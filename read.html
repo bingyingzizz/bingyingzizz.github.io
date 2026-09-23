@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-site="bingyingzizz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>怎么读这张图 · bingyingzizz</title>
+<meta name="description" content="数学星图：读图指南、记号对照表、检索协议、内容准则、枢纽定理榜">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M9 9 23 15 12 24' stroke='%234f7cf5' stroke-width='1.7' fill='none' opacity='.5'/><circle cx='9' cy='9' r='3.2' fill='%234f7cf5'/><circle cx='23' cy='15' r='3.2' fill='%234f7cf5'/><circle cx='12' cy='24' r='3.2' fill='%234f7cf5'/></svg>">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/read.css">
+<link rel="stylesheet" href="assets/katex.min.css">
+<script src="assets/katex.min.js"></script>
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.doc{display:block!important}</style></noscript>
+</head>
+<body class="reader">
+
+<header class="rhead">
+  <div class="in">
+    <a class="back" href="./">← bingyingzizz</a>
+    <span class="sp"></span>
+    <a class="mini" href="mathgalaxy/">数学星图 →</a>
+    <a class="mini" id="raw" href="mathgalaxy/reading.md" target="_blank" rel="noopener">原文 ↗</a>
+  </div>
+</header>
+
+<div class="rlayout">
+
+  <nav class="side" aria-label="文档">
+    <p>怎么读这张图</p>
+    <a href="#reading" data-doc="reading"><b>读图指南</b><span>三层 / 四种边 / 层号</span></a>
+    <a href="#notation" data-doc="notation"><b>记号对照表</b><span>包含 / 真包含 / 补集 / 字母谁是谁</span></a>
+    <a href="#llms" data-doc="llms"><b>检索协议</b><span>给 AI 的入口</span></a>
+    <a href="#policy" data-doc="policy"><b>内容准则</b><span>这张图为什么这么长</span></a>
+    <a href="#hubs" data-doc="hubs"><b>枢纽定理榜</b><span>哪些东西是地基</span></a>
+  </nav>
+
+  <main class="rbody">
+    <section class="doc" id="reading" data-title="读图指南" data-raw="mathgalaxy/reading.md">
+      <h1 class="stag">数学星图 · 怎么读这张图</h1>
+      <div class="body">
+        <p class="stag">数据见 <code>index.md</code>。</p>
+        <h2 class="stag">三层尺度</h2>
+        <p class="stag">星系（数学领域）→ 星团（一套自足的装置）→ 节点（定理 / 定义 / 引理）。 <strong>星团 = 为了造出某个「能用的东西」而存在的一整套结果</strong>，不按课程分。星团的 <code>hub</code> 是<strong>中心天体</strong>：装置被造出来就是为了得到它。</p>
+        <h2 class="stag">边的四种 kind</h2>
+        <div class="stag"><ul><li><code>implication</code>（sources → target，带证明）、<code>equivalence</code>（a ⟺ b，双向证明）、 <code>definition</code>（定义 → 用到它的结论）—— 这三类是 <strong>strong</strong> 边，逻辑骨架。</li><li><code>analogy</code> 是 <strong>weak</strong> 边：思想相通，没有逻辑蕴含，只用来找远房灵感。用了必须对用户明说「以下是弱边联想，不是逻辑结论」。⚠️ 弱边<strong>不参与分层</strong>。</li></ul></div>
+        <h2 class="stag">layer（依赖深度）</h2>
+        <p class="stag">从最底层的 ZF 公理与集合概念算起，沿「前置 → 依赖它的」最长路径数出来的层号，可以当<strong>学习顺序</strong>用；等价的命题算同一层。 ⚠️ 它是依赖深度，不是课程顺序。</p>
+        <h2 class="stag">字段与引用</h2>
+        <p class="stag"><code>id</code> <code>type</code> <code>label</code> <code>title</code> <code>region</code> <code>cluster</code> <code>layer</code> <code>statement</code> <code>notes</code> <code>refs</code>；节点用 <code>id</code> 引用，深链 <code>#n=&lt;节点id&gt;</code>。</p>
+        <p class="stag">记号见 <code>notation.md</code>。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="notation" data-title="记号对照表" data-raw="mathgalaxy/notation-full.md">
+      <h1 class="stag">数学星图 · 记号对照表</h1>
+      <div class="body">
+        <p class="stag">全图数学记号的写法。同一星团内一个符号只有一个含义；跨星团同名不同义在表里注明。</p>
+        <h3 class="stag">逻辑与集合</h3>
+        <div class="stag"><ul><li><code>\forall</code> ∀　<strong>全称量词</strong></li><li><code>\exists</code> ∃　<strong>存在量词</strong></li><li><code>\exists!</code> ∃!　<strong>唯一存在</strong></li><li><code>\neg</code> ¬　<strong>否定（对象语言）</strong></li><li><code>\wedge</code> ∧　<strong>合取（对象语言）</strong></li><li><code>\vee</code> ∨　<strong>析取（对象语言）</strong></li><li><code>\to</code> →　<strong>蕴含（对象语言）/ 趋于 / 映射</strong></li><li><code>\leftrightarrow</code> ↔　<strong>等价（对象语言）</strong> — 只用于公理 / 公式内部</li><li><code>\implies</code> ⟹　<strong>推出（元语言）</strong></li><li><code>\iff</code> ⟺　<strong>当且仅当（元语言）</strong></li><li><code>\Longleftarrow</code> ⟸　<strong>反向证明的方向标记（配 <code>$(\implies)$</code>）</strong></li><li><code>\langle \mathbb{N}, \le \rangle</code> ⟨ℕ,≤⟩　<strong>「集合 + 结构」的配对写法</strong></li><li><code>\models</code> ⊨　<strong>满足</strong></li><li><code>\vdash</code> ⊢　<strong>可证明</strong></li><li><code>\in</code> ∈　<strong>属于</strong></li><li><code>\notin</code> ∉　<strong>不属于</strong></li><li><code>\subseteq</code> ⊆　<strong>包含（允许相等）</strong></li><li><code>\subset</code> ⊂　<strong>真包含（不含相等）</strong></li><li><code>\supseteq</code> ⊇　<strong>反向包含（允许相等）</strong></li><li><code>\supset</code> ⊃　<strong>反向真包含</strong></li><li><code>\cup</code> ∪　<strong>二元并</strong></li><li><code>\cap</code> ∩　<strong>二元交</strong></li><li><code>\setminus</code> ∖　<strong>差集</strong></li><li><code>A^{c}</code> Aᶜ　<strong>补集（相对全集 $X$）</strong></li><li><code>\bigcup</code> ⋃　<strong>族的并</strong></li><li><code>\bigcap</code> ⋂　<strong>族的交</strong></li><li><code>\bigsqcup</code> ⨆　<strong>可数不交并</strong></li><li><code>\emptyset</code> ∅　<strong>空集</strong></li><li><code>\mathcal{P}(X)</code> 𝒫(X)　<strong>幂集</strong> — <code>2^{X}</code> 只用于基数幂 / 函数集</li><li><code>\{ a, b \}</code> {a,b}　<strong>集合</strong></li><li><code>(a, b)</code> (a,b)　<strong>有序对</strong></li><li><code>A / \sim</code> A/~　<strong>商集</strong></li><li><code>[a]</code> [a]　<strong>等价类</strong></li><li><code>\sim</code> ∼　<strong>等价关系 / 等价</strong></li><li><code>\times</code> ×　<strong>笛卡尔积 / 乘积</strong></li><li><code>\{ x : \ldots \}</code>　<strong>集合描述</strong></li><li><code>\rightrightarrows</code> ⇉　<strong>一致收敛</strong></li><li><code>\hookrightarrow</code> ↪　<strong>单射</strong></li><li><code>\upharpoonright</code> ↾　<strong>限制 $f \upharpoonright A$</strong></li></ul></div>
+        <h3 class="stag">序、基数与序数</h3>
+        <div class="stag"><ul><li><code>\preceq</code> ⪯　<strong>一般偏序关系（抽象偏序集上的）</strong> — 抽象偏序集上的序</li><li><code>\sqsubseteq</code> ⊑　<strong>第二个偏序集上的序</strong> — 只在对举两个偏序集时用</li><li><code>\prec</code> ≺　<strong>严格关系</strong></li><li><code>\le</code> ≤　<strong>序 / 大小</strong></li><li><code>\ge</code> ≥　<strong>反向序</strong></li><li><code>\ne</code> ≠　<strong>不等</strong></li><li><code>\sup S</code> sup S　<strong>上确界</strong></li><li><code>\inf S</code> inf S　<strong>下确界</strong></li><li><code>(P, \preceq)</code>　<strong>偏序集</strong></li><li><code>(W, \preceq)</code>　<strong>良序集</strong></li><li><code>(\alpha, \in)</code>　<strong>序数（用属于关系排序）</strong></li><li><code>\mathrm{On}</code> On　<strong>序数全体</strong></li><li><code>\operatorname{ot}(W)</code> ot(W)　<strong>良序集的序型</strong></li><li><code>\omega</code> ω　<strong>最小无限序数</strong></li><li><code>V_{\alpha}</code> V_α　<strong>累积层级</strong></li><li><code>\aleph(X)</code> ℵ(X)　<strong>Hartogs 数（$X$ 的）</strong> — 与 $\aleph_0$ 同族，靠有没有参数区分</li><li><code>\aleph_0</code> ℵ₀　<strong>可数无穷的基数</strong></li><li><code>|A|</code> |A|　<strong>基数</strong></li></ul></div>
+        <h3 class="stag">数系与分析基础</h3>
+        <div class="stag"><ul><li><code>\mathbb{N}</code> ℕ　<strong>自然数</strong></li><li><code>\mathbb{Z}</code> ℤ　<strong>整数</strong></li><li><code>\mathbb{Q}</code> ℚ　<strong>有理数</strong></li><li><code>\mathbb{R}</code> ℝ　<strong>实数</strong></li><li><code>\mathbb{C}</code> ℂ　<strong>复数</strong></li><li><code>\overline{\mathbb{R}}</code> ℝ̄　<strong>扩充实数 $[ -\infty, +\infty ]$</strong></li><li><code>\mathbb{R}^{n}</code> ℝⁿ　<strong>n 维欧氏空间</strong></li><li><code>(a, b]</code>　<strong>半开区间（左开右闭）</strong></li><li><code>\varepsilon</code> ε　<strong>正数 / ε–δ 里的 ε</strong></li><li><code>\delta</code> δ　<strong>小量 / 增量</strong></li><li><code>|x|</code> |x|　<strong>绝对值</strong></li><li><code>\|f\|_p</code> ‖f‖ₚ　<strong>L^p 范数</strong></li><li><code>\lim_{n \to \infty}</code>　<strong>数列极限</strong></li><li><code>\liminf</code> lim inf　<strong>下极限</strong></li><li><code>\limsup</code> lim sup　<strong>上极限</strong></li><li><code>\sum_{j=1}^{\infty}</code> Σ　<strong>级数</strong></li><li><code>\prod</code> ∏　<strong>乘积</strong></li><li><code>\mapsto</code> ↦　<strong>映射到（$x \mapsto f(x)$）</strong></li><li><code>\cdot</code> ·　<strong>乘法点</strong></li><li><code>\operatorname{Re}</code> Re　<strong>实部</strong></li><li><code>\operatorname{Im}</code> Im　<strong>虚部</strong></li><li><code>\bar{z}</code> z̄　<strong>共轭</strong></li><li><code>f_n \uparrow f</code> ↑　<strong>单调递增地趋于</strong> — 集列同理：$E_n \uparrow X$；递减写 $\downarrow$</li><li><code>\nearrow, \searrow</code> ↗ ↘　<strong>（集列 / 函数列）单调递增 / 递减</strong></li><li><code>\nrightarrow</code> ↛　<strong>不趋于（$\int f_n = 1 \nrightarrow 0$）</strong></li><li><code>C \leftarrow C \cup \{ v \}</code> ←　<strong>赋值：把左边更新成右边（＝「令…为…」）</strong></li></ul></div>
+        <h3 class="stag">拓扑与度量</h3>
+        <div class="stag"><ul><li><code>\mathcal{T}</code> 𝒯　<strong>拓扑</strong></li><li><code>\mathcal{B}</code> ℬ　<strong>拓扑的一组基</strong></li><li><code>\mathcal{S}</code> 𝒮　<strong>子基</strong></li><li><code>d(x, y)</code>　<strong>距离</strong></li><li><code>B(x, \varepsilon)</code>　<strong>开球</strong></li><li><code>\mathfrak{B}_X</code> 𝔅_X　<strong>Borel σ-代数</strong></li></ul></div>
+        <h3 class="stag">测度与 σ-代数</h3>
+        <div class="stag"><ul><li><code>\mu</code> μ　<strong>测度</strong></li><li><code>\nu</code> ν　<strong>第二个测度 / 待比较的测度</strong> — 符号测度那一支里专指符号测度</li><li><code>\mu^{*}</code> μ*　<strong>外测度</strong></li><li><code>\mu_{0}</code> μ₀　<strong>预测度</strong></li><li><code>\rho</code> ρ　<strong>预备函数 $\rho : \mathcal{E} \to [0, +\infty]$，$\rho(\emptyset) = 0$</strong> — $\mathcal{E}$ 上用来定义外测度的预备函数</li><li><code>\mathcal{M}</code> ℳ　<strong>σ-代数 / 可测集全体</strong></li><li><code>\mathcal{M}(\mathcal{E})</code> ℳ(ℰ)　<strong>由 $\mathcal{E}$ 生成的 σ-代数</strong></li><li><code>\mathfrak{m}(\mathcal{E})</code> 𝔪(ℰ)　<strong>由 $\mathcal{E}$ 生成的单调类</strong> — 与 $\mathcal{M}(\mathcal{E})$ 成对</li><li><code>\mathcal{A}</code> 𝒜　<strong>代数 / 集合族</strong></li><li><code>\mathfrak{A}</code> 𝔄　<strong>代数 / 基本类</strong> — 测度论里是代数 / 基本类；一阶逻辑里是一阶结构</li><li><code>\mathcal{E}</code> ℰ　<strong>生成元集合族（「设 $\mathcal{E} \subseteq \mathcal{P}(X)$」）</strong></li><li><code>\mathcal{N}</code> 𝒩　<strong>零集族或第二个空间的 σ-代数</strong> — 测度的构造里是零集族；可测函数 / 乘积测度里是第二个空间的 $\sigma$ 代数</li><li><code>\mathcal{L}</code> ℒ　<strong>Lebesgue σ-代数或一阶语言</strong> — 分析里是 Lebesgue $\sigma$ 代数；一阶逻辑里是一阶语言</li><li><code>\mathcal{M} \otimes \mathcal{N}</code> ℳ⊗𝒩　<strong>积 σ-代数</strong></li><li><code>\mu \times \nu</code> μ×ν　<strong>乘积测度</strong></li><li><code>m</code> m　<strong>$\mathbb{R}$ 上的 Lebesgue 测度</strong></li><li><code>\mu_{G}</code> μ_G　<strong>单调函数 $G$ 诱导的 Borel 测度</strong></li><li><code>\text{a.e.}</code> a.e.　<strong>几乎处处</strong></li><li><code>\nu^{+}, \nu^{-}, |\nu|</code>　<strong>符号测度的正 / 负 / 全变差部分</strong></li><li><code>\lambda, \rho</code> λ, ρ　<strong>RN 分解 $\nu = \lambda + \rho$</strong> — RN 分解的两部分：$\lambda$ 奇异、$\rho$ 绝对连续</li><li><code>\ll</code> ≪　<strong>绝对连续</strong></li><li><code>\perp</code> ⊥　<strong>奇异 / 互相垂直</strong></li><li><code>\sigma</code> σ　<strong>前缀：σ-环 / σ-代数 / σ-有限</strong> — <code>title</code> 里作为术语前缀时保留 Unicode（<code>σ-代数</code>）</li><li><code>\mathfrak{B}</code> 𝔅　<strong>Borel σ-代数</strong></li></ul></div>
+        <h3 class="stag">积分与函数空间</h3>
+        <div class="stag"><ul><li><code>\chi_{E}</code> χ_E　<strong>特征函数</strong></li><li><code>L^{+}</code> L⁺　<strong>非负可测函数全体</strong></li><li><code>\varphi</code> φ　<strong>简单函数（$\varphi = \sum a_j \chi_{E_j}$）</strong> — 一阶逻辑里是一阶公式</li><li><code>\psi</code> ψ　<strong>与 $\varphi$ 配对的第二个函数</strong></li><li><code>\int \varphi \, d\mu</code> ∫　<strong>积分</strong></li><li><code>L^{1}</code> L¹　<strong>可积函数空间</strong></li><li><code>L^{p}, L^{q}</code>　<strong>L^p 空间（$p, q$ 共轭指数）</strong></li><li><code>Hf</code> Hf　<strong>极大函数</strong></li><li><code>d\nu / d\mu</code>　<strong>Radon–Nikodym 导数</strong></li><li><code>\Phi</code> Φ　<strong>连续线性泛函 $\Phi \in (L^{p})^{*}$</strong></li><li><code>\Sigma</code> Σ　<strong>有限支集简单函数全体（<code>analysis.lp</code> 局部）</strong></li><li><code>\partial f / \partial t</code>　<strong>偏导</strong></li></ul></div>
+        <h3 class="stag">字母约定</h3>
+        <div class="stag"><ul><li><code>\alpha</code> α　<strong>序数 / 指标</strong> — 局部义：微分里是阈值，积分里是复相位</li><li><code>\beta</code> β　<strong>序数（配 $\alpha$）</strong></li><li><code>\gamma</code> γ　<strong>序数（配 $\alpha$、$\beta$）/ 一般函数</strong></li><li><code>\pi</code> π　<strong>投影 $\pi_{\alpha}$</strong></li><li><code>\theta</code> θ　<strong>角度</strong></li><li><code>\tau</code> τ　<strong>停时 / 一般函数（罕见）</strong></li><li><code>\zeta</code> ζ　<strong>（罕见）</strong></li><li><code>\mathcal{C}</code> 𝒞　<strong>证明内局部：Cauchy 列全体 / 递升集合族</strong></li><li><code>\mathcal{F}</code> ℱ　<strong>证明内局部：部分选择函数全体 / 生成元族</strong></li><li><code>\mathcal{U}, \mathcal{V}</code>　<strong>证明内局部：开覆盖 / 有限子覆盖</strong></li><li><code>\mathcal{D}</code> 𝒟　<strong>证明内局部：链的族</strong></li><li><code>\mathcal{K}</code> 𝒦　<strong>证明内局部：单调类定理里的试探集族</strong></li><li><code>\mathrm{ZFC}</code> ZFC　<strong>公理系统名（名词 → <code>\mathrm{}</code>）</strong></li></ul></div>
+      </div>
+    </section>
+
+    <section class="doc" id="llms" data-title="检索协议" data-raw="mathgalaxy/llms.txt">
+      <h1 class="stag">数学星图 MathGalaxy</h1>
+      <div class="body">
+        <p class="stag">可检索的数学知识图谱：节点是定理 / 定义 / 引理，边是它们的逻辑关系。 <strong>给 AI 用：按协议取数据，不要单次抓 graph.json。</strong> 6 星系 / 23 星团 / 230 节点 / 485 连线。数据根 = 本文件所在目录。线上：<a href="https://bingyingzizz.github.io/mathgalaxy/" target="_blank" rel="noopener">https://bingyingzizz.github.io/mathgalaxy/</a></p>
+        <h2 class="stag">检索协议</h2>
+        <div class="stag"><ol><li><code>index.md</code> —— 星系 → 星团 id。</li><li><code>index/&lt;星系id&gt;.md</code> —— 该星系的星团（名字、中心天体、点数）。</li><li><code>index/&lt;星团id&gt;.md</code> —— 该团节点清单（id / 名称 / 层号）。</li><li><code>nodes/&lt;节点id&gt;.md</code> —— 陈述 + 出入边（每条带证明路径）。说明在 <code>notes/&lt;节点id&gt;.md</code>，边的正文在 <code>proofs/&lt;边id&gt;.md</code>。</li></ol></div>
+        <p class="stag">顺着 id 继续读就是沿图走。</p>
+        <p class="stag">⚠ <strong>单次抓取只有约 1000 词元</strong>，抓取工具还会转义 <code># * [ ] ` _ ~</code>。产物都按这个尺度切过：<strong>放不下的分页成 <code>&lt;路径&gt;.2.md</code></strong>，第 1 页永远是 <code>&lt;路径&gt;.md</code>，页头写了上下页在哪。 <code>graph.json</code> / <code>graph.md</code> 是 550 / 430 KB 的全量导出： <strong>只用来下载，不要用来检索</strong>。</p>
+        <h2 class="stag">其它</h2>
+        <p class="stag"><code>reading.md</code> 结构/边 · <code>policy.md</code> 准则 · <code>hubs.md</code> 枢纽 · <code>notation.md</code> 记号表。 LaTeX 由 KaTeX 渲染；<code>label</code> 等字段是纯文本。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="policy" data-title="内容准则" data-raw="mathgalaxy/policy.md">
+      <h1 class="stag">数学星图 · 内容准则</h1>
+      <div class="body">
+        <h2 class="stag">一、每一层都由上一层<strong>构造</strong>出来</h2>
+        <p class="stag">新对象必须由<strong>已经有的东西</strong>造出来（子集、幂集、笛卡尔积、商集、函数空间……）。</p>
+        <div class="stag"><ul><li>⛔ <strong>禁止</strong>用「满足某组性质的对象（同构意义下唯一）」引入新东西 —— 那是 <strong>公理刻画</strong>，悄悄假设了存在性。判据：这句话在<strong>定义新对象</strong>，还是在<strong>陈述已有对象的性质</strong>？</li><li>⛔ <strong>性质是定理，不是定义</strong>：造出来之后，再把性质作为带证明的定理挂上去。</li><li>⭐ <strong>唯一豁免</strong>：一阶语言与公式（<code>def.first-order-language</code>、<code>def.formula</code>）是<strong>元层</strong>对象，比 ZFC 更原始。</li><li><strong>自查抓手</strong>：「用到了却没节点 / 没连边」都违规。</li></ul></div>
+        <h2 class="stag">二、同一结论只收一份</h2>
+        <p class="stag">重复的定理<strong>已合并</strong>。判据：<strong>A 能一句话说成 B（或特例）就不是两个节点。</strong></p>
+        <h2 class="stag">三、只保留最通用的版本</h2>
+        <p class="stag">条件最弱、结论最强的那个；特例写在 <code>notes</code> 里。</p>
+        <h2 class="stag">四、星团按「装置」分，不按课程分</h2>
+        <p class="stag">星团 = 为了造出某个「能用的东西」而存在的一整套结果；一个团别超 40 点。</p>
+        <h2 class="stag">五、记号</h2>
+        <p class="stag">见 <code>notation.md</code>；新内容先按它转写再进 packs/。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="hubs" data-title="枢纽定理榜" data-raw="mathgalaxy/hubs.md">
+      <h1 class="stag">数学星图 · 枢纽定理榜</h1>
+      <div class="body">
+        <p class="stag">按<strong>入边数</strong>排序：有多少条强边指向它。回答一个问题 —— <strong>哪些东西是真正的地基，值得优先学熟。</strong>（弱边不计入。）数据根 <code>./</code>：每项都能顺着读 <code>nodes/&lt;id&gt;.md</code>。</p>
+        <div class="stag"><ol class="ranks"><li class="rank" style="--w:1.000"><span class="rank-n">6</span><span class="rank-b"><code>lem.zorn</code> 佐恩引理<span class="meta">layer 9</span><span class="meta">选择原理</span></span></li><li class="rank" style="--w:0.833"><span class="rank-n">5</span><span class="rank-b"><code>def.cauchy-null</code> Cauchy 列与零列<span class="meta">layer 10</span><span class="meta">数系的构造</span></span></li><li class="rank" style="--w:0.833"><span class="rank-n">5</span><span class="rank-b"><code>def.product-measure</code> 乘积测度<span class="meta">layer 16</span><span class="meta">乘积测度与 Fubini</span></span></li><li class="rank" style="--w:0.833"><span class="rank-n">5</span><span class="rank-b"><code>prop.nbv-derivative</code> NBV 函数的导数与测度的关系<span class="meta">layer 19</span><span class="meta">有界变差与绝对连续</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>thm.ring-monotone-sigma</code> 环 → σ-环 的判据<span class="meta">layer 5</span><span class="meta">集合族与 σ-代数</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>thm.monotone-class</code> 单调类定理<span class="meta">layer 6</span><span class="meta">集合族与 σ-代数</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>def.section</code> 截口<span class="meta">layer 6</span><span class="meta">乘积测度与 Fubini</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>prop.section-measurable</code> 截口可测<span class="meta">layer 7</span><span class="meta">乘积测度与 Fubini</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>thm.wellordering</code> 良序定理<span class="meta">layer 9</span><span class="meta">选择原理</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>thm.hausdorff</code> Hausdorff 极大原理<span class="meta">layer 9</span><span class="meta">选择原理</span></span></li><li class="rank" style="--w:0.667"><span class="rank-n">4</span><span class="rank-b"><code>thm.cardinal-comparable</code> 基数可比定理<span class="meta">layer 10</span><span class="meta">基数与等势</span></span></li></ol></div>
+        <p class="stag">（230 个节点里 223 个带强边入边，列了前 11 个；完整清单见 <code>graph.json</code>。）</p>
+      </div>
+    </section>
+
+    <p class="rfoot">
+      这几份东西同时也是 <b>AI 的检索入口</b>：原件就在
+      <code>mathgalaxy/</code> 下（<code>.md</code> / <code>.txt</code>），
+      可以直接把 URL 丢给 AI，不需要打开这个页面。<br>
+      最近更新：2026-09-23
+    </p>
+  </main>
+
+</div>
+
+<script>
+/* 阅读页只做三件事：按 hash 切换文档、给每块内容排错峰进场的延迟、更新顶栏的「原文」链接。
+   正文是构建期就渲染好的静态 HTML —— 打开即读，不依赖任何脚本。 */
+(function () {
+  var SITE = document.documentElement.dataset.site || '';
+  var secs = [].slice.call(document.querySelectorAll('.doc'));
+  var navs = [].slice.call(document.querySelectorAll('.side a'));
+  var raw = document.getElementById('raw');
+  var ids = secs.map(function (s) { return s.id; });
+
+  function target() {
+    var h = location.hash.replace(/^#/, '');
+    return ids.indexOf(h) >= 0 ? h : ids[0];
+  }
+
+  // 重放进场动画：先摘掉 .run，强制一次重排，再挂回去
+  function replay(sec) {
+    var els = [].slice.call(sec.querySelectorAll('.stag'));
+    els.forEach(function (el) { el.classList.remove('run'); });
+    void sec.offsetWidth;
+    els.forEach(function (el, i) {
+      el.style.animationDelay = Math.min(i, 12) * 45 + 'ms';
+      el.classList.add('run');
+    });
+  }
+
+  function show(id, first) {
+    secs.forEach(function (s) {
+      s.classList.toggle('on', s.id === id);
+      var h = s.querySelector('h1');
+      if (h) h.style.viewTransitionName = '';   // doc-hero 同时只能有一个主人
+    });
+    navs.forEach(function (a) {
+      a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false');
+    });
+    var sec = document.getElementById(id);
+    var h1 = sec.querySelector('h1');
+    if (h1) h1.style.viewTransitionName = 'doc-hero';
+    if (raw) raw.href = sec.dataset.raw;
+    document.title = sec.dataset.title + ' · ' + SITE;
+    replay(sec);
+    if (!first) window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('hashchange', function () { show(target(), false); });
+  show(target(), true);
+})();
+
+/* 行内数学：正文里写成 $…$ 的地方交给 KaTeX 渲染。
+   ⚠️ 只走**文本节点**（TreeWalker），不碰 innerHTML —— 否则会破坏构建期排好的 HTML。
+   ⚠️ `<code>` / `<pre>` 里的 $ 不处理（那是原文里的 LaTeX 源码，就该原样显示）。
+   只在加载时跑一遍：所有文档的 section 一开始就都在 DOM 里（靠 class 切换显隐）。 */
+(function () {
+  if (!window.katex) return;
+  var RE = /\$([^$\n]+?)\$/g;
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(function (node) {
+    var txt = node.nodeValue;
+    if (txt.indexOf('$') < 0) return;
+    var p = node.parentNode;
+    if (!p || p.closest('code, pre, script, style, .katex')) return;
+    var frag = document.createDocumentFragment();
+    var last = 0, m, hit = false;
+    RE.lastIndex = 0;
+    while ((m = RE.exec(txt))) {
+      hit = true;
+      if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+      var span = document.createElement('span');
+      try {
+        span.innerHTML = katex.renderToString(m[1], { throwOnError: false, displayMode: false });
+      } catch (e) {
+        span.textContent = m[0];
+      }
+      frag.appendChild(span);
+      last = m.index + m[0].length;
+    }
+    if (!hit) return;
+    if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+    p.replaceChild(frag, node);
+  });
+})();
+</script>
+</body>
+</html>

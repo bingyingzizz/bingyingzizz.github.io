@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>bingyingzizz</title>
+<meta name="description" content="个人站点：数学笔记与一些别的">
+<!-- 站点图标：三个点连成的一小段星座（内联 SVG，不额外请求） -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M9 9 23 15 12 24' stroke='%234f7cf5' stroke-width='1.7' fill='none' opacity='.5'/><circle cx='9' cy='9' r='3.2' fill='%234f7cf5'/><circle cx='23' cy='15' r='3.2' fill='%234f7cf5'/><circle cx='12' cy='24' r='3.2' fill='%234f7cf5'/></svg>">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ⬇︎⬇︎ 这里换成你自己的名字和一句话介绍 ⬇︎⬇︎ -->
+  <h1 class="enter" style="--i:0">bingyingzizz</h1>
+  <p class="sub enter" style="--i:1">数学笔记与一些别的</p>
+  <!-- ⬆︎⬆︎ -->
+
+  <h2 class="enter" style="--i:2">项目</h2>
+
+  <a class="card enter" style="--i:3" href="mathgalaxy/">
+    <b>数学星图 · MathGalaxy</b>
+    <span>可交互的数学知识图谱 —— 定理、定义、引理按「星系 / 星团 / 恒星」三层组织，
+    箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
+    当前 6 星系 / 23 星团 / 230 节点 / 485 连线（强边 477，弱边 8）。</span>
+    <i class="go">→</i>
+  </a>
+
+  <h2 class="enter" style="--i:4">怎么读这张图</h2>
+
+  <a class="card enter" style="--i:5" href="read.html#reading">
+    <b data-vt>读图指南</b>
+    <span>三层尺度、四种边、依赖深度、字段与深链 —— 先看这一份，图上那些线和大小
+    才不是装饰。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:6" href="read.html#notation">
+    <b data-vt>记号对照表</b>
+    <span>全图记号的唯一权威：包含 / 真包含 / 补集怎么写，每个希腊字母、花体字母
+    在哪儿是什么意思。写内容之前先过这一关。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:7" href="read.html#llms">
+    <b data-vt>检索协议</b>
+    <span>给 AI 的入口，也是给人看的地图：先读目录、再读星团清单、最后读单个节点。
+    要跟着图一步一步走，从这里开始。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:8" href="read.html#policy">
+    <b data-vt>内容准则</b>
+    <span>这张图为什么这么长出来的：每一层都由上一层构造出来、同一结论只收一份、
+    只保留最通用的版本、星团按「装置」分不按课程分。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:9" href="read.html#hubs">
+    <b data-vt>枢纽定理榜</b>
+    <span>按被引用次数排序 —— 哪些东西是真正的地基，值得优先学熟。</span>
+    <i class="go">→</i>
+  </a>
+
+  <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
+  <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
+    <b>graph.md</b>
+    <span>整张星图的 Markdown 全量导出（约 420 KB）。适合一次下载、本地处理；
+    ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
+    <i class="go">↓</i>
+  </a>
+  <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
+    <b>graph.json</b>
+    <span>机器可读的全量版本（约 550 KB），每条边带 strength（强边 / 弱边）与完整证明。
+    同样只适合下载，不适合单次抓取。</span>
+    <i class="go">↓</i>
+  </a>
+
+  <footer class="enter" style="--i:13">
+    最近更新：2026-09-23 ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
+    <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+  </footer>
+
+</div>
+
+<script>
+/* 点卡片换页时，让**卡片标题**平滑变成阅读页的大标题（View Transitions 的
+   共用元素变形）。名字只能有一个元素持有，所以先把其它的清掉再挂。
+   浏览器不支持就是普通跳转，这段等于没写。 */
+(function(){
+  var marks = document.querySelectorAll('[data-vt]');
+  marks.forEach(function(el){
+    var link = el.closest('a');
+    if(!link) return;
+    link.addEventListener('click', function(e){
+      if(e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      marks.forEach(function(m){ m.style.viewTransitionName = ''; });
+      el.style.viewTransitionName = 'doc-hero';
+    });
+  });
+})();
+</script>
+</body>
+</html>

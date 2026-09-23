@@ -1,0 +1,132 @@
+/* ==========================================================================
+   个人站点 · 阅读页样式（配合 assets/site.css）
+   --------------------------------------------------------------------------
+   页面在 site/read.html，正文由 tools/md.mjs 在**构建期**渲染好塞进去，
+   运行时只干两件事：切换文档、给每一块挂错峰进场的延迟。
+   ========================================================================== */
+
+/* 深链（read.html#hubs）浏览器会把整节顶到视口顶 —— 顶栏是吸顶的，会把标题
+   压在底下、被 backdrop-filter 磨成一团糊。给所有「滚进视野」留出顶栏的高度。
+   窄屏还要多留一截：导航条在正文上方（见文件末尾的媒体查询）。 */
+html{scroll-padding-top:76px}
+
+body.reader{padding-bottom:0}
+
+/* -------------------------------------------------------------- 顶栏 */
+.rhead{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line)}
+.rhead .in{max-width:1080px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;gap:10px}
+.rhead .back{color:var(--soft);font-size:14px;font-weight:600}
+.rhead .back:hover{color:var(--ink);text-decoration:none}
+.rhead .sp{flex:1}
+.mini{font-size:12.5px;color:var(--soft);border:1px solid var(--line);border-radius:999px;
+  padding:5px 12px;line-height:1.5;
+  transition:border-color .2s var(--ease),color .2s var(--ease),background .2s var(--ease)}
+.mini:hover{color:var(--accent);border-color:rgba(79,124,245,.45);background:var(--accent-soft);
+  text-decoration:none}
+
+/* -------------------------------------------------------------- 布局 */
+.rlayout{max-width:1080px;margin:0 auto;padding:38px 24px 100px;
+  display:grid;grid-template-columns:196px minmax(0,1fr);gap:56px;align-items:start}
+.rbody{max-width:720px;min-width:0}
+
+/* -------------------------------------------------------------- 左栏 */
+.side{position:sticky;top:84px}
+.side p{font-size:12px;letter-spacing:.12em;color:var(--faint);font-weight:600;margin:2px 0 12px}
+.side a{display:block;padding:9px 12px;border-radius:10px;color:var(--soft);font-size:14.5px;
+  line-height:1.4;transition:background .18s var(--ease),color .18s var(--ease)}
+.side a b{display:block;font-weight:600}
+.side a span{display:block;font-size:11.5px;color:var(--faint);margin-top:2px}
+.side a:hover{background:rgba(20,22,28,.04);color:var(--ink);text-decoration:none}
+.side a[aria-current="true"]{background:var(--accent-soft);color:var(--accent)}
+.side a[aria-current="true"] span{color:inherit;opacity:.62}
+
+/* -------------------------------------------------------------- 正文 */
+.js .doc{display:none}
+.js .doc.on{display:block}
+
+.doc h1{font-size:clamp(23px,3.2vw,31px);line-height:1.3;letter-spacing:-.02em;
+  font-weight:700;margin:2px 0 26px}
+.body{font-size:15.6px;line-height:1.86;color:#24272e}
+.body p{margin:0 0 15px}
+
+.body h2{font-size:17px;font-weight:650;color:var(--ink);letter-spacing:0;
+  margin:38px 0 13px;display:flex;align-items:baseline;gap:10px}
+.body h2::before{content:'';flex:none;width:4px;height:14px;border-radius:2px;
+  background:var(--accent);transform:translateY(-1px)}
+.body h3{font-size:15.5px;font-weight:650;margin:26px 0 9px}
+.body h2:first-child,.body h3:first-child{margin-top:6px}
+
+.body ul,.body ol{list-style:none;margin:0 0 18px;padding:0}
+.body li{position:relative;padding-left:22px;margin-bottom:9px}
+.body ul>li::before{content:'';position:absolute;left:5px;top:.72em;width:5px;height:5px;
+  border-radius:50%;background:var(--faint)}
+.body ol{counter-reset:li}
+.body ol>li{counter-increment:li;padding-left:31px}
+.body ol>li::before{content:counter(li);position:absolute;left:0;top:.16em;
+  width:20px;height:20px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+  font-size:11.5px;font-weight:700;line-height:20px;text-align:center}
+
+.body strong{font-weight:650;color:var(--ink)}
+/* 标题里的 **强调**：h2 本身已经是 650 的深色，再加粗看不出来 —— 用主色点一下 */
+.body h2 strong,.body h3 strong{color:var(--accent)}
+.body code{font-family:var(--mono);font-size:.875em;background:var(--code-bg);
+  padding:1.5px 5.5px;border-radius:6px;color:#2c313b;
+  white-space:nowrap;overflow-wrap:anywhere}
+.body pre{background:#f6f7f9;border:1px solid var(--line);border-radius:11px;
+  padding:14px 16px;overflow:auto;margin:0 0 18px}
+.body pre code{background:none;padding:0;font-size:13px;white-space:pre}
+.body blockquote{margin:0 0 18px;padding:2px 0 2px 16px;border-left:3px solid var(--line);
+  color:var(--soft)}
+.body a{border-bottom:1px solid rgba(79,124,245,.32)}
+.body a:hover{text-decoration:none;border-bottom-color:var(--accent)}
+
+/* 榜单（hubs.md）：名次徽章 + 底部一条按相对大小长的横条 */
+.ranks{margin:4px 0 20px!important}
+.ranks li.rank{display:flex;align-items:baseline;gap:11px;position:relative;
+  padding:9px 14px 11px 12px;margin-bottom:5px;border-radius:11px;
+  transition:background .18s var(--ease)}
+.ranks li.rank:hover{background:rgba(20,22,28,.035)}
+.ranks li.rank::before{display:none}
+.ranks li.rank::after{content:'';position:absolute;left:12px;right:12px;bottom:4px;height:2px;
+  border-radius:2px;width:auto;transform:scaleX(var(--w,1));transform-origin:left;
+  background:linear-gradient(90deg,var(--accent),rgba(79,124,245,.15));opacity:.5}
+.rank-n{flex:none;width:22px;height:22px;border-radius:8px;background:var(--accent-soft);
+  color:var(--accent);font-size:12px;font-weight:700;line-height:22px;text-align:center;
+  transform:translateY(2px)}
+.rank-b{min-width:0}
+.rank-b code{white-space:nowrap}
+.rank-b .meta{font-size:12.5px;color:var(--faint);margin-left:9px;white-space:nowrap}
+.rank-b .meta::before{content:'·';margin-right:7px;opacity:.6}
+
+/* -------------------------------------------------------------- 页脚 */
+.rfoot{margin:52px 0 0;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--faint);font-size:13px;line-height:1.75}
+.rfoot code{font-family:var(--mono);font-size:12.5px;background:var(--code-bg);
+  padding:1px 5px;border-radius:5px}
+
+/* -------------------------------------------------------------- 进场动画 */
+/* .stag 由构建期打在每个正文块上；JS 给它加 .run 并写 animationDelay。
+   没 JS / 开了「减少动态效果」时，.run 不起作用 —— 内容照样看得见。 */
+@media (prefers-reduced-motion: no-preference){
+  .doc .stag.run{animation:rise .52s var(--ease) both}
+}
+
+/* -------------------------------------------------------------- 窄屏 */
+@media (max-width:860px){
+  /* 顶栏 56 + 导航条 47 + 一点余量：深链打开时标题和导航条都得露出来 */
+  html{scroll-padding-top:126px}
+  .rhead .in{padding:12px 20px}
+  .rhead .back{font-size:13.5px}
+  .rlayout{grid-template-columns:1fr;gap:20px;padding:22px 20px 72px}
+  .side{position:static;display:flex;gap:8px;overflow-x:auto;
+    margin:0 -20px;padding:2px 20px 10px;scrollbar-width:none}
+  .side::-webkit-scrollbar{display:none}
+  .side p{display:none}
+  .side a{flex:none;padding:7px 14px;border:1px solid var(--line);border-radius:999px;
+    font-size:13.5px;white-space:nowrap}
+  .side a span{display:none}
+  .body{font-size:15.4px}
+  .rank-b .meta{display:none}
+}
