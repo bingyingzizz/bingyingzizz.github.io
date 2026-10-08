@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-08T09:44:38.964Z
+> 由 `tools/build.mjs` 自动生成于 2026-10-08T09:55:44.268Z
 > 7 星系 / 34 星团 / 373 节点 / 813 连线（强边 805，弱边 8）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -5286,7 +5286,7 @@ $$\delta : \mathcal{C} \longrightarrow \widehat{\mathcal{C}}, \qquad X \mapsto h
 
 它带一个明显的**遗忘函子** $j_{T} : \mathcal{C}/T \to \mathcal{C}$。用逗号范畴的说法：
 
-$$\mathcal{C}/T \;\cong\; \bigl(\mathcal{C} \subseteq \widehat{\mathcal{C}}\bigr) \Big\downarrow \bigl(\mathbf{1} \xrightarrow{\ T\ } \widehat{\mathcal{C}}\bigr)$$
+$$\mathcal{C}/T \;\cong\; \bigl(\mathcal{C} \hookrightarrow \widehat{\mathcal{C}}\bigr) \Big\downarrow \bigl(\mathbf{1} \xrightarrow{\ T\ } \widehat{\mathcal{C}}\bigr)$$
 
 这正是把「元素范畴」搬到预层上：$T(X)$ 的元素当元素看，遗忘函子 $j_{T}$ 把 $(X, s)$ 送回 $X$。
 
@@ -5299,9 +5299,9 @@ $$\mathcal{C}/T \;\cong\; \bigl(\mathcal{C} \subseteq \widehat{\mathcal{C}}\bigr
 
 对任取的一个预层，下面这个方块
 
-$$\begin{array}{ccc} \mathcal{C}/T & \longrightarrow & \widehat{\mathcal{C}}/T \\ \big\downarrow{\scriptstyle{j_{T}}} & & \big\downarrow \\ \mathcal{C} & \xrightarrow{\ y\ } & \widehat{\mathcal{C}} \end{array}$$
+$$\begin{array}{ccc} \mathcal{C}/T & \hookrightarrow & \widehat{\mathcal{C}}/T \\ \big\downarrow{\scriptstyle{j_{T}}} & & \big\downarrow \\ \mathcal{C} & \xrightarrow{\ h\ } & \widehat{\mathcal{C}} \end{array}$$
 
-是**笛卡尔的**。这里上面一行是**切片范畴之间的嵌入**（把 $(X, s)$ 送到 $(h_{X},\ s : h_{X} \to T)$），下面一行是**范畴 $\mathcal{C}$ 到预层范畴 $\widehat{\mathcal{C}}$ 的 Yoneda 嵌入**，两条竖边是两个遗忘函子。
+是**笛卡尔的**。上面是**切片范畴到预层范畴的嵌入**，下面是**范畴 $\mathcal{C}$ 到预层范畴的 Yoneda 嵌入** $h$（$h(X) = h_{X} = \operatorname{Hom}(-, X)$），两条竖边是两个遗忘函子。
 
 也就是说：**切片范畴 $\mathcal{C}/T$ 就是遗忘函子 $\widehat{\mathcal{C}}/T \to \widehat{\mathcal{C}}$ 沿 Yoneda 嵌入拉回来的东西**。
 

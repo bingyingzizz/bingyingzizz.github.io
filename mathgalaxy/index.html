@@ -17280,7 +17280,7 @@ window.MG = window.MG || {};
         '',
         '它带一个明显的**遗忘函子** $j_{T} : \\mathcal{C}/T \\to \\mathcal{C}$。用逗号范畴的说法：',
         '',
-        '$$\\mathcal{C}/T \\;\\cong\\; \\bigl(\\mathcal{C} \\subseteq \\widehat{\\mathcal{C}}\\bigr) \\Big\\downarrow \\bigl(\\mathbf{1} \\xrightarrow{\\ T\\ } \\widehat{\\mathcal{C}}\\bigr)$$'
+        '$$\\mathcal{C}/T \\;\\cong\\; \\bigl(\\mathcal{C} \\hookrightarrow \\widehat{\\mathcal{C}}\\bigr) \\Big\\downarrow \\bigl(\\mathbf{1} \\xrightarrow{\\ T\\ } \\widehat{\\mathcal{C}}\\bigr)$$'
       ].join('\n'),
       notes: [
         '这正是把「元素范畴」搬到预层上：$T(X)$ 的元素当元素看，遗忘函子 $j_{T}$ 把 $(X, s)$ 送回 $X$。',
@@ -17301,9 +17301,9 @@ window.MG = window.MG || {};
       statement: [
         '对任取的一个预层，下面这个方块',
         '',
-        '$$\\begin{array}{ccc} \\mathcal{C}/T & \\longrightarrow & \\widehat{\\mathcal{C}}/T \\\\ \\big\\downarrow{\\scriptstyle{j_{T}}} & & \\big\\downarrow \\\\ \\mathcal{C} & \\xrightarrow{\\ y\\ } & \\widehat{\\mathcal{C}} \\end{array}$$',
+        '$$\\begin{array}{ccc} \\mathcal{C}/T & \\hookrightarrow & \\widehat{\\mathcal{C}}/T \\\\ \\big\\downarrow{\\scriptstyle{j_{T}}} & & \\big\\downarrow \\\\ \\mathcal{C} & \\xrightarrow{\\ h\\ } & \\widehat{\\mathcal{C}} \\end{array}$$',
         '',
-        '是**笛卡尔的**。这里上面一行是**切片范畴之间的嵌入**（把 $(X, s)$ 送到 $(h_{X},\\ s : h_{X} \\to T)$），下面一行是**范畴 $\\mathcal{C}$ 到预层范畴 $\\widehat{\\mathcal{C}}$ 的 Yoneda 嵌入**，两条竖边是两个遗忘函子。'
+        '是**笛卡尔的**。上面是**切片范畴到预层范畴的嵌入**，下面是**范畴 $\\mathcal{C}$ 到预层范畴的 Yoneda 嵌入** $h$（$h(X) = h_{X} = \\operatorname{Hom}(-, X)$），两条竖边是两个遗忘函子。'
       ].join('\n'),
       notes: '也就是说：**切片范畴 $\\mathcal{C}/T$ 就是遗忘函子 $\\widehat{\\mathcal{C}}/T \\to \\widehat{\\mathcal{C}}$ 沿 Yoneda 嵌入拉回来的东西**。\n\n特例最能说明问题：$T = h_{X}$（可表示）时，方块给出 $\\mathcal{C}/X \\simeq \\widehat{\\mathcal{C}}/h_{X}$ —— 在 $\\mathcal{C}$ 里沿 $X$ 切片，与在预层范畴里沿 $h_{X}$ 切片，是同一件事。'
     },
