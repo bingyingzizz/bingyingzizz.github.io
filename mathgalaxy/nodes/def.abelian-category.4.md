@@ -2,4 +2,5 @@
 根 `../`　·　第 1 页 `nodes/def.abelian-category.md`　·　上一页 `nodes/def.abelian-category.3.md`
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
 - 被 `def.ab-axioms` Grothendieck 的 AB 公理 用

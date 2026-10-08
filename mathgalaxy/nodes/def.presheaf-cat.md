@@ -10,4 +10,7 @@ $$\widehat{\mathcal{C}} := \operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf
 - `def.natural-transformation` 自然变换：用到了定义 自然变换　proofs/def-dep.nat-presheafcat.md
 - `def.functor` 函子：用到了定义 函子　proofs/def-dep.functor-presheafcat.md
 
+## 它能推出什么 / 谁在用它
+- 被 `def.abelian-sheaf` 阿贝尔层 用
+
 > 说明见 `notes/def.presheaf-cat.md`

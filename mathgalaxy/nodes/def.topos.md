@@ -17,6 +17,8 @@ layer 16 · 定义 · 拓扑斯 · 范畴论
 - ⇒ `thm.giraud` Giraud 定理
 - 被 `thm.giraud` Giraud 定理 用
 - 被 `prop.topos-covering-epi` 拓扑斯中覆盖即余积满射 用
+- 被 `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
 - 被 `def.topos-morphism` 拓扑斯的态射 用
+- 被 `def.internal-hom` 内 Hom 用
 
 > 说明见 `notes/def.topos.md`

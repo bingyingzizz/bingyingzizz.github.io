@@ -21,4 +21,8 @@
 
 - 内射对象怎么判断 → prop.injective-criterion def.projective-object def.mono
 
-见 `../alias.md`。
+- 什么是阿贝尔层 → def.abelian-sheaf def.presheaf-valued def.sheaf
+
+- 什么是内 Hom → def.internal-hom def.tensor-abelian-sheaf def.adjoint
+
+> 续见 alias/category.4.md

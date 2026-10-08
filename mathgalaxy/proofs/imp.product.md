@@ -6,9 +6,7 @@
 任给 $A$、$B$。
 
 1. 由配对公理与并集公理，$A \cup B$ 是集合。
-
 2. 对任意 $a \in A$、$b \in B$，Kuratowski 有序对 $(a, b) = \{\{a\}, \{a, b\}\}$。其中 $\{a\} \subseteq A \cup B$，$\{a, b\} \subseteq A \cup B$，所以 $\{a\}, \{a, b\} \in \mathcal{P}(A \cup B)$，进而 $(a, b) \in \mathcal{P}(\mathcal{P}(A \cup B))$。
-
 3. 由幂集公理，$\mathcal{P}(\mathcal{P}(A \cup B))$ 是集合。用分离公理模式取
 
 $$C = \{ z \in \mathcal{P}(\mathcal{P}(A \cup B)) : \exists a \in A, \exists b \in B, z = (a, b) \}$$

@@ -1,7 +1,7 @@
 # Grothendieck 范畴　`def.grothendieck-category`　·　说明
 根 `../`
 
-例：$A\text{-}\mathbf{Mod}$ 是 Grothendieck 范畴；阿贝尔范畴 $\mathcal{C}$ 的 $\operatorname{Ind}(\mathcal{C})$（按滤过余极限补全）也是；拓扑斯 $\mathcal{T}$ 上的 $\mathbf{Ab}(\mathcal{T})$ 也是。
+例：$A\text{-}\mathbf{Mod}$ 是 Grothendieck 范畴；阿贝尔范畴 $\mathcal{C}$ 的 $\operatorname{Ind}(\mathcal{C})$（按滤过余极限补全）也是；拓扑斯 $\mathcal{T}$ 上的 $\mathbf{Ab}(\mathcal{T})$ 也是（见「拓扑斯上的阿贝尔群是 Grothendieck 范畴」）。
 
 两条随定义而来的事实：Grothendieck 范畴**自动满足 AB3\***（有所有极限）；而且它**有足够多的内射对象**。
 

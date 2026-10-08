@@ -10,10 +10,9 @@
 - **5** `def.product-measure` 乘积测度 · layer 16 · 乘积测度与 Fubini
 - **5** `def.abelian-category` 加法 / 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
 - **5** `prop.nbv-derivative` NBV 函数的导数与测度的关系 · layer 19 · 有界变差与绝对连续
+- **5** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 19 · 阿贝尔层
 - **4** `thm.ring-monotone-sigma` 环 → σ-环 的判据 · layer 5 · 集合族与 σ-代数
 - **4** `thm.monotone-class` 单调类定理 · layer 6 · 集合族与 σ-代数
 - **4** `def.section` 截口 · layer 6 · 乘积测度与 Fubini
-- **4** `prop.section-measurable` 截口可测 · layer 7 · 乘积测度与 Fubini
-- **4** `thm.wellordering` 良序定理 · layer 9 · 选择原理
 
-（373 个节点里 366 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+（378 个节点里 371 个带强边入边，列了前 10 个；完整清单见 `graph.json`。）

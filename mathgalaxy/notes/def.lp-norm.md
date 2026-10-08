@@ -6,9 +6,7 @@
 
 
 - $\|f\|_p = 0 \iff f = 0$ a.e.；
-
 - $\|cf\|_p = |c| \, \|f\|_p$；
-
 - $f, g \in L^p \implies f + g \in L^p$（这一步用 $|f+g|^p \le 2^p(|f|^p + |g|^p)$）。
 
 

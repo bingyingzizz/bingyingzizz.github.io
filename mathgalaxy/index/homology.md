@@ -7,3 +7,4 @@
 - hom.complex　复形与导出三角　中心天体 def.distinguished-triangle　8 点
 - hom.cohomology　同调与正合列　中心天体 def.cohomology　6 点
 - hom.spectral　过滤与谱序列　中心天体 def.spectral-sequence　2 点
+- hom.sheaf　阿贝尔层　中心天体 def.abelian-sheaf　6 点

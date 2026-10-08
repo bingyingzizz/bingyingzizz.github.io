@@ -9,10 +9,10 @@
 - 被 `thm.saft` 伴随函子定理 用
 - 被 `prop.chaus-reflective` 紧 Haus 是反射子范畴 用
 - 被 `prop.cg-coreflective` 紧生成空间是余反射子范畴 用
-- 被 `prop.condab-tensor` CondAb 上的张量与内 Hom 用
 - 被 `prop.injective-criterion` 内射对象的判据 用
 - 被 `def.adjunction-unit` 单位与余单位 用
 - 被 `def.reflective-subcategory` 反射子范畴 用
 - 被 `def.kan-extension` Kan 延拓 用
 - 被 `def.topos-morphism` 拓扑斯的态射 用
 - 被 `def.chaus-pretopos` CHaus 是预拓扑斯 用
+- 被 `def.tensor-abelian-sheaf` 阿贝尔层的张量积 用

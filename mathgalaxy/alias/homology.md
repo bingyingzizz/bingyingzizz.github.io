@@ -3,6 +3,8 @@
 
 - 等化子和核是什么 → def.equalizer def.mono prop.cohomology-exact-sequence
 
+- 凝聚态阿贝尔群是什么 → def.condensed-abelian-group def.abelian-sheaf prop.condab-section
+
 - 复形是什么 → def.cochain-complex prop.complex-additive def.cohomology
 
 - 同调是什么 → def.cohomology prop.cohomology-exact-sequence thm.long-exact
@@ -19,4 +21,6 @@
 
 - 内射对象怎么判断 → prop.injective-criterion def.projective-object def.mono
 
-见 `../alias.md`。
+- 什么是阿贝尔层 → def.abelian-sheaf def.presheaf-valued def.sheaf
+
+> 续见 alias/homology.2.md

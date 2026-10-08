@@ -8,7 +8,6 @@
 设 $X$ 是集合。$X = \emptyset$ 时平凡，以下设 $X \ne \emptyset$。
 
 1. 由 AC，非空子集族 $\mathcal{P}(X) \setminus \{\emptyset \}$ 上有选择函数 $\varphi$，即 $\varphi (A) \in A$ 对每个非空 $A \subseteq X$ 成立。
-
 2. 用超限递归往下取元素：对序数 $\alpha$，只要余集非空就令
 
 $$x(\alpha) = \varphi( X \setminus \{ x(\beta) : \beta < \alpha \} )$$

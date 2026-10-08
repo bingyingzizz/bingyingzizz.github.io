@@ -14,6 +14,7 @@ $$\prod_{a \in S} h_{a} : \mathcal{C} \longrightarrow \mathbf{Set}^{S}, \qquad X
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.giraud` Giraud 定理
 - 被 `prop.condab-generated` CondAb 由有限表现投射对象生成 用
+- 被 `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
 - 被 `def.topos` 拓扑斯 用
 - 被 `def.grothendieck-category` Grothendieck 范畴 用
 

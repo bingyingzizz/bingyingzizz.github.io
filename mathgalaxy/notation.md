@@ -8,7 +8,7 @@
 - `notation/topo.md` 拓扑与度量 6
 - `notation/measure.md` 测度与 σ-代数 24
 - `notation/integral.md` 积分与函数空间 12
-- `notation/layout.md` 排版与箭头 9
+- `notation/layout.md` 排版与箭头 10
 - `notation/cat.md` 范畴与同调 16
 - `notation/letters.md` 字母约定 19
 

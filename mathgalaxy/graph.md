@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-08T10:10:49.807Z
-> 9 星系 / 39 星团 / 373 节点 / 789 连线（强边 780，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-08T10:32:16.713Z
+> 9 星系 / 40 星团 / 378 节点 / 806 连线（强边 797，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -1090,9 +1090,7 @@ $$X \in \mathcal{A} \iff X\text{ 的每个有限子集都属于} \mathcal{A}$$
 典型例子：
 
 - 偏序集 $P$ 的**链族**（$X$ 是链 $\iff X$ 的每个二元子集可比）；
-
 - 向量空间的**线性无关子集族**；
-
 - 某个滤子之上的**滤子族**。
 
 
@@ -1470,15 +1468,10 @@ $$X\text{ 紧} \iff X\text{ 列紧} \iff X\text{ 完备且全有界}$$
 
 
 - 紧 $\implies$ 列紧
-
 - 列紧 $\implies$ 全有界　（整段里**唯一**实质用到选择原理的一步，用的是 DC）
-
 - 列紧 $\implies$ 完备
-
 - 列紧 $\implies$ 紧　（「坏球」法，只用到全有界，不动选择公理）
-
 - 紧 $\implies$ 完备、紧 $\implies$ 全有界
-
 - 完备 + 全有界 $\implies$ 列紧　（对角线法，也不动选择公理）
 
 
@@ -4187,13 +4180,9 @@ $T_F(b) - T_F(a)$ 称为 $F$ 在 $[a, b]$ 上的全变差；$[a,b]$ 上有界变
 *命题*　命题：BV 的几个例子与封闭性
 
 1. 若 $F : \mathbb{R} \to \mathbb{R}$ **有界递增**，则 $F \in BV$（此时 $T_F = F - F(-\infty)$）。
-
 2. $BV$ 是 $\mathbb{C}$向量空间。
-
 3. 若 $F$ 实可微且 $F'$ 有界，则对一切 $-\infty < a < b < \infty$ 有 $F \in BV([a,b])$。
-
 4. $F(x) = \sin x$：对任何紧区间 $[a,b]$，$F \in BV([a,b])$。
-
 5. $F(x) = xsin(1/x)$（$x \ne 0$），$F(0) = 0$：若 $0 \in [a,b]$，则 $F \in BV([a,b])$。
 
 第 4、5 两个例子是「振荡型」的：函数本身有界、但导数在某个点附近爆掉或无限振荡。它们仍然有界变差 —— 说明**BV 比「$C^{1}$」宽得多**。
@@ -4482,9 +4471,7 @@ $$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} : f \text{ 可测},\ \|f
 
 
 - $\|f\|_p = 0 \iff f = 0$ a.e.；
-
 - $\|cf\|_p = |c| \, \|f\|_p$；
-
 - $f, g \in L^p \implies f + g \in L^p$（这一步用 $|f+g|^p \le 2^p(|f|^p + |g|^p)$）。
 
 
@@ -4667,7 +4654,6 @@ $$\|fg\|_1 = \|f\|_1 \|g\|_\infty \iff |g(x)| = \|g\|_\infty \text{ a.e. on } \{
 
 
 1. 在某点**增长太快**（局部爆破）；
-
 2. 在无穷远**衰减太慢**。
 
 
@@ -4797,7 +4783,6 @@ $$\|f\|_p^p = \int |f|^p \cdot 1 \le \big\| |f|^p \big\|_{q/p} \, \|1\|_{q/(q-p)
 
 
 - **测度有限** $\to$ 只有「爆破」要防 $\to$ 指数**越小**空间**越大**：$L^1 \supseteq L^2 \supseteq \cdots \supseteq L^\infty$；
-
 - **计数测度** $\to$ 只有「衰减」要防 $\to$ 指数**越大**空间**越小**：$\ell^1 \subseteq \ell^2 \subseteq \cdots \subseteq \ell^\infty$。
 
 参考：Folland, Real Analysis, §6.1
@@ -5096,15 +5081,10 @@ $$F(1_X) = 1_{F(X)}, \qquad F(g \circ f) = F(g) \circ F(f)$$
 
 
 - **遗忘函子** $\mathbf{Top} \to \mathbf{Set}$：$(X, \tau) \mapsto X$，连续映射当作普通映射。拓扑被丢掉，所以叫「遗忘」。同理 $\mathbf{Ab} \to \mathbf{Set}$、$\mathbf{Grp} \to \mathbf{Mon}$（含入）。
-
 - $\mathbf{Set} \to \mathbf{Top}$ 有两种：$X \mapsto (X, \mathcal{P}(X))$（离散拓扑）与 $X \mapsto (X, \{ \emptyset, X \})$（平凡拓扑）。两者都对，因为从离散空间射出、射入平凡空间的映射总是连续的。
-
 - **自由构造** $\mathbf{Set} \to \mathbf{Ab}$：$X \mapsto \bigoplus_X \mathbb{Z}$；$\mathbf{Set} \to \mathbf{Grp}$：$X \mapsto \langle x, x^{-1} \mid x \in X \rangle$。
-
 - **交换化** $\mathbf{Grp} \to \mathbf{Ab}$：$G \mapsto G / [G, G]$。
-
 - **群化** $\mathbf{Mon} \to \mathbf{Grp}$：$M \mapsto M^{gr} = \langle x_g \ (g \in M) \mid x_g x_h = x_{gh} \rangle$。
-
 - $\mathbf{Top}^{\mathrm{op}} \to \mathbf{Cat}$：$(X, \tau) \mapsto \operatorname{Open}(X)$。反变，因为开集越少映射越多。
 
 #### 自然变换　`def.natural-transformation`
@@ -5402,9 +5382,7 @@ $$T : \mathcal{C}^{\mathrm{op}} \longrightarrow \mathbf{Set}$$
 
 
 - 偏序集上：对每个 $i$ 给一个 $T_i$，对 $i \le j$ 给「限制」$T_j \to T_i$（把反对称性去掉，预序集上同样成立）。
-
 - 拓扑空间上：$\operatorname{Open}(X)$ 是开集范畴（态射是含入），预层给每个开集 $u$ 一个 $T(u)$，给 $u' \subseteq u$ 一个「限制」$T(u) \to T(u')$，$s \mapsto s|_{u'}$。连续函数预层 $C^{0}$、光滑函数预层 $C^{\infty}$、常预层 $\underline{E}$（$\underline{E}(u) = E$，限制取恒等）、常函数预层都是。
-
 - 固定 $X \in \mathcal{C}$：$h_{X} : Y \mapsto \operatorname{Hom}_{\mathcal{C}}(Y, X)$ 是预层，叫**可表示预层**。
 
 #### 预层范畴　`def.presheaf-cat`
@@ -5440,9 +5418,7 @@ $$\forall Y \in \mathcal{C},\ \forall t \in F(Y),\ \exists! \, f : X \to Y,\qqua
 
 
 - $k \in \operatorname{Ob}(\mathbf{CRng})$，$F : k\text{-}\mathbf{Alg} \to \mathbf{Set}$ 是遗忘函子。$(k[t],\ t)$ 表示 $F$：对 $A \in k\text{-}\mathbf{Alg}$ 与 $a \in F(A)$，令 $t \mapsto a$ 诱导出唯一的 $k$-代数同态 $k[t] \to A$。
-
 - $F : \mathbf{Ring} \to \mathbf{Set}$ 取常值单点集。$\mathbb{Z}$ 表示 $F$：每个环都有唯一的 $\mathbb{Z} \to R$。
-
 - 固定拓扑空间 $X$ 与子空间 $Y \subseteq X$，反变函子
 
 
@@ -5564,7 +5540,6 @@ $$\operatorname{Hom}_{\mathcal{D}}\bigl(F(X),\ Y\bigr) \;\cong\; \operatorname{H
 
 
 - 遗忘函子 $\mathbf{Top} \to \mathbf{Set}$ 有左右**两个**伴随：左伴随是**离散拓扑**（$\operatorname{Hom}_{\mathbf{Top}}(S_{d}, X) \cong \operatorname{Hom}_{\mathbf{Set}}(S, F(X))$），右伴随是**平凡拓扑**（$\operatorname{Hom}_{\mathbf{Top}}(X, S_{t}) \cong \operatorname{Hom}_{\mathbf{Set}}(F(X), S)$）。
-
 - 遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 的左伴随是**自由阿贝尔群**：$\operatorname{Hom}_{\mathbf{Ab}}(\mathbb{Z}^{(X)}, M) \cong \operatorname{Hom}_{\mathbf{Set}}(X, \operatorname{forget} M)$。**自由是遗忘的左伴随**。
 
 
@@ -5574,7 +5549,6 @@ $$\operatorname{Hom}_{\mathcal{D}}\bigl(F(X),\ Y\bigr) \;\cong\; \operatorname{H
 
 
 - **对偶**：$F \dashv G$ $\iff$ $G^{\mathrm{op}} \dashv F^{\mathrm{op}}$（在 $\mathcal{C}^{\mathrm{op}} \to \mathcal{D}^{\mathrm{op}}$ 上）。
-
 - **复合**：$F \dashv G$ 且 $F' \dashv G'$ $\implies$ $F' \circ F \dashv G \circ G'$，因为
 
 
@@ -5704,11 +5678,8 @@ $$\operatorname{Hom}_{\mathcal{C}}\bigl(F(X),\ X'\bigr) \;\cong\; \operatorname{
 
 
 - $\mathbf{Ab}$ 是 $\mathbf{Grp}$ 的反射子范畴：$F : \mathbf{Grp} \to \mathbf{Ab}$，$G \mapsto G/[G,G]$，且 $\operatorname{Hom}_{\mathbf{Ab}}(G/[G,G], G') \cong \operatorname{Hom}_{\mathbf{Grp}}(G, G')$。
-
 - $\mathbf{Grp}$ 同时是 $\mathbf{Mon}$ 的反射子范畴与余反射子范畴：右伴随把幺半群送到它的**可逆元群** $M^{\times}$。
-
 - $\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的反射子范畴。
-
 - 离散空间范畴在 $\mathbf{Top}$ 中是反射的，平凡拓扑空间范畴在 $\mathbf{Top}$ 中是余反射的。
 
 #### 反射子范畴里的极限　`prop.reflective-limits`
@@ -5858,7 +5829,6 @@ $$\operatorname{Hom}(h_{X}, F) \longrightarrow \operatorname{Hom}(R, F)$$
 
 
 - **单射 = 分离公理**：两个整体截面若在 $R$ 上一致，就必定相等；
-
 - **双射 = 粘合公理**：任何一族相容截面都能**唯一**地拼成整体截面。
 
 
@@ -5918,7 +5888,6 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 
 
 1. **层范畴里的极限就是在预层范畴里算的**（反射子范畴对极限封闭）；
-
 2. $T \mapsto T^{\sharp}$ **保所有余极限与有限极限**。
 
 
@@ -5928,9 +5897,7 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 
 
 - 取**最粗**拓扑（$J(X) = \{h_{X}\}$）时每个预层都是层，$\sharp$ 是恒等；取**最细**拓扑（$J(X) = $ 一切筛）时层范畴只剩一个对象，即常数预层 $\mathbf{1}$。
-
 - 常数预层（每个开集上取同一个集合 $E$）的层化叫**常数层**。
-
 - 拓扑空间 $X$ 上取 $\mathcal{C} = \operatorname{Open}(X)$，得到的就是通常的层范畴，$\sharp$ 就是通常的层化函子。
 
 #### 正则满态射　`def.regular-epi`
@@ -5948,7 +5915,6 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 $$X \times_{Y} Y' \;\cong\; \varinjlim_{i} \bigl(X_{i} \times_{Y} Y'\bigr)$$
 
 2. 正则满态射 $f : X \to Y$ 叫**万有的**，如果对任意 $Y' \to Y$，拉回 $f \times_{Y} Y'$ 仍是正则满态射；
-
 3. 余积 $X = \coprod_{i \in I} X_{i}$ 叫**不交的**，如果 (a) 每个 $X_{i} \to X$ 是单态射，(b) $i \ne j$ 时 $X_{i} \times_{X} X_{j}$ 是始对象。
 
 有效等价关系叫**万有的**，如果它的商映射是万有正则满态射。
@@ -6290,7 +6256,7 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 
 **Grothendieck 范畴**是带**生成元**的 **AB5** 范畴（AB5 即：有所有余极限，且滤过余极限正合）。
 
-例：$A\text{-}\mathbf{Mod}$ 是 Grothendieck 范畴；阿贝尔范畴 $\mathcal{C}$ 的 $\operatorname{Ind}(\mathcal{C})$（按滤过余极限补全）也是；拓扑斯 $\mathcal{T}$ 上的 $\mathbf{Ab}(\mathcal{T})$ 也是。
+例：$A\text{-}\mathbf{Mod}$ 是 Grothendieck 范畴；阿贝尔范畴 $\mathcal{C}$ 的 $\operatorname{Ind}(\mathcal{C})$（按滤过余极限补全）也是；拓扑斯 $\mathcal{T}$ 上的 $\mathbf{Ab}(\mathcal{T})$ 也是（见「拓扑斯上的阿贝尔群是 Grothendieck 范畴」）。
 
 两条随定义而来的事实：Grothendieck 范畴**自动满足 AB3\***（有所有极限）；而且它**有足够多的内射对象**。
 
@@ -6539,6 +6505,127 @@ $$F^{p}H^{n} := \operatorname{im}\bigl(H^{n}(F^{p}K) \to H^{n}(K)\bigr)$$
 
 谱序列说的就是：**对充分大的 $r$，$E_{r}$ 页稳定下来，恰好等于这个过滤的关联分次**。所以它是「从过滤的复形一层层逼近同调」的工具 —— 直接算 $H^{n}$ 太难时，就把 $H^{n}$ 拆成容易算的那些碎片。
 
+### 星团：阿贝尔层
+> 造出「拓扑斯里的阿贝尔群」：取值一般的层 → 阿贝尔层 → 拓扑斯上的阿贝尔群是 Grothendieck 范畴 → 内 Hom → 张量积 → 平坦性。
+
+#### 取值一般的预层与层　`def.presheaf-valued`
+*定义*　取值在一般范畴里的层（Sheaf with Values in a Category）
+
+设 $\mathcal{C}$、$\mathcal{D}$ 是范畴。
+
+1. 取值在 $\mathcal{D}$ 的**预层**是反变函子 $T : \mathcal{C}^{\mathrm{op}} \to \mathcal{D}$；预层之间的**态射**是自然变换。
+2. $\mathcal{C}$ 是 site 时，**层** $F : \mathcal{C}^{\mathrm{op}} \to \mathcal{D}$ 是这样的预层：对每个 $Y \in \mathcal{D}$，集合值预层
+
+$$X \longmapsto \operatorname{Hom}_{\mathcal{D}}\bigl(Y,\ F(X)\bigr)$$
+
+都是层。
+
+把 $\mathcal{D}$ 取成 $\mathbf{Set}$ 就回到原来的层；取成 $\mathbf{Ab}$ 就得到**阿贝尔层**。
+
+定义里的技巧是：**用「射入 $Y$ 的映射」把 $\mathcal{D}$ 里的层条件降回集合层**。于是集合层的每一条结论，只要它的表述里那些构造在 $\mathcal{D}$ 里也有（极限、积……），就能逐条搬过来 —— 这是「层可以取一般值」的全部秘密。
+
+#### 阿贝尔层　`def.abelian-sheaf`
+*定义*　阿贝尔层（Abelian Sheaf）
+
+固定 site $\mathcal{C}$。记
+
+$$\widehat{\mathcal{C}}(\mathbf{Ab}) := \operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf{Ab})$$
+
+为**阿贝尔群预层**的范畴，$\widetilde{\mathcal{C}}(\mathbf{Ab})$ 为它里面**层**的满子范畴。后者叫 $\mathcal{C}$ 上的**阿贝尔层**，也叫 $\mathcal{C}$ 上的**阿贝尔群**。
+
+记号：$\operatorname{Hom}_{\mathbb{Z}}(M, N) := \operatorname{Hom}_{\widehat{\mathcal{C}}(\mathbf{Ab})}(M, N) = \operatorname{Hom}_{\widetilde{\mathcal{C}}(\mathbf{Ab})}(M, N)$。
+
+⭐ **阿贝尔群预层就是「最粗拓扑下的层」** —— 两种说法是一套东西。
+
+遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 沿复合给出遗忘函子 $\widehat{\mathcal{C}}(\mathbf{Ab}) \to \widehat{\mathcal{C}}$。
+
+两条基本事实：
+
+- **阿贝尔层按底集合层来判**：$M$ 是阿贝尔层 $\iff$ 它的底集合预层是层。因为遗忘函子保所有极限，而层条件是一个极限图 —— 用米田引理把 $\operatorname{Hom}_{\mathbb{Z}}(N, M(-))$ 换回 $M(-)$，条件就同一条。
+- **阿贝尔层 = 层范畴里的阿贝尔群对象**：$\widetilde{\mathcal{C}}(\mathbf{Ab}) \simeq \mathbf{Ab}\bigl(\widetilde{\mathcal{C}}\bigr)$。这正是「凝聚态阿贝尔群 = 凝聚态集范畴里的阿贝尔群」那条定义的一般版本。
+
+#### 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`thm.topos-abelian-grothendieck`
+*定理*　$\mathcal{T}(\mathbf{Ab})$ 是 Grothendieck 范畴
+
+若 $\mathcal{T}$ 是拓扑斯，则 $\mathcal{T}$ 上的阿贝尔层所成范畴 $\mathcal{T}(\mathbf{Ab})$ 是 **Grothendieck 范畴**：它有小的生成元集、有所有余极限、且滤过余极限正合。
+
+证明分三段：
+
+
+
+- **阿贝尔**：先在预层范畴 $\widehat{\mathcal{C}}(\mathbf{Ab})$ 里逐分量验证（那里就是逐点的阿贝尔群）—— 具体的，对任意态射 $u$ 验证 $\operatorname{coker}(\ker u) \cong \ker(\operatorname{coker} u)$；再沿**正合反射**（层化）把这些等式运回层范畴。滤过余极限正合同理。
+- **所有极限与余极限存在**：因为层范畴是预层范畴的反射子范畴。
+- **小生成元集**：若 $S$ 是 $\mathcal{T}$ 的小生成元集，则 $\{\mathbb{Z}\cdot X : X \in S\}$ 生成 $\mathcal{T}(\mathbf{Ab})$ —— 它们的余积就是生成元。
+
+
+
+顺带一条：$\mathbb{Z}\cdot X$ 在 $\mathcal{T}(\mathbf{Ab})$ 里**投射**（先看预层：$M \mapsto \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}\cdot h_{X}, M) \cong M(X)$ 在预层上是正合的）。
+
+#### 内 Hom　`def.internal-hom`
+*定义*　内 Hom（Internal Hom）
+
+设 $\mathcal{T}$ 是拓扑斯，$X \in \mathcal{T}$、$M \in \mathcal{T}(\mathbf{Ab})$。则
+
+$$\operatorname{Hom}(X, M) : Y \longmapsto \operatorname{Hom}(X \times Y,\ M) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}\cdot(X \times Y),\ M\bigr)$$
+
+是 $\mathcal{T}$ 上的一个阿贝尔层，叫 $M$ 在 $X$ 处的**内 Hom**。
+
+又对 $M, N \in \mathcal{T}(\mathbf{Ab})$，预层 $X \mapsto \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}(X, N)\bigr)$ 是**可表示的**；表示对象记 $\operatorname{Hom}_{\mathbb{Z}}(M, N) \in \mathcal{T}(\mathbf{Ab})$。
+
+于是有自然同构
+
+
+
+$$\operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}(X, N)\bigr) \;\cong\; \operatorname{Hom}\bigl(X,\ \operatorname{Hom}_{\mathbb{Z}}(M, N)\bigr) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}(M, N)(X)$$
+
+
+
+「可表示」这一步只用到一个事实：那个预层**保所有极限**（于是由表示函子的判据，它有表示对象）。
+
+两条推论：$\operatorname{Hom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{Z}}(M, N)(\mathbf{1})$ —— 也就是说 **$\mathcal{T}(\mathbf{Ab})$ 富集在自己上面**；以及 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}\cdot X, M) \cong \operatorname{Hom}(X, M)$。
+
+内 Hom 在预层范畴里算与在层范畴里算结果一样：$\operatorname{Hom}_{\widehat{\mathcal{C}}(\mathbf{Ab})}(M,N) = \operatorname{Hom}_{\widetilde{\mathcal{C}}(\mathbf{Ab})}(M,N)$。
+
+#### 阿贝尔层的张量积　`def.tensor-abelian-sheaf`
+*定义*　张量积与封闭幺半结构
+
+设 $\mathcal{T}$ 是拓扑斯、$M, N \in \mathcal{T}(\mathbf{Ab})$。函子
+
+$$P \longmapsto \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
+
+可表示；表示对象记 $M \otimes_{\mathbb{Z}} N$。于是
+
+$$\operatorname{Hom}_{\mathbb{Z}}\bigl(M \otimes_{\mathbb{Z}} N,\ P\bigr) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
+
+也就是说 $\mathcal{T}(\mathbf{Ab})$ 是**封闭对称幺半**范畴：对固定的 $N$，$M \mapsto M \otimes_{\mathbb{Z}} N$ 是 $P \mapsto \operatorname{Hom}_{\mathbb{Z}}(N, P)$ 的左伴随。
+
+**怎么算。** $M \otimes_{\mathbb{Z}} N$ 是预层 $X \mapsto M(X) \otimes_{\mathbb{Z}} N(X)$ 的**层化**：先逐点张量，再层化。（证明只要考虑 $\mathcal{T} = \widehat{\mathcal{C}}$ 的情形，再用层化；最后归结到通常阿贝尔群的同名结论。）
+
+**基本性质。** 交换（$M \otimes_{\mathbb{Z}} N \cong N \otimes_{\mathbb{Z}} M$）、结合、单位 $M \otimes_{\mathbb{Z}} \mathbb{Z}\cdot\mathbf{1} \cong M$；以及
+
+
+
+$$\mathbb{Z}\cdot X \;\otimes_{\mathbb{Z}}\; \mathbb{Z}\cdot Y \;\cong\; \mathbb{Z}\cdot (X \times Y)$$
+
+
+
+记 $M \cdot X := M \otimes_{\mathbb{Z}} \mathbb{Z}\cdot X$，则 $\operatorname{Hom}_{\mathbb{Z}}(M, N)(X) \cong \operatorname{Hom}_{\mathbb{Z}}(M \cdot X,\ N)$ —— **「在某点处取值」= 「先在点处张量、再取 Hom」**。
+
+⭐ **凝聚态阿贝尔群 $\mathrm{CondAb}$ 就是这里的特例**（$\mathcal{T} = \mathrm{Cond}$）：上面每一条原样照搬，不必单独写一遍。特别地 $\mathrm{CondAb}$ 是封闭对称幺半范畴，因而富集在自己上面，可以谈张量积、对偶与交换代数。
+
+⚠️ 但要注意 $\operatorname{Hom}_{\mathbb{Z}}(M, N)$ 自然是一个**紧生成拓扑空间**，却**不是拓扑阿贝尔群** —— 因为紧生成空间对（拓扑空间的）积不封闭。把 $\mathrm{CondAb}$ 当成「拓扑阿贝尔群」来用会在这一步出问题。
+
+#### 平坦阿贝尔层　`def.flat-abelian-sheaf`
+*定义*　平坦性（Flatness）
+
+拓扑斯 $\mathcal{T}$ 中的阿贝尔群 $P$ 叫**平坦的**，如果函子
+
+$$M \longmapsto P \otimes_{\mathbb{Z}} M$$
+
+是**正合**的。
+
+例：**通常的阿贝尔群平坦 $\iff$ 无挠**。由此立刻得到：$\mathbb{Z}\cdot X$ **总是平坦的** —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。
+
 ## 星系：凝聚态数学（Condensed Mathematics）
 > 把拓扑空间换成「紧 Hausdorff 空间上的层」：凝聚态集、凝聚态阿贝尔群。
 
@@ -6679,21 +6766,15 @@ $$\mathbf{Top} \longrightarrow \mathrm{Cond}, \qquad X \mapsto \underline{X},\qu
 #### 凝聚态阿贝尔群　`def.condensed-abelian-group`
 *定义*　凝聚态阿贝尔群（Condensed Abelian Group）
 
-**凝聚态阿贝尔群**是 $\mathbf{CHaus}$ 上的阿贝尔群值层。四种说法给出同一个范畴：
+**凝聚态阿贝尔群**就是 $\mathrm{Cond}$ 上的**阿贝尔层**。四种说法给出同一个范畴：
 
 $$\mathrm{Ab}(\mathrm{Cond}) \;\simeq\; \mathrm{Cond}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{CHaus}}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{FCHaus}}(\mathrm{Ab})$$
 
 记作 $\mathrm{CondAb}$。
 
-阿贝尔群值层的定义是逐点检验的：预层 $M : \mathbf{CHaus}^{\mathrm{op}} \to \mathbf{Ab}$ 是层 $\iff$ 对每个 $A \in \mathbf{Ab}$，集合值预层
+一般定义见「阿贝尔层」—— 凝聚态阿贝尔群就是 $\mathcal{T} = \mathrm{Cond}$ 的那个特例。
 
-
-
-$$X \mapsto \operatorname{Hom}_{\mathbf{Ab}}\bigl(A, M(X)\bigr)$$
-
-
-
-是层。**等价地（更好用）**：$M$ 是凝聚态阿贝尔群 $\iff$ 它**保有限积**；再等价地：把 $M$ 忘成集合值预层之后是层 —— 因为遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 保极限。
+在紧 Hausdorff 这个场地里层条件可以化简：**$M$ 是凝聚态阿贝尔群 $\iff$ 它保有限积**（一般拓扑斯上没有这么干净的判据）。
 
 记号：$\operatorname{Hom}_{\mathbb{Z}}(M, N) := \operatorname{Hom}_{\mathrm{CondAb}}(M, N)$。
 
@@ -6717,6 +6798,8 @@ $\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\**
 
 推论：$\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。
 
+「是 Grothendieck 范畴」那一半其实对**任意**拓扑斯都成立（见「拓扑斯上的阿贝尔群是 Grothendieck 范畴」）；这里真正多出来的是 **AB6 与 AB4\*** —— 一般拓扑斯上的阿贝尔群并不同时具备这两条。
+
 这一整段的好处是：$\mathrm{CondAb}$ 上能照搬 $\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。
 
 #### Stonean 给出有限表现投射对象　`lem.stonean-projective`
@@ -6730,23 +6813,6 @@ $\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\**
 *命题*　$\mathrm{CondAb}$ 的生成元
 
 $\mathrm{CondAb}$ 由**有限表现的投射**凝聚态阿贝尔群生成。特别地，它有足够多的投射对象。
-
-#### CondAb 上的张量与内 Hom　`prop.condab-tensor`
-*命题*　$\mathrm{CondAb}$ 上的 $\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$
-
-$\mathrm{CondAb}$ 上存在两个双函子 $\operatorname{Hom}_{\mathbb{Z}}$ 与 $\otimes_{\mathbb{Z}}$，使
-
-$$\operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}(M, N)$$
-
-并且
-
-$$\operatorname{Hom}_{\mathbb{Z}}\bigl(M \otimes_{\mathbb{Z}} N,\ P\bigr) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
-
-即 $\otimes_{\mathbb{Z}}$ 与内部的 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随** —— 所以 $\mathrm{CondAb}$ 是一个**封闭对称幺半**范畴（特别地，它富集在自己上面）。
-
-所以它不只是一个阿贝尔范畴，还带着一套封闭的张量结构 —— 这才是「在凝聚态阿贝尔群上做代数」的前提：可以谈张量积、可以对偶、可以谈交换代数。
-
-⚠️ 注意 $\operatorname{Hom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot)$ 自然是一个**紧生成拓扑空间**，但它**不是拓扑阿贝尔群** —— 因为紧生成空间对（拓扑空间的）积不封闭。
 
 ---
 
@@ -6802,7 +6868,6 @@ $$x \cap \{ A \} = \emptyset$$
 *无穷公理 + 幂集公理 + 分离公理模式 $\implies \omega$ 存在*
 
 1. 由无穷公理取一个归纳集 $I$。称 $J \subseteq I$ 是**归纳的**，若 $\emptyset \in J$ 且 $\forall x (x \in J \to x \cup \{x\} \in J)$。
-
 2. 由幂集公理，$\mathcal{P}(I)$ 是集合；再用分离公理模式取
 
 $$S = \{ J \in \mathcal{P}(I) : J\text{ 是归纳集} \}$$
@@ -6816,7 +6881,6 @@ $$\omega = \{ x \in I : \forall J ( J \in S \to x \in J ) \}$$
 即 $\omega$ 是所有归纳子集的交。
 
 4. $\omega$ 是归纳集：$\emptyset$ 属于每个 $J \in S$，故 $\emptyset \in \omega$；若 $x \in \omega$，则 $x$ 属于每个 $J \in S$，从而 $x \cup \{x\}$ 属于每个 $J \in S$，故 $x \cup \{x\} \in \omega$。
-
 5. $\omega$ 含于一切归纳集：若 $K$ 是归纳集，则 $K \cap I$ 也是归纳集且 $K \cap I \in S$，由 $\omega$ 的定义 $\omega \subseteq K \cap I \subseteq K$。
 
 故 $\omega$ 是最小归纳集，即自然数集。∎
@@ -6839,9 +6903,7 @@ $$x \in \bigcup\{ a, b \} \iff \exists Y ( Y \in \{ a, b \} \wedge  x \in Y ) \i
 任给 $A$、$B$。
 
 1. 由配对公理与并集公理，$A \cup B$ 是集合。
-
 2. 对任意 $a \in A$、$b \in B$，Kuratowski 有序对 $(a, b) = \{\{a\}, \{a, b\}\}$。其中 $\{a\} \subseteq A \cup B$，$\{a, b\} \subseteq A \cup B$，所以 $\{a\}, \{a, b\} \in \mathcal{P}(A \cup B)$，进而 $(a, b) \in \mathcal{P}(\mathcal{P}(A \cup B))$。
-
 3. 由幂集公理，$\mathcal{P}(\mathcal{P}(A \cup B))$ 是集合。用分离公理模式取
 
 $$C = \{ z \in \mathcal{P}(\mathcal{P}(A \cup B)) : \exists a \in A, \exists b \in B, z = (a, b) \}$$
@@ -6858,7 +6920,6 @@ $$C = \{ z \in \mathcal{P}(\mathcal{P}(A \cup B)) : \exists a \in A, \exists b \
 设 $X$ 是集合。$X = \emptyset$ 时平凡，以下设 $X \ne \emptyset$。
 
 1. 由 AC，非空子集族 $\mathcal{P}(X) \setminus \{\emptyset \}$ 上有选择函数 $\varphi$，即 $\varphi (A) \in A$ 对每个非空 $A \subseteq X$ 成立。
-
 2. 用超限递归往下取元素：对序数 $\alpha$，只要余集非空就令
 
 $$x(\alpha) = \varphi( X \setminus \{ x(\beta) : \beta < \alpha \} )$$
@@ -6866,7 +6927,6 @@ $$x(\alpha) = \varphi( X \setminus \{ x(\beta) : \beta < \alpha \} )$$
 一旦余集为空就停止。
 
 3. **过程一定会停**：取 $X$ 的 **Hartogs 数** $\aleph (X)$，即最小的不能单射进 $X$ 的序数（见「Hartogs 定理」——它在 ZF 里就能证，不需要 AC）。若对一切 $\alpha < \aleph (X)$ 过程都没停，则 $\alpha \mapsto x(\alpha )$ 就是 $\aleph (X)$ 到 $X$ 的单射，与 $\aleph (X)$ 的定义矛盾。故存在序数 $\gamma$ 使 $x : \gamma \to X$ 是双射。
-
 4. 把 $\gamma$ 上的序经 $x$ 搬到 $X$ 上：
 
 $$a \preceq b :\iff x^{-1}(a) \le x^{-1}(b)$$
@@ -6878,9 +6938,7 @@ $$a \preceq b :\iff x^{-1}(a) \le x^{-1}(b)$$
 设 $F$ 是一族非空集合（即 $\emptyset \notin F$）。
 
 1. 由良序定理，取 $U = \bigcup F$ 的一个良序 $\preceq$。
-
 2. 对每个 $X \in F$：$X \ne \emptyset$ 且 $X \subseteq U$，所以 $X$ 是 $U$ 的非空子集，有 $\preceq$最小元 m(X)。
-
 3. 定义 $f(X) = m(X)$（$X$ 唯一确定 m(X)，故这是一个函数）。则 $\operatorname{dom} f = F$ 且 $f(X) \in X$ 对一切 $X \in F$ 成立，即 $f$ 是 $F$ 的选择函数。
 
 由 $F$ 的任意性，AC 成立。∎
@@ -6919,7 +6977,6 @@ $$\mathcal{W} = \{ (W, \preceq_W) : W \subseteq X, \preceq_W\text{ 是} W\text{ 
 $(W_{1}, \preceq _{1}) \le (W_{2}, \preceq _{2}) \iff W_{1} \subseteq W_{2}$，$\preceq _{1} = \preceq _{2}|W_{1}$，且 $W_{1}$ 是 $(W_{2}, \preceq _{2})$ 的一个前段。
 
 1. $(\mathcal{W}, \le )$ 是偏序集（三条性质直接验证）。
-
 2. **每个链有上界**：设 $\mathcal{D} \subseteq \mathcal{W}$ 是链。令 $W^{*} = \bigcup \{ W : (W, \preceq ) \in \mathcal{D} \}$，在 $W^{*}$ 上定义
 
 $$x \preceq_* y \iff\text{ 存在} (W, \preceq_W) \in \mathcal{D}\text{ 使} x, y \in W\text{ 且} x \preceq_W y$$
@@ -6927,7 +6984,6 @@ $$x \preceq_* y \iff\text{ 存在} (W, \preceq_W) \in \mathcal{D}\text{ 使} x, 
 因 $\mathcal{D}$ 是链，这些良序彼此兼容，$\preceq_*$ 是 $W^{*}$ 上的良序，且 $(W^{*}, \preceq_*)\in \mathcal{W}$ 是 $\mathcal{D}$ 的上界。
 
 3. 由佐恩引理，取极大元 $(W, \preceq )$。
-
 4. 若 $W \ne X$，取 $x \in X \setminus W$，在 $W \cup \{x\}$ 上定义序：保留 $W$ 上的 $\preceq$，并令所有 $w \in W$ 都 $\preceq x$（把 $x$ 放在最顶端）。这仍是良序，而且是 $(W, \preceq )$ 的严格延拓，与极大性矛盾。故 $W = X$，即 $X$ 被良序化。∎
 
 #### 佐恩引理 ⟺ Hausdorff 极大原理　`eq.zorn-hausdorff`
@@ -6942,7 +6998,6 @@ $$\mathcal{C} = \{ C \subseteq P : C\text{ 是链} \}$$
 按包含关系 $\subseteq$ 排序。给定 $C_{0}$ 时改用 $\mathcal{C}_{0} = \{ C \in \mathcal{C} : C \supseteq C_{0} \}$，它非空（$C_{0} \in \mathcal{C}_{0}$）。
 
 1. **$\mathcal{C}_{0}$ 中每个链有上界**：设 $\mathcal{D} \subseteq \mathcal{C}_{0}$ 是（$\subseteq$）链，即 $\mathcal{D}$ 是一族两两可比较的链。令 $U = \bigcup \mathcal{D}$。任取 $x, y \in U$，则有 $D_{1}, D_{2} \in \mathcal{D}$ 使 $x \in D_{1}$、$y \in D_{2}$；因 $\mathcal{D}$ 是链，不妨设 $D_{1} \subseteq D_{2}$，于是 $x, y \in D_{2}$，而 $D_{2}$ 是链，故 $x$ 与 $y$ 可比。所以 $U$ 是链。又每个 $D \in \mathcal{D}$ 都 $\supseteq C_{0}$，故 $U \supseteq C_{0}$，即 $U \in \mathcal{C}_{0}$，它是 $\mathcal{D}$ 的上界。
-
 2. 由佐恩引理，$\mathcal{C}_{0}$ 有极大元 $M$。$M$ 是包含 $C_{0}$ 的链，且不能再变大，即 $M$ 是包含 $C_{0}$ 的极大链。∎
 
 **Hausdorff 极大原理 ⇒ 佐恩引理（路线 3⟹2）**
@@ -6950,9 +7005,7 @@ $$\mathcal{C} = \{ C \subseteq P : C\text{ 是链} \}$$
 设 $(P, \preceq )$ 是非空偏序集，且 $P$ 的每个链都有上界。
 
 1. 由 Hausdorff 极大原理（取 $C_{0} = \emptyset$），$P$ 存在极大链 $M$。
-
 2. M 是链，故由题设有上界 $u \in P$。
-
 3. **断言 $u$ 是极大元**：若不然，存在 $v \in P$ 使 $u \prec v$。则 $M \cup \{v\}$ 仍是链——任取 $m \in M$，由 $m \preceq u \prec v$ 及传递性得 $m \preceq v$，故 $m$ 与 $v$ 可比。于是 $M \subset M \cup \{v\}$ 是一个更大的链，与 $M$ 的极大性矛盾。
 
 故 $u$ 是 $P$ 的极大元。∎
@@ -6971,7 +7024,6 @@ $X$ 是链 $\iff X$ 中任两元素可比 $\iff X$ 的每个有限子集是链 $
 （最后一个 $\Longleftarrow$ 方向：任取 $x, y \in X$，则 {x, y} 是 $X$ 的有限子集，属于 $\mathcal{C}$，故 $x$ 与 $y$ 可比。）
 
 2. $\mathcal{C}$ 非空（$\emptyset$ 是链）。由 Tukey 引理，$\mathcal{C}$ 有极大元 $M$，即 $P$ 的极大链。
-
 3. 若要包含给定的 $C_{0}$：注意 $\mathcal{C}_{0} = \{ C \in \mathcal{C} : C \supseteq C_{0} \}$ 同样具有有限特征——「$X$ 含 $C_{0}$ 且 $X$ 的每个有限子集是链」正是有限特征的形状（含 $C_{0}$ 是整体性质，不对有限子集设限）。对 $\mathcal{C}_{0}$ 用 Tukey 引理即得包含 $C_{0}$ 的极大链。∎
 
 **Hausdorff 极大原理 ⇒ Tukey 引理**
@@ -6983,7 +7035,6 @@ $X$ 是链 $\iff X$ 中任两元素可比 $\iff X$ 的每个有限子集是链 $
 $$U = \bigcup \{ A : A \in \mathcal{C} \}$$
 
 1. **$U \in \mathcal{A}$**：由有限特征，只需证 $U$ 的每个有限子集属于 $\mathcal{A}$。设 $S \subseteq U$ 有限，则每个 $s \in S$ 落在某个 $A_s \in \mathcal{C}$ 中；$\mathcal{C}$ 是 $\subseteq$链而 $S$ 有限，故其中必有最大的 $A_{0}$ 包含 $S$（即 $S \subseteq A_{0}$）。因为 $A_{0} \in \mathcal{A}$ 且 $\mathcal{A}$ 具有有限特征，$A_{0}$ 的每个有限子集都属于 $\mathcal{A}$，特别地 $S \in \mathcal{A}$。故 $U$ 的每个有限子集属于 $\mathcal{A}$，从而 $U \in \mathcal{A}$。
-
 2. **$U$ 是极大元**：若存在 $B \in \mathcal{A}$ 使 $U \subset B$，则 $\mathcal{C} \cup \{B\}$ 仍是 $\subseteq$链（每个 $A \in \mathcal{C}$ 满足 $A \subseteq U \subseteq B$），与 $\mathcal{C}$ 的极大性矛盾。
 
 故 $U$ 是 $(\mathcal{A}, \subseteq )$ 的极大元。∎
@@ -7058,11 +7109,8 @@ $$\mathcal{A} = \{ S \subseteq V : S \supseteq S_0\text{ 且} S\text{ 线性无�
 按包含关系 $\subseteq$ 排序。
 
 1. **$\mathcal{A} \ne \emptyset$**：$S_{0} \in \mathcal{A}$。
-
 2. **每个链有上界**：设 $\mathcal{D} \subseteq \mathcal{A}$ 是 $\subseteq$链，令 $U = \bigcup \mathcal{D}$。要证 $U$ 线性无关，只需证 $U$ 的每个有限子集线性无关：取有限子集 $\{v_{1}$ …$v_{n}\} \subseteq U$，每个 $v_{i}$ 属于某个 $D_{i} \in \mathcal{D}$；$\mathcal{D}$ 是链且只有有限多个 $D_{i}$，故其中有一个最大的 $D$ 包含全部 $v_{i}$，即 $\{v_{1}$ …$v_{n}\} \subseteq D$。而 $D$ 线性无关，故它的子集 $\{v_{1}$ …$v_{n}\}$ 也线性无关。因此 $U$ 线性无关，$U \in \mathcal{A}$，它是 $\mathcal{D}$ 的上界。
-
 3. 由佐恩引理，$\mathcal{A}$ 有极大元 $B$。$B$ 是含 $S_{0}$ 的线性无关集，且在「含 $S_{0}$ 的线性无关集」中极大。
-
 4. **$B$ 生成 $V$**：若存在 $v \in V$ 不在 $B$ 的张成空间 span(B) 中，则 $B \cup \{v\}$ 仍线性无关（否则 $v$ 可写成 $B$ 中有限多个向量的线性组合，与 $v \notin \operatorname{span}(B)$ 矛盾），且严格大于 $B$，与 $B$ 的极大性矛盾。故 $\operatorname{span}(B) = V$，即 $B$ 是 $V$ 的基。取 $S_{0} = \emptyset$ 得「$V$ 有基」。∎
 
 > 同样的套路可以证明：每个环有极大理想、每个域上每个模有极大无关组、每个偏序集有极大反链。
@@ -11005,10 +11053,6 @@ Giraud 定理给出「是**拓扑斯**」的四个等价说法。
 
 命题说的是**紧生成空间**是余反射子范畴。
 
-#### 定义引用：「凝聚态阿贝尔群」→ CondAb 上的张量与内 Hom　`def-dep.condab-tensor`
-
-两个双函子定义在**凝聚态阿贝尔群**范畴上。
-
 #### 定义引用：「伴随函子」→ 紧生成空间是余反射子范畴　`def-dep.adjoint-cg-coreflective`
 
 「余反射」的意思是含入函子有**右伴随**。
@@ -11040,10 +11084,6 @@ Giraud 定理给出「是**拓扑斯**」的四个等价说法。
 #### 定义引用：「投射 / 内射对象」→ CondAb 由有限表现投射对象生成　`def-dep.projective-condab-generated`
 
 生成元取的是**有限表现的投射**对象。
-
-#### 定义引用：「伴随函子」→ CondAb 上的张量与内 Hom　`def-dep.adjoint-condab-tensor`
-
-$\otimes_{\mathbb{Z}}$ 与内部 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随**。
 
 #### 定义引用：「上链复形」→ 复形范畴是加法范畴　`def-dep.complex-additive`
 
@@ -11096,6 +11136,26 @@ $\otimes_{\mathbb{Z}}$ 与内部 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴�
 #### 定义引用：「Grothendieck 的 AB 公理」→ CondAb 满足 AB6 与 AB4*　`def-dep.ab-condab`
 
 AB6 与 AB4\* 的含义见「Grothendieck 的 AB 公理」那条。
+
+#### 定义引用：「拓扑斯」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.topos-abelian-grothendieck`
+
+定理对**拓扑斯** $\mathcal{T}$ 上的阿贝尔层说话。
+
+#### 定义引用：「阿贝尔层」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.abelsh-grothendieck`
+
+$\mathcal{T}(\mathbf{Ab})$ 就是 $\mathcal{T}$ 上的**阿贝尔层**范畴。
+
+#### 定义引用：「Grothendieck 范畴」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.grothendieck-topos-ab`
+
+结论是「$\mathcal{T}(\mathbf{Ab})$ 是 **Grothendieck 范畴**」。
+
+#### 定义引用：「生成元集」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.generator-topos-ab`
+
+小生成元集取 $\{\mathbb{Z}\cdot X : X \in S\}$，$S$ 是 $\mathcal{T}$ 的生成元集。
+
+#### 定义引用：「加法 / 阿贝尔范畴」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.abeliancat-topos-ab`
+
+结论的一部分是「$\mathcal{T}(\mathbf{Ab})$ 是**阿贝尔**范畴」。
 
 #### 定义引用：「子集」→ 关系　`def-dep.subset-rel`
 
@@ -12025,6 +12085,62 @@ AB5、AB6 的差别全在**滤过余极限**上：前者要它正合，后者还
 
 Grothendieck 范畴 = **AB5** 范畴 + 一个生成元。
 
+#### 定义引用：「自然变换」→ 取值一般的预层与层　`def-dep.valued-presh-nattrans`
+
+取值在一般范畴的预层就是**反变函子**，预层态射就是**自然变换**。
+
+#### 定义引用：「取值一般的预层与层」→ 阿贝尔层　`def-dep.abelsheaf-valued`
+
+**阿贝尔层**是取值在 $\mathbf{Ab}$ 的层。
+
+#### 定义引用：「预层」→ 阿贝尔层　`def-dep.abelsheaf-presheaf`
+
+阿贝尔群预层的底就是**集合预层**。
+
+#### 定义引用：「层」→ 阿贝尔层　`def-dep.abelsheaf-sheaf`
+
+「是不是层」这一条按**底集合预层**判。
+
+#### 定义引用：「预层范畴」→ 阿贝尔层　`def-dep.abelsheaf-presheafcat`
+
+$\widehat{\mathcal{C}}(\mathbf{Ab})$ 是**预层范畴**取值于 $\mathbf{Ab}$ 的版本。
+
+#### 定义引用：「积 / 余积」→ 内 Hom　`def-dep.internalhom-product`
+
+内 Hom 用的是 $\mathcal{T}$ 里的**积** $X \times Y$。
+
+#### 定义引用：「阿贝尔层」→ 内 Hom　`def-dep.internalhom-abelsheaf`
+
+内 Hom 的取值是**阿贝尔层**。
+
+#### 定义引用：「拓扑斯」→ 内 Hom　`def-dep.internalhom-topos`
+
+内 Hom 定义在**拓扑斯** $\mathcal{T}$ 上。
+
+#### 定义引用：「内 Hom」→ 阿贝尔层的张量积　`def-dep.tensor-internalhom`
+
+张量积由**内 Hom** 的那个可表示函子给出。
+
+#### 定义引用：「阿贝尔层」→ 阿贝尔层的张量积　`def-dep.tensor-abelsheaf`
+
+张量积定义在**阿贝尔层**范畴上。
+
+#### 定义引用：「伴随函子」→ 阿贝尔层的张量积　`def-dep.tensor-adjoint`
+
+$\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随**。
+
+#### 定义引用：「阿贝尔层」→ 凝聚态阿贝尔群　`def-dep.condab-abelsheaf`
+
+凝聚态阿贝尔群是 $\mathcal{T} = \mathrm{Cond}$ 的**阿贝尔层**。
+
+#### 定义引用：「凝聚态阿贝尔群」→ 阿贝尔层的张量积　`def-dep.tensor-condab`
+
+凝聚态阿贝尔群是这里的**特例**（$\mathcal{T} = \mathrm{Cond}$）。
+
+#### 定义引用：「阿贝尔层的张量积」→ 平坦阿贝尔层　`def-dep.flat-tensor`
+
+平坦性说的是「$P \otimes_{\mathbb{Z}} -$ **正合**」。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -12247,6 +12363,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **图与极限 ↔ 复形与导出三角**　3 条节点级连线
 - **图与极限 ↔ 同调与正合列**　3 条节点级连线
 - **凝聚态阿贝尔群 ↔ 加法与阿贝尔范畴**　2 条节点级连线
+- **拓扑斯 ↔ 阿贝尔层**　3 条节点级连线
+- **加法与阿贝尔范畴 ↔ 阿贝尔层**　2 条节点级连线
 - **向量空间的基 ↔ 序结构**　2 条节点级连线
 - **微分定理 ↔ 集合族与 σ-代数**　2 条节点级连线
 - **集合族与 σ-代数 ↔ 符号测度与分解**　2 条节点级连线
@@ -12264,3 +12382,5 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **范畴与图 ↔ 复形与导出三角**　2 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　4 条节点级连线
 - **单满、子对象与像 ↔ 加法与阿贝尔范畴**　2 条节点级连线
+- **预层与米田 ↔ 阿贝尔层**　2 条节点级连线
+- **凝聚态阿贝尔群 ↔ 阿贝尔层**　2 条节点级连线

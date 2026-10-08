@@ -13,6 +13,4 @@ $X$ 是链 $\iff X$ 中任两元素可比 $\iff X$ 的每个有限子集是链 $
 
 （最后一个 $\Longleftarrow$ 方向：任取 $x, y \in X$，则 {x, y} 是 $X$ 的有限子集，属于 $\mathcal{C}$，故 $x$ 与 $y$ 可比。）
 
-2. $\mathcal{C}$ 非空（$\emptyset$ 是链）。由 Tukey 引理，$\mathcal{C}$ 有极大元 $M$，即 $P$ 的极大链。
-
 > 续见 proofs/eq.hausdorff-tukey.2.md

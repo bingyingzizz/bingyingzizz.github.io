@@ -9,6 +9,4 @@ $$\mathcal{A} = \{ S \subseteq V : S \supseteq S_0\text{ 且} S\text{ 线性无�
 
 按包含关系 $\subseteq$ 排序。
 
-1. **$\mathcal{A} \ne \emptyset$**：$S_{0} \in \mathcal{A}$。
-
 > 续见 proofs/imp.zorn-to-basis.2.md

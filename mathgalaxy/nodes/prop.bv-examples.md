@@ -3,12 +3,10 @@
 layer 16 · 命题 · 有界变差与绝对连续 · 分析学
 
 1. 若 $F : \mathbb{R} \to \mathbb{R}$ **有界递增**，则 $F \in BV$（此时 $T_F = F - F(-\infty)$）。
-
 2. $BV$ 是 $\mathbb{C}$向量空间。
-
 3. 若 $F$ 实可微且 $F'$ 有界，则对一切 $-\infty < a < b < \infty$ 有 $F \in BV([a,b])$。
-
 4. $F(x) = \sin x$：对任何紧区间 $[a,b]$，$F \in BV([a,b])$。
+5. $F(x) = xsin(1/x)$（$x \ne 0$），$F(0) = 0$：若 $0 \in [a,b]$，则 $F \in
 > 陈述续见 `nodes/prop.bv-examples.2.md`
 
 

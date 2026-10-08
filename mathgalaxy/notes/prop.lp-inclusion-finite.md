@@ -22,5 +22,4 @@ $$\|f\|_p^p = \int |f|^p \cdot 1 \le \big\| |f|^p \big\|_{q/p} \, \|1\|_{q/(q-p)
 
 
 - **测度有限** $\to$ 只有「爆破」要防 $\to$ 指数**越小**空间**越大**：$L^1 \supseteq L^2 \supseteq \cdots \supseteq L^\infty$；
-
 - **计数测度** $\to$ 只有「衰减」要防 $\to$ 指数**越大**空间**越小**：$\ell^1 \subseteq \ell^2 \subseteq \cdots \subseteq \ell^\infty$。
