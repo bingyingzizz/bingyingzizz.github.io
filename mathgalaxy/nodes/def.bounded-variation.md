@@ -1,6 +1,6 @@
 # 有界变差 BV　`def.bounded-variation`
 全变差与有界变差函数（Total Variation, BV）
-layer 15 · 定义 · 有界变差与绝对连续 · 分析学
+layer 16 · 定义 · 有界变差与绝对连续 · 分析学
 
 设 $F : \mathbb{R} \to \mathbb{C}$。定义它的**全变差函数**
 

@@ -7,3 +7,5 @@
 3. **有限交封闭**：$U, V \in \mathcal{T} \implies U \cap V \in \mathcal{T}$。
 
 $\mathcal{T}$ 的成员称为**开集**，它们的补集称为**闭集**。
+
+> 续见 `nodes/def.topology.3.md`

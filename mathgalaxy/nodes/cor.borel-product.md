@@ -1,6 +1,6 @@
 # 可数积的 Borel 代数　`cor.borel-product`
 推论：可数积距离空间的 Borel σ-代数（可分时相等）
-layer 13 · 推论 · 乘积测度与 Fubini · 分析学+拓扑学
+layer 14 · 推论 · 乘积测度与 Fubini · 分析学+拓扑学
 
 设 $X_{1}, X_{2}$ … 是距离空间，$X = \prod_{j=1}^{\infty} X_j$ 配以积度量。则
 

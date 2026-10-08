@@ -1,6 +1,6 @@
 # Lebesgue 微分定理　`thm.lebesgue-differentiation`
 Lebesgue 微分定理：$A_{r} f(x) \to f(x) \text{a.e.}$
-layer 23 · 定理 · 微分定理 · 分析学
+layer 24 · 定理 · 微分定理 · 分析学
 
 设 $f \in L^1_{loc}$。则
 

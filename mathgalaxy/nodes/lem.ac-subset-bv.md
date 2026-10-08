@@ -1,6 +1,6 @@
 # AC ⊆ BV　`lem.ac-subset-bv`
 引理：绝对连续蕴含绝对变差（紧区间上）
-layer 16 · 引理 · 有界变差与绝对连续 · 分析学
+layer 17 · 引理 · 有界变差与绝对连续 · 分析学
 
 $$AC([a, b]) \subseteq BV([a, b])$$
 

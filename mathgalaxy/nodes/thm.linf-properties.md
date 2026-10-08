@@ -1,6 +1,6 @@
 # L^∞ 的性质　`thm.linf-properties`
 定理：$L^\infty$ 的五条基本性质
-layer 19 · 定理 · L^p 空间 · 分析学
+layer 20 · 定理 · L^p 空间 · 分析学
 
 **(a)** $\|fg\|_\infty \le \|f\|_\infty \|g\|_\infty$。若 $f \in L^1$、$g \in L^\infty$，则
 

@@ -11,4 +11,16 @@
 
 - 每个向量空间有基 | Hamel 基 | 基的存在性 → thm.vsbasis
 
+- 群 | group | 阿贝尔群 | 交换群 | Abelian group → def.group
+
+- 子群 | subgroup → def.subgroup
+
+- 正规子群 | normal subgroup | 陪集 | coset → def.normal-subgroup
+
+- 商群 | quotient group | G/N | 商映射 → def.quotient-group
+
+- 群同态 | group homomorphism | 核 | kernel | 像 | image → def.group-hom
+
+- Noether 第一同构定理 | 第一同构定理 | 同构定理 | first isomorphism theorem | Noether → thm.first-iso
+
 见 `../../alias.md`。

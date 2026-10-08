@@ -1,6 +1,6 @@
 # 五种收敛　`def.convergence-modes`
 收敛的类型：一致 / 近一致 / a.e. / 依测度 / $L^{1}$
-layer 19 · 定义 · 可测函数与收敛 · 分析学
+layer 20 · 定义 · 可测函数与收敛 · 分析学
 
 设 $f_n, f : X \to \mathbb{C}$ 可测，$X$ 带测度 $\mu$。
 > 陈述续见 `nodes/def.convergence-modes.2.md`

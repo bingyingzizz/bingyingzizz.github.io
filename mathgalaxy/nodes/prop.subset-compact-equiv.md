@@ -1,6 +1,6 @@
 # 子集的紧性刻画　`prop.subset-compact-equiv`
 命题：X 完备时，A 紧 $\iff A$ 闭且全有界
-layer 14 · 命题 · 度量空间 · 拓扑学
+layer 15 · 命题 · 度量空间 · 拓扑学
 
 设 (X, d) 是**完备**的距离空间，$A \subseteq X$。则
 

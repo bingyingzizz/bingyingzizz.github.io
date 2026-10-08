@@ -1,6 +1,6 @@
 # ℝ 不可数　`thm.real-uncountable`
 实数集是稠密而不可数的：$|\mathbb{R}| = 2^{\aleph_0}$
-layer 13 · 定理 · 数系的构造 · 分析学+集合论
+layer 14 · 定理 · 数系的构造 · 分析学+集合论
 
 **实数集 $\mathbb{R}$ 不可数**：不存在从 $\mathbb{N}$ 到 $\mathbb{R}$ 的满射，即 $\mathbb{R}$ 不能排成一个序列。
 

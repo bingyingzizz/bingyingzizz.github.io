@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-08T10:32:16.713Z
-> 9 星系 / 40 星团 / 378 节点 / 806 连线（强边 797，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-08T10:42:42.368Z
+> 9 星系 / 40 星团 / 401 节点 / 860 连线（强边 851，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -1341,6 +1341,19 @@ $$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 
 商拓扑与子空间拓扑是方向相反的一对：一个取「切一刀得到的最粗」，一个取「贴回去得到的最细」。
 
+#### 积拓扑　`def.product-topology`
+*定义*　积拓扑与乘积空间（Product Topology）
+
+设 $(X_{i}, \mathcal{T}_{i})_{i \in I}$ 是一族拓扑空间。$\prod_{i \in I} X_{i}$ 上的**积拓扑**是以
+
+$$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},\ \text{除有限多个 } i \text{ 外 } U_{i} = X_{i})$$
+
+为基的拓扑 —— 也就是使所有投影 $\pi_{j} : \prod_{i} X_{i} \to X_{j}$ 都连续的**最粗**拓扑。
+
+⭐ **「最粗」是关键字**：投影要连续，只要求每个 $\pi_{j}^{-1}(U_{j})$ 是开的；把这些取有限交当基，就是积拓扑。要求更细反而会丢掉极限 —— 而「$x_{n} \to x$ $\iff$ 按每个分量都收敛」正是这条最粗性换来的。
+
+**范畴意义**：$\prod_{i} X_{i}$ 连同投影就是 $\mathbf{Top}$ 里的**积**。所以积拓扑不是随便挑的，它是泛性质唯一确定的那一个。
+
 #### Hausdorff 空间　`def.hausdorff`
 *定义*　Hausdorff 空间 / $T_{2}$（Hausdorff Space）
 
@@ -1702,17 +1715,74 @@ Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续
 
 这条把 Gleason 定理翻译成了一句「具体拓扑」的话：投射性 = 收缩核。与模论里「投射模 = 自由模的直和项」完全平行 —— 两者都是「投射 = 从自由对象上切一块下来」。
 
-### 星团：紧生成空间
-> 造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。
+### 星团：紧生成空间与弱 Hausdorff
+> 造出「乘积好用的拓扑空间范畴」：紧生成空间（$k$-空间）→ $k$-拓扑与 $k$-化 → 商映射与积 → 紧开拓扑 → 弱 Hausdorff → $\mathrm{CGWH}$ 是反射子范畴。
 
 #### 紧生成空间　`def.compactly-generated`
 *定义*　紧生成空间 / $k$-空间（Compactly Generated Space）
 
-拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \subseteq X$ 闭 $\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \to X$，$f^{-1}(Y)$ 在 $S$ 中闭。
+拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。
 
-例：局部紧 Hausdorff 空间都是紧生成的。
+等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— $Y \subseteq X$ 是开（闭）集 $\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \to X$，$f^{-1}(Y)$ 在 $S$ 中开（闭）。
 
-「由紧 Hausdorff 空间的映射决定拓扑」这句话的意思是：**只要一个子集在所有这类映射下的原像都闭，它就是闭的**。一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。
+「由从紧 Hausdorff 空间进来的映射决定拓扑」的意思是：**只要一个子集在所有这类映射下的原像都开，它就是开的**。
+
+一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。
+
+这是**余反射**的入口：$k$-化（见「$k$-开、$k$-闭与 $k$-拓扑」）把任何空间改造成紧生成的，而且改造前后到别的紧生成空间之间的映射一一对应。
+
+#### 紧生成空间的例子　`ex.cg-examples`
+*例*　哪些空间是紧生成的
+
+**例 1**　局部紧 Hausdorff 空间是紧生成的。
+**例 2**　序列空间是紧生成的：$A \subseteq X$ 闭 $\iff$ 只要 $x_{n} \to x$ 且 $x_{n} \in A$，就有 $x \in A$。
+**例 3**　若 $I$ **不可数**，则 $\mathbb{R}^{I}$ 与 $\mathbb{Z}^{I}$（积拓扑）都**不是**紧生成的。
+
+**例 1** 是最常用的一条：紧 Hausdorff 空间自己当然紧生成（它本身就是自己的那条余极限）；一般局部紧 Hausdorff 空间由「取紧邻域」这一类映射决定拓扑。
+
+**例 3** 是反面教材 —— 它正是「乘积不好用」的根源：$\mathbb{R}^{I}$ 太细，细到没有足够的紧 Hausdorff 空间能测出它的拓扑。$k$-化会把它换成拓扑更粗的 $k(\mathbb{R}^{I})$，那个才好用。
+
+#### 紧生成空间的等价刻画　`prop.cg-equivalent-conditions`
+*命题*　紧生成性的六条等价说法
+
+下面六条等价：
+
+1. $X$ 是紧生成的；
+2. $X$ 是「紧 $T_{1}$ 空间的不交并」的商空间；
+3. $X$ 是「局部紧 $T_{1}$ 空间」的商空间；
+4. $Y \subseteq X$ 开 $\iff$ 对每个从紧 $T_{1}$ 空间出发的连续 $f : S \to X$，$f^{-1}(Y)$ 开；
+5. $X \to Y$ 连续 $\iff$ 对每个连续 $f : S \to X$，复合 $S \to X \to Y$ 连续；
+6. $X$ 是所有连续映射 $S \to X$（$S$ 紧 $T_{1}$）的余极限。
+
+**证明的走法。** (1) $\iff$ (6) 是定义换一种说法：余极限就是「由全体映射决定」。
+
+
+
+- (6) $\implies$ (2)：取 $Y = \coprod_{S \to X} S$（沿所有连续映射 $S \to X$，$S$ 紧 $T_{1}$）。全体映射拼出 $Y \to X$，它显然满 —— **满的连续映射就是商映射**。
+- (2) $\implies$ (3)：紧 $T_{1}$ 空间本身局部紧。
+- (3) $\implies$ (1)：商映射 $Z \twoheadrightarrow X$（$Z$ 局部紧 $T_{1}$）把 $Z$ 的紧生成性传下去 —— 商是余极限，而余极限的余极限还是余极限。
+- (4) $\iff$ (1)：这是「由映射决定拓扑」的逐字翻译：用 $S$ 是紧空间这一条，把 $f^{-1}(Y)$ 的开性从 $f(S)$ 拉回到 $S$ 上。
+- (5) $\iff$ (4)：把「$X \to Y$ 连续」按定义展开成「开集的原像开」，再用 (4) 换成紧 $T_{1}$ 空间上的检验。
+
+⚠️ **测试空间的取法要留意。** 定义那一条用的是**紧 Hausdorff**空间，而这里 (2)(3)(4)(6) 用的是**紧 $T_{1}$**空间。两个测试族是否给出同一个 $k$-化，取决于「从紧 $T_{1}$ 空间出发的连续映射能否换成从紧 Hausdorff 空间出发的」—— **这一点待核对**；用的时候务必先把手头的测试族固定下来。
+
+#### k-开、k-闭与 k-拓扑　`def.k-topology`
+*定义*　$k$-开集与 $k$-化（$k$-Topology）
+
+子集 $Y \subseteq X$ 叫 **$k$-开**（**$k$-闭**）的，如果对每个连续映射 $f : S \to X$（$S$ 紧 Hausdorff），$f^{-1}(Y)$ 在 $S$ 中开（闭）。
+
+全体 $k$-开集构成的拓扑叫 $X$ 上的 **$k$-拓扑**；记 $kX$ 为「同一个集合、拓扑换成 $k$-拓扑」的那个空间。
+
+$k$-拓扑就是**使所有连续映射 $S \to X$（$S$ 紧 Hausdorff）都连续的最终（最细）拓扑**。它比原来的拓扑**细** —— 开集变多了（原本开的当然还是 $k$-开的）。
+
+⭐ **紧生成 = 自己就是 $k$-化**：$X$ 紧生成 $\iff$ $kX = X$（同一个拓扑空间）。所以 $k$ 是一个**幂等**的改造：$k(kX) = kX$。
+
+一般情形下 $kX$ 与 $X$ 之间的恒等映射 $kX \to X$ 连续（拓扑变细了），但反方向不连续 —— 这个「往下走」的映射正是余反射的余单位 $\varepsilon_{X}$。
+
+#### kX 是紧空间的余极限　`prop.ktx-colimit`
+*命题*　$kX = \varinjlim S$
+
+对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \to X$（$S$ 取遍紧 $T_{1}$ 空间）在 $\mathbf{Top}$ 中的余极限。
 
 #### 紧生成空间是余反射子范畴　`prop.cg-coreflective`
 *命题*　紧生成空间是 $\mathbf{Top}$ 的余反射子范畴
@@ -1721,28 +1791,175 @@ Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续
 
 $$k : \mathbf{Top} \longrightarrow k\mathbf{Top}, \qquad X \mapsto kX$$
 
-即 $i \dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成紧生成的那一个。
+即 $i \dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成 $k$-拓扑。
 
-⭐ 与紧 Hausdorff 对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\beta$），而 $k\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。
+**要证的是**：对每个紧生成空间 $X$ 与每个拓扑空间 $Y$，
+
+
+
+$$\operatorname{Hom}_{\mathbf{Top}}(X,\ Y) \;\cong\; \operatorname{Hom}_{k\mathbf{Top}}\bigl(X,\ kY\bigr).$$
+
+
+
+**证明。** 余单位是 $\varepsilon_{Y} : kY \to Y$（恒等映射，拓扑从细到粗，连续）。
+
+
+
+- 先证 $kY$ 确实紧生成：把每个连续映射 $S \to Y$（$S$ 紧 $T_{1}$）复合 $\varepsilon_{Y}$ 抬成 $S \to kY$，再用 $kY$ 的定义（$k$-开集的取法）验证「由这些映射决定拓扑」。
+- 于是任意 $f : X \to Y$ 连续（$X$ 紧生成）时，$f = \varepsilon_{Y} \circ f': X \to kY$ 给出一个到 $kY$ 的连续映射 $f'$：设 $U \subseteq kY$ 开，要证 $f'^{-1}(U)$ 在 $X$ 中开。由 $X$ 紧生成，只需对每个紧 $L \subseteq X$ 验证 $f'^{-1}(U) \cap L$ 在 $L$ 中开。而 $f|_{L} : L \to Y$ 连续、$L$ 紧，故 $f(L)$ 紧；$U \cap f(L)$ 在 $f(L)$ 中开，于是 $(f|_{L})^{-1}\bigl(U \cap f(L)\bigr) = f'^{-1}(U) \cap L$ 在 $L$ 中开。∎
+- 反向由 $\varepsilon_{Y}$ 连续直接得到。这样两个方向互逆，就是那个同构。
+
+⭐ 与紧 Hausdorff 对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\beta$），而 $k\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对**余极限**封闭。
+
+#### 商映射与局部紧空间作积　`thm.quotient-product`
+*定理*　商映射与局部紧因子作积仍是商映射
+
+设 $q : X \to Y$ 是**商映射**，$Z$ 是**局部紧 Hausdorff** 空间。则
+
+$$q \times \mathrm{id}_{Z} : X \times Z \longrightarrow Y \times Z$$
+
+也是商映射。
+
+⭐ **这是「紧生成空间对积封闭」那条的引擎**，也是搜「商映射」「局部紧」时该落到的地方。
+
+**证明的走法（逆映射连续法）。** 记 $W := (q \times \mathrm{id}_{Z})^{-1}(U)$，要证 $W$ 开。取一点 $(x, z) \in W$，记 $y = q(x)$。因为 $U$ 在 $Y \times Z$ 中开，可以挑出基本开集
+
+
+
+$$V \times K \;\subseteq\; U, \qquad y \in V,\;\; z \in K,$$
+
+
+
+其中 $V$ 开、$K$ 是 $z$ 的**紧邻域**（局部紧 Hausdorff $\implies$ 每点有紧邻域基，可以要求 $K$ 落在任意给定的邻域里）。由 $q$ 是商映射，$q^{-1}(V)$ 是 $X$ 中的开集，于是
+
+
+
+$$q^{-1}(V) \times K \;\subseteq\; W$$
+
+
+
+是 $(x, z)$ 的一个开邻域 —— 所以 $(x, z)$ 是 $W$ 的内点，$W$ 开。∎
+
+⚠️ **局部紧这个条件不能省。** 一般情形下「商映射乘 id」不是商映射：取 $q$ 是某条坏商、$Z$ 是一个既不局部紧又不紧生成的空间，乘积的商拓扑会严格细于商空间应有的拓扑。
+
+记法：有的书上把这条写成「$Z$ 局部紧 Hausdorff $\implies$ 函子 $- \times Z$ 保商映射」。
+
+#### 紧生成空间对积封闭　`cor.cg-product`
+*推论*　紧生成空间作积仍紧生成
+
+若 $X$ 紧生成、$Y$ 局部紧 Hausdorff，则 $X \times Y$ 紧生成。
+
+#### k-化与积　`prop.k-product`
+*命题*　$k(kX \times Y) = k(X \times Y)$
+
+对任何 $X, Y \in \mathbf{Top}$，
+
+$$k(kX \times Y) \;=\; k(X \times Y).$$
+
+若 $Y$ 还**局部紧 Hausdorff**，则更强：
+
+$$kX \times Y \;=\; k(X \times Y).$$
+
+两式的差别正好是余反射子范畴的两个层次：一般情形下 $k$ 不是「积封闭」的，得对积再取一次 $k$；$Y$ 局部紧 Hausdorff 时（由商映射与积那条定理）$k$ 与「乘 $Y$」可交换。**这就是为什么 $k\mathbf{Top}$ 里的乘积得取 $k(X \times Y)$ 而不是 $X \times Y$。**
+
+#### 紧开拓扑　`def.compact-open-topology`
+*定义*　紧开拓扑（Compact-Open Topology）
+
+设 $X, Y \in \mathbf{Top}$。对每个连续映射 $g : S \to X$（$S$ 紧 Hausdorff）与每个开集 $V \subseteq Y$，令
+
+$$W_{S,V} := \{\, f : X \to Y \;\mid\; \operatorname{Im}(f \circ g) \subseteq V \,\}.$$
+
+$C(X, Y)$（也就是 $\operatorname{Hom}_{\mathbf{Top}}(X, Y)$）上的**紧开拓扑**是由全体 $W_{S,V}$ 生成的拓扑。
+
+读法：$W_{S,V}$ 是「在所有从头进来的紧块上都落在 $V$ 里」的那些映射。$g$ 通过 $S$ 这个「测试块」把 $X$ 的局部控制住。
+
+⭐ 这一条让 $\operatorname{Hom}(X,Y)$ 本身成为一个拓扑空间 —— 于是可以谈「映射空间」，才可以谈同伦、道路空间、环路空间。在 $\mathrm{CGWH}$ 里它才真正好用（见「函数空间弱 Hausdorff」那条）。
+
+#### 离散时函数空间是积　`prop.compact-open-discrete`
+*命题*　离散 $X$ 时 $C(X,Y) \cong Y^{X}$
+
+若 $X$ 是**离散**空间，则 $C(X, Y) \cong Y^{X}$（右边取**积拓扑**）。
+
+#### 弱 Hausdorff 空间　`def.weak-hausdorff`
+*定义*　弱 Hausdorff 空间（Weak Hausdorff Space）
+
+拓扑空间 $X$ 叫**弱 Hausdorff** 的，如果对每个连续映射 $f : S \to X$（$S$ 紧 Hausdorff），像 $f(S)$ 都在 $X$ 中**闭**。
+
+#### 弱 Hausdorff 的基本性质　`prop.weak-hausdorff-basic`
+*命题*　弱 Hausdorff 的几条基本性质
+
+设 $X$ 弱 Hausdorff。则
+
+- $X$ 的每个紧 Hausdorff 子空间都闭；
+- $X$ 是 $T_{1}$ 的（单点是紧 Hausdorff 子空间）；
+- 对每个连续 $f : S \to X$（$S$ 紧 Hausdorff），$f(S)$ 是**紧 Hausdorff** 的；
+- **对角** $\Delta_{X} \subseteq X \times X$ 是 $k$-闭的；反过来，若 $X$ 紧生成，则对角 $k$-闭 $\implies$ $X$ 弱 Hausdorff；
+- 若还有 $Y$ 弱 Hausdorff、$f, g : X \rightrightarrows Y$ 连续，则 $\ker(f, g) = \{\, x : f(x) = g(x) \,\} \subseteq X$ 是 $k$-闭的。
+
+**为什么叫「弱」Hausdorff。** Hausdorff 要求任意两点的开邻域能分开；弱 Hausdorff 只要求「紧块的像是闭的」—— 条件弱得多，却正好够用：出现在 $\mathrm{CGWH}$ 里的那些构造（商、函数空间、纤维积）都不需要全 Hausdorff。
+
+⚠️ 弱 Hausdorff **不蕴含** Hausdorff（存在紧生成的弱 Hausdorff 而非 Hausdorff 的空间）；但它蕴含 $T_{1}$，上面第二条就是。
+
+**对角那条的作用**：$\Delta_{X}$ $k$-闭 $\iff$ 「两个映射相等的点集」是 $k$-闭的 —— 这与 $T_{1}$、$T_{2}$ 在一般拓扑里的刻画（对角闭）平行，只是这里闭的判据换成了 $k$-闭。紧生成是让这个等价反过来的补充条件。
+
+#### 紧块的纤维积还是紧的　`prop.cgwh-fiber-product`
+*命题*　紧 Hausdorff 沿弱 Hausdorff 的纤维积
+
+若 $S, S'$ 是紧 Hausdorff 空间、$X$ 弱 Hausdorff，且给定了连续映射 $S \to X$、$S' \to X$，则纤维积 $S \times_{X} S'$ 紧 Hausdorff。
+
+#### k-闭等价关系与弱 Hausdorff 商　`prop.cg-kclosed-quotient`
+*命题*　$R$ 是 $k$-闭 $\iff$ $X/R$ 弱 Hausdorff
+
+设 $X$ 紧生成，$R$ 是 $X$ 上的等价关系（看作 $R \subseteq X \times X$）。则 $R$ 是 $k$-闭的 $\iff$ 商空间 $X/R$ 弱 Hausdorff。
+
+#### CGWH 是 CG 的反射子范畴　`thm.cgwh-reflective`
+*定理*　紧生成的弱 Hausdorff 空间是反射子范畴
+
+紧生成的**弱 Hausdorff** 空间构成的范畴 $\mathrm{CGWH}$ 是 $\mathrm{CG}$（紧生成空间）的**反射**子范畴。
+
+反射是
+
+$$h : X \longmapsto X/R,$$
+
+其中 $R$ 是 $X$ 上**最小的闭等价关系**。
+
+**为什么取「最小的闭等价关系」。** 要让商 $X/R$ 弱 Hausdorff，$R$ 得是 $k$-闭的（上一条）；而要商掉得尽量少、好让反射是「最经济」的改造，就取最小的那个闭等价关系。（$R \mapsto X/R$ 把关系越大商越小，方向别弄反。）
+
+⭐ 这一条给出「怎么把一个空间修好」的完整链条：$X \rightsquigarrow kX$（先 $k$-化，变成 $\mathrm{CG}$）$\rightsquigarrow kX/R$（再商掉最小闭等价关系，变成 $\mathrm{CGWH}$）。两步都是**函子性**的，所以 $\mathrm{CGWH}$ 里的同构、极限、余极限都能从 $\mathbf{Top}$ 里搬过来。
+
+⭐ 这就是为什么现代代数拓扑默认在 $\mathrm{CGWH}$ 里做事：$\mathrm{CGWH}$ 对**有限积**封闭、函数空间 $kC(X,Y)$ 还在里面、且是笛卡尔闭的 —— 而 $\mathbf{Top}$ 一个都不满足。
+
+#### CGWH 的开闭子空间与滤过余极限　`prop.cgwh-closed`
+*命题*　$\mathrm{CGWH}$ 的封闭性
+
+1. 紧生成的弱 Hausdorff 空间的**开子空间**与**闭子空间**仍紧生成且弱 Hausdorff。
+2. 若 $X = \varinjlim X_{i}$ 是紧生成的弱 Hausdorff 空间沿**闭含入**的**滤过**余极限，则 $X$ 也紧生成的弱 Hausdorff，并且每个 $X_{i}$ 都在 $X$ 中闭。
+
+第 2 条正是凝聚态数学里反复要用的那一条：把「由有限块拼起来的对象」按滤过余极限拼大，$\mathrm{CGWH}$ 的性质不会掉。
+
+#### 函数空间弱 Hausdorff　`prop.cg-function-space`
+*命题*　$Y$ 弱 Hausdorff $\implies$ $kC(X,Y)$ 弱 Hausdorff
+
+若 $Y$ 弱 Hausdorff，则 $kC(X, Y)$（紧开拓扑再取 $k$-化）也弱 Hausdorff。
 
 ## 星系：抽象代数（Abstract Algebra）
 > 群、环、域、模与线性代数；佐恩引理的经典应用场。
 
 ### 星团：代数结构
-> 造出代数语言本身：**域** = 集合 + 两个运算 + 公理，**有序域** = 域 + 与运算相容的全序。ℚ 与 ℝ 都是实例。（代数学的笔记进来后这一团扩容：群 / 环 / 模。）
+> 造出代数语言本身：**群** = 集合 + 运算 + 公理 → 子群 → 正规子群 → 商群 → 第一同构定理；再往上叠**域**（= 两个阿贝尔群 + 分配律）与**有序域**。
 
 #### 域　`def.field`
 *定义*　域 $F$（Field）
 
 设 $F$ 是一个**集合**，$+$ 与 $\cdot$ 是 $F$ 上的两个**二元运算**（即两个函数 $F \times F \to F$）。称 $(F, +, \cdot)$ 是一个**域**，当且仅当：
 
-- **加法**：$a + (b + c) = (a + b) + c$，$a + b = b + a$；存在 $0 \in F$ 使 $a + 0 = a$；对每个 $a$ 存在 $-a \in F$ 使 $a + (-a) = 0$；
-- **乘法**：$a(bc) = (ab)c$，$ab = ba$；存在 $1 \in F$，$1 \ne 0$，使 $a \cdot 1 = a$；对每个 $a \ne 0$ 存在 $a^{-1} \in F$ 使 $a\, a^{-1} = 1$；
-- **分配律**：$a (b + c) = ab + ac$。
+- $(F, +)$ 是**阿贝尔群**；
+- $(F \setminus \{0\}, \cdot)$ 是**阿贝尔群**（这里 $0$ 是加法群的单位元）；
+- **分配律** $a (b + c) = ab + ac$ 对一切 $a, b, c \in F$ 成立。
 
 一句话：**加减乘除（除以非零元）都封闭，且满足结合、交换、分配律**。
 
-⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。
+⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。注意上面三条把「群」的两条公理组直接**引用**过来了：域的定义是**在群的定义之上再加一层**，不是重新数一遍等式。
 
 已经造好的例子：
 - $\mathbb{Q}$（有理数）：最顺手的域；
@@ -1771,6 +1988,138 @@ $$|a| := \begin{cases} a, & a \ge 0 \\ -a, & a < 0 \end{cases}$$
 📌 **「完备」不是这条定义的一部分**，它是在有序域上再加一条：**每个非空有上界的子集都有上确界**。$\mathbb{Q}$ 就是「有序但完备不了」的例子 —— $\{q \in \mathbb{Q} : q^2 < 2\}$ 有上界却没有上确界。
 
 参考：Lang, Algebra, Ch. VI；Rudin, Principles of Mathematical Analysis, Ch. 1
+
+#### 群　`def.group`
+*定义*　群与阿贝尔群（Group）
+
+设 $G$ 是**集合**，$\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \times G \to G$，$(a, b) \mapsto a \cdot b$）。称 $(G, \cdot)$ 是一个**群**，当且仅当：
+
+- **结合律**：$(a b) c = a (b c)$ 对一切 $a, b, c \in G$ 成立；
+- **单位元**：存在 $e \in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；
+- **逆元**：对每个 $a \in G$ 存在 $a^{-1} \in G$ 使 $a a^{-1} = a^{-1} a = e$。
+
+再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。
+
+⭐ **格式还是「集合 + 运算 + 公理」**：群不是凭空的对象 —— 一个集合、一个函数、三条等式就定出了一个群。判别一个东西是不是群，就是逐条核对这些等式。
+
+**单位元与逆元是唯一的**：若 $e, e'$ 都是单位元，则 $e = e e' = e'$；若 $a^{-1}, a'$ 都是 $a$ 的逆，则 $a' = a' e = a' a a^{-1} = e a^{-1} = a^{-1}$。所以「$e$」与「$a^{-1}$」这两个记号合法。
+
+**例子与反例**：$(\mathbb{Z}, +)$ 是阿贝尔群；$(\mathbb{Q} \setminus \{0\}, \cdot)$ 是阿贝尔群；$(\mathbb{Z}, \cdot)$ **不是**群（只有 $\pm 1$ 有乘法逆元）；$n \times n$ 可逆矩阵在乘法下是群但**不阿贝尔**（$n \ge 2$）。
+
+📌 还有一层更弱的：只要求结合律与单位元、不要求逆元，叫**幺半群**。（$\mathbb{N}$ 在加法下就是幺半群不是群。）
+
+#### 子群　`def.subgroup`
+*定义*　子群（Subgroup）
+
+设 $(G, \cdot)$ 是群，$H \subseteq G$。称 $H$ 是 $G$ 的**子群**（记 $H \le G$），如果 $H$ 在**限制过来的运算**下自己构成一个群 —— 也就是：
+
+- $e \in H$；
+- $a, b \in H \implies ab \in H$（对运算封闭）；
+- $a \in H \implies a^{-1} \in H$（对逆封闭）。
+
+（结合律是从 $G$ 里继承的，不必重查。）
+
+两条合起来可写成一条：$a, b \in H \implies a b^{-1} \in H$。
+
+任意多个子群的交仍是子群；但**并**一般不是 —— 这也是「由 $S$ 生成的子群 $\langle S \rangle$」要定义成「含 $S$ 的一切子群的交」的原因。
+
+#### 正规子群　`def.normal-subgroup`
+*定义*　正规子群与陪集（Normal Subgroup）
+
+设 $H \le G$，$g \in G$。**左陪集**与**右陪集**分别是
+
+$$gH := \{\, gh : h \in H \,\}, \qquad Hg := \{\, hg : h \in H \,\}.$$
+
+称 $H$ 是 $G$ 的**正规子群**（记 $H \trianglelefteq G$），如果对一切 $g \in G$ 有 $gH = Hg$，等价地 $gHg^{-1} = H$。
+
+⭐ **为什么要正规。** 陪集 $gH$ 是**集合**，想用「$gH \cdot g'H := gg'H$」把商集变成群，就必须让这个定义**与代表元的选取无关**。算一下差在哪儿：
+
+
+
+$$(g h)(g' h') = g g' \cdot \bigl((g')^{-1} h g'\bigr) h',$$
+
+
+
+最右边那个括号里的 $(g')^{-1} h g'$ 得还在 $H$ 里才行 —— 「$H$ 对共轭封闭」正是正规性。**阿贝尔群里每个子群都正规**（共轭不动），所以在阿贝尔群里这一步永远不碍事。
+
+**陪集是一条等价关系。** 定义 $a \sim b \iff a^{-1} b \in H$，则等价类恰好是左陪集，全体左陪集划分 $G$ —— 这就是下面商群要用的商集。
+
+**记号**：$H \le G$ 表示子群，$H \trianglelefteq G$ 表示正规子群（$\trianglelefteq$ 读作「正规于」）。
+
+#### 商群　`def.quotient-group`
+*定义*　商群（Quotient Group）
+
+设 $N \trianglelefteq G$。全体左陪集 $\{\, gN : g \in G \,\}$ 记作 $G/N$，在上面定义
+
+$$(g N) \cdot (g' N) := (g g') N.$$
+
+正规性保证这个定义与代表元的选取无关，于是 $G/N$ 成为一个群，叫**商群**。
+
+自然映射 $\pi : G \to G/N$，$g \mapsto gN$，是满同态。
+
+商群就是**集合层面的商集**再往上一层：先在 $G$ 上用等价关系「差一个 $N$ 的元素」商掉，再验证商集上还残留着一个运算。
+
+**泛性质**（商群真正的用处）：对任何群同态 $\varphi : G \to G'$，若 $N \subseteq \ker\varphi$，则 $\varphi$ 唯一地穿过 $\pi$：存在唯一的 $\overline{\varphi} : G/N \to G'$ 使 $\overline{\varphi} \circ \pi = \varphi$。
+
+⚠️ 商**群**只对正规子群有；商**集** $G/H$ 对任何子群都有（左陪集照样划分 $G$），但那个商集上一般没有群结构。
+
+#### 群同态、核与像　`def.group-hom`
+*定义*　群同态（Group Homomorphism）
+
+设 $(G, \cdot)$、$(G', \ast)$ 是群。映射 $\varphi : G \to G'$ 叫**群同态**，如果
+
+$$\varphi(a b) = \varphi(a) \ast \varphi(b) \qquad (a, b \in G).$$
+
+它的**核**与**像**分别是
+
+$$\ker\varphi := \{\, g \in G : \varphi(g) = e' \,\} \;\subseteq\; G, \qquad \operatorname{im}\varphi := \varphi(G) \;\subseteq\; G'.$$
+
+**同态自动保单位元与逆元**：$\varphi(e) = e'$、$\varphi(a^{-1}) = \varphi(a)^{-1}$（由 $\varphi(e) = \varphi(e e) = \varphi(e)\varphi(e)$ 两边消去得到）。所以定义里只需写一条等式。
+
+**核与像都是子群**：$\operatorname{im}\varphi \le G'$ 显然；$\ker\varphi \le G$ 由 $\varphi(ab^{-1}) = \varphi(a)\varphi(b)^{-1} = e'$ 得到。
+
+⭐ **核还是正规子群**：对 $k \in \ker\varphi$、$g \in G$，
+
+
+
+$$\varphi(g k g^{-1}) = \varphi(g)\, e'\, \varphi(g)^{-1} = e',$$
+
+
+
+所以 $gkg^{-1} \in \ker\varphi$，即 $\ker\varphi \trianglelefteq G$。**核总是正规的** —— 这正是「商群能商掉核」的全部理由。
+
+**单同态 $\iff$ 核平凡**：$\varphi$ 是单射 $\iff$ $\ker\varphi = \{e\}$。于是「单」这个性质被一个**子群**完全编码了。
+
+#### 第一同构定理（Noether）　`thm.first-iso`
+*定理*　第一同构定理（Noether）
+
+设 $\varphi : G \to G'$ 是**群同态**。则 $\varphi$ 诱导出同构
+
+$$G \big/ \ker\varphi \;\cong\; \operatorname{im}\varphi, \qquad g \ker\varphi \;\longmapsto\; \varphi(g).$$
+
+特别地：**满同态的像就是商群**（$\varphi$ 满时 $G/\ker\varphi \cong G'$）。
+
+**证明的三步。** 记 $K = \ker\varphi$。
+
+
+
+- **良定义**：若 $g K = g' K$，则 $g' = g k$（某个 $k \in K$），于是 $\varphi(g') = \varphi(g)\varphi(k) = \varphi(g) e' = \varphi(g)$ —— 同一陪集里的元素被送到同一个值。
+- **同态**：$\overline{\varphi}\bigl((gK)(g'K)\bigr) = \overline{\varphi}(gg'K) = \varphi(gg') = \varphi(g)\varphi(g') = \overline{\varphi}(gK)\,\overline{\varphi}(g'K)$。
+- **双射**：单，因为 $\overline{\varphi}(gK) = e'$ 意味着 $\varphi(g) = e'$，即 $g \in K$，于是 $gK = K$；满，因为像本来就是 $\varphi(G)$。∎
+
+⭐ **它其实是「集合 + 运算 + 公理」这套格式的通用定理，不是群的专利。** 同一个证明逐字照搬，只要把「同态」换成对应的东西：
+
+
+
+$$A \big/ \ker f \;\cong\; \operatorname{im} f.$$
+
+
+
+⭐ **集合层面的原型**：对任何映射 $f : A \to B$，在 $A$ 上令 $a \sim a' \iff f(a) = f(a')$，则 $f$ 诱导**双射** $A/{\sim} \;\to\; \operatorname{im} f$（见「商集与等价类」）。群版比它多出来的只有一句话：**商掉核之后，剩下的是一个群**。前两步（良定义、双射）就是集合版的内容，第三步（同态）才是新的。
+
+**它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。
+
+参考：Lang, Algebra, Ch. I §4；Dummit & Foote, Abstract Algebra, §10.2
 
 ### 星团：向量空间的基
 > 造出线性代数的地基：每个向量空间都有基。
@@ -11157,6 +11506,58 @@ $\mathcal{T}(\mathbf{Ab})$ 就是 $\mathcal{T}$ 上的**阿贝尔层**范畴。
 
 结论的一部分是「$\mathcal{T}(\mathbf{Ab})$ 是**阿贝尔**范畴」。
 
+#### 定义引用：「商拓扑」→ 商映射与局部紧空间作积　`def-dep.cg-quotient-locally-compact`
+
+定理说的是**商映射** —— 也就是商拓扑那条满射。
+
+#### 定义引用：「积拓扑」→ 商映射与局部紧空间作积　`def-dep.cg-product-top`
+
+结论说的是**乘积空间** $X \times Z \to Y \times Z$。
+
+#### 定义引用：「Hausdorff 空间」→ 紧生成空间对积封闭　`def-dep.cg-hausdorff-cgprod`
+
+推论里的因子 $Y$ 要求**局部紧 Hausdorff**。
+
+#### 定义引用：「k-开、k-闭与 k-拓扑」→ k-化与积　`def-dep.cg-kproduct`
+
+式子里两边的 $k$ 都是**$k$-化**。
+
+#### 定义引用：「商拓扑」→ k-闭等价关系与弱 Hausdorff 商　`def-dep.cg-ktx-quotient`
+
+命题说的是**商空间** $X/R$。
+
+#### 定义引用：「积拓扑」→ 弱 Hausdorff 的基本性质　`def-dep.weakhaus-diagonal`
+
+对角 $\Delta_{X}$ 住在**乘积** $X \times X$ 里。
+
+#### 定义引用：「紧生成空间」→ CGWH 是 CG 的反射子范畴　`def-dep.cgwh-cg`
+
+$\mathrm{CGWH}$ 是在**紧生成**之上再加弱 Hausdorff。
+
+#### 定义引用：「紧开拓扑」→ 函数空间弱 Hausdorff　`def-dep.funcspace-compactopen`
+
+命题里的 $kC(X, Y)$ 就是**紧开拓扑**再取 $k$-化。
+
+#### 定义引用：「商群」→ 第一同构定理（Noether）　`def-dep.firstiso-quotient-group`
+
+定理左端的 $G/\ker\varphi$ 是**商群**。
+
+#### 定义引用：「群同态、核与像」→ 第一同构定理（Noether）　`def-dep.firstiso-kernel`
+
+核与像都是**群同态**的概念。
+
+#### 定义引用：「正规子群」→ 第一同构定理（Noether）　`def-dep.firstiso-normal`
+
+核是**正规**子群 —— 这正是它能被商掉的理由。
+
+#### 定义引用：「正规子群」→ 商群　`def-dep.quotient-group-normal`
+
+商群只对**正规**子群有定义。
+
+#### 定义引用：「子群」→ 群同态、核与像　`def-dep.grouphom-subgroup`
+
+核与像都是**子群**。
+
 #### 定义引用：「子集」→ 关系　`def-dep.subset-rel`
 
 关系是 $A \times B$ 的**子集**，定义域 $\operatorname{dom} R$ 与值域 $\operatorname{ran} R$ 也都是子集。
@@ -12141,6 +12542,170 @@ $\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随**。
 
 平坦性说的是「$P \otimes_{\mathbb{Z}} -$ **正合**」。
 
+#### 定义引用：「拓扑空间与开集」→ 紧生成空间　`def-dep.cg-topology`
+
+紧生成说的是**拓扑空间**上的一条性质。
+
+#### 定义引用：「紧 Hausdorff 空间范畴」→ 紧生成空间　`def-dep.cg-chaus`
+
+测试空间取的是**紧 Hausdorff** 空间。
+
+#### 定义引用：「紧生成空间」→ k-开、k-闭与 k-拓扑　`def-dep.ktopo-cg`
+
+$k$-开集就是用「从**紧 Hausdorff** 空间进来的映射」去测。
+
+#### 定义引用：「商拓扑」→ k-开、k-闭与 k-拓扑　`def-dep.ktopo-quotient`
+
+$k$-拓扑是使所有这类映射都连续的**最终（最细）拓扑** —— 与商拓扑是同一个构造。
+
+#### 定义引用：「紧生成空间」→ kX 是紧空间的余极限　`def-dep.ktx-colimit-cg`
+
+$kX$ 是沿紧 $T_{1}$ 空间取余极限。
+
+#### 定义引用：「k-开、k-闭与 k-拓扑」→ kX 是紧空间的余极限　`def-dep.ktx-colimit-ktopo`
+
+余极限的那条拓扑就是 $k$-拓扑。
+
+#### 定义引用：「k-开、k-闭与 k-拓扑」→ 紧生成空间是余反射子范畴　`def-dep.cgcoref-ktopo`
+
+余反射的函子 $k$ 就是**换成 $k$-拓扑**。
+
+#### 定义引用：「紧生成空间」→ 紧生成空间是余反射子范畴　`def-dep.cgcoref-cg`
+
+标的范畴 $k\mathbf{Top}$ 是**紧生成**空间。
+
+#### 定义引用：「伴随函子」→ 紧生成空间是余反射子范畴　`def-dep.cgcoref-adjoint`
+
+「余反射」= 含入函子有**右伴随**。
+
+#### 定义引用：「商拓扑」→ 商映射与局部紧空间作积　`def-dep.quotprod-quotient`
+
+定理说的是**商映射**。
+
+#### 定义引用：「积拓扑」→ 商映射与局部紧空间作积　`def-dep.quotprod-product`
+
+结论说的是**乘积** $X \times Z \to Y \times Z$。
+
+#### 定义引用：「紧生成空间」→ 紧生成空间对积封闭　`def-dep.cgprod-cg`
+
+推论说的是**紧生成**空间作积。
+
+#### 定义引用：「k-开、k-闭与 k-拓扑」→ k-化与积　`def-dep.kprod-ktopo`
+
+两边的 $k$ 都是**$k$-化**。
+
+#### 定义引用：「积拓扑」→ k-化与积　`def-dep.kprod-product`
+
+式子说的是**积**与 $k$-化的交换。
+
+#### 定义引用：「Hausdorff 空间」→ 弱 Hausdorff 空间　`def-dep.weakhaus-hausdorff`
+
+弱 Hausdorff 是把 Hausdorff 的条件放宽到「**紧块的像闭**」。
+
+#### 定义引用：「k-开、k-闭与 k-拓扑」→ 弱 Hausdorff 的基本性质　`def-dep.weakhaus-basic-k`
+
+「对角是 $k$-闭」要先用上 **$k$-拓扑**。
+
+#### 定义引用：「Hausdorff 空间」→ CGWH 是 CG 的反射子范畴　`def-dep.cgwh-hausdorff`
+
+反射去掉的是「弱 Hausdorff」，用的是**闭等价关系**。
+
+#### 定义引用：「商拓扑」→ CGWH 是 CG 的反射子范畴　`def-dep.cgwh-quotient`
+
+反射把 $X$ 换成**商空间** $X/R$。
+
+#### 定义引用：「拓扑空间与开集」→ 积拓扑　`def-dep.producttopo-topology`
+
+积拓扑是**拓扑空间**族上的构造。
+
+#### 定义引用：「基与子基」→ 积拓扑　`def-dep.producttopo-base`
+
+积拓扑取的是那族「有限多分量真开」的集合作**基**。
+
+#### 定义引用：「紧生成空间」→ 紧生成空间的例子　`def-dep.cgex-cg`
+
+例子说的都是**紧生成**空间。
+
+#### 定义引用：「紧生成空间」→ 紧生成空间的等价刻画　`def-dep.cgeq-cg`
+
+命题刻画的是**紧生成**性。
+
+#### 定义引用：「商拓扑」→ 紧生成空间的等价刻画　`def-dep.cgeq-quotient`
+
+(2)(3) 两条把紧生成空间写成**商空间**。
+
+#### 定义引用：「拓扑空间与开集」→ 紧开拓扑　`def-dep.compactopen-topology`
+
+紧开拓扑是函数集合上的一种**拓扑**。
+
+#### 定义引用：「紧」→ 紧开拓扑　`def-dep.compactopen-compact`
+
+测试块 $S$ 取的是**紧**空间。
+
+#### 定义引用：「连续」→ 紧开拓扑　`def-dep.compactopen-continuous`
+
+定义里要求 $g$ 与 $f$ 都**连续**。
+
+#### 定义引用：「紧开拓扑」→ 离散时函数空间是积　`def-dep.compactopen-discrete`
+
+命题说的是**紧开拓扑**下的函数空间。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 紧块的纤维积还是紧的　`def-dep.cgwhfiber-fibered`
+
+结论说的是**纤维积** $S \times_{X} S'$。
+
+#### 定义引用：「弱 Hausdorff 空间」→ 紧块的纤维积还是紧的　`def-dep.cgwhfiber-weakhaus`
+
+要求 $X$ 是**弱 Hausdorff** 空间。
+
+#### 定义引用：「子空间拓扑」→ CGWH 的开闭子空间与滤过余极限　`def-dep.cgwhclosed-subspace`
+
+结论说的是**子空间**。
+
+#### 定义引用：「弱 Hausdorff 空间」→ CGWH 的开闭子空间与滤过余极限　`def-dep.cgwhclosed-weakhaus`
+
+结论说的是**弱 Hausdorff** 性在子空间与滤过余极限下保持。
+
+#### 定义引用：「函数」→ 群　`def-dep.group-function`
+
+群运算是 $G \times G \to G$，一个**函数**。
+
+#### 定义引用：「群」→ 子群　`def-dep.subgroup-group`
+
+子群是**群**的子结构（限制过来的运算）。
+
+#### 定义引用：「群」→ 正规子群　`def-dep.normal-group`
+
+正规子群先要是**群**的子群。
+
+#### 定义引用：「商集与等价类」→ 商群　`def-dep.quotgroup-quotientset`
+
+商群 = 陪集做成的**商集**再加一层运算。
+
+#### 定义引用：「正规子群」→ 商群　`def-dep.quotgroup-normal`
+
+商群只对**正规**子群有。
+
+#### 定义引用：「群」→ 群同态、核与像　`def-dep.grouphom-group`
+
+同态是两个**群**之间的映射。
+
+#### 定义引用：「正规子群」→ 群同态、核与像　`def-dep.grouphom-kernel`
+
+核是**正规**子群。
+
+#### 定义引用：「商群」→ 第一同构定理（Noether）　`def-dep.firstiso-quotient`
+
+$G/\ker\varphi$ 是**商群**。
+
+#### 定义引用：「群同态、核与像」→ 第一同构定理（Noether）　`def-dep.firstiso-hom`
+
+定理的输入是一个**群同态**（要用到它的核与像）。
+
+#### 定义引用：「群」→ 域　`def-dep.field-group`
+
+域 = 两个**阿贝尔群** + 分配律 —— 域的定义建立在群的定义之上。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -12328,6 +12893,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **拓扑空间 ↔ 度量空间**　3 条节点级连线
 - **数系的构造 ↔ 关系与函数**　5 条节点级连线
 - **代数结构 ↔ 数系的构造**　5 条节点级连线
+- **代数结构 ↔ 关系与函数**　3 条节点级连线
 - **序结构 ↔ 序数与超限**　3 条节点级连线
 - **基数与等势 ↔ 序数与超限**　3 条节点级连线
 - **序数与超限 ↔ ZFC 公理系统**　2 条节点级连线
@@ -12343,7 +12909,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **凝聚态集 ↔ 紧 Haus 与 Stone**　11 条节点级连线
 - **拓扑斯 ↔ 凝聚态集**　3 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　4 条节点级连线
-- **凝聚态集 ↔ 紧生成空间**　2 条节点级连线
+- **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **同调与正合列 ↔ 复形与导出三角**　3 条节点级连线
 - **序结构 ↔ 集合的构造**　4 条节点级连线
 - **选择原理 ↔ 序结构**　7 条节点级连线
@@ -12359,12 +12925,14 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **单满、子对象与像 ↔ 拓扑斯**　2 条节点级连线
 - **图与极限 ↔ 拓扑斯**　5 条节点级连线
 - **拓扑斯 ↔ 预层与米田**　2 条节点级连线
+- **伴随与反射 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 紧 Haus 与 Stone**　4 条节点级连线
 - **图与极限 ↔ 复形与导出三角**　3 条节点级连线
 - **图与极限 ↔ 同调与正合列**　3 条节点级连线
 - **凝聚态阿贝尔群 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑斯 ↔ 阿贝尔层**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 阿贝尔层**　2 条节点级连线
+- **紧生成空间与弱 Hausdorff ↔ 拓扑空间**　16 条节点级连线
 - **向量空间的基 ↔ 序结构**　2 条节点级连线
 - **微分定理 ↔ 集合族与 σ-代数**　2 条节点级连线
 - **集合族与 σ-代数 ↔ 符号测度与分解**　2 条节点级连线
@@ -12379,6 +12947,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 紧 Haus 与 Stone**　2 条节点级连线
 - **层与拓扑 ↔ 预层与米田**　4 条节点级连线
+- **图与极限 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
+- **紧生成空间与弱 Hausdorff ↔ 紧 Haus 与 Stone**　2 条节点级连线
 - **范畴与图 ↔ 复形与导出三角**　2 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　4 条节点级连线
 - **单满、子对象与像 ↔ 加法与阿贝尔范畴**　2 条节点级连线

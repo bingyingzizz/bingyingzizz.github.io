@@ -1,6 +1,6 @@
 # 测度的基本性质　`prop.measure-basic`
 命题：测度的单调性、次可加性与两种连续性
-layer 14 · 命题 · 测度的构造 · 分析学
+layer 15 · 命题 · 测度的构造 · 分析学
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间，以下集合都取自 $\mathcal{M}$。
 > 陈述续见 `nodes/prop.measure-basic.2.md`

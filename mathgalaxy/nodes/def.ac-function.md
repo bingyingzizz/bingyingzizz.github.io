@@ -1,6 +1,6 @@
 # 绝对连续函数　`def.ac-function`
 绝对连续函数 AC（Absolutely Continuous Function）
-layer 13 · 定义 · 有界变差与绝对连续 · 分析学
+layer 14 · 定义 · 有界变差与绝对连续 · 分析学
 
 函数 $F : [a, b] \to \mathbb{C}$ 是**绝对连续的**，当且仅当
 

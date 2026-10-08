@@ -1,6 +1,6 @@
 # 何时两个函数积分处处相同　`prop.integrals-equal-iff`
 命题：$\int_E f = \int_E g$ 对一切 $E \iff f = g \text{a.e.}$
-layer 19 · 命题 · 积分 · 分析学
+layer 20 · 命题 · 积分 · 分析学
 
 设 $f, g \in L^1(\mu)$。则下列三条等价：
 

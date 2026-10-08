@@ -1,6 +1,6 @@
 # 乘积测度　`def.product-measure`
 乘积测度（Product Measure $\mu \times \nu$）
-layer 16 · 定义 · 乘积测度与 Fubini · 分析学
+layer 17 · 定义 · 乘积测度与 Fubini · 分析学
 
 设 $(X, \mathcal{M}, \mu )$ 与 $(Y, \mathcal{N}, \nu )$ 是测度空间。
 

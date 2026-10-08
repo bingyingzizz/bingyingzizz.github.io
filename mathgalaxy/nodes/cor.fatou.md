@@ -1,6 +1,6 @@
 # Fatou 的推论　`cor.fatou`
 推论：$f_{n} \to f \text{a.e.} \implies \int f \le \lim \int f_{n}$
-layer 19 · 推论 · 积分 · 分析学
+layer 20 · 推论 · 积分 · 分析学
 
 设 $\{f_n\} \subseteq L^+$，$f \in L^+$，且 $f_n \to f$ a.e.。则
 

@@ -1,4 +1,10 @@
 # 紧生成空间是余反射子范畴　`prop.cg-coreflective`　·　说明
 根 `../`
 
-⭐ 与紧 Hausdorff 对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\beta$），而 $k\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。
+**要证的是**：对每个紧生成空间 $X$ 与每个拓扑空间 $Y$，
+
+$$\operatorname{Hom}_{\mathbf{Top}}(X,\ Y) \;\cong\; \operatorname{Hom}_{k\mathbf{Top}}\bigl(X,\ kY\bigr).$$
+
+**证明。** 余单位是 $\varepsilon_{Y} : kY \to Y$（恒等映射，拓扑从细到粗，连续）。
+
+> 续见 notes/prop.cg-coreflective.2.md

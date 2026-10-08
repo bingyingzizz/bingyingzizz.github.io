@@ -1,6 +1,6 @@
 # L⁺　`def.lplus`
 $L^{+}$：非负可测函数全体
-layer 14 · 定义 · 积分 · 分析学
+layer 15 · 定义 · 积分 · 分析学
 
 固定测度空间 $(X, \mathcal{M}, \mu )$。记
 > 陈述续见 `nodes/def.lplus.2.md`

@@ -1,6 +1,6 @@
 # 控制收敛定理　`thm.dct`
 控制收敛定理（DCT, Dominated Convergence Theorem）
-layer 19 · 定理 · 积分 · 分析学
+layer 20 · 定理 · 积分 · 分析学
 
 设 $\{f_n\} \subseteq L^1$，$f_n \to f$ a.e.，且存在**控制函数** $g \in L^1$ 使
 

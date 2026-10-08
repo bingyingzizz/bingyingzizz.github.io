@@ -1,6 +1,6 @@
 # 级数收敛　`def.series`
 级数 $\sum a_n$（Series）
-layer 13 · 定义 · 实数与极限 · 分析学
+layer 14 · 定义 · 实数与极限 · 分析学
 
 给定数列 $\{a_n\}$，令**部分和** $s_N := \su
 > 陈述续见 `nodes/def.series.2.md`

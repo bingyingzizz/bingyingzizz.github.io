@@ -7,4 +7,6 @@
 
 - 基本类 | fundamental class → def.fundamental-class
 
+- Noether 第一同构定理 | 第一同构定理 | 同构定理 | first isomorphism theorem | Noether → thm.first-iso
+
 见 `../../alias.md`。

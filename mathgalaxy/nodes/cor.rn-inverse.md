@@ -1,6 +1,6 @@
 # 互为绝对连续时导数互逆　`cor.rn-inverse`
 推论：$\mu \ll \lambda$ 且 $\lambda \ll \mu \implies (d\mu/d\lambda)(d\lambda/d\mu) = 1$
-layer 17 · 推论 · 符号测度与分解 · 分析学
+layer 18 · 推论 · 符号测度与分解 · 分析学
 
 若 $\mu \ll  \lambda$ 且 $\lambda \ll  \mu$（两个 $\sigma$有限测度互为绝对连续），则
 > 陈述续见 `nodes/cor.rn-inverse.2.md`

@@ -1,6 +1,6 @@
 # L¹ 里的逼近　`thm.approximation-L1`
 定理：$L^{1}$ 中可用简单函数 / 连续函数逼近
-layer 19 · 定理 · 积分 · 分析学
+layer 20 · 定理 · 积分 · 分析学
 
 设 $f \in L^1(\mu)$。则对任意 $\varepsilon > 0$，存在简单函数 $\varphi = \sum_j a_j \chi_{E_j}$ 使
 

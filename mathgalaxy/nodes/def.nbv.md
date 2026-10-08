@@ -1,6 +1,6 @@
 # NBV　`def.nbv`
 NBV：右连续且 $F(-\infty) = 0$ 的有界变差函数
-layer 16 · 定义 · 有界变差与绝对连续 · 分析学
+layer 17 · 定义 · 有界变差与绝对连续 · 分析学
 
 $$NBV := \{ F \in BV : F\text{ 右连续},\text{ 且} F(-\infty) = 0 \}$$
 

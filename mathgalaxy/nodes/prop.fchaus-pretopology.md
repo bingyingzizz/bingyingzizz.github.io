@@ -1,6 +1,6 @@
 # FCHaus 上的预拓扑　`prop.fchaus-pretopology`
 有限不交并给出自由紧 Hausforff 空间上的预拓扑
-layer 16 · 命题 · 凝聚态集 · 凝聚态数学
+layer 17 · 命题 · 凝聚态集 · 凝聚态数学
 
 记 $\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\beta I$）构成的满子范畴。$\mathbf{FCHaus}$ 中的对象都是 $\mathrm{Cond}$ 的**投射对象**，满射 $S \to S'$ 总有截面 —— 于是**有限不交并给出 $\mathbf{FCHaus}$ 上的一个
 > 陈述续见 `nodes/prop.fchaus-pretopology.2.md`

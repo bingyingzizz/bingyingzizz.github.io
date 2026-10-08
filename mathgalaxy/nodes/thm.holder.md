@@ -1,6 +1,6 @@
 # Hölder 不等式　`thm.holder`
 Hölder 不等式
-layer 18 · 定理 · L^p 空间 · 分析学
+layer 19 · 定理 · L^p 空间 · 分析学
 
 设 $1 < p < \infty$，$q$ 是 $p$ 的**共轭指数**：$\dfrac{1}{p} + \dfrac{1}{q} = 1$。则对可测 $f, g$：
 

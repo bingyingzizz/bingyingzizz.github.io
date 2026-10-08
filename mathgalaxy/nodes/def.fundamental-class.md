@@ -1,6 +1,6 @@
 # 基本类　`def.fundamental-class`
 基本类（Fundamental Class）
-layer 13 · 定义 · 集合族与 σ-代数 · 分析学+集合论
+layer 14 · 定义 · 集合族与 σ-代数 · 分析学+集合论
 
 设 $X$ 是集合，$\mathfrak{A} \subseteq \mathcal{P}(X)$。$\mathfrak{A}$ 是 $X$ 上的一个**基本类**，当且仅当
 

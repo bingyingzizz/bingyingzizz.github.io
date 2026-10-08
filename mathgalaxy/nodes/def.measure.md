@@ -1,6 +1,6 @@
 # 测度　`def.measure`
 测度（Measure）
-layer 13 · 定义 · 测度的构造 · 分析学
+layer 14 · 定义 · 测度的构造 · 分析学
 
 设 $\mathcal{M}$ 是 $X$ 上的 $\sigma$代数。函数 $\mu : \mathcal{M} \to [0, +\infty]$ 是一个**测度**，当且仅当
 

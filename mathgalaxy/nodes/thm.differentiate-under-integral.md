@@ -1,6 +1,6 @@
 # 交换极限/导数与积分　`thm.differentiate-under-integral`
 定理：在积分号下取极限与求导
-layer 20 · 定理 · 积分 · 分析学
+layer 21 · 定理 · 积分 · 分析学
 
 设 $f : X \times [a, b] \to \mathbb{C}$（$-\infty < a < b < \infty$），$f(\cdot, t)$ 对每个 $t \in [a, b]$ 都可积。记
 

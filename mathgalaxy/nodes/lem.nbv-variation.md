@@ -1,6 +1,6 @@
 # 全变差的 NBV 性质　`lem.nbv-variation`
 引理：$T_F(-\infty) = 0$；F 右连续 $\implies T_F$ 右连续
-layer 17 · 引理 · 有界变差与绝对连续 · 分析学
+layer 18 · 引理 · 有界变差与绝对连续 · 分析学
 
 设 $F \in BV$。则
 

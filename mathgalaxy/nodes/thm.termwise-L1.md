@@ -1,6 +1,6 @@
 # L¹ 的逐项积分　`thm.termwise-L1`
 定理：$\sum\int|f_{j}| < \infty \implies \sum f_{j}$ 几乎处处收敛且可逐项积分
-layer 19 · 定理 · 积分 · 分析学
+layer 20 · 定理 · 积分 · 分析学
 
 设 $\{f_j\} \subseteq L^1$ 满足
 > 陈述续见 `nodes/thm.termwise-L1.2.md`

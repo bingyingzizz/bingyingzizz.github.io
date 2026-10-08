@@ -1,6 +1,6 @@
 # 符号测度　`def.signed-measure`
 符号测度（Signed Measure）
-layer 14 · 定义 · 符号测度与分解 · 分析学
+layer 15 · 定义 · 符号测度与分解 · 分析学
 
 设 $(X, \mathcal{M})$ 是可测空间。$\nu : \mathcal{M} \to [-\infty, +\infty]$ 是**符号测度**，当且仅当
 

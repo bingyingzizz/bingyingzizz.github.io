@@ -1,6 +1,6 @@
 # Lebesgue–Stieltjes 测度　`def.lebesgue-stieltjes`
 Lebesgue–Stieltjes 测度（Lebesgue–Stieltjes Measure $\mu_F$）
-layer 14 · 定义 · 测度的构造 · 分析学
+layer 15 · 定义 · 测度的构造 · 分析学
 
 由递增右连续函数 $F$ 按上一条定理得到的 Borel 测度 $\mu_F$ 称为 **$F$ 的 Lebesgue–Stieltjes 测度**。
 

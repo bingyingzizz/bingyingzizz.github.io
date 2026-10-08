@@ -1,6 +1,6 @@
 # 对偶配对 φ_g　`def.duality-map`
 由 g 给出的线性泛函 $\varphi_g(f) = \int f\cdot g$
-layer 18 · 定义 · L^p 空间 · 分析学
+layer 19 · 定义 · L^p 空间 · 分析学
 
 设 $p, q$ 共轭，$g \in L^q$。定义 $L^p$ 上的线性泛函
 

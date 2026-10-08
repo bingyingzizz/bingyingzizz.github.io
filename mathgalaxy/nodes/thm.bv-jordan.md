@@ -1,6 +1,6 @@
 # BV 的 Jordan 分解　`thm.bv-jordan`
 定理：$F \in BV \iff F = G - H$（G、H 有界递增）
-layer 17 · 定理 · 有界变差与绝对连续 · 分析学
+layer 18 · 定理 · 有界变差与绝对连续 · 分析学
 
 **(a)** $F \in BV \iff \operatorname{Re} F \in BV\text{ 且} \operatorname{Im} F \in BV$。
 

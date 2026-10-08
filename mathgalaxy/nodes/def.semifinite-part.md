@@ -1,6 +1,6 @@
 # 半有限部分　`def.semifinite-part`
 半有限部分（Semifinite Part of a Measure）
-layer 15 · 定义 · 测度的构造 · 分析学
+layer 16 · 定义 · 测度的构造 · 分析学
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间。定义
 > 陈述续见 `nodes/def.semifinite-part.2.md`

@@ -1,6 +1,6 @@
 # L¹ 收敛 ⟹ 依测度收敛　`prop.L1-implies-measure`
 命题：$L^{1}$ 收敛蕴含依测度收敛（Markov 不等式）
-layer 20 · 命题 · 可测函数与收敛 · 分析学
+layer 21 · 命题 · 可测函数与收敛 · 分析学
 
 若 $f_n \to f$ 于 $L^1$，则 $f_n \to f$ 依测度：
 

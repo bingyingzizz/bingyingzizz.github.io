@@ -1,6 +1,6 @@
 # Lebesgue 集　`def.lebesgue-set`
 Lebesgue 集 $L_f$
-layer 21 · 定义 · 微分定理 · 分析学
+layer 22 · 定义 · 微分定理 · 分析学
 
 设 $f \in L^1_{loc}$。定义
 

@@ -1,6 +1,6 @@
 # Egorov 定理　`thm.egorov`
 Egorov 定理：a.e. 收敛 $\implies$ 近一致
-layer 20 · 定理 · 可测函数与收敛 · 分析学
+layer 21 · 定理 · 可测函数与收敛 · 分析学
 
 设 $\mu(X) < \infty$，且 $f_n \to f$ a.e.。则 $f_n \to f$ **近一致**：
 

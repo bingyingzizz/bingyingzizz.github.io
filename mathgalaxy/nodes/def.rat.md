@@ -1,6 +1,6 @@
 # 有理数 ℚ　`def.rat`
 有理数 $\mathbb{Q}$（由 $\mathbb{Z} \times (\mathbb{Z}\setminus\{0\})$ 构造）
-layer 8 · 定义 · 数系的构造 · 集合论
+layer 9 · 定义 · 数系的构造 · 集合论
 
 在 $\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})$ 上定义
 

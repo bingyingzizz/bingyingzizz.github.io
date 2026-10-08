@@ -1,6 +1,6 @@
 # 完备化后可改在零集上　`prop.completion-measurable-function`
 命题：完备化空间上的可测函数，几乎处处等于一个原空间可测函数
-layer 16 · 命题 · 可测函数与收敛 · 分析学
+layer 17 · 命题 · 可测函数与收敛 · 分析学
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间，$(X, \bar{\mathcal{M}}, \bar{\mu})$ 是它的完备化（见「完备化定理」）。若 $f$ 是 $\bar{\mathcal{M}}$-可测的函数，则存在 **$\mathcal{M}$可测**的函数 $g$ 使
 

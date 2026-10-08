@@ -1,6 +1,6 @@
 # 积分为零 ⟺ 几乎处处为零　`prop.integral-zero-iff`
 命题：$\int f = 0 \iff f = 0 \text{a.e.}$
-layer 16 · 命题 · 积分 · 分析学
+layer 17 · 命题 · 积分 · 分析学
 
 设 $f \in L^+$。则
 

@@ -6,12 +6,12 @@
 - thm.omega　自然数集存在　layer 5
 - thm.induction　归纳原理与递推定义　layer 6
 - def.int　整数 ℤ　layer 7
-- def.rat　有理数 ℚ　layer 8
-- def.abs　绝对值 |x|　layer 8
-- thm.triangle　三角不等式　layer 9
-- def.cauchy-null　Cauchy 列与零列　layer 10
-- def.real　实数系 ℝ　layer 11
-- def.complex　复数 ℂ　layer 12
-- lem.archimedean　阿基米德性质　layer 13
-- thm.real-uncountable　ℝ 不可数　layer 13
-- thm.real-unique　完备有序域的唯一性　layer 14
+- def.rat　有理数 ℚ　layer 9
+- def.abs　绝对值 |x|　layer 9
+- thm.triangle　三角不等式　layer 10
+- def.cauchy-null　Cauchy 列与零列　layer 11
+- def.real　实数系 ℝ　layer 12
+- def.complex　复数 ℂ　layer 13
+- lem.archimedean　阿基米德性质　layer 14
+- thm.real-uncountable　ℝ 不可数　layer 14
+- thm.real-unique　完备有序域的唯一性　layer 15

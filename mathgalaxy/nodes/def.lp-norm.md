@@ -1,6 +1,6 @@
 # L^p 范数　`def.lp-norm`
 $L^p$ 范数与 $L^p$ 空间
-layer 17 · 定义 · L^p 空间 · 分析学
+layer 18 · 定义 · L^p 空间 · 分析学
 
 固定测度空间 $(X, \mathcal{M}, \mu)$。对可测 $f$ 与 $0 < p < \infty$ 定义
 

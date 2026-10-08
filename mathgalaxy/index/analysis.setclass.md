@@ -11,5 +11,5 @@
 - def.generated-sigma　生成的 σ-代数　layer 5
 - thm.monotone-class　单调类定理　layer 6
 - def.borel　Borel σ-代数　layer 6
-- def.fundamental-class　基本类　layer 13
-- prop.set-class-properties　集合族的基本性质　layer 14
+- def.fundamental-class　基本类　layer 14
+- prop.set-class-properties　集合族的基本性质　layer 15

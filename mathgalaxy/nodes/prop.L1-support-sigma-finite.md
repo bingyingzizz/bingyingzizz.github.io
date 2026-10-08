@@ -1,6 +1,6 @@
 # L¹ 函数的支撑 σ-有限　`prop.L1-support-sigma-finite`
 命题：$f \in L^{1} \implies \{f \ne 0\}$ 是 σ-有限的
-layer 19 · 命题 · 积分 · 分析学
+layer 20 · 命题 · 积分 · 分析学
 
 若 $f \in L^1(\mu)$，则
 

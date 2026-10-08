@@ -1,6 +1,6 @@
 # 绝对值 |x|　`def.abs`
 绝对值 $|x|$（Absolute Value）
-layer 8 · 定义 · 数系的构造 · 集合论+分析学
+layer 9 · 定义 · 数系的构造 · 集合论+分析学
 
 设 $K$ 是**有序域**（$\mathbb{Q}$ 与 $\mathbb{R}$ 都是），$x \in K$。定义
 

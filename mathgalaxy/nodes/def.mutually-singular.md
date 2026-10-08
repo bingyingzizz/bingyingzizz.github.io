@@ -1,6 +1,6 @@
 # 相互奇异　`def.mutually-singular`
 相互奇异 / 互相垂直（Mutually Singular $\mu \perp \nu$）
-layer 15 · 定义 · 符号测度与分解 · 分析学
+layer 16 · 定义 · 符号测度与分解 · 分析学
 
 两个测度（或符号测度）$\mu, \nu$ **相互奇异**，记作 $\mu \perp  \nu$，当且仅当存在 $E, F \in \mathcal{M}$ 使
 

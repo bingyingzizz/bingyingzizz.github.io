@@ -1,6 +1,6 @@
 # Lusin 定理　`cor.lusin`
 Lusin 定理：可测函数几乎处处连续
-layer 21 · 推论 · 可测函数与收敛 · 分析学
+layer 22 · 推论 · 可测函数与收敛 · 分析学
 
 设 $f : [a, b] \to \mathbb{C}$ 是 Lebesgue 可测的。则对任意 $\varepsilon > 0$，存在**紧集** $E \subseteq [a, b]$ 使
 

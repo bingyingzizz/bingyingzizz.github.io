@@ -455,7 +455,13 @@ mark { background: #ffe9a8; color: inherit; padding: 0 1px; border-radius: 3px; 
 .pn-link:hover { background: rgba(20, 22, 28, .055); }
 .pn-link .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; transform: translateY(-1px); }
 .pn-link .kw { color: var(--ink-faint); font-size: 12px; flex: none; }
-.pn-link .nm { font-weight: 600; }
+.pn-link .nm {
+  font-weight: 600;
+  /* ⛔ 别在这里截断字符串：标题里有 $…$，切一半会让 $ 配对不上、公式原样吐出来。
+     用行钳制代替 —— 纯显示层，绝不动内容。 */
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .pn-link > span:last-child { min-width: 0; flex: 1 1 auto; }
 .pn-link .ds {
   color: var(--ink-faint); font-size: 12px;
@@ -4098,7 +4104,7 @@ window.addEventListener('error', function (e) {
       return '<div class="pn-link" data-kind="edge" data-id="' + e.id + '">' +
         '<span class="dot" style="background:' + edgeDot(e) + '"></span>' +
         (keyword ? '<span class="kw">' + U.escapeHtml(keyword) + '</span>' : '') +
-        '<span><span class="nm">' + U.titleHtml(U.truncate(head, 44)) + '</span>' +
+        '<span><span class="nm">' + U.titleHtml(head) + '</span>' +
         '<div class="ds">' + arrow + ' ' + U.escapeHtml(name) +
         (snippet ? ' · ' + U.escapeHtml(U.truncate(snippet, 48)) : '') + '</div></span>' +
         '</div>';
@@ -4822,8 +4828,8 @@ MG.clusters = [
     id: 'algebra.structures',
     name: '代数结构',
     parent: 'algebra',
-    hub: 'def.field',
-    desc: '造出代数语言本身：**域** = 集合 + 两个运算 + 公理，**有序域** = 域 + 与运算相容的全序。ℚ 与 ℝ 都是实例。（代数学的笔记进来后这一团扩容：群 / 环 / 模。）'
+    hub: 'def.group',
+    desc: '造出代数语言本身：**群** = 集合 + 运算 + 公理 → 子群 → 正规子群 → 商群 → 第一同构定理；再往上叠**域**（= 两个阿贝尔群 + 分配律）与**有序域**。'
   },
   {
     id: 'algebra.vectorspace',
@@ -4857,10 +4863,10 @@ MG.clusters = [
   },
   {
     id: 'topo.cg',
-    name: '紧生成空间',
+    name: '紧生成空间与弱 Hausdorff',
     parent: 'topology',
     hub: 'def.compactly-generated',
-    desc: '造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。'
+    desc: '造出「乘积好用的拓扑空间范畴」：紧生成空间（$k$-空间）→ $k$-拓扑与 $k$-化 → 商映射与积 → 紧开拓扑 → 弱 Hausdorff → $\\mathrm{CGWH}$ 是反射子范畴。'
   },
 
   /* ------------------------------------------------ 星系：分析学 */
@@ -5484,8 +5490,8 @@ MG.aliases = {
     { id: 'def.topos-morphism', aka: ['拓扑斯的态射', 'geometric morphism', '几何态射', '拉回函子', '推前函子'] },
 
     /* 紧生成空间 */
-    { id: 'def.compactly-generated', aka: ['紧生成空间', 'compactly generated', 'k-space', 'k-空间', 'k化'] },
-    { id: 'prop.cg-coreflective', aka: ['紧生成空间是余反射的', 'kification'] },
+    { id: 'def.compactly-generated', aka: ['紧生成空间', 'compactly generated', 'k-space', 'k-空间', 'k空间', 'k化', '紧生成'] },
+    { id: 'prop.cg-coreflective', aka: ['紧生成空间是余反射的', 'kification', '紧生成是余反射子范畴', 'k 是右伴随'] },
 
     /* 凝聚态集 */
     { id: 'def.chaus-pretopos', aka: ['CHaus 是预拓扑斯'] },
@@ -5513,6 +5519,33 @@ MG.aliases = {
     { id: 'def.internal-hom', aka: ['内 Hom', 'internal hom', 'Hom(X,M)', '内层', '内部 Hom'] },
     { id: 'def.tensor-abelian-sheaf', aka: ['阿贝尔层的张量积', '封闭对称幺半', 'closed symmetric monoidal', 'Tensor', 'internal hom', '封闭张量结构'] },
     { id: 'def.flat-abelian-sheaf', aka: ['平坦阿贝尔层', 'flat', '平坦性', '无挠'] },
+
+    /* 紧生成空间与弱 Hausdorff */
+    { id: 'ex.cg-examples', aka: ['紧生成空间的例子', '局部紧空间是紧生成的', 'R^I 不紧生成'] },
+    { id: 'prop.cg-equivalent-conditions', aka: ['紧生成空间的等价刻画', 'k-空间等价条件'] },
+    { id: 'def.k-topology', aka: ['k-拓扑', 'k拓扑', 'k-开', 'k-闭', 'k-化', 'k-ification', 'kX'] },
+    { id: 'prop.ktx-colimit', aka: ['kX 是余极限'] },
+    { id: 'thm.quotient-product', aka: ['商映射乘局部紧', '商映射与积', 'quotient map product', '局部紧因子'] },
+    { id: 'cor.cg-product', aka: ['紧生成空间对积封闭', 'CG 对有限积封闭'] },
+    { id: 'prop.k-product', aka: ['k-化与积交换', 'k(X×Y)'] },
+    { id: 'def.compact-open-topology', aka: ['紧开拓扑', 'compact-open topology', '函数空间拓扑', 'W_{S,V}'] },
+    { id: 'prop.compact-open-discrete', aka: ['离散时函数空间是积空间'] },
+    { id: 'def.weak-hausdorff', aka: ['弱 Hausdorff', 'weak Hausdorff', '弱豪斯多夫'] },
+    { id: 'prop.weak-hausdorff-basic', aka: ['弱 Hausdorff 的性质', '对角 k-闭'] },
+    { id: 'prop.cgwh-fiber-product', aka: ['紧块的纤维积', 'fiber product compact'] },
+    { id: 'prop.cg-kclosed-quotient', aka: ['k-闭等价关系', '弱 Hausdorff 商'] },
+    { id: 'thm.cgwh-reflective', aka: ['CGWH', 'CGWH 是反射子范畴', '紧生成弱 Hausdorff', '弱 Hausdorff 化'] },
+    { id: 'prop.cgwh-closed', aka: ['CGWH 的子空间', 'CGWH 的滤过余极限'] },
+    { id: 'prop.cg-function-space', aka: ['函数空间弱 Hausdorff', 'kC(X,Y)'] },
+
+    /* 群与第一同构定理 */
+    { id: 'def.group', aka: ['群', 'group', '阿贝尔群', '交换群', 'Abelian group'] },
+    { id: 'def.subgroup', aka: ['子群', 'subgroup'] },
+    { id: 'def.normal-subgroup', aka: ['正规子群', 'normal subgroup', '陪集', 'coset'] },
+    { id: 'def.quotient-group', aka: ['商群', 'quotient group', 'G/N', '商映射'] },
+    { id: 'def.group-hom', aka: ['群同态', 'group homomorphism', '核', 'kernel', '像', 'image'] },
+    { id: 'thm.first-iso', aka: ['Noether 第一同构定理', '第一同构定理', '同构定理', 'first isomorphism theorem', 'Noether'] },
+    { id: 'def.product-topology', aka: ['积拓扑', 'product topology', '乘积空间', '投影'] },
 
     /* 同调代数 */
     { id: 'def.cochain-complex', aka: ['复形', 'complex', '上链复形', 'cochain complex', '链复形', '微分'] },
@@ -5685,6 +5718,15 @@ MG.aliases = {
     { q: '层的张量积怎么算', to: ['def.tensor-abelian-sheaf', 'def.internal-hom', 'thm.sheafification'] },
     { q: '为什么凝聚态阿贝尔群可以做代数', to: ['def.tensor-abelian-sheaf', 'thm.condab-ab', 'def.condensed-abelian-group'] },
     { q: '什么是平坦对象', to: ['def.flat-abelian-sheaf', 'def.tensor-abelian-sheaf', 'def.abelian-category'] },
+    { q: '商映射乘局部紧是什么定理', to: ['thm.quotient-product', 'cor.cg-product', 'def.quotient-topology'] },
+    { q: '什么是k拓扑', to: ['def.k-topology', 'def.compactly-generated', 'prop.cg-coreflective'] },
+    { q: '哪些空间是紧生成的', to: ['def.compactly-generated', 'ex.cg-examples', 'prop.cg-equivalent-conditions'] },
+    { q: '什么是弱 Hausdorff', to: ['def.weak-hausdorff', 'prop.weak-hausdorff-basic', 'thm.cgwh-reflective'] },
+    { q: '紧开拓扑是什么', to: ['def.compact-open-topology', 'prop.cg-function-space', 'def.compactly-generated'] },
+    { q: 'Noether 第一同构定理', to: ['thm.first-iso', 'def.quotient-group', 'def.group-hom'] },
+    { q: '商群是什么', to: ['def.quotient-group', 'def.normal-subgroup', 'def.quotient-set'] },
+    { q: '核为什么是正规子群', to: ['def.group-hom', 'def.normal-subgroup', 'thm.first-iso'] },
+    { q: '积拓扑是什么', to: ['def.product-topology', 'def.quotient-topology', 'def.compactly-generated'] },
   ],
 };
 
@@ -5968,6 +6010,8 @@ MG.notation = {
       note: '只用在交换图的 $\\begin{array}$ 里给边注（如 $\\downarrow\\scriptstyle{f}$）压字号，正文里不用。' },
     { g: 'layout', tex: '\\xrightarrow{f}, \\xleftarrow{g}', uni: '→f／←g', name: '带标签的箭头',
       note: '交换图里把态射名字写在箭头上 / 下。' },
+    { g: 'layout', tex: '\\trianglelefteq',  uni: '⊴', name: '正规子群 $H \\trianglelefteq G$',
+      note: '子群写 $H \\le G$；正规子群写 $H \\trianglelefteq G$（三角形 = normal）。' },
     { g: 'layout', tex: '\\mapsto, \\longmapsto', uni: '↦ ／ ⟼', name: '元素映射',
       note: '写明「把元素送到哪儿」用 $\\mapsto$；定义一条长链条（比如预层的取值）用 $\\longmapsto$。' },
     { g: 'layout', tex: '\\downarrow, \\uparrow', uni: '↓ ↑', name: '竖直箭头',
@@ -14975,6 +15019,27 @@ window.MG = window.MG || {};
       notes: '直观：**商空间的开集就是「拉回去是开的」的那些**。所以商空间里的性质要「从上面看下来」：$Y$ 中有没有开集分离两个点，问的是它们的原像能不能被 $X$ 的开集分开。\n\n商拓扑与子空间拓扑是方向相反的一对：一个取「切一刀得到的最粗」，一个取「贴回去得到的最细」。'
     },
 
+    {
+      id: 'def.product-topology',
+      cluster: 'topology.general',
+      type: 'definition',
+      label: '积拓扑',
+      title: '积拓扑与乘积空间（Product Topology）',
+      regions: ['topology'],
+      tags: ['定义', '拓扑', '乘积', '投影'],
+      statement: [
+        '设 $(X_{i}, \\mathcal{T}_{i})_{i \\in I}$ 是一族拓扑空间。$\\prod_{i \\in I} X_{i}$ 上的**积拓扑**是以',
+        '',
+        '$$\\prod_{i \\in I} U_{i} \\qquad (U_{i} \\in \\mathcal{T}_{i},\\ \\text{除有限多个 } i \\text{ 外 } U_{i} = X_{i})$$',
+        '',
+        '为基的拓扑 —— 也就是使所有投影 $\\pi_{j} : \\prod_{i} X_{i} \\to X_{j}$ 都连续的**最粗**拓扑。'
+      ].join('\n'),
+      notes: [
+        '⭐ **「最粗」是关键字**：投影要连续，只要求每个 $\\pi_{j}^{-1}(U_{j})$ 是开的；把这些取有限交当基，就是积拓扑。要求更细反而会丢掉极限 —— 而「$x_{n} \\to x$ $\\iff$ 按每个分量都收敛」正是这条最粗性换来的。',
+        '**范畴意义**：$\\prod_{i} X_{i}$ 连同投影就是 $\\mathbf{Top}$ 里的**积**。所以积拓扑不是随便挑的，它是泛性质唯一确定的那一个。'
+      ].join('\n\n')
+    },
+
     /* ------------------------------------------------------ 分离公理 */
     {
       id: 'def.hausdorff',
@@ -15929,13 +15994,13 @@ window.MG = window.MG || {};
       statement: [
         '设 $F$ 是一个**集合**，$+$ 与 $\\cdot$ 是 $F$ 上的两个**二元运算**（即两个函数 $F \\times F \\to F$）。称 $(F, +, \\cdot)$ 是一个**域**，当且仅当：',
         '',
-        '- **加法**：$a + (b + c) = (a + b) + c$，$a + b = b + a$；存在 $0 \\in F$ 使 $a + 0 = a$；对每个 $a$ 存在 $-a \\in F$ 使 $a + (-a) = 0$；',
-        '- **乘法**：$a(bc) = (ab)c$，$ab = ba$；存在 $1 \\in F$，$1 \\ne 0$，使 $a \\cdot 1 = a$；对每个 $a \\ne 0$ 存在 $a^{-1} \\in F$ 使 $a\\, a^{-1} = 1$；',
-        '- **分配律**：$a (b + c) = ab + ac$。',
+        '- $(F, +)$ 是**阿贝尔群**；',
+        '- $(F \\setminus \\{0\\}, \\cdot)$ 是**阿贝尔群**（这里 $0$ 是加法群的单位元）；',
+        '- **分配律** $a (b + c) = ab + ac$ 对一切 $a, b, c \\in F$ 成立。',
         '',
         '一句话：**加减乘除（除以非零元）都封闭，且满足结合、交换、分配律**。'
       ].join('\n'),
-      notes: '⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。\n\n已经造好的例子：\n- $\\mathbb{Q}$（有理数）：最顺手的域；\n- $\\mathbb{R}$（实数）：由 Cauchy 列造出来之后，再验证它满足这些等式（见「$\\mathbb{R}$ 是完备有序域」）；\n- $\\mathbb{Z}$ **不是**域：$2$ 在里面没有乘法逆元；$\\mathbb{N}$ 也不是：$1 - 2$ 没有意义。\n\n⚠ 「域」（field）与测度论里的「环」不是一回事：那里的环是**集合环**，指对有限并与差封闭的**集族**，同名不同物。',
+      notes: '⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。注意上面三条把「群」的两条公理组直接**引用**过来了：域的定义是**在群的定义之上再加一层**，不是重新数一遍等式。\n\n已经造好的例子：\n- $\\mathbb{Q}$（有理数）：最顺手的域；\n- $\\mathbb{R}$（实数）：由 Cauchy 列造出来之后，再验证它满足这些等式（见「$\\mathbb{R}$ 是完备有序域」）；\n- $\\mathbb{Z}$ **不是**域：$2$ 在里面没有乘法逆元；$\\mathbb{N}$ 也不是：$1 - 2$ 没有意义。\n\n⚠ 「域」（field）与测度论里的「环」不是一回事：那里的环是**集合环**，指对有限并与差封闭的**集族**，同名不同物。',
       refs: ['Lang, Algebra, Ch. I', 'Dummit & Foote, Abstract Algebra, §13.1']
     },
 
@@ -19544,56 +19609,6 @@ window.MG = window.MG || {};
 </script>
 <script>
 /* ==========================================================================
-   内容包 · 紧生成空间（2 条，后补）
-   --------------------------------------------------------------------------
-   紧生成空间是 Top 的**余反射**子范畴（与紧 Hausdorff 的反射方向正好相反）。
-   它是凝聚态集那段里「底拓扑空间」那一条的必要配角。
-   ========================================================================== */
-window.MG = window.MG || {};
-(window.MG.packs = window.MG.packs || []).push({
-
-  name: '紧生成空间',
-  nodes: [
-
-    {
-      id: 'def.compactly-generated',
-      cluster: 'topo.cg',
-      type: 'definition',
-      label: '紧生成空间',
-      title: '紧生成空间 / $k$-空间（Compactly Generated Space）',
-      regions: ['topology'],
-      tags: ['拓扑', '紧生成', 'k-空间'],
-      statement: [
-        '拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \\subseteq X$ 闭 $\\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \\to X$，$f^{-1}(Y)$ 在 $S$ 中闭。'
-      ].join('\n'),
-      notes: '例：局部紧 Hausdorff 空间都是紧生成的。\n\n「由紧 Hausdorff 空间的映射决定拓扑」这句话的意思是：**只要一个子集在所有这类映射下的原像都闭，它就是闭的**。一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。'
-    },
-
-    {
-      id: 'prop.cg-coreflective',
-      cluster: 'topo.cg',
-      type: 'proposition',
-      label: '紧生成空间是余反射子范畴',
-      title: '紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴',
-      regions: ['topology'],
-      tags: ['拓扑', '紧生成', '余反射'],
-      statement: [
-        '紧生成空间构成的范畴 $k\\mathbf{Top}$ 是 $\\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$ 有**右**伴随',
-        '',
-        '$$k : \\mathbf{Top} \\longrightarrow k\\mathbf{Top}, \\qquad X \\mapsto kX$$',
-        '',
-        '即 $i \\dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成紧生成的那一个。'
-      ].join('\n'),
-      notes: '⭐ 与紧 Hausdorff 对照着记：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\\beta$），而 $k\\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。'
-    }
-  ],
-
-  edges: []
-});
-
-</script>
-<script>
-/* ==========================================================================
    内容包 · 凝聚态集（18 条）
    --------------------------------------------------------------------------
    第九团（终点站）：CHaus 是预拓扑斯 → 凝聚态集 → Cond 是拓扑斯
@@ -20684,6 +20699,566 @@ window.MG = window.MG || {};
         '是**正合**的。'
       ].join('\n'),
       notes: '例：**通常的阿贝尔群平坦 $\\iff$ 无挠**。由此立刻得到：$\\mathbb{Z}\\cdot X$ **总是平坦的** —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。'
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 紧生成空间与弱 Hausdorff 空间（18 条）
+   --------------------------------------------------------------------------
+   这一团要造出的东西是：**一个「乘积好用」的拓扑空间范畴**。
+
+   场地是紧 Hausdorff 空间 —— 它们是「足够小、足够正常」的测试空间。
+   一个空间若被从它们进来的连续映射完全决定，就叫紧生成（$k$-空间）。
+   这一步（$k$-化）是**余反射**：把所有「测试不够」的坏空间照原样换掉，
+   于是乘积不再出问题。再加一条弱 Hausdorff 条件，就得到
+   $\mathrm{CGWH}$ —— 现代代数拓扑默认待的那间屋子。
+
+   对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（往紧里收），
+   $k\mathbf{Top}$ 是**余反射**的（往外放）。方向正好相反。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '紧生成空间与弱 Hausdorff 空间',
+  nodes: [
+
+    /* ------------------------------------------------------ 定义与例子 */
+    {
+      id: 'def.compactly-generated',
+      cluster: 'topo.cg',
+      type: 'definition',
+      label: '紧生成空间',
+      title: '紧生成空间 / $k$-空间（Compactly Generated Space）',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', 'k-空间', 'k-拓扑'],
+      statement: [
+        '拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。',
+        '',
+        '等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— $Y \\subseteq X$ 是开（闭）集 $\\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \\to X$，$f^{-1}(Y)$ 在 $S$ 中开（闭）。'
+      ].join('\n'),
+      notes: [
+        '「由从紧 Hausdorff 空间进来的映射决定拓扑」的意思是：**只要一个子集在所有这类映射下的原像都开，它就是开的**。',
+        '一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。',
+        '这是**余反射**的入口：$k$-化（见「$k$-开、$k$-闭与 $k$-拓扑」）把任何空间改造成紧生成的，而且改造前后到别的紧生成空间之间的映射一一对应。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'ex.cg-examples',
+      cluster: 'topo.cg',
+      type: 'example',
+      label: '紧生成空间的例子',
+      title: '哪些空间是紧生成的',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '例子', '局部紧'],
+      statement: [
+        '**例 1**　局部紧 Hausdorff 空间是紧生成的。',
+        '**例 2**　序列空间是紧生成的：$A \\subseteq X$ 闭 $\\iff$ 只要 $x_{n} \\to x$ 且 $x_{n} \\in A$，就有 $x \\in A$。',
+        '**例 3**　若 $I$ **不可数**，则 $\\mathbb{R}^{I}$ 与 $\\mathbb{Z}^{I}$（积拓扑）都**不是**紧生成的。'
+      ].join('\n'),
+      notes: [
+        '**例 1** 是最常用的一条：紧 Hausdorff 空间自己当然紧生成（它本身就是自己的那条余极限）；一般局部紧 Hausdorff 空间由「取紧邻域」这一类映射决定拓扑。',
+        '**例 3** 是反面教材 —— 它正是「乘积不好用」的根源：$\\mathbb{R}^{I}$ 太细，细到没有足够的紧 Hausdorff 空间能测出它的拓扑。$k$-化会把它换成拓扑更粗的 $k(\\mathbb{R}^{I})$，那个才好用。'
+      ].join('\n\n')
+    },
+
+    /* -------------------------------------------------- 等价刻画 */
+    {
+      id: 'prop.cg-equivalent-conditions',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '紧生成空间的等价刻画',
+      title: '紧生成性的六条等价说法',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '等价刻画'],
+      statement: [
+        '下面六条等价：',
+        '',
+        [
+          '1. $X$ 是紧生成的；',
+          '2. $X$ 是「紧 $T_{1}$ 空间的不交并」的商空间；',
+          '3. $X$ 是「局部紧 $T_{1}$ 空间」的商空间；',
+          '4. $Y \\subseteq X$ 开 $\\iff$ 对每个从紧 $T_{1}$ 空间出发的连续 $f : S \\to X$，$f^{-1}(Y)$ 开；',
+          '5. $X \\to Y$ 连续 $\\iff$ 对每个连续 $f : S \\to X$，复合 $S \\to X \\to Y$ 连续；',
+          '6. $X$ 是所有连续映射 $S \\to X$（$S$ 紧 $T_{1}$）的余极限。'
+        ].join('\n')
+      ].join('\n'),
+      notes: [
+        '**证明的走法。** (1) $\\iff$ (6) 是定义换一种说法：余极限就是「由全体映射决定」。',
+        '',
+        [
+          '- (6) $\\implies$ (2)：取 $Y = \\coprod_{S \\to X} S$（沿所有连续映射 $S \\to X$，$S$ 紧 $T_{1}$）。全体映射拼出 $Y \\to X$，它显然满 —— **满的连续映射就是商映射**。',
+          '- (2) $\\implies$ (3)：紧 $T_{1}$ 空间本身局部紧。',
+          '- (3) $\\implies$ (1)：商映射 $Z \\twoheadrightarrow X$（$Z$ 局部紧 $T_{1}$）把 $Z$ 的紧生成性传下去 —— 商是余极限，而余极限的余极限还是余极限。',
+          '- (4) $\\iff$ (1)：这是「由映射决定拓扑」的逐字翻译：用 $S$ 是紧空间这一条，把 $f^{-1}(Y)$ 的开性从 $f(S)$ 拉回到 $S$ 上。',
+          '- (5) $\\iff$ (4)：把「$X \\to Y$ 连续」按定义展开成「开集的原像开」，再用 (4) 换成紧 $T_{1}$ 空间上的检验。'
+        ].join('\n'),
+        '⚠️ **测试空间的取法要留意。** 定义那一条用的是**紧 Hausdorff**空间，而这里 (2)(3)(4)(6) 用的是**紧 $T_{1}$**空间。两个测试族是否给出同一个 $k$-化，取决于「从紧 $T_{1}$ 空间出发的连续映射能否换成从紧 Hausdorff 空间出发的」—— **这一点待核对**；用的时候务必先把手头的测试族固定下来。'
+      ].join('\n\n')
+    },
+
+    /* ------------------------------------------------------ k-拓扑 */
+    {
+      id: 'def.k-topology',
+      cluster: 'topo.cg',
+      type: 'definition',
+      label: 'k-开、k-闭与 k-拓扑',
+      title: '$k$-开集与 $k$-化（$k$-Topology）',
+      regions: ['topology'],
+      tags: ['拓扑', 'k-拓扑', 'k-开', 'k-化'],
+      statement: [
+        '子集 $Y \\subseteq X$ 叫 **$k$-开**（**$k$-闭**）的，如果对每个连续映射 $f : S \\to X$（$S$ 紧 Hausdorff），$f^{-1}(Y)$ 在 $S$ 中开（闭）。',
+        '',
+        '全体 $k$-开集构成的拓扑叫 $X$ 上的 **$k$-拓扑**；记 $kX$ 为「同一个集合、拓扑换成 $k$-拓扑」的那个空间。'
+      ].join('\n'),
+      notes: [
+        '$k$-拓扑就是**使所有连续映射 $S \\to X$（$S$ 紧 Hausdorff）都连续的最终（最细）拓扑**。它比原来的拓扑**细** —— 开集变多了（原本开的当然还是 $k$-开的）。',
+        '⭐ **紧生成 = 自己就是 $k$-化**：$X$ 紧生成 $\\iff$ $kX = X$（同一个拓扑空间）。所以 $k$ 是一个**幂等**的改造：$k(kX) = kX$。',
+        '一般情形下 $kX$ 与 $X$ 之间的恒等映射 $kX \\to X$ 连续（拓扑变细了），但反方向不连续 —— 这个「往下走」的映射正是余反射的余单位 $\\varepsilon_{X}$。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.ktx-colimit',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: 'kX 是紧空间的余极限',
+      title: '$kX = \\varinjlim S$',
+      regions: ['topology'],
+      tags: ['拓扑', 'k-拓扑', '余极限'],
+      statement: '对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \\to X$（$S$ 取遍紧 $T_{1}$ 空间）在 $\\mathbf{Top}$ 中的余极限。'
+    },
+
+    /* -------------------------------------------------- 余反射 */
+    {
+      id: 'prop.cg-coreflective',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '紧生成空间是余反射子范畴',
+      title: '紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '余反射', '伴随'],
+      statement: [
+        '紧生成空间构成的范畴 $k\\mathbf{Top}$ 是 $\\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$ 有**右**伴随',
+        '',
+        '$$k : \\mathbf{Top} \\longrightarrow k\\mathbf{Top}, \\qquad X \\mapsto kX$$',
+        '',
+        '即 $i \\dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成 $k$-拓扑。'
+      ].join('\n'),
+      notes: [
+        '**要证的是**：对每个紧生成空间 $X$ 与每个拓扑空间 $Y$，',
+        '',
+        '$$\\operatorname{Hom}_{\\mathbf{Top}}(X,\\ Y) \\;\\cong\\; \\operatorname{Hom}_{k\\mathbf{Top}}\\bigl(X,\\ kY\\bigr).$$',
+        '',
+        '**证明。** 余单位是 $\\varepsilon_{Y} : kY \\to Y$（恒等映射，拓扑从细到粗，连续）。',
+        '',
+        [
+          '- 先证 $kY$ 确实紧生成：把每个连续映射 $S \\to Y$（$S$ 紧 $T_{1}$）复合 $\\varepsilon_{Y}$ 抬成 $S \\to kY$，再用 $kY$ 的定义（$k$-开集的取法）验证「由这些映射决定拓扑」。',
+          '- 于是任意 $f : X \\to Y$ 连续（$X$ 紧生成）时，$f = \\varepsilon_{Y} \\circ f\': X \\to kY$ 给出一个到 $kY$ 的连续映射 $f\'$：设 $U \\subseteq kY$ 开，要证 $f\'^{-1}(U)$ 在 $X$ 中开。由 $X$ 紧生成，只需对每个紧 $L \\subseteq X$ 验证 $f\'^{-1}(U) \\cap L$ 在 $L$ 中开。而 $f|_{L} : L \\to Y$ 连续、$L$ 紧，故 $f(L)$ 紧；$U \\cap f(L)$ 在 $f(L)$ 中开，于是 $(f|_{L})^{-1}\\bigl(U \\cap f(L)\\bigr) = f\'^{-1}(U) \\cap L$ 在 $L$ 中开。∎',
+          '- 反向由 $\\varepsilon_{Y}$ 连续直接得到。这样两个方向互逆，就是那个同构。'
+        ].join('\n'),
+        '⭐ 与紧 Hausdorff 对照着记：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\\beta$），而 $k\\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对**余极限**封闭。'
+      ].join('\n\n')
+    },
+
+    /* -------------------------------------------------- 商映射与积 */
+    {
+      id: 'thm.quotient-product',
+      cluster: 'topo.cg',
+      type: 'theorem',
+      label: '商映射与局部紧空间作积',
+      title: '商映射与局部紧因子作积仍是商映射',
+      regions: ['topology'],
+      tags: ['拓扑', '商映射', '局部紧', '乘积'],
+      statement: [
+        '设 $q : X \\to Y$ 是**商映射**，$Z$ 是**局部紧 Hausdorff** 空间。则',
+        '',
+        '$$q \\times \\mathrm{id}_{Z} : X \\times Z \\longrightarrow Y \\times Z$$',
+        '',
+        '也是商映射。'
+      ].join('\n'),
+      notes: [
+        '⭐ **这是「紧生成空间对积封闭」那条的引擎**，也是搜「商映射」「局部紧」时该落到的地方。',
+        '**证明的走法（逆映射连续法）。** 记 $W := (q \\times \\mathrm{id}_{Z})^{-1}(U)$，要证 $W$ 开。取一点 $(x, z) \\in W$，记 $y = q(x)$。因为 $U$ 在 $Y \\times Z$ 中开，可以挑出基本开集',
+        '',
+        '$$V \\times K \\;\\subseteq\\; U, \\qquad y \\in V,\\;\\; z \\in K,$$',
+        '',
+        '其中 $V$ 开、$K$ 是 $z$ 的**紧邻域**（局部紧 Hausdorff $\\implies$ 每点有紧邻域基，可以要求 $K$ 落在任意给定的邻域里）。由 $q$ 是商映射，$q^{-1}(V)$ 是 $X$ 中的开集，于是',
+        '',
+        '$$q^{-1}(V) \\times K \\;\\subseteq\\; W$$',
+        '',
+        '是 $(x, z)$ 的一个开邻域 —— 所以 $(x, z)$ 是 $W$ 的内点，$W$ 开。∎',
+        '⚠️ **局部紧这个条件不能省。** 一般情形下「商映射乘 id」不是商映射：取 $q$ 是某条坏商、$Z$ 是一个既不局部紧又不紧生成的空间，乘积的商拓扑会严格细于商空间应有的拓扑。',
+        '记法：有的书上把这条写成「$Z$ 局部紧 Hausdorff $\\implies$ 函子 $- \\times Z$ 保商映射」。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'cor.cg-product',
+      cluster: 'topo.cg',
+      type: 'corollary',
+      label: '紧生成空间对积封闭',
+      title: '紧生成空间作积仍紧生成',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '乘积'],
+      statement: '若 $X$ 紧生成、$Y$ 局部紧 Hausdorff，则 $X \\times Y$ 紧生成。'
+    },
+
+    {
+      id: 'prop.k-product',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: 'k-化与积',
+      title: '$k(kX \\times Y) = k(X \\times Y)$',
+      regions: ['topology'],
+      tags: ['拓扑', 'k-拓扑', '乘积', 'k-化'],
+      statement: [
+        '对任何 $X, Y \\in \\mathbf{Top}$，',
+        '',
+        '$$k(kX \\times Y) \\;=\\; k(X \\times Y).$$',
+        '',
+        '若 $Y$ 还**局部紧 Hausdorff**，则更强：',
+        '',
+        '$$kX \\times Y \\;=\\; k(X \\times Y).$$'
+      ].join('\n'),
+      notes: '两式的差别正好是余反射子范畴的两个层次：一般情形下 $k$ 不是「积封闭」的，得对积再取一次 $k$；$Y$ 局部紧 Hausdorff 时（由商映射与积那条定理）$k$ 与「乘 $Y$」可交换。**这就是为什么 $k\\mathbf{Top}$ 里的乘积得取 $k(X \\times Y)$ 而不是 $X \\times Y$。**'
+    },
+
+    /* -------------------------------------------------- 紧开拓扑 */
+    {
+      id: 'def.compact-open-topology',
+      cluster: 'topo.cg',
+      type: 'definition',
+      label: '紧开拓扑',
+      title: '紧开拓扑（Compact-Open Topology）',
+      regions: ['topology'],
+      tags: ['拓扑', '紧开拓扑', '函数空间'],
+      statement: [
+        '设 $X, Y \\in \\mathbf{Top}$。对每个连续映射 $g : S \\to X$（$S$ 紧 Hausdorff）与每个开集 $V \\subseteq Y$，令',
+        '',
+        '$$W_{S,V} := \\{\\, f : X \\to Y \\;\\mid\\; \\operatorname{Im}(f \\circ g) \\subseteq V \\,\\}.$$',
+        '',
+        '$C(X, Y)$（也就是 $\\operatorname{Hom}_{\\mathbf{Top}}(X, Y)$）上的**紧开拓扑**是由全体 $W_{S,V}$ 生成的拓扑。'
+      ].join('\n'),
+      notes: [
+        '读法：$W_{S,V}$ 是「在所有从头进来的紧块上都落在 $V$ 里」的那些映射。$g$ 通过 $S$ 这个「测试块」把 $X$ 的局部控制住。',
+        '⭐ 这一条让 $\\operatorname{Hom}(X,Y)$ 本身成为一个拓扑空间 —— 于是可以谈「映射空间」，才可以谈同伦、道路空间、环路空间。在 $\\mathrm{CGWH}$ 里它才真正好用（见「函数空间弱 Hausdorff」那条）。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.compact-open-discrete',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '离散时函数空间是积',
+      title: '离散 $X$ 时 $C(X,Y) \\cong Y^{X}$',
+      regions: ['topology'],
+      tags: ['拓扑', '紧开拓扑', '积拓扑'],
+      statement: '若 $X$ 是**离散**空间，则 $C(X, Y) \\cong Y^{X}$（右边取**积拓扑**）。'
+    },
+
+    /* -------------------------------------------------- 弱 Hausdorff */
+    {
+      id: 'def.weak-hausdorff',
+      cluster: 'topo.cg',
+      type: 'definition',
+      label: '弱 Hausdorff 空间',
+      title: '弱 Hausdorff 空间（Weak Hausdorff Space）',
+      regions: ['topology'],
+      tags: ['拓扑', '弱 Hausdorff', 'CGWH'],
+      statement: '拓扑空间 $X$ 叫**弱 Hausdorff** 的，如果对每个连续映射 $f : S \\to X$（$S$ 紧 Hausdorff），像 $f(S)$ 都在 $X$ 中**闭**。'
+    },
+
+    {
+      id: 'prop.weak-hausdorff-basic',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '弱 Hausdorff 的基本性质',
+      title: '弱 Hausdorff 的几条基本性质',
+      regions: ['topology'],
+      tags: ['拓扑', '弱 Hausdorff', '对角'],
+      statement: [
+        '设 $X$ 弱 Hausdorff。则',
+        '',
+        [
+          '- $X$ 的每个紧 Hausdorff 子空间都闭；',
+          '- $X$ 是 $T_{1}$ 的（单点是紧 Hausdorff 子空间）；',
+          '- 对每个连续 $f : S \\to X$（$S$ 紧 Hausdorff），$f(S)$ 是**紧 Hausdorff** 的；',
+          '- **对角** $\\Delta_{X} \\subseteq X \\times X$ 是 $k$-闭的；反过来，若 $X$ 紧生成，则对角 $k$-闭 $\\implies$ $X$ 弱 Hausdorff；',
+          '- 若还有 $Y$ 弱 Hausdorff、$f, g : X \\rightrightarrows Y$ 连续，则 $\\ker(f, g) = \\{\\, x : f(x) = g(x) \\,\\} \\subseteq X$ 是 $k$-闭的。'
+        ].join('\n')
+      ].join('\n'),
+      notes: [
+        '**为什么叫「弱」Hausdorff。** Hausdorff 要求任意两点的开邻域能分开；弱 Hausdorff 只要求「紧块的像是闭的」—— 条件弱得多，却正好够用：出现在 $\\mathrm{CGWH}$ 里的那些构造（商、函数空间、纤维积）都不需要全 Hausdorff。',
+        '⚠️ 弱 Hausdorff **不蕴含** Hausdorff（存在紧生成的弱 Hausdorff 而非 Hausdorff 的空间）；但它蕴含 $T_{1}$，上面第二条就是。',
+        '**对角那条的作用**：$\\Delta_{X}$ $k$-闭 $\\iff$ 「两个映射相等的点集」是 $k$-闭的 —— 这与 $T_{1}$、$T_{2}$ 在一般拓扑里的刻画（对角闭）平行，只是这里闭的判据换成了 $k$-闭。紧生成是让这个等价反过来的补充条件。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.cgwh-fiber-product',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '紧块的纤维积还是紧的',
+      title: '紧 Hausdorff 沿弱 Hausdorff 的纤维积',
+      regions: ['topology'],
+      tags: ['拓扑', '弱 Hausdorff', '纤维积', '紧'],
+      statement: '若 $S, S\'$ 是紧 Hausdorff 空间、$X$ 弱 Hausdorff，且给定了连续映射 $S \\to X$、$S\' \\to X$，则纤维积 $S \\times_{X} S\'$ 紧 Hausdorff。'
+    },
+
+    {
+      id: 'prop.cg-kclosed-quotient',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: 'k-闭等价关系与弱 Hausdorff 商',
+      title: '$R$ 是 $k$-闭 $\\iff$ $X/R$ 弱 Hausdorff',
+      regions: ['topology'],
+      tags: ['拓扑', '弱 Hausdorff', '商空间', '等价关系'],
+      statement: '设 $X$ 紧生成，$R$ 是 $X$ 上的等价关系（看作 $R \\subseteq X \\times X$）。则 $R$ 是 $k$-闭的 $\\iff$ 商空间 $X/R$ 弱 Hausdorff。'
+    },
+
+    {
+      id: 'thm.cgwh-reflective',
+      cluster: 'topo.cg',
+      type: 'theorem',
+      label: 'CGWH 是 CG 的反射子范畴',
+      title: '紧生成的弱 Hausdorff 空间是反射子范畴',
+      regions: ['topology'],
+      tags: ['拓扑', 'CGWH', '反射', '商'],
+      statement: [
+        '紧生成的**弱 Hausdorff** 空间构成的范畴 $\\mathrm{CGWH}$ 是 $\\mathrm{CG}$（紧生成空间）的**反射**子范畴。',
+        '',
+        '反射是',
+        '',
+        '$$h : X \\longmapsto X/R,$$',
+        '',
+        '其中 $R$ 是 $X$ 上**最小的闭等价关系**。'
+      ].join('\n'),
+      notes: [
+        '**为什么取「最小的闭等价关系」。** 要让商 $X/R$ 弱 Hausdorff，$R$ 得是 $k$-闭的（上一条）；而要商掉得尽量少、好让反射是「最经济」的改造，就取最小的那个闭等价关系。（$R \\mapsto X/R$ 把关系越大商越小，方向别弄反。）',
+        '⭐ 这一条给出「怎么把一个空间修好」的完整链条：$X \\rightsquigarrow kX$（先 $k$-化，变成 $\\mathrm{CG}$）$\\rightsquigarrow kX/R$（再商掉最小闭等价关系，变成 $\\mathrm{CGWH}$）。两步都是**函子性**的，所以 $\\mathrm{CGWH}$ 里的同构、极限、余极限都能从 $\\mathbf{Top}$ 里搬过来。',
+        '⭐ 这就是为什么现代代数拓扑默认在 $\\mathrm{CGWH}$ 里做事：$\\mathrm{CGWH}$ 对**有限积**封闭、函数空间 $kC(X,Y)$ 还在里面、且是笛卡尔闭的 —— 而 $\\mathbf{Top}$ 一个都不满足。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.cgwh-closed',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: 'CGWH 的开闭子空间与滤过余极限',
+      title: '$\\mathrm{CGWH}$ 的封闭性',
+      regions: ['topology'],
+      tags: ['拓扑', 'CGWH', '子空间', '余极限'],
+      statement: [
+        '1. 紧生成的弱 Hausdorff 空间的**开子空间**与**闭子空间**仍紧生成且弱 Hausdorff。',
+        '2. 若 $X = \\varinjlim X_{i}$ 是紧生成的弱 Hausdorff 空间沿**闭含入**的**滤过**余极限，则 $X$ 也紧生成的弱 Hausdorff，并且每个 $X_{i}$ 都在 $X$ 中闭。'
+      ].join('\n'),
+      notes: '第 2 条正是凝聚态数学里反复要用的那一条：把「由有限块拼起来的对象」按滤过余极限拼大，$\\mathrm{CGWH}$ 的性质不会掉。'
+    },
+
+    {
+      id: 'prop.cg-function-space',
+      cluster: 'topo.cg',
+      type: 'proposition',
+      label: '函数空间弱 Hausdorff',
+      title: '$Y$ 弱 Hausdorff $\\implies$ $kC(X,Y)$ 弱 Hausdorff',
+      regions: ['topology'],
+      tags: ['拓扑', '弱 Hausdorff', '紧开拓扑', '函数空间'],
+      statement: '若 $Y$ 弱 Hausdorff，则 $kC(X, Y)$（紧开拓扑再取 $k$-化）也弱 Hausdorff。'
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 群与第一同构定理（6 条）
+   --------------------------------------------------------------------------
+   这一批补的是代数的最底层：从「集合 + 运算 + 公理」造出**群**，
+   再由正规子群造出**商群**，最后给出第一同构定理
+   $G/\\ker\\varphi \\cong \\operatorname{im}\\varphi$。
+
+   它是「商集与等价类」那条在代数里的第一击：
+   商集把「同一个值」的点粘起来，群结构让粘完的东西还是群。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '群与第一同构定理',
+  nodes: [
+
+    /* ------------------------------------------------------------ 群 */
+    {
+      id: 'def.group',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '群',
+      title: '群与阿贝尔群（Group）',
+      regions: ['algebra'],
+      tags: ['代数', '群', '阿贝尔群', '运算'],
+      statement: [
+        '设 $G$ 是**集合**，$\\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \\times G \\to G$，$(a, b) \\mapsto a \\cdot b$）。称 $(G, \\cdot)$ 是一个**群**，当且仅当：',
+        '',
+        [
+          '- **结合律**：$(a b) c = a (b c)$ 对一切 $a, b, c \\in G$ 成立；',
+          '- **单位元**：存在 $e \\in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；',
+          '- **逆元**：对每个 $a \\in G$ 存在 $a^{-1} \\in G$ 使 $a a^{-1} = a^{-1} a = e$。'
+        ].join('\n'),
+        '',
+        '再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。'
+      ].join('\n'),
+      notes: [
+        '⭐ **格式还是「集合 + 运算 + 公理」**：群不是凭空的对象 —— 一个集合、一个函数、三条等式就定出了一个群。判别一个东西是不是群，就是逐条核对这些等式。',
+        '**单位元与逆元是唯一的**：若 $e, e\'$ 都是单位元，则 $e = e e\' = e\'$；若 $a^{-1}, a\'$ 都是 $a$ 的逆，则 $a\' = a\' e = a\' a a^{-1} = e a^{-1} = a^{-1}$。所以「$e$」与「$a^{-1}$」这两个记号合法。',
+        '**例子与反例**：$(\\mathbb{Z}, +)$ 是阿贝尔群；$(\\mathbb{Q} \\setminus \\{0\\}, \\cdot)$ 是阿贝尔群；$(\\mathbb{Z}, \\cdot)$ **不是**群（只有 $\\pm 1$ 有乘法逆元）；$n \\times n$ 可逆矩阵在乘法下是群但**不阿贝尔**（$n \\ge 2$）。',
+        '📌 还有一层更弱的：只要求结合律与单位元、不要求逆元，叫**幺半群**。（$\\mathbb{N}$ 在加法下就是幺半群不是群。）'
+      ].join('\n\n')
+    },
+
+    /* ---------------------------------------------------------- 子群 */
+    {
+      id: 'def.subgroup',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '子群',
+      title: '子群（Subgroup）',
+      regions: ['algebra'],
+      tags: ['代数', '群', '子群'],
+      statement: [
+        '设 $(G, \\cdot)$ 是群，$H \\subseteq G$。称 $H$ 是 $G$ 的**子群**（记 $H \\le G$），如果 $H$ 在**限制过来的运算**下自己构成一个群 —— 也就是：',
+        '',
+        [
+          '- $e \\in H$；',
+          '- $a, b \\in H \\implies ab \\in H$（对运算封闭）；',
+          '- $a \\in H \\implies a^{-1} \\in H$（对逆封闭）。'
+        ].join('\n'),
+        '',
+        '（结合律是从 $G$ 里继承的，不必重查。）'
+      ].join('\n'),
+      notes: '两条合起来可写成一条：$a, b \\in H \\implies a b^{-1} \\in H$。\n\n任意多个子群的交仍是子群；但**并**一般不是 —— 这也是「由 $S$ 生成的子群 $\\langle S \\rangle$」要定义成「含 $S$ 的一切子群的交」的原因。'
+    },
+
+    /* ------------------------------------------------------ 正规子群 */
+    {
+      id: 'def.normal-subgroup',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '正规子群',
+      title: '正规子群与陪集（Normal Subgroup）',
+      regions: ['algebra'],
+      tags: ['代数', '群', '正规子群', '陪集'],
+      statement: [
+        '设 $H \\le G$，$g \\in G$。**左陪集**与**右陪集**分别是',
+        '',
+        '$$gH := \\{\\, gh : h \\in H \\,\\}, \\qquad Hg := \\{\\, hg : h \\in H \\,\\}.$$',
+        '',
+        '称 $H$ 是 $G$ 的**正规子群**（记 $H \\trianglelefteq G$），如果对一切 $g \\in G$ 有 $gH = Hg$，等价地 $gHg^{-1} = H$。'
+      ].join('\n'),
+      notes: [
+        '⭐ **为什么要正规。** 陪集 $gH$ 是**集合**，想用「$gH \\cdot g\'H := gg\'H$」把商集变成群，就必须让这个定义**与代表元的选取无关**。算一下差在哪儿：',
+        '',
+        '$$(g h)(g\' h\') = g g\' \\cdot \\bigl((g\')^{-1} h g\'\\bigr) h\',$$',
+        '',
+        '最右边那个括号里的 $(g\')^{-1} h g\'$ 得还在 $H$ 里才行 —— 「$H$ 对共轭封闭」正是正规性。**阿贝尔群里每个子群都正规**（共轭不动），所以在阿贝尔群里这一步永远不碍事。',
+        '**陪集是一条等价关系。** 定义 $a \\sim b \\iff a^{-1} b \\in H$，则等价类恰好是左陪集，全体左陪集划分 $G$ —— 这就是下面商群要用的商集。',
+        '**记号**：$H \\le G$ 表示子群，$H \\trianglelefteq G$ 表示正规子群（$\\trianglelefteq$ 读作「正规于」）。'
+      ].join('\n\n')
+    },
+
+    /* -------------------------------------------------------- 商群 */
+    {
+      id: 'def.quotient-group',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '商群',
+      title: '商群（Quotient Group）',
+      regions: ['algebra'],
+      tags: ['代数', '群', '商群', '商集'],
+      statement: [
+        '设 $N \\trianglelefteq G$。全体左陪集 $\\{\\, gN : g \\in G \\,\\}$ 记作 $G/N$，在上面定义',
+        '',
+        '$$(g N) \\cdot (g\' N) := (g g\') N.$$',
+        '',
+        '正规性保证这个定义与代表元的选取无关，于是 $G/N$ 成为一个群，叫**商群**。',
+        '',
+        '自然映射 $\\pi : G \\to G/N$，$g \\mapsto gN$，是满同态。'
+      ].join('\n'),
+      notes: [
+        '商群就是**集合层面的商集**再往上一层：先在 $G$ 上用等价关系「差一个 $N$ 的元素」商掉，再验证商集上还残留着一个运算。',
+        '**泛性质**（商群真正的用处）：对任何群同态 $\\varphi : G \\to G\'$，若 $N \\subseteq \\ker\\varphi$，则 $\\varphi$ 唯一地穿过 $\\pi$：存在唯一的 $\\overline{\\varphi} : G/N \\to G\'$ 使 $\\overline{\\varphi} \\circ \\pi = \\varphi$。',
+        '⚠️ 商**群**只对正规子群有；商**集** $G/H$ 对任何子群都有（左陪集照样划分 $G$），但那个商集上一般没有群结构。'
+      ].join('\n\n')
+    },
+
+    /* -------------------------------------------------------- 同态 */
+    {
+      id: 'def.group-hom',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '群同态、核与像',
+      title: '群同态（Group Homomorphism）',
+      regions: ['algebra'],
+      tags: ['代数', '群', '同态', '核', '像'],
+      statement: [
+        '设 $(G, \\cdot)$、$(G\', \\ast)$ 是群。映射 $\\varphi : G \\to G\'$ 叫**群同态**，如果',
+        '',
+        '$$\\varphi(a b) = \\varphi(a) \\ast \\varphi(b) \\qquad (a, b \\in G).$$',
+        '',
+        '它的**核**与**像**分别是',
+        '',
+        '$$\\ker\\varphi := \\{\\, g \\in G : \\varphi(g) = e\' \\,\\} \\;\\subseteq\\; G, \\qquad \\operatorname{im}\\varphi := \\varphi(G) \\;\\subseteq\\; G\'.$$'
+      ].join('\n'),
+      notes: [
+        '**同态自动保单位元与逆元**：$\\varphi(e) = e\'$、$\\varphi(a^{-1}) = \\varphi(a)^{-1}$（由 $\\varphi(e) = \\varphi(e e) = \\varphi(e)\\varphi(e)$ 两边消去得到）。所以定义里只需写一条等式。',
+        '**核与像都是子群**：$\\operatorname{im}\\varphi \\le G\'$ 显然；$\\ker\\varphi \\le G$ 由 $\\varphi(ab^{-1}) = \\varphi(a)\\varphi(b)^{-1} = e\'$ 得到。',
+        '⭐ **核还是正规子群**：对 $k \\in \\ker\\varphi$、$g \\in G$，',
+        '',
+        '$$\\varphi(g k g^{-1}) = \\varphi(g)\\, e\'\\, \\varphi(g)^{-1} = e\',$$',
+        '',
+        '所以 $gkg^{-1} \\in \\ker\\varphi$，即 $\\ker\\varphi \\trianglelefteq G$。**核总是正规的** —— 这正是「商群能商掉核」的全部理由。',
+        '**单同态 $\\iff$ 核平凡**：$\\varphi$ 是单射 $\\iff$ $\\ker\\varphi = \\{e\\}$。于是「单」这个性质被一个**子群**完全编码了。'
+      ].join('\n\n')
+    },
+
+    /* -------------------------------------------------- 第一同构定理 */
+    {
+      id: 'thm.first-iso',
+      cluster: 'algebra.structures',
+      type: 'theorem',
+      label: '第一同构定理（Noether）',
+      title: '第一同构定理（Noether）',
+      regions: ['algebra', 'set-theory'],
+      tags: ['代数', '群', '同构定理', 'Noether', '商群', '商映射'],
+      statement: [
+        '设 $\\varphi : G \\to G\'$ 是**群同态**。则 $\\varphi$ 诱导出同构',
+        '',
+        '$$G \\big/ \\ker\\varphi \\;\\cong\\; \\operatorname{im}\\varphi, \\qquad g \\ker\\varphi \\;\\longmapsto\\; \\varphi(g).$$',
+        '',
+        '特别地：**满同态的像就是商群**（$\\varphi$ 满时 $G/\\ker\\varphi \\cong G\'$）。'
+      ].join('\n'),
+      notes: [
+        '**证明的三步。** 记 $K = \\ker\\varphi$。',
+        '',
+        [
+          '- **良定义**：若 $g K = g\' K$，则 $g\' = g k$（某个 $k \\in K$），于是 $\\varphi(g\') = \\varphi(g)\\varphi(k) = \\varphi(g) e\' = \\varphi(g)$ —— 同一陪集里的元素被送到同一个值。',
+          '- **同态**：$\\overline{\\varphi}\\bigl((gK)(g\'K)\\bigr) = \\overline{\\varphi}(gg\'K) = \\varphi(gg\') = \\varphi(g)\\varphi(g\') = \\overline{\\varphi}(gK)\\,\\overline{\\varphi}(g\'K)$。',
+          '- **双射**：单，因为 $\\overline{\\varphi}(gK) = e\'$ 意味着 $\\varphi(g) = e\'$，即 $g \\in K$，于是 $gK = K$；满，因为像本来就是 $\\varphi(G)$。∎'
+        ].join('\n'),
+        '⭐ **它其实是「集合 + 运算 + 公理」这套格式的通用定理，不是群的专利。** 同一个证明逐字照搬，只要把「同态」换成对应的东西：',
+        '',
+        '$$A \\big/ \\ker f \\;\\cong\\; \\operatorname{im} f.$$',
+        '',
+        '⭐ **集合层面的原型**：对任何映射 $f : A \\to B$，在 $A$ 上令 $a \\sim a\' \\iff f(a) = f(a\')$，则 $f$ 诱导**双射** $A/{\\sim} \\;\\to\\; \\operatorname{im} f$（见「商集与等价类」）。群版比它多出来的只有一句话：**商掉核之后，剩下的是一个群**。前两步（良定义、双射）就是集合版的内容，第三步（同态）才是新的。',
+        '**它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。'
+      ].join('\n\n'),
+      refs: ['Lang, Algebra, Ch. I §4', 'Dummit & Foote, Abstract Algebra, §10.2']
     }
   ],
 
@@ -22180,6 +22755,101 @@ window.MG = window.MG || {};
       definition: 'def.abelian-category',
       usedBy: 'thm.topos-abelian-grothendieck',
       note: '结论的一部分是「$\\mathcal{T}(\\mathbf{Ab})$ 是**阿贝尔**范畴」。'
+    },
+
+    /* ------------------------------- 紧生成空间与弱 Hausdorff（18 条那一批） */
+    {
+      id: 'def-dep.cg-quotient-locally-compact',
+      kind: 'definition',
+      definition: 'def.quotient-topology',
+      usedBy: 'thm.quotient-product',
+      note: '定理说的是**商映射** —— 也就是商拓扑那条满射。'
+    },
+    {
+      id: 'def-dep.cg-product-top',
+      kind: 'definition',
+      definition: 'def.product-topology',
+      usedBy: 'thm.quotient-product',
+      note: '结论说的是**乘积空间** $X \\times Z \\to Y \\times Z$。'
+    },
+    {
+      id: 'def-dep.cg-hausdorff-cgprod',
+      kind: 'definition',
+      definition: 'def.hausdorff',
+      usedBy: 'cor.cg-product',
+      note: '推论里的因子 $Y$ 要求**局部紧 Hausdorff**。'
+    },
+    {
+      id: 'def-dep.cg-kproduct',
+      kind: 'definition',
+      definition: 'def.k-topology',
+      usedBy: 'prop.k-product',
+      note: '式子里两边的 $k$ 都是**$k$-化**。'
+    },
+    {
+      id: 'def-dep.cg-ktx-quotient',
+      kind: 'definition',
+      definition: 'def.quotient-topology',
+      usedBy: 'prop.cg-kclosed-quotient',
+      note: '命题说的是**商空间** $X/R$。'
+    },
+    {
+      id: 'def-dep.weakhaus-diagonal',
+      kind: 'definition',
+      definition: 'def.product-topology',
+      usedBy: 'prop.weak-hausdorff-basic',
+      note: '对角 $\\Delta_{X}$ 住在**乘积** $X \\times X$ 里。'
+    },
+    {
+      id: 'def-dep.cgwh-cg',
+      kind: 'definition',
+      definition: 'def.compactly-generated',
+      usedBy: 'thm.cgwh-reflective',
+      note: '$\\mathrm{CGWH}$ 是在**紧生成**之上再加弱 Hausdorff。'
+    },
+    {
+      id: 'def-dep.funcspace-compactopen',
+      kind: 'definition',
+      definition: 'def.compact-open-topology',
+      usedBy: 'prop.cg-function-space',
+      note: '命题里的 $kC(X, Y)$ 就是**紧开拓扑**再取 $k$-化。'
+    },
+
+    /* ---------------------------------------------- 群与第一同构定理 */
+    {
+      id: 'def-dep.firstiso-quotient-group',
+      kind: 'definition',
+      definition: 'def.quotient-group',
+      usedBy: 'thm.first-iso',
+      note: '定理左端的 $G/\\ker\\varphi$ 是**商群**。'
+    },
+    {
+      id: 'def-dep.firstiso-kernel',
+      kind: 'definition',
+      definition: 'def.group-hom',
+      usedBy: 'thm.first-iso',
+      note: '核与像都是**群同态**的概念。'
+    },
+    {
+      id: 'def-dep.firstiso-normal',
+      kind: 'definition',
+      definition: 'def.normal-subgroup',
+      usedBy: 'thm.first-iso',
+      note: '核是**正规**子群 —— 这正是它能被商掉的理由。'
+    },
+    {
+      id: 'def-dep.quotient-group-normal',
+      kind: 'definition',
+      definition: 'def.normal-subgroup',
+      usedBy: 'def.quotient-group',
+      note: '商群只对**正规**子群有定义。'
+    },
+    {
+      id: 'def-dep.grouphom-subgroup',
+      kind: 'definition',
+      definition: 'def.subgroup',
+      usedBy: 'def.group-hom',
+      note: '核与像都是**子群**。'
     }
   ]
 });
@@ -22964,6 +23634,92 @@ window.MG = window.MG || {};
       '凝聚态阿贝尔群是这里的**特例**（$\\mathcal{T} = \\mathrm{Cond}$）。'],
     ['def.tensor-abelian-sheaf', 'def.flat-abelian-sheaf', 'def-dep.flat-tensor',
       '平坦性说的是「$P \\otimes_{\\mathbb{Z}} -$ **正合**」。'],
+
+    /* ------------------------------- 紧生成空间与弱 Hausdorff（18 条那一批） */
+    ['def.topology', 'def.compactly-generated', 'def-dep.cg-topology',
+      '紧生成说的是**拓扑空间**上的一条性质。'],
+    ['def.chaus', 'def.compactly-generated', 'def-dep.cg-chaus',
+      '测试空间取的是**紧 Hausdorff** 空间。'],
+    ['def.compactly-generated', 'def.k-topology', 'def-dep.ktopo-cg',
+      '$k$-开集就是用「从**紧 Hausdorff** 空间进来的映射」去测。'],
+    ['def.quotient-topology', 'def.k-topology', 'def-dep.ktopo-quotient',
+      '$k$-拓扑是使所有这类映射都连续的**最终（最细）拓扑** —— 与商拓扑是同一个构造。'],
+    ['def.compactly-generated', 'prop.ktx-colimit', 'def-dep.ktx-colimit-cg',
+      '$kX$ 是沿紧 $T_{1}$ 空间取余极限。'],
+    ['def.k-topology', 'prop.ktx-colimit', 'def-dep.ktx-colimit-ktopo',
+      '余极限的那条拓扑就是 $k$-拓扑。'],
+    ['def.k-topology', 'prop.cg-coreflective', 'def-dep.cgcoref-ktopo',
+      '余反射的函子 $k$ 就是**换成 $k$-拓扑**。'],
+    ['def.compactly-generated', 'prop.cg-coreflective', 'def-dep.cgcoref-cg',
+      '标的范畴 $k\\mathbf{Top}$ 是**紧生成**空间。'],
+    ['def.adjoint', 'prop.cg-coreflective', 'def-dep.cgcoref-adjoint',
+      '「余反射」= 含入函子有**右伴随**。'],
+    ['def.quotient-topology', 'thm.quotient-product', 'def-dep.quotprod-quotient',
+      '定理说的是**商映射**。'],
+    ['def.product-topology', 'thm.quotient-product', 'def-dep.quotprod-product',
+      '结论说的是**乘积** $X \\times Z \\to Y \\times Z$。'],
+    ['def.compactly-generated', 'cor.cg-product', 'def-dep.cgprod-cg',
+      '推论说的是**紧生成**空间作积。'],
+    ['def.k-topology', 'prop.k-product', 'def-dep.kprod-ktopo',
+      '两边的 $k$ 都是**$k$-化**。'],
+    ['def.product-topology', 'prop.k-product', 'def-dep.kprod-product',
+      '式子说的是**积**与 $k$-化的交换。'],
+    ['def.hausdorff', 'def.weak-hausdorff', 'def-dep.weakhaus-hausdorff',
+      '弱 Hausdorff 是把 Hausdorff 的条件放宽到「**紧块的像闭**」。'],
+    ['def.k-topology', 'prop.weak-hausdorff-basic', 'def-dep.weakhaus-basic-k',
+      '「对角是 $k$-闭」要先用上 **$k$-拓扑**。'],
+    ['def.hausdorff', 'thm.cgwh-reflective', 'def-dep.cgwh-hausdorff',
+      '反射去掉的是「弱 Hausdorff」，用的是**闭等价关系**。'],
+    ['def.quotient-topology', 'thm.cgwh-reflective', 'def-dep.cgwh-quotient',
+      '反射把 $X$ 换成**商空间** $X/R$。'],
+    ['def.topology', 'def.product-topology', 'def-dep.producttopo-topology',
+      '积拓扑是**拓扑空间**族上的构造。'],
+    ['def.topology-base', 'def.product-topology', 'def-dep.producttopo-base',
+      '积拓扑取的是那族「有限多分量真开」的集合作**基**。'],
+    ['def.compactly-generated', 'ex.cg-examples', 'def-dep.cgex-cg',
+      '例子说的都是**紧生成**空间。'],
+    ['def.compactly-generated', 'prop.cg-equivalent-conditions', 'def-dep.cgeq-cg',
+      '命题刻画的是**紧生成**性。'],
+    ['def.quotient-topology', 'prop.cg-equivalent-conditions', 'def-dep.cgeq-quotient',
+      '(2)(3) 两条把紧生成空间写成**商空间**。'],
+    ['def.topology', 'def.compact-open-topology', 'def-dep.compactopen-topology',
+      '紧开拓扑是函数集合上的一种**拓扑**。'],
+    ['def.compact', 'def.compact-open-topology', 'def-dep.compactopen-compact',
+      '测试块 $S$ 取的是**紧**空间。'],
+    ['def.continuous', 'def.compact-open-topology', 'def-dep.compactopen-continuous',
+      '定义里要求 $g$ 与 $f$ 都**连续**。'],
+    ['def.compact-open-topology', 'prop.compact-open-discrete', 'def-dep.compactopen-discrete',
+      '命题说的是**紧开拓扑**下的函数空间。'],
+    ['def.fibered-product', 'prop.cgwh-fiber-product', 'def-dep.cgwhfiber-fibered',
+      '结论说的是**纤维积** $S \\times_{X} S\'$。'],
+    ['def.weak-hausdorff', 'prop.cgwh-fiber-product', 'def-dep.cgwhfiber-weakhaus',
+      '要求 $X$ 是**弱 Hausdorff** 空间。'],
+    ['def.subspace-topology', 'prop.cgwh-closed', 'def-dep.cgwhclosed-subspace',
+      '结论说的是**子空间**。'],
+    ['def.weak-hausdorff', 'prop.cgwh-closed', 'def-dep.cgwhclosed-weakhaus',
+      '结论说的是**弱 Hausdorff** 性在子空间与滤过余极限下保持。'],
+
+    /* ---------------------------------------------- 群与第一同构定理 */
+    ['def.function', 'def.group', 'def-dep.group-function',
+      '群运算是 $G \\times G \\to G$，一个**函数**。'],
+    ['def.group', 'def.subgroup', 'def-dep.subgroup-group',
+      '子群是**群**的子结构（限制过来的运算）。'],
+    ['def.group', 'def.normal-subgroup', 'def-dep.normal-group',
+      '正规子群先要是**群**的子群。'],
+    ['def.quotient-set', 'def.quotient-group', 'def-dep.quotgroup-quotientset',
+      '商群 = 陪集做成的**商集**再加一层运算。'],
+    ['def.normal-subgroup', 'def.quotient-group', 'def-dep.quotgroup-normal',
+      '商群只对**正规**子群有。'],
+    ['def.group', 'def.group-hom', 'def-dep.grouphom-group',
+      '同态是两个**群**之间的映射。'],
+    ['def.normal-subgroup', 'def.group-hom', 'def-dep.grouphom-kernel',
+      '核是**正规**子群。'],
+    ['def.quotient-group', 'thm.first-iso', 'def-dep.firstiso-quotient',
+      '$G/\\ker\\varphi$ 是**商群**。'],
+    ['def.group-hom', 'thm.first-iso', 'def-dep.firstiso-hom',
+      '定理的输入是一个**群同态**（要用到它的核与像）。'],
+    ['def.group', 'def.field', 'def-dep.field-group',
+      '域 = 两个**阿贝尔群** + 分配律 —— 域的定义建立在群的定义之上。'],
   ];
 
   var edges = E.map(function (e) {
@@ -23024,15 +23780,16 @@ MG.trunk = [
   'def.function',              //  5 层  函数
   'def.quotient-set',          //  5 层  商集与等价类 —— ℤ、ℚ、ℝ 用的是同一招
   'def.int',                   //  7 层  整数 ℤ = (ℕ×ℕ)/~（差相同）
-  'def.field',                 //  6 层  域 = 集合 + 两个运算 + 公理（代数语言本身）
-  'def.ordered-field',         //  7 层  有序域 = 域 + 与运算相容的全序
-  'def.rat',                   //  8 层  有理数 ℚ = (ℤ×(ℤ∖{0}))/~（分数值相同）—— 第一个有序域
-  'def.abs',                   //  8 层  绝对值 —— Cauchy 列的定义就要用它
-  'def.cauchy-null',           // 10 层  有理 Cauchy 列 / 零列 / 等价
-  'def.real',                  // 11 层  实数 ℝ：由 Cauchy 列**构造**（不是公理刻画）
-  'thm.real-ordered-field',    // 12 层  ℝ 是完备有序域 —— 性质是定理，含**确界原理**
-  'def.interval',              // 12 层  区间
-  'def.sequence-limit',        // 12 层  数列极限
+  'def.group',                 //  6 层  群 = 集合 + 运算 + 公理（代数语言本身）
+  'def.field',                 //  7 层  域 = 两个阿贝尔群 + 分配律
+  'def.ordered-field',         //  8 层  有序域 = 域 + 与运算相容的全序
+  'def.rat',                   //  9 层  有理数 ℚ = (ℤ×(ℤ∖{0}))/~（分数值相同）—— 第一个有序域
+  'def.abs',                   //  9 层  绝对值 —— Cauchy 列的定义就要用它
+  'def.cauchy-null',           // 11 层  有理 Cauchy 列 / 零列 / 等价
+  'def.real',                  // 12 层  实数 ℝ：由 Cauchy 列**构造**（不是公理刻画）
+  'thm.real-ordered-field',    // 13 层  ℝ 是完备有序域 —— 性质是定理，含**确界原理**
+  'def.interval',              // 13 层  区间
+  'def.sequence-limit',        // 13 层  数列极限
 
   /* ========================== 二、序与选择（工具） ========================== */
   'def.poset',                 //  5 层  偏序集
@@ -23046,37 +23803,37 @@ MG.trunk = [
   'def.sigma-algebra',         //  4 层  σ-代数
   'def.generated-sigma',       //  5 层  生成的 σ-代数
   'def.borel',                 //  6 层  Borel σ-代数
-  'def.extended-real',         // 12 层  扩充实数 [−∞,+∞] —— 测度的取值落在这里
-  'def.measure',               // 13 层  测度
-  'def.outer-measure',         // 13 层  外测度（定义在幂集上，只有次可加性）
-  'def.null-set',              // 14 层  零集与完备
-  'thm.caratheodory',          // 15 层  Carathéodory 定理：外测度 → 测度
-  'def.ae',                    // 15 层  几乎处处
+  'def.extended-real',         // 13 层  扩充实数 [−∞,+∞] —— 测度的取值落在这里
+  'def.measure',               // 14 层  测度
+  'def.outer-measure',         // 14 层  外测度（定义在幂集上，只有次可加性）
+  'def.null-set',              // 15 层  零集与完备
+  'thm.caratheodory',          // 16 层  Carathéodory 定理：外测度 → 测度
+  'def.ae',                    // 16 层  几乎处处
 
   /* ============================== 四、积分 ============================== */
   'def.measurable-function',   //  6 层  可测函数
   'def.simple-function',       //  7 层  简单函数
-  'def.integral-simple',       // 15 层  简单函数的积分
-  'def.integral-nonneg',       // 16 层  非负函数的积分
-  'thm.mct',                   // 17 层  单调收敛定理
-  'def.integrable',            // 18 层  可积 / L¹
-  'lem.fatou',                 // 18 层  Fatou 引理
-  'thm.dct',                   // 19 层  控制收敛定理
-  'thm.fubini-tonelli',        // 19 层  Fubini–Tonelli
+  'def.integral-simple',       // 16 层  简单函数的积分
+  'def.integral-nonneg',       // 17 层  非负函数的积分
+  'thm.mct',                   // 18 层  单调收敛定理
+  'def.integrable',            // 19 层  可积 / L¹
+  'lem.fatou',                 // 19 层  Fatou 引理
+  'thm.dct',                   // 20 层  控制收敛定理
+  'thm.fubini-tonelli',        // 20 层  Fubini–Tonelli
 
   /* ========================= 五、函数空间与微分 ========================= */
-  'def.ac-function',           // 13 层  绝对连续函数
-  'def.derivative',            // 14 层  导数
-  'def.bounded-variation',     // 15 层  有界变差 BV
-  'def.lp-norm',               // 17 层  L^p 范数
-  'thm.holder',                // 18 层  Hölder 不等式
-  'def.locally-integrable',    // 19 层  局部可积
-  'thm.lp-banach',             // 20 层  L^p 是 Banach 空间
-  'thm.ftc-lebesgue',          // 21 层  微积分基本定理（Lebesgue 版）
-  'def.maximal-function',      // 21 层  极大函数
-  'thm.lebesgue-radon-nikodym',// 20 层  Lebesgue–Radon–Nikodym 定理
-  'thm.riesz-representation-lp', // 21 层  (L^p)* ≅ L^q
-  'thm.lebesgue-differentiation', // 21 层  Lebesgue 微分定理
+  'def.ac-function',           // 14 层  绝对连续函数
+  'def.derivative',            // 15 层  导数
+  'def.bounded-variation',     // 16 层  有界变差 BV
+  'def.lp-norm',               // 18 层  L^p 范数
+  'thm.holder',                // 19 层  Hölder 不等式
+  'def.locally-integrable',    // 20 层  局部可积
+  'thm.lp-banach',             // 21 层  L^p 是 Banach 空间
+  'thm.ftc-lebesgue',          // 22 层  微积分基本定理（Lebesgue 版）
+  'def.maximal-function',      // 22 层  极大函数
+  'thm.lebesgue-radon-nikodym',// 21 层  Lebesgue–Radon–Nikodym 定理
+  'thm.riesz-representation-lp', // 22 层  (L^p)* ≅ L^q
+  'thm.lebesgue-differentiation', // 24 层  Lebesgue 微分定理
 
   /* ================= 六、范畴与函子（换一套语言） ================= */
   /* 前五段都在「集合 + 元素」的语言里做数学。这一条新主线（六 / 七 / 八 三段）
@@ -23094,9 +23851,10 @@ MG.trunk = [
 
   /* ============ 七、覆盖、层与凝聚态（新语言长出的东西） ============ */
   'def.grothendieck-topology', // 14 层  Grothendieck 拓扑（什么算覆盖）
-  'def.chaus',                 // 14 层  紧 Hausdorff 空间范畴（下一步的场地）
+  'def.chaus',                 // 15 层  紧 Hausdorff 空间范畴（下一步的场地）
   'def.sheaf',                 // 15 层  层（能粘的预层）
   'def.topos',                 // 16 层  拓扑斯（几何的代数替身）
+  'def.compactly-generated',   //    层  紧生成空间（底拓扑空间的场地）
   'def.condensed-set',         // 16 层  凝聚态集 = CHaus 上的层
   'def.abelian-sheaf',         // 16 层  阿贝尔层（层里的阿贝尔群）
   'def.condensed-abelian-group', // 17 层  凝聚态阿贝尔群

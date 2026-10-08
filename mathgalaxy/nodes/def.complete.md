@@ -1,6 +1,6 @@
 # 完备　`def.complete`
 完备距离空间（Complete Metric Space）
-layer 13 · 定义 · 度量空间 · 拓扑学
+layer 14 · 定义 · 度量空间 · 拓扑学
 
 序列 $\{x_{n}\}$ 是 **Cauchy 列**，当且仅当
 

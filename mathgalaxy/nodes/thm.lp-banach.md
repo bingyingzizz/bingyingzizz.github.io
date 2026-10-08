@@ -1,6 +1,6 @@
 # L^p 是 Banach 空间　`thm.lp-banach`
 定理（Riesz–Fischer）：$1 \le p < \infty$ 时 $L^p$ 完备
-layer 20 · 定理 · L^p 空间 · 分析学
+layer 21 · 定理 · L^p 空间 · 分析学
 
 设 $1 \le p < \infty$。则 $L^p(X, \mathcal{M}, \mu)$ 关于范数 $\|\cdot\|_p$ 是**完备**的，即它是一个 **Banach 空间**。
 

@@ -1,6 +1,6 @@
 # 可积 / L¹　`def.integrable`
 可积函数与 $L^{1}$ 空间
-layer 18 · 定义 · 积分 · 分析学
+layer 19 · 定义 · 积分 · 分析学
 
 实值可测 $f$ **可积**，当且仅当 $\int f^+ < \infty$ 且 $\int f^- < \infty$。等价地：
 

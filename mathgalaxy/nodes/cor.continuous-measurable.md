@@ -1,6 +1,6 @@
 # 连续 ⟹ Borel 可测　`cor.continuous-measurable`
 推论：连续函数是 Borel 可测的
-layer 14 · 推论 · 可测函数与收敛 · 分析学+拓扑学
+layer 15 · 推论 · 可测函数与收敛 · 分析学+拓扑学
 
 设 X, Y 是拓扑空间，各配 $Borel \sigma$代数 $\mathfrak{B}_X, \mathfrak{B}_Y$。则
 > 陈述续见 `nodes/cor.continuous-measurable.2.md`

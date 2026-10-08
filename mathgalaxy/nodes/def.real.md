@@ -1,6 +1,6 @@
 # 实数系 ℝ　`def.real`
 实数系 $\mathbb{R}$（由 Cauchy 列构造）
-layer 11 · 定义 · 数系的构造 · 集合论+分析学
+layer 12 · 定义 · 数系的构造 · 集合论+分析学
 
 记 $\mathcal{C}$ 为全体**有理 Cauchy 列**，$\sim$ 是「差为**零列**」这个等价关系（见「Cauchy 列与零列」）。令
 

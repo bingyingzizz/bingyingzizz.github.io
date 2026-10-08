@@ -1,6 +1,6 @@
 # 距离空间　`def.metric-space`
 距离空间 / 度量空间（Metric Space）
-layer 12 · 定义 · 度量空间 · 拓扑学
+layer 13 · 定义 · 度量空间 · 拓扑学
 
 **距离空间**是一对 (X, d)：$X$ 是集合，$d : X \times X \to [0, +\infty )$ 是 $X$ 上的**距离**，满足
 

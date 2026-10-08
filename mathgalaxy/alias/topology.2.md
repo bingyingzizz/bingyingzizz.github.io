@@ -13,4 +13,12 @@
 
 - 内射对象怎么判断 → prop.injective-criterion def.projective-object def.mono
 
-见 `../alias.md`。
+- 商映射乘局部紧是什么定理 → thm.quotient-product cor.cg-product def.quotient-topology
+
+- 什么是k拓扑 → def.k-topology def.compactly-generated prop.cg-coreflective
+
+- 哪些空间是紧生成的 → def.compactly-generated ex.cg-examples prop.cg-equivalent-conditions
+
+- 什么是弱 Hausdorff → def.weak-hausdorff prop.weak-hausdorff-basic thm.cgwh-reflective
+
+> 续见 alias/topology.3.md

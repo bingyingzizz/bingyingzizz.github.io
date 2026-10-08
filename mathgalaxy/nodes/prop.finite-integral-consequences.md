@@ -1,6 +1,6 @@
 # 积分有限的后果　`prop.finite-integral-consequences`
 命题：$\int f < \infty$ 时，f 几乎处处有限、支撑 σ-有限
-layer 15 · 命题 · 积分 · 分析学
+layer 16 · 命题 · 积分 · 分析学
 
 设 $f \in L^+$ 且 $\int f < \infty$。则
 

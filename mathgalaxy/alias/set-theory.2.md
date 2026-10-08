@@ -11,4 +11,10 @@
 
 - 积和余积是什么 → def.product def.limit thm.product
 
+- Noether 第一同构定理 → thm.first-iso def.quotient-group def.group-hom
+
+- 商群是什么 → def.quotient-group def.normal-subgroup def.quotient-set
+
+- 核为什么是正规子群 → def.group-hom def.normal-subgroup thm.first-iso
+
 见 `../alias.md`。

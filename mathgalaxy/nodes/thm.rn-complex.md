@@ -1,6 +1,6 @@
 # 复测度的 Radon–Nikodym　`thm.rn-complex`
 定理：复测度的 $\nu = \lambda + f d\mu$ 分解
-layer 19 · 定理 · 符号测度与分解 · 分析学
+layer 20 · 定理 · 符号测度与分解 · 分析学
 
 设 $\nu$ 是复测度、$\mu$ 是 **$\sigma$有限**测度。则存在复测度 $\lambda$ 与 $f \in L^1(\mu)$
 > 陈述续见 `nodes/thm.rn-complex.2.md`

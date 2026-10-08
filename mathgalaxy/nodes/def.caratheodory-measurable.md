@@ -1,6 +1,6 @@
 # μ*-可测集　`def.caratheodory-measurable`
 Carathéodory 可测性（$\mu^{*}$-Measurable Set）
-layer 14 · 定义 · 测度的构造 · 分析学
+layer 15 · 定义 · 测度的构造 · 分析学
 
 设 $\mu^{*}$ 是 $X$ 上的外测度。$A \subseteq X$ 称为 **$\mu^{*}$-可测的**，当且仅当 $A$ 把每个集合都「干净地切成两块」：
 

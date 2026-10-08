@@ -6,3 +6,4 @@
 - 被 `lem.minimal-closed-surjection` 满射的极小闭子集 用
 - 被 `def.regular-measure` 正则 Borel 测度 用
 - 被 `def.chaus` 紧 Hausdorff 空间范畴 用
+- 被 `def.compact-open-topology` 紧开拓扑 用

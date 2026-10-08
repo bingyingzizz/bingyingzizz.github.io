@@ -1,6 +1,6 @@
 # 自由紧 Hausdorff 空间　`def.free-compact-hausdorff`
 自由紧 Hausdorff 空间（Free Compact Hausdorff Space）
-layer 15 · 定义 · 紧 Haus 与 Stone · 拓扑学
+layer 16 · 定义 · 紧 Haus 与 Stone · 拓扑学
 
 **自由紧 Hausdorff 空间**就是某个离散空间 $I$ 的 Stone–Čech 紧化 $F \cong \beta I$。称 $I$ 是 $F$ 的一组**基**：此时
 > 陈述续见 `nodes/def.free-compact-hausdorff.2.md`

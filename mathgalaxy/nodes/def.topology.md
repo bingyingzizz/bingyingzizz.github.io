@@ -22,6 +22,8 @@ layer 4 · 定义 · 拓扑空间 · 拓扑学
 - 被 `def.hausdorff` Hausdorff 空间 用
 - 被 `def.connected` 连通与连通分量 用
 
+- …另有出边，续页见 `nodes/def.topology.3.md`
+
 refs: Munkres, Topology, Ch. 2
 
 > 说明见 `notes/def.topology.md`

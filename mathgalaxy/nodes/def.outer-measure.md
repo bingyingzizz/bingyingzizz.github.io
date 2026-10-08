@@ -1,6 +1,6 @@
 # 外测度　`def.outer-measure`
 外测度（Outer Measure）
-layer 13 · 定义 · 测度的构造 · 分析学
+layer 14 · 定义 · 测度的构造 · 分析学
 
 设 $X$ 是非空集合。函数 $\mu^* : \mathcal{P}(X) \to [0, +\infty]$ 是一个**外测度**，当且仅当
 

@@ -1,6 +1,6 @@
 # Fubini–Tonelli　`thm.fubini-tonelli`
 Fubini–Tonelli 定理（重积分可交换次序）
-layer 19 · 定理 · 乘积测度与 Fubini · 分析学
+layer 20 · 定理 · 乘积测度与 Fubini · 分析学
 
 设 $(X, \mathcal{M}, \mu )$、$(Y, \mathcal{N}, \nu )$ 是 **$\sigma$有限**的测度空间。
 

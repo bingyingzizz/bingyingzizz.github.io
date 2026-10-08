@@ -1,6 +1,6 @@
 # 依测度 Cauchy　`def.cauchy-in-measure`
 依测度 Cauchy 序列
-layer 14 · 定义 · 可测函数与收敛 · 分析学
+layer 15 · 定义 · 可测函数与收敛 · 分析学
 
 可测函数列 $\{f_n\}$ 是**依测度 Cauchy 的**，当且仅当
 

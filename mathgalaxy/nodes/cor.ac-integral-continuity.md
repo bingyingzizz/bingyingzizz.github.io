@@ -1,6 +1,6 @@
 # 积分的绝对连续性　`cor.ac-integral-continuity`
 推论：$\int_E f d\mu$ 在小测度集上任意小
-layer 20 · 推论 · 符号测度与分解 · 分析学
+layer 21 · 推论 · 符号测度与分解 · 分析学
 
 设 $f \in L^1(\mu)$。则
 > 陈述续见 `nodes/cor.ac-integral-continuity.2.md`

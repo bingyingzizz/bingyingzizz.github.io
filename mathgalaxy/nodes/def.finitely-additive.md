@@ -1,6 +1,6 @@
 # 有限可加测度　`def.finitely-additive`
 有限可加测度（Finitely Additive Measure）
-layer 14 · 定义 · 测度的构造 · 分析学
+layer 15 · 定义 · 测度的构造 · 分析学
 
 若 $\mu$ 只满足 (i) 与**有限**可加性：
 

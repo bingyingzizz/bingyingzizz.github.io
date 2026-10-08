@@ -1,6 +1,6 @@
 # 函数绝对连续 ⟺ 测度绝对连续　`prop.ac-iff-measure-ac`
 命题：F 绝对连续 $\iff \mu_F \ll m$
-layer 20 · 命题 · 有界变差与绝对连续 · 分析学
+layer 21 · 命题 · 有界变差与绝对连续 · 分析学
 
 设 $F \in NBV$。则
 

@@ -1,6 +1,6 @@
 # 覆盖引理　`lem.covering`
 覆盖引理：开球族里能挑出不交子族，三倍膨胀仍覆盖
-layer 14 · 引理 · 微分定理 · 分析学
+layer 15 · 引理 · 微分定理 · 分析学
 
 设 $\mathcal{E}$ 是一族 $\mathbb{R}^{n}$ 中的开球，$U = \bigcup\mathcal{E}$。若 $c < m(U)$，则存在 $\mathcal{E}$ 中**两两不交**的球 $B_1, \ldots , B_k$ 使
 

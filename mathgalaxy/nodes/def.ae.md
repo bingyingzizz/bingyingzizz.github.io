@@ -1,6 +1,6 @@
 # 几乎处处　`def.ae`
 几乎处处（Almost Everywhere, a.e.）
-layer 15 · 定义 · 测度的构造 · 分析学
+layer 16 · 定义 · 测度的构造 · 分析学
 
 设 $(X, \mathcal{M}, \mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当
 

@@ -1,6 +1,6 @@
 # 单调收敛定理　`thm.mct`
 单调收敛定理（MCT, Monotone Convergence Theorem）
-layer 17 · 定理 · 积分 · 分析学
+layer 18 · 定理 · 积分 · 分析学
 
 设 $\{f_n\} \subseteq L^+$ 满足
 

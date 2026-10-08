@@ -25,6 +25,7 @@ $$A / \sim\ := \{ [a] : a \in A \}$$
 - 被 `def.cauchy-null` Cauchy 列与零列 用
 - 被 `def.real` 实数系 ℝ 用
 - 被 `def.integrable` 可积 / L¹ 用
+- 被 `def.quotient-group` 商群 用
 
 refs: Kunen, Set Theory, I.5
 

@@ -1,6 +1,6 @@
 # 完备情形的 F–T　`thm.fubini-complete`
 定理：完备化的乘积测度上，Fubini–Tonelli 仍然成立
-layer 20 · 定理 · 乘积测度与 Fubini · 分析学
+layer 21 · 定理 · 乘积测度与 Fubini · 分析学
 
 设 $(X, \mathcal{M}, \mu )$、$(Y, \mathcal{N}, \nu )$ 都是**完备**的 $\sigma$有限测度空间，$(X \times Y, \mathcal{L}, \lambda)$ 是
 

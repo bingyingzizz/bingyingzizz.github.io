@@ -1,6 +1,6 @@
 # Fatou 引理　`lem.fatou`
 Fatou 引理（Fatou's Lemma）
-layer 18 · 引理 · 积分 · 分析学
+layer 19 · 引理 · 积分 · 分析学
 
 设 $\{f_n\} \subseteq L^+$，则
 

@@ -1,6 +1,6 @@
 # 自由表示　`def.free-presentation`
 自由表示（Free Presentation）
-layer 15 · 定义 · 紧 Haus 与 Stone · 拓扑学
+layer 16 · 定义 · 紧 Haus 与 Stone · 拓扑学
 
 紧 Hausdorff 空间之间的连续满射 $F \twoheadrightarrow S$ 叫 $S$ 的**自由表示**，如果
 

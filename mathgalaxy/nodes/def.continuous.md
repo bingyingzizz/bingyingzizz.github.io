@@ -1,6 +1,6 @@
 # 连续　`def.continuous`
 连续（Continuity）
-layer 13 · 定义 · 实数与极限 · 分析学+拓扑学
+layer 14 · 定义 · 实数与极限 · 分析学+拓扑学
 
 $f : \mathbb{R} \to \mathbb{R}$ 在 $x_0$ **连续**，当且仅当
 
@@ -19,6 +19,7 @@ $f$ **连续**（在 $\mathbb{R}$ 上连续）当且仅当它在每一点连续�
 ## 它能推出什么 / 谁在用它
 - 被 `def.derivative` 导数 用
 - 被 `cor.continuous-measurable` 连续 ⟹ Borel 可测 用
+- 被 `def.compact-open-topology` 紧开拓扑 用
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 

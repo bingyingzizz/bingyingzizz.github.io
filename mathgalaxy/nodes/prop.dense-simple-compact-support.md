@@ -1,6 +1,6 @@
 # 紧支简单函数稠密　`prop.dense-simple-compact-support`
 命题：紧支集简单函数在 $L^p$ 中稠密
-layer 18 · 命题 · L^p 空间 · 分析学
+layer 19 · 命题 · L^p 空间 · 分析学
 
 设 $1 \le p < \infty$。**紧支集的简单函数**在 $L^p$ 中稠密（$p = \infty$ 时不成立）。
 

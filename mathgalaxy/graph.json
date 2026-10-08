@@ -2,13 +2,13 @@
  "meta": {
   "name": "数学星图 MathGalaxy",
   "schema": "mathgalaxy/v1",
-  "generated": "2026-10-08T10:32:16.713Z",
+  "generated": "2026-10-08T10:42:42.368Z",
   "counts": {
    "regions": 9,
    "clusters": 40,
-   "nodes": 378,
-   "edges": 806,
-   "strong": 797,
+   "nodes": 401,
+   "edges": 860,
+   "strong": 851,
    "weak": 9
   },
   "readingGuide": {
@@ -47,7 +47,7 @@
    "en": "Set Theory",
    "desc": "ZFC 公理系统、序数、基数与选择原理。",
    "color": "#4F7CF5",
-   "nodeCount": 51
+   "nodeCount": 52
   },
   {
    "id": "order-theory",
@@ -63,7 +63,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 43
+   "nodeCount": 60
   },
   {
    "id": "algebra",
@@ -71,7 +71,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 5
+   "nodeCount": 11
   },
   {
    "id": "analysis",
@@ -254,11 +254,17 @@
    "id": "algebra.structures",
    "name": "代数结构",
    "parent": "algebra",
-   "desc": "造出代数语言本身：**域** = 集合 + 两个运算 + 公理，**有序域** = 域 + 与运算相容的全序。ℚ 与 ℝ 都是实例。（代数学的笔记进来后这一团扩容：群 / 环 / 模。）",
-   "nodeCount": 2,
+   "desc": "造出代数语言本身：**群** = 集合 + 运算 + 公理 → 子群 → 正规子群 → 商群 → 第一同构定理；再往上叠**域**（= 两个阿贝尔群 + 分配律）与**有序域**。",
+   "nodeCount": 8,
    "nodes": [
     "def.field",
-    "def.ordered-field"
+    "def.ordered-field",
+    "def.group",
+    "def.subgroup",
+    "def.normal-subgroup",
+    "def.quotient-group",
+    "def.group-hom",
+    "thm.first-iso"
    ]
   },
   {
@@ -277,7 +283,7 @@
    "name": "拓扑空间",
    "parent": "topology",
    "desc": "造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。",
-   "nodeCount": 10,
+   "nodeCount": 11,
    "nodes": [
     "def.topology",
     "def.closed-set",
@@ -286,6 +292,7 @@
     "def.homeomorphism",
     "def.subspace-topology",
     "def.quotient-topology",
+    "def.product-topology",
     "def.hausdorff",
     "def.connected",
     "def.clopen"
@@ -337,13 +344,29 @@
   },
   {
    "id": "topo.cg",
-   "name": "紧生成空间",
+   "name": "紧生成空间与弱 Hausdorff",
    "parent": "topology",
-   "desc": "造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。",
-   "nodeCount": 2,
+   "desc": "造出「乘积好用的拓扑空间范畴」：紧生成空间（$k$-空间）→ $k$-拓扑与 $k$-化 → 商映射与积 → 紧开拓扑 → 弱 Hausdorff → $\\mathrm{CGWH}$ 是反射子范畴。",
+   "nodeCount": 18,
    "nodes": [
     "def.compactly-generated",
-    "prop.cg-coreflective"
+    "ex.cg-examples",
+    "prop.cg-equivalent-conditions",
+    "def.k-topology",
+    "prop.ktx-colimit",
+    "prop.cg-coreflective",
+    "thm.quotient-product",
+    "cor.cg-product",
+    "prop.k-product",
+    "def.compact-open-topology",
+    "prop.compact-open-discrete",
+    "def.weak-hausdorff",
+    "prop.weak-hausdorff-basic",
+    "prop.cgwh-fiber-product",
+    "prop.cg-kclosed-quotient",
+    "thm.cgwh-reflective",
+    "prop.cgwh-closed",
+    "prop.cg-function-space"
    ]
   },
   {
@@ -1536,7 +1559,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "度量",
@@ -1559,7 +1582,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "完备",
@@ -1581,7 +1604,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "全有界",
@@ -1603,7 +1626,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "列紧",
@@ -1625,7 +1648,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "紧",
@@ -1647,7 +1670,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定理",
     "紧",
@@ -1671,7 +1694,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "紧",
@@ -1693,7 +1716,7 @@
     "topology"
    ],
    "cluster": "topology.metric",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "紧",
@@ -1718,7 +1741,7 @@
     "set-theory"
    ],
    "cluster": "analysis.setclass",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "集合族",
@@ -1831,7 +1854,7 @@
     "analysis"
    ],
    "cluster": "analysis.setclass",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "基本类",
@@ -2015,7 +2038,7 @@
     "topology"
    ],
    "cluster": "analysis.product",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "推论",
     "Borel",
@@ -2038,7 +2061,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "测度",
@@ -2061,7 +2084,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "预测度",
@@ -2084,7 +2107,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "有限可加"
@@ -2105,7 +2128,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "σ-有限",
@@ -2127,7 +2150,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "单调性",
@@ -2151,7 +2174,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "零集",
@@ -2173,7 +2196,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定理",
     "完备化",
@@ -2196,7 +2219,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "半有限"
@@ -2217,7 +2240,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "外测度",
@@ -2240,7 +2263,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "命题",
     "外测度",
@@ -2263,7 +2286,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "Carathéodory",
@@ -2286,7 +2309,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定理",
     "Carathéodory",
@@ -2310,7 +2333,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "Carathéodory",
@@ -2333,7 +2356,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定理",
     "唯一性",
@@ -2356,7 +2379,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "命题",
     "Lebesgue–Stieltjes",
@@ -2378,7 +2401,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "Lebesgue–Stieltjes",
@@ -2400,7 +2423,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "Lebesgue–Stieltjes",
@@ -2468,7 +2491,7 @@
     "topology"
    ],
    "cluster": "analysis.measurable",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "推论",
     "连续",
@@ -2535,7 +2558,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "封闭性",
@@ -2601,7 +2624,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "完备",
@@ -2623,7 +2646,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "完备化",
@@ -2645,7 +2668,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "L⁺"
@@ -2666,7 +2689,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "积分",
@@ -2688,7 +2711,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "积分",
@@ -2711,7 +2734,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "积分",
@@ -2733,7 +2756,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定理",
     "MCT",
@@ -2755,7 +2778,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "逐项积分",
@@ -2777,7 +2800,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "零集",
@@ -2799,7 +2822,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "推论",
     "MCT",
@@ -2822,7 +2845,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "引理",
     "Fatou",
@@ -2844,7 +2867,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "推论",
     "Fatou",
@@ -2867,7 +2890,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "命题",
     "σ-有限",
@@ -2889,7 +2912,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "积分",
@@ -2911,7 +2934,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "L¹",
@@ -2933,7 +2956,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "L¹",
@@ -2955,7 +2978,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "三角不等式"
@@ -2976,7 +2999,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "σ-有限",
@@ -2998,7 +3021,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "几乎处处",
@@ -3020,7 +3043,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "DCT",
@@ -3042,7 +3065,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "逐项积分",
@@ -3064,7 +3087,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "逼近",
@@ -3087,7 +3110,7 @@
     "analysis"
    ],
    "cluster": "analysis.integral",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "DCT",
@@ -3110,7 +3133,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定义",
     "收敛",
@@ -3132,7 +3155,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "反例",
     "收敛",
@@ -3154,7 +3177,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "Cauchy",
@@ -3176,7 +3199,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定理",
     "依测度",
@@ -3199,7 +3222,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "命题",
     "L¹",
@@ -3222,7 +3245,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "Egorov",
@@ -3245,7 +3268,7 @@
     "analysis"
    ],
    "cluster": "analysis.measurable",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "推论",
     "Lusin",
@@ -3268,7 +3291,7 @@
     "analysis"
    ],
    "cluster": "analysis.product",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "乘积测度",
@@ -3335,7 +3358,7 @@
     "analysis"
    ],
    "cluster": "analysis.product",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定理",
     "乘积测度",
@@ -3357,7 +3380,7 @@
     "analysis"
    ],
    "cluster": "analysis.product",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "Fubini",
@@ -3380,7 +3403,7 @@
     "analysis"
    ],
    "cluster": "analysis.product",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "Fubini",
@@ -3402,7 +3425,7 @@
     "analysis"
    ],
    "cluster": "analysis.product",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "注记",
     "完备",
@@ -3424,7 +3447,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "符号测度"
@@ -3446,7 +3469,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "正集",
@@ -3468,7 +3491,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "正集"
@@ -3489,7 +3512,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定理",
     "Hahn 分解",
@@ -3513,7 +3536,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "奇异",
@@ -3535,7 +3558,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "Jordan 分解",
@@ -3557,7 +3580,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "绝对连续"
@@ -3578,7 +3601,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "绝对连续",
@@ -3601,7 +3624,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定理",
     "绝对连续",
@@ -3623,7 +3646,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "绝对连续",
@@ -3645,7 +3668,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "推论",
     "绝对连续",
@@ -3667,7 +3690,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "引理",
     "奇异",
@@ -3689,7 +3712,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "Radon-Nikodym",
@@ -3711,7 +3734,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "RN 导数",
@@ -3733,7 +3756,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "命题",
     "RN 导数",
@@ -3755,7 +3778,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "推论",
     "RN 导数"
@@ -3776,7 +3799,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "复测度"
@@ -3797,7 +3820,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "Radon-Nikodym",
@@ -3819,7 +3842,7 @@
     "analysis"
    ],
    "cluster": "analysis.signed",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "全变差",
@@ -3842,7 +3865,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "L¹",
@@ -3864,7 +3887,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "引理",
     "覆盖",
@@ -3886,7 +3909,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定义",
     "局部可积"
@@ -3907,7 +3930,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定义",
     "平均算子"
@@ -3928,7 +3951,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "引理",
     "连续",
@@ -3950,7 +3973,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定义",
     "极大函数",
@@ -3972,7 +3995,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "定理",
     "极大不等式",
@@ -3994,7 +4017,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定理",
     "Lebesgue 微分",
@@ -4016,7 +4039,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定义",
     "Lebesgue 集"
@@ -4037,7 +4060,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定理",
     "Lebesgue 集"
@@ -4058,7 +4081,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "可缩族"
@@ -4079,7 +4102,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分",
@@ -4101,7 +4124,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "正则",
@@ -4123,7 +4146,7 @@
     "analysis"
    ],
    "cluster": "analysis.differentiation",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "定理",
     "RN 导数",
@@ -4146,7 +4169,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定理",
     "单调函数",
@@ -4168,7 +4191,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "全变差",
@@ -4191,7 +4214,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "命题",
     "BV",
@@ -4213,7 +4236,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "引理",
     "全变差",
@@ -4235,7 +4258,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定理",
     "BV",
@@ -4257,7 +4280,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "BV",
@@ -4279,7 +4302,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "NBV"
@@ -4300,7 +4323,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "引理",
     "全变差",
@@ -4322,7 +4345,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "命题",
     "递增",
@@ -4345,7 +4368,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "Riesz 表示",
@@ -4368,7 +4391,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "NBV",
@@ -4390,7 +4413,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "绝对连续",
@@ -4412,7 +4435,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "命题",
     "绝对连续",
@@ -4434,7 +4457,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "推论",
     "AC",
@@ -4457,7 +4480,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "引理",
     "AC",
@@ -4479,7 +4502,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定理",
     "微积分基本定理",
@@ -4502,7 +4525,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "Lp",
@@ -4524,7 +4547,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "引理",
     "Young",
@@ -4546,7 +4569,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "Hölder",
@@ -4568,7 +4591,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "Minkowski",
@@ -4590,7 +4613,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "Banach",
@@ -4613,7 +4636,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "稠密",
@@ -4635,7 +4658,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "L∞",
@@ -4657,7 +4680,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "L∞",
@@ -4680,7 +4703,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "插值",
@@ -4702,7 +4725,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "插值",
@@ -4724,7 +4747,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "序列空间",
@@ -4746,7 +4769,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "有限测度",
@@ -4768,7 +4791,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "共轭",
@@ -4790,7 +4813,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "对偶",
@@ -4812,7 +4835,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "等距",
@@ -4834,7 +4857,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "命题",
     "有界泛函",
@@ -4856,7 +4879,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定理",
     "Riesz 表示",
@@ -4879,7 +4902,7 @@
     "analysis"
    ],
    "cluster": "analysis.lp",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "推论",
     "自反",
@@ -4901,7 +4924,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "实数"
@@ -4923,7 +4946,7 @@
     "order-theory"
    ],
    "cluster": "analysis.real",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "实数"
@@ -4944,7 +4967,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "极限"
@@ -4965,7 +4988,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "极限"
@@ -4987,7 +5010,7 @@
     "topology"
    ],
    "cluster": "analysis.real",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "极限",
@@ -5009,7 +5032,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "导数"
@@ -5031,7 +5054,7 @@
     "algebra"
    ],
    "cluster": "set.numbers",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "复数"
@@ -5158,7 +5181,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "零集"
@@ -5449,6 +5472,27 @@
    "refs": []
   },
   {
+   "id": "def.product-topology",
+   "type": "definition",
+   "label": "积拓扑",
+   "title": "积拓扑与乘积空间（Product Topology）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 6,
+   "tags": [
+    "定义",
+    "拓扑",
+    "乘积",
+    "投影"
+   ],
+   "statement": "设 $(X_{i}, \\mathcal{T}_{i})_{i \\in I}$ 是一族拓扑空间。$\\prod_{i \\in I} X_{i}$ 上的**积拓扑**是以\n\n$$\\prod_{i \\in I} U_{i} \\qquad (U_{i} \\in \\mathcal{T}_{i},\\ \\text{除有限多个 } i \\text{ 外 } U_{i} = X_{i})$$\n\n为基的拓扑 —— 也就是使所有投影 $\\pi_{j} : \\prod_{i} X_{i} \\to X_{j}$ 都连续的**最粗**拓扑。",
+   "notes": "⭐ **「最粗」是关键字**：投影要连续，只要求每个 $\\pi_{j}^{-1}(U_{j})$ 是开的；把这些取有限交当基，就是积拓扑。要求更细反而会丢掉极限 —— 而「$x_{n} \\to x$ $\\iff$ 按每个分量都收敛」正是这条最粗性换来的。\n\n**范畴意义**：$\\prod_{i} X_{i}$ 连同投影就是 $\\mathbf{Top}$ 里的**积**。所以积拓扑不是随便挑的，它是泛性质唯一确定的那一个。",
+   "refs": []
+  },
+  {
    "id": "def.hausdorff",
    "type": "definition",
    "label": "Hausdorff 空间",
@@ -5584,7 +5628,7 @@
     "set-theory"
    ],
    "cluster": "set.numbers",
-   "layer": 8,
+   "layer": 9,
    "tags": [
     "定义",
     "有理数",
@@ -5607,7 +5651,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 8,
+   "layer": 9,
    "tags": [
     "定义",
     "绝对值",
@@ -5630,7 +5674,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 9,
+   "layer": 10,
    "tags": [
     "定理",
     "不等式",
@@ -5653,7 +5697,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 10,
+   "layer": 11,
    "tags": [
     "定义",
     "Cauchy 列",
@@ -5676,7 +5720,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 11,
+   "layer": 12,
    "tags": [
     "定义",
     "实数",
@@ -5701,7 +5745,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定理",
     "实数",
@@ -5726,7 +5770,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "引理",
     "阿基米德",
@@ -5751,7 +5795,7 @@
     "analysis"
    ],
    "cluster": "set.numbers",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定理",
     "实数",
@@ -5775,7 +5819,7 @@
     "set-theory"
    ],
    "cluster": "set.numbers",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定理",
     "实数",
@@ -5799,14 +5843,14 @@
     "algebra"
    ],
    "cluster": "algebra.structures",
-   "layer": 6,
+   "layer": 7,
    "tags": [
     "定义",
     "代数",
     "域"
    ],
-   "statement": "设 $F$ 是一个**集合**，$+$ 与 $\\cdot$ 是 $F$ 上的两个**二元运算**（即两个函数 $F \\times F \\to F$）。称 $(F, +, \\cdot)$ 是一个**域**，当且仅当：\n\n- **加法**：$a + (b + c) = (a + b) + c$，$a + b = b + a$；存在 $0 \\in F$ 使 $a + 0 = a$；对每个 $a$ 存在 $-a \\in F$ 使 $a + (-a) = 0$；\n- **乘法**：$a(bc) = (ab)c$，$ab = ba$；存在 $1 \\in F$，$1 \\ne 0$，使 $a \\cdot 1 = a$；对每个 $a \\ne 0$ 存在 $a^{-1} \\in F$ 使 $a\\, a^{-1} = 1$；\n- **分配律**：$a (b + c) = ab + ac$。\n\n一句话：**加减乘除（除以非零元）都封闭，且满足结合、交换、分配律**。",
-   "notes": "⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。\n\n已经造好的例子：\n- $\\mathbb{Q}$（有理数）：最顺手的域；\n- $\\mathbb{R}$（实数）：由 Cauchy 列造出来之后，再验证它满足这些等式（见「$\\mathbb{R}$ 是完备有序域」）；\n- $\\mathbb{Z}$ **不是**域：$2$ 在里面没有乘法逆元；$\\mathbb{N}$ 也不是：$1 - 2$ 没有意义。\n\n⚠ 「域」（field）与测度论里的「环」不是一回事：那里的环是**集合环**，指对有限并与差封闭的**集族**，同名不同物。",
+   "statement": "设 $F$ 是一个**集合**，$+$ 与 $\\cdot$ 是 $F$ 上的两个**二元运算**（即两个函数 $F \\times F \\to F$）。称 $(F, +, \\cdot)$ 是一个**域**，当且仅当：\n\n- $(F, +)$ 是**阿贝尔群**；\n- $(F \\setminus \\{0\\}, \\cdot)$ 是**阿贝尔群**（这里 $0$ 是加法群的单位元）；\n- **分配律** $a (b + c) = ab + ac$ 对一切 $a, b, c \\in F$ 成立。\n\n一句话：**加减乘除（除以非零元）都封闭，且满足结合、交换、分配律**。",
+   "notes": "⭐ **格式是「集合 + 运算 + 公理」**：域不是凭空的对象 —— 一个集合、两个函数、几条等式就定出了一个域。判别一个东西是不是域，就是逐条核对这些等式。注意上面三条把「群」的两条公理组直接**引用**过来了：域的定义是**在群的定义之上再加一层**，不是重新数一遍等式。\n\n已经造好的例子：\n- $\\mathbb{Q}$（有理数）：最顺手的域；\n- $\\mathbb{R}$（实数）：由 Cauchy 列造出来之后，再验证它满足这些等式（见「$\\mathbb{R}$ 是完备有序域」）；\n- $\\mathbb{Z}$ **不是**域：$2$ 在里面没有乘法逆元；$\\mathbb{N}$ 也不是：$1 - 2$ 没有意义。\n\n⚠ 「域」（field）与测度论里的「环」不是一回事：那里的环是**集合环**，指对有限并与差封闭的**集族**，同名不同物。",
    "refs": [
     "Lang, Algebra, Ch. I",
     "Dummit & Foote, Abstract Algebra, §13.1"
@@ -5823,7 +5867,7 @@
     "order-theory"
    ],
    "cluster": "algebra.structures",
-   "layer": 7,
+   "layer": 8,
    "tags": [
     "定义",
     "代数",
@@ -7012,7 +7056,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "范畴论",
     "紧",
@@ -7032,7 +7076,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "范畴论",
     "Stone–Čech",
@@ -7052,7 +7096,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "范畴论",
     "紧",
@@ -7072,7 +7116,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "范畴论",
     "自由",
@@ -7092,7 +7136,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "商",
@@ -7132,7 +7176,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "投射",
@@ -7152,7 +7196,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "范畴论",
     "商",
@@ -7172,7 +7216,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "自由表示",
@@ -7192,7 +7236,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "范畴论",
     "连通分量",
@@ -7212,7 +7256,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "范畴论",
     "Stone",
@@ -7232,7 +7276,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "极端不连通",
@@ -7252,7 +7296,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "反射",
@@ -7272,7 +7316,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "Stone",
@@ -7312,7 +7356,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "范畴论",
     "Stone",
@@ -7332,7 +7376,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "范畴论",
     "Gleason",
@@ -7352,7 +7396,7 @@
     "topology"
    ],
    "cluster": "topo.chaus",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "范畴论",
     "收缩核",
@@ -8082,46 +8126,6 @@
    "refs": []
   },
   {
-   "id": "def.compactly-generated",
-   "type": "definition",
-   "label": "紧生成空间",
-   "title": "紧生成空间 / $k$-空间（Compactly Generated Space）",
-   "region": "topology",
-   "regions": [
-    "topology"
-   ],
-   "cluster": "topo.cg",
-   "layer": 15,
-   "tags": [
-    "拓扑",
-    "紧生成",
-    "k-空间"
-   ],
-   "statement": "拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \\subseteq X$ 闭 $\\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \\to X$，$f^{-1}(Y)$ 在 $S$ 中闭。",
-   "notes": "例：局部紧 Hausdorff 空间都是紧生成的。\n\n「由紧 Hausdorff 空间的映射决定拓扑」这句话的意思是：**只要一个子集在所有这类映射下的原像都闭，它就是闭的**。一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。",
-   "refs": []
-  },
-  {
-   "id": "prop.cg-coreflective",
-   "type": "proposition",
-   "label": "紧生成空间是余反射子范畴",
-   "title": "紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴",
-   "region": "topology",
-   "regions": [
-    "topology"
-   ],
-   "cluster": "topo.cg",
-   "layer": 16,
-   "tags": [
-    "拓扑",
-    "紧生成",
-    "余反射"
-   ],
-   "statement": "紧生成空间构成的范畴 $k\\mathbf{Top}$ 是 $\\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$ 有**右**伴随\n\n$$k : \\mathbf{Top} \\longrightarrow k\\mathbf{Top}, \\qquad X \\mapsto kX$$\n\n即 $i \\dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成紧生成的那一个。",
-   "notes": "⭐ 与紧 Hausdorff 对照着记：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\\beta$），而 $k\\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。",
-   "refs": []
-  },
-  {
    "id": "def.chaus-pretopos",
    "type": "theorem",
    "label": "CHaus 是预拓扑斯",
@@ -8210,7 +8214,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "凝聚态",
     "自由",
@@ -8230,7 +8234,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "凝聚态",
     "自由",
@@ -8250,7 +8254,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "凝聚态",
     "等价",
@@ -8270,7 +8274,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "凝聚态",
     "满态射"
@@ -8308,7 +8312,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "凝聚态",
     "拓扑空间"
@@ -8327,7 +8331,7 @@
     "condensed"
    ],
    "cluster": "cond.set",
-   "layer": 17,
+   "layer": 19,
    "tags": [
     "凝聚态",
     "伴随",
@@ -8367,7 +8371,7 @@
     "condensed"
    ],
    "cluster": "cond.ab",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "凝聚态",
     "截面",
@@ -8447,7 +8451,7 @@
     "condensed"
    ],
    "cluster": "cond.ab",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "凝聚态",
     "Stonean",
@@ -8935,6 +8939,509 @@
    "statement": "拓扑斯 $\\mathcal{T}$ 中的阿贝尔群 $P$ 叫**平坦的**，如果函子\n\n$$M \\longmapsto P \\otimes_{\\mathbb{Z}} M$$\n\n是**正合**的。",
    "notes": "例：**通常的阿贝尔群平坦 $\\iff$ 无挠**。由此立刻得到：$\\mathbb{Z}\\cdot X$ **总是平坦的** —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。",
    "refs": []
+  },
+  {
+   "id": "def.compactly-generated",
+   "type": "definition",
+   "label": "紧生成空间",
+   "title": "紧生成空间 / $k$-空间（Compactly Generated Space）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 16,
+   "tags": [
+    "拓扑",
+    "紧生成",
+    "k-空间",
+    "k-拓扑"
+   ],
+   "statement": "拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。\n\n等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— $Y \\subseteq X$ 是开（闭）集 $\\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \\to X$，$f^{-1}(Y)$ 在 $S$ 中开（闭）。",
+   "notes": "「由从紧 Hausdorff 空间进来的映射决定拓扑」的意思是：**只要一个子集在所有这类映射下的原像都开，它就是开的**。\n\n一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。\n\n这是**余反射**的入口：$k$-化（见「$k$-开、$k$-闭与 $k$-拓扑」）把任何空间改造成紧生成的，而且改造前后到别的紧生成空间之间的映射一一对应。",
+   "refs": []
+  },
+  {
+   "id": "ex.cg-examples",
+   "type": "example",
+   "label": "紧生成空间的例子",
+   "title": "哪些空间是紧生成的",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 17,
+   "tags": [
+    "拓扑",
+    "紧生成",
+    "例子",
+    "局部紧"
+   ],
+   "statement": "**例 1**　局部紧 Hausdorff 空间是紧生成的。\n**例 2**　序列空间是紧生成的：$A \\subseteq X$ 闭 $\\iff$ 只要 $x_{n} \\to x$ 且 $x_{n} \\in A$，就有 $x \\in A$。\n**例 3**　若 $I$ **不可数**，则 $\\mathbb{R}^{I}$ 与 $\\mathbb{Z}^{I}$（积拓扑）都**不是**紧生成的。",
+   "notes": "**例 1** 是最常用的一条：紧 Hausdorff 空间自己当然紧生成（它本身就是自己的那条余极限）；一般局部紧 Hausdorff 空间由「取紧邻域」这一类映射决定拓扑。\n\n**例 3** 是反面教材 —— 它正是「乘积不好用」的根源：$\\mathbb{R}^{I}$ 太细，细到没有足够的紧 Hausdorff 空间能测出它的拓扑。$k$-化会把它换成拓扑更粗的 $k(\\mathbb{R}^{I})$，那个才好用。",
+   "refs": []
+  },
+  {
+   "id": "prop.cg-equivalent-conditions",
+   "type": "proposition",
+   "label": "紧生成空间的等价刻画",
+   "title": "紧生成性的六条等价说法",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 17,
+   "tags": [
+    "拓扑",
+    "紧生成",
+    "等价刻画"
+   ],
+   "statement": "下面六条等价：\n\n1. $X$ 是紧生成的；\n2. $X$ 是「紧 $T_{1}$ 空间的不交并」的商空间；\n3. $X$ 是「局部紧 $T_{1}$ 空间」的商空间；\n4. $Y \\subseteq X$ 开 $\\iff$ 对每个从紧 $T_{1}$ 空间出发的连续 $f : S \\to X$，$f^{-1}(Y)$ 开；\n5. $X \\to Y$ 连续 $\\iff$ 对每个连续 $f : S \\to X$，复合 $S \\to X \\to Y$ 连续；\n6. $X$ 是所有连续映射 $S \\to X$（$S$ 紧 $T_{1}$）的余极限。",
+   "notes": "**证明的走法。** (1) $\\iff$ (6) 是定义换一种说法：余极限就是「由全体映射决定」。\n\n\n\n- (6) $\\implies$ (2)：取 $Y = \\coprod_{S \\to X} S$（沿所有连续映射 $S \\to X$，$S$ 紧 $T_{1}$）。全体映射拼出 $Y \\to X$，它显然满 —— **满的连续映射就是商映射**。\n- (2) $\\implies$ (3)：紧 $T_{1}$ 空间本身局部紧。\n- (3) $\\implies$ (1)：商映射 $Z \\twoheadrightarrow X$（$Z$ 局部紧 $T_{1}$）把 $Z$ 的紧生成性传下去 —— 商是余极限，而余极限的余极限还是余极限。\n- (4) $\\iff$ (1)：这是「由映射决定拓扑」的逐字翻译：用 $S$ 是紧空间这一条，把 $f^{-1}(Y)$ 的开性从 $f(S)$ 拉回到 $S$ 上。\n- (5) $\\iff$ (4)：把「$X \\to Y$ 连续」按定义展开成「开集的原像开」，再用 (4) 换成紧 $T_{1}$ 空间上的检验。\n\n⚠️ **测试空间的取法要留意。** 定义那一条用的是**紧 Hausdorff**空间，而这里 (2)(3)(4)(6) 用的是**紧 $T_{1}$**空间。两个测试族是否给出同一个 $k$-化，取决于「从紧 $T_{1}$ 空间出发的连续映射能否换成从紧 Hausdorff 空间出发的」—— **这一点待核对**；用的时候务必先把手头的测试族固定下来。",
+   "refs": []
+  },
+  {
+   "id": "def.k-topology",
+   "type": "definition",
+   "label": "k-开、k-闭与 k-拓扑",
+   "title": "$k$-开集与 $k$-化（$k$-Topology）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 17,
+   "tags": [
+    "拓扑",
+    "k-拓扑",
+    "k-开",
+    "k-化"
+   ],
+   "statement": "子集 $Y \\subseteq X$ 叫 **$k$-开**（**$k$-闭**）的，如果对每个连续映射 $f : S \\to X$（$S$ 紧 Hausdorff），$f^{-1}(Y)$ 在 $S$ 中开（闭）。\n\n全体 $k$-开集构成的拓扑叫 $X$ 上的 **$k$-拓扑**；记 $kX$ 为「同一个集合、拓扑换成 $k$-拓扑」的那个空间。",
+   "notes": "$k$-拓扑就是**使所有连续映射 $S \\to X$（$S$ 紧 Hausdorff）都连续的最终（最细）拓扑**。它比原来的拓扑**细** —— 开集变多了（原本开的当然还是 $k$-开的）。\n\n⭐ **紧生成 = 自己就是 $k$-化**：$X$ 紧生成 $\\iff$ $kX = X$（同一个拓扑空间）。所以 $k$ 是一个**幂等**的改造：$k(kX) = kX$。\n\n一般情形下 $kX$ 与 $X$ 之间的恒等映射 $kX \\to X$ 连续（拓扑变细了），但反方向不连续 —— 这个「往下走」的映射正是余反射的余单位 $\\varepsilon_{X}$。",
+   "refs": []
+  },
+  {
+   "id": "prop.ktx-colimit",
+   "type": "proposition",
+   "label": "kX 是紧空间的余极限",
+   "title": "$kX = \\varinjlim S$",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 18,
+   "tags": [
+    "拓扑",
+    "k-拓扑",
+    "余极限"
+   ],
+   "statement": "对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \\to X$（$S$ 取遍紧 $T_{1}$ 空间）在 $\\mathbf{Top}$ 中的余极限。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.cg-coreflective",
+   "type": "proposition",
+   "label": "紧生成空间是余反射子范畴",
+   "title": "紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 18,
+   "tags": [
+    "拓扑",
+    "紧生成",
+    "余反射",
+    "伴随"
+   ],
+   "statement": "紧生成空间构成的范畴 $k\\mathbf{Top}$ 是 $\\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$ 有**右**伴随\n\n$$k : \\mathbf{Top} \\longrightarrow k\\mathbf{Top}, \\qquad X \\mapsto kX$$\n\n即 $i \\dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成 $k$-拓扑。",
+   "notes": "**要证的是**：对每个紧生成空间 $X$ 与每个拓扑空间 $Y$，\n\n\n\n$$\\operatorname{Hom}_{\\mathbf{Top}}(X,\\ Y) \\;\\cong\\; \\operatorname{Hom}_{k\\mathbf{Top}}\\bigl(X,\\ kY\\bigr).$$\n\n\n\n**证明。** 余单位是 $\\varepsilon_{Y} : kY \\to Y$（恒等映射，拓扑从细到粗，连续）。\n\n\n\n- 先证 $kY$ 确实紧生成：把每个连续映射 $S \\to Y$（$S$ 紧 $T_{1}$）复合 $\\varepsilon_{Y}$ 抬成 $S \\to kY$，再用 $kY$ 的定义（$k$-开集的取法）验证「由这些映射决定拓扑」。\n- 于是任意 $f : X \\to Y$ 连续（$X$ 紧生成）时，$f = \\varepsilon_{Y} \\circ f': X \\to kY$ 给出一个到 $kY$ 的连续映射 $f'$：设 $U \\subseteq kY$ 开，要证 $f'^{-1}(U)$ 在 $X$ 中开。由 $X$ 紧生成，只需对每个紧 $L \\subseteq X$ 验证 $f'^{-1}(U) \\cap L$ 在 $L$ 中开。而 $f|_{L} : L \\to Y$ 连续、$L$ 紧，故 $f(L)$ 紧；$U \\cap f(L)$ 在 $f(L)$ 中开，于是 $(f|_{L})^{-1}\\bigl(U \\cap f(L)\\bigr) = f'^{-1}(U) \\cap L$ 在 $L$ 中开。∎\n- 反向由 $\\varepsilon_{Y}$ 连续直接得到。这样两个方向互逆，就是那个同构。\n\n⭐ 与紧 Hausdorff 对照着记：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\\beta$），而 $k\\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对**余极限**封闭。",
+   "refs": []
+  },
+  {
+   "id": "thm.quotient-product",
+   "type": "theorem",
+   "label": "商映射与局部紧空间作积",
+   "title": "商映射与局部紧因子作积仍是商映射",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 7,
+   "tags": [
+    "拓扑",
+    "商映射",
+    "局部紧",
+    "乘积"
+   ],
+   "statement": "设 $q : X \\to Y$ 是**商映射**，$Z$ 是**局部紧 Hausdorff** 空间。则\n\n$$q \\times \\mathrm{id}_{Z} : X \\times Z \\longrightarrow Y \\times Z$$\n\n也是商映射。",
+   "notes": "⭐ **这是「紧生成空间对积封闭」那条的引擎**，也是搜「商映射」「局部紧」时该落到的地方。\n\n**证明的走法（逆映射连续法）。** 记 $W := (q \\times \\mathrm{id}_{Z})^{-1}(U)$，要证 $W$ 开。取一点 $(x, z) \\in W$，记 $y = q(x)$。因为 $U$ 在 $Y \\times Z$ 中开，可以挑出基本开集\n\n\n\n$$V \\times K \\;\\subseteq\\; U, \\qquad y \\in V,\\;\\; z \\in K,$$\n\n\n\n其中 $V$ 开、$K$ 是 $z$ 的**紧邻域**（局部紧 Hausdorff $\\implies$ 每点有紧邻域基，可以要求 $K$ 落在任意给定的邻域里）。由 $q$ 是商映射，$q^{-1}(V)$ 是 $X$ 中的开集，于是\n\n\n\n$$q^{-1}(V) \\times K \\;\\subseteq\\; W$$\n\n\n\n是 $(x, z)$ 的一个开邻域 —— 所以 $(x, z)$ 是 $W$ 的内点，$W$ 开。∎\n\n⚠️ **局部紧这个条件不能省。** 一般情形下「商映射乘 id」不是商映射：取 $q$ 是某条坏商、$Z$ 是一个既不局部紧又不紧生成的空间，乘积的商拓扑会严格细于商空间应有的拓扑。\n\n记法：有的书上把这条写成「$Z$ 局部紧 Hausdorff $\\implies$ 函子 $- \\times Z$ 保商映射」。",
+   "refs": []
+  },
+  {
+   "id": "cor.cg-product",
+   "type": "corollary",
+   "label": "紧生成空间对积封闭",
+   "title": "紧生成空间作积仍紧生成",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 17,
+   "tags": [
+    "拓扑",
+    "紧生成",
+    "乘积"
+   ],
+   "statement": "若 $X$ 紧生成、$Y$ 局部紧 Hausdorff，则 $X \\times Y$ 紧生成。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.k-product",
+   "type": "proposition",
+   "label": "k-化与积",
+   "title": "$k(kX \\times Y) = k(X \\times Y)$",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 18,
+   "tags": [
+    "拓扑",
+    "k-拓扑",
+    "乘积",
+    "k-化"
+   ],
+   "statement": "对任何 $X, Y \\in \\mathbf{Top}$，\n\n$$k(kX \\times Y) \\;=\\; k(X \\times Y).$$\n\n若 $Y$ 还**局部紧 Hausdorff**，则更强：\n\n$$kX \\times Y \\;=\\; k(X \\times Y).$$",
+   "notes": "两式的差别正好是余反射子范畴的两个层次：一般情形下 $k$ 不是「积封闭」的，得对积再取一次 $k$；$Y$ 局部紧 Hausdorff 时（由商映射与积那条定理）$k$ 与「乘 $Y$」可交换。**这就是为什么 $k\\mathbf{Top}$ 里的乘积得取 $k(X \\times Y)$ 而不是 $X \\times Y$。**",
+   "refs": []
+  },
+  {
+   "id": "def.compact-open-topology",
+   "type": "definition",
+   "label": "紧开拓扑",
+   "title": "紧开拓扑（Compact-Open Topology）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 15,
+   "tags": [
+    "拓扑",
+    "紧开拓扑",
+    "函数空间"
+   ],
+   "statement": "设 $X, Y \\in \\mathbf{Top}$。对每个连续映射 $g : S \\to X$（$S$ 紧 Hausdorff）与每个开集 $V \\subseteq Y$，令\n\n$$W_{S,V} := \\{\\, f : X \\to Y \\;\\mid\\; \\operatorname{Im}(f \\circ g) \\subseteq V \\,\\}.$$\n\n$C(X, Y)$（也就是 $\\operatorname{Hom}_{\\mathbf{Top}}(X, Y)$）上的**紧开拓扑**是由全体 $W_{S,V}$ 生成的拓扑。",
+   "notes": "读法：$W_{S,V}$ 是「在所有从头进来的紧块上都落在 $V$ 里」的那些映射。$g$ 通过 $S$ 这个「测试块」把 $X$ 的局部控制住。\n\n⭐ 这一条让 $\\operatorname{Hom}(X,Y)$ 本身成为一个拓扑空间 —— 于是可以谈「映射空间」，才可以谈同伦、道路空间、环路空间。在 $\\mathrm{CGWH}$ 里它才真正好用（见「函数空间弱 Hausdorff」那条）。",
+   "refs": []
+  },
+  {
+   "id": "prop.compact-open-discrete",
+   "type": "proposition",
+   "label": "离散时函数空间是积",
+   "title": "离散 $X$ 时 $C(X,Y) \\cong Y^{X}$",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 16,
+   "tags": [
+    "拓扑",
+    "紧开拓扑",
+    "积拓扑"
+   ],
+   "statement": "若 $X$ 是**离散**空间，则 $C(X, Y) \\cong Y^{X}$（右边取**积拓扑**）。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.weak-hausdorff",
+   "type": "definition",
+   "label": "弱 Hausdorff 空间",
+   "title": "弱 Hausdorff 空间（Weak Hausdorff Space）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 6,
+   "tags": [
+    "拓扑",
+    "弱 Hausdorff",
+    "CGWH"
+   ],
+   "statement": "拓扑空间 $X$ 叫**弱 Hausdorff** 的，如果对每个连续映射 $f : S \\to X$（$S$ 紧 Hausdorff），像 $f(S)$ 都在 $X$ 中**闭**。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.weak-hausdorff-basic",
+   "type": "proposition",
+   "label": "弱 Hausdorff 的基本性质",
+   "title": "弱 Hausdorff 的几条基本性质",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 18,
+   "tags": [
+    "拓扑",
+    "弱 Hausdorff",
+    "对角"
+   ],
+   "statement": "设 $X$ 弱 Hausdorff。则\n\n- $X$ 的每个紧 Hausdorff 子空间都闭；\n- $X$ 是 $T_{1}$ 的（单点是紧 Hausdorff 子空间）；\n- 对每个连续 $f : S \\to X$（$S$ 紧 Hausdorff），$f(S)$ 是**紧 Hausdorff** 的；\n- **对角** $\\Delta_{X} \\subseteq X \\times X$ 是 $k$-闭的；反过来，若 $X$ 紧生成，则对角 $k$-闭 $\\implies$ $X$ 弱 Hausdorff；\n- 若还有 $Y$ 弱 Hausdorff、$f, g : X \\rightrightarrows Y$ 连续，则 $\\ker(f, g) = \\{\\, x : f(x) = g(x) \\,\\} \\subseteq X$ 是 $k$-闭的。",
+   "notes": "**为什么叫「弱」Hausdorff。** Hausdorff 要求任意两点的开邻域能分开；弱 Hausdorff 只要求「紧块的像是闭的」—— 条件弱得多，却正好够用：出现在 $\\mathrm{CGWH}$ 里的那些构造（商、函数空间、纤维积）都不需要全 Hausdorff。\n\n⚠️ 弱 Hausdorff **不蕴含** Hausdorff（存在紧生成的弱 Hausdorff 而非 Hausdorff 的空间）；但它蕴含 $T_{1}$，上面第二条就是。\n\n**对角那条的作用**：$\\Delta_{X}$ $k$-闭 $\\iff$ 「两个映射相等的点集」是 $k$-闭的 —— 这与 $T_{1}$、$T_{2}$ 在一般拓扑里的刻画（对角闭）平行，只是这里闭的判据换成了 $k$-闭。紧生成是让这个等价反过来的补充条件。",
+   "refs": []
+  },
+  {
+   "id": "prop.cgwh-fiber-product",
+   "type": "proposition",
+   "label": "紧块的纤维积还是紧的",
+   "title": "紧 Hausdorff 沿弱 Hausdorff 的纤维积",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 13,
+   "tags": [
+    "拓扑",
+    "弱 Hausdorff",
+    "纤维积",
+    "紧"
+   ],
+   "statement": "若 $S, S'$ 是紧 Hausdorff 空间、$X$ 弱 Hausdorff，且给定了连续映射 $S \\to X$、$S' \\to X$，则纤维积 $S \\times_{X} S'$ 紧 Hausdorff。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.cg-kclosed-quotient",
+   "type": "proposition",
+   "label": "k-闭等价关系与弱 Hausdorff 商",
+   "title": "$R$ 是 $k$-闭 $\\iff$ $X/R$ 弱 Hausdorff",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 7,
+   "tags": [
+    "拓扑",
+    "弱 Hausdorff",
+    "商空间",
+    "等价关系"
+   ],
+   "statement": "设 $X$ 紧生成，$R$ 是 $X$ 上的等价关系（看作 $R \\subseteq X \\times X$）。则 $R$ 是 $k$-闭的 $\\iff$ 商空间 $X/R$ 弱 Hausdorff。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "thm.cgwh-reflective",
+   "type": "theorem",
+   "label": "CGWH 是 CG 的反射子范畴",
+   "title": "紧生成的弱 Hausdorff 空间是反射子范畴",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 17,
+   "tags": [
+    "拓扑",
+    "CGWH",
+    "反射",
+    "商"
+   ],
+   "statement": "紧生成的**弱 Hausdorff** 空间构成的范畴 $\\mathrm{CGWH}$ 是 $\\mathrm{CG}$（紧生成空间）的**反射**子范畴。\n\n反射是\n\n$$h : X \\longmapsto X/R,$$\n\n其中 $R$ 是 $X$ 上**最小的闭等价关系**。",
+   "notes": "**为什么取「最小的闭等价关系」。** 要让商 $X/R$ 弱 Hausdorff，$R$ 得是 $k$-闭的（上一条）；而要商掉得尽量少、好让反射是「最经济」的改造，就取最小的那个闭等价关系。（$R \\mapsto X/R$ 把关系越大商越小，方向别弄反。）\n\n⭐ 这一条给出「怎么把一个空间修好」的完整链条：$X \\rightsquigarrow kX$（先 $k$-化，变成 $\\mathrm{CG}$）$\\rightsquigarrow kX/R$（再商掉最小闭等价关系，变成 $\\mathrm{CGWH}$）。两步都是**函子性**的，所以 $\\mathrm{CGWH}$ 里的同构、极限、余极限都能从 $\\mathbf{Top}$ 里搬过来。\n\n⭐ 这就是为什么现代代数拓扑默认在 $\\mathrm{CGWH}$ 里做事：$\\mathrm{CGWH}$ 对**有限积**封闭、函数空间 $kC(X,Y)$ 还在里面、且是笛卡尔闭的 —— 而 $\\mathbf{Top}$ 一个都不满足。",
+   "refs": []
+  },
+  {
+   "id": "prop.cgwh-closed",
+   "type": "proposition",
+   "label": "CGWH 的开闭子空间与滤过余极限",
+   "title": "$\\mathrm{CGWH}$ 的封闭性",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 7,
+   "tags": [
+    "拓扑",
+    "CGWH",
+    "子空间",
+    "余极限"
+   ],
+   "statement": "1. 紧生成的弱 Hausdorff 空间的**开子空间**与**闭子空间**仍紧生成且弱 Hausdorff。\n2. 若 $X = \\varinjlim X_{i}$ 是紧生成的弱 Hausdorff 空间沿**闭含入**的**滤过**余极限，则 $X$ 也紧生成的弱 Hausdorff，并且每个 $X_{i}$ 都在 $X$ 中闭。",
+   "notes": "第 2 条正是凝聚态数学里反复要用的那一条：把「由有限块拼起来的对象」按滤过余极限拼大，$\\mathrm{CGWH}$ 的性质不会掉。",
+   "refs": []
+  },
+  {
+   "id": "prop.cg-function-space",
+   "type": "proposition",
+   "label": "函数空间弱 Hausdorff",
+   "title": "$Y$ 弱 Hausdorff $\\implies$ $kC(X,Y)$ 弱 Hausdorff",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.cg",
+   "layer": 16,
+   "tags": [
+    "拓扑",
+    "弱 Hausdorff",
+    "紧开拓扑",
+    "函数空间"
+   ],
+   "statement": "若 $Y$ 弱 Hausdorff，则 $kC(X, Y)$（紧开拓扑再取 $k$-化）也弱 Hausdorff。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.group",
+   "type": "definition",
+   "label": "群",
+   "title": "群与阿贝尔群（Group）",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 6,
+   "tags": [
+    "代数",
+    "群",
+    "阿贝尔群",
+    "运算"
+   ],
+   "statement": "设 $G$ 是**集合**，$\\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \\times G \\to G$，$(a, b) \\mapsto a \\cdot b$）。称 $(G, \\cdot)$ 是一个**群**，当且仅当：\n\n- **结合律**：$(a b) c = a (b c)$ 对一切 $a, b, c \\in G$ 成立；\n- **单位元**：存在 $e \\in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；\n- **逆元**：对每个 $a \\in G$ 存在 $a^{-1} \\in G$ 使 $a a^{-1} = a^{-1} a = e$。\n\n再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。",
+   "notes": "⭐ **格式还是「集合 + 运算 + 公理」**：群不是凭空的对象 —— 一个集合、一个函数、三条等式就定出了一个群。判别一个东西是不是群，就是逐条核对这些等式。\n\n**单位元与逆元是唯一的**：若 $e, e'$ 都是单位元，则 $e = e e' = e'$；若 $a^{-1}, a'$ 都是 $a$ 的逆，则 $a' = a' e = a' a a^{-1} = e a^{-1} = a^{-1}$。所以「$e$」与「$a^{-1}$」这两个记号合法。\n\n**例子与反例**：$(\\mathbb{Z}, +)$ 是阿贝尔群；$(\\mathbb{Q} \\setminus \\{0\\}, \\cdot)$ 是阿贝尔群；$(\\mathbb{Z}, \\cdot)$ **不是**群（只有 $\\pm 1$ 有乘法逆元）；$n \\times n$ 可逆矩阵在乘法下是群但**不阿贝尔**（$n \\ge 2$）。\n\n📌 还有一层更弱的：只要求结合律与单位元、不要求逆元，叫**幺半群**。（$\\mathbb{N}$ 在加法下就是幺半群不是群。）",
+   "refs": []
+  },
+  {
+   "id": "def.subgroup",
+   "type": "definition",
+   "label": "子群",
+   "title": "子群（Subgroup）",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 7,
+   "tags": [
+    "代数",
+    "群",
+    "子群"
+   ],
+   "statement": "设 $(G, \\cdot)$ 是群，$H \\subseteq G$。称 $H$ 是 $G$ 的**子群**（记 $H \\le G$），如果 $H$ 在**限制过来的运算**下自己构成一个群 —— 也就是：\n\n- $e \\in H$；\n- $a, b \\in H \\implies ab \\in H$（对运算封闭）；\n- $a \\in H \\implies a^{-1} \\in H$（对逆封闭）。\n\n（结合律是从 $G$ 里继承的，不必重查。）",
+   "notes": "两条合起来可写成一条：$a, b \\in H \\implies a b^{-1} \\in H$。\n\n任意多个子群的交仍是子群；但**并**一般不是 —— 这也是「由 $S$ 生成的子群 $\\langle S \\rangle$」要定义成「含 $S$ 的一切子群的交」的原因。",
+   "refs": []
+  },
+  {
+   "id": "def.normal-subgroup",
+   "type": "definition",
+   "label": "正规子群",
+   "title": "正规子群与陪集（Normal Subgroup）",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 7,
+   "tags": [
+    "代数",
+    "群",
+    "正规子群",
+    "陪集"
+   ],
+   "statement": "设 $H \\le G$，$g \\in G$。**左陪集**与**右陪集**分别是\n\n$$gH := \\{\\, gh : h \\in H \\,\\}, \\qquad Hg := \\{\\, hg : h \\in H \\,\\}.$$\n\n称 $H$ 是 $G$ 的**正规子群**（记 $H \\trianglelefteq G$），如果对一切 $g \\in G$ 有 $gH = Hg$，等价地 $gHg^{-1} = H$。",
+   "notes": "⭐ **为什么要正规。** 陪集 $gH$ 是**集合**，想用「$gH \\cdot g'H := gg'H$」把商集变成群，就必须让这个定义**与代表元的选取无关**。算一下差在哪儿：\n\n\n\n$$(g h)(g' h') = g g' \\cdot \\bigl((g')^{-1} h g'\\bigr) h',$$\n\n\n\n最右边那个括号里的 $(g')^{-1} h g'$ 得还在 $H$ 里才行 —— 「$H$ 对共轭封闭」正是正规性。**阿贝尔群里每个子群都正规**（共轭不动），所以在阿贝尔群里这一步永远不碍事。\n\n**陪集是一条等价关系。** 定义 $a \\sim b \\iff a^{-1} b \\in H$，则等价类恰好是左陪集，全体左陪集划分 $G$ —— 这就是下面商群要用的商集。\n\n**记号**：$H \\le G$ 表示子群，$H \\trianglelefteq G$ 表示正规子群（$\\trianglelefteq$ 读作「正规于」）。",
+   "refs": []
+  },
+  {
+   "id": "def.quotient-group",
+   "type": "definition",
+   "label": "商群",
+   "title": "商群（Quotient Group）",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 8,
+   "tags": [
+    "代数",
+    "群",
+    "商群",
+    "商集"
+   ],
+   "statement": "设 $N \\trianglelefteq G$。全体左陪集 $\\{\\, gN : g \\in G \\,\\}$ 记作 $G/N$，在上面定义\n\n$$(g N) \\cdot (g' N) := (g g') N.$$\n\n正规性保证这个定义与代表元的选取无关，于是 $G/N$ 成为一个群，叫**商群**。\n\n自然映射 $\\pi : G \\to G/N$，$g \\mapsto gN$，是满同态。",
+   "notes": "商群就是**集合层面的商集**再往上一层：先在 $G$ 上用等价关系「差一个 $N$ 的元素」商掉，再验证商集上还残留着一个运算。\n\n**泛性质**（商群真正的用处）：对任何群同态 $\\varphi : G \\to G'$，若 $N \\subseteq \\ker\\varphi$，则 $\\varphi$ 唯一地穿过 $\\pi$：存在唯一的 $\\overline{\\varphi} : G/N \\to G'$ 使 $\\overline{\\varphi} \\circ \\pi = \\varphi$。\n\n⚠️ 商**群**只对正规子群有；商**集** $G/H$ 对任何子群都有（左陪集照样划分 $G$），但那个商集上一般没有群结构。",
+   "refs": []
+  },
+  {
+   "id": "def.group-hom",
+   "type": "definition",
+   "label": "群同态、核与像",
+   "title": "群同态（Group Homomorphism）",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 8,
+   "tags": [
+    "代数",
+    "群",
+    "同态",
+    "核",
+    "像"
+   ],
+   "statement": "设 $(G, \\cdot)$、$(G', \\ast)$ 是群。映射 $\\varphi : G \\to G'$ 叫**群同态**，如果\n\n$$\\varphi(a b) = \\varphi(a) \\ast \\varphi(b) \\qquad (a, b \\in G).$$\n\n它的**核**与**像**分别是\n\n$$\\ker\\varphi := \\{\\, g \\in G : \\varphi(g) = e' \\,\\} \\;\\subseteq\\; G, \\qquad \\operatorname{im}\\varphi := \\varphi(G) \\;\\subseteq\\; G'.$$",
+   "notes": "**同态自动保单位元与逆元**：$\\varphi(e) = e'$、$\\varphi(a^{-1}) = \\varphi(a)^{-1}$（由 $\\varphi(e) = \\varphi(e e) = \\varphi(e)\\varphi(e)$ 两边消去得到）。所以定义里只需写一条等式。\n\n**核与像都是子群**：$\\operatorname{im}\\varphi \\le G'$ 显然；$\\ker\\varphi \\le G$ 由 $\\varphi(ab^{-1}) = \\varphi(a)\\varphi(b)^{-1} = e'$ 得到。\n\n⭐ **核还是正规子群**：对 $k \\in \\ker\\varphi$、$g \\in G$，\n\n\n\n$$\\varphi(g k g^{-1}) = \\varphi(g)\\, e'\\, \\varphi(g)^{-1} = e',$$\n\n\n\n所以 $gkg^{-1} \\in \\ker\\varphi$，即 $\\ker\\varphi \\trianglelefteq G$。**核总是正规的** —— 这正是「商群能商掉核」的全部理由。\n\n**单同态 $\\iff$ 核平凡**：$\\varphi$ 是单射 $\\iff$ $\\ker\\varphi = \\{e\\}$。于是「单」这个性质被一个**子群**完全编码了。",
+   "refs": []
+  },
+  {
+   "id": "thm.first-iso",
+   "type": "theorem",
+   "label": "第一同构定理（Noether）",
+   "title": "第一同构定理（Noether）",
+   "region": "algebra",
+   "regions": [
+    "algebra",
+    "set-theory"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 9,
+   "tags": [
+    "代数",
+    "群",
+    "同构定理",
+    "Noether",
+    "商群",
+    "商映射"
+   ],
+   "statement": "设 $\\varphi : G \\to G'$ 是**群同态**。则 $\\varphi$ 诱导出同构\n\n$$G \\big/ \\ker\\varphi \\;\\cong\\; \\operatorname{im}\\varphi, \\qquad g \\ker\\varphi \\;\\longmapsto\\; \\varphi(g).$$\n\n特别地：**满同态的像就是商群**（$\\varphi$ 满时 $G/\\ker\\varphi \\cong G'$）。",
+   "notes": "**证明的三步。** 记 $K = \\ker\\varphi$。\n\n\n\n- **良定义**：若 $g K = g' K$，则 $g' = g k$（某个 $k \\in K$），于是 $\\varphi(g') = \\varphi(g)\\varphi(k) = \\varphi(g) e' = \\varphi(g)$ —— 同一陪集里的元素被送到同一个值。\n- **同态**：$\\overline{\\varphi}\\bigl((gK)(g'K)\\bigr) = \\overline{\\varphi}(gg'K) = \\varphi(gg') = \\varphi(g)\\varphi(g') = \\overline{\\varphi}(gK)\\,\\overline{\\varphi}(g'K)$。\n- **双射**：单，因为 $\\overline{\\varphi}(gK) = e'$ 意味着 $\\varphi(g) = e'$，即 $g \\in K$，于是 $gK = K$；满，因为像本来就是 $\\varphi(G)$。∎\n\n⭐ **它其实是「集合 + 运算 + 公理」这套格式的通用定理，不是群的专利。** 同一个证明逐字照搬，只要把「同态」换成对应的东西：\n\n\n\n$$A \\big/ \\ker f \\;\\cong\\; \\operatorname{im} f.$$\n\n\n\n⭐ **集合层面的原型**：对任何映射 $f : A \\to B$，在 $A$ 上令 $a \\sim a' \\iff f(a) = f(a')$，则 $f$ 诱导**双射** $A/{\\sim} \\;\\to\\; \\operatorname{im} f$（见「商集与等价类」）。群版比它多出来的只有一句话：**商掉核之后，剩下的是一个群**。前两步（良定义、双射）就是集合版的内容，第三步（同态）才是新的。\n\n**它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。",
+   "refs": [
+    "Lang, Algebra, Ch. I §4",
+    "Dummit & Foote, Abstract Algebra, §10.2"
+   ]
   }
  ],
  "edges": [
@@ -13913,6 +14420,110 @@
    "note": "结论的一部分是「$\\mathcal{T}(\\mathbf{Ab})$ 是**阿贝尔**范畴」。"
   },
   {
+   "id": "def-dep.cg-quotient-locally-compact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "thm.quotient-product",
+   "note": "定理说的是**商映射** —— 也就是商拓扑那条满射。"
+  },
+  {
+   "id": "def-dep.cg-product-top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product-topology",
+   "usedBy": "thm.quotient-product",
+   "note": "结论说的是**乘积空间** $X \\times Z \\to Y \\times Z$。"
+  },
+  {
+   "id": "def-dep.cg-hausdorff-cgprod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "cor.cg-product",
+   "note": "推论里的因子 $Y$ 要求**局部紧 Hausdorff**。"
+  },
+  {
+   "id": "def-dep.cg-kproduct",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.k-topology",
+   "usedBy": "prop.k-product",
+   "note": "式子里两边的 $k$ 都是**$k$-化**。"
+  },
+  {
+   "id": "def-dep.cg-ktx-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "prop.cg-kclosed-quotient",
+   "note": "命题说的是**商空间** $X/R$。"
+  },
+  {
+   "id": "def-dep.weakhaus-diagonal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product-topology",
+   "usedBy": "prop.weak-hausdorff-basic",
+   "note": "对角 $\\Delta_{X}$ 住在**乘积** $X \\times X$ 里。"
+  },
+  {
+   "id": "def-dep.cgwh-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "thm.cgwh-reflective",
+   "note": "$\\mathrm{CGWH}$ 是在**紧生成**之上再加弱 Hausdorff。"
+  },
+  {
+   "id": "def-dep.funcspace-compactopen",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact-open-topology",
+   "usedBy": "prop.cg-function-space",
+   "note": "命题里的 $kC(X, Y)$ 就是**紧开拓扑**再取 $k$-化。"
+  },
+  {
+   "id": "def-dep.firstiso-quotient-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-group",
+   "usedBy": "thm.first-iso",
+   "note": "定理左端的 $G/\\ker\\varphi$ 是**商群**。"
+  },
+  {
+   "id": "def-dep.firstiso-kernel",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group-hom",
+   "usedBy": "thm.first-iso",
+   "note": "核与像都是**群同态**的概念。"
+  },
+  {
+   "id": "def-dep.firstiso-normal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-subgroup",
+   "usedBy": "thm.first-iso",
+   "note": "核是**正规**子群 —— 这正是它能被商掉的理由。"
+  },
+  {
+   "id": "def-dep.quotient-group-normal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-subgroup",
+   "usedBy": "def.quotient-group",
+   "note": "商群只对**正规**子群有定义。"
+  },
+  {
+   "id": "def-dep.grouphom-subgroup",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.subgroup",
+   "usedBy": "def.group-hom",
+   "note": "核与像都是**子群**。"
+  },
+  {
    "id": "ana.embed-better-world",
    "kind": "analogy",
    "strength": "weak",
@@ -15960,6 +16571,334 @@
    "definition": "def.tensor-abelian-sheaf",
    "usedBy": "def.flat-abelian-sheaf",
    "note": "平坦性说的是「$P \\otimes_{\\mathbb{Z}} -$ **正合**」。"
+  },
+  {
+   "id": "def-dep.cg-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.compactly-generated",
+   "note": "紧生成说的是**拓扑空间**上的一条性质。"
+  },
+  {
+   "id": "def-dep.cg-chaus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chaus",
+   "usedBy": "def.compactly-generated",
+   "note": "测试空间取的是**紧 Hausdorff** 空间。"
+  },
+  {
+   "id": "def-dep.ktopo-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "def.k-topology",
+   "note": "$k$-开集就是用「从**紧 Hausdorff** 空间进来的映射」去测。"
+  },
+  {
+   "id": "def-dep.ktopo-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "def.k-topology",
+   "note": "$k$-拓扑是使所有这类映射都连续的**最终（最细）拓扑** —— 与商拓扑是同一个构造。"
+  },
+  {
+   "id": "def-dep.ktx-colimit-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "prop.ktx-colimit",
+   "note": "$kX$ 是沿紧 $T_{1}$ 空间取余极限。"
+  },
+  {
+   "id": "def-dep.ktx-colimit-ktopo",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.k-topology",
+   "usedBy": "prop.ktx-colimit",
+   "note": "余极限的那条拓扑就是 $k$-拓扑。"
+  },
+  {
+   "id": "def-dep.cgcoref-ktopo",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.k-topology",
+   "usedBy": "prop.cg-coreflective",
+   "note": "余反射的函子 $k$ 就是**换成 $k$-拓扑**。"
+  },
+  {
+   "id": "def-dep.cgcoref-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "prop.cg-coreflective",
+   "note": "标的范畴 $k\\mathbf{Top}$ 是**紧生成**空间。"
+  },
+  {
+   "id": "def-dep.cgcoref-adjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.cg-coreflective",
+   "note": "「余反射」= 含入函子有**右伴随**。"
+  },
+  {
+   "id": "def-dep.quotprod-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "thm.quotient-product",
+   "note": "定理说的是**商映射**。"
+  },
+  {
+   "id": "def-dep.quotprod-product",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product-topology",
+   "usedBy": "thm.quotient-product",
+   "note": "结论说的是**乘积** $X \\times Z \\to Y \\times Z$。"
+  },
+  {
+   "id": "def-dep.cgprod-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "cor.cg-product",
+   "note": "推论说的是**紧生成**空间作积。"
+  },
+  {
+   "id": "def-dep.kprod-ktopo",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.k-topology",
+   "usedBy": "prop.k-product",
+   "note": "两边的 $k$ 都是**$k$-化**。"
+  },
+  {
+   "id": "def-dep.kprod-product",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product-topology",
+   "usedBy": "prop.k-product",
+   "note": "式子说的是**积**与 $k$-化的交换。"
+  },
+  {
+   "id": "def-dep.weakhaus-hausdorff",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "def.weak-hausdorff",
+   "note": "弱 Hausdorff 是把 Hausdorff 的条件放宽到「**紧块的像闭**」。"
+  },
+  {
+   "id": "def-dep.weakhaus-basic-k",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.k-topology",
+   "usedBy": "prop.weak-hausdorff-basic",
+   "note": "「对角是 $k$-闭」要先用上 **$k$-拓扑**。"
+  },
+  {
+   "id": "def-dep.cgwh-hausdorff",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "thm.cgwh-reflective",
+   "note": "反射去掉的是「弱 Hausdorff」，用的是**闭等价关系**。"
+  },
+  {
+   "id": "def-dep.cgwh-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "thm.cgwh-reflective",
+   "note": "反射把 $X$ 换成**商空间** $X/R$。"
+  },
+  {
+   "id": "def-dep.producttopo-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.product-topology",
+   "note": "积拓扑是**拓扑空间**族上的构造。"
+  },
+  {
+   "id": "def-dep.producttopo-base",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology-base",
+   "usedBy": "def.product-topology",
+   "note": "积拓扑取的是那族「有限多分量真开」的集合作**基**。"
+  },
+  {
+   "id": "def-dep.cgex-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "ex.cg-examples",
+   "note": "例子说的都是**紧生成**空间。"
+  },
+  {
+   "id": "def-dep.cgeq-cg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "prop.cg-equivalent-conditions",
+   "note": "命题刻画的是**紧生成**性。"
+  },
+  {
+   "id": "def-dep.cgeq-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-topology",
+   "usedBy": "prop.cg-equivalent-conditions",
+   "note": "(2)(3) 两条把紧生成空间写成**商空间**。"
+  },
+  {
+   "id": "def-dep.compactopen-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.compact-open-topology",
+   "note": "紧开拓扑是函数集合上的一种**拓扑**。"
+  },
+  {
+   "id": "def-dep.compactopen-compact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact",
+   "usedBy": "def.compact-open-topology",
+   "note": "测试块 $S$ 取的是**紧**空间。"
+  },
+  {
+   "id": "def-dep.compactopen-continuous",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.continuous",
+   "usedBy": "def.compact-open-topology",
+   "note": "定义里要求 $g$ 与 $f$ 都**连续**。"
+  },
+  {
+   "id": "def-dep.compactopen-discrete",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact-open-topology",
+   "usedBy": "prop.compact-open-discrete",
+   "note": "命题说的是**紧开拓扑**下的函数空间。"
+  },
+  {
+   "id": "def-dep.cgwhfiber-fibered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "prop.cgwh-fiber-product",
+   "note": "结论说的是**纤维积** $S \\times_{X} S'$。"
+  },
+  {
+   "id": "def-dep.cgwhfiber-weakhaus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.weak-hausdorff",
+   "usedBy": "prop.cgwh-fiber-product",
+   "note": "要求 $X$ 是**弱 Hausdorff** 空间。"
+  },
+  {
+   "id": "def-dep.cgwhclosed-subspace",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.subspace-topology",
+   "usedBy": "prop.cgwh-closed",
+   "note": "结论说的是**子空间**。"
+  },
+  {
+   "id": "def-dep.cgwhclosed-weakhaus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.weak-hausdorff",
+   "usedBy": "prop.cgwh-closed",
+   "note": "结论说的是**弱 Hausdorff** 性在子空间与滤过余极限下保持。"
+  },
+  {
+   "id": "def-dep.group-function",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.function",
+   "usedBy": "def.group",
+   "note": "群运算是 $G \\times G \\to G$，一个**函数**。"
+  },
+  {
+   "id": "def-dep.subgroup-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.subgroup",
+   "note": "子群是**群**的子结构（限制过来的运算）。"
+  },
+  {
+   "id": "def-dep.normal-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.normal-subgroup",
+   "note": "正规子群先要是**群**的子群。"
+  },
+  {
+   "id": "def-dep.quotgroup-quotientset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-set",
+   "usedBy": "def.quotient-group",
+   "note": "商群 = 陪集做成的**商集**再加一层运算。"
+  },
+  {
+   "id": "def-dep.quotgroup-normal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-subgroup",
+   "usedBy": "def.quotient-group",
+   "note": "商群只对**正规**子群有。"
+  },
+  {
+   "id": "def-dep.grouphom-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.group-hom",
+   "note": "同态是两个**群**之间的映射。"
+  },
+  {
+   "id": "def-dep.grouphom-kernel",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-subgroup",
+   "usedBy": "def.group-hom",
+   "note": "核是**正规**子群。"
+  },
+  {
+   "id": "def-dep.firstiso-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-group",
+   "usedBy": "thm.first-iso",
+   "note": "$G/\\ker\\varphi$ 是**商群**。"
+  },
+  {
+   "id": "def-dep.firstiso-hom",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group-hom",
+   "usedBy": "thm.first-iso",
+   "note": "定理的输入是一个**群同态**（要用到它的核与像）。"
+  },
+  {
+   "id": "def-dep.field-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.field",
+   "note": "域 = 两个**阿贝尔群** + 分配律 —— 域的定义建立在群的定义之上。"
   }
  ],
  "clusterLinks": [
@@ -16223,6 +17162,13 @@
    "explicit": false
   },
   {
+   "a": "algebra.structures",
+   "b": "set.rel",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "order.structure",
    "b": "set.ordinal",
    "count": 3,
@@ -16440,6 +17386,13 @@
    "explicit": false
   },
   {
+   "a": "cat.adjoint",
+   "b": "topo.cg",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cond.ab",
    "b": "topo.chaus",
    "count": 4,
@@ -16478,6 +17431,13 @@
    "a": "hom.ab",
    "b": "hom.sheaf",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "topo.cg",
+   "b": "topology.general",
+   "count": 16,
    "label": "",
    "explicit": false
   },
@@ -16576,6 +17536,20 @@
    "a": "cat.sheaf",
    "b": "cat.yoneda",
    "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "topo.cg",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "topo.cg",
+   "b": "topo.chaus",
+   "count": 2,
    "label": "",
    "explicit": false
   },

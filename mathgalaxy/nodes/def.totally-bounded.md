@@ -1,6 +1,6 @@
 # 全有界　`def.totally-bounded`
 全有界 / 预紧（Totally Bounded）
-layer 13 · 定义 · 度量空间 · 拓扑学
+layer 14 · 定义 · 度量空间 · 拓扑学
 
 距离空间 (X, d) **全有界**（也叫**预紧**），当且仅当对每个 $\varepsilon > 0$ 都存在**有限的 $\varepsilon$网**：
 

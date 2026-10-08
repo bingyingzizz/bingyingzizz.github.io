@@ -1,6 +1,6 @@
 # 积出来的函数是 AC · NBV　`cor.integral-is-ac-nbv`
 推论：$f \in L^{1}(m) \implies F(x) = \int_{-\infty}^{x} f$ 是 AC、NBV；反之亦然
-layer 19 · 推论 · 有界变差与绝对连续 · 分析学
+layer 20 · 推论 · 有界变差与绝对连续 · 分析学
 
 **(1)** 若 $f \in L^1(m)$，则
 

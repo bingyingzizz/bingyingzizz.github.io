@@ -1,6 +1,6 @@
 # L^p ∩ L^r ⊆ L^q　`prop.lp-inter-lr-in-lq`
 命题（插值）：$L^p \cap L^r \subseteq L^q$
-layer 18 · 命题 · L^p 空间 · 分析学
+layer 19 · 命题 · L^p 空间 · 分析学
 
 设 $0 < p < q < r \le \infty$。若 $f \in L^p \cap L^r$，则 $f \in L^q$，且
 

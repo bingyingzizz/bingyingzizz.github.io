@@ -1,6 +1,6 @@
 # 复测度　`def.complex-measure`
 复测度（Complex Measure）
-layer 15 · 定义 · 符号测度与分解 · 分析学
+layer 16 · 定义 · 符号测度与分解 · 分析学
 
 可测空间 $(X, \mathcal{M})$ 上的**复测度**是一个映射
 

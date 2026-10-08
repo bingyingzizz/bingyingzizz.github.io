@@ -1,6 +1,6 @@
 # Hahn 分解定理　`thm.hahn-decomposition`
 Hahn 分解定理（Hahn Decomposition Theorem）
-layer 17 · 定理 · 符号测度与分解 · 分析学
+layer 18 · 定理 · 符号测度与分解 · 分析学
 
 设 $\nu$ 是 $(X, \mathcal{M})$ 上的符号测度。则存在 $P, N \in \mathcal{M}$ 使
 

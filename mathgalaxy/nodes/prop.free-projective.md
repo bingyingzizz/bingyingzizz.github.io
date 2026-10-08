@@ -1,6 +1,6 @@
 # 自由紧 Haus 是投射对象　`prop.free-projective`
 自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 的投射对象
-layer 16 · 命题 · 紧 Haus 与 Stone · 拓扑学
+layer 17 · 命题 · 紧 Haus 与 Stone · 拓扑学
 
 自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 中的投射对象。
 

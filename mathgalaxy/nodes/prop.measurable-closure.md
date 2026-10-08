@@ -1,6 +1,6 @@
 # 可测函数的封闭性　`prop.measurable-closure`
 命题：可测函数对和、积、sup、max、极限封闭
-layer 14 · 命题 · 可测函数与收敛 · 分析学
+layer 15 · 命题 · 可测函数与收敛 · 分析学
 
 以下都设函数取值在 $\overline{\mathbb{R}} = [-\infty , +\infty ]$ 或 $\mathbb{C}$ 中，且可测。
 

@@ -8,3 +8,4 @@
 - 被 `def.condensed-set` 凝聚态集 用
 - 被 `def.underlying-topological-space` 底拓扑空间 用
 - 被 `def.compactly-generated` 紧生成空间 用
+- 被 `def.compactly-generated` 紧生成空间 用

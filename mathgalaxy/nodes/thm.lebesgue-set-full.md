@@ -1,6 +1,6 @@
 # Lebesgue 集几乎处处　`thm.lebesgue-set-full`
 定理：$f \in L^{1}_{\text{loc}} \implies m(L_f^{c}) = 0$
-layer 24 · 定理 · 微分定理 · 分析学
+layer 25 · 定理 · 微分定理 · 分析学
 
 若 $f \in L^1_{loc}$，则
 

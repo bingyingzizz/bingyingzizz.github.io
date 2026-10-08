@@ -1,6 +1,6 @@
 # 零集与完备　`def.null-set`
 μ-零集 / 完备测度空间（Null Set & Complete Measure Space）
-layer 14 · 定义 · 测度的构造 · 分析学
+layer 15 · 定义 · 测度的构造 · 分析学
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间，$E \in \mathcal{M}$。
 

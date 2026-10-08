@@ -1,6 +1,6 @@
 # 正则 Borel 测度　`def.regular-measure`
 正则 Borel 测度（Regular Borel Measure）
-layer 16 · 定义 · 微分定理 · 分析学
+layer 17 · 定义 · 微分定理 · 分析学
 
 $\mathbb{R}^{n}$ 上的 Borel 测度 $\nu$ 是**正则的**，当且仅当
 

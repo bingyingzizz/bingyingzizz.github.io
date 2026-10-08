@@ -1,6 +1,6 @@
 # Minkowski 不等式　`thm.minkowski`
 Minkowski 不等式（$L^p$ 的三角不等式）
-layer 19 · 定理 · L^p 空间 · 分析学
+layer 20 · 定理 · L^p 空间 · 分析学
 
 设 $1 \le p < \infty$。则对 $f, g \in L^p$：
 

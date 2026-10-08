@@ -10,3 +10,4 @@
 - 被 `def.representable` 表示函子 用
 - 被 `def.adjoint` 伴随函子 用
 - 被 `def.comma-category` 逗号范畴 用
+- 被 `def.group` 群 用

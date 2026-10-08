@@ -1,6 +1,6 @@
 # 局部可积　`def.locally-integrable`
 局部可积函数 $L^{1}_{\text{loc}}$
-layer 19 · 定义 · 微分定理 · 分析学
+layer 20 · 定义 · 微分定理 · 分析学
 
 可测函数 $f : \mathbb{R}^n \to \mathbb{C}$ 是**局部可积的**，当且仅当
 

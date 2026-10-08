@@ -1,6 +1,6 @@
 # 简单函数的积分　`def.integral-simple`
 简单函数的积分：加权和
-layer 15 · 定义 · 积分 · 分析学
+layer 16 · 定义 · 积分 · 分析学
 
 设 $\varphi \in L^+$ 是简单函数，写成标准形式
 

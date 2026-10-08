@@ -1,6 +1,6 @@
 # MCT（a.e. 版本）　`cor.mct-ae`
 推论：单调收敛定理的几乎处处版本
-layer 16 · 推论 · 积分 · 分析学
+layer 17 · 推论 · 积分 · 分析学
 
 设 $\{f_n\} \subseteq L^+$，$f \in L^+$。若对**几乎处处的**
 > 陈述续见 `nodes/cor.mct-ae.2.md`

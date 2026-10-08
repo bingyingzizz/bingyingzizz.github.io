@@ -15,6 +15,7 @@ layer 5 · 定义 · 拓扑空间 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - 被 `def.metric-space` 距离空间 用
 - ⇒ `thm.stone-profinite` Stone ⟺ 投射有限
+- 被 `def.product-topology` 积拓扑 用
 
 refs: Munkres, Topology, Ch. 2
 

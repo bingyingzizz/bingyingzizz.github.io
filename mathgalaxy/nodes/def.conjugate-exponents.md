@@ -1,6 +1,6 @@
 # 共轭指数　`def.conjugate-exponents`
 共轭指数（Conjugate Exponents）
-layer 13 · 定义 · L^p 空间 · 分析学
+layer 14 · 定义 · L^p 空间 · 分析学
 
 设 $1 \le p \le \infty$。称 $q$ 是 $p$ 的**共轭指数**，当且仅当
 
