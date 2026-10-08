@@ -17,6 +17,10 @@ layer 4 · 定义 · 拓扑空间 · 拓扑学
 - 被 `def.metric-space` 距离空间 用
 - 被 `def.borel` Borel σ-代数 用
 - 被 `def.continuous` 连续 用
+- 被 `def.subspace-topology` 子空间拓扑 用
+- 被 `def.quotient-topology` 商拓扑 用
+- 被 `def.hausdorff` Hausdorff 空间 用
+- 被 `def.connected` 连通与连通分量 用
 
 refs: Munkres, Topology, Ch. 2
 

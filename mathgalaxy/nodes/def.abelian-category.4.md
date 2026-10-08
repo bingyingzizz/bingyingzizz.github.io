@@ -1,0 +1,5 @@
+# 加法 / 阿贝尔范畴　`def.abelian-category`　·　续页（第 4 页）
+根 `../`　·　第 1 页 `nodes/def.abelian-category.md`　·　上一页 `nodes/def.abelian-category.3.md`
+
+## 它能推出什么 / 谁在用它（续）
+- 被 `def.ab-axioms` Grothendieck 的 AB 公理 用

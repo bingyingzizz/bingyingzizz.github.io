@@ -10,7 +10,7 @@
 - `L^{p}, L^{q}`　**L^p 空间（$p, q$ 共轭指数）**
 - `Hf` Hf　**极大函数**
 - `d\nu / d\mu`　**Radon–Nikodym 导数**
-- `\Phi` Φ　**连续线性泛函 $\Phi \in (L^{p})^{*}$**
+- `\Phi` Φ　**连续线性泛函 $\Phi \in (L^{p})^{*}$；范畴论里作伴随的双射 $\Phi_{X,Y}$**
 - `\Sigma` Σ　**有限支集简单函数全体（`analysis.lp` 局部）**
 - `\partial f / \partial t`　**偏导**
 

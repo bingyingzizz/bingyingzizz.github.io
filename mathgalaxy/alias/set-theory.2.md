@@ -9,4 +9,6 @@
 
 - 向量空间为什么一定有基 → thm.vsbasis def.vs lem.zorn
 
+- 积和余积是什么 → def.product def.limit thm.product
+
 见 `../alias.md`。

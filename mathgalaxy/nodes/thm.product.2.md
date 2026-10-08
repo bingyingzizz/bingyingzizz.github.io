@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 `thm.omega` 自然数集存在
+- 被 `def.category` 范畴 用
+- 被 `def.product` 积 / 余积 用

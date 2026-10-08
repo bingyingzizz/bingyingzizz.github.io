@@ -15,4 +15,12 @@
 
 - 连续映射怎么定义 → def.continuous-map def.topology def.closed-set
 
-见 `../alias.md`。
+- 什么是反射子范畴 → def.reflective-subcategory prop.chaus-reflective prop.cg-coreflective
+
+- 紧 Hausdorff 空间有什么特别 → def.chaus prop.chaus-reflective thm.gleason
+
+- Stone-Cech 紧化是什么 → prop.chaus-reflective def.free-compact-hausdorff def.chaus
+
+- 什么是 Stone 空间 → def.stone-space thm.stone-profinite prop.stone-reflective
+
+> 续见 alias/topology.2.md

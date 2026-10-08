@@ -23,6 +23,7 @@ $n$ 元组递归定义为 $(a_{1}$ …$a_{n}) = ( (a_{1}$ …$a_{n-1}), a_{n} )$
 - 被 `def.bijection` 单射 / 满射 / 双射 用
 - 被 `def.rel` 关系 用
 - 被 `thm.product` 笛卡尔积存在 用
+- 被 `def.graph` 图 用
 
 refs: Kunen, Set Theory, I.5
 

@@ -17,7 +17,9 @@ $$\forall\{U_i\}_{i \in I} (\text{ 每个} U_i\text{ 开且} X = \bigcup_{i \in 
 - 被 `thm.metric-compact-equiv` 紧的三个等价刻画 用
 - 被 `prop.compact-subset-closed` 紧子集是闭的 用
 - 被 `prop.subset-compact-equiv` 子集的紧性刻画 用
-- 被 `def.regular-measure` 正则 Borel 测度 用
+- ⇒ `prop.chaus-reflective` 紧 Haus 是反射子范畴
+
+- …另有出边，续页见 `nodes/def.compact.2.md`
 
 refs: Munkres, Topology, §26
 

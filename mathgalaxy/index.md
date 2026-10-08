@@ -1,39 +1,26 @@
 # 数学星图 · 目录
 
-数据根 = 本文件所在目录。下一步：读 `index/<星团id>.md` 拿节点清单。
-规模：6 星系 / 23 星团 / 230 节点 / 485 连线。
+数据根 = 本目录。下一步：读 `index/<星团id>.md` 拿节点清单。
+星团的名字见 `index/<星系id>.md`（那页还有中心天体与点数）。
+规模：7 星系 / 34 星团 / 373 节点 / 813 连线。
 
 ## 数理逻辑（logic）
-- logic.fol　一阶语言与公式
+logic.fol
 
 ## 集合论（set-theory）
-- set.zfc　ZFC 公理系统
-- set.construct　集合的构造
-- set.rel　关系与函数
-- set.cardinal　基数与等势
-- set.numbers　数系的构造
-- set.ordinal　序数与超限
+set.zfc　set.construct　set.rel　set.cardinal　set.numbers　set.ordinal
 
 ## 序理论（order-theory）
-- order.structure　序结构
-- order.choice　选择原理
+order.structure　order.choice
 
 ## 拓扑学（topology）
-- topology.general　拓扑空间
-- topology.metric　度量空间
+topology.general　topology.metric
 
 ## 抽象代数（algebra）
-- algebra.structures　代数结构
-- algebra.vectorspace　向量空间的基
+algebra.structures　algebra.vectorspace
 
 ## 分析学（analysis）
-- analysis.real　实数与极限
-- analysis.setclass　集合族与 σ-代数
-- analysis.measure　测度的构造
-- analysis.measurable　可测函数与收敛
-- analysis.integral　积分
-- analysis.product　乘积测度与 Fubini
-- analysis.signed　符号测度与分解
-- analysis.differentiation　微分定理
-- analysis.bv　有界变差与绝对连续
-- analysis.lp　L^p 空间
+analysis.real　analysis.setclass　analysis.measure　analysis.measurable　analysis.integral　analysis.product　analysis.signed　analysis.differentiation　analysis.bv　analysis.lp
+
+## 范畴论（category）
+cat.basic　cat.functor　cat.limit　cat.yoneda　cat.adjoint　cat.chaus　cat.sheaf　cat.topos　cat.cg　cond　cat.homology

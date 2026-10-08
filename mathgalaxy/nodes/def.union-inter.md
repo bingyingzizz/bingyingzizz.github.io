@@ -15,6 +15,9 @@ $$\bigcap \mathcal{A} := \{ x : \forall A \in \mathcal{A},\ x \in A \}$$
 - `def.subset` 子集：用到了定义 子集　proofs/dep.subset-union-inter.md
 - `def.empty` 空集 ∅：用到了定义 空集 ∅　proofs/dep.empty-union.md
 
+## 它能推出什么 / 谁在用它
+- 被 `def.universe` Grothendieck 宇宙 用
+
 refs: Kunen, Set Theory, I.5
 
 > 说明见 `notes/def.union-inter.md`

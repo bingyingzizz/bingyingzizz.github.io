@@ -1,0 +1,5 @@
+# 层与拓扑（cat.sheaf）· 节点清单（第 2/2 页）
+根 `../`　·　第 1 页 `index/cat.sheaf.md`
+
+- thm.sheafification　层化　layer 18
+- prop.site-properties　site 的层范畴的好性质　layer 19

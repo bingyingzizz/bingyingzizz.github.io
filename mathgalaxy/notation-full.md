@@ -12,7 +12,7 @@
 - `\vee` ∨　**析取（对象语言）**
 - `\to` →　**蕴含（对象语言）/ 趋于 / 映射**
 - `\leftrightarrow` ↔　**等价（对象语言）** — 只用于公理 / 公式内部
-- `\implies` ⟹　**推出（元语言）**
+- `\implies` ⟹　**推出（元语言）** — 范畴论里同一字形也当**自然变换**用（$F \implies G$）：夹在两个函子之间就是变换，不是推出。
 - `\iff` ⟺　**当且仅当（元语言）**
 - `\Longleftarrow` ⟸　**反向证明的方向标记（配 `$(\implies)$`）**
 - `\langle \mathbb{N}, \le \rangle` ⟨ℕ,≤⟩　**「集合 + 结构」的配对写法**
@@ -141,22 +141,40 @@
 - `L^{p}, L^{q}`　**L^p 空间（$p, q$ 共轭指数）**
 - `Hf` Hf　**极大函数**
 - `d\nu / d\mu`　**Radon–Nikodym 导数**
-- `\Phi` Φ　**连续线性泛函 $\Phi \in (L^{p})^{*}$**
+- `\Phi` Φ　**连续线性泛函 $\Phi \in (L^{p})^{*}$；范畴论里作伴随的双射 $\Phi_{X,Y}$**
 - `\Sigma` Σ　**有限支集简单函数全体（`analysis.lp` 局部）**
 - `\partial f / \partial t`　**偏导**
+
+### 排版与箭头
+
+- `\bigl( \bigr)` （ ）　**按内容伸缩的括号** — **成对写**，别只写左边。
+- `\Bigl( \Bigr)` （ ）　**按内容伸缩的括号（大一号）** — 里外两层时，外层用 `\Bigl \Bigr`、内层用 `\bigl \bigr`。
+- `\scriptstyle`　**缩小一号** — 只用在交换图的 $\begin{array}$ 里给边注（如 $\downarrow\scriptstyle{f}$）压字号，正文里不用。
+- `\xrightarrow{f}, \xleftarrow{g}` →f／←g　**带标签的箭头** — 交换图里把态射名字写在箭头上 / 下。
+- `\downarrow, \uparrow` ↓ ↑　**竖直箭头** — 交换图里竖边的方向。
+- `\varinjlim, \varprojlim` lim→／lim←　**余极限 / 极限** — 带指标的极限写作 $\varinjlim_{(X,s)} h_{X}$；不带指标时可以用 $\lim$、$\operatorname{colim}$。
+- `\dashv` ⊣　**左伴随 $F \dashv G$** — 写 $F \dashv G$ 表示 $F$ 是 $G$ 的**左**伴随。箭头朝右也朝下，别写成 $\vdash$（那是有穷逻辑的可推导）。
+- `\coprod, \bigoplus, \sqcup` ∐ ∐ ⊔　**余积 / 直和 / 不交并** — 集合的余积写 $\coprod$，加法群的余积写 $\bigoplus$，两个空间的不交并写 $\sqcup$。
+- `\underline{E}` E̲　**常预层 / 强调** — 常预层 $\underline{E}$ 取常值 $E$。
 
 ### 字母约定
 
 - `\alpha` α　**序数 / 指标** — 局部义：微分里是阈值，积分里是复相位
 - `\beta` β　**序数（配 $\alpha$）**
 - `\gamma` γ　**序数（配 $\alpha$、$\beta$）/ 一般函数**
+- `\eta` η　**自然变换 / 自然同构（范畴论）**
 - `\pi` π　**投影 $\pi_{\alpha}$**
 - `\theta` θ　**角度**
 - `\tau` τ　**停时 / 一般函数（罕见）**
 - `\zeta` ζ　**（罕见）**
-- `\mathcal{C}` 𝒞　**证明内局部：Cauchy 列全体 / 递升集合族**
+- `\mathcal{C}` 𝒞　**证明内局部：Cauchy 列全体 / 递升集合族；范畴论里作范畴**
 - `\mathcal{F}` ℱ　**证明内局部：部分选择函数全体 / 生成元族**
 - `\mathcal{U}, \mathcal{V}`　**证明内局部：开覆盖 / 有限子覆盖**
-- `\mathcal{D}` 𝒟　**证明内局部：链的族**
+- `\mathcal{D}` 𝒟　**证明内局部：链的族；范畴论里作范畴**
 - `\mathcal{K}` 𝒦　**证明内局部：单调类定理里的试探集族**
+- `\Delta` Δ　**分析里作对称差 / 增量（局部）；范畴论里作单纯形范畴、常图函子 $\Delta X$**
+- `\rightarrowtail` ↣　**单态射 / 嵌入（范畴论）**
+- `h^{X}, h_{X}` h^X／h_X　**可表示函子 / 可表示预层（范畴论）** — **上标记协变** $h^{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$；**下标记预层** $h_{X} = \operatorname{Hom}_{\mathcal{C}}(-, X)$。米田引理用上标，米田嵌入用下标。
+- `\Theta` Θ　**证明内局部：余极限到 $T$ 的那一个态射**
+- `\Gamma(F, M)` Γ(F,M)　**截面（凝聚态里）** — 凝聚态集或凝聚态阿贝尔群 $M$ 在紧 Hausdorff 空间 $F$ 处的**截面**，就是 $M(F)$。
 - `\mathrm{ZFC}` ZFC　**公理系统名（名词 → `\mathrm{}`）**

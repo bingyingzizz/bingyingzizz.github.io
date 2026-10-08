@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 `def.outer-measure` 外测度 用
+- 被 `def.universe` Grothendieck 宇宙 用

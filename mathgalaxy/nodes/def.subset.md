@@ -21,10 +21,9 @@ $$A = B \iff A \subseteq B \wedge  B \subseteq A$$
 - 被 `def.diff-complement` 差集与补集 用
 - 被 `def.power-set` 幂集 𝒫(X) 用
 - 被 `def.topology` 拓扑空间与开集 用
+- 被 `def.subspace-topology` 子空间拓扑 用
 - 被 `ax.sep` 分离公理模式 用
 - 被 `ax.power` 幂集公理 用
-- 被 `def.finchar` 有限特征 用
-- 被 `def.rel` 关系 用
 
 refs: Kunen, Set Theory, I.2
 

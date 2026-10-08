@@ -13,6 +13,7 @@ $$\emptyset := \{ x : x \ne x \}$$
 ## 它能推出什么 / 谁在用它
 - 被 `thm.empty` 空集存在 用
 - 被 `def.union-inter` 并集与交集 用
+- 被 `def.final-initial` 终对象 / 始对象 用
 
 refs: Kunen, Set Theory, I.5
 
