@@ -1,6 +1,6 @@
 # 截面函子保极限余极限　`prop.condab-section`
 截面函子 $\Gamma(F, -)$
-layer 16 · 命题 · 凝聚态集 · 范畴论+拓扑学
+layer 16 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 
 设 $F \in \mathbf{FCHaus}$。则**截面函子**
 

@@ -1,6 +1,6 @@
 # 上链复形　`def.cochain-complex`
 复形（Complex）
-layer 10 · 定义 · 同调代数 · 范畴论
+layer 10 · 定义 · 复形与导出三角 · 同调代数
 
 设 $\mathcal{C}$ 是加法范畴。$\mathcal{C}$ 中的**（长）序列**是有序集 $(\mathbb{Z}, \le)$ 上的图
 
@@ -15,7 +15,6 @@ $$\cdots \longrightarrow K^{n-1} \xrightarrow{\ d^{n-1}\ } K^{n} \xrightarrow{\ 
 
 ## 它能推出什么 / 谁在用它
 - 被 `prop.complex-additive` 复形范畴是加法范畴 用
-- 被 `def.homotopy` 同伦 用
 
 > 说明见 `notes/def.cochain-complex.md`
 

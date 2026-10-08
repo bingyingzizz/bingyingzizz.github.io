@@ -41,7 +41,7 @@
 - `\times` ×　**笛卡尔积 / 乘积**
 - `\{ x : \ldots \}`　**集合描述**
 - `\rightrightarrows` ⇉　**一致收敛**
-- `\hookrightarrow` ↪　**单射**
+- `\hookrightarrow` ↪　**单射 / 嵌入** — 两种意思都在用：集合论里读「单射」，范畴论里读「**嵌入**」（子范畴进大范畴、Yoneda 嵌入、切片范畴的嵌入）。
 - `\upharpoonright` ↾　**限制 $f \upharpoonright A$**
 
 ### 序、基数与序数
@@ -156,6 +156,25 @@
 - `\dashv` ⊣　**左伴随 $F \dashv G$** — 写 $F \dashv G$ 表示 $F$ 是 $G$ 的**左**伴随。箭头朝右也朝下，别写成 $\vdash$（那是有穷逻辑的可推导）。
 - `\coprod, \bigoplus, \sqcup` ∐ ∐ ⊔　**余积 / 直和 / 不交并** — 集合的余积写 $\coprod$，加法群的余积写 $\bigoplus$，两个空间的不交并写 $\sqcup$。
 - `\underline{E}` E̲　**常预层 / 强调** — 常预层 $\underline{E}$ 取常值 $E$。
+
+### 范畴与同调
+
+- `\mathcal{C}` 𝒞　**一般的范畴；预层范畴写 $\widehat{\mathcal{C}}$，拓扑斯写 $\mathcal{T}$**
+- `\widehat{\mathcal{C}}` Ĉ　**预层范畴 $\operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf{Set})$**
+- `\mathcal{T}` 𝒯　**拓扑斯**
+- `h^{X}, h_{X}` h^X／h_X　**可表示函子 / 可表示预层** — **上标记协变** $h^{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$；**下标记预层** $h_{X} = \operatorname{Hom}_{\mathcal{C}}(-, X)$。米田引理用上标，米田嵌入用下标。
+- `h : \mathcal{C} \to \widehat{\mathcal{C}}` h　**米田嵌入 $X \mapsto h_{X}$**
+- `\mathcal{C}/T` 𝒞/T　**预层 $T$ 的切片范畴；遗忘函子写 $j_{T}$**
+- `h_{X} \downarrow T`　**逗号范畴（切片范畴就是它）**
+- `\sharp` ♯　**层化 $T \mapsto T^{\sharp}$** — 写在右上角：$T^{\sharp}$ 是 $T$ 的层化。
+- `\mathbf{K}(\mathcal{C})` K(C)　**复形的同伦范畴** — 上加 $+$ / $-$ / $b$ 表示下有界 / 上有界 / 有界。
+- `M(f)` M(f)　**态射 $f$ 的映射锥**
+- `K[k]` K[k]　**复形的 $k$-位移**
+- `F^{n}M,\ \operatorname{Gr}^{n}M` F^n／Gr^n　**过滤与关联分次**
+- `E^{p,q}_{r}` E^p,q_r　**谱序列的第 $r$ 页**
+- `\mathrm{Cond},\ \mathrm{CondAb}` Cond／CondAb　**凝聚态集 / 凝聚态阿贝尔群**
+- `\bar{\mathbb{N}}` ℕ̄　**$\mathbb{N}$ 的一点紧化** — 从 $\bar{\mathbb{N}}$ 到 $X$ 的连续映射 = 「收敛序列连同指定的极限」。
+- `\mathrm{AB1} \cdots \mathrm{AB6}` AB1–AB6　**Grothendieck 的正合性等级** — AB1 预阿贝尔 · AB2 阿贝尔 · AB3 有余极限 · AB4 余积正合 · AB5 滤过余极限正合 · AB6 滤过余极限与积交换。带星号的是对偶。
 
 ### 字母约定
 

@@ -15,10 +15,10 @@ $$\mathcal{C}^{I} := \operatorname{Hom}(I, \mathcal{C})$$
 - `def.category` 范畴：用到了定义 范畴　proofs/def-dep.category-diagram.md
 
 ## 它能推出什么 / 谁在用它
-- 被 `def.simplicial` 单纯对象 用
-- 被 `def.limit` 极限 用
 - 被 `prop.limit-adjoint` 极限即伴随 用
 - 被 `prop.filtered-exact` 滤过余极限正合 用
+- 被 `def.simplicial` 单纯对象 用
+- 被 `def.limit` 极限 用
 - 被 `def.cochain-complex` 上链复形 用
 
 > 说明见 `notes/def.commutative-diagram.md`

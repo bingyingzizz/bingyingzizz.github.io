@@ -1,6 +1,6 @@
 # 投射有限空间　`def.profinite`
 投射有限空间（Profinite Space）
-layer 12 · 定义 · 紧 Haus 与 Stone · 范畴论+拓扑学
+layer 12 · 定义 · 紧 Haus 与 Stone · 拓扑学
 
 **投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
 
@@ -11,7 +11,6 @@ $$X \;=\; \varprojlim_{i \in I} X_{i}, \qquad X_{i} \text{ 有限离散},\quad I
 
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.stone-profinite` Stone ⟺ 投射有限
-- 被 `thm.stone-profinite` Stone ⟺ 投射有限 用
 - 被 `thm.stone-profinite` Stone ⟺ 投射有限 用
 
 ## 说明

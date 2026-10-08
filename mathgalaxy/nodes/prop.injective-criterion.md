@@ -1,6 +1,6 @@
 # 内射对象的判据　`prop.injective-criterion`
 内射对象的四条等价说法
-layer 14 · 命题 · 同调代数 · 范畴论
+layer 15 · 命题 · 同调与正合列 · 同调代数
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$I \in \mathcal{A}$。下列等价：
 
@@ -14,6 +14,7 @@ layer 14 · 命题 · 同调代数 · 范畴论
 $$M \text{ 内射} \iff M'' \text{ 内射}$$
 
 ## 为什么成立（入边，证明在 proofs/）
+- `def.projective-object` 投射 / 内射对象：用到了定义 投射 / 内射对象　proofs/def-dep.injective-criterion.md
 - `def.mono` 单态射 / 满态射：用到了定义 单态射 / 满态射　proofs/def-dep.mono-injective-criterion.md
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-dep.adjoint-injective-criterion.md
 

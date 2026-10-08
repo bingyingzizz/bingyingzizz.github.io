@@ -1,16 +1,6 @@
 # 问法 → 节点 · 范畴论
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/category.md`
 
-- Stone-Cech 紧化是什么 → prop.chaus-reflective def.free-compact-hausdorff def.chaus
-
-- 什么是 Stone 空间 → def.stone-space thm.stone-profinite prop.stone-reflective
-
-- 投射有限空间是什么 → def.profinite thm.stone-profinite def.stone-space
-
-- 什么是投射对象 → def.projective-object thm.gleason prop.cond-projectives
-
-- 层是什么 → def.sheaf thm.sheaf-descent def.presheaf
-
 - 什么是 Grothendieck 拓扑 → def.grothendieck-topology def.pretopology def.sieve
 
 - 预层怎么变成层 → thm.sheafification def.cech-functor prop.cech-properties
@@ -25,4 +15,10 @@
 
 - 什么是拟紧对象 → def.quasi-compact prop.quasi-compact-properties def.quasi-separated
 
-> 续见 alias/category.4.md
+- 凝聚态集是什么 → def.condensed-set def.chaus def.sheaf
+
+- 凝聚态集为什么是拓扑斯 → thm.cond-topos def.condensed-set thm.giraud
+
+- 内射对象怎么判断 → prop.injective-criterion def.projective-object def.mono
+
+见 `../alias.md`。

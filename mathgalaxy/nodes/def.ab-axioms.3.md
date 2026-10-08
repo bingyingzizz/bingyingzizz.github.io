@@ -2,4 +2,4 @@
 根 `../`　·　第 1 页 `nodes/def.ab-axioms.md`　·　上一页 `nodes/def.ab-axioms.2.md`
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 `thm.condab-ab` CondAb 满足 AB6 与 AB4* 用
+- 被 `def.grothendieck-category` Grothendieck 范畴 用

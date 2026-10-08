@@ -1,6 +1,6 @@
 # 元素范畴　`def.elements-category`
 元素范畴（Category of Elements）
-layer 11 · 定义 · 图与极限 · 范畴论
+layer 11 · 定义 · 单满、子对象与像 · 范畴论
 
 函子 $F : \mathcal{C} \to \mathbf{Set}$ 的**元素范畴** $\operatorname{el}(F)$ 以
 

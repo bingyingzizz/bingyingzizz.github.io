@@ -13,6 +13,9 @@ $$\delta : \mathcal{C} \longrightarrow \widehat{\mathcal{C}}, \qquad X \mapsto h
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-yoneda-embedding.md
 - `def.ff-faithful` 忠实 / 满 / 全忠实：用到了定义 忠实 / 满 / 全忠实　proofs/def-link.ff-faithful-yoneda-embedding.md
 - `def.natural-transformation` 自然变换：用到了定义 自然变换　proofs/def-dep.nat-yoneda-embedding.md
-- `def.ff-faithful` 忠实 / 满 / 全忠实：用到了定义 忠实 / 满 / 全忠实　proofs/def-dep.ff-yoneda-embedding.md
+- `prop.chaus-reflective` 紧 Haus 是反射子范畴：米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」　proofs/ana.embed-better-world.md
 
 > 说明见 `notes/prop.yoneda-embedding.md`
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 `nodes/prop.yoneda-embedding.2.md`

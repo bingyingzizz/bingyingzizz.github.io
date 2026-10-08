@@ -2,6 +2,6 @@
 根 `../`　·　第 1 页 `nodes/prop.chaus-reflective.md`
 
 ## 陈述（续）
-$$\operatorname{Hom}_{\mathbf{CHaus}}\bigl(\beta X,\ K\bigr) \;\cong\; \operatorname{Hom}_{\mathbf{Top}}\bigl(X,\ K\bigr)$$
-
 而且含入 $X \to \beta X$ 在 $X$ 本身紧 Hausdorff 时是同构。
+
+> 续见 `nodes/prop.chaus-reflective.3.md`

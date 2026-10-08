@@ -18,6 +18,5 @@ $$\alpha : F \implies p_{!}F \circ p$$
 ## 它能推出什么 / 谁在用它
 - ⇒ `ex.kan-extension` Kan 延拓的两个例子
 - 被 `ex.kan-extension` Kan 延拓的两个例子 用
-- 被 `ex.kan-extension` Kan 延拓的两个例子 用
 
 > 说明见 `notes/def.kan-extension.md`

@@ -1,6 +1,6 @@
 # 全不连通与 Stone 空间　`def.stone-space`
 Stone 空间与 Stonean 空间（Stone / Stonean Space）
-layer 15 · 定义 · 紧 Haus 与 Stone · 范畴论+拓扑学
+layer 15 · 定义 · 紧 Haus 与 Stone · 拓扑学
 
 - $X$ **全不连通**（totally disconnected），如果其中每个连通分量都是单点；
 - $X$ **极端不连通**（extremally disconnected），如果任一开集的**闭包仍是闭开集**；

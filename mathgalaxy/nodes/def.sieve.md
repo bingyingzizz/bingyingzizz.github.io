@@ -13,8 +13,8 @@ layer 10 · 定义 · 层与拓扑 · 范畴论
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.sheaf-descent` 层的下降条件
 - ⇒ `prop.covering-sieve-epi` 覆盖筛即余积满射
+- 被 `prop.covering-sieve-epi` 覆盖筛即余积满射 用
 - 被 `def.grothendieck-topology` Grothendieck 拓扑 用
-- 被 `def.canonical-topology` 标准拓扑 用
 
 - …另有出边，续页见 `nodes/def.sieve.3.md`
 

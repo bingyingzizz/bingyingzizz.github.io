@@ -9,7 +9,6 @@ layer 12 · 命题 · 伴随与反射 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-reflective.md
 - `def.reflective-subcategory` 反射子范畴：用到了定义 反射子范畴　proofs/def-dep.reflective-limits.md
-- `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-reflective.md
 
 ## 说明
 也就是说，**反射子范畴对极限封闭**。这条让「先在大的范畴里算，再看能不能落回去」成为标准操作：余极限要回炉过一次反射，极限则不用。

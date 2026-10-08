@@ -1,6 +1,6 @@
 # 同调　`def.cohomology`
 同调（Cohomology）
-layer 13 · 定义 · 同调代数 · 范畴论
+layer 13 · 定义 · 同调与正合列 · 同调代数
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$K$ 是 $\mathcal{A}$ 中的上链复形。$K$ 的**第 $n$ 阶同调**是
 > 陈述续见 `nodes/def.cohomology.2.md`
@@ -12,8 +12,8 @@ layer 13 · 定义 · 同调代数 · 范畴论
 
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.long-exact` 长正合列
-- 被 `def.cohomological-functor` 上同调函子 用
 - 被 `thm.long-exact` 长正合列 用
+- 被 `def.cohomological-functor` 上同调函子 用
 - 被 `def.quasi-iso` 拟同构 用
 
 ## 说明

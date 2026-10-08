@@ -21,6 +21,6 @@
 
 - Kan 延拓是什么 → def.kan-extension ex.kan-extension def.adjoint
 
-- 紧 Hausdorff 空间有什么特别 → def.chaus prop.chaus-reflective thm.gleason
+- 层是什么 → def.sheaf thm.sheaf-descent def.presheaf
 
 > 续见 alias/category.3.md

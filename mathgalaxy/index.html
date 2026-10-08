@@ -4650,8 +4650,8 @@ MG.regions = [
     en: 'Topology',
     color: '#D9649F',
     center: { x: 1220, y: -660 },
-    radius: 460,
-    desc: '开集、连续、紧致与连通；大量定理依赖选择原理。'
+    radius: 560,
+    desc: '开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。'
   },
   {
     id: 'algebra',
@@ -4677,8 +4677,26 @@ MG.regions = [
     en: 'Category Theory',
     color: '#B03A5B',
     center: { x: 1600, y: 1250 },
-    radius: 560,
-    desc: '范畴、函子、自然变换、极限与伴随；再往上走到层论、拓扑斯与凝聚态数学。'
+    radius: 520,
+    desc: '范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。'
+  },
+  {
+    id: 'homology',
+    name: '同调代数',
+    en: 'Homological Algebra',
+    color: '#C89A2B',
+    center: { x: 2250, y: 120 },
+    radius: 480,
+    desc: '加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。'
+  },
+  {
+    id: 'condensed',
+    name: '凝聚态数学',
+    en: 'Condensed Mathematics',
+    color: '#1F8A70',
+    center: { x: 450, y: 1900 },
+    radius: 500,
+    desc: '把拓扑空间换成「紧 Hausdorff 空间上的层」：凝聚态集、凝聚态阿贝尔群。'
   }
 ];
 
@@ -4830,6 +4848,20 @@ MG.clusters = [
     hub: 'def.metric-space',
     desc: '造出「用距离算出来的拓扑」：完备、全有界、列紧，以及紧性的几种等价刻画。'
   },
+  {
+    id: 'topo.chaus',
+    name: '紧 Haus 与 Stone',
+    parent: 'topology',
+    hub: 'prop.chaus-reflective',
+    desc: '造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。'
+  },
+  {
+    id: 'topo.cg',
+    name: '紧生成空间',
+    parent: 'topology',
+    hub: 'def.compactly-generated',
+    desc: '造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。'
+  },
 
   /* ------------------------------------------------ 星系：分析学 */
   {
@@ -4923,7 +4955,14 @@ MG.clusters = [
     name: '图与极限',
     parent: 'category',
     hub: 'def.limit',
-    desc: '造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子，再落回子对象与像。'
+    desc: '造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子。'
+  },
+  {
+    id: 'cat.structure',
+    name: '单满、子对象与像',
+    parent: 'category',
+    hub: 'def.subobject',
+    desc: '造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。'
   },
   {
     id: 'cat.yoneda',
@@ -4940,13 +4979,6 @@ MG.clusters = [
     desc: '造出「两个方向之间的最佳翻译」：伴随 → 单位与余单位 → 保极限 → 伴随函子定理 → 反射子范畴 → Kan 延拓。'
   },
   {
-    id: 'cat.chaus',
-    name: '紧 Haus 与 Stone',
-    parent: 'category',
-    hub: 'prop.chaus-reflective',
-    desc: '造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。'
-  },
-  {
     id: 'cat.sheaf',
     name: '层与拓扑',
     parent: 'category',
@@ -4960,26 +4992,51 @@ MG.clusters = [
     hub: 'def.topos',
     desc: '造出「几何的代数替身」：预拓扑斯 → 预标准拓扑 → 生成元 → 拓扑斯 → Giraud 定理 → 拟紧拟分离 → 拓扑斯的态射。'
   },
+
+  /* ------------------------------------------------ 星系：同调代数 */
   {
-    id: 'cat.cg',
-    name: '紧生成空间',
-    parent: 'category',
-    hub: 'def.compactly-generated',
-    desc: '造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。'
+    id: 'hom.ab',
+    name: '加法与阿贝尔范畴',
+    parent: 'homology',
+    hub: 'def.abelian-category',
+    desc: '造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。'
   },
   {
-    id: 'cond',
+    id: 'hom.complex',
+    name: '复形与导出三角',
+    parent: 'homology',
+    hub: 'def.distinguished-triangle',
+    desc: '造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。'
+  },
+  {
+    id: 'hom.cohomology',
+    name: '同调与正合列',
+    parent: 'homology',
+    hub: 'def.cohomology',
+    desc: '造出「把复形读成不变量」这件事：同调 → 上同调函子 → 长正合列 → 拟同构与零调 → 内射对象。'
+  },
+  {
+    id: 'hom.spectral',
+    name: '过滤与谱序列',
+    parent: 'homology',
+    hub: 'def.spectral-sequence',
+    desc: '造出「逐层逼近同调」的工具：带过滤的对象 → 关联分次 → 谱序列从 $E_{r}$ 页逐页算到 $E_{\\infty}$。'
+  },
+
+  /* ------------------------------------------------ 星系：凝聚态数学 */
+  {
+    id: 'cond.set',
     name: '凝聚态集',
-    parent: 'category',
+    parent: 'condensed',
     hub: 'def.condensed-set',
-    desc: '造出终点站：紧 Hausdorff 空间上的层就是凝聚态集，换到自由对象上退化成「保有限积」，再往上走凝聚态阿贝尔群。'
+    desc: '造出主角：紧 Hausdorff 空间上的层就是凝聚态集；换到自由对象上，层条件退化成「保有限积」。'
   },
   {
-    id: 'cat.homology',
-    name: '同调代数',
-    parent: 'category',
-    hub: 'def.cochain-complex',
-    desc: '造出「复形」这套机器：复形 → 同伦 → 同伦范畴 → 映射锥与导出三角 → 同调与长正合列 → 拟同构 → 内射对象 → 谱序列。'
+    id: 'cond.ab',
+    name: '凝聚态阿贝尔群',
+    parent: 'condensed',
+    hub: 'def.condensed-abelian-group',
+    desc: '在凝聚态集上做代数：阿贝尔群值层 → 截面函子 → 足够多投射对象 → 张量与内 Hom。'
   }
 
   /* 以后加内容时，新星团往这里追加即可。留空不写 = 该星系的节点直属于星系。 */
@@ -5719,6 +5776,7 @@ MG.notation = {
     { id: 'measure', name: '测度与 σ-代数' },
     { id: 'integral',name: '积分与函数空间' },
     { id: 'layout',  name: '排版与箭头' },
+    { id: 'cat',     name: '范畴与同调' },
     { id: 'letters', name: '字母约定' },
   ],
 
@@ -5768,7 +5826,8 @@ MG.notation = {
     { g: 'set', tex: '\\times',       uni: '×', name: '笛卡尔积 / 乘积' },
     { g: 'set', tex: '\\{ x : \\ldots \\}', uni: '', name: '集合描述' },
     { g: 'set', tex: '\\rightrightarrows', uni: '⇉', name: '一致收敛' },
-    { g: 'set', tex: '\\hookrightarrow', uni: '↪', name: '单射' },
+    { g: 'set', tex: '\\hookrightarrow', uni: '↪', name: '单射 / 嵌入',
+      note: '两种意思都在用：集合论里读「单射」，范畴论里读「**嵌入**」（子范畴进大范畴、Yoneda 嵌入、切片范畴的嵌入）。' },
     { g: 'set', tex: '\\upharpoonright', uni: '↾', name: '限制 $f \\upharpoonright A$' },
 
     /* -------- 序、基数与序数 -------- */
@@ -5899,6 +5958,29 @@ MG.notation = {
       note: '集合的余积写 $\\coprod$，加法群的余积写 $\\bigoplus$，两个空间的不交并写 $\\sqcup$。' },
     { g: 'layout', tex: '\\underline{E}',  uni: 'E̲', name: '常预层 / 强调',
       note: '常预层 $\\underline{E}$ 取常值 $E$。' },
+
+    /* -------- 范畴与同调 -------- */
+    { g: 'cat', tex: '\\mathcal{C}', uni: '𝒞', name: '一般的范畴；预层范畴写 $\\widehat{\\mathcal{C}}$，拓扑斯写 $\\mathcal{T}$' },
+    { g: 'cat', tex: '\\widehat{\\mathcal{C}}', uni: 'Ĉ', name: '预层范畴 $\\operatorname{Hom}(\\mathcal{C}^{\\mathrm{op}}, \\mathbf{Set})$' },
+    { g: 'cat', tex: '\\mathcal{T}', uni: '𝒯', name: '拓扑斯' },
+    { g: 'cat', tex: 'h^{X}, h_{X}', uni: 'h^X／h_X', name: '可表示函子 / 可表示预层',
+      note: '**上标记协变** $h^{X} = \\operatorname{Hom}_{\\mathcal{C}}(X, -)$；**下标记预层** $h_{X} = \\operatorname{Hom}_{\\mathcal{C}}(-, X)$。米田引理用上标，米田嵌入用下标。' },
+    { g: 'cat', tex: 'h : \\mathcal{C} \\to \\widehat{\\mathcal{C}}', uni: 'h', name: '米田嵌入 $X \\mapsto h_{X}$' },
+    { g: 'cat', tex: '\\mathcal{C}/T', uni: '𝒞/T', name: '预层 $T$ 的切片范畴；遗忘函子写 $j_{T}$' },
+    { g: 'cat', tex: 'h_{X} \\downarrow T', uni: '', name: '逗号范畴（切片范畴就是它）' },
+    { g: 'cat', tex: '\\sharp', uni: '♯', name: '层化 $T \\mapsto T^{\\sharp}$',
+      note: '写在右上角：$T^{\\sharp}$ 是 $T$ 的层化。' },
+    { g: 'cat', tex: '\\mathbf{K}(\\mathcal{C})', uni: 'K(C)', name: '复形的同伦范畴',
+      note: '上加 $+$ / $-$ / $b$ 表示下有界 / 上有界 / 有界。' },
+    { g: 'cat', tex: 'M(f)', uni: 'M(f)', name: '态射 $f$ 的映射锥' },
+    { g: 'cat', tex: 'K[k]', uni: 'K[k]', name: '复形的 $k$-位移' },
+    { g: 'cat', tex: 'F^{n}M,\\ \\operatorname{Gr}^{n}M', uni: 'F^n／Gr^n', name: '过滤与关联分次' },
+    { g: 'cat', tex: 'E^{p,q}_{r}', uni: 'E^p,q_r', name: '谱序列的第 $r$ 页' },
+    { g: 'cat', tex: '\\mathrm{Cond},\\ \\mathrm{CondAb}', uni: 'Cond／CondAb', name: '凝聚态集 / 凝聚态阿贝尔群' },
+    { g: 'cat', tex: '\\bar{\\mathbb{N}}', uni: 'ℕ̄', name: '$\\mathbb{N}$ 的**一点紧化**',
+      note: '从 $\\bar{\\mathbb{N}}$ 到 $X$ 的连续映射 = 「收敛序列连同指定的极限」。' },
+    { g: 'cat', tex: '\\mathrm{AB1} \\cdots \\mathrm{AB6}', uni: 'AB1–AB6', name: 'Grothendieck 的正合性等级',
+      note: 'AB1 预阿贝尔 · AB2 阿贝尔 · AB3 有余极限 · AB4 余积正合 · AB5 滤过余极限正合 · AB6 滤过余极限与积交换。带星号的是对偶。' },
 
     /* -------- 字母约定 -------- */
     { g: 'letters', tex: '\\alpha',   uni: 'α', name: '序数 / 指标',
@@ -16983,7 +17065,7 @@ window.MG = window.MG || {};
     /* ------------------------------------------------------ 单态射 */
     {
       id: 'def.mono',
-      cluster: 'cat.limit',
+      cluster: 'cat.structure',
       type: 'definition',
       label: '单态射 / 满态射',
       title: '单态射与满态射（Monomorphism / Epimorphism）',
@@ -17004,7 +17086,7 @@ window.MG = window.MG || {};
     /* ------------------------------------------------------ 子对象 */
     {
       id: 'def.subobject',
-      cluster: 'cat.limit',
+      cluster: 'cat.structure',
       type: 'definition',
       label: '子对象',
       title: '子对象（Subobject）',
@@ -17051,7 +17133,7 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------------- 像 */
     {
       id: 'def.image',
-      cluster: 'cat.limit',
+      cluster: 'cat.structure',
       type: 'definition',
       label: '像 / 余像',
       title: '像与余像（Image / Coimage）',
@@ -17075,7 +17157,7 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 元素范畴 */
     {
       id: 'def.elements-category',
-      cluster: 'cat.limit',
+      cluster: 'cat.structure',
       type: 'definition',
       label: '元素范畴',
       title: '元素范畴（Category of Elements）',
@@ -17982,11 +18064,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 紧 Haus 范畴 */
     {
       id: 'def.chaus',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '紧 Hausdorff 空间范畴',
       title: '紧 Hausdorff 空间范畴 $\\mathbf{CHaus}$',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '紧', 'Hausdorff'],
       statement: [
         '**紧 Hausdorff 空间**是既紧又 Hausdorff 的拓扑空间。以它们为对象、连续映射为态射，得到范畴 $\\mathbf{CHaus}$。含入函子记 $\\mathbf{CHaus} \\hookrightarrow \\mathbf{Top}$。'
@@ -18000,11 +18082,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------ CHaus 是反射子范畴 */
     {
       id: 'prop.chaus-reflective',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '紧 Haus 是反射子范畴',
-      title: 'Stone–Čech 紧化：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的反射子范畴',
-      regions: ['category', 'topology'],
+      title: 'Stone–Čech 紧化',
+      regions: ['topology'],
       tags: ['范畴论', 'Stone–Čech', '反射'],
       statement: [
         '$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的**反射子范畴**，反射叫 **Stone–Čech 紧化**：',
@@ -18031,11 +18113,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------- 极小闭子集引理 */
     {
       id: 'lem.minimal-closed-surjection',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'lemma',
       label: '满射的极小闭子集',
       title: '满连续映射的极小闭子集',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '紧', '佐恩引理'],
       statement: [
         '设 $f : S \\to T$ 是紧 Hausdorff 空间之间的连续满射。则存在**极小**的闭子集 $S\' \\subseteq S$，使限制 $f|_{S\'}$ 仍然是满射。'
@@ -18046,11 +18128,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 自由紧 Haus */
     {
       id: 'def.free-compact-hausdorff',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '自由紧 Hausdorff 空间',
       title: '自由紧 Hausdorff 空间（Free Compact Hausdorff Space）',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '自由', 'Stone–Čech'],
       statement: [
         '**自由紧 Hausdorff 空间**就是某个离散空间 $I$ 的 Stone–Čech 紧化 $F \\cong \\beta I$。称 $I$ 是 $F$ 的一组**基**：此时',
@@ -18065,11 +18147,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------- CHaus 是自由的商 */
     {
       id: 'prop.chaus-quotient-of-free',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '紧 Haus 是自由的商',
       title: '每个紧 Hausdorff 空间都是自由紧 Hausdorff 空间的商',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '商', '自由'],
       statement: [
         '每个紧 Hausdorff 空间 $S$ 都是某个自由紧 Hausdorff 空间的**连续满像**：取 $S$ 上的离散拓扑，则',
@@ -18084,11 +18166,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 投射对象 */
     {
       id: 'def.projective-object',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '投射 / 内射对象',
       title: '投射对象与内射对象（Projective / Injective Object）',
-      regions: ['category'],
+      regions: ['topology'],
       tags: ['范畴论', '投射', '提升'],
       statement: [
         '范畴 $\\mathcal{C}$ 中对象 $P$ 叫**投射的**，如果函子 $h_{P} = \\operatorname{Hom}_{\\mathcal{C}}(P, -)$ **保持满态射**。对偶地，$I$ 叫**内射的**，如果 $h^{I}$ 把单态射送到满态射。',
@@ -18109,11 +18191,11 @@ window.MG = window.MG || {};
     /* ----------------------------------------- 自由紧 Haus 是投射的 */
     {
       id: 'prop.free-projective',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '自由紧 Haus 是投射对象',
       title: '自由紧 Hausdorff 空间是 $\\mathbf{CHaus}$ 的投射对象',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '投射', '自由'],
       statement: '自由紧 Hausdorff 空间是 $\\mathbf{CHaus}$ 中的投射对象。',
       notes: '设 $F \\cong \\beta I$，给定满态射 $T \\twoheadrightarrow S$ 与 $F \\to S$。由自由性，$F \\to S$ 等同于 $I$ 上的一族点，于是 $I \\to T$ 就是一个集合层的提升（$I$ 离散、$\\mathbf{Set}$ 中对象都投射，即选择公理）；再用 $\\beta I$ 的泛性质把它变回 $F \\to T$，而它自动与原有映射相容。∎'
@@ -18122,11 +18204,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 自由表示 */
     {
       id: 'def.free-presentation',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '自由表示',
       title: '自由表示（Free Presentation）',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '商', '等价关系'],
       statement: [
         '紧 Hausdorff 空间之间的连续满射 $F \\twoheadrightarrow S$ 叫 $S$ 的**自由表示**，如果',
@@ -18147,11 +18229,11 @@ window.MG = window.MG || {};
     /* --------------------------------------------- 自由表示的存在性 */
     {
       id: 'cor.chaus-free-presentation',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'corollary',
       label: '紧 Haus 都有自由表示',
       title: '每个紧 Hausdorff 空间都有自由表示',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '自由表示', '存在性'],
       statement: '每个紧 Hausdorff 空间 $S$ 都有自由表示。',
       notes: '取 $F = \\beta S^{\\mathrm{disc}}$（前一条命题：$F \\twoheadrightarrow S$ 满，且 $F$ 自由）。把同样的做法对 $S \\times_{S} S$ 再做一次，得到 $F\' \\twoheadrightarrow R$ 满。三条逐一满足：自由、满、以及对 $R$ 的那条满射。∎'
@@ -18160,11 +18242,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------ 连通分量是闭开之交 */
     {
       id: 'prop.component-clopen',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '连通分量是闭开邻域之交',
       title: '紧 Hausdorff 空间中连通分量 = 闭开邻域之交',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '连通分量', '闭开集'],
       statement: [
         '设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：',
@@ -18177,11 +18259,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------- 全不连通 / 极端不连通 */
     {
       id: 'def.stone-space',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '全不连通与 Stone 空间',
       title: 'Stone 空间与 Stonean 空间（Stone / Stonean Space）',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', 'Stone', '不连通'],
       statement: [
         '- $X$ **全不连通**（totally disconnected），如果其中每个连通分量都是单点；',
@@ -18198,11 +18280,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------- 极端不连通的性质 */
     {
       id: 'prop.stonean-basic',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '极端不连通的基本性质',
       title: '极端不连通的性质',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '极端不连通', '闭包'],
       statement: [
         '**(a)** 若 $X$ 极端不连通，则任意两个不交开集 $U, V$ 的闭包仍不交：$\\overline{U} \\cap \\overline{V} = \\emptyset$。',
@@ -18215,11 +18297,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------- 全不连通是反射子范畴 */
     {
       id: 'prop.td-reflective',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: '全不连通空间是反射子范畴',
       title: '全不连通空间是 $\\mathbf{Top}$ 的反射子范畴',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '反射', '连通分量'],
       statement: [
         '全不连通空间构成的范畴是 $\\mathbf{Top}$ 的**反射子范畴**，反射是',
@@ -18234,11 +18316,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------- Stone 是反射的 */
     {
       id: 'prop.stone-reflective',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'proposition',
       label: 'Stone 空间是 CHaus 的反射子范畴',
       title: 'Stone 空间是 $\\mathbf{CHaus}$ 的反射子范畴',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', 'Stone', '反射'],
       statement: 'Stone 空间构成的范畴是 $\\mathbf{CHaus}$ 的反射子范畴。',
       notes: '推论：**Stone 空间的任意极限仍是 Stone 空间**。把这条与「全不连通空间对极限封闭」并排看，就能读出 Stone 空间的双重身份：它既是「紧 Hausdorff 里全不连通的那些」，也是「紧 Hausdorff 这个反射子范畴里再反射一次剩下的那些」。'
@@ -18247,11 +18329,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 投射有限 */
     {
       id: 'def.profinite',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'definition',
       label: '投射有限空间',
       title: '投射有限空间（Profinite Space）',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '投射有限', '有向极限'],
       statement: [
         '**投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：',
@@ -18264,11 +18346,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------- Stone ⟺ 投射有限 */
     {
       id: 'thm.stone-profinite',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'theorem',
       label: 'Stone ⟺ 投射有限',
       title: 'Stone 空间 $\\iff$ 投射有限空间',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', 'Stone', '投射有限'],
       statement: '拓扑空间是 Stone 空间 $\\iff$ 它是投射有限空间。'
     },
@@ -18276,11 +18358,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- Gleason */
     {
       id: 'thm.gleason',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'theorem',
       label: 'Gleason 定理',
       title: 'Gleason 定理：$\\mathbf{CHaus}$ 的投射对象',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', 'Gleason', '投射对象'],
       statement: '$\\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。'
     },
@@ -18288,11 +18370,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Stonean 是收缩核 */
     {
       id: 'cor.stonean-retract',
-      cluster: 'cat.chaus',
+      cluster: 'topo.chaus',
       type: 'corollary',
       label: 'Stonean 是收缩核',
       title: 'Stonean 空间 = 自由紧 Hausdorff 空间的收缩核',
-      regions: ['category', 'topology'],
+      regions: ['topology'],
       tags: ['范畴论', '收缩核', 'Stonean'],
       statement: [
         'Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续映射 $r : X \\to A$ 使 $r|_{A} = 1_{A}$（这样的 $A$ 叫 $X$ 的收缩核）。'
@@ -19418,11 +19500,11 @@ window.MG = window.MG || {};
 
     {
       id: 'def.compactly-generated',
-      cluster: 'cat.cg',
+      cluster: 'topo.cg',
       type: 'definition',
       label: '紧生成空间',
       title: '紧生成空间 / $k$-空间（Compactly Generated Space）',
-      regions: ['topology', 'category'],
+      regions: ['topology'],
       tags: ['拓扑', '紧生成', 'k-空间'],
       statement: [
         '拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \\subseteq X$ 闭 $\\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \\to X$，$f^{-1}(Y)$ 在 $S$ 中闭。'
@@ -19432,11 +19514,11 @@ window.MG = window.MG || {};
 
     {
       id: 'prop.cg-coreflective',
-      cluster: 'cat.cg',
+      cluster: 'topo.cg',
       type: 'proposition',
       label: '紧生成空间是余反射子范畴',
       title: '紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴',
-      regions: ['topology', 'category'],
+      regions: ['topology'],
       tags: ['拓扑', '紧生成', '余反射'],
       statement: [
         '紧生成空间构成的范畴 $k\\mathbf{Top}$ 是 $\\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$ 有**右**伴随',
@@ -19472,11 +19554,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ CHaus 是预拓扑斯 */
     {
       id: 'def.chaus-pretopos',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'theorem',
       label: 'CHaus 是预拓扑斯',
       title: '$\\mathbf{CHaus}$ 是预拓扑斯',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', 'CHaus', '预拓扑斯'],
       statement: [
         '在 $\\mathbf{CHaus}$ 中：',
@@ -19502,11 +19584,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 凝聚态集 */
     {
       id: 'def.condensed-set',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'definition',
       label: '凝聚态集',
       title: '凝聚态集（Condensed Set）',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '层', '定义'],
       statement: [
         '**凝聚态集**是 $\\mathbf{CHaus}$ 上的（集合值）**层**。其范畴记',
@@ -19526,11 +19608,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 凝聚态集的刻画 */
     {
       id: 'prop.condensed-criterion',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'proposition',
       label: '凝聚态集的刻画',
       title: '预层是凝聚态集的两条判据',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '层', '判据'],
       statement: [
         '$\\mathbf{CHaus}$ 上的集合预层 $X$ 是凝聚态集 $\\iff$',
@@ -19555,11 +19637,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Cond 是拓扑斯 */
     {
       id: 'thm.cond-topos',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'theorem',
       label: 'Cond 是拓扑斯',
       title: '凝聚态集的范畴是拓扑斯',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '拓扑斯'],
       statement: '**凝聚态集的范畴 $\\mathrm{Cond}$ 是拓扑斯。**'
     },
@@ -19567,11 +19649,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------- FCHaus 上的预拓扑 */
     {
       id: 'prop.fchaus-pretopology',
-      cluster: 'cond',
-      type: 'definition',
+      cluster: 'cond.set',
+      type: 'proposition',
       label: 'FCHaus 上的预拓扑',
       title: '有限不交并给出自由紧 Hausforff 空间上的预拓扑',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '自由', '预拓扑'],
       statement: [
         '记 $\\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\\beta I$）构成的满子范畴。$\\mathbf{FCHaus}$ 中的对象都是 $\\mathrm{Cond}$ 的**投射对象**，满射 $S \\to S\'$ 总有截面 —— 于是**有限不交并给出 $\\mathbf{FCHaus}$ 上的一个预拓扑**。'
@@ -19582,11 +19664,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------- FCHaus 上层的判据 */
     {
       id: 'prop.fchaus-sheaf',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'proposition',
       label: 'FCHaus 上层的判据',
       title: '自由紧 Hausforff 空间上的层 $\\iff$ 保有限积',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '自由', '层'],
       statement: '设 $X$ 是 $\\mathbf{FCHaus}$ 上的集合预层。则 $X$ 是层 $\\iff$ $X$ **保有限积**。'
     },
@@ -19594,11 +19676,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Cond ≅ FCHaus */
     {
       id: 'thm.cond-equiv-fchaus',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'theorem',
       label: 'Cond 即 FCHaus 上的层',
       title: '$\\mathrm{Cond} \\simeq \\widehat{\\mathbf{FCHaus}}$',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '等价', '自由'],
       statement: [
         '$\\mathbf{CHaus}$ 上的层与 $\\mathbf{FCHaus}$ 上的层是**同一个范畴**：',
@@ -19611,11 +19693,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 满态射的判据 */
     {
       id: 'prop.cond-epi',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'proposition',
       label: '凝聚态集满态射的判据',
       title: '凝聚态集的满态射',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '满态射'],
       statement: '凝聚态集的态射 $X \\to Y$ 是满态射 $\\iff$ 对每个**自由**紧 Hausdorff 空间 $F$，$X(F) \\to Y(F)$ 是满射。'
     },
@@ -19623,11 +19705,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 足够多投射对象 */
     {
       id: 'prop.cond-projectives',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'proposition',
       label: 'Cond 有足够多投射对象',
       title: '$\\mathrm{Cond}$ 的投射对象',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '投射对象'],
       statement: [
         '自由紧 Hausdorff 空间（看作凝聚态集）都是**投射对象**；并且 $\\mathrm{Cond}$ 有**足够多的投射对象**。'
@@ -19637,11 +19719,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 底拓扑空间 */
     {
       id: 'def.underlying-topological-space',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'definition',
       label: '底拓扑空间',
       title: '凝聚态集的底拓扑空间',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '拓扑空间'],
       statement: [
         '凝聚态集 $X$ 的**底拓扑空间** $X(\\cdot)$ 取集合 $X(\\ast)$（在单点空间处的截面），并赋予使所有映射',
@@ -19656,11 +19738,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Top ↔ Cond */
     {
       id: 'thm.top-cond-adjoint',
-      cluster: 'cond',
+      cluster: 'cond.set',
       type: 'theorem',
       label: 'Top 与 Cond 的伴随',
       title: '$\\mathbf{Top} \\to \\mathrm{Cond}$ 与它的伴随',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '伴随', '紧生成'],
       statement: [
         '函子',
@@ -19675,11 +19757,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------- 凝聚态阿贝尔群 */
     {
       id: 'def.condensed-abelian-group',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'definition',
       label: '凝聚态阿贝尔群',
       title: '凝聚态阿贝尔群（Condensed Abelian Group）',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '阿贝尔群', '层'],
       statement: [
         '**凝聚态阿贝尔群**是 $\\mathbf{CHaus}$ 上的阿贝尔群值层。四种说法给出同一个范畴：',
@@ -19701,11 +19783,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 截面函子 */
     {
       id: 'prop.condab-section',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'proposition',
       label: '截面函子保极限余极限',
       title: '截面函子 $\\Gamma(F, -)$',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '截面', '正合'],
       statement: [
         '设 $F \\in \\mathbf{FCHaus}$。则**截面函子**',
@@ -19720,11 +19802,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Grothendieck 范畴 */
     {
       id: 'def.ab-axioms',
-      cluster: 'cond',
+      cluster: 'hom.ab',
       type: 'definition',
       label: 'Grothendieck 的 AB 公理',
       title: 'Grothendieck 的 AB 公理（AB1–AB6）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', 'AB 公理', '正合'],
       statement: [
         '范畴 $\\mathcal{C}$ 的**正合性等级**（Grothendieck 的 AB 公理）逐条加强如下：',
@@ -19744,11 +19826,11 @@ window.MG = window.MG || {};
     },
     {
       id: 'def.grothendieck-category',
-      cluster: 'cond',
+      cluster: 'hom.ab',
       type: 'definition',
       label: 'Grothendieck 范畴',
       title: 'Grothendieck 范畴（Grothendieck Category）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['范畴论', '同调代数', '生成元'],
       statement: [
         '**Grothendieck 范畴**是带**生成元**的 **AB5** 范畴（AB5 即：有所有余极限，且滤过余极限正合）。'
@@ -19763,11 +19845,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ CondAb 的 AB 公理 */
     {
       id: 'thm.condab-ab',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'theorem',
       label: 'CondAb 满足 AB6 与 AB4*',
       title: '$\\mathrm{CondAb}$ 的 AB 公理',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '同调代数', '正合'],
       statement: '$\\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\\***。',
       notes: '推论：$\\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。\n\n这一整段的好处是：$\\mathrm{CondAb}$ 上能照搬 $\\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。'
@@ -19776,11 +19858,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ Stonean 给投射对象 */
     {
       id: 'lem.stonean-projective',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'lemma',
       label: 'Stonean 给出有限表现投射对象',
       title: 'Stonean 空间给出有限表现的投射对象',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', 'Stonean', '投射'],
       statement: [
         '设 $F$ 是**自由紧 Hausdorff 空间**（更一般地，**Stonean 空间**）。则自由凝聚态阿贝尔群 $\\mathbb{Z}\\cdot F$ 是**有限表现**的**投射**凝聚态阿贝尔群。'
@@ -19791,11 +19873,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ CondAb 的生成元 */
     {
       id: 'prop.condab-generated',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'proposition',
       label: 'CondAb 由有限表现投射对象生成',
       title: '$\\mathrm{CondAb}$ 的生成元',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '生成元', '投射'],
       statement: '$\\mathrm{CondAb}$ 由**有限表现的投射**凝聚态阿贝尔群生成。特别地，它有足够多的投射对象。'
     },
@@ -19803,11 +19885,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------ 张量与内 Hom */
     {
       id: 'prop.condab-tensor',
-      cluster: 'cond',
+      cluster: 'cond.ab',
       type: 'proposition',
       label: 'CondAb 上的张量与内 Hom',
       title: '$\\mathrm{CondAb}$ 上的 $\\otimes_{\\mathbb{Z}}$ 与 $\\operatorname{Hom}_{\\mathbb{Z}}$',
-      regions: ['category', 'topology'],
+      regions: ['condensed'],
       tags: ['凝聚态', '张量积', '伴随'],
       statement: [
         '$\\mathrm{CondAb}$ 上存在两个双函子 $\\operatorname{Hom}_{\\mathbb{Z}}$ 与 $\\otimes_{\\mathbb{Z}}$，使',
@@ -19960,11 +20042,11 @@ window.MG = window.MG || {};
     /* ------------------------------------ 加法 / 阿贝尔范畴（地基） */
     {
       id: 'def.abelian-category',
-      cluster: 'cat.homology',
+      cluster: 'hom.ab',
       type: 'definition',
       label: '加法 / 阿贝尔范畴',
       title: '加法范畴与阿贝尔范畴（Additive / Abelian Category）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '阿贝尔范畴', '加法范畴'],
       statement: [
         '- **预加法范畴**（$\\mathbf{Ab}$-范畴）是每个 $\\operatorname{Hom}$ 集都带有阿贝尔群结构、且复合双线性的范畴；',
@@ -19988,11 +20070,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------------ 复形 */
     {
       id: 'def.cochain-complex',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'definition',
       label: '上链复形',
       title: '复形（Complex）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '复形', '微分'],
       statement: [
         '设 $\\mathcal{C}$ 是加法范畴。$\\mathcal{C}$ 中的**（长）序列**是有序集 $(\\mathbb{Z}, \\le)$ 上的图',
@@ -20010,11 +20092,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------------- 复形是加法的 */
     {
       id: 'prop.complex-additive',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'proposition',
       label: '复形范畴是加法范畴',
       title: '复形范畴的性质',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '加法范畴', '逐项计算'],
       statement: [
         '复形构成 $\\mathcal{C}$ 的**加法满子范畴** $\\mathcal{C}(\\mathcal{C})$：',
@@ -20029,11 +20111,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------------- 同伦 */
     {
       id: 'def.homotopy',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'definition',
       label: '同伦',
       title: '同伦（Homotopy）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '同伦', '零伦'],
       statement: [
         '复形态射 $f, g : K \\to L$ 叫**同伦的**，如果存在一族态射',
@@ -20052,11 +20134,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 同伦范畴 */
     {
       id: 'def.homotopy-category',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'definition',
       label: '同伦范畴',
       title: '同伦范畴（Homotopy Category）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '同伦范畴'],
       statement: [
         '**同伦范畴** $\\mathbf{K}(\\mathcal{C})$ 的对象与 $\\mathcal{C}(\\mathcal{C})$ 相同，态射取',
@@ -20075,11 +20157,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------------ 映射锥 */
     {
       id: 'def.mapping-cone',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'definition',
       label: '映射锥',
       title: '映射锥与位移（Mapping Cone）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '映射锥', '位移'],
       statement: [
         '态射 $f : K \\to L$ 的**映射锥**是复形',
@@ -20094,11 +20176,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 导出三角 */
     {
       id: 'def.distinguished-triangle',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'definition',
       label: '导出三角',
       title: '导出三角（Distinguished Triangle）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '三角', '映射锥'],
       statement: [
         '$\\mathbf{K}(\\mathcal{C})$ 中的**导出三角**是形状为',
@@ -20117,11 +20199,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------ 三角的旋转与延拓 */
     {
       id: 'prop.triangle-rotation',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'proposition',
       label: '三角的旋转与延拓',
       title: '导出三角的基本性质',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '三角', '旋转'],
       statement: [
         '在 $\\mathbf{K}(\\mathcal{C})$ 中：',
@@ -20137,11 +20219,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------- 三角态射的性质 */
     {
       id: 'lem.triangle-morphism',
-      cluster: 'cat.homology',
+      cluster: 'hom.complex',
       type: 'lemma',
       label: '三角态射的性质',
       title: '导出三角之间态射的性质',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '三角', '同伦'],
       statement: [
         '设 $(u, v, w)$ 是 $\\mathbf{K}(\\mathcal{C})$ 中导出三角之间的态射。则',
@@ -20155,11 +20237,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------------------- 同调 */
     {
       id: 'def.cohomology',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'definition',
       label: '同调',
       title: '同调（Cohomology）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '同调', '复形'],
       statement: [
         '设 $\\mathcal{A}$ 是阿贝尔范畴，$K$ 是 $\\mathcal{A}$ 中的上链复形。$K$ 的**第 $n$ 阶同调**是',
@@ -20177,11 +20259,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------- 同调的短正合列 */
     {
       id: 'prop.cohomology-exact-sequence',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'proposition',
       label: '同调的短正合列',
       title: '把同调夹在两个余核 / 核之间',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '同调', '正合列'],
       statement: [
         '设 $K$ 是复形。则对每个 $k$ 有正合列',
@@ -20194,11 +20276,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------------- 上同调函子 */
     {
       id: 'def.cohomological-functor',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'definition',
       label: '上同调函子',
       title: '上同调函子（Cohomological Functor）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '上同调函子', '正合'],
       statement: [
         '设 $\\mathcal{C}$ 是加法范畴、$\\mathcal{A}$ 是阿贝尔范畴。函子 $F : \\mathbf{K}(\\mathcal{C}) \\to \\mathcal{A}$ 叫**上同调函子**，如果对每个导出三角 $K \\to L \\to M \\to K[1]$，序列',
@@ -20213,11 +20295,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------------- 长正合列 */
     {
       id: 'thm.long-exact',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'theorem',
       label: '长正合列',
       title: '短正合列给出长正合列（蛇引理）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '长正合列', '蛇引理'],
       statement: [
         '设 $\\mathcal{A}$ 是阿贝尔范畴，$0 \\to K \\to L \\to M \\to 0$ 是复形的短正合列。则存在**长正合列**',
@@ -20233,11 +20315,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 拟同构 */
     {
       id: 'def.quasi-iso',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'definition',
       label: '拟同构',
       title: '拟同构与零调复形（Quasi-Isomorphism）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '拟同构', '零调'],
       statement: [
         '复形态射 $f : K \\to L$ 叫**拟同构**，如果对每个 $n$，$H^{n}(f)$ 都是同构。复形 $K$ 叫**零调的**，如果 $H^{n}(K) = 0$ 对所有 $n$。'
@@ -20252,11 +20334,11 @@ window.MG = window.MG || {};
     /* -------------------------------------------------- 内射对象 */
     {
       id: 'prop.injective-criterion',
-      cluster: 'cat.homology',
+      cluster: 'hom.cohomology',
       type: 'proposition',
       label: '内射对象的判据',
       title: '内射对象的四条等价说法',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '内射对象', '正合'],
       statement: [
         '设 $\\mathcal{A}$ 是阿贝尔范畴，$I \\in \\mathcal{A}$。下列等价：',
@@ -20276,11 +20358,11 @@ window.MG = window.MG || {};
     /* ------------------------------------------------------ 过滤 */
     {
       id: 'def.filtration',
-      cluster: 'cat.homology',
+      cluster: 'hom.spectral',
       type: 'definition',
       label: '过滤',
       title: '过滤（Filtration）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '过滤', '关联分次'],
       statement: [
         '设 $\\mathcal{A}$ 是阿贝尔范畴。$M \\in \\mathcal{A}$ 上的（**递降**）**过滤**是 $M$ 的子对象沿 $(\\mathbb{Z}, \\ge)$ 的图：',
@@ -20295,11 +20377,11 @@ window.MG = window.MG || {};
     /* ---------------------------------------------------- 谱序列 */
     {
       id: 'def.spectral-sequence',
-      cluster: 'cat.homology',
+      cluster: 'hom.spectral',
       type: 'definition',
       label: '谱序列',
       title: '谱序列（Spectral Sequence）',
-      regions: ['category'],
+      regions: ['homology'],
       tags: ['同调代数', '谱序列', '过滤'],
       statement: [
         '**谱序列**由两部分组成：',
@@ -21212,6 +21294,659 @@ window.MG = window.MG || {};
       definition: 'def.clopen',
       usedBy: 'prop.stonean-basic',
       note: '极端不连通的表述与推论都落在**闭开集**上。'
+    },
+
+    /* ---------- 从 92 挪过来的「结论用到的定义」（按文件头的分工属于本文件） ---------- */
+    {
+      id: 'def-dep.limit-functoriality',
+      kind: 'definition',
+      definition: 'def.limit',
+      usedBy: 'thm.lim-functor',
+      note: '函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。'
+    },
+    {
+      id: 'def-dep.nat-limfunctor',
+      kind: 'definition',
+      definition: 'def.natural-transformation',
+      usedBy: 'thm.lim-functor',
+      note: '输入是一个**自然变换** $\\alpha : F \\implies G$，输出是极限之间的唯一态射。'
+    },
+    {
+      id: 'def-dep.nat-yoneda',
+      kind: 'definition',
+      definition: 'def.natural-transformation',
+      usedBy: 'lem.yoneda',
+      note: '引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。'
+    },
+    {
+      id: 'def-dep.functor-yoneda',
+      kind: 'definition',
+      definition: 'def.functor',
+      usedBy: 'lem.yoneda',
+      note: '引理对**任意函子** $F : \\mathcal{C} \\to \\mathbf{Set}$ 成立。'
+    },
+    {
+      id: 'def-dep.nat-yoneda-embedding',
+      kind: 'definition',
+      definition: 'def.natural-transformation',
+      usedBy: 'prop.yoneda-embedding',
+      note: '全忠实说的是**自然变换集** $\\operatorname{Hom}_{\\widehat{\\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\\operatorname{Hom}_{\\mathcal{C}}(X, Y)$ 的双射。'
+    },
+    {
+      id: 'def-dep.adjoint-criterion',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'thm.right-adjoint-criterion',
+      note: '判据说的正是「$F$ 有没有**右伴随**」。'
+    },
+    {
+      id: 'def-dep.adjoint-ff',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'prop.adjoint-full-faithful',
+      note: '命题谈的是**伴随**里左（右）伴随的那个函子。'
+    },
+    {
+      id: 'def-dep.ff-adjoint',
+      kind: 'definition',
+      definition: 'def.ff-faithful',
+      usedBy: 'prop.adjoint-full-faithful',
+      note: '「$F$ **全忠实**」用的是忠实与满的定义。'
+    },
+    {
+      id: 'def-dep.unit-adjoint-ff',
+      kind: 'definition',
+      definition: 'def.adjunction-unit',
+      usedBy: 'prop.adjoint-full-faithful',
+      note: '命题的另一边是「**单位** $\\eta$ 是同构」。'
+    },
+    {
+      id: 'def-dep.diagram-limit-adjoint',
+      kind: 'definition',
+      definition: 'def.commutative-diagram',
+      usedBy: 'prop.limit-adjoint',
+      note: '命题里的 $\\Delta : \\mathcal{C} \\to \\mathcal{C}^{I}$ 是**常图函子**，$\\mathcal{C}^{I}$ 是图范畴。'
+    },
+    {
+      id: 'def-dep.adjoint-saft',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'thm.saft',
+      note: 'SAFT 的结论是「$G$ 有**左伴随**」。'
+    },
+    {
+      id: 'def-dep.reflective-limits',
+      kind: 'definition',
+      definition: 'def.reflective-subcategory',
+      usedBy: 'prop.reflective-limits',
+      note: '命题谈的是**反射子范畴**里的极限与余极限。'
+    },
+    {
+      id: 'def-dep.diagram-filtered',
+      kind: 'definition',
+      definition: 'def.commutative-diagram',
+      usedBy: 'prop.filtered-exact',
+      note: '余极限函子 $\\varinjlim : \\mathbf{Set}^{I} \\to \\mathbf{Set}$ 的定义域是**图范畴**。'
+    },
+    {
+      id: 'def-dep.adjoint-chaus-reflective',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'prop.chaus-reflective',
+      note: '「$\\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。'
+    },
+    {
+      id: 'def-dep.hausdorff-stonecech',
+      kind: 'definition',
+      definition: 'def.hausdorff',
+      usedBy: 'prop.chaus-reflective',
+      note: '$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。'
+    },
+    {
+      id: 'def-dep.free-chaus-quotient',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.chaus-quotient-of-free',
+      note: '命题说的商空间正是从**自由紧 Hausdorff 空间** $\\beta S^{\\mathrm{disc}}$ 商出来的。'
+    },
+    {
+      id: 'def-dep.chaus-quotient-free',
+      kind: 'definition',
+      definition: 'def.chaus',
+      usedBy: 'prop.chaus-quotient-of-free',
+      note: '命题说的对象是 $\\mathbf{CHaus}$ 中的空间。'
+    },
+    {
+      id: 'def-dep.projective-free',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'prop.free-projective',
+      note: '命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。'
+    },
+    {
+      id: 'def-dep.free-projective',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.free-projective',
+      note: '命题谈的是**自由紧 Hausdorff 空间**。'
+    },
+    {
+      id: 'def-dep.free-presentation-cor',
+      kind: 'definition',
+      definition: 'def.free-presentation',
+      usedBy: 'cor.chaus-free-presentation',
+      note: '推论说每个对象都**有**自由表示。'
+    },
+    {
+      id: 'def-dep.chaus-component',
+      kind: 'definition',
+      definition: 'def.chaus',
+      usedBy: 'prop.component-clopen',
+      note: '证明里用到紧 Hausdorff 空间是**正规**的。'
+    },
+    {
+      id: 'def-dep.stone-stonean-basic',
+      kind: 'definition',
+      definition: 'def.stone-space',
+      usedBy: 'prop.stonean-basic',
+      note: '命题谈的是**极端不连通**（以及由它推出的全不连通）。'
+    },
+    {
+      id: 'def-dep.stone-reflective',
+      kind: 'definition',
+      definition: 'def.stone-space',
+      usedBy: 'prop.stone-reflective',
+      note: '「Stone 空间」是**全不连通的紧 Hausdorff 空间**。'
+    },
+    {
+      id: 'def-dep.stone-td-reflective',
+      kind: 'definition',
+      definition: 'def.stone-space',
+      usedBy: 'prop.td-reflective',
+      note: '全不连通是 Stone 空间定义里的一半。'
+    },
+    {
+      id: 'def-dep.connected-td-reflective',
+      kind: 'definition',
+      definition: 'def.connected',
+      usedBy: 'prop.td-reflective',
+      note: '反射 $\\pi_{0}$ 就是把每个点送到它的**连通分量**。'
+    },
+    {
+      id: 'def-dep.gleason-retract',
+      kind: 'definition',
+      definition: 'thm.gleason',
+      usedBy: 'cor.stonean-retract',
+      note: '推论把 Gleason 定理翻译成「Stonean = **收缩核**」。'
+    },
+    {
+      id: 'def-dep.sheaf-descent',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'thm.sheaf-descent',
+      note: '定理给「是层」一个可以逐项验证的**正合列**判据。'
+    },
+    {
+      id: 'def-dep.fibered-descent',
+      kind: 'definition',
+      definition: 'def.fibered-product',
+      usedBy: 'thm.sheaf-descent',
+      note: '正合列里的 $X_{i} \\times_{X} X_{j}$ 是**纤维积**。'
+    },
+    {
+      id: 'def-dep.cech-properties',
+      kind: 'definition',
+      definition: 'def.cech-functor',
+      usedBy: 'prop.cech-properties',
+      note: '三条性质都是关于 $\\widehat{H}$ 的。'
+    },
+    {
+      id: 'def-dep.cech-sheafification',
+      kind: 'definition',
+      definition: 'def.cech-functor',
+      usedBy: 'thm.sheafification',
+      note: '层化取「对预层做两次 **Čech 构造**」。'
+    },
+    {
+      id: 'def-dep.reflective-sheafification',
+      kind: 'definition',
+      definition: 'def.reflective-subcategory',
+      usedBy: 'thm.sheafification',
+      note: '定理的结论是「层范畴是**反射子范畴**」。'
+    },
+    {
+      id: 'def-dep.universal-site',
+      kind: 'definition',
+      definition: 'def.universal-colimit',
+      usedBy: 'prop.site-properties',
+      note: '五条性质里出现了**万有余极限、万有满态射、不交余积**。'
+    },
+    {
+      id: 'def-dep.equalizer-mono-epi',
+      kind: 'definition',
+      definition: 'def.equalizer',
+      usedBy: 'prop.sheaf-mono-epi-iso',
+      note: '「满-单分解」把任意态射拆成 $F \\twoheadrightarrow I \\rightarrowtail G$。'
+    },
+    {
+      id: 'def-dep.sheaf-epi-criterion',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'prop.sheaf-epi-criterion',
+      note: '命题说的是**层**之间的态射什么时候是满的。'
+    },
+    {
+      id: 'def-dep.effective-sheafify',
+      kind: 'definition',
+      definition: 'def.effective-equivalence',
+      usedBy: 'prop.sheafify-equivalence',
+      note: '命题说的是**层化**与等价关系、商的交换。'
+    },
+    {
+      id: 'def-dep.sieve-covering-epi',
+      kind: 'definition',
+      definition: 'def.sieve',
+      usedBy: 'prop.covering-sieve-epi',
+      note: '命题说覆盖族生成**覆盖筛**与余积满射是一回事。'
+    },
+    {
+      id: 'def-dep.universal-disjoint',
+      kind: 'definition',
+      definition: 'def.universal-colimit',
+      usedBy: 'prop.disjoint-universal',
+      note: '命题说的是**不交万有余积**在次标准拓扑下保持不变。'
+    },
+    {
+      id: 'def-dep.canonical-disjoint',
+      kind: 'definition',
+      definition: 'def.canonical-topology',
+      usedBy: 'prop.disjoint-universal',
+      note: '「次标准」是命题的关键假设。'
+    },
+    {
+      id: 'def-dep.pretopos-factorization',
+      kind: 'definition',
+      definition: 'def.pretopos',
+      usedBy: 'prop.pretopos-factorization',
+      note: '命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。'
+    },
+    {
+      id: 'def-dep.image-pretopos-factorization',
+      kind: 'definition',
+      definition: 'def.image',
+      usedBy: 'prop.pretopos-factorization',
+      note: '结论里「严格」说的是 $\\operatorname{im} f \\cong \\operatorname{coim} f$。'
+    },
+    {
+      id: 'def-dep.subobject-lattice',
+      kind: 'definition',
+      definition: 'def.subobject',
+      usedBy: 'prop.subobject-lattice',
+      note: '命题说的是**子对象**全体构成有界格。'
+    },
+    {
+      id: 'def-dep.fibered-subobject-lattice',
+      kind: 'definition',
+      definition: 'def.fibered-product',
+      usedBy: 'prop.subobject-lattice',
+      note: '格里的交就是**纤维积**（拉回）。'
+    },
+    {
+      id: 'def-dep.sheaf-precanonical',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'prop.precanonical-sheaf',
+      note: '命题给出预标准拓扑下「是**层**」的两条可验等式。'
+    },
+    {
+      id: 'def-dep.precanonical-preserves',
+      kind: 'definition',
+      definition: 'def.precanonical-topology',
+      usedBy: 'prop.precanonical-preserves',
+      note: '命题谈的是**预标准拓扑**下余积与商是否走样。'
+    },
+    {
+      id: 'def-dep.sheaf-mono-epi',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'prop.precanonical-mono-epi',
+      note: '命题比较的是 $\\mathcal{C}$ 里的单满与它在**层**范畴里的像。'
+    },
+    {
+      id: 'def-dep.topos-giraud',
+      kind: 'definition',
+      definition: 'def.topos',
+      usedBy: 'thm.giraud',
+      note: 'Giraud 定理给出「是**拓扑斯**」的四个等价说法。'
+    },
+    {
+      id: 'def-dep.canonical-giraud',
+      kind: 'definition',
+      definition: 'def.canonical-topology',
+      usedBy: 'thm.giraud',
+      note: '第 2 条说的是对**标准拓扑**而言的层。'
+    },
+    {
+      id: 'def-dep.representable-giraud',
+      kind: 'definition',
+      definition: 'def.representable',
+      usedBy: 'thm.giraud',
+      note: '第 2 条的关键词是「层都**可表示**」。'
+    },
+    {
+      id: 'def-dep.topos-covering-epi',
+      kind: 'definition',
+      definition: 'def.topos',
+      usedBy: 'prop.topos-covering-epi',
+      note: '命题在**拓扑斯**里把「覆盖」与余积满射对起来。'
+    },
+    {
+      id: 'def-dep.topology-covering-epi',
+      kind: 'definition',
+      definition: 'def.grothendieck-topology',
+      usedBy: 'prop.topos-covering-epi',
+      note: '命题的左边是「$(X_{i} \\to X)$ 是**覆盖**」，即生成覆盖筛。'
+    },
+    {
+      id: 'def-dep.representable-quotient',
+      kind: 'definition',
+      definition: 'def.representable',
+      usedBy: 'lem.representable-quotient',
+      note: '引理说的是「**可表示性**可以从覆盖的一块块传回整体」。'
+    },
+    {
+      id: 'def-dep.effective-quotient',
+      kind: 'definition',
+      definition: 'def.effective-equivalence',
+      usedBy: 'lem.representable-quotient',
+      note: '把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。'
+    },
+    {
+      id: 'def-dep.sheaf-limits',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'prop.topos-sheaf-limits',
+      note: '命题把「是**层**」与「保所有极限」说成一回事。'
+    },
+    {
+      id: 'def-dep.limit-sheaf-limits',
+      kind: 'definition',
+      definition: 'def.limit',
+      usedBy: 'prop.topos-sheaf-limits',
+      note: '「保**极限**」是命题的另一半。'
+    },
+    {
+      id: 'def-dep.fibered-qc',
+      kind: 'definition',
+      definition: 'def.fibered-product',
+      usedBy: 'prop.quasi-compact-properties',
+      note: '第 3 条里的「存在满射 $X \\to F$」用的是 $\\mathcal{C}$ 里的对象覆盖层。'
+    },
+    {
+      id: 'def-dep.qc-pretopos-qcqs',
+      kind: 'definition',
+      definition: 'def.quasi-compact',
+      usedBy: 'thm.pretopos-qcqs',
+      note: '定理的两边之一是**拟紧**。'
+    },
+    {
+      id: 'def-dep.qs-pretopos-qcqs',
+      kind: 'definition',
+      definition: 'def.quasi-separated',
+      usedBy: 'thm.pretopos-qcqs',
+      note: '另一边是**拟分离**。'
+    },
+    {
+      id: 'def-dep.pretopos-condensed-criterion',
+      kind: 'definition',
+      definition: 'def.pretopos',
+      usedBy: 'prop.condensed-criterion',
+      note: '两条判据来自「$\\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。'
+    },
+    {
+      id: 'def-dep.condensed-criterion',
+      kind: 'definition',
+      definition: 'def.condensed-set',
+      usedBy: 'prop.condensed-criterion',
+      note: '判据给出的是「预层是**凝聚态集**」的等价条件。'
+    },
+    {
+      id: 'def-dep.condensed-topos',
+      kind: 'definition',
+      definition: 'def.condensed-set',
+      usedBy: 'thm.cond-topos',
+      note: '定理说的是 $\\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。'
+    },
+    {
+      id: 'def-dep.free-pretopology',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.fchaus-pretopology',
+      note: '预拓扑搭在**自由紧 Hausdorff 空间**上。'
+    },
+    {
+      id: 'def-dep.projective-pretopology',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'prop.fchaus-pretopology',
+      note: '「满射有截面」说的是这些对象**投射**。'
+    },
+    {
+      id: 'def-dep.free-sheaf',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.fchaus-sheaf',
+      note: '命题谈的是**自由紧 Hausdorff 空间**上的层。'
+    },
+    {
+      id: 'def-dep.sheaf-cond-equiv',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'thm.cond-equiv-fchaus',
+      note: '定理说两边的**层**范畴是同一个。'
+    },
+    {
+      id: 'def-dep.sheaf-cond-epi',
+      kind: 'definition',
+      definition: 'def.sheaf',
+      usedBy: 'prop.cond-epi',
+      note: '命题说的是**凝聚态集**（层）之间满态射的判据。'
+    },
+    {
+      id: 'def-dep.free-cond-epi',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.cond-epi',
+      note: '探针取的是**自由**紧 Hausdorff 空间。'
+    },
+    {
+      id: 'def-dep.projective-cond',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'prop.cond-projectives',
+      note: '命题说自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里是**投射对象**。'
+    },
+    {
+      id: 'def-dep.condensed-top-adjoint',
+      kind: 'definition',
+      definition: 'def.condensed-set',
+      usedBy: 'thm.top-cond-adjoint',
+      note: '定理里的函子 $X \\mapsto \\underline{X}$ 以**凝聚态集**为靶。'
+    },
+    {
+      id: 'def-dep.cg-top-cond',
+      kind: 'definition',
+      definition: 'def.compactly-generated',
+      usedBy: 'thm.top-cond-adjoint',
+      note: '限制到**紧生成空间**上时那个函子变得全忠实。'
+    },
+    {
+      id: 'def-dep.cg-coreflective',
+      kind: 'definition',
+      definition: 'def.compactly-generated',
+      usedBy: 'prop.cg-coreflective',
+      note: '命题说的是**紧生成空间**是余反射子范畴。'
+    },
+    {
+      id: 'def-dep.condab-tensor',
+      kind: 'definition',
+      definition: 'def.condensed-abelian-group',
+      usedBy: 'prop.condab-tensor',
+      note: '两个双函子定义在**凝聚态阿贝尔群**范畴上。'
+    },
+    {
+      id: 'def-dep.adjoint-cg-coreflective',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'prop.cg-coreflective',
+      note: '「余反射」的意思是含入函子有**右伴随**。'
+    },
+    {
+      id: 'def-dep.free-condab-section',
+      kind: 'definition',
+      definition: 'def.free-compact-hausdorff',
+      usedBy: 'prop.condab-section',
+      note: '截面函子 $\\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。'
+    },
+    {
+      id: 'def-dep.limit-condab-section',
+      kind: 'definition',
+      definition: 'def.limit',
+      usedBy: 'prop.condab-section',
+      note: '结论说它保**所有极限与余极限**。'
+    },
+    {
+      id: 'def-dep.condab-ab',
+      kind: 'definition',
+      definition: 'def.condensed-abelian-group',
+      usedBy: 'thm.condab-ab',
+      note: '定理说的是 $\\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。'
+    },
+    {
+      id: 'def-dep.stonean-projective',
+      kind: 'definition',
+      definition: 'def.stone-space',
+      usedBy: 'lem.stonean-projective',
+      note: '引理的输入是 **Stonean 空间**。'
+    },
+    {
+      id: 'def-dep.projective-stonean',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'lem.stonean-projective',
+      note: '结论说 $\\mathbb{Z}\\cdot F$ 是**投射**对象。'
+    },
+    {
+      id: 'def-dep.generator-condab-generated',
+      kind: 'definition',
+      definition: 'def.generator',
+      usedBy: 'prop.condab-generated',
+      note: '命题说的是 $\\mathrm{CondAb}$ 由谁**生成**。'
+    },
+    {
+      id: 'def-dep.projective-condab-generated',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'prop.condab-generated',
+      note: '生成元取的是**有限表现的投射**对象。'
+    },
+    {
+      id: 'def-dep.adjoint-condab-tensor',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'prop.condab-tensor',
+      note: '$\\otimes_{\\mathbb{Z}}$ 与内部 $\\operatorname{Hom}_{\\mathbb{Z}}$ **互为伴随**。'
+    },
+    {
+      id: 'def-dep.complex-additive',
+      kind: 'definition',
+      definition: 'def.cochain-complex',
+      usedBy: 'prop.complex-additive',
+      note: '命题说的是**复形**构成的那个范畴。'
+    },
+    {
+      id: 'def-dep.equalizer-complex-additive',
+      kind: 'definition',
+      definition: 'def.equalizer',
+      usedBy: 'prop.complex-additive',
+      note: '核与余核都是**逐项**取出来的。'
+    },
+    {
+      id: 'def-dep.triangle-rotation',
+      kind: 'definition',
+      definition: 'def.distinguished-triangle',
+      usedBy: 'prop.triangle-rotation',
+      note: '命题说的是**导出三角**的基本性质。'
+    },
+    {
+      id: 'def-dep.triangle-morphism',
+      kind: 'definition',
+      definition: 'def.distinguished-triangle',
+      usedBy: 'lem.triangle-morphism',
+      note: '引理说的是**导出三角**之间态射的性质。'
+    },
+    {
+      id: 'def-dep.homotopy-triangle-morphism',
+      kind: 'definition',
+      definition: 'def.homotopy',
+      usedBy: 'lem.triangle-morphism',
+      note: '「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。'
+    },
+    {
+      id: 'def-dep.equalizer-cohomology-sequence',
+      kind: 'definition',
+      definition: 'def.equalizer',
+      usedBy: 'prop.cohomology-exact-sequence',
+      note: '这条正合列把同调夹在**余核**与**核**之间。'
+    },
+    {
+      id: 'def-dep.cohomology-long-exact',
+      kind: 'definition',
+      definition: 'def.cohomology',
+      usedBy: 'thm.long-exact',
+      note: '长正合列里跑的是**同调**。'
+    },
+    {
+      id: 'def-dep.equalizer-long-exact',
+      kind: 'definition',
+      definition: 'def.equalizer',
+      usedBy: 'thm.long-exact',
+      note: '「正合列」本身就是一句关于**核与像**的话。'
+    },
+    {
+      id: 'def-dep.injective-criterion',
+      kind: 'definition',
+      definition: 'def.projective-object',
+      usedBy: 'prop.injective-criterion',
+      note: '命题给出**内射对象**的四条等价刻画。'
+    },
+    {
+      id: 'def-dep.mono-injective-criterion',
+      kind: 'definition',
+      definition: 'def.mono',
+      usedBy: 'prop.injective-criterion',
+      note: '「每个**单态射**都有收缩」是等价条件之一。'
+    },
+    {
+      id: 'def-dep.adjoint-injective-criterion',
+      kind: 'definition',
+      definition: 'def.adjoint',
+      usedBy: 'prop.injective-criterion',
+      note: '「$\\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。'
+    },
+    {
+      id: 'def-dep.grothendieck-condab',
+      kind: 'definition',
+      definition: 'def.grothendieck-category',
+      usedBy: 'thm.condab-ab',
+      note: '定理说的是 $\\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。'
+    },
+    {
+      id: 'def-dep.ab-condab',
+      kind: 'definition',
+      definition: 'def.ab-axioms',
+      usedBy: 'thm.condab-ab',
+      note: 'AB6 与 AB4\\* 的含义见「Grothendieck 的 AB 公理」那条。'
     }
   ]
 });
@@ -21240,6 +21975,31 @@ window.MG = window.MG || {};
   nodes: [],
 
   edges: [
+
+    /* -------------------------------------------- 嵌入一个更好的世界 */
+    {
+      id: 'ana.embed-better-world',
+      kind: 'analogy',
+      a: 'prop.yoneda-embedding',
+      b: 'prop.chaus-reflective',
+      title: '米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」',
+      note: [
+        '两件事在数学上没有谁推出谁（一个是范畴嵌入，一个是拓扑紧化），但**招数是同一个**：',
+        '**手上这个对象缺东西，就先把它嵌进一个大环境，在那里把活干完，再回到原地。**',
+        '',
+        '**米田嵌入**：$\\mathcal{C} \\hookrightarrow \\widehat{\\mathcal{C}}$。',
+        '$\\mathcal{C}$ 里可能连两个对象的积都没有；$\\widehat{\\mathcal{C}}$ 里**什么极限余极限都有**。',
+        '所以在 $\\mathcal{C}$ 里造不出来的东西，搬到 $\\widehat{\\mathcal{C}}$ 里造（稠密性定理就是把它拆成 $h_{X}$ 的余极限）。',
+        '',
+        '**Stone–Čech 紧化**：$X \\hookrightarrow \\beta X$。',
+        '$X$ 可能不紧、不 Hausdorff，连连续函数都少得可怜；',
+        '$\\beta X$ 里**紧 Hausdorff 的一切好性质都有**（Tychonoff 方块给的）。',
+        '所以在 $X$ 上做不到的分析，搬到 $\\beta X$ 上做（凝聚态集就是拿 $\\beta X$ 当探针）。',
+        '',
+        '**共同的招**：不要在原环境里硬造；先找（或造）一个「什么都不缺」的大环境，嵌进去，干完再拉回来。',
+        '💡 卡在「这个范畴 / 这个空间里根本没有我要的那个东西」时，回来想想这两条。'
+      ].join('\n')
+    },
 
     /* ------------------------------------------------ 证明模板的类比 */
     {
@@ -21454,13 +22214,11 @@ window.MG = window.MG || {};
 
 (function () {
   var E = [
-
     /* ------------------------------------------------ 集合的构造（最底层） */
     ['def.subset', 'def.rel', 'def-dep.subset-rel',
       '关系是 $A \\times B$ 的**子集**，定义域 $\\operatorname{dom} R$ 与值域 $\\operatorname{ran} R$ 也都是子集。'],
     ['def.rel', 'def.function', 'def-dep.rel-function',
       '函数是**特殊的关系**：只多要求「每个输入的输出唯一」。'],
-
     /* ---------------------------------------------------------- 序结构 */
     ['def.rel', 'def.poset', 'def-dep.rel-poset',
       '偏序 $\\preceq$ 是 $A$ 上的**二元关系**——先有关系，才有「自反、反对称、传递」这三条。'],
@@ -21470,13 +22228,11 @@ window.MG = window.MG || {};
       '上界与极大元都是相对于 $S \\subseteq P$ 说的，条件用 $\\preceq$ 写成。'],
     ['def.subset', 'def.wellorder', 'def-dep.subset-wellorder',
       '「$W$ 的每个非空**子集**都有最小元」——良序性是靠子集量词说出来的。'],
-
     /* ---------------------------------------------------- 向量空间的基 */
     ['def.subset', 'def.vs', 'def-dep.subset-vs',
       '「$S$ 的每个**有限子集**都线性无关」——线性无关性是逐有限子集定义的。'],
     ['def.finchar', 'def.vs', 'def-dep.finchar-vs',
       '正因为逐有限子集定义，线性无关性**具有有限特征**（注里点明了这一步）。'],
-
     /* -------------------------------------------------------- 度量空间 */
     ['def.function', 'def.metric-space', 'def-dep.function-metric-space',
       '距离 $d : X \\times X \\to [0, +\\infty)$ 是一个**函数**，记号 $d(x, y)$ 用的就是函数值。'],
@@ -21488,7 +22244,6 @@ window.MG = window.MG || {};
       '「子列收敛到 $X$ 中的点」里的收敛，用的就是这个 $d$。'],
     ['def.metric-space', 'def.compact', 'def-dep.metric-compact',
       '这一条陈述在距离空间 $(X, d)$ 上，开覆盖用的是由 $d$ 诱导的开集。'],
-
     /* ------------------------------------------------ 测度的构造：集合族 */
     ['def.subset', 'def.fundamental-class', 'def-dep.subset-fundamental-class',
       '$\\mathfrak{A} \\subseteq \\mathcal{P}(X)$：基本类首先是一族**子集**。'],
@@ -21500,7 +22255,6 @@ window.MG = window.MG || {};
       '这条同时定义 $\\mathcal{M}(\\mathcal{E})$ 与 $\\mathfrak{m}(\\mathcal{E})$——后者就是**由 $\\mathcal{E}$ 生成的单调类**。'],
     ['def.function', 'def.product-sigma', 'def-dep.function-product-sigma',
       '投影 $\\pi_\\alpha$ 是**函数**，柱集 $\\pi_\\alpha^{-1}(E_\\alpha)$ 用的是逆像。'],
-
     /* ------------------------------------------------ 测度的构造：测度本身 */
     ['def.sigma-algebra', 'def.measure', 'def-dep.sigma-algebra-measure',
       '测度是定义在**$\\sigma$ 代数** $\\mathcal{M}$ 上的函数 $\\mu : \\mathcal{M} \\to [0, +\\infty]$。'],
@@ -21528,7 +22282,6 @@ window.MG = window.MG || {};
       '正则性是**关于 Borel 测度**说的：外正则就是用开集去逼近 Borel 集。'],
     ['def.compact', 'def.regular-measure', 'def-dep.compact-regular',
       '第一条要求「$\\nu(K) < \\infty$ 对每个**紧集** $K$ 成立」。'],
-
     /* ------------------------------------------------------------ 积分 */
     ['def.sigma-algebra', 'def.measurable-function', 'def-dep.sigma-algebra-measurable-fn',
       '可测空间 $(X, \\mathcal{M})$ 就是「集合 $+$ $\\sigma$ 代数」；可测性说的是原像落在 $\\mathcal{M}$ 里。'],
@@ -21562,7 +22315,6 @@ window.MG = window.MG || {};
       '扩张这一步：$\\mu_{0}$ **诱导出 $X \\times Y$ 上的外测度**，再限制到积 $\\sigma$ 代数上。'],
     ['def.subset', 'def.section', 'def-dep.subset-section',
       '截口 $E_x = \\{ y : (x, y) \\in E \\}$ 是**子集**（$E \\subseteq X \\times Y$）。'],
-
     /* -------------------------------------------------- 符号测度与分解 */
     ['def.sigma-algebra', 'def.signed-measure', 'def-dep.sigma-algebra-signed-measure',
       '符号测度定义在**可测空间** $(X, \\mathcal{M})$ 上。'],
@@ -21588,7 +22340,6 @@ window.MG = window.MG || {};
       '复测度是照着**测度**改写取值的：$\\nu : \\mathcal{M} \\to \\mathbb{C}$。'],
     ['def.signed-measure', 'def.complex-measure', 'def-dep.signed-complex-measure',
       '注里逐条与**符号测度**对照：复测度自动有限、级数自动绝对收敛。'],
-
     /* ---------------------------------------------------- ℝⁿ 上的微分 */
     ['def.measurable-function', 'def.locally-integrable', 'def-dep.measurable-fn-locally-integrable',
       '局部可积的对象是**可测函数** $f : \\mathbb{R}^n \\to \\mathbb{C}$。'],
@@ -21608,13 +22359,11 @@ window.MG = window.MG || {};
       '实数系是一个**全序**域：序公理里说的「全序」就是偏序再加上可比性。'],
     ['def.extended-real', 'def.conjugate-exponents', 'def-dep.extended-conjugate',
       '共轭指数里 $p = \\infty$ 要配 $q = 1$，约定 $1/\\infty = 0$ —— 用到了**扩充实数**。'],
-
     /* ------------------------------------------- 有界变差与绝对连续 */
     ['def.bounded-variation', 'def.nbv', 'def-dep.bv-nbv',
       '$NBV := \\{ F \\in BV : F$ 右连续且 $F(-\\infty) = 0 \\}$，整个定义建立在**有界变差**之上。'],
     ['def.borel', 'def.nbv', 'def-dep.borel-nbv',
       '加这两个条件的目的，是与 $\\mathbb{R}$ 上的**复 Borel 测度**一一对应。'],
-
     /* -------------------------------------------------------- L^p 空间 */
     ['def.measurable-function', 'def.lp-norm', 'def-dep.measurable-fn-lp-norm',
       '$L^p$ 的元素要求 $f$ **可测**且 $\\|f\\|_p < \\infty$。'],
@@ -21636,7 +22385,6 @@ window.MG = window.MG || {};
       '$\\varphi_g(f) = \\int f g \\, d\\mu$ 本身是一个**积分**。'],
     ['def.essential-sup', 'def.duality-map', 'def-dep.essential-sup-duality-map',
       '$g \\in L^\\infty$ 那一头（$p = 1$）要用本性上界。'],
-
     /* ------------------------------------------------ 补漏：用到了却没连边 */
     ['def.function', 'def.measurable-function', 'def-dep.function-measurable-function',
       '可测性的载体是**函数** $f : X \\to Y$ —— 先有函数，才谈得上「每个可测集的原像可测」。'],
@@ -21650,7 +22398,6 @@ window.MG = window.MG || {};
       '「$m(E_r) > \\alpha \\cdot m(B(r, x))$」里的 $m$ 是一个**测度**。'],
     ['def.lplus', 'def.integral-simple', 'def-dep.lplus-integral-simple',
       '标准形式写的是「$\\varphi \\in L^+$ 是简单函数」—— 定义域落在 $L^+$ 里。'],
-
     /* --------------------------------------------------- 范畴论（地基） */
     ['def.power-set', 'def.universe', 'def-dep.power-universe',
       '宇宙的第三条要求 $x \\in U \\implies \\mathcal{P}(x) \\in U$，用的就是**幂集**。'],
@@ -21672,7 +22419,6 @@ window.MG = window.MG || {};
       '$M \\times_{s,t} M = \\{ (f,g) \\in M \\times M : s(f) = t(g) \\}$ 是 $M \\times M$ 的一个**子集**。'],
     ['def.category', 'def.section-retraction', 'def-dep.category-section',
       '截面与收缩说的是范畴里**态射与单位态射**之间的关系，没有范畴就无从说起。'],
-
     /* ------------------------------------------------- 范畴论（函子层） */
     ['def.category', 'def.functor', 'def-dep.category-functor',
       '函子的定义域与靶都是**范畴**：对象映到对象、态射映到态射。'],
@@ -21690,7 +22436,6 @@ window.MG = window.MG || {};
       '范畴等价是**函子**的一条性质 —— 先有函子，才谈得上它是不是等价。'],
     ['def.natural-transformation', 'def.cat-equivalence', 'def-dep.nat-equivalence',
       '等价要求两个复合**自然同构**于恒等函子，这个「$\\cong$」只有靠自然变换才说得出来。'],
-
     /* ------------------------------------------------- 范畴论（图的层次） */
     ['def.functor', 'def.commutative-diagram', 'def-dep.functor-diagram',
       '一张图就是一个**函子** $D : I \\to \\mathcal{C}$，索引范畴 $I$ 是它的定义域。'],
@@ -21728,10 +22473,6 @@ window.MG = window.MG || {};
       '子对象就是一个**单态射** $Y \\rightarrowtail X$ —— 用「可以嵌入」代替「是子集」。'],
     ['def.fibered-product', 'def.subobject', 'def-dep.fibered-subobject',
       '子对象的**交**与**原像**都是用纤维积（拉回）定义的。'],
-    ['def.limit', 'thm.lim-functor', 'def-dep.limit-functoriality',
-      '函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。'],
-    ['def.natural-transformation', 'thm.lim-functor', 'def-dep.nat-limfunctor',
-      '输入是一个**自然变换** $\\alpha : F \\implies G$，输出是极限之间的唯一态射。'],
     ['def.subobject', 'def.image', 'def-dep.subobject-image',
       '像被定义为 $Y$ 的**子对象**，即一个单态射 $I \\rightarrowtail Y$。'],
     ['def.mono', 'def.image', 'def-dep.mono-image',
@@ -21740,7 +22481,6 @@ window.MG = window.MG || {};
       '元素范畴的对象是 $(Y, t)$，$t \\in F(Y)$；把 $F$ 看成函数之后「元素」才有意义。'],
     ['def.cone', 'def.elements-category', 'def-dep.cone-el',
       '「泛 = 辅助范畴的始 / 终对象」正是锥的「泛」的来源：极限就是锥范畴的终对象。'],
-
     /* ------------------------------------------------- 范畴论（预层层） */
     ['def.functor', 'def.presheaf', 'def-dep.functor-presheaf',
       '预层按定义就是一个**反变函子** $T : \\mathcal{C}^{\\mathrm{op}} \\to \\mathbf{Set}$。'],
@@ -21764,27 +22504,6 @@ window.MG = window.MG || {};
       '切片范畴就是**元素范畴**搬到预层上：把 $T(X)$ 的元素当元素。'],
     ['def.presheaf', 'def.slice-category', 'def-dep.presheaf-slice',
       '切片范畴的**指标是 $T$ 的截面** $s \\in T(X)$，没有预层就没有这些截面。'],
-    ['def.representable', 'lem.yoneda', 'def-dep.representable-yoneda',
-      '引理里的 $h^{X} = \\operatorname{Hom}_{\\mathcal{C}}(X, -)$ 正是那个**可表示函子**。'],
-    ['def.natural-transformation', 'lem.yoneda', 'def-dep.nat-yoneda',
-      '引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。'],
-    ['def.functor', 'lem.yoneda', 'def-dep.functor-yoneda',
-      '引理对**任意函子** $F : \\mathcal{C} \\to \\mathbf{Set}$ 成立。'],
-    ['def.representable', 'thm.represented-criterion', 'def-dep.representable-criterion',
-      '定理的左右两边都是「被 $X$ **表示**」这件事的不同说法。'],
-    ['def.natural-transformation', 'prop.yoneda-embedding', 'def-dep.nat-yoneda-embedding',
-      '全忠实说的是**自然变换集** $\\operatorname{Hom}_{\\widehat{\\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\\operatorname{Hom}_{\\mathcal{C}}(X, Y)$ 的双射。'],
-    ['def.ff-faithful', 'prop.yoneda-embedding', 'def-dep.ff-yoneda-embedding',
-      '「$\\delta$ 是**全忠实**函子」用的正是忠实与满的定义。'],
-    ['def.slice-category', 'thm.density', 'def-dep.slice-density',
-      '稠密性定理里的余极限跑在**切片范畴** $\\mathcal{C}_{T}$ 上。'],
-    ['def.fibered-product', 'prop.slice-cartesian', 'def-dep.fibered-slice',
-      '「那个方块是**笛卡尔的**」正是纤维积定义里的说法。'],
-    ['def.presheaf', 'lem.presheaf-mono-pointwise', 'def-dep.presheaf-mono',
-      '被检验的 $\\varphi : T \\implies T\'$ 是**预层**之间的自然变换。'],
-    ['def.mono', 'lem.presheaf-mono-pointwise', 'def-dep.mono-presheaf-mono',
-      '结论里的单态射是范畴论意义下的**可消性**，不是逐点单射。'],
-
     /* ------------------------------------------------- 范畴论（伴随层） */
     ['def.functor', 'def.adjoint', 'def-dep.functor-adjoint',
       '伴随是**两个函子**之间的关系，两边各放一个方向。'],
@@ -21796,30 +22515,6 @@ window.MG = window.MG || {};
       '单位与余单位是把伴随的同构 $\\Phi$ 在两个**恒等态射**上取值得到的，先有伴随才有它们。'],
     ['def.natural-transformation', 'def.adjunction-unit', 'def-dep.nat-unit',
       '单位与余单位本身都是**自然变换**，三角等式也是自然性方块拼出来的。'],
-    ['def.adjoint', 'thm.right-adjoint-criterion', 'def-dep.adjoint-criterion',
-      '判据说的正是「$F$ 有没有**右伴随**」。'],
-    ['def.representable', 'thm.right-adjoint-criterion', 'def-dep.representable-adjoint-criterion',
-      '判据的右端是「$\\operatorname{Hom}_{\\mathcal{D}}(F(-), Y)$ **可表示**」。'],
-    ['def.adjoint', 'prop.adjoint-full-faithful', 'def-dep.adjoint-ff',
-      '命题谈的是**伴随**里左（右）伴随的那个函子。'],
-    ['def.ff-faithful', 'prop.adjoint-full-faithful', 'def-dep.ff-adjoint',
-      '「$F$ **全忠实**」用的是忠实与满的定义。'],
-    ['def.adjunction-unit', 'prop.adjoint-full-faithful', 'def-dep.unit-adjoint-ff',
-      '命题的另一边是「**单位** $\\eta$ 是同构」。'],
-    ['def.limit', 'prop.limit-adjoint', 'def-dep.limit-adjoint',
-      '命题说的是「所有 $I$ 形状的**极限**存在」。'],
-    ['def.commutative-diagram', 'prop.limit-adjoint', 'def-dep.diagram-limit-adjoint',
-      '命题里的 $\\Delta : \\mathcal{C} \\to \\mathcal{C}^{I}$ 是**常图函子**，$\\mathcal{C}^{I}$ 是图范畴。'],
-    ['def.adjoint', 'thm.right-adjoint-preserves-limits', 'def-dep.adjoint-preserves',
-      '定理的前提是一对**伴随** $F \\dashv G$。'],
-    ['def.limit', 'thm.right-adjoint-preserves-limits', 'def-dep.limit-preserves',
-      '定理的结论是 $G$ 保持**极限**。'],
-    ['def.adjoint', 'thm.saft', 'def-dep.adjoint-saft',
-      'SAFT 的结论是「$G$ 有**左伴随**」。'],
-    ['def.limit', 'thm.saft', 'def-dep.limit-saft',
-      '前提里的「完备」与「保极限」都是关于**极限**的；构造 $F(X)$ 也是取一个极限。'],
-    ['def.comma-category', 'thm.saft', 'def-dep.comma-saft',
-      '构造 $F(X) = \\varprojlim_{(Y,f) \\in (X \\downarrow G)} Y$ 跑在**逗号范畴** $X \\downarrow G$ 上。'],
     ['def.function', 'def.comma-category', 'def-dep.function-comma',
       '逗号范畴的对象是 $(Y, f)$，其中 $f : X \\to G(Y)$ 是一个**映射**。'],
     ['def.functor', 'def.comma-category', 'def-dep.functor-comma',
@@ -21830,27 +22525,12 @@ window.MG = window.MG || {};
       '反射的定义就是「**含入函子有左伴随**」。'],
     ['def.ff-faithful', 'def.reflective-subcategory', 'def-dep.ff-reflective',
       '反射说的是**满子范畴**，「满」正是函子全忠实里的一半。'],
-    ['def.reflective-subcategory', 'prop.reflective-limits', 'def-dep.reflective-limits',
-      '命题谈的是**反射子范畴**里的极限与余极限。'],
-    ['def.limit', 'prop.reflective-limits', 'def-dep.limit-reflective',
-      '命题的结论是「在 $\\mathcal{C}$ 里有的**极限**（余极限）在 $\\mathcal{C}\'$ 里也有」。'],
     ['def.adjoint', 'def.kan-extension', 'def-dep.adjoint-kan',
       '左 Kan 延拓的定义就是「$p_{!}$ 是预复合函子的**左伴随**」—— 一个伴随同构。'],
     ['def.functor', 'def.kan-extension', 'def-dep.functor-kan',
       '$p$、$F$、$p_{!}F$、$G$ 都是**函子**。'],
     ['def.natural-transformation', 'def.kan-extension', 'def-dep.nat-kan',
       '$\\alpha : F \\implies p_{!}F \\circ p$ 与 $\\gamma$ 都是**自然变换**。'],
-    ['def.kan-extension', 'ex.kan-extension', 'def-dep.kan-ex',
-      '两个例子都是「某个东西等于**左 Kan 延拓**」。'],
-    ['def.limit', 'ex.kan-extension', 'def-dep.limit-kan-ex',
-      '**(1)** 说余极限是沿 $I \\to \\mathbf{1}$ 的左 Kan 延拓。'],
-    ['def.adjoint', 'ex.kan-extension', 'def-dep.adjoint-kan-ex',
-      '**(2)** 说右伴随是 $1_{\\mathcal{C}}$ 沿 $F$ 的左 Kan 延拓。'],
-    ['def.limit', 'prop.filtered-exact', 'def-dep.limit-filtered',
-      '结论说滤过余极限保持**有限极限** —— 「正合」是相对极限说的。'],
-    ['def.commutative-diagram', 'prop.filtered-exact', 'def-dep.diagram-filtered',
-      '余极限函子 $\\varinjlim : \\mathbf{Set}^{I} \\to \\mathbf{Set}$ 的定义域是**图范畴**。'],
-
     /* ------------------------------------------------- 范畴论（紧 Haus 层） */
     ['def.compact', 'def.chaus', 'def-dep.compact-chaus',
       '紧 Hausdorff 空间就是**紧**空间再加上 Hausdorff 性。'],
@@ -21858,65 +22538,22 @@ window.MG = window.MG || {};
       '「Hausdorff」那一半来自分离公理。'],
     ['def.category', 'def.chaus', 'def-dep.category-chaus',
       '把它们收成一个**范畴**：对象是空间，态射是连续映射。'],
-    ['def.adjoint', 'prop.chaus-reflective', 'def-dep.adjoint-chaus-reflective',
-      '「$\\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。'],
-    ['def.compact', 'prop.chaus-reflective', 'def-dep.compact-stonecech',
-      'Stone–Čech 紧化的构造跑在 **Tychonoff 方块**里，紧性由 Tychonoff 定理给出。'],
-    ['def.hausdorff', 'prop.chaus-reflective', 'def-dep.hausdorff-stonecech',
-      '$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。'],
-    ['def.compact', 'lem.minimal-closed-surjection', 'def-dep.compact-minimal',
-      '极小闭子集存在用的是**紧性**（有限交性质）。'],
     ['def.chaus', 'def.free-compact-hausdorff', 'def-dep.chaus-free',
       '自由紧 Hausdorff 空间是 $\\mathbf{CHaus}$ 里的对象：$F \\cong \\beta I$。'],
-    ['def.free-compact-hausdorff', 'prop.chaus-quotient-of-free', 'def-dep.free-chaus-quotient',
-      '命题说的商空间正是从**自由紧 Hausdorff 空间** $\\beta S^{\\mathrm{disc}}$ 商出来的。'],
-    ['def.chaus', 'prop.chaus-quotient-of-free', 'def-dep.chaus-quotient-free',
-      '命题说的对象是 $\\mathbf{CHaus}$ 中的空间。'],
     ['def.mono', 'def.projective-object', 'def-dep.mono-projective',
       '投射性的定义要求「**满态射**有提升」，内射性对偶地要求「**单态射**有延拓」—— 纯箭头语言。'],
-    ['def.projective-object', 'prop.free-projective', 'def-dep.projective-free',
-      '命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。'],
-    ['def.free-compact-hausdorff', 'prop.free-projective', 'def-dep.free-projective',
-      '命题谈的是**自由紧 Hausdorff 空间**。'],
     ['def.fibered-product', 'def.free-presentation', 'def-dep.fibered-free-presentation',
       '$R := F \\times_{S} F$ 是一个**纤维积**。'],
     ['def.chaus', 'def.free-presentation', 'def-dep.chaus-free-presentation',
       '自由表示是 $\\mathbf{CHaus}$ 里的一个满射三元组。'],
-    ['def.free-presentation', 'cor.chaus-free-presentation', 'def-dep.free-presentation-cor',
-      '推论说每个对象都**有**自由表示。'],
-    ['def.connected', 'prop.component-clopen', 'def-dep.connected-component-clopen',
-      '命题算的是**连通分量**。'],
-    ['def.clopen', 'prop.component-clopen', 'def-dep.clopen-component',
-      '连通分量被写成一切含 $x$ 的**闭开集**之交。'],
-    ['def.chaus', 'prop.component-clopen', 'def-dep.chaus-component',
-      '证明里用到紧 Hausdorff 空间是**正规**的。'],
     ['def.connected', 'def.stone-space', 'def-dep.connected-stone',
       '「**全不连通**」说的是每个连通分量都是单点。'],
     ['def.clopen', 'def.stone-space', 'def-dep.clopen-stone',
       '「**极端不连通**」说的是任一开集的闭包仍是闭开集。'],
     ['def.chaus', 'def.stone-space', 'def-dep.chaus-stone',
       'Stone 空间与 Stonean 空间分别是「全不连通」与「极端不连通」再加**紧 Hausdorff**。'],
-    ['def.clopen', 'prop.stonean-basic', 'def-dep.clopen-stonean-basic',
-      '两条性质说的都是**闭开集**与闭包的关系。'],
-    ['def.stone-space', 'prop.stonean-basic', 'def-dep.stone-stonean-basic',
-      '命题谈的是**极端不连通**（以及由它推出的全不连通）。'],
     ['def.limit', 'def.profinite', 'def-dep.limit-profinite',
       '投射有限空间是有限离散空间沿有向系统的**极限**。'],
-    ['def.projective-object', 'thm.gleason', 'def-dep.projective-gleason',
-      'Gleason 定理把 $\\mathbf{CHaus}$ 的**投射对象**认了出来。'],
-    ['def.stone-space', 'thm.gleason', 'def-dep.stone-gleason',
-      '认出的是 **Stonean 空间**。'],
-    ['def.profinite', 'thm.stone-profinite', 'def-dep.profinite-stone',
-      '定理说的是 Stone 空间与**投射有限空间**是同一批空间。'],
-    ['def.stone-space', 'prop.stone-reflective', 'def-dep.stone-reflective',
-      '「Stone 空间」是**全不连通的紧 Hausdorff 空间**。'],
-    ['def.stone-space', 'prop.td-reflective', 'def-dep.stone-td-reflective',
-      '全不连通是 Stone 空间定义里的一半。'],
-    ['def.connected', 'prop.td-reflective', 'def-dep.connected-td-reflective',
-      '反射 $\\pi_{0}$ 就是把每个点送到它的**连通分量**。'],
-    ['thm.gleason', 'cor.stonean-retract', 'def-dep.gleason-retract',
-      '推论把 Gleason 定理翻译成「Stonean = **收缩核**」。'],
-
     /* ------------------------------------------------- 范畴论（层层） */
     ['def.presheaf', 'def.sieve', 'def-dep.presheaf-sieve',
       '筛是**预层** $h_{X}$ 的一个子函子。'],
@@ -21938,49 +22575,24 @@ window.MG = window.MG || {};
       '层是一个满足额外条件的**预层**。'],
     ['def.limit', 'def.sheaf', 'def-dep.limit-sheaf',
       '「$F(X) \\cong \\varprojlim_{Y \\in \\mathcal{C}/R} F(Y)$」用到了**极限**。'],
-    ['def.sheaf', 'thm.sheaf-descent', 'def-dep.sheaf-descent',
-      '定理给「是层」一个可以逐项验证的**正合列**判据。'],
-    ['def.fibered-product', 'thm.sheaf-descent', 'def-dep.fibered-descent',
-      '正合列里的 $X_{i} \\times_{X} X_{j}$ 是**纤维积**。'],
     ['def.sheaf', 'def.cech-functor', 'def-dep.sheaf-cech',
       'Čech 函子是把预层朝**层**的方向推一把的那个构造。'],
-    ['def.cech-functor', 'prop.cech-properties', 'def-dep.cech-properties',
-      '三条性质都是关于 $\\widehat{H}$ 的。'],
-    ['def.cech-functor', 'thm.sheafification', 'def-dep.cech-sheafification',
-      '层化取「对预层做两次 **Čech 构造**」。'],
-    ['def.reflective-subcategory', 'thm.sheafification', 'def-dep.reflective-sheafification',
-      '定理的结论是「层范畴是**反射子范畴**」。'],
     ['def.mono', 'def.regular-epi', 'def-dep.mono-regular-epi',
       '正则满态射是**余等化子**，是满态射里更「规矩」的那一类。'],
     ['def.equalizer', 'def.regular-epi', 'def-dep.equalizer-regular-epi',
       '「某个平行对的余等化子」用的是**余等化子**。'],
     ['def.fibered-product', 'def.universal-colimit', 'def-dep.fibered-universal',
       '万有性、不交余积都要用**纤维积**说出来。'],
-    ['def.universal-colimit', 'prop.site-properties', 'def-dep.universal-site',
-      '五条性质里出现了**万有余极限、万有满态射、不交余积**。'],
-    ['def.equalizer', 'prop.sheaf-mono-epi-iso', 'def-dep.equalizer-mono-epi',
-      '「满-单分解」把任意态射拆成 $F \\twoheadrightarrow I \\rightarrowtail G$。'],
-    ['def.sheaf', 'prop.sheaf-epi-criterion', 'def-dep.sheaf-epi-criterion',
-      '命题说的是**层**之间的态射什么时候是满的。'],
     ['def.equalizer', 'def.effective-equivalence', 'def-dep.equalizer-effective',
       '$\\overline{X} := \\operatorname{coker}(R \\rightrightarrows X)$ 是**余等化子**。'],
     ['def.fibered-product', 'def.effective-equivalence', 'def-dep.fibered-effective',
       '有效性说的是 $R \\cong X \\times_{\\overline{X}} X$，一个**纤维积**。'],
-    ['def.effective-equivalence', 'prop.sheafify-equivalence', 'def-dep.effective-sheafify',
-      '命题说的是**层化**与等价关系、商的交换。'],
     ['def.grothendieck-topology', 'def.canonical-topology', 'def-dep.topology-canonical',
       '标准拓扑就是在所有**拓扑**里最细的那个（使可表示预层都是层）。'],
     ['def.presheaf', 'def.canonical-topology', 'def-dep.presheaf-canonical',
       '次标准的判据是「**可表示预层**都是层」。'],
     ['def.sieve', 'def.canonical-topology', 'def-dep.sieve-canonical',
       '标准拓扑是拿**筛**一条条规定出来的。'],
-    ['def.sieve', 'prop.covering-sieve-epi', 'def-dep.sieve-covering-epi',
-      '命题说覆盖族生成**覆盖筛**与余积满射是一回事。'],
-    ['def.universal-colimit', 'prop.disjoint-universal', 'def-dep.universal-disjoint',
-      '命题说的是**不交万有余积**在次标准拓扑下保持不变。'],
-    ['def.canonical-topology', 'prop.disjoint-universal', 'def-dep.canonical-disjoint',
-      '「次标准」是命题的关键假设。'],
-
     /* ------------------------------------------------- 范畴论（拓扑斯层） */
     ['def.universal-colimit', 'def.pretopos', 'def-dep.universal-pretopos',
       '预拓扑斯的第 2、3、4 条用的都是**不交 / 万有 / 有效**这三个词。'],
@@ -21988,67 +22600,28 @@ window.MG = window.MG || {};
       '第 3 条要求**等价关系有效**。'],
     ['def.regular-epi', 'def.pretopos', 'def-dep.regular-pretopos',
       '第 4 条要求**满态射正则**。'],
-    ['def.pretopos', 'prop.pretopos-factorization', 'def-dep.pretopos-factorization',
-      '命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。'],
-    ['def.image', 'prop.pretopos-factorization', 'def-dep.image-pretopos-factorization',
-      '结论里「严格」说的是 $\\operatorname{im} f \\cong \\operatorname{coim} f$。'],
-    ['def.subobject', 'prop.subobject-lattice', 'def-dep.subobject-lattice',
-      '命题说的是**子对象**全体构成有界格。'],
-    ['def.fibered-product', 'prop.subobject-lattice', 'def-dep.fibered-subobject-lattice',
-      '格里的交就是**纤维积**（拉回）。'],
     ['def.pretopos', 'def.precanonical-topology', 'def-dep.pretopos-precanonical',
       '预标准拓扑是**预拓扑斯**上定义的那个预拓扑。'],
     ['def.grothendieck-topology', 'def.precanonical-topology', 'def-dep.topology-precanonical',
       '预标准预拓扑**生成**的 Grothendieck 拓扑叫预标准拓扑。'],
-    ['def.sheaf', 'prop.precanonical-sheaf', 'def-dep.sheaf-precanonical',
-      '命题给出预标准拓扑下「是**层**」的两条可验等式。'],
-    ['def.precanonical-topology', 'prop.precanonical-preserves', 'def-dep.precanonical-preserves',
-      '命题谈的是**预标准拓扑**下余积与商是否走样。'],
-    ['def.sheaf', 'prop.precanonical-mono-epi', 'def-dep.sheaf-mono-epi',
-      '命题比较的是 $\\mathcal{C}$ 里的单满与它在**层**范畴里的像。'],
     ['def.ff-faithful', 'def.generator', 'def-dep.ff-generator',
       '生成元集的定义就是「拼起来那个函子**忠实**」。'],
     ['def.pretopos', 'def.topos', 'def-dep.pretopos-topos',
       '拓扑斯就是「带小生成元集」的**预拓扑斯**。'],
     ['def.generator', 'def.topos', 'def-dep.generator-topos',
       '第 1 条要求存在**小生成元集**。'],
-    ['def.topos', 'thm.giraud', 'def-dep.topos-giraud',
-      'Giraud 定理给出「是**拓扑斯**」的四个等价说法。'],
-    ['def.canonical-topology', 'thm.giraud', 'def-dep.canonical-giraud',
-      '第 2 条说的是对**标准拓扑**而言的层。'],
-    ['def.representable', 'thm.giraud', 'def-dep.representable-giraud',
-      '第 2 条的关键词是「层都**可表示**」。'],
-    ['def.topos', 'prop.topos-covering-epi', 'def-dep.topos-covering-epi',
-      '命题在**拓扑斯**里把「覆盖」与余积满射对起来。'],
-    ['def.grothendieck-topology', 'prop.topos-covering-epi', 'def-dep.topology-covering-epi',
-      '命题的左边是「$(X_{i} \\to X)$ 是**覆盖**」，即生成覆盖筛。'],
-    ['def.representable', 'lem.representable-quotient', 'def-dep.representable-quotient',
-      '引理说的是「**可表示性**可以从覆盖的一块块传回整体」。'],
-    ['def.effective-equivalence', 'lem.representable-quotient', 'def-dep.effective-quotient',
-      '把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。'],
-    ['def.sheaf', 'prop.topos-sheaf-limits', 'def-dep.sheaf-limits',
-      '命题把「是**层**」与「保所有极限」说成一回事。'],
-    ['def.limit', 'prop.topos-sheaf-limits', 'def-dep.limit-sheaf-limits',
-      '「保**极限**」是命题的另一半。'],
     ['def.grothendieck-topology', 'def.quasi-compact', 'def-dep.topology-qc',
       '拟紧说的是：任何生成**覆盖筛**的族都有有限的子族仍然生成覆盖筛。'],
-    ['def.fibered-product', 'prop.quasi-compact-properties', 'def-dep.fibered-qc',
-      '第 3 条里的「存在满射 $X \\to F$」用的是 $\\mathcal{C}$ 里的对象覆盖层。'],
     ['def.fibered-product', 'def.quasi-separated', 'def-dep.fibered-qs',
       '拟分离说的是「两个拟紧对象的**纤维积**仍拟紧」。'],
     ['def.quasi-compact', 'def.quasi-separated', 'def-dep.qc-qs',
       '「拟分离」这个词里就带着「拟紧」。'],
-    ['def.quasi-compact', 'thm.pretopos-qcqs', 'def-dep.qc-pretopos-qcqs',
-      '定理的两边之一是**拟紧**。'],
-    ['def.quasi-separated', 'thm.pretopos-qcqs', 'def-dep.qs-pretopos-qcqs',
-      '另一边是**拟分离**。'],
     ['def.topos', 'def.topos-morphism', 'def-dep.topos-morphism',
       '态射是**拓扑斯**之间的一对函子。'],
     ['def.adjoint', 'def.topos-morphism', 'def-dep.adjoint-topos-morphism',
       '$f^{*} \\dashv f_{*}$ 是一个**伴随对**。'],
     ['def.limit', 'def.topos-morphism', 'def-dep.limit-topos-morphism',
       '要求 $f^{*}$ **正合**，即保有限极限。'],
-
     /* ------------------------------------------------- 范畴论（凝聚态） */
     ['def.pretopos', 'def.chaus-pretopos', 'def-dep.pretopos-chaus',
       '结论是 $\\mathbf{CHaus}$ 满足**预拓扑斯**的四条公理。'],
@@ -22060,65 +22633,18 @@ window.MG = window.MG || {};
       '凝聚态集是**紧 Hausdorff 空间**上的层。'],
     ['def.sheaf', 'def.condensed-set', 'def-dep.sheaf-condensed',
       '「层」这个词就来自层与拓扑那一段。'],
-    ['def.pretopos', 'prop.condensed-criterion', 'def-dep.pretopos-condensed-criterion',
-      '两条判据来自「$\\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。'],
-    ['def.condensed-set', 'prop.condensed-criterion', 'def-dep.condensed-criterion',
-      '判据给出的是「预层是**凝聚态集**」的等价条件。'],
-    ['def.condensed-set', 'thm.cond-topos', 'def-dep.condensed-topos',
-      '定理说的是 $\\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。'],
-    ['def.free-compact-hausdorff', 'prop.fchaus-pretopology', 'def-dep.free-pretopology',
-      '预拓扑搭在**自由紧 Hausdorff 空间**上。'],
-    ['def.projective-object', 'prop.fchaus-pretopology', 'def-dep.projective-pretopology',
-      '「满射有截面」说的是这些对象**投射**。'],
-    ['def.free-compact-hausdorff', 'prop.fchaus-sheaf', 'def-dep.free-sheaf',
-      '命题谈的是**自由紧 Hausdorff 空间**上的层。'],
-    ['def.sheaf', 'thm.cond-equiv-fchaus', 'def-dep.sheaf-cond-equiv',
-      '定理说两边的**层**范畴是同一个。'],
-    ['def.sheaf', 'prop.cond-epi', 'def-dep.sheaf-cond-epi',
-      '命题说的是**凝聚态集**（层）之间满态射的判据。'],
-    ['def.free-compact-hausdorff', 'prop.cond-epi', 'def-dep.free-cond-epi',
-      '探针取的是**自由**紧 Hausdorff 空间。'],
-    ['def.projective-object', 'prop.cond-projectives', 'def-dep.projective-cond',
-      '命题说自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里是**投射对象**。'],
     ['def.chaus', 'def.underlying-topological-space', 'def-dep.chaus-underlying',
       '底空间的拓扑由「从**紧 Hausdorff 空间**进来的映射」定出来。'],
-    ['def.condensed-set', 'thm.top-cond-adjoint', 'def-dep.condensed-top-adjoint',
-      '定理里的函子 $X \\mapsto \\underline{X}$ 以**凝聚态集**为靶。'],
-    ['def.compactly-generated', 'thm.top-cond-adjoint', 'def-dep.cg-top-cond',
-      '限制到**紧生成空间**上时那个函子变得全忠实。'],
-    ['def.compactly-generated', 'prop.cg-coreflective', 'def-dep.cg-coreflective',
-      '命题说的是**紧生成空间**是余反射子范畴。'],
     ['def.limit', 'def.compactly-generated', 'def-dep.limit-cg',
       '紧生成空间的定义是「紧 Hausdorff 空间作为指标的**余极限**」。'],
     ['def.chaus', 'def.compactly-generated', 'def-dep.chaus-cg',
       '指标取的是**紧 Hausdorff 空间**与它们之间的连续映射。'],
     ['def.generator', 'def.grothendieck-category', 'def-dep.generator-grothendieck',
       'Grothendieck 范畴 = AB5 范畴**加一个生成元**。'],
-    ['def.condensed-abelian-group', 'prop.condab-tensor', 'def-dep.condab-tensor',
-      '两个双函子定义在**凝聚态阿贝尔群**范畴上。'],
-    ['def.adjoint', 'prop.cg-coreflective', 'def-dep.adjoint-cg-coreflective',
-      '「余反射」的意思是含入函子有**右伴随**。'],
     ['def.condensed-set', 'def.condensed-abelian-group', 'def-dep.condensed-ab',
       '凝聚态阿贝尔群是在**凝聚态集**上再加阿贝尔群结构。'],
     ['def.sheaf', 'def.condensed-abelian-group', 'def-dep.sheaf-condensed-ab',
       '它是**阿贝尔群值层**。'],
-    ['def.free-compact-hausdorff', 'prop.condab-section', 'def-dep.free-condab-section',
-      '截面函子 $\\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。'],
-    ['def.limit', 'prop.condab-section', 'def-dep.limit-condab-section',
-      '结论说它保**所有极限与余极限**。'],
-    ['def.condensed-abelian-group', 'thm.condab-ab', 'def-dep.condab-ab',
-      '定理说的是 $\\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。'],
-    ['def.stone-space', 'lem.stonean-projective', 'def-dep.stonean-projective',
-      '引理的输入是 **Stonean 空间**。'],
-    ['def.projective-object', 'lem.stonean-projective', 'def-dep.projective-stonean',
-      '结论说 $\\mathbb{Z}\\cdot F$ 是**投射**对象。'],
-    ['def.generator', 'prop.condab-generated', 'def-dep.generator-condab-generated',
-      '命题说的是 $\\mathrm{CondAb}$ 由谁**生成**。'],
-    ['def.projective-object', 'prop.condab-generated', 'def-dep.projective-condab-generated',
-      '生成元取的是**有限表现的投射**对象。'],
-    ['def.adjoint', 'prop.condab-tensor', 'def-dep.adjoint-condab-tensor',
-      '$\\otimes_{\\mathbb{Z}}$ 与内部 $\\operatorname{Hom}_{\\mathbb{Z}}$ **互为伴随**。'],
-
     /* ------------------------------------------------- 范畴论（同调代数） */
     ['def.commutative-diagram', 'def.cochain-complex', 'def-dep.diagram-complex',
       '一个（长）序列就是**有序集上的图** $(\\mathbb{Z}, \\le) \\to \\mathcal{C}$。'],
@@ -22126,10 +22652,6 @@ window.MG = window.MG || {};
       '序列作为图就是**函子**；「复形」是加上 $d \\circ d = 0$ 之后的那个。'],
     ['def.category', 'def.cochain-complex', 'def-dep.category-complex',
       '复形定义在**加法范畴** $\\mathcal{C}$ 上，微分是范畴里的态射。'],
-    ['def.cochain-complex', 'prop.complex-additive', 'def-dep.complex-additive',
-      '命题说的是**复形**构成的那个范畴。'],
-    ['def.equalizer', 'prop.complex-additive', 'def-dep.equalizer-complex-additive',
-      '核与余核都是**逐项**取出来的。'],
     ['def.cochain-complex', 'def.homotopy', 'def-dep.complex-homotopy',
       '同伦是**复形态射**之间的一种关系。'],
     ['def.homotopy', 'def.homotopy-category', 'def-dep.homotopy-homotopy-category',
@@ -22142,34 +22664,16 @@ window.MG = window.MG || {};
       '映射锥逐项取的是 $K^{n+1} \\oplus L^{n}$ —— 加法范畴里的**双积**。'],
     ['def.mapping-cone', 'def.distinguished-triangle', 'def-dep.mapping-cone-triangle',
       '导出三角的定义就是「同构于某个**映射锥**三角」。'],
-    ['def.distinguished-triangle', 'prop.triangle-rotation', 'def-dep.triangle-rotation',
-      '命题说的是**导出三角**的基本性质。'],
-    ['def.distinguished-triangle', 'lem.triangle-morphism', 'def-dep.triangle-morphism',
-      '引理说的是**导出三角**之间态射的性质。'],
-    ['def.homotopy', 'lem.triangle-morphism', 'def-dep.homotopy-triangle-morphism',
-      '「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。'],
     ['def.cochain-complex', 'def.cohomology', 'def-dep.complex-cohomology',
       '同调是**复形**的 $\\ker d^{n} / \\operatorname{im} d^{n-1}$。'],
     ['def.equalizer', 'def.cohomology', 'def-dep.equalizer-cohomology',
       '同调里出现的 $\\ker$ 与 $\\operatorname{im}$ 是**等化子**与**像**。'],
-    ['def.equalizer', 'prop.cohomology-exact-sequence', 'def-dep.equalizer-cohomology-sequence',
-      '这条正合列把同调夹在**余核**与**核**之间。'],
     ['def.cohomology', 'def.cohomological-functor', 'def-dep.cohomology-functor',
       '上同调函子是把导出三角变成**正合列**的那些函子。'],
     ['def.distinguished-triangle', 'def.cohomological-functor', 'def-dep.triangle-cohomological',
       '定义里的正合性条件就是针对**导出三角**说的。'],
-    ['def.cohomology', 'thm.long-exact', 'def-dep.cohomology-long-exact',
-      '长正合列里跑的是**同调**。'],
-    ['def.equalizer', 'thm.long-exact', 'def-dep.equalizer-long-exact',
-      '「正合列」本身就是一句关于**核与像**的话。'],
     ['def.cohomology', 'def.quasi-iso', 'def-dep.cohomology-quasi-iso',
       '拟同构说的是「**同调**全都是同构」。'],
-    ['def.injective-object', 'prop.injective-criterion', 'def-dep.injective-criterion',
-      '命题给出**内射对象**的四条等价刻画。'],
-    ['def.mono', 'prop.injective-criterion', 'def-dep.mono-injective-criterion',
-      '「每个**单态射**都有收缩」是等价条件之一。'],
-    ['def.adjoint', 'prop.injective-criterion', 'def-dep.adjoint-injective-criterion',
-      '「$\\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。'],
     ['def.subobject', 'def.filtration', 'def-dep.subobject-filtration',
       '过滤是一族**子对象** $F^{n}M \\subseteq M$。'],
     ['def.cochain-complex', 'def.spectral-sequence', 'def-dep.complex-spectral-sequence',
@@ -22186,7 +22690,6 @@ window.MG = window.MG || {};
       '等价条件之一说的是「$\\ker(N \\to \\operatorname{coker} f)\\cong\\operatorname{coker}(\\ker f\\to M)$」—— 像与余像重合。'],
     ['def.cochain-complex', 'def.abelian-category', 'def-dep.complex-abelian',
       '复形定义在**加法范畴**上，同调定义在**阿贝尔范畴**上。'],
-
     /* ------------------------------------------------- Grothendieck 的 AB 公理 */
     ['def.abelian-category', 'def.ab-axioms', 'def-dep.abelian-ab-axioms',
       'AB1 = **预阿贝尔**、AB2 = **阿贝尔** —— 前两条就是这两个词。'],
@@ -22198,10 +22701,6 @@ window.MG = window.MG || {};
       'AB5、AB6 的差别全在**滤过余极限**上：前者要它正合，后者还要它与积交换。'],
     ['def.ab-axioms', 'def.grothendieck-category', 'def-dep.ab-grothendieck',
       'Grothendieck 范畴 = **AB5** 范畴 + 一个生成元。'],
-    ['def.grothendieck-category', 'thm.condab-ab', 'def-dep.grothendieck-condab',
-      '定理说的是 $\\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。'],
-    ['def.ab-axioms', 'thm.condab-ab', 'def-dep.ab-condab',
-      'AB6 与 AB4\\* 的含义见「Grothendieck 的 AB 公理」那条。']
   ];
 
   var edges = E.map(function (e) {
@@ -22314,7 +22813,35 @@ MG.trunk = [
   'def.maximal-function',      // 21 层  极大函数
   'thm.lebesgue-radon-nikodym',// 20 层  Lebesgue–Radon–Nikodym 定理
   'thm.riesz-representation-lp', // 21 层  (L^p)* ≅ L^q
-  'thm.lebesgue-differentiation' // 21 层  Lebesgue 微分定理
+  'thm.lebesgue-differentiation', // 21 层  Lebesgue 微分定理
+
+  /* ================= 六、范畴与函子（换一套语言） ================= */
+  /* 前五段都在「集合 + 元素」的语言里做数学。这一条新主线（六 / 七 / 八 三段）
+     把语言换成「范畴 + 箭头」，最后落到紧 Hausdorff 空间上的层。
+     拆成三段只是为了让**段内层号单调**（依赖深度会上下跳，但学习顺序不会）。 */
+  'def.category',              //  7 层  范畴（本线的入口）
+  'def.functor',               //  8 层  函子
+  'def.natural-transformation',//  9 层  自然变换（函子之间的翻译）
+  'def.commutative-diagram',   //  9 层  交换图（图 = 函子）
+  'def.adjoint',               //  9 层  伴随（两个方向互为最佳）
+  'def.presheaf',              //  9 层  预层（反变函子）
+  'def.limit',                 // 11 层  极限（泛锥）
+  'def.representable',         // 12 层  表示函子（万有元素）
+  'lem.yoneda',                // 13 层  米田引理（自然变换集 ≅ F(X)）
+
+  /* ============ 七、覆盖、层与凝聚态（新语言长出的东西） ============ */
+  'def.grothendieck-topology', // 14 层  Grothendieck 拓扑（什么算覆盖）
+  'def.chaus',                 // 14 层  紧 Hausdorff 空间范畴（下一步的场地）
+  'def.sheaf',                 // 15 层  层（能粘的预层）
+  'def.topos',                 // 16 层  拓扑斯（几何的代数替身）
+  'def.condensed-set',         // 16 层  凝聚态集 = CHaus 上的层
+  'def.condensed-abelian-group', // 17 层  凝聚态阿贝尔群
+
+  /* ==================== 八、同调代数（复形这套机器） ==================== */
+  'def.cochain-complex',       // 10 层  复形（两两复合为零）
+  'def.cohomology',            // 13 层  同调（把复形读成不变量）
+  'def.abelian-category',      // 16 层  阿贝尔范畴（做同调代数的场地）
+  'thm.long-exact'             // 16 层  长正合列
 ];
 
 </script>

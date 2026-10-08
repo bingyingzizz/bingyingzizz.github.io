@@ -1,6 +1,6 @@
 # 同伦范畴　`def.homotopy-category`
 同伦范畴（Homotopy Category）
-layer 12 · 定义 · 同调代数 · 范畴论
+layer 12 · 定义 · 复形与导出三角 · 同调代数
 
 **同伦范畴** $\mathbf{K}(\mathcal{C})$ 的对象与 $\mathcal{C}(\mathcal{C})$ 相同，态射取
 

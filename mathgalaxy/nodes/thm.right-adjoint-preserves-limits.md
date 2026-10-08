@@ -10,7 +10,5 @@ $$G\bigl(\lim D\bigr) \;\cong\; \lim\, (G \circ D)$$
 - `def.adjoint` 伴随函子 + `def.limit` 极限：伴随 $\implies$ 右伴随保极限　proofs/imp.right-adjoint-limits.md
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-link.adjoint-preserves-limits.md
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-preserves-limits.md
-- `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-dep.adjoint-preserves.md
-- `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-preserves.md
 
 > 说明见 `notes/thm.right-adjoint-preserves-limits.md`

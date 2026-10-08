@@ -17,9 +17,9 @@ layer 15 · 定义 · 拓扑斯 · 范畴论
 ## 它能推出什么 / 谁在用它
 - ⇒ `prop.pretopos-factorization` 满-单分解
 - 被 `prop.pretopos-factorization` 满-单分解 用
+- 被 `prop.condensed-criterion` 凝聚态集的刻画 用
 - 被 `def.precanonical-topology` 预标准拓扑 用
 - 被 `def.topos` 拓扑斯 用
-- 被 `def.chaus-pretopos` CHaus 是预拓扑斯 用
 
 > 说明见 `notes/def.pretopos.md`
 

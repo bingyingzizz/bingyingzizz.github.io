@@ -18,10 +18,10 @@ $$F(1_X) = 1_{F(X)}, \qquad F(g \circ f) = F(g) \circ F(f)$$
 - `def.function` 函数：用到了定义 函数　proofs/def-dep.function-functor.md
 
 ## 它能推出什么 / 谁在用它
+- 被 `lem.yoneda` 米田引理 用
 - 被 `def.natural-transformation` 自然变换 用
 - 被 `def.ff-faithful` 忠实 / 满 / 全忠实 用
 - 被 `def.essentially-surjective` 本质满 用
-- 被 `def.cat-equivalence` 范畴等价 用
 
 > 说明见 `notes/def.functor.md`
 

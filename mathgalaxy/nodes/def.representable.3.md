@@ -6,8 +6,5 @@
 - 被 `lem.yoneda` 米田引理 用
 - 被 `thm.represented-criterion` 表示的两个定义等价 用
 - 被 `thm.right-adjoint-criterion` 右伴随存在的判据 用
-- 被 `lem.yoneda` 米田引理 用
-- 被 `thm.represented-criterion` 表示的两个定义等价 用
-- 被 `thm.right-adjoint-criterion` 右伴随存在的判据 用
 - 被 `thm.giraud` Giraud 定理 用
 - 被 `lem.representable-quotient` 可表示性的下降 用

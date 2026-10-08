@@ -12,11 +12,11 @@ $$\ker(f,g) \longrightarrow X \overset{f}{\underset{g}{\rightrightarrows}} Y \lo
 - `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-equalizer.md
 
 ## 它能推出什么 / 谁在用它
-- 被 `def.regular-epi` 正则满态射 用
 - 被 `prop.sheaf-mono-epi-iso` 层中单满即同构 用
-- 被 `def.effective-equivalence` 有效等价关系 用
 - 被 `prop.complex-additive` 复形范畴是加法范畴 用
-- 被 `def.cohomology` 同调 用
+- 被 `prop.cohomology-exact-sequence` 同调的短正合列 用
+- 被 `thm.long-exact` 长正合列 用
+- 被 `def.regular-epi` 正则满态射 用
 
 > 说明见 `notes/def.equalizer.md`
 

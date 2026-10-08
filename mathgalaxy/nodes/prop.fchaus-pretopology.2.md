@@ -2,4 +2,6 @@
 根 `../`　·　第 1 页 `nodes/prop.fchaus-pretopology.md`
 
 ## 陈述（续）
-一个预拓扑**。
+预拓扑**。
+
+> 续见 `nodes/prop.fchaus-pretopology.3.md`

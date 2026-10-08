@@ -1,6 +1,6 @@
 # 导出三角　`def.distinguished-triangle`
 导出三角（Distinguished Triangle）
-layer 14 · 定义 · 同调代数 · 范畴论
+layer 14 · 定义 · 复形与导出三角 · 同调代数
 
 $\mathbf{K}(\mathcal{C})$ 中的**导出三角**是形状为
 

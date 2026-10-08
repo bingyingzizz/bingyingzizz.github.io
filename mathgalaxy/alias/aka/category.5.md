@@ -1,30 +1,28 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 自由紧 Hausdorff 空间 | free compact Hausdorff | FCHaus → def.free-compact-hausdorff
+- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 → def.sheaf
 
-- 紧 Haus 是自由的商 → prop.chaus-quotient-of-free
+- 层的下降条件 | sheaf condition | 层条件 → thm.sheaf-descent
 
-- 投射对象 | projective object | 内射对象 | injective object | 投射模 | 内射模 → def.projective-object
+- Cech 函子 | Čech functor | H hat → def.cech-functor
 
-- 自由对象是投射的 → prop.free-projective
+- Cech 函子的性质 | 左正合 → prop.cech-properties
 
-- 自由表示 | free presentation | 自由表现 → def.free-presentation
+- 层化 | sheafification | sheafify | 伴随层 → thm.sheafification
 
-- 紧 Haus 都有自由表示 → cor.chaus-free-presentation
+- 正则满态射 | regular epimorphism | regular epi → def.regular-epi
 
-- 连通分量是闭开邻域之交 → prop.component-clopen
+- 万有余极限 | universal colimit | 万有满态射 | 不交余积 | disjoint coproduct → def.universal-colimit
 
-- Stone 空间 | Stone space | Stonean 空间 | 极端不连通 | extremally disconnected | 全不连通 | totally disconnected → def.stone-space
+- 层范畴的性质 | site 的好性质 | 预拓扑斯公理 → prop.site-properties
 
-- 极端不连通的性质 → prop.stonean-basic
+- 层中单满即同构 | epi-mono factorization → prop.sheaf-mono-epi-iso
 
-- 全不连通是反射子范畴 | pi_0 → prop.td-reflective
+- 满态射的局部判据 | 局部满 | local epimorphism → prop.sheaf-epi-criterion
 
-- Stone 空间是反射子范畴 → prop.stone-reflective
+- 有效等价关系 | effective equivalence relation | 有效关系 → def.effective-equivalence
 
-- 投射有限空间 | profinite space | profinite → def.profinite
-
-- Stone 等价于投射有限 | Stone duality → thm.stone-profinite
+- 层化与商交换 → prop.sheafify-equivalence
 
 > 续见 alias/aka/category.6.md

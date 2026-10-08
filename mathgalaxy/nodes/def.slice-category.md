@@ -18,6 +18,5 @@ layer 12 · 定义 · 预层与米田 · 范畴论
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.density` 稠密性定理
 - 被 `thm.density` 稠密性定理 用
-- 被 `thm.density` 稠密性定理 用
 
 > 说明见 `notes/def.slice-category.md`

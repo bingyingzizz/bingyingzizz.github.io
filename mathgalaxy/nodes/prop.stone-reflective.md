@@ -1,6 +1,6 @@
 # Stone 空间是 CHaus 的反射子范畴　`prop.stone-reflective`
 Stone 空间是 $\mathbf{CHaus}$ 的反射子范畴
-layer 16 · 命题 · 紧 Haus 与 Stone · 范畴论+拓扑学
+layer 16 · 命题 · 紧 Haus 与 Stone · 拓扑学
 
 Stone 空间构成的范畴是 $\mathbf{CHaus}$ 的反射子范畴。
 

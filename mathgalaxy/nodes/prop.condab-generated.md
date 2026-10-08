@@ -1,6 +1,6 @@
 # CondAb 由有限表现投射对象生成　`prop.condab-generated`
 $\mathrm{CondAb}$ 的生成元
-layer 15 · 命题 · 凝聚态集 · 范畴论+拓扑学
+layer 15 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 
 $\mathrm{CondAb}$ 由**有限表现的投射**凝聚态阿贝尔群生成。特别地，它有足够多的投射对象。
 

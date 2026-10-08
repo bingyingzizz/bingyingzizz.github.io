@@ -1,6 +1,6 @@
 # CHaus 是预拓扑斯　`def.chaus-pretopos`
 $\mathbf{CHaus}$ 是预拓扑斯
-layer 16 · 定理 · 凝聚态集 · 范畴论+拓扑学
+layer 16 · 定理 · 凝聚态集 · 凝聚态数学
 
 在 $\mathbf{CHaus}$ 中：
 

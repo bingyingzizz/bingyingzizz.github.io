@@ -2,4 +2,4 @@
 根 `../`　·　第 1 页 `nodes/def.pretopos.md`
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 `prop.condensed-criterion` 凝聚态集的刻画 用
+- 被 `def.chaus-pretopos` CHaus 是预拓扑斯 用

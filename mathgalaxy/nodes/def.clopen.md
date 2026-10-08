@@ -11,8 +11,6 @@ $X$ 的子集 $K$ 叫**闭开集**，如果它同时是开集与闭集。等价�
 - ⇒ `prop.component-clopen` 连通分量是闭开邻域之交
 - 被 `prop.component-clopen` 连通分量是闭开邻域之交 用
 - 被 `prop.stonean-basic` 极端不连通的基本性质 用
-- 被 `prop.component-clopen` 连通分量是闭开邻域之交 用
 - 被 `def.stone-space` 全不连通与 Stone 空间 用
-- 被 `prop.stonean-basic` 极端不连通的基本性质 用
 
 > 说明见 `notes/def.clopen.md`

@@ -19,10 +19,10 @@
 
 - 滤过余极限正合 | filtered colimits are exact → prop.filtered-exact
 
-- CHaus | 紧 Hausdorff 空间 | compact Hausdorff | 紧豪斯多夫空间 → def.chaus
+- 筛 | sieve | 覆盖筛 | covering sieve → def.sieve
 
-- Stone-Cech 紧化 | Stone-Čech | βX | beta X | 紧化 → prop.chaus-reflective
+- 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology → def.pretopology
 
-- 满射的极小闭子集 → lem.minimal-closed-surjection
+- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 → def.grothendieck-topology
 
 > 续见 alias/aka/category.5.md

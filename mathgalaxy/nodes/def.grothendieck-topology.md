@@ -17,8 +17,8 @@ layer 14 · 定义 · 层与拓扑 · 范畴论
 
 ## 它能推出什么 / 谁在用它
 - ⇒ `prop.covering-sieve-epi` 覆盖筛即余积满射
+- 被 `prop.topos-covering-epi` 拓扑斯中覆盖即余积满射 用
 - 被 `def.sheaf` 层 用
-- 被 `def.canonical-topology` 标准拓扑 用
 
 > 说明见 `notes/def.grothendieck-topology.md`
 

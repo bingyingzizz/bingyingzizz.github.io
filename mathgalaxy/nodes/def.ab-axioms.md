@@ -1,6 +1,6 @@
 # Grothendieck 的 AB 公理　`def.ab-axioms`
 Grothendieck 的 AB 公理（AB1–AB6）
-layer 17 · 定义 · 凝聚态集 · 范畴论
+layer 17 · 定义 · 加法与阿贝尔范畴 · 同调代数
 
 范畴 $\mathcal{C}$ 的**正合性等级**（Grothendieck 的 AB 公理）逐条加强如下：
 
@@ -19,7 +19,7 @@ layer 17 · 定义 · 凝聚态集 · 范畴论
 - …另有入边，续页见 `nodes/def.ab-axioms.2.md`
 
 ## 它能推出什么 / 谁在用它
-- 被 `def.grothendieck-category` Grothendieck 范畴 用
+- 被 `thm.condab-ab` CondAb 满足 AB6 与 AB4* 用
 
 > 说明见 `notes/def.ab-axioms.md`
 

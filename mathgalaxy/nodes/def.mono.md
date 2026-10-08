@@ -1,6 +1,6 @@
 # 单态射 / 满态射　`def.mono`
 单态射与满态射（Monomorphism / Epimorphism）
-layer 13 · 定义 · 图与极限 · 范畴论
+layer 13 · 定义 · 单满、子对象与像 · 范畴论
 
 态射 $i : Y \to X$ 叫**单态射**（mono），如果对任意对象 $Z$ 与任意 $f, g : Z \to Y$，
 
@@ -14,9 +14,9 @@ $$i \circ f = i \circ g \;\Longrightarrow\; f = g$$
 ## 它能推出什么 / 谁在用它
 - ⇒ `prop.covering-sieve-epi` 覆盖筛即余积满射
 - 被 `lem.presheaf-mono-pointwise` 预层态射的单满按点检验 用
+- 被 `prop.injective-criterion` 内射对象的判据 用
 - 被 `def.subobject` 子对象 用
 - 被 `def.image` 像 / 余像 用
-- 被 `lem.presheaf-mono-pointwise` 预层态射的单满按点检验 用
 - 被 `def.projective-object` 投射 / 内射对象 用
 
 > 说明见 `notes/def.mono.md`

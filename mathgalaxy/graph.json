@@ -2,14 +2,14 @@
  "meta": {
   "name": "数学星图 MathGalaxy",
   "schema": "mathgalaxy/v1",
-  "generated": "2026-10-08T09:55:44.268Z",
+  "generated": "2026-10-08T10:10:49.807Z",
   "counts": {
-   "regions": 7,
-   "clusters": 34,
+   "regions": 9,
+   "clusters": 39,
    "nodes": 373,
-   "edges": 813,
-   "strong": 805,
-   "weak": 8
+   "edges": 789,
+   "strong": 780,
+   "weak": 9
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -61,9 +61,9 @@
    "id": "topology",
    "name": "拓扑学",
    "en": "Topology",
-   "desc": "开集、连续、紧致与连通；大量定理依赖选择原理。",
+   "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 59
+   "nodeCount": 43
   },
   {
    "id": "algebra",
@@ -85,9 +85,25 @@
    "id": "category",
    "name": "范畴论",
    "en": "Category Theory",
-   "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论、拓扑斯与凝聚态数学。",
+   "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 138
+   "nodeCount": 82
+  },
+  {
+   "id": "homology",
+   "name": "同调代数",
+   "en": "Homological Algebra",
+   "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
+   "color": "#C89A2B",
+   "nodeCount": 19
+  },
+  {
+   "id": "condensed",
+   "name": "凝聚态数学",
+   "en": "Condensed Mathematics",
+   "desc": "把拓扑空间换成「紧 Hausdorff 空间上的层」：凝聚态集、凝聚态阿贝尔群。",
+   "color": "#1F8A70",
+   "nodeCount": 17
   }
  ],
  "clusters": [
@@ -290,6 +306,44 @@
     "thm.metric-compact-equiv",
     "prop.compact-subset-closed",
     "prop.subset-compact-equiv"
+   ]
+  },
+  {
+   "id": "topo.chaus",
+   "name": "紧 Haus 与 Stone",
+   "parent": "topology",
+   "desc": "造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。",
+   "nodeCount": 18,
+   "nodes": [
+    "def.chaus",
+    "prop.chaus-reflective",
+    "lem.minimal-closed-surjection",
+    "def.free-compact-hausdorff",
+    "prop.chaus-quotient-of-free",
+    "def.projective-object",
+    "prop.free-projective",
+    "def.free-presentation",
+    "cor.chaus-free-presentation",
+    "prop.component-clopen",
+    "def.stone-space",
+    "prop.stonean-basic",
+    "prop.td-reflective",
+    "prop.stone-reflective",
+    "def.profinite",
+    "thm.stone-profinite",
+    "thm.gleason",
+    "cor.stonean-retract"
+   ]
+  },
+  {
+   "id": "topo.cg",
+   "name": "紧生成空间",
+   "parent": "topology",
+   "desc": "造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。",
+   "nodeCount": 2,
+   "nodes": [
+    "def.compactly-generated",
+    "prop.cg-coreflective"
    ]
   },
   {
@@ -565,8 +619,8 @@
    "id": "cat.limit",
    "name": "图与极限",
    "parent": "category",
-   "desc": "造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子，再落回子对象与像。",
-   "nodeCount": 13,
+   "desc": "造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子。",
+   "nodeCount": 9,
    "nodes": [
     "def.commutative-diagram",
     "def.simplicial",
@@ -576,9 +630,18 @@
     "def.product",
     "def.fibered-product",
     "def.equalizer",
+    "thm.lim-functor"
+   ]
+  },
+  {
+   "id": "cat.structure",
+   "name": "单满、子对象与像",
+   "parent": "category",
+   "desc": "造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。",
+   "nodeCount": 4,
+   "nodes": [
     "def.mono",
     "def.subobject",
-    "thm.lim-functor",
     "def.image",
     "def.elements-category"
    ]
@@ -622,33 +685,6 @@
     "def.kan-extension",
     "ex.kan-extension",
     "prop.filtered-exact"
-   ]
-  },
-  {
-   "id": "cat.chaus",
-   "name": "紧 Haus 与 Stone",
-   "parent": "category",
-   "desc": "造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。",
-   "nodeCount": 18,
-   "nodes": [
-    "def.chaus",
-    "prop.chaus-reflective",
-    "lem.minimal-closed-surjection",
-    "def.free-compact-hausdorff",
-    "prop.chaus-quotient-of-free",
-    "def.projective-object",
-    "prop.free-projective",
-    "def.free-presentation",
-    "cor.chaus-free-presentation",
-    "prop.component-clopen",
-    "def.stone-space",
-    "prop.stonean-basic",
-    "prop.td-reflective",
-    "prop.stone-reflective",
-    "def.profinite",
-    "thm.stone-profinite",
-    "thm.gleason",
-    "cor.stonean-retract"
    ]
   },
   {
@@ -706,22 +742,66 @@
    ]
   },
   {
-   "id": "cat.cg",
-   "name": "紧生成空间",
-   "parent": "category",
-   "desc": "造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。",
-   "nodeCount": 2,
+   "id": "hom.ab",
+   "name": "加法与阿贝尔范畴",
+   "parent": "homology",
+   "desc": "造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。",
+   "nodeCount": 3,
    "nodes": [
-    "def.compactly-generated",
-    "prop.cg-coreflective"
+    "def.ab-axioms",
+    "def.grothendieck-category",
+    "def.abelian-category"
    ]
   },
   {
-   "id": "cond",
+   "id": "hom.complex",
+   "name": "复形与导出三角",
+   "parent": "homology",
+   "desc": "造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。",
+   "nodeCount": 8,
+   "nodes": [
+    "def.cochain-complex",
+    "prop.complex-additive",
+    "def.homotopy",
+    "def.homotopy-category",
+    "def.mapping-cone",
+    "def.distinguished-triangle",
+    "prop.triangle-rotation",
+    "lem.triangle-morphism"
+   ]
+  },
+  {
+   "id": "hom.cohomology",
+   "name": "同调与正合列",
+   "parent": "homology",
+   "desc": "造出「把复形读成不变量」这件事：同调 → 上同调函子 → 长正合列 → 拟同构与零调 → 内射对象。",
+   "nodeCount": 6,
+   "nodes": [
+    "def.cohomology",
+    "prop.cohomology-exact-sequence",
+    "def.cohomological-functor",
+    "thm.long-exact",
+    "def.quasi-iso",
+    "prop.injective-criterion"
+   ]
+  },
+  {
+   "id": "hom.spectral",
+   "name": "过滤与谱序列",
+   "parent": "homology",
+   "desc": "造出「逐层逼近同调」的工具：带过滤的对象 → 关联分次 → 谱序列从 $E_{r}$ 页逐页算到 $E_{\\infty}$。",
+   "nodeCount": 2,
+   "nodes": [
+    "def.filtration",
+    "def.spectral-sequence"
+   ]
+  },
+  {
+   "id": "cond.set",
    "name": "凝聚态集",
-   "parent": "category",
-   "desc": "造出终点站：紧 Hausdorff 空间上的层就是凝聚态集，换到自由对象上退化成「保有限积」，再往上走凝聚态阿贝尔群。",
-   "nodeCount": 19,
+   "parent": "condensed",
+   "desc": "造出主角：紧 Hausdorff 空间上的层就是凝聚态集；换到自由对象上，层条件退化成「保有限积」。",
+   "nodeCount": 11,
    "nodes": [
     "def.chaus-pretopos",
     "def.condensed-set",
@@ -733,41 +813,22 @@
     "prop.cond-epi",
     "prop.cond-projectives",
     "def.underlying-topological-space",
-    "thm.top-cond-adjoint",
+    "thm.top-cond-adjoint"
+   ]
+  },
+  {
+   "id": "cond.ab",
+   "name": "凝聚态阿贝尔群",
+   "parent": "condensed",
+   "desc": "在凝聚态集上做代数：阿贝尔群值层 → 截面函子 → 足够多投射对象 → 张量与内 Hom。",
+   "nodeCount": 6,
+   "nodes": [
     "def.condensed-abelian-group",
     "prop.condab-section",
-    "def.ab-axioms",
-    "def.grothendieck-category",
     "thm.condab-ab",
     "lem.stonean-projective",
     "prop.condab-generated",
     "prop.condab-tensor"
-   ]
-  },
-  {
-   "id": "cat.homology",
-   "name": "同调代数",
-   "parent": "category",
-   "desc": "造出「复形」这套机器：复形 → 同伦 → 同伦范畴 → 映射锥与导出三角 → 同调与长正合列 → 拟同构 → 内射对象 → 谱序列。",
-   "nodeCount": 17,
-   "nodes": [
-    "def.abelian-category",
-    "def.cochain-complex",
-    "prop.complex-additive",
-    "def.homotopy",
-    "def.homotopy-category",
-    "def.mapping-cone",
-    "def.distinguished-triangle",
-    "prop.triangle-rotation",
-    "lem.triangle-morphism",
-    "def.cohomology",
-    "prop.cohomology-exact-sequence",
-    "def.cohomological-functor",
-    "thm.long-exact",
-    "def.quasi-iso",
-    "prop.injective-criterion",
-    "def.filtration",
-    "def.spectral-sequence"
    ]
   }
  ],
@@ -6375,7 +6436,7 @@
    "regions": [
     "category"
    ],
-   "cluster": "cat.limit",
+   "cluster": "cat.structure",
    "layer": 13,
    "tags": [
     "范畴论",
@@ -6395,7 +6456,7 @@
    "regions": [
     "category"
    ],
-   "cluster": "cat.limit",
+   "cluster": "cat.structure",
    "layer": 14,
    "tags": [
     "范畴论",
@@ -6435,7 +6496,7 @@
    "regions": [
     "category"
    ],
-   "cluster": "cat.limit",
+   "cluster": "cat.structure",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -6455,7 +6516,7 @@
    "regions": [
     "category"
    ],
-   "cluster": "cat.limit",
+   "cluster": "cat.structure",
    "layer": 11,
    "tags": [
     "范畴论",
@@ -6932,12 +6993,11 @@
    "type": "definition",
    "label": "紧 Hausdorff 空间范畴",
    "title": "紧 Hausdorff 空间范畴 $\\mathbf{CHaus}$",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 14,
    "tags": [
     "范畴论",
@@ -6952,13 +7012,12 @@
    "id": "prop.chaus-reflective",
    "type": "proposition",
    "label": "紧 Haus 是反射子范畴",
-   "title": "Stone–Čech 紧化：$\\mathbf{CHaus}$ 是 $\\mathbf{Top}$ 的反射子范畴",
-   "region": "category",
+   "title": "Stone–Čech 紧化",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -6974,12 +7033,11 @@
    "type": "lemma",
    "label": "满射的极小闭子集",
    "title": "满连续映射的极小闭子集",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 14,
    "tags": [
     "范畴论",
@@ -6995,12 +7053,11 @@
    "type": "definition",
    "label": "自由紧 Hausdorff 空间",
    "title": "自由紧 Hausdorff 空间（Free Compact Hausdorff Space）",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -7016,12 +7073,11 @@
    "type": "proposition",
    "label": "紧 Haus 是自由的商",
    "title": "每个紧 Hausdorff 空间都是自由紧 Hausdorff 空间的商",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7037,11 +7093,11 @@
    "type": "definition",
    "label": "投射 / 内射对象",
    "title": "投射对象与内射对象（Projective / Injective Object）",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category"
+    "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 14,
    "tags": [
     "范畴论",
@@ -7057,12 +7113,11 @@
    "type": "proposition",
    "label": "自由紧 Haus 是投射对象",
    "title": "自由紧 Hausdorff 空间是 $\\mathbf{CHaus}$ 的投射对象",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7078,12 +7133,11 @@
    "type": "definition",
    "label": "自由表示",
    "title": "自由表示（Free Presentation）",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -7099,12 +7153,11 @@
    "type": "corollary",
    "label": "紧 Haus 都有自由表示",
    "title": "每个紧 Hausdorff 空间都有自由表示",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7120,12 +7173,11 @@
    "type": "proposition",
    "label": "连通分量是闭开邻域之交",
    "title": "紧 Hausdorff 空间中连通分量 = 闭开邻域之交",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -7141,12 +7193,11 @@
    "type": "definition",
    "label": "全不连通与 Stone 空间",
    "title": "Stone 空间与 Stonean 空间（Stone / Stonean Space）",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 15,
    "tags": [
     "范畴论",
@@ -7162,12 +7213,11 @@
    "type": "proposition",
    "label": "极端不连通的基本性质",
    "title": "极端不连通的性质",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7183,12 +7233,11 @@
    "type": "proposition",
    "label": "全不连通空间是反射子范畴",
    "title": "全不连通空间是 $\\mathbf{Top}$ 的反射子范畴",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7204,12 +7253,11 @@
    "type": "proposition",
    "label": "Stone 空间是 CHaus 的反射子范畴",
    "title": "Stone 空间是 $\\mathbf{CHaus}$ 的反射子范畴",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7225,12 +7273,11 @@
    "type": "definition",
    "label": "投射有限空间",
    "title": "投射有限空间（Profinite Space）",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 12,
    "tags": [
     "范畴论",
@@ -7246,12 +7293,11 @@
    "type": "theorem",
    "label": "Stone ⟺ 投射有限",
    "title": "Stone 空间 $\\iff$ 投射有限空间",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 17,
    "tags": [
     "范畴论",
@@ -7267,12 +7313,11 @@
    "type": "theorem",
    "label": "Gleason 定理",
    "title": "Gleason 定理：$\\mathbf{CHaus}$ 的投射对象",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 16,
    "tags": [
     "范畴论",
@@ -7288,12 +7333,11 @@
    "type": "corollary",
    "label": "Stonean 是收缩核",
    "title": "Stonean 空间 = 自由紧 Hausdorff 空间的收缩核",
-   "region": "category",
+   "region": "topology",
    "regions": [
-    "category",
     "topology"
    ],
-   "cluster": "cat.chaus",
+   "cluster": "topo.chaus",
    "layer": 17,
    "tags": [
     "范畴论",
@@ -8030,10 +8074,9 @@
    "title": "紧生成空间 / $k$-空间（Compactly Generated Space）",
    "region": "topology",
    "regions": [
-    "topology",
-    "category"
+    "topology"
    ],
-   "cluster": "cat.cg",
+   "cluster": "topo.cg",
    "layer": 15,
    "tags": [
     "拓扑",
@@ -8051,10 +8094,9 @@
    "title": "紧生成空间是 $\\mathbf{Top}$ 的余反射子范畴",
    "region": "topology",
    "regions": [
-    "topology",
-    "category"
+    "topology"
    ],
-   "cluster": "cat.cg",
+   "cluster": "topo.cg",
    "layer": 16,
    "tags": [
     "拓扑",
@@ -8070,12 +8112,11 @@
    "type": "theorem",
    "label": "CHaus 是预拓扑斯",
    "title": "$\\mathbf{CHaus}$ 是预拓扑斯",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8091,12 +8132,11 @@
    "type": "definition",
    "label": "凝聚态集",
    "title": "凝聚态集（Condensed Set）",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8112,12 +8152,11 @@
    "type": "proposition",
    "label": "凝聚态集的刻画",
    "title": "预层是凝聚态集的两条判据",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 17,
    "tags": [
     "凝聚态",
@@ -8133,12 +8172,11 @@
    "type": "theorem",
    "label": "Cond 是拓扑斯",
    "title": "凝聚态集的范畴是拓扑斯",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 18,
    "tags": [
     "凝聚态",
@@ -8150,15 +8188,14 @@
   },
   {
    "id": "prop.fchaus-pretopology",
-   "type": "definition",
+   "type": "proposition",
    "label": "FCHaus 上的预拓扑",
    "title": "有限不交并给出自由紧 Hausforff 空间上的预拓扑",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8174,12 +8211,11 @@
    "type": "proposition",
    "label": "FCHaus 上层的判据",
    "title": "自由紧 Hausforff 空间上的层 $\\iff$ 保有限积",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8195,12 +8231,11 @@
    "type": "theorem",
    "label": "Cond 即 FCHaus 上的层",
    "title": "$\\mathrm{Cond} \\simeq \\widehat{\\mathbf{FCHaus}}$",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 17,
    "tags": [
     "凝聚态",
@@ -8216,12 +8251,11 @@
    "type": "proposition",
    "label": "凝聚态集满态射的判据",
    "title": "凝聚态集的满态射",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8236,12 +8270,11 @@
    "type": "proposition",
    "label": "Cond 有足够多投射对象",
    "title": "$\\mathrm{Cond}$ 的投射对象",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 15,
    "tags": [
     "凝聚态",
@@ -8256,12 +8289,11 @@
    "type": "definition",
    "label": "底拓扑空间",
    "title": "凝聚态集的底拓扑空间",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 15,
    "tags": [
     "凝聚态",
@@ -8276,12 +8308,11 @@
    "type": "theorem",
    "label": "Top 与 Cond 的伴随",
    "title": "$\\mathbf{Top} \\to \\mathrm{Cond}$ 与它的伴随",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.set",
    "layer": 17,
    "tags": [
     "凝聚态",
@@ -8297,12 +8328,11 @@
    "type": "definition",
    "label": "凝聚态阿贝尔群",
    "title": "凝聚态阿贝尔群（Condensed Abelian Group）",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 17,
    "tags": [
     "凝聚态",
@@ -8318,12 +8348,11 @@
    "type": "proposition",
    "label": "截面函子保极限余极限",
    "title": "截面函子 $\\Gamma(F, -)$",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8339,11 +8368,11 @@
    "type": "definition",
    "label": "Grothendieck 的 AB 公理",
    "title": "Grothendieck 的 AB 公理（AB1–AB6）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cond",
+   "cluster": "hom.ab",
    "layer": 17,
    "tags": [
     "同调代数",
@@ -8359,11 +8388,11 @@
    "type": "definition",
    "label": "Grothendieck 范畴",
    "title": "Grothendieck 范畴（Grothendieck Category）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cond",
+   "cluster": "hom.ab",
    "layer": 18,
    "tags": [
     "范畴论",
@@ -8379,12 +8408,11 @@
    "type": "theorem",
    "label": "CondAb 满足 AB6 与 AB4*",
    "title": "$\\mathrm{CondAb}$ 的 AB 公理",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 19,
    "tags": [
     "凝聚态",
@@ -8400,12 +8428,11 @@
    "type": "lemma",
    "label": "Stonean 给出有限表现投射对象",
    "title": "Stonean 空间给出有限表现的投射对象",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 16,
    "tags": [
     "凝聚态",
@@ -8421,12 +8448,11 @@
    "type": "proposition",
    "label": "CondAb 由有限表现投射对象生成",
    "title": "$\\mathrm{CondAb}$ 的生成元",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 15,
    "tags": [
     "凝聚态",
@@ -8442,12 +8468,11 @@
    "type": "proposition",
    "label": "CondAb 上的张量与内 Hom",
    "title": "$\\mathrm{CondAb}$ 上的 $\\otimes_{\\mathbb{Z}}$ 与 $\\operatorname{Hom}_{\\mathbb{Z}}$",
-   "region": "category",
+   "region": "condensed",
    "regions": [
-    "category",
-    "topology"
+    "condensed"
    ],
-   "cluster": "cond",
+   "cluster": "cond.ab",
    "layer": 18,
    "tags": [
     "凝聚态",
@@ -8463,11 +8488,11 @@
    "type": "definition",
    "label": "加法 / 阿贝尔范畴",
    "title": "加法范畴与阿贝尔范畴（Additive / Abelian Category）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.ab",
    "layer": 16,
    "tags": [
     "同调代数",
@@ -8483,11 +8508,11 @@
    "type": "definition",
    "label": "上链复形",
    "title": "复形（Complex）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 10,
    "tags": [
     "同调代数",
@@ -8503,11 +8528,11 @@
    "type": "proposition",
    "label": "复形范畴是加法范畴",
    "title": "复形范畴的性质",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 13,
    "tags": [
     "同调代数",
@@ -8523,11 +8548,11 @@
    "type": "definition",
    "label": "同伦",
    "title": "同伦（Homotopy）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 11,
    "tags": [
     "同调代数",
@@ -8543,11 +8568,11 @@
    "type": "definition",
    "label": "同伦范畴",
    "title": "同伦范畴（Homotopy Category）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 12,
    "tags": [
     "同调代数",
@@ -8562,11 +8587,11 @@
    "type": "definition",
    "label": "映射锥",
    "title": "映射锥与位移（Mapping Cone）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 13,
    "tags": [
     "同调代数",
@@ -8582,11 +8607,11 @@
    "type": "definition",
    "label": "导出三角",
    "title": "导出三角（Distinguished Triangle）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 14,
    "tags": [
     "同调代数",
@@ -8602,11 +8627,11 @@
    "type": "proposition",
    "label": "三角的旋转与延拓",
    "title": "导出三角的基本性质",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 15,
    "tags": [
     "同调代数",
@@ -8622,11 +8647,11 @@
    "type": "lemma",
    "label": "三角态射的性质",
    "title": "导出三角之间态射的性质",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.complex",
    "layer": 15,
    "tags": [
     "同调代数",
@@ -8642,11 +8667,11 @@
    "type": "definition",
    "label": "同调",
    "title": "同调（Cohomology）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.cohomology",
    "layer": 13,
    "tags": [
     "同调代数",
@@ -8662,11 +8687,11 @@
    "type": "proposition",
    "label": "同调的短正合列",
    "title": "把同调夹在两个余核 / 核之间",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.cohomology",
    "layer": 13,
    "tags": [
     "同调代数",
@@ -8682,11 +8707,11 @@
    "type": "definition",
    "label": "上同调函子",
    "title": "上同调函子（Cohomological Functor）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.cohomology",
    "layer": 15,
    "tags": [
     "同调代数",
@@ -8702,11 +8727,11 @@
    "type": "theorem",
    "label": "长正合列",
    "title": "短正合列给出长正合列（蛇引理）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.cohomology",
    "layer": 16,
    "tags": [
     "同调代数",
@@ -8722,11 +8747,11 @@
    "type": "definition",
    "label": "拟同构",
    "title": "拟同构与零调复形（Quasi-Isomorphism）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.cohomology",
    "layer": 14,
    "tags": [
     "同调代数",
@@ -8742,12 +8767,12 @@
    "type": "proposition",
    "label": "内射对象的判据",
    "title": "内射对象的四条等价说法",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
-   "layer": 14,
+   "cluster": "hom.cohomology",
+   "layer": 15,
    "tags": [
     "同调代数",
     "内射对象",
@@ -8762,11 +8787,11 @@
    "type": "definition",
    "label": "过滤",
    "title": "过滤（Filtration）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.spectral",
    "layer": 15,
    "tags": [
     "同调代数",
@@ -8782,11 +8807,11 @@
    "type": "definition",
    "label": "谱序列",
    "title": "谱序列（Spectral Sequence）",
-   "region": "category",
+   "region": "homology",
    "regions": [
-    "category"
+    "homology"
    ],
-   "cluster": "cat.homology",
+   "cluster": "hom.spectral",
    "layer": 16,
    "tags": [
     "同调代数",
@@ -13006,6 +13031,759 @@
    "note": "极端不连通的表述与推论都落在**闭开集**上。"
   },
   {
+   "id": "def-dep.limit-functoriality",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.limit",
+   "usedBy": "thm.lim-functor",
+   "note": "函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。"
+  },
+  {
+   "id": "def-dep.nat-limfunctor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.natural-transformation",
+   "usedBy": "thm.lim-functor",
+   "note": "输入是一个**自然变换** $\\alpha : F \\implies G$，输出是极限之间的唯一态射。"
+  },
+  {
+   "id": "def-dep.nat-yoneda",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.natural-transformation",
+   "usedBy": "lem.yoneda",
+   "note": "引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。"
+  },
+  {
+   "id": "def-dep.functor-yoneda",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "lem.yoneda",
+   "note": "引理对**任意函子** $F : \\mathcal{C} \\to \\mathbf{Set}$ 成立。"
+  },
+  {
+   "id": "def-dep.nat-yoneda-embedding",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.natural-transformation",
+   "usedBy": "prop.yoneda-embedding",
+   "note": "全忠实说的是**自然变换集** $\\operatorname{Hom}_{\\widehat{\\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\\operatorname{Hom}_{\\mathcal{C}}(X, Y)$ 的双射。"
+  },
+  {
+   "id": "def-dep.adjoint-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "thm.right-adjoint-criterion",
+   "note": "判据说的正是「$F$ 有没有**右伴随**」。"
+  },
+  {
+   "id": "def-dep.adjoint-ff",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.adjoint-full-faithful",
+   "note": "命题谈的是**伴随**里左（右）伴随的那个函子。"
+  },
+  {
+   "id": "def-dep.ff-adjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ff-faithful",
+   "usedBy": "prop.adjoint-full-faithful",
+   "note": "「$F$ **全忠实**」用的是忠实与满的定义。"
+  },
+  {
+   "id": "def-dep.unit-adjoint-ff",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjunction-unit",
+   "usedBy": "prop.adjoint-full-faithful",
+   "note": "命题的另一边是「**单位** $\\eta$ 是同构」。"
+  },
+  {
+   "id": "def-dep.diagram-limit-adjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.commutative-diagram",
+   "usedBy": "prop.limit-adjoint",
+   "note": "命题里的 $\\Delta : \\mathcal{C} \\to \\mathcal{C}^{I}$ 是**常图函子**，$\\mathcal{C}^{I}$ 是图范畴。"
+  },
+  {
+   "id": "def-dep.adjoint-saft",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "thm.saft",
+   "note": "SAFT 的结论是「$G$ 有**左伴随**」。"
+  },
+  {
+   "id": "def-dep.reflective-limits",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.reflective-subcategory",
+   "usedBy": "prop.reflective-limits",
+   "note": "命题谈的是**反射子范畴**里的极限与余极限。"
+  },
+  {
+   "id": "def-dep.diagram-filtered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.commutative-diagram",
+   "usedBy": "prop.filtered-exact",
+   "note": "余极限函子 $\\varinjlim : \\mathbf{Set}^{I} \\to \\mathbf{Set}$ 的定义域是**图范畴**。"
+  },
+  {
+   "id": "def-dep.adjoint-chaus-reflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.chaus-reflective",
+   "note": "「$\\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。"
+  },
+  {
+   "id": "def-dep.hausdorff-stonecech",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "prop.chaus-reflective",
+   "note": "$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。"
+  },
+  {
+   "id": "def-dep.free-chaus-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.chaus-quotient-of-free",
+   "note": "命题说的商空间正是从**自由紧 Hausdorff 空间** $\\beta S^{\\mathrm{disc}}$ 商出来的。"
+  },
+  {
+   "id": "def-dep.chaus-quotient-free",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chaus",
+   "usedBy": "prop.chaus-quotient-of-free",
+   "note": "命题说的对象是 $\\mathbf{CHaus}$ 中的空间。"
+  },
+  {
+   "id": "def-dep.projective-free",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "prop.free-projective",
+   "note": "命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。"
+  },
+  {
+   "id": "def-dep.free-projective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.free-projective",
+   "note": "命题谈的是**自由紧 Hausdorff 空间**。"
+  },
+  {
+   "id": "def-dep.free-presentation-cor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-presentation",
+   "usedBy": "cor.chaus-free-presentation",
+   "note": "推论说每个对象都**有**自由表示。"
+  },
+  {
+   "id": "def-dep.chaus-component",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chaus",
+   "usedBy": "prop.component-clopen",
+   "note": "证明里用到紧 Hausdorff 空间是**正规**的。"
+  },
+  {
+   "id": "def-dep.stone-stonean-basic",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stone-space",
+   "usedBy": "prop.stonean-basic",
+   "note": "命题谈的是**极端不连通**（以及由它推出的全不连通）。"
+  },
+  {
+   "id": "def-dep.stone-reflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stone-space",
+   "usedBy": "prop.stone-reflective",
+   "note": "「Stone 空间」是**全不连通的紧 Hausdorff 空间**。"
+  },
+  {
+   "id": "def-dep.stone-td-reflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stone-space",
+   "usedBy": "prop.td-reflective",
+   "note": "全不连通是 Stone 空间定义里的一半。"
+  },
+  {
+   "id": "def-dep.connected-td-reflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.connected",
+   "usedBy": "prop.td-reflective",
+   "note": "反射 $\\pi_{0}$ 就是把每个点送到它的**连通分量**。"
+  },
+  {
+   "id": "def-dep.gleason-retract",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.gleason",
+   "usedBy": "cor.stonean-retract",
+   "note": "推论把 Gleason 定理翻译成「Stonean = **收缩核**」。"
+  },
+  {
+   "id": "def-dep.sheaf-descent",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "thm.sheaf-descent",
+   "note": "定理给「是层」一个可以逐项验证的**正合列**判据。"
+  },
+  {
+   "id": "def-dep.fibered-descent",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "thm.sheaf-descent",
+   "note": "正合列里的 $X_{i} \\times_{X} X_{j}$ 是**纤维积**。"
+  },
+  {
+   "id": "def-dep.cech-properties",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-functor",
+   "usedBy": "prop.cech-properties",
+   "note": "三条性质都是关于 $\\widehat{H}$ 的。"
+  },
+  {
+   "id": "def-dep.cech-sheafification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-functor",
+   "usedBy": "thm.sheafification",
+   "note": "层化取「对预层做两次 **Čech 构造**」。"
+  },
+  {
+   "id": "def-dep.reflective-sheafification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.reflective-subcategory",
+   "usedBy": "thm.sheafification",
+   "note": "定理的结论是「层范畴是**反射子范畴**」。"
+  },
+  {
+   "id": "def-dep.universal-site",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.universal-colimit",
+   "usedBy": "prop.site-properties",
+   "note": "五条性质里出现了**万有余极限、万有满态射、不交余积**。"
+  },
+  {
+   "id": "def-dep.equalizer-mono-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "prop.sheaf-mono-epi-iso",
+   "note": "「满-单分解」把任意态射拆成 $F \\twoheadrightarrow I \\rightarrowtail G$。"
+  },
+  {
+   "id": "def-dep.sheaf-epi-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "prop.sheaf-epi-criterion",
+   "note": "命题说的是**层**之间的态射什么时候是满的。"
+  },
+  {
+   "id": "def-dep.effective-sheafify",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.effective-equivalence",
+   "usedBy": "prop.sheafify-equivalence",
+   "note": "命题说的是**层化**与等价关系、商的交换。"
+  },
+  {
+   "id": "def-dep.sieve-covering-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sieve",
+   "usedBy": "prop.covering-sieve-epi",
+   "note": "命题说覆盖族生成**覆盖筛**与余积满射是一回事。"
+  },
+  {
+   "id": "def-dep.universal-disjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.universal-colimit",
+   "usedBy": "prop.disjoint-universal",
+   "note": "命题说的是**不交万有余积**在次标准拓扑下保持不变。"
+  },
+  {
+   "id": "def-dep.canonical-disjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.canonical-topology",
+   "usedBy": "prop.disjoint-universal",
+   "note": "「次标准」是命题的关键假设。"
+  },
+  {
+   "id": "def-dep.pretopos-factorization",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.pretopos",
+   "usedBy": "prop.pretopos-factorization",
+   "note": "命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。"
+  },
+  {
+   "id": "def-dep.image-pretopos-factorization",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.image",
+   "usedBy": "prop.pretopos-factorization",
+   "note": "结论里「严格」说的是 $\\operatorname{im} f \\cong \\operatorname{coim} f$。"
+  },
+  {
+   "id": "def-dep.subobject-lattice",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.subobject",
+   "usedBy": "prop.subobject-lattice",
+   "note": "命题说的是**子对象**全体构成有界格。"
+  },
+  {
+   "id": "def-dep.fibered-subobject-lattice",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "prop.subobject-lattice",
+   "note": "格里的交就是**纤维积**（拉回）。"
+  },
+  {
+   "id": "def-dep.sheaf-precanonical",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "prop.precanonical-sheaf",
+   "note": "命题给出预标准拓扑下「是**层**」的两条可验等式。"
+  },
+  {
+   "id": "def-dep.precanonical-preserves",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.precanonical-topology",
+   "usedBy": "prop.precanonical-preserves",
+   "note": "命题谈的是**预标准拓扑**下余积与商是否走样。"
+  },
+  {
+   "id": "def-dep.sheaf-mono-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "prop.precanonical-mono-epi",
+   "note": "命题比较的是 $\\mathcal{C}$ 里的单满与它在**层**范畴里的像。"
+  },
+  {
+   "id": "def-dep.topos-giraud",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topos",
+   "usedBy": "thm.giraud",
+   "note": "Giraud 定理给出「是**拓扑斯**」的四个等价说法。"
+  },
+  {
+   "id": "def-dep.canonical-giraud",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.canonical-topology",
+   "usedBy": "thm.giraud",
+   "note": "第 2 条说的是对**标准拓扑**而言的层。"
+  },
+  {
+   "id": "def-dep.representable-giraud",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.representable",
+   "usedBy": "thm.giraud",
+   "note": "第 2 条的关键词是「层都**可表示**」。"
+  },
+  {
+   "id": "def-dep.topos-covering-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topos",
+   "usedBy": "prop.topos-covering-epi",
+   "note": "命题在**拓扑斯**里把「覆盖」与余积满射对起来。"
+  },
+  {
+   "id": "def-dep.topology-covering-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.grothendieck-topology",
+   "usedBy": "prop.topos-covering-epi",
+   "note": "命题的左边是「$(X_{i} \\to X)$ 是**覆盖**」，即生成覆盖筛。"
+  },
+  {
+   "id": "def-dep.representable-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.representable",
+   "usedBy": "lem.representable-quotient",
+   "note": "引理说的是「**可表示性**可以从覆盖的一块块传回整体」。"
+  },
+  {
+   "id": "def-dep.effective-quotient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.effective-equivalence",
+   "usedBy": "lem.representable-quotient",
+   "note": "把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。"
+  },
+  {
+   "id": "def-dep.sheaf-limits",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "prop.topos-sheaf-limits",
+   "note": "命题把「是**层**」与「保所有极限」说成一回事。"
+  },
+  {
+   "id": "def-dep.limit-sheaf-limits",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.limit",
+   "usedBy": "prop.topos-sheaf-limits",
+   "note": "「保**极限**」是命题的另一半。"
+  },
+  {
+   "id": "def-dep.fibered-qc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "prop.quasi-compact-properties",
+   "note": "第 3 条里的「存在满射 $X \\to F$」用的是 $\\mathcal{C}$ 里的对象覆盖层。"
+  },
+  {
+   "id": "def-dep.qc-pretopos-qcqs",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quasi-compact",
+   "usedBy": "thm.pretopos-qcqs",
+   "note": "定理的两边之一是**拟紧**。"
+  },
+  {
+   "id": "def-dep.qs-pretopos-qcqs",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quasi-separated",
+   "usedBy": "thm.pretopos-qcqs",
+   "note": "另一边是**拟分离**。"
+  },
+  {
+   "id": "def-dep.pretopos-condensed-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.pretopos",
+   "usedBy": "prop.condensed-criterion",
+   "note": "两条判据来自「$\\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。"
+  },
+  {
+   "id": "def-dep.condensed-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.condensed-set",
+   "usedBy": "prop.condensed-criterion",
+   "note": "判据给出的是「预层是**凝聚态集**」的等价条件。"
+  },
+  {
+   "id": "def-dep.condensed-topos",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.condensed-set",
+   "usedBy": "thm.cond-topos",
+   "note": "定理说的是 $\\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。"
+  },
+  {
+   "id": "def-dep.free-pretopology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.fchaus-pretopology",
+   "note": "预拓扑搭在**自由紧 Hausdorff 空间**上。"
+  },
+  {
+   "id": "def-dep.projective-pretopology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "prop.fchaus-pretopology",
+   "note": "「满射有截面」说的是这些对象**投射**。"
+  },
+  {
+   "id": "def-dep.free-sheaf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.fchaus-sheaf",
+   "note": "命题谈的是**自由紧 Hausdorff 空间**上的层。"
+  },
+  {
+   "id": "def-dep.sheaf-cond-equiv",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "thm.cond-equiv-fchaus",
+   "note": "定理说两边的**层**范畴是同一个。"
+  },
+  {
+   "id": "def-dep.sheaf-cond-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "prop.cond-epi",
+   "note": "命题说的是**凝聚态集**（层）之间满态射的判据。"
+  },
+  {
+   "id": "def-dep.free-cond-epi",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.cond-epi",
+   "note": "探针取的是**自由**紧 Hausdorff 空间。"
+  },
+  {
+   "id": "def-dep.projective-cond",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "prop.cond-projectives",
+   "note": "命题说自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里是**投射对象**。"
+  },
+  {
+   "id": "def-dep.condensed-top-adjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.condensed-set",
+   "usedBy": "thm.top-cond-adjoint",
+   "note": "定理里的函子 $X \\mapsto \\underline{X}$ 以**凝聚态集**为靶。"
+  },
+  {
+   "id": "def-dep.cg-top-cond",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "thm.top-cond-adjoint",
+   "note": "限制到**紧生成空间**上时那个函子变得全忠实。"
+  },
+  {
+   "id": "def-dep.cg-coreflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compactly-generated",
+   "usedBy": "prop.cg-coreflective",
+   "note": "命题说的是**紧生成空间**是余反射子范畴。"
+  },
+  {
+   "id": "def-dep.condab-tensor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.condensed-abelian-group",
+   "usedBy": "prop.condab-tensor",
+   "note": "两个双函子定义在**凝聚态阿贝尔群**范畴上。"
+  },
+  {
+   "id": "def-dep.adjoint-cg-coreflective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.cg-coreflective",
+   "note": "「余反射」的意思是含入函子有**右伴随**。"
+  },
+  {
+   "id": "def-dep.free-condab-section",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.free-compact-hausdorff",
+   "usedBy": "prop.condab-section",
+   "note": "截面函子 $\\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。"
+  },
+  {
+   "id": "def-dep.limit-condab-section",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.limit",
+   "usedBy": "prop.condab-section",
+   "note": "结论说它保**所有极限与余极限**。"
+  },
+  {
+   "id": "def-dep.condab-ab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.condensed-abelian-group",
+   "usedBy": "thm.condab-ab",
+   "note": "定理说的是 $\\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。"
+  },
+  {
+   "id": "def-dep.stonean-projective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stone-space",
+   "usedBy": "lem.stonean-projective",
+   "note": "引理的输入是 **Stonean 空间**。"
+  },
+  {
+   "id": "def-dep.projective-stonean",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "lem.stonean-projective",
+   "note": "结论说 $\\mathbb{Z}\\cdot F$ 是**投射**对象。"
+  },
+  {
+   "id": "def-dep.generator-condab-generated",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.generator",
+   "usedBy": "prop.condab-generated",
+   "note": "命题说的是 $\\mathrm{CondAb}$ 由谁**生成**。"
+  },
+  {
+   "id": "def-dep.projective-condab-generated",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "prop.condab-generated",
+   "note": "生成元取的是**有限表现的投射**对象。"
+  },
+  {
+   "id": "def-dep.adjoint-condab-tensor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.condab-tensor",
+   "note": "$\\otimes_{\\mathbb{Z}}$ 与内部 $\\operatorname{Hom}_{\\mathbb{Z}}$ **互为伴随**。"
+  },
+  {
+   "id": "def-dep.complex-additive",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cochain-complex",
+   "usedBy": "prop.complex-additive",
+   "note": "命题说的是**复形**构成的那个范畴。"
+  },
+  {
+   "id": "def-dep.equalizer-complex-additive",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "prop.complex-additive",
+   "note": "核与余核都是**逐项**取出来的。"
+  },
+  {
+   "id": "def-dep.triangle-rotation",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.distinguished-triangle",
+   "usedBy": "prop.triangle-rotation",
+   "note": "命题说的是**导出三角**的基本性质。"
+  },
+  {
+   "id": "def-dep.triangle-morphism",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.distinguished-triangle",
+   "usedBy": "lem.triangle-morphism",
+   "note": "引理说的是**导出三角**之间态射的性质。"
+  },
+  {
+   "id": "def-dep.homotopy-triangle-morphism",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.homotopy",
+   "usedBy": "lem.triangle-morphism",
+   "note": "「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。"
+  },
+  {
+   "id": "def-dep.equalizer-cohomology-sequence",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "prop.cohomology-exact-sequence",
+   "note": "这条正合列把同调夹在**余核**与**核**之间。"
+  },
+  {
+   "id": "def-dep.cohomology-long-exact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cohomology",
+   "usedBy": "thm.long-exact",
+   "note": "长正合列里跑的是**同调**。"
+  },
+  {
+   "id": "def-dep.equalizer-long-exact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "thm.long-exact",
+   "note": "「正合列」本身就是一句关于**核与像**的话。"
+  },
+  {
+   "id": "def-dep.injective-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "prop.injective-criterion",
+   "note": "命题给出**内射对象**的四条等价刻画。"
+  },
+  {
+   "id": "def-dep.mono-injective-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.mono",
+   "usedBy": "prop.injective-criterion",
+   "note": "「每个**单态射**都有收缩」是等价条件之一。"
+  },
+  {
+   "id": "def-dep.adjoint-injective-criterion",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "prop.injective-criterion",
+   "note": "「$\\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。"
+  },
+  {
+   "id": "def-dep.grothendieck-condab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.grothendieck-category",
+   "usedBy": "thm.condab-ab",
+   "note": "定理说的是 $\\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。"
+  },
+  {
+   "id": "def-dep.ab-condab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ab-axioms",
+   "usedBy": "thm.condab-ab",
+   "note": "AB6 与 AB4\\* 的含义见「Grothendieck 的 AB 公理」那条。"
+  },
+  {
+   "id": "ana.embed-better-world",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "prop.yoneda-embedding",
+   "b": "prop.chaus-reflective",
+   "title": "米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」",
+   "note": "两件事在数学上没有谁推出谁（一个是范畴嵌入，一个是拓扑紧化），但**招数是同一个**：\n**手上这个对象缺东西，就先把它嵌进一个大环境，在那里把活干完，再回到原地。**\n\n**米田嵌入**：$\\mathcal{C} \\hookrightarrow \\widehat{\\mathcal{C}}$。\n$\\mathcal{C}$ 里可能连两个对象的积都没有；$\\widehat{\\mathcal{C}}$ 里**什么极限余极限都有**。\n所以在 $\\mathcal{C}$ 里造不出来的东西，搬到 $\\widehat{\\mathcal{C}}$ 里造（稠密性定理就是把它拆成 $h_{X}$ 的余极限）。\n\n**Stone–Čech 紧化**：$X \\hookrightarrow \\beta X$。\n$X$ 可能不紧、不 Hausdorff，连连续函数都少得可怜；\n$\\beta X$ 里**紧 Hausdorff 的一切好性质都有**（Tychonoff 方块给的）。\n所以在 $X$ 上做不到的分析，搬到 $\\beta X$ 上做（凝聚态集就是拿 $\\beta X$ 当探针）。\n\n**共同的招**：不要在原环境里硬造；先找（或造）一个「什么都不缺」的大环境，嵌进去，干完再拉回来。\n💡 卡在「这个范畴 / 这个空间里根本没有我要的那个东西」时，回来想想这两条。"
+  },
+  {
    "id": "ana.sep-container",
    "kind": "analogy",
    "strength": "weak",
@@ -14054,22 +14832,6 @@
    "note": "子对象的**交**与**原像**都是用纤维积（拉回）定义的。"
   },
   {
-   "id": "def-dep.limit-functoriality",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "thm.lim-functor",
-   "note": "函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。"
-  },
-  {
-   "id": "def-dep.nat-limfunctor",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.natural-transformation",
-   "usedBy": "thm.lim-functor",
-   "note": "输入是一个**自然变换** $\\alpha : F \\implies G$，输出是极限之间的唯一态射。"
-  },
-  {
    "id": "def-dep.subobject-image",
    "kind": "definition",
    "strength": "strong",
@@ -14190,86 +14952,6 @@
    "note": "切片范畴的**指标是 $T$ 的截面** $s \\in T(X)$，没有预层就没有这些截面。"
   },
   {
-   "id": "def-dep.representable-yoneda",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.representable",
-   "usedBy": "lem.yoneda",
-   "note": "引理里的 $h^{X} = \\operatorname{Hom}_{\\mathcal{C}}(X, -)$ 正是那个**可表示函子**。"
-  },
-  {
-   "id": "def-dep.nat-yoneda",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.natural-transformation",
-   "usedBy": "lem.yoneda",
-   "note": "引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。"
-  },
-  {
-   "id": "def-dep.functor-yoneda",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.functor",
-   "usedBy": "lem.yoneda",
-   "note": "引理对**任意函子** $F : \\mathcal{C} \\to \\mathbf{Set}$ 成立。"
-  },
-  {
-   "id": "def-dep.representable-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.representable",
-   "usedBy": "thm.represented-criterion",
-   "note": "定理的左右两边都是「被 $X$ **表示**」这件事的不同说法。"
-  },
-  {
-   "id": "def-dep.nat-yoneda-embedding",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.natural-transformation",
-   "usedBy": "prop.yoneda-embedding",
-   "note": "全忠实说的是**自然变换集** $\\operatorname{Hom}_{\\widehat{\\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\\operatorname{Hom}_{\\mathcal{C}}(X, Y)$ 的双射。"
-  },
-  {
-   "id": "def-dep.ff-yoneda-embedding",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.ff-faithful",
-   "usedBy": "prop.yoneda-embedding",
-   "note": "「$\\delta$ 是**全忠实**函子」用的正是忠实与满的定义。"
-  },
-  {
-   "id": "def-dep.slice-density",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.slice-category",
-   "usedBy": "thm.density",
-   "note": "稠密性定理里的余极限跑在**切片范畴** $\\mathcal{C}_{T}$ 上。"
-  },
-  {
-   "id": "def-dep.fibered-slice",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.fibered-product",
-   "usedBy": "prop.slice-cartesian",
-   "note": "「那个方块是**笛卡尔的**」正是纤维积定义里的说法。"
-  },
-  {
-   "id": "def-dep.presheaf-mono",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.presheaf",
-   "usedBy": "lem.presheaf-mono-pointwise",
-   "note": "被检验的 $\\varphi : T \\implies T'$ 是**预层**之间的自然变换。"
-  },
-  {
-   "id": "def-dep.mono-presheaf-mono",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.mono",
-   "usedBy": "lem.presheaf-mono-pointwise",
-   "note": "结论里的单态射是范畴论意义下的**可消性**，不是逐点单射。"
-  },
-  {
    "id": "def-dep.functor-adjoint",
    "kind": "definition",
    "strength": "strong",
@@ -14308,102 +14990,6 @@
    "definition": "def.natural-transformation",
    "usedBy": "def.adjunction-unit",
    "note": "单位与余单位本身都是**自然变换**，三角等式也是自然性方块拼出来的。"
-  },
-  {
-   "id": "def-dep.adjoint-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "thm.right-adjoint-criterion",
-   "note": "判据说的正是「$F$ 有没有**右伴随**」。"
-  },
-  {
-   "id": "def-dep.representable-adjoint-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.representable",
-   "usedBy": "thm.right-adjoint-criterion",
-   "note": "判据的右端是「$\\operatorname{Hom}_{\\mathcal{D}}(F(-), Y)$ **可表示**」。"
-  },
-  {
-   "id": "def-dep.adjoint-ff",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "prop.adjoint-full-faithful",
-   "note": "命题谈的是**伴随**里左（右）伴随的那个函子。"
-  },
-  {
-   "id": "def-dep.ff-adjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.ff-faithful",
-   "usedBy": "prop.adjoint-full-faithful",
-   "note": "「$F$ **全忠实**」用的是忠实与满的定义。"
-  },
-  {
-   "id": "def-dep.unit-adjoint-ff",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjunction-unit",
-   "usedBy": "prop.adjoint-full-faithful",
-   "note": "命题的另一边是「**单位** $\\eta$ 是同构」。"
-  },
-  {
-   "id": "def-dep.limit-adjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "prop.limit-adjoint",
-   "note": "命题说的是「所有 $I$ 形状的**极限**存在」。"
-  },
-  {
-   "id": "def-dep.diagram-limit-adjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.commutative-diagram",
-   "usedBy": "prop.limit-adjoint",
-   "note": "命题里的 $\\Delta : \\mathcal{C} \\to \\mathcal{C}^{I}$ 是**常图函子**，$\\mathcal{C}^{I}$ 是图范畴。"
-  },
-  {
-   "id": "def-dep.adjoint-preserves",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "thm.right-adjoint-preserves-limits",
-   "note": "定理的前提是一对**伴随** $F \\dashv G$。"
-  },
-  {
-   "id": "def-dep.limit-preserves",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "thm.right-adjoint-preserves-limits",
-   "note": "定理的结论是 $G$ 保持**极限**。"
-  },
-  {
-   "id": "def-dep.adjoint-saft",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "thm.saft",
-   "note": "SAFT 的结论是「$G$ 有**左伴随**」。"
-  },
-  {
-   "id": "def-dep.limit-saft",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "thm.saft",
-   "note": "前提里的「完备」与「保极限」都是关于**极限**的；构造 $F(X)$ 也是取一个极限。"
-  },
-  {
-   "id": "def-dep.comma-saft",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.comma-category",
-   "usedBy": "thm.saft",
-   "note": "构造 $F(X) = \\varprojlim_{(Y,f) \\in (X \\downarrow G)} Y$ 跑在**逗号范畴** $X \\downarrow G$ 上。"
   },
   {
    "id": "def-dep.function-comma",
@@ -14446,22 +15032,6 @@
    "note": "反射说的是**满子范畴**，「满」正是函子全忠实里的一半。"
   },
   {
-   "id": "def-dep.reflective-limits",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.reflective-subcategory",
-   "usedBy": "prop.reflective-limits",
-   "note": "命题谈的是**反射子范畴**里的极限与余极限。"
-  },
-  {
-   "id": "def-dep.limit-reflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "prop.reflective-limits",
-   "note": "命题的结论是「在 $\\mathcal{C}$ 里有的**极限**（余极限）在 $\\mathcal{C}'$ 里也有」。"
-  },
-  {
    "id": "def-dep.adjoint-kan",
    "kind": "definition",
    "strength": "strong",
@@ -14484,46 +15054,6 @@
    "definition": "def.natural-transformation",
    "usedBy": "def.kan-extension",
    "note": "$\\alpha : F \\implies p_{!}F \\circ p$ 与 $\\gamma$ 都是**自然变换**。"
-  },
-  {
-   "id": "def-dep.kan-ex",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.kan-extension",
-   "usedBy": "ex.kan-extension",
-   "note": "两个例子都是「某个东西等于**左 Kan 延拓**」。"
-  },
-  {
-   "id": "def-dep.limit-kan-ex",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "ex.kan-extension",
-   "note": "**(1)** 说余极限是沿 $I \\to \\mathbf{1}$ 的左 Kan 延拓。"
-  },
-  {
-   "id": "def-dep.adjoint-kan-ex",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "ex.kan-extension",
-   "note": "**(2)** 说右伴随是 $1_{\\mathcal{C}}$ 沿 $F$ 的左 Kan 延拓。"
-  },
-  {
-   "id": "def-dep.limit-filtered",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "prop.filtered-exact",
-   "note": "结论说滤过余极限保持**有限极限** —— 「正合」是相对极限说的。"
-  },
-  {
-   "id": "def-dep.diagram-filtered",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.commutative-diagram",
-   "usedBy": "prop.filtered-exact",
-   "note": "余极限函子 $\\varinjlim : \\mathbf{Set}^{I} \\to \\mathbf{Set}$ 的定义域是**图范畴**。"
   },
   {
    "id": "def-dep.compact-chaus",
@@ -14550,38 +15080,6 @@
    "note": "把它们收成一个**范畴**：对象是空间，态射是连续映射。"
   },
   {
-   "id": "def-dep.adjoint-chaus-reflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "prop.chaus-reflective",
-   "note": "「$\\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。"
-  },
-  {
-   "id": "def-dep.compact-stonecech",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.compact",
-   "usedBy": "prop.chaus-reflective",
-   "note": "Stone–Čech 紧化的构造跑在 **Tychonoff 方块**里，紧性由 Tychonoff 定理给出。"
-  },
-  {
-   "id": "def-dep.hausdorff-stonecech",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.hausdorff",
-   "usedBy": "prop.chaus-reflective",
-   "note": "$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。"
-  },
-  {
-   "id": "def-dep.compact-minimal",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.compact",
-   "usedBy": "lem.minimal-closed-surjection",
-   "note": "极小闭子集存在用的是**紧性**（有限交性质）。"
-  },
-  {
    "id": "def-dep.chaus-free",
    "kind": "definition",
    "strength": "strong",
@@ -14590,44 +15088,12 @@
    "note": "自由紧 Hausdorff 空间是 $\\mathbf{CHaus}$ 里的对象：$F \\cong \\beta I$。"
   },
   {
-   "id": "def-dep.free-chaus-quotient",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.chaus-quotient-of-free",
-   "note": "命题说的商空间正是从**自由紧 Hausdorff 空间** $\\beta S^{\\mathrm{disc}}$ 商出来的。"
-  },
-  {
-   "id": "def-dep.chaus-quotient-free",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.chaus",
-   "usedBy": "prop.chaus-quotient-of-free",
-   "note": "命题说的对象是 $\\mathbf{CHaus}$ 中的空间。"
-  },
-  {
    "id": "def-dep.mono-projective",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.mono",
    "usedBy": "def.projective-object",
    "note": "投射性的定义要求「**满态射**有提升」，内射性对偶地要求「**单态射**有延拓」—— 纯箭头语言。"
-  },
-  {
-   "id": "def-dep.projective-free",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "prop.free-projective",
-   "note": "命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。"
-  },
-  {
-   "id": "def-dep.free-projective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.free-projective",
-   "note": "命题谈的是**自由紧 Hausdorff 空间**。"
   },
   {
    "id": "def-dep.fibered-free-presentation",
@@ -14644,38 +15110,6 @@
    "definition": "def.chaus",
    "usedBy": "def.free-presentation",
    "note": "自由表示是 $\\mathbf{CHaus}$ 里的一个满射三元组。"
-  },
-  {
-   "id": "def-dep.free-presentation-cor",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-presentation",
-   "usedBy": "cor.chaus-free-presentation",
-   "note": "推论说每个对象都**有**自由表示。"
-  },
-  {
-   "id": "def-dep.connected-component-clopen",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.connected",
-   "usedBy": "prop.component-clopen",
-   "note": "命题算的是**连通分量**。"
-  },
-  {
-   "id": "def-dep.clopen-component",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.clopen",
-   "usedBy": "prop.component-clopen",
-   "note": "连通分量被写成一切含 $x$ 的**闭开集**之交。"
-  },
-  {
-   "id": "def-dep.chaus-component",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.chaus",
-   "usedBy": "prop.component-clopen",
-   "note": "证明里用到紧 Hausdorff 空间是**正规**的。"
   },
   {
    "id": "def-dep.connected-stone",
@@ -14702,84 +15136,12 @@
    "note": "Stone 空间与 Stonean 空间分别是「全不连通」与「极端不连通」再加**紧 Hausdorff**。"
   },
   {
-   "id": "def-dep.clopen-stonean-basic",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.clopen",
-   "usedBy": "prop.stonean-basic",
-   "note": "两条性质说的都是**闭开集**与闭包的关系。"
-  },
-  {
-   "id": "def-dep.stone-stonean-basic",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.stone-space",
-   "usedBy": "prop.stonean-basic",
-   "note": "命题谈的是**极端不连通**（以及由它推出的全不连通）。"
-  },
-  {
    "id": "def-dep.limit-profinite",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.limit",
    "usedBy": "def.profinite",
    "note": "投射有限空间是有限离散空间沿有向系统的**极限**。"
-  },
-  {
-   "id": "def-dep.projective-gleason",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "thm.gleason",
-   "note": "Gleason 定理把 $\\mathbf{CHaus}$ 的**投射对象**认了出来。"
-  },
-  {
-   "id": "def-dep.stone-gleason",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.stone-space",
-   "usedBy": "thm.gleason",
-   "note": "认出的是 **Stonean 空间**。"
-  },
-  {
-   "id": "def-dep.profinite-stone",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.profinite",
-   "usedBy": "thm.stone-profinite",
-   "note": "定理说的是 Stone 空间与**投射有限空间**是同一批空间。"
-  },
-  {
-   "id": "def-dep.stone-reflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.stone-space",
-   "usedBy": "prop.stone-reflective",
-   "note": "「Stone 空间」是**全不连通的紧 Hausdorff 空间**。"
-  },
-  {
-   "id": "def-dep.stone-td-reflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.stone-space",
-   "usedBy": "prop.td-reflective",
-   "note": "全不连通是 Stone 空间定义里的一半。"
-  },
-  {
-   "id": "def-dep.connected-td-reflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.connected",
-   "usedBy": "prop.td-reflective",
-   "note": "反射 $\\pi_{0}$ 就是把每个点送到它的**连通分量**。"
-  },
-  {
-   "id": "def-dep.gleason-retract",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.gleason",
-   "usedBy": "cor.stonean-retract",
-   "note": "推论把 Gleason 定理翻译成「Stonean = **收缩核**」。"
   },
   {
    "id": "def-dep.presheaf-sieve",
@@ -14862,52 +15224,12 @@
    "note": "「$F(X) \\cong \\varprojlim_{Y \\in \\mathcal{C}/R} F(Y)$」用到了**极限**。"
   },
   {
-   "id": "def-dep.sheaf-descent",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "thm.sheaf-descent",
-   "note": "定理给「是层」一个可以逐项验证的**正合列**判据。"
-  },
-  {
-   "id": "def-dep.fibered-descent",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.fibered-product",
-   "usedBy": "thm.sheaf-descent",
-   "note": "正合列里的 $X_{i} \\times_{X} X_{j}$ 是**纤维积**。"
-  },
-  {
    "id": "def-dep.sheaf-cech",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.sheaf",
    "usedBy": "def.cech-functor",
    "note": "Čech 函子是把预层朝**层**的方向推一把的那个构造。"
-  },
-  {
-   "id": "def-dep.cech-properties",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.cech-functor",
-   "usedBy": "prop.cech-properties",
-   "note": "三条性质都是关于 $\\widehat{H}$ 的。"
-  },
-  {
-   "id": "def-dep.cech-sheafification",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.cech-functor",
-   "usedBy": "thm.sheafification",
-   "note": "层化取「对预层做两次 **Čech 构造**」。"
-  },
-  {
-   "id": "def-dep.reflective-sheafification",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.reflective-subcategory",
-   "usedBy": "thm.sheafification",
-   "note": "定理的结论是「层范畴是**反射子范畴**」。"
   },
   {
    "id": "def-dep.mono-regular-epi",
@@ -14934,30 +15256,6 @@
    "note": "万有性、不交余积都要用**纤维积**说出来。"
   },
   {
-   "id": "def-dep.universal-site",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.universal-colimit",
-   "usedBy": "prop.site-properties",
-   "note": "五条性质里出现了**万有余极限、万有满态射、不交余积**。"
-  },
-  {
-   "id": "def-dep.equalizer-mono-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.equalizer",
-   "usedBy": "prop.sheaf-mono-epi-iso",
-   "note": "「满-单分解」把任意态射拆成 $F \\twoheadrightarrow I \\rightarrowtail G$。"
-  },
-  {
-   "id": "def-dep.sheaf-epi-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "prop.sheaf-epi-criterion",
-   "note": "命题说的是**层**之间的态射什么时候是满的。"
-  },
-  {
    "id": "def-dep.equalizer-effective",
    "kind": "definition",
    "strength": "strong",
@@ -14972,14 +15270,6 @@
    "definition": "def.fibered-product",
    "usedBy": "def.effective-equivalence",
    "note": "有效性说的是 $R \\cong X \\times_{\\overline{X}} X$，一个**纤维积**。"
-  },
-  {
-   "id": "def-dep.effective-sheafify",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.effective-equivalence",
-   "usedBy": "prop.sheafify-equivalence",
-   "note": "命题说的是**层化**与等价关系、商的交换。"
   },
   {
    "id": "def-dep.topology-canonical",
@@ -15006,30 +15296,6 @@
    "note": "标准拓扑是拿**筛**一条条规定出来的。"
   },
   {
-   "id": "def-dep.sieve-covering-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sieve",
-   "usedBy": "prop.covering-sieve-epi",
-   "note": "命题说覆盖族生成**覆盖筛**与余积满射是一回事。"
-  },
-  {
-   "id": "def-dep.universal-disjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.universal-colimit",
-   "usedBy": "prop.disjoint-universal",
-   "note": "命题说的是**不交万有余积**在次标准拓扑下保持不变。"
-  },
-  {
-   "id": "def-dep.canonical-disjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.canonical-topology",
-   "usedBy": "prop.disjoint-universal",
-   "note": "「次标准」是命题的关键假设。"
-  },
-  {
    "id": "def-dep.universal-pretopos",
    "kind": "definition",
    "strength": "strong",
@@ -15054,38 +15320,6 @@
    "note": "第 4 条要求**满态射正则**。"
   },
   {
-   "id": "def-dep.pretopos-factorization",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.pretopos",
-   "usedBy": "prop.pretopos-factorization",
-   "note": "命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。"
-  },
-  {
-   "id": "def-dep.image-pretopos-factorization",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.image",
-   "usedBy": "prop.pretopos-factorization",
-   "note": "结论里「严格」说的是 $\\operatorname{im} f \\cong \\operatorname{coim} f$。"
-  },
-  {
-   "id": "def-dep.subobject-lattice",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.subobject",
-   "usedBy": "prop.subobject-lattice",
-   "note": "命题说的是**子对象**全体构成有界格。"
-  },
-  {
-   "id": "def-dep.fibered-subobject-lattice",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.fibered-product",
-   "usedBy": "prop.subobject-lattice",
-   "note": "格里的交就是**纤维积**（拉回）。"
-  },
-  {
    "id": "def-dep.pretopos-precanonical",
    "kind": "definition",
    "strength": "strong",
@@ -15100,30 +15334,6 @@
    "definition": "def.grothendieck-topology",
    "usedBy": "def.precanonical-topology",
    "note": "预标准预拓扑**生成**的 Grothendieck 拓扑叫预标准拓扑。"
-  },
-  {
-   "id": "def-dep.sheaf-precanonical",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "prop.precanonical-sheaf",
-   "note": "命题给出预标准拓扑下「是**层**」的两条可验等式。"
-  },
-  {
-   "id": "def-dep.precanonical-preserves",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.precanonical-topology",
-   "usedBy": "prop.precanonical-preserves",
-   "note": "命题谈的是**预标准拓扑**下余积与商是否走样。"
-  },
-  {
-   "id": "def-dep.sheaf-mono-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "prop.precanonical-mono-epi",
-   "note": "命题比较的是 $\\mathcal{C}$ 里的单满与它在**层**范畴里的像。"
   },
   {
    "id": "def-dep.ff-generator",
@@ -15150,92 +15360,12 @@
    "note": "第 1 条要求存在**小生成元集**。"
   },
   {
-   "id": "def-dep.topos-giraud",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.topos",
-   "usedBy": "thm.giraud",
-   "note": "Giraud 定理给出「是**拓扑斯**」的四个等价说法。"
-  },
-  {
-   "id": "def-dep.canonical-giraud",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.canonical-topology",
-   "usedBy": "thm.giraud",
-   "note": "第 2 条说的是对**标准拓扑**而言的层。"
-  },
-  {
-   "id": "def-dep.representable-giraud",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.representable",
-   "usedBy": "thm.giraud",
-   "note": "第 2 条的关键词是「层都**可表示**」。"
-  },
-  {
-   "id": "def-dep.topos-covering-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.topos",
-   "usedBy": "prop.topos-covering-epi",
-   "note": "命题在**拓扑斯**里把「覆盖」与余积满射对起来。"
-  },
-  {
-   "id": "def-dep.topology-covering-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.grothendieck-topology",
-   "usedBy": "prop.topos-covering-epi",
-   "note": "命题的左边是「$(X_{i} \\to X)$ 是**覆盖**」，即生成覆盖筛。"
-  },
-  {
-   "id": "def-dep.representable-quotient",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.representable",
-   "usedBy": "lem.representable-quotient",
-   "note": "引理说的是「**可表示性**可以从覆盖的一块块传回整体」。"
-  },
-  {
-   "id": "def-dep.effective-quotient",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.effective-equivalence",
-   "usedBy": "lem.representable-quotient",
-   "note": "把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。"
-  },
-  {
-   "id": "def-dep.sheaf-limits",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "prop.topos-sheaf-limits",
-   "note": "命题把「是**层**」与「保所有极限」说成一回事。"
-  },
-  {
-   "id": "def-dep.limit-sheaf-limits",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "prop.topos-sheaf-limits",
-   "note": "「保**极限**」是命题的另一半。"
-  },
-  {
    "id": "def-dep.topology-qc",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.grothendieck-topology",
    "usedBy": "def.quasi-compact",
    "note": "拟紧说的是：任何生成**覆盖筛**的族都有有限的子族仍然生成覆盖筛。"
-  },
-  {
-   "id": "def-dep.fibered-qc",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.fibered-product",
-   "usedBy": "prop.quasi-compact-properties",
-   "note": "第 3 条里的「存在满射 $X \\to F$」用的是 $\\mathcal{C}$ 里的对象覆盖层。"
   },
   {
    "id": "def-dep.fibered-qs",
@@ -15252,22 +15382,6 @@
    "definition": "def.quasi-compact",
    "usedBy": "def.quasi-separated",
    "note": "「拟分离」这个词里就带着「拟紧」。"
-  },
-  {
-   "id": "def-dep.qc-pretopos-qcqs",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.quasi-compact",
-   "usedBy": "thm.pretopos-qcqs",
-   "note": "定理的两边之一是**拟紧**。"
-  },
-  {
-   "id": "def-dep.qs-pretopos-qcqs",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.quasi-separated",
-   "usedBy": "thm.pretopos-qcqs",
-   "note": "另一边是**拟分离**。"
   },
   {
    "id": "def-dep.topos-morphism",
@@ -15334,116 +15448,12 @@
    "note": "「层」这个词就来自层与拓扑那一段。"
   },
   {
-   "id": "def-dep.pretopos-condensed-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.pretopos",
-   "usedBy": "prop.condensed-criterion",
-   "note": "两条判据来自「$\\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。"
-  },
-  {
-   "id": "def-dep.condensed-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.condensed-set",
-   "usedBy": "prop.condensed-criterion",
-   "note": "判据给出的是「预层是**凝聚态集**」的等价条件。"
-  },
-  {
-   "id": "def-dep.condensed-topos",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.condensed-set",
-   "usedBy": "thm.cond-topos",
-   "note": "定理说的是 $\\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。"
-  },
-  {
-   "id": "def-dep.free-pretopology",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.fchaus-pretopology",
-   "note": "预拓扑搭在**自由紧 Hausdorff 空间**上。"
-  },
-  {
-   "id": "def-dep.projective-pretopology",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "prop.fchaus-pretopology",
-   "note": "「满射有截面」说的是这些对象**投射**。"
-  },
-  {
-   "id": "def-dep.free-sheaf",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.fchaus-sheaf",
-   "note": "命题谈的是**自由紧 Hausdorff 空间**上的层。"
-  },
-  {
-   "id": "def-dep.sheaf-cond-equiv",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "thm.cond-equiv-fchaus",
-   "note": "定理说两边的**层**范畴是同一个。"
-  },
-  {
-   "id": "def-dep.sheaf-cond-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.sheaf",
-   "usedBy": "prop.cond-epi",
-   "note": "命题说的是**凝聚态集**（层）之间满态射的判据。"
-  },
-  {
-   "id": "def-dep.free-cond-epi",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.cond-epi",
-   "note": "探针取的是**自由**紧 Hausdorff 空间。"
-  },
-  {
-   "id": "def-dep.projective-cond",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "prop.cond-projectives",
-   "note": "命题说自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里是**投射对象**。"
-  },
-  {
    "id": "def-dep.chaus-underlying",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.chaus",
    "usedBy": "def.underlying-topological-space",
    "note": "底空间的拓扑由「从**紧 Hausdorff 空间**进来的映射」定出来。"
-  },
-  {
-   "id": "def-dep.condensed-top-adjoint",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.condensed-set",
-   "usedBy": "thm.top-cond-adjoint",
-   "note": "定理里的函子 $X \\mapsto \\underline{X}$ 以**凝聚态集**为靶。"
-  },
-  {
-   "id": "def-dep.cg-top-cond",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.compactly-generated",
-   "usedBy": "thm.top-cond-adjoint",
-   "note": "限制到**紧生成空间**上时那个函子变得全忠实。"
-  },
-  {
-   "id": "def-dep.cg-coreflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.compactly-generated",
-   "usedBy": "prop.cg-coreflective",
-   "note": "命题说的是**紧生成空间**是余反射子范畴。"
   },
   {
    "id": "def-dep.limit-cg",
@@ -15470,22 +15480,6 @@
    "note": "Grothendieck 范畴 = AB5 范畴**加一个生成元**。"
   },
   {
-   "id": "def-dep.condab-tensor",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.condensed-abelian-group",
-   "usedBy": "prop.condab-tensor",
-   "note": "两个双函子定义在**凝聚态阿贝尔群**范畴上。"
-  },
-  {
-   "id": "def-dep.adjoint-cg-coreflective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "prop.cg-coreflective",
-   "note": "「余反射」的意思是含入函子有**右伴随**。"
-  },
-  {
    "id": "def-dep.condensed-ab",
    "kind": "definition",
    "strength": "strong",
@@ -15500,70 +15494,6 @@
    "definition": "def.sheaf",
    "usedBy": "def.condensed-abelian-group",
    "note": "它是**阿贝尔群值层**。"
-  },
-  {
-   "id": "def-dep.free-condab-section",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.free-compact-hausdorff",
-   "usedBy": "prop.condab-section",
-   "note": "截面函子 $\\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。"
-  },
-  {
-   "id": "def-dep.limit-condab-section",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.limit",
-   "usedBy": "prop.condab-section",
-   "note": "结论说它保**所有极限与余极限**。"
-  },
-  {
-   "id": "def-dep.condab-ab",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.condensed-abelian-group",
-   "usedBy": "thm.condab-ab",
-   "note": "定理说的是 $\\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。"
-  },
-  {
-   "id": "def-dep.stonean-projective",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.stone-space",
-   "usedBy": "lem.stonean-projective",
-   "note": "引理的输入是 **Stonean 空间**。"
-  },
-  {
-   "id": "def-dep.projective-stonean",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "lem.stonean-projective",
-   "note": "结论说 $\\mathbb{Z}\\cdot F$ 是**投射**对象。"
-  },
-  {
-   "id": "def-dep.generator-condab-generated",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.generator",
-   "usedBy": "prop.condab-generated",
-   "note": "命题说的是 $\\mathrm{CondAb}$ 由谁**生成**。"
-  },
-  {
-   "id": "def-dep.projective-condab-generated",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.projective-object",
-   "usedBy": "prop.condab-generated",
-   "note": "生成元取的是**有限表现的投射**对象。"
-  },
-  {
-   "id": "def-dep.adjoint-condab-tensor",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "prop.condab-tensor",
-   "note": "$\\otimes_{\\mathbb{Z}}$ 与内部 $\\operatorname{Hom}_{\\mathbb{Z}}$ **互为伴随**。"
   },
   {
    "id": "def-dep.diagram-complex",
@@ -15588,22 +15518,6 @@
    "definition": "def.category",
    "usedBy": "def.cochain-complex",
    "note": "复形定义在**加法范畴** $\\mathcal{C}$ 上，微分是范畴里的态射。"
-  },
-  {
-   "id": "def-dep.complex-additive",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.cochain-complex",
-   "usedBy": "prop.complex-additive",
-   "note": "命题说的是**复形**构成的那个范畴。"
-  },
-  {
-   "id": "def-dep.equalizer-complex-additive",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.equalizer",
-   "usedBy": "prop.complex-additive",
-   "note": "核与余核都是**逐项**取出来的。"
   },
   {
    "id": "def-dep.complex-homotopy",
@@ -15654,30 +15568,6 @@
    "note": "导出三角的定义就是「同构于某个**映射锥**三角」。"
   },
   {
-   "id": "def-dep.triangle-rotation",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.distinguished-triangle",
-   "usedBy": "prop.triangle-rotation",
-   "note": "命题说的是**导出三角**的基本性质。"
-  },
-  {
-   "id": "def-dep.triangle-morphism",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.distinguished-triangle",
-   "usedBy": "lem.triangle-morphism",
-   "note": "引理说的是**导出三角**之间态射的性质。"
-  },
-  {
-   "id": "def-dep.homotopy-triangle-morphism",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.homotopy",
-   "usedBy": "lem.triangle-morphism",
-   "note": "「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。"
-  },
-  {
    "id": "def-dep.complex-cohomology",
    "kind": "definition",
    "strength": "strong",
@@ -15692,14 +15582,6 @@
    "definition": "def.equalizer",
    "usedBy": "def.cohomology",
    "note": "同调里出现的 $\\ker$ 与 $\\operatorname{im}$ 是**等化子**与**像**。"
-  },
-  {
-   "id": "def-dep.equalizer-cohomology-sequence",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.equalizer",
-   "usedBy": "prop.cohomology-exact-sequence",
-   "note": "这条正合列把同调夹在**余核**与**核**之间。"
   },
   {
    "id": "def-dep.cohomology-functor",
@@ -15718,44 +15600,12 @@
    "note": "定义里的正合性条件就是针对**导出三角**说的。"
   },
   {
-   "id": "def-dep.cohomology-long-exact",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.cohomology",
-   "usedBy": "thm.long-exact",
-   "note": "长正合列里跑的是**同调**。"
-  },
-  {
-   "id": "def-dep.equalizer-long-exact",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.equalizer",
-   "usedBy": "thm.long-exact",
-   "note": "「正合列」本身就是一句关于**核与像**的话。"
-  },
-  {
    "id": "def-dep.cohomology-quasi-iso",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.cohomology",
    "usedBy": "def.quasi-iso",
    "note": "拟同构说的是「**同调**全都是同构」。"
-  },
-  {
-   "id": "def-dep.mono-injective-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.mono",
-   "usedBy": "prop.injective-criterion",
-   "note": "「每个**单态射**都有收缩」是等价条件之一。"
-  },
-  {
-   "id": "def-dep.adjoint-injective-criterion",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.adjoint",
-   "usedBy": "prop.injective-criterion",
-   "note": "「$\\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。"
   },
   {
    "id": "def-dep.subobject-filtration",
@@ -15860,22 +15710,6 @@
    "definition": "def.ab-axioms",
    "usedBy": "def.grothendieck-category",
    "note": "Grothendieck 范畴 = **AB5** 范畴 + 一个生成元。"
-  },
-  {
-   "id": "def-dep.grothendieck-condab",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.grothendieck-category",
-   "usedBy": "thm.condab-ab",
-   "note": "定理说的是 $\\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。"
-  },
-  {
-   "id": "def-dep.ab-condab",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.ab-axioms",
-   "usedBy": "thm.condab-ab",
-   "note": "AB6 与 AB4\\* 的含义见「Grothendieck 的 AB 公理」那条。"
   }
  ],
  "clusterLinks": [
@@ -16169,14 +16003,14 @@
   {
    "a": "cat.adjoint",
    "b": "cat.yoneda",
-   "count": 3,
+   "count": 2,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.adjoint",
    "b": "cat.limit",
-   "count": 18,
+   "count": 11,
    "label": "",
    "explicit": false
   },
@@ -16188,16 +16022,16 @@
    "explicit": false
   },
   {
-   "a": "cat.chaus",
+   "a": "topo.chaus",
    "b": "topology.metric",
-   "count": 6,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cat.chaus",
+   "a": "topo.chaus",
    "b": "topology.general",
-   "count": 13,
+   "count": 10,
    "label": "",
    "explicit": false
   },
@@ -16209,9 +16043,9 @@
    "explicit": false
   },
   {
-   "a": "cat.limit",
-   "b": "cat.sheaf",
-   "count": 10,
+   "a": "cat.sheaf",
+   "b": "cat.structure",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -16223,30 +16057,37 @@
    "explicit": false
   },
   {
-   "a": "cat.chaus",
-   "b": "cond",
-   "count": 15,
+   "a": "cond.set",
+   "b": "topo.chaus",
+   "count": 11,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.topos",
-   "b": "cond",
-   "count": 5,
+   "b": "cond.set",
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.sheaf",
-   "b": "cond",
-   "count": 5,
+   "b": "cond.set",
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cat.cg",
-   "b": "cond",
+   "a": "cond.set",
+   "b": "topo.cg",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.cohomology",
+   "b": "hom.complex",
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -16293,16 +16134,86 @@
    "explicit": false
   },
   {
+   "a": "cat.structure",
+   "b": "cat.yoneda",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.limit",
    "b": "cat.yoneda",
-   "count": 8,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.functor",
    "b": "cat.yoneda",
-   "count": 10,
+   "count": 9,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.functor",
+   "b": "cat.limit",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "cat.sheaf",
+   "count": 8,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.structure",
+   "b": "cat.topos",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "cat.topos",
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.topos",
+   "b": "cat.yoneda",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.ab",
+   "b": "topo.chaus",
+   "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "hom.complex",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "hom.cohomology",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.ab",
+   "b": "hom.ab",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -16349,13 +16260,6 @@
    "explicit": false
   },
   {
-   "a": "cat.functor",
-   "b": "cat.limit",
-   "count": 3,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cat.basic",
    "b": "cat.limit",
    "count": 2,
@@ -16365,7 +16269,7 @@
   {
    "a": "cat.limit",
    "b": "set.rel",
-   "count": 3,
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -16377,6 +16281,13 @@
    "explicit": false
   },
   {
+   "a": "cat.limit",
+   "b": "cat.structure",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.basic",
    "b": "cat.yoneda",
    "count": 2,
@@ -16391,9 +16302,9 @@
    "explicit": false
   },
   {
-   "a": "cat.chaus",
-   "b": "cat.limit",
-   "count": 3,
+   "a": "cat.limit",
+   "b": "topo.chaus",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -16405,43 +16316,22 @@
    "explicit": false
   },
   {
-   "a": "cat.limit",
-   "b": "cat.topos",
-   "count": 7,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.topos",
-   "b": "cat.yoneda",
+   "a": "cat.basic",
+   "b": "hom.complex",
    "count": 2,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cat.adjoint",
-   "b": "cond",
-   "count": 3,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cat.limit",
-   "b": "cond",
-   "count": 3,
+   "b": "hom.ab",
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cat.homology",
-   "b": "cat.limit",
-   "count": 12,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.basic",
-   "b": "cat.homology",
+   "a": "cat.structure",
+   "b": "hom.ab",
    "count": 2,
    "label": "",
    "explicit": false

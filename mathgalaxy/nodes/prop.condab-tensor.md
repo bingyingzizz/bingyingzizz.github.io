@@ -1,6 +1,6 @@
 # CondAb 上的张量与内 Hom　`prop.condab-tensor`
 $\mathrm{CondAb}$ 上的 $\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$
-layer 18 · 命题 · 凝聚态集 · 范畴论+拓扑学
+layer 18 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 
 $\mathrm{CondAb}$ 上存在两个双函子 $\operatorname{Hom}_{\mathbb{Z}}$ 与 $\otimes_{\mathbb{Z}}$，使
 

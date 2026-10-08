@@ -1,6 +1,6 @@
 # Stonean 是收缩核　`cor.stonean-retract`
 Stonean 空间 = 自由紧 Hausdorff 空间的收缩核
-layer 17 · 推论 · 紧 Haus 与 Stone · 范畴论+拓扑学
+layer 17 · 推论 · 紧 Haus 与 Stone · 拓扑学
 
 Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续映射 $r : X \to A$ 使 $r|_{A} = 1_{A}$（这样的 $A$ 叫 $X$ 的收缩核）。
 

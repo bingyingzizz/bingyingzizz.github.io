@@ -13,7 +13,5 @@ $$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-saft.md
 - `def.comma-category` 逗号范畴：用到了定义 逗号范畴　proofs/def-link.comma-saft.md
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-dep.adjoint-saft.md
-- `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-saft.md
-- `def.comma-category` 逗号范畴：用到了定义 逗号范畴　proofs/def-dep.comma-saft.md
 
 > 说明见 `notes/thm.saft.md`

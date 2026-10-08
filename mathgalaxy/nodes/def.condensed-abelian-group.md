@@ -1,6 +1,6 @@
 # 凝聚态阿贝尔群　`def.condensed-abelian-group`
 凝聚态阿贝尔群（Condensed Abelian Group）
-layer 17 · 定义 · 凝聚态集 · 范畴论+拓扑学
+layer 17 · 定义 · 凝聚态阿贝尔群 · 凝聚态数学
 
 **凝聚态阿贝尔群**是 $\mathbf{CHaus}$ 上的阿贝尔群值层。四种说法给出同一个范畴：
 

@@ -1,6 +1,6 @@
 # 投射 / 内射对象　`def.projective-object`
 投射对象与内射对象（Projective / Injective Object）
-layer 14 · 定义 · 紧 Haus 与 Stone · 范畴论
+layer 14 · 定义 · 紧 Haus 与 Stone · 拓扑学
 
 范畴 $\mathcal{C}$ 中对象 $P$ 叫**投射的**，如果函子 $h_{P} = \operatorname{Hom}_{\mathcal{C}}(P, -)$ **保持满态射**。对偶地，$I$ 叫**内射的**，如果 $h^{I}$ 把单态射送到满态射。
 
@@ -17,7 +17,7 @@ $$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadri
 - ⇒ `thm.gleason` Gleason 定理
 - 被 `thm.gleason` Gleason 定理 用
 - 被 `prop.free-projective` 自由紧 Haus 是投射对象 用
-- 被 `thm.gleason` Gleason 定理 用
+- 被 `prop.fchaus-pretopology` FCHaus 上的预拓扑 用
 
 > 说明见 `notes/def.projective-object.md`
 

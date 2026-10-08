@@ -13,11 +13,11 @@ $$\begin{array}{ccc} X_1 \times_{X_0} X_2 & \longrightarrow & X_2 \\ \downarrow 
 
 ## 它能推出什么 / 谁在用它
 - 被 `prop.slice-cartesian` 切片范畴是拉回 用
+- 被 `thm.sheaf-descent` 层的下降条件 用
+- 被 `prop.subobject-lattice` 子对象构成有界格 用
+- 被 `prop.quasi-compact-properties` 拟紧的性质 用
 - 被 `def.mono` 单态射 / 满态射 用
 - 被 `def.subobject` 子对象 用
-- 被 `prop.slice-cartesian` 切片范畴是拉回 用
-- 被 `def.free-presentation` 自由表示 用
-- 被 `def.pretopology` 预拓扑 用
 
 > 说明见 `notes/def.fibered-product.md`
 

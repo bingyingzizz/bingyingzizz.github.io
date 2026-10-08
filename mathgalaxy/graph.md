@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-08T09:55:44.268Z
-> 7 星系 / 34 星团 / 373 节点 / 813 连线（强边 805，弱边 8）
+> 由 `tools/build.mjs` 自动生成于 2026-10-08T10:10:49.807Z
+> 9 星系 / 39 星团 / 373 节点 / 789 连线（强边 780，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -1225,7 +1225,7 @@ Tukey 引理的好处是「免验证」：只要目标族具有有限特征，�
 参考：Tukey (1940)；Jech, The Axiom of Choice, Ch. 2
 
 ## 星系：拓扑学（Topology）
-> 开集、连续、紧致与连通；大量定理依赖选择原理。
+> 开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。
 
 ### 星团：拓扑空间
 > 造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。
@@ -1516,6 +1516,221 @@ $$A\text{ 紧} \iff A\text{ 闭}\text{ 且} A\text{ 全有界}$$
 这也是 **Heine–Borel** 的推广：$\mathbb{R}^{n}$ 完备，而在 $\mathbb{R}^{n}$ 中 $A$ 有界 $\iff A$ 全有界，于是「有界闭集紧」正是它的特例。
 
 参考：Munkres, Topology, §28；Rudin, Principles of Mathematical Analysis, Ch. 2
+
+### 星团：紧 Haus 与 Stone
+> 造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。
+
+#### 紧 Hausdorff 空间范畴　`def.chaus`
+*定义*　紧 Hausdorff 空间范畴 $\mathbf{CHaus}$
+
+**紧 Hausdorff 空间**是既紧又 Hausdorff 的拓扑空间。以它们为对象、连续映射为态射，得到范畴 $\mathbf{CHaus}$。含入函子记 $\mathbf{CHaus} \hookrightarrow \mathbf{Top}$。
+
+紧跟 Hausdorff 放在一起是一件很划算的事：**紧 Hausdorff 是正则的、正规的**，而且从紧空间到 Hausdorff 空间的连续双射自动是同胚。很多在 $\mathbf{Top}$ 里要额外假设的东西，在这里是免费的。
+
+$\mathbf{CHaus}$ 里**任意极限存在**，并且就是 $\mathbf{Top}$ 里算完之后那个结果（见「紧 Haus 是反射子范畴」那条）。
+
+#### 紧 Haus 是反射子范畴　`prop.chaus-reflective`
+*命题*　Stone–Čech 紧化
+
+$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射子范畴**，反射叫 **Stone–Čech 紧化**：
+
+$$\beta : \mathbf{Top} \longrightarrow \mathbf{CHaus}, \qquad X \mapsto \beta X$$
+
+即对每个 $X \in \mathbf{Top}$ 与每个紧 Hausdorff 空间 $K$，
+
+$$\operatorname{Hom}_{\mathbf{CHaus}}\bigl(\beta X,\ K\bigr) \;\cong\; \operatorname{Hom}_{\mathbf{Top}}\bigl(X,\ K\bigr)$$
+
+而且含入 $X \to \beta X$ 在 $X$ 本身紧 Hausdorff 时是同构。
+
+构造：把 $X$ 送进 Tychonoff 方块
+
+
+
+$$e_{X} : X \longrightarrow [0,1]^{C(X,[0,1])}, \qquad x \mapsto (f(x))_{f}$$
+
+
+
+再取闭包 $\beta X := \overline{e_{X}(X)}$。方块紧 Hausdorff，闭子集因而也紧 Hausdorff。
+
+⭐ **$e_{X}$ 是单射 $\iff$ $X$ 是 Tychonoff（$T_{3.5}$）空间** —— 即连续函数多到能分开不同的点。所以对于一般拓扑空间，$\beta X$ 是把「连续函数看得出的信息」全部收进来之后的紧化。
+
+推论：**紧 Hausdorff 空间的任意极限自动是紧 Hausdorff 的**。这是反射子范畴对极限封闭的一般结论在这里的样子 —— 以后在 $\mathbf{CHaus}$ 里取极限，不必再回头验紧性与 Hausdorff 性。
+
+#### 满射的极小闭子集　`lem.minimal-closed-surjection`
+*引理*　满连续映射的极小闭子集
+
+设 $f : S \to T$ 是紧 Hausdorff 空间之间的连续满射。则存在**极小**的闭子集 $S' \subseteq S$，使限制 $f|_{S'}$ 仍然是满射。
+
+证明用佐恩引理：把「$f$ 在其上满」的闭子集族按**反包含**排序，链的上界取交 —— 紧性保证交出来的闭子集仍然满（若非满，剩下的那个紧集会被一列越来越小的闭集挖空，与有限交性质矛盾）。于是有极大元，在原序下就是极小闭子集。
+
+#### 自由紧 Hausdorff 空间　`def.free-compact-hausdorff`
+*定义*　自由紧 Hausdorff 空间（Free Compact Hausdorff Space）
+
+**自由紧 Hausdorff 空间**就是某个离散空间 $I$ 的 Stone–Čech 紧化 $F \cong \beta I$。称 $I$ 是 $F$ 的一组**基**：此时
+
+$$\operatorname{Hom}_{\mathbf{CHaus}}(F, S) \;\cong\; \operatorname{Hom}_{\mathbf{Top}}(I, S) \;=\; S^{I}$$
+
+即连续映射 $F \to S$ 与 $S$ 中一族点 $(t_{i})_{i \in I}$ 一一对应。这族点使 $F \to S$ 成为满射时，叫 $F$ 的**生成元**。
+
+「自由」两个字在这里的含义和自由群、自由模完全一样：**在 $I$ 上没有任何约束**（$I$ 是离散的，所以从 $I$ 出发的映射随便给点就是连续的），于是「$F$ 到别处的映射」与「$I$ 上的一族点」是一回事。
+
+#### 紧 Haus 是自由的商　`prop.chaus-quotient-of-free`
+*命题*　每个紧 Hausdorff 空间都是自由紧 Hausdorff 空间的商
+
+每个紧 Hausdorff 空间 $S$ 都是某个自由紧 Hausdorff 空间的**连续满像**：取 $S$ 上的离散拓扑，则
+
+$$F := \beta\, S^{\mathrm{disc}} \longrightarrow S$$
+
+是连续满射。
+
+恒等映射 $S^{\mathrm{disc}} \to S$ 连续（离散拓扑最细），沿它的 Stone–Čech 泛性质给出 $\beta S^{\mathrm{disc}} \to S$。既然 $S^{\mathrm{disc}} \to S$ 已经是满射，而紧空间的连续满像 $\beta S^{\mathrm{disc}} \to S$ 作用在稠密的 $S^{\mathrm{disc}}$ 上已经覆盖了 $S$，满射性就跟着来了。
+
+#### 投射 / 内射对象　`def.projective-object`
+*定义*　投射对象与内射对象（Projective / Injective Object）
+
+范畴 $\mathcal{C}$ 中对象 $P$ 叫**投射的**，如果函子 $h_{P} = \operatorname{Hom}_{\mathcal{C}}(P, -)$ **保持满态射**。对偶地，$I$ 叫**内射的**，如果 $h^{I}$ 把单态射送到满态射。
+
+展开成提升条件就是：对每个满态射 $A \twoheadrightarrow B$ 与每个 $P \to B$，都存在提升 $P \to A$ 使三角形交换：
+
+$$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadrightarrow & B \end{array}$$
+
+对偶地，$I$ 内射说的是每个 $A \rightarrowtail B$ 与每个 $A \to I$ 都能延拓成 $B \to I$。
+
+「投射」这个名字来自模论：$R\text{-}\mathbf{Mod}$ 里的投射对象恰好是投射模，内射对象恰好是内射模 —— 那两条标准判据（$P$ 是直和项、$I$ 是直和项）就是这里的定义在模上的样子。
+
+两条立刻可用的推论：**$P$ 投射时任何满态射 $Y \twoheadrightarrow P$ 都有截面**；**若 $X \to Y$ 有收缩而 $Y$ 投射，则 $X$ 也投射**（内射的情形对偶）。
+
+在 $\mathbf{Set}$ 里**每个对象都投射**，这就是选择公理：给定满射 $A \twoheadrightarrow B$ 与 $B$ 中的点，总能挑一个原像。
+
+#### 自由紧 Haus 是投射对象　`prop.free-projective`
+*命题*　自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 的投射对象
+
+自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 中的投射对象。
+
+设 $F \cong \beta I$，给定满态射 $T \twoheadrightarrow S$ 与 $F \to S$。由自由性，$F \to S$ 等同于 $I$ 上的一族点，于是 $I \to T$ 就是一个集合层的提升（$I$ 离散、$\mathbf{Set}$ 中对象都投射，即选择公理）；再用 $\beta I$ 的泛性质把它变回 $F \to T$，而它自动与原有映射相容。∎
+
+#### 自由表示　`def.free-presentation`
+*定义*　自由表示（Free Presentation）
+
+紧 Hausdorff 空间之间的连续满射 $F \twoheadrightarrow S$ 叫 $S$ 的**自由表示**，如果
+
+1. $F$ 是自由紧 Hausdorff 空间；
+2. $F \to S$ 是满态射；
+3. 令 $R := F \times_{S} F$，则 $F \to R$ 是满态射。
+
+此时 $S \cong \operatorname{coker}(R \rightrightarrows F)$。
+
+对照集合里的那件事：对 $f : X \to Y$，令 $R := X \times_{Y} X = \{(x_{1},x_{2}) : f(x_{1}) = f(x_{2})\}$（「像相同的点对」），则 $X/R \cong \operatorname{im} f$（**Noether 第一同构定理**）；反过来，给定 $X$ 上的等价关系 $R$，把 $Y := X/R$，就有 $R = X \times_{Y} X$。
+
+自由表示就是把这件事搬进 $\mathbf{CHaus}$：$R$ 是「把像相同的点粘起来」那个等价关系，而第三条要求 $R$ 自己也能由一个自由紧 Hausdorff 空间满射过来 —— 于是整个 $S$ 由自由对象经过一次余等化子造出来。
+
+$\mathbf{CHaus}$ 里有余等化子，所以 $\operatorname{coker}(R \rightrightarrows F)$ 存在；它就是商空间 $F/R$。
+
+#### 紧 Haus 都有自由表示　`cor.chaus-free-presentation`
+*推论*　每个紧 Hausdorff 空间都有自由表示
+
+每个紧 Hausdorff 空间 $S$ 都有自由表示。
+
+取 $F = \beta S^{\mathrm{disc}}$（前一条命题：$F \twoheadrightarrow S$ 满，且 $F$ 自由）。把同样的做法对 $S \times_{S} S$ 再做一次，得到 $F' \twoheadrightarrow R$ 满。三条逐一满足：自由、满、以及对 $R$ 的那条满射。∎
+
+#### 连通分量是闭开邻域之交　`prop.component-clopen`
+*命题*　紧 Hausdorff 空间中连通分量 = 闭开邻域之交
+
+设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
+
+$$C(x) \;=\; \bigcap \{\, K \subseteq S : K \text{ 闭开},\ x \in K \,\}$$
+
+证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。
+
+#### 全不连通与 Stone 空间　`def.stone-space`
+*定义*　Stone 空间与 Stonean 空间（Stone / Stonean Space）
+
+- $X$ **全不连通**（totally disconnected），如果其中每个连通分量都是单点；
+- $X$ **极端不连通**（extremally disconnected），如果任一开集的**闭包仍是闭开集**；
+- **Stone 空间** = 全不连通的紧 Hausdorff 空间；
+- **Stonean 空间** = 极端不连通的紧 Hausdorff 空间。
+
+记 $\pi_{0}(X) := \{\, C(x) : x \in X \,\}$ 为连通分量的集合，并赋予它**商拓扑**；$x \mapsto C(x)$ 给出连续映射 $X \to \pi_{0}(X)$。
+
+两个字面上很像的条件分居两端：**全不连通**说「碎到每个分量只剩一个点」，**极端不连通**说「开集的闭包不再长大」。后者更强 —— 极端不连通的 $T_{1}$ 空间必全不连通。
+
+#### 极端不连通的基本性质　`prop.stonean-basic`
+*命题*　极端不连通的性质
+
+**(a)** 若 $X$ 极端不连通，则任意两个不交开集 $U, V$ 的闭包仍不交：$\overline{U} \cap \overline{V} = \emptyset$。
+
+**(b)** 极端不连通的 Hausdorff 空间是**全不连通**的。
+
+**(a)** 反证：若 $\overline{U} \cap \overline{V}$ 非空，取其中的点 $x$。因为 $X$ 极端不连通，$\overline{U}$ 与 $\overline{V}$ 都是闭开的，于是它们与自己的内部的关系逼出矛盾 —— 具体地说，$x$ 的每个邻域都要同时碰到 $U$ 与 $V$，而这两个闭开集又把 $x$ 与「另一个」隔开。
+
+**(b)** 设 $x \ne y$。Hausdorff 性给出分离它们的开集 $U \ni x$、$V \ni y$，由 (a) 得两个不交的闭开集把 $x$ 与 $y$ 隔开，于是 $C(x) \subseteq U \not\ni y$，$y \notin C(x)$。所以每个连通分量是单点。
+
+#### 全不连通空间是反射子范畴　`prop.td-reflective`
+*命题*　全不连通空间是 $\mathbf{Top}$ 的反射子范畴
+
+全不连通空间构成的范畴是 $\mathbf{Top}$ 的**反射子范畴**，反射是
+
+$$\pi_{0} : \mathbf{Top} \longrightarrow \mathbf{Top}_{\mathrm{td}}, \qquad X \mapsto \pi_{0}(X)$$
+
+并且 $X \to \pi_{0}(X)$ 是同构 $\iff$ $X$ 全不连通。
+
+推论：**全不连通空间的任意极限仍是全不连通的** —— 因为 $\pi_{0}$ 作为反射（一个左伴随）保余极限，而含入函子保极限。这条与「$\mathbf{CHaus}$ 对极限封闭」叠起来，就是 Stone 空间与 Stonean 空间各自对极限封闭。
+
+#### Stone 空间是 CHaus 的反射子范畴　`prop.stone-reflective`
+*命题*　Stone 空间是 $\mathbf{CHaus}$ 的反射子范畴
+
+Stone 空间构成的范畴是 $\mathbf{CHaus}$ 的反射子范畴。
+
+推论：**Stone 空间的任意极限仍是 Stone 空间**。把这条与「全不连通空间对极限封闭」并排看，就能读出 Stone 空间的双重身份：它既是「紧 Hausdorff 里全不连通的那些」，也是「紧 Hausdorff 这个反射子范畴里再反射一次剩下的那些」。
+
+#### 投射有限空间　`def.profinite`
+*定义*　投射有限空间（Profinite Space）
+
+**投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
+
+$$X \;=\; \varprojlim_{i \in I} X_{i}, \qquad X_{i} \text{ 有限离散},\quad I \text{ 有向}$$
+
+「pro-finite」= 有限者的投射极限。直观上它是「越来越细的有限分辨率」堆出来的对象：$X_{i}$ 是第 $i$ 层分辨率下的样子，$I$ 有向保证任意两层分辨率都能同时加细。
+
+#### Stone ⟺ 投射有限　`thm.stone-profinite`
+*定理*　Stone 空间 $\iff$ 投射有限空间
+
+拓扑空间是 Stone 空间 $\iff$ 它是投射有限空间。
+
+#### Gleason 定理　`thm.gleason`
+*定理*　Gleason 定理：$\mathbf{CHaus}$ 的投射对象
+
+$\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。
+
+#### Stonean 是收缩核　`cor.stonean-retract`
+*推论*　Stonean 空间 = 自由紧 Hausdorff 空间的收缩核
+
+Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续映射 $r : X \to A$ 使 $r|_{A} = 1_{A}$（这样的 $A$ 叫 $X$ 的收缩核）。
+
+这条把 Gleason 定理翻译成了一句「具体拓扑」的话：投射性 = 收缩核。与模论里「投射模 = 自由模的直和项」完全平行 —— 两者都是「投射 = 从自由对象上切一块下来」。
+
+### 星团：紧生成空间
+> 造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。
+
+#### 紧生成空间　`def.compactly-generated`
+*定义*　紧生成空间 / $k$-空间（Compactly Generated Space）
+
+拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \subseteq X$ 闭 $\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \to X$，$f^{-1}(Y)$ 在 $S$ 中闭。
+
+例：局部紧 Hausdorff 空间都是紧生成的。
+
+「由紧 Hausdorff 空间的映射决定拓扑」这句话的意思是：**只要一个子集在所有这类映射下的原像都闭，它就是闭的**。一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。
+
+#### 紧生成空间是余反射子范畴　`prop.cg-coreflective`
+*命题*　紧生成空间是 $\mathbf{Top}$ 的余反射子范畴
+
+紧生成空间构成的范畴 $k\mathbf{Top}$ 是 $\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\mathbf{Top} \hookrightarrow \mathbf{Top}$ 有**右**伴随
+
+$$k : \mathbf{Top} \longrightarrow k\mathbf{Top}, \qquad X \mapsto kX$$
+
+即 $i \dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成紧生成的那一个。
+
+⭐ 与紧 Hausdorff 对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\beta$），而 $k\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。
 
 ## 星系：抽象代数（Abstract Algebra）
 > 群、环、域、模与线性代数；佐恩引理的经典应用场。
@@ -4734,7 +4949,7 @@ $$L^p \cong (L^p)^{**}$$
 参考：Folland, Real Analysis, §6.2
 
 ## 星系：范畴论（Category Theory）
-> 范畴、函子、自然变换、极限与伴随；再往上走到层论、拓扑斯与凝聚态数学。
+> 范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。
 
 ### 星团：范畴与图
 > 造出「范畴」这个概念本身：先有图 $(V, E, s, t)$，再配上复合与单位，得到一个六元组。
@@ -4959,7 +5174,7 @@ $$F \circ G \cong 1_{\mathcal{C}'}, \qquad G \circ F \cong 1_{\mathcal{C}}$$
 在等价之下，「两个范畴是不是同一个」这个问题被替换成「能不能互相翻译而不丢结构」—— 范畴论后面所有「$\mathcal{C}$ 与 $\mathcal{C}'$ 一样」的说法，用的都是这个意思。
 
 ### 星团：图与极限
-> 造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子，再落回子对象与像。
+> 造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子。
 
 #### 交换图　`def.commutative-diagram`
 *定义*　交换图（Commutative Diagram）
@@ -5096,6 +5311,26 @@ $$\ker(f,g) \longrightarrow X \overset{f}{\underset{g}{\rightrightarrows}} Y \lo
 
 例：$\mathbf{Set}$ 里 $\ker(f,g) = \{x \in X : f(x) = g(x)\}$，$\operatorname{coker}(f,g) = Y/\!\sim$（$\sim$ 由 $f(x) \sim g(x)$ 生成）。$\mathbf{Top}$ 里加子空间 / 商拓扑。$\mathbf{Ab}$ 里 $\ker(f,g) = \ker(f - g)$ —— 两个映射的等化子退化成**一个**映射的核，这正是「核」这个名字的来源。
 
+#### 极限的函子性　`thm.lim-functor`
+*定理*　极限是函子（Limits as a Functor）
+
+设 $\mathcal{C}$ 具有所有以 $I$ 为索引的极限。给定图 $F, G : I \to \mathcal{C}$ 与自然变换 $\alpha : F \implies G$，族
+
+$$\{\, \alpha_i \circ \pi^{F}_{i} : \lim F \to G(i) \,\}_{i \in I}$$
+
+是 $\lim F$ 到 $G$ 的一个锥，于是泛性给出**唯一**的态射
+
+$$\lim \alpha : \lim F \longrightarrow \lim G, \qquad \pi^{G}_{i} \circ \lim \alpha = \alpha_i \circ \pi^{F}_{i}$$
+
+这样得到的 $\lim : \mathcal{C}^{I} \to \mathcal{C}$ 是一个函子。
+
+这就是「泛性」的标准用法：**先造一个锥，再让唯一性把态射免费送上门**。极限的对象层是构造，态射层是泛性，两者合起来才是函子。
+
+有了它，「$\lim$ 保持某个性质」才说得通 —— 后面讨论「某个函子保极限」时，正是拿这个函子去做文章。
+
+### 星团：单满、子对象与像
+> 造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。
+
 #### 单态射 / 满态射　`def.mono`
 *定义*　单态射与满态射（Monomorphism / Epimorphism）
 
@@ -5117,23 +5352,6 @@ $$Y \cap Z := Y \times_{X} Z, \qquad f^{-1}(Y) := Y \times_{X} X'$$
 （对 $Y, Z \subseteq X$ 与任意 $f : X' \to X$；存在时才有定义）。
 
 把「子集」换成「单态射」，好处是不再依赖元素 —— 于是这套语言可以照搬到没有元素的范畴里去。「交」变成拉回、「原像」也变成拉回，两种操作合成了一个：$Y \cap Z$ 解的是「既在 $Y$ 里又在 $Z$ 里」的部分，$f^{-1}(Y)$ 解的是「$y = f(x)$ 有解」的部分。
-
-#### 极限的函子性　`thm.lim-functor`
-*定理*　极限是函子（Limits as a Functor）
-
-设 $\mathcal{C}$ 具有所有以 $I$ 为索引的极限。给定图 $F, G : I \to \mathcal{C}$ 与自然变换 $\alpha : F \implies G$，族
-
-$$\{\, \alpha_i \circ \pi^{F}_{i} : \lim F \to G(i) \,\}_{i \in I}$$
-
-是 $\lim F$ 到 $G$ 的一个锥，于是泛性给出**唯一**的态射
-
-$$\lim \alpha : \lim F \longrightarrow \lim G, \qquad \pi^{G}_{i} \circ \lim \alpha = \alpha_i \circ \pi^{F}_{i}$$
-
-这样得到的 $\lim : \mathcal{C}^{I} \to \mathcal{C}$ 是一个函子。
-
-这就是「泛性」的标准用法：**先造一个锥，再让唯一性把态射免费送上门**。极限的对象层是构造，态射层是泛性，两者合起来才是函子。
-
-有了它，「$\lim$ 保持某个性质」才说得通 —— 后面讨论「某个函子保极限」时，正是拿这个函子去做文章。
 
 #### 像 / 余像　`def.image`
 *定义*　像与余像（Image / Coimage）
@@ -5577,198 +5795,6 @@ $$\varinjlim_{i} (X_{i} \times Y_{i}) \;\cong\; \bigl(\varinjlim_{i} X_{i}\bigr)
 做法是两边都取代表元再比对：$mathbf{Set}$ 里滤过余极限的元素恰好是某个指标处的元素，所以「一边一个代表元」可以上升到「同一个指标处的一对」。
 
 这条为什么重要：后面谈层的时候，层化是拿滤过余极限配出来的，而**只有滤过余极限不破坏有限极限**，这套构造才能与有限极限（也就是把拓扑信息编码进去的那个部分）相安无事。
-
-### 星团：紧 Haus 与 Stone
-> 造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。
-
-#### 紧 Hausdorff 空间范畴　`def.chaus`
-*定义*　紧 Hausdorff 空间范畴 $\mathbf{CHaus}$
-
-**紧 Hausdorff 空间**是既紧又 Hausdorff 的拓扑空间。以它们为对象、连续映射为态射，得到范畴 $\mathbf{CHaus}$。含入函子记 $\mathbf{CHaus} \hookrightarrow \mathbf{Top}$。
-
-紧跟 Hausdorff 放在一起是一件很划算的事：**紧 Hausdorff 是正则的、正规的**，而且从紧空间到 Hausdorff 空间的连续双射自动是同胚。很多在 $\mathbf{Top}$ 里要额外假设的东西，在这里是免费的。
-
-$\mathbf{CHaus}$ 里**任意极限存在**，并且就是 $\mathbf{Top}$ 里算完之后那个结果（见「紧 Haus 是反射子范畴」那条）。
-
-#### 紧 Haus 是反射子范畴　`prop.chaus-reflective`
-*命题*　Stone–Čech 紧化：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的反射子范畴
-
-$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射子范畴**，反射叫 **Stone–Čech 紧化**：
-
-$$\beta : \mathbf{Top} \longrightarrow \mathbf{CHaus}, \qquad X \mapsto \beta X$$
-
-即对每个 $X \in \mathbf{Top}$ 与每个紧 Hausdorff 空间 $K$，
-
-$$\operatorname{Hom}_{\mathbf{CHaus}}\bigl(\beta X,\ K\bigr) \;\cong\; \operatorname{Hom}_{\mathbf{Top}}\bigl(X,\ K\bigr)$$
-
-而且含入 $X \to \beta X$ 在 $X$ 本身紧 Hausdorff 时是同构。
-
-构造：把 $X$ 送进 Tychonoff 方块
-
-
-
-$$e_{X} : X \longrightarrow [0,1]^{C(X,[0,1])}, \qquad x \mapsto (f(x))_{f}$$
-
-
-
-再取闭包 $\beta X := \overline{e_{X}(X)}$。方块紧 Hausdorff，闭子集因而也紧 Hausdorff。
-
-⭐ **$e_{X}$ 是单射 $\iff$ $X$ 是 Tychonoff（$T_{3.5}$）空间** —— 即连续函数多到能分开不同的点。所以对于一般拓扑空间，$\beta X$ 是把「连续函数看得出的信息」全部收进来之后的紧化。
-
-推论：**紧 Hausdorff 空间的任意极限自动是紧 Hausdorff 的**。这是反射子范畴对极限封闭的一般结论在这里的样子 —— 以后在 $\mathbf{CHaus}$ 里取极限，不必再回头验紧性与 Hausdorff 性。
-
-#### 满射的极小闭子集　`lem.minimal-closed-surjection`
-*引理*　满连续映射的极小闭子集
-
-设 $f : S \to T$ 是紧 Hausdorff 空间之间的连续满射。则存在**极小**的闭子集 $S' \subseteq S$，使限制 $f|_{S'}$ 仍然是满射。
-
-证明用佐恩引理：把「$f$ 在其上满」的闭子集族按**反包含**排序，链的上界取交 —— 紧性保证交出来的闭子集仍然满（若非满，剩下的那个紧集会被一列越来越小的闭集挖空，与有限交性质矛盾）。于是有极大元，在原序下就是极小闭子集。
-
-#### 自由紧 Hausdorff 空间　`def.free-compact-hausdorff`
-*定义*　自由紧 Hausdorff 空间（Free Compact Hausdorff Space）
-
-**自由紧 Hausdorff 空间**就是某个离散空间 $I$ 的 Stone–Čech 紧化 $F \cong \beta I$。称 $I$ 是 $F$ 的一组**基**：此时
-
-$$\operatorname{Hom}_{\mathbf{CHaus}}(F, S) \;\cong\; \operatorname{Hom}_{\mathbf{Top}}(I, S) \;=\; S^{I}$$
-
-即连续映射 $F \to S$ 与 $S$ 中一族点 $(t_{i})_{i \in I}$ 一一对应。这族点使 $F \to S$ 成为满射时，叫 $F$ 的**生成元**。
-
-「自由」两个字在这里的含义和自由群、自由模完全一样：**在 $I$ 上没有任何约束**（$I$ 是离散的，所以从 $I$ 出发的映射随便给点就是连续的），于是「$F$ 到别处的映射」与「$I$ 上的一族点」是一回事。
-
-#### 紧 Haus 是自由的商　`prop.chaus-quotient-of-free`
-*命题*　每个紧 Hausdorff 空间都是自由紧 Hausdorff 空间的商
-
-每个紧 Hausdorff 空间 $S$ 都是某个自由紧 Hausdorff 空间的**连续满像**：取 $S$ 上的离散拓扑，则
-
-$$F := \beta\, S^{\mathrm{disc}} \longrightarrow S$$
-
-是连续满射。
-
-恒等映射 $S^{\mathrm{disc}} \to S$ 连续（离散拓扑最细），沿它的 Stone–Čech 泛性质给出 $\beta S^{\mathrm{disc}} \to S$。既然 $S^{\mathrm{disc}} \to S$ 已经是满射，而紧空间的连续满像 $\beta S^{\mathrm{disc}} \to S$ 作用在稠密的 $S^{\mathrm{disc}}$ 上已经覆盖了 $S$，满射性就跟着来了。
-
-#### 投射 / 内射对象　`def.projective-object`
-*定义*　投射对象与内射对象（Projective / Injective Object）
-
-范畴 $\mathcal{C}$ 中对象 $P$ 叫**投射的**，如果函子 $h_{P} = \operatorname{Hom}_{\mathcal{C}}(P, -)$ **保持满态射**。对偶地，$I$ 叫**内射的**，如果 $h^{I}$ 把单态射送到满态射。
-
-展开成提升条件就是：对每个满态射 $A \twoheadrightarrow B$ 与每个 $P \to B$，都存在提升 $P \to A$ 使三角形交换：
-
-$$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadrightarrow & B \end{array}$$
-
-对偶地，$I$ 内射说的是每个 $A \rightarrowtail B$ 与每个 $A \to I$ 都能延拓成 $B \to I$。
-
-「投射」这个名字来自模论：$R\text{-}\mathbf{Mod}$ 里的投射对象恰好是投射模，内射对象恰好是内射模 —— 那两条标准判据（$P$ 是直和项、$I$ 是直和项）就是这里的定义在模上的样子。
-
-两条立刻可用的推论：**$P$ 投射时任何满态射 $Y \twoheadrightarrow P$ 都有截面**；**若 $X \to Y$ 有收缩而 $Y$ 投射，则 $X$ 也投射**（内射的情形对偶）。
-
-在 $\mathbf{Set}$ 里**每个对象都投射**，这就是选择公理：给定满射 $A \twoheadrightarrow B$ 与 $B$ 中的点，总能挑一个原像。
-
-#### 自由紧 Haus 是投射对象　`prop.free-projective`
-*命题*　自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 的投射对象
-
-自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 中的投射对象。
-
-设 $F \cong \beta I$，给定满态射 $T \twoheadrightarrow S$ 与 $F \to S$。由自由性，$F \to S$ 等同于 $I$ 上的一族点，于是 $I \to T$ 就是一个集合层的提升（$I$ 离散、$\mathbf{Set}$ 中对象都投射，即选择公理）；再用 $\beta I$ 的泛性质把它变回 $F \to T$，而它自动与原有映射相容。∎
-
-#### 自由表示　`def.free-presentation`
-*定义*　自由表示（Free Presentation）
-
-紧 Hausdorff 空间之间的连续满射 $F \twoheadrightarrow S$ 叫 $S$ 的**自由表示**，如果
-
-1. $F$ 是自由紧 Hausdorff 空间；
-2. $F \to S$ 是满态射；
-3. 令 $R := F \times_{S} F$，则 $F \to R$ 是满态射。
-
-此时 $S \cong \operatorname{coker}(R \rightrightarrows F)$。
-
-对照集合里的那件事：对 $f : X \to Y$，令 $R := X \times_{Y} X = \{(x_{1},x_{2}) : f(x_{1}) = f(x_{2})\}$（「像相同的点对」），则 $X/R \cong \operatorname{im} f$（**Noether 第一同构定理**）；反过来，给定 $X$ 上的等价关系 $R$，把 $Y := X/R$，就有 $R = X \times_{Y} X$。
-
-自由表示就是把这件事搬进 $\mathbf{CHaus}$：$R$ 是「把像相同的点粘起来」那个等价关系，而第三条要求 $R$ 自己也能由一个自由紧 Hausdorff 空间满射过来 —— 于是整个 $S$ 由自由对象经过一次余等化子造出来。
-
-$\mathbf{CHaus}$ 里有余等化子，所以 $\operatorname{coker}(R \rightrightarrows F)$ 存在；它就是商空间 $F/R$。
-
-#### 紧 Haus 都有自由表示　`cor.chaus-free-presentation`
-*推论*　每个紧 Hausdorff 空间都有自由表示
-
-每个紧 Hausdorff 空间 $S$ 都有自由表示。
-
-取 $F = \beta S^{\mathrm{disc}}$（前一条命题：$F \twoheadrightarrow S$ 满，且 $F$ 自由）。把同样的做法对 $S \times_{S} S$ 再做一次，得到 $F' \twoheadrightarrow R$ 满。三条逐一满足：自由、满、以及对 $R$ 的那条满射。∎
-
-#### 连通分量是闭开邻域之交　`prop.component-clopen`
-*命题*　紧 Hausdorff 空间中连通分量 = 闭开邻域之交
-
-设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
-
-$$C(x) \;=\; \bigcap \{\, K \subseteq S : K \text{ 闭开},\ x \in K \,\}$$
-
-证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。
-
-#### 全不连通与 Stone 空间　`def.stone-space`
-*定义*　Stone 空间与 Stonean 空间（Stone / Stonean Space）
-
-- $X$ **全不连通**（totally disconnected），如果其中每个连通分量都是单点；
-- $X$ **极端不连通**（extremally disconnected），如果任一开集的**闭包仍是闭开集**；
-- **Stone 空间** = 全不连通的紧 Hausdorff 空间；
-- **Stonean 空间** = 极端不连通的紧 Hausdorff 空间。
-
-记 $\pi_{0}(X) := \{\, C(x) : x \in X \,\}$ 为连通分量的集合，并赋予它**商拓扑**；$x \mapsto C(x)$ 给出连续映射 $X \to \pi_{0}(X)$。
-
-两个字面上很像的条件分居两端：**全不连通**说「碎到每个分量只剩一个点」，**极端不连通**说「开集的闭包不再长大」。后者更强 —— 极端不连通的 $T_{1}$ 空间必全不连通。
-
-#### 极端不连通的基本性质　`prop.stonean-basic`
-*命题*　极端不连通的性质
-
-**(a)** 若 $X$ 极端不连通，则任意两个不交开集 $U, V$ 的闭包仍不交：$\overline{U} \cap \overline{V} = \emptyset$。
-
-**(b)** 极端不连通的 Hausdorff 空间是**全不连通**的。
-
-**(a)** 反证：若 $\overline{U} \cap \overline{V}$ 非空，取其中的点 $x$。因为 $X$ 极端不连通，$\overline{U}$ 与 $\overline{V}$ 都是闭开的，于是它们与自己的内部的关系逼出矛盾 —— 具体地说，$x$ 的每个邻域都要同时碰到 $U$ 与 $V$，而这两个闭开集又把 $x$ 与「另一个」隔开。
-
-**(b)** 设 $x \ne y$。Hausdorff 性给出分离它们的开集 $U \ni x$、$V \ni y$，由 (a) 得两个不交的闭开集把 $x$ 与 $y$ 隔开，于是 $C(x) \subseteq U \not\ni y$，$y \notin C(x)$。所以每个连通分量是单点。
-
-#### 全不连通空间是反射子范畴　`prop.td-reflective`
-*命题*　全不连通空间是 $\mathbf{Top}$ 的反射子范畴
-
-全不连通空间构成的范畴是 $\mathbf{Top}$ 的**反射子范畴**，反射是
-
-$$\pi_{0} : \mathbf{Top} \longrightarrow \mathbf{Top}_{\mathrm{td}}, \qquad X \mapsto \pi_{0}(X)$$
-
-并且 $X \to \pi_{0}(X)$ 是同构 $\iff$ $X$ 全不连通。
-
-推论：**全不连通空间的任意极限仍是全不连通的** —— 因为 $\pi_{0}$ 作为反射（一个左伴随）保余极限，而含入函子保极限。这条与「$\mathbf{CHaus}$ 对极限封闭」叠起来，就是 Stone 空间与 Stonean 空间各自对极限封闭。
-
-#### Stone 空间是 CHaus 的反射子范畴　`prop.stone-reflective`
-*命题*　Stone 空间是 $\mathbf{CHaus}$ 的反射子范畴
-
-Stone 空间构成的范畴是 $\mathbf{CHaus}$ 的反射子范畴。
-
-推论：**Stone 空间的任意极限仍是 Stone 空间**。把这条与「全不连通空间对极限封闭」并排看，就能读出 Stone 空间的双重身份：它既是「紧 Hausdorff 里全不连通的那些」，也是「紧 Hausdorff 这个反射子范畴里再反射一次剩下的那些」。
-
-#### 投射有限空间　`def.profinite`
-*定义*　投射有限空间（Profinite Space）
-
-**投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
-
-$$X \;=\; \varprojlim_{i \in I} X_{i}, \qquad X_{i} \text{ 有限离散},\quad I \text{ 有向}$$
-
-「pro-finite」= 有限者的投射极限。直观上它是「越来越细的有限分辨率」堆出来的对象：$X_{i}$ 是第 $i$ 层分辨率下的样子，$I$ 有向保证任意两层分辨率都能同时加细。
-
-#### Stone ⟺ 投射有限　`thm.stone-profinite`
-*定理*　Stone 空间 $\iff$ 投射有限空间
-
-拓扑空间是 Stone 空间 $\iff$ 它是投射有限空间。
-
-#### Gleason 定理　`thm.gleason`
-*定理*　Gleason 定理：$\mathbf{CHaus}$ 的投射对象
-
-$\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。
-
-#### Stonean 是收缩核　`cor.stonean-retract`
-*推论*　Stonean 空间 = 自由紧 Hausdorff 空间的收缩核
-
-Stonean 空间恰好是自由紧 Hausdorff 空间的**收缩核**：存在连续映射 $r : X \to A$ 使 $r|_{A} = 1_{A}$（这样的 $A$ 叫 $X$ 的收缩核）。
-
-这条把 Gleason 定理翻译成了一句「具体拓扑」的话：投射性 = 收缩核。与模论里「投射模 = 自由模的直和项」完全平行 —— 两者都是「投射 = 从自由对象上切一块下来」。
 
 ### 星团：层与拓扑
 > 造出「覆盖」这套语言：筛 → 预拓扑 / Grothendieck 拓扑 → 层（下降条件）→ Čech 函子与层化 → site 的层范畴的好性质。
@@ -6235,193 +6261,11 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 
 动机来自拓扑空间：连续映射 $\varphi : X \to Y$ 给出层范畴之间的一对函子 —— 沿 $\varphi$ 把层拉回来（$f^{*}$）、再把层推出去（$f_{*}$）。这一对满足 $f^{*} \dashv f_{*}$，并且 $f^{*}$ 正合。于是**拓扑斯之间的「映射」就照这个样子定义**：不是函子，而是一对互为伴随的函子，而且方向与几何直觉相反（左边那个是拉回）。
 
-### 星团：紧生成空间
-> 造出「由紧 Hausdorff 空间测试出来的拓扑」：紧生成空间，以及它是拓扑空间范畴的余反射子范畴。
-
-#### 紧生成空间　`def.compactly-generated`
-*定义*　紧生成空间 / $k$-空间（Compactly Generated Space）
-
-拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。等价地：$X$ 的拓扑由「从紧 Hausdorff 空间进来的连续映射」完全决定 —— 子集 $Y \subseteq X$ 闭 $\iff$ 对每个紧 Hausdorff 空间 $S$ 与每个连续映射 $f : S \to X$，$f^{-1}(Y)$ 在 $S$ 中闭。
-
-例：局部紧 Hausdorff 空间都是紧生成的。
-
-「由紧 Hausdorff 空间的映射决定拓扑」这句话的意思是：**只要一个子集在所有这类映射下的原像都闭，它就是闭的**。一般拓扑空间不满足这一条 —— 于是紧生成性把那些「测试不够」的空间排除在外，留下的那批在做乘积、函数空间时行为良好。
-
-#### 紧生成空间是余反射子范畴　`prop.cg-coreflective`
-*命题*　紧生成空间是 $\mathbf{Top}$ 的余反射子范畴
-
-紧生成空间构成的范畴 $k\mathbf{Top}$ 是 $\mathbf{Top}$ 的**余反射子范畴**：含入函子 $i : k\mathbf{Top} \hookrightarrow \mathbf{Top}$ 有**右**伴随
-
-$$k : \mathbf{Top} \longrightarrow k\mathbf{Top}, \qquad X \mapsto kX$$
-
-即 $i \dashv k$。$kX$ 与 $X$ 有同一个集合，拓扑换成紧生成的那一个。
-
-⭐ 与紧 Hausdorff 对照着记：$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射**子范畴（含入函子有**左**伴随 $\beta$），而 $k\mathbf{Top}$ 是**余反射**的（含入函子有**右**伴随 $k$）。一个把空间「收紧」，一个把空间「松开」—— 所以前者对极限封闭，后者对余极限封闭。
-
-### 星团：凝聚态集
-> 造出终点站：紧 Hausdorff 空间上的层就是凝聚态集，换到自由对象上退化成「保有限积」，再往上走凝聚态阿贝尔群。
-
-#### CHaus 是预拓扑斯　`def.chaus-pretopos`
-*定理*　$\mathbf{CHaus}$ 是预拓扑斯
-
-在 $\mathbf{CHaus}$ 中：
-
-1. 所有极限与余极限存在；
-2. 有限余积**不交**且**万有**；
-3. 等价关系**有效**且**万有**；
-4. 满态射**正则**且**万有**。
-
-因此 $\mathbf{CHaus}$ 是**预拓扑斯**。
-
-第 1 条由「$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的反射子范畴」直接读出：
-
-
-
-$$\varprojlim{}^{\mathbf{CHaus}} D \;\cong\; \varprojlim{}^{\mathbf{Top}} D, \qquad \varinjlim{}^{\mathbf{CHaus}} D \;\cong\; \beta\Bigl(\varinjlim{}^{\mathbf{Top}} D\Bigr)$$
-
-
-
-**极限在 $\mathbf{Top}$ 里怎么算就怎么算**（反射子范畴对极限封闭），**余极限要先在 $\mathbf{Top}$ 里算、再用 $\beta$ 紧化回去**（左伴随保余极限）。
-
-第 2、3 条从 $\mathbf{Set}$ 继承：不交性、万有性、有效性都是「逐点」的性质，而 $\mathbf{CHaus}$ 里的构造逐点继承集合。
-
-第 4 条是紧 Hausdorff 的特色：那里的满射都正则。
-
-#### 凝聚态集　`def.condensed-set`
-*定义*　凝聚态集（Condensed Set）
-
-**凝聚态集**是 $\mathbf{CHaus}$ 上的（集合值）**层**。其范畴记
-
-$$\mathrm{Cond} \;:=\; \widehat{\mathbf{CHaus}}$$
-
-这里 $\mathbf{CHaus}$ 配的是它的**预标准拓扑**。
-
-**例 1. 拓扑空间给凝聚态集。** 任一拓扑空间 $X$ 给出凝聚态集 $\underline{X}(S) := C(S, X) = \operatorname{Hom}_{\mathbf{Top}}(S, X)$ —— 从 $S$ 到 $X$ 的连续映射全体。
-
-**例 2. 收敛序列。** 取 $X$ 是拓扑空间，则 $\underline{X}(\bar{\mathbb{N}})$ 恰好是「**收敛序列 $(x_{n})_{n \ge 1}$ 连同指定的极限 $x_{\infty}$**」的集合 —— 这里 $\bar{\mathbb{N}}$ 是 $\mathbb{N}$ 的**一点紧化**，而「收敛序列连同极限」正好就是从 $\bar{\mathbb{N}}$ 到 $X$ 的连续映射：$\mathbb{N}$ 上的像给出序列，新添那个点上的像给出极限。
-
-**例 3. 连续函数模掉局部常值函数。** 存在唯一的凝聚态集 $Q$ 使 $Q(S) = C(S, \mathbb{R}) / C(S, \mathbb{R}^{\mathrm{disc}})$。
-
-这三个例子的共同点：**取值都是「从紧 Hausdorff 空间出发的连续映射的某种商或子集」**。凝聚态集之所以能记住拓扑信息，靠的就是把这些映射全留下来。
-
-#### 凝聚态集的刻画　`prop.condensed-criterion`
-*命题*　预层是凝聚态集的两条判据
-
-$\mathbf{CHaus}$ 上的集合预层 $X$ 是凝聚态集 $\iff$
-
-1. 对有限族 $(S_{i})_{i \in I}$：
-
-$$X\Bigl(\coprod_{i \in I} S_{i}\Bigr) \;\cong\; \prod_{i \in I} X(S_{i})$$
-
-2. 对任何**闭等价关系** $R \rightrightarrows S$：
-
-$$X\bigl(\operatorname{coker}(R \rightrightarrows S)\bigr) \;\cong\; \ker\bigl(X(S) \rightrightarrows X(R)\bigr)$$
-
-特别地 $X(\emptyset) \cong \{\ast\}$；等价地，若 $S' \to S$ 是满射，则
-
-$$X(S) \longrightarrow X(S') \rightrightarrows X(S' \times_{S} S')$$
-
-左正合。
-
-$\mathbf{CHaus}$ 是预拓扑斯，所以它上面的预标准拓扑恰好由两类覆盖生成：**有限不交并**与**满射**。上面第 1、2 条就是这两类覆盖下的层条件 —— 「有限余积变有限积」与「商变核」。
-
-换一种写法：$X$ 是凝聚态集 $\iff$ 它把有限余积变成有限积、把余等化子变成等化子。这句话后面的所有构造都在用。
-
-#### Cond 是拓扑斯　`thm.cond-topos`
-*定理*　凝聚态集的范畴是拓扑斯
-
-**凝聚态集的范畴 $\mathrm{Cond}$ 是拓扑斯。**
-
-#### FCHaus 上的预拓扑　`prop.fchaus-pretopology`
-*定义*　有限不交并给出自由紧 Hausforff 空间上的预拓扑
-
-记 $\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\beta I$）构成的满子范畴。$\mathbf{FCHaus}$ 中的对象都是 $\mathrm{Cond}$ 的**投射对象**，满射 $S \to S'$ 总有截面 —— 于是**有限不交并给出 $\mathbf{FCHaus}$ 上的一个预拓扑**。
-
-为什么层条件「自动成立」：在自由紧 Hausdorff 空间上，满射有截面，所以「局部有原像」总能在整体上补出来（分离性由截面的存在直接给出）。**能取截面**是这里最省事的一点。
-
-#### FCHaus 上层的判据　`prop.fchaus-sheaf`
-*命题*　自由紧 Hausforff 空间上的层 $\iff$ 保有限积
-
-设 $X$ 是 $\mathbf{FCHaus}$ 上的集合预层。则 $X$ 是层 $\iff$ $X$ **保有限积**。
-
-#### Cond 即 FCHaus 上的层　`thm.cond-equiv-fchaus`
-*定理*　$\mathrm{Cond} \simeq \widehat{\mathbf{FCHaus}}$
-
-$\mathbf{CHaus}$ 上的层与 $\mathbf{FCHaus}$ 上的层是**同一个范畴**：
-
-$$\mathrm{Cond} \;\simeq\; \widehat{\mathbf{FCHaus}}$$
-
-两个方向：$\mathbf{CHaus}$ 上的层限制到 $\mathbf{FCHaus}$ 上仍是层（覆盖变少了，层的条件只会更容易满足）；反过来，$\mathbf{FCHaus}$ 上的层 $X$ 沿「自由对象到 $S$ 的映射」取滤过余极限延拓回 $\mathbf{CHaus}$，得到的就是粘合出来的那个值。证明见边上那条推导。
-
-#### 凝聚态集满态射的判据　`prop.cond-epi`
-*命题*　凝聚态集的满态射
-
-凝聚态集的态射 $X \to Y$ 是满态射 $\iff$ 对每个**自由**紧 Hausdorff 空间 $F$，$X(F) \to Y(F)$ 是满射。
-
-#### Cond 有足够多投射对象　`prop.cond-projectives`
-*命题*　$\mathrm{Cond}$ 的投射对象
-
-自由紧 Hausdorff 空间（看作凝聚态集）都是**投射对象**；并且 $\mathrm{Cond}$ 有**足够多的投射对象**。
-
-#### 底拓扑空间　`def.underlying-topological-space`
-*定义*　凝聚态集的底拓扑空间
-
-凝聚态集 $X$ 的**底拓扑空间** $X(\cdot)$ 取集合 $X(\ast)$（在单点空间处的截面），并赋予使所有映射
-
-$$f : S \longrightarrow X(\cdot), \qquad f \in X(S),\ S \in \mathbf{CHaus}$$
-
-都连续的**最细**拓扑。
-
-等价刻画：$Y \subseteq X(\cdot)$ 是开集 $\iff$ 对每个 $S \in \mathbf{CHaus}$ 与每个 $f \in X(S)$，$f^{-1}(Y)$ 在 $S$ 中开。
-
-所以「$X$ 的底空间」记下了 $X$ 能看见的全部拓扑信息，但**一般会丢掉 $X$ 自己的精细结构** —— 除非 $X$ 来自一个紧生成空间。
-
-#### Top 与 Cond 的伴随　`thm.top-cond-adjoint`
-*定理*　$\mathbf{Top} \to \mathrm{Cond}$ 与它的伴随
-
-函子
-
-$$\mathbf{Top} \longrightarrow \mathrm{Cond}, \qquad X \mapsto \underline{X},\quad \underline{X}(S) := C(S, X)$$
-
-是**忠实**的，并且有右伴随 $X \mapsto X(\cdot)$。限制到**紧生成空间**的满子范畴上时，它变成**全忠实**的。
-
-关键一句：**若 $X$ 是拓扑空间，则它的底空间 $X(\cdot) \cong kX$**。
-
-所以「拓扑空间 $\to$ 凝聚态集 $\to$ 底拓扑空间」这个来回，做的正是**$k$-化**：它把一般拓扑空间换成紧生成的那一个，之后就不再变化。于是 $k\mathbf{Top}$ 恰好是 $\mathrm{Cond}$ 里「完整地记得自己」的那部分，而一般的 $\mathbf{Top}$ 多出来的那些空间在 $\mathrm{Cond}$ 里被合并掉了。
-
-#### 凝聚态阿贝尔群　`def.condensed-abelian-group`
-*定义*　凝聚态阿贝尔群（Condensed Abelian Group）
-
-**凝聚态阿贝尔群**是 $\mathbf{CHaus}$ 上的阿贝尔群值层。四种说法给出同一个范畴：
-
-$$\mathrm{Ab}(\mathrm{Cond}) \;\simeq\; \mathrm{Cond}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{CHaus}}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{FCHaus}}(\mathrm{Ab})$$
-
-记作 $\mathrm{CondAb}$。
-
-阿贝尔群值层的定义是逐点检验的：预层 $M : \mathbf{CHaus}^{\mathrm{op}} \to \mathbf{Ab}$ 是层 $\iff$ 对每个 $A \in \mathbf{Ab}$，集合值预层
-
-
-
-$$X \mapsto \operatorname{Hom}_{\mathbf{Ab}}\bigl(A, M(X)\bigr)$$
-
-
-
-是层。**等价地（更好用）**：$M$ 是凝聚态阿贝尔群 $\iff$ 它**保有限积**；再等价地：把 $M$ 忘成集合值预层之后是层 —— 因为遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 保极限。
-
-记号：$\operatorname{Hom}_{\mathbb{Z}}(M, N) := \operatorname{Hom}_{\mathrm{CondAb}}(M, N)$。
-
-#### 截面函子保极限余极限　`prop.condab-section`
-*命题*　截面函子 $\Gamma(F, -)$
-
-设 $F \in \mathbf{FCHaus}$。则**截面函子**
-
-$$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \Gamma(F, M) := M(F)$$
-
-保**所有极限与所有余极限**。
-
-理由：层在 $F$ 处的截面是「逐点」算出来的，而 $\mathbf{Ab}$ 里有限积与有限余积一致、滤过余极限正合。
-
-这条是**把 $\mathrm{CondAb}$ 的性质逐点归到 $\mathbf{Ab}$** 的通道 —— 下面的 AB 公理那一条就是靠它推出来的。
+## 星系：同调代数（Homological Algebra）
+> 加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。
+
+### 星团：加法与阿贝尔范畴
+> 造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。
 
 #### Grothendieck 的 AB 公理　`def.ab-axioms`
 *定义*　Grothendieck 的 AB 公理（AB1–AB6）
@@ -6452,47 +6296,6 @@ $$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \
 
 「滤过余极限正合 + 有生成元」这两条合起来，就足以让一套同调代数跑起来 —— 这是 Grothendieck 那一代人为「在抽象范畴上做同调代数」挑出来的最低要求。
 
-#### CondAb 满足 AB6 与 AB4*　`thm.condab-ab`
-*定理*　$\mathrm{CondAb}$ 的 AB 公理
-
-$\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\***。
-
-推论：$\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。
-
-这一整段的好处是：$\mathrm{CondAb}$ 上能照搬 $\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。
-
-#### Stonean 给出有限表现投射对象　`lem.stonean-projective`
-*引理*　Stonean 空间给出有限表现的投射对象
-
-设 $F$ 是**自由紧 Hausdorff 空间**（更一般地，**Stonean 空间**）。则自由凝聚态阿贝尔群 $\mathbb{Z}\cdot F$ 是**有限表现**的**投射**凝聚态阿贝尔群。
-
-要证的等价形式是：函子 $M \mapsto \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}\cdot F, M) \cong \Gamma(F, M)$ 保满态射与滤过余极限。前半由「自由紧 Hausdorff 空间在 $\mathrm{Cond}$ 里投射」给出，后半由截面函子的构造给出 —— 而截面函子实际上**保所有余极限**。
-
-#### CondAb 由有限表现投射对象生成　`prop.condab-generated`
-*命题*　$\mathrm{CondAb}$ 的生成元
-
-$\mathrm{CondAb}$ 由**有限表现的投射**凝聚态阿贝尔群生成。特别地，它有足够多的投射对象。
-
-#### CondAb 上的张量与内 Hom　`prop.condab-tensor`
-*命题*　$\mathrm{CondAb}$ 上的 $\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$
-
-$\mathrm{CondAb}$ 上存在两个双函子 $\operatorname{Hom}_{\mathbb{Z}}$ 与 $\otimes_{\mathbb{Z}}$，使
-
-$$\operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}(M, N)$$
-
-并且
-
-$$\operatorname{Hom}_{\mathbb{Z}}\bigl(M \otimes_{\mathbb{Z}} N,\ P\bigr) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
-
-即 $\otimes_{\mathbb{Z}}$ 与内部的 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随** —— 所以 $\mathrm{CondAb}$ 是一个**封闭对称幺半**范畴（特别地，它富集在自己上面）。
-
-所以它不只是一个阿贝尔范畴，还带着一套封闭的张量结构 —— 这才是「在凝聚态阿贝尔群上做代数」的前提：可以谈张量积、可以对偶、可以谈交换代数。
-
-⚠️ 注意 $\operatorname{Hom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot)$ 自然是一个**紧生成拓扑空间**，但它**不是拓扑阿贝尔群** —— 因为紧生成空间对（拓扑空间的）积不封闭。
-
-### 星团：同调代数
-> 造出「复形」这套机器：复形 → 同伦 → 同伦范畴 → 映射锥与导出三角 → 同调与长正合列 → 拟同构 → 内射对象 → 谱序列。
-
 #### 加法 / 阿贝尔范畴　`def.abelian-category`
 *定义*　加法范畴与阿贝尔范畴（Additive / Abelian Category）
 
@@ -6512,6 +6315,9 @@ $$\operatorname{Hom}_{\mathbb{Z}}\bigl(M \otimes_{\mathbb{Z}} N,\ P\bigr) \;\con
 例：$A\text{-}\mathbf{Mod}$ 是阿贝尔范畴；拓扑斯上的 $\mathbf{Ab}(\mathcal{T})$ 也是；$\mathbf{AbCHaus}$ 也是。而 $\mathbf{AbTop}$ **不是**（$\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ 这个恒等映射不严格），$\mathbf{AbHaus}$ 也不是。
 
 阿贝尔范畴是整套同调代数的**工作环境**：有核有余核，「正合列」才说得出口；而加法范畴只提供加法的骨架（零对象与直和）。
+
+### 星团：复形与导出三角
+> 造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。
 
 #### 上链复形　`def.cochain-complex`
 *定义*　复形（Complex）
@@ -6615,6 +6421,9 @@ $$K \xrightarrow{\ f\ } L \longrightarrow M(f) \longrightarrow K[1]$$
 
 第 2 条是「五引理」在同伦范畴里的样子：**前两步定住了，第三步就跟着定住**。第 1 条说明三角之间的态射被前两步控制得很紧 —— 这正是三角范畴公理里那条最不明显的要求的来源。
 
+### 星团：同调与正合列
+> 造出「把复形读成不变量」这件事：同调 → 上同调函子 → 长正合列 → 拟同构与零调 → 内射对象。
+
 #### 同调　`def.cohomology`
 *定义*　同调（Cohomology）
 
@@ -6688,6 +6497,9 @@ $$M \text{ 内射} \iff M'' \text{ 内射}$$
 
 证明用一张 $3 \times 3$ 的 $\operatorname{Hom}$ 图表：把短正合列 $0 \to A \to B \to C \to 0$ 用 $\operatorname{Hom}(-, M)$ 家族拉成三行，用两次蛇引理读出中间一行 $0 \to \ker f \to \ker g \to \ker h \to \operatorname{coker} f \to \operatorname{coker} g \to 0$，再看出第一行与第三行都是正合的，于是 $\ker g = \operatorname{coker} g = 0$。
 
+### 星团：过滤与谱序列
+> 造出「逐层逼近同调」的工具：带过滤的对象 → 关联分次 → 谱序列从 $E_{r}$ 页逐页算到 $E_{\infty}$。
+
 #### 过滤　`def.filtration`
 *定义*　过滤（Filtration）
 
@@ -6726,6 +6538,215 @@ $$F^{p}H^{n} := \operatorname{im}\bigl(H^{n}(F^{p}K) \to H^{n}(K)\bigr)$$
 继承。于是每根 $H^{n}$ 上都有一串 $H^{n} \supseteq \cdots \supseteq F^{p}H^{n} \supseteq F^{p+1}H^{n} \supseteq \cdots \supseteq 0$。
 
 谱序列说的就是：**对充分大的 $r$，$E_{r}$ 页稳定下来，恰好等于这个过滤的关联分次**。所以它是「从过滤的复形一层层逼近同调」的工具 —— 直接算 $H^{n}$ 太难时，就把 $H^{n}$ 拆成容易算的那些碎片。
+
+## 星系：凝聚态数学（Condensed Mathematics）
+> 把拓扑空间换成「紧 Hausdorff 空间上的层」：凝聚态集、凝聚态阿贝尔群。
+
+### 星团：凝聚态集
+> 造出主角：紧 Hausdorff 空间上的层就是凝聚态集；换到自由对象上，层条件退化成「保有限积」。
+
+#### CHaus 是预拓扑斯　`def.chaus-pretopos`
+*定理*　$\mathbf{CHaus}$ 是预拓扑斯
+
+在 $\mathbf{CHaus}$ 中：
+
+1. 所有极限与余极限存在；
+2. 有限余积**不交**且**万有**；
+3. 等价关系**有效**且**万有**；
+4. 满态射**正则**且**万有**。
+
+因此 $\mathbf{CHaus}$ 是**预拓扑斯**。
+
+第 1 条由「$\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的反射子范畴」直接读出：
+
+
+
+$$\varprojlim{}^{\mathbf{CHaus}} D \;\cong\; \varprojlim{}^{\mathbf{Top}} D, \qquad \varinjlim{}^{\mathbf{CHaus}} D \;\cong\; \beta\Bigl(\varinjlim{}^{\mathbf{Top}} D\Bigr)$$
+
+
+
+**极限在 $\mathbf{Top}$ 里怎么算就怎么算**（反射子范畴对极限封闭），**余极限要先在 $\mathbf{Top}$ 里算、再用 $\beta$ 紧化回去**（左伴随保余极限）。
+
+第 2、3 条从 $\mathbf{Set}$ 继承：不交性、万有性、有效性都是「逐点」的性质，而 $\mathbf{CHaus}$ 里的构造逐点继承集合。
+
+第 4 条是紧 Hausdorff 的特色：那里的满射都正则。
+
+#### 凝聚态集　`def.condensed-set`
+*定义*　凝聚态集（Condensed Set）
+
+**凝聚态集**是 $\mathbf{CHaus}$ 上的（集合值）**层**。其范畴记
+
+$$\mathrm{Cond} \;:=\; \widehat{\mathbf{CHaus}}$$
+
+这里 $\mathbf{CHaus}$ 配的是它的**预标准拓扑**。
+
+**例 1. 拓扑空间给凝聚态集。** 任一拓扑空间 $X$ 给出凝聚态集 $\underline{X}(S) := C(S, X) = \operatorname{Hom}_{\mathbf{Top}}(S, X)$ —— 从 $S$ 到 $X$ 的连续映射全体。
+
+**例 2. 收敛序列。** 取 $X$ 是拓扑空间，则 $\underline{X}(\bar{\mathbb{N}})$ 恰好是「**收敛序列 $(x_{n})_{n \ge 1}$ 连同指定的极限 $x_{\infty}$**」的集合 —— 这里 $\bar{\mathbb{N}}$ 是 $\mathbb{N}$ 的**一点紧化**，而「收敛序列连同极限」正好就是从 $\bar{\mathbb{N}}$ 到 $X$ 的连续映射：$\mathbb{N}$ 上的像给出序列，新添那个点上的像给出极限。
+
+**例 3. 连续函数模掉局部常值函数。** 存在唯一的凝聚态集 $Q$ 使 $Q(S) = C(S, \mathbb{R}) / C(S, \mathbb{R}^{\mathrm{disc}})$。
+
+这三个例子的共同点：**取值都是「从紧 Hausdorff 空间出发的连续映射的某种商或子集」**。凝聚态集之所以能记住拓扑信息，靠的就是把这些映射全留下来。
+
+#### 凝聚态集的刻画　`prop.condensed-criterion`
+*命题*　预层是凝聚态集的两条判据
+
+$\mathbf{CHaus}$ 上的集合预层 $X$ 是凝聚态集 $\iff$
+
+1. 对有限族 $(S_{i})_{i \in I}$：
+
+$$X\Bigl(\coprod_{i \in I} S_{i}\Bigr) \;\cong\; \prod_{i \in I} X(S_{i})$$
+
+2. 对任何**闭等价关系** $R \rightrightarrows S$：
+
+$$X\bigl(\operatorname{coker}(R \rightrightarrows S)\bigr) \;\cong\; \ker\bigl(X(S) \rightrightarrows X(R)\bigr)$$
+
+特别地 $X(\emptyset) \cong \{\ast\}$；等价地，若 $S' \to S$ 是满射，则
+
+$$X(S) \longrightarrow X(S') \rightrightarrows X(S' \times_{S} S')$$
+
+左正合。
+
+$\mathbf{CHaus}$ 是预拓扑斯，所以它上面的预标准拓扑恰好由两类覆盖生成：**有限不交并**与**满射**。上面第 1、2 条就是这两类覆盖下的层条件 —— 「有限余积变有限积」与「商变核」。
+
+换一种写法：$X$ 是凝聚态集 $\iff$ 它把有限余积变成有限积、把余等化子变成等化子。这句话后面的所有构造都在用。
+
+#### Cond 是拓扑斯　`thm.cond-topos`
+*定理*　凝聚态集的范畴是拓扑斯
+
+**凝聚态集的范畴 $\mathrm{Cond}$ 是拓扑斯。**
+
+#### FCHaus 上的预拓扑　`prop.fchaus-pretopology`
+*命题*　有限不交并给出自由紧 Hausforff 空间上的预拓扑
+
+记 $\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\beta I$）构成的满子范畴。$\mathbf{FCHaus}$ 中的对象都是 $\mathrm{Cond}$ 的**投射对象**，满射 $S \to S'$ 总有截面 —— 于是**有限不交并给出 $\mathbf{FCHaus}$ 上的一个预拓扑**。
+
+为什么层条件「自动成立」：在自由紧 Hausdorff 空间上，满射有截面，所以「局部有原像」总能在整体上补出来（分离性由截面的存在直接给出）。**能取截面**是这里最省事的一点。
+
+#### FCHaus 上层的判据　`prop.fchaus-sheaf`
+*命题*　自由紧 Hausforff 空间上的层 $\iff$ 保有限积
+
+设 $X$ 是 $\mathbf{FCHaus}$ 上的集合预层。则 $X$ 是层 $\iff$ $X$ **保有限积**。
+
+#### Cond 即 FCHaus 上的层　`thm.cond-equiv-fchaus`
+*定理*　$\mathrm{Cond} \simeq \widehat{\mathbf{FCHaus}}$
+
+$\mathbf{CHaus}$ 上的层与 $\mathbf{FCHaus}$ 上的层是**同一个范畴**：
+
+$$\mathrm{Cond} \;\simeq\; \widehat{\mathbf{FCHaus}}$$
+
+两个方向：$\mathbf{CHaus}$ 上的层限制到 $\mathbf{FCHaus}$ 上仍是层（覆盖变少了，层的条件只会更容易满足）；反过来，$\mathbf{FCHaus}$ 上的层 $X$ 沿「自由对象到 $S$ 的映射」取滤过余极限延拓回 $\mathbf{CHaus}$，得到的就是粘合出来的那个值。证明见边上那条推导。
+
+#### 凝聚态集满态射的判据　`prop.cond-epi`
+*命题*　凝聚态集的满态射
+
+凝聚态集的态射 $X \to Y$ 是满态射 $\iff$ 对每个**自由**紧 Hausdorff 空间 $F$，$X(F) \to Y(F)$ 是满射。
+
+#### Cond 有足够多投射对象　`prop.cond-projectives`
+*命题*　$\mathrm{Cond}$ 的投射对象
+
+自由紧 Hausdorff 空间（看作凝聚态集）都是**投射对象**；并且 $\mathrm{Cond}$ 有**足够多的投射对象**。
+
+#### 底拓扑空间　`def.underlying-topological-space`
+*定义*　凝聚态集的底拓扑空间
+
+凝聚态集 $X$ 的**底拓扑空间** $X(\cdot)$ 取集合 $X(\ast)$（在单点空间处的截面），并赋予使所有映射
+
+$$f : S \longrightarrow X(\cdot), \qquad f \in X(S),\ S \in \mathbf{CHaus}$$
+
+都连续的**最细**拓扑。
+
+等价刻画：$Y \subseteq X(\cdot)$ 是开集 $\iff$ 对每个 $S \in \mathbf{CHaus}$ 与每个 $f \in X(S)$，$f^{-1}(Y)$ 在 $S$ 中开。
+
+所以「$X$ 的底空间」记下了 $X$ 能看见的全部拓扑信息，但**一般会丢掉 $X$ 自己的精细结构** —— 除非 $X$ 来自一个紧生成空间。
+
+#### Top 与 Cond 的伴随　`thm.top-cond-adjoint`
+*定理*　$\mathbf{Top} \to \mathrm{Cond}$ 与它的伴随
+
+函子
+
+$$\mathbf{Top} \longrightarrow \mathrm{Cond}, \qquad X \mapsto \underline{X},\quad \underline{X}(S) := C(S, X)$$
+
+是**忠实**的，并且有右伴随 $X \mapsto X(\cdot)$。限制到**紧生成空间**的满子范畴上时，它变成**全忠实**的。
+
+关键一句：**若 $X$ 是拓扑空间，则它的底空间 $X(\cdot) \cong kX$**。
+
+所以「拓扑空间 $\to$ 凝聚态集 $\to$ 底拓扑空间」这个来回，做的正是**$k$-化**：它把一般拓扑空间换成紧生成的那一个，之后就不再变化。于是 $k\mathbf{Top}$ 恰好是 $\mathrm{Cond}$ 里「完整地记得自己」的那部分，而一般的 $\mathbf{Top}$ 多出来的那些空间在 $\mathrm{Cond}$ 里被合并掉了。
+
+### 星团：凝聚态阿贝尔群
+> 在凝聚态集上做代数：阿贝尔群值层 → 截面函子 → 足够多投射对象 → 张量与内 Hom。
+
+#### 凝聚态阿贝尔群　`def.condensed-abelian-group`
+*定义*　凝聚态阿贝尔群（Condensed Abelian Group）
+
+**凝聚态阿贝尔群**是 $\mathbf{CHaus}$ 上的阿贝尔群值层。四种说法给出同一个范畴：
+
+$$\mathrm{Ab}(\mathrm{Cond}) \;\simeq\; \mathrm{Cond}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{CHaus}}(\mathrm{Ab}) \;\simeq\; \widehat{\mathbf{FCHaus}}(\mathrm{Ab})$$
+
+记作 $\mathrm{CondAb}$。
+
+阿贝尔群值层的定义是逐点检验的：预层 $M : \mathbf{CHaus}^{\mathrm{op}} \to \mathbf{Ab}$ 是层 $\iff$ 对每个 $A \in \mathbf{Ab}$，集合值预层
+
+
+
+$$X \mapsto \operatorname{Hom}_{\mathbf{Ab}}\bigl(A, M(X)\bigr)$$
+
+
+
+是层。**等价地（更好用）**：$M$ 是凝聚态阿贝尔群 $\iff$ 它**保有限积**；再等价地：把 $M$ 忘成集合值预层之后是层 —— 因为遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 保极限。
+
+记号：$\operatorname{Hom}_{\mathbb{Z}}(M, N) := \operatorname{Hom}_{\mathrm{CondAb}}(M, N)$。
+
+#### 截面函子保极限余极限　`prop.condab-section`
+*命题*　截面函子 $\Gamma(F, -)$
+
+设 $F \in \mathbf{FCHaus}$。则**截面函子**
+
+$$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \Gamma(F, M) := M(F)$$
+
+保**所有极限与所有余极限**。
+
+理由：层在 $F$ 处的截面是「逐点」算出来的，而 $\mathbf{Ab}$ 里有限积与有限余积一致、滤过余极限正合。
+
+这条是**把 $\mathrm{CondAb}$ 的性质逐点归到 $\mathbf{Ab}$** 的通道 —— 下面的 AB 公理那一条就是靠它推出来的。
+
+#### CondAb 满足 AB6 与 AB4*　`thm.condab-ab`
+*定理*　$\mathrm{CondAb}$ 的 AB 公理
+
+$\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\***。
+
+推论：$\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。
+
+这一整段的好处是：$\mathrm{CondAb}$ 上能照搬 $\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。
+
+#### Stonean 给出有限表现投射对象　`lem.stonean-projective`
+*引理*　Stonean 空间给出有限表现的投射对象
+
+设 $F$ 是**自由紧 Hausdorff 空间**（更一般地，**Stonean 空间**）。则自由凝聚态阿贝尔群 $\mathbb{Z}\cdot F$ 是**有限表现**的**投射**凝聚态阿贝尔群。
+
+要证的等价形式是：函子 $M \mapsto \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}\cdot F, M) \cong \Gamma(F, M)$ 保满态射与滤过余极限。前半由「自由紧 Hausdorff 空间在 $\mathrm{Cond}$ 里投射」给出，后半由截面函子的构造给出 —— 而截面函子实际上**保所有余极限**。
+
+#### CondAb 由有限表现投射对象生成　`prop.condab-generated`
+*命题*　$\mathrm{CondAb}$ 的生成元
+
+$\mathrm{CondAb}$ 由**有限表现的投射**凝聚态阿贝尔群生成。特别地，它有足够多的投射对象。
+
+#### CondAb 上的张量与内 Hom　`prop.condab-tensor`
+*命题*　$\mathrm{CondAb}$ 上的 $\otimes_{\mathbb{Z}}$ 与 $\operatorname{Hom}_{\mathbb{Z}}$
+
+$\mathrm{CondAb}$ 上存在两个双函子 $\operatorname{Hom}_{\mathbb{Z}}$ 与 $\otimes_{\mathbb{Z}}$，使
+
+$$\operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}(M, N)$$
+
+并且
+
+$$\operatorname{Hom}_{\mathbb{Z}}\bigl(M \otimes_{\mathbb{Z}} N,\ P\bigr) \;\cong\; \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
+
+即 $\otimes_{\mathbb{Z}}$ 与内部的 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随** —— 所以 $\mathrm{CondAb}$ 是一个**封闭对称幺半**范畴（特别地，它富集在自己上面）。
+
+所以它不只是一个阿贝尔范畴，还带着一套封闭的张量结构 —— 这才是「在凝聚态阿贝尔群上做代数」的前提：可以谈张量积、可以对偶、可以谈交换代数。
+
+⚠️ 注意 $\operatorname{Hom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{Z}}(M, N)(\cdot)$ 自然是一个**紧生成拓扑空间**，但它**不是拓扑阿贝尔群** —— 因为紧生成空间对（拓扑空间的）积不封闭。
 
 ---
 
@@ -10704,6 +10725,378 @@ Gleason 定理把 $\mathbf{CHaus}$ 的**投射对象**认了出来。
 
 极端不连通的表述与推论都落在**闭开集**上。
 
+#### 定义引用：「极限」→ 极限的函子性　`def-dep.limit-functoriality`
+
+函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。
+
+#### 定义引用：「自然变换」→ 极限的函子性　`def-dep.nat-limfunctor`
+
+输入是一个**自然变换** $\alpha : F \implies G$，输出是极限之间的唯一态射。
+
+#### 定义引用：「自然变换」→ 米田引理　`def-dep.nat-yoneda`
+
+引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。
+
+#### 定义引用：「函子」→ 米田引理　`def-dep.functor-yoneda`
+
+引理对**任意函子** $F : \mathcal{C} \to \mathbf{Set}$ 成立。
+
+#### 定义引用：「自然变换」→ 米田嵌入　`def-dep.nat-yoneda-embedding`
+
+全忠实说的是**自然变换集** $\operatorname{Hom}_{\widehat{\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\operatorname{Hom}_{\mathcal{C}}(X, Y)$ 的双射。
+
+#### 定义引用：「伴随函子」→ 右伴随存在的判据　`def-dep.adjoint-criterion`
+
+判据说的正是「$F$ 有没有**右伴随**」。
+
+#### 定义引用：「伴随函子」→ 全忠实与单位　`def-dep.adjoint-ff`
+
+命题谈的是**伴随**里左（右）伴随的那个函子。
+
+#### 定义引用：「忠实 / 满 / 全忠实」→ 全忠实与单位　`def-dep.ff-adjoint`
+
+「$F$ **全忠实**」用的是忠实与满的定义。
+
+#### 定义引用：「单位与余单位」→ 全忠实与单位　`def-dep.unit-adjoint-ff`
+
+命题的另一边是「**单位** $\eta$ 是同构」。
+
+#### 定义引用：「交换图」→ 极限即伴随　`def-dep.diagram-limit-adjoint`
+
+命题里的 $\Delta : \mathcal{C} \to \mathcal{C}^{I}$ 是**常图函子**，$\mathcal{C}^{I}$ 是图范畴。
+
+#### 定义引用：「伴随函子」→ 伴随函子定理　`def-dep.adjoint-saft`
+
+SAFT 的结论是「$G$ 有**左伴随**」。
+
+#### 定义引用：「反射子范畴」→ 反射子范畴里的极限　`def-dep.reflective-limits`
+
+命题谈的是**反射子范畴**里的极限与余极限。
+
+#### 定义引用：「交换图」→ 滤过余极限正合　`def-dep.diagram-filtered`
+
+余极限函子 $\varinjlim : \mathbf{Set}^{I} \to \mathbf{Set}$ 的定义域是**图范畴**。
+
+#### 定义引用：「伴随函子」→ 紧 Haus 是反射子范畴　`def-dep.adjoint-chaus-reflective`
+
+「$\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。
+
+#### 定义引用：「Hausdorff 空间」→ 紧 Haus 是反射子范畴　`def-dep.hausdorff-stonecech`
+
+$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ 紧 Haus 是自由的商　`def-dep.free-chaus-quotient`
+
+命题说的商空间正是从**自由紧 Hausdorff 空间** $\beta S^{\mathrm{disc}}$ 商出来的。
+
+#### 定义引用：「紧 Hausdorff 空间范畴」→ 紧 Haus 是自由的商　`def-dep.chaus-quotient-free`
+
+命题说的对象是 $\mathbf{CHaus}$ 中的空间。
+
+#### 定义引用：「投射 / 内射对象」→ 自由紧 Haus 是投射对象　`def-dep.projective-free`
+
+命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ 自由紧 Haus 是投射对象　`def-dep.free-projective`
+
+命题谈的是**自由紧 Hausdorff 空间**。
+
+#### 定义引用：「自由表示」→ 紧 Haus 都有自由表示　`def-dep.free-presentation-cor`
+
+推论说每个对象都**有**自由表示。
+
+#### 定义引用：「紧 Hausdorff 空间范畴」→ 连通分量是闭开邻域之交　`def-dep.chaus-component`
+
+证明里用到紧 Hausdorff 空间是**正规**的。
+
+#### 定义引用：「全不连通与 Stone 空间」→ 极端不连通的基本性质　`def-dep.stone-stonean-basic`
+
+命题谈的是**极端不连通**（以及由它推出的全不连通）。
+
+#### 定义引用：「全不连通与 Stone 空间」→ Stone 空间是 CHaus 的反射子范畴　`def-dep.stone-reflective`
+
+「Stone 空间」是**全不连通的紧 Hausdorff 空间**。
+
+#### 定义引用：「全不连通与 Stone 空间」→ 全不连通空间是反射子范畴　`def-dep.stone-td-reflective`
+
+全不连通是 Stone 空间定义里的一半。
+
+#### 定义引用：「连通与连通分量」→ 全不连通空间是反射子范畴　`def-dep.connected-td-reflective`
+
+反射 $\pi_{0}$ 就是把每个点送到它的**连通分量**。
+
+#### 定义引用：「Gleason 定理」→ Stonean 是收缩核　`def-dep.gleason-retract`
+
+推论把 Gleason 定理翻译成「Stonean = **收缩核**」。
+
+#### 定义引用：「层」→ 层的下降条件　`def-dep.sheaf-descent`
+
+定理给「是层」一个可以逐项验证的**正合列**判据。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 层的下降条件　`def-dep.fibered-descent`
+
+正合列里的 $X_{i} \times_{X} X_{j}$ 是**纤维积**。
+
+#### 定义引用：「Čech 函子」→ Čech 函子的性质　`def-dep.cech-properties`
+
+三条性质都是关于 $\widehat{H}$ 的。
+
+#### 定义引用：「Čech 函子」→ 层化　`def-dep.cech-sheafification`
+
+层化取「对预层做两次 **Čech 构造**」。
+
+#### 定义引用：「反射子范畴」→ 层化　`def-dep.reflective-sheafification`
+
+定理的结论是「层范畴是**反射子范畴**」。
+
+#### 定义引用：「万有关系」→ site 的层范畴的好性质　`def-dep.universal-site`
+
+五条性质里出现了**万有余极限、万有满态射、不交余积**。
+
+#### 定义引用：「等化子 / 余等化子」→ 层中单满即同构　`def-dep.equalizer-mono-epi`
+
+「满-单分解」把任意态射拆成 $F \twoheadrightarrow I \rightarrowtail G$。
+
+#### 定义引用：「层」→ 满态射的局部判据　`def-dep.sheaf-epi-criterion`
+
+命题说的是**层**之间的态射什么时候是满的。
+
+#### 定义引用：「有效等价关系」→ 层化与等价关系交换　`def-dep.effective-sheafify`
+
+命题说的是**层化**与等价关系、商的交换。
+
+#### 定义引用：「筛」→ 覆盖筛即余积满射　`def-dep.sieve-covering-epi`
+
+命题说覆盖族生成**覆盖筛**与余积满射是一回事。
+
+#### 定义引用：「万有关系」→ 不交万有余积与次标准拓扑　`def-dep.universal-disjoint`
+
+命题说的是**不交万有余积**在次标准拓扑下保持不变。
+
+#### 定义引用：「标准拓扑」→ 不交万有余积与次标准拓扑　`def-dep.canonical-disjoint`
+
+「次标准」是命题的关键假设。
+
+#### 定义引用：「预拓扑斯」→ 满-单分解　`def-dep.pretopos-factorization`
+
+命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。
+
+#### 定义引用：「像 / 余像」→ 满-单分解　`def-dep.image-pretopos-factorization`
+
+结论里「严格」说的是 $\operatorname{im} f \cong \operatorname{coim} f$。
+
+#### 定义引用：「子对象」→ 子对象构成有界格　`def-dep.subobject-lattice`
+
+命题说的是**子对象**全体构成有界格。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 子对象构成有界格　`def-dep.fibered-subobject-lattice`
+
+格里的交就是**纤维积**（拉回）。
+
+#### 定义引用：「层」→ 预标准拓扑下的层　`def-dep.sheaf-precanonical`
+
+命题给出预标准拓扑下「是**层**」的两条可验等式。
+
+#### 定义引用：「预标准拓扑」→ 余积与商在层范畴中不变　`def-dep.precanonical-preserves`
+
+命题谈的是**预标准拓扑**下余积与商是否走样。
+
+#### 定义引用：「层」→ 单满在层化后不变　`def-dep.sheaf-mono-epi`
+
+命题比较的是 $\mathcal{C}$ 里的单满与它在**层**范畴里的像。
+
+#### 定义引用：「拓扑斯」→ Giraud 定理　`def-dep.topos-giraud`
+
+Giraud 定理给出「是**拓扑斯**」的四个等价说法。
+
+#### 定义引用：「标准拓扑」→ Giraud 定理　`def-dep.canonical-giraud`
+
+第 2 条说的是对**标准拓扑**而言的层。
+
+#### 定义引用：「表示函子」→ Giraud 定理　`def-dep.representable-giraud`
+
+第 2 条的关键词是「层都**可表示**」。
+
+#### 定义引用：「拓扑斯」→ 拓扑斯中覆盖即余积满射　`def-dep.topos-covering-epi`
+
+命题在**拓扑斯**里把「覆盖」与余积满射对起来。
+
+#### 定义引用：「Grothendieck 拓扑」→ 拓扑斯中覆盖即余积满射　`def-dep.topology-covering-epi`
+
+命题的左边是「$(X_{i} \to X)$ 是**覆盖**」，即生成覆盖筛。
+
+#### 定义引用：「表示函子」→ 可表示性的下降　`def-dep.representable-quotient`
+
+引理说的是「**可表示性**可以从覆盖的一块块传回整体」。
+
+#### 定义引用：「有效等价关系」→ 可表示性的下降　`def-dep.effective-quotient`
+
+把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。
+
+#### 定义引用：「层」→ 拓扑斯上的层即保极限的预层　`def-dep.sheaf-limits`
+
+命题把「是**层**」与「保所有极限」说成一回事。
+
+#### 定义引用：「极限」→ 拓扑斯上的层即保极限的预层　`def-dep.limit-sheaf-limits`
+
+「保**极限**」是命题的另一半。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 拟紧的性质　`def-dep.fibered-qc`
+
+第 3 条里的「存在满射 $X \to F$」用的是 $\mathcal{C}$ 里的对象覆盖层。
+
+#### 定义引用：「拟紧对象」→ 预拓扑斯由拓扑斯唯一确定　`def-dep.qc-pretopos-qcqs`
+
+定理的两边之一是**拟紧**。
+
+#### 定义引用：「拟分离对象」→ 预拓扑斯由拓扑斯唯一确定　`def-dep.qs-pretopos-qcqs`
+
+另一边是**拟分离**。
+
+#### 定义引用：「预拓扑斯」→ 凝聚态集的刻画　`def-dep.pretopos-condensed-criterion`
+
+两条判据来自「$\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。
+
+#### 定义引用：「凝聚态集」→ 凝聚态集的刻画　`def-dep.condensed-criterion`
+
+判据给出的是「预层是**凝聚态集**」的等价条件。
+
+#### 定义引用：「凝聚态集」→ Cond 是拓扑斯　`def-dep.condensed-topos`
+
+定理说的是 $\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ FCHaus 上的预拓扑　`def-dep.free-pretopology`
+
+预拓扑搭在**自由紧 Hausdorff 空间**上。
+
+#### 定义引用：「投射 / 内射对象」→ FCHaus 上的预拓扑　`def-dep.projective-pretopology`
+
+「满射有截面」说的是这些对象**投射**。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ FCHaus 上层的判据　`def-dep.free-sheaf`
+
+命题谈的是**自由紧 Hausdorff 空间**上的层。
+
+#### 定义引用：「层」→ Cond 即 FCHaus 上的层　`def-dep.sheaf-cond-equiv`
+
+定理说两边的**层**范畴是同一个。
+
+#### 定义引用：「层」→ 凝聚态集满态射的判据　`def-dep.sheaf-cond-epi`
+
+命题说的是**凝聚态集**（层）之间满态射的判据。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ 凝聚态集满态射的判据　`def-dep.free-cond-epi`
+
+探针取的是**自由**紧 Hausdorff 空间。
+
+#### 定义引用：「投射 / 内射对象」→ Cond 有足够多投射对象　`def-dep.projective-cond`
+
+命题说自由紧 Hausdorff 空间在 $\mathrm{Cond}$ 里是**投射对象**。
+
+#### 定义引用：「凝聚态集」→ Top 与 Cond 的伴随　`def-dep.condensed-top-adjoint`
+
+定理里的函子 $X \mapsto \underline{X}$ 以**凝聚态集**为靶。
+
+#### 定义引用：「紧生成空间」→ Top 与 Cond 的伴随　`def-dep.cg-top-cond`
+
+限制到**紧生成空间**上时那个函子变得全忠实。
+
+#### 定义引用：「紧生成空间」→ 紧生成空间是余反射子范畴　`def-dep.cg-coreflective`
+
+命题说的是**紧生成空间**是余反射子范畴。
+
+#### 定义引用：「凝聚态阿贝尔群」→ CondAb 上的张量与内 Hom　`def-dep.condab-tensor`
+
+两个双函子定义在**凝聚态阿贝尔群**范畴上。
+
+#### 定义引用：「伴随函子」→ 紧生成空间是余反射子范畴　`def-dep.adjoint-cg-coreflective`
+
+「余反射」的意思是含入函子有**右伴随**。
+
+#### 定义引用：「自由紧 Hausdorff 空间」→ 截面函子保极限余极限　`def-dep.free-condab-section`
+
+截面函子 $\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。
+
+#### 定义引用：「极限」→ 截面函子保极限余极限　`def-dep.limit-condab-section`
+
+结论说它保**所有极限与余极限**。
+
+#### 定义引用：「凝聚态阿贝尔群」→ CondAb 满足 AB6 与 AB4*　`def-dep.condab-ab`
+
+定理说的是 $\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。
+
+#### 定义引用：「全不连通与 Stone 空间」→ Stonean 给出有限表现投射对象　`def-dep.stonean-projective`
+
+引理的输入是 **Stonean 空间**。
+
+#### 定义引用：「投射 / 内射对象」→ Stonean 给出有限表现投射对象　`def-dep.projective-stonean`
+
+结论说 $\mathbb{Z}\cdot F$ 是**投射**对象。
+
+#### 定义引用：「生成元集」→ CondAb 由有限表现投射对象生成　`def-dep.generator-condab-generated`
+
+命题说的是 $\mathrm{CondAb}$ 由谁**生成**。
+
+#### 定义引用：「投射 / 内射对象」→ CondAb 由有限表现投射对象生成　`def-dep.projective-condab-generated`
+
+生成元取的是**有限表现的投射**对象。
+
+#### 定义引用：「伴随函子」→ CondAb 上的张量与内 Hom　`def-dep.adjoint-condab-tensor`
+
+$\otimes_{\mathbb{Z}}$ 与内部 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随**。
+
+#### 定义引用：「上链复形」→ 复形范畴是加法范畴　`def-dep.complex-additive`
+
+命题说的是**复形**构成的那个范畴。
+
+#### 定义引用：「等化子 / 余等化子」→ 复形范畴是加法范畴　`def-dep.equalizer-complex-additive`
+
+核与余核都是**逐项**取出来的。
+
+#### 定义引用：「导出三角」→ 三角的旋转与延拓　`def-dep.triangle-rotation`
+
+命题说的是**导出三角**的基本性质。
+
+#### 定义引用：「导出三角」→ 三角态射的性质　`def-dep.triangle-morphism`
+
+引理说的是**导出三角**之间态射的性质。
+
+#### 定义引用：「同伦」→ 三角态射的性质　`def-dep.homotopy-triangle-morphism`
+
+「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。
+
+#### 定义引用：「等化子 / 余等化子」→ 同调的短正合列　`def-dep.equalizer-cohomology-sequence`
+
+这条正合列把同调夹在**余核**与**核**之间。
+
+#### 定义引用：「同调」→ 长正合列　`def-dep.cohomology-long-exact`
+
+长正合列里跑的是**同调**。
+
+#### 定义引用：「等化子 / 余等化子」→ 长正合列　`def-dep.equalizer-long-exact`
+
+「正合列」本身就是一句关于**核与像**的话。
+
+#### 定义引用：「投射 / 内射对象」→ 内射对象的判据　`def-dep.injective-criterion`
+
+命题给出**内射对象**的四条等价刻画。
+
+#### 定义引用：「单态射 / 满态射」→ 内射对象的判据　`def-dep.mono-injective-criterion`
+
+「每个**单态射**都有收缩」是等价条件之一。
+
+#### 定义引用：「伴随函子」→ 内射对象的判据　`def-dep.adjoint-injective-criterion`
+
+「$\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。
+
+#### 定义引用：「Grothendieck 范畴」→ CondAb 满足 AB6 与 AB4*　`def-dep.grothendieck-condab`
+
+定理说的是 $\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。
+
+#### 定义引用：「Grothendieck 的 AB 公理」→ CondAb 满足 AB6 与 AB4*　`def-dep.ab-condab`
+
+AB6 与 AB4\* 的含义见「Grothendieck 的 AB 公理」那条。
+
 #### 定义引用：「子集」→ 关系　`def-dep.subset-rel`
 
 关系是 $A \times B$ 的**子集**，定义域 $\operatorname{dom} R$ 与值域 $\operatorname{ran} R$ 也都是子集。
@@ -11192,14 +11585,6 @@ $\Delta$ 的态射是**单调映射** $[n] \to [m]$，面映射与退化映射�
 
 子对象的**交**与**原像**都是用纤维积（拉回）定义的。
 
-#### 定义引用：「极限」→ 极限的函子性　`def-dep.limit-functoriality`
-
-函子性说的是极限在**图与图之间**如何变化，前提是这些极限都存在。
-
-#### 定义引用：「自然变换」→ 极限的函子性　`def-dep.nat-limfunctor`
-
-输入是一个**自然变换** $\alpha : F \implies G$，输出是极限之间的唯一态射。
-
 #### 定义引用：「子对象」→ 像 / 余像　`def-dep.subobject-image`
 
 像被定义为 $Y$ 的**子对象**，即一个单态射 $I \rightarrowtail Y$。
@@ -11260,46 +11645,6 @@ $\operatorname{Hom}_{\mathcal{C}}(X, -)$ 是对**范畴** $\mathcal{C}$ 取的 H
 
 切片范畴的**指标是 $T$ 的截面** $s \in T(X)$，没有预层就没有这些截面。
 
-#### 定义引用：「表示函子」→ 米田引理　`def-dep.representable-yoneda`
-
-引理里的 $h^{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$ 正是那个**可表示函子**。
-
-#### 定义引用：「自然变换」→ 米田引理　`def-dep.nat-yoneda`
-
-引理数的是 $h^{X}$ 到 $F$ 的**自然变换**全体。
-
-#### 定义引用：「函子」→ 米田引理　`def-dep.functor-yoneda`
-
-引理对**任意函子** $F : \mathcal{C} \to \mathbf{Set}$ 成立。
-
-#### 定义引用：「表示函子」→ 表示的两个定义等价　`def-dep.representable-criterion`
-
-定理的左右两边都是「被 $X$ **表示**」这件事的不同说法。
-
-#### 定义引用：「自然变换」→ 米田嵌入　`def-dep.nat-yoneda-embedding`
-
-全忠实说的是**自然变换集** $\operatorname{Hom}_{\widehat{\mathcal{C}}}(h_{X}, h_{Y})$ 与 $\operatorname{Hom}_{\mathcal{C}}(X, Y)$ 的双射。
-
-#### 定义引用：「忠实 / 满 / 全忠实」→ 米田嵌入　`def-dep.ff-yoneda-embedding`
-
-「$\delta$ 是**全忠实**函子」用的正是忠实与满的定义。
-
-#### 定义引用：「切片范畴」→ 稠密性定理　`def-dep.slice-density`
-
-稠密性定理里的余极限跑在**切片范畴** $\mathcal{C}_{T}$ 上。
-
-#### 定义引用：「纤维积 / 纤维余积」→ 切片范畴是拉回　`def-dep.fibered-slice`
-
-「那个方块是**笛卡尔的**」正是纤维积定义里的说法。
-
-#### 定义引用：「预层」→ 预层态射的单满按点检验　`def-dep.presheaf-mono`
-
-被检验的 $\varphi : T \implies T'$ 是**预层**之间的自然变换。
-
-#### 定义引用：「单态射 / 满态射」→ 预层态射的单满按点检验　`def-dep.mono-presheaf-mono`
-
-结论里的单态射是范畴论意义下的**可消性**，不是逐点单射。
-
 #### 定义引用：「函子」→ 伴随函子　`def-dep.functor-adjoint`
 
 伴随是**两个函子**之间的关系，两边各放一个方向。
@@ -11319,54 +11664,6 @@ $\operatorname{Hom}_{\mathcal{D}}(F(X), Y)$ 与 $\operatorname{Hom}_{\mathcal{C}
 #### 定义引用：「自然变换」→ 单位与余单位　`def-dep.nat-unit`
 
 单位与余单位本身都是**自然变换**，三角等式也是自然性方块拼出来的。
-
-#### 定义引用：「伴随函子」→ 右伴随存在的判据　`def-dep.adjoint-criterion`
-
-判据说的正是「$F$ 有没有**右伴随**」。
-
-#### 定义引用：「表示函子」→ 右伴随存在的判据　`def-dep.representable-adjoint-criterion`
-
-判据的右端是「$\operatorname{Hom}_{\mathcal{D}}(F(-), Y)$ **可表示**」。
-
-#### 定义引用：「伴随函子」→ 全忠实与单位　`def-dep.adjoint-ff`
-
-命题谈的是**伴随**里左（右）伴随的那个函子。
-
-#### 定义引用：「忠实 / 满 / 全忠实」→ 全忠实与单位　`def-dep.ff-adjoint`
-
-「$F$ **全忠实**」用的是忠实与满的定义。
-
-#### 定义引用：「单位与余单位」→ 全忠实与单位　`def-dep.unit-adjoint-ff`
-
-命题的另一边是「**单位** $\eta$ 是同构」。
-
-#### 定义引用：「极限」→ 极限即伴随　`def-dep.limit-adjoint`
-
-命题说的是「所有 $I$ 形状的**极限**存在」。
-
-#### 定义引用：「交换图」→ 极限即伴随　`def-dep.diagram-limit-adjoint`
-
-命题里的 $\Delta : \mathcal{C} \to \mathcal{C}^{I}$ 是**常图函子**，$\mathcal{C}^{I}$ 是图范畴。
-
-#### 定义引用：「伴随函子」→ 右伴随保极限　`def-dep.adjoint-preserves`
-
-定理的前提是一对**伴随** $F \dashv G$。
-
-#### 定义引用：「极限」→ 右伴随保极限　`def-dep.limit-preserves`
-
-定理的结论是 $G$ 保持**极限**。
-
-#### 定义引用：「伴随函子」→ 伴随函子定理　`def-dep.adjoint-saft`
-
-SAFT 的结论是「$G$ 有**左伴随**」。
-
-#### 定义引用：「极限」→ 伴随函子定理　`def-dep.limit-saft`
-
-前提里的「完备」与「保极限」都是关于**极限**的；构造 $F(X)$ 也是取一个极限。
-
-#### 定义引用：「逗号范畴」→ 伴随函子定理　`def-dep.comma-saft`
-
-构造 $F(X) = \varprojlim_{(Y,f) \in (X \downarrow G)} Y$ 跑在**逗号范畴** $X \downarrow G$ 上。
 
 #### 定义引用：「函数」→ 逗号范畴　`def-dep.function-comma`
 
@@ -11388,14 +11685,6 @@ $G$ 是**函子**，$X \downarrow G$ 是绕着它搭起来的。
 
 反射说的是**满子范畴**，「满」正是函子全忠实里的一半。
 
-#### 定义引用：「反射子范畴」→ 反射子范畴里的极限　`def-dep.reflective-limits`
-
-命题谈的是**反射子范畴**里的极限与余极限。
-
-#### 定义引用：「极限」→ 反射子范畴里的极限　`def-dep.limit-reflective`
-
-命题的结论是「在 $\mathcal{C}$ 里有的**极限**（余极限）在 $\mathcal{C}'$ 里也有」。
-
 #### 定义引用：「伴随函子」→ Kan 延拓　`def-dep.adjoint-kan`
 
 左 Kan 延拓的定义就是「$p_{!}$ 是预复合函子的**左伴随**」—— 一个伴随同构。
@@ -11407,26 +11696,6 @@ $p$、$F$、$p_{!}F$、$G$ 都是**函子**。
 #### 定义引用：「自然变换」→ Kan 延拓　`def-dep.nat-kan`
 
 $\alpha : F \implies p_{!}F \circ p$ 与 $\gamma$ 都是**自然变换**。
-
-#### 定义引用：「Kan 延拓」→ Kan 延拓的两个例子　`def-dep.kan-ex`
-
-两个例子都是「某个东西等于**左 Kan 延拓**」。
-
-#### 定义引用：「极限」→ Kan 延拓的两个例子　`def-dep.limit-kan-ex`
-
-**(1)** 说余极限是沿 $I \to \mathbf{1}$ 的左 Kan 延拓。
-
-#### 定义引用：「伴随函子」→ Kan 延拓的两个例子　`def-dep.adjoint-kan-ex`
-
-**(2)** 说右伴随是 $1_{\mathcal{C}}$ 沿 $F$ 的左 Kan 延拓。
-
-#### 定义引用：「极限」→ 滤过余极限正合　`def-dep.limit-filtered`
-
-结论说滤过余极限保持**有限极限** —— 「正合」是相对极限说的。
-
-#### 定义引用：「交换图」→ 滤过余极限正合　`def-dep.diagram-filtered`
-
-余极限函子 $\varinjlim : \mathbf{Set}^{I} \to \mathbf{Set}$ 的定义域是**图范畴**。
 
 #### 定义引用：「紧」→ 紧 Hausdorff 空间范畴　`def-dep.compact-chaus`
 
@@ -11440,45 +11709,13 @@ $\alpha : F \implies p_{!}F \circ p$ 与 $\gamma$ 都是**自然变换**。
 
 把它们收成一个**范畴**：对象是空间，态射是连续映射。
 
-#### 定义引用：「伴随函子」→ 紧 Haus 是反射子范畴　`def-dep.adjoint-chaus-reflective`
-
-「$\mathbf{CHaus}$ 是**反射子范畴**」的意思就是含入函子有左伴随。
-
-#### 定义引用：「紧」→ 紧 Haus 是反射子范畴　`def-dep.compact-stonecech`
-
-Stone–Čech 紧化的构造跑在 **Tychonoff 方块**里，紧性由 Tychonoff 定理给出。
-
-#### 定义引用：「Hausdorff 空间」→ 紧 Haus 是反射子范畴　`def-dep.hausdorff-stonecech`
-
-$e_{K}$ 是单射那一步用的是**紧 Hausdorff 空间是 $T_{3.5}$ 的**。
-
-#### 定义引用：「紧」→ 满射的极小闭子集　`def-dep.compact-minimal`
-
-极小闭子集存在用的是**紧性**（有限交性质）。
-
 #### 定义引用：「紧 Hausdorff 空间范畴」→ 自由紧 Hausdorff 空间　`def-dep.chaus-free`
 
 自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 里的对象：$F \cong \beta I$。
 
-#### 定义引用：「自由紧 Hausdorff 空间」→ 紧 Haus 是自由的商　`def-dep.free-chaus-quotient`
-
-命题说的商空间正是从**自由紧 Hausdorff 空间** $\beta S^{\mathrm{disc}}$ 商出来的。
-
-#### 定义引用：「紧 Hausdorff 空间范畴」→ 紧 Haus 是自由的商　`def-dep.chaus-quotient-free`
-
-命题说的对象是 $\mathbf{CHaus}$ 中的空间。
-
 #### 定义引用：「单态射 / 满态射」→ 投射 / 内射对象　`def-dep.mono-projective`
 
 投射性的定义要求「**满态射**有提升」，内射性对偶地要求「**单态射**有延拓」—— 纯箭头语言。
-
-#### 定义引用：「投射 / 内射对象」→ 自由紧 Haus 是投射对象　`def-dep.projective-free`
-
-命题的结论是「自由紧 Hausdorff 空间是**投射对象**」。
-
-#### 定义引用：「自由紧 Hausdorff 空间」→ 自由紧 Haus 是投射对象　`def-dep.free-projective`
-
-命题谈的是**自由紧 Hausdorff 空间**。
 
 #### 定义引用：「纤维积 / 纤维余积」→ 自由表示　`def-dep.fibered-free-presentation`
 
@@ -11487,22 +11724,6 @@ $R := F \times_{S} F$ 是一个**纤维积**。
 #### 定义引用：「紧 Hausdorff 空间范畴」→ 自由表示　`def-dep.chaus-free-presentation`
 
 自由表示是 $\mathbf{CHaus}$ 里的一个满射三元组。
-
-#### 定义引用：「自由表示」→ 紧 Haus 都有自由表示　`def-dep.free-presentation-cor`
-
-推论说每个对象都**有**自由表示。
-
-#### 定义引用：「连通与连通分量」→ 连通分量是闭开邻域之交　`def-dep.connected-component-clopen`
-
-命题算的是**连通分量**。
-
-#### 定义引用：「闭开集」→ 连通分量是闭开邻域之交　`def-dep.clopen-component`
-
-连通分量被写成一切含 $x$ 的**闭开集**之交。
-
-#### 定义引用：「紧 Hausdorff 空间范畴」→ 连通分量是闭开邻域之交　`def-dep.chaus-component`
-
-证明里用到紧 Hausdorff 空间是**正规**的。
 
 #### 定义引用：「连通与连通分量」→ 全不连通与 Stone 空间　`def-dep.connected-stone`
 
@@ -11516,45 +11737,9 @@ $R := F \times_{S} F$ 是一个**纤维积**。
 
 Stone 空间与 Stonean 空间分别是「全不连通」与「极端不连通」再加**紧 Hausdorff**。
 
-#### 定义引用：「闭开集」→ 极端不连通的基本性质　`def-dep.clopen-stonean-basic`
-
-两条性质说的都是**闭开集**与闭包的关系。
-
-#### 定义引用：「全不连通与 Stone 空间」→ 极端不连通的基本性质　`def-dep.stone-stonean-basic`
-
-命题谈的是**极端不连通**（以及由它推出的全不连通）。
-
 #### 定义引用：「极限」→ 投射有限空间　`def-dep.limit-profinite`
 
 投射有限空间是有限离散空间沿有向系统的**极限**。
-
-#### 定义引用：「投射 / 内射对象」→ Gleason 定理　`def-dep.projective-gleason`
-
-Gleason 定理把 $\mathbf{CHaus}$ 的**投射对象**认了出来。
-
-#### 定义引用：「全不连通与 Stone 空间」→ Gleason 定理　`def-dep.stone-gleason`
-
-认出的是 **Stonean 空间**。
-
-#### 定义引用：「投射有限空间」→ Stone ⟺ 投射有限　`def-dep.profinite-stone`
-
-定理说的是 Stone 空间与**投射有限空间**是同一批空间。
-
-#### 定义引用：「全不连通与 Stone 空间」→ Stone 空间是 CHaus 的反射子范畴　`def-dep.stone-reflective`
-
-「Stone 空间」是**全不连通的紧 Hausdorff 空间**。
-
-#### 定义引用：「全不连通与 Stone 空间」→ 全不连通空间是反射子范畴　`def-dep.stone-td-reflective`
-
-全不连通是 Stone 空间定义里的一半。
-
-#### 定义引用：「连通与连通分量」→ 全不连通空间是反射子范畴　`def-dep.connected-td-reflective`
-
-反射 $\pi_{0}$ 就是把每个点送到它的**连通分量**。
-
-#### 定义引用：「Gleason 定理」→ Stonean 是收缩核　`def-dep.gleason-retract`
-
-推论把 Gleason 定理翻译成「Stonean = **收缩核**」。
 
 #### 定义引用：「预层」→ 筛　`def-dep.presheaf-sieve`
 
@@ -11596,29 +11781,9 @@ $f^{*}(R) = R \times_{h_{X}} h_{Y}$ 是**预层**层面的拉回。
 
 「$F(X) \cong \varprojlim_{Y \in \mathcal{C}/R} F(Y)$」用到了**极限**。
 
-#### 定义引用：「层」→ 层的下降条件　`def-dep.sheaf-descent`
-
-定理给「是层」一个可以逐项验证的**正合列**判据。
-
-#### 定义引用：「纤维积 / 纤维余积」→ 层的下降条件　`def-dep.fibered-descent`
-
-正合列里的 $X_{i} \times_{X} X_{j}$ 是**纤维积**。
-
 #### 定义引用：「层」→ Čech 函子　`def-dep.sheaf-cech`
 
 Čech 函子是把预层朝**层**的方向推一把的那个构造。
-
-#### 定义引用：「Čech 函子」→ Čech 函子的性质　`def-dep.cech-properties`
-
-三条性质都是关于 $\widehat{H}$ 的。
-
-#### 定义引用：「Čech 函子」→ 层化　`def-dep.cech-sheafification`
-
-层化取「对预层做两次 **Čech 构造**」。
-
-#### 定义引用：「反射子范畴」→ 层化　`def-dep.reflective-sheafification`
-
-定理的结论是「层范畴是**反射子范畴**」。
 
 #### 定义引用：「单态射 / 满态射」→ 正则满态射　`def-dep.mono-regular-epi`
 
@@ -11632,18 +11797,6 @@ $f^{*}(R) = R \times_{h_{X}} h_{Y}$ 是**预层**层面的拉回。
 
 万有性、不交余积都要用**纤维积**说出来。
 
-#### 定义引用：「万有关系」→ site 的层范畴的好性质　`def-dep.universal-site`
-
-五条性质里出现了**万有余极限、万有满态射、不交余积**。
-
-#### 定义引用：「等化子 / 余等化子」→ 层中单满即同构　`def-dep.equalizer-mono-epi`
-
-「满-单分解」把任意态射拆成 $F \twoheadrightarrow I \rightarrowtail G$。
-
-#### 定义引用：「层」→ 满态射的局部判据　`def-dep.sheaf-epi-criterion`
-
-命题说的是**层**之间的态射什么时候是满的。
-
 #### 定义引用：「等化子 / 余等化子」→ 有效等价关系　`def-dep.equalizer-effective`
 
 $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子**。
@@ -11651,10 +11804,6 @@ $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子*
 #### 定义引用：「纤维积 / 纤维余积」→ 有效等价关系　`def-dep.fibered-effective`
 
 有效性说的是 $R \cong X \times_{\overline{X}} X$，一个**纤维积**。
-
-#### 定义引用：「有效等价关系」→ 层化与等价关系交换　`def-dep.effective-sheafify`
-
-命题说的是**层化**与等价关系、商的交换。
 
 #### 定义引用：「Grothendieck 拓扑」→ 标准拓扑　`def-dep.topology-canonical`
 
@@ -11668,18 +11817,6 @@ $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子*
 
 标准拓扑是拿**筛**一条条规定出来的。
 
-#### 定义引用：「筛」→ 覆盖筛即余积满射　`def-dep.sieve-covering-epi`
-
-命题说覆盖族生成**覆盖筛**与余积满射是一回事。
-
-#### 定义引用：「万有关系」→ 不交万有余积与次标准拓扑　`def-dep.universal-disjoint`
-
-命题说的是**不交万有余积**在次标准拓扑下保持不变。
-
-#### 定义引用：「标准拓扑」→ 不交万有余积与次标准拓扑　`def-dep.canonical-disjoint`
-
-「次标准」是命题的关键假设。
-
 #### 定义引用：「万有关系」→ 预拓扑斯　`def-dep.universal-pretopos`
 
 预拓扑斯的第 2、3、4 条用的都是**不交 / 万有 / 有效**这三个词。
@@ -11692,22 +11829,6 @@ $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子*
 
 第 4 条要求**满态射正则**。
 
-#### 定义引用：「预拓扑斯」→ 满-单分解　`def-dep.pretopos-factorization`
-
-命题把预拓扑斯那四条公理兑换成「每个态射都有满-单分解」。
-
-#### 定义引用：「像 / 余像」→ 满-单分解　`def-dep.image-pretopos-factorization`
-
-结论里「严格」说的是 $\operatorname{im} f \cong \operatorname{coim} f$。
-
-#### 定义引用：「子对象」→ 子对象构成有界格　`def-dep.subobject-lattice`
-
-命题说的是**子对象**全体构成有界格。
-
-#### 定义引用：「纤维积 / 纤维余积」→ 子对象构成有界格　`def-dep.fibered-subobject-lattice`
-
-格里的交就是**纤维积**（拉回）。
-
 #### 定义引用：「预拓扑斯」→ 预标准拓扑　`def-dep.pretopos-precanonical`
 
 预标准拓扑是**预拓扑斯**上定义的那个预拓扑。
@@ -11715,18 +11836,6 @@ $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子*
 #### 定义引用：「Grothendieck 拓扑」→ 预标准拓扑　`def-dep.topology-precanonical`
 
 预标准预拓扑**生成**的 Grothendieck 拓扑叫预标准拓扑。
-
-#### 定义引用：「层」→ 预标准拓扑下的层　`def-dep.sheaf-precanonical`
-
-命题给出预标准拓扑下「是**层**」的两条可验等式。
-
-#### 定义引用：「预标准拓扑」→ 余积与商在层范畴中不变　`def-dep.precanonical-preserves`
-
-命题谈的是**预标准拓扑**下余积与商是否走样。
-
-#### 定义引用：「层」→ 单满在层化后不变　`def-dep.sheaf-mono-epi`
-
-命题比较的是 $\mathcal{C}$ 里的单满与它在**层**范畴里的像。
 
 #### 定义引用：「忠实 / 满 / 全忠实」→ 生成元集　`def-dep.ff-generator`
 
@@ -11740,49 +11849,9 @@ $\overline{X} := \operatorname{coker}(R \rightrightarrows X)$ 是**余等化子*
 
 第 1 条要求存在**小生成元集**。
 
-#### 定义引用：「拓扑斯」→ Giraud 定理　`def-dep.topos-giraud`
-
-Giraud 定理给出「是**拓扑斯**」的四个等价说法。
-
-#### 定义引用：「标准拓扑」→ Giraud 定理　`def-dep.canonical-giraud`
-
-第 2 条说的是对**标准拓扑**而言的层。
-
-#### 定义引用：「表示函子」→ Giraud 定理　`def-dep.representable-giraud`
-
-第 2 条的关键词是「层都**可表示**」。
-
-#### 定义引用：「拓扑斯」→ 拓扑斯中覆盖即余积满射　`def-dep.topos-covering-epi`
-
-命题在**拓扑斯**里把「覆盖」与余积满射对起来。
-
-#### 定义引用：「Grothendieck 拓扑」→ 拓扑斯中覆盖即余积满射　`def-dep.topology-covering-epi`
-
-命题的左边是「$(X_{i} \to X)$ 是**覆盖**」，即生成覆盖筛。
-
-#### 定义引用：「表示函子」→ 可表示性的下降　`def-dep.representable-quotient`
-
-引理说的是「**可表示性**可以从覆盖的一块块传回整体」。
-
-#### 定义引用：「有效等价关系」→ 可表示性的下降　`def-dep.effective-quotient`
-
-把 $F$ 实现成 $X/R$ 这一步用的是**等价关系有效**。
-
-#### 定义引用：「层」→ 拓扑斯上的层即保极限的预层　`def-dep.sheaf-limits`
-
-命题把「是**层**」与「保所有极限」说成一回事。
-
-#### 定义引用：「极限」→ 拓扑斯上的层即保极限的预层　`def-dep.limit-sheaf-limits`
-
-「保**极限**」是命题的另一半。
-
 #### 定义引用：「Grothendieck 拓扑」→ 拟紧对象　`def-dep.topology-qc`
 
 拟紧说的是：任何生成**覆盖筛**的族都有有限的子族仍然生成覆盖筛。
-
-#### 定义引用：「纤维积 / 纤维余积」→ 拟紧的性质　`def-dep.fibered-qc`
-
-第 3 条里的「存在满射 $X \to F$」用的是 $\mathcal{C}$ 里的对象覆盖层。
 
 #### 定义引用：「纤维积 / 纤维余积」→ 拟分离对象　`def-dep.fibered-qs`
 
@@ -11791,14 +11860,6 @@ Giraud 定理给出「是**拓扑斯**」的四个等价说法。
 #### 定义引用：「拟紧对象」→ 拟分离对象　`def-dep.qc-qs`
 
 「拟分离」这个词里就带着「拟紧」。
-
-#### 定义引用：「拟紧对象」→ 预拓扑斯由拓扑斯唯一确定　`def-dep.qc-pretopos-qcqs`
-
-定理的两边之一是**拟紧**。
-
-#### 定义引用：「拟分离对象」→ 预拓扑斯由拓扑斯唯一确定　`def-dep.qs-pretopos-qcqs`
-
-另一边是**拟分离**。
 
 #### 定义引用：「拓扑斯」→ 拓扑斯的态射　`def-dep.topos-morphism`
 
@@ -11832,61 +11893,9 @@ $f^{*} \dashv f_{*}$ 是一个**伴随对**。
 
 「层」这个词就来自层与拓扑那一段。
 
-#### 定义引用：「预拓扑斯」→ 凝聚态集的刻画　`def-dep.pretopos-condensed-criterion`
-
-两条判据来自「$\mathbf{CHaus}$ 是**预拓扑斯**」：预标准拓扑只由有限不交并与满射生成。
-
-#### 定义引用：「凝聚态集」→ 凝聚态集的刻画　`def-dep.condensed-criterion`
-
-判据给出的是「预层是**凝聚态集**」的等价条件。
-
-#### 定义引用：「凝聚态集」→ Cond 是拓扑斯　`def-dep.condensed-topos`
-
-定理说的是 $\mathrm{Cond}$（**凝聚态集**的范畴）是拓扑斯。
-
-#### 定义引用：「自由紧 Hausdorff 空间」→ FCHaus 上的预拓扑　`def-dep.free-pretopology`
-
-预拓扑搭在**自由紧 Hausdorff 空间**上。
-
-#### 定义引用：「投射 / 内射对象」→ FCHaus 上的预拓扑　`def-dep.projective-pretopology`
-
-「满射有截面」说的是这些对象**投射**。
-
-#### 定义引用：「自由紧 Hausdorff 空间」→ FCHaus 上层的判据　`def-dep.free-sheaf`
-
-命题谈的是**自由紧 Hausdorff 空间**上的层。
-
-#### 定义引用：「层」→ Cond 即 FCHaus 上的层　`def-dep.sheaf-cond-equiv`
-
-定理说两边的**层**范畴是同一个。
-
-#### 定义引用：「层」→ 凝聚态集满态射的判据　`def-dep.sheaf-cond-epi`
-
-命题说的是**凝聚态集**（层）之间满态射的判据。
-
-#### 定义引用：「自由紧 Hausdorff 空间」→ 凝聚态集满态射的判据　`def-dep.free-cond-epi`
-
-探针取的是**自由**紧 Hausdorff 空间。
-
-#### 定义引用：「投射 / 内射对象」→ Cond 有足够多投射对象　`def-dep.projective-cond`
-
-命题说自由紧 Hausdorff 空间在 $\mathrm{Cond}$ 里是**投射对象**。
-
 #### 定义引用：「紧 Hausdorff 空间范畴」→ 底拓扑空间　`def-dep.chaus-underlying`
 
 底空间的拓扑由「从**紧 Hausdorff 空间**进来的映射」定出来。
-
-#### 定义引用：「凝聚态集」→ Top 与 Cond 的伴随　`def-dep.condensed-top-adjoint`
-
-定理里的函子 $X \mapsto \underline{X}$ 以**凝聚态集**为靶。
-
-#### 定义引用：「紧生成空间」→ Top 与 Cond 的伴随　`def-dep.cg-top-cond`
-
-限制到**紧生成空间**上时那个函子变得全忠实。
-
-#### 定义引用：「紧生成空间」→ 紧生成空间是余反射子范畴　`def-dep.cg-coreflective`
-
-命题说的是**紧生成空间**是余反射子范畴。
 
 #### 定义引用：「极限」→ 紧生成空间　`def-dep.limit-cg`
 
@@ -11900,14 +11909,6 @@ $f^{*} \dashv f_{*}$ 是一个**伴随对**。
 
 Grothendieck 范畴 = AB5 范畴**加一个生成元**。
 
-#### 定义引用：「凝聚态阿贝尔群」→ CondAb 上的张量与内 Hom　`def-dep.condab-tensor`
-
-两个双函子定义在**凝聚态阿贝尔群**范畴上。
-
-#### 定义引用：「伴随函子」→ 紧生成空间是余反射子范畴　`def-dep.adjoint-cg-coreflective`
-
-「余反射」的意思是含入函子有**右伴随**。
-
 #### 定义引用：「凝聚态集」→ 凝聚态阿贝尔群　`def-dep.condensed-ab`
 
 凝聚态阿贝尔群是在**凝聚态集**上再加阿贝尔群结构。
@@ -11915,38 +11916,6 @@ Grothendieck 范畴 = AB5 范畴**加一个生成元**。
 #### 定义引用：「层」→ 凝聚态阿贝尔群　`def-dep.sheaf-condensed-ab`
 
 它是**阿贝尔群值层**。
-
-#### 定义引用：「自由紧 Hausdorff 空间」→ 截面函子保极限余极限　`def-dep.free-condab-section`
-
-截面函子 $\Gamma(F, -)$ 的 $F$ 取的是**自由**紧 Hausdorff 空间。
-
-#### 定义引用：「极限」→ 截面函子保极限余极限　`def-dep.limit-condab-section`
-
-结论说它保**所有极限与余极限**。
-
-#### 定义引用：「凝聚态阿贝尔群」→ CondAb 满足 AB6 与 AB4*　`def-dep.condab-ab`
-
-定理说的是 $\mathrm{CondAb}$（**凝聚态阿贝尔群**）满足 AB6 与 AB4*。
-
-#### 定义引用：「全不连通与 Stone 空间」→ Stonean 给出有限表现投射对象　`def-dep.stonean-projective`
-
-引理的输入是 **Stonean 空间**。
-
-#### 定义引用：「投射 / 内射对象」→ Stonean 给出有限表现投射对象　`def-dep.projective-stonean`
-
-结论说 $\mathbb{Z}\cdot F$ 是**投射**对象。
-
-#### 定义引用：「生成元集」→ CondAb 由有限表现投射对象生成　`def-dep.generator-condab-generated`
-
-命题说的是 $\mathrm{CondAb}$ 由谁**生成**。
-
-#### 定义引用：「投射 / 内射对象」→ CondAb 由有限表现投射对象生成　`def-dep.projective-condab-generated`
-
-生成元取的是**有限表现的投射**对象。
-
-#### 定义引用：「伴随函子」→ CondAb 上的张量与内 Hom　`def-dep.adjoint-condab-tensor`
-
-$\otimes_{\mathbb{Z}}$ 与内部 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴随**。
 
 #### 定义引用：「交换图」→ 上链复形　`def-dep.diagram-complex`
 
@@ -11959,14 +11928,6 @@ $\otimes_{\mathbb{Z}}$ 与内部 $\operatorname{Hom}_{\mathbb{Z}}$ **互为伴�
 #### 定义引用：「范畴」→ 上链复形　`def-dep.category-complex`
 
 复形定义在**加法范畴** $\mathcal{C}$ 上，微分是范畴里的态射。
-
-#### 定义引用：「上链复形」→ 复形范畴是加法范畴　`def-dep.complex-additive`
-
-命题说的是**复形**构成的那个范畴。
-
-#### 定义引用：「等化子 / 余等化子」→ 复形范畴是加法范畴　`def-dep.equalizer-complex-additive`
-
-核与余核都是**逐项**取出来的。
 
 #### 定义引用：「上链复形」→ 同伦　`def-dep.complex-homotopy`
 
@@ -11992,18 +11953,6 @@ $\mathbf{K}(\mathcal{C})$ 本身是一个**范畴**（还是加法范畴）。
 
 导出三角的定义就是「同构于某个**映射锥**三角」。
 
-#### 定义引用：「导出三角」→ 三角的旋转与延拓　`def-dep.triangle-rotation`
-
-命题说的是**导出三角**的基本性质。
-
-#### 定义引用：「导出三角」→ 三角态射的性质　`def-dep.triangle-morphism`
-
-引理说的是**导出三角**之间态射的性质。
-
-#### 定义引用：「同伦」→ 三角态射的性质　`def-dep.homotopy-triangle-morphism`
-
-「$u, v$ 是同伦等价则 $w$ 也是」里的比较用的是**同伦**。
-
 #### 定义引用：「上链复形」→ 同调　`def-dep.complex-cohomology`
 
 同调是**复形**的 $\ker d^{n} / \operatorname{im} d^{n-1}$。
@@ -12011,10 +11960,6 @@ $\mathbf{K}(\mathcal{C})$ 本身是一个**范畴**（还是加法范畴）。
 #### 定义引用：「等化子 / 余等化子」→ 同调　`def-dep.equalizer-cohomology`
 
 同调里出现的 $\ker$ 与 $\operatorname{im}$ 是**等化子**与**像**。
-
-#### 定义引用：「等化子 / 余等化子」→ 同调的短正合列　`def-dep.equalizer-cohomology-sequence`
-
-这条正合列把同调夹在**余核**与**核**之间。
 
 #### 定义引用：「同调」→ 上同调函子　`def-dep.cohomology-functor`
 
@@ -12024,25 +11969,9 @@ $\mathbf{K}(\mathcal{C})$ 本身是一个**范畴**（还是加法范畴）。
 
 定义里的正合性条件就是针对**导出三角**说的。
 
-#### 定义引用：「同调」→ 长正合列　`def-dep.cohomology-long-exact`
-
-长正合列里跑的是**同调**。
-
-#### 定义引用：「等化子 / 余等化子」→ 长正合列　`def-dep.equalizer-long-exact`
-
-「正合列」本身就是一句关于**核与像**的话。
-
 #### 定义引用：「同调」→ 拟同构　`def-dep.cohomology-quasi-iso`
 
 拟同构说的是「**同调**全都是同构」。
-
-#### 定义引用：「单态射 / 满态射」→ 内射对象的判据　`def-dep.mono-injective-criterion`
-
-「每个**单态射**都有收缩」是等价条件之一。
-
-#### 定义引用：「伴随函子」→ 内射对象的判据　`def-dep.adjoint-injective-criterion`
-
-「$\operatorname{Hom}(-, I)$ **正合**」说的是这个函子保正合列 —— 与伴随性相关的那条刻画。
 
 #### 定义引用：「子对象」→ 过滤　`def-dep.subobject-filtration`
 
@@ -12096,17 +12025,27 @@ AB5、AB6 的差别全在**滤过余极限**上：前者要它正合，后者还
 
 Grothendieck 范畴 = **AB5** 范畴 + 一个生成元。
 
-#### 定义引用：「Grothendieck 范畴」→ CondAb 满足 AB6 与 AB4*　`def-dep.grothendieck-condab`
-
-定理说的是 $\mathrm{CondAb}$ **是** Grothendieck 范畴，并且额外满足两条。
-
-#### 定义引用：「Grothendieck 的 AB 公理」→ CondAb 满足 AB6 与 AB4*　`def-dep.ab-condab`
-
-AB6 与 AB4\* 的含义见「Grothendieck 的 AB 公理」那条。
-
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
+
+#### 米田嵌入 ～ 紧 Haus 是反射子范畴　`ana.embed-better-world`
+*米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」*
+
+两件事在数学上没有谁推出谁（一个是范畴嵌入，一个是拓扑紧化），但**招数是同一个**：
+**手上这个对象缺东西，就先把它嵌进一个大环境，在那里把活干完，再回到原地。**
+
+**米田嵌入**：$\mathcal{C} \hookrightarrow \widehat{\mathcal{C}}$。
+$\mathcal{C}$ 里可能连两个对象的积都没有；$\widehat{\mathcal{C}}$ 里**什么极限余极限都有**。
+所以在 $\mathcal{C}$ 里造不出来的东西，搬到 $\widehat{\mathcal{C}}$ 里造（稠密性定理就是把它拆成 $h_{X}$ 的余极限）。
+
+**Stone–Čech 紧化**：$X \hookrightarrow \beta X$。
+$X$ 可能不紧、不 Hausdorff，连连续函数都少得可怜；
+$\beta X$ 里**紧 Hausdorff 的一切好性质都有**（Tychonoff 方块给的）。
+所以在 $X$ 上做不到的分析，搬到 $\beta X$ 上做（凝聚态集就是拿 $\beta X$ 当探针）。
+
+**共同的招**：不要在原环境里硬造；先找（或造）一个「什么都不缺」的大环境，嵌进去，干完再拉回来。
+💡 卡在「这个范畴 / 这个空间里根本没有我要的那个东西」时，回来想想这两条。
 
 #### 笛卡尔积存在 ～ 自然数集存在　`ana.sep-container`
 *「幂集造容器 + 分离筛内容」——同一个证明模板*
@@ -12277,43 +12216,51 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **基数与等势 ↔ 序数与超限**　3 条节点级连线
 - **序数与超限 ↔ ZFC 公理系统**　2 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
-- **伴随与反射 ↔ 预层与米田**　3 条节点级连线
-- **伴随与反射 ↔ 图与极限**　18 条节点级连线
+- **伴随与反射 ↔ 预层与米田**　2 条节点级连线
+- **伴随与反射 ↔ 图与极限**　11 条节点级连线
 - **伴随与反射 ↔ 函子与自然变换**　8 条节点级连线
-- **紧 Haus 与 Stone ↔ 度量空间**　6 条节点级连线
-- **紧 Haus 与 Stone ↔ 拓扑空间**　13 条节点级连线
+- **紧 Haus 与 Stone ↔ 度量空间**　4 条节点级连线
+- **紧 Haus 与 Stone ↔ 拓扑空间**　10 条节点级连线
 - **伴随与反射 ↔ 层与拓扑**　2 条节点级连线
-- **图与极限 ↔ 层与拓扑**　10 条节点级连线
+- **层与拓扑 ↔ 单满、子对象与像**　2 条节点级连线
 - **层与拓扑 ↔ 拓扑斯**　14 条节点级连线
-- **紧 Haus 与 Stone ↔ 凝聚态集**　15 条节点级连线
-- **拓扑斯 ↔ 凝聚态集**　5 条节点级连线
-- **层与拓扑 ↔ 凝聚态集**　5 条节点级连线
-- **紧生成空间 ↔ 凝聚态集**　2 条节点级连线
+- **凝聚态集 ↔ 紧 Haus 与 Stone**　11 条节点级连线
+- **拓扑斯 ↔ 凝聚态集**　3 条节点级连线
+- **层与拓扑 ↔ 凝聚态集**　4 条节点级连线
+- **凝聚态集 ↔ 紧生成空间**　2 条节点级连线
+- **同调与正合列 ↔ 复形与导出三角**　3 条节点级连线
 - **序结构 ↔ 集合的构造**　4 条节点级连线
 - **选择原理 ↔ 序结构**　7 条节点级连线
 - **微分定理 ↔ 度量空间**　3 条节点级连线
 - **微分定理 ↔ 测度的构造**　3 条节点级连线
 - **L^p 空间 ↔ 可测函数与收敛**　3 条节点级连线
 - **L^p 空间 ↔ 测度的构造**　4 条节点级连线
-- **图与极限 ↔ 预层与米田**　8 条节点级连线
-- **函子与自然变换 ↔ 预层与米田**　10 条节点级连线
+- **单满、子对象与像 ↔ 预层与米田**　3 条节点级连线
+- **图与极限 ↔ 预层与米田**　3 条节点级连线
+- **函子与自然变换 ↔ 预层与米田**　9 条节点级连线
+- **函子与自然变换 ↔ 图与极限**　3 条节点级连线
+- **图与极限 ↔ 层与拓扑**　8 条节点级连线
+- **单满、子对象与像 ↔ 拓扑斯**　2 条节点级连线
+- **图与极限 ↔ 拓扑斯**　5 条节点级连线
+- **拓扑斯 ↔ 预层与米田**　2 条节点级连线
+- **凝聚态阿贝尔群 ↔ 紧 Haus 与 Stone**　4 条节点级连线
+- **图与极限 ↔ 复形与导出三角**　3 条节点级连线
+- **图与极限 ↔ 同调与正合列**　3 条节点级连线
+- **凝聚态阿贝尔群 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **向量空间的基 ↔ 序结构**　2 条节点级连线
 - **微分定理 ↔ 集合族与 σ-代数**　2 条节点级连线
 - **集合族与 σ-代数 ↔ 符号测度与分解**　2 条节点级连线
 - **范畴与图 ↔ 集合的构造**　5 条节点级连线
 - **范畴与图 ↔ 关系与函数**　2 条节点级连线
 - **范畴与图 ↔ 函子与自然变换**　2 条节点级连线
-- **函子与自然变换 ↔ 图与极限**　3 条节点级连线
 - **范畴与图 ↔ 图与极限**　2 条节点级连线
-- **图与极限 ↔ 关系与函数**　3 条节点级连线
+- **图与极限 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 集合的构造**　2 条节点级连线
+- **图与极限 ↔ 单满、子对象与像**　3 条节点级连线
 - **范畴与图 ↔ 预层与米田**　2 条节点级连线
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
-- **紧 Haus 与 Stone ↔ 图与极限**　3 条节点级连线
+- **图与极限 ↔ 紧 Haus 与 Stone**　2 条节点级连线
 - **层与拓扑 ↔ 预层与米田**　4 条节点级连线
-- **图与极限 ↔ 拓扑斯**　7 条节点级连线
-- **拓扑斯 ↔ 预层与米田**　2 条节点级连线
-- **伴随与反射 ↔ 凝聚态集**　3 条节点级连线
-- **图与极限 ↔ 凝聚态集**　3 条节点级连线
-- **同调代数 ↔ 图与极限**　12 条节点级连线
-- **范畴与图 ↔ 同调代数**　2 条节点级连线
+- **范畴与图 ↔ 复形与导出三角**　2 条节点级连线
+- **图与极限 ↔ 加法与阿贝尔范畴**　4 条节点级连线
+- **单满、子对象与像 ↔ 加法与阿贝尔范畴**　2 条节点级连线

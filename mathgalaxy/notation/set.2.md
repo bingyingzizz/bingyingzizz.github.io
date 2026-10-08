@@ -19,7 +19,7 @@
 - `\times` ×　**笛卡尔积 / 乘积**
 - `\{ x : \ldots \}`　**集合描述**
 - `\rightrightarrows` ⇉　**一致收敛**
-- `\hookrightarrow` ↪　**单射**
+- `\hookrightarrow` ↪　**单射 / 嵌入** — 两种意思都在用：集合论里读「单射」，范畴论里读「**嵌入**」（子范畴进大范畴、Yoneda 嵌入、切片范畴的嵌入）。
 - `\upharpoonright` ↾　**限制 $f \upharpoonright A$**
 
 索引 `notation.md`。

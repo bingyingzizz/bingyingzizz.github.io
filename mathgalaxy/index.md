@@ -2,7 +2,7 @@
 
 数据根 = 本目录。下一步：读 `index/<星团id>.md` 拿节点清单。
 星团的名字见 `index/<星系id>.md`（那页还有中心天体与点数）。
-规模：7 星系 / 34 星团 / 373 节点 / 813 连线。
+规模：9 星系 / 39 星团 / 373 节点 / 789 连线。
 
 ## 数理逻辑（logic）
 logic.fol
@@ -14,7 +14,7 @@ set.zfc　set.construct　set.rel　set.cardinal　set.numbers　set.ordinal
 order.structure　order.choice
 
 ## 拓扑学（topology）
-topology.general　topology.metric
+topology.general　topology.metric　topo.chaus　topo.cg
 
 ## 抽象代数（algebra）
 algebra.structures　algebra.vectorspace
@@ -23,4 +23,10 @@ algebra.structures　algebra.vectorspace
 analysis.real　analysis.setclass　analysis.measure　analysis.measurable　analysis.integral　analysis.product　analysis.signed　analysis.differentiation　analysis.bv　analysis.lp
 
 ## 范畴论（category）
-cat.basic　cat.functor　cat.limit　cat.yoneda　cat.adjoint　cat.chaus　cat.sheaf　cat.topos　cat.cg　cond　cat.homology
+cat.basic　cat.functor　cat.limit　cat.structure　cat.yoneda　cat.adjoint　cat.sheaf　cat.topos
+
+## 同调代数（homology）
+hom.ab　hom.complex　hom.cohomology　hom.spectral
+
+## 凝聚态数学（condensed）
+cond.set　cond.ab

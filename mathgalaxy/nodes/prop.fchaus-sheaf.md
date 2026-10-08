@@ -1,6 +1,6 @@
 # FCHaus 上层的判据　`prop.fchaus-sheaf`
 自由紧 Hausforff 空间上的层 $\iff$ 保有限积
-layer 16 · 命题 · 凝聚态集 · 范畴论+拓扑学
+layer 16 · 命题 · 凝聚态集 · 凝聚态数学
 
 设 $X$ 是 $\mathbf{FCHaus}$ 上的集合预层。则 $X$ 是层 $\iff$ $X$ **保有限积**。
 

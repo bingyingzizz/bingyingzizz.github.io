@@ -15,7 +15,6 @@ $$T : \mathcal{C}^{\mathrm{op}} \longrightarrow \mathbf{Set}$$
 ## 它能推出什么 / 谁在用它
 - 被 `lem.presheaf-mono-pointwise` 预层态射的单满按点检验 用
 - 被 `def.slice-category` 切片范畴 用
-- 被 `lem.presheaf-mono-pointwise` 预层态射的单满按点检验 用
 - 被 `def.sieve` 筛 用
 - 被 `def.grothendieck-topology` Grothendieck 拓扑 用
 - 被 `def.sheaf` 层 用

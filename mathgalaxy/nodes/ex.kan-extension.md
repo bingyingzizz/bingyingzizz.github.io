@@ -14,7 +14,5 @@ $$(p_{!}D)(\ast) = \varinjlim_{i \in I} D(i) = X$$
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-link.adjoint-kan-ex.md
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-kan-ex.md
 
-- …另有入边，续页见 `nodes/ex.kan-extension.3.md`
-
 ## 说明
 两条合起来看：**余极限和右伴随都是 Kan 延拓的特例**。Kan 延拓是这一整团的统一出口 —— 前面分散的定义（极限、伴随、反射）在其中都能各就各位。

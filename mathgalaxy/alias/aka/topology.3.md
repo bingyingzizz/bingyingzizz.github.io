@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 投射对象 | projective object | 内射对象 | injective object | 投射模 | 内射模 → def.projective-object
+
 - 自由对象是投射的 → prop.free-projective
 
 - 自由表示 | free presentation | 自由表现 → def.free-presentation
@@ -24,7 +26,5 @@
 - Gleason 定理 | Gleason | CHaus 的投射对象 → thm.gleason
 
 - Stonean 是收缩核 | retract | 收缩核 → cor.stonean-retract
-
-- 紧生成空间 | compactly generated | k-space | k-空间 | k化 → def.compactly-generated
 
 > 续见 alias/aka/topology.4.md

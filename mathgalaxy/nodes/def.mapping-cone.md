@@ -1,6 +1,6 @@
 # 映射锥　`def.mapping-cone`
 映射锥与位移（Mapping Cone）
-layer 13 · 定义 · 同调代数 · 范畴论
+layer 13 · 定义 · 复形与导出三角 · 同调代数
 
 态射 $f : K \to L$ 的**映射锥**是复形
 

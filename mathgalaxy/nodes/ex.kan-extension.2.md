@@ -6,5 +6,3 @@
 $$G = F_{!}1_{\mathcal{C}}, \qquad \operatorname{Hom}(F_{!}1_{\mathcal{C}},\ G) \cong \operatorname{Hom}(1_{\mathcal{C}},\ G \circ F)$$
 
 右边那个对应的 $1_{\mathcal{C}} \implies G \circ F$ 正是**单位** $\eta$。
-
-> 续见 `nodes/ex.kan-extension.3.md`

@@ -17,13 +17,13 @@ $$G(f) \circ \alpha_X = \alpha_Y \circ F(f)$$
 - `def.category` 范畴：用到了定义 范畴　proofs/def-dep.category-nat.md
 
 ## 它能推出什么 / 谁在用它
-- 被 `def.cat-equivalence` 范畴等价 用
-- 被 `def.cone` 锥 用
 - 被 `thm.lim-functor` 极限的函子性 用
-- 被 `def.presheaf-cat` 预层范畴 用
-- 被 `def.representable` 表示函子 用
 - 被 `lem.yoneda` 米田引理 用
 - 被 `prop.yoneda-embedding` 米田嵌入 用
+- 被 `def.cat-equivalence` 范畴等价 用
+- 被 `def.cone` 锥 用
+- 被 `def.presheaf-cat` 预层范畴 用
+- 被 `def.representable` 表示函子 用
 
 > 说明见 `notes/def.natural-transformation.md`
 

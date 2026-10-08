@@ -1,6 +1,6 @@
 # 凝聚态集　`def.condensed-set`
 凝聚态集（Condensed Set）
-layer 16 · 定义 · 凝聚态集 · 范畴论+拓扑学
+layer 16 · 定义 · 凝聚态集 · 凝聚态数学
 
 **凝聚态集**是 $\mathbf{CHaus}$ 上的（集合值）**层**。其范畴记
 

@@ -1,30 +1,18 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 层范畴的性质 | site 的好性质 | 预拓扑斯公理 → prop.site-properties
+- 拓扑斯中覆盖即余积满 → prop.topos-covering-epi
 
-- 层中单满即同构 | epi-mono factorization → prop.sheaf-mono-epi-iso
+- 层即保极限的预层 → prop.topos-sheaf-limits
 
-- 满态射的局部判据 | 局部满 | local epimorphism → prop.sheaf-epi-criterion
+- 拟紧 | quasi-compact | qc → def.quasi-compact
 
-- 有效等价关系 | effective equivalence relation | 有效关系 → def.effective-equivalence
+- 拟紧的性质 → prop.quasi-compact-properties
 
-- 层化与商交换 → prop.sheafify-equivalence
+- 拟分离 | quasi-separated | qs → def.quasi-separated
 
-- 标准拓扑 | canonical topology | 次标准 | subcanonical → def.canonical-topology
+- 预拓扑斯由拓扑斯唯一确定 | qcqs → thm.pretopos-qcqs
 
-- 覆盖等价于余积满 → prop.covering-sieve-epi
+- 拓扑斯的态射 | geometric morphism | 几何态射 | 拉回函子 | 推前函子 → def.topos-morphism
 
-- 不交万有余积与次标准 → prop.disjoint-universal
-
-- 预拓扑斯 | pretopos | 预拓扑斯公理 → def.pretopos
-
-- 预拓扑斯里的满单分解 | 平衡范畴 | balanced → prop.pretopos-factorization
-
-- 子对象构成有界格 | 子对象格 → prop.subobject-lattice
-
-- 预标准拓扑 | precanonical topology → def.precanonical-topology
-
-- 预标准拓扑下的层 → prop.precanonical-sheaf
-
-> 续见 alias/aka/category.8.md
+见 `../../alias.md`。

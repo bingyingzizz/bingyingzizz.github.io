@@ -1,6 +1,6 @@
 # 像 / 余像　`def.image`
 像与余像（Image / Coimage）
-layer 15 · 定义 · 图与极限 · 范畴论
+layer 15 · 定义 · 单满、子对象与像 · 范畴论
 
 态射 $f : X \to Y$ 的**像** $\operatorname{im} f$ 是 $Y$ 的一个子对象，它在一切分解 $f : X \to I \rightarrowtail Y$ 组成的范畴中是**始对象**（即：任何别的分解都唯一地穿过它）。对偶地，$\operatorname{coim} f$ 是分解 $X \twoheadrightarrow I \to Y$ 的余泛对象。
 

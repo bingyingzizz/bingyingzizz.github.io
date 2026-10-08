@@ -10,7 +10,6 @@ $$\varinjlim : \mathbf{Set}^{I} \longrightarrow \mathbf{Set}$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - `def.limit` 极限：用到了定义 极限　proofs/def-link.limit-filtered.md
-- `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-filtered.md
 - `def.commutative-diagram` 交换图：用到了定义 交换图　proofs/def-dep.diagram-filtered.md
 
 ## 它能推出什么 / 谁在用它
