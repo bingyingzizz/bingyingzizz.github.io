@@ -10,3 +10,4 @@ layer 6 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 ## 它能推出什么 / 谁在用它
 - 被 `prop.cgwh-fiber-product` 紧块的纤维积还是紧的 用
 - 被 `prop.cgwh-closed` CGWH 的开闭子空间与滤过余极限 用
+- 被 `prop.exact-sequence-topo-ab` 拓扑阿贝尔群正合列的搬运 用

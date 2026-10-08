@@ -13,6 +13,7 @@ layer 5 · 定义 · 拓扑空间 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - 被 `prop.compact-subset-closed` 紧子集是闭的 用
 - 被 `def.clopen` 闭开集 用
+- 被 `def.normal-space` 正规空间 用
 
 refs: Munkres, Topology, Ch. 2
 

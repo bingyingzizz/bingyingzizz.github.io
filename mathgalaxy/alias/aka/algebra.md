@@ -23,4 +23,10 @@
 
 - Noether 第一同构定理 | 第一同构定理 | 同构定理 | first isomorphism theorem | Noether → thm.first-iso
 
+- 环 | ring | 交换环 | 含幺环 → def.ring
+
+- 理想 | ideal | 商环 | quotient ring | 主理想 → def.ideal
+
+- 模 | module | 模同态 | A-Mod → def.module
+
 见 `../../alias.md`。

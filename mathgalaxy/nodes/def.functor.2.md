@@ -12,3 +12,4 @@
 - 被 `def.kan-extension` Kan 延拓 用
 - 被 `def.sieve` 筛 用
 - 被 `def.cochain-complex` 上链复形 用
+- 被 `def.localization` 局部化 用

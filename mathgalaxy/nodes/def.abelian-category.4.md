@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
 - 被 `def.ab-axioms` Grothendieck 的 AB 公理 用
+- 被 `prop.lc-ab-preabelian` 局部紧阿贝尔群不是阿贝尔范畴 用
+- 被 `thm.freyd-mitchell` Freyd–Mitchell 嵌入定理 用

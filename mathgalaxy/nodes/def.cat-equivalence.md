@@ -14,3 +14,6 @@ $$F \circ G \cong 1_{\mathcal{C}'}, \qquad G \circ F \cong 1_{\mathcal{C}}$$
 - `def.natural-transformation` 自然变换：用到了定义 自然变换　proofs/def-dep.nat-equivalence.md
 
 > 说明见 `notes/def.cat-equivalence.md`
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 `nodes/def.cat-equivalence.2.md`

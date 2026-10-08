@@ -11,4 +11,10 @@
 
 - 什么是平坦对象 → def.flat-abelian-sheaf def.tensor-abelian-sheaf def.abelian-category
 
+- 什么是局部化 → def.localization prop.calculus-of-fractions def.homotopy-category
+
+- 什么是模 → def.module def.ring def.abelian-category
+
+- Freyd-Mitchell 是什么 → thm.freyd-mitchell def.abelian-category def.module
+
 见 `../alias.md`。

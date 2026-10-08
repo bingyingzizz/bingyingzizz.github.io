@@ -20,6 +20,7 @@ $f$ **连续**（在 $\mathbb{R}$ 上连续）当且仅当它在每一点连续�
 - 被 `def.derivative` 导数 用
 - 被 `cor.continuous-measurable` 连续 ⟹ Borel 可测 用
 - 被 `def.compact-open-topology` 紧开拓扑 用
+- 被 `lem.urysohn` Urysohn 引理 用
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 

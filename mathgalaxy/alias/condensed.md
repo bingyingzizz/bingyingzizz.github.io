@@ -17,4 +17,8 @@
 
 - 为什么凝聚态阿贝尔群可以做代数 → def.tensor-abelian-sheaf thm.condab-ab def.condensed-abelian-group
 
-见 `../alias.md`。
+- 拓扑阿贝尔群怎么进凝聚态 → prop.abtop-to-abcond def.topo-ab-group def.condensed-abelian-group
+
+- 什么是 Pontryagin 对偶 → def.pontryagin-dual thm.pontryagin-van-kampen
+
+> 续见 alias/condensed.2.md

@@ -15,4 +15,8 @@
 
 - 拓扑斯的态射 | geometric morphism | 几何态射 | 拉回函子 | 推前函子 → def.topos-morphism
 
+- 局部化 | localization | ho(C) | 形式逆 | Proposition 1.4.12 | Prop 1.4.12 → def.localization
+
+- 分式演算 | calculus of fractions | Ore 条件 | Proposition 1.4.14 | Prop 1.4.14 → prop.calculus-of-fractions
+
 见 `../../alias.md`。

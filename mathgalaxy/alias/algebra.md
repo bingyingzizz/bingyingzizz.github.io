@@ -11,4 +11,10 @@
 
 - 核为什么是正规子群 → def.group-hom def.normal-subgroup thm.first-iso
 
+- 什么是环 → def.ring def.ideal def.field
+
+- 什么是模 → def.module def.ring def.abelian-category
+
+- Freyd-Mitchell 是什么 → thm.freyd-mitchell def.abelian-category def.module
+
 见 `../alias.md`。

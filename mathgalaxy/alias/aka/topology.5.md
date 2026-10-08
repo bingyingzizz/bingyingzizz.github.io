@@ -17,4 +17,12 @@
 
 - 积拓扑 | product topology | 乘积空间 | 投影 → def.product-topology
 
-见 `../../alias.md`。
+- 笛卡尔闭 | cartesian closed | currying | 指数对象 | Theorem 2.3.6 | Thm 2.3.6 → prop.cg-cartesian-closed
+
+- 指数伴随 | Corollary 2.3.7 | Cor 2.3.7 | 余极限万有 → cor.cg-exponential-adjoint
+
+- 正规空间 | normal space | 正则空间 | 分离公理 → def.normal-space
+
+- Urysohn 引理 | Urysohn | Lemma 2.1.2 | 连续函数足够多 → lem.urysohn
+
+> 续见 alias/aka/topology.6.md

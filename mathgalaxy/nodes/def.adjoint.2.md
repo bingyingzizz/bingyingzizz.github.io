@@ -17,3 +17,4 @@
 - 被 `def.chaus-pretopos` CHaus 是预拓扑斯 用
 - 被 `def.tensor-abelian-sheaf` 阿贝尔层的张量积 用
 - 被 `prop.cg-coreflective` 紧生成空间是余反射子范畴 用
+- 被 `cor.cg-exponential-adjoint` CG 的指数伴随 用

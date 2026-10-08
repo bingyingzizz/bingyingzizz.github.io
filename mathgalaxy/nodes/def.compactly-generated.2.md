@@ -12,3 +12,6 @@
 - 被 `cor.cg-product` 紧生成空间对积封闭 用
 - 被 `ex.cg-examples` 紧生成空间的例子 用
 - 被 `prop.cg-equivalent-conditions` 紧生成空间的等价刻画 用
+- 被 `prop.abtop-to-abcond` 拓扑阿贝尔群嵌入凝聚态 用
+- 被 `prop.lc-ab-preabelian` 局部紧阿贝尔群不是阿贝尔范畴 用
+- 被 `prop.cg-cartesian-closed` 紧生成空间是笛卡尔闭的 用

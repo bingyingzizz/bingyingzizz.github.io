@@ -18,5 +18,8 @@ layer 6 · 定义 · 代数结构 · 抽象代数
 - 被 `def.normal-subgroup` 正规子群 用
 - 被 `def.group-hom` 群同态、核与像 用
 - 被 `def.field` 域 用
+- 被 `def.topo-ab-group` 拓扑阿贝尔群 用
+- 被 `def.ring` 环 用
+- 被 `def.module` 模 用
 
 > 说明见 `notes/def.group.md`

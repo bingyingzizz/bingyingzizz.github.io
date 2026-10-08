@@ -1,6 +1,8 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 同伦 | homotopy | 零伦 | null-homotopic | 链同伦 → def.homotopy
+
 - 同伦范畴 | homotopy category | K(C) | 同伦等价 → def.homotopy-category
 
 - 映射锥 | mapping cone | 位移 | shift | K[1] → def.mapping-cone

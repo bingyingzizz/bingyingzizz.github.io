@@ -16,5 +16,6 @@ $$\mathrm{Ab}(\mathrm{Cond}) \;\simeq\; \mathrm{Cond}(\mathrm{Ab}) \;\simeq\; \w
 ## 它能推出什么 / 谁在用它
 - 被 `thm.condab-ab` CondAb 满足 AB6 与 AB4* 用
 - 被 `def.tensor-abelian-sheaf` 阿贝尔层的张量积 用
+- 被 `prop.abtop-to-abcond` 拓扑阿贝尔群嵌入凝聚态 用
 
 > 说明见 `notes/def.condensed-abelian-group.md`

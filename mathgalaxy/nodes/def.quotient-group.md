@@ -18,5 +18,6 @@ $$(g N) \cdot (g' N) := (g g') N.$$
 ## 它能推出什么 / 谁在用它
 - 被 `thm.first-iso` 第一同构定理（Noether） 用
 - 被 `thm.first-iso` 第一同构定理（Noether） 用
+- 被 `def.ideal` 理想 用
 
 > 说明见 `notes/def.quotient-group.md`

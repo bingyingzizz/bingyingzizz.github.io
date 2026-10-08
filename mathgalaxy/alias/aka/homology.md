@@ -15,10 +15,10 @@
 
 - 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
 
+- Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
+
 - 复形 | complex | 上链复形 | cochain complex | 链复形 | 微分 → def.cochain-complex
 
 - 复形范畴是加法范畴 | 逐项计算 → prop.complex-additive
-
-- 同伦 | homotopy | 零伦 | null-homotopic | 链同伦 → def.homotopy
 
 > 续见 alias/aka/homology.2.md

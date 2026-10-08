@@ -5050,6 +5050,13 @@ MG.clusters = [
     parent: 'condensed',
     hub: 'def.condensed-abelian-group',
     desc: '在凝聚态集上做代数：阿贝尔群值层 → 截面函子 → 足够多投射对象 → 张量与内 Hom。'
+  },
+  {
+    id: 'cond.topo',
+    name: '拓扑阿贝尔群',
+    parent: 'condensed',
+    hub: 'thm.pontryagin-van-kampen',
+    desc: '造出「拓扑阿贝尔群 → 凝聚态阿贝尔群」这条通道：关联凝聚态群（保所有极限）→ 连续同态即内部 Hom → 正合列的搬运 → Pontryagin 对偶 → 局部紧阿贝尔群不是阿贝尔范畴。'
   }
 
   /* 以后加内容时，新星团往这里追加即可。留空不写 = 该星系的节点直属于星系。 */
@@ -5547,6 +5554,25 @@ MG.aliases = {
     { id: 'thm.first-iso', aka: ['Noether 第一同构定理', '第一同构定理', '同构定理', 'first isomorphism theorem', 'Noether'] },
     { id: 'def.product-topology', aka: ['积拓扑', 'product topology', '乘积空间', '投影'] },
 
+    /* 书里的编号（按编号直接搜） */
+    { id: 'prop.cg-cartesian-closed', aka: ['笛卡尔闭', 'cartesian closed', 'currying', '指数对象', 'Theorem 2.3.6', 'Thm 2.3.6'] },
+    { id: 'cor.cg-exponential-adjoint', aka: ['指数伴随', 'Corollary 2.3.7', 'Cor 2.3.7', '余极限万有'] },
+    { id: 'def.localization', aka: ['局部化', 'localization', 'ho(C)', '形式逆', 'Proposition 1.4.12', 'Prop 1.4.12'] },
+    { id: 'prop.calculus-of-fractions', aka: ['分式演算', 'calculus of fractions', 'Ore 条件', 'Proposition 1.4.14', 'Prop 1.4.14'] },
+    { id: 'def.normal-space', aka: ['正规空间', 'normal space', '正则空间', '分离公理'] },
+    { id: 'lem.urysohn', aka: ['Urysohn 引理', 'Urysohn', 'Lemma 2.1.2', '连续函数足够多'] },
+    { id: 'def.topo-ab-group', aka: ['拓扑阿贝尔群', 'topological abelian group', 'AbTop', '连续同态', 'CZ(M,N)'] },
+    { id: 'prop.abtop-to-abcond', aka: ['关联凝聚态群', 'Proposition 6.2.1', 'Prop 6.2.1', 'AbTop 到 AbCond'] },
+    { id: 'prop.continuous-hom-condensed', aka: ['Proposition 6.2.2', 'Prop 6.2.2', '连续同态是内部 Hom'] },
+    { id: 'prop.exact-sequence-topo-ab', aka: ['Proposition 6.2.3', 'Prop 6.2.3', '正合列的搬运', '紧提升'] },
+    { id: 'prop.lc-ab-preabelian', aka: ['局部紧阿贝尔群', 'pre-abelian', 'Exercise 6.4', 'R-disc 不是严格'] },
+    { id: 'def.pontryagin-dual', aka: ['Pontryagin 对偶', 'Pontryagin dual', '圆群', 'T'] },
+    { id: 'thm.pontryagin-van-kampen', aka: ['Pontryagin-van Kampen', '庞特里亚金对偶定理', 'Theorem 6.2.4', 'Thm 6.2.4', '自等价'] },
+    { id: 'def.ring', aka: ['环', 'ring', '交换环', '含幺环'] },
+    { id: 'def.ideal', aka: ['理想', 'ideal', '商环', 'quotient ring', '主理想'] },
+    { id: 'def.module', aka: ['模', 'module', '模同态', 'A-Mod'] },
+    { id: 'thm.freyd-mitchell', aka: ['Freyd-Mitchell', 'Freyd', 'Mitchell', 'Theorem 5.2.4', 'Thm 5.2.4', '嵌入定理'] },
+
     /* 同调代数 */
     { id: 'def.cochain-complex', aka: ['复形', 'complex', '上链复形', 'cochain complex', '链复形', '微分'] },
     { id: 'prop.complex-additive', aka: ['复形范畴是加法范畴', '逐项计算'] },
@@ -5727,6 +5753,16 @@ MG.aliases = {
     { q: '商群是什么', to: ['def.quotient-group', 'def.normal-subgroup', 'def.quotient-set'] },
     { q: '核为什么是正规子群', to: ['def.group-hom', 'def.normal-subgroup', 'thm.first-iso'] },
     { q: '积拓扑是什么', to: ['def.product-topology', 'def.quotient-topology', 'def.compactly-generated'] },
+    { q: '紧生成空间为什么好用', to: ['prop.cg-cartesian-closed', 'cor.cg-exponential-adjoint', 'thm.cgwh-reflective'] },
+    { q: '什么是局部化', to: ['def.localization', 'prop.calculus-of-fractions', 'def.homotopy-category'] },
+    { q: '什么是分式演算', to: ['prop.calculus-of-fractions', 'def.localization'] },
+    { q: 'Urysohn 引理是什么', to: ['lem.urysohn', 'def.normal-space', 'def.hausdorff'] },
+    { q: '拓扑阿贝尔群怎么进凝聚态', to: ['prop.abtop-to-abcond', 'def.topo-ab-group', 'def.condensed-abelian-group'] },
+    { q: '什么是 Pontryagin 对偶', to: ['def.pontryagin-dual', 'thm.pontryagin-van-kampen'] },
+    { q: '局部紧阿贝尔群能做同调代数吗', to: ['prop.lc-ab-preabelian', 'thm.condab-ab', 'prop.abtop-to-abcond'] },
+    { q: '什么是环', to: ['def.ring', 'def.ideal', 'def.field'] },
+    { q: '什么是模', to: ['def.module', 'def.ring', 'def.abelian-category'] },
+    { q: 'Freyd-Mitchell 是什么', to: ['thm.freyd-mitchell', 'def.abelian-category', 'def.module'] },
   ],
 };
 
@@ -21070,6 +21106,59 @@ window.MG = window.MG || {};
       regions: ['topology'],
       tags: ['拓扑', '弱 Hausdorff', '紧开拓扑', '函数空间'],
       statement: '若 $Y$ 弱 Hausdorff，则 $kC(X, Y)$（紧开拓扑再取 $k$-化）也弱 Hausdorff。'
+    },
+
+    {
+      id: 'prop.cg-cartesian-closed',
+      cluster: 'topo.cg',
+      type: 'theorem',
+      label: '紧生成空间是笛卡尔闭的',
+      title: '紧生成空间是笛卡尔闭范畴',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '笛卡尔闭', '指数对象', 'currying'],
+      statement: [
+        '设 $X, Y, Z$ 是紧生成空间。则存在同胚',
+        '',
+        '$$kC\\bigl(k(X \\times Y),\\ kZ\\bigr) \\;\\cong\\; kC\\bigl(kX,\\ kC(kY, kZ)\\bigr).$$',
+        '',
+        '等价的说法是 $k\\mathbf{Top}$ 里成立 **currying**：',
+        '',
+        '$$C\\bigl(k(X \\times Y),\\ Z\\bigr) \\;\\cong\\; C\\bigl(X,\\ C(Y, Z)\\bigr).$$'
+      ].join('\n'),
+      notes: [
+        '⭐ **这就是这一团要造的那个「能用的东西」**：$k\\mathbf{Top}$ 里**有函数空间、而且函数空间还在范畴里**，于是「映射空间」「同伦」这些构造可以完全在 $k\\mathbf{Top}$ 内部做完。$\\mathbf{Top}$ 本身做不到这件事。',
+        '**证明的走法。** 先对紧生成空间手工验证集合层面的双射',
+        '',
+        '$$C\\bigl(k(X \\times Y),\\ Z\\bigr) \\;\\cong\\; C\\bigl(X,\\ C(Y, Z)\\bigr),$$',
+        '',
+        '再用米田引理把「$kC$ 上的同胚」化归成「对每个紧生成测试空间 $T$ 的映射集相等」：',
+        '',
+        '$$C\\bigl(T,\\ kC(k(X\\times Y), kZ)\\bigr) \\cong C\\bigl(k(T\\times X\\times Y),\\ Z\\bigr) \\cong C\\bigl(T,\\ kC(kX, kC(kY,kZ))\\bigr).$$',
+        '',
+        '两次都只用到积的结合性与 $k$-化的函子性 —— 这也是为什么必须**先取 $k$-化**：不取的话右边那个 $C(Y,Z)$ 未必紧生成。',
+        '⚠️ 一个容易踩的点：$C(kX, kY) = C(kX, Y)$ 作为**集合**相等，但一般**不是同胚**，哪怕换成 $k$-拓扑也一样。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'cor.cg-exponential-adjoint',
+      cluster: 'topo.cg',
+      type: 'corollary',
+      label: 'CG 的指数伴随',
+      title: '$X \\mapsto k(X \\times Y) \\;\\dashv\\; Z \\mapsto kC(kY, Z)$',
+      regions: ['topology'],
+      tags: ['拓扑', '紧生成', '伴随', '指数对象', '余极限万有'],
+      statement: [
+        '在紧生成空间范畴上，函子',
+        '',
+        '$$X \\longmapsto k(X \\times Y) \\qquad \\text{左伴随于} \\qquad Z \\longmapsto kC(kY, Z).$$',
+        '',
+        '也就是说 $kC(kY, -)$ 是「乘 $Y$」的**右伴随**（$k(Y \\times -)$ 叫**指数对象** $Z^{Y}$）。'
+      ].join('\n'),
+      notes: [
+        '**两个立刻的推论**：左伴随**保余极限**，所以 $X \\mapsto k(X \\times Y)$ 保紧生成空间的余极限；右伴随**保极限**，所以 $Z \\mapsto kC(kY,Z)$ 保极限。',
+        '⭐ **余极限在 $k\\mathbf{Top}$ 里是万有的。** 因为「乘 $Y$」有右伴随，它与余极限交换，这正是余极限万有（把余极限沿任意态射拉回还是余极限）的条件。**这一点在 $\\mathbf{Top}$ 里不成立** —— 也是「非要在 $k\\mathbf{Top}$ 里做事」的又一条理由。'
+      ].join('\n\n')
     }
   ],
 
@@ -21259,6 +21348,469 @@ window.MG = window.MG || {};
         '**它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。'
       ].join('\n\n'),
       refs: ['Lang, Algebra, Ch. I §4', 'Dummit & Foote, Abstract Algebra, §10.2']
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 局部化与分式演算（2 条）
+   --------------------------------------------------------------------------
+   原书 §1.4。这一团补的是「把一族态射当成同构之后会得到什么范畴」。
+
+   用途不止一处：同伦范畴 $\mathbf{K}(\mathcal{C})$ 就是把链同伦当成同构的局部化，
+   导出范畴 $D(\mathcal{A})$ 是再把拟同构当成同构的局部化 ——
+   所以这一条是同调代数那一整条线的入口。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '局部化与分式演算',
+  nodes: [
+
+    {
+      id: 'def.localization',
+      cluster: 'cat.basic',
+      type: 'definition',
+      label: '局部化',
+      title: '范畴的局部化（Localization）',
+      regions: ['category'],
+      tags: ['范畴论', '局部化', '分式', '同伦范畴'],
+      statement: [
+        '设 $\\mathcal{C}$ 是范畴，$W$ 是 $\\mathcal{C}$ 中一族态射（想「当成同构」的那些）。$\\mathcal{C}$ 关于 $W$ 的**局部化** $\\mathrm{ho}(\\mathcal{C})$ 是这样一个范畴，连同函子 $\\gamma : \\mathcal{C} \\to \\mathrm{ho}(\\mathcal{C})$：',
+        '',
+        '1. 对每个 $w \\in W$，$\\gamma(w)$ 是同构；',
+        '2. **泛性质**：对任何函子 $F : \\mathcal{C} \\to \\mathcal{D}$ 使每个 $w \\in W$ 的像都是同构，存在唯一的 $\\overline{F} : \\mathrm{ho}(\\mathcal{C}) \\to \\mathcal{D}$ 使 $\\overline{F} \\circ \\gamma = F$。'
+      ].join('\n'),
+      notes: [
+        '**怎么把态射造出来。** 局部化里的态射是 $W$ 中态射的**形式逆**与 $\\mathcal{C}$ 中原有态射拼成的**有限长链**（这叫**分式**，因为长得像 $c \\cdot w^{-1} \\cdot d$）。两个这样的链只要能用原范畴里的交换图连通，就视作同一个态射。',
+        '⭐ **两个标准例子**（都在同调代数那一支）：把链同伦 $\\simeq$ 全体当成同构，得到**同伦范畴** $\\mathbf{K}(\\mathcal{C})$；再把**拟同构**全体当成同构，得到**导出范畴** $D(\\mathcal{A})$。所以这一条是那一整条线的地基层。',
+        '⚠️ **局部化一定存在，但可能很贵**：一般情形下 $\\mathrm{ho}(\\mathcal{C})$ 的态射**不再是集合**（每两个对象之间的分式链可能真类多），Hom 也可能爆掉。下面那条命题说的就是「什么时候它老老实实是个局部小范畴」。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.calculus-of-fractions',
+      cluster: 'cat.basic',
+      type: 'proposition',
+      label: '分式演算下的局部化',
+      title: '右分式演算 $\\implies$ 局部化好算',
+      regions: ['category'],
+      tags: ['范畴论', '局部化', '分式演算', 'Ore 条件'],
+      statement: [
+        '设 $\\mathcal{C}$ 是小范畴、$W$ 是其中一族态射。称 $W$ **容许右分式演算**，如果：',
+        '',
+        '1. $W$ 对复合封闭，且包含所有恒等态射；',
+        '2. **（Ore 条件）** 对任何 $w : X\' \\to X$ 与任何 $f : Y \\to X$，存在 $g$ 与 $v \\in W$ 使方块交换：',
+        '',
+        '$$\\begin{array}{ccc} Z & \\xrightarrow{\\;g\\;} & Y \\\\[2pt] {\\scriptstyle v}\\big\\downarrow & & \\big\\downarrow{\\scriptstyle f} \\\\[2pt] X\' & \\xrightarrow[\\;w\\;]{} & X \\end{array} \\qquad v \\in W;$$',
+        '',
+        '3. **（消去条件）** 若 $w \\in W$ 且 $f \\circ w = g \\circ w$，则存在 $v \\in W$ 使 $v \\circ f = v \\circ g$。',
+        '',
+        '则 $\\mathrm{ho}(\\mathcal{C})$ 可以这样具体算出来：对象不变，$\\operatorname{Hom}_{\\mathrm{ho}}(X, Y)$ 是形如 $X \\xleftarrow{\\;w\\;} X\' \\xrightarrow{\\;f\\;} Y$（$w \\in W$）的**分式**在等价关系下的商集。'
+      ].join('\n'),
+      notes: [
+        '⭐ **直觉**：Ore 条件说的是「分式能做通分」—— 一个 $W$ 里的态射跟在前面，总能换成一个 $W$ 里的态射跟在后面，于是分式可以统一写成「先逆一个、再走一个」的**单分式** $f \\circ w^{-1}$，复合起来才封得住。消去条件保证「等价」这件事本身是好的。',
+        '**与环论对照**：这正是交换环里**局部化** $S^{-1}A$（$S$ 是乘性子集）的那个条件；那里的「分式」$a/s$ 就是这里的分式，Ore 条件在交换的情形自动成立。',
+        '⚠️ 局部化**总是存在**（上一条），但**不总是**能这样具体算 —— 分式演算是一条足够好用的**充分**条件。'
+      ].join('\n\n')
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 正规空间与 Urysohn 引理（2 条）
+   --------------------------------------------------------------------------
+   原书 §2.1。分离公理那一层原来只有 Hausdorff，缺了「正规」这一级；
+   而 Urysohn 引理正是「正规 ⇒ 有足够多连续函数」的那条命脉 ——
+   后面 Tietze 扩张定理、以及凝聚态上同调里「实 Banach 空间在紧 Hausdorff
+   空间上零调」都要往回用它。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '正规空间与 Urysohn 引理',
+  nodes: [
+
+    {
+      id: 'def.normal-space',
+      cluster: 'topology.general',
+      type: 'definition',
+      label: '正规空间',
+      title: '正规空间（Normal Space）',
+      regions: ['topology'],
+      tags: ['拓扑', '分离公理', '正规', '闭集'],
+      statement: [
+        '拓扑空间 $X$ 叫**正规的**，如果它是 $T_{1}$ 的，并且任意两个**不交闭集** $A, B$ 都能被开集分开：存在开集 $U \\supseteq A$、$V \\supseteq B$ 使 $U \\cap V = \\emptyset$。',
+        '',
+        '把「不交闭集」换成「一点与不含该点的闭集」，得到的是**正则**空间；再换成「两点」，得到的就是 **Hausdorff**。'
+      ].join('\n'),
+      notes: [
+        '**分离公理的层级**（都是往上加强）：',
+        '',
+        [
+          '- $T_{1}$：单点是闭集；',
+          '- Hausdorff：两点可被开集分开；',
+          '- 正则：点与不含它的闭集可分开 $\\implies$ Hausdorff；',
+          '- **正规**：两个不交闭集可分开 $\\implies$ 正则。',
+        ].join('\n'),
+        '',
+        '**紧 Hausdorff $\\implies$ 正规**（这是紧性最常用的一个推论：两个不交闭集在紧空间里能被有限多个开集对分开）。所以 $[0,1]$、$\\beta I$ 这些空间都是正规的 —— 于是 Urysohn 引理在那里永远能用。',
+        '⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'lem.urysohn',
+      cluster: 'topology.general',
+      type: 'lemma',
+      label: 'Urysohn 引理',
+      title: 'Urysohn 引理',
+      regions: ['topology'],
+      tags: ['拓扑', '正规', '连续函数', 'Urysohn'],
+      statement: [
+        '设 $X$ 是拓扑空间。则 $X$ **正规** $\\iff$ 对任意两个不交闭集 $A, B \\subseteq X$，存在连续函数',
+        '',
+        '$$f : X \\longrightarrow [0, 1], \\qquad f|_{A} \\equiv 0, \\qquad f|_{B} \\equiv 1.$$'
+      ].join('\n'),
+      notes: [
+        '⭐ **它的意义是：正规性 = 「连续函数足够多」。** 光是「闭集能被开集分开」还是纯拓扑的说法；Urysohn 引理把它换成了**一个函数** —— 从此可以拿实数来量拓扑，分析才接得上。',
+        '**证明的走法（「二分法」造 $f$）。** 先在两个闭集之间造一列开集：对每个二进有理数 $q \\in [0,1]$ 给一个开集 $U_{q}$，使',
+        '',
+        '$$A \\subseteq U_{q} \\subseteq \\overline{U_{q}} \\subseteq U_{q\'} \\quad (q < q\'),$$',
+        '',
+        '这一步只用正规性（每一步都是「不交闭集被开集分开」）。然后令',
+        '',
+        '$$f(x) := \\inf\\{\\, q : x \\in U_{q} \\,\\}$$',
+        '',
+        '（$x \\notin$ 任何 $U_{q}$ 时取 $1$）。由那列开集的**单调夹逼**可以验证 $f$ 连续，且 $f|_{A} = 0$、$f|_{B} = 1$。反方向是直接的：$f^{-1}[0, 1/2)$ 与 $f^{-1}(1/2, 1]$ 就是分开 $A, B$ 的开集。∎',
+        '**用途**：它是 **Tietze 扩张定理**（把闭子集上的连续实函数扩到整个空间）的前置，而 Tietze 又是「实 Banach 空间在紧 Hausdorff 空间上零调」那条的引擎 —— 那条链最终通到凝聚态上同调。'
+      ].join('\n\n')
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 拓扑阿贝尔群（7 条）
+   --------------------------------------------------------------------------
+   原书 §6.2。这一团造出的东西是**「拓扑阿贝尔群 → 凝聚态阿贝尔群」这条通道**：
+   把「带拓扑的阿贝尔群」忠实、保极限地搬进 $\mathrm{CondAb}$ 里，
+   于是可以在凝聚态这一侧做同调代数，再把结果搬回去。
+
+   终点是 **Pontryagin–van Kampen 对偶**：局部紧 Hausdorff 阿贝尔群
+   在对偶下自成一个世界，$M \mapsto \widehat{M}$ 是可逆的。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '拓扑阿贝尔群',
+  nodes: [
+
+    /* ------------------------------------------------ 拓扑阿贝尔群 */
+    {
+      id: 'def.topo-ab-group',
+      cluster: 'cond.topo',
+      type: 'definition',
+      label: '拓扑阿贝尔群',
+      title: '拓扑阿贝尔群与连续同态（Topological Abelian Group）',
+      regions: ['condensed', 'topology'],
+      tags: ['凝聚态', '拓扑阿贝尔群', '连续同态', '紧开拓扑'],
+      statement: [
+        '**拓扑阿贝尔群** $(M, +, \\tau)$ 是一个**阿贝尔群** $M$ 连带一个拓扑 $\\tau$，使运算连续：',
+        '',
+        '$$+ : M \\times M \\longrightarrow M, \\qquad - : M \\longrightarrow M.$$',
+        '',
+        '两个拓扑阿贝尔群之间的**连续同态**记作',
+        '',
+        '$$C_{\\mathbb{Z}}(M, N) \\;\\subseteq\\; C(M, N),$$',
+        '',
+        '右边带**紧开拓扑**，左边取**子空间拓扑**。'
+      ].join('\n'),
+      notes: [
+        '⭐ **为什么用 $C_{\\mathbb{Z}}$ 这个记号**：$\\mathbb{Z}$ 提醒你这些是 $\\mathbb{Z}$-模（也就是阿贝尔群）的同态，不是随便的连续映射。',
+        '**与内部 Hom 的关系**：$M$ **紧生成**时 $C_{\\mathbb{Z}}(M, N) = \\operatorname{Hom}_{\\mathbb{Z}}(M, N)$ —— 见下一条命题。（这是「测试够了」的又一个红利。）',
+        '⚠️ **两个容易掉进去的坑**（原书专门点出来）：',
+        '',
+        [
+          '- $\\underline{M} \\mapsto M$ 那条通道**没有明显的伴随**，因为函子 $X \\mapsto X(\\bullet)$（取底拓扑空间）**不保积**；',
+          '- 就算 $M$ 是拓扑阿贝尔群，$kM$ **一般也不是**拓扑阿贝尔群 —— 因为紧生成空间对（拓扑空间的）积不封闭。',
+        ].join('\n'),
+      ].join('\n\n')
+    },
+
+    /* ------------------------------------------------ 关联凝聚态群 */
+    {
+      id: 'prop.abtop-to-abcond',
+      cluster: 'cond.topo',
+      type: 'proposition',
+      label: '拓扑阿贝尔群嵌入凝聚态',
+      title: '$\\mathbf{AbTop} \\to \\mathrm{AbCond}$ 保所有极限',
+      regions: ['condensed'],
+      tags: ['凝聚态', '拓扑阿贝尔群', '忠实函子', '保极限'],
+      statement: [
+        '存在**保所有极限**的**忠实**函子',
+        '',
+        '$$\\mathbf{AbTop} \\longrightarrow \\mathrm{AbCond}, \\qquad M \\longmapsto \\underline{M}.$$',
+        '',
+        '它在**紧生成**阿贝尔群这一部分上是**全忠实**的。'
+      ].join('\n'),
+      notes: [
+        '**构造**：一个拓扑阿贝尔群 $M$ 给出凝聚态阿贝尔群',
+        '',
+        '$$\\underline{M} : S \\longmapsto C(S, M),$$',
+        '',
+        '即「从紧 Hausdorff 空间 $S$ 到 $M$ 的连续映射集」（逐点加法）。因为 $M$ 是拓扑阿贝尔群、$C(S, M)$ 按逐点加法是阿贝尔群，这是阿贝尔群值预层；层条件是「粘合连续映射」，成立。',
+        '**保所有极限**来自定理「$\\mathbf{Top} \\to \\mathrm{Cond}$ 保有限积」：凝聚态里的极限逐点算，而连续映射的极限在 $\\mathbf{Top}$ 里算和逐点算一致。',
+        '⭐ **这一条的实际用途**：把拓扑问题搬进凝聚态这一侧，用那里的同调代数（长正合列、求导函子）去算，再搬回来。**代价是丢失信息** —— 忠实但不一定满，所以「凝聚态地相等」比「拓扑地相等」更弱。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'prop.continuous-hom-condensed',
+      cluster: 'cond.topo',
+      type: 'proposition',
+      label: '连续同态与内部 Hom',
+      title: '$C_{\\mathbb{Z}}(M,N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}(M,N)$（$M$ 紧生成）',
+      regions: ['condensed'],
+      tags: ['凝聚态', '连续同态', '内 Hom', '紧生成'],
+      statement: '若 $M, N$ 是两个拓扑阿贝尔群、且 $M$ **紧生成**，则存在凝聚态阿贝尔群的自然同构 $C_{\\mathbb{Z}}(M, N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}(M, N)$。'
+    },
+
+    {
+      id: 'prop.exact-sequence-topo-ab',
+      cluster: 'cond.topo',
+      type: 'proposition',
+      label: '拓扑阿贝尔群正合列的搬运',
+      title: '拓扑正合列 $\\implies$ 凝聚态正合列',
+      regions: ['condensed'],
+      tags: ['凝聚态', '正合列', '弱 Hausdorff', '紧子集'],
+      statement: [
+        '设',
+        '',
+        '$$0 \\longrightarrow M\' \\xrightarrow{\\;u\\;} M \\xrightarrow{\\;v\\;} M\'\' \\longrightarrow 0$$',
+        '',
+        '是拓扑阿贝尔群的**正合列**，$M\'\'$ **弱 Hausdorff**，并且满足：',
+        '',
+        '**（紧提升条件）** 对每个紧 Hausdorff $K\'\' \\subseteq M\'\'$，存在紧 Hausdorff $K \\subseteq M$ 使 $K\'\' \\subseteq v(K)$。',
+        '',
+        '则凝聚态阿贝尔群的正合列',
+        '',
+        '$$0 \\longrightarrow \\underline{M\'} \\xrightarrow{\\;\\underline{u}\\;} \\underline{M} \\xrightarrow{\\;\\underline{v}\\;} \\underline{M\'\'} \\longrightarrow 0$$',
+        '',
+        '也正合。'
+      ].join('\n'),
+      notes: '左正合是自动的（上一条函子保所有极限）；右端要的是「$\\underline{v}$ 是满态射」，而凝聚态里满态射的判据就是「对自由紧 Hausdorff 空间逐点满」，于是归结为紧提升条件。\n\n📌 **局部紧时紧提升条件自动满足** —— 所以对局部紧阿贝尔群，正合列可以整条搬过去。'
+    },
+
+    /* ------------------------------------------ 局部紧阿贝尔群 */
+    {
+      id: 'prop.lc-ab-preabelian',
+      cluster: 'cond.topo',
+      type: 'proposition',
+      label: '局部紧阿贝尔群不是阿贝尔范畴',
+      title: '局部紧 Hausdorff 阿贝尔群：预阿贝尔但非阿贝尔',
+      regions: ['condensed', 'topology'],
+      tags: ['凝聚态', '局部紧', '预阿贝尔', '严格态射'],
+      statement: [
+        '局部紧 Hausdorff 阿贝尔群构成的范畴是**预阿贝尔**的，但**不是阿贝尔**范畴。',
+        '',
+        '具体地：核 = 通常的核带子空间拓扑；余核 = 商群 $N/f(M)$ 带商拓扑；但态射**不必是严格的** ——',
+        '',
+        '$$\\mathrm{id} : \\mathbb{R}^{\\mathrm{disc}} \\longrightarrow \\mathbb{R}$$',
+        '',
+        '（同一个群，一个取离散拓扑、一个取通常拓扑）就不是严格的。'
+      ].join('\n'),
+      notes: '⭐ 这条说明「拓扑阿贝尔群」这个范畴**不够好**：没法在里面做同调代数。这正是要把它搬进凝聚态那侧的理由 —— 那边是 Grothendieck 范畴，要什么有什么。\n\n**为什么核余核都造得出还是不行。** 阿贝尔范畴要求「每个单态射都是某个态射的核」（等价地：单态射与其余核的核同构，即**严格**）。$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ 是单态射（它同构于自己的像），但它的余核是 $0$ —— 像在余核里被整个商掉了。于是「余核的核」不是原来的对象，严格性破掉。'
+    },
+
+    /* ---------------------------------------------- Pontryagin 对偶 */
+    {
+      id: 'def.pontryagin-dual',
+      cluster: 'cond.topo',
+      type: 'definition',
+      label: 'Pontryagin 对偶',
+      title: 'Pontryagin 对偶（Pontryagin Dual）',
+      regions: ['condensed'],
+      tags: ['凝聚态', 'Pontryagin', '对偶', '圆群'],
+      statement: [
+        '记**圆群**',
+        '',
+        '$$\\mathbb{T} := \\{\\, z \\in \\mathbb{C} : |z| = 1 \\,\\}.$$',
+        '',
+        '拓扑阿贝尔群 $M$ 的 **Pontryagin 对偶**是',
+        '',
+        '$$\\widehat{M} := C_{\\mathbb{Z}}(M, \\mathbb{T}),$$',
+        '',
+        '即从 $M$ 到 $\\mathbb{T}$ 的连续群同态全体，带紧开拓扑。'
+      ].join('\n'),
+      notes: [
+        '**为什么是 $\\mathbb{T}$**：它是**紧**的 $T_{1}$ 群，也是最简单的「能承载全部特征标」的群。对偶群因此自动是紧的（当 $M$ 离散时）—— 这就是「对偶把大小反过来」的机制。',
+        '**两个基本例子**（都可以直接算）：$\\widehat{\\mathbb{Z}} \\cong \\mathbb{T}$，$\\widehat{\\mathbb{T}} \\cong \\mathbb{Z}$ —— 对偶把离散的整数群换成紧的圆群，反过来也一样。第三个例子 $\\widehat{\\mathbb{R}} \\cong \\mathbb{R}$ 由 Fourier 变换给出：$y \\mapsto e^{2\\pi i xy}$ 的每个连续特征标都长这样。',
+        '⭐ **对偶把结构翻过来**（Pontryagin 那一对字典）：',
+        '',
+        [
+          '- 离散 $\\leftrightarrow$ 紧 Hausdorff；',
+          '- 挠（torsion）$\\leftrightarrow$ **Stonean**；',
+          '- 无挠 $\\leftrightarrow$ **连通**。',
+        ].join('\n'),
+        '',
+        '这张字典是「用拓扑来读代数」的最初范本，也是凝聚态数学「用紧 Hausdorff 空间测一切」这一思路的来源。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'thm.pontryagin-van-kampen',
+      cluster: 'cond.topo',
+      type: 'theorem',
+      label: 'Pontryagin–van Kampen 对偶',
+      title: 'Pontryagin–van Kampen 对偶定理',
+      regions: ['condensed', 'topology'],
+      tags: ['凝聚态', 'Pontryagin', '自等价', '局部紧'],
+      statement: [
+        '函子',
+        '',
+        '$$M \\longmapsto \\widehat{M} := C_{\\mathbb{Z}}(M, \\mathbb{T}),$$',
+        '',
+        '是**局部紧 Hausdorff 阿贝尔群**范畴上的**自等价**（而且是自伴随的等价）。',
+        '',
+        '特别地，$\\widehat{M}$ 仍局部紧 Hausdorff，并且**双重对偶回到自己**：$\\widehat{\\widehat{M}} = M$。'
+      ].join('\n'),
+      notes: [
+        '**「自伴随的等价」是什么意思**：$M \\mapsto \\widehat{M}$ 既是 $M \\mapsto \\widehat{M}$ 的左伴随又是它的右伴随（对偶函子与自己的伴随关系，配对由取值映射 $M \\times \\widehat{M} \\to \\mathbb{T}$ 给出）。',
+        '**整条正合列都对偶过去**：如果 $0 \\to M\' \\to M \\to M\'\' \\to 0$ 是局部紧阿贝尔群的（严格）正合列，那么对偶之后 $0 \\to \\widehat{M\'\'} \\to \\widehat{M} \\to \\widehat{M\'} \\to 0$ 仍正合 —— **箭头全部转向**。这是「自等价保结构」的直接好处：群论问题可以在对偶那边做，再翻回来。',
+        '**几个必记的对应**：$\\widehat{\\mathbb{R}} \\cong \\mathbb{R}$（Fourier 变换）；$\\widehat{\\mathbb{Z}} \\cong \\mathbb{T}$ 与 $\\widehat{\\mathbb{T}} \\cong \\mathbb{Z}$（互相换）；有限维实 Banach 空间上的对偶退化成通常的线性对偶（实 Banach 空间局部紧 $\\iff$ 有限维）。',
+        '⭐ **这一条是凝聚态阿贝尔群那套理论的原型**：把 $\\mathbb{T}$ 换成别的测试对象、把「局部紧」换成别的条件，就得到各种对偶（Tannaka、Gelfand……）。凝聚态数学把「$\\mathbb{T}$ 换成 CHaus 上的层」升了一次维。'
+      ].join('\n\n')
+    }
+  ],
+
+  edges: []
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 环、理想与模 + Freyd-Mitchell（5 条）
+   --------------------------------------------------------------------------
+   原书 §5.2 用 $A\\text{-}\\mathbf{Mod}$ 讲了半天阿贝尔范畴的例子，
+   但「环」「模」本身一直没有节点 —— 「用到了却没节点」。
+   这一包把它补齐，并顺手把 Freyd-Mitchell 定理挂上去：
+   那是「在小阿贝尔范畴里可以假装自己在做模论」的许可证。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '环、理想与模',
+  nodes: [
+
+    {
+      id: 'def.ring',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '环',
+      title: '环与交换环（Ring）',
+      regions: ['algebra'],
+      tags: ['代数', '环', '交换环'],
+      statement: [
+        '设 $A$ 是**集合**，$+$ 与 $\\cdot$ 是 $A$ 上的两个**二元运算**。称 $(A, +, \\cdot)$ 是一个**环**，当且仅当：',
+        '',
+        '- $(A, +)$ 是**阿贝尔群**；',
+        '- $(A, \\cdot)$ 满足**结合律**（不要求单位元，也不要求交换）；',
+        '- **分配律** $a(b + c) = ab + ac$、$(a + b)c = ac + bc$ 成立。',
+        '',
+        '乘法还交换的环叫**交换环**；再要求有乘法单位元 $1 \\ne 0$ 的环叫**含幺环**。'
+      ].join('\n'),
+      notes: '⭐ **又是「集合 + 运算 + 公理」**，而且这一层直接**引用**了下面的阿贝尔群：加法那一组公理不再重写，一句话带过。\n\n**与域对照**：域要求每个非零元可逆（$(F\\setminus\\{0\\}, \\cdot)$ 是阿贝尔群），环**不要求**。所以域是环中的一个特例，$\\mathbb{Z}$ 是环但不是域 —— 这正是「域」那条定义里 $\\mathbb{Z}$ 反例的来源。',
+      refs: ['Lang, Algebra, Ch. II', 'Dummit & Foote, Abstract Algebra, §7.1']
+    },
+
+    {
+      id: 'def.ideal',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '理想',
+      title: '理想与商环（Ideal）',
+      regions: ['algebra'],
+      tags: ['代数', '环', '理想', '商环'],
+      statement: [
+        '设 $A$ 是环。子集 $I \\subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \\in A$、$x \\in I$ 有',
+        '',
+        '$$a x \\in I \\quad \\text{与} \\quad x a \\in I.$$',
+        '',
+        '（只要求 $a x \\in I$ 的叫**左理想**，只要求 $x a \\in I$ 的叫**右理想**；交换环里三者一致。）',
+        '',
+        '商集 $A/I$（按加法陪集）上的乘法 $(a + I)(b + I) := ab + I$ 良定义，得到的环叫**商环**。'
+      ].join('\n'),
+      notes: [
+        '**为什么理想这样定义。** 与正规子群一模一样的问题：想在商集上定义乘法，就要让 $(a + I)(b + I)$ 与代表元无关。算一下 $(a + x)(b + y) = ab + ay + xb + xy$ —— 后面三项都得落在 $I$ 里。$xy \\in I$ 由「$I$ 是子群」保证不了，必须**额外要求**。',
+        '⭐ **对照表**：群要商出**群**，商掉的是**正规子群**；环要商出**环**，商掉的是**理想**。（$I$ 作为加法子群当然自动正规 —— 加法群是阿贝尔群 —— 所以那一边不用另加条件。）',
+        '**主理想** $(a) := \\{\\, xa : x \\in A \\,\\}$（交换环里就是 $a$ 的倍数全体）。$A/(a)$ 是「把 $a$ 当成 $0$」造出来的环；$\\mathbb{Z}/(n) = \\mathbb{Z}/n\\mathbb{Z}$ 就是模 $n$ 同余。'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'def.module',
+      cluster: 'algebra.structures',
+      type: 'definition',
+      label: '模',
+      title: '模与模同态（Module）',
+      regions: ['algebra'],
+      tags: ['代数', '模', '环', '同态'],
+      statement: [
+        '设 $A$ 是含幺环、$M$ 是**阿贝尔群**。称 $M$ 是一个 **$A$-模**，如果给定了一个映射',
+        '',
+        '$$A \\times M \\longrightarrow M, \\qquad (a, m) \\longmapsto a \\cdot m,$$',
+        '',
+        '满足 $a(bm) = (ab)m$、$(a + b)m = am + bm$、$a(m + n) = am + an$、$1 \\cdot m = m$。',
+        '',
+        '保持这个作用的加法群同态叫 **$A$-模同态**：$f(am) = a f(m)$。全体 $A$-模与模同态构成范畴 $A\\text{-}\\mathbf{Mod}$。'
+      ].join('\n'),
+      notes: [
+        '⭐ **模 = 阿贝尔群 + 环作用**，所以它同时是「群」和「环」两边的孩子：$\\mathbb{Z}$-模**就是**阿贝尔群（$n \\cdot m$ 只能有一种定义）；域上的模**就是**向量空间。这两句话把「模」放在已知例子的中点。',
+        '**$A\\text{-}\\mathbf{Mod}$ 为什么是同调代数的样板间**：它同时是',
+        '',
+        [
+          '- **阿贝尔范畴**（有核、余核，单满态射全部严格）；',
+          '- **具有足够多内射对象**（每个模都嵌进内射模）；',
+          '- **具有足够多投射对象**（自由模都是投射的）；',
+          '- **Grothendieck 范畴**（有生成元 $A$ 自己，滤过余极限正合）。',
+        ].join('\n'),
+        '',
+        '所以「在 $A\\text{-}\\mathbf{Mod}$ 里能做的」，就是同调代数想推广到一般范畴的东西。**其余范畴能做的事情，都以它为标尺。**'
+      ].join('\n\n')
+    },
+
+    {
+      id: 'thm.freyd-mitchell',
+      cluster: 'hom.ab',
+      type: 'theorem',
+      label: 'Freyd–Mitchell 嵌入定理',
+      title: 'Freyd–Mitchell 嵌入定理',
+      regions: ['homology'],
+      tags: ['同调代数', '阿贝尔范畴', '嵌入', 'Freyd', 'Mitchell'],
+      statement: [
+        '若 $\\mathcal{C}$ 是**小**阿贝尔范畴，则存在一个环 $A$ 与一个**全忠实**的**正合**函子',
+        '',
+        '$$\\mathcal{C} \\longrightarrow A\\text{-}\\mathbf{Mod}.$$'
+      ].join('\n'),
+      notes: [
+        '⭐ **它的意义是：在小阿贝尔范畴里，你可以假装自己在做模论。** 想证一条关于全体对象的命题（比如蛇引理、五引理），就先用「追元素」的办法在 $A\\text{-}\\mathbf{Mod}$ 里证一遍 —— 那里元素是有意义的 —— 再沿这个全忠实正合函子把结论搬回来。**「在一个具体的范畴里追元素」这件事因此是合法的推广手段。**',
+        '**为什么要求小**：证明要把 $\\mathcal{C}$ 里的对象**做成**模，用的正是「全体 $\\hom$ 集合」的余极限构造；范畴不小的话这些集合是真类，做不成模。',
+        '⚠️ **对偶版本**：同样的论证给一个嵌进 $\\mathbf{Mod}\\text{-}A$（右模）的版本；$A$ 不唯一，构造依赖选定的生成元。',
+        '**与 Giraud 定理对照**：Giraud 是把**拓扑斯**说成「预层范畴的正合反射子范畴」，Freyd–Mitchell 是把**小阿贝尔范畴**说成「模范畴的全忠实正合子范畴」—— 两条定理是同一个思路（「找一个具体的大范畴把自己装进去」）在不同结构上的版本。'
+      ].join('\n\n'),
+      refs: ['Freyd, Abelian Categories (1964)', 'Mitchell, The full imbedding theorem (1964)']
     }
   ],
 
@@ -23720,6 +24272,86 @@ window.MG = window.MG || {};
       '定理的输入是一个**群同态**（要用到它的核与像）。'],
     ['def.group', 'def.field', 'def-dep.field-group',
       '域 = 两个**阿贝尔群** + 分配律 —— 域的定义建立在群的定义之上。'],
+
+    /* -------------------------------------------- 局部化与分式演算 */
+    ['def.functor', 'def.localization', 'def-dep.localization-functor',
+      '局部化是一条**泛性质**：对函子 $\\mathcal{C} \\to \\mathcal{D}$ 说话。'],
+    ['def.section-retraction', 'def.localization', 'def-dep.localization-iso',
+      '要求 $W$ 里的态射在局部化里变成**同构**（有截面也有收缩）。'],
+    ['def.natural-transformation', 'def.localization', 'def-dep.localization-nattrans',
+      '泛性质里的唯一性说的是函子之间的等式，即自然变换的层面。'],
+    ['def.localization', 'prop.calculus-of-fractions', 'def-dep.fractions-localization',
+      '命题给出局部化的一个**具体算法**。'],
+    ['def.mono', 'prop.calculus-of-fractions', 'def-dep.fractions-mono',
+      '消去条件用的是「$v \\circ f = v \\circ g$」这种等式。'],
+
+    /* -------------------------------------------- 正规空间与 Urysohn */
+    ['def.hausdorff', 'def.normal-space', 'def-dep.normal-hausdorff',
+      '正规要求在 $T_{1}$ 之上再加强（闭集之间可以分开）。'],
+    ['def.closed-set', 'def.normal-space', 'def-dep.normal-closed',
+      '正规性说的是**不交闭集**能被开集分开。'],
+    ['def.continuous', 'lem.urysohn', 'def-dep.urysohn-continuous',
+      '引理的结论是一个**连续函数** $f : X \\to [0,1]$。'],
+    ['def.normal-space', 'lem.urysohn', 'def-dep.urysohn-normal',
+      '引理说的正是「正规 $\\iff$ 存在这样的函数」。'],
+
+    /* -------------------------------------------- 拓扑阿贝尔群 */
+    ['def.group', 'def.topo-ab-group', 'def-dep.topoab-group',
+      '拓扑阿贝尔群是一个**阿贝尔群**再加拓扑。'],
+    ['def.topology', 'def.topo-ab-group', 'def-dep.topoab-topology',
+      '「运算连续」要在**拓扑**里说。'],
+    ['def.compact-open-topology', 'def.topo-ab-group', 'def-dep.topoab-compactopen',
+      '$C_{\\mathbb{Z}}(M,N)$ 是 $C(M,N)$ 带**紧开拓扑**的子空间。'],
+    ['def.topo-ab-group', 'prop.abtop-to-abcond', 'def-dep.abtopabcond-topoab',
+      '函子的定义域是**拓扑阿贝尔群**。'],
+    ['def.condensed-abelian-group', 'prop.abtop-to-abcond', 'def-dep.abtopabcond-condab',
+      '函子的靶是**凝聚态阿贝尔群**。'],
+    ['def.compactly-generated', 'prop.abtop-to-abcond', 'def-dep.abtopabcond-cg',
+      '「全忠实」只在**紧生成**的那一部分成立。'],
+    ['def.topo-ab-group', 'prop.continuous-hom-condensed', 'def-dep.conthom-topoab',
+      '命题说的是两个**拓扑阿贝尔群**的连续同态。'],
+    ['def.internal-hom', 'prop.continuous-hom-condensed', 'def-dep.conthom-internalhom',
+      '结论是凝聚态阿贝尔群的**内部 Hom**。'],
+    ['prop.abtop-to-abcond', 'prop.exact-sequence-topo-ab', 'def-dep.exacttopo-abtopabcond',
+      '证明靠的是「$\\mathbf{AbTop} \\to \\mathrm{AbCond}$ 保所有极限」那条。'],
+    ['def.weak-hausdorff', 'prop.exact-sequence-topo-ab', 'def-dep.exacttopo-weakhaus',
+      '假设里要求 $M\'\'$ 是**弱 Hausdorff** 的。'],
+    ['def.abelian-category', 'prop.lc-ab-preabelian', 'def-dep.lcab-abeliancat',
+      '结论是「预阿贝尔但**不是阿贝尔**范畴」。'],
+    ['def.compactly-generated', 'prop.lc-ab-preabelian', 'def-dep.lcab-cg',
+      '反例用的是同一个群换拓扑，要靠**紧生成**那一套来看严格性。'],
+    ['def.topo-ab-group', 'def.pontryagin-dual', 'def-dep.pontryagin-topoab',
+      '对偶的对象是**拓扑阿贝尔群**。'],
+    ['def.topo-ab-group', 'thm.pontryagin-van-kampen', 'def-dep.pvk-topoab',
+      '定理在**局部紧 Hausdorff 阿贝尔群**范畴上说话。'],
+    ['def.pontryagin-dual', 'thm.pontryagin-van-kampen', 'def-dep.pvk-dual',
+      '定理说的是**对偶函子**是自等价。'],
+    ['def.cat-equivalence', 'thm.pontryagin-van-kampen', 'def-dep.pvk-equivalence',
+      '结论是「自等价」。'],
+
+    /* -------------------------------------------- 环、理想与模 */
+    ['def.group', 'def.ring', 'def-dep.ring-group',
+      '环的加法部分是**阿贝尔群**。'],
+    ['def.ring', 'def.ideal', 'def-dep.ideal-ring',
+      '理想是**环**的子集，且对乘法吸收。'],
+    ['def.quotient-group', 'def.ideal', 'def-dep.ideal-quotientgroup',
+      '$(I,+)$ 是加法**子群**；商环先做加法商的**商群**。'],
+    ['def.group', 'def.module', 'def-dep.module-group',
+      '模的底是一个**阿贝尔群**。'],
+    ['def.ring', 'def.module', 'def-dep.module-ring',
+      '模是**环**在阿贝尔群上的作用。'],
+    ['def.abelian-category', 'thm.freyd-mitchell', 'def-dep.freyd-abeliancat',
+      '定理说的是**小阿贝尔范畴**。'],
+    ['def.module', 'thm.freyd-mitchell', 'def-dep.freyd-module',
+      '嵌入的靶是**模范畴** $A\\text{-}\\mathbf{Mod}$。'],
+    ['def.compact-open-topology', 'prop.cg-cartesian-closed', 'def-dep.cgcc-compactopen',
+      '指数对象里那个 $kC$ 就是**紧开拓扑**再取 $k$-化。'],
+    ['def.compactly-generated', 'prop.cg-cartesian-closed', 'def-dep.cgcc-cg',
+      '定理说的是**紧生成空间**范畴。'],
+    ['prop.cg-cartesian-closed', 'cor.cg-exponential-adjoint', 'def-dep.cgexp-cc',
+      '伴随那条是笛卡尔闭的重新表述。'],
+    ['def.adjoint', 'cor.cg-exponential-adjoint', 'def-dep.cgexp-adjoint',
+      '结论说的是「左伴随于」。']
   ];
 
   var edges = E.map(function (e) {
@@ -23781,6 +24413,7 @@ MG.trunk = [
   'def.quotient-set',          //  5 层  商集与等价类 —— ℤ、ℚ、ℝ 用的是同一招
   'def.int',                   //  7 层  整数 ℤ = (ℕ×ℕ)/~（差相同）
   'def.group',                 //  6 层  群 = 集合 + 运算 + 公理（代数语言本身）
+  'def.ring',                  //  7 层  环 = 阿贝尔群 + 乘法 + 分配律
   'def.field',                 //  7 层  域 = 两个阿贝尔群 + 分配律
   'def.ordered-field',         //  8 层  有序域 = 域 + 与运算相容的全序
   'def.rat',                   //  9 层  有理数 ℚ = (ℤ×(ℤ∖{0}))/~（分数值相同）—— 第一个有序域

@@ -5,3 +5,4 @@
 - 被 `def.adjunction-unit` 单位与余单位 用
 - 被 `def.kan-extension` Kan 延拓 用
 - 被 `def.presheaf-valued` 取值一般的预层与层 用
+- 被 `def.localization` 局部化 用

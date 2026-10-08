@@ -18,3 +18,5 @@ $C(X, Y)$（也就是 $\operatorname{Hom}_{\mathbf{Top}}(X, Y)$）上的**紧开
 - 被 `prop.compact-open-discrete` 离散时函数空间是积 用
 
 > 说明见 `notes/def.compact-open-topology.md`
+
+- …另有出边，续页见 `nodes/def.compact-open-topology.2.md`
