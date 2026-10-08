@@ -1,0 +1,16 @@
+# 数学星图 · 别名与问法索引
+
+同一个东西的别的叫法，以及常见问法该看哪几个节点。英文名同样可搜。
+
+用别的叫法（英文名 / 老名字 / 大白话）查不到东西时，先来这里换节点 id。
+
+`alias/<星系id>.md` 是**问法**（一句人话 → 节点 id）；
+`alias/aka/<星系id>.md` 是**别名**（别的叫法 → 节点 id）。
+
+- 数理逻辑　`alias/logic.md` 0 问法　·　`alias/aka/logic.md` 4 别名
+- 集合论　`alias/set-theory.md` 16 问法　·　`alias/aka/set-theory.md` 51 别名
+- 序理论　`alias/order-theory.md` 8 问法　·　`alias/aka/order-theory.md` 12 别名
+- 拓扑学　`alias/topology.md` 7 问法　·　`alias/aka/topology.md` 18 别名
+- 抽象代数　`alias/algebra.md` 2 问法　·　`alias/aka/algebra.md` 5 别名
+- 分析学　`alias/analysis.md` 41 问法　·　`alias/aka/analysis.md` 160 别名
+
