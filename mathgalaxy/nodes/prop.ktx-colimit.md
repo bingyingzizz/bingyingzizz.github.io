@@ -2,7 +2,7 @@
 $kX = \varinjlim S$
 layer 18 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 
-对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \to X$（$S$ 取遍紧 $T_{1}$ 空间）在 $\mathbf{Top}$ 中的余极限。
+对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \to X$（$S$ 取遍紧 Hausdorff 空间）在 $\mathbf{Top}$ 中的余极限。
 
 ## 为什么成立（入边，证明在 proofs/）
 - `def.compactly-generated` 紧生成空间：用到了定义 紧生成空间　proofs/def-dep.ktx-colimit-cg.md

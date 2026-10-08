@@ -20817,24 +20817,24 @@ window.MG = window.MG || {};
         '',
         [
           '1. $X$ 是紧生成的；',
-          '2. $X$ 是「紧 $T_{1}$ 空间的不交并」的商空间；',
-          '3. $X$ 是「局部紧 $T_{1}$ 空间」的商空间；',
-          '4. $Y \\subseteq X$ 开 $\\iff$ 对每个从紧 $T_{1}$ 空间出发的连续 $f : S \\to X$，$f^{-1}(Y)$ 开；',
+          '2. $X$ 是「紧 Hausdorff 空间的不交并」的商空间；',
+          '3. $X$ 是「局部紧 Hausdorff 空间」的商空间；',
+          '4. $Y \\subseteq X$ 开 $\\iff$ 对每个从紧 Hausdorff 空间出发的连续 $f : S \\to X$，$f^{-1}(Y)$ 开；',
           '5. $X \\to Y$ 连续 $\\iff$ 对每个连续 $f : S \\to X$，复合 $S \\to X \\to Y$ 连续；',
-          '6. $X$ 是所有连续映射 $S \\to X$（$S$ 紧 $T_{1}$）的余极限。'
+          '6. $X$ 是所有连续映射 $S \\to X$（$S$ 紧 Hausdorff）的余极限。'
         ].join('\n')
       ].join('\n'),
       notes: [
         '**证明的走法。** (1) $\\iff$ (6) 是定义换一种说法：余极限就是「由全体映射决定」。',
         '',
         [
-          '- (6) $\\implies$ (2)：取 $Y = \\coprod_{S \\to X} S$（沿所有连续映射 $S \\to X$，$S$ 紧 $T_{1}$）。全体映射拼出 $Y \\to X$，它显然满 —— **满的连续映射就是商映射**。',
-          '- (2) $\\implies$ (3)：紧 $T_{1}$ 空间本身局部紧。',
-          '- (3) $\\implies$ (1)：商映射 $Z \\twoheadrightarrow X$（$Z$ 局部紧 $T_{1}$）把 $Z$ 的紧生成性传下去 —— 商是余极限，而余极限的余极限还是余极限。',
+          '- (6) $\\implies$ (2)：取 $Y = \\coprod_{S \\to X} S$（沿所有连续映射 $S \\to X$，$S$ 紧 Hausdorff）。全体映射拼出 $Y \\to X$，它显然满 —— **满的连续映射就是商映射**。',
+          '- (2) $\\implies$ (3)：紧 Hausdorff 空间本身局部紧。',
+          '- (3) $\\implies$ (1)：商映射 $Z \\twoheadrightarrow X$（$Z$ 局部紧 Hausdorff）把 $Z$ 的紧生成性传下去 —— 商是余极限，而余极限的余极限还是余极限。',
           '- (4) $\\iff$ (1)：这是「由映射决定拓扑」的逐字翻译：用 $S$ 是紧空间这一条，把 $f^{-1}(Y)$ 的开性从 $f(S)$ 拉回到 $S$ 上。',
-          '- (5) $\\iff$ (4)：把「$X \\to Y$ 连续」按定义展开成「开集的原像开」，再用 (4) 换成紧 $T_{1}$ 空间上的检验。'
+          '- (5) $\\iff$ (4)：把「$X \\to Y$ 连续」按定义展开成「开集的原像开」，再用 (4) 换成紧 Hausdorff 空间上的检验。'
         ].join('\n'),
-        '⚠️ **测试空间的取法要留意。** 定义那一条用的是**紧 Hausdorff**空间，而这里 (2)(3)(4)(6) 用的是**紧 $T_{1}$**空间。两个测试族是否给出同一个 $k$-化，取决于「从紧 $T_{1}$ 空间出发的连续映射能否换成从紧 Hausdorff 空间出发的」—— **这一点待核对**；用的时候务必先把手头的测试族固定下来。'
+        '⭐ **测试空间统一取紧 Hausdorff 空间。** 定义那一条与这里 (2)(3)(4)(6) 用的是同一族测试空间 —— 也就是说：$X$ 紧生成 $\\iff$ 存在紧 Hausdorff 空间的不交并 $\\coprod S \\twoheadrightarrow X$ 是商映射 $\\iff$ 存在局部紧 Hausdorff 空间 $Z \\twoheadrightarrow X$ 是商映射。**三个说法给出同一个范畴**，用哪一条就看哪一条好算。'
       ].join('\n\n')
     },
 
@@ -20867,7 +20867,7 @@ window.MG = window.MG || {};
       title: '$kX = \\varinjlim S$',
       regions: ['topology'],
       tags: ['拓扑', 'k-拓扑', '余极限'],
-      statement: '对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \\to X$（$S$ 取遍紧 $T_{1}$ 空间）在 $\\mathbf{Top}$ 中的余极限。'
+      statement: '对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \\to X$（$S$ 取遍紧 Hausdorff 空间）在 $\\mathbf{Top}$ 中的余极限。'
     },
 
     /* -------------------------------------------------- 余反射 */
@@ -20894,7 +20894,7 @@ window.MG = window.MG || {};
         '**证明。** 余单位是 $\\varepsilon_{Y} : kY \\to Y$（恒等映射，拓扑从细到粗，连续）。',
         '',
         [
-          '- 先证 $kY$ 确实紧生成：把每个连续映射 $S \\to Y$（$S$ 紧 $T_{1}$）复合 $\\varepsilon_{Y}$ 抬成 $S \\to kY$，再用 $kY$ 的定义（$k$-开集的取法）验证「由这些映射决定拓扑」。',
+          '- 先证 $kY$ 确实紧生成：把每个连续映射 $S \\to Y$（$S$ 紧 Hausdorff）复合 $\\varepsilon_{Y}$ 抬成 $S \\to kY$，再用 $kY$ 的定义（$k$-开集的取法）验证「由这些映射决定拓扑」。',
           '- 于是任意 $f : X \\to Y$ 连续（$X$ 紧生成）时，$f = \\varepsilon_{Y} \\circ f\': X \\to kY$ 给出一个到 $kY$ 的连续映射 $f\'$：设 $U \\subseteq kY$ 开，要证 $f\'^{-1}(U)$ 在 $X$ 中开。由 $X$ 紧生成，只需对每个紧 $L \\subseteq X$ 验证 $f\'^{-1}(U) \\cap L$ 在 $L$ 中开。而 $f|_{L} : L \\to Y$ 连续、$L$ 紧，故 $f(L)$ 紧；$U \\cap f(L)$ 在 $f(L)$ 中开，于是 $(f|_{L})^{-1}\\bigl(U \\cap f(L)\\bigr) = f\'^{-1}(U) \\cap L$ 在 $L$ 中开。∎',
           '- 反向由 $\\varepsilon_{Y}$ 连续直接得到。这样两个方向互逆，就是那个同构。'
         ].join('\n'),
@@ -24197,7 +24197,7 @@ window.MG = window.MG || {};
     ['def.quotient-topology', 'def.k-topology', 'def-dep.ktopo-quotient',
       '$k$-拓扑是使所有这类映射都连续的**最终（最细）拓扑** —— 与商拓扑是同一个构造。'],
     ['def.compactly-generated', 'prop.ktx-colimit', 'def-dep.ktx-colimit-cg',
-      '$kX$ 是沿紧 $T_{1}$ 空间取余极限。'],
+      '$kX$ 是沿紧 Hausdorff 空间取余极限。'],
     ['def.k-topology', 'prop.ktx-colimit', 'def-dep.ktx-colimit-ktopo',
       '余极限的那条拓扑就是 $k$-拓扑。'],
     ['def.k-topology', 'prop.cg-coreflective', 'def-dep.cgcoref-ktopo',
