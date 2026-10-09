@@ -25,4 +25,6 @@
 
 - 区间 | interval → def.interval
 
+- 偏序集的极限 | 极限就是交 | Exercise 1.30 → prop.poset-limit-join
+
 见 `../../alias.md`。

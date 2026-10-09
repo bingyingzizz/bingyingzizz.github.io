@@ -14,5 +14,6 @@ $$F(\lim D) \longrightarrow \lim (F \circ D).$$
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.exact-functor` 正合函子 用
+- 被 `prop.preserves-products-kernels` 保积与核 ⟹ 保所有有限极限 用
 
 > 说明见 `notes/def.preserves-limit.md`

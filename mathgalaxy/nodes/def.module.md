@@ -16,5 +16,6 @@ $$A \times M \longrightarrow M, \qquad (a, m) \longmapsto a \cdot m,$$
 
 ## 它能推出什么 / 谁在用它
 - 被 `thm.freyd-mitchell` Freyd–Mitchell 嵌入定理 用
+- 被 `ex.algebra-categories` 代数的几个范畴 用
 
 > 说明见 `notes/def.module.md`

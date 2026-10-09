@@ -1,6 +1,14 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Noether 第一同构定理 | 第一同构定理 | 同构定理 | first isomorphism theorem | Noether → thm.first-iso
+
+- 环 | ring | 交换环 | 含幺环 → def.ring
+
+- 理想 | ideal | 商环 | quotient ring | 主理想 → def.ideal
+
+- 模 | module | 模同态 | A-Mod → def.module
+
 - 幺半群对象 | monoid object | Mon(C) | 笛卡尔范畴 | cartesian category → def.monoid-object
 
 - 群对象 | group object | 阿贝尔群对象 | abelian group object | Gr(C) | Ab(C) → def.group-object

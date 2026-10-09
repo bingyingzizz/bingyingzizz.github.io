@@ -5,24 +5,24 @@
 
 - 诱导拓扑 | induced topology | Definition 3.4.7 | Def 3.4.7 → def.induced-topology
 
-- 反射子范畴 | reflective subcategory | 余反射 | 反射函子 → def.reflective-subcategory
+- 代数的范畴 | Mon | Gr | Rng | G-Set | A-Mod | k-Alg | Exercise 1.1 → ex.algebra-categories
 
-- 反射子范畴里的极限 → prop.reflective-limits
+- 偏序集的极限 | 极限就是交 | Exercise 1.30 → prop.poset-limit-join
 
-- Kan 延拓 | Kan extension | 左 Kan 延拓 | 右 Kan 延拓 → def.kan-extension
+- 严格态射 | strict morphism | 严格 | Exercise 1.33 → def.strict-morphism
 
-- 余极限是 Kan 延拓 | 伴随是 Kan 延拓 → ex.kan-extension
+- 保积与核 | Exercise 1.43 → prop.preserves-products-kernels
 
-- 滤过余极限正合 | filtered colimits are exact → prop.filtered-exact
+- 保拉回保单态射 | Exercise 1.46 → prop.preserves-fibered-products-mono
 
-- 筛 | sieve | 覆盖筛 | covering sieve → def.sieve
+- Ab(C) 的极限 | Exercise 1.52 → prop.ab-limits-forgetful
 
-- 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology → def.pretopology
+- 左伴随唯一 | Exercise 1.58 → prop.left-adjoint-unique
 
-- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 → def.grothendieck-topology
+- 余单位与忠实 | Exercise 1.60 → prop.counit-epi-iff-faithful
 
-- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 → def.sheaf
+- C 是 Ind(C) 的反射 | Exercise 1.73 → prop.ind-reflective
 
-- 层的下降条件 | sheaf condition | 层条件 → thm.sheaf-descent
+- 滤过加有限余极限 | Exercise 1.41 → prop.filtered-finite-colimits
 
 > 续见 alias/aka/category.7.md

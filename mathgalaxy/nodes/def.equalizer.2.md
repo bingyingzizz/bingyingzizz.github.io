@@ -7,3 +7,4 @@
 - 被 `def.abelian-category` 加法 / 阿贝尔范畴 用
 - 被 `prop.limit-construction` 极限的构造 用
 - 被 `thm.snake-lemma` 蛇引理 用
+- 被 `def.strict-morphism` 严格态射 用

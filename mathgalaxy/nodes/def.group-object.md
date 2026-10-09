@@ -17,5 +17,7 @@ $$\iota : G \longrightarrow G$$
 
 ## 它能推出什么 / 谁在用它
 - 被 `ex.ab-of-categories` Ab(C) 的例子 用
+- 被 `ex.algebra-categories` 代数的几个范畴 用
+- 被 `prop.ab-limits-forgetful` Ab(C) 的极限 用
 
 > 说明见 `notes/def.group-object.md`

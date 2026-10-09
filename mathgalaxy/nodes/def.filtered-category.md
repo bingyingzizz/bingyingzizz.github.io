@@ -20,3 +20,5 @@ layer 10 · 定义 · 图与极限 · 范畴论
 - 被 `def.finitely-presented` 有限表现对象 用
 
 > 说明见 `notes/def.filtered-category.md`
+
+- …另有出边，续页见 `nodes/def.filtered-category.2.md`

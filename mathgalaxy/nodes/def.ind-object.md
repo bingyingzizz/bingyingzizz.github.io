@@ -9,4 +9,7 @@ layer 11 · 定义 · 图与极限 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - `def.filtered-category` 滤过范畴：用到了定义 滤过范畴　proofs/def-dep.indobj-filtered.md
 
+## 它能推出什么 / 谁在用它
+- 被 `prop.ind-reflective` C 是 Ind(C) 的反射子范畴 用
+
 > 说明见 `notes/def.ind-object.md`

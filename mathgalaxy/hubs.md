@@ -14,4 +14,4 @@
 - **5** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 19 · 阿贝尔层
 - **5** `prop.nbv-derivative` NBV 函数的导数与测度的关系 · layer 20 · 有界变差与绝对连续
 
-（453 个节点里 446 个带强边入边，列了前 9 个；完整清单见 `graph.json`。）
+（467 个节点里 460 个带强边入边，列了前 9 个；完整清单见 `graph.json`。）

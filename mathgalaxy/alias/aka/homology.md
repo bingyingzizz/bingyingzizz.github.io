@@ -11,14 +11,14 @@
 
 - 分裂短正合列 | split exact | 分裂引理 | split lemma | Definition 5.1.6 | Def 5.1.6 → def.split-exact
 
+- 投射对象的余积 | Exercise 1.48 → prop.projective-coproduct
+
+- Ab(C) 的极限 | Exercise 1.52 → prop.ab-limits-forgetful
+
+- AB6 | 滤过余极限与积交换 | Exercise 1.69 → prop.ab6
+
 - Grothendieck 范畴 | Grothendieck category | AB5 → def.grothendieck-category
 
 - 取值在范畴里的层 | sheaf with values | presheaf with values | 一般值的层 → def.presheaf-valued
-
-- 阿贝尔层 | abelian sheaf | 阿贝尔群层 | sheaf of abelian groups | Ab(C) | 层上的阿贝尔群 → def.abelian-sheaf
-
-- 拓扑斯上的阿贝尔群 | Ab(T) 是 Grothendieck 范畴 → thm.topos-abelian-grothendieck
-
-- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom → def.internal-hom
 
 > 续见 alias/aka/homology.2.md

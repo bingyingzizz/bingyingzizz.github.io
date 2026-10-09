@@ -19,3 +19,6 @@
 - 被 `prop.cg-coreflective` 紧生成空间是余反射子范畴 用
 - 被 `cor.cg-exponential-adjoint` CG 的指数伴随 用
 - 被 `def.morphism-of-sites` site 的态射 用
+- 被 `prop.abelianization` 交换化 用
+
+> 续见 `nodes/def.adjoint.3.md`

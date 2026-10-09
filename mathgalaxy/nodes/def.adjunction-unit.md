@@ -23,5 +23,6 @@ $$\varepsilon_{Y} := \Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \to Y \qquad (\textb
 ## 它能推出什么 / 谁在用它
 - ⇒ `prop.adjoint-full-faithful` 全忠实与单位
 - 被 `prop.adjoint-full-faithful` 全忠实与单位 用
+- 被 `prop.counit-epi-iff-faithful` 余单位与忠实性 用
 
 > 说明见 `notes/def.adjunction-unit.md`

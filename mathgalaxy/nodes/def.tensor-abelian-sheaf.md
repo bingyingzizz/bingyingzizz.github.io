@@ -18,5 +18,6 @@ $$P \longmapsto \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\ma
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.flat-abelian-sheaf` 平坦阿贝尔层 用
+- 被 `prop.ring-tensor-coproduct` 交换环的纤维余积是张量积 用
 
 > 说明见 `notes/def.tensor-abelian-sheaf.md`

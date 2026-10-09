@@ -1,6 +1,14 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 映射锥 | mapping cone | 位移 | shift | K[1] → def.mapping-cone
+
+- 导出三角 | distinguished triangle | 三角 | triangle → def.distinguished-triangle
+
+- 三角的旋转 | rotation | 八面体公理 → prop.triangle-rotation
+
+- 三角态射的性质 → lem.triangle-morphism
+
 - 同调 | cohomology | homology | H^n | 闭链 | 上边缘 → def.cohomology
 
 - 同调的短正合列 → prop.cohomology-exact-sequence

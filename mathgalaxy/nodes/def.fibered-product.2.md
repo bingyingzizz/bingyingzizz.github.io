@@ -10,3 +10,4 @@
 - 被 `def.mapping-cone` 映射锥 用
 - 被 `def.abelian-category` 加法 / 阿贝尔范畴 用
 - 被 `prop.cgwh-fiber-product` 紧块的纤维积还是紧的 用
+- 被 `prop.preserves-fibered-products-mono` 保纤维积 ⟹ 保单态射 用

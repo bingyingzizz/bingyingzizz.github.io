@@ -7,4 +7,7 @@ layer 13 · 定义 · 函子与自然变换 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - `def.preserves-limit` 保极限的函子：用到了定义 保极限的函子　proofs/def-dep.exact-preslim.md
 
+## 它能推出什么 / 谁在用它
+- 被 `prop.preserves-products-kernels` 保积与核 ⟹ 保所有有限极限 用
+
 > 说明见 `notes/def.exact-functor.md`

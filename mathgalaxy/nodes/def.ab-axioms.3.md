@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 `def.grothendieck-category` Grothendieck 范畴 用
+- 被 `prop.ab6` AB6：滤过余极限与积交换 用

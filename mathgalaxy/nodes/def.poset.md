@@ -19,6 +19,7 @@ layer 5 · 定义 · 序结构 · 序理论
 - 被 `lem.zorn` 佐恩引理 用
 - 被 `thm.hausdorff` Hausdorff 极大原理 用
 - 被 `def.real` 实数系 ℝ 用
+- 被 `prop.poset-limit-join` 偏序集里的极限是交 用
 
 refs: Kunen, Set Theory, I.11；Davey & Priestley, Introduction to Lattices and Order
 

@@ -1,18 +1,22 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 可表函子保极限 | 可表函子保所有极限 | representable preserves limits | left exact | 左正合 | 保有限极限 → prop.representable-preserves-limits
+- 预拓扑斯由拓扑斯唯一确定 | qcqs → thm.pretopos-qcqs
 
-- 幺半群对象 | monoid object | Mon(C) | 笛卡尔范畴 | cartesian category → def.monoid-object
+- 拓扑斯的态射 | geometric morphism | 几何态射 | 拉回函子 | 推前函子 → def.topos-morphism
 
-- 群对象 | group object | 阿贝尔群对象 | abelian group object | Gr(C) | Ab(C) → def.group-object
+- 局部化 | localization | ho(C) | 形式逆 | Proposition 1.4.12 | Prop 1.4.12 → def.localization
 
-- Ab(Top) | Ab(Set) | 拓扑阿贝尔群怎么来的 | 群对象的例子 → ex.ab-of-categories
+- 分式演算 | calculus of fractions | Ore 条件 | Proposition 1.4.14 | Prop 1.4.14 → prop.calculus-of-fractions
 
-- 环的局部化 | W^{-1}R | 乘性子集 | 分式环 | localization of a ring → prop.ring-localization
+- 连通范畴 | connected category | 锯齿 → def.connected-category
 
-- 局部化的 Hom | 分式演算 余极限 | Hom 是余极限 → prop.localization-hom-colim
+- 共尾函子 | cofinal | cofinal functor | final functor | coinitial | 共尾 → def.cofinal-functor
 
-- 覆盖筛的四条等价 | 覆盖筛等价条件 | Proposition 3.2.12 | Prop 3.2.12 | 层化 覆盖筛 → prop.sieve-covering-equivalent
+- 共尾函子不改变余极限 | cofinal colimit | 共尾 余极限 → thm.cofinal-colimit
 
-见 `../../alias.md`。
+- 滤过范畴 | filtered category | filtered | 滤过余极限 | 有限余锥 | cocone → def.filtered-category
+
+- 滤过换成有向集 | 有向集 | directed set | Proposition 1.4.2 | Prop 1.4.2 → prop.filtered-directed
+
+> 续见 alias/aka/category.11.md

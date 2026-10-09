@@ -5,3 +5,4 @@
 - 被 `def.regular-epi` 正则满态射 用
 - 被 `def.abelian-category` 加法 / 阿贝尔范畴 用
 - 被 `prop.calculus-of-fractions` 分式演算下的局部化 用
+- 被 `prop.preserves-fibered-products-mono` 保纤维积 ⟹ 保单态射 用
