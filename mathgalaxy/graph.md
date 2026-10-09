@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-09T04:25:13.006Z
-> 9 星系 / 42 星团 / 430 节点 / 924 连线（强边 915，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-09T04:30:36.301Z
+> 9 星系 / 42 星团 / 434 节点 / 934 连线（强边 925，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -5996,6 +5996,27 @@ $$J = \bigl\{\, (K,\ D : K \to I,\ i,\ \{\Phi_{k} : D(k) \to i\}_{k \in K}) \,\b
 
 原书把这条列为 **Proposition 1.4.2**。
 
+#### 极限的构造　`prop.limit-construction`
+*命题*　极限 = 无限积 + 等化子
+
+设 $D : I \to \mathcal{C}$ 是**小**图。若 $\mathcal{C}$ 有 $I$ 中对象为指标的所有**积**、以及一对平行映射的**等化子**，则 $\lim D$ 存在，并且可以具体地造出来：
+
+$$X' := \prod_{i \in I} D(i), \qquad X'' := \prod_{\alpha : i \to j} D(j),$$
+
+$$X = \lim D \;\cong\; \operatorname{eq}\Bigl(\; X' \xrightarrow[\;p\;]{\;q\;} X'' \;\Bigr),$$
+
+其中两条映射 $p, q : X' \to X''$ 按分量定义为：$p$ 在 $\alpha$-分量上取**投影** $X' \to D(j)$，$q$ 在 $\alpha$-分量上取**投影再复合 $D(\alpha)$**：
+
+$$p_{\alpha} := \mathrm{pr}_{j}, \qquad q_{\alpha} := D(\alpha) \circ \mathrm{pr}_{i}.$$
+
+⭐ **这条把「极限存在」变成了一句具体的话**：只要 $\mathcal{C}$ 有足够多的积与等化子，所有极限就都有了。教科书说「完备范畴 = 有小积且有小等化子的范畴」，依据就是它。
+
+**为什么是这样。** 一个锥 $\{\, g_{i} : Y \to D(i) \,\}$ 等价于一条映射 $g : Y \to X'$（积的泛性质）；而「$g$ 是锥」这个条件（对每条 $\alpha : i \to j$ 有 $D(\alpha) \circ g_{i} = g_{j}$）恰好就是「$p \circ g = q \circ g$」。所以**锥 = 使 $p,q$ 相等的那族映射**，而「最一般的这种映射」正是等化子的定义。
+
+**对偶地**：余极限 = 无限余积 + 余等化子。
+
+⭐ **实用价值**：证明「某个范畴完备」时不用逐条图去造极限 —— 只要造出（小）积与等化子就够了（譬如 $\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$\mathrm{Cond}$ 都是这么验的）。
+
 ### 星团：单满、子对象与像
 > 造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。
 
@@ -6435,15 +6456,29 @@ $$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 #### 逗号范畴　`def.comma-category`
 *定义*　逗号范畴（Comma Category）
 
-设 $G : \mathcal{D} \to \mathcal{C}$ 是函子，$X \in \mathcal{C}$。**逗号范畴** $X \downarrow G$ 以
+设 $F : \mathcal{A} \to \mathcal{C}$、$G : \mathcal{B} \to \mathcal{C}$ 是两个**靶相同**的函子。**逗号范畴** $F \downarrow G$ 以
 
-$$\bigl\{(Y, f) : Y \in \mathcal{D},\ f : X \to G(Y)\bigr\}$$
+$$\bigl\{(A, B, f) : A \in \mathcal{A},\ B \in \mathcal{B},\ f : F(A) \to G(B)\bigr\}$$
 
-为对象，从 $(Y, f)$ 到 $(Y', f')$ 的态射取使 $G(g) \circ f = f'$ 的 $g : Y \to Y'$。
+为对象，从 $(A, B, f)$ 到 $(A', B', f')$ 的态射是一对 $(a : A \to A',\ b : B \to B')$，使方块交换：
 
-它是「**把 $X$ 映射进 $G$ 的像**」的全部方式组成的范畴。把箭头反向得 $F \downarrow Y$，拼起来得 $F \downarrow G$。
+$$\begin{array}{ccc} F(A) & \xrightarrow{\;f\;} & G(B) \\[2pt] {\scriptstyle F(a)}\big\downarrow & & \big\downarrow{\scriptstyle G(b)} \\[2pt] F(A') & \xrightarrow[\;f'\;]{} & G(B') \end{array}$$
 
-预层的切片范畴、元素范畴都是它的特例。凡是要在某个函子外面「挂一个外部对象」再取最优的情形，用的都是它。
+**两个特例**：取 $\mathcal{A} = \mathbf{1}$（单对象范畴）时 $F$ 就是「选出 $\mathcal{C}$ 的一个对象 $X$」，此时 $F \downarrow G$ 记作 $X \downarrow G$；取 $\mathcal{B} = \mathbf{1}$ 得 $F \downarrow Y$。
+
+**读法**：$F \downarrow G$ 把所有「从 $F$ 的世界伸一条箭头到 $G$ 的世界」的方式组织成一个范畴。**对象是箭头本身**（连同它们两端的来源），态射是让箭头之间能互相比较的那一对态射。
+
+**记号**：$F \downarrow G$ 里的符号就是「逗号」，所以叫逗号范畴；有的书写 $(F \downarrow G)$ 或 $(F/G)$。
+
+⭐ **为什么它到处出现**：泛性质常常是「某个逗号范畴里的**终/始对象**」。
+
+
+
+- $X \downarrow \mathrm{id}_{\mathcal{C}}$ 是**切片** $\mathcal{C}/X$；
+- 预层的**元素范畴** $\int F$ 就是 $\mathbf{1} \downarrow F$（把预层看成函子 $\mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$）；
+- 伴随的**单位**定义成 $\mathrm{id} \downarrow G$（或 $F \downarrow \mathrm{id}$）里的始对象。
+
+判别一个东西是不是逗号范畴，就看它「对象是不是箭头、态射是不是交换方块」。
 
 #### 反射子范畴　`def.reflective-subcategory`
 *定义*　反射子范畴（Reflective Subcategory）
@@ -6819,6 +6854,30 @@ $$\text{次标准} \iff \text{可表示预层都是层} \iff X^{\sharp} = h_{X}\
 
 原书把这条列为 **Proposition 3.2.12**；紧跟着的推论 **Corollary 3.2.13** 是一族态射的版本：族 $(X_{i} \to X)$ 生成覆盖筛 $\iff \coprod_{i} X_{i} \to X$ 是满态射。
 
+#### 截面函子　`def.section-functor`
+*定义*　截面函子与全局截面（Sections Functor）
+
+设 $\mathcal{C}$ 是 site，$X \in \mathcal{C}$，$\widetilde{\mathcal{C}}$ 是层范畴。**在 $X$ 处的截面函子**是
+
+$$\Gamma(X, -) : \widetilde{\mathcal{C}} \longrightarrow \mathbf{Set}, \qquad F \longmapsto \Gamma(X, F) := F(X).$$
+
+取 $X = \mathbf{1}$（终对象）时叫**全局截面函子**，记 $\Gamma(F) := F(\mathbf{1})$。
+
+**它就是 $h_{X}$ 的 Hom 函子**：$\Gamma(X, F) = \operatorname{Hom}_{\widetilde{\mathcal{C}}}(h_{X}, F) = F(X)$（米田引理）—— 所以截面函子不是新东西，它就是「用可表示预层去测 $F$」。
+
+⭐ **保什么、不保什么**：
+
+
+
+- **保所有极限**：层范畴里的极限是在预层范畴里逐点算的，而逐点算的极限在 $X$ 处当然还是那个极限。
+- **一般不保余极限**：余极限要先在预层里算、再**层化**，而层化之后在 $X$ 处取的值可能严格大于余极限。**这就是「截面函子不正合」的全部内容。**
+
+
+
+**什么时候保余极限**：当 $X$ 在层范畴里**投射**时（$\operatorname{Hom}(h_{X}, -) = \Gamma(X,-)$ 保满态射），它保余极限。
+
+⭐ **凝聚态那一侧的例子**：$F \in \mathbf{FCHaus}$ 时 $\mathbb{Z}\cdot F$ 是投射的，于是 $\Gamma(F, -)$ 保所有极限**与**所有余极限 —— 那条命题是这里的一个特例。
+
 ### 星团：拓扑斯
 > 造出「几何的代数替身」：预拓扑斯 → 预标准拓扑 → 生成元 → 拓扑斯 → Giraud 定理 → 拟紧拟分离 → 拓扑斯的态射。
 
@@ -7105,6 +7164,59 @@ $$\mathcal{C} \longrightarrow A\text{-}\mathbf{Mod}.$$
 **与 Giraud 定理对照**：Giraud 是把**拓扑斯**说成「预层范畴的正合反射子范畴」，Freyd–Mitchell 是把**小阿贝尔范畴**说成「模范畴的全忠实正合子范畴」—— 两条定理是同一个思路（「找一个具体的大范畴把自己装进去」）在不同结构上的版本。
 
 参考：Freyd, Abelian Categories (1964)；Mitchell, The full imbedding theorem (1964)
+
+#### 蛇引理　`thm.snake-lemma`
+*引理*　蛇引理（Snake Lemma）
+
+设 $\mathcal{A}$ 是阿贝尔范畴，下面这张交换图的两行都正合：
+
+$$\begin{array}{ccccccc} A & \xrightarrow{\;f\;} & B & \xrightarrow{\;g\;} & C & \longrightarrow & 0 \\[2pt] {\scriptstyle a}\big\downarrow & & {\scriptstyle b}\big\downarrow & & {\scriptstyle c}\big\downarrow & & \\[2pt] 0 & \longrightarrow & A' & \xrightarrow[\;f'\;]{} & B' & \xrightarrow[\;g'\;]{} & C' \end{array}$$
+
+则存在**连接同态** $\delta : \ker c \to \operatorname{coker} a$，使序列
+
+$$\ker a \to \ker b \to \ker c \xrightarrow{\;\delta\;} \operatorname{coker} a \to \operatorname{coker} b \to \operatorname{coker} c$$
+
+正合。
+
+**为什么叫「蛇」**：把这条长正合列画成一圈，六个群/模串起来正好是一条蛇的形状 —— $\delta$ 是蛇头那一拐。
+
+**$\delta$ 怎么造**（追图）：取 $x \in \ker c \subseteq C$。由 $g$ 满，取 $y \in B$ 使 $g(y) = x$；由交换性 $g'(b(y)) = c(g(y)) = c(x) = 0$，所以 $b(y) \in \ker g' = \operatorname{im} f'$，取 $z \in A'$ 使 $f'(z) = b(y)$；令
+
+
+
+$$\delta(x) := z \pmod{\operatorname{im} a}.$$
+
+
+
+要验证的只有一件事：**换了 $y$ 的选择，$z$ 只差一个 $a$ 的像** —— 而那正好由第一行的正合性与图的交换性给出。所以 $\delta$ 良定义，且 $\delta$ 的像落在 $\operatorname{coker} a$ 里。∎
+
+⭐ **用处**：它是**长正合列**的引擎 —— 把短正合列 $0 \to K \to L \to M \to 0$ 的每一层（核、余核）串起来，靠的就是每层的 $\delta$。凡是「有了短正合列想推长正合列」的地方，底下都在跑蛇引理。
+
+⚠️ 在**一般**阿贝尔范畴里追元素：可以先用 Freyd–Mitchell 把 $\mathcal{A}$ 全忠实地嵌进模范畴，在那边追完再把结论搬回来。
+
+#### 五引理　`thm.five-lemma`
+*引理*　五引理（Five Lemma）
+
+设 $\mathcal{A}$ 是阿贝尔范畴，下面这张交换图的两行都正合：
+
+$$\begin{array}{ccccccccc} A_{1} & \to & A_{2} & \to & A_{3} & \to & A_{4} & \to & A_{5} \\[2pt] {\scriptstyle \alpha_{1}}\big\downarrow & & {\scriptstyle \alpha_{2}}\big\downarrow & & {\scriptstyle \alpha_{3}}\big\downarrow & & {\scriptstyle \alpha_{4}}\big\downarrow & & {\scriptstyle \alpha_{5}}\big\downarrow \\[2pt] B_{1} & \to & B_{2} & \to & B_{3} & \to & B_{4} & \to & B_{5} \end{array}$$
+
+若 $\alpha_{1}$ 是**满**态射、$\alpha_{2}, \alpha_{4}$ 是**同构**、$\alpha_{5}$ 是**单**态射，则中间的 $\alpha_{3}$ 也是**同构**。
+
+**证明就是追图**（「五引理追图」是这句成语的出处）。分两半：
+
+
+
+- **$\alpha_{3}$ 单**：设 $x \in A_{3}$ 被 $\alpha_{3}$ 送到 $0$。往右上走一步（用第二行的正合性）可把 $\alpha_{3}(x)$ 拉回成 $\alpha_{4}$ 某个元素的原像，用 $\alpha_{4}$ 是单射把 $x$ 拉回 $A_{2}$，再用第一行的正合性与 $\alpha_{2}$ 的单射把 $x$ 挤成 $0$。
+- **$\alpha_{3}$ 满**：给定 $y \in B_{3}$，用 $\alpha_{4}$ 是满射往右下走一步，再用第一行第二行的正合性与交换性把 $y$ 拉回成某个 $A_{3}$ 元素的像 —— 这一步用到 $\alpha_{1}$ 满。
+
+
+
+两个方向都只用「正合 = 核 = 像」这一条。∎
+
+⭐ **推论（常用形式）**：若图中的 $A_{1} = B_{1} = 0$、$A_{5} = B_{5} = 0$，则 $\alpha_{3}$ 是单（满 / 同构）由 $\alpha_{2}, \alpha_{4}$ 单（满 / 同构）决定 —— **这就是「比较长正合列」时最常引的那句：两头一样，中间就一样。**
+
+⚠️ 与蛇引理的关系：两者都是追图，但**五引理只讲同构传递**（不需要造连接同态），蛇引理**造**出 $\delta$。凡是「想比较两个谱序列/两条长正合列」的地方，用五引理。
 
 ### 星团：复形与导出三角
 > 造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。
@@ -13576,6 +13688,46 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 记号 $\widetilde{(-)}$ 是**层化**。
 
+#### 定义引用：「极限」→ 极限的构造　`def-dep.limcon-limit`
+
+命题说的是**极限**怎么造。
+
+#### 定义引用：「积 / 余积」→ 极限的构造　`def-dep.limcon-product`
+
+第一步用的是**积** $\prod_{i} D(i)$。
+
+#### 定义引用：「等化子 / 余等化子」→ 极限的构造　`def-dep.limcon-equalizer`
+
+第二步取**等化子**。
+
+#### 定义引用：「层」→ 截面函子　`def-dep.sectionfunctor-sheaf`
+
+截面函子定义在**层**范畴上。
+
+#### 定义引用：「表示函子」→ 截面函子　`def-dep.sectionfunctor-representable`
+
+它就是可表示预层 $h_{X}$ 的 $\operatorname{Hom}$ 函子。
+
+#### 定义引用：「加法 / 阿贝尔范畴」→ 蛇引理　`def-dep.snake-abelian`
+
+蛇引理在**阿贝尔范畴**里说。
+
+#### 定义引用：「等化子 / 余等化子」→ 蛇引理　`def-dep.snake-equalizer`
+
+要用到核与像（等化子的语言）。
+
+#### 定义引用：「加法 / 阿贝尔范畴」→ 五引理　`def-dep.five-abelian`
+
+五引理在**阿贝尔范畴**里说。
+
+#### 定义引用：「蛇引理」→ 五引理　`def-dep.five-snake`
+
+两者都是**追图**，五引理是比较同构的版本。
+
+#### 定义引用：「像 / 余像」→ 五引理　`def-dep.five-image`
+
+用的还是「正合 = 核 = 像」。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -13817,12 +13969,12 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **范畴与图 ↔ 预层与米田**　2 条节点级连线
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 紧 Haus 与 Stone**　2 条节点级连线
-- **层与拓扑 ↔ 预层与米田**　4 条节点级连线
+- **层与拓扑 ↔ 预层与米田**　5 条节点级连线
 - **图与极限 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 紧 Haus 与 Stone**　2 条节点级连线
 - **范畴与图 ↔ 复形与导出三角**　2 条节点级连线
-- **图与极限 ↔ 加法与阿贝尔范畴**　4 条节点级连线
-- **单满、子对象与像 ↔ 加法与阿贝尔范畴**　2 条节点级连线
+- **图与极限 ↔ 加法与阿贝尔范畴**　5 条节点级连线
+- **单满、子对象与像 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **预层与米田 ↔ 阿贝尔层**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 阿贝尔层**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧生成空间与弱 Hausdorff**　4 条节点级连线

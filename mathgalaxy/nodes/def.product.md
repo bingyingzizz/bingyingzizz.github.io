@@ -15,5 +15,6 @@ $$\operatorname{Hom}_{\mathcal{C}}\Bigl(Y, \prod_{i} X_i\Bigr) \;\cong\; \prod_{
 - 被 `def.internal-hom` 内 Hom 用
 - 被 `def.monoid-object` 幺半群对象 用
 - 被 `def.group-object` 群对象与阿贝尔群对象 用
+- 被 `prop.limit-construction` 极限的构造 用
 
 > 说明见 `notes/def.product.md`

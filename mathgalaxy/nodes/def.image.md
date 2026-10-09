@@ -17,5 +17,6 @@ $$\operatorname{coim} f \longrightarrow \operatorname{im} f$$
 ## 它能推出什么 / 谁在用它
 - 被 `prop.pretopos-factorization` 满-单分解 用
 - 被 `def.abelian-category` 加法 / 阿贝尔范畴 用
+- 被 `thm.five-lemma` 五引理 用
 
 > 说明见 `notes/def.image.md`

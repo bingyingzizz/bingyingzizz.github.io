@@ -1,6 +1,10 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 蛇引理 | snake lemma | 连接同态 | 追图 | diagram chasing → thm.snake-lemma
+
+- 五引理 | five lemma | 追图 → thm.five-lemma
+
 - Grothendieck 范畴 | Grothendieck category | AB5 → def.grothendieck-category
 
 - 取值在范畴里的层 | sheaf with values | presheaf with values | 一般值的层 → def.presheaf-valued
@@ -16,9 +20,5 @@
 - 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
 
 - Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
-
-- 复形 | complex | 上链复形 | cochain complex | 链复形 | 微分 → def.cochain-complex
-
-- 复形范畴是加法范畴 | 逐项计算 → prop.complex-additive
 
 > 续见 alias/aka/homology.2.md

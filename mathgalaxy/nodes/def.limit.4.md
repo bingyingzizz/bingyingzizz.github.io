@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 `prop.representable-preserves-limits` 可表函子保所有极限 用
+- 被 `prop.limit-construction` 极限的构造 用

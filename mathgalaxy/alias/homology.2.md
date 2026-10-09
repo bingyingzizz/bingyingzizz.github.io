@@ -17,4 +17,8 @@
 
 - Freyd-Mitchell 是什么 → thm.freyd-mitchell def.abelian-category def.module
 
+- 什么是蛇引理 → thm.snake-lemma thm.long-exact def.cohomology
+
+- 什么是五引理 → thm.five-lemma thm.snake-lemma def.abelian-category
+
 见 `../alias.md`。

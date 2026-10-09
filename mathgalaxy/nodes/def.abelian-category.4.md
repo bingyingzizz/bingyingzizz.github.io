@@ -6,3 +6,5 @@
 - 被 `def.ab-axioms` Grothendieck 的 AB 公理 用
 - 被 `prop.lc-ab-preabelian` 局部紧阿贝尔群不是阿贝尔范畴 用
 - 被 `thm.freyd-mitchell` Freyd–Mitchell 嵌入定理 用
+- 被 `thm.snake-lemma` 蛇引理 用
+- 被 `thm.five-lemma` 五引理 用

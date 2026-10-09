@@ -5,4 +5,10 @@
 
 - 覆盖筛的等价条件 → prop.sieve-covering-equivalent prop.covering-sieve-epi def.sieve
 
+- 极限怎么构造 → prop.limit-construction def.limit def.equalizer
+
+- 什么是截面函子 → def.section-functor prop.condab-section def.sheaf
+
+- 逗号范畴是什么 → def.comma-category def.slice-category def.elements-category
+
 见 `../alias.md`。

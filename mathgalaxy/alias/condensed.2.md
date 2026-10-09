@@ -5,4 +5,6 @@
 
 - 拓扑阿贝尔群是怎么定义的 → ex.ab-of-categories def.group-object def.topo-ab-group
 
+- 什么是截面函子 → def.section-functor prop.condab-section def.sheaf
+
 见 `../alias.md`。
