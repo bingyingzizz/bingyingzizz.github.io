@@ -5,3 +5,4 @@
 - 被 `def.canonical-topology` 标准拓扑 用
 - 被 `def.precanonical-topology` 预标准拓扑 用
 - 被 `def.quasi-compact` 拟紧对象 用
+- 被 `prop.sieve-covering-equivalent` 覆盖筛的四条等价 用

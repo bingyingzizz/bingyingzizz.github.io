@@ -21,3 +21,5 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 - ⇒ `prop.site-properties` site 的层范畴的好性质
 
 > 说明见 `notes/thm.sheafification.md`
+
+- …另有出边，续页见 `nodes/thm.sheafification.3.md`

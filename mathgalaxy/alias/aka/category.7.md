@@ -19,4 +19,10 @@
 
 - 分式演算 | calculus of fractions | Ore 条件 | Proposition 1.4.14 | Prop 1.4.14 → prop.calculus-of-fractions
 
-见 `../../alias.md`。
+- 连通范畴 | connected category | 锯齿 → def.connected-category
+
+- 共尾函子 | cofinal | cofinal functor | final functor | coinitial | 共尾 → def.cofinal-functor
+
+- 共尾函子不改变余极限 | cofinal colimit | 共尾 余极限 → thm.cofinal-colimit
+
+> 续见 alias/aka/category.8.md

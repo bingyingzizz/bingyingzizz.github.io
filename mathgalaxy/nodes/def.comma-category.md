@@ -16,5 +16,6 @@ $$\bigl\{(Y, f) : Y \in \mathcal{D},\ f : X \to G(Y)\bigr\}$$
 ## 它能推出什么 / 谁在用它
 - ⇒ `thm.saft` 伴随函子定理
 - 被 `thm.saft` 伴随函子定理 用
+- 被 `def.cofinal-functor` 共尾函子 用
 
 > 说明见 `notes/def.comma-category.md`

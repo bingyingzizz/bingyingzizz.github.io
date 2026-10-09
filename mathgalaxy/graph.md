@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-08T13:08:28.547Z
-> 9 星系 / 41 星团 / 418 节点 / 896 连线（强边 887，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-09T04:25:13.006Z
+> 9 星系 / 42 星团 / 430 节点 / 924 连线（强边 915，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -2277,6 +2277,33 @@ $$A \times M \longrightarrow M, \qquad (a, m) \longmapsto a \cdot m,$$
 
 
 所以「在 $A\text{-}\mathbf{Mod}$ 里能做的」，就是同调代数想推广到一般范畴的东西。**其余范畴能做的事情，都以它为标尺。**
+
+#### 环的局部化 W⁻¹R　`prop.ring-localization`
+*例*　环的局部化（Localization of a Ring）
+
+设 $R$ 是**交换环**，$W \subseteq R$ 是**乘性子集**（$1 \in W$，且 $f, g \in W \implies fg \in W$）。
+
+把 $R$ 看作**单对象范畴**：唯一对象 $\ast$，$\operatorname{Hom}(\ast, \ast) = R$，复合就是乘法。它关于 $W$ 的局部化记作
+
+$$W^{-1}R,$$
+
+元素写成**分式** $r/w$（$r \in R$、$w \in W$）。
+
+⭐ **这就是范畴局部化最熟悉的一个例子。** 「把 $W$ 里的元素变成可逆元」这句话，在单对象范畴里就是「把 $W$ 里的态射变成同构」—— 和第「局部化」那条定义是同一件事。
+
+**等价关系**：分式之间按
+
+
+
+$$r/w = r'/w' \iff \exists s \in W,\quad s\,(rw' - r'w) = 0$$
+
+
+
+相等（那个 $s$ 是必要的：$W$ 里可能有零因子，不加 $s$ 会出错）。运算是通常的分数运算 $r/w + r'/w' = (rw' + r'w)/(ww')$、$(r/w)(r'/w') = rr'/(ww')$ —— 分母乘起来还在 $W$ 里，这正是**乘性子集**这个条件的用处。
+
+**两个标准例子**：$R = \mathbb{Z}$、$W = \mathbb{Z} \setminus \{0\}$ 给出 $\mathbb{Q}$；$R$ 一般、$W = \{f^{n} : n \ge 0\}$ 给出「在 $f$ 处局部化」，把 $f$ 变成可逆元。
+
+⭐ **为什么要求 $W$ 乘性封闭**：不封闭的话分式之间没法相乘（分母不落在 $W$ 里），局部化的泛性质（它是「使 $W$ 中元素可逆」的最一般的环）就构造不出来。
 
 ### 星团：向量空间的基
 > 造出线性代数的地基：每个向量空间都有基。
@@ -5597,6 +5624,23 @@ $$\begin{array}{ccc} Z & \xrightarrow{\;g\;} & Y \\[2pt] {\scriptstyle v}\big\do
 
 ⚠️ 局部化**总是存在**（上一条），但**不总是**能这样具体算 —— 分式演算是一条足够好用的**充分**条件。
 
+#### 局部化的 Hom 是滤过余极限　`prop.localization-hom-colim`
+*命题*　$\operatorname{Hom}_{\mathrm{ho}}(X,Y) = \varinjlim_{X' \to X \in W} \operatorname{Hom}(X', Y)$
+
+设小范畴 $\mathcal{C}$ 关于 $W$ 容许**右分式演算**。则
+
+$$\operatorname{Hom}_{\mathrm{ho}(\mathcal{C})}(X, Y) \;=\; \varinjlim_{X' \to X \in W} \operatorname{Hom}_{\mathcal{C}}(X', Y),$$
+
+下标遍历所有 $w : X' \to X$（$w \in W$），沿这些 $w$ 取**滤过**余极限。
+
+⭐ **把「形式添加的逆」变成具体的余极限。** 局部化的态射本来是「向右走一步、向左倒一步」的锯齿链，一般没法直接算；右分式演算保证了可以**通分**：找一个大一点的 $X'$ 把几条链对齐，于是所有态射都可以看成「先在 $X'$ 上走一步、再倒回 $X$」，也就是 $\operatorname{Hom}_{\mathcal{C}}(X', Y)$ 里的一个元素。
+
+**为什么是余极限**：不同的 $X' \to X$ 给的是同一族态射的不同「表示」，取余极限正是「把这些表示粘起来」；而 Ore 条件保证这些 $X' \to X$ 组成的指标范畴是**滤过**的（任意两个都能被第三个同时压住），所以这个余极限是滤过余极限 —— 行为良好。
+
+⭐ **实用价值**：这一条把局部化的 Hom 集合**算成**原范畴里已知东西的滤过余极限。导出范畴 $D(\mathcal{A})$ 里算 $\operatorname{Hom}$ 就是从这一步开始的。
+
+⚠️ 没有分式演算时余极限**一般不对** —— 那时 $\mathrm{ho}(\mathcal{C})$ 的 Hom 可能连集合都不是。
+
 ### 星团：函子与自然变换
 > 造出「范畴之间的翻译」：函子 → 忠实 / 满 / 全忠实 → 自然变换 → 范畴等价。
 
@@ -5848,6 +5892,110 @@ $$\lim \alpha : \lim F \longrightarrow \lim G, \qquad \pi^{G}_{i} \circ \lim \al
 
 有了它，「$\lim$ 保持某个性质」才说得通 —— 后面讨论「某个函子保极限」时，正是拿这个函子去做文章。
 
+#### 连通范畴　`def.connected-category`
+*定义*　连通范畴（Connected Category）
+
+范畴 $\mathcal{C}$ 叫**连通的**，如果对任意两个对象 $A, B \in \mathcal{C}$，都存在一条**有限锯齿**
+
+$$A = X_{0} \longrightarrow X_{1} \longleftarrow X_{2} \longrightarrow \cdots \longleftarrow X_{n} = B,$$
+
+或同样一条但箭头方向相反（$A = X_{0} \leftarrow X_{1} \to X_{2} \leftarrow \cdots \to X_{n} = B$）把 $A$ 与 $B$ 连起来。
+
+「锯齿」的意思是：每个 $X_{k} \to X_{k+1}$ 或 $X_{k} \leftarrow X_{k+1}$ 都得是**真态射**，方向可以来回换，只要首尾接得上。
+
+**空范畴不连通**（它连一个对象都没有）；**单对象范畴连通**（$n = 0$ 的空锯齿就够了）。
+
+⚠️ 与拓扑里的连通**不是一回事**：这里纯粹是「态射图画成的无向图连通」，没有任何开集。
+
+⭐ **为什么需要它**：滤过范畴要求「任意两个对象都有共同的上界」，那是连通性的一种强形式。共尾函子的定义（每个逗号范畴非空**且连通**）里，连通那一条正是用来保证「两条不同的路给出同一个答案」。
+
+#### 共尾函子　`def.cofinal-functor`
+*定义*　共尾函子（Cofinal Functor）
+
+设 $F : J \to I$ 是函子。对 $i \in I$，记 $i \downarrow F$ 为逗号范畴，它的对象是 $\{\, f : i \to F(j) \,\}$（$j \in J$）。
+
+称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \in I$：
+
+$$i \downarrow F \quad \text{非空，且连通。}$$
+
+⭐ **直观**：$F$ 的像在 $I$ 里「到处都有、而且没有被隔开」。非空 = 每个 $i$ 都有一条路走到 $F$ 的像里；连通 = 不同的走法之间能互相转换。**满足这两条，$J$ 就在 $I$ 里「铺得足够满」**，沿着它算余极限与沿着整个 $I$ 算是一回事（见下一条）。
+
+**对偶**：把 $i \downarrow F$ 换成**下**逗号范畴 $F \downarrow i$（对象是 $\{\, f : F(j) \to i \,\}$）得到的条件叫 **coinitial**，它保的是**极限**。
+
+⚠️ **名字很乱，看定义别看名字**：不同的书上 cofinal / final / right cofinal / left cofinal 指的可能是同一个东西，也可能方向相反。本图统一按上面这条定义（用 $i \downarrow F$）。
+
+**例子**：$J \to \mathbf{1}$ 共尾 $\iff$ $J$ 连通；有向集沿 $\le$ 的含入 $\mathbb{N} \to \mathbb{Z}$ 是共尾的；$\mathcal{C}$ 到它的反射子范畴的含入一般**不是**共尾的（方向反了就看 coinitial）。
+
+#### 共尾函子不改变余极限　`thm.cofinal-colimit`
+*定理*　共尾 $\implies$ 沿 $F$ 算余极限与沿 $I$ 算同构
+
+设 $F : J \to I$ **共尾**，$D : I \to \mathcal{C}$ 是图。若 $\varinjlim_{j \in J} D(F(j))$ 存在，则 $\varinjlim_{i \in I} D(i)$ 存在，并且
+
+$$\varinjlim_{j \in J} D\bigl(F(j)\bigr) \;\cong\; \varinjlim_{i \in I} D(i).$$
+
+**证明的走法**（记 $L = \varinjlim_{i \in I} D(i)$，要证 $L$ 也是 $D \circ F$ 的余极限）：
+
+
+
+- $L$ 显然是 $D \circ F$ 的余锥（余锥的腿复合一下就到 $D \circ F$ 上）。
+- 设 $\{\, g_{j} : D(F(j)) \to M \,\}$ 是 $D\circ F$ 的余锥。要对**每个** $i \in I$ 造一条腿 $p_{i} : D(i) \to M$：由 $i \downarrow F$ **非空**，取一条 $f : i \to F(j)$，令 $p_{i} := g_{j} \circ D(f)$。
+- **良定义**靠连通性：换一条 $f' : i \to F(j')$，两个选择 $(j, f)$、$(j', f')$ 由 $i \downarrow F$ 的连通性被一条锯齿连起来，沿锯齿走一遍交换图，两条腿给出同一个 $p_{i}$。
+- 这样 $M$ 变成 $D$ 的余锥，泛性给出唯一的 $L \to M$ —— 于是 $L$ 满足 $D \circ F$ 余锥的泛性质。
+- 反方向由「余锥复合」直接得到。两边互逆。∎
+
+⭐ **用途**：算余极限时可以**把指标范畴换成一个共尾的子范畴**。最常用的一招是把 $\mathbb{N}$ 换成一个子列、或者把有向集换成它的共尾子集 —— 极限不变。
+
+对偶地：**coinitial** 函子不改变极限。
+
+#### 滤过范畴　`def.filtered-category`
+*定义*　滤过范畴与滤过余极限（Filtered Category）
+
+范畴 $I$ 叫**滤过的**（filtered），如果：
+
+1. **非空**：$I$ 至少有一个对象；
+2. **上界**：对任意 $i, j \in I$，存在 $k \in I$ 与态射 $i \to k$、$j \to k$；
+3. **余等化**：对任意平行的 $u, v : i \rightrightarrows j$，存在 $w : j \to k$ 使 $w \circ u = w \circ v$。
+
+等价的说法是：**$I$ 中每个有限图都有余锥。** 沿滤过范畴取的余极限叫**滤过余极限**。
+
+**三条 $\iff$ 有限余锥**：三条正好对应「有限图的余锥存在」的三种情形 —— 空图（就是第 1 条）、两个点（第 2 条）、一对平行箭头（第 3 条）。所以「滤过」=「有限图都有余锥」= **所有信息都能在后面被接住**。
+
+**与有向集的关系**：有向集（偏序集 + 任意两元有上界）看成范畴就是滤过的；反过来，**任何滤过范畴都能换成一个共尾的有向集**（见「滤过范畴可换成有向集」）。所以「滤过余极限」与「沿有向集的余极限」是同一件事。
+
+⭐ **为什么处处要求它**：滤过余极限在 $\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$\mathrm{CondAb}$ 里都**正合**（与有限极限交换），这是 Grothendieck 的 **AB5** 公理，也是同调代数挑范畴时的关键条件。沿一般范畴取余极限没有这条好性质。
+
+⚠️ 与「链」区分：链是**全序**子集，比滤过强；滤过只要求「有共同上界」，任意两元之间不必可比。
+
+#### 滤过范畴可换成有向集　`prop.filtered-directed`
+*命题*　滤过 $\implies$ 存在共尾的有向集
+
+若 $I$ 是**滤过**范畴，则存在**有向集** $J$ 与函子 $u : J \to I$，使得对任何图 $D : I \to \mathcal{C}$：
+
+若 $\varinjlim_{J} D \circ u$ 存在，则 $\varinjlim_{I} D$ 存在，且 $\varinjlim_{J} D\circ u \cong \varinjlim_{I} D$。
+
+**构造**：取 $J$ 为「$I$ 中的有限图连同它选定的一个余锥」组成的集合
+
+
+
+$$J = \bigl\{\, (K,\ D : K \to I,\ i,\ \{\Phi_{k} : D(k) \to i\}_{k \in K}) \,\bigr\},$$
+
+
+
+按「$D'$ 包含 $D$、且存在相容的 $i \to i'$」排成偏序（滤过性保证任意两个元都有共同上界，所以这确实是个有向集）。令 $u : J \to I$ 把 $(K, D, i, \Phi)$ 送到 $i$。
+
+**只需验证 $u$ 共尾**：
+
+
+
+- **非空**：把 $i$ 自己看成一个单点范畴上的图，它当然有余锥，于是 $(\cdot, i, \emptyset) \in J$ 给出 $i \downarrow u$ 的一个对象。
+- **连通**：给定两个对象 $(j', f')$、$(j'', f'')$，由 $I$ 的滤过性可以把它们的两张有限图并起来、再找一个共同的余锥 $a$，于是 $(j', f') \leftarrow (a, f) \to (j'', f'')$ 把它俩连起来。∎
+
+
+
+⭐ **推论**：**滤过余极限 = 沿有向集的余极限**。所以关于「滤过余极限」的定理，只要对有向集这一种最简单的指标范畴证一遍，就自动对一切滤过范畴成立。
+
+原书把这条列为 **Proposition 1.4.2**。
+
 ### 星团：单满、子对象与像
 > 造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。
 
@@ -5902,6 +6050,73 @@ $$\bigl\{(Y, t) : Y \in \mathcal{C},\ t \in F(Y)\bigr\}$$
 这条把「**泛**」这个字一次说清：**泛 = 某个辅助范畴里的始对象（或终对象）**。于是「泛锥」「泛分解」「泛元素」其实是同一句套话的三次应用。
 
 例：$\mathbb{Z}$ 是环范畴的始对象，所以说它「在所有环里泛」；空图上的泛锥就是终对象；极限就是锥范畴的终对象。
+
+### 星团：范畴里的代数结构
+> 把「集合 + 运算 + 公理」搬到任意有有限积的范畴里：幺半群对象 → 群对象 → 阿贝尔群对象。⭐ $\mathrm{Ab}(\mathbf{Set})=\mathbf{Ab}$、$\mathrm{Ab}(\mathbf{Top})$ = 拓扑阿贝尔群、$\mathrm{Ab}(\mathrm{Cond})=\mathrm{CondAb}$ —— 代数那条线与凝聚态那条线在这里接上。
+
+#### 幺半群对象　`def.monoid-object`
+*定义*　幺半群对象（Monoid Object）
+
+设 $\mathcal{C}$ 是有**有限积**的范畴（也叫**笛卡尔范畴**），$1$ 是它的终对象。$\mathcal{C}$ 中的**幺半群对象**是一个对象 $G$ 连同一个**乘法**
+
+$$\mu : G \times G \longrightarrow G$$
+
+与一个**单位** $\varepsilon : 1 \to G$，使下面两个方块交换：
+
+$$\begin{array}{ccc} G\times G\times G & \xrightarrow{\;\mu \times \mathrm{id}\;} & G \times G \\[2pt] {\scriptstyle \mathrm{id}\times \mu}\big\downarrow & & \big\downarrow{\scriptstyle \mu} \\[2pt] G \times G & \xrightarrow[\;\mu\;]{} & G \end{array} \qquad \begin{array}{ccc} G & \xrightarrow{\;\varepsilon \times \mathrm{id}\;} & G \times G \\[2pt] {\scriptstyle \mathrm{id}\times \varepsilon}\big\downarrow & & \big\downarrow{\scriptstyle \mu} \\[2pt] G \times G & \xrightarrow[\;\mu\;]{} & G \end{array}$$
+
+⭐ **格式一模一样**：还是「对象 + 态射 + 公理」，只是**公理从等式换成了交换图** —— 「$a(bc) = (ab)c$」变成了「两个复合态射相等」。集合上的幺半群就是这个定义在 $\mathcal{C} = \mathbf{Set}$ 时的样子。
+
+**为什么要求有限积**：乘法要拿「两个自变量」说话，而范畴里「两个」就是积 $G \times G$；单位要拿「没有自变量」说话，那就是终对象 $1 \to G$。
+
+**态射**：两个幺半群对象之间的态射 $f : G \to G'$ 是使 $f \circ \mu = \mu' \circ (f\times f)$ 且 $f \circ \varepsilon = \varepsilon'$ 的态射。全体构成范畴 $\mathrm{Mon}(\mathcal{C})$。
+
+⚠️ 名字上容易和「$\mathcal{C}$ 上的预层 / 群层」混：这里说的是**范畴内部**的一个对象带结构（「内部」的意思），不是值在群里的函子。
+
+#### 群对象与阿贝尔群对象　`def.group-object`
+*定义*　群对象与阿贝尔群对象（Group Object）
+
+设 $G$ 是笛卡尔范畴 $\mathcal{C}$ 里的一个**幺半群对象**。若存在态射
+
+$$\iota : G \longrightarrow G$$
+
+使下方方块交换（$\iota$ 就是「取逆」），则称 $G$ 是 $\mathcal{C}$ 里的**群对象**：
+
+$$\begin{array}{ccc} G & \xrightarrow{\;(\iota,\ \mathrm{id})\;} & G \times G \\[2pt] {\scriptstyle (\mathrm{id},\ \iota)}\big\downarrow & & \big\downarrow{\scriptstyle \mu} \\[2pt] G \times G & \xrightarrow[\;\mu\;]{} & G \end{array}$$
+
+再若 $\mu \circ \tau = \mu$（$\tau : G \times G \to G \times G$ 是**交换因子**，交换两个分量），则称 $G$ 是**阿贝尔群对象**。
+
+记 $\mathrm{Gr}(\mathcal{C})$、$\mathrm{Ab}(\mathcal{C})$ 为 $\mathcal{C}$ 中群对象、阿贝尔群对象连同保结构态射构成的范畴。
+
+⭐ **同一套定义，换范畴就换出一整个世界**：
+
+
+
+- $\mathrm{Ab}(\mathbf{Set}) = \mathbf{Ab}$ —— 就是通常的阿贝尔群；
+- $\mathrm{Ab}(\mathbf{Top})$ = **拓扑阿贝尔群**（群运算连续）；
+- $\mathrm{Ab}(\mathbf{Manifold})$ = 阿贝尔 Lie 群；
+- **$\mathrm{Ab}(\mathrm{Cond}) = \mathrm{CondAb}$** —— 凝聚态阿贝尔群；
+- $\mathrm{Ab}(\widehat{\mathcal{C}})$ = 预层范畴里的阿贝尔群对象。
+
+
+
+⭐⭐ **所以「凝聚态阿贝尔群 = 凝聚态集范畴里的阿贝尔群对象」这句话不是新定义，只是这条定义代进 $\mathcal{C} = \mathrm{Cond}$。** 整个星图里「集合 + 运算 + 公理 $	o$ 群 $	o$ 阿贝尔群」那条线，到这一层就和凝聚态那条线接上了。
+
+⚠️ 群对象**不要求**范畴有极限（只用有限积），所以它比「在拓扑斯里做代数」适用范围更广。
+
+#### Ab(C) 的例子　`ex.ab-of-categories`
+*例*　$\mathrm{Ab}(-)$ 在几个范畴上的样子
+
+- $\mathrm{Ab}(\mathbf{Set}) = \mathbf{Ab}$；
+- $\mathrm{Ab}(\mathbf{Top})$ = **拓扑阿贝尔群**；
+- $\mathrm{Ab}(\mathbf{Manifold})$ = 阿贝尔 Lie 群；
+- $\mathrm{Ab}(\mathbf{Grp}) = \mathbf{Ab}$（群对象之间的运算是逐点的）；
+- $\mathrm{Ab}(\mathrm{Cond}) = \mathrm{CondAb}$；
+- $\mathrm{Ab}(\widehat{\mathcal{C}})$ = 预层范畴里的阿贝尔群对象 $\simeq$ 值在 $\mathbf{Ab}$ 的预层。
+
+⭐ 这张表最有用的一点是**反着读**：想研究拓扑阿贝尔群，就把 $\mathcal{C}$ 取成 $\mathbf{Top}$；想研究凝聚态阿贝尔群，就把 $\mathcal{C}$ 取成 $\mathrm{Cond}$。**同一个定义、同一套定理（核、余核、正合列……）直接搬**。
+
+⚠️ $\mathrm{Ab}(\mathbf{Grp}) = \mathbf{Ab}$ 这条最容易让人愣一下：群范畴里的群对象**恰好是**阿贝尔群（Eckmann–Hilton 论证）—— 「群」这个结构加在「群」这个范畴上时，会强制交换性。
 
 ### 星团：预层与米田
 > 造出「表示」这套语言：预层范畴是落点，米田引理说自然变换集与 $F(X)$ 一一对应，稠密性定理说每个预层都是可表示预层的余极限。
@@ -6060,6 +6275,34 @@ $$T \;\cong\; \varinjlim_{(X, s) \in \mathcal{C}_{T}} h_{X}$$
 一句话：**预层的性质按点检验**。$\widehat{\mathcal{C}}$ 里的一切都是逐点定义的，单满不例外。
 
 （$\Longleftarrow$）方向是显然的：逐点单射的族当然左可消。（$\Longrightarrow$）方向要用米田引理，见边上那条推导。
+
+#### 可表函子保所有极限　`prop.representable-preserves-limits`
+*命题*　可表函子保所有极限
+
+若 $F : \mathcal{C} \to \mathbf{Set}$ **可表**，即 $F \cong \operatorname{Hom}_{\mathcal{C}}(X, -)$，则 $F$ **保所有极限**：对任何图 $D : I \to \mathcal{C}$（只要 $\lim D$ 存在），
+
+$$\operatorname{Hom}_{\mathcal{C}}\bigl(X,\ \lim D\bigr) \;\cong\; \lim \operatorname{Hom}_{\mathcal{C}}\bigl(X,\ D(-)\bigr).$$
+
+**证明。** 先证 $h^{X} = \operatorname{Hom}(X, -)$ 保极限。取 $D : I \to \mathcal{C}$，链式：
+
+
+
+$$\operatorname{Hom}_{\mathcal{C}}\bigl(X,\ \lim D\bigr) \;\cong\; \operatorname{Hom}_{\mathcal{C}^{I}}\bigl(\underline{\{0\}},\ h^{X} \circ D\bigr) \;\cong\; \lim \bigl(h^{X} \circ D\bigr).$$
+
+
+
+第一式是**极限的定义**（$\lim D$ 表示锥函子：$\operatorname{Hom}(\Delta Y, D) \cong \operatorname{Hom}(Y, \lim D)$，取 $Y = X$）；第二式是「函子范畴里的极限逐点算」。这里 $\underline{\{0\}}$ 是取值恒为 $\{0\}$ 的**常函子**（在函子范畴 $\mathcal{C}^{I}$ 里它才是 $\operatorname{Hom}$ 的合法对象）。∎
+
+再由 $F \cong \operatorname{Hom}(X,-)$，同构的函子保的东西一样，$F$ 也保所有极限。
+
+**一批立刻的推论**：
+
+
+
+- **反变**可表函子 $\operatorname{Hom}(-, X)$ 把**余极限**变成**极限**（取对偶范畴即得）；
+- $\operatorname{Hom}(X, -)$ 保**有限**极限这一点，就是说 $X$ 与一切有限极限「相容」。
+
+说一个函子 **left exact**（左正合），指它保所有**有限**极限 —— 所以右正合就是保所有有限余极限，「正合」是两者都对。
 
 ### 星团：伴随与反射
 > 造出「两个方向之间的最佳翻译」：伴随 → 单位与余单位 → 保极限 → 伴随函子定理 → 反射子范畴 → Kan 延拓。
@@ -6551,6 +6794,30 @@ $$\text{次标准} \iff \text{可表示预层都是层} \iff X^{\sharp} = h_{X}\
 一个方向：次标准保证 $X = h_{X}$、$X_{i} = h_{X_{i}}$ 都在层范畴里，而 $\coprod_{i} h_{X_{i}}$ 本来就不交，所以自动是层。另一个方向：拿 $h_{X} = \coprod_{i} h_{X_{i}}$ 去逐条验注入性与「拉回是始对象」。
 
 含义：**标准拓扑恰好把 $\mathcal{C}$ 里成立的那部分余积性质原样保留下来**，不多也不少 —— 这就是「次标准」这个名字该有的分量。
+
+#### 覆盖筛的四条等价　`prop.sieve-covering-equivalent`
+*命题*　覆盖筛的等价刻画（$\widetilde{R} \simeq \underline{X}$）
+
+设 $\mathcal{C}$ 是 site，$X \in \mathcal{C}$，$R$ 是 $X$ 上的一个**筛**。则下列四条等价：
+
+1. $R \in J(X)$（即 $R$ 是 $X$ 上的**覆盖筛**）；
+2. $\widetilde{R} \simeq \underline{X}$；
+3. $\underline{X} \simeq \varinjlim_{Y \in \mathcal{C}/R} \underline{Y}$；
+4. $\coprod_{Y \in \mathcal{C}/R} \underline{Y} \longrightarrow \underline{X}$ 是**满态射**。
+
+记号：$\underline{X} := \widetilde{h_{X}}$ 是 $X$ 对应的**层**；$\mathcal{C}/R$ 是由「筛 $R$ 里的那些态射」组成的范畴（对象是 $f \in R(Y)$，态射是使 $\ast$ 交换的那些 $g$）。
+
+⭐ **读法**：第 1 条是「$R$ 被拓扑 $J$ 承认」，第 2、3、4 条都**只提到层**。所以这一条说的是：**「是不是覆盖」这件事可以由层来刻画，不必回头看 $J$。** 这正是「拓扑 $leftrightarrow$ 层范畴」那条对应能够一一对上的原因。
+
+**证明走法。** 合成 $R \hookrightarrow h_{X} \to \widetilde{h_{X}} = \underline{X}$ 唯一地延拓出 $u : \widetilde{R} \to \underline{X}$（层化是左伴随，层是余完备的）。
+
+
+
+- **$1 \implies 2$**：$R \in J(X)$ 时 $R \to \widetilde{R}$ 又延拓出 $v : \underline{X} = \widetilde{h_{X}} \to \widetilde{R}$；由延拓的唯一性（对 $\mathrm{id}_{R}$、对 $\mathrm{id}_{\underline{X}}$）得 $v \circ u = \mathrm{id}_{\widetilde{R}}$、$u \circ v = \mathrm{id}_{\underline{X}}$，故 $u$ 是同构。
+- **$2 \implies 1$**：设 $u$ 是同构。要把 $R$ 拼出一个 $J(X)$ 里的筛：由 $h_{X} \to \underline{X} \cong \widetilde{R} = \mathcal{H}(\mathcal{H}(R))$，可造出 $R' \in J(X)$ 与 $\varphi : R' \to \mathcal{H}(R)$。对 $f \in R'(Y)$，它的像落在 $\mathcal{H}(R)(Y)$ 里，而那里每个元素都来自某个 $S \to R$（$S \in J(Y)$），于是 $S \subseteq f^{-1}(R)$，即 $f^{-1}(R) \in J(Y)$。既然对一切 $f \in R'$ 都成立，由 $R'$ 是覆盖筛得 $R$ 也是覆盖筛。
+- **$3$、$4$** 与前两条的等价是练习。∎
+
+原书把这条列为 **Proposition 3.2.12**；紧跟着的推论 **Corollary 3.2.13** 是一族态射的版本：族 $(X_{i} \to X)$ 生成覆盖筛 $\iff \coprod_{i} X_{i} \to X$ 是满态射。
 
 ### 星团：拓扑斯
 > 造出「几何的代数替身」：预拓扑斯 → 预标准拓扑 → 生成元 → 拓扑斯 → Giraud 定理 → 拟紧拟分离 → 拓扑斯的态射。
@@ -13197,6 +13464,118 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 结论说的是「左伴随于」。
 
+#### 定义引用：「逗号范畴」→ 共尾函子　`def-dep.cofinal-comma`
+
+共尾性的定义就是**逗号范畴** $i \downarrow F$ 非空且连通。
+
+#### 定义引用：「连通范畴」→ 共尾函子　`def-dep.cofinal-connected`
+
+定义里的「连通」指的是**连通范畴**。
+
+#### 定义引用：「函子」→ 共尾函子　`def-dep.cofinal-functor`
+
+共尾说的是一个**函子**的性质。
+
+#### 定义引用：「函子」→ 连通范畴　`def-dep.connected-functor`
+
+锯齿上的每个箭头都是**函子**那个范畴里的态射。
+
+#### 定义引用：「极限」→ 共尾函子不改变余极限　`def-dep.cofinalcolim-colimit`
+
+结论说的是**余极限**同构。
+
+#### 定义引用：「共尾函子」→ 共尾函子不改变余极限　`def-dep.cofinalcolim-cofinal`
+
+前提是 $F$ **共尾**。
+
+#### 定义引用：「范畴」→ 滤过范畴　`def-dep.filtered-category`
+
+滤过性是**范畴**的一条性质。
+
+#### 定义引用：「交换图」→ 滤过范畴　`def-dep.filtered-diagram`
+
+「每个有限**图**都有余锥」说的是交换图。
+
+#### 定义引用：「滤过范畴」→ 滤过范畴可换成有向集　`def-dep.filtereddir-filtered`
+
+命题的输入是**滤过范畴**。
+
+#### 定义引用：「链」→ 滤过范畴可换成有向集　`def-dep.filtereddir-chain`
+
+有向集就是「偏序集 + 任意两元有上界」，用的是**链**那套序语言。
+
+#### 定义引用：「共尾函子」→ 滤过范畴可换成有向集　`def-dep.filtereddir-cofinal`
+
+证明的要点是验证 $u$ **共尾**。
+
+#### 定义引用：「极限」→ 可表函子保所有极限　`def-dep.replim-limit`
+
+命题说的是可表函子**保极限**。
+
+#### 定义引用：「表示函子」→ 可表函子保所有极限　`def-dep.replim-representable`
+
+前提是可表函子 $F \cong \operatorname{Hom}(X,-)$。
+
+#### 定义引用：「预层范畴」→ 可表函子保所有极限　`def-dep.replim-functorcat`
+
+证明里把锥函子搬到**函子范畴** $\mathcal{C}^{I}$ 里算。
+
+#### 定义引用：「积 / 余积」→ 幺半群对象　`def-dep.monoidobj-product`
+
+乘法 $\mu : G \times G \to G$ 用的是**积**。
+
+#### 定义引用：「终对象 / 始对象」→ 幺半群对象　`def-dep.monoidobj-terminal`
+
+单位 $\varepsilon : 1 \to G$ 里的 $1$ 是**终对象**。
+
+#### 定义引用：「幺半群对象」→ 群对象与阿贝尔群对象　`def-dep.groupobj-monoid`
+
+群对象是在**幺半群对象**上再加一条逆元。
+
+#### 定义引用：「积 / 余积」→ 群对象与阿贝尔群对象　`def-dep.groupobj-product`
+
+交换因子 $\tau$ 是**积**上的换位态射。
+
+#### 定义引用：「群」→ 群对象与阿贝尔群对象　`def-dep.groupobj-group`
+
+群对象是**群**的定义搬到任意笛卡尔范畴里。
+
+#### 定义引用：「群对象与阿贝尔群对象」→ Ab(C) 的例子　`def-dep.abex-groupobj`
+
+例子说的都是 $\mathrm{Ab}(\mathcal{C})$ 这条构造。
+
+#### 定义引用：「环」→ 环的局部化 W⁻¹R　`def-dep.ringloc-ring`
+
+局部化的是**交换环**。
+
+#### 定义引用：「局部化」→ 环的局部化 W⁻¹R　`def-dep.ringloc-localization`
+
+它就是范畴局部化在**单对象范畴**上的特例。
+
+#### 定义引用：「局部化」→ 局部化的 Hom 是滤过余极限　`def-dep.lochom-localization`
+
+命题算的是局部化范畴里的 $\operatorname{Hom}$。
+
+#### 定义引用：「分式演算下的局部化」→ 局部化的 Hom 是滤过余极限　`def-dep.lochom-fractions`
+
+公式只在**右分式演算**成立时才对，且给出的是**滤过**余极限。
+
+#### 定义引用：「筛」→ 覆盖筛的四条等价　`def-dep.sieveequiv-sieve`
+
+命题说的是 $X$ 上的一个**筛**。
+
+#### 定义引用：「Grothendieck 拓扑」→ 覆盖筛的四条等价　`def-dep.sieveequiv-topology`
+
+「$R \in J(X)$」里的 $J$ 是 **Grothendieck 拓扑**。
+
+#### 定义引用：「层」→ 覆盖筛的四条等价　`def-dep.sieveequiv-sheaf`
+
+第 2 至 4 条都只提到**层**与**层化**。
+
+#### 定义引用：「层化」→ 覆盖筛的四条等价　`def-dep.sieveequiv-sheafification`
+
+记号 $\widetilde{(-)}$ 是**层化**。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -13391,7 +13770,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **序数与超限 ↔ ZFC 公理系统**　2 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
 - **伴随与反射 ↔ 预层与米田**　2 条节点级连线
-- **伴随与反射 ↔ 图与极限**　11 条节点级连线
+- **伴随与反射 ↔ 图与极限**　12 条节点级连线
 - **伴随与反射 ↔ 函子与自然变换**　8 条节点级连线
 - **紧 Haus 与 Stone ↔ 度量空间**　4 条节点级连线
 - **紧 Haus 与 Stone ↔ 拓扑空间**　10 条节点级连线
@@ -13410,9 +13789,9 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **L^p 空间 ↔ 可测函数与收敛**　3 条节点级连线
 - **L^p 空间 ↔ 测度的构造**　4 条节点级连线
 - **单满、子对象与像 ↔ 预层与米田**　3 条节点级连线
-- **图与极限 ↔ 预层与米田**　3 条节点级连线
+- **图与极限 ↔ 预层与米田**　4 条节点级连线
 - **函子与自然变换 ↔ 预层与米田**　9 条节点级连线
-- **函子与自然变换 ↔ 图与极限**　3 条节点级连线
+- **函子与自然变换 ↔ 图与极限**　5 条节点级连线
 - **图与极限 ↔ 层与拓扑**　8 条节点级连线
 - **单满、子对象与像 ↔ 拓扑斯**　2 条节点级连线
 - **图与极限 ↔ 拓扑斯**　5 条节点级连线
@@ -13431,7 +13810,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **范畴与图 ↔ 集合的构造**　5 条节点级连线
 - **范畴与图 ↔ 关系与函数**　2 条节点级连线
 - **范畴与图 ↔ 函子与自然变换**　4 条节点级连线
-- **范畴与图 ↔ 图与极限**　2 条节点级连线
+- **范畴与图 ↔ 图与极限**　3 条节点级连线
 - **图与极限 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 集合的构造**　2 条节点级连线
 - **图与极限 ↔ 单满、子对象与像**　3 条节点级连线
@@ -13447,3 +13826,4 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **预层与米田 ↔ 阿贝尔层**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 阿贝尔层**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧生成空间与弱 Hausdorff**　4 条节点级连线
+- **范畴里的代数结构 ↔ 图与极限**　3 条节点级连线

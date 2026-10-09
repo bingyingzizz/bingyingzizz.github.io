@@ -20,6 +20,7 @@ $$\forall x, y \in C ( x \preceq y \vee  y \preceq x )$$
 - 被 `def.finchar` 有限特征 用
 - 被 `lem.zorn` 佐恩引理 用
 - 被 `thm.hausdorff` Hausdorff 极大原理 用
+- 被 `prop.filtered-directed` 滤过范畴可换成有向集 用
 
 refs: Kunen, Set Theory, I.11
 

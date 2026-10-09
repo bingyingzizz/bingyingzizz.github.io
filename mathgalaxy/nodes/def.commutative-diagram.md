@@ -20,5 +20,6 @@ $$\mathcal{C}^{I} := \operatorname{Hom}(I, \mathcal{C})$$
 - 被 `def.simplicial` 单纯对象 用
 - 被 `def.limit` 极限 用
 - 被 `def.cochain-complex` 上链复形 用
+- 被 `def.filtered-category` 滤过范畴 用
 
 > 说明见 `notes/def.commutative-diagram.md`

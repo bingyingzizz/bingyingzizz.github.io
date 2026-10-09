@@ -23,3 +23,5 @@ layer 6 · 定义 · 代数结构 · 抽象代数
 - 被 `def.module` 模 用
 
 > 说明见 `notes/def.group.md`
+
+- …另有出边，续页见 `nodes/def.group.2.md`

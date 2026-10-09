@@ -12,4 +12,7 @@ $$\operatorname{Hom}_{\mathcal{C}}(X, \mathbf{1}_{\mathcal{C}}) = \{*\}, \qquad 
 - `def.empty` 空集 ∅：用到了定义 空集 ∅　proofs/def-dep.empty-final.md
 - `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-final.md
 
+## 它能推出什么 / 谁在用它
+- 被 `def.monoid-object` 幺半群对象 用
+
 > 说明见 `notes/def.final-initial.md`

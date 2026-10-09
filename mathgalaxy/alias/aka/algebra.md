@@ -29,4 +29,4 @@
 
 - 模 | module | 模同态 | A-Mod → def.module
 
-见 `../../alias.md`。
+> 续见 alias/aka/algebra.2.md

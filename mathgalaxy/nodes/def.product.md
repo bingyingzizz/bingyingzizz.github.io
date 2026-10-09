@@ -13,5 +13,7 @@ $$\operatorname{Hom}_{\mathcal{C}}\Bigl(Y, \prod_{i} X_i\Bigr) \;\cong\; \prod_{
 ## 它能推出什么 / 谁在用它
 - 被 `def.ab-axioms` Grothendieck 的 AB 公理 用
 - 被 `def.internal-hom` 内 Hom 用
+- 被 `def.monoid-object` 幺半群对象 用
+- 被 `def.group-object` 群对象与阿贝尔群对象 用
 
 > 说明见 `notes/def.product.md`

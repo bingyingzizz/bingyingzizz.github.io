@@ -15,4 +15,7 @@ $$\begin{array}{ccc} Z & \xrightarrow{\;g\;} & Y \\[2pt] {\scriptstyle v}\big\do
 - `def.localization` 局部化：用到了定义 局部化　proofs/def-dep.fractions-localization.md
 - `def.mono` 单态射 / 满态射：用到了定义 单态射 / 满态射　proofs/def-dep.fractions-mono.md
 
+## 它能推出什么 / 谁在用它
+- 被 `prop.localization-hom-colim` 局部化的 Hom 是滤过余极限 用
+
 > 说明见 `notes/prop.calculus-of-fractions.md`

@@ -12,3 +12,4 @@
 - 被 `def.condensed-set` 凝聚态集 用
 - 被 `def.condensed-abelian-group` 凝聚态阿贝尔群 用
 - 被 `def.abelian-sheaf` 阿贝尔层 用
+- 被 `prop.sieve-covering-equivalent` 覆盖筛的四条等价 用

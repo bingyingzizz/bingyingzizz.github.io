@@ -16,6 +16,7 @@ layer 7 · 定义 · 代数结构 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - 被 `def.ideal` 理想 用
 - 被 `def.module` 模 用
+- 被 `prop.ring-localization` 环的局部化 W⁻¹R 用
 
 refs: Lang, Algebra, Ch. II；Dummit & Foote, Abstract Algebra, §7.1
 

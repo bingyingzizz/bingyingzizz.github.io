@@ -17,4 +17,10 @@
 
 - Freyd-Mitchell 是什么 → thm.freyd-mitchell def.abelian-category def.module
 
+- 什么是群对象 → def.group-object def.monoid-object ex.ab-of-categories
+
+- 拓扑阿贝尔群是怎么定义的 → ex.ab-of-categories def.group-object def.topo-ab-group
+
+- 环的局部化是什么 → prop.ring-localization def.localization prop.calculus-of-fractions
+
 见 `../alias.md`。

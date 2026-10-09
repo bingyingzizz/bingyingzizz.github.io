@@ -12,5 +12,6 @@ $$\widehat{\mathcal{C}} := \operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.abelian-sheaf` 阿贝尔层 用
+- 被 `prop.representable-preserves-limits` 可表函子保所有极限 用
 
 > 说明见 `notes/def.presheaf-cat.md`

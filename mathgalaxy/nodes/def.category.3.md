@@ -11,3 +11,4 @@
 - 被 `def.pretopology` 预拓扑 用
 - 被 `def.cochain-complex` 上链复形 用
 - 被 `def.homotopy-category` 同伦范畴 用
+- 被 `def.filtered-category` 滤过范畴 用

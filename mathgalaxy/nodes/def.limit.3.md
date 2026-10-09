@@ -21,3 +21,6 @@
 - 被 `def.topos-morphism` 拓扑斯的态射 用
 - 被 `def.compactly-generated` 紧生成空间 用
 - 被 `def.ab-axioms` Grothendieck 的 AB 公理 用
+- 被 `thm.cofinal-colimit` 共尾函子不改变余极限 用
+
+> 续见 `nodes/def.limit.4.md`
