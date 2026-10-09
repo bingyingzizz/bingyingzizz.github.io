@@ -8,3 +8,4 @@
 - 被 `prop.sieve-covering-equivalent` 覆盖筛的四条等价 用
 - 被 `def.topologically-generating` 拓扑生成集 用
 - 被 `def.induced-topology` 诱导拓扑 用
+- 被 `prop.cech-as-colim` Čech 上同调是沿覆盖筛的余极限 用

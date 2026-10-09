@@ -7,4 +7,4 @@
 
 对偶地：有足够多投射时 $K^{-}(\mathcal{P}) \simeq D^{-}(\mathcal{A})$。
 
-📌 原书 **Theorem 7.2.6**。
+📌  **Theorem 7.2.6**。

@@ -12,4 +12,6 @@ $$\lim D = \inf D \;(\text{下确界}), \qquad \varinjlim D = \sup D \;(\text{�
 - `def.limit` 极限：用到了定义 极限　proofs/def-dep.posetlim-limit.md
 - `def.poset` 偏序集：用到了定义 偏序集　proofs/def-dep.posetlim-poset.md
 
+refs: Le Stum, Exercise 1.30
+
 > 说明见 `notes/prop.poset-limit-join.md`

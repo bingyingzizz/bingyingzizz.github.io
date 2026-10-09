@@ -11,4 +11,6 @@ $$P \twoheadrightarrow X.$$
 ## 为什么成立（入边，证明在 proofs/）
 - `def.projective-object` 投射 / 内射对象：用到了定义 投射 / 内射对象　proofs/def-dep.enoughproj-projective.md
 
+refs: Le Stum, Definition 1.4.8
+
 > 说明见 `notes/def.enough-projectives.md`

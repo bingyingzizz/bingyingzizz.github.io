@@ -11,4 +11,6 @@ layer 14 · 命题 · 图与极限 · 范畴论
 - `def.chain` 链：用到了定义 链　proofs/def-dep.filtereddir-chain.md
 - `def.cofinal-functor` 共尾函子：用到了定义 共尾函子　proofs/def-dep.filtereddir-cofinal.md
 
+refs: Le Stum, Proposition 1.4.2
+
 > 说明见 `notes/prop.filtered-directed.md`

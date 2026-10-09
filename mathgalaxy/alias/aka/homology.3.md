@@ -3,20 +3,22 @@
 
 - Grothendieck 谱序列 | Corollary 7.2.13 | Cor 7.2.13 | Corollary 7.2.21 → cor.grothendieck-spectral
 
-- Grothendieck 范畴 | Grothendieck category | AB5 → def.grothendieck-category
+- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 → def.sheaf-cohomology
 
-- 取值在范畴里的层 | sheaf with values | presheaf with values | 一般值的层 → def.presheaf-valued
+- Čech 上同调 | Cech 上同调 | Cech cohomology | Definition 7.3.5 | Def 7.3.5 → def.cech-cohomology
 
-- 阿贝尔层 | abelian sheaf | 阿贝尔群层 | sheaf of abelian groups | Ab(C) | 层上的阿贝尔群 → def.abelian-sheaf
+- Čech 上同调是余极限 | Exercise 7.46 → prop.cech-as-colim
 
-- 拓扑斯上的阿贝尔群 | Ab(T) 是 Grothendieck 范畴 → thm.topos-abelian-grothendieck
+- Cartan-Leray | Cartan–Leray 谱序列 | Theorem 7.3.6 | Thm 7.3.6 → thm.cartan-leray
 
-- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom → def.internal-hom
+- 无环层 | acyclic sheaf | Definition 7.3.9 | Def 7.3.9 → def.acyclic-sheaf
 
-- 阿贝尔层的张量积 | 封闭对称幺半 | closed symmetric monoidal | Tensor | internal hom | 封闭张量结构 → def.tensor-abelian-sheaf
+- 无环等价于 Cech 为零 | Proposition 7.3.10 | Prop 7.3.10 → prop.acyclic-iff-cech
 
-- 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
+- 紧 Hausdorff 上 Cech 就是上同调 | Proposition 7.3.11 | Prop 7.3.11 → prop.chaus-cech-eq-h
 
-- Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
+- 滤过极限的上同调 | Proposition 7.3.12 | Prop 7.3.12 → prop.filtered-limit-cohomology
+
+- Stone 空间上同调为零 | Exercise 7.50 → prop.stone-acyclic
 
 > 续见 alias/aka/homology.4.md

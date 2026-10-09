@@ -2,13 +2,13 @@
  "meta": {
   "name": "数学星图 MathGalaxy",
   "schema": "mathgalaxy/v1",
-  "generated": "2026-10-09T07:07:59.558Z",
+  "generated": "2026-10-09T12:05:58.026Z",
   "counts": {
    "regions": 9,
-   "clusters": 42,
-   "nodes": 481,
-   "edges": 1015,
-   "strong": 1006,
+   "clusters": 43,
+   "nodes": 492,
+   "edges": 1034,
+   "strong": 1025,
    "weak": 9
   },
   "readingGuide": {
@@ -63,7 +63,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 70
+   "nodeCount": 74
   },
   {
    "id": "algebra",
@@ -87,7 +87,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 122
+   "nodeCount": 125
   },
   {
    "id": "homology",
@@ -95,7 +95,7 @@
    "en": "Homological Algebra",
    "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
    "color": "#C89A2B",
-   "nodeCount": 48
+   "nodeCount": 59
   },
   {
    "id": "condensed",
@@ -899,6 +899,26 @@
     "thm.filtered-complex-spectral",
     "def.bicomplex",
     "cor.grothendieck-spectral"
+   ]
+  },
+  {
+   "id": "hom.sheafcoh",
+   "name": "层上同调",
+   "parent": "homology",
+   "desc": "把导出函子开到层上：$H^{n}(X, M) = R^{n}\\Gamma(X, M)$ → Čech 上同调（便宜的算法）→ Cartan–Leray 谱序列把它们接起来 → 无环层 → 拓扑斯态射的导出函子。",
+   "nodeCount": 11,
+   "nodes": [
+    "def.sheaf-cohomology",
+    "def.cech-cohomology",
+    "prop.cech-as-colim",
+    "thm.cartan-leray",
+    "def.acyclic-sheaf",
+    "prop.acyclic-iff-cech",
+    "prop.chaus-cech-eq-h",
+    "prop.filtered-limit-cohomology",
+    "prop.stone-acyclic",
+    "prop.topos-morphism-derived",
+    "cor.homotopy-invariant-cohomology"
    ]
   },
   {
@@ -9180,7 +9200,7 @@
     "乘积"
    ],
    "statement": "设 $q : X \\to Y$ 是**商映射**，$Z$ 是**局部紧 Hausdorff** 空间。则\n\n$$q \\times \\mathrm{id}_{Z} : X \\times Z \\longrightarrow Y \\times Z$$\n\n也是商映射。",
-   "notes": "⭐ **这是「紧生成空间对积封闭」那条的引擎**，也是搜「商映射」「局部紧」时该落到的地方。\n\n**证明的走法（逆映射连续法）。** 记 $W := (q \\times \\mathrm{id}_{Z})^{-1}(U)$，要证 $W$ 开。取一点 $(x, z) \\in W$，记 $y = q(x)$。因为 $U$ 在 $Y \\times Z$ 中开，可以挑出基本开集\n\n\n\n$$V \\times K \\;\\subseteq\\; U, \\qquad y \\in V,\\;\\; z \\in K,$$\n\n\n\n其中 $V$ 开、$K$ 是 $z$ 的**紧邻域**（局部紧 Hausdorff $\\implies$ 每点有紧邻域基，可以要求 $K$ 落在任意给定的邻域里）。由 $q$ 是商映射，$q^{-1}(V)$ 是 $X$ 中的开集，于是\n\n\n\n$$q^{-1}(V) \\times K \\;\\subseteq\\; W$$\n\n\n\n是 $(x, z)$ 的一个开邻域 —— 所以 $(x, z)$ 是 $W$ 的内点，$W$ 开。∎\n\n⚠️ **局部紧这个条件不能省。** 一般情形下「商映射乘 id」不是商映射：取 $q$ 是某条坏商、$Z$ 是一个既不局部紧又不紧生成的空间，乘积的商拓扑会严格细于商空间应有的拓扑。\n\n记法：有的书上把这条写成「$Z$ 局部紧 Hausdorff $\\implies$ 函子 $- \\times Z$ 保商映射」。",
+   "notes": "⭐ **这是「紧生成空间对积封闭」那条的引擎**，也是搜「商映射」「局部紧」时该落到的地方。\n\n**证明的走法（逆映射连续法）。** 记 $W := (q \\times \\mathrm{id}_{Z})^{-1}(U)$，要证 $W$ 开。取一点 $(x, z) \\in W$，记 $y = q(x)$。因为 $U$ 在 $Y \\times Z$ 中开，可以挑出基本开集\n\n\n\n$$V \\times K \\;\\subseteq\\; U, \\qquad y \\in V,\\;\\; z \\in K,$$\n\n\n\n其中 $V$ 开、$K$ 是 $z$ 的**紧邻域**（局部紧 Hausdorff $\\implies$ 每点有紧邻域基，可以要求 $K$ 落在任意给定的邻域里）。由 $q$ 是商映射，$q^{-1}(V)$ 是 $X$ 中的开集，于是\n\n\n\n$$q^{-1}(V) \\times K \\;\\subseteq\\; W$$\n\n\n\n是 $(x, z)$ 的一个开邻域 —— 所以 $(x, z)$ 是 $W$ 的内点，$W$ 开。∎\n\n⚠️ **局部紧这个条件不能省。** 一般情形下「商映射乘 id」不是商映射：取 $q$ 是某条坏商、$Z$ 是一个既不局部紧又不紧生成的空间，乘积的商拓扑会严格细于商空间应有的拓扑。\n\n记法：有的把这条写成「$Z$ 局部紧 Hausdorff $\\implies$ 函子 $- \\times Z$ 保商映射」。",
    "refs": []
   },
   {
@@ -9688,7 +9708,7 @@
     "紧开拓扑"
    ],
    "statement": "**拓扑阿贝尔群** $(M, +, \\tau)$ 是一个**阿贝尔群** $M$ 连带一个拓扑 $\\tau$，使运算连续：\n\n$$+ : M \\times M \\longrightarrow M, \\qquad - : M \\longrightarrow M.$$\n\n两个拓扑阿贝尔群之间的**连续同态**记作\n\n$$C_{\\mathbb{Z}}(M, N) \\;\\subseteq\\; C(M, N),$$\n\n右边带**紧开拓扑**，左边取**子空间拓扑**。",
-   "notes": "⭐ **为什么用 $C_{\\mathbb{Z}}$ 这个记号**：$\\mathbb{Z}$ 提醒你这些是 $\\mathbb{Z}$-模（也就是阿贝尔群）的同态，不是随便的连续映射。\n\n**与内部 Hom 的关系**：$M$ **紧生成**时 $C_{\\mathbb{Z}}(M, N) = \\operatorname{Hom}_{\\mathbb{Z}}(M, N)$ —— 见下一条命题。（这是「测试够了」的又一个红利。）\n\n⚠️ **两个容易掉进去的坑**（原书专门点出来）：\n\n\n\n- $\\underline{M} \\mapsto M$ 那条通道**没有明显的伴随**，因为函子 $X \\mapsto X(\\bullet)$（取底拓扑空间）**不保积**；\n- 就算 $M$ 是拓扑阿贝尔群，$kM$ **一般也不是**拓扑阿贝尔群 —— 因为紧生成空间对（拓扑空间的）积不封闭。",
+   "notes": "⭐ **为什么用 $C_{\\mathbb{Z}}$ 这个记号**：$\\mathbb{Z}$ 提醒你这些是 $\\mathbb{Z}$-模（也就是阿贝尔群）的同态，不是随便的连续映射。\n\n**与内部 Hom 的关系**：$M$ **紧生成**时 $C_{\\mathbb{Z}}(M, N) = \\operatorname{Hom}_{\\mathbb{Z}}(M, N)$ —— 见下一条命题。（这是「测试够了」的又一个红利。）\n\n⚠️ **两个容易掉进去的坑**（专门点出来）：\n\n\n\n- $\\underline{M} \\mapsto M$ 那条通道**没有明显的伴随**，因为函子 $X \\mapsto X(\\bullet)$（取底拓扑空间）**不保积**；\n- 就算 $M$ 是拓扑阿贝尔群，$kM$ **一般也不是**拓扑阿贝尔群 —— 因为紧生成空间对（拓扑空间的）积不封闭。",
    "refs": []
   },
   {
@@ -9949,7 +9969,7 @@
     "余极限"
    ],
    "statement": "设 $F : J \\to I$ 是函子。对 $i \\in I$，记 $i \\downarrow F$ 为逗号范畴，它的对象是 $\\{\\, f : i \\to F(j) \\,\\}$（$j \\in J$）。\n\n称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \\in I$：\n\n$$i \\downarrow F \\quad \\text{非空，且连通。}$$",
-   "notes": "⭐ **直观**：$F$ 的像在 $I$ 里「到处都有、而且没有被隔开」。非空 = 每个 $i$ 都有一条路走到 $F$ 的像里；连通 = 不同的走法之间能互相转换。**满足这两条，$J$ 就在 $I$ 里「铺得足够满」**，沿着它算余极限与沿着整个 $I$ 算是一回事（见下一条）。\n\n**对偶**：把 $i \\downarrow F$ 换成**下**逗号范畴 $F \\downarrow i$（对象是 $\\{\\, f : F(j) \\to i \\,\\}$）得到的条件叫 **coinitial**，它保的是**极限**。\n\n⚠️ **名字很乱，看定义别看名字**：不同的书上 cofinal / final / right cofinal / left cofinal 指的可能是同一个东西，也可能方向相反。本图统一按上面这条定义（用 $i \\downarrow F$）。\n\n**例子**：$J \\to \\mathbf{1}$ 共尾 $\\iff$ $J$ 连通；有向集沿 $\\le$ 的含入 $\\mathbb{N} \\to \\mathbb{Z}$ 是共尾的；$\\mathcal{C}$ 到它的反射子范畴的含入一般**不是**共尾的（方向反了就看 coinitial）。",
+   "notes": "⭐ **直观**：$F$ 的像在 $I$ 里「到处都有、而且没有被隔开」。非空 = 每个 $i$ 都有一条路走到 $F$ 的像里；连通 = 不同的走法之间能互相转换。**满足这两条，$J$ 就在 $I$ 里「铺得足够满」**，沿着它算余极限与沿着整个 $I$ 算是一回事（见下一条）。\n\n**对偶**：把 $i \\downarrow F$ 换成**下**逗号范畴 $F \\downarrow i$（对象是 $\\{\\, f : F(j) \\to i \\,\\}$）得到的条件叫 **coinitial**，它保的是**极限**。\n\n**例子**：$J \\to \\mathbf{1}$ 共尾 $\\iff$ $J$ 连通；有向集沿 $\\le$ 的含入 $\\mathbb{N} \\to \\mathbb{Z}$ 是共尾的；$\\mathcal{C}$ 到它的反射子范畴的含入一般**不是**共尾的（方向反了就看 coinitial）。",
    "refs": []
   },
   {
@@ -10014,8 +10034,10 @@
     "余极限"
    ],
    "statement": "若 $I$ 是**滤过**范畴，则存在**有向集** $J$ 与函子 $u : J \\to I$，使得对任何图 $D : I \\to \\mathcal{C}$：\n\n若 $\\varinjlim_{J} D \\circ u$ 存在，则 $\\varinjlim_{I} D$ 存在，且 $\\varinjlim_{J} D\\circ u \\cong \\varinjlim_{I} D$。",
-   "notes": "**构造**：取 $J$ 为「$I$ 中的有限图连同它选定的一个余锥」组成的集合\n\n\n\n$$J = \\bigl\\{\\, (K,\\ D : K \\to I,\\ i,\\ \\{\\Phi_{k} : D(k) \\to i\\}_{k \\in K}) \\,\\bigr\\},$$\n\n\n\n按「$D'$ 包含 $D$、且存在相容的 $i \\to i'$」排成偏序（滤过性保证任意两个元都有共同上界，所以这确实是个有向集）。令 $u : J \\to I$ 把 $(K, D, i, \\Phi)$ 送到 $i$。\n\n**只需验证 $u$ 共尾**：\n\n\n\n- **非空**：把 $i$ 自己看成一个单点范畴上的图，它当然有余锥，于是 $(\\cdot, i, \\emptyset) \\in J$ 给出 $i \\downarrow u$ 的一个对象。\n- **连通**：给定两个对象 $(j', f')$、$(j'', f'')$，由 $I$ 的滤过性可以把它们的两张有限图并起来、再找一个共同的余锥 $a$，于是 $(j', f') \\leftarrow (a, f) \\to (j'', f'')$ 把它俩连起来。∎\n\n\n\n⭐ **推论**：**滤过余极限 = 沿有向集的余极限**。所以关于「滤过余极限」的定理，只要对有向集这一种最简单的指标范畴证一遍，就自动对一切滤过范畴成立。\n\n原书把这条列为 **Proposition 1.4.2**。",
-   "refs": []
+   "notes": "**构造**：取 $J$ 为「$I$ 中的有限图连同它选定的一个余锥」组成的集合\n\n\n\n$$J = \\bigl\\{\\, (K,\\ D : K \\to I,\\ i,\\ \\{\\Phi_{k} : D(k) \\to i\\}_{k \\in K}) \\,\\bigr\\},$$\n\n\n\n按「$D'$ 包含 $D$、且存在相容的 $i \\to i'$」排成偏序（滤过性保证任意两个元都有共同上界，所以这确实是个有向集）。令 $u : J \\to I$ 把 $(K, D, i, \\Phi)$ 送到 $i$。\n\n**只需验证 $u$ 共尾**：\n\n\n\n- **非空**：把 $i$ 自己看成一个单点范畴上的图，它当然有余锥，于是 $(\\cdot, i, \\emptyset) \\in J$ 给出 $i \\downarrow u$ 的一个对象。\n- **连通**：给定两个对象 $(j', f')$、$(j'', f'')$，由 $I$ 的滤过性可以把它们的两张有限图并起来、再找一个共同的余锥 $a$，于是 $(j', f') \\leftarrow (a, f) \\to (j'', f'')$ 把它俩连起来。∎\n\n\n\n⭐ **推论**：**滤过余极限 = 沿有向集的余极限**。所以关于「滤过余极限」的定理，只要对有向集这一种最简单的指标范畴证一遍，就自动对一切滤过范畴成立。",
+   "refs": [
+    "Le Stum, Proposition 1.4.2"
+   ]
   },
   {
    "id": "prop.representable-preserves-limits",
@@ -10170,8 +10192,11 @@
     "层化"
    ],
    "statement": "设 $\\mathcal{C}$ 是 site，$X \\in \\mathcal{C}$，$R$ 是 $X$ 上的一个**筛**。则下列四条等价：\n\n1. $R \\in J(X)$（即 $R$ 是 $X$ 上的**覆盖筛**）；\n2. $\\widetilde{R} \\simeq \\underline{X}$；\n3. $\\underline{X} \\simeq \\varinjlim_{Y \\in \\mathcal{C}/R} \\underline{Y}$；\n4. $\\coprod_{Y \\in \\mathcal{C}/R} \\underline{Y} \\longrightarrow \\underline{X}$ 是**满态射**。",
-   "notes": "记号：$\\underline{X} := \\widetilde{h_{X}}$ 是 $X$ 对应的**层**；$\\mathcal{C}/R$ 是由「筛 $R$ 里的那些态射」组成的范畴（对象是 $f \\in R(Y)$，态射是使 $\\ast$ 交换的那些 $g$）。\n\n⭐ **读法**：第 1 条是「$R$ 被拓扑 $J$ 承认」，第 2、3、4 条都**只提到层**。所以这一条说的是：**「是不是覆盖」这件事可以由层来刻画，不必回头看 $J$。** 这正是「拓扑 $leftrightarrow$ 层范畴」那条对应能够一一对上的原因。\n\n**证明走法。** 合成 $R \\hookrightarrow h_{X} \\to \\widetilde{h_{X}} = \\underline{X}$ 唯一地延拓出 $u : \\widetilde{R} \\to \\underline{X}$（层化是左伴随，层是余完备的）。\n\n\n\n- **$1 \\implies 2$**：$R \\in J(X)$ 时 $R \\to \\widetilde{R}$ 又延拓出 $v : \\underline{X} = \\widetilde{h_{X}} \\to \\widetilde{R}$；由延拓的唯一性（对 $\\mathrm{id}_{R}$、对 $\\mathrm{id}_{\\underline{X}}$）得 $v \\circ u = \\mathrm{id}_{\\widetilde{R}}$、$u \\circ v = \\mathrm{id}_{\\underline{X}}$，故 $u$ 是同构。\n- **$2 \\implies 1$**：设 $u$ 是同构。要把 $R$ 拼出一个 $J(X)$ 里的筛：由 $h_{X} \\to \\underline{X} \\cong \\widetilde{R} = \\mathcal{H}(\\mathcal{H}(R))$，可造出 $R' \\in J(X)$ 与 $\\varphi : R' \\to \\mathcal{H}(R)$。对 $f \\in R'(Y)$，它的像落在 $\\mathcal{H}(R)(Y)$ 里，而那里每个元素都来自某个 $S \\to R$（$S \\in J(Y)$），于是 $S \\subseteq f^{-1}(R)$，即 $f^{-1}(R) \\in J(Y)$。既然对一切 $f \\in R'$ 都成立，由 $R'$ 是覆盖筛得 $R$ 也是覆盖筛。\n- **$3$、$4$** 与前两条的等价是练习。∎\n\n原书把这条列为 **Proposition 3.2.12**；紧跟着的推论 **Corollary 3.2.13** 是一族态射的版本：族 $(X_{i} \\to X)$ 生成覆盖筛 $\\iff \\coprod_{i} X_{i} \\to X$ 是满态射。",
-   "refs": []
+   "notes": "记号：$\\underline{X} := \\widetilde{h_{X}}$ 是 $X$ 对应的**层**；$\\mathcal{C}/R$ 是由「筛 $R$ 里的那些态射」组成的范畴（对象是 $f \\in R(Y)$，态射是使 $\\ast$ 交换的那些 $g$）。\n\n⭐ **读法**：第 1 条是「$R$ 被拓扑 $J$ 承认」，第 2、3、4 条都**只提到层**。所以这一条说的是：**「是不是覆盖」这件事可以由层来刻画，不必回头看 $J$。** 这正是「拓扑 $leftrightarrow$ 层范畴」那条对应能够一一对上的原因。\n\n**证明走法。** 合成 $R \\hookrightarrow h_{X} \\to \\widetilde{h_{X}} = \\underline{X}$ 唯一地延拓出 $u : \\widetilde{R} \\to \\underline{X}$（层化是左伴随，层是余完备的）。\n\n\n\n- **$1 \\implies 2$**：$R \\in J(X)$ 时 $R \\to \\widetilde{R}$ 又由**层化的粘合公理**唯一延拓出 $v : \\underline{X} = \\widetilde{h_{X}} \\to \\widetilde{R}$；把 $v \\circ u$ 与 $u \\circ v$ 分别与 $R \\to \\widetilde{R}$、$h_{X} \\to \\underline{X}$ 比较，由延拓的**唯一性**它们分别是 $\\mathrm{id}_{\\widetilde{R}}$ 与 $\\mathrm{id}_{\\underline{X}}$，故 $u$ 是同构。\n- **$2 \\implies 1$**：设 $u$ 是同构。由**传递性公理**，只要造出一个 $R' \\in J(X)$ 使每个 $f \\in R'(Y)$ 都有 $f^{-1}(R) \\in J(Y)$ 就够了。由 2 有 $h_{X} \\to \\underline{X} \\cong \\widetilde{R} = \\mathcal{H}(\\mathcal{H}(R))$，于是可造出 $R' \\in J(X)$ 与 $\\varphi : R' \\to \\mathcal{H}(R)$。对 $f \\in R'(Y)$，它在 $\\mathcal{H}(R)(Y)$ 里的像来自某个 $S \\to R$（$S \\in J(Y)$）—— 沿 $h_{Y} \\to R' \\to \\mathcal{H}(R)$ 走一圈可知 $S \\subseteq f^{-1}(R)$，于是 $f^{-1}(R) \\in J(Y)$。再用一次传递性，得 $R \\in J(X)$。\n- **$2 \\iff 3$**：由「层化是左 Kan 延拓」（$\\sharp T = \\varinjlim_{X \\in \\mathcal{C}/T} \\underline{X}$）取 $T = R$，得 $\\widetilde{R} = \\sharp R = \\varinjlim_{Y \\in \\mathcal{C}/R} \\underline{Y}$。于是「$\\widetilde{R} = \\underline{X}$」与「$\\underline{X} = \\varinjlim_{Y \\in \\mathcal{C}/R} \\underline{Y}$」是同一句话。\n- **$3 \\implies 4$**：余极限是余积的**商** —— 自然映射 $\\coprod_{Y \\in \\mathcal{C}/R} \\underline{Y} \\to \\varinjlim_{Y} \\underline{Y}$ 总是满态射；3 成立时右端就是 $\\underline{X}$。\n- **$4 \\iff 2$**：靠一个恒等式。先看**预层**层面：$\\coprod_{Y \\in \\mathcal{C}/R} h_{Y} \\to h_{X}$ 的**像恰好是 $R$** —— 它在 $Z$ 处的像是「能穿过某个 $Y \\to X \\in R$ 的那些 $Z \\to X$」，而这正是筛的定义。再对两边作用 $\\sharp$：**层化是正合的**（保有限极限），正合函子保像，于是\n\n$$\\widetilde{R} \\;=\\; \\sharp\\Bigl(\\operatorname{im}\\bigl(\\coprod_{Y \\in \\mathcal{C}/R} h_{Y} \\to h_{X}\\bigr)\\Bigr) \\;=\\; \\operatorname{im}\\Bigl(\\coprod_{Y \\in \\mathcal{C}/R} \\underline{Y} \\to \\underline{X}\\Bigr).$$\n\n于是 4（那个映射是满态射）$\\iff$ 那个像是整个 $\\underline{X}$ $\\iff$ $\\widetilde{R} = \\underline{X}$ $\\iff$ 2。∎\n\n**一族态射的版本**（紧跟着的推论）：族 $(X_{i} \\to X)_{i \\in I}$ 生成覆盖筛 $\\iff \\coprod_{i \\in I} X_{i} \\to X$ 是满态射。",
+   "refs": [
+    "Le Stum, Proposition 3.2.12",
+    "Le Stum, Exercise 3.26"
+   ]
   },
   {
    "id": "prop.limit-construction",
@@ -10321,7 +10346,7 @@
     "形式余极限"
    ],
    "statement": "范畴 $\\mathcal{C}$ 的一个 **Ind-对象**「$\\varinjlim_{i \\in I} X_{i}$」是一个**滤过图** $(X_{i})_{i \\in I}$。它们组成范畴 $\\operatorname{Ind}(\\mathcal{C})$，其 Hom 为\n\n$$\\operatorname{Hom}_{\\operatorname{Ind}(\\mathcal{C})}\\Bigl(\\text{“}\\varinjlim_{i \\in I} X_{i}\\text{”},\\ \\text{“}\\varinjlim_{j \\in J} Y_{j}\\text{”}\\Bigr) \\;=\\; \\varinjlim_{j \\in J}\\ \\varprojlim_{i \\in I}\\ \\operatorname{Hom}_{\\mathcal{C}}(X_{i}, Y_{j}).$$",
-   "notes": "**读法**：引号里的 $\\varinjlim X_{i}$ 是**形式记法** —— 对象是「滤过图」本身，不是它的余极限（余极限可能压根不存在）。\n\n**公式为什么长这样**：要给两个形式余极限之间的映射，先固定 $j$，对每个 $i$ 给一条 $X_{i} \\to Y_{j}$ 且与 $i$ 的变动相容（这就是 $\\varprojlim_{i}$），再对 $j$ 取滤过余极限（$Y_{j}$ 越往后越大，晚给的映射可以「补」上早先的）。\n\n⭐ **$\\operatorname{Ind}(\\mathcal{C})$ 是「按滤过余极限把 $\\mathcal{C}$ 补全」得到的范畴。** 原书 Prop 5.2.6 的例子里就有它：$\\mathcal{C}$ 是阿贝尔范畴时 $\\operatorname{Ind}(\\mathcal{C})$ 是 Grothendieck 范畴。\n\n**例子**：$\\operatorname{Ind}(\\mathbf{FinSet})$ 是「所有集合」（每个集合都是它有限子集的滤过余极限）；$K$-理论的「向量丛按直和/余极限补全」用的也是它。\n\n📌 对偶地有 **Pro-对象**：把滤过图换成**余滤过**图，得到 $\\operatorname{Pro}(\\mathcal{C})$（profinite 空间就是 $\\operatorname{Pro}(\\mathbf{FinSet})$）。",
+   "notes": "**读法**：引号里的 $\\varinjlim X_{i}$ 是**形式记法** —— 对象是「滤过图」本身，不是它的余极限（余极限可能压根不存在）。\n\n**公式为什么长这样**：要给两个形式余极限之间的映射，先固定 $j$，对每个 $i$ 给一条 $X_{i} \\to Y_{j}$ 且与 $i$ 的变动相容（这就是 $\\varprojlim_{i}$），再对 $j$ 取滤过余极限（$Y_{j}$ 越往后越大，晚给的映射可以「补」上早先的）。\n\n**例子**：$\\operatorname{Ind}(\\mathbf{FinSet})$ 是「所有集合」（每个集合都是它有限子集的滤过余极限）；$K$-理论的「向量丛按直和/余极限补全」用的也是它。\n\n📌 对偶地有 **Pro-对象**：把滤过图换成**余滤过**图，得到 $\\operatorname{Pro}(\\mathcal{C})$（profinite 空间就是 $\\operatorname{Pro}(\\mathbf{FinSet})$）。",
    "refs": []
   },
   {
@@ -10385,8 +10410,10 @@
     "加法范畴"
    ],
    "statement": "范畴 $\\mathcal{C}$ 里的对象 $0$ 叫**零对象**，如果它**既是终对象又是始对象**（等价地 $\\operatorname{End}(0) = \\{ \\mathrm{id} \\}$，唯一的自同态是零）。\n\n一族对象 $(M_{i})_{i \\in I}$ 的**双积**（biproduct）是「积与余积恰好重合」的对象，记 $\\bigoplus_{i \\in I} M_{i}$；代数里就叫**直和**。",
-   "notes": "**零对象给出零态射**：任意 $X \\to Y$ 都可以经 $X \\to 0 \\to Y$ 分解，得到的态射记 $0_{X,Y}$。所有「$f = 0$」「$f \\ne 0$」的说法都靠它。\n\n**双积为什么会重合**：在**预加性**范畴里，积与余积只要存在就自动一致（两个泛性质能互相满足），所以可以只谈一个。$M \\oplus N$ 的元素形式上写成 $f + g$（从 $M$ 与 $N$ 各来一条）。\n\n⭐ **加法范畴 = 预加性 + 零对象 + 所有二元直和**（原书 Definition 5.1.4）。这一层搭好，才能定义核、余核，往上才是预阿贝尔、阿贝尔范畴。\n\n⚠️ 零对象在**不一定有**的范畴里可能不存在（如 $\\mathbf{Set}$：空集是始对象，但终对象是单点集，两者不同）。$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$ 里当然是同一个 $\\{0\\}$。",
-   "refs": []
+   "notes": "**零对象给出零态射**：任意 $X \\to Y$ 都可以经 $X \\to 0 \\to Y$ 分解，得到的态射记 $0_{X,Y}$。所有「$f = 0$」「$f \\ne 0$」的说法都靠它。\n\n**双积为什么会重合**：在**预加性**范畴里，积与余积只要存在就自动一致（两个泛性质能互相满足），所以可以只谈一个。$M \\oplus N$ 的元素形式上写成 $f + g$（从 $M$ 与 $N$ 各来一条）。\n\n⚠️ 零对象在**不一定有**的范畴里可能不存在（如 $\\mathbf{Set}$：空集是始对象，但终对象是单点集，两者不同）。$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$ 里当然是同一个 $\\{0\\}$。",
+   "refs": [
+    "Le Stum, Definition 5.1.4"
+   ]
   },
   {
    "id": "def.additive-functor",
@@ -10448,8 +10475,10 @@
     "消解"
    ],
    "statement": "范畴 $\\mathcal{C}$ **有足够多的投射对象**，如果对每个 $X \\in \\mathcal{C}$，都存在投射对象 $P$ 与**满态射**\n\n$$P \\twoheadrightarrow X.$$\n\n对偶地：**有足够多的内射对象**，如果每个 $X$ 都能**单射**进某个内射对象 $X \\hookrightarrow I$。",
-   "notes": "⭐ **它保证投射消解存在**：由 $P_{0} \\twoheadrightarrow X$ 起，把核 $\\ker(P_{0} \\to X)$ 再用一个投射对象盖住，如此递归得到**投射消解**\n\n\n\n$$\\cdots \\to P_{2} \\to P_{1} \\to P_{0} \\to X \\to 0,$$\n\n\n\n于是可以取左导出函子（$\\operatorname{Tor}$、$L^{n}F$）。对偶地足够多内射给出**内射消解**与右导出函子（$\\operatorname{Ext}^{n}$、$R^{n}F$）。\n\n**为什么需要「足够多」这个条件**：导出函子是把对象换成消解再取同调，若某个对象压根没有消解，定义就卡住。所以同调代数挑范畴时会点名「有足够多投射 / 内射」。\n\n**例子**：$A\\text{-}\\mathbf{Mod}$ 两个都有（自由模投射、每个模可嵌入内射模）；$\\mathrm{CondAb}$ 有足够多投射（有限表现的投射凝聚态阿贝尔群生成它）；**Grothendieck 范畴自动有足够多内射**。\n\n📌 原书把「足够多投射」列为 Definition 1.4.8，「足够多内射」是它对偶，在 §5.2 里用到（Prop 5.2.8：Grothendieck 范畴有足够多内射）。",
-   "refs": []
+   "notes": "⭐ **它保证投射消解存在**：由 $P_{0} \\twoheadrightarrow X$ 起，把核 $\\ker(P_{0} \\to X)$ 再用一个投射对象盖住，如此递归得到**投射消解**\n\n\n\n$$\\cdots \\to P_{2} \\to P_{1} \\to P_{0} \\to X \\to 0,$$\n\n\n\n于是可以取左导出函子（$\\operatorname{Tor}$、$L^{n}F$）。对偶地足够多内射给出**内射消解**与右导出函子（$\\operatorname{Ext}^{n}$、$R^{n}F$）。\n\n**为什么需要「足够多」这个条件**：导出函子是把对象换成消解再取同调，若某个对象压根没有消解，定义就卡住。所以同调代数挑范畴时会点名「有足够多投射 / 内射」。\n\n**例子**：$A\\text{-}\\mathbf{Mod}$ 两个都有（自由模投射、每个模可嵌入内射模）；$\\mathrm{CondAb}$ 有足够多投射（有限表现的投射凝聚态阿贝尔群生成它）；**Grothendieck 范畴自动有足够多内射**。",
+   "refs": [
+    "Le Stum, Definition 1.4.8"
+   ]
   },
   {
    "id": "def.finitely-presented",
@@ -10683,7 +10712,7 @@
     "代数"
    ],
    "statement": "常用的代数范畴（对象 + 保结构映射）：\n\n- $\\mathrm{Mon}$：幺半群；\n- $\\mathrm{Gr}$（也写 $\\mathbf{Grp}$）：群；\n- $\\mathrm{Rng}$：环；\n- $G\\text{-}\\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；\n- $A\\text{-}\\mathbf{Mod}$：$A$-模；\n- $k\\text{-}\\mathbf{Alg}$：$k$-代数（$k$ 交换环）。",
-   "notes": "⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。\n\n**两个特殊的**：$G\\text{-}\\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \\to \\mathbf{Set}$ 的函子，$G$-映射就是自然变换）；$A\\text{-}\\mathbf{Mod}$ 是同调代数的样板间。\n\n📌 原书 **Exercise 1.1**。",
+   "notes": "⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。\n\n**两个特殊的**：$G\\text{-}\\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \\to \\mathbf{Set}$ 的函子，$G$-映射就是自然变换）；$A\\text{-}\\mathbf{Mod}$ 是同调代数的样板间。\n\n📌  **Exercise 1.1**。",
    "refs": []
   },
   {
@@ -10704,8 +10733,10 @@
     "伴随"
    ],
    "statement": "**交换化**函子\n\n$$(-)^{\\mathrm{ab}} : \\mathbf{Grp} \\longrightarrow \\mathbf{Ab}, \\qquad G \\longmapsto G^{\\mathrm{ab}} := G / [G, G]$$\n\n是含入函子 $\\mathbf{Ab} \\hookrightarrow \\mathbf{Grp}$ 的**左伴随**。",
-   "notes": "记号 $[G, G]$ 是**换位子子群**（由所有 $g h g^{-1} h^{-1}$ 生成）—— 它是正规子群，商掉它正好把「非交换性」清零。\n\n⭐ **伴随的读法**：任何群同态 $G \\to A$（$A$ 阿贝尔）都唯一地穿过 $G \\to G^{\\mathrm{ab}}$。也就是说**「从 $G$ 到阿贝尔群」的映射全都只看 $G^{\\mathrm{ab}}$** —— 这就是「交换化是最经济的把群变阿贝尔的办法」。\n\n**例子**：自由群 $F(S)^{\\mathrm{ab}} \\cong \\mathbb{Z}^{\\oplus S}$（自由阿贝尔群）。所以「自由阿贝尔群函子」= 「自由群函子」再交换化。\n\n📌 原书 **Exercise 1.9**。它同时说明 $\\mathbf{Ab} \\hookrightarrow \\mathbf{Grp}$ 除了是满子范畴之外，还有一条左伴随 —— 于是 $\\mathbf{Ab}$ 是 $\\mathbf{Grp}$ 的**反射子范畴**。",
-   "refs": []
+   "notes": "记号 $[G, G]$ 是**换位子子群**（由所有 $g h g^{-1} h^{-1}$ 生成）—— 它是正规子群，商掉它正好把「非交换性」清零。\n\n⭐ **伴随的读法**：任何群同态 $G \\to A$（$A$ 阿贝尔）都唯一地穿过 $G \\to G^{\\mathrm{ab}}$。也就是说**「从 $G$ 到阿贝尔群」的映射全都只看 $G^{\\mathrm{ab}}$** —— 这就是「交换化是最经济的把群变阿贝尔的办法」。\n\n**例子**：自由群 $F(S)^{\\mathrm{ab}} \\cong \\mathbb{Z}^{\\oplus S}$（自由阿贝尔群）。所以「自由阿贝尔群函子」= 「自由群函子」再交换化。",
+   "refs": [
+    "Le Stum, Exercise 1.9"
+   ]
   },
   {
    "id": "prop.poset-limit-join",
@@ -10727,8 +10758,10 @@
     "下确界"
    ],
    "statement": "把偏序集 $(P, \\preceq)$ 看作范畴（对象是元素，$x \\to y \\iff x \\preceq y$）。则对任何图 $D : I \\to P$：\n\n$$\\lim D = \\inf D \\;(\\text{下确界}), \\qquad \\varinjlim D = \\sup D \\;(\\text{上确界}),$$\n\n只要它们存在。",
-   "notes": "⭐ **这条把整套范畴语言翻译成序语言**，也是最好的入门例子：\n\n\n\n- **积** = 下确界 $\\inf\\{x, y\\}$；**余积** = 上确界 $\\sup\\{x, y\\}$；\n- **终对象** = 最大元；**始对象** = 最小元；\n- **拉回**（纤维积）= 两个元素的下确界；**推出** = 上确界；\n- **等化子**：因为 Hom 至多一个元素，平行的 $f, g$ 只有「相等」或「不平行」两种，所以等化子平凡。\n\n**由此立刻得到**：完备格 = 有所有小极限与小余极限的偏序集；$\\mathbb{Q}$ 作为偏序集**不**完备（$\\{q : q^{2} < 2\\}$ 没有上确界）—— 这与实数完备性那条是同一件事的两种说法。\n\n📌 原书 **Exercise 1.30**。",
-   "refs": []
+   "notes": "⭐ **这条把整套范畴语言翻译成序语言**，也是最好的入门例子：\n\n\n\n- **积** = 下确界 $\\inf\\{x, y\\}$；**余积** = 上确界 $\\sup\\{x, y\\}$；\n- **终对象** = 最大元；**始对象** = 最小元；\n- **拉回**（纤维积）= 两个元素的下确界；**推出** = 上确界；\n- **等化子**：因为 Hom 至多一个元素，平行的 $f, g$ 只有「相等」或「不平行」两种，所以等化子平凡。\n\n**由此立刻得到**：完备格 = 有所有小极限与小余极限的偏序集；$\\mathbb{Q}$ 作为偏序集**不**完备（$\\{q : q^{2} < 2\\}$ 没有上确界）—— 这与实数完备性那条是同一件事的两种说法。",
+   "refs": [
+    "Le Stum, Exercise 1.30"
+   ]
   },
   {
    "id": "def.strict-morphism",
@@ -10748,8 +10781,10 @@
     "像"
    ],
    "statement": "态射 $f : X \\to Y$ 叫**严格的**（strict），如果它在**余像**上的分解 $X \\twoheadrightarrow \\operatorname{coim} f \\to \\operatorname{im} f \\hookrightarrow Y$ 中间那一步是**同构** —— 即「余像与像之间的自然映射」可逆。",
-   "notes": "⭐ **「严格」是阿贝尔范畴与一般范畴的分水岭**：阿贝尔范畴的**每条态射都严格**；而 $\\mathbf{Top}$ 里不严格。\n\n**反例为什么在拓扑里出现**：$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ 是单态射（同构于自己的像），但它的**余像**平凡（因为像在余核里被商掉了），于是余像 $\\to$ 像那一步不是同构。**这正是一条 $\\mathbf{Top}$ 上「拓扑阿贝尔群不是阿贝尔范畴」的原因。**\n\n**在 $\\mathbf{Set}$ 与 $\\mathbf{Ab}$ 里每条态射都严格**：那边余像与像都能具体算成分解，中间那个映射就是恒等。\n\n📌 原书 **Exercise 1.33**。",
-   "refs": []
+   "notes": "⭐ **「严格」是阿贝尔范畴与一般范畴的分水岭**：阿贝尔范畴的**每条态射都严格**；而 $\\mathbf{Top}$ 里不严格。\n\n**反例为什么在拓扑里出现**：$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ 是单态射（同构于自己的像），但它的**余像**平凡（因为像在余核里被商掉了），于是余像 $\\to$ 像那一步不是同构。**这正是一条 $\\mathbf{Top}$ 上「拓扑阿贝尔群不是阿贝尔范畴」的原因。**\n\n**在 $\\mathbf{Set}$ 与 $\\mathbf{Ab}$ 里每条态射都严格**：那边余像与像都能具体算成分解，中间那个映射就是恒等。",
+   "refs": [
+    "Le Stum, Exercise 1.33"
+   ]
   },
   {
    "id": "prop.preserves-products-kernels",
@@ -10792,8 +10827,10 @@
     "保"
    ],
    "statement": "函子 $F$ 若保**纤维积**（拉回），则 $F$ 保**单态射**；对偶地，若保**纤维余积**（推出），则保**满态射**。",
-   "notes": "**为什么**：$f : Y \\to X$ 是单态射，等价于说「$Y \\to X$ 上 $\\mathrm{id}$ 与 $\\mathrm{id}$ 的两个拉回重合」，即方块\n\n$$\\begin{array}{ccc} Y & \\xrightarrow{\\;\\mathrm{id}\\;} & Y \\\\[2pt] {\\scriptstyle \\mathrm{id}}\\big\\downarrow & & \\big\\downarrow{\\scriptstyle f} \\\\[2pt] Y & \\xrightarrow[\\;f\\;]{} & X \\end{array}$$\n\n是拉回方块。保拉回就把这个重合保下来了，于是 $F(f)$ 仍是单态射。∎\n📌 原书 **Exercise 1.46**。",
-   "refs": []
+   "notes": "**为什么**：$f : Y \\to X$ 是单态射，等价于说「$Y \\to X$ 上 $\\mathrm{id}$ 与 $\\mathrm{id}$ 的两个拉回重合」，即方块\n\n$$\\begin{array}{ccc} Y & \\xrightarrow{\\;\\mathrm{id}\\;} & Y \\\\[2pt] {\\scriptstyle \\mathrm{id}}\\big\\downarrow & & \\big\\downarrow{\\scriptstyle f} \\\\[2pt] Y & \\xrightarrow[\\;f\\;]{} & X \\end{array}$$\n\n是拉回方块。保拉回就把这个重合保下来了，于是 $F(f)$ 仍是单态射。∎",
+   "refs": [
+    "Le Stum, Exercise 1.46"
+   ]
   },
   {
    "id": "prop.projective-coproduct",
@@ -10835,7 +10872,7 @@
     "遗忘函子"
    ],
    "statement": "若 $\\mathcal{C}$ 有所有极限，则 $\\mathrm{Ab}(\\mathcal{C})$ 也有所有极限，并且**遗忘函子** $\\mathrm{Ab}(\\mathcal{C}) \\to \\mathcal{C}$ 保它们。",
-   "notes": "⭐ **实用价值**：这条让「在 $\\mathcal{C}$ 里算极限」与「在 $\\mathrm{Ab}(\\mathcal{C})$ 里算极限」完全一致 —— 凝聚态那一侧 $\\mathrm{Ab}(\\mathrm{Cond}) = \\mathrm{CondAb}$ 有所有极限，就是这条在 $\\mathcal{C} = \\mathrm{Cond}$ 上的一次应用。\n\n📌 原书 **Exercise 1.52**。",
+   "notes": "⭐ **实用价值**：这条让「在 $\\mathcal{C}$ 里算极限」与「在 $\\mathrm{Ab}(\\mathcal{C})$ 里算极限」完全一致 —— 凝聚态那一侧 $\\mathrm{Ab}(\\mathrm{Cond}) = \\mathrm{CondAb}$ 有所有极限，就是这条在 $\\mathcal{C} = \\mathrm{Cond}$ 上的一次应用。\n\n📌  **Exercise 1.52**。",
    "refs": []
   },
   {
@@ -10918,7 +10955,7 @@
     "滤过余极限"
    ],
    "statement": "若 $\\mathcal{C}$ 有滤过余极限，则 $\\mathcal{C}$ 是 $\\operatorname{Ind}(\\mathcal{C})$ 的**反射子范畴**。",
-   "notes": "**反射函子**就是「取形式余极限的真正余极限」：把 Ind-对象「$\\varinjlim X_{i}$」送到 $\\mathcal{C}$ 里真实存在的那个 $\\varinjlim X_{i}$。\n\n⭐ 于是 $\\operatorname{Ind}(\\mathcal{C})$ 是「把 $\\mathcal{C}$ 补齐到对滤过余极限封闭」的最小范畴 —— 反射性说的正是「补完之后原来的东西没被改坏」。\n\n📌 原书 **Exercise 1.73**。",
+   "notes": "**反射函子**就是「取形式余极限的真正余极限」：把 Ind-对象「$\\varinjlim X_{i}$」送到 $\\mathcal{C}$ 里真实存在的那个 $\\varinjlim X_{i}$。\n\n⭐ 于是 $\\operatorname{Ind}(\\mathcal{C})$ 是「把 $\\mathcal{C}$ 补齐到对滤过余极限封闭」的最小范畴 —— 反射性说的正是「补完之后原来的东西没被改坏」。\n\n📌  **Exercise 1.73**。",
    "refs": []
   },
   {
@@ -11003,8 +11040,10 @@
     "拟同构"
    ],
    "statement": "阿贝尔范畴 $\\mathcal{A}$ 的**导出范畴** $D(\\mathcal{A})$ 是**同伦范畴 $K(\\mathcal{A})$ 关于拟同构的局部化**。\n\n于是 $D(\\mathcal{A})$ 的对象与 $K(\\mathcal{A})$（等价地 $C(\\mathcal{A})$）相同，而 $K^{\\bullet} \\to L^{\\bullet}$ 的一个态射是一个「屋顶」：\n\n$$K^{\\bullet} \\xleftarrow{\\ \\sim\\ } K'^{\\bullet} \\longrightarrow L^{\\bullet},$$\n\n左边的箭头是**拟同构**（已变成同构）。",
-   "notes": "⭐ **为什么要在 $K(\\mathcal{A})$ 里再商一次**：$K(\\mathcal{A})$ 里同伦的态射被identify了，但**拟同构还不是同构** —— 而求导函子、$\\operatorname{Ext}$、谱序列这些机器真正想要的，是「拟同构 = 同构」的那个范畴。$D(\\mathcal{A})$ 就是为此造的。\n\n**「屋顶」是什么**：局部化一般不能只靠「右走一步」，因为拟同构不总能通分；于是态射写成「先逆一个拟同构、再走一步」。这也正是 $D(\\mathcal{A})$ 的 Hom **可能不再是集合**的原因 —— 只有当 $\\mathcal{A}$ 有足够多内射（或投射）时才控制得住。\n\n📌 上有界、下有界、有界版本记 $D^{+}$、$D^{-}$、$D^{b}$；内射复形的版本记 $K^{+}(\\mathcal{I})$ 等。\n\n📌 原书 **Definition 7.2.2**（前置是 **Prop 7.2.1**）。",
-   "refs": []
+   "notes": "⭐ **为什么要在 $K(\\mathcal{A})$ 里再商一次**：$K(\\mathcal{A})$ 里同伦的态射被identify了，但**拟同构还不是同构** —— 而求导函子、$\\operatorname{Ext}$、谱序列这些机器真正想要的，是「拟同构 = 同构」的那个范畴。$D(\\mathcal{A})$ 就是为此造的。\n\n**「屋顶」是什么**：局部化一般不能只靠「右走一步」，因为拟同构不总能通分；于是态射写成「先逆一个拟同构、再走一步」。这也正是 $D(\\mathcal{A})$ 的 Hom **可能不再是集合**的原因 —— 只有当 $\\mathcal{A}$ 有足够多内射（或投射）时才控制得住。\n\n📌 上有界、下有界、有界版本记 $D^{+}$、$D^{-}$、$D^{b}$；内射复形的版本记 $K^{+}(\\mathcal{I})$ 等。",
+   "refs": [
+    "Le Stum, Definition 7.2.2"
+   ]
   },
   {
    "id": "prop.exact-to-triangle",
@@ -11024,7 +11063,7 @@
     "映射锥"
    ],
    "statement": "若 $0 \\to K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\xrightarrow{g} M^{\\bullet} \\to 0$ 是复形的**短正合列**，则存在一个**导出三角**",
-   "notes": "本质上是说：这个短正合列「就是」某个映射锥三角（在 $D(\\mathcal{A})$ 里同构于 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f) \\to K^{\\bullet}[1]$）。\n\n⭐ **这就是长正合列的来源**：有了三角，取同调函子就直接得到长正合列（见「长正合列」）。\n\n📌 原书 **Proposition 7.2.4**。",
+   "notes": "本质上是说：这个短正合列「就是」某个映射锥三角（在 $D(\\mathcal{A})$ 里同构于 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f) \\to K^{\\bullet}[1]$）。\n\n⭐ **这就是长正合列的来源**：有了三角，取同调函子就直接得到长正合列（见「长正合列」）。\n\n📌  **Proposition 7.2.4**。",
    "refs": []
   },
   {
@@ -11066,7 +11105,7 @@
     "等价"
    ],
    "statement": "若 $\\mathcal{A}$ **有足够多内射对象**，则含入",
-   "notes": "记 $K^{+}(\\mathcal{I})$ 为**上有界内射复形**模同伦构成的范畴。这条说：要算 $D^{+}(\\mathcal{A})$ 里的东西，**只需要看内射复形**。\n\n⭐ **实用价值**：这就是「用内射消解算右导出函子」的合法性来源 —— 右导出函子 $RF$ 的定义本来就要求把复形换成内射复形，这条保证了那一侧的范畴**就是**导出范畴本身，替换不会丢信息。\n\n对偶地：有足够多投射时 $K^{-}(\\mathcal{P}) \\simeq D^{-}(\\mathcal{A})$。\n\n📌 原书 **Theorem 7.2.6**。",
+   "notes": "记 $K^{+}(\\mathcal{I})$ 为**上有界内射复形**模同伦构成的范畴。这条说：要算 $D^{+}(\\mathcal{A})$ 里的东西，**只需要看内射复形**。\n\n⭐ **实用价值**：这就是「用内射消解算右导出函子」的合法性来源 —— 右导出函子 $RF$ 的定义本来就要求把复形换成内射复形，这条保证了那一侧的范畴**就是**导出范畴本身，替换不会丢信息。\n\n对偶地：有足够多投射时 $K^{-}(\\mathcal{P}) \\simeq D^{-}(\\mathcal{A})$。\n\n📌  **Theorem 7.2.6**。",
    "refs": []
   },
   {
@@ -11087,8 +11126,10 @@
     "求导"
    ],
    "statement": "设 $F : \\mathcal{A} \\to \\mathcal{A}'$ 是**加法函子**、$\\mathcal{A}$ 有足够多内射对象。$F$ 的**右导出函子** $RF$ 是（在同构意义下唯一的）使下图交换的函子\n\n$$\\begin{array}{ccc} K^{+}(\\mathcal{A}) & \\xrightarrow{\\;F\\;} & K^{+}(\\mathcal{A}') \\\\[2pt] {\\scriptstyle \\text{换成内射复形}}\\big\\downarrow & & \\\\[2pt] K^{+}(\\mathcal{I}) & \\xrightarrow[\\;RF\\;]{} & \\end{array}$$",
-   "notes": "**读法**：$F$ 本身不正合（所以不能把它直接送到导出范畴里），但**先把复形换成内射复形**、再作用 $F$、再回导出范畴，这一步就正合了 —— 那个复合就是 $RF$。\n\n**分量形式**：$R^{n}F(M) := H^{n}(RF(M))$，其中 $M$ 看成集中在 $0$ 次的复形。$R^{0}F = F$（对左正合函子），$R^{n}F = 0$（$n < 0$）。\n\n⭐ **动机**：$F$ 左正合时，短正合列 $0 \\to M' \\to M \\to M'' \\to 0$ 只给出 $0 \\to FM' \\to FM \\to FM''$ —— **右边断掉了**。右导出函子 $R^{1}F(M'')$ 正好补上那个断口，把长正合列接起来。\n\n**对偶**：左导出函子 $LF$ 用**投射**消解，补的是「右半段断掉」的情形（$M \\otimes_{A} -$、$\\operatorname{Tor}$）。\n\n📌 原书 **Definition 7.2.7**。",
-   "refs": []
+   "notes": "**读法**：$F$ 本身不正合（所以不能把它直接送到导出范畴里），但**先把复形换成内射复形**、再作用 $F$、再回导出范畴，这一步就正合了 —— 那个复合就是 $RF$。\n\n**分量形式**：$R^{n}F(M) := H^{n}(RF(M))$，其中 $M$ 看成集中在 $0$ 次的复形。$R^{0}F = F$（对左正合函子），$R^{n}F = 0$（$n < 0$）。\n\n⭐ **动机**：$F$ 左正合时，短正合列 $0 \\to M' \\to M \\to M'' \\to 0$ 只给出 $0 \\to FM' \\to FM \\to FM''$ —— **右边断掉了**。右导出函子 $R^{1}F(M'')$ 正好补上那个断口，把长正合列接起来。\n\n**对偶**：左导出函子 $LF$ 用**投射**消解，补的是「右半段断掉」的情形（$M \\otimes_{A} -$、$\\operatorname{Tor}$）。",
+   "refs": [
+    "Le Stum, Definition 7.2.7"
+   ]
   },
   {
    "id": "thm.derived-long-exact",
@@ -11107,7 +11148,7 @@
     "长正合列"
    ],
    "statement": "任意短正合列 $0 \\to K^{\\bullet} \\to L^{\\bullet} \\to M^{\\bullet} \\to 0$（在 $C^{+}(\\mathcal{A})$ 里）给出长正合列",
-   "notes": "$$\\cdots \\to R^{n}FK^{\\bullet} \\to R^{n}FL^{\\bullet} \\to R^{n}FM^{\\bullet} \\xrightarrow{\\ \\delta\\ } R^{n+1}FK^{\\bullet} \\to \\cdots$$\n\n⭐ **这就是「求导」的全部收益**：原来 $F$ 只给半条，$RF$ 把连接同态 $\\delta$ 补上，长正合列就活了。\n\n📌 原书 **Theorem 7.2.8**。",
+   "notes": "$$\\cdots \\to R^{n}FK^{\\bullet} \\to R^{n}FL^{\\bullet} \\to R^{n}FM^{\\bullet} \\xrightarrow{\\ \\delta\\ } R^{n+1}FK^{\\bullet} \\to \\cdots$$\n\n⭐ **这就是「求导」的全部收益**：原来 $F$ 只给半条，$RF$ 把连接同态 $\\delta$ 补上，长正合列就活了。\n\n📌  **Theorem 7.2.8**。",
    "refs": []
   },
   {
@@ -11128,8 +11169,10 @@
     "扩展"
    ],
    "statement": "$L^{\\bullet}$ 被 $K^{\\bullet}$ 的**第 $n$ 个扩展群**是\n\n$$\\operatorname{Ext}^{n}(K^{\\bullet}, L^{\\bullet}) := \\operatorname{Hom}_{D(\\mathcal{A})}\\bigl(K^{\\bullet},\\ L^{\\bullet}[n]\\bigr).$$",
-   "notes": "**几条立刻要记住的**（对 $\\mathcal{A}$ 里的对象 $M, N$）：\n\n\n\n- $\\operatorname{Ext}^{n}(M, N) = 0$（$n < 0$）；\n- $\\operatorname{Ext}^{0}(M, N) = \\operatorname{Hom}(M, N)$；\n- $\\operatorname{Ext}^{1}(M, N)$ **分类 $N$ 被 $M$ 的扩张**（同构意义下）；\n- 在 $\\mathbf{Ab}$ 里 $\\operatorname{Ext}^{n}(M, N) = 0$（$n > 1$）；\n- $\\operatorname{Ext}^{1}(\\mathbb{Z}/n\\mathbb{Z},\\ \\mathbb{Z}/m\\mathbb{Z}) = \\mathbb{Z}/d\\mathbb{Z}$，$d = \\gcd(m, n)$。\n\n⭐ **两种算法**：$\\operatorname{Ext}^{n} = $ 「导出范畴里的 Hom」（这条定义）$ = R^{n}\\operatorname{Hom}$（用内射消解算）。两者一致 —— 见下一条。\n\n📌 原书 **Definition 7.2.9**。",
-   "refs": []
+   "notes": "**几条立刻要记住的**（对 $\\mathcal{A}$ 里的对象 $M, N$）：\n\n\n\n- $\\operatorname{Ext}^{n}(M, N) = 0$（$n < 0$）；\n- $\\operatorname{Ext}^{0}(M, N) = \\operatorname{Hom}(M, N)$；\n- $\\operatorname{Ext}^{1}(M, N)$ **分类 $N$ 被 $M$ 的扩张**（同构意义下）；\n- 在 $\\mathbf{Ab}$ 里 $\\operatorname{Ext}^{n}(M, N) = 0$（$n > 1$）；\n- $\\operatorname{Ext}^{1}(\\mathbb{Z}/n\\mathbb{Z},\\ \\mathbb{Z}/m\\mathbb{Z}) = \\mathbb{Z}/d\\mathbb{Z}$，$d = \\gcd(m, n)$。\n\n⭐ **两种算法**：$\\operatorname{Ext}^{n} = $ 「导出范畴里的 Hom」（这条定义）$ = R^{n}\\operatorname{Hom}$（用内射消解算）。两者一致 —— 见下一条。",
+   "refs": [
+    "Le Stum, Definition 7.2.9"
+   ]
   },
   {
    "id": "prop.ext-is-rhom",
@@ -11170,8 +11213,10 @@
     "消解"
    ],
    "statement": "设 $F$ 是**左正合**加法函子、有足够多内射。对象 $M \\in \\mathcal{A}$ 叫（右）**$F$-零调的**，如果\n\n$$FM = RFM,$$\n\n即 $FM = R^{0}FM$ 且 $R^{n}FM = 0$（$n \\ne 0$）。",
-   "notes": "**为什么重要**：$F$-零调对象**可以拿来做消解** —— 算 $RF$ 时不必只用内射对象，用零调对象也合法（这就是下一条 Leray 零调性说的）。\n\n**例子**：内射对象当然零调（$RF$ 就是用它们定义的）；平坦模对 $M \\otimes_{A} -$ 零调；**Stonean 空间上的凝聚态阿贝尔群**在取截面函子下零调 —— 那正是 §8 的开头。\n\n📌 原书 **Definition 7.2.11**。",
-   "refs": []
+   "notes": "**为什么重要**：$F$-零调对象**可以拿来做消解** —— 算 $RF$ 时不必只用内射对象，用零调对象也合法（这就是下一条 Leray 零调性说的）。\n\n**例子**：内射对象当然零调（$RF$ 就是用它们定义的）；平坦模对 $M \\otimes_{A} -$ 零调；**Stonean 空间上的凝聚态阿贝尔群**在取截面函子下零调 —— 那正是 §8 的开头。",
+   "refs": [
+    "Le Stum, Definition 7.2.11"
+   ]
   },
   {
    "id": "prop.leray-acyclicity",
@@ -11212,7 +11257,7 @@
     "下有界"
    ],
    "statement": "设 $K^{\\bullet}$ 是**带过滤**的复形，且**下有界**。则存在谱序列",
-   "notes": "$$E^{p,q}_{1} = H^{p+q}\\bigl(\\operatorname{Gr}^{p}K^{\\bullet}\\bigr) \\;\\Longrightarrow\\; H^{p+q}(K^{\\bullet}).$$\n\n⭐ **读法**：先把带过滤的复形「按层切碎」（取关联分次 $\\operatorname{Gr}^{p}$），算出每层的同调当第一页；然后微分一页一页地把它们拼回去，收敛到**原来的**同调。\n\n⚠️ 「下有界」这个条件不能省 —— 它保证收敛（不是每个谱序列都会收敛到什么东西）。\n\n📌 原书 **Theorem 7.2.16**。",
+   "notes": "$$E^{p,q}_{1} = H^{p+q}\\bigl(\\operatorname{Gr}^{p}K^{\\bullet}\\bigr) \\;\\Longrightarrow\\; H^{p+q}(K^{\\bullet}).$$\n\n⭐ **读法**：先把带过滤的复形「按层切碎」（取关联分次 $\\operatorname{Gr}^{p}$），算出每层的同调当第一页；然后微分一页一页地把它们拼回去，收敛到**原来的**同调。\n\n⚠️ 「下有界」这个条件不能省 —— 它保证收敛（不是每个谱序列都会收敛到什么东西）。\n\n📌  **Theorem 7.2.16**。",
    "refs": []
   },
   {
@@ -11232,8 +11277,10 @@
     "复形的复形"
    ],
    "statement": "加法范畴里的**双复形**就是**复形的复形**：即 $(\\mathbb{Z}, \\preceq)^{2}$ 上的图 $(K^{p,q}, d^{p,q}, d'^{p,q})$，使对一切 $p, q$\n\n$$d^{p+1,q} \\circ d^{p,q} = 0, \\qquad d'^{p,q+1} \\circ d'^{p,q} = 0, \\qquad d'^{p+1,q} \\circ d^{p,q} = d^{p,q+1} \\circ d'^{p,q}.$$",
-   "notes": "前两条说「每个方向各自是复形」；**第三条说两个方向的微分交换**（差一个符号，视约定）。\n\n⭐ **怎么把它变成一个普通复形**：取**全复形** $K^{n} := \\bigoplus_{p+q=n} K^{p,q}$，微分 $d + d'$（带符号）。于是双复形的同调与「逐行算完再逐列算」的关系，正是给出谱序列的地方。\n\n**典型来源**：把复形作内射消解时自然会得到双复形（$I^{p,q}$ 里 $p$ 是原复形的次数、$q$ 是消解的次数）。**Grothendieck 谱序列**就是从它来的。\n\n📌 原书 **Definition 7.2.17**。",
-   "refs": []
+   "notes": "前两条说「每个方向各自是复形」；**第三条说两个方向的微分交换**（差一个符号，视约定）。\n\n⭐ **怎么把它变成一个普通复形**：取**全复形** $K^{n} := \\bigoplus_{p+q=n} K^{p,q}$，微分 $d + d'$（带符号）。于是双复形的同调与「逐行算完再逐列算」的关系，正是给出谱序列的地方。\n\n**典型来源**：把复形作内射消解时自然会得到双复形（$I^{p,q}$ 里 $p$ 是原复形的次数、$q$ 是消解的次数）。**Grothendieck 谱序列**就是从它来的。",
+   "refs": [
+    "Le Stum, Definition 7.2.17"
+   ]
   },
   {
    "id": "cor.grothendieck-spectral",
@@ -11253,8 +11300,257 @@
     "复合函子"
    ],
    "statement": "设 $\\mathcal{A} \\xrightarrow{F} \\mathcal{A}' \\xrightarrow{G} \\mathcal{A}''$ 是加法函子，$\\mathcal{A}, \\mathcal{A}'$ **有足够多内射**、且 $F$ 把内射对象送到 $G$-零调对象。则存在谱序列\n\n$$E^{p,q}_{2} = R^{p}G\\bigl(R^{q}F(M)\\bigr) \\;\\Longrightarrow\\; R^{p+q}(G \\circ F)(M).$$",
-   "notes": "⭐ **它的用处**：想算复合函子的导出函子 $R^{n}(G \\circ F)$，可以**先算 $R^{q}F$、再算 $R^{p}G$**，中间用谱序列把两层的贡献拼起来。这是同调代数里最基本的「两步走」工具。\n\n**典型应用**：层上同调 — 先层化再取截面、Čech 上同调到 de Rham 上同调、群的同调里的 Lyndon–Hochschild–Serre 谱序列，都是它的特例。\n\n**为什么要求 $F$ 把内射送到 $G$-零调**：这样 $F$ 的内射消解才能拿来做 $G$ 的零调消解，两边才接得上。\n\n📌 原书 **Corollary 7.2.13**（与 **Corollary 7.2.21** 同一件事的另一次陈述）。",
+   "notes": "⭐ **它的用处**：想算复合函子的导出函子 $R^{n}(G \\circ F)$，可以**先算 $R^{q}F$、再算 $R^{p}G$**，中间用谱序列把两层的贡献拼起来。这是同调代数里最基本的「两步走」工具。\n\n**典型应用**：层上同调 — 先层化再取截面、Čech 上同调到 de Rham 上同调、群的同调里的 Lyndon–Hochschild–Serre 谱序列，都是它的特例。\n\n**为什么要求 $F$ 把内射送到 $G$-零调**：这样 $F$ 的内射消解才能拿来做 $G$ 的零调消解，两边才接得上。",
+   "refs": [
+    "Le Stum, Corollary 7.2.13",
+    "Le Stum, Corollary 7.2.21"
+   ]
+  },
+  {
+   "id": "def.sheaf-cohomology",
+   "type": "definition",
+   "label": "层上同调",
+   "title": "层上同调 $H^{n}(X, M^{\\bullet})$",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "category"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 17,
+   "tags": [
+    "同调代数",
+    "层上同调",
+    "导出函子",
+    "截面函子"
+   ],
+   "statement": "设 $M^{\\bullet}$ 是 site $\\mathcal{C}$ 上的**阿贝尔层复形**，$X \\in \\mathcal{C}$。它在 $X$ 上的**第 $n$ 个上同调群**是\n\n$$H^{n}(X, M^{\\bullet}) := R^{n}\\Gamma(X, M^{\\bullet}),$$\n\n其中 $\\Gamma(X, -)$ 是 $X$ 处的**截面函子**。",
+   "notes": "⭐ **一句话**：层上同调就是**截面函子的右导出函子**。$\\Gamma(X,-)$ 左正合但不右正合（层化会捣乱），$R^{n}\\Gamma$ 正是补上断口的那半个。\n\n**为什么需要它**：单看 $H^{0}(X, M) = \\Gamma(X, M) = M(X)$ 只有整体截面；$H^{1}$ 起才开始记录「层粘不上去」的信息（$H^{1}$ 分类层的主丛 / torsor）。",
+   "refs": [
+    "Le Stum, Definition 7.3.1"
+   ]
+  },
+  {
+   "id": "def.cech-cohomology",
+   "type": "definition",
+   "label": "Čech 上同调",
+   "title": "Čech 上同调 $\\check{H}^{n}(X, M^{\\bullet})$",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "category"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 17,
+   "tags": [
+    "同调代数",
+    "Čech 上同调",
+    "预层",
+    "覆盖"
+   ],
+   "statement": "设 $M^{\\bullet}$ 是 site $\\mathcal{C}$ 上的**阿贝尔预层复形**，$X \\in \\mathcal{C}$。它的第 $n$ 个 **Čech 上同调群**是\n\n$$\\check{H}^{n}(X, M^{\\bullet}) := \\Gamma\\bigl(X,\\ \\check{H}^{n}(M^{\\bullet})\\bigr).$$",
+   "notes": "**与层上同调的区别**：层上同调要**先取内射消解**（贵）；Čech 上同调**直接用覆盖算**（便宜），代价是它一般只是「逼近」。\n\n**为什么叫 Čech**：它照着 Čech 那套「用开覆盖的交叠来算整体信息」的直觉造出来的 —— 覆盖的每一层交叠给一个群，交叠的包含关系给微分，取同调就是 Čech 上同调。",
+   "refs": [
+    "Le Stum, Definition 7.3.5"
+   ]
+  },
+  {
+   "id": "prop.cech-as-colim",
+   "type": "proposition",
+   "label": "Čech 上同调是沿覆盖筛的余极限",
+   "title": "$\\check{H}^{n}(X, M) = \\varinjlim_{R \\in J(X)} H^{n}(R, M)$",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "Čech 上同调",
+    "覆盖筛",
+    "余极限"
+   ],
+   "statement": "若 $X \\in \\mathcal{C}$、$M$ 是阿贝尔预层，则 $\\check{H}^{n}(X, M) = \\varinjlim_{R \\in J(X)} H^{n}(R, M)$（沿 $X$ 上所有覆盖筛 $R$ 取滤过余极限）。",
+   "notes": "",
    "refs": []
+  },
+  {
+   "id": "thm.cartan-leray",
+   "type": "theorem",
+   "label": "Cartan–Leray 谱序列",
+   "title": "Cartan–Leray：Čech 到层上同调的谱序列",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "Cartan",
+    "Leray",
+    "谱序列",
+    "Čech"
+   ],
+   "statement": "若 $\\mathfrak{X}$ 是 $X$ 的一个**覆盖**、$M$ 是阿贝尔层，则存在谱序列\n\n$$E^{p,q}_{2} := \\check{H}^{p}\\bigl(\\mathfrak{X},\\ H^{q}(M)\\bigr) \\;\\Longrightarrow\\; H^{p+q}(X, M).$$",
+   "notes": "⭐ **它说的是**：Čech 上同调（右边那个 $\\check{H}^{p}$）用 $H^{q}(M)$ 当系数，收敛到**真正的**层上同调。于是「便宜的算法」怎么逼近「贵的算法」这件事被讲清楚了。\n\n**推论**（Cor 7.3.7）：若覆盖的每一层上 $H^{q} = 0$（$q \\ne 0$），则 $\\check{H}^{n} \\cong H^{n}$ —— 此时 Čech 直接给出层上同调。\n\n**证明走法**：取 $\\mathfrak{X}$ 生成的筛 $R$，则 $\\Gamma(\\mathfrak{X}, M) = \\Gamma(R, \\mathcal{H}(M))$；$\\mathcal{H}$ 保内射，于是由 Grothendieck 谱序列 + 上一条得到。",
+   "refs": [
+    "Le Stum, Theorem 7.3.6"
+   ]
+  },
+  {
+   "id": "def.acyclic-sheaf",
+   "type": "definition",
+   "label": "无环层",
+   "title": "无环层（Acyclic Sheaf）",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "无环层",
+    "层上同调"
+   ],
+   "statement": "site $\\mathcal{C}$ 上的阿贝尔层 $M$ 叫**无环的**，如果 $H^{n}(M) = 0$ 对一切 $n \\ne 0$。",
+   "notes": "⚠️ 专门提醒：**这个定义依赖 site $\\mathcal{C}$，不只是依赖拓扑斯 $\\widetilde{\\mathcal{C}}$** —— 换个 site（同一拓扑斯）无环性可能变。这一点和「层的概念只依赖拓扑斯」形成对比。\n\n📌  **Definition 7.3.9**。",
+   "refs": []
+  },
+  {
+   "id": "prop.acyclic-iff-cech",
+   "type": "proposition",
+   "label": "无环 ⟺ Čech 上同调为零",
+   "title": "$M$ 无环 $\\iff \\check{H}^{n}(M) = 0$（$n \\ne 0$）",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 19,
+   "tags": [
+    "同调代数",
+    "无环层",
+    "Čech 上同调"
+   ],
+   "statement": "$\\mathcal{C}$ 上的阿贝尔层 $M$ **无环** $\\iff \\check{H}^{n}(M) = 0$ 对一切 $n \\ne 0$。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.chaus-cech-eq-h",
+   "type": "proposition",
+   "label": "紧 Hausdorff 上 Čech 就是上同调",
+   "title": "紧 Hausdorff：$\\check{H}^{n}(X, M) = H^{n}(X, M)$",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "topology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "Čech 上同调",
+    "紧 Hausdorff",
+    "层上同调"
+   ],
+   "statement": "若 $X$ 是**紧 Hausdorff** 空间，则 $\\check{H}^{n}(X, M) = H^{n}(X, M)$（对一切阿贝尔层 $M$）。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.filtered-limit-cohomology",
+   "type": "proposition",
+   "label": "滤过极限的上同调",
+   "title": "紧 Hausdorff 的滤过极限上，常值系数的上同调是余极限",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "topology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "滤过极限",
+    "常值系数",
+    "上同调"
+   ],
+   "statement": "若 $X = \\varprojlim_{i \\in I} X_{i}$ 是紧 Hausdorff 空间的**滤过极限**、$M$ 是**常值**阿贝尔群，则",
+   "notes": "$$H^{n}(X, M) = \\varinjlim_{i \\in I} H^{n}(X_{i}, M).$$\n\n⚠️ 注意方向：**极限** $X = \\varprojlim X_{i}$ 在拓扑这一侧，而它上面的**上同调**却成了**余极限** —— 上同调把方向翻过来。这条是「用有限块逼近整体，再取上同调」的合法性来源。\n\n📌  **Proposition 7.3.12**。",
+   "refs": []
+  },
+  {
+   "id": "prop.stone-acyclic",
+   "type": "proposition",
+   "label": "Stone 空间上的上同调为零",
+   "title": "Stone 空间：$H^{n}(S, M) = 0$（$n \\ne 0$）",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "topology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 17,
+   "tags": [
+    "同调代数",
+    "Stone 空间",
+    "无环",
+    "Čech"
+   ],
+   "statement": "若 $S$ 是 **Stone** 空间（= 紧 Hausdorff 完全不连通空间），则对任何阿贝尔层 $M$，$H^{n}(S, M) = 0$ 对一切 $n \\ne 0$。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "prop.topos-morphism-derived",
+   "type": "proposition",
+   "label": "拓扑斯态射的导出函子",
+   "title": "$R^{n}f_{*}M$ 是 $X' \\mapsto H^{n}(f^{-1}(X'), M)$ 的层化",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "category"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "拓扑斯",
+    "态射",
+    "导出函子"
+   ],
+   "statement": "若 $f : \\mathcal{T} \\to \\mathcal{T}'$ 是**拓扑斯的态射**，则 $R^{n}f_{*}M$ 是预层 $X' \\mapsto H^{n}\\bigl(f^{-1}(X'),\\ M\\bigr)$ 所**层化**得到的层。",
+   "notes": "⭐ **读法**：想算拓扑斯态射的导出函子，先逐点算「另一边像处的上同调」，再把结果层化回去。这与层上同调的定义（截面函子的右导出函子）是同一回事，只是把「一个点的截面」换成了「拓扑斯态射的拉回」。\n\n📌  **Proposition 7.4.1**。",
+   "refs": []
+  },
+  {
+   "id": "cor.homotopy-invariant-cohomology",
+   "type": "corollary",
+   "label": "层上同调是同伦不变量",
+   "title": "同伦等价的映射给同构的上同调",
+   "region": "homology",
+   "regions": [
+    "homology",
+    "topology"
+   ],
+   "cluster": "hom.sheafcoh",
+   "layer": 18,
+   "tags": [
+    "同调代数",
+    "同伦",
+    "上同调",
+    "常值系数"
+   ],
+   "statement": "设 $M$ 是**常值**阿贝尔群。\n\n1. 若 $f \\simeq g : X \\to Y$ 是**同伦**的连续映射，则 $f$ 与 $g$ 诱导的上同调映射相同；\n2. 若 $f : X \\to Y$ 是**同伦等价**，则 $H^{n}(Y, M) \\cong H^{n}(X, M)$。",
+   "notes": "⭐ **这就是「层上同调是拓扑不变量」那句话的出处** —— 常值系数下，$H^{n}(-, M)$ 是同伦不变的，所以它可以拿来算空间的同伦类不变量（奇异上同调、de Rham 上同调都落在这一条上）。",
+   "refs": [
+    "Le Stum, Proposition 7.4.2",
+    "Le Stum, Corollary 7.4.3"
+   ]
   }
  ],
  "edges": [
@@ -19952,6 +20248,158 @@
    "definition": "def.bicomplex",
    "usedBy": "cor.grothendieck-spectral",
    "note": "它由**双复形**（取 $F$ 的内射消解）造出来。"
+  },
+  {
+   "id": "def-dep.sheafcoh-section",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.section-functor",
+   "usedBy": "def.sheaf-cohomology",
+   "note": "层上同调是**截面函子**的右导出函子。"
+  },
+  {
+   "id": "def-dep.sheafcoh-rdf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.right-derived-functor",
+   "usedBy": "def.sheaf-cohomology",
+   "note": "$H^{n} := R^{n}\\Gamma$。"
+  },
+  {
+   "id": "def-dep.cechcoh-cech",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-functor",
+   "usedBy": "def.cech-cohomology",
+   "note": "Čech 上同调用的是**Čech 函子**。"
+  },
+  {
+   "id": "def-dep.cechcolim-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.grothendieck-topology",
+   "usedBy": "prop.cech-as-colim",
+   "note": "余极限沿 $\\in J(X)$ 的**覆盖筛**取。"
+  },
+  {
+   "id": "def-dep.cechcolim-cech",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-cohomology",
+   "usedBy": "prop.cech-as-colim",
+   "note": "它给出 Čech 上同调的另一种算法。"
+  },
+  {
+   "id": "def-dep.cartanleray-cech",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-cohomology",
+   "usedBy": "thm.cartan-leray",
+   "note": "谱序列的第一页是 **Čech 上同调**。"
+  },
+  {
+   "id": "def-dep.cartanleray-ss",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.spectral-sequence",
+   "usedBy": "thm.cartan-leray",
+   "note": "结论是一个**谱序列**。"
+  },
+  {
+   "id": "def-dep.acyclic-sheafcoh",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf-cohomology",
+   "usedBy": "def.acyclic-sheaf",
+   "note": "无环性的定义用的就是**层上同调**。"
+  },
+  {
+   "id": "def-dep.acycliccech-acyclic",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.acyclic-sheaf",
+   "usedBy": "prop.acyclic-iff-cech",
+   "note": "命题说无环等价于 **Čech 上同调为零**。"
+  },
+  {
+   "id": "def-dep.acycliccech-cech",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cech-cohomology",
+   "usedBy": "prop.acyclic-iff-cech",
+   "note": "另一半用的是 Čech 上同调。"
+  },
+  {
+   "id": "def-dep.chauscech-chaus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chaus",
+   "usedBy": "prop.chaus-cech-eq-h",
+   "note": "命题只对**紧 Hausdorff** 空间成立。"
+  },
+  {
+   "id": "def-dep.chauscech-sheafcoh",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf-cohomology",
+   "usedBy": "prop.chaus-cech-eq-h",
+   "note": "结论是两类上同调相等。"
+  },
+  {
+   "id": "def-dep.filtlim-filtered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.filtered-category",
+   "usedBy": "prop.filtered-limit-cohomology",
+   "note": "取的是**滤过**极限。"
+  },
+  {
+   "id": "def-dep.filtlim-sheafcoh",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf-cohomology",
+   "usedBy": "prop.filtered-limit-cohomology",
+   "note": "说的是**上同调**怎么随极限变。"
+  },
+  {
+   "id": "def-dep.stoneacyclic-stone",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stone-space",
+   "usedBy": "prop.stone-acyclic",
+   "note": "命题只对 **Stone 空间**成立。"
+  },
+  {
+   "id": "def-dep.topmorphder-topmorph",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topos-morphism",
+   "usedBy": "prop.topos-morphism-derived",
+   "note": "说的是**拓扑斯的态射**。"
+  },
+  {
+   "id": "def-dep.topmorphder-rdf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.right-derived-functor",
+   "usedBy": "prop.topos-morphism-derived",
+   "note": "结论算的是导出函子 $R^{n}f_{*}$。"
+  },
+  {
+   "id": "def-dep.homcohom-sheafcoh",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf-cohomology",
+   "usedBy": "cor.homotopy-invariant-cohomology",
+   "note": "结论是关于**层上同调**的。"
+  },
+  {
+   "id": "def-dep.homcohom-homotopy",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.homotopy",
+   "usedBy": "cor.homotopy-invariant-cohomology",
+   "note": "前提是映射**同伦**或**同伦等价**。"
   }
  ],
  "clusterLinks": [
@@ -20706,6 +21154,27 @@
   },
   {
    "a": "hom.ab",
+   "b": "topo.chaus",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.sheaf",
+   "b": "hom.sheafcoh",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.complex",
+   "b": "hom.sheafcoh",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.sheafcoh",
    "b": "topo.chaus",
    "count": 2,
    "label": "",

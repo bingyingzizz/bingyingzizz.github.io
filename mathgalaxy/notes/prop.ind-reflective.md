@@ -5,4 +5,4 @@
 
 ⭐ 于是 $\operatorname{Ind}(\mathcal{C})$ 是「把 $\mathcal{C}$ 补齐到对滤过余极限封闭」的最小范畴 —— 反射性说的正是「补完之后原来的东西没被改坏」。
 
-📌 原书 **Exercise 1.73**。
+📌  **Exercise 1.73**。

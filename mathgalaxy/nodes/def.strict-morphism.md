@@ -8,4 +8,6 @@ layer 16 · 定义 · 单满、子对象与像 · 范畴论
 - `def.image` 像 / 余像：用到了定义 像 / 余像　proofs/def-dep.strict-image.md
 - `def.equalizer` 等化子 / 余等化子：用到了定义 等化子 / 余等化子　proofs/def-dep.strict-equalizer.md
 
+refs: Le Stum, Exercise 1.33
+
 > 说明见 `notes/def.strict-morphism.md`

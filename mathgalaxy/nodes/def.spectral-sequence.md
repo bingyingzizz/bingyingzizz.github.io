@@ -20,5 +20,6 @@ $$d^{p,q}_{r} : E^{p,q}_{r} \longrightarrow E^{p+r,\, q-r+1}_{r}$$
 ## 它能推出什么 / 谁在用它
 - 被 `thm.filtered-complex-spectral` 过滤复形给出谱序列 用
 - 被 `cor.grothendieck-spectral` Grothendieck 谱序列 用
+- 被 `thm.cartan-leray` Cartan–Leray 谱序列 用
 
 > 说明见 `notes/def.spectral-sequence.md`

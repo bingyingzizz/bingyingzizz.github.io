@@ -1,6 +1,14 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 紧 Hausdorff 上 Cech 就是上同调 | Proposition 7.3.11 | Prop 7.3.11 → prop.chaus-cech-eq-h
+
+- 滤过极限的上同调 | Proposition 7.3.12 | Prop 7.3.12 → prop.filtered-limit-cohomology
+
+- Stone 空间上同调为零 | Exercise 7.50 → prop.stone-acyclic
+
+- 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
+
 - CHaus | 紧 Hausdorff 空间 | compact Hausdorff | 紧豪斯多夫空间 → def.chaus
 
 - Stone-Cech 紧化 | Stone-Čech | βX | beta X | 紧化 → prop.chaus-reflective
@@ -14,15 +22,5 @@
 - 投射对象 | projective object | 内射对象 | injective object | 投射模 | 内射模 → def.projective-object
 
 - 自由对象是投射的 → prop.free-projective
-
-- 自由表示 | free presentation | 自由表现 → def.free-presentation
-
-- 紧 Haus 都有自由表示 → cor.chaus-free-presentation
-
-- 连通分量是闭开邻域之交 → prop.component-clopen
-
-- Stone 空间 | Stone space | Stonean 空间 | 极端不连通 | extremally disconnected | 全不连通 | totally disconnected → def.stone-space
-
-- 极端不连通的性质 → prop.stonean-basic
 
 > 续见 alias/aka/topology.4.md

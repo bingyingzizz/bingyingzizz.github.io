@@ -7,4 +7,4 @@ $$E^{p,q}_{1} = H^{p+q}\bigl(\operatorname{Gr}^{p}K^{\bullet}\bigr) \;\Longright
 
 ⚠️ 「下有界」这个条件不能省 —— 它保证收敛（不是每个谱序列都会收敛到什么东西）。
 
-📌 原书 **Theorem 7.2.16**。
+📌  **Theorem 7.2.16**。

@@ -7,3 +7,4 @@
 - 被 `prop.stone-reflective` Stone 空间是 CHaus 的反射子范畴 用
 - 被 `prop.td-reflective` 全不连通空间是反射子范畴 用
 - 被 `lem.stonean-projective` Stonean 给出有限表现投射对象 用
+- 被 `prop.stone-acyclic` Stone 空间上的上同调为零 用

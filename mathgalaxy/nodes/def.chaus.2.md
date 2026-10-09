@@ -9,3 +9,4 @@
 - 被 `def.underlying-topological-space` 底拓扑空间 用
 - 被 `def.compactly-generated` 紧生成空间 用
 - 被 `def.compactly-generated` 紧生成空间 用
+- 被 `prop.chaus-cech-eq-h` 紧 Hausdorff 上 Čech 就是上同调 用

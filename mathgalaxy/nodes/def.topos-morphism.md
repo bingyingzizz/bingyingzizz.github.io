@@ -13,4 +13,7 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-dep.adjoint-topos-morphism.md
 - `def.limit` 极限：用到了定义 极限　proofs/def-dep.limit-topos-morphism.md
 
+## 它能推出什么 / 谁在用它
+- 被 `prop.topos-morphism-derived` 拓扑斯态射的导出函子 用
+
 > 说明见 `notes/def.topos-morphism.md`

@@ -3,6 +3,12 @@
 
 - 环的纤维余积 | 张量积是推出 | Exercise 1.29 → prop.ring-tensor-coproduct
 
+- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 → def.sheaf-cohomology
+
+- Čech 上同调 | Cech 上同调 | Cech cohomology | Definition 7.3.5 | Def 7.3.5 → def.cech-cohomology
+
+- 拓扑斯态射的导出函子 | Proposition 7.4.1 | Prop 7.4.1 → prop.topos-morphism-derived
+
 - 反射子范畴 | reflective subcategory | 余反射 | 反射函子 → def.reflective-subcategory
 
 - 反射子范畴里的极限 → prop.reflective-limits
@@ -16,15 +22,5 @@
 - 筛 | sieve | 覆盖筛 | covering sieve → def.sieve
 
 - 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology → def.pretopology
-
-- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 → def.grothendieck-topology
-
-- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 → def.sheaf
-
-- 层的下降条件 | sheaf condition | 层条件 → thm.sheaf-descent
-
-- Cech 函子 | Čech functor | H hat → def.cech-functor
-
-- Cech 函子的性质 | 左正合 → prop.cech-properties
 
 > 续见 alias/aka/category.8.md

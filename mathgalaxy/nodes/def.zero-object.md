@@ -12,4 +12,6 @@ layer 13 · 定义 · 图与极限 · 范畴论
 ## 它能推出什么 / 谁在用它
 - 被 `def.split-exact` 分裂短正合列 用
 
+refs: Le Stum, Definition 5.1.4
+
 > 说明见 `notes/def.zero-object.md`

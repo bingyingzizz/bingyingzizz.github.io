@@ -162,6 +162,7 @@
 
 ### 范畴与同调
 
+- `\check{H}^{n}` Čech 上同调 Ĥⁿ　**Čech 上同调** — 加帽子的 $H$：$\check{H}^{n}(X, M)$ 是 Čech 上同调，与层上同调 $H^{n}(X,M)$ 相区别。
 - `\mathcal{C}` 𝒞　**一般的范畴；预层范畴写 $\widehat{\mathcal{C}}$，拓扑斯写 $\mathcal{T}$**
 - `\widehat{\mathcal{C}}` Ĉ　**预层范畴 $\operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf{Set})$**
 - `\mathcal{T}` 𝒯　**拓扑斯**

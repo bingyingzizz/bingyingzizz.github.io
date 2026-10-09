@@ -1,6 +1,16 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 层化与商交换 → prop.sheafify-equivalence
+
+- 标准拓扑 | canonical topology | 次标准 | subcanonical → def.canonical-topology
+
+- 覆盖等价于余积满 → prop.covering-sieve-epi
+
+- 不交万有余积与次标准 → prop.disjoint-universal
+
+- 预拓扑斯 | pretopos | 预拓扑斯公理 → def.pretopos
+
 - 预拓扑斯里的满单分解 | 平衡范畴 | balanced → prop.pretopos-factorization
 
 - 子对象构成有界格 | 子对象格 → prop.subobject-lattice
@@ -20,15 +30,5 @@
 - Giraud 定理 | Giraud | 拓扑斯的刻画 → thm.giraud
 
 - 可表示性下降 → lem.representable-quotient
-
-- 拓扑斯中覆盖即余积满 → prop.topos-covering-epi
-
-- 层即保极限的预层 → prop.topos-sheaf-limits
-
-- 拟紧 | quasi-compact | qc → def.quasi-compact
-
-- 拟紧的性质 → prop.quasi-compact-properties
-
-- 拟分离 | quasi-separated | qs → def.quasi-separated
 
 > 续见 alias/aka/category.10.md

@@ -12,4 +12,7 @@ $$\Gamma(X, -) : \widetilde{\mathcal{C}} \longrightarrow \mathbf{Set}, \qquad F 
 - `def.sheaf` 层：用到了定义 层　proofs/def-dep.sectionfunctor-sheaf.md
 - `def.representable` 表示函子：用到了定义 表示函子　proofs/def-dep.sectionfunctor-representable.md
 
+## 它能推出什么 / 谁在用它
+- 被 `def.sheaf-cohomology` 层上同调 用
+
 > 说明见 `notes/def.section-functor.md`

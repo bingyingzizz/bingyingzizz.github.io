@@ -6,4 +6,3 @@
 $$\begin{array}{ccc} Y & \xrightarrow{\;\mathrm{id}\;} & Y \\[2pt] {\scriptstyle \mathrm{id}}\big\downarrow & & \big\downarrow{\scriptstyle f} \\[2pt] Y & \xrightarrow[\;f\;]{} & X \end{array}$$
 
 是拉回方块。保拉回就把这个重合保下来了，于是 $F(f)$ 仍是单态射。∎
-📌 原书 **Exercise 1.46**。

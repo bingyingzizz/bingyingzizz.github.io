@@ -5,4 +5,4 @@
 
 **两个特殊的**：$G\text{-}\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \to \mathbf{Set}$ 的函子，$G$-映射就是自然变换）；$A\text{-}\mathbf{Mod}$ 是同调代数的样板间。
 
-📌 原书 **Exercise 1.1**。
+📌  **Exercise 1.1**。

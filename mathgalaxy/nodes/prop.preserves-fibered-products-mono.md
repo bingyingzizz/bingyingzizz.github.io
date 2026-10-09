@@ -8,4 +8,6 @@ layer 14 · 命题 · 函子与自然变换 · 范畴论
 - `def.fibered-product` 纤维积 / 纤维余积：用到了定义 纤维积 / 纤维余积　proofs/def-dep.pfpm-fibered.md
 - `def.mono` 单态射 / 满态射：用到了定义 单态射 / 满态射　proofs/def-dep.pfpm-mono.md
 
+refs: Le Stum, Exercise 1.46
+
 > 说明见 `notes/prop.preserves-fibered-products-mono.md`

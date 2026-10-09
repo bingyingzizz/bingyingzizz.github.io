@@ -5,6 +5,4 @@
 
 **对偶**：把 $i \downarrow F$ 换成**下**逗号范畴 $F \downarrow i$（对象是 $\{\, f : F(j) \to i \,\}$）得到的条件叫 **coinitial**，它保的是**极限**。
 
-⚠️ **名字很乱，看定义别看名字**：不同的书上 cofinal / final / right cofinal / left cofinal 指的可能是同一个东西，也可能方向相反。本图统一按上面这条定义（用 $i \downarrow F$）。
-
 **例子**：$J \to \mathbf{1}$ 共尾 $\iff$ $J$ 连通；有向集沿 $\le$ 的含入 $\mathbb{N} \to \mathbb{Z}$ 是共尾的；$\mathcal{C}$ 到它的反射子范畴的含入一般**不是**共尾的（方向反了就看 coinitial）。

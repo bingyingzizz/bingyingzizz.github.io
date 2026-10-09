@@ -14,4 +14,6 @@ $$FM = RFM,$$
 ## 它能推出什么 / 谁在用它
 - 被 `prop.leray-acyclicity` Leray 零调性 用
 
+refs: Le Stum, Definition 7.2.11
+
 > 说明见 `notes/def.f-acyclic.md`

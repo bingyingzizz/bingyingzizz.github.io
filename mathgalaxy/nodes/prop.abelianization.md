@@ -12,4 +12,6 @@ $$(-)^{\mathrm{ab}} : \mathbf{Grp} \longrightarrow \mathbf{Ab}, \qquad G \longma
 - `def.quotient-group` 商群：用到了定义 商群　proofs/def-dep.abelianization-quotient.md
 - `def.adjoint` 伴随函子：用到了定义 伴随函子　proofs/def-dep.abelianization-adjoint.md
 
+refs: Le Stum, Exercise 1.9
+
 > 说明见 `notes/prop.abelianization.md`

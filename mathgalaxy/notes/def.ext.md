@@ -12,5 +12,3 @@
 - $\operatorname{Ext}^{1}(\mathbb{Z}/n\mathbb{Z},\ \mathbb{Z}/m\mathbb{Z}) = \mathbb{Z}/d\mathbb{Z}$，$d = \gcd(m, n)$。
 
 ⭐ **两种算法**：$\operatorname{Ext}^{n} = $ 「导出范畴里的 Hom」（这条定义）$ = R^{n}\operatorname{Hom}$（用内射消解算）。两者一致 —— 见下一条。
-
-📌 原书 **Definition 7.2.9**。

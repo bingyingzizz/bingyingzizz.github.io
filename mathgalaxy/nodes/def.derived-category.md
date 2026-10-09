@@ -18,6 +18,8 @@ $$K^{\bullet} \xleftarrow{\ \sim\ } K'^{\bullet} \longrightarrow L^{\bullet},$$
 ## 它能推出什么 / 谁在用它
 - 被 `prop.hom-k-eq-hom-d` Hom 在同伦范畴与导出范畴里一样 用
 
-> 说明见 `notes/def.derived-category.md`
-
 - …另有出边，续页见 `nodes/def.derived-category.2.md`
+
+refs: Le Stum, Definition 7.2.2
+
+> 说明见 `notes/def.derived-category.md`

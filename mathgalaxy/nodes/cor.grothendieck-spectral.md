@@ -11,4 +11,6 @@ $$E^{p,q}_{2} = R^{p}G\bigl(R^{q}F(M)\bigr) \;\Longrightarrow\; R^{p+q}(G \circ 
 - `def.right-derived-functor` 右导出函子：用到了定义 右导出函子　proofs/def-dep.grothss-rdf.md
 - `def.bicomplex` 双复形：用到了定义 双复形　proofs/def-dep.grothss-bicomplex.md
 
+refs: Le Stum, Corollary 7.2.13；Le Stum, Corollary 7.2.21
+
 > 说明见 `notes/cor.grothendieck-spectral.md`

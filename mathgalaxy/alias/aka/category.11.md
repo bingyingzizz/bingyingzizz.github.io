@@ -1,6 +1,10 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 滤过范畴 | filtered category | filtered | 滤过余极限 | 有限余锥 | cocone → def.filtered-category
+
+- 滤过换成有向集 | 有向集 | directed set | Proposition 1.4.2 | Prop 1.4.2 → prop.filtered-directed
+
 - 可表函子保极限 | 可表函子保所有极限 | representable preserves limits | left exact | 左正合 | 保有限极限 → prop.representable-preserves-limits
 
 - 幺半群对象 | monoid object | Mon(C) | 笛卡尔范畴 | cartesian category → def.monoid-object
@@ -13,6 +17,4 @@
 
 - 局部化的 Hom | 分式演算 余极限 | Hom 是余极限 → prop.localization-hom-colim
 
-- 覆盖筛的四条等价 | 覆盖筛等价条件 | Proposition 3.2.12 | Prop 3.2.12 | 层化 覆盖筛 → prop.sieve-covering-equivalent
-
-见 `../../alias.md`。
+> 续见 alias/aka/category.12.md

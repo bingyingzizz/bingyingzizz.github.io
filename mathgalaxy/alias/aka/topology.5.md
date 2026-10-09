@@ -1,6 +1,16 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 紧生成空间是余反射的 | kification | 紧生成是余反射子范畴 | k 是右伴随 → prop.cg-coreflective
+
+- 紧生成空间的例子 | 局部紧空间是紧生成的 | R^I 不紧生成 → ex.cg-examples
+
+- 紧生成空间的等价刻画 | k-空间等价条件 → prop.cg-equivalent-conditions
+
+- k-拓扑 | k拓扑 | k-开 | k-闭 | k-化 | k-ification | kX → def.k-topology
+
+- kX 是余极限 → prop.ktx-colimit
+
 - 商映射乘局部紧 | 商映射与积 | quotient map product | 局部紧因子 → thm.quotient-product
 
 - 紧生成空间对积封闭 | CG 对有限积封闭 → cor.cg-product
@@ -14,17 +24,5 @@
 - 弱 Hausdorff | weak Hausdorff | 弱豪斯多夫 → def.weak-hausdorff
 
 - 弱 Hausdorff 的性质 | 对角 k-闭 → prop.weak-hausdorff-basic
-
-- 紧块的纤维积 | fiber product compact → prop.cgwh-fiber-product
-
-- k-闭等价关系 | 弱 Hausdorff 商 → prop.cg-kclosed-quotient
-
-- CGWH | CGWH 是反射子范畴 | 紧生成弱 Hausdorff | 弱 Hausdorff 化 → thm.cgwh-reflective
-
-- CGWH 的子空间 | CGWH 的滤过余极限 → prop.cgwh-closed
-
-- 函数空间弱 Hausdorff | kC(X,Y) → prop.cg-function-space
-
-- 积拓扑 | product topology | 乘积空间 | 投影 → def.product-topology
 
 > 续见 alias/aka/topology.6.md

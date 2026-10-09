@@ -13,4 +13,6 @@ $$\operatorname{Ext}^{n}(K^{\bullet}, L^{\bullet}) := \operatorname{Hom}_{D(\mat
 ## 它能推出什么 / 谁在用它
 - 被 `prop.ext-is-rhom` Ext 就是 RHom 用
 
+refs: Le Stum, Definition 7.2.9
+
 > 说明见 `notes/def.ext.md`
