@@ -11,7 +11,7 @@
 
 - 米田嵌入 | Yoneda embedding | h_X → prop.yoneda-embedding
 
-- 切片范畴 | category of elements | C_T → def.slice-category
+- 切片范畴 | slice category | C_T | C/T | 𝒞/T | F ↓ T | 预层的切片 → def.slice-category
 
 - 切片方块是笛卡尔的 → prop.slice-cartesian
 
@@ -24,7 +24,5 @@
 - 单位 | 余单位 | unit | counit | 三角等式 → def.adjunction-unit
 
 - 右伴随存在的判据 | adjoint functor existence → thm.right-adjoint-criterion
-
-- 全忠实等价于单位同构 → prop.adjoint-full-faithful
 
 > 续见 alias/aka/category.4.md

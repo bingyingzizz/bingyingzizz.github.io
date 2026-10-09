@@ -5,6 +5,6 @@
 
 - 过滤 | filtration | 关联分次 | graded pieces → def.filtration
 
-- 谱序列 | spectral sequence | 第一象限谱序列 | E_r 页 → def.spectral-sequence
+- 谱序列 | spectral sequence | 第一象限谱序列 | E^{p,q}_{r} | E_r 页 → def.spectral-sequence
 
 见 `../../alias.md`。

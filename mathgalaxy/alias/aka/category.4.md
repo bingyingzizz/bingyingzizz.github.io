@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 全忠实等价于单位同构 → prop.adjoint-full-faithful
+
 - 极限即伴随 | 常图函子的伴随 → prop.limit-adjoint
 
 - 右伴随保极限 | RAPL | 左伴随保余极限 → thm.right-adjoint-preserves-limits

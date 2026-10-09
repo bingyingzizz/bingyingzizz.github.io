@@ -3717,6 +3717,36 @@ window.addEventListener('error', function (e) {
         AL.nodes.forEach(function (r) { if (r && r.id) akaOf[r.id] = r.aka || []; });
       }
 
+      /* ⭐ 记号表（src/data/notation.js）也进检索。
+         不然 `F↓G`、`♯`、`K[k]`、`𝒞/T` 这些符号永远搜不到 —— 记号表登记了也没用。
+         做法：节点正文里用到了某条记号的 LaTeX 命令，就把那条记号的
+         **渲染形态（uni）与中文名（name）** 补进这个节点的检索串。 */
+      var NOT = MG.notation || null;
+      var notEntries = ((NOT && NOT.entries) || []).map(function (e) {
+        var pieces = String(e.tex || '').split(',').map(function (s) { return s.trim().toLowerCase(); })
+          .filter(function (s) { return s.length >= 2; });
+        return { pieces: pieces, uni: String(e.uni || ''), name: String(e.name || '') };
+      }).filter(function (e) { return e.pieces.length || e.name; });
+
+      function notationForms(hay, onHit) {
+        var extra = '';
+        for (var i = 0; i < notEntries.length; i++) {
+          var e = notEntries[i];
+          var hit = false;
+          for (var j = 0; j < e.pieces.length; j++) {
+            if (e.pieces[j] && hay.indexOf(e.pieces[j]) >= 0) { hit = true; break; }
+          }
+          if (!hit && e.name && hay.indexOf(e.name.toLowerCase()) >= 0) hit = true;
+          if (hit) {
+            /* ⚠️ hay 已经 toLowerCase 过了，追加的形态也必须一起小写 ——
+               否则 `K[k]`、`M(f)`、`E^{p,q}_{r}` 这些带大写字母的记号照样搜不到。 */
+            extra += ' ' + e.uni.toLowerCase() + ' ' + e.name.toLowerCase();
+            if (onHit) onHit(e);
+          }
+        }
+        return extra;
+      }
+
       index = view.graph.nodes.map(function (n) {
         var regions = n.regions.map(function (r) {
           var reg = view.graph.regionById[r];
@@ -3734,6 +3764,13 @@ window.addEventListener('error', function (e) {
         (n.tags || []).forEach(addWord);
         aka.forEach(addWord);
         grams2(n.label).forEach(addWord);
+
+        /* 记号表：命中的记号把「渲染形态 + 中文名」补进 hay 与词表。
+           ⚠️ 必须拿**原文**（留着 LaTeX）去匹配 —— U.plain() 会把公式整个剥掉，
+           剥完之后 `\sharp`、`\downarrow` 全不见了，记号表就永远匹配不上。 */
+        var rawHay = [n.label, n.title, (n.tags || []).join(' '),
+          n.statement || '', n.notes || ''].join('\n').toLowerCase();
+        hay += notationForms(rawHay, function (e) { addWord(e.name); addWord(e.uni); });
 
         return { node: n, hay: hay, label: n.label, title: n.title, st: st, aka: aka };
       });
@@ -5423,7 +5460,7 @@ MG.aliases = {
     { id: 'lem.yoneda', aka: ['米田引理', 'Yoneda lemma', 'Yoneda'] },
     { id: 'thm.represented-criterion', aka: ['表示的两个定义等价', 'representable iff hom'] },
     { id: 'prop.yoneda-embedding', aka: ['米田嵌入', 'Yoneda embedding', 'h_X'] },
-    { id: 'def.slice-category', aka: ['切片范畴', 'category of elements', 'C_T'] },
+    { id: 'def.slice-category', aka: ['切片范畴', 'slice category', 'C_T', 'C/T', '𝒞/T', 'F ↓ T', '预层的切片'] },
     { id: 'prop.slice-cartesian', aka: ['切片方块是笛卡尔的'] },
     { id: 'thm.density', aka: ['稠密性定理', 'density theorem', '预层是余极限'] },
     { id: 'lem.presheaf-mono-pointwise', aka: ['预层逐点检验', '预层的单满'] },
@@ -5614,7 +5651,7 @@ MG.aliases = {
     { id: 'def.quasi-iso', aka: ['拟同构', 'quasi-isomorphism', 'quasi-iso', '零调', 'acyclic'] },
     { id: 'prop.injective-criterion', aka: ['内射对象的判据', 'injective criterion', 'Baer 判据'] },
     { id: 'def.filtration', aka: ['过滤', 'filtration', '关联分次', 'graded pieces'] },
-    { id: 'def.spectral-sequence', aka: ['谱序列', 'spectral sequence', '第一象限谱序列', 'E_r 页'] },
+    { id: 'def.spectral-sequence', aka: ['谱序列', 'spectral sequence', '第一象限谱序列', 'E^{p,q}_{r}', 'E_r 页'] },
   ],
 
   /* --------------------------------------------------------- 问题钩子 */
@@ -6119,7 +6156,8 @@ MG.notation = {
     { g: 'cat', tex: 'M(f)', uni: 'M(f)', name: '态射 $f$ 的映射锥' },
     { g: 'cat', tex: 'K[k]', uni: 'K[k]', name: '复形的 $k$-位移' },
     { g: 'cat', tex: 'F^{n}M,\\ \\operatorname{Gr}^{n}M', uni: 'F^n／Gr^n', name: '过滤与关联分次' },
-    { g: 'cat', tex: 'E^{p,q}_{r}', uni: 'E^p,q_r', name: '谱序列的第 $r$ 页' },
+    { g: 'cat', tex: 'E^{p,q}_{r}', uni: 'E^{p,q}_{r}', name: '谱序列的第 $r$ 页',
+      note: '上下都是多重指标：$E^{p,q}_{r}$ 读作「第 $r$ 页的 $(p,q)$ 项」。' },
     { g: 'cat', tex: '\\mathrm{Cond},\\ \\mathrm{CondAb}', uni: 'Cond／CondAb', name: '凝聚态集 / 凝聚态阿贝尔群' },
     { g: 'cat', tex: '\\bar{\\mathbb{N}}', uni: 'ℕ̄', name: '$\\mathbb{N}$ 的**一点紧化**',
       note: '从 $\\bar{\\mathbb{N}}$ 到 $X$ 的连续映射 = 「收敛序列连同指定的极限」。' },
