@@ -12,4 +12,9 @@ $$\operatorname{Hom}_{\mathbf{K}(\mathcal{C})}(K, L) \;:=\; \operatorname{Hom}_{
 - `def.homotopy` 同伦：用到了定义 同伦　proofs/def-dep.homotopy-homotopy-category.md
 - `def.category` 范畴：用到了定义 范畴　proofs/def-dep.category-homotopy-category.md
 
+## 它能推出什么 / 谁在用它
+- 被 `prop.k-calculus-fractions` K(A) 允许分式演算 用
+- 被 `def.derived-category` 导出范畴 用
+- 被 `prop.hom-k-eq-hom-d` Hom 在同伦范畴与导出范畴里一样 用
+
 > 说明见 `notes/def.homotopy-category.md`

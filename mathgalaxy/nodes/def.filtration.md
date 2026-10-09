@@ -13,6 +13,7 @@ $$\cdots \subseteq F^{n}M \subseteq F^{n+1}M \subseteq \cdots \subseteq M$$
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.spectral-sequence` 谱序列 用
+- 被 `thm.filtered-complex-spectral` 过滤复形给出谱序列 用
 
 ## 说明
 命题：$\mathbf{F}(\mathcal{C}(\mathcal{A})) \cong \mathcal{C}(\mathbf{F}(\mathcal{A}))$ —— **「带过滤」与「取复形」可以交换**。所以可以先把复形过滤好，再逐层算同调。

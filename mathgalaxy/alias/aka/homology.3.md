@@ -1,28 +1,22 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
-- 映射锥 | mapping cone | 位移 | shift | K[1] → def.mapping-cone
+- Grothendieck 谱序列 | Corollary 7.2.13 | Cor 7.2.13 | Corollary 7.2.21 → cor.grothendieck-spectral
 
-- 导出三角 | distinguished triangle | 三角 | triangle → def.distinguished-triangle
+- Grothendieck 范畴 | Grothendieck category | AB5 → def.grothendieck-category
 
-- 三角的旋转 | rotation | 八面体公理 → prop.triangle-rotation
+- 取值在范畴里的层 | sheaf with values | presheaf with values | 一般值的层 → def.presheaf-valued
 
-- 三角态射的性质 → lem.triangle-morphism
+- 阿贝尔层 | abelian sheaf | 阿贝尔群层 | sheaf of abelian groups | Ab(C) | 层上的阿贝尔群 → def.abelian-sheaf
 
-- 同调 | cohomology | homology | H^n | 闭链 | 上边缘 → def.cohomology
+- 拓扑斯上的阿贝尔群 | Ab(T) 是 Grothendieck 范畴 → thm.topos-abelian-grothendieck
 
-- 同调的短正合列 → prop.cohomology-exact-sequence
+- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom → def.internal-hom
 
-- 上同调函子 | cohomological functor → def.cohomological-functor
+- 阿贝尔层的张量积 | 封闭对称幺半 | closed symmetric monoidal | Tensor | internal hom | 封闭张量结构 → def.tensor-abelian-sheaf
 
-- 长正合列 | long exact sequence | 蛇引理 | snake lemma | 连接同态 → thm.long-exact
+- 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
 
-- 拟同构 | quasi-isomorphism | quasi-iso | 零调 | acyclic → def.quasi-iso
+- Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
 
-- 内射对象的判据 | injective criterion | Baer 判据 → prop.injective-criterion
-
-- 过滤 | filtration | 关联分次 | graded pieces → def.filtration
-
-- 谱序列 | spectral sequence | 第一象限谱序列 | E^{p,q}_{r} | E_r 页 → def.spectral-sequence
-
-见 `../../alias.md`。
+> 续见 alias/aka/homology.4.md

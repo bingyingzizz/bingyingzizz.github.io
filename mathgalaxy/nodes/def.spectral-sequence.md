@@ -17,4 +17,8 @@ $$d^{p,q}_{r} : E^{p,q}_{r} \longrightarrow E^{p+r,\, q-r+1}_{r}$$
 - `def.cochain-complex` 上链复形：用到了定义 上链复形　proofs/def-dep.complex-spectral-sequence.md
 - `def.filtration` 过滤：用到了定义 过滤　proofs/def-dep.filtration-spectral-sequence.md
 
+## 它能推出什么 / 谁在用它
+- 被 `thm.filtered-complex-spectral` 过滤复形给出谱序列 用
+- 被 `cor.grothendieck-spectral` Grothendieck 谱序列 用
+
 > 说明见 `notes/def.spectral-sequence.md`

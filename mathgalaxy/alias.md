@@ -14,6 +14,6 @@
 - 抽象代数　`alias/algebra.md` 11 问法　·　`alias/aka/algebra.md` 21 别名
 - 分析学　`alias/analysis.md` 41 问法　·　`alias/aka/analysis.md` 160 别名
 - 范畴论　`alias/category.md` 52 问法　·　`alias/aka/category.md` 122 别名
-- 同调代数　`alias/homology.md` 21 问法　·　`alias/aka/homology.md` 32 别名
+- 同调代数　`alias/homology.md` 21 问法　·　`alias/aka/homology.md` 46 别名
 - 凝聚态数学　`alias/condensed.md` 13 问法　·　`alias/aka/condensed.md` 23 别名
 

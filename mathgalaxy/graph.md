@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-09T07:02:46.698Z
-> 9 星系 / 42 星团 / 467 节点 / 987 连线（强边 978，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-09T07:07:59.558Z
+> 9 星系 / 42 星团 / 481 节点 / 1015 连线（强边 1006，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -6194,7 +6194,7 @@ $$\operatorname{Hom}_{\operatorname{Ind}(\mathcal{C})}\Bigl(\text{“}\varinjlim
 
 **公式为什么长这样**：要给两个形式余极限之间的映射，先固定 $j$，对每个 $i$ 给一条 $X_{i} \to Y_{j}$ 且与 $i$ 的变动相容（这就是 $\varprojlim_{i}$），再对 $j$ 取滤过余极限（$Y_{j}$ 越往后越大，晚给的映射可以「补」上早先的）。
 
-⭐ **$operatorname{Ind}(\mathcal{C})$ 是「按滤过余极限把 $\mathcal{C}$ 补全」得到的范畴。** 原书 Prop 5.2.6 的例子里就有它：$\mathcal{C}$ 是阿贝尔范畴时 $\operatorname{Ind}(\mathcal{C})$ 是 Grothendieck 范畴。
+⭐ **$\operatorname{Ind}(\mathcal{C})$ 是「按滤过余极限把 $\mathcal{C}$ 补全」得到的范畴。** 原书 Prop 5.2.6 的例子里就有它：$\mathcal{C}$ 是阿贝尔范畴时 $\operatorname{Ind}(\mathcal{C})$ 是 Grothendieck 范畴。
 
 **例子**：$\operatorname{Ind}(\mathbf{FinSet})$ 是「所有集合」（每个集合都是它有限子集的滤过余极限）；$K$-理论的「向量丛按直和/余极限补全」用的也是它。
 
@@ -7728,6 +7728,131 @@ $$K \xrightarrow{\ f\ } L \longrightarrow M(f) \longrightarrow K[1]$$
 
 第 2 条是「五引理」在同伦范畴里的样子：**前两步定住了，第三步就跟着定住**。第 1 条说明三角之间的态射被前两步控制得很紧 —— 这正是三角范畴公理里那条最不明显的要求的来源。
 
+#### K(A) 允许分式演算　`prop.k-calculus-fractions`
+*命题*　$K(\mathcal{A})$ 关于拟同构允许左右分式演算
+
+$K(\mathcal{A})$ 关于**拟同构**这一族态射同时允许**左**与**右分式演算**。
+
+#### 导出范畴　`def.derived-category`
+*定义*　导出范畴 $D(\mathcal{A})$
+
+阿贝尔范畴 $\mathcal{A}$ 的**导出范畴** $D(\mathcal{A})$ 是**同伦范畴 $K(\mathcal{A})$ 关于拟同构的局部化**。
+
+于是 $D(\mathcal{A})$ 的对象与 $K(\mathcal{A})$（等价地 $C(\mathcal{A})$）相同，而 $K^{\bullet} \to L^{\bullet}$ 的一个态射是一个「屋顶」：
+
+$$K^{\bullet} \xleftarrow{\ \sim\ } K'^{\bullet} \longrightarrow L^{\bullet},$$
+
+左边的箭头是**拟同构**（已变成同构）。
+
+⭐ **为什么要在 $K(\mathcal{A})$ 里再商一次**：$K(\mathcal{A})$ 里同伦的态射被identify了，但**拟同构还不是同构** —— 而求导函子、$\operatorname{Ext}$、谱序列这些机器真正想要的，是「拟同构 = 同构」的那个范畴。$D(\mathcal{A})$ 就是为此造的。
+
+**「屋顶」是什么**：局部化一般不能只靠「右走一步」，因为拟同构不总能通分；于是态射写成「先逆一个拟同构、再走一步」。这也正是 $D(\mathcal{A})$ 的 Hom **可能不再是集合**的原因 —— 只有当 $\mathcal{A}$ 有足够多内射（或投射）时才控制得住。
+
+📌 上有界、下有界、有界版本记 $D^{+}$、$D^{-}$、$D^{b}$；内射复形的版本记 $K^{+}(\mathcal{I})$ 等。
+
+📌 原书 **Definition 7.2.2**（前置是 **Prop 7.2.1**）。
+
+#### 正合列给出导出三角　`prop.exact-to-triangle`
+*命题*　复形的短正合列 $\implies$ 导出三角
+
+若 $0 \to K^{\bullet} \xrightarrow{f} L^{\bullet} \xrightarrow{g} M^{\bullet} \to 0$ 是复形的**短正合列**，则存在一个**导出三角**
+
+本质上是说：这个短正合列「就是」某个映射锥三角（在 $D(\mathcal{A})$ 里同构于 $K^{\bullet} \xrightarrow{f} L^{\bullet} \to M(f) \to K^{\bullet}[1]$）。
+
+⭐ **这就是长正合列的来源**：有了三角，取同调函子就直接得到长正合列（见「长正合列」）。
+
+📌 原书 **Proposition 7.2.4**。
+
+#### Hom 在同伦范畴与导出范畴里一样　`prop.hom-k-eq-hom-d`
+*命题*　$\operatorname{Hom}_{K}(K^{\bullet}, I^{\bullet}) = \operatorname{Hom}_{D}(K^{\bullet}, I^{\bullet})$
+
+#### 内射复形就是导出范畴　`thm.k-plus-injectives`
+*定理*　$K^{+}(\mathcal{I}) \simeq D^{+}(\mathcal{A})$
+
+若 $\mathcal{A}$ **有足够多内射对象**，则含入
+
+记 $K^{+}(\mathcal{I})$ 为**上有界内射复形**模同伦构成的范畴。这条说：要算 $D^{+}(\mathcal{A})$ 里的东西，**只需要看内射复形**。
+
+⭐ **实用价值**：这就是「用内射消解算右导出函子」的合法性来源 —— 右导出函子 $RF$ 的定义本来就要求把复形换成内射复形，这条保证了那一侧的范畴**就是**导出范畴本身，替换不会丢信息。
+
+对偶地：有足够多投射时 $K^{-}(\mathcal{P}) \simeq D^{-}(\mathcal{A})$。
+
+📌 原书 **Theorem 7.2.6**。
+
+#### 右导出函子　`def.right-derived-functor`
+*定义*　右导出函子 $RF$
+
+设 $F : \mathcal{A} \to \mathcal{A}'$ 是**加法函子**、$\mathcal{A}$ 有足够多内射对象。$F$ 的**右导出函子** $RF$ 是（在同构意义下唯一的）使下图交换的函子
+
+$$\begin{array}{ccc} K^{+}(\mathcal{A}) & \xrightarrow{\;F\;} & K^{+}(\mathcal{A}') \\[2pt] {\scriptstyle \text{换成内射复形}}\big\downarrow & & \\[2pt] K^{+}(\mathcal{I}) & \xrightarrow[\;RF\;]{} & \end{array}$$
+
+**读法**：$F$ 本身不正合（所以不能把它直接送到导出范畴里），但**先把复形换成内射复形**、再作用 $F$、再回导出范畴，这一步就正合了 —— 那个复合就是 $RF$。
+
+**分量形式**：$R^{n}F(M) := H^{n}(RF(M))$，其中 $M$ 看成集中在 $0$ 次的复形。$R^{0}F = F$（对左正合函子），$R^{n}F = 0$（$n < 0$）。
+
+⭐ **动机**：$F$ 左正合时，短正合列 $0 \to M' \to M \to M'' \to 0$ 只给出 $0 \to FM' \to FM \to FM''$ —— **右边断掉了**。右导出函子 $R^{1}F(M'')$ 正好补上那个断口，把长正合列接起来。
+
+**对偶**：左导出函子 $LF$ 用**投射**消解，补的是「右半段断掉」的情形（$M \otimes_{A} -$、$\operatorname{Tor}$）。
+
+📌 原书 **Definition 7.2.7**。
+
+#### 导出函子的长正合列　`thm.derived-long-exact`
+*定理*　短正合列 $\implies$ 右导出函子的长正合列
+
+任意短正合列 $0 \to K^{\bullet} \to L^{\bullet} \to M^{\bullet} \to 0$（在 $C^{+}(\mathcal{A})$ 里）给出长正合列
+
+$$\cdots \to R^{n}FK^{\bullet} \to R^{n}FL^{\bullet} \to R^{n}FM^{\bullet} \xrightarrow{\ \delta\ } R^{n+1}FK^{\bullet} \to \cdots$$
+
+⭐ **这就是「求导」的全部收益**：原来 $F$ 只给半条，$RF$ 把连接同态 $\delta$ 补上，长正合列就活了。
+
+📌 原书 **Theorem 7.2.8**。
+
+#### 扩展群 Ext　`def.ext`
+*定义*　扩展群 $\operatorname{Ext}^{n}$
+
+$L^{\bullet}$ 被 $K^{\bullet}$ 的**第 $n$ 个扩展群**是
+
+$$\operatorname{Ext}^{n}(K^{\bullet}, L^{\bullet}) := \operatorname{Hom}_{D(\mathcal{A})}\bigl(K^{\bullet},\ L^{\bullet}[n]\bigr).$$
+
+**几条立刻要记住的**（对 $\mathcal{A}$ 里的对象 $M, N$）：
+
+
+
+- $\operatorname{Ext}^{n}(M, N) = 0$（$n < 0$）；
+- $\operatorname{Ext}^{0}(M, N) = \operatorname{Hom}(M, N)$；
+- $\operatorname{Ext}^{1}(M, N)$ **分类 $N$ 被 $M$ 的扩张**（同构意义下）；
+- 在 $\mathbf{Ab}$ 里 $\operatorname{Ext}^{n}(M, N) = 0$（$n > 1$）；
+- $\operatorname{Ext}^{1}(\mathbb{Z}/n\mathbb{Z},\ \mathbb{Z}/m\mathbb{Z}) = \mathbb{Z}/d\mathbb{Z}$，$d = \gcd(m, n)$。
+
+⭐ **两种算法**：$\operatorname{Ext}^{n} = $ 「导出范畴里的 Hom」（这条定义）$ = R^{n}\operatorname{Hom}$（用内射消解算）。两者一致 —— 见下一条。
+
+📌 原书 **Definition 7.2.9**。
+
+#### Ext 就是 RHom　`prop.ext-is-rhom`
+*命题*　$R^{n}\operatorname{Hom}(M, K^{\bullet}) = \operatorname{Ext}^{n}(M, K^{\bullet})$
+
+若 $M \in \mathcal{A}$、$K^{\bullet} \in C^{+}(\mathcal{A})$，则 $R^{n}\operatorname{Hom}(M, K^{\bullet}) = \operatorname{Ext}^{n}(M, K^{\bullet})$（对偶地 $R^{n}\operatorname{Hom}(-, N)$ 给出另一边的 $\operatorname{Ext}$）。
+
+#### F-零调对象　`def.f-acyclic`
+*定义*　$F$-零调对象（$F$-Acyclic）
+
+设 $F$ 是**左正合**加法函子、有足够多内射。对象 $M \in \mathcal{A}$ 叫（右）**$F$-零调的**，如果
+
+$$FM = RFM,$$
+
+即 $FM = R^{0}FM$ 且 $R^{n}FM = 0$（$n \ne 0$）。
+
+**为什么重要**：$F$-零调对象**可以拿来做消解** —— 算 $RF$ 时不必只用内射对象，用零调对象也合法（这就是下一条 Leray 零调性说的）。
+
+**例子**：内射对象当然零调（$RF$ 就是用它们定义的）；平坦模对 $M \otimes_{A} -$ 零调；**Stonean 空间上的凝聚态阿贝尔群**在取截面函子下零调 —— 那正是 §8 的开头。
+
+📌 原书 **Definition 7.2.11**。
+
+#### Leray 零调性　`prop.leray-acyclicity`
+*命题*　Leray 零调性：零调复形算导出函子
+
+若 $K^{\bullet} \in C^{+}(\mathcal{A})$ 且每个 $K^{n}$ 都是 **$F$-零调**的，则 $RFK^{\bullet} = FK^{\bullet}$。
+
 ### 星团：同调与正合列
 > 造出「把复形读成不变量」这件事：同调 → 上同调函子 → 长正合列 → 拟同构与零调 → 内射对象。
 
@@ -7845,6 +7970,49 @@ $$F^{p}H^{n} := \operatorname{im}\bigl(H^{n}(F^{p}K) \to H^{n}(K)\bigr)$$
 继承。于是每根 $H^{n}$ 上都有一串 $H^{n} \supseteq \cdots \supseteq F^{p}H^{n} \supseteq F^{p+1}H^{n} \supseteq \cdots \supseteq 0$。
 
 谱序列说的就是：**对充分大的 $r$，$E_{r}$ 页稳定下来，恰好等于这个过滤的关联分次**。所以它是「从过滤的复形一层层逼近同调」的工具 —— 直接算 $H^{n}$ 太难时，就把 $H^{n}$ 拆成容易算的那些碎片。
+
+#### 过滤复形给出谱序列　`thm.filtered-complex-spectral`
+*定理*　下有界过滤复形 $\implies$ 谱序列
+
+设 $K^{\bullet}$ 是**带过滤**的复形，且**下有界**。则存在谱序列
+
+$$E^{p,q}_{1} = H^{p+q}\bigl(\operatorname{Gr}^{p}K^{\bullet}\bigr) \;\Longrightarrow\; H^{p+q}(K^{\bullet}).$$
+
+⭐ **读法**：先把带过滤的复形「按层切碎」（取关联分次 $\operatorname{Gr}^{p}$），算出每层的同调当第一页；然后微分一页一页地把它们拼回去，收敛到**原来的**同调。
+
+⚠️ 「下有界」这个条件不能省 —— 它保证收敛（不是每个谱序列都会收敛到什么东西）。
+
+📌 原书 **Theorem 7.2.16**。
+
+#### 双复形　`def.bicomplex`
+*定义*　双复形（Bicomplex）
+
+加法范畴里的**双复形**就是**复形的复形**：即 $(\mathbb{Z}, \preceq)^{2}$ 上的图 $(K^{p,q}, d^{p,q}, d'^{p,q})$，使对一切 $p, q$
+
+$$d^{p+1,q} \circ d^{p,q} = 0, \qquad d'^{p,q+1} \circ d'^{p,q} = 0, \qquad d'^{p+1,q} \circ d^{p,q} = d^{p,q+1} \circ d'^{p,q}.$$
+
+前两条说「每个方向各自是复形」；**第三条说两个方向的微分交换**（差一个符号，视约定）。
+
+⭐ **怎么把它变成一个普通复形**：取**全复形** $K^{n} := \bigoplus_{p+q=n} K^{p,q}$，微分 $d + d'$（带符号）。于是双复形的同调与「逐行算完再逐列算」的关系，正是给出谱序列的地方。
+
+**典型来源**：把复形作内射消解时自然会得到双复形（$I^{p,q}$ 里 $p$ 是原复形的次数、$q$ 是消解的次数）。**Grothendieck 谱序列**就是从它来的。
+
+📌 原书 **Definition 7.2.17**。
+
+#### Grothendieck 谱序列　`cor.grothendieck-spectral`
+*推论*　Grothendieck 谱序列
+
+设 $\mathcal{A} \xrightarrow{F} \mathcal{A}' \xrightarrow{G} \mathcal{A}''$ 是加法函子，$\mathcal{A}, \mathcal{A}'$ **有足够多内射**、且 $F$ 把内射对象送到 $G$-零调对象。则存在谱序列
+
+$$E^{p,q}_{2} = R^{p}G\bigl(R^{q}F(M)\bigr) \;\Longrightarrow\; R^{p+q}(G \circ F)(M).$$
+
+⭐ **它的用处**：想算复合函子的导出函子 $R^{n}(G \circ F)$，可以**先算 $R^{q}F$、再算 $R^{p}G$**，中间用谱序列把两层的贡献拼起来。这是同调代数里最基本的「两步走」工具。
+
+**典型应用**：层上同调 — 先层化再取截面、Čech 上同调到 de Rham 上同调、群的同调里的 Lyndon–Hochschild–Serre 谱序列，都是它的特例。
+
+**为什么要求 $F$ 把内射送到 $G$-零调**：这样 $F$ 的内射消解才能拿来做 $G$ 的零调消解，两边才接得上。
+
+📌 原书 **Corollary 7.2.13**（与 **Corollary 7.2.21** 同一件事的另一次陈述）。
 
 ### 星团：阿贝尔层
 > 造出「拓扑斯里的阿贝尔群」：取值一般的层 → 阿贝尔层 → 拓扑斯上的阿贝尔群是 Grothendieck 范畴 → 内 Hom → 张量积 → 平坦性。
@@ -13267,7 +13435,7 @@ $G$ 是**函子**，$X \downarrow G$ 是绕着它搭起来的。
 
 #### 定义引用：「元素范畴」→ 逗号范畴　`def-dep.el-comma`
 
-元素范畴是**逗号范畴**的特例：把 $G$ 取成 $mathbf{1} \to mathbf{Set}$。
+元素范畴是**逗号范畴**的特例：把 $G$ 取成 $\mathbf{1} \to \mathbf{Set}$。
 
 #### 定义引用：「伴随函子」→ 反射子范畴　`def-dep.adjoint-reflective`
 
@@ -14345,6 +14513,118 @@ AB6 说的是**滤过余极限**与积交换。
 
 纤维余积就是**张量积**。
 
+#### 定义引用：「分式演算下的局部化」→ K(A) 允许分式演算　`def-dep.kfrac-fractions`
+
+$K(\mathcal{A})$ 关于拟同构**允许分式演算**。
+
+#### 定义引用：「同伦范畴」→ K(A) 允许分式演算　`def-dep.kfrac-kcat`
+
+说的是**同伦范畴** $K(\mathcal{A})$。
+
+#### 定义引用：「局部化」→ 导出范畴　`def-dep.dercat-localization`
+
+导出范畴是 $K(\mathcal{A})$ 关于拟同构的**局部化**。
+
+#### 定义引用：「拟同构」→ 导出范畴　`def-dep.dercat-quasiiso`
+
+局部化掉的是**拟同构**。
+
+#### 定义引用：「同伦范畴」→ 导出范畴　`def-dep.dercat-kcat`
+
+被局部化的对象是**同伦范畴**。
+
+#### 定义引用：「导出三角」→ 正合列给出导出三角　`def-dep.exacttri-triangle`
+
+结论给出一个**导出三角**。
+
+#### 定义引用：「映射锥」→ 正合列给出导出三角　`def-dep.exacttri-cone`
+
+那个三角就是**映射锥**三角。
+
+#### 定义引用：「同伦范畴」→ Hom 在同伦范畴与导出范畴里一样　`def-dep.homkd-kcat`
+
+比较的是**同伦范畴**与导出范畴里的 Hom。
+
+#### 定义引用：「导出范畴」→ Hom 在同伦范畴与导出范畴里一样　`def-dep.homkd-dercat`
+
+结论说两边相等。
+
+#### 定义引用：「导出范畴」→ 内射复形就是导出范畴　`def-dep.kplusinj-dercat`
+
+结论是 $K^{+}(\mathcal{I}) simeq D^{+}(\mathcal{A})$。
+
+#### 定义引用：「函子」→ 右导出函子　`def-dep.rdf-functor`
+
+被求导的是一个**加法函子**。
+
+#### 定义引用：「上链复形」→ 右导出函子　`def-dep.rdf-complex`
+
+求导要在**复形**上做（换成内射复形）。
+
+#### 定义引用：「右导出函子」→ 导出函子的长正合列　`def-dep.derlex-rdf`
+
+长正合列是**右导出函子**给的。
+
+#### 定义引用：「长正合列」→ 导出函子的长正合列　`def-dep.derlex-longexact`
+
+它就是长正合列在导出函子上的版本。
+
+#### 定义引用：「导出范畴」→ 扩展群 Ext　`def-dep.ext-dercat`
+
+$\operatorname{Ext}^{n}$ 定义成**导出范畴**里的 Hom。
+
+#### 定义引用：「导出三角」→ 扩展群 Ext　`def-dep.ext-triangle`
+
+用到了**位移** $L^{\bullet}[n]$。
+
+#### 定义引用：「扩展群 Ext」→ Ext 就是 RHom　`def-dep.extrhom-ext`
+
+命题说两条 $\operatorname{Ext}$ 的算法一致。
+
+#### 定义引用：「内 Hom」→ Ext 就是 RHom　`def-dep.extrhom-internalhom`
+
+另一边是**内部 Hom** 的导出函子 $R^{n}\operatorname{Hom}$。
+
+#### 定义引用：「右导出函子」→ F-零调对象　`def-dep.acyclic-rdf`
+
+零调性的定义用的就是**右导出函子**。
+
+#### 定义引用：「F-零调对象」→ Leray 零调性　`def-dep.leray-acyclic`
+
+前提是每个 $K^{n}$ 都 **$F$-零调**。
+
+#### 定义引用：「右导出函子」→ Leray 零调性　`def-dep.leray-rdf`
+
+结论是 $RFK^{\bullet} = FK^{\bullet}$。
+
+#### 定义引用：「过滤」→ 过滤复形给出谱序列　`def-dep.filtss-filtration`
+
+前提是复形**带过滤**。
+
+#### 定义引用：「谱序列」→ 过滤复形给出谱序列　`def-dep.filtss-ss`
+
+结论是一个**谱序列**。
+
+#### 定义引用：「上链复形」→ 过滤复形给出谱序列　`def-dep.filtss-complex`
+
+说的是**复形**。
+
+#### 定义引用：「上链复形」→ 双复形　`def-dep.bicomplex-complex`
+
+双复形就是**复形的复形**。
+
+#### 定义引用：「谱序列」→ Grothendieck 谱序列　`def-dep.grothss-ss`
+
+结论是一个**谱序列**。
+
+#### 定义引用：「右导出函子」→ Grothendieck 谱序列　`def-dep.grothss-rdf`
+
+两头都是**导出函子** $R^{p}G \circ R^{q}F$。
+
+#### 定义引用：「双复形」→ Grothendieck 谱序列　`def-dep.grothss-bicomplex`
+
+它由**双复形**（取 $F$ 的内射消解）造出来。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -14550,7 +14830,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **拓扑斯 ↔ 凝聚态集**　3 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　4 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
-- **同调与正合列 ↔ 复形与导出三角**　3 条节点级连线
+- **同调与正合列 ↔ 复形与导出三角**　5 条节点级连线
 - **序结构 ↔ 集合的构造**　4 条节点级连线
 - **选择原理 ↔ 序结构**　7 条节点级连线
 - **微分定理 ↔ 度量空间**　3 条节点级连线
@@ -14590,7 +14870,9 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **伴随与反射 ↔ 拓扑斯**　2 条节点级连线
 - **图与极限 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 紧 Haus 与 Stone**　2 条节点级连线
-- **范畴与图 ↔ 复形与导出三角**　2 条节点级连线
+- **函子与自然变换 ↔ 复形与导出三角**　2 条节点级连线
+- **范畴与图 ↔ 复形与导出三角**　4 条节点级连线
+- **复形与导出三角 ↔ 过滤与谱序列**　4 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　8 条节点级连线
 - **单满、子对象与像 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **预层与米田 ↔ 阿贝尔层**　2 条节点级连线

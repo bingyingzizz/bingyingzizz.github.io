@@ -17,8 +17,10 @@
 
 - AB6 | 滤过余极限与积交换 | Exercise 1.69 → prop.ab6
 
-- Grothendieck 范畴 | Grothendieck category | AB5 → def.grothendieck-category
+- K(A) 分式演算 | Proposition 7.2.1 | Prop 7.2.1 → prop.k-calculus-fractions
 
-- 取值在范畴里的层 | sheaf with values | presheaf with values | 一般值的层 → def.presheaf-valued
+- 导出范畴 | derived category | D(A) | Definition 7.2.2 | Def 7.2.2 → def.derived-category
+
+- 正合列给出导出三角 | Proposition 7.2.4 | Prop 7.2.4 → prop.exact-to-triangle
 
 > 续见 alias/aka/homology.2.md

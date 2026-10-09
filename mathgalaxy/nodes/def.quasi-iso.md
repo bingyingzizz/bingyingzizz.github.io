@@ -7,4 +7,7 @@ layer 14 · 定义 · 同调与正合列 · 同调代数
 ## 为什么成立（入边，证明在 proofs/）
 - `def.cohomology` 同调：用到了定义 同调　proofs/def-dep.cohomology-quasi-iso.md
 
+## 它能推出什么 / 谁在用它
+- 被 `def.derived-category` 导出范畴 用
+
 > 说明见 `notes/def.quasi-iso.md`

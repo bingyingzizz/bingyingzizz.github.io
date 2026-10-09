@@ -3,4 +3,4 @@
 
 `def.elements-category` 元素范畴 → `def.comma-category` 逗号范畴
 
-元素范畴是**逗号范畴**的特例：把 $G$ 取成 $mathbf{1} \to mathbf{Set}$。
+元素范畴是**逗号范畴**的特例：把 $G$ 取成 $\mathbf{1} \to \mathbf{Set}$。

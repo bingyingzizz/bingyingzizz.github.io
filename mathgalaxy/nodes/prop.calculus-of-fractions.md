@@ -19,3 +19,5 @@ $$\begin{array}{ccc} Z & \xrightarrow{\;g\;} & Y \\[2pt] {\scriptstyle v}\big\do
 - 被 `prop.localization-hom-colim` 局部化的 Hom 是滤过余极限 用
 
 > 说明见 `notes/prop.calculus-of-fractions.md`
+
+- …另有出边，续页见 `nodes/prop.calculus-of-fractions.3.md`

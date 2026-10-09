@@ -1,24 +1,24 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
-- 阿贝尔层 | abelian sheaf | 阿贝尔群层 | sheaf of abelian groups | Ab(C) | 层上的阿贝尔群 → def.abelian-sheaf
+- Hom 在同伦与导出范畴一样 | Proposition 7.2.5 | Prop 7.2.5 → prop.hom-k-eq-hom-d
 
-- 拓扑斯上的阿贝尔群 | Ab(T) 是 Grothendieck 范畴 → thm.topos-abelian-grothendieck
+- 内射复形等价导出范畴 | K+(I) 等价 D+(A) | Theorem 7.2.6 | Thm 7.2.6 → thm.k-plus-injectives
 
-- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom → def.internal-hom
+- 右导出函子 | right derived functor | RF | RnF | Definition 7.2.7 | Def 7.2.7 → def.right-derived-functor
 
-- 阿贝尔层的张量积 | 封闭对称幺半 | closed symmetric monoidal | Tensor | internal hom | 封闭张量结构 → def.tensor-abelian-sheaf
+- 导出函子的长正合列 | Theorem 7.2.8 | Thm 7.2.8 → thm.derived-long-exact
 
-- 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
+- Ext | 扩展群 | extension group | Ext^n | Definition 7.2.9 | Def 7.2.9 → def.ext
 
-- Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
+- Ext 就是 RHom | Proposition 7.2.10 | Prop 7.2.10 → prop.ext-is-rhom
 
-- 复形 | complex | 上链复形 | cochain complex | 链复形 | 微分 → def.cochain-complex
+- F-零调 | acyclic | 零调对象 | Definition 7.2.11 | Def 7.2.11 → def.f-acyclic
 
-- 复形范畴是加法范畴 | 逐项计算 → prop.complex-additive
+- Leray 零调性 | Proposition 7.2.12 | Prop 7.2.12 → prop.leray-acyclicity
 
-- 同伦 | homotopy | 零伦 | null-homotopic | 链同伦 → def.homotopy
+- 过滤复形给出谱序列 | Theorem 7.2.16 | Thm 7.2.16 → thm.filtered-complex-spectral
 
-- 同伦范畴 | homotopy category | K(C) | 同伦等价 → def.homotopy-category
+- 双复形 | bicomplex | 复形的复形 | Definition 7.2.17 | Def 7.2.17 → def.bicomplex
 
 > 续见 alias/aka/homology.3.md

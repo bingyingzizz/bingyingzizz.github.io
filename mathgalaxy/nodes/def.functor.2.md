@@ -17,3 +17,4 @@
 - 被 `def.connected-category` 连通范畴 用
 - 被 `def.preserves-limit` 保极限的函子 用
 - 被 `def.additive-functor` 加法函子 用
+- 被 `def.right-derived-functor` 右导出函子 用
