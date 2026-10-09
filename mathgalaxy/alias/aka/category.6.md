@@ -1,32 +1,28 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 层中单满即同构 | epi-mono factorization → prop.sheaf-mono-epi-iso
+- 余连续函子 | cocontinuous | Definition 3.4.6 | Def 3.4.6 → def.cocontinuous-functor
 
-- 满态射的局部判据 | 局部满 | local epimorphism → prop.sheaf-epi-criterion
+- 诱导拓扑 | induced topology | Definition 3.4.7 | Def 3.4.7 → def.induced-topology
 
-- 有效等价关系 | effective equivalence relation | 有效关系 → def.effective-equivalence
+- 反射子范畴 | reflective subcategory | 余反射 | 反射函子 → def.reflective-subcategory
 
-- 层化与商交换 → prop.sheafify-equivalence
+- 反射子范畴里的极限 → prop.reflective-limits
 
-- 标准拓扑 | canonical topology | 次标准 | subcanonical → def.canonical-topology
+- Kan 延拓 | Kan extension | 左 Kan 延拓 | 右 Kan 延拓 → def.kan-extension
 
-- 覆盖等价于余积满 → prop.covering-sieve-epi
+- 余极限是 Kan 延拓 | 伴随是 Kan 延拓 → ex.kan-extension
 
-- 不交万有余积与次标准 → prop.disjoint-universal
+- 滤过余极限正合 | filtered colimits are exact → prop.filtered-exact
 
-- 预拓扑斯 | pretopos | 预拓扑斯公理 → def.pretopos
+- 筛 | sieve | 覆盖筛 | covering sieve → def.sieve
 
-- 预拓扑斯里的满单分解 | 平衡范畴 | balanced → prop.pretopos-factorization
+- 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology → def.pretopology
 
-- 子对象构成有界格 | 子对象格 → prop.subobject-lattice
+- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 → def.grothendieck-topology
 
-- 预标准拓扑 | precanonical topology → def.precanonical-topology
+- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 → def.sheaf
 
-- 预标准拓扑下的层 → prop.precanonical-sheaf
-
-- 余积与商在层范畴不变 → prop.precanonical-preserves
-
-- 单满在层化后不变 → prop.precanonical-mono-epi
+- 层的下降条件 | sheaf condition | 层条件 → thm.sheaf-descent
 
 > 续见 alias/aka/category.7.md

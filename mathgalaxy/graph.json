@@ -2,13 +2,13 @@
  "meta": {
   "name": "数学星图 MathGalaxy",
   "schema": "mathgalaxy/v1",
-  "generated": "2026-10-09T04:30:36.301Z",
+  "generated": "2026-10-09T06:58:57.494Z",
   "counts": {
    "regions": 9,
    "clusters": 42,
-   "nodes": 434,
-   "edges": 934,
-   "strong": 925,
+   "nodes": 453,
+   "edges": 960,
+   "strong": 951,
    "weak": 9
   },
   "readingGuide": {
@@ -63,7 +63,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 67
+   "nodeCount": 70
   },
   {
    "id": "algebra",
@@ -87,7 +87,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 98
+   "nodeCount": 111
   },
   {
    "id": "homology",
@@ -95,7 +95,7 @@
    "en": "Homological Algebra",
    "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
    "color": "#C89A2B",
-   "nodeCount": 28
+   "nodeCount": 31
   },
   {
    "id": "condensed",
@@ -287,7 +287,7 @@
    "name": "拓扑空间",
    "parent": "topology",
    "desc": "造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。",
-   "nodeCount": 13,
+   "nodeCount": 15,
    "nodes": [
     "def.topology",
     "def.closed-set",
@@ -301,7 +301,9 @@
     "def.connected",
     "def.clopen",
     "def.normal-space",
-    "lem.urysohn"
+    "lem.urysohn",
+    "def.locally-compact",
+    "thm.tykhonov"
    ]
   },
   {
@@ -326,7 +328,7 @@
    "name": "紧 Haus 与 Stone",
    "parent": "topology",
    "desc": "造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → Stone 空间 = 投射有限空间 → Gleason 定理。",
-   "nodeCount": 18,
+   "nodeCount": 19,
    "nodes": [
     "def.chaus",
     "prop.chaus-reflective",
@@ -345,7 +347,8 @@
     "def.profinite",
     "thm.stone-profinite",
     "thm.gleason",
-    "cor.stonean-retract"
+    "cor.stonean-retract",
+    "def.totally-disconnected"
    ]
   },
   {
@@ -623,7 +626,7 @@
    "name": "范畴与图",
    "parent": "category",
    "desc": "造出「范畴」这个概念本身：先有图 $(V, E, s, t)$，再配上复合与单位，得到一个六元组。",
-   "nodeCount": 8,
+   "nodeCount": 10,
    "nodes": [
     "def.universe",
     "def.graph",
@@ -632,7 +635,9 @@
     "def.section-retraction",
     "def.localization",
     "prop.calculus-of-fractions",
-    "prop.localization-hom-colim"
+    "prop.localization-hom-colim",
+    "def.subcategory",
+    "prop.iso-unique-section"
    ]
   },
   {
@@ -640,13 +645,15 @@
    "name": "函子与自然变换",
    "parent": "category",
    "desc": "造出「范畴之间的翻译」：函子 → 忠实 / 满 / 全忠实 → 自然变换 → 范畴等价。",
-   "nodeCount": 5,
+   "nodeCount": 7,
    "nodes": [
     "def.functor",
     "def.natural-transformation",
     "def.ff-faithful",
     "def.essentially-surjective",
-    "def.cat-equivalence"
+    "def.cat-equivalence",
+    "def.preserves-limit",
+    "def.exact-functor"
    ]
   },
   {
@@ -654,7 +661,7 @@
    "name": "图与极限",
    "parent": "category",
    "desc": "造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子。",
-   "nodeCount": 15,
+   "nodeCount": 18,
    "nodes": [
     "def.commutative-diagram",
     "def.simplicial",
@@ -670,7 +677,10 @@
     "thm.cofinal-colimit",
     "def.filtered-category",
     "prop.filtered-directed",
-    "prop.limit-construction"
+    "prop.limit-construction",
+    "def.simplex-category",
+    "def.ind-object",
+    "def.zero-object"
    ]
   },
   {
@@ -703,7 +713,7 @@
    "name": "预层与米田",
    "parent": "category",
    "desc": "造出「表示」这套语言：预层范畴是落点，米田引理说自然变换集与 $F(X)$ 一一对应，稠密性定理说每个预层都是可表示预层的余极限。",
-   "nodeCount": 11,
+   "nodeCount": 12,
    "nodes": [
     "def.presheaf",
     "def.presheaf-cat",
@@ -715,7 +725,8 @@
     "prop.slice-cartesian",
     "thm.density",
     "lem.presheaf-mono-pointwise",
-    "prop.representable-preserves-limits"
+    "prop.representable-preserves-limits",
+    "def.finitely-presented"
    ]
   },
   {
@@ -745,7 +756,7 @@
    "name": "层与拓扑",
    "parent": "category",
    "desc": "造出「覆盖」这套语言：筛 → 预拓扑 / Grothendieck 拓扑 → 层（下降条件）→ Čech 函子与层化 → site 的层范畴的好性质。",
-   "nodeCount": 20,
+   "nodeCount": 21,
    "nodes": [
     "def.sieve",
     "def.pretopology",
@@ -766,7 +777,8 @@
     "prop.covering-sieve-epi",
     "prop.disjoint-universal",
     "prop.sieve-covering-equivalent",
-    "def.section-functor"
+    "def.section-functor",
+    "def.topologically-generating"
    ]
   },
   {
@@ -774,7 +786,7 @@
    "name": "拓扑斯",
    "parent": "category",
    "desc": "造出「几何的代数替身」：预拓扑斯 → 预标准拓扑 → 生成元 → 拓扑斯 → Giraud 定理 → 拟紧拟分离 → 拓扑斯的态射。",
-   "nodeCount": 18,
+   "nodeCount": 22,
    "nodes": [
     "def.pretopos",
     "prop.pretopos-factorization",
@@ -793,7 +805,11 @@
     "prop.quasi-compact-properties",
     "def.quasi-separated",
     "thm.pretopos-qcqs",
-    "def.topos-morphism"
+    "def.topos-morphism",
+    "def.continuous-functor",
+    "def.morphism-of-sites",
+    "def.cocontinuous-functor",
+    "def.induced-topology"
    ]
   },
   {
@@ -801,14 +817,17 @@
    "name": "加法与阿贝尔范畴",
    "parent": "homology",
    "desc": "造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。",
-   "nodeCount": 6,
+   "nodeCount": 9,
    "nodes": [
     "def.ab-axioms",
     "def.grothendieck-category",
     "def.abelian-category",
     "thm.freyd-mitchell",
     "thm.snake-lemma",
-    "thm.five-lemma"
+    "thm.five-lemma",
+    "def.additive-functor",
+    "def.split-exact",
+    "def.enough-projectives"
    ]
   },
   {
@@ -10213,6 +10232,407 @@
    "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴，下面这张交换图的两行都正合：\n\n$$\\begin{array}{ccccccccc} A_{1} & \\to & A_{2} & \\to & A_{3} & \\to & A_{4} & \\to & A_{5} \\\\[2pt] {\\scriptstyle \\alpha_{1}}\\big\\downarrow & & {\\scriptstyle \\alpha_{2}}\\big\\downarrow & & {\\scriptstyle \\alpha_{3}}\\big\\downarrow & & {\\scriptstyle \\alpha_{4}}\\big\\downarrow & & {\\scriptstyle \\alpha_{5}}\\big\\downarrow \\\\[2pt] B_{1} & \\to & B_{2} & \\to & B_{3} & \\to & B_{4} & \\to & B_{5} \\end{array}$$\n\n若 $\\alpha_{1}$ 是**满**态射、$\\alpha_{2}, \\alpha_{4}$ 是**同构**、$\\alpha_{5}$ 是**单**态射，则中间的 $\\alpha_{3}$ 也是**同构**。",
    "notes": "**证明就是追图**（「五引理追图」是这句成语的出处）。分两半：\n\n\n\n- **$\\alpha_{3}$ 单**：设 $x \\in A_{3}$ 被 $\\alpha_{3}$ 送到 $0$。往右上走一步（用第二行的正合性）可把 $\\alpha_{3}(x)$ 拉回成 $\\alpha_{4}$ 某个元素的原像，用 $\\alpha_{4}$ 是单射把 $x$ 拉回 $A_{2}$，再用第一行的正合性与 $\\alpha_{2}$ 的单射把 $x$ 挤成 $0$。\n- **$\\alpha_{3}$ 满**：给定 $y \\in B_{3}$，用 $\\alpha_{4}$ 是满射往右下走一步，再用第一行第二行的正合性与交换性把 $y$ 拉回成某个 $A_{3}$ 元素的像 —— 这一步用到 $\\alpha_{1}$ 满。\n\n\n\n两个方向都只用「正合 = 核 = 像」这一条。∎\n\n⭐ **推论（常用形式）**：若图中的 $A_{1} = B_{1} = 0$、$A_{5} = B_{5} = 0$，则 $\\alpha_{3}$ 是单（满 / 同构）由 $\\alpha_{2}, \\alpha_{4}$ 单（满 / 同构）决定 —— **这就是「比较长正合列」时最常引的那句：两头一样，中间就一样。**\n\n⚠️ 与蛇引理的关系：两者都是追图，但**五引理只讲同构传递**（不需要造连接同态），蛇引理**造**出 $\\delta$。凡是「想比较两个谱序列/两条长正合列」的地方，用五引理。",
    "refs": []
+  },
+  {
+   "id": "def.subcategory",
+   "type": "definition",
+   "label": "子范畴",
+   "title": "子范畴与满子范畴（Subcategory）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.basic",
+   "layer": 8,
+   "tags": [
+    "范畴论",
+    "子范畴",
+    "满子范畴"
+   ],
+   "statement": "范畴 $\\mathcal{C}$ 的**子范畴** $\\mathcal{C}'$ 由以下数据组成：\n\n1. 对象的一个子类 $\\operatorname{Ob}(\\mathcal{C}') \\subseteq \\operatorname{Ob}(\\mathcal{C})$；\n2. 对每对 $X, Y \\in \\mathcal{C}'$，一个子集 $\\operatorname{Hom}_{\\mathcal{C}'}(X, Y) \\subseteq \\operatorname{Hom}_{\\mathcal{C}}(X, Y)$；\n\n要求这些态射对复合封闭、且包含每个对象的恒等态射。（$X, Y$ 之间的全部态射都取上时叫**满子范畴**。）",
+   "notes": "⚠️ **子范畴不等于满子范畴**：满子范畴是「对象取一部分，但态射一个不丢」；一般子范畴允许同时丢掉态射。\n\n**严格（strict）子范畴**：恒等态射在子范畴里也必须是恒等态射。绝大多数场合默认如此。\n\n**例子**：$\\mathbf{Ab} \\hookrightarrow \\mathbf{Grp}$ 是满子范畴（阿贝尔群之间的同态恰好就是它们作为群的同态）；$\\mathbf{CHaus} \\hookrightarrow \\mathbf{Top}$ 是满子范畴；$\\mathbf{Grp} \\to \\mathbf{Set}$ 不是子范畴（连对象都不是同一批集合）。\n\n⭐ 「反射子范畴」「余反射子范畴」都是在满子范畴上再加一条：含入函子有伴随。",
+   "refs": []
+  },
+  {
+   "id": "def.simplex-category",
+   "type": "definition",
+   "label": "单纯形范畴",
+   "title": "单纯形范畴 $\\Delta$",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.limit",
+   "layer": 8,
+   "tags": [
+    "范畴论",
+    "单纯形",
+    "单纯对象",
+    "面映射",
+    "退化映射"
+   ],
+   "statement": "**单纯形范畴** $\\Delta$ 的对象是正整数\n\n$$[n] := n + 1 := \\{\\, 0, 1, \\ldots, n \\,\\} \\qquad (n \\in \\mathbb{N}),$$\n\n态射是**保序映射** $[m] \\to [n]$。它由两类基本的态射生成：\n\n- **面映射** $\\delta^{i} : [n-1] \\to [n]$：跳过 $i$（$i = 0, \\ldots, n$），不取 $i$ 的保序单射；\n- **退化映射** $\\sigma^{i} : [n+1] \\to [n]$：把 $i$ 与 $i+1$ 撞在一起（$i = 0, \\ldots, n$），保序满射。",
+   "notes": "**为什么要它**：单纯对象就是 $\\Delta^{\\mathrm{op}}$ 上的图（见「单纯对象」）。这一条把「一个空间在 $n$ 维的骨架」组织成范畴语言 —— $[n]$ 是 $n$-单形，面映射是「取第 $i$ 个面」，退化映射是「把单形压扁」。\n\n**$\\Delta$ 的态射全都能写成面映射与退化映射的复合**，而且它们满足**单纯恒等式**（$\\delta^{j}\\delta^{i} = \\delta^{i}\\delta^{j-1}$ 等）。所以定义单纯对象时只要给出这两族映射就够 —— 这正是「单纯集 = 一族集合 + 面 + 退化」那种写法的来源。\n\n⚠️ 记号在各书里不统一：有的用 $[n] = \\{0, \\ldots, n\\}$（本图取这个），有的用 $\\Delta^{n}$ 指标准的几何 $n$-单形（那是**几何实现**那边的对象，不是这里的指标）。",
+   "refs": []
+  },
+  {
+   "id": "def.ind-object",
+   "type": "definition",
+   "label": "Ind-对象",
+   "title": "Ind-对象与 $\\operatorname{Ind}(\\mathcal{C})$",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.limit",
+   "layer": 11,
+   "tags": [
+    "范畴论",
+    "Ind-对象",
+    "滤过余极限",
+    "形式余极限"
+   ],
+   "statement": "范畴 $\\mathcal{C}$ 的一个 **Ind-对象**「$\\varinjlim_{i \\in I} X_{i}$」是一个**滤过图** $(X_{i})_{i \\in I}$。它们组成范畴 $\\operatorname{Ind}(\\mathcal{C})$，其 Hom 为\n\n$$\\operatorname{Hom}_{\\operatorname{Ind}(\\mathcal{C})}\\Bigl(\\text{“}\\varinjlim_{i \\in I} X_{i}\\text{”},\\ \\text{“}\\varinjlim_{j \\in J} Y_{j}\\text{”}\\Bigr) \\;=\\; \\varinjlim_{j \\in J}\\ \\varprojlim_{i \\in I}\\ \\operatorname{Hom}_{\\mathcal{C}}(X_{i}, Y_{j}).$$",
+   "notes": "**读法**：引号里的 $\\varinjlim X_{i}$ 是**形式记法** —— 对象是「滤过图」本身，不是它的余极限（余极限可能压根不存在）。\n\n**公式为什么长这样**：要给两个形式余极限之间的映射，先固定 $j$，对每个 $i$ 给一条 $X_{i} \\to Y_{j}$ 且与 $i$ 的变动相容（这就是 $\\varprojlim_{i}$），再对 $j$ 取滤过余极限（$Y_{j}$ 越往后越大，晚给的映射可以「补」上早先的）。\n\n⭐ **$operatorname{Ind}(\\mathcal{C})$ 是「按滤过余极限把 $\\mathcal{C}$ 补全」得到的范畴。** 原书 Prop 5.2.6 的例子里就有它：$\\mathcal{C}$ 是阿贝尔范畴时 $\\operatorname{Ind}(\\mathcal{C})$ 是 Grothendieck 范畴。\n\n**例子**：$\\operatorname{Ind}(\\mathbf{FinSet})$ 是「所有集合」（每个集合都是它有限子集的滤过余极限）；$K$-理论的「向量丛按直和/余极限补全」用的也是它。\n\n📌 对偶地有 **Pro-对象**：把滤过图换成**余滤过**图，得到 $\\operatorname{Pro}(\\mathcal{C})$（profinite 空间就是 $\\operatorname{Pro}(\\mathbf{FinSet})$）。",
+   "refs": []
+  },
+  {
+   "id": "def.preserves-limit",
+   "type": "definition",
+   "label": "保极限的函子",
+   "title": "函子保极限（Preservation of Limits）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.functor",
+   "layer": 12,
+   "tags": [
+    "范畴论",
+    "保极限",
+    "保余极限",
+    "函子"
+   ],
+   "statement": "设 $D : I \\to \\mathcal{C}$ 是图、$F : \\mathcal{C} \\to \\mathcal{D}$ 是函子。$F$ 诱导出锥之间的比较映射\n\n$$F(\\lim D) \\longrightarrow \\lim (F \\circ D).$$\n\n若这个比较映射对**每个**（相应型别的）图 $D$ 都是同构，就说 $F$ **保极限**（记 $\\lim D \\cong \\lim F \\circ D$）。对偶地：**保余极限**。",
+   "notes": "**比较映射是怎么来的**：$\\lim D$ 是 $D$ 的泛锥，$F$ 作用之后给出 $F \\circ D$ 的一个锥，于是由 $\\lim(F\\circ D)$ 的泛性质唯一地得到 $F(\\lim D) \\to \\lim(F\\circ D)$。所以「保极限」永远是这个**由泛性质自动存在的**映射恰好可逆。\n\n⭐ **最常用的一条**：**右伴随保所有极限**（对偶地左伴随保所有余极限）。证明只用伴随同构与极限的泛性质，不需要任何具体构造。\n\n**弱一点的说法**：$F$ 保**有限**极限（= **left exact**）、保**滤过**余极限（AB5 那一条）、保**积**、保**等化子**……都是把上面的「每个图」限制到某一类图。\n\n⚠️ 与「$F$ 连续」区分：这里说的连续函子（continuous functor）是**保极限**，与拓扑里的连续无关。",
+   "refs": []
+  },
+  {
+   "id": "def.exact-functor",
+   "type": "definition",
+   "label": "正合函子",
+   "title": "左正合 / 右正合 / 正合函子（Exact Functor）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.functor",
+   "layer": 13,
+   "tags": [
+    "范畴论",
+    "正合函子",
+    "左正合",
+    "右正合"
+   ],
+   "statement": "函子 $F$ 叫**左正合的**（left exact），如果它保所有**有限极限**；叫**右正合的**（right exact），如果它保所有**有限余极限**；两者都对时叫**正合的**（exact）。",
+   "notes": "**为什么「有限」**：一般范畴里「左正合」的用法来自阿贝尔范畴 —— 那里只要保 $0$、有限积、核，就等价于「把短正合列 $0 \\to M' \\to M \\to M'' \\to 0$ 送成 $0 \\to FM' \\to FM \\to FM''$（正的、左边正合）」。所以名字里的「正合」指的就是正合列。\n\n⭐ **右伴随是左正合的，左伴随是右正合的** —— 这是「伴随 $\\implies$ 保极限 / 保余极限」的直接后果，也是最常用的判据。\n\n**在阿贝尔范畴里更好用**：$F$ 左正合 $\\iff$ 它保核（$F(\\ker) = \\ker$）；$F$ 正合 $\\iff$ 它把短正合列送成短正合列。\n\n⚠️ 名字有歧义：有的书把「正合」只指保**有限**极限，有的指保**所有**极限。本图统一按上面这条（保有限极限/余极限）。",
+   "refs": []
+  },
+  {
+   "id": "def.zero-object",
+   "type": "definition",
+   "label": "零对象与直和",
+   "title": "零对象、双积与直和",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.limit",
+   "layer": 13,
+   "tags": [
+    "范畴论",
+    "零对象",
+    "双积",
+    "直和",
+    "加法范畴"
+   ],
+   "statement": "范畴 $\\mathcal{C}$ 里的对象 $0$ 叫**零对象**，如果它**既是终对象又是始对象**（等价地 $\\operatorname{End}(0) = \\{ \\mathrm{id} \\}$，唯一的自同态是零）。\n\n一族对象 $(M_{i})_{i \\in I}$ 的**双积**（biproduct）是「积与余积恰好重合」的对象，记 $\\bigoplus_{i \\in I} M_{i}$；代数里就叫**直和**。",
+   "notes": "**零对象给出零态射**：任意 $X \\to Y$ 都可以经 $X \\to 0 \\to Y$ 分解，得到的态射记 $0_{X,Y}$。所有「$f = 0$」「$f \\ne 0$」的说法都靠它。\n\n**双积为什么会重合**：在**预加性**范畴里，积与余积只要存在就自动一致（两个泛性质能互相满足），所以可以只谈一个。$M \\oplus N$ 的元素形式上写成 $f + g$（从 $M$ 与 $N$ 各来一条）。\n\n⭐ **加法范畴 = 预加性 + 零对象 + 所有二元直和**（原书 Definition 5.1.4）。这一层搭好，才能定义核、余核，往上才是预阿贝尔、阿贝尔范畴。\n\n⚠️ 零对象在**不一定有**的范畴里可能不存在（如 $\\mathbf{Set}$：空集是始对象，但终对象是单点集，两者不同）。$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$ 里当然是同一个 $\\{0\\}$。",
+   "refs": []
+  },
+  {
+   "id": "def.additive-functor",
+   "type": "definition",
+   "label": "加法函子",
+   "title": "加法函子（Additive Functor）",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 9,
+   "tags": [
+    "同调代数",
+    "加法函子",
+    "预加性",
+    "直和"
+   ],
+   "statement": "设 $\\mathcal{C}, \\mathcal{D}$ 是两个**预加性范畴**。函子 $F : \\mathcal{C} \\to \\mathcal{D}$ 叫**加法函子**，如果对每对 $M, N \\in \\mathcal{C}$，映射\n\n$$\\operatorname{Hom}_{\\mathcal{C}}(M, N) \\longrightarrow \\operatorname{Hom}_{\\mathcal{D}}(F(M), F(N)), \\qquad f \\longmapsto F(f)$$\n\n是**阿贝尔群同态**（即保加法、保 $0$）。",
+   "notes": "**等价说法**：加法函子自动保**有限直和**（$F(M \\oplus N) \\cong F(M) \\oplus F(N)$），而且 $F(0) = 0$。反过来，一个保有限直和的函子（在预加性范畴之间）也是加法的。\n\n⭐ **为什么同调代数只谈加法函子**：求导函子、$\\operatorname{Ext}$、$H^{n}$ 都是加法的。复形上的运算（$d^{2}=0$、取同调、映射锥）每一步都是**加减法**，非加法函子连复形都送不成复形。\n\n**例子**：$\\operatorname{Hom}(X, -)$ 是加法的（$\\operatorname{Hom}$ 本身是阿贝尔群）；$M \\otimes_{A} -$ 是加法的；遗忘函子 $A\\text{-}\\mathbf{Mod} \\to \\mathbf{Ab}$ 是加法的。\n\n⚠️ 「加法」与「左正合/右正合」是两件事：加法只是保群结构，正合才是保核与余核。加法是前提，正合是进一步的条件。",
+   "refs": []
+  },
+  {
+   "id": "def.split-exact",
+   "type": "definition",
+   "label": "分裂短正合列",
+   "title": "分裂的短正合列（Split Exact Sequence）",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 14,
+   "tags": [
+    "同调代数",
+    "短正合列",
+    "分裂",
+    "直和"
+   ],
+   "statement": "短正合列\n\n$$0 \\longrightarrow M_{1} \\xrightarrow{\\;i_{1}\\;} M \\xrightarrow{\\;i_{2}\\;} M_{2} \\longrightarrow 0$$\n叫**分裂的**，如果它同构于\n\n$$0 \\longrightarrow M_{1} \\xrightarrow{\\;\\mathrm{pr}_{1}\\;} M_{1} \\oplus M_{2} \\xrightarrow{\\;\\mathrm{pr}_{2}\\;} M_{2} \\longrightarrow 0$$\n\n（即 $i_{1}$ 是到直和第一个分量的含入、$i_{2}$ 是到第二个分量的投影）。",
+   "notes": "**等价判据**（在阿贝尔范畴里，三条等价）：\n\n\n\n- $i_{2}$ 有**截面** $s : M_{2} \\to M$（$i_{2} \\circ s = \\mathrm{id}$）；\n- $i_{1}$ 有**收缩** $r : M \\to M_{1}$（$r \\circ i_{1} = \\mathrm{id}$）；\n- $M \\cong M_{1} \\oplus M_{2}$ 与这个列相容。\n\n⭐ **这就是「分裂引理」**（split lemma）：在加法范畴里，「短正合列分裂」与「有截面」与「是直和」是同一件事。它把**列论的问题化成直和的问题** —— 这是同调代数里最常用的一步化简。\n\n⚠️ 短正合列一般**不**分裂（$0 \\to \\mathbb{Z} \\xrightarrow{2} \\mathbb{Z} \\to \\mathbb{Z}/2 \\to 0$ 就不分裂）—— 分裂是特殊情形，判断它分不分裂正是 $\\operatorname{Ext}^{1}$ 要回答的问题。",
+   "refs": []
+  },
+  {
+   "id": "def.enough-projectives",
+   "type": "definition",
+   "label": "足够多投射对象",
+   "title": "足够多投射对象（Enough Projectives）",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 15,
+   "tags": [
+    "同调代数",
+    "投射对象",
+    "足够多",
+    "消解"
+   ],
+   "statement": "范畴 $\\mathcal{C}$ **有足够多的投射对象**，如果对每个 $X \\in \\mathcal{C}$，都存在投射对象 $P$ 与**满态射**\n\n$$P \\twoheadrightarrow X.$$\n\n对偶地：**有足够多的内射对象**，如果每个 $X$ 都能**单射**进某个内射对象 $X \\hookrightarrow I$。",
+   "notes": "⭐ **它保证投射消解存在**：由 $P_{0} \\twoheadrightarrow X$ 起，把核 $\\ker(P_{0} \\to X)$ 再用一个投射对象盖住，如此递归得到**投射消解**\n\n\n\n$$\\cdots \\to P_{2} \\to P_{1} \\to P_{0} \\to X \\to 0,$$\n\n\n\n于是可以取左导出函子（$\\operatorname{Tor}$、$L^{n}F$）。对偶地足够多内射给出**内射消解**与右导出函子（$\\operatorname{Ext}^{n}$、$R^{n}F$）。\n\n**为什么需要「足够多」这个条件**：导出函子是把对象换成消解再取同调，若某个对象压根没有消解，定义就卡住。所以同调代数挑范畴时会点名「有足够多投射 / 内射」。\n\n**例子**：$A\\text{-}\\mathbf{Mod}$ 两个都有（自由模投射、每个模可嵌入内射模）；$\\mathrm{CondAb}$ 有足够多投射（有限表现的投射凝聚态阿贝尔群生成它）；**Grothendieck 范畴自动有足够多内射**。\n\n📌 原书把「足够多投射」列为 Definition 1.4.8，「足够多内射」是它对偶，在 §5.2 里用到（Prop 5.2.8：Grothendieck 范畴有足够多内射）。",
+   "refs": []
+  },
+  {
+   "id": "def.finitely-presented",
+   "type": "definition",
+   "label": "有限表现对象",
+   "title": "有限表现（紧）对象（Finitely Presented Object）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.yoneda",
+   "layer": 13,
+   "tags": [
+    "范畴论",
+    "有限表现",
+    "紧对象",
+    "可表函子"
+   ],
+   "statement": "对象 $X \\in \\mathcal{C}$ 叫**有限表现的**（也叫**紧的**，compact），如果可表函子\n\n$$h^{X} = \\operatorname{Hom}_{\\mathcal{C}}(X, -)$$\n\n**保滤过余极限**：对每个滤过图 $D$，$\\operatorname{Hom}(X, \\varinjlim D) \\cong \\varinjlim \\operatorname{Hom}(X, D(-))$。",
+   "notes": "**直观**：「测 $X$」不需要等到极限做完 —— 从 $X$ 出发的映射**在有限阶段就已经确定**，后面的滤过余极限只是把它们拼起来。所以「紧」=「不往无穷处伸手」。\n\n**例子**：有限集（$\\mathbf{Set}$ 里）、有限生成模（$A\\text{-}\\mathbf{Mod}$ 里）、有限 CW 复形（拓扑里）。$\\mathbb{R}$ 在 $\\mathbf{Top}$ 里**不是**紧的（$\\mathbb{R}$ 是有限区间的滤过余极限，但 $\\operatorname{Hom}(\\mathbb{R},-)$ 不保那个余极限）。\n\n⭐ **在同调代数里的用处**：$X$ 有限表现 $\\iff$ $h^{X}$ 保滤过余极限 $\\iff$ $X$ 是「小」的测试对象。凝聚态那一侧「CondAb 由有限表现的投射对象生成」正是靠它 —— 有限表现的投射对象是 $\\mathrm{CondAb}$ 的生成元。\n\n⚠️ 「有限表现」与「有限生成」不同：有限生成只要求有一个满射 $A^{n} \\twoheadrightarrow M$；有限表现还要求核也是有限生成的（即 $A^{m} \\to A^{n} \\to M \\to 0$ 正合）。",
+   "refs": []
+  },
+  {
+   "id": "prop.iso-unique-section",
+   "type": "proposition",
+   "label": "同构的截面与收缩唯一",
+   "title": "同构的截面与收缩",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.basic",
+   "layer": 9,
+   "tags": [
+    "范畴论",
+    "同构",
+    "截面",
+    "收缩"
+   ],
+   "statement": "若 $f : X \\to Y$ 是**同构**，则它的**截面**与**收缩**都存在且**唯一**，而且两者相等，都等于 $f^{-1}$。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.totally-disconnected",
+   "type": "definition",
+   "label": "完全不连通与极不连通",
+   "title": "完全不连通 / 极不连通空间",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topo.chaus",
+   "layer": 6,
+   "tags": [
+    "拓扑",
+    "完全不连通",
+    "极不连通",
+    "Stonean",
+    "连通分量"
+   ],
+   "statement": "拓扑空间 $X$ 叫**完全不连通的**，如果**每个连通分量都是单点**。\n\n叫**极不连通的**（extremally disconnected），如果**每个开集的闭包仍然开**。",
+   "notes": "⚠️ **两个名字只差一个字，强弱正好相反**：\n\n\n\n- **完全不连通**说「碎到每个分量只剩一个点」；\n- **极不连通**说「开集的闭包不再长大」—— 后者更强。\n\n**极不连通的需求方是 Haskell / 集合论 / 凝聚态**：它是「投影对象」的几何形态（Gleason 定理：$\\mathbf{CHaus}$ 的投射对象恰好是 Stonean 空间）。\n\n⭐ **在紧 Hausdorff 的世界里三者串成一条链**：极不连通 $\\implies$ 完全不连通（**Lemma 2.2.10**）；完全不连通 + 紧 Hausdorff $\\iff$ **profinite**（**Prop 2.2.9**）；极不连通 + 紧 Hausdorff $\\implies$ **Stonean**。\n\n**例子**：Cantor 集 $2^{\\mathbb{N}}$ 完全不连通但不极不连通；$\\beta\\mathbb{N}$（$\\mathbb{N}$ 的 Stone–Čech 紧化）极不连通；$\\beta\\mathbb{N} \\setminus \\mathbb{N}$ 是它的一个极端例子。",
+   "refs": []
+  },
+  {
+   "id": "def.locally-compact",
+   "type": "definition",
+   "label": "局部紧 Hausdorff 空间",
+   "title": "局部紧 Hausdorff 空间（Locally Compact Hausdorff）",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 15,
+   "tags": [
+    "拓扑",
+    "局部紧",
+    "Hausdorff",
+    "紧邻域"
+   ],
+   "statement": "拓扑空间 $X$ 叫**局部紧 Hausdorff** 的，如果它是 Hausdorff 的，并且**每个点都有紧邻域**：对每个 $x \\in X$，存在紧集 $K$ 使 $x \\in \\operatorname{int} K$。",
+   "notes": "**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \\ni x$ 里都能找到一个紧邻域 $K$ 使 $x \\in \\operatorname{int}K \\subseteq K \\subseteq U$）。这条更强的形式正是「商映射 $\\times$ 局部紧」那条定理要用的。\n\n**例子**：$\\mathbb{R}^{n}$、任何离散空间、任何紧 Hausdorff 空间。**反例**：$\\mathbb{Q}$（不是局部紧）、无穷维 Banach 空间（闭单位球不紧）。\n\n⭐ **它在凝聚态数学里的位置**：$\\mathbf{CHaus}$ 是场地，而**局部紧 Hausdorff**是「能用紧 Hausdorff 逼近」的最小一族 —— 局部紧 Hausdorff 空间都是**紧生成**的（例 1），所以都能忠实地变成凝聚态集。Pontryagin 对偶也只在局部紧 Hausdorff 阿贝尔群那一条线上成立。\n\n⚠️ 「局部紧」这个条件**不能省**：商映射乘 id 那条定理、Tychonoff 以外的积性质、以及「紧提升条件」都要它。",
+   "refs": []
+  },
+  {
+   "id": "thm.tykhonov",
+   "type": "theorem",
+   "label": "Tychonoff 定理",
+   "title": "Tychonoff 定理：紧空间的任意积紧",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 15,
+   "tags": [
+    "拓扑",
+    "紧",
+    "积",
+    "Tychonoff",
+    "选择公理"
+   ],
+   "statement": "任意一族紧空间的**积**（带积拓扑）仍然紧 —— 任意多个，包括不可数多个。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.topologically-generating",
+   "type": "definition",
+   "label": "拓扑生成集",
+   "title": "拓扑生成集（Topologically Generating Set）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.sheaf",
+   "layer": 15,
+   "tags": [
+    "范畴论",
+    "site",
+    "生成集",
+    "筛"
+   ],
+   "statement": "设 $\\mathcal{C}$ 是 site。集合 $G \\subseteq \\mathcal{C}$ 叫**拓扑生成集**，如果每个 $X \\in \\mathcal{C}$ 都容许一个由**落在 $G$ 里的对象**组成的覆盖族 $(G_{i} \\to X)_{i}$。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.continuous-functor",
+   "type": "definition",
+   "label": "连续函子（site 之间）",
+   "title": "连续函子（Continuous Functor between Sites）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.topos",
+   "layer": 16,
+   "tags": [
+    "范畴论",
+    "site",
+    "连续函子",
+    "态射"
+   ],
+   "statement": "设 $\\mathcal{C}, \\mathcal{C}'$ 是两个 site。函子\n\n$$f^{-1} := g : \\mathcal{C} \\longrightarrow \\mathcal{C}'$$\n叫**连续的**，如果沿 $g$ 的预复合把 $\\mathcal{C}'$ 上的层拉回成 $\\mathcal{C}$ 上的层：\n\n$$g^{*} : \\widetilde{\\mathcal{C}'} \\longrightarrow \\widetilde{\\mathcal{C}}, \\qquad F \\longmapsto F \\circ g, \\qquad \\text{落在层范畴里。}$$",
+   "notes": "**读法**：$g$ 的方向是 $\\mathcal{C} \\to \\mathcal{C}'$，但层是**反变**的，所以 $g$ 把 $\\mathcal{C}'$ 上的层**拉回**到 $\\mathcal{C}$ 上。这个「方向拧一下」是 site 态射的一切别扭之处。\n\n⭐ **它等价于**：$g$ 把 $\\mathcal{C}'$ 的覆盖族拉回成 $\\mathcal{C}$ 的覆盖族（覆盖筛的原像还是覆盖筛）。所以「连续」= 「覆盖关系被保住了」。\n\n**记号**：$f^{-1}$ 这个名字来自拓扑：空间之间的连续映射 $f : X \\to Y$ 给出开集范畴之间的函子 $f^{-1} : \\operatorname{Open}(Y) \\to \\operatorname{Open}(X)$（取原像），而层沿它拉回。\n\n📌 下一步：再加一条「$f^{-1}$ 是左正合的」，就得到 **site 的态射**（Definition 3.4.5）。",
+   "refs": []
+  },
+  {
+   "id": "def.morphism-of-sites",
+   "type": "definition",
+   "label": "site 的态射",
+   "title": "site 的态射（Morphism of Sites）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.topos",
+   "layer": 17,
+   "tags": [
+    "范畴论",
+    "site",
+    "态射",
+    "左正合"
+   ],
+   "statement": "**site 的态射**是一个**连续函子** $f^{-1} := g : \\mathcal{C} \\to \\mathcal{C}'$，并且要求 $f^{-1}$ 是**左正合**的（保有限极限）。等价地：$f^{-1}$ 有右伴随 $f_{*}$，而 $f^{-1} \\dashv f_{*}$。",
+   "notes": "⭐ **一对伴随**：$f^{-1} \\dashv f_{*}$ —— $f^{-1}$ 是左伴随（所以保余极限），$f_{*}$ 是右伴随（所以保极限）。加上「连续」那一条（$f^{-1}$ 把层拉回成层），这一对就构成拓扑斯之间的态射（见「拓扑斯的态射」）。\n\n**为什么要求左正合**：层范畴里的有限极限是在预层里逐点算的，要让 $f^{-1}$ 把层送到层之后**还保有限极限**，就得让它在 site 这一层先保有限极限。\n\n**几何直觉**：空间之间的连续映射给出 site 的态射；site 的态射是这条的「代数替身」—— 之后拓扑斯的态射也是照这个模式定义的，只是把「site」换成「层范畴」。",
+   "refs": []
+  },
+  {
+   "id": "def.cocontinuous-functor",
+   "type": "definition",
+   "label": "余连续函子",
+   "title": "余连续函子（Cocontinuous Functor）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.topos",
+   "layer": 16,
+   "tags": [
+    "范畴论",
+    "site",
+    "余连续",
+    "层"
+   ],
+   "statement": "设 $g : \\mathcal{C}' \\to \\mathcal{C}$ 是两个 site 之间的函子。叫**余连续的**，如果函子 $g^{\\sharp}$（把预层沿 $g$ 推出、再层化）**把层送到层**。",
+   "notes": "",
+   "refs": []
+  },
+  {
+   "id": "def.induced-topology",
+   "type": "definition",
+   "label": "诱导拓扑",
+   "title": "诱导拓扑（Induced Topology）",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.topos",
+   "layer": 17,
+   "tags": [
+    "范畴论",
+    "site",
+    "诱导拓扑"
+   ],
+   "statement": "设 $\\mathcal{C}'$ 是 site，$f^{-1} : \\mathcal{C} \\to \\mathcal{C}'$ 是任何函子。$\\mathcal{C}$ 上的**诱导拓扑**是使 $f^{-1}$ **连续**的最细拓扑。",
+   "notes": "",
+   "refs": []
   }
  ],
  "edges": [
@@ -18262,6 +18682,214 @@
    "definition": "def.image",
    "usedBy": "thm.five-lemma",
    "note": "用的还是「正合 = 核 = 像」。"
+  },
+  {
+   "id": "def-dep.subcategory-category",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.subcategory",
+   "note": "子范畴是**范畴**的对象与态射各取一部分。"
+  },
+  {
+   "id": "def-dep.simplexcat-category",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.simplex-category",
+   "note": "$\\Delta$ 本身就是一个**范畴**（对象是 $[n]$，态射是保序映射）。"
+  },
+  {
+   "id": "def-dep.indobj-filtered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.filtered-category",
+   "usedBy": "def.ind-object",
+   "note": "Ind-对象就是一个**滤过图**。"
+  },
+  {
+   "id": "def-dep.preslim-limit",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.limit",
+   "usedBy": "def.preserves-limit",
+   "note": "「保极限」说的是函子与**极限**的关系。"
+  },
+  {
+   "id": "def-dep.preslim-functor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "def.preserves-limit",
+   "note": "被谈论的是**函子**。"
+  },
+  {
+   "id": "def-dep.exact-preslim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.preserves-limit",
+   "usedBy": "def.exact-functor",
+   "note": "左/右正合就是把「保极限」限制到**有限**的那些图。"
+  },
+  {
+   "id": "def-dep.zeroobj-finalinitial",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.final-initial",
+   "usedBy": "def.zero-object",
+   "note": "零对象 = **终对象与始对象重合**。"
+  },
+  {
+   "id": "def-dep.addfunctor-functor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "def.additive-functor",
+   "note": "加法性先是**函子**的一条性质。"
+  },
+  {
+   "id": "def-dep.addfunctor-group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.additive-functor",
+   "note": "$\\operatorname{Hom}$ 集上要有**阿贝尔群**结构才谈得上保加法。"
+  },
+  {
+   "id": "def-dep.splitexact-zeroobj",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.zero-object",
+   "usedBy": "def.split-exact",
+   "note": "分裂的正合列就是**直和**的那条列。"
+  },
+  {
+   "id": "def-dep.enoughproj-projective",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.projective-object",
+   "usedBy": "def.enough-projectives",
+   "note": "「足够多**投射**对象」。"
+  },
+  {
+   "id": "def-dep.finpres-filtered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.filtered-category",
+   "usedBy": "def.finitely-presented",
+   "note": "有限表现的定义是「保**滤过余极限**」。"
+  },
+  {
+   "id": "def-dep.finpres-representable",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.representable",
+   "usedBy": "def.finitely-presented",
+   "note": "用的函子是**可表函子** $h^{X}$。"
+  },
+  {
+   "id": "def-dep.iso-unique-section",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.section-retraction",
+   "usedBy": "prop.iso-unique-section",
+   "note": "命题说的是同构的**截面与收缩**。"
+  },
+  {
+   "id": "def-dep.totdisc-connected",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.connected",
+   "usedBy": "def.totally-disconnected",
+   "note": "「完全不连通」= 每个**连通分量**都是单点。"
+  },
+  {
+   "id": "def-dep.loccpt-hausdorff",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "def.locally-compact",
+   "note": "局部紧**Hausdorff** 的头一个要求就是 Hausdorff。"
+  },
+  {
+   "id": "def-dep.loccpt-compact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact",
+   "usedBy": "def.locally-compact",
+   "note": "要求每点有**紧**邻域。"
+  },
+  {
+   "id": "def-dep.tykhonov-compact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact",
+   "usedBy": "thm.tykhonov",
+   "note": "定理说的是**紧**空间的积。"
+  },
+  {
+   "id": "def-dep.tykhonov-product",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product-topology",
+   "usedBy": "thm.tykhonov",
+   "note": "积**带积拓扑**。"
+  },
+  {
+   "id": "def-dep.topgen-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.grothendieck-topology",
+   "usedBy": "def.topologically-generating",
+   "note": "拓扑生成集是相对 **site 的拓扑**说的。"
+  },
+  {
+   "id": "def-dep.contfunctor-sheaf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "def.continuous-functor",
+   "note": "「连续」的定义就是**层**沿它拉回还是层。"
+  },
+  {
+   "id": "def-dep.sitesmorphism-continuous",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.continuous-functor",
+   "usedBy": "def.morphism-of-sites",
+   "note": "site 的态射先要是一个**连续函子**。"
+  },
+  {
+   "id": "def-dep.sitesmorphism-adjoint",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.adjoint",
+   "usedBy": "def.morphism-of-sites",
+   "note": "等价形式是 $f^{-1}$ 有**右伴随** $f_{*}$。"
+  },
+  {
+   "id": "def-dep.cocontfunctor-sheaf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sheaf",
+   "usedBy": "def.cocontinuous-functor",
+   "note": "余连续说的是**层**能不能推出去。"
+  },
+  {
+   "id": "def-dep.inducedtopo-topology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.grothendieck-topology",
+   "usedBy": "def.induced-topology",
+   "note": "诱导拓扑本身是一条**拓扑**。"
+  },
+  {
+   "id": "def-dep.inducedtopo-continuous",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.continuous-functor",
+   "usedBy": "def.induced-topology",
+   "note": "诱导拓扑取的是使 $f^{-1}$ **连续**的最细拓扑。"
   }
  ],
  "clusterLinks": [
@@ -18506,7 +19134,7 @@
   {
    "a": "topology.general",
    "b": "topology.metric",
-   "count": 3,
+   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -18597,7 +19225,7 @@
   {
    "a": "topo.chaus",
    "b": "topology.general",
-   "count": 10,
+   "count": 11,
    "label": "",
    "explicit": false
   },
@@ -18618,7 +19246,7 @@
   {
    "a": "cat.sheaf",
    "b": "cat.topos",
-   "count": 14,
+   "count": 17,
    "label": "",
    "explicit": false
   },
@@ -18709,7 +19337,7 @@
   {
    "a": "cat.limit",
    "b": "cat.yoneda",
-   "count": 4,
+   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -18723,7 +19351,7 @@
   {
    "a": "cat.functor",
    "b": "cat.limit",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -18856,7 +19484,7 @@
   {
    "a": "cat.basic",
    "b": "cat.limit",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -18910,6 +19538,13 @@
    "explicit": false
   },
   {
+   "a": "cat.adjoint",
+   "b": "cat.topos",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.limit",
    "b": "topo.cg",
    "count": 2,
@@ -18933,7 +19568,7 @@
   {
    "a": "cat.limit",
    "b": "hom.ab",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -18962,6 +19597,13 @@
    "a": "cond.topo",
    "b": "topo.cg",
    "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.structures",
+   "b": "hom.ab",
+   "count": 2,
    "label": "",
    "explicit": false
   },

@@ -1,28 +1,20 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 滤过余极限正合 | filtered colimits are exact → prop.filtered-exact
+- Ind-对象 | ind-object | Ind(C) | Definition 1.4.3 | Def 1.4.3 → def.ind-object
 
-- 筛 | sieve | 覆盖筛 | covering sieve → def.sieve
+- 保极限 | preserves limits | 保余极限 | 连续函子 | Definition 1.4.4 | Def 1.4.4 → def.preserves-limit
 
-- 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology → def.pretopology
+- 正合函子 | left exact | right exact | 左正合 | 右正合 | Definition 1.4.6 | Def 1.4.6 → def.exact-functor
 
-- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 → def.grothendieck-topology
+- 有限表现 | finitely presented | 紧对象 | compact object | Definition 1.4.9 | Def 1.4.9 → def.finitely-presented
 
-- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 → def.sheaf
+- 零对象 | zero object | 双积 | 直和 | biproduct | Definition 5.1.3 | Def 5.1.3 → def.zero-object
 
-- 层的下降条件 | sheaf condition | 层条件 → thm.sheaf-descent
+- 拓扑生成集 | topologically generating | Definition 3.2.3 | Def 3.2.3 → def.topologically-generating
 
-- Cech 函子 | Čech functor | H hat → def.cech-functor
+- 连续函子 | continuous functor | Definition 3.4.4 | Def 3.4.4 → def.continuous-functor
 
-- Cech 函子的性质 | 左正合 → prop.cech-properties
-
-- 层化 | sheafification | sheafify | 伴随层 → thm.sheafification
-
-- 正则满态射 | regular epimorphism | regular epi → def.regular-epi
-
-- 万有余极限 | universal colimit | 万有满态射 | 不交余积 | disjoint coproduct → def.universal-colimit
-
-- 层范畴的性质 | site 的好性质 | 预拓扑斯公理 → prop.site-properties
+- site 的态射 | morphism of sites | Definition 3.4.5 | Def 3.4.5 → def.morphism-of-sites
 
 > 续见 alias/aka/category.6.md

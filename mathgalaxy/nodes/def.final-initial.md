@@ -14,5 +14,6 @@ $$\operatorname{Hom}_{\mathcal{C}}(X, \mathbf{1}_{\mathcal{C}}) = \{*\}, \qquad 
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.monoid-object` 幺半群对象 用
+- 被 `def.zero-object` 零对象与直和 用
 
 > 说明见 `notes/def.final-initial.md`

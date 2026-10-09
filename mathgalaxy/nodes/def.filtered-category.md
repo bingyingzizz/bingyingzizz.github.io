@@ -16,5 +16,7 @@ layer 10 · 定义 · 图与极限 · 范畴论
 
 ## 它能推出什么 / 谁在用它
 - 被 `prop.filtered-directed` 滤过范畴可换成有向集 用
+- 被 `def.ind-object` Ind-对象 用
+- 被 `def.finitely-presented` 有限表现对象 用
 
 > 说明见 `notes/def.filtered-category.md`

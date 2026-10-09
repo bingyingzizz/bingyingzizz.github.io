@@ -15,3 +15,5 @@
 - 被 `def.localization` 局部化 用
 - 被 `def.cofinal-functor` 共尾函子 用
 - 被 `def.connected-category` 连通范畴 用
+- 被 `def.preserves-limit` 保极限的函子 用
+- 被 `def.additive-functor` 加法函子 用

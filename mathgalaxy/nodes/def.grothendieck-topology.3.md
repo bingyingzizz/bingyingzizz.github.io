@@ -6,3 +6,5 @@
 - 被 `def.precanonical-topology` 预标准拓扑 用
 - 被 `def.quasi-compact` 拟紧对象 用
 - 被 `prop.sieve-covering-equivalent` 覆盖筛的四条等价 用
+- 被 `def.topologically-generating` 拓扑生成集 用
+- 被 `def.induced-topology` 诱导拓扑 用

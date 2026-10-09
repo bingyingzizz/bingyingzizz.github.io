@@ -1,7 +1,7 @@
 # 拓扑空间（topology.general）· 节点清单（第 1/1 页）
 
 造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。
-中心天体 def.topology　·　13 个节点　·　根 `../`
+中心天体 def.topology　·　15 个节点　·　根 `../`
 
 - def.topology　拓扑空间与开集　layer 4
 - def.closed-set　闭集与闭包　layer 5
@@ -16,3 +16,5 @@
 - def.normal-space　正规空间　layer 6
 - def.homeomorphism　同胚　layer 7
 - lem.urysohn　Urysohn 引理　layer 15
+- def.locally-compact　局部紧 Hausdorff 空间　layer 15
+- thm.tykhonov　Tychonoff 定理　layer 15

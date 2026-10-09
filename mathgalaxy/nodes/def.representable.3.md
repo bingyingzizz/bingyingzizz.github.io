@@ -10,3 +10,4 @@
 - 被 `lem.representable-quotient` 可表示性的下降 用
 - 被 `prop.representable-preserves-limits` 可表函子保所有极限 用
 - 被 `def.section-functor` 截面函子 用
+- 被 `def.finitely-presented` 有限表现对象 用

@@ -1,8 +1,11 @@
 # 加法与阿贝尔范畴（hom.ab）· 节点清单（第 1/1 页）
 
 造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。
-中心天体 def.abelian-category　·　6 个节点　·　根 `../`
+中心天体 def.abelian-category　·　9 个节点　·　根 `../`
 
+- def.additive-functor　加法函子　layer 9
+- def.split-exact　分裂短正合列　layer 14
+- def.enough-projectives　足够多投射对象　layer 15
 - def.abelian-category　加法 / 阿贝尔范畴　layer 16
 - def.ab-axioms　Grothendieck 的 AB 公理　layer 17
 - thm.freyd-mitchell　Freyd–Mitchell 嵌入定理　layer 17

@@ -17,14 +17,10 @@
 
 - 闭开集 | clopen | 既开又闭 → def.clopen
 
-- CHaus | 紧 Hausdorff 空间 | compact Hausdorff | 紧豪斯多夫空间 → def.chaus
+- 完全不连通 | totally disconnected | 极不连通 | extremally disconnected | Definition 2.2.7 | Def 2.2.7 → def.totally-disconnected
 
-- Stone-Cech 紧化 | Stone-Čech | βX | beta X | 紧化 → prop.chaus-reflective
+- 局部紧 | locally compact | 局部紧 Hausdorff | 紧邻域 | Definition 2.3.1 | Def 2.3.1 → def.locally-compact
 
-- 满射的极小闭子集 → lem.minimal-closed-surjection
-
-- 自由紧 Hausdorff 空间 | free compact Hausdorff | FCHaus → def.free-compact-hausdorff
-
-- 紧 Haus 是自由的商 → prop.chaus-quotient-of-free
+- Tychonoff | Tykhonov | 吉洪诺夫 | Theorem 2.1.4 | Thm 2.1.4 | 紧空间的积 → thm.tykhonov
 
 > 续见 alias/aka/topology.3.md

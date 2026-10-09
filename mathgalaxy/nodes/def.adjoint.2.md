@@ -18,3 +18,4 @@
 - 被 `def.tensor-abelian-sheaf` 阿贝尔层的张量积 用
 - 被 `prop.cg-coreflective` 紧生成空间是余反射子范畴 用
 - 被 `cor.cg-exponential-adjoint` CG 的指数伴随 用
+- 被 `def.morphism-of-sites` site 的态射 用

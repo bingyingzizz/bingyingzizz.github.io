@@ -1,30 +1,30 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 生成元 | generator | 生成元集 | set of generators → def.generator
+- Cech 函子 | Čech functor | H hat → def.cech-functor
 
-- 拓扑斯 | topos | Grothendieck topos | 初等拓扑斯 → def.topos
+- Cech 函子的性质 | 左正合 → prop.cech-properties
 
-- Giraud 定理 | Giraud | 拓扑斯的刻画 → thm.giraud
+- 层化 | sheafification | sheafify | 伴随层 → thm.sheafification
 
-- 可表示性下降 → lem.representable-quotient
+- 正则满态射 | regular epimorphism | regular epi → def.regular-epi
 
-- 拓扑斯中覆盖即余积满 → prop.topos-covering-epi
+- 万有余极限 | universal colimit | 万有满态射 | 不交余积 | disjoint coproduct → def.universal-colimit
 
-- 层即保极限的预层 → prop.topos-sheaf-limits
+- 层范畴的性质 | site 的好性质 | 预拓扑斯公理 → prop.site-properties
 
-- 拟紧 | quasi-compact | qc → def.quasi-compact
+- 层中单满即同构 | epi-mono factorization → prop.sheaf-mono-epi-iso
 
-- 拟紧的性质 → prop.quasi-compact-properties
+- 满态射的局部判据 | 局部满 | local epimorphism → prop.sheaf-epi-criterion
 
-- 拟分离 | quasi-separated | qs → def.quasi-separated
+- 有效等价关系 | effective equivalence relation | 有效关系 → def.effective-equivalence
 
-- 预拓扑斯由拓扑斯唯一确定 | qcqs → thm.pretopos-qcqs
+- 层化与商交换 → prop.sheafify-equivalence
 
-- 拓扑斯的态射 | geometric morphism | 几何态射 | 拉回函子 | 推前函子 → def.topos-morphism
+- 标准拓扑 | canonical topology | 次标准 | subcanonical → def.canonical-topology
 
-- 局部化 | localization | ho(C) | 形式逆 | Proposition 1.4.12 | Prop 1.4.12 → def.localization
+- 覆盖等价于余积满 → prop.covering-sieve-epi
 
-- 分式演算 | calculus of fractions | Ore 条件 | Proposition 1.4.14 | Prop 1.4.14 → prop.calculus-of-fractions
+- 不交万有余积与次标准 → prop.disjoint-universal
 
 > 续见 alias/aka/category.8.md

@@ -12,3 +12,5 @@
 - 被 `def.cochain-complex` 上链复形 用
 - 被 `def.homotopy-category` 同伦范畴 用
 - 被 `def.filtered-category` 滤过范畴 用
+- 被 `def.subcategory` 子范畴 用
+- 被 `def.simplex-category` 单纯形范畴 用

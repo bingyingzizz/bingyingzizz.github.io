@@ -6,3 +6,4 @@
 - 被 `lem.stonean-projective` Stonean 给出有限表现投射对象 用
 - 被 `prop.condab-generated` CondAb 由有限表现投射对象生成 用
 - 被 `prop.injective-criterion` 内射对象的判据 用
+- 被 `def.enough-projectives` 足够多投射对象 用

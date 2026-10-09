@@ -14,3 +14,5 @@
 - 被 `def.abelian-sheaf` 阿贝尔层 用
 - 被 `prop.sieve-covering-equivalent` 覆盖筛的四条等价 用
 - 被 `def.section-functor` 截面函子 用
+- 被 `def.continuous-functor` 连续函子（site 之间） 用
+- 被 `def.cocontinuous-functor` 余连续函子 用

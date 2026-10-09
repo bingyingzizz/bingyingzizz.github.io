@@ -19,3 +19,5 @@ $$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},\ \text{除有限多�
 - 被 `prop.k-product` k-化与积 用
 
 > 说明见 `notes/def.product-topology.md`
+
+- …另有出边，续页见 `nodes/def.product-topology.2.md`

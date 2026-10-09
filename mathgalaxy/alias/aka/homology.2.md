@@ -1,6 +1,12 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 阿贝尔层的张量积 | 封闭对称幺半 | closed symmetric monoidal | Tensor | internal hom | 封闭张量结构 → def.tensor-abelian-sheaf
+
+- 平坦阿贝尔层 | flat | 平坦性 | 无挠 → def.flat-abelian-sheaf
+
+- Freyd-Mitchell | Freyd | Mitchell | Theorem 5.2.4 | Thm 5.2.4 | 嵌入定理 → thm.freyd-mitchell
+
 - 复形 | complex | 上链复形 | cochain complex | 链复形 | 微分 → def.cochain-complex
 
 - 复形范畴是加法范畴 | 逐项计算 → prop.complex-additive
@@ -16,15 +22,5 @@
 - 三角的旋转 | rotation | 八面体公理 → prop.triangle-rotation
 
 - 三角态射的性质 → lem.triangle-morphism
-
-- 同调 | cohomology | homology | H^n | 闭链 | 上边缘 → def.cohomology
-
-- 同调的短正合列 → prop.cohomology-exact-sequence
-
-- 上同调函子 | cohomological functor → def.cohomological-functor
-
-- 长正合列 | long exact sequence | 蛇引理 | snake lemma | 连接同态 → thm.long-exact
-
-- 拟同构 | quasi-isomorphism | quasi-iso | 零调 | acyclic → def.quasi-iso
 
 > 续见 alias/aka/homology.3.md

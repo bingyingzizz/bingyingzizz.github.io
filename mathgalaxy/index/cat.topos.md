@@ -1,7 +1,7 @@
 # 拓扑斯（cat.topos）· 节点清单（第 1/2 页）
 
 造出「几何的代数替身」：预拓扑斯 → 预标准拓扑 → 生成元 → 拓扑斯 → Giraud 定理 → 拟紧拟分离 → 拓扑斯的态射。
-中心天体 def.topos　·　18 个节点　·　根 `../`　·　续页 `index/cat.topos.2.md`
+中心天体 def.topos　·　22 个节点　·　根 `../`　·　续页 `index/cat.topos.2.md`
 
 - def.generator　生成元集　layer 10
 - prop.quasi-compact-properties　拟紧的性质　layer 13
@@ -16,7 +16,7 @@
 - def.topos　拓扑斯　layer 16
 - prop.topos-sheaf-limits　拓扑斯上的层即保极限的预层　layer 16
 - def.quasi-separated　拟分离对象　layer 16
-- prop.precanonical-preserves　余积与商在层范畴中不变　layer 17
-- thm.giraud　Giraud 定理　layer 17
+- def.continuous-functor　连续函子（site 之间）　layer 16
+- def.cocontinuous-functor　余连续函子　layer 16
 
 > 续见 `index/cat.topos.2.md`

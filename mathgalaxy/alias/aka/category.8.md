@@ -1,22 +1,34 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 连通范畴 | connected category | 锯齿 → def.connected-category
+- 预拓扑斯 | pretopos | 预拓扑斯公理 → def.pretopos
 
-- 共尾函子 | cofinal | cofinal functor | final functor | coinitial | 共尾 → def.cofinal-functor
+- 预拓扑斯里的满单分解 | 平衡范畴 | balanced → prop.pretopos-factorization
 
-- 共尾函子不改变余极限 | cofinal colimit | 共尾 余极限 → thm.cofinal-colimit
+- 子对象构成有界格 | 子对象格 → prop.subobject-lattice
 
-- 滤过范畴 | filtered category | filtered | 滤过余极限 | 有限余锥 | cocone → def.filtered-category
+- 预标准拓扑 | precanonical topology → def.precanonical-topology
 
-- 滤过换成有向集 | 有向集 | directed set | Proposition 1.4.2 | Prop 1.4.2 → prop.filtered-directed
+- 预标准拓扑下的层 → prop.precanonical-sheaf
 
-- 可表函子保极限 | 可表函子保所有极限 | representable preserves limits | left exact | 左正合 | 保有限极限 → prop.representable-preserves-limits
+- 余积与商在层范畴不变 → prop.precanonical-preserves
 
-- 幺半群对象 | monoid object | Mon(C) | 笛卡尔范畴 | cartesian category → def.monoid-object
+- 单满在层化后不变 → prop.precanonical-mono-epi
 
-- 群对象 | group object | 阿贝尔群对象 | abelian group object | Gr(C) | Ab(C) → def.group-object
+- 生成元 | generator | 生成元集 | set of generators → def.generator
 
-- Ab(Top) | Ab(Set) | 拓扑阿贝尔群怎么来的 | 群对象的例子 → ex.ab-of-categories
+- 拓扑斯 | topos | Grothendieck topos | 初等拓扑斯 → def.topos
+
+- Giraud 定理 | Giraud | 拓扑斯的刻画 → thm.giraud
+
+- 可表示性下降 → lem.representable-quotient
+
+- 拓扑斯中覆盖即余积满 → prop.topos-covering-epi
+
+- 层即保极限的预层 → prop.topos-sheaf-limits
+
+- 拟紧 | quasi-compact | qc → def.quasi-compact
+
+- 拟紧的性质 → prop.quasi-compact-properties
 
 > 续见 alias/aka/category.9.md

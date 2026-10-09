@@ -15,12 +15,10 @@
 
 - 截面函子 | 全局截面 | sections functor | Γ(X,F) | Γ(F) | 层在 X 处的取值 → def.section-functor
 
-- 反射子范畴 | reflective subcategory | 余反射 | 反射函子 → def.reflective-subcategory
+- 子范畴 | subcategory | 满子范畴 | Definition 1.1.5 | Def 1.1.5 → def.subcategory
 
-- 反射子范畴里的极限 → prop.reflective-limits
+- 单纯形范畴 | simplex category | Delta | 面映射 | 退化映射 | Definition 1.1.2 | Def 1.1.2 → def.simplex-category
 
-- Kan 延拓 | Kan extension | 左 Kan 延拓 | 右 Kan 延拓 → def.kan-extension
-
-- 余极限是 Kan 延拓 | 伴随是 Kan 延拓 → ex.kan-extension
+- Proposition 1.1.4 | Prop 1.1.4 | 同构的截面唯一 → prop.iso-unique-section
 
 > 续见 alias/aka/category.5.md
