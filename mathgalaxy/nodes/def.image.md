@@ -21,3 +21,5 @@ $$\operatorname{coim} f \longrightarrow \operatorname{im} f$$
 - 被 `def.strict-morphism` 严格态射 用
 
 > 说明见 `notes/def.image.md`
+
+- …另有出边，续页见 `nodes/def.image.2.md`

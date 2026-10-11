@@ -1,6 +1,6 @@
 # 紧 Haus 是反射子范畴　`prop.chaus-reflective`
 Stone–Čech 紧化
-layer 16 · 命题 · 紧 Haus 与 Stone · 拓扑学
+layer 16 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 
 $\mathbf{CHaus}$ 是 $\mathbf{Top}$ 的**反射子范畴**，反射叫 **Stone–Čech 紧化**：
 

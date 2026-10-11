@@ -1,6 +1,6 @@
 # 完全不连通与极不连通　`def.totally-disconnected`
 完全不连通 / 极不连通空间
-layer 6 · 定义 · 紧 Haus 与 Stone · 拓扑学
+layer 6 · 定义 · Stone 与 Stonean · 拓扑学
 
 拓扑空间 $X$ 叫**完全不连通的**，如果**每个连通分量都是单点**。
 

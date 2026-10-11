@@ -21,3 +21,5 @@ $$P \longmapsto \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\ma
 - 被 `prop.ring-tensor-coproduct` 交换环的纤维余积是张量积 用
 
 > 说明见 `notes/def.tensor-abelian-sheaf.md`
+
+- …另有出边，续页见 `nodes/def.tensor-abelian-sheaf.3.md`

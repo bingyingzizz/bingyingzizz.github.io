@@ -7,4 +7,16 @@
 
 - 什么是截面函子 → def.section-functor prop.condab-section def.sheaf
 
-见 `../alias.md`。
+- 什么是拟紧的凝聚态集 → def.quasi-compact thm.qcqs-chaus-equiv def.free-compact-hausdorff
+
+- 什么是拟分离 → def.quasi-separated prop.cg-wh-iff-qseparated lem.qseparated-ind-inclusions
+
+- 紧 Hausdorff 空间在凝聚态里长什么样 → thm.qcqs-chaus-equiv def.chaus def.condensed-set
+
+- 弱 Hausdorff 和拟分离是一回事吗 → prop.cg-wh-iff-qseparated lem.weak-hausdorff-qseparated lem.qseparated-underlying-weak-hausdorff
+
+- 内部 Hom 怎么用连续函数空间算 → prop.cond-internal-hom def.internal-hom def.compactly-generated
+
+- 什么空间上凝聚态上同调会消失 → prop.stonean-cond-acyclic thm.real-banach-chaus-acyclic lem.stone-constant-acyclic
+
+> 续见 alias/condensed.3.md

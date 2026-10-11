@@ -1,6 +1,6 @@
 # 投射有限空间　`def.profinite`
 投射有限空间（Profinite Space）
-layer 12 · 定义 · 紧 Haus 与 Stone · 拓扑学
+layer 12 · 定义 · Stone 与 Stonean · 拓扑学
 
 **投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
 

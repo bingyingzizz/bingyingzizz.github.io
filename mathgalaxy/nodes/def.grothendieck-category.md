@@ -11,5 +11,7 @@ layer 18 · 定义 · 加法与阿贝尔范畴 · 同调代数
 ## 它能推出什么 / 谁在用它
 - 被 `thm.condab-ab` CondAb 满足 AB6 与 AB4* 用
 - 被 `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
+- 被 `prop.grothendieck-enough-injectives` Grothendieck 范畴有足够多内射 用
+- 被 `prop.ab5-implications` AB5 与 AB3*/AB4* 的关系 用
 
 > 说明见 `notes/def.grothendieck-category.md`

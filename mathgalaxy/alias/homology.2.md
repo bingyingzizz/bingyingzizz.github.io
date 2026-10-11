@@ -21,4 +21,4 @@
 
 - 什么是五引理 → thm.five-lemma thm.snake-lemma def.abelian-category
 
-见 `../alias.md`。
+> 续见 alias/homology.3.md

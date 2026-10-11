@@ -13,6 +13,8 @@ $$\check{H}^{n}(X, M^{\bullet}) := \Gamma\bigl(X,\ \check{H}^{n}(M^{\bullet})\bi
 - 被 `prop.cech-as-colim` Čech 上同调是沿覆盖筛的余极限 用
 - 被 `thm.cartan-leray` Cartan–Leray 谱序列 用
 - 被 `prop.acyclic-iff-cech` 无环 ⟺ Čech 上同调为零 用
+- 被 `lem.stone-cech-1-bounded` Stone 满射的 Čech 复形 1-有界零调 用
+- 被 `method.simplicial-cohomology` 单纯方法算层上同调 用
 
 refs: Le Stum, Definition 7.3.5
 

@@ -18,5 +18,9 @@ $$\mathrm{Cond} \;:=\; \widehat{\mathbf{CHaus}}$$
 - 被 `thm.cond-topos` Cond 是拓扑斯 用
 - 被 `thm.top-cond-adjoint` Top 与 Cond 的伴随 用
 - 被 `def.condensed-abelian-group` 凝聚态阿贝尔群 用
+- 被 `prop.cond-internal-hom` 内部 Hom 的函数空间刻画 用
+- 被 `prop.cond-slice-topos-morphism` Cond/X 到开集拓扑斯的态射 用
 
 > 说明见 `notes/def.condensed-set.md`
+
+- …另有出边，续页见 `nodes/def.condensed-set.2.md`

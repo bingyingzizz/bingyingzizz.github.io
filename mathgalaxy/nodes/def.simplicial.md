@@ -17,4 +17,7 @@ $$[0], \ [1], \ [2], \ \ldots, \ [n], \ \ldots$$
 - `def.commutative-diagram` 交换图：用到了定义 交换图　proofs/def-dep.diagram-simplicial.md
 - `def.function` 函数：用到了定义 函数　proofs/def-dep.function-simplicial.md
 
+## 它能推出什么 / 谁在用它
+- 被 `method.simplicial-cohomology` 单纯方法算层上同调 用
+
 > 说明见 `notes/def.simplicial.md`

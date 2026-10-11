@@ -9,3 +9,4 @@
 - 被 `def.compact-open-topology` 紧开拓扑 用
 - 被 `def.locally-compact` 局部紧 Hausdorff 空间 用
 - 被 `thm.tykhonov` Tychonoff 定理 用
+- 被 `thm.tietze-banach` Tietze 延拓（Banach 值） 用

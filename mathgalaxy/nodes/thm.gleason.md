@@ -1,6 +1,6 @@
 # Gleason 定理　`thm.gleason`
 Gleason 定理：$\mathbf{CHaus}$ 的投射对象
-layer 17 · 定理 · 紧 Haus 与 Stone · 拓扑学
+layer 17 · 定理 · Stone 与 Stonean · 拓扑学
 
 $\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。
 

@@ -17,4 +17,8 @@
 
 - 环的局部化 | W^{-1}R | 乘性子集 | 分式环 | localization of a ring → prop.ring-localization
 
+- 布尔环 | Boolean ring | 幂等环 → def.boolean-ring
+
+- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 → thm.boolean-stone
+
 见 `../../alias.md`。

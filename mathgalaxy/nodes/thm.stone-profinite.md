@@ -1,6 +1,6 @@
 # Stone ⟺ 投射有限　`thm.stone-profinite`
 Stone 空间 $\iff$ 投射有限空间
-layer 18 · 定理 · 紧 Haus 与 Stone · 拓扑学
+layer 18 · 定理 · Stone 与 Stonean · 拓扑学
 
 拓扑空间是 Stone 空间 $\iff$ 它是投射有限空间。
 

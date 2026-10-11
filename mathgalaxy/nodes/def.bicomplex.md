@@ -11,6 +11,7 @@ $$d^{p+1,q} \circ d^{p,q} = 0, \qquad d'^{p,q+1} \circ d'^{p,q} = 0, \qquad d'^{
 
 ## 它能推出什么 / 谁在用它
 - 被 `cor.grothendieck-spectral` Grothendieck 谱序列 用
+- 被 `lem.cartan-eilenberg` Cartan–Eilenberg 分解 用
 
 refs: Le Stum, Definition 7.2.17
 

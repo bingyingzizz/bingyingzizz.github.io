@@ -18,6 +18,8 @@ $$H^{n}(X, M^{\bullet}) := R^{n}\Gamma(X, M^{\bullet}),$$
 - 被 `prop.filtered-limit-cohomology` 滤过极限的上同调 用
 - 被 `cor.homotopy-invariant-cohomology` 层上同调是同伦不变量 用
 
+- …另有出边，续页见 `nodes/def.sheaf-cohomology.2.md`
+
 refs: Le Stum, Definition 7.3.1
 
 > 说明见 `notes/def.sheaf-cohomology.md`

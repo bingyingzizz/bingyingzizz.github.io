@@ -1,6 +1,6 @@
 # 紧 Haus 是自由的商　`prop.chaus-quotient-of-free`
 每个紧 Hausdorff 空间都是自由紧 Hausdorff 空间的商
-layer 17 · 命题 · 紧 Haus 与 Stone · 拓扑学
+layer 17 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 
 每个紧 Hausdorff 空间 $S$ 都是某个自由紧 Hausdorff 空间的**连续满像**：取 $S$ 上的离散拓扑，则
 

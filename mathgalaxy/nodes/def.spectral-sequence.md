@@ -23,3 +23,5 @@ $$d^{p,q}_{r} : E^{p,q}_{r} \longrightarrow E^{p+r,\, q-r+1}_{r}$$
 - 被 `thm.cartan-leray` Cartan–Leray 谱序列 用
 
 > 说明见 `notes/def.spectral-sequence.md`
+
+- …另有出边，续页见 `nodes/def.spectral-sequence.3.md`

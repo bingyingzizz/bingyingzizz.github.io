@@ -17,4 +17,8 @@
 
 - 连续映射怎么定义 → def.continuous-map def.topology def.closed-set
 
+- 什么是 Banach 阿贝尔群 → def.banach-ab-group def.semi-normed-ab-group prop.banach-stone-acyclic
+
+- 有限维 Banach 之间的 RHom → ex.finite-banach-rhom prop.rhom-banach-discrete-zero def.banach-ab-group
+
 见 `../alias.md`。

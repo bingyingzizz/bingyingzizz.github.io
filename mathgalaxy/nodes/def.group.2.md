@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 `def.group-object` 群对象与阿贝尔群对象 用
 - 被 `def.additive-functor` 加法函子 用
+- 被 `def.semi-normed-ab-group` 半范数阿贝尔群 用

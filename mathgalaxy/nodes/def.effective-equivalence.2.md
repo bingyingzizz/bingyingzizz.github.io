@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 `lem.representable-quotient` 可表示性的下降 用
 - 被 `def.pretopos` 预拓扑斯 用
+- 被 `prop.cond-equivalence-effective` Cond 的等价关系有效 用

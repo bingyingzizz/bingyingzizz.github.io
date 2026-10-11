@@ -19,8 +19,8 @@ layer 17 · 定义 · 加法与阿贝尔范畴 · 同调代数
 - …另有入边，续页见 `nodes/def.ab-axioms.2.md`
 
 ## 它能推出什么 / 谁在用它
-- 被 `thm.condab-ab` CondAb 满足 AB6 与 AB4* 用
+- …另有出边，续页见 `nodes/def.ab-axioms.3.md`
+
+refs: Le Stum, Definition 5.2.5
 
 > 说明见 `notes/def.ab-axioms.md`
-
-- …另有出边，续页见 `nodes/def.ab-axioms.3.md`

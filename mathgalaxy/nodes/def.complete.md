@@ -19,6 +19,7 @@ $$\{x_n\}\text{ 是} Cauchy\text{ 列} \implies \exists x \in X : x_n \to x$$
 - ⇒ `def.sequentially-compact` 列紧
 - 被 `thm.metric-compact-equiv` 紧的三个等价刻画 用
 - 被 `prop.subset-compact-equiv` 子集的紧性刻画 用
+- 被 `def.banach-ab-group` Banach 阿贝尔群 用
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 

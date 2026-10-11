@@ -15,6 +15,7 @@ $$V \in \mathcal{T}_Y \implies f^{-1}(V) \in \mathcal{T}_X$$
 
 ## 它能推出什么 / 谁在用它
 - 被 `def.homeomorphism` 同胚 用
+- 被 `thm.tietze-banach` Tietze 延拓（Banach 值） 用
 
 refs: Munkres, Topology, Ch. 2
 

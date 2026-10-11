@@ -8,4 +8,10 @@ layer 15 · 定义 · 拓扑空间 · 拓扑学
 - `def.hausdorff` Hausdorff 空间：用到了定义 Hausdorff 空间　proofs/def-dep.loccpt-hausdorff.md
 - `def.compact` 紧：用到了定义 紧　proofs/def-dep.loccpt-compact.md
 
+## 它能推出什么 / 谁在用它
+- 被 `thm.dyckhoff` 局部紧上凝聚态＝层上同调 用
+- 被 `thm.lc-ext-vanishing` 局部紧阿贝尔群高次 Ext 消失 用
+- 被 `ex.connected-lc-ext` 连通局部紧到离散只剩 Ext一次 用
+- 被 `thm.lc-structure` 局部紧阿贝尔群结构定理 用
+
 > 说明见 `notes/def.locally-compact.md`

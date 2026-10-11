@@ -17,4 +17,8 @@
 
 - 拓扑阿贝尔群是怎么定义的 → ex.ab-of-categories def.group-object def.topo-ab-group
 
-见 `../alias.md`。
+- 什么是拟紧的凝聚态集 → def.quasi-compact thm.qcqs-chaus-equiv def.free-compact-hausdorff
+
+- 紧 Hausdorff 空间在凝聚态里长什么样 → thm.qcqs-chaus-equiv def.chaus def.condensed-set
+
+> 续见 alias/topology.4.md

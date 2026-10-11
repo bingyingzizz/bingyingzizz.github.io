@@ -19,3 +19,5 @@ $$\mathrm{Ab}(\mathrm{Cond}) \;\simeq\; \mathrm{Cond}(\mathrm{Ab}) \;\simeq\; \w
 - 被 `prop.abtop-to-abcond` 拓扑阿贝尔群嵌入凝聚态 用
 
 > 说明见 `notes/def.condensed-abelian-group.md`
+
+- …另有出边，续页见 `nodes/def.condensed-abelian-group.2.md`

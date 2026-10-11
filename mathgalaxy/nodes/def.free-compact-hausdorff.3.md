@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 `prop.cond-epi` 凝聚态集满态射的判据 用
 - 被 `prop.condab-section` 截面函子保极限余极限 用
+- 被 `thm.qcqs-chaus-equiv` qc 与 qcqs 的判定 用

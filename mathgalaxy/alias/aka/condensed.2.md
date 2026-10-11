@@ -17,4 +17,8 @@
 
 - Pontryagin-van Kampen | 庞特里亚金对偶定理 | Theorem 6.2.4 | Thm 6.2.4 | 自等价 → thm.pontryagin-van-kampen
 
-见 `../../alias.md`。
+- 内部 Hom 的刻画 | internal hom | 连续函数空间 | C(X,Y) | Proposition 4.2.6 → prop.cond-internal-hom
+
+- qcqs | 拟紧拟分离 | CHaus 等价 qcqs | qcqs 判定 | Theorem 4.2.8 → thm.qcqs-chaus-equiv
+
+> 续见 alias/aka/condensed.3.md

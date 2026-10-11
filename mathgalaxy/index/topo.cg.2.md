@@ -4,6 +4,7 @@
 - cor.cg-product　紧生成空间对积封闭　layer 17
 - thm.cgwh-reflective　CGWH 是 CG 的反射子范畴　layer 17
 - prop.cg-cartesian-closed　紧生成空间是笛卡尔闭的　layer 17
+- prop.closed-inclusion-filtered-limit　紧块沿闭含入拼出的空间　layer 17
 - prop.ktx-colimit　kX 是紧空间的余极限　layer 18
 - prop.cg-coreflective　紧生成空间是余反射子范畴　layer 18
 - prop.k-product　k-化与积　layer 18

@@ -3,6 +3,8 @@
 
 一个字读法：**头两条补的是「态射有没有核与余核、单满正不正则」；后面几条一路在补「越来越多的余极限操作是正合的、并且和别的操作交换」。**
 
-例：$\mathbf{Ab}$ 满足 AB6 与 AB4*；$\mathbf{AbTop}$ 只满足 AB1；$\mathbf{AbCHaus} \simeq \mathbf{Ab}^{\mathrm{op}}$ 满足 AB4 与 AB6*（Pontryagin 对偶）；对任意范畴 $\mathcal{C}$，$\mathbf{Ab}^{\mathcal{C}}$ 满足 AB6 与 AB4*；拓扑斯上的 $\mathbf{Ab}(\mathcal{T})$ 满足 AB5 与 AB3*。
+⭐ **这些公理之间还有蕴含关系**（见「AB5 与 AB3*/AB4* 的关系」）：Grothendieck 范畴自动满足 AB3\*；AB5 与 AB5\* 互斥（除零范畴外不能同时成立）；拓扑斯上的 $\mathbf{Ab}(\mathcal{T})$ 停在 AB5 + AB3\*，而 $\mathrm{CondAb}$ 能上到 AB6 + AB4\*。
 
-⚠️ 拓扑斯上的 $\mathbf{Ab}(\mathcal{T})$ **一般并不满足 AB6 或 AB4\***；另外，除 $\{0\}$ 之外没有范畴能同时满足 AB5 与 AB5\*。
+⭐ **哪些范畴落在哪一级**是另一条独立的事，见「AB 公理的例子表」—— 那张表把 $\mathbf{Ab}$、$\mathbf{AbTop}$、$\mathbf{AbCHaus}$、预层范畴、拓扑斯上的阿贝尔群、$\mathrm{CondAb}$ 全部排了一遍。
+
+⚠️ 这条只给**定义与名字**：AB 公理是一把尺子，用来量「一个范畴能做多少同调代数」。真正有用的是把它用在具体范畴上得到的结论（即上面两条）。

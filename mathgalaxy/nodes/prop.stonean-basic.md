@@ -1,6 +1,6 @@
 # 极端不连通的基本性质　`prop.stonean-basic`
 极端不连通的性质
-layer 17 · 命题 · 紧 Haus 与 Stone · 拓扑学
+layer 17 · 命题 · Stone 与 Stonean · 拓扑学
 
 **(a)** 若 $X$ 极端不连通，则任意两个不交开集 $U, V$ 的闭包仍不交：$\overline{U} \cap \overline{V} = \emptyset$。
 

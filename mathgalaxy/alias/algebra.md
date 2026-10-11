@@ -23,4 +23,6 @@
 
 - 环的局部化是什么 → prop.ring-localization def.localization prop.calculus-of-fractions
 
-见 `../alias.md`。
+- Stone 表示定理是什么 → thm.boolean-stone def.boolean-ring def.stone-space
+
+> 续见 alias/algebra.2.md

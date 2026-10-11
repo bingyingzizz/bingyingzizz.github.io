@@ -11,4 +11,14 @@
 
 - 谱序列 | spectral sequence | 第一象限谱序列 | E^{p,q}_{r} | E_r 页 → def.spectral-sequence
 
-见 `../../alias.md`。
+- Stonean 上零调 | Stonean acyclic | Proposition 8.1.1 → prop.stonean-cond-acyclic
+
+- Stone 上常系数零调 | Stone acyclic constant | Lemma 8.1.2 → lem.stone-constant-acyclic
+
+- Dyckhoff | 局部紧上凝聚态等于层上同调 | Proposition 8.1.4 → thm.dyckhoff
+
+- K-有界正合 | K-bounded exact | K-有界零调 | Definition 8.2.1 → def.k-bounded-exact
+
+- K-有界与完备化 | k-bounded completion | Lemma 8.2.2 → lem.k-bounded-completion
+
+> 续见 alias/aka/homology.7.md

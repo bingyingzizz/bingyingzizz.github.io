@@ -10,3 +10,5 @@
 - 被 `def.right-derived-functor` 右导出函子 用
 - 被 `thm.filtered-complex-spectral` 过滤复形给出谱序列 用
 - 被 `def.bicomplex` 双复形 用
+- 被 `def.k-bounded-exact` K-有界正合 用
+- 被 `def.exact-sequence` 一般正合列 用

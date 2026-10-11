@@ -15,3 +15,7 @@
 - 被 `prop.abtop-to-abcond` 拓扑阿贝尔群嵌入凝聚态 用
 - 被 `prop.lc-ab-preabelian` 局部紧阿贝尔群不是阿贝尔范畴 用
 - 被 `prop.cg-cartesian-closed` 紧生成空间是笛卡尔闭的 用
+- 被 `prop.cond-internal-hom` 内部 Hom 的函数空间刻画 用
+- 被 `prop.cg-wh-iff-qseparated` 紧生成：弱 Hausdorff ⟺ 拟分离 用
+
+> 续见 `nodes/def.compactly-generated.3.md`
