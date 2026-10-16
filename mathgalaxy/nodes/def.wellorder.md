@@ -1,0 +1,25 @@
+# 良序集　`def.wellorder`
+良序集（Well-Ordered Set）
+layer 6 · 定义 · 序结构 · 序理论
+[在星图里打开](../#n=def.wellorder)　·　[节点索引](../index.md)
+
+全序集 $(W, \preceq )$ 是**良序的**，当且仅当 $W$ 的每个非空子集都有最小元：
+
+$$\forall S \subseteq W ( S \ne \emptyset \to \exists m \in S, \forall s \in S, m \preceq s )$$
+
+等价于：不存在无穷严格递减链 $w_{0} \succ w_{1} \succ w_{2} \succ \cdots$。
+
+## 为什么成立（入边，证明在 proofs/）
+- [`def.poset`](../nodes/def.poset.md) 偏序集：用到了定义 偏序集　[proofs/def-link.wellorder-poset.md](../proofs/def-link.wellorder-poset.md)
+- [`def.finchar`](../nodes/def.finchar.md) 有限特征：两种「用有限/最小的东西控制无穷」的手法　[proofs/ana.tame-infinite.md](../proofs/ana.tame-infinite.md)
+
+- …另有入边，续页见 [nodes/def.wellorder.2.md](./def.wellorder.2.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.wellorder.3.md](./def.wellorder.3.md)
+
+refs: Kunen, Set Theory, I.11
+
+> 说明见 `notes/def.wellorder.md`
+
+引用：`def.wellorder`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

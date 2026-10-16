@@ -1,0 +1,101 @@
+/* ==========================================================================
+   个人站点 · 全局样式（首页 + 阅读页共用）
+   --------------------------------------------------------------------------
+   这份文件是**站点源码**，由 tools/publish.mjs 原样拷到 dist-site/assets/。
+   改观感改这里；改「有哪些页面、页面里有什么」改 tools/publish.mjs。
+   ========================================================================== */
+
+:root{
+  --ink:#15171c;          /* 正文 */
+  --soft:#5b6068;         /* 次要文字 */
+  --faint:#9aa0a8;        /* 极淡：小标题、页脚 */
+  --line:rgba(20,22,28,.10);
+  --accent:#4f7cf5;
+  --accent-soft:rgba(79,124,245,.10);
+  --code-bg:rgba(20,22,28,.055);
+
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+         "Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"JetBrains Mono",Menlo,Consolas,
+         "Courier New",monospace;
+
+  --ease:cubic-bezier(.2,.7,.2,1);
+
+  /* 入场错峰用：第 n 个元素延迟 n×60ms（见 .enter） */
+  --step:60ms;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);font-family:var(--font);
+  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility}
+::selection{background:var(--accent-soft)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+[hidden]{display:none!important}
+
+/* ------------------------------------------------------------------ 首页 */
+.wrap{max-width:760px;margin:0 auto;padding:clamp(40px,10vh,120px) 24px 80px}
+h1{font-size:clamp(26px,5vw,38px);letter-spacing:-.02em;margin:0 0 6px;font-weight:700}
+.sub{color:var(--soft);margin:0 0 40px;font-size:15px}
+h2{font-size:13px;letter-spacing:.12em;color:var(--faint);
+  margin:44px 0 14px;font-weight:600}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);
+  color:var(--faint);font-size:13px}
+footer a{color:var(--soft)}
+
+/* ------------------------------------------------------------ 卡片（首页） */
+.card{position:relative;display:block;padding:18px 52px 18px 22px;border:1px solid var(--line);
+  border-radius:14px;margin-bottom:12px;color:inherit;overflow:hidden;
+  transition:border-color .2s var(--ease),box-shadow .28s var(--ease),
+             transform .24s var(--ease)}
+.card:hover{border-color:rgba(20,22,28,.20);box-shadow:0 8px 28px rgba(16,20,30,.08);
+  text-decoration:none;transform:translateY(-2px)}
+.card:active{transform:translateY(0);box-shadow:0 3px 12px rgba(16,20,30,.07)}
+
+/* 左侧那条会「长出来」的色条 —— 比整块变色安静 */
+.card::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;
+  background:var(--accent);opacity:.85;transform:scaleX(0);transform-origin:left;
+  transition:transform .3s var(--ease)}
+.card:hover::before{transform:scaleX(1)}
+
+/* 右侧的箭头：hover 时向右滑一点 */
+.card .go{position:absolute;right:22px;top:50%;font-style:normal;font-size:15px;
+  color:var(--faint);opacity:.45;transform:translateY(-50%);
+  transition:transform .28s var(--ease),color .28s var(--ease),opacity .28s var(--ease)}
+.card:hover .go{transform:translate(4px,-50%);color:var(--accent);opacity:1}
+.card b{display:block;font-size:16.5px;margin-bottom:3px;font-weight:650}
+.card span{color:var(--soft);font-size:13.5px;line-height:1.7}
+
+/* 「下载」这类卡片：不抢注意力，色条换成灰的 */
+.card.dl::before{background:#8a94a6;opacity:.5}
+.card.dl:hover .go{color:var(--soft)}
+
+/* -------------------------------------------------------------- 入场动画 */
+/* 首屏元素一条条浮上来。没有 JS 也照跑（纯 CSS）。 */
+@media (prefers-reduced-motion: no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .enter{animation:rise .6s var(--ease) both;animation-delay:calc(var(--i,0) * var(--step))}
+}
+
+/* ---------------------------------------------------------- 跨页过渡 ------- */
+/* View Transitions：点卡片换页时，旧页轻轻退、新页浮上来。
+   不支持的浏览器（老 Firefox）就是普通跳转，没有任何副作用。 */
+@view-transition{navigation:auto}
+
+@media (prefers-reduced-motion: no-preference){
+  @keyframes vt-out{to{opacity:0;transform:translateY(-8px)}}
+  @keyframes vt-in{from{opacity:0;transform:translateY(14px)}}
+
+  ::view-transition-old(root){animation:vt-out .26s var(--ease) both}
+  ::view-transition-new(root){animation:vt-in .44s var(--ease) both}
+
+  /* 卡片标题 → 阅读页大标题的「变形」：JS 临时给两边挂上同名 doc-hero */
+  ::view-transition-group(doc-hero){animation-duration:.42s;animation-timing-function:var(--ease)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  /* 不动画，但要留住「一次跳转」这件事本身：把过渡压成 0 */
+  ::view-transition-old(root),::view-transition-new(root),
+  ::view-transition-group(doc-hero){animation:none!important}
+}

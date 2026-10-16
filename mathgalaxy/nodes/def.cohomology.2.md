@@ -1,0 +1,7 @@
+# 同调　`def.cohomology`　·　续页（第 2 页）
+[在星图里打开](../#n=def.cohomology)　·　第 1 页 [nodes/def.cohomology.md](./def.cohomology.md)
+
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-dep.equalizer-cohomology.md](../proofs/def-dep.equalizer-cohomology.md)
+
+> 续见 [nodes/def.cohomology.3.md](./def.cohomology.3.md)

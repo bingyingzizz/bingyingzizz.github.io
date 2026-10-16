@@ -1,0 +1,21 @@
+# bingyingzizz.github.io
+
+个人站点。主体是**数学星图 MathGalaxy**：744 个数学概念（定理 / 定义 / 引理）按
+「星系 → 星团 → 恒星」三层组织，边是逻辑关系（推出 / 等价 / 定义引用 / 类比）。
+
+## 想读内容，按这个顺序
+
+- `/mathgalaxy/llms.txt`    星图的检索协议 —— **先读这一份**，它说清了每种产物怎么用
+- `/mathgalaxy/index.md`    索引：星系、星团、节点 id 一览
+- `/mathgalaxy/nodes/<id>.md`  一个概念一个文件，绝大多数 ≤ 1300 B，可以整份读进来
+- `/mathgalaxy/nodes/<id>.html` 同一个概念的完整单页版（公式是 MathML、不分页，但大得多）
+- `/read.html`              给人读的：读图指南 / 记号对照表 / 内容准则 / 枢纽定理榜
+
+## 程序化使用
+
+- `/mathgalaxy/graph.json`  全量图（约 1.7 MB），schema 见 `/mathgalaxy/reading.md`
+
+## 许可
+
+内容 **CC BY 4.0**（署名即可）；代码 MIT。引用请写节点 id + 版本，
+条款见 `/mathgalaxy/LICENSE.txt`。

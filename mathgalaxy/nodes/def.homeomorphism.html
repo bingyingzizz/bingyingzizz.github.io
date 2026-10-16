@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同胚（Homeomorphism） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 X 、 Y 是拓扑空间。 f : X → Y 是同胚，当且仅当 f 是双射； f 与 f^-1 都连续。 此时记 X ≅ Y ，称两个空间同胚。「同胚」是拓扑空间之间的等价关系（恒等、逆、复合都保持）。 · English: Homeomorphism">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.homeomorphism.html">
+<link rel="alternate" type="text/markdown" href="def.homeomorphism.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.homeomorphism.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="同胚（Homeomorphism） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 X 、 Y 是拓扑空间。 f : X → Y 是同胚，当且仅当 f 是双射； f 与 f^-1 都连续。 此时记 X ≅ Y ，称两个空间同胚。「同胚」是拓扑空间之间的等价关系（恒等、逆、复合都保持）。 · English: Homeomorphism">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.homeomorphism.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#D9649F">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.homeomorphism.html#concept","name":"同胚","alternateName":"Homeomorphism","description":"设 X 、 Y 是拓扑空间。 f : X → Y 是同胚，当且仅当 f 是双射； f 与 f^-1 都连续。 此时记 X ≅ Y ，称两个空间同胚。「同胚」是拓扑空间之间的等价关系（恒等、逆、复合都保持）。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.homeomorphism.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.homeomorphism","keywords":"定义, 拓扑, 同胚"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"拓扑学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology"},{"@type":"ListItem","position":3,"name":"拓扑空间","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general"},{"@type":"ListItem","position":4,"name":"同胚","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.homeomorphism.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#D9649F">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology">拓扑学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general">拓扑空间</a><span class="sep">›</span><span aria-current="page">同胚</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>同胚</h1>
+    <p class="full">同胚（Homeomorphism）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 7</li><li>拓扑学</li><li>拓扑空间</li></ul>
+    <p class="idline"><code>def.homeomorphism</code> · 定义 · 拓扑 · 同胚</p>
+    <p class="aka"><span class="aka-k">又称</span>同胚<span class="aka-s">·</span>homeomorphism<span class="aka-s">·</span>拓扑等价</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 是拓扑空间。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 是<strong>同胚</strong>，当且仅当</p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 是双射；</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 都连续。</li></ul><p>此时记 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>≅</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \cong Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span>，称两个空间<strong>同胚</strong>。「同胚」是拓扑空间之间的等价关系（恒等、逆、复合都保持）。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>⭐ 同胚 = 「拓扑上分不出来」：一切<strong>拓扑性质</strong>（紧性、连通性、Hausdorff、闭包）都保持不变。</p><p>⚠ 反过来也要当心：<strong>度量性质在同胚下会变</strong>。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 与开区间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0, 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 同胚（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>↦</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mi>π</mi></mfrac><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \mapsto \frac{1}{2} + \frac{1}{\pi}\arctan x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.522em;vertical-align:-0.011em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↦</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span></span></span></span>），但前者完备、后者不完备 —— 这就是「完备性不是拓扑性质」的经典例子，也是距离空间里「紧 / 闭」与「完备 / 全有界」两类性质的分界线。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.bijection.html">单射 / 满射 / 双射</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>同胚首先是<strong>双射</strong>，再要求两个方向都连续。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.continuous-map.html">连续映射</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 都连续」用的是<strong>连续映射</strong>。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Munkres, Topology, Ch. 2</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">两个空间什么时候算同一个</span><span class="also">也看 <a href="def.order-iso.html">序同构</a>、<a href="def.bijection.html">单射 / 满射 / 双射</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">22 个</span></h2><ul class="sibs"><li><a href="def.topology.html">拓扑空间与开集</a><span class="lay">layer 4</span></li><li><a href="def.closed-set.html">闭集与闭包</a><span class="lay">layer 5</span></li><li><a href="def.connected.html">连通与连通分量</a><span class="lay">layer 5</span></li><li><a href="def.continuous-map.html">连续映射</a><span class="lay">layer 5</span></li><li><a href="def.hausdorff.html">Hausdorff 空间</a><span class="lay">layer 5</span></li><li><a href="def.subspace-topology.html">子空间拓扑</a><span class="lay">layer 5</span></li><li><a href="def.topology-base.html">基与子基</a><span class="lay">layer 5</span></li><li><a href="def.clopen.html">闭开集</a><span class="lay">layer 6</span></li><li><a href="def.normal-space.html">正规空间</a><span class="lay">layer 6</span></li><li><a href="def.product-topology.html">积拓扑</a><span class="lay">layer 6</span></li><li><a href="def.quotient-topology.html">商拓扑</a><span class="lay">layer 6</span></li><li><a href="prop.closed-map-neighborhood-basis.html">闭映射的邻域基</a><span class="lay">layer 6</span></li><li><a href="prop.connected-image-closure.html">连通的像与闭包</a><span class="lay">layer 6</span></li><li><a href="prop.normal-locally-closed.html">正规空间的邻域里有闭邻域</a><span class="lay">layer 7</span></li><li><a href="prop.hausdorff-reflective.html">Hausdorff 空间是反射子范畴</a><span class="lay">layer 11</span></li><li><a href="def.locally-compact.html">局部紧 Hausdorff 空间</a><span class="lay">layer 15</span></li><li><a href="lem.urysohn.html">Urysohn 引理</a><span class="lay">layer 15</span></li><li><a href="prop.compact-basic-operations.html">紧性的基本操作</a><span class="lay">layer 15</span></li><li><a href="thm.tykhonov.html">Tychonoff 定理</a><span class="lay">layer 15</span></li><li><a href="prop.paracompact-partition-unity.html">仿紧性与单位分解</a><span class="lay">layer 16</span></li><li><a href="prop.quotient-of-compact.html">紧空间的商紧</a><span class="lay">layer 16</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.homeomorphism">在星图里打开「同胚」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="def.homeomorphism.md">Markdown 原文</a>　·　
+      <a href="def.homeomorphism.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.homeomorphism</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>允许右分式演算时局部化函子正合 · 数学星图 MathGalaxy</title>
+<meta name="description" content="若 C 关于 W 容许右分式演算，则局部化函子 Q : C → ho(C) 正合。 证明。 右分式演算说 Homho(X, Y) 是形如 X ← X' → Y （ w ∈ W ）的分式的商 ✓，而 Q 在这些 Hom 集上是满的、并与原范畴的映射交换 ✓，于是它保有限极限与有限余极限 ✓。∎">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.localization-functor-exact.html">
+<link rel="alternate" type="text/markdown" href="prop.localization-functor-exact.md" title="Markdown 原文（给 AI 的按需检索版）">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="允许右分式演算时局部化函子正合 · 数学星图 MathGalaxy">
+<meta property="og:description" content="若 C 关于 W 容许右分式演算，则局部化函子 Q : C → ho(C) 正合。 证明。 右分式演算说 Homho(X, Y) 是形如 X ← X' → Y （ w ∈ W ）的分式的商 ✓，而 Q 在这些 Hom 集上是满的、并与原范畴的映射交换 ✓，于是它保有限极限与有限余极限 ✓。∎">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.localization-functor-exact.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#B03A5B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.localization-functor-exact.html#concept","name":"允许右分式演算时局部化函子正合","alternateName":"命题：右分式演算 正合","description":"若 C 关于 W 容许右分式演算，则局部化函子 Q : C → ho(C) 正合。 证明。 右分式演算说 Homho(X, Y) 是形如 X ← X' → Y （ w ∈ W ）的分式的商 ✓，而 Q 在这些 Hom 集上是满的、并与原范畴的映射交换 ✓，于是它保有限极限与有限余极限 ✓。∎","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.localization-functor-exact.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"命题, 局部化, 分式演算, 正合"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"范畴论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#category"},{"@type":"ListItem","position":3,"name":"范畴与图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#cat.basic"},{"@type":"ListItem","position":4,"name":"允许右分式演算时局部化函子正合","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.localization-functor-exact.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#B03A5B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#category">范畴论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#cat.basic">范畴与图</a><span class="sep">›</span><span aria-current="page">允许右分式演算时局部化函子正合</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>允许右分式演算时局部化函子正合</h1>
+    <p class="full">命题：右分式演算 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>:</mo><mi mathvariant="script">C</mi><mo>→</mo><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi></mrow><mo stretchy="false">(</mo><mi mathvariant="script">C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Q : \mathcal{C} \to \mathrm{ho}(\mathcal{C})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">ho</span></span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.05834em;">C</span><span class="mclose">)</span></span></span></span> 正合</p>
+    <ul class="facts"><li>命题</li><li>依赖深度 layer 11</li><li>范畴论</li><li>范畴与图</li></ul>
+    <p class="idline"><code>prop.localization-functor-exact</code> · 命题 · 局部化 · 分式演算 · 正合</p>
+    <p class="aka"><span class="aka-k">又称</span>Exercise 1.54</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>若 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">C</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span></span></span> 关于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span> 容许<strong>右分式演算</strong>，则局部化函子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>:</mo><mi mathvariant="script">C</mi><mo>→</mo><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi></mrow><mo stretchy="false">(</mo><mi mathvariant="script">C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Q : \mathcal{C} \to \mathrm{ho}(\mathcal{C})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">ho</span></span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.05834em;">C</span><span class="mclose">)</span></span></span></span> <strong>正合</strong>。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>证明。</strong> 右分式演算说 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi></mrow></msub><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Hom}_{\mathrm{ho}}(X, Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop"><span class="mord mathrm">Hom</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">ho</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span> 是形如 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mover><mo stretchy="true" minsize="3.0em">←</mo><mpadded width="+0.6em" lspace="0.3em"><mrow><mtext> </mtext><mi>w</mi><mtext> </mtext></mrow></mpadded></mover><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mrow><mtext> </mtext><mi>f</mi><mtext> </mtext></mrow></mpadded></mover><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \xleftarrow{\ w\ } X&#x27; \xrightarrow{\ f\ } Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9344em;vertical-align:-0.011em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel x-arrow"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9234em;"><span style="top:-3.322em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight x-arrow-pad"><span class="mord mtight"><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span><span class="mspace mtight"><span class="mtight"> </span></span></span></span></span><span class="svg-align" style="top:-2.689em;"><span class="pstrut" style="height:2.7em;"></span><span class="hide-tail" style="height:0.522em;min-width:1.469em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMinYMin slice"><path d="M400000 241H110l3-3c68.7-52.7 113.7-120
+ 135-202 4-14.7 6-23 6-25 0-7.3-7-11-21-11-8 0-13.2.8-15.5 2.5-2.3 1.7-4.2 5.8
+-5.5 12.5-1.3 4.7-2.7 10.3-4 17-12 48.7-34.8 92-68.5 130S65.3 228.3 18 247
+c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
+ 490c.7 2 1.3 5 2 9s1.2 6.7 1.5 8c.3 1.3 1 3.3 2 6s2.2 4.5 3.5 5.5c1.3 1 3.3
+ 1.8 6 2.5s6 1 10 1c14 0 21-3.7 21-11 0-2-2-10.3-6-25-20-79.3-65-146.7-135-202
+ l-3-3h399890zM100 241v40h399900v-40z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1191em;vertical-align:-0.011em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel x-arrow"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1081em;"><span style="top:-3.322em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight x-arrow-pad"><span class="mord mtight"><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mspace mtight"><span class="mtight"> </span></span></span></span></span><span class="svg-align" style="top:-2.689em;"><span class="pstrut" style="height:2.7em;"></span><span class="hide-tail" style="height:0.522em;min-width:1.469em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.522em" viewBox="0 0 400000 522" preserveAspectRatio="xMaxYMin slice"><path d="M0 241v40h399891c-47.3 35.3-84 78-110 128
+-16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
+ 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
+ 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
+-40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
+-12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
+ 151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>∈</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">w \in W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>）的分式的商 ✓，而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span> 在这些 Hom 集上是满的、并与原范畴的映射交换 ✓，于是它保有限极限与有限余极限 ✓。∎</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.localization.html">局部化</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>正合说的是局部化函子。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, An introduction to condensed mathematics, Exercise 1.54</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">17 个</span></h2><ul class="sibs"><li><a href="def.universe.html">Grothendieck 宇宙</a><span class="lay">layer 4</span></li><li><a href="def.graph.html">图</a><span class="lay">layer 6</span></li><li><a href="def.category.html">范畴</a><span class="lay">layer 7</span></li><li><a href="def.graph-morphism.html">图的态射</a><span class="lay">layer 7</span></li><li><a href="def.section-retraction.html">截面与收缩</a><span class="lay">layer 8</span></li><li><a href="def.subcategory.html">子范畴</a><span class="lay">layer 8</span></li><li><a href="prop.matrix-category.html">矩阵范畴</a><span class="lay">layer 8</span></li><li><a href="prop.functor-preserves-sections.html">函子保截面与收缩</a><span class="lay">layer 9</span></li><li><a href="def.localization.html">局部化</a><span class="lay">layer 10</span></li><li><a href="prop.preorder-as-category.html">预序集就是「Hom 至多一元」的小范畴</a><span class="lay">layer 11</span></li><li><a href="def.mor-domain-codomain.html">态射范畴上的域与余域函子</a><span class="lay">layer 13</span></li><li><a href="prop.cat-final-initial-products.html">Cat 的终始对象与有限积</a><span class="lay">layer 13</span></li><li><a href="prop.calculus-of-fractions.html">分式演算下的局部化</a><span class="lay">layer 14</span></li><li><a href="prop.iso-unique-section.html">同构的截面与收缩唯一</a><span class="lay">layer 14</span></li><li><a href="prop.localization-hom-colim.html">局部化的 Hom 是滤过余极限</a><span class="lay">layer 15</span></li><li><a href="prop.projective-universal-epi.html">投射对象与满态射的截面</a><span class="lay">layer 15</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=prop.localization-functor-exact">在星图里打开「允许右分式演算时局部化函子正合」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="prop.localization-functor-exact.md">Markdown 原文</a>　·　
+      <a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>prop.localization-functor-exact</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

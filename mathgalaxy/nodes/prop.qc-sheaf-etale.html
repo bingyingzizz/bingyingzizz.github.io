@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命题： 上的层拟紧 对应 espace étalé 紧 · 数学星图 MathGalaxy</title>
+<meta name="description" content="拓扑空间 X 上的层（对标准拓扑而言）拟紧 ⟺ 与它对应的 espace étalé 是紧空间。 证明。 拟紧的定义是「从余积出发的满态射可以取有限子族仍然满」✓；在 X 上的层这个具体世界里，「 ∐i Fi → G 满」正是 espace étalé 之间的映射在每根纤维上满，于是「有限子族已经满」 ⟺ 「相应…">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.qc-sheaf-etale.html">
+<link rel="alternate" type="text/markdown" href="prop.qc-sheaf-etale.md" title="Markdown 原文（给 AI 的按需检索版）">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="命题： 上的层拟紧 对应 espace étalé 紧 · 数学星图 MathGalaxy">
+<meta property="og:description" content="拓扑空间 X 上的层（对标准拓扑而言）拟紧 ⟺ 与它对应的 espace étalé 是紧空间。 证明。 拟紧的定义是「从余积出发的满态射可以取有限子族仍然满」✓；在 X 上的层这个具体世界里，「 ∐i Fi → G 满」正是 espace étalé 之间的映射在每根纤维上满，于是「有限子族已经满」 ⟺ 「相应…">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.qc-sheaf-etale.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#B03A5B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.qc-sheaf-etale.html#concept","name":"拟紧层与紧的 étale 空间","alternateName":"命题： 上的层拟紧 对应 espace étalé 紧","description":"拓扑空间 X 上的层（对标准拓扑而言）拟紧 ⟺ 与它对应的 espace étalé 是紧空间。 证明。 拟紧的定义是「从余积出发的满态射可以取有限子族仍然满」✓；在 X 上的层这个具体世界里，「 ∐i Fi → G 满」正是 espace étalé 之间的映射在每根纤维上满，于是「有限子族已经满」 ⟺ 「相应…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.qc-sheaf-etale.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"命题, 拟紧, espace étalé, 标准拓扑"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"范畴论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#category"},{"@type":"ListItem","position":3,"name":"拓扑斯","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#cat.topos"},{"@type":"ListItem","position":4,"name":"拟紧层与紧的 étale 空间","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.qc-sheaf-etale.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#B03A5B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#category">范畴论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#cat.topos">拓扑斯</a><span class="sep">›</span><span aria-current="page">拟紧层与紧的 étale 空间</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>拟紧层与紧的 étale 空间</h1>
+    <p class="full">命题：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上的层拟紧 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 对应 espace étalé 紧</p>
+    <ul class="facts"><li>命题</li><li>依赖深度 layer 16</li><li>范畴论</li><li>拓扑斯</li></ul>
+    <p class="idline"><code>prop.qc-sheaf-etale</code> · 命题 · 拟紧 · espace étalé · 标准拓扑</p>
+    <p class="aka"><span class="aka-k">又称</span>Exercise 3.70</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>拓扑空间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上的层（对<strong>标准拓扑</strong>而言）<strong>拟紧</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 与它对应的 <strong>espace étalé</strong> 是<strong>紧</strong>空间。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>证明。</strong> 拟紧的定义是「从余积出发的满态射可以取有限子族仍然满」✓；在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上的层这个具体世界里，「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∐</mo><mi>i</mi></msub><msub><mi mathvariant="script">F</mi><mi>i</mi></msub><mo>→</mo><mi mathvariant="script">G</mi></mrow><annotation encoding="application/x-tex">\coprod_{i} \mathcal{F}_{i} \to \mathcal{G}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0497em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∐</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.162em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0993em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7805em;vertical-align:-0.0972em;"></span><span class="mord mathcal" style="margin-right:0.0593em;">G</span></span></span></span> 满」正是 espace étalé 之间的映射在每根纤维上满，于是「有限子族已经满」<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span>「相应的紧空间被有限个块覆盖」✓ —— 两边同时成立 ✓。∎</p><p>⭐ 读法：<strong>拓扑空间上的「拟紧层」就是几何里那个「紧的 étale 空间」</strong>。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.quasi-compact.html">拟紧对象</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>判定的是拟紧性。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, An introduction to condensed mathematics, Exercise 3.70</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">36 个</span></h2><ul class="sibs"><li><a href="def.generator.html">生成元集</a><span class="lay">layer 10</span></li><li><a href="prop.quasi-compact-properties.html">拟紧的性质</a><span class="lay">layer 13</span></li><li><a href="prop.slice-topos.html">切片拓扑斯</a><span class="lay">layer 13</span></li><li><a href="lem.representable-quotient.html">可表示性的下降</a><span class="lay">layer 14</span></li><li><a href="prop.slice-covering-sieve.html">切片里的覆盖筛</a><span class="lay">layer 14</span></li><li><a href="def.pretopos.html">预拓扑斯</a><span class="lay">layer 15</span></li><li><a href="def.quasi-compact.html">拟紧对象</a><span class="lay">layer 15</span></li><li><a href="prop.subobject-lattice.html">子对象构成有界格</a><span class="lay">layer 15</span></li><li><a href="def.cocontinuous-functor.html">余连续函子</a><span class="lay">layer 16</span></li><li><a href="def.continuous-functor.html">连续函子（site 之间）</a><span class="lay">layer 16</span></li><li><a href="def.precanonical-topology.html">预标准拓扑</a><span class="lay">layer 16</span></li><li><a href="def.quasi-separated.html">拟分离对象</a><span class="lay">layer 16</span></li><li><a href="def.topos.html">拓扑斯</a><span class="lay">layer 16</span></li><li><a href="prop.precanonical-mono-epi.html">单满在层化后不变</a><span class="lay">layer 16</span></li><li><a href="prop.precanonical-sheaf.html">预标准拓扑下的层</a><span class="lay">layer 16</span></li><li><a href="prop.pretopos-factorization.html">满-单分解</a><span class="lay">layer 16</span></li><li><a href="prop.topos-sheaf-limits.html">拓扑斯上的层即保极限的预层</a><span class="lay">layer 16</span></li><li><a href="def.induced-topology.html">诱导拓扑</a><span class="lay">layer 17</span></li><li><a href="def.morphism-of-sites.html">site 的态射</a><span class="lay">layer 17</span></li><li><a href="def.topos-morphism.html">拓扑斯的态射</a><span class="lay">layer 17</span></li><li><a href="prop.abelian-slice-adjunction.html">切片上的正合左伴随</a><span class="lay">layer 17</span></li><li><a href="prop.precanonical-preserves.html">余积与商在层范畴中不变</a><span class="lay">layer 17</span></li><li><a href="prop.topos-covering-epi.html">拓扑斯中覆盖即余积满射</a><span class="lay">layer 17</span></li><li><a href="thm.giraud.html">Giraud 定理</a><span class="lay">layer 17</span></li><li><a href="thm.pretopos-qcqs.html">预拓扑斯由拓扑斯唯一确定</a><span class="lay">layer 17</span></li><li><a href="prop.internal-hom-slice-value.html">内 Hom 的取值</a><span class="lay">layer 18</span></li><li><a href="prop.slice-shriek-z.html">切片左伴随作用在 Z 上</a><span class="lay">layer 18</span></li><li><a href="prop.topos-morphism-abelian-adjunction.html">拓扑斯态射在阿贝尔群上给出伴随</a><span class="lay">layer 18</span></li><li><a href="prop.topos-morphism-point.html">点给出的拓扑斯态射</a><span class="lay">layer 18</span></li><li><a href="thm.induced-topos-morphism.html">任意函子诱导拓扑斯态射</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-slice-identification.html">切片上的上同调就是原上同调</a><span class="lay">layer 19</span></li><li><a href="prop.inverse-image-tensor.html">拉回与内 Hom、张量积相容</a><span class="lay">layer 19</span></li><li><a href="prop.topos-morphism-from-object.html">对象给出拓扑斯态射</a><span class="lay">layer 19</span></li><li><a href="prop.slice-shriek-projection.html">切片的投影公式</a><span class="lay">layer 20</span></li><li><a href="prop.topos-morphism-final-map.html">终映射给出的拓扑斯态射</a><span class="lay">layer 20</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=prop.qc-sheaf-etale">在星图里打开「拟紧层与紧的 étale 空间」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="prop.qc-sheaf-etale.md">Markdown 原文</a>　·　
+      <a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>prop.qc-sheaf-etale</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>序同构与序型（Order Isomorphism） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 (A, ≼ ) 与 (B, ⊑ ) 是偏序集。双射 f : A → B 称为序同构，当且仅当 ∀ a, b ∈ A ( a ≼ b ⟺ f(a) ⊑ f(b) ) 即 f 与 f^-1 都保序。此时称 A 与 B 序同构，记 A ≅ B 。 · English: Order Isomorphism">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-iso.html">
+<link rel="alternate" type="text/markdown" href="def.order-iso.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.order-iso.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="序同构与序型（Order Isomorphism） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 (A, ≼ ) 与 (B, ⊑ ) 是偏序集。双射 f : A → B 称为序同构，当且仅当 ∀ a, b ∈ A ( a ≼ b ⟺ f(a) ⊑ f(b) ) 即 f 与 f^-1 都保序。此时称 A 与 B 序同构，记 A ≅ B 。 · English: Order Isomorphism">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-iso.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2FA96B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-iso.html#concept","name":"序同构","alternateName":"Order Isomorphism","description":"设 (A, ≼ ) 与 (B, ⊑ ) 是偏序集。双射 f : A → B 称为序同构，当且仅当 ∀ a, b ∈ A ( a ≼ b ⟺ f(a) ⊑ f(b) ) 即 f 与 f^-1 都保序。此时称 A 与 B 序同构，记 A ≅ B 。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-iso.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.order-iso","keywords":"定义, 序, 序同构, 序型"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"序理论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#order-theory"},{"@type":"ListItem","position":3,"name":"序结构","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#order.structure"},{"@type":"ListItem","position":4,"name":"序同构","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-iso.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#2FA96B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#order-theory">序理论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#order.structure">序结构</a><span class="sep">›</span><span aria-current="page">序同构</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>序同构</h1>
+    <p class="full">序同构与序型（Order Isomorphism）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 6</li><li>序理论</li><li>序结构</li></ul>
+    <p class="idline"><code>def.order-iso</code> · 定义 · 序 · 序同构 · 序型</p>
+    <p class="aka"><span class="aka-k">又称</span>序同构<span class="aka-s">·</span>order isomorphism<span class="aka-s">·</span>保序双射</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mo>⪯</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(A, \preceq )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mo>⊑</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(B, \sqsubseteq )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊑</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 是<strong>偏序集</strong>。双射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">f : A \to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 称为<strong>序同构</strong>，当且仅当</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>∈</mo><mi>A</mi><mtext>  </mtext><mo stretchy="false">(</mo><mi>a</mi><mo>⪯</mo><mi>b</mi><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>⊑</mo><mi>f</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\forall a, b \in A\; ( a \preceq b \iff f(a) \sqsubseteq f(b) )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∀</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7184em;vertical-align:-0.024em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊑</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">))</span></span></span></span></span><p>即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> <strong>都保序</strong>。此时称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> <strong>序同构</strong>，记 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>≅</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cong B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>⭐ <strong>序同构比「同构」严</strong>：它要求<strong>双向</strong>保序，只要求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 保序是不够的 —— <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 保序且是双射时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 不一定保序。</p><p>⭐ <strong>良序集上就省事了</strong>：若两个良序集之间有<strong>保序单射</strong>，它自动是到某个初始段的序同构 —— 不必再回头验逆映射。这条性质是「序数可以比较」的全部技术来源。</p><p>⚠ <strong>序型</strong>是序同构给出的等价类。良序集的序型<strong>不是集合</strong>：所有良序集的序型凑在一起构成真类，用一个具体的代表来替代它 —— 那就是序数。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.poset.html">偏序集</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>序同构是<strong>偏序集</strong>之间的映射：先有偏序，才谈得上保序。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Kunen, Set Theory, I.11</li><li>Jech, Set Theory, 2.2</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">两个空间什么时候算同一个</span><span class="also">也看 <a href="def.homeomorphism.html">同胚</a>、<a href="def.bijection.html">单射 / 满射 / 双射</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">6 个</span></h2><ul class="sibs"><li><a href="def.poset.html">偏序集</a><span class="lay">layer 5</span></li><li><a href="def.bound.html">界与确界</a><span class="lay">layer 6</span></li><li><a href="def.chain.html">链</a><span class="lay">layer 6</span></li><li><a href="def.wellorder.html">良序集</a><span class="lay">layer 6</span></li><li><a href="def.finchar.html">有限特征</a><span class="lay">layer 7</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.order-iso">在星图里打开「序同构」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="def.order-iso.md">Markdown 原文</a>　·　
+      <a href="def.order-iso.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.order-iso</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

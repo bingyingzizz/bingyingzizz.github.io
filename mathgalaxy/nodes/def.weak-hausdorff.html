@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弱 Hausdorff 空间（Weak Hausdorff Space） · 数学星图 MathGalaxy</title>
+<meta name="description" content="拓扑空间 X 叫弱 Hausdorff 的，如果对每个连续映射 f : S → X （ S 紧 Hausdorff），像 f(S) 都在 X 中闭。 · English: Weak Hausdorff Space">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.weak-hausdorff.html">
+<link rel="alternate" type="text/markdown" href="def.weak-hausdorff.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.weak-hausdorff.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="弱 Hausdorff 空间（Weak Hausdorff Space） · 数学星图 MathGalaxy">
+<meta property="og:description" content="拓扑空间 X 叫弱 Hausdorff 的，如果对每个连续映射 f : S → X （ S 紧 Hausdorff），像 f(S) 都在 X 中闭。 · English: Weak Hausdorff Space">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.weak-hausdorff.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#D9649F">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.weak-hausdorff.html#concept","name":"弱 Hausdorff 空间","alternateName":"Weak Hausdorff Space","description":"拓扑空间 X 叫弱 Hausdorff 的，如果对每个连续映射 f : S → X （ S 紧 Hausdorff），像 f(S) 都在 X 中闭。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.weak-hausdorff.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.weak-hausdorff","keywords":"拓扑, 弱 Hausdorff, CGWH"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"拓扑学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology"},{"@type":"ListItem","position":3,"name":"紧生成空间与弱 Hausdorff","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topo.cg"},{"@type":"ListItem","position":4,"name":"弱 Hausdorff 空间","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.weak-hausdorff.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#D9649F">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology">拓扑学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topo.cg">紧生成空间与弱 Hausdorff</a><span class="sep">›</span><span aria-current="page">弱 Hausdorff 空间</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>弱 Hausdorff 空间</h1>
+    <p class="full">弱 Hausdorff 空间（Weak Hausdorff Space）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 6</li><li>拓扑学</li><li>紧生成空间与弱 Hausdorff</li></ul>
+    <p class="idline"><code>def.weak-hausdorff</code> · 拓扑 · 弱 Hausdorff · CGWH</p>
+    <p class="aka"><span class="aka-k">又称</span>弱 Hausdorff<span class="aka-s">·</span>weak Hausdorff<span class="aka-s">·</span>弱豪斯多夫<span class="aka-s">·</span>Definition 2.3.8<span class="aka-s">·</span>Def 2.3.8<span class="aka-s">·</span>Exercise 2.32<span class="aka-s">·</span>Exercise 2.33</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>拓扑空间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 叫<strong>弱 Hausdorff</strong> 的，如果对每个连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>S</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">f : S \to X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 紧 Hausdorff），像 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(S)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mclose">)</span></span></span></span> 都在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中<strong>闭</strong>。</p>
+  </section>
+
+  
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">9</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="prop.cond-epi-open-surjective.html">开满射是满态射</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>假设里的一条：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 弱 Hausdorff。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.weak-hausdorff-k-closed.html">弱 Hausdorff 的对角线与核</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>前提是弱 Hausdorff。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cgwh-fiber-product.html">紧块的纤维积还是紧的</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>要求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 是<strong>弱 Hausdorff</strong> 空间。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cgwh-closed.html">CGWH 的开闭子空间与滤过余极限</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论说的是<strong>弱 Hausdorff</strong> 性在子空间与滤过余极限下保持。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.exact-sequence-topo-ab.html">拓扑阿贝尔群正合列的搬运</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>假设里要求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup></mrow><annotation encoding="application/x-tex">M&#x27;&#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span></span></span></span> 是<strong>弱 Hausdorff</strong> 的。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="lem.weak-hausdorff-qseparated.html">弱 Hausdorff 推出 拟分离</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>前提是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> <strong>弱 Hausdorff</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="lem.qseparated-underlying-weak-hausdorff.html">拟分离 推出 底空间弱 Hausdorff</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论断言底空间<strong>弱 Hausdorff</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cg-wh-iff-qseparated.html">紧生成：弱 Hausdorff ⟺ 拟分离</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>一边是<strong>弱 Hausdorff</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.closed-inclusion-filtered-limit.html">紧块沿闭含入拼出的空间</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论断言余极限仍<strong>弱 Hausdorff</strong>。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.hausdorff.html">Hausdorff 空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>弱 Hausdorff 是把 Hausdorff 的条件放宽到「<strong>紧块的像闭</strong>」。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, An introduction to condensed mathematics, §2.3</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">什么是弱 Hausdorff</span><span class="also">也看 <a href="prop.weak-hausdorff-basic.html">弱 Hausdorff 的基本性质</a>、<a href="thm.cgwh-reflective.html">CGWH 是 CG 的反射子范畴</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">23 个</span></h2><ul class="sibs"><li><a href="prop.cg-kclosed-quotient.html">k-闭等价关系与弱 Hausdorff 商</a><span class="lay">layer 7</span></li><li><a href="prop.cgwh-closed.html">CGWH 的开闭子空间与滤过余极限</a><span class="lay">layer 7</span></li><li><a href="thm.quotient-product.html">商映射与局部紧空间作积</a><span class="lay">layer 7</span></li><li><a href="prop.cgwh-fiber-product.html">紧块的纤维积还是紧的</a><span class="lay">layer 13</span></li><li><a href="def.compact-open-topology.html">紧开拓扑</a><span class="lay">layer 15</span></li><li><a href="def.compactly-generated.html">紧生成空间</a><span class="lay">layer 16</span></li><li><a href="prop.cg-function-space.html">函数空间弱 Hausdorff</a><span class="lay">layer 16</span></li><li><a href="prop.compact-open-discrete.html">离散时函数空间是积</a><span class="lay">layer 16</span></li><li><a href="prop.continuous-map-space-metric.html">紧 Hausdorff 上的函数空间是度量空间</a><span class="lay">layer 16</span></li><li><a href="cor.cg-product.html">紧生成空间对积封闭</a><span class="lay">layer 17</span></li><li><a href="def.k-topology.html">k-开、k-闭与 k-拓扑</a><span class="lay">layer 17</span></li><li><a href="ex.cg-examples.html">紧生成空间的例子</a><span class="lay">layer 17</span></li><li><a href="prop.cg-cartesian-closed.html">紧生成空间是笛卡尔闭的</a><span class="lay">layer 17</span></li><li><a href="prop.cg-equivalent-conditions.html">紧生成空间的等价刻画</a><span class="lay">layer 17</span></li><li><a href="prop.closed-inclusion-filtered-limit.html">紧块沿闭含入拼出的空间</a><span class="lay">layer 17</span></li><li><a href="thm.cgwh-reflective.html">CGWH 是 CG 的反射子范畴</a><span class="lay">layer 17</span></li><li><a href="cor.cg-exponential-adjoint.html">CG 的指数伴随</a><span class="lay">layer 18</span></li><li><a href="prop.cg-coreflective.html">紧生成空间是余反射子范畴</a><span class="lay">layer 18</span></li><li><a href="prop.k-product.html">k-化与积</a><span class="lay">layer 18</span></li><li><a href="prop.ktx-colimit.html">kX 是紧空间的余极限</a><span class="lay">layer 18</span></li><li><a href="prop.weak-hausdorff-basic.html">弱 Hausdorff 的基本性质</a><span class="lay">layer 18</span></li><li><a href="prop.weak-hausdorff-k-closed.html">弱 Hausdorff 的对角线与核</a><span class="lay">layer 18</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.weak-hausdorff">在星图里打开「弱 Hausdorff 空间」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="def.weak-hausdorff.md">Markdown 原文</a>　·　
+      <a href="def.weak-hausdorff.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.weak-hausdorff</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

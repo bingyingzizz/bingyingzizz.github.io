@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>闭集 / 闭包 / 稠密（Closed Set, Closure） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 (X, T) 是拓扑空间。 F ⊆ X 是闭集： X ∖ F 是开集； A ⊆ X 的闭包 cl A ：一切包含 A 的闭集之交（最小的那个闭集）； A 稠密： cl A = X ； x 的邻域：任何含 x 的开集（的包含者）。 由 De Morgan 律，开集的三条公理翻译成闭集就是： ∅, X 闭；任意交…">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.closed-set.html">
+<link rel="alternate" type="text/markdown" href="def.closed-set.md" title="Markdown 原文（给 AI 的按需检索版）">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="闭集 / 闭包 / 稠密（Closed Set, Closure） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 (X, T) 是拓扑空间。 F ⊆ X 是闭集： X ∖ F 是开集； A ⊆ X 的闭包 cl A ：一切包含 A 的闭集之交（最小的那个闭集）； A 稠密： cl A = X ； x 的邻域：任何含 x 的开集（的包含者）。 由 De Morgan 律，开集的三条公理翻译成闭集就是： ∅, X 闭；任意交…">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.closed-set.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#D9649F">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.closed-set.html#concept","name":"闭集与闭包","alternateName":"闭集 / 闭包 / 稠密（Closed Set, Closure）","description":"设 (X, T) 是拓扑空间。 F ⊆ X 是闭集： X ∖ F 是开集； A ⊆ X 的闭包 cl A ：一切包含 A 的闭集之交（最小的那个闭集）； A 稠密： cl A = X ； x 的邻域：任何含 x 的开集（的包含者）。 由 De Morgan 律，开集的三条公理翻译成闭集就是： ∅, X 闭；任意交…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.closed-set.html","inLanguage":"zh-CN","license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.closed-set","keywords":"定义, 拓扑, 闭集"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"拓扑学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology"},{"@type":"ListItem","position":3,"name":"拓扑空间","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general"},{"@type":"ListItem","position":4,"name":"闭集与闭包","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.closed-set.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#D9649F">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology">拓扑学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general">拓扑空间</a><span class="sep">›</span><span aria-current="page">闭集与闭包</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>闭集与闭包</h1>
+    <p class="full">闭集 / 闭包 / 稠密（Closed Set, Closure）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 5</li><li>拓扑学</li><li>拓扑空间</li></ul>
+    <p class="idline"><code>def.closed-set</code> · 定义 · 拓扑 · 闭集</p>
+    <p class="aka"><span class="aka-k">又称</span>闭集<span class="aka-s">·</span>闭包<span class="aka-s">·</span>closed set<span class="aka-s">·</span>closure<span class="aka-s">·</span>聚点</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi mathvariant="script">T</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(X, \mathcal{T})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mclose">)</span></span></span></span> 是拓扑空间。</p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">F \subseteq X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 是<strong>闭集</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∖</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">X \setminus F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∖</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> 是开集；</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">A \subseteq X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 的<strong>闭包</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">cl</mi><mo>⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{cl} A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mop"><span class="mord mathrm">cl</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span></span></span></span>：一切包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 的闭集之交（最小的那个闭集）；</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> <strong>稠密</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">cl</mi><mo>⁡</mo><mi>A</mi><mo>=</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">\operatorname{cl} A = X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mop"><span class="mord mathrm">cl</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>；</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 的<strong>邻域</strong>：任何含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 的开集（的包含者）。</li></ul><p>由 De Morgan 律，开集的三条公理翻译成闭集就是：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∅</mi><mo separator="true">,</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">\emptyset, X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">∅</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 闭；<strong>任意</strong>交闭；<strong>有限</strong>并闭。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>⭐ 开与闭不是互斥的：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">∅</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 既开又闭；在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 里 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> 是闭的，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[0, 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 既不开也不闭。</p><p>闭包是「把极限点都收进来」：在距离空间里 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">cl</mi><mo>⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{cl} A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mop"><span class="mord mathrm">cl</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span></span></span></span> 恰好是「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 中某个序列的极限」全体。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">4</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="prop.compact-subset-closed.html">紧子集是闭的</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>「紧子集是闭的」里的「闭」就是这条定义的闭集。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.clopen.html">闭开集</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>闭开集 = <strong>开集</strong> 且 <strong>闭集</strong>，两个概念各占一半。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.closed-map-neighborhood-basis.html">闭映射的邻域基</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>证明里用了「闭映射把闭集送到闭集」与开集的定义。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.normal-space.html">正规空间</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>正规性说的是<strong>不交闭集</strong>能被开集分开。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.topology.html">拓扑空间与开集</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>闭集定义成<strong>开集</strong>的补，开集的性质靠 De Morgan 律翻译过去。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.diff-complement.html">差集与补集</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>「补集」这条定义是闭集定义的直接依据。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Munkres, Topology, Ch. 2</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">连续映射怎么定义</span><span class="also">也看 <a href="def.continuous-map.html">连续映射</a>、<a href="def.topology.html">拓扑空间与开集</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">22 个</span></h2><ul class="sibs"><li><a href="def.topology.html">拓扑空间与开集</a><span class="lay">layer 4</span></li><li><a href="def.connected.html">连通与连通分量</a><span class="lay">layer 5</span></li><li><a href="def.continuous-map.html">连续映射</a><span class="lay">layer 5</span></li><li><a href="def.hausdorff.html">Hausdorff 空间</a><span class="lay">layer 5</span></li><li><a href="def.subspace-topology.html">子空间拓扑</a><span class="lay">layer 5</span></li><li><a href="def.topology-base.html">基与子基</a><span class="lay">layer 5</span></li><li><a href="def.clopen.html">闭开集</a><span class="lay">layer 6</span></li><li><a href="def.normal-space.html">正规空间</a><span class="lay">layer 6</span></li><li><a href="def.product-topology.html">积拓扑</a><span class="lay">layer 6</span></li><li><a href="def.quotient-topology.html">商拓扑</a><span class="lay">layer 6</span></li><li><a href="prop.closed-map-neighborhood-basis.html">闭映射的邻域基</a><span class="lay">layer 6</span></li><li><a href="prop.connected-image-closure.html">连通的像与闭包</a><span class="lay">layer 6</span></li><li><a href="def.homeomorphism.html">同胚</a><span class="lay">layer 7</span></li><li><a href="prop.normal-locally-closed.html">正规空间的邻域里有闭邻域</a><span class="lay">layer 7</span></li><li><a href="prop.hausdorff-reflective.html">Hausdorff 空间是反射子范畴</a><span class="lay">layer 11</span></li><li><a href="def.locally-compact.html">局部紧 Hausdorff 空间</a><span class="lay">layer 15</span></li><li><a href="lem.urysohn.html">Urysohn 引理</a><span class="lay">layer 15</span></li><li><a href="prop.compact-basic-operations.html">紧性的基本操作</a><span class="lay">layer 15</span></li><li><a href="thm.tykhonov.html">Tychonoff 定理</a><span class="lay">layer 15</span></li><li><a href="prop.paracompact-partition-unity.html">仿紧性与单位分解</a><span class="lay">layer 16</span></li><li><a href="prop.quotient-of-compact.html">紧空间的商紧</a><span class="lay">layer 16</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.closed-set">在星图里打开「闭集与闭包」</a>　·　
+      <a href="../all.html">全部 744 个概念</a>　·　
+      <a href="def.closed-set.md">Markdown 原文</a>　·　
+      <a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.closed-set</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>
