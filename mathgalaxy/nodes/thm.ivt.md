@@ -11,8 +11,10 @@ $$f(\xi) = c$$
 - [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域 + [`def.continuous`](../nodes/def.continuous.md) 连续：确界原理 + 连续的定义 $\implies$ 介值定理　[proofs/imp.ivt.md](../proofs/imp.ivt.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`thm.fundamental-algebra`](../nodes/thm.fundamental-algebra.md) 代数基本定理
 - ⇒ [`cor.zero-point`](../nodes/cor.zero-point.md) 零点定理
-- ⇒ [`thm.monotone-inverse`](../nodes/thm.monotone-inverse.md) 反函数连续
+
+- …另有出边，续页见 [nodes/thm.ivt.2.md](./thm.ivt.2.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 

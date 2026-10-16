@@ -19,7 +19,8 @@ are not. Whole table: `notation-full.md`.
 - `notation/num.md` Number systems and real analysis 26
 - `notation/topo.md` Topology and metrics 6
 - `notation/measure.md` Measure and σ-algebras 25
-- `notation/integral.md` Integration and function spaces 17
+- `notation/integral.md` Integration and function spaces 16
+- `notation/linalg.md` 线性代数 16
 - `notation/layout.md` Typesetting and arrows 13
 - `notation/cat.md` Categories and homology 21
 - `notation/letters.md` Letter conventions 22

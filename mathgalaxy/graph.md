@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-16T14:43:48.554Z
-> 9 星系 / 51 星团 / 792 节点 / 1485 连线（强边 1476，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-16T14:58:02.808Z
+> 9 星系 / 54 星团 / 834 节点 / 1535 连线（强边 1526，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -3019,7 +3019,7 @@ $\mathbb{Z}\text{-}\mathbf{Mod} \cong \mathbf{Ab}$（范畴**同构**）；$\mat
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.10
 
 ### 星团：向量空间的基
-> 造出线性代数的地基：每个向量空间都有基。
+> 造出线性代数的地基：线性无关 / 张成 → 基 → 维数（任意两组基等势）。$\operatorname{span} S = \bigcap \{W \supseteq S\}$ 这个「取一切之交」的模板与 $\sigma$-代数的生成是同一招。
 
 #### 向量空间的基　`def.vs`
 *定义*　向量空间 / 线性无关 / 基
@@ -3049,6 +3049,860 @@ $V$ 有基；
 这是「序理论的结论在代数里落地」的标准范例，也是本星图上跨板块连线的一个实例。
 
 参考：Lang, Linear Algebra；Brunner, The Axiom of Choice in Topology
+
+#### 子空间　`def.subspace`
+*定义*　线性子空间（Linear Subspace）
+
+设 $V$ 是域 $K$ 上的向量空间。$U \subseteq V$ 叫 $V$ 的**（线性）子空间**，当且仅当
+
+- $0 \in U$；
+- $U$ 对加法封闭：$u, v \in U \implies u + v \in U$；
+- $U$ 对标量乘法封闭：$u \in U$、$c \in K \implies cu \in U$。
+
+等价地：$U$ 配上 $V$ 限制过来的运算，自己就是一个 $K$-向量空间。
+
+子空间之间的**包含关系**按集合包含定义，任意多个子空间的**交**仍是子空间（加法与数乘逐条验证即可）。
+
+⭐ 三个条件里的第一条可以并进后两条：$U \ne \emptyset$ 且对减法封闭即可（取 $u - u = 0$）。三条分开写的用处是**逐条对照**。
+
+⚠ **并集一般不是子空间**：$x$ 轴与 $y$ 轴之并连 $(1,0)+(0,1)$ 都不含。所以子空间的格是「交封闭、并一般不封闭」—— 要「并」就得用**和** $U + W$。
+
+⚠ 空集不是子空间；$\{0\}$ 与 $V$ 是最小的两个（叫**平凡子空间**）。
+
+⭐ 别与拓扑的「子空间」（`def.subspace-topology`，即子空间拓扑）混：两个中文名一样，含义完全不同。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
+
+#### 子空间判据　`prop.subspace-criterion`
+*命题*　命题：子空间的两条判据
+
+**(合并版)** 非空子集 $U \subseteq V$ 是子空间，当且仅当对一切 $u, v \in U$ 与 $c \in K$ 有 $cu + v \in U$。
+
+**(阶梯版)** 若 $U_1 \subseteq U_2 \subseteq U_3 \subseteq \cdots$ 是一列子空间（递增链），则 $\bigcup_n U_n$ 也是子空间。
+
+**(生成版)** 记 $\mathcal{U}$ 为「包含 $S$ 的一切子空间」之族。任意子集 $S \subseteq V$ 的**张成**是
+
+$$\operatorname{span} S := \bigcap \mathcal{U} = \bigcap \{ U : S \subseteq U \subseteq V,\ U \text{ is a subspace} \}$$
+
+是包含 $S$ 的最小子空间，并且等于 $S$ 中元素的**有限**线性组合全体。
+
+⭐ 「合并版」把三个条件压成一个运算 $cu + v$：它同时管住了 $0$（取 $c = -1$、$v = u$）、加法（取 $c = 1$）与数乘（取 $v = 0$，此时 $0 \in U$ 已由前者得到）。写证明时用这一版最省字。
+
+⭐ 「阶梯版」是**无限**并集唯一好用的场合：任意有限并都不封闭，但递增链的并封闭 —— 因为任意两个元素必落在链中的同一个 $U_n$ 里（有限多个指标取最大即可）。
+
+⭐ 「生成版」与「$\sigma$-代数的生成」「子群的生成」是同一招：**取一切包含它的结构之交**。这也是图上 `ana.generated-closure` 那条弱边讲的事。
+
+参考：Lang, Linear Algebra
+
+#### 坐标　`def.coordinate`
+*定义*　坐标与有序基（Coordinates）
+
+设 $\mathcal{B} = (v_1, \ldots, v_n)$ 是 $V$ 的**有序**基（顺序算进去）。由「基」的定义，每个 $v \in V$ 都能**唯一**地写成
+
+$$v = c_1 v_1 + \cdots + c_n v_n, \qquad c_i \in K$$
+
+把系数排成列
+
+$$[v]_{\mathcal{B}} := \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \in K^{n}$$
+
+叫 $v$ 在基 $\mathcal{B}$ 下的**坐标**。于是
+
+$$v \mapsto [v]_{\mathcal{B}}$$
+
+是 $V \to K^{n}$ 的双射，而且是线性的（保持加法与数乘）。
+
+⭐ 这一条把「抽象的向量空间」翻译成「$K^{n}$ 里的列向量」—— **这是矩阵论的全部合法性来源**：以后再谈矩阵，说的都是这件事在两侧不同基下的样子。
+
+⚠ 「唯一」来自基的定义（既有线性无关又有生成）；只要缺一条，坐标就不再唯一（无关性不够则重复，生成性不够则写不出来）。
+
+⚠ 「有序」不可省：把 $(v_1, v_2)$ 换成 $(v_2, v_1)$，坐标的两个分量就交换了 —— 这正是矩阵换基公式里那些排列的来源。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### Steinitz 交换引理　`thm.steinitz`
+*定理*　定理（Steinitz）：交换引理
+
+设 $V$ 是 $K$-向量空间，$S = (v_1, \ldots, v_n)$ 线性无关，$T = (w_1, \ldots, w_m)$ 生成 $V$。则
+
+- $n \le m$；
+- 可以从 $T$ 中**删去** $n$ 个向量、换入 $S$ 的全部向量，得到的 $m$ 个向量仍生成 $V$。特别地，$V$ 有一组基，其元素取自 $T \cup S$ 且含 $S$。
+
+⭐ 一句话：**「无关的」永远不比「生成的」多**。它是维数良定义的全部内容 —— 两句话（$n \le m$ 与可交换）在证明里是一起归纳出来的。
+
+⭐ 证明是对 $n$ 归纳：把 $v_1$ 用 $T$ 表出（$T$ 生成），其中必有一个系数非零（否则 $v_1 = 0$ 与无关矛盾），把它换成 $v_1$ 仍生成；再对剩下的重复。
+
+⚠ 有限性是前提：这一条只管**有限**的无关集与生成集。无限的情形要靠 Zorn 引理（「每个向量空间有基」那一条就是）。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
+
+#### 维数良定义　`thm.dimension`
+*定理*　定理：任意两组基等势，维数良定义
+
+设 $V$ 是 $K$-向量空间，$\mathcal{B}$ 与 $\mathcal{B}'$ 是 $V$ 的两组基。则 $\mathcal{B}$ 与 $\mathcal{B}'$ **等势**（有双射）。
+
+于是可以无矛盾地定义 $V$ 的**维数**
+
+$$\dim_K V := |\mathcal{B}|$$
+
+（$V = \{0\}$ 时约定 $\dim V = 0$；没有有限基时称 $V$ 是**无限维**的。）
+
+⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $|\mathcal{B}| \le |\mathcal{B}'|$ 与反向。
+
+⚠ 有限维的情形交换引理就够了；无限维要证明「无限基等势」（用 $|A \times \mathbb{N}| = |A|$ 那一套基数算术），比有限情形麻烦得多。
+
+⭐ 维数的基本性质：$\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$；$\dim(V/U) = \dim V - \dim U$。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
+
+### 星团：矩阵与行列式
+> 造出「把线性映射写成数字阵列」的整套工具：矩阵 → 选定基后的线性映射 ⟷ 矩阵 → 基变换与相似 → 初等变换与秩 → 线性方程组的解结构 → **行列式**（交错多重线性的唯一刻画）→ 乘性 → Laplace 展开与 Cramer 法则。
+
+#### 矩阵　`def.matrix`
+*定义*　矩阵（Matrix）
+
+设 $K$ 是域，$m, n \ge 1$。一个 $m \times n$ 的**矩阵**是 $K$ 中元素排成的长方形阵列
+
+$$A = (a_{ij}) = \begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & & \vdots \\ a_{m1} & \cdots & a_{mn} \end{pmatrix}, \qquad a_{ij} \in K$$
+
+（$i$ 是行指标、$j$ 是列指标，都从 $1$ 数起。）全体 $m \times n$ 矩阵记 $M_{m \times n}(K)$，方阵记 $M_n(K) := M_{n \times n}(K)$。
+
+$A$ 的第 $j$ **列**是 $K^{m}$ 中的列向量，第 $i$ **行**是 $K^{n}$ 中的行向量。
+
+⭐ 矩阵就是「按行列排好的一堆 $K$ 中元素」—— **本身不含任何数学结构**，它的意义全部来自你怎么读它（读成线性映射的账本、读成方程组的系数、读成双线性型的配方）。
+
+⚠ 两套下标约定（$a_{ij}$ 是第 $i$ 行第 $j$ 列）必须前后一致，否则转置与乘法会全错。本图一律「先行后列」。
+
+⭐ $M_{m \times n}(K)$ 作为集合就是 $K^{mn}$ —— 所以它当然是 $K$-向量空间（逐分量运算）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
+
+#### 矩阵的加法与乘法　`def.matrix-operations`
+*定义*　矩阵的加法、数乘与乘法
+
+设 $A = (a_{ij})$、$B = (b_{ij})$ 同型（都是 $m \times n$）。
+
+**加法与数乘**（逐分量）：
+
+$$(A + B)_{ij} := a_{ij} + b_{ij}, \qquad (cA)_{ij} := c\,a_{ij}$$
+
+**乘法**：设 $A \in M_{m \times n}(K)$、$B \in M_{n \times p}(K)$，则 $AB \in M_{m \times p}(K)$ 定义为
+
+$$(AB)_{ij} := \sum_{k=1}^{n} a_{ik} b_{kj}$$
+
+（$A$ 的列数必须等于 $B$ 的行数，否则不定义。）
+
+⭐ 乘法为什么长这样：把 $B$ 的每一列看成 $K^{n}$ 中的向量，则 $AB$ 的第 $j$ 列 $= A \cdot (B$ 的第 $j$ 列$)$ —— **矩阵乘法就是线性映射的复合**（见「线性映射 $\leftrightarrow$ 矩阵」）。不是「行列逐条相乘」的偶然配方。
+
+⚠ 乘法**不交换**：$AB \ne BA$（连形状都可能不合）。例 $A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$、$B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ 给 $AB = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \ne BA$。
+
+⚠ $AB = 0$ 不必有 $A = 0$ 或 $B = 0$ —— 这就是「$M_n(K)$ 是环但不是整环」的意思，也解释了行列式为什么必要（det 把这件事管住了）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 1
+
+#### M_n(K) 是环　`thm.matrix-ring`
+*定理*　定理：$M_n(K)$ 是环，对加法构成 $K$-向量空间
+
+在 $M_n(K)$ 上定义逐分量加法与矩阵乘法。则
+
+- $(M_n(K), +)$ 是阿贝尔群（零元是零矩阵）；
+- 乘法结合、对加法双向分配、有单位元 $I_n$（对角为 $1$、其余为 $0$）；
+- 于是 $M_n(K)$ 是**环**，而且是 $K$-代数（加法与数乘使它成为 $K$-向量空间，乘法与之相容）。
+
+⚠ 乘法**不交换**（$n \ge 2$ 时），所以它是非交换环。
+
+⭐ 这条定理的每一句都是「把 $M_n(K)$ 当成 $\operatorname{End}(K^{n})$ 来读」的结果：矩阵的加法是映射的加法、乘法是复合、单位元是恒等映射（都在「线性映射 $\leftrightarrow$ 矩阵」那一条里证过）。
+
+⭐ 于是 $M_n(K)$ 成为一个**环**，可以问它的理想、可逆元（$\operatorname{GL}_n(K)$）、单侧逆等等 —— 抽象代数那一侧的工具直接搬过来用。
+
+⚠ 「非交换」是本质的：矩阵环是最典型的非交换环，也是有限维代数的原型（Wedderburn 定理说的就是「单的有限维代数都是 $M_n(D)$」）。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
+
+#### 线性映射 ⟷ 矩阵　`thm.matrix-linear-map`
+*定理*　定理：选定基后，线性映射与矩阵一一对应
+
+设 $V$ 有有序基 $\mathcal{B} = (v_1, \ldots, v_n)$、$W$ 有有序基 $\mathcal{C} = (w_1, \ldots, w_m)$，都是有限维 $K$-向量空间。称 $m \times n$ 矩阵 $[T]_{\mathcal{B}}^{\mathcal{C}}$ 为 $T$ 在这两组基下的**矩阵**，其中第 $j$ 列是 $T(v_j)$ 在 $\mathcal{C}$ 下的坐标。
+
+于是映射 $T \mapsto [T]_{\mathcal{B}}^{\mathcal{C}}$ 是 $K$-向量空间的同构
+
+$$\operatorname{Hom}_K(V, W) \;\cong\; M_{m \times n}(K)$$
+
+并且**复合对应乘法**：若 $T : V \to W$、$S : W \to U$，则
+
+$$[S \circ T]_{\mathcal{B}}^{\mathcal{E}} = [S]_{\mathcal{C}}^{\mathcal{E}}\; [T]_{\mathcal{B}}^{\mathcal{C}}$$
+
+⭐ 这就是整套矩阵论的**出生证**：矩阵不是被定义出来的对象，而是线性映射在选定基下的**坐标**（与「坐标」那一条完全同一个机制，只是两侧各选一组基）。
+
+⭐ 于是所有矩阵运算都有了意义：加法 = 映射的和、乘法 = 复合、单位矩阵 = 恒等映射、可逆 = 同构。**矩阵的每一个公式都可以翻译成映射的语言**，反之亦然 —— 这是本图把两者分团又用边连起来的原因。
+
+⚠ 这一切都**依赖基的选取**：换一组基，矩阵就变了（变成相似的，见「基变换」）。而线性映射本身不变。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 3；Lang, Linear Algebra
+
+#### 基变换与相似　`thm.change-of-basis`
+*定理*　定理：换基给出相似矩阵
+
+设 $T : V \to V$ 线性，$\mathcal{B}, \mathcal{B}'$ 是 $V$ 的两组有序基。记 $P := [\mathrm{id}]_{\mathcal{B}'}^{\mathcal{B}}$（**过渡矩阵**，第 $j$ 列是 $\mathcal{B}'$ 的第 $j$ 个向量在 $\mathcal{B}$ 下的坐标）。则 $P$ 可逆，且
+
+$$[T]_{\mathcal{B}'} = P^{-1}\,[T]_{\mathcal{B}}\,P$$
+
+此时称两个矩阵**相似**（记 $A \sim B$）。相似是一个等价关系。
+
+⭐ 一句话：**换基就是共轭**。$P^{-1}AP$ 里的 $P$ 管「坐标怎么换」，而两侧一进一出正好把基的选取抹掉 —— 所以「相似」是矩阵的**内在**性质（属于那个线性映射），而不是基质自身的性质。
+
+⭐ 值得记住的分工：$A$ 与 $B$ 相似 $\iff$ 它们是**同一个**线性映射在两组基下的矩阵；$A$ 与 $B$ 等价（只要求 $B = PAQ$，$P, Q$ 可逆）$\iff$ 它们秩相等（连空间都可以换）。
+
+⚠ 相似比等价严得多：相似的矩阵**秩相同、迹相同、行列式相同、特征多项式相同** —— 这些都是相似不变量（后面特征值那一团要用）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 4
+
+#### 初等变换与初等矩阵　`def.elementary-matrix`
+*定义*　初等变换与初等矩阵（Elementary Matrices）
+
+**初等行变换**指下列三种操作：
+
+- 把第 $i$ 行与第 $j$ 行**互换**；
+- 把第 $i$ 行乘以非零常数 $c$；
+- 把第 $j$ 行的 $c$ 倍**加到**第 $i$ 行上。
+
+对单位矩阵 $I_n$ 做一次上述操作得到的矩阵叫**初等矩阵**（记 $E$）。关键性质是：**对 $A$ 做一次初等行变换，等于在左边乘上相应的初等矩阵**，即把 $A$ 换成 $EA$。
+
+每个初等矩阵都**可逆**，且逆仍是初等矩阵（同类型的）：互换的逆是自己、乘 $c$ 的逆是乘 $c^{-1}$、加 $c$ 倍的逆是加 $-c$ 倍。
+
+⭐ 「左乘 = 行变换」这条对应关系把**操作**变成了**对象**：于是「用消元法解方程组」就是「在左边乘一串初等矩阵」，可以写成等式 $E_k \cdots E_1 A = R$（$R$ 是行简化阶梯形）。
+
+⭐ 最重要的一条推论：$A$ **可逆当且仅当它是有限多个初等矩阵之积**（消元法把 $A$ 化成 $I_n$，把这一串操作记录下来就是 $A^{-1}$ 的显式分解）。这也是「算逆矩阵」那套 $[A \mid I] \to [I \mid A^{-1}]$ 手法的道理。
+
+⚠ 初等**列**变换对应的是**右乘**。行列混着做就成了等价变换（$A \mapsto PAQ$），它保持秩但不保持相似。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 1
+
+#### 行秩 = 列秩　`thm.rank-row-col`
+*定理*　定理：行秩等于列秩，都等于矩阵的秩
+
+设 $A \in M_{m \times n}(K)$。把 $A$ 的 $m$ 个行向量看成 $K^{n}$ 中的向量，其张成的子空间的维数叫**行秩**；同理定义**列秩**（$A$ 的 $n$ 个列向量在 $K^{m}$ 中张成的维数）。则
+
+行秩 $=$ 列秩 $= \operatorname{rank} A$，即
+
+$$\operatorname{rank}_{\text{row}} A = \operatorname{rank}_{\text{col}} A = \operatorname{rank} A$$
+
+其中 $\operatorname{rank} A$ 是线性映射 $x \mapsto Ax$ 的秩（见「秩」）。
+
+⭐ 「行秩 = 列秩」不是显然的：它说的是 $K^{n}$ 里那 $m$ 个行向量与 $K^{m}$ 里那 $n$ 个列向量**恰好一样独立**，而这恰是「矩阵的秩」这个数**只有一个**的根源。
+
+⭐ 证明走初等变换：左乘可逆矩阵不改变行空间（只换基），于是可以先把 $A$ 化成行简化阶梯形，其中非零行的个数就是秩 —— 而列秩也被同一批主元决定了。
+
+⚠ 它是「用消元法算秩」的合法性依据：把一列列的运算搬来搬去，那个数不会变。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 4
+
+#### 线性方程组的解结构　`thm.linear-system-solutions`
+*定理*　定理：线性方程组的解结构
+
+设 $A \in M_{m \times n}(K)$、$b \in K^{m}$，考虑方程组 $Ax = b$。
+
+- **有解** $\iff$ $\operatorname{rank} A = \operatorname{rank}(A \mid b)$（把 $b$ 添成第 $n+1$ 列）；
+- 有解时，解集是**仿射子空间**
+
+$$x_0 + \ker A = \{\, x_0 + u : u \in \ker A \,\}$$
+
+其中 $x_0$ 是任一特解；于是解空间的维数是 $n - \operatorname{rank} A$；
+- 齐次方程组 $Ax = 0$ 的解空间就是 $\ker A$，维数 $= n - \operatorname{rank} A$；
+- 特别地：$m = n$ 且 $\det A \ne 0$ 时解**唯一**，$x = A^{-1}b$。
+
+⭐ 「解集 = 特解 + 齐次解」是线性代数的中心图景：**非齐次没有结构，齐次才有**（它是子空间），非齐次只是它的一个平移（仿射子空间）。
+
+⭐ 维数公式 $n - \operatorname{rank} A$ 就是秩-零化度定理的方程组版本：变量数 $n$ = 约束掉的 $\operatorname{rank} A$ + 自由的 $\dim \ker A$。
+
+⚠ 「有解 $\iff$ $\operatorname{rank} A = \operatorname{rank}(A \mid b)$」的几何意思：$b$ 落在 $A$ 的列空间里。别把它误记成「rank A = m」（那是有解**且解唯一**的条件）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
+
+#### 可逆矩阵　`def.invertible-matrix`
+*定义*　可逆矩阵与 $\operatorname{GL}_n(K)$
+
+方阵 $A \in M_n(K)$ 叫**可逆**，当且仅当存在 $B \in M_n(K)$ 使
+
+$$AB = BA = I_n$$
+
+此时 $B$ 唯一，记 $A^{-1}$。全体可逆 $n$ 阶矩阵在乘法下构成群，记
+
+$$\operatorname{GL}_n(K) := \{\, A \in M_n(K) : A \text{ is invertible} \,\}$$
+
+叫**一般线性群**。
+
+⭐ 一条把三个团串起来的等价表：对 $A \in M_n(K)$，下列命题等价 ——
+- $A$ 可逆；
+- 线性映射 $x \mapsto Ax$ 是双射（即同构）；
+- $\operatorname{rank} A = n$（满秩）；
+- $\ker A = \{0\}$（零化度为 $0$）；
+- $A$ 的列向量线性无关（从而是一组基）；
+- $\det A \ne 0$；
+- $A$ 可以写成有限多个初等矩阵之积。
+
+⚠ **有限维特有**：只有 $\dim V < \infty$ 时「单 $\iff$ 满 $\iff$ 可逆」才成立（无限维的单射移位算子可逆吗？不）。
+
+⭐ $\operatorname{GL}_n(K)$ 是矩阵环 $M_n(K)$ 的**单位群**，也是代数群的原型（它是 $K^{n^{2}}$ 里的一个由多项式方程 $\det A \cdot \det A^{-1} = 1$ 切出来的对象）—— 这一条与代数几何、李群都接得上。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 1
+
+#### 多重线性型　`def.multilinear-form`
+*定义*　多重线性型 $V^{n} \to K$（Multilinear Form）
+
+设 $V$ 是 $K$-向量空间。映射 $f : V^{n} := V \times \cdots \times V \to K$ 叫 **$n$ 重线性型**，当且仅当固定任意 $n - 1$ 个变元后，剩下的那个变元是线性的：对每个 $i$，
+
+$$f(\ldots, v_i + c\,w_i, \ldots) = f(\ldots, v_i, \ldots) + c\, f(\ldots, w_i, \ldots)$$
+
+全体 $n$ 重线性型记 $\operatorname{Mult}_n(V; K)$，它按逐点运算成为 $K$-向量空间。
+
+$n = 2$ 时叫**双线性型**；固定一组基后，$n$ 重线性型与「$n$ 维数组 $(f(e_{i_1}, \ldots, e_{i_n}))$」一一对应。
+
+⭐ 注意事项的顺序：「对每个变元分别线性」比「整体线性」**弱**得多 —— $f(x, y) = xy$ 对每个变元都线性，但它不是 $\mathbb{R}^{2} \to \mathbb{R}$ 的线性映射（$f(x + x', y + y') \ne f(x,y) + f(x',y')$ 一般成立）。**多重线性 $\ne$ 线性。**
+
+⭐ 它是「张量积」的来源：$n$ 重线性型就是 $V^{\otimes n}$ 上的线性泛函（见「张量积的万有性质」）。
+
+⭐ 行列式就是 $n = \dim V$ 时最特殊的那一个多重线性型（再加上交错与规范化两条）。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
+
+#### 交错型　`def.alternating-form`
+*定义*　交错型（Alternating Form）与对称型
+
+设 $f : V^{n} \to K$ 是多重线性型。
+
+- $f$ 叫**对称的**，当且仅当对任意置换 $\sigma$ 有 $f(v_{\sigma(1)}, \ldots, v_{\sigma(n)}) = f(v_1, \ldots, v_n)$；
+- $f$ 叫**交错的**，当且仅当任有两个变元相等时 $f = 0$；
+- $f$ 叫**反称的**，当且仅当 $f(v_{\sigma(1)}, \ldots) = \operatorname{sgn}(\sigma)\, f(v_1, \ldots)$。
+
+在域的特征 $\ne 2$ 时，**交错 $\iff$ 反称**。
+
+⭐ 「交错」的判据（两个变元相等则取零）用起来最省事，「反称」的公式（带符号）算起来最方便 —— 两者在 $\operatorname{char} K \ne 2$ 时等价。
+
+⚠ $\operatorname{char} K = 2$ 时不等价：此时 $-1 = 1$，反称型自动对称，交错性是更强的条件。本图默认 $\operatorname{char} K = 0$ 或至少 $\ne 2$（$\mathbb{R}, \mathbb{C}, \mathbb{Q}$ 都满足）。
+
+⭐ 交错性是行列式之所以为行列式的**核心性质**：交换两行变号（$\operatorname{sgn}(\sigma)$）、两行相同则为零。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
+
+#### 行列式的存在唯一性　`thm.det-exists-unique`
+*定理*　定理：交错 $n$ 重线性规范函数存在且唯一
+
+设 $\dim_K V = n$。则存在**唯一**的函数
+
+$$D : V^{n} \longrightarrow K$$
+
+满足：
+
+**(i) 多重线性**：对每个变元分别线性；
+
+**(ii) 交错**：任两个变元相等时取值为 $0$；
+
+**(iii) 规范化**：$D(e_1, \ldots, e_n) = 1$（$(e_i)$ 是任一固定的有序基）。
+
+⭐ 这条定理是行列式的**正确出生方式**：不是「对角线相乘再相减」，而是「满足三条公理的唯一函数」。三条公理分别是**线性、交错、规范**，缺一不可。
+
+⭐ 「唯一」比「存在」有用得多：任何满足这三条的函数都等于行列式，所以验证一条恒等式时只要验证这三条即可 —— 例如 $\det(A^{\mathsf{T}}) = \det A$、$\det(AB) = \det A \det B$。
+
+⭐ 「存在」的构造：把 $(v_1, \ldots, v_n)$ 用基展开成 $n \times n$ 的系数矩阵 $(a_{ij})$，然后取 Leibniz 公式 $\sum_{\sigma} \operatorname{sgn}(\sigma) \prod_i a_{i,\sigma(i)}$ 为定义 —— 逐条验证三条公理即可（见证明那一节）。
+
+⭐ 与「万有性质」的关系：这不是通常意义上的万有性质（没有松伴随），但它是**同样的手法** —— 用一个泛条件（三条公理）把对象钉死。所以图上把它与 `prop.module-tensor-universal`（张量积的万有性质）看成同一族的证明技术。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
+
+#### 行列式　`def.determinant`
+*定义*　行列式 $\det A$（Determinant）
+
+对 $A = (a_{ij}) \in M_n(K)$，定义**行列式**
+
+$$\det A := \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma)\ \prod_{i=1}^{n} a_{i,\sigma(i)}$$
+
+（$S_n$ 是 $n$ 次对称群、$\operatorname{sgn}$ 是置换的符号；共 $n!$ 项。）
+
+把 $A$ 的列看成 $V = K^{n}$ 中的向量，则 $\det$ 就是「行列式的存在唯一性」里那个唯一的 $D$。
+
+基本性质：$\det I_n = 1$；交换两列变号；有两列相同则为 $0$；$\det A^{\mathsf{T}} = \det A$。
+
+⭐ 几何读法（$K = \mathbb{R}$）：$|\det A|$ 是线性映射 $x \mapsto Ax$ 把单位立方体拉成的平行体的**体积**，符号是**定向**。于是 $\det = 0 \iff$ 这个映射把空间压扁了 $\iff$ 不可逆。
+
+⭐ 这个几何意义在后面换元积分公式里会再出现一次：$\int f\,dx$ 换成 $\int f\,|\det|\,dy$ —— 那里的 $|\det|$ 就是体积缩放因子。
+
+⚠ 公式里的 $n!$ 项说明这个定义**不能用来算**（$n = 20$ 就超过 $10^{18}$ 项）；算的时候用消元法或 Laplace 展开。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
+
+#### 行列式的乘性　`thm.det-multiplicative`
+*定理*　定理：$\det(AB) = \det A \cdot \det B$
+
+对 $A, B \in M_n(K)$：
+
+$$\det(AB) = \det A \cdot \det B, \qquad \det A^{\mathsf{T}} = \det A, \qquad \det(cA) = c^{n} \det A$$
+
+于是 $A$ 可逆时 $\det(A^{-1}) = (\det A)^{-1}$，并且
+
+$$\det A \ne 0$$
+
+⭐ **乘性**是行列式最重要的一条：它把「矩阵乘法（复合）」翻译成「数量乘法」，于是 $\det$ 是从环 $M_n(K)$ 到域 $K$ 的**乘法同态**（把 $\operatorname{GL}_n(K)$ 送到 $K^{\times}$）。
+
+⭐ 证明的技巧：固定 $B$，看 $A \mapsto \det(AB)$ —— 它关于 $A$ 的列是**交错多重线性**的（因为 $AB$ 的列就是 $A$ 的列的线性组合），由存在唯一性它等于常数倍的 $\det A$；取 $A = I$ 定出常数 $= \det B$。
+
+⚠ 注意 $\det(cA) = c^{n}\det A$（不是 $c\det A$）—— 每一列都乘了 $c$，共 $n$ 次。
+
+参考：Lang, Linear Algebra
+
+#### Laplace 展开　`prop.det-laplace`
+*命题*　命题：Laplace 展开（按一行或一列展开）
+
+设 $A = (a_{ij}) \in M_n(K)$，记 $A_{ij}$ 为划掉第 $i$ 行与第 $j$ 列后得到的 $(n-1)$ 阶矩阵，$M_{ij} := \det A_{ij}$（**余子式**），$C_{ij} := (-1)^{i+j} M_{ij}$（**代数余子式**）。则对每个固定的 $i$：
+
+$$\det A = \sum_{j=1}^{n} a_{ij}\, C_{ij}$$
+
+（**按第 $i$ 行展开**；按列同理。）并且「错位展开」给出零：$\sum_j a_{kj} C_{ij} = 0$（$k \ne i$）。
+
+⭐ 这是行列式的**递归算法**：$n$ 阶化归成 $n$ 个 $n-1$ 阶，复杂度 $O(n!)$。实际计算里先用消元法把某一行化到只剩一个非零元，再展开 —— 两件事配合起来很快。
+
+⭐ 「错位展开等于零」这一条可以直接改写成矩阵等式 $A \cdot \operatorname{adj} A = (\det A) I_n$（$\operatorname{adj} A$ 是代数余子式的转置），也就是 $A^{-1} = (\det A)^{-1} \operatorname{adj} A$ —— Cramer 法则与逆矩阵公式都从这里出来。
+
+⭐ 还有一个常用推论（$K = \mathbb{R}^{n \times n}$ 时把 $A$ 看成 $n$ 个行向量）：**行列式对每一行都是线性的**，所以对一行做初等变换时 det 的变化规律可以逐条写出（换行变号、倍加不变、乘 $c$ 则乘 $c$）。Gauss 消元正是靠这三条算行列式的。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 5
+
+#### Cramer 法则　`thm.cramer`
+*定理*　定理（Cramer）：用行列式解方程组
+
+设 $A \in M_n(K)$ 且 $\det A \ne 0$，$b \in K^{n}$。则方程组 $Ax = b$ 有唯一解，且
+
+$$x_j = \frac{\det A_j}{\det A}, \qquad j = 1, \ldots, n$$
+
+其中 $A_j$ 是把 $A$ 的第 $j$ 列换成 $b$ 得到的矩阵。
+
+⭐ 理论意义大于计算意义：它给出解对 $b$ **显式**的表达式，从而能立刻看出「解连续地依赖 $b$」（$\det A \ne 0$ 时 $A^{-1}$ 存在，$x = A^{-1}b$）。
+
+⚠ 计算上不划算：算 $n$ 个 $n$ 阶行列式比消元法贵得多（除非 $n$ 很小）。现代数值线性代数从不这样解方程组。
+
+⭐ 它是「$\det A \ne 0 \iff$ 可逆」这一条的算法化身：分母不为零 $\iff$ 唯一解 $\iff$ 可逆。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 5；Lang, Linear Algebra
+
+### 星团：多项式与因式分解
+> 造出 $K[x]$ 这套装置：多项式 → 带余除法（$K[x]$ 是欧几里得整环）→ 因式定理 → **代数基本定理**（$\mathbb{C}$ 代数闭）→ 不可约多项式与唯一分解。它是特征多项式、有理标准型与 Galois 理论的共同地基。
+
+#### 一元多项式　`def.polynomial`
+*定义*　一元多项式（Polynomial）
+
+设 $K$ 是域。$K$ 上的一个**一元多项式**是形式表达式
+
+$$f = a_0 + a_1 x + a_2 x^{2} + \cdots + a_n x^{n}, \qquad a_i \in K$$
+
+（只有有限多项系数非零）；$x$ 叫**未定元**，$a_i$ 叫**系数**。
+
+若最高次非零系数是 $a_n \ne 0$，称 $f$ 的**次数**为 $n$，记 $\deg f := n$。规定零多项式没有次数（或记 $\deg 0 := -\infty$），非零常数多项式的次数为 $0$。$a_n$ 叫**首项系数**；$a_n = 1$ 时称 $f$ 是**首一**的。
+
+两个多项式**相等**当且仅当各次系数全相等 —— 「多项式」与「多项式函数」是两件事（见注释）。
+
+⚠ **多项式 $\ne$ 多项式函数**：在 $\mathbb{F}_2$ 上，$x^{2} + x$ 与 $0$ 作为函数处处相等（$0, 1$ 代进去都得 $0$），但作为多项式不同（系数不同）。本图的「多项式」一律指**形式对象**（系数序列）。
+
+⭐ 去掉「有限项」这个词就得到**形式幂级数** $K[[x]]$ —— 那是另一门学问（生成函数、形式群）。
+
+⭐ 次数是这套理论的「尺子」：带余除法、根的个数、不可约性，全部按次数说话。
+
+参考：Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
+
+#### 多项式环　`def.polynomial-ring`
+*定义*　多项式环 $K[x]$（Polynomial Ring）
+
+在 $K$ 上全体一元多项式构成的集合 $K[x]$ 上定义
+
+$$(f + g)_i := a_i + b_i, \qquad (fg)_i := \sum_{j=0}^{i} a_j\, b_{i-j}$$
+
+（加法逐项、乘法是**卷积**）。则 $K[x]$ 是交换含幺环，叫 $K$ 上的**多项式环**，而且
+
+$$\deg(fg) = \deg f + \deg g \qquad (f, g \ne 0)$$
+
+由此 $K[x]$ 是**整环**（无零因子）：$fg = 0 \implies f = 0$ 或 $g = 0$。
+
+⭐ $K[x]$ 是「$K$ 上的一元多项式函子」的取值：$K \mapsto K[x]$ 与「把 $K$ 送入 $K$-代数」之间是伴随的（自由 $K$-代数）。图上 `ex.algebra-categories` 那条已经提过 $k\text{-}\mathbf{Alg}$。
+
+⭐ $\deg(fg) = \deg f + \deg g$ 是整环性的全部来源：系数域的整性把次数加成，于是没有零因子。
+
+⚠ 常数多项式（$\deg = 0$）与零多项式要分开处理，所有关于次数的等式都要加「$f, g \ne 0$」的前提。
+
+参考：Lang, Algebra, Ch. IV
+
+#### 带余除法　`thm.division-algorithm`
+*定理*　定理：带余除法（$K[x]$ 是欧几里得整环）
+
+设 $K$ 是域，$f, g \in K[x]$，$g \ne 0$。则存在**唯一**的 $q, r \in K[x]$ 使
+
+$$f = q\,g + r, \qquad \deg r < \deg g$$
+
+（$r$ 叫**余式**，$q$ 叫**商**；允许 $r = 0$。）
+
+于是 $K[x]$ 是**欧几里得整环**：存在「次数」这个满足 $\deg r < \deg g$ 的欧几里得函数。
+
+⭐ 「$K$ 是域」这一条不可省：换成环 $\mathbb{Z}[x]$ 就没有带余除法了（$x^{2}$ 除以 $2x + 1$ 商不出多项式）。它的作用是保证**首项系数可逆**，从而能消掉最高次项。
+
+⭐ 这一步的后果极长：有带余除法就有**辗转相除**（求最大公因式）、就有 **Bézout 等式**（$af + bg = \gcd$）、就有「不可约 $\implies$ 素」、就推出**唯一分解**（`thm.poly-ufd`）。欧几里得整环是「什么都好」的一类环。
+
+⚠ 唯一性用的是次数比较，不是「除法本身唯一」—— 除法过程中每步的选择都不唯一，但最终商与余式唯一。
+
+参考：Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
+
+#### 因式定理与根　`thm.factor-theorem`
+*定理*　定理：因式定理 $f(a) = 0 \iff (x - a) \mid f$
+
+设 $f \in K[x]$、$a \in K$。则
+
+$$f(a) = 0 \iff (x - a) \text{ divides } f \ \text{ in } K[x]$$
+
+即：存在 $h \in K[x]$ 使 $f = (x - a)\,h$。此时称 $a$ 是 $f$ 的**根**（零点）。
+
+⭐ 证明只有两行：把 $f$ 除以 $(x - a)$（$x - a$ 首一，带余除法可用），余式 $r$ 的次数 $< 1$，即 $r$ 是常数；把 $x = a$ 代进去得 $f(a) = r$。所以「余式」就是「函数值」。
+
+⭐ 由此立刻得到**根的个数不超过次数**（见下一条），以及「一次多项式一定有根」。
+
+⚠ $a$ 必须是 $K$ 中的元素：$x^{2} + 1$ 在 $\mathbb{R}$ 上没有根，但它当然不被 $(x - a)$ 整除（$a \in \mathbb{R}$）。根的**存在性**与 $K$ 有关 —— 那正是代数基本定理要管的事。
+
+参考：Lang, Algebra, Ch. IV
+
+#### 根的个数不超过次数　`prop.root-bound`
+*命题*　命题：$\deg f = n$ 时 $f$ 至多有 $n$ 个根（计重数）
+
+设 $f \in K[x]$ 是非零多项式，$\deg f = n$。则 $f$ 在 $K$ 中至多有 $n$ 个根（互不相同的根）。
+
+更精确地（用**重数**）：存在 $a_1, \ldots, a_m \in K$（互异）与正整数 $e_1, \ldots, e_m$ 使
+
+$$f = (x - a_1)^{e_1} \cdots (x - a_m)^{e_m}\, h, \qquad h(a_i) \ne 0 \ \text{for all } i$$
+
+此时 $e_1 + \cdots + e_m \le n$（$e_i$ 叫根 $a_i$ 的**重数**）。
+
+⭐ 证明就是反复用因式定理：每取一个根就除一次 $(x - a)$，次数降 1，降不到负，所以最多 $n$ 次。
+
+⭐ 这个「小」命题的用处出乎意料地大：**有限域上的多项式恒等式判定**（两个次数 $< n$ 的多项式若在 $n$ 个点上相等则恒等）—— 插值法、纠错码（Reed–Solomon）都靠它。
+
+⚠ 只在**整环**里成立：在 $\mathbb{Z}/8$ 上，$x^{2} - 1$ 有四个根 $1, 3, 5, 7$（因为 $\mathbb{Z}/8$ 有零因子）。$K[x]$ 是整环是关键。
+
+参考：Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
+
+#### 代数基本定理　`thm.fundamental-algebra`
+*定理*　定理（代数基本定理）：$\mathbb{C}$ 代数闭
+
+每个次数 $\ge 1$ 的复系数多项式 $p \in \mathbb{C}[z]$ 都有复根。等价地：
+
+- $\mathbb{C}$ 是**代数闭域**：$\mathbb{C}[z]$ 中不可约多项式恰好是那些一次多项式；
+- 每个 $p \ne 0$ 都可以唯一地写成
+
+$$p(z) = c\,(z - z_1)^{e_1} \cdots (z - z_m)^{e_m}, \qquad c \in \mathbb{C}^{\times}$$
+
+⭐ 名字叫「代数」基本定理，可它**不是代数定理** —— 任何证明都要用到 $\mathbb{R}$ 的**完备性**（因为 $\mathbb{C}$ 的代数闭性本质上是一条紧性 + 连续性的事实）。图上把它的 `regions` 标成 `analysis` + `algebra` 就是这个原因。
+
+⭐ 证明骨架（图上走的是这条路）：
+1. $|p(z)| \to +\infty$ 当 $|z| \to \infty$，所以在某个闭圆盘上由**最值定理**取到最小值 $m \ge 0$；
+2. 若 $m > 0$，在取到最小值的点 $z_0$ 附近作扰动 $z_0 + h$，把 $p(z_0 + h) = p(z_0) + a_k h^{k} + \cdots$ 展开（$a_k h^{k}$ 是第一个非零项），选 $h$ 的方向使 $|p(z_0) + a_k h^{k}| < |p(z_0)|$，与最小性矛盾。
+3. 故 $m = 0$，即 $p$ 有根；再用因式定理除一次、归纳即得全部分解。
+
+⚠ 步骤 2 用到**复数开 $k$ 次方**（$a_k h^{k}$ 可以取任意方向），这正是需要在 $\mathbb{C}$ 上做、而不是在 $\mathbb{R}$ 上的原因。
+
+参考：Lang, Algebra, Ch. IV；Rudin, Real and Complex Analysis, Ch. 10
+
+#### 不可约多项式　`def.irreducible-poly`
+*定义*　不可约多项式（Irreducible Polynomial）
+
+设 $f \in K[x]$ 是非零、非单位（即 $\deg f \ge 1$）。称 $f$ **可约**，当且仅当存在 $g, h \in K[x]$ 满足
+
+$$f = g\,h, \qquad \deg g \ge 1, \ \deg h \ge 1$$
+
+否则称 $f$ **不可约**（irreducible）。
+
+等价说法：$f$ 不可约 $\iff$ $f$ 在环 $K[x]$ 里不能写成两个次数更小的非单位之积 $\iff$ 主理想 $(f)$ 是 $K[x]$ 的**极大理想**。
+
+⭐ 不可约性**依赖域 $K$**：$x^{2} + 1$ 在 $\mathbb{R}[x]$ 中不可约，在 $\mathbb{C}[x]$ 中可约（$= (x + i)(x - i)$），在 $\mathbb{F}_2[x]$ 中又可约（$x^{2} + 1 = (x+1)^{2}$）。所以「不可约」永远要写明在哪个域上。
+
+⭐ 「不可约 $\iff$ $(f)$ 极大」这一条把代数问题翻译成环论的语言：于是 $K[x]/(f)$ 是**域**（商掉极大理想得域）—— 这就是「造一个新域、让 $f$ 在那里有根」的装置（Galois 那一批要用）。
+
+⚠ 不可约与「没有根」不同：$x^{4} + 1$ 在 $\mathbb{R}[x]$ 上无根但可约（$= (x^{2}+\sqrt{2}x+1)(x^{2}-\sqrt{2}x+1)$）。次数 $\le 3$ 时两者才等价。
+
+参考：Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
+
+#### K[x] 是唯一分解整环　`thm.poly-ufd`
+*定理*　定理：$K[x]$ 是唯一分解整环（UFD）
+
+设 $K$ 是域。则每个非零、非单位的多项式 $f \in K[x]$ 都可以写成有限多个不可约多项式的乘积
+
+$$f = c\, p_1 p_2 \cdots p_r, \qquad c \in K^{\times},\ p_i \text{ monic irreducible}$$
+
+而且分解**唯一**到顺序与常数因子：若 $f = c' q_1 \cdots q_s$ 是另一种这样的分解，则 $r = s$ 且存在置换 $\sigma$ 使 $p_i = q_{\sigma(i)}$（当然 $c = c'$）。
+
+⭐ 这是带余除法的**终点**：欧几里得整环 $\implies$ 主理想整环 $\implies$ 唯一分解整环。整条链上三个「整环」的定义都值得记住，因为它们在抽象代数里各自有反例（UFD 不必是 PID：$\mathbb{Z}[x]$；PID 不必是欧几里得整环：某些环）。
+
+⭐ 唯一性的证明靠「不可约 $\implies$ 素」：若 $p$ 不可约且 $p \mid gh$，则 $p \mid g$ 或 $p \mid h$。这一步用的是 **Bézout 等式**（辗转相除的产物），也正是带余除法唯一真正被用到的地方。
+
+⭐ 它的用途： $\mathbb{Q}[x]$ 里的整系数多项式分解、$K[x]/(f)$ 的域结构、特征多项式与极小多项式的关系（下一批）都建立在它上面。
+
+参考：Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
+
+### 星团：线性映射与秩
+> 造出「线性映射」这套语言：线性映射 → 核与像 → 商空间与第一同构定理 → **秩-零化度定理** → 对偶空间与零化子。它是「群同态 → 正规子群 → 第一同构定理」那套模板在向量空间上的重演。
+
+#### 线性映射　`def.linear-map`
+*定义*　线性映射（Linear Map）
+
+设 $V, W$ 是域 $K$ 上的向量空间。映射 $T : V \to W$ 叫 **$K$-线性的**（或线性映射），当且仅当
+
+$$T(u + v) = T(u) + T(v), \qquad T(cu) = c\,T(u)$$
+
+对一切 $u, v \in V$、$c \in K$ 成立。等价地：$T(cu + v) = c\,T(u) + T(v)$。
+
+两个线性映射的**和**与**数乘**仍是线性映射，于是全体线性映射构成一个 $K$-向量空间，记
+
+$$\operatorname{Hom}_K(V, W) := \{\, T : V \to W \ \text{linear} \,\}$$
+
+复合 $S \circ T$ 仍是线性的。
+
+⭐ 线性 = **保持两个运算**（加法与数乘）。与群同态（保持一个运算）相比多了一条，但那条数是免费的：$T(0) = 0$ 与 $T(-v) = -T(v)$ 都能从定义推出。
+
+⭐ 「$\operatorname{Hom}_K(V, W)$ 本身是向量空间」这件事是线性代数特有的：一般范畴里两个对象之间的态射集没有加法（$\mathbf{Set}$ 里就是如此），而向量空间的范畴是**加法范畴** —— 两个对象之间的态射集自带加法，这是它比一般范畴多出来的结构。
+
+⚠ 线性的关键在于**只看 $K$ 的加法与数乘**：平移 $v \mapsto v + v_0$（$v_0 \ne 0$）不是线性的（$0$ 不映到 $0$），但它「差一个平移就是线性的」—— 那叫仿射映射。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 线性同构　`def.linear-isomorphism`
+*定义*　线性同构（Linear Isomorphism）
+
+线性映射 $T : V \to W$ 叫**线性同构**，当且仅当 $T$ 是**双射**。此时记 $V \cong W$，并称 $V$ 与 $W$ 同构。
+
+**基本事实**：$\dim_K V = n < \infty$ 时，$V \cong K^{n}$（取一组基，$v \mapsto [v]_{\mathcal{B}}$ 就是同构）。更一般地，
+
+$$V \cong W \iff \dim V = \dim W$$
+
+（「$\iff$」的右到左这一半在有限维时成立；无限维时仍成立，只是「维数」要按基的势来理解。）
+
+⭐ 这条「基本事实」是整个有限维线性代数的**取消论**：同构类只由维数决定，所以「$n$ 维向量空间」只有一个（在同构意义下）。于是研究所有有限维向量空间 = 研究所有 $K^{n}$。
+
+⚠ 无限维时结论只在一半成立：等势的基给出同构，但同构当然也给出等势的基 —— 所以其实两个方向都对，只是「维数」要按基的势来理解（见「维数良定义」）。
+
+⭐ 在范畴语言里：$V \mapsto \dim V$ 把 $K\text{-}\mathbf{Vect}$ 的有限维对象与基数对应起来，加法范畴的结构因此退化成线性代数的具体计算。
+
+参考：Lang, Linear Algebra
+
+#### 核与像　`def.kernel-image-vs`
+*定义*　核与像（Kernel and Image）
+
+设 $T : V \to W$ 线性。定义
+
+$$\ker T := \{\, v \in V : T(v) = 0 \,\} \subseteq V, \qquad \operatorname{im} T := \{\, T(v) : v \in V \,\} \subseteq W$$
+
+分别叫 $T$ 的**核**与**像**。两者都是子空间，并且
+
+$T$ **单射**，当且仅当
+
+$$\ker T = \{0\}$$
+
+$T$ **满射**，当且仅当 $\operatorname{im} T = W$。
+
+⭐ 「单射 $\iff$ 核为零」是线性映射最好用的一条：因为 $T(u) = T(v) \iff T(u - v) = 0$ —— **线性把「两点相同」换成了「差落在核里」**。一般映射没有这个便利。
+
+⭐ 核与像分别是「丢失的信息」与「留下来的信息」：秩-零化度定理说的就是这两块加起来正好是 $V$。
+
+⚠ $\ker T$ 是 $V$ 的子空间、$\operatorname{im} T$ 是 $W$ 的子空间 —— 别写反。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 商空间　`def.quotient-vs`
+*定义*　商空间 $V / U$（Quotient Space）
+
+设 $U \subseteq V$ 是子空间。在 $V$ 上定义等价关系
+
+$$v \sim v' \iff v - v' \in U$$
+
+等价类 $v + U := \{\, v + u : u \in U \,\}$ 叫 $U$ 的**陪集**。全体陪集记 $V / U$，在上面定义
+
+$$(v + U) + (v' + U) := (v + v') + U, \qquad c\,(v + U) := (cv) + U$$
+
+这两条**与代表元的选取无关**（因为 $U$ 是子空间），于是 $V / U$ 成为一个 $K$-向量空间，叫**商空间**。
+
+商映射 $\pi : V \to V/U$、$v \mapsto v + U$ 是满的线性映射，且 $\ker \pi = U$。
+
+⭐ 这一条是集合的商集（`def.quotient-set`）**加上结构**：先把 $V$ 按 $U$ 压成集合，再验证运算良定义。良定义的那一步是全部内容 —— 因为运算写在代表元上，而代表元有无数种选法。
+
+⭐ 「每个子空间都是某个线性映射的核」由此得到：取 $\pi$ 即可。这与群的情形完全平行（每个正规子群都是某个同态的核）。
+
+⚠ 商的是**子空间**（不是任意子集）：否则陪集之和不封闭。群那边对应的是「正规子群」，这里所有子空间自动正规（因为 $K$-向量空间都是交换群）。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 第一同构定理（向量空间版）　`thm.first-iso-vs`
+*定理*　定理：$V / \ker T \cong \operatorname{im} T$
+
+设 $T : V \to W$ 是线性映射。则
+
+$$\overline{T} : V / \ker T \longrightarrow \operatorname{im} T, \qquad v + \ker T \longmapsto T(v)$$
+
+是良定义的**线性同构**。特别地
+
+$$V / \ker T \cong \operatorname{im} T$$
+
+⭐ 这是图上第三次出现同一个模板：集合的 $A/\!\sim$、群的 $G/N \cong \operatorname{im}\varphi$、向量空间的 $V/\ker T \cong \operatorname{im} T$。三处的证明逐字相同 —— **压掉核，剩下的就是像**。
+
+⭐ 特别有用的一支：若 $T$ 满，则 $W \cong V / \ker T$；若 $T$ 单，则 $V \cong \operatorname{im} T$。
+
+⚠ 良定义那一步不能省：$v + \ker T = v' + \ker T$ 说明 $v - v' \in \ker T$，于是 $T(v) = T(v')$ —— 正是「$\overline{T}$ 只依赖陪集」这句话。
+
+参考：Lang, Linear Algebra
+
+#### 商空间的万有性质　`thm.quotient-universal-vs`
+*定理*　定理：商空间的万有性质
+
+设 $U \subseteq V$ 是子空间、$\pi : V \to V/U$ 是商映射。则对每个线性映射 $T : V \to W$ 满足 $U \subseteq \ker T$，存在**唯一**的线性映射 $\overline{T} : V/U \to W$ 使下图交换：
+
+$$T = \overline{T} \circ \pi$$
+
+（即：$U \subseteq \ker T$ $\iff$ $T$ 能「穿过」商映射分解。）
+
+⭐ 「万有性质」= **把商空间刻划成「压掉 $U$ 的最一般的落点」**：任何在 $U$ 上消失的映射，都**唯一**地经由 $V/U$ 分解。存在性来自定义、唯一性来自 $\pi$ 满。
+
+⭐ 这条性质是「余核 / 商」这一族概念的通用配方，在范畴论里叫**余等化子**的万有性质（`def.equalizer` 那一支）。
+
+⚠ 条件是 $U \subseteq \ker T$（$T$ 在 $U$ 上为零），不是 $U = \ker T$ —— 允许多压掉一点。
+
+参考：Lang, Linear Algebra
+
+#### 秩　`def.rank`
+*定义*　秩 $\operatorname{rank} T$（Rank）
+
+设 $T : V \to W$ 线性。$T$ 的**秩**定义为像的维数：
+
+$$\operatorname{rank} T := \dim \operatorname{im} T$$
+
+矩阵 $A \in M_{m \times n}(K)$ 的秩定义为它作为 $K^{n} \to K^{m}$ 的线性映射（$x \mapsto Ax$）的秩。
+
+⭐ 秩是「$T$ 留下了多少维信息」的度量。它是线性代数里**唯一**的数值不变量：两个矩阵在换基下等价（不要求同一个基）当且仅当秩相等。
+
+⚠ 秩依赖基的**选择**吗？不依赖：定义里没有出现基（$\dim \operatorname{im} T$ 与基无关，因为维数良定义）。这正是秩好用的原因。
+
+⭐ 后面「行列式」那一段会给出一个只用矩阵元素算秩/判可逆的办法（$\det \ne 0 \iff$ 满秩）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 零化度　`def.nullity`
+*定义*　零化度 $\operatorname{null} T$（Nullity）
+
+设 $T : V \to W$ 线性。$T$ 的**零化度**定义为核的维数：
+
+$$\operatorname{null} T := \dim \ker T$$
+
+（也叫**亏格**；英文 nullity 或 defect。）
+
+⭐ 零化度是「$T$ 丢掉了多少维信息」的度量。与秩正好配对：秩-零化度定理说两者之和等于出发空间的维数。
+
+⚠ $\operatorname{null} T = 0 \iff \ker T = \{0\} \iff T$ 单射 —— 零化度是最便宜的「单射判据」。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 秩-零化度定理　`thm.rank-nullity`
+*定理*　定理（秩-零化度）：$\dim V = \operatorname{rank} T + \operatorname{null} T$
+
+设 $V$ 是有限维 $K$-向量空间，$T : V \to W$ 线性。则
+
+$$\dim V = \operatorname{rank} T + \operatorname{null} T = \dim \operatorname{im} T + \dim \ker T$$
+
+⭐ 这是有限维线性代数的**中心定理**：一个线性映射的输入维数，被「留下的」与「丢掉的」两块恰好分完，不多不少。
+
+⭐ 推论（挑三条最常用的）：
+- $T$ 单 $\iff \operatorname{rank} T = \dim V$；$T$ 满 $\iff \operatorname{rank} T = \dim W$；
+- $\dim V = \dim W < \infty$ 时：$T$ 单 $\iff$ $T$ 满 $\iff$ $T$ 可逆（**有限维特有**，无限维不成立：移位算子 $T(x_1, x_2, \ldots) = (0, x_1, x_2, \ldots)$ 单不满）；
+- $n$ 元齐次线性方程组的解空间维数 $= n - \operatorname{rank} A$。
+
+⚠ 只有 $\dim V < \infty$ 时才是这个干净的等式；无限维时右边是基数的加法，要写成 $\dim V = \dim \ker T + \dim \operatorname{im} T$（对基数成立）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 3；Lang, Linear Algebra
+
+#### 对偶空间　`def.dual-space`
+*定义*　对偶空间 $V^{\ast}$（Dual Space）
+
+设 $V$ 是 $K$-向量空间。$V$ 的**对偶空间**定义为从 $V$ 到 $K$ 的线性映射全体：
+
+$$V^{\ast} := \operatorname{Hom}_K(V, K)$$
+
+其中元素叫**线性泛函**。$V^{\ast}$ 按逐点和与逐点数乘成为向量空间。
+
+若 $T : V \to W$ 线性，定义**转置**（或对偶）映射
+
+$$T^{\ast} : W^{\ast} \to V^{\ast}, \qquad \varphi \longmapsto \varphi \circ T$$
+
+它线性，且 $(S \circ T)^{\ast} = T^{\ast} \circ S^{\ast}$（**反变**）。
+
+⭐ 注意方向：$T : V \to W$ 的对偶 $T^{\ast}$ 是 $W^{\ast} \to V^{\ast}$，**箭头反过来**。这就是「对偶」这一词的全部含义，也与 $(-)^{\ast}$ 作为反变函子的地位一致。
+
+⭐ 有限维时 $V \cong V^{\ast}$（等维），但**没有自然的同构** —— 要找同构必须先选一组基。而 $V \cong V^{\ast\ast}$ 有自然同构 $v \mapsto (\varphi \mapsto \varphi(v))$，这是「对偶的对偶回到自己」。
+
+⚠ 无限维时 $V^{\ast}$ 严格大于 $V$（$\dim V^{\ast} = |K|^{\dim V}$），所以上述同构不成立。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 对偶基　`def.dual-basis`
+*定义*　对偶基（Dual Basis）
+
+设 $\mathcal{B} = (v_1, \ldots, v_n)$ 是 $V$ 的有序基。对每个 $i$ 定义 $v_i^{\ast} : V \to K$ 为
+
+$$v_i^{\ast}(v_j) := \delta_{ij} = \begin{cases} 1, & i = j \\ 0, & i \ne j \end{cases}$$
+
+（线性地延拓到整个 $V$。）则 $(v_1^{\ast}, \ldots, v_n^{\ast})$ 是 $V^{\ast}$ 的一组基，叫 $\mathcal{B}$ 的**对偶基**。于是在有限维时 $\dim V^{\ast} = \dim V$：
+
+$$\dim V^{\ast} = \dim V$$
+
+并且对任意 $\varphi \in V^{\ast}$ 有 $\varphi = \sum_i \varphi(v_i)\, v_i^{\ast}$。
+
+⭐ 对偶基是「坐标的第 $i$ 个分量」这个泛函：$v_i^{\ast}(v) = [v]_{\mathcal{B}}$ 的第 $i$ 个分量。所以坐标本身就是一个线性泛函。
+
+⭐ 由此得到矩阵的转置：$[T^{\ast}]_{\mathcal{B}^{\ast}}^{\mathcal{C}^{\ast}} = ([T]_{\mathcal{C}}^{\mathcal{B}})^{\mathsf{T}}$ —— **对偶就是转置**，这就是转置这个名字的来源。
+
+⚠ 对偶基依赖基的选取：换一组基，对偶基也跟着换（且是反向的，见「基变换」）。
+
+参考：Lang, Linear Algebra
+
+#### 零化子　`def.annihilator`
+*定义*　零化子 $U^{0}$（Annihilator）
+
+设 $U \subseteq V$ 是子空间。$U$ 的**零化子**定义为
+
+$$U^{0} := \{\, \varphi \in V^{\ast} : \varphi(u) = 0 \ \text{whenever}\ u \in U \,\} \subseteq V^{\ast}$$
+
+它是 $V^{\ast}$ 的子空间，并且（$\dim V < \infty$ 时）
+
+$$\dim U^{0} = \dim V - \dim U, \qquad (U^{0})^{0} = U$$
+
+（第二个等号把 $U$ 看成 $V^{\ast\ast}$ 的子集，用自然同构 $V \cong V^{\ast\ast}$。）
+
+⭐ 零化子是「在 $U$ 上消失的那些泛函」，于是 $\dim U^0 = \dim V - \dim U$ 与秩-零化度定理同构：把 $\pi : V \to V/U$ 拿来做对偶就得到 $U^{0} \cong (V/U)^{\ast}$。
+
+⭐ $(U^{0})^{0} = U$ 说的是：**子空间与零化子互为对偶**（在有限维里是一条双向字典：大的 $U$ 对应小的 $U^0$，反序）。
+
+⚠ 无限维时 $(U^0)^0 \supseteq U$ 可能严格更大，字典裂开。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+#### 直和与补空间　`def.direct-sum`
+*定义*　直和 $V = U \oplus W$ 与补空间
+
+设 $U, W \subseteq V$ 是子空间。称 $V$ 是 $U$ 与 $W$ 的**（内部）直和**，记
+
+$$V = U \oplus W$$
+
+当且仅当
+
+- $U + W = V$（每个向量都能写成 $u + w$），
+- $U \cap W = \{0\}$（写法唯一）。
+
+此时每个 $v \in V$ 都**唯一**地写成 $v = u + w$；映射 $(u, w) \mapsto u + w$ 是线性同构 $U \times W \cong V$。称 $W$ 是 $U$ 在 $V$ 中的**补空间**。
+
+⭐ 直和的两条 = 「存在性」+「唯一性」，与基的定义（生成 + 无关）是同一个模式。这也解释了为什么一条都不能少：$U + W = V$ 管存在、$U \cap W = 0$ 管唯一。
+
+⭐ **补空间总是存在**（有限维或一般情形都可以用 Zorn 引理把 $U$ 的基扩成 $V$ 的基，取新增向量张成 $W$），但**不唯一**（$\mathbb{R}^{2}$ 里 $x$ 轴的补空间可以是任意另一条过原点的直线）。
+
+⚠ 与「商空间」的分工：$V/U$ 是**压掉** $U$，$U \oplus W$ 是**拆开** $V$。有补空间时 $V/U \cong W$（由第一同构定理），但一般情形没有这种拆法。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
 ## 星系：分析学（Analysis）
 > 极限、测度、泛函分析；Hahn–Banach 等定理也依赖选择原理。
@@ -16087,6 +16941,452 @@ DCT 的证明是正负部各用一次 Fatou —— 又回到 $L^{+}$。
 
 「a.e. 版本」的意思就是把零集上的例外丢掉。
 
+#### 定义引用：「向量空间的基」→ 子空间　`dep.vs-subspace`
+
+子空间的定义只用到向量空间的三条运算公理（加法、数乘、零元），不涉及基。
+
+#### 定义引用：「子空间」→ 子空间判据　`dep.subspace-criterion`
+
+判据是把子空间定义里的三条压缩成一条运算 $cu + v$；生成版则直接引用「子空间」。
+
+#### 定义引用：「向量空间的基」→ 坐标　`dep.vs-coordinate`
+
+坐标的合法性来自「基」的定义（线性无关 + 生成 = 表示唯一），而那个定义就写在 `def.vs` 里。
+
+#### 定义引用：「Steinitz 交换引理」→ 维数良定义　`dep.steinitz-dimension`
+
+维数的定义要用「基的势」这个词 —— 而「势是唯一的」正是 Steinitz 引理给出的。
+
+#### 子空间 ⟹ 子空间判据　`imp.subspace-criterion`
+*子空间的定义 $\implies$ 两条判据与生成*
+
+**合并版。**
+
+($\implies$) 设 $U$ 是子空间。$u, v \in U$、$c \in K$ 时 $cu \in U$（数乘封闭）且 $cu + v \in U$（加法封闭）。
+
+($\Longleftarrow$) 设对一切 $u, v, c$ 有 $cu + v \in U$。取 $u = v$、$c = -1$ 得 $0 \in U$；取 $c = 1$ 得加法封闭；取 $v = 0$、$c$ 任意得数乘封闭（这里用到了 $0 \in U$，而它刚证过）。三条齐备，$U$ 是子空间。
+
+**阶梯版。** 设 $U_1 \subseteq U_2 \subseteq \cdots$，令 $U := \bigcup_n U_n$。非空。取 $u, v \in U$、$c \in K$：存在 $i, j$ 使 $u \in U_i$、$v \in U_j$。由链的递增性，取 $N := \max\{i, j\}$ 就有 $u, v \in U_N$；由 $U_N$ 是子空间，$cu + v \in U_N \subseteq U$。由合并版，$U$ 是子空间。
+
+**生成版。** 令 $\mathcal{U} := \{U \subseteq V : U \supseteq S,\ U$ 是子空间$\}$，$U_0 := \bigcap \mathcal{U}$。
+
+1. $\mathcal{U} \ne \emptyset$（$V \in \mathcal{U}$），且任意多个子空间之交仍是子空间（三条逐条验证），故 $U_0$ 是子空间且 $U_0 \supseteq S$。
+2. 若 $U \supseteq S$ 是子空间，则 $U \in \mathcal{U}$，故 $U_0 \subseteq U$ —— 所以 $U_0$ 是**最小**的。
+3. $U_0$ 含 $S$ 中元素的**有限**线性组合：对每个这样的组合闭包验证一遍（对组合的长度归纳），可知全体有限线性组合构成一个含 $S$ 的子空间 $W$；由最小性 $U_0 \subseteq W$；又每个 $U \in \mathcal{U}$ 都含 $W$（子空间对有限组合封闭），故 $W \subseteq U_0$。两者相等。∎
+
+> 第 3 步是「生成 = 有限组合全体」这句话的全部内容：**「最小」与「有限组合」是同一件事**，一个从上面（取交）说、一个从下面（构造）说。
+
+#### 向量空间的基 ⟹ Steinitz 交换引理　`imp.steinitz`
+*线性无关与生成的定义 $\implies$ 交换引理*
+
+对 $n$ 归纳。$n = 0$ 平凡。
+
+**归纳步。** 设 $S = (v_1, \ldots, v_n)$ 线性无关、$T = (w_1, \ldots, w_m)$ 生成 $V$。
+
+1. 把 $v_1$ 用 $T$ 表出：$v_1 = \sum_j a_j w_j$。由 $v_1 \ne 0$（无关集不含零向量），某个 $a_j \ne 0$；重排下标设 $a_1 \ne 0$。
+2. 于是 $w_1 = a_1^{-1}\bigl( v_1 - \sum_{j \ge 2} a_j w_j \bigr)$ 可由 $T' := (v_1, w_2, \ldots, w_m)$ 表出，所以 $T'$ 仍生成 $V$（$T$ 中每个元素都能用 $T'$ 表出，而 $V$ 由 $T$ 生成）。
+3. 对 $S' := (v_2, \ldots, v_n)$ 与生成集 $T'$（$n - 1$ 与 $m$ 个元素）用归纳假设：得 $n - 1 \le m$，即 $n \le m + 1$，且可以从 $T'$ 中删 $n - 1$ 个换入 $S'$ 仍生成。
+4. 合并第 2、3 步：从 $T$ 中删去 $w_1$ 与那 $n - 1$ 个，换入 $v_1, \ldots, v_n$，仍生成 $V$。
+
+（归纳假设给出的其实是 $n - 1 \le m$，要得到 $n \le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $|S| \le |T|$ 且可交换。上面的第 3 步用 $T'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎
+
+**基的存在性**：取 $T = $ 一组有限生成集、$S = \emptyset$ 逐步扩，或直接对无关集用 Zorn 引理（无限维情形），即得「每个向量空间有基」。
+
+> 交换引理的全部技巧在第 2 步：**用一个无关向量替换掉生成集里的一个向量，生成性不丢**。这件事能反复做，正是「无关的可以往生成集里塞」的来源。
+
+#### Steinitz 交换引理 ⟹ 维数良定义　`imp.dimension`
+*交换引理 $\implies$ 维数良定义*
+
+设 $\mathcal{B}$ 与 $\mathcal{B}'$ 是 $V$ 的两组基。
+
+1. 由 $\mathcal{B}$ 是基，它线性无关；由 $\mathcal{B}'$ 是基，它生成 $V$。于是由交换引理（取 $S = \mathcal{B}$、$T = \mathcal{B}'$）得 $|\mathcal{B}| \le |\mathcal{B}'|$。
+2. 交换两者的角色（$S = \mathcal{B}'$、$T = \mathcal{B}$）得 $|\mathcal{B}'| \le |\mathcal{B}|$。
+3. 由 Bernstein 定理（或直接用两个方向的单射）得 $|\mathcal{B}| = |\mathcal{B}'|$。
+
+于是映射 $\mathcal{B} \mapsto |\mathcal{B}|$ 不依赖基的选取，$\dim_K V := |\mathcal{B}|$ 是良定义的。∎
+
+⚠ 上面第 1、2 步用的交换引理是**有限**版本；无限维时要用它的无限形式（或 Zorn 引理 + 基数算术），结论相同。
+
+> 这条边的意义是：**「维数」不是定义出来的，是证出来的**。图上把它单独立一个节点，就是为了留下这个证明 —— 而不是把它塞进 `def.vs` 的 notes 里一笔带过。
+
+#### 定义引用：「向量空间的基」→ 线性映射　`dep.vs-linearmap`
+
+线性映射的定义里出现的就是向量空间的加法与数乘 —— 换个范畴（模）就是同一句话。
+
+#### 定义引用：「线性映射」→ 线性同构　`dep.linearmap-isomorphism`
+
+同构 = 双射的线性映射；「线性」这一半来自这里，「双射」那一半来自集合论。
+
+#### 定义引用：「线性映射」→ 核与像　`dep.linearmap-kernelimage`
+
+核定义为 $T^{-1}(0)$、像定义为 $T(V)$，都只用 $T$ 的线性（其实用不到线性，只是线性保证它们是子空间）。
+
+#### 定义引用：「商集与等价类」→ 商空间　`dep.quotientset-quotientvs`
+
+商空间的底层就是「按子空间作陪集」这个商集；新东西只有「运算良定义」那一步。
+
+#### 定义引用：「核与像」→ 秩　`dep.kernelimage-rank`
+
+秩定义为像的维数，而维数要用「维数良定义」那一条。
+
+#### 定义引用：「核与像」→ 零化度　`dep.kernelimage-nullity`
+
+零化度定义为核的维数，用的是同一个「维数」。
+
+#### 定义引用：「秩」→ 秩-零化度定理　`dep.rank-nullity`
+
+定理的两项就是秩与零化度；定理说的是它们的和等于出发空间的维数。
+
+#### 定义引用：「线性映射」→ 对偶空间　`dep.linearmap-dualspace`
+
+对偶空间就是取 $W = K$ 的 $\operatorname{Hom}(V, K)$ —— 线性泛函就是落在一维的线性映射。
+
+#### 定义引用：「对偶空间」→ 对偶基　`dep.dualspace-dualbasis`
+
+对偶基是对偶空间里由原基**指定**出来的一组元素（用 $\delta_{ij}$ 定义）。
+
+#### 定义引用：「对偶空间」→ 零化子　`dep.dualspace-annihilator`
+
+零化子是 $V^{\ast}$ 的子空间，由「在 $U$ 上为零」这个条件切出来。
+
+#### 定义引用：「子空间」→ 直和与补空间　`dep.vs-directsum`
+
+直和的两个条件（和等于 $V$、交为零）都是子空间层面的陈述。
+
+#### 核与像 + 商空间 ⟹ 第一同构定理（向量空间版）　`imp.first-iso-vs`
+*核 / 像 / 商空间 $\implies$ 第一同构定理*
+
+令 $\overline{T}(v + \ker T) := T(v)$。
+
+1. **良定义**：若 $v + \ker T = v' + \ker T$，则 $v - v' \in \ker T$，即 $T(v - v') = 0$，由线性得 $T(v) = T(v')$。所以 $\overline{T}$ 只依赖陪集。
+2. **线性**：$\overline{T}\bigl((v + \ker T) + c(v' + \ker T)\bigr) = \overline{T}\bigl((v + cv') + \ker T\bigr) = T(v + cv') = T(v) + cT(v')$。
+3. **单射**：若 $\overline{T}(v + \ker T) = 0$，则 $T(v) = 0$，即 $v \in \ker T$，于是 $v + \ker T$ 是零陪集。故 $\ker \overline{T} = \{0\}$，$\overline{T}$ 单。
+4. **满射**：$\operatorname{im} \overline{T} = \operatorname{im} T$ 由定义直接得到。
+
+四步齐备，$\overline{T}$ 是线性同构，$V/\ker T \cong \operatorname{im} T$。∎
+
+> 四步的顺序值得记住：**先良定义、再线性、再单、再满**。所有「商掉之后构造映射」的证明都是这个骨架 —— 群、环、模、拓扑空间（商拓扑）一模一样。
+
+#### 商空间 ⟹ 商空间的万有性质　`imp.quotient-universal-vs`
+*商映射 $\implies$ 万有性质*
+
+设 $T : V \to W$ 线性且 $U \subseteq \ker T$。
+
+**存在性**：令 $\overline{T}(v + U) := T(v)$。良定义：若 $v - v' \in U \subseteq \ker T$，则 $T(v - v') = 0$，即 $T(v) = T(v')$。线性同第一同构定理的证明。于是 $\overline{T} \circ \pi = T$ 由定义成立。
+
+**唯一性**：设 $S : V/U \to W$ 也满足 $S \circ \pi = T$。任取 $v + U \in V/U$，则
+
+$$S(v + U) = S(\pi(v)) = T(v) = \overline{T}(v + U)$$
+
+故 $S = \overline{T}$。∎
+
+> 唯一性只用到一个事实：**$\pi$ 是满射**（所以每个陪集都有代表元可用）。这是「万有性质」类定理的共同收尾方式。
+
+#### 第一同构定理（向量空间版） + 维数良定义 + 秩 + 零化度 ⟹ 秩-零化度定理　`imp.rank-nullity`
+*第一同构定理 + 维数 $\implies$ 秩-零化度定理*
+
+设 $\dim V = n < \infty$。
+
+1. 取 $\ker T$ 的一组基 $u_1, \ldots, u_k$（$k = \operatorname{null} T$），并把它扩充成 $V$ 的一组基
+
+$$u_1, \ldots, u_k,\ v_1, \ldots, v_{n-k}$$
+
+（扩充的合法性：Steinitz 交换引理 / 「每个线性无关集都能扩充成基」）。
+2. **断言 $T(v_1), \ldots, T(v_{n-k})$ 是 $\operatorname{im} T$ 的基。**
+   - *生成*：任取 $T(v)$，把 $v$ 按上面的基展开，落在 $\ker T$ 的那些项被 $T$ 杀掉，剩下 $T(v) = \sum_j c_j T(v_j)$。
+   - *无关*：若 $\sum_j c_j T(v_j) = 0$，则 $T\bigl(\sum_j c_j v_j\bigr) = 0$，即 $\sum_j c_j v_j \in \ker T$；把它用 $u_i$ 展开并与 $v_j$ 那部分的唯一性比较，得所有 $c_j = 0$。
+3. 于是 $\operatorname{rank} T = \dim \operatorname{im} T = n - k = \dim V - \operatorname{null} T$，移项即得
+
+$$\dim V = \operatorname{rank} T + \operatorname{null} T$$
+
+（另一条路：由第一同构定理 $\operatorname{im} T \cong V/\ker T$，而 $\dim(V/U) = \dim V - \dim U$ 由第 1 步的扩充直接得到 —— 两条路是同一件事的两种说法。）∎
+
+> 第 2 步的「无关」是最容易漏的一半：**把无关性从 $V$ 的基搬到像上**，用的是「$\ker T$ 已经作为基的一部分被单独列出」。
+
+#### 定义引用：「向量空间的基」→ 矩阵　`dep.vs-matrix`
+
+矩阵的元素取自域 $K$，而行列指标是有限集 —— 定义里用到的只有「域」与「有限指标集」。
+
+#### 定义引用：「矩阵」→ 矩阵的加法与乘法　`dep.matrix-ops`
+
+加、数乘、乘法都是写在矩阵元素上的逐条公式，先要有矩阵这个对象。
+
+#### 定义引用：「线性映射」→ 线性映射 ⟷ 矩阵　`dep.linearmap-matrix`
+
+定理的两边是 $\operatorname{Hom}_K(V, W)$ 与矩阵集合，而左边的元素就是线性映射。
+
+#### 定义引用：「矩阵」→ 初等变换与初等矩阵　`dep.matrix-elementary`
+
+初等矩阵就是对单位矩阵做一次初等行变换得到的矩阵。
+
+#### 定义引用：「矩阵的加法与乘法」→ 可逆矩阵　`dep.matrixops-invertible`
+
+「可逆」这个词要用乘法来陈述（$AB = BA = I_n$），所以先要有乘法。
+
+#### 定义引用：「多重线性型」→ 交错型　`dep.multilinear-alternating`
+
+交错性是加在多重线性型上的**额外条件**（交换变元要变号），所以先有多重线性。
+
+#### 定义引用：「交错型」→ 行列式　`dep.alternating-det`
+
+行列式就是交错 $n$ 重线性型在 $V = K^{n}$ 上的那一支（用置换的符号写出显式公式）。
+
+#### 定义引用：「行列式的存在唯一性」→ 行列式　`dep.detexists-determinant`
+
+存在唯一性定理保证了「那个唯一的 $D$」确实存在，行列式的定义才站得住。
+
+#### 定义引用：「秩」→ 行秩 = 列秩　`dep.rank-rowcol`
+
+定理说的是行秩与列秩都等于 $\operatorname{rank} A$ —— 后者的定义在映射那一侧。
+
+#### 定义引用：「秩」→ 线性方程组的解结构　`dep.rank-linearsystems`
+
+解的存在性与解空间的维数都用 $\operatorname{rank} A$ 表述。
+
+#### 矩阵的加法与乘法 + 线性映射 ⟷ 矩阵 ⟹ M_n(K) 是环　`imp.matrix-ring`
+*矩阵运算的定义 $\implies$ $M_n(K)$ 是环*
+
+逐条验证。
+
+1. **加法群**：逐分量加法继承 $K$ 的加法群结构，零元是零矩阵，$-A$ 是逐分量取负。
+2. **乘法结合**：$(AB)C$ 与 $A(BC)$ 的 $(i,j)$ 元素都是 $\sum_{k,l} a_{ik} b_{kl} c_{lj}$（两次求和次序可换，因为都是有限和）。
+3. **分配律**：$(A + B)C$ 与 $AC + BC$ 的 $(i,j)$ 元素都是 $\sum_k (a_{ik} + b_{ik}) c_{kj}$。
+4. **单位元**：$(I_n A)_{ij} = \sum_k \delta_{ik} a_{kj} = a_{ij}$，同理 $A I_n = A$。
+5. **$K$-代数**：数乘与加法的相容（向量空间公理）逐分量成立，且 $c(AB) = (cA)B = A(cB)$ 由有限和的线性性得到。
+
+**非交换**（$n \ge 2$）：取 $A = E_{12}$（只有 $(1,2)$ 位是 $1$）、$B = E_{21}$，则 $AB = E_{11}$ 而 $BA = E_{22}$，不等。∎
+
+（另一条路更短：由「线性映射 $\leftrightarrow$ 矩阵」把加法读成映射的加法、乘法读成复合，于是环公理就是 $\operatorname{End}(K^{n})$ 的环公理，逐条显然。）
+
+> 第 5 步「$c(AB) = A(cB)$」是 $K$-代数定义里唯一不平凡的一条 —— 它说明数乘可以从任何一个因子里提出来。
+
+#### 坐标 + 线性映射 + 矩阵 ⟹ 线性映射 ⟷ 矩阵　`imp.matrix-linear-map`
+*坐标 + 线性 $\implies$ 线性映射与矩阵一一对应*
+
+记 $\mathcal{B} = (v_1, \ldots, v_n)$、$\mathcal{C} = (w_1, \ldots, w_m)$。
+
+**构造**：给定 $T$，它在每个基向量上的值 $T(v_j) \in W$ 有唯一坐标 $(a_{1j}, \ldots, a_{mj})^{\mathsf{T}}$，排成矩阵 $[T]_{\mathcal{B}}^{\mathcal{C}} := (a_{ij})$。
+
+**反过来**：给定矩阵 $A = (a_{ij})$，定义 $T(v_j) := \sum_i a_{ij} w_i$，再线性地延拓到整个 $V$（每个 $v = \sum_j c_j v_j$ 令 $T(v) := \sum_j c_j T(v_j)$）。**良定义**：因为坐标 $c_j$ 唯一（基的定义）。
+
+**互逆**：两个构造显然互相还原，故 $T \mapsto [T]$ 是双射。
+
+**线性**：$[T + cS]$ 的第 $j$ 列 $= (T + cS)(v_j)$ 的坐标 $= T(v_j)$ 的坐标 $+ c \cdot S(v_j)$ 的坐标 $=$ 相应两列之和再加数乘。
+
+**复合对应乘法**：设 $T : V \to W$、$S : W \to U$，$S$ 在 $\mathcal{C}, \mathcal{E}$ 下的矩阵为 $B$、$T$ 在 $\mathcal{B}, \mathcal{C}$ 下的矩阵为 $A$。则
+
+$$(S \circ T)(v_j) = S\Bigl( \sum_i a_{ij} w_i \Bigr) = \sum_i a_{ij} S(w_i) = \sum_i a_{ij} \sum_k b_{ki} u_k = \sum_k \Bigl( \sum_i b_{ki} a_{ij} \Bigr) u_k$$
+
+括号里正是 $(BA)_{kj}$，故 $[S \circ T] = BA$。∎
+
+> 「良定义」那一步用到了**坐标的唯一性**（即基的定义）。这正是整条定理的地基 —— 若基不是基，$T$ 就定义不出来。
+
+#### 线性映射 ⟷ 矩阵 ⟹ 基变换与相似　`imp.change-of-basis`
+*矩阵表示 + 乘法对应复合 $\implies$ 相似*
+
+记 $P := [\mathrm{id}]_{\mathcal{B}'}^{\mathcal{B}}$。由矩阵表示对复合的乘性，
+
+$$[T]_{\mathcal{B}'} = [\mathrm{id} \circ T \circ \mathrm{id}]_{\mathcal{B}'}^{\mathcal{B}'} = [\mathrm{id}]_{\mathcal{B}}^{\mathcal{B}'}\ [T]_{\mathcal{B}}^{\mathcal{B}}\ [\mathrm{id}]_{\mathcal{B}'}^{\mathcal{B}} = P^{-1}\,[T]_{\mathcal{B}}\,P$$
+
+其中 $[\mathrm{id}]_{\mathcal{B}}^{\mathcal{B}'} = P^{-1}$ 是因为两个过渡矩阵互为逆（$(P^{-1}P)$ 是恒等映射在两同一组基下的矩阵，即 $I_n$）。
+
+由「可逆 $\iff$ 双射」一栏的等价，$P$ 可逆。
+
+**相似是等价关系**：自反（$P = I$）、对称（$A \sim B \implies B = P^{-1}AP \implies A = (P^{-1})^{-1} B P^{-1}$）、传递（$P^{-1}AP = B$、$Q^{-1}BQ = C \implies (PQ)^{-1}A(PQ) = C$）。∎
+
+> 整条证明里**没有做任何计算**，只是把「换基」写成三个映射的复合再用矩阵表示的乘性 —— 这是把矩阵论建立在线性映射语言上的最大红利。
+
+#### 线性映射 ⟷ 矩阵 + 秩 ⟹ 行秩 = 列秩　`imp.rank-row-col`
+*矩阵表示 $\implies$ 行秩 = 列秩*
+
+把 $A$ 看成映射 $T : K^{n} \to K^{m}$、$x \mapsto Ax$（取标准基）。
+
+1. **列秩**：$A$ 的列向量正是 $T(e_1), \ldots, T(e_n)$，所以列秩 $= \dim \operatorname{im} T = \operatorname{rank} A$。
+2. **行秩**：$A$ 的转置 $A^{\mathsf{T}}$ 对应的映射 $T^{\mathsf{T}} : K^{m} \to K^{n}$ 就是 $T$ 的对偶（取标准基，见「对偶基」里的 $[T^{\ast}] = [T]^{\mathsf{T}}$）。$A$ 的行向量是 $A^{\mathsf{T}}$ 的列向量，故行秩 $= \operatorname{rank} A^{\mathsf{T}}$。
+3. 只需再证 $\operatorname{rank} A^{\mathsf{T}} = \operatorname{rank} A$：由 $\operatorname{im} T^{\mathsf{T}} = (\ker T)^{0}$（零化子）与 $\dim U^{0} = \dim V - \dim U$，
+
+$$\operatorname{rank} A^{\mathsf{T}} = \dim \operatorname{im} T^{\mathsf{T}} = \dim (\ker T)^{0} = n - \dim \ker T = \dim \operatorname{im} T = \operatorname{rank} A$$
+
+（最后一步用了秩-零化度定理。）∎
+
+> 这条证明把「行秩 = 列秩」化归成对偶那一段的零化子维数公式 —— 也就是说：**转置不改变秩**，而那是零化子与秩-零化度的共同推论。
+
+#### 秩-零化度定理 + 核与像 ⟹ 线性方程组的解结构　`imp.linear-system-solutions`
+*秩-零化度 $\implies$ 线性方程组的解结构*
+
+记 $T : K^{n} \to K^{m}$、$x \mapsto Ax$。
+
+**有解判据**：$Ax = b$ 有解 $\iff$ $b \in \operatorname{im} T$。而 $\operatorname{im} T$ 就是 $A$ 的列空间，其维数是列秩；把 $b$ 添成一列不改变列空间的维数当且仅当 $b$ 落在其中 —— 即 $\operatorname{rank} A = \operatorname{rank}(A \mid b)$。
+
+**解的结构**：若 $x_0$ 是一个解，则对任意 $u \in \ker T$，$A(x_0 + u) = b$，所以 $x_0 + \ker T \subseteq$ 解集。反之若 $x$ 也是解，则 $A(x - x_0) = 0$，即 $x - x_0 \in \ker T$，故 $x \in x_0 + \ker T$。两边相等。
+
+**维数**：由秩-零化度定理，$\dim \ker T = n - \operatorname{rank} A$；平移不改变「维数」（仿射子空间与 $\ker T$ 同维）。
+
+**唯一性**：$\det A \ne 0$ 时 $\ker T = \{0\}$，解集是单点集 $\{A^{-1}b\}$。∎
+
+> 第 2 段是**纯集合论**的：解集 = 一个特解 + 全体齐次解。它对任何群同态、任何环同态都成立 —— 「非齐次解 = 特解 + 齐次解」是这一招的通用形态。
+
+#### 多重线性型 + 交错型 ⟹ 行列式的存在唯一性　`imp.det-exists-unique`
+*多重线性 + 交错 $\implies$ 行列式的存在唯一性*
+
+记 $D(e_1, \ldots, e_n) = 1$ 决定了规范的零点。
+
+**唯一性。** 设 $D$ 满足三条。把每个 $v_j = \sum_i a_{ij} e_i$ 代入，由多重线性展开成 $n^{n}$ 项之和，每一项是 $a_{i_1 1} \cdots a_{i_n n} D(e_{i_1}, \ldots, e_{i_n})$。由交错性，只有 $i_1, \ldots, i_n$ **互不相同**的那些项非零 —— 也就是说，只有置换 $\sigma \in S_n$ 对应的项（取 $i_j = \sigma(j)$）存活。再由交错性 $D(e_{\sigma(1)}, \ldots, e_{\sigma(n)}) = \operatorname{sgn}(\sigma)\, D(e_1, \ldots, e_n) = \operatorname{sgn}(\sigma)$。于是
+
+$$D(v_1, \ldots, v_n) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma)\ a_{\sigma(1), 1} \cdots a_{\sigma(n), n}$$
+
+右端只依赖 $a_{ij}$，故 $D$ 唯一。
+
+**存在性。** 直接把上式取作 $D$ 的定义，逐条验证三条公理：多重线性（每一项对每个 $a_{ij}$ 都是一次的，而 $a_{ij}$ 关于 $v_j$ 线性）、交错性（交换两个变元 = 把置换乘一个对换，$\operatorname{sgn}$ 变号，而所有项成对相消）、规范性（代入 $a_{ij} = \delta_{ij}$ 后只剩 $\sigma = \mathrm{id}$ 一项，值为 $1$）。∎
+
+> **唯一性先证、存在性后验**：这是「用泛性质定义对象」的标准套路 —— 先把任何满足条件的对象都逼成一个显式公式，再把那个公式拿回来验证它确实满足条件。
+
+#### 行列式的存在唯一性 + 行列式 ⟹ 行列式的乘性　`imp.det-multiplicative`
+*存在唯一性 $\implies$ 乘性*
+
+固定 $B$，考虑映射 $A \mapsto \det(AB)$，把它看成 $A$ 的 $n$ 个列向量 $a_1, \ldots, a_n$ 的函数。
+
+1. **多重线性**：$AB$ 的第 $j$ 列是 $A \cdot (B$ 的第 $j$ 列$)$，即 $\sum_i b_{ij} a_i$。所以固定其他列时，$\det(AB)$ 关于第 $j$ 列是线性的（先把 $a_j$ 的线性组合拉出来，再用 $\det$ 的多重线性）。
+2. **交错**：若 $a_i = a_j$（$i \ne j$），则 $AB$ 的第 $i$、$j$ 列也相等（同样的线性组合），于是 $\det(AB) = 0$。
+3. 由存在唯一性，$\det(AB) = c \cdot \det A$ 对某个常数 $c$ 成立（同一条公理系下的函数只差常数倍）。取 $A = I$ 得 $c = \det B$。故 $\det(AB) = \det A \det B$。
+
+**转置**：$\det A^{\mathsf{T}} = \det A$ —— 用存在唯一性，$A \mapsto \det A^{\mathsf{T}}$ 也满足三条公理（转置把列换成行，交错性与规范性不变），故两者相等。
+
+**可逆判据**：$A$ 可逆时 $1 = \det I = \det(A A^{-1}) = \det A \cdot \det(A^{-1})$，故 $\det A \ne 0$。反之若 $A$ 不可逆，则其列向量线性相关，$\det A = 0$（由交错性把线性相关性代入展开）。∎
+
+> 第 3 步「只差常数倍」是**唯一性定理**最漂亮的一次使用：不必计算，只要说明一个新函数满足同一套公理就自动成比例。
+
+#### 行列式 + 行列式的存在唯一性 ⟹ Laplace 展开　`imp.det-laplace`
+*置换展开 $\implies$ Laplace 展开*
+
+把 $\det A$ 按第 $i$ 行拆开：$A$ 的每一列 $a_j$ 都含 $a_{ij} e_i$ 这一项，由多重线性可把 $\det$ 展成 $n$ 项之和，第 $j$ 项是「把第 $j$ 列换成 $a_{ij} e_i$、其余列不动」的行列式。
+
+该行列式 $= a_{ij} \cdot \det(\ldots, e_i, \ldots)$，其中 $e_i$ 在第 $j$ 位。把 $e_i$ 通过 $|i - j|$ 次相邻列交换移到第 $1$ 位（每次变号），再按第一列展开，剩下的 $(n-1)$ 阶行列式正是划掉第 $i$ 行、第 $j$ 列后的 $A_{ij}$，符号累计为 $(-1)^{i+j}$。于是
+
+$$\det A = \sum_j a_{ij}\,(-1)^{i+j} \det A_{ij} = \sum_j a_{ij}\, C_{ij}$$
+
+**错位展开**：若 $k \ne i$ 而用第 $k$ 行的元素配第 $i$ 行的代数余子式，那等于「把第 $i$ 行换成第 $k$ 行」之后的行列式 —— 有两行相同，故为 $0$。∎
+
+> 符号 $(-1)^{i+j}$ 的来源是**移动 $e_i$ 到第一个位置**所需的交换次数 —— 这也是「棋盘格符号」的几何解释。
+
+#### 行列式 + Laplace 展开 + 可逆矩阵 ⟹ Cramer 法则　`imp.cramer`
+*伴随矩阵 + 行列式 $\implies$ Cramer 法则*
+
+由 Laplace 展开与错位展开，定义**伴随矩阵** $\operatorname{adj} A := (C_{ji})$（代数余子式的转置），则两条展开合起来就是
+
+$$A \cdot \operatorname{adj} A = (\det A)\, I_n = \operatorname{adj} A \cdot A$$
+
+（$(i,j)$ 元素是 $\sum_k a_{ik} C_{jk}$：$i = j$ 时按第 $i$ 行展开 $= \det A$，$i \ne j$ 时错位展开 $= 0$。）
+
+若 $\det A \ne 0$，则 $A^{-1} = (\det A)^{-1} \operatorname{adj} A$，于是 $x = A^{-1} b$ 的唯一解可以写成
+
+$$x_j = \frac{1}{\det A} \sum_i C_{ij} b_i$$
+
+而 $\sum_i C_{ij} b_i$ 恰好是「把 $A$ 的第 $j$ 列换成 $b$」之后按第 $j$ 列做 Laplace 展开的结果，即 $\det A_j$。故 $x_j = \det A_j / \det A$。∎
+
+> 证明的组织方式值得记住：**Laplace 展开 + 错位展开 = 伴随矩阵**，于是 Cramer 法则不过是「$A^{-1} = \operatorname{adj}A / \det A$」写在分量上。
+
+#### 定义引用：「环」→ 多项式环　`dep.ring-polyring`
+
+$K[x]$ 是环的一个具体例子：加法逐项、乘法卷积，验证的就是环公理。
+
+#### 定义引用：「一元多项式」→ 多项式环　`dep.polynomial-polyring`
+
+$K[x]$ 的元素就是多项式，环结构写在它们上面。
+
+#### 定义引用：「多项式环」→ 带余除法　`dep.polyring-division`
+
+带余除法是 $K[x]$ 里两个元素之间的运算，先要有这个环。
+
+#### 定义引用：「多项式环」→ 不可约多项式　`dep.polyring-irreducible`
+
+「可约 / 不可约」是 $K[x]$ 里元素的性质，说到底是环里的因子分解问题。
+
+#### 定义引用：「不可约多项式」→ K[x] 是唯一分解整环　`dep.factor-polyufd`
+
+唯一分解定理的陈述里出现了「不可约多项式」，先要有那个词。
+
+#### 一元多项式 + 域 ⟹ 带余除法　`imp.division-algorithm`
+*多项式的次数 + $K$ 是域 $\implies$ 带余除法*
+
+**存在性**：对 $\deg f$ 归纳。若 $\deg f < \deg g$，取 $q = 0$、$r = f$ 即可。否则设
+
+$$f = a_m x^{m} + \cdots, \qquad g = b_n x^{n} + \cdots \quad (a_m \ne 0, b_n \ne 0, m \ge n)$$
+
+令 $c := a_m b_n^{-1} \in K$（**这里用到 $K$ 是域**，$b_n$ 可逆），并令
+
+$$f_1 := f - c\,x^{m-n} g$$
+
+则 $f_1$ 的 $m$ 次项被消掉，$\deg f_1 < \deg f$。对 $f_1$ 用归纳假设：$f_1 = q_1 g + r$（$\deg r < \deg g$），于是 $f = (c x^{m-n} + q_1) g + r$。
+
+**唯一性**：设 $f = q g + r = q' g + r'$，两式相减得 $(q - q') g = r' - r$。若 $q \ne q'$，则左端次数 $\ge \deg g$（由 $\deg(fg) = \deg f + \deg g$），而右端次数 $< \deg g$，矛盾。故 $q = q'$，随之 $r = r'$。∎
+
+> 「域」在存在性那一步被用了一次（$b_n^{-1}$），在唯一性那一步用了一次（整环的次数可加性）。两处都是本质的。
+
+#### 带余除法 ⟹ 因式定理与根　`imp.factor-theorem`
+*带余除法 $\implies$ 因式定理*
+
+设 $a \in K$。把 $f$ 除以 $x - a$（首一，故带余除法适用）：
+
+$$f = q\,(x - a) + r, \qquad \deg r < 1$$
+
+即 $r \in K$ 是常数。把 $x = a$ 代入两边：$f(a) = q(a) \cdot 0 + r = r$。
+
+于是 $f(a) = 0 \iff r = 0 \iff (x - a) \mid f$。∎
+
+> 这条证明只有一行实质内容，但它给出了一个额外收获：**余式就是函数值** —— 这也是多项式作为「函数」与作为「形式对象」之间的桥。
+
+#### 因式定理与根 ⟹ 根的个数不超过次数　`imp.root-bound`
+*因式定理 $\implies$ 根的个数不超过次数*
+
+对 $n = \deg f$ 归纳，同时证明「可提出重数」的精确形式。
+
+**存在性**：若 $f$ 在 $K$ 中没有根，取 $m = 0$、$h = f$ 即可。否则取一个根 $a_1$，由因式定理 $f = (x - a_1) f_1$，其中 $\deg f_1 = n - 1$。对 $f_1$ 归纳，得 $f_1 = (x - a_2)^{e_2} \cdots h$；再把 $a_1$ 的重数补足（若 $f_1$ 也以 $a_1$ 为根则继续除）。
+
+**次数估计**：每一步除法都让次数降 1，而左边总次数是 $n$，所以 $e_1 + \cdots + e_m \le n$。特别地互异根的个数 $m \le n$。∎
+
+> 归纳的写法要注意：**重数是一步步除出来的**，不是先取互异根再数次数 —— 后者会漏掉「同一个根出现多次」的情形。
+
+#### 最值定理 + 介值定理 + 因式定理与根 ⟹ 代数基本定理　`imp.fundamental-algebra`
+*最值定理 + 介值定理 + 因式定理 $\implies$ 代数基本定理*
+
+设 $p(z) = a_n z^{n} + \cdots + a_0$，$n \ge 1$，$a_n \ne 0$。
+
+1. **在某个闭圆盘上取到最小模**：由 $|p(z)| \ge |a_n||z|^{n} - \sum_{k < n} |a_k||z|^{k}$，当 $|z| \to \infty$ 时 $|p(z)| \to +\infty$；特别地存在 $R$ 使 $|z| > R$ 时 $|p(z)| > |p(0)|$。于是 $z \mapsto |p(z)|$ 在紧集 $\{|z| \le R\}$ 上取到最小值（**最值定理**，用到 $\mathbb{R}$ 的完备性 + 紧性），而它在盘外不可能更小。记最小值点为 $z_0$，$m := |p(z_0)|$。
+2. **若 $m > 0$ 则矛盾**：记 $w := z - z_0$，把 $p$ 在 $z_0$ 处展开成 $w$ 的多项式：
+
+$$p(z_0 + w) = p(z_0) + c_k w^{k} + O(w^{k+1}), \qquad c_k \ne 0, \ k \ge 1$$
+
+（$k$ 是第一个非零项的阶。）取 $w = t\,\zeta$，其中 $\zeta^{k} = -p(z_0)/c_k$ 的一个 $k$ 次方根、$t > 0$ 很小。由**复数开 $k$ 次方**，这样的 $\zeta$ 总存在。则
+
+$$|p(z_0 + t\zeta)|^{2} = |p(z_0)|^{2}\Bigl( 1 - \frac{2t^{k}}{|p(z_0)|} + O(t^{k+1}) \Bigr) < |p(z_0)|^{2}$$
+
+对充分小的 $t$ 成立，与 $z_0$ 的最小性矛盾。
+3. 故 $m = 0$，即 $p(z_0) = 0$：$p$ 有根。
+4. **归纳得完全分解**：由因式定理 $p = (z - z_0) p_1$，$\deg p_1 = n - 1$，对 $p_1$ 重复第 1–3 步，$n$ 步之后 $p$ 分解成 $n$ 个一次因子之积（常数因子提到最前）。
+5. **唯一性**：由 $K[x]$ 是唯一分解整环（同一次序与常数因子之外唯一），也由「根的个数不超过次数」直接得到。∎
+
+> 整个证明里**分析用在哪**：第 1 步（紧集上连续函数取最小）与第 2 步的 $O(t^{k+1})$ 估计。代数只负责第 4、5 步。这也解释了它为什么既不是纯代数定理、又比一般的分析定理「硬」。
+
+#### 带余除法 ⟹ K[x] 是唯一分解整环　`imp.poly-ufd`
+*带余除法 $\implies$ 唯一分解*
+
+记 $R := K[x]$，它是整环（$\deg(fg) = \deg f + \deg g$）。
+
+**第一步：辗转相除与 Bézout 等式。** 对 $f, g \ne 0$ 反复用带余除法（$f = qg + r$，$\deg r < \deg g$），次数严格下降故必停：最后非零余式 $d$ 满足 $d \mid f$、$d \mid g$，且存在 $a, b \in R$ 使
+
+$$a f + b g = d$$
+
+（把除法的每一步回代即得。）$d$ 就是 $\gcd(f, g)$（首一化之后唯一）。
+
+**第二步：不可约 $\implies$ 素。** 设 $p$ 不可约、$p \mid fg$。若 $p \nmid f$，则 $\gcd(p, f) = 1$，由 Bézout 有 $ap + bf = 1$；两边乘 $g$：$apg + bfg = g$。左端两项都被 $p$ 整除（第一项显然，第二项因为 $p \mid fg$），故 $p \mid g$。
+
+**第三步：存在性。** 对 $\deg f$ 归纳：若 $f$ 不可约则已分解完；否则 $f = gh$ 且 $\deg g, \deg h < \deg f$，对两者归纳。
+
+**第四步：唯一性。** 设 $p_1 \cdots p_r = q_1 \cdots q_s$（都是不可约元，首一化后）。由 $p_1 \mid q_1 \cdots q_s$ 与第二步，存在某个 $j$ 使 $p_1 \mid q_j$；两者都不可约（从而相伴），约掉后对 $r + s$ 归纳，得 $r = s$ 且分解在顺序与单位之下相同。∎
+
+> 四步里**只有第二步用了域的特殊性**（本质上是带余除法给出的 Bézout 等式）；其余三步对任何整环都成立。这也是「欧几里得整环 $\implies$ UFD」这条链的标准证明。
+
 #### 依测度 Cauchy ⟹ 依测度 Cauchy ⟹ 收敛　`imp.cauchy-in-measure`
 *依测度 Cauchy $\implies$ 依测度收敛且有一子列 a.e. 收敛*
 
@@ -23976,6 +25276,10 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **可测函数与收敛 ↔ 集合族与 σ-代数**　2 条节点级连线
 - **积分 ↔ 可测函数与收敛**　8 条节点级连线
 - **积分 ↔ 测度的构造**　11 条节点级连线
+- **线性映射与秩 ↔ 向量空间的基**　4 条节点级连线
+- **矩阵与行列式 ↔ 向量空间的基**　2 条节点级连线
+- **线性映射与秩 ↔ 矩阵与行列式**　6 条节点级连线
+- **多项式与因式分解 ↔ 代数结构**　2 条节点级连线
 - **测度的构造 ↔ 乘积测度与 Fubini**　6 条节点级连线
 - **积分 ↔ 乘积测度与 Fubini**　2 条节点级连线
 - **乘积测度与 Fubini ↔ 集合的构造**　3 条节点级连线

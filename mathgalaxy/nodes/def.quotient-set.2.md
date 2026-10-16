@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.quotient-set)　·　第 1 页 [nodes/def.quotient-set.md](./def.quotient-set.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
 - 被 [`def.int`](../nodes/def.int.md) 整数 ℤ 用
 - 被 [`def.rat`](../nodes/def.rat.md) 有理数 ℚ 用
 - 被 [`def.cauchy-null`](../nodes/def.cauchy-null.md) Cauchy 列与零列 用

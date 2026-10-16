@@ -12,7 +12,7 @@ layer 8 · 定义 · 向量空间的基 · 抽象代数
 注意线性无关性是**逐有限子集**定义的性质——这正是它「具有有限特征」的原因。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.vsbasis`](../nodes/thm.vsbasis.md) 每个向量空间有基 用
+- 被 [`def.subspace`](../nodes/def.subspace.md) 子空间 用
 
 - …另有出边，续页见 [nodes/def.vs.3.md](./def.vs.3.md)
 

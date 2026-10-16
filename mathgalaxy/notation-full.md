@@ -145,11 +145,29 @@
 - `\Delta x_i` Δxᵢ　**分割的小区间长度** — 与 $\Delta$ 的别的含义（对称差、增量）区分：带上标 $x_i$ 时专指分割点之差。
 - `\omega_i` ωᵢ　**函数在第 $i$ 段上的振幅** — $\omega_i := \sup_{I_i} f - \inf_{I_i} f$。与序数里那个 $\omega$（最小无限序数）无关。
 - `\|P\|` ‖P‖　**分割的模（最长小区间）** — 不是范数：这里只是「最粗的那一刀有多宽」。
-- `Hf` Hf　**极大函数**
 - `d\nu / d\mu`　**Radon–Nikodym 导数**
 - `\Phi` Φ　**连续线性泛函 $\Phi \in (L^{p})^{*}$；范畴论里作伴随的双射 $\Phi_{X,Y}$**
 - `\Sigma` Σ　**有限支集简单函数全体（`analysis.lp` 局部）**
 - `\partial f / \partial t`　**偏导**
+
+### 线性代数
+
+- `\vdots` ⋮　**矩阵里的竖省略号** — 配套：横 $\cdots$、斜 $\ddots$。⚠️ 列向量里写 `\begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}` 时中间那行的 `\\`（源码四个反斜杠）不能少。
+- `\begin{pmatrix} a & b \\ c & d \end{pmatrix}` 矩阵　**矩阵的排版** — 用 `\begin{pmatrix}`（圆括号）或 `bmatrix`（方括号）；矩阵内换行写 `\\`（源码里是四个反斜杠），列用 `&` 分隔。省略号：竖 $\vdots$、横 $\cdots$、斜 $\ddots$。
+- `\dim V` dim V　**向量空间的维数** — 写成算子形式 `\dim V`（KaTeX 自带 `\dim`，不加参数）。⚠️ 与「维度」的日常用法无关：这里指基的势。
+- `\ker T` ker T　**线性映射的核** — 与集合论的 $ker$ 无关；线性映射的核是 $T^{-1}(0)$，是子空间。
+- `\operatorname{im} T` im T　**线性映射的像** — 有参数的名字用 `\operatorname{im}`，不写 `\mathrm{im}`。
+- `\operatorname{rank} T` rank T　**映射的秩（$= \dim \operatorname{im} T$）**
+- `\operatorname{null} T` null T　**映射的零化度（$= \dim \ker T$）**
+- `V^{\ast}` V*　**对偶空间 $\operatorname{Hom}(V, K)$** — 用 $V^{\ast}$，不用 $V'$（撇号太弱且与求导撞）。$\operatorname{Hom}$ 记全体线性映射。
+- `V \oplus W` V ⊕ W　**直和** — 集合的无交并用 $\sqcup$，向量空间的直和用 $\oplus$，别混。
+- `[T]_{\mathcal{B}}^{\mathcal{C}}` [T]　**线性映射在有序基下的矩阵** — 上标是到达空间的基、下标是出发空间的基。两个基一样时简写 $[T]_{\mathcal{B}}$。
+- `\det A` det A　**行列式（KaTeX 自带 `\det`）**
+- `\operatorname{tr} A` tr A　**迹** — KaTeX **没有** `\tr`，必须写 `\operatorname{tr}`。
+- `A^{\mathsf{T}}` Aᵀ　**转置** — 用 `\mathsf{T}`（无衬线），不用 $A^{t}$ 或 $A^{T}$ —— 后两个在正文里容易与指标 $T$ 混。
+- `\operatorname{GL}_{n}(K)` GLₙ　**可逆矩阵群（一般线性群）** — 名词用 `\operatorname{}`；也写 `\mathrm{GL}`。
+- `\operatorname{Hom}(V, W)` Hom(V,W)　**两个向量空间之间的线性映射全体**
+- `Hf` Hf　**极大函数**
 
 ### 排版与箭头
 
