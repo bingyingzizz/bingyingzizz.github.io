@@ -8,3 +8,4 @@
 - 被 [`def.function-limit`](../nodes/def.function-limit.md) 函数极限 用
 - 被 [`def.cauchy-sequence`](../nodes/def.cauchy-sequence.md) Cauchy 列 用
 - ⇒ [`thm.squeeze`](../nodes/thm.squeeze.md) 夹逼定理
+- 被 [`def.pointwise-convergence`](../nodes/def.pointwise-convergence.md) 逐点收敛 用

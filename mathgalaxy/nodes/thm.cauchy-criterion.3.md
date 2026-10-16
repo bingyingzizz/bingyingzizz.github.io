@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.completeness-equivalent`](../nodes/thm.completeness-equivalent.md) 完备性的六条等价
+- ⇒ [`prop.improper-comparison`](../nodes/prop.improper-comparison.md) 反常积分的比较判敛
+- ⇒ [`thm.cauchy-criterion-series`](../nodes/thm.cauchy-criterion-series.md) 级数的 Cauchy 准则

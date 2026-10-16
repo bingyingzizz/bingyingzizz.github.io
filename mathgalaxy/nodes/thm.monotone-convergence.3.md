@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.completeness-equivalent`](../nodes/thm.completeness-equivalent.md) 完备性的六条等价
 - ⇒ [`thm.monotone-inverse`](../nodes/thm.monotone-inverse.md) 反函数连续
+- ⇒ [`thm.comparison-test`](../nodes/thm.comparison-test.md) 比较判别法

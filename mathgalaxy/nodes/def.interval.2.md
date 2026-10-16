@@ -6,3 +6,4 @@
 - 被 [`def.ac-function`](../nodes/def.ac-function.md) 绝对连续函数 用
 - 被 [`def.limit-point`](../nodes/def.limit-point.md) 聚点 用
 - 被 [`def.convex-function`](../nodes/def.convex-function.md) 凸函数 用
+- 被 [`def.partition`](../nodes/def.partition.md) 分割 用

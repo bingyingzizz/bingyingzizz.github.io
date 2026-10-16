@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.rolle`](../nodes/thm.rolle.md) Rolle 中值定理
+- ⇒ [`prop.integrable-examples`](../nodes/prop.integrable-examples.md) 哪些函数可积
+- ⇒ [`thm.mean-value-integral`](../nodes/thm.mean-value-integral.md) 积分中值定理

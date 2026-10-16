@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.derivative-monotone`](../nodes/prop.derivative-monotone.md) 导数符号 ⟹ 单调性
 - ⇒ [`thm.convex-criterion`](../nodes/thm.convex-criterion.md) 凸性的导数判据
+- ⇒ [`thm.uniform-limit-derivative`](../nodes/thm.uniform-limit-derivative.md) 导数与极限交换

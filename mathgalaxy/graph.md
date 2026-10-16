@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-16T14:27:09.948Z
-> 9 星系 / 48 星团 / 744 节点 / 1437 连线（强边 1428，弱边 9）
+> 由 `tools/build.mjs` 自动生成于 2026-10-16T14:43:48.554Z
+> 9 星系 / 51 星团 / 792 节点 / 1485 连线（强边 1476，弱边 9）
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -3827,6 +3827,888 @@ $$f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}\,(x - x_0)^{k} + o\bigl( (x - x_
 ⭐ 典型用途：算 $\lim_{x \to 0} (\sin x - x)/x^{3}$ 这类极限（把 $\sin x$ 展到三阶，余项一除就没了）。
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 5
+
+### 星团：Riemann 积分
+> 造出「曲线下的面积」这套工具：分割 → 上和 / 下和 → 可积性判据 → 微积分基本定理（Newton–Leibniz）。顶点是那条**把可积性翻译成零测集语言**的判据 —— 它在这里与 Lebesgue 积分那一侧正式接头。
+
+#### 分割　`def.partition`
+*定义*　分割与加细（Partition）
+
+闭区间 $[a, b]$ 的一个**分割**是一组有限点
+
+$$P = \{ a = x_0 < x_1 < \cdots < x_n = b \}$$
+
+第 $i$ 个小区间记 $I_i := [x_{i-1}, x_i]$，长度记 $\Delta x_i := x_i - x_{i-1}$。分割的**模**是
+
+$$\|P\| := \max_{1 \le i \le n} \Delta x_i$$
+
+若 $P \subseteq P'$（把 $P$ 的点全放进 $P'$，可能还添了新点），称 $P'$ 是 $P$ 的**加细**。任意两个分割 $P, Q$ 都有公共加细 $P \cup Q$。
+
+⭐ **有限**是刻意的：Riemann 积分只切有限刀。Lebesgue 那一侧才允许可数无穷多块 —— 那正是两者差别的一个来源。
+
+⚠ 记号里的 $x_i$ 是分割点，与函数自变量无关；$\Delta x_i$ 是长度，不是函数值之差。
+
+⭐ 加细的作用：分割越细，上和越小、下和越大（见「上和与下和」的注释）—— 它们是单调的，所以可以取确界。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6；Spivak, Calculus, Ch. 13
+
+#### Riemann 和　`def.riemann-sum`
+*定义*　Riemann 和（标记和）
+
+设 $f : [a, b] \to \mathbb{R}$ 有界，$P = \{ x_0 < \cdots < x_n \}$ 是分割，并在每个小区间里各取一个**标记点** $\xi_i \in I_i$。**Riemann 和**是
+
+$$S(f, P, \xi) := \sum_{i=1}^{n} f(\xi_i)\,\Delta x_i$$
+
+它依赖三样东西：$f$、分割 $P$、以及标记点 $\xi_1, \ldots, \xi_n$ 的取法。
+
+⭐ 几何读法：把每一小段上的「高」取成 $f(\xi_i)$，得到 $n$ 个矩形，$S$ 就是它们的面积之和。**标记点的取法**是这套理论里唯一的自由 —— 可积的定义之所以要「对任意取法都成立」，就是为了让这个自由消失。
+
+⚠ $f$ 必须有界：否则某个 $f(\xi_i)$ 可以任意大，和没有意义。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 上和与下和　`def.darboux-sum`
+*定义*　上和 $U(f, P)$ 与下和 $L(f, P)$（Darboux Sums）
+
+设 $f$ 在 $[a, b]$ 上有界，$P = \{ x_0 < \cdots < x_n \}$ 是分割。记
+
+$$M_i := \sup_{x \in I_i} f(x), \qquad m_i := \inf_{x \in I_i} f(x), \qquad \omega_i := M_i - m_i$$
+
+（$M_i$ 是 $f$ 在第 $i$ 段上的**上确界**，$m_i$ 是下确界，$\omega_i$ 是**振幅**。）**上和**与**下和**定义为
+
+$$U(f, P) := \sum_{i=1}^{n} M_i\,\Delta x_i, \qquad L(f, P) := \sum_{i=1}^{n} m_i\,\Delta x_i$$
+
+⭐ 上和、下和是「把所有标记法一次夹住」：对每个分割 $P$ 与**任意**标记 $\xi$ 都有
+
+$$L(f, P) \le S(f, P, \xi) \le U(f, P)$$
+
+⭐ **加细的单调性**：若 $P' \supseteq P$，则 $L(f, P) \le L(f, P')$ 且 $U(f, P') \le U(f, P)$ —— 切得更细之后每段的 $m_i$ 只会变大、$M_i$ 只会变小。正因为这一条，$\sup_P L(f, P)$ 与 $\inf_P U(f, P)$ 才是可用（且可算）的量。
+
+⚠ 两个确界都对**有限**分割取；$M_i$、$m_i$ 有限要有界性做前提。
+
+⚠ 记号 $U$ 来自 upper、$L$ 来自 lower：上和每段取**大**值。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### Riemann 可积　`def.riemann-integrable`
+*定义*　Riemann 可积与积分 $\int_a^b f$
+
+设 $f$ 在 $[a, b]$ 上有界。称 $f$ **Riemann 可积**，当且仅当存在实数 $I$ 使
+
+$$\forall \varepsilon > 0,\ \exists \delta > 0 :\ \|P\| < \delta \implies \bigl| S(f, P, \xi) - I \bigr| < \varepsilon$$
+
+对**任意**分割 $P$ 与**任意**标记 $\xi$ 成立。此时 $I$ 唯一，记作
+
+$$I = \int_a^b f = \int_a^b f(x)\,dx$$
+
+约定 $\int_b^a f := -\int_a^b f$，$\int_a^a f := 0$。
+
+⭐ 定义里最容易漏的两个词：**任意**与**模**。不是「存在一列分割让和收敛」，而是「模足够小的**所有**分割、**所有**标记都落在 $I$ 附近」。
+
+⭐ 等价说法（Darboux 形式，见「Darboux 判据」）：$\sup_P L(f, P) = \inf_P U(f, P)$。两条定义等价不是免费的 —— 它需要证明，这个证明就是 `thm.riemann-criterion`。
+
+⚠ 取值在 $\mathbb{C}$ 的函数可积定义为实部与虚部分别可积；向量值同理。
+
+⚠ 有界是可积的**前提**：无界函数在 Riemann 意义下不可积（Lebesgue 意义下可以，只要 $\int |f| < \infty$）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### Darboux 判据　`thm.darboux-criterion`
+*定理*　定理（Darboux 判据）：可积 $\iff \inf_P U = \sup_P L$
+
+设 $f$ 在 $[a, b]$ 上有界。则 $f$ Riemann 可积，当且仅当
+
+$$\inf_{P} U(f, P) = \sup_{P} L(f, P)$$
+
+而且此时这个公共值就是 $\int_a^b f$。
+
+⭐ 把「极限存在」换成了「两个确界相等」：前者要谈标记点的取法，后者**完全不提标记点** —— 这是 Darboux 形式好用的全部原因。
+
+⭐ 两个确界的单调性：$P'$ 是 $P$ 的加细时 $L(f, P) \le L(f, P') \le U(f, P') \le U(f, P)$（每一段上的 $m_i$ 只会变大、$M_i$ 只会变小）。于是对**任何**两个分割 $P, Q$ 都有 $L(f, P) \le U(f, Q)$：取公共加细 $P \cup Q$ 即得。
+
+⚠ 因此 $\sup_P L \le \inf_P U$ 永远是自动成立的，判据真正要求的是**反向不等式**。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 可积的振幅判据　`thm.riemann-criterion`
+*定理*　定理（Riemann 判据）：可积 $\iff$ 振幅和可以任意小
+
+设 $f$ 在 $[a, b]$ 上有界。则 $f$ 可积，当且仅当对每个 $\varepsilon > 0$ 都存在分割 $P$ 使
+
+$$U(f, P) - L(f, P) = \sum_{i} \omega_i\,\Delta x_i < \varepsilon$$
+
+（$\omega_i$ 是 $f$ 在第 $i$ 段上的振幅。）并且此时两种定义（标记和极限 / Darboux 确界）给出的积分值相同。
+
+⭐ **振幅和可以任意小**是全书最有用的一句可积性判据：一切「某个函数可积」的证明都是把它化归成振幅和的估计。
+
+⭐ 用法示例：连续函数用**一致连续**控制 $\omega_i$；单调函数用等距分割让 $\sum \omega_i \Delta x_i \le (f(b) - f(a))\|P\|$。
+
+⚠ 判据只要求**存在**一个分割使振幅和够小，不要求所有分割 —— 因为振幅和随加细单调不增。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6；Spivak, Calculus, Ch. 13
+
+#### 哪些函数可积　`prop.integrable-examples`
+*命题*　命题：连续、单调 $\implies$ 可积；Dirichlet 函数不可积
+
+设 $f$ 在 $[a, b]$ 上有界。
+
+- $f$ **连续** $\implies$ $f$ 可积；
+- $f$ **单调** $\implies$ $f$ 可积；
+- $f$ 有界且只有**有限个**不连续点 $\implies$ $f$ 可积。
+
+反之不成立。**Dirichlet 函数**（$x$ 有理时取 $1$、无理时取 $0$）有界但不可积。
+
+⭐ 三条都是「振幅和可以任意小」的直接应用。
+
+⭐ Dirichlet 函数为什么不可积：任何分割的每个小区间里都同时含**有理数**与**无理数**（稠密性），所以 $M_i = 1$、$m_i = 0$，于是 $U - L = \sum \Delta x_i = b - a$ 对每个分割成立，振幅和永远不趋于零。
+
+⚠ 但它在 Lebesgue 意义下可积，且积分为 $0$（有理数集是零测集）。**同一条函数，两个积分理论给出不同答案** —— 差别不在函数，在于「怎么切」。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 可积 ⟺ 不连续点零测　`thm.riemann-lebesgue-criterion`
+*定理*　定理（Lebesgue 判据）：有界可积 $\iff$ 不连续点集是零测集
+
+设 $f : [a, b] \to \mathbb{R}$ 有界，记 $D$ 为 $f$ 在 $[a, b]$ 上的**不连续点**全体。则 $f$ 在 $[a, b]$ 上 Riemann 可积，当且仅当 $D$ 是 Lebesgue 零测集，即
+
+$$m(D) = 0$$
+
+（$m$ 是 $\mathbb{R}$ 上的 Lebesgue 测度；零测集 = 可以被可数多个区间覆盖、且这些区间长度之和任意小。）
+
+⭐ 这一条是**初等微积分与测度论的接头处**：左边是「振幅和可以任意小」（纯 Riemann 语言），右边是「不连续点集有多小」（纯 Lebesgue 语言）。说同一件事，用两套语言。
+
+⭐ 立刻可用的几个特例：连续函数可积（不连续点集为空）、单调函数可积（不连续点至多可数，可数集零测）、有有限个跳跃的函数可积。
+
+⚠ 函数**有界**是前提：无界函数即使几乎处处连续也不 Riemann 可积。
+
+⚠ 「零测」比「可数」宽得多：Cantor 集不可数但零测，所以**在 Cantor 集上不连续、处处稠密地连续**的函数照样可积。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 11；Folland, Real Analysis, Ch. 2
+
+#### 积分的线性与区间可加　`prop.integral-linear`
+*命题*　命题：积分的线性性与区间可加性
+
+设 $f, g$ 在 $[a, b]$ 上可积，$c \in \mathbb{R}$。则 $f + g$ 与 $cf$ 都可积，且
+
+$$\int_a^b (f + g) = \int_a^b f + \int_a^b g, \qquad \int_a^b cf = c\int_a^b f$$
+
+并且对 $a < c < b$：$f$ 在 $[a, b]$ 上可积，当且仅当它在 $[a, c]$ 与 $[c, b]$ 上分别可积，此时
+
+$$\int_a^b f = \int_a^c f + \int_c^b f$$
+
+⭐ 「区间可加」是 Riemann 积分最实用的一条：它把一个大区间上的问题切成两半 —— 这也是后面「反常积分」能定义的基础。
+
+⚠ 两个可积函数的**乘积**也可积（振幅估计：$\omega(fg) \le M\omega(g) + N\omega(f)$ 在每一段上），但**商**不一定，商要先保证分母不接近零。
+
+⭐ 和与积的可积性都靠振幅判据：把 $\omega(f + g) \le \omega(f) + \omega(g)$ 代进去即可。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 积分的保序与估计　`prop.integral-order`
+*命题*　命题：保序性、绝对值不等式与基本估计
+
+设 $f, g$ 在 $[a, b]$ 上可积。
+
+- **保序**：若 $f(x) \le g(x)$ 处处成立，则 $\int_a^b f \le \int_a^b g$；特别地 $f \ge 0 \implies \int_a^b f \ge 0$。
+- **绝对值**：$|f|$ 可积，且
+
+$$\Bigl| \int_a^b f \Bigr| \le \int_a^b |f|$$
+
+- **基本估计**：若 $|f(x)| \le M$ 处处成立，则 $\bigl| \int_a^b f \bigr| \le M\,(b - a)$。
+
+⭐ 保序性听起来平凡，但它是**一切积分不等式**的源头：要证 $\int f \le \int g$，只需逐点证明 $f \le g$。
+
+⚠ 保序是**非严格**的：逐点严格不等推不出积分严格不等（$f = 0$、$g$ 只在一点为正的例子）。
+
+⭐ $|f|$ 可积是 Riemann 特有的现象（Lebesgue 那边 $f$ 可积直接蕴含 $|f|$ 可积）；反过来 $|f|$ 可积不蕴含 $f$ 可积 —— $f$ 取 $1$ 与 $-1$ 在有理/无理处交替时，$|f| \equiv 1$ 可积而 $f$ 不可积。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 变上限积分的导数　`thm.ftc-riemann-part1`
+*定理*　定理（第一基本定理）：变上限积分及其导数
+
+设 $f$ 在 $[a, b]$ 上可积，定义
+
+$$F(x) := \int_a^x f, \qquad x \in [a, b]$$
+
+则：
+
+**(a)** $F$ 在 $[a, b]$ 上连续；事实上若 $|f| \le M$ 则 $|F(y) - F(x)| \le M|y - x|$（即 $F$ 是 Lipschitz 的）。
+
+**(b)** 若 $f$ 在 $x_0 \in (a, b)$ 处连续，则 $F$ 在 $x_0$ 处可导，且
+
+$$F'(x_0) = f(x_0)$$
+
+⭐ 这条定理说：**积分再求导，回到原函数**（在 $f$ 连续的点处）。于是「求不定积分」这件事有了一个**具体的构造**，而不是只靠倒着背导数表。
+
+⚠ (b) 只要求 $f$ 在**那一点**连续：$f$ 有跳跃的地方 $F$ 会有角点（$F$ 在该点不可导），但 $F$ 仍处处连续。
+
+⭐ (a) 的 Lipschitz 估计正是「$\int_a^b f$ 对上限连续依赖」。在 Lebesgue 那一侧 (a) 仍成立、(b) 要改成「a.e. 可导」（Lebesgue 微分定理）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### Newton–Leibniz 公式　`thm.ftc-riemann-part2`
+*定理*　定理（第二基本定理）：$\int_a^b F' = F(b) - F(a)$
+
+设 $F : [a, b] \to \mathbb{R}$ 可导、$F'$ 在 $[a, b]$ 上可积。则
+
+$$\int_a^b F'(x)\,dx = F(b) - F(a)$$
+
+（$F$ 称为 $F'$ 的**原函数**；公式的另一种写法：$\int_a^b f = F\bigr|_a^b$。）
+
+⭐ 这是整个初等微积分的主定理：**求面积变成了找原函数**。它也解释了为什么不定积分表值得背 —— 每一个导数公式反过来都是一条积分公式。
+
+⚠ 前提「$F'$ 可积」不可省：存在可导函数其导数**不可积**（$F(x) = x^{2}\sin(1/x^{2})$ 那一类）。
+
+⚠ 反过来也不够强：Newton–Leibniz 要求 $F$ 是原函数；Lebesgue 版（`thm.ftc-lebesgue`）把条件放宽成**绝对连续**，并且把「$F'$ 存在」也写成结论的一部分。两条定理的关系是「同一句话在两种积分下的形态」。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 换元积分　`prop.integration-substitution`
+*命题*　命题：换元公式（Substitution）
+
+设 $\varphi : [\alpha, \beta] \to [a, b]$ 有连续导数，$f$ 在 $[a, b]$ 上连续。则
+
+$$\int_{\alpha}^{\beta} f\bigl(\varphi(t)\bigr)\,\varphi'(t)\,dt = \int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\,dx$$
+
+⭐ 它是**链式法则反着写**：$\frac{d}{dt}F(\varphi(t)) = F'(\varphi(t))\varphi'(t)$，两边用 Newton–Leibniz 即可。所以换元公式没有独立的内容，它只是把复合求导搬过去。
+
+⚠ $\varphi$ 不必单调：公式里的上下限按 $\varphi(\alpha)$、$\varphi(\beta)$ 取值，若 $\varphi(\beta) < \varphi(\alpha)$ 整数号自然翻转（这正是约定 $\int_b^a = -\int_a^b$ 的用处）。
+
+⚠ 「$\varphi'$ 连续」是充分条件而非必要：$\varphi$ 单调可导、$\varphi'$ 可积即可。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 分部积分　`prop.integration-by-parts`
+*命题*　命题：分部积分公式（Integration by Parts）
+
+设 $F, G : [a, b] \to \mathbb{R}$ 可导、$F', G'$ 可积。则
+
+$$\int_a^b F G' = F(b)G(b) - F(a)G(a) - \int_a^b F' G$$
+
+（写成惯用的形式：$\int_a^b u\,dv = uv\bigr|_a^b - \int_a^b v\,du$。）
+
+⭐ 它同样是**乘积求导法则反着写**：$(FG)' = F'G + FG'$，两边积分再用 Newton–Leibniz。
+
+⚠ 里外里验证的常见错误：把 $F(b)G(b) - F(a)G(a)$ 写成 $(FG)(b - a)$ —— 那是「乘积的积分」，不是「乘积的端点差」。
+
+⭐ 分部积分最有价值的形态是「移项」：$\int F G' = FG\bigr|_a^b - \int F'G$ 把难积的一方挪到另一边。在 Lebesgue 那一侧它对应「弱导数 / 分布意义下的求导」那一整套。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 积分中值定理　`thm.mean-value-integral`
+*定理*　定理：积分中值定理（第一形式）
+
+设 $f$ 在 $[a, b]$ 上连续、$g$ 可积且**不变号**（$g \ge 0$ 或 $g \le 0$）。则存在 $\xi \in [a, b]$ 使
+
+$$\int_a^b f g = f(\xi) \int_a^b g$$
+
+取 $g \equiv 1$ 得：存在 $\xi \in [a, b]$ 使 $\int_a^b f = f(\xi)(b - a)$，此时 $f(\xi)$ 称为 $f$ 在 $[a, b]$ 上的**平均值**。
+
+⭐ 几何读法：曲线下的面积等于「某个高度」乘上底 —— 也就是**平均值**能真的被某一点取到（连续函数 + 最值定理）。
+
+⚠ $g$ **不变号**不可省：$g$ 取正负时加权平均可能落在 $f$ 的值域之外。
+
+⭐ 它在 Newton–Leibniz 的证明里出场（用于证明 $F(b) - F(a)$ 可以被 $F'$ 的积分替代），也是 Taylor 余项、数值积分误差估计的标准工具。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 反常积分　`def.improper-integral`
+*定义*　反常积分：无穷区间与无界函数（Improper Integral）
+
+**无穷区间**：若 $f$ 在每个 $[a, R]$ 上可积，定义
+
+$$\int_a^{+\infty} f := \lim_{R \to +\infty} \int_a^{R} f$$
+
+（极限存在且有限时称**收敛**，否则称发散）。
+
+**无界函数**：若 $f$ 在 $[a, b]$ 上无界、但在每个 $[a, b - \varepsilon]$ 上可积，定义
+
+$$\int_a^{b} f := \lim_{\varepsilon \to 0^{+}} \int_a^{b - \varepsilon} f$$
+
+两种情况可以混合（既是无穷区间又无界），此时要**分段**处理：每一段都必须收敛。
+
+⭐ 反常积分不是新理论：它只是 Riemann 积分的**极限** —— 定义里所有的积分都是普通积分。
+
+⚠ 「混合情形要分段」是必须的：把 $\int_{-\infty}^{+\infty} f$ 定义成 $\lim_{R \to \infty}\int_{-R}^{R}$ 会漏掉不绝对收敛的现象（$\int_{-R}^{R} x\,dx = 0$ 对每个 $R$，而 $\int_0^{+\infty}$ 与 $\int_{-\infty}^{0}$ 都发散）。这个区别叫**主值积分**。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### 反常积分的比较判敛　`prop.improper-comparison`
+*命题*　命题：比较判别法与绝对收敛
+
+设 $f, g$ 在不含端点的区间上可积，且 $|f(x)| \le g(x)$ 在近端成立。
+
+- $\int g$ 收敛 $\implies$ $\int f$ 收敛；
+- **绝对收敛**：$\int |f|$ 收敛 $\implies$ $\int f$ 收敛；
+- 若 $f \ge 0$，则 $\int f$ 收敛当且仅当 $\lim \int$ 的上确界有限（单调性判别法）。
+
+⭐ 「绝对收敛 $\implies$ 收敛」的证明走 **Cauchy 准则**：$|\int_{p}^{q} f| \le \int_p^q |f|$，而 $\int |f|$ 收敛给出右端可以任意小。
+
+⚠ 反过来不成立：$\int_1^{+\infty} \frac{\sin x}{x}\,dx$ 收敛但不绝对收敛 —— 与数项级数里「条件收敛」一模一样的现象。
+
+⭐ 这条与「级数的比较判敛」是同一条定理的两个化身：把 $f$ 在 $[n, n+1]$ 上积分就得到级数版本。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6
+
+#### Riemann ⟹ Lebesgue　`prop.riemann-implies-lebesgue`
+*命题*　命题：Riemann 可积 $\implies$ Lebesgue 可积，且积分相等
+
+设 $f : [a, b] \to \mathbb{R}$ 有界且 Riemann 可积。则 $f$ 关于 Lebesgue 测度可测，且 Lebesgue 可积，并且两个积分相等：
+
+$$\int_{[a, b]} f\,dm = \int_a^b f$$
+
+反过来不成立：存在 Lebesgue 可积而 Riemann 不可积的函数（例如 Dirichlet 函数）。
+
+⭐ 这条命题把「两个积分」焊接起来：**Lebesgue 积分是 Riemann 积分的真扩张** —— 能算的照旧能算（值相同），不能算的多了一批。
+
+⭐ 证明走 `thm.riemann-lebesgue-criterion`：Riemann 可积 $\implies$ 不连续点集零测 $\implies$ $f$ 与某个可测函数 a.e. 相等；再用上、下简单函数逼近夹出积分相等。
+
+⚠ 注意**值相同**这一半：不是「差不多」，是逐字相等。所以 $\int_0^1 x\,dx = \frac{1}{2}$ 在两种语言里都是同一句话。
+
+参考：Folland, Real Analysis, Ch. 2；Rudin, Real and Complex Analysis, Ch. 1
+
+### 星团：数项级数的敛散性
+> 造出「无限多项相加靠不靠谱」这套判据：Cauchy 准则 → 比较判别法 → **Kummer 判别法**（d'Alembert / Raabe / Bertrand / Gauss 全是它的特例）→ 根值 / 积分 / 凝聚判别法 → Abel–Dirichlet 判别法。分水岭是**绝对收敛**：绝对收敛的级数可以随便重排、相乘，条件收敛的不行。
+
+#### 级数的 Cauchy 准则　`thm.cauchy-criterion-series`
+*定理*　定理：级数收敛 $\iff$ 尾部可以任意小
+
+设 $\{a_n\} \subseteq \mathbb{R}$，$s_N := \sum_{n=1}^{N} a_n$。则 $\sum a_n$ 收敛，当且仅当
+
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n > m \ge N :\ \Bigl| \sum_{k=m+1}^{n} a_k \Bigr| < \varepsilon$$
+
+**必要条件**：$\sum a_n$ 收敛 $\implies$ $a_n \to 0$。
+
+⭐ 这条准则的作用是**把级数问题变成数列问题**：它不过是 $\mathbb{R}$ 的 Cauchy 收敛准则用在部分和数列 $\{s_N\}$ 上（配上区间可加性把 $s_n - s_m$ 写成一段尾巴）。
+
+⚠ 「$a_n \to 0$」只是**必要**条件：调和级数 $\sum 1/n$ 的通项趋于零而级数发散。判发散时它很有用（通项不趋于零就直接发散），判收敛时它什么也说明不了。
+
+⭐ 整个这一包的一切判据都以它为母体：比较判别法用「尾巴被更大的尾巴压住」，Abel–Dirichlet 用「尾巴被部分和的有界性压住」。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 比较判别法　`thm.comparison-test`
+*定理*　定理：比较判别法（Comparison Test）
+
+设 $0 \le a_n \le b_n$ 对充分大的 $n$ 成立。则
+
+- $\sum b_n$ 收敛 $\implies$ $\sum a_n$ 收敛；
+- $\sum a_n$ 发散 $\implies$ $\sum b_n$ 发散。
+
+**极限形式**：若 $a_n, b_n > 0$ 且 $\dfrac{a_n}{b_n} \to L$，则 $L \in (0, +\infty)$ 时两者**同敛散**；$L = 0$ 时由 $\sum b_n$ 收敛推出 $\sum a_n$ 收敛。
+
+⭐ 这是**所有正项级数判据的地基**，而它自己只是「部分和单调有界 $\implies$ 收敛」的直接翻译：$\sum a_n$ 的部分和被 $\sum b_n$ 的部分和压住。
+
+⚠ 前提是**非负**（或至少最终非负）：有正有负时部分和不再单调，「压住」什么也不意味着。
+
+⚠ 它**不是** Kummer 判别法的推论 —— 方向相反：Kummer 判别法的证明本身就要用到「部分和单调有界」这一套（即比较的思想）。把这条删掉会让整包判据失去落脚点。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### Kummer 判别法　`thm.kummer`
+*定理*　定理：Kummer 判别法（正项级数判据的总纲）
+
+设 $\sum a_n$ 是**正项**级数（$a_n > 0$），$\{c_n\}$ 是一列正数。令
+
+$$K_n := c_n \cdot \frac{a_n}{a_{n+1}} - c_{n+1}$$
+
+则：
+
+- **收敛**：若 $\liminf_{n \to \infty} K_n > 0$，则 $\sum a_n$ 收敛；
+- **发散**：若 $\sum \frac{1}{c_n}$ 发散，且 $K_n \le 0$ 对充分大的 $n$ 成立，则 $\sum a_n$ 发散。
+
+⭐ 这一条是**正项级数判据的总纲**：所有「比值型」的判别法都是它取不同的 $\{c_n\}$ 得到的 ——
+
+- $c_n = 1$：**d'Alembert（比值）判别法** —— $\lim \frac{a_{n+1}}{a_n} < 1$ 收敛、$> 1$ 发散；
+- $c_n = n$：**Raabe 判别法** —— $\lim n\bigl(\frac{a_n}{a_{n+1}} - 1\bigr) > 1$ 收敛；
+- $c_n = n \ln n$：**Bertrand 判别法** —— 比 Raabe 更细的一档；
+- $c_n$ 由 Gauss 展开给出：**Gauss 判别法** —— 处理 $a_n/a_{n+1} = 1 + \frac{\mu}{n} + O(n^{-1-\delta})$ 那一类。
+
+⚠ 收敛那一支要求的是 $\liminf K_n > 0$（不是 $\lim K_n$，也不是某一个 $K_n > 0$）。
+
+⚠ 发散那一支多一个条件「$\sum 1/c_n$ 发散」—— 取 $c_n = 1$ 时它就是 $\sum 1$ 发散，取 $c_n = n$ 时是调和级数发散，都不是免费的。
+
+⚠ **哪些不是它的推论**：比较判别法（更基础）、根值判别法（走 $\limsup$ 与几何级数比较那条路，与 Kummer 不可互推；反倒是「比值极限存在 $\implies$ 根值极限存在且相等」，所以根值更强）、积分判别法与凝聚判别法（一个换成反常积分、一个按 $2^k$ 分组）。这四条各留一个节点。
+
+参考：Knopp, Theory and Application of Infinite Series；Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 根值判别法　`thm.root-test`
+*定理*　定理：根值判别法（Cauchy，用 $\limsup \sqrt[n]{a_n}$）
+
+设 $a_n \ge 0$，记
+
+$$\alpha := \limsup_{n \to \infty} \sqrt[n]{a_n}$$
+
+则：$\alpha < 1$ 时 $\sum a_n$ 收敛；$\alpha > 1$ 时 $\sum a_n$ 发散；$\alpha = 1$ 时**无结论**。
+
+⭐ 机制是「与几何级数比较」：$\alpha < q < 1$ 时最终有 $\sqrt[n]{a_n} \le q$，即 $a_n \le q^{n}$，而几何级数收敛。
+
+⭐ 与比值判别法的关系：**根值更强**。若 $\lim a_{n+1}/a_n$ 存在，则 $\lim \sqrt[n]{a_n}$ 也存在且相等；反之不然（$a_n = 2^{-n}$ 与 $a_n = 2^{-n - (-1)^n}$ 之类的例子）。所以「比值判别法判不了的，根值可能能判」。
+
+⚠ 用到的是 **$\limsup$** 而不是 $\lim$：数列 $\sqrt[n]{a_n}$ 未必收敛，但 $\limsup$ 总有定义。
+
+⚠ $\alpha = 1$ 时它完全失灵：$\sum 1/n$ 发散与 $\sum 1/n^{2}$ 收敛都有 $\alpha = 1$。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 积分判别法　`thm.integral-test`
+*定理*　定理：积分判别法（Cauchy 积分判别法）
+
+设 $f : [1, +\infty) \to [0, +\infty)$ **非负且递减**。则级数 $\sum f(n)$ 与反常积分 $\int_1^{+\infty} f$ 同敛散，即
+
+$$\sum_{n=1}^{\infty} f(n) < +\infty \iff \int_1^{+\infty} f(x)\,dx < +\infty$$
+
+更精确地，对每个 $N$ 有不等式
+
+$$\int_1^{N+1} f \le \sum_{n=1}^{N} f(n) \le f(1) + \int_1^{N} f$$
+
+⭐ 一句话：**级数与积分被同一把尺子夹住**。上界 $f(n) \le \int_{n-1}^{n} f$ 与下界 $\int_{n}^{n+1} f \le f(n)$ 各出自单调性，逐段相加即得夹逼的不等式。
+
+⭐ 最经典的用途：$\sum 1/n^{s}$ 在 $s > 1$ 时收敛、$s \le 1$ 时发散 —— 因为 $\int_1^{\infty} x^{-s}\,dx$ 的同一条分界就在 $s = 1$。
+
+⚠ 必须是**单调递减**的非负函数：$f$ 只是在整数点上被定义、或者上下起伏时，不等式两边都不成立。
+
+⚠ 它**不是** Kummer 的推论：这里走的是「把求和翻译成反常积分」这条完全不同的路。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### Cauchy 凝聚判别法　`thm.cauchy-condensation`
+*定理*　定理：Cauchy 凝聚判别法（按 $2^{k}$ 分组）
+
+设 $a_n \ge 0$ 且**递减**。则原级数与「按 $2^{k}$ 抽出来的那一个」同敛散，即
+
+$$\sum_{n=1}^{\infty} a_n < +\infty \iff \sum_{k=0}^{\infty} 2^{k}\, a_{2^{k}} < +\infty$$
+
+⭐ 它是「**按 $2$ 的幂分组**」的正式化：把下标落在 $[2^{k}, 2^{k+1})$ 里的项全部换成该段最小的那一项（$a_{2^{k+1}}$）或最大的那一项（$a_{2^{k}}$），两边夹住即得。
+
+⭐ 威力示例：$\sum \frac{1}{n \ln n}$ 的敛散性 —— 凝聚后变成 $\sum \frac{2^{k}}{2^{k} \ln 2^{k}} = \frac{1}{\ln 2}\sum \frac{1}{k}$，一眼看出**发散**。
+
+⚠ 条件是 $a_n$ 非负且**递减**（分组替换才成立）。
+
+⚠ 它同样不是 Kummer 的推论 —— 它连「比值」都不看。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### Abel–Dirichlet 判别法　`thm.abel-dirichlet-series`
+*定理*　定理：Abel 与 Dirichlet 判别法（非绝对收敛那一族）
+
+**(Dirichlet)** 设 $\{b_n\}$ 单调且 $b_n \to 0$，而 $\sum a_n$ 的**部分和有界**（存在 $M$ 使 $\bigl| \sum_{n \le N} a_n \bigr| \le M$ 对一切 $N$ 成立）。则 $\sum a_n b_n$ 收敛。
+
+**(Abel)** 设 $\{b_n\}$ 单调**有界**，而 $\sum a_n$ 收敛。则 $\sum a_n b_n$ 收敛。
+
+⭐ 这两个判别法处理的是**一般来说不绝对收敛**的级数 —— 正项那一族的判据（比较、Kummer、根值、积分）在这里全都用不上。
+
+⭐ **Leibniz 交错级数判别法是 Dirichlet 的特例**：取 $a_n = (-1)^{n}$（部分和只取 $0, 1$ 两个值，有界），$b_n$ 单调趋于 $0$，就得到「交错级数收敛」。所以图上**不单独建 Leibniz 节点**。
+
+⭐ 证明的核心是 **Abel 求和（分部求和）**：把 $\sum_{k \le n} a_k b_k$ 改写成 $A_n b_n - A_m b_{m+1} - \sum_{k} A_k (b_{k+1} - b_k)$，于是「$A$ 有界」与「$b$ 单调」各发挥一次作用，再用 Cauchy 准则收尾。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 绝对收敛　`def.absolute-convergence`
+*定义*　绝对收敛（Absolute Convergence）
+
+设 $\{a_n\} \subseteq \mathbb{R}$（或 $\mathbb{C}$）。称级数 $\sum a_n$ **绝对收敛**，当且仅当正项级数
+
+$$\sum_{n=1}^{\infty} |a_n|$$
+
+收敛。
+
+⭐ 绝对收敛是这一包的分水岭：**绝对收敛的级数可以被当作有限和来对待** —— 可以任意换序（重排不变）、可以逐项相乘（Cauchy 乘积）、可以任意加括号。条件收敛的级数这些性质**全部失效**。
+
+⭐ 它把一般项级数的问题**归约成正项级数**：一旦验证了 $\sum |a_n|$ 收敛，就可以动用比较、Kummer、根值、积分、凝聚这一整族判据。
+
+⚠ 反过来的蕴含不成立（见「条件收敛」），而且「绝对收敛」这个名字容易误导：它不是「更强的收敛」，而是「加上符号无关性之后的收敛」。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 条件收敛　`def.conditional-convergence`
+*定义*　条件收敛（Conditional Convergence）
+
+称实（或复）级数 $\sum a_n$ **条件收敛**，当且仅当它收敛，但 $\sum |a_n|$ **发散**。
+
+典型例子是交错调和级数：
+
+$$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n} = \ln 2$$
+
+它收敛，而取绝对值之后就是发散的调和级数。
+
+⭐ 条件收敛的级数是**脆弱的**：Riemann 重排定理说，它的项可以被重新排列成收敛到**任意**事先指定的值（甚至发散到 $\pm\infty$）。所以对它做任何「交换次序」的动作都必须先证明合法性。
+
+⚠ 交错调和级数收敛到 $\ln 2$，但把「一个正项、两个负项」这样重排之后会收敛到 $\frac{1}{2}\ln 2$ —— 同一个级数、同样的项、不同的和。
+
+⭐ 判据层面：条件收敛只能用 Abel–Dirichlet 那一族来判（正项判据全部失灵）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 绝对收敛 ⟹ 收敛　`thm.absolute-implies-convergent`
+*定理*　定理：绝对收敛蕴含收敛
+
+若 $\sum |a_n|$ 收敛，则 $\sum a_n$ 收敛，且
+
+$$\Bigl| \sum_{n=1}^{\infty} a_n \Bigr| \le \sum_{n=1}^{\infty} |a_n|$$
+
+⭐ 证明只用一次三角不等式（注意 $|\sum_{k=m+1}^{n} a_k| \le \sum_{k=m+1}^{n} |a_k|$）加上级数的 Cauchy 准则。
+
+⚠ **不反向**：交错调和级数收敛但不绝对收敛。
+
+⭐ 这条定理实际上的用法是**归约**：要证一个一般项级数收敛，先去证 $\sum |a_n|$ 收敛 —— 后者是正项级数，能用的工具多得多。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 重排不变性　`thm.rearrangement`
+*定理*　定理：绝对收敛级数任意重排后和不变
+
+设 $\sum a_n$ **绝对收敛**，$\sigma : \mathbb{N} \to \mathbb{N}$ 是任意双射。则 $\sum a_{\sigma(n)}$ 也绝对收敛，且
+
+$$\sum_{n=1}^{\infty} a_{\sigma(n)} = \sum_{n=1}^{\infty} a_n$$
+
+⭐ 这条定理的实质是：**绝对收敛的级数是一个「可交换的和」** —— 像有限和一样，加法的次序不影响结果。
+
+⭐ 证明思路：先对非负项级数证（此时重排后的部分和与原级数的部分和互相夹住），再拆成正负部或实部虚部。
+
+⚠ 条件收敛时结论**彻底失效**（见「Riemann 重排定理」）。所以「能不能重排」是判断一个级数是否绝对收敛的最直观标志。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### Riemann 重排定理　`thm.riemann-rearrangement`
+*定理*　定理（Riemann）：条件收敛级数可以重排成任意和
+
+设实级数 $\sum a_n$ **条件收敛**（收敛但不绝对收敛）。则对**任意** $s \in \overline{\mathbb{R}}$（即任意实数，或 $\pm\infty$）都存在双射 $\sigma : \mathbb{N} \to \mathbb{N}$ 使
+
+$$\sum_{n=1}^{\infty} a_{\sigma(n)} = s$$
+
+并且也存在重排使其部分和**不收敛**。
+
+⭐ 这是初等分析里最反直觉的反例之一：**同一个级数、同样的项、同样的顺序集合，换个次序结果可以是你想要的任何数**。
+
+⭐ 机制：条件收敛时正项之和与负项之和**各自都是 $+\infty$ 与 $-\infty$（绝对值意义下）**，但两者抵消得刚好。于是可以「加正项直到超过 $s$，再加负项直到低于 $s$」，来回一次比一次更接近 —— 因为通项趋于零，这个过程收敛到 $s$。
+
+⚠ 反过来：绝对收敛时重排不变（见「重排不变性」）。所以「重排」这个操作恰好把两个世界分开了。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### Cauchy 乘积　`thm.series-product`
+*定理*　定理：绝对收敛级数的 Cauchy 乘积
+
+设 $\sum a_n$ 与 $\sum b_n$ 都**绝对收敛**，记
+
+$$c_n := \sum_{k=0}^{n} a_k b_{n-k}$$
+
+（**Cauchy 乘积**）。则 $\sum c_n$ 绝对收敛，且
+
+$$\sum_{n=0}^{\infty} c_n = \Bigl( \sum_{n=0}^{\infty} a_n \Bigr)\Bigl( \sum_{n=0}^{\infty} b_n \Bigr)$$
+
+⭐ 这是「重排不变」的第二个应用场合：$\sum c_n$ 就是把二重和 $\sum_{m, n} a_m b_n$ 按「对角线」重排的结果，而重排合法正是靠绝对收敛。
+
+⚠ **只收敛不绝对收敛时会失败**：$a_n = b_n = \frac{(-1)^{n}}{\sqrt{n+1}}$ 时两个级数都收敛，但它们的 Cauchy 乘积发散（通项不趋于零）。
+
+⭐ 这一条是幂级数乘法的依据（两个绝对收敛的幂级数相乘，系数就是卷积）—— 也是后面 `analysis.uniform` 那一包要用到的东西。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+
+### 星团：函数列、幂级数与初等函数
+> 造出「取极限与积分 / 求导能不能交换」的判据：逐点收敛 → **一致收敛**（三种交换定理）→ Weierstrass 判别法 → Dini 定理。**幂级数**是一致收敛的旗舰应用 —— 而 $\exp$、$\log$、$\sin$、$\cos$、$\pi$ 全都由幂级数定义，初等函数在这里第一次有了合法出身。
+
+#### 逐点收敛　`def.pointwise-convergence`
+*定义*　逐点收敛（Pointwise Convergence）
+
+设 $f_n : X \to \mathbb{R}$（$n = 1, 2, \ldots$）与 $f : X \to \mathbb{R}$。称 $\{f_n\}$ **逐点收敛**到 $f$，当且仅当对**每个固定的** $x \in X$ 都有
+
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N :\ |f_n(x) - f(x)| < \varepsilon$$
+
+记 $f_n \to f$（逐点）。
+
+⭐ 注意量词的顺序：$\exists N$ 出现在 $\forall x$ **之后** —— 所以这里的 $N$ 可以依赖 $\varepsilon$ **和 $x$**。每个人各用一个自己的 $N$，没人管别人。
+
+⚠ 逐点收敛太弱：极限函数可以**不连续**，极限与积分可以**不交换**。例：$f_n(x) = x^{n}$ 在 $[0, 1]$ 上逐点收敛到「$x < 1$ 时为 $0$、$x = 1$ 时为 $1$」的间断函数。
+
+⭐ 逐点收敛是「点态」概念，逐点验证即可；困难全在**能否把 $x$ 用一个统一的 $N$ 管住**上。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 一致收敛　`def.uniform-convergence`
+*定义*　一致收敛 $f_n \rightrightarrows f$（Uniform Convergence）
+
+沿用上面的记号。称 $\{f_n\}$ **一致收敛**到 $f$，当且仅当
+
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N,\ \forall x \in X :\ |f_n(x) - f(x)| < \varepsilon$$
+
+记 $f_n \rightrightarrows f$。等价说法（用上确界）：
+
+$$\sup_{x \in X} |f_n(x) - f(x)| \xrightarrow{\;n \to \infty\;} 0$$
+
+⭐ 与逐点收敛的唯一差别是**量词顺序**：这里 $\exists N$ 出现在 $\forall x$ **之前** —— 一个 $N$ 通吃整个定义域。
+
+⭐ 上确界形式是最常用的判据：一致收敛就是「误差函数的上确界趋于零」，也就是**在 sup 范数下收敛**。这也解释了它为什么是「函数空间里的收敛」而不是「点集上的收敛」。
+
+⚠ 一致收敛 $\implies$ 逐点收敛，反之不然（$f_n(x) = x^{n}$ 在 $[0, 1]$ 上）。
+
+⭐ 这一包的三大交换定理（保连续、保积分、保导数）全都只需要一致收敛 —— 而 $f_n(x) = x^{n}$ 那种「漏掉一个点」的收敛恰好把连续性弄丢了。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 一致 Cauchy 列　`def.uniform-cauchy`
+*定义*　一致 Cauchy 列（Uniformly Cauchy）
+
+称 $\{f_n\}$ 是**一致 Cauchy 列**，当且仅当
+
+$$\forall \varepsilon > 0,\ \exists N,\ \forall m, n \ge N,\ \forall x \in X :\ |f_m(x) - f_n(x)| < \varepsilon$$
+
+即 $\sup_{x} |f_m(x) - f_n(x)| \to 0$（$m, n \to \infty$）。
+
+⭐ 与一致收敛的关系：$\{f_n\}$ 一致收敛（到某个函数）$\iff$ 它是一致 Cauchy 列 —— 证明与数列情形同构：必要性是三角不等式，充分性是「每个 $x$ 上逐点收敛（数列完备），再用一致 Cauchy 性把 $m \to \infty$ 取掉」。
+
+⭐ 它的价值在于**不必先知道极限函数是谁**：验证一致 Cauchy 只看 $\{f_n\}$ 自己。Weierstrass 判别法就是靠它把「一致收敛」化归成「尾部的上确界和可以任意小」。
+
+⚠ 逐点 Cauchy（对每个 $x$，数列 $\{f_n(x)\}$ 是 Cauchy）**弱于**一致 Cauchy，恰如逐点收敛弱于一致收敛。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 一致收敛保连续　`thm.uniform-limit-continuous`
+*定理*　定理：一致收敛的连续函数列的极限连续
+
+设 $f_n : X \to \mathbb{R}$ 都连续，且 $f_n \rightrightarrows f$。则 $f$ 连续。
+
+特别地：**一致收敛把 $C^{0}(X)$ 变成封闭的**（在这个意义下 $(C^{0}, \|\cdot\|_{\infty})$ 是完备的）。
+
+⭐ 三个 $\varepsilon/3$ 的标准套路：$|f(x) - f(x_0)| \le |f(x) - f_n(x)| + |f_n(x) - f_n(x_0)| + |f_n(x_0) - f(x_0)|$。第一、三项靠**一致收敛**（同一个 $n$ 对两个点同时管用），第二项靠 $f_n$ 的连续性。
+
+⚠ 逐点收敛**不保连续**（$x^{n}$ 在 $[0, 1]$ 上），这就是三者里最重要的一条：一致收敛存在的理由就是为了让「连续性」这种整体性质能穿过极限。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 积分与极限交换　`thm.uniform-limit-integral`
+*定理*　定理：一致收敛 $\implies$ 极限与积分可交换（Riemann 版）
+
+设 $f_n$ 在 $[a, b]$ 上可积、$f_n \rightrightarrows f$。则 $f$ 可积，且
+
+不但极限存在，而且可以给出误差估计：
+
+$$\Bigl| \int_a^b f_n - \int_a^b f \Bigr| \le (b - a)\,\sup_{x} |f_n(x) - f(x)|$$
+
+⭐ 证明只有一行：$\bigl|\int f_n - \int f\bigr| \le \int |f_n - f| \le (b - a)\sup_x |f_n - f|$，右端由一致收敛趋于零。
+
+⚠ **一致收敛不能换成逐点收敛**：$f_n = n\,\chi_{(0, 1/n)}$ 逐点收敛到 $0$ 而 $\int f_n = 1$ 对一切 $n$ 成立。
+
+⭐ Lebesgue 那一侧把条件放宽到「控制收敛」（存在可积的 $g$ 压住 $|f_n|$）—— 但**必须带一个控制函数**，光有逐点收敛仍不够（上面那个例子就是：没有可积的 $g$ 压住 $n\chi_{(0,1/n)}$）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 导数与极限交换　`thm.uniform-limit-derivative`
+*定理*　定理：导数与极限可交换（需要导数一致收敛）
+
+设 $f_n$ 在 $[a, b]$ 上可导、$f_n'$ 都连续，且
+
+- $f_n' \rightrightarrows g$（**导数**一致收敛），
+- 至少有一个点 $x_0$ 处 $f_n(x_0)$ 收敛。
+
+则 $f_n$ 一致收敛到某 $f$，$f$ 可导，且
+
+$$f' = g$$
+
+也就是求导与取极限可以交换：$\bigl( \lim_n f_n \bigr)' = \lim_n f_n'$。
+
+⭐ 与积分那条的关键区别：**求导会把误差放大**，所以需要一致收敛的不是 $f_n$ 而是 $f_n'$。还要额外假设「有一个点收敛」，否则 $f_n$ 可以全体差一个常数（$f_n + c_n$ 的导数收敛一样好）。
+
+⚠ 只假设 $f_n \rightrightarrows f$ **不够**：$f_n(x) = \frac{\sin(nx)}{n}$ 一致收敛到 $0$，而 $f_n'(x) = \cos(nx)$ 处处不收敛。
+
+⭐ 证明走中值定理：对 $\frac{f_n(x) - f_n(x_0)}{x - x_0}$ 用 Lagrange 中值定理把差商换成某点的 $f_n'$，再让 $n \to \infty$ 用 $f_n'$ 的一致收敛。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### Weierstrass 判别法　`prop.weierstrass-m-test`
+*命题*　命题：Weierstrass 判别法（$M$-判别法）
+
+设 $f_n : X \to \mathbb{R}$ 满足 $|f_n(x)| \le M_n$ 对一切 $x \in X$ 成立，且**正项级数** $\sum M_n$ 收敛。则函数项级数
+
+$$\sum_{n=1}^{\infty} f_n(x)$$
+
+在 $X$ 上**一致收敛**（并且绝对收敛）。
+
+⭐ 它是一致收敛最好用的判据：把「函数的事」压成「数列的事」—— 只要找到一个与 $x$ 无关的控制级数。
+
+⚠ 它给出的是**充分**条件：一致收敛的级数未必有这种「逐项统一控制」（$\sum \frac{(-1)^{n}}{n}$ 型的例子）。
+
+⭐ 用法：幂级数在 $|x| \le r < R$ 上一致收敛，正是取 $M_n = |a_n| r^{n}$ 并对 $\sum M_n$ 用根值判别法。这一条是下一段「幂级数」全部性质的入口。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### Dini 定理　`thm.dini`
+*定理*　定理（Dini）：紧集上单调的逐点收敛就是一致收敛
+
+设 $X$ 是**紧**度量空间，$f_n : X \to \mathbb{R}$ 连续、$f : X \to \mathbb{R}$ 连续，$f_n \to f$ **逐点**收敛，且 $\{f_n\}$ 单调（$f_n \le f_{n+1}$ 或 $f_n \ge f_{n+1}$ 对一切 $n$ 成立）。则
+
+$$f_n \rightrightarrows f$$
+
+⭐ 它把「逐点」升级成「一致」，代价是三条额外假设：**紧**、**连续**（$f_n$ 与 $f$ 都要）、**单调**。三条都不能丢：
+- 不紧：$f_n(x) = \min(nx, 1)$ 在 $(0, 1]$ 上
+- 极限不连续：$f_n = x^{n}$ 在 $[0, 1]$ 上（$f$ 间断）
+- 不单调：$f_n$ 取「尖峰」在 $[0, 1]$ 上滑动
+
+⭐ 证明是紧性的标准用法：对每个 $x$ 取足够大的 $n_x$ 使误差 $< \varepsilon$，连续性给每个 $x$ 一个小邻域；紧性取出有限覆盖，取这些 $n_x$ 的最大值。**单调性**保证了「$n \ge N$」而不是「$n = N$」—— 这就是它必须出场的地方。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7
+
+#### 幂级数　`def.power-series`
+*定义*　幂级数（Power Series）
+
+给定数列 $\{a_n\} \subseteq \mathbb{R}$（或 $\mathbb{C}$）与中心 $x_0$，形如
+
+$$\sum_{n=0}^{\infty} a_n (x - x_0)^{n}$$
+
+的表达式叫**幂级数**。使它在某个 $x$ 处收敛的那些 $x$ 构成**收敛域**；收敛域的**内部**总是一个以 $x_0$ 为中心的区间（或圆盘）。
+
+⭐ 幂级数是「级数」与「函数」这两件事的交叉点：它既是一个级数（每一项都可算），又是一个函数（在收敛域上）。所以前面两包的工具都往这里汇合。
+
+⚠ 收敛域不一定是开区间：端点要单独判断（可能收敛、可能发散、可能条件收敛）—— 那正是 `thm.abel-endpoint` 处理的事。
+
+⭐ 有趣的现象：**幂级数在收敛域内部的行为完全没有「野蛮」余地**（无穷次可导，见「逐项求导」），这与一般的函数项级数形成鲜明对比。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 收敛半径　`thm.convergence-radius`
+*定理*　定理：Cauchy–Hadamard 收敛半径
+
+设 $\sum a_n (x - x_0)^{n}$ 是幂级数，令（约定 $1/0 = +\infty$、$1/{+\infty} = 0$）
+
+$$R := \frac{1}{\limsup_{n \to \infty} \sqrt[n]{|a_n|}}$$
+
+则：$|x - x_0| < R$ 时级数**绝对收敛**；$|x - x_0| > R$ 时级数**发散**；$|x - x_0| = R$ 时**无结论**。
+
+⭐ $R$ 叫**收敛半径**，$(x_0 - R, x_0 + R)$ 叫收敛区间。证明就是对系数用**根值判别法**：$\limsup \sqrt[n]{|a_n (x - x_0)^{n}|} = |x - x_0| \cdot \limsup \sqrt[n]{|a_n|}$。
+
+⚠ 这里用的必须是 $\limsup$ 而不是 $\lim$：$\sqrt[n]{|a_n|}$ 未必收敛。
+
+⚠ $|x - x_0| = R$ 处三种情形都可能出现（$\sum x^{n}$ 两端都发散、$\sum x^{n}/n$ 一端收敛一端发散、$\sum x^{n}/n^{2}$ 两端都收敛）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 幂级数的逐项运算　`thm.power-series-analytic`
+*定理*　定理：收敛区间内幂级数可逐项求导与积分
+
+设 $f(x) := \sum_{n=0}^{\infty} a_n (x - x_0)^{n}$ 的收敛半径为 $R > 0$。则：
+
+- 在 $|x - x_0| < R$ 内 $f$ 连续，而且在每个 $[x_0 - r, x_0 + r]$（$r < R$）上**一致收敛**；
+- $f$ 在 $|x - x_0| < R$ 内可导，且**逐项求导**给出导数，收敛半径仍是 $R$：
+
+$$f'(x) = \sum_{n=1}^{\infty} n\, a_n (x - x_0)^{n-1}$$
+
+- 同理可以**逐项积分**，收敛半径仍是 $R$。
+
+⭐ 结论里最值得注意的是「**收敛半径不变**」：逐项求导后系数变成 $n a_n$，$\sqrt[n]{n} \to 1$ 所以半径一动不动。于是可以反复求导 —— **幂级数在收敛区间内是 $C^{\infty}$ 的**，而且各阶导数都由系数决定：$a_n = f^{(n)}(x_0)/n!$。
+
+⚠ 「一致收敛」只在**闭的子区间** $[x_0 - r, x_0 + r]$ 上成立，不能推广到整个开区间 —— 端点附近一致收敛会失效。
+
+⭐ 这一条是 Taylor 公式的另一面：Taylor 定理说「$f$ 可以用多项式逼近」，这里说「如果 $f$ **本身**是幂级数，那这些多项式就是它的部分和，而且确实收敛到 $f$」。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### Abel 第二定理　`thm.abel-endpoint`
+*定理*　定理（Abel 第二定理）：端点处的连续性
+
+设 $f(x) = \sum_{n=0}^{\infty} a_n x^{n}$ 的收敛半径 $R = 1$，且 $\sum a_n$ **收敛**（即右端 $x = 1$ 处收敛）。则
+
+$$\lim_{x \to 1^{-}} f(x) = \sum_{n=0}^{\infty} a_n$$
+
+即 $f$ 在 $x = 1$ 处**左连续**（把 $f$ 在端点补上收敛值之后）。
+
+⭐ 含义：**幂级数在收敛区间的端点是「连续地」离开的**，只要那一端真的收敛。它把「区间内部的和」与「端点上的和」接了起来，是求某些数项级数之和的标准手法：
+
+$$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n} = \lim_{x \to 1^{-}} \ln(1 + x) = \ln 2$$
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 指数函数　`def.exp-function`
+*定义*　指数函数 $\exp$（由幂级数定义）
+
+对 $z \in \mathbb{C}$，定义
+
+$$\exp z := \sum_{n=0}^{\infty} \frac{z^{n}}{n!}$$
+
+该级数对每个 $z$ 都绝对收敛（收敛半径 $+\infty$），并且满足
+
+$$\exp(z + w) = \exp z \cdot \exp w, \qquad \exp 0 = 1, \qquad \frac{d}{dz}\exp z = \exp z$$
+
+⭐ **先有级数，后有 $e^{x}$**：这样定义的原因是它不依赖任何几何直观、对复数同样成立、而且所有性质（函数方程、导数等于自身）都能从级数里算出来。
+
+⭐ 函数方程的证明是卷积：$\exp(z+w) = \sum_n \frac{(z+w)^{n}}{n!}$，把 $(z+w)^{n}$ 二项式展开再重排（绝对收敛，重排合法）。
+
+⚠ $\exp$ 从不取零值：$\exp z \cdot \exp(-z) = \exp 0 = 1$。于是它把 $\mathbb{C}$ 送进 $\mathbb{C} \setminus \{0\}$。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 对数函数与 e　`def.log-function`
+*定义*　对数函数 $\log$ 与常数 $e$
+
+$\exp$ 在 $\mathbb{R}$ 上严格递增（因为 $(\exp x)' = \exp x > 0$），其像为 $(0, +\infty)$。定义 $\log : (0, +\infty) \to \mathbb{R}$ 为它的反函数：
+
+$$\log := (\exp|_{\mathbb{R}})^{-1}, \qquad e := \exp 1 = \sum_{n=0}^{\infty} \frac{1}{n!}$$
+
+于是
+
+$$\log(xy) = \log x + \log y, \qquad \frac{d}{dx}\log x = \frac{1}{x}$$
+
+⭐ 反函数连续且单调（见「反函数连续」），导数由反函数求导得到。
+
+⚠ $\log$ 的定义域是 $(0, +\infty)$ —— 在 $\mathbb{R}$ 上 $\exp$ 取不到非正值，所以 $\log$ 也没有负数输入（复对数要另开一支，那里有分支切割的问题）。
+
+⭐ $e$ 的两个常见面孔在这里统一：$e = \exp 1 = \sum 1/n!$ 与 $e = \lim_n (1 + 1/n)^{n}$ 可以互相推出，但前者是定义、后者是定理。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 正弦与余弦　`def.trig-function`
+*定义*　正弦、余弦（由幂级数定义）
+
+对 $z \in \mathbb{C}$，定义
+
+$$\cos z := \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(2k)!}\, z^{2k}, \qquad \sin z := \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(2k+1)!}\, z^{2k+1}$$
+
+两个级数对每个 $z$ 都绝对收敛（收敛半径 $+\infty$），并且
+
+$$\cos' = -\sin, \qquad \sin' = \cos, \qquad \cos 0 = 1, \qquad \sin 0 = 0$$
+
+⭐ 三角函数的**分析定义**（而非几何定义）：由级数出发，一切恒等式与求导公式都可以算出来，而且自动对复数成立。
+
+⭐ 与 $\exp$ 的关系将在「Euler 公式」那一条里揭晓：把 $\exp$ 的级数按 $n$ 的奇偶拆开，就得到 $\cos$ 与 $\sin$。
+
+⚠ 几何意义（单位圆、角度、弧度）是**后来**才接上的：级数先告诉我们 $\cos$ 有零点、$\sin$ 有周期，几何图像才随之而来。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 圆周率 π　`def.pi`
+*定义*　常数 $\pi$（由余弦的最小正零点定义）
+
+由 $\cos$ 的幂级数可以证明：$\cos$ 在 $(0, 2)$ 内**恰有一个**零点。把它记为 $\pi / 2$，即
+
+$$\pi := 2 \cdot \min \{ x > 0 : \cos x = 0 \}$$
+
+于是 $\cos(\pi/2) = 0$、$\sin(\pi/2) = 1$，而且 $\cos$ 与 $\sin$ 都以 $2\pi$ 为周期。
+
+⭐ $\pi$ 在这里不是「周长与直径之比」—— 那是**几何**事实，要靠弧长理论才能证明。分析里的 $\pi$ 定义为**余弦的最小正零点**，于是周期、正交性、Fourier 展开全都从级数里长出来。
+
+⭐ 存在性的关键一步：$\cos 0 = 1 > 0$ 而 $\cos 2 < 0$（由级数估值：$\cos 2 = 1 - 2 + \frac{16}{24} - \cdots$ 的尾巴被控制住），由**介值定理**得到零点。唯一性靠 $\sin > 0$ 在 $(0, 2)$ 上（$\cos' = -\sin$ 且 $\sin$ 递增为正）。
+
+⚠ 定义里用的是 $\min$，所以先要证明那个集合非空 —— 这正是上面说的介值定理那一步。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### Euler 公式　`thm.euler-formula`
+*定理*　定理：$e^{i\theta} = \cos\theta + i\sin\theta$
+
+对一切实数（或复数）$\theta$，
+
+$$\exp(i\theta) = e^{i\theta} = \cos\theta + i\sin\theta$$
+
+特别地 $e^{i\pi} = -1$。
+
+⭐ 这条公式把**指数、三角、复数**三件事焊成一件：$\theta \mapsto e^{i\theta}$ 是单位圆上以弧长 $\theta$ 为参数的运动，实部是 $\cos$、虚部是 $\sin$。
+
+⭐ 证明就是**重排级数**（见下面的证明）：把 $\exp$ 的级数按奇偶项拆开。表面上看只是换了个写法，实际上它给出了「$\cos$ 与 $\sin$ 是同一个指数函数的两个分量」这个结构性事实。
+
+⚠ 注意这里**不需要**任何几何输入：弧长、角度、单位圆这些词都只是事后对公式的**解释**。反过来，正因为有这条公式，三角函数才可能有周期（周期来自 $e^{2\pi i} = 1$）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 8
 
 ### 星团：集合族与 σ-代数
 > 造出「能承载测度的集合族」：环 → σ-环 → σ-代数 → 生成、Borel、单调类判据。测度本身在下一个团里。
@@ -22347,6 +23229,594 @@ $$\frac{R^{(n)}(x)}{n!} = \frac{f^{(n)}(x) - f^{(n)}(x_0)}{n!}$$
 
 > 所以「Peano 余项」这件事的代价是**第 $n$ 阶导数在 $x_0$ 连续**（否则 L'Hôpital 的头几步代价太大）；而 Lagrange 余项要求的是 $n+1$ 阶可导，两者是不同方向的条件。
 
+#### 定义引用：「区间」→ 分割　`dep.interval-partition`
+
+分割是闭区间的一种有限点选取，$\Delta x_i$ 是小区间的长度 —— 两者都只说区间。
+
+#### 定义引用：「分割」→ Riemann 和　`dep.partition-riemannsum`
+
+Riemann 和是在一个固定的分割上、按标记点累加 $f(\xi_i)\Delta x_i$。
+
+#### 定义引用：「分割」→ 上和与下和　`dep.partition-darbouxsum`
+
+上和、下和同样只依赖分割：把每段的标记换成该段的上确界 / 下确界。
+
+#### 定义引用：「上和与下和」→ Riemann 可积　`dep.darbouxsum-integrable`
+
+可积的 Darboux 形式定义为「两个确界相等」，所以要用上和与下和来陈述。
+
+#### 定义引用：「Riemann 可积」→ 反常积分　`dep.riemannsum-improper`
+
+反常积分是普通 Riemann 积分取极限，所以它的定义域里每一段都要先可积。
+
+#### Riemann 可积 ⟹ Darboux 判据　`imp.darboux-criterion`
+*可积的定义 $\implies$ Darboux 判据*
+
+记 $L^{*} := \sup_P L(f, P)$、$U^{*} := \inf_P U(f, P)$。由上和、下和的单调性（加细后 $L$ 只增、$U$ 只减），对任意两个分割 $P, Q$ 有 $L(f, P) \le U(f, Q)$，故
+
+$$L^{*} \le U^{*}$$
+
+永远成立。下面说明「$L^{*} = U^{*}$」与「标记和收敛」等价。
+
+**(i) 设 $L^{*} = U^{*} =: I$。** 给定 $\varepsilon > 0$，取分割 $P_1, P_2$ 使 $L(f, P_1) > I - \varepsilon$、$U(f, P_2) < I + \varepsilon$。令 $P := P_1 \cup P_2$，由单调性 $L(f, P) \ge L(f, P_1) > I - \varepsilon$、$U(f, P) \le U(f, P_2) < I + \varepsilon$。
+
+设 $P = \{ x_0 < \cdots < x_n \}$，取 $\delta := $ 比「$P$ 中相邻分割点的最小间距」更小的正数（$n = 0$ 时平凡）。对任意模小于 $\delta$ 的分割 $Q$ 与任意标记 $\xi$：每个 $Q$ 的小区间至多**跨过一个** $P$ 的分割点，于是把 $Q$ 的小区间按「是否含 $P$ 的分割点」分类求和，可得
+
+$$L(f, P) - 2M\,\|Q\|\cdot n \le L(f, Q) \le S(f, Q, \xi) \le U(f, Q) \le U(f, P) + 2M\,\|Q\| \cdot n$$
+
+其中 $M := \sup |f|$（跨过分割点的那几段振幅不超过 $2M$）。令 $\|Q\| \to 0$，两侧都趋于 $I$，故 $S(f, Q, \xi) \to I$。
+
+**(ii) 设标记和收敛到 $I$。** 任取分割 $P$ 与 $\varepsilon > 0$。用**同一分割** $P$、取使 $f(\xi_i)$ 逼近 $M_i$ 的标记，可得 $S > U(f, P) - \varepsilon$；取使 $f(\xi_i)$ 逼近 $m_i$ 的标记得 $S < L(f, P) + \varepsilon$。两者都随模趋于 $I$，故 $|U(f, P) - I| \le \varepsilon$、$|L(f, P) - I| \le \varepsilon$ 对足够细的 $P$ 成立，于是 $U^{*} = L^{*} = I$。∎
+
+> 两个方向里，(i) 是真正的技术活：**任意**细分割要与一个**固定**的加细比较，差的部分就是那些跨过分割点的区间 —— 它们的总长度被 $\|Q\|$ 控制住了。
+
+#### Darboux 判据 ⟹ 可积的振幅判据　`imp.riemann-criterion`
+*Darboux 判据 $\implies$ 振幅判据*
+
+记 $L^{*} = \sup_P L$、$U^{*} = \inf_P U$，恒有 $L(f, P) \le L^{*} \le U^{*} \le U(f, P)$。于是
+
+$$U(f, P) - L(f, P) \ge U^{*} - L^{*}$$
+
+**($\implies$)** 设 $f$ 可积，即 $L^{*} = U^{*}$。给定 $\varepsilon > 0$，取 $P_1$ 使 $L(f, P_1) > L^{*} - \varepsilon/2$、$P_2$ 使 $U(f, P_2) < U^{*} + \varepsilon/2$，并令 $P = P_1 \cup P_2$。由单调性
+
+$$U(f, P) - L(f, P) \le U(f, P_2) - L(f, P_1) < \varepsilon$$
+
+**($\Longleftarrow$)** 设对每个 $\varepsilon$ 都存在 $P$ 使 $U(f, P) - L(f, P) < \varepsilon$。由上式 $0 \le U^{*} - L^{*} < \varepsilon$ 对一切 $\varepsilon$ 成立，故 $U^{*} = L^{*}$，由 Darboux 判据 $f$ 可积。∎
+
+两种定义给出的积分值相同：Darboux 判据已说明公共值就是 $\int_a^b f$。
+
+> 判据的实用性全在「存在一个分割」这个弱要求上 —— 证明可积性时只需**造一个**好分割，不必面对所有分割。
+
+#### 可积的振幅判据 + 紧集上连续 ⟹ 一致连续 + 最值定理 ⟹ 哪些函数可积　`imp.integrable-examples`
+*振幅判据 + 一致连续 $\implies$ 可积性三例*
+
+**① 连续 $\implies$ 可积。** 设 $f$ 在 $[a, b]$ 上连续，令 $M := \sup |f|$。由 Cantor 定理，$f$ 在 $[a, b]$ 上**一致连续**：对 $\varepsilon > 0$ 取 $\delta > 0$，使 $|x - y| < \delta$ 时 $|f(x) - f(y)| < \dfrac{\varepsilon}{b - a}$。
+
+取分割 $P$ 使 $\|P\| < \delta$，则每段上 $\omega_i \le \dfrac{\varepsilon}{b - a}$，于是
+
+$$U(f, P) - L(f, P) = \sum_i \omega_i \Delta x_i \le \frac{\varepsilon}{b - a} \sum_i \Delta x_i = \varepsilon$$
+
+由振幅判据可积。
+
+**② 单调 $\implies$ 可积。** 设 $f$ 递增。取等距分割 $x_i = a + i\,(b - a)/n$，则第 $i$ 段上 $M_i = f(x_i)$、$m_i = f(x_{i-1})$，振幅和
+
+$$U - L = \sum_{i=1}^{n} \bigl( f(x_i) - f(x_{i-1}) \bigr)\frac{b - a}{n} = \bigl( f(b) - f(a) \bigr)\frac{b - a}{n} \xrightarrow{\;n \to \infty\;} 0$$
+
+（这是**裂项**：中间的 $f(x_i)$ 全部抵消。）
+
+**③ 有限个不连续点 $\implies$ 可积。** 把 $[a, b]$ 分成有限段，每段内部连续、端点处或为不连续点；对每一段用 ①，再把分割在端点处接起来即可。
+
+**④ Dirichlet 函数不可积。** 任取分割 $P$：每个小区间同时含有理数与无理数（稠密性），故 $M_i = 1$、$m_i = 0$，振幅和 $U - L = \sum \Delta x_i = b - a$ 与 $P$ 无关，永远不小于 $\varepsilon = b - a$。由振幅判据不可积。∎
+
+> ① 里用的正是「紧集上连续 $\implies$ 一致连续」—— 这是 ② 之外唯一需要紧性的地方，而 ② 靠的是**单调**（振幅自动沿分割点裂项）。
+
+#### 可积的振幅判据 + 零集与完备 ⟹ 可积 ⟺ 不连续点零测　`imp.riemann-lebesgue`
+*振幅判据 + 零测集 $\implies$ Lebesgue 判据*
+
+记 $D$ 为 $f$ 的不连续点集，并设 $|f| \le M$。
+
+**($\Longleftarrow$)** 设 $D$ 是零测集，给定 $\varepsilon > 0$。
+
+1. 取开区间族 $\{ J_k \}$ 覆盖 $D$，且 $\sum_k |J_k| < \varepsilon / (4M + 1)$。
+2. 令 $K := [a, b] \setminus \bigcup_k J_k$ —— 这是**紧集**，且 $f$ 在 $K$ 上每点连续。由一致性（$K$ 紧）可得：存在 $\delta > 0$，使 $|x - y| < \delta$、$x, y \in K$ 时 $|f(x) - f(y)| < \varepsilon / (2(b - a))$。
+3. 取分割，使每个小区间要么整个落在某个 $J_k$ 里（第一类），要么长度 $< \delta$（第二类）。第一类上 $\omega_i \le 2M$，共占长度 $< \varepsilon /(4M + 1)$；第二类上 $\omega_i \le \varepsilon / (2(b - a))$。于是
+
+$$\sum_i \omega_i \Delta x_i \le 2M \cdot \frac{\varepsilon}{4M + 1} + \frac{\varepsilon}{2(b - a)} \cdot (b - a) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon$$
+
+由振幅判据可积。
+
+**($\implies$)** 设 $f$ 可积。对每个 $k \ge 1$ 取分割 $P_k$ 使 $\sum_i \omega_i \Delta x_i < 1 / k$。把「$\omega_i > 1/k$」的那些小区间记为 $J_{k,1}, \ldots$，则
+
+$$\sum_j |J_{k, j}| \le k \sum_j \omega_j |J_{k,j}| \le k \cdot \frac{1}{k} = 1$$
+
+更精细地取 $\varepsilon / k$ 代替 $1/k$，可得 $\sum_j |J_{k,j}| < \varepsilon$。所以集合 $D_k := \bigcup_j J_{k,j}$ 是零测集的「$\varepsilon$-近似」。
+
+4. 现在关键的一步：$D \subseteq \bigcup_{k} \overline{D_k}$ —— 若 $f$ 在 $x$ 处不连续，则 $f$ 在该点的振幅 $\omega(f, x) > 1/k$ 对某个 $k$ 成立，于是 $x$ 属于那些长度可以任意小的区间的闭包。于是 $D$ 被可数多个零测集覆盖，本身是零测集。∎
+
+> ($\Longleftarrow$) 的 2 与 3 是「**紧性 + 零测**」的标准组合拳：把不连续点用总长度很小的开集包起来，剩下的紧集上连续函数一致连续。这一招在后面（Lusin 定理、Egorov 定理）会反复出现。
+
+#### 可积的振幅判据 ⟹ 积分的线性与区间可加　`imp.integral-linear`
+*振幅判据 $\implies$ 线性与区间可加*
+
+**振幅的次可加性**：在同一区间 $I$ 上，$\omega(f + g) \le \omega(f) + \omega(g)$，$\omega(cf) = |c|\,\omega(f)$（因为 $\sup(f + g) \le \sup f + \sup g$、$\inf(f + g) \ge \inf f + \inf g$）。
+
+1. 设 $f, g$ 可积。给定 $\varepsilon > 0$，取分割 $P_f$ 使 $\sum \omega(f)\Delta x < \varepsilon / 2$，$P_g$ 同理；令 $P = P_f \cup P_g$，加细不增振幅和，于是 $\sum \omega(f + g)\Delta x \le \sum \omega(f)\Delta x + \sum \omega(g)\Delta x < \varepsilon$。故 $f + g$ 可积。
+2. 值的关系 $\int (f + g) = \int f + \int g$：在同一分割上，$L(f,P) + L(g,P) \le L(f+g,P) \le U(f+g,P) \le U(f,P) + U(g,P)$，令分割变细即得。
+3. 数乘同理（$\omega(cf) = |c|\omega(f)$，值的关系由 $U(cf,P) = cU(f,P)$ 当 $c \ge 0$、$c < 0$ 时互换上下的角色）。
+4. **区间可加**：设 $P$ 是 $[a, b]$ 的分割，取 $c$ 为分割点，则 $P$ 分裂成 $[a, c]$ 与 $[c, b]$ 的分割，$U(f, P) = U_{[a,c]}(f) + U_{[c,b]}(f)$（$L$ 同）。由振幅判据，一侧的振幅和可以任意小当且仅当两侧都可以，故可积性等价；取极限得 $\int_a^b f = \int_a^c f + \int_c^b f$。∎
+
+> 「振幅的次可加性」是这一整包的主引擎：可积性的一切运算性质（和、数乘、乘积、区间可加）都是它的推论。
+
+#### Riemann 可积 ⟹ 积分的保序与估计　`imp.integral-order`
+*可积的定义 $\implies$ 保序与绝对值不等式*
+
+**保序**：设 $f \le g$ 处处成立。对每个分割 $P$ 与每个标记 $\xi$ 都有 $S(f, P, \xi) \le S(g, P, \xi)$，令 $\|P\| \to 0$ 得 $\int f \le \int g$。特别地 $f \ge 0 \implies \int f \ge 0$。
+
+**绝对值**：由 $|f| = f^{+} + f^{-}$，其中 $f^{+} := \max(f, 0)$、$f^{-} := \max(-f, 0)$ 都是「连续函数与 $f$ 的复合」，可积（用振幅判据：$\omega(|f|) \le \omega(f)$ 逐段成立）。又 $-|f| \le f \le |f|$，由保序性得
+
+$$-\int |f| \le \int f \le \int |f| \quad\Longrightarrow\quad \Bigl| \int_a^b f \Bigr| \le \int_a^b |f|$$
+
+**基本估计**：$|f| \le M$ 时由保序性 $\int |f| \le \int M = M(b - a)$，配合上一条即得。∎
+
+> $\omega(|f|) \le \omega(f)$ 是逐段证明的：$\sup |f| - \inf |f| \le \sup f - \inf f$（反向三角不等式）。
+
+#### 积分的线性与区间可加 + 积分的保序与估计 + 连续 ⟹ 变上限积分的导数　`imp.ftc-part1`
+*区间可加 + 基本估计 $\implies$ 变上限积分的导数*
+
+设 $|f| \le M$。
+
+**(a)** 对 $x < y$，由区间可加性 $F(y) - F(x) = \int_x^y f$，再由基本估计 $|F(y) - F(x)| \le M(y - x)$。故 $F$ 是 Lipschitz 的，特别地连续（给定 $\varepsilon > 0$ 取 $\delta = \varepsilon / M$，$M = 0$ 时平凡）。
+
+**(b)** 设 $f$ 在 $x_0$ 连续，给定 $\varepsilon > 0$，取 $\delta > 0$ 使 $|x - x_0| < \delta$ 时 $|f(x) - f(x_0)| < \varepsilon$。则对 $0 < h < \delta$
+
+$$\frac{F(x_0 + h) - F(x_0)}{h} - f(x_0) = \frac{1}{h}\int_{x_0}^{x_0 + h} \bigl( f - f(x_0) \bigr)$$
+
+（第二个等号用了区间可加性把 $\int_{x_0}^{x_0+h} f(x_0) = h f(x_0)$ 提出来。）右端的绝对值 $\le \frac{1}{h} \cdot \varepsilon \cdot h = \varepsilon$，由基本估计。$h < 0$ 时同法（注意商里 $h$ 为负、积分上下限颠倒，两次符号相消）。故 $F'(x_0) = f(x_0)$。∎
+
+> (b) 的证明只用到了 $f$ 在**同一点**的连续性 —— 积分本身在别处的取值完全不参与。
+
+#### 积分中值定理 + 积分的线性与区间可加 ⟹ Newton–Leibniz 公式　`imp.ftc-part2`
+*积分中值定理 $\implies$ Newton–Leibniz 公式*
+
+设 $F$ 可导、$f := F'$ 可积。取分割 $P = \{ a = x_0 < \cdots < x_n = b \}$。对每一段用 Lagrange 中值定理：存在 $\xi_i \in (x_{i-1}, x_i)$ 使
+
+$$F(x_i) - F(x_{i-1}) = F'(\xi_i)\,\Delta x_i = f(\xi_i)\,\Delta x_i$$
+
+对各段求和，左端**裂项**：
+
+$$F(b) - F(a) = \sum_{i} \bigl( F(x_i) - F(x_{i-1}) \bigr) = \sum_i f(\xi_i)\,\Delta x_i = S(f, P, \xi)$$
+
+右端正是一个 Riemann 和。令 $\|P\| \to 0$，由 $f$ 可积，$S(f, P, \xi) \to \int_a^b f$；左端与 $P$ 无关，故 $F(b) - F(a) = \int_a^b f$。∎
+
+> 证明里没有用到积分中值定理（那是**另一条**常用证明）；这里的要点是「**裂项**」：导数在中值点取到的值恰好把所有增量接起来。这也解释了为什么必须要求 $F'$ 可积 —— 否则右端的 Riemann 和没有极限可言。
+
+#### Newton–Leibniz 公式 ⟹ 换元积分　`imp.substitution`
+*链式法则 + Newton–Leibniz $\implies$ 换元公式*
+
+设 $\varphi$ 有连续导数，$f$ 连续，并令 $G$ 是 $f$ 的一个原函数（由第一基本定理，$G(x) := \int_{a}^{x} f$ 就是）。则 $G(\varphi(t))$ 对 $t$ 可导，且由链式法则
+
+$$\frac{d}{dt} G\bigl(\varphi(t)\bigr) = G'\bigl(\varphi(t)\bigr)\,\varphi'(t) = f\bigl(\varphi(t)\bigr)\,\varphi'(t)$$
+
+右边的函数连续因而可积。对它在 $[\alpha, \beta]$ 上用 Newton–Leibniz：
+
+$$\int_{\alpha}^{\beta} f\bigl(\varphi(t)\bigr)\varphi'(t)\,dt = G\bigl(\varphi(\beta)\bigr) - G\bigl(\varphi(\alpha)\bigr) = \int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\,dx$$
+
+最后一步再用一次 Newton–Leibniz（$G$ 是 $f$ 的原函数）。∎
+
+> 两个方向的换元（「凑微分」与「变量替换」）在这一个公式里，因为等式两边可以任意读：从左读是代入，从右读是替换。
+
+#### Newton–Leibniz 公式 ⟹ 分部积分　`imp.by-parts`
+*乘积求导 + Newton–Leibniz $\implies$ 分部积分*
+
+设 $F, G$ 可导、$F', G'$ 可积。乘积求导法则给出
+
+$$(FG)' = F'G + FG'$$
+
+左边可积（可积函数的乘积可积），故右边也可积。对三者在 $[a, b]$ 上用 Newton–Leibniz：
+
+$$F(b)G(b) - F(a)G(a) = \int_a^b (FG)' = \int_a^b F'G + \int_a^b FG'$$
+
+移项即得 $\int_a^b FG' = F(b)G(b) - F(a)G(a) - \int_a^b F'G$。∎
+
+> 「可积函数的乘积可积」这一步值得留意：分部积分把 $FG'$ 的可积性**转嫁**给了 $F'G$ —— 所以公式的真正用处是「换一个更好积的对手」。
+
+#### 最值定理 + 积分的保序与估计 ⟹ 积分中值定理　`imp.mean-value-integral`
+*最值定理 + 保序 $\implies$ 积分中值定理*
+
+设 $f$ 连续、$g \ge 0$ 可积（$g \le 0$ 时取 $-g$）。
+
+1. 由最值定理，$f$ 在 $[a, b]$ 上取到最小值 $m$ 与最大值 $M$。
+2. 由 $g \ge 0$ 得 $mg \le fg \le Mg$；由保序性与线性性，
+
+$$m\int_a^b g \le \int_a^b fg \le M\int_a^b g$$
+
+3. 若 $\int_a^b g = 0$，则三式都被夹在 $0$ 上，$\int fg = 0 = f(\xi) \cdot 0$ 对任意 $\xi$ 成立。
+4. 否则令
+
+$$c := \frac{\int_a^b fg}{\int_a^b g} \in [m, M]$$
+
+由介值定理，存在 $\xi \in [a, b]$ 使 $f(\xi) = c$，整理即得结论。∎
+
+> 第 4 步用的正是**介值定理** —— 中值定理家族里唯一需要「$f$ 取遍中间值」的地方。
+
+#### 反常积分 + Cauchy 收敛准则 ⟹ 反常积分的比较判敛　`imp.improper-comparison`
+*反常积分的定义 + Cauchy 准则 $\implies$ 比较判敛*
+
+以无穷区间 $\int_a^{+\infty}$ 为例（无界函数的情形把 $R \to \infty$ 换成 $\varepsilon \to 0^{+}$，逐字照搬）。记 $I(R) := \int_a^{R} f$。
+
+1. **Cauchy 准则的形式**：$\int_a^{+\infty} f$ 收敛当且仅当对每个 $\varepsilon > 0$ 存在 $R_0$，使 $R_0 < p < q$ 时 $\bigl| \int_p^{q} f \bigr| < \varepsilon$（把数列的 Cauchy 准则用在 $R \mapsto I(R)$ 上，配合区间可加性）。
+2. **绝对收敛 $\implies$ 收敛**：若 $\int |f|$ 收敛，则对 $p < q$，$\bigl| \int_p^q f \bigr| \le \int_p^q |f|$，右端由第 1 步可以任意小，故 $\int f$ 收敛。
+3. **比较**：设 $|f| \le g$ 近端成立。若 $\int g$ 收敛，则由第 1 步，$\int_p^q |f| \le \int_p^q g$ 也可以任意小，故 $\int |f|$ 收敛，再由第 2 步得 $\int f$ 收敛。
+4. **非负情形的单调性**：$f \ge 0$ 时 $R \mapsto \int_a^R f$ 单调递增，故收敛当且仅当它有上界。∎
+
+> 第 1 步是全部关键：**反常积分的收敛问题被翻译成「尾部的积分可以任意小」**，从此与级数判敛的套路完全平行（级数的 Cauchy 准则也长这样）。
+
+#### 可积 ⟺ 不连续点零测 + 可积 / L¹ ⟹ Riemann ⟹ Lebesgue　`imp.riemann-implies-lebesgue`
+*Lebesgue 判据 $\implies$ Riemann 积分是 Lebesgue 积分的特例*
+
+设 $f$ 在 $[a, b]$ 上有界且 Riemann 可积。
+
+1. **可测性**：Riemann 可积给出上、下简单函数序列
+
+$$\varphi_n := \sum_i m_i \chi_{I_i}, \qquad \psi_n := \sum_i M_i \chi_{I_i}$$
+
+（对一列模趋于零的分割），满足 $\varphi_n \le f \le \psi_n$ 且 $\int (\psi_n - \varphi_n) = U(f, P_n) - L(f, P_n) \to 0$（这里 $\int$ 是 Lebesgue 积分，对简单函数与 Riemann 积分一致）。于是 $f$ 是简单函数的上确界，因而可测。
+2. **两个积分相等**：$\int \varphi_n \to \int_a^b f$（Riemann 侧，由下和的性质），而 $\varphi_n \uparrow \bar{f} \le f$ 点态单调上升，由单调收敛定理 $\int \varphi_n \to \int \bar{f}$，其中 $\bar{f} := \sup_n \varphi_n$。两式比较得 $\int \bar{f} = \int_a^b f$。
+3. 同理对上简单函数 $\psi_n$ 用控制收敛（或单调下降）得 $\int \underline{f} = \int_a^b f$，其中 $\underline{f} := \inf_n \psi_n$。
+4. 由 $\underline{f} \le f \le \bar{f}$ 与两者积分相等，得 $f = \bar{f}$ a.e.，于是 $f$ Lebesgue 可积且 $\int_{[a, b]} f\,dm = \int_a^b f$。
+
+反之：Dirichlet 函数 Lebesgue 可积（积分为 $0$）而 Riemann 不可积（见「哪些函数可积」），故不反向成立。∎
+
+> 第 1 步里「两个积分对简单函数一致」是可以直接验算的：简单函数的 Lebesgue 积分就是 $\sum c_j m(E_j)$，而 $E_j$ 是有限个区间之并、$m(E_j)$ 就是长度之和 —— 与 Riemann 侧逐段求和相同。
+
+#### 定义引用：「级数收敛」→ 绝对收敛　`dep.series-absolute`
+
+绝对收敛是**关于另一个级数**（$\sum |a_n|$）的性质，而那个级数是正项级数 —— 用到的还是级数收敛的定义。
+
+#### 定义引用：「绝对收敛」→ 条件收敛　`dep.absolute-conditional`
+
+条件收敛 = 收敛 **且** 不绝对收敛，所以它的定义必须先有「绝对收敛」这个词。
+
+#### Cauchy 收敛准则 + 级数收敛 ⟹ 级数的 Cauchy 准则　`imp.series-cauchy`
+*实数的 Cauchy 准则 $\implies$ 级数的 Cauchy 准则*
+
+设 $s_N = \sum_{n \le N} a_n$。由定义，$\sum a_n$ 收敛 $\iff$ 数列 $\{s_N\}$ 收敛；而由实数的 Cauchy 收敛准则，$\{s_N\}$ 收敛 $\iff$ $\{s_N\}$ 是 Cauchy 列，即
+
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n > m \ge N :\ |s_n - s_m| < \varepsilon$$
+
+把 $s_n - s_m = \sum_{k=m+1}^{n} a_k$ 代进去即得所证。
+
+**必要条件**：$\sum a_n$ 收敛时 $a_n = s_n - s_{n-1} \to 0$（两个收敛数列之差）。∎
+
+> 这条准则里**唯一**的外来输入是实数的完备性 —— 换句话说，级数收敛的判别本质上是在用 $\mathbb{R}$ 没有洞。
+
+#### 级数收敛 + 单调有界定理 ⟹ 比较判别法　`imp.comparison-test`
+*非负项级数 + 单调有界 $\implies$ 比较判别法*
+
+设 $0 \le a_n \le b_n$ 对 $n \ge N_0$ 成立。记 $A_N := \sum_{n \le N} a_n$、$B_N := \sum_{n \le N} b_n$，两者都（最终）单调递增。
+
+1. 若 $\sum b_n$ 收敛，则 $\{B_N\}$ 有界；由 $A_N \le B_N + \text{const}$（前 $N_0$ 项之差），$\{A_N\}$ 也有界。
+2. 单调有界 $\implies$ $\{A_N\}$ 收敛，即 $\sum a_n$ 收敛。
+3. 第二条是第一条的逆否命题。
+
+**极限形式**：设 $a_n / b_n \to L \in (0, +\infty)$，则存在 $N_0$ 使 $n \ge N_0$ 时 $\frac{L}{2} b_n \le a_n \le 2L\, b_n$ —— 两边比较即得同敛散性。$L = 0$ 时只有右半边不等式，故只单向成立。∎
+
+> 比较判别法对「非负」的依赖是本质的：$b_n$ 收敛给出 $\{B_N\}$ 有界，而 $\{A_N\}$ 有界只有在它单调（即 $a_n \ge 0$）时才等价于收敛。
+
+#### 比较判别法 ⟹ Kummer 判别法　`imp.kummer`
+*比较判别法 $\implies$ Kummer 判别法*
+
+记 $K_n := c_n \frac{a_n}{a_{n+1}} - c_{n+1}$。
+
+**收敛支**：设 $n \ge N_0$ 时 $K_n \ge \delta > 0$。把它写成
+
+$$c_n a_n - c_{n+1} a_{n+1} \ge \delta\, a_{n+1}$$
+
+对 $n = N_0, \ldots, M-1$ 求和，左端**裂项**：$c_{N_0} a_{N_0} - c_M a_M \ge \delta \sum_{n = N_0}^{M-1} a_{n+1}$。左端 $\le c_{N_0} a_{N_0}$（因为 $c_M a_M > 0$），故
+
+$$\sum_{n = N_0}^{M-1} a_{n+1} \le \frac{c_{N_0} a_{N_0}}{\delta}$$
+
+对一切 $M$ 成立 —— 部分和有界，由比较判别法（或直接由单调有界）收敛。
+
+**发散支**：设 $\sum 1/c_n$ 发散且 $n \ge N_0$ 时 $K_n \le 0$，即 $c_n a_n \le c_{n+1} a_{n+1}$。于是 $\{c_n a_n\}$ 递增，特别地 $c_n a_n \ge c_{N_0} a_{N_0} =: \gamma > 0$，从而
+
+$$a_n \ge \frac{\gamma}{c_n}$$
+
+由 $\sum 1/c_n$ 发散与比较判别法，$\sum a_n$ 发散。∎
+
+> **裂项**是这一族判别法的共同机制：$K_n$ 的设计就是要让 $c_n a_n - c_{n+1}a_{n+1}$ 塌缩成一个望远镜和。（把 $c_n$ 取成 $1, n, n\ln n$ 就分别得到 d'Alembert、Raabe、Bertrand。）
+
+#### 比较判别法 ⟹ 根值判别法　`imp.root-test`
+*与几何级数比较 $\implies$ 根值判别法*
+
+**$\alpha < 1$**：取 $q$ 使 $\alpha < q < 1$。由 $\limsup \sqrt[n]{a_n} = \alpha < q$，存在 $N$ 使 $n \ge N$ 时 $\sqrt[n]{a_n} < q$，即 $a_n < q^{n}$。几何级数 $\sum q^{n}$ 收敛，由比较判别法 $\sum a_n$ 收敛。
+
+**$\alpha > 1$**：此时 $\sqrt[n]{a_n} > 1$ 对无穷多个 $n$ 成立（否则 $\limsup \le 1$），即 $a_n > 1$ 对无穷多个 $n$ 成立。于是 $a_n \not\to 0$，由级数的必要条件（Cauchy 准则）发散。
+
+**$\alpha = 1$**：$a_n = 1/n$（发散）与 $a_n = 1/n^{2}$（收敛）都满足 $\limsup \sqrt[n]{a_n} = 1$，故无结论。
+
+**与比值判别法的比较**：若 $a_{n+1}/a_n \to L$，则 $\sqrt[n]{a_n} \to L$（取对数后用 Cesàro 平均），故比值能判的根值也能判；反之（$a_n = 2^{-n+(-1)^{n}}$）不成立。∎
+
+> $\alpha > 1$ 那一支其实不需要比较判别法 —— 它只用到「通项必须趋于零」这个必要条件。
+
+#### 比较判别法 + 反常积分 ⟹ 积分判别法　`imp.integral-test`
+*单调性 + 反常积分 $\implies$ 积分判别法*
+
+设 $f \ge 0$ 递减。对每个 $n \ge 1$ 与 $x \in [n, n+1]$ 有 $f(n+1) \le f(x) \le f(n)$，逐段积分得
+
+$$f(n+1) \le \int_{n}^{n+1} f \le f(n)$$
+
+对 $n = 1, \ldots, N$ 求和（裂项式的夹逼）：
+
+$$\int_1^{N+1} f \le \sum_{n=1}^{N} f(n) \le f(1) + \int_1^{N} f$$
+
+1. 若 $\int_1^{+\infty} f$ 收敛，则右端的不等式给出部分和 $\sum_{n \le N} f(n)$ 有界，由比较判别法（非负项）级数收敛。
+2. 若 $\int_1^{+\infty} f$ 发散，则左端的不等式给出部分和数列无界，级数发散。∎
+
+> 左、右两个不等式是同一个单调性的两次使用：一段上 $f$ 的最大值在左端点、最小值在右端点。
+
+#### 比较判别法 ⟹ Cauchy 凝聚判别法　`imp.cauchy-condensation`
+*按 $2^{k}$ 分组 + 比较 $\implies$ 凝聚判别法*
+
+设 $a_n \ge 0$ 递减。对每个 $k \ge 0$，下标落在 $[2^{k}, 2^{k+1})$ 里的项共 $2^{k}$ 个，且都在 $a_{2^{k+1}}$ 与 $a_{2^{k}}$ 之间。于是
+
+$$2^{k}\, a_{2^{k+1}} \le \sum_{n = 2^{k}}^{2^{k+1}-1} a_n \le 2^{k}\, a_{2^{k}}$$
+
+对 $k = 0, \ldots, K-1$ 求和：
+
+$$\frac{1}{2}\sum_{k=1}^{K} 2^{k} a_{2^{k}} \le \sum_{n=1}^{2^{K}-1} a_n \le \sum_{k=0}^{K-1} 2^{k} a_{2^{k}}$$
+
+（左端用了 $\sum_k 2^{k} a_{2^{k+1}} = \frac{1}{2}\sum_{j} 2^{j} a_{2^{j}}$ 的重编号。）两个不等式把「原级数的部分和」与「凝聚级数的部分和」互相压住，由比较判别法两者同敛散。∎
+
+> 「$\frac{1}{2}$ 因子」说明为什么两边的常数不重要 —— 有界性只关心有没有界，不关心界是多少。
+
+#### 级数的 Cauchy 准则 ⟹ Abel–Dirichlet 判别法　`imp.abel-dirichlet`
+*Cauchy 准则 + 分部求和 $\implies$ Abel–Dirichlet 判别法*
+
+记 $A_n := \sum_{k \le n} a_k$，$A_{-1} := 0$，并设 $|A_n| \le M$ 对一切 $n$ 成立。
+
+**分部求和（Abel 求和）**：对 $m < n$，
+
+$$\sum_{k=m+1}^{n} a_k b_k = \sum_{k=m+1}^{n} (A_k - A_{k-1}) b_k = A_n b_n - A_m b_{m+1} - \sum_{k=m+1}^{n-1} A_k (b_{k+1} - b_k)$$
+
+（把 $A_k b_k - A_{k-1} b_k$ 重排并与下一项合并。）
+
+**Dirichlet 支**：$b_n \downarrow 0$ 单调时 $b_{k+1} - b_k \le 0$，于是右边三项的绝对值分别被下式控制：
+
+$$|A_n b_n| + |A_m b_{m+1}| + \sum_{k=m+1}^{n-1} |A_k|\,|b_{k+1} - b_k| \le M\Bigl( |b_n| + |b_{m+1}| + \sum_{k=m+1}^{n-1} (b_k - b_{k+1}) \Bigr) \le M\bigl( b_n + b_{m+1} + b_{m+1} - b_n \bigr) \le 4M\, b_{m+1}$$
+
+最后一步用了**望远镜和** $\sum_{k=m+1}^{n-1}(b_k - b_{k+1}) = b_{m+1} - b_n$。由 $b \to 0$，给定 $\varepsilon > 0$ 取 $m$ 足够大便可使尾巴 $< \varepsilon$；由级数的 Cauchy 准则，$\sum a_n b_n$ 收敛。
+
+**Abel 支**：$b_n$ 单调有界时令 $b := \lim b_n$，则 $\{b_n - b\}$ 单调趋于 $0$，对 $\sum a_n (b_n - b)$ 用 Dirichlet 支；又 $\sum a_n b$ 收敛，两者相加即得。∎
+
+> 分部求和是这一族判别法的引擎 —— 它把「$\sum a_n b_n$ 的尾巴」换成了「$A_k$ 与 $b$ 的增量」，于是**部分和有界**（$A$）与**单调趋于零**（$b$）各自发挥一次作用。Leibniz 判别法取 $a_n = (-1)^{n}$ 即得。
+
+#### 级数的 Cauchy 准则 ⟹ 绝对收敛 ⟹ 收敛　`imp.absolute-implies`
+*级数的 Cauchy 准则 $\implies$ 绝对收敛蕴含收敛*
+
+设 $\sum |a_n|$ 收敛。由级数的 Cauchy 准则，给定 $\varepsilon > 0$ 存在 $N$ 使 $n > m \ge N$ 时 $\sum_{k=m+1}^{n} |a_k| < \varepsilon$。由三角不等式
+
+$$\Bigl| \sum_{k=m+1}^{n} a_k \Bigr| \le \sum_{k=m+1}^{n} |a_k| < \varepsilon$$
+
+再一次用 Cauchy 准则，$\sum a_n$ 收敛。
+
+关于和的不等式：对每个 $N$ 有 $|\sum_{n \le N} a_n| \le \sum_{n \le N} |a_n|$，两边令 $N \to \infty$ 并注意绝对值函数连续即得。∎
+
+> 证明里**没有任何关于正负的假设** —— 这也是为什么它能同时对实级数和复级数成立。
+
+#### 绝对收敛 + 绝对收敛 ⟹ 收敛 ⟹ 重排不变性　`imp.rearrangement`
+*绝对收敛 $\implies$ 重排不变*
+
+**先设 $a_n \ge 0$。** 记 $S := \sum a_n \in [0, +\infty]$。任取双射 $\sigma$。
+
+1. 对每个 $N$，$\sum_{n \le N} a_{\sigma(n)} \le S$（有限个项是原级数的一个有限部分）。取上确界得 $\sum_n a_{\sigma(n)} \le S$。
+2. 反过来把 $\sigma^{-1}$ 代进去（同一条推理用在 $\sigma^{-1}$ 上，把 $\sum a_n$ 看成 $\sum a_{\sigma(n)}$ 的重排）得 $S \le \sum_n a_{\sigma(n)}$。
+3. 故两者相等（有限或同时为 $+\infty$）；特别地 $\sum a_n < \infty$ 时重排也收敛且和相同。
+
+**一般情形。** 写 $a_n = a_n^{+} - a_n^{-}$，其中 $a^{\pm} := \frac{|a_n| \pm a_n}{2} \ge 0$。由 $0 \le a_n^{\pm} \le |a_n|$，两个非负级数都收敛；对它们各用上面的结论，再相减：
+
+$$\sum_n a_{\sigma(n)} = \sum_n a_{\sigma(n)}^{+} - \sum_n a_{\sigma(n)}^{-} = \sum_n a_n^{+} - \sum_n a_n^{-} = \sum_n a_n$$
+
+绝对收敛性同理（$\sum |a_{\sigma(n)}| = \sum |a_n| < \infty$，来自非负情形）。∎
+
+> 第 2 步「对 $\sigma^{-1}$ 再用一次」是关键技巧：非负级数的和定义为上确界，而「有限部分」这个说法对两个方向都成立。
+
+#### 条件收敛 ⟹ Riemann 重排定理　`imp.riemann-rearrangement`
+*条件收敛 $\implies$ 重排可以任意指定和*
+
+设 $\sum a_n$ 条件收敛。记 $p_n := a_n^{+}$、$q_n := a_n^{-}$（正部与负部），则 $\sum a_n = \sum p_n - \sum q_n$ 收敛。
+
+1. **两个非负级数都发散**：若 $\sum p_n$ 与 $\sum q_n$ 都收敛，则 $\sum |a_n| = \sum p_n + \sum q_n$ 收敛，与条件收敛矛盾；若只有一个收敛，则另一个必须也收敛（因为 $\sum a_n$ 收敛），同样矛盾。故 $\sum p_n = \sum q_n = +\infty$。
+2. **构造重排**：给定实数 $s$，先把正项按原顺序取出、逐项加到部分和上，直到部分和 $> s$ 为止（可以做到，因为正项之和发散）；再把负项逐项取来，直到部分和 $< s$（同样可以做到）。如此反复。
+3. **收敛到 $s$**：每次「越界」的那一步所加的项，其绝对值不超过「跨过 $s$ 之前与 $s$ 的距离」，而由于 $a_n \to 0$，越界的幅度随步骤趋于零（可以先用 $a_n \to 0$ 挑选出「每个正项、负项的绝对值都 $< \varepsilon$」的尾部来开工）。于是构造出的部分和与 $s$ 的距离趋于零。
+4. 若想收敛到 $+\infty$：只加正项（每次都加到超过当前高度再加一点）；想不收敛：把正负两堆交替使用但间隔越拉越大。∎
+
+> 第 1 步是全部的关键：**条件收敛 = 正部与负部各自发散、但两者之差收敛**。这条证明也是「$a_n \to 0$ 是必要条件」最有价值的一次使用。
+
+#### 绝对收敛 + 重排不变性 ⟹ Cauchy 乘积　`imp.series-product`
+*重排不变 + 二重和 $\implies$ Cauchy 乘积公式*
+
+设 $A := \sum a_n$、$B := \sum b_n$ 都绝对收敛，记 $A_N := \sum_{n \le N} a_n$、$B_N := \sum_{n \le N} b_n$。
+
+1. **对角线与方形的关系**：$A_N B_N = \sum_{m, n \le N} a_m b_n$ 是二重和的一个「方形」部分和。
+2. **绝对收敛性**：$\sum_{m, n} |a_m b_n| = \bigl( \sum_m |a_m| \bigr)\bigl( \sum_n |b_n| \bigr) < \infty$（二重非负和按任一方式展布都相等），故二重绝对收敛，任一重排都不改变和，且和 $= AB$。
+3. **按对角线重排**：把 $\sum_{m, n} a_m b_n$ 按 $m + n$ 分组，第 $n$ 组之和正是 $c_n = \sum_{k \le n} a_k b_{n-k}$。由第 2 步的重排不变性，$\sum c_n = AB$。
+4. **$\sum c_n$ 绝对收敛**：同理对 $\sum_{m,n} |a_m b_n|$ 按对角线分组，得 $\sum |c_n| \le \sum_{m,n}|a_m b_n| < \infty$。
+
+**反例（不绝对收敛时失败）**：取 $a_n = b_n = \frac{(-1)^{n}}{\sqrt{n+1}}$，两个级数由 Abel–Dirichlet 收敛，但 $c_n = (-1)^{n}\sum_{k \le n} \frac{1}{\sqrt{(k+1)(n-k+1)}}$ 的绝对值 $\ge \frac{2(n+1)}{n+2} \to 2$，故 $c_n \not\to 0$，乘积级数发散。∎
+
+> 第 2 步把「一维绝对收敛」升级成「二重绝对收敛」，这一步是全部技术的来源：二重和可以按任何顺序累加 —— 包括按对角线。
+
+#### 定义引用：「数列极限」→ 逐点收敛　`dep.seqlimit-pointwise`
+
+逐点收敛就是「对每个固定的 $x$，数列 $f_n(x)$ 按原来的定义收敛」—— 把数列极限逐点地用一遍。
+
+#### 定义引用：「逐点收敛」→ 一致收敛　`dep.pointwise-uniform`
+
+两个定义用的是同一套 $\varepsilon$-$N$ 语言，差别只在 $\exists N$ 与 $\forall x$ 的先后顺序。
+
+#### 定义引用：「一致收敛」→ 一致 Cauchy 列　`dep.uniform-uniformcauchy`
+
+一致 Cauchy 是把一致收敛的定义里「与 $f$ 比较」换成「$f_m$ 与 $f_n$ 互相比较」，量词形状不变。
+
+#### 定义引用：「级数收敛」→ 幂级数　`dep.series-powerseries`
+
+幂级数就是系数为 $a_n (x - x_0)^{n}$ 的函数项级数；固定 $x$ 之后它就是一个数项级数。
+
+#### 定义引用：「幂级数」→ 指数函数　`dep.powerseries-exp`
+
+$\exp$ 的级数 $\sum z^{n}/n!$ 就是一个收敛半径为 $+\infty$ 的幂级数。
+
+#### 定义引用：「幂级数」→ 正弦与余弦　`dep.powerseries-trig`
+
+$\cos$ 与 $\sin$ 同样由幂级数定义，只保留偶次项 / 奇次项。
+
+#### 定义引用：「指数函数」→ 对数函数与 e　`dep.exp-log`
+
+$\log$ 定义为 $\exp$（限制在 $\mathbb{R}$ 上）的反函数，所以它的存在性来自 $\exp$ 的单调性。
+
+#### 定义引用：「正弦与余弦」→ 圆周率 π　`dep.trig-pi`
+
+$\pi$ 用 $\cos$ 的最小正零点定义 —— 没有 $\cos$ 的幂级数，这个定义写不出来。
+
+#### 一致收敛 + 连续 ⟹ 一致收敛保连续　`imp.uniform-limit-continuous`
+*一致收敛 + 连续 $\implies$ 极限连续*
+
+设 $x_0 \in X$，给定 $\varepsilon > 0$。
+
+1. 由一致收敛，存在 $n$，使**对一切 $x$** 有 $|f_n(x) - f(x)| < \varepsilon / 3$。
+2. 由 $f_n$ 在 $x_0$ 连续，存在 $\delta > 0$，使 $d(x, x_0) < \delta$ 时 $|f_n(x) - f_n(x_0)| < \varepsilon / 3$。
+3. 对这样的 $x$，三角不等式给出
+
+$$|f(x) - f(x_0)| \le |f(x) - f_n(x)| + |f_n(x) - f_n(x_0)| + |f_n(x_0) - f(x_0)| < \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon$$
+
+故 $f$ 在 $x_0$ 连续。由 $x_0$ 任意，$f$ 连续。∎
+
+> 第 1 步之所以能用一个 $n$ 同时管住 $x$ 与 $x_0$，正是**一致**收敛的全部内容 —— 换成逐点收敛，第 1 步会给出两个不同的 $n$，证明立刻断裂。
+
+#### 一致收敛 + 积分的保序与估计 ⟹ 积分与极限交换　`imp.uniform-limit-integral`
+*一致收敛 + 积分的绝对值估计 $\implies$ 极限与积分交换*
+
+记 $\varepsilon_n := \sup_{x \in [a, b]} |f_n(x) - f(x)|$。
+
+1. **可积性**：$f = f_n + (f - f_n)$，其中 $f_n$ 可积、而 $f - f_n$ 被常数 $\varepsilon_n$ 控制；用振幅判据，$\omega(f - f_n) \le 2\varepsilon_n$ 逐段成立，故 $f - f_n$ 可积，从而 $f$ 可积。（也可以直接对 $f$ 用振幅判据与 $f_n$ 的振幅比较。）
+2. **估计**：由积分的绝对值不等式与基本估计，
+
+$$\Bigl| \int_a^b f_n - \int_a^b f \Bigr| = \Bigl| \int_a^b (f_n - f) \Bigr| \le \int_a^b |f_n - f| \le (b - a)\,\varepsilon_n$$
+3. 由一致收敛 $\varepsilon_n \to 0$，右端趋于零，故极限与积分可交换。∎
+
+> 整个证明里**没有一次**提到具体是哪个 $x$ —— 误差被一个与 $x$ 无关的常数 $\varepsilon_n$ 统一控制，这就是一致收敛的力量。
+
+#### 一致收敛 + Lagrange 中值定理 + 一致收敛保连续 ⟹ 导数与极限交换　`imp.uniform-limit-derivative`
+*中值定理 + 一致收敛 $\implies$ 导数与极限可交换*
+
+设 $f_n' \rightrightarrows g$ 且 $f_n(x_0)$ 收敛。
+
+1. **$\{f_n\}$ 一致收敛**：对 $x \in [a, b]$，由中值定理存在 $\xi$ 介于 $x$ 与 $x_0$ 之间使 $f_n(x) - f_n(x_0) = f_n'(\xi)(x - x_0)$，于是
+
+$$|f_m(x) - f_n(x)| \le |f_m(x_0) - f_n(x_0)| + |x - x_0| \cdot \sup_{t}|f_m'(t) - f_n'(t)| \le |f_m(x_0) - f_n(x_0)| + (b - a)\|f_m' - f_n'\|_{\infty}$$
+
+右端与 $x$ 无关且（由 $f_n(x_0)$ 收敛与 $f_n'$ 一致 Cauchy）可以任意小，故 $\{f_n\}$ 一致 Cauchy，因而一致收敛到某个 $f$；再由上一条 $f$ 连续。
+
+2. **求导**：固定 $x$，对 $h \ne 0$ 定义 $\varphi_n(h) := \frac{f_n(x + h) - f_n(x)}{h}$。由中值定理 $\varphi_n(h) = f_n'(\xi_n)$ 对某个 $\xi_n$；又对 $n \to \infty$，$\varphi_n(h) \to \frac{f(x+h) - f(x)}{h} =: \varphi(h)$。
+
+3. 在 $n \to \infty$ **之后**再令 $h \to 0$：$\varphi(h) = \lim_n \varphi_n(h) = \lim_n f_n'(\xi_n(h))$，而 $f_n' \rightrightarrows g$ 给出 $\varphi(h) \to g(x)$。两个极限交换的合法性来自 $f_n'$ 的一致收敛（同第 1 步的估计）。故 $f'(x) = g(x)$。∎
+
+> 第 1 步是关键的准备：**假设 $f_n'$ 一致收敛，就能白送 $f_n$ 的一致收敛**。这也说明了为什么这条定理比积分那条「贵」—— 需要额外的一个收敛点 $x_0$ 来定住那个自由常数。
+
+#### 比较判别法 + 一致 Cauchy 列 ⟹ Weierstrass 判别法　`imp.weierstrass-m-test`
+*比较判别法 + 一致 Cauchy $\implies$ Weierstrass 判别法*
+
+设 $|f_n(x)| \le M_n$、$\sum M_n$ 收敛。记部分和 $S_N(x) := \sum_{n \le N} f_n(x)$。
+
+对 $N' > N$，
+
+$$|S_{N'}(x) - S_N(x)| \le \sum_{n = N+1}^{N'} |f_n(x)| \le \sum_{n = N+1}^{N'} M_n$$
+
+右端与 $x$ 无关，而 $\sum M_n$ 收敛（由数项级数的 Cauchy 准则）使它可以任意小 —— 所以 $\{S_N\}$ 是**一致 Cauchy 列**，因而一致收敛。绝对收敛同理（$\sum |f_n(x)| \le \sum M_n$）。∎
+
+> 证明的要害是「右端与 $x$ 无关」这一步：把 $x$ 从估计里彻底消掉，就得到了一致性。
+
+#### 一致收敛 + 连续 + 紧 ⟹ Dini 定理　`imp.dini`
+*紧性 + 单调 + 连续性 $\implies$ Dini 定理*
+
+以 $f_n \uparrow f$ 为例（$f_n \downarrow f$ 时对 $-f_n$ 用同样的论证）。给定 $\varepsilon > 0$。
+
+1. 对每个 $x \in X$，由逐点单调收敛存在 $n_x$ 使 $0 \le f(x) - f_{n_x}(x) < \varepsilon$（这里用到了「$f_n(x)$ 单调递增地收敛到 $f(x)$」）。
+2. 由 $f$ 与 $f_{n_x}$ 都连续，存在 $x$ 的邻域 $U_x$ 使 $y \in U_x$ 时 $|f(y) - f(x)| < \varepsilon$ 且 $|f_{n_x}(y) - f_{n_x}(x)| < \varepsilon$。合并：$y \in U_x$ 时 $f(y) - f_{n_x}(y) < 3\varepsilon$。
+3. $\{U_x\}_{x \in X}$ 是紧空间 $X$ 的开覆盖，取出有限子覆盖 $U_{x_1}, \ldots, U_{x_k}$，令 $N := \max\{n_{x_1}, \ldots, n_{x_k}\}$。
+4. 对任意 $y \in X$，$y$ 落在某个 $U_{x_j}$ 里；由**单调性** $n \ge N \ge n_{x_j}$ 时 $f_{n}(y) \ge f_{n_{x_j}}(y)$，于是 $f(y) - f_n(y) \le f(y) - f_{n_{x_j}}(y) < 3\varepsilon$。
+
+故 $\sup_y |f(y) - f_n(y)| \le 3\varepsilon$ 对一切 $n \ge N$ 成立，即 $f_n \rightrightarrows f$。∎
+
+> 第 4 步是**单调性唯一**出场的地方：它把「$n = n_{x_j}$ 时误差小」升级成「一切 $n \ge N$ 时误差小」。没有单调性，有限覆盖给出的只是一列互不相干的点。
+
+#### 根值判别法 + 幂级数 ⟹ 收敛半径　`imp.convergence-radius`
+*根值判别法 $\implies$ Cauchy–Hadamard 公式*
+
+记 $b_n(x) := a_n (x - x_0)^{n}$，则 $\sqrt[n]{|b_n(x)|} = |x - x_0| \cdot \sqrt[n]{|a_n|}$。
+
+1. 由 $\limsup$ 的乘法性质，
+
+$$\limsup_{n} \sqrt[n]{|b_n(x)|} = |x - x_0| \cdot \limsup_{n} \sqrt[n]{|a_n|} = \frac{|x - x_0|}{R}$$
+
+（约定 $R = +\infty$ 时右端为 $0$、$R = 0$ 时为 $+\infty$。）
+2. 由**根值判别法**：上式 $< 1$ 即 $|x - x_0| < R$ 时绝对收敛；$> 1$ 即 $|x - x_0| > R$ 时发散。
+3. $|x - x_0| = R$ 时上式恰为 $1$，根值判别法在此**没有结论**。∎
+
+> 注意用 $\limsup$ 而非 $\lim$ 的必要性：根值判别法本身就是用 $\limsup$ 陈述的，所以这条公式才对所有幂级数（包括那些系数没有极限的）都成立。
+
+#### 导数与极限交换 + Weierstrass 判别法 + 收敛半径 ⟹ 幂级数的逐项运算　`imp.power-series-analytic`
+*M-判别法 + 导数交换 $\implies$ 幂级数可逐项求导*
+
+设 $r < R$，取 $r < \rho < R$。
+
+1. **在 $[x_0 - r, x_0 + r]$ 上一致收敛**：$|a_n (x - x_0)^{n}| \le |a_n| \rho^{n}$，而 $\sum |a_n| \rho^{n}$ 收敛（因为 $\rho < R$），由 Weierstrass 判别法一致收敛。再由「一致收敛保连续」，$f$ 在每个这样的区间上连续，从而在 $|x - x_0| < R$ 内连续。
+2. **逐项求导后的级数**：$\sum n a_n (x - x_0)^{n-1}$ 的收敛半径是
+
+$$\frac{1}{\limsup \sqrt[n]{n|a_n|}} = \frac{1}{\limsup \sqrt[n]{|a_n|}} = R$$
+
+（因为 $\sqrt[n]{n} \to 1$。）于是它在 $[x_0 - r, x_0 + r]$ 上也一致收敛（同样用 M-判别法）。
+3. **交换求导与极限**：对部分和 $S_N$（多项式）用「导数与极限可交换」：$S_N' \rightrightarrows$ 逐项求导级数，且 $S_N(x_0) = a_0$ 收敛，故 $f$ 可导且 $f' = \sum n a_n (x - x_0)^{n-1}$。
+4. 逐项积分的结论对 $f$ 的部分和用「极限与积分可交换」同理。∎
+
+> 第 2 步是整条定理的关键：**求导不改变收敛半径**。若半径会缩，反复求导就会把收敛域吃光，$C^{\infty}$ 的结论也就无从谈起。
+
+#### 幂级数 + Abel–Dirichlet 判别法 ⟹ Abel 第二定理　`imp.abel-endpoint`
+*Abel–Dirichlet 判别法 $\implies$ Abel 第二定理*
+
+设 $R = 1$、$\sum a_n$ 收敛，要证 $\lim_{x \to 1^{-}} f(x) = \sum a_n$。记 $s := \sum_{n} a_n$、$s_N := \sum_{n \le N} a_n$。
+
+1. **分部求和（Abel 求和）**：对 $0 \le x < 1$，
+
+$$f(x) = \sum_{n=0}^{\infty} a_n x^{n} = (1 - x)\sum_{n=0}^{\infty} s_n x^{n}$$
+
+（证明：把 $a_n = s_n - s_{n-1}$ 代入，交换求和次序，得到 $(1-x)\sum s_n x^n$。）
+2. 由 $\sum a_n = s$ 收敛，$\{s_n\}$ 有界，且 $s_n \to s$。把上式改写成
+
+$$f(x) - s = (1 - x)\sum_{n=0}^{\infty} (s_n - s)\, x^{n}$$
+3. 给定 $\varepsilon > 0$，取 $N$ 使 $n \ge N$ 时 $|s_n - s| < \varepsilon / 2$。把和拆成前 $N$ 项与尾部：前 $N$ 项乘上 $(1 - x)$ 当 $x \to 1^{-}$ 时趋于零；尾部被 $(1-x)\sum_{n \ge N} \varepsilon/2 \cdot x^{n} \le \varepsilon/2$ 控制。
+4. 合并：$\limsup_{x \to 1^{-}} |f(x) - s| \le \varepsilon/2 < \varepsilon$，故极限为 $s$。∎
+
+（这里第 1 步的求和是 Abel 求和法的核心 —— 它与 Abel–Dirichlet 判别法同源：都是把一个级数换成它的部分和的加权平均。）
+
+> 「$(1-x)\sum s_n x^{n}$」这个改写把 $\{s_n\}$ 的**收敛性**变成了权重 $(1-x)x^{n}$ 的**平均** —— 权重之和恰为 $1$，所以极限读起来就是「$s_n$ 的加权平均趋于 $s$」。
+
+#### 指数函数 + 正弦与余弦 ⟹ Euler 公式　`imp.euler-formula`
+*级数的奇偶拆分 $\implies$ Euler 公式*
+
+把 $\exp(i\theta)$ 的级数按 $n$ 的奇偶拆开：
+
+$$\exp(i\theta) = \sum_{n=0}^{\infty} \frac{(i\theta)^{n}}{n!} = \sum_{k=0}^{\infty} \frac{(i\theta)^{2k}}{(2k)!} + \sum_{k=0}^{\infty} \frac{(i\theta)^{2k+1}}{(2k+1)!}$$
+
+用 $i^{2k} = (-1)^{k}$、$i^{2k+1} = (-1)^{k} i$：
+
+$$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k+1}}{(2k+1)!} = \cos\theta + i\sin\theta$$
+
+（拆分与重排的合法性来自绝对收敛。）取 $\theta = \pi$：由 $\cos\pi = -1$、$\sin\pi = 0$ 得 $e^{i\pi} = -1$。∎
+
+> 整条证明只有「拆奇数项与偶数项」这一个动作 —— 但这一步把指数函数与三角函数之间的关系揭示成**一个恒等式**，而不是两个巧合。
+
 ### 弱边（类比 / 思想相通）
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
@@ -22638,8 +24108,14 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **凝聚态上同调 ↔ 复形与导出三角**　11 条节点级连线
 - **凝聚态上同调 ↔ 过滤与谱序列**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧 Hausdorff 空间**　2 条节点级连线
-- **实数完备性的等价刻画 ↔ 实数与极限**　3 条节点级连线
+- **实数完备性的等价刻画 ↔ 实数与极限**　5 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线
 - **连续与紧性 ↔ 实数与极限**　3 条节点级连线
 - **实数完备性的等价刻画 ↔ 连续与紧性**　5 条节点级连线
 - **微分中值定理与 Taylor ↔ 实数与极限**　4 条节点级连线
+- **实数与极限 ↔ Riemann 积分**　2 条节点级连线
+- **连续与紧性 ↔ Riemann 积分**　2 条节点级连线
+- **实数与极限 ↔ 数项级数的敛散性**　3 条节点级连线
+- **实数完备性的等价刻画 ↔ 数项级数的敛散性**　2 条节点级连线
+- **实数与极限 ↔ 函数列、幂级数与初等函数**　4 条节点级连线
+- **数项级数的敛散性 ↔ 函数列、幂级数与初等函数**　3 条节点级连线

@@ -8,3 +8,6 @@
 - 被 [`def.uniform-continuity`](../nodes/def.uniform-continuity.md) 一致连续 用
 - 被 [`prop.discontinuity-types`](../nodes/prop.discontinuity-types.md) 间断点分类 用
 - ⇒ [`thm.ivt`](../nodes/thm.ivt.md) 介值定理
+- ⇒ [`thm.ftc-riemann-part1`](../nodes/thm.ftc-riemann-part1.md) 变上限积分的导数
+- ⇒ [`thm.uniform-limit-continuous`](../nodes/thm.uniform-limit-continuous.md) 一致收敛保连续
+- ⇒ [`thm.dini`](../nodes/thm.dini.md) Dini 定理

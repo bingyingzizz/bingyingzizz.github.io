@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.continuous-bounded-on-compact`](../nodes/prop.continuous-bounded-on-compact.md) 紧集上连续 ⟹ 有界 用
+- ⇒ [`thm.dini`](../nodes/thm.dini.md) Dini 定理
