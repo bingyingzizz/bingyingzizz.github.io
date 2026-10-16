@@ -1,6 +1,6 @@
 # 不可约多项式　`def.irreducible-poly`
 不可约多项式（Irreducible Polynomial）
-layer 9 · 定义 · 多项式与因式分解 · 抽象代数
+layer 10 · 定义 · 多项式与因式分解 · 抽象代数
 [在星图里打开](../#n=def.irreducible-poly)　·　[节点索引](../index.md)
 
 设 $f \in K[x]$ 是非零、非单位（即 $\deg f \ge 1$）。称 $f$ **可约**，当且仅当存在 $g, h \in K[x]$ 满足

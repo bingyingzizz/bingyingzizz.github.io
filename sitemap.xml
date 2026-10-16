@@ -158,6 +158,42 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.fundamental-algebra.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.irreducible-poly.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.poly-ufd.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.invariant-subspace.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.eigenvalue.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.char-poly.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.trace.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.similarity.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cayley-hamilton.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.diagonalizable.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.minimal-poly.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.minimal-poly-divisor.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.primary-decomposition.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.jordan-canonical-form.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.jordan-uniqueness.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.inner-product.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.induced-norm.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cauchy-schwarz.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orthogonality.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orthogonal-complement.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.gram-schmidt.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orthogonal-projection.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.projection-formula.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.operator-adjoint.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.isometry.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-operator.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.spectral-theorem.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.spectral-normal.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quadratic-form.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.sylvester-criterion.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.svd.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.bilinear-form.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tensor-product-vs.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.tensor-universal-property.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.tensor-hom-adjunction.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.exterior-power.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.exterior-algebra.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.symmetric-algebra.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.det-as-exterior.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.convergence-modes.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.convergence-counterexamples.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cauchy-in-measure.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>

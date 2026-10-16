@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.det-laplace`](../nodes/prop.det-laplace.md) Laplace 展开
 - ⇒ [`thm.cramer`](../nodes/thm.cramer.md) Cramer 法则
+- 被 [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式 用

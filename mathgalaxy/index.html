@@ -8298,6 +8298,30 @@ MG.clusters = [
     desc: '造出线性代数的地基：线性无关 / 张成 → 基 → 维数（任意两组基等势）。$\\operatorname{span} S = \\bigcap \\{W \\supseteq S\\}$ 这个「取一切之交」的模板与 $\\sigma$-代数的生成是同一招。'
   },
   {
+    id: 'algebra.spectral',
+    name: '特征值与 Jordan 型',
+    en: 'Eigenvalues and Jordan Form',
+    parent: 'algebra',
+    hub: 'thm.jordan-canonical-form',
+    desc: '造出「一个算子在换基下长什么样」的完整答案：特征值与特征多项式 → Cayley–Hamilton → 极小多项式 → **可对角化判据** → 根子空间分解 → **Jordan 标准形**（代数闭域上相似分类的最终形态）。多项式环 $K[x]$ 那套语言（唯一分解整环）在这里第三次出场。'
+  },
+  {
+    id: 'algebra.inner',
+    name: '内积空间与正交性',
+    en: 'Inner Product Spaces and Orthogonality',
+    parent: 'algebra',
+    hub: 'thm.spectral-theorem',
+    desc: '在向量空间上加一把「尺子」：内积 → 诱导范数与距离 → Cauchy–Schwarz → 正交与正交补 → **Gram–Schmidt** 与正交投影 → 伴随算子 → **谱定理**（实对称 / 复正规可正交对角化）→ 二次型与 Sylvester 判据 → 奇异值分解。'
+  },
+  {
+    id: 'algebra.multilinear',
+    name: '多重线性与张量',
+    en: 'Multilinear Algebra and Tensors',
+    parent: 'algebra',
+    hub: 'def.exterior-algebra',
+    desc: '造出「把双线性型变成线性映射」的机器：双线性型 → **张量积的万有性质** → 张量 ⊣ 内 Hom（伴随）→ 外幂与外代数 → 对称代数 → **行列式 = 最高外幂上的作用**（把行列式的来源统一到外代数）。'
+  },
+  {
     id: 'algebra.matrix',
     name: '矩阵与行列式',
     en: 'Matrices and Determinants',
@@ -42602,6 +42626,13 @@ window.MG = window.MG || {};
         '而 $\\sum_i C_{ij} b_i$ 恰好是「把 $A$ 的第 $j$ 列换成 $b$」之后按第 $j$ 列做 Laplace 展开的结果，即 $\\det A_j$。故 $x_j = \\det A_j / \\det A$。∎'
       ].join('\n'),
       note: '证明的组织方式值得记住：**Laplace 展开 + 错位展开 = 伴随矩阵**，于是 Cramer 法则不过是「$A^{-1} = \\operatorname{adj}A / \\det A$」写在分量上。'
+    },
+    {
+      id: 'dep.vs-multilinearform',
+      kind: 'definition',
+      definition: 'def.vs',
+      usedBy: 'def.multilinear-form',
+      note: '多重线性型是定义在 $K$-向量空间 $V$ 上的映射 $V^{n} \\to K$，所以要先用向量空间。'
     }
   ]
 });
@@ -42640,11 +42671,11 @@ window.MG = window.MG || {};
         '',
         '（只有有限多项系数非零）；$x$ 叫**未定元**，$a_i$ 叫**系数**。',
         '',
-        '若最高次非零系数是 $a_n \\ne 0$，称 $f$ 的**次数**为 $n$，记 $\\deg f := n$。规定零多项式没有次数（或记 $\\deg 0 := -\\infty$），非零常数多项式的次数为 $0$。$a_n$ 叫**首项系数**；$a_n = 1$ 时称 $f$ 是**首一**的。',
+        '若最高次非零系数是 $a_n \\ne 0$，称 $f$ 的**次数**为 $n$，记 $\\deg f := n$。零多项式不规定次数，非零常数多项式的次数为 $0$。$a_n$ 叫**首项系数**；$a_n = 1$ 时称 $f$ 是**首一**的。',
         '',
         '两个多项式**相等**当且仅当各次系数全相等 —— 「多项式」与「多项式函数」是两件事（见注释）。'
       ].join('\n'),
-      notes: '⚠ **多项式 $\\ne$ 多项式函数**：在 $\\mathbb{F}_2$ 上，$x^{2} + x$ 与 $0$ 作为函数处处相等（$0, 1$ 代进去都得 $0$），但作为多项式不同（系数不同）。本图的「多项式」一律指**形式对象**（系数序列）。\n\n⭐ 去掉「有限项」这个词就得到**形式幂级数** $K[[x]]$ —— 那是另一门学问（生成函数、形式群）。\n\n⭐ 次数是这套理论的「尺子」：带余除法、根的个数、不可约性，全部按次数说话。',
+      notes: '⭐ 约定：零多项式**没有次数** —— 若记 $\\deg 0 := -\\infty$，则 $\\deg(fg) = \\deg f + \\deg g$ 与 $\\deg(f + g) \\le \\max\\{\\deg f, \\deg g\\}$ 对零多项式也说得通，这是最省事的簿记方式。\n\n⚠ **多项式 $\\ne$ 多项式函数**：在 $\\mathbb{F}_2$ 上，$x^{2} + x$ 与 $0$ 作为函数处处相等（$0, 1$ 代进去都得 $0$），但作为多项式不同（系数不同）。本图的「多项式」一律指**形式对象**（系数序列）。\n\n⭐ 去掉「有限项」这个词就得到**形式幂级数** $K[[x]]$ —— 那是另一门学问（生成函数、形式群）。\n\n⭐ 次数是这套理论的「尺子」：带余除法、根的个数、不可约性，全部按次数说话。',
       refs: ['Lang, Algebra, Ch. IV', 'Dummit–Foote, Abstract Algebra, Ch. 9']
     },
     {
@@ -42926,6 +42957,1338 @@ window.MG = window.MG || {};
         '**第四步：唯一性。** 设 $p_1 \\cdots p_r = q_1 \\cdots q_s$（都是不可约元，首一化后）。由 $p_1 \\mid q_1 \\cdots q_s$ 与第二步，存在某个 $j$ 使 $p_1 \\mid q_j$；两者都不可约（从而相伴），约掉后对 $r + s$ 归纳，得 $r = s$ 且分解在顺序与单位之下相同。∎'
       ].join('\n'),
       note: '四步里**只有第二步用了域的特殊性**（本质上是带余除法给出的 Bézout 等式）；其余三步对任何整环都成立。这也是「欧几里得整环 $\\implies$ UFD」这条链的标准证明。'
+    },
+    {
+      id: 'dep.field-polynomial',
+      kind: 'definition',
+      definition: 'def.field',
+      usedBy: 'def.polynomial',
+      note: '多项式定义在系数域 $K$ 上（换成一般交换环也成立，但 $K[x]$ 的除法性质要靠域）。'
+    }
+  ]
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 线性代数 ⑤：特征值与 Jordan 型
+   --------------------------------------------------------------------------
+   新星团 `algebra.spectral`（12 点）。它回答的是**相似分类**问题：
+
+     一个算子在换基下能变成什么样？
+
+     不变子空间 → 特征值与特征向量 → 特征多项式 → Cayley–Hamilton
+       → 极小多项式 → 可对角化？ → 根子空间分解 → **Jordan 标准形**
+
+   ⭐ 这条链的尽头是「代数闭域上，相似类由 Jordan 型完全决定」——
+      它是有限维线性代数里**唯一**一个完整的分类定理。
+   ⚠️ 命名：Jordan 标准形用 `thm.jordan-canonical-form`（⛔ 不能叫 `thm.jordan`，
+      那是测度论的 Jordan 分解）。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数：特征值与 Jordan 型',
+  nodes: [
+
+    {
+      id: 'def.invariant-subspace',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '不变子空间',
+      title: '不变子空间（Invariant Subspace）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱'],
+      statement: [
+        '设 $T : V \\to V$ 线性。子空间 $U \\subseteq V$ 叫 $T$-**不变**的，当且仅当',
+        '',
+        '$$T(U) \\subseteq U$$',
+        '',
+        '即 $u \\in U \\implies T(u) \\in U$。此时 $T$ 限制在 $U$ 上给出一个线性映射 $T|_U : U \\to U$。',
+        '',
+        '$\\{0\\}$ 与 $V$ 永远是 $T$-不变的（**平凡**不变子空间）；$T$ 的核与像也都是 $T$-不变的。'
+      ].join('\n'),
+      notes: '⭐ 「不变」是「可以拆开算」的前提：若 $V = U_1 \\oplus \\cdots \\oplus U_k$ 且每个 $U_i$ 都不变，则 $T$ 在这组分解下是**分块对角**的 —— 于是求特征值、判断可逆、算幂都可以逐块做。\n\n⭐ 整条 Jordan 分解的思路就是「把 $V$ 拆成尽量小（尽量细）的不变子空间之直和」，而拆得最细的那一组就是 Jordan 块。\n\n⚠ 注意 $T$-不变与「$T$ 的像」不同：不变只要求 $T(U) \\subseteq U$，不要求等于。$\\ker T \\subseteq U$ 的那些 $U$ 都自动不变。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6', 'Lang, Linear Algebra']
+    },
+    {
+      id: 'def.eigenvalue',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '特征值与特征向量',
+      title: '特征值与特征向量（Eigenvalue & Eigenvector）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱'],
+      statement: [
+        '设 $T : V \\to V$ 线性，$V \\ne \\{0\\}$。数 $\\lambda \\in K$ 叫 $T$ 的**特征值**，当且仅当存在**非零**向量 $v \\in V$ 使',
+        '',
+        '$$T(v) = \\lambda\\, v$$',
+        '',
+        '这样的 $v$ 叫属于 $\\lambda$ 的**特征向量**。属于 $\\lambda$ 的特征向量加上 $0$ 构成子空间',
+        '',
+        '$$E_{\\lambda} := \\ker(T - \\lambda\\,I) \\subseteq V$$',
+        '',
+        '叫**特征子空间**；$\\dim E_{\\lambda}$ 叫 $\\lambda$ 的**几何重数**。'
+      ].join('\n'),
+      notes: '⭐ 一句话：**特征向量是「$T$ 只把它拉伸、不改变方向」的那些向量**，特征值是拉伸倍数。等价说法：$\\lambda$ 是特征值 $\\iff$ $T - \\lambda I$ **不可逆** $\\iff$ $\\det(\\lambda I - T) = 0$。\n\n⭐ 特征子空间 $E_\\lambda$ 是 $T$-不变的（而且 $T$ 在它上面就是「乘 $\\lambda$」），不同特征值的特征子空间**线性无关**（和是直和）。\n\n⚠ $\\lambda$ 必须在 $K$ 里：实矩阵可能没有实特征值（旋转 $90^\\circ$ 的特征值是 $\\pm i$），此时要扩到 $\\mathbb{C}$（或直接说「在 $K$ 上无特征值」）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
+    },
+    {
+      id: 'def.char-poly',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '特征多项式',
+      title: '特征多项式 $\\chi_T(x) = \\det(x I - T)$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱', '多项式'],
+      statement: [
+        '设 $T : V \\to V$ 线性、$\\dim V = n < \\infty$。任取一组基把 $T$ 写成矩阵 $A$，定义',
+        '',
+        '$$\\chi_T(x) := \\det(x\\,I_n - A) \\in K[x]$$',
+        '',
+        '叫 $T$ 的**特征多项式**。它是一个 $n$ 次首一多项式，且与基的选取无关（换基给出相似的 $A$，而 $\\det(P^{-1}(xI - A)P) = \\det(xI - A)$）。',
+        '',
+        '它的根（在 $K$ 中，或扩域中）恰好是 $T$ 的特征值，重数叫**代数重数**。展开后',
+        '',
+        '$$\\chi_T(x) = x^{n} - (\\operatorname{tr} T)\\,x^{n-1} + \\cdots + (-1)^{n} \\det T$$'
+      ].join('\n'),
+      notes: '⭐ 特征多项式把「特征值」这个**几何**问题变成了「多项式求根」这个**代数**问题 —— 于是代数基本定理保证在 $\\mathbb{C}$ 上永远有 $n$ 个特征值（计重数）。\n\n⭐ 系数与不变量的关系：$x^{n-1}$ 的系数是 $-\\operatorname{tr} T$、常数项是 $(-1)^{n}\\det T$。于是「迹 = 特征值之和」「行列式 = 特征值之积」都成了 Vieta 公式的读法，**不必真的解出特征值**。\n\n⚠ 几何重数 $\\le$ 代数重数；两者不等的例子是 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$（$\\lambda = 1$：代数重数 2、几何重数 1）—— 这正是它不能对角化的原因。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6', 'Lang, Linear Algebra']
+    },
+    {
+      id: 'def.trace',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '迹',
+      title: '迹 $\\operatorname{tr} A$（Trace）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱'],
+      statement: [
+        '对方阵 $A = (a_{ij}) \\in M_n(K)$，定义**迹**为对角线之和：',
+        '',
+        '$$\\operatorname{tr} A := \\sum_{i=1}^{n} a_{ii}$$',
+        '',
+        '基本性质：',
+        '',
+        '- $\\operatorname{tr}(A + B) = \\operatorname{tr} A + \\operatorname{tr} B$，$\\operatorname{tr}(cA) = c\\operatorname{tr} A$（线性）；',
+        '- $\\operatorname{tr}(AB) = \\operatorname{tr}(BA)$，于是 $\\operatorname{tr}(P^{-1}AP) = \\operatorname{tr} A$（**相似不变**）；',
+        '- $\\operatorname{tr}(ABC) = \\operatorname{tr}(BCA)$（**循环不变**）。'
+      ].join('\n'),
+      notes: '⭐ 迹是**最便宜的不变量**：$O(n)$ 就算出来，却已经能区分不少矩阵（比行列式便宜得多）。\n\n⭐ 它的深层含义：$\\operatorname{tr}$ 是矩阵代数的**唯一的（差常数倍）中心线性泛函**，也是「$K^{n}$-代数到 $K$ 的迹型」—— 在 Galois 理论、特征类里都会再遇到。\n\n⚠ 「相似不变」比「循环不变」弱：$\\operatorname{tr}(P^{-1}AP) = \\operatorname{tr}(A P^{-1} P) = \\operatorname{tr}A$ 只是循环不变的特例。反之迹相同不蕴含相似（$\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$ 与零矩阵迹都是 $0$ 而不相似）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
+    },
+    {
+      id: 'def.similarity',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '相似',
+      title: '相似（Similarity）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱'],
+      statement: [
+        '两个方阵 $A, B \\in M_n(K)$ 叫**相似**，记 $A \\sim B$，当且仅当存在可逆矩阵 $P$ 使',
+        '',
+        '$$B = P^{-1} A\\, P$$',
+        '',
+        '$P$ 叫**过渡矩阵**。相似的**等价**说法：$A$ 与 $B$ 是同一个线性映射在两组基下的矩阵。',
+        '',
+        '相似的不变量：秩、迹、行列式、特征多项式（从而特征值与它们的代数重数）、极小多项式。'
+      ].join('\n'),
+      notes: '⭐ 相似是**等价关系**（自反 / 对称 / 传递），所以 $M_n(K)$ 被分成相似类；**分类问题就是「描述所有相似类」**。\n\n⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。图上两条边（`thm.change-of-basis` 与 `dep.linearmap-similarity`）说的就是这件事。\n\n⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 与 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ 等价但不相似。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
+    },
+    {
+      id: 'thm.cayley-hamilton',
+      cluster: 'algebra.spectral',
+      type: 'theorem',
+      label: 'Cayley–Hamilton',
+      title: '定理（Cayley–Hamilton）：$\\chi_T(T) = 0$',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '谱'],
+      statement: [
+        '设 $T : V \\to V$ 是有限维 $K$-向量空间上的线性映射，$\\chi_T$ 是它的特征多项式。把 $\\chi_T$ 里出现的 $x$ 换成 $T$（常数项乘 $I$），得到算子 $\\chi_T(T)$。则',
+        '',
+        '$$\\chi_T(T) = 0$$',
+        '',
+        '（右边是**零算子**；矩阵形式是零矩阵。）',
+        '',
+        '矩阵形式：对 $A \\in M_n(K)$ 有 $\\chi_A(A) = 0$（零矩阵）。'
+      ].join('\n'),
+      notes: '⭐ 这条定理说的是「**每个算子都满足自己的特征方程**」—— 于是 $\\chi_T$ 是「把 $T$ 送进零」的多项式**之一**，这立刻给出一个把 $K[x]$-模的结构用上的入口（$V$ 成了 $K[x]/(\\chi_T)$-模）。\n\n⚠ 常见错误记法：不能把 $\\chi_T(T) = \\det(T I - T)$ 这样代进去（那是「矩阵里的矩阵」），要**先把 $\\chi_T$ 展开成 $\\sum c_k x^{k}$，再逐项换成 $\\sum c_k T^{k}$**。\n\n⭐ 用途：算矩阵的幂（$A^{n}$ 可以用低次幂线性表出）、证明极小多项式整除特征多项式、求逆矩阵（$A^{-1}$ 由 $\\chi_A$ 的系数给出）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6', 'Lang, Linear Algebra']
+    },
+    {
+      id: 'thm.diagonalizable',
+      cluster: 'algebra.spectral',
+      type: 'theorem',
+      label: '可对角化判据',
+      title: '定理：可对角化的几个等价条件',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '谱'],
+      statement: [
+        '设 $\\dim V = n < \\infty$，$T : V \\to V$ 线性，$\\lambda_1, \\ldots, \\lambda_m$ 是它在 $K$ 中互异的特征值。则下列命题等价：',
+        '',
+        '**(1)** $T$ **可对角化**：存在基使 $T$ 的矩阵是对角阵；',
+        '',
+        '**(2)** $V = E_{\\lambda_1} \\oplus \\cdots \\oplus E_{\\lambda_m}$，即特征向量张成整个 $V$；',
+        '',
+        '**(3)** $\\sum_i \\dim E_{\\lambda_i} = n$（几何重数之和达到 $n$）；',
+        '',
+        '**(4)** 每个特征值的几何重数等于代数重数；',
+        '',
+        '**(5)** 存在**互异**的 $\\lambda_i$ 使 $T$ 满足 $\\prod_i (T - \\lambda_i I) = 0$（即 $T$ 被一个无重根的多项式零化）。'
+      ].join('\n'),
+      notes: '⭐ 最常用的判据是 **(3)/(4)**：$n$ 个线性无关的特征向量存在 $\\iff$ 可对角化。注意「特征值个数 $= n$」不够（重根要按重数算）。\n\n⭐ **(5)** 是最深刻的写法：它把「可对角化」翻译成**极小多项式无重根**（见「极小多项式整除特征多项式」）—— 这一条在谱定理与 Jordan 型的讨论里都要用。\n\n⚠ 判据依赖 $K$：$\\mathbb{R}$ 上的旋转没有实特征值，当然不可对角化；但它到 $\\mathbb{C}$ 上就有特征值 $\\pm i$ 且可对角化。所以「可对角化」永远相对于 $K$ 说。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
+    },
+    {
+      id: 'def.minimal-poly',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '极小多项式',
+      title: '极小多项式（算子的）$\\mu_T$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '谱', '多项式'],
+      statement: [
+        '设 $\\dim V < \\infty$，$T : V \\to V$。集合',
+        '',
+        '$$I_T := \\{\\, p \\in K[x] : p(T) = 0 \\,\\}$$',
+        '',
+        '是 $K[x]$ 的一个非零理想（由 Cayley–Hamilton，$\\chi_T \\in I_T$）。由于 $K[x]$ 是主理想整环，存在**唯一**的首一多项式 $\\mu_T$ 使 $I_T = (\\mu_T)$。',
+        '',
+        '$\\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的首一多项式（唯一）。',
+        '',
+        '⚠️ 与域论里的「代数元的极小多项式」（`def.minimal-poly-element`）区分：一个是零化算子的、一个是零化代数元的，形式上是一回事，名字要分开。'
+      ].join('\n'),
+      notes: '⭐ 极小多项式是**相似完全不变量**中最细的那一个（与特征多项式合起来）：Jordan 型完全由它们决定，而两个矩阵相似 $\\iff$ 它们有相同的**不变因子**（等价于相同的 Jordan 型）。\n\n⭐ $I_T$ 是理想这件事本身很重要：$p(T) = 0$、$q(T) = 0 \\implies (p + q)(T) = 0$，且 $r\\,p$ 也在里面 —— 于是 $T$ 在 $K[x]$ 上成了**模**（$x$ 作用 = $T$），后面 Jordan 型的证明全在这个模里做。\n\n⚠ 极小多项式与特征多项式的根**相同**（差一个重数）：两者都等于「$T$ 的特征值全体」。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6', 'Lang, Linear Algebra']
+    },
+    {
+      id: 'thm.minimal-poly-divisor',
+      cluster: 'algebra.spectral',
+      type: 'theorem',
+      label: '极小多项式整除特征多项式',
+      title: '定理：$\\mu_T \\mid \\chi_T$，且两者同根',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '谱', '多项式'],
+      statement: [
+        '设 $\\dim V = n < \\infty$，$T : V \\to V$。则',
+        '',
+        '- $\\mu_T \\mid \\chi_T$（极小多项式整除特征多项式）；特别地 $\\deg \\mu_T \\le n$；',
+        '- $\\mu_T$ 与 $\\chi_T$ 在 $K$ 的代数闭包中**有完全相同的根**（即相同的特征值集合）；',
+        '- 因此 $T$ 可对角化（在代数闭包上看）$\\iff$ $\\mu_T$ 无重根。'
+      ].join('\n'),
+      notes: '⭐ 三条里的第一条是 Cayley–Hamilton + 理想性的直接后果：$\\chi_T \\in I_T = (\\mu_T)$。\n\n⭐ 第二条（同根）的证明值得记住：若 $\\lambda$ 是特征值、$v$ 是特征向量，则 $\\mu_T(T)v = \\mu_T(\\lambda) v$，而 $\\mu_T(T) = 0$、$v \\ne 0$，故 $\\mu_T(\\lambda) = 0$；反向由 $\\mu_T \\mid \\chi_T$ 得到。\n\n⚠ 第三个断言的「在代数闭包上看」不能省：$\\mu_T$ 是否无重根要到扩域里判（$\\mathbb{R}$ 上的旋转：$\\mu_T = x^{2} + 1$ 无重根，在 $\\mathbb{C}$ 上可对角化，在 $\\mathbb{R}$ 上不能）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
+    },
+    {
+      id: 'thm.primary-decomposition',
+      cluster: 'algebra.spectral',
+      type: 'theorem',
+      label: '根子空间分解',
+      title: '定理（主分解）：$V = \\bigoplus_i \\ker (T - \\lambda_i I)^{m_i}$',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '谱'],
+      statement: [
+        '设 $K$ **代数闭**，$T : V \\to V$，$\\dim V = n < \\infty$。设',
+        '',
+        '$$\\chi_T(x) = \\prod_{i=1}^{r} (x - \\lambda_i)^{m_i}$$',
+        '',
+        '（$\\lambda_i$ 互异、$m_i \\ge 1$）是特征多项式的分解。则',
+        '',
+        '- $V = \\bigoplus_{i=1}^{r} V_i$，其中 $V_i := \\ker (T - \\lambda_i I)^{m_i}$ 是**广义特征子空间**（也叫**根子空间**）；',
+        '- $\\dim V_i = m_i$（代数重数），每个 $V_i$ 都是 $T$-不变的，且 $T|_{V_i}$ 只有一个特征值 $\\lambda_i$；',
+        '- $E_{\\lambda_i} = \\ker(T - \\lambda_i I) \\subseteq V_i$ 是它里面的「$\\lambda_i$ 那一层」。'
+      ].join('\n'),
+      notes: '⭐ 这一步是 Jordan 分解的**第一半**：先把 $V$ 按特征值拆成 $r$ 块，每一块上只剩一个特征值。第二半是在每块里再把「$T - \\lambda_i I$ 的幂零程度」拆成小块（那就是 Jordan 块）。\n\n⭐ 它的代数版本：$V$ 是 $K[x]$-模，$\\chi_T$ 是它上面的「零化多项式」；由 $K[x]$ 的唯一分解，模按 $\\chi_T$ 的不可约因子拆开（**中国剩余定理**）—— 这就是「主分解」这个名字的来源。\n\n⚠ 要求 $K$ 代数闭：否则 $\\chi_T$ 分解不出一次因子，块也不按特征值分（要把「不可约因子」当成块）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 7', 'Lang, Algebra, Ch. XIV']
+    },
+    {
+      id: 'thm.jordan-canonical-form',
+      cluster: 'algebra.spectral',
+      type: 'theorem',
+      label: 'Jordan 标准形',
+      title: '定理（Jordan）：代数闭域上的相似标准形',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '谱', '标准形'],
+      statement: [
+        '设 $K$ 代数闭、$T : V \\to V$，$\\dim V < \\infty$。则存在 $V$ 的一组基，使 $T$ 的矩阵是**分块对角**的',
+        '',
+        '$$J = \\begin{pmatrix} J_{1} & & \\\\ & \\ddots & \\\\ & & J_{s} \\end{pmatrix}, \\qquad J_{k} = \\begin{pmatrix} \\lambda_{k} & 1 & & \\\\ & \\ddots & \\ddots & \\\\ & & \\ddots & 1 \\\\ & & & \\lambda_{k} \\end{pmatrix}$$',
+        '',
+        '每个 $J_k$ 是形如 $\\lambda_k I + N_k$ 的**Jordan 块**（$N_k$ 是幂零的「上移位」矩阵）。',
+        '',
+        '等价说法：$T$ 可对角化 $\\iff$ 所有 Jordan 块都是 $1 \\times 1$。'
+      ].join('\n'),
+      notes: '⭐ 这是**有限维线性代数唯一的完整分类定理**：代数闭域上「相似」由 Jordan 型完全决定（块的大小与特征值的分布）。它同时给出了「相似不变量」的完整清单。\n\n⭐ 证明的两半：主分解（按特征值拆）＋ 在每个根子空间上对幂零算子 $N = T - \\lambda I$ 取「$\\ker N^{k}$ 的链」并逐层补基（这一步用 `def.quotient-vs` 与归纳）。\n\n⚠ 三个前提都在：**代数闭**（否则没有 $\\lambda$）、**有限维**（否则可能连特征值都没有）、**$K$ 是域**。$\\mathbb{R}$ 上只能用「实 Jordan 形」或改走有理标准型（`thm.rational-canonical-form`）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 7', 'Lang, Algebra, Ch. XIV']
+    },
+    {
+      id: 'cor.jordan-uniqueness',
+      cluster: 'algebra.spectral',
+      type: 'corollary',
+      label: 'Jordan 型的唯一性',
+      title: '推论：Jordan 型在块的排列之外唯一',
+      regions: ['algebra'],
+      tags: ['推论', '线性代数', '谱', '标准形'],
+      statement: [
+        'Jordan 标准形在「Jordan 块的排列顺序」之外是**唯一**的，即 $A \\sim B$ 当且仅当 $A$ 与 $B$ 有相同的 Jordan 型（不计块的次序）：',
+        '',
+        '$$A \\sim B \\iff \\mu_A(\\lambda) = \\mu_B(\\lambda) \\ \\ (\\forall \\lambda)$$',
+        '',
+        '更定量地：对每个特征值 $\\lambda$，Jordan 块的**尺寸**构成一个分拆 $\\mu(\\lambda)$；两个矩阵相似当且仅当对每个 $\\lambda$ 都有 $\\mu_A(\\lambda) = \\mu_B(\\lambda)$。'
+      ].join('\n'),
+      notes: '⭐ 唯一性的实用形式：**块的个数 = 几何重数**（$\\dim E_\\lambda$）、**块的最大尺寸 = $\\lambda$ 在极小多项式里的次数**、**尺寸之和 = 代数重数**。于是「相似分类」被压缩成一组整数的分拆数据。\n\n⭐ 由此得到一条漂亮的推论：$A$ 幂零（$A^{k} = 0$ 对某 $k$）$\\iff$ 它的特征值只有 $0$ $\\iff$ 它的特征多项式是 $x^{n}$。\n\n⚠ 「不计块的次序」是必须的：Jordan 形是按特征值与块的排列写的，重排块给出同一个算子的另一种写法（换个基而已）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 7']
+    }
+  ],
+
+  edges: [
+
+    /* ------------------------------------------------------------ 定义依赖 */
+    {
+      id: 'dep.linearmap-invariant',
+      kind: 'definition',
+      definition: 'def.linear-map',
+      usedBy: 'def.invariant-subspace',
+      note: '不变性说的是 $T(U) \\subseteq U$，用到的只有 $T$ 是映射这一点。'
+    },
+    {
+      id: 'dep.invariant-eigenvalue',
+      kind: 'definition',
+      definition: 'def.invariant-subspace',
+      usedBy: 'def.eigenvalue',
+      note: '特征向量等价于「一维的不变子空间」：$T(\\langle v \\rangle) \\subseteq \\langle v \\rangle$ 且 $v \\ne 0$。'
+    },
+    {
+      id: 'dep.determinant-charpoly',
+      kind: 'definition',
+      definition: 'def.determinant',
+      usedBy: 'def.char-poly',
+      note: '特征多项式就是 $\\det(xI - A)$ —— 行列式在这里第一次被用到「变量是矩阵」的场合。'
+    },
+    {
+      id: 'dep.polyring-charpoly',
+      kind: 'definition',
+      definition: 'def.polynomial-ring',
+      usedBy: 'def.char-poly',
+      note: '$\\det(xI - A)$ 的结果落在 $K[x]$ 里，是多项式环的元素。'
+    },
+    {
+      id: 'dep.charpoly-trace',
+      kind: 'definition',
+      definition: 'def.char-poly',
+      usedBy: 'def.trace',
+      note: '迹是特征多项式 $x^{n-1}$ 的系数（差个符号）—— 两条边互为解释，这条说的是「迹由特征多项式定义」。'
+    },
+    {
+      id: 'dep.changeofbasis-similarity',
+      kind: 'definition',
+      definition: 'thm.change-of-basis',
+      usedBy: 'def.similarity',
+      note: '相似的定义 $B = P^{-1}AP$ 就是「换基公式」写成矩阵的样子。'
+    },
+    {
+      id: 'dep.charpoly-minimal',
+      kind: 'definition',
+      definition: 'def.char-poly',
+      usedBy: 'def.minimal-poly',
+      note: '极小多项式的集合 $I_T$ 非空，靠的是 Cayley–Hamilton（即 $\\chi_T \\in I_T$）。'
+    },
+    {
+      id: 'dep.minimal-primary',
+      kind: 'definition',
+      definition: 'def.minimal-poly',
+      usedBy: 'thm.primary-decomposition',
+      note: '主分解的代数版本里，「$\\chi_T$ 的因子」与「极小多项式」是同一套理想论的产物。'
+    },
+
+    /* ---------------------------------------------------------------- 证明 */
+    {
+      id: 'imp.cayley-hamilton',
+      kind: 'implication',
+      sources: ['def.char-poly', 'prop.det-laplace'],
+      target: 'thm.cayley-hamilton',
+      title: '特征多项式 + 伴随矩阵 $\\implies$ Cayley–Hamilton',
+      proof: [
+        '记 $A \\in M_n(K)$，考虑**多项式矩阵** $B(x) := xI - A \\in M_n(K[x])$，以及它的伴随矩阵',
+        '',
+        '$$\\operatorname{adj} B(x) = \\bigl( C_{ji}(x) \\bigr), \\qquad \\deg C_{ji} \\le n - 1$$',
+        '',
+        '1. 由伴随矩阵的基本等式（见「Laplace 展开」）$B(x) \\operatorname{adj} B(x) = \\det B(x)\\, I = \\chi_A(x)\\, I$。',
+        '2. 把 $\\operatorname{adj} B(x)$ 按 $x$ 的幂展开：$\\operatorname{adj} B(x) = \\sum_{k=0}^{n-1} B_k\\, x^{k}$（$B_k \\in M_n(K)$）。代入第 1 步并比较 $x$ 的各次系数，得到一串矩阵等式',
+        '',
+        '$$B_0 = -A B_0, \\qquad B_k = -A B_k + B_{k-1}, \\qquad \\cdots$$',
+        '3. 把第 $k$ 个等式左乘 $A^{k}$ 并全部相加 —— 中间项**全部相消**，只剩',
+        '',
+        '$$0 = A^{n} + c_{n-1}A^{n-1} + \\cdots + c_0 I = \\chi_A(A)$$',
+        '',
+        '（其中 $\\chi_A(x) = x^{n} + c_{n-1}x^{n-1} + \\cdots + c_0$。）∎',
+        '',
+        '一般算子 $T$ 的情形：取一组基把它写成 $A$，把上式翻译回算子语言即可。'
+      ].join('\n'),
+      note: '第 3 步「中间项全部相消」是全部技巧：那一串等式被设计成望远镜式（$A^{k} B_k - A^{k+1}B_{k-1}$ 型），所以相加之后只剩两头。'
+    },
+    {
+      id: 'imp.diagonalizable',
+      kind: 'implication',
+      sources: ['def.eigenvalue', 'def.invariant-subspace', 'thm.minimal-poly-divisor'],
+      target: 'thm.diagonalizable',
+      title: '特征子空间 + 极小多项式 $\\implies$ 可对角化判据',
+      proof: [
+        '记 $n = \\dim V$、$\\lambda_1, \\ldots, \\lambda_m$ 为（$K$ 中）互异特征值。',
+        '',
+        '**(1) $\\implies$ (2)**：若 $T$ 在某组基下是对角阵 $\\operatorname{diag}(\\lambda_{i_1}, \\ldots)$，则每个基向量都是特征向量，于是这组基（共 $n$ 个）落在 $\\bigcup_i E_{\\lambda_i}$ 中；又不同特征值的特征子空间之和是直和，故 $V = \\bigoplus_i E_{\\lambda_i}$。',
+        '',
+        '**(2) $\\implies$ (3)**：取维数即得 $\\sum_i \\dim E_{\\lambda_i} = n$。',
+        '',
+        '**(3) $\\implies$ (1)**：在每个 $E_{\\lambda_i}$ 里取一组基（共 $\\sum_i \\dim E_{\\lambda_i} = n$ 个向量）。它们线性无关（直和），故是 $V$ 的基；在这组基下 $T$ 是对角阵。',
+        '',
+        '**(4) $\\iff$ (3)**：恒有 $\\dim E_{\\lambda} \\le m_\\lambda$（代数重数）与 $\\sum_\\lambda m_\\lambda = n$。于是「和 $= n$」等价于「每个都取等号」，即几何重数 $=$ 代数重数。',
+        '',
+        '**(5) $\\implies$ (4)**：设 $\\prod_i (T - \\lambda_i I) = 0$ 且 $\\lambda_i$ 互异，则 $\\mu_T \\mid \\prod_i (x - \\lambda_i)$，故 $\\mu_T$ 无重根。“无重根”意味着极小多项式在每个特征值处的重数为 1，结合 $\\mu_T$ 与 $\\chi_T$ 同根、且代数重数 $\\ge$ 几何重数 $\\ge 1$，逐块比较即得几何重数 $=$ 代数重数。',
+        '',
+        '**(1) $\\implies$ (5)**：可对角化时 $\\mu_T = \\prod_i (x - \\lambda_i)$（互异的一次因子之积），代入 $T$ 得零。∎'
+      ].join('\n'),
+      note: '证明里真正有内容的是 **(4) $\\iff$ (3)**（几何重数 vs 代数重数）与最后一对（**(5) 是无重根判据**）。前三条只是把「对角化」翻译成「有 $n$ 个无关特征向量」。'
+    },
+    {
+      id: 'imp.minimal-poly-divisor',
+      kind: 'implication',
+      sources: ['thm.cayley-hamilton', 'def.minimal-poly'],
+      target: 'thm.minimal-poly-divisor',
+      title: 'Cayley–Hamilton $\\implies \\mu_T \\mid \\chi_T$ 且同根',
+      proof: [
+        '1. **整除**：由 Cayley–Hamilton，$\\chi_T(T) = 0$，即 $\\chi_T \\in I_T = (\\mu_T)$，故 $\\mu_T \\mid \\chi_T$。由此 $\\deg \\mu_T \\le \\deg \\chi_T = n$。',
+        '2. **$\\chi_T$ 的根都是 $\\mu_T$ 的根**：由第 1 步与「$\\mu_T$ 非零」得 $\\mu_T \\mid \\chi_T$，故 $\\chi_T$ 的每个根也是 $\\mu_T$ 的根。',
+        '3. **$\\mu_T$ 的根都是 $\\chi_T$ 的根**：设 $\\mu_T(\\lambda) = 0$。由 $\\mu_T \\ne 0$ 且 $\\mu_T \\mid \\chi_T$，把 $\\mu_T$ 在 $K$ 的代数闭包中分解为 $\\prod (x - \\lambda_j)^{e_j}$；对每个 $j$ 取非零向量 $v_j \\in \\ker(T - \\lambda_j I)^{e_j}$（由第 4 步非零），则 $v := v_j$ 满足 $\\mu_T(T) v = 0$。若 $\\lambda_j$ 不是特征值，则 $T - \\lambda_j I$ 可逆，于是 $(T - \\lambda_j I)^{e_j}$ 可逆，$\\ker = \\{0\\}$，矛盾。故每个 $\\lambda_j$ 都是特征值，即 $\\chi_T(\\lambda_j) = 0$。',
+        '4. **每个 $\\ker (T - \\lambda_j I)^{e_j} \\ne \\{0\\}$**：若全为零，则 $\\mu_T$ 的每个因子都可逆、乘积可逆，而 $\\mu_T(T) = 0$ 与可逆性矛盾（$n \\ge 1$ 时 $V \\ne 0$）。',
+        '',
+        '于是两者的根集合相同。∎'
+      ].join('\n'),
+      note: '第 3、4 步合起来是一个**双向夹逼**：既要说明 $\\mu_T$ 的根一定是特征值，也要先证明那些核非零 —— 后者看起来显然，其实是「$\\mu_T(T) = 0$ 而 $T$ 非平凡」的推论。'
+    },
+    {
+      id: 'imp.primary-decomposition',
+      kind: 'implication',
+      sources: ['thm.poly-ufd', 'def.minimal-poly', 'prop.root-bound'],
+      target: 'thm.primary-decomposition',
+      title: '唯一分解 + 极小多项式 $\\implies$ 根子空间分解',
+      proof: [
+        '设 $K$ 代数闭、$\\chi_T = \\prod_{i=1}^{r}(x - \\lambda_i)^{m_i}$，$\\lambda_i$ 互异。',
+        '',
+        '1. **把 $V$ 看成 $K[x]$-模**：令 $x \\cdot v := T(v)$。模的公理就是 $T$ 的线性性 + $T^{0} = I$，逐步验证即可。于是 $\\chi_T \\cdot V = 0$。',
+        '2. **中国剩余定理**：$\\chi_T = \\prod_i (x - \\lambda_i)^{m_i}$ 中诸因子两两互素（互异一次因子的幂），故',
+        '',
+        '$$K[x]/(\\chi_T) \\;\\cong\\; \\prod_i K[x]/((x - \\lambda_i)^{m_i})$$',
+        '3. **翻译回 $V$**：对每个 $i$ 令 $V_i := \\ker (T - \\lambda_i I)^{m_i}$。由互素性可取多项式 $u_i$ 使 $\\sum_i u_i \\cdot \\frac{\\chi_T}{(x-\\lambda_i)^{m_i}} = 1$（Bézout），作用到 $v \\in V$ 上给出分解 $v = \\sum_i v_i$，$v_i \\in V_i$。直和性由「不同因子的核之交为零」得到。',
+        '4. **维数**：$V_i$ 是 $T$-不变的，且 $T|_{V_i}$ 只有一个特征值 $\\lambda_i$，故 $\\chi_{T|_{V_i}} = (x - \\lambda_i)^{\\dim V_i}$；两边取乘积并与 $\\chi_T$ 比较，得 $\\dim V_i = m_i$。',
+        '5. **$E_{\\lambda_i} \\subseteq V_i$**：$\\ker(T - \\lambda_i I) \\subseteq \\ker (T - \\lambda_i I)^{m_i}$ 显然。∎'
+      ].join('\n'),
+      note: '第 1 步（把 $V$ 变成 $K[x]$-模）是整条链的枢纽：一旦成为模，「按不可约因子拆」就自动由 **$K[x]$ 是唯一分解整环 + Bézout** 提供，不必再在向量空间里手搓。'
+    },
+    {
+      id: 'imp.jordan-canonical-form',
+      kind: 'implication',
+      sources: ['thm.primary-decomposition', 'thm.factor-theorem'],
+      target: 'thm.jordan-canonical-form',
+      title: '根子空间分解 + 幂零块 $\\implies$ Jordan 标准形',
+      proof: [
+        '1. 由主分解，$V = \\bigoplus_i V_i$，每个 $V_i$ 是 $T$-不变的，且 $T|_{V_i} = \\lambda_i I + N_i$，其中',
+        '',
+        '$$N_i := (T - \\lambda_i I)|_{V_i}$$',
+        '',
+        '是**幂零**的（因为 $V_i = \\ker (T - \\lambda_i I)^{m_i}$）。只要在每个 $V_i$ 上把幂零算子化成标准形，拼起来就是 Jordan 形。',
+        '2. **幂零算子的标准形**：设 $N$ 在有限维空间 $W$ 上幂零。对 $k = 1, 2, \\ldots$ 有链',
+        '',
+        '$$\\{0\\} \\subseteq \\ker N \\subseteq \\ker N^{2} \\subseteq \\cdots \\subseteq \\ker N^{s} = W$$',
+        '',
+        '归纳地：从最后一层 $\\ker N^{s}$ 里取一组基，映到商 $\\ker N^{s}/\\ker N^{s-1}$ 上；在商里按同样办法取基并拉回，逐层拼出一组基，使 $N$ 在其中表现为若干「上移位」块 $N_k$（对角线为 $0$、上对角为 $1$）。',
+        '3. **拼装**：把每个 $V_i$ 里得到的基拼成 $V$ 的基。在这组基下 $T$ 的矩阵：在第 $i$ 块上是 $\\lambda_i I + N_i$，即若干 Jordan 块之并，各块的特征值为 $\\lambda_i$。',
+        '',
+        '$T$ 可对角化 $\\iff$ 每个 $N_i = 0$ $\\iff$ 每个 $V_i = E_{\\lambda_i}$ $\\iff$ 所有块是 $1 \\times 1$。∎'
+      ].join('\n'),
+      note: '第 2 步（幂零算子的分层取基）是整条定理唯一的**构造性**部分；其余两半都是「把已知分解拼起来」。这也解释了为什么 Jordan 型的计算本质上只是「求若干核链」。'
+    },
+    {
+      id: 'imp.jordan-uniqueness',
+      kind: 'implication',
+      sources: ['thm.jordan-canonical-form', 'def.similarity'],
+      target: 'cor.jordan-uniqueness',
+      title: 'Jordan 形 $\\implies$ 相似分类',
+      proof: [
+        'Jordan 形是由「$V$ 的一组基」给出的，所以每个算子都有一个 Jordan 形 —— 剩下的问题是唯一性。',
+        '',
+        '1. **不变量**：Jordan 形只依赖算子的相似类，因为它是用「核链的维数」造出来的。具体地，对每个特征值 $\\lambda$ 与每个 $k$，',
+        '',
+        '$$\\dim \\ker (T - \\lambda I)^{k}$$',
+        '',
+        '是相似不变量（由 $T$ 本身决定，与基无关），而「尺寸 $\\ge k$ 的 Jordan 块个数」正好等于 $\\dim \\ker(T - \\lambda I)^{k} - \\dim \\ker (T - \\lambda I)^{k-1}$。',
+        '2. **唯一性**：由第 1 步，Jordan 块的尺寸分布 $\\mu(\\lambda)$ 完全由这些核的维数决定，因此不依赖基的选取；反过来，若两个算子有相同的 $\\mu(\\lambda)$（对一切 $\\lambda$），则它们可以配成同一个 Jordan 型的两个写本，从而是同一个算子在两组基下的矩阵，即相似。∎'
+      ].join('\n'),
+      note: '证明的思路是「**先造一个不变量，再证明它把类分完**」—— 这也是所有分类定理的标准套路（与「基的势是唯一的」那条如出一辙）。'
+    }
+  ]
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 线性代数 ⑥：内积空间与正交性
+   --------------------------------------------------------------------------
+   新星团 `algebra.inner`（16 点）。前面几包只有**加法与数乘**，这一包加上一把
+   **尺子**（内积）：
+
+     内积 → 诱导范数与距离 → Cauchy–Schwarz → 正交 / 正交补
+       → Gram–Schmidt（标准正交基存在）→ 正交投影与最佳逼近
+       → 伴随算子 → **谱定理**（可正交对角化）→ 二次型与 Sylvester 判据 → SVD
+
+   ⭐ 与图上别处的接口：
+     · `def.metric-space`（内积诱导距离）· `def.lp-norm`（$p = 2$ 时 $L^{2}$ 是内积空间）
+     · `def.estimate`… 以及分析那边的 Cauchy–Schwarz（同一个不等式）
+   ⚠️ 命名：算子伴随用 `def.operator-adjoint`（⛔ 不能叫 `def.adjoint`，那是范畴论的伴随函子）。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数：内积空间与正交性',
+  nodes: [
+
+    {
+      id: 'def.inner-product',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '内积',
+      title: '内积与内积空间（Inner Product Space）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $V$ 是 $K$-向量空间（$K = \\mathbb{R}$ 或 $\\mathbb{C}$）。映射',
+        '',
+        '$$\\langle \\cdot, \\cdot \\rangle : V \\times V \\longrightarrow K$$',
+        '',
+        '叫 $V$ 上的**内积**，当且仅当对一切 $u, v, w \\in V$、$c \\in K$：',
+        '',
+        '- **对第一变元线性**：$\\langle u + c\\,w, v \\rangle = \\langle u, v \\rangle + c\\langle w, v \\rangle$；',
+        '- **共轭对称**：$\\langle v, u \\rangle = \\overline{\\langle u, v \\rangle}$（$K = \\mathbb{R}$ 时就是对称）；',
+        '- **正定**：$\\langle v, v \\rangle \\ge 0$，且 $\\langle v, v \\rangle = 0 \\iff v = 0$。',
+        '',
+        '配上内积的 $V$ 叫**内积空间**。实数情形下内积就是正定对称双线性型。',
+        '',
+        '标准例子：$K^{n}$ 上的内积 $\\langle x, y \\rangle := \\sum_i \\overline{x_i}\\, y_i$。'
+      ].join('\n'),
+      notes: '⭐ 复数情形下**不能要求双线性**：若 $\\langle u, v \\rangle$ 对两个变元都线性，则 $\\langle i v, i v \\rangle = i^{2}\\langle v, v \\rangle = -\\langle v, v \\rangle$ 恒为负，与正定矛盾。所以复数情形只能是**一个变元线性、另一个共轭线性**（叫**半双线性**或 sesquilinear）。\n\n⭐ 哪一边写成共轭是**约定**：本图取「第一变元线性、第二变元共轭线性」的**物理约定**（与图上别处一致）。换个约定所有公式共轭一下，不改变内容。\n\n⚠ 正定性是内积与「一般双线性型」的分水岭：正定才有「长度」可言，才有 Cauchy–Schwarz、才有正交投影。丢掉正定（只留对称双线性）得到的是**二次型**那一套（见 `def.quadratic-form`），丢掉对称得到的是**辛形式**。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8', 'Roman, Advanced Linear Algebra, Ch. 11']
+    },
+    {
+      id: 'def.induced-norm',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '诱导范数与距离',
+      title: '由内积诱导的范数与距离',
+      regions: ['algebra', 'analysis'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $(V, \\langle \\cdot, \\cdot \\rangle)$ 是内积空间。定义',
+        '',
+        '$$\\|v\\| := \\sqrt{\\langle v, v \\rangle}, \\qquad d(u, v) := \\|u - v\\|$$',
+        '',
+        '则 $\\|\\cdot\\|$ 是 $V$ 上的**范数**（正定、齐次、三角不等式），$d$ 是**距离**，并且',
+        '',
+        '$$\\|v\\| = 0 \\iff v = 0, \\qquad \\|cv\\| = |c|\\,\\|v\\|, \\qquad \\|u + v\\| \\le \\|u\\| + \\|v\\|$$',
+        '',
+        '（三角不等式来自 Cauchy–Schwarz。）'
+      ].join('\n'),
+      notes: '⭐ 于是**内积空间自动是度量空间**，可以谈收敛、完备、紧 —— 分析那一侧的全部工具都能进来。完备的内积空间叫 **Hilbert 空间**。\n\n⭐ 反过来：范数未必来自内积。判据是**平行四边形律**\n\n$$\\|u + v\\|^{2} + \\|u - v\\|^{2} = 2\\|u\\|^{2} + 2\\|v\\|^{2}$$\n\n（$\\ell^{p}$ 在 $p \\ne 2$ 时不满足它，所以 $\\ell^{p}$ 上的范数不来自任何内积 —— 这也是「$L^{2}$ 特别」的原因。）\n\n⭐ 由内积恢复内积的公式是**极化恒等式**：$\\langle u, v\\rangle = \\frac{1}{4}\\bigl( \\|u+v\\|^{2} - \\|u-v\\|^{2} \\bigr)$（实情形）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'thm.cauchy-schwarz',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: 'Cauchy–Schwarz',
+      title: '定理：Cauchy–Schwarz 不等式',
+      regions: ['algebra', 'analysis'],
+      tags: ['定理', '线性代数', '内积', '不等式'],
+      statement: [
+        '设 $V$ 是内积空间，$u, v \\in V$。则',
+        '',
+        '$$|\\langle u, v \\rangle| \\le \\|u\\|\\,\\|v\\|$$',
+        '',
+        '等号成立当且仅当 $u, v$ **线性相关**。'
+      ].join('\n'),
+      notes: '⭐ 它是「内积 $\\implies$ 范数」这条路上唯一需要证明的一步（三角不等式由它推出）。\n\n⭐ 证明技巧：对一切 $t \\in K$ 令 $f(t) := \\|u - t v\\|^{2} \\ge 0$，展开后是关于 $t$ 的二次式；取 $t = \\langle v, u \\rangle / \\|v\\|^{2}$ 即得结论。\n\n⭐ 它是分析里最常用的不等式之一：$L^{2}$ 上就是 $|\\int f\\bar{g}| \\le \\|f\\|_{2}\\|g\\|_{2}$，概率论里就是 $|\\operatorname{Cov}| \\le \\sigma_X\\sigma_Y$。名字与「数列形式的 Cauchy–Schwarz」（`analysis.lp` 团里的 Hölder 在 $p = q = 2$ 的情形）是同一个。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.orthogonality',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '正交',
+      title: '正交与正交分解',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $V$ 是内积空间。',
+        '',
+        '- $u \\perp v$（称 $u$ 与 $v$ **正交**）$\\iff \\langle u, v \\rangle = 0$；',
+        '- $S \\perp T$：$S$ 中每个向量与 $T$ 中每个向量正交；',
+        '- $\\{v_1, \\ldots, v_k\\}$ 叫**标准正交组**，当且仅当 $\\langle v_i, v_j \\rangle = \\delta_{ij}$；',
+        '- $\\{v_i\\}$ 是**标准正交基**，当且仅当它既是一组基又是标准正交组。',
+        '',
+        '**勾股定理**：$u \\perp v \\implies \\|u + v\\|^{2} = \\|u\\|^{2} + \\|v\\|^{2}$。'
+      ].join('\n'),
+      notes: '⭐ 标准正交基的最大好处是**坐标就是内积**：若 $(e_1, \\ldots, e_n)$ 标准正交，则\n\n$$v = \\sum_{i=1}^{n} \\langle e_i, v \\rangle\\, e_i, \\qquad \\|v\\|^{2} = \\sum_{i=1}^{n} |\\langle e_i, v \\rangle|^{2}$$\n\n（第二条是 **Parseval 等式**。）一般基要解线性方程组才能求坐标，标准正交基只要算 $n$ 个内积 —— 这就是 Gram–Schmidt 值得做的理由。\n\n⚠ 标准正交组与标准正交「基」不同：前者只要求正交归一，不要求张成整个空间。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.orthogonal-complement',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '正交补',
+      title: '正交补 $U^{\\perp}$ 与直和分解',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $U \\subseteq V$ 是子空间。$U$ 的**正交补**定义为',
+        '',
+        '$$U^{\\perp} := \\{\\, v \\in V : \\langle u, v \\rangle = 0 \\ \\text{for all}\\ u \\in U \\,\\}$$',
+        '',
+        '它是 $V$ 的子空间，并且',
+        '',
+        '- $U \\cap U^{\\perp} = \\{0\\}$；',
+        '- $U \\subseteq (U^{\\perp})^{\\perp}$；',
+        '- **有限维时** $V = U \\oplus U^{\\perp}$，且 $(U^{\\perp})^{\\perp} = U$、$\\dim U^{\\perp} = \\dim V - \\dim U$。'
+      ].join('\n'),
+      notes: '⭐ «$V = U \\oplus U^{\\perp}$» 是内积空间比一般向量空间**多出来的东西**：一般的子空间有补空间但不唯一（见 `def.direct-sum`），而正交补是**唯一**的补空间。\n\n⭐ 它与对偶里的零化子（`def.annihilator`）是一对：$U^{\\perp} \\subseteq V$、$U^{0} \\subseteq V^{\\ast}$，两者的维数公式长得一样（$\\dim V - \\dim U$），在「$V \\cong V^{\\ast}$（靠内积）」之下互相翻译。\n\n⚠ $V = U \\oplus U^{\\perp}$ 在**无限维**时对闭子空间才成立，任意子空间不成立（这是 Hilbert 空间理论的一个真定理）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'thm.gram-schmidt',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: 'Gram–Schmidt 正交化',
+      title: '定理：Gram–Schmidt 正交化（标准正交基存在）',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '内积'],
+      statement: [
+        '设 $(v_1, \\ldots, v_k)$ 是内积空间 $V$ 中线性无关的向量组。则存在标准正交组 $(e_1, \\ldots, e_k)$ 与上三角的可逆系数关系，使',
+        '',
+        '$$\\operatorname{span}(e_1, \\ldots, e_j) = \\operatorname{span}(v_1, \\ldots, v_j), \\qquad j = 1, \\ldots, k$$',
+        '',
+        '特别地：**每个有限维内积空间都有标准正交基**（任一基都可以被正交化）。'
+      ].join('\n'),
+      notes: '⭐ 算法（归纳）：先令 $e_1 := v_1 / \\|v_1\\|$；再对 $j = 2, \\ldots, k$ 依次令\n\n$$w_j := v_j - \\sum_{i < j} \\langle e_i, v_j \\rangle\\, e_i, \\qquad e_j := \\frac{w_j}{\\|w_j\\|}$$\n\n（每一步把 $v_j$ 在已有方向上的分量全部减掉。）\n\n⭐ 它是「矩阵分解」的入口：把 $A$ 的列正交化就得到 **QR 分解** $A = QR$（$Q$ 列标准正交、$R$ 上三角）—— 数值上比直接解方程稳定得多。\n\n⚠ 它依赖内积与**实/复的域结构**：把内积换成一般的对称双线性型（如 Minkowski 度规）时算法会碰上 $\\|w_j\\| = 0$ 而除零。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.orthogonal-projection',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '正交投影',
+      title: '正交投影（Orthogonal Projection）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $U \\subseteq V$ 是有限维子空间，$V = U \\oplus U^{\\perp}$。对 $v \\in V$ 唯一地写 $v = u + w$（$u \\in U$、$w \\in U^{\\perp}$），定义',
+        '',
+        '$$P_U(v) := u$$',
+        '',
+        '$P_U : V \\to V$ 叫**正交投影**（或正交投影算子）。它的性质：',
+        '',
+        '- $P_U$ 线性，$P_U^{2} = P_U$（**幂等**），$\\ker P_U = U^{\\perp}$、$\\operatorname{im} P_U = U$；',
+        '- $P_U$ 是**自伴**的：$\\langle P_U u, v \\rangle = \\langle u, P_U v \\rangle$（见「伴随算子」）；',
+        '- $v - P_U v \\perp U$。'
+      ].join('\n'),
+      notes: '⭐ 一句话：**正交投影 = 幂等 + 自伴**。反过来，任何幂等且自伴的算子都是某个子空间的正交投影 —— 这条「算子语言」的刻画后面在谱定理里直接变成「特征值只有 $0, 1$ 的自伴算子」。\n\n⭐ 幂等但不自伴的算子叫**射影**（projection）：它是「沿 $\\ker P$ 平行地投到 $\\operatorname{im} P$」，一般不是正交投影。两者的区别就是「最短距离」有没有被取到。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'thm.projection-formula',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: '最佳逼近与投影公式',
+      title: '定理：正交投影是最佳逼近，且可用标准正交基算出',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '内积', '逼近'],
+      statement: [
+        '设 $U \\subseteq V$ 是有限维子空间，$v \\in V$。则',
+        '',
+        '**(1) 最佳逼近性**：$\\|v - P_U v\\| \\le \\|v - u\\|$ 对一切 $u \\in U$ 成立，等号仅当 $u = P_U v$；',
+        '',
+        '**(2) 显式公式**：若 $(e_1, \\ldots, e_k)$ 是 $U$ 的标准正交基，则',
+        '',
+        '$$P_U v = \\sum_{j=1}^{k} \\langle e_j, v \\rangle\\, e_j, \\qquad \\|v\\|^{2} = \\|P_U v\\|^{2} + \\|v - P_U v\\|^{2} \\ge \\sum_{j=1}^{k} |\\langle e_j, v \\rangle|^{2}$$',
+        '',
+        '（最后一条叫 **Bessel 不等式**。）'
+      ].join('\n'),
+      notes: '⭐ 「最佳逼近」的几何含义：$P_U v$ 是 $U$ 中离 $v$ **最近**的点，而「最近」这件事被内积的范数定义得很好。这是最小二乘法、Fourier 级数（截断到前 $n$ 项最优）的共同来源。\n\n⭐ 显式公式说明标准正交基的威力：投影不必解方程组，只要算 $k$ 个内积。\n\n⚠ 「$U$ 有限维」或「$U$ 闭」是必需的：无限维且不闭时，最近的**点可能不存在**（只有下确界）。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.operator-adjoint',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '伴随算子',
+      title: '伴随算子 $T^{\\ast}$（Adjoint Operator）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $V, W$ 是有限维内积空间，$T : V \\to W$ 线性。则存在**唯一**的线性映射 $T^{\\ast} : W \\to V$ 使',
+        '',
+        '$$\\langle T v, w \\rangle_W = \\langle v, T^{\\ast} w \\rangle_V \\qquad (\\forall v \\in V, w \\in W)$$',
+        '',
+        '$T^{\\ast}$ 叫 $T$ 的**伴随**。在标准正交基下，$[T^{\\ast}] = [T]^{\\dagger}$（共轭转置）。',
+        '',
+        '性质：$(T + S)^{\\ast} = T^{\\ast} + S^{\\ast}$、$(cT)^{\\ast} = \\bar{c}\\,T^{\\ast}$、$(TS)^{\\ast} = S^{\\ast}T^{\\ast}$、$T^{\\ast\\ast} = T$。',
+        '',
+        '⚠️ 与范畴论的**伴随函子**（`def.adjoint`）不是一回事：那是两个函子之间的关系，这里是同一个空间上的算子。'
+      ].join('\n'),
+      notes: '⭐ 定义的方式值得注意：$T^{\\ast}$ 不是构造出来的，而是被**一条恒等式唯一定出**来的（存在性靠 Riesz 表示：$w \\mapsto \\langle T\\cdot, w\\rangle$ 是 $V$ 上的有界线性泛函）。这是「用泛性质定义对象」在有限维内积空间里的版本。\n\n⭐ 复的情形里 $(cT)^{\\ast} = \\bar c T^{\\ast}$ 的共轭**不可丢** —— 它来自内积对第二变元的共轭线性。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.isometry',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '等距与正交变换',
+      title: '等距、正交变换与酉变换（Isometry）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '线性映射 $T : V \\to V$ 叫**等距**，当且仅当它保持内积（等价地保持范数）：',
+        '',
+        '$$\\langle Tv, Tw \\rangle = \\langle v, w \\rangle \\quad (\\forall v, w) \\qquad \\iff \\qquad \\|Tv\\| = \\|v\\| \\quad (\\forall v)$$',
+        '',
+        '实数情形称**正交变换**，复数情形称**酉变换**；它们的矩阵分别叫正交矩阵（$Q^{\\mathsf{T}}Q = I$）与酉矩阵（$U^{\\dagger}U = I$）。',
+        '',
+        '等距的等价刻画：$T^{\\ast}T = I$（$\\iff T$ 可逆且 $T^{\\ast} = T^{-1}$）。全体正交（酉）变换构成群 $O(n)$（$U(n)$）。'
+      ].join('\n'),
+      notes: '⭐ 等距保持**全部几何**：长度、角度、正交性、体积（$|\\det| = 1$）。所以「两个图形全等」在代数上就是「差一个正交变换」。\n\n⭐ $O(n)$ 是紧李群（有界闭），$SO(n) := \\{Q : \\det Q = 1\\}$ 是它的连通分支（含单位元的那个）—— 旋转群。\n\n⚠ 「保持范数 $\\implies$ 保持内积」的推导用**极化恒等式**：内积可以由范数恢复（$\\langle u,v\\rangle = \\frac{1}{4}\\sum_{k=0}^{3} i^{k}\\|u + i^{k}v\\|^{2}$）—— 这也是「范数未必来自内积」那一节的另一半。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8']
+    },
+    {
+      id: 'def.normal-operator',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '正规算子',
+      title: '自伴、正规与酉算子',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积', '谱'],
+      statement: [
+        '设 $T : V \\to V$ 是有限维内积空间上的线性算子。',
+        '',
+        '- $T$ **自伴**（实数情形叫**对称**，复数情形叫 **Hermite**）：$T^{\\ast} = T$；',
+        '- $T$ **正规**：$T^{\\ast}T = T T^{\\ast}$（与自己的伴随交换）；',
+        '- $T$ **酉**（正交）：$T^{\\ast}T = T T^{\\ast} = I$。',
+        '',
+        '层次：$\\{$酉$\\} \\subset \\{$正规$\\}$，$\\{$自伴$\\} \\subset \\{$正规$\\}$，两者的交是「自伴且酉」（即 $T^{2} = I$ 的对称变换）。'
+      ].join('\n'),
+      notes: '⭐ 为什么要这三个词：**谱定理对正规算子成立**（可酉对角化），而自伴是最重要的一类正规算子（特征值全实）。一般算子做不到（Jordan 块没有标准正交基）。\n\n⭐ 自伴的实特征值 + 不同特征值的特征向量正交 —— 这两条合起来就是谱定理的内容。\n\n⚠ 「正规」在复数情形才把酉与自伴统一起来：实对称（自伴）与实正交（酉）都是实正规算子的特例，但它们在实情形下**不一定可正交对角化**（旋转 $90^\\circ$ 是正交、正规，但没有实特征值）—— 谱定理在实情形要求**对称**。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8', 'Roman, Advanced Linear Algebra, Ch. 11']
+    },
+    {
+      id: 'thm.spectral-theorem',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: '谱定理（实对称）',
+      title: '定理（谱定理）：实对称算子可正交对角化',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '内积', '谱'],
+      statement: [
+        '设 $V$ 是有限维**实**内积空间，$T : V \\to V$ **自伴**（即实对称）。则存在 $V$ 的**标准正交基**，使 $T$ 在其中是对角阵：',
+        '',
+        '$$V = E_{\\lambda_1} \\oplus \\cdots \\oplus E_{\\lambda_m}$$',
+        '',
+        '（这些特征子空间**两两正交**。）',
+        '',
+        '并且所有特征值 $\\lambda_i$ **都是实数**。矩阵形式：实对称矩阵 $A$ 存在正交矩阵 $Q$ 使 $Q^{\\mathsf{T}} A Q = \\operatorname{diag}(\\lambda_1, \\ldots, \\lambda_n)$。'
+      ].join('\n'),
+      notes: '⭐ 与 Jordan 型的区别：Jordan 只保证「相似」，谱定理保证「**酉/正交**相似」，代价是把条件收紧到自伴（正规）。这是有限维里两个不同的分类问题的答案。\n\n⭐ 证明的两步：① 至少有一个（实）特征值（用最值定理：$|Tv|$ 或 $\\langle Tv, v\\rangle$ 在单位球面这个**紧**集上取极值）；② 对特征子空间的正交补归纳（不变性来自自伴：$T(U) \\subseteq U \\implies T(U^{\\perp}) \\subseteq U^{\\perp}$）。\n\n⭐ 无限维的推广是**Hilbert 空间上的谱定理**（自伴算子的谱测度 / 投影值测度）—— 那是泛函分析的内容，图上 `analysis.lp` 那一团的 $L^{2}$ 就是它的舞台。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8', 'Roman, Advanced Linear Algebra, Ch. 11']
+    },
+    {
+      id: 'cor.spectral-normal',
+      cluster: 'algebra.inner',
+      type: 'corollary',
+      label: '谱定理（复正规）',
+      title: '推论：复正规算子可酉对角化',
+      regions: ['algebra'],
+      tags: ['推论', '线性代数', '内积', '谱'],
+      statement: [
+        '设 $V$ 是有限维**复**内积空间，$T : V \\to V$ **正规**（$T^{\\ast}T = TT^{\\ast}$）。则存在 $V$ 的**标准正交基**使 $T$ 是对角阵：',
+        '',
+        '$$T = U \\Lambda\\, U^{\\dagger}, \\qquad U^{\\dagger}U = I,\\ \\Lambda = \\operatorname{diag}(\\lambda_1, \\ldots, \\lambda_n)$$',
+        '',
+        '并且：',
+        '',
+        '- $T$ 自伴 $\\iff$ 所有特征值**实**；',
+        '- $T$ 酉 $\\iff$ 所有特征值**模长为 1**；',
+        '- $T$ 是正交投影 $\\iff$ 特征值全在 $\\{0, 1\\}$ 中且 $T$ 自伴。'
+      ].join('\n'),
+      notes: '⭐ 这三条「$T$ 的性质 $\\iff$ 特征值的性质」是谱定理最有用的副产品：把一个**算子**的问题翻译成一组**数**的问题。\n\n⭐ 复正规是实对称与实正交的共同推广：只要在复域上做，两者都能对角化；在实数域上就只能对对称的那些做。\n\n⚠ 投影那条只在**自伴**时成立：一般的幂等算子（射影）不能酉对角化。',
+      refs: ['Roman, Advanced Linear Algebra, Ch. 11']
+    },
+    {
+      id: 'def.quadratic-form',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '二次型',
+      title: '二次型与正定性（Quadratic Form）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '内积'],
+      statement: [
+        '设 $A \\in M_n(\\mathbb{R})$ 对称。由它给出的函数',
+        '',
+        '$$q(x) := x^{\\mathsf{T}} A\\, x = \\sum_{i, j} a_{ij}\\, x_i x_j \\in \\mathbb{R}, \\qquad x \\in \\mathbb{R}^{n}$$',
+        '',
+        '叫**二次型**（它是 $x$ 的二次齐次函数）。称 $q$（或 $A$）：',
+        '',
+        '- **正定**：$x \\ne 0 \\implies q(x) > 0$；',
+        '- **半正定**：$x \\ne 0 \\implies q(x) \\ge 0$；',
+        '- **负定** / **不定** 同理定义。',
+        '',
+        '由谱定理，$q$ 正定 $\\iff$ $A$ 的所有特征值为正 $\\iff$ 存在可逆 $P$ 使 $A = P^{\\mathsf{T}}P$（即 $A$ 与正定矩阵合同）。'
+      ].join('\n'),
+      notes: '⭐ 二次型是「内积」的**放宽版**：内积要求正定，二次型允许不定（甚至退化）。所以内积空间的一切几何结论在二次型里都要重新检查（「长度」可以是负的）。\n\n⭐ 正定二次型与内积一一对应（$\\langle u, v\\rangle := u^{\\mathsf{T}}Av$），而**每个内积空间都可以通过 Gram–Schmidt 变成标准欧氏空间** —— 这就是「正定 $\\implies$ 可由 $P^{\\mathsf{T}}P$ 实现」的含义。\n\n⭐ 不定二次型出现在相对论（Minkowski 度规）、Morse 理论（Hessian 的负惯性指数 = 临界点类型）里。',
+      refs: ['Hoffman–Kunze, Linear Algebra, Ch. 8', 'Roman, Advanced Linear Algebra, Ch. 11']
+    },
+    {
+      id: 'thm.sylvester-criterion',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: 'Sylvester 判据',
+      title: '定理（Sylvester）：正定性 $\\iff$ 各阶顺序主子式为正',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '内积', '判别法'],
+      statement: [
+        '设 $A \\in M_n(\\mathbb{R})$ 对称。记 $D_k$ 为 $A$ 的**左上角** $k \\times k$ 子矩阵的行列式（**顺序主子式**）。则',
+        '',
+        '$$D_1 > 0,\\quad D_2 > 0,\\quad \\ldots,\\quad D_n > 0$$'
+      ].join('\n'),
+      notes: '⭐ 这是**最便宜**的正定性判据：只算 $n$ 个行列式（实际算时用消元法顺带得到），不必求特征值。\n\n⭐ 用途直接可见：多元微分里 $f$ 的 **Hessian 矩阵正定 $\\implies$ 局部极小**（`thm.second-derivative-test`）；线性代数里「$A$ 正定 $\\iff$ 存在 Cholesky 分解 $A = LL^{\\mathsf{T}}$」。\n\n⚠ 只能看**顺序**主子式（左上角那一串），不能只看「所有主子式」或随便挑几个。反过来：所有顺序主子式为正 $\\implies$ 正定，但如果只是「所有主子式非负」那只是半正定。',
+      refs: ['Horn–Johnson, Matrix Analysis, Ch. 7']
+    },
+    {
+      id: 'thm.svd',
+      cluster: 'algebra.inner',
+      type: 'theorem',
+      label: '奇异值分解',
+      title: '定理（SVD）：$A = U\\Sigma V^{\\mathsf{T}}$',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '内积', '谱'],
+      statement: [
+        '设 $A \\in M_{m \\times n}(\\mathbb{R})$（或 $\\mathbb{C}$），秩为 $r$。则存在正交（酉）矩阵 $U \\in M_m$、$V \\in M_n$ 与「对角」矩阵 $\\Sigma$（只有前 $r$ 个对角元非零）使',
+        '',
+        '$$A = U \\Sigma V^{\\dagger}, \\qquad \\Sigma = \\operatorname{diag}(\\sigma_1, \\ldots, \\sigma_r, 0, \\ldots), \\quad \\sigma_1 \\ge \\cdots \\ge \\sigma_r > 0$$',
+        '',
+        '$\\sigma_i$ 叫 $A$ 的**奇异值**，它们是 $A^{\\dagger}A$（或 $AA^{\\dagger}$）的特征值的平方根。'
+      ].join('\n'),
+      notes: '⭐ SVD 的几何读法：**任何线性映射 = 旋转/反射 $\\to$ 沿坐标轴拉伸 $\\to$ 再旋转/反射**。于是它把任意矩阵化成了「$U$ 与 $V$ 取好基之后」的对角形 —— 这是**等价**（$A \\mapsto PAQ$）分类的完整答案（对角元即奇异值，非零个数即秩）。\n\n⭐ 与谱定理的分工：谱定理处理**方形且自伴**（相似分类）；SVD 处理**任意形状**（等价分类）。前者要求 $m = n$ 且 $A^{\\ast} = A$，后者没有任何要求。\n\n⭐ 用途（数值线性代数里最重要的一条定理）：降秩逼近（Eckart–Young：截断到前 $k$ 个奇异值给出最优低秩逼近）、主成分分析、伪逆、条件数。',
+      refs: ['Horn–Johnson, Matrix Analysis, Ch. 7', 'Roman, Advanced Linear Algebra, Ch. 11']
+    }
+  ],
+
+  edges: [
+
+    /* ------------------------------------------------------------ 定义依赖 */
+    {
+      id: 'dep.vs-innerproduct',
+      kind: 'definition',
+      definition: 'def.vs',
+      usedBy: 'def.inner-product',
+      note: '内积是加在向量空间上的**额外结构**：三条公理里的第一条就是「对第一变元线性」，它用的就是 $V$ 的运算。'
+    },
+    {
+      id: 'dep.innerproduct-inducednorm',
+      kind: 'definition',
+      definition: 'def.inner-product',
+      usedBy: 'def.induced-norm',
+      note: '范数定义为 $\\sqrt{\\langle v, v\\rangle}$，合法性来自内积的正定性。'
+    },
+    {
+      id: 'dep.metric-inducednorm',
+      kind: 'definition',
+      definition: 'def.metric-space',
+      usedBy: 'def.induced-norm',
+      note: '内积空间的范数给出距离 $d(u,v) = \\|u - v\\|$，于是它自动是度量空间，分析那一侧的工具都能用。'
+    },
+    {
+      id: 'dep.innerproduct-orthogonality',
+      kind: 'definition',
+      definition: 'def.inner-product',
+      usedBy: 'def.orthogonality',
+      note: '正交就是「内积为零」——定义里只用到内积这一个词。'
+    },
+    {
+      id: 'dep.orthogonality-orthocomplement',
+      kind: 'definition',
+      definition: 'def.orthogonality',
+      usedBy: 'def.orthogonal-complement',
+      note: '正交补是「与 $U$ 全体的正交向量之集」，所以要先有正交。'
+    },
+    {
+      id: 'dep.orthocomplement-projection',
+      kind: 'definition',
+      definition: 'def.orthogonal-complement',
+      usedBy: 'def.orthogonal-projection',
+      note: '投影的定义用到了直和分解 $V = U \\oplus U^{\\perp}$，也就是正交补。'
+    },
+    {
+      id: 'dep.innerproduct-operatoradjoint',
+      kind: 'definition',
+      definition: 'def.inner-product',
+      usedBy: 'def.operator-adjoint',
+      note: '伴随算子的定义是一条内积恒等式，存在唯一性靠内积的完备性（Riesz 表示）。'
+    },
+    {
+      id: 'dep.operatoradjoint-normal',
+      kind: 'definition',
+      definition: 'def.operator-adjoint',
+      usedBy: 'def.normal-operator',
+      note: '「正规」「自伴」「酉」三个词都是用伴随算子写的（$T^{\\ast}T = TT^{\\ast}$ 等）。'
+    },
+    {
+      id: 'dep.innerproduct-isometry',
+      kind: 'definition',
+      definition: 'def.inner-product',
+      usedBy: 'def.isometry',
+      note: '等距的定义就是保持内积（等价地保持范数）。'
+    },
+    {
+      id: 'dep.quadraticform-sylvester',
+      kind: 'definition',
+      definition: 'def.quadratic-form',
+      usedBy: 'thm.sylvester-criterion',
+      note: 'Sylvester 判据判的是二次型的正定性，用的是它的系数矩阵。'
+    },
+
+    /* ---------------------------------------------------------------- 证明 */
+    {
+      id: 'imp.cauchy-schwarz',
+      kind: 'implication',
+      sources: ['def.inner-product', 'def.induced-norm'],
+      target: 'thm.cauchy-schwarz',
+      title: '内积的正定性 $\\implies$ Cauchy–Schwarz',
+      proof: [
+        '若 $v = 0$ 结论平凡。设 $v \\ne 0$，对一切 $t \\in K$ 有',
+        '',
+        '$$0 \\le \\|u - t v\\|^{2} = \\|u\\|^{2} - \\bar{t}\\langle u, v\\rangle - t\\,\\overline{\\langle u, v\\rangle} + |t|^{2}\\|v\\|^{2}$$',
+        '',
+        '取 $t := \\dfrac{\\langle v, u \\rangle}{\\|v\\|^{2}}$（则 $\\bar t = \\overline{\\langle v,u\\rangle}/\\|v\\|^{2} = \\langle u, v\\rangle/\\|v\\|^{2}$），代入整理得',
+        '',
+        '$$0 \\le \\|u\\|^{2} - \\frac{|\\langle u, v\\rangle|^{2}}{\\|v\\|^{2}} \\quad\\Longrightarrow\\quad |\\langle u, v\\rangle|^{2} \\le \\|u\\|^{2}\\|v\\|^{2}$$',
+        '',
+        '开方即得结论。',
+        '',
+        '**等号条件**：$\\|u - tv\\|^{2} = 0 \\iff u = tv$，即线性相关。∎',
+        '',
+        '由此也得三角不等式：$\\|u+v\\|^{2} = \\|u\\|^{2} + 2\\operatorname{Re}\\langle u,v\\rangle + \\|v\\|^{2} \\le \\|u\\|^{2} + 2\\|u\\|\\|v\\| + \\|v\\|^{2} = (\\|u\\|+\\|v\\|)^{2}$。'
+      ].join('\n'),
+      note: '证明的关键是「**对一切 $t$ 都非负**」：这给了一个关于 $t$ 的二次函数恒非负，于是它的判别式 $\\le 0$ —— 这正是 Cauchy–Schwarz。'
+    },
+    {
+      id: 'imp.gram-schmidt',
+      kind: 'implication',
+      sources: ['def.orthogonality', 'def.orthogonal-projection'],
+      target: 'thm.gram-schmidt',
+      title: '正交性的定义 $\\implies$ Gram–Schmidt',
+      proof: [
+        '对 $j$ 归纳。$j = 1$ 时取 $e_1 := v_1 / \\|v_1\\|$（$v_1 \\ne 0$，因为线性无关）。',
+        '',
+        '归纳步：设已作出标准正交组 $e_1, \\ldots, e_{j-1}$，且它们张成 $\\operatorname{span}(v_1, \\ldots, v_{j-1})$。令',
+        '',
+        '$$w_j := v_j - \\sum_{i=1}^{j-1} \\langle e_i, v_j \\rangle\\, e_i, \\qquad e_j := \\frac{w_j}{\\|w_j\\|}$$',
+        '',
+        '1. **$\\langle e_k, w_j\\rangle = 0$（$k < j$）**：由 $\\langle e_k, e_i\\rangle = \\delta_{ki}$ 逐个消掉。',
+        '2. **$w_j \\ne 0$**：否则 $v_j \\in \\operatorname{span}(e_1, \\ldots, e_{j-1}) = \\operatorname{span}(v_1, \\ldots, v_{j-1})$，与线性无关矛盾。',
+        '3. 于是 $e_j$ 与前面的都正交，且 $\\|e_j\\| = 1$。',
+        '4. **张成不变**：$v_j \\in \\operatorname{span}(e_1, \\ldots, e_j)$ 与 $e_j \\in \\operatorname{span}(v_1, \\ldots, v_j)$ 互相给出，故两个张成相等。∎',
+        '',
+        '有限维时对整组基做一遍，就得到标准正交基。'
+      ].join('\n'),
+      note: '第 1 步「逐个消掉」正是把 $v_j$ 减去它在每个已有方向上的分量 —— 这就是「正交化」这个词的字面意思。第 2 步用线性无关保证不会归零。'
+    },
+    {
+      id: 'imp.projection-formula',
+      kind: 'implication',
+      sources: ['def.orthogonal-projection', 'thm.gram-schmidt'],
+      target: 'thm.projection-formula',
+      title: '正交投影 + 标准正交基 $\\implies$ 最佳逼近与显式公式',
+      proof: [
+        '**显式公式**：设 $(e_1, \\ldots, e_k)$ 是 $U$ 的标准正交基，令 $u := \\sum_i \\langle e_i, v\\rangle e_i \\in U$。则对每个 $j$，',
+        '',
+        '$$\\langle e_j, v - u\\rangle = \\langle e_j, v\\rangle - \\sum_i \\langle e_i, v\\rangle\\,\\langle e_j, e_i\\rangle = \\langle e_j, v\\rangle - \\langle e_j, v\\rangle = 0$$',
+        '',
+        '故 $v - u \\perp U$，即 $u = P_U v$。',
+        '',
+        '**最佳逼近**：对任意 $u\' \\in U$，由 $v - P_U v \\perp U$ 与 $P_U v - u\' \\in U$ 得（勾股定理）',
+        '',
+        '$$\\|v - u\'\\|^{2} = \\|v - P_U v\\|^{2} + \\|P_U v - u\'\\|^{2} \\ge \\|v - P_U v\\|^{2}$$',
+        '',
+        '等号仅当 $P_U v = u\'$。',
+        '',
+        '**Bessel**：把 $v = P_U v + (v - P_U v)$ 用勾股定理，并注意 $\\|P_U v\\|^{2} = \\sum_i |\\langle e_i, v\\rangle|^{2}$（对标准正交组合直接展开）。∎'
+      ].join('\n'),
+      note: '证明里「$v - P_Uv \\perp U$ 且 $P_Uv - u\' \\in U$」这两条是勾股定理能用的全部理由 —— 也是「正交投影」比一般射影好的地方。'
+    },
+    {
+      id: 'imp.spectral-theorem',
+      kind: 'implication',
+      sources: ['def.normal-operator', 'thm.diagonalizable', 'thm.evt', 'def.orthogonal-complement'],
+      target: 'thm.spectral-theorem',
+      title: '自伴性 + 紧性 $\\implies$ 谱定理（实对称）',
+      proof: [
+        '设 $T$ 是有限维实内积空间上的自伴算子。',
+        '',
+        '1. **存在实特征值**：单位球面 $S := \\{v : \\|v\\| = 1\\}$ 是紧集，函数 $f(v) := \\langle Tv, v\\rangle$ 连续，故在某点 $v_0$ 取到最大值 $\\lambda$（**最值定理**）。用 Lagrange 乘子（或直接对 $v_0$ 附近扰动求导）可得 $Tv_0 = \\lambda v_0$：即在约束 $\\|v\\|^{2} = 1$ 下 $f$ 的极值点满足 $\\nabla f = \\lambda \\nabla(\\|v\\|^{2})$，而两个梯度分别是 $2Tv_0$ 与 $2v_0$。于是 $\\lambda$ 是特征值，且由 $\\lambda = \\langle Tv_0, v_0\\rangle \\in \\mathbb{R}$ 知它是实数。',
+        '2. **特征子空间的不变性**：$U := E_\\lambda$ 是 $T$-不变的；由**自伴性**，$U^{\\perp}$ 也是 $T$-不变的：若 $w \\perp U$，则对 $u \\in U$，$\\langle u, Tw\\rangle = \\langle Tu, w\\rangle = \\langle \\lambda u, w\\rangle = \\lambda\\langle u, w\\rangle = 0$，即 $Tw \\perp U$。',
+        '3. **归纳**：$T|_{U^{\\perp}}$ 仍自伴，对 $\\dim U^{\\perp} < \\dim V$ 用归纳假设，得 $U^{\\perp} = E_{\\lambda_2}\\oplus\\cdots$（两两正交）。于是 $V = E_{\\lambda} \\oplus U^{\\perp}$ 是所有特征子空间的正交直和。',
+        '4. 在每个 $E_{\\lambda_i}$ 里取标准正交基（Gram–Schmidt），拼起来就是 $V$ 的标准正交基，$T$ 在其中是对角阵。∎'
+      ].join('\n'),
+      note: '第 1 步是**分析输入**（紧集上连续函数取最值），第 2 步是**自伴性唯一**被用到的地方。这也解释了为什么谱定理在实情形必须要求对称：没有自伴性，$U^{\\perp}$ 不必不变，归纳断掉。'
+    },
+    {
+      id: 'imp.spectral-normal',
+      kind: 'implication',
+      sources: ['thm.spectral-theorem', 'def.normal-operator'],
+      target: 'cor.spectral-normal',
+      title: '实谱定理 + 复化 $\\implies$ 复正规可酉对角化',
+      proof: [
+        '1. **自伴的情形**：复自伴算子（Hermite）的实谱定理版本：把 $V$ 看作实向量空间，$T$ 作为实算子是实对称的，由上一条得到实特征值与正交分解；再把实结构复化即得复情形。',
+        '2. **正规的情形**：$T$ 正规时写 $T = A + iB$，其中 $A := (T + T^{\\ast})/2$、$B := (T - T^{\\ast})/(2i)$ 都自伴；正规性等价于 $AB = BA$（直接展开 $T^{\\ast}T = TT^{\\ast}$ 即得）。',
+        '3. 由 $AB = BA$，它们**同时**可正交对角化：对 $A$ 的每个特征子空间 $E_\\lambda$，由 $AB = BA$ 得 $B(E_\\lambda) \\subseteq E_\\lambda$；在 $E_\\lambda$ 上对 $B$ 用实谱定理（同理复化），把所有这样的标准正交基拼起来即得。',
+        '4. 于是 $T$ 在同一组标准正交基下对角（对角元 $\\lambda_j + i\\mu_j$）。',
+        '5. **三条等价**：由对角形直接读出 —— $T^{\\ast} = T \\iff$ 所有对角元实；$T$ 酉 $\\iff |\\lambda|=1$；投影 $\\iff$ 特征值 $\\in\\{0,1\\}$ 且自伴。∎'
+      ].join('\n'),
+      note: '第 2 步的「正规 $\\iff$ $AB$ 交换」是这条推论的核心：**复正规算子 = 一对交换的自伴算子**，于是问题化归到实谱定理。'
+    },
+    {
+      id: 'imp.sylvester',
+      kind: 'implication',
+      sources: ['def.quadratic-form', 'thm.spectral-theorem'],
+      target: 'thm.sylvester-criterion',
+      title: '谱定理 $\\implies$ Sylvester 判据',
+      proof: [
+        '设 $A$ 实对称。',
+        '',
+        '**($\\Longleftarrow$)** 设所有顺序主子式 $D_k > 0$。对 $k$ 归纳证明 $A$ 的前 $k$ 阶主子矩阵正定：$k = 1$ 显然（$a_{11} = D_1 > 0$）。归纳步：把 $A_k$ 分块 $\\begin{pmatrix} A_{k-1} & b \\\\ b^{\\mathsf{T}} & a_{kk}\\end{pmatrix}$，由 $D_{k} = D_{k-1}\\cdot(a_{kk} - b^{\\mathsf{T}}A_{k-1}^{-1}b) > 0$（**分块行列式公式**）与归纳假设 $D_{k-1} > 0$ 得 Schur 补 $a_{kk} - b^{\\mathsf{T}}A_{k-1}^{-1}b > 0$；由 Schur 补正定 $\\implies A_k$ 正定。',
+        '',
+        '**($\\implies$)** 若 $A$ 正定，则每个左上角主子矩阵 $A_k$ 也正定（对 $A_k$ 上的 $x$ 补零得 $x^{\\mathsf{T}}A_kx = \\tilde x^{\\mathsf{T}}A\\tilde x > 0$）。由谱定理 $A_k = Q\\Lambda Q^{\\mathsf{T}}$（$\\Lambda$ 对角且对角元 $> 0$），故 $D_k = \\det A_k = \\prod_i \\lambda_i > 0$。∎'
+      ].join('\n'),
+      note: '两个方向的分量不同：($\\Longleftarrow$) 是**归纳 + Schur 补**（纯代数），($\\implies$) 用的是**谱定理**（特征值全正 $\\implies$ 行列式为正）。'
+    },
+    {
+      id: 'imp.svd',
+      kind: 'implication',
+      sources: ['thm.spectral-theorem', 'def.operator-adjoint'],
+      target: 'thm.svd',
+      title: '谱定理 $\\implies$ 奇异值分解',
+      proof: [
+        '设 $A \\in M_{m \\times n}(\\mathbb{R})$，秩 $r$。',
+        '',
+        '1. $A^{\\mathsf{T}}A \\in M_n$ 是**对称半正定**的（$x^{\\mathsf{T}}A^{\\mathsf{T}}Ax = \\|Ax\\|^{2} \\ge 0$），故由谱定理存在标准正交基 $v_1, \\ldots, v_n$ 与 $\\lambda_1 \\ge \\cdots \\ge \\lambda_n \\ge 0$ 使 $A^{\\mathsf{T}}A v_i = \\lambda_i v_i$。',
+        '2. 令 $\\sigma_i := \\sqrt{\\lambda_i}$，设 $\\sigma_1 \\ge \\cdots \\ge \\sigma_r > 0 = \\sigma_{r+1} = \\cdots$。对 $i \\le r$ 令 $u_i := A v_i / \\sigma_i$，则 $\\|u_i\\| = 1$ 且 $\\langle u_i, u_j\\rangle = \\delta_{ij}$（用 $\\langle Av_i, Av_j\\rangle = \\lambda_j\\delta_{ij}$）。',
+        '3. 把 $u_1, \\ldots, u_r$ 扩充成 $\\mathbb{R}^{m}$ 的标准正交基 $u_1, \\ldots, u_m$；把 $v_1, \\ldots, v_n$ 补全成标准正交基。则 $Av_i = \\sigma_i u_i$（$i \\le r$）且 $Av_i = 0$（$i > r$，因为 $\\|Av_i\\|^{2} = \\lambda_i = 0$）。',
+        '4. 以 $v_i$ 为定义域基、$u_i$ 为值域基写出矩阵：$A$ 在这两组基下是 $\\Sigma = \\operatorname{diag}(\\sigma_1, \\ldots, \\sigma_r, 0, \\ldots)$，即 $A = U\\Sigma V^{\\mathsf{T}}$。∎'
+      ].join('\n'),
+      note: '关键观察只有一条：**$A^{\\mathsf{T}}A$ 半正定** —— 于是谱定理给出正交的特征基，而 $A$ 把这组基送到一组正交向量上（差伸缩 $\\sigma_i$）。SVD 的全部内容就是这个观察的坐标化。'
+    },
+    {
+      id: 'dep.bilinearform-quadraticform',
+      kind: 'definition',
+      definition: 'def.bilinear-form',
+      usedBy: 'def.quadratic-form',
+      note: '对称双线性型 $B$ 与二次型 $q$ 由极化恒等式互相确定（$2B(u, v) = q(u + v) - q(u) - q(v)$），所以二次型是「对称双线性型的对角化写法」。'
+    }
+  ]
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 线性代数 ⑦：多重线性与张量
+   --------------------------------------------------------------------------
+   新星团 `algebra.multilinear`（8 点）。这一包造的是**把「多变量线性」变成
+   「单变量线性」的机器**：
+
+     双线性型 → 张量积（万有性质）→ 张量 ⊣ 内 Hom（伴随）
+       → 外幂 → 外代数 → 对称代数 → **行列式 = 最高外幂上的作用**
+
+   ⭐ 与图上别处的接口：
+     · `prop.module-tensor-universal`（模的张量积）—— 同一件事的一般版本
+     · `prop.tensor-hom-adjunction` 就是「张量 ⊣ 内 Hom」这只伴随
+     · 外代数让 `def.determinant` 与 `thm.det-exists-unique` 有了统一来源
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数：多重线性与张量',
+  nodes: [
+
+    {
+      id: 'def.bilinear-form',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '双线性型',
+      title: '双线性型（Bilinear Form）',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '张量'],
+      statement: [
+        '设 $V, W, U$ 是 $K$-向量空间。映射 $B : V \\times W \\to U$ 叫**双线性**的，当且仅当固定一个变元后，对另一个变元是线性的：',
+        '',
+        '$$B(v + cv\', w) = B(v, w) + c\\,B(v\', w), \\qquad B(v, w + cw\') = B(v, w) + c\\,B(v, w\')$$',
+        '',
+        '$V = W$、$U = K$ 时叫 $V$ 上的**双线性型**。记全体为 $\\operatorname{Bil}(V, W; U)$，它按逐点运算构成 $K$-向量空间。',
+        '',
+        '特例：内积（正定对称）、辛形式（非退化交错）、二次型的极化（对称）都是双线性型。'
+      ].join('\n'),
+      notes: '⭐ 双线性「比线性弱」：$B$ 不是 $V \\times W \\to U$ 的线性映射（$V \\times W$ 上的线性要求 $B(v + v\', w + w\') = B(v,w) + B(v\',w\')$，一般不对）。这正是张量积要解决的问题 —— **把双线性「翻译」成线性**。\n\n⭐ 固定一组基后，$\\operatorname{Bil}(V, W; K) \\cong M_{m \\times n}(K)$（取 $B(e_i, f_j)$），与「矩阵就是双线性型的系数」一致。\n\n⭐ $\\operatorname{Bil}(V, W; U) \\cong \\operatorname{Hom}(V \\otimes W, U)$ —— 这就是万有性质那一条。',
+      refs: ['Lang, Algebra, Ch. XVI', 'Roman, Advanced Linear Algebra, Ch. 14']
+    },
+    {
+      id: 'def.tensor-product-vs',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '张量积',
+      title: '向量空间的张量积 $V \\otimes W$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '张量'],
+      statement: [
+        '设 $V, W$ 是 $K$-向量空间。取它们的一组基 $(e_i)$、$(f_j)$，定义形式符号 $e_i \\otimes f_j$ 的**形式线性组合**全体',
+        '',
+        '$$V \\otimes_K W := \\Bigl\\{\\, \\sum_{i, j} c_{ij}\\, e_i \\otimes f_j \\,\\Bigr\\}$$',
+        '',
+        '配上双线性映射 $\\otimes : V \\times W \\to V \\otimes W$、$v \\otimes w$，满足',
+        '',
+        '$$(v + v\') \\otimes w = v \\otimes w + v\' \\otimes w, \\qquad v \\otimes (w + w\') = v \\otimes w + v \\otimes w\', \\qquad (cv) \\otimes w = v \\otimes (cw)$$',
+        '',
+        '则 $\\dim(V \\otimes W) = (\\dim V)(\\dim W)$，且这个构造**不依赖基的选取**（见万有性质）。'
+      ].join('\n'),
+      notes: '⭐ 元素分两类：**可分解张量** $v \\otimes w$ 与它们的**有限和**。后者才填满整个 $V \\otimes W$ —— 「一般张量不是单个 $v \\otimes w$」是初学者最常踩的坑。\n\n⚠ $v \\otimes w = 0$ 可以发生在 $v \\ne 0, w \\ne 0$ 时吗？不可以（张量积是自由构造，基底是 $e_i \\otimes f_j$）。这与「不可分解为纯张量」是两件事。\n\n⭐ 张量积是**对称的**（$V \\otimes W \\cong W \\otimes V$）且**结合的**，单位元是 $K$（$V \\otimes K \\cong V$）—— 于是有限维向量空间配上 $\\otimes$ 构成一个对称幺半范畴。',
+      refs: ['Lang, Algebra, Ch. XVI', 'Roman, Advanced Linear Algebra, Ch. 14']
+    },
+    {
+      id: 'thm.tensor-universal-property',
+      cluster: 'algebra.multilinear',
+      type: 'theorem',
+      label: '张量积的万有性质',
+      title: '定理：张量积把双线性映射换成线性映射',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '张量'],
+      statement: [
+        '对每个线性映射（更一般地：双线性映射）$B : V \\times W \\to U$，存在**唯一**的线性映射',
+        '',
+        '$$\\widetilde{B} : V \\otimes W \\to U, \\qquad \\widetilde{B}(v \\otimes w) = B(v, w)$$',
+        '',
+        '反之，任何线性映射 $\\widetilde B$ 与 $\\otimes$ 复合都给出双线性映射。于是有自然的同构',
+        '',
+        '$$\\operatorname{Hom}_K(V \\otimes W,\\ U) \\;\\cong\\; \\operatorname{Bil}(V, W; U)$$',
+        '',
+        '（对每个 $U$ 自然，这就是「张量积是双线性函子的**表示**」）'
+      ].join('\n'),
+      notes: '⭐ 一句话：**张量积是「多变量线性」的线性化装置** —— 所有双线性的东西，只要写成 $V \\otimes W$ 上的映射就自动变成线性的，后面整套线性代数都能用。\n\n⭐ 「唯一」是万有性质的核心：它保证 $V \\otimes W$ 在**同构唯一**的意义下被确定（存在性给构造、唯一性给「不依赖构造」）。这也是图上「同一招」第三次出现（张量积、商空间、外幂各一次）。\n\n⭐ 任意交换环上也成立（`prop.module-tensor-universal`），系数域只是最简单的情形。',
+      refs: ['Lang, Algebra, Ch. XVI']
+    },
+    {
+      id: 'prop.tensor-hom-adjunction',
+      cluster: 'algebra.multilinear',
+      type: 'proposition',
+      label: '张量 ⊣ 内 Hom',
+      title: '命题：$(-) \\otimes V \\dashv \\operatorname{Hom}(V, -)$',
+      regions: ['algebra'],
+      tags: ['命题', '线性代数', '张量', '伴随'],
+      statement: [
+        '固定 $V$。则对一切 $K$-向量空间 $W, U$ 有自然同构',
+        '',
+        '$$\\operatorname{Hom}_K(W \\otimes V,\\ U) \\;\\cong\\; \\operatorname{Hom}_K\\bigl( W,\\ \\operatorname{Hom}_K(V, U) \\bigr)$$',
+        '',
+        '即函子 $(-) \\otimes V$ 是 $\\operatorname{Hom}(V, -)$ 的**左伴随**：',
+        '',
+        '$$(-) \\otimes_K V \\;\\dashv\\; \\operatorname{Hom}_K(V, -)$$'
+      ].join('\n'),
+      notes: '⭐ 这是**张量–内 Hom 伴随**（tensor–hom adjunction），也是「自由–遗忘」之外的第二个伴随范本：它把「两个变量的线性映射」与「取值在函数空间里的线性映射」对应起来（**curry 化**）。\n\n⭐ 它在范畴论里的地位：「$\\otimes$ 是闭的」这一条（对称幺半闭范畴）就是这只伴随的存在性 —— 图上 `def.adjoint` 那一团可以直接接过来。\n\n⚠ 「自然」两个字不能省：同构本身容易写，但要让它对 $W, U$ 自然，才足以称为伴随。这也是伴随与「碰巧同构」的区别。',
+      refs: ['Lang, Algebra, Ch. XVI', 'Mac Lane, Categories for the Working Mathematician, Ch. IV']
+    },
+    {
+      id: 'def.exterior-power',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '外幂',
+      title: '外幂 $\\bigwedge^{k} V$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '张量'],
+      statement: [
+        '设 $V$ 是 $K$-向量空间。$V$ 的 **$k$ 次外幂** $\\bigwedge^{k} V$ 是 $V^{\\otimes k}$ 商掉由',
+        '',
+        '$$v_1 \\otimes \\cdots \\otimes v_k \\quad \\text{with}\\ v_i = v_j\\ (i \\ne j)$$',
+        '',
+        '张成的子空间所得的商空间；记像为 $v_1 \\wedge \\cdots \\wedge v_k$。于是',
+        '',
+        '$$v \\wedge v = 0, \\qquad v \\wedge w = -\\, w \\wedge v$$',
+        '',
+        '并且 $\\dim \\bigwedge^{k} V = \\binom{n}{k}$（$n = \\dim V$）；$k > n$ 时 $\\bigwedge^{k}V = 0$。'
+      ].join('\n'),
+      notes: '⭐ 几何含义：$\\dim V = n$ 时 $\\bigwedge^{n} V$ 是**一维**的，而 $v_1 \\wedge \\cdots \\wedge v_n$ 正是「这 $n$ 个向量张成的平行体的有向体积」——它的系数就是行列式。\n\n⭐ 交错性是「商掉」实现的：$v \\wedge v = 0$（把 $v \\otimes v$ 送进商），这正是 `def.alternating-form` 那一条里「两个变元相等则为零」。\n\n⚠ 特征 $2$ 的域里 $v \\wedge w = -w \\wedge v$ 与 $v \\wedge w = w \\wedge v$ 是同一句话（$-1 = 1$），交错与对称不再可分。本图默认 $\\operatorname{char} K \\ne 2$。',
+      refs: ['Lang, Algebra, Ch. XIX', 'Roman, Advanced Linear Algebra, Ch. 14']
+    },
+    {
+      id: 'def.exterior-algebra',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '外代数',
+      title: '外代数 $\\bigwedge^{\\bullet} V$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '张量'],
+      statement: [
+        '把各次外幂直和起来：',
+        '',
+        '$$\\bigwedge^{\\bullet} V := \\bigoplus_{k \\ge 0} \\bigwedge^{k} V \\qquad (\\bigwedge^{0} V := K,\\ \\bigwedge^{1} V := V)$$',
+        '',
+        '它按「先张量再取像」的乘法 $\\wedge$ 构成一个**分次交换代数**：',
+        '',
+        '$$(u \\wedge v) \\wedge w = u \\wedge (v \\wedge w), \\qquad v \\wedge w = (-1)^{|v| |w|}\\ w \\wedge v$$',
+        '',
+        '（$|v|$ 是元素的次数。「分次交换」意味着奇次元素之间反交换。）'
+      ].join('\n'),
+      notes: '⭐ 外代数是「**带符号的多项式代数**」：它与对称代数一起构成两个极端 —— 对称代数允许交换、外代数强制反交换。两者的共同来源是「把 $V^{\\otimes k}$ 按对称群作用取商 / 取不变量」。\n\n⭐ 用途清单：微分形式（$\\bigwedge^{k}(\\mathbb{R}^{n})^{\\ast}$ 就是 $k$-形式空间）、体积与行列式、Clifford 代数（把 $\\wedge$ 换成 $v^{2} = -\\|v\\|^{2}$）、de Rham 复形。\n\n⚠ 它是**非交换**的（奇次部分反交换），但**分次交换**：这一点在写符号时最容易错（换两个奇元素时要带一个负号）。',
+      refs: ['Lang, Algebra, Ch. XIX']
+    },
+    {
+      id: 'def.symmetric-algebra',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '对称代数',
+      title: '对称代数 $\\operatorname{Sym}^{\\bullet} V$',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '张量'],
+      statement: [
+        '与外幂平行地，对称幂定义为 $V^{\\otimes k}$ 商掉由 $v \\otimes w - w \\otimes v$ 张成的子空间，记像为 $v \\cdot w$（交换）；再把各次直和起来得**对称代数**',
+        '',
+        '$$\\operatorname{Sym}^{\\bullet} V := \\bigoplus_{k \\ge 0} \\operatorname{Sym}^{k} V$$',
+        '',
+        '它是一个**交换**分次代数，并且',
+        '',
+        '$$\\dim \\operatorname{Sym}^{k} V = \\binom{n + k - 1}{k}, \\qquad \\operatorname{Sym}^{\\bullet} V \\cong K[x_1, \\ldots, x_n] \\ (n = \\dim V)$$'
+      ].join('\n'),
+      notes: '⭐ 三个「$V^{\\otimes \\bullet}$ 的商」构成一张完整的表：\n\n- 全不商 $\\implies$ **张量代数** $T^{\\bullet}V$（非交换、自由）；\n- 商掉 $vw - wv$ $\\implies$ **对称代数** $\\operatorname{Sym}^{\\bullet}V \\cong K[x_1, \\ldots, x_n]$（交换）；\n- 商掉 $vw + wv$ $\\implies$ **外代数** $\\bigwedge^{\\bullet}V$（分次交换）。\n\n⭐ «$\\operatorname{Sym}^{\\bullet}V \\cong K[x_1,\\ldots,x_n]$» 说明多项式环不是凭空造出来的 —— 它就是「$n$ 维空间的对称代数」。这解释了为什么多项式与多重线性型的关系这么紧（也回到 `def.polynomial-ring`）。\n\n⭐ 二重线性型的分类（对称 / 交错）在代数层面的化身就是这两个商。',
+      refs: ['Lang, Algebra, Ch. XIX']
+    },
+    {
+      id: 'thm.det-as-exterior',
+      cluster: 'algebra.multilinear',
+      type: 'theorem',
+      label: '行列式 = 最高外幂上的作用',
+      title: '定理：行列式就是 $T$ 在 $\\bigwedge^{n}V$ 上的作用',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '张量', '行列式'],
+      statement: [
+        '设 $\\dim_K V = n < \\infty$，$T : V \\to V$ 线性。因为 $\\dim \\bigwedge^{n} V = 1$，$T$ 诱导出的一维空间上的线性映射',
+        '',
+        '$$\\bigl( \\textstyle\\bigwedge^{n} T \\bigr) : \\bigwedge^{n} V \\to \\bigwedge^{n} V, \\qquad v_1 \\wedge \\cdots \\wedge v_n \\mapsto T(v_1) \\wedge \\cdots \\wedge T(v_n)$$',
+        '',
+        '必是「乘一个数」。那个数正是行列式：',
+        '',
+        '$$\\bigl( \\textstyle\\bigwedge^{n} T \\bigr)(v_1 \\wedge \\cdots \\wedge v_n) = (\\det T)\\,(v_1 \\wedge \\cdots \\wedge v_n)$$',
+        '',
+        '等价说法：$\\det T$ 是 $T$ 在**最高外幂**这个一维空间上的特征值。'
+      ].join('\n'),
+      notes: '⭐ 这条定理把行列式的三条公理**一次性地解释掉了**：\n- 多重线性 $\\Longleftarrow$ $\\wedge$ 对每个变元线性；\n- 交错性 $\\Longleftarrow$ $v \\wedge v = 0$（商空间的构造）；\n- 规范性 $\\Longleftarrow$ 取 $v_i = e_i$ 时 $e_1 \\wedge \\cdots \\wedge e_n$ 是基、系数定为 $1$。\n\n⭐ 于是 `thm.det-exists-unique` 的「存在唯一性」变成了「一维空间上的线性映射只能乘一个数」——**同一个定理的第二种证明**，而且是概念上更干净的那种。\n\n⭐ 它同时说明：$\\det$ 是**换基不变的**（因为 $\\bigwedge^{n}T$ 不依赖基）、$\\det(AB) = \\det A \\det B$（函子性：$\\bigwedge^{n}(AB) = \\bigwedge^{n}A \\circ \\bigwedge^{n}B$，而一维空间上映射的复合就是乘法）—— `thm.det-multiplicative` 也是一条推论。',
+      refs: ['Lang, Algebra, Ch. XIX', 'Roman, Advanced Linear Algebra, Ch. 14']
+    }
+  ],
+
+  edges: [
+
+    /* ------------------------------------------------------------ 定义依赖 */
+    {
+      id: 'dep.multilinearform-bilinear',
+      kind: 'definition',
+      definition: 'def.multilinear-form',
+      usedBy: 'def.bilinear-form',
+      note: '双线性型就是 $n = 2$ 的多重线性型（多了一层「两个空间可以不同、值域可以不是 $K$」的推广）。'
+    },
+    {
+      id: 'dep.bilinear-tensor',
+      kind: 'definition',
+      definition: 'def.bilinear-form',
+      usedBy: 'def.tensor-product-vs',
+      note: '张量积的万有性质就是「把双线性映射换成线性映射」——对象是双线性映射。'
+    },
+    {
+      id: 'dep.tensor-exterior',
+      kind: 'definition',
+      definition: 'def.tensor-product-vs',
+      usedBy: 'def.exterior-algebra',
+      note: '外代数是张量代数 $V^{\\otimes\\bullet}$ 的商（商掉 $v \\otimes v$ 型的元素）。'
+    },
+    {
+      id: 'dep.tensor-symmetric',
+      kind: 'definition',
+      definition: 'def.tensor-product-vs',
+      usedBy: 'def.symmetric-algebra',
+      note: '对称代数同样是张量代数的商（商掉 $v \\otimes w - w \\otimes v$）。'
+    },
+    {
+      id: 'dep.alternating-exteriorpower',
+      kind: 'definition',
+      definition: 'def.alternating-form',
+      usedBy: 'def.exterior-power',
+      note: '外幂的「交错」性质（$v \\wedge v = 0$）与交错型是同一个条件的两副面孔：一个是代数里的乘法，一个是多重线性型的取值。'
+    },
+
+    /* ---------------------------------------------------------------- 证明 */
+    {
+      id: 'imp.tensor-universal-property',
+      kind: 'implication',
+      sources: ['def.tensor-product-vs', 'def.quotient-vs'],
+      target: 'thm.tensor-universal-property',
+      title: '张量积的构造 $\\implies$ 万有性质',
+      proof: [
+        '**存在性**：给定双线性 $B : V \\times W \\to U$。先在 $V \\times W$ 生成的自由向量空间（形式上取全部 $(v, w)$ 的形式线性组合）上定义 $\\widehat B\\bigl( \\sum c_{ij}(v_i, w_j) \\bigr) := \\sum c_{ij} B(v_i, w_j)$，这是线性的；再由 $B$ 的双线性，$\\widehat B$ 在「双线性关系」张成的子空间上取零，于是由**商空间的万有性质**（`thm.quotient-universal-vs`）它唯一地下降为 $\\widetilde B : V \\otimes W \\to U$。',
+        '',
+        '**唯一性**：任何满足 $\\widetilde B(v \\otimes w) = B(v, w)$ 的线性映射在可分解张量上取值已定；而可分解张量张成 $V \\otimes W$，故线性映射被取值唯一确定。',
+        '',
+        '**反向**：给定线性 $\\widetilde B$，则 $B := \\widetilde B \\circ \\otimes$ 是双线性的（因为 $\\otimes$ 双线性）。',
+        '',
+        '两个方向互逆且自然，故 $\\operatorname{Hom}(V \\otimes W, U) \\cong \\operatorname{Bil}(V, W; U)$。∎'
+      ].join('\n'),
+      note: '结尾的「自然」两字是**伴随**的入口：正因为同构对 $U$（以及 $V, W$）自然，张量积才是一个真正的函子层面的构造，而不仅是「某个具体的商空间」。'
+    },
+    {
+      id: 'imp.tensor-hom-adjunction',
+      kind: 'implication',
+      sources: ['thm.tensor-universal-property'],
+      target: 'prop.tensor-hom-adjunction',
+      title: '万有性质 $\\implies$ 张量 ⊣ 内 Hom',
+      proof: [
+        '由万有性质，对一切 $W, U$：',
+        '',
+        '$$\\operatorname{Hom}(W \\otimes V, U) \\cong \\operatorname{Bil}(W, V; U)$$',
+        '另一方面，**双线性映射与「取值在线性映射里的线性映射」一一对应**（curry 化）：给定 $B : W \\times V \\to U$，对每个 $w$ 得到 $B(w, -) \\in \\operatorname{Hom}(V, U)$，且 $w \\mapsto B(w, -)$ 线性 —— 这个对应是双射。于是',
+        '',
+        '$$\\operatorname{Bil}(W, V; U) \\cong \\operatorname{Hom}\\bigl( W, \\operatorname{Hom}(V, U) \\bigr)$$',
+        '',
+        '两式复合即得所要的同构，且逐条验证它对 $W, U$ 自然（同构由「$w \\mapsto$ 那个线性映射」显式给出，与别的变元无关）。∎'
+      ].join('\n'),
+      note: '整条证明没有用到 $V$ 的有限维（这是纯范畴论的事实），只用到张量积的万有性质。'
+    },
+    {
+      id: 'imp.det-as-exterior',
+      kind: 'implication',
+      sources: ['def.exterior-power', 'thm.det-exists-unique'],
+      target: 'thm.det-as-exterior',
+      title: '外幂的一维性 + 存在唯一性 $\\implies$ 行列式就是那个系数',
+      proof: [
+        '设 $\\dim V = n$。',
+        '',
+        '1. **$\\bigwedge^{n}V$ 是一维的**：取 $V$ 的基 $e_1, \\ldots, e_n$，则 $\\{e_{i_1}\\wedge\\cdots\\wedge e_{i_n}\\}$ 中只有 $i_1, \\ldots, i_n$ 互异的那些非零，即只有 $e_1 \\wedge \\cdots \\wedge e_n$ 一个（差符号），故 $\\dim \\bigwedge^{n}V = 1$。',
+        '2. **一维空间上的线性映射就是乘一个数**：设 $\\dim L = 1$、$\\varphi : L \\to L$ 线性，取 $0 \\ne \\ell \\in L$，则 $\\varphi(\\ell) = c\\,\\ell$ 对某个 $c$；对任意 $t\\ell$ 有 $\\varphi(t\\ell) = t\\varphi(\\ell) = tc\\ell$，故 $\\varphi$ 就是「乘 $c$」。',
+        '3. **定出那个数**：定义 $D(v_1, \\ldots, v_n) := $ 满足 $T(v_1)\\wedge\\cdots\\wedge T(v_n) = D\\cdot(e_1\\wedge\\cdots\\wedge e_n)$ 的系数（先固定 $v_i = e_i$ 定义，再对一般 $v_i$ 用交错多重线性延拓）。逐条验证 $D$ 满足多重线性、交错、规范化三条公理，由**行列式的存在唯一性**得 $D = \\det T$。',
+        '',
+        '于是 $(\\bigwedge^{n}T)(v_1 \\wedge \\cdots \\wedge v_n) = (\\det T)(v_1 \\wedge \\cdots \\wedge v_n)$。∎'
+      ].join('\n'),
+      note: '第 3 步的做法值得记住：**先把「一维空间上的系数」定义出来，再用存在唯一性把它认成行列式** —— 这样就不必真的去算那个系数。'
     }
   ]
 });

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法 用
 - 被 [`def.irreducible-poly`](../nodes/def.irreducible-poly.md) 不可约多项式 用
+- 被 [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式 用

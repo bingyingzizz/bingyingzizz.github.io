@@ -9,6 +9,9 @@ $$[T]_{\mathcal{B}'} = P^{-1}\,[T]_{\mathcal{B}}\,P$$
 
 此时称两个矩阵**相似**（记 $A \sim B$）。相似是一个等价关系。
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.similarity`](../nodes/def.similarity.md) 相似 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.change-of-basis.2.md](./thm.change-of-basis.2.md)
 

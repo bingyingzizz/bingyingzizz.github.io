@@ -1,6 +1,6 @@
 # 行列式　`def.determinant`
 行列式 $\det A$（Determinant）
-layer 3 · 定义 · 矩阵与行列式 · 抽象代数
+layer 12 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.determinant)　·　[节点索引](../index.md)
 
 对 $A = (a_{ij}) \in M_n(K)$，定义**行列式**

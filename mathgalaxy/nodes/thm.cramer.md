@@ -1,6 +1,6 @@
 # Cramer 法则　`thm.cramer`
 定理（Cramer）：用行列式解方程组
-layer 12 · 定理 · 矩阵与行列式 · 抽象代数
+layer 14 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.cramer)　·　[节点索引](../index.md)
 
 设 $A \in M_n(K)$ 且 $\det A \ne 0$，$b \in K^{n}$。则方程组 $Ax = b$ 有唯一解，且

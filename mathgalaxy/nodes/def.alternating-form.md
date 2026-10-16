@@ -1,6 +1,6 @@
 # 交错型　`def.alternating-form`
 交错型（Alternating Form）与对称型
-layer 1 · 定义 · 矩阵与行列式 · 抽象代数
+layer 10 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.alternating-form)　·　[节点索引](../index.md)
 
 设 $f : V^{n} \to K$ 是多重线性型。

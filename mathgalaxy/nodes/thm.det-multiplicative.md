@@ -1,6 +1,6 @@
 # 行列式的乘性　`thm.det-multiplicative`
 定理：$\det(AB) = \det A \cdot \det B$
-layer 4 · 定理 · 矩阵与行列式 · 抽象代数
+layer 13 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.det-multiplicative)　·　[节点索引](../index.md)
 
 对 $A, B \in M_n(K)$：

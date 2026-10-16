@@ -8,4 +8,4 @@
 - **4** `def.essential-sup` essential supremum · layer 16 · L^p 空间
 - **4** `prop.chaus-reflective` Stone–Čech compactification · layer 16 · 紧 Hausdorff 空间
 
-(825 of 834 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)
+(863 of 870 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)

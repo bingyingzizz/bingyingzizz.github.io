@@ -1,6 +1,6 @@
 # 因式定理与根　`thm.factor-theorem`
 定理：因式定理 $f(a) = 0 \iff (x - a) \mid f$
-layer 10 · 定理 · 多项式与因式分解 · 抽象代数
+layer 11 · 定理 · 多项式与因式分解 · 抽象代数
 [在星图里打开](../#n=thm.factor-theorem)　·　[节点索引](../index.md)
 
 设 $f \in K[x]$、$a \in K$。则

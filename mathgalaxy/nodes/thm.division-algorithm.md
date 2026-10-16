@@ -1,6 +1,6 @@
 # 带余除法　`thm.division-algorithm`
 定理：带余除法（$K[x]$ 是欧几里得整环）
-layer 9 · 定理 · 多项式与因式分解 · 抽象代数
+layer 10 · 定理 · 多项式与因式分解 · 抽象代数
 [在星图里打开](../#n=thm.division-algorithm)　·　[节点索引](../index.md)
 
 设 $K$ 是域，$f, g \in K[x]$，$g \ne 0$。则存在**唯一**的 $q, r \in K[x]$ 使

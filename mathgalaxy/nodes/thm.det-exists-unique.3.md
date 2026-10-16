@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.det-laplace`](../nodes/prop.det-laplace.md) Laplace 展开
+- ⇒ [`thm.det-as-exterior`](../nodes/thm.det-as-exterior.md) 行列式 = 最高外幂上的作用

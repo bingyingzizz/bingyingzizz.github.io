@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.fundamental-algebra`](../nodes/thm.fundamental-algebra.md) 代数基本定理
+- ⇒ [`thm.jordan-canonical-form`](../nodes/thm.jordan-canonical-form.md) Jordan 标准形
