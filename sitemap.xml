@@ -46,14 +46,14 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.hartogs.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.vs.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.vsbasis.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.metric-space.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.complete.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.totally-bounded.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.sequentially-compact.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.compact.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.metric-compact-equiv.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.compact-subset-closed.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.subset-compact-equiv.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.metric-space.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.complete.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.totally-bounded.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.sequentially-compact.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.compact.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.metric-compact-equiv.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.compact-subset-closed.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.subset-compact-equiv.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.fundamental-class.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.set-ring.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.sigma-ring.html</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
@@ -774,28 +774,28 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.functor-preserves-monoid-objects.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.adjunction-extends-to-diagrams.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.kan-extension-fully-faithful.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.hausdorff-reflective.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.normal-locally-closed.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.compact-basic-operations.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.quotient-of-compact.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.totally-disconnected-subspace.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.profinite-sets-spaces.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.continuous-map-space-metric.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.ind-representable-iff-left-exact.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.covering-sieves-filter.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.site-covering-families-pretopology.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheafification-image.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheafification-slice-colimit.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheaf-hom-computed-in-presheaves.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.inverse-image-constant-sheaf.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.stalk-of-sheafification.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.module-tensor-universal.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.set-top-ab-complete.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.adjunction-composition.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.connected-image-closure.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sieve-generated-by-family.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.pontryagin-finite-dim-banach.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.hausdorff-reflective.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.normal-locally-closed.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.compact-basic-operations.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.quotient-of-compact.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.totally-disconnected-subspace.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.profinite-sets-spaces.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.continuous-map-space-metric.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.ind-representable-iff-left-exact.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.covering-sieves-filter.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.site-covering-families-pretopology.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheafification-image.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheafification-slice-colimit.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sheaf-hom-computed-in-presheaves.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.inverse-image-constant-sheaf.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.stalk-of-sheafification.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.module-tensor-universal.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.set-top-ab-complete.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.adjunction-composition.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.connected-image-closure.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.sieve-generated-by-family.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.pontryagin-finite-dim-banach.html</loc><lastmod>2026-10-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.chaus-quotient-equiv.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.weak-hausdorff-k-closed.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.topology-alternative-axiom.html</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
