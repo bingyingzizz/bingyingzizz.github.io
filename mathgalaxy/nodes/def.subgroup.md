@@ -12,7 +12,9 @@ layer 7 · 定义 · 代数结构 · 抽象代数
 （结合律是从 $G$ 里继承的，不必重查。）
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用
+- 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
+
+- …另有出边，续页见 [nodes/def.subgroup.3.md](./def.subgroup.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.subgroup.2.md](./def.subgroup.2.md)

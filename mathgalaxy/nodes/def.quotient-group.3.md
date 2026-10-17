@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.quotient-group)　·　第 1 页 [nodes/def.quotient-group.md](./def.quotient-group.md)　·　上一页 [nodes/def.quotient-group.2.md](./def.quotient-group.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.composition-series`](../nodes/def.composition-series.md) 合成列 用
+- 被 [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群 用
 - 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用
 - 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用
 - 被 [`def.ideal`](../nodes/def.ideal.md) 理想 用

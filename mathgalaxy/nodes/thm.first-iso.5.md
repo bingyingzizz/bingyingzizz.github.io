@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像：用到了定义 群同态、核与像　[proofs/def-dep.firstiso-hom.md](../proofs/def-dep.firstiso-hom.md)
+
+> 续见 [nodes/thm.first-iso.6.md](./thm.first-iso.6.md)

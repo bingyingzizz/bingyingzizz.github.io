@@ -13,7 +13,7 @@ $$gH := \{\, gh : h \in H \,\}, \qquad Hg := \{\, hg : h \in H \,\}.$$
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/def-dep.normal-group.md](../proofs/def-dep.normal-group.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用
+- 被 [`def.simple-group`](../nodes/def.simple-group.md) 单群 用
 
 - …另有出边，续页见 [nodes/def.normal-subgroup.2.md](./def.normal-subgroup.2.md)
 
