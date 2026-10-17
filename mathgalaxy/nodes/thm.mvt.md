@@ -13,7 +13,7 @@ $$f(b) - f(a) = f'(\xi)\,(b - a)$$
 - [`thm.rolle`](../nodes/thm.rolle.md) Rolle 中值定理：Rolle 定理 $\implies$ Lagrange 中值定理　[proofs/imp.mvt.md](../proofs/imp.mvt.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.constant-iff-zero-derivative`](../nodes/cor.constant-iff-zero-derivative.md) 导数为零 ⟺ 常函数
+- ⇒ [`thm.mixed-partials`](../nodes/thm.mixed-partials.md) 混合偏导相等
 
 - …另有出边，续页见 [nodes/thm.mvt.2.md](./thm.mvt.2.md)
 

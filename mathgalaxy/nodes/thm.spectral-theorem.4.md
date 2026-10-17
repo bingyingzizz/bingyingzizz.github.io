@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.svd`](../nodes/thm.svd.md) 奇异值分解
+- ⇒ [`thm.second-derivative-test`](../nodes/thm.second-derivative-test.md) 极值判别（Hessian 判据）

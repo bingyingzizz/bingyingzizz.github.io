@@ -7,3 +7,4 @@
 - 被 [`thm.matrix-linear-map`](../nodes/thm.matrix-linear-map.md) 线性映射 ⟷ 矩阵 用
 - ⇒ [`thm.matrix-linear-map`](../nodes/thm.matrix-linear-map.md) 线性映射 ⟷ 矩阵
 - 被 [`def.invariant-subspace`](../nodes/def.invariant-subspace.md) 不变子空间 用
+- 被 [`def.total-differential`](../nodes/def.total-differential.md) 可微与全微分 用

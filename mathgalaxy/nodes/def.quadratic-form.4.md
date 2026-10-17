@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.sylvester-criterion`](../nodes/thm.sylvester-criterion.md) Sylvester 判据 用
 - ⇒ [`thm.sylvester-criterion`](../nodes/thm.sylvester-criterion.md) Sylvester 判据
+- 被 [`thm.second-derivative-test`](../nodes/thm.second-derivative-test.md) 极值判别（Hessian 判据） 用

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.quadratic-form`](../nodes/def.quadratic-form.md) 二次型 用
 - 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积 用
+- 被 [`def.hessian`](../nodes/def.hessian.md) Hessian 矩阵 用

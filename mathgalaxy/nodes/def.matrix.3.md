@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.elementary-matrix`](../nodes/def.elementary-matrix.md) 初等变换与初等矩阵 用
 - ⇒ [`thm.matrix-linear-map`](../nodes/thm.matrix-linear-map.md) 线性映射 ⟷ 矩阵
+- 被 [`def.jacobian`](../nodes/def.jacobian.md) Jacobi 矩阵 用

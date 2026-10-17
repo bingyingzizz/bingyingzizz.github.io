@@ -8,6 +8,7 @@
 - 被 [`def.matrix`](../nodes/def.matrix.md) 矩阵 用
 - 被 [`def.multilinear-form`](../nodes/def.multilinear-form.md) 多重线性型 用
 - 被 [`def.inner-product`](../nodes/def.inner-product.md) 内积 用
+- 被 [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间 用
 - 被 [`thm.vsbasis`](../nodes/thm.vsbasis.md) 每个向量空间有基 用
 - ～弱边 [`def.finchar`](../nodes/def.finchar.md) 有限特征
 - ～弱边 [`def.generated-sigma`](../nodes/def.generated-sigma.md) 生成的 σ-代数

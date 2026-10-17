@@ -6,3 +6,4 @@
 - 被 [`def.operator-adjoint`](../nodes/def.operator-adjoint.md) 伴随算子 用
 - 被 [`def.isometry`](../nodes/def.isometry.md) 等距与正交变换 用
 - ⇒ [`thm.cauchy-schwarz`](../nodes/thm.cauchy-schwarz.md) Cauchy–Schwarz
+- 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
