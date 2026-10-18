@@ -1384,15 +1384,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          电脑和平板上看得见，手机因为屏幕小而看不出来）。半径 1.6 ≈ 8 个世界单位，
          云雾本来就是糊的，形状与浓淡无差别；成本 0.2ms 且只在开页 / 改显隐时发生。 */
       texBlur: 1.6,
-      blobsPerRegion: 15,         // 每个板块的云朵数
-      blobAlpha: 0.038,           // 单朵云的基础不透明度（多朵叠加后会更深）
-      centerAlpha: 0.033,         // 板块中心大团雾
+      blobsPerRegion: 12,         // 每个板块的云朵数
+      blobAlpha: 0.030,           // 单朵云的基础不透明度（多朵叠加后会更深）
+      centerAlpha: 0.025,         // 板块中心大团雾
       nodeAlpha: 0.025,           // 每个节点周围的小团雾
-      spread: 0.60,               // 云朵分布半径 / 板块半径
+      spread: 0.52,               // 云朵分布半径 / 板块半径
       blobRadiusMin: 0.30,
       blobRadiusMax: 0.50,
-      cloudMargin: 60,           // 板块云半径 = 专属节点最大离心距 + 该余量
-      cloudRadiusMin: 200,
+      cloudMargin: 36,           // 板块云半径 = 专属节点最大离心距 + 该余量
+      cloudRadiusMin: 160,
       dilate: 1.45                // 纹理画布在内容范围外多留的边距
     },
 
@@ -1429,20 +1429,26 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             出现 / 消失）。四档：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
             切换点 = tierBound × (1±tierHysteresis)，曲线在切换点之前已经到 0。 */
       sectorNameIn:   { rel: [0.10, 0.45] },  // 大板块名：最远处就亮（≈任何可达缩放都亮）
-      sectorNameOut:  { rel: [1.00, 1.065] }, // 进领域档（1.08×1.01）之前归零
-      galaxyNameIn:   { rel: [1.095, 1.26] }, // 领域名：全图那一档**不出**，放大后才出
-      galaxyNameOut:  { rel: [1.94, 2.005] }, // 进星团档（2.03×1.01）之前归零
-      clusterNameIn:  { rel: [2.055, 2.30] }, // 星团名：放大到领域尺度才出
+      sectorNameOut:  { rel: [1.00, 1.072] }, // 进领域档（1.08×0.995=1.0746）之前归零
+      galaxyNameIn:   { rel: [1.078, 1.14] }, // 领域名：全图那一档**不出**，放大后快速亮起来
+      galaxyNameOut:  { rel: [1.94, 2.015] }, // 进星团档（2.03×0.995=2.0199）之前归零
+      clusterNameIn:  { rel: [2.042, 2.15] }, // 星团名：放大到领域尺度才出
       clusterNameOut: { rel: [3.85, 4.80] },
-      clusterLinkOut: { rel: [1.00, 2.80] },  // 团级粗线：全图最亮，放大后退场
+      clusterLinkOut: { rel: [1.05, 2.20] },  // 团级粗线：全图最亮，放大到星团档就退场
       trunkNameIn:    { rel: [1.35, 1.75] },  // 主干名：和领域名同一档出现（全图只剩大板块名）
 
-      /* 档位边界（×k₀）与回差：进得晚（×1.01）、出得早（×0.99）⇒ 死区里不闪。
-         ⚠️ 边界必须落在上面曲线的缝隙里：
-            档 0→1 在 [1.065, 1.095]、档 1→2 在 [2.005, 2.055]、档 2→3 在 [4.80, …]。
-            注意 B1 取 2.03 而不是 2.00：否则「放大到 2×k₀」正好落进缝隙，一屏没有大字。 */
+      /* 档位边界（×k₀）与回差：进得晚（×1.005）、出得早（×0.995）⇒ 死区里不闪。
+         ⚠️ 回差从 0.01 收到 **0.005**：死区 = 2h×B ≈ 1%（板块→领域）/ 2%（领域→星团）的 k₀。
+            用户报的「名称交接有很小一段空档」就是这段 —— 之前 0.01 时是 3%~5%，
+            轮滑一格就跨过去了，看起来像「大板块标题没了、领域名又很淡」。 */
       tierBound: [1.08, 2.03, 4.90],
-      tierHysteresis: 0.01,
+      tierHysteresis: 0.005,
+
+      /* ⭐ 跨领域（不是跨星团）的逐条连线：**中景默认收起**，放大到近景
+         （≈ 4.9×k₀ 的节点档）才回来；选中 / 悬停的边始终放行。
+         背景：星团闸门（crossEdgeOut）只挡到 1.3×k₀，中景那一档
+         跨领域的定义引用仍然铺成一张网（用户 2026-10-18 的反馈）。 */
+      regionEdgeIn: { rel: [4.20, 5.60] },
 
       /* —— 节点级：屏幕上相邻两点的像素距离 —— */
       nodeDotIn:  { px: [8, 20] },            // 圆点：几乎一直在
@@ -3674,7 +3680,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          把 maxd 拉得很长，云半径跟着涨，而那里其实没什么点。
          分位数既保住了「云把内容包住」的观感，又不会为个别远点空摊一大片。 */
       var ds = basis.map(function (nd) { return U.dist(nd.x, nd.y, cx, cy); }).sort(function (a, b) { return a - b; });
-      var maxd = ds.length ? ds[Math.min(ds.length - 1, Math.floor(ds.length * 0.92))] : 0;
+      var maxd = ds.length ? ds[Math.min(ds.length - 1, Math.floor(ds.length * 0.88))] : 0;
       r.stat = {
         cx: cx, cy: cy, count: list.length,
         radius: Math.max(bc.cloudRadiusMin, maxd + bc.cloudMargin)
@@ -4134,7 +4140,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       galaxyName: 1, clusterName: 1, nodeDot: 1,
       nodeName: 1, trunkName: 0, nodeEdge: 1, clusterLink: 0,
       trunkEdge: 0, trunkDim: 1, envelope: 0, sectorName: 1, crossEdge: 0,
-      defDim: 1, tier: 0
+      defDim: 1, tier: 0, regionEdge: 0
     };
 
     /* ⭐ 尺度档位的**回差**：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
@@ -4241,6 +4247,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 跨团长线：**远尺度收起**（crossEdge→0），放大到领域/星团尺度才回来 */
       var tCross = thr(L.crossEdgeOut);
       lodA.crossEdge = smoothstep(tCross[0], tCross[1], k);
+      /* 跨**领域**（不是跨团）的逐条边：中景收起，近景才回来（见 config.lod.regionEdgeIn） */
+      var tReg = thr(L.regionEdgeIn || { rel: [4.20, 5.60] });
+      lodA.regionEdge = smoothstep(tReg[0], tReg[1], k);
       /* 定义引用线在中景降权（见 config.edge.definitionMidScale）：
          两个 draw 路径共用这一个系数 —— 定义线大部分走的是**合并描边**快路径，
          只改 drawEdgeOne 会「改了没效果」（这条坑写在 HANDOVER 里）。 */
@@ -5046,6 +5055,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          聚合线也一样 —— 如果它连着我正在看的那个团，跨板块也照画。 */
       var focusNode = (view.focus && view.focus.type === 'node') ? view.graph.byId[view.focus.id] : null;
       var focusCluster = focusNode ? focusNode.cluster : null;
+      /* ⭐ 中景（1.3~2.2×k₀）只留**同一个领域内部**的聚合线。
+         远景（<1.3×k₀）保留跨板块的骨架，近景（>4.2×k₀）聚合线本来就退场了。 */
+      var midZone = lodA.crossEdge > 0.5 && lodA.regionEdge < 0.5;
+      var regionOfCluster = function (cid) {
+        var cc = view.graph.clusterById && view.graph.clusterById[cid];
+        return (cc && cc.parent) || '';
+      };
 
       ctx.save();
       ctx.lineCap = 'round';
@@ -5055,11 +5071,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
            · 同板块的聚合线照画（它们是板块内部的骨架）；
            · **跨板块**的聚合线要够粗才画（count ≥ crossSectorMinEdges），
              否则远看就是一地斜穿的细线。
-           这一层本来就是「聚合」而不是逐条边，筛掉不等于关系消失 ——
-           放大、选中、搜索都还能找到它。 */
-        if (!C.showAllEdges && lodA.crossEdge < 0.5) {
+           ⭐ 2026-10-18：这条筛选**不再只作用于最远那一档**。原来它只在
+              crossEdge<0.5（≈1.3×k₀ 以下）生效，中景 1.3~2.8×k₀ 之间
+              所有跨板块聚合线都放出来 → 用户看到的「中景像一张网」。
+              现在只要不是「全部连线」就一直筛；选中团的线仍然放行。 */
+        if (!C.showAllEdges) {
           var sA = clusterSector(l.a), sB = clusterSector(l.b);
           var touchesFocus = !!(focusCluster && (l.a === focusCluster || l.b === focusCluster));
+          if (midZone && regionOfCluster(l.a) !== regionOfCluster(l.b) && !touchesFocus) return;
           if (!touchesFocus && sA && sB && sA !== sB && l.count < (cfgL.crossSectorMinEdges || 4)) return;
         }
         var A = view.graph.clusterById[l.a], B = view.graph.clusterById[l.b];
@@ -5280,6 +5299,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         var active = isEdgeActive(g);
+        /* 中景：跨领域的定义引用也先收起（和 drawEdgeOne 同一口径） */
+        if (!C.showAllEdges && !active && lodA.regionEdge < 0.5 && edgeCrossRegion(e)) return;
         /* 定义引用线**不跟着放大**（89% 的线都是它）。放大后如果它也变粗，
            整个画面会被蓝网盖住；「定义线降权」的既定口径不能破。 */
         var w = C.edge.definitionWidth * (active ? 1.85 : 1);
@@ -5341,6 +5362,23 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return false;
     }
 
+    /** 这条边的两端是否属于**不同领域**（物理归属：星团所属星系；无星团取 regions[0]）。
+        结果缓存在边上（内容不变，不必每帧重算）。 */
+    function edgeCrossRegion(e) {
+      if (e._crossRegion != null) return e._crossRegion;
+      var ids = GU.edgeNodes(e);
+      var first = null, cross = false;
+      for (var i = 0; i < ids.length; i++) {
+        var n = view.graph.byId[ids[i]];
+        if (!n) continue;
+        var r = (n.clusterObj && n.clusterObj.parent) || (n.regions && n.regions[0]) || '';
+        if (first === null) { first = r; continue; }
+        if (r && first && r !== first) { cross = true; break; }
+      }
+      e._crossRegion = cross;
+      return cross;
+    }
+
     /** 逐条绘制（推出 / 等价 / 类比，以及定义线在别的调用点单画时）—— 与原来逐字一致 */
     function drawEdgeOne(g) {
       var e = g.edge;
@@ -5355,6 +5393,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       if (e.kind === 'definition') a *= lodA.defDim;
       if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
       if (a <= 0.02) return;
+
+      /* ⭐ 中景：**跨领域的逐条边默认收起**（用户 2026-10-18：
+         「中景像一张网，压过节点和文字」）。选中 / 悬停 / 「全部连线」放行；
+         放大到近景（regionEdgeIn）自己会回来。 */
+      if (!C.showAllEdges && !active && lodA.regionEdge < 0.5 && edgeCrossRegion(e)) return;
 
       /* ⭐ 阶段 3：远尺度收起「逐条跨团长线」。
          只看「两端星团是否相同」——团内关系不受影响；选中/聚焦的边、以及
@@ -50645,13 +50688,21 @@ MG.trunk = [
       return { k: k, cx: base.cx, cy: base.cy };
     }
 
-    /** 适配到某个星系（只算还看得见的点） */
+    /** 适配到某个星系（只算**物理上住在这个星系里**的点）。
+        ⚠️ 不能直接按 `regions[]` 取：跨领域的点（比如 `def.complex` 声明了
+        analysis+algebra，但物理上在 `set.numbers` 团里）会把 bbox 拉到整张图，
+        于是「点分析学」得到的是全景（用户 2026-10-18 报的正是这个）。
+        判据用**星团所属星系**（团是物理位置的真源）；没有星团的点才看 regions[0]。 */
     function fitRegion(rid) {
       var list = graph.nodes.filter(function (n) {
-        return n.regions.indexOf(rid) >= 0 && vis.isNodeVisible(n.id);
+        if (!vis.isNodeVisible(n.id)) return false;
+        var home = (n.clusterObj && n.clusterObj.parent) || (n.regions && n.regions[0]);
+        return home === rid;
       });
       if (!list.length) return;
-      cam.animateTo(targetFor(bboxOf(list), 170, 1.35));
+      /* 留白 170 → 70：星系本来就是一大团，留太多会显得「没聚焦」。
+         仍然走 targetFor（⇒ cam.availRect，扣掉左栏图例；右侧面板由 panelInset 补）。 */
+      cam.animateTo(targetFor(bboxOf(list), 70, 1.6));
       requestDraw();
     }
 
@@ -51283,10 +51334,12 @@ MG.trunk = [
       return out;
     }
 
-    /* 图例三级折叠状态：**大板块默认展开、领域默认收起**。
+    /* 图例三级折叠状态：**默认收起大板块**（图例短一点），点三角逐级展开。
+       2026-10-18 按反馈改：原来大板块默认全展开 → 图例 707px 高，
+       手机上要滚很久；现在初始只有 4 个大板块行。
        ⚠️ 只存内存，不写 localStorage —— 这是「临时看一眼」的展开，不是长期偏好。 */
     var legendFold = { sec: Object.create(null), reg: Object.create(null) };
-    function sectorOpen(id) { return legendFold.sec[id] !== false; }
+    function sectorOpen(id) { return legendFold.sec[id] === true; }
     function regionOpen(id) { return legendFold.reg[id] === true; }
 
     /**
