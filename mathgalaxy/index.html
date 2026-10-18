@@ -5448,6 +5448,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         /* ⚠️ 选中 / 悬停的边：全景下节点级 LOD 的 alpha 是 0，会整条消失。
            用户点了一个点就想知道它连到哪 —— 和 drawEdgeOne 用同一个下限。 */
         if (active) a = Math.max(a, 0.55);
+        /* 「全部连线」打开时定义线也要真的出现 —— 但它们占全部连线 84%，
+           所以下限比其它三类低一档（0.10 vs 0.14），免得蓝网盖住板块。 */
+        if (C.showAllEdges) a = Math.max(a, 0.10);
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         /* 中景：跨领域的定义引用也先收起（和 drawEdgeOne 同一口径） */
@@ -5546,6 +5549,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 选中 / 悬停的边：哪怕在全景（节点级 LOD 的 alpha 是 0）也要看得见 ——
          用户点了一个点，就想知道它连到哪。 */
       if (active) a = Math.max(a, 0.55);
+      /* ⭐ 用户主动打开「全部连线」= 他就是想看全。全景的节点级 LOD 把 alpha 压成 0，
+         不顶一个下限的话这个开关在那一档**什么也不做**（看着像坏按钮）。
+         下限取 0.14：够看见网，又不至于糊成一片 —— 关掉就回到分档。 */
+      if (C.showAllEdges) a = Math.max(a, 0.14);
       if (a <= 0.02) return;
 
       /* ⭐ 中景：**跨领域的逐条边默认收起**（用户 2026-10-18：
