@@ -1258,6 +1258,18 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          不折扣的话这 302 条边会合力把四个板块往中间拽（实测板块质心几乎重合）。
          折扣只改「弹簧的拉力」，不改线的画法：跨板块的关系照旧画出来。 */
       crossSectorPull: 0.35,
+      /* ⭐ 2026-10-18：**大板块之间的最小净空**（世界单位，见 layout.js 的
+         separateSectors）。0 = 关掉（回到「圆盘贴着长」的老样子）。
+         这个数只推开**不同板块**的领域圆盘，板块内部一点不动。
+         量级参考：领域容量盘的半径 140~1226，全景适配 k≈0.10 ⇒ 480 世界单位
+         约 48px，正好是「一眼看出这里是四块」的距离。 */
+      sectorGap: 480,
+      /* 同一板块**内部**的领域之间最多留多少净空（世界单位）。超过就互相拉近 ——
+         「数理逻辑」只有 4 个点，不拉近就会孤零零飘在板块外面（全景里像一块碎片）。
+         ⚠️ **0 是对的**：再大就会逼着同一板块的领域彼此重叠（实测 160 时
+            代数板块的领域云互相压了 805，连同它们的星团也叠在一起）。
+         0 = 刚好相切 —— 既是一块板，又没有真的叠在一起。-1 或更小 = 不拉近。 */
+      sectorInnerGap: 0,
       temp0: 62,                  // 初始温度（同时是每步位移上限）
       temp1: 0.5,                 // 终止温度
       maxStep: 26
@@ -3485,6 +3497,73 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       reg._cap = Math.max(reg._cap, far + 60);
     });
 
+    /* ⭐ 2026-10-18 · 四层结构的最后一刀：**大板块聚成一团，板块之间留空**
+       ------------------------------------------------------------------
+       改之前 9 个领域的圆盘是「贴着长」的：最大的几对边缘只差 150~300
+       世界单位（拓扑学 ↔ 凝聚态甚至**重叠** 446），于是全景是一片连绵的岛链，
+       不像 4 块板。验收口径是用户转述的那句：**遮住标题也要认得出板块**。
+
+       两条规则，都是纯几何（不动任何内容，不改星团/节点的摆法）：
+         · **同板块内**：领域之间不该拉太开 —— 净空超过 `sectorInnerGap`
+           就互相拉近（否则「数理逻辑」4 个点会孤零零飘在板块外面）。
+         · **跨板块**：净空至少 `sectorGap`，不够就各让一半推开。
+
+       ⚠️ 顺序是先收拢、再推开：反过来的话，收拢那一步会把好不容易推开的板块
+          又拉回来。
+       ⚠️ 位置在**星团打包之后、节点锚点之前**：这时 `reg._cap` 才是最终值
+          （上面那行 `max(reg._cap, far+60)` 量的是星团真实外接半径）。
+          早一步用「按节点数估的容量盘」会小看大领域，推了等于没推。
+       ⚠️ 移动领域 = 连同它的星团一起平移（节点锚点在下一步才由星团中心算）。 */
+    (function packSectors() {
+      var outer = cfg.sectorGap || 0;
+      var inner = cfg.sectorInnerGap == null ? 160 : cfg.sectorInnerGap;
+      var list = graph.regions.filter(function (r) { return !!r.center; });
+      if (list.length < 2) return;
+
+      function resolve(maxIt, damp, cross) {
+        /* cross = true：**跨**板块，够不着就推开；false：**同**板块，太远就拉近 */
+        var limit = cross ? outer : inner;
+        for (var it = 0; it < maxIt; it++) {
+          var worst = 0;
+          for (var i = 0; i < list.length; i++) {
+            for (var j = i + 1; j < list.length; j++) {
+              var a = list[i], b = list[j];
+              /* 没写板块的领域（理论上不该有）一律按「不同板块」处理，安全 */
+              var sameSector = (a.sector && b.sector && a.sector === b.sector);
+              if (cross === sameSector) continue;
+              var dx = b.center.x - a.center.x, dy = b.center.y - a.center.y;
+              var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+              var need = a._cap + b._cap + limit;
+              var delta = cross ? (need - d) : (d - need);
+              if (delta <= 0.5) continue;
+              if (delta > worst) worst = delta;
+              var move = delta * 0.5 * damp;
+              var ux = dx / d, uy = dy / d;
+              /* ⚠️ 方向：`u` 是 a → b。收拢时 a 朝 b 走（+u），推开时 a 背离 b（−u）。
+                 两条规则共用同一段代码，符号写反就会「越推越近」（踩过）。 */
+              var sgn = cross ? -1 : 1;
+              /* 稀疏时方向由 dx,dy 决定；两点重合时 dx,dy 会退化，前面 ||0.01 兜住 */
+              a.center.x += ux * move * sgn; a.center.y += uy * move * sgn;
+              b.center.x -= ux * move * sgn; b.center.y -= uy * move * sgn;
+            }
+          }
+          if (worst < 0.5) break;
+        }
+      }
+
+      var before = list.map(function (r) { return { x: r.center.x, y: r.center.y }; });
+      if (inner >= 0) resolve(120, 0.5, false);       // 1) 板块内收拢
+      if (outer > 0) resolve(240, 1.0, true);         // 2) 板块间推开
+      list.forEach(function (r, i) {
+        var mx = r.center.x - before[i].x, my = r.center.y - before[i].y;
+        if (!mx && !my) return;
+        graph.clusters.forEach(function (c) {
+          if (c.parent !== r.id || !c.center) return;
+          c.center = { x: c.center.x + mx, y: c.center.y + my };
+        });
+      });
+    })();
+
     /* ------------------------------------------------ 2. 节点锚点 */
     var buckets = Object.create(null);   // 无星团节点按星系分桶
     var borders = [], orphans = [];
@@ -4140,7 +4219,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       galaxyName: 1, clusterName: 1, nodeDot: 1,
       nodeName: 1, trunkName: 0, nodeEdge: 1, clusterLink: 0,
       trunkEdge: 0, trunkDim: 1, envelope: 0, sectorName: 1, crossEdge: 0,
-      defDim: 1, tier: 0, regionEdge: 0
+      defDim: 1, tier: 0, regionEdge: 0, sectorLink: 1
     };
 
     /* ⭐ 尺度档位的**回差**：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
@@ -4250,6 +4329,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 跨**领域**（不是跨团）的逐条边：中景收起，近景才回来（见 config.lod.regionEdgeIn） */
       var tReg = thr(L.regionEdgeIn || { rel: [4.20, 5.60] });
       lodA.regionEdge = smoothstep(tReg[0], tReg[1], k);
+      /* 全景的一层：**每对板块最多一条很淡的聚合线**（1.00~1.30×k₀），
+         放大一档就交给团级聚合线（它们自己按 clusterLinkOut 退场）。 */
+      var tSecLink = thr({ rel: [1.00, 1.30] });
+      lodA.sectorLink = 1 - smoothstep(tSecLink[0], tSecLink[1], k);
       /* 定义引用线在中景降权（见 config.edge.definitionMidScale）：
          两个 draw 路径共用这一个系数 —— 定义线大部分走的是**合并描边**快路径，
          只改 drawEdgeOne 会「改了没效果」（这条坑写在 HANDOVER 里）。 */
@@ -4988,7 +5071,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.textAlign = 'center';
         ctx.globalAlpha = 1;
         prof.labelCount++;                  // 大板块名也算一个「画上去的标签」
-        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2 });
+        /* pad = 给**节点名**留的禁入边距（见 drawLabels 里 placed 的膨胀）。
+           板块名是最大的字，离它太近的节点名会把它读成一团。 */
+        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2, pad: 10 });
       });
       ctx.restore();
     }
@@ -5037,14 +5122,76 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.textAlign = 'center';
         ctx.globalAlpha = 1;
         prof.labelCount++;                  // 星系名算一个「画上去的标签」
-        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2 });
+        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2, pad: 8 });
+      });
+      ctx.restore();
+    }
+
+    /* ------------------------------------------------ 板块骨架（全景） */
+    /* 用户 2026-10-18：「全景里基础与逻辑—代数—几何与拓扑之间仍有多条粗长线」。
+       核实过：那不是普通边，也不是主干边 —— 是 `drawClusterLinks` 的**聚合线**
+       （276 条，按团心连，远看就是一片灰网）。
+       全景改成「每对板块只留一条很淡的线」，放大一档才交回团级聚合线。 */
+    var sectorPairCache = null;
+    function sectorPairs() {
+      if (sectorPairCache) return sectorPairCache;
+      var out = [], agg = Object.create(null), byId = Object.create(null);
+      (view.graph.sectors || []).forEach(function (s) { if (!s.empty) byId[s.id] = s; });
+      (view.graph.clusterLinks || []).forEach(function (l) {
+        var A = view.graph.clusterById[l.a], B = view.graph.clusterById[l.b];
+        if (!A || !B || !A.stat || !B.stat) return;
+        var sA = clusterSector(l.a), sB = clusterSector(l.b);
+        if (!sA || !sB || sA === sB) return;
+        var key = sA < sB ? sA + '|' + sB : sB + '|' + sA;
+        var o = agg[key];
+        if (!o) o = agg[key] = { a: sA < sB ? sA : sB, b: sA < sB ? sB : sA, count: 0 };
+        o.count += l.count;
+      });
+      Object.keys(agg).forEach(function (key) {
+        var o = agg[key];
+        if (o.count < 6) return;                       // 太弱的板块对不画
+        var sa = byId[o.a], sb = byId[o.b];
+        var pa = sa && sectorAnchor(sa), pb = sb && sectorAnchor(sb);
+        if (!pa || !pb) return;
+        o.pa = pa; o.pb = pb;
+        out.push(o);
+      });
+      out.sort(function (x, y) { return y.count - x.count; });
+      sectorPairCache = out;
+      return out;
+    }
+
+    /** 全景的板块骨架：每对板块一条，alpha ≈0.05~0.13（远看只是「它们有关系」） */
+    function drawSectorLinks(alpha) {
+      var list = sectorPairs();
+      if (!list.length) return;
+      var cfgL = C.clusterLink;
+      ctx.save();
+      ctx.lineCap = 'round';
+      list.forEach(function (o) {
+        var p0 = w2s(o.pa.x, o.pa.y), p1 = w2s(o.pb.x, o.pb.y);
+        var dx = p1.x - p0.x, dy = p1.y - p0.y;
+        var len = Math.sqrt(dx * dx + dy * dy) || 1;
+        var bow = Math.min(110, len * 0.07);
+        var cx = (p0.x + p1.x) / 2 - (dy / len) * bow;
+        var cy = (p0.y + p1.y) / 2 + (dx / len) * bow;
+        var t = Math.min(1, o.count / 120);
+        ctx.beginPath();
+        ctx.moveTo(p0.x, p0.y);
+        ctx.quadraticCurveTo(cx, cy, p1.x, p1.y);
+        ctx.lineWidth = 1.0 + 1.2 * t;
+        ctx.strokeStyle = 'rgba(' + cfgL.color + ',' + (alpha * (0.055 + 0.075 * t)).toFixed(3) + ')';
+        ctx.stroke();
       });
       ctx.restore();
     }
 
     /* ------------------------------------------------ 星团级连线 */
     function drawClusterLinks() {
-      var a = lodA.clusterLink;
+      var secA = lodA.sectorLink;
+      if (secA > 0.02) drawSectorLinks(secA);
+      /* 全景那一档：团级聚合线让位给板块骨架（1 - secA） */
+      var a = lodA.clusterLink * (1 - secA);
       if (a <= 0.02) return;
       var links = view.graph.clusterLinks || [];
       if (!links.length) return;
@@ -5266,6 +5413,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.fillText(text, p.x, y + 0.5);
         ctx.globalAlpha = 1;
         prof.labelCount++;                   // 星团名也是一个「画上去的标签」
+        slot.box.pad = 5;                    // 节点名离团名至少 5px（见 drawLabels）
         nameBoxes.push(slot.box);
       });
       ctx.restore();
@@ -5293,12 +5441,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (g.edge.kind !== 'definition') { drawEdgeOne(g); return; }
         var e = g.edge, style = T.edgeStyles.definition;
         var spine = isSpine(e);
+        var active = isEdgeActive(g);
         var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0)
           * lodA.defDim;                       // 中景降权（与 drawEdgeOne 同一系数）
-        if (!isEdgeActive(g)) a *= edgeFade(g); // 长边在屏幕空间降权
+        if (!active) a *= edgeFade(g);          // 长边在屏幕空间降权
+        /* ⚠️ 选中 / 悬停的边：全景下节点级 LOD 的 alpha 是 0，会整条消失。
+           用户点了一个点就想知道它连到哪 —— 和 drawEdgeOne 用同一个下限。 */
+        if (active) a = Math.max(a, 0.55);
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
-        var active = isEdgeActive(g);
         /* 中景：跨领域的定义引用也先收起（和 drawEdgeOne 同一口径） */
         if (!C.showAllEdges && !active && lodA.regionEdge < 0.5 && edgeCrossRegion(e)) return;
         /* 定义引用线**不跟着放大**（89% 的线都是它）。放大后如果它也变粗，
@@ -5392,6 +5543,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          只改这里等于没改。 */
       if (e.kind === 'definition') a *= lodA.defDim;
       if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
+      /* 选中 / 悬停的边：哪怕在全景（节点级 LOD 的 alpha 是 0）也要看得见 ——
+         用户点了一个点，就想知道它连到哪。 */
+      if (active) a = Math.max(a, 0.55);
       if (a <= 0.02) return;
 
       /* ⭐ 中景：**跨领域的逐条边默认收起**（用户 2026-10-18：
@@ -5479,10 +5633,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     function drawArrow(g) {
       var e = g.edge;
+      var active = isEdgeActive(g);
       var a = alphaForEdge(e) * lodA.nodeEdge;
-      if (!isEdgeActive(g)) a *= edgeFade(g);
+      if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
+      /* 与线同一个下限：否则整条线回来了、箭头却没有，看起来像「没方向」。 */
+      if (active) a = Math.max(a, 0.55);
       if (a <= 0.02) return;
-      var sz = U.clamp(C.edge.arrowSize * Math.pow(camNow().k, 0.35), 6, 17) * (isEdgeActive(g) ? 1.2 : 1);
+      var sz = U.clamp(C.edge.arrowSize * Math.pow(camNow().k, 0.35), 6, 17) * (active ? 1.2 : 1);
       var x = g.arrow.x, y = g.arrow.y, ang = g.arrow.angle;
       ctx.save();
       ctx.translate(x, y);
@@ -5639,9 +5796,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       if (lodA.nodeName <= 0.02 && lodA.trunkName <= 0.02) return;
 
       // 缩得很小时只留「重要」节点的名字；重叠的名字一律让位（永远去重叠）
-      var keepAll = k >= C.node.labelMinZoomAll;
+      /* ⭐ 标签密度分档（用户 2026-10-18：「一个领域内部名字太密，看不清团名」）：
+         · 星团档（tier 2，团名正亮着）⇒ 只放**结构性**的点（主干 / 枢纽 / 度数 ≥5），
+           把版面让给团名；
+         · 节点档（tier ≥3，团名正在退场）⇒ 放宽到度数 ≥3；
+         · 再放大（k ≥ labelMinZoomAll）⇒ 全放，只靠去重叠兜底。
+         ⚠️ 判据用 `lodA.tier`（和板块名 / 领域名 / 团名同一套档位），不另起一套阈值。 */
+      var tier = lodA.tier | 0;
+      var allNames = k >= C.node.labelMinZoomAll;
+      var minDeg = allNames ? 1 : (tier >= 3 ? 3 : 5);
       // 板块 / 领域 / 星团名 + 特殊标签先占位 —— 节点名不许压上去
-      var placed = nameBoxes.slice();
+      /* 结构性名字（板块 / 领域 / 星团）自己带一圈禁入边距：节点名压到它们边上时，
+         那个大标题会被读成一团糊。只在这里膨胀，⛔ 不去改 nameBoxes 本身
+         （placeName 还要拿原框判「大标题之间」的避让）。 */
+      var placed = nameBoxes.map(function (b) {
+        var q = b.pad || 0;
+        if (!q) return b;
+        return { x0: b.x0 - q, y0: b.y0 - q, x1: b.x1 + q, y1: b.y1 + q, rank: b.rank };
+      });
       var nodes = view.graph.nodes.slice().sort(function (a, b) {
         return labelPriority(b) - labelPriority(a);
       });
@@ -5661,8 +5833,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (nameAlpha <= 0.06) return;
         var a = alphaForNode(n.id);
         if (a <= 0.06) return;
-        // 缩小时只画重要的：主干一律画，其余要 degree >= 3
-        if (!keepAll && !trunk && n.degree < 3) return;
+        // 缩小时只画重要的：主干一律画，其余按上面那三档
+        if (!trunk && !allNames && !n.isHub && n.degree < minDeg) return;
 
         var p = screenOf(n);
         if (!inView(p.x, p.y, PAD_NODE)) return;   // 屏幕外的名字：既不量宽也不画
@@ -5739,7 +5911,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return hitEdge ? { type: 'edge', id: hitEdge } : null;
     }
 
-    function invalidate() { geomCache = null; }
+    function invalidate() { geomCache = null; sectorPairCache = null; }
 
     return {
       resize: resize,
@@ -5760,8 +5932,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          ⚠️ 只读快照，别拿它当状态改 —— holdTier 的真源在 computeLod 里。 */
       lodState: function () {
         return {
+          k: camNow().k,
           tier: lodA.tier, sector: lodA.sectorName, region: lodA.galaxyName,
-          cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName
+          cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName,
+          /* 下面这些是 2026-10-18 加的：判「全景还是一条网吗」「导出计数对不对」要读它们 */
+          trunkName: lodA.trunkName, clusterLink: lodA.clusterLink, sectorLink: lodA.sectorLink,
+          crossEdge: lodA.crossEdge, regionEdge: lodA.regionEdge, labelCount: prof.labelCount
         };
       },
       profReset: function () { prof.edges = 0; prof.nodes = 0; prof.labels = 0; prof.labelCount = 0; prof.frames = 0; },
@@ -50454,6 +50630,10 @@ MG.trunk = [
     var xlink = MG.createXLink(graph, MG.aliases);
     /* 导出（当前视图 → 子图 JSON / SVG / TikZ）。引擎模块，不碰任何内容。 */
     var exporter = MG.createExport ? MG.createExport(view, cam, renderer.nodeRadius) : null;
+    /* 图例里「导出当前视图（N 点 / K 线）」上一次写进去的数字。
+       视角一动这个数就变了，但**图例不能每帧重建** ⇒ 见 syncExportCount()。 */
+    var lastExCount = { n: -1, k: -1 };
+    var exCountSig = '', exCountTimer = 0;
     var cloudTex = null;
     var cloudDirty = true;
     /* 云雾层上一次是按什么参数画的 —— 相机 / 视口 / dpr / 纹理四样都没变就不必再画。
@@ -50532,6 +50712,8 @@ MG.trunk = [
       drawProf.ms += performance.now() - tp; drawProf.n++;
       if (animating) requestDraw();
       noteCamera();
+      /* 图例里「导出当前视图（N 点 / K 线）」跟视角走：相机停稳 350ms 后重数一次 */
+      noteExportCount();
 
     }
 
@@ -51363,6 +51545,42 @@ MG.trunk = [
         name + '<span class="lg-num">' + num + '</span></span>';
     }
 
+    /* ------------------------------------------- 图例里的「当前视图」计数 */
+    /* 用户 2026-10-18：「开页写着 44 点 / 28 线，展开分析之后变成 910 / 1637」。
+       根因两条：① renderLegend() 在 cam.fit() **之前**跑（适配还没发生）；
+       ② 视角变化后没有任何东西去刷新这个数。
+       口径先钉死：**当前视图 = 屏幕内的点**（和 exporter.collect 同一个函数，
+       ⛔ 不另写一套判据）。刷新时机 = 相机停稳 350ms 之后，不是每帧。 */
+    function exCamSig() {
+      return cam.k.toFixed(5) + ',' + cam.tx.toFixed(1) + ',' + cam.ty.toFixed(1) +
+        ',' + cam.viewW + ',' + cam.viewH;
+    }
+    /** 只改那一个标题的 textContent；数字没变就一个字符都不碰 */
+    function syncExportCount(force) {
+      if (!exporter || !legendEl) return;
+      var el = document.getElementById('lg-ex-title');
+      if (!el) return;                       // 图例折叠成壳 / 没渲染
+      var c = exporter.collect();
+      var n = c.nodes.length, k = c.edges.length;
+      if (!force && n === lastExCount.n && k === lastExCount.k) return;
+      lastExCount = { n: n, k: k };
+      el.textContent = tf('导出当前视图（{n} 点 / {k} 线）', { n: n, k: k });
+    }
+    /** 相机一动就重新计时；停稳 350ms 才真的去数一遍（数 910 个点不值得每帧做）
+        ⚠️ 只有**签名真的变了**才重置计时器。写成「sig 相同但计时器还在也重置」
+          会变成：只要还有零星重画（hover、已读脉冲、HUD），计时器永远被推后 → 数
+          永远不更新（踩过：开页停在 42 点 / 14 线）。 */
+    function noteExportCount() {
+      var sig = exCamSig();
+      if (sig === exCountSig) return;
+      exCountSig = sig;
+      if (exCountTimer) clearTimeout(exCountTimer);
+      exCountTimer = setTimeout(function () {
+        exCountTimer = 0;
+        syncExportCount(false);
+      }, 350);
+    }
+
     function renderLegend() {
       var types = T.typeOrder || Object.keys(T.nodeTypes || {});
       var total = graph.nodes.length;
@@ -51502,11 +51720,15 @@ MG.trunk = [
           '</div></div>'
         : '';
 
-      /* ---------- 导出：导出的是「你现在看到的这一块」 ---------- */
+      /* ---------- 导出：导出的是「你现在看到的这一块」 ----------
+         ⚠️ 数字单独装在 #lg-ex-title 里：它随视角变（屏幕内有多少点 / 线），
+            但图例不能跟着每一帧重画。syncExportCount() 只改这一个节点的
+            textContent，不重建 DOM（否则「拖层号滑杆」之类的拖拽会断）。 */
       var exN = 0, exE = 0;
       if (exporter) { var _c = exporter.collect(); exN = _c.nodes.length; exE = _c.edges.length; }
+      lastExCount = { n: exN, k: exE };
       var exportGroup =
-        '<div class="lg-group"><div class="lg-title">' +
+        '<div class="lg-group"><div class="lg-title" id="lg-ex-title">' +
         U.escapeHtml(tf('导出当前视图（{n} 点 / {k} 线）', { n: exN, k: exE })) + '</div>' +
         '<div class="lg-row lg-layers">' +
         '<button class="lg-reset" data-export="svg" title="' + U.escapeHtml(tf('导出 SVG 矢量图：当前屏幕内的点 + 这些点之间的线（可直接放进文档）')) + '">SVG</button>' +
@@ -52389,6 +52611,9 @@ MG.trunk = [
         cam.centerOn(cx, cy);
         cam.animateTo({ k: fitK, cx: cx, cy: cy }, REDUCE_MOTION ? 1 : 700);
       }
+      /* 图例是**适配之前**渲染的（必须先有 DOM 才量得出可用矩形）⇒ 里面那个
+         「导出当前视图（N 点 / K 线）」是拿适配前的相机数的。这里补一次真数。 */
+      syncExportCount(true);
       requestDraw();
     }
 
