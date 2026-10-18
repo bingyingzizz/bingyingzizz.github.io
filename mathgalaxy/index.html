@@ -1338,7 +1338,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          在**领域 / 星团尺度**把它压到这个比例 —— 那是「看结构」的档位，
          关系线（推出 / 等价）才是主角。缩到全图或放大到近景都恢复 1.0。
          ⛔ 曲线只有一处：drawEdgeOne 与 drawEdges 的合并描边路径都要乘 lodA.defDim。 */
-      definitionMidScale: 0.60
+      definitionMidScale: 0.60,
+      /* ⭐ 长边在**屏幕空间**降权（2026-10-18）：
+         跨度 ÷ 视口对角线 < start ⇒ 不降；到 end ⇒ 降到 floor。
+         全图适配时所有线都被缩进一屏（不降），放大后横穿画面的线自动退淡；
+         选中 / 悬停的边永远不降。⛔ 不删线 —— 早先「两端点都在屏外就丢」
+         会把屏幕变成一堆互不相连的点（见 renderer 的注释）。 */
+      longFade: { start: 0.20, end: 0.45, floor: 0.10 }
     },
 
     /* 星团包络（每个「装置」的范围）
@@ -3362,33 +3368,107 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       liveClusters.push(c);
     });
 
+    /* -------------------------------------------- 1b. 团间耦合 → 摆放方向 */
+    /* 每个团往「它连得最多的那些团所在的星系」那一侧靠。
+       为什么需要：团的位置以前只由「星系内第几个」决定，于是范畴论里跟同调代数
+       关系最紧的「拓扑斯」被摆到星系西缘、离同调 8000 —— 用户看到的
+       「很多超长线」有一半是这么来的。这里只改**星系内的方位**，不动星系中心。
+       ⚠️ 权重按边的语义分档：定义引用几乎占全部连线（1373/1637），
+          如果按条数算，一个节点的定义被谁引用得多就会压过真正的推导关系。 */
+    var KIND_W = { implication: 3, equivalence: 2, definition: 1, analogy: 0 };
+    var pairW = Object.create(null);          // "a|b" → 权重
+    graph.edges.forEach(function (e) {
+      var w = KIND_W[e.kind] == null ? 1 : KIND_W[e.kind];
+      if (!w) return;
+      var ids = MG.graphUtil.edgeNodes(e);
+      var cs = [];
+      for (var i = 0; i < ids.length; i++) {
+        var nd = graph.byId[ids[i]];
+        if (nd && nd.cluster) cs.push(nd.cluster);
+      }
+      for (var a = 0; a < cs.length; a++) {
+        for (var b = a + 1; b < cs.length; b++) {
+          if (cs[a] === cs[b]) continue;
+          var key = cs[a] < cs[b] ? cs[a] + '|' + cs[b] : cs[b] + '|' + cs[a];
+          pairW[key] = (pairW[key] || 0) + w;
+        }
+      }
+    });
+    var clusterW = Object.create(null);        // cid → [{to, w}]
+    Object.keys(pairW).forEach(function (key) {
+      var p = key.split('|');
+      (clusterW[p[0]] = clusterW[p[0]] || []).push({ to: p[1], w: pairW[key] });
+      (clusterW[p[1]] = clusterW[p[1]] || []).push({ to: p[0], w: pairW[key] });
+    });
+    liveClusters.forEach(function (c) {
+      var reg = graph.galaxyOf(c);
+      var base = (U.hashString(c.id) % 628) / 100;   // 没有外连时的兜底角度
+      var wsum = 0, vx = 0, vy = 0;
+      (clusterW[c.id] || []).forEach(function (t) {
+        var o = graph.clusterById[t.to];
+        var r2 = (o && o.parent) ? graph.regionById[o.parent] : null;
+        if (!r2) return;
+        wsum += t.w; vx += r2.center.x * t.w; vy += r2.center.y * t.w;
+      });
+      c._extW = wsum;
+      if (!wsum || !reg) { c._prefAngle = base; return; }
+      var dx = vx / wsum - reg.center.x, dy = vy / wsum - reg.center.y;
+      c._prefAngle = (Math.abs(dx) + Math.abs(dy) < 1) ? base : Math.atan2(dy, dx);
+    });
+
     graph.regions.forEach(function (reg) {
       var mine = liveClusters.filter(function (c) { return c.parent === reg.id; });
       if (!mine.length) return;
-      // 大的排前面，视觉上更像"星系核 + 外环"
-      mine.sort(function (a, b) { return b.nodes.length - a.nodes.length; });
-      var maxCap = 0;
-      mine.forEach(function (c) { maxCap = Math.max(maxCap, c._cap); });
 
       if (mine.length === 1) {
         mine[0].center = { x: reg.center.x, y: reg.center.y };
+        reg._cap = Math.max(reg._cap, mine[0]._cap + 60);
         return;
       }
-      // 团与团之间要**离得够远**：K 个团均布在半径 ringR 的圈上时，相邻中心距
-      // = 2·ringR·sin(π/K)；要求它 ≥ 两个盘 + 一条空带（`cluster.blank`）。
-      // 盘挨着盘的话，一眼看不出哪个点属于哪个团。
-      var K = mine.length;
-      var ringR = Math.max((2 * maxCap + ccfg.blank) / (2 * Math.sin(Math.PI / K)),
-        reg._cap * (0.34 + 0.05 * Math.min(K, 6)));
-      var phase = (U.hashString(reg.id) % 628) / 100;
-      mine.forEach(function (c, i) {
-        var th = phase + i * (Math.PI * 2 / mine.length);
-        // 团越大，稍微往外挪一点，避免挤在一起
-        var rr = ringR + c._cap * 0.18;
-        c.center = { x: reg.center.x + Math.cos(th) * rr, y: reg.center.y + Math.sin(th) * rr };
+
+      /* ⭐ 紧凑圆盘打包（2026-10-18）。旧写法把所有团均布在**一条圆环**上：
+         K 个团时 ringR = (2·maxCap + blank) / (2 sin(π/K))，K=17（分析学）时
+         ≈ 2100 —— 团被甩到离星系中心 2000 外，两个星系的环在中间交叉，
+         于是「预层」和「测度」摆到了同一块（用户原话），跨星系的线也跟着变长。
+         新写法：从内往外一圈圈找空位，盘与盘只留 gap；方向优先朝向
+         「它的边连得最多的那个星系」（_prefAngle）。
+         ⇒ 星系是紧凑的圆盘而不是空心大环，团不会越界，外连多的团靠向对方。 */
+      var gap = Math.max(48, ccfg.blank * 0.20);       // blank 300 → 60
+      var placed = [];
+      mine.slice().sort(function (a, b) {
+        /* 大的先放（占位能力强），连得多的次之 —— 免得大团被挤到外圈 */
+        return (b._cap - a._cap) || (b._extW - a._extW) || (a.id < b.id ? -1 : 1);
+      }).forEach(function (c) {
+        var pick = null;
+        for (var rr = 0; rr <= 3200 && !pick; rr += 50) {
+          var slots = rr < 1 ? 1 : Math.max(6,
+            Math.round(2 * Math.PI * rr / Math.max(150, (c._cap + gap) * 1.6)));
+          for (var s = 0; s < slots; s++) {
+            /* 从「朝向伙伴星系」的角度开始，左右交替试 —— 越近越优先 */
+            var off = (s % 2 ? 1 : -1) * Math.ceil(s / 2) * (2 * Math.PI / slots);
+            var th = c._prefAngle + off;
+            var x = Math.cos(th) * rr, y = Math.sin(th) * rr;
+            var ok = true;
+            for (var q = 0; q < placed.length; q++) {
+              var pp = placed[q];
+              var ddx = x - pp.x, ddy = y - pp.y;
+              var need = c._cap + pp.c._cap + gap;
+              if (ddx * ddx + ddy * ddy < need * need) { ok = false; break; }
+            }
+            if (ok) { pick = { x: x, y: y }; break; }
+          }
+        }
+        if (!pick) pick = { x: 0, y: 0 };             // 兜底（不该发生）
+        placed.push({ c: c, x: pick.x, y: pick.y });
+        c.center = { x: reg.center.x + pick.x, y: reg.center.y + pick.y };
       });
-      // 星系圆盘要装得下所有星团
-      reg._cap = Math.max(reg._cap, ringR + maxCap * 1.15 + 60);
+
+      /* 星系圆盘 = 实际外接半径（不是环半径）；给跨星系节点/云留一点余量 */
+      var far = 0;
+      placed.forEach(function (p) {
+        far = Math.max(far, Math.sqrt(p.x * p.x + p.y * p.y) + p.c._cap);
+      });
+      reg._cap = Math.max(reg._cap, far + 60);
     });
 
     /* ------------------------------------------------ 2. 节点锚点 */
@@ -4353,6 +4433,53 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return { x: from.x + (dx / d) * r, y: from.y + (dy / d) * r, ux: dx / d, uy: dy / d, len: d };
     }
 
+    /** 这条线在屏幕上横跨多少像素（取折线外框的长边）—— 长边降权要用 */
+    function polySpan(polys) {
+      var x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (var i = 0; i < polys.length; i++) {
+        var pts = polys[i];
+        for (var j = 0; j < pts.length; j++) {
+          var p = pts[j];
+          if (p.x < x0) x0 = p.x;
+          if (p.x > x1) x1 = p.x;
+          if (p.y < y0) y0 = p.y;
+          if (p.y > y1) y1 = p.y;
+        }
+      }
+      if (x0 > x1) return 0;
+      return Math.max(x1 - x0, y1 - y0);
+    }
+
+    /** 几何对象统一出口（顺便量屏幕跨度） */
+    function edgeGeom(e, quads, polys, arrow, glyph, ends) {
+      return {
+        edge: e, quads: quads, polys: polys, arrow: arrow, glyph: glyph,
+        ends: ends, lenPx: polySpan(polys)
+      };
+    }
+
+    /* ⭐ 长边在屏幕空间降权（2026-10-18）。
+       用户：「现在有很多超长线」。一条横穿整个视口的线，放大后既提供不了局部信息，
+       又把画面切成碎片；可它也不能直接删（早先试过「两端点都在屏外就丢」，
+       k=1.44 时 175 条只剩 7 条，屏幕变成一堆互不相连的点 —— renderer 里那条注释）。
+       折中：按**屏幕跨度 ÷ 视口对角线**做 1 → floor 的淡出。
+         · 全图适配时所有线都短（世界再大也被缩到一屏）⇒ 骨架照常可见；
+         · 放大后同一条线在屏幕上越来越长 ⇒ 自动退到 floor，局部结构才浮得出来。
+       ⛔ 选中 / 悬停的边不降权（它在讲「我看的这一条从哪来」。） */
+    function edgeFade(g) {
+      var F = C.edge.longFade;
+      if (!F || F.floor == null || F.floor >= 1) return 1;
+      /* 用户主动打开「全部连线」= 他就是想看全，别再替他把长的压掉。 */
+      if (C.showAllEdges) return 1;
+      var c = camNow();
+      var vw = c.viewW || W, vh = c.viewH || H;
+      var diag = Math.sqrt(vw * vw + vh * vh) || 1;
+      var t = (g.lenPx / diag - F.start) / Math.max(0.001, F.end - F.start);
+      if (t <= 0) return 1;
+      if (t > 1) t = 1;
+      return 1 - (1 - F.floor) * t;
+    }
+
     function computeEdge(e, cam) {
       var byId = view.graph.byId;
       var quads = [], polys = [], arrow = null, glyph = null, ends = [];
@@ -4373,7 +4500,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         quads.push({ p0: p0, p1: ctl, p2: p2 });
         polys.push(U.flattenQuad(p0, ctl, p2, 16));
         ends = [dn.id, un.id];
-        return { edge: e, quads: quads, polys: polys, arrow: null, glyph: null, ends: ends };
+        return edgeGeom(e, quads, polys, null, null, ends);
 
       }
 
@@ -4390,7 +4517,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           glyph = { x: (q.x + w.x) / 2, y: (q.y + w.y) / 2, text: '⟺' };
         }
         ends = [e.a, e.b];
-        return { edge: e, quads: [], polys: polys, arrow: null, glyph: glyph, ends: ends };
+        return edgeGeom(e, [], polys, null, glyph, ends);
       }
 
       /* implication */
@@ -4429,7 +4556,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         arrow = { x: tip.x, y: tip.y, angle: Math.atan2(-tip.uy, -tip.ux) };
         ends.push(tg.id);
       }
-      return { edge: e, quads: quads, polys: polys, arrow: arrow, glyph: null, ends: ends };
+      return edgeGeom(e, quads, polys, arrow, null, ends);
     }
 
     /* -------------------------------------------------------- 可见性权重 */
@@ -5131,6 +5258,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var spine = isSpine(e);
         var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0)
           * lodA.defDim;                       // 中景降权（与 drawEdgeOne 同一系数）
+        if (!isEdgeActive(g)) a *= edgeFade(g); // 长边在屏幕空间降权
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         var active = isEdgeActive(g);
@@ -5200,13 +5328,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var spine = isSpine(e);
       // 主干骨架：它有自己的淡入曲线，缩小时也能看见；放大后让位给全部连线
       var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0);
+      var active = isEdgeActive(g);
       /* 定义引用线在中景降权（领域 / 星团尺度 ×0.60）。⚠️ 定义线绝大多数走的是
          drawEdges() 的合并描边快路径，那里也必须乘同一个 lodA.defDim ——
          只改这里等于没改。 */
       if (e.kind === 'definition') a *= lodA.defDim;
+      if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
       if (a <= 0.02) return;
 
-      var active = isEdgeActive(g);
       /* ⭐ 阶段 3：远尺度收起「逐条跨团长线」。
          只看「两端星团是否相同」——团内关系不受影响；选中/聚焦的边、以及
          用户打开 `showAllEdges` 时一律放行。⛔ 不画聚合箭头。 */
@@ -5287,6 +5416,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     function drawArrow(g) {
       var e = g.edge;
       var a = alphaForEdge(e) * lodA.nodeEdge;
+      if (!isEdgeActive(g)) a *= edgeFade(g);
       if (a <= 0.02) return;
       var sz = U.clamp(C.edge.arrowSize * Math.pow(camNow().k, 0.35), 6, 17) * (isEdgeActive(g) ? 1.2 : 1);
       var x = g.arrow.x, y = g.arrow.y, ang = g.arrow.angle;
