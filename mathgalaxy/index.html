@@ -1339,12 +1339,20 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          关系线（推出 / 等价）才是主角。缩到全图或放大到近景都恢复 1.0。
          ⛔ 曲线只有一处：drawEdgeOne 与 drawEdges 的合并描边路径都要乘 lodA.defDim。 */
       definitionMidScale: 0.60,
-      /* ⭐ 长边在**屏幕空间**降权（2026-10-18）：
-         跨度 ÷ 视口对角线 < start ⇒ 不降；到 end ⇒ 降到 floor。
-         全图适配时所有线都被缩进一屏（不降），放大后横穿画面的线自动退淡；
-         选中 / 悬停的边永远不降。⛔ 不删线 —— 早先「两端点都在屏外就丢」
-         会把屏幕变成一堆互不相连的点（见 renderer 的注释）。 */
-      longFade: { start: 0.20, end: 0.45, floor: 0.10 }
+      /* ⭐ 线宽随缩放生长（2026-10-18）：
+         节点半径 ∝ k^0.62，线宽却一直是 1.7px ⇒ 放大后「推出的黑线」细得像发丝
+         （用户原话：「放大以后推出的黑色线有些过于细了」）。
+         用比节点温和的 k^0.45，夹在 [1, widthMax]；基准 k=0.62（内容铺满时的缩放）。
+         ⚠️ drawEdgeOne、drawEdges 的定义线快路径都要乘，否则 89% 的线不跟着变。 */
+      widthRefK: 0.62,
+      widthPow: 0.45,
+      widthMax: 2.6,
+      /* ⭐ 长边降权：按**世界长度**，不是屏幕长度（2026-10-18 修正）。
+         屏幕长度会把「放大后本来正常的局部关系」也当成超长线 ——
+         k=1.5 时一条 500 单位（约 4 条边）的推出线在屏幕上 750px，
+         旧口径把它压到 0.1，看起来像断了。世界长度才是「这条关系跨了多少条边」。
+         < start ⇒ 不降；到 end ⇒ 降到 floor。选中 / 悬停的边永不降。 */
+      longFade: { start: 1300, end: 3400, floor: 0.18 }
     },
 
     /* 星团包络（每个「装置」的范围）
@@ -4472,12 +4480,22 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 用户主动打开「全部连线」= 他就是想看全，别再替他把长的压掉。 */
       if (C.showAllEdges) return 1;
       var c = camNow();
-      var vw = c.viewW || W, vh = c.viewH || H;
-      var diag = Math.sqrt(vw * vw + vh * vh) || 1;
-      var t = (g.lenPx / diag - F.start) / Math.max(0.001, F.end - F.start);
+      /* ⚠️ 用**世界长度**（lenPx / k），不是屏幕长度：屏幕口径会把放大后
+         正常的局部关系也压掉（k=1.5 时 500 单位 ≈ 4 条边，屏幕 750px）。 */
+      var worldLen = g.lenPx / Math.max(1e-6, c.k || 1);
+      var t = (worldLen - F.start) / Math.max(1, F.end - F.start);
       if (t <= 0) return 1;
       if (t > 1) t = 1;
       return 1 - (1 - F.floor) * t;
+    }
+
+    /** 线宽随缩放生长的倍率（见 config.edge.widthPow） */
+    function edgeWidthMul() {
+      var E = C.edge;
+      var c = camNow();
+      var k = c.k || (E.widthRefK || 0.62);
+      return U.clamp(Math.pow(k / (E.widthRefK || 0.62), E.widthPow == null ? 0.45 : E.widthPow),
+        1, E.widthMax == null ? 2.6 : E.widthMax);
     }
 
     function computeEdge(e, cam) {
@@ -5262,6 +5280,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         var active = isEdgeActive(g);
+        /* 定义引用线**不跟着放大**（89% 的线都是它）。放大后如果它也变粗，
+           整个画面会被蓝网盖住；「定义线降权」的既定口径不能破。 */
         var w = C.edge.definitionWidth * (active ? 1.85 : 1);
         var spineOnly = spine && lodA.nodeEdge < 0.9;
         if (spineOnly) { a *= 0.55 + 0.45 * lodA.nodeEdge; w = 1.25; }
@@ -5343,7 +5363,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var w = (e.kind === 'implication' ? C.edge.implicationWidth
         : e.kind === 'equivalence' ? C.edge.equivalenceWidth
           : e.kind === 'analogy' ? T.edgeStyles.analogy.width
-            : C.edge.definitionWidth) * (active ? 1.85 : 1);
+            : C.edge.definitionWidth) * (active ? 1.85 : 1)
+        * (e.kind === 'definition' ? 1 : edgeWidthMul());
 
       // 全图尺度：主干画成一条低调的暖色细线，不抢云雾和装置名
       var spineOnly = spine && lodA.nodeEdge < 0.9;
