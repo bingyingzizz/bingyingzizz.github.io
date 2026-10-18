@@ -445,6 +445,27 @@ html.ui-no-hint #hint { display: none; }
   border-left: 2px solid var(--line);
 }
 #legend .lg-kids .lg-item { font-size: 11.5px; }
+
+/* ---------- 三级折叠：大板块 → 领域 → 星团 ----------
+   ⭐ 2026-10-17：原来「领域 + 星团」两层平铺，60 个团全摊开 ⇒ 图例占 17% 还得滚。
+      现在大板块是分组头、领域是第二级、星团在领域里面，默认只展开到大板块。 */
+#legend .lg-sectors { display: block; margin-top: 2px; }
+#legend .lg-sec + .lg-sec { margin-top: 6px; }
+#legend .lg-sec-head, #legend .lg-reg-head { display: flex; align-items: center; gap: 4px; }
+#legend .lg-fold {
+  flex: none; width: 12px; text-align: center; cursor: pointer;
+  font-size: 11px; line-height: 1; color: var(--ink-soft);
+  user-select: none; transition: color .14s ease;
+}
+#legend .lg-fold:hover { color: var(--ink); }
+#legend .lg-sec-head .lg-name { font-weight: 650; color: var(--ink); font-size: 12.5px; }
+#legend .lg-regs {
+  margin: 2px 0 2px 7px; padding-left: 8px;
+  border-left: 2px solid var(--line);
+}
+#legend .lg-reg + .lg-reg { margin-top: 2px; }
+#legend .lg-reg-head { font-size: 11.5px; }
+#legend .lg-reg .lg-kids { margin-left: 13px; }
 #legend .lg-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
 #legend .lg-swatch { width: 15px; height: 9px; border-radius: 3px; flex: none; }
 #legend .lg-line { width: 16px; height: 0; border-top-width: 2px; border-top-style: solid; flex: none; }
@@ -1072,6 +1093,7 @@ window.addEventListener('error', function (e) {
   <button data-act="toggle-defs"    class="toggle on" title="显示 / 隐藏「定义引用」蓝线" data-t-title="显示 / 隐藏「定义引用」蓝线" data-t="定义线">定义线</button>
   <button data-act="toggle-labels"  class="toggle on" title="显示 / 隐藏节点名称" data-t-title="显示 / 隐藏节点名称" data-t="名称">名称</button>
   <button data-act="toggle-explore" class="toggle" title="探索模式：把「类比」这类弱边提亮（平时压得很淡）" data-t-title="探索模式：把「类比」这类弱边提亮（平时压得很淡）" data-t="探索">探索</button>
+  <button data-act="toggle-alledges" class="toggle" title="全部连线：连跨星团、跨板块的长线也画出来（远看会更密；平时只在放大后出现）" data-t-title="全部连线：连跨星团、跨板块的长线也画出来（远看会更密；平时只在放大后出现）" data-t="全部连线">全部连线</button>
   <button data-act="toggle-wheel"  class="toggle on" title="滚轮：缩放 ⇄ 平移" data-t-title="滚轮：缩放 ⇄ 平移" data-t="滚轮·缩放">滚轮·缩放</button>
   <span class="tb-sep"></span>
   <!-- 界面语言（T2.4 的入口，2026-10-16 补）：**按钮上写的是「切过去之后会变成什么语言」** ——
@@ -1160,10 +1182,10 @@ window.addEventListener('error', function (e) {
         ⛔ 但 h1 不参与折叠，它永远可见。 -->
 <div id="hint" class="floating">
   <h1>数学星图 MathGalaxy</h1>
-  <details open>
+  <details>
     <summary data-t="这是什么 · 怎么用">这是什么 · 怎么用</summary>
-    <p class="hint-lead" data-t="把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。">把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「星系 / 星团 / 恒星」
-    三层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。</p>
+    <p class="hint-lead" data-t="把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 / 领域 / 星团 / 节点」四层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。">把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 / 领域 / 星团 / 节点」
+    四层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。</p>
     <p class="hint-keys"><span data-t="拖拽平移 · 滚轮 / 双指缩放 · 点击节点聚焦 · 点击连线看推导 · 聚焦后 ←→ 沿边游走">拖拽平移 · 滚轮 / 双指缩放 · 点击节点聚焦 · 点击连线看推导 · 聚焦后 ←→ 沿边游走</span>
     ｜ <a href="all.html" data-t="全部概念索引">全部概念索引</a> · <a href="questions.html" data-t="常见问法">常见问法</a> · <a href="read.html" data-t="读图指南">读图指南</a> · <a href="llms.txt" data-t="检索协议">检索协议</a></p>
   </details>
@@ -1231,6 +1253,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          代价：世界盒 6.77k×5.21k → 7.44k×5.68k，全图适配的 k 0.123 → 0.113
          （lod 阈值全是 rel/px 写法，跟着 k₀ 自动走，不用重标）。 */
       regionSpread: 1.80,
+      /* ⭐ 2026-10-17 四层结构：**跨大板块的边只按这个折扣牵引**。
+         全库 2101 条边里有 302 条跨板块，它们的平均长 2008、同板块的只有 759 ——
+         不折扣的话这 302 条边会合力把四个板块往中间拽（实测板块质心几乎重合）。
+         折扣只改「弹簧的拉力」，不改线的画法：跨板块的关系照旧画出来。 */
+      crossSectorPull: 0.35,
       temp0: 62,                  // 初始温度（同时是每步位移上限）
       temp1: 0.5,                 // 终止温度
       maxStep: 26
@@ -1267,7 +1294,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          取中间偏后一点当闸门。改 idealDist 或 nodeNameIn 时要一起看。 */
       labelMinZoomAll: 0.30,
       labelPad: 3,
+      /* ⭐ 光晕拆成两档（2026-10-17）：
+         `glow`         —— 普通节点的光晕（位图烘焙期间临时关掉，改由实时层画）；
+         `glowSelected` —— 选中 / 悬停节点的光圈，**不跟着普通光晕一起关**。
+         以前只有一个布尔，一刀切下去连「我正在看的那个点」的光圈也没了。 */
       glow: true,
+      glowSelected: true,
+      glowNormalAlpha: 0.72,      // 普通光晕的不透明度（选中 / 悬停固定 1.0）
 
       /* 半径分层：让「中心天体 / 枢纽」与「边角小点」一眼分得开。
          ------------------------------------------------------------------
@@ -1300,7 +1333,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       defCurvature: 0.17,         // 定义线弯曲程度（避免与直线重叠）
       mergeOffset: 52,            // 多前提箭头汇聚点距离目标多远（世界单位）
       arrowSize: 9.5,             // 箭头长度（屏幕像素，随缩放轻微变化）
-      equivalenceGlyph: 0.7       // 大于该缩放时在等价线中点画 ⟺
+      equivalenceGlyph: 0.7,      // 大于该缩放时在等价线中点画 ⟺
+      /* ⭐ 2026-10-17：定义引用线占全部连线 89%（逐条看是一片蓝网）。
+         在**领域 / 星团尺度**把它压到这个比例 —— 那是「看结构」的档位，
+         关系线（推出 / 等价）才是主角。缩到全图或放大到近景都恢复 1.0。
+         ⛔ 曲线只有一处：drawEdgeOne 与 drawEdges 的合并描边路径都要乘 lodA.defDim。 */
+      definitionMidScale: 0.60
     },
 
     /* 星团包络（每个「装置」的范围）
@@ -1333,13 +1371,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          云雾本来就是糊的，形状与浓淡无差别；成本 0.2ms 且只在开页 / 改显隐时发生。 */
       texBlur: 1.6,
       blobsPerRegion: 15,         // 每个板块的云朵数
-      blobAlpha: 0.075,           // 单朵云的基础不透明度（多朵叠加后会更深）
-      centerAlpha: 0.065,         // 板块中心大团雾
-      nodeAlpha: 0.050,           // 每个节点周围的小团雾
-      spread: 0.72,               // 云朵分布半径 / 板块半径
+      blobAlpha: 0.038,           // 单朵云的基础不透明度（多朵叠加后会更深）
+      centerAlpha: 0.033,         // 板块中心大团雾
+      nodeAlpha: 0.025,           // 每个节点周围的小团雾
+      spread: 0.60,               // 云朵分布半径 / 板块半径
       blobRadiusMin: 0.30,
       blobRadiusMax: 0.50,
-      cloudMargin: 110,           // 板块云半径 = 专属节点最大离心距 + 该余量
+      cloudMargin: 60,           // 板块云半径 = 专属节点最大离心距 + 该余量
       cloudRadiusMin: 200,
       dilate: 1.45                // 纹理画布在内容范围外多留的边距
     },
@@ -1367,12 +1405,30 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
        ------------------------------------------------------------------ */
     lod: {
       /* —— 结构性：倍率 × k₀ —— */
-      galaxyNameIn:   { rel: [0.25, 0.85] },  // 星系名：全图就亮
-      galaxyNameHold: 0.50,                   // 装置名出来时，星系名最多压掉多少
-      clusterNameIn:  { rel: [0.45, 1.15] },  // 装置名：全图就基本全亮，放大后让位给节点名
-      clusterNameOut: { rel: [2.00, 3.60] },
+      /* ⭐ 2026-10-17 四层结构 + **尺度回差**：
+         最远视角先认**大板块**，放大一档才轮到领域，再放大到星团。
+         三档名字以前互相重叠（sector 退到 1.90×k₀ 时领域从 0.95×k₀ 就开始了），
+         临界位置两份名字抢同一块屏幕 ⇒ 缩放抖动时会闪。
+         现在**曲线彼此留缝**：上一档在下一档起亮前就归零。
+
+         ⚠️ 缝隙要和 `tierBound` 的回差带对齐（否则 holdTier 切换的瞬间名字会「啪」地
+            出现 / 消失）。四档：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
+            切换点 = tierBound × (1±tierHysteresis)，曲线在切换点之前已经到 0。 */
+      sectorNameIn:   { rel: [0.10, 0.45] },  // 大板块名：最远处就亮（≈任何可达缩放都亮）
+      sectorNameOut:  { rel: [1.00, 1.065] }, // 进领域档（1.08×1.01）之前归零
+      galaxyNameIn:   { rel: [1.095, 1.26] }, // 领域名：全图那一档**不出**，放大后才出
+      galaxyNameOut:  { rel: [1.94, 2.005] }, // 进星团档（2.03×1.01）之前归零
+      clusterNameIn:  { rel: [2.055, 2.30] }, // 星团名：放大到领域尺度才出
+      clusterNameOut: { rel: [3.85, 4.80] },
       clusterLinkOut: { rel: [1.00, 2.80] },  // 团级粗线：全图最亮，放大后退场
-      trunkNameIn:    { rel: [0.85, 1.05] },  // 主干名：全图就全亮（去重叠会筛掉挤的）
+      trunkNameIn:    { rel: [1.35, 1.75] },  // 主干名：和领域名同一档出现（全图只剩大板块名）
+
+      /* 档位边界（×k₀）与回差：进得晚（×1.01）、出得早（×0.99）⇒ 死区里不闪。
+         ⚠️ 边界必须落在上面曲线的缝隙里：
+            档 0→1 在 [1.065, 1.095]、档 1→2 在 [2.005, 2.055]、档 2→3 在 [4.80, …]。
+            注意 B1 取 2.03 而不是 2.00：否则「放大到 2×k₀」正好落进缝隙，一屏没有大字。 */
+      tierBound: [1.08, 2.03, 4.90],
+      tierHysteresis: 0.01,
 
       /* —— 节点级：屏幕上相邻两点的像素距离 —— */
       nodeDotIn:  { px: [8, 20] },            // 圆点：几乎一直在
@@ -1387,7 +1443,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 主干内部的边：全图尺度上单独留一条「骨架」。
          节点级连线要等相邻 36px 才画，那时已经放大 1.3 倍以上了 ——
          这段区间里主线也看不见。给它一条自己的曲线，缩小时才看得见主线。 */
-      trunkEdgeIn: { rel: [0.50, 1.25] },
+      trunkEdgeIn: { rel: [1.05, 1.75] },
       /* 全图时把「不在主干上」的点/名压暗，主线才浮得出来；放大到 2.2× k₀ 恢复原样。
          （主干本来是 58 个点、84 条内部边的**一张网**，不压暗的话只是多一层网。） */
       trunkDimIn:  { rel: [0.60, 2.20] },
@@ -1395,7 +1451,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
       /* 星团包络：和装置名同一档出现，放大到节点名出来之前就退场 */
       envelopeIn:  { rel: [0.25, 0.85] },
-      envelopeOut: { rel: [1.40, 2.80] }
+      envelopeOut: { rel: [1.40, 2.80] },
+
+      /* ⭐ 阶段 3：远尺度**默认收起「逐条跨团长线」**（团内的关系照旧画）。
+         这条只作用于「两端不在同一个星团」的边；选中 / 聚焦的边一律放行，
+         `showAllEdges` 打开时也放行。⛔ 不画任何「板块 A ⟹ 板块 B」的聚合箭头。 */
+      crossEdgeOut: { rel: [0.90, 1.70] },
+
+      /* 定义引用线在「领域 / 星团」尺度压暗的区间（×k₀）。曲线形状和
+         `edge.definitionMidScale` 一起用：区间内乘 0.60，两端恢复 1.0。 */
+      defDimIn:  { rel: [1.05, 1.25] },
+      defDimOut: { rel: [3.80, 4.70] }
     },
 
     /* 星团（一套自足的装置，内部关系密、对外整块连接） */
@@ -1412,7 +1478,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       },
       cloudPadding: 42,     // 星团云比节点分布外扩多少（世界单位）—— 收紧，让团的边界看得清
       cloudMinRadius: 120,
-      cloudAlpha: 0.14,     // 星团云不透明度（叠在星系云上，形成"更密的结"）
+      cloudAlpha: 0.08,     // 星团云不透明度（叠在星系云上，形成"更密的结"）
       labelSize: 13.5,
       labelOffset: 0,       // 星团名放在星团中心上方
       namePad: 6            // 星团名底下那块底色的内边距
@@ -1421,6 +1487,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* 星团级连线（自动从节点级连线聚合出来，不需要手写） */
     clusterLink: {
       minEdges: 2,          // 两个星团之间至少这么多条节点连线才画
+      /* 阶段 3：远尺度（`crossEdgeOut` 以下）**跨板块**的聚合线要更粗才画，
+         否则远看满屏斜穿的细线。同板块的不受这条限制。 */
+      crossSectorMinEdges: 4,
       widthMin: 1.6,
       widthMax: 7.5,
       color: '86, 104, 140',
@@ -1446,6 +1515,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* 开关默认值 */
     exploreMode: false,     // true → 打开弱边（探索模式）
     showDefinitionLines: true,    showLabels: true,
+    /* 阶段 3：远尺度收起跨团长线。打开它就「全部连线」都画（不新增渲染路径）。 */
+    showAllEdges: false,
     wheelZooms: true,             // false → 滚轮平移（触控板手感）
     hideParallelImplications: true, // 已有等价线时不再叠画同对节点的箭头
     highlightDefinitions: true,   // 面板上把「定义引用」单独分组
@@ -2170,6 +2241,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     (graph.regions || []).forEach(function (r) {
       r.nameShow = useEn ? (r.en || r.name) : r.name;
     });
+    (graph.sectors || []).forEach(function (s) {
+      s.nameShow = useEn ? (s.en || s.name) : s.name;
+    });
     MG.displayEpoch = (MG.displayEpoch || 0) + 1;
     /* 文本量缓存：键里已经带 displayLang（见 renderer.js 的 textCacheKey），
        这里再整体作废一次 —— 两条一起才叫「语言进了缓存 key」。 */
@@ -2259,6 +2333,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
   var CFG = MG.config.camera;
 
   function createCamera() {
+    /* ⭐ 「可用画布」的内缩：左栏（图例导航）、底部说明条、右侧详情抽屉。
+       以前视口中心一律 = viewW/2, viewH/2，于是「适配全部」把图的左半边画到面板背后
+       （用户 2026-10-17 报的「图有一截藏在侧栏后面」）。
+       内缩由 app 量 DOM **实体**（getBoundingClientRect / display）后 setInsets 传进来 ——
+       引擎不认识界面，也不该猜宽度。
+       ⛔ 可用矩形只在这里算一处：renderer.fitZoom() 的 k₀ 也必须读 availRect()，
+          两处各算一遍就会像 layout.stat.radius / background.paintRegion 那样漂。 */
+    var insets = { left: 0, right: 0, top: 0, bottom: 0 };
+
+    function availRect() {
+      var w = Math.max(40, cam.viewW - insets.left - insets.right);
+      var h = Math.max(40, cam.viewH - insets.top - insets.bottom);
+      return {
+        x0: insets.left, y0: insets.top, w: w, h: h,
+        cx: insets.left + w / 2, cy: insets.top + h / 2
+      };
+    }
+
     var cam = {
       k: 1, tx: 0, ty: 0,
       viewW: 1, viewH: 1,
@@ -2269,6 +2361,19 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       setViewport: function (w, h) {
         cam.viewW = w; cam.viewH = h;
       },
+
+      /** 设置面板内缩（屏幕像素）。缺省 0 ⇒ 与旧行为完全一致。 */
+      setInsets: function (o) {
+        o = o || {};
+        insets = {
+          left: Math.max(0, +o.left || 0), right: Math.max(0, +o.right || 0),
+          top: Math.max(0, +o.top || 0), bottom: Math.max(0, +o.bottom || 0)
+        };
+      },
+      insets: function () {
+        return { left: insets.left, right: insets.right, top: insets.top, bottom: insets.bottom };
+      },
+      availRect: availRect,
 
       toScreen: function (wx, wy) {
         return { x: wx * cam.k + cam.tx, y: wy * cam.k + cam.ty };
@@ -2304,21 +2409,23 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         cam._anim = null;
       },
 
-      /** 把世界坐标点移到屏幕中心 */
+      /** 把世界坐标点移到**可用区**中心（扣掉面板之后） */
       centerOn: function (wx, wy) {
-        cam.tx = cam.viewW / 2 - wx * cam.k;
-        cam.ty = cam.viewH / 2 - wy * cam.k;
+        var av = availRect();
+        cam.tx = av.cx - wx * cam.k;
+        cam.ty = av.cy - wy * cam.k;
       },
 
-      /** 让世界矩形 bbox 适配视口 */
+      /** 让世界矩形 bbox 适配**可用区** */
       fit: function (bbox, padding) {
+        var av = availRect();
         var pad = padding == null ? CFG.fitPadding : padding;
         // 小屏幕上别让留白吃掉整个视野
-        pad = Math.min(pad, Math.min(cam.viewW, cam.viewH) * 0.18);
+        pad = Math.min(pad, Math.min(av.w, av.h) * 0.18);
         var w = Math.max(1, bbox.maxX - bbox.minX);
         var h = Math.max(1, bbox.maxY - bbox.minY);
-        var availW = Math.max(40, cam.viewW - pad * 2);
-        var availH = Math.max(40, cam.viewH - pad * 2);
+        var availW = Math.max(40, av.w - pad * 2);
+        var availH = Math.max(40, av.h - pad * 2);
         var k = Math.min(availW / w, availH / h);
         k = U.clamp(k, Math.max(CFG.minZoom, CFG.fitMinZoom),
           Math.min(CFG.maxZoom, CFG.maxFitZoom));
@@ -2330,9 +2437,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /** 平滑移动到目标视角；target = {k, cx, cy}（cx,cy 为世界中心） */
       animateTo: function (target, ms) {
         var k0 = cam.k, tx0 = cam.tx, ty0 = cam.ty;
+        var av = availRect();
         var k1 = U.clamp(target.k == null ? cam.k : target.k, CFG.minZoom, CFG.maxZoom);
-        var tx1 = target.cx != null ? cam.viewW / 2 - target.cx * k1 : cam.tx;
-        var ty1 = target.cy != null ? cam.viewH / 2 - target.cy * k1 : cam.ty;
+        var tx1 = target.cx != null ? av.cx - target.cx * k1 : cam.tx;
+        var ty1 = target.cy != null ? av.cy - target.cy * k1 : cam.ty;
         cam._anim = { t0: now(), dur: ms == null ? CFG.animateMs : ms, k0: k0, tx0: tx0, ty0: ty0, k1: k1, tx1: tx1, ty1: ty1 };
       },
 
@@ -2607,6 +2715,36 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     };
 
     graph.regions.forEach(function (r) { graph.regionById[r.id] = r; });
+
+    /* ------------------------------------------------------- 大板块索引 */
+    /* 四层结构的第一层。真源是 src/data/sectors.js 的 `regions` 归属表 ——
+       ⛔ regions.js 里**不**再写 sector 字段（两处并存一定会漂）。
+       这里反向把 sector 写到 region 上，供布局与渲染读。
+       `empty: true`（没有挂任何领域）的板块保留登记但不参与显示。 */
+    graph.sectors = (MG.sectors || []).map(function (s) {
+      var rs = (s.regions || []).map(function (id) { return graph.regionById[id]; }).filter(Boolean);
+      return {
+        id: s.id, name: s.name, en: s.en, color: s.color,
+        desc: s.desc, secondary: s.secondary || null,
+        empty: !!s.empty || rs.length === 0,
+        regions: rs
+      };
+    });
+    graph.sectorOf = Object.create(null);      // regionId → sector
+    graph.sectors.forEach(function (s) {
+      s.regions.forEach(function (r) { r.sector = s.id; graph.sectorOf[r.id] = s; });
+    });
+    // 没挂在任何板块上的领域：留个兜底板块，免得渲染时找不到颜色
+    graph.regions.forEach(function (r) {
+      if (graph.sectorOf[r.id]) return;
+      var loose = graph.sectors.filter(function (s) { return s.id === '__loose'; })[0];
+      if (!loose) {
+        loose = { id: '__loose', name: '其他', en: 'Other', color: '#7A7F8C', empty: false, regions: [] };
+        graph.sectors.push(loose);
+      }
+      loose.regions.push(r);
+      graph.sectorOf[r.id] = loose;
+    });
 
     /* ---------------------------------------------------------- 星团索引 */
     /* 星团 = 星系内部一套「自足的装置」。节点写 cluster 字段即归属；
@@ -3200,6 +3338,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       n.isBorder = n.regionObjs.length > 1;
       n.degree = (graph.adj[n.id] || []).length;
       n.galaxy = n.clusterObj ? graph.galaxyOf(n.clusterObj) : (n.regionObjs[0] || null);
+      /* 四层结构：节点属于哪个**大板块**（取主归属领域那一块）。
+         只用来给跨板块的边打折，不影响任何坐标的语义。 */
+      n._sector = (n.regionObjs[0] && n.regionObjs[0].sector) || '';
     });
 
     graph.regions.forEach(function (r) {
@@ -3335,7 +3476,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         for (var b = a + 1; b < ids.length; b++) {
           var ia = indexOf(nodes, ids[a]), ib = indexOf(nodes, ids[b]);
           if (ia < 0 || ib < 0) continue;
-          pairs.push([ia, ib, w]);
+          pairs.push([ia, ib, w, nodes[ia]._sector !== nodes[ib]._sector]);
         }
       }
     });
@@ -3372,6 +3513,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         dx = nodes[i].x - nodes[j].x; dy = nodes[i].y - nodes[j].y;
         d = Math.sqrt(dx * dx + dy * dy) || 1;
         f = ((d - springLen) / d) * cfg.spring * pairs[s][2] * k * 0.55;
+        /* 跨大板块的边打折：关系照画，但别把四个板块往中间拽。 */
+        if (pairs[s][3]) f *= (cfg.crossSectorPull == null ? 1 : cfg.crossSectorPull);
         if (f > cfg.springMax) f = cfg.springMax;
         else if (f < -cfg.springMax) f = -cfg.springMax;
         disp[i * 2] -= (dx / d) * f; disp[i * 2 + 1] -= (dy / d) * f;
@@ -3438,7 +3581,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var singles = list.filter(function (nd) { return !nd.isBorder; });
       var basis = singles.length >= 2 ? singles : list;
       var cx = r.center.x, cy = r.center.y, maxd = 0;
-      basis.forEach(function (nd) { maxd = Math.max(maxd, U.dist(nd.x, nd.y, cx, cy)); });
+      /* ⭐ 阶段 4：板块云的半径改用**92 分位**而不是最大值。
+         用户指着左边那团粉雾说「糊成一片」—— 根因是几个离心很远的跨板块节点
+         把 maxd 拉得很长，云半径跟着涨，而那里其实没什么点。
+         分位数既保住了「云把内容包住」的观感，又不会为个别远点空摊一大片。 */
+      var ds = basis.map(function (nd) { return U.dist(nd.x, nd.y, cx, cy); }).sort(function (a, b) { return a - b; });
+      var maxd = ds.length ? ds[Math.min(ds.length - 1, Math.floor(ds.length * 0.92))] : 0;
       r.stat = {
         cx: cx, cy: cy, count: list.length,
         radius: Math.max(bc.cloudRadiusMin, maxd + bc.cloudMargin)
@@ -3639,8 +3787,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
        规则与 layout.js 里算 stat.radius 时一致：跨星系的点不参与。 */
     var core = list.filter(function (n) { return !n.isBorder; });
     var basis = core.length >= 2 ? core : list;
-    var maxd = 0;
-    basis.forEach(function (n) { maxd = Math.max(maxd, U.dist(n.x, n.y, cx, cy)); });
+    /* ⭐ 阶段 4：半径改用 **92 分位**而不是最大值。
+       ⚠️ 这里和 layout.js 的 stat.radius 是**两处独立计算** —— 上一刀改的是
+       layout 那处，截图逐字节没变，就是因为云其实用的是这里的 maxd。
+       几个离心很远的点（尤其跨板块的）会把 max 拉长一大截，而那里并没有点，
+       云就糊成一大片。分位数保住「包住内容」，又不为个别远点空摊。 */
+    var ds = basis.map(function (n) { return U.dist(n.x, n.y, cx, cy); }).sort(function (a, b) { return a - b; });
+    var maxd = ds.length ? ds[Math.min(ds.length - 1, Math.floor(ds.length * 0.92))] : 0;
     var R = Math.max(bc.cloudRadiusMin, maxd + bc.cloudMargin);
     var rand = U.rngFrom(region.id, MG.config.seed);
 
@@ -3892,8 +4045,25 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     var lodA = {
       galaxyName: 1, clusterName: 1, nodeDot: 1,
       nodeName: 1, trunkName: 0, nodeEdge: 1, clusterLink: 0,
-      trunkEdge: 0, trunkDim: 1, envelope: 0
+      trunkEdge: 0, trunkDim: 1, envelope: 0, sectorName: 1, crossEdge: 0,
+      defDim: 1, tier: 0
     };
+
+    /* ⭐ 尺度档位的**回差**：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
+       为什么需要：临界位置上「上一档还没走、下一档已经来」，两份名字抢同一块屏幕，
+       缩放只要抖一下，placeName() 的落位就翻来覆去 —— 看起来就是闪。
+       做法：进入下一档要越过边界 ×(1+h)（**晚**），退回上一档要低于 ×(1−h)（**早**），
+       死区里档位不动。⛔ 只在这里更新 holdTier，别处只读 lodA.tier。 */
+    var holdTier = 0;
+    function updateTier(k) {
+      var L = C.lod;
+      var spec = L.tierBound || [1.03, 2.03, 4.90];
+      var h = L.tierHysteresis == null ? 0.05 : L.tierHysteresis;
+      var k0 = fitZoom();
+      while (holdTier < spec.length && k > spec[holdTier] * k0 * (1 + h)) holdTier++;
+      while (holdTier > 0 && k < spec[holdTier - 1] * k0 * (1 - h)) holdTier--;
+      return holdTier;
+    }
 
     /* ------------------------------------------------------------------
        LOD 阈值换算（写法见 config.lod 的注释）
@@ -3912,10 +4082,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          判据要用 camNow().viewW/viewH（staticCam 也带这两个字段）。 */
       var c = camNow();
       var vw = c.viewW || W, vh = c.viewH || H;
-      var key = [bb.minX, bb.minY, bb.maxX, bb.maxY, vw, vh].join(',');
+      /* ⭐ 与 camera.fit() 用**同一块可用矩形**（扣掉左栏 / 底部说明条）。
+         以前这里按整个视口算 k₀，而「适配全部」按视口算 ⇒ 两边一致；
+         2026-10-17 给相机加了内缩之后，这里必须跟着读 availRect()，
+         否则 {rel:…} 的阈值全部和「用户看到的那一档」错位
+         （正是 config 注释里那条铁律：同一个量不许在两个文件里各算一遍）。 */
+      var av = (typeof c.availRect === 'function') ? c.availRect() : { w: vw, h: vh };
+      var key = [bb.minX, bb.minY, bb.maxX, bb.maxY, vw, vh, av.w, av.h].join(',');
       if (key === fitKKey) return fitKCache;
-      var pad = Math.min(C.camera.fitPadding, Math.min(vw, vh) * 0.18);
-      var aw = Math.max(40, vw - pad * 2), ah = Math.max(40, vh - pad * 2);
+      var pad = Math.min(C.camera.fitPadding, Math.min(av.w, av.h) * 0.18);
+      var aw = Math.max(40, av.w - pad * 2), ah = Math.max(40, av.h - pad * 2);
       var w = Math.max(1, bb.maxX - bb.minX), h = Math.max(1, bb.maxY - bb.minY);
       fitKCache = U.clamp(Math.min(aw / w, ah / h),
         Math.max(C.camera.minZoom, C.camera.fitMinZoom),
@@ -3936,10 +4112,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     function computeLod() {
       var k = camNow().k, L = C.lod;
+      /* 档位先定（带返回差），三档名字**互斥**：同一时刻只有一档在画。
+         曲线本身已经在缝隙里归零，所以档位切换不会出现「啪」的一下。 */
+      var tier = updateTier(k);
+      lodA.tier = tier;
       var tDot = thr(L.nodeDotIn), tEdge = thr(L.nodeEdgeIn), tName = thr(L.nodeNameIn);
       var tTrunk = thr(L.trunkNameIn), tGal = thr(L.galaxyNameIn);
+      var tGalOut = thr(L.galaxyNameOut || { rel: [1.94, 2.005] });
       var tCIn = thr(L.clusterNameIn), tCOut = thr(L.clusterNameOut);
       var tCLink = thr(L.clusterLinkOut);
+      var tSec = thr(L.sectorNameIn), tSecOut = thr(L.sectorNameOut);
 
       lodA.nodeDot = smoothstep(tDot[0], tDot[1], k);
       lodA.nodeName = smoothstep(tName[0], tName[1], k);
@@ -3955,14 +4137,30 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       // 星团包络：中等缩放出现，放大后让位
       var tEnvIn = thr(L.envelopeIn), tEnvOut = thr(L.envelopeOut);
       lodA.envelope = smoothstep(tEnvIn[0], tEnvIn[1], k) * (1 - smoothstep(tEnvOut[0], tEnvOut[1], k));
-      // 星团名：放大到看得见节点名时就退场，避免和节点名打架
+      /* 星团名：放大到看得见节点名时就退场，避免和节点名打架。
+         ⚠️ 只有 holdTier ≥ 2（星团档）才画 —— 档位之外一律 0。 */
       var cNameIn = smoothstep(tCIn[0], tCIn[1], k);
       var cNameOut = smoothstep(tCOut[0], tCOut[1], k);
-      lodA.clusterName = cNameIn * (1 - cNameOut);
-      // 星系名：最小的时候出现，星团名起来之后压掉一部分（但不清零，留个方位感）
-      lodA.galaxyName = (1 - (L.galaxyNameHold || 0) * cNameIn) * smoothstep(tGal[0], tGal[1], k);
+      lodA.clusterName = tier >= 2 ? cNameIn * (1 - cNameOut) : 0;
+      /* 领域名：**只在领域档**画（以前它会一直留到 50% 去和星团名抢位置） */
+      var galName = smoothstep(tGal[0], tGal[1], k) * (1 - smoothstep(tGalOut[0], tGalOut[1], k));
+      lodA.galaxyName = tier === 1 ? galName : 0;
       // 星团级粗线与节点级细线交叉淡入淡出
       lodA.clusterLink = 1 - smoothstep(tCLink[0], tCLink[1], k);
+      /* 大板块名：**只有它在最远视角**。档位 0 之外一律不画。 */
+      var secName = smoothstep(tSec[0], tSec[1], k) * (1 - smoothstep(tSecOut[0], tSecOut[1], k));
+      lodA.sectorName = tier === 0 ? secName : 0;
+      /* 跨团长线：**远尺度收起**（crossEdge→0），放大到领域/星团尺度才回来 */
+      var tCross = thr(L.crossEdgeOut);
+      lodA.crossEdge = smoothstep(tCross[0], tCross[1], k);
+      /* 定义引用线在中景降权（见 config.edge.definitionMidScale）：
+         两个 draw 路径共用这一个系数 —— 定义线大部分走的是**合并描边**快路径，
+         只改 drawEdgeOne 会「改了没效果」（这条坑写在 HANDOVER 里）。 */
+      var dIn = thr(L.defDimIn || { rel: [1.05, 1.25] });
+      var dOut = thr(L.defDimOut || { rel: [3.80, 4.70] });
+      var mid = smoothstep(dIn[0], dIn[1], k) * (1 - smoothstep(dOut[0], dOut[1], k));
+      var floor = C.edge.definitionMidScale == null ? 0.60 : C.edge.definitionMidScale;
+      lodA.defDim = 1 - (1 - floor) * mid;
     }
 
     /* ------------------------------------------------------------ 尺寸 */
@@ -4317,6 +4515,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ============================================================ 绘制 */
     /* 本帧已被「星系名 / 装置名」占掉的矩形 —— 节点名不许压上去 */
     var nameBoxes = [];
+    /* 本帧**预留**给特殊标签（选中 → 悬停 → 搜索命中）的位置。
+       ⚠️ 它们必须在板块 / 领域 / 星团名**之前**占位，否则「我刚搜到的那个点」
+          名字会被大标题挤掉 —— 见 reserveSpecialLabels()。 */
+    var reservedLabels = [];
 
     /* ---------- 静态层（可烘）：包络 → 星团连线 → 边 → 节点 → 箭头 ---------- */
     function paintStatic(geoms) {
@@ -4353,6 +4555,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          （实测同机位位图路 vs 实画路差 5.6% 像素、集中在各团的软色区）。
          放在名字/标签**之前**画，免得色块压住字。 */
       if (envLive) drawEnvelopes();
+      /* ⭐ 标签避让的优先级在这里就定死：**选中项 → 悬停 → 搜索命中**先占位，
+         然后才是「当前尺度的主要名称」（板块 / 领域 / 星团），最后是普通节点名。
+         ⛔ 放不下就隐藏低优先级，不缩字号、不降对比度（用户 2026-10-17 拍板）。 */
+      if (C.showLabels) reserveSpecialLabels();
+      if (lodA.sectorName > 0.02) drawSectorNames();
       if (lodA.galaxyName > 0.02) drawGalaxyNames();
       if (lodA.clusterName > 0.02) drawClusterNames();
       if (C.showLabels) drawLabels();
@@ -4366,6 +4573,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var geoms = ensureGeom();     // ⚠️ 照常建几何：命中测试（hitTest）依赖它
       computeLod();
       nameBoxes.length = 0;
+      reservedLabels.length = 0;
 
       if (!staticHidden) paintStatic(geoms);   // 位图模式：静态层交给 DOM 图层
 
@@ -4391,7 +4599,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          ⚠️ 清空写在裁剪**里面**：调用方不必管清底，也不会误清掉别的带。 */
     function drawStatic(target, scale, rect, band) {
       var save = { ctx: ctx, W: W, H: H, dpr: dpr, cam: staticCam, cull: cullOff,
-        hover: view.hover, labels: C.showLabels, glow: C.node.glow, glowLiveV: glowLive };
+        hover: view.hover, labels: C.showLabels, glow: C.node.glow,
+        glowSel: C.node.glowSelected, glowLiveV: glowLive };
       ctx = target;
       W = target.canvas.width; H = target.canvas.height; dpr = 1;
       /* ⚠️ staticCam 必须是「够用的相机」：凡是用 camNow() 的地方都会拿到它，
@@ -4404,6 +4613,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       staticCam = {
         k: scale, tx: -rect.minX * scale, ty: -rect.minY * scale,
         viewW: view.cam.viewW, viewH: view.cam.viewH,
+        /* ⚠️ fitZoom() 现在按「可用矩形」算 k₀（与 camera.fit 同一套）。
+           烘焙时相机是这张假对象，所以必须把同一个 availRect 递过去 ——
+           漏了就会退回「整个视口」口径，烘出来的 LOD 和实时画对不上。 */
+        availRect: function () { return view.cam.availRect(); },
         toScreen: function (x, y) { return { x: x * this.k + this.tx, y: y * this.k + this.ty }; }
       };
       /* ⭐ cullOff = false：**按烘焙画布裁剪**。
@@ -4416,6 +4629,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       view.hover = null;                    // hover 不进烘焙
       C.showLabels = false;                 // 标签不进烘焙
       C.node.glow = false;                  // 光晕实时画（实测 ≈0.05ms）
+      /* ⚠️ 选中光圈也要在这里关掉：烘焙时 view.focus 不清空，若只关普通光晕，
+         选中的那颗点会把光晕**烘进静态图**里，取消选中后还留在画布上。 */
+      C.node.glowSelected = false;
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       var clipped = false;
       if (band && band.h > 0) {
@@ -4433,18 +4649,20 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };
       computeLod();
       nameBoxes.length = 0;
+      reservedLabels.length = 0;
       paintStatic(geomForBake());
       if (clipped) ctx.restore();       // ⛔ 必须在切回实时 ctx 之前 restore
 
       ctx = save.ctx; W = save.W; H = save.H; dpr = save.dpr;
       staticCam = save.cam; cullOff = save.cull;
-      view.hover = save.hover; C.showLabels = save.labels; C.node.glow = save.glow; glowLive = save.glowLiveV;
+      view.hover = save.hover; C.showLabels = save.labels; C.node.glow = save.glow;
+      C.node.glowSelected = save.glowSel; glowLive = save.glowLiveV;
       geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };   // 实时层下一帧重建
     }
 
     /* 光晕实时画（烘焙集里没有它）：与 drawNode 里那段逐字一致，只是独立成一遍 */
     function drawGlows() {
-      if (!C.node.glow) return;
+      if (!C.node.glow && !C.node.glowSelected) return;
       view.graph.nodes.forEach(function (n) {
         if (!nodeOk(n.id) || !nodeInView(n)) return;
         var p = screenOf(n), r = nodeRadius(n);
@@ -4454,9 +4672,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var isHover = (view.hover && view.hover.type === 'node' && view.hover.id === n.id) ||
           (view.hover && view.hover.type === 'edge' && edgeById(view.hover.id) &&
             GU.edgeNodes(edgeById(view.hover.id)).indexOf(n.id) >= 0);
+        /* ⭐ 普通光晕关掉了也要把选中 / 悬停的那几颗画出来（光圈是「我在看它」的记号，
+           不该被「少点光晕」这个审美开关一起关掉）。 */
+        var emph = isFocus || isHover;
+        if (!emph && !C.node.glow) return;
         var gs = glowSprite(MG.typeStyle(n.type).color);
         var gsz = r * 5.4;
-        ctx.globalAlpha = a * (isFocus || isHover ? 1 : 0.72);
+        ctx.globalAlpha = a * (emph ? 1 :
+          (C.node.glowNormalAlpha == null ? 0.72 : C.node.glowNormalAlpha));
         ctx.drawImage(gs, p.x - gsz / 2, p.y - gsz / 2, gsz, gsz);
         ctx.globalAlpha = 1;
       });
@@ -4555,6 +4778,67 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       ctx.restore();
     }
 
+    /* ------------------------------------------------ 大板块名（最远视角） */
+    /* 板块落在哪：**成员领域 stat 重心的加权平均**（按节点数加权）。
+       Stage 1 只读现有重心，不动布局；Stage 2 会改成 sectors.js 里手写的 center。 */
+    function sectorAnchor(s) {
+      var wsum = 0, x = 0, y = 0;
+      (s.regions || []).forEach(function (r) {
+        if (!r.stat) return;
+        var w = Math.max(1, r.stat.count);
+        wsum += w; x += r.stat.cx * w; y += r.stat.cy * w;
+      });
+      if (!wsum) return null;
+      return { x: x / wsum, y: y / wsum };
+    }
+
+    function drawSectorNames() {
+      var a = lodA.sectorName;
+      var fs = U.clamp(26 * Math.pow(view.cam.k, 0.12), 17, 34);
+      ctx.save();
+      ctx.font = '800 ' + fs.toFixed(1) + 'px ' + T.font;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      (view.graph.sectors || []).forEach(function (s) {
+        if (s.empty || !s.regions.length) return;          // 空板块不占画面
+        var c = sectorAnchor(s);
+        if (!c) return;
+        var p = w2s(c.x, c.y);
+        if (p.x < -400 || p.x > W + 400 || p.y < -300 || p.y > H + 300) return;
+        var text = s.nameShow || s.name;
+        var tw = measure(ctx, text, ctx.font);   // 缓存键含 displayLang ⇒ 中英分别量
+        var ls = fs * 0.22;
+        var bw = tw + ls * (text.length - 1) + 40, bh = fs + 22;
+        // rank 2 = 当前尺度主名；放不下就**不画**（不缩字号、不叠到别人身上）
+        var slot = placeName(p.x, p.y, bw, bh, 2);
+        if (!slot) return;
+        var cy = slot.y;
+        ctx.globalAlpha = a;
+        ctx.fillStyle = 'rgba(255,255,255,0.94)';
+        ctx.beginPath();
+        roundPath(ctx, p.x - bw / 2, cy - bh / 2, bw, bh, bh / 2);
+        ctx.fill();
+        ctx.strokeStyle = U.rgba(s.color, 0.85);
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+        // 手动加字距（和领域名同一手感，但更粗、更有颜色）
+        var chars = text.split('');
+        var total = tw + ls * (chars.length - 1);
+        var cx = p.x - total / 2;
+        ctx.fillStyle = U.rgba(s.color, 0.96);
+        ctx.textAlign = 'left';
+        chars.forEach(function (ch) {
+          ctx.fillText(ch, cx, cy + 1);
+          cx += ctx.measureText(ch).width + ls;
+        });
+        ctx.textAlign = 'center';
+        ctx.globalAlpha = 1;
+        prof.labelCount++;                  // 大板块名也算一个「画上去的标签」
+        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2 });
+      });
+      ctx.restore();
+    }
+
     /* ------------------------------------------------ 星系名 */
     function drawGalaxyNames() {
       var a = lodA.galaxyName;
@@ -4572,12 +4856,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         /* ⭐ T2.4 收尾：画布上的名字也要跟语言走。`nameShow` 是**启动时算一次**的
            （见 src/core/i18n.js 的 MG.localizeDisplay）—— ⛔ 不在每帧里查表。 */
         var text = r.nameShow || r.name;
-        var tw = ctx.measureText(text).width;
+        var tw = measure(ctx, text, ctx.font);
         var ls = fs * 0.18;
         var bw = tw + ls * (text.length - 1) + 26, bh = fs + 14;
-        // 星系名之间也尽量不叠（它们最先占位，所以通常就在原位）
-        var slot = placeName(p.x, p.y, bw, bh);
-        var cy = slot ? slot.y : p.y;
+        // rank 2 = 当前尺度主名；放不下就不画（优先保选中 / 搜索命中的标签）
+        var slot = placeName(p.x, p.y, bw, bh, 2);
+        if (!slot) return;
+        var cy = slot.y;
         ctx.globalAlpha = a;
         ctx.fillStyle = 'rgba(255,255,255,0.86)';
         ctx.beginPath();
@@ -4598,7 +4883,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.textAlign = 'center';
         ctx.globalAlpha = 1;
         prof.labelCount++;                  // 星系名算一个「画上去的标签」
-        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2 });
+        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2 });
       });
       ctx.restore();
     }
@@ -4612,11 +4897,26 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var cfgL = C.clusterLink;
       var maxCount = 1;
       links.forEach(function (l) { if (l.count > maxCount) maxCount = l.count; });
+      /* ⭐ 选中节点的跨板块关系**优先于任何隐藏规则**（用户 2026-10-17 的判据）：
+         聚合线也一样 —— 如果它连着我正在看的那个团，跨板块也照画。 */
+      var focusNode = (view.focus && view.focus.type === 'node') ? view.graph.byId[view.focus.id] : null;
+      var focusCluster = focusNode ? focusNode.cluster : null;
 
       ctx.save();
       ctx.lineCap = 'round';
       links.forEach(function (l) {
         if (l.count < cfgL.minEdges) return;
+        /* ⭐ 阶段 3：远尺度只留**主要关系**。
+           · 同板块的聚合线照画（它们是板块内部的骨架）；
+           · **跨板块**的聚合线要够粗才画（count ≥ crossSectorMinEdges），
+             否则远看就是一地斜穿的细线。
+           这一层本来就是「聚合」而不是逐条边，筛掉不等于关系消失 ——
+           放大、选中、搜索都还能找到它。 */
+        if (!C.showAllEdges && lodA.crossEdge < 0.5) {
+          var sA = clusterSector(l.a), sB = clusterSector(l.b);
+          var touchesFocus = !!(focusCluster && (l.a === focusCluster || l.b === focusCluster));
+          if (!touchesFocus && sA && sB && sA !== sB && l.count < (cfgL.crossSectorMinEdges || 4)) return;
+        }
         var A = view.graph.clusterById[l.a], B = view.graph.clusterById[l.b];
         if (!A || !B || !A.stat || !B.stat) return;
         if (view.isNodeVisible && (!visibleIn(A.nodes) || !visibleIn(B.nodes))) return;
@@ -4746,13 +5046,18 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     /* ------------------------------------------------ 星团名 */
     /** 给一个名字找位置：先试原位，再试上下几个偏移；都不行就返回 null。
-        依据是 nameBoxes（星系名 → 装置名 → 节点名，按这个优先级依次占位）。 */
-    function placeName(cx, cy, bw, bh) {
+        依据是 nameBoxes（**选中/搜索 → 当前尺度主名 → 节点名**，按这个优先级依次占位）。
+        rank：0 选中 / 1 悬停 / 2 当前尺度主名（板块·领域·星团）/ 3 其他。
+        ⛔ 放不下就返回 null（调用方隐藏），**不缩字号、不降对比度**。 */
+    function placeName(cx, cy, bw, bh, rank) {
       var step = bh + 6;
       var gaps = [0, -step, step, -2 * step, 2 * step];
       for (var gi = 0; gi < gaps.length; gi++) {
         var y = cy + gaps[gi];
-        var box = { x0: cx - bw / 2, y0: y - bh / 2, x1: cx + bw / 2, y1: y + bh / 2 };
+        var box = {
+          x0: cx - bw / 2, y0: y - bh / 2, x1: cx + bw / 2, y1: y + bh / 2,
+          rank: rank == null ? 3 : rank
+        };
         var hit = false;
         for (var i = 0; i < nameBoxes.length; i++) {
           var b = nameBoxes[i];
@@ -4776,13 +5081,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var p = w2s(c.stat.cx, c.stat.cy);
         if (p.x < -300 || p.x > W + 300 || p.y < -200 || p.y > H + 200) return;
         var text = c.nameShow || c.name;      // ⭐ T2.4：星团名跟语言走（启动时算一次）
-        var tw = ctx.measureText(text).width;
+        var tw = measure(ctx, text, ctx.font);
         var pad = C.cluster.namePad;
         var bw = tw + pad * 2, bh = fs + 9;
         // ⚠️ 装置名之间也要互相避让：两个团挨得近时（比如「代数结构」与
         //    「向量空间的基」）名字会直接叠在一起，读不清。放不下就不画 ——
         //    包络还在，放大一点名字自然回来。
-        var slot = placeName(p.x, p.y, bw, bh);
+        var slot = placeName(p.x, p.y, bw, bh, 2);
         if (!slot) return;
         var y = slot.y;
         ctx.globalAlpha = a;
@@ -4824,7 +5129,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (g.edge.kind !== 'definition') { drawEdgeOne(g); return; }
         var e = g.edge, style = T.edgeStyles.definition;
         var spine = isSpine(e);
-        var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0);
+        var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0)
+          * lodA.defDim;                       // 中景降权（与 drawEdgeOne 同一系数）
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         var active = isEdgeActive(g);
@@ -4865,6 +5171,28 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       });
     }
 
+    /** 星团 → 它所在的大板块 id（没挂上就返回空串） */
+    function clusterSector(cid) {
+      var c = view.graph.clusterById && view.graph.clusterById[cid];
+      if (!c || !c.parent) return '';
+      var r = view.graph.regionById[c.parent];
+      return (r && r.sector) || '';
+    }
+
+    /** 这条边的两端是否属于**不同星团**（多来源边：任一对不同就算跨团） */
+    function edgeCrossCluster(e) {
+      var ids = MG.graphUtil.edgeNodes(e);
+      var first = null;
+      for (var i = 0; i < ids.length; i++) {
+        var n = view.graph.byId[ids[i]];
+        if (!n) continue;
+        var c = n.cluster || '';
+        if (first === null) first = c;
+        else if (c !== first) return true;
+      }
+      return false;
+    }
+
     /** 逐条绘制（推出 / 等价 / 类比，以及定义线在别的调用点单画时）—— 与原来逐字一致 */
     function drawEdgeOne(g) {
       var e = g.edge;
@@ -4872,9 +5200,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var spine = isSpine(e);
       // 主干骨架：它有自己的淡入曲线，缩小时也能看见；放大后让位给全部连线
       var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0);
+      /* 定义引用线在中景降权（领域 / 星团尺度 ×0.60）。⚠️ 定义线绝大多数走的是
+         drawEdges() 的合并描边快路径，那里也必须乘同一个 lodA.defDim ——
+         只改这里等于没改。 */
+      if (e.kind === 'definition') a *= lodA.defDim;
       if (a <= 0.02) return;
 
       var active = isEdgeActive(g);
+      /* ⭐ 阶段 3：远尺度收起「逐条跨团长线」。
+         只看「两端星团是否相同」——团内关系不受影响；选中/聚焦的边、以及
+         用户打开 `showAllEdges` 时一律放行。⛔ 不画聚合箭头。 */
+      if (!C.showAllEdges && !active && lodA.crossEdge < 0.5 && edgeCrossCluster(e)) return;
       var w = (e.kind === 'implication' ? C.edge.implicationWidth
         : e.kind === 'equivalence' ? C.edge.equivalenceWidth
           : e.kind === 'analogy' ? T.edgeStyles.analogy.width
@@ -4984,10 +5320,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           GU.edgeNodes(edgeById(view.hover.id)).indexOf(n.id) >= 0);
 
       // 光晕（位图模式下由 drawGlows() 单独实时画一遍，这里跳过）
-      if (C.node.glow && !glowLive) {
+      // ⭐ 两档：普通光晕跟 C.node.glow，选中/悬停的光圈跟 C.node.glowSelected。
+      var emph = isFocus || isHover;
+      if ((emph ? C.node.glowSelected : C.node.glow) && !glowLive) {
         var gs = glowSprite(st.color);
         var gsz = r * 5.4;
-        ctx.globalAlpha = a * (isFocus || isHover ? 1 : 0.72);
+        ctx.globalAlpha = a * (emph ? 1 :
+          (C.node.glowNormalAlpha == null ? 0.72 : C.node.glowNormalAlpha));
         ctx.drawImage(gs, p.x - gsz / 2, p.y - gsz / 2, gsz, gsz);
         ctx.globalAlpha = 1;
       }
@@ -5021,36 +5360,115 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ---------------------------------------------------------- 名称 */
     function isTrunk(n) { return !!(n && n.trunk); }
 
+    /** 这一帧「必须赢」的标签：**选中 → 悬停 → 搜索命中**。
+        为什么要在画板块名之前先占位：placeName() 是「先到先得」的队列，
+        大标题（18px 粗体）比节点名大得多，晚一步就永远挤不进去 ——
+        用户点了搜索结果却看不到那个点的名字。 */
+    function reserveSpecialLabels() {
+      var k = view.cam.k;
+      /* ⚠️ 缩到全图时 labelFont() 只有 9.5px —— 选中/搜索命中的名字是「我为什么在看这一屏」
+         的线索，不能跟着变小。这里给它 12px 的下限（⛔ 不是给普通节点名放大）。 */
+      var fs = Math.max(labelFont(), 12);
+      var order = [];
+      if (view.focus && view.focus.type === 'node') order.push({ id: view.focus.id, rank: 0 });
+      if (view.hover && view.hover.type === 'node') order.push({ id: view.hover.id, rank: 1 });
+      if (view.searchIds) {
+        Object.keys(view.searchIds).forEach(function (id) { order.push({ id: id, rank: 2 }); });
+      }
+      if (!order.length) return;
+      ctx.font = '600 ' + fs + 'px ' + T.font;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      var seen = Object.create(null);
+      for (var i = 0; i < order.length && reservedLabels.length < 24; i++) {
+        var it = order[i];
+        if (seen[it.id]) continue;
+        seen[it.id] = 1;
+        var n = view.graph.byId[it.id];
+        if (!n || !nodeOk(it.id)) continue;
+        var p = screenOf(n);
+        if (!inView(p.x, p.y, PAD_NODE)) continue;
+        var r = nodeRadius(n);
+        var text = n.labelShow || n.label;
+        var tw = measure(ctx, text, ctx.font);
+        var x = p.x, y = p.y + r + C.node.labelOffset * Math.max(k, 0.62);
+        var box = {
+          x0: x - tw / 2 - C.node.labelPad, y0: y - 1,
+          x1: x + tw / 2 + C.node.labelPad, y1: y + fs + 2, rank: it.rank
+        };
+        /* 特殊标签之间也避让；但**选中 / 悬停那一颗必须出现**（放不下就压上去）。 */
+        var hit = false;
+        for (var j = 0; j < reservedLabels.length; j++) {
+          var b = reservedLabels[j].box;
+          if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) { hit = true; break; }
+        }
+        if (hit && it.rank > 1) continue;
+        nameBoxes.push(box);
+        reservedLabels.push({
+          id: it.id, rank: it.rank, x: x, y: y, fs: fs, text: text,
+          alpha: alphaForNode(it.id), type: n.type, box: box
+        });
+      }
+    }
+
+    /** 把预留好的特殊标签画出来（位置已经占好，这里只落笔） */
+    function drawReservedLabels() {
+      if (!reservedLabels.length) return;
+      ctx.font = '600 ' + labelFont() + 'px ' + T.font;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      reservedLabels.forEach(function (L) {
+        if (L.alpha <= 0.06) return;
+        /* 字号跟着当前缩放走（预留时同一帧算的 fs）；高亮色 = 类型色，
+           和普通节点名的墨色区分开 —— 但**不加粗、不放大**（优先级靠占位，不靠抢眼）。 */
+        ctx.font = '600 ' + L.fs + 'px ' + T.font;
+        var alpha = L.alpha;
+        ctx.lineWidth = Math.max(2.5, L.fs * 0.28);
+        ctx.strokeStyle = 'rgba(255,255,255,' + (0.9 * alpha).toFixed(3) + ')';
+        ctx.strokeText(L.text, L.x, L.y);
+        ctx.fillStyle = (L.rank <= 1)
+          ? U.rgba(MG.typeStyle(L.type).color, alpha)
+          : 'rgba(28,28,30,' + alpha.toFixed(3) + ')';
+        ctx.fillText(L.text, L.x, L.y);
+        prof.labelCount++;
+      });
+    }
+
     function drawLabels() {
+      /* 特殊标签（选中 / 悬停 / 搜索命中）**先画**：它们在 reserveSpecialLabels()
+         里已经占好位，普通名字不会压上去。 */
+      drawReservedLabels();
+
       var k = view.cam.k;
       var fs = labelFont();
-      // 连主干的名字都还没到出现的时候 → 只画聚焦/悬停的那一个
-      if (lodA.nodeName <= 0.02 && lodA.trunkName <= 0.02) { drawKeyLabels(fs); return; }
+      // 连主干的名字都还没到出现的时候 → 只剩上面那几个特殊标签
+      if (lodA.nodeName <= 0.02 && lodA.trunkName <= 0.02) return;
 
       // 缩得很小时只留「重要」节点的名字；重叠的名字一律让位（永远去重叠）
       var keepAll = k >= C.node.labelMinZoomAll;
-      // 星系名 / 装置名先占位（它们在上面已经画过了）—— 节点名不许压上去
+      // 板块 / 领域 / 星团名 + 特殊标签先占位 —— 节点名不许压上去
       var placed = nameBoxes.slice();
       var nodes = view.graph.nodes.slice().sort(function (a, b) {
         return labelPriority(b) - labelPriority(a);
       });
+      var reserved = Object.create(null);
+      reservedLabels.forEach(function (L) { reserved[L.id] = 1; });
 
       ctx.font = '600 ' + fs + 'px ' + T.font;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
 
       nodes.forEach(function (n) {
+        if (reserved[n.id]) return;                // 已经画过的特殊标签不再画第二遍
         if (!nodeOk(n.id)) return;
         var trunk = isTrunk(n);
         // 主干的名字用更早出现的那条曲线；其余仍按原节奏
         var nameAlpha = trunk ? Math.max(lodA.nodeName, lodA.trunkName) : lodA.nodeName;
         if (nameAlpha <= 0.06) return;
         var a = alphaForNode(n.id);
-        var isSpecial = (view.focus && view.focus.id === n.id) ||
-          (view.hover && view.hover.type === 'node' && view.hover.id === n.id);
         if (a <= 0.06) return;
         // 缩小时只画重要的：主干一律画，其余要 degree >= 3
-        if (!keepAll && !isSpecial && !trunk && n.degree < 3) return;
+        if (!keepAll && !trunk && n.degree < 3) return;
 
         var p = screenOf(n);
         if (!inView(p.x, p.y, PAD_NODE)) return;   // 屏幕外的名字：既不量宽也不画
@@ -5060,47 +5478,21 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var x = p.x, y = p.y + r + C.node.labelOffset * Math.max(k, 0.62);
         var box = { x0: x - tw / 2 - C.node.labelPad, y0: y - 1, x1: x + tw / 2 + C.node.labelPad, y1: y + fs + 2 };
 
-        if (!isSpecial) {
-          var hit = false;
-          for (var i = 0; i < placed.length; i++) {
-            var b = placed[i];
-            if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) { hit = true; break; }
-          }
-          if (hit) return;
+        var hit = false;
+        for (var i = 0; i < placed.length; i++) {
+          var b = placed[i];
+          if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) { hit = true; break; }
         }
+        if (hit) return;
         placed.push(box);
 
-        var alpha = a * (isSpecial ? 1 : 0.92 * nameAlpha);
+        var alpha = a * 0.92 * nameAlpha;
         ctx.lineWidth = Math.max(2.5, fs * 0.28);
         ctx.strokeStyle = 'rgba(255,255,255,' + (0.9 * alpha).toFixed(3) + ')';
         ctx.strokeText(text, x, y);
-        ctx.fillStyle = isSpecial ? U.rgba(MG.typeStyle(n.type).color, alpha) : 'rgba(28,28,30,' + alpha.toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(28,28,30,' + alpha.toFixed(3) + ')';
         ctx.fillText(text, x, y);
         prof.labelCount++;                    // 节点名：真正画上去了才算一条
-      });
-    }
-
-    /** 缩得太小时只画关键节点的名字 */
-    function drawKeyLabels(fs) {
-      var special = [];
-      if (view.focus && view.focus.type === 'node') special.push(view.focus.id);
-      if (view.hover && view.hover.type === 'node') special.push(view.hover.id);
-      if (!special.length) return;
-      ctx.font = '600 ' + Math.max(fs, 12) + 'px ' + T.font;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'top';
-      special.forEach(function (id) {
-        var n = view.graph.byId[id];
-        if (!n || !nodeOk(id)) return;
-        var p = screenOf(n), r = nodeRadius(n);
-        var y = p.y + r + 10;
-        var label = n.labelShow || n.label;      // ⭐ T2.4：跟语言走
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = T.labelHalo;
-        ctx.strokeText(label, p.x, y);
-        ctx.fillStyle = T.ink;
-        ctx.fillText(label, p.x, y);
-        prof.labelCount++;                    // 聚焦/悬停时那个「关键名字」也算一条
       });
     }
 
@@ -5109,6 +5501,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       if (n.trunk) s += 400;                       // 主干的名字优先留下（去重叠时赢）
       if (view.focus && view.focus.id === n.id) s += 1000;
       if (view.hover && view.hover.id === n.id) s += 800;
+      /* 搜索命中：排在选中 / 悬停之后、普通名字之前（同一屏里让「刚搜到的」先落位）。 */
+      if (view.searchIds && view.searchIds[n.id]) s += 600;
       if (n.type === 'definition') s -= 6;
       return s;
     }
@@ -5168,6 +5562,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       drawReadRings: drawReadRings,                          // 已读脉冲环 → #layer-read（见上）
       bbox: bbox,
       prof: prof,
+      /* 诊断用：当前帧的 LOD 读数（档位 / 三档名字 / 定义线系数）。
+         ⚠️ 只读快照，别拿它当状态改 —— holdTier 的真源在 computeLod 里。 */
+      lodState: function () {
+        return {
+          tier: lodA.tier, sector: lodA.sectorName, region: lodA.galaxyName,
+          cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName
+        };
+      },
       profReset: function () { prof.edges = 0; prof.nodes = 0; prof.labels = 0; prof.labelCount = 0; prof.frames = 0; },
       get size() { return { w: W, h: H }; }
     };
@@ -6486,7 +6888,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var refQ = '';
       var m0 = /^ref\s*[:：]\s*(.*)$/.exec(q);
       if (m0) { refMode = true; refQ = m0[1].trim(); q = refQ; }
-      if (!q) { render(); return; }
+      if (!q) { notifyHits([]); render(); return; }
 
       var terms = termsOf(q);
       var termSet = Object.create(null);
@@ -6578,6 +6980,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       }
 
       active = items.length ? 0 : -1;
+      notifyHits(items);
       render();
     }
 
@@ -6719,6 +7122,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       results.classList.add('hidden');
       box.classList.remove('active');
       syncA11y();
+      /* ⭐ 关掉结果列表 ⇒ 画布上「搜索命中优先占标签位」也一起失效。
+         否则搜完再点空白关掉，那几个名字还会一直挤在别人的位置前面。 */
+      notifyHits([]);
+    }
+
+    /** 把当前展示的命中 id 交给画布（标签避让的优先级：选中 → 搜索命中 → 本档主名）。 */
+    function notifyHits(list) {
+      if (!hooks.onHits) return;
+      var ids = [];
+      (list || []).forEach(function (it) { if (it && it.kind === 'node') ids.push(it.id); });
+      hooks.onHits(ids);
     }
 
     function clear() {
@@ -8106,7 +8520,7 @@ MG.regions = [
     name: '分析学',
     en: 'Analysis',
     color: '#3AA8D8',
-    center: { x: -420, y: 720 },
+    center: { x: -180, y: 880 },
     radius: 500,
     desc: '极限、测度、泛函分析；Hahn–Banach 等定理也依赖选择原理。'
   },
@@ -8115,7 +8529,7 @@ MG.regions = [
     name: '范畴论',
     en: 'Category Theory',
     color: '#B03A5B',
-    center: { x: 1600, y: 1250 },
+    center: { x: -1500, y: 40 },
     radius: 520,
     desc: '范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。'
   },
@@ -8148,9 +8562,78 @@ MG.regions = [
          · 全图超过 4000 的长边 **42 条 → 1 条**，超过 3000 的 105 → 25
          · 世界盒 6.75k×5.72k → 6.77k×5.21k（世界变扁，全图适配的 k 0.112 → 0.123）
        云重心落在 (1830, 135)，离圈的圆心 (1847, 132) 只有 14 个单位。 */
-    center: { x: 1192, y: -40 },
+    center: { x: 1560, y: -120 },
     radius: 500,
     desc: '把拓扑空间换成「紧 Hausdorff 空间上的层」：凝聚态集、凝聚态阿贝尔群。'
+  }
+];
+
+</script>
+<script>
+/* ==========================================================================
+   数学星图 · 大板块（sector）定义
+   --------------------------------------------------------------------------
+   四层结构：**大板块 → 领域 → 星团 → 节点**。
+
+   · 大板块只负责**组织与显示**：它不改节点 id、陈述、证明、边的语义。
+   · 归属表唯一真源就在这里（`regions` 数组）。⛔ 不要在 regions.js 里再写一份
+     `sector` 字段 —— 两处并存就一定会漂。建图时由 graph.js 反向写到
+     `region.sector` / `graph.sectorOf`。
+   · **没有内容的板块不建区域**：`empty: true` 的条目会被渲染与侧栏一律跳过，
+     不占画布面积、不画云、不出名字。将来有内容时把它挪进 `regions` 即可。
+
+   ⭐ 跨领域内容的**主 / 次归属**（登记，不是复制 —— 节点仍只有一份）：
+     · 范畴论 192 点：主 = 基础与逻辑；次 = 代数 / 几何与拓扑
+       （它是工具不是对象，按体量放在基础与逻辑的东缘，紧邻代数）
+     · 凝聚态数学 87 点：主 = 代数；次 = 几何与拓扑 / 基础与逻辑
+       （产物是凝聚态阿贝尔群与 Ext/RHom，原料是紧 Hausdorff 上的层）
+     · 同调代数 116 点：主 = 代数；次 = 范畴论 / 拓扑
+   ========================================================================== */
+window.MG = window.MG || {};
+
+MG.sectors = [
+  {
+    id: 'foundations',
+    name: '基础与逻辑',
+    en: 'Foundations & Logic',
+    color: '#5B6BD6',
+    regions: ['logic', 'set-theory', 'order-theory', 'category'],
+    secondary: { category: ['algebra', 'geometry-topology'] },
+    desc: '一阶语言与 ZFC、集合的构造与基数、偏序与选择原理；范畴论作为**跨领域基础工具**也归这里 —— 它不研究某一类结构，而是给所有结构提供语言（极限、伴随、层与拓扑斯）。'
+  },
+  {
+    id: 'analysis',
+    name: '分析',
+    en: 'Analysis',
+    color: '#2E9BD4',
+    regions: ['analysis'],
+    desc: '极限与完备性、连续与紧性、中值定理与 Taylor、Riemann 积分、级数、多元微分，再往上到测度、积分、Fubini、微分定理与 L^p。'
+  },
+  {
+    id: 'algebra',
+    name: '代数',
+    en: 'Algebra',
+    color: '#E08A3C',
+    regions: ['algebra', 'homology', 'condensed'],
+    secondary: { condensed: ['geometry-topology', 'foundations'] },
+    desc: '群环域模与线性代数、特征值与内积空间、多重线性与张量；再往上是复形与导出三角、同调与谱序列、层上同调，以及**凝聚态数学**（主归属在此）。'
+  },
+  {
+    id: 'geometry-topology',
+    name: '几何与拓扑',
+    en: 'Geometry & Topology',
+    color: '#D9649F',
+    regions: ['topology'],
+    desc: '开集、连续、紧致与连通；紧 Hausdorff 空间、Stone 空间与紧生成空间 —— 也是凝聚态数学「紧 Hausdorff 上的层」那一侧的原料。'
+  },
+  {
+    id: 'number-theory',
+    name: '数论',
+    en: 'Number Theory',
+    color: '#6E8B3D',
+    regions: [],
+    empty: true,
+    desc: '（当前没有内容：全库唯一带 Fermat 名字的节点是极值点的 Fermat 引理，不是数论。按「没内容就不建区域」的约定登记为**空板块**，不占画布、不出名字；将来把领域挂进来即可归位。）'
   }
 ];
 
@@ -11576,6 +12059,7 @@ MG.uiEn = {
     '定义线': 'Def. lines',
     '名称': 'Names',
     '探索': 'Explore',
+    '全部连线': 'All edges',
     '滚轮·缩放': 'Wheel: zoom',
     '滚轮·平移': 'Wheel: pan',
     '放大（+）': 'Zoom in (+)',
@@ -11587,6 +12071,8 @@ MG.uiEn = {
     '显示 / 隐藏节点名称': 'Show / hide node names',
     '探索模式：把「类比」这类弱边提亮（平时压得很淡）':
       'Explore mode: brighten weak edges such as analogies (kept very faint otherwise)',
+    '全部连线：连跨星团、跨板块的长线也画出来（远看会更密；平时只在放大后出现）':
+      'All edges: also draw cross-cluster and cross-field long edges (denser when zoomed out; normally they appear only after zooming in)',
     '滚轮：缩放 ⇄ 平移': 'Wheel: zoom ⇄ pan',
     '界面语言：中文 / English —— 点一下切成英文':
       'Interface language: Chinese / English — click to switch to English',
@@ -11668,6 +12154,13 @@ MG.uiEn = {
     '点色块：显示 / 隐藏整个「{名}」；点名字：跳过去看':
       'Click the swatch to show / hide all of “{名}”; click the name to jump there',
     '跳过去看「{名}」': 'Jump to “{名}”',
+    /* 三级折叠（大板块 → 领域 → 星团）的三角按钮 */
+    '展开这个大板块的领域': 'Expand the fields of this sector',
+    '收起这个大板块的领域': 'Collapse the fields of this sector',
+    '展开这个领域的星团': 'Expand the clusters of this field',
+    '收起这个领域的星团': 'Collapse the clusters of this field',
+    '点色块：显示 / 隐藏整个「{名}」（{n} 个领域）；点三角：展开 / 收起':
+      'Click the swatch to show / hide all of “{名}” ({n} fields); click the triangle to expand / collapse',
     '第 {n} 层（{k} 个）：{名}': 'Layer {n} ({k}): {名}',
     '拖动：只显示「离地基不超过 k 步」的点。': 'Drag: keep only points within k steps of the foundations. ',
     '不限层数（全部 {n} 个点）': 'No layer limit (all {n} nodes)',
@@ -49710,6 +50203,9 @@ MG.trunk = [
       visible: [],
       focus: null,
       hover: null,
+      /* 搜索命中的节点（id → 1）：渲染器按「选中 → 搜索命中 → 本档主名」排标签。
+         ⚠️ 只是**本帧的标签优先级**，不影响显隐、不改图。 */
+      searchIds: null,
       isNodeVisible: vis.isNodeVisible,
       isNodeRead: reads.isRead,
       showReadMarks: reads.isShowMarks
@@ -49827,6 +50323,36 @@ MG.trunk = [
     }
 
     /* ------------------------------------------------------------ 尺寸 */
+    /* ⭐ 可用画布：扣掉**挡在画布上**的左栏（#legend）与底部说明条（#hint）。
+       判据一律是 DOM **实体**（getBoundingClientRect 的宽高），不是 class 名：
+         · 设置里把图例 / 说明关掉 ⇒ display:none ⇒ 矩形 0×0 ⇒ 不扣；
+         · 图例折叠 / 说明条 details 展开，高度会变 ⇒ 每次用前现量。
+       右侧详情抽屉**不在这里** —— 它由 panelInset() 在 targetFor/ensureCenter 里补，
+       两处都加会扣两次。
+       ⚠️ 窄屏要设上限：手机上图例几乎占满宽度，全扣掉会把图缩成一条。 */
+    function uiInsets() {
+      var out = { left: 0, right: 0, top: 0, bottom: 0 };
+      /* ⚠️ 开页时 applyUI / syncNarrowLegend 都在 resize() 之前跑，cam.viewW 还是 1 ——
+         这时用 window.innerWidth（同一块视口，不是代理指标）。 */
+      var vw = cam.viewW > 1 ? cam.viewW : global.innerWidth;
+      var vh = cam.viewH > 1 ? cam.viewH : global.innerHeight;
+      if (legendEl) {
+        var r = legendEl.getBoundingClientRect();
+        if (r.width > 1 && r.height > 1) {
+          out.left = Math.round(Math.min(vw * 0.45, r.right + 8));
+        }
+      }
+      if (hintEl) {
+        var hr = hintEl.getBoundingClientRect();
+        if (hr.width > 1 && hr.height > 1) {
+          out.bottom = Math.round(Math.min(vh * 0.40, vh - hr.top + 8));
+        }
+      }
+      return out;
+    }
+    /** 把最新内缩交给相机（相机再传给 renderer 的 fitZoom ⇒ k₀ 同一口径） */
+    function syncInsets() { cam.setInsets(uiInsets()); }
+
     function resize() {
       var s = renderer.resize();
       dpr = s.dpr;
@@ -49834,6 +50360,7 @@ MG.trunk = [
       cloudEl.height = Math.max(1, Math.round(s.h * dpr));
       readEl.width = Math.max(1, Math.round(s.w * dpr));
       readEl.height = Math.max(1, Math.round(s.h * dpr));
+      syncInsets();
       requestDraw();
     }
     global.addEventListener('resize', resize);
@@ -49909,10 +50436,14 @@ MG.trunk = [
     }
 
     function ensureCenter(pt) {
+      syncInsets();                       // 面板可能刚展开/收起，先重量一次
       var inset = panelInset();
+      var ins = cam.insets();             // 左栏 / 底部说明条
       var p = cam.toScreen(pt.x, pt.y);
-      var outside = p.x < 90 || p.x > cam.viewW - 90 - inset.x ||
-        p.y < 110 || p.y > cam.viewH - 90 - inset.y;
+      /* ⚠️ 判据要用**可用区**：左栏 300px 宽，若仍按 p.x < 90 判，落在栏后的点
+         会被当成「已经在视野里」，跳转过去什么也看不到（用户报的就是这个）。 */
+      var outside = p.x < ins.left + 70 || p.x > cam.viewW - 90 - inset.x ||
+        p.y < 110 || p.y > cam.viewH - 90 - inset.y - ins.bottom;
       if (!outside) return;
       cam.animateTo(centerTargetFor(pt));
     }
@@ -49928,13 +50459,15 @@ MG.trunk = [
 
     /** 让一个世界矩形铺满可视区（右侧留给面板），返回相机目标 */
     function targetFor(bb, padding, maxZoom) {
+      syncInsets();
       var inset = panelInset();
+      var av = cam.availRect();             // 已扣掉左栏 / 底部说明条
       // 小屏幕上把留白收窄，否则整张图会缩得看不动
-      var pad = Math.min(padding, Math.min(cam.viewW, cam.viewH) * 0.18);
+      var pad = Math.min(padding, Math.min(av.w, av.h) * 0.18);
       var w = Math.max(40, bb.maxX - bb.minX);
       var h = Math.max(40, bb.maxY - bb.minY);
-      var availW = Math.max(80, cam.viewW - pad * 2 - inset.x);
-      var availH = Math.max(80, cam.viewH - pad * 2 - inset.y);
+      var availW = Math.max(80, av.w - pad * 2 - inset.x);
+      var availH = Math.max(80, av.h - pad * 2 - inset.y);
       var k = U.clamp(Math.min(availW / w, availH / h),
         Math.max(C.camera.minZoom, C.camera.fitMinZoom),
         Math.min(C.camera.maxZoom, maxZoom == null ? C.camera.maxFitZoom : maxZoom));
@@ -50254,7 +50787,14 @@ MG.trunk = [
     /* ---------------------------------------------------------- 搜索 */
     var search = MG.createSearch(searchBox, searchInput, searchResults, view, {
       onNode: function (id) { focusNode(id, { force: true }); },
-      onRegion: function (rid) { fitRegion(rid); }
+      onRegion: function (rid) { fitRegion(rid); },
+      /* 结果列表变了就把命中 id 交给渲染器（只用于标签占位优先级）。 */
+      onHits: function (ids) {
+        var map = Object.create(null);
+        (ids || []).forEach(function (id) { map[id] = 1; });
+        view.searchIds = map;
+        requestDraw();
+      }
     });
     search.reindex();
 
@@ -50275,6 +50815,12 @@ MG.trunk = [
         C.exploreMode = !C.exploreMode;
         btn.classList.toggle('on', C.exploreMode);
         renderLegend();
+        requestDraw();
+      } else if (act === 'toggle-alledges') {
+        /* ⭐ 2026-10-17：`showAllEdges` 早就被两条闸门读着（逐条跨团长线 /
+           跨板块聚合线），但一直没有入口。这里只改这个开关，不新增渲染路径。 */
+        C.showAllEdges = !C.showAllEdges;
+        btn.classList.toggle('on', C.showAllEdges);
         requestDraw();
       } else if (act === 'toggle-labels') {
         C.showLabels = !C.showLabels;
@@ -50384,6 +50930,8 @@ MG.trunk = [
       for (var i = 0; i < boxes.length; i++) {
         boxes[i].checked = !hid[boxes[i].getAttribute('data-ui')];
       }
+      /* 关掉 / 打开图例与说明条会改变可用画布 ⇒ 重新量内缩（顺带让 LOD 的 k₀ 跟上）。 */
+      if (cam.viewW > 1) { syncInsets(); requestDraw(); }
     }
     function toggleUI(k, visible) {
       var hid = uiHidden();
@@ -50551,6 +51099,25 @@ MG.trunk = [
     function regionNodes(id) {
       return graph.nodes.filter(function (n) { return n.regions.indexOf(id) >= 0; });
     }
+    /** 一个**大板块**里的全部节点（各领域求并集 —— 跨领域节点只算一次） */
+    function sectorNodes(sid) {
+      var s = (graph.sectors || []).filter(function (x) { return x.id === sid; })[0];
+      if (!s) return [];
+      var seen = Object.create(null), out = [];
+      s.regions.forEach(function (r) {
+        regionNodes(r.id).forEach(function (n) {
+          if (seen[n.id]) return;
+          seen[n.id] = 1; out.push(n);
+        });
+      });
+      return out;
+    }
+
+    /* 图例三级折叠状态：**大板块默认展开、领域默认收起**。
+       ⚠️ 只存内存，不写 localStorage —— 这是「临时看一眼」的展开，不是长期偏好。 */
+    var legendFold = { sec: Object.create(null), reg: Object.create(null) };
+    function sectorOpen(id) { return legendFold.sec[id] !== false; }
+    function regionOpen(id) { return legendFold.reg[id] === true; }
 
     /**
      * 一个可点的开关芯片。
@@ -50574,9 +51141,7 @@ MG.trunk = [
     }
 
     function renderLegend() {
-      var regions = graph.regions || [];
       var types = T.typeOrder || Object.keys(T.nodeTypes || {});
-      var live = regions.filter(function (r) { return r.stat; });
       var total = graph.nodes.length;
       var shown = vis.visibleCount();
 
@@ -50606,27 +51171,64 @@ MG.trunk = [
               (C.exploreMode ? '' : tf('（点右上角「探索」显示）'))) + '</em></span>'
           : '');
 
-      /* ---------- 数学板块：星系 + 它下面的星团（缩进一层） ---------- */
-      var regionRows = live.map(function (r) {
-        var mine = graph.clusters.filter(function (c) { return c.parent === r.id && c.stat; });
-        var rname = MG.regionName(r);
+      /* ---------- 数学板块：**大板块 → 领域 → 星团**（三级折叠） ----------
+         ⭐ 2026-10-17：原来是「领域 → 星团」两层平铺，60 个团全摊开 ⇒ 图例占掉
+            17% 的屏幕还得滚动。改成三级：
+              · 大板块默认**展开**（于是能一眼看到 9 个领域的分布）；
+              · 领域默认**收起**（团名要单独点开）；
+              · 每一项都保留原来的开关芯片（data-vs / data-vr / data-vc）——
+                点色块 = 显示/隐藏整块，点名字 = 跳过去看，点三角 = 折叠。
+            ⛔ 折叠状态只存在内存里（刷新回默认），不写 localStorage：
+               这是「看一眼就走」的临时展开，不是用户的长期偏好。 */
+      var liveSectors = (graph.sectors || []).filter(function (s) {
+        return !s.empty && s.regions && s.regions.length;
+      });
+      var sectorRows = liveSectors.map(function (s) {
+        var rs = s.regions.filter(function (r) { return r.stat; });
+        if (!rs.length) return '';
+        var sname = s.nameShow || s.name;
+        var sOpen = sectorOpen(s.id);
         var head = togChip({
-          label: rname, color: U.mixWithWhite(r.color, 0.45), list: regionNodes(r.id),
-          attr: 'data-vr="' + r.id + '"',
-          tip: tf('点色块：显示 / 隐藏整个「{名}」；点名字：跳过去看', { 名: rname }),
-          nav: r.id, navTip: tf('跳过去看「{名}」', { 名: rname })
+          label: sname, color: U.mixWithWhite(s.color, 0.30), list: sectorNodes(s.id),
+          attr: 'data-vs="' + s.id + '"',
+          tip: tf('点色块：显示 / 隐藏整个「{名}」（{n} 个领域）；点三角：展开 / 收起', {
+            名: sname, n: rs.length
+          })
         });
-        if (!mine.length) return head;
-        var kids = mine.map(function (c) {
-          var cname = MG.clusterName(c);
-          return togChip({
-            label: cname, color: U.mixWithWhite(c.color || r.color, 0.62), list: c.nodes,
-            attr: 'data-vc="' + c.id + '"', round: true,
-            tip: tf('点圆点：显示 / 隐藏「{名}」；点名字：跳过去看', { 名: cname }),
-            nav: c.id, navTip: tf('跳过去看「{名}」', { 名: cname })
+        var regs = rs.map(function (r) {
+          var mine = graph.clusters.filter(function (c) { return c.parent === r.id && c.stat; });
+          var rname = MG.regionName(r);
+          var rOpen = regionOpen(r.id);
+          var rhead = togChip({
+            label: rname, color: U.mixWithWhite(r.color, 0.45), list: regionNodes(r.id),
+            attr: 'data-vr="' + r.id + '"',
+            tip: tf('点色块：显示 / 隐藏整个「{名}」；点名字：跳过去看', { 名: rname }),
+            nav: r.id, navTip: tf('跳过去看「{名}」', { 名: rname })
           });
+          var kids = '';
+          if (mine.length && rOpen) {
+            kids = '<span class="lg-kids">' + mine.map(function (c) {
+              var cname = MG.clusterName(c);
+              return togChip({
+                label: cname, color: U.mixWithWhite(c.color || r.color, 0.62), list: c.nodes,
+                attr: 'data-vc="' + c.id + '"', round: true,
+                tip: tf('点圆点：显示 / 隐藏「{名}」；点名字：跳过去看', { 名: cname }),
+                nav: c.id, navTip: tf('跳过去看「{名}」', { 名: cname })
+              });
+            }).join('') + '</span>';
+          }
+          return '<div class="lg-reg' + (kids ? ' open' : '') + '">' +
+            '<div class="lg-reg-head">' +
+            '<span class="lg-fold" data-vr-open="' + r.id + '" title="' +
+            U.escapeHtml(rOpen ? tf('收起这个领域的星团') : tf('展开这个领域的星团')) + '">' +
+            (rOpen ? '▾' : '▸') + '</span>' + rhead + '</div>' + kids + '</div>';
         }).join('');
-        return head + '<span class="lg-kids">' + kids + '</span>';
+        return '<div class="lg-sec' + (sOpen ? ' open' : '') + '">' +
+          '<div class="lg-sec-head">' +
+          '<span class="lg-fold" data-vs-open="' + s.id + '" title="' +
+          U.escapeHtml(sOpen ? tf('收起这个大板块的领域') : tf('展开这个大板块的领域')) + '">' +
+          (sOpen ? '▾' : '▸') + '</span>' + head + '</div>' +
+          (sOpen ? '<div class="lg-regs">' + regs + '</div>' : '') + '</div>';
       }).join('');
 
       var hidden = total - shown;
@@ -50716,7 +51318,7 @@ MG.trunk = [
         '<div class="lg-row lg-layers">' + layerChips + '</div></div>' +
         subGroup +
         '<div class="lg-group"><div class="lg-title">' + U.escapeHtml(tf('数学板块')) + '</div>' +
-        '<div class="lg-row">' + regionRows + '</div></div>' +
+        '<div class="lg-sectors">' + sectorRows + '</div></div>' +
         exportGroup +
         '<div class="lg-hint">' + U.escapeHtml(legendHint) + '</div>' +
         '</div>';
@@ -50749,6 +51351,24 @@ MG.trunk = [
       if (t.closest('[data-toggle]')) {
         legendEl.classList.toggle('collapsed');
         saveLegendChoice();                     // 记住用户自己的选择（窄屏默认不覆盖它）
+        return;
+      }
+
+      /* 三级折叠的三角：只展开 / 收起，**不动显隐**（点色块才是显隐）。
+         ⚠️ 必须排在 [data-nav] / 芯片之前判：三角和芯片是同一行的兄弟节点，
+            但鼠标点到三角时 target 就是它，closest 不会串到芯片上。 */
+      var foldSec = t.closest('[data-vs-open]');
+      if (foldSec) {
+        var fsid = foldSec.getAttribute('data-vs-open');
+        legendFold.sec[fsid] = !sectorOpen(fsid);
+        renderLegend();
+        return;
+      }
+      var foldReg = t.closest('[data-vr-open]');
+      if (foldReg) {
+        var frid = foldReg.getAttribute('data-vr-open');
+        legendFold.reg[frid] = !regionOpen(frid);
+        renderLegend();
         return;
       }
 
@@ -50789,6 +51409,8 @@ MG.trunk = [
       }
       chip = t.closest('[data-vr]');
       if (chip) toggleList(regionNodes(chip.getAttribute('data-vr')));
+      chip = t.closest('[data-vs]');
+      if (chip) toggleList(sectorNodes(chip.getAttribute('data-vs')));
     });
 
     /* 层号滑杆：拖的过程中只更新读数 + 过滤（不重画图例、不重新适配镜头），
@@ -50866,7 +51488,12 @@ MG.trunk = [
       if (!det) return;
       var armed = false;
       setTimeout(function () { armed = true; }, 1200);
-      det.addEventListener('toggle', function () { if (armed) det.setAttribute('data-user', '1'); });
+      det.addEventListener('toggle', function () {
+        if (armed) det.setAttribute('data-user', '1');
+        /* 说明条展开 / 收起 ⇒ 底部内缩变了 ⇒ 相机可用区与 LOD 的 k₀ 都要跟上。 */
+        syncInsets();
+        requestDraw();
+      });
     })();
     syncNarrowLegend();
     window.addEventListener('resize', syncNarrowLegend);
@@ -50974,6 +51601,7 @@ MG.trunk = [
         &hide=R:<星系>,C:<星团>,T:<类别>,<节点id>,…          藏起来的点：
                            能整块表达就整块，剩下的才写 id，所以整块开关的链接很短
         &dl=0 &lb=0 &ex=1  定义线 / 名字 / 探索（弱边）的开关
+        &ae=1              全部连线（跨星团长线 + 跨板块聚合线也画）
         &v=<k>,<cx>,<cy>   相机的缩放与世界中心（写的时候按屏幕中心算，换窗口也对得上）
         &fps=1             右下角显示诊断角标（帧耗时 / 连线层耗时 / dpr / canvas 尺寸）
 
@@ -51002,9 +51630,13 @@ MG.trunk = [
     function enc(s) { return encodeURIComponent(String(s)); }
     function dec(s) { try { return decodeURIComponent(String(s)); } catch (e) { return String(s); } }
 
-    /** 屏幕中心的世界坐标（相机存中心而不是 tx/ty，换个窗口大小也还原得对） */
+    /** 相机「看得见的那块」的世界中心（相机存中心而不是 tx/ty，换个窗口大小也还原得对）
+        ⚠️ 必须用**可用区**中心（cam.availRect().cx），不是视口中心：
+           相机现在把世界点对到可用区中心，URL 里若按视口中心写，
+           带面板时一进一出就会整体偏移 160px。 */
     function camCenter() {
-      return { x: (cam.viewW / 2 - cam.tx) / cam.k, y: (cam.viewH / 2 - cam.ty) / cam.k };
+      var av = cam.availRect();
+      return { x: (av.cx - cam.tx) / cam.k, y: (av.cy - cam.ty) / cam.k };
     }
     function camSig() {
       var c = camCenter();
@@ -51046,6 +51678,7 @@ MG.trunk = [
       if (!C.showDefinitionLines) p.push('dl=0');
       if (!C.showLabels) p.push('lb=0');
       if (C.exploreMode) p.push('ex=1');
+      if (C.showAllEdges) p.push('ae=1');
       var hide = hideTokens();
       if (hide.length) p.push('hide=' + hide.join(','));
       if (fpsHud) p.push('fps=1');       // 诊断角标开着 → 让它留在 URL 里（刷新、分享都还在）
@@ -51130,7 +51763,8 @@ MG.trunk = [
     function syncToolbar() {
       var map = {
         'toggle-defs': C.showDefinitionLines, 'toggle-labels': C.showLabels,
-        'toggle-explore': C.exploreMode, 'toggle-trunk': trunkOnly, 'toggle-wheel': C.wheelZooms
+        'toggle-explore': C.exploreMode, 'toggle-trunk': trunkOnly, 'toggle-wheel': C.wheelZooms,
+        'toggle-alledges': C.showAllEdges
       };
       Object.keys(map).forEach(function (act) {
         var btn = toolbar.querySelector('[data-act="' + act + '"]');
@@ -51153,7 +51787,8 @@ MG.trunk = [
       if (!Object.keys(kv).length) return false;
       var hasCam = !!kv.v;
       var isView = hasCam || kv.ly != null || kv.tr != null || kv.sub != null ||
-        kv.hide != null || kv.dl != null || kv.lb != null || kv.ex != null;
+        kv.hide != null || kv.dl != null || kv.lb != null || kv.ex != null ||
+        kv.ae != null;
       if (!isView && kv.n == null && kv.e == null && kv.r == null && kv.c == null) return false;
 
       hashState.applying = true;
@@ -51165,6 +51800,7 @@ MG.trunk = [
           C.showDefinitionLines = kv.dl != null ? dec(kv.dl) !== '0' : true;
           C.showLabels = kv.lb != null ? dec(kv.lb) !== '0' : true;
           C.exploreMode = kv.ex != null ? dec(kv.ex) === '1' : false;
+          C.showAllEdges = kv.ae != null ? dec(kv.ae) === '1' : false;
 
           var ly = kv.ly != null ? parseInt(dec(kv.ly), 10) : NaN;
           setLayerMax(isFinite(ly) ? ly : null);
@@ -51516,6 +52152,8 @@ MG.trunk = [
       }
       syncToolbar();
       renderLegend();
+      // 图例 / 说明条的高度是上面两行才定下来的 ⇒ 适配前重量一次可用矩形
+      syncInsets();
       // 上次藏了一批点（或开着主干模式）→ 开局就只把「还看得见的那些」铺满屏幕
       var live = visibleNodes();
       var bb = (live.length && live.length < graph.nodes.length) ? bboxOf(live) : graph.bbox();
