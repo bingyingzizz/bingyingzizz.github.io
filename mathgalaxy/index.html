@@ -52731,7 +52731,6 @@ MG.trunk = [
       var bb = (live.length && live.length < graph.nodes.length) ? bboxOf(live) : graph.bbox();
       cam.fit(bb, C.camera.fitPadding);
       var fitK = cam.k;
-      view.kFit0 = fitK;                 // ⭐ 缓存「适配全部」的 k：r=k/kFit 的唯一真源（不随相机漂）
       var cx = (bb.minX + bb.maxX) / 2, cy = (bb.minY + bb.maxY) / 2;
       if (!applyHash()) {
         // 初始视角：先稍微留白，再平滑推进到「全部适配」
