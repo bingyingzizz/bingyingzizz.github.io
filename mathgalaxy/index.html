@@ -4477,7 +4477,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          绝对 k 会把「适配全部」和「放大到某个 k」混为一谈：世界盒一变，
          同样的 k 就是另一个缩放档，全景反而把节点名全放出来（labelCount=92）。 */
       var kFit0 = 0;
-      kFit0 = (view.kFit0 > 0) ? view.kFit0 : (function () { try { return fitZoom(); } catch (e) { return 0; } })();
+      /* ⛔ 2026-10-19：**不再用缓存的 kFit0**。平板/换屏/横竖屏之后 fitZoom 会变，
+         而缓存的旧值会让 r=k/kFit 偏移 —— 表现就是「平板上全图还看得见节点和推出线，
+         电脑上却是干净的全景」。fitZoom 只是一次除法，每帧现算不心疼。 */
+      kFit0 = (function () { try { return fitZoom(); } catch (e) { return 0; } })();
       var rRel = kFit0 > 0 ? k / kFit0 : 1;
       lodA.rRel = rRel;
       /* ⭐ 2026-10-19：线的「最低可见度」只能是 r 的**一条连续曲线** —— 原来全景顶 0.30、
