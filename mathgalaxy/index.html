@@ -4502,7 +4502,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     /* ------------------------------------------------------------ 尺寸 */
     function resize() {
-      dpr = Math.min(global.devicePixelRatio || 1, 2.5);
+      /* ⛔ 2026-10-19：**高 dpr 设备压到 2.0**。平板实测 dpr 2.5、canvas 3000×1600、
+         位图层 3328×2944 —— 每帧要合成 ~980 万像素，小米平板（Adreno 735）实测
+         「其余 40.7ms、绘制 16.1ms」，拖动 18fps。像素数按 dpr² 走，2.5→2.0 直接省 36%。
+         视觉上 2.0 与 2.5 的差别在 1× 截图里看不出（线条仍有亚像素抗锯齿）。 */
+      dpr = Math.min(global.devicePixelRatio || 1, 2.0);
       var rect = canvas.getBoundingClientRect();
       var w = Math.max(1, Math.round(rect.width || global.innerWidth));
       var h = Math.max(1, Math.round(rect.height || global.innerHeight));
