@@ -52481,6 +52481,13 @@ MG.trunk = [
 
       /* 对齐自检：位图图层在屏幕上的实际位置/宽度 vs「实时层算出的同一世界矩形」。
          错位px 大 = 位置错；宽比 ≠1 = **缩放**错（k/k_bake 算错或尺寸没跟上）。 */
+      /* 渲染实际用的 dpr（已被 renderer 夹到 ≤2.0），不是全局 devicePixelRatio ——
+         原来这里直接打印全局值，于是「压到 2.0 了但角标还写 2.5」，看着像没生效。 */
+      function effDpr() {
+        var cv = document.getElementById('graph');
+        var cw = cv && cv.clientWidth;
+        return (cv && cw) ? +(cv.width / cw).toFixed(2) : global.devicePixelRatio;
+      }
       function alignLine() {
         var bs = bitmap ? bitmap.state() : null;
         if (!bs || !bs.ready) return '对齐 （位图未就绪）';
@@ -52496,7 +52503,7 @@ MG.trunk = [
         var off = Math.hypot(r.left - ex, r.top - ey);
         return '对齐 错位 ' + off.toFixed(1) + 'px ｜ 宽比 ' + (ew ? (r.width / ew).toFixed(4) : '-')
           + ' ｜ 层 ' + el.width + 'x' + el.height + ' @k_bake ' + bs.k.toFixed(3) + ' @k ' + cam.k.toFixed(3)
-          + ' @dpr ' + global.devicePixelRatio;
+          + ' @dpr ' + effDpr() + '（全局 ' + global.devicePixelRatio + '）';
       }
       var hudLast = 0, hudAcc = 0, hudCnt = 0, hudWorst = 0, hudPeak = 0;
       var hudPeakDraw = 0, hudPeakInp = 0, hudPeakRest = 0;
@@ -52615,7 +52622,7 @@ MG.trunk = [
             + ' 烘' + bs.bakes + '次 末' + bs.lastMs + '/峰' + bs.peakMs + 'ms 换' + bs.swaps) : '未装') + '\n' +
           'gap ' + gaps + ' 次（>2s 或 hidden，不进峰值）\n' +
           alignLine() + '\n' +
-          global.innerWidth + '×' + global.innerHeight + ' · dpr ' + global.devicePixelRatio +
+          global.innerWidth + '×' + global.innerHeight + ' · dpr ' + effDpr() +
           ' · canvas ' + c.width + '×' + c.height + ' · 画布名字 ' + (MG.displayLang || 'zh') +
           '\n节点 ' + graph.nodes.length + ' · 连线 ' + view.visible.length +
           (hudTex ? ' · 云雾纹理 ' + hudTex.canvas.width + '×' + hudTex.canvas.height : '') +
