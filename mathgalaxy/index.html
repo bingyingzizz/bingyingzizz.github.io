@@ -4884,9 +4884,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     var staticCam = null, cullOff = false, staticHidden = false, glowLive = false, envLive = false, hoverFull = false;
     /* 低频汇总用：只累加 performance.now 的差值，⛔ 绝不引入 flush/readback。
        ⭐ labels = 标签**绘制耗时**（ms，低频汇总口径，不是条数）；
-          labelCount = 这一帧真的画上去的标签**条数**（星系名+星团名+节点名）。
-          ⚠️ 早先的报告把 labels(ms) 当成「条数」过 —— 所以这两个字段名字必须分开写清楚。 */
-    var prof = { edges: 0, nodes: 0, labels: 0, labelCount: 0, frames: 0 };
+          labelCount = 这一帧真的画上去的标签**条数**（板块名+领域名+团名+节点名，
+                       回放出来的也算）；labelReplay = 其中**回放**出来的条数；
+          labelRecalc = 这一帧是**重算**（1）还是回放（0）。三者在 profReset 里一起清。
+          ⚠️ 早先的报告把 labels(ms) 当成「条数」过 —— 所以这两个字段名字必须分开写清楚。
+          ⛔ 节点名的**每帧预算**要的是「本帧已画几条」= labelCount − labelBase，
+             不能直接拿 labelCount 比（那个是跨帧累加的，见 drawLabels 里的注释）。 */
+    var prof = { edges: 0, nodes: 0, labels: 0, labelCount: 0, labelReplay: 0, labelRecalc: 0, frames: 0 };
     function camNow() { return staticCam || view.cam; }
     function setStaticHidden(v) { staticHidden = !!v; }
     function bbox() { return view.graph.bbox(); }
@@ -4956,10 +4960,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          然后才是「当前尺度的主要名称」（板块 / 领域 / 星团），最后是普通节点名。
          ⛔ 放不下就隐藏低优先级，不缩字号、不降对比度（用户 2026-10-17 拍板）。 */
       if (C.showLabels) reserveSpecialLabels();
-      if (lodA.sectorName > 0.02) drawSectorNames();
-      if (lodA.galaxyName > 0.02) drawGalaxyNames();
-      if (lodA.clusterName > 0.02) drawClusterNames();
-      if (C.showLabels) drawLabels();
+      /* ⭐ 四类名字只走这一个入口（板块 → 领域 → 星团 → 节点，顺序即避让优先级）。
+         ⛔ 别在这里再单独调那四个函数 —— 一帧调两次会让「记录/回放」记双份。 */
+      drawAllNames();
       drawHoverOverlay();
     }
 
@@ -5893,60 +5896,85 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
 
     /* ⭐⭐ 2026-10-19 **标签冻结**（用户要的两件事：拖动时不闪、拖完立刻有）：
-       · 相机只平移（k 没变）⇒ 直接**回放上一帧的标签**，按位移整体 translate，
-         不测量、不避让、不重排 —— 于是标签跟着画面走，不会因为每帧重新避让而闪；
-       · k 变了（缩放）⇒ 重算一次（缩放时重排才有意义）。
-       记录方式是临时接管 ctx.fillText/strokeText —— 不用改动三个绘制点里的任何一行。 */
-    var labelCache = null;
+       ⛔ 这里包的是「名字」这一**组**，不是原来那个只包节点名的半成品 ——
+          用户在拖动时看到的名字来自四个函数：大板块名 / 领域名 / 星团名 / 节点名。
+       两条路：
+         · 相机 k 没变、且这一帧**确实在平移** ⇒ 回放上一帧记下的文字操作，
+           整体 translate 位移量；**不测量、不避让、不重排** ⇒ 名字跟着画面走，不会闪；
+         · 其余情况（k 变了 / 没有缓存 / **相机停住了**）⇒ 重算一次。
+       ⭐「相机停住 ⇒ 重算」是唯一的失效入口，它同时兜住了松手、动画结束、
+          换语言、藏节点、开关「名称」、搜索高亮 —— 这些都会在**相机不动**的帧上
+          落一次重算，所以缓存不需要任何手工失效。
+       ⛔ 不要记 ctx 的变换矩阵：回放时外层已按同一相机画过背景，差的只是一个平移量。
+       ⛔ 不要在这里改四个绘制点里的任何一行（接管 fillText/strokeText 就够了）。 */
+    var labelCache = null;      // { k, tx, ty, w, h, ops: [...] }
+    var labelBase = 0;          // 本帧起点（prof.labelCount）→ 节点名的「每帧预算」靠它
 
+    /** 回放：把上一帧记下的文字按 (dx,dy) 整体搬一次 —— 零测量、零避让 */
     function replayLabels(dx, dy) {
-      prof.labelReplay = (prof.labelReplay || 0) + labelCache.ops.length;
-      var ops = labelCache.ops;
+      var ops = labelCache.ops, n = 0;
       ctx.save();
       ctx.translate(dx, dy);
       for (var i = 0; i < ops.length; i++) {
         var o = ops[i];
-        if (!o.t) continue;
+        /* ⚠️ 逐条还原六项状态：四个函数各自 ctx.save() 过，回放不能假设任何继承值 */
         ctx.globalAlpha = o.a;
-        ctx.font = o.font;
-        ctx.textAlign = o.align;
-        if (o.w) {
-          ctx.strokeStyle = o.stroke;
+        ctx.font = o.f;
+        ctx.textAlign = o.al;
+        ctx.textBaseline = o.bl;
+        if (o.s) {
+          ctx.strokeStyle = o.ss;
           ctx.lineWidth = o.lw;
           ctx.strokeText(o.t, o.x, o.y);
+        } else {
+          ctx.fillStyle = o.fs;
+          ctx.fillText(o.t, o.x, o.y);
+          n++;
         }
-        ctx.fillStyle = o.fill;
-        ctx.fillText(o.t, o.x, o.y);
       }
       ctx.restore();
+      prof.labelCount += n;          // HUD 的「标签 N 条」把回放出来的也算上
+      prof.labelReplay += n;
     }
 
-    function drawLabelsCached() {
+    /** 统一入口：四类名字一次画完（顺序 = 避让优先级：板块 → 领域 → 星团 → 节点） */
+    function drawAllNames() {
       var c = camNow();
-      if (labelCache && labelCache.k === c.k) {
-        replayLabels(c.tx - labelCache.tx, c.ty - labelCache.ty);
-        return;
+      if (labelCache && labelCache.k === c.k && labelCache.w === W && labelCache.h === H) {
+        var dx = c.tx - labelCache.tx, dy = c.ty - labelCache.ty;
+        if (dx || dy) { replayLabels(dx, dy); return; }   // 纯平移才回放；停住 ⇒ 往下重算
       }
-      var rec = [];
+      var ops = [];
+      labelBase = prof.labelCount;
+      /* ⚠️ 还原**不能一律赋值**：赋值会给 ctx 留下「自己的」fillText 属性，永久盖住原型上的
+         方法（实测后果：之后任何「拦 prototype 数 fillText」的探针都数到 0 次）。
+         原来有就放回，原来没有就 delete —— delete 一个可配置的自有属性在严格模式下也合法。 */
+      var ownF = Object.prototype.hasOwnProperty.call(ctx, 'fillText');
+      var ownS = Object.prototype.hasOwnProperty.call(ctx, 'strokeText');
       var of = ctx.fillText, os = ctx.strokeText;
+      /* 记的是**调用那一刻**的 ctx 状态（alpha / 颜色 / 字体 / 对齐 / 基线）：
+         回放时按原值复位，所以记录里不带任何「变换」也不带 save/restore 栈。 */
       ctx.fillText = function (t, x, y) {
-        rec.push({ t: t, x: x, y: y, a: ctx.globalAlpha, fill: ctx.fillStyle,
-          font: ctx.font, align: ctx.textAlign });
+        ops.push({ t: t, x: x, y: y, a: ctx.globalAlpha, fs: ctx.fillStyle,
+          f: ctx.font, al: ctx.textAlign, bl: ctx.textBaseline });
         return of.call(ctx, t, x, y);
       };
       ctx.strokeText = function (t, x, y) {
-        var last = rec[rec.length - 1];
-        if (!last || last.t !== t || last.x !== x || last.y !== y) {
-          last = { t: t, x: x, y: y, a: 0 };
-          rec.push(last);
-        }
-        last.w = 1; last.stroke = ctx.strokeStyle; last.lw = ctx.lineWidth;
+        ops.push({ t: t, x: x, y: y, a: ctx.globalAlpha, ss: ctx.strokeStyle,
+          lw: ctx.lineWidth, f: ctx.font, al: ctx.textAlign, bl: ctx.textBaseline, s: 1 });
         return os.call(ctx, t, x, y);
       };
-      drawLabelsCached();
-      ctx.fillText = of; ctx.strokeText = os;
-      labelCache = { k: c.k, tx: c.tx, ty: c.ty, ops: rec };
-      prof.labelRecalc = (prof.labelRecalc || 0) + 1;
+      try {
+        if (lodA.sectorName > 0.02) drawSectorNames();
+        if (lodA.galaxyName > 0.02) drawGalaxyNames();
+        if (lodA.clusterName > 0.02) drawClusterNames();
+        if (C.showLabels) drawLabels();
+      } finally {
+        if (ownF) ctx.fillText = of; else delete ctx.fillText;
+        if (ownS) ctx.strokeText = os; else delete ctx.strokeText;
+      }
+      labelCache = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H, ops: ops };
+      prof.labelRecalc++;
     }
 
     function drawLabels() {
@@ -6004,8 +6032,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (!inView(p.x, p.y, PAD_NODE)) return;   // 屏幕外的名字：既不量宽也不画
         /* ⭐ 2026-10-19：**每帧节点名预算**。平板实测一帧画 231 条、量文本 13.6ms
            （占总帧 45ms 的 30%）。预算按视口宽度给：1200 CSS 宽 ⇒ 120 条，
-           电脑 1576 ⇒ 157 条。超了就只画前 N 条（优先级已由 sort 定好）。 */
-        if (prof.labelCount >= Math.round(Math.min(220, Math.max(70, (camNow().viewW || W) / 10)))) return;
+           电脑 1576 ⇒ 157 条。超了就只画前 N 条（优先级已由 sort 定好）。
+           ⛔⛔ 必须用 `prof.labelCount - labelBase`（= **本帧**已画几条）。
+              以前直接拿 prof.labelCount 比 —— 那是跨帧累加的 HUD 口径，而唯一清零点
+              profReset() 只挂在 `?fps=1` 的角标里 ⇒ 不带 fps 的页面画满一帧预算之后，
+              节点名**再也不出来**。实测：k=0.62、屏内 1637 个点、157 个可见点，
+              一帧 fillText 调用 **0** 次（截图确认整屏没有一个名字）。 */
+        if (prof.labelCount - labelBase >= Math.round(Math.min(220, Math.max(70, (camNow().viewW || W) / 10)))) return;
         var r = nodeRadius(n);
         var text = n.labelShow || n.label;         // ⭐ T2.4：节点名跟语言走（启动时算一次）
         var tw = measure(ctx, text, ctx.font);
@@ -6130,7 +6163,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           labelCount: prof.labelCount
         };
       },
-      profReset: function () { prof.edges = 0; prof.nodes = 0; prof.labels = 0; prof.labelCount = 0; prof.frames = 0; },
+      profReset: function () { prof.edges = 0; prof.nodes = 0; prof.labels = 0; prof.labelCount = 0; prof.labelReplay = 0; prof.labelRecalc = 0; prof.frames = 0; },
       get size() { return { w: W, h: H }; }
     };
   }
