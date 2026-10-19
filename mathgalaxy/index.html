@@ -4903,9 +4903,21 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
                        回放出来的也算）；labelReplay = 其中**回放**出来的条数；
           labelRecalc = 这一帧是**重算**（1）还是回放（0）。三者在 profReset 里一起清。
           ⚠️ 早先的报告把 labels(ms) 当成「条数」过 —— 所以这两个字段名字必须分开写清楚。
-          ⛔ 节点名的**每帧预算**要的是「本帧已画几条」= labelCount − labelBase，
-             不能直接拿 labelCount 比（那个是跨帧累加的，见 drawLabels 里的注释）。 */
+          ⛔ 节点名的**每帧预算**数的是 drawLabels 里的局部计数器（本帧落笔几条），
+             不拿 labelCount 比：它是跨帧累加的 HUD 口径，而且把结构性名字也算进去了。 */
     var prof = { edges: 0, nodes: 0, labels: 0, labelCount: 0, labelReplay: 0, labelRecalc: 0, frames: 0 };
+    /* 标签分项（**只描述最近一次重算**，回放帧不动它）—— 用来回答
+       「为什么这个节点的名字没画出来」，不要再靠猜：
+         structural = 这一趟里板块/领域/星团名 + 特殊标签先画掉几条；
+         budget     = 本帧节点名预算（nodeNameBudget() 算出来的那个数）；
+         cand       = 通过全部闸门（可见 / 不透明度 / 档位门槛 / 屏幕内）的节点数 = 候选；
+         drawn      = 真正落笔的节点名条数；
+         cut*       = 被各条闸门各自掐掉多少（互不重叠，一个节点只记第一个拦它的闸门）。 */
+    var labelStat = { budget: 0, structural: 0, cand: 0, drawn: 0,
+      cutBudget: 0, cutAvoid: 0, cutTier: 0, cutOff: 0, cutAlpha: 0, cutHidden: 0, cutSpecial: 0 };
+    /* 逐节点原因（探针用）：setLabelTrace(true) 之后，最近一次重算里每个节点落一个原因。
+       ⛔ 默认关 —— 关着的时候连这个对象都不分配。 */
+    var labelTraceOn = false, labelTraceMap = null;
     function camNow() { return staticCam || view.cam; }
     function setStaticHidden(v) { staticHidden = !!v; }
     function bbox() { return view.graph.bbox(); }
@@ -5950,7 +5962,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
        ⛔ 不要记 ctx 的变换矩阵：回放时外层已按同一相机画过背景，差的只是一个平移量。
        ⛔ 不要在这里改四个绘制点里的任何一行（换 ctx + 贴图层就够了）。 */
     var labelCache = null;      // { k, tx, ty, w, h, sig, count, stamp }
-    var labelBase = 0;          // 本帧起点（prof.labelCount）→ 节点名的「每帧预算」靠它
+    var labelBase = 0;          // 本趟重算的起点（prof.labelCount）→ 诊断分项里「结构性名字」靠它
+    /* 「可见集合 / 世界内容」变了的**代次号**：`invalidate()` 每调一次 +1，进 labelSig。
+       ⛔ 为什么需要它：自从「机位没变就直接贴缓存」之后，标签层只在指纹变了时重算；
+          而**藏一批点**（左下角面板 / 主干模式 / 分层 / 并入外部内容）不改指纹里那几项，
+          少了这一代次号，被藏掉的名字会一直贴在屏幕上，直到相机动一下才消失。
+          这些改动本来就都会调 `renderer.invalidate()`（app.js 里 7 处）。 */
+    var sigEpoch = 0;
     /* 上一帧画完时的机位 —— 判「相机停住」用（⛔ 不能用 labelCache.tx，理由见上） */
     var labelPrevCam = null;
     /* 离屏标签层。margin 越大幅度上能走更远才重算一次，代价是画布内存 ∝ (W+2m)(H+2m)。 */
@@ -6039,14 +6057,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     /** 「名字集合」的指纹：任一项变了 ⇒ 离屏层里那块内容已经不代表现在，必须重算。
         覆盖面 = 特殊标签（选中 → 悬停 → 搜索命中，见 reserveSpecialLabels 的 rank 0/1/2）
-        + 「名称」开关（关掉时 drawLabels 不画，节点名整批消失）+ 画布语言（labelShow 换了）。 */
+        + 「名称」开关（关掉时 drawLabels 不画，节点名整批消失）+ 画布语言（labelShow 换了）
+        + `sigEpoch`（可见集合变了：藏点 / 主干模式 / 分层 / 并入外部内容包 ——
+          这些都不改上面那几项，但会改「该画哪些名字」）。 */
     function labelSig() {
       /* ⚠️ 选中**两条都要**：focus 是 node 时是 rank 0 的特殊标签，
          是 edge 时虽然自己不出标签，但 alphaForNode 会把无关的点压暗 ⇒ 名字的 alpha 也变。 */
       var f = view.focus ? (view.focus.type + ':' + view.focus.id) : '';
       var h = (view.hover && view.hover.type === 'node') ? view.hover.id : '';
       var s = view.searchIds ? Object.keys(view.searchIds).join(',') : '';
-      return f + '|' + h + '|' + s + '|' + (C.showLabels ? '1' : '0') + '|' + (MG.displayLang || 'zh');
+      return f + '|' + h + '|' + s + '|' + (C.showLabels ? '1' : '0') + '|'
+        + (MG.displayLang || 'zh') + '|' + sigEpoch;
     }
 
     /** 回放：把离屏标签层整块按 (dx,dy) 搬一次 —— 零测量、零避让、零重排 */
@@ -6068,14 +6089,23 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var sig = labelSig();
       if (labelCache && labLayer && labLayer.g && labLayer.dpr === dpr && labelCache.k === c.k &&
           labelCache.w === W && labelCache.h === H && labelCache.sig === sig) {
-        var dx = c.tx - labelCache.tx, dy = c.ty - labelCache.ty;
-        if (dx || dy) {                                   // 纯平移才回放；停住（dx=dy=0）⇒ 往下重算
+        /* ⭐⭐ 机位与**重算那一帧**逐位相同 ⇒ 这一层就是为这一屏算的，直接贴，不重算。
+           ⛔ 旧实现在这种情况下（dx=dy=0）往下走去重算 ⇒ 同一机位每重画一帧都要
+              重新量宽度 + 重新避让 + 重新落笔。app 的循环虽然是 on-demand 的，
+              但相机一停还有一堆人会触发重画（烘焙补带 / 收尾 / hover 之外的零星重画），
+              每来一帧就是一次全量标签重算。贴缓存后这些帧只剩一次 drawImage。 */
+        if (labelCache.tx === c.tx && labelCache.ty === c.ty) {
+          if (labelLayerAlive()) { replayLabels(0, 0); return; }
+        } else {
+          var dx = c.tx - labelCache.tx, dy = c.ty - labelCache.ty;
           /* ② 累计位移超过**离屏层余量**或半屏 ⇒ 再往外那一块压根没画过（它从来没被测量/避让） */
           var vw = c.viewW || W, vh = c.viewH || H;
           var limX = Math.min(vw * 0.5, LAB_MARGIN * 0.9);
           var limY = Math.min(vh * 0.5, LAB_MARGIN * 0.9);
           var far = Math.abs(dx) > limX || Math.abs(dy) > limY;
-          /* ③ 本帧机位 == 上一帧机位 ⇒ 相机停了，这帧就该重算（松手 / 滚轮去抖 / 动画收尾） */
+          /* ③ 本帧机位 == 上一帧机位 ⇒ 相机停了，这帧就该重算一次
+             （松手 / 滚轮去抖 / 动画收尾）。重算完缓存就落在这个机位上，
+             下一帧起走上面那条 `tx/ty 相同 ⇒ 直接贴`。 */
           var stopped = !!(prevCam && prevCam.k === c.k && prevCam.tx === c.tx && prevCam.ty === c.ty);
           /* ⑤ **层还在不在**：离屏 canvas 不在 DOM 里，浏览器内存吃紧时可以把它回收成
              一张空白画布，而缓存里的 count 还说自己有内容 ⇒ 以前会一直贴一张空图，
@@ -6163,39 +6193,76 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (!q) return b;
         return { x0: b.x0 - q, y0: b.y0 - q, x1: b.x1 + q, y1: b.y1 + q, rank: b.rank };
       });
-      var nodes = view.graph.nodes.slice().sort(function (a, b) {
-        return labelPriority(b) - labelPriority(a);
-      });
+      /* ⭐ 本帧的**画名顺序** = 避让顺序，两级：
+         ① **严格屏内**的节点先（用户此刻真的看得见的）；
+         ② 再按 labelPriority（主干 / 枢纽 / 选中 / 悬停 / 搜索命中 / 度数）。
+         ⛔⛔ 为什么必须加 ①：预算一旦掐，掐掉的应该是「离屏余量（PAD_NODE=220px）里
+            那些只为平移预览准备的名字」，绝不能是用户正看着的那一批。
+            旧实现只按全局优先级排，余量里的高节点照样抢预算 —— 实测 dpr2 1200×640、
+            r=8 时预算画满 120 条，**严格屏内只有 43 条**有名字（另 77 条画在了屏外）。
+         ⭐ 顺带把 labelPriority / screenOf 各算一次存进数组：旧实现对每个节点
+            在排序里反复调 labelPriority（≈20 次/节点/帧）。 */
+      var order = [], allNodes = view.graph.nodes, oi, oN, oS;
+      for (oi = 0; oi < allNodes.length; oi++) {
+        oN = allNodes[oi];
+        oS = screenOf(oN);
+        order.push({
+          n: oN, x: oS.x, y: oS.y,
+          on: (oS.x >= 0 && oS.x <= W && oS.y >= 0 && oS.y <= H) ? 1 : 0,
+          p: labelPriority(oN)
+        });
+      }
+      order.sort(function (a, b) { return (b.on - a.on) || (b.p - a.p); });
+
       var reserved = Object.create(null);
       reservedLabels.forEach(function (L) { reserved[L.id] = 1; });
+
+      /* ---- 预算 & 诊断分项（探针读 labelStat()：这一趟到底为什么少了一堆名字） ---- */
+      var st = labelStat;
+      st.structural = prof.labelCount - labelBase;      // 本趟结构性名字 + 特殊标签已经画掉几条
+      st.budget = nodeNameBudget();
+      st.cand = 0; st.drawn = 0;
+      st.cutBudget = 0; st.cutAvoid = 0; st.cutTier = 0; st.cutOff = 0;
+      st.cutAlpha = 0; st.cutHidden = 0; st.cutSpecial = 0;
+      if (labelTraceOn) labelTraceMap = Object.create(null);
+      var miss = labelTraceOn ? function (id, why) { labelTraceMap[id] = why; } : null;
+      /* 本帧**节点名**已经画上去几条 —— 预算只数它。
+         ⛔ 旧口径是 `prof.labelCount - labelBase`：labelCount 是跨帧累加的 HUD 口径，
+            而 labelBase 只在重算开头刷新；更要紧的是它**把结构性名字算进去了**
+            （板块名 + 领域名 + 团名 + 特殊标签先画，一样占预算）——
+            实测平板 r=3.6：预算 120，结构性名字先吃掉 58 条 ⇒ 节点名实际只有 62 条。 */
+      var nodeDrawn = 0;
 
       ctx.font = '600 ' + fs + 'px ' + T.font;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
 
-      nodes.forEach(function (n) {
-        if (reserved[n.id]) return;                // 已经画过的特殊标签不再画第二遍
-        if (!nodeOk(n.id)) return;
+      order.forEach(function (it) {
+        var n = it.n, p = it;
+        if (reserved[n.id]) { st.cutSpecial++; if (miss) miss(n.id, 'special'); return; }
+        if (!nodeOk(n.id)) { st.cutHidden++; if (miss) miss(n.id, 'hidden'); return; }
         var trunk = isTrunk(n);
         // 主干的名字用更早出现的那条曲线；其余仍按原节奏
         var nameAlpha = trunk ? Math.max(lodA.nodeName, lodA.trunkName) : lodA.nodeName;
-        if (nameAlpha <= 0.06) return;
+        if (nameAlpha <= 0.06) { st.cutAlpha++; if (miss) miss(n.id, 'fade'); return; }
         var a = alphaForNode(n.id);
-        if (a <= 0.06) return;
+        if (a <= 0.06) { st.cutAlpha++; if (miss) miss(n.id, 'dim'); return; }
         // 缩小时只画重要的：主干一律画，其余按上面那三档
-        if (!trunk && !allNames && !n.isHub && n.degree < minDeg) return;
+        if (!trunk && !allNames && !n.isHub && n.degree < minDeg) {
+          st.cutTier++; if (miss) miss(n.id, 'tier'); return;
+        }
 
-        var p = screenOf(n);
-        if (!inView(p.x, p.y, PAD_NODE)) return;   // 屏幕外的名字：既不量宽也不画
-        /* ⭐ 2026-10-19：**每帧节点名预算**。平板实测一帧画 231 条、量文本 13.6ms
-           （占总帧 45ms 的 30%）。预算按视口宽度给：1200 CSS 宽 ⇒ 120 条，
-           电脑 1576 ⇒ 157 条。超了就只画前 N 条（优先级已由 sort 定好）。
-           ⛔⛔ 必须用 `prof.labelCount - labelBase`（= **本帧**已画几条）。
-              以前直接拿 prof.labelCount 比 —— 那是跨帧累加的 HUD 口径，而唯一清零点
-              profReset() 只挂在 `?fps=1` 的角标里 ⇒ 不带 fps 的页面画满一帧预算之后，
-              节点名**再也不出来**。实测：k=0.62、屏内 1637 个点、157 个可见点，
-              一帧 fillText 调用 **0** 次（截图确认整屏没有一个名字）。 */
-        if (prof.labelCount - labelBase >= Math.round(Math.min(220, Math.max(70, (camNow().viewW || W) / 10)))) return;
+        if (!inView(p.x, p.y, PAD_NODE)) { st.cutOff++; if (miss) miss(n.id, 'off'); return; }
+        st.cand++;
+        /* ⭐⭐ 每帧节点名预算：按**可用面积**给（见 nodeNameBudget），只数真的画上去的节点名，
+           而且**主干 / 枢纽 / 选中 / 悬停 / 搜索命中永远不吃预算**（labelMustDraw）。
+           背景（用户 2026-10 在平板上报「一半节点名一直不显示，换个机位换一批」）：
+           旧口径 max(70, viewW/10) 在 1200 CSS 宽上只有 120 条，还先被结构性名字吃掉一半 ⇒
+           实测 r=4 时严格屏内 462 个点里只有 39 个有名字（8.4%），r=8 时 43/100。
+           名字缺不缺跟相机停在哪有关、跟等多久无关 —— 正是这个确定性的截断。 */
+        if (nodeDrawn >= st.budget && !labelMustDraw(n)) {
+          st.cutBudget++; if (miss) miss(n.id, 'budget'); return;
+        }
         var r = nodeRadius(n);
         var text = n.labelShow || n.label;         // ⭐ T2.4：节点名跟语言走（启动时算一次）
         var tw = measure(ctx, text, ctx.font);
@@ -6207,7 +6274,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           var b = placed[i];
           if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) { hit = true; break; }
         }
-        if (hit) return;
+        if (hit) { st.cutAvoid++; if (miss) miss(n.id, 'avoid'); return; }
         placed.push(box);
 
         var alpha = a * 0.92 * nameAlpha;
@@ -6217,7 +6284,37 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.fillStyle = 'rgba(28,28,30,' + alpha.toFixed(3) + ')';
         ctx.fillText(text, x, y);
         prof.labelCount++;                    // 节点名：真正画上去了才算一条
+        nodeDrawn++;
+        st.drawn++;
+        if (miss) miss(n.id, 'drawn');
       });
+    }
+
+    /** 每帧节点名预算：按**可用面积**给，不再按 `viewW / 10`。
+        · 一个名字盒子约 60×20 CSS px，避让留隙按 1.6 倍算 ⇒ 2600 px²/条；
+        · 1200×640（平板）⇒ **295** 条（旧口径 120）；
+          1576×808（作者机器）⇒ 490 → 封顶 **460**（旧口径 157）。
+        ⚠️ 故意**不按 dpr 缩**：dpr 只影响「画一条多贵」，不影响「屏上放得下几条」。
+           省开销要靠「相机没动就直接贴缓存」（见 drawAllNames 的 atCache 分支），
+           而不是靠少画名字 —— 旧实现正是拿少画名字当性能手段，代价是一半节点永远没名字。
+        ⚠️ 到底画几条仍由避让（placed[]）决定：名字互相压叠时宁可少画一个，
+           这是既有设计（用户 2026-10-17 拍板）。预算只是**防爆上限**。 */
+    function nodeNameBudget() {
+      var c = camNow();
+      var vw = c.viewW || W, vh = c.viewH || H;
+      return Math.round(U.clamp(vw * vh / 2600, 140, 460));
+    }
+
+    /** 名字**永远不吃预算**的那一批：主干 / 枢纽 / 选中 / 悬停 / 搜索命中。
+        用户 2026-10 拍板：「主干 / 枢纽 / 选中 / 悬停 / 搜索命中的名字永远不被预算掐掉」。
+        ⚠️ 它们仍然过避让（放不下就让位，除非是 reserveSpecialLabels 预留的那几个）——
+           这里只豁免**预算**这一条闸门。 */
+    function labelMustDraw(n) {
+      if (n.trunk || n.isHub) return true;
+      var f = view.focus;
+      if (f && f.id === n.id) return true;
+      if (view.hover && view.hover.id === n.id) return true;
+      return !!(view.searchIds && view.searchIds[n.id]);
     }
 
     function labelPriority(n) {
@@ -6290,7 +6387,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return hitEdge ? { type: 'edge', id: hitEdge } : null;
     }
 
-    function invalidate() { geomCache = null; sectorPairCache = null; }
+    function invalidate() { geomCache = null; sectorPairCache = null; sigEpoch++; }
 
     return {
       resize: resize,
@@ -6307,6 +6404,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       drawReadRings: drawReadRings,                          // 已读脉冲环 → #layer-read（见上）
       bbox: bbox,
       prof: prof,
+      /* 诊断：最近一次标签重算的分项（候选 / 画出去 / 各闸门掐掉多少）+ 逐节点原因。
+         ⛔ 只读；`setLabelTrace(true)` 才会为**每个节点**落一条原因（默认关，零分配）。 */
+      labelStat: function () { return labelStat; },
+      setLabelTrace: function (on) { labelTraceOn = !!on; if (!labelTraceOn) labelTraceMap = null; return labelTraceOn; },
+      labelTrace: function () { return labelTraceMap; },
       /* 诊断用：当前帧的 LOD 读数（档位 / 三档名字 / 定义线系数）。
          ⚠️ 只读快照，别拿它当状态改 —— holdTier 的真源在 computeLod 里。 */
       fitZoom: fitZoom,                                  // 给 paintKey 现算 r=k/kFit 用
