@@ -5944,6 +5944,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
         var p = screenOf(n);
         if (!inView(p.x, p.y, PAD_NODE)) return;   // 屏幕外的名字：既不量宽也不画
+        /* ⭐ 2026-10-19：**每帧节点名预算**。平板实测一帧画 231 条、量文本 13.6ms
+           （占总帧 45ms 的 30%）。预算按视口宽度给：1200 CSS 宽 ⇒ 120 条，
+           电脑 1576 ⇒ 157 条。超了就只画前 N 条（优先级已由 sort 定好）。 */
+        if (prof.labelCount >= Math.round(Math.min(220, Math.max(70, (camNow().viewW || W) / 10)))) return;
         var r = nodeRadius(n);
         var text = n.labelShow || n.label;         // ⭐ T2.4：节点名跟语言走（启动时算一次）
         var tw = measure(ctx, text, ctx.font);
