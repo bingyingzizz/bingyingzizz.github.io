@@ -50852,7 +50852,7 @@ MG.trunk = [
         var _moving = (prevCam && (prevCam.k !== c.k || prevCam.tx !== c.tx || prevCam.ty !== c.ty));
         if (_moving) bakeIdleAt = performance.now();
         prevCam = { k: c.k, tx: c.tx, ty: c.ty };
-        var _canBake = !animating && (performance.now() - bakeIdleAt > 250);
+        var _canBake = !animating && (performance.now() - bakeIdleAt > 120);
         var useBmp = bitmap ? (_canBake ? bitmap.tick(c, dpr, paintKey()) : !!lastUseBmp) : false;
         lastUseBmp = useBmp;
         renderer.setStaticHidden(useBmp);
@@ -50901,7 +50901,10 @@ MG.trunk = [
 
     function resize() {
       var s = renderer.resize();
-      dpr = s.dpr;
+      /* ⛔ 2026-10-19：**dpr 在这里才真正决定画布像素数**（云雾层、读图层、主画布都按它）。
+         之前只在 renderer 里夹了一次，这里仍用原始 devicePixelRatio ⇒ 角标 2.5、
+         层也还是 2.5 那么大，压 dpr 那一刀等于没落到像素上。 */
+      dpr = Math.min(s.dpr || 1, 2.0);
       cloudEl.width = Math.max(1, Math.round(s.w * dpr));
       cloudEl.height = Math.max(1, Math.round(s.h * dpr));
       readEl.width = Math.max(1, Math.round(s.w * dpr));
