@@ -50822,6 +50822,7 @@ MG.trunk = [
         cloudDrawn.tex = null;              // 纹理换了：这一次必须重铺
       }
       var tp = performance.now();
+      if (typeof prevCam === 'undefined') { var prevCam = null; var bakeIdleAt = 0; }
       var animating = cam.tick();
       if (dirty || animating) {
         var c = cam;
@@ -50837,7 +50838,14 @@ MG.trunk = [
            ⇒ 15~25fps（fps=1 角标实测：绘制 6.2ms / 其余 27.6ms，全在烘）。
            交互期间沿用上一代位图（清晰度略降、位置正确），停稳后再补。
          注意：这里不 tick 时位图图层留着上一帧的图，不会闪空。 */
-        var useBmp = bitmap ? (animating ? !!lastUseBmp : bitmap.tick(c, dpr, paintKey())) : false;
+        /* ⭐ 2026-10-19：**「停稳 250ms 才烘」**。原来只判 animating，可拖动/滚轮并不走
+           相机动画那条路 ⇒ 照样每帧烘一条带（平板实测：其余 36.9ms，绘制只有 8.8）。
+           这里用「相机这一帧动没动」当判据，比 animating 可靠。 */
+        var _moving = (prevCam && (prevCam.k !== c.k || prevCam.tx !== c.tx || prevCam.ty !== c.ty));
+        if (_moving) bakeIdleAt = performance.now();
+        prevCam = { k: c.k, tx: c.tx, ty: c.ty };
+        var _canBake = !animating && (performance.now() - bakeIdleAt > 250);
+        var useBmp = bitmap ? (_canBake ? bitmap.tick(c, dpr, paintKey()) : !!lastUseBmp) : false;
         lastUseBmp = useBmp;
         renderer.setStaticHidden(useBmp);
         renderer.setGlowLive(useBmp);
