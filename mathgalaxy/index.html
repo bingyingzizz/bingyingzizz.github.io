@@ -5891,6 +5891,62 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       });
     }
 
+
+    /* ⭐⭐ 2026-10-19 **标签冻结**（用户要的两件事：拖动时不闪、拖完立刻有）：
+       · 相机只平移（k 没变）⇒ 直接**回放上一帧的标签**，按位移整体 translate，
+         不测量、不避让、不重排 —— 于是标签跟着画面走，不会因为每帧重新避让而闪；
+       · k 变了（缩放）⇒ 重算一次（缩放时重排才有意义）。
+       记录方式是临时接管 ctx.fillText/strokeText —— 不用改动三个绘制点里的任何一行。 */
+    var labelCache = null;
+
+    function replayLabels(dx, dy) {
+      var ops = labelCache.ops;
+      ctx.save();
+      ctx.translate(dx, dy);
+      for (var i = 0; i < ops.length; i++) {
+        var o = ops[i];
+        if (!o.t) continue;
+        ctx.globalAlpha = o.a;
+        ctx.font = o.font;
+        ctx.textAlign = o.align;
+        if (o.w) {
+          ctx.strokeStyle = o.stroke;
+          ctx.lineWidth = o.lw;
+          ctx.strokeText(o.t, o.x, o.y);
+        }
+        ctx.fillStyle = o.fill;
+        ctx.fillText(o.t, o.x, o.y);
+      }
+      ctx.restore();
+    }
+
+    function drawLabelsCached() {
+      var c = camNow();
+      if (labelCache && labelCache.k === c.k) {
+        replayLabels(c.tx - labelCache.tx, c.ty - labelCache.ty);
+        return;
+      }
+      var rec = [];
+      var of = ctx.fillText, os = ctx.strokeText;
+      ctx.fillText = function (t, x, y) {
+        rec.push({ t: t, x: x, y: y, a: ctx.globalAlpha, fill: ctx.fillStyle,
+          font: ctx.font, align: ctx.textAlign });
+        return of.call(ctx, t, x, y);
+      };
+      ctx.strokeText = function (t, x, y) {
+        var last = rec[rec.length - 1];
+        if (!last || last.t !== t || last.x !== x || last.y !== y) {
+          last = { t: t, x: x, y: y, a: 0 };
+          rec.push(last);
+        }
+        last.w = 1; last.stroke = ctx.strokeStyle; last.lw = ctx.lineWidth;
+        return os.call(ctx, t, x, y);
+      };
+      drawLabelsCached();
+      ctx.fillText = of; ctx.strokeText = os;
+      labelCache = { k: c.k, tx: c.tx, ty: c.ty, ops: rec };
+    }
+
     function drawLabels() {
       /* 特殊标签（选中 / 悬停 / 搜索命中）**先画**：它们在 reserveSpecialLabels()
          里已经占好位，普通名字不会压上去。 */
