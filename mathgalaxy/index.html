@@ -4330,8 +4330,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
   var rrNative = -1;                    // -1 未定 / 1 原生 / 0 手画
   function roundPath(ctx, x, y, w, h, r) {
     if (rrNative !== 0) {
-      if (rrNative === 1) { ctx.roundRect(x, y, w, h, [r]); return; }
-      if (ctx.roundRect) {
+      /* ⚠️ 定成「原生可用」之后**每一条也必须包 try**：平板那种实现不是「永远坏」，
+         而是「某些参数才抛」。旧写法只在探路那一次捕获，之后一旦抛出来就直接穿到
+         调用方 —— 出字函数在离屏层重算里，一抛整帧就废（见 drawAllNames 的事务化）。
+         ⇒ 任何时候抛一次就永久退回手画 arcTo（形状一致，慢一点但不会炸）。 */
+      if (rrNative === 1) {
+        try { ctx.roundRect(x, y, w, h, [r]); return; }
+        catch (e) { rrNative = 0; }
+      } else if (ctx.roundRect) {
         try { ctx.roundRect(x, y, w, h, [r]); rrNative = 1; return; }
         catch (e) { rrNative = 0; }
       } else { rrNative = 0; }
@@ -4427,7 +4433,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     }
 
     function computeLod() {
-      var k = camNow().k, L = C.lod;
+      /* ⛔⛔ LOD 的判据只有**屏幕上的 CSS 尺度** k（世界单位 → CSS 像素）。
+         烘焙时 `camNow().k` 是 `scale = k × min(dpr,2)`（世界单位 → **烘焙画布的设备像素**），
+         直接拿它算 LOD 会让高 dpr 设备的静态层整整多走一档：
+         平板 dpr=2 实测「适配全部」k=0.0828 ⇒ 实时 r=1.00（nodeDot=0），
+         烘焙却按 0.1656 判出 r=2.00（nodeDot=1）⇒ 全景被烘进 910 个圆点 + 一层细线，
+         而电脑 dpr=1 时 scale 恰等于 k，所以**只有平板看得出来**。
+         ⇒ 烘焙路径由 drawStatic 传进来的 `lodK`（= 真实相机 k）说话；
+           几何尺寸（线宽 / 半径 / 裁剪）仍旧用烘焙 scale，两者不能混。 */
+      var cL = camNow();
+      var k = cL.lodK || cL.k, L = C.lod;
       /* 档位先定（带返回差），三档名字**互斥**：同一时刻只有一档在画。
          曲线本身已经在缝隙里归零，所以档位切换不会出现「啪」的一下。 */
       var tier = updateTier(k);
@@ -4997,7 +5012,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             （实测 k=1.2、3312×2056 的画布：整张 46~58ms/帧 → 1/10 带 ≤1 个时隙）。
          ⛔ y0 与 y0+h 必须是整数：小数的裁剪边会被抗锯齿，带与带之间就会出现接缝。
          ⚠️ 清空写在裁剪**里面**：调用方不必管清底，也不会误清掉别的带。 */
-    function drawStatic(target, scale, rect, band) {
+    function drawStatic(target, scale, rect, band, lodK) {
       var save = { ctx: ctx, W: W, H: H, dpr: dpr, cam: staticCam, cull: cullOff,
         hover: view.hover, labels: C.showLabels, glow: C.node.glow,
         glowSel: C.node.glowSelected, glowLiveV: glowLive };
@@ -5012,6 +5027,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          裁剪用的是 W/H 全局量，与这里无关，所以两种口径不会打架。 */
       staticCam = {
         k: scale, tx: -rect.minX * scale, ty: -rect.minY * scale,
+        /* ⭐ 烘焙的 LOD 必须按**真实相机 k** 判，不能按 scale（= k×dpr）——
+           见 computeLod 开头那段。缺省（老调用方只传四个参数）退回 scale。 */
+        lodK: (lodK > 0 ? lodK : scale),
         viewW: view.cam.viewW, viewH: view.cam.viewH,
         /* ⚠️ fitZoom() 现在按「可用矩形」算 k₀（与 camera.fit 同一套）。
            烘焙时相机是这张假对象，所以必须把同一个 availRect 递过去 ——
@@ -5032,32 +5050,39 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* ⚠️ 选中光圈也要在这里关掉：烘焙时 view.focus 不清空，若只关普通光晕，
          选中的那颗点会把光晕**烘进静态图**里，取消选中后还留在画布上。 */
       C.node.glowSelected = false;
-      ctx.setTransform(1, 0, 0, 1, 0, 0);
       var clipped = false;
-      if (band && band.h > 0) {
-        ctx.save();
-        ctx.beginPath();
-        ctx.rect(0, band.y0, W, band.h);
-        ctx.clip();
-        ctx.clearRect(0, band.y0, W, band.h);
-        clipped = true;
-      } else {
-        ctx.clearRect(0, 0, W, H);
+      /* ⛔⛔ 这一段**必须** try/finally：这里换掉了 7 个模块级量（ctx / W / H / dpr /
+         staticCam / cullOff / C.showLabels / glowLive）。以前没有 finally，
+         只要 paintStatic 抛一次（平板 roundRect、显存不足、渐变失败……），
+         整个渲染器就永久停在「烘焙态」：draw() 于是把内容画进位图画布、且 C.showLabels
+         被永久置 false ⇒ **节点和线照旧，文字整块没有**。这就是「标签时有时无」的一类死法。 */
+      try {
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        if (band && band.h > 0) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(0, band.y0, W, band.h);
+          ctx.clip();
+          ctx.clearRect(0, band.y0, W, band.h);
+          clipped = true;
+        } else {
+          ctx.clearRect(0, 0, W, H);
+        }
+        /* ⛔ 单位变换：staticCam 已把世界坐标换算成烘焙画布像素（k=scale、tx=-minX*scale），
+           再叠一次 setTransform(scale,…) 会把内容又乘一个 k_bake —— 实测烘出来的线只占画布 48%×48%。 */
+        geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };
+        computeLod();
+        nameBoxes.length = 0;
+        reservedLabels.length = 0;
+        paintStatic(geomForBake());
+      } finally {
+        if (clipped) ctx.restore();       // ⛔ 必须在切回实时 ctx 之前 restore
+        ctx = save.ctx; W = save.W; H = save.H; dpr = save.dpr;
+        staticCam = save.cam; cullOff = save.cull;
+        view.hover = save.hover; C.showLabels = save.labels; C.node.glow = save.glow;
+        C.node.glowSelected = save.glowSel; glowLive = save.glowLiveV;
+        geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };   // 实时层下一帧重建
       }
-      /* ⛔ 单位变换：staticCam 已把世界坐标换算成烘焙画布像素（k=scale、tx=-minX*scale），
-         再叠一次 setTransform(scale,…) 会把内容又乘一个 k_bake —— 实测烘出来的线只占画布 48%×48%。 */
-      geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };
-      computeLod();
-      nameBoxes.length = 0;
-      reservedLabels.length = 0;
-      paintStatic(geomForBake());
-      if (clipped) ctx.restore();       // ⛔ 必须在切回实时 ctx 之前 restore
-
-      ctx = save.ctx; W = save.W; H = save.H; dpr = save.dpr;
-      staticCam = save.cam; cullOff = save.cull;
-      view.hover = save.hover; C.showLabels = save.labels; C.node.glow = save.glow;
-      C.node.glowSelected = save.glowSel; glowLive = save.glowLiveV;
-      geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };   // 实时层下一帧重建
     }
 
     /* 光晕实时画（烘焙集里没有它）：与 drawNode 里那段逐字一致，只是独立成一遍 */
@@ -5924,13 +5949,23 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           · 回放只贴「屏幕上要的那一块」（源矩形自动裁到图层内），成本 ≈ 一张视口大小的位图。
        ⛔ 不要记 ctx 的变换矩阵：回放时外层已按同一相机画过背景，差的只是一个平移量。
        ⛔ 不要在这里改四个绘制点里的任何一行（换 ctx + 贴图层就够了）。 */
-    var labelCache = null;      // { k, tx, ty, w, h, sig, count }
+    var labelCache = null;      // { k, tx, ty, w, h, sig, count, stamp }
     var labelBase = 0;          // 本帧起点（prof.labelCount）→ 节点名的「每帧预算」靠它
     /* 上一帧画完时的机位 —— 判「相机停住」用（⛔ 不能用 labelCache.tx，理由见上） */
     var labelPrevCam = null;
     /* 离屏标签层。margin 越大幅度上能走更远才重算一次，代价是画布内存 ∝ (W+2m)(H+2m)。 */
     var LAB_MARGIN = 200;
     var labLayer = null;        // { cv, g, w, h, dpr, margin, ox }
+    /* ⭐ 回放前的「验戳」：重算时在层的余量里打一个 1×1 的戳，每次回放前读它。
+       为什么必须验：离屏 canvas 不在 DOM 里，浏览器内存吃紧时可以把它回收成一张空白
+         画布，而缓存里的 count 还说自己有内容 ⇒ 旧实现会一直贴一张空图，
+         屏幕上一个字都没有（节点 / 连线在位图图层上，照样好好的）。
+       成本实测（3200×2080 的层、软件光栅）：贴一次 1.74 ms，读 1 个像素 **0.003 ms**
+         ⇒ 每帧都验得起（贴图那步的 1/500），不另设「多久验一次」的魔法数。
+       ⛔ 戳的落点必须在**永远贴不出去**的那圈余量里：源矩形左边最小 = ox − 0.9·margin·d
+          = 0.1·margin·d（dpr2 ⇒ 40 设备像素）⇒ 戳在 (1,1) 永远在源矩形之外。 */
+    var LAB_STAMP = [1, 1];
+    var labBad = false;         // 重算抛过异常 / 层没内容 ⇒ 这一帧直接实时画（下帧再试）
 
     /** 离屏标签层（按 W/H/dpr 复用；尺寸或 dpr 变了就重建） */
     function ensureLabelLayer() {
@@ -5948,12 +5983,58 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         (dx,dy) = 当前机位 − 重算那一帧的机位；只贴屏幕上真正要的那一块。 */
     function blitLabels(dx, dy) {
       var L = labLayer;
-      if (!L) return;
+      if (!L || !L.g) return;
       var d = L.dpr;
       /* 源矩形：当前屏 (0,0) 在图层里是 (L.ox − dx*d, L.ox − dy*d)。
          ⚠️ |dx| 超过余量时源矩形会越界 —— 自动被裁掉（drawImage 会把目标按比例裁），
             所以 ② 的判据必须保证永远走不到那里（见 far）。 */
       ctx.drawImage(L.cv, L.ox - dx * d, L.ox - dy * d, W * d, H * d, 0, 0, W, H);
+    }
+
+    /** 出字的那一组（顺序 = 避让优先级：板块 → 领域 → 星团 → 节点）。
+        ⚠️ 四个函数一行都没改：圆角框、字距、alpha、避让全靠「换 ctx」复用。 */
+    function drawNamesGroup() {
+      if (lodA.sectorName > 0.02) drawSectorNames();
+      if (lodA.galaxyName > 0.02) drawGalaxyNames();
+      if (lodA.clusterName > 0.02) drawClusterNames();
+      if (C.showLabels) drawLabels();
+    }
+
+    /** 退路：名字**直接画在主画布**上（不走离屏层）。
+        层拿不到 context / 重算抛异常时用它 —— 慢一点，但这一帧至少还有字。
+        ⛔ 吞掉异常：名字没画出来也不能把 draw() 后面的 hover 叠加一起带走。 */
+    function drawNamesDirect() {
+      try { drawNamesGroup(); } catch (e) { labBad = true; }
+    }
+
+    /** 重算时在层的余量里打一个 1×1 的粉色戳；回放前读它就知道这层还有没有内容。
+        ⛔ 落点必须在「永远贴不出去」的那一圈余量里：源矩形左边最小 = ox − 0.9·margin·d
+           = 0.1·margin·d（dpr2 ⇒ 40 设备像素）⇒ 戳在 (1,1) 永远在源矩形之外。 */
+    function stampLabelLayer() {
+      var L = labLayer;
+      if (!L || !L.g) return false;
+      var g = L.g;
+      try {
+        g.save();
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        g.globalAlpha = 1;
+        g.fillStyle = '#ff00ff';
+        g.fillRect(LAB_STAMP[0], LAB_STAMP[1], 1, 1);
+        g.restore();
+        return true;
+      } catch (e) { return false; }
+    }
+
+    /** 回放前的验戳。
+        true = 层里还有内容，可以放心回放；false = 层已经空了，调用方去重算。 */
+    function labelLayerAlive() {
+      if (labBad || !labLayer || !labLayer.g || !labelCache || !labelCache.stamp) return false;
+      try {
+        var d = labLayer.g.getImageData(LAB_STAMP[0], LAB_STAMP[1], 1, 1).data;
+        return d[3] > 0;
+      } catch (e) {
+        return true;      // 读不出来（少见）⇒ 别误判成空，照旧回放
+      }
     }
 
     /** 「名字集合」的指纹：任一项变了 ⇒ 离屏层里那块内容已经不代表现在，必须重算。
@@ -5985,7 +6066,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var prevCam = labelPrevCam;
       labelPrevCam = { k: c.k, tx: c.tx, ty: c.ty };
       var sig = labelSig();
-      if (labelCache && labLayer && labLayer.dpr === dpr && labelCache.k === c.k &&
+      if (labelCache && labLayer && labLayer.g && labLayer.dpr === dpr && labelCache.k === c.k &&
           labelCache.w === W && labelCache.h === H && labelCache.sig === sig) {
         var dx = c.tx - labelCache.tx, dy = c.ty - labelCache.ty;
         if (dx || dy) {                                   // 纯平移才回放；停住（dx=dy=0）⇒ 往下重算
@@ -5996,12 +6077,25 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           var far = Math.abs(dx) > limX || Math.abs(dy) > limY;
           /* ③ 本帧机位 == 上一帧机位 ⇒ 相机停了，这帧就该重算（松手 / 滚轮去抖 / 动画收尾） */
           var stopped = !!(prevCam && prevCam.k === c.k && prevCam.tx === c.tx && prevCam.ty === c.ty);
-          if (!far && !stopped) { replayLabels(dx, dy); return; }
+          /* ⑤ **层还在不在**：离屏 canvas 不在 DOM 里，浏览器内存吃紧时可以把它回收成
+             一张空白画布，而缓存里的 count 还说自己有内容 ⇒ 以前会一直贴一张空图，
+             屏幕上一个字都没有。这里按实物（1×1 的戳）验，验不过就落到重算。 */
+          if (!far && !stopped && labelLayerAlive()) { replayLabels(dx, dy); return; }
         }
       }
-      /* 重算：清空离屏层，把四个出字函数的落点整体挪到层的坐标系里 */
+      /* 重算。
+         ⛔⛔ **先让缓存失效，再动离屏层**：下面先 clearRect 再画，万一画到一半抛异常
+             （平板 roundRect、内存不足……），缓存绝不能还说自己「有效、可以回放」——
+             否则下一帧会把一张画了一半/全空的层贴出去，而且之后每一帧都照贴，
+             屏幕上就是「节点和线都在、文字整块消失」。 */
+      labelCache = null;
       var L = ensureLabelLayer();
       var g = L.g;
+      if (!g) {                              // 拿不到 2d context（内存不足）：退化成每帧直接画
+        labBad = true;
+        drawNamesDirect();
+        return;
+      }
       g.setTransform(1, 0, 0, 1, 0, 0);
       g.clearRect(0, 0, L.cv.width, L.cv.height);
       g.setTransform(dpr, 0, 0, dpr, L.ox, L.ox);
@@ -6010,17 +6104,32 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* ⚠️ 只在这一段里把 ctx 换成离屏层的 context：四个绘制函数（含 roundPath 画的
           圆角底框、手动字距、alpha、避让）**一行都不改**。drawStatic 也是这么换 ctx 的。 */
       var saveCtx = ctx;
+      var ok = true;
       ctx = g;
       try {
-        if (lodA.sectorName > 0.02) drawSectorNames();
-        if (lodA.galaxyName > 0.02) drawGalaxyNames();
-        if (lodA.clusterName > 0.02) drawClusterNames();
-        if (C.showLabels) drawLabels();
+        drawNamesGroup();
+      } catch (err) {
+        ok = false;
       } finally {
         ctx = saveCtx;
       }
+      if (!ok) {
+        /* 这一趟废了：层是空的/画了一半，⛔ 绝不贴它。这一帧改成实时画，下一帧自然重试。 */
+        labBad = true;
+        labelBase = prof.labelCount;
+        nameBoxes.length = 0;                // 失败那趟可能已经塞了一半避让框
+        drawNamesDirect();
+        return;
+      }
+      labBad = false;
+      if (!stampLabelLayer()) {              // 连戳都画不上去 ⇒ 这层不可信，走实时画
+        labBad = true;
+        nameBoxes.length = 0;
+        drawNamesDirect();
+        return;
+      }
       labelCache = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H, sig: sig,
-        count: prof.labelCount - before };
+        count: prof.labelCount - before, stamp: 1 };
       prof.labelRecalc++;
       blitLabels(0, 0);
     }
@@ -6507,7 +6616,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var gen = ++buildGen;
       var t0 = now();
       try {
-        renderer.drawStatic(cv.getContext('2d'), s.scale, r);
+        renderer.drawStatic(cv.getContext('2d'), s.scale, r, null, k);
       } catch (err) {
         stats.reason = '降档：' + ((err && err.message) || err);
         if (ti < tiers.length - 1) { ti++; cv.width = 1; cv.height = 1; return runBake(); }
@@ -6611,7 +6720,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (h <= 0) { finishRound(); return; }
         var t0 = now();
         try {
-          renderer.drawStatic(cv.getContext('2d'), round.scale, round.rect, { y0: y0, h: h });
+          /* ⚠️ 第 5 个参数 = **真实相机 k**：烘焙画布的 scale 是 k×dpr，LOD 必须按屏幕
+             CSS 尺度判（否则 dpr≥2 时烘焙层整整多走一档，全景把节点和细线全烘进去）。 */
+          renderer.drawStatic(cv.getContext('2d'), round.scale, round.rect, { y0: y0, h: h }, round.k);
         } catch (err) {
           stats.reason = '降档：' + ((err && err.message) || err);
           round = null; snap.ready = false; buildGen++;
