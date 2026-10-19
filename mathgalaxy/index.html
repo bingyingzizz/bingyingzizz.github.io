@@ -1252,53 +1252,33 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             所以在同样的缩放下，你那一屏里的邻居变少了 —— 这正是要的效果。
          代价：世界盒 6.77k×5.21k → 7.44k×5.68k，全图适配的 k 0.123 → 0.113
          （lod 阈值全是 rel/px 写法，跟着 k₀ 自动走，不用重标）。 */
-      regionSpread: 1.80,
+      regionSpread: 1.55,
       /* ⭐ 2026-10-17 四层结构：**跨大板块的边只按这个折扣牵引**。
          全库 2101 条边里有 302 条跨板块，它们的平均长 2008、同板块的只有 759 ——
          不折扣的话这 302 条边会合力把四个板块往中间拽（实测板块质心几乎重合）。
          折扣只改「弹簧的拉力」，不改线的画法：跨板块的关系照旧画出来。 */
       crossSectorPull: 0.35,
       /* ⭐ 2026-10-18：**大板块之间的最小净空**（世界单位，见 layout.js 的
-         separateSectors）。0 = 关掉（回到「圆盘贴着长」的老样子）。
+         packSectors）。0 = 关掉（回到「圆盘贴着长」的老样子）。
          这个数只推开**不同板块**的领域圆盘，板块内部一点不动。
-         量级参考：领域容量盘的半径 140~1226，全景适配 k≈0.10 ⇒ 480 世界单位
-         约 48px，正好是「一眼看出这里是四块」的距离。 */
-      sectorGap: 480,
+         ⚠️ 2026-10-19：480 → **160**。用户看完两版说「星系之间的边界太大」——
+         480 是为了「一眼看出这里是四块」调的，但那同时把颜色过渡也切断了。
+         160 让跨板块的云重新接触，混色带才长得出来。 */
+      sectorGap: 0,
       /* 同一板块**内部**的领域之间最多留多少净空（世界单位）。超过就互相拉近 ——
          「数理逻辑」只有 4 个点，不拉近就会孤零零飘在板块外面（全景里像一块碎片）。
          ⚠️ **0 是对的**：再大就会逼着同一板块的领域彼此重叠（实测 160 时
             代数板块的领域云互相压了 805，连同它们的星团也叠在一起）。
          0 = 刚好相切 —— 既是一块板，又没有真的叠在一起。-1 或更小 = 不拉近。 */
       sectorInnerGap: 0,
+      /* ⭐ 2026-10-19：**团与团之间的硬净空**（世界单位）。板块缝收到 0 之后，
+         「不粘连」不能再靠留白保证 —— 由布局末尾的团级圆盘碰撞来保证。
+         ⛔ 它只推团心（半径 = 团自己的 _cap），不动板块、不动领域。 */
+      clusterGap: 24,
+      /* ⭐ 2026-10-19：领域中心改由**跨领域边权**求解（见 layout.js 的 solveRegionCenters）。
+         打开后 packSectors 整段跳过 —— 两条规则会打架。regions.js 的 center 降级成初始锚。 */
+      regionSolve: true,
 
-      /* ⭐⭐ 2026-10-18 布局重构（Stage 0）：团心改由**跨团关系强度**决定
-         ------------------------------------------------------------------
-         旧的三层装箱（节点→团盘→领域盘→板块推开）里，两个团离多远只取决于
-         「谁装得进谁的容器」，跟它们有没有关系无关 —— 这是全景长线、聚合线
-         像灰网的**总根**。relaxed 模式把 60 个团心的目标距离设成
-             L_ij = (r_i + r_j)·α + β·D̂_ij·R̄
-         用 stress majorization 拟合（D̂ = 跨团关系图上归一化的最短路）。
-
-         ⛔ mode 默认仍是 'packed'（今天的样子）。验收通过前不许改。
-            URL 开关（Stage 0 对照用）：`?layout=relaxed` / `?weight=raw`。 */
-      mode: 'packed',
-      weightMode: 'raw',          // raw 在扫描里全面优于 normalized（见 HANDOVER §20）
-      alpha: 0.55,                // 半径下限项：关系再强也不许塌进彼此
-      beta: 26,                   // 关系距离权重（全景仍是四团糊 ⇒ 调大它，别去画线）
-      overlapFactor: 0.85,        // 分离步：允许的最深重叠（0.85 = 最多交叠 15%）
-      seed: 'packed',             // 初始位置 = 装箱结果（可复现、视觉连续）
-      outer: 40,                  // 主循环轮数
-      inner: 5,                   // 每轮「应力步 / 分离步」各做几次
-      /* 跨团关系强度的权重表（按边的语义分档；analogy 不参与布局） */
-      relaxWeight: { implication: 1.0, equivalence: 0.8, definition: 0.15, analogy: 0 },
-      /* 应力权重的「底」：0 = 原方案（只有真有关系的那 269 对受力）。
-         > 0 ⇒ 没关系的团也被要求「离远点」（它们的目标距离本来就是最大的）。
-         ⚠️ 这是原方案最缺的一块：不加底时 1501 对完全不受力，ρ 上不去。 */
-      weightFloor: 0.15,
-      /* §3.7 的尺度归一：把团心外接盒的面积拉回装箱时的面积。
-         ⚠️ 实测松弛后的解比种子紧凑 2~3 倍，拉回去会把紧凑的团心摊成一把散沙
-            （cluster 半径不动），所以 Stage 0 要两版都出、由作者选。 */
-      scaleArea: true,
       temp0: 62,                  // 初始温度（同时是每步位移上限）
       temp1: 0.5,                 // 终止温度
       maxStep: 26
@@ -1322,7 +1302,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     /* 节点 */
     node: {
-      baseRadius: 8.5,
+      baseRadius: 6,             // ⭐ Stage 1b：8.5 → 6（fit 档屏幕直径 ≤4px，看起来是星不是泡）
       minRadius: 3.0,
       maxRadius: 26,
       radiusPower: 0.62,          // 半径随缩放增长指数（<1 → 缩小时仍看得见）
@@ -1406,12 +1386,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       smooth: 3,                  // 半径序列平滑几遍（消掉尖角）
       fillAlpha: 0.30,            // 中心浓度（渐变，平均值比它低）
       gradSpan: 0.90,             // 渐变半径 / 最远采样半径 —— <1 保证各方向都化到 0
-      strokeAlpha: 0.12,          // 淡轮廓线（0 = 不描边；0.05~0.10 之间比较合适）
+      strokeAlpha: 0.12,       // 淡轮廓线（0 = 不描边）—— 2026-10-19 回到旧值：用户说「星团边界要看得见」
       width: 1.6
     },
 
     /* 电子云背景 */
     background: {
+      /* ⛔ colorFieldK 已删除（2026-10-19）：色场改回加法叠加，不再做 1−exp(−K·Σw) 的饱和。 */
       /* ⚠️ 世界（约 10661×9176）× 这个比例 = 云雾纹理的像素数。
        原来写 0.42 → 4478×3854 ≈ **17.3 M 像素**（≈69MB）：既浪费内存，又可能超过 GPU 的
        MAX_TEXTURE_SIZE —— 有些环境只给 4096，一旦超了 Chrome 会走软件路径，表现正是
@@ -1426,7 +1407,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          云雾本来就是糊的，形状与浓淡无差别；成本 0.2ms 且只在开页 / 改显隐时发生。 */
       texBlur: 1.6,
       blobsPerRegion: 12,         // 每个板块的云朵数
-      blobAlpha: 0.030,           // 单朵云的基础不透明度（多朵叠加后会更深）
+      blobAlpha: 0.075,
+      splatRadius: 130,           // 单节点撒点的世界半径 —— 40 时相邻节点（间距 64）的雾团不重叠，才是一片一片的           // 单朵云的基础不透明度（多朵叠加后会更深）—— 2026-10-19 回到旧值
       centerAlpha: 0.025,         // 板块中心大团雾
       nodeAlpha: 0.025,           // 每个节点周围的小团雾
       spread: 0.52,               // 云朵分布半径 / 板块半径
@@ -3377,405 +3359,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     return far;
   }
 
-  /* ==================================================================== */
-  /* relaxed 布局：星团位置由「跨星团关系强度」决定（2026-10-18 · Stage 0）
-     --------------------------------------------------------------------
-     诊断：旧布局是「节点 → 团盘 → 领域盘 → 板块推开」的三层**装箱**，于是
-     两个团离多远只取决于「谁装得进谁的容器」，跟它们有没有关系无关。
-     这就是全景长线、聚合线像灰网的总根。
-
-     新做法（唯一判据）：60 个团心的目标距离
-         L_ij = (r_i + r_j)·α + β·D̂_ij·R̄
-     用 stress majorization 拟合 L，D̂ 是**跨团关系图**上的归一化最短路
-     （代价 = 1/关系强度 ⇒ 关系越强、图上越近）。只解 60×60，毫秒级。
-
-     ⛔ 这条路径里不许出现任何「板块」相关的力 / 净空 / 锚点 / 边界。
-     ⛔ 不许用随机初始位置：种子就是装箱结果（可复现、视觉连续）。 */
   function layoutNow() {
     return (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
   }
-
-  /** ?layout=relaxed / #layout=relaxed —— 用来在 Stage 0 里对照，不动默认值 */
-  function urlFlag(name, allowed) {
-    var loc = global.location || {};
-    var s = String(loc.search || '') + '&' + String(loc.hash || '');
-    var m = new RegExp('(?:^|[?&#])' + name + '=([a-z]+)').exec(s);
-    if (!m) return null;
-    return allowed.indexOf(m[1]) >= 0 ? m[1] : null;
-  }
-
-  /** 跨星团关系强度矩阵。clusters 会按 id 排序（固定顺序 ⇒ 结果可复现） */
-  function clusterAdjacency(graph, clusters, weightMode) {
-    var cs = clusters.slice().sort(function (a, b) { return a.id < b.id ? -1 : (a.id > b.id ? 1 : 0); });
-    var n = cs.length, idx = Object.create(null);
-    cs.forEach(function (c, i) { idx[c.id] = i; });
-    var KW = MG.config.layout.relaxWeight || {};
-    var raw = new Float64Array(n * n);
-    graph.edges.forEach(function (e) {
-      var w = KW[e.kind];
-      if (!w) return;                            // analogy 不参与布局
-      var ids = MG.graphUtil.edgeNodes(e);
-      var seen = [];
-      for (var i = 0; i < ids.length; i++) {
-        var nd = graph.byId[ids[i]];
-        if (!nd || !nd.cluster || idx[nd.cluster] == null) continue;
-        if (seen.indexOf(nd.cluster) < 0) seen.push(nd.cluster);
-      }
-      for (var a = 0; a < seen.length; a++) {
-        for (var b = a + 1; b < seen.length; b++) {
-          var ia = idx[seen[a]], ib = idx[seen[b]];
-          if (ia === ib) continue;
-          raw[ia * n + ib] += w;
-          raw[ib * n + ia] += w;
-        }
-      }
-    });
-    var W = new Float64Array(n * n);
-    var norm = weightMode !== 'raw';
-    for (var i2 = 0; i2 < n; i2++) {
-      for (var j = 0; j < n; j++) {
-        if (i2 === j) continue;
-        var v = raw[i2 * n + j];
-        if (!v) continue;
-        /* 归一化：除以 √(n_i·n_j)，防大团靠节点数压过一切 */
-        if (norm) v = v / Math.sqrt(Math.max(1, cs[i2].nodes.length) * Math.max(1, cs[j].nodes.length));
-        W[i2 * n + j] = v;
-      }
-    }
-    return { cs: cs, n: n, idx: idx, raw: raw, W: W, weightMode: norm ? 'normalized' : 'raw' };
-  }
-
-  /** 关系图上的最短路（代价 = 1/(w+ε)）；不连通对取 D_max */
-  function clusterGraphDist(adj) {
-    var n = adj.n, W = adj.W;
-    var D = new Float64Array(n * n);
-    var EPS = 1e-9;
-    for (var s = 0; s < n; s++) {
-      var dist = new Float64Array(n);
-      dist.fill(Infinity);
-      var done = new Uint8Array(n);
-      dist[s] = 0;
-      for (var it = 0; it < n; it++) {
-        var u = -1, best = Infinity;
-        for (var v = 0; v < n; v++) if (!done[v] && dist[v] < best) { best = dist[v]; u = v; }
-        if (u < 0) break;
-        done[u] = 1;
-        for (var v2 = 0; v2 < n; v2++) {
-          if (done[v2] || v2 === u) continue;
-          var wgt = W[u * n + v2];
-          if (!(wgt > 0)) continue;
-          var c = 1 / (wgt + EPS);
-          if (dist[u] + c < dist[v2]) dist[v2] = dist[u] + c;
-        }
-      }
-      for (var v3 = 0; v3 < n; v3++) D[s * n + v3] = dist[v3];
-    }
-    var dmax = 0;
-    for (var i = 0; i < n * n; i++) if (isFinite(D[i]) && D[i] > dmax) dmax = D[i];
-    for (var i2 = 0; i2 < n * n; i2++) if (!isFinite(D[i2])) D[i2] = dmax;
-    return { D: D, dmax: dmax };
-  }
-
-  /** 把团心从「装箱种子」松弛到「关系最优」；返回诊断数 */
-  function relaxedCenters(graph, liveClusters, cfg, weightMode) {
-    var t0 = layoutNow();
-    var adj = clusterAdjacency(graph, liveClusters, weightMode);
-    var cs = adj.cs, n = adj.n, W = adj.W;
-    if (n < 3) return null;
-    var gd = clusterGraphDist(adj);
-    var D = gd.D;
-    var r = new Float64Array(n), sumR = 0;
-    for (var i = 0; i < n; i++) { r[i] = Math.max(40, cs[i]._cap || 120); sumR += r[i]; }
-    var Rbar = sumR / n;
-    /* D 归一化到 [0,1]（用 i≠j 的最小 / 最大） */
-    var dmin = Infinity;
-    for (i = 0; i < n; i++) for (var j = 0; j < n; j++) if (i !== j && D[i * n + j] < dmin) dmin = D[i * n + j];
-    if (!isFinite(dmin)) dmin = 0;
-    var span = Math.max(1e-9, gd.dmax - dmin);
-    var L = new Float64Array(n * n);
-    for (i = 0; i < n; i++) {
-      for (j = i + 1; j < n; j++) {
-        var dh = Math.min(1, Math.max(0, (D[i * n + j] - dmin) / span));
-        var v = (r[i] + r[j]) * cfg.alpha + cfg.beta * dh * Rbar;
-        L[i * n + j] = v; L[j * n + i] = v;
-      }
-    }
-    var px = new Float64Array(n), py = new Float64Array(n);
-    for (i = 0; i < n; i++) { px[i] = cs[i].center.x; py[i] = cs[i].center.y; }
-    /* 应力权重 = 关系强度 + 一个很小的底（`weightFloor`）。
-       ⚠️ 底为 0 时（原方案）**只有 269 对有关系**的团之间有约束，剩下 1501 对
-         完全不受力 —— 它们只是被相关对「顺带」摆在那儿，于是
-         ρ(全体, W) 卡在 −0.35 左右上不去。给一个很小的底，等于要求
-         「没关系的团也别挨在一起」（它们的目标距离 L 本来就是最大值）。 */
-    var stressW = W;
-    if (cfg.weightFloor > 0) {
-      stressW = new Float64Array(n * n);
-      for (i = 0; i < n * n; i++) stressW[i] = W[i] + (i % n === Math.floor(i / n) ? 0 : cfg.weightFloor);
-    }
-    function recenter() {
-      var mx = 0, my = 0;
-      for (var q = 0; q < n; q++) { mx += px[q]; my += py[q]; }
-      mx /= n; my /= n;
-      for (var q2 = 0; q2 < n; q2++) { px[q2] -= mx; py[q2] -= my; }
-    }
-    /* 应力主步（SMACOF / stress majorization）：
-       p_i = Σ_j w_ij ( p_j + L_ij·u_ij ) / Σ_j w_ij，u_ij = (p_i−p_j)/|p_i−p_j|
-       ⚠️ 右端读**旧**坐标、左端写**新**坐标（Jacobi），这才是收敛的那一版。 */
-    function stressStep() {
-      var nx = new Float64Array(n), ny = new Float64Array(n);
-      for (var a = 0; a < n; a++) {
-        var sx = 0, sy = 0, sw = 0;
-        for (var b = 0; b < n; b++) {
-          if (a === b) continue;
-          var w = stressW[a * n + b];
-          if (!(w > 0)) continue;
-          var dx = px[a] - px[b], dy = py[a] - py[b];
-          var d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 1e-9) {
-            /* 退化方向：固定角度（无随机数）⇒ 同一份内容每次结果一致 */
-            var ang = (((a * 7 + b * 13) % 8) * Math.PI) / 4;
-            dx = Math.cos(ang); dy = Math.sin(ang); d = 1;
-          }
-          var lab = L[a * n + b];
-          sx += w * (px[b] + lab * dx / d);
-          sy += w * (py[b] + lab * dy / d);
-          sw += w;
-        }
-        if (sw > 0) { nx[a] = sx / sw; ny[a] = sy / sw; }
-        else { nx[a] = px[a]; ny[a] = py[a]; }   // 一个强边都没有的团：待在种子里
-      }
-      px = nx; py = ny;
-    }
-    /* 分离步：允许**有限**重叠（0.85），但不许糊死。板块不参与。 */
-    function sepStep(factor) {
-      for (var a = 0; a < n; a++) {
-        for (var b = a + 1; b < n; b++) {
-          var target = factor * (r[a] + r[b]);
-          var dx = px[b] - px[a], dy = py[b] - py[a];
-          var d = Math.sqrt(dx * dx + dy * dy);
-          if (d >= target) continue;
-          if (d < 1e-6) {
-            var ang = (((a * 7 + b * 13) % 8) * Math.PI) / 4;
-            dx = Math.cos(ang); dy = Math.sin(ang); d = 1e-6;
-          }
-          var push = (target - d) / 2;
-          var ux = dx / d, uy = dy / d;
-          px[a] -= ux * push; py[a] -= uy * push;
-          px[b] += ux * push; py[b] += uy * push;
-        }
-      }
-    }
-    function boxOfCenters() {
-      var mnx = Infinity, mny = Infinity, mxx = -Infinity, mxy = -Infinity;
-      for (var q = 0; q < n; q++) {
-        if (px[q] < mnx) mnx = px[q]; if (px[q] > mxx) mxx = px[q];
-        if (py[q] < mny) mny = py[q]; if (py[q] > mxy) mxy = py[q];
-      }
-      return { w: Math.max(1, mxx - mnx), h: Math.max(1, mxy - mny), minX: mnx, minY: mny };
-    }
-
-    recenter();
-    var seedBox = boxOfCenters();
-    var outer = cfg.outer == null ? 40 : cfg.outer;
-    var inner = cfg.inner == null ? 5 : cfg.inner;
-    for (var o = 0; o < outer; o++) {
-      for (var s = 0; s < inner; s++) stressStep();
-      for (var s2 = 0; s2 < inner; s2++) sepStep(cfg.overlapFactor);
-      recenter();
-    }
-    /* 尺度归一：让**团心外接盒的面积**回到种子（= 改前）的面积，半径不动
-       ⇒ 全图适配的 k 不漂，节点大小 / 标签密度不连带变化。
-       ⚠️ 均匀缩放不改变距离的次序 ⇒ 不影响 ρ。 */
-    var boxAfter = boxOfCenters();
-    var a0 = Math.max(1, seedBox.w * seedBox.h);
-    var a1 = Math.max(1, boxAfter.w * boxAfter.h);
-    var scale = cfg.scaleArea === false ? 1 : Math.sqrt(a0 / a1);
-    if (!isFinite(scale) || scale <= 0) scale = 1;
-    for (i = 0; i < n; i++) { px[i] *= scale; py[i] *= scale; }
-    for (var s3 = 0; s3 < 20; s3++) sepStep(cfg.overlapFactor);   // 缩放后补修重叠
-    recenter();
-
-    for (i = 0; i < n; i++) cs[i].center = { x: px[i], y: py[i] };
-
-    /* 领域 = **成员星团聚出来的形状**的质心（权重 = 节点数），不再是圆盘圆心。
-       云 / 名字 / 点领域聚焦全都读 r.center ⇒ 跟着走。 */
-    graph.regions.forEach(function (reg) {
-      var mine = liveClusters.filter(function (c) { return c.parent === reg.id; });
-      if (!mine.length) return;
-      var wsum = 0, cx = 0, cy = 0, far = 0;
-      mine.forEach(function (c) {
-        var w = Math.max(1, c.nodes.length);
-        wsum += w; cx += c.center.x * w; cy += c.center.y * w;
-      });
-      cx /= wsum; cy /= wsum;
-      mine.forEach(function (c) {
-        far = Math.max(far, U.dist(c.center.x, c.center.y, cx, cy) + (c._cap || 0));
-      });
-      reg.center = { x: cx, y: cy };
-      reg._cap = Math.max(reg._cap, far + 60);
-    });
-
-    return {
-      mode: 'relaxed', weightMode: adj.weightMode, clusters: n,
-      alpha: cfg.alpha, beta: cfg.beta, overlapFactor: cfg.overlapFactor,
-      outer: outer, inner: inner, scale: scale,
-      seedBox: { w: seedBox.w, h: seedBox.h },
-      boxAfterScale: { w: seedBox.w, h: seedBox.h },
-      ms: layoutNow() - t0
-    };
-  }
-
-  /* ---------------------------------------------------------- 回执口径 */
-  /* ⭐ ρ / 重叠 / 跨领域表**只在这里实现一处**，探针脚本不许另写一套口径。 */
-  function ranksOf(arr) {
-    var idx = [], i;
-    for (i = 0; i < arr.length; i++) idx.push(i);
-    idx.sort(function (a, b) { return arr[a] - arr[b]; });
-    var rk = new Float64Array(arr.length);
-    i = 0;
-    while (i < idx.length) {
-      var j = i;
-      while (j + 1 < idx.length && arr[idx[j + 1]] === arr[idx[i]]) j++;
-      var avg = (i + j) / 2 + 1;
-      for (var q = i; q <= j; q++) rk[idx[q]] = avg;
-      i = j + 1;
-    }
-    return rk;
-  }
-  function pearson(a, b) {
-    var n = a.length, ma = 0, mb = 0, i;
-    for (i = 0; i < n; i++) { ma += a[i]; mb += b[i]; }
-    ma /= n; mb /= n;
-    var sa = 0, sb = 0, sab = 0;
-    for (i = 0; i < n; i++) {
-      var da = a[i] - ma, db = b[i] - mb;
-      sa += da * da; sb += db * db; sab += da * db;
-    }
-    var den = Math.sqrt(sa * sb);
-    return den ? sab / den : 0;
-  }
-  function spearman(a, b) { return pearson(ranksOf(a), ranksOf(b)); }
-
-  MG.layoutMetrics = function (graph, opts) {
-    opts = opts || {};
-    var all = graph.clusters.filter(function (c) { return c.stat; });
-    var adj = clusterAdjacency(graph, all, opts.weightMode || MG.config.layout.weightMode);
-    var cs = adj.cs, n = adj.n, W = adj.W, raw = adj.raw;
-    var gd = clusterGraphDist(adj);
-    var D = gd.D;
-    var xs = [], wr = [], wn = [], dd = [], lx = [], lw = [], ld = [], ux2 = [];
-    for (var i = 0; i < n; i++) {
-      for (var j = i + 1; j < n; j++) {
-        var A = cs[i].stat, B = cs[j].stat;
-        if (!A || !B) continue;
-        var dw = U.dist(A.cx, A.cy, B.cx, B.cy);
-        xs.push(dw);
-        wr.push(raw[i * n + j]);
-        wn.push(W[i * n + j]);
-        dd.push(D[i * n + j]);
-        /* 只看「真有关系」的那 269 对：它们之间的次序对不对，是次要口径 */
-        if (raw[i * n + j] > 0) { lx.push(dw); lw.push(raw[i * n + j]); ld.push(D[i * n + j]); }
-        else { ux2.push(dw); }
-      }
-    }
-    /* 距离分布：ρ 卡住时靠它判断「是没关系的那批没被推远」还是「有关系的没排开」 */
-    function med(arr) {
-      if (!arr.length) return 0;
-      var t = arr.slice().sort(function (a, b) { return a - b; });
-      return t[Math.floor(t.length / 2)];
-    }
-    var linkedMed = med(lx), unlinkedMed = med(ux2);
-    var below = 0;
-    for (var u = 0; u < ux2.length; u++) if (ux2[u] < linkedMed) below++;
-    /* 团盘重叠普查（用画出来的 stat.radius，不是容量估的 _cap） */
-    var sameSector = 0, crossSector = 0, deepest = 0, deepestPair = '', pairs = 0;
-    for (i = 0; i < n; i++) {
-      for (j = i + 1; j < n; j++) {
-        var a = cs[i].stat, b = cs[j].stat;
-        var need = a.radius + b.radius;
-        var d2 = U.dist(a.cx, a.cy, b.cx, b.cy);
-        if (d2 >= need) continue;
-        pairs++;
-        var ratio = (need - d2) / Math.min(a.radius, b.radius);
-        var sec = function (c) {
-          var r = c.parent && graph.regionById[c.parent];
-          return (r && r.sector) || '';
-        };
-        if (sec(cs[i]) === sec(cs[j])) sameSector++; else crossSector++;
-        if (ratio > deepest) { deepest = ratio; deepestPair = cs[i].id + '↔' + cs[j].id; }
-      }
-    }
-    /* 9×9 跨领域：平均团心距离 vs 强边（推出 + 等价）条数 */
-    var regs = graph.regions.filter(function (r) { return r.stat; });
-    var table = [];
-    for (i = 0; i < regs.length; i++) {
-      var row = [];
-      for (j = 0; j < regs.length; j++) {
-        var dists = [], cnt = 0;
-        for (var a2 = 0; a2 < n; a2++) {
-          for (var b2 = 0; b2 < n; b2++) {
-            if (cs[a2].parent !== regs[i].id || cs[b2].parent !== regs[j].id) continue;
-            if (a2 === b2) continue;              // ⛔ 同一个团的自距离不能算进对角
-            dists.push(U.dist(cs[a2].stat.cx, cs[a2].stat.cy, cs[b2].stat.cx, cs[b2].stat.cy));
-          }
-        }
-        /* 强边条数：数**节点对**（推出 / 等价），团内不计。
-           ⚠️ 只按节点 id 的先后计入一个方向会让表不对称（看着像有方向性，其实没有）；
-              所以这里同时加到 (i,j) 和 (j,i) 上 —— 矩阵必须对称。 */
-        var addPairs = function (ri, rj) {
-          graph.edges.forEach(function (e) {
-            if (e.kind !== 'implication' && e.kind !== 'equivalence') return;
-            var ids = MG.graphUtil.edgeNodes(e);
-            for (var x = 0; x < ids.length; x++) {
-              for (var y = x + 1; y < ids.length; y++) {
-                var nx = graph.byId[ids[x]], ny = graph.byId[ids[y]];
-                if (!nx || !ny || !nx.clusterObj || !ny.clusterObj) continue;
-                if (nx.cluster === ny.cluster) continue;
-                if (nx.clusterObj.parent !== ri || ny.clusterObj.parent !== rj) continue;
-                cnt++;
-              }
-            }
-          });
-        };
-        addPairs(regs[i].id, regs[j].id);
-        if (i !== j) addPairs(regs[j].id, regs[i].id);
-        var mean = 0;
-        for (var q = 0; q < dists.length; q++) mean += dists[q];
-        mean = dists.length ? mean / dists.length : 0;
-        row.push({ meanDist: Math.round(mean), strong: cnt });
-      }
-      table.push({ region: regs[i].id, name: regs[i].name, cells: row });
-    }
-    var bb = graph.bbox();
-    return {
-      clusters: n,
-      weightMode: adj.weightMode,
-      pairs: xs.length,
-      rho: {
-        distVsWraw: +spearman(xs, wr).toFixed(4),
-        distVsWnorm: +spearman(xs, wn).toFixed(4),
-        distVsD: +spearman(xs, dd).toFixed(4)
-      },
-      /* 只看有关系的对（次要口径）：强关系应该更近 */
-      rhoLinked: {
-        pairs: lx.length,
-        distVsWraw: +spearman(lx, lw).toFixed(4),
-        distVsD: +spearman(lx, ld).toFixed(4)
-      },
-      distStats: {
-        linkedMed: Math.round(linkedMed),
-        unlinkedMed: Math.round(unlinkedMed),
-        unlinkedPairs: ux2.length,
-        unlinkedBelowLinkedMed: ux2.length ? +(below / ux2.length).toFixed(3) : 0
-      },
-      linked: wr.filter(function (v) { return v > 0; }).length,
-      dmax: +gd.dmax.toFixed(3),
-      overlap: { pairs: pairs, sameSector: sameSector, crossSector: crossSector,
-        deepest: +deepest.toFixed(3), deepestPair: deepestPair },
-      crossRegion: table,
-      bbox: { w: Math.round(bb.maxX - bb.minX), h: Math.round(bb.maxY - bb.minY) }
-    };
-  };
 
   /* ==================================================================== */
   function computeLayout(graph) {
@@ -3784,12 +3370,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     var nodes = graph.nodes;
     if (!nodes.length) return;
     var tAll = layoutNow();
-    /* ⭐ 布局模式（2026-10-18 · Stage 0）：默认仍是 'packed'（今天的样子），
-       `?layout=relaxed` / `#layout=relaxed` 才走关系驱动的松弛版。
-       ⛔ 验收通过前不许改默认值。 */
-    var mode = urlFlag('layout', ['packed', 'relaxed']) || cfg.mode || 'packed';
-    var wmode = urlFlag('weight', ['raw', 'normalized']) || cfg.weightMode || 'normalized';
-    var relaxed = mode === 'relaxed';
 
     /* -------------------------------------------------------- 0. 准备 */
     // 星系中心整体外扩：regions.js 里的坐标是手写的「大致方位」，这里按
@@ -3950,7 +3530,57 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           （上面那行 `max(reg._cap, far+60)` 量的是星团真实外接半径）。
           早一步用「按节点数估的容量盘」会小看大领域，推了等于没推。
        ⚠️ 移动领域 = 连同它的星团一起平移（节点锚点在下一步才由星团中心算）。 */
+    /* ⭐ 2026-10-19：**领域中心由跨领域边权解出来**（regions.js 的 center 降级成初始锚）。
+       9 个点、无随机数：有关系对按权重拉向「两盘相切」，所有对都有排斥防止叠。
+       ⚠️ 必须在 `_cap` 算完之后、星团打包之前调用。 */
+    (function solveRegionCenters() {
+      if (!cfg.regionSolve) return;
+      var regs = graph.regions.filter(function (r) { return r._cap > 0 && r.center; });
+      if (regs.length < 3) return;
+      var wt = Object.create(null);
+      graph.edges.forEach(function (e) {
+        var ids = MG.graphUtil.edgeNodes(e);
+        var pr = ids.map(function (id) { var nd = graph.byId[id]; return nd && nd.regions && nd.regions[0]; });
+        for (var a = 0; a < pr.length; a++) for (var b = a + 1; b < pr.length; b++) {
+          if (!pr[a] || !pr[b] || pr[a] === pr[b]) continue;
+          var kk = pr[a] < pr[b] ? pr[a] + '|' + pr[b] : pr[b] + '|' + pr[a];
+          wt[kk] = (wt[kk] || 0) + 1;
+        }
+      });
+      var wsum0 = 0, wn0 = 0;
+      Object.keys(wt).forEach(function (k2) { wsum0 += wt[k2]; wn0++; });
+      var wMean = wn0 ? wsum0 / wn0 : 1;
+      var c0x = 0, c0y = 0;
+      regs.forEach(function (r) { c0x += r.center.x; c0y += r.center.y; });
+      c0x /= regs.length; c0y /= regs.length;
+      for (var it = 0; it < 500; it++) {
+        var damp = 0.5 * (1 - 0.6 * it / 500);
+        regs.forEach(function (A, i) {
+          var fx = 0, fy = 0;
+          regs.forEach(function (B, j) {
+            if (i === j) return;
+            var dx = B.center.x - A.center.x, dy = B.center.y - A.center.y;
+            var d = Math.sqrt(dx * dx + dy * dy) || 0.01, ux = dx / d, uy = dy / d;
+            var key = A.id < B.id ? A.id + '|' + B.id : B.id + '|' + A.id;
+            var w = wt[key] || 0, touch = A._cap + B._cap + 8;
+            /* ⭐ 2026-10-19：权重不封顶 —— 原来 min(1, w/6) 让「一条 4400 长的强边」只拿到
+               0.5 的权重，等于承认它不重要。现在按「相对平均权重」放大（上限 3×），
+               强关系优先被拉近，长边清单才降得下来。 */
+            if (w) { var mul = Math.min(3, w / Math.max(1, wMean)); var pull = (d - touch) * 0.05 * mul; fx += ux * pull; fy += uy * pull; }
+            if (d < touch) { var push = (touch - d) * 0.25; fx -= ux * push; fy -= uy * push; }
+          });
+          fx += (c0x - A.center.x) * 0.002; fy += (c0y - A.center.y) * 0.002;
+          A._fx = fx; A._fy = fy;
+        });
+        regs.forEach(function (A) {
+          A.center.x += A._fx * damp; A.center.y += A._fy * damp;
+          A._fx = 0; A._fy = 0;
+        });
+      }
+    })();
     (function packSectors() {
+      /* 领域中心已由 solveRegionCenters 解出 ⇒ 板块收拢/推开会把它压扁，整段跳过。 */
+      if (cfg.regionSolve) return;
       var outer = cfg.sectorGap || 0;
       var inner = cfg.sectorInnerGap == null ? 160 : cfg.sectorInnerGap;
       var list = graph.regions.filter(function (r) { return !!r.center; });
@@ -4000,16 +3630,89 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       });
     })();
 
-    /* ⭐ relaxed 模式：装箱结果降级成**种子**，团心改由跨团关系决定。
-       必须在「节点锚点」之前 —— 锚点是按团心算的。 */
-    var relaxInfo = null;
-    if (relaxed) relaxInfo = relaxedCenters(graph, liveClusters, cfg, wmode);
+    /* ⭐ 2026-10-19 试装：**跨板块领域放在哪里**（`?cond=cross` 才走）。
+       现在的规则是「跟着主板块平移」，于是凝聚态数学整个落在代数板块里；
+       但它的料来自拓扑（63 条）、同调（28 条）、范畴（29 条）——
+       该站在那几门的交界上。这里按**真实边数**加权，把它的圆心挪到加权重心。
+       ⛔ 默认 'sector'（今天的样子）；等挑完再删掉另一条。 */
+    var condPlace = (function () {
+      var s = String(global.location && global.location.search || '');
+      var m = /[?&]cond=(cross|gap)/.exec(s);
+      return m ? m[1] : 'sector';
+    })();
+    var condInfo = null;
+    if (condPlace !== 'sector') {
+      var primReg = Object.create(null);
+      nodes.forEach(function (n) { if (n.regions && n.regions.length) primReg[n.id] = n.regions[0]; });
+      (graph.regions || []).forEach(function (r) {
+        var sec = (graph.sectors || []).filter(function (s) {
+          return (s.secondary && s.secondary[r.id]) || (s.regions || []).indexOf(r.id) >= 0;
+        });
+        var extra = [];
+        sec.forEach(function (s) { if (s.secondary && s.secondary[r.id]) extra = extra.concat(s.secondary[r.id]); });
+        if (!extra.length) return;
+        /* 权重 = 与「同属那几个板块的其它领域」之间的边数 */
+        var wts = Object.create(null);
+        graph.edges.forEach(function (e) {
+          var ids = MG.graphUtil.edgeNodes(e);
+          for (var a = 0; a < ids.length; a++) for (var b = 0; b < ids.length; b++) {
+            if (a === b) continue;
+            if (primReg[ids[a]] !== r.id) continue;
+            var other = primReg[ids[b]];
+            if (!other || other === r.id) continue;
+            wts[other] = (wts[other] || 0) + 1;
+          }
+        });
+        var sum = 0, tx = 0, ty = 0, parts = [];
+        Object.keys(wts).forEach(function (rid) {
+          var rr = graph.regionById[rid];
+          if (!rr || !rr.center) return;
+          sum += wts[rid]; tx += rr.center.x * wts[rid]; ty += rr.center.y * wts[rid];
+          parts.push({ id: rid, w: wts[rid] });
+        });
+        if (!sum) return;
+        parts.sort(function (x, y) { return y.w - x.w; });
+        var delta = { x: tx / sum - r.center.x, y: ty / sum - r.center.y };
+        r.center = { x: tx / sum, y: ty / sum };
+        graph.clusters.forEach(function (c) {
+          if (c.parent !== r.id || !c.center) return;
+          c.center = { x: c.center.x + delta.x, y: c.center.y + delta.y };
+        });
+        condInfo = { region: r.id, parts: parts.slice(0, 5), center: { x: Math.round(r.center.x), y: Math.round(r.center.y) } };
+      });
+    }
+
+    /* ⭐ 2026-10-19：**团级硬净空**。板块缝收到 0 之后，「不粘连」不能再靠留白保证 ——
+       这里对团心做一遍圆盘碰撞（半径 = 团自己的 `_cap`），保证「挨着但不叠」。
+       只推团心（节点锚点随后由团心算），不动板块、不动领域中心。无随机数。 */
+    (function separateClusters() {
+      var list = liveClusters.filter(function (c) { return c.center && c._cap > 0; });
+      var gap = cfg.clusterGap == null ? 24 : cfg.clusterGap;
+      for (var it = 0; it < 120; it++) {
+        var worst = 0;
+        for (var a = 0; a < list.length; a++) {
+          for (var b = a + 1; b < list.length; b++) {
+            var A = list[a], B = list[b];
+            var dx = B.center.x - A.center.x, dy = B.center.y - A.center.y;
+            var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+            var need = A._cap + B._cap + gap;
+            var delta = need - d;
+            if (delta <= 0.5) continue;
+            if (delta > worst) worst = delta;
+            var ux = dx / d, uy = dy / d, move = delta * 0.5 * 0.65;
+            A.center.x -= ux * move; A.center.y -= uy * move;
+            B.center.x += ux * move; B.center.y += uy * move;
+          }
+        }
+        if (worst < 0.5) break;
+      }
+    })();
 
     /* ------------------------------------------------ 2. 节点锚点 */
     var buckets = Object.create(null);   // 无星团节点按星系分桶
     var borders = [], orphans = [];
 
-    // 2a. 有星团的节点：行星-卫星摆法（行星 = 团内度数最高的定义节点）
+    // 2a. 有星团的节点：行星-卫星锚点
     liveClusters.forEach(function (c) {
       planetaryAnchors(graph, c, c.center.x, c.center.y, ccfg.planetary);
 
@@ -4099,30 +3802,31 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     var disp = new Float64Array(N * 2);
     var i, j, dx, dy, d, d2, f, ux, uy, step, n;
 
-    /* ⚠️ relaxed 模式下**不做**这 700 步自由松弛：团心是关系解出来的，
-       再让节点级的弹簧/斥力去搬它，等于把刚解出来的信息又搅浑（ρ 会掉）。
-       只需要一遍硬碰撞，保证跨团节点不压在一起。 */
-    var iters = relaxed ? 0 : cfg.iterations;
+    var iters = cfg.iterations;
+    var nodeGap = cfg.minGap;
+    var ranIters = iters;
 
     for (var iter = 0; iter < iters; iter++) {
-      var t = iter / Math.max(1, cfg.iterations - 1);
+      var t = iter / Math.max(1, iters - 1);
       var temp = U.lerp(cfg.temp0, cfg.temp1, t * t);
       for (i = 0; i < N * 2; i++) disp[i] = 0;
 
-      /* 3a. 排斥 */
-      for (i = 0; i < N; i++) {
-        var ni = nodes[i];
-        for (j = i + 1; j < N; j++) {
-          var nj = nodes[j];
-          dx = ni.x - nj.x; dy = ni.y - nj.y;
-          d2 = dx * dx + dy * dy;
-          if (d2 < 1e-6) { dx = 0.7 + (i - j) * 0.13; dy = 0.4; d2 = dx * dx + dy * dy; }
-          if (d2 > cutoff2) continue;
-          d = Math.sqrt(d2);
-          f = (k * k / d) * cfg.repulsion;
-          ux = dx / d; uy = dy / d;
-          disp[i * 2] += ux * f; disp[i * 2 + 1] += uy * f;
-          disp[j * 2] -= ux * f; disp[j * 2 + 1] -= uy * f;
+      /* 3a. 排斥（O(n²)，cutoff 之外不算） */
+      {
+        for (i = 0; i < N; i++) {
+          var ni = nodes[i];
+          for (j = i + 1; j < N; j++) {
+            var nj = nodes[j];
+            dx = ni.x - nj.x; dy = ni.y - nj.y;
+            d2 = dx * dx + dy * dy;
+            if (d2 < 1e-6) { dx = 0.7 + (i - j) * 0.13; dy = 0.4; d2 = dx * dx + dy * dy; }
+            if (d2 > cutoff2) continue;
+            d = Math.sqrt(d2);
+            f = (k * k / d) * cfg.repulsion;
+            ux = dx / d; uy = dy / d;
+            disp[i * 2] += ux * f; disp[i * 2 + 1] += uy * f;
+            disp[j * 2] -= ux * f; disp[j * 2 + 1] -= uy * f;
+          }
         }
       }
 
@@ -4148,7 +3852,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         disp[i * 2] += (n.anchor.x - n.x) * f;
         disp[i * 2 + 1] += (n.anchor.y - n.y) * f;
 
-        // 星团软墙：别飘出自己的星团
+        // 团容器：软墙（走出去就被按回来）
         if (n.clusterObj && n.clusterObj.center) {
           var cx = n.clusterObj.center.x, cy = n.clusterObj.center.y;
           var vx = n.x - cx, vy = n.y - cy;
@@ -4175,8 +3879,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       }
 
       /* 3e. 硬性碰撞 */
-      if (iter > cfg.iterations * 0.3) {
-        var minGap = cfg.minGap;
+      var collideFrom = cfg.iterations * 0.3;
+      if (iter > collideFrom) {
+        var minGap = nodeGap;
         for (i = 0; i < N; i++) {
           for (j = i + 1; j < N; j++) {
             dx = nodes[j].x - nodes[i].x; dy = nodes[j].y - nodes[i].y;
@@ -4189,28 +3894,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             nodes[i].x -= qx; nodes[i].y -= qy;
           }
         }
-      }
-    }
-
-    /* relaxed：只修硬碰撞（不搬团心）。遍数给足是因为跨团节点在团间空白里可能挨着。 */
-    if (relaxed) {
-      var mg = cfg.minGap;
-      for (var pass = 0; pass < 16; pass++) {
-        var moved = false;
-        for (i = 0; i < N; i++) {
-          for (j = i + 1; j < N; j++) {
-            dx = nodes[j].x - nodes[i].x; dy = nodes[j].y - nodes[i].y;
-            d2 = dx * dx + dy * dy;
-            if (d2 >= mg * mg || d2 < 1e-9) continue;
-            d = Math.sqrt(d2);
-            var push2 = (mg - d) / 2;
-            var qx2 = (dx / d) * push2, qy2 = (dy / d) * push2;
-            nodes[j].x += qx2; nodes[j].y += qy2;
-            nodes[i].x -= qx2; nodes[i].y -= qy2;
-            moved = true;
-          }
-        }
-        if (!moved) break;
       }
     }
 
@@ -4261,13 +3944,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return { minX: minX, minY: minY, maxX: maxX, maxY: maxY };
     };
 
-    /* 回执用：模式 / 权重口径 / 松弛诊断 / 总耗时（⛔ 不含随机，跑几次都一样） */
+    /* 回执用：松弛诊断 / 总耗时（⛔ 不含随机，跑几次都一样） */
     var bb0 = graph.bbox();
     graph.layoutMs = Math.round(layoutNow() - tAll);
+    /* ⭐ 长边巡检（2026-10-19）：布局是否局部性良好，用「超过 2000 世界单位的边」验收，
+       不再靠肉眼发现。看 graph.layoutInfo.longEdges。 */
+    var _long = [];
+    graph.edges.forEach(function (e) { var ids = MG.graphUtil.edgeNodes(e); if (ids.length < 2) return;
+      var a = graph.byId[ids[0]], b = graph.byId[ids[1]]; if (!a || !b) return;
+      var dd = U.dist(a.x, a.y, b.x, b.y);
+      if (dd > 2000) _long.push({ d: Math.round(dd), id: e.id, kind: e.kind }); });
+    _long.sort(function (x, y) { return y.d - x.d; });
     graph.layoutInfo = {
-      mode: mode, weightMode: wmode,
-      relaxMs: relaxInfo ? Math.round(relaxInfo.ms) : 0,
-      relax: relaxInfo,
+      longEdges: _long.slice(0, 12),
+      longCount: _long.length,
+      longMax: _long.length ? _long[0].d : 0,
+      condPlace: condPlace,
+      cond: condInfo,
+      ranIters: ranIters,
       bbox: { w: Math.round(bb0.maxX - bb0.minX), h: Math.round(bb0.maxY - bb0.minY) }
     };
   }
@@ -4322,31 +4016,81 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     // 世界坐标 → 纹理像素
     ctx.setTransform(scale, 0, 0, scale, -minX * scale, -minY * scale);
 
+    /* ⭐⭐ Stage 1b：**不再画任何圆形云盘**（星团盘 / 领域盘 / 板块盘全删）。
+       改成节点泼溅密度场：每个节点按所属领域色泼一个半径 40 世界单位、
+       中心 α 0.03、边缘 0 的径向渐变，整体模糊一次（smoothTexture）。
+       910 × 0.03 叠加最浓处 ≈ 0.94，不会过曝。 */
+    /* ⭐⭐ 归一化领域色场（Stage 1b）：颜色 = Σ(rgb·a) / Σa，alpha = 1−exp(−k·Σa)。
+       为什么必须归一化：一堆独立径向渐变直接叠起来会浑浊、圆边互相打断 —— 眼睛看到
+       的就是「一堆透明圆」。归一化后颜色只由「这一像素周围各领域的权重比」决定，
+       形状是自由有机的，没有圆边。 */
+    var CW = 1024, CH = 768;
+    var cvC = document.createElement('canvas'), cvW = document.createElement('canvas');
+    cvC.width = CW; cvC.height = CH; cvW.width = CW; cvW.height = CH;
+    var ctxC = cvC.getContext('2d'), ctxW = cvW.getContext('2d');
+    ctxC.globalCompositeOperation = 'lighter';
+    ctxW.globalCompositeOperation = 'lighter';
+    var scx = CW / w, scy = CH / h;
     var drawn = 0;
-    (graph.regions || []).forEach(function (region) {
-      if (!region.stat) return;                       // 空星系不画云
-      var list = graph.nodes.filter(function (n) {
-        return n.regions.indexOf(region.id) >= 0 && ok(n.id);
-      });
-      if (!list.length) return;                       // 点全被藏了 → 这一团云也收掉
+    /* ⭐ 2026-10-19：**领域大云**这一层（5a840a9 配方里最关键的一层，之前漏了）。
+       每节点小雾只够做颗粒；整块领域的色底要靠这一层，两层叠起来才是连续渐变。 */
+    (graph.regions || []).forEach(function (reg) {
+      if (!reg.stat) return;
+      var rgb0 = U.hexToRgb(reg.color || '#7A8699');
+      var pr0 = Math.max(4, reg.stat.radius * 0.72 * scx);
+      var px0 = (reg.stat.cx - minX) * scx, py0 = (reg.stat.cy - minY) * scy;
+      var g0 = ctxC.createRadialGradient(px0, py0, 0, px0, py0, pr0);
+      var s0 = rgb0.r + ',' + rgb0.g + ',' + rgb0.b + ',';
+      g0.addColorStop(0, 'rgba(' + s0 + '0.10)');
+      g0.addColorStop(0.55, 'rgba(' + s0 + '0.055)');
+      g0.addColorStop(1, 'rgba(' + s0 + '0)');
+      ctxC.fillStyle = g0;
+      ctxC.beginPath(); ctxC.arc(px0, py0, pr0, 0, Math.PI * 2); ctxC.fill();
+    });
+    (graph.nodes || []).forEach(function (n) {
+      if (!ok(n.id)) return;
+      var rid = (n.regions && n.regions[0]) || '';
+      var reg = graph.regionById && graph.regionById[rid];
+      var hex = (reg && reg.color) || '#7A8699';
+      var rgb = U.hexToRgb(hex);
+      var sr = (bc.splatRadius == null ? 130 : bc.splatRadius);   // 世界单位
+      var px = (n.x - minX) * scx, py = (n.y - minY) * scy;
+      var pr = Math.max(2, sr * scx);
+      var gC = ctxC.createRadialGradient(px, py, 0, px, py, pr);
+      gC.addColorStop(0, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.05)');
+      gC.addColorStop(1, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0)');
+      ctxC.fillStyle = gC;
+      ctxC.beginPath(); ctxC.arc(px, py, pr, 0, Math.PI * 2); ctxC.fill();
+      var gW = ctxW.createRadialGradient(px, py, 0, px, py, pr);
+      gW.addColorStop(0, 'rgba(255,255,255,0.05)');
+      gW.addColorStop(1, 'rgba(255,255,255,0)');
+      ctxW.fillStyle = gW;
+      ctxW.beginPath(); ctxW.arc(px, py, pr, 0, Math.PI * 2); ctxW.fill();
       drawn++;
-      paintRegion(ctx, region, list, bc);
     });
-
-    // 星团：在星系云之上再叠一层更小更浓的云 → 看起来像星云里更密的结
+    /* 合成：读回两条通道，逐像素归一化（1024×768 ≈ 79 万像素，一次 ~40ms） */
+    var outCv = document.createElement('canvas');
+    outCv.width = CW; outCv.height = CH;
+    var octx = outCv.getContext('2d');
+    var img = octx.createImageData(CW, CH);
+    var dC = ctxC.getImageData(0, 0, CW, CH).data;
+    var dW = ctxW.getImageData(0, 0, CW, CH).data;
+    var o = img.data;
+    /* ⭐ 2026-10-19：回到**加法叠加**（5a840a9 那套配方）——
+       不再做 alpha = 1−exp(−K·Σw) 的饱和压缩。饱和会把浓淡压平，
+       于是每一块地方都是一片均匀的色块；直接取画布叠加出来的 alpha，
+       才是「越靠中心越浓、越往外越淡」的连续过渡。 */
+    for (var pi = 0; pi < o.length; pi += 4) {
+      o[pi] = dC[pi]; o[pi + 1] = dC[pi + 1]; o[pi + 2] = dC[pi + 2];
+      o[pi + 3] = dC[pi + 3];
+    }
+    octx.putImageData(img, 0, 0);
     var cdrawn = 0;
-    (graph.clusters || []).forEach(function (c) {
-      if (!c.stat) return;
-      var list = c.nodes.filter(function (n) { return ok(n.id); });
-      if (!list.length) return;
-      cdrawn++;
-      paintCluster(ctx, c, list, graph, bc);
-    });
 
     return {
-      canvas: smoothTexture(cv, bc.texBlur),
+      canvas: smoothTexture(outCv, 1.2),
       x: minX, y: minY, w: w, h: h,
-      scale: scale,
+      scale: 1,
       regions: drawn,
       clusters: cdrawn
     };
@@ -4819,6 +4563,27 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var mid = smoothstep(dIn[0], dIn[1], k) * (1 - smoothstep(dOut[0], dOut[1], k));
       var floor = C.edge.definitionMidScale == null ? 0.60 : C.edge.definitionMidScale;
       lodA.defDim = 1 - (1 - floor) * mid;
+      /* ⭐⭐ 2026-10-18 Stage 1b：闸门换 **r = k / kFit**（与缩放尺度无关）。
+         绝对 k 会把「适配全部」和「放大到某个 k」混为一谈：世界盒一变，
+         同样的 k 就是另一个缩放档，全景反而把节点名全放出来（labelCount=92）。 */
+      var kFit0 = 0;
+      kFit0 = (view.kFit0 > 0) ? view.kFit0 : (function () { try { return fitZoom(); } catch (e) { return 0; } })();
+      var rRel = kFit0 > 0 ? k / kFit0 : 1;
+      lodA.rRel = rRel;
+      /* ⭐ 2026-10-19：线的「最低可见度」只能是 r 的**一条连续曲线** —— 原来全景顶 0.30、
+         中景顶 0.34、近景靠 px 闸门自然满值，三段拼出来就是「蓝→淡→蓝」的台阶。 */
+      lodA.edgeFloor = 0.30 + 0.45 * smoothstep(1.20, 2.80, rRel);
+      lodA.sectorName = smoothstep(0.20, 0.55, rRel) * (1 - smoothstep(1.30, 1.60, rRel));
+      lodA.galaxyName = smoothstep(0.95, 1.02, rRel) * (1 - smoothstep(1.45, 1.85, rRel));
+      lodA.clusterName = smoothstep(1.50, 1.70, rRel) * (1 - smoothstep(3.85, 4.80, rRel));
+      lodA.nodeName = rRel < 2.8 ? 0 : smoothstep(2.8, 3.0, rRel);
+      lodA.trunkName = rRel < 2.4 ? 0 : smoothstep(2.4, 2.6, rRel);
+      lodA.skeletonEdge = smoothstep(1.10, 1.20, rRel);
+      lodA.bodyEdge = smoothstep(2.70, 2.90, rRel);
+      lodA.sectorLink = 0;
+      /* ⭐⭐ 全景档（r<1.35）**不画节点**，只画团块 + 领域色场：1600×900 里铺 910 个点，
+         任何布局都会变成均匀纹理（地图不在全览档画每栋楼）。r≥1.35 才淡入节点。 */
+      lodA.nodeDot = smoothstep(1.32, 1.42, rRel);
     }
 
     /* ------------------------------------------------------------ 尺寸 */
@@ -5239,7 +5004,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     function paintStatic(geoms) {
       var tE = performance.now();
       if (!envLive) drawEnvelopes();       // 位图模式：包络交给实时层（见 paintDynamic）
-      drawClusterLinks();
 
       var defs = [], eqs = [], imps = [], anas = [];
       geoms.forEach(function (g) {
@@ -5494,8 +5258,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     }
 
     /* ------------------------------------------------ 大板块名（最远视角） */
-    /* 板块落在哪：**成员领域 stat 重心的加权平均**（按节点数加权）。
-       Stage 1 只读现有重心，不动布局；Stage 2 会改成 sectors.js 里手写的 center。 */
+    /* 板块落在哪：**成员领域 stat 重心的加权平均**（按节点数加权）。 */
     function sectorAnchor(s) {
       var wsum = 0, x = 0, y = 0;
       (s.regions || []).forEach(function (r) {
@@ -5664,69 +5427,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       ctx.restore();
     }
 
-    /* ------------------------------------------------ 星团级连线 */
-    function drawClusterLinks() {
-      var secA = lodA.sectorLink;
-      if (secA > 0.02) drawSectorLinks(secA);
-      /* 全景那一档：团级聚合线让位给板块骨架（1 - secA） */
-      var a = lodA.clusterLink * (1 - secA);
-      if (a <= 0.02) return;
-      var links = view.graph.clusterLinks || [];
-      if (!links.length) return;
-      var cfgL = C.clusterLink;
-      var maxCount = 1;
-      links.forEach(function (l) { if (l.count > maxCount) maxCount = l.count; });
-      /* ⭐ 选中节点的跨板块关系**优先于任何隐藏规则**（用户 2026-10-17 的判据）：
-         聚合线也一样 —— 如果它连着我正在看的那个团，跨板块也照画。 */
-      var focusNode = (view.focus && view.focus.type === 'node') ? view.graph.byId[view.focus.id] : null;
-      var focusCluster = focusNode ? focusNode.cluster : null;
-      /* ⭐ 中景（1.3~2.2×k₀）只留**同一个领域内部**的聚合线。
-         远景（<1.3×k₀）保留跨板块的骨架，近景（>4.2×k₀）聚合线本来就退场了。 */
-      var midZone = lodA.crossEdge > 0.5 && lodA.regionEdge < 0.5;
-      var regionOfCluster = function (cid) {
-        var cc = view.graph.clusterById && view.graph.clusterById[cid];
-        return (cc && cc.parent) || '';
-      };
-
-      ctx.save();
-      ctx.lineCap = 'round';
-      links.forEach(function (l) {
-        if (l.count < cfgL.minEdges) return;
-        /* ⭐ 阶段 3：远尺度只留**主要关系**。
-           · 同板块的聚合线照画（它们是板块内部的骨架）；
-           · **跨板块**的聚合线要够粗才画（count ≥ crossSectorMinEdges），
-             否则远看就是一地斜穿的细线。
-           ⭐ 2026-10-18：这条筛选**不再只作用于最远那一档**。原来它只在
-              crossEdge<0.5（≈1.3×k₀ 以下）生效，中景 1.3~2.8×k₀ 之间
-              所有跨板块聚合线都放出来 → 用户看到的「中景像一张网」。
-              现在只要不是「全部连线」就一直筛；选中团的线仍然放行。 */
-        if (!C.showAllEdges) {
-          var sA = clusterSector(l.a), sB = clusterSector(l.b);
-          var touchesFocus = !!(focusCluster && (l.a === focusCluster || l.b === focusCluster));
-          if (midZone && regionOfCluster(l.a) !== regionOfCluster(l.b) && !touchesFocus) return;
-          if (!touchesFocus && sA && sB && sA !== sB && l.count < (cfgL.crossSectorMinEdges || 4)) return;
-        }
-        var A = view.graph.clusterById[l.a], B = view.graph.clusterById[l.b];
-        if (!A || !B || !A.stat || !B.stat) return;
-        if (view.isNodeVisible && (!visibleIn(A.nodes) || !visibleIn(B.nodes))) return;
-        var p0 = w2s(A.stat.cx, A.stat.cy);
-        var p1 = w2s(B.stat.cx, B.stat.cy);
-        var len = U.dist(p0.x, p0.y, p1.x, p1.y);
-        if (len < 2) return;
-        var t = Math.min(1, l.count / Math.max(2, maxCount));
-        var w = U.lerp(cfgL.widthMin, cfgL.widthMax, Math.sqrt(t)) * Math.min(1.4, Math.max(0.6, camNow().k));
-        var bend = (l.a < l.b ? 1 : -1) * len * cfgL.curve;
-        var ctl = U.perpControl(p0.x, p0.y, p1.x, p1.y, bend);
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(ctl.x, ctl.y, p1.x, p1.y);
-        ctx.lineWidth = w;
-        ctx.strokeStyle = 'rgba(' + cfgL.color + ',' + (cfgL.alpha * a).toFixed(3) + ')';
-        ctx.stroke();
-      });
-      ctx.restore();
-    }
-
     /* ------------------------------------------------ 星团包络 */
     /**
      * 给一堆点画一圈闭合的平滑边界：绕一圈取 samples 个方向，
@@ -5817,15 +5517,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var gR = Math.max(1, rmax * camNow().k * cfgE.gradSpan);
         var g = ctx.createRadialGradient(cs.x, cs.y, 0, cs.x, cs.y, gR);
         var rgbS = rgb.r + ',' + rgb.g + ',' + rgb.b + ',';
-        g.addColorStop(0.00, 'rgba(' + rgbS + (cfgE.fillAlpha * a).toFixed(4) + ')');
-        g.addColorStop(0.45, 'rgba(' + rgbS + (cfgE.fillAlpha * 0.52 * a).toFixed(4) + ')');
-        g.addColorStop(0.78, 'rgba(' + rgbS + (cfgE.fillAlpha * 0.16 * a).toFixed(4) + ')');
+        g.addColorStop(0.00, 'rgba(' + rgbS + (cfgE.fillAlpha * 0.45 * a).toFixed(4) + ')');
+        g.addColorStop(0.45, 'rgba(' + rgbS + (cfgE.fillAlpha * 0.45 * 0.52 * a).toFixed(4) + ')');
+        g.addColorStop(0.78, 'rgba(' + rgbS + (cfgE.fillAlpha * 0.45 * 0.16 * a).toFixed(4) + ')');
         g.addColorStop(1.00, 'rgba(' + rgbS + '0)');
+        /* ⛔ Stage 1b：包络**不再填充**（9 个巨淡圆叠在一起会把 10 个岛连成一坨），
+           只留一条 α≤0.06 的极淡描边。 */
         ctx.fillStyle = g;
         ctx.fill();
 
         if (cfgE.strokeAlpha > 0.002) {           // 留着的：要一条很淡的轮廓线时把它调起来
-          ctx.lineWidth = cfgE.width;
+          ctx.lineWidth = 1;
           ctx.strokeStyle = 'rgba(' + rgbS + (cfgE.strokeAlpha * a).toFixed(3) + ')';
           ctx.stroke();
         }
@@ -5910,6 +5612,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
      *    所以定义线相交处由「更深」变成「同样深浅」—— 观感反而更干净。
      */
     function drawEdges(list) {
+      /* ⭐ 线条三档（r = k/kFit）：定义引用线**只在 L3（r ≥ 2.8）**画。
+         L0 一条不画、L1–L2 只画推出/等价骨架 —— 都在 drawEdgeOne 里判。
+         「全部连线」绕过所有闸门。 */
       /* 只有**定义引用线**走「合并描边」的快路径：它占全部连线 89%（1244/1391），
          逐条 stroke() 在用户机器上约 0.05ms/条 ⇒ 一帧六十多毫秒
          （实测：把它一关，同一页面 13fps → 240fps；而把像素量砍到 1/4 毫无变化）。
@@ -5920,9 +5625,28 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var e = g.edge, style = T.edgeStyles.definition;
         var spine = isSpine(e);
         var active = isEdgeActive(g);
+        /* 2026-10-19：不再「只画主干」—— 那一版在全景留下几根稀疏长线，用户报「像 bug」。 */
         var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0)
           * lodA.defDim;                       // 中景降权（与 drawEdgeOne 同一系数）
+        /* ⭐ 2026-10-19：全景/中景同样顶一个下限 —— 定义线占 89%，不顶就「只有推出线」 */
+        if (!active && !C.showAllEdges && !view.focus) a = Math.max(a, lodA.edgeFloor);
         if (!active) a *= edgeFade(g);          // 长边在屏幕空间降权
+        /* ⭐ 2026-10-19：**定义线这条「合并描边」路径以前完全没有视口裁剪** ——
+           两端都在屏外、只是线段横穿视口的线照样画。用户上报的「空白处几条长蓝线」
+           就是它（改前改后逐像素相同，正因为这两条路径压根不是同一条）。
+           口径：≥1.35 起，两端都在外 ⇒ 不画；只有一端在 ⇒ 按屏幕长度衰减。 */
+        if (!active && !C.showAllEdges && (lodA.rRel || 1) >= 1.35) {
+          var dEnds = GU.edgeNodes(e), dIn = 0;
+          for (var di = 0; di < dEnds.length; di++) {
+            var dn = view.graph.byId[dEnds[di]];
+            if (!dn) continue;
+            var dp = w2s(dn.x, dn.y);
+            if (dp.x >= 0 && dp.x <= W && dp.y >= 0 && dp.y <= H) dIn++;
+          }
+          if (dIn === 0) return;
+          if (dIn === 1) a *= Math.exp(-(g.lenPx || 0) / 320);
+          if (a <= 0.06) return;
+        }
         /* ⚠️ 选中 / 悬停的边：全景下节点级 LOD 的 alpha 是 0，会整条消失。
            用户点了一个点就想知道它连到哪 —— 和 drawEdgeOne 用同一个下限。 */
         if (active) a = Math.max(a, 0.55);
@@ -5932,12 +5656,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (a <= 0.02) return;
         if (!C.showDefinitionLines) return;
         /* 中景：跨领域的定义引用也先收起（和 drawEdgeOne 同一口径） */
-        if (!C.showAllEdges && !active && lodA.regionEdge < 0.5 && edgeCrossRegion(e)) return;
         /* 定义引用线**不跟着放大**（89% 的线都是它）。放大后如果它也变粗，
            整个画面会被蓝网盖住；「定义线降权」的既定口径不能破。 */
         var w = C.edge.definitionWidth * (active ? 1.85 : 1);
-        var spineOnly = spine && lodA.nodeEdge < 0.9;
-        if (spineOnly) { a *= 0.55 + 0.45 * lodA.nodeEdge; w = 1.25; }
+        /* ⛔ 2026-10-19：定义引用线**永远用蓝**。原来 spineOnly（低缩放下 nodeEdge<0.9）会把
+           定义线改画成主干色（T.spineColor 橙棕，低透明下看着就是黑的）—— 于是同一条定义线
+           在全景是黑的、放大才变蓝（用户报）。主干强调只属于推出/等价，不该接管定义线。 */
+        var spineOnly = false;
         var color = spineOnly
           ? U.rgba(T.spineColor || 'B4661A', a)
           : 'rgba(' + style.color + ',' + ((style.alpha != null ? style.alpha : 1) * a).toFixed(3) + ')';
@@ -6019,9 +5744,39 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       // 主干骨架：它有自己的淡入曲线，缩小时也能看见；放大后让位给全部连线
       var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0);
       var active = isEdgeActive(g);
-      /* 定义引用线在中景降权（领域 / 星团尺度 ×0.60）。⚠️ 定义线绝大多数走的是
-         drawEdges() 的合并描边快路径，那里也必须乘同一个 lodA.defDim ——
-         只改这里等于没改。 */
+      /* ⭐⭐ 2026-10-19 用户定稿的线条规则（取代 Stage 1b 的三档）：
+         · 全景（r<1.35）：**全都画**，整体顶到 0.30 —— 一层「雾网」，不是空的；
+         · 中景（1.35≤r<2.8）：全都画，不按 kind 过滤、不藏跨领域线；
+         · 近景（r≥2.8）：只画**至少一端在视口内**的（另一端在外按屏幕长度衰减）。
+         ⛔ clusterLinks 聚合线已删（用户：「实在是不明显指代什么」）。
+         ⚠️ 全景那档节点级 px 闸门是 0，必须顶一个下限，否则一条线都没有。 */
+      var rT = lodA.rRel || 1;
+      if (!active && !C.showAllEdges) {
+        /* ⭐ 2026-10-19：全景不画节点，黑线（推出/等价）就只剩「浮空的箭头骨架」——
+           用户要求这一档只留蓝色的定义引用当雾网。 */
+        if (rT < 1.35 && e.kind !== 'definition') return;
+        if (rT >= 2.8) {
+          var endIds = GU.edgeNodes(e), inside = 0;
+          for (var ei = 0; ei < endIds.length; ei++) {
+            var en = view.graph.byId[endIds[ei]];
+            if (!en) continue;
+            var sp = w2s(en.x, en.y);
+            if (sp.x >= 0 && sp.x <= W && sp.y >= 0 && sp.y <= H) inside++;
+          }
+          if (inside === 0) return;
+          /* ⭐ 2026-10-19：定义线**不按屏幕长度衰减** —— 长定义边在深缩放下 lenPx 上下、
+             指数一乘就归零，于是「群在视窗里、另一端在屏外」时整条线消失（用户报）。
+             非定义线保留这条（它本来就短，衰减只是防糊）。 */
+          if (inside === 1 && e.kind !== 'definition') a *= Math.exp(-(g.lenPx || 0) / 320);
+          /* ⛔ 两端都在屏内但横穿整屏的线同样算「长线」—— 原来只在 inside===1 时衰减，
+             于是屏内一条 1200px 的蓝线永远活着（用户截图里那几条就是它）。 */
+          /* ⛔ 2026-10-19：近景的长线**不留下限**。原来 max(0.03,…) 会让 0.8×0.03=0.024
+             刚好压线通过 α>0.02 的闸门 ⇒ 空白区域里飘几条横穿全屏的蓝线（用户报了）。 */
+          if (a <= 0.06) return;
+        } else {
+          a = Math.max(a, lodA.edgeFloor);
+        }
+      }
       if (e.kind === 'definition') a *= lodA.defDim;
       if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
       /* 选中 / 悬停的边：哪怕在全景（节点级 LOD 的 alpha 是 0）也要看得见 ——
@@ -6036,12 +5791,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* ⭐ 中景：**跨领域的逐条边默认收起**（用户 2026-10-18：
          「中景像一张网，压过节点和文字」）。选中 / 悬停 / 「全部连线」放行；
          放大到近景（regionEdgeIn）自己会回来。 */
-      if (!C.showAllEdges && !active && lodA.regionEdge < 0.5 && edgeCrossRegion(e)) return;
 
       /* ⭐ 阶段 3：远尺度收起「逐条跨团长线」。
          只看「两端星团是否相同」——团内关系不受影响；选中/聚焦的边、以及
          用户打开 `showAllEdges` 时一律放行。⛔ 不画聚合箭头。 */
-      if (!C.showAllEdges && !active && lodA.crossEdge < 0.5 && edgeCrossCluster(e)) return;
       var w = (e.kind === 'implication' ? C.edge.implicationWidth
         : e.kind === 'equivalence' ? C.edge.equivalenceWidth
           : e.kind === 'analogy' ? T.edgeStyles.analogy.width
@@ -6120,6 +5873,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var e = g.edge;
       var active = isEdgeActive(g);
       var a = alphaForEdge(e) * lodA.nodeEdge;
+      /* 箭头跟线同一条规则：全景/中景顶一个下限，否则「线回来了箭头没有」。 */
+      if (!active && !C.showAllEdges && !view.focus) a = Math.max(a, lodA.edgeFloor * 0.42);
       if (!active) a *= edgeFade(g);           // 长边在屏幕空间降权（选中的不降）
       /* 与线同一个下限：否则整条线回来了、箭头却没有，看起来像「没方向」。 */
       if (active) a = Math.max(a, 0.55);
@@ -6359,6 +6114,27 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     }
 
     /* ========================================================== 命中检测 */
+    /* 当前缩放下这条边到底画不画 —— 与 drawEdgeOne / drawEdges 同一口径的近似。
+       ⛔ 2026-10-19：用户报「看不见的线还能点到」。命中检测以前只看 alphaForEdge，
+       完全不看缩放闸门，所以全景里那些没画的线照样能被点中并弹出面板。 */
+    function edgeShown(g) {
+      var e = g.edge, r = lodA.rRel || 1;
+      if (C.showAllEdges) return true;
+      if (e.kind === 'definition' && !C.showDefinitionLines) return false;
+      if (GU.isWeak(e) && !C.exploreMode) return false;
+      if (r < 1.35 && e.kind !== 'definition') return false;   // 全景不画黑线
+      return true;
+    }
+    /* ⭐ 2026-10-19：长线降权改回**世界长度**（用户报：同一条线越放大越长、越淡、最后消失，
+       而它两头都在视野里）。屏幕长度的惩罚由「一端在屏外」那一支负责，这里只看世界长度，
+       这样任何缩放下同一条边的浓淡都是同一个值。 */
+    function worldLen(e) {
+      if (e._wlen != null) return e._wlen;
+      var ids = GU.edgeNodes(e);
+      var a0 = ids[0] && view.graph.byId[ids[0]], b0 = ids[1] && view.graph.byId[ids[1]];
+      e._wlen = (a0 && b0) ? U.dist(a0.x, a0.y, b0.x, b0.y) : 0;
+      return e._wlen;
+    }
     function hitTest(sx, sy) {
       ensureGeom();
       // 先节点
@@ -6379,7 +6155,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var list = geomCache ? Object.keys(geomCache).map(function (k) { return geomCache[k]; }) : [];
       var hitEdge = null, hitD = Infinity;
       list.forEach(function (g) {
-        if (g.edge.kind === 'definition' && !C.showDefinitionLines) return;
+        if (!edgeShown(g)) return;
         // 弱边没开探索模式时不响应点击（它本来就几乎看不见）
         if (GU.isWeak(g.edge) && !C.exploreMode) return;
         var a = alphaForEdge(g.edge);
@@ -6415,9 +6191,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       prof: prof,
       /* 诊断用：当前帧的 LOD 读数（档位 / 三档名字 / 定义线系数）。
          ⚠️ 只读快照，别拿它当状态改 —— holdTier 的真源在 computeLod 里。 */
+      fitZoom: fitZoom,                                  // 给 paintKey 现算 r=k/kFit 用
       lodState: function () {
         return {
-          k: camNow().k,
+          k: camNow().k, rRel: lodA.rRel || 1,
           tier: lodA.tier, sector: lodA.sectorName, region: lodA.galaxyName,
           cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName,
           /* 下面这些是 2026-10-18 加的：判「全景还是一条网吗」「导出计数对不对」要读它们 */
@@ -9383,7 +9160,7 @@ MG.regions = [
     name: '抽象代数',
     en: 'Abstract Algebra',
     color: '#E08A3C',
-    center: { x: 960, y: 430 },
+    center: { x: 1250, y: 780 },
     radius: 500,
     desc: '群、环、域、模与线性代数；佐恩引理的经典应用场。'
   },
@@ -9412,7 +9189,7 @@ MG.regions = [
     name: '同调代数',
     en: 'Homological Algebra',
     color: '#C89A2B',
-    center: { x: 2250, y: 120 },
+    center: { x: 900, y: 60 },
     radius: 480,
     desc: '加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。'
   },
@@ -51136,6 +50913,9 @@ MG.trunk = [
       return graph.nodes.length + '|' + vis.hiddenCount() + '|'
         + (C.showDefinitionLines ? 1 : 0) + (C.showLabels ? 1 : 0) + (C.exploreMode ? 1 : 0) + '|'
         + (C.hideParallelImplications ? 1 : 0) + (C.showAllEdges ? 1 : 0) + '|'
+        /* ⚠️ LOD 档位（r=k/kFit）必须进绘制输入：全景不画节点/边/箭头，
+           相机一变就得重烘，否则位图继续显示「上一档」的内容（踩过）。 */
+        + Math.round((cam.k / Math.max(1e-6, renderer.fitZoom())) * 4) + '|'
         + (view.focus ? view.focus.type + ':' + view.focus.id : '-');
     }
     var rafId = 0;
@@ -53093,6 +52873,7 @@ MG.trunk = [
       var bb = (live.length && live.length < graph.nodes.length) ? bboxOf(live) : graph.bbox();
       cam.fit(bb, C.camera.fitPadding);
       var fitK = cam.k;
+      view.kFit0 = fitK;                 // ⭐ 缓存「适配全部」的 k：r=k/kFit 的唯一真源（不随相机漂）
       var cx = (bb.minX + bb.maxX) / 2, cy = (bb.minY + bb.maxY) / 2;
       if (!applyHash()) {
         // 初始视角：先稍微留白，再平滑推进到「全部适配」
