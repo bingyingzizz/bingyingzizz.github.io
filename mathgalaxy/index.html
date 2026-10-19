@@ -52491,7 +52491,7 @@ MG.trunk = [
       /* 渲染实际用的 dpr（已被 renderer 夹到 ≤2.0），不是全局 devicePixelRatio ——
          原来这里直接打印全局值，于是「压到 2.0 了但角标还写 2.5」，看着像没生效。 */
       function effDpr() {
-        var cv = document.getElementById('graph');
+        var cv = document.getElementById('layer-graph');
         var cw = cv && cv.clientWidth;
         return (cv && cw) ? +(cv.width / cw).toFixed(2) : global.devicePixelRatio;
       }
