@@ -5902,13 +5902,33 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          · 相机 k 没变、且这一帧**确实在平移** ⇒ 回放上一帧记下的文字操作，
            整体 translate 位移量；**不测量、不避让、不重排** ⇒ 名字跟着画面走，不会闪；
          · 其余情况（k 变了 / 没有缓存 / **相机停住了**）⇒ 重算一次。
-       ⭐「相机停住 ⇒ 重算」是唯一的失效入口，它同时兜住了松手、动画结束、
-          换语言、藏节点、开关「名称」、搜索高亮 —— 这些都会在**相机不动**的帧上
-          落一次重算，所以缓存不需要任何手工失效。
+       ⭐ 失效入口一共**四条**（2026-10-19 收尾补后三条）：
+         ① k / 画布尺寸变了；
+         ② **累计位移超过半屏** —— 新露出来的那半屏压根没被测量过，回放再多也补不上；
+         ③ **相机停住了**（本帧机位与上一帧逐位相同 = 松手 / 滚轮去抖收尾 / 动画结束）；
+         ④ `labelSig()` 变了（选中 / 悬停 / 搜索命中 / 「名称」开关 / 画布语言）。
+       ⛔ ②③ 之外还有一条隐含的：`dx == dy == 0`（机位与**重算那一帧**相同）也重算。
+       ⚠️ ③ 必须比「c.tx === labelCache.tx」—— 后者记的是**重算那一帧**的机位，
+          平移之后就永远差一个 dx，于是「停住」那条分支一辈子进不去（旧实现就是这样：
+          滚轮平移完，最后一帧仍是回放，没人再画 ⇒ 名字停在旧的一屏）。
        ⛔ 不要记 ctx 的变换矩阵：回放时外层已按同一相机画过背景，差的只是一个平移量。
        ⛔ 不要在这里改四个绘制点里的任何一行（接管 fillText/strokeText 就够了）。 */
-    var labelCache = null;      // { k, tx, ty, w, h, ops: [...] }
+    var labelCache = null;      // { k, tx, ty, w, h, sig, ops: [...] }
     var labelBase = 0;          // 本帧起点（prof.labelCount）→ 节点名的「每帧预算」靠它
+    /* 上一帧画完时的机位 —— 判「相机停住」用（⛔ 不能用 labelCache.tx，理由见上） */
+    var labelPrevCam = null;
+
+    /** 「名字集合」的指纹：任一项变了 ⇒ 上一帧记下的 ops 已经不代表现在，必须重算。
+        覆盖面 = 特殊标签（选中 → 悬停 → 搜索命中，见 reserveSpecialLabels 的 rank 0/1/2）
+        + 「名称」开关（关掉时 drawLabels 不画，节点名整批消失）+ 画布语言（labelShow 换了）。 */
+    function labelSig() {
+      /* ⚠️ 选中**两条都要**：focus 是 node 时是 rank 0 的特殊标签，
+         是 edge 时虽然自己不出标签，但 alphaForNode 会把无关的点压暗 ⇒ 名字的 alpha 也变。 */
+      var f = view.focus ? (view.focus.type + ':' + view.focus.id) : '';
+      var h = (view.hover && view.hover.type === 'node') ? view.hover.id : '';
+      var s = view.searchIds ? Object.keys(view.searchIds).join(',') : '';
+      return f + '|' + h + '|' + s + '|' + (C.showLabels ? '1' : '0') + '|' + (MG.displayLang || 'zh');
+    }
 
     /** 回放：把上一帧记下的文字按 (dx,dy) 整体搬一次 —— 零测量、零避让 */
     function replayLabels(dx, dy) {
@@ -5940,9 +5960,21 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /** 统一入口：四类名字一次画完（顺序 = 避让优先级：板块 → 领域 → 星团 → 节点） */
     function drawAllNames() {
       var c = camNow();
-      if (labelCache && labelCache.k === c.k && labelCache.w === W && labelCache.h === H) {
+      /* ⚠️ 先取上一帧机位再覆盖：本帧要判的是「这一帧相机动没动」 */
+      var prevCam = labelPrevCam;
+      labelPrevCam = { k: c.k, tx: c.tx, ty: c.ty };
+      var sig = labelSig();
+      if (labelCache && labelCache.k === c.k && labelCache.w === W && labelCache.h === H &&
+          labelCache.sig === sig) {
         var dx = c.tx - labelCache.tx, dy = c.ty - labelCache.ty;
-        if (dx || dy) { replayLabels(dx, dy); return; }   // 纯平移才回放；停住 ⇒ 往下重算
+        if (dx || dy) {                                   // 纯平移才回放；停住（dx=dy=0）⇒ 往下重算
+          /* ② 累计位移 > 半屏 ⇒ 新露出来的那一块没有任何名字（它从来没被测量/避让过） */
+          var vw = c.viewW || W, vh = c.viewH || H;
+          var far = Math.abs(dx) > vw * 0.5 || Math.abs(dy) > vh * 0.5;
+          /* ③ 本帧机位 == 上一帧机位 ⇒ 相机停了，这帧就该重算（松手 / 滚轮去抖 / 动画收尾） */
+          var stopped = !!(prevCam && prevCam.k === c.k && prevCam.tx === c.tx && prevCam.ty === c.ty);
+          if (!far && !stopped) { replayLabels(dx, dy); return; }
+        }
       }
       var ops = [];
       labelBase = prof.labelCount;
@@ -5973,7 +6005,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (ownF) ctx.fillText = of; else delete ctx.fillText;
         if (ownS) ctx.strokeText = os; else delete ctx.strokeText;
       }
-      labelCache = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H, ops: ops };
+      labelCache = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H, sig: sig, ops: ops };
       prof.labelRecalc++;
     }
 
@@ -6993,7 +7025,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           document.documentElement.classList.add('dragging');
         }
         if (dragStateTimer) { clearTimeout(dragStateTimer); dragStateTimer = 0; }
-        if (holdMs) dragStateTimer = setTimeout(function () { setDragState(false); }, holdMs);
+        if (holdMs) dragStateTimer = setTimeout(function () {
+          setDragState(false);
+          /* ⭐ 2026-10-19：**滚轮没有「松手」事件**，这 260ms 去抖就是它的收尾 ——
+             那一帧必须补一次重绘。不然最后一帧停在「回放」上，相机停稳之后再没人画，
+             名字就永远留在旧的一屏（用户报的「滚轮平移完，露出来的区域没名字」）。
+             ⚠️ 这里只是**踢一脚**重绘；「回放还是重算」由 renderer 判（本帧机位 ==
+                上一帧机位 ⇒ 停住 ⇒ 重算），交互层不碰标签逻辑。 */
+          requestDraw();
+        }, holdMs);
       } else {
         if (dragStateTimer) { clearTimeout(dragStateTimer); dragStateTimer = 0; }
         if (dragStateOn) {
@@ -50921,9 +50961,15 @@ MG.trunk = [
         cloudDrawn.tex = null;              // 纹理换了：这一次必须重铺
       }
       var tp = performance.now();
-      if (typeof prevCam === 'undefined') { var prevCam = null; var bakeIdleAt = 0; }
+      if (typeof prevCam === 'undefined') { var prevCam = null; var bakeIdleAt = 0; var wasAnimating = false; }
       var animating = cam.tick();
-      if (dirty || animating) {
+      /* ⭐ 2026-10-19：**动画刚结束的那一帧也要画一次**（settleDraw）。
+         否则「最后一帧」画的是「上一帧机位 + 回放」的标签，此后没人再画 ⇒ 名字永远差
+         最后一步的位移（松手 / 滚轮去抖是同一个病，见 interaction.js 的 260ms 收尾）。
+         renderer 判「本帧机位 == 上一帧机位 ⇒ 停住 ⇒ 重算」，这一帧正好喂给它。 */
+      var settleDraw = wasAnimating && !animating;
+      wasAnimating = animating;
+      if (dirty || animating || settleDraw) {
         var c = cam;
         if (cloudDrawn.tex !== cloudTex || cloudDrawn.k !== c.k ||
           cloudDrawn.tx !== c.tx || cloudDrawn.ty !== c.ty || cloudDrawn.w !== c.viewW ||
