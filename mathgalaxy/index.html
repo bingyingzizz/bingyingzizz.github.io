@@ -1471,7 +1471,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          （≈ 4.9×k₀ 的节点档）才回来；选中 / 悬停的边始终放行。
          背景：星团闸门（crossEdgeOut）只挡到 1.3×k₀，中景那一档
          跨领域的定义引用仍然铺成一张网（用户 2026-10-18 的反馈）。 */
-      regionEdgeIn: { rel: [4.20, 5.60] },
 
       /* —— 节点级：屏幕上相邻两点的像素距离 —— */
       nodeDotIn:  { px: [8, 20] },            // 圆点：几乎一直在
@@ -1499,7 +1498,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* ⭐ 阶段 3：远尺度**默认收起「逐条跨团长线」**（团内的关系照旧画）。
          这条只作用于「两端不在同一个星团」的边；选中 / 聚焦的边一律放行，
          `showAllEdges` 打开时也放行。⛔ 不画任何「板块 A ⟹ 板块 B」的聚合箭头。 */
-      crossEdgeOut: { rel: [0.90, 1.70] },
 
       /* 定义引用线在「领域 / 星团」尺度压暗的区间（×k₀）。曲线形状和
          `edge.definitionMidScale` 一起用：区间内乘 0.60，两端恢复 1.0。 */
@@ -3630,116 +3628,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       });
     })();
 
-    /* ⭐ 2026-10-19 试装：**跨板块领域放在哪里**（`?cond=cross` 才走）。
-       现在的规则是「跟着主板块平移」，于是凝聚态数学整个落在代数板块里；
-       但它的料来自拓扑（63 条）、同调（28 条）、范畴（29 条）——
-       该站在那几门的交界上。这里按**真实边数**加权，把它的圆心挪到加权重心。
-       ⛔ 默认 'sector'（今天的样子）；等挑完再删掉另一条。 */
-    var condPlace = (function () {
-      var s = String(global.location && global.location.search || '');
-      var m = /[?&]cond=(cross|gap)/.exec(s);
-      return m ? m[1] : 'sector';
-    })();
-    var condInfo = null;
-    if (condPlace !== 'sector') {
-      var primReg = Object.create(null);
-      nodes.forEach(function (n) { if (n.regions && n.regions.length) primReg[n.id] = n.regions[0]; });
-      (graph.regions || []).forEach(function (r) {
-        var sec = (graph.sectors || []).filter(function (s) {
-          return (s.secondary && s.secondary[r.id]) || (s.regions || []).indexOf(r.id) >= 0;
-        });
-        var extra = [];
-        sec.forEach(function (s) { if (s.secondary && s.secondary[r.id]) extra = extra.concat(s.secondary[r.id]); });
-        if (!extra.length) return;
-        /* 权重 = 与「同属那几个板块的其它领域」之间的边数 */
-        var wts = Object.create(null);
-        graph.edges.forEach(function (e) {
-          var ids = MG.graphUtil.edgeNodes(e);
-          for (var a = 0; a < ids.length; a++) for (var b = 0; b < ids.length; b++) {
-            if (a === b) continue;
-            if (primReg[ids[a]] !== r.id) continue;
-            var other = primReg[ids[b]];
-            if (!other || other === r.id) continue;
-            wts[other] = (wts[other] || 0) + 1;
-          }
-        });
-        var sum = 0, tx = 0, ty = 0, parts = [];
-        Object.keys(wts).forEach(function (rid) {
-          var rr = graph.regionById[rid];
-          if (!rr || !rr.center) return;
-          sum += wts[rid]; tx += rr.center.x * wts[rid]; ty += rr.center.y * wts[rid];
-          parts.push({ id: rid, w: wts[rid] });
-        });
-        if (!sum) return;
-        parts.sort(function (x, y) { return y.w - x.w; });
-        var delta = { x: tx / sum - r.center.x, y: ty / sum - r.center.y };
-        r.center = { x: tx / sum, y: ty / sum };
-        graph.clusters.forEach(function (c) {
-          if (c.parent !== r.id || !c.center) return;
-          c.center = { x: c.center.x + delta.x, y: c.center.y + delta.y };
-        });
-        condInfo = { region: r.id, parts: parts.slice(0, 5), center: { x: Math.round(r.center.x), y: Math.round(r.center.y) } };
-      });
-    }
-
-    /* ⭐ 2026-10-19：**团级硬净空**。板块缝收到 0 之后，「不粘连」不能再靠留白保证 ——
-       这里对团心做一遍圆盘碰撞（半径 = 团自己的 `_cap`），保证「挨着但不叠」。
-       只推团心（节点锚点随后由团心算），不动板块、不动领域中心。无随机数。 */
-    /* ⭐ 2026-10-19 用户定稿：**跨领域星团**（次要领域成员 ≥15%）不再硬归一边 ——
-       圆心落在两个领域中心连线上（按成员比例插值），颜色按比例混合；
-       之后由 separateClusters 的硬净空把它嵌在两块之间，不重叠。 */
-    (function crossClusters() {
-      var HEX = '0123456789ABCDEF';
-      function hex2(r, g, b) {
-        var f = function (v) { return HEX[(v >> 4) & 15] + HEX[v & 15]; };
-        return '#' + f(r) + f(g) + f(b);
-      }
-      liveClusters.forEach(function (c) {
-        var cnt = Object.create(null), tot = 0;
-        c.nodes.forEach(function (nd) {
-          tot++;
-          (nd.regions || []).forEach(function (r) { cnt[r] = (cnt[r] || 0) + 1; });
-        });
-        var keys = Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a]; });
-        if (keys.length < 2) return;
-        if (cnt[keys[1]] / Math.max(1, tot) < 0.15) return;
-        var A = graph.regionById[keys[0]], B = graph.regionById[keys[1]];
-        if (!A || !B || !A.center || !B.center) return;
-        var t = cnt[keys[1]] / (cnt[keys[0]] + cnt[keys[1]]);
-        c.cross = [keys[0], keys[1]];
-        c.center = {
-          x: A.center.x * (1 - t) + B.center.x * t,
-          y: A.center.y * (1 - t) + B.center.y * t
-        };
-        var ca = U.hexToRgb(A.color || '#7A8699'), cb = U.hexToRgb(B.color || '#7A8699');
-        c.color = hex2(Math.round(ca.r * (1 - t) + cb.r * t),
-                       Math.round(ca.g * (1 - t) + cb.g * t),
-                       Math.round(ca.b * (1 - t) + cb.b * t));
-      });
-    })();
-    (function separateClusters() {
-      var list = liveClusters.filter(function (c) { return c.center && c._cap > 0; });
-      var gap = cfg.clusterGap == null ? 24 : cfg.clusterGap;
-      for (var it = 0; it < 120; it++) {
-        var worst = 0;
-        for (var a = 0; a < list.length; a++) {
-          for (var b = a + 1; b < list.length; b++) {
-            var A = list[a], B = list[b];
-            var dx = B.center.x - A.center.x, dy = B.center.y - A.center.y;
-            var d = Math.sqrt(dx * dx + dy * dy) || 0.01;
-            var need = A._cap + B._cap + gap;
-            var delta = need - d;
-            if (delta <= 0.5) continue;
-            if (delta > worst) worst = delta;
-            var ux = dx / d, uy = dy / d, move = delta * 0.5 * 0.65;
-            A.center.x -= ux * move; A.center.y -= uy * move;
-            B.center.x += ux * move; B.center.y += uy * move;
-          }
-        }
-        if (worst < 0.5) break;
-      }
-    })();
-
     /* ------------------------------------------------ 2. 节点锚点 */
     var buckets = Object.create(null);   // 无星团节点按星系分桶
     var borders = [], orphans = [];
@@ -3992,8 +3880,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       longEdges: _long.slice(0, 12),
       longCount: _long.length,
       longMax: _long.length ? _long[0].d : 0,
-      condPlace: condPlace,
-      cond: condInfo,
       ranIters: ranIters,
       bbox: { w: Math.round(bb0.maxX - bb0.minX), h: Math.round(bb0.maxY - bb0.minY) }
     };
@@ -4473,8 +4359,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     var lodA = {
       galaxyName: 1, clusterName: 1, nodeDot: 1,
       nodeName: 1, trunkName: 0, nodeEdge: 1, clusterLink: 0,
-      trunkEdge: 0, trunkDim: 1, envelope: 0, sectorName: 1, crossEdge: 0,
-      defDim: 1, tier: 0, regionEdge: 0, sectorLink: 1
+      trunkEdge: 0, trunkDim: 1, envelope: 0, sectorName: 1
+      defDim: 1, tier: 0
     };
 
     /* ⭐ 尺度档位的**回差**：0 大板块 / 1 领域 / 2 星团 / 3 节点近景。
@@ -4578,16 +4464,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* 大板块名：**只有它在最远视角**。档位 0 之外一律不画。 */
       var secName = smoothstep(tSec[0], tSec[1], k) * (1 - smoothstep(tSecOut[0], tSecOut[1], k));
       lodA.sectorName = tier === 0 ? secName : 0;
-      /* 跨团长线：**远尺度收起**（crossEdge→0），放大到领域/星团尺度才回来 */
-      var tCross = thr(L.crossEdgeOut);
-      lodA.crossEdge = smoothstep(tCross[0], tCross[1], k);
-      /* 跨**领域**（不是跨团）的逐条边：中景收起，近景才回来（见 config.lod.regionEdgeIn） */
-      var tReg = thr(L.regionEdgeIn || { rel: [4.20, 5.60] });
-      lodA.regionEdge = smoothstep(tReg[0], tReg[1], k);
       /* 全景的一层：**每对板块最多一条很淡的聚合线**（1.00~1.30×k₀），
          放大一档就交给团级聚合线（它们自己按 clusterLinkOut 退场）。 */
       var tSecLink = thr({ rel: [1.00, 1.30] });
-      lodA.sectorLink = 1 - smoothstep(tSecLink[0], tSecLink[1], k);
       /* 定义引用线在中景降权（见 config.edge.definitionMidScale）：
          两个 draw 路径共用这一个系数 —— 定义线大部分走的是**合并描边**快路径，
          只改 drawEdgeOne 会「改了没效果」（这条坑写在 HANDOVER 里）。 */
@@ -4611,7 +4490,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       lodA.clusterName = smoothstep(1.50, 1.70, rRel) * (1 - smoothstep(3.85, 4.80, rRel));
       lodA.nodeName = rRel < 2.8 ? 0 : smoothstep(2.8, 3.0, rRel);
       lodA.trunkName = rRel < 2.4 ? 0 : smoothstep(2.4, 2.6, rRel);
-      lodA.sectorLink = 0;
       /* ⭐⭐ 全景档（r<1.35）**不画节点**，只画团块 + 领域色场：1600×900 里铺 910 个点，
          任何布局都会变成均匀纹理（地图不在全览档画每栋楼）。r≥1.35 才淡入节点。 */
       lodA.nodeDot = smoothstep(1.32, 1.42, rRel);
@@ -6177,8 +6055,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           tier: lodA.tier, sector: lodA.sectorName, region: lodA.galaxyName,
           cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName,
           /* 下面这些是 2026-10-18 加的：判「全景还是一条网吗」「导出计数对不对」要读它们 */
-          trunkName: lodA.trunkName, clusterLink: lodA.clusterLink, sectorLink: lodA.sectorLink,
-          crossEdge: lodA.crossEdge, regionEdge: lodA.regionEdge, labelCount: prof.labelCount
+          trunkName: lodA.trunkName, clusterLink: lodA.clusterLink
+        labelCount: prof.labelCount
         };
       },
       profReset: function () { prof.edges = 0; prof.nodes = 0; prof.labels = 0; prof.labelCount = 0; prof.frames = 0; },
