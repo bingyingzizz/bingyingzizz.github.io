@@ -3685,6 +3685,38 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ⭐ 2026-10-19：**团级硬净空**。板块缝收到 0 之后，「不粘连」不能再靠留白保证 ——
        这里对团心做一遍圆盘碰撞（半径 = 团自己的 `_cap`），保证「挨着但不叠」。
        只推团心（节点锚点随后由团心算），不动板块、不动领域中心。无随机数。 */
+    /* ⭐ 2026-10-19 用户定稿：**跨领域星团**（次要领域成员 ≥15%）不再硬归一边 ——
+       圆心落在两个领域中心连线上（按成员比例插值），颜色按比例混合；
+       之后由 separateClusters 的硬净空把它嵌在两块之间，不重叠。 */
+    (function crossClusters() {
+      var HEX = '0123456789ABCDEF';
+      function hex2(r, g, b) {
+        var f = function (v) { return HEX[(v >> 4) & 15] + HEX[v & 15]; };
+        return '#' + f(r) + f(g) + f(b);
+      }
+      liveClusters.forEach(function (c) {
+        var cnt = Object.create(null), tot = 0;
+        c.nodes.forEach(function (nd) {
+          tot++;
+          (nd.regions || []).forEach(function (r) { cnt[r] = (cnt[r] || 0) + 1; });
+        });
+        var keys = Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a]; });
+        if (keys.length < 2) return;
+        if (cnt[keys[1]] / Math.max(1, tot) < 0.15) return;
+        var A = graph.regionById[keys[0]], B = graph.regionById[keys[1]];
+        if (!A || !B || !A.center || !B.center) return;
+        var t = cnt[keys[1]] / (cnt[keys[0]] + cnt[keys[1]]);
+        c.cross = [keys[0], keys[1]];
+        c.center = {
+          x: A.center.x * (1 - t) + B.center.x * t,
+          y: A.center.y * (1 - t) + B.center.y * t
+        };
+        var ca = U.hexToRgb(A.color || '#7A8699'), cb = U.hexToRgb(B.color || '#7A8699');
+        c.color = hex2(Math.round(ca.r * (1 - t) + cb.r * t),
+                       Math.round(ca.g * (1 - t) + cb.g * t),
+                       Math.round(ca.b * (1 - t) + cb.b * t));
+      });
+    })();
     (function separateClusters() {
       var list = liveClusters.filter(function (c) { return c.center && c._cap > 0; });
       var gap = cfg.clusterGap == null ? 24 : cfg.clusterGap;
@@ -3956,6 +3988,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       if (dd > 2000) _long.push({ d: Math.round(dd), id: e.id, kind: e.kind }); });
     _long.sort(function (x, y) { return y.d - x.d; });
     graph.layoutInfo = {
+      crossClusters: liveClusters.filter(function (c) { return !!c.cross; }).map(function (c) { return { id: c.id, cross: c.cross }; }),
       longEdges: _long.slice(0, 12),
       longCount: _long.length,
       longMax: _long.length ? _long[0].d : 0,
@@ -4578,8 +4611,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       lodA.clusterName = smoothstep(1.50, 1.70, rRel) * (1 - smoothstep(3.85, 4.80, rRel));
       lodA.nodeName = rRel < 2.8 ? 0 : smoothstep(2.8, 3.0, rRel);
       lodA.trunkName = rRel < 2.4 ? 0 : smoothstep(2.4, 2.6, rRel);
-      lodA.skeletonEdge = smoothstep(1.10, 1.20, rRel);
-      lodA.bodyEdge = smoothstep(2.70, 2.90, rRel);
       lodA.sectorLink = 0;
       /* ⭐⭐ 全景档（r<1.35）**不画节点**，只画团块 + 领域色场：1600×900 里铺 910 个点，
          任何布局都会变成均匀纹理（地图不在全览档画每栋楼）。r≥1.35 才淡入节点。 */
@@ -5374,59 +5405,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
        （276 条，按团心连，远看就是一片灰网）。
        全景改成「每对板块只留一条很淡的线」，放大一档才交回团级聚合线。 */
     var sectorPairCache = null;
-    function sectorPairs() {
-      if (sectorPairCache) return sectorPairCache;
-      var out = [], agg = Object.create(null), byId = Object.create(null);
-      (view.graph.sectors || []).forEach(function (s) { if (!s.empty) byId[s.id] = s; });
-      (view.graph.clusterLinks || []).forEach(function (l) {
-        var A = view.graph.clusterById[l.a], B = view.graph.clusterById[l.b];
-        if (!A || !B || !A.stat || !B.stat) return;
-        var sA = clusterSector(l.a), sB = clusterSector(l.b);
-        if (!sA || !sB || sA === sB) return;
-        var key = sA < sB ? sA + '|' + sB : sB + '|' + sA;
-        var o = agg[key];
-        if (!o) o = agg[key] = { a: sA < sB ? sA : sB, b: sA < sB ? sB : sA, count: 0 };
-        o.count += l.count;
-      });
-      Object.keys(agg).forEach(function (key) {
-        var o = agg[key];
-        if (o.count < 6) return;                       // 太弱的板块对不画
-        var sa = byId[o.a], sb = byId[o.b];
-        var pa = sa && sectorAnchor(sa), pb = sb && sectorAnchor(sb);
-        if (!pa || !pb) return;
-        o.pa = pa; o.pb = pb;
-        out.push(o);
-      });
-      out.sort(function (x, y) { return y.count - x.count; });
-      sectorPairCache = out;
-      return out;
-    }
-
     /** 全景的板块骨架：每对板块一条，alpha ≈0.05~0.13（远看只是「它们有关系」） */
-    function drawSectorLinks(alpha) {
-      var list = sectorPairs();
-      if (!list.length) return;
-      var cfgL = C.clusterLink;
-      ctx.save();
-      ctx.lineCap = 'round';
-      list.forEach(function (o) {
-        var p0 = w2s(o.pa.x, o.pa.y), p1 = w2s(o.pb.x, o.pb.y);
-        var dx = p1.x - p0.x, dy = p1.y - p0.y;
-        var len = Math.sqrt(dx * dx + dy * dy) || 1;
-        var bow = Math.min(110, len * 0.07);
-        var cx = (p0.x + p1.x) / 2 - (dy / len) * bow;
-        var cy = (p0.y + p1.y) / 2 + (dx / len) * bow;
-        var t = Math.min(1, o.count / 120);
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(cx, cy, p1.x, p1.y);
-        ctx.lineWidth = 1.0 + 1.2 * t;
-        ctx.strokeStyle = 'rgba(' + cfgL.color + ',' + (alpha * (0.055 + 0.075 * t)).toFixed(3) + ')';
-        ctx.stroke();
-      });
-      ctx.restore();
-    }
-
     /* ------------------------------------------------ 星团包络 */
     /**
      * 给一堆点画一圈闭合的平滑边界：绕一圈取 samples 个方向，
