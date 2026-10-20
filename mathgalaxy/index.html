@@ -6275,7 +6275,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (!txt) return;
         var wW = (txt.length * C.node.labelSize * 0.95 + C.node.labelPad * 2) / kk0;
         var hW = (C.node.labelSize + 6) / kk0;
-        var R = Math.max(wW, hW);
+        /* ⭐ 2026-10-20：归属判定按**可缩小后的尺寸**算 —— 屏幕层的避让已经会缩到 68%，
+           归属若仍按全尺寸卡，就会有一批名字永远拿不到资格（用户：「必须放到最大才看得见」）。 */
+        var R = Math.max(wW, hW) * 0.68;
         var cx = Math.floor(n.x / cell), cy = Math.floor(n.y / cell);
         var lim = Math.ceil(R / cell);
         for (var gx = -lim; gx <= lim; gx++) for (var gy = -lim; gy <= lim; gy++) {
@@ -6467,7 +6469,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             var bx2 = { x0: sp2.box.x0, y0: sp2.box.y0, x1: sp2.box.x1, y1: sp2.box.y1,
               id: n.id, kind: 'node' };
             var h2 = hitOf(bx2, placed);
-            if (!h2) { fs = fs2; tw = tw2; spot = sp2; x = sp2.x; y = sp2.y; box = bx2; hit = null; break; }
+            if (!h2) { fs = fs2; tw = tw2; spot = sp2; x = sp2.x; y = sp2.y; box = bx2; hit = null; fontBase = ctx.font; break; }
           }
           ctx.font = fontBase;
         }
