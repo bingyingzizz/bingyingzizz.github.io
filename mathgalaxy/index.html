@@ -4968,6 +4968,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ---------- 静态层（可烘）：包络 → 星团连线 → 边 → 节点 → 箭头 ---------- */
     function paintStatic(geoms) {
       var tE = performance.now();
+      if (edgeTraceOn) edgeTraceMap = Object.create(null);   // 诊断账本按帧清空，别读上一机位的旧记录
       if (!envLive) drawEnvelopes();       // 位图模式：包络交给实时层（见 paintDynamic）
 
       var defs = [], eqs = [], imps = [], anas = [];
@@ -5659,6 +5660,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return cross;
     }
 
+    /* ⭐ 诊断：逐边 alpha 账本（与 labelTrace 同一套用法：默认关，关着时零分配）。
+       `setEdgeTrace(true)` 之后，最近一次绘制里每条走过 drawEdgeOne 的边落一条：
+         { why, kind, r, lenPx, wlen, a0, a, inside }
+       `a0` = 节点级 LOD 之后的 alpha，`a` = 真正落笔的 alpha，`wlen` = lenPx / k。
+       用途：判「同一条边放大就淡了」到底是**屏幕长度**（lenPx 涨）还是**节点级 LOD**
+       （nodeEdge 掉）造成的 —— 探针要读的就是引擎自己算出来的那个 a，
+       ⛔ 别在探针里把公式抄一遍（抄出来的只是代理指标）。 */
+    var edgeTraceOn = false, edgeTraceMap = null;
+    function edgeTrace(g, why, a, a0, inside) {
+      if (!edgeTraceOn) return;
+      var k = camNow().k || 1;
+      edgeTraceMap[g.edge.id] = {
+        why: why, kind: g.edge.kind, r: lodA.rRel || 1,
+        lenPx: g.lenPx || 0, wlen: (g.lenPx || 0) / Math.max(1e-6, k),
+        a0: a0, a: a, inside: inside
+      };
+    }
+
     /** 逐条绘制（推出 / 等价 / 类比，以及定义线在别的调用点单画时）—— 与原来逐字一致 */
     function drawEdgeOne(g) {
       var e = g.edge;
@@ -5666,18 +5685,19 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var spine = isSpine(e);
       // 主干骨架：它有自己的淡入曲线，缩小时也能看见；放大后让位给全部连线
       var a = alphaForEdge(e) * Math.max(lodA.nodeEdge, spine ? lodA.trunkEdge : 0);
+      var aLod = a, insideN = -1;      // 诊断：LOD 之后的 a / 两端在屏内的个数
       var active = isEdgeActive(g);
       /* ⭐⭐ 2026-10-19 用户定稿的线条规则（取代 Stage 1b 的三档）：
          · 全景（r<1.35）：**全都画**，整体顶到 0.30 —— 一层「雾网」，不是空的；
          · 中景（1.35≤r<2.8）：全都画，不按 kind 过滤、不藏跨领域线；
-         · 近景（r≥2.8）：只画**至少一端在视口内**的（另一端在外按屏幕长度衰减）。
+         · 近景（r≥2.8）：只画**至少一端在视口内**的；长线按**世界长度**降权（edgeFade）。
          ⛔ clusterLinks 聚合线已删（用户：「实在是不明显指代什么」）。
          ⚠️ 全景那档节点级 px 闸门是 0，必须顶一个下限，否则一条线都没有。 */
       var rT = lodA.rRel || 1;
       if (!active && !C.showAllEdges) {
         /* ⭐ 2026-10-19：全景不画节点，黑线（推出/等价）就只剩「浮空的箭头骨架」——
            用户要求这一档只留蓝色的定义引用当雾网。 */
-        if (rT < 1.35 && e.kind !== 'definition') return;
+        if (rT < 1.35 && e.kind !== 'definition') { edgeTrace(g, 'far', 0, aLod, -1); return; }
         if (rT >= 2.8) {
           var endIds = GU.edgeNodes(e), inside = 0;
           for (var ei = 0; ei < endIds.length; ei++) {
@@ -5686,16 +5706,29 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             var sp = w2s(en.x, en.y);
             if (sp.x >= 0 && sp.x <= W && sp.y >= 0 && sp.y <= H) inside++;
           }
-          if (inside === 0) return;
-          /* ⭐ 2026-10-19：定义线**不按屏幕长度衰减** —— 长定义边在深缩放下 lenPx 上下、
-             指数一乘就归零，于是「群在视窗里、另一端在屏外」时整条线消失（用户报）。
-             非定义线保留这条（它本来就短，衰减只是防糊）。 */
-          if (inside === 1 && e.kind !== 'definition') a *= Math.exp(-(g.lenPx || 0) / 320);
-          /* ⛔ 两端都在屏内但横穿整屏的线同样算「长线」—— 原来只在 inside===1 时衰减，
-             于是屏内一条 1200px 的蓝线永远活着（用户截图里那几条就是它）。 */
-          /* ⛔ 2026-10-19：近景的长线**不留下限**。原来 max(0.03,…) 会让 0.8×0.03=0.024
-             刚好压线通过 α>0.02 的闸门 ⇒ 空白区域里飘几条横穿全屏的蓝线（用户报了）。 */
-          if (a <= 0.06) return;
+          insideN = inside;
+          if (inside === 0) { edgeTrace(g, 'off', 0, aLod, 0); return; }
+          /* ⭐⭐ 2026-10-2x（手机上报「全景很清楚、稍微放大就没了」）：
+             ⛔ **删掉按屏幕长度衰减**（原来是 exp(-lenPx/320)）。理由有两条：
+               ① 同一个量（这条边有多长）已经在 `edgeFade(g)` 里按**世界长度**算过一次，
+                 这里再按 lenPx 算一遍就是两个口径打架；手机上视口只有 390 CSS px，
+                 稍微一放大 lenPx 就上百（实测 r=6 时 647 px ⇒ 乘数只剩 e^-2.0≈0.13），
+                 而世界长度根本没变。
+               ② 长线该淡仍然会淡：`edgeFade` 的世界长度 1300→3400、floor 0.18 兜着，
+                 和缩放到哪一档无关（任何缩放下同一条边的浓淡都是同一个值）。
+             ⭐ 近景**保留连续下限**：`edgeFloor` 在 r=2.8 处正好是 0.75，而节点级的
+               `nodeEdge` 要等「节点间距 36~66 px」（k 0.30~0.55）才亮起来 ——
+               手机上 kFit≈0.06 ⇒ 那是 r≈5~9。于是 r 2.8→5 这一段黑线被 nodeEdge=0
+               掐成**一条都不画**，与 r<2.8 的 0.75 之间是一道断崖（实测 2.79→2.81
+               一步之内：203 条 drawn@0.75 变成 4 条 drawn + 166 条 faded）。
+               近景不该比中景更淡 ⇒ 下限与中景同一条曲线（lodA.edgeFloor）。
+             ⛔ 带 `!view.focus`：聚焦时 alphaForEdge 会把无关的边压到 dimEdge，
+                近景不该把这份「压暗」再顶回来（中景那条 floor 没这个保护，历史遗留）。 */
+          if (!view.focus) a = Math.max(a, lodA.edgeFloor);
+          /* ⛔ 两端都在屏内但横穿整屏的线同样算「长线」—— 交给 edgeFade（世界长度）。
+             ⛔ 近景的长线**不额外留下限**：空白区域里飘几条横穿全屏的线是 2026-10-19
+                用户报过的（当时的 0.03 下限正好压线通过 α>0.02 的闸门）。 */
+          if (a <= 0.06) { edgeTrace(g, 'faded', a, aLod, insideN); return; }
         } else {
           a = Math.max(a, lodA.edgeFloor);
         }
@@ -5709,7 +5742,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          不顶一个下限的话这个开关在那一档**什么也不做**（看着像坏按钮）。
          下限取 0.14：够看见网，又不至于糊成一片 —— 关掉就回到分档。 */
       if (C.showAllEdges) a = Math.max(a, 0.14);
-      if (a <= 0.02) return;
+      if (a <= 0.02) { edgeTrace(g, 'dim', a, aLod, insideN); return; }
 
       /* ⭐ 中景：**跨领域的逐条边默认收起**（用户 2026-10-18：
          「中景像一张网，压过节点和文字」）。选中 / 悬停 / 「全部连线」放行；
@@ -5766,6 +5799,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         }
       });
       ctx.stroke();
+      edgeTrace(g, 'drawn', a, aLod, insideN);
 
       // 等价线中点画一个 ⟺（用白色描边做底，而不是白方块，免得在云上留个补丁）
       if (g.glyph && cam_eqVisible()) {
@@ -5874,6 +5908,41 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ---------------------------------------------------------- 名称 */
     function isTrunk(n) { return !!(n && n.trunk); }
 
+    /* ⭐⭐ 2026-10-2x **贴边名字夹回画布**（用户报「屏幕边缘的节点名字缺失，中间正常」）。
+       取证（`_tools/_p2labels.js` / `_p3pan.js`）：边缘节点在 labelTrace 里**是 drawn**、
+       画布上也真有墨 —— 丢名字的不是候选 / 避让 / 预算，也不是 LAB_MARGIN 贴图
+       （余量 240 > 回放上限 min(vw/2, 216)，被裁掉的那圈**永远在视口外**；
+       实测平移 120 px 回放，83/83 个名字一个没丢）。
+       真正丢的是**画布边**：名字居中画在节点下方，节点贴到视口边上时这个位置就落到
+       画布外面了（左右各切半截，下边整条掉出去）。实测 390×844、r=6：
+       节点中心在屏内的名字 89 条，其中 **19 条的框有一部分在画布外**、2 条整条在下方
+       （`ink=0`）；桌面 1600×900、r=3：219 条里 14 条被切、2 条看不见。
+       判据用**名字框**（实体），不用节点中心：
+         · 左右溢出 ⇒ 整块平移到框贴住那条边；
+         · 下面放不下 ⇒ 翻到节点**上方**（⛔ 不是往上夹 —— 夹住会压在节点自己身上）；
+         · ⛔ 只在**节点本身在屏内**（±r）时夹：节点在屏外还夹的话，会拖出一串
+           和圆点脱钩的「浮空名字」（屏幕边上看着像无主的标签）。
+       ⚠️ 名字比整屏还宽时只能居中（两头都切），这是唯一的例外。
+       返回 { x, y, box }：x/y 是文字锚点（textAlign=center、textBaseline=top），
+       box 是占位框 —— 避让与落笔必须用**同一个**框。 */
+    function nameSpot(px, py, r, tw, fs, camK) {
+      var pad = C.node.labelPad;
+      var half = tw / 2 + pad;
+      var off = C.node.labelOffset * Math.max(camK, 0.62);
+      var x = px, y = py + r + off;
+      var dotIn = px >= -r && px <= W + r && py >= -r && py <= H + r;
+      if (dotIn) {
+        if (half * 2 >= W) x = W / 2;
+        else if (x - half < 0) x = half;
+        else if (x + half > W) x = W - half;
+        if (y + fs + 2 > H) {                     // 下面放不下 ⇒ 翻到节点上方
+          y = py - r - off - fs - 2;
+          if (y < 0) y = 0;                       // 上面也没有余量（节点在顶上）⇒ 贴顶
+        }
+      }
+      return { x: x, y: y, box: { x0: x - half, y0: y - 1, x1: x + half, y1: y + fs + 2 } };
+    }
+
     /** 这一帧「必须赢」的标签：**选中 → 悬停 → 搜索命中**。
         为什么要在画板块名之前先占位：placeName() 是「先到先得」的队列，
         大标题（18px 粗体）比节点名大得多，晚一步就永远挤不进去 ——
@@ -5905,10 +5974,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var r = nodeRadius(n);
         var text = n.labelShow || n.label;
         var tw = measure(ctx, text, ctx.font);
-        var x = p.x, y = p.y + r + C.node.labelOffset * Math.max(k, 0.62);
+        var spot = nameSpot(p.x, p.y, r, tw, fs, k);
+        var x = spot.x, y = spot.y;
         var box = {
-          x0: x - tw / 2 - C.node.labelPad, y0: y - 1,
-          x1: x + tw / 2 + C.node.labelPad, y1: y + fs + 2, rank: it.rank,
+          x0: spot.box.x0, y0: spot.box.y0,
+          x1: spot.box.x1, y1: spot.box.y1, rank: it.rank,
           id: it.id, kind: 'special'
         };
         /* 特殊标签之间也避让；但**选中 / 悬停那一颗必须出现**（放不下就压上去）。 */
@@ -6238,17 +6308,19 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          这么一换，边界抖动从「节点中心过线」变成「名字真的出屏」——平移时不再
          有几百个节点在排序里整体跳档（用户 2026-10 报的「同一名字换机位就没了」）。
          ⚠️ 量宽度只在 PAD_NODE 余量内做；`measure` 有缓存（键含 font 与语言），
-            第二次起是哈希查找，不是每帧重排 910 次文字。 */
-      var labOff = C.node.labelOffset * Math.max(k, 0.62);
+            第二次起是哈希查找，不是每帧重排 910 次文字。
+         ⭐⭐ 2026-10-2x：框一律走 `nameSpot()` —— **和落笔同一个实现**。贴边夹回画布
+            之后，下边缘的名字会翻到节点上方（从「屏外」变成「屏内」）、左右边缘的
+            名字会平移；排序判据不跟着走的话，它们会被当成余量里的名字排到最后。 */
       ctx.font = '600 ' + fs + 'px ' + T.font;
       for (oi = 0; oi < allNodes.length; oi++) {
         oN = allNodes[oi];
         oS = screenOf(oN);
         var onI = 0;
         if (oS.x > -PAD_NODE && oS.x < W + PAD_NODE && oS.y > -PAD_NODE && oS.y < H + PAD_NODE) {
-          var hwI = measure(ctx, oN.labelShow || oN.label, ctx.font) / 2 + C.node.labelPad;
-          var ytI = oS.y + nodeRadius(oN) + labOff - 1;
-          onI = (oS.x + hwI > 0 && oS.x - hwI < W && ytI + fs + 3 > 0 && ytI < H) ? 1 : 0;
+          var bI = nameSpot(oS.x, oS.y, nodeRadius(oN),
+            measure(ctx, oN.labelShow || oN.label, ctx.font), fs, k).box;
+          onI = (bI.x1 > 0 && bI.x0 < W && bI.y1 > 0 && bI.y0 < H) ? 1 : 0;
         }
         order.push({
           n: oN, x: oS.x, y: oS.y,
@@ -6324,8 +6396,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var r = nodeRadius(n);
         var text = n.labelShow || n.label;         // ⭐ T2.4：节点名跟语言走（启动时算一次）
         var tw = measure(ctx, text, ctx.font);
-        var x = p.x, y = p.y + r + C.node.labelOffset * Math.max(k, 0.62);
-        var box = { x0: x - tw / 2 - C.node.labelPad, y0: y - 1, x1: x + tw / 2 + C.node.labelPad, y1: y + fs + 2,
+        var spot = nameSpot(p.x, p.y, r, tw, fs, k);   // ⭐ 贴边夹回画布（见 nameSpot）
+        var x = spot.x, y = spot.y;
+        var box = { x0: spot.box.x0, y0: spot.box.y0, x1: spot.box.x1, y1: spot.box.y1,
           id: n.id, kind: 'node' };
 
         var hit = null;
@@ -6498,6 +6571,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       labelStat: function () { return labelStat; },
       setLabelTrace: function (on) { labelTraceOn = !!on; if (!labelTraceOn) labelTraceMap = null; return labelTraceOn; },
       labelTrace: function () { return labelTraceMap; },
+      /* 诊断：逐边 alpha 账本（默认关、零分配）。返回 { [edgeId]: {why,kind,r,lenPx,wlen,a0,a,inside} } */
+      setEdgeTrace: function (on) {
+        edgeTraceOn = !!on;
+        edgeTraceMap = edgeTraceOn ? Object.create(null) : null;
+        return edgeTraceOn;
+      },
+      edgeTrace: function () { return edgeTraceMap; },
       /* 诊断用：节点名的**每帧预算**（和画的那一趟同一个函数，⛔ 别在探针里另算一遍） */
       labelBudget: function () { return nodeNameBudget(); },
       /* 诊断用：当前帧的 LOD 读数（档位 / 三档名字 / 定义线系数）。
@@ -6510,6 +6590,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
           cluster: lodA.clusterName, defDim: lodA.defDim, nodeName: lodA.nodeName,
           /* 下面这些是 2026-10-18 加的：判「全景还是一条网吗」「导出计数对不对」要读它们 */
           trunkName: lodA.trunkName, clusterLink: lodA.clusterLink,
+          /* 2026-10-2x：判「黑线为什么淡了」要读的两个喂给 alpha 的系数 */
+          nodeEdge: lodA.nodeEdge, edgeFloor: lodA.edgeFloor,
           labelCount: prof.labelCount
         };
       },
