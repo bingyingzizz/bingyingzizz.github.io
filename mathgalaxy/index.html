@@ -6294,6 +6294,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return set;
     }
 
+
+    /** 框是否撞到已放置的框（撞到就返回那个框） */
+    function hitOf(box, list) {
+      for (var i = 0; i < list.length; i++) {
+        var b = list[i];
+        if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) return b;
+      }
+      return null;
+    }
+
     function drawLabels() {
       /* 特殊标签（选中 / 悬停 / 搜索命中）**先画**：它们在 reserveSpecialLabels()
          里已经占好位，普通名字不会压上去。 */
@@ -6441,10 +6451,25 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var box = { x0: spot.box.x0, y0: spot.box.y0, x1: spot.box.x1, y1: spot.box.y1,
           id: n.id, kind: 'node' };
 
-        var hit = null;
-        for (var i = 0; i < placed.length; i++) {
-          var b = placed[i];
-          if (box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0) { hit = b; break; }
+        var hit = hitOf(box, placed);
+        /* ⭐⭐ 2026-10-20 用户要求：**撞了先缩字号，缩到底还不下才不画**。
+           以前一撞直接 return，于是有些名字必须放到最大才看得见。
+           最多缩到 10px（再小读不出）；每档重新量宽、重算框、重新判避让。 */
+        if (hit) {
+          var fontBase = ctx.font;
+          var tries = [0.88, 0.78, 0.68];
+          for (var ti = 0; ti < tries.length; ti++) {
+            var fs2 = Math.round(Math.max(10, fs * tries[ti]) * 10) / 10;
+            if (fs2 >= fs - 0.05) break;
+            ctx.font = fontBase.replace(/(\d+(?:\.\d+)?)px/, fs2 + 'px');
+            var tw2 = measure(ctx, text, ctx.font);
+            var sp2 = nameSpot(p.x, p.y, r, tw2, fs2, k);
+            var bx2 = { x0: sp2.box.x0, y0: sp2.box.y0, x1: sp2.box.x1, y1: sp2.box.y1,
+              id: n.id, kind: 'node' };
+            var h2 = hitOf(bx2, placed);
+            if (!h2) { fs = fs2; tw = tw2; spot = sp2; x = sp2.x; y = sp2.y; box = bx2; hit = null; break; }
+          }
+          ctx.font = fontBase;
         }
         if (hit) {
           st.cutAvoid++;
