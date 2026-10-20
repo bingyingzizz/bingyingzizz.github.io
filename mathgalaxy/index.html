@@ -5930,16 +5930,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var half = tw / 2 + pad;
       var off = C.node.labelOffset * Math.max(camK, 0.62);
       var x = px, y = py + r + off;
-      var dotIn = px >= -r && px <= W + r && py >= -r && py <= H + r;
-      if (dotIn) {
-        if (half * 2 >= W) x = W / 2;
-        else if (x - half < 0) x = half;
-        else if (x + half > W) x = W - half;
-        if (y + fs + 2 > H) {                     // 下面放不下 ⇒ 翻到节点上方
-          y = py - r - off - fs - 2;
-          if (y < 0) y = 0;                       // 上面也没有余量（节点在顶上）⇒ 贴顶
-        }
-      }
+      /* ⛔ 2026-10-20 用户明确否决「贴边夹回画布 / 翻到上方」：名字就画在节点正下方，
+         落到画布外就不画。别再自作主张给它找位置。 */
       return { x: x, y: y, box: { x0: x - half, y0: y - 1, x1: x + half, y1: y + fs + 2 } };
     }
 
