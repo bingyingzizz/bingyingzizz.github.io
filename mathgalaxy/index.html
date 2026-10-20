@@ -6252,6 +6252,48 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       blitLabels(0, 0);
     }
 
+
+    /* ⭐⭐ 2026-10-20 **名字归属与视口无关**（用户指出的机制）：
+       原来「谁画名字」是在**本帧已放置的名字**之间做避让 ⇒ A 是否出现取决于
+       B 此刻在不在屏内；平移到边缘时 B 出屏、A 冒出来，再移回来 A 又消失 —— 看着像闪。
+       现在按**世界空间**算一次归属：按优先级从高到低，若自己标签框的世界范围内
+       没有更高优先级的节点，就独占这个名字。只看布局与优先级、不看相机 ⇒
+       平移不改变归属；缩放换档（k 每 2.5% 一档）才重算。
+       ⛔ 屏幕空间避让仍保留（真重叠才跳过），只是不再由它决定「谁有资格」。 */
+    var ownCache = { key: '', set: null };
+    function labelOwnSet(k) {
+      var key = Math.round(k * 40) + '|' + (MG.displayLang || 'zh') + '|' + (C.showLabels ? 1 : 0);
+      if (ownCache.key === key) return ownCache.set;
+      var kk0 = Math.max(0.02, k);
+      var ns = view.graph.nodes.slice().sort(function (a, b) {
+        return (labelPriority(b) - labelPriority(a)) || (a.id < b.id ? -1 : 1);
+      });
+      var cell = Math.max(6, (C.node.labelSize + 12) / kk0);
+      var grid = Object.create(null), set = Object.create(null);
+      ns.forEach(function (n) {
+        var txt = n.labelShow || n.label;
+        if (!txt) return;
+        var wW = (txt.length * C.node.labelSize * 0.95 + C.node.labelPad * 2) / kk0;
+        var hW = (C.node.labelSize + 6) / kk0;
+        var R = Math.max(wW, hW);
+        var cx = Math.floor(n.x / cell), cy = Math.floor(n.y / cell);
+        var lim = Math.ceil(R / cell);
+        for (var gx = -lim; gx <= lim; gx++) for (var gy = -lim; gy <= lim; gy++) {
+          var arr = grid[(cx + gx) + ',' + (cy + gy)];
+          if (!arr) continue;
+          for (var i = 0; i < arr.length; i++) {
+            var m = arr[i], R2 = Math.max(R, m.R);
+            if (Math.abs(m.x - n.x) < R2 && Math.abs(m.y - n.y) < R2) return;
+          }
+        }
+        var key2 = cx + ',' + cy;
+        (grid[key2] || (grid[key2] = [])).push({ x: n.x, y: n.y, R: R });
+        set[n.id] = 1;
+      });
+      ownCache = { key: key, set: set };
+      return set;
+    }
+
     function drawLabels() {
       /* 特殊标签（选中 / 悬停 / 搜索命中）**先画**：它们在 reserveSpecialLabels()
          里已经占好位，普通名字不会压上去。 */
@@ -6374,6 +6416,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (!inView(p.x, p.y, PAD_NODE)) { st.cutOff++; if (miss) miss(n.id, 'off', ex); return; }
         st.cand++;
         if (ex) ex.cand = st.cand;
+        /* 归属与视口无关：不独占就不画（见 labelOwnSet）。主干/枢纽/选中/悬停/搜索命中不受限。 */
+        if (!labelMustDraw(n) && !labelOwnSet(k)[n.id]) {
+          st.cutOwn = (st.cutOwn || 0) + 1;
+          if (miss) miss(n.id, 'own', ex);
+          return;
+        }
         /* ⭐⭐ 每帧节点名预算：按**可用面积**给（见 nodeNameBudget），只数真的画上去的节点名，
            而且**主干 / 枢纽 / 选中 / 悬停 / 搜索命中永远不吃预算**（labelMustDraw）。
            背景（用户 2026-10 在平板上报「一半节点名一直不显示，换个机位换一批」）：
