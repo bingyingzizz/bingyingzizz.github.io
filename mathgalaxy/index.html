@@ -6280,18 +6280,21 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         /* ⭐ 2026-10-20：归属判定按**可缩小后的尺寸**算 —— 屏幕层的避让已经会缩到 68%，
            归属若仍按全尺寸卡，就会有一批名字永远拿不到资格（用户：「必须放到最大才看得见」）。 */
         var R = Math.max(wW, hW) * 0.68;
+        /* ⭐ 2026-10-20 用户报「明明不冲突却没有名字」：原来用 max(R) 的**方框**判重叠，
+           等于把标签当正方形、边长取最长边 ⇒ 过度保守。这里按真·矩形相交判（半宽之和 + 半高之和）。 */
+        var _hw = wW / 2, _hh = hW / 2;
         var cx = Math.floor(n.x / cell), cy = Math.floor(n.y / cell);
         var lim = Math.ceil(R / cell);
         for (var gx = -lim; gx <= lim; gx++) for (var gy = -lim; gy <= lim; gy++) {
           var arr = grid[(cx + gx) + ',' + (cy + gy)];
           if (!arr) continue;
           for (var i = 0; i < arr.length; i++) {
-            var m = arr[i], R2 = Math.max(R, m.R);
-            if (Math.abs(m.x - n.x) < R2 && Math.abs(m.y - n.y) < R2) return;
+            var m = arr[i];
+            if (Math.abs(m.x - n.x) < (_hw + (m.hw || _hw)) && Math.abs(m.y - n.y) < (_hh + (m.hh || _hh))) return;
           }
         }
         var key2 = cx + ',' + cy;
-        (grid[key2] || (grid[key2] = [])).push({ x: n.x, y: n.y, R: R });
+        (grid[key2] || (grid[key2] = [])).push({ x: n.x, y: n.y, hw: wW / 2, hh: hW / 2 });
         set[n.id] = 1;
       });
       ownCache = { key: key, set: set };
