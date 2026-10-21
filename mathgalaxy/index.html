@@ -6459,7 +6459,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
            最多缩到 10px（再小读不出）；每档重新量宽、重算框、重新判避让。 */
         if (hit) {
           var fontBase = ctx.font;
-          var tries = [0.88, 0.78, 0.68];
+          var tries = [];   /* 2026-10-20 停用：按本帧碰撞缩字号会让平移时字号乱跳（用户报） */
           for (var ti = 0; ti < tries.length; ti++) {
             var fs2 = Math.round(Math.max(10, fs * tries[ti]) * 10) / 10;
             if (fs2 >= fs - 0.05) break;
