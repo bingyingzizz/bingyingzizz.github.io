@@ -12,6 +12,8 @@ $$f = c\, p_1 p_2 \cdots p_r, \qquad c \in K^{\times},\ p_i \text{ monic irreduc
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.primary-decomposition`](../nodes/thm.primary-decomposition.md) 根子空间分解
 
+- …另有出边，续页见 [nodes/thm.poly-ufd.3.md](./thm.poly-ufd.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.poly-ufd.2.md](./thm.poly-ufd.2.md)
 

@@ -15,6 +15,8 @@ $$f = q\,g + r, \qquad \deg r < \deg g$$
 - ⇒ [`thm.factor-theorem`](../nodes/thm.factor-theorem.md) 因式定理与根
 - ⇒ [`thm.poly-ufd`](../nodes/thm.poly-ufd.md) K[x] 是唯一分解整环
 
+- …另有出边，续页见 [nodes/thm.division-algorithm.3.md](./thm.division-algorithm.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.division-algorithm.2.md](./thm.division-algorithm.2.md)
 

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.prime-ideal`](../nodes/prop.prime-ideal.md) 素理想与极大理想
 - 被 [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据 用
+- 被 [`def.divides`](../nodes/def.divides.md) 整除 用

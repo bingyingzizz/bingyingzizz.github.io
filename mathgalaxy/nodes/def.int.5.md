@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.int-ring`](../nodes/thm.int-ring.md) ℤ 是交换整环
+- 被 [`def.divides`](../nodes/def.divides.md) 整除 用
 - 被 [`def.rat`](../nodes/def.rat.md) 有理数 ℚ 用

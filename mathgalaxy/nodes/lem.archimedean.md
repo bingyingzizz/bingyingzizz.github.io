@@ -1,5 +1,5 @@
 # Archimedes 性质　`lem.archimedean`
-阿基米德性质与 $\mathbb{Q}$ 的稠密性
+Archimedes 性质与 $\mathbb{Q}$ 的稠密性
 layer 14 · 引理 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=lem.archimedean)　·　[节点索引](../index.md)
 

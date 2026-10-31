@@ -19,4 +19,5 @@
 - 解析空间　`alias/aka/analytic.md` 0+15
 - 复变函数　`alias/aka/complex.md` 0+73
 - 微分几何　`alias/aka/diffgeom.md` 0+24
+- 数论　`alias/aka/number.md` 0+15
 
