@@ -1,4 +1,4 @@
-# 斯通定理　`thm.metric-paracompact`
+# Stone 定理　`thm.metric-paracompact`
 度量空间必为仿紧空间
 layer 14 · 定理 · 可度量化 · 拓扑学
 [在星图里打开](../#n=thm.metric-paracompact)　·　[节点索引](../index.md)

@@ -1,4 +1,4 @@
-# 阿基米德性质　`lem.archimedean`　·　续页（第 3 页）
+# Archimedes 性质　`lem.archimedean`　·　续页（第 3 页）
 [在星图里打开](../#n=lem.archimedean)　·　第 1 页 [nodes/lem.archimedean.md](./lem.archimedean.md)　·　上一页 [nodes/lem.archimedean.2.md](./lem.archimedean.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

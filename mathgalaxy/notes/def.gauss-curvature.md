@@ -1,4 +1,4 @@
-# 高斯曲率　`def.gauss-curvature`　·　说明
+# Gauss 曲率　`def.gauss-curvature`　·　说明
 根 `../`
 
 ⚠️ **符号与指标顺序**（本包全包统一）：$R_{ijk\ell} = \langle R(\partial_{i},\partial_{j})\partial_{k},\partial_{\ell}\rangle$，于是单位球面（$K = 1$、$g_{ij} = \delta_{ij}$）上 $R_{1221} = 1$、$R_{1212} = -1$。很多书写成「$K = R_{1212}/\det g$」，那用的是另一种指标顺序（或另一种 $R$ 的符号），数学上是同一件事。**判断约定对不对的检查只有一条：单位球面必须给出 $K = 1$。**

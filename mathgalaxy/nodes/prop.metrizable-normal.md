@@ -9,7 +9,7 @@ layer 15 · 命题 · 可度量化 · 拓扑学
 3. 是**仿紧**的（Stone 定理）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) 斯通定理：imp.pcp-stone-metrizable-paracompact　[proofs/imp.pcp-stone-metrizable-paracompact.md](../proofs/imp.pcp-stone-metrizable-paracompact.md)
+- [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理：imp.pcp-stone-metrizable-paracompact　[proofs/imp.pcp-stone-metrizable-paracompact.md](../proofs/imp.pcp-stone-metrizable-paracompact.md)
 
 - …另有入边，续页见 [nodes/prop.metrizable-normal.2.md](./prop.metrizable-normal.2.md)
 

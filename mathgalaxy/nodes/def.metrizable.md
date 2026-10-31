@@ -10,7 +10,7 @@ $$\mathcal{T}_{d} = \mathcal{T},\qquad \mathcal{T}_{d} := \{\, U \subseteq X : \
 等价地说：$X$ 与某个距离空间**同胚**，即存在一个与 $\mathcal{T}$ 相容的度量（compatible metric）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) 乌雷松度量化定理 用
+- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
 
 - …另有出边，续页见 [nodes/def.metrizable.3.md](./def.metrizable.3.md)
 

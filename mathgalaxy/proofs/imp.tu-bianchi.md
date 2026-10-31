@@ -1,7 +1,7 @@
 # 法坐标下的三阶偏导抵消 $\implies$ 第二比安基恒等式
 `imp.tu-bianchi` · 推出 · strong 边 · 根 `../`
 
-`def.curvature-tensor` 黎曼曲率张量 + `prop.curvature-tensor-symmetries` 曲率张量的对称性 → `thm.bianchi-identity` 比安基恒等式
+`def.curvature-tensor` Riemann 曲率张量 + `prop.curvature-tensor-symmetries` 曲率张量的对称性 → `thm.bianchi-identity` 比安基恒等式
 
 **第二比安基。** 取 $p\in M$ 处的**法坐标**（指数映射给的坐标，见 `def.exponential-map`）：$\Gamma^{k}_{ij}(p) = 0$、$\partial_{i}g_{jk}(p) = 0$，于是 $p$ 处 $\nabla_{i} = \partial_{i}$，且由 $R^{\ell}_{ijk} = \partial_{i}\Gamma^{\ell}_{jk}-\partial_{j}\Gamma^{\ell}_{ik}$ 与 $\Gamma$ 的公式得
 

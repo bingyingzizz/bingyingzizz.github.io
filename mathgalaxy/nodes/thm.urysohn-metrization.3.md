@@ -1,4 +1,4 @@
-# 乌雷松度量化定理　`thm.urysohn-metrization`　·　续页（第 3 页）
+# Urysohn 度量化定理　`thm.urysohn-metrization`　·　续页（第 3 页）
 [在星图里打开](../#n=thm.urysohn-metrization)　·　第 1 页 [nodes/thm.urysohn-metrization.md](./thm.urysohn-metrization.md)　·　上一页 [nodes/thm.urysohn-metrization.2.md](./thm.urysohn-metrization.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

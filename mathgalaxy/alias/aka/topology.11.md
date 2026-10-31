@@ -45,4 +45,6 @@
 
 - 提升定理 → thm.lifting
 
-见 `../../alias.md`。
+- 仿紧豪斯多夫空间正规 | 豪斯多夫 → thm.paracompact-hausdorff-normal
+
+> 续见 alias/aka/topology.12.md

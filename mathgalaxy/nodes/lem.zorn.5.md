@@ -1,4 +1,4 @@
-# 佐恩引理　`lem.zorn`　·　续页（第 5 页）
+# Zorn 引理　`lem.zorn`　·　续页（第 5 页）
 [在星图里打开](../#n=lem.zorn)　·　第 1 页 [nodes/lem.zorn.md](./lem.zorn.md)　·　上一页 [nodes/lem.zorn.4.md](./lem.zorn.4.md)
 
 ## 它能推出什么 / 谁在用它（续）

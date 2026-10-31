@@ -25,7 +25,7 @@
 
 - 积分与极限交换 → thm.uniform-limit-integral
 
-- 阿基米德的 ε 形式与取整 → cor.archimedean-epsilon
+- 阿基米德的 ε 形式与取整 | 阿基米德 → cor.archimedean-epsilon
 
 - p-级数 → thm.p-series
 
@@ -40,7 +40,5 @@
 - 连续函数的运算 → prop.continuous-arithmetic
 
 - 零点定理 → cor.zero-point
-
-- 反函数连续 → thm.monotone-inverse
 
 > 续见 alias/aka/analysis.15.md

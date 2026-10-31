@@ -1,4 +1,4 @@
-# 仿紧豪斯多夫空间正规　`thm.paracompact-hausdorff-normal`　·　续页（第 2 页）
+# 仿紧 Hausdorff 空间正规　`thm.paracompact-hausdorff-normal`　·　续页（第 2 页）
 [在星图里打开](../#n=thm.paracompact-hausdorff-normal)　·　第 1 页 [nodes/thm.paracompact-hausdorff-normal.md](./thm.paracompact-hausdorff-normal.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

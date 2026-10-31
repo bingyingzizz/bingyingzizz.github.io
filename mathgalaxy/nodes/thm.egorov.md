@@ -1,4 +1,4 @@
-# Egorov 定理　`thm.egorov`
+# Егоров 定理　`thm.egorov`
 Egorov 定理：a.e. 收敛 $\implies$ 近一致
 layer 21 · 定理 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=thm.egorov)　·　[节点索引](../index.md)

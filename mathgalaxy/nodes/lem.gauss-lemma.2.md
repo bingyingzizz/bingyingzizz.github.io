@@ -1,4 +1,4 @@
-# 高斯引理　`lem.gauss-lemma`　·　续页（第 2 页）
+# Gauss 引理　`lem.gauss-lemma`　·　续页（第 2 页）
 [在星图里打开](../#n=lem.gauss-lemma)　·　第 1 页 [nodes/lem.gauss-lemma.md](./lem.gauss-lemma.md)
 
 ## 陈述（续）

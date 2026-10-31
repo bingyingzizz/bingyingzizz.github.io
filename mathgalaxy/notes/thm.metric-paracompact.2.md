@@ -1,4 +1,4 @@
-# 斯通定理　`thm.metric-paracompact`　·　说明
+# Stone 定理　`thm.metric-paracompact`　·　说明
 根 `../`
 
 个成员与它相交的一切成员都落在同一个原成员里。

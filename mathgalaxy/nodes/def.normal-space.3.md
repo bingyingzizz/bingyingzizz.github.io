@@ -3,7 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`lem.shrink`](../nodes/lem.shrink.md) 收缩引理 用
-- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) 乌雷松度量化定理 用
+- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
 - 被 [`prop.metrizable-normal`](../nodes/prop.metrizable-normal.md) 可度量化空间的性质 用
 - 被 [`prop.paracompact-partition-unity`](../nodes/prop.paracompact-partition-unity.md) 仿紧性与单位分解 用
 - 被 [`prop.normal-locally-closed`](../nodes/prop.normal-locally-closed.md) 正规空间的邻域里有闭邻域 用

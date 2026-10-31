@@ -1,4 +1,4 @@
-# 高斯曲率　`def.gauss-curvature`　·　续页（第 2 页）
+# Gauss 曲率　`def.gauss-curvature`　·　续页（第 2 页）
 [在星图里打开](../#n=def.gauss-curvature)　·　第 1 页 [nodes/def.gauss-curvature.md](./def.gauss-curvature.md)
 
 ## 陈述（续）

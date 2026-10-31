@@ -1,5 +1,5 @@
-# 仿紧豪斯多夫空间正规　`thm.paracompact-hausdorff-normal`
-仿紧的豪斯多夫空间是正规空间
+# 仿紧 Hausdorff 空间正规　`thm.paracompact-hausdorff-normal`
+仿紧的 Hausdorff 空间是正规空间
 layer 8 · 定理 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=thm.paracompact-hausdorff-normal)　·　[节点索引](../index.md)
 

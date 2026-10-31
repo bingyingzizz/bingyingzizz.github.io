@@ -1,7 +1,7 @@
 # 第一基本形式就是一个黎曼度量
 `imp.tu-surface-riemannian` · 推出 · strong 边 · 根 `../`
 
-`def.first-fundamental-form` 第一基本形式 + `def.regular-surface` 曲面与参数化 → `def.riemannian-metric` 黎曼度量
+`def.first-fundamental-form` 第一基本形式 + `def.regular-surface` 曲面与参数化 → `def.riemannian-metric` Riemann 度量
 
 对 $p\in S$ 令 $g_{p}(v,w) := \langle\mathrm{d}r_{p}(v),\mathrm{d}r_{p}(w)\rangle$，$v,w\in T_{p}S$。三条公理逐个验证：
 

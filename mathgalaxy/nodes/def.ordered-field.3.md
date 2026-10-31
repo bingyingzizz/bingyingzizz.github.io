@@ -6,5 +6,5 @@
 - 被 [`def.abs`](../nodes/def.abs.md) 绝对值 |x| 用
 - 被 [`thm.triangle`](../nodes/thm.triangle.md) 三角不等式 用
 - 被 [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域 用
-- 被 [`lem.archimedean`](../nodes/lem.archimedean.md) 阿基米德性质 用
+- 被 [`lem.archimedean`](../nodes/lem.archimedean.md) Archimedes 性质 用
 - 被 [`thm.real-unique`](../nodes/thm.real-unique.md) 完备有序域的唯一性 用

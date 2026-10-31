@@ -11,5 +11,5 @@
 - def.paracompact　仿紧空间　layer 7
 - lem.shrink　收缩引理　layer 7
 - def.partition-of-unity　单位分解　layer 7
-- thm.paracompact-hausdorff-normal　仿紧豪斯多夫空间正规　layer 8
+- thm.paracompact-hausdorff-normal　仿紧 Hausdorff 空间正规　layer 8
 - prop.paracompact-closed-refinement　闭加细　layer 9

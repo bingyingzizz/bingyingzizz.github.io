@@ -1,7 +1,7 @@
 # $\mathbb{Q}$ 稠密 $\implies$ 完备有序域与 $\mathbb{R}$ 同构
 `imp.real-unique` · 推出 · strong 边 · 根 `../`
 
-`lem.archimedean` 阿基米德性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
+`lem.archimedean` Archimedes 性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
 
 设 $K$ 是完备有序域，取 $K' := \mathbb{R}$（上面构造出来的那个）。分三步造出唯一的同构 $f : K \to \mathbb{R}$。
 

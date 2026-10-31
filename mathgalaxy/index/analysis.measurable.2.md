@@ -3,5 +3,5 @@
 
 - prop.convergence-counterexamples　四个标准反例　layer 21
 - prop.L1-implies-measure　L¹ 收敛 ⟹ 依测度收敛　layer 21
-- thm.egorov　Egorov 定理　layer 21
+- thm.egorov　Егоров 定理　layer 21
 - cor.lusin　Lusin 定理　layer 22

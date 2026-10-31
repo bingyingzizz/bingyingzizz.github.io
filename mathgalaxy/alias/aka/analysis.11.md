@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Young 不等式 | Young → lem.young-inequality
+
 - 本性上界 | essential supremum | L-infinity | L∞ 范数 → def.essential-sup
 
 - Lp 范数 | Lp norm | L^p 空间 → def.lp-norm

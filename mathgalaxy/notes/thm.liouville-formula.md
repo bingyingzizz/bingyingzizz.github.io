@@ -1,4 +1,4 @@
-# 刘维尔公式　`thm.liouville-formula`　·　说明
+# Liouville 公式　`thm.liouville-formula`　·　说明
 根 `../`
 
 **结构**：$k_{g} = \frac{\mathrm{d}\theta}{\mathrm{d}s}-\omega^{1}_{2}(\dot\gamma)$，第一项是曲线相对标架的转角，第二项是标架本身的转动；把 $\omega^{1}_{2} = \frac{(\ln E)_{v}}{2\sqrt G}\omega^{1}-\frac{(\ln G)_{u}}{2\sqrt E}\omega^{2}$ 代进去就是上式。

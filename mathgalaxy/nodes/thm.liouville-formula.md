@@ -1,14 +1,14 @@
-# 刘维尔公式　`thm.liouville-formula`
-测地曲率的刘维尔公式
+# Liouville 公式　`thm.liouville-formula`
+测地曲率的 Liouville 公式
 layer 28 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.liouville-formula)　·　[节点索引](../index.md)
 
-白话：**测地曲率 = 曲线自己转的角度减去标架被度量「带着转」的角度**，而后者只由 $E, G$ 的偏导数决定。所以只要知道度量（也就是 $I$
+白话：**测地曲率 = 曲线自己转的角度减去标架被度量「带着转」的角度**，而后者只由 $E, G$ 的偏导数决定。所以只要知道度量（也就是 
 > 陈述续见 [nodes/thm.liouville-formula.2.md](./thm.liouville-formula.2.md)
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) 高斯博内定理
+- ⇒ [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.liouville-formula.3.md](./thm.liouville-formula.3.md)

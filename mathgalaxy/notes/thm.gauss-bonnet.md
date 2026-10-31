@@ -1,4 +1,4 @@
-# 高斯博内定理　`thm.gauss-bonnet`　·　说明
+# Gauss–Bonnet 定理　`thm.gauss-bonnet`　·　说明
 根 `../`
 
 **局部版是核心**（Gauss–Bonnet）：对由一条分段光滑简单闭曲线围成的区域 $D$，

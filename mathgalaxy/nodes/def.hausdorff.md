@@ -11,7 +11,7 @@ $$\forall x \ne y \in X,\ \exists U \ni x,\ V \ni y \ \text{开},\quad U \cap V 
 - [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep.topology-hausdorff.md](../proofs/dep.topology-hausdorff.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.paracompact-hausdorff-normal`](../nodes/thm.paracompact-hausdorff-normal.md) 仿紧豪斯多夫空间正规 用
+- 被 [`thm.paracompact-hausdorff-normal`](../nodes/thm.paracompact-hausdorff-normal.md) 仿紧 Hausdorff 空间正规 用
 
 - …另有出边，续页见 [nodes/def.hausdorff.2.md](./def.hausdorff.2.md)
 

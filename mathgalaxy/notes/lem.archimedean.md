@@ -1,4 +1,4 @@
-# 阿基米德性质　`lem.archimedean`　·　说明
+# Archimedes 性质　`lem.archimedean`　·　说明
 根 `../`
 
 ⭐ 两条都是**完备性（确界原理）的推论**，不需要任何别的假设。

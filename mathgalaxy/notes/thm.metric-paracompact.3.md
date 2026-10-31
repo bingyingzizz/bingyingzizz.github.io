@@ -1,4 +1,4 @@
-# 斯通定理　`thm.metric-paracompact`　·　说明
+# Stone 定理　`thm.metric-paracompact`　·　说明
 根 `../`
 
 ⚠️ **折衷**：本节点给的是构造与出处，最后那个「合回一层」的细节见 Munkres §41 / Engelking Ch. 5，不逐行重写。

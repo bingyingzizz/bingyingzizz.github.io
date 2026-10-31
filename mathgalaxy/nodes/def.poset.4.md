@@ -8,7 +8,7 @@
 - 被 [`def.bound`](../nodes/def.bound.md) 界与确界 用
 - 被 [`def.wellorder`](../nodes/def.wellorder.md) 良序集 用
 - 被 [`def.finchar`](../nodes/def.finchar.md) 有限特征 用
-- 被 [`lem.zorn`](../nodes/lem.zorn.md) 佐恩引理 用
+- 被 [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理 用
 - 被 [`thm.hausdorff`](../nodes/thm.hausdorff.md) Hausdorff 极大原理 用
 - 被 [`def.real`](../nodes/def.real.md) 实数系 ℝ 用
 - 被 [`prop.poset-limit-join`](../nodes/prop.poset-limit-join.md) 偏序集里的极限是交 用

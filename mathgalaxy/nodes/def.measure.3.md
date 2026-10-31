@@ -8,7 +8,7 @@
 - 被 [`prop.measure-basic`](../nodes/prop.measure-basic.md) 测度的基本性质 用
 - 被 [`prop.measurable-closure`](../nodes/prop.measurable-closure.md) 可测函数的封闭性 用
 - 被 [`thm.termwise-integration`](../nodes/thm.termwise-integration.md) 逐项积分 用
-- 被 [`thm.egorov`](../nodes/thm.egorov.md) Egorov 定理 用
+- 被 [`thm.egorov`](../nodes/thm.egorov.md) Егоров 定理 用
 - 被 [`def.absolute-continuity`](../nodes/def.absolute-continuity.md) 绝对连续 用
 - 被 [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质 用
 

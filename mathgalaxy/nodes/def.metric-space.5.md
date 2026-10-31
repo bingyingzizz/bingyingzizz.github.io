@@ -6,7 +6,7 @@
 - 被 [`def.contraction`](../nodes/def.contraction.md) 压缩映射 用
 - 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
 - ⇒ [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间
-- 被 [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) 斯通定理 用
+- 被 [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理 用
 - 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
 - 被 [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形 用
 - 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用

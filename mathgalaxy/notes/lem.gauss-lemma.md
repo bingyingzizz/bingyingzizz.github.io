@@ -1,4 +1,4 @@
-# 高斯引理　`lem.gauss-lemma`　·　说明
+# Gauss 引理　`lem.gauss-lemma`　·　说明
 根 `../`
 
 **证明骨架（细节在边上）**：沿测地线对 $\langle \partial_{\rho},\partial_{\theta}\rangle$ 求 $\rho$ 的导数，第一项因测地线为零，第二项用 $[\partial_{\rho},\partial_{\theta}] = 0$ 与 $|\partial_{\rho}| = 1$ 化成 $\frac{1}{2}\partial_{\theta}\langle \partial_{\rho},\partial_{\rho}\rangle = 0$。于是这个内积沿 $\rho$ 是常数；$\rho\to0$ 时 $\partial_{\theta}\to0$，常数只能是 $0$。

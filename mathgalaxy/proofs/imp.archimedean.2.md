@@ -1,7 +1,7 @@
 # 完备性 $\implies$ 阿基米德性质 + $\mathbb{Q}$ 稠密
 `imp.archimedean` · 推出 · strong 边 · 根 `../`
 
-`thm.real-ordered-field` ℝ 是完备有序域 → `lem.archimedean` 阿基米德性质
+`thm.real-ordered-field` ℝ 是完备有序域 → `lem.archimedean` Archimedes 性质
 
 $$m \le nx < m + 1$$
 

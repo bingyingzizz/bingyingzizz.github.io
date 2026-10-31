@@ -1,7 +1,7 @@
 # 行列式的平方 $\implies$ 密度不依赖定向
 `imp.spivak-volume-measure` · 推出 · strong 边 · 根 `../`
 
-`def.volume-density` 体积密度与体积形式 + `def.riemannian-metric` 黎曼度量 → `prop.volume-density-well-defined` 密度与定向无关
+`def.volume-density` 体积密度与体积形式 + `def.riemannian-metric` Riemann 度量 → `prop.volume-density-well-defined` 密度与定向无关
 
 $$\sqrt{\det g^{y}}\,\mathrm{d}y^{1}\cdots\mathrm{d}y^{n} = \sqrt{\det g^{x}}\,\mathrm{d}x^{1}\cdots\mathrm{d}x^{n} .$$
 

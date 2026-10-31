@@ -1,7 +1,7 @@
 # 选择公理 + Hartogs 定理 $\implies$ 佐恩引理（路线 $1\implies2$）
 `imp.hartogs-zorn` · 推出 · strong 边 · 根 `../`
 
-`ax.choice` 选择公理 + `thm.hartogs` Hartogs 定理 → `lem.zorn` 佐恩引理
+`ax.choice` 选择公理 + `thm.hartogs` Hartogs 定理 → `lem.zorn` Zorn 引理
 
 设 $(P, \preceq )$ 是非空偏序集，且 $P$ 的每个链都有上界。目标是造出一个极大元。
 

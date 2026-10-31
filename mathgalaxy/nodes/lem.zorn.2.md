@@ -1,4 +1,4 @@
-# 佐恩引理　`lem.zorn`　·　续页（第 2 页）
+# Zorn 引理　`lem.zorn`　·　续页（第 2 页）
 [在星图里打开](../#n=lem.zorn)　·　第 1 页 [nodes/lem.zorn.md](./lem.zorn.md)
 
 ## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative（续）

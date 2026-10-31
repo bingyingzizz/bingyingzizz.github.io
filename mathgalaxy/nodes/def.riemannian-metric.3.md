@@ -1,4 +1,4 @@
-# 黎曼度量　`def.riemannian-metric`　·　续页（第 3 页）
+# Riemann 度量　`def.riemannian-metric`　·　续页（第 3 页）
 [在星图里打开](../#n=def.riemannian-metric)　·　第 1 页 [nodes/def.riemannian-metric.md](./def.riemannian-metric.md)　·　上一页 [nodes/def.riemannian-metric.2.md](./def.riemannian-metric.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

@@ -1,4 +1,4 @@
-# 佐恩引理　`lem.zorn`　·　续页（第 3 页）
+# Zorn 引理　`lem.zorn`　·　续页（第 3 页）
 [在星图里打开](../#n=lem.zorn)　·　第 1 页 [nodes/lem.zorn.md](./lem.zorn.md)　·　上一页 [nodes/lem.zorn.2.md](./lem.zorn.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

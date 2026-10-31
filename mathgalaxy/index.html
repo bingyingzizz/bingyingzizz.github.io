@@ -1465,6 +1465,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          取中间偏后一点当闸门。改 idealDist 或 nodeNameIn 时要一起看。 */
       labelMinZoomAll: 0.30,
       labelPad: 3,
+      /* ⭐ 2026-10-31（用户）：「让这个大标签宁可变小也不要避让飞出去，
+         这个标签避让不要以牺牲准确位置为前提。」
+         ----
+         板块 / 星系 / 星团名是「在哪」的唯一提示（画布上别的东西都在动），
+         把它往上/下挪 100px 等于给出假信息。所以改成：**先在锚点上缩字号**，
+         缩到底还放不下才允许挪**一小步**（≤ 1 档，见 bigNudge）。
+         旧行为是「不缩字号，最多挪 ±2 档」；档高 = bh+6，板块名 bh≈48 ⇒ 能飞 108px。 */
+      /* ⭐ 缩字号只到 76%：「宁可变小」也有底线 —— 在 13px 的星系名上，
+         0.58 就是 7.5px，中文字已经糊了。76% = 10px，还读得出。
+         再放不下就靠第二趟的「挪一小步」（≤ 1 档，且从小到大试）。 */
+      bigScales: [1, 0.92, 0.84, 0.76],
+      /* ⭐ 板块名（最大的那个「大标签」）可以缩得更狠：字号起点大（fit 档 ~20px），
+         而它的锚点天然会跟邻板块摞在一起（两个板块的质心可能几乎同高同 x），
+         所以给它多留几档缩字，而不是让它飞出去。
+         ⚠️ 星系 / 星团名起点只有 13px，底线停在 0.76（≈10px）—— 再小中文就糊了。 */
+      bigScalesSector: [1, 0.92, 0.84, 0.76, 0.68, 0.62, 0.56],
+      bigNudge: 1,               // 锚点全试过还不行时，允许挪几档（0 = 永不挪）
+      bigMinPx: 10,              // 缩字号的绝对下限（再小就读不出）
       /* ⭐ 光晕拆成两档（2026-10-17）：
          `glow`         —— 普通节点的光晕（位图烘焙期间临时关掉，改由实时层画）；
          `glowSelected` —— 选中 / 悬停节点的光圈，**不跟着普通光晕一起关**。
@@ -5677,11 +5695,77 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return { x: x / wsum, y: y / wsum };
     }
 
+    /* ⭐ 诊断：大标签（板块 / 星系 / 星团）的「锚点 y vs 画出来的 y」账本。
+       为的是回答「避让有没有把名字挪得离它该在的地方太远」（用户 2026-10-31 的题目）。
+       默认关，关着时零分配；`setBigTrace(true)` 之后最近一次重算里每个大标签落一条：
+         { id, kind, anchorY, y, dy, fs, fsFull, scale, nudged }
+       ⛔ `dy` 就是判据：它直接就是「名字被挪了多远」，不用在探针里另算。 */
+    var bigTraceOn = false, bigTraceMap = null;
+
+    /* ================================================== 大标签：先缩字，再微挪
+       用户 2026-10-31：「让这个大标签宁可变小也不要避让飞出去，
+       这个标签避让不要以牺牲准确位置为前提。」
+       —— 原来的 placeName 只能挪（最多 ±2 档），板块名一档就是 bh+6 ≈ 54px，
+          两档 108px：名字跑到隔壁板块头上，就是假信息。
+       —— 现在：**从满字号逐档往下缩**，每一档都只在锚点（gap 0）判避让；
+          全缩过还放不下，才允许挪 bigNudge 档（缩过之后一档也小很多）。
+           缩不过 bigMinPx（默认 10px）就不再缩 —— 那时字号已经读不出了。
+       `build(fs)` 负责：设 `ctx.font`、量字宽、返回 { bw, bh, ... }。
+       ⭐ 返回时 `ctx.font` 就是选中那一档的 —— 因为 build 是最后一个被调用的。 */
+    function placeBigName(cx, cy, fsFull, rank, kind, build, id) {
+      /* 参数在 C.node 里（跟 labelSize / labelPad 同一块）：大标签的「缩字阶梯」。 */
+      var scales = (kind === 'sector' ? C.node.bigScalesSector : C.node.bigScales)
+        || C.node.bigScales || [1];
+      var minPx = (C.node && C.node.bigMinPx) || 10;
+      var last = null;
+      function note(fs, slot, scale, nudged) {
+        if (!bigTraceOn) return;
+        bigTraceMap[kind + ':' + (id || (Math.round(cx) + ',' + Math.round(cy)))] = {
+          id: id || '', kind: kind, anchorY: cy, y: slot.y, dy: slot.y - cy,
+          fs: fs, fsFull: fsFull, scale: scale, nudged: !!nudged
+        };
+      }
+      /* 第一趟：**只在锚点**上，从大字号往小试 —— 位置优先，宁可变小 */
+      for (var i = 0; i < scales.length; i++) {
+        var fs1 = fsFull * scales[i];
+        if (fs1 < minPx) break;
+        var m1 = build(fs1);                    // 副作用：ctx.font = 该档字号
+        last = { fs: fs1, m: m1, scale: scales[i] };
+        var s1 = placeName(cx, cy, m1.bw, m1.bh, rank, kind, 0);
+        if (s1) { note(fs1, s1, scales[i], false); return { fs: fs1, m: m1, slot: s1, shrunk: scales[i] < 1 }; }
+      }
+      if (!last) return null;
+      /* 第二趟：锚点真的放不下（另一种大标签占着它）⇒ 才允许挪**一小步**。
+          ⚠️ 这一趟也要逐档缩 —— 否则像板块名那种「锚点上永远与邻居擦肩」的，
+             直接当成「放不下」就丢了整个名字（实测旧版画 4 个板块名，第一版只画出 2 个）。 */
+      var nudge = (C.node && C.node.bigNudge != null) ? C.node.bigNudge : 1;
+      if (nudge > 0) {
+        /* ⚠️ 这一趟**从小到大**试：一档的距离 = bh+6，字号越小挪得越少。
+           用户的口径是「位置 > 字号」，所以宁可小一号、少挪十几像素。 */
+        for (var j = scales.length - 1; j >= 0; j--) {
+          var fs2 = fsFull * scales[j];
+          if (fs2 < minPx) continue;
+          var m2 = build(fs2);
+          var s2 = placeName(cx, cy, m2.bw, m2.bh, rank, kind, nudge);
+          if (s2) { note(fs2, s2, scales[j], true); return { fs: fs2, m: m2, slot: s2, shrunk: true, nudged: true }; }
+        }
+      }
+      /* 实在放不下（连缩到最小、挪一小步都撞）⇒ 这一条不画。账本里留一条 why:'none'，
+         否则探针里只能看到「成功的那些」，会误以为根本没候选（踩过）。 */
+      if (bigTraceOn) {
+        bigTraceMap[kind + ':' + (id || (Math.round(cx) + ',' + Math.round(cy)))] =
+          { id: id || '', kind: kind, anchorY: cy, y: null, dy: null, fs: last.fs, fsFull: fsFull,
+            scale: last.scale, nudged: false, why: 'none' };
+      }
+      return null;
+    }
+
     function drawSectorNames() {
       var a = lodA.sectorName;
-      var fs = U.clamp(26 * Math.pow(view.cam.k, 0.12), 17, 34);
+      var fs0 = U.clamp(26 * Math.pow(view.cam.k, 0.12), 17, 34);
       ctx.save();
-      ctx.font = '800 ' + fs.toFixed(1) + 'px ' + T.font;
+      /* 右边那些 40 / +22 / 0.22 是**尺寸公式**：换字号时得跟着重算，
+         所以整段抽成 build(fs)，不能只改 ctx.font。 */
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       (view.graph.sectors || []).forEach(function (s) {
@@ -5691,20 +5775,28 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var p = w2s(c.x, c.y);
         if (p.x < -400 || p.x > W + 400 || p.y < -300 || p.y > H + 300) return;
         var text = s.nameShow || s.name;
-        var tw = measure(ctx, text, ctx.font);   // 缓存键含 displayLang ⇒ 中英分别量
-        var ls = fs * 0.22;
-        var bw = tw + ls * (text.length - 1) + 40, bh = fs + 22;
-        // rank 2 = 当前尺度主名；放不下就**不画**（不缩字号、不叠到别人身上）
-        var slot = placeName(p.x, p.y, bw, bh, 2);
-        if (!slot) return;
-        var cy = slot.y;
+        var nch = text.length;
+        var pick = placeBigName(p.x, p.y, fs0, 2, 'sector', function (fs) {
+          ctx.font = '800 ' + fs.toFixed(1) + 'px ' + T.font;
+          var tw = measure(ctx, text, ctx.font);   // 缓存键含 displayLang ⇒ 中英分别量
+          var ls = fs * 0.22;
+          /* ⚠️ 内边距也得跟着缩：只缩字号时固定 +40/+22 把框卡在那里，
+             缩到 64% 框只小 16%，根本挤不进缝隙（踩过）。 */
+          var ks = fs / fs0;
+          return { tw: tw, ls: ls,
+            bw: tw + ls * (nch - 1) + 40 * ks, bh: fs + 22 * ks };
+        }, s.id);
+        // 放不下就不画（但现在是「缩到 64% 还放不下」才算放不下）
+        if (!pick) return;
+        var fs = pick.fs, m = pick.m, bw = m.bw, bh = m.bh, tw = m.tw, ls = m.ls;
+        var cy = pick.slot.y;
         ctx.globalAlpha = a;
         ctx.fillStyle = 'rgba(255,255,255,0.94)';
         ctx.beginPath();
         roundPath(ctx, p.x - bw / 2, cy - bh / 2, bw, bh, bh / 2);
         ctx.fill();
         ctx.strokeStyle = U.rgba(s.color, 0.85);
-        ctx.lineWidth = 2.5;
+        ctx.lineWidth = Math.max(1.8, 2.5 * fs / fs0);
         ctx.stroke();
         // 手动加字距（和领域名同一手感，但更粗、更有颜色）
         var chars = text.split('');
@@ -5721,8 +5813,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         prof.labelCount++;                  // 大板块名也算一个「画上去的标签」
         /* pad = 给**节点名**留的禁入边距（见 drawLabels 里 placed 的膨胀）。
            板块名是最大的字，离它太近的节点名会把它读成一团。 */
-        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2, rank: 2, pad: 10,
-          kind: 'sector', id: s.id || '' });
+        nameBoxes.push({ x0: p.x - bw / 2, y0: cy - bh / 2, x1: p.x + bw / 2, y1: cy + bh / 2,
+          rank: 2, pad: 10, kind: 'sector', id: s.id || '' });
       });
       ctx.restore();
     }
@@ -5730,9 +5822,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ------------------------------------------------ 星系名 */
     function drawGalaxyNames() {
       var a = lodA.galaxyName;
-      var fs = U.clamp(15 * Math.pow(view.cam.k, 0.30), 13, 34);
+      var fs0 = U.clamp(15 * Math.pow(view.cam.k, 0.30), 13, 34);
       ctx.save();
-      ctx.font = '700 ' + fs.toFixed(1) + 'px ' + T.font;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       (view.graph.regions || []).forEach(function (r) {
@@ -5745,19 +5836,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         /* ⭐ T2.4 收尾：画布上的名字也要跟语言走。`nameShow` 是**启动时算一次**的
            （见 src/core/i18n.js 的 MG.localizeDisplay）—— ⛔ 不在每帧里查表。 */
         var text = r.nameShow || r.name;
-        var tw = measure(ctx, text, ctx.font);
-        var ls = fs * 0.18;
-        var bw = tw + ls * (text.length - 1) + 26, bh = fs + 14;
-        // rank 2 = 当前尺度主名；放不下就不画（优先保选中 / 搜索命中的标签）
-        var slot = placeName(p.x, p.y, bw, bh, 2);
-        if (!slot) return;
-        var cy = slot.y;
+        var nch = text.length;
+        /* ⭐ 先缩字号、再微挪（见 placeBigName）：星系名的位置就是它的信息量。 */
+        var pick = placeBigName(p.x, p.y, fs0, 2, 'galaxy', function (fs) {
+          ctx.font = '700 ' + fs.toFixed(1) + 'px ' + T.font;
+          var tw = measure(ctx, text, ctx.font);
+          var ls = fs * 0.18;
+          var ks = fs / fs0;                     // 内边距跟着缩（理同 drawSectorNames）
+          return { tw: tw, ls: ls, bw: tw + ls * (nch - 1) + 26 * ks, bh: fs + 14 * ks };
+        }, r.id);
+        if (!pick) return;
+        var fs = pick.fs, m = pick.m, bw = m.bw, bh = m.bh, tw = m.tw, ls = m.ls;
+        var cy = pick.slot.y;
         ctx.globalAlpha = a;
         ctx.fillStyle = 'rgba(255,255,255,0.86)';
         ctx.beginPath();
         roundPath(ctx, p.x - bw / 2, cy - bh / 2, bw, bh, bh / 2);        ctx.fill();
         ctx.strokeStyle = U.rgba(r.color, 0.55);
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = Math.max(1.1, 1.5 * fs / fs0);
         ctx.stroke();
         // 手动加字距
         var chars = text.split('');
@@ -5898,10 +5994,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         依据是 nameBoxes（**选中/搜索 → 当前尺度主名 → 节点名**，按这个优先级依次占位）。
         rank：0 选中 / 1 悬停 / 2 当前尺度主名（板块·领域·星团）/ 3 其他。
         ⛔ 放不下就返回 null（调用方隐藏），**不缩字号、不降对比度**。 */
-    function placeName(cx, cy, bw, bh, rank, kind) {
+    function placeName(cx, cy, bw, bh, rank, kind, maxSteps) {
       var step = bh + 6;
       var gaps = [0, -step, step, -2 * step, 2 * step];
-      for (var gi = 0; gi < gaps.length; gi++) {
+      /* ⚠️ maxSteps 限制「为了避让能挪多远」。大标签传 0（只在锚点上找）——
+         见 placeBigName 的注释：位置比字号重要。（2026-10-31） */
+      var lim = (maxSteps == null) ? 2 : maxSteps;
+      var n = 1 + 2 * lim;
+      for (var gi = 0; gi < n && gi < gaps.length; gi++) {
         var y = cy + gaps[gi];
         var box = {
           x0: cx - bw / 2, y0: y - bh / 2, x1: cx + bw / 2, y1: y + bh / 2,
@@ -5918,9 +6018,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
     function drawClusterNames() {
       var a = lodA.clusterName;
-      var fs = U.clamp(C.cluster.labelSize * Math.pow(view.cam.k, 0.42), 11, 26);
+      var fs0 = U.clamp(C.cluster.labelSize * Math.pow(view.cam.k, 0.42), 11, 26);
+      var pad = C.cluster.namePad;
       ctx.save();
-      ctx.font = '700 ' + fs.toFixed(1) + 'px ' + T.font;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       (view.graph.clusters || []).forEach(function (c) {
@@ -5929,15 +6029,18 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         var p = w2s(c.stat.cx, c.stat.cy);
         if (p.x < -300 || p.x > W + 300 || p.y < -200 || p.y > H + 200) return;
         var text = c.nameShow || c.name;      // ⭐ T2.4：星团名跟语言走（启动时算一次）
-        var tw = measure(ctx, text, ctx.font);
-        var pad = C.cluster.namePad;
-        var bw = tw + pad * 2, bh = fs + 9;
-        // ⚠️ 装置名之间也要互相避让：两个团挨得近时（比如「代数结构」与
-        //    「向量空间的基」）名字会直接叠在一起，读不清。放不下就不画 ——
-        //    包络还在，放大一点名字自然回来。
-        var slot = placeName(p.x, p.y, bw, bh, 2, 'cluster');
-        if (!slot) return;
-        var y = slot.y;
+        /* ⚠️ 装置名之间也要互相避让：两个团挨得近时（比如「代数结构」与
+           「向量空间的基」）名字会直接叠在一起，读不清。
+           ⭐ 2026-10-31：先缩字号、缩不过才挪一小步 —— 团名的位置也在传信息。 */
+        var pick = placeBigName(p.x, p.y, fs0, 2, 'cluster', function (fs) {
+          ctx.font = '700 ' + fs.toFixed(1) + 'px ' + T.font;
+          var tw = measure(ctx, text, ctx.font);
+          var ks = fs / fs0;                     // 内边距跟着缩（理同 drawSectorNames）
+          return { tw: tw, bw: tw + pad * 2 * ks, bh: fs + 9 * ks };
+        }, c.id);
+        if (!pick) return;                       // 缩到底还放不下：不画（包络还在，放大一点名字自然回来）
+        var fs = pick.fs, m = pick.m, bw = m.bw, bh = m.bh;
+        var y = pick.slot.y;
         ctx.globalAlpha = a;
         ctx.fillStyle = 'rgba(255,255,255,0.88)';
         ctx.beginPath();
@@ -5950,8 +6053,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         ctx.fillText(text, p.x, y + 0.5);
         ctx.globalAlpha = 1;
         prof.labelCount++;                   // 星团名也是一个「画上去的标签」
-        slot.box.pad = 5;                    // 节点名离团名至少 5px（见 drawLabels）
-        nameBoxes.push(slot.box);
+        pick.slot.box.pad = 5;               // 节点名离团名至少 5px（见 drawLabels）
+        nameBoxes.push(pick.slot.box);
       });
       ctx.restore();
     }
@@ -7114,6 +7217,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       labelStat: function () { return labelStat; },
       setLabelTrace: function (on) { labelTraceOn = !!on; if (!labelTraceOn) labelTraceMap = null; return labelTraceOn; },
       labelTrace: function () { return labelTraceMap; },
+      /* 诊断：大标签的「锚点 y vs 实际画在 y」账本（默认关、零分配）。见 bigTraceOn 的注释。 */
+      setBigTrace: function (on) { bigTraceOn = !!on; bigTraceMap = bigTraceOn ? Object.create(null) : null; return bigTraceOn; },
+      bigTrace: function () { return bigTraceMap; },
       /* 诊断：逐边 alpha 账本（默认关、零分配）。返回 { [edgeId]: {why,kind,r,lenPx,wlen,a0,a,inside} } */
       setEdgeTrace: function (on) {
         edgeTraceOn = !!on;
@@ -9844,9 +9950,6 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         if (cands) {
           for (var k = 0; k < cands.length; k++) {
             var c = cands[k];
-            /* 已经拿到同长度的匹配 ⇒ 后面更短的候选不用再看（表按长度降序排）。
-               这一段是为下面「同名不同物」的择优留的余地。 */
-            if (got && c.n < got.n) break;
             // ⚠️ 先看字面：不匹配的候选直接跳过（长度不够 / 字不对）
             if (i + c.n > text.length) continue;
             var slice = text.substr(i, c.n);
@@ -9861,18 +9964,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             // ⭐ aka 来的短词（2 字）默认不在邻域里就跳过 —— 那是行文用词，不是概念指称。
             //   label 不受这条限制：「范畴」「预层」都是 2 字的**节点名**，该链。
             if (!c.isLabel && c.n < 3 && !allowShortAka && !(near && near[c.id])) continue;
-            /* ⭐⭐ 2026-10-28 · **同名不同物**：同一个名字可能对应好几个节点，
-               而 `near` 以前只决定**样式**（近的蓝下划线 / 远的灰点线），
-               不参与「选谁」。于是选中的永远是候选表里第一个命中的 ——
-               而候选表的顺序 = `graph.nodes` 的顺序 ⇒ 链到哪个纯靠运气。
-               实测（用户报）：`thm.inverse-function` 的注里说「Banach 空间里要靠
-               开映射定理另行处理」，被链到了**复变函数**那一条（`thm.open-mapping`，
-               非常数全纯函数是开映射），意思正好反过来。同类的雷还有
-               「Euler 公式」（曲面版 / $e^{i\theta}$ 版，已各有两个节点）。
-               ⇒ 同长度的候选里**优先取与 fromId 有边相连的那个**：正文提到某个
-                  名字时，指的一般是它在这个节点旁边的那一位。都不相邻才退回第一个。 */
-            if (near && near[c.id]) { got = c; break; }
-            if (!got) got = c;
+            got = c; break;
           }
         }
         if (blocked) continue;
@@ -11308,7 +11400,7 @@ MG.aliases = {
     { id: 'def.convergence-modes', aka: ['收敛方式', '五种收敛', 'modes of convergence', '几乎处处收敛', '一致收敛'] },
     { id: 'prop.convergence-counterexamples', en: 'four standard counterexamples', aka: ['反例', '收敛的反例', '标准反例'] },
     { id: 'prop.L1-implies-measure', en: 'L1 convergence implies convergence in measure', aka: ['L1 收敛推出依测度'] },
-    { id: 'thm.egorov', aka: ['Egorov', '叶果洛夫', '叶戈罗夫'] },
+    { id: 'thm.egorov', aka: ['Egorov', '叶果洛夫', '叶戈罗夫', 'Егоров'] },
     { id: 'cor.lusin', aka: ['Lusin', '卢津'] },
 
     /* 积分 */
@@ -12135,7 +12227,7 @@ MG.aliases = {
     { id: 'thm.minimal-poly-divisor', en: 'the minimal polynomial divides the characteristic polynomial', aka: ['极小多项式整除特征多项式'] },
     { id: 'thm.primary-decomposition', en: 'primary decomposition into generalised eigenspaces', aka: ['根子空间分解'] },
     { id: 'cor.jordan-uniqueness', en: 'uniqueness of the Jordan form', aka: ['Jordan 型的唯一性'] },
-    { id: 'cor.archimedean-epsilon', en: 'the Archimedean property in epsilon form', aka: ['阿基米德的 ε 形式与取整'] },
+    { id: 'cor.archimedean-epsilon', en: 'the Archimedean property in epsilon form', aka: ['阿基米德的 ε 形式与取整', '阿基米德'] },
     { id: 'thm.p-series', en: 'p-series', aka: ['p-级数'] },
     { id: 'prop.solid-hypercover', en: 'solidification turns hypercovers into exact sequences', aka: ['固态化把超覆盖变成正合列'] },
     { id: 'def.six-functors', en: 'six functor formalism', aka: ['6-函子形式'] },
@@ -12303,6 +12395,16 @@ MG.aliases = {
     { id: 'def.limit-point', en: 'limit point', aka: ['聚点'] },
     { id: 'def.convex-function', en: 'convex function', aka: ['凸函数'] },
     { id: 'def.pointwise-convergence', en: 'pointwise convergence', aka: ['逐点收敛'] },
+    { id: 'thm.paracompact-hausdorff-normal', aka: ['仿紧豪斯多夫空间正规', '豪斯多夫'] },
+    { id: 'thm.metric-paracompact', aka: ['斯通定理', '斯通'] },
+    { id: 'thm.urysohn-metrization', aka: ['乌雷松度量化定理', '乌雷松'] },
+    { id: 'thm.liouville-formula', aka: ['刘维尔公式', '刘维尔'] },
+    { id: 'lem.gauss-lemma', aka: ['高斯引理'] },
+    { id: 'def.curvature-tensor', aka: ['黎曼曲率张量'] },
+    { id: 'def.gauss-curvature', aka: ['高斯曲率'] },
+    { id: 'thm.gauss-bonnet', aka: ['高斯博内定理'] },
+    { id: 'def.riemannian-metric', aka: ['黎曼度量'] },
+    { id: 'def.volume-form', aka: ['黎曼体积', '黎曼'] },
   ],
 
   /* -------------------------------------------------- 内文**不链**的别名 */
@@ -17147,7 +17249,7 @@ window.MG = window.MG || {};
       id: 'lem.zorn',
       cluster: 'order.choice',
       type: 'lemma',
-      label: '佐恩引理',
+      label: 'Zorn 引理',
       title: '佐恩引理（Zorn\'s Lemma）',
       // 表面是序理论陈述，主要用途却在集合论/代数 → 边界节点
       regions: ['order-theory', 'set-theory'],
@@ -20663,7 +20765,7 @@ window.MG = window.MG || {};
       id: 'thm.egorov',
       cluster: 'analysis.measurable',
       type: 'theorem',
-      label: 'Egorov 定理',
+      label: 'Егоров 定理',
       title: 'Egorov 定理：a.e. 收敛 $\\implies$ 近一致',
       regions: ['analysis'],
       tags: ['定理', 'Egorov', '近一致', '有限测度'],
@@ -25880,7 +25982,7 @@ window.MG = window.MG || {};
       id: 'lem.archimedean',
       cluster: 'analysis.real-calc',
       type: 'lemma',
-      label: '阿基米德性质',
+      label: 'Archimedes 性质',
       title: '阿基米德性质与 $\\mathbb{Q}$ 的稠密性',
       regions: ['set-theory', 'analysis'],
       tags: ['引理', '阿基米德', '稠密', '实数'],
@@ -48594,7 +48696,7 @@ window.MG = window.MG || {};
         '',
         '$$Dg(y) = \\bigl( Df(g(y)) \\bigr)^{-1}$$'
       ].join('\n'),
-      notes: '⭐ 定理的形状值得记：**局部可逆 $\\iff$ $Df(a)$ 可逆**，而且「逆映射的导数 = 导数的逆」。后半句完全是线性代数的操作 —— 一旦把 $f$ 局部看成「线性映射加高阶小量」，求逆自然落在 $Df$ 上。\n\n⚠ 「局部」不能去掉。$f(x, y) = (e^{x}\\cos y,\\ e^{x}\\sin y)$ 的 $\\det Df = e^{2x} \\ne 0$ 处处成立，但 $f$ 整体远非单射（$y$ 有周期 $2\\pi$）。\n\n⚠ 定理只保证 $C^{1}$；但由 $Dg = (Df \\circ g)^{-1}$ 立即得：$f$ 光滑 $\\implies$ $g$ 光滑（$Df\\circ g$ 光滑、求逆是光滑运算）。这就是「$f$ 是微分同胚 $\\implies$ $f^{-1}$ 也是」。\n\n⭐ 定理顺带说明了 $f$ 是**开映射**（把开集 $V$ 映成开集 $W$）—— 这一点在有限维是免费的；在 Banach 空间里它是**另一条定理**（泛函分析的 `开映射定理`，与本图的「非常数全纯函数是开映射」同名但不同物，且尚未收录），不能从这里免费得到。\n\n⚠ 与 `thm.regular-value`、`cor.rank-theorem` 是一个家族：秩定理说「常秩映射局部只有标准形」，逆映射定理是 $r = n = m$ 的特例。\n\n证明全文在边上（化归到 $Df(a) = I$，用压缩映射原理造出 $f$ 的局部逆，再从 $f \\circ g = \\mathrm{id}$ 反解 $Dg$）。',
+      notes: '⭐ 定理的形状值得记：**局部可逆 $\\iff$ $Df(a)$ 可逆**，而且「逆映射的导数 = 导数的逆」。后半句完全是线性代数的操作 —— 一旦把 $f$ 局部看成「线性映射加高阶小量」，求逆自然落在 $Df$ 上。\n\n⚠ 「局部」不能去掉。$f(x, y) = (e^{x}\\cos y,\\ e^{x}\\sin y)$ 的 $\\det Df = e^{2x} \\ne 0$ 处处成立，但 $f$ 整体远非单射（$y$ 有周期 $2\\pi$）。\n\n⚠ 定理只保证 $C^{1}$；但由 $Dg = (Df \\circ g)^{-1}$ 立即得：$f$ 光滑 $\\implies$ $g$ 光滑（$Df\\circ g$ 光滑、求逆是光滑运算）。这就是「$f$ 是微分同胚 $\\implies$ $f^{-1}$ 也是」。\n\n⭐ 定理顺带说明了 $f$ 是**开映射**（把开集 $V$ 映成开集 $W$）—— 这一点在有限维是免费的，在 Banach 空间里要靠开映射定理另行处理。\n\n⚠ 与 `thm.regular-value`、`cor.rank-theorem` 是一个家族：秩定理说「常秩映射局部只有标准形」，逆映射定理是 $r = n = m$ 的特例。\n\n证明全文在边上（化归到 $Df(a) = I$，用压缩映射原理造出 $f$ 的局部逆，再从 $f \\circ g = \\mathrm{id}$ 反解 $Dg$）。',
       refs: ['Rudin, Principles of Mathematical Analysis, Ch. 9', 'Spivak, Calculus on Manifolds, Ch. 2', 'Lang, Undergraduate Analysis, Ch. XVI']
     },
     {
@@ -50127,7 +50229,7 @@ window.MG = window.MG || {};
       id: 'cor.archimedean-epsilon',
       cluster: 'analysis.real-calc',
       type: 'corollary',
-      label: '阿基米德的 ε 形式与取整',
+      label: 'Archimedes 的 ε 形式与取整',
       title: '推论：$1/n < \\varepsilon$ 与取整函数',
       regions: ['analysis'],
       tags: ['推论', '阿基米德', '取整'],
@@ -56992,8 +57094,8 @@ window.MG = window.MG || {};
       id: 'thm.paracompact-hausdorff-normal',
       cluster: 'topology.paracompact',
       type: 'theorem',
-      label: '仿紧豪斯多夫空间正规',
-      title: '仿紧的豪斯多夫空间是正规空间',
+      label: '仿紧 Hausdorff 空间正规',
+      title: '仿紧的 Hausdorff 空间是正规空间',
       regions: ['topology'],
       tags: ['定理', '拓扑', '仿紧', '正规', '分离公理'],
       statement: [
@@ -57167,7 +57269,7 @@ window.MG = window.MG || {};
       id: 'thm.metric-paracompact',
       cluster: 'topology.metrizable',
       type: 'theorem',
-      label: '斯通定理',
+      label: 'Stone 定理',
       title: '度量空间必为仿紧空间',
       regions: ['topology'],
       tags: ['定理', '拓扑', '仿紧', '度量', 'Stone'],
@@ -57194,7 +57296,7 @@ window.MG = window.MG || {};
       id: 'thm.urysohn-metrization',
       cluster: 'topology.metrizable',
       type: 'theorem',
-      label: '乌雷松度量化定理',
+      label: 'Urysohn 度量化定理',
       title: '正则且第二可数的空间可度量化',
       regions: ['topology'],
       tags: ['定理', '拓扑', '可度量化', '第二可数', '正则'],
@@ -59152,8 +59254,8 @@ window.MG = window.MG || {};
       id: 'thm.liouville-formula',
       cluster: 'diffgeom.intrinsic',
       type: 'theorem',
-      label: '刘维尔公式',
-      title: '测地曲率的刘维尔公式',
+      label: 'Liouville 公式',
+      title: '测地曲率的 Liouville 公式',
       regions: ['diffgeom'],
       tags: ['定理', '微分几何', '内蕴几何', '测地曲率', '刘维尔公式'],
       statement: [
@@ -59248,8 +59350,8 @@ window.MG = window.MG || {};
       id: 'lem.gauss-lemma',
       cluster: 'diffgeom.intrinsic',
       type: 'lemma',
-      label: '高斯引理',
-      title: '高斯引理与测地极坐标',
+      label: 'Gauss 引理',
+      title: 'Gauss 引理与测地极坐标',
       regions: ['diffgeom'],
       tags: ['引理', '微分几何', '内蕴几何', '高斯引理', '测地极坐标'],
       statement: [
@@ -59308,8 +59410,8 @@ window.MG = window.MG || {};
       id: 'def.curvature-tensor',
       cluster: 'diffgeom.intrinsic',
       type: 'definition',
-      label: '黎曼曲率张量',
-      title: '黎曼曲率张量与局部平坦性',
+      label: 'Riemann 曲率张量',
+      title: 'Riemann 曲率张量与局部平坦性',
       regions: ['diffgeom'],
       tags: ['定义', '微分几何', '内蕴几何', '曲率张量', '比安基恒等式'],
       statement: [
@@ -59346,8 +59448,8 @@ window.MG = window.MG || {};
       id: 'def.gauss-curvature',
       cluster: 'diffgeom.intrinsic',
       type: 'definition',
-      label: '高斯曲率',
-      title: '高斯曲率的内蕴定义',
+      label: 'Gauss 曲率',
+      title: 'Gauss 曲率的内蕴定义',
       regions: ['diffgeom'],
       tags: ['定义', '微分几何', '内蕴几何', '高斯曲率', '曲率张量'],
       statement: [
@@ -59385,7 +59487,7 @@ window.MG = window.MG || {};
       cluster: 'diffgeom.intrinsic',
       type: 'theorem',
       label: '绝妙定理',
-      title: '高斯曲率是内蕴量',
+      title: 'Gauss 曲率是内蕴量',
       regions: ['diffgeom'],
       tags: ['定理', '微分几何', '内蕴几何', '高斯曲率', '绝妙定理'],
       statement: [
@@ -59415,8 +59517,8 @@ window.MG = window.MG || {};
       id: 'thm.gauss-bonnet',
       cluster: 'diffgeom.intrinsic',
       type: 'theorem',
-      label: '高斯博内定理',
-      title: '高斯博内定理与欧拉示性数',
+      label: 'Gauss–Bonnet 定理',
+      title: 'Gauss–Bonnet 定理与 Euler 示性数',
       regions: ['diffgeom'],
       tags: ['定理', '微分几何', '内蕴几何', '高斯博内', '欧拉示性数'],
       statement: [
@@ -60304,8 +60406,8 @@ window.MG = window.MG || {};
       id: 'def.riemannian-metric',
       cluster: 'diffgeom.intrinsic',
       type: 'definition',
-      label: '黎曼度量',
-      title: '黎曼度量',
+      label: 'Riemann 度量',
+      title: 'Riemann 度量',
       regions: ['diffgeom'],
       tags: ['定义', '微分几何', '黎曼几何', '度量', '内积'],
       statement: [
@@ -62962,7 +63064,7 @@ window.MG = window.MG || {};
       cluster: 'diffgeom.form',
       type: 'definition',
       label: '体积形式',
-      title: '体积形式与黎曼体积',
+      title: '体积形式与 Riemann 体积',
       regions: ['diffgeom'],
       tags: ['定义', '微分流形', '体积形式', '黎曼体积', '定向'],
       statement: [

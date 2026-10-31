@@ -1,7 +1,7 @@
 # $\mathbb{Q}$ 稠密 $\implies$ 完备有序域与 $\mathbb{R}$ 同构
 `imp.real-unique` · 推出 · strong 边 · 根 `../`
 
-`lem.archimedean` 阿基米德性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
+`lem.archimedean` Archimedes 性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
 
 **满射**：给定 $y' \in K'$，令 $x := \sup\{q \in \mathbb{Q} : q' < y'\}$（同样由阿基米德性与完备性存在）。任取有理数 $p < x < r$，则 $p' \le y' \le r'$；由 $\mathbb{Q}$ 稠密取 $p \nearrow x$、$r \searrow x$ 代入，得 $f(x) = y'$。
 

@@ -1,4 +1,4 @@
-# 黎曼曲率张量　`def.curvature-tensor`　·　说明
+# Riemann 曲率张量　`def.curvature-tensor`　·　说明
 根 `../`
 
 **来处是可积性条件**。想找坐标把 $g_{ij}$ 拉成 $\delta_{ij}$，等价于解 $g_{ij} = \delta_{\alpha\beta}\frac{\partial y^{\alpha}}{\partial x^{i}}\frac{\partial y^{\beta}}{\partial x^{j}}$；而「$\partial_{i}\partial_{j} = \partial_{j}\partial_{i}$」的相容性要求的正是 $R^{\ell}_{ijk} = 0$。所以 $R$ 从一开始就是「能不能把度量摊平」的阻碍。

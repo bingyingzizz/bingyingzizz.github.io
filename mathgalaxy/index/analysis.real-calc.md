@@ -13,6 +13,6 @@
 - prop.abs-properties　绝对值的运算性质　layer 10
 - thm.triangle　三角不等式　layer 10
 - thm.nth-root　n 次方根　layer 14
-- lem.archimedean　阿基米德性质　layer 14
-- cor.archimedean-epsilon　阿基米德的 ε 形式与取整　layer 15
+- lem.archimedean　Archimedes 性质　layer 14
+- cor.archimedean-epsilon　Archimedes 的 ε 形式与取整　layer 15
 - def.real-power　有理指数与实数指数幂　layer 15

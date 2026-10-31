@@ -1,7 +1,7 @@
 # 良序定理 $\iff$ 佐恩引理
 `eq.wo-zorn` · 等价 · strong 边 · 根 `../`
 
-`thm.wellordering` 良序定理 → `lem.zorn` 佐恩引理
+`thm.wellordering` 良序定理 → `lem.zorn` Zorn 引理
 
 $$x \preceq_* y \iff\text{ 存在} (W, \preceq_W) \in \mathcal{D}\text{ 使} x, y \in W\text{ 且} x \preceq_W y$$
 

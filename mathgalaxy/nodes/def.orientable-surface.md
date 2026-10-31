@@ -8,7 +8,7 @@ layer 26 · 定义 · 曲面论 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) 高斯博内定理 用
+- 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理 用
 - 被 [`def.integral-form`](../nodes/def.integral-form.md) 形式的积分 用
 
 - …另有出边，续页见 [nodes/def.orientable-surface.5.md](./def.orientable-surface.5.md)

@@ -1,4 +1,4 @@
-# 黎曼曲率张量　`def.curvature-tensor`　·　续页（第 3 页）
+# Riemann 曲率张量　`def.curvature-tensor`　·　续页（第 3 页）
 [在星图里打开](../#n=def.curvature-tensor)　·　第 1 页 [nodes/def.curvature-tensor.md](./def.curvature-tensor.md)　·　上一页 [nodes/def.curvature-tensor.2.md](./def.curvature-tensor.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

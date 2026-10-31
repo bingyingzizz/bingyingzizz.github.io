@@ -1,5 +1,5 @@
 # 绝妙定理　`thm.theorema-egregium`
-高斯曲率是内蕴量
+Gauss 曲率是内蕴量
 layer 29 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.theorema-egregium)　·　[节点索引](../index.md)
 

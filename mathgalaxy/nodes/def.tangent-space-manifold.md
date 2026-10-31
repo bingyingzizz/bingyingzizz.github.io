@@ -8,7 +8,7 @@ layer 17 · 定义 · 内蕴几何 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) 黎曼度量 用
+- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量 用
 
 - …另有出边，续页见 [nodes/def.tangent-space-manifold.5.md](./def.tangent-space-manifold.5.md)
 

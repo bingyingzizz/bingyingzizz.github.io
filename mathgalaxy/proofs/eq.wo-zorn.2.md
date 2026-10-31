@@ -1,7 +1,7 @@
 # 良序定理 $\iff$ 佐恩引理
 `eq.wo-zorn` · 等价 · strong 边 · 根 `../`
 
-`thm.wellordering` 良序定理 → `lem.zorn` 佐恩引理
+`thm.wellordering` 良序定理 → `lem.zorn` Zorn 引理
 
 **$u$ 是极大元**：若存在 $w \in P$ 使 $u \prec w$，则 $w \succ u \succeq c$（$\forall c \in C$），故 $w \in U(C)$ 是有严格上界的元素，与「停止条件」矛盾。
 

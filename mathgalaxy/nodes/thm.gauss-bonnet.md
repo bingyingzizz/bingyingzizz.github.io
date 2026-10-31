@@ -1,5 +1,5 @@
-# 高斯博内定理　`thm.gauss-bonnet`
-高斯博内定理与欧拉示性数
+# Gauss–Bonnet 定理　`thm.gauss-bonnet`
+Gauss–Bonnet 定理与 Euler 示性数
 layer 29 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.gauss-bonnet)　·　[节点索引](../index.md)
 

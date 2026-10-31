@@ -9,4 +9,4 @@
 - ⇒ [`thm.rodrigues`](../nodes/thm.rodrigues.md) Rodrigues 定理
 - ⇒ [`thm.euler-formula-surface`](../nodes/thm.euler-formula-surface.md) Euler 公式
 - ⇒ [`prop.curvature-lines`](../nodes/prop.curvature-lines.md) 曲率线网
-- 被 [`thm.liouville-formula`](../nodes/thm.liouville-formula.md) 刘维尔公式 用
+- 被 [`thm.liouville-formula`](../nodes/thm.liouville-formula.md) Liouville 公式 用

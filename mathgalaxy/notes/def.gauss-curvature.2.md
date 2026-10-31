@@ -1,4 +1,4 @@
-# 高斯曲率　`def.gauss-curvature`　·　说明
+# Gauss 曲率　`def.gauss-curvature`　·　说明
 根 `../`
 
 两条路给出同一个数，这就是**绝妙定理**的内容 —— 在那个节点里给证明。

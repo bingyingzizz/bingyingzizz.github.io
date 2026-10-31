@@ -7,7 +7,7 @@
 
 - L1 收敛推出依测度 → prop.L1-implies-measure
 
-- Egorov | 叶果洛夫 | 叶戈罗夫 → thm.egorov
+- Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
 
 - Lusin | 卢津 → cor.lusin
 
@@ -28,7 +28,5 @@
 - 单调收敛 | MCT | monotone convergence theorem | Levi 定理 → thm.mct
 
 - 复函数的积分 | 复积分 → def.integral-complex
-
-- 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
 
 > 续见 alias/aka/analysis.6.md

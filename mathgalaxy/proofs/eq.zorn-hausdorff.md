@@ -1,7 +1,7 @@
 # 佐恩引理 $\iff$ Hausdorff 极大原理
 `eq.zorn-hausdorff` · 等价 · strong 边 · 根 `../`
 
-`lem.zorn` 佐恩引理 → `thm.hausdorff` Hausdorff 极大原理
+`lem.zorn` Zorn 引理 → `thm.hausdorff` Hausdorff 极大原理
 
 **佐恩引理 ⇒ Hausdorff 极大原理（路线 2⟹3）**
 

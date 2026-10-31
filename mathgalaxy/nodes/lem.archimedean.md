@@ -1,4 +1,4 @@
-# 阿基米德性质　`lem.archimedean`
+# Archimedes 性质　`lem.archimedean`
 阿基米德性质与 $\mathbb{Q}$ 的稠密性
 layer 14 · 引理 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=lem.archimedean)　·　[节点索引](../index.md)
@@ -16,7 +16,7 @@ $$\forall x, y \in K,\ x < y \implies \exists q \in \mathbb{Q} : x < q < y$$
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.archimedean-epsilon`](../nodes/cor.archimedean-epsilon.md) 阿基米德的 ε 形式与取整
+- ⇒ [`cor.archimedean-epsilon`](../nodes/cor.archimedean-epsilon.md) Archimedes 的 ε 形式与取整
 
 - …另有出边，续页见 [nodes/lem.archimedean.4.md](./lem.archimedean.4.md)
 

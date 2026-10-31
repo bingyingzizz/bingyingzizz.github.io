@@ -1,7 +1,7 @@
 # 在正交基上取迹 $\implies$ 二维 Ricci $= Kg$、数量曲率 $= 2K$
 `imp.tu-ricci` · 推出 · strong 边 · 根 `../`
 
-`def.curvature-tensor` 黎曼曲率张量 + `def.trace` 迹 → `def.ricci-curvature` Ricci 曲率
+`def.curvature-tensor` Riemann 曲率张量 + `def.trace` 迹 → `def.ricci-curvature` Ricci 曲率
 
 **迹与基无关。** $Z\mapsto R(Z,X)Y$ 是 $T_{p}M$ 上的线性映射，它的迹在换基时不变（`def.trace` 的相似不变性），故用单位正交基算迹合法。
 

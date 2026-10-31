@@ -9,4 +9,4 @@
 - 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
 - 被 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化 用
 - 被 [`def.arc-length`](../nodes/def.arc-length.md) 弧长 用
-- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) 黎曼度量 用
+- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量 用

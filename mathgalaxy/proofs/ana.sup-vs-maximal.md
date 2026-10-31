@@ -1,7 +1,7 @@
 # 佐恩引理与确界原理：都是「一次把无穷过程走完」
 `ana.sup-vs-maximal` · 类比（弱边） · weak 边 · 根 `../`
 
-`lem.zorn` 佐恩引理 → `thm.real-ordered-field` ℝ 是完备有序域
+`lem.zorn` Zorn 引理 → `thm.real-ordered-field` ℝ 是完备有序域
 
 两个命题的精神酷似，而且都不是构造性的：
 

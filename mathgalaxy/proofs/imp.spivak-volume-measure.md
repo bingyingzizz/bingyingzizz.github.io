@@ -1,7 +1,7 @@
 # 行列式的平方 $\implies$ 密度不依赖定向
 `imp.spivak-volume-measure` · 推出 · strong 边 · 根 `../`
 
-`def.volume-density` 体积密度与体积形式 + `def.riemannian-metric` 黎曼度量 → `prop.volume-density-well-defined` 密度与定向无关
+`def.volume-density` 体积密度与体积形式 + `def.riemannian-metric` Riemann 度量 → `prop.volume-density-well-defined` 密度与定向无关
 
 **（1）局部变换。** 设 $y$ 是另一张卡，$J := \partial x/\partial y$。由 $\partial_{y^{i}} = \sum_{k}J_{ki}\,\partial_{x^{k}}$ 与度量的双线性得 $g^{y} = J^{\mathsf T}g^{x}J$，取行列式：$\det g^{y} = (\det J)^{2}\det g^{x}$。两边开方（$\det g>0$，因为 $g$ 正定），
 

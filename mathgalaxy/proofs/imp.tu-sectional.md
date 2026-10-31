@@ -1,7 +1,7 @@
 # 反称性 $\implies$ 截面曲率与基的选取无关
 `imp.tu-sectional` · 推出 · strong 边 · 根 `../`
 
-`def.curvature-tensor` 黎曼曲率张量 + `def.riemannian-metric` 黎曼度量 → `def.sectional-curvature` 截面曲率
+`def.curvature-tensor` Riemann 曲率张量 + `def.riemannian-metric` Riemann 度量 → `def.sectional-curvature` 截面曲率
 
 **无关性。** 设 $X' = aX+bY$、$Y' = cX+dY$，$\Delta := ad-bc\ne0$。由 $R$ 的多重线性与对前两变元的反称性，$R(X',Y') = \Delta\,R(X,Y)$；再用 $\langle R(X,Y)X,X\rangle = \langle R(X,Y)Y,Y\rangle = 0$（对后两变元反称）得
 

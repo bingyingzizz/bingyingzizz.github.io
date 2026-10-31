@@ -1,7 +1,7 @@
 # n 次方根 $\implies$ 有理指数良定义；确界 $\implies$ 实数指数
 `imp.real-power` · 推出 · strong 边 · 根 `../`
 
-`thm.nth-root` n 次方根 + `lem.archimedean` 阿基米德性质 → `def.real-power` 有理指数与实数指数幂
+`thm.nth-root` n 次方根 + `lem.archimedean` Archimedes 性质 → `def.real-power` 有理指数与实数指数幂
 
 **有理指数良定义。** 设 $m/n = m'/n'$（$n, n' \ge 1$），则 $mn' = m'n$。取 $n n'$ 次方根：
 

@@ -1,4 +1,4 @@
-# 佐恩引理　`lem.zorn`
+# Zorn 引理　`lem.zorn`
 佐恩引理（Zorn's Lemma）
 layer 9 · 引理 · 选择原理 · 序理论+集合论
 [在星图里打开](../#n=lem.zorn)　·　[节点索引](../index.md)

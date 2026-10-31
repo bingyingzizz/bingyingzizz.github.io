@@ -8,7 +8,7 @@ layer 22 · 定义 · 内蕴几何 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.curvature-tensor`](../nodes/def.curvature-tensor.md) 黎曼曲率张量 用
+- 被 [`def.curvature-tensor`](../nodes/def.curvature-tensor.md) Riemann 曲率张量 用
 - ⇒ [`prop.curvature-tensor-symmetries`](../nodes/prop.curvature-tensor-symmetries.md) 曲率张量的对称性
 
 ## 为什么成立（入边，证明在 proofs/）

@@ -1,4 +1,4 @@
-# 阿基米德的 ε 形式与取整　`cor.archimedean-epsilon`　·　说明
+# Archimedes 的 ε 形式与取整　`cor.archimedean-epsilon`　·　说明
 根 `../`
 
 ⭐ (i) 是分析里「取 $n$ 足够大」的**标准形态**。阿基米德性质原来说的是「$\mathbb{N}$ 无上界」，但实际写证明时用的几乎总是 (i)：给 $\varepsilon$，取 $n > 1/\varepsilon$。

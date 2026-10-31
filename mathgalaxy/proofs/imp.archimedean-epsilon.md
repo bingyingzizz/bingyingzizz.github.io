@@ -1,7 +1,7 @@
 # 阿基米德性质 $\implies$ $1/n < \varepsilon$ 与取整
 `imp.archimedean-epsilon` · 推出 · strong 边 · 根 `../`
 
-`lem.archimedean` 阿基米德性质 → `cor.archimedean-epsilon` 阿基米德的 ε 形式与取整
+`lem.archimedean` Archimedes 性质 → `cor.archimedean-epsilon` Archimedes 的 ε 形式与取整
 
 **(i)** 给定 $\varepsilon > 0$。由阿基米德性质（用于 $x = 1/\varepsilon$）存在 $n \in \mathbb{N}$ 使 $n > 1/\varepsilon$。这样的 $n \ge 1$；两边除以 $n\varepsilon > 0$ 得 $1/n < \varepsilon$。
 

@@ -1,7 +1,7 @@
 # a.e. 收敛 + 有限测度 $\implies$ 近一致
 `imp.egorov` · 推出 · strong 边 · 根 `../`
 
-`def.convergence-modes` 五种收敛 → `thm.egorov` Egorov 定理
+`def.convergence-modes` 五种收敛 → `thm.egorov` Егоров 定理
 
 $$\mu(E) \le \sum_k \mu(E_{n_k}(k)) < \varepsilon \cdot \sum_k 2^{-k} = \varepsilon$$
 

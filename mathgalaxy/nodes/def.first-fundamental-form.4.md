@@ -6,4 +6,4 @@
 - 被 [`def.christoffel-symbol`](../nodes/def.christoffel-symbol.md) 克里斯托费尔记号 用
 - 被 [`def.isometry-surface`](../nodes/def.isometry-surface.md) 等距 用
 - 被 [`def.area-element`](../nodes/def.area-element.md) 面积元 用
-- ⇒ [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) 黎曼度量
+- ⇒ [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量

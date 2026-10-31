@@ -1,4 +1,4 @@
-# 阿基米德性质　`lem.archimedean`　·　续页（第 2 页）
+# Archimedes 性质　`lem.archimedean`　·　续页（第 2 页）
 [在星图里打开](../#n=lem.archimedean)　·　第 1 页 [nodes/lem.archimedean.md](./lem.archimedean.md)
 
 ## 陈述（续）

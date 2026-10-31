@@ -1,5 +1,5 @@
-# 高斯引理　`lem.gauss-lemma`
-高斯引理与测地极坐标
+# Gauss 引理　`lem.gauss-lemma`
+Gauss 引理与测地极坐标
 layer 28 · 引理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=lem.gauss-lemma)　·　[节点索引](../index.md)
 

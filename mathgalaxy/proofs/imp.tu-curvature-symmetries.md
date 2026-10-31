@@ -1,7 +1,7 @@
 # 保度量 $+$ 无挠 $\implies$ 曲率张量的四条对称性
 `imp.tu-curvature-symmetries` · 推出 · strong 边 · 根 `../`
 
-`def.curvature-tensor` 黎曼曲率张量 + `def.affine-connection` 仿射联络 → `prop.curvature-tensor-symmetries` 曲率张量的对称性
+`def.curvature-tensor` Riemann 曲率张量 + `def.affine-connection` 仿射联络 → `prop.curvature-tensor-symmetries` 曲率张量的对称性
 
 (1) **对 $X,Y$ 反称**：$R(X,Y) = [\nabla_{X},\nabla_{Y}]-\nabla_{[X,Y]}$ 中交换 $X,Y$，每一项都反号。
 

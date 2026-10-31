@@ -1,7 +1,7 @@
 # 法坐标下的三阶偏导抵消 $\implies$ 第二比安基恒等式
 `imp.tu-bianchi` · 推出 · strong 边 · 根 `../`
 
-`def.curvature-tensor` 黎曼曲率张量 + `prop.curvature-tensor-symmetries` 曲率张量的对称性 → `thm.bianchi-identity` 比安基恒等式
+`def.curvature-tensor` Riemann 曲率张量 + `prop.curvature-tensor-symmetries` 曲率张量的对称性 → `thm.bianchi-identity` 比安基恒等式
 
 把 $\nabla_{i}R_{jk\ell m}+\nabla_{j}R_{ki\ell m}+\nabla_{k}R_{ij\ell m}$ 在 $p$ 处写成 $g$ 的三阶偏导：三条轮流展开后，每一个三阶偏导 $\partial\partial\partial g$ 恰好出现两次、符号相反，逐项抵消。于是等式在 $p$ 处成立；$p$ 任意且两边都是张量，故恒等式处处成立。
 

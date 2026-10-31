@@ -1,5 +1,5 @@
 # 体积形式　`def.volume-form`
-体积形式与黎曼体积
+体积形式与 Riemann 体积
 layer 26 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.volume-form)　·　[节点索引](../index.md)
 

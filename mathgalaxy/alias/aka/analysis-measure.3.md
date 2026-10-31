@@ -25,7 +25,7 @@
 
 - L1 收敛推出依测度 → prop.L1-implies-measure
 
-- Egorov | 叶果洛夫 | 叶戈罗夫 → thm.egorov
+- Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
 
 - Lusin | 卢津 → cor.lusin
 

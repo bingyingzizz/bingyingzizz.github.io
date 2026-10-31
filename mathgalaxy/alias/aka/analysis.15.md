@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 反函数连续 → thm.monotone-inverse
+
 - Kummer 判别法 → thm.kummer
 
 - Dini 定理 → thm.dini
@@ -46,7 +48,5 @@
 - 整数幂 → def.power
 
 - 高阶导数与 C^k → def.higher-derivative
-
-- 指数律与幂的单调性 → prop.power-rules
 
 > 续见 alias/aka/analysis.16.md

@@ -1,5 +1,5 @@
-# 高斯曲率　`def.gauss-curvature`
-高斯曲率的内蕴定义
+# Gauss 曲率　`def.gauss-curvature`
+Gauss 曲率的内蕴定义
 layer 24 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.gauss-curvature)　·　[节点索引](../index.md)
 
@@ -8,7 +8,7 @@ layer 24 · 定义 · 内蕴几何 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) 高斯博内定理 用
+- 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理 用
 - ⇒ [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理
 
 - …另有出边，续页见 [nodes/def.gauss-curvature.4.md](./def.gauss-curvature.4.md)

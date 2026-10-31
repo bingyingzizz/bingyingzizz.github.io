@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 指数律与幂的单调性 → prop.power-rules
+
 - 单侧极限 → def.function-limit-onesided
 
 - 间断点分类 → prop.discontinuity-types

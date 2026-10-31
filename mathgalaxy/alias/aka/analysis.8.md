@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 绝对连续的 ε-δ 刻画 | 绝对连续等价刻画 → thm.ac-epsilon-delta
+
 - 要么奇异要么有下界 → lem.singular-or-lower-bound
 
 - Radon–Nikodym 导数 | RN 导数 | 密度 | Radon-Nikodym derivative → def.rn-derivative
@@ -28,7 +30,5 @@
 - 覆盖引理 | covering lemma | Vitali 覆盖 → lem.covering
 
 - 可缩族 | shrinking | 缩族 → def.shrinks-nicely
-
-- 正则测度 | regular measure | 正则 Borel 测度 → def.regular-measure
 
 > 续见 alias/aka/analysis.9.md

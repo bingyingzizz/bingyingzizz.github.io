@@ -1,4 +1,4 @@
-# 斯通定理　`thm.metric-paracompact`　·　说明
+# Stone 定理　`thm.metric-paracompact`　·　说明
 根 `../`
 
 **证明的两条标准路线**（都不在本节点展开到最后一步）：

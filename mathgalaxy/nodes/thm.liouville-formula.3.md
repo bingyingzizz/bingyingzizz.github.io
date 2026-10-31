@@ -1,4 +1,4 @@
-# 刘维尔公式　`thm.liouville-formula`　·　续页（第 3 页）
+# Liouville 公式　`thm.liouville-formula`　·　续页（第 3 页）
 [在星图里打开](../#n=thm.liouville-formula)　·　第 1 页 [nodes/thm.liouville-formula.md](./thm.liouville-formula.md)　·　上一页 [nodes/thm.liouville-formula.2.md](./thm.liouville-formula.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

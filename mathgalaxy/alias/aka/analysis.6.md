@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
+
 - Fatou | Fatou's lemma | 法图引理 | 法都引理 → lem.fatou
 
 - 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
@@ -26,7 +28,5 @@
 - 积 σ-代数 | product sigma-algebra | 乘积 σ代数 → def.product-sigma
 
 - 截口 | section | 切片 → def.section
-
-- 积 σ代数的生成基 → prop.product-sigma-base
 
 > 续见 alias/aka/analysis.7.md

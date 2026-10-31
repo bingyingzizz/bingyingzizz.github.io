@@ -8,7 +8,7 @@ layer 26 · 命题 · 内蕴几何 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.liouville-formula`](../nodes/thm.liouville-formula.md) 刘维尔公式
+- ⇒ [`thm.liouville-formula`](../nodes/thm.liouville-formula.md) Liouville 公式
 - ⇒ [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理
 
 ## 为什么成立（入边，证明在 proofs/）

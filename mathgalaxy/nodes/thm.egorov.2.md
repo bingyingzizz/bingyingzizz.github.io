@@ -1,4 +1,4 @@
-# Egorov 定理　`thm.egorov`　·　续页（第 2 页）
+# Егоров 定理　`thm.egorov`　·　续页（第 2 页）
 [在星图里打开](../#n=thm.egorov)　·　第 1 页 [nodes/thm.egorov.md](./thm.egorov.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

@@ -1,7 +1,7 @@
 # 佐恩引理 $\implies$ 选择公理（路线 $2\implies1$）
 `imp.zorn-choice` · 推出 · strong 边 · 根 `../`
 
-`lem.zorn` 佐恩引理 → `ax.choice` 选择公理
+`lem.zorn` Zorn 引理 → `ax.choice` 选择公理
 
 设 $\{A_i\}_\{i \in I\}$ 是一族非空集合。要对它造出一个选择函数。
 

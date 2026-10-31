@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-31T03:18:07.287Z
+> 由 `tools/build.mjs` 自动生成于 2026-10-31T04:12:53.376Z
 > 13 星系 / 88 星团 / 1288 节点 / 2337 连线（强边 2326，弱边 11；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -1239,7 +1239,7 @@ Zermelo 1904 年为证明「每个集合可良序」而明确提出了选择公�
 
 参考：Zermelo (1904)；Kunen, Set Theory, I.12
 
-#### 佐恩引理　`lem.zorn`
+#### Zorn 引理　`lem.zorn`
 *引理*　佐恩引理（Zorn's Lemma）
 
 设 $(P, \preceq )$ 是**非空**偏序集。若 $P$ 的每个链在 $P$ 中都有上界，则 $P$ 有**极大元**。
@@ -2804,8 +2804,8 @@ $$\mathcal{W}_{i} := \{\, V_{j} : j < i \,\} \cup \{\, U_{k} : k \ge i \,\}$$
 
 参考：Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch. 5
 
-#### 仿紧豪斯多夫空间正规　`thm.paracompact-hausdorff-normal`
-*定理*　仿紧的豪斯多夫空间是正规空间
+#### 仿紧 Hausdorff 空间正规　`thm.paracompact-hausdorff-normal`
+*定理*　仿紧的 Hausdorff 空间是正规空间
 
 设 $X$ 是**仿紧**的 **Hausdorff** 空间。则 $X$ 是**正规**的；证明会先得到更强的中间结论：$X$ 已经是**正则**的。
 
@@ -2903,7 +2903,7 @@ $$\mathcal{T}_{d} = \mathcal{T},\qquad \mathcal{T}_{d} := \{\, U \subseteq X : \
 
 参考：Munkres, Topology (2nd ed.), Sections 20 and 40
 
-#### 斯通定理　`thm.metric-paracompact`
+#### Stone 定理　`thm.metric-paracompact`
 *定理*　度量空间必为仿紧空间
 
 设 $(X, d)$ 是距离空间。则 $X$（带 $d$ 诱导的拓扑）是**仿紧**的：它的每个开覆盖都有局部有限的开加细。
@@ -2921,7 +2921,7 @@ $$\mathcal{T}_{d} = \mathcal{T},\qquad \mathcal{T}_{d} := \{\, U \subseteq X : \
 
 参考：Stone, Paracompactness and product spaces, Bull. Amer. Math. Soc. 54 (1948)；Munkres, Topology (2nd ed.), Section 41
 
-#### 乌雷松度量化定理　`thm.urysohn-metrization`
+#### Urysohn 度量化定理　`thm.urysohn-metrization`
 *定理*　正则且第二可数的空间可度量化
 
 设 $X$ 是**正则**（含 $T_{1}$）的**第二可数**空间。则 $X$ 是**可度量化的**：存在与 $X$ 的拓扑相容的距离。
@@ -6538,7 +6538,7 @@ $$ab = 0 \implies a = 0 \text{ 或 } b = 0, \qquad a \ne 0,\ ab = ac \implies b 
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 1
 
-#### 阿基米德的 ε 形式与取整　`cor.archimedean-epsilon`
+#### Archimedes 的 ε 形式与取整　`cor.archimedean-epsilon`
 *推论*　推论：$1/n < \varepsilon$ 与取整函数
 
 设 $K$ 是完备有序域（如 $\mathbb{R}$）。
@@ -6724,7 +6724,7 @@ $$\big| |x| - |y| \big| \le |x - y|, \qquad |x_1 + x_2 + \cdots + x_n| \le |x_1|
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 1
 
-#### 阿基米德性质　`lem.archimedean`
+#### Archimedes 性质　`lem.archimedean`
 *引理*　阿基米德性质与 $\mathbb{Q}$ 的稠密性
 
 设 $K$ 是一个**完备有序域**（比如 $\mathbb{R}$）。则：
@@ -8582,7 +8582,7 @@ $$Dg(y) = \bigl( Df(g(y)) \bigr)^{-1}$$
 
 ⚠ 定理只保证 $C^{1}$；但由 $Dg = (Df \circ g)^{-1}$ 立即得：$f$ 光滑 $\implies$ $g$ 光滑（$Df\circ g$ 光滑、求逆是光滑运算）。这就是「$f$ 是微分同胚 $\implies$ $f^{-1}$ 也是」。
 
-⭐ 定理顺带说明了 $f$ 是**开映射**（把开集 $V$ 映成开集 $W$）—— 这一点在有限维是免费的；在 Banach 空间里它是**另一条定理**（泛函分析的 `开映射定理`，与本图的「非常数全纯函数是开映射」同名但不同物，且尚未收录），不能从这里免费得到。
+⭐ 定理顺带说明了 $f$ 是**开映射**（把开集 $V$ 映成开集 $W$）—— 这一点在有限维是免费的，在 Banach 空间里要靠开映射定理另行处理。
 
 ⚠ 与 `thm.regular-value`、`cor.rank-theorem` 是一个家族：秩定理说「常秩映射局部只有标准形」，逆映射定理是 $r = n = m$ 的特例。
 
@@ -9673,7 +9673,7 @@ $$\int |f_n - f| \to 0 \implies f_n \to f\text{ 依测度}$$
 
 参考：Folland, Real Analysis, Prop. 2.29
 
-#### Egorov 定理　`thm.egorov`
+#### Егоров 定理　`thm.egorov`
 *定理*　Egorov 定理：a.e. 收敛 $\implies$ 近一致
 
 设 $\mu(X) < \infty$，且 $f_n \to f$ a.e.。则 $f_n \to f$ **近一致**：
@@ -24750,8 +24750,8 @@ $$k_{g}(\gamma)\equiv 0 \iff \nabla_{\dot\gamma}\dot\gamma\equiv 0 .$$
 
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 测地曲率；do Carmo, Differential Forms and Applications, 第 3 章「联络形式」· 测地曲率与联络形式
 
-#### 刘维尔公式　`thm.liouville-formula`
-*定理*　测地曲率的刘维尔公式
+#### Liouville 公式　`thm.liouville-formula`
+*定理*　测地曲率的 Liouville 公式
 
 白话：**测地曲率 = 曲线自己转的角度减去标架被度量「带着转」的角度**，而后者只由 $E, G$ 的偏导数决定。所以只要知道度量（也就是 $I$），就能算出任何曲线的测地曲率 —— 不需要曲面怎么嵌在 $\mathbb{R}^{3}$ 里。
 
@@ -24822,8 +24822,8 @@ $$(\mathrm{d}\exp_{p})_{0} = \mathrm{id}_{T_{p}S},$$
 
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 指数映射；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯映射的几何」· 法坐标
 
-#### 高斯引理　`lem.gauss-lemma`
-*引理*　高斯引理与测地极坐标
+#### Gauss 引理　`lem.gauss-lemma`
+*引理*　Gauss 引理与测地极坐标
 
 设 $p \in S$、$v \in T_{p}S$、$w \in T_{v}(T_{p}S)$。则
 
@@ -24868,8 +24868,8 @@ $$g_{ij}(p) = \delta_{ij},\qquad \Gamma^{k}_{ij}(p) = 0,\qquad \partial_{k}g_{ij
 
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯映射的几何」· 法坐标；Petersen, Riemannian Geometry, 「高斯引理与法坐标」一章·法坐标下度量的展开
 
-#### 黎曼曲率张量　`def.curvature-tensor`
-*定义*　黎曼曲率张量与局部平坦性
+#### Riemann 曲率张量　`def.curvature-tensor`
+*定义*　Riemann 曲率张量与局部平坦性
 
 白话：**曲率张量量的是「沿两个方向搬来搬去，顺序换一下，结果差多少」**。在平坦的平面里怎么换都对，差为零；在球面上换顺序就会差一点，那一点就是曲率。它是内蕴的：公式里只出现 $g$ 与它的导数，没有法向、没有第二基本形式。
 
@@ -24899,8 +24899,8 @@ $$R_{ijk\ell} = -R_{jik\ell} = -R_{ij\ell k} = R_{k\ell ij},\qquad R_{ijk\ell}+R
 
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 曲率张量；do Carmo, Riemannian Geometry, 「曲率」一章·Ricci 恒等式与比安基恒等式
 
-#### 高斯曲率　`def.gauss-curvature`
-*定义*　高斯曲率的内蕴定义
+#### Gauss 曲率　`def.gauss-curvature`
+*定义*　Gauss 曲率的内蕴定义
 
 白话：二维曲面上「曲率」其实只有**一个数**，这个数就是高斯曲率 $K$。这里用曲率张量的一个分量算出它，下一节点（绝妙定理）再说明它和 $k_{1}k_{2}$ 是同一个数。
 
@@ -24930,7 +24930,7 @@ $$K = \langle R(e_{1},e_{2})e_{2},e_{1}\rangle .$$
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯曲率；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯方程
 
 #### 绝妙定理　`thm.theorema-egregium`
-*定理*　高斯曲率是内蕴量
+*定理*　Gauss 曲率是内蕴量
 
 高斯曲率 $K$ 只依赖第一基本形式 $I$。准确地说：若 $\varphi : S_{1}\to S_{2}$ 是局部等距，则
 
@@ -24954,8 +24954,8 @@ $$K(p) = \frac{3}{\pi}\lim_{\rho\to0}\frac{2\pi\rho-L(\rho)}{\rho^{3}}.$$
 
 参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯的绝妙定理；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯方程与绝妙定理
 
-#### 高斯博内定理　`thm.gauss-bonnet`
-*定理*　高斯博内定理与欧拉示性数
+#### Gauss–Bonnet 定理　`thm.gauss-bonnet`
+*定理*　Gauss–Bonnet 定理与 Euler 示性数
 
 设 $M \subseteq \mathbb{R}^{3}$ 是紧致、可定向的曲面（允许带分段光滑边界）。则
 
@@ -25064,8 +25064,8 @@ $$T_{p}M = \ker\mathrm{d}F_{p}\qquad (p\in M).$$
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 正则水平集与隐函数定理；Tu, An Introduction to Manifolds, 「Manifolds」· 正则水平集定理
 
-#### 黎曼度量　`def.riemannian-metric`
-*定义*　黎曼度量
+#### Riemann 度量　`def.riemannian-metric`
+*定义*　Riemann 度量
 
 **在做什么**：在每点的切空间上放一个内积，并要求它随点光滑变化 —— 有了它，流形上才有长度、角度、体积，也才有测地线与曲率。
 
@@ -26176,7 +26176,7 @@ $$\mathcal{L}_{X} = \mathrm{d}\,\iota_{X} + \iota_{X}\,\mathrm{d},$$
 > 让「积分」在流形上跑起来：奇异方块与链 → 边界算子与 ∂²=0 → 链上的积分与换元、Stokes 与散度定理 → 体积形式与密度 → de Rham 复形、Poincaré 引理、Mayer–Vietoris，最后到 de Rham 定理。
 
 #### 体积形式　`def.volume-form`
-*定义*　体积形式与黎曼体积
+*定义*　体积形式与 Riemann 体积
 
 **在说什么**：一个处处不为零的 $n$-形式给出「有向体积」；度量的行列式因子乘上坐标体积形式，就是黎曼体积。
 
@@ -27078,7 +27078,7 @@ $$a \preceq b :\iff x^{-1}(a) \le x^{-1}(b)$$
 
 > 这是整张星图里最关键的一条等价链的起点：AC 给「挑选」，良序给「最小」，两者互为表里。
 
-#### 良序定理 ⟺ 佐恩引理　`eq.wo-zorn`
+#### 良序定理 ⟺ Zorn 引理　`eq.wo-zorn`
 *良序定理 $\iff$ 佐恩引理*
 
 **良序定理 ⇒ 佐恩引理**
@@ -27119,7 +27119,7 @@ $$x \preceq_* y \iff\text{ 存在} (W, \preceq_W) \in \mathcal{D}\text{ 使} x, 
 3. 由佐恩引理，取极大元 $(W, \preceq )$。
 4. 若 $W \ne X$，取 $x \in X \setminus W$，在 $W \cup \{x\}$ 上定义序：保留 $W$ 上的 $\preceq$，并令所有 $w \in W$ 都 $\preceq x$（把 $x$ 放在最顶端）。这仍是良序，而且是 $(W, \preceq )$ 的严格延拓，与极大性矛盾。故 $W = X$，即 $X$ 被良序化。∎
 
-#### 佐恩引理 ⟺ Hausdorff 极大原理　`eq.zorn-hausdorff`
+#### Zorn 引理 ⟺ Hausdorff 极大原理　`eq.zorn-hausdorff`
 *佐恩引理 $\iff$ Hausdorff 极大原理*
 
 **佐恩引理 ⇒ Hausdorff 极大原理（路线 2⟹3）**
@@ -27174,7 +27174,7 @@ $$U = \bigcup \{ A : A \in \mathcal{C} \}$$
 
 > 这一对证明很典型：先看出「链」这个概念本身具有有限特征，就把 Hausdorff 原理换成了用起来更省事的 Tukey 引理。
 
-#### 选择公理 + Hartogs 定理 ⟹ 佐恩引理　`imp.hartogs-zorn`
+#### 选择公理 + Hartogs 定理 ⟹ Zorn 引理　`imp.hartogs-zorn`
 *选择公理 + Hartogs 定理 $\implies$ 佐恩引理（路线 $1\implies2$）*
 
 设 $(P, \preceq )$ 是非空偏序集，且 $P$ 的每个链都有上界。目标是造出一个极大元。
@@ -27203,7 +27203,7 @@ $>$ 这一路线的分工很干净：**AC 负责「挑」，Hartogs 负责「停
 
 > 比走良序定理更直：整段只挑一次元素，终止性由 Hartogs 定理（ZF 可证）兜底。
 
-#### 佐恩引理 ⟹ 选择公理　`imp.zorn-choice`
+#### Zorn 引理 ⟹ 选择公理　`imp.zorn-choice`
 *佐恩引理 $\implies$ 选择公理（路线 $2\implies1$）*
 
 设 $\{A_i\}_\{i \in I\}$ 是一族非空集合。要对它造出一个选择函数。
@@ -27232,7 +27232,7 @@ $$f' = f \cup \{ (i_0, a) \}$$
 
 > 「按包含序取极大元，再证明它已经没法再大」—— 这是用佐恩引理造存在性对象的典型手法。
 
-#### 佐恩引理 ⟹ 每个向量空间有基　`imp.zorn-to-basis`
+#### Zorn 引理 ⟹ 每个向量空间有基　`imp.zorn-to-basis`
 *佐恩引理 $\implies$ 每个向量空间有基*
 
 设 $V \ne 0$ 是域 $K$ 上的向量空间，并给定线性无关集 $S_{0} \subseteq V$。令
@@ -29537,7 +29537,7 @@ $$(-a)(-b) = -\bigl(a(-b)\bigr) = -\bigl(-(ab)\bigr) = ab.$$
 
 **(v)** $|x| > c$ 即「并非 $|x| \le c$」，由 (iv) 的等价取反得 $x > c$ 或 $x < -c$。$\blacksquare$
 
-#### 阿基米德性质 ⟹ 阿基米德的 ε 形式与取整　`imp.archimedean-epsilon`
+#### Archimedes 性质 ⟹ Archimedes 的 ε 形式与取整　`imp.archimedean-epsilon`
 *阿基米德性质 $\implies$ $1/n < \varepsilon$ 与取整*
 
 **(i)** 给定 $\varepsilon > 0$。由阿基米德性质（用于 $x = 1/\varepsilon$）存在 $n \in \mathbb{N}$ 使 $n > 1/\varepsilon$。这样的 $n \ge 1$；两边除以 $n\varepsilon > 0$ 得 $1/n < \varepsilon$。
@@ -29588,7 +29588,7 @@ $$v^{n} - u^{n} = (v - u)\,(v^{n-1} + v^{n-2}u + \cdots + u^{n-1}) > 0,$$
 
 **乘法。** $(\sqrt[n]{a}\,\sqrt[n]{b})^{n} = ab$，两边都是正数，由唯一性得 $\sqrt[n]{ab} = \sqrt[n]{a}\,\sqrt[n]{b}$。$\blacksquare$
 
-#### n 次方根 + 阿基米德性质 ⟹ 有理指数与实数指数幂　`imp.real-power`
+#### n 次方根 + Archimedes 性质 ⟹ 有理指数与实数指数幂　`imp.real-power`
 *n 次方根 $\implies$ 有理指数良定义；确界 $\implies$ 实数指数*
 
 **有理指数良定义。** 设 $m/n = m'/n'$（$n, n' \ge 1$），则 $mn' = m'n$。取 $n n'$ 次方根：
@@ -29673,7 +29673,7 @@ $$\mu(\{|f_n - f| > \delta\}) \le (1/\delta)\cdot\int |f_n - f| d\mu \to 0$$
 
 （最后一步正是 $L^{1}$ 收敛的定义。）再对任意 $\varepsilon > 0$ 取 $n$ 足够大即可。∎
 
-#### 五种收敛 ⟹ Egorov 定理　`imp.egorov`
+#### 五种收敛 ⟹ Егоров 定理　`imp.egorov`
 *a.e. 收敛 + 有限测度 $\implies$ 近一致*
 
 设 $f_n \to f$ a.e.，$\mu(X) < \infty$。
@@ -29706,7 +29706,7 @@ $$|f_n(x) - f(x)| < k^{-1}$$
 
 $>$ ⚠ ③ 是唯一用到 $\mu(X) < \infty$ 的地方（递减列的上连续性需要首项有限）。少了它这一步就不成立，反例见节点正文。
 
-#### L¹ 里的逼近 + Egorov 定理 ⟹ Lusin 定理　`imp.lusin`
+#### L¹ 里的逼近 + Егоров 定理 ⟹ Lusin 定理　`imp.lusin`
 *简单函数逼近 + Egorov $\implies$ Lusin*
 
 **① 先用简单函数逼近。** 由「$L^{1}$ 里的逼近」，取简单函数列 $\{\varphi_n\}$ 使 $\int|f - \varphi_n| \to 0$；取子列还可保证 $\varphi_n \to f$ a.e.（由 $L^{1}$ 收敛 $\implies$ 依测度收敛 + 抽 a.e. 子列）。而简单函数是有限个可测集的特征函数之和。
@@ -29725,7 +29725,7 @@ $>$ ⭐ 核心思想与 Egorov 一样是「**丢掉一小块，换取好性质**
 
 四个反例各自击破一种收敛的逆命题。
 
-#### 定义引用：「五种收敛」→ Egorov 定理　`def-link.modes-egorov`
+#### 定义引用：「五种收敛」→ Егоров 定理　`def-link.modes-egorov`
 
 Egorov 定理说的是其中两种收敛（a.e. 与近一致）的关系。
 
@@ -29741,7 +29741,7 @@ $L^{1}$ 收敛的定义里用到 $\int |f_{n} - f|$。
 
 两种收敛的定义直接对照。
 
-#### 定义引用：「测度」→ Egorov 定理　`def-link.measure-egorov`
+#### 定义引用：「测度」→ Егоров 定理　`def-link.measure-egorov`
 
 证明的 ③ 靠测度的上连续性，而那是可数可加性的推论。
 
@@ -29865,7 +29865,7 @@ $$(\sin x)' = \sum_{k \ge 0} \frac{(-1)^{k}(2k+1)x^{2k}}{(2k+1)!} = \cos x, \qqu
 
 **$\sqrt{x}$**：由 $x = (\sqrt{x})^{2}$ 两边求导得 $1 = 2\sqrt{x}\,(\sqrt{x})'$。$\blacksquare$
 
-#### 级数收敛 + Bernoulli 不等式 + 阿基米德的 ε 形式与取整 ⟹ 几何级数　`imp.geometric-series`
+#### 级数收敛 + Bernoulli 不等式 + Archimedes 的 ε 形式与取整 ⟹ 几何级数　`imp.geometric-series`
 *部分和公式 + Bernoulli $\implies$ 几何级数*
 
 **$|q| < 1$。** 部分和（$q \ne 1$）
@@ -31570,11 +31570,11 @@ $\sigma$-局部有限就是拿「局部有限族」当积木，可数多个拼�
 
 收缩的每一步都是把「闭集含于开集」用正规性夹一次；这一步只用正规性，不用仿紧。
 
-#### 定义引用：「Hausdorff 空间」→ 仿紧豪斯多夫空间正规　`dep.pcp-hausdorff-pcn`
+#### 定义引用：「Hausdorff 空间」→ 仿紧 Hausdorff 空间正规　`dep.pcp-hausdorff-pcn`
 
 定理要的是「仿紧 **且** Hausdorff」：没有 Hausdorff，仿紧推不出正规（Sierpiński 空间是反例）。
 
-#### 定义引用：「仿紧空间」→ 仿紧豪斯多夫空间正规　`dep.pcp-paracompact-pcn`
+#### 定义引用：「仿紧空间」→ 仿紧 Hausdorff 空间正规　`dep.pcp-paracompact-pcn`
 
 另一个前提是仿紧；证明里「取局部有限开加细」是唯一用到它的地方。
 
@@ -31610,19 +31610,19 @@ Michael 判别法里「加细」故意**不**要求成员是开集 —— 这正
 
 第二可数 = 给「基」再加一个计数条件（基的成员可数）。
 
-#### 定义引用：「第二可数空间」→ 乌雷松度量化定理　`dep.pcp-second-urysohn`
+#### 定义引用：「第二可数空间」→ Urysohn 度量化定理　`dep.pcp-second-urysohn`
 
 定理的假设之一：第二可数（另加正则）。
 
-#### 定义引用：「可度量化空间」→ 乌雷松度量化定理　`dep.pcp-metrizable-urysohn`
+#### 定义引用：「可度量化空间」→ Urysohn 度量化定理　`dep.pcp-metrizable-urysohn`
 
 定理的结论：可度量化。
 
-#### 定义引用：「Urysohn 引理」→ 乌雷松度量化定理　`dep.pcp-urysohn-lemma-metrization`
+#### 定义引用：「Urysohn 引理」→ Urysohn 度量化定理　`dep.pcp-urysohn-lemma-metrization`
 
 构造可数多个分离函数那一步用的就是 Urysohn 引理（前提「正规」由第二可数 $+$ 正则推出）。
 
-#### 定义引用：「正规空间」→ 乌雷松度量化定理　`dep.pcp-normal-urysohn-metrization`
+#### 定义引用：「正规空间」→ Urysohn 度量化定理　`dep.pcp-normal-urysohn-metrization`
 
 证明的中间站：正则 $+$ Lindelöf $\implies$ 正规，Urysohn 引理才有前提。
 
@@ -31650,7 +31650,7 @@ $\sigma$-离散的定义与 $\sigma$-局部有限写在同一个节点里，Bing
 
 结论第 2 条：可度量化 $\implies$ 正规，证明用距离函数造分离函数。
 
-#### 仿紧空间 + Hausdorff 空间 ⟹ 仿紧豪斯多夫空间正规　`imp.pcp-paracompact-hausdorff-normal`
+#### 仿紧空间 + Hausdorff 空间 ⟹ 仿紧 Hausdorff 空间正规　`imp.pcp-paracompact-hausdorff-normal`
 
 **先证正则。** 设 $x \notin F$、$F$ 闭。对每个 $y \in F$ 取不交开集 $O_{1} \ni y$、$O_{2} \ni x$ 并令 $G_{y} := O_{1}$：由 $O_{1} \subseteq X \setminus O_{2}$ 得 $\operatorname{cl} G_{y} \cap O_{2} = \emptyset$，故 $x \notin \operatorname{cl} G_{y}$。开覆盖 $\{\, X \setminus F \,\} \cup \{\, G_{y} \,\}$ 由仿紧性有局部有限开加细 $\mathcal{C}$；令 $W := \bigcup \{\, C \in \mathcal{C} : C \cap F \ne \emptyset \,\}$。
 - $F \subseteq W$：$y \in F$ 落在某个 $C$ 里，而 $C \subseteq X \setminus F$ 不可能，故 $C \subseteq G_{y}$，于是 $C$ 计入 $W$；
@@ -31658,14 +31658,14 @@ $\sigma$-离散的定义与 $\sigma$-局部有限写在同一个节点里，Bing
 所以 $W \ni F$ 与 $X \setminus \operatorname{cl} W \ni x$ 是不交开集：正则 ✓。
 **再证正规。** 设 $A, B$ 不交闭。对 $x \in A$ 用正则性取开集 $O_{x} \ni x$ 使 $\operatorname{cl} O_{x} \cap B = \emptyset$。开覆盖 $\{\, X \setminus A \,\} \cup \{\, O_{x} \,\}$ 有局部有限开加细 $\mathcal{D}$；令 $U := \bigcup \{\, D \in \mathcal{D} : D \cap A \ne \emptyset \,\}$。同上 $A \subseteq U$，且每个计入的 $D \subseteq O_{x}$ 给出 $\operatorname{cl} D \cap B = \emptyset$，由局部有限性得 $\operatorname{cl} U \cap B = \emptyset$。于是 $U$ 与 $X \setminus \operatorname{cl} U$ 分开 $A, B$ ✓。∎
 
-#### 仿紧豪斯多夫空间正规 + 收缩引理 ⟹ 闭加细　`imp.pcp-shrink-closed-refinement`
+#### 仿紧 Hausdorff 空间正规 + 收缩引理 ⟹ 闭加细　`imp.pcp-shrink-closed-refinement`
 
 设 $\mathcal{U}$ 是仿紧 Hausdorff 空间 $X$ 的开覆盖。仿紧性给出局部有限开加细 $\mathcal{V} = \{ V_{i} \}$；由上一条定理 $X$ 正规，于是可以对 $\mathcal{V}$ 用收缩引理，得到开覆盖 $\{ W_{i} \}$ 使 $\operatorname{cl} W_{i} \subseteq V_{i}$。取 $F_{i} := \operatorname{cl} W_{i}$：
 - 闭 ✓，且 $F_{i} \subseteq V_{i} \subseteq$ 某个 $\mathcal{U}$ 的成员（加细可传递）；
 - 覆盖 $X$ ✓（$\{ W_{i} \}$ 已覆盖）；
 - 局部有限 ✓：只碰有限多个 $V_{i}$ 的开邻域也只碰有限多个 $\operatorname{cl} W_{i}$，用的是 $\operatorname{cl} W_{i} \subseteq V_{i}$。∎
 
-#### 仿紧豪斯多夫空间正规 + 收缩引理 ⟹ 仿紧性与单位分解　`imp.pcp-shrink-unity`
+#### 仿紧 Hausdorff 空间正规 + 收缩引理 ⟹ 仿紧性与单位分解　`imp.pcp-shrink-unity`
 
 这是已有命题里「仿紧 Hausdorff $\implies$ 任意开覆盖有从属单位分解」的那一半，逐步重复一遍以显示它不额外需要任何东西：
 设 $\mathcal{U} = \{ U_{i} \}$ 是开覆盖。仿紧给局部有限开加细 $\mathcal{V} = \{ V_{i} \}$，正规性（上一条定理）加收缩引理给开覆盖 $\{ W_{i} \}$ 使 $\operatorname{cl} W_{i} \subseteq V_{i}$。
@@ -31679,7 +31679,7 @@ $$\rho_{i} := g_{i}/g$$
 设 $(X, d)$ 是距离空间，$\mathcal{T}_{d}$ 是开球之并给出的拓扑。取 $X$ 上原来的拓扑 $\mathcal{T}_{d}$ 与同一个 $d$：恒等映射 $\mathrm{id} : (X, \mathcal{T}_{d}) \to (X, \mathcal{T}_{d})$ 是同胚，故 $d$ 与拓扑相容，$X$ 可度量化 ✓。
 ⭐ 这条边看着废话，但它确定了术语的**方向**：「可度量化」是比较弱的性质（拓扑恰好来自某个度量），「距离空间」是带了具体度量的对象。图里所有「度量 $\implies$ 某性质」的结论都要经过这一条才能搬到可度量化空间上。
 
-#### 斯通定理 ⟹ 可度量化空间的性质　`imp.pcp-stone-metrizable-paracompact`
+#### Stone 定理 ⟹ 可度量化空间的性质　`imp.pcp-stone-metrizable-paracompact`
 
 这是可度量化空间那条命题的第 3 条（仿紧）。设 $X$ 可度量化，取相容度量 $d$，则 $(X, d)$ 是距离空间，由 Stone 定理仿紧。
 「仿紧」是拓扑性质（只用到开覆盖与局部有限族，两者都由拓扑决定），故在同胚下保持；而 $X$ 与 $(X, d)$ 之间就有同胚（恒等映射）。于是 $X$ 仿紧 ✓。∎
@@ -31697,7 +31697,7 @@ $$\rho_{i} := g_{i}/g$$
 离散 $\implies$ 局部有限（每点邻域至多碰一个成员，当然只碰有限个），故每层 $\mathcal{A}_{n}$ 也局部有限，于是 $\mathcal{B}$ 是 $\sigma$-局部有限的基。由 Nagata–Smirnov 定理，$X$ 可度量化 ✓。∎
 ⭐ 所以 Bing 定理不必单独证明 —— 它的假设是 Nagata–Smirnov 假设的特例。Bing 的独立价值在证明路径（$\sigma$-离散族的闭包族仍离散，闭包运算与覆盖运算可以交换着算），而不在结论更强。
 
-#### 局部有限基度量化定理 + 第二可数空间 ⟹ 乌雷松度量化定理　`imp.pcp-urysohn-from-ns`
+#### 局部有限基度量化定理 + 第二可数空间 ⟹ Urysohn 度量化定理　`imp.pcp-urysohn-from-ns`
 
 设 $X$ 正则且第二可数，取可数基 $\mathcal{B} = \{ B_{n} \}$。把 $\mathcal{B}$ 写成可数多个「单项族」之并：$\mathcal{B} = \bigcup_{n} \{\, B_{n} \,\}$。
 每个单项族 $\{\, B_{n} \,\}$ 是**离散**族（任何点的任何邻域至多碰到它的唯一成员 —— 因为只有一个成员），当然也局部有限。故 $\mathcal{B}$ 是 $\sigma$-局部有限的基，由 Nagata–Smirnov 定理 $X$ 可度量化 ✓。∎
@@ -31771,7 +31771,7 @@ $$\rho_{i} := g_{i}/g$$
 
 加细是覆盖之间的关系，而覆盖由开集构成 —— 源头是拓扑。
 
-#### 定义引用：「距离空间」→ 斯通定理　`def-link.metric-paracompact`
+#### 定义引用：「距离空间」→ Stone 定理　`def-link.metric-paracompact`
 
 度量空间的度量给出可数局部基，仿紧性就是从这层结构长出来的。
 
@@ -31795,7 +31795,7 @@ $$\rho_{i} := g_{i}/g$$
 
 这条万有性质讲的是 $M\otimes_R N$ 这个对象本身；先有构造（商掉双线性关系），才谈得上它对双线性映射万有。
 
-#### 定义引用：「联络形式」→ 黎曼曲率张量　`def-link.curvature-tensor`
+#### 定义引用：「联络形式」→ Riemann 曲率张量　`def-link.curvature-tensor`
 
 黎曼曲率张量量的是「沿两条路径平行移动的差别」，它的定义对象就是联络：$R(X,Y)=\nabla_X\nabla_Y-\nabla_Y\nabla_X-\nabla_{[X,Y]}$。
 
@@ -32088,7 +32088,7 @@ $$M = II(r_{u}, r_{v}) = \langle W(r_{u}), r_{v}\rangle = k_{1}\langle r_{u}, r_
 
 指数映射的定义就是把 $T_{p}S$ 的每条射线「顺着测地线走单位时间」，所以它整个建立在测地线的存在唯一性上。
 
-#### 定义引用：「黎曼曲率张量」→ 高斯曲率　`dep.curv-gauss`
+#### 定义引用：「Riemann 曲率张量」→ Gauss 曲率　`dep.curv-gauss`
 
 高斯曲率是曲率张量在二维时唯一独立分量的归一化：$K = R_{1221}/\det(g)$。没有曲率张量，这个定义无法陈述。
 
@@ -32096,11 +32096,11 @@ $$M = II(r_{u}, r_{v}) = \langle W(r_{u}), r_{v}\rangle = k_{1}\langle r_{u}, r_
 
 绝妙定理的结论用的是「内蕴」这个词，所以它必须先有定义：$K$ 是内蕴量 $\iff$ 一切局部等距都保持它。
 
-#### 定义引用：「高斯曲率」→ 高斯博内定理　`dep.gauss-bonnet`
+#### 定义引用：「Gauss 曲率」→ Gauss–Bonnet 定理　`dep.gauss-bonnet`
 
 高斯–博内定理的被积函数就是高斯曲率；定理说的是这个被积函数的全积分与拓扑量的关系。
 
-#### 定义引用：「测地曲率」→ 高斯博内定理　`dep.gcurv-bonnet`
+#### 定义引用：「测地曲率」→ Gauss–Bonnet 定理　`dep.gcurv-bonnet`
 
 带边界的版本里，边界的贡献是测地曲率的积分 —— 少了 $k_{g}$ 的定义，公式右端的 $2\pi$ 就解释不了。
 
@@ -32136,7 +32136,7 @@ $$M = II(r_{u}, r_{v}) = \langle W(r_{u}), r_{v}\rangle = k_{1}\langle r_{u}, r_
 
 法曲率的第二种算法 $\kappa_{n} = -\langle \dot\gamma,\mathrm{d}n(\dot\gamma)\rangle$ 用的就是 Weingarten 变换。
 
-#### 定义引用：「主曲率」→ 刘维尔公式　`dep.principal-liouville`
+#### 定义引用：「主曲率」→ Liouville 公式　`dep.principal-liouville`
 
 刘维尔公式的 notes 里要用主曲率 $k_{1},k_{2}$ 去否掉一个常见的错误简化式，所以这里必须引用主曲率。
 
@@ -32166,7 +32166,7 @@ $$\ddot\sigma^{k}+\Gamma^{k}_{ij}(\sigma)\dot\sigma^{i}\dot\sigma^{j} = c^{2}\le
 且 $\sigma(0) = p$、$\dot\sigma(0) = cv$。由唯一性 $\sigma = \gamma_{cv}$，即 $\gamma_{cv}(t) = \gamma_{v}(ct)$。
 **是测地线且按弧长参数化。** 解出来的曲线满足 $\nabla_{\dot\gamma}\dot\gamma = 0$，正是测地线；又 $\frac{\mathrm{d}}{\mathrm{d}s}\langle \dot\gamma,\dot\gamma\rangle = 2\langle \nabla_{\dot\gamma}\dot\gamma,\dot\gamma\rangle = 0$，故速度恒定。$\blacksquare$
 
-#### 指数映射 + 测地线 ⟹ 高斯引理　`imp.gauss-lemma`
+#### 指数映射 + 测地线 ⟹ Gauss 引理　`imp.gauss-lemma`
 
 **先证 $\langle \partial_{\rho},\partial_{\theta}\rangle = 0$。** 在测地极坐标下 $\gamma(\rho,\theta) = \exp_{p}(\rho\cos\theta\,e_{1}+\rho\sin\theta\,e_{2})$。对固定的 $\theta$，$\rho\mapsto\gamma(\rho,\theta)$ 是测地线且按弧长参数化，所以 $|\partial_{\rho}| = 1$ 且 $\nabla_{\partial_{\rho}}\partial_{\rho} = 0$；又 $\partial_{\rho},\partial_{\theta}$ 是坐标向量场，$[\partial_{\rho},\partial_{\theta}] = 0$。于是
 $$\partial_{\rho}\langle \partial_{\rho},\partial_{\theta}\rangle = \langle \nabla_{\partial_{\rho}}\partial_{\rho},\partial_{\theta}\rangle+\langle \partial_{\rho},\nabla_{\partial_{\rho}}\partial_{\theta}\rangle = 0+\langle \partial_{\rho},\nabla_{\partial_{\theta}}\partial_{\rho}\rangle = \frac{1}{2}\partial_{\theta}\langle \partial_{\rho},\partial_{\rho}\rangle = 0 .$$
@@ -32188,7 +32188,7 @@ $$\Gamma^{k}_{ij}(p)v^{i}v^{j} = 0,$$
 $$\partial_{k}g_{ij} = \langle \nabla_{\partial_{k}}\partial_{i},\partial_{j}\rangle+\langle \partial_{i},\nabla_{\partial_{k}}\partial_{j}\rangle = \Gamma^{\ell}_{ki}g_{\ell j}+\Gamma^{\ell}_{kj}g_{i\ell},$$
 在 $p$ 处两个 $\Gamma$ 都为零，右端为零。$\blacksquare$
 
-#### 测地曲率 + 标架下的联络系数 ⟹ 刘维尔公式　`imp.liouville`
+#### 测地曲率 + 标架下的联络系数 ⟹ Liouville 公式　`imp.liouville`
 
 **第一步：曲线在正交标架里的绝对导数。** 取 $e_{1} = \partial_{u}/\sqrt E$、$e_{2} = \partial_{v}/\sqrt G$，写 $\dot\gamma = \cos\theta\,e_{1}+\sin\theta\,e_{2}$（$\theta$ 就是与 $u$ 线的夹角），于是 $n\times\dot\gamma = -\sin\theta\,e_{1}+\cos\theta\,e_{2}$。由 $\nabla e_{1} = -\omega^{1}_{2}\otimes e_{2}$、$\nabla e_{2} = \omega^{1}_{2}\otimes e_{1}$ 得
 $$\nabla_{\dot\gamma}\dot\gamma = \left(-\sin\theta\,\frac{\mathrm{d}\theta}{\mathrm{d}s}-\cos\theta\,\omega^{1}_{2}(\dot\gamma)\right)e_{1}+\left(\cos\theta\,\frac{\mathrm{d}\theta}{\mathrm{d}s}-\sin\theta\,\omega^{1}_{2}(\dot\gamma)\right)e_{2}.$$
@@ -32211,7 +32211,7 @@ $$\ddot\gamma = \langle \ddot\gamma,n\rangle n+\langle \ddot\gamma,n\times\dot\g
 **取模长。** 两项正交，故
 $$\kappa^{2} = |\ddot\gamma|^{2} = \kappa_{n}^{2}+k_{g}^{2}. \quad\blacksquare$$
 
-#### 高斯曲率 + 黎曼曲率张量 + 标架下的联络系数 ⟹ 绝妙定理　`imp.egregium-frame`
+#### Gauss 曲率 + Riemann 曲率张量 + 标架下的联络系数 ⟹ 绝妙定理　`imp.egregium-frame`
 
 **思路：$K$ 的两条表达式，一条只含 $I$，一条是 $\det(h_{ij})$，两边必相等。**
 **① 联络形式由 $I$ 唯一确定。** 取局部单位正交余标架 $\omega^{1},\omega^{2}$（由 $I$ 定出，$g = (\omega^{1})^{2}+(\omega^{2})^{2}$）。第一结构方程要求 $\mathrm{d}\omega^{1} = \omega^{2}\wedge\omega^{1}_{2}$、$\mathrm{d}\omega^{2} = \omega^{1}\wedge\omega^{2}_{1}$，加上 $\omega^{1}_{2} = -\omega^{2}_{1}$。写 $\omega^{1}_{2} = a\,\omega^{1}+b\,\omega^{2}$：第一式定出 $a$，第二式定出 $b$（两式分别给出 $a$ 与 $b$ 的一个方程）。所以 $\omega^{1}_{2}$ 完全由 $\mathrm{d}\omega^{1},\mathrm{d}\omega^{2}$ 决定，也就是完全由 $I$ 决定 —— 这正是 Levi-Civita 联络的唯一性。
@@ -32224,7 +32224,7 @@ $$K\,\omega^{1}\wedge\omega^{2} = \mathrm{d}\omega^{1}_{2},$$
 **④ 收尾。** 若 $\varphi$ 是局部等距，则 $I_{1} = \varphi^{*}I_{2}$，故两侧的 $\omega$ 都被拉回、$\mathrm{d}\omega^{1}_{2}$ 逐点相等，于是 $K_{1} = K_{2}\circ\varphi$。$\blacksquare$
 ⚠️ 符号与约定：本包取 $\omega^{i}_{j} = \langle\nabla e_{j},e_{i}\rangle$。这时单位球面可以直接验算：取测地极坐标，$\omega^{1} = \mathrm{d}\rho$、$\omega^{2} = \sin\rho\,\mathrm{d}\theta$、$\omega^{1}_{2} = -\cos\rho\,\mathrm{d}\theta$，于是 $\mathrm{d}\omega^{1}_{2} = \sin\rho\,\mathrm{d}\rho\wedge\mathrm{d}\theta = +\omega^{1}\wedge\omega^{2}$，即 $K = 1$；同时 $\omega^{1}_{3} = \omega^{1}$、$\omega^{2}_{3} = \omega^{2}$，$h_{ij} = \delta_{ij}$、$\det = 1$ ✓。换另一支约定（$\omega^{i}_{j}$ 整体反号）时，证明里所有 $\omega^{i}_{j}$ 一起反号、$K$ 的符号随之统一反号，「$K$ 内蕴」这个结论不变。
 
-#### 高斯引理 + 高斯曲率 ⟹ 绝妙定理　`imp.egregium-polar`
+#### Gauss 引理 + Gauss 曲率 ⟹ 绝妙定理　`imp.egregium-polar`
 
 **目标：把 $K$ 写成只含唯一度量系数 $G$ 的表达式。**
 **① 测地极坐标把 $I$ 压到一个函数。** 由高斯引理，$I = \mathrm{d}\rho^{2}+G(\rho,\theta)\,\mathrm{d}\theta^{2}$，其中 $E\equiv1$、$F\equiv0$。于是所有 $\Gamma$ 都可以用 $G$ 显式写出：$\Gamma^{\theta}_{\rho\theta} = \frac{G_{\rho}}{2G}$、$\Gamma^{\rho}_{\theta\theta} = -\frac{G_{\rho}}{2}$，其余为零。
@@ -32236,7 +32236,7 @@ $$K = -\frac{1}{G}\left(\frac{G_{\rho\rho}}{2}-\frac{G_{\rho}^{2}}{4G}\right) = 
 **③ 结论。** 右端只有 $G$，而 $G$ 是 $I$ 的系数。所以 $K$ 由 $I$ 决定，绝妙定理成立。$\blacksquare$
 **④ 副产品：小圆的读数。** 把 $\sqrt G = \rho-\frac{K(p)}{6}\rho^{3}+O(\rho^{5})$（高斯引理那一条的展开）代回上式，两端逐阶相符 —— 这说明上面的公式是自洽的，也给出可操作的读数：$K(p)$ 就是「半径 $\rho$ 的测地圆比 $2\pi\rho$ 短多少」的三阶速率。
 
-#### 刘维尔公式 + 测地曲率 + 高斯曲率 ⟹ 高斯博内定理　`imp.gauss-bonnet`
+#### Liouville 公式 + 测地曲率 + Gauss 曲率 ⟹ Gauss–Bonnet 定理　`imp.gauss-bonnet`
 
 **第一步（局部版）：简单闭曲线围成的区域。** 设 $D$ 由分段光滑简单闭曲线 $\partial D$ 围成，取正交单位标架与联络形式 $\omega^{1}_{2}$。由刘维尔公式（或等价地 $k_{g} = \frac{\mathrm{d}\theta}{\mathrm{d}s}-\omega^{1}_{2}(\dot\gamma)$），
 $$\int_{\partial D}k_{g}\,\mathrm{d}s = \int_{\partial D}\mathrm{d}\theta-\int_{\partial D}\omega^{1}_{2} = 2\pi-\int_{D}\mathrm{d}\omega^{1}_{2}.$$
@@ -32336,11 +32336,11 @@ $\mathrm{d}A = \sqrt{\det(g_{ij})}$ 里的 $g_{ij}$ 就是 $I$ 的系数矩阵�
 
 「面积形式 $\omega^{1}\wedge\omega^{2}$ 能整体选取而不换号」是可定向的等价刻画；两个定向差一个符号。
 
-#### 定义引用：「面积元」→ 高斯博内定理　`dep.tu-area-bonnet`
+#### 定义引用：「面积元」→ Gauss–Bonnet 定理　`dep.tu-area-bonnet`
 
 Gauss–Bonnet 里的 $\int_{M}K\,\mathrm{d}A$ 用的就是这个测度：面积元。
 
-#### 定义引用：「可定向曲面」→ 高斯博内定理　`dep.tu-orient-bonnet`
+#### 定义引用：「可定向曲面」→ Gauss–Bonnet 定理　`dep.tu-orient-bonnet`
 
 定理要求可定向：否则面积元与测地曲率的符号说不清，公式只能取绝对值或模 $2$。
 
@@ -32376,11 +32376,11 @@ Hausdorff 是两条技术假设之一：保证极限唯一（否则「$\gamma'(0
 
 定理的结论是「$M$ 是光滑流形」，所以要把造出来的图卡与相容性写清楚。
 
-#### 定义引用：「内积」→ 黎曼度量　`dep.tu-inner-riemannian`
+#### 定义引用：「内积」→ Riemann 度量　`dep.tu-inner-riemannian`
 
 黎曼度量就是「每点一个内积」，对称、双线性、正定三条字面照搬。
 
-#### 定义引用：「切空间」→ 黎曼度量　`dep.tu-tangent-riemannian`
+#### 定义引用：「切空间」→ Riemann 度量　`dep.tu-tangent-riemannian`
 
 内积住在 $T_{p}M$ 上，所以必须先有切空间；「光滑变化」是对向量场说的。
 
@@ -32388,15 +32388,15 @@ Hausdorff 是两条技术假设之一：保证极限唯一（否则「$\gamma'(0
 
 协变导数作用在向量场上，而向量场逐点取值于 $TM$ —— 联络是在 $TM$ 上做微分的规则。
 
-#### 定义引用：「仿射联络」→ 黎曼曲率张量　`dep.tu-connection-curvature`
+#### 定义引用：「仿射联络」→ Riemann 曲率张量　`dep.tu-connection-curvature`
 
 曲率算子是联络的交换子 $[\nabla_{X},\nabla_{Y}]-\nabla_{[X,Y]}$；$\Gamma$ 与 $\omega$ 都只是它的坐标表达。
 
-#### 定义引用：「黎曼曲率张量」→ 曲率张量的对称性　`dep.tu-curv-symmetries`
+#### 定义引用：「Riemann 曲率张量」→ 曲率张量的对称性　`dep.tu-curv-symmetries`
 
 对称性是曲率张量的性质，主语就是它；本节点补的是证明与独立分量计数。
 
-#### 定义引用：「黎曼曲率张量」→ 比安基恒等式　`dep.tu-curv-bianchi`
+#### 定义引用：「Riemann 曲率张量」→ 比安基恒等式　`dep.tu-curv-bianchi`
 
 两条比安基都是曲率张量必须满足的恒等式；缩并版还要用到 Ricci 与数量曲率。
 
@@ -32404,11 +32404,11 @@ Hausdorff 是两条技术假设之一：保证极限唯一（否则「$\gamma'(0
 
 缩并那一步要用「两对指标可交换」把指标搬正 —— 那是这个命题的第 3 条。
 
-#### 定义引用：「黎曼度量」→ 截面曲率　`dep.tu-riemannian-sectional`
+#### 定义引用：「Riemann 度量」→ 截面曲率　`dep.tu-riemannian-sectional`
 
 截面曲率的分子分母都用 $g$ 的内积；没有度量就没有「单位正交基」，也谈不上二维截面的面积。
 
-#### 定义引用：「黎曼曲率张量」→ 截面曲率　`dep.tu-curv-sectional`
+#### 定义引用：「Riemann 曲率张量」→ 截面曲率　`dep.tu-curv-sectional`
 
 截面曲率是曲率张量的一个二次读数：同一个 $R$、同一个二维截面，取一个数。
 
@@ -32416,7 +32416,7 @@ Hausdorff 是两条技术假设之一：保证极限唯一（否则「$\gamma'(0
 
 Ricci 是「$Z\mapsto R(Z,X)Y$」的迹，数量曲率是 Ricci 相对 $g$ 的迹 —— 两次取迹，取法与基无关。
 
-#### 定义引用：「黎曼曲率张量」→ Ricci 曲率　`dep.tu-curv-ricci`
+#### 定义引用：「Riemann 曲率张量」→ Ricci 曲率　`dep.tu-curv-ricci`
 
 缩并的对象是曲率张量的分量：$R_{ij} = R^{k}_{\ kij}$ 就是把一上一下两个指标缩掉。
 
@@ -32561,7 +32561,7 @@ $$f = f(p)+\sum_{i}\bigl(x^{i}-x^{i}(p)\bigr)h_{i},\qquad h_{i}(p) = \partial_{i
 
 由 Leibniz 律 $D\bigl((x^{i}-x^{i}(p))h_{i}\bigr) = D(x^{i})\,h_{i}(p)+0\cdot D(h_{i})$，故 $Df = \sum_{i}D(x^{i})\,\partial_{i}f(p)$ —— 即 $D$ 就是坐标速度为 $\bigl(D(x^{1}),\ldots,D(x^{n})\bigr)$ 的那条曲线的方向导数。∎
 
-#### 第一基本形式 + 曲面与参数化 ⟹ 黎曼度量　`imp.tu-surface-riemannian`
+#### 第一基本形式 + 曲面与参数化 ⟹ Riemann 度量　`imp.tu-surface-riemannian`
 *第一基本形式就是一个黎曼度量*
 
 对 $p\in S$ 令 $g_{p}(v,w) := \langle\mathrm{d}r_{p}(v),\mathrm{d}r_{p}(w)\rangle$，$v,w\in T_{p}S$。三条公理逐个验证：
@@ -32597,7 +32597,7 @@ $$\nabla_{X}e_{j} = \bigl(\mathrm{d}e_{j}(X)\bigr)^{\top} = \sum_{k=1}^{2}\omega
 
 ⭐ 所以「结构方程」不是新的公理系统，而是**仿射联络 + 正交标架**的坐标写法：第一结构方程 = 无挠，第二结构方程 = 曲率形式。
 
-#### 黎曼曲率张量 + 仿射联络 ⟹ 曲率张量的对称性　`imp.tu-curvature-symmetries`
+#### Riemann 曲率张量 + 仿射联络 ⟹ 曲率张量的对称性　`imp.tu-curvature-symmetries`
 *保度量 $+$ 无挠 $\implies$ 曲率张量的四条对称性*
 
 (1) **对 $X,Y$ 反称**：$R(X,Y) = [\nabla_{X},\nabla_{Y}]-\nabla_{[X,Y]}$ 中交换 $X,Y$，每一项都反号。
@@ -32618,7 +32618,7 @@ $$\nabla^{2}Z(X,Y)-\nabla^{2}Z(Y,X) = \nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}
 
 **计数**：(1)(2) 说明 $R$ 可看成 $\bigwedge^{2}T_{p}M$ 上的双线性型，(4) 说明它对称，故有 $\frac{N(N+1)}{2}$ 个分量（$N = \binom{n}{2}$）；再扣掉 (3) 给出的 $\binom{n}{3}$ 个独立关系，得 $\frac{n^{2}(n^{2}-1)}{12}$。∎
 
-#### 黎曼曲率张量 + 曲率张量的对称性 ⟹ 比安基恒等式　`imp.tu-bianchi`
+#### Riemann 曲率张量 + 曲率张量的对称性 ⟹ 比安基恒等式　`imp.tu-bianchi`
 *法坐标下的三阶偏导抵消 $\implies$ 第二比安基恒等式*
 
 **第二比安基。** 取 $p\in M$ 处的**法坐标**（指数映射给的坐标，见 `def.exponential-map`）：$\Gamma^{k}_{ij}(p) = 0$、$\partial_{i}g_{jk}(p) = 0$，于是 $p$ 处 $\nabla_{i} = \partial_{i}$，且由 $R^{\ell}_{ijk} = \partial_{i}\Gamma^{\ell}_{jk}-\partial_{j}\Gamma^{\ell}_{ik}$ 与 $\Gamma$ 的公式得
@@ -32635,7 +32635,7 @@ $$\nabla^{i}R_{ij}-\frac{1}{2}\nabla_{j}S = 0 ,$$
 
 **第一比安基**已在 `prop.curvature-tensor-symmetries` 里证过（无挠的推论），这里只是把代数版与微分版并列。∎
 
-#### 黎曼曲率张量 + 黎曼度量 ⟹ 截面曲率　`imp.tu-sectional`
+#### Riemann 曲率张量 + Riemann 度量 ⟹ 截面曲率　`imp.tu-sectional`
 *反称性 $\implies$ 截面曲率与基的选取无关*
 
 **无关性。** 设 $X' = aX+bY$、$Y' = cX+dY$，$\Delta := ad-bc\ne0$。由 $R$ 的多重线性与对前两变元的反称性，$R(X',Y') = \Delta\,R(X,Y)$；再用 $\langle R(X,Y)X,X\rangle = \langle R(X,Y)Y,Y\rangle = 0$（对后两变元反称）得
@@ -32652,7 +32652,7 @@ $$K = \langle R(e_{1},e_{2})e_{2},e_{1}\rangle = R_{1221} ,$$
 
 **常曲率情形。** 若所有截面曲率都是 $K$，则 $R(X,Y)Z = K\bigl(\langle Y,Z\rangle X-\langle X,Z\rangle Y\bigr)$：两边都是对 $(X,Y)$ 反称、对 $(Z,W)$ 反称的「曲率型」张量，且给出相同的截面曲率；两个曲率型张量若截面曲率处处相同则相等（极化：把 $X$ 换成 $X+Z$ 之类，靠双线性分离交叉项）。∎
 
-#### 黎曼曲率张量 + 迹 ⟹ Ricci 曲率　`imp.tu-ricci`
+#### Riemann 曲率张量 + 迹 ⟹ Ricci 曲率　`imp.tu-ricci`
 *在正交基上取迹 $\implies$ 二维 Ricci $= Kg$、数量曲率 $= 2K$*
 
 **迹与基无关。** $Z\mapsto R(Z,X)Y$ 是 $T_{p}M$ 上的线性映射，它的迹在换基时不变（`def.trace` 的相似不变性），故用单位正交基算迹合法。
@@ -33415,7 +33415,7 @@ $(1,0)$ 型张量场就是向量场；分量变换律 $X^{i} = \sum_{j}\frac{\pa
 
 体积形式是 $n$-形式且处处非零 —— 「$n$-形式」与「处处非零」两个条件都建立在微分形式的定义上。
 
-#### 定义引用：「黎曼度量」→ 体积形式　`dep.mf-riemannian-volume`
+#### 定义引用：「Riemann 度量」→ 体积形式　`dep.mf-riemannian-volume`
 
 系数 $\sqrt{\det(g_{ij})}$ 完全来自度量；没有 $g$ 就只剩「处处非零的 $n$-形式」，写不出体积。
 
@@ -33794,7 +33794,7 @@ $\partial$ 的最后一步是「线性延拓到链」；没有链这个概念，
 
 证明的全部计算就是「把 $\mathrm{d}$ 按定义展开成 $\sum_{j}\partial_{j}f_{j}$」；$\mathrm{d}^{2} = 0$ 这一步也在这里被隐式用到（$\mathrm{d}(\mathrm{d}x^{I}) = 0$）。
 
-#### 定义引用：「黎曼度量」→ 体积密度与体积形式　`dep.spivak-metric-density`
+#### 定义引用：「Riemann 度量」→ 体积密度与体积形式　`dep.spivak-metric-density`
 
 「正向标准正交基」这个说法靠度量才有意义；系数 $\sqrt{\det(g_{ij})}$ 里的 $g_{ij} = g(\partial_{i},\partial_{j})$ 也是度量给的。没有 $g$，$\mathrm{d}\mu_{g}$ 与 $\mathrm{d}V$ 都无从写起。
 
@@ -33923,7 +33923,7 @@ $$\int_{\partial c}\omega = \sum_{l}n_{l}\int_{\partial c_{l}}\omega = \sum_{l}n
 
 ⭐ 注意全程没有用到 $M$ 的定向、紧致性，也没有让 $\omega$ 有紧支：这三件事都被「换成链」吃掉了。
 
-#### 体积密度与体积形式 + 黎曼度量 ⟹ 密度与定向无关　`imp.spivak-volume-measure`
+#### 体积密度与体积形式 + Riemann 度量 ⟹ 密度与定向无关　`imp.spivak-volume-measure`
 *行列式的平方 $\implies$ 密度不依赖定向*
 
 **（1）局部变换。** 设 $y$ 是另一张卡，$J := \partial x/\partial y$。由 $\partial_{y^{i}} = \sum_{k}J_{ki}\,\partial_{x^{k}}$ 与度量的双线性得 $g^{y} = J^{\mathsf T}g^{x}J$，取行列式：$\det g^{y} = (\det J)^{2}\det g^{x}$。两边开方（$\det g>0$，因为 $g$ 正定），
@@ -34555,7 +34555,7 @@ Lie 导数作用在**张量场**上；三类的具体写法（函数 / 向量场
 
 「$\mathrm{d}\iota_{X} + \iota_{X}\mathrm{d}$ 与 $\mathrm{d}$ 交换」这一步用了 $\mathrm{d}^{2} = 0$；没有它，右边那个组合连类型都对不上。
 
-#### 定义引用：「黎曼度量」→ 诱导体积　`dep.mf2-riem-subvol`
+#### 定义引用：「Riemann 度量」→ 诱导体积　`dep.mf2-riem-subvol`
 
 诱导度量 $i^{\ast}g$ 是把 $g$ 沿着 $\mathrm{d}i$ 拉回；$\sqrt{\det(g_{ab})}$ 这个因子则完全来自 $g$（对照 `def.volume-form`）。
 
@@ -37042,7 +37042,7 @@ Cauchy 列、零列都是**有理数列**：$\varepsilon$ 取正有理数，绝�
 
 要证的就是「构造出来的 $\mathbb{R}$ 是一个**完备有序域**」：前两组公理是「有序域」，第三组是不属于这条定义的额外一条。
 
-#### 定义引用：「有序域」→ 阿基米德性质　`dep.ordered-archimedean`
+#### 定义引用：「有序域」→ Archimedes 性质　`dep.ordered-archimedean`
 
 「$\mathbb{N}$ 在 $K$ 中无上界」里的 $K$ 是**有序域**（$\mathbb{N}$ 按 $1$ 生成的子结构嵌在里面）。
 
@@ -37066,7 +37066,7 @@ Cauchy 列的定义式 $|x_m - x_n| < \varepsilon$ 里的 $|\cdot|$ 就是它，
 
 $L^1$ 的元素不是函数本身，而是**函数在 a.e. 相等下的等价类** —— 后面 $L^p$、RN 导数用的是同一个手法。
 
-#### 定义引用：「有理数 ℚ」→ 阿基米德性质　`dep.rat-archimedean`
+#### 定义引用：「有理数 ℚ」→ Archimedes 性质　`dep.rat-archimedean`
 
 「$\mathbb{Q}$ 在 $K$ 中稠密」里的 $\mathbb{Q}$ 就是有理数集在 $K$ 中的嵌入像。
 
@@ -37181,7 +37181,7 @@ $$\beta_n - \alpha_n = \frac{\beta_0 - \alpha_0}{2^n} \xrightarrow{\ n \to \inft
 
 > ⭐ 注意 ⑤ 与 ⑥ 的位置：**先有「Cauchy 列收敛」，才有确界原理**。戴德金分割那条路的顺序正好相反（那里完备性是「并」的直接后果），两条路殊途同归。
 
-#### ℝ 是完备有序域 ⟹ 阿基米德性质　`imp.archimedean`
+#### ℝ 是完备有序域 ⟹ Archimedes 性质　`imp.archimedean`
 *完备性 $\implies$ 阿基米德性质 + $\mathbb{Q}$ 稠密*
 
 设 $K$ 是完备有序域（把 $\mathbb{N}$、$\mathbb{Z}$、$\mathbb{Q}$ 按 $1$ 生成的子域嵌进去看）。
@@ -37209,7 +37209,7 @@ $$m \le nx < m + 1$$
 
 > ⭐ 注意 (i) 的证明只用了「$\mathbb{N}$ 的每个元都有后继」与「上确界存在」这两件事 —— 这就是为什么**完备性蕴含阿基米德性**。
 
-#### 阿基米德性质 + 实数系 ℝ ⟹ 完备有序域的唯一性　`imp.real-unique`
+#### Archimedes 性质 + 实数系 ℝ ⟹ 完备有序域的唯一性　`imp.real-unique`
 *$\mathbb{Q}$ 稠密 $\implies$ 完备有序域与 $\mathbb{R}$ 同构*
 
 设 $K$ 是完备有序域，取 $K' := \mathbb{R}$（上面构造出来的那个）。分三步造出唯一的同构 $f : K \to \mathbb{R}$。
@@ -39220,15 +39220,15 @@ $A \times B = \{ (a, b) : a \in A, b \in B \}$ 中的元素就是有序对。
 
 「$X$ 是链 $\iff X$ 的每个有限子集是链」——这是链族具有有限特征的原因，也是 $Tukey \implies Hausdorff$ 的全部关键。
 
-#### 定义引用：「偏序集」→ 佐恩引理　`def-link.zorn-poset`
+#### 定义引用：「偏序集」→ Zorn 引理　`def-link.zorn-poset`
 
 佐恩引理是**关于偏序集**的命题：前提与结论都离不开 $\preceq$ 与上界。
 
-#### 定义引用：「链」→ 佐恩引理　`def-link.zorn-chain`
+#### 定义引用：「链」→ Zorn 引理　`def-link.zorn-chain`
 
 「$P$ 的每个链都有上界」是佐恩引理的核心条件。
 
-#### 定义引用：「界与确界」→ 佐恩引理　`def-link.zorn-bound`
+#### 定义引用：「界与确界」→ Zorn 引理　`def-link.zorn-bound`
 
 条件用的是「上界」，结论用的是「极大元」——特别要注意不是「最大元」。
 
@@ -43478,7 +43478,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 
 💡 卡在「无穷没法遍历」时，问：有没有一个更粗的、可测/可验证的量，能把这件事包住？
 
-#### 佐恩引理 ～ ℝ 是完备有序域　`ana.sup-vs-maximal`
+#### Zorn 引理 ～ ℝ 是完备有序域　`ana.sup-vs-maximal`
 *佐恩引理与确界原理：都是「一次把无穷过程走完」*
 
 两个命题的精神酷似，而且都不是构造性的：

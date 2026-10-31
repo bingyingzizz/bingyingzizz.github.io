@@ -1,7 +1,7 @@
 # $\mathbb{Q}$ 稠密 $\implies$ 完备有序域与 $\mathbb{R}$ 同构
 `imp.real-unique` · 推出 · strong 边 · 根 `../`
 
-`lem.archimedean` 阿基米德性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
+`lem.archimedean` Archimedes 性质 + `def.real` 实数系 ℝ → `thm.real-unique` 完备有序域的唯一性
 
 - $x \le y \implies f(x) \le f(y)$：$\{q : q<x\} \subseteq \{q : q<y\}$；
 - $x < y \implies f(x) < f(y)$：由 $\mathbb{Q}$ 稠密取 $q, r$ 使 $x < q < r < y$，则 $f(x) \le q' < r' \le f(y)$。

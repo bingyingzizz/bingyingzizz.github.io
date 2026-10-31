@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 正则测度 | regular measure | 正则 Borel 测度 → def.regular-measure
+
 - L1 与全变差 → prop.L1-signed
 
 - 局部可积 | locally integrable → def.locally-integrable
@@ -26,7 +28,5 @@
 - 绝对连续函数 | absolutely continuous function | AC 函数 → def.ac-function
 
 - 有界变差 | bounded variation | BV | 变差 → def.bounded-variation
-
-- 单调函数可导 | 单调函数几乎处处可导 → thm.monotone-differentiable
 
 > 续见 alias/aka/analysis.10.md

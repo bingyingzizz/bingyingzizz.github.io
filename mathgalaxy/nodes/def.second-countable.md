@@ -11,7 +11,7 @@ layer 6 · 定义 · 拓扑空间 · 拓扑学
 - …另有入边，续页见 [nodes/def.second-countable.2.md](./def.second-countable.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) 乌雷松度量化定理 用
+- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
 
 - …另有出边，续页见 [nodes/def.second-countable.3.md](./def.second-countable.3.md)
 
