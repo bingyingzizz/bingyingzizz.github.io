@@ -4,7 +4,7 @@
 **哪些东西是真正的地基，值得优先学熟。**（弱边不计入。）
 数据根 `./`：每项都能顺着读 `nodes/<id>.md`。
 
-- **6** `lem.zorn` Zorn 引理 · layer 9 · 选择原理
+- **7** `lem.zorn` Zorn 引理 · layer 9 · 选择原理
 - **6** `def.submanifold-volume` 诱导体积 · layer 28 · 微分形式、积分与 de Rham
 - **6** `thm.de-rham` de Rham 定理 · layer 29 · 微分形式、积分与 de Rham
 - **5** `thm.first-iso` 第一同构定理（Noether） · layer 9 · 代数结构

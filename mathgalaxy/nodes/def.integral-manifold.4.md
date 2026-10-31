@@ -5,3 +5,5 @@
 - [`def.submersion-immersion`](../nodes/def.submersion-immersion.md) 浸入 / 淹没 / 嵌入：用到了定义 浸入 / 淹没 / 嵌入　[proofs/dep.mf2-immersion-integral.md](../proofs/dep.mf2-immersion-integral.md)
 - [`def.tangent-distribution`](../nodes/def.tangent-distribution.md) 切分布：用到了定义 切分布　[proofs/dep.mf2-distribution-integral.md](../proofs/dep.mf2-distribution-integral.md)
 - [`def.differential-map`](../nodes/def.differential-map.md) 切映射：用到了定义 切映射　[proofs/dep.mf2-diff-integral.md](../proofs/dep.mf2-diff-integral.md)
+
+> 续见 [nodes/def.integral-manifold.5.md](./def.integral-manifold.5.md)

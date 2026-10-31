@@ -7,11 +7,13 @@ layer 21 · 定义 · 向量场与 Lie 结构 · 微分几何
 > 陈述续见 [nodes/def.integral-manifold.2.md](./def.integral-manifold.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理：Zorn 引理：叶状结构的整体存在　[proofs/imp.zorn-foliation.md](../proofs/imp.zorn-foliation.md)
+
 - …另有入边，续页见 [nodes/def.integral-manifold.4.md](./def.integral-manifold.4.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.integral-manifold.5.md](./def.integral-manifold.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· 积分流形与叶片坐标；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 浸入子流形
 

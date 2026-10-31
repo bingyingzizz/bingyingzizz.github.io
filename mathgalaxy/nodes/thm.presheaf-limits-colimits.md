@@ -8,7 +8,7 @@ layer 11 · 定理 · 预层与米田 · 范畴论
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.presheaf-cat`](../nodes/def.presheaf-cat.md) 预层范畴：用到了定义 预层范畴　[proofs/def-link.pfcat-limits.md](../proofs/def-link.pfcat-limits.md)
+- [`ax.choice`](../nodes/ax.choice.md) 选择公理：选择公理：Set 的小积存在　[proofs/imp.ac-presheaf-limits.md](../proofs/imp.ac-presheaf-limits.md)
 
 - …另有入边，续页见 [nodes/thm.presheaf-limits-colimits.3.md](./thm.presheaf-limits-colimits.3.md)
 

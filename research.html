@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>星图研究 · bingyingzizz</title>
-<meta name="description" content="星图研究：围绕数学星图产生的推导笔记。当前收录 Schölze《Lectures on Analytic Geometry》Question 0.10.4 在一般 p-liquid 系数下的否定答案，以及 p-Banach 情形被压成的单一标量缺口。每条均标注验证状态。">
+<title>紧群上 p-liquid 系数的正次数上同调：一般系数的反例 · bingyingzizz</title>
+<meta name="description" content="论文（预印本，未经同行评审）：对 G=SU(2) 与 V_p=coker(∂₄) 的平凡作用证明 H³(G,V_p)≠0，从而在「任意 p-liquid 系数」的量词下否定 Clausen–Scholze《Lectures on Analytic Geometry》Question 0.10.4；p-Banach 情形仍开，并归约为单一标量下确界。">
 <link rel="canonical" href="https://bingyingzizz.github.io/research.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="数学星图 MathGalaxy">
@@ -17,159 +17,366 @@
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/read.css">
 <link rel="stylesheet" href="assets/katex.min.css">
 <script src="assets/katex.min.js"></script>
+<style>
+  :root { --ink:#16181d; --dim:#5b6270; --line:#dfe3ea; --bg:#fff; --accent:#8a1c1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;
+    font-size:17px; line-height:1.78; -webkit-font-smoothing:antialiased; }
+  .paper { max-width:50rem; margin:0 auto; padding:3.2rem 1.4rem 6rem; }
+  .topnav { max-width:50rem; margin:0 auto; padding:1rem 1.4rem 0; font-size:.82rem;
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--dim); }
+  .topnav a { color:var(--dim); text-decoration:none; margin-right:1.1rem; }
+  .topnav a:hover { color:var(--accent); }
+  .kicker { font-family:system-ui,sans-serif; font-size:.74rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 .9rem; }
+  h1 { font-size:1.72rem; line-height:1.42; margin:0 0 .5rem; font-weight:600; letter-spacing:.005em; }
+  .en-title { font-size:1.02rem; color:var(--dim); font-style:italic; margin:0 0 1.4rem; line-height:1.5; }
+  .byline { font-size:.92rem; color:var(--dim); margin:0 0 .2rem;
+    font-family:system-ui,sans-serif; }
+  .status { font-size:.82rem; color:var(--accent); border:1px solid #e8d3d3;
+    background:#fdf7f7; padding:.6rem .85rem; border-radius:3px; margin:1.4rem 0 2rem;
+    font-family:system-ui,sans-serif; line-height:1.6; }
+  h2 { font-size:1.14rem; margin:2.6rem 0 .8rem; font-weight:600;
+    padding-bottom:.32rem; border-bottom:1px solid var(--line); }
+  h3 { font-size:1rem; margin:1.7rem 0 .5rem; font-weight:600; color:#2a2f38; }
+  p { margin:.72rem 0; text-align:justify; }
+  .abstract { border-top:2px solid var(--ink); border-bottom:1px solid var(--line);
+    padding:1.1rem 0 1.2rem; margin:1.6rem 0 2rem; font-size:.96rem; }
+  .abstract .ablabel { font-family:system-ui,sans-serif; font-size:.78rem; letter-spacing:.1em;
+    text-transform:uppercase; display:block; margin-bottom:.5rem; color:var(--dim); }
+  blockquote { margin:1rem 0; padding:.5rem 1.1rem; border-left:3px solid var(--line);
+    color:#2b313a; font-size:.97rem; background:#fafbfc; }
+  .thm, .lem, .prop, .rem { margin:1.1rem 0; padding:.55rem .95rem; border-left:3px solid var(--line);
+    background:#fbfcfd; }
+  .thm { border-left-color:var(--ink); }
+  .lem { border-left-color:#4a5d8a; }
+  .prop { border-left-color:#3f7a5e; }
+  .rem { border-left-color:#b08a3e; background:#fdfcf8; }
+  .thm > .hd, .lem > .hd, .prop > .hd, .rem > .hd { font-family:system-ui,sans-serif;
+    font-size:.8rem; font-weight:600; letter-spacing:.06em; margin-bottom:.28rem; }
+  .thm > .hd { color:var(--ink); } .lem > .hd { color:#4a5d8a; }
+  .prop > .hd { color:#3f7a5e; } .rem > .hd { color:#8a6a1e; }
+  ol.refs { font-size:.9rem; color:#2b313a; padding-left:1.4rem; }
+  ol.refs li { margin:.45rem 0; }
+  code { font-family:ui-monospace,Consolas,monospace; font-size:.86em;
+    background:#f3f5f8; padding:.08em .3em; border-radius:2px; }
+  table { border-collapse:collapse; width:100%; font-size:.9rem; margin:1rem 0;
+    font-family:system-ui,sans-serif; }
+  th,td { border-bottom:1px solid var(--line); padding:.42rem .5rem; text-align:left;
+    vertical-align:top; }
+  th { font-weight:600; color:#2a2f38; font-size:.82rem; letter-spacing:.03em; }
+  .foot { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--line);
+    font-size:.8rem; color:var(--dim); font-family:system-ui,sans-serif; }
+  .katex-display { margin:.9rem 0; overflow-x:auto; overflow-y:hidden; }
+  @media (max-width:640px){ body{font-size:16px} .paper{padding:2rem 1rem 4rem} }
+</style>
 </head>
-<body class="reader">
+<body>
 
-<header class="rhead">
-  <div class="in">
-    <a class="back" href="./">← bingyingzizz</a>
-    <span class="sp"></span>
-    <a class="mini" href="mathgalaxy/">数学星图 →</a>
-    <a class="mini" href="https://github.com/bingyingzizz/MathGalaxy" rel="noopener">仓库 ↗</a>
-  </div>
-</header>
-
-<div class="rlayout">
-  <nav class="side" aria-label="本页">
-    <p>星图研究</p>
-    <ol>
-      <li><a href="#what">这是什么</a></li>
-      <li><a href="#q0104">Q 0.10.4（一般 p-liquid）</a></li>
-      <li><a href="#pbanach">p-Banach：仍开</a></li>
-      <li><a href="#protocol">验证协议</a></li>
-      <li><a href="#cite">引用与许可</a></li>
-    </ol>
-  </nav>
-
-  <main class="rbody">
-
-    <section class="doc" id="what">
-      <h1 class="stag">星图研究</h1>
-      <div class="body">
-        <p>这里放从<b>数学星图</b>的整理过程中长出来的推导笔记。<b>不是综述，不是教程</b>。原则只有两条：</p>
-        <ol>
-          <li><b>每条都标验证状态。</b>「已证 / 条件性 / 未证」三分，不给读者猜。</li>
-          <li><b>不把必要条件当充分条件。</b>这是这类笔记最容易出错的地方，也是逐轮复核专门盯的一项。</li>
-        </ol>
-        <p class="rfoot" style="display:block">⚠️ 本页内容<b>未经第三方专家审阅</b>。请按「工作笔记」而不是「已发表结果」对待。</p>
-      </div>
-    </section>
-
-    <section class="doc" id="q0104">
-      <h2>一 · Question 0.10.4：一般 p-liquid 系数下是否定的</h2>
-      <div class="body">
-        <p><b>问题</b>（Clausen–Scholze，《Lectures on Analytic Geometry》Lecture X，Question 0.10.4，2026 稳定引用版原文）：</p>
-        <blockquote>Let $G$ be a compact nonabelian group, say $G=\mathrm{SU}(2)$, and let $V$ be a $p$-liquid $\mathbb{R}$-vector space, e.g. a $p$-Banach. Does $H^i(G,V)$ vanish for $i>0$?</blockquote>
-        <p>紧交换群那一侧作者已解决（Corollary 0.10.2），并注明 <i>“The proof uses commutativity critically.”</i></p>
-
-        <p><b>结论（笔记范围）</b>：取
-        $$V_p=\operatorname{coker}\!\bigl(\partial_4:M_{&lt;p}(G^4)\to M_{&lt;p}(G^3)\bigr),\qquad G=\mathrm{SU}(2),$$
-        赋予<b>平凡作用</b>。则 $V_p$ 是 $p$-liquid 实向量空间，且
-        $$H^3(G,V_p)\ne 0 .$$
-        也就是说，按原题「任意 $p$-liquid」的字面量词，答案是<b>否</b>。</p>
-
-        <p><b>机制一句话</b>：$p$-liquid 测度就是可数原子和（讲义 Prop 10.7）⇒ $G^\delta$ 的<b>有界</b>（不必连续、不必可测）三上圈可以在 liquid 链上逐原子求值 ⇒ 用算术双曲三流形的<b>体积上圈</b>配一个有限 bar 三圈，得到一个填不出来的三圈。三圈本身来自一个「同一个抽象群同时嵌入 $\mathrm{SU}(2)$ 与余紧双曲三格」的算术构造，两个表示由 $\mathbb{C}$ 的域自同构相连。</p>
-
-        <p><b>范围与免责（重要，别跳过）</b></p>
-        <ul>
-          <li>⛔ <b>未经第三方专家审阅。</b>只做过内部对抗性复核（见下节协议）。</li>
-          <li>⚠️ $V_p$ <b>不是 quasiseparated 对象</b>，也<b>不是</b> p-Banach。若只把 p-Banach 当作「真系数」，本结论不覆盖那种读法。</li>
-          <li>⛔ 未做穷尽文献检索。做过定向检索（含 2026 年新出的 condensed 群上同调专著）：<b>没有发现与之矛盾的定理，也没有发现该问题已被回答</b>；稳定引用版（2026-05-05）仍逐字列着该问题、0 引用。</li>
-          <li>⚠️ 依赖一条外部深定理（Bourgain–Gamburd 的 $\mathrm{SU}(d)$ Haar 谱隙）于后续分析；该处的谱隙常数 $\sigma$ 未取数值。</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="doc" id="pbanach">
-      <h2>二 · p-Banach 情形：仍开，但已被压成一个标量</h2>
-      <div class="body">
-        <p>上面的 $V_p$ <b>不能</b>来自任何 Hausdorff p-Banach 空间（它是 $\sigma$-紧的像、故局部紧，而 $p&lt;1$ 时局部紧线性空间必有限维，与其显式无限线性无关族矛盾）。所以「换系数」不是免费的。</p>
-        <p>目前把 p-Banach 半边精确压成：</p>
-        <p>$$\exists\ \text{Hausdorff p-Banach } B,\ \ \Phi:V_p\to B\ \text{condensed 线性},\ \ \Phi(q(z))\ne0
-        \iff \exists\ \omega\ \text{(凹模)},\ \ \Delta_{p,\omega}(z)>0,$$</p>
-        <p>其中 $\Delta_{p,\omega}(z)$ 是对<b>全部有限四链</b> $B\in\mathbb{R}[G^4]$ 的下确界。三层量词必须分开看：</p>
-        <table>
-          <thead><tr><th>层</th><th>状态</th></tr></thead>
-          <tbody>
-            <tr><td>正平均（前插四链）</td><td>✅ 已闭合：整族有统一正下界，且临界常数 $\Theta(1-p)$</td></tr>
-            <tr><td>带符号前插</td><td>🚧 未闭合。缺口是一个定量对比：近优总成本 $O(\sqrt{\varepsilon})$ 完全容许所需的 $o(\varepsilon^{3/4})$</td></tr>
-            <tr><td>任意四链 / 原 $\Delta$</td><td>🚧 未闭合，且前插族<b>不</b>参数化全部四链（有明确反例：证书成本严格正而 $\Delta$ 恰为 0）</td></tr>
-          </tbody>
-        </table>
-        <p>一句话：<b>不是「差几步」，是「差一整类工具」</b>——现有工具（有界上圈求值、Haar 谱隙、原子计数）都是正定或线性泛函，<b>看不见正负抵消</b>，而 $\Delta$ 恰恰允许任意抵消。</p>
-      </div>
-    </section>
-
-    <section class="doc" id="protocol">
-      <h2>三 · 验证协议：为什么这些笔记值得一看</h2>
-      <div class="body">
-        <p>整套推导以<b>只追加</b>的方式写成：每一轮只在文件末尾追加，且每轮都记录「起始字节数 + 前缀 SHA-256」。这些哈希是<b>可复算</b>的，等于用密码学方式证明「旧文没被悄悄改过」。</p>
-        <p>复核时优先攻三件事，而不是通读：</p>
-        <ol>
-          <li><b>必要条件有没有被当充分条件用。</b></li>
-          <li><b>量词有没有偷换</b>（子族 → 全体、每项正 → 一致正、有预算 → 无预算）。</li>
-          <li><b>跨节定义有没有漂移。</b></li>
-        </ol>
-        <p>这套流程的实际收获是：推导里出现了<b>多处主动推翻自己</b>的段落——作者造出反例否掉自己的候选路线（例如「证书成本正 ⇒ 目标为正」这条自然但错误的推理，被一个十六项边界直接证伪），并在失败时如实记录「这次测试是我自己的预设过强」。</p>
-        <p>同样重要的是它<b>没有</b>做什么：全文 21 处写明「不新增全题完成标记」，每节结账表都保留同样的「未证」行。</p>
-      </div>
-    </section>
-
-    <section class="doc" id="cite">
-      <h2>四 · 引用与许可</h2>
-      <div class="body">
-        <p>目标问题的原始出处：P. Scholze, <i>Lectures on Analytic Geometry</i>, Lecture X, Question 0.10.4（arXiv:2605.03655，2026-05-05 稳定引用版）。</p>
-        <p>本页笔记：bingyingzizz，2026-10。若引用，请注明「工作笔记，未经同行评审」。</p>
-        <p>许可：文字内容 <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>；站点与引擎代码 MIT。</p>
-        <p class="rfoot" style="display:block">最近更新：2026-10-31　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io" rel="noopener">本站源码</a></p>
-      </div>
-    </section>
-
-  </main>
+<div class="topnav">
+  <a href="./">← bingyingzizz</a>
+  <a href="mathgalaxy/">数学星图</a>
+  <a href="https://github.com/bingyingzizz/MathGalaxy">仓库</a>
 </div>
 
+<main class="paper">
+
+  <p class="kicker">预印本 · 星图研究 Notes in Graph Research</p>
+
+  <h1>紧群上 $p$-liquid 系数的正次数上同调：一般系数的反例</h1>
+  <p class="en-title">Positive-degree cohomology of compact groups with $p$-liquid coefficients:
+  a counterexample for general coefficients</p>
+
+  <p class="byline">bingyingzizz　·　2026 年 10 月</p>
+
+  <div class="status">
+    <b>状态。</b>预印本，<b>未经同行评审</b>。本文的核心结论经内部对抗性复核（逐式核验关键链条，见 §7），
+    但<b>没有</b>经过外部专家审阅，也<b>没有</b>做穷尽文献检索（做过定向检索：未发现与之矛盾的定理，也未发现该问题已被回答）。
+    引用请注明「preprint, not peer-reviewed」。
+  </div>
+
+  <div class="abstract">
+    <b class="ablabel">摘要</b>
+    <p>设 $G=\mathrm{SU}(2)$，$V_p=\operatorname{coker}\bigl(\partial_4:M_{&lt;p}(G^4)\to M_{&lt;p}(G^3)\bigr)$，
+    赋予平凡作用。我们证明 $V_p$ 是 $p$-liquid 实向量空间且 $H^3(G,V_p)\neq0$。
+    因此 Clausen–Scholze 在《Lectures on Analytic Geometry》Lecture X, Question 0.10.4 中提出的问题
+    ——「紧非交换群、$p$-liquid 系数、平凡作用时 $H^i(G,V)$ 是否对一切 $i&gt;0$ 为零」——
+    在「任意 $p$-liquid 系数」这一量词下答案是否定的。</p>
+    <p>证明的关键是：$p$-liquid 测度恰为可数原子和（该讲义 Prop. 10.7），
+    因而 $G^{\delta}$ 的<b>有界</b>（无须连续、无须可测）上圈可在 liquid 链上逐原子求值；
+    再配一个来自算术双曲三流形的体积上圈，得到一个不存在四链填充的三圈。</p>
+    <p>$p$-Banach 情形<b>仍开</b>。我们给出：$V_p$ 不可能来自 Hausdorff $p$-Banach（§6.1）；
+    p-Banach 反例与一个显式标量下确界 $\Delta_{p,\omega}(z)$ 的精确等价（§6.2）；
+    以及该下确界在「前插平均族」上的完整闭合（§6.3）。剩余缺口是一个量词问题（§6.4）。</p>
+  </div>
+
+  <h2>1　引言</h2>
+
+  <p>设 $G$ 为紧群，$V$ 为 $p$-liquid $\mathbb{R}$-向量空间（$0&lt;p\leq1$），$G$ 平凡作用于 $V$。
+    上同调指 condensed 导出群上同调 $H^i(G,V)=R\Gamma(BG,V)$。Clausen–Scholze 提出问题：</p>
+
+  <blockquote><b>Question 0.10.4.</b> Let $G$ be a compact nonabelian group, say $G=\mathrm{SU}(2)$,
+  and let $V$ be a $p$-liquid $\mathbb{R}$-vector space, e.g. a $p$-Banach.
+  Does $H^i(G,V)$ vanish for $i&gt;0$?</blockquote>
+
+  <p>已知边界如下。交换情形已由作者解决（Cor. 0.10.2：紧交换 $A$，$R\underline{\mathrm{Hom}}(A,V)=0$），
+    其证明作者注明 <i>“The proof uses commutativity critically.”</i>；
+    有限群自动成立（$|F|^{-1}\sum_g g$ 是幂等）；
+    $p\geq1$ 或系数局部凸时由 Austin–Moore 的定理覆盖；
+    profinite 群目前只有比较定理。缺口因此是<b>非交换 × 非局部凸（$p&lt;1$）</b>。</p>
+
+  <p>本文处理该缺口在上述<b>字面量词</b>下的情形，并明确划出仍开的部分。</p>
+
+  <h2>2　记号与所用输入</h2>
+
+  <p>$\mathrm{Cond}(\mathbb{R})$ 记 condensed 实向量空间范畴；$\mathcal{L}iquid_p$ 记 $p$-liquid 子范畴。
+    对紧 Hausdorff $S$，$M_{&lt;p}(S)=\varinjlim_{q&lt;p}M_q(S)$ 为相应的自由 $p$-liquid 模。
+    我们只使用讲义中已证明的下列结果（编号依 2026-05-05 稳定引用版）：</p>
+
+  <table>
+    <thead><tr><th>输入</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>Thm. 6.5</td><td>$\mathcal{L}iquid_p$ 是 $\mathrm{Cond}(\mathbb{R})$ 的阿贝尔子范畴，对<b>核、余核、扩张</b>封闭；
+        由 $M_{&lt;p}(S)$（$S$ 极不连通）紧投射生成；含入函子有左伴随，其在导出范畴上的左伴随是<b>左导出</b>函子。</td></tr>
+      <tr><td>Prop. 10.1</td><td>对任意紧 Hausdorff $S$，$\mathbb{R}[S]$ 的导出 $p$-liquidification 等于 $M_{&lt;p}(S)$，<b>且集中在次数 0</b>。</td></tr>
+      <tr><td>Prop. 10.7</td><td>设 $S$ 紧 Hausdorff，$0&lt;p&lt;1$。则任意 $\mu\in M_p(S)$ 可写成
+        $\mu=\sum_{n\geq0}x_n[s_n]$，其中 $s_n\in S$、$\sum_n|x_n|^p&lt;\infty$（原子可取互不相同）。</td></tr>
+      <tr><td>Cor. 0.10.2</td><td>紧交换 $A$ 时 $R\underline{\mathrm{Hom}}(A,V)=0$。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rem"><div class="hd">Remark 2.1</div>
+    <p>Prop. 10.7 的原文紧接着指出：这「<i>only a description of the underlying set</i>」，
+    作为 condensed set 的 $M_p(S)$ 并不是可数子空间上的滤过余极限。
+    因此本文只<b>在通常点上</b>使用该展开（见 Lemma 3.1），不据此推断 condensed 结构。</p>
+  </div>
+
+  <h2>3　关键引理：有界函数在 liquid 链上的求值</h2>
+
+  <p>记 $\varepsilon:M_{&lt;p}(S)\to\mathbb{R}$ 为总质量泛函，$\varepsilon([s])=1$。
+    对集合意义的有界 $f:S\to\mathbb{R}$，形式地令 $E_f\bigl(\sum_j a_j[s_j]\bigr)=\sum_j a_jf(s_j)$。
+    这一步的危险在于：$f$ 不连续，$E_f$ 不能由连续性得到。</p>
+
+  <div class="lem"><div class="hd">Lemma 3.1（原子求值）</div>
+    <p>设 $S$ 紧 Hausdorff，$0&lt;p\leq1$。则 $E_f$ 对任意集合意义有界的 $f:S\to\mathbb{R}$
+    在 $M_{&lt;p}(S)(*)$ 上<b>良定义</b>且线性；若 $a:S\to S'$ 连续、$f:S'\to\mathbb{R}$ 有界，则
+    $E_f\circ a_*=E_{f\circ a}$。</p>
+  </div>
+
+  <p><b>证明思路。</b>取 $q&lt;p$ 使 $\mu\in M_q(S)(*)$，由 Prop. 10.7 得 $\sum|x_j|^q&lt;\infty$，故 $\sum|x_j|&lt;\infty$，
+    右端绝对收敛。良定义性：若 $\sum_j a_j[s_j]=0$，则对每个连续 $\varphi$，
+    由 $\varphi$ 给出的 liquid 线性泛函给出 $\sum_j a_j\varphi(s_j)=0$；
+    于是有限变差 Radon 测度 $\sum_j a_j\delta_{s_j}$ 与所有连续函数配对为零，从而为零测度，
+    故对每个 $s$ 有 $\sum_{s_j=s}a_j=0$；按原子分组即得任意有界 $f$ 上求和为零。线性性与函子性同法。∎</p>
+
+  <div class="rem"><div class="hd">Remark 3.2（这一步的支撑点）</div>
+    <p>良定义性最终落在 $\ker\bigl(M_q(S)(*)\to\ell^q(S)\bigr)=dF_r(S)(*)$ 上，其中
+    $F_r(S)=M(S,\mathbb{Z}((T))_r)$、$d=2-T^{-1}$、$T=1/2$ 特化。
+    这由显式除法给出：若 $\mathcal{A}_r(\mu)=\sum_n2^{-n}\mu_n=0$，则
+    $\nu_n=-\sum_{k&lt;n}2^{n-1-k}\mu_k$ 满足 $d\nu=\mu$，且
+    $\sum_nr^n\|\nu_n\|_1\leq\frac{r}{2r-1}c&lt;\infty$（$r=2^{-q}&gt;\tfrac12$）。
+    该级数与 $T=1/2$ 的特化在讲义印刷页 69–71 处已备。</p>
+  </div>
+
+  <h2>4　算术输入：同一个抽象群的两个表示</h2>
+
+  <p>令 $\alpha=\sqrt[3]{2}$，$k=\mathbb{Q}(\alpha)$（一个实位、一对复位）。
+    取四元数代数 $B=(-1,-1)_k$ 与其极大序 $\mathcal{O}$。$B$ 在唯一实位分歧（$\otimes\mathbb{R}\cong\mathbb{H}$），
+    故为除代数；在复位分裂，$B\otimes_{k,w}\mathbb{C}\cong M_2(\mathbb{C})$。
+    于是 $B^1$ 的算术群在复位给出 $\mathrm{PSL}_2(\mathbb{C})$ 中的余紧格。
+    取有限指数无挠子群 $\Gamma=\mathcal{O}^1\cap(1+3\mathcal{O})$。</p>
+
+  <p>实位给出忠实嵌入 $\rho_0:\Gamma\hookrightarrow\mathrm{SU}(2)$。
+    选域嵌入 $\tau:k(i)\hookrightarrow\mathbb{C}$，$\alpha\mapsto\zeta_3\alpha$、$i\mapsto i$
+    （注意 $\zeta_3\notin k(i)$，故不自相矛盾），再延拓为 $\sigma\in\mathrm{Aut}(\mathbb{C})$。
+    逐项作用于矩阵得抽象同态</p>
+
+  <p>$$\rho=\sigma|_{\mathrm{SU}(2)}:\ \mathrm{SU}(2)^{\delta}\longrightarrow\mathrm{SL}_2(\mathbb{C})^{\delta},$$</p>
+
+  <p>它在 $\rho_0(\Gamma)$ 上恰为复位表示（用 $\det\sigma(M)=\sigma(\det M)=1$，故像落在 $\mathrm{SL}_2$）。
+    <b>$\rho$ 定义在整个 $\mathrm{SU}(2)$ 上</b>，这一点是后文能得到整体有界上圈的关键；
+    但 $\rho$ 并不连续，也不保持酉性。</p>
+
+  <p>令 $M=\Lambda\backslash\mathbb{H}^3$ 为对应的闭双曲三流形，$v$ 为有向直化体积上圈。
+    $|v|\leq v_3$（正则理想四面体体积），且 $\delta v=0$。定义</p>
+
+  <p>$$\beta(g,h,k')=v\bigl(\rho(g),\rho(h),\rho(k')\bigr).$$</p>
+
+  <p>则 $\beta$ 是 $G^{\delta}$ 上的<b>有界</b>实三上圈。取 $M$ 的基本类的一个有限 bar 代表
+    $z_\Gamma\in\mathbb{R}[\Gamma^3]$，沿 $\rho_0$ 推前得 $z\in\mathbb{R}[G^3]$，$\partial_3z=0$。
+    直化与 $\rho\circ\rho_0=\rho_2$ 给出</p>
+
+  <p>$$E_\beta(z)=\operatorname{Vol}(M)&gt;0 .$$</p>
+
+  <h2>5　主定理</h2>
+
+  <div class="thm"><div class="hd">Theorem 5.1</div>
+    <p>设 $G=\mathrm{SU}(2)$，$0&lt;p\leq1$，$q:M_{&lt;p}(G^3)\to V_p$ 为余核投影。赋予 $V_p$ 平凡作用。则
+    $V_p\in\mathcal{L}iquid_p$，且 $q\circ\mathrm{Dirac}:G^3\to V_p$ 的类满足</p>
+    <p>$$[c_p]\neq0\ \in\ H^3(G,V_p).$$</p>
+  </div>
+
+  <p><b>证明。</b>(i) $V_p\in\mathcal{L}iquid_p$ 由 Thm. 6.5 的余核封闭性。
+    (ii) 由 Lemma 3.1，$E_\beta\bigl(\partial_4b\bigr)=E_{\delta\beta}(b)=0$ 对任意
+    $b\in M_{&lt;p}(G^4)(*)$ 成立。若存在 $b$ 使 $\partial_4b=z$，则 $0=E_\beta(z)=\operatorname{Vol}(M)&gt;0$，矛盾。
+    (iii) 通常点上的评价在投射测试对象上正合，故 $z$ 不是 $C_\bullet$ 中的边界，
+    即 $H_3(C_\bullet)\neq0$，其中 $C_n=M_{&lt;p}(G^n)$。
+    (iv) 令 $Q:C_\bullet\to V_p[3]$ 在次数 3 取 $q$、其余为零。$\partial_4z=0$ 使它成为链映射；
+    若 $[Q]=0$ 则 $Q=dR$，于是 $q(z)=Q(z)=R(\partial_3z)=0$，矛盾。故 $Q$ 在导出范畴中非零。
+    (v) 由 Prop. 10.1 与 Thm. 6.5(2)，在 $\mathrm{Cond}(\mathbb{R})$ 中有
+    $R\Gamma(BG,V)\simeq\operatorname{Tot}_nR\operatorname{Hom}(\mathbb{R}[G^n],V)\simeq R\operatorname{Hom}(C_\bullet,V)$，
+    故 (iv) 给出 $[c_p]\neq0\in H^3(G,V_p)$。∎</p>
+
+  <div class="rem"><div class="hd">Remark 5.2</div>
+    <p>证明<b>没有</b>经过连续 bar 上同调与 condensed 导出上同调的比较，也<b>没有</b>使用 $C_n$ 的投射性；
+    $z$ 的不可填充性是在<b>通常点</b>上、对<b>所有</b> liquid 四链验证的，而非仅对有限链。</p>
+  </div>
+
+  <h2>6　$p$-Banach 情形：仍开</h2>
+
+  <h3>6.1　$V_p$ 不来自 Hausdorff $p$-Banach</h3>
+  <p>$V_p(*)$ 可被可数族紧 Hausdorff 空间的连续像覆盖（由共尾的 $q_m&lt;p$ 与整数盘半径）。
+    若 $V_p\cong\underline{B}$ 且 $B$ 是 Hausdorff $p$-Banach，则 $B$ 为 $\sigma$-紧；
+    又 $B$ 完备可度量化故 Baire，于是某个像有内点，$B$ 局部紧，
+    而 $p&lt;1$ 时局部紧线性空间必有限维。另一方面显式族
+    $x_n=q([a|a|a^n])$（$a=\mathrm{diag}(e^{2\pi i\sqrt2},e^{-2\pi i\sqrt2})$，无限阶）
+    给出 $\dim V_p(*)=\infty$，矛盾。∎</p>
+
+  <h3>6.2　精确归约</h3>
+  <p>对非降、有界、$\omega(0)=0$、$\omega(t)&gt;0\ (t&gt;0)$ 的模，定义自由 $p$-Banach 空间 $F_\omega$、
+    商 $B_\omega=F_\omega/J_\omega$ 与有限链泛函</p>
+  <p>$$\Delta_{p,\omega}(z)=\inf\Bigl\{\sum_i|a_i|^p+\sum_j|b_j|^p\omega(d(u_j,v_j))^p
+     \ :\ z=\partial_4b+\sum_i a_i[s_i]+\sum_j b_j([u_j]-[v_j])\Bigr\},$$</p>
+  <p>下确界取遍全部有限 $b\in\mathbb{R}[G^4]$。则</p>
+  <p>$$\exists\,B\ \text{Hausdorff p-Banach},\ \Phi:V_p\to B\ \text{condensed 线性},\ \Phi(q(z))\neq0
+     \iff \exists\,\omega,\ \Delta_{p,\omega}(z)&gt;0 .$$</p>
+  <p>（$\Rightarrow$：取 $\omega(t)=t+\Omega_c(t)/C$，$\Omega_c$ 为 $c=\Phi\circ c_p$ 的一致模；
+    $\Leftarrow$：取 $B_\omega$ 与 $\Phi_\omega$。）</p>
+
+  <h3>6.3　前插平均族已闭合</h3>
+  <p>对任意模 $\omega$，记 $e_{p,\omega}(\mu)=\sum_{k\in F_0}\rho_{G,\omega}(R_k\mu-\mu)$，
+    $F_0$ 为 $z$ 的有限第一坐标集。用同一 $F_0$ 的 Haar $L^2$ 谱隙
+    （Bourgain–Gamburd，对代数矩阵生成的稠密子群；$\sigma=\sigma(F_0)&gt;0$）、
+    中位数 $\Rightarrow L^p$ 转移（常数 $P=4/\sigma$）、以及相邻尺度有限频带求积，
+    得对<b>全部</b>有限链 $\mu\in\mathbb{R}[G]$、$\varepsilon(\mu)=1$：</p>
+  <p>$$e_{p,W_0}(\mu)\ \geq\ c_{F_0,p}&gt;0,\qquad
+     c_{F_0,p}=\frac{\sigma}{4C_p(1+B_p)\Lambda_p},\quad
+     \Lambda_p=\sum_{n\geq0}2^{-3(1-p)n}(2+n\log2)^p&lt;\infty .$$</p>
+  <p>该下界<b>不带</b>词半径、原子 $p$-质量或树项数预算。取与 $\varepsilon=1-p$ 匹配的几何尺度阶梯，
+    再把上界 $\limsup_{p\to1^-}c_p^*/(1-p)\leq6em$ 合并，得临界常数 $c_p^*=\Theta_{F_0,W_0}(1-p)$。</p>
+
+  <h3>6.4　剩余缺口是量词问题</h3>
+  <p>6.3 只控制「前插」形状 $B_\mu(z')$。而 $\Delta$ 取遍<b>任意</b>四链并允许任意抵消。
+    存在明确反例：某个两项四链 $P_0$ 与 $z_0=\partial_4P_0$ 使
+    $\Delta_{p,W}(z_0)=0$（填充即 $P_0$），而其前插残差在 $\mu=([1]+[-1])/2$ 处有 32 个不相消原子。
+    故 6.3 不能升级为 $\Delta&gt;0$。当前唯一瓶颈是一个定量对比：
+    近优总成本为 $O(\sqrt\varepsilon)$，而所需门槛是 $o(\varepsilon^{3/4})$，前者「完全容许」后者。
+    现有工具（有界上圈求值、Haar 谱隙、原子计数）均为线性或正定，对符号抵消不敏感。</p>
+
+  <h2>7　验证状态</h2>
+
+  <p>本文不是从零写成的论文，而是一份<b>逐步追加</b>的推导的摘要。为保证可审计，采用两条纪律：</p>
+
+  <table>
+    <thead><tr><th>纪律</th><th>内容与复核结果</th></tr></thead>
+    <tbody>
+      <tr><td>只追加 + 前缀哈希</td><td>每轮只在文件末尾追加，并记录「起始字节数 + 前缀 SHA-256」。
+        对 $301{,}040$、$504{,}117$、$525{,}538$、$547{,}927$、$584{,}279$、$609{,}371$、
+        $635{,}576$、$663{,}501$、$690{,}788$、$720{,}168$ 字节的前缀逐条复算，<b>全部一致</b>，
+        即旧文自始未被改动。</td></tr>
+      <tr><td>对抗性复核</td><td>九轮独立复核，优先攻三件事：必要条件是否被当充分条件用、量词是否被偷换、
+        跨节定义是否漂移。中途修正过一个真实缺口（原子求值的良定义性，见 §3），
+        也纠正过一条早先错误的引理（「存在内自同构同时反转 $\mathrm{SU}(2)$ 全部元素」为假，
+        反例 $q=j$；只保留「任意一对元素可被同一共轭反转」的弱形式）。</td></tr>
+      <tr><td>自我否定的反模型</td><td>推导中多处给出<b>否定自己候选路线</b>的明确反模型，
+        例如：证书成本严格正而残差恰为零的十六项边界；$\Delta=0$ 却有非零稠密残差的两项边界；
+        「取绝对值把带符号化为正」不连续；「有预算正性拼出无预算正性」不成立。</td></tr>
+    </tbody>
+  </table>
+
+  <p><b>未验证的部分</b>（据实登记）：未做外部专家审阅；未做穷尽文献检索；
+    §6.3 依赖 Bourgain–Gamburd 的 $\mathrm{SU}(d)$ 谱隙定理，本文只核对了其假设与使用方式，
+    未在线核对原论文全部 57 页的细节，也<b>未</b>取 $\sigma$ 的数值。</p>
+
+  <h2>8　待解决的问题</h2>
+  <ol>
+    <li>求 $\Delta_{p,\omega}(z)&gt;0$（由此经 6.2 得 $p$-Banach 反例），
+      或构造一列近优四链使 $\Delta_{p,\omega}(z)=0$（由此否定本路线）。</li>
+    <li>把 6.3 的「前插族」下界推广到允许相消的一般四链；目前缺口是
+      $O(\sqrt\varepsilon)$ 与 $o(\varepsilon^{3/4})$ 之间的定量不相容性。</li>
+    <li>$V_p$ 的 quasiseparated 性：本文不声称 $V_p$ 是 qs 对象。
+      若把「$p$-liquid」读作隐含 qs 的子类，则 Theorem 5.1 不覆盖该读法。</li>
+  </ol>
+
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>P. Scholze，<i>Lectures on Analytic Geometry</i>，Lecture X，Question 0.10.4、
+      Prop. 10.1、Prop. 10.7、Thm. 6.5、Cor. 0.10.2。arXiv:2605.03655（2026-05-05 稳定引用版）。</li>
+    <li>J. Bourgain, A. Gamburd，<i>A spectral gap theorem in SU(d)</i>，J. Eur. Math. Soc. 14 (2012), 1455–1511。</li>
+    <li>T. Austin, C. Moore，<i>Continuity properties of measurable group cohomology</i>，
+      Math. Ann. (2013)；arXiv:1004.4937。</li>
+    <li>E. Brink，<i>Condensed Group Cohomology</i>，arXiv:2512.03648（278 页）。
+      本文核对了其结论范围：其两条主定理覆盖 solid 系数与有限维连续实表示，即 $p\geq1$／局部凸一侧，
+      不含 $p&lt;1$ 的 $p$-liquid 系数。</li>
+    <li>N. Bourbaki / 标准代数数论（四元数代数、算术 Kleinian 群的存在与余紧性）；
+      A. Page，<i>Computing arithmetic Kleinian groups</i>。</li>
+  </ol>
+
+  <p class="foot">
+    文字内容 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>；站点与引擎代码 MIT。
+    <br>最近更新：2026-10-31　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+  </p>
+
+</main>
+
 <script>
-/* 行内与行间数学：$…$ / $$…$$ 交给 KaTeX。
-   ⚠️ 只走文本节点（TreeWalker），不碰 innerHTML。
-   ⚠️ <code>/<pre> 里的 $ 不处理。
-   ⚠️ 先处理 $$…$$ 再处理 $…$，否则行间公式会被拆坏。 */
+/* 数学渲染：用 indexOf 扫描，不依赖正则（正则版在多处漏渲染过）。 */
 (function () {
   if (!window.katex) return;
-  var RE_D = /\$\$([\s\S]+?)\$\$/g;
-  var RE_I = /\$([^$\n]+?)\$/g;
-  function collect() {
-    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
-    var out = []; while (w.nextNode()) out.push(w.currentNode);
-    return out.filter(function (n) {
-      var p = n.parentNode;
-      return p && n.nodeValue.indexOf('$') >= 0 && !p.closest('code, pre, script, style, .katex');
-    });
+  var BS = String.fromCharCode(92);
+  var D = String.fromCharCode(36, 36), I = String.fromCharCode(36);
+  function mk(tex, display) {
+    var sp = document.createElement('span');
+    try { sp.innerHTML = katex.renderToString(tex, { throwOnError: false, displayMode: display }); }
+    catch (e) { sp.textContent = display ? D + tex + D : I + tex + I; }
+    return sp;
   }
-  function run(RE, display) {
-    collect().forEach(function (node) {
-      var txt = node.nodeValue, p = node.parentNode;
-      var frag = document.createDocumentFragment(), last = 0, m, hit = false;
-      RE.lastIndex = 0;
-      while ((m = RE.exec(txt))) {
-        hit = true;
-        if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
-        var span = document.createElement('span');
-        try { span.innerHTML = katex.renderToString(m[1], { throwOnError: false, displayMode: display }); }
-        catch (e) { span.textContent = m[0]; }
-        frag.appendChild(span);
-        last = m.index + m[0].length;
+  function one(node) {
+    var txt = node.nodeValue, out = [], i = 0, changed = false;
+    for (;;) {
+      var s = txt.indexOf(I, i);
+      if (s < 0) break;
+      if (txt.substr(s, 2) === D) {
+        var e = txt.indexOf(D, s + 2);
+        if (e < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 2, e), true));
+        i = e + 2; changed = true;
+      } else {
+        var e2 = txt.indexOf(I, s + 1);
+        if (e2 < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 1, e2), false));
+        i = e2 + 1; changed = true;
       }
-      if (!hit) return;
-      if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
-      p.replaceChild(frag, node);
-    });
+    }
+    if (!changed) return;
+    if (i < txt.length) out.push(document.createTextNode(txt.slice(i)));
+    var frag = document.createDocumentFragment();
+    for (var k = 0; k < out.length; k++) frag.appendChild(out[k]);
+    node.parentNode.replaceChild(frag, node);
   }
-  run(RE_D, true);
-  run(RE_I, false);
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), list = [];
+  while (w.nextNode()) list.push(w.currentNode);
+  for (var k = 0; k < list.length; k++) {
+    var n = list[k], par = n.parentNode;
+    if (!par || n.nodeValue.indexOf(I) < 0) continue;
+    if (par.closest('code, pre, script, style, .katex')) continue;
+    one(n);
+  }
 })();
 </script>
 </body>

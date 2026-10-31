@@ -6,8 +6,10 @@ layer 15 · 定理 · 拓扑空间 · 拓扑学
 任意一族紧空间的**积**（带积拓扑）仍然紧 —— 任意多个，包括不可数多个。
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`ax.choice`](../nodes/ax.choice.md) 选择公理：选择公理：Tychonoff 定理（Alexander 子基引理）　[proofs/imp.ac-tykhonov.md](../proofs/imp.ac-tykhonov.md)
 - [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-dep.tykhonov-compact.md](../proofs/def-dep.tykhonov-compact.md)
-- [`def.product-topology`](../nodes/def.product-topology.md) 积拓扑：用到了定义 积拓扑　[proofs/def-dep.tykhonov-product.md](../proofs/def-dep.tykhonov-product.md)
+
+- …另有入边，续页见 [nodes/thm.tykhonov.2.md](./thm.tykhonov.2.md)
 
 refs: Munkres, Topology, §37；Le Stum, Exercise 2.19
 

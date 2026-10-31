@@ -1,6 +1,6 @@
 # 闭加细　`prop.paracompact-closed-refinement`
 仿紧空间的开覆盖有局部有限闭加细
-layer 9 · 命题 · 仿紧与单位分解 · 拓扑学
+layer 11 · 命题 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=prop.paracompact-closed-refinement)　·　[节点索引](../index.md)
 
 设 $X$ 是**仿紧 Hausdorff** 空间，$\mathcal{U}$ 是 $X$ 的开覆盖。则 $\mathcal{U}$ 有**局部有限的闭加细** $\mathcal{F} = \{ F_{i} \}_{i \in I}$：每个 $F_{i}$ 是闭集、含于 $\mathcal{U}$ 的某个成员、族 $\mathcal{F}$ 局部有限，且 $

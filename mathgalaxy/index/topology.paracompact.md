@@ -9,7 +9,7 @@
 - thm.michael-paracompact　迈克尔仿紧判别法　layer 6
 - def.sigma-locally-finite　可数并的局部有限族　layer 7
 - def.paracompact　仿紧空间　layer 7
-- lem.shrink　收缩引理　layer 7
 - def.partition-of-unity　单位分解　layer 7
 - thm.paracompact-hausdorff-normal　仿紧 Hausdorff 空间正规　layer 8
-- prop.paracompact-closed-refinement　闭加细　layer 9
+- lem.shrink　收缩引理　layer 10
+- prop.paracompact-closed-refinement　闭加细　layer 11
