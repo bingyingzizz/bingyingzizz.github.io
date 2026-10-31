@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bingyingzizz.github.io/</loc><lastmod>2026-10-30</lastmod><priority>1.0</priority></url>
-  <url><loc>https://bingyingzizz.github.io/read.html</loc><lastmod>2026-10-30</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bingyingzizz.github.io/research.html</loc><lastmod>2026-10-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://bingyingzizz.github.io/</loc><lastmod>2026-10-31</lastmod><priority>1.0</priority></url>
+  <url><loc>https://bingyingzizz.github.io/read.html</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://bingyingzizz.github.io/research.html</loc><lastmod>2026-10-31</lastmod><priority>0.9</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/</loc><lastmod>2026-10-31</lastmod><priority>1.0</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/all.html</loc><lastmod>2026-10-31</lastmod><priority>0.9</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/questions.html</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
@@ -683,6 +683,28 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ufd.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.comaximal.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.crt-rings.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.multiplicative-function.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.divisor-function.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.divisor-formula.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius-function.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mu-sum.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mobius-inversion.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.prime-counting.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.chebyshev-estimate.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bertrand.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.prime-number-theorem.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quadratic-residue.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.legendre-symbol.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euler-criterion.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.gauss-qr.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.quadratic-reciprocity.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.jacobi-symbol.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.jacobi-laws.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.order-mod-n.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.order-divides-phi.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.primitive-root.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.primitive-root-exists.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.discrete-log.html</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.monotone-differentiable.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.bounded-variation.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.bv-examples.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>

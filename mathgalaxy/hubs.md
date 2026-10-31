@@ -16,4 +16,4 @@
 - **5** `def.abelian-category` 加法 / 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
 - **5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 16 · 拓扑空间
 
-（1312 个节点里 1305 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+（1334 个节点里 1327 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）

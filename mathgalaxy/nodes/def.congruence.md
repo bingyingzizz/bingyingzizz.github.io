@@ -12,6 +12,7 @@ layer 11 · 定义 · 整除与同余 · 数论
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环 用
+- 被 [`def.quadratic-residue`](../nodes/def.quadratic-residue.md) 二次剩余 用
 
 refs: 华罗庚《数论导引》§2
 

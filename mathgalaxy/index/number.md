@@ -3,4 +3,6 @@
 
 整数环的算术：整除与带余除法、辗转相除与 Bézout、素数与唯一分解、同余与剩余类环、中国剩余定理、Euler 函数与 Fermat 小定理。
 
+- number.functions　数论函数与素数分布 / Arithmetic Functions and Distribution of Primes　中心天体 thm.mobius-inversion　10 点
+- number.quadratic　二次剩余与原根 / Quadratic Residues and Primitive Roots　中心天体 thm.quadratic-reciprocity　12 点
 - number.basic　整除与同余 / Divisibility and Congruences　中心天体 def.congruence　15 点

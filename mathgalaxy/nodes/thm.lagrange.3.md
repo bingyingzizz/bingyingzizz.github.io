@@ -5,3 +5,4 @@
 - ⇒ [`thm.orbit-stabilizer`](../nodes/thm.orbit-stabilizer.md) 轨道–稳定子定理
 - 被 [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理 用
 - ⇒ [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理
+- ⇒ [`thm.order-divides-phi`](../nodes/thm.order-divides-phi.md) 阶整除 Euler 函数

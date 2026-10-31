@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-31T13:58:42.026Z
-> 14 星系 / 90 星团 / 1312 节点 / 2380 连线（强边 2365，弱边 15；其中**不分层**的「推论」21 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-10-31T14:14:16.470Z
+> 14 星系 / 92 星团 / 1334 节点 / 2414 连线（强边 2397，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -27153,6 +27153,508 @@ $$\operatorname{Lie}(G) \cong \mathfrak{g},$$
 ## 星系：数论（Number Theory）
 > 整数环的算术：整除与带余除法、辗转相除与 Bézout、素数与唯一分解、同余与剩余类环、中国剩余定理、Euler 函数与 Fermat 小定理。
 
+### 星团：数论函数与素数分布
+> 把「算术函数」做成一套可算的东西：**积性函数** → 除数函数 $	au, sigma$ → **Möbius 函数** $mu$ → **Möbius 反演** → 素数计数 $pi, 	heta, psi$ → **Чебышёв 估计** → **Bertrand 假设** → 素数定理（只给陈述与骨架）。
+
+#### 积性函数　`def.multiplicative-function`
+*定义*　积性函数与完全积性
+
+称 $f : \mathbb{N}^{+} \to \mathbb{C}$ 是**积性函数**，若 $f(1) = 1$ 且对互素的 $m, n$（即 $\gcd(m,n) = 1$）有
+
+$$f(mn) = f(m)\,f(n) .$$
+
+若上式对**一切** $m, n$ 都成立（不要求互素），称 $f$ 是**完全积性**的。
+
+为什么这个条件自然：由算术基本定理，$n$ 唯一分解成素数幂之积，而这些素数幂两两互素 —— 所以积性函数完全由它在素数幂 $p^{e}$ 上的值决定。这就把「$n$ 的全体」上的函数压成「每个素数一列」的数据。
+
+
+
+完全积性更强：还要求 $f(p^{e}) = f(p)^{e}$。$\mu$、$\varphi$、$\tau$、$\sigma$ 都积性；只有 $\mu$ 与「$\mathrm{id}$」「$1$」是完全积性，$\varphi$、$\tau$、$\sigma$ 不是（例如 $\varphi(4) = 2 \ne \varphi(2)^{2} = 1$）。
+
+
+
+两个积性函数的**狄利克雷卷积**仍积性 —— 这是后面 Möbius 反演的代数背景。
+
+参考：华罗庚《数论导引》第三章；Apostol, Introduction to Analytic Number Theory, Ch. 2
+
+#### 除数函数 τ 与 σ　`def.divisor-function`
+*定义*　除数个数与除数之和
+
+对 $n \ge 1$ 定义
+
+$$\tau(n) := \#\{\, d \ge 1 : d \mid n \,\}, \qquad \sigma(n) := \sum_{d \mid n} d .$$
+
+$\tau(n)$ 是 $n$ 的正因数个数，$\sigma(n)$ 是它们之和。
+
+两者都**积性**（不是完全积性）：$n$ 的因数由各素因子的指数独立选取，于是 $\tau$ 与 $\sigma$ 在互素的两个数上相乘。
+
+
+
+$\sigma(n) = 2n$ 的 $n$ 叫**完全数**（$6 = 1+2+3$、$28$、$496$）；$\sigma(n) < 2n$ 叫亏数、$> 2n$ 叫盈数。奇完全数是否存在仍未解决 —— 这是数论里最老的未解问题之一。
+
+
+
+「$\tau$ 的平均阶是 $\log n$」等价于「调和级数发散」：$\sum_{n \le x} \tau(n) = x\log x + O(x)$，这就是 Dirichlet 的除数问题。
+
+参考：华罗庚《数论导引》第三章；Apostol, Ch. 2
+
+#### τ 与 σ 的乘积公式　`thm.divisor-formula`
+*定理*　用素因子分解算 $\tau(n)$ 与 $\sigma(n)$
+
+设 $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$。则
+
+$$\tau(n) = \prod_{i=1}^{r} (e_{i} + 1), \qquad \sigma(n) = \prod_{i=1}^{r} \frac{p_{i}^{\,e_{i}+1} - 1}{p_{i} - 1} .$$
+
+**为什么是乘积**：$n$ 的每个因数 $d$ 的形状是 $d = p_{1}^{f_{1}} \cdots p_{r}^{f_{r}}$，其中 $0 \le f_{i} \le e_{i}$ —— 而且由唯一分解，这种写法唯一。于是「选因数」退化成「每个指数独立选一个值」，共 $\prod (e_{i}+1)$ 种。
+
+
+
+$\sigma$ 同理，只是每列是一个等比数列求和：$\sum_{f=0}^{e_{i}} p_{i}^{f} = \dfrac{p_{i}^{e_{i}+1}-1}{p_{i}-1}$。
+
+
+
+这两个公式是「积性 + 素数幂上的值」这套方法的样板：$\varphi$、$\mu$ 的公式都是同一套路（$\varphi(p^{e}) = p^{e} - p^{e-1}$）。
+
+参考：华罗庚《数论导引》第三章
+
+#### Möbius 函数　`def.mobius-function`
+*定义*　Möbius 函数 $\mu$：按素因子个数取符号
+
+定义
+
+$$\mu(n) := \begin{cases} 1, & n = 1, \\ (-1)^{r}, & n = p_{1}p_{2}\cdots p_{r}\ \text{是}\ r\ \text{个互不相同素数之积}, \\ 0, & n\ \text{含平方因子}\ (p^{2} \mid n) . \end{cases}$$
+
+$\mu$ 是**积性**函数里最简单的一个（也是完全积性以外的第一个「有零值」的积性函数）：由素数幂上的值 $\mu(p) = -1$、$\mu(p^{e}) = 0\ (e \ge 2)$ 完全确定。
+
+
+
+它出现的原因只有一个：**它是「常数函数 $1$」在狄利克雷卷积下的逆**。也就是说，Möbius 反演不是技巧，而是卷积群的逆元。
+
+
+
+$\sum_{d \mid n} \mu(d)$ 只在 $n = 1$ 时为 $1$、其余为 $0$ —— 这条恒等式是整个反演公式的全部内容（见 `thm.mu-sum`）。
+
+参考：华罗庚《数论导引》第三章；Apostol, Ch. 2
+
+#### Möbius 和的恒等式　`thm.mu-sum`
+*定理*　$\mu$ 的和：只有 $n=1$ 剩下 $1$
+
+对 $n \ge 1$，
+
+$$\sum_{d \mid n} \mu(d) = \begin{cases} 1, & n = 1, \\ 0, & n > 1 . \end{cases}$$
+
+证明：$n = 1$ 显然。设 $n = p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$，$r \ge 1$。含平方因子的 $d$ 贡献 $0$，所以只需对「由互异素因子组成的 $d$」求和：
+
+
+
+$$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = (1 - 1)^{r} = 0 .$$
+
+
+
+即二项式展开。这条恒等式是 $\mu$ 的**唯一**用处：它把「求和」变成「投影到 $n = 1$ 上」。
+
+参考：华罗庚《数论导引》第三章
+
+#### Möbius 反演　`thm.mobius-inversion`
+*定理*　从和函数还原原函数
+
+设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则
+
+$$g(n) = \sum_{d \mid n} f(d) \quad \text{对一切 } n \qquad \iff \qquad f(n) = \sum_{d \mid n} \mu(d)\, g\!\left(\frac{n}{d}\right) \ \text{对一切 } n .$$
+
+**$\Leftarrow$ 的方向**（唯一要看的方向）：把 $f(d)$ 的表达式代进去，
+
+
+
+$$\sum_{d\mid n} f(d) = \sum_{d\mid n}\ \sum_{e\mid (n/d)} \mu(e)\, g\!\left(\frac{n}{de}\right) = \sum_{m \mid n} g(m) \sum_{e \mid (n/m)} \mu(e) .$$
+
+
+
+内层和由 `thm.mu-sum` 只在 $n/m = 1$ 时为 $1$，其余为 $0$ —— 于是整个式子塌成 $g(n)$。
+
+
+
+**另一方向**同理（或直接用 $\Leftarrow$ 于反向的偏序）。所以「反演」不是新定理，是 $\mu * 1 = \delta$ 这一句话的两面。
+
+
+
+**用法**：数论里的「求和  与  还原」几乎都靠它。例如 $\sum_{d\mid n}\varphi(d) = n$ 反演出 $\varphi(n) = \sum_{d\mid n}\mu(d)\,(n/d)$；素数计数也是先有 $\log n! = \sum_{m \le n}\psi(n/m)$ 再反演。
+
+参考：华罗庚《数论导引》第三章；Apostol, Ch. 2
+
+#### 素数计数函数　`def.prime-counting`
+*定义*　$\pi(x)$、$\theta(x)$ 与 $\psi(x)$
+
+对 $x > 0$ 定义
+
+$$\pi(x) := \sum_{p \le x} 1, \qquad \theta(x) := \sum_{p \le x} \log p, \qquad \psi(x) := \sum_{p^{k} \le x} \log p .$$
+
+$\pi$ 数素数个数，$\theta$ 按对数加权，$\psi$（**Чебышёв 函数**）把所有素数幂一起数。
+
+为什么要有三个：$\pi$ 是最想知道的，但它对求导/求和极不友好；$\psi$ 最好用 ——
+
+
+
+$$\psi(x) = \sum_{n \le x} \Lambda(n), \qquad \Lambda(n) = \begin{cases}\log p, & n = p^{k},\\ 0, & \text{否则}\end{cases}$$
+
+
+
+（$\Lambda$ 叫 von Mangoldt 函数），而 $\log n! = \sum_{n \le x}\Lambda(n)\lfloor x/n\rfloor$ 把 $\psi$ 与阶乘直接连起来。三者的关系是 $\theta \le \psi \le \theta + O(\sqrt{x}\log x)$ 与 $\pi(x) \sim \theta(x)/\log x$ —— 所以「三者同阶」这句话本身就是定理。
+
+
+
+⭐ 人名按原文字母写：**Чебышёв**（不用音译，也不用英文拼法 Chebyshev）—— 这是本项目的口径。
+
+参考：华罗庚《数论导引》第七、九章；Apostol, Ch. 4
+
+#### Чебышёв 估计　`thm.chebyshev-estimate`
+*定理*　$\pi(x)$ 与 $x/\log x$ 同阶（初等上下界）
+
+存在常数 $0 < c_{1} < c_{2}$ 使对一切 $x \ge 2$，
+
+$$c_{1}\,\frac{x}{\log x} < \pi(x) < c_{2}\,\frac{x}{\log x} .$$
+
+（$\pi(x) \asymp x/\log x$；初等证明给出的常数例如 $0.3$ 与 $6$。）
+
+**证明骨架**（只靠二项式系数，不用复分析）：
+
+
+
+1. 取 $N = \binom{2n}{n}$。它在 $\dfrac{4^{n}}{2n+1} \le N \le 4^{n}$ 之间（中间项最大 + 二项式和为 $4^{n}$）。
+
+2. 把 $N$ 分解：$n < p \le 2n$ 的素数都整除 $N$（它们在分子里出现、分母里不出现），于是 $\prod_{n < p \le 2n} p \le N \le 4^{n}$ —— 取对数得 $\theta(2n) - \theta(n) \le 2n\log 2$。
+
+3. 反方向用 $N$ 的 $p$-进指数：$v_{p}(N) = \sum_{k}\left(\lfloor 2n/p^{k}\rfloor - 2\lfloor n/p^{k}\rfloor\right) \le \log(2n)/\log p$，累乘得 $N \le (2n)^{\pi(2n)}$，与下界 $N \ge 4^{n}/(2n+1)$ 合并即得 $\pi(2n) \ge c\,n/\log n$。
+
+4. 从 $2n$ 过渡到一般的 $x$：用 $\theta$ 的单调性与 $\pi$ 的分段常数性质夹住。
+
+
+
+⚠ 这是**骨架**：每一步的常数没有仔细优化，第四步的区间处理也略去了。完整证明见华罗庚《数论导引》第九章。
+
+参考：华罗庚《数论导引》第九章；Apostol, Ch. 4
+
+#### Bertrand 假设　`thm.bertrand`
+*定理*　每个 $n>1$ 与 $2n$ 之间必有素数
+
+对每个整数 $n > 1$，存在素数 $p$ 使 $n < p < 2n$。
+
+Bertrand 猜想（1845）由 Чебышёв 证明（1850），所以也叫 **Чебышёв 定理**；后来 Erdős 在 1932 年给出一个只用二项式系数的漂亮初等证明（他当时 19 岁）。
+
+
+
+初等证明的关键仍是 $\binom{2n}{n}$：假设 $n < p < 2n$ 无素数，则 $\binom{2n}{n}$ 的所有素因子都 $\le n$，再用 $v_{p}$ 的估计与 $\binom{2n}{n} \ge 4^{n}/(2n+1)$ 导出矛盾（中间的常数要靠「小于 $2n/3$ 的素数乘积」估计）。
+
+
+
+它是素数分布的第一个**区间型**结论：$\pi(2n) - \pi(n) \ge 1$。真命题但远弱于素数定理（后者说这个区间里有 $\sim n/\log n$ 个素数）。
+
+参考：华罗庚《数论导引》第九章；Apostol, Ch. 4
+
+#### 素数定理　`thm.prime-number-theorem`
+*定理*　$\pi(x) \sim x/\log x$
+
+$$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
+
+等价形式：$\theta(x) \sim x$、$\psi(x) \sim x$、$p_{n} \sim n\log n$（$p_{n}$ 是第 $n$ 个素数）。
+
+⛔ **这条只有陈述与骨架，证明不在本图**：所有已知证明都要复分析或等价的重型工具（Riemann 的 $\zeta$ 函数、或 Selberg–Erdős 的初等证明 —— 后者虽叫「初等」，但论证极长）。
+
+
+
+主流路线（Riemann 1859）的骨架：
+
+
+
+1. $\zeta(s) = \sum n^{-s}$ 在 $\operatorname{Re}\,s > 1$ 全纯，经解析延拓成为亚纯函数，唯一极点在 $s = 1$（留数 $1$）；
+
+2. $\zeta$ 在直线 $\operatorname{Re}\,s = 1$ 上无零点 —— 这一步就是素数定理的全部难点；
+
+3. 由 Perron 公式 / 显式公式把 $\psi(x)$ 写成 $x - \sum_{\rho} x^{\rho}/\rho + \cdots$，零点 $\rho$ 的位置决定误差项；
+
+4. 由 ② 得 $\psi(x) \sim x$，再由 $\psi \sim \theta \sim \pi\log$ 的等价性得 $\pi(x) \sim x/\log x$。
+
+
+
+⭐ Riemann 假设（$\operatorname{Re}\,\rho = 1/2$）就是把 ③ 的误差压到 $O(\sqrt{x}\log x)$ 的命题，至今未解。
+
+参考：华罗庚《数论导引》第九、十章；Apostol, Ch. 4, 12
+
+### 星团：二次剩余与原根
+> 解 $x^{2} equiv a pmod p$ 的整套机器：**二次剩余** → **Legendre 符号** → **Euler 判别法** → **Gauss 引理** → **二次互反律** → **Jacobi 符号**（便宜但会撒谎）→ 模 $n$ 的**阶** → **原根**（$mathbb{F}_{p}^{	imes}$ 循环）→ **离散对数**。
+
+#### 二次剩余　`def.quadratic-residue`
+*定义*　二次剩余与二次非剩余
+
+设 $p$ 是奇素数，$p \nmid a$。若同余方程
+
+$$x^{2} \equiv a \pmod p$$
+
+有解，称 $a$ 是模 $p$ 的**二次剩余**；否则称**二次非剩余**。
+
+$p$ 是奇素数时，$1, \cdots, p-1$ 里恰有 $(p-1)/2$ 个二次剩余：映射 $x \mapsto x^{2}$ 在 $\mathbb{F}_{p}^{\times}$ 上是 $2$ 对 $1$（$x$ 与 $-x$ 同像，且 $x^{2} = y^{2}$ $\implies$ $(x-y)(x+y) = 0$ $\implies$ $x = \pm y$），所以像集大小是 $(p-1)/2$。
+
+
+
+模合数时这套干净的结构就没了（$\mathbb{Z}/n$ 不是域），要换成 Jacobi 符号的技巧 —— 这也是为什么二次互反律只在素数上陈述。
+
+参考：华罗庚《数论导引》第四章
+
+#### Legendre 符号　`def.legendre-symbol`
+*定义*　Legendre 符号 $\left(\frac{a}{p}\right)$
+
+设 $p$ 是奇素数，$p \nmid a$。定义
+
+$$\left(\frac{a}{p}\right) := \begin{cases} 1, & a\ \text{是模}\ p\ \text{的二次剩余}, \\ -1, & a\ \text{是二次非剩余} . \end{cases}$$
+
+补充规定 $\left(\frac{a}{p}\right) = 0$ 当 $p \mid a$。
+
+它把「有没有解」压成一个取值 $\pm 1$ 的函数，而乘法性立刻可见：由 $x^{2} \equiv a$、$y^{2} \equiv b$ 得 $(xy)^{2} \equiv ab$，配合「各恰有 $(p-1)/2$ 个剩余」的计数，得
+
+
+
+$$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right) .$$
+
+
+
+所以 $\left(\frac{\cdot}{p}\right) : \mathbb{F}_{p}^{\times} \to \{\pm 1\}$ 是群同态，核就是二次剩余构成的子群 —— Legendre 符号就是商群 $\mathbb{F}_{p}^{\times}/(\mathbb{F}_{p}^{\times})^{2} \cong \{\pm 1\}$ 的那张同构表。
+
+参考：华罗庚《数论导引》第四章
+
+#### Euler 判别法　`thm.euler-criterion`
+*定理*　$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2}$
+
+设 $p$ 是奇素数，$p \nmid a$。则
+
+$$\left(\frac{a}{p}\right) \equiv a^{\frac{p-1}{2}} \pmod p .$$
+
+**为什么**：$\mathbb{F}_{p}^{\times}$ 是 $p-1$ 阶循环群。设 $a = g^{k}$（$g$ 是原根）。
+
+
+
+- 若 $k$ 偶，$a = (g^{k/2})^{2}$ 是剩余，且 $a^{(p-1)/2} = g^{k(p-1)/2} = (g^{p-1})^{k/2} = 1$；
+
+- 若 $k$ 奇，$a$ 不是剩余（循环群的平方恰是偶数次幂），且 $a^{(p-1)/2} = g^{(p-1)/2} = -1$（因为它的平方是 $1$ 而不是 $1$ 本身 —— 阶为 $2$ 的元素只能是 $-1$）。
+
+
+
+一般地，$x^{(p-1)/2} \equiv 1$ 的解恰有 $(p-1)/2$ 个（多项式次数界），正好与二次剩余的个数相等，两边重合即得。
+
+
+
+它把「解方程」变成「算一次幂模」—— 这是实用上判二次剩余的标准手段（也是 Solovay–Strassen 素性检验的基础）。
+
+参考：华罗庚《数论导引》第四章
+
+#### Gauss 引理（二次剩余）　`lem.gauss-qr`
+*引理*　Gauss 引理：$\left(\frac{a}{p}\right) = (-1)^{\mu}$
+
+设 $p$ 是奇素数，$p \nmid a$。考虑 $a, 2a, \cdots, \frac{p-1}{2}a$，把它们各自换成模 $p$ 的最小正剩余（落在 $1, \cdots, p-1$），设其中有 $\mu$ 个大于 $\frac{p}{2}$。则
+
+$$\left(\frac{a}{p}\right) = (-1)^{\mu} .$$
+
+**作用**：它把 Legendre 符号降成「数一数有多少个超过了 $p/2$」，从而不必做幂运算就能算出 $\left(\frac{2}{p}\right)$、$\left(\frac{-1}{p}\right)$ 这类具体值。
+
+
+
+**证明要点**：记这些最小正剩余为 $r_{1}, \cdots, r_{n}$（$n = \frac{p-1}{2}$）。把它们里大于 $p/2$ 的换成 $p - r_{i}$，得到的 $n$ 个数恰好是 $1, \cdots, n$ 的一个排列。于是
+
+
+
+$$a^{n} \cdot n! \equiv \pm n! \pmod p ,$$
+
+
+
+符号由「换了多少个」（即 $\mu$ 的奇偶）决定。约掉 $n!$（$p \nmid n!$）再用 Euler 判别法 $a^{n} \equiv \left(\frac{a}{p}\right)$ 即得。
+
+
+
+⚠ 与微分几何里那条 `lem.gauss-lemma`（Gauss 引理 / 测地极坐标）**同名不同物**，别混。
+
+参考：华罗庚《数论导引》第四章
+
+#### 二次互反律　`thm.quadratic-reciprocity`
+*定理*　Gauss 的二次互反律
+
+设 $p, q$ 是两个不同的奇素数。则
+
+$$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}} .$$
+
+等价说法：$p, q$ 中至少有一个 $\equiv 1 \pmod 4$ 时 $\left(\frac{p}{q}\right) = \left(\frac{q}{p}\right)$；两个都 $\equiv 3 \pmod 4$ 时两者相反。补充公式：
+
+$$\left(\frac{-1}{p}\right) = (-1)^{\frac{p-1}{2}}, \qquad \left(\frac{2}{p}\right) = (-1)^{\frac{p^{2}-1}{8}} .$$
+
+**这是数论里最重要的一条定理**（Gauss 一生给了 8 个证明，第一个 1796 年、19 岁）。它把「$p$ 是不是模 $q$ 的剩余」这个难问题换成「$q$ 是不是模 $p$ 的剩余」这个更容易的小问题 —— 因为可以递归把 $p$ 降到 $< q$。
+
+
+
+⭐ 现在的主流证明走**有限域上的曲线计数**：$\left(\frac{p}{q}\right)$ 与 $x^{2} \equiv p \pmod q$ 的解数有关，而这批解数可以按 $\mathbb{F}_{p}$ 上的椭圆曲线/乘法群逐层数出来（Zolotarev 引理 + 置换的符号）。这不是初等计数能绕过去的。
+
+
+
+**用法**：判 $\left(\frac{a}{p}\right)$ 时把它拆成素因子，逐个用互反律「翻过来」，再递归 —— 复杂度 $O(\log p)$ 级别的除法。上面两条补充公式处理 $-1$ 与 $2$ 这两种「不能翻」的情形。
+
+
+
+⚠ 本节点只给陈述与路线，完整证明不在本图（它依赖二次型的类群或曲线计数，量级上属于另一章）。
+
+参考：华罗庚《数论导引》第四章
+
+#### Jacobi 符号　`def.jacobi-symbol`
+*定义*　Jacobi 符号：把 Legendre 符号乘起来
+
+设 $n = q_{1}^{e_{1}}\cdots q_{r}^{e_{r}}$ 是正奇数（$q_{i}$ 为奇素数），$a \in \mathbb{Z}$。定义
+
+$$\left(\frac{a}{n}\right) := \prod_{i=1}^{r}\left(\frac{a}{q_{i}}\right)^{e_{i}} .$$
+
+⚠ **它不再回答「有没有解」**：$\left(\frac{a}{n}\right) = 1$ 不保证 $x^{2} \equiv a \pmod n$ 有解。例如 $\left(\frac{2}{15}\right) = \left(\frac{2}{3}\right)\left(\frac{2}{5}\right) = (-1)(-1) = 1$，但 $x^{2} \equiv 2 \pmod{15}$ 无解（模 $3$ 与模 $5$ 都要成立，而 $2$ 在模 $3$ 下不是剩余）。
+
+
+
+它的价值在**计算**：Jacobi 符号可以完全用互反律移项，不需要分解 $n$，所以能快速算；而「Jacobi 符号为 $-1$」确实能断定无解（充分条件）。
+
+
+
+这条「便宜但会撒谎」的性质正是 Solovay–Strassen 与 Miller–Rabin 这类概率素性检验的入口：用 Jacobi 符号筛掉大部分合数。
+
+参考：华罗庚《数论导引》第四章
+
+#### Jacobi 符号的计算法则　`thm.jacobi-laws`
+*定理*　Jacobi 符号的互反与乘性
+
+设 $m, n$ 是正奇数，$a, b \in \mathbb{Z}$。则
+
+$$\left(\frac{ab}{n}\right) = \left(\frac{a}{n}\right)\left(\frac{b}{n}\right), \qquad \left(\frac{a}{mn}\right) = \left(\frac{a}{m}\right)\left(\frac{a}{n}\right),$$
+
+$$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}, \qquad \left(\frac{-1}{n}\right) = (-1)^{\frac{n-1}{2}}, \qquad \left(\frac{2}{n}\right) = (-1)^{\frac{n^{2}-1}{8}} .$$
+
+算法：把 $\left(\frac{a}{n}\right)$ 里的 $a$ 拆成 $2^{k}$ 乘一个奇数，用 $\left(\frac{2}{n}\right)$ 的公式处理 $2$ 的部分；再把剩下的奇数因子用互反律翻过来（符号按 $m \equiv n \equiv 3 \pmod 4$ 判），然后对 $a \bmod n$ 取余 —— 与辗转相除同构，$O(\log n)$ 步。
+
+
+
+**为什么不分解 $n$**：互反律允许在 $\left(\frac{m}{n}\right)$ 与 $\left(\frac{n}{m}\right)$ 之间来回换，形状完全对称（除了那个符号）。这条「对称性 + 取余」就是 Jacobi 符号算法的全部。
+
+
+
+与 Legendre 符号的关系：$n$ 素时两者一致；$n$ 合数时 Jacobi 只是「乘积形式」，见 `def.jacobi-symbol` 的警告。
+
+参考：华罗庚《数论导引》第四章
+
+#### 模 n 的阶　`def.order-mod-n`
+*定义*　模 $n$ 的阶与循环子群
+
+设 $\gcd(a, n) = 1$。使
+
+$$a^{k} \equiv 1 \pmod n$$
+
+成立的最小正整数 $k$ 叫 $a$ 模 $n$ 的**阶**，记 $\operatorname{ord}_{n}(a)$。
+
+$\operatorname{ord}_{n}(a)$ 就是群论里 $[a]$ 在单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 中的**元素阶** —— 两个概念完全同一个东西，只是坐标不同。
+
+
+
+性质（全部由群论直接搬来）：
+
+
+
+- $\operatorname{ord}_{n}(a) \mid \varphi(n)$（Lagrange）；
+
+- $a^{k} \equiv 1 \iff \operatorname{ord}_{n}(a) \mid k$；
+
+- $\operatorname{ord}_{n}(a^{t}) = \dfrac{\operatorname{ord}_{n}(a)}{\gcd(t, \operatorname{ord}_{n}(a))}$。
+
+
+
+前两条合起来说明「指数」这个概念在模算术里是完全良性的 —— 只要底数与 $n$ 互素。
+
+参考：华罗庚《数论导引》第五章
+
+#### 阶整除 Euler 函数　`thm.order-divides-phi`
+*定理*　$\operatorname{ord}_{n}(a) \mid \varphi(n)$
+
+设 $\gcd(a, n) = 1$。则 $\operatorname{ord}_{n}(a) \mid \varphi(n)$；特别地 $a^{\varphi(n)} \equiv 1 \pmod n$（Euler 定理）。
+
+**证明**：设 $k = \operatorname{ord}_{n}(a)$，$H = \{[1], [a], \cdots, [a]^{k-1}\}$ 是单位群里的循环子群，$|H| = k$。由 Lagrange 定理（`thm.lagrange`），$k \mid |G| = \varphi(n)$。
+
+
+
+**这是 Euler 定理的「原因」**：Euler 定理不是关于同余的，而是「有限群里元素的阶整除群阶」这句话在 $G = (\mathbb{Z}/n\mathbb{Z})^{\times}$ 上的翻译（见 `imp.nt-lagrange-euler`）。
+
+
+
+**推论**：$a$ 是原根 $\iff$ $\operatorname{ord}_{n}(a) = \varphi(n)$ —— 即它在单位群里生成整个群。
+
+参考：华罗庚《数论导引》第五章
+
+#### 原根　`def.primitive-root`
+*定义*　原根：单位群的生成元
+
+设 $\gcd(g, n) = 1$。若
+
+$$\operatorname{ord}_{n}(g) = \varphi(n) ,$$
+
+即 $g$ 在 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 里的阶等于群的阶，称 $g$ 是模 $n$ 的**原根**。
+
+等价说法：$\{[g]^{0}, [g]^{1}, \cdots, [g]^{\varphi(n)-1}\}$ 遍历整个单位群；即 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 是循环群、$g$ 是它的生成元。
+
+不是每个 $n$ 都有原根：$n = 1, 2, 4, p^{k}, 2p^{k}$（$p$ 为奇素数）恰好这些有，其余没有。$n = 8$ 就没有：单位群 $\{1,3,5,7\}$ 里每个元素的平方都是 $1$，是 Klein 四元群，不循环。
+
+
+
+模素数时原根一定存在（`thm.primitive-root-exists`），这是最关键的情形：$\mathbb{F}_{p}^{\times}$ 循环。它让「离散对数」有意义，也支撑了「$\mathbb{F}_{p}$ 的乘法结构 = 循环群」这一整套图像。
+
+
+
+原根个数：有原根时恰有 $\varphi(\varphi(n))$ 个。
+
+参考：华罗庚《数论导引》第五章
+
+#### 模素数有原根　`thm.primitive-root-exists`
+*定理*　$\mathbb{F}_{p}^{\times}$ 是循环群
+
+设 $p$ 是素数。则单位群 $\mathbb{F}_{p}^{\times} = (\mathbb{Z}/p\mathbb{Z})^{\times}$ 是 $p-1$ 阶循环群；它的生成元叫模 $p$ 的**原根**，共有 $\varphi(p-1)$ 个。
+
+**证明**：关键是计数。对每个 $d \mid p-1$，设 $\psi(d)$ 为 $\mathbb{F}_{p}^{\times}$ 中**阶恰为** $d$ 的元素个数。由「阶整除 $\varphi(p) = p-1$」（`thm.order-divides-phi`）与「$x^{d} = 1$ 至多有 $d$ 个解」得
+
+
+
+$$\sum_{d \mid p-1}\psi(d) = p - 1 = \sum_{d \mid p-1}\varphi(d) .$$
+
+
+
+再证 $\psi(d) \le \varphi(d)$：若存在阶为 $d$ 的元素 $g$，则阶为 $d$ 的元素恰是 $g^{t}$（$\gcd(t,d) = 1$），共 $\varphi(d)$ 个；若不存在，则 $\psi(d) = 0$。两种情形都有 $\psi(d) \le \varphi(d)$，而总和相等，故每项都相等 —— 特别地 $\psi(p-1) = \varphi(p-1) > 0$。
+
+
+
+所以原根存在，且个数是 $\varphi(p-1)$。这条证明只用到「多项式根的个数」与「$\sum_{d\mid n}\varphi(d) = n$」两件事。
+
+
+
+⚠ 一般的 $n$ 只有 $1, 2, 4, p^{k}, 2p^{k}$ 有原根 —— 那需要单独处理 $p^{k}$（Hensel 式提升），本图未收录。
+
+参考：华罗庚《数论导引》第五章
+
+#### 离散对数　`def.discrete-log`
+*定义*　以原根为底的离散对数
+
+设 $g$ 是模 $n$ 的原根，$\gcd(a, n) = 1$。把 $a$ 写成
+
+$$a \equiv g^{k} \pmod n, \qquad 0 \le k < \varphi(n) ,$$
+
+这个唯一的 $k$ 叫 $a$ 的**离散对数**，记 $k = \log_{g} a$。
+
+唯一性来自 $g$ 是生成元（每个单位恰好对应一个指数）；「$k$ 的范围是 $0 \le k < \varphi(n)$」只是取代表元。
+
+
+
+它把**乘法变成加法**：$\log_{g}(ab) = \log_{g}a + \log_{g}b \pmod{\varphi(n)}$ —— 与实对数同构，把 $(\mathbb{Z}/n)^{\times}$ 与 $\mathbb{Z}/\varphi(n)$ 对齐。
+
+
+
+计算上：正向（给定 $k$ 算 $g^{k}$）是快速幂，$O(\log k)$；反向（给定 $a$ 求 $k$）没有已知的多项式算法，最好的通用方法是 baby-step giant-step（$O(\sqrt{n})$）与 index calculus。**这个不对称性就是 Diffie–Hellman 与 ElGamal 的基础** —— 也是「离散对数问题」在密码学里被当作困难问题的原因。
+
+参考：华罗庚《数论导引》第五章；Apostol, Ch. 10
+
 ### 星团：整除与同余
 > 造出整数的算术：**整除** → 带余除法 → 辗转相除与 $\gcd$ / Bézout → 素数 → 算术基本定理（唯一分解）→ 同余 → 剩余类环 → 中国剩余定理 → $\varphi$ → Euler / Fermat / Wilson。
 
@@ -27279,7 +27781,7 @@ $1$ 不是素数：否则唯一分解就不唯一了（$6 = 2\cdot 3 = 1\cdot 2\
 
 
 
-这条证明是**非构造**的：它没说第 $n+1$ 个素数是谁，也没给出 $\pi(x)$ 的任何估计。定量版本（Chebyshev 的 $\pi(x) \asymp x/\log x$）要用 Stirling 公式与组合恒等式，属于解析数论。
+这条证明是**非构造**的：它没说第 $n+1$ 个素数是谁，也没给出 $\pi(x)$ 的任何估计。定量版本（Чебышёв 的 $\pi(x) \asymp x/\log x$）要用 Stirling 公式与组合恒等式，属于解析数论。
 
 
 
@@ -37129,6 +37631,329 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
 
+#### 定义引用：「中国剩余定理」→ Möbius 函数　`e138:definition`
+
+Möbius 函数的积性用中国剩余定理：互素的 $m,n$ 的素因子集不相交，$\mu(mn) = \mu(m)\mu(n)$。
+
+#### 定义引用：「算术基本定理」→ 积性函数　`e139:definition`
+
+积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。
+
+#### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e140:definition`
+
+公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。
+
+#### 定义引用：「素数」→ 素数计数函数　`e141:definition`
+
+$\pi(x)$ 数的是素数，$\theta$、$\psi$ 按对数给素数加权。
+
+#### 定义引用：「积性函数」→ 除数函数 τ 与 σ　`e142:definition`
+
+$\tau$ 与 $\sigma$ 是积性函数的头两个例子。
+
+#### 定义引用：「素数计数函数」→ Чебышёв 估计　`e143:definition`
+
+估计的对象就是 $\pi(x)$；证明里还要用 $\theta$ 做过渡。
+
+#### 定义引用：「素数计数函数」→ 素数定理　`e144:definition`
+
+定理是 $\pi(x)$ 的渐近式。
+
+#### 定义引用：「Möbius 函数」→ Möbius 和的恒等式　`e145:definition`
+
+这条恒等式是 $\mu$ 的定义直接算出来的（按「由互异素因子组成的因数」求和）。
+
+#### 定义引用：「Möbius 和的恒等式」→ Möbius 反演　`e146:definition`
+
+反演的全部内容就是 $\mu * 1 = \delta$ —— 即 $\sum_{d \mid m}\mu(d) = [m=1]$。
+
+#### 算术基本定理 ⟹ 积性函数　`imp.nt-multiplicative-from-fta`
+*积性函数的积性来自「素数幂两两互素」*
+
+设 $f$ 积性，$n = p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$。这些素数幂 $q_{i} := p_{i}^{e_{i}}$ 两两互素，于是对 $r$ 归纳：
+
+
+
+$$f(n) = f(q_{1})\cdots f(q_{r}) .$$
+
+
+
+反之若两个函数在一个互素的分解上一致，也一致。所以积性函数完全由 $(f(p^{e}))_{p,e}$ 这张表决定。
+
+
+
+⚠ 这里用的是「两两互素 $\implies$ 可以逐步拆」，不涉及唯一分解本身；唯一分解保证的是「$n$ 只有一种这样的拆法」，所以「由表决定」才不会自相矛盾。
+
+#### 算术基本定理 ⟹ τ 与 σ 的乘积公式　`imp.nt-divisor-formula`
+*$\tau$、$\sigma$ 的乘积公式：指数独立选取*
+
+由唯一分解，$d \mid n$ 当且仅当 $d = p_{1}^{f_{1}}\cdots p_{r}^{f_{r}}$ 且 $0 \le f_{i} \le e_{i}$，且这种 $(f_{1},\cdots,f_{r})$ 与 $d$ 一一对应。于是因数集与 $\prod_{i}[0, e_{i}]$ 的整数点一一对应，个数为 $\prod(e_{i}+1)$。
+
+
+
+$\sigma$：按上述对应，$\sigma(n) = \sum_{f_{1}=0}^{e_{1}}\cdots\sum_{f_{r}=0}^{e_{r}} p_{1}^{f_{1}}\cdots p_{r}^{f_{r}} = \prod_{i}\left(\sum_{f=0}^{e_{i}}p_{i}^{f}\right)$，内层是等比数列，和为 $(p_{i}^{e_{i}+1}-1)/(p_{i}-1)$。
+
+
+
+两个公式都是「乘积」而不是「和」，正是因为因数分解与指数选取都是**独立**的。
+
+#### Möbius 函数 ⟹ Möbius 和的恒等式　`imp.nt-mu-sum`
+*$\sum_{d\mid n}\mu(d) = [n=1]$：二项式展开*
+
+$n = 1$：只有 $d = 1$，和为 $1$。
+
+
+
+$n > 1$：设 $n = p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$，$r \ge 1$。$\mu(d) \ne 0$ 只当 $d$ 由**互异**素因子组成，故
+
+
+
+$$\sum_{d \mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = \sum_{k=0}^{r}\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$
+
+
+
+正负项按 $|S|$ 配对抵消 —— 这就是全部内容。
+
+#### Möbius 和的恒等式 ⟹ Möbius 反演　`imp.nt-mobius-inversion`
+*反演：交换求和次序，内层只剩 $n/m=1$*
+
+设 $g(n) = \sum_{d \mid n} f(d)$ 对一切 $n$。要证 $f(n) = \sum_{d\mid n}\mu(d)g(n/d)$。
+
+
+
+代进去：
+
+
+
+$$\sum_{d\mid n}\mu(d)\,g\!\left(\frac{n}{d}\right) = \sum_{d\mid n}\mu(d)\sum_{e \mid (n/d)} f(e) .$$
+
+
+
+令 $e\,d = n/m$，即 $m = n/(de)$；交换求和次序（有限和，可换）：
+
+
+
+$$= \sum_{m \mid n} f(m)\sum_{d \mid (n/m)}\mu(d) .$$
+
+
+
+内层由 $\sum_{d\mid t}\mu(d) = [t = 1]$ 只在 $t = n/m = 1$ 时为 $1$，其余为 $0$。故整个和为 $f(n)$。
+
+
+
+反方向把上面这段反过来用（或对「$\mu$ 反演也成立」再套一次）即得。所以反演是 $\mu * 1 = \delta$ 的同义反复。
+
+#### τ 与 σ 的乘积公式 ⟹ Чебышёв 估计　`imp.nt-chebyshev`
+*Чебышёв 估计：$\binom{2n}{n}$ 的上下界*
+
+**下界**（$\pi$ 不能太小）：取 $N = \binom{2n}{n}$，则 $N \ge \dfrac{4^{n}}{2n+1}$（中间项是最大项，总和 $4^{n}$ 不超过 $(2n+1)$ 倍最大项）。
+
+
+
+另一方面 $N \le (2n)^{\pi(2n)}$：因为 $N = \frac{(2n)!}{(n!)^{2}}$ 是整数，它的每个素因子 $\le 2n$，而 $v_{p}(N) \le \frac{\log N}{\log p}$ 的粗估计可换成 $v_{p}(N) \le \frac{\log(2n)}{\log p}$（用 $\lfloor 2x\rfloor - 2\lfloor x\rfloor \in \{0,1\}$ 逐项累加与 $p^{k} \le 2n$ 截断）。
+
+
+
+两式合并：$\dfrac{4^{n}}{2n+1} \le (2n)^{\pi(2n)}$，取对数得 $\pi(2n) \ge \dfrac{2n\log 2 - \log(2n+1)}{\log(2n)} \ge c\,\dfrac{n}{\log n}$。
+
+
+
+**上界**：对 $n < p \le 2n$ 的素数，$p$ 整除 $N$ 而 $p > n$ 保证 $p^{2} \nmid N$（$v_{p}(N) = \lfloor 2n/p\rfloor - 2\lfloor n/p\rfloor \le 1$）。于是 $\prod_{n<p\le 2n}p \le N \le 4^{n}$，取对数得 $\theta(2n) - \theta(n) \le 2n\log 2$；把它沿 $n, n/2, n/4, \cdots$ 累加得 $\theta(x) \le C x$，再由 $\theta \ge (\log x)\,\pi(\sqrt{x}) + \cdots$ 的初等关系得 $\pi(x) \le C' x/\log x$。
+
+
+
+⚠ 这是骨架：常数都没优化，第四步的拼接（$2n$  推出  一般 $x$）省了细节。完整证明见华罗庚《数论导引》第九章。
+
+#### Чебышёв 估计 ⟹ Bertrand 假设　`imp.nt-bertrand`
+*Bertrand 假设：Чебышёв 估计的区间版*
+
+要证：对 $n > 1$ 存在素数 $p \in (n, 2n)$。
+
+
+
+反设没有这样的素数。取 $N = \binom{2n}{n}$，则 $N$ 的每个素因子 $p \le n$（因为 $p > 2n$ 不可能，$n < p < 2n$ 被假设排除，$p = 2n$ 不是素数）。
+
+
+
+把 $p \le n$ 的贡献拆成两段：
+
+
+
+- $p \le \sqrt{2n}$：由 $v_{p}(N) \le \log(2n)/\log p$ 得总贡献 $\le (2n)^{\pi(\sqrt{2n})} \le (2n)^{\sqrt{2n}}$；
+
+- $\sqrt{2n} < p \le 2n/3$：这样的 $p$ 在 $N$ 里最多出现一次（$p^{2} > 2n$），且 $p \le 2n/3$ 的素数乘积可以用归纳假设的界估计；
+
+- $2n/3 < p \le n$：若出现，则 $p \mid N$ 而 $p$ 只出现一次，且 $2p > 4n/3 > n$ 使 $\binom{2n}{n}$ 中只有一个这样的因子 —— 这段要单独数。
+
+
+
+三段合起来给出 $N \le 4^{n/3}\cdot(\text{多项式因子})$，与 $N \ge 4^{n}/(2n+1)$ 矛盾（对充分大的 $n$）；小 $n$ 逐个验证（$n = 2,3,\cdots$）。
+
+
+
+⚠ 这是骨架：第三段的计数是 Erdős 证明里最需要小心的部分。完整证明见华罗庚《数论导引》第九章。
+
+#### 素数计数函数 ⟹ 素数定理　`imp.nt-pnt`
+*素数定理：$\zeta$ 在 $\operatorname{Re}\,s = 1$ 上无零点*
+
+**① $\zeta$ 的解析延拓。** 对 $\operatorname{Re}\,s > 1$，$\zeta(s) = \sum_{n\ge1} n^{-s} = \prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。它在 $s = 1$ 有单极点、留数 $1$，并可延拓为 $\mathbb{C}$ 上的亚纯函数。
+
+
+
+**② 关键一步：$\operatorname{Re}\,s = 1$ 上无零点。** 用 $3 + 4\cos\theta + \cos 2\theta \ge 0$ 配上 Euler 乘积的对数导数，得 $\zeta(1 + it) \ne 0$。这一步是全部难点，也是「素数不会太集中在一条线上」的本质。
+
+
+
+**③ 显式公式。** 对 $c > 1$，
+
+
+
+$$\psi(x) = x - \sum_{\rho}\frac{x^{\rho}}{\rho} - \log 2\pi - \tfrac{1}{2}\log(1 - x^{-2}),$$
+
+
+
+其中 $\rho$ 遍历 $\zeta$ 的非平凡零点（求和按对称方式截断）。
+
+
+
+**④ 收尾。** 由 ②，$x^{\rho} = o(x)$（因为 $|\rho| \le 1$ 且严格小于 $1$ 的实部给出 $x^{\operatorname{Re}\rho}$），于是 $\psi(x) \sim x$；再由 $\psi \sim \theta$ 与 $\theta \sim \pi\log$ 得 $\pi(x) \sim x/\log x$。
+
+
+
+⛔ 本节点**只给陈述与骨架**，证明的每一步（尤其 ② 与 ③ 的截断估计）都不在本图 —— 它需要复分析整章（`complex` 星系那一条线）。要真正做完，得先有 $\zeta$、$\Gamma$、Perron 公式与零点计数，那是另一个量级的工作。
+
+#### 定义引用：「同余」→ 二次剩余　`e148:definition`
+
+二次剩余的陈述就是同余方程 $x^{2} \equiv a$ 有没有解。
+
+#### 定义引用：「二次剩余」→ Legendre 符号　`e149:definition`
+
+Legendre 符号把「是不是剩余」编码成 $\pm 1$。
+
+#### 定义引用：「Legendre 符号」→ Euler 判别法　`e150:definition`
+
+判别法的结论就是 Legendre 符号的显式公式。
+
+#### 定义引用：「Legendre 符号」→ Gauss 引理（二次剩余）　`e151:definition`
+
+引理给的是 Legendre 符号的另一个算法（数 $\mu$ 的奇偶）。
+
+#### 定义引用：「Legendre 符号」→ 二次互反律　`e152:definition`
+
+互反律说的是两个 Legendre 符号之间的关系。
+
+#### 定义引用：「Jacobi 符号」→ Jacobi 符号的计算法则　`e153:definition`
+
+计算法则全部是 Jacobi 符号的乘法/移项性质。
+
+#### 定义引用：「Legendre 符号」→ Jacobi 符号　`e154:definition`
+
+Jacobi 符号是把 Legendre 符号按素因子幂乘起来。
+
+#### 定义引用：「模 n 的阶」→ 原根　`e155:definition`
+
+原根的定义就是「阶等于 $\varphi(n)$」。
+
+#### 定义引用：「群」→ 模 n 的阶　`e156:definition`
+
+阶就是元素在单位群里的阶 —— 群论概念在模算术里的坐标。
+
+#### 定义引用：「原根」→ 离散对数　`e157:definition`
+
+离散对数以原根为底，唯一性来自「生成元」。
+
+#### 定义引用：「模素数有原根」→ 离散对数　`e158:definition`
+
+原根存在，离散对数才有定义。
+
+#### 定义引用：「积性函数」→ Legendre 符号　`e159:definition`
+
+Legendre 符号对第一个变量完全积性（$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$）。
+
+#### 模 n 的阶 ⟹ Euler 判别法　`imp.nt-euler-criterion`
+*Euler 判别法：$a^{(p-1)/2}$ 只能等于 $\pm 1$*
+
+设 $p$ 奇素数、$p \nmid a$，$n = \frac{p-1}{2}$。
+
+
+
+由 Fermat 小定理（`thm.fermat-little`），$\left(a^{n}\right)^{2} = a^{p-1} \equiv 1 \pmod p$。于是 $a^{n}$ 是 $x^{2} \equiv 1$ 的根，而 $\mathbb{Z}/p\mathbb{Z}$ 是域，$x^{2} - 1 = (x-1)(x+1)$ 只有两根，故 $a^{n} \equiv \pm 1$。
+
+
+
+**若 $a$ 是剩余**：$a \equiv b^{2}$，则 $a^{n} \equiv b^{2n} = b^{p-1} \equiv 1$。
+
+
+
+**若 $a$ 不是剩余**：$x^{n} \equiv 1$ 在 $\mathbb{F}_{p}^{\times}$ 里恰有 $n = \frac{p-1}{2}$ 个解（$\mathbb{F}_{p}^{\times}$ 循环，或直接由「$x^{n} - 1$ 至多 $n$ 个根」加计数），而这 $n$ 个解全是剩余（前一段已证剩余都满足）。剩余的个数也恰是 $n$，故「$a^{n} \equiv 1$」$\iff$「$a$ 是剩余」。剩下的是非剩余只能取 $-1$。
+
+
+
+结合二者即得 $\left(\frac{a}{p}\right) \equiv a^{(p-1)/2}$。
+
+#### Euler 判别法 ⟹ Gauss 引理（二次剩余）　`imp.nt-gauss-qr`
+*Gauss 引理：数超过 $p/2$ 的个数，用 Euler 判别法收尾*
+
+设 $n = \frac{p-1}{2}$，把 $a, 2a, \cdots, na$ 取模 $p$ 的最小正剩余记为 $r_{1}, \cdots, r_{n}$，其中 $\mu$ 个 $> \frac{p}{2}$。
+
+
+
+对每个 $r_{i}$ 定义 $s_{i} := r_{i}$（若 $r_{i} < \frac{p}{2}$）或 $p - r_{i}$（若 $r_{i} > \frac{p}{2}$）。则 $s_{1}, \cdots, s_{n}$ 是 $1, \cdots, n$ 的一个排列：因为 $s_{i} \le \frac{p-1}{2}$ 且互不相同（若 $s_{i} = s_{j}$，则 $r_{i} = \pm r_{j}$，即 $ia \equiv \pm ja$，约掉 $a$ 后 $i \equiv \pm j$，而 $1 \le i, j \le n$ 迫使 $i = j$）。
+
+
+
+两边相乘：
+
+
+
+$$n!\, a^{n} = \prod_{i=1}^{n}(ia) \equiv \prod_{i=1}^{n} r_{i} \equiv (-1)^{\mu}\prod_{i=1}^{n} s_{i} = (-1)^{\mu}\, n! \pmod p .$$
+
+
+
+$p \nmid n!$，约掉得 $a^{n} \equiv (-1)^{\mu}$。再用 Euler 判别法 $a^{n} \equiv \left(\frac{a}{p}\right)$（`thm.euler-criterion`），即得 $\left(\frac{a}{p}\right) = (-1)^{\mu}$。
+
+#### Lagrange 定理 ⟹ 阶整除 Euler 函数　`imp.nt-order-phi`
+*阶整除群阶：Lagrange 定理*
+
+设 $\gcd(a, n) = 1$，$G = (\mathbb{Z}/n\mathbb{Z})^{\times}$，$k = \operatorname{ord}_{n}(a)$。
+
+
+
+则 $H := \{[1], [a], \cdots, [a]^{k-1}\} \subseteq G$ 是子群：封闭性来自 $[a]^{i}[a]^{j} = [a]^{i+j}$（指数按 $k$ 取模），逆元是 $[a]^{k-1}$。
+
+
+
+$|H| = k$：这 $k$ 个元素互不相同（若 $[a]^{i} = [a]^{j}$，$0 \le i < j < k$，则 $[a]^{j-i} = 1$ 与 $k$ 的最小性矛盾）。
+
+
+
+由 Lagrange 定理（`thm.lagrange`），$|H|$ 整除 $|G| = \varphi(n)$，故 $k \mid \varphi(n)$。
+
+
+
+取 $k \mid \varphi(n)$、$\varphi(n) = k m$ 得 $a^{\varphi(n)} = (a^{k})^{m} \equiv 1$ —— 这就是 Euler 定理。
+
+#### 阶整除 Euler 函数 ⟹ 模素数有原根　`imp.nt-primitive-root`
+*模素数有原根：$\psi(d) \le \varphi(d)$ 且总和相等*
+
+设 $p$ 素，$G = \mathbb{F}_{p}^{\times}$，$|G| = p-1$。对每个 $d \mid p-1$，记 $\psi(d) := \#\{g \in G : \operatorname{ord}(g) = d\}$。
+
+
+
+**① 分段互斥**：每个 $g$ 的阶由 `thm.order-divides-phi` 必整除 $p-1$，故 $\sum_{d \mid p-1}\psi(d) = p-1$。
+
+
+
+**② 另一侧**：$\sum_{d \mid p-1}\varphi(d) = p-1$（经典恒等式，由「按 $\gcd(k, p-1)$ 分类」可得）。
+
+
+
+**③ $\psi(d) \le \varphi(d)$**：若 $\psi(d) = 0$ 显然。否则取阶为 $d$ 的 $g$，则 $g^{t}$（$1 \le t \le d$）全部互异，其中阶恰为 $d$ 的恰是 $\gcd(t, d) = 1$ 的那些，共 $\varphi(d)$ 个 —— 所以阶为 $d$ 的元素不超过 $\varphi(d)$ 个。
+
+
+
+**④ 收尾**：$\sum \psi(d) = \sum \varphi(d)$ 且逐项 $\psi(d) \le \varphi(d)$，故每项相等；特别地 $\psi(p-1) = \varphi(p-1) > 0$。存在阶为 $p-1$ 的元素 —— 即原根，共 $\varphi(p-1)$ 个。
+
 #### T_F ± F 递增 ⟹ 有界变差函数的 Jordan 分解　`imp.bv-jordan`
 *$T_F \pm F$ 递增 $\implies BV$ 的 Jordan 分解*
 
@@ -44202,6 +45027,32 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 所以「Bézout」在图里出现两次是对的：一次是 $\mathbb{Z}$ 上的定理，一次是整环上的类名 —— 后者包含了前者，也包含了 $K[x]$。
 
+#### 除数函数 τ 与 σ ～ 积性函数　`e147:analogy`
+*积性函数：$\tau$、$\sigma$ 与 $\mu$、$\varphi$ 是同一个框架的四个实例*
+
+四个函数都满足 $f(mn) = f(m)f(n)$（互素时），都由「素数幂上的值」决定，公式都是乘积形状。
+
+
+
+差别只在素数幂上的取值：$\tau(p^{e}) = e+1$（数指数）、$\sigma(p^{e}) = 1 + p + \cdots + p^{e}$（等比和）、$\varphi(p^{e}) = p^{e} - p^{e-1}$（扣除被 $p$ 整除的）、$\mu(p^{e}) = 0\ (e\ge2)$、$-1\ (e=1)$（只记素因子个数）。
+
+
+
+所以「积性函数」这条定义是四个具体公式的共同外壳 —— 与「张量场是向量场、微分形式、度量的共同外壳」是同一种组织方式。
+
+#### Jacobi 符号 ～ Legendre 符号　`e160:analogy`
+*Jacobi 符号：把 Legendre 符号从素数推到奇数*
+
+两者定义形状相同（乘性 + 取值 $\pm 1$ or $0$），但含义分家：Legendre 说「有没有解」，Jacobi 只是「乘积」。
+
+
+
+代价与好处：Jacobi 会撒谎（$\left(\frac{2}{15}\right) = 1$ 却无解），但**不必分解模数**就能算 —— 互反律在它上面照样成立。
+
+
+
+这条「便宜但只给必要条件」的性质，正是概率素性检验的可用之处：Jacobi 说 $-1$ 就一定合数。
+
 #### 米田嵌入 ～ 紧 Haus 是反射子范畴　`ana.embed-better-world`
 *米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」*
 
@@ -44466,6 +45317,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **整环与分解 ↔ 代数结构**　6 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
+- **整除与同余 ↔ 数论函数与素数分布**　6 条节点级连线
 - **有界变差与绝对连续 ↔ 符号测度与分解**　5 条节点级连线
 - **有界变差与绝对连续 ↔ 测度的构造**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 积分**　4 条节点级连线

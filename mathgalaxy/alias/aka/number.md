@@ -31,4 +31,14 @@
 
 - 威尔逊定理 → cor.wilson
 
-见 `../../alias.md`。
+- 积性 | 乘性函数 → def.multiplicative-function
+
+- 除数函数 | 因子个数函数 | 因数和函数 → def.divisor-function
+
+- 除数公式 | 因数和公式 → thm.divisor-formula
+
+- 莫比乌斯和恒等式 | μ 的和 → thm.mu-sum
+
+- 莫比乌斯反演公式 → thm.mobius-inversion
+
+> 续见 alias/aka/number.2.md
