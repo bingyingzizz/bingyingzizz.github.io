@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-10-31T14:14:16.470Z",
+  "generated": "2026-10-31T14:20:07.506Z",
   "counts": {
    "regions": 14,
    "clusters": 92,
@@ -2345,7 +2345,7 @@
    "name": "数论函数与素数分布",
    "en": "Arithmetic Functions and Distribution of Primes",
    "parent": "number",
-   "desc": "把「算术函数」做成一套可算的东西：**积性函数** → 除数函数 $\tau, sigma$ → **Möbius 函数** $mu$ → **Möbius 反演** → 素数计数 $pi, \theta, psi$ → **Чебышёв 估计** → **Bertrand 假设** → 素数定理（只给陈述与骨架）。",
+   "desc": "把「算术函数」做成一套可算的东西：积性函数 → 除数函数 τ、σ → Möbius 函数 μ → Möbius 反演 → 素数计数 π、θ、ψ → Чебышёв 估计 → Bertrand 假设 → 素数定理（只给陈述与骨架）。",
    "nodeCount": 10,
    "nodes": [
     "def.multiplicative-function",
@@ -2365,7 +2365,7 @@
    "name": "二次剩余与原根",
    "en": "Quadratic Residues and Primitive Roots",
    "parent": "number",
-   "desc": "解 $x^{2} equiv a pmod p$ 的整套机器：**二次剩余** → **Legendre 符号** → **Euler 判别法** → **Gauss 引理** → **二次互反律** → **Jacobi 符号**（便宜但会撒谎）→ 模 $n$ 的**阶** → **原根**（$mathbb{F}_{p}^{\times}$ 循环）→ **离散对数**。",
+   "desc": "解 x² ≡ a（模 p）的整套机器：二次剩余 → Legendre 符号 → Euler 判别法 → Gauss 引理 → 二次互反律 → Jacobi 符号（便宜但会撒谎）→ 模 n 的阶 → 原根（乘法群循环）→ 离散对数。",
    "nodeCount": 12,
    "nodes": [
     "def.quadratic-residue",

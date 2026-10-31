@@ -1,6 +1,6 @@
 # 数论函数与素数分布 / Arithmetic Functions and Distribution of Primes（number.functions）· 节点清单（第 1/1 页）
 
-把「算术函数」做成一套可算的东西：**积性函数** → 除数函数 $	au, sigma$ → **Möbius 函数** $mu$ → **Möbius 反演** → 素数计数 $pi, 	heta, psi$ → **Чебышёв 估计** → **Bertrand 假设** → 素数定理（只给陈述与骨架）。
+把「算术函数」做成一套可算的东西：积性函数 → 除数函数 τ、σ → Möbius 函数 μ → Möbius 反演 → 素数计数 π、θ、ψ → Чебышёв 估计 → Bertrand 假设 → 素数定理（只给陈述与骨架）。
 中心天体 thm.mobius-inversion　·　10 个节点　·　根 `../`
 
 - def.prime-counting　素数计数函数　layer 12

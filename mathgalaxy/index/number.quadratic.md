@@ -1,6 +1,6 @@
 # 二次剩余与原根 / Quadratic Residues and Primitive Roots（number.quadratic）· 节点清单（第 1/1 页）
 
-解 $x^{2} equiv a pmod p$ 的整套机器：**二次剩余** → **Legendre 符号** → **Euler 判别法** → **Gauss 引理** → **二次互反律** → **Jacobi 符号**（便宜但会撒谎）→ 模 $n$ 的**阶** → **原根**（$mathbb{F}_{p}^{	imes}$ 循环）→ **离散对数**。
+解 x² ≡ a（模 p）的整套机器：二次剩余 → Legendre 符号 → Euler 判别法 → Gauss 引理 → 二次互反律 → Jacobi 符号（便宜但会撒谎）→ 模 n 的阶 → 原根（乘法群循环）→ 离散对数。
 中心天体 thm.quadratic-reciprocity　·　12 个节点　·　根 `../`
 
 - def.order-mod-n　模 n 的阶　layer 7
