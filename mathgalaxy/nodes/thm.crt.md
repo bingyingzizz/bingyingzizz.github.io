@@ -14,6 +14,9 @@ $$\mathbb{Z}/N\mathbb{Z} \;\cong\; \mathbb{Z}/n_{1}\mathbb{Z} \times \cdots \tim
 
 - …另有入边，续页见 [nodes/thm.crt.2.md](./thm.crt.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.crt.3.md](./thm.crt.3.md)
+
 refs: 华罗庚《数论导引》§2
 
 > 说明见 `notes/thm.crt.md`

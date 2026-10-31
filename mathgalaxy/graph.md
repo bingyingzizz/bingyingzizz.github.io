@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-31T08:50:33.640Z
-> 14 星系 / 89 星团 / 1303 节点 / 2360 连线（强边 2347，弱边 13；其中**不分层**的「推论」21 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-10-31T13:58:42.026Z
+> 14 星系 / 90 星团 / 1312 节点 / 2380 连线（强边 2365，弱边 15；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -6194,6 +6194,209 @@ $$V = U \oplus W$$
 ⚠ 与「商空间」的分工：$V/U$ 是**压掉** $U$，$U \oplus W$ 是**拆开** $V$。有补空间时 $V/U \cong W$（由第一同构定理），但一般情形没有这种拆法。
 
 参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
+### 星团：整环与分解
+> 把「唯一分解」这件事本身做成环类：**整环**（无零因子）→ gcd 整环 / Bézout 整环 / Euclid 整环 → **PID** → **UFD**，五个类之间的蕴含都是真蕴含（反例各给一个），外加中国剩余定理的环论形式（互素理想 ⇒ 直积分解）。
+
+#### 整环　`def.int-domain`
+*定义*　整环：没有零因子的交换幺环
+
+设 $A$ 是交换、含幺、且 $A \ne \{0\}$ 的环。若 $ab = 0$ 只可能 $a = 0$ 或 $b = 0$，就称 $A$ 是**整环**（$A$ 没有零因子）。
+
+等价说法（消去律）：对 $a \ne 0$，$ab = ac$ $\implies$ $b = c$。
+
+整环是「能谈整除与约分」的最小环境：$\mathbb{Z}$、$K[x]$、$\mathbb{Z}[i]$、$\mathbb{Z}[\sqrt{2}]$ 都是整环；$\mathbb{Z}/n\mathbb{Z}$（$n$ 合数）与 $M_{n}(K)$（$n \ge 2$）不是。
+
+
+
+它也是「整除」的落点：$a \mid b$ 只在无零因子时才有正常的消去性质 —— 否则 $2 \cdot 3 \equiv 0 \pmod 6$ 会让整除与顺序彻底乱掉。
+
+
+
+三个条件的用处：交换 $\implies$ 可以谈「主理想 $(a)$」；含幺 $\implies$ 单位群与「可逆」有意义；无零因子 $\implies$ 可以约分、才能定义分式域。
+
+参考：Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Borevich–Shafarevich, Number Theory, Ch. 1
+
+#### 相伴、不可约与素　`def.irreducible-element`
+*定义*　相伴、不可约元与素元
+
+设 $A$ 是整环，$a, b \in A$ 非零。
+
+- $a$ 与 $b$ **相伴**（记 $a \sim b$），若 $a = ub$ 对某个可逆元 $u$ 成立。
+- 非零非单位的 $p$ 叫**不可约**，若 $p = ab$ 迫使 $a$ 或 $b$ 可逆（即 $p$ 不能拆成两个非单位的乘积）。
+- 非零非单位的 $p$ 叫**素**，若 $p \mid ab$ $\implies$ $p \mid a$ 或 $p \mid b$。
+
+在整环里**素 $\implies$ 不可约**：若 $p = ab$ 且 $p$ 是素元，则 $p \mid a$ 或 $p \mid b$，设 $p \mid a$、$a = pc$，则 $pcb = p$，约掉 $p$ 得 $cb = 1$，故 $b$ 可逆。
+
+
+
+反之不然：$\mathbb{Z}[\sqrt{-5}]$ 里 $2$ 不可约（范数论证：$N(2) = 4$，而 $N(a + b\sqrt{-5}) = a^{2} + 5b^{2}$ 取不到 $2$），但 $2 \mid 6 = (1+\sqrt{-5})(1-\sqrt{-5})$ 而不整除任一因子 —— 所以 $2$ 是「不可约而非素」。
+
+
+
+「不可约 = 素」正是唯一分解整环的判别特征（见 `def.ufd`）：UFD 里两者重合，非 UFD 里必有分歧。
+
+参考：Atiyah–Macdonald, Ch. 1
+
+#### gcd 整环　`def.gcd-domain`
+*定义*　gcd 整环：任意两元素都有最大公因子
+
+整环 $A$ 叫 **gcd 整环**，若任意 $a, b \in A$ 都有**最大公因子**：存在 $d$ 使
+
+$$d \mid a,\quad d \mid b,\quad \text{且任何 } c \mid a,\ c \mid b \text{ 都有 } c \mid d .$$
+
+注意「最大」是**整除意义下的最大下界**，不是大小比较 —— 整环上没有全序。
+
+为什么必须这样定义：$\mathbb{Z}$ 里「最大的公因数」靠 $|d|$ 比较，一般整环没有绝对值。改用「被一切公因子整除」才对：$\mathbb{Z}$ 里它等价于「绝对值最大」，而 $\mathbb{Z}[i]$ 里也只有这个说法成立。
+
+
+
+层级：UFD $\implies$ gcd 整环（`imp.ring-ufd-gcd`），反之不然（$\mathbb{Z}[\sqrt{-5}]$ 连 $\gcd(6, 2(1+\sqrt{-5}))$ 都不存在）。Bézout 整环 $\implies$ gcd 整环，因为 $\gcd$ 直接由线性组合给出。
+
+
+
+$\gcd$ 可以不存在 —— 这正是「UFD 的分解唯一性」不能用 gcd 替代的原因。
+
+参考：Kaplansky, Commutative Rings, Ch. 1
+
+#### Bézout 整环　`def.bezout-domain`
+*定义*　Bézout 整环：有限生成理想都是主理想
+
+整环 $A$ 叫 **Bézout 整环**，若每个**有限生成**理想都是主理想 —— 等价地：任意 $a, b \in A$ 存在 $d, u, v$ 使
+
+$$u a + v b = d = \gcd(a, b) .$$
+
+PID $\implies$ Bézout（所有理想都是主理想，当然包括有限生成的），反之不然：Bézout 整环未必 Noether，可能有非有限生成的理想。
+
+
+
+$\mathbb{Z}[x]$ **不是** Bézout：$\gcd(2, x) = 1$，但 $2u + xv = 1$ 无解（代 $x = 0$ 得 $2u(0) = 1$）—— 所以「Bézout 性质」强于 gcd 整环。
+
+
+
+Bézout 整环里「不可约 = 素」（因为 $\gcd$ 由线性组合给出，Euclid 引理的证明可以直接搬过来）。
+
+参考：Kaplansky, Commutative Rings, Ch. 1
+
+#### Euclid 整环　`def.euclidean-domain`
+*定义*　Euclid 整环：带余除法成立
+
+整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \setminus \{0\} \to \mathbb{N}$（**欧几里得函数**），使对任意 $a \in A$、$b \ne 0$，存在 $q, r \in A$ 满足
+
+$$a = q b + r, \qquad r = 0 \ \text{或}\ N(r) < N(b) .$$
+
+三个例子，三种 $N$：$\mathbb{Z}$ 取 $N(a) = |a|$；$K[x]$ 取 $N(f) = \deg f$（这就是 `thm.division-algorithm`）；$\mathbb{Z}[i]$（Gauss 整数）取 $N(a+bi) = a^{2}+b^{2}$。
+
+
+
+为什么它值钱：后面所有算术（$\gcd$、Bézout、唯一分解）的证明**只用到「余数下降」**这一条，所以整条链在 Euclid 整环里一次性成立（`imp.ring-euclid-pid` 起）。
+
+
+
+Euclid 整环 $\implies$ PID 的证明要点：取理想 $I \ne 0$，在其中选 $N$ 最小的 $b$，则任何 $a \in I$ 除以 $b$ 的余数 $r = a - qb \in I$ 满足 $N(r) < N(b)$，只能 $r = 0$，故 $I = (b)$。
+
+参考：Borevich–Shafarevich, Number Theory, Ch. 1；Atiyah–Macdonald, Ch. 1
+
+#### 主理想整环　`def.pid`
+*定义*　主理想整环（PID）：每个理想都由一个元素生成
+
+整环 $A$ 叫**主理想整环**（PID），若每个理想都是主理想：对任意理想 $I$ 存在 $a$ 使 $I = (a) = aA$。
+
+例：$\mathbb{Z}$（每个理想是 $(n)$）、$K[x]$（理想由次数最低的多项式生成）、$\mathbb{Z}[i]$。
+
+
+
+反例：$\mathbb{Z}[x]$ 不是 PID —— $(2, x)$ 不是主理想（若 $(2,x) = (f)$，则 $f \mid 2$ 迫使 $f$ 是常数 $\pm 1$ 或 $\pm 2$；前者给出 $(f) = A$、后者不含 $x$，都不对）。$K[x, y]$ 同理，$(x, y)$ 不是主理想。
+
+
+
+PID $\implies$ UFD（`imp.ring-pid-ufd`）是这类环的中心定理：分解的存在性靠「理想升链必停」（Noether），唯一性靠「不可约 = 素」（Bézout 性质来自 PID）。
+
+参考：Atiyah–Macdonald, Ch. 1
+
+#### 唯一分解整环　`def.ufd`
+*定义*　唯一分解整环（UFD）：分解存在且唯一
+
+整环 $A$ 叫**唯一分解整环**（UFD），若
+
+1. **存在性**：每个非零非单位元 $a$ 都能写成有限多个不可约元的乘积；
+2. **唯一性**：两个这样的分解只差次序与相伴（即把因子逐个配对成相伴元）。
+
+$\mathbb{Z}$ 与 $K[x]$ 都是 UFD（后者见 `thm.poly-ufd`），而 $\mathbb{Z}[\sqrt{-5}]$ 不是：
+
+
+
+$$6 = 2 \cdot 3 = (1+\sqrt{-5})(1-\sqrt{-5}),$$
+
+
+
+四个因子都不可约，且互不相伴 —— 所以分解不唯一。
+
+
+
+UFD 的三个判别性质：①「不可约 = 素」（`def.irreducible-element`）；② 任意两元素有 $\gcd$（`def.gcd-domain`）；③ 没有「无限下降的因子链」。三者都等价于唯一分解。
+
+
+
+层级（`imp.ring-euclid-pid` / `imp.ring-pid-ufd`）：Euclid 整环 $\implies$ PID $\implies$ UFD $\implies$ gcd 整环，两个箭头都不可逆（$\mathbb{Z}[\sqrt{-5}]$ 连 gcd 都没有；存在 UFD 不是 PID，如 $K[x, y]$）。
+
+参考：Atiyah–Macdonald, Ch. 1；Kaplansky, Commutative Rings, Ch. 1
+
+#### 互素理想　`def.comaximal`
+*定义*　互素理想：$I + J = A$
+
+环 $A$ 的两个理想 $I, J$ 叫**互素**，若
+
+$$I + J = A .$$
+
+一族理想 $\{I_{1}, \cdots, I_{k}\}$ 叫**两两互素**，若 $i \ne j$ 时 $I_{i} + I_{j} = A$。
+
+$A = \mathbb{Z}$、$I = (m)$、$J = (n)$ 时，$I + J = (m) + (n) = (\gcd(m, n))$，所以「互素」正是 $\gcd(m,n) = 1$ —— 中国剩余定理的「两两互素」条件在一般环里的正确说法。
+
+
+
+等价刻画：$I + J = A$ $\iff$ 存在 $u \in I$、$v \in J$ 使 $u + v = 1$（Bézout 的一般形式）。
+
+
+
+互素的一个好用推论：$I \cap J = IJ$（一般只有 $IJ \subseteq I \cap J$）。证明：$a \in I \cap J$，写 $1 = u + v$，则 $a = au + av$，而 $au \in IJ$（$a \in J$、$u \in I$）、$av \in IJ$（$a \in I$、$v \in J$）。
+
+参考：Atiyah–Macdonald, Ch. 1
+
+#### 中国剩余定理（环论形式）　`thm.crt-rings`
+*定理*　中国剩余定理：互素理想给出环的直积分解
+
+设 $I, J$ 是环 $A$ 的两个理想且 $I + J = A$。则
+
+$$A/(I \cap J) \;\cong\; A/I \times A/J, \qquad a \longmapsto (a \bmod I,\ a \bmod J) .$$
+
+更一般地：若 $I_{1}, \cdots, I_{k}$ 两两互素，则
+
+$$A\Big/\bigcap_{i} I_{i} \;\cong\; \prod_{i=1}^{k} A/I_{i} .$$
+
+**构造**：由互素写 $1 = u + v$（$u \in I$、$v \in J$），令 $e := v$。则
+
+
+
+$$e \equiv 0 \pmod I, \qquad e \equiv 1 \pmod J, \qquad e^{2} = e .$$
+
+
+
+于是对任意右端 $(x, y)$，元素 $a = x(1-e) + y e$ 满足 $a \equiv x \pmod I$、$a \equiv y \pmod J$ —— 存在性。唯一性：两解之差被 $I$ 与 $J$ 同时整除，故落在 $I \cap J$。
+
+
+
+**同构**：由第一同构定理（`thm.first-iso`），核是 $I \cap J$、商掉即得；满射由上面的构造给出。
+
+
+
+**分母可以写成乘积**：互素时 $I \cap J = IJ$（见 `def.comaximal`），所以也常写成 $A/IJ \cong A/I \times A/J$。
+
+
+
+**与数论的关系**：取 $A = \mathbb{Z}$、$I = (m)$、$J = (n)$、$\gcd(m,n) = 1$，就是 `thm.crt`：$\mathbb{Z}/(mn) \cong \mathbb{Z}/m \times \mathbb{Z}/n$。这条环论形式才是它的「正确形状」—— 数论版只是 $A = \mathbb{Z}$ 的特例。
+
+参考：Atiyah–Macdonald, Ch. 1；Borevich–Shafarevich, Number Theory, Ch. 2
 
 ## 星系：数学分析（Mathematical Analysis）
 > 从实数出发的初等分析：极限与完备性、连续与紧性、中值定理与 Taylor、多元微分与逆映射定理、级数、一致收敛，顶点是 Riemann 积分与 Newton–Leibniz 公式。
@@ -36798,6 +37001,134 @@ $p$ 素时 $G = (\mathbb{Z}/p\mathbb{Z})^{\times}$ 有 $p-1$ 个元素。方程 
 
 反过来若 $n$ 合数（$n > 4$），写 $n = ab$ 且 $1 < a, b < n$，则 $a \mid (n-1)!$ 与 $b \mid (n-1)!$，在 $\gcd(a,b) = 1$ 时得 $n \mid (n-1)!$；$\gcd(a,b) > 1$ 的情形改用 $n$ 的一个真因子与 $n/\text{它}$ 同样论证，仍得 $n \mid (n-1)!$。故不可能 $\equiv -1$。
 
+#### 定义引用：「环」→ 整环　`e122:definition`
+
+整环是「交换、含幺、无零因子」的环 —— 三个条件全是对 `def.ring` 的追加。
+
+#### 定义引用：「环」→ 相伴、不可约与素　`e123:definition`
+
+不可约与素都要「可逆元」和「整除」，两者都只在环里才有意义。
+
+#### 定义引用：「相伴、不可约与素」→ 唯一分解整环　`e124:definition`
+
+UFD 的定义直接用「不可约元」与「相伴」：分解的唯一性就是在相伴意义下的唯一性。
+
+#### 定义引用：「整环」→ 唯一分解整环　`e125:definition`
+
+UFD 是整环：没有无零因子这个前提，「分解」与「约分」都不成立，唯一性无从谈起。
+
+#### 定义引用：「整环」→ gcd 整环　`e126:definition`
+
+gcd 整环是整环：「最大公因子」用整除做下界，而无零因子才使整除正常（$0$ 不做因子）。
+
+#### 定义引用：「整环」→ Euclid 整环　`e127:definition`
+
+Euclid 整环是整环，外加一个满足带余除法的欧几里得函数。
+
+#### 定义引用：「整环」→ Bézout 整环　`e128:definition`
+
+Bézout 整环是整环：条件落在「有限生成理想是主理想」上。
+
+#### 定义引用：「理想」→ 主理想整环　`e129:definition`
+
+PID 的定义就是「每个理想都是主理想」—— 没有理想这个概念写不出来。
+
+#### 定义引用：「理想」→ 互素理想　`e130:definition`
+
+互素是理想的加法条件：$I + J = A$。
+
+#### 定义引用：「理想」→ 中国剩余定理（环论形式）　`e131:definition`
+
+定理的两个对象 $I, J$ 都是理想，商 $A/I$ 是商环。
+
+#### 定义引用：「第一同构定理（Noether）」→ 中国剩余定理（环论形式）　`e132:definition`
+
+同构的存在性直接由第一同构定理给出：核是 $I \cap J$。
+
+#### 定义引用：「唯一分解整环」→ 算术基本定理　`e133:definition`
+
+算术基本定理就是「$\mathbb{Z}$ 是 UFD」这句话在整数上的展开。
+
+#### 定义引用：「唯一分解整环」→ K[x] 是唯一分解整环　`e134:definition`
+
+$K[x]$ 是 UFD —— 定理本身是在验证这个定义。
+
+#### 定义引用：「Euclid 整环」→ 带余除法　`e135:definition`
+
+$K[x]$ 的带余除法正是「$N = \deg$ 的欧几里得函数」，这条定理是 Euclid 整环的一个实例。
+
+#### Euclid 整环 ⟹ 主理想整环　`imp.ring-euclid-pid`
+*Euclid 整环 $\implies$ PID：取范数最小的元素生成理想*
+
+设 $A$ 是 Euclid 整环（欧几里得函数 $N$），$I \trianglelefteq A$ 是非零理想 $I \ne 0$。
+
+
+
+在 $I$ 中取 $N$ 最小的非零元 $b$（$\mathbb{N}$ 良序，故存在）。
+
+
+
+对任意 $a \in I$ 做带余除法：$a = qb + r$，$r = 0$ 或 $N(r) < N(b)$。注意 $r = a - qb \in I$（$a, b \in I$），而 $b$ 的 $N$ 在 $I \setminus \{0\}$ 里最小，故 $N(r) < N(b)$ 不可能 —— 只能 $r = 0$。
+
+
+
+于是 $a = qb \in (b)$，即 $I \subseteq (b)$；反向 $(b) \subseteq I$ 显然。故 $I = (b)$ 是主理想，$A$ 是 PID。
+
+#### 主理想整环 ⟹ 唯一分解整环　`imp.ring-pid-ufd`
+*PID $\implies$ UFD：升链条件给存在性，不可约=素给唯一性*
+
+**存在性**（分解不能无限细）：若某个非零非单位元 $a$ 写不成有限乘积，则可写 $a = a_{1}b_{1}$ 且两者都非单位，对其一继续拆 —— 得到严格上升的理想链 $(a) \subset (a_{1}) \subset (a_{2}) \subset \cdots$。其并 $I = \bigcup (a_{i})$ 是理想，PID 给出 $I = (d)$，于是 $d \in (a_{n})$ 对某个 $n$ 成立，链在 $n$ 停止 —— 与「能无限拆」矛盾。
+
+
+
+**不可约 = 素**（PID 里）：设 $p$ 不可约且 $p \mid ab$。理想 $(p, a)$ 是主理想，记作 $(d)$，则 $d \mid p$；$p$ 不可约给出 $d \sim 1$ 或 $d \sim p$。若 $d \sim p$，则 $p \mid a$，完事；若 $d \sim 1$，则 $(p, a) = A$，写 $1 = up + va$，乘 $b$ 得 $b = upb + vab$，而 $p \mid ab$，故 $p \mid b$。
+
+
+
+**唯一性**：两个分解的素因子逐个用「素元整除乘积必整除某个因子」配对，约掉后归纳即得。所以 PID 是 UFD。
+
+#### 唯一分解整环 ⟹ gcd 整环　`imp.ring-ufd-gcd`
+*UFD $\implies$ gcd 整环：取公共素因子指数的最小值*
+
+设 $A$ 是 UFD，$a, b$ 非零。把两者写成不可约元的乘积，按相伴类归并：
+
+
+
+$$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
+
+
+
+（只保留在两者中至少一个里出现的 $p_{i}$。）
+
+
+
+令 $d := \prod_{i} p_{i}^{\,\min(m_{i}, n_{i})}$。则 $d \mid a$ 且 $d \mid b$，故 $d$ 是公因子。
+
+
+
+反之设 $c \mid a$、$c \mid b$。把 $c$ 分解，每个不可约因子 $q \mid c$ 都整除 $a$，而 UFD 里不可约即素，故 $q$ 与某个 $p_{i}$ 相伴，且它在 $c$ 里的重数 $\le \min(m_{i}, n_{i})$。于是 $c \mid d$。
+
+
+
+所以 $d$ 是「被一切公因子整除」的那个公因子 —— 即 $\gcd$。UFD 是 gcd 整环。
+
+#### Bézout 整环 ⟹ gcd 整环　`imp.ring-bezout-gcd`
+*Bézout 整环 $\implies$ gcd 整环：gcd 由线性组合直接给出*
+
+设 $A$ 是 Bézout 整环。取 $a, b \in A$，则理想 $(a, b)$ 是主理想，写 $(a, b) = (d)$。
+
+
+
+由 $a \in (d)$、$b \in (d)$ 得 $d \mid a$、$d \mid b$；由 $d \in (a, b)$ 得存在 $u, v$ 使 $d = ua + vb$。
+
+
+
+若 $c \mid a$、$c \mid b$，则 $c \mid ua + vb = d$。所以 $d$ 是被一切公因子整除的公因子 —— 即 $\gcd(a,b)$。故 $A$ 是 gcd 整环。
+
+
+
+（这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
+
 #### T_F ± F 递增 ⟹ 有界变差函数的 Jordan 分解　`imp.bv-jordan`
 *$T_F \pm F$ 递增 $\implies BV$ 的 Jordan 分解*
 
@@ -43845,6 +44176,32 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 但 UFD 不是自动的：$\mathbb{Z}[\sqrt{-5}]$ 与 $K[x, y]$ 都不是 UFD。反例的形状也一样 —— 同一个元素有两条真分解。
 
+#### 中国剩余定理 ～ 中国剩余定理（环论形式）　`e136:analogy`
+*中国剩余定理：数论版是环论版在 $\mathbb{Z}$ 上的样子*
+
+两边的陈述结构相同：模数互素 $\implies$ 商环分解成直积。
+
+
+
+数论版的「$n_{i}$ 两两互素」= 环论版的「理想两两互素 $I_{i} + I_{j} = A$」（因为 $(m) + (n) = (\gcd(m,n))$）；数论版的 $N = n_{1}\cdots n_{k}$ = 环论版的 $\bigcap I_{i}$（互素时等于乘积 $I_{1}\cdots I_{k}$）。
+
+
+
+差异只在证明工具：数论版用 Bézout 造 $e_{i}$，环论版用「$1 = u + v$」造幂等元 $e$ —— 其实是同一件事。
+
+#### Bézout 恒等式 ～ Bézout 整环　`e137:analogy`
+*Bézout 恒等式：从 $\mathbb{Z}$ 上的定理升级为一个环类*
+
+数论版的 Bézout 说「$\gcd(a,b)$ 是 $a,b$ 的整系数组合」，这需要 $\mathbb{Z}$ 的特殊性（Euclid 算法）。
+
+
+
+把它当作**公理式的性质**来定义一个环类，就是 Bézout 整环：每个有限生成理想都是主理想。$\mathbb{Z}$、$K[x]$ 满足；$\mathbb{Z}[x]$ 不满足（$\gcd(2,x)=1$ 却不是线性组合）。
+
+
+
+所以「Bézout」在图里出现两次是对的：一次是 $\mathbb{Z}$ 上的定理，一次是整环上的类名 —— 后者包含了前者，也包含了 $K[x]$。
+
 #### 米田嵌入 ～ 紧 Haus 是反射子范畴　`ana.embed-better-world`
 *米田嵌入与 Stone–Čech 紧化：都是「嵌进一个大得多的世界」*
 
@@ -44106,6 +44463,9 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **代数结构 ↔ 整除与同余**　3 条节点级连线
 - **群作用与置换 ↔ 整除与同余**　2 条节点级连线
 - **多项式与因式分解 ↔ 整除与同余**　2 条节点级连线
+- **整环与分解 ↔ 代数结构**　6 条节点级连线
+- **整环与分解 ↔ 整除与同余**　3 条节点级连线
+- **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 符号测度与分解**　5 条节点级连线
 - **有界变差与绝对连续 ↔ 测度的构造**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 积分**　4 条节点级连线

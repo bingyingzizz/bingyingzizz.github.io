@@ -9,9 +9,10 @@
 - 被 [`def.scalar-restriction`](../nodes/def.scalar-restriction.md) 标量限制 用
 - 被 [`def.group-ring`](../nodes/def.group-ring.md) 群环 用
 - 被 [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环 用
+- 被 [`def.int-domain`](../nodes/def.int-domain.md) 整环 用
+- 被 [`def.irreducible-element`](../nodes/def.irreducible-element.md) 相伴、不可约与素 用
 - 被 [`prop.zmod-is-ab`](../nodes/prop.zmod-is-ab.md) Z-模就是阿贝尔群 用
 - 被 [`def.ideal`](../nodes/def.ideal.md) 理想 用
 - 被 [`def.module`](../nodes/def.module.md) 模 用
-- 被 [`prop.ring-localization`](../nodes/prop.ring-localization.md) 环的局部化 W⁻¹R 用
 
 > 续见 [nodes/def.ring.3.md](./def.ring.3.md)
