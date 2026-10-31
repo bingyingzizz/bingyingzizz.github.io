@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>外延公理（extensionality） · 数学星图 MathGalaxy</title>
+<meta name="description" content="集合由它的元素唯一决定： ∀ A ∀ B [ ∀ x ( x ∈ A rightarrow x ∈ B ) → A = B ] 反方向（ A = B → 元素完全相同）由等词逻辑自动成立，所以常写成 rightarrow 。 这条公理保证了「用条件刻画集合」时结果是唯一的，因此 { x ∈ A : φ (x) }… · English: extensionality">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html">
+<link rel="alternate" type="text/markdown" href="ax.ext.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="ax.ext.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="外延公理（extensionality） · 数学星图 MathGalaxy">
+<meta property="og:description" content="集合由它的元素唯一决定： ∀ A ∀ B [ ∀ x ( x ∈ A rightarrow x ∈ B ) → A = B ] 反方向（ A = B → 元素完全相同）由等词逻辑自动成立，所以常写成 rightarrow 。 这条公理保证了「用条件刻画集合」时结果是唯一的，因此 { x ∈ A : φ (x) }… · English: extensionality">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4F7CF5">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html#concept","name":"外延公理","alternateName":"extensionality","description":"集合由它的元素唯一决定： ∀ A ∀ B [ ∀ x ( x ∈ A rightarrow x ∈ B ) → A = B ] 反方向（ A = B → 元素完全相同）由等词逻辑自动成立，所以常写成 rightarrow 。 这条公理保证了「用条件刻画集合」时结果是唯一的，因此 { x ∈ A : φ (x) }…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"ax.ext","keywords":"ZFC, 集合相等"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"集合论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#set-theory"},{"@type":"ListItem","position":3,"name":"ZFC 公理系统","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#set.zfc"},{"@type":"ListItem","position":4,"name":"外延公理","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#4F7CF5">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#set-theory">集合论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#set.zfc">ZFC 公理系统</a><span class="sep">›</span><span aria-current="page">外延公理</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>外延公理<span class="en" lang="en">extensionality</span></h1>
+    
+    <ul class="facts"><li>公理</li><li>依赖深度 layer 0</li><li>集合论</li><li>ZFC 公理系统</li></ul>
+    <p class="idline"><code>ax.ext</code> · ZFC · 集合相等</p>
+    <p class="aka"><span class="aka-k">又称</span>外延<span class="aka-s">·</span>extensionality<span class="aka-s">·</span>集合相等</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>集合由它的元素唯一决定：</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>A</mi><mi mathvariant="normal">∀</mi><mi>B</mi><mo stretchy="false">[</mo><mi mathvariant="normal">∀</mi><mi>x</mi><mo stretchy="false">(</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>↔</mo><mi>x</mi><mo>∈</mo><mi>B</mi><mo stretchy="false">)</mo><mo>→</mo><mi>A</mi><mo>=</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\forall A \forall B [ \forall x ( x \in A \leftrightarrow  x \in B ) \to A = B ]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∀</span><span class="mord mathnormal">A</span><span class="mord">∀</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">[</span><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span></span></span></span></span><p>反方向（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>B</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">A = B \to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span></span></span></span> 元素完全相同）由等词逻辑自动成立，所以常写成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span>。 这条公理保证了「用条件刻画集合」时结果是唯一的，因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>:</mo><mi>φ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{ x \in A : \varphi (x) \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">φ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)}</span></span></span></span> 这种写法不会产生歧义。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>它是「集合」这个名字的全部含义：一个集合 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span></span></span></span> 一个外延（一堆元素），与「怎么描述它」无关。</p><p>去掉它，就可以有元素完全相同却彼此不同的对象（例如带原子 ur-element 的集合论）。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.subset.html">子集</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>子集最常用的那条性质——<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>B</mi><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>A</mi><mo>⊆</mo><mi>B</mi><mo>∧</mo><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A = B \iff A \subseteq B \wedge B \subseteq A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7073em;vertical-align:-0.024em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>（<strong>两边互包</strong>）——正是<strong>外延公理</strong>的直接推论。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.empty.html">空集存在</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>空集的存在由分离公理模式给出，但「这样的集合<strong>至多一个</strong>」靠的是<strong>外延公理</strong>——所以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">∅</span></span></span></span> 这个记号才有意义。</p></div>
+</li></ul></section>
+  
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Kunen, Set Theory, I.2</li><li>Jech, Set Theory, 1.2</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">9 个</span></h2><ul class="sibs"><li><a href="ax.found.html">正则公理</a><span class="lay">layer 0</span></li><li><a href="ax.inf.html">无穷公理</a><span class="lay">layer 0</span></li><li><a href="ax.pair.html">配对公理</a><span class="lay">layer 0</span></li><li><a href="ax.union.html">并集公理</a><span class="lay">layer 0</span></li><li><a href="thm.noself.html">无自属集合</a><span class="lay">layer 1</span></li><li><a href="ax.power.html">幂集公理</a><span class="lay">layer 2</span></li><li><a href="ax.repl.html">替换公理模式</a><span class="lay">layer 3</span></li><li><a href="ax.sep.html">分离公理模式</a><span class="lay">layer 4</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=ax.ext">在星图里打开「外延公理」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="ax.ext.md">Markdown 原文</a>　·　
+      <a href="ax.ext.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>ax.ext</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

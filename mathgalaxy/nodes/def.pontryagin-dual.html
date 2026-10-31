@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pontryagin 对偶（Pontryagin dual） · 数学星图 MathGalaxy</title>
+<meta name="description" content="记圆群 T := { z ∈ ℂ : |z| = 1 }. 拓扑阿贝尔群 M 的 Pontryagin 对偶是 M := Cℤ(M, T), 即从 M 到 T 的连续群同态全体，带紧开拓扑。 · English: Pontryagin dual">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.pontryagin-dual.html">
+<link rel="alternate" type="text/markdown" href="def.pontryagin-dual.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.pontryagin-dual.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="Pontryagin 对偶（Pontryagin dual） · 数学星图 MathGalaxy">
+<meta property="og:description" content="记圆群 T := { z ∈ ℂ : |z| = 1 }. 拓扑阿贝尔群 M 的 Pontryagin 对偶是 M := Cℤ(M, T), 即从 M 到 T 的连续群同态全体，带紧开拓扑。 · English: Pontryagin dual">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.pontryagin-dual.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1F8A70">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.pontryagin-dual.html#concept","name":"Pontryagin 对偶","alternateName":"Pontryagin dual","description":"记圆群 T := { z ∈ ℂ : |z| = 1 }. 拓扑阿贝尔群 M 的 Pontryagin 对偶是 M := Cℤ(M, T), 即从 M 到 T 的连续群同态全体，带紧开拓扑。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.pontryagin-dual.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.pontryagin-dual","keywords":"凝聚态, Pontryagin, 对偶, 圆群"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"凝聚态数学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#condensed"},{"@type":"ListItem","position":3,"name":"拓扑阿贝尔群","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#cond.topo"},{"@type":"ListItem","position":4,"name":"Pontryagin 对偶","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.pontryagin-dual.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#1F8A70">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#condensed">凝聚态数学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#cond.topo">拓扑阿贝尔群</a><span class="sep">›</span><span aria-current="page">Pontryagin 对偶</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>Pontryagin 对偶<span class="en" lang="en">Pontryagin dual</span></h1>
+    
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 17</li><li>凝聚态数学</li><li>拓扑阿贝尔群</li></ul>
+    <p class="idline"><code>def.pontryagin-dual</code> · 凝聚态 · Pontryagin · 对偶 · 圆群</p>
+    <p class="aka"><span class="aka-k">又称</span>Pontryagin 对偶<span class="aka-s">·</span>Pontryagin dual<span class="aka-s">·</span>圆群<span class="aka-s">·</span>T<span class="aka-s">·</span>Exercise 6.11<span class="aka-s">·</span>Exercise 6.6</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>记<strong>圆群</strong></p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="double-struck">T</mi><mo>:</mo><mo>=</mo><mo stretchy="false">{</mo><mtext> </mtext><mi>z</mi><mo>∈</mo><mi mathvariant="double-struck">C</mi><mo>:</mo><mi mathvariant="normal">∣</mi><mi>z</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mn>1</mn><mtext> </mtext><mo stretchy="false">}</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\mathbb{T} := \{\, z \in \mathbb{C} : |z| = 1 \,\}.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mclose">}</span><span class="mord">.</span></span></span></span></span><p>拓扑阿贝尔群 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 的 <strong>Pontryagin 对偶</strong>是</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover accent="true"><mi>M</mi><mo stretchy="true">^</mo></mover><mo>:</mo><mo>=</mo><msub><mi>C</mi><mi mathvariant="double-struck">Z</mi></msub><mo stretchy="false">(</mo><mi>M</mi><mo separator="true">,</mo><mi mathvariant="double-struck">T</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\widehat{M} := C_{\mathbb{Z}}(M, \mathbb{T}),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9233em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9233em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span><span class="svg-align" style="width:calc(100% - 0.1667em);margin-left:0.1667em;top:-3.6833em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.24em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.24em" viewBox="0 0 1062 239" preserveAspectRatio="none"><path d="M529 0h5l519 115c5 1 9 5 9 10 0 1-1 2-1 3l-4 22
+c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z"/></svg></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3322em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbb mtight">Z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbb">T</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span><p>即从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">T</mi></mrow><annotation encoding="application/x-tex">\mathbb{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">T</span></span></span></span> 的连续群同态全体，带紧开拓扑。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>为什么是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">T</mi></mrow><annotation encoding="application/x-tex">\mathbb{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">T</span></span></span></span></strong>：它是<strong>紧</strong>的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 群，也是最简单的「能承载全部特征标」的群。对偶群因此自动是紧的（当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 离散时）—— 这就是「对偶把大小反过来」的机制。</p><p><strong>两个基本例子</strong>（都可以直接算）：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi mathvariant="double-struck">Z</mi><mo stretchy="true">^</mo></mover><mo>≅</mo><mi mathvariant="double-struck">T</mi></mrow><annotation encoding="application/x-tex">\widehat{\mathbb{Z}} \cong \mathbb{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9289em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9289em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbb">Z</span></span><span class="svg-align" style="width:calc(100% - 0.1667em);margin-left:0.1667em;top:-3.6889em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.24em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.24em" viewBox="0 0 1062 239" preserveAspectRatio="none"><path d="M529 0h5l519 115c5 1 9 5 9 10 0 1-1 2-1 3l-4 22
+c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z"/></svg></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">T</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi mathvariant="double-struck">T</mi><mo stretchy="true">^</mo></mover><mo>≅</mo><mi mathvariant="double-struck">Z</mi></mrow><annotation encoding="application/x-tex">\widehat{\mathbb{T}} \cong \mathbb{Z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9289em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9289em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbb">T</span></span><span class="svg-align" style="width:calc(100% - 0.1667em);margin-left:0.1667em;top:-3.6889em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.24em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.24em" viewBox="0 0 1062 239" preserveAspectRatio="none"><path d="M529 0h5l519 115c5 1 9 5 9 10 0 1-1 2-1 3l-4 22
+c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z"/></svg></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">Z</span></span></span></span> —— 对偶把离散的整数群换成紧的圆群，反过来也一样。第三个例子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi mathvariant="double-struck">R</mi><mo stretchy="true">^</mo></mover><mo>≅</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\widehat{\mathbb{R}} \cong \mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9289em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9289em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbb">R</span></span><span class="svg-align" style="width:calc(100% - 0.1667em);margin-left:0.1667em;top:-3.6889em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.24em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.24em" viewBox="0 0 1062 239" preserveAspectRatio="none"><path d="M529 0h5l519 115c5 1 9 5 9 10 0 1-1 2-1 3l-4 22
+c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z"/></svg></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 由 Fourier 变换给出：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>↦</mo><msup><mi>e</mi><mrow><mn>2</mn><mi>π</mi><mi>i</mi><mi>x</mi><mi>y</mi></mrow></msup></mrow><annotation encoding="application/x-tex">y \mapsto e^{2\pi i xy}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7054em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↦</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8247em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">πi</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span></span></span></span></span></span></span></span> 的每个连续特征标都长这样。</p><p>⭐ <strong>对偶到底把什么换成了什么，有两条独立的命题</strong>：</p><ul><li>「离散与紧 Hausdorff 互换」—— 讲的是<strong>拓扑性质</strong>怎么翻；</li><li>「挠与 Stonean、无挠与连通」—— 讲的是<strong>代数性质</strong>怎么翻。</li></ul><p>两张字典合起来才是完整的「用拓扑来读代数」，也是凝聚态数学「用紧 Hausdorff 空间测一切」这一思路的来源。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">6</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="prop.chaus-two-term-resolution.html">紧阿贝尔群的两项消解</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>整个证明就是在 Pontryagin 对偶两侧来回搬运。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.pontryagin-finite-dim-banach.html">有限维 Banach 空间的对偶是向量空间对偶</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>有限维情形下对偶退化成向量空间对偶。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.pontryagin-van-kampen.html">Pontryagin–van Kampen 对偶</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>定理说的是<strong>对偶函子</strong>是自等价。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.dual-rhom-characterization.html">Pontryagin 对偶的导出 Hom 刻画</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>左边是 <strong>Pontryagin 对偶</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mo lspace="0em" rspace="0em">∨</mo></msup></mrow><annotation encoding="application/x-tex">M^{\vee}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∨</span></span></span></span></span></span></span></span></span></span></span></span>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.pontryagin-discrete-compact-duality.html">离散 与 紧 Hausdorff</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>说的是 <strong>Pontryagin 对偶</strong>函子。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.pontryagin-torsion-stone.html">挠 与 Stonean，无挠 与 连通</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>说的还是 <strong>Pontryagin 对偶</strong>。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.topo-ab-group.html">拓扑阿贝尔群</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>对偶的对象是<strong>拓扑阿贝尔群</strong>。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, §6.2</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">4 条</span></h2><ul class="hooks"><li><span class="q">什么是 Pontryagin 对偶</span><span class="also">也看 <a href="thm.pontryagin-van-kampen.html">Pontryagin–van Kampen 对偶</a></span></li><li><span class="q">Pontryagin 对偶怎么用 RHom 写</span><span class="also">也看 <a href="prop.dual-rhom-characterization.html">Pontryagin 对偶的导出 Hom 刻画</a>、<a href="table.rhom-zrt.html">Z、R、T 的导出 Hom 计算表</a></span></li><li><span class="q">挠群的对偶是什么</span><span class="also">也看 <a href="prop.pontryagin-torsion-stone.html">挠 与 Stonean，无挠 与 连通</a>、<a href="def.stone-space.html">全不连通与 Stone 空间</a></span></li><li><span class="q">离散群的对偶是什么</span><span class="also">也看 <a href="prop.pontryagin-discrete-compact-duality.html">离散 与 紧 Hausdorff</a>、<a href="def.chaus.html">紧 Hausdorff 空间范畴</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">13 个</span></h2><ul class="sibs"><li><a href="def.topo-ab-group.html">拓扑阿贝尔群</a><span class="lay">layer 16</span></li><li><a href="thm.lc-structure.html">局部紧阿贝尔群结构定理</a><span class="lay">layer 16</span></li><li><a href="prop.abhaus-strict-exact.html">Hausdorff 拓扑阿贝尔群的核与余核</a><span class="lay">layer 17</span></li><li><a href="prop.lc-ab-preabelian.html">局部紧阿贝尔群不是阿贝尔范畴</a><span class="lay">layer 17</span></li><li><a href="prop.abtop-to-abcond.html">拓扑阿贝尔群嵌入凝聚态</a><span class="lay">layer 18</span></li><li><a href="prop.continuous-hom-condensed.html">连续同态与内部 Hom</a><span class="lay">layer 18</span></li><li><a href="prop.pontryagin-discrete-compact-duality.html">离散 与 紧 Hausdorff</a><span class="lay">layer 18</span></li><li><a href="prop.pontryagin-finite-dim-banach.html">有限维 Banach 空间的对偶是向量空间对偶</a><span class="lay">layer 18</span></li><li><a href="prop.pontryagin-torsion-stone.html">挠 与 Stonean，无挠 与 连通</a><span class="lay">layer 18</span></li><li><a href="thm.pontryagin-van-kampen.html">Pontryagin–van Kampen 对偶</a><span class="lay">layer 18</span></li><li><a href="prop.chaus-two-term-resolution.html">紧阿贝尔群的两项消解</a><span class="lay">layer 19</span></li><li><a href="prop.exact-sequence-topo-ab.html">拓扑阿贝尔群正合列的搬运</a><span class="lay">layer 19</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.pontryagin-dual">在星图里打开「Pontryagin 对偶」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.pontryagin-dual.md">Markdown 原文</a>　·　
+      <a href="def.pontryagin-dual.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.pontryagin-dual</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

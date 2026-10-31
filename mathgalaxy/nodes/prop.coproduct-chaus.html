@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不交并是紧 Hausdorff 的余积（disjoint unions are coproducts of compact Hausdorff spaces） · 数学星图 MathGalaxy</title>
+<meta name="description" content="在紧 Hausdorff 空间范畴里（自由紧 Hausdorff 空间之间也一样），不交并是余积： Hom(S ⊔ T, Z) ≅ Hom(S, Z) × Hom(T, Z). · English: disjoint unions are coproducts of compact Hausdorff spaces">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html">
+<link rel="alternate" type="text/markdown" href="prop.coproduct-chaus.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="prop.coproduct-chaus.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="不交并是紧 Hausdorff 的余积（disjoint unions are coproducts of compact Hausdorff spaces） · 数学星图 MathGalaxy">
+<meta property="og:description" content="在紧 Hausdorff 空间范畴里（自由紧 Hausdorff 空间之间也一样），不交并是余积： Hom(S ⊔ T, Z) ≅ Hom(S, Z) × Hom(T, Z). · English: disjoint unions are coproducts of compact Hausdorff spaces">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#D9649F">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html#concept","name":"不交并是紧 Hausdorff 的余积","alternateName":"disjoint unions are coproducts of compact Hausdorff spaces","description":"在紧 Hausdorff 空间范畴里（自由紧 Hausdorff 空间之间也一样），不交并是余积： Hom(S ⊔ T, Z) ≅ Hom(S, Z) × Hom(T, Z).","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"命题, 紧 Hausdorff, 不相交并, 余积"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"拓扑学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology"},{"@type":"ListItem","position":3,"name":"紧 Hausdorff 空间","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topo.chaus"},{"@type":"ListItem","position":4,"name":"不交并是紧 Hausdorff 的余积","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.coproduct-chaus.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#D9649F">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology">拓扑学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topo.chaus">紧 Hausdorff 空间</a><span class="sep">›</span><span aria-current="page">不交并是紧 Hausdorff 的余积</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>不交并是紧 Hausdorff 的余积<span class="en" lang="en">disjoint unions are coproducts of compact Hausdorff spaces</span></h1>
+    <p class="full">命题：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊔</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">S \sqcup T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊔</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">C</mi><mi mathvariant="bold">H</mi><mi mathvariant="bold">a</mi><mi mathvariant="bold">u</mi><mi mathvariant="bold">s</mi></mrow><annotation encoding="application/x-tex">\mathbf{CHaus}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord"><span class="mord mathbf">CHaus</span></span></span></span></span> 里的余积</p>
+    <ul class="facts"><li>命题</li><li>依赖深度 layer 16</li><li>拓扑学</li><li>紧 Hausdorff 空间</li></ul>
+    <p class="idline"><code>prop.coproduct-chaus</code> · 命题 · 紧 Hausdorff · 不相交并 · 余积</p>
+    <p class="aka"><span class="aka-k">又称</span>Exercise 2.12</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>在<strong>紧 Hausdorff</strong> 空间范畴里（自由紧 Hausdorff 空间之间也一样），<strong>不交并</strong>是<strong>余积</strong>：</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>S</mi><mo>⊔</mo><mi>T</mi><mo separator="true">,</mo><mtext> </mtext><mi>Z</mi><mo stretchy="false">)</mo><mtext>  </mtext><mo>≅</mo><mtext>  </mtext><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>S</mi><mo separator="true">,</mo><mi>Z</mi><mo stretchy="false">)</mo><mo>×</mo><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>T</mi><mo separator="true">,</mo><mi>Z</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\operatorname{Hom}(S \sqcup T,\ Z) \;\cong\; \operatorname{Hom}(S, Z) \times \operatorname{Hom}(T, Z).</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊔</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>证明。</strong> 一个连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊔</mo><mi>T</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">S \sqcup T \to Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊔</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span> 由它在两半上的限制决定 ✓；反之给两条连续映射，把它们拼起来仍连续（不交并的拓扑就是两块拓扑的和）✓。于是上面的自然双射成立，即余积的泛性质 ✓。紧 Hausdorff 对有限不交并封闭（两块紧、两块 Hausdorff）✓。∎</p><p>⚠️ 无限个不交并一般<strong>不</strong>紧，所以余积只对有限族留在范畴里；这也是后面用预拓扑（有限不交并）而不是一般不交并的原因。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.chaus.html">紧 Hausdorff 空间范畴</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>命题活在紧 Hausdorff 范畴里。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.product.html">积 / 余积</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论是「这是余积」。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, An introduction to condensed mathematics, Exercise 2.12</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">11 个</span></h2><ul class="sibs"><li><a href="def.projective-object.html">投射 / 内射对象</a><span class="lay">layer 14</span></li><li><a href="def.chaus.html">紧 Hausdorff 空间范畴</a><span class="lay">layer 15</span></li><li><a href="lem.minimal-closed-surjection.html">满射的极小闭子集</a><span class="lay">layer 15</span></li><li><a href="def.free-compact-hausdorff.html">自由紧 Hausdorff 空间</a><span class="lay">layer 16</span></li><li><a href="def.free-presentation.html">自由表示</a><span class="lay">layer 16</span></li><li><a href="prop.chaus-quotient-equiv.html">紧 Hausdorff 上商映射的四种说法</a><span class="lay">layer 16</span></li><li><a href="prop.chaus-reflective.html">紧 Haus 是反射子范畴</a><span class="lay">layer 16</span></li><li><a href="cor.chaus-free-presentation.html">紧 Haus 都有自由表示</a><span class="lay">layer 17</span></li><li><a href="prop.chaus-quotient-of-free.html">紧 Haus 是自由的商</a><span class="lay">layer 17</span></li><li><a href="prop.free-projective.html">自由紧 Haus 是投射对象</a><span class="lay">layer 17</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=prop.coproduct-chaus">在星图里打开「不交并是紧 Hausdorff 的余积」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="prop.coproduct-chaus.md">Markdown 原文</a>　·　
+      <a href="prop.coproduct-chaus.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>prop.coproduct-chaus</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

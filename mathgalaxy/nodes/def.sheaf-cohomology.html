@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>层上同调（sheaf cohomology） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 M^bullet 是景 C 上的阿贝尔层复形， X ∈ C 。它在 X 上的第 n 个上同调群是 H^n(X, M^bullet) := R^nΓ(X, M^bullet), 其中 Γ(X, -) 是 X 处的截面函子。 · English: sheaf cohomology">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.sheaf-cohomology.html">
+<link rel="alternate" type="text/markdown" href="def.sheaf-cohomology.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.sheaf-cohomology.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="层上同调（sheaf cohomology） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 M^bullet 是景 C 上的阿贝尔层复形， X ∈ C 。它在 X 上的第 n 个上同调群是 H^n(X, M^bullet) := R^nΓ(X, M^bullet), 其中 Γ(X, -) 是 X 处的截面函子。 · English: sheaf cohomology">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.sheaf-cohomology.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#C89A2B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.sheaf-cohomology.html#concept","name":"层上同调","alternateName":"sheaf cohomology","description":"设 M^bullet 是景 C 上的阿贝尔层复形， X ∈ C 。它在 X 上的第 n 个上同调群是 H^n(X, M^bullet) := R^nΓ(X, M^bullet), 其中 Γ(X, -) 是 X 处的截面函子。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.sheaf-cohomology.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.sheaf-cohomology","keywords":"同调代数, 层上同调, 导出函子, 截面函子"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"同调代数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#homology"},{"@type":"ListItem","position":3,"name":"层上同调","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheafcoh"},{"@type":"ListItem","position":4,"name":"层上同调","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.sheaf-cohomology.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#C89A2B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheafcoh">层上同调</a><span class="sep">›</span><span aria-current="page">层上同调</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>层上同调<span class="en" lang="en">sheaf cohomology</span></h1>
+    <p class="full">层上同调 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><msup><mi>M</mi><mo lspace="0em" rspace="0em">∙</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^{n}(X, M^{\bullet})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∙</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 17</li><li>同调代数</li><li>范畴论</li><li>层上同调</li></ul>
+    <p class="idline"><code>def.sheaf-cohomology</code> · 同调代数 · 层上同调 · 导出函子 · 截面函子</p>
+    <p class="aka"><span class="aka-k">又称</span>层上同调<span class="aka-s">·</span>sheaf cohomology<span class="aka-s">·</span>H^n(X,M)<span class="aka-s">·</span>Definition 7.3.1<span class="aka-s">·</span>Def 7.3.1</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mo lspace="0em" rspace="0em">∙</mo></msup></mrow><annotation encoding="application/x-tex">M^{\bullet}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∙</span></span></span></span></span></span></span></span></span></span></span></span> 是景 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">C</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span></span></span> 上的<strong>阿贝尔层复形</strong>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><mi mathvariant="script">C</mi></mrow><annotation encoding="application/x-tex">X \in \mathcal{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span></span></span>。它在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上的<strong>第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个上同调群</strong>是</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><msup><mi>M</mi><mo lspace="0em" rspace="0em">∙</mo></msup><mo stretchy="false">)</mo><mo>:</mo><mo>=</mo><msup><mi>R</mi><mi>n</mi></msup><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><msup><mi>M</mi><mo lspace="0em" rspace="0em">∙</mo></msup><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">H^{n}(X, M^{\bullet}) := R^{n}\Gamma(X, M^{\bullet}),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7241em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∙</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7241em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∙</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mo>−</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Gamma(X, -)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">−</span><span class="mclose">)</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 处的<strong>截面函子</strong>。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>⭐ <strong>一句话</strong>：层上同调就是<strong>截面函子的右导出函子</strong>。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mo>−</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Gamma(X,-)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">−</span><span class="mclose">)</span></span></span></span> 左正合但不右正合（层化会捣乱），<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mi>n</mi></msup><mi mathvariant="normal">Γ</mi></mrow><annotation encoding="application/x-tex">R^{n}\Gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">Γ</span></span></span></span> 正是补上断口的那半个。</p><p><strong>为什么需要它</strong>：单看 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>0</mn></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>M</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>M</mi><mo stretchy="false">)</mo><mo>=</mo><mi>M</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^{0}(X, M) = \Gamma(X, M) = M(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> 只有整体截面；<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 起才开始记录「层粘不上去」的信息（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 分类层的主丛 / torsor）。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">19</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="prop.cohomology-of-coproduct.html">上同调与不交并</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>命题比较的就是层上同调 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^{n}(X, M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cohomology-as-ext.html">上同调就是 Ext</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>左边就是层上同调 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><msup><mi>M</mi><mo lspace="0em" rspace="0em">∙</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^{n}(X, M^{\bullet})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∙</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.presheaf-representable-acyclic.html">预层在可表示对象上没有高次上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论是「预层情形下可表示对象的上同调为零」，与层上同调对照。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="cor.cech-cohomology-spectral.html">Čech 到上同调的谱序列</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>推论把 Čech 上同调与层上同调用一条谱序列连起来。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.higher-cohomology-presheaf-zero.html">高次上同调预层的关联层为零</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>命题说的是层上同调给出的那个预层。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cohomology-functoriality.html">上同调的函子性</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>映射的两端都是层上同调。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.leray-spectral-sequence.html">Leray 谱序列</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>谱序列两端都是层上同调。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.topos-morphism-point.html">点给出的拓扑斯态射</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>拉回就是茎，后面算上同调全靠它。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cohomology-via-associated-sheaf.html">用关联层算上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>两边都是层上同调。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.cohomology-presheaf-H.html">层化不改变导出的整体截面</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>命题说「上同调预层的取值就是上同调」。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.acyclic-sheaf.html">无环层</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>无环性的定义用的就是<strong>层上同调</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.chaus-cech-eq-h.html">紧 Hausdorff 上 Čech 就是上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论是两类上同调相等。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.filtered-limit-cohomology.html">滤过极限的上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>说的是<strong>上同调</strong>怎么随极限变。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="cor.homotopy-invariant-cohomology.html">层上同调是同伦不变量</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论是关于<strong>层上同调</strong>的。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.stonean-cond-acyclic.html">Stonean 上凝聚阿贝尔群零调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>说的是凝聚态上同调群 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">d</mi></mrow><mi>n</mi></msubsup></mrow><annotation encoding="application/x-tex">H^{n}_{\mathrm{cond}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9664em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-2.4169em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">cond</span></span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span></span></span></span>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="lem.stone-constant-acyclic.html">Stone 上常系数零调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>说的是上同调群。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>右边是经典的<strong>层上同调</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="method.simplicial-cohomology.html">单纯方法算层上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>算的是<strong>层上同调</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^{n}(X, M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.filtered-limit-cohomology.html">滤过极限的上同调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论算的是<strong>层上同调</strong>。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.section-functor.html">截面函子</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>层上同调是<strong>截面函子</strong>的右导出函子。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.right-derived-functor.html">右导出函子</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mi>n</mi></msup><mo>:</mo><mo>=</mo><msup><mi>R</mi><mi>n</mi></msup><mi mathvariant="normal">Γ</mi></mrow><annotation encoding="application/x-tex">H^{n} := R^{n}\Gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">Γ</span></span></span></span>。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, Definition 7.3.1</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">5 条</span></h2><ul class="hooks"><li><span class="q">凝聚态上同调和层上同调什么关系</span><span class="also">也看 <a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a>、<a href="prop.chaus-cech-eq-h.html">紧 Hausdorff 上 Čech 就是上同调</a></span></li><li><span class="q">Dyckhoff 定理说的是什么</span><span class="also">也看 <a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a>、<a href="def.locally-compact.html">局部紧 Hausdorff 空间</a></span></li><li><span class="q">层上同调怎么算</span><span class="also">也看 <a href="method.simplicial-cohomology.html">单纯方法算层上同调</a>、<a href="def.cech-cohomology.html">Čech 上同调</a></span></li><li><span class="q">Čech 上同调什么时候等于层上同调</span><span class="also">也看 <a href="prop.chaus-cech-eq-h.html">紧 Hausdorff 上 Čech 就是上同调</a>、<a href="def.cech-cohomology.html">Čech 上同调</a></span></li><li><span class="q">紧块拼起来的空间上同调怎么算</span><span class="also">也看 <a href="prop.filtered-limit-cohomology.html">滤过极限的上同调</a>、<a href="prop.closed-inclusion-filtered-limit.html">紧块沿闭含入拼出的空间</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">38 个</span></h2><ul class="sibs"><li><a href="def.etale-space.html">étale 空间</a><span class="lay">layer 5</span></li><li><a href="def.etale-sheaf.html">étale 层</a><span class="lay">layer 16</span></li><li><a href="def.skyscraper-sheaf.html">天际线层</a><span class="lay">layer 16</span></li><li><a href="def.cech-cohomology.html">Čech 上同调</a><span class="lay">layer 17</span></li><li><a href="lem.cartan-eilenberg.html">Cartan–Eilenberg 分解</a><span class="lay">layer 17</span></li><li><a href="prop.cech-section-vanishing.html">带截面的覆盖上 Čech 零调</a><span class="lay">layer 17</span></li><li><a href="prop.etale-sheaf-examples.html">étale 层的例子</a><span class="lay">layer 17</span></li><li><a href="prop.skyscraper-stalks.html">天际线层的茎</a><span class="lay">layer 17</span></li><li><a href="prop.stone-acyclic.html">Stone 空间上的上同调为零</a><span class="lay">layer 17</span></li><li><a href="cor.homotopy-invariant-cohomology.html">层上同调是同伦不变量</a><span class="lay">layer 18</span></li><li><a href="def.acyclic-sheaf.html">无环层</a><span class="lay">layer 18</span></li><li><a href="method.simplicial-cohomology.html">单纯方法算层上同调</a><span class="lay">layer 18</span></li><li><a href="prop.cech-as-colim.html">Čech 上同调是沿覆盖筛的余极限</a><span class="lay">layer 18</span></li><li><a href="prop.cech-cochain-formula.html">Čech 上链的具体公式</a><span class="lay">layer 18</span></li><li><a href="prop.cech-interval-vanishing.html">区间上没有高阶 Čech 上同调</a><span class="lay">layer 18</span></li><li><a href="prop.chaus-cech-eq-h.html">紧 Hausdorff 上 Čech 就是上同调</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-as-ext.html">上同调就是 Ext</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-functoriality.html">上同调的函子性</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-of-coproduct.html">上同调与不交并</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-presheaf-H.html">层化不改变导出的整体截面</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-via-associated-sheaf.html">用关联层算上同调</a><span class="lay">layer 18</span></li><li><a href="prop.derived-pushforward-composition.html">推前的复合</a><span class="lay">layer 18</span></li><li><a href="prop.filtered-limit-cohomology.html">滤过极限的上同调</a><span class="lay">layer 18</span></li><li><a href="prop.higher-cohomology-presheaf-zero.html">高次上同调预层的关联层为零</a><span class="lay">layer 18</span></li><li><a href="prop.presheaf-representable-acyclic.html">预层在可表示对象上没有高次上同调</a><span class="lay">layer 18</span></li><li><a href="prop.skyscraper-injective.html">天际线层是内射层</a><span class="lay">layer 18</span></li><li><a href="prop.topos-morphism-derived.html">拓扑斯态射的导出函子</a><span class="lay">layer 18</span></li><li><a href="thm.cartan-leray.html">Cartan–Leray 谱序列</a><span class="lay">layer 18</span></li><li><a href="thm.leray-spectral-sequence.html">Leray 谱序列</a><span class="lay">layer 18</span></li><li><a href="cor.cech-cohomology-spectral.html">Čech 到上同调的谱序列</a><span class="lay">layer 19</span></li><li><a href="lem.covering-free-acyclic.html">覆盖给出的自由复形零调</a><span class="lay">layer 19</span></li><li><a href="prop.acyclic-equivalent-conditions.html">无环性的四条等价说法</a><span class="lay">layer 19</span></li><li><a href="prop.acyclic-iff-cech.html">无环 ⟺ Čech 上同调为零</a><span class="lay">layer 19</span></li><li><a href="prop.cech-higher-cohomology-presheaf.html">高次上同调预层没有 Čech 上同调</a><span class="lay">layer 19</span></li><li><a href="thm.pushforward-enough-injectives.html">足够多内射层</a><span class="lay">layer 19</span></li><li><a href="prop.cech-h1-equals-h1.html">一次 Čech 就是一次上同调</a><span class="lay">layer 20</span></li><li><a href="thm.paracompact-cech-equals-sheaf.html">仿紧空间上的 Čech 就是上同调</a><span class="lay">layer 20</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.sheaf-cohomology">在星图里打开「层上同调」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.sheaf-cohomology.md">Markdown 原文</a>　·　
+      <a href="def.sheaf-cohomology.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.sheaf-cohomology</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

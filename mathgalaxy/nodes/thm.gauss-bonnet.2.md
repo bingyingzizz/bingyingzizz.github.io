@@ -1,0 +1,180 @@
+# 高斯博内定理　`thm.gauss-bonnet`　·　续页（第 2 页）
+[在星图里打开](../#n=thm.gauss-bonnet)　·　第 1 页 [nodes/thm.gauss-bonnet.md](./thm.gauss-bonnet.md)
+
+## 陈述（续）
+ $M
+ \s
+ubs
+ete
+q \
+mat
+hbb
+{R}
+^{3
+}$ 
+是
+紧
+致
+、
+可
+定
+向
+的
+曲
+面
+（
+允
+许
+带
+分
+段
+光
+滑
+边
+界
+）
+。
+则
+$$\
+int
+_{M
+}K\
+,\m
+ath
+rm{
+d}A
++\i
+nt_
+{\p
+art
+ial
+ M}
+k_{
+g}\
+,\m
+ath
+rm{
+d}s
+ = 
+2\p
+i\c
+hi(
+M),
+$$
+其
+中
+ $\
+chi
+(M)
+$ 
+是
+欧
+拉
+示
+性
+数
+，
+$\m
+ath
+rm{
+d}A
+$ 
+是
+面
+积
+元
+，
+$\p
+art
+ial
+ M$
+ 
+取
+使
+ $M
+$ 
+落
+在
+左
+侧
+的
+定
+向
+。
+特
+别
+地
+，
+**
+闭
+**
+曲
+面
+（
+$\p
+art
+ial
+ M 
+= \
+emp
+tys
+et$
+）
+上
+$$\
+int
+_{M
+}K\
+,\m
+ath
+rm{
+d}A
+ = 
+2\p
+i\c
+hi(
+M).
+$$
+于
+是
+ $K
+$ 
+的
+全
+积
+分
+是
+一
+个
+**
+拓
+扑
+**
+量
+：
+球
+面
+ $4
+\pi
+$
+、
+环
+面
+ $0
+$
+、
+亏
+格
+ $g
+$ 
+的
+闭
+曲
+面
+ $4
+\pi
+(1-
+g)$
+。
+
+> 续见 [nodes/thm.gauss-bonnet.3.md](./thm.gauss-bonnet.3.md)

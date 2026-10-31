@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平坦阿贝尔层（flat） · 数学星图 MathGalaxy</title>
+<meta name="description" content="拓扑斯 T 中的阿贝尔群 P 叫平坦的，如果函子 M ⟼ P ⊗ℤ M 是正合的。 例：通常的阿贝尔群平坦 ⟺ 无挠。由此立刻得到： ℤ· X 总是平坦的 —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。 · English: flat">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.flat-abelian-sheaf.html">
+<link rel="alternate" type="text/markdown" href="def.flat-abelian-sheaf.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.flat-abelian-sheaf.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="平坦阿贝尔层（flat） · 数学星图 MathGalaxy">
+<meta property="og:description" content="拓扑斯 T 中的阿贝尔群 P 叫平坦的，如果函子 M ⟼ P ⊗ℤ M 是正合的。 例：通常的阿贝尔群平坦 ⟺ 无挠。由此立刻得到： ℤ· X 总是平坦的 —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。 · English: flat">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.flat-abelian-sheaf.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#C89A2B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flat-abelian-sheaf.html#concept","name":"平坦阿贝尔层","alternateName":"flat","description":"拓扑斯 T 中的阿贝尔群 P 叫平坦的，如果函子 M ⟼ P ⊗ℤ M 是正合的。 例：通常的阿贝尔群平坦 ⟺ 无挠。由此立刻得到： ℤ· X 总是平坦的 —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flat-abelian-sheaf.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.flat-abelian-sheaf","keywords":"同调代数, 平坦, 张量积"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"同调代数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#homology"},{"@type":"ListItem","position":3,"name":"阿贝尔层","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheaf"},{"@type":"ListItem","position":4,"name":"平坦阿贝尔层","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flat-abelian-sheaf.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#C89A2B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheaf">阿贝尔层</a><span class="sep">›</span><span aria-current="page">平坦阿贝尔层</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>平坦阿贝尔层<span class="en" lang="en">flat</span></h1>
+    <p class="full">平坦性</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 19</li><li>同调代数</li><li>阿贝尔层</li></ul>
+    <p class="idline"><code>def.flat-abelian-sheaf</code> · 同调代数 · 平坦 · 张量积</p>
+    <p class="aka"><span class="aka-k">又称</span>平坦阿贝尔层<span class="aka-s">·</span>flat<span class="aka-s">·</span>平坦性<span class="aka-s">·</span>无挠<span class="aka-s">·</span>Definition 5.3.3<span class="aka-s">·</span>Exercise 5.31</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>拓扑斯 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">T</mi></mrow><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span></span></span></span> 中的阿贝尔群 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 叫<strong>平坦的</strong>，如果函子</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mo>⟼</mo><mi>P</mi><msub><mo>⊗</mo><mi mathvariant="double-struck">Z</mi></msub><mi>M</mi></mrow><annotation encoding="application/x-tex">M \longmapsto P \otimes_{\mathbb{Z}} M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6943em;vertical-align:-0.011em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mbin">⊗</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3322em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbb mtight">Z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span></span><p>是<strong>正合</strong>的。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>例：<strong>通常的阿贝尔群平坦 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 无挠</strong>。由此立刻得到：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">Z</mi><mo>⋅</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">\mathbb{Z}\cdot X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">Z</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> <strong>总是平坦的</strong> —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="prop.flat-tensor-acyclic.html">平坦张量保持零调</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>前提是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 平坦。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.tensor-abelian-sheaf.html">阿贝尔层的张量积</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>平坦性说的是「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mo>⊗</mo><mi mathvariant="double-struck">Z</mi></msub><mo>−</mo></mrow><annotation encoding="application/x-tex">P \otimes_{\mathbb{Z}} -</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mbin">⊗</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3322em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbb mtight">Z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span> <strong>正合</strong>」。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, An introduction to condensed mathematics, §5.3</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">什么是平坦对象</span><span class="also">也看 <a href="def.tensor-abelian-sheaf.html">阿贝尔层的张量积</a>、<a href="def.abelian-category.html">加法 / 阿贝尔范畴</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">13 个</span></h2><ul class="sibs"><li><a href="def.presheaf-valued.html">取值一般的预层与层</a><span class="lay">layer 10</span></li><li><a href="prop.generators-abelian-sheaves.html">生成元给出阿贝尔层的生成元</a><span class="lay">layer 11</span></li><li><a href="def.abelian-sheaf.html">阿贝尔层</a><span class="lay">layer 16</span></li><li><a href="def.free-abelian-sheaf.html">自由阿贝尔群层</a><span class="lay">layer 17</span></li><li><a href="def.internal-hom.html">内 Hom</a><span class="lay">layer 17</span></li><li><a href="def.tensor-abelian-sheaf.html">阿贝尔层的张量积</a><span class="lay">layer 18</span></li><li><a href="prop.presheaf-free-projective.html">自由的预层是投射的</a><span class="lay">layer 18</span></li><li><a href="thm.abelian-sheaf-equiv.html">阿贝尔层即拓扑斯里的阿贝尔群</a><span class="lay">layer 18</span></li><li><a href="prop.free-sheaf-tensor.html">自由对象的张量积</a><span class="lay">layer 19</span></li><li><a href="prop.tensor-rhom-natural-map.html">张量与导出 Hom 的配对</a><span class="lay">layer 19</span></li><li><a href="thm.topos-abelian-grothendieck.html">拓扑斯上的阿贝尔群是 Grothendieck 范畴</a><span class="lay">layer 19</span></li><li><a href="prop.flat-tensor-acyclic.html">平坦张量保持零调</a><span class="lay">layer 20</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.flat-abelian-sheaf">在星图里打开「平坦阿贝尔层」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.flat-abelian-sheaf.md">Markdown 原文</a>　·　
+      <a href="def.flat-abelian-sheaf.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.flat-abelian-sheaf</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

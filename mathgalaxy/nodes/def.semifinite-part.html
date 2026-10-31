@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>半有限部分（the semifinite part of a measure） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 (X, M, μ ) 是测度空间。定义 μ0(E) := sup { μ(F) : F ⊆ E, F ∈ M, μ(F) &lt; ∞ } 则 μ 0 称为 μ 的半有限部分，它是一个半有限测度，且 μ 0 ≤ μ 。 · English: the semifinite part of a measure">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.semifinite-part.html">
+<link rel="alternate" type="text/markdown" href="def.semifinite-part.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.semifinite-part.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="半有限部分（the semifinite part of a measure） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 (X, M, μ ) 是测度空间。定义 μ0(E) := sup { μ(F) : F ⊆ E, F ∈ M, μ(F) &lt; ∞ } 则 μ 0 称为 μ 的半有限部分，它是一个半有限测度，且 μ 0 ≤ μ 。 · English: the semifinite part of a measure">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.semifinite-part.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1C86B0">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.semifinite-part.html#concept","name":"半有限部分","alternateName":"the semifinite part of a measure","description":"设 (X, M, μ ) 是测度空间。定义 μ0(E) := sup { μ(F) : F ⊆ E, F ∈ M, μ(F) < ∞ } 则 μ 0 称为 μ 的半有限部分，它是一个半有限测度，且 μ 0 ≤ μ 。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.semifinite-part.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.semifinite-part","keywords":"定义, 半有限"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"实变函数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure"},{"@type":"ListItem","position":3,"name":"测度的构造","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measure"},{"@type":"ListItem","position":4,"name":"半有限部分","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.semifinite-part.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#1C86B0">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure">实变函数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measure">测度的构造</a><span class="sep">›</span><span aria-current="page">半有限部分</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>半有限部分<span class="en" lang="en">the semifinite part of a measure</span></h1>
+    
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 16</li><li>实变函数</li><li>数学分析</li><li>测度的构造</li></ul>
+    <p class="idline"><code>def.semifinite-part</code> · 定义 · 半有限</p>
+    <p class="aka"><span class="aka-k">又称</span>半有限部分</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi mathvariant="script">M</mi><mo separator="true">,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(X, \mathcal{M}, \mu )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal">M</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mclose">)</span></span></span></span> 是测度空间。定义</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo><mo>:</mo><mo>=</mo><mi>sup</mi><mo>⁡</mo><mo stretchy="false">{</mo><mi>μ</mi><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo><mo>:</mo><mi>F</mi><mo>⊆</mo><mi>E</mi><mo separator="true">,</mo><mi>F</mi><mo>∈</mo><mi mathvariant="script">M</mi><mo separator="true">,</mo><mi>μ</mi><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo><mo>&lt;</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\mu_0(E) := \sup \{ \mu(F) : F \subseteq E, F \in \mathcal{M}, \mu(F) &lt; \infty \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sup</span><span class="mopen">{</span><span class="mord mathnormal">μ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal">M</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∞</span><span class="mclose">}</span></span></span></span></span><p>则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu _{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 称为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> 的<strong>半有限部分</strong>，它是一个半有限测度，且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>≤</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu _{0} \le \mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>它的作用：把一个「可能有很坏的无穷值」的测度修成半有限的，同时尽量保留原来的有限部分。</p><p>若 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> 本身半有限，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>=</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu _{0} = \mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> —— 所以这是「半有限化」操作。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.measure-space.html">有限 / σ-有限 / 半有限</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>半有限部分是针对「半有限」这个概念做的修补。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Folland, Real Analysis, §1.2</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">18 个</span></h2><ul class="sibs"><li><a href="def.measure.html">测度</a><span class="lay">layer 14</span></li><li><a href="def.outer-measure.html">外测度</a><span class="lay">layer 14</span></li><li><a href="def.caratheodory-measurable.html">μ*-可测集</a><span class="lay">layer 15</span></li><li><a href="def.finitely-additive.html">有限可加测度</a><span class="lay">layer 15</span></li><li><a href="def.lebesgue-stieltjes.html">Lebesgue–Stieltjes 测度</a><span class="lay">layer 15</span></li><li><a href="def.measure-space.html">有限 / σ-有限 / 半有限</a><span class="lay">layer 15</span></li><li><a href="def.null-set.html">零集与完备</a><span class="lay">layer 15</span></li><li><a href="def.premeasure.html">预测度</a><span class="lay">layer 15</span></li><li><a href="prop.measure-basic.html">测度的基本性质</a><span class="lay">layer 15</span></li><li><a href="def.ae.html">几乎处处</a><span class="lay">layer 16</span></li><li><a href="prop.ls-premeasure.html">F 给出的预测度</a><span class="lay">layer 16</span></li><li><a href="prop.outer-measure-induced.html">由预测度诱导外测度</a><span class="lay">layer 16</span></li><li><a href="thm.caratheodory.html">Carathéodory 定理</a><span class="lay">layer 16</span></li><li><a href="thm.completion.html">完备化定理</a><span class="lay">layer 16</span></li><li><a href="prop.caratheodory-extension.html">预测度还原</a><span class="lay">layer 17</span></li><li><a href="thm.caratheodory-uniqueness.html">扩张的唯一性</a><span class="lay">layer 18</span></li><li><a href="thm.ls-exists.html">F ↔ Borel 测度</a><span class="lay">layer 19</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.semifinite-part">在星图里打开「半有限部分」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.semifinite-part.md">Markdown 原文</a>　·　
+      <a href="def.semifinite-part.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.semifinite-part</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

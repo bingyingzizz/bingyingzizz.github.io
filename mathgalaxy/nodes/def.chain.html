@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>链 / 反链（chain） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 (P, ≼ ) 是偏序集， C ⊆ P 。 C 是链（也叫全序子集），当且仅当 C 中任意两个元素都可比： ∀ x, y ∈ C ( x ≼ y ∨ y ≼ x ) C 是反链，当且仅当 C 中任意两个不同元素都不可比。 约定： ∅ 与单点集都算链。 · English: chain">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain.html">
+<link rel="alternate" type="text/markdown" href="def.chain.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.chain.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="链 / 反链（chain） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 (P, ≼ ) 是偏序集， C ⊆ P 。 C 是链（也叫全序子集），当且仅当 C 中任意两个元素都可比： ∀ x, y ∈ C ( x ≼ y ∨ y ≼ x ) C 是反链，当且仅当 C 中任意两个不同元素都不可比。 约定： ∅ 与单点集都算链。 · English: chain">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2FA96B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain.html#concept","name":"链","alternateName":"chain","description":"设 (P, ≼ ) 是偏序集， C ⊆ P 。 C 是链（也叫全序子集），当且仅当 C 中任意两个元素都可比： ∀ x, y ∈ C ( x ≼ y ∨ y ≼ x ) C 是反链，当且仅当 C 中任意两个不同元素都不可比。 约定： ∅ 与单点集都算链。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.chain","keywords":"定义, 链"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"序理论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#order-theory"},{"@type":"ListItem","position":3,"name":"序结构","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#order.structure"},{"@type":"ListItem","position":4,"name":"链","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#2FA96B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#order-theory">序理论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#order.structure">序结构</a><span class="sep">›</span><span aria-current="page">链</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>链<span class="en" lang="en">chain</span></h1>
+    <p class="full">链 / 反链</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 6</li><li>序理论</li><li>序结构</li></ul>
+    <p class="idline"><code>def.chain</code> · 定义 · 链</p>
+    <p class="aka"><span class="aka-k">又称</span>链<span class="aka-s">·</span>chain<span class="aka-s">·</span>全序<span class="aka-s">·</span>线序</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>P</mi><mo separator="true">,</mo><mo>⪯</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(P, \preceq )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 是偏序集，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>⊆</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">C \subseteq P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>。</p><p><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 是链</strong>（也叫全序子集），当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 中任意两个元素都可比：</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>∈</mo><mi>C</mi><mo stretchy="false">(</mo><mi>x</mi><mo>⪯</mo><mi>y</mi><mo>∨</mo><mi>y</mi><mo>⪯</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\forall x, y \in C ( x \preceq y \vee  y \preceq x )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">∀</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span><p><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 是反链</strong>，当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 中任意两个不同元素都不可比。</p><p>约定：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">∅</span></span></span></span> 与单点集都算链。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>「链」这个词是佐恩引理、Hausdorff 极大原理的中心概念——它们说的都是「链能长到多大」。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">4</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.finchar.html">有限特征</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 是链 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>X</mi></mrow><annotation encoding="application/x-tex">\iff X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 的每个有限子集是链」——这是链族具有有限特征的原因，也是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>u</mi><mi>k</mi><mi>e</mi><mi>y</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi>H</mi><mi>a</mi><mi>u</mi><mi>s</mi><mi>d</mi><mi>o</mi><mi>r</mi><mi>f</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">Tukey \implies Hausdorff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal">a</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord mathnormal" style="margin-right:0.10764em;">ff</span></span></span></span> 的全部关键。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="lem.zorn.html">佐恩引理</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 的每个链都有上界」是佐恩引理的核心条件。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.hausdorff.html">Hausdorff 极大原理</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>整条原理就是在说「链可以长到极大」。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.filtered-directed.html">滤过范畴可换成有向集</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>有向集就是「偏序集 + 任意两元有上界」，用的是<strong>链</strong>那套序语言。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.poset.html">偏序集</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>链是偏序集的子集：定义里用到了偏序 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⪯</mo></mrow><annotation encoding="application/x-tex">\preceq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">⪯</span></span></span></span> 与可比性。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.subset.html">子集</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>链是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 的<strong>子集</strong>，只是额外要求两两可比。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Kunen, Set Theory, I.11</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">怎么用佐恩引理</span><span class="also">也看 <a href="lem.zorn.html">佐恩引理</a>、<a href="def.bound.html">界与确界</a>、<a href="def.finchar.html">有限特征</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">6 个</span></h2><ul class="sibs"><li><a href="def.poset.html">偏序集</a><span class="lay">layer 5</span></li><li><a href="def.bound.html">界与确界</a><span class="lay">layer 6</span></li><li><a href="def.order-iso.html">序同构</a><span class="lay">layer 6</span></li><li><a href="def.wellorder.html">良序集</a><span class="lay">layer 6</span></li><li><a href="def.finchar.html">有限特征</a><span class="lay">layer 7</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.chain">在星图里打开「链」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.chain.md">Markdown 原文</a>　·　
+      <a href="def.chain.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.chain</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

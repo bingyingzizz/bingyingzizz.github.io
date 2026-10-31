@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
+<meta name="description" content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」三层组织，每个概念一页，边是推出、等价与定义引用。人可读，AI 可查。">
+<!-- Google Search Console 的站点所有权验证（用户 2026-10-14 从 GSC 取的）。
+     ⛔ 别删这行：删掉 = Google 认为所有权失效，已经建好的索引会慢慢掉光。
+     ⚠️ 只放首页 ——「网址前缀」资源的验证就是查 https://bingyingzizz.github.io/ 这一个 URL。
+     ⚠️ 它是**纯 meta 标签**，不加载任何脚本，对页面零影响。 -->
+<meta name="google-site-verification" content="070Wv6Y6pKKy1mlkW4aZp7pPL5RTB0ivdwIITtjkYyY" />
+<link rel="canonical" href="https://bingyingzizz.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱">
+<meta property="og:description" content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」 三层组织，概念之间由推出、等价与定义引用连成一张可缩放、可检索的图。每个概念一页。 A zoomable, searchable knowledge graph of mathematics.">
+<meta property="og:url" content="https://bingyingzizz.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"数学星图 MathGalaxy","alternateName":"MathGalaxy","url":"https://bingyingzizz.github.io/","inLanguage":["zh-CN","en"],"description":"数学星图 MathGalaxy —— 可交互的数学知识图谱，把人可读、AI 可查的数学笔记组织成「星系 / 星团 / 恒星」三层尺度的依赖图。 An interactive knowledge graph of mathematics: definitions, theorems and proofs, usable as lecture notes, a study reference and a dependency map of prerequisites.","keywords":"mathematics, knowledge graph, lecture notes, study reference, prerequisites,definitions and theorems, dependency graph, category theory, condensed mathematics,homological algebra, topology, measure theory, set theory, ZFC, axiom of choice","audience":{"@type":"EducationalAudience","educationalRole":"student"},"sameAs":"https://github.com/bingyingzizz/MathGalaxy"}</script>
+<!-- 站点图标：三个点连成的一小段星座（内联 SVG，不额外请求） -->
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M9 9 23 15 12 24' stroke='%234f7cf5' stroke-width='1.7' fill='none' opacity='.5'/><circle cx='9' cy='9' r='3.2' fill='%234f7cf5'/><circle cx='23' cy='15' r='3.2' fill='%234f7cf5'/><circle cx='12' cy='24' r='3.2' fill='%234f7cf5'/></svg>">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ⚠️ h1 里必须有「数学星图 MathGalaxy」：搜索引擎靠这一行建立站点主题。
+       以前这里写的是用户名 —— 那正是「只有搜用户名才找得到」的直接原因
+       （实测 site: 查询全站只收到 3 个 URL）。个人标识保留在副标题与页脚。 -->
+  <h1 class="enter" style="--i:0">数学星图 MathGalaxy</h1>
+  <p class="sub enter" style="--i:1">bingyingzizz 的数学笔记与一些别的</p>
+
+  <h2 class="enter" style="--i:2">项目</h2>
+
+  <a class="card enter" style="--i:3" href="mathgalaxy/">
+    <b>数学星图 · MathGalaxy</b>
+    <span>可交互的数学知识图谱 —— 定理、定义、引理按「星系 / 星团 / 恒星」三层组织，
+    箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
+    内容覆盖 9 个数学领域，从 ZF 公理一路到凝聚态数学，还在长。</span>
+    <i class="go">→</i>
+  </a>
+
+  <h2 class="enter" style="--i:4">怎么读这张图</h2>
+
+  <a class="card enter" style="--i:5" href="read.html#reading">
+    <b data-vt>读图指南</b>
+    <span>三层尺度、四种边加一种「推论」、依赖深度、字段与深链 —— 先看这一份，图上那些线和大小
+    才不是装饰。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:6" href="read.html#notation">
+    <b data-vt>记号对照表</b>
+    <span>全图记号的唯一权威：包含 / 真包含 / 补集怎么写，每个希腊字母、花体字母
+    在哪儿是什么意思。写内容之前先过这一关。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:7" href="read.html#llms">
+    <b data-vt>检索协议</b>
+    <span>给 AI 的入口，也是给人看的地图：先读目录、再读星团清单、最后读单个节点。
+    要跟着图一步一步走，从这里开始。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:8" href="read.html#policy">
+    <b data-vt>内容准则</b>
+    <span>这张图为什么这么长出来的：每一层都由上一层构造出来、同一结论只收一份、
+    只保留最通用的版本、星团按「装置」分不按课程分。</span>
+    <i class="go">→</i>
+  </a>
+  <a class="card enter" style="--i:9" href="read.html#hubs">
+    <b data-vt>枢纽定理榜</b>
+    <span>按被引用次数排序 —— 哪些东西是真正的地基，值得优先学熟。</span>
+    <i class="go">→</i>
+  </a>
+
+  <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
+  <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
+    <b>graph.md</b>
+    <span>整张星图的 Markdown 全量导出（约 420 KB）。适合一次下载、本地处理；
+    ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
+    <i class="go">↓</i>
+  </a>
+  <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
+    <b>graph.json</b>
+    <span>机器可读的全量版本（约 550 KB），每条边带 strength（强边 / 弱边）与完整证明。
+    同样只适合下载，不适合单次抓取。</span>
+    <i class="go">↓</i>
+  </a>
+
+  <!-- ⭐ 2026-10-20：英文落地段落。为什么要有它 —— 英文查询要命中，页面上就得
+       真的有英文。之前整站只有中文（概念页 44% 连英文名都没有），英文搜索自然拿不到。
+       ⛔ 这里是**描述**，不是关键字堆砌：写的是这张图到底是什么、怎么用。
+       ⛔ 不要为了塞词把句子写坏 —— 人也要能读。 -->
+  <h2 class="enter" style="--i:13">About · English</h2>
+  <section class="about-en enter" style="--i:14" lang="en">
+    <p><b>MathGalaxy</b> is an interactive knowledge graph of mathematics. Every definition,
+    theorem and lemma is a node; every arrow is a derivation. Zoom out and you see the
+    branches of the subject; zoom in and you read a single statement together with its
+    remarks, its references, and the proofs that tie it to what it rests on.</p>
+    <p>The graph is organised at three scales — a <b>galaxy</b> (a branch of mathematics),
+    a <b>cluster</b> (a self-contained apparatus built to make one thing work), and a
+    <b>star</b> (one result). It runs from the ZFC axioms and the equivalence chain around
+    the axiom of choice, through algebra, topology, measure theory and homological algebra,
+    up to category theory and condensed mathematics — the parts of the subject a student
+    actually has to walk through in dependency order.</p>
+    <p>It doubles as <b>lecture notes</b>, a <b>study reference</b> and a <b>course companion</b>:
+    read a topic along its prerequisite chain instead of in the order a textbook prints it,
+    and when a proof cites something you have not met yet, follow the edge. Each concept has
+    its own page with statement, notes and references; the whole graph is exported as
+    <code>graph.json</code>, <code>graph.md</code> and <code>llms.txt</code> as well, so an AI
+    agent can look a result up without first guessing the Chinese terminology.</p>
+    <p class="meta-en">Content is licensed CC BY 4.0; the engine is MIT and has no dependencies.
+    Interface and prose are Chinese-first, with English names on the concepts that have them.</p>
+  </section>
+
+  <footer class="enter" style="--i:15">
+    最近更新：2026-10-31 ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
+    <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+  </footer>
+
+</div>
+
+<script>
+/* 点卡片换页时，让**卡片标题**平滑变成阅读页的大标题（View Transitions 的
+   共用元素变形）。名字只能有一个元素持有，所以先把其它的清掉再挂。
+   浏览器不支持就是普通跳转，这段等于没写。 */
+(function(){
+  var marks = document.querySelectorAll('[data-vt]');
+  marks.forEach(function(el){
+    var link = el.closest('a');
+    if(!link) return;
+    link.addEventListener('click', function(e){
+      if(e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      marks.forEach(function(m){ m.style.viewTransitionName = ''; });
+      el.style.viewTransitionName = 'doc-hero';
+    });
+  });
+})();
+</script>
+</body>
+</html>

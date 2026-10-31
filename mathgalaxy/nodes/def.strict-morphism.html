@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>严格态射（strict morphism） · 数学星图 MathGalaxy</title>
+<meta name="description" content="态射 f : X → Y 叫严格的（strict），如果它在余像上的分解 X ↠ coim f → im f ↪ Y 中间那一步是同构 —— 即「余像与像之间的自然映射」可逆。 · English: strict morphism">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.strict-morphism.html">
+<link rel="alternate" type="text/markdown" href="def.strict-morphism.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.strict-morphism.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="严格态射（strict morphism） · 数学星图 MathGalaxy">
+<meta property="og:description" content="态射 f : X → Y 叫严格的（strict），如果它在余像上的分解 X ↠ coim f → im f ↪ Y 中间那一步是同构 —— 即「余像与像之间的自然映射」可逆。 · English: strict morphism">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.strict-morphism.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#B03A5B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.strict-morphism.html#concept","name":"严格态射","alternateName":"strict morphism","description":"态射 f : X → Y 叫严格的（strict），如果它在余像上的分解 X ↠ coim f → im f ↪ Y 中间那一步是同构 —— 即「余像与像之间的自然映射」可逆。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.strict-morphism.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.strict-morphism","keywords":"范畴论, 严格, 余像, 像"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"范畴论","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#category"},{"@type":"ListItem","position":3,"name":"单满、子对象与像","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#cat.structure"},{"@type":"ListItem","position":4,"name":"严格态射","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.strict-morphism.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#B03A5B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#category">范畴论</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#cat.structure">单满、子对象与像</a><span class="sep">›</span><span aria-current="page">严格态射</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>严格态射<span class="en" lang="en">strict morphism</span></h1>
+    
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 16</li><li>范畴论</li><li>单满、子对象与像</li></ul>
+    <p class="idline"><code>def.strict-morphism</code> · 范畴论 · 严格 · 余像 · 像</p>
+    <p class="aka"><span class="aka-k">又称</span>严格态射<span class="aka-s">·</span>strict morphism<span class="aka-s">·</span>严格<span class="aka-s">·</span>Exercise 1.33</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>态射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 叫<strong>严格的</strong>（strict），如果它在<strong>余像</strong>上的分解 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>↠</mo><mi mathvariant="normal">coim</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">im</mi><mo>⁡</mo><mi>f</mi><mo>↪</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \twoheadrightarrow \operatorname{coim} f \to \operatorname{im} f \hookrightarrow Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6969em;vertical-align:-0.0135em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">↠</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop"><span class="mord mathrm">coim</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop"><span class="mord mathrm">im</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 中间那一步是<strong>同构</strong> —— 即「余像与像之间的自然映射」可逆。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>⭐ <strong>「严格」是阿贝尔范畴与一般范畴的分水岭</strong>：阿贝尔范畴的<strong>每条态射都严格</strong>；而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">T</mi><mi mathvariant="bold">o</mi><mi mathvariant="bold">p</mi></mrow><annotation encoding="application/x-tex">\mathbf{Top}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8805em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathbf">Top</span></span></span></span></span> 里不严格。</p><p><strong>反例为什么在拓扑里出现</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">c</mi></mrow></msup><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}^{\mathrm{disc}} \to \mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">disc</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 是单态射（同构于自己的像），但它的<strong>余像</strong>平凡（因为像在余核里被商掉了），于是余像 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 像那一步不是同构。<strong>这正是一条 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">T</mi><mi mathvariant="bold">o</mi><mi mathvariant="bold">p</mi></mrow><annotation encoding="application/x-tex">\mathbf{Top}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8805em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathbf">Top</span></span></span></span></span> 上「拓扑阿贝尔群不是阿贝尔范畴」的原因。</strong></p><p><strong>在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">S</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">t</mi></mrow><annotation encoding="application/x-tex">\mathbf{Set}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord"><span class="mord mathbf">Set</span></span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">b</mi></mrow><annotation encoding="application/x-tex">\mathbf{Ab}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathbf">Ab</span></span></span></span></span> 里每条态射都严格</strong>：那边余像与像都能具体算成分解，中间那个映射就是恒等。</p></section>
+
+  
+
+  
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.image.html">像 / 余像</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>严格性比较的是<strong>余像与像</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.equalizer.html">等化子 / 余等化子</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>余像与像都是余等化子 / 等化子的语言。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, Exercise 1.33</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">6 个</span></h2><ul class="sibs"><li><a href="def.elements-category.html">元素范畴</a><span class="lay">layer 11</span></li><li><a href="def.mono.html">单态射 / 满态射 / 同构</a><span class="lay">layer 13</span></li><li><a href="def.subobject.html">子对象</a><span class="lay">layer 14</span></li><li><a href="prop.slice-fully-faithful-mono.html">单态射的切片刻画</a><span class="lay">layer 14</span></li><li><a href="def.image.html">像 / 余像</a><span class="lay">layer 15</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.strict-morphism">在星图里打开「严格态射」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.strict-morphism.md">Markdown 原文</a>　·　
+      <a href="def.strict-morphism.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.strict-morphism</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

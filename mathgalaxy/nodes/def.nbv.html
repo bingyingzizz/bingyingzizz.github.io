@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>规范有界变差函数：右连续且 的有界变差函数（normalised function of bounded variation） · 数学星图 MathGalaxy</title>
+<meta name="description" content="NBV := { F ∈ BV : F 右连续, 且 F(-∞) = 0 } 为什么要加这两个条件：因为下一条定理要建立 ℝ 上的复 Borel 测度 rightarrow NBV 的一一对应，而对应式是 F(x) = μ((-∞, x]) 右边那个函数自动右连续、且在 -∞ 处为 0。把左边限制成 NBV，对应… · English: normalised function of bounded variation">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.nbv.html">
+<link rel="alternate" type="text/markdown" href="def.nbv.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.nbv.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="规范有界变差函数：右连续且 的有界变差函数（normalised function of bounded variation） · 数学星图 MathGalaxy">
+<meta property="og:description" content="NBV := { F ∈ BV : F 右连续, 且 F(-∞) = 0 } 为什么要加这两个条件：因为下一条定理要建立 ℝ 上的复 Borel 测度 rightarrow NBV 的一一对应，而对应式是 F(x) = μ((-∞, x]) 右边那个函数自动右连续、且在 -∞ 处为 0。把左边限制成 NBV，对应… · English: normalised function of bounded variation">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.nbv.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1C86B0">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.nbv.html#concept","name":"规范有界变差函数","alternateName":"normalised function of bounded variation","description":"NBV := { F ∈ BV : F 右连续, 且 F(-∞) = 0 } 为什么要加这两个条件：因为下一条定理要建立 ℝ 上的复 Borel 测度 rightarrow NBV 的一一对应，而对应式是 F(x) = μ((-∞, x]) 右边那个函数自动右连续、且在 -∞ 处为 0。把左边限制成 NBV，对应…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.nbv.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.nbv","keywords":"定义, NBV"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"实变函数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure"},{"@type":"ListItem","position":3,"name":"有界变差与绝对连续","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.bv"},{"@type":"ListItem","position":4,"name":"规范有界变差函数","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.nbv.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#1C86B0">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure">实变函数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.bv">有界变差与绝对连续</a><span class="sep">›</span><span aria-current="page">规范有界变差函数</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>规范有界变差函数<span class="en" lang="en">normalised function of bounded variation</span></h1>
+    <p class="full">规范有界变差函数：右连续且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">F(-\infty) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">∞</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 的有界变差函数</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 17</li><li>实变函数</li><li>数学分析</li><li>有界变差与绝对连续</li></ul>
+    <p class="idline"><code>def.nbv</code> · 定义 · NBV</p>
+    <p class="aka"><span class="aka-k">又称</span>NBV<span class="aka-s">·</span>规范有界变差</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>N</mi><mi>B</mi><mi>V</mi><mo>:</mo><mo>=</mo><mo stretchy="false">{</mo><mi>F</mi><mo>∈</mo><mi>B</mi><mi>V</mi><mo>:</mo><mi>F</mi><mtext> 右连续</mtext><mo separator="true">,</mo><mtext> 且</mtext><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">NBV := \{ F \in BV : F\text{ 右连续},\text{ 且} F(-\infty) = 0 \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">NB</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">右连续</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">且</span></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">∞</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mclose">}</span></span></span></span></span>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>为什么要加这两个条件：因为下一条定理要建立<strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 上的复 Borel 测度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo><mi>N</mi><mi>B</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\leftrightarrow NBV</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">NB</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></strong> 的一一对应，而对应式是</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>μ</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mo>−</mo><mi mathvariant="normal">∞</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(x) = \mu((-\infty, x])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">μ</span><span class="mopen">((</span><span class="mord">−</span><span class="mord">∞</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">])</span></span></span></span></span><p>右边那个函数自动右连续、且在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span> 处为 0。把左边限制成 NBV，对应才是<strong>双射</strong>而不是满射。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">3</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="lem.nbv-variation.html">全变差的规范有界变差性质</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>引理要为 NBV 服务（T_F 也要落在 NBV 里）。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="cor.integral-is-ac-nbv.html">积分得到的函数绝对连续且规范有界变差</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>推论同时落在 NBV 与 AC 的交里。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.nbv-derivative.html">规范有界变差函数的导数与测度的关系</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>前提就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>∈</mo><mi>N</mi><mi>B</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">F \in NBV</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">NB</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.bounded-variation.html">有界变差函数</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>B</mi><mi>V</mi><mo>:</mo><mo>=</mo><mo stretchy="false">{</mo><mi>F</mi><mo>∈</mo><mi>B</mi><mi>V</mi><mo>:</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">NBV := \{ F \in BV : F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">NB</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> 右连续且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F(-\infty) = 0 \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">∞</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mclose">}</span></span></span></span>，整个定义建立在<strong>有界变差</strong>之上。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.borel.html">Borel σ-代数</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>加这两个条件的目的，是与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 上的<strong>复 Borel 测度</strong>一一对应。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Folland, Real Analysis, Theorem 3.29</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">16 个</span></h2><ul class="sibs"><li><a href="def.ac-function.html">绝对连续函数</a><span class="lay">layer 14</span></li><li><a href="def.bounded-variation.html">有界变差函数</a><span class="lay">layer 16</span></li><li><a href="lem.ac-subset-bv.html">绝对连续蕴含有界变差</a><span class="lay">layer 17</span></li><li><a href="lem.variation-monotone.html">T_F ± F 递增</a><span class="lay">layer 17</span></li><li><a href="prop.bv-examples.html">有界变差函数的例子与基本性质</a><span class="lay">layer 17</span></li><li><a href="thm.monotone-differentiable.html">单调函数几乎处处可导</a><span class="lay">layer 17</span></li><li><a href="lem.nbv-variation.html">全变差的规范有界变差性质</a><span class="lay">layer 18</span></li><li><a href="prop.monotone-integral-derivative.html">递增函数的导数积分不等式</a><span class="lay">layer 18</span></li><li><a href="thm.bv-jordan.html">有界变差函数的 Jordan 分解</a><span class="lay">layer 18</span></li><li><a href="prop.bv-regularity.html">有界变差函数的正则性</a><span class="lay">layer 19</span></li><li><a href="thm.borel-measure-nbv.html">测度与规范有界变差函数的一一对应</a><span class="lay">layer 19</span></li><li><a href="cor.integral-is-ac-nbv.html">积分得到的函数绝对连续且规范有界变差</a><span class="lay">layer 20</span></li><li><a href="prop.nbv-derivative.html">规范有界变差函数的导数与测度的关系</a><span class="lay">layer 20</span></li><li><a href="prop.ac-iff-measure-ac.html">函数绝对连续 ⟺ 测度绝对连续</a><span class="lay">layer 21</span></li><li><a href="thm.ftc-lebesgue.html">微积分基本定理（Lebesgue 版）</a><span class="lay">layer 22</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.nbv">在星图里打开「规范有界变差函数」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.nbv.md">Markdown 原文</a>　·　
+      <a href="def.nbv.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.nbv</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

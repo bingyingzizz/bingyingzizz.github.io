@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正规空间（normal space） · 数学星图 MathGalaxy</title>
+<meta name="description" content="拓扑空间 X 叫正规的，如果它是 T1 的，并且任意两个不交闭集 A, B 都能被开集分开：存在开集 U ⊇ A 、 V ⊇ B 使 U ∩ V = ∅ 。 把「不交闭集」换成「一点与不含该点的闭集」，得到的是正则空间；再换成「两点」，得到的就是 Hausdorff。 · English: normal space">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-space.html">
+<link rel="alternate" type="text/markdown" href="def.normal-space.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.normal-space.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="正规空间（normal space） · 数学星图 MathGalaxy">
+<meta property="og:description" content="拓扑空间 X 叫正规的，如果它是 T1 的，并且任意两个不交闭集 A, B 都能被开集分开：存在开集 U ⊇ A 、 V ⊇ B 使 U ∩ V = ∅ 。 把「不交闭集」换成「一点与不含该点的闭集」，得到的是正则空间；再换成「两点」，得到的就是 Hausdorff。 · English: normal space">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-space.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#D9649F">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-space.html#concept","name":"正规空间","alternateName":"normal space","description":"拓扑空间 X 叫正规的，如果它是 T1 的，并且任意两个不交闭集 A, B 都能被开集分开：存在开集 U ⊇ A 、 V ⊇ B 使 U ∩ V = ∅ 。 把「不交闭集」换成「一点与不含该点的闭集」，得到的是正则空间；再换成「两点」，得到的就是 Hausdorff。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-space.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.normal-space","keywords":"拓扑, 分离公理, 正规, 闭集"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"拓扑学","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology"},{"@type":"ListItem","position":3,"name":"拓扑空间","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general"},{"@type":"ListItem","position":4,"name":"正规空间","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-space.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#D9649F">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology">拓扑学</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#topology.general">拓扑空间</a><span class="sep">›</span><span aria-current="page">正规空间</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>正规空间<span class="en" lang="en">normal space</span></h1>
+    
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 6</li><li>拓扑学</li><li>拓扑空间</li></ul>
+    <p class="idline"><code>def.normal-space</code> · 拓扑 · 分离公理 · 正规 · 闭集</p>
+    <p class="aka"><span class="aka-k">又称</span>正规空间<span class="aka-s">·</span>normal space<span class="aka-s">·</span>正则空间<span class="aka-s">·</span>分离公理<span class="aka-s">·</span>Definition 2.1.1<span class="aka-s">·</span>Def 2.1.1</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>拓扑空间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 叫<strong>正规的</strong>，如果它是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的，并且任意两个<strong>不交闭集</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A, B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 都能被开集分开：存在开集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊇</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">U \supseteq A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊇</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">V \supseteq B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊇</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 使 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∩</mo><mi>V</mi><mo>=</mo><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">U \cap V = \emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">∅</span></span></span></span>。</p><p>把「不交闭集」换成「一点与不含该点的闭集」，得到的是<strong>正则</strong>空间；再换成「两点」，得到的就是 <strong>Hausdorff</strong>。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>分离公理的层级</strong>（都是往上加强）：</p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：单点是闭集；</li><li>Hausdorff：两点可被开集分开；</li><li>正则：点与不含它的闭集可分开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> Hausdorff；</li><li><strong>正规</strong>：两个不交闭集可分开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 正则。</li></ul><p><strong>紧 Hausdorff <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 正规</strong>（这是紧性最常用的一个推论：两个不交闭集在紧空间里能被有限多个开集对分开）。所以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">\beta I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> 这些空间都是正规的 —— 于是 Urysohn 引理在那里永远能用。</p><p>⚠️ <strong>正规性不是遗传的</strong>：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">7</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="lem.shrink.html">收缩引理</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>收缩的每一步都是把「闭集含于开集」用正规性夹一次；这一步只用正规性，不用仿紧。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.urysohn-metrization.html">乌雷松度量化定理</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>证明的中间站：正则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span> Lindelöf <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 正规，Urysohn 引理才有前提。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.metrizable-normal.html">可度量化空间的性质</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论第 2 条：可度量化 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 正规，证明用距离函数造分离函数。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.paracompact-partition-unity.html">仿紧性与单位分解</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>第二条说的就是正规空间里的单位分解。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.normal-locally-closed.html">正规空间的邻域里有闭邻域</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>命题的前提是正规 Hausdorff。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="lem.urysohn.html">Urysohn 引理</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>引理说的正是「正规 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 存在这样的函数」。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="thm.tietze-banach.html">Tietze 延拓（Banach 值）</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>前提是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> <strong>正规</strong>。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.hausdorff.html">Hausdorff 空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>正规要求在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 之上再加强（闭集之间可以分开）。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.closed-set.html">闭集与闭包</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>正规性说的是<strong>不交闭集</strong>能被开集分开。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Munkres, Topology</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">2 条</span></h2><ul class="hooks"><li><span class="q">Urysohn 引理是什么</span><span class="also">也看 <a href="lem.urysohn.html">Urysohn 引理</a>、<a href="def.hausdorff.html">Hausdorff 空间</a></span></li><li><span class="q">Tietze 延拓在凝聚态数学里怎么用</span><span class="also">也看 <a href="thm.tietze-banach.html">Tietze 延拓（Banach 值）</a>、<a href="thm.real-banach-chaus-acyclic.html">实 Banach 在紧 Hausdorff 上零调</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">24 个</span></h2><ul class="sibs"><li><a href="def.topology.html">拓扑空间与开集</a><span class="lay">layer 4</span></li><li><a href="def.closed-set.html">闭集与闭包</a><span class="lay">layer 5</span></li><li><a href="def.connected.html">连通与连通分量</a><span class="lay">layer 5</span></li><li><a href="def.continuous-map.html">连续映射</a><span class="lay">layer 5</span></li><li><a href="def.hausdorff.html">Hausdorff 空间</a><span class="lay">layer 5</span></li><li><a href="def.subspace-topology.html">子空间拓扑</a><span class="lay">layer 5</span></li><li><a href="def.topology-base.html">基与子基</a><span class="lay">layer 5</span></li><li><a href="def.clopen.html">闭开集</a><span class="lay">layer 6</span></li><li><a href="def.product-topology.html">积拓扑</a><span class="lay">layer 6</span></li><li><a href="def.quotient-topology.html">商拓扑</a><span class="lay">layer 6</span></li><li><a href="def.second-countable.html">第二可数空间</a><span class="lay">layer 6</span></li><li><a href="prop.closed-map-neighborhood-basis.html">闭映射的邻域基</a><span class="lay">layer 6</span></li><li><a href="prop.connected-image-closure.html">连通的像与闭包</a><span class="lay">layer 6</span></li><li><a href="def.first-countable.html">第一可数空间</a><span class="lay">layer 7</span></li><li><a href="def.homeomorphism.html">同胚</a><span class="lay">layer 7</span></li><li><a href="prop.normal-locally-closed.html">正规空间的邻域里有闭邻域</a><span class="lay">layer 7</span></li><li><a href="prop.hausdorff-reflective.html">Hausdorff 空间是反射子范畴</a><span class="lay">layer 11</span></li><li><a href="def.locally-compact.html">局部紧 Hausdorff 空间</a><span class="lay">layer 15</span></li><li><a href="lem.urysohn.html">Urysohn 引理</a><span class="lay">layer 15</span></li><li><a href="prop.compact-basic-operations.html">紧性的基本操作</a><span class="lay">layer 15</span></li><li><a href="thm.tykhonov.html">Tychonoff 定理</a><span class="lay">layer 15</span></li><li><a href="prop.paracompact-partition-unity.html">仿紧性与单位分解</a><span class="lay">layer 16</span></li><li><a href="prop.quotient-of-compact.html">紧空间的商紧</a><span class="lay">layer 16</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.normal-space">在星图里打开「正规空间」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.normal-space.md">Markdown 原文</a>　·　
+      <a href="def.normal-space.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.normal-space</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

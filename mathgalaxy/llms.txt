@@ -1,0 +1,24 @@
+# 数学星图 MathGalaxy
+
+MathGalaxy: a searchable knowledge graph of mathematics.
+1288 nodes / 2337 edges · 13 galaxies / 88 clusters · content v0.9.1.
+Chinese is the source; 1288 nodes have English pages.
+13 星系 / 88 星团 / 1288 节点 / 2337 连线。数据根 = 本文件所在目录。线上：https://bingyingzizz.github.io/mathgalaxy/
+
+## 检索协议
+
+0. `alias.md` 大白话 / 英文名 → 节点 id。
+1. `index.md` 星系 → `index/<星系id>.md` 星团 → `index/<星团id>.md` 节点清单。
+2. `nodes/<节点id>.md` 陈述 + 出入边（每条带证明路径）；
+   说明在 `notes/<节点id>.md`，边的正文在 `proofs/<边id>.md`。
+3. **英文**：有英文名/摘要的节点另有 `nodes/<节点id>.en.md`
+   （英文名 + 摘要；陈述与证明仍以中文页为准）。文档英文版是 `*.en.md`。
+   ⛔ 没有英文版的就按中文页读，别猜。
+顺着 id 继续读就是沿图走。
+
+⚠ 单次抓取约 1000 词元（还会转义 `# * [ ] \` _ ~`）；放不下的分页成 `<路径>.2.md`，
+首页永远是 `<路径>.md`。`graph.json` / `graph.md` 只下载，别用来检索。
+
+## 其它
+
+`reading.md` 结构 · `policy.md` 准则 · `hubs.md` 枢纽 · `notation.md` 记号表。LaTeX 走 KaTeX；`label` 等字段是纯文本。

@@ -1,0 +1,234 @@
+# 许可与引用
+
+MathGalaxy · 数学星图 —— 许可与引用
+
+    内容（图、笔记、导出产物）：  CC BY 4.0      SPDX: CC-BY-4.0
+    代码（src/ tools/ site/）：    MIT            SPDX: MIT
+
+    内容许可官方地址：https://creativecommons.org/licenses/by/4.0/
+    内容许可的法律文本完整原文：本仓库 LICENSE-CC-BY-4.0.txt
+    （逐字节复制自 creativecommons.org，未改一字 —— 中文部分只是说明，
+     **以 CC BY 4.0 的法律文本为准**。）
+
+
+==========================================================================
+一、图的内容 —— CC BY 4.0
+==========================================================================
+
+    范围：节点、边、证明、笔记，以及导出的 graph.json / graph.md /
+    nodes/ 等一切产物。
+
+    © 2026 bingyingzizz。本部分以 **Creative Commons Attribution 4.0
+    国际许可协议（CC BY 4.0）** 授权。
+
+    你可以自由地：
+
+      · 阅读、检索、链接、引用、复述；
+      · **整份转载、镜像、改名再分发**；
+      · 并进别的知识库 / 语料库 / 数据集；
+      · 商用；
+      · 抓取进 AI 训练或检索管线。
+
+    ——包括整份转载与镜像，**都不需要另行取得许可**。
+
+    ⭐ 唯一的法律条件是 **署名**（CC BY 4.0 第 3(a) 条）。署名请包含：
+
+      · 作者与作品名：MathGalaxy · 数学星图，作者 bingyingzizz；
+      · 来源链接：https://github.com/bingyingzizz/MathGalaxy
+        （或站点 https://bingyingzizz.github.io/mathgalaxy/）；
+      · 许可说明：CC BY 4.0，并给出许可链接
+        https://creativecommons.org/licenses/by/4.0/ ；
+      · 若做过修改，注明「已修改」。
+
+    例：
+
+      MathGalaxy · 数学星图，作者 bingyingzizz，以 CC BY 4.0 授权。
+      https://bingyingzizz.github.io/mathgalaxy/
+
+    ---------------------------------------------------------------
+    ⭐⭐ 引用请求（**不是许可条件，没有法律强制力**，但强烈建议）
+    ---------------------------------------------------------------
+
+    引用、摘录或复述某一条内容时，请写明**节点 id** 与**内容版本号**：
+
+        参见 MathGalaxy 节点 thm.cantor（内容 v0.9.1）。
+
+    推荐格式与「怎样算合格」见下面的「五」；英文写法见「四」。
+
+    为什么这么请求：这张图是逐条笔记整理出来的，节点 id 是读者唯一能追回
+    原始陈述与完整证明的线索。标了 id，别人才能自己去看全貌，而不是只看
+    到被摘走的一句。
+
+    ⚠️ 这是**请求**。CC BY 4.0 不允许附加额外条件，所以「必须标 id」
+    不再是一条许可条件 —— 不标 id 不构成违约。它仍然是这套图的引用规范。
+
+    ---------------------------------------------------------------
+    内容版本号（整理惯例，同样不是附加条件）
+    ---------------------------------------------------------------
+
+    形如 v0.9.1。真源是 tools/ids.snapshot.json；由
+    `bun tools/idstable.mjs --apply` 递增（patch +1，可 --version 指定）。
+    节点 id 跨版本稳定；某一版的 id 全集就在那个快照文件里。
+
+    ⚠️ 本次迁移（2026-10-16）之前已经发布的版本，按当时的条款
+    （保留所有权利）授权；迁移只对之后的版本生效，历史版本无法收回。
+
+
+==========================================================================
+二、代码 —— MIT
+==========================================================================
+
+    范围：src/ 、tools/ 、site/ 下的源码。
+
+    MIT License
+
+    Copyright (c) 2026 bingyingzizz
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+
+==========================================================================
+三、第三方
+==========================================================================
+
+    数学定理本身没有版权；图里的数学内容取自教科书与笔记，整理方式与文字
+    归作者。
+
+    KaTeX（src/ui/katex.min.js 与 src/ui/katex.min.css）为 MIT 许可。
+
+
+==========================================================================
+四、English citation guide
+==========================================================================
+
+    **Licence.** Graph content: CC BY 4.0 (SPDX: `CC-BY-4.0`) — see
+    `LICENSE-CC-BY-4.0.txt` for the full legal code. Code: MIT.
+
+    Content © 2026 bingyingzizz. You may copy, redistribute, mirror, rename,
+    adapt and reuse the content, including commercially, provided you give
+    attribution. Attribution must include: the work and its author
+    (MathGalaxy, bingyingzizz), a link to the source, a link to the licence
+    (https://creativecommons.org/licenses/by/4.0/), and an indication of any
+    changes you made.
+
+    **Citation request (a request, not a licence condition).** Every statement
+    carries a stable node id, and the graph carries a content version. When you
+    cite, quote or restate a statement, please name the node and the version:
+
+    ```
+    Cite as: MathGalaxy node <id> (content vX.Y.Z), https://bingyingzizz.github.io/mathgalaxy/nodes/<id>.html
+    ```
+
+    Examples:
+
+    ```
+    MathGalaxy, node thm.cantor (content v0.9.1),
+    https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cantor.html
+
+    See MathGalaxy node def.condensed-set (content v0.9.1) for the full statement.
+    ```
+
+    Machine-readable: `graph.json` → `meta.version` (content version) and
+    `nodes[].id`; every concept page carries the English name and a
+    `DefinedTerm` JSON-LD block. Node ids are stable across versions — they are
+    the citation contract; the id set per version is in `tools/ids.snapshot.json`.
+
+    Content: © 2026 bingyingzizz, CC BY 4.0. Code: MIT. KaTeX: MIT.
+
+
+==========================================================================
+五、怎样算满足引用规范
+==========================================================================
+
+    引用请求要的是「节点 id + 内容版本」。
+
+    | 项 | 建议 | 说明 |
+    |---|---|---|
+    | 节点 id | ✅ | 形如 thm.cantor / def.sheaf / ax.choice。前缀 + 点 + 名字，全库唯一、跨版本稳定 |
+    | 内容版本 | ✅ | 形如 v0.9.1。真源 = tools/ids.snapshot.json；产物里都写着（graph.json 的 meta.version、llms.txt 的「内容 vX.Y.Z」、每个概念页页脚）|
+    | 链接 | ➕ 推荐 | https://bingyingzizz.github.io/mathgalaxy/nodes/<id>.html —— 有了链接，别人一点就能核对；纸质媒介可以写域名 + id |
+    | 英文名 | ➕ 可选 | 概念页的 English: 行或 h1 副标题里就是它（覆盖不全，缺的会回落中文名）|
+
+    合格的样子（三选一，任一即可）：
+
+        1. 参见 MathGalaxy 节点 thm.cantor（内容 v0.9.1）。
+        2. MathGalaxy, node thm.cantor (content v0.9.1),
+           https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cantor.html
+        3. [MathGalaxy thm.cantor v0.9.1](https://…/nodes/thm.cantor.html)
+
+    不合格的样子：
+
+        · 只写「MathGalaxy」「数学星图」而没有任何 id ⇒ 读者找不回是哪一条；
+        · 只写 id 不写版本 ⇒ 无法判断引的是哪一版（图在长，陈述会精化）；
+        · 把 id 抹掉、只把句子摘走，或把 id 改成自己的编号（如 T-42）。
+
+    模板（可直接复制）：
+
+        正文夹注（中文）   参见 MathGalaxy 节点 thm.cantor（内容 v0.9.1）。
+        正文夹注（英文）   See MathGalaxy, node thm.cantor (content v0.9.1).
+
+        脚注 / 参考文献（英文，含链接）
+            MathGalaxy. thm.cantor (Cantor's theorem), content v0.9.1.
+            https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cantor.html
+
+        BibTeX
+            @misc{mathgalaxy_thm_cantor,
+              title        = {MathGalaxy node \texttt{thm.cantor} (Cantor's theorem)},
+              author       = {{bingyingzizz}},
+              year         = {2026},
+              note         = {Content v0.9.1; knowledge graph of mathematics},
+              howpublished = {\url{https://bingyingzizz.github.io/mathgalaxy/nodes/thm.cantor.html}}
+            }
+
+        数据集 / 语料库（英文）
+            MathGalaxy (2026). A searchable knowledge graph of mathematics,
+            content v0.9.1. © 2026 bingyingzizz. Node ids are stable
+            identifiers; see tools/ids.snapshot.json for the id set.
+
+    引「一条推导」：推论写在**边**上（边的 id 形如 imp.xxx / eq.xxx /
+    def-link.xxx），引两端节点 + 边的 id 更精确：
+
+        MathGalaxy, edge imp.wellorder-ordinal from thm.wellordering
+        to def.ordinal (content v0.9.1).
+
+    应用里每个节点面板都有「引用此节点」按钮，点一下就能复制这种引文。
+
+
+==========================================================================
+六、镜像与再分发：迁移前后的对照
+==========================================================================
+
+    迁移的目标是「让别人敢用、机器认得出来」，代价是**镜像再也拦不住**。
+    下表列的是这一类行为。
+
+    | 行为 | 迁移前（保留所有权利） | 现在（CC BY 4.0） |
+    |---|---|---|
+    | 整份仓库 fork 到自己账号 | 条款上不允许 | ✅ 允许（署名）|
+    | 镜像一份到自己的服务器 / 静态站 | ⛔ 明令禁止 | ✅ 允许（署名）|
+    | 打包成课程材料 / 讲义整份发给学生 | ⛔ 严格说不允许 | ✅ 允许（署名）|
+    | 改名再分发 | ⛔ 明令禁止 | ✅ 允许（署名 + 标注改动）|
+    | 并进别的知识库 / 语料库 | ⛔ 禁止（且不许抹掉节点 id）| ✅ 允许（署名）|
+    | 商用（卖、打包进付费产品）| ⛔ 不允许 | ✅ 允许（署名）|
+    | 闭源再分发衍生作品 | ⛔ 不允许 | ✅ 允许（CC BY 无 copyleft）|
+    | 抓取进 AI 训练 / 检索管线 | ⚠️ 保留所有权利 ⇒ 管线多半直接跳过 | ✅ 明确允许（署名）|
+    | 平台 / 数据集 / 机构仓库怎么判 | custom license（偏「不可用」）| CC-BY-4.0（通行）|
+    | **必须写节点 id + 版本** | ✅ 是许可条件 | ⚠️ 只能是**请求**，没有法律牙齿 |
+    | 谁举证 | 作者（要证明对方没标 id）| 作者（署名要求可执行，但不含 id）|
+
+    一句话：**想让别人镜像、想被语料库收，就必须允许镜像 —— 二者不可兼得。**

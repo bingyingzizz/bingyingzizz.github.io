@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grothendieck 的 AB 公理（AB1–AB6）（Grothendieck's AB Axioms） · 数学星图 MathGalaxy</title>
+<meta name="description" content="范畴 C 的正合性等级（Grothendieck 的 AB 公理）逐条加强如下： AB1：预阿贝尔范畴； AB2：阿贝尔范畴； AB3：AB2 且有所有余极限（AB3\ 是对偶）； AB4：AB3 且余积正合（AB4\ 是对偶）； AB5：AB4 且滤过余极限正合（AB5\ 是对偶）； AB6：AB5 且滤过余极… · English: Grothendieck's AB Axioms">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.ab-axioms.html">
+<link rel="alternate" type="text/markdown" href="def.ab-axioms.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.ab-axioms.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="Grothendieck 的 AB 公理（AB1–AB6）（Grothendieck's AB Axioms） · 数学星图 MathGalaxy">
+<meta property="og:description" content="范畴 C 的正合性等级（Grothendieck 的 AB 公理）逐条加强如下： AB1：预阿贝尔范畴； AB2：阿贝尔范畴； AB3：AB2 且有所有余极限（AB3\ 是对偶）； AB4：AB3 且余积正合（AB4\ 是对偶）； AB5：AB4 且滤过余极限正合（AB5\ 是对偶）； AB6：AB5 且滤过余极… · English: Grothendieck's AB Axioms">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.ab-axioms.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#C89A2B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.ab-axioms.html#concept","name":"Grothendieck 的 AB 公理","alternateName":"Grothendieck's AB Axioms","description":"范畴 C 的正合性等级（Grothendieck 的 AB 公理）逐条加强如下： AB1：预阿贝尔范畴； AB2：阿贝尔范畴； AB3：AB2 且有所有余极限（AB3\\ 是对偶）； AB4：AB3 且余积正合（AB4\\ 是对偶）； AB5：AB4 且滤过余极限正合（AB5\\ 是对偶）； AB6：AB5 且滤过余极…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.ab-axioms.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.ab-axioms","keywords":"同调代数, AB 公理, 正合"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"同调代数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#homology"},{"@type":"ListItem","position":3,"name":"加法与阿贝尔范畴","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#hom.ab"},{"@type":"ListItem","position":4,"name":"Grothendieck 的 AB 公理","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.ab-axioms.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#C89A2B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.ab">加法与阿贝尔范畴</a><span class="sep">›</span><span aria-current="page">Grothendieck 的 AB 公理</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>Grothendieck 的 AB 公理<span class="en" lang="en">Grothendieck's AB Axioms</span></h1>
+    <p class="full">Grothendieck 的 AB 公理（AB1–AB6）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 17</li><li>同调代数</li><li>加法与阿贝尔范畴</li></ul>
+    <p class="idline"><code>def.ab-axioms</code> · 同调代数 · AB 公理 · 正合</p>
+    <p class="aka"><span class="aka-k">又称</span>AB 公理<span class="aka-s">·</span>AB 公理的例子<span class="aka-s">·</span>Definition 5.2.5</p>
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>范畴 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">C</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span></span></span> 的<strong>正合性等级</strong>（Grothendieck 的 AB 公理）逐条加强如下：</p><ol><li><strong>AB1</strong>：预阿贝尔范畴；</li><li><strong>AB2</strong>：阿贝尔范畴；</li><li><strong>AB3</strong>：AB2 且有所有余极限（<strong>AB3\</strong>* 是对偶）；</li><li><strong>AB4</strong>：AB3 且<strong>余积正合</strong>（<strong>AB4\</strong>* 是对偶）；</li><li><strong>AB5</strong>：AB4 且<strong>滤过余极限正合</strong>（<strong>AB5\</strong>* 是对偶）；</li><li><strong>AB6</strong>：AB5 且<strong>滤过余极限与积交换</strong>（<strong>AB5\</strong>* 是对偶）。</li></ol>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p>一个字读法：<strong>头两条补的是「态射有没有核与余核、单满正不正则」；后面几条一路在补「越来越多的余极限操作是正合的、并且和别的操作交换」。</strong></p><p>⭐ <strong>这些公理之间还有蕴含关系</strong>（见「AB5 与 AB3<em>/AB4</em> 的关系」）：Grothendieck 范畴自动满足 AB3\<em>；AB5 与 AB5\</em> 互斥（除零范畴外不能同时成立）；拓扑斯上的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">b</mi></mrow><mo stretchy="false">(</mo><mi mathvariant="script">T</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{Ab}(\mathcal{T})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathbf">Ab</span></span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mclose">)</span></span></span></span> 停在 AB5 + AB3\<em>，而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">b</mi></mrow><annotation encoding="application/x-tex">\mathrm{CondAb}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathrm">CondAb</span></span></span></span></span> 能上到 AB6 + AB4\</em>。</p><p>⭐ <strong>哪些范畴落在哪一级</strong>是另一条独立的事，见「AB 公理的例子表」—— 那张表把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">b</mi></mrow><annotation encoding="application/x-tex">\mathbf{Ab}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathbf">Ab</span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">b</mi><mi mathvariant="bold">T</mi><mi mathvariant="bold">o</mi><mi mathvariant="bold">p</mi></mrow><annotation encoding="application/x-tex">\mathbf{AbTop}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathbf">AbTop</span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">b</mi><mi mathvariant="bold">C</mi><mi mathvariant="bold">H</mi><mi mathvariant="bold">a</mi><mi mathvariant="bold">u</mi><mi mathvariant="bold">s</mi></mrow><annotation encoding="application/x-tex">\mathbf{AbCHaus}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathbf">AbCHaus</span></span></span></span></span>、预层范畴、拓扑斯上的阿贝尔群、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">b</mi></mrow><annotation encoding="application/x-tex">\mathrm{CondAb}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathrm">CondAb</span></span></span></span></span> 全部排了一遍。</p><p>⚠️ 这条只给<strong>定义与名字</strong>：AB 公理是一把尺子，用来量「一个范畴能做多少同调代数」。真正有用的是把它用在具体范畴上得到的结论（即上面两条）。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">5</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="thm.condab-ab.html">凝聚态阿贝尔群满足 AB6 与 AB4*</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>AB6 与 AB4\* 的含义见「Grothendieck 的 AB 公理」那条。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.grothendieck-category.html">Grothendieck 范畴</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>Grothendieck 范畴 = <strong>AB5</strong> 范畴 + 一个生成元。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.ab6.html">AB6：滤过余极限与积交换</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>它正是 AB 公理里的 <strong>AB6</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.ab5-implications.html">AB5 与 AB3*/AB4* 的关系</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>结论讲的是 <strong>AB</strong> 公理之间的蕴含关系。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.ab-axioms-examples.html">AB 公理的例子表</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>整张表列的是各类范畴满足哪些 <strong>AB</strong> 公理。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">4</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.abelian-category.html">加法 / 阿贝尔范畴</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>AB1 = <strong>预阿贝尔</strong>、AB2 = <strong>阿贝尔</strong> —— 前两条就是这两个词。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.limit.html">极限</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>AB3 及以后要求「有所有<strong>余极限</strong>」，AB3\* 是其对偶。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.product.html">积 / 余积</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>AB4 说<strong>余积正合</strong>，AB6 说<strong>滤过余极限与积交换</strong>。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="prop.filtered-exact.html">滤过余极限正合</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>AB5、AB6 的差别全在<strong>滤过余极限</strong>上：前者要它正合，后者还要它与积交换。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Le Stum, Definition 5.2.5</li></ul></section>
+
+  <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">2 条</span></h2><ul class="hooks"><li><span class="q">AB5 和 AB3* 什么关系</span><span class="also">也看 <a href="prop.ab5-implications.html">AB5 与 AB3*/AB4* 的关系</a>、<a href="def.grothendieck-category.html">Grothendieck 范畴</a></span></li><li><span class="q">哪些范畴满足哪些 AB 公理</span><span class="also">也看 <a href="prop.ab-axioms-examples.html">AB 公理的例子表</a>、<a href="thm.condab-ab.html">凝聚态阿贝尔群满足 AB6 与 AB4*</a></span></li></ul></section>
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">29 个</span></h2><ul class="sibs"><li><a href="def.additive-functor.html">加法函子</a><span class="lay">layer 9</span></li><li><a href="prop.adjoint-additive.html">伴随函子都加法</a><span class="lay">layer 10</span></li><li><a href="prop.generator-coproduct-epi.html">生成元的余积刻画</a><span class="lay">layer 11</span></li><li><a href="def.kernel-cokernel.html">核与余核</a><span class="lay">layer 14</span></li><li><a href="def.split-exact.html">分裂短正合列</a><span class="lay">layer 14</span></li><li><a href="prop.additive-iff-preserves-biproduct.html">加法函子的刻画</a><span class="lay">layer 14</span></li><li><a href="prop.left-exact-criterion.html">左正合性的判据</a><span class="lay">layer 14</span></li><li><a href="def.enough-projectives.html">足够多投射对象</a><span class="lay">layer 15</span></li><li><a href="prop.ab-limits-forgetful.html">Ab(C) 的极限</a><span class="lay">layer 15</span></li><li><a href="prop.projective-coproduct.html">投射对象的余积投射</a><span class="lay">layer 15</span></li><li><a href="def.abelian-category.html">加法 / 阿贝尔范畴</a><span class="lay">layer 16</span></li><li><a href="def.exact-sequence.html">一般正合列</a><span class="lay">layer 16</span></li><li><a href="prop.biproduct-is-product.html">直和就是积</a><span class="lay">layer 17</span></li><li><a href="prop.exact-at-points.html">正合就是逐点正合</a><span class="lay">layer 17</span></li><li><a href="prop.exact-sequence-subcategory.html">正合列构成子范畴</a><span class="lay">layer 17</span></li><li><a href="prop.hom-enrichment-unique.html">预加性结构唯一</a><span class="lay">layer 17</span></li><li><a href="prop.image-kernel-cokernel.html">像就是余核的核</a><span class="lay">layer 17</span></li><li><a href="prop.zero-object-final-criterion.html">零对象与终对象</a><span class="lay">layer 17</span></li><li><a href="thm.freyd-mitchell.html">Freyd–Mitchell 嵌入定理</a><span class="lay">layer 17</span></li><li><a href="thm.snake-lemma.html">蛇引理</a><span class="lay">layer 17</span></li><li><a href="def.grothendieck-category.html">Grothendieck 范畴</a><span class="lay">layer 18</span></li><li><a href="prop.ab-axioms-examples.html">AB 公理的例子表</a><span class="lay">layer 18</span></li><li><a href="prop.ab6.html">AB6：滤过余极限与积交换</a><span class="lay">layer 18</span></li><li><a href="prop.mitchell-exactness.html">嵌入定理的细化</a><span class="lay">layer 18</span></li><li><a href="prop.subcat-additive.html">子范畴继承加法与阿贝尔性</a><span class="lay">layer 18</span></li><li><a href="thm.five-lemma.html">五引理</a><span class="lay">layer 18</span></li><li><a href="prop.ab5-implications.html">AB5 与 AB3*/AB4* 的关系</a><span class="lay">layer 19</span></li><li><a href="prop.grothendieck-enough-injectives.html">Grothendieck 范畴有足够多内射</a><span class="lay">layer 19</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.ab-axioms">在星图里打开「Grothendieck 的 AB 公理」</a>　·　
+      <a href="../all.html">全部 1288 个概念</a>　·　
+      <a href="def.ab-axioms.md">Markdown 原文</a>　·　
+      <a href="def.ab-axioms.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.1 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.ab-axioms</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>
