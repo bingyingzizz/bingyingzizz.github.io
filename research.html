@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-site="bingyingzizz" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星图研究 · bingyingzizz</title>
+<meta name="description" content="星图研究：围绕数学星图产生的推导笔记。当前收录 Schölze《Lectures on Analytic Geometry》Question 0.10.4 在一般 p-liquid 系数下的否定答案，以及 p-Banach 情形被压成的单一标量缺口。每条均标注验证状态。">
+<link rel="canonical" href="https://bingyingzizz.github.io/research.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="星图研究 · bingyingzizz">
+<meta property="og:description" content="星图研究：围绕数学星图产生的推导笔记。当前收录 Schölze Question 0.10.4 在一般 p-liquid 系数下的否定答案，以及 p-Banach 情形被压成的单一标量缺口。未经同行评审。">
+<meta property="og:url" content="https://bingyingzizz.github.io/research.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"星图研究","url":"https://bingyingzizz.github.io/research.html","inLanguage":"zh-CN","description":"围绕数学星图产生的推导笔记：Schölze Question 0.10.4 在一般 p-liquid 系数下的否定答案；p-Banach 情形仍开。","isPartOf":{"@type":"WebSite","name":"bingyingzizz.github.io","url":"https://bingyingzizz.github.io/"}}</script>
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/read.css">
+<link rel="stylesheet" href="assets/katex.min.css">
+<script src="assets/katex.min.js"></script>
+</head>
+<body class="reader">
+
+<header class="rhead">
+  <div class="in">
+    <a class="back" href="./">← bingyingzizz</a>
+    <span class="sp"></span>
+    <a class="mini" href="mathgalaxy/">数学星图 →</a>
+    <a class="mini" href="https://github.com/bingyingzizz/MathGalaxy" rel="noopener">仓库 ↗</a>
+  </div>
+</header>
+
+<div class="rlayout">
+  <nav class="side" aria-label="本页">
+    <p>星图研究</p>
+    <ol>
+      <li><a href="#what">这是什么</a></li>
+      <li><a href="#q0104">Q 0.10.4（一般 p-liquid）</a></li>
+      <li><a href="#pbanach">p-Banach：仍开</a></li>
+      <li><a href="#protocol">验证协议</a></li>
+      <li><a href="#cite">引用与许可</a></li>
+    </ol>
+  </nav>
+
+  <main class="rbody">
+
+    <section class="doc" id="what">
+      <h1 class="stag">星图研究</h1>
+      <div class="body">
+        <p>这里放从<b>数学星图</b>的整理过程中长出来的推导笔记。<b>不是综述，不是教程</b>。原则只有两条：</p>
+        <ol>
+          <li><b>每条都标验证状态。</b>「已证 / 条件性 / 未证」三分，不给读者猜。</li>
+          <li><b>不把必要条件当充分条件。</b>这是这类笔记最容易出错的地方，也是逐轮复核专门盯的一项。</li>
+        </ol>
+        <p class="rfoot" style="display:block">⚠️ 本页内容<b>未经第三方专家审阅</b>。请按「工作笔记」而不是「已发表结果」对待。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="q0104">
+      <h2>一 · Question 0.10.4：一般 p-liquid 系数下是否定的</h2>
+      <div class="body">
+        <p><b>问题</b>（Clausen–Scholze，《Lectures on Analytic Geometry》Lecture X，Question 0.10.4，2026 稳定引用版原文）：</p>
+        <blockquote>Let $G$ be a compact nonabelian group, say $G=\mathrm{SU}(2)$, and let $V$ be a $p$-liquid $\mathbb{R}$-vector space, e.g. a $p$-Banach. Does $H^i(G,V)$ vanish for $i>0$?</blockquote>
+        <p>紧交换群那一侧作者已解决（Corollary 0.10.2），并注明 <i>“The proof uses commutativity critically.”</i></p>
+
+        <p><b>结论（笔记范围）</b>：取
+        $$V_p=\operatorname{coker}\!\bigl(\partial_4:M_{&lt;p}(G^4)\to M_{&lt;p}(G^3)\bigr),\qquad G=\mathrm{SU}(2),$$
+        赋予<b>平凡作用</b>。则 $V_p$ 是 $p$-liquid 实向量空间，且
+        $$H^3(G,V_p)\ne 0 .$$
+        也就是说，按原题「任意 $p$-liquid」的字面量词，答案是<b>否</b>。</p>
+
+        <p><b>机制一句话</b>：$p$-liquid 测度就是可数原子和（讲义 Prop 10.7）⇒ $G^\delta$ 的<b>有界</b>（不必连续、不必可测）三上圈可以在 liquid 链上逐原子求值 ⇒ 用算术双曲三流形的<b>体积上圈</b>配一个有限 bar 三圈，得到一个填不出来的三圈。三圈本身来自一个「同一个抽象群同时嵌入 $\mathrm{SU}(2)$ 与余紧双曲三格」的算术构造，两个表示由 $\mathbb{C}$ 的域自同构相连。</p>
+
+        <p><b>范围与免责（重要，别跳过）</b></p>
+        <ul>
+          <li>⛔ <b>未经第三方专家审阅。</b>只做过内部对抗性复核（见下节协议）。</li>
+          <li>⚠️ $V_p$ <b>不是 quasiseparated 对象</b>，也<b>不是</b> p-Banach。若只把 p-Banach 当作「真系数」，本结论不覆盖那种读法。</li>
+          <li>⛔ 未做穷尽文献检索。做过定向检索（含 2026 年新出的 condensed 群上同调专著）：<b>没有发现与之矛盾的定理，也没有发现该问题已被回答</b>；稳定引用版（2026-05-05）仍逐字列着该问题、0 引用。</li>
+          <li>⚠️ 依赖一条外部深定理（Bourgain–Gamburd 的 $\mathrm{SU}(d)$ Haar 谱隙）于后续分析；该处的谱隙常数 $\sigma$ 未取数值。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="doc" id="pbanach">
+      <h2>二 · p-Banach 情形：仍开，但已被压成一个标量</h2>
+      <div class="body">
+        <p>上面的 $V_p$ <b>不能</b>来自任何 Hausdorff p-Banach 空间（它是 $\sigma$-紧的像、故局部紧，而 $p&lt;1$ 时局部紧线性空间必有限维，与其显式无限线性无关族矛盾）。所以「换系数」不是免费的。</p>
+        <p>目前把 p-Banach 半边精确压成：</p>
+        <p>$$\exists\ \text{Hausdorff p-Banach } B,\ \ \Phi:V_p\to B\ \text{condensed 线性},\ \ \Phi(q(z))\ne0
+        \iff \exists\ \omega\ \text{(凹模)},\ \ \Delta_{p,\omega}(z)>0,$$</p>
+        <p>其中 $\Delta_{p,\omega}(z)$ 是对<b>全部有限四链</b> $B\in\mathbb{R}[G^4]$ 的下确界。三层量词必须分开看：</p>
+        <table>
+          <thead><tr><th>层</th><th>状态</th></tr></thead>
+          <tbody>
+            <tr><td>正平均（前插四链）</td><td>✅ 已闭合：整族有统一正下界，且临界常数 $\Theta(1-p)$</td></tr>
+            <tr><td>带符号前插</td><td>🚧 未闭合。缺口是一个定量对比：近优总成本 $O(\sqrt{\varepsilon})$ 完全容许所需的 $o(\varepsilon^{3/4})$</td></tr>
+            <tr><td>任意四链 / 原 $\Delta$</td><td>🚧 未闭合，且前插族<b>不</b>参数化全部四链（有明确反例：证书成本严格正而 $\Delta$ 恰为 0）</td></tr>
+          </tbody>
+        </table>
+        <p>一句话：<b>不是「差几步」，是「差一整类工具」</b>——现有工具（有界上圈求值、Haar 谱隙、原子计数）都是正定或线性泛函，<b>看不见正负抵消</b>，而 $\Delta$ 恰恰允许任意抵消。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="protocol">
+      <h2>三 · 验证协议：为什么这些笔记值得一看</h2>
+      <div class="body">
+        <p>整套推导以<b>只追加</b>的方式写成：每一轮只在文件末尾追加，且每轮都记录「起始字节数 + 前缀 SHA-256」。这些哈希是<b>可复算</b>的，等于用密码学方式证明「旧文没被悄悄改过」。</p>
+        <p>复核时优先攻三件事，而不是通读：</p>
+        <ol>
+          <li><b>必要条件有没有被当充分条件用。</b></li>
+          <li><b>量词有没有偷换</b>（子族 → 全体、每项正 → 一致正、有预算 → 无预算）。</li>
+          <li><b>跨节定义有没有漂移。</b></li>
+        </ol>
+        <p>这套流程的实际收获是：推导里出现了<b>多处主动推翻自己</b>的段落——作者造出反例否掉自己的候选路线（例如「证书成本正 ⇒ 目标为正」这条自然但错误的推理，被一个十六项边界直接证伪），并在失败时如实记录「这次测试是我自己的预设过强」。</p>
+        <p>同样重要的是它<b>没有</b>做什么：全文 21 处写明「不新增全题完成标记」，每节结账表都保留同样的「未证」行。</p>
+      </div>
+    </section>
+
+    <section class="doc" id="cite">
+      <h2>四 · 引用与许可</h2>
+      <div class="body">
+        <p>目标问题的原始出处：P. Scholze, <i>Lectures on Analytic Geometry</i>, Lecture X, Question 0.10.4（arXiv:2605.03655，2026-05-05 稳定引用版）。</p>
+        <p>本页笔记：bingyingzizz，2026-10。若引用，请注明「工作笔记，未经同行评审」。</p>
+        <p>许可：文字内容 <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>；站点与引擎代码 MIT。</p>
+        <p class="rfoot" style="display:block">最近更新：2026-10-31　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io" rel="noopener">本站源码</a></p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+/* 行内与行间数学：$…$ / $$…$$ 交给 KaTeX。
+   ⚠️ 只走文本节点（TreeWalker），不碰 innerHTML。
+   ⚠️ <code>/<pre> 里的 $ 不处理。
+   ⚠️ 先处理 $$…$$ 再处理 $…$，否则行间公式会被拆坏。 */
+(function () {
+  if (!window.katex) return;
+  var RE_D = /\$\$([\s\S]+?)\$\$/g;
+  var RE_I = /\$([^$\n]+?)\$/g;
+  function collect() {
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var out = []; while (w.nextNode()) out.push(w.currentNode);
+    return out.filter(function (n) {
+      var p = n.parentNode;
+      return p && n.nodeValue.indexOf('$') >= 0 && !p.closest('code, pre, script, style, .katex');
+    });
+  }
+  function run(RE, display) {
+    collect().forEach(function (node) {
+      var txt = node.nodeValue, p = node.parentNode;
+      var frag = document.createDocumentFragment(), last = 0, m, hit = false;
+      RE.lastIndex = 0;
+      while ((m = RE.exec(txt))) {
+        hit = true;
+        if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+        var span = document.createElement('span');
+        try { span.innerHTML = katex.renderToString(m[1], { throwOnError: false, displayMode: display }); }
+        catch (e) { span.textContent = m[0]; }
+        frag.appendChild(span);
+        last = m.index + m[0].length;
+      }
+      if (!hit) return;
+      if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+      p.replaceChild(frag, node);
+    });
+  }
+  run(RE_D, true);
+  run(RE_I, false);
+})();
+</script>
+</body>
+</html>
