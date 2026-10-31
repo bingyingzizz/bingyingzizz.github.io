@@ -1,5 +1,5 @@
 # Bézout 恒等式　`thm.bezout`
-Bézout：$\gcd(a,b)$ 是 $a, b$ 的整系数组合
+Bézout：最大公因数是整系数组合
 layer 13 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.bezout)　·　[节点索引](../index.md)
 

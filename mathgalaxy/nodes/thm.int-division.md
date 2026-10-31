@@ -1,5 +1,5 @@
 # 整数的带余除法　`thm.int-division`
-带余除法：$a = qb + r$，$0 \le r < |b|$
+带余除法：商与余数，余数小于除数
 layer 11 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.int-division)　·　[节点索引](../index.md)
 

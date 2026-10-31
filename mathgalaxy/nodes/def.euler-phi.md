@@ -1,5 +1,5 @@
 # Euler 函数　`def.euler-phi`
-Euler 函数 $\varphi(n)$ 与它的乘积公式
+Euler 函数与它的乘积公式
 layer 13 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.euler-phi)　·　[节点索引](../index.md)
 

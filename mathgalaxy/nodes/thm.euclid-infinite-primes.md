@@ -1,5 +1,5 @@
 # 素数有无穷多个　`thm.euclid-infinite-primes`
-Euclid 的证明：$p_{1}\cdots p_{n} + 1$
+Euclid 的证明：乘积加一必带新素因子
 layer 12 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.euclid-infinite-primes)　·　[节点索引](../index.md)
 

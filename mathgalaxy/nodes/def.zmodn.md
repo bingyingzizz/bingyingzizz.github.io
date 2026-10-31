@@ -1,5 +1,5 @@
 # 剩余类环　`def.zmodn`
-$\mathbb{Z}/n\mathbb{Z}$：把同余类收成一个元素
+剩余类环：把同余类收成一个元素
 layer 12 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.zmodn)　·　[节点索引](../index.md)
 

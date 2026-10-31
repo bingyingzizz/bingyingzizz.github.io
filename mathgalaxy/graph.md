@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-10-31T08:44:49.893Z
+> 由 `tools/build.mjs` 自动生成于 2026-10-31T08:50:33.640Z
 > 14 星系 / 89 星团 / 1303 节点 / 2360 连线（强边 2347，弱边 13；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -26973,7 +26973,7 @@ $$\operatorname{Lie}(G) \cong \mathfrak{g},$$
 参考：华罗庚《数论导引》第一章
 
 #### 整数的带余除法　`thm.int-division`
-*定理*　带余除法：$a = qb + r$，$0 \le r < |b|$
+*定理*　带余除法：商与余数，余数小于除数
 
 设 $a, b \in \mathbb{Z}$ 且 $b \ne 0$。则存在**唯一**的 $q, r \in \mathbb{Z}$ 使
 
@@ -27030,7 +27030,7 @@ $$r_{i-1} = q_{i}\, r_{i} + r_{i+1}, \qquad 0 \le r_{i+1} < r_{i} .$$
 参考：华罗庚《数论导引》§1
 
 #### Bézout 恒等式　`thm.bezout`
-*定理*　Bézout：$\gcd(a,b)$ 是 $a, b$ 的整系数组合
+*定理*　Bézout：最大公因数是整系数组合
 
 设 $a, b \in \mathbb{Z}$ 不全为零，$d = \gcd(a, b)$。则存在 $u, v \in \mathbb{Z}$ 使
 
@@ -27068,7 +27068,7 @@ $1$ 不是素数：否则唯一分解就不唯一了（$6 = 2\cdot 3 = 1\cdot 2\
 参考：华罗庚《数论导引》第一章
 
 #### 素数有无穷多个　`thm.euclid-infinite-primes`
-*定理*　Euclid 的证明：$p_{1}\cdots p_{n} + 1$
+*定理*　Euclid 的证明：乘积加一必带新素因子
 
 素数有无穷多个。
 
@@ -27125,7 +27125,7 @@ $n = 0$ 时约定 $a \equiv b \pmod 0 \iff a = b$：模 $0$ 的同余就是相�
 参考：华罗庚《数论导引》§2
 
 #### 剩余类环　`def.zmodn`
-*定义*　$\mathbb{Z}/n\mathbb{Z}$：把同余类收成一个元素
+*定义*　剩余类环：把同余类收成一个元素
 
 记 $\mathbb{Z}/n\mathbb{Z} = \{[0], [1], \cdots, [n-1]\}$，其中 $[a]$ 是 $a$ 所在的同余类，运算由代表元定义：
 
@@ -27146,7 +27146,7 @@ $\mathbb{Z}/n\mathbb{Z}$ 是域 $\iff$ $n$ 是素数（$n = p$ 时记 $\mathbb{F
 参考：华罗庚《数论导引》§2
 
 #### 中国剩余定理　`thm.crt`
-*定理*　中国剩余定理：$\mathbb{Z}/N \cong \prod_{i}\mathbb{Z}/n_{i}$
+*定理*　中国剩余定理：模两两互素的分解
 
 设 $n_{1}, \cdots, n_{k}$ 两两互素，$N = n_{1} \cdots n_{k}$。则
 
@@ -27171,7 +27171,7 @@ $$\mathbb{Z}/N\mathbb{Z} \;\cong\; \mathbb{Z}/n_{1}\mathbb{Z} \times \cdots \tim
 参考：华罗庚《数论导引》§2
 
 #### Euler 函数　`def.euler-phi`
-*定义*　Euler 函数 $\varphi(n)$ 与它的乘积公式
+*定义*　Euler 函数与它的乘积公式
 
 对 $n \ge 1$，$\varphi(n)$ 是 $1, 2, \cdots, n$ 中与 $n$ 互素的整数个数：
 
@@ -27194,7 +27194,7 @@ $\varphi(n)$ 也是分圆多项式 $\Phi_{n}$ 的次数 —— 这条联系在 G
 参考：华罗庚《数论导引》第三章
 
 #### Euler 定理　`thm.euler-theorem`
-*定理*　Euler 定理：若 $\gcd(a,n)=1$ 则 $a^{\varphi(n)} \equiv 1$
+*定理*　Euler 定理：互素时幂同余于一
 
 设 $a, n \ge 1$ 且 $\gcd(a, n) = 1$。则
 
@@ -27213,7 +27213,7 @@ $\gcd(a, n) > 1$ 时结论一般不成立：$2^{2} = 4 \equiv 0 \pmod 4$，而 $
 参考：华罗庚《数论导引》§2
 
 #### Fermat 小定理　`thm.fermat-little`
-*定理*　Fermat 小定理：$a^{p-1} \equiv 1$ 模 $p$
+*定理*　Fermat 小定理：模素数时幂同余于一
 
 设 $p$ 是素数且 $p \nmid a$。则
 
@@ -27234,7 +27234,7 @@ $$a^{p-1} \equiv 1 \pmod p ,$$
 参考：华罗庚《数论导引》§2
 
 #### Wilson 定理　`cor.wilson`
-*推论*　Wilson 定理：$(p-1)! \equiv -1$ 当且仅当 $p$ 素
+*推论*　Wilson 定理：用阶乘同余判定素数
 
 $p$ 是素数 $\iff$ $(p - 1)! \equiv -1 \pmod p$。
 

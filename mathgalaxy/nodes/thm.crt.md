@@ -1,5 +1,5 @@
 # 中国剩余定理　`thm.crt`
-中国剩余定理：$\mathbb{Z}/N \cong \prod_{i}\mathbb{Z}/n_{i}$
+中国剩余定理：模两两互素的分解
 layer 14 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.crt)　·　[节点索引](../index.md)
 

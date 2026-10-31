@@ -1,5 +1,5 @@
 # Wilson 定理　`cor.wilson`
-Wilson 定理：$(p-1)! \equiv -1$ 当且仅当 $p$ 素
+Wilson 定理：用阶乘同余判定素数
 layer 13 · 推论 · 整除与同余 · 数论
 [在星图里打开](../#n=cor.wilson)　·　[节点索引](../index.md)
 
