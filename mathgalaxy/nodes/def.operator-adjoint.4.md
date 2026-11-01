@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.normal-operator`](../nodes/def.normal-operator.md) 正规算子 用
 - ⇒ [`thm.svd`](../nodes/thm.svd.md) 奇异值分解
+- 被 [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置 用

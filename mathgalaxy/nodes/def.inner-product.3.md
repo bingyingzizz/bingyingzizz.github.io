@@ -10,3 +10,6 @@
 - 被 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化 用
 - 被 [`def.arc-length`](../nodes/def.arc-length.md) 弧长 用
 - 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量 用
+- 被 [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置 用
+
+> 续见 [nodes/def.inner-product.4.md](./def.inner-product.4.md)

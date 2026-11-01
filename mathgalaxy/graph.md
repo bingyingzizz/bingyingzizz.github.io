@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-01T14:43:52.159Z
-> 14 星系 / 92 星团 / 1341 节点 / 2473 连线（强边 2456，弱边 17；其中**不分层**的「推论」21 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-01T15:13:00.426Z
+> 14 星系 / 92 星团 / 1353 节点 / 2503 连线（强边 2486，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -4920,6 +4920,314 @@ $\sigma_i$ 叫 $A$ 的**奇异值**，它们是 $A^{\dagger}A$（或 $AA^{\dagge
 ⭐ 用途（数值线性代数里最重要的一条定理）：降秩逼近（Eckart–Young：截断到前 $k$ 个奇异值给出最优低秩逼近）、主成分分析、伪逆、条件数。
 
 参考：Horn–Johnson, Matrix Analysis, Ch. 7；Roman, Advanced Linear Algebra, Ch. 11
+
+#### 转置　`def.transpose`
+*定义*　矩阵的转置与它的性质
+
+**在做什么**：把矩阵沿主对角线翻过来。看起来只是个记号操作，但它正是**对偶空间上诱导的映射**在矩阵语言里的样子。
+
+设 $A = (a_{ij}) \in M_{m\times n}(K)$。**转置** $A^{T} \in M_{n\times m}(K)$ 由 $(A^{T})_{ij} := a_{ji}$ 定义。
+
+**基本性质**：$(A+B)^{T} = A^{T} + B^{T}$、$(cA)^{T} = cA^{T}$、$(A^{T})^{T} = A$，以及最要紧的一条
+
+$$(AB)^{T} = B^{T} A^{T}$$
+
+（乘法**换序**。）若 $A$ 可逆，则 $A^{T}$ 可逆且 $(A^{-1})^{T} = (A^{T})^{-1}$。
+
+**为什么乘法要换序**：转置不是「重新排一下」，它是**对偶**。线性映射 $T : V \to W$ 诱导对偶映射 $T^{*} : W^{*} \to V^{*}$（方向反过来），而 $T^{*}$ 的矩阵恰好是 $T$ 的矩阵的转置。方向既然反了，复合的次序自然也要反 —— $(AB)^{T} = B^{T}A^{T}$ 说的就是这件事。
+
+**与配对的相容性**：把向量当列，则 $y^{T}Ax$ 是一个数，且等于 $(A^{T}y)^{T}x$ —— 「把 $A$ 从一边搬到另一边」全靠这条，它是后面「伴随算子」「对称矩阵」全部内容的起点。
+
+⚠️ 转置依赖**基的选取**（需要用对偶基），而下一节的共轭转置（$A^{*}$）在标准正交基下才等于「伴随算子的矩阵」。把两者混同是初学最常见的事故。
+
+⚠️ 别把 $(AB)^{T} = B^{T}A^{T}$ 记成 $A^{T}B^{T}$：只有当 $A, B$ 都是方阵且碰巧可交换时才可能对，一般不成立。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 转置与对偶；北大《高等代数》· 矩阵的转置
+
+#### 共轭转置　`def.conjugate-transpose`
+*定义*　共轭转置：复数情形下的「伴随」
+
+**在做什么**：复数域上，光是转置不够 —— 内积对第二个变元是共轭线性的，所以「搬 $A$ 到另一边」时要连共轭一起搬。于是有了共轭转置。
+
+设 $A \in M_{m\times n}(\mathbb{C})$。**共轭转置**（也叫**伴随矩阵**）是
+
+$$A^{*} := \overline{A}^{T} = \bigl(\overline{A^{T}}\bigr), \qquad (A^{*})_{ij} := \overline{a_{ji}} .$$
+
+性质：$(A+B)^{*} = A^{*} + B^{*}$、$(cA)^{*} = \overline{c}\,A^{*}$、$(AB)^{*} = B^{*}A^{*}$、$(A^{*})^{*} = A$。
+
+**与内积的关系（这才是它的定义性性质）**：对一切 $x, y$ 有
+
+$$\langle Ax, y\rangle = \langle x, A^{*}y\rangle .$$
+
+实矩阵时 $A^{*} = A^{T}$，两个概念重合。
+
+**它是伴随算子的矩阵**：若在**标准正交基**下取矩阵，线性映射 $T$ 的伴随算子 $T^{*}$（`def.operator-adjoint`）的矩阵就是 $T$ 的矩阵的共轭转置。⚠️ 换了非标准正交基，这两者不再相等 —— 那条关系是「标准正交基」的特权，不是坐标无关的恒等式。
+
+**为什么必须共轭**：$\mathbb{C}^{n}$ 的标准内积是 $\langle x, y\rangle = \sum \overline{x_i} y_i$（对第一个变元共轭），于是把 $A$ 从左边搬到右边时，$\overline{A}$ 会自然出现。用「只转置」的版本，$\langle Ax,y\rangle = \langle x, A^{T}y\rangle$ 在复数域上是错的。
+
+⚠️ 三种记法并存：$A^{*}$、$A^{\dagger}$、$A^{H}$。本图统一用 $A^{*}$（与伴随算子同一个星号）。
+
+⚠️ 「伴随矩阵」这个词在有些书里指**代数余子式矩阵**（本图用 `def.determinant` 那一支的记号）。这里按内积意义使用，遇到中文教材要注意分辨。
+
+参考：Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 伴随；Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 共轭转置
+
+#### 酉矩阵与正交矩阵　`def.unitary-matrix`
+*定义*　酉矩阵与正交矩阵：保持内积的矩阵
+
+**在做什么**：把「保持长度与夹角」这件事写成矩阵条件。复情形叫**酉**，实情形叫**正交** —— 同一个条件在两种域上的两副面孔。
+
+设 $U \in M_{n}(\mathbb{C})$。称 $U$ 是**酉矩阵**，若
+
+$$U^{*}U = UU^{*} = I ,$$
+
+等价地 $U^{-1} = U^{*}$。实方阵 $Q \in M_{n}(\mathbb{R})$ 满足 $Q^{T}Q = I$ 时叫**正交矩阵**。
+
+**等价刻画**：以下三条等价 —— (i) $U$ 酉；(ii) $U$ 的**列**构成标准正交基；(iii) 对一切 $x, y$ 有 $\langle Ux, Uy\rangle = \langle x, y\rangle$。
+
+于是酉矩阵保持内积、从而保持范数（$\lVert Ux\rVert = \lVert x\rVert$）与距离；$\lvert\det U\rvert = 1$。全体酉矩阵构成群 $U(n)$，正交矩阵构成 $O(n)$。
+
+**「酉」这个名字**：$U^{*}U = I$ 在实情形退化成正交（$\perp$ 的意思），复数情形中文取「酉」（对应英文 unitary，源自拉丁语 unus「一」）。术语不重要，条件是同一个。
+
+**为什么列是标准正交基就够了**：$U^{*}U = I$ 的第 $(j,k)$ 项就是「第 $j$ 列与第 $k$ 列的内积 = $\delta_{jk}$」。所以「酉」= 「把标准正交基送到标准正交基」，这是最省事的判据。
+
+**与 `def.isometry` 的关系**：酉矩阵正是「在标准正交基下、保内积的线性映射」的矩阵。⚠️ 保内积的算子（等距）与酉矩阵在标准正交基下才一一对应；换基之后矩阵不再酉，但算子仍保内积。
+
+⭐ **对数值的意义**：酉变换不放大误差（$\lVert Ux\rVert = \lVert x\rVert$），所以「酉相似」是最稳定的相似 —— 这也是 Schur 三角化（`thm.schur-triangularization`）与 SVD 都选酉变换的原因。
+
+参考：Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 等距；北大《高等代数》· 酉矩阵与正交矩阵
+
+#### Hermite 矩阵与对称矩阵　`def.hermitian-matrix`
+*定义*　Hermite 矩阵与对称矩阵：等于自己的伴随
+
+**在做什么**：把「自伴」写成矩阵条件。复情形叫 **Hermite**，实情形叫**对称**。它们的特征是**特征值全实**、**可正交对角化**。
+
+设 $A \in M_{n}(\mathbb{C})$。称 $A$ 是 **Hermite 矩阵**（自伴矩阵），若
+
+$$A^{*} = A .$$
+
+实方阵满足 $A^{T} = A$ 时叫**对称矩阵**。
+
+**关键性质**：(i) 对角元全实；(ii) 特征值**全是实数**；(iii) 属于不同特征值的特征向量**互相正交**；(iv) 存在酉矩阵 $U$ 使 $U^{*}AU$ 为实对角阵（`thm.spectral-matrix`）。
+
+实对称矩阵是 Hermite 矩阵在 $A$ 取实值时的特例，此时 (iv) 可写成 $Q^{T}AQ$ 为对角阵，$Q$ 正交。
+
+**为什么特征值是实的**：取特征向量 $x \ne 0$ 使 $Ax = \lambda x$，则 $\lambda\langle x, x\rangle = \langle Ax, x\rangle = \langle x, Ax\rangle = \overline{\lambda}\langle x, x\rangle$ —— 第二步用的就是自伴。于是 $\lambda = \overline{\lambda}$。
+
+**为什么不同特征值的特征向量正交**：若 $Ax = \lambda x$、$Ay = \mu y$，则 $\lambda\langle x,y\rangle = \langle Ax,y\rangle = \langle x,Ay\rangle = \mu\langle x,y\rangle$，而 $\lambda \ne \mu$ $\implies$ $\langle x,y\rangle = 0$。这两行是整章的核心计算，谱定理全靠它起头。
+
+**它和二次型的关系**：对称矩阵与二次型一一对应（$q(x) = x^{T}Ax$，`def.quadratic-form`）；Hermite 矩阵与 Hermite 型一一对应。「正定」就是这条对应下「$q > 0$」（`def.positive-definite-matrix`）。
+
+⚠️ 别把「Hermite」与「对称」当两件无关的事：实对称 $\subset$ Hermite。而**复对称**（$A^{T} = A$ 而 $A^{*} \ne A$）既不是 Hermite 也没有实特征值 —— 复数域上要用 $A^{*}$，不是 $A^{T}$。
+
+参考：Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 自伴算子；Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Hermite 与对称
+
+#### 正规矩阵　`def.normal-matrix`
+*定义*　正规矩阵：与自己的伴随可交换
+
+**在做什么**：把酉矩阵、Hermite 矩阵、以及「$A^{*}A$ 与 $AA^{*}$ 不分先后」的那些矩阵，收进同一个类 —— 这一类正好就是**能被酉对角化**的全部矩阵。
+
+设 $A \in M_{n}(\mathbb{C})$。称 $A$ 是**正规矩阵**，若
+
+$$A^{*}A = AA^{*} .$$
+
+**包含关系**（都是真包含）：
+
+$\{$ 酉 $\} \subset \{$ 正规 $\}$，$\{$ Hermite $\} \subset \{$ 正规 $\}$，$\{$ 实对称 $\} \subset \{$ 正规 $\}$。
+
+**核心结论**（`thm.spectral-matrix`）：$A$ 正规 $\iff$ 存在酉矩阵 $U$ 使 $U^{*}AU$ 是对角阵。
+
+实情形对应的是**实正规矩阵**（$A^{T}A = AA^{T}$）：它可正交对角化，但**分块**为 $1\times 1$ 与 $2\times 2$ 的块，不一定是纯对角 —— 因为非实特征值只能成共轭对出现。
+
+**为什么正规是「正确的」类**：谱定理的证明里，唯一真正用到的是「特征向量正交 + 有足够多特征向量」。这两件事合起来恰好等价于 $A^{*}A = AA^{*}$ —— 所以「正规」不是人为挑出来的条件，而是「酉可对角化」的**代数翻译**。
+
+**实正规为什么只能分块对角化**：$\begin{pmatrix} 0 & -1 \\ 1 & 0\end{pmatrix}$ 是实正规的（它是旋转 $90^\circ$），但它没有实特征向量，当然不可能正交对角化。它的两个特征值是 $\pm i$ —— 共轭成对，这就是那类 $2\times 2$ 块的来源。
+
+⚠️ 与本图 `def.normal-operator`（正规**算子**）的分工：那一条说的是算子 $T^{*}T = TT^{*}$，是坐标无关的；这一条说的是它在**标准正交基**下的矩阵条件。两条互为翻译，但不要混着用（换了非标准正交基，算子的矩阵就不再「正规」）。
+
+⭐ 记住这张表就够：**正规 $\iff$ 酉对角化**；再往上加条件就得到特殊类 —— 加上「特征值全实」得 Hermite，加上「特征值全在单位圆上」得酉，两个都加得「特征值只有 $\pm 1$」的自伴酉。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正规算子；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 复谱定理
+
+#### 正定矩阵　`def.positive-definite-matrix`
+*定义*　正定矩阵与半正定矩阵
+
+**在做什么**：把「这个二次型处处为正」写成矩阵条件。物理上它是「能量形式」，几何上它是「内积的另一种写法」。
+
+设 $A \in M_{n}(\mathbb{C})$ 是 Hermite 矩阵。称 $A$ **正定**，若对一切 $x \ne 0$
+
+$$x^{*}Ax > 0 ;$$
+
+把 $>$ 换成 $\ge$ 就得**半正定**。实对称矩阵的情形把 $x^{*}$ 换成 $x^{T}$。
+
+**等价刻画**（前两条最常用）：
+
+1. 所有特征值 $> 0$（半正定：$\ge 0$）；
+2. 所有**顺序主子式** $> 0$（Sylvester 判据，`thm.sylvester-criterion`）；
+3. 存在可逆 $P$ 使 $A = P^{*}P$（半正定：$A = P^{*}P$ 不必可逆）；
+4. $x \mapsto \sqrt{x^{*}Ax}$ 是范数（半正定时是半范数）。
+
+**它是「内积的矩阵」**：任意内积在基下的矩阵就是正定 Hermite 矩阵；反过来每个正定矩阵都给出一个内积。所以「正定」= 「合法的内积矩阵」，这条对应比任何判据都好用。
+
+**为什么顺序主子式就够了**：Sylvester 判据（`thm.sylvester-criterion`）—— 做 LDL 分解时第 $k$ 个主元等于 $k$ 阶顺序主子式之比，主元全正则正定。⚠️ 只查**顺序**主子式，不是所有主子式（所有主子式 $>0$ 是更强的条件，只在特殊场合等价）。
+
+⭐ **正定 $\implies$ 可开方**：存在唯一的半正定 $\sqrt{A}$ 使 $(\sqrt A)^{2} = A$（在正交基下把特征值开方）。这正是**极分解** $A = UP$ 里那个 $P$ 的来源（`thm.polar-decomposition`）。
+
+⚠️ 「$A^{T}A$ 总是半正定」这句话在复数域要写成 $A^{*}A$；并且它正定当且仅当 $A$ 的列线性无关（否则有非零核向量）。这条在回归/最小二乘里反复出现。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正定；北大《高等代数》· 正定二次型
+
+#### Schur 三角化　`thm.schur-triangularization`
+*定理*　Schur 三角化：任何复方阵都酉相似于上三角
+
+**在做什么**：酉对角化要求太强（只有正规矩阵做得到，`thm.spectral-matrix`）。退一步只要求**上三角**，那就不挑矩阵了 —— 任何复方阵都行。
+
+设 $A \in M_{n}(\mathbb{C})$。则存在**酉**矩阵 $U$ 使
+
+$$U^{*}AU = T ,$$
+
+其中 $T$ 是**上三角**矩阵，且 $T$ 的对角元恰是 $A$ 的特征值（按任意事先指定的次序排列）。
+
+实情形：任意实方阵正交相似于**实 Schur 形**，即分块上三角，对角块为 $1\times 1$ 或 $2\times 2$（对应成对的共轭复特征值）。
+
+**特例**：$A$ 正规时 $T$ 必是对角阵 —— 这就是谱定理（`thm.spectral-matrix`）。
+
+**证明骨架**：对 $n$ 归纳。取特征向量 $x$（$\lVert x\rVert = 1$），补成标准正交基 $U_{1} = (x, \ldots)$，则 $U_{1}^{*}AU_{1} = \begin{pmatrix} \lambda & * \\ 0 & A_{1}\end{pmatrix}$；对 $A_{1}$ 用归纳假设，再拼回去。**关键**是「补成标准正交基」这一步 —— 它保证变换是酉的，从而是稳定的。
+
+⭐ **为什么它比 Jordan 标准形更常用**：Jordan 形用任意相似（$P^{-1}AP$），理论上漂亮但 $P$ 可能病态到无法计算；Schur 用酉相似（$U^{*}AU$），条件数永远是 1。所以**数值线性代数一律用 Schur，不用 Jordan**。
+
+**它给出谱定理的捷径**：若 $A$ 正规且 $U^{*}AU = T$ 上三角，则 $T$ 也正规；而上三角且正规 $\implies$ 必是对角阵（比较 $(TT^{*})_{11}$ 的两边即得第一行除对角元外全零，再归纳）。
+
+⚠️ 实情形**不能**做成实对角/实三角到「只有 $1\times1$ 块」的程度：旋转 $90^\circ$ 那个例子说明 $2\times 2$ 块躲不掉。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Schur 定理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 复谱定理的证明
+
+#### 谱定理（矩阵版）　`thm.spectral-matrix`
+*定理*　谱定理（矩阵版）：正规矩阵恰好是酉可对角化的那些
+
+**在做什么**：把两条已有的算子版谱定理（`thm.spectral-theorem` 实对称、`cor.spectral-normal` 复正规）落到**矩阵**上，并给出精确的充要条件。
+
+设 $A \in M_{n}(\mathbb{C})$。则
+
+$$A\ \text{正规} \iff \exists\, U\ \text{酉},\ U^{*}AU = \operatorname{diag}(\lambda_{1}, \ldots, \lambda_{n}) .$$
+
+即：**正规 $\iff$ 有一组标准正交的特征向量基**。此时
+
+$$A = U \Lambda U^{*}, \qquad \Lambda = \operatorname{diag}(\lambda_{1}, \ldots, \lambda_{n}) ,$$
+
+这叫 $A$ 的**谱分解**（正交投影之和：$A = \sum_i \lambda_i u_i u_i^{*}$）。
+
+**实情形**：实对称矩阵 $\iff$ 存在**正交**矩阵 $Q$ 使 $Q^{T}AQ$ 为实对角阵。
+
+**四个等价说法，任取其一当定义都行**：$A$ 正规；$A$ 有标准正交特征向量基；$A = U\Lambda U^{*}$；$A$ 的谱测度只取原子值。矩阵语言里第一种最省事，第二种最直观（`thm.spectral-matrix` 的全部内容就是「两者等价」）。
+
+**谱分解的读法**：$A = \sum_i \lambda_i P_i$，其中 $P_i = u_i u_i^{*}$ 是往特征方向上的正交投影，满足 $P_i^2 = P_i$、$P_iP_j = 0$（$i \ne j$）、$\sum_i P_i = I$。于是**「对角化」= 「把算子拆成一堆互相垂直的方向，各自乘一个数」**。
+
+⭐ 与函数演算的连接：有了谱分解，任意函数 $f$ 都能作用：$f(A) := \sum_i f(\lambda_i)P_i$。$\sqrt{A}$、$e^{tA}$、$A^{1/2}$ 全是这一条的特例 —— 这也是为什么「正定矩阵可开方」不需要另外构造。
+
+⚠️ 非正规矩阵也可能可对角化（`thm.diagonalizable`），但特征向量**不正交**，相似矩阵 $P$ 一般病态。所以「可对角化」与「酉可对角化」是两件事：后者要求**正交**，强得多。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 谱定理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 谱定理
+
+#### 极分解　`thm.polar-decomposition`
+*定理*　极分解：$A = UP$，把矩阵拆成「旋转 $\times$ 拉伸」
+
+**在做什么**：复数可以写成 $z = e^{i\theta}\lvert z\rvert$（方向 $\times$ 长度）。矩阵也有同款分解：**酉（方向）$\times$ 半正定（长度）**。
+
+设 $A \in M_{n}(\mathbb{C})$。则存在酉矩阵 $U$ 与**半正定** Hermite 矩阵 $P$ 使
+
+$$A = UP ,$$
+
+且 $P$ 由 $A$ 唯一确定（$P = \sqrt{A^{*}A}$）；若 $A$ 可逆，则 $U$ 也唯一，且 $P$ 正定。
+
+**另一种次序**：同样有 $A = P'U'$，其中 $P' = \sqrt{AA^{*}}$ 半正定、$U'$ 酉。
+
+**与 SVD 的关系**：把 $P$ 对角化（$P = V\Sigma V^{*}$）即得 $A = (UV)\Sigma V^{*}$ —— 这正是奇异值分解（`thm.svd`）；$\Sigma$ 的对角元就是**奇异值**。
+
+**为什么 $P = \sqrt{A^{*}A}$**：就像 $\lvert z\rvert = \sqrt{\bar z z}$。$A^{*}A$ 总是半正定 Hermite（`def.positive-definite-matrix` 的注），所以能开唯一的半正定平方根。定义 $U := AP^{-1}$（$A$ 可逆时），剩下只需验 $U$ 保内积 —— 一行计算：$U^{*}U = P^{-1}A^{*}AP^{-1} = P^{-1}P^{2}P^{-1} = I$。
+
+⭐ **几何读法**：任何线性映射都是「先沿一组正交方向各自伸缩（$P$），再整体旋转（$U$）」。伸缩因子就是奇异值。这条对**非方阵**也成立（用等距代替酉）。
+
+**与 SVD 的分工**：极分解强调「旋转 $\times$ 拉伸」这个**结构**，SVD 强调「$A = U\Sigma V^{*}$ 这个**坐标写法**」。两者信息量相同，SVD 多给了两组基底。
+
+⚠️ 唯一性要说清：$P$ 永远唯一，但 $A$ 奇异时 $U$ 可以在 $A$ 的核上任意取 —— 所以「极分解唯一」这句话只在可逆时成立。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 极分解；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 极分解
+
+#### 谱半径　`def.spectral-radius`
+*定义*　谱半径：特征值模长的最大值
+
+**在做什么**：用一个数概括「谱有多大」。它决定 $A^{k}$ 会不会爆炸，也决定迭代法收不收敛。
+
+设 $A \in M_{n}(\mathbb{C})$。**谱半径**是
+
+$$\rho(A) := \max\bigl\{\, \lvert\lambda\rvert : \lambda\ \text{是}\ A\ \text{的特征值} \,\bigr\} .$$
+
+**基本性质**：
+
+1. $\rho(A) \le \lVert A\rVert$ 对**任意**从属矩阵范数成立；
+2. 相似不变：$\rho(P^{-1}AP) = \rho(A)$（特征值不变）；
+3. $\rho(A) = \lim_{k\to\infty}\lVert A^{k}\rVert^{1/k}$（这一条在有限维可由 Jordan 形直接验证）；
+4. $\rho(A) < 1 \iff A^{k} \to 0$。
+
+⚠️ **公式 (3) 在本图只做到有限维**。一般 Banach 代数上的 Gelfand 公式 $\rho(a) = \lim\lVert a^{n}\rVert^{1/n}$（以及「谱非空」「谱半径等于谱的上确界」）需要复分析（Liouville）与算子理论，**留给泛函那一批**，这里不展开成独立节点。
+
+**为什么第 (1) 条成立但常常严格**：取特征对 $Ax = \lambda x$，则 $\lvert\lambda\rvert\lVert x\rVert = \lVert Ax\rVert \le \lVert A\rVert\lVert x\rVert$。等号不总成立 —— $\begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix}$ 的 $\rho = 0$ 而任何范数都 $> 0$，它是**幂零**的。
+
+⭐ **它的用处比范数更准**：$A^{k}$ 的增长其实由 $\rho$ 控制（Jordan 块的多项式因子只贡献 $k^{m-1}$ 的因子，被 $\rho^{k}$ 的指数压住）。所以「迭代收敛」的判据一律写 $\rho < 1$，而不是 $\lVert A\rVert < 1$。
+
+⚠️ 非方阵没有谱半径（特征值只对方阵有定义）；伪谱（pseudospectrum）是另一回事，本图未收录。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 谱；北大《高等代数》· 特征值与谱
+
+#### Rayleigh 商　`def.rayleigh-quotient`
+*定义*　Rayleigh 商：用二次型读出特征值
+
+**在做什么**：把「特征值」变成一个**极值问题**。这样特征值就能被「优化」而不是只能「解方程」。
+
+设 $A$ 是 $n$ 阶 Hermite 矩阵。对 $x \ne 0$ 定义 **Rayleigh 商**
+
+$$R_{A}(x) := \frac{x^{*}Ax}{x^{*}x} .$$
+
+（$x$ 是单位向量时就是 $x^{*}Ax$，所以它其实是「$A$ 在 $x$ 方向上的平均伸缩率」。）
+
+**核心性质**：
+
+1. $R_{A}(x)$ 恒为**实数**，且落在 $[\lambda_{\min}, \lambda_{\max}]$ 内；
+2. $\lambda_{\min} = \min_{x\ne 0} R_A(x)$、$\lambda_{\max} = \max_{x\ne 0} R_A(x)$，极值在对应特征向量处取到；
+3. 更一般地，全体临界点恰是特征向量，临界值恰是特征值。
+
+**为什么它是实的**：$\overline{x^{*}Ax} = x^{*}A^{*}x = x^{*}Ax$（用 Hermite），而分母是实数。
+
+⭐ **它给出「最速下降/幂迭代」的理论依据**：沿 $R_A$ 的梯度方向走就是在逼近最大特征向量。数值上 $x_{k+1} \propto Ax_k$ 收敛到主特征向量的速率由 $\lvert\lambda_2/\lambda_1\rvert$ 决定 —— 这就是幂法的收敛率。
+
+**它的推广**是要证明 `thm.courant-fischer`：只把 $R_A$ 限制在 $k$ 维子空间上取极值，就得到第 $k$ 个特征值。所以 Rayleigh 商是「谱的变分刻画」的入口，不是孤立的记号。
+
+⚠️ $A$ 必须 Hermite（或实对称）才保证 $R_A$ 是实的、有极值意义；一般矩阵的 $x^{*}Ax$ 是复的，Rayleigh 商退化成复值函数，标准理论不适用。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 变分刻画；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 极小极大
+
+#### Courant–Fischer 极小极大原理　`thm.courant-fischer`
+*定理*　Courant–Fischer：第 $k$ 个特征值的变分刻画
+
+**在做什么**：Rayleigh 商只能抓**最大**与**最小**特征值。要抓「第 $k$ 个」，就得让子空间参与竞争 —— 这就是极小极大。
+
+设 $A$ 是 $n$ 阶 Hermite 矩阵，特征值按降序排列 $\lambda_{1} \ge \lambda_{2} \ge \cdots \ge \lambda_{n}$。则对每个 $k = 1, \ldots, n$，
+
+$$\lambda_{k} = \max_{\dim S = k}\ \min_{0 \ne x \in S} R_{A}(x) = \min_{\dim T = n-k+1}\ \max_{0 \ne x \in T} R_{A}(x) ,$$
+
+其中 $S, T$ 取遍相应维数的子空间，$R_A$ 是 Rayleigh 商（`def.rayleigh-quotient`）。
+
+**推论（Weyl 单调性）**：若 $A \le B$（即 $B - A$ 半正定），则 $\lambda_{k}(A) \le \lambda_{k}(B)$ 对每个 $k$ 成立。
+
+**证明骨架（一侧）**：取 $S_{0} = \operatorname{span}(u_{1},\ldots,u_{k})$（前 $k$ 个特征向量），在它上面 $\min R_A = \lambda_k$ 取到于 $u_k$，于是「$\max$ 至少是 $\lambda_k$」。另一侧：任取 $\dim S = k$，它与 $\operatorname{span}(u_k, \ldots, u_n)$ 的维数和 $> n$，必有交，取交里的单位向量即得 $\min_{S} R_A \le \lambda_k$。两个不等式合起来就是等号。
+
+⭐ **它为什么重要**：把「特征值是方程的根」换成「特征值是某个优化问题的值」，于是特征值有了**连续性**（子空间族是紧的）与**单调性**（Weyl）。扰动理论、数值特征值算法、图谱理论全都建立在这条上。
+
+**与 SVD 的连接**：对 $A^{*}A$ 用这条，就得到奇异值的变分刻画 $\sigma_k = \max_{\dim S=k}\min_{x\in S}\lVert Ax\rVert/\lVert x\rVert$ —— 这是「低秩逼近最优」的严格依据（Eckart–Young）。
+
+⚠️ 前提是 **Hermite**（或实对称）。一般矩阵没有实谱，Rayleigh 商也不是实的，这套不等式不成立；那种情形要用奇异值代替特征值。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 极小极大原理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 奇异值
 
 ### 星团：多重线性与张量
 > 造出「把双线性型变成线性映射」的机器：双线性型 → **张量积的万有性质** → 张量 ⊣ 内 Hom（伴随）→ 外幂与外代数 → 对称代数 → **行列式 = 最高外幂上的作用**（把行列式的来源统一到外代数）。
@@ -38646,6 +38954,126 @@ Stokes 要的是**可定向的 $n$ 维带边流形**，不是 $R^{3}$ 里的 2 �
 
 边界符号约定说的是任意维带边流形上「外法向先」的约定，不限于曲面。
 
+#### 定义引用：「矩阵」→ 转置　`dep.ln-transpose-matrix`
+
+转置是矩阵元素的下标互换，先得有矩阵。
+
+#### 定义引用：「对偶空间」→ 转置　`dep.ln-transpose-dual`
+
+转置 = 对偶映射的矩阵；「乘法换序」正是「对偶把箭头反过来」的坐标表现。
+
+#### 定义引用：「伴随算子」→ 共轭转置　`dep.ln-ctranspose-adjoint`
+
+在标准正交基下，伴随算子的矩阵就是共轭转置 —— 这是两者唯一正确的连接方式。
+
+#### 定义引用：「内积」→ 共轭转置　`dep.ln-ctranspose-inner`
+
+共轭的来源是内积对第一个变元共轭；没有内积就没有 $A^{*}$。
+
+#### 定义引用：「转置」→ 共轭转置　`dep.ln-ctranspose-transpose`
+
+共轭转置 = 先共轭再转置。
+
+#### 定义引用：「共轭转置」→ 酉矩阵与正交矩阵　`dep.ln-unitary-ctranspose`
+
+酉的定义 $U^{*}U = I$ 直接用共轭转置写。
+
+#### 定义引用：「等距与正交变换」→ 酉矩阵与正交矩阵　`dep.ln-unitary-isometry`
+
+酉矩阵就是「在标准正交基下、保内积的线性映射」的矩阵 —— 等距的坐标写法。
+
+#### 定义引用：「矩阵」→ 酉矩阵与正交矩阵　`dep.ln-unitary-matrix`
+
+先有方阵，才谈得上 $U^{*}U = I$。
+
+#### 定义引用：「共轭转置」→ Hermite 矩阵与对称矩阵　`dep.ln-hermite-ctranspose`
+
+Hermite 的定义 $A^{*} = A$ 就是一个共轭转置条件。
+
+#### 定义引用：「内积」→ Hermite 矩阵与对称矩阵　`dep.ln-hermite-inner`
+
+「自伴」的意义在于 $\langle Ax,y\rangle = \langle x,Ay\rangle$，必须先有内积。
+
+#### 定义引用：「共轭转置」→ 正规矩阵　`dep.ln-normal-ctranspose`
+
+正规条件 $A^{*}A = AA^{*}$ 用共轭转置写。
+
+#### 定义引用：「正规算子」→ 正规矩阵　`dep.ln-normal-operator`
+
+矩阵版与算子版互为翻译（标准正交基下）。
+
+#### 定义引用：「Hermite 矩阵与对称矩阵」→ 正规矩阵　`dep.ln-normal-unitary`
+
+Hermite 是正规的特例（$A^{*} = A$ $\implies$ 两个乘积都是 $A^{2}$），包含关系写进正文。
+
+#### 定义引用：「Hermite 矩阵与对称矩阵」→ 正定矩阵　`dep.ln-posdef-hermite`
+
+正定只对 Hermite（实对称）矩阵定义 —— 否则 $x^{*}Ax$ 不是实的，「$>0$」没有意义。
+
+#### 定义引用：「二次型」→ 正定矩阵　`dep.ln-posdef-qform`
+
+正定矩阵与正定二次型一一对应。
+
+#### 定义引用：「酉矩阵与正交矩阵」→ Schur 三角化　`dep.ln-schur-unitary`
+
+Schur 形的变换必须取酉矩阵（这正是它数值稳定、而 Jordan 形不稳定的原因）。
+
+#### 定义引用：「特征值与特征向量」→ Schur 三角化　`dep.ln-schur-eigen`
+
+三角阵的对角元就是特征值 —— 归纳证明里每一步都在取特征向量。
+
+#### 定义引用：「正规矩阵」→ 谱定理（矩阵版）　`dep.ln-schur-normal`
+
+谱定理（矩阵版）的主语就是「正规」这一类。
+
+#### 定义引用：「酉矩阵与正交矩阵」→ 谱定理（矩阵版）　`dep.ln-spectral-unitary`
+
+对角化的变换限制为酉矩阵，才叫谱分解。
+
+#### 定义引用：「可对角化判据」→ 谱定理（矩阵版）　`dep.ln-spectral-diag`
+
+谱定理是「可对角化」在正交条件下的加强版；先有一般的可对角化判据。
+
+#### 定义引用：「正定矩阵」→ 极分解　`dep.ln-polar-posdef`
+
+$P = \sqrt{A^{*}A}$ 是半正定的，正定那一条给出「半正定矩阵有唯一平方根」。
+
+#### 定义引用：「奇异值分解」→ 极分解　`dep.ln-polar-svd`
+
+把 $P$ 对角化即得 SVD，所以 SVD 可以看成极分解的推论；反过来也常用。
+
+#### 定义引用：「特征值与特征向量」→ 谱半径　`dep.ln-radius-eigen`
+
+谱半径是「所有特征值模长的最大值」，先有特征值。
+
+#### 定义引用：「Hermite 矩阵与对称矩阵」→ Rayleigh 商　`dep.ln-rayleigh-hermite`
+
+Rayleigh 商只对 Hermite（实对称）矩阵有实值、有极值意义。
+
+#### 定义引用：「内积」→ Rayleigh 商　`dep.ln-rayleigh-inner`
+
+商里的 $x^{*}y$ 就是内积。
+
+#### 定义引用：「Rayleigh 商」→ Courant–Fischer 极小极大原理　`dep.ln-cf-rayleigh`
+
+极小极大的目标函数就是 Rayleigh 商。
+
+#### 定义引用：「Hermite 矩阵与对称矩阵」→ Courant–Fischer 极小极大原理　`dep.ln-cf-hermite`
+
+定理要求 $A$ 是 Hermite（实对称）—— 否则特征值不是实的，不等式无从谈起。
+
+#### 定义引用：「谱定理（矩阵版）」→ 谱定理（实对称）　`dep.ln-spectral-old`
+
+矩阵版把算子的谱定理落到标准正交基下的矩阵语言；两条互为翻译。
+
+#### 定义引用：「谱定理（矩阵版）」→ 谱定理（复正规）　`dep.ln-normal-oldspectral`
+
+「复正规可酉对角化」的矩阵表述就是这一条。
+
+#### 定义引用：「谱半径」→ 迹　`dep.ln-trace-spectral`
+
+迹等于特征值之和；谱半径给的是「模最大的那个」，两者从不同角度记账。
+
 #### Young 不等式 ⟹ Hölder 不等式　`imp.holder`
 *Young 不等式 $\implies$ Hölder 不等式*
 
@@ -45761,6 +46189,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **多项式与因式分解 ↔ 代数结构**　3 条节点级连线
 - **矩阵与行列式 ↔ 特征值与 Jordan 型**　3 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
+- **内积空间与正交性 ↔ 特征值与 Jordan 型**　5 条节点级连线
 - **矩阵与行列式 ↔ 多重线性与张量**　4 条节点级连线
 - **多元微分 ↔ 度量空间**　3 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
@@ -45871,6 +46300,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **有界变差与绝对连续 ↔ 测度的构造**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 积分**　4 条节点级连线
 - **微分形式、积分与 de Rham ↔ Lie 群**　4 条节点级连线
+- **内积空间与正交性 ↔ 矩阵与行列式**　2 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
 - **实数与极限 ↔ 数系的构造**　3 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线

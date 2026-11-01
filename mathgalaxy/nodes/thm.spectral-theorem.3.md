@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.normal-operator`](../nodes/def.normal-operator.md) 正规算子 + [`thm.diagonalizable`](../nodes/thm.diagonalizable.md) 可对角化判据 + [`thm.evt`](../nodes/thm.evt.md) 最值定理 + [`def.orthogonal-complement`](../nodes/def.orthogonal-complement.md) 正交补：自伴性 + 紧性 $\implies$ 谱定理（实对称）　[proofs/imp.spectral-theorem.md](../proofs/imp.spectral-theorem.md)
+- [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版）：用到了定义 谱定理（矩阵版）　[proofs/dep.ln-spectral-old.md](../proofs/dep.ln-spectral-old.md)
 
 > 续见 [nodes/thm.spectral-theorem.4.md](./thm.spectral-theorem.4.md)

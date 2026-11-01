@@ -8,4 +8,4 @@
 - **4** `thm.monotone-class` monotone class theorem · layer 6 · 集合族与 σ-代数
 - **4** `def.section` section · layer 6 · 乘积测度与 Fubini
 
-(1334 of 1341 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)
+(1346 of 1353 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)

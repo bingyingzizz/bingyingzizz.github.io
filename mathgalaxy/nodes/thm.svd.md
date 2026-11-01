@@ -9,6 +9,9 @@ $$A = U \Sigma V^{\dagger}, \qquad \Sigma = \operatorname{diag}(\sigma_1, \ldots
 
 $\sigma_i$ 叫 $A$ 的**奇异值**，它们是 $A^{\dagger}A$（或 $AA^{\dagger}$）的特征值的平方根。
 
+## 它能推出什么 / 谁在用它
+- 被 [`thm.polar-decomposition`](../nodes/thm.polar-decomposition.md) 极分解 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.svd.2.md](./thm.svd.2.md)
 

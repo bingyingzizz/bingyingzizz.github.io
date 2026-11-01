@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称） + [`def.normal-operator`](../nodes/def.normal-operator.md) 正规算子：实谱定理 + 复化 $\implies$ 复正规可酉对角化　[proofs/imp.spectral-normal.md](../proofs/imp.spectral-normal.md)
+- [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版）：用到了定义 谱定理（矩阵版）　[proofs/dep.ln-normal-oldspectral.md](../proofs/dep.ln-normal-oldspectral.md)

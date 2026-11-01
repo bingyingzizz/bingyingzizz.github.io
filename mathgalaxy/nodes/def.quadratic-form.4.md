@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.sylvester-criterion`](../nodes/thm.sylvester-criterion.md) Sylvester 判据
 - 被 [`thm.second-derivative-test`](../nodes/thm.second-derivative-test.md) 极值判别（Hessian 判据） 用
+- 被 [`def.positive-definite-matrix`](../nodes/def.positive-definite-matrix.md) 正定矩阵 用

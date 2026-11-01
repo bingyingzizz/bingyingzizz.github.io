@@ -14,6 +14,9 @@ $$\langle Tv, Tw \rangle = \langle v, w \rangle \quad (\forall v, w) \qquad \iff
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.isometry.2.md](./def.isometry.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.isometry.3.md](./def.isometry.3.md)
+
 refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.isometry.md`

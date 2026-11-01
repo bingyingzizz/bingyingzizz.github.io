@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称）
+- 被 [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版） 用
