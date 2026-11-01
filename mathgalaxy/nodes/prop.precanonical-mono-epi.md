@@ -5,7 +5,7 @@ layer 16 · 命题 · 拓扑斯 · 范畴论
 
 设 $\mathcal{C}$ 是预拓扑斯、配预标准拓扑。对 $\mathcal{C}$ 中的态射 $f : X \to Y$，
 
-$$f \text{ 是单态射（满态射）} \iff X^{\sharp} \to Y^{\sharp} \text{ 是单态射（满态射）}$$
+$f$ **是单态射（满态射）** $\iff X^{\sharp} \to Y^{\sharp}$ **是单态射（满态射）**
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-dep.sheaf-mono-epi.md](../proofs/def-dep.sheaf-mono-epi.md)

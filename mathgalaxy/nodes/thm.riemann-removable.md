@@ -7,7 +7,8 @@ layer 21 · 定理 · Cauchy 理论 · 复变函数
 
 设 $f$ 在 $D(a, r) \setminus \{a\}$ 上全纯，且
 
-$$\lim_{z \to a} (z - a) f(z) = 0 \qquad (\text{等价地，} f(z) = o(|z - a|^{-1})).$$
+$$\lim_{z \to a} (z - a) f(z) = 0.$$
+等价的说法是 $f(z) = o(|z - a|^{-1})$。
 > 陈述续见 [nodes/thm.riemann-removable.2.md](./thm.riemann-removable.2.md)
 
 

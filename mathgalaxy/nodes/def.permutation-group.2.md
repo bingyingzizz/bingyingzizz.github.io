@@ -4,6 +4,7 @@
 ## 陈述（续）
 各循环长度组成的多重集叫 $\sigma$ 的**循环型**。
 
-$$\operatorname{ord}(\sigma) = \text{各循环长度的最小公倍数}$$
+$\operatorname{ord}(\sigma)$ 等于**各循环长度的最小公倍数**：若循环分解的长度是 $\ell_1, \ldots, \ell_r$，则
+$$\operatorname{ord}(\sigma) = \operatorname{lcm}(\ell_1, \ldots, \ell_r)$$
 
 > 续见 [nodes/def.permutation-group.3.md](./def.permutation-group.3.md)

@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-01T14:15:15.149Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-01T14:43:52.159Z
 > 14 星系 / 92 星团 / 1341 节点 / 2473 连线（强边 2456，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -546,7 +546,7 @@ $$A / \sim\ := \{ [a] : a \in A \}$$
 
 对任意集合 $X$，都存在一个**不能单射进 $X$** 的序数；取其中最小的那个，记作 $\aleph (X)$，叫做 $X$ 的 **Hartogs 数**（Hartogs 序数）。
 
-$$\forall X \exists\alpha ( \alpha \hookrightarrow  X\text{ 不成立} ),\text{ 且} \alpha = \aleph(X)\text{ 时}: \forall\beta < \alpha, \beta \hookrightarrow  X\text{ 成立}$$
+$$\forall X \exists\alpha \bigl[\, \neg(\alpha \hookrightarrow  X)\ \wedge \alpha = \aleph(X)\ \wedge \forall\beta < \alpha,\ \beta \hookrightarrow  X\, \bigr]$$
 
 ⭐⭐ **它在 ZF 里就能证，不需要选择公理。** 这是它最要紧的性质 —— 正因为不依赖 AC，它才能安全地用在「$AC \implies$ 良序定理」「$AC \implies$ 佐恩引理」这类证明里，用来说明超限递归**必定停下来**，而不至于循环论证。
 
@@ -645,7 +645,7 @@ $\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots$
 
 若存在单射 $f : A \to B$ 与单射 $g : B \to A$，则存在**双射** $A \to B$，即
 
-$$|A| \le |B| \ \text{且}\ |B| \le |A| \implies |A| = |B|$$
+$$|A| \le |B| \ \wedge \ |B| \le |A| \implies |A| = |B|$$
 
 ⭐ 它的价值在于**省事**：要证两个集合等势，只要各造一个方向的单射，不必显式写出那个双射。（对比：Cantor 定理的另一条路 —— 有单射无满射 —— 用的是对称的说法。）
 
@@ -1149,7 +1149,8 @@ $\langle \mathbb{N}, \le \rangle$ 是良序的；$\langle \mathbb{Z}, \le \rangl
 
 集合族 $\mathcal{A}$ 具有**有限特征**，当且仅当对任意集合 $X$：
 
-$$X \in \mathcal{A} \iff X\text{ 的每个有限子集都属于} \mathcal{A}$$
+记 $[X]^{<\omega}$ 为 $X$ 的全体**有限子集**，则它等价于
+$$X \in \mathcal{A} \iff \forall\, Y \in [X]^{<\omega},\ Y \in \mathcal{A}$$
 
 也就是说：「局部地看起来像 $\mathcal{A}$ 的成员」$\implies$「整体就是 $\mathcal{A}$ 的成员」。
 
@@ -1442,7 +1443,8 @@ $$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 
 设 $(X_{i}, \mathcal{T}_{i})_{i \in I}$ 是一族拓扑空间。$\prod_{i \in I} X_{i}$ 上的**积拓扑**是以
 
-$$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},\ \text{除有限多个 } i \text{ 外 } U_{i} = X_{i})$$
+$$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},$$
+其中**除有限多个 $i$ 之外**都有 $U_{i} = X_{i}$）
 
 为基的拓扑 —— 也就是使所有投影 $\pi_{j} : \prod_{i} X_{i} \to X_{j}$ 都连续的**最粗**拓扑。
 
@@ -1588,7 +1590,9 @@ $$\mathcal{U}_{i} := \{\, U_{i} : p_{i}^{-1}(U_{i}) \in \mathcal{S}_{0} \,\},\qq
 
 设 $\pi : Y \to X$ 是**闭**连续映射，$A \subseteq X$。则「$A$ 的邻域的原像」
 
-$$\bigl\{\, \pi^{-1}(U) \;:\; U \text{ 是 } A \text{ 在 } X \text{ 中的邻域} \,\bigr\}$$
+$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\pi^{-1}(U)$ 全体是
+
+$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \,$$
 
 构成 $\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。
 
@@ -2009,7 +2013,8 @@ $$\operatorname{Hom}(S \sqcup T,\ Z) \;\cong\; \operatorname{Hom}(S, Z) \times \
 
 设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
 
-$$C(x) \;=\; \bigcap \{\, K \subseteq S : K \text{ 闭开},\ x \in K \,\}$$
+$C(x)$ 是**所有包含 $x$ 的闭开子集之交**：
+$$C(x) \;=\; \bigcap \{\, K \subseteq S : x \in K \,$$
 
 证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。
 
@@ -2087,7 +2092,8 @@ Stone 空间构成的范畴是 $\mathbf{CHaus}$ 的反射子范畴。
 
 **投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
 
-$$X \;=\; \varprojlim_{i \in I} X_{i}, \qquad X_{i} \text{ 有限离散},\quad I \text{ 有向}$$
+$$X \;=\; \varprojlim_{i \in I} X_{i},$$
+其中每个 $X_{i}$ 是**有限离散**空间、$I$ 是**有向**集。
 
 「pro-finite」= 有限者的投射极限。直观上它是「越来越细的有限分辨率」堆出来的对象：$X_{i}$ 是第 $i$ 层分辨率下的样子，$I$ 有向保证任意两层分辨率都能同时加细。
 
@@ -2204,7 +2210,9 @@ $$\mathbf{BoolRing}^{\mathrm{op}}\;\simeq\;\mathbf{Stone}.$$
 
 设 $S$ 是 **Stone** 空间。则 $S$ 的**任何开覆盖都有有限的、两两不交的闭开加细**：存在有限族 $(C_{r})_{r \le m}$ 使
 
-$$C_{r} \text{ 闭开}, \qquad C_{r} \cap C_{s} = \emptyset \ (r \ne s), \qquad \bigsqcup_{r} C_{r} = S,$$
+- 每个 $C_{r}$ **闭开**；
+- $r \ne s$ 时 $C_{r} \cap C_{s} = \emptyset$；
+- $\bigsqcup_{r} C_{r} = S$。
 
 且每个 $C_{r}$ 都含在覆盖的某一支之中。
 
@@ -2624,7 +2632,7 @@ $$C\bigl(T,\ kC(k(X\times Y), kZ)\bigr) \cong C\bigl(k(T\times X\times Y),\ Z\bi
 
 在紧生成空间范畴上，函子
 
-$$X \longmapsto k(X \times Y) \qquad \text{左伴随于} \qquad Z \longmapsto kC(kY, Z).$$
+$$X \longmapsto k(X \times Y) \qquad \dashv \qquad Z \longmapsto kC(kY, Z).$$
 
 也就是说 $kC(kY, -)$ 是「乘 $Y$」的**右伴随**（$k(Y \times -)$ 叫**指数对象** $Z^{Y}$）。
 
@@ -3579,7 +3587,7 @@ $$H_{0}(X) \;\cong\; \bigoplus_{C \in \pi_{0}(X)} \mathbb{Z}.$$
 
 更精确：从每个分支 $C$ 中取一点 $x_{C}$，则类 $[x_{C}]$ 构成 $H_{0}(X)$ 的一组基。特别地
 
-$$\tilde{H}_{0}(X) = 0 \iff X \text{ 道路连通}.$$
+$$\tilde{H}_{0}(X) = 0 \iff X \text{ is path-connected}.$$
 
 **所以 $H_{0}$ 就是「$X$ 有几块」**。这也解释了为什么 $\tilde{H}_{0}(S^{0}) = \mathbb{Z}$（两点，秩 $2$ 商掉对角那条 $\mathbb{Z}$ 剩秩 $1$），从而球面同调的公式在 $p = 0$ 处也统一。
 
@@ -3707,7 +3715,7 @@ $$g : K^{(m)} \longrightarrow L$$
 
 **推论**：设 $K$ 是有限单纯复形。则包含映射 $C_{*}(K) \hookrightarrow S_{*}(|K|)$ 诱导同构
 
-$$H_{p}(K) \;\cong\; H_{p}(|K|) \qquad (\text{对一切 } p).$$
+$$H_{p}(K) \;\cong\; H_{p}(|K|) \qquad \forall p.$$
 
 于是「多面体的奇异同调可以只按某个三角剖分算成单纯同调」，而后者是**有限矩阵**问题。
 
@@ -4055,7 +4063,7 @@ $$A \big/ \ker f \;\cong\; \operatorname{im} f.$$
 
 设 $A$ 是环。子集 $I \subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \in A$、$x \in I$ 有
 
-$$a x \in I \quad \text{与} \quad x a \in I.$$
+$$a x \in I, \qquad x a \in I.$$
 
 （只要求 $a x \in I$ 的叫**左理想**，只要求 $x a \in I$ 的叫**右理想**；交换环里三者一致。）
 
@@ -5172,7 +5180,8 @@ $$\sigma = (a_1\ a_2\ \cdots\ a_{k_1})(b_1\ \cdots\ b_{k_2}) \cdots$$
 
 各循环长度组成的多重集叫 $\sigma$ 的**循环型**。
 
-$$\operatorname{ord}(\sigma) = \text{各循环长度的最小公倍数}$$
+$\operatorname{ord}(\sigma)$ 等于**各循环长度的最小公倍数**：若循环分解的长度是 $\ell_1, \ldots, \ell_r$，则
+$$\operatorname{ord}(\sigma) = \operatorname{lcm}(\ell_1, \ldots, \ell_r)$$
 
 ⭐ 「不交」是关键词：两个不交的循环**可以交换**，所以循环分解才能看成「把置换拆成互不干扰的零件」。一旦相交就不能随便换序。
 
@@ -5189,7 +5198,8 @@ $$\operatorname{ord}(\sigma) = \text{各循环长度的最小公倍数}$$
 
 每个 $\sigma \in S_n$ 都能写成**对换**（两个点的交换）之积，且所用对换个数的**奇偶性**与分解方式无关。据此定义**符号**
 
-$$\operatorname{sgn}(\sigma) := (-1)^{k} \quad (\sigma = \text{$k$ 个对换之积})$$
+$$\operatorname{sgn}(\sigma) := (-1)^{k}$$
+其中 $\sigma$ 是 $k$ 个对换之积（良定性由 $\sigma$ 的奇偶性保证）。
 
 等价公式（不含分解的任意性）
 
@@ -5241,7 +5251,7 @@ $$\langle g \rangle := \{\, g^{k} : k \in \mathbb{Z} \,\} \quad \subseteq\; G$$
 
 设 $G$ 是有限群、$H \le G$。对 $g \in G$ 记**左陪集** $gH := \{\, gh : h \in H \,\}$。则左陪集构成 $G$ 的一个划分，每个左陪集与 $H$ 等势，于是
 
-$$|G| = [G : H] \cdot |H|, \qquad \text{即} \qquad |H| \mid |G|$$
+$$|G| = [G : H] \cdot |H|, \qquad |H| \mid |G|$$
 
 其中 $[G : H] := |G|/|H|$ 叫 $H$ 在 $G$ 中的**指数**。
 
@@ -6243,7 +6253,8 @@ $$V = U \oplus W$$
 
 整环 $A$ 叫 **gcd 整环**，若任意 $a, b \in A$ 都有**最大公因子**：存在 $d$ 使
 
-$$d \mid a,\quad d \mid b,\quad \text{且任何 } c \mid a,\ c \mid b \text{ 都有 } c \mid d .$$
+$$d \mid a,\quad d \mid b,$$
+并且**任何同时整除 $a, b$ 的 $c$ 都整除 $d$**。
 
 注意「最大」是**整除意义下的最大下界**，不是大小比较 —— 整环上没有全序。
 
@@ -6283,7 +6294,7 @@ Bézout 整环里「不可约 = 素」（因为 $\gcd$ 由线性组合给出，E
 
 整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \setminus \{0\} \to \mathbb{N}$（**欧几里得函数**），使对任意 $a \in A$、$b \ne 0$，存在 $q, r \in A$ 满足
 
-$$a = q b + r, \qquad r = 0 \ \text{或}\ N(r) < N(b) .$$
+$$a = q b + r, \qquad r = 0 \ \vee \ N(r) < N(b) .$$
 
 三个例子，三种 $N$：$\mathbb{Z}$ 取 $N(a) = |a|$；$K[x]$ 取 $N(f) = \deg f$（这就是 `thm.division-algorithm`）；$\mathbb{Z}[i]$（Gauss 整数）取 $N(a+bi) = a^{2}+b^{2}$。
 
@@ -8844,7 +8855,7 @@ $$Df(a) : E \to F \quad \text{topological linear isomorphism}$$
 
 设 $E, F, G$ 是 Banach 空间，$U \subseteq E \times F$ 开，$F_0 : U \to G$ 是 $C^{1}$，$(a, b) \in U$ 满足 $F_0(a, b) = 0$ 且偏导
 
-$$D_y F_0(a, b) : F \to G \quad \text{是拓扑线性同构}$$
+而 $D_y F_0(a, b) : F \to G$ 是**拓扑线性同构**。
 
 则存在 $a$ 的邻域 $V \subseteq E$ 与唯一的 $C^{1}$ 映射 $g : V \to F$ 使 $g(a) = b$、$F_0(x, g(x)) = 0$，且
 
@@ -9224,7 +9235,7 @@ $(X, \mathcal{M}, \mu )$ 称为**测度空间**。
 
 若 $\mathcal{M}$ 只是一个**环**（不必是 $\sigma$代数），而 $\mu : \mathcal{M} \to [0, +\infty]$ 仍满足测度的两条：
 
-$$\mu(\emptyset) = 0, \quad  \{E_j\}\text{ 两两不交} \implies \mu(\bigcup E_j) = \sum \mu(E_j)$$
+$$\mu(\emptyset) = 0, \quad  E_j \cap E_k = \emptyset\ (j \ne k) \implies \mu(\bigcup E_j) = \sum \mu(E_j)$$
 
 则称 $\mu$ 是 $\mathcal{M}$ 上的**预测度**。
 
@@ -9239,7 +9250,7 @@ Carathéodory 扩张定理的作用就是把预测度从环一路提升到生成
 
 若 $\mu$ 只满足 (i) 与**有限**可加性：
 
-$$A, B \in \mathcal{M}\text{ 两两不交} \implies \mu(A \cup B) = \mu(A) + \mu(B)$$
+$$A, B \in \mathcal{M},\ A \cap B = \emptyset \implies \mu(A \cup B) = \mu(A) + \mu(B)$$
 （由归纳，可推到任意有限多个不交集合），
 
 则 $\mu$ 称为**有限可加测度**。
@@ -9519,7 +9530,7 @@ $\mu _F$ 的**分布函数**视角：若 $F$ 还满足 $F(-\infty ) = 0$、$F(+\
 
 设 $(X, \mathcal{M}, \mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当
 
-$$\exists E \in \mathcal{M}:\ \mu(E) = 0 \quad \text{且} \quad \forall x \in X \setminus E,\ P(x)\ \text{成立}$$
+$$\exists E \in \mathcal{M}:\ \mu(E) = 0\ \wedge \ \forall x \in X \setminus E,\ P(x) .$$
 
 即：**使命题不成立的那些点构成一个零集**。
 
@@ -9847,7 +9858,7 @@ $$\forall\varepsilon > 0, \mu(\{x : |f_n(x) - f_m(x)| \ge \varepsilon\}) \to 0\q
 
 若 $\{f_n\}$ 依测度 Cauchy，则存在可测函数 $f$ 使
 
-$$f_n \to f\text{ 依测度}, $$
+$$f_n \xrightarrow{\ \mu\ } f$$
 
 并且存在**子列** $\{f_{n_j}\}$ 使
 
@@ -9866,7 +9877,7 @@ $$f_{n_j} \to f\quad  \text{a.e.}$$
 
 若 $f_n \to f$ 于 $L^1$，则 $f_n \to f$ 依测度：
 
-$$\int |f_n - f| \to 0 \implies f_n \to f\text{ 依测度}$$
+$$\int |f_n - f| \to 0 \implies f_n \xrightarrow{\ \mu\ } f$$
 
 工具是 **Markov（Chebyshev）不等式**：$
 \mu(\{|g| \ge \varepsilon\}) \le (1/\varepsilon)\cdot\int |g| d\mu$
@@ -9882,7 +9893,8 @@ $$\int |f_n - f| \to 0 \implies f_n \to f\text{ 依测度}$$
 
 设 $\mu(X) < \infty$，且 $f_n \to f$ a.e.。则 $f_n \to f$ **近一致**：
 
-$$\forall\varepsilon > 0, \exists E \subseteq X : \mu(E) < \varepsilon,\text{ 且} f_n \rightrightarrows  f\text{ 在} X \setminus E\text{ 上一致}$$
+$$\forall\varepsilon > 0,\ \exists E \subseteq X :\ \mu(E) < \varepsilon$$
+且 $f_n \rightrightarrows  f$ 在 $X \setminus E$ 上**一致收敛**。
 
 ⭐ 「几乎处处收敛」听起来很弱，但 Egorov 说：只要空间**有限测度**，它其实差一点就是**一致收敛** —— 代价只是丢掉一个任意小的集合。
 
@@ -9897,7 +9909,8 @@ $$\forall\varepsilon > 0, \exists E \subseteq X : \mu(E) < \varepsilon,\text{ �
 
 设 $f : [a, b] \to \mathbb{C}$ 是 Lebesgue 可测的。则对任意 $\varepsilon > 0$，存在**紧集** $E \subseteq [a, b]$ 使
 
-$$\mu(E^c) < \varepsilon,\text{ 且} f|_E\text{ 连续}$$
+$$\mu(E^c) < \varepsilon$$
+且 $f|_E$ **连续**。
 
 ⭐ 「可测」这个条件看起来很弱，但 Lusin 说：可测函数差一点就是**连续**函数 —— 只要允许把定义域挖掉一小块。
 
@@ -10586,7 +10599,8 @@ $$\int f d\lambda = \int_X ( \int_Y f d\nu ) d\mu = \int_Y ( \int_X f d\mu ) d\n
 - $\nu$ **至多取到 $\pm \infty$ 中的一个**（不能同时取到 $\infty$ 与 $-\infty$）；
 - 对两两不交的 $\{E_j\} \subseteq \mathcal{M}$：
 
-$$\nu( \bigsqcup_j E_j ) = \sum_j \nu(E_j),\text{ 且右边的级数绝对收敛}(\text{当} |\nu(\bigsqcup E_j)| < \infty\text{ 时})$$
+$$\nu( \bigsqcup_j E_j ) = \sum_j \nu(E_j),$$
+其中右边的级数**绝对收敛**（在 $|\nu(\bigsqcup_j E_j)| < \infty$ 时）。
 
 ⚠ 「至多取到一个无穷」这一条是**必需的**：否则可数可加性会碰上 $\infty - \infty$。
 
@@ -10722,7 +10736,7 @@ $$\forall E \in \mathcal{M}, \mu(E) = 0 \implies \nu(E) = 0$$
 
 设 $\mu$ 是测度，$\nu$ 是符号测度。则
 
-$$\nu \ll  \mu \iff |\nu| \ll  \mu \iff \nu^+ \ll  \mu\text{ 且} \nu^- \ll  \mu$$
+$$\nu \ll  \mu \iff |\nu| \ll  \mu \iff \nu^+ \ll  \mu\ \wedge \ \nu^- \ll  \mu$$
 
 并且：若同时有 $\nu \perp  \mu$ 与 $\nu \ll  \mu$，则 $\nu = 0$。
 
@@ -10756,7 +10770,7 @@ $$\nu(E) := \int_E f d\mu$$
 
 则 $\nu$ 是符号测度，且 $\nu \ll  \mu$。并且
 
-$$\nu\text{ 有限} \iff f \in L^1(\mu)$$
+$\nu$ **有限** $\iff f \in L^1(\mu)$
 
 这是绝对连续测度的**标准来源**，也是 Radon–Nikodym 定理要反过来证明的那件事：**所有**绝对连续的 $\nu$ 都长这个样子。
 
@@ -11036,7 +11050,8 @@ $$c < m(K) \le 3^n \sum_j m(B_j)\quad  \implies\quad  \sum_j m(B_j) > 3^{-n} c$$
 
 可测函数 $f : \mathbb{R}^n \to \mathbb{C}$ 是**局部可积的**，当且仅当
 
-$$\int_K |f(x)| dx < \infty\quad \text{ 对每个有界可测集} K \subseteq \mathbb{R}^n$$
+对每个**有界可测集** $K \subseteq \mathbb{R}^n$ 都有
+$$\int_K |f(x)| dx < \infty$$
 
 局部可积函数全体记作 $L^1_{loc}$（或 $L^1_{loc}(\mathbb{R}^n)$）。
 
@@ -11131,7 +11146,7 @@ $$m(\{x : Hf(x) > \alpha\}) \le (C/\alpha)\cdot\int |f(x)| dx$$
 
 设 $f \in L^1_{loc}$。则
 
-$$\lim_{r\to0} A_r f(x) = f(x)\quad \text{ 对} \text{a.e.} x \in \mathbb{R}^n$$
+$$\lim_{r\to0} A_r f(x) = f(x)\quad \text{for a.e. } x \in \mathbb{R}^n$$
 
 ⭐ 一句话：**可积函数几乎处处等于自己局部平均值的极限**。
 
@@ -11229,7 +11244,7 @@ $$\frac{1}{m(E_r)} \int_{E_r} |f - f(x)| \le \frac{1}{m(E_r)} \int_{B(r,x)} |f -
 $\mathbb{R}^{n}$ 上的 Borel 测度 $\nu$ 是**正则的**，当且仅当
 
 $\cdot$ $\nu(K) < \infty$ 对每个紧集 $K$ 成立；
-$\cdot$ $\nu(E) = \inf\{ \nu(U) : U\text{ 开}, E \subseteq U \}$ 对每个 $E \in \mathfrak{B}_{\mathbb{R}^n}$ 成立（**外正则**）。
+$\cdot$ $\nu(E) = \inf\{ \nu(U) : U \in \mathcal{T},\ E \subseteq U \}$ 对每个 $E \in \mathfrak{B}_{\mathbb{R}^n}$ 成立（**外正则**）。
 
 符号测度或复测度 $\nu$ 叫正则 $\iff$ $|\nu|$ 正则。
 
@@ -11638,7 +11653,8 @@ $$\|f\|_p := \left[ \int |f|^p \, d\mu \right]^{1/p}$$
 
 以及
 
-$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} : f \text{ 可测},\ \|f\|_p < \infty \,\}$$
+$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} :\ \|f|_p < \infty \,$$
+其中 $f$ 是**可测**函数。
 
 基本事实（都可直接验证）：
 
@@ -12158,7 +12174,7 @@ $$(L^{p})^{**} \cong (L^{q})^{*} \cong L^{p},$$
 
 **每个集合都装得进某个宇宙。** 这是一条独立的公理：
 
-$$\forall x \, \exists U \left[ U \text{ 是宇宙} \wedge  x \in U \right]$$
+$$\forall x \, \exists U \left[ U \in \mathrm{Univ} \wedge  x \in U \right]$$
 
 其中「宇宙」按「Grothendieck 宇宙」那份定义：传递，且对配对、幂集、以内部集合为索引的并封闭。
 
@@ -12402,7 +12418,7 @@ $$\varinjlim_{(X'\to X)\in J}\operatorname{Hom}_{\mathcal{C}}(X', Y)$$
 
 设 $\mathcal{C}$ 有纤维积、且**满态射是万有的**（沿任意态射拉回仍是满态射）。则
 
-$$X \text{ 是投射对象} \iff \text{每个满态射 } Y \twoheadrightarrow X \text{ 都有截面}.$$
+$X$ **是投射对象** $\iff$ 每个满态射 $Y \twoheadrightarrow X$ 都**有截面**。
 
 **证明。**
 
@@ -12913,7 +12929,7 @@ $$A = X_{0} \longrightarrow X_{1} \longleftarrow X_{2} \longrightarrow \cdots \l
 
 称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \in I$：
 
-$$i \downarrow F \quad \text{非空，且连通。}$$
+$i \downarrow F$ **非空，且连通**。
 
 ⭐ **直观**：$F$ 的像在 $I$ 里「到处都有、而且没有被隔开」。非空 = 每个 $i$ 都有一条路走到 $F$ 的像里；连通 = 不同的走法之间能互相转换。**满足这两条，$J$ 就在 $I$ 里「铺得足够满」**，沿着它算余极限与沿着整个 $I$ 算是一回事（见下一条）。
 
@@ -13077,7 +13093,8 @@ $$\operatorname{Hom}_{\operatorname{Ind}(\mathcal{C})}\Bigl(\text{“}\varinjlim
 
 把偏序集 $(P, \preceq)$ 看作范畴（对象是元素，$x \to y \iff x \preceq y$）。则对任何图 $D : I \to P$：
 
-$$\lim D = \inf D \;(\text{下确界}), \qquad \varinjlim D = \sup D \;(\text{上确界}),$$
+$$\lim D = \inf D, \qquad \varinjlim D = \sup D,$$
+即极限是**下确界**、余极限是**上确界**。
 
 只要它们存在。
 
@@ -13333,7 +13350,7 @@ $$\begin{array}{ccc} G & \xrightarrow{\;(\iota,\ \mathrm{id})\;} & G \times G \\
 
 若 $F : \mathcal{C} \to \mathcal{D}$ **保有限积**（含终对象），则它把
 
-$$\text{幺半群对象} \longmapsto \text{幺半群对象}, \qquad \text{群对象} \longmapsto \text{群对象}, \qquad \text{环对象} \longmapsto \text{环对象},$$
+$F$ 把**幺半群对象**送到幺半群对象、**群对象**送到群对象、**环对象**送到环对象。
 
 以及 $G$-对象、$A$-模、$k$-代数同理 —— 于是它诱导出 $\mathrm{Mon}(\mathcal{C}) \to \mathrm{Mon}(\mathcal{D})$ 等一串函子。
 
@@ -13746,9 +13763,9 @@ $$\Phi_{X, Y} : \operatorname{Hom}_{\mathcal{D}}\bigl(F(X), Y\bigr) \longrightar
 
 把它在两个「恒等态射」上取值，得到两个自然变换：
 
-$$\eta_{X} := \Phi_{X, F(X)}(1_{F(X)}) : X \to G F(X) \qquad (\textbf{单位})$$
+$$\eta_{X} := \Phi_{X, F(X)}(1_{F(X)}) : X \to G F(X)$$
 
-$$\varepsilon_{Y} := \Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \to Y \qquad (\textbf{余单位})$$
+$$\varepsilon_{Y} := \Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \to Y$$
 
 它们满足**三角等式**
 
@@ -14731,7 +14748,7 @@ $$R \;=\; \coprod_{i \in I} \operatorname{im}\bigl(h_{f_{i}}\bigr),$$
 
 Grothendieck 拓扑定义里**最后一条公理**可以换成：对一切 $R \subseteq R' \subseteq h_{X}$，
 
-$$R \in J(X) \implies R' \in J(X), \qquad \bigl(R' \in J(X) \text{ 且 } \forall f \in R'(Y),\ f^{-1}(R) \in J(Y)\bigr) \implies R \in J(X).$$
+$$R \in J(X) \implies R' \in J(X), \qquad \bigl(R' \in J(X) \ \wedge \ \forall f \in R'(Y),\ f^{-1}(R) \in J(Y)\bigr) \implies R \in J(X).$$
 
 **证明。** 两条正是原公理 (T2)、(T3) 的「筛版本」：第一句说覆盖**对放大封闭**（原来那条是「沿自身拉回仍覆盖」，两者等价）✓；第二句说**局部是覆盖则整体是覆盖**（原来那条是「覆盖沿覆盖细化」）✓。逐条对照即得 ✓。∎
 
@@ -14874,7 +14891,8 @@ $$F(X) \;\cong\; \ker\Bigl(\prod_{i} F(X_{i}) \rightrightarrows \prod_{i,j} F(X_
 
 等价地，下面两条同时成立：
 
-$$F\Bigl(\coprod_{i \in I} X_{i}\Bigr) \;\cong\; \prod_{i \in I} F(X_{i}), \qquad R \text{ 是 } X \text{ 上的等价关系} \implies F(X/R) \;\cong\; \ker\bigl(F(X) \rightrightarrows F(R)\bigr)$$
+$$F\Bigl(\coprod_{i \in I} X_{i}\Bigr) \;\cong\; \prod_{i \in I} F(X_{i}),$$
+其中 $R$ 是 $X$ 上的**等价关系**（拓扑斯的覆盖所对应的那个）。
 
 **证明。** 设覆盖族 $(X_{i} \to X)_{i \in I}$（有限、$\coprod_{i}X_{i} \to X$ 满）。层条件是对每个这样的族
 $$F(X) \to \prod_{i}F(X_{i}) \rightrightarrows \prod_{i,j}F(X_{i}\times_{X}X_{j})$$
@@ -14909,7 +14927,7 @@ $$F(X) \to \prod_{i}F(X_{i}) \rightrightarrows \prod_{i,j}F(X_{i}\times_{X}X_{j}
 
 设 $\mathcal{C}$ 是预拓扑斯、配预标准拓扑。对 $\mathcal{C}$ 中的态射 $f : X \to Y$，
 
-$$f \text{ 是单态射（满态射）} \iff X^{\sharp} \to Y^{\sharp} \text{ 是单态射（满态射）}$$
+$f$ **是单态射（满态射）** $\iff X^{\sharp} \to Y^{\sharp}$ **是单态射（满态射）**
 
 **证明。** 记层化为 $(-)^{\sharp}$。
 - **$(\implies)$**：层化是到层范畴的**左伴随**，故保余极限，特别保满态射；又是**左正合**的（保有限极限），故保单态射 ✓。
@@ -15094,7 +15112,8 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 $$f^{-1} := g : \mathcal{C} \longrightarrow \mathcal{C}'$$
 叫**连续的**，如果沿 $g$ 的预复合把 $\mathcal{C}'$ 上的层拉回成 $\mathcal{C}$ 上的层：
 
-$$g^{*} : \widetilde{\mathcal{C}'} \longrightarrow \widetilde{\mathcal{C}}, \qquad F \longmapsto F \circ g, \qquad \text{落在层范畴里。}$$
+$$g^{*} : \widetilde{\mathcal{C}^{prime}} \longrightarrow \widetilde{\mathcal{C}}, \qquad F \longmapsto F \circ g$$
+（它把层送到层，所以限制在层范畴上。）
 
 **读法**：$g$ 的方向是 $\mathcal{C} \to \mathcal{C}'$，但层是**反变**的，所以 $g$ 把 $\mathcal{C}'$ 上的层**拉回**到 $\mathcal{C}$ 上。这个「方向拧一下」是景态射的一切别扭之处。
 
@@ -15258,7 +15277,9 @@ $$M\cdot X \;:=\; M \otimes_{\mathbb{Z}} \mathbb{Z}\cdot X \;=\; j_{X!}j_{X}^{-1
 
 把 $X \in \mathcal{C}$ 看成函子 $X : \mathbf{1} \to \mathcal{C}$，它给出拓扑斯态射 $\widehat{X} : \mathbf{Set} \to \widehat{\mathcal{C}}$，三个函子在对象上由下式给出：
 
-$$\widehat{X}^{-1}(T) = T(X), \qquad \bigl(\widehat{X}_{!}(E)\bigr)(Y) = \begin{cases} E & \exists\, Y \to X,\\ \emptyset & \text{否则},\end{cases} \qquad \bigl(\widehat{X}_{*}(E)\bigr)(Y) = \begin{cases} E & \exists\, X \to Y,\\ \{0\} & \text{否则}.\end{cases}$$
+$\widehat{X}^{-1}(T) = T(X)$；而 $\widehat{X}_{!}(E)$ 在存在 $Y \to X$ 时取 $E$、**否则取 $\emptyset$**；$\widehat{X}_{*}(E)$ 在存在 $X \to Y$ 时取 $E$、**否则取 $\{0\}$**：
+
+$$\widehat{X}^{-1}(T) = T(X), \qquad \bigl(\widehat{X}_{!}(E)\bigr)(Y) \in \{\, E,\ \emptyset\, \}, \qquad \bigl(\widehat{X}_{*}(E)\bigr)(Y) \in \{\, E,\ \{0\}\, \}.$$
 
 **证明。** 由「任意函子诱导拓扑斯态射」，$X : \mathbf{1} \to \mathcal{C}$ 诱导出 $\widehat{X}_{!} \dashv \widehat{X}^{-1} \dashv \widehat{X}_{*}$ ✓。三条公式分别是：拉回就是取值 ✓；左 Kan 延拓沿 $\mathbf{1} \to \mathcal{C}$ 由逗号范畴的余极限给出，而「$\exists Y \to X$」正是那个余极限非空的条件 ✓；右伴对偶 ✓。∎
 
@@ -15736,7 +15757,7 @@ $$0 \longrightarrow M \longrightarrow I^{0} \longrightarrow I^{1} \longrightarro
 
 设 $\mathcal{C}$ 是**预加性范畴**，$M \in \mathcal{C}$。则
 
-$$M \text{ 是零对象} \iff M \text{ 是终对象} \iff M \text{ 是始对象}.$$
+$M$ **是零对象** $\iff$ $M$ **是终对象** $\iff$ $M$ **是始对象**
 
 **证明。** 预加性给每个 $\operatorname{Hom}(X,Y)$ 一个阿贝尔群结构，且复合**双线性** —— 于是**零态射**永远存在（它就是群的单位元），并且由双线性把 $0 + h = h$ 展开得
 $$0_{Y,Z}\circ h = 0_{X,Z}, \qquad f\circ 0_{X,Y} = 0_{X,Z} ✓$$
@@ -15755,7 +15776,7 @@ $$f = 1_{M}\circ f = 0_{M}\circ f = 0_{X,M}, \qquad g = 0_{X,M},$$
 
 设 $\mathcal{C}$ 是预加性范畴，$M, M_{1}, M_{2} \in \mathcal{C}$。
 
-$$M \text{ 是} M_{1}, M_{2} \text{ 的直和} \iff (M, p_{1}, p_{2}) \text{ 是} M_{1}, M_{2} \text{ 的积} \iff (M, i_{1}, i_{2}) \text{ 是余积},$$
+$M$ **是 $M_{1}, M_{2}$ 的直和** $\iff$ $(M, p_{1}, p_{2})$ **是 $M_{1}, M_{2}$ 的积**
 
 其中「直和」指存在 $p_{k} : M \to M_{k}$、$i_{k} : M_{k} \to M$ 使
 
@@ -15795,7 +15816,7 @@ $$f + g = \nabla_{N}\circ (f \oplus g)\circ \Delta_{M}.$$
 
 设 $\mathcal{C}, \mathcal{D}$ 是加法范畴，$F : \mathcal{C} \to \mathcal{D}$ 是函子。则三者等价：
 
-$$F \text{ 加法} \iff F \text{ 保零对象与所有直和} \iff F \text{ 保所有有限积} \iff F \text{ 保所有有限余积}.$$
+$F$ **加法** $\iff$ $F$ **保零对象与所有直和** $\iff$ $F$ **保所有有限积** $\iff$ $F$ **保所有有限余积**
 
 **证明。** **① 加法 $\implies$ 保双积。** $F$ 加法意味着每个 $\operatorname{Hom}(M,N) \to \operatorname{Hom}(FM,FN)$ 是群同态。若 $M$ 是 $M_{1},M_{2}$ 的双积，$F$ 把三条等式送到
 $$F(p_{k})F(i_{k}) = 1, \qquad F(i_{1})F(p_{1}) + F(i_{2})F(p_{2}) = 1_{F(M)},$$
@@ -15854,7 +15875,7 @@ $$\operatorname{im}(d^{n-1}_{1}\oplus d^{n-1}_{2}) = \operatorname{im}d^{n-1}_{1
 
 设 $\mathcal{C}, \mathcal{D}$ 是阿贝尔范畴，$F : \mathcal{C} \to \mathcal{D}$ 是函子。则
 
-$$F \text{ 左正合} \iff F \text{ 加法，且把左正合列送到左正合列}.$$
+$F$ **左正合** $\iff$ $F$ **加法，且把左正合列送到左正合列**
 
 对偶地：$F$ 右正合 $\iff$ $F$ 加法，且把右正合列送到右正合列。
 
@@ -15927,7 +15948,9 @@ $$(\operatorname{coker} m') \circ m = 0.$$
 
 设 $\mathcal{C}$ 是有余积的阿贝尔范畴、$G \in \mathcal{C}$。则
 
-$$G \text{ 是生成元} \iff \text{对每个 } M \in \mathcal{C},\ \exists I:\ G^{(I)} \twoheadrightarrow M.$$
+$G$ **是生成元** $\iff$ 对每个 $M \in \mathcal{C}$ 都存在指标集 $I$ 与满态射
+
+$$G^{(I)} \twoheadrightarrow M.$$
 
 **证明。**
 **$(\Longrightarrow)$** 取 $I := \operatorname{Hom}_{\mathcal{C}}(G, M)$，令 $\coprod_I G \to M$ 的各分量按对应态射来 ✓。若它不是满射，则 $M \to \operatorname{coker}$ 非零，由生成性存在 $g : G \to M$ 使这个复合非零 —— 可是 $g$ 本来就是 $I$ 中的一个分量，它的像落在 $\operatorname{im}$ 里，矛盾 ✓。
@@ -16031,7 +16054,8 @@ $$f^{n} - g^{n} \;=\; s^{n+1} \circ d_{K}^{n} + d_{L}^{n-1} \circ s^{n}$$
 
 **同伦范畴** $\mathbf{K}(\mathcal{C})$ 的对象与 $\mathcal{C}(\mathcal{C})$ 相同，态射取
 
-$$\operatorname{Hom}_{\mathbf{K}(\mathcal{C})}(K, L) \;:=\; \operatorname{Hom}_{\mathcal{C}(\mathcal{C})}(K, L) \big/ \{\text{零伦态射}\}$$
+$$\operatorname{Hom}_{\mathbf{K}(\mathcal{C})}(K, L) \;:=\; \operatorname{Hom}_{\mathcal{C}(\mathcal{C})}(K, L) \big/\ \sim,$$
+其中 $\sim$ 由**零同伦**的映射生成。
 
 其中的同构叫**同伦等价**；在 $\mathbf{K}(\mathcal{C})$ 中变成 $0$ 的复形叫**同伦平凡的**。
 
@@ -16235,7 +16259,8 @@ $$\mathbf{K}^{+}(\mathcal{I}) \xrightarrow{\;\sim\;} D^{+}(\mathcal{A})$$
 
 设 $F : \mathcal{A} \to \mathcal{A}'$ 是**加法函子**、$\mathcal{A}$ 有足够多内射对象。$F$ 的**右导出函子** $RF$ 是（在同构意义下唯一的）使下图交换的函子
 
-$$\begin{array}{ccc} K^{+}(\mathcal{A}) & \xrightarrow{\;F\;} & K^{+}(\mathcal{A}') \\[2pt] {\scriptstyle \text{换成内射复形}}\big\downarrow & & \\[2pt] K^{+}(\mathcal{I}) & \xrightarrow[\;RF\;]{} & \end{array}$$
+$$\begin{array}{ccc} K^{+}(\mathcal{A}) & \xrightarrow{\;F\;} & K^{+}(\mathcal{A}') \\[2pt] \big\downarrow & & \\[2pt] K^{+}(\mathcal{I}) & \xrightarrow[\;RF\;]{} & \end{array}$$
+其中竖直箭头表示把对象**换成内射复形**（取内射消解）。
 
 **读法**：$F$ 本身不正合（所以不能把它直接送到导出范畴里），但**先把复形换成内射复形**、再作用 $F$、再回导出范畴，这一步就正合了 —— 那个复合就是 $RF$。
 
@@ -16567,7 +16592,7 @@ $(3) \implies (1)$：对每个 $M$，$I$ 对 $\operatorname{Hom}(M,-)$ 零调意
 
 设 $\mathcal{A}$ 是阿贝尔范畴（有足够多内射）、$\mathcal{A}'$ 是阿贝尔范畴，$F : \mathcal{A} \to \mathcal{A}'$ 是**加法**函子。则
 
-$$F \text{ 左正合} \iff \forall M \in \mathcal{A}:\ R^{0}F(M) \cong F(M).$$
+$F$ **左正合** $\iff$ 对每个 $M \in \mathcal{A}$ 都有 $R^{0}F(M) \cong F(M)$。
 
 对偶地（有足够多投射时）：$F$ 右正合 $\iff L_{0}F \cong F$。
 
@@ -16713,7 +16738,7 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 
 进一步：若 $0 \to M' \to M \to M'' \to 0$ 正合且 $M'$ 内射，则
 
-$$M \text{ 内射} \iff M'' \text{ 内射}$$
+$M$ **内射** $\iff M\prime\prime$ **内射**
 
 证明用一张 $3 \times 3$ 的 $\operatorname{Hom}$ 图表：把短正合列 $0 \to A \to B \to C \to 0$ 用 $\operatorname{Hom}(-, M)$ 家族拉成三行，用两次蛇引理读出中间一行 $0 \to \ker f \to \ker g \to \ker h \to \operatorname{coker} f \to \operatorname{coker} g \to 0$，再看出第一行与第三行都是正合的，于是 $\ker g = \operatorname{coker} g = 0$。
 
@@ -17454,7 +17479,8 @@ $$0 \to Z^{p} \to K^{p} \to B^{p+1} \to 0, \qquad 0 \to B^{p} \to Z^{p} \to H^{p
 
 设 $\mathcal{T}$ 是拓扑斯，$X_{0} \xrightarrow{\ p\ } X$ 是态射且**有截面** $s$（$p s = 1_{X}$）。记
 
-$$X_{n} := X_{0} \times_{X} \cdots \times_{X} X_{0} \quad (n+1 \text{ 个因子}),$$
+$$X_{n} := X_{0} \times_{X} \cdots \times_{X} X_{0},$$
+（共 $n+1$ 个因子。）
 
 则对 $\mathcal{T}$ 中任何阿贝尔群 $M$，增广 Čech 复形 $\check{C}^{\bullet}\bigl((X_{0} \to X)^{+}, M\bigr)$ 是**同伦平凡**的；特别地
 
@@ -17884,7 +17910,8 @@ $$\mathcal{T}(\mathbf{Ab}) \longrightarrow \mathcal{T}$$
 
 （把阿贝尔层忘成底集合层）有**左伴随**，记作
 
-$$\mathbb{Z}\cdot(-) : \mathcal{T} \longrightarrow \mathcal{T}(\mathbf{Ab}), \qquad X \longmapsto \mathbb{Z}\cdot X \quad (\text{也记 } \mathbb{Z}[X]),$$
+$$\mathbb{Z}\cdot(-) : \mathcal{T} \longrightarrow \mathcal{T}(\mathbf{Ab}), \qquad X \longmapsto \mathbb{Z}\cdot X,$$
+后者也记作 $\mathbb{Z}[X]$。
 
 它由**万有性质**刻画：对 $X \in \mathcal{T}$ 与 $M \in \mathcal{T}(\mathbf{Ab})$，
 
@@ -19691,7 +19718,8 @@ $$F \twoheadrightarrow X.$$
 
 2. 函子 $S \mapsto \underline{S}$（把紧 Hausdorff 空间看成它表示的凝聚态集）给出范畴等价
 
-$$\mathbf{CHaus}\ \simeq\ \{\text{紧 Hausdorff 空间}\} \longrightarrow \{\text{拟紧且拟分离的凝聚态集}\}.$$
+$$\mathbf{CHaus}\ \simeq\ \mathrm{CHaus}\ \longrightarrow \mathrm{CondSet}_{\mathrm{qcqs}}.$$
+即：**紧 Hausdorff 空间**与**拟紧且拟分离的凝聚态集**等价。
 
 **这一条在说什么。** 凝聚态集是「用紧 Hausdorff 空间探测出来的层」。这条定理说：探测得最规整的那批对象（拟紧拟分离 的），**原来就是探测者自己**。于是「紧 Hausdorff 空间」这个范畴可以**原封不动**地坐进 $\mathrm{Cond}$ 里，作为它的「紧块部分」。
 
@@ -19790,7 +19818,7 @@ $$\Bigl(\varprojlim_{i} X_{i}\Bigr)(S) = \varprojlim_{i} X_{i}(S).$$
 
 **余极限不能这样算** —— 它是「先在预层里逐点取余极限、再**层化**」：
 
-$$\Bigl(\varinjlim_{i} X_{i}\Bigr)(S) = \Bigl(\text{层化}\bigl(S' \mapsto \varinjlim_{i} X_{i}(S')\bigr)\Bigr)(S).$$
+$$\Bigl(\varinjlim_{i} X_{i}\Bigr)(S) = \Bigl(\operatorname{sh}\bigl(S^{prime} \mapsto \varinjlim_{i} X_{i}(S^{prime})\bigr)\Bigr)(S).$$
 
 **证明极限那一半。** 层范畴 $\mathrm{Cond}$ 是预层范畴 $\widehat{\mathbf{CHaus}}$ 的**反射**满子范畴，含入函子 $i$ 有左伴随（层化）。右伴随保极限，所以 $i$ 保极限：$\mathrm{Cond}$ 里的极限就是预层里的极限；而预层里的极限是**逐点**算的。∎
 **余极限为什么不行。** 层化只是 $i$ 的**左**伴随，它不保余极限，所以余极限要先在预层里逐点取、再层化一次。
@@ -19917,7 +19945,8 @@ $F$ 是紧 Hausdorff 范畴里的**投射对象**（自由即投射），所以 
 
 设 $X$ 是拓扑空间、$Y \to X$ 是凝聚态集之间的态射（即 $Y \in \mathrm{Cond}/X$）。则预层
 
-$$U \;\longmapsto\; Y(U) := \operatorname{Hom}_{/X}\bigl(\underline{U},\ Y\bigr) \qquad (U \subseteq X \text{ 开})$$
+$$U \;\longmapsto\; Y(U) := \operatorname{Hom}_{/X}\bigl(\underline{U},\ Y\bigr)$$
+其中 $U \subseteq X$ 取遍**开集**。
 
 是 $X$ 上的一个**层**。
 
@@ -21273,7 +21302,7 @@ $$\operatorname{RHom}(Z[S]^{\blacksquare}, C) \longrightarrow \operatorname{RHom
 
 对任意 profinite 集 $S$，连续函数群 $C(S, \mathbb{Z})$（见 `def.cond-measure`）
 
-$$C(S, \mathbb{Z}) = \{\, f : S \to \mathbb{Z}\ \text{连续} \,\}$$
+$$C(S, \mathbb{Z}) = \{\, f : S \to \mathbb{Z}\ \mid f \text{continuous}\, \}$$
 
 是**自由阿贝尔群**。
 
@@ -21474,7 +21503,7 @@ $$\mathbb{Z}_p \otimes^{L\blacksquare} \mathbb{Z}[[T]] = \mathbb{Z}_p[[T]], \qqu
 - 一个**凝聚态环** $A$ —— 白话：凝聚态集（「对每个紧 Hausdorff 空间 $S$ 给出一个集合 $A(S)$、且随 $S$ 变小而相容」的那套规则，见 `def.condensed-set`）里**还能做加法与乘法**。等价说法：对每个 $S$，$A(S)$ 是一个普通环，且 $S \to T$ 诱导的映射是环同态。所以「凝聚态环」不是新对象，就是把「环」搬进凝聚态集的范畴；点开「凝聚态」跳到凝聚态集那页是对的，环这一层就写在下面这句里。最省事的例子：任意普通环取离散拓扑。
 - 一个函子
 
-$$\{\text{extremally disconnected 集}\} \longrightarrow \operatorname{Mod}^{\mathrm{cond}}_{A}, \qquad S \longmapsto \mathcal{A}[S],$$
+$$\{\,\ S : S \text{ extremally disconnected}\, \} \longrightarrow \operatorname{Mod}^{\mathrm{cond}}_{A}, \qquad S \longmapsto \mathcal{A}[S]$$
 
 它把有限不交并送到**乘积**，并带一族与 $S \to T$ 相容的映射 $S \to \mathcal{A}[S]$：对每个 $s \in S$ 给出自由完备模里的一个元素 —— 这就是「自由生成元」的抽象版。
 
@@ -21717,7 +21746,7 @@ $$\operatorname{Spa}(A, A^+) := \bigl\{\, |\cdot| : A \to \Gamma \cup \{0\} \ \b
 
 是 $A$ 上「在 $A^+$ 上 $\le 1$」的那些赋值（即 $A^+$ 里每个元素都算有界）的等价类全体。拓扑由**有理开集**给出：对 $f, g_1, \ldots, g_n \in A$，
 
-$$U\!\left(\tfrac{g_1, \ldots, g_n}{f}\right) := \bigl\{\, x : |g_i(x)| \le |f(x)| \ne 0 \ \text{对一切 } i \,\bigr\}.$$
+$$U\!\left(\tfrac{g_1, \ldots, g_n}{f}\right) := \bigl\{\, x : |g_i(x)| \le |f(x)| \ne 0\ \forall i\, \bigr\}.$$
 
 这些有理开集构成一组基，$\operatorname{Spa}(A,A^+)$ 是 **spectral space**（谱空间：同胚于某个环的素谱的拓扑空间；等价刻画是「紧、$T_0$、有紧开集作基」）。
 
@@ -22194,7 +22223,7 @@ $$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\p
 
 设 $\gamma: [a, b] \to \mathbb{C}$ 分段光滑（参数曲线），$f$ 在 $\gamma$ 上连续。定义
 
-$$\int_\gamma f(z)\,\mathrm{d}z := \lim_{\text{分割}} \sum_{k=1}^{n} f(\gamma(\tau_k))\,(\gamma(t_k) - \gamma(t_{k-1})),$$
+$$\int_\gamma f(z)\,\mathrm{d}z := \lim_{\lVert\Delta\rVert \to 0} \sum_{k=1}^{n} f(\gamma(\tau_k))\,(\gamma(t_k) - \gamma(t_{k-1})),$$
 
 分割取 $[a, b]$ 的任意加细分割、$\tau_k \in [t_{k-1}, t_k]$ 任意，极限存在且与取法无关；它等于
 
@@ -22783,7 +22812,8 @@ $$f(z) = \frac{1}{2\pi i}\oint_{|\zeta - a| = \rho_2} \frac{f(\zeta)}{\zeta - z}
 
 设 $f$ 在 $D(a, r) \setminus \{a\}$ 上全纯，且
 
-$$\lim_{z \to a} (z - a) f(z) = 0 \qquad (\text{等价地，} f(z) = o(|z - a|^{-1})).$$
+$$\lim_{z \to a} (z - a) f(z) = 0.$$
+等价的说法是 $f(z) = o(|z - a|^{-1})$。
 
 则 $a$ 是 $f$ 的**可去奇点**：存在 $f$ 在 $D(a, r)$ 上的全纯延拓。
 
@@ -22888,7 +22918,7 @@ $$Z := \{\, z \in \Omega : f(z) = g(z) \,\}$$
 
 设 $z_{0}$ 是 $f$ 的**本性奇点**（即 Laurent 展开的主部有无穷多项）。则对 $z_{0}$ 的每个去心邻域 $U = \{\, 0 < |z - z_{0}| < r \,\}$，像集 $f(U)$ 在 $\mathbb{C}$ 中**稠密**：
 
-$$\forall\, w \in \mathbb{C},\ \forall\, \varepsilon > 0,\ \exists\, z \in U \text{ 使 } |f(z) - w| < \varepsilon.$$
+$$\forall\, w \in \mathbb{C},\ \forall\, \varepsilon > 0,\ \exists\, z \in U:\ |f(z) - w| < \varepsilon.$$
 
 **证明（反证）**：设存在 $w_{0}$、$\rho > 0$ 使 $f(U) \cap B(w_{0}, \rho) = \emptyset$。令
 
@@ -23411,7 +23441,8 @@ $$(z_{1}, z_{2}; z_{3}, z_{4}) := \frac{N}{D},$$
 
 设 $z_{1}, z_{2}, z_{3}, z_{4}$ 互不相同。则
 
-$$(z_{1}, z_{2}; z_{3}, z_{4}) \in \mathbb{R} \iff \text{四点共圆或共线}.$$
+$$(z_{1}, z_{2}; z_{3}, z_{4}) \in \mathbb{R}$$
+当且仅当 $z_{1}, z_{2}, z_{3}, z_{4}$ **四点共圆或共线**。
 
 （在扩充平面上「圆」与「直线」是同一类对象，所以这句话不必分两种情形。）
 
@@ -27402,7 +27433,11 @@ $\sigma$ 同理，只是每列是一个等比数列求和：$\sum_{f=0}^{e_{i}} 
 
 定义
 
-$$\mu(n) := \begin{cases} 1, & n = 1, \\ (-1)^{r}, & n = p_{1}p_{2}\cdots p_{r}\ \text{是}\ r\ \text{个互不相同素数之积}, \\ 0, & n\ \text{含平方因子}\ (p^{2} \mid n) . \end{cases}$$
+$\mu : \mathbb{N} \to \mathbb{Z}$ 按 $n$ 的素因子结构定义：
+
+- $n = 1$ 时 $\mu(1) = 1$；
+- $n$ 是 $r$ 个**互不相同**素数之积（$n = p_{1}p_{2}\cdots p_{r}$）时 $\mu(n) = (-1)^{r}$；
+- $n$ **含平方因子**（存在素数 $p$ 使 $p^{2} \mid n$）时 $\mu(n) = 0$。
 
 $\mu$ 是**积性**函数里最简单的一个（也是完全积性以外的第一个「有零值」的积性函数）：由素数幂上的值 $\mu(p) = -1$、$\mu(p^{e}) = 0\ (e \ge 2)$ 完全确定。
 
@@ -27440,7 +27475,7 @@ $$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = (1 - 1)^
 
 设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则
 
-$$g(n) = \sum_{d \mid n} f(d) \quad \text{对一切 } n \qquad \iff \qquad f(n) = \sum_{d \mid n} \mu(d)\, g\!\left(\frac{n}{d}\right) \ \text{对一切 } n .$$
+$$g(n) = \sum_{d \mid n} f(d)\quad \forall n \qquad \iff \qquad f(n) = \sum_{d \mid n} \mu(d)\, g\!\left(\frac{n}{d}\right) \quad \forall n .$$
 
 **$\Leftarrow$ 的方向**（唯一要看的方向）：把 $f(d)$ 的表达式代进去，
 
@@ -27585,7 +27620,10 @@ $p$ 是奇素数时，$1, \cdots, p-1$ 里恰有 $(p-1)/2$ 个二次剩余：映
 
 设 $p$ 是奇素数，$p \nmid a$。定义
 
-$$\left(\frac{a}{p}\right) := \begin{cases} 1, & a\ \text{是模}\ p\ \text{的二次剩余}, \\ -1, & a\ \text{是二次非剩余} . \end{cases}$$
+$\left(\frac{a}{p}\right)$ 只取值 $\pm 1$：
+
+- $a$ **是模 $p$ 的二次剩余**（即 $a \equiv x^{2} \pmod p$ 有解 $x \not\equiv 0$）时取 $1$；
+- $a$ **是二次非剩余**时取 $-1$。
 
 补充规定 $\left(\frac{a}{p}\right) = 0$ 当 $p \mid a$。
 

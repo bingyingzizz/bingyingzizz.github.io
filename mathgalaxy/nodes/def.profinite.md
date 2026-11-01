@@ -5,7 +5,8 @@ layer 12 · 定义 · Stone 与 Stonean · 拓扑学
 
 **投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：
 
-$$X \;=\; \varprojlim_{i \in I} X_{i}, \qquad X_{i} \text{ 有限离散},\quad I \text{ 有向}$$
+$$X \;=\; \varprojlim_{i \in I} X_{i},$$
+其中每个 $X_{i}$ 是**有限离散**空间、$I$ 是**有向**集。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.limit-profinite.md](../proofs/def-dep.limit-profinite.md)

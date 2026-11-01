@@ -5,7 +5,8 @@ layer 12 · 定义 · 整环与分解 · 抽象代数
 
 整环 $A$ 叫 **gcd 整环**，若任意 $a, b \in A$ 都有**最大公因子**：存在 $d$ 使
 
-$$d \mid a,\quad d \mid b,\quad \text{且任何 } c \mid a,\ c \mid b \text{ 都有 } c \mid d .$$
+$$d \mid a,\quad d \mid b,$$
+并且**任何同时整除 $a, b$ 的 $c$ 都整除 $d$**。
 
 注意「最大」是**整除意义下的最大下界**，不是大小比较 —— 整环上没有全序。
 

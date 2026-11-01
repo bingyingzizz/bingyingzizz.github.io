@@ -5,7 +5,7 @@ layer 8 · 定理 · 基数与等势 · 集合论
 
 对任意集合 $X$，都存在一个**不能单射进 $X$** 的序数；取其中最小的那个，记作 $\aleph (X)$，叫做 $X$ 的 **Hartogs 数**（Hartogs 序数）。
 
-$$\forall X \exists\alpha ( \alpha \hookrightarrow  X\text{ 不成立} ),\text{ 且} \alpha = \aleph(X)\text{ 时}: \forall\beta < \alpha, \beta \hookrightarrow  X\text{ 成立}$$
+$$\forall X \exists\alpha \bigl[\, \neg(\alpha \hookrightarrow  X)\ \wedge \alpha = \aleph(X)\ \wedge \forall\beta < \alpha,\ \beta \hookrightarrow  X\, \bigr]$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.ordinal`](../nodes/def.ordinal.md) 序数：用到了定义 序数　[proofs/def-link.ordinal-hartogs.md](../proofs/def-link.ordinal-hartogs.md)

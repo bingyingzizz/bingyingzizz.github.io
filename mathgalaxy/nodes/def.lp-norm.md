@@ -9,7 +9,8 @@ $$\|f\|_p := \left[ \int |f|^p \, d\mu \right]^{1/p}$$
 
 以及
 
-$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} : f \text{ 可测},\ \|f\|_p < \infty \,\}$$
+$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} :\ \|f|_p < \infty \,$$
+其中 $f$ 是**可测**函数。
 
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.holder`](../nodes/thm.holder.md) Hölder 不等式 用

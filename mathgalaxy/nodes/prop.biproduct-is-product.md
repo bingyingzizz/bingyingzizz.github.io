@@ -5,7 +5,7 @@ layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 
 设 $\mathcal{C}$ 是预加性范畴，$M, M_{1}, M_{2} \in \mathcal{C}$。
 
-$$M \text{ 是} M_{1}, M_{2} \text{ 的直和} \iff (M, p_{1}, p_{2}) \text{ 是} M_{1}, M_{2} \text{ 的积} \iff (M, i_{1}, i_{2}) \text{ 是余积},$$
+$M$ **是 $M_{1}, M_{2}$ 的直和** $\iff$ $(M, p_{1}, p_{2})$ **是 $M_{1}, M_{2}$ 的积**
 
 其中「直和」指存在 $p_{k} : M \to M_{k}$、$i_{k} : M_{k} \to M$ 使
 > 陈述续见 [nodes/prop.biproduct-is-product.2.md](./prop.biproduct-is-product.2.md)

@@ -6,7 +6,7 @@ layer 17 · 定义 · 微分定理 · 实变函数+数学分析
 $\mathbb{R}^{n}$ 上的 Borel 测度 $\nu$ 是**正则的**，当且仅当
 
 $\cdot$ $\nu(K) < \infty$ 对每个紧集 $K$ 成立；
-$\cdot$ $\nu(E) = \inf\{ \nu(U) : U\text{ 开}, E \subseteq U \}$ 对每个 $E \in \mathfrak{B}_{\mathbb{R}^n}$ 成立（**外正则**）。
+$\cdot$ $\nu(E) = \inf\{ \nu(U) : U \in \mathcal{T},\ E \subseteq U \}$ 对每个 $E \in \mathfrak{B}_{\mathbb{R}^n}$ 成立（**外正则**）。
 
 符号测度或复测度 $\nu$ 叫正则 $\iff$ $|\nu|$ 正则。
 

@@ -5,7 +5,7 @@ layer 5 · 公理 · 范畴与图 · 范畴论+集合论
 
 **每个集合都装得进某个宇宙。** 这是一条独立的公理：
 
-$$\forall x \, \exists U \left[ U \text{ 是宇宙} \wedge  x \in U \right]$$
+$$\forall x \, \exists U \left[ U \in \mathrm{Univ} \wedge  x \in U \right]$$
 
 其中「宇宙」按「Grothendieck 宇宙」那份定义：传递，且对配对、幂集、以内部集合为索引的并封闭。
 > 陈述续见 [nodes/ax.grothendieck-universe.2.md](./ax.grothendieck-universe.2.md)

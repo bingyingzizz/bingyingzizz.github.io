@@ -5,7 +5,7 @@ layer 15 · 定义 · 测度的构造 · 实变函数+数学分析
 
 若 $\mu$ 只满足 (i) 与**有限**可加性：
 
-$$A, B \in \mathcal{M}\text{ 两两不交} \implies \mu(A \cup B) = \mu(A) + \mu(B)$$
+$$A, B \in \mathcal{M},\ A \cap B = \emptyset \implies \mu(A \cup B) = \mu(A) + \mu(B)$$
 （由归纳，可推到任意有限多个不交集合），
 
 则 $\mu$ 称为**有限可加测度**。

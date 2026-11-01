@@ -7,7 +7,7 @@ layer 13 · 定义 · 图与极限 · 范畴论
 
 称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \in I$：
 
-$$i \downarrow F \quad \text{非空，且连通。}$$
+$i \downarrow F$ **非空，且连通**。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.comma-category`](../nodes/def.comma-category.md) 逗号范畴：用到了定义 逗号范畴　[proofs/def-dep.cofinal-comma.md](../proofs/def-dep.cofinal-comma.md)

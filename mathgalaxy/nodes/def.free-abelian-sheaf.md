@@ -9,7 +9,8 @@ $$\mathcal{T}(\mathbf{Ab}) \longrightarrow \mathcal{T}$$
 
 （把阿贝尔层忘成底集合层）有**左伴随**，记作
 
-$$\mathbb{Z}\cdot(-) : \mathcal{T} \longrightarrow \mathcal{T}(\mathbf{Ab}), \qquad X \longmapsto \mathbb{Z}\cdot X \quad (\text{也记 } \mathbb{Z}[X]),$$
+$$\mathbb{Z}\cdot(-) : \mathcal{T} \longrightarrow \mathcal{T}(\mathbf{Ab}), \qquad X \longmapsto \mathbb{Z}\cdot X,$$
+后者也记作 $\mathbb{Z}[X]$。
 > 陈述续见 [nodes/def.free-abelian-sheaf.2.md](./def.free-abelian-sheaf.2.md)
 
 

@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-01T14:15:15.149Z",
+  "generated": "2026-11-01T14:43:52.159Z",
   "counts": {
    "regions": 14,
    "clusters": 92,
@@ -2847,19 +2847,26 @@
    "title": "子集 / 真子集",
    "label_en": "subset",
    "title_en": "subset",
+   "statement_en": "Let $A$ and $B$ be sets.\\n\\n- **$A$ is a subset of $B$** (written $A \\subseteq B$): $\\forall x ( x \\in A \\to x \\in B )$\\n- **$A$ is a proper subset of $B$** (written $A \\subset B$): $A \\subseteq B$ and $A \\ne B$.\\n\\nBasic properties: $\\subseteq$ is reflexive and transitive; and by the axiom of extensionality, two sets are equal exactly when they contain each other:\\n\\n$$A = B \\iff A \\subseteq B \\wedge  B \\subseteq A$$\\n\\nThis is the most common way to prove two sets equal: **containment both ways**.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#6fb94ac5"
+     }
     }
    },
    "en_page": "nodes/def.subset.en.md",
@@ -2886,19 +2893,26 @@
    "title": "有序对",
    "label_en": "ordered pair",
    "title_en": "ordered pair",
+   "statement_en": "Kuratowski's definition:\n\n$$(a, b) := \\{ \\{a\\}, \\{a, b\\} \\}$$\n\nThe pairing and power-set axioms guarantee that this is a set.\n\n**Characteristic property** (this is all that \"ordered\" means):\n\n$$(a, b) = (c, d) \\iff a = c \\wedge  b = d$$\n\nAn $n$-tuple is defined recursively: $(a_{1}$ …$a_{n}) = ( (a_{1}$ …$a_{n-1}), a_{n} )$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#a830b9b2"
+     }
     }
    },
    "en_page": "nodes/def.pair.en.md",
@@ -2925,19 +2939,26 @@
    "title": "关系",
    "label_en": "binary relation",
    "title_en": "binary relation",
+   "statement_en": "Let $A$ and $B$ be sets.\n\nA **relation** $R$ consists of ordered pairs; $R \\subseteq A \\times B$ means that $R$ is a relation from $A$ to $B$.\n\n- **domain** $\\operatorname{dom} R = \\{ a : \\exists b (a, b) \\in R \\}$;\n- **range** $\\operatorname{ran} R = \\{ b : \\exists a (a, b) \\in R \\}$;\n- **inverse** $R^{-1} = \\{ (b, a) : (a, b) \\in R \\}$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#ebf411a5"
+     }
     }
    },
    "en_page": "nodes/def.rel.en.md",
@@ -2964,19 +2985,26 @@
    "title": "映射",
    "label_en": "mapping",
    "title_en": "mapping",
+   "statement_en": "Let $f$ be a relation from $A$ to $B$. Then $f$ is a **map** (written $f : A \\to B$) if and only if every input has exactly one output:\n\n$$\\forall a \\in A, \\exists! b \\in B, (a, b) \\in f$$\n\nUniqueness is what makes the notation $f(a) = b$ unambiguous; in that case $\\operatorname{dom} f = A$, and the **image** of $f$ is $f(A) = \\{ f(a) : a \\in A \\}$.\n\nInjective / surjective / bijective are separate nodes; a map whose values lie in a set of numbers has its own name, a **function**.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#2c875827"
+     }
     }
    },
    "en_page": "nodes/def.function.en.md",
@@ -3004,19 +3032,26 @@
    "title": "函数",
    "label_en": "function",
    "title_en": "function",
+   "statement_en": "Let $X$ be a set and $f : X \\to Y$ a **map**. If its values lie in a **set of numbers** — that is, $Y \\subseteq \\mathbb{R}$ or $Y \\subseteq \\mathbb{C}$ — then $f$ is called a **function**.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#0f3927eb"
+     }
     }
    },
    "en_page": "nodes/def.number-function.en.md",
@@ -3468,7 +3503,7 @@
     "有限特征",
     "Tukey"
    ],
-   "statement": "集合族 $\\mathcal{A}$ 具有**有限特征**，当且仅当对任意集合 $X$：\n\n$$X \\in \\mathcal{A} \\iff X\\text{ 的每个有限子集都属于} \\mathcal{A}$$\n\n也就是说：「局部地看起来像 $\\mathcal{A}$ 的成员」$\\implies$「整体就是 $\\mathcal{A}$ 的成员」。",
+   "statement": "集合族 $\\mathcal{A}$ 具有**有限特征**，当且仅当对任意集合 $X$：\n\n记 $[X]^{<\\omega}$ 为 $X$ 的全体**有限子集**，则它等价于\n$$X \\in \\mathcal{A} \\iff \\forall\\, Y \\in [X]^{<\\omega},\\ Y \\in \\mathcal{A}$$\n\n也就是说：「局部地看起来像 $\\mathcal{A}$ 的成员」$\\implies$「整体就是 $\\mathcal{A}$ 的成员」。",
    "notes": "典型例子：\n\n- 偏序集 $P$ 的**链族**（$X$ 是链 $\\iff X$ 的每个二元子集可比）；\n- 向量空间的**线性无关子集族**；\n- 某个滤子之上的**滤子族**。\n\n\n\n有限特征是 Tukey 引理的用武之地：只要目标族具有有限特征，极大元就自动存在（在 AC 之下）。",
    "refs": [
     "Jech, The Axiom of Choice, Ch. 2"
@@ -3739,7 +3774,7 @@
     "基数",
     "不需要选择公理"
    ],
-   "statement": "对任意集合 $X$，都存在一个**不能单射进 $X$** 的序数；取其中最小的那个，记作 $\\aleph (X)$，叫做 $X$ 的 **Hartogs 数**（Hartogs 序数）。\n\n$$\\forall X \\exists\\alpha ( \\alpha \\hookrightarrow  X\\text{ 不成立} ),\\text{ 且} \\alpha = \\aleph(X)\\text{ 时}: \\forall\\beta < \\alpha, \\beta \\hookrightarrow  X\\text{ 成立}$$",
+   "statement": "对任意集合 $X$，都存在一个**不能单射进 $X$** 的序数；取其中最小的那个，记作 $\\aleph (X)$，叫做 $X$ 的 **Hartogs 数**（Hartogs 序数）。\n\n$$\\forall X \\exists\\alpha \\bigl[\\, \\neg(\\alpha \\hookrightarrow  X)\\ \\wedge \\alpha = \\aleph(X)\\ \\wedge \\forall\\beta < \\alpha,\\ \\beta \\hookrightarrow  X\\, \\bigr]$$",
    "notes": "⭐⭐ **它在 ZF 里就能证，不需要选择公理。** 这是它最要紧的性质 —— 正因为不依赖 AC，它才能安全地用在「$AC \\implies$ 良序定理」「$AC \\implies$ 佐恩引理」这类证明里，用来说明超限递归**必定停下来**，而不至于循环论证。\n\n**证明思路**（全在 ZF 内）：设 $\\mathcal{W}$ 为 $X$ 的各个子集上的良序关系全体 —— 它是集合，因为 $\\mathcal{W} \\subseteq \\mathcal{P}(X \\times X)$。任意两个这样的良序，较短者必同构于较长者的一个初始段，故按「序型」它们两两可比；由替换公理，这些序型构成一个集合 $A$。$A$ 在 $\\in$ 下是传递的良序集，于是 **$A$ 本身就是一个序数 $\\alpha$**。若 $\\alpha$ 能单射进 $X$，把这个单射搬过去，就得到 $X$ 某个子集上的一个良序、其序型恰为 $\\alpha$，即 $\\alpha \\in A = \\alpha$ —— 与序数不能自属矛盾。故 $\\alpha$ 不能单射进 $X$。\n\n**它怎样让递归「停」**：超限递归每走一步就吐出 $X$ 的一个新元素。若一直走下去，就会得到 $\\aleph (X) \\to X$ 的单射，与 $\\aleph (X)$ 的定义直接冲突。所以递归必在某个 $\\alpha < \\aleph (X)$ 处停止。\n\n**一个立刻的推论**：序数全体不构成集合（Burali–Forti 悖论）。在 Hartogs 定理里取 $X =$ 全体序数即可 —— 每个序数都通过恒等映射单射进它。",
    "refs": [
     "Hartogs (1915)",
@@ -4897,7 +4932,7 @@
     "预测度",
     "环"
    ],
-   "statement": "若 $\\mathcal{M}$ 只是一个**环**（不必是 $\\sigma$代数），而 $\\mu : \\mathcal{M} \\to [0, +\\infty]$ 仍满足测度的两条：\n\n$$\\mu(\\emptyset) = 0, \\quad  \\{E_j\\}\\text{ 两两不交} \\implies \\mu(\\bigcup E_j) = \\sum \\mu(E_j)$$\n\n则称 $\\mu$ 是 $\\mathcal{M}$ 上的**预测度**。",
+   "statement": "若 $\\mathcal{M}$ 只是一个**环**（不必是 $\\sigma$代数），而 $\\mu : \\mathcal{M} \\to [0, +\\infty]$ 仍满足测度的两条：\n\n$$\\mu(\\emptyset) = 0, \\quad  E_j \\cap E_k = \\emptyset\\ (j \\ne k) \\implies \\mu(\\bigcup E_j) = \\sum \\mu(E_j)$$\n\n则称 $\\mu$ 是 $\\mathcal{M}$ 上的**预测度**。",
    "notes": "为什么要有这个中间概念：$\\mathbb{R}$ 上半开区间 (a, b] 的全体只是一个基本类，它的有限不交并构成一个环，还不是 $\\sigma$代数 —— 但这时已经能定义长度了，那就是预测度。\n\nCarathéodory 扩张定理的作用就是把预测度从环一路提升到生成的 $\\sigma$代数上。所以「**先造预测度，再扩张**」是构造测度的标准两步走。",
    "refs": [
     "Halmos, Measure Theory, §9",
@@ -4938,7 +4973,7 @@
     "定义",
     "有限可加"
    ],
-   "statement": "若 $\\mu$ 只满足 (i) 与**有限**可加性：\n\n$$A, B \\in \\mathcal{M}\\text{ 两两不交} \\implies \\mu(A \\cup B) = \\mu(A) + \\mu(B)$$\n（由归纳，可推到任意有限多个不交集合），\n\n则 $\\mu$ 称为**有限可加测度**。",
+   "statement": "若 $\\mu$ 只满足 (i) 与**有限**可加性：\n\n$$A, B \\in \\mathcal{M},\\ A \\cap B = \\emptyset \\implies \\mu(A \\cup B) = \\mu(A) + \\mu(B)$$\n（由归纳，可推到任意有限多个不交集合），\n\n则 $\\mu$ 称为**有限可加测度**。",
    "notes": "它比预测度还弱：预测度是可数可加的（只是定义域是环），有限可加测度只要求有限可加。\n\n⚠ 有限可加 $\\ne$ 可数可加：在 $\\mathbb{N}$ 上定义 $\\mu (E) = 0$（$E$ 有限）、$\\mu (E) = +\\infty$（$E$ 无限），它是有限可加的，但对 $\\bigcup _{n} \\{n\\} = \\mathbb{N}$ 不满足可数可加。历史上（Banach–Tarski 时代）确实认真考虑过只用有限可加性的「测度」，但那样连「长度」都构造不出来。",
    "refs": [
     "Halmos, Measure Theory, §9"
@@ -10734,7 +10769,7 @@
     "Banach",
     "隐函数"
    ],
-   "statement": "设 $E, F, G$ 是 Banach 空间，$U \\subseteq E \\times F$ 开，$F_0 : U \\to G$ 是 $C^{1}$，$(a, b) \\in U$ 满足 $F_0(a, b) = 0$ 且偏导\n\n$$D_y F_0(a, b) : F \\to G \\quad \\text{是拓扑线性同构}$$\n\n则存在 $a$ 的邻域 $V \\subseteq E$ 与唯一的 $C^{1}$ 映射 $g : V \\to F$ 使 $g(a) = b$、$F_0(x, g(x)) = 0$，且\n\n$$Dg(x) = -\\bigl( D_y F_0(x, g(x)) \\bigr)^{-1} D_x F_0(x, g(x))$$",
+   "statement": "设 $E, F, G$ 是 Banach 空间，$U \\subseteq E \\times F$ 开，$F_0 : U \\to G$ 是 $C^{1}$，$(a, b) \\in U$ 满足 $F_0(a, b) = 0$ 且偏导\n\n而 $D_y F_0(a, b) : F \\to G$ 是**拓扑线性同构**。\n\n则存在 $a$ 的邻域 $V \\subseteq E$ 与唯一的 $C^{1}$ 映射 $g : V \\to F$ 使 $g(a) = b$、$F_0(x, g(x)) = 0$，且\n\n$$Dg(x) = -\\bigl( D_y F_0(x, g(x)) \\bigr)^{-1} D_x F_0(x, g(x))$$",
    "notes": "⭐ 证明与有限维版本**逐字相同**：令 $\\Phi(x, y) := (x, F_0(x, y))$，则 $D\\Phi$ 是块上三角、$D\\Phi$ 拓扑同构 $\\iff$ $D_y F_0$ 拓扑同构，对 $\\Phi$ 用 Banach 版逆映射定理（`thm.inverse-function-banach`）即可。\n\n⭐ 这一步说明了为什么「逆映射」与「隐函数」在图上应当分开建节点却共用一个证明：它们在**范畴层面是同一件事**（$\\Phi$ 是把隐函数问题打包成逆映射问题的函子式构造），只是包装不同。\n\n⚠ 名字冲突提醒：本节点里的 $F_0$ 是为了不与 Banach 空间 $F$ 撞名而加的角标，含义与有限维版本的 $F$ 相同。",
    "refs": [
     "Lang, Real and Functional Analysis, Ch. I",
@@ -11150,7 +11185,7 @@
     "群",
     "置换"
    ],
-   "statement": "$n$ 元集合（不妨取 $\\{1, 2, \\ldots, n\\}$）的全体双射在**复合**下构成群，记 $S_n$，叫 **$n$ 次对称群**；它的元素叫**置换**，$|S_n| = n!$。$S_n$ 的子群统称**置换群**。\n\n**循环分解**：每个 $\\sigma \\in S_n$ 可以唯一地（在循环的书写顺序与循环之间的次序不计的意义下）写成**互不相交**的循环之积\n\n$$\\sigma = (a_1\\ a_2\\ \\cdots\\ a_{k_1})(b_1\\ \\cdots\\ b_{k_2}) \\cdots$$\n\n各循环长度组成的多重集叫 $\\sigma$ 的**循环型**。\n\n$$\\operatorname{ord}(\\sigma) = \\text{各循环长度的最小公倍数}$$",
+   "statement": "$n$ 元集合（不妨取 $\\{1, 2, \\ldots, n\\}$）的全体双射在**复合**下构成群，记 $S_n$，叫 **$n$ 次对称群**；它的元素叫**置换**，$|S_n| = n!$。$S_n$ 的子群统称**置换群**。\n\n**循环分解**：每个 $\\sigma \\in S_n$ 可以唯一地（在循环的书写顺序与循环之间的次序不计的意义下）写成**互不相交**的循环之积\n\n$$\\sigma = (a_1\\ a_2\\ \\cdots\\ a_{k_1})(b_1\\ \\cdots\\ b_{k_2}) \\cdots$$\n\n各循环长度组成的多重集叫 $\\sigma$ 的**循环型**。\n\n$\\operatorname{ord}(\\sigma)$ 等于**各循环长度的最小公倍数**：若循环分解的长度是 $\\ell_1, \\ldots, \\ell_r$，则\n$$\\operatorname{ord}(\\sigma) = \\operatorname{lcm}(\\ell_1, \\ldots, \\ell_r)$$",
    "notes": "⭐ 「不交」是关键词：两个不交的循环**可以交换**，所以循环分解才能看成「把置换拆成互不干扰的零件」。一旦相交就不能随便换序。\n\n⭐ 循环型是 $S_n$ 的**共轭不变量**，而且完全决定共轭类：$\\sigma, \\tau$ 共轭 $\\iff$ 循环型相同。$S_n$ 的共轭类因此与 $n$ 的**分拆**一一对应 —— 这条把组合学的分拆函数拉进了群论。\n\n⭐ 例子：$n = 4$ 的循环型与类大小：$1^{4}$（单位，$1$ 个）、$2\\,1^{2}$（对换，$6$ 个）、$2^{2}$（双对换，$3$ 个）、$3\\,1$（$3$-循环，$8$ 个）、$4$（$4$-循环，$6$ 个），合计 $24 = 4!$ ✓。\n\n⚠ 记号约定：$(a_1\\ a_2\\ \\cdots\\ a_k)$ 表示 $a_1 \\mapsto a_2 \\mapsto \\cdots \\mapsto a_k \\mapsto a_1$，其余点不动。本图一律**右到左**复合（先作用右边的），与 `def.alternating-group` 的符号公式配套。",
    "refs": [
     "Lang, Algebra, Ch. I §5",
@@ -11192,7 +11227,7 @@
     "群",
     "置换"
    ],
-   "statement": "每个 $\\sigma \\in S_n$ 都能写成**对换**（两个点的交换）之积，且所用对换个数的**奇偶性**与分解方式无关。据此定义**符号**\n\n$$\\operatorname{sgn}(\\sigma) := (-1)^{k} \\quad (\\sigma = \\text{$k$ 个对换之积})$$\n\n等价公式（不含分解的任意性）\n\n$$\\operatorname{sgn}(\\sigma) = \\prod_{1 \\le i < j \\le n} \\frac{\\sigma(j) - \\sigma(i)}{j - i} \\in \\{\\pm 1\\}$$\n\n$\\operatorname{sgn} : S_n \\to \\{\\pm 1\\}$ 是群同态（$n \\ge 2$ 时满）。其核\n\n$$A_n := \\ker \\operatorname{sgn} = \\{\\, \\sigma \\in S_n : \\operatorname{sgn}(\\sigma) = 1 \\,\\}$$\n\n叫 **$n$ 次交错群**：$|A_n| = n!/2$，$A_n \\trianglelefteq S_n$，$[S_n : A_n] = 2$。",
+   "statement": "每个 $\\sigma \\in S_n$ 都能写成**对换**（两个点的交换）之积，且所用对换个数的**奇偶性**与分解方式无关。据此定义**符号**\n\n$$\\operatorname{sgn}(\\sigma) := (-1)^{k}$$\n其中 $\\sigma$ 是 $k$ 个对换之积（良定性由 $\\sigma$ 的奇偶性保证）。\n\n等价公式（不含分解的任意性）\n\n$$\\operatorname{sgn}(\\sigma) = \\prod_{1 \\le i < j \\le n} \\frac{\\sigma(j) - \\sigma(i)}{j - i} \\in \\{\\pm 1\\}$$\n\n$\\operatorname{sgn} : S_n \\to \\{\\pm 1\\}$ 是群同态（$n \\ge 2$ 时满）。其核\n\n$$A_n := \\ker \\operatorname{sgn} = \\{\\, \\sigma \\in S_n : \\operatorname{sgn}(\\sigma) = 1 \\,\\}$$\n\n叫 **$n$ 次交错群**：$|A_n| = n!/2$，$A_n \\trianglelefteq S_n$，$[S_n : A_n] = 2$。",
    "notes": "⭐ 符号是 $S_n$ 到 $\\{\\pm 1\\}$ 的**唯一**非平凡同态（$n \\ge 3$），所以 $A_n$ 是 $S_n$ 的**唯一**指数 $2$ 子群 —— 这个唯一性是后面「$S_n$ 不单」以及 Galois 理论里「二次子扩张唯一」的来源。\n\n⭐ 乘积公式为什么干净：每一项 $\\frac{\\sigma(j)-\\sigma(i)}{j-i}$ 的分母固定、分子只是把同一批差重新排列，故乘积的符号只取决于 $\\sigma$ 引起的排列的奇偶性。这也顺手证明了「奇偶性与分解无关」。\n\n⚠ 边界：$n = 1$ 时 $A_1 = S_1$ 是平凡群，$|A_n| = n!/2$ 不适用。$n = 2$ 时 $A_2 = \\{e\\}$。\n\n⭐ **单性的跳变**：$A_4$ 不单（有正规子群 $V_4 = \\{e, (12)(34), (13)(24), (14)(23)\\}$），而 $A_5$ **单**且非阿贝尔。这个跳变正是 $S_n$ 可解性的分界线（`prop.sn-solvable`）。",
    "refs": [
     "Lang, Algebra, Ch. I §5",
@@ -11276,7 +11311,7 @@
     "群",
     "子群"
    ],
-   "statement": "设 $G$ 是有限群、$H \\le G$。对 $g \\in G$ 记**左陪集** $gH := \\{\\, gh : h \\in H \\,\\}$。则左陪集构成 $G$ 的一个划分，每个左陪集与 $H$ 等势，于是\n\n$$|G| = [G : H] \\cdot |H|, \\qquad \\text{即} \\qquad |H| \\mid |G|$$\n\n其中 $[G : H] := |G|/|H|$ 叫 $H$ 在 $G$ 中的**指数**。",
+   "statement": "设 $G$ 是有限群、$H \\le G$。对 $g \\in G$ 记**左陪集** $gH := \\{\\, gh : h \\in H \\,\\}$。则左陪集构成 $G$ 的一个划分，每个左陪集与 $H$ 等势，于是\n\n$$|G| = [G : H] \\cdot |H|, \\qquad |H| \\mid |G|$$\n\n其中 $[G : H] := |G|/|H|$ 叫 $H$ 在 $G$ 中的**指数**。",
    "notes": "⭐ 证明只有两句：**陪集构成划分**（$g_1 H \\cap g_2 H \\ne \\emptyset \\implies g_1 H = g_2 H$，靠 $H$ 对乘法的封闭）+ **平移是双射**（$h \\mapsto gh$ 是 $H \\to gH$ 的双射）。证明全文在边上。\n\n⭐ 三个立刻能用的推论：\n- 每个元素 $g$ 的阶整除 $|G|$（把 $\\langle g\\rangle$ 当 $H$）；\n- 素数阶群必循环（任取非单位元，阶只能是 $1$ 或 $p$）；\n- $g^{|G|} = e$ 对一切 $g$ 成立 —— 于是 Euler 定理 $a^{\\varphi(n)} \\equiv 1 \\pmod n$ 是它的特例（取 $G = (\\mathbb{Z}/n)^{\\times}$）。\n\n⚠ **逆命题不成立**：「$d \\mid |G|$ $\\implies$ 有 $d$ 阶子群」是**假**的。最小反例：$|A_4| = 12$，$6 \\mid 12$，但 $A_4$ 没有 $6$ 阶子群（$6$ 阶子群必指数 $2$ 因而正规，而 $A_4$ 的唯一正规子群是 $V_4$ 与 $A_4$）。所以「整除」只是必要条件 —— 要部分逆命题就得请出 Sylow 定理。",
    "refs": [
     "Lang, Algebra, Ch. I §4",
@@ -12177,7 +12212,7 @@
     "子列",
     "Borel–Cantelli"
    ],
-   "statement": "若 $\\{f_n\\}$ 依测度 Cauchy，则存在可测函数 $f$ 使\n\n$$f_n \\to f\\text{ 依测度}, $$\n\n并且存在**子列** $\\{f_{n_j}\\}$ 使\n\n$$f_{n_j} \\to f\\quad  \\text{a.e.}$$",
+   "statement": "若 $\\{f_n\\}$ 依测度 Cauchy，则存在可测函数 $f$ 使\n\n$$f_n \\xrightarrow{\\ \\mu\\ } f$$\n\n并且存在**子列** $\\{f_{n_j}\\}$ 使\n\n$$f_{n_j} \\to f\\quad  \\text{a.e.}$$",
    "notes": "⭐ 这是「依测度收敛」最有用的性质：**收敛本身不保证任何一处真的收敛，但总能抽出一列几乎处处收敛的子列**。\n\n证明的工具是 Borel–Cantelli 型的推理：造出 $\\sum_k \\mu(E_k) < \\infty$ 的一族「坏集合」，则几乎每个点只落进有限多个坏集合。\n\n这也是 Riesz 定理（a.e. 收敛 $\\iff$ 依测度收敛 + 子列）的那一半。",
    "refs": [
     "Folland, Real Analysis, Theorem 2.30"
@@ -12218,7 +12253,7 @@
     "依测度",
     "Markov"
    ],
-   "statement": "若 $f_n \\to f$ 于 $L^1$，则 $f_n \\to f$ 依测度：\n\n$$\\int |f_n - f| \\to 0 \\implies f_n \\to f\\text{ 依测度}$$",
+   "statement": "若 $f_n \\to f$ 于 $L^1$，则 $f_n \\to f$ 依测度：\n\n$$\\int |f_n - f| \\to 0 \\implies f_n \\xrightarrow{\\ \\mu\\ } f$$",
    "notes": "工具是 **Markov（Chebyshev）不等式**：$\n\\mu(\\{|g| \\ge \\varepsilon\\}) \\le (1/\\varepsilon)\\cdot\\int |g| d\\mu$\n\n（因为 $\\varepsilon \\chi_{\\{|g| \\ge \\varepsilon\\}} \\le |g|$，两边积分即可。）取 $g = f_n - f$ 就得到结论。\n\n⚠ 反方向不成立：反例 (iii) 就是依测度收敛但不 $L^{1}$ 收敛。",
    "refs": [
     "Folland, Real Analysis, Prop. 2.29"
@@ -12260,7 +12295,7 @@
     "近一致",
     "有限测度"
    ],
-   "statement": "设 $\\mu(X) < \\infty$，且 $f_n \\to f$ a.e.。则 $f_n \\to f$ **近一致**：\n\n$$\\forall\\varepsilon > 0, \\exists E \\subseteq X : \\mu(E) < \\varepsilon,\\text{ 且} f_n \\rightrightarrows  f\\text{ 在} X \\setminus E\\text{ 上一致}$$",
+   "statement": "设 $\\mu(X) < \\infty$，且 $f_n \\to f$ a.e.。则 $f_n \\to f$ **近一致**：\n\n$$\\forall\\varepsilon > 0,\\ \\exists E \\subseteq X :\\ \\mu(E) < \\varepsilon$$\n且 $f_n \\rightrightarrows  f$ 在 $X \\setminus E$ 上**一致收敛**。",
    "notes": "⭐ 「几乎处处收敛」听起来很弱，但 Egorov 说：只要空间**有限测度**，它其实差一点就是**一致收敛** —— 代价只是丢掉一个任意小的集合。\n\n⚠ **「$\\mu(X) < \\infty$」不能省。** 反例：$f_n = \\chi_{(n, n+1)}$ 在 $\\mathbb{R}$ 上，a.e. 收敛到 0，但丢掉任何有限测度的集合后，剩下的部分仍有 $\\sup = 1$，无法一致收敛。\n\n这是「丢掉小集合换取好性质」这一类结论的模板（Lusin 定理也是这个模式）。",
    "refs": [
     "Folland, Real Analysis, Theorem 2.33"
@@ -12302,7 +12337,7 @@
     "连续",
     "紧集"
    ],
-   "statement": "设 $f : [a, b] \\to \\mathbb{C}$ 是 Lebesgue 可测的。则对任意 $\\varepsilon > 0$，存在**紧集** $E \\subseteq [a, b]$ 使\n\n$$\\mu(E^c) < \\varepsilon,\\text{ 且} f|_E\\text{ 连续}$$",
+   "statement": "设 $f : [a, b] \\to \\mathbb{C}$ 是 Lebesgue 可测的。则对任意 $\\varepsilon > 0$，存在**紧集** $E \\subseteq [a, b]$ 使\n\n$$\\mu(E^c) < \\varepsilon$$\n且 $f|_E$ **连续**。",
    "notes": "⭐ 「可测」这个条件看起来很弱，但 Lusin 说：可测函数差一点就是**连续**函数 —— 只要允许把定义域挖掉一小块。\n\n与 Egorov 的分工：Egorov 说「一列函数」几乎一致收敛，Lusin 说「一个函数」几乎连续。两者都是「丢掉小集合换取正则性」。\n\n⚠ 挖掉的那块必须容许是开集，剩下的必须是**紧**集（在 [a,b] 上紧 $\\iff$ 有界闭），不能只是可测集。",
    "refs": [
     "Folland, Real Analysis, Theorem 2.34"
@@ -12985,7 +13020,7 @@
     "固态",
     "自由群"
    ],
-   "statement": "白话：一件反直觉的事 —— 「$S$ 上取整数值的连续函数」看上去像「无穷多个 $\\mathbb{Z}$ 拼起来」的东西，它却**总是**自由阿贝尔群（有基、无关系）。这是整块固态理论能立住的那根钉子。\n\n对任意 profinite 集 $S$，连续函数群 $C(S, \\mathbb{Z})$（见 `def.cond-measure`）\n\n$$C(S, \\mathbb{Z}) = \\{\\, f : S \\to \\mathbb{Z}\\ \\text{连续} \\,\\}$$\n\n是**自由阿贝尔群**。",
+   "statement": "白话：一件反直觉的事 —— 「$S$ 上取整数值的连续函数」看上去像「无穷多个 $\\mathbb{Z}$ 拼起来」的东西，它却**总是**自由阿贝尔群（有基、无关系）。这是整块固态理论能立住的那根钉子。\n\n对任意 profinite 集 $S$，连续函数群 $C(S, \\mathbb{Z})$（见 `def.cond-measure`）\n\n$$C(S, \\mathbb{Z}) = \\{\\, f : S \\to \\mathbb{Z}\\ \\mid f \\text{continuous}\\, \\}$$\n\n是**自由阿贝尔群**。",
    "notes": "⭐ 这是 Specker（1950，$S$ 为 $\\mathbb{Z}_p$ 型）与 Nöbeling（1968，一般 profinite）的结果。反直觉的地方：$C(S,\\mathbb{Z})$ 看起来像「每点给一个整数」的无穷乘积，却**总是自由**的 —— 而它的对偶 $M(S,\\mathbb{Z}) = \\prod_I \\mathbb{Z}$ 才是大的那一头。\n\n⭐ 它是整个固态理论的支点：没有它，$Z[S]^{\\blacksquare}$ 就说不成 $\\prod_I \\mathbb{Z}$，`thm.solid-abelian` 里的「紧投射生成元」也就无从谈起。\n\n⚠ 注意 $C(S,\\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\\mathbb{R})$ 行为完全不同：$C(S,\\mathbb{R})$ 一般不是自由 $\\mathbb{R}$-向量空间。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Theorem 5.4"
@@ -13418,7 +13453,7 @@
     "凝聚态",
     "解析环"
    ],
-   "statement": "白话：**预解析环 = 一个环 $A$，加上「$S$ 上的自由完备模长什么样」这套指定**。固态理论真正用到的是后者（自由模），所以干脆把后者抽出来当公理。\n\n一个**预解析环** $\\mathcal{A}$ 由两部分组成：\n\n- 一个**凝聚态环** $A$ —— 白话：凝聚态集（「对每个紧 Hausdorff 空间 $S$ 给出一个集合 $A(S)$、且随 $S$ 变小而相容」的那套规则，见 `def.condensed-set`）里**还能做加法与乘法**。等价说法：对每个 $S$，$A(S)$ 是一个普通环，且 $S \\to T$ 诱导的映射是环同态。所以「凝聚态环」不是新对象，就是把「环」搬进凝聚态集的范畴；点开「凝聚态」跳到凝聚态集那页是对的，环这一层就写在下面这句里。最省事的例子：任意普通环取离散拓扑。\n- 一个函子\n\n$$\\{\\text{extremally disconnected 集}\\} \\longrightarrow \\operatorname{Mod}^{\\mathrm{cond}}_{A}, \\qquad S \\longmapsto \\mathcal{A}[S],$$\n\n它把有限不交并送到**乘积**，并带一族与 $S \\to T$ 相容的映射 $S \\to \\mathcal{A}[S]$：对每个 $s \\in S$ 给出自由完备模里的一个元素 —— 这就是「自由生成元」的抽象版。\n\n记号说明：$\\mathcal{A}[S]$ 叫 **$S$ 上的自由完备模**（相对 $A$ 而言）。直觉：普通自由模 $A[S] = \\bigoplus_{s \\in S} A$ 只允许**有限**和；$\\mathcal{A}[S]$ 把它补全，允许「无穷和」收敛，是最小的一步补全。$\\mathbb{Z}$ 上它就是 $Z[S]^{\\blacksquare} = \\varprojlim_i \\mathbb{Z}[S_i]$。\n\n换句话说，$\\mathcal{A}$ 就是「环 $A$ 加上一套指定的自由完备模 $\\mathcal{A}[S]$」。",
+   "statement": "白话：**预解析环 = 一个环 $A$，加上「$S$ 上的自由完备模长什么样」这套指定**。固态理论真正用到的是后者（自由模），所以干脆把后者抽出来当公理。\n\n一个**预解析环** $\\mathcal{A}$ 由两部分组成：\n\n- 一个**凝聚态环** $A$ —— 白话：凝聚态集（「对每个紧 Hausdorff 空间 $S$ 给出一个集合 $A(S)$、且随 $S$ 变小而相容」的那套规则，见 `def.condensed-set`）里**还能做加法与乘法**。等价说法：对每个 $S$，$A(S)$ 是一个普通环，且 $S \\to T$ 诱导的映射是环同态。所以「凝聚态环」不是新对象，就是把「环」搬进凝聚态集的范畴；点开「凝聚态」跳到凝聚态集那页是对的，环这一层就写在下面这句里。最省事的例子：任意普通环取离散拓扑。\n- 一个函子\n\n$$\\{\\,\\ S : S \\text{ extremally disconnected}\\, \\} \\longrightarrow \\operatorname{Mod}^{\\mathrm{cond}}_{A}, \\qquad S \\longmapsto \\mathcal{A}[S]$$\n\n它把有限不交并送到**乘积**，并带一族与 $S \\to T$ 相容的映射 $S \\to \\mathcal{A}[S]$：对每个 $s \\in S$ 给出自由完备模里的一个元素 —— 这就是「自由生成元」的抽象版。\n\n记号说明：$\\mathcal{A}[S]$ 叫 **$S$ 上的自由完备模**（相对 $A$ 而言）。直觉：普通自由模 $A[S] = \\bigoplus_{s \\in S} A$ 只允许**有限**和；$\\mathcal{A}[S]$ 把它补全，允许「无穷和」收敛，是最小的一步补全。$\\mathbb{Z}$ 上它就是 $Z[S]^{\\blacksquare} = \\varprojlim_i \\mathbb{Z}[S_i]$。\n\n换句话说，$\\mathcal{A}$ 就是「环 $A$ 加上一套指定的自由完备模 $\\mathcal{A}[S]$」。",
    "notes": "⭐ 这个定义是在抽公理：固态理论里真正用到的不是 $A$ 本身，而是「$S$ 上的自由完备模是什么」。把这件事做成一个函子，就能对任意环（甚至解析空间）复制整套构造。\n\n⭐ 三个基本例子：\n- $\\mathbb{Z}_\\blacksquare$：$A = \\mathbb{Z}$，$\\mathbb{Z}_\\blacksquare[S] = Z[S]^{\\blacksquare}$；\n- $\\mathbb{Z}_{p,\\blacksquare}$：$A = \\mathbb{Z}_p$，$\\mathbb{Z}_{p,\\blacksquare}[S] = \\varprojlim_i \\mathbb{Z}_p[S_i]$（$p$-进测度）；\n- $(A,\\mathbb{Z})_\\blacksquare$（$A$ 离散）：$A[S] = Z[S]^{\\blacksquare} \\otimes_{\\mathbb{Z}} A$。\n\n⚠ 这个定义在原文里带一条警告：它应当允许「导出」版本（$A$ 是单纯环）才足够一般。本图只写经典版本，够用到现在这一步。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Definition 7.1"
@@ -13780,7 +13815,7 @@
     "adic",
     "谱"
    ],
-   "statement": "白话：**把环 $A$ 的元素「量大小」的所有方式收集起来，就得到 adic 谱**。每个点是一个「绝对值」（valuation，赋值），$A^+$ 的作用是筛掉「把某个有界元量成 $>1$」的那些点。这是 $\\operatorname{Spec}$ 的「带大小」版本 —— $\\operatorname{Spec}$ 只记「哪些理想的元素为零」，$\\operatorname{Spa}$ 还记「多小」。\n\n先约定术语。**赋值**是「量大小」的函数 $|\\cdot| : A \\to \\Gamma \\cup \\{0\\}$（$\\Gamma$ 是乘法写法的全序阿贝尔群，想成 $\\mathbb{R}_{>0}$ 即可），满足\n\n$$|0| = 0, \\quad |1| = 1, \\quad |xy| = |x|\\,|y|, \\quad |x + y| \\le \\max(|x|, |y|).$$\n\n两个赋值 $|\\cdot|, |\\cdot|_1$ **等价**，如果存在保序的群同构使 $|x|_1 = \\sigma(|x|)$ 对一切 $x$ —— 也就是「它们给 $A$ 排出的大小顺序完全一样」，只是「标尺」换了。$\\operatorname{Spa}$ 取的是赋值的**等价类**（所以同一个点不会因为标尺不同重复计数）。直觉：$|x|$ 是「$x$ 到 $0$ 的距离」，$|x| \\le 1$ 是「$x$ 有界」；$p$-进绝对值 $|p^{n}u| = p^{-n}$（$u$ 与 $p$ 互素）就是标准例子。\n\n设 $(A, A^+)$ 是离散 Huber pair。**adic 谱**\n\n$$\\operatorname{Spa}(A, A^+) := \\bigl\\{\\, |\\cdot| : A \\to \\Gamma \\cup \\{0\\} \\ \\big|\\ |A^+| \\le 1 \\,\\bigr\\} \\big/ \\sim$$\n\n是 $A$ 上「在 $A^+$ 上 $\\le 1$」的那些赋值（即 $A^+$ 里每个元素都算有界）的等价类全体。拓扑由**有理开集**给出：对 $f, g_1, \\ldots, g_n \\in A$，\n\n$$U\\!\\left(\\tfrac{g_1, \\ldots, g_n}{f}\\right) := \\bigl\\{\\, x : |g_i(x)| \\le |f(x)| \\ne 0 \\ \\text{对一切 } i \\,\\bigr\\}.$$\n\n这些有理开集构成一组基，$\\operatorname{Spa}(A,A^+)$ 是 **spectral space**（谱空间：同胚于某个环的素谱的拓扑空间；等价刻画是「紧、$T_0$、有紧开集作基」）。",
+   "statement": "白话：**把环 $A$ 的元素「量大小」的所有方式收集起来，就得到 adic 谱**。每个点是一个「绝对值」（valuation，赋值），$A^+$ 的作用是筛掉「把某个有界元量成 $>1$」的那些点。这是 $\\operatorname{Spec}$ 的「带大小」版本 —— $\\operatorname{Spec}$ 只记「哪些理想的元素为零」，$\\operatorname{Spa}$ 还记「多小」。\n\n先约定术语。**赋值**是「量大小」的函数 $|\\cdot| : A \\to \\Gamma \\cup \\{0\\}$（$\\Gamma$ 是乘法写法的全序阿贝尔群，想成 $\\mathbb{R}_{>0}$ 即可），满足\n\n$$|0| = 0, \\quad |1| = 1, \\quad |xy| = |x|\\,|y|, \\quad |x + y| \\le \\max(|x|, |y|).$$\n\n两个赋值 $|\\cdot|, |\\cdot|_1$ **等价**，如果存在保序的群同构使 $|x|_1 = \\sigma(|x|)$ 对一切 $x$ —— 也就是「它们给 $A$ 排出的大小顺序完全一样」，只是「标尺」换了。$\\operatorname{Spa}$ 取的是赋值的**等价类**（所以同一个点不会因为标尺不同重复计数）。直觉：$|x|$ 是「$x$ 到 $0$ 的距离」，$|x| \\le 1$ 是「$x$ 有界」；$p$-进绝对值 $|p^{n}u| = p^{-n}$（$u$ 与 $p$ 互素）就是标准例子。\n\n设 $(A, A^+)$ 是离散 Huber pair。**adic 谱**\n\n$$\\operatorname{Spa}(A, A^+) := \\bigl\\{\\, |\\cdot| : A \\to \\Gamma \\cup \\{0\\} \\ \\big|\\ |A^+| \\le 1 \\,\\bigr\\} \\big/ \\sim$$\n\n是 $A$ 上「在 $A^+$ 上 $\\le 1$」的那些赋值（即 $A^+$ 里每个元素都算有界）的等价类全体。拓扑由**有理开集**给出：对 $f, g_1, \\ldots, g_n \\in A$，\n\n$$U\\!\\left(\\tfrac{g_1, \\ldots, g_n}{f}\\right) := \\bigl\\{\\, x : |g_i(x)| \\le |f(x)| \\ne 0\\ \\forall i\\, \\bigr\\}.$$\n\n这些有理开集构成一组基，$\\operatorname{Spa}(A,A^+)$ 是 **spectral space**（谱空间：同胚于某个环的素谱的拓扑空间；等价刻画是「紧、$T_0$、有紧开集作基」）。",
    "notes": "⭐ 赋值满足**强三角不等式** $|x+y| \\le \\max(|x|,|y|)$，这是非阿基米德的标志；换成 $\\le |x| + |y|$ 就是阿基米德的（复几何那一边），那是另一套理论。\n\n⭐ 有理开集是「$|g_i| \\le |f|$」定义的区域 —— 直觉上就是「$g_i/f$ 有界」的 locus。它们既开又紧（quasicompact），这正是 adic 空间比概形好用的地方：仿射开集自带紧性。\n\n⚠ $\\operatorname{Spa}(A,A^+)$ 一般**不是** Hausdorff 的，它是 spectral（紧、$T_0$、有开集基）。所以不能拿度量空间的直觉套它。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture IX, Definition 9.1"
@@ -20944,7 +20979,7 @@
     "定义",
     "符号测度"
    ],
-   "statement": "设 $(X, \\mathcal{M})$ 是可测空间。$\\nu : \\mathcal{M} \\to [-\\infty, +\\infty]$ 是**符号测度**，当且仅当\n\n- $\\nu(\\emptyset) = 0$；\n- $\\nu$ **至多取到 $\\pm \\infty$ 中的一个**（不能同时取到 $\\infty$ 与 $-\\infty$）；\n- 对两两不交的 $\\{E_j\\} \\subseteq \\mathcal{M}$：\n\n$$\\nu( \\bigsqcup_j E_j ) = \\sum_j \\nu(E_j),\\text{ 且右边的级数绝对收敛}(\\text{当} |\\nu(\\bigsqcup E_j)| < \\infty\\text{ 时})$$",
+   "statement": "设 $(X, \\mathcal{M})$ 是可测空间。$\\nu : \\mathcal{M} \\to [-\\infty, +\\infty]$ 是**符号测度**，当且仅当\n\n- $\\nu(\\emptyset) = 0$；\n- $\\nu$ **至多取到 $\\pm \\infty$ 中的一个**（不能同时取到 $\\infty$ 与 $-\\infty$）；\n- 对两两不交的 $\\{E_j\\} \\subseteq \\mathcal{M}$：\n\n$$\\nu( \\bigsqcup_j E_j ) = \\sum_j \\nu(E_j),$$\n其中右边的级数**绝对收敛**（在 $|\\nu(\\bigsqcup_j E_j)| < \\infty$ 时）。",
    "notes": "⚠ 「至多取到一个无穷」这一条是**必需的**：否则可数可加性会碰上 $\\infty - \\infty$。\n\n**例 1**：$\\mu _{1}$、$\\mu _{2}$ 是测度，其中至少一个有限 $\\implies$ $\\nu = \\mu_1 - \\mu_2$ 是符号测度。\n\n**例 2**：$f : X \\to [-\\infty, +\\infty]$ 可测，且 $\\int f^+ d\\mu$、$\\int f^- d\\mu$ 中至少一个有限 $\\implies$\n\n\n\n$$\\nu(E) := \\int_E f d\\mu$$\n\n\n\n是符号测度。这样的 $f$ 叫**广义可积函数**（extended integrable function）。",
    "refs": [
     "Folland, Real Analysis, §3.1",
@@ -21231,7 +21266,7 @@
     "变差",
     "奇异"
    ],
-   "statement": "设 $\\mu$ 是测度，$\\nu$ 是符号测度。则\n\n$$\\nu \\ll  \\mu \\iff |\\nu| \\ll  \\mu \\iff \\nu^+ \\ll  \\mu\\text{ 且} \\nu^- \\ll  \\mu$$\n\n并且：若同时有 $\\nu \\perp  \\mu$ 与 $\\nu \\ll  \\mu$，则 $\\nu = 0$。",
+   "statement": "设 $\\mu$ 是测度，$\\nu$ 是符号测度。则\n\n$$\\nu \\ll  \\mu \\iff |\\nu| \\ll  \\mu \\iff \\nu^+ \\ll  \\mu\\ \\wedge \\ \\nu^- \\ll  \\mu$$\n\n并且：若同时有 $\\nu \\perp  \\mu$ 与 $\\nu \\ll  \\mu$，则 $\\nu = 0$。",
    "notes": "后半句「既奇异又绝对连续 $\\implies$ 等于零」是结构定理的**起始点**：Radon–Nikodym 要说的正是「一般情形下 $\\nu$ 就是这两部分之和」。\n\n证明：若 $\\nu \\perp \\mu$，取 $E$（$\\mu$零）与 $F$（$\\nu$零）划分空间；由 $\\nu \\ll \\mu$ 得 $\\nu (E) = 0$；又 $\\nu (F) = 0$，故 $\\nu$ 在整个 $X$ 上为 0。",
    "refs": [
     "Folland, Real Analysis, Prop. 3.5"
@@ -21311,7 +21346,7 @@
     "绝对连续",
     "积分"
    ],
-   "statement": "设 $\\mu$ 是测度，$f$ 是广义 $\\mu$可积函数，定义\n\n$$\\nu(E) := \\int_E f d\\mu$$\n\n则 $\\nu$ 是符号测度，且 $\\nu \\ll  \\mu$。并且\n\n$$\\nu\\text{ 有限} \\iff f \\in L^1(\\mu)$$",
+   "statement": "设 $\\mu$ 是测度，$f$ 是广义 $\\mu$可积函数，定义\n\n$$\\nu(E) := \\int_E f d\\mu$$\n\n则 $\\nu$ 是符号测度，且 $\\nu \\ll  \\mu$。并且\n\n$\\nu$ **有限** $\\iff f \\in L^1(\\mu)$",
    "notes": "这是绝对连续测度的**标准来源**，也是 Radon–Nikodym 定理要反过来证明的那件事：**所有**绝对连续的 $\\nu$ 都长这个样子。\n\n记法上常写成微分形式：\n\n\n\n$$\\nu(E) = \\int_E f d\\mu\\quad  \\iff\\quad  d\\nu = f d\\mu$$",
    "refs": [
     "Folland, Real Analysis, §3.2"
@@ -21986,7 +22021,7 @@
     "复积分",
     "围道"
    ],
-   "statement": "**白话**：把路径切成很多小段，每段用 $f$ 在该点的值乘上这一小段对应的**复位移**，加起来取极限 —— 就是沿这条路径的积分。\n\n设 $\\gamma: [a, b] \\to \\mathbb{C}$ 分段光滑（参数曲线），$f$ 在 $\\gamma$ 上连续。定义\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z := \\lim_{\\text{分割}} \\sum_{k=1}^{n} f(\\gamma(\\tau_k))\\,(\\gamma(t_k) - \\gamma(t_{k-1})),$$\n\n分割取 $[a, b]$ 的任意加细分割、$\\tau_k \\in [t_{k-1}, t_k]$ 任意，极限存在且与取法无关；它等于\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z = \\int_a^b f(\\gamma(t))\\,\\gamma'(t)\\,\\mathrm{d}t,$$\n\n右端是实参数 $t$ 上的复值 Riemann 积分。拆成实部虚部（$f = u + iv$，$z = x + iy$）就是两条实线积分：\n\n$$\\int_\\gamma f\\,\\mathrm{d}z = \\int_\\gamma (u\\,\\mathrm{d}x - v\\,\\mathrm{d}y) + i\\int_\\gamma (v\\,\\mathrm{d}x + u\\,\\mathrm{d}y).$$\n\n$\\gamma$ 为闭曲线时记 $\\oint_\\gamma$；反向曲线 $\\gamma^{-1}$ 上积分变号：$\\int_{\\gamma^{-1}} f\\,\\mathrm{d}z = -\\int_\\gamma f\\,\\mathrm{d}z$。",
+   "statement": "**白话**：把路径切成很多小段，每段用 $f$ 在该点的值乘上这一小段对应的**复位移**，加起来取极限 —— 就是沿这条路径的积分。\n\n设 $\\gamma: [a, b] \\to \\mathbb{C}$ 分段光滑（参数曲线），$f$ 在 $\\gamma$ 上连续。定义\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z := \\lim_{\\lVert\\Delta\\rVert \\to 0} \\sum_{k=1}^{n} f(\\gamma(\\tau_k))\\,(\\gamma(t_k) - \\gamma(t_{k-1})),$$\n\n分割取 $[a, b]$ 的任意加细分割、$\\tau_k \\in [t_{k-1}, t_k]$ 任意，极限存在且与取法无关；它等于\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z = \\int_a^b f(\\gamma(t))\\,\\gamma'(t)\\,\\mathrm{d}t,$$\n\n右端是实参数 $t$ 上的复值 Riemann 积分。拆成实部虚部（$f = u + iv$，$z = x + iy$）就是两条实线积分：\n\n$$\\int_\\gamma f\\,\\mathrm{d}z = \\int_\\gamma (u\\,\\mathrm{d}x - v\\,\\mathrm{d}y) + i\\int_\\gamma (v\\,\\mathrm{d}x + u\\,\\mathrm{d}y).$$\n\n$\\gamma$ 为闭曲线时记 $\\oint_\\gamma$；反向曲线 $\\gamma^{-1}$ 上积分变号：$\\int_{\\gamma^{-1}} f\\,\\mathrm{d}z = -\\int_\\gamma f\\,\\mathrm{d}z$。",
    "notes": "⭐ 右端那个实积分就是定义的全部内容：**复围道积分 = 对实参数 $t$ 的复值 Riemann 积分**。于是实积分的一切性质（线性、区间可加、绝对值不等式、换元）自动搬过来。\n\n⭐ 与实积分真正的区别在**路径依赖**：$\\int_\\gamma f\\,\\mathrm{d}z$ 一般不只是端点的函数。Cauchy 定理说的正是「全纯时它忽然只依赖端点，闭路上为 $0$」。\n\n⭐ 上面那个实部虚部的拆法是后面接 Green 公式的接口：$P = u$、$Q = -v$ 与 $P = v$、$Q = u$ 各套一次 Green，就得到 Cauchy–Green 恒等式。",
    "refs": [
     "王晓光《复变函数》笔记，第 6 章 · 复积分",
@@ -22520,7 +22555,7 @@
     "可去奇点",
     "延拓"
    ],
-   "statement": "**白话**：如果 $f$ 在 $a$ 附近全纯，而且靠近 $a$ 时「爆得比 $1/|z - a|$ 慢」，那 $a$ 这个洞可以补上，补完还是全纯。\n\n设 $f$ 在 $D(a, r) \\setminus \\{a\\}$ 上全纯，且\n\n$$\\lim_{z \\to a} (z - a) f(z) = 0 \\qquad (\\text{等价地，} f(z) = o(|z - a|^{-1})).$$\n\n则 $a$ 是 $f$ 的**可去奇点**：存在 $f$ 在 $D(a, r)$ 上的全纯延拓。",
+   "statement": "**白话**：如果 $f$ 在 $a$ 附近全纯，而且靠近 $a$ 时「爆得比 $1/|z - a|$ 慢」，那 $a$ 这个洞可以补上，补完还是全纯。\n\n设 $f$ 在 $D(a, r) \\setminus \\{a\\}$ 上全纯，且\n\n$$\\lim_{z \\to a} (z - a) f(z) = 0.$$\n等价的说法是 $f(z) = o(|z - a|^{-1})$。\n\n则 $a$ 是 $f$ 的**可去奇点**：存在 $f$ 在 $D(a, r)$ 上的全纯延拓。",
    "notes": "⭐ 证明：对 $z \\in D(a, r) \\setminus \\{a\\}$ 与充分小的 $\\varepsilon < |z - a|$，把 $f$ 写成两个 Cauchy 型积分之差 $f(z) = I_r(z) - I_\\varepsilon(z)$，其中 $I_r$ 是沿 $|\\zeta - a| = r$ 的积分（在 $D(a, r)$ 上全纯），$I_\\varepsilon$ 是沿 $|\\zeta - a| = \\varepsilon$ 的积分。估计\n\n$$|I_\\varepsilon(z)| \\le \\frac{\\varepsilon \\, \\|f\\|_{\\partial D(a, \\varepsilon)}}{|z - a| - \\varepsilon} \\longrightarrow 0 \\qquad (\\varepsilon \\to 0),$$\n\n最后一步用的正是条件 $(z - a) f(z) \\to 0$。但 $I_\\varepsilon(z)$ 与 $\\varepsilon \\in (0, |z - a|)$ 的选取**无关**，所以只能恒为 $0$。于是 $f = I_r$ 在 $D(a, r)$ 上全纯，补上 $f(a) := I_r(a)$ 即可。\n\n⭐ 用途：它让「可去奇点」真的可以当没有。例如 $\\sin z / z$ 在 $0$ 处补成 $1$，于是 $\\sin z / z$ 就是整函数；$z^k f(z)$ 的零点阶、以及「全纯函数在零点附近可写成 $(z - a)^k \\psi(z)$」都要靠它。\n\n⚠ 条件比「有界」更宽（有界就够了）：它允许 $f$ 以 $o(1/|z - a|)$ 的速度增长，仍然可去。真正不可去的是 $1/(z - a)$ 这样的速度 —— 那是极点。",
    "refs": [
     "王晓光《复变函数》笔记，第 9 章 · Riemann 可去奇点定理",
@@ -26212,7 +26247,7 @@
     "孤立奇点",
     "Casorati-Weierstrass"
    ],
-   "statement": "设 $z_{0}$ 是 $f$ 的**本性奇点**（即 Laurent 展开的主部有无穷多项）。则对 $z_{0}$ 的每个去心邻域 $U = \\{\\, 0 < |z - z_{0}| < r \\,\\}$，像集 $f(U)$ 在 $\\mathbb{C}$ 中**稠密**：\n\n$$\\forall\\, w \\in \\mathbb{C},\\ \\forall\\, \\varepsilon > 0,\\ \\exists\\, z \\in U \\text{ 使 } |f(z) - w| < \\varepsilon.$$",
+   "statement": "设 $z_{0}$ 是 $f$ 的**本性奇点**（即 Laurent 展开的主部有无穷多项）。则对 $z_{0}$ 的每个去心邻域 $U = \\{\\, 0 < |z - z_{0}| < r \\,\\}$，像集 $f(U)$ 在 $\\mathbb{C}$ 中**稠密**：\n\n$$\\forall\\, w \\in \\mathbb{C},\\ \\forall\\, \\varepsilon > 0,\\ \\exists\\, z \\in U:\\ |f(z) - w| < \\varepsilon.$$",
    "notes": "**证明（反证）**：设存在 $w_{0}$、$\\rho > 0$ 使 $f(U) \\cap B(w_{0}, \\rho) = \\emptyset$。令\n\n$$F(z) := \\frac{1}{f(z) - w_{0}}, \\qquad 0 < |z - z_{0}| < r.$$\n\n则 $|F(z)| < 1/\\rho$ 在 $U$ 上有界，故 $z_{0}$ 是 $F$ 的**可去奇点**（`thm.riemann-removable`），$F$ 在 $z_{0}$ 处可补成全纯。于是 $f = w_{0} + 1/F$ 在 $z_{0}$ 附近的行为只可能是：$F(z_{0}) \\ne 0$ $\\implies$ $f$ 全纯；$F$ 有 $m$ 阶零点 $\\implies$ $f$ 有 $m$ 阶极点；$F \\equiv 0$ $\\implies$ $f \\equiv \\infty$（不可能）。三种都与「$z_{0}$ 是本性奇点」矛盾。∎\n\n⭐ **怎么记**：三类奇点里，可去奇点附近**有界**，极点附近**趋于无穷**，本性奇点则**什么都可能发生** —— 它把每个去心邻域的像撒得满 $\\mathbb{C}$ 都是。\n\n⚠️ Casorati–Weierstrass 只说**稠密**，不说「取到每个值」。更强的 **Picard 大定理**说：去心邻域的像**至多漏掉一个点**（且那个值至多取到有限次）—— 本图不展开，只标出处。",
    "refs": [
     "王晓光《复变函数》· 本性奇点与 Casorati–Weierstrass 定理",
@@ -27195,7 +27230,7 @@
     "定义",
     "局部可积"
    ],
-   "statement": "可测函数 $f : \\mathbb{R}^n \\to \\mathbb{C}$ 是**局部可积的**，当且仅当\n\n$$\\int_K |f(x)| dx < \\infty\\quad \\text{ 对每个有界可测集} K \\subseteq \\mathbb{R}^n$$\n\n局部可积函数全体记作 $L^1_{loc}$（或 $L^1_{loc}(\\mathbb{R}^n)$）。",
+   "statement": "可测函数 $f : \\mathbb{R}^n \\to \\mathbb{C}$ 是**局部可积的**，当且仅当\n\n对每个**有界可测集** $K \\subseteq \\mathbb{R}^n$ 都有\n$$\\int_K |f(x)| dx < \\infty$$\n\n局部可积函数全体记作 $L^1_{loc}$（或 $L^1_{loc}(\\mathbb{R}^n)$）。",
    "notes": "直觉：$f$ 可能「在无穷远处爆掉」，但在每个有限范围里都还好。\n\n例：常函数 1 属于 $L^{1}_{l}oc$ 但不属于 $L^{1}(\\mathbb{R}^{n})$；$1/|x|$ 在 $\\mathbb{R}^{n}$ 上属于 $L^{1}_{l}oc$（$n \\ge 2$ 时不属于 $L^{1}$）。\n\n⚠ 微分理论里必须是 $L^{1}_{l}oc$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。",
    "refs": [
     "Folland, Real Analysis, §3.4"
@@ -27398,7 +27433,7 @@
     "Lebesgue 微分",
     "a.e."
    ],
-   "statement": "设 $f \\in L^1_{loc}$。则\n\n$$\\lim_{r\\to0} A_r f(x) = f(x)\\quad \\text{ 对} \\text{a.e.} x \\in \\mathbb{R}^n$$",
+   "statement": "设 $f \\in L^1_{loc}$。则\n\n$$\\lim_{r\\to0} A_r f(x) = f(x)\\quad \\text{for a.e. } x \\in \\mathbb{R}^n$$",
    "notes": "⭐ 一句话：**可积函数几乎处处等于自己局部平均值的极限**。\n\n这也是「Lebesgue 积分比 Riemann 积分好」最直观的一条：Riemann 可积函数的连续性几乎处处成立，而这里连「连续」都不需要。\n\n证明的三段（下一条箭头里展开）：先用连续函数逼近 $\\to$ 再用极大定理把「坏集」压成零测。",
    "refs": [
     "Folland, Real Analysis, Theorem 3.18"
@@ -27615,7 +27650,7 @@
     "正则",
     "Borel 测度"
    ],
-   "statement": "$\\mathbb{R}^{n}$ 上的 Borel 测度 $\\nu$ 是**正则的**，当且仅当\n\n$\\cdot$ $\\nu(K) < \\infty$ 对每个紧集 $K$ 成立；\n$\\cdot$ $\\nu(E) = \\inf\\{ \\nu(U) : U\\text{ 开}, E \\subseteq U \\}$ 对每个 $E \\in \\mathfrak{B}_{\\mathbb{R}^n}$ 成立（**外正则**）。\n\n符号测度或复测度 $\\nu$ 叫正则 $\\iff$ $|\\nu|$ 正则。",
+   "statement": "$\\mathbb{R}^{n}$ 上的 Borel 测度 $\\nu$ 是**正则的**，当且仅当\n\n$\\cdot$ $\\nu(K) < \\infty$ 对每个紧集 $K$ 成立；\n$\\cdot$ $\\nu(E) = \\inf\\{ \\nu(U) : U \\in \\mathcal{T},\\ E \\subseteq U \\}$ 对每个 $E \\in \\mathfrak{B}_{\\mathbb{R}^n}$ 成立（**外正则**）。\n\n符号测度或复测度 $\\nu$ 叫正则 $\\iff$ $|\\nu|$ 正则。",
    "notes": "第二条是「从外面用开集逼近」。在 $\\mathbb{R}^{n}$ 上它其实由第一条推出。\n\n**每个正则测度都是 $\\sigma$有限的**（用紧集的可数覆盖）。\n\n$f \\in L^+(\\mathbb{R}^n)$ 时，$f\\cdot dm$ 正则 $\\iff$ $f \\in L^1_{loc}$ —— 这条把「正则」与「局部可积」接了起来。",
    "refs": [
     "Folland, Real Analysis, §7.2"
@@ -28616,7 +28651,7 @@
     "道路连通分支",
     "约化同调"
    ],
-   "statement": "设 $X \\ne \\emptyset$，$\\pi_{0}(X)$ 是它的**道路连通分支**之集。则\n\n$$H_{0}(X) \\;\\cong\\; \\bigoplus_{C \\in \\pi_{0}(X)} \\mathbb{Z}.$$\n\n更精确：从每个分支 $C$ 中取一点 $x_{C}$，则类 $[x_{C}]$ 构成 $H_{0}(X)$ 的一组基。特别地\n\n$$\\tilde{H}_{0}(X) = 0 \\iff X \\text{ 道路连通}.$$",
+   "statement": "设 $X \\ne \\emptyset$，$\\pi_{0}(X)$ 是它的**道路连通分支**之集。则\n\n$$H_{0}(X) \\;\\cong\\; \\bigoplus_{C \\in \\pi_{0}(X)} \\mathbb{Z}.$$\n\n更精确：从每个分支 $C$ 中取一点 $x_{C}$，则类 $[x_{C}]$ 构成 $H_{0}(X)$ 的一组基。特别地\n\n$$\\tilde{H}_{0}(X) = 0 \\iff X \\text{ is path-connected}.$$",
    "notes": "**所以 $H_{0}$ 就是「$X$ 有几块」**。这也解释了为什么 $\\tilde{H}_{0}(S^{0}) = \\mathbb{Z}$（两点，秩 $2$ 商掉对角那条 $\\mathbb{Z}$ 剩秩 $1$），从而球面同调的公式在 $p = 0$ 处也统一。\n\n⚠️ **道路连通 vs 连通**：$H_{0}$ 只看见**道路**连通分支，不是连通分支。在通常的空间（局部道路连通）上两者一致，但一般情况不同——例如拓扑学家的正弦曲线是连通而不道路连通的，它的 $H_{0}$ 反映的是道路分支。\n\n**为什么边缘落在「同分支点之差」上**：$\\partial$ 只作用在一条奇异 $1$-单纯形（一条道路）上，它的像是两个端点之差；而整条道路都在同一个道路连通分支里。所以 $\\partial$ 无法跨越分支 $\\implies$ 不同分支的点在 $H_{0}$ 里线性无关。\n\n💡 这是本团第一条**算得出具体数**的结论：$H_{0}$ 是唯一一个「看空间就写答案」的同调群。",
    "refs": [
     "Munkres, Elements of Algebraic Topology, Ch. 4 · H_0 and components",
@@ -28825,7 +28860,7 @@
     "重心重分",
     "同调群"
    ],
-   "statement": "设 $K, L$ 是单纯复形，$K$ **有限**，$f : |K| \\to |L|$ 连续。记 $K^{(m)}$ 为 $K$ 的 $m$ 次**重心重分**（$|K^{(m)}| = |K|$，单纯形直径按固定比例缩小）。则存在 $m \\ge 1$ 与**单纯映射**\n\n$$g : K^{(m)} \\longrightarrow L$$\n\n使 $|g| \\simeq f$（$|g|$ 与 $f$ 同伦）。这样的 $g$ 叫 $f$ 的一个**单纯逼近**。\n\n**推论**：设 $K$ 是有限单纯复形。则包含映射 $C_{*}(K) \\hookrightarrow S_{*}(|K|)$ 诱导同构\n\n$$H_{p}(K) \\;\\cong\\; H_{p}(|K|) \\qquad (\\text{对一切 } p).$$\n\n于是「多面体的奇异同调可以只按某个三角剖分算成单纯同调」，而后者是**有限矩阵**问题。",
+   "statement": "设 $K, L$ 是单纯复形，$K$ **有限**，$f : |K| \\to |L|$ 连续。记 $K^{(m)}$ 为 $K$ 的 $m$ 次**重心重分**（$|K^{(m)}| = |K|$，单纯形直径按固定比例缩小）。则存在 $m \\ge 1$ 与**单纯映射**\n\n$$g : K^{(m)} \\longrightarrow L$$\n\n使 $|g| \\simeq f$（$|g|$ 与 $f$ 同伦）。这样的 $g$ 叫 $f$ 的一个**单纯逼近**。\n\n**推论**：设 $K$ 是有限单纯复形。则包含映射 $C_{*}(K) \\hookrightarrow S_{*}(|K|)$ 诱导同构\n\n$$H_{p}(K) \\;\\cong\\; H_{p}(|K|) \\qquad \\forall p.$$\n\n于是「多面体的奇异同调可以只按某个三角剖分算成单纯同调」，而后者是**有限矩阵**问题。",
    "notes": "⚠️ **本图的证明是骨架**，四条支柱：\n① **重分不改变同调**：重心重分给出链映射 $\\operatorname{sd} : C_{*}(K) \\to C_{*}(K')$（把每个单纯形映成「以它的重心为锥顶、锥在它的一个面上」的链，符号由顶点全序决定），它诱导同调同构——构造一条反向链同伦即可（关键事实：重分后每个小单纯形的顶点集都落在原来某个单纯形里）；\n② **切细到落进星里**：取 $L$ 的**星形**开覆盖 $\\{\\operatorname{st}(w)\\}_{w \\in V(L)}$。$f$ 连续、$|K|$ 紧，故由 Lebesgue 数可取 $m$ 使 $K^{(m)}$ 的每个单纯形的像都落在**同一个** $\\operatorname{st}(w)$ 里；\n③ **选顶点得单纯映射**：可以把 $K^{(m)}$ 的每个顶点 $v$ 送到某个使 $|f|(v) \\in \\operatorname{st}(w)$ 的 $w$，并且选得使每条单纯形的顶点像构成 $L$ 的一个单纯形（星形覆盖保证这一点能做）；\n④ **同伦**：$\\operatorname{st}(w)$ 是凸的，所以 $|g|(x)$ 与 $f(x)$ 之间的线段整个留在里面，$H(x, t) := (1 - t)|g|(x) + t f(x)$ 是有定义的连续同伦。\n\n⚠️ ① 与 ④ 的技术细节（符号追踪、链同伦的显式公式）本图**没有**写出来，这是本节最容易被低估的地方。\n\n⭐ **推论为什么值钱**：它一次性给出三件事——（i）单纯同调是拓扑不变量（不依赖三角剖分）；（ii）可以用有限矩阵的秩计算奇异同调；（iii）Euler 示性数的公式可以搬到奇异同调上（见 `thm.euler-characteristic` 的边）。\n\n💡 一句话：**连续映射 $\\approx$ 重分之后的单纯映射**。拓扑在这里被「组合化」了一次。",
    "refs": [
     "Munkres, Elements of Algebraic Topology · 单纯逼近定理（本图不给章号 / 定理号）",
@@ -28909,7 +28944,7 @@
     "共圆",
     "分式线性变换"
    ],
-   "statement": "设 $z_{1}, z_{2}, z_{3}, z_{4}$ 互不相同。则\n\n$$(z_{1}, z_{2}; z_{3}, z_{4}) \\in \\mathbb{R} \\iff \\text{四点共圆或共线}.$$\n\n（在扩充平面上「圆」与「直线」是同一类对象，所以这句话不必分两种情形。）",
+   "statement": "设 $z_{1}, z_{2}, z_{3}, z_{4}$ 互不相同。则\n\n$$(z_{1}, z_{2}; z_{3}, z_{4}) \\in \\mathbb{R}$$\n当且仅当 $z_{1}, z_{2}, z_{3}, z_{4}$ **四点共圆或共线**。\n\n（在扩充平面上「圆」与「直线」是同一类对象，所以这句话不必分两种情形。）",
    "notes": "**证明**：取分式线性变换 $T$ 把 $z_{1}, z_{2}, z_{3}$ 分别送到 $0, 1, \\infty$（存在且唯一，见 `prop.mobius-three-points`）。由交比不变性\n\n$$(z_{1}, z_{2}; z_{3}, z_{4}) = (0, 1; \\infty, Tz_{4}) = Tz_{4}.$$\n\n于是「交比为实」$\\iff$「$Tz_{4}$ 在实轴上」。而 $T^{-1}(\\mathbb{R})$ 是一条直线或一个圆（实轴是过 $\\infty$ 的「圆」，见 `prop.mobius-circle`），它恰好过 $z_{1}, z_{2}, z_{3}$。∎\n\n⭐ **它是共圆判据的复数版**：初等几何里要量角，这里只要算一个复数是不是实数。工程上判四点共圆、或判某个分式线性变换把实轴送到哪，都是这一条。",
    "refs": [
     "王晓光《复变函数》· 交比与共圆判据",
@@ -30253,7 +30288,7 @@
     "环论",
     "整除"
    ],
-   "statement": "整环 $A$ 叫 **gcd 整环**，若任意 $a, b \\in A$ 都有**最大公因子**：存在 $d$ 使\n\n$$d \\mid a,\\quad d \\mid b,\\quad \\text{且任何 } c \\mid a,\\ c \\mid b \\text{ 都有 } c \\mid d .$$\n\n注意「最大」是**整除意义下的最大下界**，不是大小比较 —— 整环上没有全序。",
+   "statement": "整环 $A$ 叫 **gcd 整环**，若任意 $a, b \\in A$ 都有**最大公因子**：存在 $d$ 使\n\n$$d \\mid a,\\quad d \\mid b,$$\n并且**任何同时整除 $a, b$ 的 $c$ 都整除 $d$**。\n\n注意「最大」是**整除意义下的最大下界**，不是大小比较 —— 整环上没有全序。",
    "notes": "为什么必须这样定义：$\\mathbb{Z}$ 里「最大的公因数」靠 $|d|$ 比较，一般整环没有绝对值。改用「被一切公因子整除」才对：$\\mathbb{Z}$ 里它等价于「绝对值最大」，而 $\\mathbb{Z}[i]$ 里也只有这个说法成立。\n\n\n\n层级：UFD $\\implies$ gcd 整环（`imp.ring-ufd-gcd`），反之不然（$\\mathbb{Z}[\\sqrt{-5}]$ 连 $\\gcd(6, 2(1+\\sqrt{-5}))$ 都不存在）。Bézout 整环 $\\implies$ gcd 整环，因为 $\\gcd$ 直接由线性组合给出。\n\n\n\n$\\gcd$ 可以不存在 —— 这正是「UFD 的分解唯一性」不能用 gcd 替代的原因。",
    "refs": [
     "Kaplansky, Commutative Rings, Ch. 1"
@@ -30333,7 +30368,7 @@
     "环论",
     "整除"
    ],
-   "statement": "整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \\setminus \\{0\\} \\to \\mathbb{N}$（**欧几里得函数**），使对任意 $a \\in A$、$b \\ne 0$，存在 $q, r \\in A$ 满足\n\n$$a = q b + r, \\qquad r = 0 \\ \\text{或}\\ N(r) < N(b) .$$",
+   "statement": "整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \\setminus \\{0\\} \\to \\mathbb{N}$（**欧几里得函数**），使对任意 $a \\in A$、$b \\ne 0$，存在 $q, r \\in A$ 满足\n\n$$a = q b + r, \\qquad r = 0 \\ \\vee \\ N(r) < N(b) .$$",
    "notes": "三个例子，三种 $N$：$\\mathbb{Z}$ 取 $N(a) = |a|$；$K[x]$ 取 $N(f) = \\deg f$（这就是 `thm.division-algorithm`）；$\\mathbb{Z}[i]$（Gauss 整数）取 $N(a+bi) = a^{2}+b^{2}$。\n\n\n\n为什么它值钱：后面所有算术（$\\gcd$、Bézout、唯一分解）的证明**只用到「余数下降」**这一条，所以整条链在 Euclid 整环里一次性成立（`imp.ring-euclid-pid` 起）。\n\n\n\nEuclid 整环 $\\implies$ PID 的证明要点：取理想 $I \\ne 0$，在其中选 $N$ 最小的 $b$，则任何 $a \\in I$ 除以 $b$ 的余数 $r = a - qb \\in I$ 满足 $N(r) < N(b)$，只能 $r = 0$，故 $I = (b)$。",
    "refs": [
     "Borevich–Shafarevich, Number Theory, Ch. 1",
@@ -30654,7 +30689,7 @@
     "数论",
     "数论函数"
    ],
-   "statement": "定义\n\n$$\\mu(n) := \\begin{cases} 1, & n = 1, \\\\ (-1)^{r}, & n = p_{1}p_{2}\\cdots p_{r}\\ \\text{是}\\ r\\ \\text{个互不相同素数之积}, \\\\ 0, & n\\ \\text{含平方因子}\\ (p^{2} \\mid n) . \\end{cases}$$",
+   "statement": "定义\n\n$\\mu : \\mathbb{N} \\to \\mathbb{Z}$ 按 $n$ 的素因子结构定义：\n\n- $n = 1$ 时 $\\mu(1) = 1$；\n- $n$ 是 $r$ 个**互不相同**素数之积（$n = p_{1}p_{2}\\cdots p_{r}$）时 $\\mu(n) = (-1)^{r}$；\n- $n$ **含平方因子**（存在素数 $p$ 使 $p^{2} \\mid n$）时 $\\mu(n) = 0$。",
    "notes": "$\\mu$ 是**积性**函数里最简单的一个（也是完全积性以外的第一个「有零值」的积性函数）：由素数幂上的值 $\\mu(p) = -1$、$\\mu(p^{e}) = 0\\ (e \\ge 2)$ 完全确定。\n\n\n\n它出现的原因只有一个：**它是「常数函数 $1$」在狄利克雷卷积下的逆**。也就是说，Möbius 反演不是技巧，而是卷积群的逆元。\n\n\n\n$\\sum_{d \\mid n} \\mu(d)$ 只在 $n = 1$ 时为 $1$、其余为 $0$ —— 这条恒等式是整个反演公式的全部内容（见 `thm.mu-sum`）。",
    "refs": [
     "华罗庚《数论导引》第三章",
@@ -30729,12 +30764,8 @@
    ],
    "cluster": "number.functions",
    "layer": 17,
-   "tags": [
-    "数论",
-    "数论函数",
-    "定理"
-   ],
-   "statement": "设 $f, g : \\mathbb{N}^{+} \\to \\mathbb{C}$。则\n\n$$g(n) = \\sum_{d \\mid n} f(d) \\quad \\text{对一切 } n \\qquad \\iff \\qquad f(n) = \\sum_{d \\mid n} \\mu(d)\\, g\\!\\left(\\frac{n}{d}\\right) \\ \\text{对一切 } n .$$",
+   "tags": [],
+   "statement": "设 $f, g : \\mathbb{N}^{+} \\to \\mathbb{C}$。则\n\n$$g(n) = \\sum_{d \\mid n} f(d)\\quad \\forall n \\qquad \\iff \\qquad f(n) = \\sum_{d \\mid n} \\mu(d)\\, g\\!\\left(\\frac{n}{d}\\right) \\quad \\forall n .$$",
    "notes": "**$\\Leftarrow$ 的方向**（唯一要看的方向）：把 $f(d)$ 的表达式代进去，\n\n\n\n$$\\sum_{d\\mid n} f(d) = \\sum_{d\\mid n}\\ \\sum_{e\\mid (n/d)} \\mu(e)\\, g\\!\\left(\\frac{n}{de}\\right) = \\sum_{m \\mid n} g(m) \\sum_{e \\mid (n/m)} \\mu(e) .$$\n\n\n\n内层和由 `thm.mu-sum` 只在 $n/m = 1$ 时为 $1$，其余为 $0$ —— 于是整个式子塌成 $g(n)$。\n\n\n\n**另一方向**同理（或直接用 $\\Leftarrow$ 于反向的偏序）。所以「反演」不是新定理，是 $\\mu * 1 = \\delta$ 这一句话的两面。\n\n\n\n**用法**：数论里的「求和  与  还原」几乎都靠它。例如 $\\sum_{d\\mid n}\\varphi(d) = n$ 反演出 $\\varphi(n) = \\sum_{d\\mid n}\\mu(d)\\,(n/d)$；素数计数也是先有 $\\log n! = \\sum_{m \\le n}\\psi(n/m)$ 再反演。",
    "refs": [
     "华罗庚《数论导引》第三章",
@@ -30976,7 +31007,7 @@
     "数论",
     "二次剩余"
    ],
-   "statement": "设 $p$ 是奇素数，$p \\nmid a$。定义\n\n$$\\left(\\frac{a}{p}\\right) := \\begin{cases} 1, & a\\ \\text{是模}\\ p\\ \\text{的二次剩余}, \\\\ -1, & a\\ \\text{是二次非剩余} . \\end{cases}$$\n\n补充规定 $\\left(\\frac{a}{p}\\right) = 0$ 当 $p \\mid a$。",
+   "statement": "设 $p$ 是奇素数，$p \\nmid a$。定义\n\n$\\left(\\frac{a}{p}\\right)$ 只取值 $\\pm 1$：\n\n- $a$ **是模 $p$ 的二次剩余**（即 $a \\equiv x^{2} \\pmod p$ 有解 $x \\not\\equiv 0$）时取 $1$；\n- $a$ **是二次非剩余**时取 $-1$。\n\n补充规定 $\\left(\\frac{a}{p}\\right) = 0$ 当 $p \\mid a$。",
    "notes": "它把「有没有解」压成一个取值 $\\pm 1$ 的函数，而乘法性立刻可见：由 $x^{2} \\equiv a$、$y^{2} \\equiv b$ 得 $(xy)^{2} \\equiv ab$，配合「各恰有 $(p-1)/2$ 个剩余」的计数，得\n\n\n\n$$\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right) .$$\n\n\n\n所以 $\\left(\\frac{\\cdot}{p}\\right) : \\mathbb{F}_{p}^{\\times} \\to \\{\\pm 1\\}$ 是群同态，核就是二次剩余构成的子群 —— Legendre 符号就是商群 $\\mathbb{F}_{p}^{\\times}/(\\mathbb{F}_{p}^{\\times})^{2} \\cong \\{\\pm 1\\}$ 的那张同构表。",
    "refs": [
     "华罗庚《数论导引》第四章"
@@ -32414,7 +32445,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#d9b86281"
+      "abstract": "v0.9.1#361b9f22"
      }
     }
    },
@@ -32431,7 +32462,7 @@
     "Lp",
     "范数"
    ],
-   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu)$。对可测 $f$ 与 $0 < p < \\infty$ 定义\n\n$$\\|f\\|_p := \\left[ \\int |f|^p \\, d\\mu \\right]^{1/p}$$\n\n以及\n\n$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} : f \\text{ 可测},\\ \\|f\\|_p < \\infty \\,\\}$$",
+   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu)$。对可测 $f$ 与 $0 < p < \\infty$ 定义\n\n$$\\|f\\|_p := \\left[ \\int |f|^p \\, d\\mu \\right]^{1/p}$$\n\n以及\n\n$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} :\\ \\|f|_p < \\infty \\,$$\n其中 $f$ 是**可测**函数。",
    "notes": "基本事实（都可直接验证）：\n\n\n\n- $\\|f\\|_p = 0 \\iff f = 0$ a.e.；\n- $\\|cf\\|_p = |c| \\, \\|f\\|_p$；\n- $f, g \\in L^p \\implies f + g \\in L^p$（这一步用 $|f+g|^p \\le 2^p(|f|^p + |g|^p)$）。\n\n\n\n⚠ **$p < 1$ 时三角不等式失效**，所以那时 $L^p$ 只是拟范数空间（虽然它仍然是完备的）。\n\n和 $L^1$ 一样，$L^p$ 的元素其实是**函数的等价类**（a.e. 相等视为同一个），这正是 $\\|f\\|_p = 0 \\implies f = 0$ 得以成立的前提。",
    "refs": [
     "Folland, Real Analysis, §6.1"
@@ -33709,7 +33740,7 @@
     "定义",
     "零集"
    ],
-   "statement": "设 $(X, \\mathcal{M}, \\mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当\n\n$$\\exists E \\in \\mathcal{M}:\\ \\mu(E) = 0 \\quad \\text{且} \\quad \\forall x \\in X \\setminus E,\\ P(x)\\ \\text{成立}$$\n\n即：**使命题不成立的那些点构成一个零集**。\n\n常见的用法：$f = g$ a.e.（$\\{f \\ne g\\}$ 是零集）、$f_n \\to f$ a.e.（不收敛的点是零集）、$F' = 0$ a.e.。",
+   "statement": "设 $(X, \\mathcal{M}, \\mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当\n\n$$\\exists E \\in \\mathcal{M}:\\ \\mu(E) = 0\\ \\wedge \\ \\forall x \\in X \\setminus E,\\ P(x) .$$\n\n即：**使命题不成立的那些点构成一个零集**。\n\n常见的用法：$f = g$ a.e.（$\\{f \\ne g\\}$ 是零集）、$f_n \\to f$ a.e.（不收敛的点是零集）、$F' = 0$ a.e.。",
    "notes": "⭐ a.e. 是 Lebesgue 理论的**润滑剂**：$L^1$、$L^p$ 的元素其实是**函数的等价类**（a.e. 相等视为同一个），几乎所有收敛定理（MCT、Fatou、DCT 的 a.e. 版本、Egorov）都只要求 a.e. 收敛 —— 因为零集上的取值对积分没有贡献。\n\n⚠ 「a.e. 相等」与「处处相等」是不同的关系：$\\int |f| = 0 \\implies f = 0$ a.e.（而不是处处 0）。\n⚠ 零集的**子集**未必可测，除非测度空间完备 —— 这就是「完备化」要解决的问题。",
    "refs": [
     "Rudin, Real and Complex Analysis, Ch. 1"
@@ -33909,7 +33940,7 @@
     "定理",
     "基数"
    ],
-   "statement": "若存在单射 $f : A \\to B$ 与单射 $g : B \\to A$，则存在**双射** $A \\to B$，即\n\n$$|A| \\le |B| \\ \\text{且}\\ |B| \\le |A| \\implies |A| = |B|$$",
+   "statement": "若存在单射 $f : A \\to B$ 与单射 $g : B \\to A$，则存在**双射** $A \\to B$，即\n\n$$|A| \\le |B| \\ \\wedge \\ |B| \\le |A| \\implies |A| = |B|$$",
    "notes": "⭐ 它的价值在于**省事**：要证两个集合等势，只要各造一个方向的单射，不必显式写出那个双射。（对比：Cantor 定理的另一条路 —— 有单射无满射 —— 用的是对称的说法。）\n\n⚠ 它**不需要**选择公理：证明是构造性的（见边的证明），这也是它比「任意两个基数可比」好用的地方。",
    "refs": [
     "Kunen, Set Theory, I.6"
@@ -34292,7 +34323,7 @@
     "乘积",
     "投影"
    ],
-   "statement": "设 $(X_{i}, \\mathcal{T}_{i})_{i \\in I}$ 是一族拓扑空间。$\\prod_{i \\in I} X_{i}$ 上的**积拓扑**是以\n\n$$\\prod_{i \\in I} U_{i} \\qquad (U_{i} \\in \\mathcal{T}_{i},\\ \\text{除有限多个 } i \\text{ 外 } U_{i} = X_{i})$$\n\n为基的拓扑 —— 也就是使所有投影 $\\pi_{j} : \\prod_{i} X_{i} \\to X_{j}$ 都连续的**最粗**拓扑。",
+   "statement": "设 $(X_{i}, \\mathcal{T}_{i})_{i \\in I}$ 是一族拓扑空间。$\\prod_{i \\in I} X_{i}$ 上的**积拓扑**是以\n\n$$\\prod_{i \\in I} U_{i} \\qquad (U_{i} \\in \\mathcal{T}_{i},$$\n其中**除有限多个 $i$ 之外**都有 $U_{i} = X_{i}$）\n\n为基的拓扑 —— 也就是使所有投影 $\\pi_{j} : \\prod_{i} X_{i} \\to X_{j}$ 都连续的**最粗**拓扑。",
    "notes": "⭐ **「最粗」是关键字**：投影要连续，只要求每个 $\\pi_{j}^{-1}(U_{j})$ 是开的；把这些取有限交当基，就是积拓扑。要求更细反而会丢掉极限 —— 而「$x_{n} \\to x$ $\\iff$ 按每个分量都收敛」正是这条最粗性换来的。\n\n**范畴意义**：$\\prod_{i} X_{i}$ 连同投影就是 $\\mathbf{Top}$ 里的**积**。所以积拓扑不是随便挑的，它是泛性质唯一确定的那一个。",
    "refs": [
     "Munkres, Topology"
@@ -35600,7 +35631,7 @@
     "大基数",
     "公理"
    ],
-   "statement": "**每个集合都装得进某个宇宙。** 这是一条独立的公理：\n\n$$\\forall x \\, \\exists U \\left[ U \\text{ 是宇宙} \\wedge  x \\in U \\right]$$\n\n其中「宇宙」按「Grothendieck 宇宙」那份定义：传递，且对配对、幂集、以内部集合为索引的并封闭。\n\n⭐ 等价的常用说法：**强不可达基数无界地多** —— 对每个序数 $\\alpha$ 都有强不可达基数 $\\kappa > \\alpha$，此时 $V_{\\kappa}$ 本身就是一个宇宙。",
+   "statement": "**每个集合都装得进某个宇宙。** 这是一条独立的公理：\n\n$$\\forall x \\, \\exists U \\left[ U \\in \\mathrm{Univ} \\wedge  x \\in U \\right]$$\n\n其中「宇宙」按「Grothendieck 宇宙」那份定义：传递，且对配对、幂集、以内部集合为索引的并封闭。\n\n⭐ 等价的常用说法：**强不可达基数无界地多** —— 对每个序数 $\\alpha$ 都有强不可达基数 $\\kappa > \\alpha$，此时 $V_{\\kappa}$ 本身就是一个宇宙。",
    "notes": "它**不在 ZFC 里**。取强不可达基数 $\\kappa$，$V_{\\kappa} \\models \\mathrm{ZFC}$，所以这条公理蕴含 $\\mathrm{Con}(\\mathrm{ZFC})$；由 Gödel 第二不完备定理，ZFC 若一致就**证不出**它。所以用到它的定理必须把它写进前提，不能默认。\n\n它比「存在一个宇宙」**强**：说的是宇宙无界地多。范畴论要的正是这一点 —— $\\mathbf{Set}$ 相对于 $U$ 是小范畴，而 $U$ 本身落在更大的宇宙 $U^{+}$ 里，于是「$U$-小范畴的范畴」又是 $U^{+}$ 里的小范畴。**每往上走一级都有地方站。**\n\n弱形式：只处理固定的几个范畴时，假设「存在一个宇宙」（等价于「存在一个强不可达基数」）就够，不必要求无界地多。\n\n⚠️ 实践中的替代：类型论用**宇宙层级**把这件事自动化（Lean 的 `Type u`、Coq 的 `Type_i`）；本图按 SGA 的惯例，用一条公理一次性解决。",
    "refs": [
     "SGA 4, I.0",
@@ -37011,7 +37042,7 @@
     "伴随",
     "三角等式"
    ],
-   "statement": "设 $F \\dashv G$，记那个自然同构为\n\n$$\\Phi_{X, Y} : \\operatorname{Hom}_{\\mathcal{D}}\\bigl(F(X), Y\\bigr) \\longrightarrow \\operatorname{Hom}_{\\mathcal{C}}\\bigl(X, G(Y)\\bigr)$$\n\n把它在两个「恒等态射」上取值，得到两个自然变换：\n\n$$\\eta_{X} := \\Phi_{X, F(X)}(1_{F(X)}) : X \\to G F(X) \\qquad (\\textbf{单位})$$\n\n$$\\varepsilon_{Y} := \\Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \\to Y \\qquad (\\textbf{余单位})$$\n\n它们满足**三角等式**\n\n$$\\varepsilon_{F(X)} \\circ F(\\eta_{X}) = 1_{F(X)}, \\qquad G(\\varepsilon_{Y}) \\circ \\eta_{G(Y)} = 1_{G(Y)}$$\n\n反过来，给定 $\\eta : 1_{\\mathcal{C}} \\implies G \\circ F$ 与 $\\varepsilon : F \\circ G \\implies 1_{\\mathcal{D}}$ 满足这两条，就唯一决定了一对伴随。",
+   "statement": "设 $F \\dashv G$，记那个自然同构为\n\n$$\\Phi_{X, Y} : \\operatorname{Hom}_{\\mathcal{D}}\\bigl(F(X), Y\\bigr) \\longrightarrow \\operatorname{Hom}_{\\mathcal{C}}\\bigl(X, G(Y)\\bigr)$$\n\n把它在两个「恒等态射」上取值，得到两个自然变换：\n\n$$\\eta_{X} := \\Phi_{X, F(X)}(1_{F(X)}) : X \\to G F(X)$$\n\n$$\\varepsilon_{Y} := \\Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \\to Y$$\n\n它们满足**三角等式**\n\n$$\\varepsilon_{F(X)} \\circ F(\\eta_{X}) = 1_{F(X)}, \\qquad G(\\varepsilon_{Y}) \\circ \\eta_{G(Y)} = 1_{G(Y)}$$\n\n反过来，给定 $\\eta : 1_{\\mathcal{C}} \\implies G \\circ F$ 与 $\\varepsilon : F \\circ G \\implies 1_{\\mathcal{D}}$ 满足这两条，就唯一决定了一对伴随。",
    "notes": "一句话：**单位是「把自己送进去」，余单位是「把别人接回来」**，三角等式保证两个方向互不打架。\n\n⚠️ **单位与余单位一般不一定是同构**，这是伴随与「范畴等价」最大的差别。它们同时同构时，才是等价。\n\n由 $\\Phi$ 反解两边的公式：$\\Phi_{X,Y}(f) = G(f) \\circ \\eta_{X}$，$\\Phi^{-1}_{X,Y}(g) = \\varepsilon_{Y} \\circ F(g)$。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §1.5"
@@ -37928,7 +37959,7 @@
     "连通分量",
     "闭开集"
    ],
-   "statement": "设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：\n\n$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : K \\text{ 闭开},\\ x \\in K \\,\\}$$",
+   "statement": "设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：\n\n$C(x)$ 是**所有包含 $x$ 的闭开子集之交**：\n$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : x \\in K \\,$$",
    "notes": "证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.2"
@@ -38125,7 +38156,7 @@
     "投射有限",
     "有向极限"
    ],
-   "statement": "**投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：\n\n$$X \\;=\\; \\varprojlim_{i \\in I} X_{i}, \\qquad X_{i} \\text{ 有限离散},\\quad I \\text{ 有向}$$",
+   "statement": "**投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：\n\n$$X \\;=\\; \\varprojlim_{i \\in I} X_{i},$$\n其中每个 $X_{i}$ 是**有限离散**空间、$I$ 是**有向**集。",
    "notes": "「pro-finite」= 有限者的投射极限。直观上它是「越来越细的有限分辨率」堆出来的对象：$X_{i}$ 是第 $i$ 层分辨率下的样子，$I$ 有向保证任意两层分辨率都能同时加细。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.2"
@@ -39174,7 +39205,7 @@
     "层",
     "预标准"
    ],
-   "statement": "设 $\\mathcal{C}$ 是预拓扑斯、配预标准拓扑。预层 $F$ 是层 $\\iff$ 对每个有限族 $(X_{i} \\to X)$ 且 $\\coprod_{i} X_{i} \\to X$ 满，\n\n$$F(X) \\;\\cong\\; \\ker\\Bigl(\\prod_{i} F(X_{i}) \\rightrightarrows \\prod_{i,j} F(X_{i} \\times_{X} X_{j})\\Bigr)$$\n\n等价地，下面两条同时成立：\n\n$$F\\Bigl(\\coprod_{i \\in I} X_{i}\\Bigr) \\;\\cong\\; \\prod_{i \\in I} F(X_{i}), \\qquad R \\text{ 是 } X \\text{ 上的等价关系} \\implies F(X/R) \\;\\cong\\; \\ker\\bigl(F(X) \\rightrightarrows F(R)\\bigr)$$",
+   "statement": "设 $\\mathcal{C}$ 是预拓扑斯、配预标准拓扑。预层 $F$ 是层 $\\iff$ 对每个有限族 $(X_{i} \\to X)$ 且 $\\coprod_{i} X_{i} \\to X$ 满，\n\n$$F(X) \\;\\cong\\; \\ker\\Bigl(\\prod_{i} F(X_{i}) \\rightrightarrows \\prod_{i,j} F(X_{i} \\times_{X} X_{j})\\Bigr)$$\n\n等价地，下面两条同时成立：\n\n$$F\\Bigl(\\coprod_{i \\in I} X_{i}\\Bigr) \\;\\cong\\; \\prod_{i \\in I} F(X_{i}),$$\n其中 $R$ 是 $X$ 上的**等价关系**（拓扑斯的覆盖所对应的那个）。",
    "notes": "**证明。** 设覆盖族 $(X_{i} \\to X)_{i \\in I}$（有限、$\\coprod_{i}X_{i} \\to X$ 满）。层条件是对每个这样的族\n$$F(X) \\to \\prod_{i}F(X_{i}) \\rightrightarrows \\prod_{i,j}F(X_{i}\\times_{X}X_{j})$$\n为等化子。\n- **「余积变积」**：取单支覆盖 $X \\to X$（它当然满），则层条件退化成 $F(X) \\cong F(X)$ 的平凡等式 —— 有限余积的层条件要把 $I$ 取成各支自身：对有限族 $(X_{i})$，$\\coprod_{i}X_{i} \\to \\coprod_{i}X_{i}$ 满，层条件给出 $F(\\coprod_{i}X_{i}) \\cong \\prod_{i}F(X_{i})$ ✓（与余积交换 == 与有限积交换，因为 $F$ 是 $\\mathbf{Set}$ 值）。\n- **「商变核」**：一般族的覆盖条件里，$\\coprod_{i}X_{i} \\to X$ 是满态射，于是它在预拓扑斯里是**有效满**的：$R := \\coprod_{i,j}X_{i}\\times_{X}X_{j}$ 是 $\\coprod_{i}X_{i}$ 上的等价关系，而 $X$ 是这个关系的商（余等化子）。于是层条件读作 $F(X) \\cong \\ker\\bigl(F(\\coprod X_{i}) \\rightrightarrows F(R)\\bigr)$；再接上「余积变积」就得到陈述里的第一条等式 ✓。反过来取 $X = X/R$ 的商映射作覆盖，得 $F(X/R) \\cong \\ker(F(X)\\rightrightarrows F(R))$ ✓。\n- **合起来**：两条所说正是所有覆盖（都是有限族、余积满）的层条件 ✓。\n- **推论**：$h_{X} = \\operatorname{Hom}(X,-)$ 满足两条（Hom 把余积送成积、把商送成核），故每个可表示预层都是层 —— 即预标准拓扑是次标准的 ✓。∎\n\n这两条把「层」写成了两条在 $\\mathbf{Set}$ 里显然、在这里需要验的等式：**有限余积变有限积**、**商变核**。它们正是「预拓扑斯里的余积与商和集合里长得一样」的精确说法。\n\n推论：**预标准拓扑是次标准的** —— 可表示预层 $h_{X}$ 满足上面两条（$\\operatorname{Hom}(X, -)$ 保积，$\\operatorname{Hom}(X/R, -)$ 由余等化子给出核），所以它们都是层。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §3.3"
@@ -39254,7 +39285,7 @@
     "层",
     "单态射"
    ],
-   "statement": "设 $\\mathcal{C}$ 是预拓扑斯、配预标准拓扑。对 $\\mathcal{C}$ 中的态射 $f : X \\to Y$，\n\n$$f \\text{ 是单态射（满态射）} \\iff X^{\\sharp} \\to Y^{\\sharp} \\text{ 是单态射（满态射）}$$",
+   "statement": "设 $\\mathcal{C}$ 是预拓扑斯、配预标准拓扑。对 $\\mathcal{C}$ 中的态射 $f : X \\to Y$，\n\n$f$ **是单态射（满态射）** $\\iff X^{\\sharp} \\to Y^{\\sharp}$ **是单态射（满态射）**",
    "notes": "**证明。** 记层化为 $(-)^{\\sharp}$。\n- **$(\\implies)$**：层化是到层范畴的**左伴随**，故保余极限，特别保满态射；又是**左正合**的（保有限极限），故保单态射 ✓。\n- **$(\\Longleftarrow)$**：预标准拓扑是次标准的，所以 $h_{X}^{\\sharp} \\cong h_{X}$、$h_{Y}^{\\sharp} \\cong h_{Y}$，且 $f^{\\sharp}$ 在 Yoneda 嵌入下的像就是 $h_{f}$。\n- 对可表示预层：$h_{f}$ 单 $\\iff$ $f$ 单（Yoneda 双射把 $h_{f}(Z)$ 的诱导映射写成「与 $f$ 复合」，单射性逐点验出）；$h_{f}$ 满 $\\iff$ $f$ 满（$\\mathbf{Set}$ 值预层范畴中的满态射逐点判定；一边取 $Z = Y$ 与 $1_{Y}$，另一边用 $\\operatorname{Hom}(Z,-)$ 保满态射）✓。\n- 于是 $h_{f}$ 单（满）$\\iff$ $h_{f}^{\\sharp}$ 单（满），两头接起来即得 ✓。∎\n\n所以「谁是单的、谁是满的」在 $\\mathcal{C}$ 里和它在层范畴里问出来是同一个答案。这在后面起作用：Giraud 定理里把 $\\mathcal{C}$ 换成 $\\mathcal{T}$ 再配标准拓扑时，单满关系不会走样。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §3.3"
@@ -40635,7 +40666,7 @@
     "同调代数",
     "同伦范畴"
    ],
-   "statement": "**同伦范畴** $\\mathbf{K}(\\mathcal{C})$ 的对象与 $\\mathcal{C}(\\mathcal{C})$ 相同，态射取\n\n$$\\operatorname{Hom}_{\\mathbf{K}(\\mathcal{C})}(K, L) \\;:=\\; \\operatorname{Hom}_{\\mathcal{C}(\\mathcal{C})}(K, L) \\big/ \\{\\text{零伦态射}\\}$$\n\n其中的同构叫**同伦等价**；在 $\\mathbf{K}(\\mathcal{C})$ 中变成 $0$ 的复形叫**同伦平凡的**。",
+   "statement": "**同伦范畴** $\\mathbf{K}(\\mathcal{C})$ 的对象与 $\\mathcal{C}(\\mathcal{C})$ 相同，态射取\n\n$$\\operatorname{Hom}_{\\mathbf{K}(\\mathcal{C})}(K, L) \\;:=\\; \\operatorname{Hom}_{\\mathcal{C}(\\mathcal{C})}(K, L) \\big/\\ \\sim,$$\n其中 $\\sim$ 由**零同伦**的映射生成。\n\n其中的同构叫**同伦等价**；在 $\\mathbf{K}(\\mathcal{C})$ 中变成 $0$ 的复形叫**同伦平凡的**。",
    "notes": "等价的说法：$f : K \\to L$ 是同伦等价 $\\iff$ 存在 $g : L \\to K$ 使 $g \\circ f \\sim 1_{K}$、$f \\circ g \\sim 1_{L}$；$K$ 同伦平凡 $\\iff$ $1_{K} \\sim 0_{K}$。\n\n$\\mathbf{K}(\\mathcal{C})$ 是**加法范畴**，且 $\\mathcal{C}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C})$ 加法；任何加法函子 $F : \\mathcal{C} \\to \\mathcal{C}'$ 诱导 $\\mathbf{K}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C}')$。\n\n为什么要在同伦范畴里干活：同调函子在同伦下不变，所以**先商掉同伦，剩下的信息才是同调真正看得见的**。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.1"
@@ -41034,7 +41065,7 @@
     "内射对象",
     "正合"
    ],
-   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴，$I \\in \\mathcal{A}$。下列等价：\n\n1. $I$ 是**内射对象**；\n2. 每个单态射 $I \\rightarrowtail M$ 都有**收缩** $M \\to I$；\n3. 函子 $\\operatorname{Hom}_{\\mathcal{A}}(-, I)$ **正合**；\n4. 每个短正合列 $0 \\to I \\to M \\to M'' \\to 0$ 都**分裂**。\n\n进一步：若 $0 \\to M' \\to M \\to M'' \\to 0$ 正合且 $M'$ 内射，则\n\n$$M \\text{ 内射} \\iff M'' \\text{ 内射}$$",
+   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴，$I \\in \\mathcal{A}$。下列等价：\n\n1. $I$ 是**内射对象**；\n2. 每个单态射 $I \\rightarrowtail M$ 都有**收缩** $M \\to I$；\n3. 函子 $\\operatorname{Hom}_{\\mathcal{A}}(-, I)$ **正合**；\n4. 每个短正合列 $0 \\to I \\to M \\to M'' \\to 0$ 都**分裂**。\n\n进一步：若 $0 \\to M' \\to M \\to M'' \\to 0$ 正合且 $M'$ 内射，则\n\n$M$ **内射** $\\iff M\\prime\\prime$ **内射**",
    "notes": "证明用一张 $3 \\times 3$ 的 $\\operatorname{Hom}$ 图表：把短正合列 $0 \\to A \\to B \\to C \\to 0$ 用 $\\operatorname{Hom}(-, M)$ 家族拉成三行，用两次蛇引理读出中间一行 $0 \\to \\ker f \\to \\ker g \\to \\ker h \\to \\operatorname{coker} f \\to \\operatorname{coker} g \\to 0$，再看出第一行与第三行都是正合的，于是 $\\ker g = \\operatorname{coker} g = 0$。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.1–7.3"
@@ -42230,7 +42261,7 @@
     "指数对象",
     "余极限万有"
    ],
-   "statement": "在紧生成空间范畴上，函子\n\n$$X \\longmapsto k(X \\times Y) \\qquad \\text{左伴随于} \\qquad Z \\longmapsto kC(kY, Z).$$\n\n也就是说 $kC(kY, -)$ 是「乘 $Y$」的**右伴随**（$k(Y \\times -)$ 叫**指数对象** $Z^{Y}$）。",
+   "statement": "在紧生成空间范畴上，函子\n\n$$X \\longmapsto k(X \\times Y) \\qquad \\dashv \\qquad Z \\longmapsto kC(kY, Z).$$\n\n也就是说 $kC(kY, -)$ 是「乘 $Y$」的**右伴随**（$k(Y \\times -)$ 叫**指数对象** $Z^{Y}$）。",
    "notes": "**两个立刻的推论**：左伴随**保余极限**，所以 $X \\mapsto k(X \\times Y)$ 保紧生成空间的余极限；右伴随**保极限**，所以 $Z \\mapsto kC(kY,Z)$ 保极限。\n\n⭐ **余极限在 $k\\mathbf{Top}$ 里是万有的。** 因为「乘 $Y$」有右伴随，它与余极限交换，这正是余极限万有（把余极限沿任意态射拉回还是余极限）的条件。**这一点在 $\\mathbf{Top}$ 里不成立** —— 也是「非要在 $k\\mathbf{Top}$ 里做事」的又一条理由。\n\n**证明（伴随 = 自然双射）。** 要证的是**自然**双射\n$$\\operatorname{Hom}_{k\\mathbf{Top}}\\bigl(k(X\\times Y),\\ Z\\bigr) \\;\\cong\\; \\operatorname{Hom}_{k\\mathbf{Top}}\\bigl(X,\\ kC(kY, Z)\\bigr).$$\n- **左边**：$k$-化是余反射（含入 $i$ 有右伴随 $k$），故对紧生成的 $Z$ 有 $\\operatorname{Hom}_{k\\mathbf{Top}}(kA, Z) = \\operatorname{Hom}_{\\mathbf{Top}}(A, Z)$；取 $A = X\\times Y$ 得左边 $= \\operatorname{Hom}_{\\mathbf{Top}}(X\\times Y,\\ Z)$。\n- **右边**：同理 $\\operatorname{Hom}_{k\\mathbf{Top}}(X, kC(kY,Z)) = \\operatorname{Hom}_{\\mathbf{Top}}(X, C(kY,Z))$。\n- **中间的 currying**：集合层面永远有双射 $\\operatorname{Hom}_{\\mathbf{Top}}(X\\times Y, Z) \\cong \\operatorname{Hom}_{\\mathbf{Top}}(X, C(Y,Z))$（把 $f$ 送到 $x\\mapsto f(x,-)$）；拓扑层面，$Z$ 紧生成时「连续性可由紧 Hausdorff 块检验」，而 $kY$ 的紧块就是 $Y$ 的紧块，故 $C(Y,Z)$ 与 $C(kY,Z)$ 上的紧开拓扑一致。\n两条合起来给出自然双射，即 $k(X\\times Y) \\dashv kC(kY, -)$。∎\n**顺带的两个推论**（伴随的一般性质）：左伴随 $X\\mapsto k(X\\times Y)$ **保余极限**；右伴随 $Z\\mapsto kC(kY,Z)$ **保极限**。前者正是「$-\\times Y$ 在 $k\\mathbf{Top}$ 里保余极限」，也是上面「$\\mathrm{CGWH}$ 对积封闭」那条用的零件。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.3"
@@ -43034,7 +43065,7 @@
     "理想",
     "商环"
    ],
-   "statement": "设 $A$ 是环。子集 $I \\subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \\in A$、$x \\in I$ 有\n\n$$a x \\in I \\quad \\text{与} \\quad x a \\in I.$$\n\n（只要求 $a x \\in I$ 的叫**左理想**，只要求 $x a \\in I$ 的叫**右理想**；交换环里三者一致。）\n\n商集 $A/I$（按加法陪集）上的乘法 $(a + I)(b + I) := ab + I$ 良定义，得到的环叫**商环**。",
+   "statement": "设 $A$ 是环。子集 $I \\subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \\in A$、$x \\in I$ 有\n\n$$a x \\in I, \\qquad x a \\in I.$$\n\n（只要求 $a x \\in I$ 的叫**左理想**，只要求 $x a \\in I$ 的叫**右理想**；交换环里三者一致。）\n\n商集 $A/I$（按加法陪集）上的乘法 $(a + I)(b + I) := ab + I$ 良定义，得到的环叫**商环**。",
    "notes": "**为什么理想这样定义。** 与正规子群一模一样的问题：想在商集上定义乘法，就要让 $(a + I)(b + I)$ 与代表元无关。算一下 $(a + x)(b + y) = ab + ay + xb + xy$ —— 后面三项都得落在 $I$ 里。$xy \\in I$ 由「$I$ 是子群」保证不了，必须**额外要求**。\n\n⭐ **对照表**：群要商出**群**，商掉的是**正规子群**；环要商出**环**，商掉的是**理想**。（$I$ 作为加法子群当然自动正规 —— 加法群是阿贝尔群 —— 所以那一边不用另加条件。）\n\n**主理想** $(a) := \\{\\, xa : x \\in A \\,\\}$（交换环里就是 $a$ 的倍数全体）。$A/(a)$ 是「把 $a$ 当成 $0$」造出来的环；$\\mathbb{Z}/(n) = \\mathbb{Z}/n\\mathbb{Z}$ 就是模 $n$ 同余。",
    "refs": [
     "Lang, Algebra"
@@ -43201,7 +43232,7 @@
     "final",
     "余极限"
    ],
-   "statement": "设 $F : J \\to I$ 是函子。对 $i \\in I$，记 $i \\downarrow F$ 为逗号范畴，它的对象是 $\\{\\, f : i \\to F(j) \\,\\}$（$j \\in J$）。\n\n称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \\in I$：\n\n$$i \\downarrow F \\quad \\text{非空，且连通。}$$",
+   "statement": "设 $F : J \\to I$ 是函子。对 $i \\in I$，记 $i \\downarrow F$ 为逗号范畴，它的对象是 $\\{\\, f : i \\to F(j) \\,\\}$（$j \\in J$）。\n\n称 $F$ 是**共尾的**（cofinal，也写作 **final**），如果对每个 $i \\in I$：\n\n$i \\downarrow F$ **非空，且连通**。",
    "notes": "⭐ **直观**：$F$ 的像在 $I$ 里「到处都有、而且没有被隔开」。非空 = 每个 $i$ 都有一条路走到 $F$ 的像里；连通 = 不同的走法之间能互相转换。**满足这两条，$J$ 就在 $I$ 里「铺得足够满」**，沿着它算余极限与沿着整个 $I$ 算是一回事（见下一条）。\n\n**对偶**：把 $i \\downarrow F$ 换成**下**逗号范畴 $F \\downarrow i$（对象是 $\\{\\, f : F(j) \\to i \\,\\}$）得到的条件叫 **coinitial**，它保的是**极限**。\n\n**例子**：$J \\to \\mathbf{1}$ 共尾 $\\iff$ $J$ 连通；有向集沿 $\\le$ 的含入 $\\mathbb{N} \\to \\mathbb{Z}$ 是共尾的；$\\mathcal{C}$ 到它的反射子范畴的含入一般**不是**共尾的（方向反了就看 coinitial）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §1.3"
@@ -44448,7 +44479,7 @@
     "连续函子",
     "态射"
    ],
-   "statement": "设 $\\mathcal{C}, \\mathcal{C}'$ 是两个景。函子\n\n$$f^{-1} := g : \\mathcal{C} \\longrightarrow \\mathcal{C}'$$\n叫**连续的**，如果沿 $g$ 的预复合把 $\\mathcal{C}'$ 上的层拉回成 $\\mathcal{C}$ 上的层：\n\n$$g^{*} : \\widetilde{\\mathcal{C}'} \\longrightarrow \\widetilde{\\mathcal{C}}, \\qquad F \\longmapsto F \\circ g, \\qquad \\text{落在层范畴里。}$$",
+   "statement": "设 $\\mathcal{C}, \\mathcal{C}'$ 是两个景。函子\n\n$$f^{-1} := g : \\mathcal{C} \\longrightarrow \\mathcal{C}'$$\n叫**连续的**，如果沿 $g$ 的预复合把 $\\mathcal{C}'$ 上的层拉回成 $\\mathcal{C}$ 上的层：\n\n$$g^{*} : \\widetilde{\\mathcal{C}^{prime}} \\longrightarrow \\widetilde{\\mathcal{C}}, \\qquad F \\longmapsto F \\circ g$$\n（它把层送到层，所以限制在层范畴上。）",
    "notes": "**读法**：$g$ 的方向是 $\\mathcal{C} \\to \\mathcal{C}'$，但层是**反变**的，所以 $g$ 把 $\\mathcal{C}'$ 上的层**拉回**到 $\\mathcal{C}$ 上。这个「方向拧一下」是景态射的一切别扭之处。\n\n⭐ **它等价于**：$g$ 把 $\\mathcal{C}'$ 的覆盖族拉回成 $\\mathcal{C}$ 的覆盖族（覆盖筛的原像还是覆盖筛）。所以「连续」= 「覆盖关系被保住了」。\n\n**记号**：$f^{-1}$ 这个名字来自拓扑：空间之间的连续映射 $f : X \\to Y$ 给出开集范畴之间的函子 $f^{-1} : \\operatorname{Open}(Y) \\to \\operatorname{Open}(X)$（取原像），而层沿它拉回。\n\n📌 下一步：再加一条「$f^{-1}$ 是左正合的」，就得到 **景的态射**。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §3.3"
@@ -44698,7 +44729,7 @@
     "上确界",
     "下确界"
    ],
-   "statement": "把偏序集 $(P, \\preceq)$ 看作范畴（对象是元素，$x \\to y \\iff x \\preceq y$）。则对任何图 $D : I \\to P$：\n\n$$\\lim D = \\inf D \\;(\\text{下确界}), \\qquad \\varinjlim D = \\sup D \\;(\\text{上确界}),$$\n\n只要它们存在。",
+   "statement": "把偏序集 $(P, \\preceq)$ 看作范畴（对象是元素，$x \\to y \\iff x \\preceq y$）。则对任何图 $D : I \\to P$：\n\n$$\\lim D = \\inf D, \\qquad \\varinjlim D = \\sup D,$$\n即极限是**下确界**、余极限是**上确界**。\n\n只要它们存在。",
    "notes": "**证明。** 把偏序集看成范畴时，$\\operatorname{Hom}(x,y)$ 至多一个元素，「锥」$c \\to D$ 就退化成「$c \\preceq D(i)$ 对一切 $i$」，即 $c$ 是 $D$ 的一个**下界** ✓。\n- 泛锥 = 下界中**最大**的那一个 = $\\inf D$；「$\\lim D$ 存在」正好就是「$\\inf D$ 存在」✓。\n- 对偶地（把 $\\preceq$ 反向），余锥 = 上界，泛余锥 = 最小上界 = $\\sup D$ ✓。\n- 特例：单点图 $\\inf = \\sup = $ 该元素；空图给出终对象（最大元）与始对象（最小元）；两元素图给出积 $\\inf\\{x,y\\}$ 与余积 $\\sup\\{x,y\\}$；拉回、推出分别是下确界、上确界（因为相容条件自动满足）；而等化子：$f, g$ 若平行则 $f = g$（Hom 至多一个元素），此时等化子就是恒等 ✓。\n因此完备格 $=$ 有所有小极限的偏序集；有界格 $\\leftrightarrow$ 有有限极限与有限余极限 ✓。∎\n\n⭐ **这条把整套范畴语言翻译成序语言**，也是最好的入门例子：\n\n\n\n- **积** = 下确界 $\\inf\\{x, y\\}$；**余积** = 上确界 $\\sup\\{x, y\\}$；\n- **终对象** = 最大元；**始对象** = 最小元；\n- **拉回**（纤维积）= 两个元素的下确界；**推出** = 上确界；\n- **等化子**：因为 Hom 至多一个元素，平行的 $f, g$ 只有「相等」或「不平行」两种，所以等化子平凡。\n\n**由此立刻得到**：完备格 = 有所有小极限与小余极限的偏序集；$\\mathbb{Q}$ 作为偏序集**不**完备（$\\{q : q^{2} < 2\\}$ 没有上确界）—— 这与实数完备性那条是同一件事的两种说法。",
    "refs": [
     "Le Stum, Exercise 1.30"
@@ -45395,7 +45426,7 @@
     "内射消解",
     "求导"
    ],
-   "statement": "设 $F : \\mathcal{A} \\to \\mathcal{A}'$ 是**加法函子**、$\\mathcal{A}$ 有足够多内射对象。$F$ 的**右导出函子** $RF$ 是（在同构意义下唯一的）使下图交换的函子\n\n$$\\begin{array}{ccc} K^{+}(\\mathcal{A}) & \\xrightarrow{\\;F\\;} & K^{+}(\\mathcal{A}') \\\\[2pt] {\\scriptstyle \\text{换成内射复形}}\\big\\downarrow & & \\\\[2pt] K^{+}(\\mathcal{I}) & \\xrightarrow[\\;RF\\;]{} & \\end{array}$$",
+   "statement": "设 $F : \\mathcal{A} \\to \\mathcal{A}'$ 是**加法函子**、$\\mathcal{A}$ 有足够多内射对象。$F$ 的**右导出函子** $RF$ 是（在同构意义下唯一的）使下图交换的函子\n\n$$\\begin{array}{ccc} K^{+}(\\mathcal{A}) & \\xrightarrow{\\;F\\;} & K^{+}(\\mathcal{A}') \\\\[2pt] \\big\\downarrow & & \\\\[2pt] K^{+}(\\mathcal{I}) & \\xrightarrow[\\;RF\\;]{} & \\end{array}$$\n其中竖直箭头表示把对象**换成内射复形**（取内射消解）。",
    "notes": "**读法**：$F$ 本身不正合（所以不能把它直接送到导出范畴里），但**先把复形换成内射复形**、再作用 $F$、再回导出范畴，这一步就正合了 —— 那个复合就是 $RF$。\n\n**分量形式**：$R^{n}F(M) := H^{n}(RF(M))$，其中 $M$ 看成集中在 $0$ 次的复形。$R^{0}F = F$（对左正合函子），$R^{n}F = 0$（$n < 0$）。\n\n⭐ **动机**：$F$ 左正合时，短正合列 $0 \\to M' \\to M \\to M'' \\to 0$ 只给出 $0 \\to FM' \\to FM \\to FM''$ —— **右边断掉了**。右导出函子 $R^{1}F(M'')$ 正好补上那个断口，把长正合列接起来。\n\n**对偶**：左导出函子 $LF$ 用**投射**消解，补的是「右半段断掉」的情形（$M \\otimes_{A} -$、$\\operatorname{Tor}$）。",
    "refs": [
     "Le Stum, Definition 7.2.7"
@@ -46267,7 +46298,7 @@
     "拟分离",
     "紧 Hausdorff"
    ],
-   "statement": "1. 凝聚态集 $X$ 是**拟紧**的 $\\iff$ 存在**自由**紧 Hausdorff 空间 $F$ 与满态射\n\n$$F \\twoheadrightarrow X.$$\n\n2. 函子 $S \\mapsto \\underline{S}$（把紧 Hausdorff 空间看成它表示的凝聚态集）给出范畴等价\n\n$$\\mathbf{CHaus}\\ \\simeq\\ \\{\\text{紧 Hausdorff 空间}\\} \\longrightarrow \\{\\text{拟紧且拟分离的凝聚态集}\\}.$$",
+   "statement": "1. 凝聚态集 $X$ 是**拟紧**的 $\\iff$ 存在**自由**紧 Hausdorff 空间 $F$ 与满态射\n\n$$F \\twoheadrightarrow X.$$\n\n2. 函子 $S \\mapsto \\underline{S}$（把紧 Hausdorff 空间看成它表示的凝聚态集）给出范畴等价\n\n$$\\mathbf{CHaus}\\ \\simeq\\ \\mathrm{CHaus}\\ \\longrightarrow \\mathrm{CondSet}_{\\mathrm{qcqs}}.$$\n即：**紧 Hausdorff 空间**与**拟紧且拟分离的凝聚态集**等价。",
    "notes": "**这一条在说什么。** 凝聚态集是「用紧 Hausdorff 空间探测出来的层」。这条定理说：探测得最规整的那批对象（拟紧拟分离 的），**原来就是探测者自己**。于是「紧 Hausdorff 空间」这个范畴可以**原封不动**地坐进 $\\mathrm{Cond}$ 里，作为它的「紧块部分」。\n\n**第 1 条为什么用「自由」的 $F$。** 「拟紧」的一般定义是「任何覆盖都有有限子覆盖」，这是纯逻辑条件。这条把它换成了一个**几何**条件：能从一个（无限可能是很大的）自由紧 Hausdorff 块**满射**过来。于是拟紧变成了「可以被一个紧 Hausdorff 块盖住」。\n\n**「自由」的含义**：$\\mathbb{Z}[S]$ 那类由点集生成、不带额外关系的东西 —— 装得上就是「有足够多的点去盖」。\n\n⭐ 一般拓扑斯上的对应结论是「拟紧拟分离 对象 $\\cong$ 紧 Hausdorff 对象」，这里做的是 $\\mathrm{Cond}$ 这个特例。\n\n**证明（两条都是一般拓扑斯上的定理在 $\\mathrm{Cond}$ 上的特例）。**\n- **第 1 条**：「拟紧」在拓扑斯里的等价刻画是「存在从**投射 / 自由**对象的满射」—— 反向显然（满射 $F \\twoheadrightarrow X$ 给出一个覆盖，用 $F$ 的参数化把有限子覆盖抽出来，因为自由对象 $F = \\beta I$ 是「由点集生成」的，有限性是逐点的）；正向用 $\\mathbf{FCHaus}$ 张成 $\\mathbf{CHaus}$ 再把覆盖的参数压进一个自由对象。\n- **第 2 条**：拟紧拟分离 的对象由「它到各紧 Hausdorff 块的值」决定，而 $\\mathrm{Cond}$ 里紧 Hausdorff 空间 $S$ 表示的层 $\\underline{S} = h_{S}$ 正是 拟紧拟分离 的（拟紧 由 $S \\to S$ 本身给出；qs 由「紧 Hausdorff 的两块相交还是紧 Hausdorff」给出）。于是 $S \\mapsto \\underline{S}$ 全忠实；本质满则是上一条与拟分离的刻画拼起来。∎",
    "refs": [
     "Le Stum, Theorem 4.2.8"
@@ -47822,7 +47853,7 @@
     "极限",
     "余极限"
    ],
-   "statement": "$\\mathrm{Cond}$ 有所有（小）极限与余极限。**极限逐点计算**：对每个紧 Hausdorff 空间 $S$，\n\n$$\\Bigl(\\varprojlim_{i} X_{i}\\Bigr)(S) = \\varprojlim_{i} X_{i}(S).$$\n\n**余极限不能这样算** —— 它是「先在预层里逐点取余极限、再**层化**」：\n\n$$\\Bigl(\\varinjlim_{i} X_{i}\\Bigr)(S) = \\Bigl(\\text{层化}\\bigl(S' \\mapsto \\varinjlim_{i} X_{i}(S')\\bigr)\\Bigr)(S).$$",
+   "statement": "$\\mathrm{Cond}$ 有所有（小）极限与余极限。**极限逐点计算**：对每个紧 Hausdorff 空间 $S$，\n\n$$\\Bigl(\\varprojlim_{i} X_{i}\\Bigr)(S) = \\varprojlim_{i} X_{i}(S).$$\n\n**余极限不能这样算** —— 它是「先在预层里逐点取余极限、再**层化**」：\n\n$$\\Bigl(\\varinjlim_{i} X_{i}\\Bigr)(S) = \\Bigl(\\operatorname{sh}\\bigl(S^{prime} \\mapsto \\varinjlim_{i} X_{i}(S^{prime})\\bigr)\\Bigr)(S).$$",
    "notes": "**证明极限那一半。** 层范畴 $\\mathrm{Cond}$ 是预层范畴 $\\widehat{\\mathbf{CHaus}}$ 的**反射**满子范畴，含入函子 $i$ 有左伴随（层化）。右伴随保极限，所以 $i$ 保极限：$\\mathrm{Cond}$ 里的极限就是预层里的极限；而预层里的极限是**逐点**算的。∎\n**余极限为什么不行。** 层化只是 $i$ 的**左**伴随，它不保余极限，所以余极限要先在预层里逐点取、再层化一次。\n**一个具体的反例。** 取紧 Hausdorff 的满射 $F \\twoheadrightarrow S$，例如 $S = S^{1}$、$F = S^{1}$、$z \\mapsto z^{2}$。在 $\\mathrm{Cond}$ 里，满射是**有效满**，所以\n$$\\operatorname{coeq}\\bigl(F \\times_{S} F \\rightrightarrows F\\bigr) = h_{S};$$\n但**逐点**看 $T = S^{1}$：$F \\times_{S} F = S^{1} \\times \\{\\pm 1\\}$，两个投影在 $\\mathrm{Hom}(S^{1}, F) = \\mathrm{Hom}(S^{1}, S^{1})$ 上就是 $g \\mapsto g$ 与 $g \\mapsto -g$，于是逐点余等化子把 $\\mathrm{id}$ 与 $-\\mathrm{id}$ 粘了起来，是 $\\mathrm{Hom}(S^{1}, S^{1})$ 的一个**真商**；而 $h_{S}(S^{1}) = \\mathrm{Hom}(S^{1}, S^{1})$ 里这两个元素并不相等。两者不同，故余极限不是逐点算的。\n\n**「逐点」是什么意思**：要算一个凝聚态集，就得知道它在每个 $S$ 上取什么值。极限可以一路拆到每个 $S$ 上算；余极限不行，多一步层化。\n\n⭐ **这条是后面所有计算的技术基础**：凡是遇到 $\\mathrm{Cond}$ 里的极限，都可以拆到每个 $S$ 上去算，而集合的极限是好算的。\n\n⚠️ **有限余积是例外**（它是逐点的）：$h_{S_{1}} \\coprod h_{S_{2}} = h_{S_{1} \\coprod S_{2}}$ —— 因为 $\\coprod$ 正是预标准拓扑的覆盖，「有限余积变有限积」那条层条件直接给出它。",
    "refs": [
     "Le Stum, Corollary 4.1.6",
@@ -48367,7 +48398,7 @@
     "零对象",
     "预加性"
    ],
-   "statement": "设 $\\mathcal{C}$ 是**预加性范畴**，$M \\in \\mathcal{C}$。则\n\n$$M \\text{ 是零对象} \\iff M \\text{ 是终对象} \\iff M \\text{ 是始对象}.$$",
+   "statement": "设 $\\mathcal{C}$ 是**预加性范畴**，$M \\in \\mathcal{C}$。则\n\n$M$ **是零对象** $\\iff$ $M$ **是终对象** $\\iff$ $M$ **是始对象**",
    "notes": "**证明。** 预加性给每个 $\\operatorname{Hom}(X,Y)$ 一个阿贝尔群结构，且复合**双线性** —— 于是**零态射**永远存在（它就是群的单位元），并且由双线性把 $0 + h = h$ 展开得\n$$0_{Y,Z}\\circ h = 0_{X,Z}, \\qquad f\\circ 0_{X,Y} = 0_{X,Z} ✓$$\n**终对象 $\\implies$ 零对象**：$M$ 终对象时 $\\operatorname{End}(M) = \\{1_{M}\\}$ 只有一个元素；而它是阿贝尔群，群里的唯一元素必是单位元，故 $1_{M} = 0_{M}$ ✓。\n**零对象 $\\implies$ 终对象**：设 $1_{M} = 0_{M}$。任给 $X$ 与 $f, g : X \\to M$，由双线性\n$$f = 1_{M}\\circ f = 0_{M}\\circ f = 0_{X,M}, \\qquad g = 0_{X,M},$$\n故 $f = g$：$\\operatorname{Hom}(X,M)$ 至多一个元素，而它非空（有零态射），所以 $M$ 是终对象 ✓。\n**始对象**：把整个论证搬到 $\\mathcal{C}^{\\mathrm{op}}$ 即可 ✓。∎\n\n⭐ 于是「零对象」有两条等价说法：$\\operatorname{End}(M) = 1$（$1_{M} = 0_{M}$），以及「既是终对象又是始对象」—— 在预加性范畴里它们完全等价，可以随意挑方便的那条用。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.1"
@@ -48410,7 +48441,7 @@
     "直和",
     "积"
    ],
-   "statement": "设 $\\mathcal{C}$ 是预加性范畴，$M, M_{1}, M_{2} \\in \\mathcal{C}$。\n\n$$M \\text{ 是} M_{1}, M_{2} \\text{ 的直和} \\iff (M, p_{1}, p_{2}) \\text{ 是} M_{1}, M_{2} \\text{ 的积} \\iff (M, i_{1}, i_{2}) \\text{ 是余积},$$\n\n其中「直和」指存在 $p_{k} : M \\to M_{k}$、$i_{k} : M_{k} \\to M$ 使\n\n$$p_{1}i_{1} = 1_{M_{1}}, \\qquad p_{2}i_{2} = 1_{M_{2}}, \\qquad i_{1}p_{1} + i_{2}p_{2} = 1_{M}.$$",
+   "statement": "设 $\\mathcal{C}$ 是预加性范畴，$M, M_{1}, M_{2} \\in \\mathcal{C}$。\n\n$M$ **是 $M_{1}, M_{2}$ 的直和** $\\iff$ $(M, p_{1}, p_{2})$ **是 $M_{1}, M_{2}$ 的积**\n\n其中「直和」指存在 $p_{k} : M \\to M_{k}$、$i_{k} : M_{k} \\to M$ 使\n\n$$p_{1}i_{1} = 1_{M_{1}}, \\qquad p_{2}i_{2} = 1_{M_{2}}, \\qquad i_{1}p_{1} + i_{2}p_{2} = 1_{M}.$$",
    "notes": "**证明。** **① 先推出正交性。** 把 $i_{1}p_{1} + i_{2}p_{2} = 1_{M}$ 夹在 $p_{1}$ 与 $i_{2}$ 之间：\n$$p_{1}i_{2} = p_{1}(i_{1}p_{1} + i_{2}p_{2})i_{2} = (p_{1}i_{1})(p_{1}i_{2}) + (p_{1}i_{2})(p_{2}i_{2}) = p_{1}i_{2} + p_{1}i_{2},$$\n两边在阿贝尔群 $\\operatorname{Hom}(M_{2},M_{1})$ 里减去 $p_{1}i_{2}$，得 $p_{1}i_{2} = 0$ ✓；对称地 $p_{2}i_{1} = 0$。合起来就是 $p_{k}i_{l} = \\delta_{kl}$ ✓。\n**② 直和 $\\implies$ 是积。** 给 $f_{k} : X \\to M_{k}$，令 $f := i_{1}f_{1} + i_{2}f_{2}$。由 ① 得 $p_{k}f = f_{k}$ ✓。唯一性：若 $h$ 也满足 $p_{k}h = f_{k}$，则\n$$h = 1_{M}\\,h = (i_{1}p_{1} + i_{2}p_{2})h = i_{1}f_{1} + i_{2}f_{2} = f ✓$$\n故 $(M,p_{1},p_{2})$ 是积 ✓。\n**③ 是积 $\\implies$ 直和。** 设 $(M,p_{1},p_{2})$ 是积。由积的泛性取**唯一**的 $i_{k} : M_{k} \\to M$ 使 $p_{l}i_{k} = \\delta_{lk}$，于是 $p_{k}i_{k} = 1_{M_{k}}$ ✓；又 $i_{1}p_{1} + i_{2}p_{2}$ 与 $1_{M}$ 的两个投影都是 $p_{l}$，由积的唯一性两者相等 ✓。\n**④ 余积。** 把 ② ③ 搬到 $\\mathcal{C}^{\\mathrm{op}}$（积与余积互换、$i$ 与 $p$ 互换）即得 ✓。∎\n⭐ 这就是**双积**（biproduct）这个名字的来历：积与余积在预加性范畴里重合，所以直和只需要谈一个对象。\n\n**为什么加法范畴一定要有双积**：正因为两者重合，才可以把「加」（$f + g$）与「余积的含入」写在同一套符号里 —— 这是整个同调代数记号的地基。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.1"
@@ -48494,7 +48525,7 @@
     "加法函子",
     "双积"
    ],
-   "statement": "设 $\\mathcal{C}, \\mathcal{D}$ 是加法范畴，$F : \\mathcal{C} \\to \\mathcal{D}$ 是函子。则三者等价：\n\n$$F \\text{ 加法} \\iff F \\text{ 保零对象与所有直和} \\iff F \\text{ 保所有有限积} \\iff F \\text{ 保所有有限余积}.$$",
+   "statement": "设 $\\mathcal{C}, \\mathcal{D}$ 是加法范畴，$F : \\mathcal{C} \\to \\mathcal{D}$ 是函子。则三者等价：\n\n$F$ **加法** $\\iff$ $F$ **保零对象与所有直和** $\\iff$ $F$ **保所有有限积** $\\iff$ $F$ **保所有有限余积**",
    "notes": "**证明。** **① 加法 $\\implies$ 保双积。** $F$ 加法意味着每个 $\\operatorname{Hom}(M,N) \\to \\operatorname{Hom}(FM,FN)$ 是群同态。若 $M$ 是 $M_{1},M_{2}$ 的双积，$F$ 把三条等式送到\n$$F(p_{k})F(i_{k}) = 1, \\qquad F(i_{1})F(p_{1}) + F(i_{2})F(p_{2}) = 1_{F(M)},$$\n这正是「$F(M)$ 是 $F(M_{1}), F(M_{2})$ 的双积」的定义 ✓；有限多支同理。零对象：$1_{F(0)} = F(1_{0}) = F(0_{0}) = 0_{F(0)}$（群同态把零元送到零元），故 $F(0)$ 是零对象 ✓。\n**② 保双积与零对象 $\\implies$ 加法。** 用上面的关键公式 $f + g = \\nabla_{N}(f\\oplus g)\\Delta_{M}$。$F$ 保积、保余积，故 $F(\\Delta_{M}) = \\Delta_{FM}$、$F(\\nabla_{N}) = \\nabla_{FN}$（这三个映射都由「与投影 / 含入复合是什么」唯一刻画，而 $F$ 保投影与含入），且 $F(f \\oplus g) = Ff \\oplus Fg$（由四角刻画同样唯一）。于是\n$$F(f+g) = F(\\nabla_{N})F(f\\oplus g)F(\\Delta_{M}) = \\nabla_{FN}(Ff\\oplus Fg)\\Delta_{FM} = Ff + Fg ✓$$\n故 $\\operatorname{Hom}(M,N) \\to \\operatorname{Hom}(FM,FN)$ 保加法；它当然保零，所以是群同态，即 $F$ 加法 ✓。\n**③ 有限积 / 有限余积**：加法范畴里有限积、有限余积、直和三者重合（见「直和就是积」），所以三个条件说的是同一件事；空积是终对象、空余积是始对象，都是零对象 ✓。∎\n\n⭐ 实用价值：验一个函子加法，只需验它**保双积**，不必去碰 $\\operatorname{Hom}$ 上的群结构。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.1"
@@ -48660,7 +48691,7 @@
     "截面",
     "同伦"
    ],
-   "statement": "设 $\\mathcal{T}$ 是拓扑斯，$X_{0} \\xrightarrow{\\ p\\ } X$ 是态射且**有截面** $s$（$p s = 1_{X}$）。记\n\n$$X_{n} := X_{0} \\times_{X} \\cdots \\times_{X} X_{0} \\quad (n+1 \\text{ 个因子}),$$\n\n则对 $\\mathcal{T}$ 中任何阿贝尔群 $M$，增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((X_{0} \\to X)^{+}, M\\bigr)$ 是**同伦平凡**的；特别地\n\n$$\\check{H}^{n}\\bigl((X_{0} \\to X),\\ M\\bigr) = 0 \\qquad (n > 0).$$\n\n同伦的形状是 $f \\mapsto f \\circ s^{n}$，其中 $s^{n} : X_{n} \\to X_{n+1}$。",
+   "statement": "设 $\\mathcal{T}$ 是拓扑斯，$X_{0} \\xrightarrow{\\ p\\ } X$ 是态射且**有截面** $s$（$p s = 1_{X}$）。记\n\n$$X_{n} := X_{0} \\times_{X} \\cdots \\times_{X} X_{0},$$\n（共 $n+1$ 个因子。）\n\n则对 $\\mathcal{T}$ 中任何阿贝尔群 $M$，增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((X_{0} \\to X)^{+}, M\\bigr)$ 是**同伦平凡**的；特别地\n\n$$\\check{H}^{n}\\bigl((X_{0} \\to X),\\ M\\bigr) = 0 \\qquad (n > 0).$$\n\n同伦的形状是 $f \\mapsto f \\circ s^{n}$，其中 $s^{n} : X_{n} \\to X_{n+1}$。",
    "notes": "**证明。** 对每个 $n \\ge -1$ 取\n$$s^{n} := s \\times_{X} 1_{X_{n}} : X_{n} \\longrightarrow X_{n+1}$$\n（$n = -1$ 时它就是 $s$ 本身）。这是「沿截面把次数提高一格」的那一族映射，满足收缩同伦的恒等式\n$$1_{X_{n}} = s^{n+1} d_{n} + d_{n+1} s^{n}, \\qquad d_{n} := \\sum_{i=0}^{n}(-1)^{i} d^{n}_{i}$$\n（把两边逐项展开成各面映射 $d^{n}_{i}$ 的复合即可验证）✓。把 $s^{n}$ 线性延拓到自由对象上，同一恒等式说明 $\\mathbb{Z}\\cdot X^{+}_{\\bullet}$ 上的恒等映射**同伦于 0** —— 即这个复形同伦平凡 ✓。\n而 $\\check{C}^{\\bullet} = \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}\\cdot X^{+}_{\\bullet},\\ M\\bigr)$，Hom 函子把同伦 $(s^{n})$ 送到同伦 $(\\operatorname{Hom}(s^{n}, M))$，故 Čech 复形也同伦平凡，正次数上同调为零 ✓。∎\n\n⭐ **有截面 $\\implies$ 没有高次 Čech 上同调**。于是覆盖族里只要有一支映射带截面，整族的 Čech 复形就收缩掉 —— 「同构映射」「有限不交覆盖」这些情形全部自动零调。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.3"
@@ -49477,7 +49508,7 @@
     "闭映射",
     "邻域基"
    ],
-   "statement": "设 $\\pi : Y \\to X$ 是**闭**连续映射，$A \\subseteq X$。则「$A$ 的邻域的原像」\n\n$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\text{ 是 } A \\text{ 在 } X \\text{ 中的邻域} \\,\\bigr\\}$$\n\n构成 $\\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。",
+   "statement": "设 $\\pi : Y \\to X$ 是**闭**连续映射，$A \\subseteq X$。则「$A$ 的邻域的原像」\n\n$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\\pi^{-1}(U)$ 全体是\n\n$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\in \\mathcal{N}_{X}(A) \\,$$\n\n构成 $\\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。",
    "notes": "**证明。** 设 $V \\subseteq Y$ 是 $\\pi^{-1}(A)$ 的开邻域。取\n$$U := X \\setminus \\pi(Y \\setminus V).$$\n$\\pi$ **闭**说明 $\\pi(Y\\setminus V)$ 闭，故 $U$ 是开集 ✓。逐条验：\n- **$A \\subseteq U$**：若 $a \\in A$，则 $\\pi^{-1}(a) \\subseteq \\pi^{-1}(A) \\subseteq V$，故 $\\pi^{-1}(a) \\cap (Y\\setminus V) = \\emptyset$，即 $a \\notin \\pi(Y\\setminus V)$，于是 $a \\in U$ ✓；\n- **$\\pi^{-1}(U) \\subseteq V$**：若 $y \\in \\pi^{-1}(U)$，则 $\\pi(y) \\notin \\pi(Y\\setminus V)$，特别地 $y \\notin Y \\setminus V$，即 $y \\in V$ ✓。\n于是每个 $\\pi^{-1}(A)$ 的开邻域 $V$ 都含着一个形如 $\\pi^{-1}(U)$ 的邻域，即这一族构成邻域基 ✓。∎\n\n⭐ 一句话：**闭映射把「$A$ 的邻域」原样搬成「$\\pi^{-1}(A)$ 的邻域」**。这条在构造延拓时用来把「局部定义域」从 $X$ 抬到 $Y$ 而不丢失信息（延拓定理证明里的标准一步）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §8.3"
@@ -49811,7 +49842,7 @@
     "闭开集",
     "加细"
    ],
-   "statement": "设 $S$ 是 **Stone** 空间。则 $S$ 的**任何开覆盖都有有限的、两两不交的闭开加细**：存在有限族 $(C_{r})_{r \\le m}$ 使\n\n$$C_{r} \\text{ 闭开}, \\qquad C_{r} \\cap C_{s} = \\emptyset \\ (r \\ne s), \\qquad \\bigsqcup_{r} C_{r} = S,$$\n\n且每个 $C_{r}$ 都含在覆盖的某一支之中。",
+   "statement": "设 $S$ 是 **Stone** 空间。则 $S$ 的**任何开覆盖都有有限的、两两不交的闭开加细**：存在有限族 $(C_{r})_{r \\le m}$ 使\n\n- 每个 $C_{r}$ **闭开**；\n- $r \\ne s$ 时 $C_{r} \\cap C_{s} = \\emptyset$；\n- $\\bigsqcup_{r} C_{r} = S$。\n\n且每个 $C_{r}$ 都含在覆盖的某一支之中。",
    "notes": "**证明。** Stone 空间就是**投射有限**空间：$S = \\varprojlim_{i \\in I} S_{i}$，每个 $S_{i}$ 有限离散、转移映射满 ✓。于是\n$$\\bigl\\{\\, \\pi_{i}^{-1}(x) \\;:\\; i \\in I,\\ x \\in S_{i} \\,\\bigr\\}$$\n是 $S$ 的一组**闭开**集基，而且对 $i \\le j$ 有嵌套（$\\pi_{j}$ 的纤维含在 $\\pi_{i}$ 的纤维里）✓。\n**① 先取有限闭开子覆盖。** 给定开覆盖 $(U_{\\alpha})$：对每个 $s \\in S$ 取 $i(s)$ 与 $x := \\pi_{i(s)}(s)$，使\n$$D_{s} := \\pi_{i(s)}^{-1}(x) \\subseteq U_{\\alpha(s)}$$\n（用基的闭开性，取直径足够细的那一层）✓。$\\{D_{s}\\}$ 是开覆盖，而 $S$ **紧** $\\implies$ 抽出有限子覆盖 $D_{1}, \\ldots, D_{m}$ ✓。\n**② 再两两不交化。** 记 $D^{1}_{j} := D_{j}$、$D^{0}_{j} := S \\setminus D_{j}$，对每个 $\\varepsilon \\in \\{0,1\\}^{m}$ 取\n$$C_{\\varepsilon} := D^{\\varepsilon_{1}}_{1} \\cap \\cdots \\cap D^{\\varepsilon_{m}}_{m}.$$\n每个 $C_{\\varepsilon}$ 是闭开的（有限交、补）✓；不同 $\\varepsilon$ 的 $C_{\\varepsilon}$ **两两不交** ✓；它们**并为** $S$（每点属于唯一一个 $C_{\\varepsilon}$）✓。去掉空集，得到有限族 $(C_{r})$。\n**③ 每块含在某一支里。** 若 $C_{\\varepsilon} \\ne \\emptyset$，取 $s \\in C_{\\varepsilon}$；由 $\\{D_{j}\\}$ 覆盖 $S$，有 $j$ 使 $s \\in D_{j}$ —— 而 $s \\in D_{j}$ 说明 $\\varepsilon_{j} = 1$，于是\n$$C_{\\varepsilon} \\subseteq D_{j} \\subseteq U_{\\alpha(j)} ✓$$\n∎\n\n⭐ 用途：它把「开覆盖」换成「**有限不交闭开分划**」，于是可以**逐块定义、逐块拼起来**。§8.2 里「Stone 空间上 $C(S, M^{\\mathrm{disc}})$ 在 $C(S, M)$ 中稠密」用的就是这一条：在每一块上取一个常值，拼成局部常值函数。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.2"
@@ -49893,7 +49924,7 @@
     "左正合",
     "加法函子"
    ],
-   "statement": "设 $\\mathcal{C}, \\mathcal{D}$ 是阿贝尔范畴，$F : \\mathcal{C} \\to \\mathcal{D}$ 是函子。则\n\n$$F \\text{ 左正合} \\iff F \\text{ 加法，且把左正合列送到左正合列}.$$\n\n对偶地：$F$ 右正合 $\\iff$ $F$ 加法，且把右正合列送到右正合列。",
+   "statement": "设 $\\mathcal{C}, \\mathcal{D}$ 是阿贝尔范畴，$F : \\mathcal{C} \\to \\mathcal{D}$ 是函子。则\n\n$F$ **左正合** $\\iff$ $F$ **加法，且把左正合列送到左正合列**\n\n对偶地：$F$ 右正合 $\\iff$ $F$ 加法，且把右正合列送到右正合列。",
    "notes": "**证明。**\n**$(\\Longrightarrow)$** 左正合就是**保有限极限** ✓。保有限极限当然保有限积与核，于是：$F$ 保双积 $\\implies$ $F$ 加法（见「加法函子的刻画」）✓；而左正合列 $0 \\to M' \\to M \\to M''$ 本身就是一个有限极限图表，被 $F$ 送到同样的图表，即仍是左正合列 ✓。\n**$(\\Longleftarrow)$** 设 $F$ 加法且保左正合列。由「保有限积 + 保核 $\\implies$ 保所有有限极限」，只需证这两条 ✓：\n- **保核**：$0 \\to \\ker f \\xrightarrow{\\ i\\ } M \\xrightarrow{\\ f\\ } N$ 是左正合列 ✓，被送到左正合列 $0 \\to F(\\ker f) \\xrightarrow{\\ Fi\\ } FM \\xrightarrow{\\ Ff\\ } FN$，这正是 $F(\\ker f) \\cong \\ker(Ff)$ ✓；\n- **保有限积**：$0 \\to M \\xrightarrow{\\ i_{1}\\ } M \\oplus N \\xrightarrow{\\ p_{2}\\ } N$ 也是左正合列（$i_{1}$ 单、$\\operatorname{im}i_{1} = \\ker p_{2}$）✓，被送到左正合列 $0 \\to FM \\to F(M\\oplus N) \\to FN$；而 $F$ **加法**说明 $F$ 保双积、$Fi_{1}$ 就是第一个含入 ✓，于是 $F(M \\oplus N)$ 连同 $Fi_{1}, Fi_{2}$ 满足直和的三条等式（见「直和就是积」），即 $F(M\\oplus N) \\cong FM \\oplus FN$ ✓。\n两条合起来：$F$ 保有限积与核，从而保所有有限极限，即左正合 ✓。∎\n\n⭐ 这条把「左正合」拆成两件**逐项可查**的事：**加法**（看双积）与**保左正合列**（看具体的列）。实际验证函子左正合时用的就是这两把尺子。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.2"
@@ -49934,7 +49965,7 @@
     "左正合",
     "内射消解"
    ],
-   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴（有足够多内射）、$\\mathcal{A}'$ 是阿贝尔范畴，$F : \\mathcal{A} \\to \\mathcal{A}'$ 是**加法**函子。则\n\n$$F \\text{ 左正合} \\iff \\forall M \\in \\mathcal{A}:\\ R^{0}F(M) \\cong F(M).$$\n\n对偶地（有足够多投射时）：$F$ 右正合 $\\iff L_{0}F \\cong F$。",
+   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴（有足够多内射）、$\\mathcal{A}'$ 是阿贝尔范畴，$F : \\mathcal{A} \\to \\mathcal{A}'$ 是**加法**函子。则\n\n$F$ **左正合** $\\iff$ 对每个 $M \\in \\mathcal{A}$ 都有 $R^{0}F(M) \\cong F(M)$。\n\n对偶地（有足够多投射时）：$F$ 右正合 $\\iff L_{0}F \\cong F$。",
    "notes": "**证明。**\n**$(\\Longrightarrow)$** 取 $M$ 的一条内射消解 $0 \\to M \\xrightarrow{\\ \\varepsilon\\ } I^{0} \\xrightarrow{\\ d^{0}\\ } I^{1} \\to \\cdots$ ✓。$F$ **左正合**，所以它把上半段正合列送到正合列\n$$0 \\longrightarrow FM \\xrightarrow{\\ F\\varepsilon\\ } FI^{0} \\xrightarrow{\\ Fd^{0}\\ } FI^{1} ✓$$\n于是由 $R^{0}F(M) = H^{0}(FI^{\\bullet})$ 的定义\n$$R^{0}F(M) = \\ker(Fd^{0}) = \\operatorname{im}(F\\varepsilon) \\cong FM ✓$$\n**$(\\Longleftarrow)$** 设 $R^{0}F \\cong F$。短正合列 $0 \\to M' \\to M \\to M'' \\to 0$ 的长正合列开头是\n$$0 \\to R^{0}F(M') \\to R^{0}F(M) \\to R^{0}F(M'') \\to R^{1}F(M') \\to \\cdots$$\n用 $R^{0}F \\cong F$ 换掉前三项，得到 $0 \\to FM' \\to FM \\to FM''$ **正合** ✓，即 $F$ 左正合 ✓。∎\n\n⭐ 一句话：**左正合性可以只用 $0$ 次导出函子来检验**。反过来，这也解释了为什么「$R^{0}F = F$」在导出函子的记号里被当成左正合的默认性质。\n\n⚠️ 前提「$F$ 加法」不能省：非加法函子的导出函子没有意义（导出函子是在加法范畴的复形上定义的）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.2"
@@ -50475,7 +50506,7 @@
     "左伴随",
     "Z[X]"
    ],
-   "statement": "设 $\\mathcal{T}$ 是拓扑斯。遗忘函子\n\n$$\\mathcal{T}(\\mathbf{Ab}) \\longrightarrow \\mathcal{T}$$\n\n（把阿贝尔层忘成底集合层）有**左伴随**，记作\n\n$$\\mathbb{Z}\\cdot(-) : \\mathcal{T} \\longrightarrow \\mathcal{T}(\\mathbf{Ab}), \\qquad X \\longmapsto \\mathbb{Z}\\cdot X \\quad (\\text{也记 } \\mathbb{Z}[X]),$$\n\n它由**万有性质**刻画：对 $X \\in \\mathcal{T}$ 与 $M \\in \\mathcal{T}(\\mathbf{Ab})$，\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}\\cdot X,\\ M\\bigr) \\;\\cong\\; \\operatorname{Hom}_{\\mathcal{T}}(X,\\ M) = M(X).$$",
+   "statement": "设 $\\mathcal{T}$ 是拓扑斯。遗忘函子\n\n$$\\mathcal{T}(\\mathbf{Ab}) \\longrightarrow \\mathcal{T}$$\n\n（把阿贝尔层忘成底集合层）有**左伴随**，记作\n\n$$\\mathbb{Z}\\cdot(-) : \\mathcal{T} \\longrightarrow \\mathcal{T}(\\mathbf{Ab}), \\qquad X \\longmapsto \\mathbb{Z}\\cdot X,$$\n后者也记作 $\\mathbb{Z}[X]$。\n\n它由**万有性质**刻画：对 $X \\in \\mathcal{T}$ 与 $M \\in \\mathcal{T}(\\mathbf{Ab})$，\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}\\cdot X,\\ M\\bigr) \\;\\cong\\; \\operatorname{Hom}_{\\mathcal{T}}(X,\\ M) = M(X).$$",
    "notes": "**怎么造。** 先逐点自由化、再层化：把 $X$ 看成预层，取预层 $U \\mapsto \\mathbb{Z}\\cdot X(U)$（逐点自由阿贝尔群），再层化：\n\n$$\\mathbb{Z}\\cdot X \\;:=\\; \\bigl(U \\mapsto \\mathbb{Z}\\cdot X(U)\\bigr)^{\\#}.$$\n\n**为什么这就对。** 预层那一层是逐点的：函子范畴里的伴随逐点造，而 $\\mathbf{Ab} \\to \\mathbf{Set}$ 的遗忘函子有左伴随 $E \\mapsto \\mathbb{Z}\\cdot E$（自由阿贝尔群）✓，于是 $\\widehat{\\mathcal{C}}(\\mathbf{Ab}) \\to \\widehat{\\mathcal{C}}$ 的左伴随即逐点自由 ✓。到层这一层，用「层化 $\\dashv$ 含入」把伴随传下去 ✓：\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}\\cdot X,\\ M\\bigr) = \\operatorname{Hom}_{\\widehat{\\mathcal{C}}(\\mathbf{Ab})}\\bigl(\\mathbb{Z}\\cdot X,\\ M\\bigr) \\cong \\operatorname{Hom}_{\\widehat{\\mathcal{C}}}(X,\\ M) = M(X) ✓$$\n\n（$M$ 本身是层，所以在预层那边的 Hom 与层这边的 Hom 一样）。∎\n\n⭐ **用处**：$\\mathbb{Z}\\cdot X$ 是「把一个空间/层当自由生成元看」的装置。Čech 复形就是 $\\check{C}^{\\bullet}(X, M) = \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot X_{\\bullet}, M)$；层上同调则是 $H^{n}(X, M) = \\operatorname{Ext}^{n}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot X, M)$ ✓。\n\n⚠️ **一般不是逐点算的**：层化会改动取值，「逐点自由再层化」与「自由」只有在层条件不碍事的时候才重合。\n\n📌 例：$\\mathbb{Z}\\cdot \\mathbf{1} \\cong \\mathbb{Z}$（常层）；$\\mathbb{Z}\\cdot X$ 永远是**投射**对象的候选（它是自由的）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 5.18, Exercise 5.24"
@@ -50684,7 +50715,7 @@
     "截面",
     "拓扑斯"
    ],
-   "statement": "设 $X$ 是拓扑空间、$Y \\to X$ 是凝聚态集之间的态射（即 $Y \\in \\mathrm{Cond}/X$）。则预层\n\n$$U \\;\\longmapsto\\; Y(U) := \\operatorname{Hom}_{/X}\\bigl(\\underline{U},\\ Y\\bigr) \\qquad (U \\subseteq X \\text{ 开})$$\n\n是 $X$ 上的一个**层**。",
+   "statement": "设 $X$ 是拓扑空间、$Y \\to X$ 是凝聚态集之间的态射（即 $Y \\in \\mathrm{Cond}/X$）。则预层\n\n$$U \\;\\longmapsto\\; Y(U) := \\operatorname{Hom}_{/X}\\bigl(\\underline{U},\\ Y\\bigr)$$\n其中 $U \\subseteq X$ 取遍**开集**。\n\n是 $X$ 上的一个**层**。",
    "notes": "**证明。** 由「开覆盖给出覆盖」，开覆盖 $U = \\bigcup_i U_{i}$ 给出 $\\mathrm{Cond}/X$ 里的覆盖 $\\coprod_i \\underline{U_{i}} \\to \\underline{U}$ ✓。\n而 $Y$ 是拓扑斯 $\\mathrm{Cond}/X$ 的对象，拓扑斯的对象对**标准拓扑**下的每个覆盖筛都满足下降 —— 层条件的定义正是「$\\operatorname{Hom}(-, Y)$ 把覆盖筛变成等化子」✓。\n把这条用在上面的覆盖上：$Y(U) \\to \\prod_i Y(U_{i}) \\rightrightarrows \\prod_{i,j} Y(U_{i} \\cap U_{j})$ 是等化子，正是 $U \\mapsto Y(U)$ 的层条件 ✓。∎\n\n⭐ 一句话：**「$X$ 上的开集给的截面」就是层**，因为开覆盖已经是 $\\mathrm{Cond}/X$ 里的覆盖。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 4.7"
@@ -50894,7 +50925,7 @@
     "AB3",
     "满态射"
    ],
-   "statement": "设 $\\mathcal{C}$ 是有余积的阿贝尔范畴、$G \\in \\mathcal{C}$。则\n\n$$G \\text{ 是生成元} \\iff \\text{对每个 } M \\in \\mathcal{C},\\ \\exists I:\\ G^{(I)} \\twoheadrightarrow M.$$",
+   "statement": "设 $\\mathcal{C}$ 是有余积的阿贝尔范畴、$G \\in \\mathcal{C}$。则\n\n$G$ **是生成元** $\\iff$ 对每个 $M \\in \\mathcal{C}$ 都存在指标集 $I$ 与满态射\n\n$$G^{(I)} \\twoheadrightarrow M.$$",
    "notes": "**证明。**\n**$(\\Longrightarrow)$** 取 $I := \\operatorname{Hom}_{\\mathcal{C}}(G, M)$，令 $\\coprod_I G \\to M$ 的各分量按对应态射来 ✓。若它不是满射，则 $M \\to \\operatorname{coker}$ 非零，由生成性存在 $g : G \\to M$ 使这个复合非零 —— 可是 $g$ 本来就是 $I$ 中的一个分量，它的像落在 $\\operatorname{im}$ 里，矛盾 ✓。\n**$(\\Longleftarrow)$** 给 $f \\ne g : M \\to N$，则 $h := f - g \\ne 0$。取满射 $G^{(I)} \\twoheadrightarrow M$，于是 $h \\circ (\\text{满射}) \\ne 0$，特别地某个分量 $G \\to M$ 上非零 ✓，即 $\\operatorname{Hom}(G, h) \\ne 0$ —— 所以 $\\operatorname{Hom}(G, -)$ 忠实，$G$ 是生成元 ✓。∎\n\n⚠️ 这条判据其实**只用到余积**（AB3），滤过余极限没有出场（AB5 的那部分条件用不上）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 5.13"
@@ -52171,7 +52202,7 @@
     "截面",
     "拉回"
    ],
-   "statement": "设 $\\mathcal{C}$ 有纤维积、且**满态射是万有的**（沿任意态射拉回仍是满态射）。则\n\n$$X \\text{ 是投射对象} \\iff \\text{每个满态射 } Y \\twoheadrightarrow X \\text{ 都有截面}.$$",
+   "statement": "设 $\\mathcal{C}$ 有纤维积、且**满态射是万有的**（沿任意态射拉回仍是满态射）。则\n\n$X$ **是投射对象** $\\iff$ 每个满态射 $Y \\twoheadrightarrow X$ 都**有截面**。",
    "notes": "**证明。**\n\n**$(\\Longleftarrow)$** 给满态射 $p : Y \\twoheadrightarrow Z$ 与 $f : X \\to Z$。取拉回 $X \\times_{Z} Y \\to X$：由万有性它是满态射 ✓，于是有截面 $s$ ✓；$s$ 与第二条投影复合给出 $X \\to Y$ 使 $p \\circ (\\text{复合}) = f$ ✓，即 $f$ 提升 ✓。\n\n**$(\\Longrightarrow)$** 满态射 $Y \\twoheadrightarrow X$ 本身就是一次提升测试（拿 $1_{X}$ 去提升）✓。∎",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.49"
@@ -52212,7 +52243,7 @@
     "环对象",
     "保有限积"
    ],
-   "statement": "若 $F : \\mathcal{C} \\to \\mathcal{D}$ **保有限积**（含终对象），则它把\n\n$$\\text{幺半群对象} \\longmapsto \\text{幺半群对象}, \\qquad \\text{群对象} \\longmapsto \\text{群对象}, \\qquad \\text{环对象} \\longmapsto \\text{环对象},$$\n\n以及 $G$-对象、$A$-模、$k$-代数同理 —— 于是它诱导出 $\\mathrm{Mon}(\\mathcal{C}) \\to \\mathrm{Mon}(\\mathcal{D})$ 等一串函子。",
+   "statement": "若 $F : \\mathcal{C} \\to \\mathcal{D}$ **保有限积**（含终对象），则它把\n\n$F$ 把**幺半群对象**送到幺半群对象、**群对象**送到群对象、**环对象**送到环对象。\n\n以及 $G$-对象、$A$-模、$k$-代数同理 —— 于是它诱导出 $\\mathrm{Mon}(\\mathcal{C}) \\to \\mathrm{Mon}(\\mathcal{D})$ 等一串函子。",
    "notes": "**证明。** 一个群对象就是「$m : G \\times G \\to G$、$e : \\mathbf{1} \\to G$、$i : G \\to G$ 加上若干交换图」✓。$F$ 保有限积（特别地保 $G \\times G$ 与 $\\mathbf{1}$），把这些态射与交换图逐条搬过去，得到的仍是群对象 ✓。环对象、模、$G$-对象也一样（它们的数据都只用到有限积）✓。∎",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.53"
@@ -53317,7 +53348,7 @@
     "覆盖筛",
     "公理"
    ],
-   "statement": "Grothendieck 拓扑定义里**最后一条公理**可以换成：对一切 $R \\subseteq R' \\subseteq h_{X}$，\n\n$$R \\in J(X) \\implies R' \\in J(X), \\qquad \\bigl(R' \\in J(X) \\text{ 且 } \\forall f \\in R'(Y),\\ f^{-1}(R) \\in J(Y)\\bigr) \\implies R \\in J(X).$$",
+   "statement": "Grothendieck 拓扑定义里**最后一条公理**可以换成：对一切 $R \\subseteq R' \\subseteq h_{X}$，\n\n$$R \\in J(X) \\implies R' \\in J(X), \\qquad \\bigl(R' \\in J(X) \\ \\wedge \\ \\forall f \\in R'(Y),\\ f^{-1}(R) \\in J(Y)\\bigr) \\implies R \\in J(X).$$",
    "notes": "**证明。** 两条正是原公理 (T2)、(T3) 的「筛版本」：第一句说覆盖**对放大封闭**（原来那条是「沿自身拉回仍覆盖」，两者等价）✓；第二句说**局部是覆盖则整体是覆盖**（原来那条是「覆盖沿覆盖细化」）✓。逐条对照即得 ✓。∎\n\n⭐ 读法：这两句把「覆盖」说成一族满足**滤子 + 局部性**的筛，实际验证拓扑时比原公理好写好用。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 3.12"
@@ -53441,7 +53472,7 @@
     "函子",
     "预层范畴"
    ],
-   "statement": "把 $X \\in \\mathcal{C}$ 看成函子 $X : \\mathbf{1} \\to \\mathcal{C}$，它给出拓扑斯态射 $\\widehat{X} : \\mathbf{Set} \\to \\widehat{\\mathcal{C}}$，三个函子在对象上由下式给出：\n\n$$\\widehat{X}^{-1}(T) = T(X), \\qquad \\bigl(\\widehat{X}_{!}(E)\\bigr)(Y) = \\begin{cases} E & \\exists\\, Y \\to X,\\\\ \\emptyset & \\text{否则},\\end{cases} \\qquad \\bigl(\\widehat{X}_{*}(E)\\bigr)(Y) = \\begin{cases} E & \\exists\\, X \\to Y,\\\\ \\{0\\} & \\text{否则}.\\end{cases}$$",
+   "statement": "把 $X \\in \\mathcal{C}$ 看成函子 $X : \\mathbf{1} \\to \\mathcal{C}$，它给出拓扑斯态射 $\\widehat{X} : \\mathbf{Set} \\to \\widehat{\\mathcal{C}}$，三个函子在对象上由下式给出：\n\n$\\widehat{X}^{-1}(T) = T(X)$；而 $\\widehat{X}_{!}(E)$ 在存在 $Y \\to X$ 时取 $E$、**否则取 $\\emptyset$**；$\\widehat{X}_{*}(E)$ 在存在 $X \\to Y$ 时取 $E$、**否则取 $\\{0\\}$**：\n\n$$\\widehat{X}^{-1}(T) = T(X), \\qquad \\bigl(\\widehat{X}_{!}(E)\\bigr)(Y) \\in \\{\\, E,\\ \\emptyset\\, \\}, \\qquad \\bigl(\\widehat{X}_{*}(E)\\bigr)(Y) \\in \\{\\, E,\\ \\{0\\}\\, \\}.$$",
    "notes": "**证明。** 由「任意函子诱导拓扑斯态射」，$X : \\mathbf{1} \\to \\mathcal{C}$ 诱导出 $\\widehat{X}_{!} \\dashv \\widehat{X}^{-1} \\dashv \\widehat{X}_{*}$ ✓。三条公式分别是：拉回就是取值 ✓；左 Kan 延拓沿 $\\mathbf{1} \\to \\mathcal{C}$ 由逗号范畴的余极限给出，而「$\\exists Y \\to X$」正是那个余极限非空的条件 ✓；右伴对偶 ✓。∎",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 3.52"

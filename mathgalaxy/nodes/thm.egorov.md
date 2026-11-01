@@ -5,7 +5,8 @@ layer 21 · 定理 · 可测函数与收敛 · 实变函数+数学分析
 
 设 $\mu(X) < \infty$，且 $f_n \to f$ a.e.。则 $f_n \to f$ **近一致**：
 
-$$\forall\varepsilon > 0, \exists E \subseteq X : \mu(E) < \varepsilon,\text{ 且} f_n \rightrightarrows  f\text{ 在} X \setminus E\text{ 上一致}$$
+$$\forall\varepsilon > 0,\ \exists E \subseteq X :\ \mu(E) < \varepsilon$$
+且 $f_n \rightrightarrows  f$ 在 $X \setminus E$ 上**一致收敛**。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.convergence-modes`](../nodes/def.convergence-modes.md) 五种收敛：a.e. 收敛 + 有限测度 $\implies$ 近一致　[proofs/imp.egorov.md](../proofs/imp.egorov.md)

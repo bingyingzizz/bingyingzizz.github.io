@@ -5,12 +5,14 @@ layer 6 · 命题 · 拓扑空间 · 拓扑学
 
 设 $\pi : Y \to X$ 是**闭**连续映射，$A \subseteq X$。则「$A$ 的邻域的原像」
 
-$$\bigl\{\, \pi^{-1}(U) \;:\; U \text{ 是 } A \text{ 在 } X \text{ 中的邻域} \,\bigr\}$$
+$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\pi^{-1}(U)$ 全体是
 
-构成 $\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。
+$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \,$$
+> 陈述续见 [nodes/prop.closed-map-neighborhood-basis.2.md](./prop.closed-map-neighborhood-basis.2.md)
+
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.closed-map-neighborhood-basis.2.md](./prop.closed-map-neighborhood-basis.2.md)
+- …另有入边，续页见 [nodes/prop.closed-map-neighborhood-basis.3.md](./prop.closed-map-neighborhood-basis.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3
 

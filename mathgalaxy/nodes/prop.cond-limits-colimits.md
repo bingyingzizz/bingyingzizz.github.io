@@ -8,11 +8,11 @@ $\mathrm{Cond}$ 有所有（小）极限与余极限。**极限逐点计算**：
 $$\Bigl(\varprojlim_{i} X_{i}\Bigr)(S) = \varprojlim_{i} X_{i}(S).$$
 
 **余极限不能这样算** —— 它是「先在预层里逐点取余极限、再**层化**」：
+> 陈述续见 [nodes/prop.cond-limits-colimits.2.md](./prop.cond-limits-colimits.2.md)
 
-$$\Bigl(\varinjlim_{i} X_{i}\Bigr)(S) = \Bigl(\text{层化}\bigl(S' \mapsto \varinjlim_{i} X_{i}(S')\bigr)\Bigr)(S).$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.cond-limits-colimits.2.md](./prop.cond-limits-colimits.2.md)
+- …另有入边，续页见 [nodes/prop.cond-limits-colimits.3.md](./prop.cond-limits-colimits.3.md)
 
 refs: Le Stum, Corollary 4.1.6；Le Stum, §4.1
 

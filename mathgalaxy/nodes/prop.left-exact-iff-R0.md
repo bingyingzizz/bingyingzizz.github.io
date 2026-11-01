@@ -5,7 +5,7 @@ layer 14 · 命题 · 复形与导出三角 · 同调代数
 
 设 $\mathcal{A}$ 是阿贝尔范畴（有足够多内射）、$\mathcal{A}'$ 是阿贝尔范畴，$F : \mathcal{A} \to \mathcal{A}'$ 是**加法**函子。则
 
-$$F \text{ 左正合} \iff \forall M \in \mathcal{A}:\ R^{0}F(M) \cong F(M).$$
+$F$ **左正合** $\iff$ 对每个 $M \in \mathcal{A}$ 都有 $R^{0}F(M) \cong F(M)$。
 
 对偶地（有足够多投射时）：$F$ 右正合 $\iff L_{0}F \cong F$。
 

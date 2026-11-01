@@ -9,7 +9,8 @@ $$F \twoheadrightarrow X.$$
 
 2. 函子 $S \mapsto \underline{S}$（把紧 Hausdorff 空间看成它表示的凝聚态集）给出范畴等价
 
-$$\mathbf{CHaus}\ \simeq\ \{\text{紧 Hausdorff 空间}\} \longrightarrow \{\text{拟紧且拟分离的凝聚态集}\}.$$
+$$\mathbf{CHaus}\ \simeq\ \mathrm{CHaus}\ \longrightarrow \mathrm{CondSet}_{\mathrm{qcqs}}.$$
+即：**紧 Hausdorff 空间**与**拟紧且拟分离的凝聚态集**等价。
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.qcqs-chaus-equiv.2.md](./thm.qcqs-chaus-equiv.2.md)

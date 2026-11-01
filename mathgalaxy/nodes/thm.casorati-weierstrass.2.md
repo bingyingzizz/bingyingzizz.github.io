@@ -24,9 +24,9 @@ l\, \vare
 psilon > 0
 ,\ \exist
 s\, z \in
- U \text{ 
-使 } |f(z) -
- w| < \va
-repsilon.$$
+ U:\ |f(z)
+ - w| < \
+varepsilon.
+$$
 
 > 续见 [nodes/thm.casorati-weierstrass.3.md](./thm.casorati-weierstrass.3.md)

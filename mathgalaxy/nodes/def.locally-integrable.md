@@ -5,7 +5,8 @@ layer 20 · 定义 · 微分定理 · 实变函数+数学分析
 
 可测函数 $f : \mathbb{R}^n \to \mathbb{C}$ 是**局部可积的**，当且仅当
 
-$$\int_K |f(x)| dx < \infty\quad \text{ 对每个有界可测集} K \subseteq \mathbb{R}^n$$
+对每个**有界可测集** $K \subseteq \mathbb{R}^n$ 都有
+$$\int_K |f(x)| dx < \infty$$
 
 局部可积函数全体记作 $L^1_{loc}$（或 $L^1_{loc}(\mathbb{R}^n)$）。
 

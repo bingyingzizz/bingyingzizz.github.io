@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.jordan-decomposition`](../nodes/thm.jordan-decomposition.md) Jordan 分解定理：用到了定义 Jordan 分解定理　[proofs/def-link.variations-ac.md](../proofs/def-link.variations-ac.md)
+
+> 续见 [nodes/prop.ac-and-variations.3.md](./prop.ac-and-variations.3.md)

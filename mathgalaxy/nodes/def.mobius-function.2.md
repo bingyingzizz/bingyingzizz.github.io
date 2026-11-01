@@ -2,4 +2,5 @@
 [在星图里打开](../#n=def.mobius-function)　·　第 1 页 [nodes/def.mobius-function.md](./def.mobius-function.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式 用
 - ⇒ [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式

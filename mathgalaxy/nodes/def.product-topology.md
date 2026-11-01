@@ -5,7 +5,8 @@ layer 6 · 定义 · 拓扑空间 · 拓扑学
 
 设 $(X_{i}, \mathcal{T}_{i})_{i \in I}$ 是一族拓扑空间。$\prod_{i \in I} X_{i}$ 上的**积拓扑**是以
 
-$$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},\ \text{除有限多个 } i \text{ 外 } U_{i} = X_{i})$$
+$$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},$$
+其中**除有限多个 $i$ 之外**都有 $U_{i} = X_{i}$）
 
 为基的拓扑 —— 也就是使所有投影 $\pi_{j} : \prod_{i} X_{i} \to X_{j}$ 都连续的**最粗**拓扑。
 

@@ -5,15 +5,15 @@ layer 20 · 命题 · 符号测度与分解 · 实变函数+数学分析
 
 设 $\mu$ 是测度，$\nu$ 是符号测度。则
 
-$$\nu \ll  \mu \iff |\nu| \ll  \mu \iff \nu^+ \ll  \mu\text{ 且} \nu^- \ll  \mu$$
+$$\nu \ll  \mu \iff |\nu| \ll  \mu \iff \nu^+ \ll  \mu\ \wedge \ \nu^- \ll  \mu$$
 
 并且：若同时有 $\nu \perp  \mu$ 与 $\nu \ll  \mu$，则 $\nu = 0$。
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.lebesgue-radon-nikodym`](../nodes/thm.lebesgue-radon-nikodym.md) Lebesgue–Radon–Nikodym 定理
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.ac-and-variations.2.md](./prop.ac-and-variations.2.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.ac-and-variations.3.md](./prop.ac-and-variations.3.md)
 
 refs: Folland, Real Analysis, Prop. 3.5
 

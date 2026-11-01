@@ -5,7 +5,7 @@ layer 24 · 定理 · 微分定理 · 实变函数+数学分析
 
 设 $f \in L^1_{loc}$。则
 
-$$\lim_{r\to0} A_r f(x) = f(x)\quad \text{ 对} \text{a.e.} x \in \mathbb{R}^n$$
+$$\lim_{r\to0} A_r f(x) = f(x)\quad \text{for a.e. } x \in \mathbb{R}^n$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`def.average-operator`](../nodes/def.average-operator.md) 平均算子 Aᵣ

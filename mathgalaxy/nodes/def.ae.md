@@ -5,7 +5,7 @@ layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
 
 设 $(X, \mathcal{M}, \mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当
 
-$$\exists E \in \mathcal{M}:\ \mu(E) = 0 \quad \text{且} \quad \forall x \in X \setminus E,\ P(x)\ \text{成立}$$
+$$\exists E \in \mathcal{M}:\ \mu(E) = 0\ \wedge \ \forall x \in X \setminus E,\ P(x) .$$
 
 即：**使命题不成立的那些点构成一个零集**。
 

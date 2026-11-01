@@ -5,7 +5,7 @@ layer 8 · 定理 · 群作用与置换 · 抽象代数
 
 设 $G$ 是有限群、$H \le G$。对 $g \in G$ 记**左陪集** $gH := \{\, gh : h \in H \,\}$。则左陪集构成 $G$ 的一个划分，每个左陪集与 $H$ 等势，于是
 
-$$|G| = [G : H] \cdot |H|, \qquad \text{即} \qquad |H| \mid |G|$$
+$$|G| = [G : H] \cdot |H|, \qquad |H| \mid |G|$$
 
 其中 $[G : H] := |G|/|H|$ 叫 $H$ 在 $G$ 中的**指数**。
 

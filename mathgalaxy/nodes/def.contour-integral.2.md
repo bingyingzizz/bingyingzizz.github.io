@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.contour-integral)　·　第 1 页 [nodes/def.contour-integral.md](./def.contour-integral.md)
 
 ## 陈述（续）
-$$\int_\gamma f(z)\,\mathrm{d}z := \lim_{\text{分割}} \sum_{k=1}^{n} f(\gamma(\tau_k))\,(\gamma(t_k) - \gamma(t_{k-1})),$$
+$$\int_\gamma f(z)\,\mathrm{d}z := \lim_{\lVert\Delta\rVert \to 0} \sum_{k=1}^{n} f(\gamma(\tau_k))\,(\gamma(t_k) - \gamma(t_{k-1})),$$
 
 分割取 $[a, b]$ 的任意加细分割、$\tau_k \in [t_{k-1}, t_k]$ 任意，极限存在且与取法无关；它等于
 

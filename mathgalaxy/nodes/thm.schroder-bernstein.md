@@ -5,7 +5,7 @@ layer 7 · 定理 · 基数与等势 · 集合论
 
 若存在单射 $f : A \to B$ 与单射 $g : B \to A$，则存在**双射** $A \to B$，即
 
-$$|A| \le |B| \ \text{且}\ |B| \le |A| \implies |A| = |B|$$
+$$|A| \le |B| \ \wedge \ |B| \le |A| \implies |A| = |B|$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.bijection`](../nodes/def.bijection.md) 单射 / 满射 / 双射：两个方向的单射 $\implies$ 双射　[proofs/imp.schroder-bernstein.md](../proofs/imp.schroder-bernstein.md)

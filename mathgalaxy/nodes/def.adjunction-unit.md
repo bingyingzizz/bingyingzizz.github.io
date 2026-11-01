@@ -9,9 +9,11 @@ $$\Phi_{X, Y} : \operatorname{Hom}_{\mathcal{D}}\bigl(F(X), Y\bigr) \longrightar
 
 把它在两个「恒等态射」上取值，得到两个自然变换：
 
-$$\eta_{X} := \Phi_{X, F(X)}(1_{F(X)}) : X \to G F(X) \qquad (\textbf{单位})$$
+$$\eta_{X} := \Phi_{X, F(X)}(1_{F(X)}) : X \to G F(X)$$
 
-$$\varepsilon_{Y} := \Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \to Y \qquad (\textbf{余单位})$$
+$$\varepsilon_{Y} := \Phi_{G(Y), Y}^{-1}(1_{G(Y)}) : F G(Y) \to Y$$
+
+它们满足**三角等式**
 > 陈述续见 [nodes/def.adjunction-unit.2.md](./def.adjunction-unit.2.md)
 
 

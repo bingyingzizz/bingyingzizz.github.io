@@ -9,7 +9,7 @@ $$\nu(E) := \int_E f d\mu$$
 
 则 $\nu$ 是符号测度，且 $\nu \ll  \mu$。并且
 
-$$\nu\text{ 有限} \iff f \in L^1(\mu)$$
+$\nu$ **有限** $\iff f \in L^1(\mu)$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.integrable`](../nodes/def.integrable.md) 可积 / L¹：用到了定义 可积 / L¹　[proofs/def-link.integral-ac.md](../proofs/def-link.integral-ac.md)

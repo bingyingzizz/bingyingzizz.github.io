@@ -5,7 +5,7 @@ layer 25 · 定理 · 多元微分 · 数学分析
 
 设 $E, F, G$ 是 Banach 空间，$U \subseteq E \times F$ 开，$F_0 : U \to G$ 是 $C^{1}$，$(a, b) \in U$ 满足 $F_0(a, b) = 0$ 且偏导
 
-$$D_y F_0(a, b) : F \to G \quad \text{是拓扑线性同构}$$
+而 $D_y F_0(a, b) : F \to G$ 是**拓扑线性同构**。
 > 陈述续见 [nodes/thm.implicit-function-banach.2.md](./thm.implicit-function-banach.2.md)
 
 

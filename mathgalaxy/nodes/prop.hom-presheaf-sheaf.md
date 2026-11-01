@@ -5,7 +5,8 @@ layer 16 · 命题 · 凝聚态集 · 凝聚态数学
 
 设 $X$ 是拓扑空间、$Y \to X$ 是凝聚态集之间的态射（即 $Y \in \mathrm{Cond}/X$）。则预层
 
-$$U \;\longmapsto\; Y(U) := \operatorname{Hom}_{/X}\bigl(\underline{U},\ Y\bigr) \qquad (U \subseteq X \text{ 开})$$
+$$U \;\longmapsto\; Y(U) := \operatorname{Hom}_{/X}\bigl(\underline{U},\ Y\bigr)$$
+其中 $U \subseteq X$ 取遍**开集**。
 
 是 $X$ 上的一个**层**。
 

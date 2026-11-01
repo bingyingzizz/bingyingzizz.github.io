@@ -5,7 +5,7 @@ layer 9 · 定义 · 整环与分解 · 抽象代数
 
 整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \setminus \{0\} \to \mathbb{N}$（**欧几里得函数**），使对任意 $a \in A$、$b \ne 0$，存在 $q, r \in A$ 满足
 
-$$a = q b + r, \qquad r = 0 \ \text{或}\ N(r) < N(b) .$$
+$$a = q b + r, \qquad r = 0 \ \vee \ N(r) < N(b) .$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e127:definition.md](../proofs/e127:definition.md)

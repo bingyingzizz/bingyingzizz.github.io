@@ -5,7 +5,7 @@ layer 9 · 定义 · 代数结构 · 抽象代数
 
 设 $A$ 是环。子集 $I \subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \in A$、$x \in I$ 有
 
-$$a x \in I \quad \text{与} \quad x a \in I.$$
+$$a x \in I, \qquad x a \in I.$$
 
 （只要求 $a x \in I$ 的叫**左理想**，只要求 $x a \in I$ 的叫**右理想**；交换环里三者一致。）
 

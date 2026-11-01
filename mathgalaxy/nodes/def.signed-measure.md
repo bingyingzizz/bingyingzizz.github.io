@@ -9,7 +9,8 @@ layer 15 · 定义 · 符号测度与分解 · 实变函数+数学分析
 - $\nu$ **至多取到 $\pm \infty$ 中的一个**（不能同时取到 $\infty$ 与 $-\infty$）；
 - 对两两不交的 $\{E_j\} \subseteq \mathcal{M}$：
 
-$$\nu( \bigsqcup_j E_j ) = \sum_j \nu(E_j),\text{ 且右边的级数绝对收敛}(\text{当} |\nu(\bigsqcup E_j)| < \infty\text{ 时})$$
+$$\nu( \bigsqcup_j E_j ) = \sum_j \nu(E_j),$$
+其中右边的级数**绝对收敛**（在 $|\nu(\bigsqcup_j E_j)| < \infty$ 时）。
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.signed-measure.2.md](./def.signed-measure.2.md)

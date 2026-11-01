@@ -5,7 +5,7 @@ layer 17 · 定理 · 数论函数与素数分布 · 数论
 
 设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则
 
-$$g(n) = \sum_{d \mid n} f(d) \quad \text{对一切 } n \qquad \iff \qquad f(n) = \sum_{d \mid n} \mu(d)\, g\!\left(\frac{n}{d}\right) \ \text{对一切 } n .$$
+$$g(n) = \sum_{d \mid n} f(d)\quad \forall n \qquad \iff \qquad f(n) = \sum_{d \mid n} \mu(d)\, g\!\left(\frac{n}{d}\right) \quad \forall n .$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式：反演：交换求和次序，内层只剩 $n/m=1$　[proofs/imp.nt-mobius-inversion.md](../proofs/imp.nt-mobius-inversion.md)

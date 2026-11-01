@@ -5,7 +5,7 @@ layer 15 · 定义 · 测度的构造 · 实变函数+数学分析
 
 若 $\mathcal{M}$ 只是一个**环**（不必是 $\sigma$代数），而 $\mu : \mathcal{M} \to [0, +\infty]$ 仍满足测度的两条：
 
-$$\mu(\emptyset) = 0, \quad  \{E_j\}\text{ 两两不交} \implies \mu(\bigcup E_j) = \sum \mu(E_j)$$
+$$\mu(\emptyset) = 0, \quad  E_j \cap E_k = \emptyset\ (j \ne k) \implies \mu(\bigcup E_j) = \sum \mu(E_j)$$
 
 则称 $\mu$ 是 $\mathcal{M}$ 上的**预测度**。
 

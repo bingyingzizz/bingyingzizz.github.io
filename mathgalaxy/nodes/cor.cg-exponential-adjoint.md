@@ -5,7 +5,7 @@ layer 18 · 推论 · 紧生成空间与弱 Hausdorff · 拓扑学
 
 在紧生成空间范畴上，函子
 
-$$X \longmapsto k(X \times Y) \qquad \text{左伴随于} \qquad Z \longmapsto kC(kY, Z).$$
+$$X \longmapsto k(X \times Y) \qquad \dashv \qquad Z \longmapsto kC(kY, Z).$$
 
 也就是说 $kC(kY, -)$ 是「乘 $Y$」的**右伴随**（$k(Y \times -)$ 叫**指数对象** $Z^{Y}$）。
 

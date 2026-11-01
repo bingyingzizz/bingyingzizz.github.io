@@ -5,7 +5,8 @@ layer 12 · 命题 · 图与极限 · 范畴论+序理论
 
 把偏序集 $(P, \preceq)$ 看作范畴（对象是元素，$x \to y \iff x \preceq y$）。则对任何图 $D : I \to P$：
 
-$$\lim D = \inf D \;(\text{下确界}), \qquad \varinjlim D = \sup D \;(\text{上确界}),$$
+$$\lim D = \inf D, \qquad \varinjlim D = \sup D,$$
+即极限是**下确界**、余极限是**上确界**。
 
 只要它们存在。
 
