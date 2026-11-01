@@ -1,5 +1,5 @@
-# 外微分　`def.exterior-derivative`
-外微分
+# 外微分（欧氏开集）　`def.exterior-derivative`
+外微分：欧氏开集上的坐标公式
 layer 14 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.exterior-derivative)　·　[节点索引](../index.md)
 
@@ -7,11 +7,14 @@ layer 14 · 定义 · 活动标架与结构方程 · 微分几何
 > 陈述续见 [nodes/def.exterior-derivative.2.md](./def.exterior-derivative.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.differential-form`](../nodes/def.differential-form.md) 微分形式：用到了定义 微分形式　[proofs/dep.tu-form-exterior-d.md](../proofs/dep.tu-form-exterior-d.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.exterior-derivative.4.md](./def.exterior-derivative.4.md)
+- 被 [`prop.pullback-forms`](../nodes/prop.pullback-forms.md) 拉回（开集间） 用
+- 被 [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理 用
+
+- …另有出边，续页见 [nodes/def.exterior-derivative.5.md](./def.exterior-derivative.5.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.exterior-derivative.4.md](./def.exterior-derivative.4.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 外微分与闭形式；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 外微分
 

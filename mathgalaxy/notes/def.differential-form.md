@@ -1,4 +1,4 @@
-# 微分形式　`def.differential-form`　·　说明
+# 微分形式（欧氏开集）　`def.differential-form`　·　说明
 根 `../`
 
 **与外代数的关系**：每点 $\omega_{p}\in\bigwedge^{k}(\mathbb{R}^{n})^{\ast}$，所以 $k$-形式就是「$\bigwedge^{k}(\mathbb{R}^{n})^{\ast}$-值的光滑函数」。外代数给代数结构，光滑性给分析结构；两者合起来才能定义 $\mathrm{d}$（`def.exterior-derivative`）。

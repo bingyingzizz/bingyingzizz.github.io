@@ -1,7 +1,7 @@
 # 一元微积分基本定理 $\implies$ Stokes 定理
 `imp.tu-stokes` · 推出 · strong 边 · 根 `../`
 
-`def.integral-form` 形式的积分 + `def.exterior-derivative` 外微分 → `thm.stokes` Stokes 定理
+`def.integral-form` 形式的积分 + `def.exterior-derivative` 外微分（欧氏开集） → `thm.stokes` Stokes 定理
 
 **化到半空间。** 用单位分解把 $\omega$ 拆成有限个支在保向卡里的形式，每块化到 $\mathbb{H}^{n} = \{x^{n}\le 0\}$ 中的方块 $Q$ 上，于是只需证 $\int_{Q}\mathrm{d}\omega = \int_{\partial Q}\omega$。
 

@@ -1,6 +1,6 @@
 # Mayer–Vietoris 序列　`thm.mayer-vietoris`
 Mayer–Vietoris 长正合列
-layer 17 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.mayer-vietoris)　·　[节点索引](../index.md)
 
 **在做什么**：把一个大流形的上同调，拆成两块以及它们交叠的上同调 —— 这是「打补丁」计算上同调的标准机器。

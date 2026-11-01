@@ -1,5 +1,5 @@
-# 拉回　`prop.pullback-forms`
-微分形式的拉回
+# 拉回（开集间）　`prop.pullback-forms`
+拉回：开集之间的形式
 layer 15 · 命题 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=prop.pullback-forms)　·　[节点索引](../index.md)
 
@@ -7,13 +7,14 @@ layer 15 · 命题 · 活动标架与结构方程 · 微分几何
 > 陈述续见 [nodes/prop.pullback-forms.2.md](./prop.pullback-forms.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.differential-form`](../nodes/def.differential-form.md) 微分形式：逐点交错型 $\implies$ 拉回保楔积　[proofs/imp.tu-pullback-wedge.md](../proofs/imp.tu-pullback-wedge.md)
-
-- …另有入边，续页见 [nodes/prop.pullback-forms.4.md](./prop.pullback-forms.4.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.pullback-forms.5.md](./prop.pullback-forms.5.md)
+- ⇒ [`thm.stokes-chain`](../nodes/thm.stokes-chain.md) 链上的 Stokes 定理
+- 被 [`def.left-invariant-form`](../nodes/def.left-invariant-form.md) 左不变形式 用
+
+- …另有出边，续页见 [nodes/prop.pullback-forms.6.md](./prop.pullback-forms.6.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.pullback-forms.4.md](./prop.pullback-forms.4.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 拉回及其性质；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 拉回
 

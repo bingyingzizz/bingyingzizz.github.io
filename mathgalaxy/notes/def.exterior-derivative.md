@@ -1,4 +1,4 @@
-# 外微分　`def.exterior-derivative`　·　说明
+# 外微分（欧氏开集）　`def.exterior-derivative`　·　说明
 根 `../`
 
 **$\mathrm{d}$ 是什么代数对象**：外代数上的**反导子** —— 次数 $+1$、分次 Leibniz、平方为零。这三条唯一确定它，所以不必背公式，记住这三条即可。

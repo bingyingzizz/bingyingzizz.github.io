@@ -4,6 +4,7 @@
 中心天体 def.geodesic　·　27 个节点　·　根 `../`　·　续页 `index/diffgeom.intrinsic.2.md`
 
 - def.smooth-manifold　光滑流形　layer 8
+- def.integral-form　形式的积分　layer 14
 - def.tangent-space-manifold　切空间　layer 17
 - def.affine-connection　仿射联络　layer 22
 - def.curvature-tensor　Riemann 曲率张量　layer 23
@@ -18,6 +19,5 @@
 - def.intrinsic-quantity　内蕴量　layer 26
 - prop.christoffel-frame　标架下的联络系数　layer 26
 - def.geodesic　测地线　layer 26
-- def.sectional-curvature　截面曲率　layer 26
 
 > 续见 `index/diffgeom.intrinsic.2.md`

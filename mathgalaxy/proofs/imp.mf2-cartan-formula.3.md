@@ -1,7 +1,7 @@
 # 两者都是与 $\mathrm{d}$ 交换的次数 $0$ 导子 $\implies$ Cartan 公式
 `imp.mf2-cartan-formula` · 推出 · strong 边 · 根 `../`
 
-`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分 → `thm.cartan-formula` Cartan 公式
+`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分（欧氏开集） → `thm.cartan-formula` Cartan 公式
 
 **(4) 在函数上相等。** 对 $f \in C^{\infty}(M)$：$Df = \mathrm{d}\bigl(\iota_{X}f\bigr) + \iota_{X}\mathrm{d}f = 0 + \mathrm{d}f(X) = Xf = \mathcal{L}_{X}f$。
 

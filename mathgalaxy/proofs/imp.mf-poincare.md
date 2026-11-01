@@ -1,7 +1,7 @@
 # 链同伦 $\mathrm{d}K + K\mathrm{d} = \operatorname{id}$ $\implies$ 闭形式恰当
 `imp.mf-poincare` · 推出 · strong 边 · 根 `../`
 
-`def.de-rham-complex` de Rham 上同调 + `def.exterior-derivative` 外微分 → `lem.poincare-lemma` Poincaré 引理
+`def.de-rham-complex` de Rham 上同调 + `def.exterior-derivative` 外微分（欧氏开集） → `lem.poincare-lemma` Poincaré 引理
 
 **收缩映射。** 取 $H : U \times [0,1] \to U$、$H(x,t) := tx$（星形保证它落在 $U$ 里）。记 $i_{t} : U \to U \times [0,1]$、$i_{t}(x) := (x,t)$。
 

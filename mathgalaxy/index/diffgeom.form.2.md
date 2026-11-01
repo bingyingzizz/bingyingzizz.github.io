@@ -1,12 +1,15 @@
 # 微分形式、积分与 de Rham / Differential Forms, Integration and de Rham Cohomology（diffgeom.form）· 节点清单（第 2/2 页）
 根 `../`　·　第 1 页 `index/diffgeom.form.md`
 
+- thm.change-of-variables-manifold　流形上的换元公式　layer 22
+- thm.de-rham-h0　零次上同调　layer 23
+- lem.poincare-lemma　Poincaré 引理　layer 23
+- thm.mayer-vietoris　Mayer–Vietoris 序列　layer 23
+- def.volume-form　体积形式　layer 26
+- def.volume-density　体积密度与体积形式　layer 26
+- prop.boundary-sign-convention　边界的符号约定　layer 27
 - prop.volume-density-well-defined　密度与定向无关　layer 27
 - def.divergence　散度　layer 27
-- def.integral-on-chain　链上的积分　layer 28
-- thm.change-of-variables-manifold　流形上的换元公式　layer 28
-- def.submanifold-volume　诱导体积　layer 28
-- prop.integral-chain-linear　链上积分的双线性　layer 29
-- thm.stokes-chain　链上的 Stokes 定理　layer 29
-- thm.divergence-theorem　散度定理　layer 29
-- thm.de-rham　de Rham 定理　layer 29
+- def.submanifold-volume　诱导体积　layer 27
+- thm.divergence-theorem　散度定理　layer 28
+- thm.de-rham　de Rham 定理　layer 28

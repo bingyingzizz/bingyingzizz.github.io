@@ -1,7 +1,7 @@
 # 逐项积完一元导数 $\implies$ 方块上的 Stokes 公式
 `imp.spivak-cube-stokes` · 推出 · strong 边 · 根 `../`
 
-`def.boundary-operator` 边界算子 + `def.exterior-derivative` 外微分 → `lem.single-cube-stokes` 方块上的 Stokes 公式
+`def.boundary-operator` 边界算子 + `def.exterior-derivative` 外微分（欧氏开集） → `lem.single-cube-stokes` 方块上的 Stokes 公式
 
 最后一步用 $(-1)^{i+\alpha+i-1} = (-1)^{\alpha+1}$：$\alpha = 1$ 给 $+1$、$\alpha = 0$ 给 $-1$。
 

@@ -12,3 +12,5 @@
 - ⇒ [`thm.cayley`](../nodes/thm.cayley.md) Cayley 定理
 - ⇒ [`thm.sylow`](../nodes/thm.sylow.md) Sylow 定理
 - 被 [`def.semidirect-product`](../nodes/def.semidirect-product.md) 半直积 用
+
+> 续见 [nodes/def.group-action.5.md](./def.group-action.5.md)

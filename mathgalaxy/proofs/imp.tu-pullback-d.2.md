@@ -1,7 +1,7 @@
 # 链式法则 $+$ $\mathrm{d}^{2}=0$ $\implies$ $F^{\ast}$ 与 $\mathrm{d}$ 交换
 `imp.tu-pullback-d` · 推出 · strong 边 · 根 `../`
 
-`def.exterior-derivative` 外微分 → `prop.pullback-forms` 拉回
+`def.exterior-derivative` 外微分（欧氏开集） → `prop.pullback-forms` 拉回（开集间）
 
 $$\mathrm{d}(f\circ F) = \sum_{j}(\partial_{j}f\circ F)\,\mathrm{d}F^{j} ,$$
 

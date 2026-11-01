@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.integral-on-chain`](../nodes/def.integral-on-chain.md) 链上的积分：逐项定义 $\implies$ 对形式与对链都线性　[proofs/imp.spivak-chain-linear.md](../proofs/imp.spivak-chain-linear.md)
+- [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf3-form-chainint.md](../proofs/dep.mf3-form-chainint.md)

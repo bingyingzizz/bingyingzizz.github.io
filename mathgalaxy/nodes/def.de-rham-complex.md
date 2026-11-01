@@ -1,11 +1,11 @@
 # de Rham 上同调　`def.de-rham-complex`
 de Rham 复形与上同调群
-layer 16 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 22 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.de-rham-complex)　·　[节点索引](../index.md)
 
 **在说什么**：外微分满足 $\mathrm{d}^{2} = 0$，于是 $k$-形式排成一串「链」；闭形式模掉恰当形式剩下的那部分就是上同调 —— 它量的是「有多少闭形式是假闭的」。
 
-设 $M$ 是光滑流形，$\Omega^{k}(M)$ 是 $k$-形式的空间。外微分（`def.exterior-derivative`）给出 **de Rham 复形**
+设 $M$ 是光滑流形，$\Omega^{k}(M)$ 是 $k$-形式的空间。流形上的外微分给出 **de Rham 复形**
 > 陈述续见 [nodes/def.de-rham-complex.2.md](./def.de-rham-complex.2.md)
 
 

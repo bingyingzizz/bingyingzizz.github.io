@@ -8,7 +8,7 @@ layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.differential-form`](../nodes/def.differential-form.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf2-dform-iop.md](../proofs/dep.mf2-dform-iop.md)
+- [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf2-dform-iop.md](../proofs/dep.mf2-dform-iop.md)
 
 - …另有入边，续页见 [nodes/def.interior-product.4.md](./def.interior-product.4.md)
 

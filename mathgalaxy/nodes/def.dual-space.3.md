@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.annihilator`](../nodes/def.annihilator.md) 零化子 用
 - 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
+- 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用

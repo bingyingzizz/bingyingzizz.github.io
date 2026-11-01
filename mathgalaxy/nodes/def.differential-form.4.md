@@ -1,4 +1,4 @@
-# 微分形式　`def.differential-form`　·　续页（第 4 页）
+# 微分形式（欧氏开集）　`def.differential-form`　·　续页（第 4 页）
 [在星图里打开](../#n=def.differential-form)　·　第 1 页 [nodes/def.differential-form.md](./def.differential-form.md)　·　上一页 [nodes/def.differential-form.3.md](./def.differential-form.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

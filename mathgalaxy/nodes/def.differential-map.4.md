@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.tangent-space-manifold`](../nodes/def.tangent-space-manifold.md) 切空间：用到了定义 切空间　[proofs/dep.mf-tangent-diff.md](../proofs/dep.mf-tangent-diff.md)
+
+> 续见 [nodes/def.differential-map.5.md](./def.differential-map.5.md)

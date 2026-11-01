@@ -6,4 +6,3 @@
 - ⇒ [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理
 - 被 [`def.integral-on-chain`](../nodes/def.integral-on-chain.md) 链上的积分 用
 - ⇒ [`thm.change-of-variables-manifold`](../nodes/thm.change-of-variables-manifold.md) 流形上的换元公式
-- 被 [`def.submanifold-volume`](../nodes/def.submanifold-volume.md) 诱导体积 用

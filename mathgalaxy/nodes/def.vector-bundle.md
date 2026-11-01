@@ -12,8 +12,10 @@ layer 9 · 定义 · 流形与向量丛 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.vs`](../nodes/def.vs.md) 向量空间的基：用到了定义 向量空间的基　[proofs/dep.mf-vs-vectorbundle.md](../proofs/dep.mf-vs-vectorbundle.md)
 
+- …另有入边，续页见 [nodes/def.vector-bundle.4.md](./def.vector-bundle.4.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.vector-bundle.4.md](./def.vector-bundle.4.md)
+- …另有出边，续页见 [nodes/def.vector-bundle.5.md](./def.vector-bundle.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛与局部平凡化
 

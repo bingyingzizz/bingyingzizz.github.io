@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`def.differential-map`](../nodes/def.differential-map.md) 切映射
+- 被 [`def.fiber-bundle`](../nodes/def.fiber-bundle.md) 纤维丛 用

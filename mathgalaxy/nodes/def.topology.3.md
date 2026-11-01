@@ -7,10 +7,10 @@
 - 被 [`def.refinement`](../nodes/def.refinement.md) 覆盖的加细 用
 - 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
 - 被 [`def.manifold-chart`](../nodes/def.manifold-chart.md) 图卡 用
+- 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
 - 被 [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包 用
 - 被 [`def.topology-base`](../nodes/def.topology-base.md) 基与子基 用
 - 被 [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射 用
 - 被 [`def.metric-space`](../nodes/def.metric-space.md) 距离空间 用
-- 被 [`def.borel`](../nodes/def.borel.md) Borel σ-代数 用
 
 > 续见 [nodes/def.topology.4.md](./def.topology.4.md)

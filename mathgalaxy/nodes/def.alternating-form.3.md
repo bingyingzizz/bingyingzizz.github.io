@@ -4,4 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.det-exists-unique`](../nodes/thm.det-exists-unique.md) 行列式的存在唯一性
 - 被 [`def.exterior-power`](../nodes/def.exterior-power.md) 外幂 用
-- 被 [`def.differential-form`](../nodes/def.differential-form.md) 微分形式 用
+- 被 [`def.differential-form`](../nodes/def.differential-form.md) 微分形式（欧氏开集） 用

@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.trace`](../nodes/def.trace.md) 迹：用到了定义 迹　[proofs/dep.mf-trace-tensorfield.md](../proofs/dep.mf-trace-tensorfield.md)
 - [`def.vector-field`](../nodes/def.vector-field.md) 向量场：用到了定义 向量场　[proofs/dep.mf-vf-tensorfield.md](../proofs/dep.mf-vf-tensorfield.md)
+- [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛：用到了定义 余切丛　[proofs/dep.mf3-cotb-tensor.md](../proofs/dep.mf3-cotb-tensor.md)

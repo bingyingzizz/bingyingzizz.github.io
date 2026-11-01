@@ -1,7 +1,7 @@
 # 链式法则 $+$ $\mathrm{d}^{2}=0$ $\implies$ $F^{\ast}$ 与 $\mathrm{d}$ 交换
 `imp.tu-pullback-d` · 推出 · strong 边 · 根 `../`
 
-`def.exterior-derivative` 外微分 → `prop.pullback-forms` 拉回
+`def.exterior-derivative` 外微分（欧氏开集） → `prop.pullback-forms` 拉回（开集间）
 
 只需验证 $\omega = f\,\mathrm{d}x^{I}$，再用线性拼起来。由已证的保楔积与 $F^{\ast}f = f\circ F$：
 

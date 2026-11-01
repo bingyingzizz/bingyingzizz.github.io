@@ -9,3 +9,4 @@
 - 被 [`def.lie-group`](../nodes/def.lie-group.md) Lie 群 用
 - 被 [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形 用
 - 被 [`def.singular-cube`](../nodes/def.singular-cube.md) 奇异方块 用
+- 被 [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式 用

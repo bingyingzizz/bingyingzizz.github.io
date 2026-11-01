@@ -1,6 +1,6 @@
 # 形式的积分　`def.integral-form`
 形式的积分与定向
-layer 27 · 定义 · 内蕴几何 · 微分几何
+layer 14 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.integral-form)　·　[节点索引](../index.md)
 
 **在做什么**：把「$n$-形式在一个定向区域上积起来」说清楚 —— 它是唯一能自然积分的东西，因为换元时只有最高次外形式的变换因子恰好是行列式（不带绝对值）。
@@ -8,7 +8,7 @@ layer 27 · 定义 · 内蕴几何 · 微分几何
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面：用到了定义 可定向曲面　[proofs/dep.tu-orient-integral.md](../proofs/dep.tu-orient-integral.md)
+- [`def.orientable-manifold`](../nodes/def.orientable-manifold.md) 可定向流形：用到了定义 可定向流形　[proofs/dep.tu-orient-integral.md](../proofs/dep.tu-orient-integral.md)
 
 - …另有入边，续页见 [nodes/def.integral-form.3.md](./def.integral-form.3.md)
 

@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面：用到了定义 可定向曲面　[proofs/dep.spivak-surface-boundary.md](../proofs/dep.spivak-surface-boundary.md)
+- [`def.orientable-manifold`](../nodes/def.orientable-manifold.md) 可定向流形：用到了定义 可定向流形　[proofs/dep.mf3-bsign-orientmanifold.md](../proofs/dep.mf3-bsign-orientmanifold.md)

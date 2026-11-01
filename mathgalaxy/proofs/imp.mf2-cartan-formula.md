@@ -1,7 +1,7 @@
 # 两者都是与 $\mathrm{d}$ 交换的次数 $0$ 导子 $\implies$ Cartan 公式
 `imp.mf2-cartan-formula` · 推出 · strong 边 · 根 `../`
 
-`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分 → `thm.cartan-formula` Cartan 公式
+`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分（欧氏开集） → `thm.cartan-formula` Cartan 公式
 
 记 $D := \mathrm{d}\,\iota_{X} + \iota_{X}\,\mathrm{d}$，要证 $D = \mathcal{L}_{X}$ 作用在 $\Omega^{\bullet}(M)$ 上。分四步。
 

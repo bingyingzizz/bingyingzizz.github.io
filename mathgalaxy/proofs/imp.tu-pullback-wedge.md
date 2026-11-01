@@ -1,7 +1,7 @@
 # 逐点交错型 $\implies$ 拉回保楔积
 `imp.tu-pullback-wedge` · 推出 · strong 边 · 根 `../`
 
-`def.differential-form` 微分形式 → `prop.pullback-forms` 拉回
+`def.differential-form` 微分形式（欧氏开集） → `prop.pullback-forms` 拉回（开集间）
 
 两边都对系数函数线性，故只需对单项式 $\omega = a\,\mathrm{d}x^{I}$、$\eta = b\,\mathrm{d}x^{J}$ 验证，并记 $F = (F^{1},\ldots,F^{n})$。
 

@@ -13,7 +13,7 @@ layer 26 · 定义 · Lie 群 · 微分几何
 - …另有入边，续页见 [nodes/def.left-invariant-form.4.md](./def.left-invariant-form.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.left-invariant-form.5.md](./def.left-invariant-form.5.md)
+- …另有出边，续页见 [nodes/def.left-invariant-form.6.md](./def.left-invariant-form.6.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左不变形式与余标架；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左不变向量场与 Lie 代数
 

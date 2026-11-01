@@ -1,6 +1,6 @@
 # 链上积分的双线性　`prop.integral-chain-linear`
 链上积分对形式与对链都线性
-layer 29 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 21 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.integral-chain-linear)　·　[节点索引](../index.md)
 
 **在做什么**：把「链上的积分」说成一个配对 —— 左边是链、右边是形式、结果是一个数，两头都线性。这条双线

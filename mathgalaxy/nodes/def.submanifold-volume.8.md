@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.interior-product`](../nodes/def.interior-product.md) 内乘：用到了定义 内乘　[proofs/dep.mf2-iop-subvol.md](../proofs/dep.mf2-iop-subvol.md)
-- [`def.integral-form`](../nodes/def.integral-form.md) 形式的积分：用到了定义 形式的积分　[proofs/dep.mf2-integral-subvol.md](../proofs/dep.mf2-integral-subvol.md)
+- [`def.integral-on-chain`](../nodes/def.integral-on-chain.md) 链上的积分：用到了定义 链上的积分　[proofs/dep.mf2-integral-subvol.md](../proofs/dep.mf2-integral-subvol.md)

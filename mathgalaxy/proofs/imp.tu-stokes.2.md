@@ -1,7 +1,7 @@
 # 一元微积分基本定理 $\implies$ Stokes 定理
 `imp.tu-stokes` · 推出 · strong 边 · 根 `../`
 
-`def.integral-form` 形式的积分 + `def.exterior-derivative` 外微分 → `thm.stokes` Stokes 定理
+`def.integral-form` 形式的积分 + `def.exterior-derivative` 外微分（欧氏开集） → `thm.stokes` Stokes 定理
 
 只剩 $i = n$：$\int_{Q}\partial_{n}f_{n}\ \mathrm{d}x^{1}\cdots\mathrm{d}x^{n} = \int f_{n}(x^{1},\ldots,x^{n-1},0)\,\mathrm{d}x^{1}\cdots\mathrm{d}x^{n-1}$ —— 而这正是 $\omega$ 限制到边界 $\{x^{n} = 0\}$ 上的积分（诱导定向使两个符号一致）。
 

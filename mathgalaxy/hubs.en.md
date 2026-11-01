@@ -8,9 +8,9 @@ count.)
 Data root `./`: every entry can be followed to `nodes/<id>.md`.
 
 - **7** `lem.zorn` Zorn's lemma · layer 9 · 选择原理
-- **6** `def.submanifold-volume` induced volume · layer 28 · 微分形式、积分与 de Rham
-- **6** `thm.de-rham` de Rham theorem · layer 29 · 微分形式、积分与 de Rham
-- **5** `thm.first-iso` first isomorphism theorem · layer 9 · 代数结构
-- **5** `def.cauchy-null` Cauchy sequences and null sequences · layer 11 · 数系的构造
+- **7** `thm.stokes` Stokes' Theorem · layer 27 · 内蕴几何
+- **6** `thm.bundle-classification` classification of bundles · layer 18 · 流形与向量丛
+- **6** `def.tensor-field` Tensor Field · layer 20 · 向量场与 Lie 结构
+- **6** `def.left-invariant-form` left-invariant form · layer 26 · Lie 群
 
 > continued in `hubs.en.2.md`

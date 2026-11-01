@@ -10,7 +10,7 @@ layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
 ## 它能推出什么 / 谁在用它
 - 被 [`def.involutive-distribution`](../nodes/def.involutive-distribution.md) 对合分布 用
 
-- …另有出边，续页见 [nodes/def.tangent-distribution.5.md](./def.tangent-distribution.5.md)
+- …另有出边，续页见 [nodes/def.tangent-distribution.6.md](./def.tangent-distribution.6.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.tangent-distribution.4.md](./def.tangent-distribution.4.md)

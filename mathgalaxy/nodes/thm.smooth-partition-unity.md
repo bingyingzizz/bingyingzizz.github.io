@@ -11,6 +11,8 @@ layer 17 · 定理 · 流形与向量丛 · 微分几何
 - 被 [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量 用
 - ⇒ [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量
 
+- …另有出边，续页见 [nodes/thm.smooth-partition-unity.5.md](./thm.smooth-partition-unity.5.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.smooth-partition-unity.3.md](./thm.smooth-partition-unity.3.md)
 

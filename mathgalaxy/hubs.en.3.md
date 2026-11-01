@@ -2,16 +2,16 @@
 
 > page 1 `hubs.en.md`
 
-- **5** `def.tensor-field` Tensor Field · layer 20 · 向量场与 Lie 结构
-- **5** `prop.nbv-derivative` derivative of an NBV function and its measure · layer 20 · 有界变差与绝对连续
-- **5** `thm.gauss-bonnet` Gauss–Bonnet Theorem · layer 29 · 内蕴几何
-- **4** `thm.ring-monotone-sigma` when a ring is a sigma-ring · layer 5 · 集合族与 σ-代数
-- **4** `thm.monotone-class` monotone class theorem · layer 6 · 集合族与 σ-代数
+- **5** `def.product-measure` product measure · layer 17 · 乘积测度与 Fubini
+- **5** `def.tangent-bundle` Tangent Bundle · layer 18 · 流形与向量丛
+- **5** `def.form-on-manifold` Differential Form · layer 18 · 微分形式、积分与 de Rham
+- **5** `def.lp-norm` Lp norm · layer 18 · L^p 空间
+- **5** `prop.cg-coreflective` compactly generated spaces form a coreflective subcategory · layer 18 · 紧生成空间与弱 Hausdorff
 
-- **4** `def.section` section · layer 6 · 乘积测度与 Fubini
-- **4** `prop.section-measurable` sections of measurable sets and functions · layer 7 · 乘积测度与 Fubini
-- **4** `thm.quotient-product` quotient map product · layer 7 · 紧生成空间与弱 Hausdorff
-- **4** `def.smooth-manifold` Smooth Manifold · layer 8 · 内蕴几何
-- **4** `def.int` integers · layer 8 · 数系的构造
+- **5** `def.cotangent-bundle` 余切丛 · layer 19 · 流形与向量丛
+- **5** `thm.topos-abelian-grothendieck` abelian groups in a topos form a Grothendieck category · layer 19 · 阿贝尔层
+- **5** `prop.nbv-derivative` derivative of an NBV function and its measure · layer 20 · 有界变差与绝对连续
+- **5** `thm.cartan-formula` Cartan's formula · layer 22 · 向量场与 Lie 结构
+- **5** `prop.boundary-sign-convention` Boundary Sign Convention · layer 27 · 微分形式、积分与 de Rham
 
 > continued in `hubs.en.4.md`

@@ -1,7 +1,7 @@
 # 左不变性 $+$ 括号在左不变场上封闭 $\implies$ Maurer–Cartan 方程
 `imp.mf2-maurer-cartan` · 推出 · strong 边 · 根 `../`
 
-`def.left-invariant-form` 左不变形式 + `def.exterior-derivative` 外微分 + `prop.left-invariant-fields` 左不变向量场 → `thm.maurer-cartan` Maurer–Cartan 方程
+`def.left-invariant-form` 左不变形式 + `def.exterior-derivative` 外微分（欧氏开集） + `prop.left-invariant-fields` 左不变向量场 → `thm.maurer-cartan` Maurer–Cartan 方程
 
 **$\mathfrak{g}$-值版本**：把上式按 $\omega = \sum\omega^{i}e_{i}$ 组装，右端是 $-\frac{1}{2}\sum_{j,k}\omega^{j}\wedge\omega^{k}\,(\sum_{i}c^{i}_{\ jk}e_{i}) = -\frac{1}{2}\sum_{j,k}\omega^{j}\wedge\omega^{k}\,[e_{j},e_{k}] = -\frac{1}{2}[\omega\wedge\omega]$，正是 $\mathrm{d}\omega = -\frac{1}{2}[\omega\wedge\omega]$。∎
 

@@ -1,7 +1,7 @@
 # 逐项积完一元导数 $\implies$ 方块上的 Stokes 公式
 `imp.spivak-cube-stokes` · 推出 · strong 边 · 根 `../`
 
-`def.boundary-operator` 边界算子 + `def.exterior-derivative` 外微分 → `lem.single-cube-stokes` 方块上的 Stokes 公式
+`def.boundary-operator` 边界算子 + `def.exterior-derivative` 外微分（欧氏开集） → `lem.single-cube-stokes` 方块上的 Stokes 公式
 
 **（1）写法。** 把 $\eta$ 按缺哪个 $\mathrm{d}x^{j}$ 唯一地写成
 

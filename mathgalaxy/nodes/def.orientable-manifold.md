@@ -10,7 +10,7 @@ layer 13 · 定义 · 流形与向量丛 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.volume-form-orientation`](../nodes/prop.volume-form-orientation.md) 定向与体积形式 用
+- 被 [`def.integral-form`](../nodes/def.integral-form.md) 形式的积分 用
 
 - …另有出边，续页见 [nodes/def.orientable-manifold.4.md](./def.orientable-manifold.4.md)
 

@@ -1,7 +1,7 @@
 # 链同伦 $\mathrm{d}K + K\mathrm{d} = \operatorname{id}$ $\implies$ 闭形式恰当
 `imp.mf-poincare` · 推出 · strong 边 · 根 `../`
 
-`def.de-rham-complex` de Rham 上同调 + `def.exterior-derivative` 外微分 → `lem.poincare-lemma` Poincaré 引理
+`def.de-rham-complex` de Rham 上同调 + `def.exterior-derivative` 外微分（欧氏开集） → `lem.poincare-lemma` Poincaré 引理
 
 $$\mathrm{d}K\omega + K\mathrm{d}\omega = i_{1}^{\ast}\omega - i_{0}^{\ast}\omega .$$
 

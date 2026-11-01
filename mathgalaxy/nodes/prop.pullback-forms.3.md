@@ -1,4 +1,4 @@
-# 拉回　`prop.pullback-forms`　·　续页（第 3 页）
+# 拉回（开集间）　`prop.pullback-forms`　·　续页（第 3 页）
 [在星图里打开](../#n=prop.pullback-forms)　·　第 1 页 [nodes/prop.pullback-forms.md](./prop.pullback-forms.md)　·　上一页 [nodes/prop.pullback-forms.2.md](./prop.pullback-forms.2.md)
 
 ## 陈述（续）

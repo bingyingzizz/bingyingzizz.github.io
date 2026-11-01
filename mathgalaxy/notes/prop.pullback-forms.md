@@ -1,4 +1,4 @@
-# 拉回　`prop.pullback-forms`　·　说明
+# 拉回（开集间）　`prop.pullback-forms`　·　说明
 根 `../`
 
 **方向**：$F : U\to V$ 给出的是 $F^{\ast} : \Omega^{k}(V)\to\Omega^{k}(U)$，与 $F$ 反向。这就是「形式是协变的」的确切含义；也是它能沿任意光滑映射定义，而向量场的前推要求 $F$ 是微分同胚的原因。

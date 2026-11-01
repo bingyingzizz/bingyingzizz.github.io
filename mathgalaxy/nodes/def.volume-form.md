@@ -8,7 +8,7 @@ layer 26 · 定义 · 微分形式、积分与 de Rham · 微分几何
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.differential-form`](../nodes/def.differential-form.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf-orientable-form.md](../proofs/dep.mf-orientable-form.md)
+- [`def.differential-form`](../nodes/def.differential-form.md) 微分形式（欧氏开集）：用到了定义 微分形式（欧氏开集）　[proofs/dep.mf-orientable-form.md](../proofs/dep.mf-orientable-form.md)
 
 - …另有入边，续页见 [nodes/def.volume-form.3.md](./def.volume-form.3.md)
 
