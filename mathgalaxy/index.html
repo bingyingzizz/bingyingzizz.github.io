@@ -2303,7 +2303,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
         flushPara();
         var ol = [];
         while (i < lines.length && /^\s*\d+[.)]\s+/.test(lines[i])) {
-          ol.push('<li>' + inlineMd(lines[i].replace(/^\s*\d+[.)]\s+/, '')) + '</li>'); i++;
+          /* ⭐ 2026-11-01：**把源码里的序号写进 `value`**。
+             以前只输出 <li>，序号交给浏览器数 —— 一旦列表被中间的 $$…$$ 或空行断开，
+             后面的条目会另起一个 <ol> 又从 1 数起（实测「容许右分式演算」第 3 条显示成 1）。
+             写 value 之后，作者写几就是几，与列表被切几段无关。 */
+          var om = /^\s*(\d+)[.)]\s+/.exec(lines[i]);
+          ol.push('<li' + (om ? ' value="' + om[1] + '"' : '') +
+            inlineMd(lines[i].replace(/^\s*\d+[.)]\s+/, '')) + '</li>'); i++;
         }
         html.push('<ol>' + ol.join('') + '</ol>');
         continue;
@@ -32694,7 +32700,10 @@ window.MG = window.MG || {};
       notes: [
         '**怎么把态射造出来。** 局部化里的态射是 $W$ 中态射的**形式逆**与 $\\mathcal{C}$ 中原有态射拼成的**有限长链**（这叫**分式**，因为长得像 $c \\cdot w^{-1} \\cdot d$）。两个这样的链只要能用原范畴里的交换图连通，就视作同一个态射。',
         '⭐ **两个标准例子**（都在同调代数那一支）：把链同伦 $\\simeq$ 全体当成同构，得到**同伦范畴** $\\mathbf{K}(\\mathcal{C})$；再把**拟同构**全体当成同构，得到**导出范畴** $D(\\mathcal{A})$。所以这一条是那一整条线的地基层。',
-        '⚠️ **局部化一定存在，但可能很贵**：一般情形下 $\\mathrm{ho}(\\mathcal{C})$ 的态射**不再是集合**（每两个对象之间的分式链可能真类多），Hom 也可能爆掉。下面那条命题说的就是「什么时候它老老实实是个局部小范畴」。'
+        '⚠️ **局部化一定存在，但可能很贵**：一般情形下 $\\mathrm{ho}(\\mathcal{C})$ 的态射**不再是集合**。' +
+        '本图的范畴论部分一律相对一个固定的 Grothendieck 宇宙 $U$（`ax.grothendieck-universe`）来谈大小 ——' +
+        '两个对象之间的分式链可能**多到 $U$ 装不下**（即这堆链本身不在 $U$ 里），于是 $\\operatorname{Hom}$ 不是集合，Hom 也就无从下手。' +
+        '下面那条命题说的就是「什么时候它的每个 Hom 都老老实实是 $U$ 里的集合」（即局部小）。'
       ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §1.1']
     },
