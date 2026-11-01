@@ -5,7 +5,7 @@
 
 - 序型 | order type | 序数表示 → thm.wellorder-ordinal
 
-- Burali-Forti | 序数全体是真类 | 布拉利-福尔蒂 → thm.burali-forti
+- Burali-Forti | 序数全体不构成集合 | 布拉利-福尔蒂 → thm.burali-forti
 
 - 选择函数 | choice function | 选取函数 → def.choicefn
 

@@ -1,7 +1,7 @@
-# 序数的定义 + 三歧性 $\implies$ 序数全体是真类
+# 序数的定义 + 三歧性 $\implies$ 序数全体不构成集合
 `imp.burali-forti` · 推出 · strong 边 · 根 `../`
 
-`def.ordinal` 序数 + `thm.ordinal-trichotomy` 序数可比 → `thm.burali-forti` 序数全体是真类
+`def.ordinal` 序数 + `thm.ordinal-trichotomy` 序数可比 → `thm.burali-forti` 序数全体不构成集合
 
 反设 $\mathrm{On}$ 是一个集合。
 

@@ -3,4 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.wellorder-ordinal`](../nodes/thm.wellorder-ordinal.md) 良序集的序型
-- ⇒ [`thm.burali-forti`](../nodes/thm.burali-forti.md) 序数全体是真类
+- ⇒ [`thm.burali-forti`](../nodes/thm.burali-forti.md) 序数全体不构成集合
