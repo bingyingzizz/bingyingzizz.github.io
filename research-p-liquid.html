@@ -80,537 +80,573 @@
 
 <main class="paper">
 
-  <p class="kicker">Preprint</p>
-  <h1>紧群上 $p$-liquid 系数的正次数上同调：一般系数的反例</h1>
-  <p class="en-title">Positive-degree cohomology of compact groups with $p$-liquid coefficients:
-    a counterexample for general coefficients</p>
-  <p class="byline">bingyingzizz · 2026 年 10 月</p>
-
-  <div class="status">
-    未经同行评审。引用请注明 preprint。
-  </div>
-
-  <div class="abstract">
-    <span class="ablabel">摘要</span>
-    <p>设 $G=\mathrm{SU}(2)$，$V_p=\operatorname{coker}\bigl(\partial_4:M_{&lt;p}(G^4)\to M_{&lt;p}(G^3)\bigr)$，
-    取平凡作用。本文证明 $V_p$ 是 $p$-liquid 实向量空间且 $H^3(G,V_p)\neq0$。
-    因此 Clausen–Scholze 在《Lectures on Analytic Geometry》Lecture X 中提出的问题——紧非交换群、
-    $p$-liquid 系数、平凡作用时 $H^i(G,V)$ 是否对一切 $i&gt;0$ 为零——在「任意 $p$-liquid 系数」
-    这一量词下答案为否。</p>
-    <p>论证分三步。第一，$p$-liquid 测度是可数原子和，由此证明集合意义的有界函数可以在
-    $M_{&lt;p}(S)$ 的通常点上按原子取值（§4）。第二，用四元数除代数 $(-1,-1)_{\mathbb{Q}(\sqrt[3]{2})}$
-    造出一个抽象群同时嵌入 $\mathrm{SU}(2)$ 与 $\mathrm{PSL}_2(\mathbb{C})$ 的余紧格，
-    借此把闭双曲三流形的体积上圈拉回成 $G^{\delta}$ 上的有界三上圈，并配上一个配对为正的
-    有限三圈（§5–§6）。第三，把前两步合起来，得到该三圈不存在 liquid 四链填充，
-    从而 $H^3(G,V_p)\neq0$（§7–§8）。</p>
-    <p>$p$-Banach 情形不在本文范围内。§9 说明 $V_p$ 不来自任何 Hausdorff p-Banach，
-    并把 p-Banach 反例的存在性归约为一个显式标量下确界是否为正；其中「前插平均」这一族已被解决，
-    剩余缺口是一个量词问题。</p>
-  </div>
-
-  <h2>1　问题</h2>
-
-  <p>设 $G$ 为紧群，$V$ 为 $p$-liquid $\mathbb{R}$-向量空间（$0&lt;p\leq1$），$G$ 平凡作用于 $V$。
-    本文的上同调指 condensed 导出群上同调 $H^i(G,V)=R\Gamma(BG,V)$。所要回答的是：</p>
-
-  <blockquote><p><b>Question 0.10.4</b>（Clausen–Scholze，Lecture X）。
-    Let $G$ 是紧非交换群，例如 $G=\mathrm{SU}(2)$，$V$ 是 $p$-liquid $\mathbb{R}$-向量空间，
-    例如 $p$-Banach，$G$ 平凡作用。是否对一切 $i&gt;0$ 都有 $H^i(G,V)=0$？</p></blockquote>
-
-  <p>已知情形如下。紧交换群由同一讲的 Cor. 0.10.2 解决，作者并注明该证明「用到交换性」。
-    有限群由平均幂等自动成立。系数为 $p\geq1$ 或局部凸时由 Austin–Moore 的定理覆盖。
-    profinite 群目前只有比较定理。因此缺口是<b>非交换且 $p&lt;1$</b> 的情形。</p>
-
-  <p>本文在「任意 $p$-liquid 系数」这一量词下给出反例。系数取</p>
-
-  <p>$$V_p=\operatorname{coker}\bigl(\partial_4:M_{&lt;p}(G^4)\longrightarrow M_{&lt;p}(G^3)\bigr),
-    \qquad G=\mathrm{SU}(2),$$</p>
-
-  <p>赋予平凡作用。结论是 $H^3(G,V_p)\neq0$。需要强调的是：$V_p$ 是 $p$-liquid 但不是 quasiseparated
-    对象，也不来自 p-Banach（§9.1），所以本文不回答 p-Banach 情形。</p>
-
-  <h2>2　所用的外部结果</h2>
-
-  <p>除下列结果外，本文只用标准代数数论与同调代数。编号依 2026-05-05 的稳定引用版。</p>
-
-  <table>
-    <thead><tr><th>编号</th><th>内容</th><th>用处</th></tr></thead>
-    <tbody>
-      <tr><td>Thm. 6.5</td>
-        <td>$\mathcal{L}iquid_p(\mathbb{R})$ 是 $\mathrm{Cond}(\mathbb{R})$ 的阿贝尔子范畴，
-          对核、余核、扩张封闭；由 $M_{&lt;p}(S)$（$S$ 极不连通）紧投射生成；
-          含入函子 $D(\mathcal{L}iquid_p)\to D(\mathrm{Cond})$ 全忠实，其左伴随为左导出函子。</td>
-        <td>§8.1、§8.4</td></tr>
-      <tr><td>Prop. 10.1</td>
-        <td>对任意紧 Hausdorff $S$，$\mathbb{R}[S]$ 的导出 $p$-liquidification 等于 $M_{&lt;p}(S)$，
-          且集中在次数 $0$。</td><td>§8.4</td></tr>
-      <tr><td>Prop. 10.7</td>
-        <td>设 $S$ 紧 Hausdorff、$0&lt;p&lt;1$。则任意 $\mu\in M_p(S)$ 可写成
-          $\mu=\sum_{n\geq0}x_n[s_n]$，其中 $s_n\in S$、$x_n\in\mathbb{R}$、$\sum_n|x_n|^p&lt;\infty$，
-          原子可取互不相同。</td><td>§4</td></tr>
-      <tr><td>Cor. 0.10.2</td>
-        <td>紧交换 $A$、$V$ $p$-liquid 时 $R\underline{\mathrm{Hom}}(A,V)=0$。</td>
-        <td>仅用于说明缺口位置</td></tr>
-    </tbody>
-  </table>
-
-  <p>Prop. 10.7 之后原文指出：该描述只是 underlying set 的描述，$M_p(S)$ 作为 condensed set
-    并不是可数子空间上的滤过余极限。本文只在通常点上使用该展开，不据此推断 condensed 结构。</p>
-
-  <h2>3　复形与检测三圈</h2>
-
-  <p>固定 $0&lt;p\leq1$ 与 $G=\mathrm{SU}(2)$。令 $C_n=M_{&lt;p}(G^n)$、$C_0=\mathbb{R}$，
-    边界由非齐次 bar 公式给出：</p>
-
-  <p>$$\partial_3[g|h|k]=[h|k]-[gh|k]+[g|hk]-[g|h],$$</p>
-  <p>$$\partial_4[g|h|k|\ell]=[h|k|\ell]-[gh|k|\ell]+[g|hk|\ell]-[g|h|k\ell]+[g|h|k].$$</p>
-
-  <p>称 $z\in C_3$ 为<b>检测三圈</b>，若 $\partial_3z=0$ 且存在集合意义有界的实三上圈 $\beta$
-    （即 $\delta\beta=0$）使 $E_\beta(z)\neq0$，其中 $E_\beta$ 为 §4 定义的原子取值。
-    §5–§6 构造这样的 $(z,\beta)$，§7 证明 $z$ 不是 liquid 边界。</p>
-
-  <h2>4　有界函数在 liquid 链上的取值</h2>
-
-  <p>记 $\varepsilon:M_{&lt;p}(S)\to\mathbb{R}$ 为总质量泛函，$\varepsilon([s])=1$。
-    设 $f:S\to\mathbb{R}$ 集合意义有界。形式上令</p>
-
-  <p>$$E_f\Bigl(\sum_ja_j[s_j]\Bigr)=\sum_ja_jf(s_j).$$</p>
-
-  <p>若 $f$ 不连续，这一步不能由连续性得到；本节说明它仍然良定义。</p>
-
-  <h3>4.1　展开的绝对收敛性</h3>
-
-  <p>设 $\mu\in M_{&lt;p}(S)(*)$。由 $M_{&lt;p}=\varinjlim_{q&lt;p}M_q$ 的共尾性，存在 $q&lt;p$ 使
-    $\mu\in M_q(S)(*)$。取 Prop. 10.7 的展开 $\mu=\sum_nx_n[s_n]$，$\sum_n|x_n|^q&lt;\infty$。
-    因 $|x_n|^q$ 可和，$|x_n|\to0$，故最终 $|x_n|\leq1$，从而 $|x_n|\leq|x_n|^q$，于是</p>
-
-  <p>$$\sum_n|x_n|&lt;\infty .$$</p>
-
-  <p>因此对任何有界 $f$，右端绝对收敛。剩下的问题是它与展开的选取无关。</p>
-
-  <h3>4.2　连续函数给出的泛函</h3>
-
-  <p>设 $f=\varphi$ 连续。此时 $[s]\mapsto\varphi(s)$ 是 $\mathbb{R}[S]\to\mathbb{R}$ 的 condensed
-    线性映射，经 $p$-liquidification 的左伴随给出 $\tilde\varphi:M_{&lt;p}(S)\to\mathbb{R}$，
-    它在原子上的取值是 $\tilde\varphi\bigl(\sum_ja_j[s_j]\bigr)=\sum_ja_j\varphi(s_j)$。
-    于是若 $\sum_ja_j[s_j]=0$，则对每个连续 $\varphi$ 有 $\sum_ja_j\varphi(s_j)=0$。</p>
-
-  <h3>4.3　良定义性</h3>
-
-  <div class="env lem"><div class="hd">Lemma 4.1</div>
-    <p>设 $S$ 紧 Hausdorff、$0&lt;p\leq1$、$f:S\to\mathbb{R}$ 集合意义有界。
-    则 $E_f$ 在 $M_{&lt;p}(S)(*)$ 上良定义且线性。</p>
-  </div>
-
-  <p class="pf">设 $\sum_ja_j[s_j]=0$ 是一元素的原子展开。由 §4.2，对每个连续 $\varphi$ 有
-    $\sum_ja_j\varphi(s_j)=0$。于是有限变差 Radon 测度
-    $\Sigma=\sum_ja_j\delta_{s_j}$ 与每个连续函数配零；紧 Hausdorff 空间上的连续函数分离有限变差
-    Radon 测度，故 $\Sigma=0$，特别地对每个 $s$ 有 $\Sigma(\{s\})=\sum_{s_j=s}a_j=0$。
-    展开绝对收敛，可按同一原子分组，于是对任意有界 $f$ 有</p>
-
-  <p>$$\sum_ja_jf(s_j)=\sum_s\Bigl(\sum_{s_j=s}a_j\Bigr)f(s)=0 .$$</p>
-
-  <p>两个展开之差归于此情形，故 $E_f$ 与展开无关；线性性由展开的拼接得到。
-    若 $a:S\to S'$ 连续、$f:S'\to\mathbb{R}$ 有界，则绝对收敛直接给出
-    $E_f\circ a_*=E_{f\circ a}$。∎</p>
-
-  <h3>4.4　良定义性的算术来源</h3>
-
-  <p>上节的论证用到「若展开之和为零，则每个原子上的系数之和为零」。这一条等价于如下事实：
-    实特化的核恰好是 $dF_r(S)(*)$。此处 $F_r(S)=M(S,\mathbb{Z}((T))_r)$、$d=2-T^{-1}$、
-    $r=2^{-q}$，并在 $T=1/2$ 处特化。该事实由显式除法给出。</p>
-
-  <div class="env lem"><div class="hd">Lemma 4.2</div>
-    <p>设 $\mu=(\mu_n)_n\in F_r(S)(*)$，$\mu_n=\sum_sc_{n,s}[s]$ 为第 $n$ 层的有限链，且
-    $\sum_nm_nr^n&lt;\infty$，$m_n=\sum_s|c_{n,s}|$。令
-    $\mathcal{A}_r(\mu)=\sum_n2^{-n}\mu_n$（在 $\ell^1(S)$ 中收敛）。若 $\mathcal{A}_r(\mu)=0$，则存在
-    $\nu\in F_r(S)(*)$ 使 $d\nu=\mu$，且
-    $\sum_nr^n\|\nu_n\|_1\leq\frac{r}{2r-1}\sum_km_kr^k$。</p>
-  </div>
-
-  <p class="pf">由 $\sum_nm_nr^n&lt;\infty$ 与 $r&lt;1$ 知 $m_n=0$ 对充分负的 $n$ 成立，故 $\mu$ 的非零层有下界
-    $n_0$。令</p>
-
-  <p>$$\nu_n=-\sum_{k&lt;n}2^{n-1-k}\mu_k .$$</p>
-
-  <p>由下界性，每个 $\nu_n$ 是有限个 $\mathbb{Z}[S]$ 元素的整数线性组合，$n\leq n_0$ 时为零。直接计算</p>
-
-  <p>$$(d\nu)_n=2\nu_n-\nu_{n+1}=\mu_n ,$$</p>
-
-  <p>故 $d\nu=\mu$。若 $\varepsilon$ 记总质量，则 $\varepsilon(\mu_n)=0$ 对所有 $n$ 成立，从而
-    $\nu_n=\sum_{k\geq n}2^{n-1-k}\mu_k$（绝对收敛的尾和）。由 Tonelli，</p>
-
-  <p>$$\sum_nr^n\|\nu_n\|_1\leq\sum_km_k\sum_{n\leq k}2^{n-1-k}r^n
-    =\sum_km_k\frac{r^{k+1}}{2r-1}\leq\frac{r}{2r-1}\sum_km_kr^k&lt;\infty ,$$</p>
-
-  <p>其中用了 $\sum_{n\leq k}(2r)^n=(2r)^k\cdot\frac{2r}{2r-1}$，而 $2r&gt;1$ 使该几何级数收敛。∎</p>
-
-  <p>Lemma 4.2 与「实特化给出的商是 $M_q(S)$」合起来给出
-    $\ker\bigl(M_q(S)(*)\to\ell^q(S)\bigr)=dF_r(S)(*)$，这正是 §4.3 所需的唯一额外输入。
-    一个直接的核对：对有限链，核就是「原子系数按点求和为零」的那些元素，与测度语言一致。</p>
-
-  <h2>5　算术输入</h2>
-
-  <p>本节构造一个抽象群，它同时嵌入 $\mathrm{SU}(2)$ 与 $\mathrm{PSL}_2(\mathbb{C})$ 的余紧格，
-    且两个表示由一个域自同构相连。这个「同一群、两个表示」的结构是全文的关键：
-    体积上圈只在前者（$\mathrm{PSL}_2(\mathbb{C})$ 一侧）有意义，而我们需要它定义在<b>整个</b>
-    $\mathrm{SU}(2)$ 上。</p>
-
-  <h3>5.1　数域与四元数代数</h3>
-
-  <p>令 $\alpha=\sqrt[3]{2}$、$k=\mathbb{Q}(\alpha)$。$x^3-2$ 是 Eisenstein 多项式，故 $k$ 的次数为 $3$；
-    它只有一个实位（$\alpha\mapsto\sqrt[3]{2}$）与一对复位（$\alpha\mapsto\zeta_3^{\pm1}\sqrt[3]{2}$）。
-    取四元数代数</p>
-
-  <p>$$B=(-1,-1)_k=k\langle I,J\rangle,\qquad I^2=J^2=-1,\quad IJ=-JI,\quad K=IJ .$$</p>
-
-  <p>在唯一实位，$B\otimes_{k,v}\mathbb{R}\cong\mathbb{H}$（Hamilton 四元数），故 $B$ 在该位分歧；
-    特别地 $B$ 是除代数。在复位 $B\otimes_{k,w}\mathbb{C}\cong M_2(\mathbb{C})$，此时 $B$ 分裂。
-    设 $\mathcal{O}=\mathcal{O}_k\oplus\mathcal{O}_kI\oplus\mathcal{O}_kJ\oplus\mathcal{O}_kK$
-    为极大序，$\mathcal{O}^1$ 为范数 $1$ 的元素群。</p>
-
-  <h3>5.2　格与无挠性</h3>
-
-  <p>由算术 Kleinian 群的标准理论，$\mathcal{O}^1$ 在复位投影到 $\mathrm{PSL}_2(\mathbb{C})$
-    是有限余体积格；因 $B$ 是除代数，该格余紧。取</p>
-
-  <p>$$\Gamma=\{x\in\mathcal{O}^1:\ x-1\in3\mathcal{O}\},$$</p>
-
-  <p>它是有限指数无挠子群。有限指数由 $\mathcal{O}/3\mathcal{O}$ 有限得到；无挠性用二项展开：
-    设 $A=1+3^sD$，$s\geq1$，$D\not\equiv0\bmod3$，且 $A^\ell=1$ 取 $\ell$ 素数。则</p>
-
-  <p>$$A^\ell-1=\ell\,3^sD+\binom{\ell}{2}3^{2s}D^2+\cdots$$</p>
-
-  <p>若 $\ell\neq3$，最低项的 $3$-进价为 $s$，其余项至少 $2s$，故 $A^\ell-1\neq0$；
-    若 $\ell=3$，最低项为 $3^{s+1}D$，价 $s+1$，其余项至少 $2s+1&gt;s+1$，同样矛盾。</p>
-
-  <h3>5.3　实位嵌入</h3>
-
-  <p>实位给出忠实嵌入</p>
-
-  <p>$$\rho_0(a+bI+cJ+dK)=\begin{pmatrix}a+bi&c+di\\-c+di&a-bi\end{pmatrix}.$$</p>
-
-  <p>直接计算 $\rho_0(x)^*\rho_0(x)=\bigl(a^2+b^2+c^2+d^2\bigr)\mathrm{id}$，而
-    $a^2+b^2+c^2+d^2$ 正是约化范数，故 $\rho_0(\mathcal{O}^1)\subseteq\mathrm{SU}(2)$，
-    且 $\det\rho_0(x)$ 等于约化范数。</p>
-
-  <h3>5.4　域自同构</h3>
-
-  <p>取域嵌入 $\tau:k(i)\to\mathbb{C}$，$\alpha\mapsto\zeta_3\alpha$、$i\mapsto i$。
-    二者相容：$\tau$ 由 $\mathbb{Q}[x,y]/(x^3-2,\,y^2+1)\to\mathbb{C}$，$x\mapsto\zeta_3\alpha$、
-    $y\mapsto i$ 给出，两条关系式在像上成立，故良定义且单射。</p>
-
-  <p>这一步不自相矛盾的关键是 $\zeta_3\notin k(i)$。若不然，$\mathbb{Q}(\zeta_3)\subseteq k(i)$，
-    于是 $k(i)=\mathbb{Q}(\alpha,\zeta_3)$（两者次数都是 $6$），而后者是 $x^3-2$ 的分裂域、
-    因而在 $\mathbb{Q}$ 上 Galois；但 $k(i)=\mathbb{Q}(\alpha,i)$ 的 Galois 闭包是
-    $\mathbb{Q}(\alpha,\zeta_3,i)$，次数 $12$，矛盾。</p>
-
-  <p>把 $\tau$ 先延拓到 $\overline{\mathbb{Q}}$，再取超越基延拓为 $\sigma\in\operatorname{Aut}(\mathbb{C})$。
-    逐项作用于矩阵得到抽象群同态</p>
-
-  <p>$$\rho=\sigma|_{\mathrm{SU}(2)}:\ \mathrm{SU}(2)^{\delta}\longrightarrow\mathrm{SL}_2(\mathbb{C})^{\delta}.$$</p>
-
-  <p>它保持乘法（矩阵乘法是元素的多项式），且 $\det\sigma(M)=\sigma(\det M)=\sigma(1)=1$，
-    故确实取值于 $\mathrm{SL}_2(\mathbb{C})$。它<b>定义在整个</b> $\mathrm{SU}(2)$ 上——
-    这一点是后文能取到整体有界上圈的原因——但不连续，也不保持酉性。</p>
-
-  <h3>5.5　两个表示的关系</h3>
-
-  <p>把 $k$ 经实位看作 $\mathbb{C}$ 的子域。对 $\gamma=a+bI+cJ+dK\in\Gamma$，其坐标 $a,b,c,d$ 在
-    $k\subset\mathbb{R}$ 中，故 $\rho_0(\gamma)$ 的条目是 $a+bi$ 之类；施加 $\sigma$ 后条目变为
-    $\sigma(a)+\sigma(b)i$ 之类。由于 $\sigma|_k$ 就是复嵌入 $\alpha\mapsto\zeta_3\alpha$，而
-    $\sigma(i)=i$，所得矩阵正是复位表示 $\rho_2(\gamma)$。即</p>
-
-  <p>$$\rho\circ\rho_0=\rho_2:\ \Gamma\longrightarrow\mathrm{SL}_2(\mathbb{C}),$$</p>
-
-  <p>且 $\det\rho_2(\gamma)=\sigma(\text{约化范数})=1$。$\rho_2$ 在 $\mathrm{PSL}_2(\mathbb{C})$
-    中的像 $\Lambda$ 是余紧无挠格；它忠实，因为 $-1$ 是挠元而 $\Gamma$ 无挠。
-    于是</p>
-
-  <p>$$M=\Lambda\backslash\mathbb{H}^3$$</p>
-
-  <p>是闭定向双曲三流形，$\operatorname{Vol}(M)&gt;0$，$\pi_1(M)\cong\Gamma$。</p>
-
-  <h2>6　体积上圈与有限三圈</h2>
-
-  <h3>6.1　直四面体体积</h3>
-
-  <p>固定 $o\in\mathbb{H}^3$。对 $A,B,C\in\mathrm{SL}_2(\mathbb{C})$（经 $\mathrm{PSL}_2(\mathbb{C})$ 作用）令</p>
-
-  <p>$$v(A,B,C)=\operatorname{Vol}_{\mathrm{or}}\bigl[o,Ao,ABo,ABCo\bigr]$$</p>
-
-  <p>为有向直四面体的体积。它满足两条性质。其一，$|v|\leq v_3$，其中 $v_3$ 是正则理想双曲四面体的
-    体积（这是双曲四面体体积的上界，与顶点位置无关）。其二，齐次形式
-    $F(x_0,x_1,x_2,x_3)=\operatorname{Vol}_{\mathrm{or}}[x_0,x_1,x_2,x_3]$ 在五点上的交错和为零：</p>
-
-  <p>$$\sum_{i=0}^{4}(-1)^iF(x_0,\dots,\widehat{x_i},\dots,x_4)=0 .$$</p>
-
-  <p>这来自「直化是链映射」与 $d\,\mathrm{vol}_{\mathbb{H}^3}=0$ 的 Stokes 公式：直 $4$-单形的边界
-    总定向体积为零。取 $(x_0,\dots,x_4)=(o,Ao,ABo,ABCo,ABCDo)$ 即得非齐次上圈等式
-    $\delta v=0$。</p>
-
-  <h3>6.2　有界三上圈</h3>
-
-  <p>令 $G=\mathrm{SU}(2)$，定义</p>
-
-  <p>$$\beta(g,h,k')=v\bigl(\rho(g),\rho(h),\rho(k')\bigr).$$</p>
-
-  <p>由 $\rho$ 定义在整个 $G$ 上，$\beta$ 定义在整个 $G^3$ 上；由 $|v|\leq v_3$ 得
-    $\|\beta\|_\infty\leq v_3$；由 $\delta v=0$ 得 $\delta\beta=0$。
-    注意 $\beta$ 不连续、不可测，但引理 4.1 只要求它集合意义有界。</p>
-
-  <h3>6.3　有限 bar 代表与直化次数</h3>
-
-  <p>取 $M$ 的一个有限有序三角剖分 $w$（定向基本三链），并把剖分提升到 $\mathbb{H}^3$。
-    对每个顶点轨道选代表 $\tilde v_a$，令 $\tilde f(\gamma\tilde v_a)=\gamma o$，
-    再在每个提升的四面体上作面相容的测地直化，得到 $\Gamma$-等变的连续映射
-    $\tilde f:\mathbb{H}^3\to\mathbb{H}^3$。</p>
-
-  <p>$\mathbb{H}^3$ 是 $\mathrm{CAT}(-1)$ 空间，两点间测地线唯一，故
-    $\widetilde H(x,t)=$ 从 $x$ 到 $\tilde f(x)$ 的测地线在参数 $t$ 处的点给出连续、
-    $\Gamma$-等变的同伦 $\mathrm{id}\simeq\tilde f$（$\Gamma$ 通过等距作用）。
-    它下降为 $\mathrm{id}_M\simeq f$，于是 $f_*[M]=[M]$，即 $\deg f=1$。</p>
-
-  <p>对 $w$ 中每个定向四面体取一个提升，顶点写成 $\gamma_i\tilde v_{a_i}$，对应齐次 bar 单形
-    $[\gamma_0|\gamma_1|\gamma_2|\gamma_3]$，按 $w$ 的系数相加。公共面相消（换提升只同时左乘），
-    故所得</p>
-
-  <p>$$z_\Gamma\in\mathbb{R}[\Gamma^3],\qquad \partial_3z_\Gamma=0$$</p>
-
-  <p>是有限三圈。写成非齐次记号，每项为
-    $[\gamma_0^{-1}\gamma_1\,|\,\gamma_1^{-1}\gamma_2\,|\,\gamma_2^{-1}\gamma_3]$；
-    在 $v$ 下的体积正是该四面体在 $f_*w$ 中的有向体积（先用 $\gamma_0^{-1}$ 平移顶点）。
-    于是</p>
-
-  <p>$$\langle v,z_\Gamma\rangle=\int_{f_*w}\mathrm{vol}_M
-    =\langle[\mathrm{vol}_M],f_*[M]\rangle=\operatorname{Vol}(M)&gt;0 .$$</p>
-
-  <h3>6.4　推前到 $G$</h3>
-
-  <div class="env lem"><div class="hd">Lemma 6.1</div>
-    <p>令 $z=(\rho_0)_*z_\Gamma\in\mathbb{R}[G^3]$。则 $\partial_3z=0$ 且 $E_\beta(z)=\operatorname{Vol}(M)&gt;0$。</p>
-  </div>
-
-  <p class="pf">$\rho_0$ 是群同态，故推前与 $\partial_3$ 交换，得 $\partial_3z=0$。
-    对 $z_\Gamma=\sum_ra_r[\gamma_{r,0}|\gamma_{r,1}|\gamma_{r,2}]$，</p>
-
-  <p>$$E_\beta(z)=\sum_ra_r\,v\bigl(\rho\rho_0(\gamma_{r,0}),\rho\rho_0(\gamma_{r,1}),\rho\rho_0(\gamma_{r,2})\bigr)
-    =\sum_ra_r\,v\bigl(\rho_2(\gamma_{r,0}),\rho_2(\gamma_{r,1}),\rho_2(\gamma_{r,2})\bigr),$$</p>
-
-  <p>后一等号用 §5.5 的 $\rho\circ\rho_0=\rho_2$。右端即 $\langle v,z_\Gamma\rangle=\operatorname{Vol}(M)&gt;0$。∎</p>
-
-  <h2>7　检测三圈不可填充</h2>
-
-  <div class="env lem"><div class="hd">Lemma 7.1</div>
-    <p>不存在 $b\in M_{&lt;p}(G^4)(*)$ 使 $\partial_4b=z$。</p>
-  </div>
-
-  <p class="pf">反设 $z=\partial_4b$。由 Lemma 4.1，取 $b=\sum_jc_j[d_j]$ 的原子展开，令
-    $b_N=\sum_{j\leq N}c_j[d_j]$。取 $q&lt;p$ 使 $\sum_j|c_j|^q&lt;\infty$，并对有限链 $\xi$ 定义原子
-    $q$-质量</p>
-
-  <p>$$m_q(\xi)=\sum_s|\xi_s|^q .$$</p>
-
-  <p>$m_q$ 次可加。$\partial_4$ 的五项各由连续映射（投影、乘法）诱导，故
-    $m_q(\partial_4\xi)\leq5\,m_q(\xi)$。于是</p>
-
-  <p>$$m_q\bigl(\partial_4(b-b_N)\bigr)\leq5\sum_{j&gt;N}|c_j|^q\longrightarrow0 .$$</p>
-
-  <p>另一方面，$E_\beta(\partial_4b_N)=\sum_{j\leq N}c_j(\delta\beta)(d_j)=0$，因为
-    $E_\beta\circ\partial_4=E_{\delta\beta}$（Lemma 4.1 的函子性）且 $\delta\beta=0$；
-    这里所有和都是有限的。最后估计</p>
-
-  <p>$$\bigl|E_\beta(\xi)\bigr|\leq\|\beta\|_\infty\sum_s|\xi_s|
-    \leq\|\beta\|_\infty\,m_q(\xi)^{1/q},$$</p>
-
-  <p>末步用 $q\leq1$ 时 $(\sum|\xi_s|)^q\leq\sum|\xi_s|^q$。把上式用于 $\xi=\partial_4(b-b_N)$ 并令
-    $N\to\infty$，得 $E_\beta(\partial_4b)=0$，与 $E_\beta(z)=\operatorname{Vol}(M)&gt;0$ 矛盾。∎</p>
-
-  <p>由于通常点上的取值在投射测试对象上正合，Lemma 7.1 蕴含 $z$ 不是 $C_\bullet$ 中的边界，
-    即 $H_3(C_\bullet)\neq0$。这是本文唯一使用「通常点」的地方，方向是证明对象非零，
-    而不是用通常点检测所有对象为零。</p>
-
-  <h2>8　系数 $V_p$ 与非零类</h2>
-
-  <h3>8.1　$V_p$ 是 $p$-liquid</h3>
-
-  <p>$M_{&lt;p}(G^3)$、$M_{&lt;p}(G^4)$ 是 $\mathcal{L}iquid_p$ 的生成元，故属于该范畴；
-    由 Thm. 6.5，$\mathcal{L}iquid_p$ 对余核封闭，故
-    $V_p=\operatorname{coker}(\partial_4:M_{&lt;p}(G^4)\to M_{&lt;p}(G^3))$ 亦属之。</p>
-
-  <h3>8.2　上圈</h3>
-
-  <p>令 $q:C_3\to V_p$ 为商映射，$c_p=q\circ\mathrm{Dirac}:G^3\to V_p$。由 $q\partial_4=0$ 得
-    $\delta c_p=0$。$c_p$ 是 condensed 态射，因为 $[g|h|k]$ 是 $G^3\to C_3$ 的态射。</p>
-
-  <h3>8.3　类非零</h3>
-
-  <div class="env lem"><div class="hd">Lemma 8.1</div>
-    <p>在 $H^3(G,V_p)$ 中 $[c_p]\neq0$。</p>
-  </div>
-
-  <p class="pf">令 $Q:C_\bullet\to V_p[3]$ 在链次数 $3$ 取 $q$、其余次数取零。由
-    $dQ=q\partial_4=0$ 知 $Q$ 是链映射。若 $[Q]=0$，则存在
-    $R\in\operatorname{Hom}(C_2,V_p)$ 使 $Q=dR$，即 $Q(y)=R(\partial_3y)$ 对一切 $y\in C_3$。
-    取 $y=z$：由 $\partial_3z=0$ 得</p>
-
-  <p>$$q(z)=Q(z)=R(\partial_3z)=R(0)=0 ,$$</p>
-
-  <p>而 $q(z)\neq0$——否则 $z$ 是 $C_\bullet$ 中的边界，与 Lemma 7.1 矛盾。∎</p>
-
-  <h3>8.4　把类算到 $H^3(G,V_p)$ 中</h3>
-
-  <div class="env lem"><div class="hd">Lemma 8.2</div>
-    <p>对 $p$-liquid $V$ 有自然等价</p>
-    <p>$$R\Gamma(BG,V)\simeq\operatorname{Tot}_{[n]\in\Delta}
-      R\operatorname{Hom}_{\mathrm{Cond}(\mathbb{R})}\bigl(\mathbb{R}[G^n],V\bigr)
-      \simeq R\operatorname{Hom}(C_\bullet,V).$$</p>
-  </div>
-
-  <p class="pf">第一步是分类 topos 的 bar 下降（平凡作用使系数在各层都是 $V$）。
-    对每个单形 $[n]$，由 Thm. 6.5 全忠实性与导出伴随，
-    $R\operatorname{Hom}_{\mathrm{Cond}}(\mathbb{R}[S],V)\simeq
-    R\operatorname{Hom}_{\mathcal{L}iquid_p}\bigl(\mathbb{R}[S]^{L,liq},V\bigr)$；
-    再由 Prop. 10.1，$\mathbb{R}[S]^{L,liq}\simeq M_{&lt;p}(S)$ 且集中在次数 $0$。
-    左导出函子在导出范畴上正合，故与全复形交换，逐项替换合法。</p>
-
-  <p>最后一项：取 $V\to I^\bullet$ 的非负内射解，则 $\operatorname{Hom}(C_n,I^m)$ 的总次数为 $n+m$，
-    每个总次数只有有限多项；正规化与未正规化之间的退化部分可缩，故第一象限比较定理给出总复形的
-    等价。全程不需要 $C_n$ 的投射性。∎</p>
-
-  <p>由 Lemma 8.2，Lemma 8.1 中的非零链映射 $Q$ 给出 $R\Gamma(BG,V_p)$ 在次数 $3$ 的非零元，
-    即 $[c_p]\neq0\in H^3(G,V_p)$。</p>
-
-  <h3>8.5　主定理</h3>
-
-  <div class="env thm"><div class="hd">Theorem 8.3</div>
-    <p>设 $G=\mathrm{SU}(2)$、$0&lt;p\leq1$，$V_p=\operatorname{coker}(\partial_4:C_4\to C_3)$ 取平凡作用。
-    则 $V_p$ 是 $p$-liquid 实向量空间，且</p>
-    <p>$$H^3(G,V_p)\neq0 .$$</p>
-  </div>
-
-  <p class="pf">由 §8.1 得 $V_p\in\mathcal{L}iquid_p$；由 Lemma 6.1 取 $(z,\beta)$；
-    由 Lemma 4.1 得 $E_\beta$；由 Lemma 7.1 知 $z$ 不可填充；由 Lemma 8.1 与 Lemma 8.2
-    得非零类。∎</p>
-
-  <p>证明不经过连续 bar 上同调与 condensed 导出上同调之间的比较，也不使用 $C_n$ 的投射性；
-    $z$ 的不可填充性是在通常点上对<b>所有</b> liquid 四链验证的，而不是只对有限链。
-    若把 $V_p$ 换成别的系数，Lemma 7.1 的论证失效，这正是下一节要处理的事。</p>
-
-  <h2>9　$p$-Banach 情形不在本文范围内</h2>
-
-  <h3>9.1　$V_p$ 不来自 Hausdorff p-Banach</h3>
-
-  <p>$V_p(*)$ 可被可数族紧 Hausdorff 空间的连续像覆盖：由共尾的 $q_m&lt;p$ 与整数盘半径，
-    令 $K_{m,N}=M(G^3,\mathbb{Z}((T))_{r_m})_{\le N}$，$r_m=2^{-q_m}$。若 $V_p\cong\underline{B}$
-    且 $B$ 是 Hausdorff p-Banach，则这些像在 $B$ 中紧，故 $B$ 是 $\sigma$-紧的；又 $B$
-    完备可度量化，故为 Baire 空间，于是某个像有内点，$B$ 局部紧。而 $p&lt;1$ 时局部紧线性空间
-    必为有限维。</p>
-
-  <p>另一方面 $\dim V_p(*)=\infty$。取无限阶元
-    $a=\mathrm{diag}(e^{2\pi i\sqrt2},e^{-2\pi i\sqrt2})$，令 $x_n=q([a|a|a^n])$，$n\geq2$。
-    $\partial_3$ 经余核诱导 $\overline{\partial_3}:V_p\to C_2$，而</p>
-
-  <p>$$\overline{\partial_3}(x_n)=[a|a^n]-[a^2|a^n]+[a|a^{n+1}]-[a|a] .$$</p>
-
-  <p>在有限线性组合 $\sum_{n=2}^Mt_n\overline{\partial_3}(x_n)$ 中，坐标 $[a^2|a^n]$ 的系数恰为 $-t_n$
-    （其余项的第一坐标都是 $a$，而 $a^2\neq a$；不同 $n$ 的 $a^n$ 互异），
-    故所有 $t_n=0$。于是 $x_n$ 线性无关，$\dim V_p(*)=\infty$，矛盾。</p>
-
-  <h3>9.2　精确归约</h3>
-
-  <p>设 $\omega:[0,1]\to\mathbb{R}$ 非降、有界、$\omega(0)=0$、$\omega(t)&gt;0$（$t&gt;0$）。
-    在有限链上定义 $p$-齐次次可加半范数</p>
-
-  <p>$$\rho_\omega(x)=\inf\Bigl\{\sum_i|a_i|^p+\sum_j|b_j|^p\omega\bigl(d(u_j,v_j)\bigr)^p\Bigr\},$$</p>
-
-  <p>下确界取遍有限分解 $x=\sum_ia_i[s_i]+\sum_jb_j([u_j]-[v_j])$。分离零半范子空间再完备化得
-    $F_\omega$，商掉 $\partial_4(\mathbb{R}[G^4])$ 的闭包得 Hausdorff p-Banach $B_\omega$。
-    对本文的 $z$ 令</p>
-
-  <p>$$\Delta_{p,\omega}(z)=\inf\Bigl\{\sum_i|a_i|^p+\sum_j|b_j|^p\omega\bigl(d(u_j,v_j)\bigr)^p\Bigr\},$$</p>
-
-  <p>下确界取遍满足 $z=\partial_4b+\sum_ia_i[s_i]+\sum_jb_j([u_j]-[v_j])$、$b\in\mathbb{R}[G^4]$
-    有限分解的全部选择。则有等价</p>
-
-  <p>$$\exists\,B\ \text{Hausdorff p-Banach},\ \Phi:V_p\to B\ \text{condensed 线性},\ \Phi(q(z))\neq0
-    \iff \exists\,\omega\ \text{如上},\ \Delta_{p,\omega}(z)&gt;0 .$$</p>
-
-  <p>向右：取 $\omega(t)=t+\Omega_c(t)/C$，其中 $\Omega_c$ 为 $c=\Phi\circ c_p$ 的一致模、$C$ 为其界；
-    则 $L([s])=c(s)$ 有界延伸并杀死 $\partial_4(\mathbb{R}[G^4])$，下降为 $B_\omega\to B$，
-    故 $\Delta_{p,\omega}(z)=0$ 会迫使 $\Phi(q(z))=0$。向左：取 $\Phi_\omega$ 与
-    商范数等式 $\rho_{B_\omega}(\Phi_\omega(q(z)))=\Delta_{p,\omega}(z)$。</p>
-
-  <h3>9.3　前插平均族已被解决</h3>
-
-  <p>设 $F_0\subset G$ 为 $z$ 的有限第一坐标集，$e_{p,W}(\mu)=\sum_{k\in F_0}\rho_{G,W}(R_k\mu-\mu)$。
-    用 $F_0$ 的 Haar $L^2$ 谱隙（Bourgain–Gamburd；$F_0$ 由代数矩阵组成并生成稠密子群，
-    谱隙常数 $\sigma&gt;0$），配合中位数给出的 $L^p$ 转移（常数 $4/\sigma$）与相邻尺度的
-    有限频带求积（$B_p=C_p196^{1-p}$，$196$ 来自 Hopf 坐标下求积点数上界 $Q\leq196N^3$），得</p>
-
-  <p>$$e_{p,W_0}(\mu)\ \geq\ \frac{\sigma}{4C_p(1+B_p)\Lambda_p}&gt;0,
-    \qquad \Lambda_p=\sum_{n\geq0}2^{-3(1-p)n}(2+n\log 2)^p&lt;\infty ,$$</p>
-
-  <p>对全部满足 $\varepsilon(\mu)=1$ 的有限链 $\mu\in\mathbb{R}[G]$ 成立；$W_0(t)=1/\log(e^2/t)$。
-    该下界不含词半径、原子 $p$-质量或树项数预算。把尺度阶梯换成与 $\varepsilon=1-p$ 匹配的
-    几何阶梯可去掉一个 $\varepsilon^{-1}$，配合上界 $\limsup c_p^*/(1-p)\leq6em$
-    （$m=|F_0|$）得临界常数 $c_p^*=\Theta(1-p)$。</p>
-
-  <h3>9.4　剩余缺口</h3>
-
-  <p>9.3 只控制形状为「前插」的四链 $B_\mu(z')$，而 $\Delta$ 取遍任意四链并允许抵消。
-    这不是技术性差别：存在两项四链 $P_0$ 使 $\Delta_{p,W}(\partial_4P_0)=0$（填充即 $P_0$），
-    而其前插残差在 $\mu=([1]+[-1])/2$ 处有 $32$ 个不相消原子。故 9.3 不能升级为
-    $\Delta&gt;0$。</p>
-
-  <p>当前的形式是：近优四链的总成本为 $O(\sqrt\varepsilon)$，而所需门槛为 $o(\varepsilon^{3/4})$，
-    前者容许后者。所用工具（有界上圈取值、Haar 谱隙、原子计数）皆为线性或正定，对符号抵消不敏感；
-    这是缺口所在，而非某个估计不够精细。</p>
-
-  <h2>10　验证说明</h2>
-
-  <p>本文的推导以只在文件末尾追加的方式写成，每一阶段记录起始字节数与前缀 SHA-256；
-    对 $301{,}040$、$504{,}117$、$525{,}538$、$547{,}927$、$584{,}279$、$609{,}371$、$635{,}576$、
-    $663{,}501$、$690{,}788$、$720{,}168$ 字节处的前缀逐条复算，结果一致，故旧文未被改动。</p>
-
-  <p>推导经多轮对抗性复核，重点是三件事：必要条件是否被当作充分条件使用、量词是否被偷换、
-    跨节定义是否漂移。其间修正过一处真实缺口（§4 的良定义性，早先只证到有限和），
-    也推翻过一条早先的引理（「存在内自同构同时反转 $\mathrm{SU}(2)$ 的全部元素」为假，
-    反例 $q=j$；只保留「任意一对元素可被同一共轭反转」的弱形式）。</p>
-
-  <p>未做的是：外部专家审阅、穷尽文献检索；Bourgain–Gamburd 的谱隙定理只核对了假设与使用方式，
-    未核对原文全部细节，也未取 $\sigma$ 的数值；$p&lt;1$ 情形之外的 $p$-Banach 问题未解决。</p>
-
-  <h2>11　待解决的问题</h2>
-
-  <ol>
-    <li>求某个 $\omega$ 使 $\Delta_{p,\omega}(z)&gt;0$（由 9.2 得 p-Banach 反例），
-      或构造一列近优四链使 $\Delta_{p,\omega}(z)=0$（否定这条路线）。</li>
-    <li>把 9.3 的前插族下界推广到允许任意抵消的一般四链；缺口即 9.4 的定量不相容性。</li>
-    <li>$V_p$ 不是 quasiseparated 对象。若把「$p$-liquid」读作隐含 qs 的子类，
-      Theorem 8.3 不覆盖该读法。</li>
-  </ol>
-
-  <h2>参考文献</h2>
-  <ol class="refs">
-    <li>P. Scholze, <i>Lectures on Analytic Geometry</i>, Lecture X: Question 0.10.4,
-      Prop. 10.1, Prop. 10.7, Thm. 6.5, Cor. 0.10.2. arXiv:2605.03655（2026-05-05 稳定引用版）.</li>
-    <li>J. Bourgain, A. Gamburd, <i>A spectral gap theorem in SU(d)</i>,
-      J. Eur. Math. Soc. 14 (2012), 1455–1511.</li>
-    <li>T. Austin, C. Moore, <i>Continuity properties of measurable group cohomology</i>,
-      Math. Ann. (2013); arXiv:1004.4937.</li>
-    <li>E. Brink, <i>Condensed Group Cohomology</i>, arXiv:2512.03648. 其结论覆盖 solid 系数
-      与有限维连续实表示，即 $p\geq1$ 一侧，不含 $p&lt;1$ 的 $p$-liquid 系数.</li>
-    <li>A. Page, <i>Computing arithmetic Kleinian groups</i>（算术 Kleinian 群的存在性与余紧性）.</li>
-  </ol>
-
-  <p class="foot">
-    文字内容 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>；站点与引擎代码 MIT。
-    <br>原始推导记录（含全部检查与中间版本）在仓库 <code>papers/p-liquid.md</code>。
-    最近更新：2026-10-31 · <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
-  </p>
-
-</main>
+<p class="kicker">Preprint</p>
+<h1>紧群上 $p$-liquid 系数的正次数上同调：一般系数的反例</h1>
+<p class="en-title">Positive-degree cohomology of compact groups with $p$-liquid coefficients: a counterexample for general coefficients</p>
+<p class="byline">bingyingzizz · 2026 年 10 月</p>
+<div class="status">未经同行评审。引用请注明 preprint。</div>
+<div class="abstract"><span class="ablabel">摘要</span>
+<p>对每个 $0&lt;p\le1$，本文构造一个带平凡 $G=\mathrm{SU}(2)$ 作用的 $p$-liquid 实向量空间</p>
+<div class="dm">$$V_p=\operatorname{coker}\bigl(\partial_4:M_{&lt;p}(G^4)\longrightarrow M_{&lt;p}(G^3)\bigr),$$</div>
+<p>并证明 $H^3(G,V_p)\ne0$。这里的上同调是 condensed 分类 topos 的导出群上同调。因而，紧群对任意平凡 $p$-liquid 实系数的正次数上同调全称消隐命题为假。</p>
+<p>证明分为三步。首先，从自由 liquid 对象的形式层坐标与实特化关系出发，证明任意集合意义的有界函数都能在通常点的 liquid 链上良定义地取值。其次，利用同一算术四元数群的紧实位表示和余紧双曲复位表示，借 $\mathbb C$ 的域自同构拉回有界体积三上圈，并用闭双曲三流形的有限基本三圈给出正体积配对。最后，证明这个有限三圈没有 liquid 四链填充，将其送入上述余核，并通过逐层导出伴随与双复形识别得到非零三次类。</p>
+<p>反例适用于一般 $p$-liquid 系数，包括 $p=1$，但其系数 $V_p$ 不能来自 Hausdorff $p$-Banach 空间。本文给出这一不可表示性的证明，以及把同一有限三圈迁移到 $p$-Banach 系数的精确代价判据。对其中的前插平均族，谱隙、中位数和有限频带求积给出固定 $p&lt;1$ 时的一致正下界，并确定最优缺陷的阶为 $\Theta(1-p)$。这个子族结果不决定允许任意四链的代价，因此不解决 Hausdorff $p$-Banach 系数的全称问题。</p>
+</div>
+<h2>1 问题</h2>
+<p>Scholze 的 Question 0.10.4 的数学表述为：设 $G$ 为紧群，$V$ 为带平凡 $G$ 作用的 $p$-liquid 实向量空间，例如所考虑的 $p$-Banach 实空间，是否总有</p>
+<div class="dm">$$H^i(G,V)=0\qquad(i&gt;0)?$$</div>
+<p>本文沿用题号 0.10.4；所引讲义 PDF 将它编号为 Question 10.4。</p>
+<p>已有的消隐结果有不同的适用范围。有限群可以用除以群阶的有限平均收缩实系数复形。紧交换群的情形由 Corollary 0.10.2 处理。对于 Banach 系数，例如通常 $L^p$ 空间中 $p\ge1$ 的情形，Haar 平均具有相应的线性连续性；Austin–Moore 的 Theorem A 在其 Fréchet、局部凸系数范围内给出可测与连续上同调的比较及紧群消隐。它的非局部凸推广并不是该定理的结论。讲义 Theorem 6.7 对 $p$-Banach 系数给出的 profinite 空间上同调消隐，也须与一般紧 Hausdorff 空间的情形区分。</p>
+<p>缺口在于：一般 liquid 对象未必带有可用于 Haar 积分的局部凸拓扑；即使目标是 $p$-Banach 空间，$p&lt;1$ 时也不能直接采用 Banach 值积分的论证。此外，分类空间的下降涉及每层空间的全部导出上同调，只计算连续函数组成的普通 bar 复形，并不自动计算题目中的 $H^i(G,V)$。</p>
+<p>本文在一般系数范围给出否定回答：对同一个紧非交换群 $\mathrm{SU}(2)$，每个 $0&lt;p\le1$ 都有明确的平凡系数 $V_p$ 使三次上同调非零。证明独立于低次数消隐，也不要求自由 liquid 对象投射。第 9 节说明为什么这个结论不包含 Hausdorff $p$-Banach 特例。</p>
+<h2>2 预备与所用外部结果</h2>
+<p>记 $\mathcal A=\operatorname{Cond}(\mathbb R)$ 为 condensed 实向量空间范畴，$\operatorname{Liq}_p(\mathbb R)$ 为其中的 $p$-liquid 子范畴。紧 Hausdorff 空间及拓扑群均取其关联 condensed 对象。记 $*$ 为通常点；$V(*)$ 只表示通常点实向量空间，不给它另选拓扑。$\mathbb R[S]$ 表示自由 condensed 实向量空间，$[s]$ 表示 Dirac 元。</p>
+<p>对紧 Hausdorff 空间 $S$，记</p>
+<div class="dm">$$M_{&lt;p}(S)=\underset{0&lt;r&lt;p}{\operatorname{colim}}M_r(S).$$</div>
+<p>下文在讨论单个展开时将小指数记为 $q$，以便与余核映射 $q:C_3\to V_p$ 按上下文区分。所有 $\operatorname{RHom}$ 如无另行说明均在 $\mathcal A$ 中计算。$H^i(G,V)$ 表示 $R\Gamma(BG,V)$ 的第 $i$ 次上同调。</p>
+<p>使用的讲义输入如下，编号均保留讲义中的形式。</p>
+<ol><li><b>Proposition 10.1 及其后正文。</b> 对紧 Hausdorff $S$，形式自由对象 $M(S,\mathbb Z((T))_r)$ 有紧 Hausdorff 有界盘表示，并可沿 profinite 超覆盖下降。实基变换后，自由 condensed 实对象的导出 liquidification 满足</li></ol>
+<div class="dm">$$L\operatorname{liq}_p(\mathbb R[S])\simeq M_{&lt;p}(S)[0].$$</div>
+<p>它用于构造链对象、处理第 4 节的形式坐标与紧参数提升，并在第 8 节给出逐层导出比较。</p>
+<ol><li><b>Proposition 10.7。</b> 每个 $M_{&lt;p}(S)(*)$ 中的元素都有可数原子展开</li></ol>
+<div class="dm">$$x=\sum_j a_j[s_j],\qquad \sum_j|a_j|^q&lt;\infty
+\quad\text{对某个 }0&lt;q&lt;p.$$</div>
+<p>它提供单个通常点元素的可求和表示。其后的非余极限警告仍须保留：单个元素有可数支撑，不意味着一个紧参数族有共同的可数支撑。</p>
+<ol><li><b>Theorem 6.5。</b> $\operatorname{Liq}_p(\mathbb R)$ 在 $\mathcal A$ 中对核、余核和扩张封闭；其导出嵌入具有讲义所述的全忠实性及导出伴随。前者保证本文的余核仍是合法系数，后者与 Proposition 10.1 一起给出第 8.4 节的导出 Hom 等价。</li></ol>
+<ol><li><b>Corollary 0.10.2，即 PDF 的 Corollary 10.2。</b> 紧交换群在所述平凡 $p$-liquid 实系数范围内满足正次数消隐。本文只用它定位问题的已知范围，不用它证明反例。</li></ol>
+<p>第 4.4 节还使用 Definition 6.3 的 profinite 测度描述，以及 Theorem 6.9(2) 和讲义实特化正文：当 $r=2^{-q}$ 时，$T=1/2$ 的实特化关系由 $2-T^{-1}$ 生成。第 5 节使用算术 Kleinian 格定理，第 6 节使用直双曲四面体的体积界和 Stokes 公式，第 9.3 节使用 Bourgain–Gamburd 的 Haar 谱隙定理。这些结果的具体假设和用途在相应处给出。</p>
+<p>通常点评价在 condensed 阿贝尔群上正合。事实上，满射的一个 $*$-截面可沿非空 profinite 覆盖局部提升，再沿覆盖中的一个点拉回，得到 $*$ 上的提升。更一般的下降正合性须带参数证明，不能反过来由通常点的计算推断。</p>
+<h2>3 复形与检测三圈</h2>
+<p>固定 $G=\mathrm{SU}(2)$ 及 $0&lt;p\le1$，令</p>
+<div class="dm">$$C_n=M_{&lt;p}(G^n),\qquad C_0=\mathbb R.$$</div>
+<p>采用平凡作用的未正规化非齐次 bar 边界：</p>
+<div class="dm">$$\begin{aligned}
+\partial_n[g_1|\cdots|g_n]
+={}&amp;[g_2|\cdots|g_n]\\
+&amp;+\sum_{j=1}^{n-1}(-1)^j
+[g_1|\cdots|g_jg_{j+1}|\cdots|g_n]
++(-1)^n[g_1|\cdots|g_{n-1}].
+\end{aligned}$$</div>
+<p>每个面来自连续群运算，故诱导 liquid 线性态射；单纯恒等式给出 $\partial_{n-1}\partial_n=0$。特别地，</p>
+<div class="dm">$$\partial_3[g|h|k]=[h|k]-[gh|k]+[g|hk]-[g|h],$$</div>
+<div class="dm">$$\partial_4[g|h|k|\ell]
+=[h|k|\ell]-[gh|k|\ell]+[g|hk|\ell]
+-[g|h|k\ell]+[g|h|k].$$</div>
+<p>令 $Z_3=\ker\partial_3$。称有限链 $z\in\mathbb R[G^3]$ 为一个检测三圈，是指 $\partial_3z=0$，并存在有界实函数 $\beta:G^3\to\mathbb R$，使</p>
+<div class="dm">$$\delta\beta=0,\qquad E_\beta(z)\ne0.$$</div>
+<p>这里 $\delta$ 为上述边界的对偶公式，$E_\beta$ 是第 4 节构造的通常点取值；$\beta$ 不要求连续。第 7 节将证明这样的 $z$ 不在 $\partial_4(C_4(*))$ 中。</p>
+<h2>4 有界函数在 liquid 链上的取值</h2>
+<h3>4.1 展开的绝对收敛性</h3>
+<p>设 $S$ 紧 Hausdorff，$x\in M_{&lt;p}(S)(*)$。Proposition 10.7 给出某个 $0&lt;q&lt;p\le1$ 及展开 $x=\sum_j a_j[s_j]$，满足 $\sum_j|a_j|^q&lt;\infty$。由标量 $q$ 次可加性，</p>
+<div class="dm">$$\sum_j|a_j|\le\left(\sum_j|a_j|^q\right)^{1/q}&lt;\infty.$$</div>
+<p>因此对任意有界 $f:S\to\mathbb R$，级数 $\sum_j a_jf(s_j)$ 绝对收敛。重复点可以合并；剩下需要证明的是，这个和只依赖 liquid 元素本身。</p>
+<h3>4.2 连续函数给出的泛函</h3>
+<p>连续函数 $\varphi:S\to\mathbb R$ 由自由 liquid 对象的伴随性诱导态射</p>
+<div class="dm">$$L_\varphi:M_{&lt;p}(S)\longrightarrow\mathbb R,
+\qquad L_\varphi([s])=\varphi(s).$$</div>
+<p>它与可求和展开相容：</p>
+<div class="dm">$$L_\varphi\left(\sum_j a_j[s_j]\right)
+=\sum_j a_j\varphi(s_j).$$</div>
+<p>为明确这个相容性所含的无穷求和，固定 $r=2^{-q}$，把形式提升写成 $\mu=\sum_n\mu_nT^n$，其中 $\mu_n=\sum_s c_{n,s}[s]$ 为有限整数链，$\sum_{n,s}|c_{n,s}|r^n\le c$。实特化后的取值是</p>
+<div class="dm">$$\sum_{n,s}c_{n,s}2^{-n}\varphi(s).$$</div>
+<p>非零层有共同下界 $n_0$，而 $t=1/2&lt;r$ 给出</p>
+<div class="dm">$$\sum_{n\ge N,s}|c_{n,s}|t^n|\varphi(s)|
+\le\|\varphi\|_\infty c(t/r)^N.$$</div>
+<p>每层的有限和连续，尾项在固定有界盘上一致趋零，因而得到连续的盘上泛函。移位换序说明它杀死 $(2-T^{-1})\mu$。第 4.4 节证明实特化恰是这个商，并验证任意原子展开与此层坐标求和一致；所以这里没有把未经证明的原子拓扑当作 condensed 结构。</p>
+<h3>4.3 良定义性（Lemma + 证明）</h3>
+<p class="thmline"><b>Lemma 4.1</b>（有界原子取值）. 设 $S$ 紧 Hausdorff，$0&lt;p\le1$，$f:S\to\mathbb R$ 是集合意义的有界函数。公式</p>
+<div class="dm">$$E_f:M_{&lt;p}(S)(*)\longrightarrow\mathbb R,
+\qquad E_f\left(\sum_j a_j[s_j]\right)=\sum_j a_jf(s_j)$$</div>
+<p>定义实线性映射。若 $a:S\to S'$ 连续，则 $E_fa_*=E_{f\circ a}$。</p>
+<p>证明. 绝对收敛已在第 4.1 节证明。若 $\sum_j a_j[s_j]=0$，连续测试泛函给出 $\sum_j a_j\varphi(s_j)=0$。有限变差原子 Radon 测度</p>
+<div class="dm">$$\mu=\sum_j a_j\delta_{s_j}$$</div>
+<p>因而对所有连续实函数积分为零。紧 Hausdorff 空间上连续函数分离有限 Radon 测度，故 $\mu=0$，特别是每个合并原子的系数 $\sum_{j:s_j=s}a_j=0$。绝对收敛允许分组，得到 $\sum_j a_jf(s_j)=0$。两个展开取差即得独立性，拼接展开给线性性，有限层推前后换序给自然性。此论证所用的展开与连续泛函的相容性由下一小节的实商计算提供；该计算还直接证明原子坐标唯一性。∎</p>
+<p>这里的结论只关于通常点。若 $S=\mathbb N\cup\{\infty\}$ 为单点紧化，取 $f(n)=1$、$f(\infty)=0$，则 $[n]$ 随 Dirac 族趋于 $[\infty]$，而取值分别为 1 和 0。因此 $E_f$ 一般不可能是 condensed 态射，也无需假设 $f$ 可测。</p>
+<h3>4.4 良定义性的算术来源（显式除法：$\nu_n$ 构造、$d\nu=\mu$、$r/(2r-1)$ 的界、$\ker=dF_r$）</h3>
+<p>固定 $0&lt;q&lt;p\le1$，令</p>
+<div class="dm">$$r=2^{-q},\qquad A_r=\mathbb Z((T))_r,\qquad
+F_r(S)=M(S,A_r),\qquad d=2-T^{-1}.$$</div>
+<p>这里 $1/2&lt;r&lt;1$。形式对象的通常点具有唯一的层坐标</p>
+<div class="dm">$$\mu=\sum_{n\in\mathbb Z}\mu_nT^n,
+\quad \mu_n\in\mathbb Z[S],\quad
+\sum_n r^n\|\mu_n\|_1&lt;\infty.$$</div>
+<p>因为非零整数链质量至少为 1，非零层必有共同下界。Theorem 6.9(2) 的 profinite 实特化公式是 $M_q(P)=F_r(P)/dF_r(P)$。先说明它对一般紧 Hausdorff $S$ 也成立。</p>
+<p>取 profinite 超覆盖 $P_\bullet\to S$，增广记为 $\pi:P_0\to S$，两个面记为 $\varepsilon_0,\varepsilon_1:P_1\to P_0$，并置</p>
+<div class="dm">$$D_1=(\varepsilon_0)_*-(\varepsilon_1)_*.$$</div>
+<p>若 $\pi_*\mu=0$，每层整数链在每个 $\pi$-纤维内系数和为零。逐一配对正负整数系数，并利用 $P_1\to P_0\times_SP_0$ 满射提升配对，得到有限链 $\eta_n$ 满足</p>
+<div class="dm">$$D_1\eta_n=\mu_n,\qquad
+\|\eta_n\|_1\le\tfrac12\|\mu_n\|_1,
+\qquad
+\sum_n r^n\|\eta_n\|_1
+\le\tfrac12\sum_n r^n\|\mu_n\|_1.$$</div>
+<p>因此 $\eta\in F_r(P_1)(*)$。同样，逐层提升每个支撑点给出 $\pi_*$ 的保质量满射提升。</p>
+<p>这个配对还须给出 sheaf 的正合性。设 profinite 测试空间 $U$ 上的核截面 $\mu$ 落在半径 $c$ 的紧盘内。由 Proposition 10.1，</p>
+<div class="dm">$$L=\{(u,\eta)\in U\times F_r(P_1)_{\le c/2}:
+D_1\eta=\mu(u)\}$$</div>
+<p>是紧 Hausdorff 空间，并由逐点配对知 $L\to U$ 满射。取 profinite 满覆盖 $Q\to L$，便沿覆盖 $Q\to U$ 得到局部提升；保质量满射也以相同的紧盘拉回处理。于是</p>
+<div class="dm">$$F_r(P_1)\xrightarrow{D_1}F_r(P_0)
+\xrightarrow{\pi_*}F_r(S)\longrightarrow0$$</div>
+<p>在 condensed 范畴正合。这里截面落在一个盘内来自滤过盘表示和 site 的有限覆盖性质；并未用通常点检测正合性。</p>
+<p>$D_1$ 与标量 $d$ 交换，故实基变换的零次下降给出</p>
+<div class="dm">$$\begin{aligned}
+M_q(S)
+&amp;=\operatorname{coker}\bigl(F_r(P_1)/dF_r(P_1)
+\longrightarrow F_r(P_0)/dF_r(P_0)\bigr)\\
+&amp;=F_r(P_0)/(\operatorname{im}D_1+dF_r(P_0))
+=F_r(S)/dF_r(S).
+\end{aligned}$$</div>
+<p>等价的核等式是 $\pi_*^{-1}(dF_r(S))=\operatorname{im}D_1+dF_r(P_0)$：局部提升 $d$ 前的元素，减掉其 $d$ 倍即可。通常点评价正合，因此这也是真正的通常点商。</p>
+<p>现在只在唯一的形式层坐标上定义</p>
+<div class="dm">$$\mathcal A_r(\mu)=\sum_{n\in\mathbb Z}2^{-n}\mu_n
+=(\alpha_s)_{s\in S},\qquad
+\alpha_s=\sum_n2^{-n}c_{n,s}.$$</div>
+<p>它在抽象 $\ell^1(S)$ 中绝对收敛，而且整数系数满足 $|c_{n,s}|^q\le|c_{n,s}|$，故</p>
+<div class="dm">$$\sum_s|\alpha_s|^q
+\le\sum_{n,s}|c_{n,s}|^q2^{-nq}
+\le\sum_n r^n\|\mu_n\|_1.$$</div>
+<p>移位和绝对换序立即给出 $\mathcal A_r(d\nu)=0$。反之，若 $\mathcal A_r(\mu)=0$，定义</p>
+<div class="dm">$$\nu_n=-\sum_{k&lt;n}2^{n-1-k}\mu_k.$$</div>
+<p>由于非零层有下界，每个和有限，$\nu_n$ 是有限整数链，并且低层为零。递推式</p>
+<div class="dm">$$\nu_{n+1}=2\nu_n-\mu_n$$</div>
+<p>说明 $d\nu=\mu$。为验证 $\nu$ 仍属于形式对象，使用零原子总和把它改写为绝对收敛尾和</p>
+<div class="dm">$$\nu_n=\sum_{k\ge n}2^{n-1-k}\mu_k.$$</div>
+<p>于是非负项换序给出</p>
+<div class="dm">$$\begin{aligned}
+\sum_n r^n\|\nu_n\|_1
+&amp;\le\sum_k\|\mu_k\|_1
+\sum_{\substack{n\in\mathbb Z\\n\le k}}2^{n-1-k}r^n\\
+&amp;=\frac{r}{2r-1}\sum_k r^k\|\mu_k\|_1&lt;\infty.
+\end{aligned}$$</div>
+<p>内和的下限是负无穷，等号来自</p>
+<div class="dm">$$2^{-k-1}\sum_{n=-\infty}^k(2r)^n
+=\frac{r^{k+1}}{2r-1}.$$</div>
+<p>保留实际有限下界只会减小上界。分母正性正是 $r&gt;1/2$。由此严格得到</p>
+<div class="dm">$$\ker\mathcal A_r=dF_r(S)(*).$$</div>
+<p>还需证明坐标描述覆盖所有可求和原子族。给定 $(a_s)\in\ell^q(S)$，逐点选同号二进展开</p>
+<div class="dm">$$a_s=\sum_{n\ge m_s}\epsilon_{n,s}2^{-n},\qquad
+\epsilon_{n,s}\in\{-1,0,1\},\qquad
+2^{-m_s}\le|a_s|&lt;2^{-m_s+1}.$$</div>
+<p>每层只有有限多个非零位，否则 $\sum_s|a_s|^q$ 发散；有界性给共同的层下界。令 $\widehat\mu_n=\sum_s\epsilon_{n,s}[s]$，则</p>
+<div class="dm">$$\sum_{n,s}|\epsilon_{n,s}|r^n
+\le\frac1{1-r}\sum_s|a_s|^q&lt;\infty.$$</div>
+<p>因此它给出提升，且 $\mathcal A_r(\widehat\mu)=a$。不同二进表示的差属于已经算出的核。形式标量乘法的绝对收敛卷积满足</p>
+<div class="dm">$$\mathcal A_r(h\mu)=h(1/2)\mathcal A_r(\mu),$$</div>
+<p>所以实商上的同构确实为实线性：</p>
+<div class="dm">$$M_q(S)(*)\cong\ell^q(S).$$</div>
+<p>对带重复点的展开，逐个系数作二进提升后，每层先在有限自由群中合并，得到的 $s$-坐标恰为 $\sum_{j:s_j=s}a_j$。它与自然 liquid 求和相同：将 $j\mapsto s_j$ 延拓为 $\beta\mathbb N\to S$，在 $\beta\mathbb N$ 的每个有限 clopen 分割上给一块赋系数 $\sum_{j\in A\cap\mathbb N}a_j$。这些系数相容、$q$-质量一致有界，二进提升特化后正是这族系数。推前到 $S$ 即得所述展开。</p>
+<p>若 $q_1&lt;q_2&lt;p$，上述同构把过渡映射识别为保留原子系数的包含。滤过余极限在通常点计算，因此</p>
+<div class="dm">$$M_{&lt;p}(S)(*)\cong\bigcup_{0&lt;q&lt;p}\ell^q(S).$$</div>
+<p>这从实商的全部关系出发证明了合并原子系数的唯一性，补足第 4.2 节的求和相容性，也独立给出 Lemma 4.1。该式始终是通常点向量空间的描述；它没有为紧参数族指定共同支撑，更没有把 $M_q(S)$ 识别为通常原子准范数拓扑。</p>
+<h2>5 算术输入</h2>
+<h3>5.1 数域与四元数代数</h3>
+<p>令 $\alpha=\sqrt[3]{2}&gt;0$，$k=\mathbb Q(\alpha)\subset\mathbb R$。由 Eisenstein 判别，$[k:\mathbb Q]=3$；其三个嵌入将 $\alpha$ 分别送到 $\alpha,\zeta_3\alpha,\zeta_3^2\alpha$，因此恰有一个实位和一对复位。取</p>
+<div class="dm">$$B=(-1,-1)_k
+=k\langle I,J\rangle/(I^2=J^2=-1,\ IJ=-JI),\qquad K=IJ,$$</div>
+<p>以及阶</p>
+<div class="dm">$$\mathcal O=\mathcal O_k\oplus\mathcal O_kI
+\oplus\mathcal O_kJ\oplus\mathcal O_kK.$$</div>
+<p>唯一实位上的 $B$ 是 Hamilton 四元数代数，因而在该位分歧。四元数代数若在 $k$ 上分裂，各实位也分裂，故这里的 $B$ 是除代数。复位上则有 $B\otimes_{k,\tau}\mathbb C\cong M_2(\mathbb C)$。</p>
+<h3>5.2 格与无挠性</h3>
+<p>使用算术 Kleinian 格定理：若数域恰有一个复位，四元数代数在全部实位分歧，则一个阶的约化范数一群在该复位投影到 $\mathrm{PSL}_2(\mathbb C)$ 后为有限余体积格；若该代数为除代数，格余紧。参见 Page 的 Theorem 6 或 Reid 的相关综述。上述 $k,B$ 满足全部条件。</p>
+<p>取</p>
+<div class="dm">$$\Gamma=\mathcal O^1\cap(1+3\mathcal O).$$</div>
+<p>由于 $\mathcal O/3\mathcal O$ 有限，$\Gamma$ 在 $\mathcal O^1$ 中有限指数。为证明无挠性，把秩 12 的自由整数模 $\mathcal O$ 上的左乘写成忠实表示 $\mathcal O^1\to\mathrm{GL}_{12}(\mathbb Z)$。$\Gamma$ 的像包含在模 3 主同余核内。</p>
+<p>若其中有非平凡有限阶矩阵，取其适当幂可设阶为素数 $\ell$。写</p>
+<div class="dm">$$A=1+3^sD,\qquad s\ge1,\qquad D\not\equiv0\pmod3.$$</div>
+<p>若 $\ell\ne3$，二项展开中 $\ell3^sD$ 的最小矩阵项 3-进价为 $s$，其余项价严格更高。若 $\ell=3$，则</p>
+<div class="dm">$$A^3-1=3^{s+1}D+3^{2s+1}D^2+3^{3s}D^3;$$</div>
+<p>首项最小价为 $s+1$，其余项至少为 $s+2$。两种情形都不可能为零，矛盾。于是 $\Gamma$ 无挠，其复位投影仍是余紧格。</p>
+<h3>5.3 实位嵌入 $\rho_0$</h3>
+<p>实位矩阵表示为</p>
+<div class="dm">$$\rho_0(a+bI+cJ+dK)
+=\begin{pmatrix}
+a+bi&amp;c+di\\
+-c+di&amp;a-bi
+\end{pmatrix}.$$</div>
+<p>矩阵中的 $I,J$ 满足四元数关系，且</p>
+<div class="dm">$$\det\rho_0(x)=a^2+b^2+c^2+d^2=\operatorname{Nrd}(x).$$</div>
+<p>实位范数一条件还给出酉性，因此限制得到忠实群嵌入 $\rho_0:\Gamma\hookrightarrow\mathrm{SU}(2)$。它的矩阵条目全在 $k(i)$ 中。</p>
+<h3>5.4 域自同构 $\sigma$</h3>
+<p>多项式 $X^3-2$ 在 $\mathbb Q(i)$ 上仍不可约：若可约，三次多项式必有一个根属于 $\mathbb Q(i)$，但每个根在 $\mathbb Q$ 上次数为 3，不可能属于二次扩张。于是存在域嵌入</p>
+<div class="dm">$$\tau:k(i)\longrightarrow\mathbb C,\qquad
+\tau(\alpha)=\zeta_3\alpha,\quad\tau(i)=i.$$</div>
+<p>这里 $\zeta_3\notin k(i)$。否则 $k(i)$ 包含 $\mathbb Q(i,\zeta_3)$；后者是次数 4 的双二次域，而 $[k(i):\mathbb Q]=6$，与塔式次数公式矛盾。这也说明 $\tau$ 是取值于另一个共轭子域的嵌入，无须是 $k(i)$ 的自同构。</p>
+<p>把 $\tau$ 延拓为 $\overline{\mathbb Q}$ 的自同构，再选 $\mathbb C/\overline{\mathbb Q}$ 的超越基，在超越基上选恒等延拓，并延拓到代数闭包，得到 $\sigma\in\operatorname{Aut}(\mathbb C)$。不对这个域自同构要求连续性。</p>
+<h3>5.5 两个表示的关系</h3>
+<p>对矩阵逐项施加 $\sigma$，定义抽象群同态</p>
+<div class="dm">$$\rho=\sigma|_{\mathrm{SU}(2)}:
+\mathrm{SU}(2)^\delta\longrightarrow\mathrm{SL}_2(\mathbb C)^\delta.$$</div>
+<p>上标 $\delta$ 表示忘记拓扑。由于 $\sigma$ 固定 $i$，在 $\rho_0(\Gamma)$ 上逐项施加 $\sigma$，恰把系数按复位 $\tau$ 嵌入；故与复位表示 $\rho_2$ 严格满足</p>
+<div class="dm">$$\rho\circ\rho_0=\rho_2.$$</div>
+<p>$\rho_2$ 的 $\mathrm{PSL}_2(\mathbb C)$ 投影记为 $\Lambda$。投影的核至多为 $\{1,-1\}$，而 $-1\notin\Gamma$。若投影像有有限阶元，原像的适当幂为 $\pm1$，也与 $\Gamma$ 无挠矛盾。因此 $\Gamma\cong\Lambda$，且 $\Lambda$ 是无挠余紧格。</p>
+<p>于是</p>
+<div class="dm">$$M=\Lambda\backslash\mathbb H^3$$</div>
+<p>为闭定向双曲三流形，$\pi_1(M)\cong\Gamma$，$\operatorname{Vol}(M)&gt;0$。紧位像 $\rho_0(\Gamma)$ 只是 $G$ 的抽象子群；双曲几何中的离散格是复位像 $\Lambda$。两个表示的等式是代数等式，不是拓扑比较。</p>
+<h2>6 体积上圈与有限三圈</h2>
+<h3>6.1 直四面体体积</h3>
+<p>固定 $o\in\mathbb H^3$，令</p>
+<div class="dm">$$v(A,B,C)=\operatorname{Vol}_{\mathrm{or}}
+[o,Ao,ABo,ABCo],\qquad A,B,C\in\mathrm{SL}_2(\mathbb C).$$</div>
+<p>记齐次形式为 $F(x_0,x_1,x_2,x_3)$。直双曲四面体的统一体积界给出 $|v|\le v_3$，其中 $v_3$ 是正则理想四面体的体积。直化与边界交换，体积形式闭合，Stokes 公式因此给出五点等式</p>
+<div class="dm">$$\sum_{j=0}^4(-1)^j
+F(x_0,\ldots,\widehat{x_j},\ldots,x_4)=0.$$</div>
+<p>代入 $(o,Ao,ABo,ABCo,ABCDo)$，并利用体积的等距不变性，得到</p>
+<div class="dm">$$v(B,C,D)-v(AB,C,D)+v(A,BC,D)
+-v(A,B,CD)+v(A,B,C)=0.$$</div>
+<p>所以 $\delta v=0$。这里的积分只涉及普通有限几何单形。</p>
+<h3>6.2 有界三上圈 $\beta=v\circ\rho^3$</h3>
+<p>定义</p>
+<div class="dm">$$\beta(g,h,k)=v(\rho(g),\rho(h),\rho(k)).$$</div>
+<p>由 $\rho$ 为抽象群同态，$\beta$ 满足 $\delta\beta=0$，且 $\|\beta\|_\infty\le v_3$。它是在离散群 $G^\delta$ 上的有界三上圈。</p>
+<p>$\beta$ 对紧拓扑不连续。事实上，若连续，则可作实标量 Haar 积分</p>
+<div class="dm">$$u(g,h)=\int_G\beta(t,g,h)\,d\gamma(t).$$</div>
+<p>把 $\delta\beta(t,g,h,k)=0$ 积分，并对第二项用右不变性，得到 $\beta=\delta u$。这会使它在每个有限三圈上的配对为零，与第 6.4 节构造的正体积配对矛盾。该论证只用标量积分，不把 $\beta$ 当作 liquid 实系数上圈；反例的合法系数上圈在第 8 节另行构造。</p>
+<h3>6.3 有限 bar 代表与直化次数</h3>
+<p>取 $M$ 的有限有序三角剖分，其定向基本三圈记为 $w$。把剖分提升到 $\mathbb H^3$，对每个顶点轨道选代表 $\widetilde v_a$。定义顶点映射</p>
+<div class="dm">$$\widetilde f(\gamma\widetilde v_a)=\rho_2(\gamma)o,$$</div>
+<p>并在每个单形上用相同的测地直化作面相容延伸，得到连续 $\Gamma$-等变映射 $\widetilde f:\mathbb H^3\to\mathbb H^3$。公共面的有序顶点相同，所以各直单形确实拼合。</p>
+<p>两点间唯一测地线给出显式同伦</p>
+<div class="dm">$$\widetilde H(x,t)=\text{从 }x\text{ 到 }\widetilde f(x)
+\text{ 的测地线在参数 }t\text{ 处的点}.$$</div>
+<p>它连续且 $\Gamma$-等变，故下降为 $\operatorname{id}_M$ 与 $f:M\to M$ 的同伦。因此</p>
+<div class="dm">$$f_*[M]=[M],\qquad\deg f=1.$$</div>
+<p>对 $w$ 中每个定向四面体选一个提升，把顶点写成 $\gamma_i\widetilde v_{a_i}$，赋予齐次 bar 单形 $[\gamma_0,\gamma_1,\gamma_2,\gamma_3]$ 的共不变量。换提升只同时左乘所有顶点；公共面依照基本链的定向抵消。转为非齐次记号，每项为</p>
+<div class="dm">$$[\gamma_0^{-1}\gamma_1\mid
+\gamma_1^{-1}\gamma_2\mid\gamma_2^{-1}\gamma_3].$$</div>
+<p>所得有限链 $z_\Gamma\in\mathbb R[\Gamma^3]$ 满足 $\partial_3z_\Gamma=0$。其体积取值等于 $f_*w$ 上的积分，于是</p>
+<div class="dm">$$\langle\rho_2^*v,z_\Gamma\rangle
+=\int_{f_*w}\mathrm{vol}_M
+=\langle[\mathrm{vol}_M],f_*[M]\rangle
+=\operatorname{Vol}(M)&gt;0.$$</div>
+<p>这给出了与选定体积上圈对齐的有限 bar 代表；次数为 1 来自上述等变同伦。</p>
+<h3>6.4 推前到 $G$</h3>
+<p class="thmline"><b>Lemma 6.1</b>（有限检测三圈）. 令 $z=(\rho_0)_*z_\Gamma\in\mathbb R[G^3]$。则对所有 $0&lt;p\le1$，它在 $C_3(*)$ 中满足</p>
+<div class="dm">$$\partial_3z=0,\qquad E_\beta(z)=\operatorname{Vol}(M)&gt;0.$$</div>
+<p>证明. 群同态诱导 bar 链映射，所以 $\partial_3z=(\rho_0)_*\partial_3z_\Gamma=0$。有限 Dirac 链自然进入每个 $M_{&lt;p}(G^3)(*)$，而 $\rho\rho_0=\rho_2$ 给出</p>
+<div class="dm">$$E_\beta(z)=\langle\rho_2^*v,z_\Gamma\rangle
+=\operatorname{Vol}(M).$$</div>
+<p>这个配对只含有限项，因此没有任何无穷积分或连续性要求。∎</p>
+<h2>7 检测三圈不可填充</h2>
+<p class="thmline"><b>Lemma 7.1</b>（liquid 不可填充性）. 对每个 $0&lt;p\le1$，Lemma 6.1 的 $z$ 都不在 $\partial_4(C_4(*))$ 中。因此 $H_3(C_\bullet)(*)\ne0$，且 $\partial_4:C_4\to Z_3$ 不是满射。</p>
+<p>证明. 对固定 $0&lt;q&lt;p$ 的原子坐标 $x=\sum_s a_s[s]$，定义</p>
+<div class="dm">$$m_q(x)=\sum_s|a_s|^q.$$</div>
+<p>第 4 节的坐标描述与连续推前相容；同纤维系数求和及 $q$ 次可加性给出 $m_q(a_*x)\le m_q(x)$。$\partial_4$ 有五个面，所以</p>
+<div class="dm">$$m_q(\partial_4\xi)\le5m_q(\xi),\qquad
+|E_\beta(x)|\le\|\beta\|_\infty m_q(x)^{1/q}.$$</div>
+<p>若 $b\in C_4(*)$，选某个 $q&lt;p$ 的展开 $b=\sum_j a_j[x_j]$，并置 $b_N=\sum_{j\le N}a_j[x_j]$。有限上圈等式给出</p>
+<div class="dm">$$E_\beta(\partial_4b_N)=\sum_{j\le N}a_j(\delta\beta)(x_j)=0.$$</div>
+<p>另一方面，</p>
+<div class="dm">$$\begin{aligned}
+m_q(\partial_4(b-b_N))&amp;\le5\sum_{j&gt;N}|a_j|^q\longrightarrow0,\\
+|E_\beta(\partial_4b)-E_\beta(\partial_4b_N)|
+&amp;\le\|\beta\|_\infty
+\left(5\sum_{j&gt;N}|a_j|^q\right)^{1/q}\longrightarrow0.
+\end{aligned}$$</div>
+<p>故 $E_\beta(\partial_4b)=0$。若 $\partial_4b=z$，则与 $E_\beta(z)=\operatorname{Vol}(M)&gt;0$ 矛盾。</p>
+<p>通常点正合使 $H_3(C_\bullet)(*)$ 等于通常点链复形的第三同调。因此这个无填充的点给出非零同调，并否定满射性。这里用的是“满射必在通常点满射”的方向；并未用“通常点上满射即可推出 condensed 满射”，也未用通常点检测所有对象为零。∎</p>
+<h2>8 系数 $V_p$ 与非零类</h2>
+<h3>8.1 $V_p$ 是 $p$-liquid</h3>
+<p>在 $\mathcal A$ 中定义</p>
+<div class="dm">$$V_p=\operatorname{coker}(\partial_4:C_4\to C_3),
+\qquad q:C_3\longrightarrow V_p.$$</div>
+<p>给 $V_p$ 平凡 $G$ 作用。Proposition 10.1 保证 $C_3,C_4$ 为 $p$-liquid，Theorem 6.5 的余核封闭性保证 $V_p$ 也为 $p$-liquid。这里的余核与 condensed 余核相同。由通常点正合及 Lemma 7.1，</p>
+<div class="dm">$$q(z)\ne0\quad\text{于 }V_p(*).$$</div>
+<h3>8.2 上圈 $c_p$</h3>
+<p>Dirac 族和余核映射复合给出 condensed 态射</p>
+<div class="dm">$$c_p:G^3\longrightarrow V_p,\qquad
+c_p(g,h,k)=q([g|h|k]).$$</div>
+<p>因为 $q\partial_4=0$，它满足严格的上圈等式 $\delta c_p=0$。其线性形式是只在链次数 3 非零的链映射</p>
+<div class="dm">$$Q:C_\bullet\longrightarrow V_p[3],\qquad Q_3=q.$$</div>
+<p>这里 $V_p[3]$ 放在链次数 3，即上链次数 $-3$。我们采用未正规化 bar；除去退化链是链同伦等价，不要求这个具体代表在退化元上为零。</p>
+<h3>8.3 类非零</h3>
+<p>为避免把普通 cochain 非边界性误当作导出非零性，取 $\mathcal A$ 中的单射分解 $V_p\hookrightarrow I^0\to I^1\to\cdots$，首个单射记为 $\iota$。把 $Q$ 送入总复形 $\operatorname{Tot}\operatorname{Hom}_{\mathcal A}(C_n,I^m)$，其中总上链次数为 $n+m$。它的唯一非零分量是 $\iota q:C_3\to I^0$。</p>
+<p>若 $Q=dR$，则总次数 2 的 $R$ 在双次数 $(3,0)$ 的边界只能来自 $R_{2,0}:C_2\to I^0$，因而</p>
+<div class="dm">$$\iota q=R_{2,0}\partial_3.$$</div>
+<p>代入检测三圈，得到</p>
+<div class="dm">$$\iota q(z)=R_{2,0}(\partial_3z)=0.$$</div>
+<p>由 $\iota$ 单射，这正是 $q(z)=0$，与第 8.1 节矛盾。因此 $Q$ 在导出 Hom 的第三上同调中非零。等价地，它在第三同调上诱导非零单射</p>
+<div class="dm">$$H_3(C_\bullet)=\ker\partial_3/\operatorname{im}\partial_4
+\hookrightarrow C_3/\operatorname{im}\partial_4=V_p;$$</div>
+<p>零导出态射不可能有这个同调作用。</p>
+<h3>8.4 把类算到 $H^3(G,V_p)$</h3>
+<p>令 $K_n=\mathbb R[G^n]$，Dirac 单位 $u_n:K_n\to C_n$ 与各面和退化映射相容。Theorem 6.5 的导出伴随和全忠实性，结合 Proposition 10.1 的单项导出 liquidification，给出对每个紧 Hausdorff $S$ 和 liquid $V$ 自然的拟同构</p>
+<div class="dm">$$\operatorname{RHom}_{\mathcal A}(M_{&lt;p}(S),V)
+\xrightarrow{\ \sim\ }
+\operatorname{RHom}_{\mathcal A}(\mathbb R[S],V).$$</div>
+<p>它对连续映射自然，所以构成整个余单纯图的等价。</p>
+<p>分类 topos 的 bar 下降于是给出</p>
+<div class="dm">$$\begin{aligned}
+R\Gamma(BG,V)
+&amp;\simeq\operatorname{Tot}_{[n]\in\Delta}
+\operatorname{RHom}_{\mathcal A}(\mathbb R[G^n],V)\\
+&amp;\simeq\operatorname{Tot}_{[n]\in\Delta}
+\operatorname{RHom}_{\mathcal A}(C_n,V)
+\simeq\operatorname{RHom}_{\mathcal A}(C_\bullet,V).
+\end{aligned}$$</div>
+<p>最后一步可直接检查：用上述单射分解，取第一象限双复形 $\operatorname{Hom}_{\mathcal A}(C_n,I^m)$，每个总次数只有有限多个 $n+m$ 位置。余单纯正规化的退化部分可缩；同样处理 $K_n$，逐列拟同构通过第一象限比较定理诱导总复形拟同构。单射分解是 $\mathcal A$ 中的分解，无须将其视为 liquid 范畴中的单射对象。</p>
+<p>在这个等价下，$Q$ 对应于 $Q\circ u$，其三次分量是 $q\circ u_3$，即 $c_p$ 的线性延伸。因此第 8.3 节的非零类确实属于题目中的 $H^3(G,V_p)$。各层的全部导出 Hom 均被保留，没有把它们替换成普通连续函数空间。</p>
+<h3>8.5 主定理</h3>
+<p class="thmline"><b>Theorem 8.1</b>（一般 liquid 系数的三次反例）. 设 $G=\mathrm{SU}(2)$，$0&lt;p\le1$。以非齐次 bar 边界定义</p>
+<div class="dm">$$V_p=\operatorname{coker}_{\operatorname{Cond}(\mathbb R)}
+\bigl(M_{&lt;p}(G^4)\xrightarrow{\partial_4}M_{&lt;p}(G^3)\bigr),$$</div>
+<p>并赋予平凡 $G$ 作用。则 $V_p$ 为 $p$-liquid 实向量空间，且</p>
+<div class="dm">$$[c_p]\ne0\quad\text{于 }H^3(G,V_p).$$</div>
+<p>同一个有限算术三圈 $z$ 对每个 $p$ 都满足 $q(z)\ne0$。</p>
+<p>证明. Theorem 6.5 保证余核为 liquid。第 4 节的有界取值和第 6 节的正体积配对，经 Lemma 7.1 排除 $z$ 的所有 liquid 四链填充。于是 $q(z)\ne0$，第 8.3 节给出非零导出链映射，第 8.4 节将其识别为 $[c_p]$。∎</p>
+<p>证明没有使用普通连续 bar 与导出群上同调的比较，也没有使用 $C_n$ 的投射性。它不依赖任何低次消隐命题。$p=1$ 时系数仍只是一般 liquid 余核；下一节证明它不能来自 Hausdorff Banach 空间，因而不与局部凸范围的消隐结果冲突。</p>
+<h2>9 $p$-Banach 情形不在本文范围内</h2>
+<h3>9.1 $V_p$ 不来自 Hausdorff $p$-Banach</h3>
+<p class="thmline"><b>Lemma 9.1</b>（系数的不可表示性）. 不存在 Hausdorff $p$-Banach 实空间 $B$，使 $\underline B\cong V_p$ 作为 condensed 实向量空间成立。</p>
+<p>证明. 取共尾递增序列 $q_m=p(1-1/(m+1))$，置 $r_m=2^{-q_m}$。Proposition 10.1 的紧盘</p>
+<div class="dm">$$K_{m,N}=M(G^3,\mathbb Z((T))_{r_m})_{\le N},
+\qquad m,N\ge1,$$</div>
+<p>经实特化和商映射送入 $V_p$，其通常点像覆盖 $V_p(*)$。确实，每个余核元素可在通常点提升到 $C_3$，再进入某个 $M_{q_m}(G^3)$，最后由第 4.4 节的真实商公式提升到某个有界盘。</p>
+<p>若 $V_p\cong\underline B$，这些从紧 Hausdorff 空间到 $\underline B$ 的 condensed 态射对应连续映射，故 $B$ 是可数个紧集的并。$B$ 完备可度量，Baire 定理说明其中一个紧集有内点。平移后得到紧零邻域，因而有一个正半径闭球紧。</p>
+<p>局部紧的 Hausdorff $p$-Banach 空间必有限维，这里不需局部凸性。把次可加的 $p$-齐次质量记为 $\rho_B$，令 $|x|=\rho_B(x)^{1/p}$。若空间无限维，对已选有限多个单位向量的张成 $E_n$，选 $y\notin E_n$。有限维子空间闭，所以 $d=\inf_{e\in E_n}|y-e|&gt;0$。选 $e_0$ 使 $|y-e_0|&lt;2d$，再归一化，得到单位向量 $x_{n+1}$ 满足</p>
+<div class="dm">$$\inf_{e\in E_n}|x_{n+1}-e|&gt;\tfrac12.$$</div>
+<p>单位球于是含无限分离点集，不能紧；缩放后与上述紧球矛盾。</p>
+<p>另一方面，$V_p(*)$ 有显式无限线性无关族。取无限阶元</p>
+<div class="dm">$$a=\operatorname{diag}(e^{2\pi i\sqrt2},e^{-2\pi i\sqrt2}),
+\qquad x_n=q([a|a|a^n]),\quad n\ge2.$$</div>
+<p>$\partial_3\partial_4=0$ 使 $\partial_3$ 下降为 $\overline\partial_3:V_p\to C_2$，且</p>
+<div class="dm">$$\overline\partial_3(x_n)
+=[a|a^n]-[a^2|a^n]+[a|a^{n+1}]-[a|a].$$</div>
+<p>在有限线性组合中，原子 $[a^2|a^n]$ 的系数只来自第 $n$ 项，且为其系数的负值。由原子坐标单射，所有系数都必须为零。因此 $V_p(*)$ 无限维，与有限维的 $B$ 矛盾。∎</p>
+<p>这个障碍还排除任何 Hausdorff quasi-Banach 表示。它判断的是当前系数的 condensed 结构；它既不给其他 $p$-Banach 系数的消隐证明，也不排除其他系数提供反例。</p>
+<p>直接把原子链作 $p$-范数完备化也不能补足这个特例。确实，在忘记拓扑的原子空间上可取 Hausdorff 商</p>
+<div class="dm">$$B_p^{\mathrm{at}}=\ell^p(G^3)/
+\overline{\partial_4\ell^p(G^4)}.$$</div>
+<p>有界 $\beta$ 给出连续线性泛函，并杀死闭边界，所以仍保住 $z$。但商 Dirac 族 $y(g,h,k)$ 不连续。取上面的 $a$，令</p>
+<div class="dm">$$g_j=\operatorname{diag}(e^{2\pi i\sqrt2/j},e^{-2\pi i\sqrt2/j})
+\longrightarrow1,\qquad j\ge2.$$</div>
+<p>$\partial_3$ 在该商上下降为到 $\ell^p(G^2)$ 的有界算子，且</p>
+<div class="dm">$$\begin{aligned}
+\overline\partial_3\bigl(y(g_j,a,a)-y(1,a,a)\bigr)
+={}&amp;[a|a]-[g_ja|a]+[g_j|a^2]-[g_j|a]\\
+&amp;-[1|a^2]+[1|a].
+\end{aligned}$$</div>
+<p>六个有序对彼此不同，故原子 $p$-质量为 6；而三边界的算子质量界为 4。因此</p>
+<div class="dm">$$\|y(g_j,a,a)-y(1,a,a)\|_{\mathrm{quot}}^p\ge6/4.$$</div>
+<p>保住抽象配对的代价是丢失 Dirac 族的连续性，这个商不能直接提供原题所需的 condensed 上圈。</p>
+<h3>9.2 精确归约</h3>
+<p>给 $G$ 取直径为 1 的双不变距离 $d_G$，在 $S=G^3$ 上取乘积最大距离 $d$。允许模 $\omega:[0,1]\to[0,\infty)$ 非降有界，满足 $\omega(0)=0$、$\omega(t)&gt;0$ 对 $t&gt;0$ 成立，且 $\omega(t)\to0$。不先要求它凹。</p>
+<p>在有限形式链上定义半范数质量</p>
+<div class="dm">$$\begin{aligned}
+\rho_\omega(x)=\inf\biggl\{&amp;\sum_i|a_i|^p+
+\sum_j|b_j|^p\omega(d(u_j,v_j))^p:\\
+&amp;x=\sum_i a_i[s_i]+\sum_j b_j([u_j]-[v_j]),
+\quad\text{各和有限}\biggr\}.
+\end{aligned}$$</div>
+<p>拼接和缩放分解分别给次可加性与 $p$-齐次性。先除去零半范数子空间再完备化，得到 Hausdorff $p$-Banach 空间 $F_\omega$。其 Dirac 族满足</p>
+<div class="dm">$$\rho_\omega([s])\le1,\qquad
+\rho_\omega([u]-[v])\le\omega(d(u,v))^p,$$</div>
+<p>因而连续。置</p>
+<div class="dm">$$J_\omega=\overline{\partial_4(\mathbb R[G^4])}^{\,F_\omega},
+\qquad B_\omega=F_\omega/J_\omega.$$</div>
+<p>商 Dirac 族是连续三上圈。$B_\omega$ 是 $p$-liquid，故普通自由对象伴随将其延伸为 $C_3\to B_\omega$。这个延伸与 $\partial_4$ 复合在 Dirac 族上为零，再由伴随唯一性得整个复合为零。因此下降为 condensed 线性态射 $\Phi_\omega:V_p\to B_\omega$。</p>
+<p>对固定的有限检测三圈定义</p>
+<div class="dm">$$\begin{aligned}
+\Delta_{p,\omega}(z)=\inf\biggl\{&amp;\sum_i|a_i|^p+
+\sum_j|b_j|^p\omega(d(u_j,v_j))^p:\\
+&amp;z=\partial_4 b+\sum_i a_i[s_i]
++\sum_j b_j([u_j]-[v_j]),\quad
+b\in\mathbb R[G^4],\quad\text{各链有限}\biggr\}.
+\end{aligned}$$</div>
+<p>由定义及闭包距离不变，</p>
+<div class="dm">$$\rho_{B_\omega}(\Phi_\omega(q(z)))
+=\Delta_{p,\omega}(z)
+=\inf_{b\in\mathbb R[G^4]}\rho_\omega(z-\partial_4b).$$</div>
+<p>这里闭包步骤可直接验证：若 $j_n\to j$，则</p>
+<div class="dm">$$|\rho_\omega(x-j_n)-\rho_\omega(x-j)|
+\le\rho_\omega(j_n-j)\longrightarrow0.$$</div>
+<p class="thmline"><b>Lemma 9.2</b>（有限三圈的双向判据）. 对固定 $0&lt;p\le1$，下列条件等价：存在 Hausdorff $p$-Banach 空间 $B$ 和 condensed 线性态射 $\Phi:V_p\to\underline B$，使 $\Phi(q(z))\ne0$；存在允许模 $\omega$，使 $\Delta_{p,\omega}(z)&gt;0$。</p>
+<p>证明. 后者通过上述 $B_\omega,\Phi_\omega$ 直接给出前者。反过来，令 $c=\Phi c_p$，它是紧空间 $S$ 上的连续 $B$-值三上圈。选 $C&gt;0$ 使 $\sup_s|c(s)|_B\le C$，并定义统一模</p>
+<div class="dm">$$\Omega_c(t)=\sup_{d(u,v)\le t}|c(u)-c(v)|_B,
+\qquad \omega(t)=t+\Omega_c(t)/C\quad(t&gt;0),$$</div>
+<p>置 $\omega(0)=0$。紧性给出 $\Omega_c(t)\to0$。有限线性延伸 $L([s])=c(s)$ 对每个允许分解满足</p>
+<div class="dm">$$\rho_B(Lx)\le C^p\rho_\omega(x).$$</div>
+<p>它延拓到 $F_\omega$，上圈等式使它杀死 $J_\omega$，故经 $B_\omega$ 分解。于是</p>
+<div class="dm">$$0&lt;\rho_B(\Phi(q(z)))\le C^p\Delta_{p,\omega}(z),$$</div>
+<p>得到正代价。∎</p>
+<p>这个等价精确描述了同一有限三圈的检测能否迁移。若正代价存在，第 8 节的同调作用论证给出 $p$-Banach 系数非零导出类。若所有允许模的代价都为零，也只排除了这种有限三圈检测，不能推出全部导出上同调消隐。</p>
+<h3>9.3 前插平均族已被解决</h3>
+<p>以下固定 $0&lt;p&lt;1$ 和慢模</p>
+<div class="dm">$$W_0(t)=\frac1{2+\log(1/t)}\quad(0&lt;t\le1),
+\qquad W_0(0)=0.$$</div>
+<p>它连续、递增且凹。以 $S=G$、$\omega=W_0$ 的上述质量完成有限链，记所得空间为 $X_p$，质量记为 $\rho_p$。等价地，在 $G$ 外加孤立根 $*$，令根到各点距离为 1，内部距离为 $W_0(d_G)$，得到相应的自由 $p$-Banach 空间。凹性保证内部三角不等式，$W_0\le1$ 保证含根的三角不等式。</p>
+<p>总质量 $\varepsilon_G([s])=1$ 满足 $|\varepsilon_G(x)|^p\le\rho_p(x)$。右平移 $R_k[s]=[sk]$ 延拓为等距算子；有限链的连续性界及稠密性说明这是强连续右作用。这个平移作用用于分析平均，不是主定理中系数的平凡作用。</p>
+<p>先把平均与原三圈准确关联。对第 6 节的三角剖分，给每个顶点轨道的代表选参数 $t_v\in G$，将提升顶点映成 $\rho_0(\gamma)t_v$，并转成非齐次 bar 链，得到有限三圈 $z_t$。它与 $z$ 同调：若 $X_i,Y_i$ 是两个顶点映射，对有序单形取有限 prism</p>
+<div class="dm">$$P_n=\sum_{j=0}^n(-1)^j
+[X_0,\ldots,X_j,Y_j,\ldots,Y_n].$$</div>
+<p>逐项删点给 $\partial P_n+P_{n-1}\partial=(F_t)_*-(F_1)_*$，故 $D=P_3(w)$ 满足 $\partial_4D=z_t-z$。因此 $E_\beta(z_t)=E_\beta(z)&gt;0$。</p>
+<p>可以选代数参数，使不同三角面的尾对 $\tau=(h,k)$ 各不相同，同时排除行内相等或单位元的退化。理由是：对两个不同面，总有只属于其中一个面的顶点；固定其余参数，尾对相等在这个顶点方向至多有一个解。退化等式同理。有限个坏集合是 Haar 零测闭集，故其补集为非空开集；代数单位四元数稠密，可在其中选代数参数。固定这个代表，记</p>
+<div class="dm">$$z'=\sum_r a_r[g_r|h_r|k_r],\qquad \partial_4D=z'-z.$$</div>
+<p>闭三流形的每个三角面恰邻接两个四面体，因此合并相同尾对后，非零行只有</p>
+<div class="dm">$$A_\tau=\epsilon_f([g_f]-[1])
+\quad\text{或}\quad
+A_\tau=\epsilon_f([g_f^+]-[g_f^-]),
+\qquad\epsilon_f\in\{1,-1\}.$$</div>
+<p>两项行的系数相反，是公共面定向抵消的结果。各行经右平移变为 $\pm(R_{k_f}\mu-\mu)$，其中第二种取 $k_f=g_f^+(g_f^-)^{-1}$。令 $F_0$ 为这些不同的非平凡 $k_f$，$m=|F_0|$。</p>
+<p>对有限实链 $\mu$ 且 $\varepsilon_G(\mu)=1$，定义前插四链</p>
+<div class="dm">$$B_\mu(z')=\sum_{s,r}\mu_sa_r[s|g_r|h_r|k_r].$$</div>
+<p>五面边界和 $\partial_3z'=0$ 给出精确公式</p>
+<div class="dm">$$z-\partial_4(B_\mu(z')-D)
+=z'-\partial_4B_\mu(z')
+=\sum_\tau(\iota_\tau)_*(\mu*A_\tau),
+\qquad\iota_\tau(x)=(x,\tau).$$</div>
+<p>这里先合并了所有相同原子的系数。</p>
+<p>这些行即使允许全部环境辅助点，仍可从真实自由质量中提取。取分离尺度 $\eta&gt;0$，使不同尾对的 $\eta$-邻域不交，置</p>
+<div class="dm">$$\theta_\tau(q)=\max(0,1-d(q,\tau)/\eta),\qquad
+L([x,q])=(\theta_\tau(q)[x])_\tau.$$</div>
+<p>凹性给出 $|\theta_\tau(q)-\theta_\tau(q')|\le W_0(d(q,q'))/W_0(\eta)$。把两点差拆成第一坐标差与系数差，前者至多一个非零分量，后者至多两个，故对全部有限分解取下确界得到</p>
+<div class="dm">$$\sum_\tau\rho_p(L_\tau x)
+\le C_{Q,p}\rho_{G^3,W_0}(x),
+\qquad C_{Q,p}=1+2W_0(\eta)^{-p}.$$</div>
+<p>因此，定义</p>
+<div class="dm">$$e_{p,W_0}(x)=\sum_{k\in F_0}\rho_p(R_kx-x),$$</div>
+<p>便有</p>
+<div class="dm">$$\rho_{G^3,W_0}\bigl(z-\partial_4(B_\mu(z')-D)\bigr)
+\ge C_{Q,p}^{-1}e_{p,W_0}(\mu).$$</div>
+<p>提取算子定义在整个 $G^3$，所以这里已包含跨行抵消和任意辅助点。</p>
+<p>$F_0$ 生成稠密子群。若其生成群 amenable，有限 Følner 概率的各个 $\ell^1$ 平移缺陷可同时趋零，但上述精确残差和有限有界配对给出</p>
+<div class="dm">$$0&lt;E_\beta(z')\le\|\beta\|_\infty
+\sum_f\|R_{k_f}\mu-\mu\|_{\ell^1},$$</div>
+<p>矛盾。$\mathrm{SU}(2)$ 的真闭子群是有限群或圆群的有限扩张，在离散意义均 amenable，故这个非 amenable 子群的闭包只能是 $G$。所有矩阵条目又为代数数，Bourgain–Gamburd 定理于是给出 Haar 谱隙：存在 $\kappa&gt;0$，使</p>
+<div class="dm">$$\sum_{k\in F_0}\|U_ku-u\|_2^2
+\ge\kappa\|u-\gamma(u)\|_2^2,
+\qquad U_kf(x)=f(xk^{-1}).$$</div>
+<p>这一步使用 Haar 正则表示的谱隙。</p>
+<p>从 $L^2$ 转移到 $L^p$ 需要中位数。对实 $f\in L^p$ 取中位数 $c$，则 $u=(f-c)_+^{p/2}$、$v=(c-f)_+^{p/2}$ 的支撑测度各至多 $1/2$，其方差至少为各自平方范数的一半。又</p>
+<div class="dm">$$|a_+^{p/2}-b_+^{p/2}|^2\le|a-b|^p.$$</div>
+<p>分别应用谱隙并相加，得到</p>
+<div class="dm">$$\|f-c\|_p^p\le P\sum_{k\in F_0}\|U_kf-f\|_p^p,
+\qquad P=4/\kappa.$$</div>
+<p>这只涉及实标量函数。</p>
+<p>接下来构造频带测试。取实偶光滑函数 $\eta_0$，在 $[-1,1]$ 上为 1，在 $|t|\ge2$ 时为零。对二进整数 $N$ 置</p>
+<div class="dm">$$\begin{aligned}
+K_N(\theta)&amp;=\sum_{j\ge1}j\eta_0(j/N)
+\frac{\sin(j\theta)}{\sin\theta},\\
+S_Nf(x)&amp;=\int_G K_N(xy^{-1})f(y)\,d\gamma(y),\\
+T_N\mu(x)&amp;=\sum_s\mu_sK_N(xs^{-1}).
+\end{aligned}$$</div>
+<p>端点按连续极限解释。字符正交关系给出</p>
+<div class="dm">$$K_1=1,\qquad\int K_N\,d\gamma=1,\qquad
+K_N*K_{RN}=K_N\quad(R\ge2),\qquad T_NR_k=U_kT_N.$$</div>
+<p>这里 $R$ 也取二进整数。记 $\Pi_D$ 为四元数四坐标次数不超过 $D$ 的多项式限制，则 $T_N$ 的像包含于 $\Pi_{2N}$。</p>
+<p>核的尺度界可从有限 Fourier 和直接推出。令 $H_N(\theta)=\sum_{j\in\mathbb Z}\eta_0(j/N)e^{ij\theta}$，则 $K_N=-H_N'/(2\sin\theta)$。Poisson 求和把它写成 Fourier 变换的周期像之和；对变换反复分部积分，得到</p>
+<div class="dm">$$|H_N^{(l)}(\theta)|\le C_{A,l}N^{l+1}(1+N\theta)^{-A},
+\qquad0\le\theta\le\pi.$$</div>
+<p>主周期像由 Schwartz 衰减控制，其余周期像到该区间的距离随周期指标线性增长，导数尾项因而可绝对求和。在 $\theta\le1/N$ 用有限字符和，在 $1/N\le\theta\le\pi/2$ 直接除以 $\sin\theta$；在另一端用 $H_N'(\pi)=0$ 和</p>
+<div class="dm">$$\frac{H_N'(\pi-u)}{\sin u}
+=-\frac{u}{\sin u}\int_0^1H_N''(\pi-tu)\,dt.$$</div>
+<p>它及其导数消除了端点奇性。因此对任意 $A$ 都有</p>
+<div class="dm">$$|K_N(x)|\le C_AN^3(1+Nd_G(x,1))^{-A},\qquad
+|\nabla K_N(x)|\le C_AN^4(1+Nd_G(x,1))^{-A}.$$</div>
+<p>取 $Ap&gt;3$，三维径向积分及逐点梯度估计给出</p>
+<div class="dm">$$\begin{aligned}
+\|K_N\|_p^p&amp;\le C_pN^{-3(1-p)},\\
+\|K_N(\cdot s^{-1})-K_N(\cdot t^{-1})\|_p^p
+&amp;\le C_pN^{-3(1-p)}\min(1,Nd_G(s,t))^p.
+\end{aligned}$$</div>
+<p>小距离时先作逐点实函数均值估计再积分，大距离时用两项 $p$ 次可加性。凹性又给</p>
+<div class="dm">$$\min(1,N\delta)\le W_0(\delta)/W_0(1/N).$$</div>
+<p>对任意分子分解逐项应用以上估计，再取下确界，得到连续延拓</p>
+<div class="dm">$$\|T_Nx\|_p^p\le C_pa_N\rho_p(x),\qquad
+a_N=N^{-3(1-p)}(2+\log N)^p.$$</div>
+<p>根边由核本身的质量控制。这个界因此覆盖全部辅助点和完成元素。</p>
+<p>还必须证明 $S_N$ 在所需有限频带上的界。使用 Hopf 坐标</p>
+<div class="dm">$$y=(\sqrt u\cos\alpha,\sqrt u\sin\alpha,
+\sqrt{1-u}\cos\beta,\sqrt{1-u}\sin\beta),\qquad
+ d\gamma=du\,\frac{d\alpha}{2\pi}\,\frac{d\beta}{2\pi}.$$</div>
+<p>两角各取 $L=2(R+1)N+1$ 个等距节点，$u$ 方向取 $J=(R+1)N+1$ 点 Gauss–Legendre 正求积。所得 $Q\le32R^3N^3$ 个正权节点精确积分 $\Pi_{2(R+1)N}$：角频率严格小于 $L$，角平均后非零项的 $u$ 次数至多 $(R+1)N$。任意左平移后的节点仍精确。</p>
+<p>对 $g\in\Pi_{2RN}$，$y\mapsto K_N(xy^{-1})g(y)$ 落在这个频带。对每个平移参数 $a$，将积分写成精确有限和，取 $p$ 次可加上界，先对 $x$、再对 $a$ 作非负标量积分，并用 $\sum_iw_i^p\le Q^{1-p}$，得到</p>
+<div class="dm">$$\|S_Ng\|_p^p
+\le\|K_N\|_p^p Q^{1-p}\|g\|_p^p
+\le B_{p,R}\|g\|_p^p,
+\qquad B_{p,R}=C_p(32R^3)^{1-p}.$$</div>
+<p>当 $R=2$ 时可用 $Q\le196N^3$，取 $B_p=C_p196^{1-p}$。只在这些有限频带上使用卷积界，便可将</p>
+<div class="dm">$$T_Nx=S_N(T_{RN}x)$$</div>
+<p>延拓到全部 $X_p$。没有使用一般 $L^p$ 卷积有界性，也没有作 $X_p$-值 Haar 积分。</p>
+<p class="thmline"><b>Lemma 9.3</b>（前插平均的一致正缺陷）. 对每个固定 $0&lt;p&lt;1$，存在 $c_{F_0,p}&gt;0$，使所有 $x\in X_p$ 满足</p>
+<div class="dm">$$e_{p,W_0}(x)\ge c_{F_0,p}|\varepsilon_G(x)|^p.$$</div>
+<p>特别是所有有限带符号质量一平均的缺陷都有同一个正下界。</p>
+<p>证明. 令 $f_n=T_{2^n}x$，取实中位数 $c_n$，并置 $h_n=f_n-c_n$、$a_n=2^{-3(1-p)n}(2+n\log2)^p$。中位数转移和协变性给出</p>
+<div class="dm">$$\|h_n\|_p^p\le PC_pa_ne_{p,W_0}(x).$$</div>
+<p>相邻频带恒等式给</p>
+<div class="dm">$$c_n-c_{n+1}=S_{2^n}h_{n+1}-h_n,$$</div>
+<p>其中 $h_{n+1}\in\Pi_{4\cdot2^n}$，所以</p>
+<div class="dm">$$|c_n-c_{n+1}|^p
+\le PC_pe_{p,W_0}(x)(a_n+B_pa_{n+1}).$$</div>
+<p>粗端为 $c_0=\varepsilon_G(x)$。细端满足</p>
+<div class="dm">$$|c_J|^p\le C_pa_J(\rho_p(x)+Pe_{p,W_0}(x))\longrightarrow0.$$</div>
+<p>对有限望远镜和先估计，再对每个固定 $x$ 令 $J\to\infty$。由于</p>
+<div class="dm">$$\Lambda_p=\sum_{n\ge0}2^{-3(1-p)n}(2+n\log2)^p&lt;\infty,$$</div>
+<p>得到</p>
+<div class="dm">$$|\varepsilon_G(x)|^p
+\le PC_p(1+B_p)\Lambda_pe_{p,W_0}(x).$$</div>
+<p>可取 $c_{F_0,p}=\kappa/[4C_p(1+B_p)\Lambda_p]$。尾项只在固定 $x$ 后取极限；所得常数与 $x$ 无关，因此不要求一族平均有共同范数预算。∎</p>
+<p>最后确定 $p\to1^-$ 时的阶。令</p>
+<div class="dm">$$c_p^*=\inf_{\substack{\mu\in\mathbb R[G]\\\varepsilon_G(\mu)=1}}
+e_{p,W_0}(\mu),\qquad \epsilon=1-p.$$</div>
+<p>固定二进尺度的估计不足以给出最优阶，改取</p>
+<div class="dm">$$R=2^{\lceil1/(3\epsilon\log2)\rceil}.$$</div>
+<p>在 $1/2\le p&lt;1$ 上，核定位可统一取 $A=10$，从而使用共同常数 $C_*$。同样的中位数望远镜给出</p>
+<div class="dm">$$1\le PC_*(1+B_{p,R})\Lambda_{p,R}e_{p,W_0}(x),
+\qquad
+\Lambda_{p,R}=\sum_{n\ge0}R^{-3\epsilon n}(2+n\log R)^p.$$</div>
+<p>所选尺度满足</p>
+<div class="dm">$$B_{p,R}\le16eC_*,\qquad
+\Lambda_{p,R}\le\frac{2\epsilon^{-p}}{(1-e^{-1})^2}.$$</div>
+<p>所以对质量一的全部完成元素，</p>
+<div class="dm">$$e_{p,W_0}(x)\ge C_0\epsilon^p\ge C_0\epsilon,
+\qquad C_0=\frac{\kappa(1-e^{-1})^2}
+{8C_*(1+16eC_*)}&gt;0.$$</div>
+<p>上界由真正有限的正平均达到同阶。给整数 $H\ge8$，在 Hopf 角坐标 $\phi\in[0,\pi/2]$、$\alpha,\beta\in[0,2\pi]$ 中，分别取 $H,8H,8H$ 个等距小区间的中点，共 $64H^3$ 个节点。沿三个坐标方向走到中点的球面路径给出归一化覆盖半径 $1/(2H)$。按固定次序贪心保留与已有节点距离至少 $1/H$ 的节点，得到分离度 $1/H$、覆盖半径 $3/(2H)$ 的有限表 $y_i$。</p>
+<p>取最近点 Borel 分割 $A_i$，平局按索引分配，定义</p>
+<div class="dm">$$\nu_H=\sum_i\gamma(A_i)[y_i],\qquad
+t_{ij}^k=\gamma(A_i\cap A_jk).$$</div>
+<p>边际恒等式给出每个平移的精确分子分解</p>
+<div class="dm">$$R_k\nu_H-\nu_H
+=\sum_{i,j}t_{ij}^k([y_jk]-[y_i]),\qquad
+\sum_{i,j}t_{ij}^k=1.$$</div>
+<p>非零项的端点距离至多 $3/H$。固定一行，相关的 $y_jk$ 彼此分离 $1/H$，位于半径 $3/H$ 的球内。归一化球面角距离的球体积满足</p>
+<div class="dm">$$\gamma(B(1,r))=\int_0^r2\sin^2(\pi u)\,du,
+\qquad \tfrac83r^3\le\gamma(B(1,r))
+\le\tfrac{2\pi^2}{3}r^3\quad(0&lt;r\le1/2).$$</div>
+<p>下界来自 $\sin(\pi u)\ge2u$，上界来自 $\sin(\pi u)\le\pi u$。比较互不相交的半径 $1/(2H)$ 球与半径 $7/(2H)$ 球，正项数不超过 $343\pi^2/4&lt;1024$；$H\ge8$ 保证所用半径都在上述区间。因此总非零项数至多 $2^{16}H^3$，有限正权的 $p$-质量界给出</p>
+<div class="dm">$$e_{p,W_0}(\nu_H)
+\le m\,2^{16\epsilon}H^{3\epsilon}
+(2+\log(H/3))^{-p}.$$</div>
+<p>取 $H=2^{\lceil p/(3\epsilon\log2)\rceil}$，得到 $e_{p,W_0}(\nu_H)=O(\epsilon)$，并且上极限系数不超过 $3em$。结合下界，</p>
+<div class="dm">$$c_p^*=\Theta_{F_0,W_0}(1-p)\qquad(p\to1^-).$$</div>
+<p>有限链稠密；若 $\mu_j\to x$ 且 $\varepsilon_G(x)=1$，用</p>
+<div class="dm">$$\widetilde\mu_j=\mu_j+(1-\varepsilon_G(\mu_j))[1]$$</div>
+<p>修正总质量，便有 $\rho_p(\widetilde\mu_j-x)\le2\rho_p(\mu_j-x)\to0$。每个平移等距，故</p>
+<div class="dm">$$|e_{p,W_0}(x)-e_{p,W_0}(y)|\le2m\rho_p(x-y).$$</div>
+<p>这证明有限带符号 inf 与完成空间 inf 相同，而不必为完成元素选择原子测度表示。正概率 inf 也有同阶夹逼，但这里不声称它与带符号 inf 相等。</p>
+<p>由行提取和上述上界，固定 prism 后的前插残差 inf</p>
+<div class="dm">$$I_p^{\mathrm{front}}(z)=
+\inf_{\varepsilon_G(\mu)=1}
+\rho_{G^3,W_0}\bigl(z-\partial_4(B_\mu(z')-D)\bigr)$$</div>
+<p>在固定 $p&lt;1$ 时严格为正，在 $p\to1^-$ 时同样为 $\Theta(1-p)$；上界通过逐项前插上述有限分子分解得到。具体地，每个三圈项贡献</p>
+<div class="dm">$$a_rt_{ij}^{g_r}
+([y_jg_r|h_r|k_r]-[y_i|h_r|k_r]),$$</div>
+<p>从而残差质量至多为</p>
+<div class="dm">$$\left(\sum_r|a_r|^p\right)2^{16\epsilon}H^{3\epsilon}
+(2+\log(H/3))^{-p}.$$</div>
+<p>固定有限三圈的系数质量在 $p\to1^-$ 时有界；尾对提取常数在 $p\in[1/2,1]$ 上也一致有界，故上下界具有同一个一次阶。</p>
+<p>但是，全局代价允许所有有限四链，因此只有</p>
+<div class="dm">$$\Delta_{p,W_0}(z)\le I_p^{\mathrm{front}}(z).$$</div>
+<p>前插族的正下界不能反向传给全局下确界。本文没有判定是否存在某个允许模使 $\Delta_{p,\omega}(z)&gt;0$，也没有把一般四链参数化为前插链。一般 liquid 系数的主定理与 Hausdorff $p$-Banach 系数的问题，因而具有明确不同的结论范围。</p>
+<h2>参考文献</h2>
+<ol><li>Peter Scholze，*Lectures on Analytic Geometry*。Theorem 6.5、Theorem 6.7、Theorem 6.9(2)，Lecture X 的 Proposition 10.1、Corollary 10.2、Question 10.4、Proposition 10.7。<a href="https://people.mpim-bonn.mpg.de/scholze/Analytic.pdf" rel="noopener">讲义</a>。</li></ol>
+<ol><li>Tim Austin、Calvin C. Moore，*Continuity properties of measurable group cohomology*。Theorem A、Question 42。<a href="https://arxiv.org/abs/1004.4937" rel="noopener">论文</a>。</li></ol>
+<ol><li>Aurel Page，*Computing arithmetic Kleinian groups*。Theorem 6。<a href="https://www.normalesup.org/~page/Recherche/Documents/articles/kln_gps.pdf" rel="noopener">论文</a>。</li></ol>
+<ol><li>Alan W. Reid，*The geometry and topology of arithmetic hyperbolic 3-manifolds*。第 2.3 节。<a href="https://web.ma.utexas.edu/users/areid/kyoto2.pdf" rel="noopener">综述</a>。</li></ol>
+<ol><li>James Farre，*Bounded cohomology of finitely generated Kleinian groups*。第 2.3 节。<a href="https://arxiv.org/abs/1706.02001" rel="noopener">论文</a>。</li></ol>
+<ol><li>Jean Bourgain、Alex Gamburd，*A spectral gap theorem in SU(d)*，Journal of the European Mathematical Society 14 (2012)，1455–1511。Theorem 1。<a href="https://ems.press/content/serial-article-files/31848" rel="noopener">论文</a>。</li></ol>
+<ol><li>Johannes Anschütz，*Solid group cohomology*。第 2 节关于一般 topos 的群上同调与 bar 下降。<a href="https://janschuetz.perso.math.cnrs.fr/skripte/homology_profinite.pdf" rel="noopener">讲义</a>。</li></ol>
+  </main>
 
 <script>
 (function () {
