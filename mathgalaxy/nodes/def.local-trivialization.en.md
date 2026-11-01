@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.local-trivialization)　·　[Chinese page (authoritative)](./def.local-trivialization.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.local-trivialization.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: this is the whole reason a bundle is called a bundle — locally it can always be flattened into a product. The clause "every point has a neighbourhood such that…" in the definitions of fiber bundles, vector bundles, principal bundles and covering spaces is exactly this statement.
 
-
-Cite: `def.local-trivialization` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/def.local-trivialization.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.pullback-form-manifold)　·　[Chinese page (authoritative)](./prop.pullback-form-manifold.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Pullback` (short) · `Pullback Between Manifolds` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.pullback-form-manifold.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: it carries a $k$-form back along a smooth map **between manifolds**. The version for open subsets of $\mathbb{R}^{n}$ is only its local appearance.
 
-
-Cite: `prop.pullback-form-manifold` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/prop.pullback-form-manifold.en.2.md

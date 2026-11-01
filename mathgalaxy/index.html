@@ -8748,7 +8748,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       return '<div class="sr-item' + (i === active ? ' active' : '') + '" data-i="' + i +
         '" id="sr-item-' + i + '" role="option" aria-selected="' + (i === active ? 'true' : 'false') + '">' +
         '<span class="sr-dot" style="background:' + color + '"></span>' +
-        '<span class="sr-title">' + mark(MG.isEn ? (it.label_en || it.label) : it.label, it.q) + '</span>' +
+        /* ⭐ 2026-11-01：名字的回落链必须与 `MG.labelOf` 一致（`label_en` → `title_en` → `label` → id）。
+           这里原来只写了 `label_en || label`，漏掉 `title_en` 那一级 —— 于是 242 个只有正式英文名、
+           没有短标签的节点（`prop.complete-measurable` 之类）在英文模式下仍然显示中文名。
+           ⛔ 别再在这里手写一份回落逻辑。 */
+        '<span class="sr-title">' + mark(it.node && MG.labelOf ? MG.labelOf(it.node) : (MG.isEn ? (it.label_en || it.label) : it.label), it.q) + '</span>' +
         '<span class="sr-sub">' + U.escapeHtml(tagText) + ' · ' + U.escapeHtml(it.sub) + '</span>' +
         (regionName ? '<span class="sr-region">' + U.escapeHtml(regionName) + '</span>' : '<span class="sr-region">' + U.escapeHtml(tagText) + '</span>') +
         '</div>';
@@ -12998,6 +13002,9 @@ MG.i18n = {
     'prop.exterior-derivative-manifold': { title_en: 'Exterior Derivative on Manifolds', label_en: 'Exterior Derivative', from: 'manual' },
     'prop.pullback-form-manifold': { title_en: 'Pullback Between Manifolds', label_en: 'Pullback', from: 'manual' },
     'def.local-trivialization': { title_en: 'Local Trivialization', label_en: 'Local Trivialization', from: 'manual' },
+    'def.cotangent-bundle': { title_en: 'Cotangent Bundle', label_en: 'Cotangent Bundle', from: 'manual' },
+    'def.fiber-bundle': { title_en: 'Fiber Bundle', label_en: 'Fiber Bundle', from: 'manual' },
+    'def.principal-bundle': { title_en: 'Principal Bundle', label_en: 'Principal Bundle', from: 'manual' },
     'def.differential-map': { title_en: 'Differential of a Smooth Map', label_en: 'Differential', from: 'manual' },
     'def.direct-sum': { title_en: 'direct sum and complement', label_en: 'direct sum and complement', from: 'explicit' },
     'def.directional-derivative': { title_en: 'Directional Derivative', label_en: 'Directional Derivative', from: 'manual' },
@@ -15667,6 +15674,198 @@ MG.i18nStatements = {
         status: 'reviewed', basedOn: 'v0.9.1#667e877a', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
       },
     },
+
+    /* ================================================ 2026-11-01 · 微分几何补洞那 7 个新节点
+       ⭐ 逐句对译中文（`src/data/packs/150-diffgeom-fiber.js`），**公式一字不改**：
+          中文里是块级 $$…$$ 的，这里也必须块级，且 tex 逐字相同（构建有公式不变量硬断言）。
+       ⚠️ status 一律 'draft'（我没有审校权）；basedOn 的指纹见 tools/i18n-status.mjs。
+       📌 只译了 statement；notes 留待下一批。 */
+
+    'def.local-trivialization': {
+      statement: {
+        en:
+        '**What it does**: this is the whole reason a bundle is called a bundle — locally it can ' +
+        'always be flattened into a product. The clause "every point has a neighbourhood such ' +
+        'that…" in the definitions of fiber bundles, vector bundles, principal bundles and ' +
+        'covering spaces is exactly this statement.\n\n' +
+        'Let $\\pi : E\\to B$ be a continuous surjection, $F$ a topological space and ' +
+        '$U\\subseteq B$ an open set. A continuous map\n\n' +
+        '$$\\Phi : \\pi^{-1}(U)\\longrightarrow U\\times F$$\n\n' +
+        'is called a **local trivialization** of $\\pi$ over $U$ if $\\Phi$ is a homeomorphism ' +
+        'and commutes with the projection:\n\n' +
+        '$$\\operatorname{pr}_{1}\\circ\\Phi = \\pi .$$\n\n' +
+        'Thus $\\Phi$ flattens the piece of the bundle over $U$ into the **trivial product** ' +
+        '$U\\times F$: each fiber $E_{b} := \\pi^{-1}(b)$ is sent to $\\{b\\}\\times F$, and is ' +
+        'therefore homeomorphic to $F$. If every point of $B$ has such an open neighbourhood ' +
+        'with a local trivialization, $\\pi$ is called **locally trivial**.\n\n' +
+        '**Smooth case**: when $E, B, F$ are smooth manifolds and $\\pi$ is smooth, one replaces ' +
+        '"homeomorphism" by "**diffeomorphism**" in the definition; that is the local ' +
+        'trivialization of a smooth bundle — without it even the tangent bundle would not be a ' +
+        'smooth bundle.',
+        status: 'draft', basedOn: 'v0.9.1#0cf9dc1d',
+      },
+    },
+
+    'def.cotangent-bundle': {
+      statement: {
+        en:
+        '**What it does**: the tangent space carries "where can I go", the cotangent space carries ' +
+        '"how do I measure". Stacking the dual spaces over all points gives the home of ' +
+        '1-forms — a differential form is not a formula out of nowhere, it is a section of this ' +
+        'bundle.\n\n' +
+        'Let $M$ be a smooth $n$-manifold. The **cotangent space** at $p$ is the dual space\n\n' +
+        '$$T_{p}^{\\ast}M := (T_{p}M)^{\\ast} = \\operatorname{Hom}_{\\mathbb{R}}\\bigl(T_{p}M,\\mathbb{R}\\bigr),$$\n\n' +
+        'whose elements are called **covectors**, or **1-forms at $p$** (also Pfaffian forms). ' +
+        'The **cotangent bundle** stacks them over the base points:\n\n' +
+        '$$T^{\\ast}M := \\bigsqcup_{p\\in M}T_{p}^{\\ast}M,$$\n\n' +
+        'with projection $\\pi : T^{\\ast}M\\to M$ sending $\\alpha\\in T_{p}^{\\ast}M$ to ' +
+        '$\\pi(\\alpha) := p$.\n\n' +
+        '**Smooth structure**: on a chart $(U,\\varphi)$ the differentials ' +
+        '$\\mathrm{d}x^{i}\\big|_{p}$ of the coordinate functions $x^{1},\\ldots,x^{n}$ form a ' +
+        'basis of $T_{p}^{\\ast}M$ (dual to $\\partial/\\partial x^{i}\\big|_{p}$), so\n\n' +
+        '$$\\Phi : \\pi^{-1}(U)\\longrightarrow\\varphi(U)\\times\\mathbb{R}^{n}$$\n\n' +
+        '$$\\sum_{i=1}^{n}a_{i}\\,\\mathrm{d}x^{i}\\big|_{p}\\longmapsto\\bigl(\\varphi(p),\\,a_{1},\\ldots,a_{n}\\bigr),$$\n\n' +
+        'is a bijection. Taking it as a chart makes $T^{\\ast}M$ a smooth $2n$-manifold, and ' +
+        '$\\pi$ a **smooth vector bundle of rank $n$** over $M$: the local trivializations are ' +
+        'the maps $\\Phi$ above, and the vector-space structure on the fibers comes from the dual ' +
+        'space.',
+        status: 'draft', basedOn: 'v0.9.1#2b81febc',
+      },
+    },
+
+    'def.fiber-bundle': {
+      statement: {
+        en:
+        '**What it says**: a vector bundle only requires the fiber to be a vector space. Replacing ' +
+        'the vector space by an **arbitrary manifold $F$** gives a fiber bundle — covering ' +
+        'spaces, principal bundles and vector bundles all fall under this one definition.\n\n' +
+        'Let $E, B, F$ be smooth manifolds and $\\pi : E\\to B$ a smooth surjection. One calls ' +
+        '$\\pi$ (together with $E$) a **fiber bundle with fiber $F$ and base $B$** if every point ' +
+        '$b\\in B$ has an open neighbourhood $U$ and a diffeomorphism\n\n' +
+        '$$\\Phi : \\pi^{-1}(U)\\longrightarrow U\\times F,\\qquad \\operatorname{pr}_{1}\\circ\\Phi = \\pi ,$$\n\n' +
+        'that is, $\\Phi$ commutes with the projection. Such a $\\Phi$ is called a **local ' +
+        'trivialization**, $E_{b} := \\pi^{-1}(b)$ the **fiber** over $b$, and $E$ the **total ' +
+        'space**.\n\n' +
+        '**Transition functions**: two trivializations over the same open cover necessarily ' +
+        'differ over their overlap by a fiberwise self-homeomorphism\n\n' +
+        '$$\\Phi_{\\alpha}\\circ\\Phi_{\\beta}^{-1}\\,(b, y) = \\bigl(b,\\ g_{\\alpha\\beta}(b)\\,y\\bigr),$$\n\n' +
+        'where $g_{\\alpha\\beta} : U_{\\alpha}\\cap U_{\\beta}\\to\\operatorname{Diff}(F)$ is the ' +
+        '**transition function**. They satisfy the cocycle conditions ' +
+        '$g_{\\alpha\\alpha} = \\operatorname{id}$ and ' +
+        '$g_{\\alpha\\beta}\\,g_{\\beta\\gamma}\\,g_{\\gamma\\alpha} = \\operatorname{id}$ (on ' +
+        'overlaps), and they measure how twisted the bundle is.\n\n' +
+        'If a Lie group $G$ acts on $F$ and the trivializations can always be chosen so that all ' +
+        '$g_{\\alpha\\beta}$ take values in $G$, one says the bundle has **structure group** $G$.',
+        status: 'draft', basedOn: 'v0.9.1#ffd3f1e4',
+      },
+    },
+
+    'def.principal-bundle': {
+      statement: {
+        en:
+        '**What it says**: the most self-referential class of fiber bundles — the fiber is not an ' +
+        'arbitrary manifold but the structure group $G$ itself, and $G$ acts freely on the bundle ' +
+        'from the right. Every vector bundle can be built from a principal bundle (by taking an ' +
+        'associated bundle).\n\n' +
+        'Let $G$ be a Lie group, $P, B$ smooth manifolds and $\\pi : P\\to B$ smooth. A ' +
+        '**principal $G$-bundle** over $P$ is the fiber bundle $\\pi$ together with a **right ' +
+        'action** of $G$ on $P$\n\n' +
+        '$$P\\times G\\longrightarrow P,\\qquad (u,g)\\longmapsto u\\cdot g ,$$\n\n' +
+        'such that\n\n' +
+        '1. **fibers are preserved**: $\\pi(u\\cdot g) = \\pi(u)$;\n' +
+        '2. **the action is free and transitive on each fiber**: $u\\cdot g = u \\iff g = e$, and ' +
+        'any two points of the same fiber $P_{b}$ differ by a right multiplication (so $P_{b}$ ' +
+        'is homeomorphic to $G$);\n' +
+        '3. **it is locally trivial and $G$-equivariant**: every point has a neighbourhood $U$ ' +
+        'and a diffeomorphism $\\Phi : \\pi^{-1}(U)\\to U\\times G$, written ' +
+        '$\\Phi(u) = \\bigl(\\pi(u),\\varphi(u)\\bigr)$, satisfying\n\n' +
+        '$$\\Phi(u\\cdot g) = \\bigl(\\pi(u),\\ \\varphi(u)\\,g\\bigr).$$\n\n' +
+        'The fiber is then $G$ (right multiplication $g\\mapsto hg$ carries it into itself), and ' +
+        'so is the structure group $G$. The **frame bundle** gives the most used examples: for a ' +
+        'vector bundle $E\\to B$ of rank $k$, the bundle of frames is a principal ' +
+        '$\\operatorname{GL}(k,\\mathbb{R})$-bundle — this is the bridge between vector bundles ' +
+        'and principal bundles.',
+        status: 'draft', basedOn: 'v0.9.1#2fbdf8a3',
+      },
+    },
+
+    'def.form-on-manifold': {
+      statement: {
+        en:
+        '**What it does**: it replaces "the $k$-form written in coordinates" by a **chart-free** ' +
+        'description. Once that is done, a form really is an object on the manifold, and not ' +
+        '"an expression inside some chart".\n\n' +
+        'Let $M$ be a smooth $n$-manifold. A **differential $k$-form** $\\omega$ on $M$ assigns ' +
+        'to each point $p\\in M$ an **alternating $k$-linear form**\n\n' +
+        '$$\\omega_{p} : T_{p}M\\times\\cdots\\times T_{p}M\\longrightarrow\\mathbb{R},$$\n\n' +
+        'and it **depends smoothly**: for every chart $(U,x)$ the function ' +
+        '$p\\mapsto\\omega_{p}\\bigl(\\partial_{i_{1}}\\big|_{p},\\ldots,\\partial_{i_{k}}\\big|_{p}\\bigr)$ ' +
+        'is smooth on $U$. The set of all $k$-forms on $M$ is denoted $\\Omega^{k}(M)$.\n\n' +
+        '**Smoothness is equivalent to smooth coefficients**: on $(U,x)$ the form $\\omega$ is ' +
+        'uniquely written as\n\n' +
+        '$$\\omega\\big|_{U} = \\sum_{I}a_{I}\\,\\mathrm{d}x^{I},\\qquad \\mathrm{d}x^{I} := \\mathrm{d}x^{i_{1}}\\wedge\\cdots\\wedge\\mathrm{d}x^{i_{k}},$$\n\n' +
+        'where $I$ runs over all $i_{1}<\\cdots<i_{k}$ and the coefficients are given by ' +
+        '$a_{I} := \\omega\\bigl(\\partial_{i_{1}},\\ldots,\\partial_{i_{k}}\\bigr)$. On the overlap ' +
+        'of two charts the two sets of coefficients are converted into one another by the ' +
+        '$k$-minors of the Jacobian matrix — and minors are smooth, so "the coefficients are ' +
+        'smooth" does not depend on the chart chosen. This step is what makes the definition ' +
+        'work at all: **it welds a local expression into a global object**.\n\n' +
+        '**Conventions**: $\\Omega^{0}(M) := C^{\\infty}(M)$; $\\Omega^{1}(M)$ consists of the ' +
+        '1-forms; and $\\Omega^{k}(M) = 0$ for $k > n$ (there is no nonzero alternating ' +
+        '$k$-linear form on an $n$-dimensional space). The direct sum ' +
+        '$\\Omega^{\\bullet}(M) = \\bigoplus_{k\\ge 0}\\Omega^{k}(M)$, with the wedge product, is ' +
+        'a graded algebra.',
+        status: 'draft', basedOn: 'v0.9.1#d05c11a4',
+      },
+    },
+
+    'prop.exterior-derivative-manifold': {
+      statement: {
+        en:
+        '**What it does**: the operator $\\mathrm{d}$ on $\\mathbb{R}^{n}$ is written by a ' +
+        'coordinate formula; carried to a manifold it must answer one question — is ' +
+        '$\\mathrm{d}\\omega$ computed in one chart the same object as in another? This ' +
+        'proposition settles it, and then $\\mathrm{d}$ can be written globally on a manifold.\n\n' +
+        'Let $M$ be a smooth manifold. There is a **unique** family of operators ' +
+        '$\\mathrm{d} : \\Omega^{k}(M)\\to\\Omega^{k+1}(M)$ for $k\\ge 0$ such that\n\n' +
+        '1. on functions $\\mathrm{d}f$ is the differential of $f$: ' +
+        '$\\mathrm{d}f_{p}(v) = v(f)$ for $v\\in T_{p}M$;\n' +
+        '2. $\\mathrm{d}$ is $\\mathbb{R}$-linear;\n' +
+        '3. **anti-derivation**: for a $k$-form $\\omega$, ' +
+        '$\\mathrm{d}(\\omega\\wedge\\tau) = \\mathrm{d}\\omega\\wedge\\tau + (-1)^{k}\\omega\\wedge\\mathrm{d}\\tau$;\n' +
+        '4. $\\mathrm{d}^{2} = 0$.\n\n' +
+        'Moreover, in any chart $(U,x)$ it equals the coordinate formula\n\n' +
+        '$$\\mathrm{d}\\Bigl(\\sum_{I}a_{I}\\,\\mathrm{d}x^{I}\\Bigr) = \\sum_{I}\\mathrm{d}a_{I}\\wedge\\mathrm{d}x^{I},$$\n\n' +
+        'where $\\mathrm{d}x^{I} := \\mathrm{d}x^{i_{1}}\\wedge\\cdots\\wedge\\mathrm{d}x^{i_{k}}$ ' +
+        'and $\\mathrm{d}a_{I}$ is the differential of the function $a_{I}$. Hence ' +
+        '"$\\mathrm{d}$ does not depend on the chart" is not an extra assumption, but the ' +
+        'conclusion of this proposition.',
+        status: 'draft', basedOn: 'v0.9.1#3a0efaf9',
+      },
+    },
+
+    'prop.pullback-form-manifold': {
+      statement: {
+        en:
+        '**What it does**: it carries a $k$-form back along a smooth map **between manifolds**. ' +
+        'The version for open subsets of $\\mathbb{R}^{n}$ is only its local appearance.\n\n' +
+        'Let $F : M\\to N$ be a smooth map and $\\omega\\in\\Omega^{k}(N)$. The **pullback** ' +
+        '$F^{\\ast}\\omega\\in\\Omega^{k}(M)$ is defined pointwise by\n\n' +
+        '$$(F^{\\ast}\\omega)_{p}(v_{1},\\ldots,v_{k}) := \\omega_{F(p)}\\bigl(\\mathrm{d}F_{p}v_{1},\\ldots,\\mathrm{d}F_{p}v_{k}\\bigr)$$\n\n' +
+        'for $v_{i}\\in T_{p}M$. Then $F^{\\ast}\\omega$ is smooth, and\n\n' +
+        '1. $F^{\\ast}$ is $\\mathbb{R}$-linear; on functions $F^{\\ast}f = f\\circ F$;\n' +
+        '2. **it preserves the wedge product**: ' +
+        '$F^{\\ast}(\\omega\\wedge\\eta) = F^{\\ast}\\omega\\wedge F^{\\ast}\\eta$;\n' +
+        '3. **it commutes with $\\mathrm{d}$**: ' +
+        '$\\mathrm{d}(F^{\\ast}\\omega) = F^{\\ast}(\\mathrm{d}\\omega)$;\n' +
+        '4. **it preserves composition**: $(G\\circ F)^{\\ast} = F^{\\ast}\\circ G^{\\ast}$ and ' +
+        '$(\\operatorname{id})^{\\ast} = \\operatorname{id}$.\n\n' +
+        'Thus $F^{\\ast} : \\Omega^{\\bullet}(N)\\to\\Omega^{\\bullet}(M)$ is a homomorphism of ' +
+        '**differential graded algebras**.',
+        status: 'draft', basedOn: 'v0.9.1#c76f8521',
+      },
+    },
+
   },
 };
 
