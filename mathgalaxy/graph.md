@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-01T13:27:32.694Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-01T13:33:34.895Z
 > 14 星系 / 92 星团 / 1341 节点 / 2473 连线（强边 2456，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -28403,7 +28403,9 @@ $>$ 这一路线的分工很干净：**AC 负责「挑」，Hartogs 负责「停
 
 **① 舞台：部分选择函数全体**。令
 
-$$\mathcal{F} = \{ f : f\text{ 是函数}, \operatorname{dom} f \subseteq I,\text{ 且} \forall i \in \operatorname{dom} f, f(i) \in A_i \}$$
+（即：$f$ 是函数，定义域含于 $I$，且在每个 $i$ 上取到 $A_i$ 里的值）
+
+$\mathcal{F} = \{ f : \operatorname{dom} f \subseteq I, \forall i \in \operatorname{dom} f, f(i) \in A_i \}$
 
 按包含关系 $\subseteq$ 排序。$\mathcal{F} \ne \emptyset$（空函数在 $\mathcal{F}$ 中），且 $(\mathcal{F}, \subseteq )$ 是偏序集。
 

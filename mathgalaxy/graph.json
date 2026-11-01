@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-01T13:27:32.694Z",
+  "generated": "2026-11-01T13:33:34.895Z",
   "counts": {
    "regions": 14,
    "clusters": 92,
@@ -58519,7 +58519,7 @@
    ],
    "target": "ax.choice",
    "title": "佐恩引理 $\\implies$ 选择公理（路线 $2\\implies1$）",
-   "proof": "设 $\\{A_i\\}_\\{i \\in I\\}$ 是一族非空集合。要对它造出一个选择函数。\n\n**① 舞台：部分选择函数全体**。令\n\n$$\\mathcal{F} = \\{ f : f\\text{ 是函数}, \\operatorname{dom} f \\subseteq I,\\text{ 且} \\forall i \\in \\operatorname{dom} f, f(i) \\in A_i \\}$$\n\n按包含关系 $\\subseteq$ 排序。$\\mathcal{F} \\ne \\emptyset$（空函数在 $\\mathcal{F}$ 中），且 $(\\mathcal{F}, \\subseteq )$ 是偏序集。\n\n**② 每个链有上界**：设 $\\mathcal{D} \\subseteq \\mathcal{F}$ 是 $\\subseteq$链，令 $f = \\bigcup \\mathcal{D}$。\n\n$f$ 是函数：若 $(i, a), (i, a') \\in f$，则它们分别属于某个 $f_{1}, f_{2} \\in \\mathcal{D}$；$\\mathcal{D}$ 是链，不妨设 $f_{1} \\subseteq f_{2}$，于是 $(i, a), (i, a') \\in f_{2}$，而 $f_{2}$ 是函数，故 $a = a'$。\n$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _\\{g \\in \\mathcal{D}\\} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。\n$f$ 是 $\\mathcal{D}$ 的上界：$f \\supseteq g$ 对一切 $g \\in \\mathcal{D}$ 成立。\n\n**③ 用佐恩引理**，取 $(\\mathcal{F}, \\subseteq )$ 的极大元 $f$。\n\n**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_\\{i_{0}\\} \\ne \\emptyset$ 取 $a \\in A_\\{i_{0}\\}$，则\n\n$$f' = f \\cup \\{ (i_0, a) \\}$$\n\n仍是 $\\mathcal{F}$ 中的元素（$i_{0} \\notin \\operatorname{dom} f$，不破坏函数性），且 $f \\subset f'$ —— 与 $f$ 的极大性矛盾。故 $\\operatorname{dom} f = I$。\n\n**⑤** 于是 $f : I \\to \\bigcup _\\{i \\in I\\} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎",
+   "proof": "设 $\\{A_i\\}_\\{i \\in I\\}$ 是一族非空集合。要对它造出一个选择函数。\n\n**① 舞台：部分选择函数全体**。令\n\n（即：$f$ 是函数，定义域含于 $I$，且在每个 $i$ 上取到 $A_i$ 里的值）\n\n$\\mathcal{F} = \\{ f : \\operatorname{dom} f \\subseteq I, \\forall i \\in \\operatorname{dom} f, f(i) \\in A_i \\}$\n\n按包含关系 $\\subseteq$ 排序。$\\mathcal{F} \\ne \\emptyset$（空函数在 $\\mathcal{F}$ 中），且 $(\\mathcal{F}, \\subseteq )$ 是偏序集。\n\n**② 每个链有上界**：设 $\\mathcal{D} \\subseteq \\mathcal{F}$ 是 $\\subseteq$链，令 $f = \\bigcup \\mathcal{D}$。\n\n$f$ 是函数：若 $(i, a), (i, a') \\in f$，则它们分别属于某个 $f_{1}, f_{2} \\in \\mathcal{D}$；$\\mathcal{D}$ 是链，不妨设 $f_{1} \\subseteq f_{2}$，于是 $(i, a), (i, a') \\in f_{2}$，而 $f_{2}$ 是函数，故 $a = a'$。\n$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _\\{g \\in \\mathcal{D}\\} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。\n$f$ 是 $\\mathcal{D}$ 的上界：$f \\supseteq g$ 对一切 $g \\in \\mathcal{D}$ 成立。\n\n**③ 用佐恩引理**，取 $(\\mathcal{F}, \\subseteq )$ 的极大元 $f$。\n\n**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_\\{i_{0}\\} \\ne \\emptyset$ 取 $a \\in A_\\{i_{0}\\}$，则\n\n$$f' = f \\cup \\{ (i_0, a) \\}$$\n\n仍是 $\\mathcal{F}$ 中的元素（$i_{0} \\notin \\operatorname{dom} f$，不破坏函数性），且 $f \\subset f'$ —— 与 $f$ 的极大性矛盾。故 $\\operatorname{dom} f = I$。\n\n**⑤** 于是 $f : I \\to \\bigcup _\\{i \\in I\\} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎",
    "note": "「按包含序取极大元，再证明它已经没法再大」—— 这是用佐恩引理造存在性对象的典型手法。"
   },
   {
