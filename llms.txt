@@ -10,6 +10,7 @@
 - `/mathgalaxy/nodes/<id>.md`  一个概念一个文件，绝大多数 ≤ 1300 B，可以整份读进来
 - `/mathgalaxy/nodes/<id>.html` 同一个概念的完整单页版（公式是 MathML、不分页，但大得多）
 - `/read.html`              给人读的：读图指南 / 记号对照表 / 内容准则 / 枢纽定理榜
+- `/research-p-liquid.html`  研究论文（英文）：紧群上 $p$-liquid 系数的正次数上同调反例
 
 ## 程序化使用
 
