@@ -3,9 +3,9 @@
 layer 7 · 定义 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=def.paracompact)　·　[节点索引](../index.md)
 
-拓扑空间 $X$ 叫**仿紧的**，如果它的**每个开覆盖都有局部有限的开加细**：
+拓扑空间 $X$ 叫**仿紧的**，如果它的**每个开覆盖都有局部有限的开加细**：对每个开覆盖 $\mathcal{U}$，都存在开覆盖 $\mathcal{V}$，使
 
-$$\forall\ \text{开覆盖}\ \mathcal{U},\quad \exists\ \text{开覆盖}\ \mathcal{V}:\quad \mathcal{V}\ \text{加细}\ \mathcal{U}\ \text{且}\ \mathcal{V}\ \text{局部有限}.$$
+$$\mathcal{V}\ \text{refines}\ \mathcal{U}\quad\text{and}\quad \mathcal{V}\ \text{is locally finite}.$$
 
 ⚠️ **约定**：本图**不**把 Hausdorff 并进「仿紧」的定义（有些书并进去）。需要分离性时一律显式写「仿紧 Hausdorff」。
 

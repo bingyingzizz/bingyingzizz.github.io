@@ -3,9 +3,9 @@
 layer 14 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.sequentially-compact)　·　[节点索引](../index.md)
 
-距离空间 (X, d) **列紧**（序列紧），当且仅当 $X$ 中每个序列都有收敛到 $X$ 中的子列：
+距离空间 $(X, d)$ **列紧**（序列紧），当且仅当 $X$ 中每个序列都有收敛到 $X$ 中的子列：
 
-$$\forall\{x_n\} \subseteq X, \exists\{x_{n_k}\}\text{ 与} \exists x \in X : x_{n_k} \to x$$
+$$\forall\{x_n\} \subseteq X,\ \exists\{x_{n_k}\},\ \exists x \in X : x_{n_k} \to x$$
 
 ## 它能推出什么 / 谁在用它
 - ⟺ [`def.compact`](../nodes/def.compact.md) 紧

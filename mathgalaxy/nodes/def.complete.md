@@ -7,9 +7,9 @@ layer 14 · 定义 · 度量空间 · 拓扑学
 
 $$\forall\varepsilon > 0, \exists N : m, n \ge N \implies d(x_m, x_n) < \varepsilon$$
 
-距离空间 (X, d) **完备**，当且仅当 $X$ 中每个 Cauchy 列都在 $X$ 中收敛：
+距离空间 $(X, d)$ **完备**，当且仅当 $X$ 中每个 Cauchy 列都在 $X$ 中收敛：
 
-$$\{x_n\}\text{ 是} Cauchy\text{ 列} \implies \exists x \in X : x_n \to x$$
+$$\{x_n\}\ \text{Cauchy} \implies \exists x \in X : x_n \to x$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sequentially-compact`](../nodes/def.sequentially-compact.md) 列紧：列紧 $\implies$ 完备　[proofs/imp.seqcompact-complete.md](../proofs/imp.seqcompact-complete.md)

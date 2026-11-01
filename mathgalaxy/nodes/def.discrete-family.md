@@ -3,9 +3,9 @@
 layer 5 · 定义 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=def.discrete-family)　·　[节点索引](../index.md)
 
-$X$ 的一族子集 $\mathcal{A} = \{ A_{s} \}_{s \in S}$ 叫**离散的**，如果每个点都有开邻域至多与**一个**成员相交：
+$X$ 的一族子集 $\mathcal{A} = \{ A_{s} \}_{s \in S}$ 叫**离散的**，如果每个点都有**开邻域**至多与**一个**成员相交：对每个 $x \in X$ 都存在开集 $U \ni x$，使
 
-$$\forall x \in X,\ \exists U \ni x \text{ 开}:\quad \#\{\, s \in S : U \cap A_{s} \ne \emptyset \,\} \le 1.$$
+$$\#\{\, s \in S : U \cap A_{s} \ne \emptyset \,\} \le 1.$$
 
 离散 $\implies$ 局部有限 $\implies$ 点有限；两个反向都不成立。
 

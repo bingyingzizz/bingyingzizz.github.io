@@ -3,9 +3,9 @@
 layer 15 · 推论 · 可测函数与收敛 · 实变函数+数学分析+拓扑学
 [在星图里打开](../#n=cor.continuous-measurable)　·　[节点索引](../index.md)
 
-设 X, Y 是拓扑空间，各配 $Borel \sigma$代数 $\mathfrak{B}_X, \mathfrak{B}_Y$。则
+设 $X, Y$ 是拓扑空间，各配 **Borel $\sigma$-代数** $\mathfrak{B}_X, \mathfrak{B}_Y$。则**连续**映射自动是 Borel 可测的：
 
-$$f : X \to Y\text{ 连续} \implies f\text{ 是} (\mathfrak{B}_X, \mathfrak{B}_Y)-\text{可测的}$$
+$f : X \to Y$ **连续** $\implies f$ 是 $(\mathfrak{B}_X, \mathfrak{B}_Y)$-**可测**的
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/cor.continuous-measurable.2.md](./cor.continuous-measurable.2.md)

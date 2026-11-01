@@ -3,9 +3,7 @@
 layer 23 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.inverse-function)　·　[节点索引](../index.md)
 
-设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{n}$ 是 $C^{1}$，$a \in U$ 且 $Df(a)$ **可逆**。则存在 $a$ 的开邻域 $V \subseteq U$ 与 $f(a)$ 的开邻域 $W$ 使
-
-$$f\bigl|_{V} : V \to W \quad \text{是双射}$$
+设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{n}$ 是 $C^{1}$，$a \in U$ 且 $Df(a)$ **可逆**。则存在 $a$ 的开邻域 $V \subseteq U$ 与 $f(a)$ 的开邻域 $W$，使限制 $f\bigl|_{V}$ 是 $V \to W$ 的**双射**，
 > 陈述续见 [nodes/thm.inverse-function.2.md](./thm.inverse-function.2.md)
 
 

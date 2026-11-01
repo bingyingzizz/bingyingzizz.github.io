@@ -3,9 +3,9 @@
 layer 17 · 引理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=lem.variation-monotone)　·　[节点索引](../index.md)
 
-设 $F$ 是**实值**有界变差函数。则
+设 $F$ 是**实值**有界变差函数。则 $T_F + F$ 与 $T_F - F$
 
-$$T_F + F\quad \text{ 与}\quad  T_F - F$$
+$$T_F + F\quad \text{and}\quad  T_F - F$$
 
 都是**递增**函数。
 
@@ -13,7 +13,7 @@ $$T_F + F\quad \text{ 与}\quad  T_F - F$$
 - [`def.bounded-variation`](../nodes/def.bounded-variation.md) 有界变差函数：用到了定义 有界变差函数　[proofs/def-link.bv-jordan-lemma.md](../proofs/def-link.bv-jordan-lemma.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.bv-jordan`](../nodes/thm.bv-jordan.md) 有界变差函数的 Jordan 分解
+- …另有出边，续页见 [nodes/lem.variation-monotone.2.md](./lem.variation-monotone.2.md)
 
 refs: Folland, Real Analysis, Theorem 3.27
 

@@ -3,9 +3,9 @@
 layer 16 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integral-simple)　·　[节点索引](../index.md)
 
-设 $\varphi \in L^+$ 是简单函数，写成标准形式
+设 $\varphi \in L^+$ 是简单函数，写成标准形式 —— 系数非负、底集两两不交且都在 $\mathcal{M}$ 里：
 
-$$\varphi = \sum_{j=1}^{n} a_j \chi_{E_j}, \quad  a_j \ge 0, E_j \in \mathcal{M}\text{ 两两不交}$$
+$\varphi = \sum_{j=1}^{n} a_j \chi_{E_j}, \quad  a_j \ge 0,\ E_j \in \mathcal{M}$ **两两不交**
 
 则定义
 

@@ -5,13 +5,13 @@ layer 15 · 命题 · 集合族与 σ-代数 · 实变函数+数学分析
 
 (1) 基本类包含 $\emptyset$。
 
-(2) 代数与 $\sigma$代数对**有限交**、**可数交**封闭。
+(2) 代数与 $\sigma$-代数对**有限交**、**可数交**封闭。
 
-$(3) \mathfrak{A}$ 是 $\sigma$代数 $\iff \mathfrak{A}$ 对**可数并**与**取补**都封闭。
+(3) $\mathfrak{A}$ 是 $\sigma$-代数 $\iff$ $\mathfrak{A}$ 对**可数并**与**取补**都封闭。
 
-(5) 若 $\mathcal{E}$ 是**基本类**，则
+(5) 若 $\mathcal{E}$ 是**基本类**，则「$\mathcal{E}$ 中有限多个两两不交集合之并」全体
 
-$$\mathfrak{A} = \{ \mathcal{E}\text{ 中有限多个两两不交集合之并} \}$$
+$\mathfrak{A} = \{ E_1 \cup \cdots \cup E_n : E_1, \ldots, E_n \in \mathcal{E}$ 两两不交 $\}$
 
 是一个**环**。
 > 陈述续见 [nodes/prop.set-class-properties.2.md](./prop.set-class-properties.2.md)

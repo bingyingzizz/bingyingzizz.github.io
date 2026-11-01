@@ -3,9 +3,7 @@
 layer 15 · 命题 · 度量空间 · 拓扑学
 [在星图里打开](../#n=prop.compact-subset-closed)　·　[节点索引](../index.md)
 
-设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。则
-
-$$A\text{ 紧} \implies A\text{ 是} X\text{ 中的闭集}$$
+设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。若 $A$ **紧**，则 $A$ 是 $X$ 中的**闭集**。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-link.compact-closed.md](../proofs/def-link.compact-closed.md)

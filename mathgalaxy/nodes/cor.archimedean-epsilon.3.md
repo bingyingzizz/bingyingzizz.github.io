@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`lem.archimedean`](../nodes/lem.archimedean.md) Archimedes 性质：阿基米德性质 $\implies$ $1/n < \varepsilon$ 与取整　[proofs/imp.archimedean-epsilon.md](../proofs/imp.archimedean-epsilon.md)
+
+> 续见 [nodes/cor.archimedean-epsilon.4.md](./cor.archimedean-epsilon.4.md)

@@ -3,11 +3,11 @@
 layer 18 · 定理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=thm.mct)　·　[节点索引](../index.md)
 
-设 $\{f_n\} \subseteq L^+$ 满足
+设 $\{f_n\} \subseteq L^+$ 是**逐点递增**序列：
 
-$$f_1 \le f_2 \le \cdots, \quad  f_n \uparrow  f\text{ 逐点}, $$
+$$f_1 \le f_2 \le \cdots, \quad  f_n \uparrow  f$$
 
-则
+则积分与极限可以交换：
 
 $$\int f = \lim_{n\to\infty} \int f_n$$
 

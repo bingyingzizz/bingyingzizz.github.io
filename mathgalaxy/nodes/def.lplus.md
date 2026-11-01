@@ -3,11 +3,9 @@ $L^{+}$：非负可测函数全体
 layer 15 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.lplus)　·　[节点索引](../index.md)
 
-固定测度空间 $(X, \mathcal{M}, \mu )$。记
+固定测度空间 $(X, \mathcal{M}, \mu )$。记 $L^+$ 为取值在**扩充**非负实数里的**可测**函数全体：
 
-$$L^+ := \{ f : X \to [0, +\infty] : f\text{ 可测} \}$$
-
-即取值在**扩充**非负实数里的可测函数全体。
+$L^+ := \{ f : X \to [0, +\infty] : f$ **可测** $\}$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.measurable-function`](../nodes/def.measurable-function.md) 可测函数：用到了定义 可测函数　[proofs/def-dep.measurable-fn-lplus.md](../proofs/def-dep.measurable-fn-lplus.md)

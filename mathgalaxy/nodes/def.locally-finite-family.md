@@ -3,9 +3,9 @@
 layer 6 · 定义 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=def.locally-finite-family)　·　[节点索引](../index.md)
 
-设 $X$ 是拓扑空间，$\mathcal{A} = \{ A_{s} \}_{s \in S}$ 是 $X$ 的一族子集。$\mathcal{A}$ 叫**局部有限的**，如果每个点都有开邻域只与**有限多个**成员相交：
+设 $X$ 是拓扑空间，$\mathcal{A} = \{ A_{s} \}_{s \in S}$ 是 $X$ 的一族子集。$\mathcal{A}$ 叫**局部有限的**，如果每个点都有**开邻域**只与**有限多个**成员相交：对每个 $x \in X$ 都存在开集 $U \ni x$，使
 
-$$\forall x \in X,\ \exists U \ni x \text{ 开}:\quad \{\, s \in S : U \cap A_{s} \ne \emptyset \,\} \text{ 有限}.$$
+$$\{\, s \in S : U \cap A_{s} \ne \emptyset \,\}\ \text{finite}.$$
 > 陈述续见 [nodes/def.locally-finite-family.2.md](./def.locally-finite-family.2.md)
 
 

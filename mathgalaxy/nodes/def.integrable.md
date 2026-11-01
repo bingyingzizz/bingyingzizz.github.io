@@ -3,13 +3,11 @@
 layer 19 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integrable)　·　[节点索引](../index.md)
 
-实值可测 $f$ **可积**，当且仅当 $\int f^+ < \infty$ 且 $\int f^- < \infty$。等价地：
+实值可测 $f$ **可积**，当且仅当 $\int f^+ < \infty$ 且 $\int f^- < \infty$。等价地，$f$ 可积当且仅当 $|f|$ 的积分有限：
 
-$$f\text{ 可积} \iff \int |f| d\mu < \infty$$
+$f$ **可积** $\iff \int |f| d\mu < \infty$
 
-复值可测 $f$ 可积，当且仅当 $\int |f| d\mu < \infty$。可积函数全体记作
-
-$$L^1(\mu) = L^1(X, \mathcal{M}, \mu) = L^1(X, \mu)$$
+复值可测 $f$ 可积，当且仅当 $\int |f| d\mu < \infty$。可积函数全体记作 $L^1$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.lplus`](../nodes/def.lplus.md) 非负可测函数类：用到了定义 非负可测函数类　[proofs/def-link.lplus-integrable.md](../proofs/def-link.lplus-integrable.md)

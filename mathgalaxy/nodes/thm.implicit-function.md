@@ -3,9 +3,9 @@
 layer 24 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.implicit-function)　·　[节点索引](../index.md)
 
-设 $U \subseteq \mathbb{R}^{n} \times \mathbb{R}^{m}$ 开，$F : U \to \mathbb{R}^{m}$ 是 $C^{1}$，$(a, b) \in U$ 满足
+设 $U \subseteq \mathbb{R}^{n} \times \mathbb{R}^{m}$ 开，$F : U \to \mathbb{R}^{m}$ 是 $C^{1}$，$(a, b) \in U$ 满足 $F(a, b) = 0$，且 $D_y F(a, b)$ **可逆**：
 
-$$F(a, b) = 0, \qquad D_y F(a, b) \in M_m(\mathbb{R})\ \text{可逆}$$
+$$F(a, b) = 0, \qquad D_y F(a, b) \in M_m(\mathbb{R})\ \text{invertible}$$
 > 陈述续见 [nodes/thm.implicit-function.2.md](./thm.implicit-function.2.md)
 
 

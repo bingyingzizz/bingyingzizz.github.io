@@ -2,6 +2,8 @@
 [在星图里打开](../#n=thm.inverse-function)　·　第 1 页 [nodes/thm.inverse-function.md](./thm.inverse-function.md)
 
 ## 陈述（续）
+$$f\bigl|_{V} : V \to W \quad \text{bijective},$$
+
 且其逆 $g := (f\bigl|_{V})^{-1} : W \to V$ 也是 $C^{1}$，并且对一切 $y \in W$
 
 $$Dg(y) = \bigl( Df(g(y)) \bigr)^{-1}$$

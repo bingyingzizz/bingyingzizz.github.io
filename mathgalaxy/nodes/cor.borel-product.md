@@ -3,15 +3,13 @@
 layer 14 · 推论 · 乘积测度与 Fubini · 实变函数+数学分析+拓扑学
 [在星图里打开](../#n=cor.borel-product)　·　[节点索引](../index.md)
 
-设 $X_{1}, X_{2}$ … 是距离空间，$X = \prod_{j=1}^{\infty} X_j$ 配以积度量。则
+若每个 $X_j$ 都**可分**，则积 $\sigma$-代数与 Borel $\sigma$-代数重合：
 
-$$\otimes _{j=1}^{\infty} \mathfrak{B}_{X_j} \subseteq \mathfrak{B}_X$$
-
-且当每个 $X_{j}$ **可分**时，等号成立：
-
-$$X_j\text{ 都可分} \implies \otimes _{j=1}^{\infty} \mathfrak{B}_{X_j} = \mathfrak{B}_X$$
+$\bigotimes_{j=1}^{\infty} \mathfrak{B}_{X_j} = \mathfrak{B}_{X}$
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.product-sigma`](../nodes/def.product-sigma.md) 积 σ-代数：用到了定义 积 σ-代数　[proofs/def-link.product-borel.md](../proofs/def-link.product-borel.md)
+
 - …另有入边，续页见 [nodes/cor.borel-product.2.md](./cor.borel-product.2.md)
 
 refs: Folland, Real Analysis, §2.1

@@ -3,12 +3,12 @@
 layer 6 · 定理 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=thm.michael-paracompact)　·　[节点索引](../index.md)
 
-设 $X$ 是**正则**空间。则
+设 $X$ 是**正则**空间。则 $X$ **仿紧**，当且仅当它的每个开覆盖都有**局部有限的加细**（加细的成员不必是开集）：
 
-$$X\ \text{仿紧}\quad \iff \quad X\ \text{的每个开覆盖都有局部有限的加细（加细的成员不必是开集）}.$$
+$X$ **仿紧** $\iff$ 每个开覆盖都有局部有限的加细
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.refinement`](../nodes/def.refinement.md) 覆盖的加细：用到了定义 覆盖的加细　[proofs/dep.pcp-closedref-michael.md](../proofs/dep.pcp-closedref-michael.md)
+- …另有入边，续页见 [nodes/thm.michael-paracompact.2.md](./thm.michael-paracompact.2.md)
 
 refs: Michael, A note on paracompact spaces, Proc. Amer. Math. Soc. 4 (1953)；Engelking, General Topology, Ch. 5
 

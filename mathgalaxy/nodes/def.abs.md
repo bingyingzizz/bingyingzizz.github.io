@@ -3,11 +3,11 @@
 layer 9 · 定义 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=def.abs)　·　[节点索引](../index.md)
 
-设 $K$ 是**有序域**（$\mathbb{Q}$ 与 $\mathbb{R}$ 都是），$x \in K$。定义
+设 $K$ 是**有序域**（$mathbb{Q}$ 与 $mathbb{R}$ 都是），$x in K$。定义
 
-$$|x| := \begin{cases} x, & x \ge 0 \\ -x, & x < 0 \end{cases} \qquad\text{即}\qquad |x| = \max\{x, -x\}$$
+$$|x| := \begin{cases} x, & x \ge 0 \\ -x, & x < 0 \end{cases} \qquad\text{i.e.}\qquad |x| = \max\{x, -x\}$$
 
-于是 $|x| \ge 0$ 恒成立，且 $|x| = 0 \iff x = 0$。
+于是 $|x| ge 0$ 恒成立，且 $|x| = 0 iff x = 0$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.ordered-field`](../nodes/def.ordered-field.md) 有序域：用到了定义 有序域　[proofs/dep.ordered-abs.md](../proofs/dep.ordered-abs.md)

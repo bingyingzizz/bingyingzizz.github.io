@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.integral-nonneg)　·　第 1 页 [nodes/def.integral-nonneg.md](./def.integral-nonneg.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.bound`](../nodes/def.bound.md) 界与确界：用到了定义 界与确界　[proofs/dep.sup-integral-nonneg.md](../proofs/dep.sup-integral-nonneg.md)
 - [`def.lplus`](../nodes/def.lplus.md) 非负可测函数类：用到了定义 非负可测函数类　[proofs/def-dep.lplus-integral-nonneg.md](../proofs/def-dep.lplus-integral-nonneg.md)
 
 > 续见 [nodes/def.integral-nonneg.3.md](./def.integral-nonneg.3.md)

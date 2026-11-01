@@ -3,7 +3,7 @@
 layer 7 · 命题 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=prop.measurable-product-and-realimag)　·　[节点索引](../index.md)
 
-**(1)** 设 $(X, \mathcal{M})$、$(Y_\alpha , \mathcal{N}_\alpha ) (\alpha \in A)$ 是可测空间，$Y = \prod_{\alpha} Y_\alpha$，$\mathcal{N} = \otimes _{\alpha} \mathcal{N}_\alpha$，$\pi _\alpha : Y \to Y_\alpha$ 是投影。则
+**(1)** 设 $(X, \mathcal{M})$、$(Y_\alpha , \mathcal{N}_\alpha ) (\alpha \in A)$ 是可测空间，$Y = \prod_{\alpha} Y_\alpha$，$\mathcal{N} = \otimes _{\alpha} \mathcal{N}_\alpha$，$\pi _\alpha : Y \to Y_\alpha$ 是投影。则 $f$ 
 > 陈述续见 [nodes/prop.measurable-product-and-realimag.2.md](./prop.measurable-product-and-realimag.2.md)
 
 

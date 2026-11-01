@@ -11,9 +11,9 @@ layer 8 · 命题 · 实数的运算与不等式 · 数学分析+抽象代数
 
 **(iii)** 若 $A$ 含幺元 $1$，则 $(-1)a = -a$；
 
-**(iv)** 若 $A$ 是整环（含幺交换、无零因子），则
+**(iv)** 若 $A$ 是整环（含幺交换、无零因子），则没有零因子、且非零元可约：
 
-$$ab = 0 \implies a = 0 \text{ 或 } b = 0, \qquad a \ne 0,\ ab = ac \implies b = c.$$
+$$ab = 0 \implies a = 0 \ \vee\ b = 0, \qquad a \ne 0,\ ab = ac \implies b = c.$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.field-rules.2.md](./prop.field-rules.2.md)

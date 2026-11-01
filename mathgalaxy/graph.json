@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-01T13:33:34.895Z",
+  "generated": "2026-11-01T14:15:15.149Z",
   "counts": {
    "regions": 14,
    "clusters": 92,
@@ -3924,7 +3924,7 @@
     "完备",
     "Cauchy 列"
    ],
-   "statement": "序列 $\\{x_{n}\\}$ 是 **Cauchy 列**，当且仅当\n\n$$\\forall\\varepsilon > 0, \\exists N : m, n \\ge N \\implies d(x_m, x_n) < \\varepsilon$$\n\n距离空间 (X, d) **完备**，当且仅当 $X$ 中每个 Cauchy 列都在 $X$ 中收敛：\n\n$$\\{x_n\\}\\text{ 是} Cauchy\\text{ 列} \\implies \\exists x \\in X : x_n \\to x$$",
+   "statement": "序列 $\\{x_{n}\\}$ 是 **Cauchy 列**，当且仅当\n\n$$\\forall\\varepsilon > 0, \\exists N : m, n \\ge N \\implies d(x_m, x_n) < \\varepsilon$$\n\n距离空间 $(X, d)$ **完备**，当且仅当 $X$ 中每个 Cauchy 列都在 $X$ 中收敛：\n\n$$\\{x_n\\}\\ \\text{Cauchy} \\implies \\exists x \\in X : x_n \\to x$$",
    "notes": "「收敛 $\\implies Cauchy$」永远成立；**「$Cauchy \\implies$ 收敛」才是完备性的内容**。\n\n例子：$\\mathbb{R}^{n}$、$\\mathbb{C}^{n}$、任何 Banach 空间都完备；$\\mathbb{Q}$ 不完备（3, 3.1, 3.14, …, 一个收敛到 $\\sqrt 2$ 的 Cauchy 列在 $\\mathbb{Q}$ 中不收敛）。\n\n**闭子集继承完备**：$X$ 完备时，$A \\subseteq X$ 作为子空间完备 $\\iff A$ 在 $X$ 中闭。这条在下面「子集的紧性刻画」里要用。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 3"
@@ -3964,7 +3964,7 @@
     "全有界",
     "ε-网"
    ],
-   "statement": "距离空间 (X, d) **全有界**（也叫**预紧**），当且仅当对每个 $\\varepsilon > 0$ 都存在**有限的 $\\varepsilon$网**：\n\n$$\\forall\\varepsilon > 0, \\exists n\\text{ 与} x_1, \\ldots , x_n \\in X : X = \\bigcup_{i=1}^{n} B(x_i, \\varepsilon)$$\n\n等价说法：对每个 $\\varepsilon > 0$，$X$ 都能被**有限个**半径 $\\varepsilon$ 的开球盖住。",
+   "statement": "距离空间 $(X, d)$ **全有界**（也叫**预紧**），当且仅当对每个 $\\varepsilon > 0$ 都存在**有限的 $\\varepsilon$-网**：\n\n$$\\forall\\varepsilon > 0,\\ \\exists x_1, \\ldots , x_n \\in X : X = \\bigcup_{i=1}^{n} B(x_i, \\varepsilon)$$\n\n等价说法：对每个 $\\varepsilon > 0$，$X$ 都能被**有限个**半径 $\\varepsilon$ 的开球盖住。",
    "notes": "关键词是**有限**。它只要求「存在」一组有限的球，不要求你写得出来。\n\n**全有界 $\\implies$ 有界**（取 $\\varepsilon = 1$，$X$ 就被有限个单位球盖住），但反之不然：无限维 Banach 空间的单位球有界而不全有界。\n\n全有界被**一致连续**映射保持，但不被连续映射保持 —— 又一次说明它是度量性质而非拓扑性质。",
    "refs": [
     "Munkres, Topology, §43"
@@ -4004,7 +4004,7 @@
     "列紧",
     "子列"
    ],
-   "statement": "距离空间 (X, d) **列紧**（序列紧），当且仅当 $X$ 中每个序列都有收敛到 $X$ 中的子列：\n\n$$\\forall\\{x_n\\} \\subseteq X, \\exists\\{x_{n_k}\\}\\text{ 与} \\exists x \\in X : x_{n_k} \\to x$$",
+   "statement": "距离空间 $(X, d)$ **列紧**（序列紧），当且仅当 $X$ 中每个序列都有收敛到 $X$ 中的子列：\n\n$$\\forall\\{x_n\\} \\subseteq X,\\ \\exists\\{x_{n_k}\\},\\ \\exists x \\in X : x_{n_k} \\to x$$",
    "notes": "在度量空间里「列紧 $\\iff$ 紧」（见下面的箭头），但在一般拓扑空间里**不等价** —— 列紧严格更强。度量空间好用的地方正是这里。\n\n注意子列收敛到的是 $X$ 中的点：列紧是内蕴性质，不看外面那个空间。",
    "refs": [
     "Munkres, Topology, §28"
@@ -4044,7 +4044,7 @@
     "紧",
     "开覆盖"
    ],
-   "statement": "距离空间 (X, d) **紧**，当且仅当 $X$ 的每个**开覆盖**都有有限子覆盖：\n\n$$\\forall\\{U_i\\}_{i \\in I} (\\text{ 每个} U_i\\text{ 开且} X = \\bigcup_{i \\in I} U_i ) \\implies \\exists i_1, \\ldots , i_n : X = \\bigcup_{k=1}^{n} U_{i_k}$$",
+   "statement": "距离空间 $(X, d)$ **紧**，当且仅当 $X$ 的每个**开覆盖**都有有限子覆盖。展开说：若族 $\\{U_i\\}_{i \\in I}$ 满足「每个 $U_i$ 都是开集」且 $X = \\bigcup_{i \\in I} U_i$，则存在有限个下标使\n\n$$X = \\bigcup_{k=1}^{n} U_{i_k}$$",
    "notes": "紧性是**拓扑**性质，只依赖开集，跟 $d$ 的具体取值无关。\n\n例子：$\\mathbb{R}$ 中的闭区间 [a, b] 紧（Heine–Borel）；$\\mathbb{R}$ 本身不紧（{(-n, n)} 没有有限子覆盖）；(0, 1] 不紧。\n\n紧性的一个常用等价形式：**有限交性质** —— 若一族闭集的任意有限子族都有交，则整族的交非空。",
    "refs": [
     "Munkres, Topology, §26"
@@ -4147,7 +4147,7 @@
     "紧",
     "闭集"
    ],
-   "statement": "设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。则\n\n$$A\\text{ 紧} \\implies A\\text{ 是} X\\text{ 中的闭集}$$",
+   "statement": "设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。若 $A$ **紧**，则 $A$ 是 $X$ 中的**闭集**。",
    "notes": "其实只要 $X$ 是 Hausdorff 空间，紧子集就是闭的；距离空间自然 Hausdorff。\n\n把它和「$X$ 完备」放在一起，正是为了下面那条**子集**的紧性刻画做准备：那条要用「$A$ 紧 $\\implies A$ 闭」和「$A$ 闭 $X$ 完备 $\\implies A$ 完备」。\n\n**证明。** 设 $A$ 紧，取 $x \\in X\\setminus A$ 要证它是内点。\n- 对每个 $a \\in A$，由 Hausdorff 性取 $a$ 的开邻域 $U_{a}$ 与 $x$ 的开邻域 $V_{a}$ 使 $U_{a}\\cap V_{a} = \\emptyset$（距离空间里取 $U_{a} = B(a, r/2)$、$V_{a} = B(x, r/2)$，$r = d(a,x)$）；\n- $\\{U_{a}\\}_{a\\in A}$ 是 $A$ 的开覆盖，由**紧性**取有限子覆盖 $U_{a_{1}}, \\ldots, U_{a_{n}}$；\n- $V := \\bigcap_{i=1}^{n} V_{a_{i}}$ 是 $x$ 的开邻域，且 $V\\cap U_{a_{i}} = \\emptyset$ 对每个 $i$ 成立，故 $V \\cap A = \\emptyset$，即 $V \\subseteq X\\setminus A$ ✓。\n于是 $X\\setminus A$ 开，$A$ 闭。∎",
    "refs": [
     "Munkres, Topology, §26"
@@ -4187,7 +4187,7 @@
     "闭",
     "全有界"
    ],
-   "statement": "设 (X, d) 是**完备**的距离空间，$A \\subseteq X$。则\n\n$$A\\text{ 紧} \\iff A\\text{ 闭}\\text{ 且} A\\text{ 全有界}$$\n\n（「$A$ 全有界」按子空间度量 d|A 理解。）",
+   "statement": "设 $(X, d)$ 是**完备**的距离空间，$A \\subseteq X$。则\n\n$A$ **紧** $\\iff$ $A$ 闭**且** $A$ **全有界**。\n\n（「$A$ 全有界」按子空间度量 $d|_A$ 理解。）",
    "notes": "⚠ **「$X$ 完备」这个前提不能省。** 理由是中间那一步：$A$ 作为子空间完备 $\\iff A$ 在 $X$ 中闭 —— 这一步要用 $X$ 完备。少了它，$A$ 闭 $A$ 全有界推不出 $A$ 紧。\n\n这也是 **Heine–Borel** 的推广：$\\mathbb{R}^{n}$ 完备，而在 $\\mathbb{R}^{n}$ 中 $A$ 有界 $\\iff A$ 全有界，于是「有界闭集紧」正是它的特例。\n\n**证明。**\n- **$\\implies$**：$A$ 紧 $\\implies$ $A$ 在 $X$ 中闭（上一条）。全有界：任给 $\\varepsilon > 0$，$\\{B(a,\\varepsilon)\\cap A\\}_{a\\in A}$ 是 $A$（带子空间度量）的开覆盖，紧性给有限子覆盖，那有限个中心就是 $\\varepsilon$-网 ✓。\n- **$\\Longleftarrow$**：设 $A$ 闭、全有界。先看**完备性**：$X$ 完备、$A$ 闭，则 $A$ 里的 Cauchy 列在 $X$ 里收敛到某点，极限落在闭的 $A$ 里，故 $A$ 作为子空间完备 ✓。再证**紧**：全有界给可数稠密子集，于是 $A$ 里的任意序列可以用「逐层取 $2^{-n}$-网 + 抽屉原理」抽出 Cauchy 子列；完备性让这个子列收敛 ✓。所以 $A$ **列紧**；而在**度量空间**里列紧 $\\iff$ 紧 ✓。∎\n⚠️ 「$X$ 完备 $\\implies$ $A$ 完备」那一步正是标题里那个前提的用处（见上一条说明）。",
    "refs": [
     "Munkres, Topology, §28",
@@ -4230,7 +4230,7 @@
     "集合族",
     "测度论"
    ],
-   "statement": "设 $X$ 是集合，$\\mathfrak{A} \\subseteq \\mathcal{P}(X)$。$\\mathfrak{A}$ 是 $X$ 上的一个**基本类**，当且仅当\n\n- 对**交**封闭：$A, B \\in \\mathfrak{A} \\implies A \\cap B \\in \\mathfrak{A}$\n- 差可以拆开：$A, B \\in \\mathfrak{A} \\implies A \\setminus B\\text{ 是} \\mathfrak{A}\\text{ 中有限多个两两不交集合之并}$",
+   "statement": "设 $X$ 是集合，$\\mathfrak{A} \\subseteq \\mathcal{P}(X)$。$\\mathfrak{A}$ 是 $X$ 上的一个**基本类**，当且仅当\n\n- 对**交**封闭：$A, B \\in \\mathfrak{A} \\implies A \\cap B \\in \\mathfrak{A}$\n- 差可以拆开：$A, B \\in \\mathfrak{A} \\implies A \\setminus B$ 是 $\\mathfrak{A}$ 中**有限多个两两不交集合之并**",
    "notes": "它比「环」弱一档：只要求对**交**封闭（不是并），而差只要求「能拆成不交并」。\n\n基本类的作用是当**砖块**：把它的元素做成有限不交并，就得到一个环 —— 这正是下面那条性质 (5)。\n\n典型例子：半开区间族 $\\{ (a, b] : a < b \\}$ 是 $\\mathbb{R}$ 上的基本类；由它做有限不交并得到的，正是构造 Lebesgue–Stieltjes 测度时要用的那个代数。",
    "refs": [
     "Halmos, Measure Theory, §4"
@@ -4438,7 +4438,7 @@
     "代数",
     "封闭性"
    ],
-   "statement": "(1) 基本类包含 $\\emptyset$。\n\n(2) 代数与 $\\sigma$代数对**有限交**、**可数交**封闭。\n\n$(3) \\mathfrak{A}$ 是 $\\sigma$代数 $\\iff \\mathfrak{A}$ 对**可数并**与**取补**都封闭。\n\n(5) 若 $\\mathcal{E}$ 是**基本类**，则\n\n$$\\mathfrak{A} = \\{ \\mathcal{E}\\text{ 中有限多个两两不交集合之并} \\}$$\n\n是一个**环**。\n\n（第 (4) 条因为本身是一条定理，单独列在「环 $\\implies \\sigma$环 的判据」里。）",
+   "statement": "(1) 基本类包含 $\\emptyset$。\n\n(2) 代数与 $\\sigma$-代数对**有限交**、**可数交**封闭。\n\n(3) $\\mathfrak{A}$ 是 $\\sigma$-代数 $\\iff$ $\\mathfrak{A}$ 对**可数并**与**取补**都封闭。\n\n(5) 若 $\\mathcal{E}$ 是**基本类**，则「$\\mathcal{E}$ 中有限多个两两不交集合之并」全体\n\n$\\mathfrak{A} = \\{ E_1 \\cup \\cdots \\cup E_n : E_1, \\ldots, E_n \\in \\mathcal{E}$ 两两不交 $\\}$\n\n是一个**环**。\n\n（第 (4) 条因为本身是一条定理，单独列在「环 $\\implies \\sigma$-环 的判据」里。）",
    "notes": "**证明。**\n(1) 取 $A \\in \\mathfrak{A}$，则 $A \\setminus A = \\emptyset \\in \\mathfrak{A}$（基本类对差封闭），故空集可写成空的不交并 ✓。\n(2) 代数：$A_{1}, \\ldots, A_{n} \\in \\mathfrak{A}$ 时 $A_{1}\\cap\\cdots\\cap A_{n} = X \\setminus \\bigl(\\bigcup_{i}(X\\setminus A_{i})\\bigr) \\in \\mathfrak{A}$（补 + 有限并）✓；可数交由 $\\sigma$代数的定义直接给出，可数交再用一次 De Morgan ✓。（只含「对不交并封闭」的环上，把「补」换成**相对补** $A \\setminus \\bigcup B_{j}$ 即可。）\n(3) $\\sigma$代数 = 对可数并封闭的代数，而对可数并封闭 + 对补封闭 $\\implies$ 对可数交封闭（De Morgan），反之亦然 —— 两条说法等价 ✓。\n(5) 设 $\\mathcal{E}$ 是基本类，$\\mathfrak{A} := \\{ \\mathcal{E} \\text{ 中有限多个两两不交的集合之并} \\}$。\n- **对有限并封闭**：把两个有限不交并摆在一起，相交的块用 $A = (A\\cap B)\\sqcup(A\\setminus B)$ 逐块拆开（基本类对差封闭），仍写成有限不交并 ✓；\n- **对差封闭**：$A \\setminus B$ 逐块做差，同样拆成有限不交并 ✓；\n- 含 $\\emptyset$（空并）✓。于是 $\\mathfrak{A}$ 是一个**环** ✓。∎\n\n(1)：取 $A \\in \\mathfrak{A}$，则 $A \\setminus A = \\emptyset$ 要能被拆成不交并，只能是空并。\n\n(2)：有限交直接由 De Morgan；可数交由 (3) 的补 + 可数并得到。若 $\\mathfrak{A}$ 只是环而不含 $X$，「补」要小心，通常用 **$A \\setminus \\bigcup B_{j}$** 这种相对补。\n\n(5)：这是把基本类升级成环的标准操作 —— 先做不交并保证「差」好算，再验证有限并仍是有限不交并。\n\n这几条性质的实际用途：**验证一个族是 $\\sigma$代数时，只需查「含 $X$」「对补」「对可数并」三条**，其余全部免费。",
    "refs": [
     "Halmos, Measure Theory, §4"
@@ -4542,7 +4542,7 @@
     "σ-代数",
     "单调类"
    ],
-   "statement": "设 $\\mathcal{E} \\subseteq \\mathcal{P}(X)$。定义\n\n$$\\mathcal{M}(\\mathcal{E}) := \\bigcap \\{ \\mathfrak{A} : \\mathfrak{A}\\text{ 是包含} \\mathcal{E}\\text{ 的} \\sigma-\\text{代数} \\}$$\n$$\\mathfrak{m}(\\mathcal{E}) := \\bigcap \\{ \\mathfrak{A} : \\mathfrak{A}\\text{ 是包含} \\mathcal{E}\\text{ 的单调类} \\}$$\n\n$\\mathcal{M}(\\mathcal{E})$ 称为**由 $\\mathcal{E}$ 生成的 $\\sigma$代数**，$\\mathfrak{m}(\\mathcal{E})$ 称为由 $\\mathcal{E}$ 生成的单调类。",
+   "statement": "设 $\\mathcal{E} \\subseteq \\mathcal{P}(X)$。定义\n\n$\\mathcal{M}(\\mathcal{E}) := \\bigcap \\{ \\mathfrak{A} : \\mathfrak{A}$ 是包含 $\\mathcal{E}$ 的 $\\sigma$-代数 $\\}$\n\n$\\mathfrak{m}(\\mathcal{E}) := \\bigcap \\{ \\mathfrak{A} : \\mathfrak{A}$ 是包含 $\\mathcal{E}$ 的单调类 $\\}$\n\n$\\mathcal{M}(\\mathcal{E})$ 称为**由 $\\mathcal{E}$ 生成的 $\\sigma$-代数**，$\\mathfrak{m}(\\mathcal{E})$ 称为由 $\\mathcal{E}$ 生成的单调类。",
    "notes": "为什么这样定义是合法的：这个交非空（$\\mathcal{P}(X)$ 总是一个含 $\\mathcal{E}$ 的 $\\sigma$代数），而且**任意多个 $\\sigma$代数之交仍是 $\\sigma$代数**（单调类也一样），所以交出来的是最小的那一个。\n\n「生成」是整段里最常用的手法：你给我一族好用的集合（基本类、开集、柱集），我把它补成最小的 $\\sigma$代数，再在上面做测度。Borel、积 $\\sigma$代数都是这么来的。",
    "refs": [
     "Halmos, Measure Theory, §6",
@@ -4647,7 +4647,7 @@
     "Borel",
     "拓扑"
    ],
-   "statement": "设 $X$ 是拓扑空间。$X$ 上的 **$Borel \\sigma$代数**是由全体开集生成的 $\\sigma$代数：\n\n$$\\mathfrak{B}_X := \\mathcal{M}(\\{ U \\subseteq X : U\\text{ 是开集} \\})$$\n\n$\\mathfrak{B}_X$ 中的集合称为 **Borel 集**：开集、闭集、可数个开集之交（$G_\\delta$）、可数个闭集之并（$F_\\sigma$）等都属于 $\\mathfrak{B}_X$。",
+   "statement": "设 $X$ 是拓扑空间。$X$ 上的 **Borel $\\sigma$-代数**是由全体开集生成的 $\\sigma$-代数：\n\n$\\mathfrak{B}_X := \\mathcal{M}(\\{ U \\subseteq X : U$ 是开集 $\\})$\n\n$\\mathfrak{B}_X$ 中的集合称为 **Borel 集**：开集、闭集、可数个开集之交（$G_\\delta$）、可数个闭集之并（$F_\\sigma$）等都属于 $\\mathfrak{B}_X$。",
    "notes": "开集族本身一般只是拓扑，不是 $\\sigma$代数 —— 取它生成的 $\\sigma$代数才得到 Borel 集全体。\n\n$\\mathbb{R}$ 上 $\\mathfrak{B}_\\mathbb{R}$ 也可以由半开区间 $\\{ (a, b] : a < b \\}$ 生成（或 { [a, b) }）。这些形式在构造测度时更好用，因为半开区间的「不交并」算起来干净。",
    "refs": [
     "Folland, Real Analysis, §1.2"
@@ -4811,7 +4811,7 @@
     "积",
     "可分"
    ],
-   "statement": "设 $X_{1}, X_{2}$ … 是距离空间，$X = \\prod_{j=1}^{\\infty} X_j$ 配以积度量。则\n\n$$\\otimes _{j=1}^{\\infty} \\mathfrak{B}_{X_j} \\subseteq \\mathfrak{B}_X$$\n\n且当每个 $X_{j}$ **可分**时，等号成立：\n\n$$X_j\\text{ 都可分} \\implies \\otimes _{j=1}^{\\infty} \\mathfrak{B}_{X_j} = \\mathfrak{B}_X$$",
+   "statement": "若每个 $X_j$ 都**可分**，则积 $\\sigma$-代数与 Borel $\\sigma$-代数重合：\n\n$\\bigotimes_{j=1}^{\\infty} \\mathfrak{B}_{X_j} = \\mathfrak{B}_{X}$",
    "notes": "**证明。**\n- **$\\subseteq$**：投影 $\\pi_{j}$ 连续，故 $\\pi_{j}^{-1}(\\text{开集})$ 是 $X$ 的开集（柱集），即每个 $\\pi_{j}^{-1}(U_{j}) \\in \\mathfrak{B}_{X}$；于是生成它们的 $\\sigma$代数 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}} \\subseteq \\mathfrak{B}_{X}$ ✓。\n- **$\\supseteq$（需要可分）**：每个 $X_{j}$ **可分**，取可数稠密集 $C_{j}$，则 $\\{ B(c, r) : c \\in C_{j},\\ r \\in \\mathbb{Q}_{>0} \\}$ 是 $X_{j}$ 的**可数基** ✓。\n  $X$ 的基本开集形如 $\\bigcap_{j \\in F}\\pi_{j}^{-1}(U_{j})$（$F$ 有限、$U_{j}$ 取基元素）；每个 $\\pi_{j}^{-1}(U_{j}) \\in \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$，有限交仍在其中，而**开集是基本开集之并**、基又可数 $\\implies$ 一切开集属于 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ $\\implies$ $\\mathfrak{B}_{X} \\subseteq \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ ✓。\n两边互包即得等号。∎\n⚠️ **可分性不能省**：$\\mathbb{R}^{\\mathbb{R}}$（不可数积）上，积 $\\sigma$代数**真包含于** Borel $\\sigma$代数 —— 那些「只看可数多个坐标」的集合撑不满 Borel 结构。\n\n$\\subseteq$ 的原因很直接：投影 $\\pi _{j}$ 连续，所以 $\\pi _{j}^{-1}($开集) 是开集，那些柱集都在 $\\mathfrak{B}_X$ 里。\n\n反方向登场的又是「可分」：$X_{j}$ 可分时取可数稠密集 $C_{j}$，则\n\n\n\n$$\\{ B(c, r) : c \\in C_j, r \\in \\mathbb{Q} \\}$$\n\n\n\n是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\\mathfrak{B}_\\{X_{j}\\}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\\mathfrak{B}_X \\subseteq \\otimes\\mathfrak{B}_\\{X_{j}\\}$。\n\n⚠ 可分性不能省：$\\mathbb{R}^\\mathbb{R}$（不可数积）上，积 $\\sigma$代数真包含于 $Borel \\sigma$代数。",
    "refs": [
     "Folland, Real Analysis, §2.1"
@@ -5623,7 +5623,7 @@
     "生成元",
     "复合"
    ],
-   "statement": "**(1) 复合**：若 $f : X \\to Y$ 是 $(\\mathcal{M}, \\mathcal{N})$可测、$g : Y \\to Z$ 是 $(\\mathcal{N}, \\mathcal{O})$可测，则 $g \\circ  f$ 是 $(\\mathcal{M}, \\mathcal{O})$可测。\n\n**(2) 只需验证生成元**：若 $\\mathcal{N} = \\mathcal{M}(\\mathcal{E})$，则\n\n$$f : X \\to Y\\text{ 可测} \\iff f^{-1}(E) \\in \\mathcal{M}\\quad  \\forall E \\in \\mathcal{E}$$",
+   "statement": "**(1) 复合**：若 $f : X \\to Y$ 是 $(\\mathcal{M}, \\mathcal{N})$-可测、$g : Y \\to Z$ 是 $(\\mathcal{N}, \\mathcal{O})$-可测，则 $g \\circ  f$ 是 $(\\mathcal{M}, \\mathcal{O})$-可测。\n\n**(2) 只需验证生成元**：若 $\\mathcal{N} = \\mathcal{M}(\\mathcal{E})$，则 $f$ 可测当且仅当每个生成元的原像都可测：\n\n$f : X \\to Y$ **可测** $\\iff f^{-1}(E) \\in \\mathcal{M}\\quad  \\forall E \\in \\mathcal{E}$",
    "notes": "**证明。**\n**(1) 复合**：对 $E \\in \\mathcal{O}$ 有 $(g \\circ f)^{-1}(E) = f^{-1}\\bigl(g^{-1}(E)\\bigr)$；由 $g$ 可测得 $g^{-1}(E) \\in \\mathcal{N}$，再由 $f$ 可测得 $f^{-1}(\\cdot) \\in \\mathcal{M}$ ✓。\n**(2) 只需验证生成元**：\n- **$(\\Longleftarrow)$** 令 $\\mathcal{C} := \\{\\, E \\subseteq Y : f^{-1}(E) \\in \\mathcal{M} \\,\\}$。原像保持并、交、补（$f^{-1}(E^{c}) = X \\setminus f^{-1}(E)$），故 $\\mathcal{C}$ 是 $Y$ 上的 **$\\sigma$代数** ✓；由假设 $\\mathcal{E} \\subseteq \\mathcal{C}$，取生成的 $\\sigma$代数得 $\\mathcal{N} = \\mathcal{M}(\\mathcal{E}) \\subseteq \\mathcal{C}$，即一切 $E \\in \\mathcal{N}$ 的原像都可测 ✓。\n- **$(\\implies)$** 按可测的定义即得 ✓。\n同一论证可用于任何「生成它的族」：拓扑空间上只需开集（或闭集、或基元素）；$\\mathbb{R}$ 上只需 $(-\\infty, a]$ 这类射线 ✓。∎\n\n(1)：对 $E \\in \\mathcal{O}$ 有 $(g\\circ f)^{-1}(E) = f^{-1}(g^{-1}(E))$，两层都可测。\n\n(2) 的 $(\\Longleftarrow )$：令 $\\mathcal{C} = \\{ E \\subseteq Y : f^{-1}(E) \\in \\mathcal{M} \\}$。因为原像保持并、交、补，**$\\mathcal{C}$ 是一个 $\\sigma$代数**；题设说 $\\mathcal{E} \\subseteq \\mathcal{C}$，于是 $\\mathcal{M}(\\mathcal{E}) \\subseteq \\mathcal{C}$，即所有可测集的原像都可测。\n\n(2) 是整段里最常用的判定工具：要证 $f$ 可测，只需在一小族生成元上验证 —— 比如 $\\mathbb{R}$ 值函数只需验证 $f^{-1}((a, \\infty))$ 可测。",
    "refs": [
     "Folland, Real Analysis, Prop. 2.1"
@@ -5664,7 +5664,7 @@
     "连续",
     "Borel"
    ],
-   "statement": "设 X, Y 是拓扑空间，各配 $Borel \\sigma$代数 $\\mathfrak{B}_X, \\mathfrak{B}_Y$。则\n\n$$f : X \\to Y\\text{ 连续} \\implies f\\text{ 是} (\\mathfrak{B}_X, \\mathfrak{B}_Y)-\\text{可测的}$$",
+   "statement": "设 $X, Y$ 是拓扑空间，各配 **Borel $\\sigma$-代数** $\\mathfrak{B}_X, \\mathfrak{B}_Y$。则**连续**映射自动是 Borel 可测的：\n\n$f : X \\to Y$ **连续** $\\implies f$ 是 $(\\mathfrak{B}_X, \\mathfrak{B}_Y)$-**可测**的",
    "notes": "连续的定义就是「开集的原像开」；而开集生成 $\\mathfrak{B}_Y$，用上一条的判定准则 (2) 立刻得到。",
    "refs": [
     "Folland, Real Analysis, §2.1",
@@ -5746,7 +5746,7 @@
     "积空间",
     "实部虚部"
    ],
-   "statement": "**(1)** 设 $(X, \\mathcal{M})$、$(Y_\\alpha , \\mathcal{N}_\\alpha ) (\\alpha \\in A)$ 是可测空间，$Y = \\prod_{\\alpha} Y_\\alpha$，$\\mathcal{N} = \\otimes _{\\alpha} \\mathcal{N}_\\alpha$，$\\pi _\\alpha : Y \\to Y_\\alpha$ 是投影。则\n\n$$f : X \\to Y\\text{ 可测} \\iff f_\\alpha = \\pi _\\alpha \\circ  f\\text{ 可测}(\\forall\\alpha \\in A)$$\n\n**(2)** 特别地，$f : X \\to \\mathbb{C}$ 可测 $\\iff$ $\\operatorname{Re} f$ 与 $\\operatorname{Im} f$ 都可测。",
+   "statement": "**(1)** 设 $(X, \\mathcal{M})$、$(Y_\\alpha , \\mathcal{N}_\\alpha ) (\\alpha \\in A)$ 是可测空间，$Y = \\prod_{\\alpha} Y_\\alpha$，$\\mathcal{N} = \\otimes _{\\alpha} \\mathcal{N}_\\alpha$，$\\pi _\\alpha : Y \\to Y_\\alpha$ 是投影。则 $f$ 可测当且仅当所有分量都可测：\n\n$f : X \\to Y$ **可测** $\\iff f_\\alpha = \\pi _\\alpha \\circ  f$ **可测** $(\\forall\\alpha \\in A)$\n\n**(2)** 特别地，$f : X \\to \\mathbb{C}$ 可测当且仅当实部与虚部都可测。",
    "notes": "(1) 的 $(\\implies )$：投影 $\\pi _\\alpha$ 本身可测（$\\pi _\\alpha ^{-1}(E_\\alpha )$ 是柱集），用复合保持。\n\n(1) 的 $(\\Longleftarrow )$：只要证柱集的原像可测 —— 而 $f^{-1}(\\pi _\\alpha^{-1}(E_\\alpha)) = f_\\alpha^{-1}(E_\\alpha)$ 可测 —— 再由积 $\\sigma$代数由柱集生成、用判定准则 (2)。\n\n(2) 的证明用了一个干净的事实：**$\\mathbb{C}$ 的 $Borel \\sigma$代数与 $\\mathbb{R}^{2}$ 的 $Borel \\sigma$代数是同一个**：\n\n\n\n$$\\mathfrak{B}_\\mathbb{C} = \\mathfrak{B}_{\\mathbb{R}^2} = \\mathfrak{B}_\\mathbb{R} \\otimes  \\mathfrak{B}_\\mathbb{R}$$\n\n\n\n于是 (2) 就是 (1) 在 $A = \\{1, 2\\}$ 时的特例。",
    "refs": [
     "Folland, Real Analysis, Prop. 2.3"
@@ -5867,7 +5867,7 @@
     "简单函数",
     "逼近"
    ],
-   "statement": "**(a)** 若 $f : X \\to [0, +\\infty]$ 可测，则存在简单函数列 $\\{\\varphi_n\\}$ 使\n\n$$0 \\le \\varphi_1 \\le \\varphi_2 \\le \\cdots \\le f, \\quad  \\varphi_n \\to f\\text{ 逐点}, $$\n\n并且**在 $f$ 有界的集合上还是一致收敛**。\n\n**(b)** 一般地（$f : X \\to \\mathbb{C}$ 可测），可取 $\\{\\varphi_n\\}$ 简单使\n\n$$0 \\le |\\varphi_1| \\le |\\varphi_2| \\le \\cdots \\le |f|, \\quad  \\varphi_n \\to f\\text{ 逐点}$$",
+   "statement": "**(a)** 若 $f : X \\to [0, +\\infty]$ 可测，则存在简单函数列 $\\{\\varphi_n\\}$，**逐点递增**地逼近 $f$：\n\n$$0 \\le \\varphi_1 \\le \\varphi_2 \\le \\cdots \\le f, \\quad  \\varphi_n \\to f$$\n\n并且**在 $f$ 有界的集合上还是一致收敛**。\n\n**(b)** 一般地（$f : X \\to \\mathbb{C}$ 可测），可取简单函数列使绝对值逐点递增、且逐点收敛到 $f$：\n\n$$0 \\le |\\varphi_1| \\le |\\varphi_2| \\le \\cdots \\le |f|, \\quad  \\varphi_n \\to f$$",
    "notes": "**证明。**\n**(a)** 对 $n \\ge 1$、$k = 0, 1, \\ldots, 2^{n}n - 1$ 令\n$$E_{n,k} := f^{-1}\\bigl((k2^{-n}, (k+1)2^{-n}]\\bigr), \\qquad F_{n} := f^{-1}\\bigl((n, +\\infty]\\bigr),$$\n$$\\varphi_{n} := \\sum_{k} k\\,2^{-n}\\,\\chi_{E_{n,k}} \\;+\\; n\\,\\chi_{F_{n}} \\;+\\; 0\\cdot\\chi_{f^{-1}(\\{0\\})}.$$\n- **简单**：每个 $E_{n,k}$、$F_{n}$ 可测（$f$ 可测 + 区间是 Borel 集），只有有限多个取值 ✓；\n- **$0 \\le \\varphi_{n} \\le f$**：在 $E_{n,k}$ 上 $k2^{-n} < f \\le (k+1)2^{-n}$ ✓；在 $F_{n}$ 上 $n < f$ ✓；其余为零 ✓；\n- **单调**：$n \\to n+1$ 时区间按 $2^{-(n+1)}$ 加细、上限从 $n$ 升到 $n+1$，逐点算一遍即知 $\\varphi_{n} \\le \\varphi_{n+1}$ ✓；\n- **逐点收敛**：若 $f(x) < \\infty$，取 $n > f(x)$ 后 $0 \\le f(x)-\\varphi_{n}(x) \\le 2^{-n} \\to 0$；若 $f(x) = +\\infty$ 则 $\\varphi_{n}(x) = n \\to \\infty$ ✓；\n- **在有界集上一致**：$f \\le M$ 时取 $n > M$，同样得 $|f-\\varphi_{n}| \\le 2^{-n}$，与 $x$ 无关 ✓。\n**(b)** 一般可测 $f$：写成 $f = (f_{1}^{+} - f_{1}^{-}) + i(f_{2}^{+} - f_{2}^{-})$，对四个非负可测部分各用 (a) 得单调列，再把实部虚部、正部负部线性组合起来；由于每一步都满足 $|\\varphi_{n}| \\le |f|$、逐点收敛，结论成立 ✓。∎\n\n(a) 的构造就是「切蛋糕」：把值域在 [0, n) 上按 $2^{-n}$ 切碎，超过 $n$ 的部分一律抹成 $n$ ——\n\n\n\n$$\\varphi_n = \\sum_{k=0}^{2^n\\cdot n-1} k\\cdot2^{-n}\\cdot\\chi_{E_n^k} + n\\cdot\\chi_{F_n}, $$\n\n$$E_n^k = f^{-1}((k\\cdot2^{-n}, (k+1)\\cdot2^{-n}]), \\quad  F_n = f^{-1}((n, +\\infty])$$\n\n\n\n每一层都是可测集的原像，所以 $\\varphi _{n}$ 是简单函数；$n$ 越大格子越细、天花板越高，于是单调递增地爬到 $f$。\n\n(b) 把 $f = g + ih$ 拆成 $g = g^+ - g^-$、$h = h^+ - h^-$，对四个非负部分用 (a)：\n\n\n\n$$\\varphi_n = \\psi_n^+ - \\psi_n^- + i(\\zeta _n^+ - \\zeta _n^-)$$",
    "refs": [
     "Folland, Real Analysis, Theorem 2.10"
@@ -5986,7 +5986,7 @@
     "定义",
     "L⁺"
    ],
-   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu )$。记\n\n$$L^+ := \\{ f : X \\to [0, +\\infty] : f\\text{ 可测} \\}$$\n\n即取值在**扩充**非负实数里的可测函数全体。",
+   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu )$。记 $L^+$ 为取值在**扩充**非负实数里的**可测**函数全体：\n\n$L^+ := \\{ f : X \\to [0, +\\infty] : f$ **可测** $\\}$",
    "notes": "⚠ 取值允许是 $\\infty$，这是刻意的：先把积分对 $[0, +\\infty ]$ 值的函数定义好，收敛定理（sup / 极限）在整个 $L^{+}$ 里封闭，不必反复讨论「积分是不是有限」。\n\n「可积」（积分有限）是之后单独加的条件，见 $L^{1}$ 的定义。",
    "refs": [
     "Folland, Real Analysis, §2.2"
@@ -6027,7 +6027,7 @@
     "积分",
     "简单函数"
    ],
-   "statement": "设 $\\varphi \\in L^+$ 是简单函数，写成标准形式\n\n$$\\varphi = \\sum_{j=1}^{n} a_j \\chi_{E_j}, \\quad  a_j \\ge 0, E_j \\in \\mathcal{M}\\text{ 两两不交}$$\n\n则定义\n\n$$\\int \\varphi d\\mu := \\sum_{j=1}^{n} a_j \\mu(E_j)$$",
+   "statement": "设 $\\varphi \\in L^+$ 是简单函数，写成标准形式 —— 系数非负、底集两两不交且都在 $\\mathcal{M}$ 里：\n\n$\\varphi = \\sum_{j=1}^{n} a_j \\chi_{E_j}, \\quad  a_j \\ge 0,\\ E_j \\in \\mathcal{M}$ **两两不交**\n\n则定义\n\n$$\\int \\varphi d\\mu := \\sum_{j=1}^{n} a_j \\mu(E_j)$$",
    "notes": "这就是「面积 $=$ 各层高度 $\\times$ 各层测度」—— 完全照着 Riemann 和的样子写，只是把区间换成了可测集。\n\n要检查**良定义**：同一个 $\\varphi$ 可以写成不同的标准形式（比如把某个 $E_{j}$ 再拆开），但由 $\\mu$ 的有限可加性，结果一样。\n\n约定 $0 \\cdot \\infty = 0$：这一步很关键 —— 它让「在无穷测度集上取 0 的函数」积分为 0，符合直觉。",
    "refs": [
     "Folland, Real Analysis, §2.2"
@@ -6108,7 +6108,7 @@
     "积分",
     "sup"
    ],
-   "statement": "设 $f \\in L^+$。定义\n\n$$\\int f d\\mu := \\sup \\{ \\int \\varphi d\\mu : 0 \\le \\varphi \\le f, \\varphi\\text{ 是简单函数} \\}$$",
+   "statement": "设 $f \\in L^+$。定义 $f$ 的积分为「不超过它的简单函数积分」的上确界：\n\n$\\int f d\\mu := \\sup \\{ \\int \\varphi d\\mu : 0 \\le \\varphi \\le f,\\ \\varphi$ **是简单函数** $\\}$",
    "notes": "直观：用简单函数从**下面**去顶 $f$，取这些面积的**上确界**。这与 Jordan 测度「从外面盖、从里面填」的做法不同 —— 这里只从里面填。\n\n为什么不再要求「外面的盖」：因为测度已经在对偶的那一侧（$\\mu$ 本身是从外面用外测度定义的），简单函数的下确界只会把积分定义偏小。\n\n⚠ 这个定义只对非负函数管用。对一般实值函数，先拆成正负部再相减（见「复函数的积分」）。",
    "refs": [
     "Folland, Real Analysis, §2.2"
@@ -6149,7 +6149,7 @@
     "MCT",
     "收敛"
    ],
-   "statement": "设 $\\{f_n\\} \\subseteq L^+$ 满足\n\n$$f_1 \\le f_2 \\le \\cdots, \\quad  f_n \\uparrow  f\\text{ 逐点}, $$\n\n则\n\n$$\\int f = \\lim_{n\\to\\infty} \\int f_n$$",
+   "statement": "设 $\\{f_n\\} \\subseteq L^+$ 是**逐点递增**序列：\n\n$$f_1 \\le f_2 \\le \\cdots, \\quad  f_n \\uparrow  f$$\n\n则积分与极限可以交换：\n\n$$\\int f = \\lim_{n\\to\\infty} \\int f_n$$",
    "notes": "⭐ 这是整个 Lebesgue 积分理论的**发动机**：后面的逐项积分、Fatou、DCT 全都是它的推论。\n\n对比 Riemann 积分：那里「积分与极限交换」需要一致收敛这样强的条件；这里只要**单调**就够了 —— 这就是 Lebesgue 积分的全部好处。\n\n⚠ 两者都可能是 $\\infty$，等式在扩充意义下理解。",
    "refs": [
     "Folland, Real Analysis, Theorem 2.14"
@@ -6481,7 +6481,7 @@
     "L¹",
     "可积"
    ],
-   "statement": "实值可测 $f$ **可积**，当且仅当 $\\int f^+ < \\infty$ 且 $\\int f^- < \\infty$。等价地：\n\n$$f\\text{ 可积} \\iff \\int |f| d\\mu < \\infty$$\n\n复值可测 $f$ 可积，当且仅当 $\\int |f| d\\mu < \\infty$。可积函数全体记作\n\n$$L^1(\\mu) = L^1(X, \\mathcal{M}, \\mu) = L^1(X, \\mu)$$",
+   "statement": "实值可测 $f$ **可积**，当且仅当 $\\int f^+ < \\infty$ 且 $\\int f^- < \\infty$。等价地，$f$ 可积当且仅当 $|f|$ 的积分有限：\n\n$f$ **可积** $\\iff \\int |f| d\\mu < \\infty$\n\n复值可测 $f$ 可积，当且仅当 $\\int |f| d\\mu < \\infty$。可积函数全体记作 $L^1$。",
    "notes": "⭐ **可积 $\\iff$ 绝对值可积**：这是 Lebesgue 积分（终于）真正好用的地方 —— 因为 $|f| \\in L^{+}$，一切非负情形的定理都能直接套用。\n\n（对比 Riemann 反常积分：那里 $\\int f$ 收敛而 $\\int|f|$ 发散是可能的，叫条件收敛。）\n\n⚠ 严格说 $L^{1}$ 的元素是**函数的等价类**（a.e. 相等视为同一个），所以「$\\int |f| = 0 \\implies f = 0$」要在 a.e. 意义下读。这是后面 Lp 空间成为赋范空间的关键一步。",
    "refs": [
     "Folland, Real Analysis, §2.3"
@@ -10607,7 +10607,7 @@
     "多元",
     "反函数"
    ],
-   "statement": "设 $U \\subseteq \\mathbb{R}^{n}$ 开，$f : U \\to \\mathbb{R}^{n}$ 是 $C^{1}$，$a \\in U$ 且 $Df(a)$ **可逆**。则存在 $a$ 的开邻域 $V \\subseteq U$ 与 $f(a)$ 的开邻域 $W$ 使\n\n$$f\\bigl|_{V} : V \\to W \\quad \\text{是双射}$$\n\n且其逆 $g := (f\\bigl|_{V})^{-1} : W \\to V$ 也是 $C^{1}$，并且对一切 $y \\in W$\n\n$$Dg(y) = \\bigl( Df(g(y)) \\bigr)^{-1}$$",
+   "statement": "设 $U \\subseteq \\mathbb{R}^{n}$ 开，$f : U \\to \\mathbb{R}^{n}$ 是 $C^{1}$，$a \\in U$ 且 $Df(a)$ **可逆**。则存在 $a$ 的开邻域 $V \\subseteq U$ 与 $f(a)$ 的开邻域 $W$，使限制 $f\\bigl|_{V}$ 是 $V \\to W$ 的**双射**，\n\n$$f\\bigl|_{V} : V \\to W \\quad \\text{bijective},$$\n\n且其逆 $g := (f\\bigl|_{V})^{-1} : W \\to V$ 也是 $C^{1}$，并且对一切 $y \\in W$\n\n$$Dg(y) = \\bigl( Df(g(y)) \\bigr)^{-1}$$",
    "notes": "⭐ 定理的形状值得记：**局部可逆 $\\iff$ $Df(a)$ 可逆**，而且「逆映射的导数 = 导数的逆」。后半句完全是线性代数的操作 —— 一旦把 $f$ 局部看成「线性映射加高阶小量」，求逆自然落在 $Df$ 上。\n\n⚠ 「局部」不能去掉。$f(x, y) = (e^{x}\\cos y,\\ e^{x}\\sin y)$ 的 $\\det Df = e^{2x} \\ne 0$ 处处成立，但 $f$ 整体远非单射（$y$ 有周期 $2\\pi$）。\n\n⚠ 定理只保证 $C^{1}$；但由 $Dg = (Df \\circ g)^{-1}$ 立即得：$f$ 光滑 $\\implies$ $g$ 光滑（$Df\\circ g$ 光滑、求逆是光滑运算）。这就是「$f$ 是微分同胚 $\\implies$ $f^{-1}$ 也是」。\n\n⭐ 定理顺带说明了 $f$ 是**开映射**（把开集 $V$ 映成开集 $W$）—— 这一点在有限维是免费的；在 Banach 空间里它是**另一条定理**（泛函分析的 `开映射定理`，与本图的「非常数全纯函数是开映射」同名但不同物，且尚未收录），不能从这里免费得到。\n\n⚠ 与 `thm.regular-value`、`cor.rank-theorem` 是一个家族：秩定理说「常秩映射局部只有标准形」，逆映射定理是 $r = n = m$ 的特例。\n\n证明全文在边上（化归到 $Df(a) = I$，用压缩映射原理造出 $f$ 的局部逆，再从 $f \\circ g = \\mathrm{id}$ 反解 $Dg$）。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 9",
@@ -10650,7 +10650,7 @@
     "多元",
     "隐函数"
    ],
-   "statement": "设 $U \\subseteq \\mathbb{R}^{n} \\times \\mathbb{R}^{m}$ 开，$F : U \\to \\mathbb{R}^{m}$ 是 $C^{1}$，$(a, b) \\in U$ 满足\n\n$$F(a, b) = 0, \\qquad D_y F(a, b) \\in M_m(\\mathbb{R})\\ \\text{可逆}$$\n\n（$D_y F$ 指只对后 $m$ 个变元求导的偏导数矩阵。）则存在 $a$ 的开邻域 $V \\subseteq \\mathbb{R}^{n}$ 与**唯一**的 $C^{1}$ 映射 $g : V \\to \\mathbb{R}^{m}$ 使\n\n$$g(a) = b, \\qquad F\\bigl(x,\\ g(x)\\bigr) = 0 \\quad (x \\in V)$$\n\n并且\n\n$$Dg(x) = - \\bigl( D_y F(x, g(x)) \\bigr)^{-1} D_x F(x, g(x))$$",
+   "statement": "设 $U \\subseteq \\mathbb{R}^{n} \\times \\mathbb{R}^{m}$ 开，$F : U \\to \\mathbb{R}^{m}$ 是 $C^{1}$，$(a, b) \\in U$ 满足 $F(a, b) = 0$，且 $D_y F(a, b)$ **可逆**：\n\n$$F(a, b) = 0, \\qquad D_y F(a, b) \\in M_m(\\mathbb{R})\\ \\text{invertible}$$\n\n（$D_y F$ 指只对后 $m$ 个变元求导的偏导数矩阵。）则存在 $a$ 的开邻域 $V \\subseteq \\mathbb{R}^{n}$ 与**唯一**的 $C^{1}$ 映射 $g : V \\to \\mathbb{R}^{m}$ 使\n\n$$g(a) = b, \\qquad F\\bigl(x,\\ g(x)\\bigr) = 0 \\quad (x \\in V)$$\n\n并且\n\n$$Dg(x) = - \\bigl( D_y F(x, g(x)) \\bigr)^{-1} D_x F(x, g(x))$$",
    "notes": "⭐ 一句话：**方程 $F(x, y) = 0$ 在 $D_yF$ 可逆处可以唯一地解出 $y = g(x)$，而且解出来的映射自动是 $C^{1}$**。这就是「隐函数」这个名字的全部内容 —— 它把「隐式地由方程确定」变成了「真的存在一个函数」。\n\n⭐ 它是**逆映射定理的换装**：把 $F$ 拼成 $\\Phi(x, y) := (x, F(x, y))$，则 $D\\Phi$ 是块上三角矩阵，$\\det D\\Phi = \\det D_y F$，故可逆性等价；而 $\\Phi$ 的逆必然是形状 $(x, y) \\mapsto (x, h(x, y))$，取 $g(x) := h(x, 0)$ 就得到要的隐函数。两个定理是同一件事的两种说法。\n\n⚠ $D_yF$ 可逆这个条件**本质**：$F(x, y) = x^{2} - y^{2}$ 在 $(0,0)$ 处 $D_yF = 0$，方程 $x^{2} = y^{2}$ 在原点附近解不出唯一的 $y = g(x)$（有 $y = \\pm x$ 两支）。\n\n⭐ $Dg$ 的公式不必背：对 $F(x, g(x)) = 0$ 两边求导、用链式法则即可 —— $D_xF + D_yF \\cdot Dg = 0$，解出 $Dg$。\n\n证明全文在边上。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 9",
@@ -10692,7 +10692,7 @@
     "Banach",
     "反函数"
    ],
-   "statement": "设 $E, F$ 是 **Banach 空间**（`def.banach-space`），$U \\subseteq E$ 开，$f : U \\to F$ 是 $C^{1}$（Fréchet 意义：全微分 $Df(x) \\in \\mathcal{L}(E, F)$ 存在且连续），$a \\in U$ 且\n\n$$Df(a) : E \\to F \\quad \\text{是拓扑线性同构（有界且逆有界）}$$\n\n则存在 $a$ 的邻域 $V$ 与 $f(a)$ 的邻域 $W$，使 $f|_{V} : V \\to W$ 是同胚，逆映射 $g$ 是 $C^{1}$，且 $Dg(y) = (Df(g(y)))^{-1}$。",
+   "statement": "设 $E, F$ 是 **Banach 空间**（`def.banach-space`），$U \\subseteq E$ 开，$f : U \\to F$ 是 $C^{1}$（Fréchet 意义：全微分 $Df(x) \\in \\mathcal{L}(E, F)$ 存在且连续），$a \\in U$ 且 $Df(a)$ **是拓扑线性同构**（有界且逆有界）：\n\n$$Df(a) : E \\to F \\quad \\text{topological linear isomorphism}$$\n\n则存在 $a$ 的邻域 $V$ 与 $f(a)$ 的邻域 $W$，使 $f|_{V} : V \\to W$ 是同胚，逆映射 $g$ 是 $C^{1}$，且 $Dg(y) = (Df(g(y)))^{-1}$。",
    "notes": "⭐ 与有限维版本（`thm.inverse-function`）的差别**只有一处，但很关键**：有限维时「$Df(a)$ 可逆」自动蕴含「逆有界」（有限维空间上的线性映射自动有界，故可逆即有界逆）；**无限维时必须把它写进条件**。「拓扑线性同构」= 线性双射 + 逆连续，缺一不可。\n\n⭐ 证明比有限维多两步，都是 Banach 空间特有的：\n- **Neumann 级数**：$\\|S\\| < 1$ 时 $(I - S)^{-1} = \\sum_{k \\ge 0} S^{k}$（级数在算子范数下收敛，靠的是 $\\mathcal{L}(E, F)$ 的完备性）。这一步把「接近恒等的算子」求逆，是化归 $Df(a) = I$ 的关键；\n- **中值不等式**：$\\|f(x) - f(y)\\| \\le \\sup_{[x,y]} \\|Df\\| \\cdot \\|x - y\\|$（`thm.mean-value-multi`），用来把 $\\Phi_y$ 弄成压缩映射。\n\n⚠ 这是**泛函分析 / 凝聚态数学真正用的形式**：那里的对象是 $C(S)$、$L^{p}$、Fréchet 空间、紧 Hausdorff 上的连续函数群，有限维版本不够用（例如 8.2 节里 $C(S, M)$ 的局部同构论证）。",
    "refs": [
     "Lang, Real and Functional Analysis, Ch. I",
@@ -11653,7 +11653,7 @@
     "代数",
     "运算"
    ],
-   "statement": "设 $A$ 是环，$a, b \\in A$。则\n\n**(i)** $0 \\cdot a = a \\cdot 0 = 0$；\n\n**(ii)** $(-a)b = -(ab) = a(-b)$，且 $(-a)(-b) = ab$；\n\n**(iii)** 若 $A$ 含幺元 $1$，则 $(-1)a = -a$；\n\n**(iv)** 若 $A$ 是整环（含幺交换、无零因子），则\n\n$$ab = 0 \\implies a = 0 \\text{ 或 } b = 0, \\qquad a \\ne 0,\\ ab = ac \\implies b = c.$$",
+   "statement": "设 $A$ 是环，$a, b \\in A$。则\n\n**(i)** $0 \\cdot a = a \\cdot 0 = 0$；\n\n**(ii)** $(-a)b = -(ab) = a(-b)$，且 $(-a)(-b) = ab$；\n\n**(iii)** 若 $A$ 含幺元 $1$，则 $(-1)a = -a$；\n\n**(iv)** 若 $A$ 是整环（含幺交换、无零因子），则没有零因子、且非零元可约：\n\n$$ab = 0 \\implies a = 0 \\ \\vee\\ b = 0, \\qquad a \\ne 0,\\ ab = ac \\implies b = c.$$",
    "notes": "⭐ 这些等式在 $\\mathbb{R}$、$\\mathbb{Q}$ 上就是**移项、通分、约分**的许可证 —— 极限四则运算、行列式展开、多项式除法里每一处「两边同乘」「约掉」都是在用它，但平时没人把它们单独写下来。\n\n⚠ **无零因子不是环公理**：$\\mathbb{Z}/6\\mathbb{Z}$ 里 $2 \\cdot 3 = 0$，$\\mathbb{Z}/4\\mathbb{Z}$ 里 $2 \\cdot 2 = 0$。所以「$ab = 0 \\implies a=0$ 或 $b=0$」在整环里才成立，在一般环里不能默认。\n\n⭐ 证明只用两样东西：**分配律**与**加法群的消去**（即两边加同一个元素）。这就是「环公理很少，但能推出来的很多」。",
    "refs": [
     "Lang, Algebra, Ch. I",
@@ -11734,7 +11734,7 @@
     "绝对值",
     "不等式"
    ],
-   "statement": "设 $K$ 是有序域，$x, y \\in K$，$c \\ge 0$。则\n\n**(i)** $|x| \\ge 0$，$|x| = 0 \\iff x = 0$，$|-x| = |x|$，$-|x| \\le x \\le |x|$；\n\n**(ii)** $|xy| = |x|\\,|y|$，且 $y \\ne 0 \\implies \\left|\\dfrac{x}{y}\\right| = \\dfrac{|x|}{|y|}$；\n\n**(iii)** $|x|^{2} = x^{2}$；\n\n**(iv)** $|x| \\le c \\iff -c \\le x \\le c$；$|x| < c \\iff -c < x < c$；\n\n**(v)** $|x| > c \\iff x > c \\text{ 或 } x < -c$。",
+   "statement": "设 $K$ 是有序域，$x, y \\in K$，$c \\ge 0$。则\n\n**(i)** $|x| \\ge 0$，$|x| = 0 \\iff x = 0$，$|-x| = |x|$，$-|x| \\le x \\le |x|$；\n\n**(ii)** $|xy| = |x|\\,|y|$，且 $y \\ne 0 \\implies \\left|\\dfrac{x}{y}\\right| = \\dfrac{|x|}{|y|}$；\n\n**(iii)** $|x|^{2} = x^{2}$；\n\n**(iv)** $|x| \\le c \\iff -c \\le x \\le c$；$|x| < c \\iff -c < x < c$；\n\n**(v)** $|x| > c \\iff x > c \\ \\vee\\ x < -c$。",
    "notes": "⭐ **三角不等式是另一条**（见「三角不等式」），这里只收「乘、商、平方、三段式」这些**等式型**的规则。两者合起来才是完整的绝对值工具箱。\n\n⭐ (iv) 是 $\\varepsilon$ 论证里最常用的一句：把「$|f(x) - L| < \\varepsilon$」改写成「$L - \\varepsilon < f(x) < L + \\varepsilon$」，才能与序公理对接。(v) 是它的补集形态。\n\n⚠ $|x|^{2} = x^{2}$ 看着废话，但它把绝对值**去掉了**：需要平方的时候不必再分情形 —— 这也是为什么 $\\ell^{2}$、$L^{2}$ 里的范数可以写成内积。\n\n📌 全部由定义 $|x| = \\max\\{x, -x\\}$ 分 $x \\ge 0$、$x < 0$ 两种情形验证。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 1"
@@ -11773,7 +11773,7 @@
     "阿基米德",
     "取整"
    ],
-   "statement": "设 $K$ 是完备有序域（如 $\\mathbb{R}$）。\n\n**(i)** 对每个 $\\varepsilon > 0$ 存在 $n \\ge 1$ 使\n\n$$\\frac{1}{n} < \\varepsilon; \\qquad \\text{等价地} \\qquad \\inf\\left\\{ \\frac{1}{n} : n \\ge 1 \\right\\} = 0.$$\n\n**(ii)** 对每个 $x \\in K$ 存在**唯一**的整数 $n$ 使\n\n$$n \\le x < n + 1.$$\n\n记 $n = \\lfloor x \\rfloor$，叫 $x$ 的**整数部分**（取整函数）；$\\{x\\} := x - \\lfloor x \\rfloor \\in [0, 1)$ 叫**小数部分**。",
+   "statement": "设 $K$ 是完备有序域（如 $\\mathbb{R}$）。\n\n**(i)** 对每个 $\\varepsilon > 0$ 存在 $n \\ge 1$ 使 $1/n < \\varepsilon$；等价地，那些 $1/n$ 的下确界是零：\n\n$$\\frac{1}{n} < \\varepsilon; \\qquad \\inf\\left\\{ \\frac{1}{n} : n \\ge 1 \\right\\} = 0.$$\n\n**(ii)** 对每个 $x \\in K$ 存在**唯一**的整数 $n$ 使\n\n$$n \\le x < n + 1.$$\n\n记 $n = \\lfloor x \\rfloor$，叫 $x$ 的**整数部分**（取整函数）；$\\{x\\} := x - \\lfloor x \\rfloor \\in [0, 1)$ 叫**小数部分**。",
    "notes": "⭐ (i) 是分析里「取 $n$ 足够大」的**标准形态**。阿基米德性质原来说的是「$\\mathbb{N}$ 无上界」，但实际写证明时用的几乎总是 (i)：给 $\\varepsilon$，取 $n > 1/\\varepsilon$。\n\n⭐ (ii) 是把实数「夹到两个相邻整数之间」—— 有理数稠密的证明（`lem.archimedean` 的 (ii)）里就用了它。它依赖 $\\mathbb{Z}$ 在 $K$ 中的**离散性**（相邻整数之间没有别的整数），而不只是无界性。\n\n⚠ $\\mathbb{Q}$ 也满足 (i)（它是阿基米德的），但 $\\mathbb{Q}$ 不满足确界原理 —— 所以 (i) 本身**不**需要完备性，只需要阿基米德性；这里写成完备有序域只是为了和 `lem.archimedean` 对齐。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 1"
@@ -17723,7 +17723,7 @@
     "局部有限",
     "仿紧"
    ],
-   "statement": "设 $X$ 是拓扑空间，$\\mathcal{A} = \\{ A_{s} \\}_{s \\in S}$ 是 $X$ 的一族子集。$\\mathcal{A}$ 叫**局部有限的**，如果每个点都有开邻域只与**有限多个**成员相交：\n\n$$\\forall x \\in X,\\ \\exists U \\ni x \\text{ 开}:\\quad \\{\\, s \\in S : U \\cap A_{s} \\ne \\emptyset \\,\\} \\text{ 有限}.$$\n\n把「开邻域」换成「点本身」，得到弱一些的**点有限族**：每个点只属于有限多个 $A_{s}$。",
+   "statement": "设 $X$ 是拓扑空间，$\\mathcal{A} = \\{ A_{s} \\}_{s \\in S}$ 是 $X$ 的一族子集。$\\mathcal{A}$ 叫**局部有限的**，如果每个点都有**开邻域**只与**有限多个**成员相交：对每个 $x \\in X$ 都存在开集 $U \\ni x$，使\n\n$$\\{\\, s \\in S : U \\cap A_{s} \\ne \\emptyset \\,\\}\\ \\text{finite}.$$\n\n把「开邻域」换成「点本身」，得到弱一些的**点有限族**：每个点只属于有限多个 $A_{s}$。",
    "notes": "**为什么要「局部」**：一个族整体上可以无穷（$\\mathbb{R}$ 上的 $\\{\\, (n, n+2) \\,\\}_{n \\in \\mathbb{Z}}$ 有无穷多个成员），但只要每点附近只碰到有限多个，任何逐点求和就自动是**局部有限和**、任何逐点判断都只需看有限多项。仿紧、单位分解、层论里的细部论证全靠这一条。\n\n**三条常用性质**（后两条才是它真正被用到的形式）：\n\n- 局部有限 $\\implies$ 点有限：取只碰有限多个成员的邻域 $U \\ni x$，含 $x$ 的成员只能更少；\n- **并的闭包等于闭包之并**：$\\operatorname{cl}\\bigcup_{s} A_{s} = \\bigcup_{s} \\operatorname{cl} A_{s}$（$\\supseteq$ 恒成立，$\\subseteq$ 那一半用局部有限性）；\n- 若每个 $A_{s}$ 都**闭**，则 $\\bigcup_{s} A_{s}$ 也闭（上一条的直接推论）。\n\n⚠️ 局部有限**不等于**「成员可以很多」，**也不等于**点有限：$\\mathbb{R}$ 上的族 $\\{\\, \\{ 1/n \\} : n \\ge 1 \\,\\}$ 点有限（每点至多属于一个成员）却不局部有限（$0$ 的任何邻域都碰到无穷多个成员）。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 39",
@@ -17765,7 +17765,7 @@
     "离散",
     "局部有限"
    ],
-   "statement": "$X$ 的一族子集 $\\mathcal{A} = \\{ A_{s} \\}_{s \\in S}$ 叫**离散的**，如果每个点都有开邻域至多与**一个**成员相交：\n\n$$\\forall x \\in X,\\ \\exists U \\ni x \\text{ 开}:\\quad \\#\\{\\, s \\in S : U \\cap A_{s} \\ne \\emptyset \\,\\} \\le 1.$$\n\n离散 $\\implies$ 局部有限 $\\implies$ 点有限；两个反向都不成立。",
+   "statement": "$X$ 的一族子集 $\\mathcal{A} = \\{ A_{s} \\}_{s \\in S}$ 叫**离散的**，如果每个点都有**开邻域**至多与**一个**成员相交：对每个 $x \\in X$ 都存在开集 $U \\ni x$，使\n\n$$\\#\\{\\, s \\in S : U \\cap A_{s} \\ne \\emptyset \\,\\} \\le 1.$$\n\n离散 $\\implies$ 局部有限 $\\implies$ 点有限；两个反向都不成立。",
    "notes": "**成员必两两不交**：若 $x \\in A_{s} \\cap A_{t}$ 而 $s \\ne t$，则 $x$ 的任何邻域都碰到两个成员，与离散矛盾。所以离散族比局部有限族「更散」：连相交都不许。\n\n**「离散」这个词有两层意思**（容易混）：本节点说的是「**族**离散」；另一种说法「$A \\subseteq X$ 是离散子集」指的是单点族 $\\{\\, \\{ a \\} : a \\in A \\,\\}$ 离散（等价于 $a$ 们在子空间拓扑下是离散的、且 $A$ 在 $X$ 里没有聚点）。仿紧与度量化里用到的一律是「族」的那一层。\n\n⭐ Bing 的度量化定理就是拿「$\\sigma$-离散基」当假设的 —— 它比「$\\sigma$-局部有限基」更紧，但证明里更容易控制（离散族的闭包族仍然离散）。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 39",
@@ -17890,7 +17890,7 @@
     "仿紧",
     "局部有限"
    ],
-   "statement": "拓扑空间 $X$ 叫**仿紧的**，如果它的**每个开覆盖都有局部有限的开加细**：\n\n$$\\forall\\ \\text{开覆盖}\\ \\mathcal{U},\\quad \\exists\\ \\text{开覆盖}\\ \\mathcal{V}:\\quad \\mathcal{V}\\ \\text{加细}\\ \\mathcal{U}\\ \\text{且}\\ \\mathcal{V}\\ \\text{局部有限}.$$\n\n⚠️ **约定**：本图**不**把 Hausdorff 并进「仿紧」的定义（有些书并进去）。需要分离性时一律显式写「仿紧 Hausdorff」。",
+   "statement": "拓扑空间 $X$ 叫**仿紧的**，如果它的**每个开覆盖都有局部有限的开加细**：对每个开覆盖 $\\mathcal{U}$，都存在开覆盖 $\\mathcal{V}$，使\n\n$$\\mathcal{V}\\ \\text{refines}\\ \\mathcal{U}\\quad\\text{and}\\quad \\mathcal{V}\\ \\text{is locally finite}.$$\n\n⚠️ **约定**：本图**不**把 Hausdorff 并进「仿紧」的定义（有些书并进去）。需要分离性时一律显式写「仿紧 Hausdorff」。",
    "notes": "**在层级里的位置**：紧 $\\implies$ 仿紧（有限子覆盖当然是局部有限的）；仿紧 Hausdorff $\\implies$ 正规 $\\implies$ 正则 $\\implies$ Hausdorff（本包的定理）；度量空间 $\\implies$ 仿紧（Stone 定理）。\n\n⭐ **它换来了什么**：单位分解（于是光滑化、流形上的积分与 Stokes、延拓定理都有工具），以及层论里「Čech 上同调等于层上同调」在细部上要的那点局部有限性。流形按定义第二可数，于是自动仿紧 —— 这就是分析里从不担心这件事的原因。\n\n**遗传性**：**开**子空间与**闭**子空间都继承仿紧性（开子空间：把 $X \\setminus Y$ 补进覆盖再求交；闭子空间：把开覆盖的成员与闭子空间求交）。一般的子空间不必仿紧。\n\n⚠️ 反方向全断：正规空间不必仿紧 —— $[0, \\omega_{1})$（第一不可数序数以下的全体序数）是正规的、可数紧的却不紧，而「可数紧 $+$ 仿紧 $\\implies$ 紧」，所以它不仿紧。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 41",
@@ -18062,7 +18062,7 @@
     "加细",
     "判别法"
    ],
-   "statement": "设 $X$ 是**正则**空间。则\n\n$$X\\ \\text{仿紧}\\quad \\iff \\quad X\\ \\text{的每个开覆盖都有局部有限的加细（加细的成员不必是开集）}.$$",
+   "statement": "设 $X$ 是**正则**空间。则 $X$ **仿紧**，当且仅当它的每个开覆盖都有**局部有限的加细**（加细的成员不必是开集）：\n\n$X$ **仿紧** $\\iff$ 每个开覆盖都有局部有限的加细",
    "notes": "**$(\\Longleftarrow)$ 才是内容，$(\\implies)$ 是废话**：仿紧的加细按定义就是局部有限的，而开加细当然是加细。所以这条定理的全部难点在一句话 —— **把「不必开」的局部有限加细撑成开加细，同时不毁掉局部有限性**。\n**思路（Michael）**：给定开覆盖 $\\mathcal{U}$ 与它的局部有限加细 $\\{ E_{s} \\}$。\n- 先做归约：由局部有限可设加细是**点有限**的（局部有限 $\\implies$ 点有限）；\n- 逐点撑开：对 $x \\in E_{s}$，正则性给出开集 $O_{x}$ 使 $x \\in O_{x} \\subseteq \\operatorname{cl} O_{x} \\subseteq$ 覆盖中含 $E_{s}$ 的那个成员，再令 $V_{s} := \\bigcup \\{\\, O_{x} : x \\in E_{s} \\,\\}$；\n- 此时 $\\{ V_{s} \\}$ 已经是**开加细并覆盖 $X$**，但一般**不再局部有限**（$V_{s} \\supseteq E_{s}$，一个邻域可能碰到很多 $V_{s}$ 而只碰到很少 $E_{s}$）；\n- 收尾：用点有限性把每一族成员**重新排序**，把第 $s$ 个换成「$E_{s}$ 挖掉前面那些开膨胀的闭包，再取内部」，新族就既开、又覆盖、又局部有限。\n**收尾引理（Michael）**：正则空间中，若开覆盖有局部有限加细，则它有局部有限的**开**加细。证明用「良序化 + 逐个膨胀」：把加细的成员良序化，依次膨胀进覆盖中对应的成员，每次只膨胀到尚未被前面成员盖住的点；局部有限性由原族的局部有限性接管（每点有邻域只碰到有限多个原成员，膨胀也只发生在这些成员里）。取这条引理即得仿紧。∎\n\n⭐ **当判据用的姿势**：实际验证仿紧时，往往只先拿到「闭的 / 不必开的 / 加细但很粗」的东西 —— 这时配上正则性就够，不必再构造开加细。本图的闭加细命题就是往这个方向走的。\n\n⚠️ **前提「正则」只在 $(\\Longleftarrow)$ 用到**；$(\\implies)$ 不需要任何分离性。\n\n⚠️ 定理里的「加细」如果是**闭**加细，结论同样成立（闭加细是加细的特例）—— 所以「正则 $+$ 每个开覆盖有局部有限闭加细」$\\implies$ 仿紧，这条常被当成仿紧的实用判据。",
    "refs": [
     "Michael, A note on paracompact spaces, Proc. Amer. Math. Soc. 4 (1953)",
@@ -31533,7 +31533,7 @@
     "全变差",
     "递增"
    ],
-   "statement": "设 $F$ 是**实值**有界变差函数。则\n\n$$T_F + F\\quad \\text{ 与}\\quad  T_F - F$$\n\n都是**递增**函数。",
+   "statement": "设 $F$ 是**实值**有界变差函数。则 $T_F + F$ 与 $T_F - F$\n\n$$T_F + F\\quad \\text{and}\\quad  T_F - F$$\n\n都是**递增**函数。",
    "notes": "证明：设 $x < y$，任给 $\\varepsilon > 0$，取分划 $x_0 < \\cdots < x_n = x$ 使 $\\sum|F(x_j) - F(x_{j-1})| \\ge T_F(x) - \\varepsilon$，再补上点 $y$ 与 $x$ 之间的比较：\n\n\n\n$$T_F(y) \\pm  F(y) \\ge \\sum_j |F(x_j) - F(x_{j-1})| + (F(y) - F(x)) \\pm  F(x) \\ge T_F(x) - \\varepsilon \\pm  F(x)$$\n\n\n\n由 $\\varepsilon$ 任意即得 $T_F(y) \\pm  F(y) \\ge T_F(x) \\pm  F(x)$。∎\n\n⭐ 这条是下一条「BV 的 Jordan 分解」的全部技术内容：一旦知道 $T_F \\pm  F$ 递增，就能把 $F$ 写成一增一减。",
    "refs": [
     "Folland, Real Analysis, Theorem 3.27"
@@ -31573,7 +31573,7 @@
     "BV",
     "Jordan 分解"
    ],
-   "statement": "**(a)** $F \\in BV \\iff \\operatorname{Re} F \\in BV\\text{ 且} \\operatorname{Im} F \\in BV$。\n\n**(b)** 设 $F : \\mathbb{R} \\to \\mathbb{R}$。则\n\n$$F \\in BV \\iff F = G - H,\\text{ 其中} G, H\\text{ 都是有界递增函数}$$",
+   "statement": "**(a)** 若 $F$ 的实部与虚部都是 $BV$，则 $F \\in BV$；反之亦然：\n\n$F \\in BV \\iff \\operatorname{Re} F \\in BV$ **且** $\\operatorname{Im} F \\in BV$。\n\n**(b)** 设 $F : \\mathbb{R} \\to \\mathbb{R}$。则 $F \\in BV$ 当且仅当它可以写成两个有界递增函数之差：\n\n$F \\in BV \\iff F = G - H$，其中 $G, H$ **都是有界递增函数**。",
    "notes": "具体取法（就是测度论 Jordan 分解的函数版）：\n\n\n\n$$F = (1/2)(T_F + F) - (1/2)(T_F - F)$$\n\n\n\n前一项叫 $F$ 的**正变差**，后一项叫**负变差** —— 名字与符号测度的 $\\nu ^{+}$、$\\nu ^{-}$ 完全对应。\n\n由引理，$T_F \\pm  F$ 递增；而「有界」来自 $F \\in BV$。\n\n⭐ 意义：**BV 函数 $=$ 两个有界递增函数之差**。于是关于 BV 的一切都能化归到「递增函数」这个好处理的情形。",
    "refs": [
     "Folland, Real Analysis, Theorem 3.27"
@@ -31652,7 +31652,7 @@
     "定义",
     "NBV"
    ],
-   "statement": "$$NBV := \\{ F \\in BV : F\\text{ 右连续},\\text{ 且} F(-\\infty) = 0 \\}$$",
+   "statement": "**规范有界变差函数**指右连续、且在 $-\\infty$ 处取零的 $BV$ 函数：\n\n$NBV := \\{ F \\in BV : F$ **右连续**，且 $F(-\\infty) = 0 \\}$",
    "notes": "为什么要加这两个条件：因为下一条定理要建立**$\\mathbb{R}$ 上的复 Borel 测度 $\\leftrightarrow NBV$** 的一一对应，而对应式是\n\n\n\n$$F(x) = \\mu((-\\infty, x])$$\n\n\n\n右边那个函数自动右连续、且在 $-\\infty$ 处为 0。把左边限制成 NBV，对应才是**双射**而不是满射。",
    "refs": [
     "Folland, Real Analysis, Theorem 3.29"
@@ -31876,7 +31876,7 @@
     "绝对连续",
     "AC"
    ],
-   "statement": "函数 $F : [a, b] \\to \\mathbb{C}$ 是**绝对连续的**，当且仅当\n\n$$\\forall\\varepsilon > 0, \\exists\\delta > 0 :\\text{ 任意有限个两两不交的区间} (a_j, b_j) \\subseteq [a, b]\\text{ 满足} \\sum(b_j - a_j) < \\delta,\\text{ 就一定有} \\sum|F(b_j) - F(a_j)| < \\varepsilon$$",
+   "statement": "函数 $F : [a, b] \\to \\mathbb{C}$ 是**绝对连续的**，当且仅当：对每个 $\\varepsilon > 0$ 都有 $\\delta > 0$，使得对**任意有限个两两不交的区间** $(a_j, b_j) \\subseteq [a, b]$，\n\n$\\sum (b_j - a_j) < \\delta \\implies \\sum |F(b_j) - F(a_j)| < \\varepsilon$",
    "notes": "⚠ 注意与「一致连续」的区别：一致连续是**单个**小区间上控制振幅，而绝对连续要求**任意多个小区间合起来**也能控制 —— 这正是为了堵住 Cantor 函数那种「在零测集上爬升」的情形。\n\n记号：$AC([a, b])$ 表示 $[a,b]$ 上绝对连续的函数全体。",
    "refs": [
     "Folland, Real Analysis, §3.5"
@@ -31916,7 +31916,7 @@
     "绝对连续",
     "μ_F ≪ m"
    ],
-   "statement": "设 $F \\in NBV$。则\n\n$$F\\text{ 绝对连续} \\iff \\mu_F \\ll  m$$",
+   "statement": "设 $F \\in NBV$。则 $F$ **绝对连续**当且仅当它对应的测度 $\\mu_F$ 关于 Lebesgue 测度绝对连续：\n\n$F$ **绝对连续** $\\iff \\mu_F \\ll  m$",
    "notes": "**$(\\Longleftarrow )$** 由测度的绝对连续的 $\\varepsilon$–$\\delta$ 刻画：$\\mu_F \\ll  m$ 给出「$m(E) < \\delta \\implies |\\mu_F(E)| < \\varepsilon$」。取 $E$ 为区间的有限不交并，就直接得到函数版的绝对连续性。\n\n**$(\\implies )$** 设 $E \\in \\mathfrak{B}_\\mathbb{R}$ 且 $m(E) = 0$。要证 $\\mu_F(E) = 0$。取递减开集列 $U_1 \\supseteq U_2 \\supseteq \\cdots \\supseteq E$ 使 $m(U_k) < \\delta$（由正则性）。每个 $U_k$ 是区间的可数不交并，由函数的绝对连续性与 $m(U_k) < \\delta$ 得 $|\\mu_F(U_j)| < \\varepsilon$；再由测度的上连续性与 $\\bigcap U_k = E$ 得 $|\\mu_F(E)| \\le \\varepsilon$。由 $\\varepsilon$ 任意，$\\mu_F(E) = 0$。∎\n\n⭐ 这条把两个「绝对连续」**接上了**：函数的和测度的。从此「绝对连续函数」这个微积分里的概念有了测度论的解释。",
    "refs": [
     "Folland, Real Analysis, Theorem 3.35"
@@ -34332,7 +34332,7 @@
     "拓扑",
     "分离公理"
    ],
-   "statement": "拓扑空间 $X$ 叫 **Hausdorff 空间**（或 **$T_{2}$ 空间**），如果任意两个不同点都**可以被开集分开**：\n\n$$\\forall x \\ne y \\in X,\\ \\exists U \\ni x,\\ V \\ni y \\ \\text{开},\\quad U \\cap V = \\emptyset$$",
+   "statement": "拓扑空间 $X$ 叫 **Hausdorff 空间**（或 **$T_{2}$ 空间**），如果任意两个不同点都**可以被开集分开**：\n\n$$\\forall x \\ne y \\in X,\\ \\exists U \\ni x,\\ V \\ni y\\ \\text{open}:\\quad U \\cap V = \\emptyset$$",
    "notes": "一句话：**极限唯一**。序列只要收敛就只能收敛到一个点 —— 这正是分析里默认的那种空间。\n\n更强的分离性是**正规**（$T_{4}$）：任意两个不交闭集可被开集分开。紧 Hausdorff 空间是正规的（证明用两次紧性造开覆盖再取有限子覆盖）。\n\n$T_{3}$（正则）与 $T_{3.5}$（Tychonoff）夹在中间：$T_{3.5}$ 说的是**不同的点可以被连续函数分离开**，也就是「连续函数足够多」这一条。Stone–Čech 紧化的单射性要求的正是它。",
    "refs": [
     "Munkres, Topology"
@@ -34674,7 +34674,7 @@
     "绝对值",
     "序"
    ],
-   "statement": "设 $K$ 是**有序域**（$\\mathbb{Q}$ 与 $\\mathbb{R}$ 都是），$x \\in K$。定义\n\n$$|x| := \\begin{cases} x, & x \\ge 0 \\\\ -x, & x < 0 \\end{cases} \\qquad\\text{即}\\qquad |x| = \\max\\{x, -x\\}$$\n\n于是 $|x| \\ge 0$ 恒成立，且 $|x| = 0 \\iff x = 0$。",
+   "statement": "设 $K$ 是**有序域**（$mathbb{Q}$ 与 $mathbb{R}$ 都是），$x in K$。定义\n\n$$|x| := \\begin{cases} x, & x \\ge 0 \\\\ -x, & x < 0 \\end{cases} \\qquad\\text{i.e.}\\qquad |x| = \\max\\{x, -x\\}$$\n\n于是 $|x| ge 0$ 恒成立，且 $|x| = 0 iff x = 0$。",
    "notes": "⭐ 读法：$|x|$ 是**到原点的距离**，与符号无关。两点之间的距离就是 $|x - y|$ —— 这就是后来**距离空间**里那个距离的原型：把「差」扔掉，只留下「距离」这个概念本身。\n\n立刻能验证的两条（都由定义分情形）：\n- $|-x| = |x|$；\n- $|xy| = |x|\\,|y|$。\n\n⚠ **不等号那一侧的估计不属于定义**：$|x + y| \\le |x| + |y|$ 是一条**定理**（见「三角不等式」）—— 定义里只有分情形，没有不等式。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 1"
