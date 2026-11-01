@@ -1,6 +1,6 @@
 # MathGalaxy · Notation
 
-> English version: **draft** · Chinese source is authoritative · machine-drafted, pending author review.
+> English version: **reviewed** · bingyingzizz · 2026-11-01 · Chinese source is authoritative.
 
 One symbol, one meaning per cluster; clashes between clusters are listed below.
 

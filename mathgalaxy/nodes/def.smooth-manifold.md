@@ -3,7 +3,7 @@
 layer 8 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.smooth-manifold)　·　[节点索引](../index.md)
 
-**在做什么**：把 $\mathbb{R}^{n}$ 上的微积分搬到「局部看起来像 $\mathbb{R
+**在做什么**：把 $\mathbb{R}^{n}$ 上的微积分搬到「局部看起来像 $\mathbb{R}^{n}$」的
 > 陈述续见 [nodes/def.smooth-manifold.2.md](./def.smooth-manifold.2.md)
 
 
@@ -15,7 +15,7 @@ layer 8 · 定义 · 内蕴几何 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.smooth-manifold.6.md](./def.smooth-manifold.6.md)
 
-## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/def.smooth-manifold.4.md](./def.smooth-manifold.4.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 图卡、图册与光滑结构；Tu, An Introduction to Manifolds, 「Manifolds」· 光滑流形与转移映射

@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Topological Spaces (`topology.general`) · Topology
 

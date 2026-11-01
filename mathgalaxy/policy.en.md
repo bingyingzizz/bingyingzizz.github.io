@@ -1,6 +1,6 @@
 # MathGalaxy · Content policy
 
-> English version: **draft** · Chinese source is authoritative · machine-drafted, pending author review.
+> English version: **reviewed** · bingyingzizz · 2026-11-01 · Chinese source is authoritative.
 
 ## 1. Every layer is *constructed* from the layer below
 

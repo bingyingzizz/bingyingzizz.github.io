@@ -2,16 +2,15 @@
 English entry · root `../`
 [in graph](../#n=ax.choice)　·　[Chinese page (authoritative)](./ax.choice.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
 layer 9 · axiom · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/ax.choice.md` and `proofs/`.
+## Statement · **reviewed**
+From any family of non-empty sets one can pick one element from each, "all at once". Written in terms of a choice function:
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Axiom_of_choice · nLab: https://ncatlab.org/nlab/show/axiom+of+choice
+$\operatorname{dom}$ is defined only for functions, so the assertion says: "there is a function $f$ with $\operatorname{dom} f = F$, and $f(X) \in X$ for every $X \in F$":
 
+$\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$\
 
-Cite: `ax.choice` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/ax.choice.en.2.md

@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham)　·　[Chinese page (authoritative)](./thm.de-rham.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
 layer 28 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 

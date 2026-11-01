@@ -19,7 +19,7 @@ $$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} : f \text{ 可测},\ \|f
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.lp-norm.3.md](./def.lp-norm.3.md)
 
-## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/def.lp-norm.2.md](./def.lp-norm.2.md)
 
 refs: Folland, Real Analysis, §6.1

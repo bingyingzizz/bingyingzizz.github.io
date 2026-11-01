@@ -3,7 +3,8 @@
 layer 12 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.path-homotopy)　·　[节点索引](../index.md)
 
-$X$ 中的一条**道路**是连续映射 $\alpha : [0, 1] \to X$；$\alpha(0)$ 是**起点**，$\alpha(1)$
+$X$ 中的一条**道路**是连续映射 $\alpha : [0, 1] \to X$；$\alpha(0)$ 是**起点**，$\alpha(1)$ 是**终点**。
+起点
 > 陈述续见 [nodes/def.path-homotopy.2.md](./def.path-homotopy.2.md)
 
 
@@ -15,7 +16,7 @@ $X$ 中的一条**道路**是连续映射 $\alpha : [0, 1] \to X$；$\alpha(0)$ 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.path-homotopy.4.md](./def.path-homotopy.4.md)
 
-## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/def.path-homotopy.3.md](./def.path-homotopy.3.md)
 
 refs: Munkres, Topology (2nd ed.), Ch. 9 · Homotopy of Paths；Hatcher, Algebraic Topology, Ch. 1 §1.1 · Paths and homotopy

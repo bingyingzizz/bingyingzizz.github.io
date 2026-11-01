@@ -1,6 +1,6 @@
 # MathGalaxy · Hub theorems
 
-> English version: **draft** · Chinese source is authoritative · machine-drafted, pending author review.
+> English version: **reviewed** · bingyingzizz · 2026-11-01 · Chinese source is authoritative.
 
 Ranked by **in-degree**: how many strong edges point at it. It answers one question —
 **which things are the real foundation and worth learning first.** (Weak edges do not

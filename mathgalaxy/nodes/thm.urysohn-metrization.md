@@ -8,7 +8,7 @@ layer 16 · 定理 · 可度量化 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.urysohn-metrization.3.md](./thm.urysohn-metrization.3.md)
 
-## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/thm.urysohn-metrization.2.md](./thm.urysohn-metrization.2.md)
 
 refs: Munkres, Topology (2nd ed.), Section 34；Engelking, General Topology, Ch. 4

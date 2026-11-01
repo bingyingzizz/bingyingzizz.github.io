@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-01T12:52:12.445Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-01T13:27:32.694Z
 > 14 星系 / 92 星团 / 1341 节点 / 2473 连线（强边 2456，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
@@ -1190,7 +1190,9 @@ $$\forall a, b \in A\; ( a \preceq b \iff f(a) \sqsubseteq f(b) )$$
 
 任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：
 
-$$\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( f\text{ 是函数} \wedge  \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$$
+$\operatorname{dom}$ 只对函数有定义，所以这句说的是「存在函数 $f$，$\operatorname{dom} f = F$，且每个 $X \in F$ 都有 $f(X) \in X$」：
+
+$\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$
 
 另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \in F$ 都有 $|C \cap X| = 1$。
 

@@ -8,12 +8,12 @@ layer 16 · 命题 · 拓扑空间 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.paracompact-partition-unity.5.md](./prop.paracompact-partition-unity.5.md)
+- …另有入边，续页见 [nodes/prop.paracompact-partition-unity.4.md](./prop.paracompact-partition-unity.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.paracompact-partition-unity.7.md](./prop.paracompact-partition-unity.7.md)
+- …另有出边，续页见 [nodes/prop.paracompact-partition-unity.6.md](./prop.paracompact-partition-unity.6.md)
 
-## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/prop.paracompact-partition-unity.3.md](./prop.paracompact-partition-unity.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3

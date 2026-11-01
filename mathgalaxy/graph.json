@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-01T12:52:12.445Z",
+  "generated": "2026-11-01T13:27:32.694Z",
   "counts": {
    "regions": 14,
    "clusters": 92,
@@ -2423,19 +2423,26 @@
    "title": "外延公理",
    "label_en": "extensionality",
    "title_en": "extensionality",
+   "statement_en": "A set is determined uniquely by its elements:\n\n$$\\forall A \\forall B [ \\forall x ( x \\in A \\leftrightarrow  x \\in B ) \\to A = B ]$$\n\nThe converse direction ($A = B \\to$ the elements are exactly the same) holds automatically in first-order logic with equality, which is why the axiom is often written with $\\leftrightarrow$. It guarantees that describing a set by a condition determines it uniquely, so a notation such as $\\{ x \\in A : \\varphi (x) \\}$ is never ambiguous.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#db41f727"
+     }
     }
    },
    "en_page": "nodes/ax.ext.en.md",
@@ -2463,19 +2470,26 @@
    "title": "分离公理模式",
    "label_en": "separation schema",
    "title_en": "separation schema",
+   "statement_en": "For every formula $\\varphi (x, p)$ (in which $B$ does not occur), the following is an axiom:\n\n$$\\forall p \\forall A \\exists B \\forall x [ x \\in B \\leftrightarrow  ( x \\in A \\wedge  \\varphi(x, p) ) ]$$\n\nBy extensionality such a $B$ is unique, and one writes $B = \\{ x \\in A : \\varphi (x, p) \\}$. It is commonly called the \"subset axiom\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#e310c0cf"
+     }
     }
    },
    "en_page": "nodes/ax.sep.en.md",
@@ -2503,19 +2517,26 @@
    "title": "配对公理",
    "label_en": "pairing",
    "title_en": "pairing",
+   "statement_en": "Given any two sets, one may pack them into \"the set whose only elements are these two\":\n\n$$\\forall a \\forall b \\exists A \\forall x [ x \\in A \\leftrightarrow  ( x = a \\vee  x = b ) ]$$\n\nBy extensionality $A$ is unique; it is written { a, b } (the unordered pair). Taking $a = b$ gives the singleton { a }.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#9aad67c7"
+     }
     }
    },
    "en_page": "nodes/ax.pair.en.md",
@@ -2541,19 +2562,26 @@
    "title": "并集公理",
    "label_en": "union",
    "title_en": "union",
+   "statement_en": "The elements of all members of a family of sets again form a set:\n\n$$\\forall F \\exists A \\forall x [ x \\in A \\leftrightarrow  \\exists Y ( Y \\in F \\wedge  x \\in Y ) ]$$\n\nIt is written $\\bigcup F$. Together with the pairing axiom it yields the binary union $a \\cup b = \\bigcup \\{ a, b \\}$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#ae9c0db1"
+     }
     }
    },
    "en_page": "nodes/ax.union.en.md",
@@ -2579,19 +2607,26 @@
    "title": "幂集公理",
    "label_en": "power set axiom",
    "title_en": "power set axiom",
+   "statement_en": "The subsets of a set form a set:\n\n$$\\forall A \\exists P \\forall x [ x \\in P \\leftrightarrow  x \\subseteq A ]$$\n\nIt is written $\\mathcal{P}(A)$ (or P(A)). It turns \"all subsets of $A$\" itself into a set — the power set is the basic device for building larger sets.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#9417a12a"
+     }
     }
    },
    "en_page": "nodes/ax.power.en.md",
@@ -2618,19 +2653,26 @@
    "title": "无穷公理",
    "label_en": "infinity",
    "title_en": "infinity",
+   "statement_en": "There exists an \"inductive set\" — a set containing $\\emptyset$ and closed under the successor operation:\n\n$$\\exists I [ \\emptyset \\in I \\wedge  \\forall x ( x \\in I \\to x \\cup \\{ x \\} \\in I ) ]$$\n\nThe axiom itself only asks that $I$ be **non-empty** and closed under successor; writing $\\emptyset \\in I$ is just for looks, since $\\emptyset$ is a primitive object (see \"the empty set\"). This axiom asserts the existence of an infinite set, and is the only source from which the set of natural numbers $\\omega$ is built.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#ccdf2115"
+     }
     }
    },
    "en_page": "nodes/ax.inf.en.md",
@@ -2658,19 +2700,26 @@
    "title": "替换公理模式",
    "label_en": "replacement",
    "title_en": "replacement",
+   "statement_en": "If a formula defines a \"functional relation\", the image of any set is again a set. For every formula $\\varphi (x, y, p)$ (in which $B$ does not occur):\n\n$$\\forall p [ \\forall x\\forall y\\forall z ( \\varphi(x,y,p) \\wedge  \\varphi(x,z,p) \\to y = z ) \\to \\forall A \\exists B \\forall y ( y \\in B \\leftrightarrow  \\exists x \\in A, \\varphi(x,y,p) ) ]$$\n\nIt guarantees that \"replacement\" never leaves the set-theoretic universe: the image $B$ is a set too.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#0835fe0f"
+     }
     }
    },
    "en_page": "nodes/ax.repl.en.md",
@@ -2698,19 +2747,26 @@
    "title": "正则公理 / 基础公理",
    "label_en": "foundation",
    "title_en": "foundation",
+   "statement_en": "Every non-empty set has an \"$\\in$-minimal\" element:\n\n$$\\forall A [ A \\ne \\emptyset \\to \\exists x ( x \\in A \\wedge  x \\cap A = \\emptyset ) ]$$\n\nAn equivalent form: $\\in$ is a well-founded relation, so there is no infinite descending chain\n\n$$x_0 \\ni  x_1 \\ni  x_2 \\ni  \\cdots$$",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#ccfc3b6b"
+     }
     }
    },
    "en_page": "nodes/ax.found.en.md",
@@ -2738,19 +2794,26 @@
    "title": "选择公理",
    "label_en": "axiom of choice",
    "title_en": "axiom of choice",
+   "statement_en": "From any family of non-empty sets one can pick one element from each, \"all at once\". Written in terms of a choice function:\n\n$\\operatorname{dom}$ is defined only for functions, so the assertion says: \"there is a function $f$ with $\\operatorname{dom} f = F$, and $f(X) \\in X$ for every $X \\in F$\":\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\\\n\nAnother common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint non-empty sets, then there is a set $C$ with $|C \\cap X| = 1$ for every $X \\in F$.\n\nThe choice function $f$ is the device for \"picking all at once\"; AC asserts that such a simultaneous choice is always possible.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "reviewed",
+     "version": "v0.9.1",
      "fields": [
+      "statement",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement"
+     ],
      "fieldStatus": {
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.1#96318197"
+     }
     }
    },
    "en_page": "nodes/ax.choice.en.md",
@@ -2766,7 +2829,7 @@
     "选择",
     "等价命题"
    ],
-   "statement": "任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：\n\n$$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( f\\text{ 是函数} \\wedge  \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$$\n\n另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \\in F$ 都有 $|C \\cap X| = 1$。\n\n选择函数 $f$ 就是「同时挑元素」的工具；AC 断言这种同时挑选永远做得到。",
+   "statement": "任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：\n\n$\\operatorname{dom}$ 只对函数有定义，所以这句说的是「存在函数 $f$，$\\operatorname{dom} f = F$，且每个 $X \\in F$ 都有 $f(X) \\in X$」：\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\n\n另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \\in F$ 都有 $|C \\cap X| = 1$。\n\n选择函数 $f$ 就是「同时挑元素」的工具；AC 断言这种同时挑选永远做得到。",
    "notes": "AC 与 ZF 独立：Gödel (1938) 证明 $Con(ZF) \\to Con(ZF + AC)$，Cohen (1963) 证明 $Con(ZF) \\to Con(ZF + \\neg AC)$。\n\n它是本星系里大量命题的枢纽——佐恩引理、良序定理、Hausdorff 极大原理、Tukey 引理都与它等价。\n\n有限个非空集合可以逐个挑选，这正是 AC 只在无穷情形才显出力量的原因。",
    "refs": [
     "Jech, The Axiom of Choice",
@@ -18225,7 +18288,7 @@
    "abstract_en": "A regular $T_{1}$ space with a countable base is metrisable. The proof embeds $X$ into a countable product of copies of $[0,1]$: second countability makes $X$ Lindelof, regularity together with Lindelof makes it normal, and Urysohn functions attached to pairs $\\operatorname{cl}B_{m}\\subseteq B_{n}$ of basic open sets separate points from closed sets. The embedding is a homeomorphism onto its image, and the metric of the product pulls back to a metric inducing the topology of $X$.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -18235,7 +18298,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -19895,7 +19958,7 @@
    "abstract_en": "For a compact orientable surface $M\\subseteq\\mathbb{R}^{3}$, possibly with piecewise smooth boundary, $\\int_{M}K\\,\\mathrm{d}A + \\int_{\\partial M}k_{g}\\,\\mathrm{d}s = 2\\pi\\chi(M)$, where $K$ is the Gaussian curvature, $k_{g}$ the geodesic curvature and $\\chi$ the Euler characteristic. In particular a closed surface satisfies $\\int_{M}K\\,\\mathrm{d}A = 2\\pi\\chi(M)$, so total curvature is a topological invariant: $4\\pi$ for the sphere, $0$ for the torus and $4\\pi(1-g)$ in genus $g$. The local statement for a disc bounded by a simple closed curve is the heart of the proof; the global one follows by summing over a triangulation.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -19905,7 +19968,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -20376,7 +20439,7 @@
    "abstract_en": "A smooth manifold is a Hausdorff second countable space covered by charts $(U,\\varphi)$ into $\\mathbb{R}^{n}$ whose transition maps $\\psi\\circ\\varphi^{-1}$ are $C^{\\infty}$, equipped with a maximal atlas. Maximising the atlas is what makes smoothness a property of the manifold rather than of a chosen family of charts. Hausdorff separates points, while second countability gives paracompactness and hence partitions of unity, the tool that glues local constructions into global ones. A smooth structure is extra data, not a topological invariant: one topological space can carry inequivalent smooth structures.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -20386,7 +20449,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -22937,7 +23000,7 @@
    "abstract_en": "A tensor field is the smooth version of a multilinear form attached to each point: an $(r,s)$-tensor at $p$ eats $r$ covectors and $s$ vectors and returns a number, and the tensor bundle $T^{(r,s)}M$ collects these into a manifold of dimension $n+n^{r+s}$ whose transition maps are products of Jacobi matrices. Smooth sections of that bundle are the $(r,s)$-tensor fields. Metrics, differential forms, symplectic forms and the curvature tensor are all instances, and because the transition law involves only first derivatives, tensor components never pick up second derivatives.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -22947,7 +23010,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -25417,7 +25480,7 @@
    "abstract_en": "Integrating forms pairs de Rham cohomology, closed forms modulo exact ones, with singular homology, and the de Rham theorem says the pairing is perfect: for every $k$ there is an isomorphism $H^{k}_{\\mathrm{dR}}(M)\\to H^{k}_{\\mathrm{sing}}(M;\\mathbb{R})$ sending $[\\omega]$ to the functional $[c]\\mapsto\\int_{c}\\omega$. The maps are compatible with pullbacks, so they form a natural isomorphism of graded algebras. The theorem welds analysis, geometry and topology into a single object.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -25427,7 +25490,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -25777,7 +25840,7 @@
    "abstract_en": "The volume form of an $n$-manifold cannot simply be pulled back to a $k$-dimensional submanifold: for $k<n$ every $n$-form restricts to the zero form. The volume of a submanifold therefore comes from the induced metric $g_{N} := i^{*}g$, whose volume form in an oriented chart is $\\sqrt{\\det(g_{ab})}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\mathrm{d}x^{k}$ with $g_{ab} := g(\\partial_{a}i,\\partial_{b}i)$. For a hypersurface this reduces to the interior product $\\iota_{\\nu}\\,\\mathrm{d}V_{g}$ with the unit normal, which is exactly where the surface element in the divergence theorem comes from.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -25787,7 +25850,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -27650,7 +27713,7 @@
    "abstract_en": "A path in $X$ is a continuous map $\\alpha:[0,1]\\to X$, with $\\alpha(0)$ its start and $\\alpha(1)$ its end. Two paths with the same endpoints $x_{0},x_{1}$ are path homotopic when some continuous $F:[0,1]\\times[0,1]\\to X$ interpolates between them while both endpoints stay fixed, written $\\alpha\\simeq_{p}\\beta$. Fixing the endpoints is essential: $[0,1]$ is contractible, so without that condition every path would be homotopic to every other and nothing would be distinguished. Path homotopy classes are the elements that the fundamental group turns into a group.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -27660,7 +27723,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -31992,7 +32055,7 @@
    "statement_en": "**What it does**: it replaces \"the $k$-form written in coordinates\" by a **chart-free** description. Once that is done, a form really is an object on the manifold, and not \"an expression inside some chart\".\n\nLet $M$ be a smooth $n$-manifold. A **differential $k$-form** $\\omega$ on $M$ assigns to each point $p\\in M$ an **alternating $k$-linear form**\n\n$$\\omega_{p} : T_{p}M\\times\\cdots\\times T_{p}M\\longrightarrow\\mathbb{R},$$\n\nand it **depends smoothly**: for every chart $(U,x)$ the function $p\\mapsto\\omega_{p}\\bigl(\\partial_{i_{1}}\\big|_{p},\\ldots,\\partial_{i_{k}}\\big|_{p}\\bigr)$ is smooth on $U$. The set of all $k$-forms on $M$ is denoted $\\Omega^{k}(M)$.\n\n**Smoothness is equivalent to smooth coefficients**: on $(U,x)$ the form $\\omega$ is uniquely written as\n\n$$\\omega\\big|_{U} = \\sum_{I}a_{I}\\,\\mathrm{d}x^{I},\\qquad \\mathrm{d}x^{I} := \\mathrm{d}x^{i_{1}}\\wedge\\cdots\\wedge\\mathrm{d}x^{i_{k}},$$\n\nwhere $I$ runs over all $i_{1}<\\cdots<i_{k}$ and the coefficients are given by $a_{I} := \\omega\\bigl(\\partial_{i_{1}},\\ldots,\\partial_{i_{k}}\\bigr)$. On the overlap of two charts the two sets of coefficients are converted into one another by the $k$-minors of the Jacobian matrix — and minors are smooth, so \"the coefficients are smooth\" does not depend on the chart chosen. This step is what makes the definition work at all: **it welds a local expression into a global object**.\n\n**Conventions**: $\\Omega^{0}(M) := C^{\\infty}(M)$; $\\Omega^{1}(M)$ consists of the 1-forms; and $\\Omega^{k}(M) = 0$ for $k > n$ (there is no nonzero alternating $k$-linear form on an $n$-dimensional space). The direct sum $\\Omega^{\\bullet}(M) = \\bigoplus_{k\\ge 0}\\Omega^{k}(M)$, with the wedge product, is a graded algebra.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32002,7 +32065,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32041,7 +32104,7 @@
    "statement_en": "**What it does**: the operator $\\mathrm{d}$ on $\\mathbb{R}^{n}$ is written by a coordinate formula; carried to a manifold it must answer one question — is $\\mathrm{d}\\omega$ computed in one chart the same object as in another? This proposition settles it, and then $\\mathrm{d}$ can be written globally on a manifold.\n\nLet $M$ be a smooth manifold. There is a **unique** family of operators $\\mathrm{d} : \\Omega^{k}(M)\\to\\Omega^{k+1}(M)$ for $k\\ge 0$ such that\n\n1. on functions $\\mathrm{d}f$ is the differential of $f$: $\\mathrm{d}f_{p}(v) = v(f)$ for $v\\in T_{p}M$;\n2. $\\mathrm{d}$ is $\\mathbb{R}$-linear;\n3. **anti-derivation**: for a $k$-form $\\omega$, $\\mathrm{d}(\\omega\\wedge\\tau) = \\mathrm{d}\\omega\\wedge\\tau + (-1)^{k}\\omega\\wedge\\mathrm{d}\\tau$;\n4. $\\mathrm{d}^{2} = 0$.\n\nMoreover, in any chart $(U,x)$ it equals the coordinate formula\n\n$$\\mathrm{d}\\Bigl(\\sum_{I}a_{I}\\,\\mathrm{d}x^{I}\\Bigr) = \\sum_{I}\\mathrm{d}a_{I}\\wedge\\mathrm{d}x^{I},$$\n\nwhere $\\mathrm{d}x^{I} := \\mathrm{d}x^{i_{1}}\\wedge\\cdots\\wedge\\mathrm{d}x^{i_{k}}$ and $\\mathrm{d}a_{I}$ is the differential of the function $a_{I}$. Hence \"$\\mathrm{d}$ does not depend on the chart\" is not an extra assumption, but the conclusion of this proposition.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32051,7 +32114,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32090,7 +32153,7 @@
    "statement_en": "**What it does**: it carries a $k$-form back along a smooth map **between manifolds**. The version for open subsets of $\\mathbb{R}^{n}$ is only its local appearance.\n\nLet $F : M\\to N$ be a smooth map and $\\omega\\in\\Omega^{k}(N)$. The **pullback** $F^{\\ast}\\omega\\in\\Omega^{k}(M)$ is defined pointwise by\n\n$$(F^{\\ast}\\omega)_{p}(v_{1},\\ldots,v_{k}) := \\omega_{F(p)}\\bigl(\\mathrm{d}F_{p}v_{1},\\ldots,\\mathrm{d}F_{p}v_{k}\\bigr)$$\n\nfor $v_{i}\\in T_{p}M$. Then $F^{\\ast}\\omega$ is smooth, and\n\n1. $F^{\\ast}$ is $\\mathbb{R}$-linear; on functions $F^{\\ast}f = f\\circ F$;\n2. **it preserves the wedge product**: $F^{\\ast}(\\omega\\wedge\\eta) = F^{\\ast}\\omega\\wedge F^{\\ast}\\eta$;\n3. **it commutes with $\\mathrm{d}$**: $\\mathrm{d}(F^{\\ast}\\omega) = F^{\\ast}(\\mathrm{d}\\omega)$;\n4. **it preserves composition**: $(G\\circ F)^{\\ast} = F^{\\ast}\\circ G^{\\ast}$ and $(\\operatorname{id})^{\\ast} = \\operatorname{id}$.\n\nThus $F^{\\ast} : \\Omega^{\\bullet}(N)\\to\\Omega^{\\bullet}(M)$ is a homomorphism of **differential graded algebras**.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32100,7 +32163,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32139,7 +32202,7 @@
    "statement_en": "**What it does**: the tangent space carries \"where can I go\", the cotangent space carries \"how do I measure\". Stacking the dual spaces over all points gives the home of 1-forms — a differential form is not a formula out of nowhere, it is a section of this bundle.\n\nLet $M$ be a smooth $n$-manifold. The **cotangent space** at $p$ is the dual space\n\n$$T_{p}^{\\ast}M := (T_{p}M)^{\\ast} = \\operatorname{Hom}_{\\mathbb{R}}\\bigl(T_{p}M,\\mathbb{R}\\bigr),$$\n\nwhose elements are called **covectors**, or **1-forms at $p$** (also Pfaffian forms). The **cotangent bundle** stacks them over the base points:\n\n$$T^{\\ast}M := \\bigsqcup_{p\\in M}T_{p}^{\\ast}M,$$\n\nwith projection $\\pi : T^{\\ast}M\\to M$ sending $\\alpha\\in T_{p}^{\\ast}M$ to $\\pi(\\alpha) := p$.\n\n**Smooth structure**: on a chart $(U,\\varphi)$ the differentials $\\mathrm{d}x^{i}\\big|_{p}$ of the coordinate functions $x^{1},\\ldots,x^{n}$ form a basis of $T_{p}^{\\ast}M$ (dual to $\\partial/\\partial x^{i}\\big|_{p}$), so\n\n$$\\Phi : \\pi^{-1}(U)\\longrightarrow\\varphi(U)\\times\\mathbb{R}^{n}$$\n\n$$\\sum_{i=1}^{n}a_{i}\\,\\mathrm{d}x^{i}\\big|_{p}\\longmapsto\\bigl(\\varphi(p),\\,a_{1},\\ldots,a_{n}\\bigr),$$\n\nis a bijection. Taking it as a chart makes $T^{\\ast}M$ a smooth $2n$-manifold, and $\\pi$ a **smooth vector bundle of rank $n$** over $M$: the local trivializations are the maps $\\Phi$ above, and the vector-space structure on the fibers comes from the dual space.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32149,7 +32212,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32188,7 +32251,7 @@
    "statement_en": "**What it does**: this is the whole reason a bundle is called a bundle — locally it can always be flattened into a product. The clause \"every point has a neighbourhood such that…\" in the definitions of fiber bundles, vector bundles, principal bundles and covering spaces is exactly this statement.\n\nLet $\\pi : E\\to B$ be a continuous surjection, $F$ a topological space and $U\\subseteq B$ an open set. A continuous map\n\n$$\\Phi : \\pi^{-1}(U)\\longrightarrow U\\times F$$\n\nis called a **local trivialization** of $\\pi$ over $U$ if $\\Phi$ is a homeomorphism and commutes with the projection:\n\n$$\\operatorname{pr}_{1}\\circ\\Phi = \\pi .$$\n\nThus $\\Phi$ flattens the piece of the bundle over $U$ into the **trivial product** $U\\times F$: each fiber $E_{b} := \\pi^{-1}(b)$ is sent to $\\{b\\}\\times F$, and is therefore homeomorphic to $F$. If every point of $B$ has such an open neighbourhood with a local trivialization, $\\pi$ is called **locally trivial**.\n\n**Smooth case**: when $E, B, F$ are smooth manifolds and $\\pi$ is smooth, one replaces \"homeomorphism\" by \"**diffeomorphism**\" in the definition; that is the local trivialization of a smooth bundle — without it even the tangent bundle would not be a smooth bundle.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32198,7 +32261,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32238,7 +32301,7 @@
    "statement_en": "**What it says**: a vector bundle only requires the fiber to be a vector space. Replacing the vector space by an **arbitrary manifold $F$** gives a fiber bundle — covering spaces, principal bundles and vector bundles all fall under this one definition.\n\nLet $E, B, F$ be smooth manifolds and $\\pi : E\\to B$ a smooth surjection. One calls $\\pi$ (together with $E$) a **fiber bundle with fiber $F$ and base $B$** if every point $b\\in B$ has an open neighbourhood $U$ and a diffeomorphism\n\n$$\\Phi : \\pi^{-1}(U)\\longrightarrow U\\times F,\\qquad \\operatorname{pr}_{1}\\circ\\Phi = \\pi ,$$\n\nthat is, $\\Phi$ commutes with the projection. Such a $\\Phi$ is called a **local trivialization**, $E_{b} := \\pi^{-1}(b)$ the **fiber** over $b$, and $E$ the **total space**.\n\n**Transition functions**: two trivializations over the same open cover necessarily differ over their overlap by a fiberwise self-homeomorphism\n\n$$\\Phi_{\\alpha}\\circ\\Phi_{\\beta}^{-1}\\,(b, y) = \\bigl(b,\\ g_{\\alpha\\beta}(b)\\,y\\bigr),$$\n\nwhere $g_{\\alpha\\beta} : U_{\\alpha}\\cap U_{\\beta}\\to\\operatorname{Diff}(F)$ is the **transition function**. They satisfy the cocycle conditions $g_{\\alpha\\alpha} = \\operatorname{id}$ and $g_{\\alpha\\beta}\\,g_{\\beta\\gamma}\\,g_{\\gamma\\alpha} = \\operatorname{id}$ (on overlaps), and they measure how twisted the bundle is.\n\nIf a Lie group $G$ acts on $F$ and the trivializations can always be chosen so that all $g_{\\alpha\\beta}$ take values in $G$, one says the bundle has **structure group** $G$.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32248,7 +32311,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32287,7 +32350,7 @@
    "statement_en": "**What it says**: the most self-referential class of fiber bundles — the fiber is not an arbitrary manifold but the structure group $G$ itself, and $G$ acts freely on the bundle from the right. Every vector bundle can be built from a principal bundle (by taking an associated bundle).\n\nLet $G$ be a Lie group, $P, B$ smooth manifolds and $\\pi : P\\to B$ smooth. A **principal $G$-bundle** over $P$ is the fiber bundle $\\pi$ together with a **right action** of $G$ on $P$\n\n$$P\\times G\\longrightarrow P,\\qquad (u,g)\\longmapsto u\\cdot g ,$$\n\nsuch that\n\n1. **fibers are preserved**: $\\pi(u\\cdot g) = \\pi(u)$;\n2. **the action is free and transitive on each fiber**: $u\\cdot g = u \\iff g = e$, and any two points of the same fiber $P_{b}$ differ by a right multiplication (so $P_{b}$ is homeomorphic to $G$);\n3. **it is locally trivial and $G$-equivariant**: every point has a neighbourhood $U$ and a diffeomorphism $\\Phi : \\pi^{-1}(U)\\to U\\times G$, written $\\Phi(u) = \\bigl(\\pi(u),\\varphi(u)\\bigr)$, satisfying\n\n$$\\Phi(u\\cdot g) = \\bigl(\\pi(u),\\ \\varphi(u)\\,g\\bigr).$$\n\nThe fiber is then $G$ (right multiplication $g\\mapsto hg$ carries it into itself), and so is the structure group $G$. The **frame bundle** gives the most used examples: for a vector bundle $E\\to B$ of rank $k$, the bundle of frames is a principal $\\operatorname{GL}(k,\\mathbb{R})$-bundle — this is the bridge between vector bundles and principal bundles.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "statement",
@@ -32297,7 +32360,7 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -32336,7 +32399,7 @@
    "abstract_en": "For a measure space $(X,\\mathcal{M},\\mu)$ and $0<p<\\infty$ one sets $\\|f\\|_p := [\\int |f|^{p}\\,\\mathrm{d}\\mu]^{1/p}$, and $L^{p}$ is the space of measurable $f$ with $\\|f\\|_p<\\infty$. Its elements are classes of functions equal almost everywhere, which is what makes $\\|f\\|_p = 0$ imply $f = 0$. For $p<1$ the triangle inequality fails, so one only gets a quasi-norm, although the space stays complete.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -32346,7 +32409,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],
@@ -49429,7 +49492,7 @@
    "abstract_en": "For a topological space $X$: $X$ is paracompact Hausdorff exactly when every open cover has a subordinate partition of unity, and $X$ is normal exactly when every locally finite open cover has one. In one direction the supports of the partition give a locally finite open refinement of the cover; in the other, normality produces the functions one at a time. This is the standard bridge from local data to global objects, for instance from local metrics to a Riemannian metric.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "reviewed",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -49439,7 +49502,7 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "draft",
+      "abstract": "reviewed",
       "name": "derived"
      },
      "staleFields": [],

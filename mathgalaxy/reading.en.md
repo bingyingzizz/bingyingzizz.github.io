@@ -1,6 +1,6 @@
 # MathGalaxy · How to read this map
 
-> English version: **draft** · Chinese source is authoritative · machine-drafted, pending author review.
+> English version: **reviewed** · bingyingzizz · 2026-11-01 · Chinese source is authoritative.
 
 Data starts at `index.md`.
 
