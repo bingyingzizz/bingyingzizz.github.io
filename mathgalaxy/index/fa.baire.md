@@ -5,8 +5,8 @@
 
 - def.g-delta　G_δ 与 F_σ　layer 5
 - def.nowhere-dense　无处稠密　layer 6
-- lem.countable-closed-cover　闭覆盖的内点　layer 6
 - def.meager-set　第一纲 / 第二纲　layer 7
+- lem.countable-closed-cover　闭覆盖的内点　layer 8
 - thm.baire　Baire 纲定理　layer 15
 - thm.locally-compact-baire　局部紧 Hausdorff 是 Baire　layer 16
 - prop.baire-characterizations　Baire 的三条等价刻画　layer 16

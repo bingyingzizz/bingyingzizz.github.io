@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/def-link.fa-banach-ubp.md](../proofs/def-link.fa-banach-ubp.md)
+- [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲：用到了定义 第一纲 / 第二纲　[proofs/dep-link.meager-ubp.md](../proofs/dep-link.meager-ubp.md)
 
 > 续见 [nodes/thm.ubp.3.md](./thm.ubp.3.md)

@@ -11,6 +11,6 @@
 - 被 [`def.compactification`](../nodes/def.compactification.md) 紧化 用
 - 被 [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密 用
 - 被 [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点 用
-- 被 [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的 用
+- 被 [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲 用
 
 > 续见 [nodes/def.closed-set.5.md](./def.closed-set.5.md)

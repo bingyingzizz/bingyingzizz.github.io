@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/def-link.fa-hausdorff-baire.md](../proofs/def-link.fa-hausdorff-baire.md)
+- [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲：用到了定义 第一纲 / 第二纲　[proofs/dep-link.meager-lcb.md](../proofs/dep-link.meager-lcb.md)

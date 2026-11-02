@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 6 · lemma · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
+layer 8 · lemma · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 names: `Countable Closed Cover` (short) · `Countable Closed Covers and Interior Points` (full)
 
 ## Statement and proof

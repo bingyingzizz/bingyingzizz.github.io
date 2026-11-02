@@ -6,14 +6,17 @@ layer 24 · 定理 · Baire 纲与三大定理 · 泛函分析
 设 $E, F$ 都是 Banach 空间，$u \in B(E, F)$ 是**满射**。则 $u$ 是**开映射**：开集的像是开集。等价地，存在 $r > 0$ 使
 
 $$u(B_E) \supseteq r\, B_F .$$
+**纲版表述（教科书里最常见的那一版）**：设 $E, F$ 是 Banach 空间、$u \in B(E,F)$ 满射。则
+
+$$\text{对 } F \text{ 的每个非空开集 } \Omega,\quad u(E) \cap \Omega \ \text{是第二纲的（在 } \Omega \text{ 中）},$$
+> 陈述续见 [nodes/thm.open-mapping-banach.2.md](./thm.open-mapping-banach.2.md)
+
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点 + [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：闭覆盖有内点 + 完备 $\implies$ 开映射定理　[proofs/imp.fa-openmap.md](../proofs/imp.fa-openmap.md)
-
-- …另有入边，续页见 [nodes/thm.open-mapping-banach.2.md](./thm.open-mapping-banach.2.md)
+- …另有入边，续页见 [nodes/thm.open-mapping-banach.4.md](./thm.open-mapping-banach.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.open-mapping-banach.3.md](./thm.open-mapping-banach.3.md)
+- …另有出边，续页见 [nodes/thm.open-mapping-banach.6.md](./thm.open-mapping-banach.6.md)
 
 refs: Rudin, Functional Analysis, 2.11
 

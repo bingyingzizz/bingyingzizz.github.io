@@ -10,6 +10,9 @@ layer 6 · 定义 · Baire 纲与三大定理 · 泛函分析
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲 用
+- 被 [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理 用
+
+- …另有出边，续页见 [nodes/def.nowhere-dense.2.md](./def.nowhere-dense.2.md)
 
 refs: 泛函分析讲义 2026-10-26
 

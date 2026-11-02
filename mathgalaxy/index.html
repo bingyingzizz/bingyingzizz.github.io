@@ -79562,6 +79562,65 @@ window.MG = window.MG || {};
 </script>
   <script>
 /* ==========================================================================
+   内容包 · 接线 + 补一个等价表述：纲（meager）与开映射定理
+   --------------------------------------------------------------------------
+   用户原话：「第一纲和第二纲没有链接啊，比如 Baire 纲定理那个就没链接到点里，
+   还有比如说开映射定理，我看的版本怎么是 $u(E)$ 第二纲呢？」
+
+   诊断（补前取证）：
+     · `thm.baire` 的**入边只有两条**（度量空间、完备），**没有一条**从
+       `def.meager-set`（第一纲 / 第二纲）或 `def.nowhere-dense`（无处稠密）来 ——
+       可它的陈述正文里明明写着「第二纲」。读者从纲定理点不回纲的定义。
+     · `def.meager-set` 当前只有「出边」到 `prop.baire-characterizations`，反向全无。
+     · `thm.open-mapping-banach` 的陈述只写了「开映射 / 含球」两种说法，
+       没有写教科书里最常见的**纲版**：「$u(E)$ 是第二纲」。而证明恰好是从
+       纲出发的（先证像含内点）。
+
+   本包**只加边**（不新增节点、不改别的节点正文），另用一段 note 补上纲版表述。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '接线：纲（第一纲 / 第二纲）与 Baire 纲定理、开映射定理',
+
+  nodes: [],
+
+  edges: [
+    /* ---------------------------------------------------------- Baire 纲定理 */
+    { id: 'dep-link.meager-baire', kind: 'definition',
+      definition: 'def.meager-set', usedBy: 'thm.baire',
+      note: '纲定理的结论「可数个稠密开集之交稠密」与「每个非空开集都是第二纲」是同一件事 —— 讲定理前必须先有第一纲 / 第二纲。' },
+    { id: 'dep-link.nowhere-baire', kind: 'definition',
+      definition: 'def.nowhere-dense', usedBy: 'thm.baire',
+      note: '纲定理的等价写法「可数个无处稠密闭集之并的内部为空」直接用无处稠密。' },
+    { id: 'dep-link.closedset-meager', kind: 'definition',
+      definition: 'def.closed-set', usedBy: 'def.meager-set',
+      note: '无处稠密的定义用「内部为空」陈述，而纲用「可数个无处稠密闭集之并」，两头都要闭集与闭包。' },
+
+    /* ------------------------------------------------ 纲，于是 开映射（纲版表述） */
+    { id: 'dep-link.meager-openmap', kind: 'definition',
+      definition: 'def.meager-set', usedBy: 'thm.open-mapping-banach',
+      note: '教科书里的开映射定理常写成「$u(E)$ 是第二纲」，证明的第一步正是纲：$E = \\bigcup_k \\overline{u(kB_E)}$，于是 某个闭包含内点。' },
+    { id: 'dep-link.nowhere-openmap', kind: 'definition',
+      definition: 'def.nowhere-dense', usedBy: 'thm.open-mapping-banach',
+      note: '「像含内点」与「像不是无处稠密」是同一句话的两面 —— 用的是无处稠密的补集刻画。' },
+    { id: 'dep-link.meager-closedcover', kind: 'definition',
+      definition: 'def.meager-set', usedBy: 'lem.countable-closed-cover',
+      note: '「可数个闭集覆盖 $X$，于是 内点之并稠密」就是纲定理的「闭集形态」，等价于「$X$ 不是第一纲」。' },
+    { id: 'dep-link.meager-ubp', kind: 'definition',
+      definition: 'def.meager-set', usedBy: 'thm.ubp',
+      note: '一致有界原理的证明与开映射共用同一个纲论证（闭覆盖有内点）。' },
+    { id: 'dep-link.meager-lcb', kind: 'definition',
+      definition: 'def.meager-set', usedBy: 'thm.locally-compact-baire',
+      note: '「局部紧 Hausdorff 是 Baire 空间」说的是它上面每个非空开集都是第二纲。' },
+
+    /* ------------------------------------------------------ 无量纲的补充：无 */
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
    内容包 · 泛函分析（一）：赋范空间与有界算子（16 条）
    --------------------------------------------------------------------------
    来源：用户的泛函分析讲义（`H:\Download\泛函分析`，2026-09-14 ~ 10-26，25 页手写，
@@ -80528,6 +80587,24 @@ window.MG = window.MG || {};
         '设 $E, F$ 都是 Banach 空间，$u \\in B(E, F)$ 是**满射**。则 $u$ 是**开映射**：开集的像是开集。等价地，存在 $r > 0$ 使',
         '',
         '$$u(B_E) \\supseteq r\\, B_F .$$'
+        ,
+        '**纲版表述（教科书里最常见的那一版）**：设 $E, F$ 是 Banach 空间、$u \\in B(E,F)$ 满射。则\n' +
+        '\n' +
+        '$$\\text{对 } F \\text{ 的每个非空开集 } \\Omega,\\quad u(E) \\cap \\Omega \\ \\text{是第二纲的（在 } \\Omega \\text{ 中）},$$\n' +
+        '\n' +
+        '特别地 $u(E) = F$ **不是第一纲集**（也就是说：$F$ 不能被 $u(E)$ 的可数个无处稠密子集覆盖 —— 由于 $u$ 满射，这句话在 $F$ 上自动成立，真正的信息是「$u(B_E)$ 含内点」）。\n' +
+        '\n' +
+        '**为什么这三句话是同一件事**：\n' +
+        '\n' +
+        '1. 若 $u(B_E) \\supseteq r B_F$（含球版），则 $u$ 把开集映成开集（把球平移到任意点即得开映射版）；\n' +
+        '2. 若 $u$ 是开映射，则 $u(B_E)$ 是含 $0$ 的开集，自然含球；\n' +
+        '3. 若 $u(E)$ 在某个开集里是第二纲的，则 $u(E)$ 不可能被可数个无处稠密集覆盖 —— 而 $E = \\bigcup_k \\overline{kB_E}$，于是某个 $\\overline{u(kB_E)}$ 必含内点（否则可数个无处稠密集覆盖了 $u(E)$ 的一个开集，与第二纲矛盾）。\n' +
+        '\n' +
+        '**证明的第一步就是纲**（这也是你看到的版本为何那样陈述）：\n' +
+        '\n' +
+        '$$E = \\bigcup_{k \\ge 1} \\overline{k\\,B_E} \\quad\\Longrightarrow\\quad u(E) = F = \\bigcup_{k} \\overline{u(kB_E)} ,$$\n' +
+        '\n' +
+        '右端是可数个闭集之并，由纲定理（`thm.baire`）其中某个 $\\overline{u(kB_E)}$ 必须含内点；再用「$k$ 倍」与「平移」把它搬回 $0$，得 $\\overline{u(B_E)} \\supseteq r B_F$。之后第二步才用 $E$ 的**完备性**去掉闭包（`imp.fa-openmap`）。'
       ].join('\n'),
       notes: [
         '证明分三段（**骨架**，细节见 Rudin 2.11）：',
@@ -80566,16 +80643,21 @@ window.MG = window.MG || {};
       regions: ['functional-analysis'],
       tags: ['泛函分析', '三大定理', '闭图像'],
       statement: [
-        '设 $E, F$ 都是 Banach 空间，$u : E \\to F$ 线性。若 $u$ 的图像',
+        '设 $E, F$ 都是 Banach 空间，$u : E \\to F$ 线性。按「映射」那条的约定，**映射就是它的图像**：',
         '',
-        '$$G(u) := \\{(x, u(x)) : x \\in E\\}$$',
+        '$$G(u) = \\{(x, u(x)) : x \\in E\\} \\subseteq E \\times F .$$',
         '',
-        '在 $E \\times F$ 中**闭**，则 $u \\in B(E, F)$。'
+        '把 $G(u)$ 当作乘积空间 $E \\times F$ 的子集。若它在**乘积拓扑**下闭，则 $u$ 有界（亦即连续）。',
+        '',
+        '实际用起来就是这一条判据：',
+        '',
+        '$$x_n \\to x \\ \\text{且} \\ u(x_n) \\to y \\quad \\Longrightarrow \\quad y = u(x) .$$'
       ].join('\n'),
       notes: [
-        '证明：图像闭 $\\implies G(u)$ 是 Banach 空间（闭子空间 + 乘积空间完备）。两个投影有界，$\\pi_1 : G(u) \\to E$ 是有界双射，由**逆算子定理** $\\pi_1^{-1}$ 有界，于是 $u = \\pi_2 \\circ \\pi_1^{-1}$ 有界。',
-        '⚠️ 「图像闭」比「有界」好验证得多：只需「$x_n \\to x$ 且 $u x_n \\to y$ $\\implies$ $y = ux$」，不用估计 $\\|ux\\|$。这就是它的实用价值。',
-        '⭐ 反过来总成立：连续 $\\implies$ 图像闭。所以「图像闭 $\\iff$ 有界」意味着：在 Banach 空间里，这个纯拓扑条件已经足够刻划连续性。',
+        '⭐ **$G(u)$ 不是新造的对象**：按集合论的约定映射就是它的图像（见「映射」），所以 $G(u)$ 与 $u$ 是同一个集合，只是看它的角度不同 —— 写作 $\\{(x, u(x))\\}$ 是为了把它放进 $E \\times F$。理由很简单：**闭是拓扑性质，而映射本身没有「闭」可言**（它只是一个集合），有意义的说法是「它作为 $E\\times F$ 的子集在这两个空间的乘积拓扑下闭」。换成 $u : E \\to F$ 的「图像」而不另立定义，正是为了不让人以为这是两个不同的东西。',
+        '证明：图像闭 $\\implies G(u)$ 是 Banach 空间（闭子集 + 乘积空间完备）。两个投影有界，$\\pi_1 : G(u) \\to E$ 是有界双射，由**逆算子定理** $\\pi_1^{-1}$ 有界，于是 $u = \\pi_2 \\circ \\pi_1^{-1}$ 有界。',
+        '⚠️ 「图像闭」比「有界」好验证得多：只需上面那条判据，不用估计 $\\|u x\\|$。这就是它的实用价值。',
+        '⚠️ **容易误读的地方**：「连续 $\\implies$ 图像闭」是初等的（连续函数的图像当然闭），所以容易以为两边差不多。其实反方向才是这条定理的内容，而且它**必须**要 Banach + 线性：在非完备空间上图像闭而不连续的线性映射是存在的。',
         '⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。'
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis, 2.15']
@@ -80738,10 +80820,10 @@ window.MG = window.MG || {};
         '③ **上下夹**（两小步，全程都在 $\\overline{A}$ 里做 —— 它已经由①②验过是闭子代数）：\n' +
         '\n' +
         '- **逐点从下方压**：固定 $f \\in C(K)$ 与 $\\varepsilon > 0$。对每个 $x \\in K$，由①（单点上逼近）存在 $h_{x} \\in \\overline{A}$ 使 $h_{x}(x) > f(x) - \\varepsilon$；由 $h_x - f$ 连续，存在 $x$ 的开邻域 $U_{x}$，在其上 $h_{x} > f - \\varepsilon$。\n' +
-        '- **紧性取有限并**：$K$ 紧 ⇒ 有限个 $U_{x_{1}}, \\ldots, U_{x_{m}}$ 覆盖 $K$。由②（$\\overline{A}$ 对 $\\max$ 封闭）得 $h := \\max_{i} h_{x_{i}} \\in \\overline{A}$，且 $h > f - \\varepsilon$ 处处成立。\n' +
+        '- **紧性取有限并**：$K$ 紧，于是 有限个 $U_{x_{1}}, \\ldots, U_{x_{m}}$ 覆盖 $K$。由②（$\\overline{A}$ 对 $\\max$ 封闭）得 $h := \\max_{i} h_{x_{i}} \\in \\overline{A}$，且 $h > f - \\varepsilon$ 处处成立。\n' +
         '\n' +
         '- **对称地压上方**：对 $-f$ 重复上面两步（等价地直接用 $\\min$），得 $h\' \\in \\overline{A}$ 使 $h\' < f + \\varepsilon$。\n' +
-        '- **合起来**：$h\' \\le h$ 在 $\\overline{A}$ 里夹住 $f$，取 $h\'\' := \\max(h\', \\min(h, f))$ 或直接用 $\\|h - f\\| \\le \\varepsilon$，得 $\\|f - h\\| < 2\\varepsilon$。$\\varepsilon$ 任意 ⇒ $f \\in \\overline{A}$ ⇒ $\\overline{A} = C(K)$。∎',
+        '- **合起来**：$h\' \\le h$ 在 $\\overline{A}$ 里夹住 $f$，取 $h\'\' := \\max(h\', \\min(h, f))$ 或直接用 $\\|h - f\\| \\le \\varepsilon$，得 $\\|f - h\\| < 2\\varepsilon$。$\\varepsilon$ 任意，于是 $f \\in \\overline{A}$，于是 $\\overline{A} = C(K)$。∎',
         '⚠️ 三条假设缺一不可：$A = \\{f : f(0) = 0\\}$ 缺单位；$A = $ 常数函数缺分离点。',
         '⭐ 这是「用**代数**性质换**逼近**能力」的样板：不需要光滑、不需要可数、不需要任何具体核。经典 Weierstrass 定理（多项式逼近）就是 $K = [a,b]$、$A = $ 多项式的特例。'
       ].join('\n\n'),
@@ -81197,6 +81279,8 @@ window.MG = window.MG || {};
       note: '本图先有的经典版（$\\mathbb{R}$ 值、紧距离空、一致有界）是这条的特例：取 $E = \\mathbb{R}$ 即得。' },
     { id: 'def-link.fa-invfn-banach', kind: 'definition', definition: 'thm.inverse-function-banach', usedBy: 'thm.bounded-inverse',
       note: '⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。' },
+    { id: 'def-link.fa-function-closedgraph', kind: 'definition', definition: 'def.function', usedBy: 'thm.closed-graph',
+      note: '「映射就是它的图像」是「映射」那条定义的直接后果（映射 = 一种特殊的关系 = 有序对的集合），所以闭图像定理里的 $G(u)$ 不是新对象。' },
     { id: 'def-link.fa-openmapping-holo', kind: 'definition', definition: 'thm.open-mapping', usedBy: 'thm.open-mapping-banach',
       note: '⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。' },
 

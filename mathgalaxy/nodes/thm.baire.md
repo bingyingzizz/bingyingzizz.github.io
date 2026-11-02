@@ -12,8 +12,10 @@ layer 15 · 定理 · Baire 纲与三大定理 · 泛函分析
 - [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-link.fa-metric-baire.md](../proofs/def-link.fa-metric-baire.md)
 - [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/def-link.fa-complete-baire.md](../proofs/def-link.fa-complete-baire.md)
 
+- …另有入边，续页见 [nodes/thm.baire.2.md](./thm.baire.2.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.baire.2.md](./thm.baire.2.md)
+- …另有出边，续页见 [nodes/thm.baire.3.md](./thm.baire.3.md)
 
 refs: 泛函分析讲义 2026-10-26；Baire 1899
 

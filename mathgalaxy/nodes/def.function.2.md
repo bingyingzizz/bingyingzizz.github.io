@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.section`](../nodes/def.section.md) 截口 用
 - 被 [`def.path-homotopy`](../nodes/def.path-homotopy.md) 道路同伦 用
+- 被 [`thm.closed-graph`](../nodes/thm.closed-graph.md) 闭图像定理 用
 - 被 [`def.bijection`](../nodes/def.bijection.md) 单射 / 满射 / 双射 用
 - 被 [`def.preimage`](../nodes/def.preimage.md) 像与原像 用
 - 被 [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑 用
