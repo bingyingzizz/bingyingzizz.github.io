@@ -8,7 +8,7 @@ layer 14 · 定理 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群：用到了定义 基本群　[proofs/e65:definition.md](../proofs/e65:definition.md)
+- [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群：用到了定义 基本群　[proofs/e65.definition.md](../proofs/e65.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.van-kampen.3.md](./thm.van-kampen.3.md)

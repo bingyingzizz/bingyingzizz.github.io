@@ -12,7 +12,7 @@ $$\Omega(X, x_{0}) := \{\, \alpha : \alpha(0) = \alpha(1) = x_{0} \,\},$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.homotopy`](../nodes/def.homotopy.md) 同伦：用到了定义 同伦　[proofs/e36:definition.md](../proofs/e36:definition.md)
+- [`def.homotopy`](../nodes/def.homotopy.md) 同伦：用到了定义 同伦　[proofs/e36.definition.md](../proofs/e36.definition.md)
 
 - …另有入边，续页见 [nodes/def.fundamental-group.3.md](./def.fundamental-group.3.md)
 

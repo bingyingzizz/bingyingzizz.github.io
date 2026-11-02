@@ -13,7 +13,7 @@ $$F : X \times [0, 1] \longrightarrow Y$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e51:definition.md](../proofs/e51:definition.md)
+- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e51.definition.md](../proofs/e51.definition.md)
 
 - …另有入边，续页见 [nodes/def.homotopy-maps.3.md](./def.homotopy-maps.3.md)
 

@@ -10,7 +10,7 @@ $$f(x) = f(-x).$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.brouwer-fixed-point`](../nodes/thm.brouwer-fixed-point.md) Brouwer 不动点定理（圆盘）：反证：奇映射的度既是奇数又必须是 0　[proofs/e16:implication.md](../proofs/e16:implication.md)
+- [`thm.brouwer-fixed-point`](../nodes/thm.brouwer-fixed-point.md) Brouwer 不动点定理（圆盘）：反证：奇映射的度既是奇数又必须是 0　[proofs/e16.implication.md](../proofs/e16.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.borsuk-ulam.3.md](./thm.borsuk-ulam.3.md)

@@ -1,8 +1,10 @@
 # 平行四边形法则　`thm.parallelogram-inner-product`　·　说明
 根 `../`
 
-「$\implies$」直接展开。「$\Longleftarrow$」用极化恒等式**定义** $\langle x,y\rangle$，再逐条验公理：对实情形，写 $\langle x, y+z\rangle$ 并与 $\langle x,y\rangle + \langle x,z\rangle$ 相减，用平行四边形法则化简得 $0$；齐次性先对有理数成立，再用**连续性**放到实数上（范数连续）；复情形再多验一步 $\langle x, iy\rangle = i\langle x,y\rangle$。
+「$\Longleftarrow$」分三段（顺序不能换）：
 
-⭐ 经典反例：$\ell^1$、$\ell^\infty$、$C[0,1]$ 都不满足（取不交支撑的 $x, y$ 一看）。所以它们的范数**不是**内积给的 —— 这是「Hilbert 空间为什么特殊」的定量答案。
+1. **用极化恒等式定义内积**。实情形取 $\langle x,y\rangle := \frac14\bigl(\|x+y\|^2 - \|x-y\|^2\bigr)$；复情形取 $\langle x,y\rangle := \frac14\sum_{k=0}^{3} i^{k}\|x + i^{k} y\|^2$。这一段的要点是：平行四边形法则恰好保证「展开后的交叉项能两两抵消」，所以范数真的能反推出双线性型。
 
-⚠️ 讲义里写的是「$\|x+y\|^2 + \|x-y\|^2 = 2\|x\|^2 + 2\|y\|^2$」加一句「平行四边行」——把几何里的「平行四边形两条对角线平方和 = 四边平方和」直接搬到了范数上。
+2. **加法性**。把 $\langle x, y+z\rangle$ 与 $\langle x,y\rangle + \langle x,z\rangle$ 相减，展开成 8 个范数平方项；对 $(y, z)$ 与 $(x,\, y+z)$ 各用一次平行四边形法则，所有项成对抵消，得 $0$。这一步**只用平行四边形法则**，不假设任何线性。
+
+> 续见 notes/thm.parallelogram-inner-product.2.md

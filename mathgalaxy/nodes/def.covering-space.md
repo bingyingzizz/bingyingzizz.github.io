@@ -10,7 +10,7 @@ $$p\big|_{V_{j}} : V_{j} \longrightarrow U$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e40:definition.md](../proofs/e40:definition.md)
+- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e40.definition.md](../proofs/e40.definition.md)
 
 - …另有入边，续页见 [nodes/def.covering-space.3.md](./def.covering-space.3.md)
 

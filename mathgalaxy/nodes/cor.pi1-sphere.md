@@ -10,7 +10,7 @@ $$\pi_{1}(S^{n}, x_{0}) = 1 \qquad (n \ge 2).$$
 对 $n = 1$ 结论不成立：$\pi_{1}(S^{1}) \cong \mathbb{Z}$（`thm.pi1-circle`）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理：两块可缩 $+$ 交叠道路连通 $\implies$ 基本群平凡　[proofs/e66:implication.md](../proofs/e66:implication.md)
+- [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理：两块可缩 $+$ 交叠道路连通 $\implies$ 基本群平凡　[proofs/e66.implication.md](../proofs/e66.implication.md)
 
 - …另有入边，续页见 [nodes/cor.pi1-sphere.2.md](./cor.pi1-sphere.2.md)
 

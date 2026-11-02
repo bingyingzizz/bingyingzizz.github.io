@@ -8,7 +8,7 @@ layer 9 · 定义 · 整环与分解 · 抽象代数
 $$a = q b + r, \qquad r = 0 \ \vee \ N(r) < N(b) .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e127:definition.md](../proofs/e127:definition.md)
+- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e127.definition.md](../proofs/e127.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.euclidean-domain.2.md](./def.euclidean-domain.2.md)

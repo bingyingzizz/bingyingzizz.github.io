@@ -8,7 +8,7 @@ layer 13 · 引理 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.path-homotopy`](../nodes/def.path-homotopy.md) 道路同伦：重参数化给出良定义、结合律、单位元与逆元　[proofs/e53:implication.md](../proofs/e53:implication.md)
+- [`def.path-homotopy`](../nodes/def.path-homotopy.md) 道路同伦：重参数化给出良定义、结合律、单位元与逆元　[proofs/e53.implication.md](../proofs/e53.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/lem.path-product.4.md](./lem.path-product.4.md)

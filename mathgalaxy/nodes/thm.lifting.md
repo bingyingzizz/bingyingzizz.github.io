@@ -12,7 +12,7 @@ $$\tilde{\alpha} : [0, 1] \longrightarrow E,\qquad \tilde{\alpha}(0) = e_{0},\qu
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.covering-space`](../nodes/def.covering-space.md) 覆叠空间：用到了定义 覆叠空间　[proofs/e58:definition.md](../proofs/e58:definition.md)
+- [`def.covering-space`](../nodes/def.covering-space.md) 覆叠空间：用到了定义 覆叠空间　[proofs/e58.definition.md](../proofs/e58.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.lifting.3.md](./thm.lifting.3.md)

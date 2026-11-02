@@ -2953,7 +2953,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       (pack.edges || []).forEach(function (raw) {
         if (raw && raw.kind === 'cluster-link') return;  // 星团连线请写在 pack.clusterLinks
         var e = normEdge(raw, name);
-        e.id = e.id || ('e' + (++autoId) + ':' + e.kind);
+        /* ⚠️ 分隔符用 '.' 不是 ':' —— Windows 上 'a:b' 是 NTFS 的**备用数据流**语法，
+           fs.writeFile('e19:implication.md') 会造出一个叫 e19 的文件 + 一个看不见的流，
+           而 publish 按名字去拷贝时直接 ENOENT。2026-11-02 踩到（发布被卡住）。 */
+        e.id = e.id || ('e' + (++autoId) + '.' + e.kind);
         edges.push(e);
       });
     });
@@ -79705,12 +79708,13 @@ window.MG = window.MG || {};
       regions: ['functional-analysis'],
       tags: ['泛函分析', '紧性', '有限维'],
       statement: [
-        '赋范空间 $E$ 的闭单位球 $B_E = \\{x \\in E : \\|x\\| \\le 1\\}$ 紧 $\\iff \\dim E < \\infty$。'
+        '赋范空间 $E$ 的闭单位球 $B_E = \\{x \\in E : \\|x\\| \\le 1\\}$ 紧 $\\iff$ $\\dim E < \\infty$。'
       ].join('\n'),
       notes: [
-        '「$\\Longleftarrow$」：有限维时范数都等价，用 $\\|\\cdot\\|_\\infty$ 的坐标球（有界闭集）套 Heine–Borel。',
-        '「$\\Longrightarrow$」：若 $\\dim E = \\infty$，用几乎正交引理递归取 $e_1, e_2, \\ldots$，满足 $\\|e_n\\| = 1$ 且 $d(e_n, \\operatorname{span}\\{e_1,\\ldots,e_{n-1}\\}) \\ge 1/2$。于是 $\\|e_n - e_m\\| \\ge 1/2$（$n \\ne m$），这列没有收敛子列，与 $B_E$ 紧（列紧）矛盾。',
-        '⭐ 这是「有限维 / 无穷维」的分水岭：**闭有界集不再紧**。所以优化里的「闭有界 $implies$ 有极小元」在无穷维全废 —— 必须换全有界（相对紧）、或弱拓扑（Banach–Alaoglu）、或强制条件（coercivity）。'
+        '「$\\Longleftarrow$」：有限维时所有范数等价（`thm.norm-equiv-finite-dim`），于是可以用 $\\|\\cdot\\|_\\infty$ 的坐标球来判断紧性；而坐标球 $\\overline{B}^{\\infty}(0,1) = [-1,1]^{n}$ 是有界闭集，由 Heine–Borel（`thm.heine-borel`）紧。∎',
+        '「$\\implies$」：若 $\\dim E = \\infty$，用 Riesz 引理（`lem.almost-orthogonal`）递归造单位向量 $\\|e_n - e_m\\| \\ge 1/2$（$n \\ne m$），这样的序列没有收敛子列，于是闭单位球不列紧、因而不紧。',
+        '',
+        '⭐ 这一条是「有限维  当且仅当  局部紧」的一半：有限维赋范空间局部紧，无穷维的**从不**局部紧。它也是「有界闭集紧」只在有限维成立的精确版本 —— 无穷维里 Heine–Borel 失效。'
       ].join('\n\n'),
       refs: ['泛函分析讲义 2026-09-28', 'Riesz 1918']
     },
@@ -80032,7 +80036,15 @@ window.MG = window.MG || {};
         '$$\\|x + y\\|^2 + \\|x - y\\|^2 = 2\\|x\\|^2 + 2\\|y\\|^2 .$$'
       ].join('\n'),
       notes: [
-        '「$\\implies$」直接展开。「$\\Longleftarrow$」用极化恒等式**定义** $\\langle x,y\\rangle$，再逐条验公理：对实情形，写 $\\langle x, y+z\\rangle$ 并与 $\\langle x,y\\rangle + \\langle x,z\\rangle$ 相减，用平行四边形法则化简得 $0$；齐次性先对有理数成立，再用**连续性**放到实数上（范数连续）；复情形再多验一步 $\\langle x, iy\\rangle = i\\langle x,y\\rangle$。',
+        '「$\\Longleftarrow$」分三段（顺序不能换）：\n' +
+        '\n' +
+        '1. **用极化恒等式定义内积**。实情形取 $\\langle x,y\\rangle := \\frac14\\bigl(\\|x+y\\|^2 - \\|x-y\\|^2\\bigr)$；复情形取 $\\langle x,y\\rangle := \\frac14\\sum_{k=0}^{3} i^{k}\\|x + i^{k} y\\|^2$。这一段的要点是：平行四边形法则恰好保证「展开后的交叉项能两两抵消」，所以范数真的能反推出双线性型。\n' +
+        '\n' +
+        '2. **加法性**。把 $\\langle x, y+z\\rangle$ 与 $\\langle x,y\\rangle + \\langle x,z\\rangle$ 相减，展开成 8 个范数平方项；对 $(y, z)$ 与 $(x,\\, y+z)$ 各用一次平行四边形法则，所有项成对抵消，得 $0$。这一步**只用平行四边形法则**，不假设任何线性。\n' +
+        '\n' +
+        '3. **齐次性**。先对 $\\lambda \\in \\mathbb{Q}$：整数由加法性归纳，分母靠 $n\\langle x, y\\rangle = \\langle x, ny\\rangle$；再对 $\\lambda \\in \\mathbb{R}$ 取有理数列 $\\lambda_n \\to \\lambda$，用**范数连续**（$\\bigl|\\|u\\| - \\|v\\|\\bigr| \\le \\|u - v\\|$）取极限。复情形额外验一条 $\\langle x, iy\\rangle = i\\langle x,y\\rangle$，之后按 $\\mathbb{C}$-线性延拓，其余公理随实情形继承。\n' +
+        '\n' +
+        '✓ 至此三条公理齐备；正定性来自 $\\langle x,x\\rangle = \\|x\\|^2 \\ge 0$，且等号 $\\iff x = 0$。',
         '⭐ 经典反例：$\\ell^1$、$\\ell^\\infty$、$C[0,1]$ 都不满足（取不交支撑的 $x, y$ 一看）。所以它们的范数**不是**内积给的 —— 这是「Hilbert 空间为什么特殊」的定量答案。',
         '⚠️ 讲义里写的是「$\\|x+y\\|^2 + \\|x-y\\|^2 = 2\\|x\\|^2 + 2\\|y\\|^2$」加一句「平行四边行」——把几何里的「平行四边形两条对角线平方和 = 四边平方和」直接搬到了范数上。'
       ].join('\n\n'),
@@ -80350,7 +80362,19 @@ window.MG = window.MG || {};
         '2. 每个非空开集都是**第二纲**的。'
       ].join('\n'),
       notes: [
-        '证法（球套法）：设 $O_n$ 稠密开。任给 $x, \\varepsilon$，$B(x, \\varepsilon) \\cap O_1$ 是非空开，取 $x_1, \\varepsilon_1 < \\varepsilon$ 使 $\\overline{B(x_1, \\varepsilon_1)} \\subseteq B(x, \\varepsilon) \\cap O_1$；归纳取 $\\varepsilon_n < 1/n$ 且 $\\overline{B(x_{n+1}, \\varepsilon_{n+1})} \\subseteq B(x_n, \\varepsilon_n) \\cap O_{n+1}$。嵌套闭球半径 $\\to 0$ 且空间完备，故交非空；交中一点落在每个 $O_n$ 里，也落在 $B(x, \\varepsilon)$ 里。',
+        '证法（球套法）分四步：\n' +
+        '\n' +
+        '1. **起点**：记 $B_0 := B(x, \\varepsilon)$。$O_1$ 稠密开 $implies$ $B_0 \\cap O_1$ 是非空开，于是可取 $x_1$ 与 $\\varepsilon_1 < \\min(\\varepsilon/2,\\ 1)$ 使\n' +
+        '\n' +
+        '$$\\overline{B(x_1, \\varepsilon_1)} \\subseteq B(x, \\varepsilon) \\cap O_1 .$$\n' +
+        '\n' +
+        '2. **归纳**：已取 $x_n, \\varepsilon_n$（且 $\\varepsilon_n < 1/n$）。由 $O_{n+1}$ 稠密开，$B(x_n, \\varepsilon_n) \\cap O_{n+1}$ 仍是非空开，取\n' +
+        '\n' +
+        '$$\\overline{B(x_{n+1}, \\varepsilon_{n+1})} \\subseteq B(x_n, \\varepsilon_n) \\cap O_{n+1}, \\qquad \\varepsilon_{n+1} < \\frac{1}{n+1} .$$\n' +
+        '\n' +
+        '3. **嵌套闭球取点**：半径 $\\varepsilon_n \\to 0$，而 $X$ 完备，于是 $\\bigcap_n \\overline{B(x_n, \\varepsilon_n)} \\ne \\emptyset$，取其中一点 $y$。（这里「半径趋于 $0$」不能省：完备性只保证半径趋于 $0$ 的嵌套闭球有公共点。）\n' +
+        '\n' +
+        '4. **收尾**：对每个 $n$，$y \\in \\overline{B(x_n, \\varepsilon_n)} \\subseteq B_0 \\cap O_n$，所以 $y \\in B_0$ 且 $y \\in \\bigcap_n O_n$。$B_0$ 是任取的，于是 $\\bigcap_n O_n$ 与每个非空开集相交 ，故稠密。∎',
         '⭐ 三种等价写法都要会用，转换只需取补集。',
         '⚠️ 完备性不能去掉：$\\mathbb{Q}$ 上每个单点闭且无处稠密，$\\mathbb{Q}$ 可数，故 $\\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。'
       ].join('\n\n'),
@@ -80711,7 +80735,13 @@ window.MG = window.MG || {};
         '证明三步：',
         '① 取闭包：$\\overline A$ 仍含单位、分离点，并由「含单位的闭子代数是格」成为**格**。',
         '② **两点插值**：$x \\ne y$、目标值 $\\alpha, \\beta \\in \\mathbb{R}$。取 $g \\in A$ 使 $g(x) \\ne g(y)$，解二元一次方程组得 $f = a\\cdot 1 + b g \\in A$ 使 $f(x) = \\alpha$、$f(y) = \\beta$。',
-        '③ **上下夹**：固定 $f \\in C(K)$ 与 $\\varepsilon$。先逐点从上方压：每个 $x$ 有邻域与某个 $h \\in \\overline A$ 使 $h > f - \\varepsilon$；紧性取有限覆盖并用 $\\max$；再对有限多个 $x$ 用 $\\min$ 压到 $h < f + \\varepsilon$。得 $\\|f - h\\| < 2\\varepsilon$。',
+        '③ **上下夹**（两小步，全程都在 $\\overline{A}$ 里做 —— 它已经由①②验过是闭子代数）：\n' +
+        '\n' +
+        '- **逐点从下方压**：固定 $f \\in C(K)$ 与 $\\varepsilon > 0$。对每个 $x \\in K$，由①（单点上逼近）存在 $h_{x} \\in \\overline{A}$ 使 $h_{x}(x) > f(x) - \\varepsilon$；由 $h_x - f$ 连续，存在 $x$ 的开邻域 $U_{x}$，在其上 $h_{x} > f - \\varepsilon$。\n' +
+        '- **紧性取有限并**：$K$ 紧 ⇒ 有限个 $U_{x_{1}}, \\ldots, U_{x_{m}}$ 覆盖 $K$。由②（$\\overline{A}$ 对 $\\max$ 封闭）得 $h := \\max_{i} h_{x_{i}} \\in \\overline{A}$，且 $h > f - \\varepsilon$ 处处成立。\n' +
+        '\n' +
+        '- **对称地压上方**：对 $-f$ 重复上面两步（等价地直接用 $\\min$），得 $h\' \\in \\overline{A}$ 使 $h\' < f + \\varepsilon$。\n' +
+        '- **合起来**：$h\' \\le h$ 在 $\\overline{A}$ 里夹住 $f$，取 $h\'\' := \\max(h\', \\min(h, f))$ 或直接用 $\\|h - f\\| \\le \\varepsilon$，得 $\\|f - h\\| < 2\\varepsilon$。$\\varepsilon$ 任意 ⇒ $f \\in \\overline{A}$ ⇒ $\\overline{A} = C(K)$。∎',
         '⚠️ 三条假设缺一不可：$A = \\{f : f(0) = 0\\}$ 缺单位；$A = $ 常数函数缺分离点。',
         '⭐ 这是「用**代数**性质换**逼近**能力」的样板：不需要光滑、不需要可数、不需要任何具体核。经典 Weierstrass 定理（多项式逼近）就是 $K = [a,b]$、$A = $ 多项式的特例。'
       ].join('\n\n'),

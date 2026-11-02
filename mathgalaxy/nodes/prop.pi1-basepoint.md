@@ -8,7 +8,7 @@ layer 15 · 命题 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态：把「换基点」看成沿道路的共轭，再用函子性核对　[proofs/e56:implication.md](../proofs/e56:implication.md)
+- [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态：把「换基点」看成沿道路的共轭，再用函子性核对　[proofs/e56.implication.md](../proofs/e56.implication.md)
 
 refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（change of base point）；Hatcher, Algebraic Topology, Ch. 1 §1.1 · basepoint issues
 

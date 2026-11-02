@@ -8,7 +8,7 @@ layer 17 · 定义 · 同调群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形：用到了定义 标准单纯形　[proofs/e70:definition.md](../proofs/e70:definition.md)
+- [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形：用到了定义 标准单纯形　[proofs/e70.definition.md](../proofs/e70.definition.md)
 
 - …另有入边，续页见 [nodes/def.simplicial-boundary.3.md](./def.simplicial-boundary.3.md)
 

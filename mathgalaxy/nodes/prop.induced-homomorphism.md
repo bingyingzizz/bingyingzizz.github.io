@@ -8,7 +8,7 @@ layer 14 · 命题 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`lem.path-product`](../nodes/lem.path-product.md) 道路拼接：复合保持拼接，于是 $f_{*}$ 是同态　[proofs/e55:implication.md](../proofs/e55:implication.md)
+- [`lem.path-product`](../nodes/lem.path-product.md) 道路拼接：复合保持拼接，于是 $f_{*}$ 是同态　[proofs/e55.implication.md](../proofs/e55.implication.md)
 
 - …另有入边，续页见 [nodes/prop.induced-homomorphism.3.md](./prop.induced-homomorphism.3.md)
 

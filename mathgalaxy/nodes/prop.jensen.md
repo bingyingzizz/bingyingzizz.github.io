@@ -8,7 +8,7 @@ layer 23 · 命题 · 解析延拓与整函数 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`prop.zero-isolated`](../nodes/prop.zero-isolated.md) 零点的孤立性与阶 + [`thm.harmonic-mean-value`](../nodes/thm.harmonic-mean-value.md) 调和函数的均值性质：Blaschke 因子除掉零点，再用调和函数的均值性质　[proofs/e25:implication.md](../proofs/e25:implication.md)
+- [`prop.zero-isolated`](../nodes/prop.zero-isolated.md) 零点的孤立性与阶 + [`thm.harmonic-mean-value`](../nodes/thm.harmonic-mean-value.md) 调和函数的均值性质：Blaschke 因子除掉零点，再用调和函数的均值性质　[proofs/e25.implication.md](../proofs/e25.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/prop.jensen.3.md](./prop.jensen.3.md)

@@ -8,7 +8,7 @@ layer 8 · 命题 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.lifting`](../nodes/thm.lifting.md) 提升定理：提升给出单射 $\pi_{1}(E) \hookrightarrow \pi_{1}(B)$，纤维就是陪集　[proofs/e60:implication.md](../proofs/e60:implication.md)
+- [`thm.lifting`](../nodes/thm.lifting.md) 提升定理：提升给出单射 $\pi_{1}(E) \hookrightarrow \pi_{1}(B)$，纤维就是陪集　[proofs/e60.implication.md](../proofs/e60.implication.md)
 
 - …另有入边，续页见 [nodes/prop.covering-index.3.md](./prop.covering-index.3.md)
 

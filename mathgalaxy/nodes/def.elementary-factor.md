@@ -8,7 +8,7 @@ layer 18 · 定义 · 解析延拓与整函数 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.complex-elementary`](../nodes/def.complex-elementary.md) 复数初等函数：用 $e^{z}$ 的截断指数造出「近似 1 但带一个零点」的因子　[proofs/e26:implication.md](../proofs/e26:implication.md)
+- [`def.complex-elementary`](../nodes/def.complex-elementary.md) 复数初等函数：用 $e^{z}$ 的截断指数造出「近似 1 但带一个零点」的因子　[proofs/e26.implication.md](../proofs/e26.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.elementary-factor.3.md](./def.elementary-factor.3.md)
