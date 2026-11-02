@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T01:51:01.344Z
-> 14 星系 / 93 星团 / 1372 节点 / 2551 连线（强边 2534，弱边 17；其中**不分层**的「推论」21 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T02:32:46.157Z
+> 14 星系 / 94 星团 / 1384 节点 / 2585 连线（强边 2568，弱边 17；其中**不分层**的「推论」21 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -5735,6 +5735,157 @@ $$U \perp W \ \cong\ U' \perp W ,$$
 ⚠️ 更强的版本叫 **Witt 延拓定理**：非退化子空间之间的等距总能延拓成整个空间的等距。它与消去定理等价，但表述不同 —— 读文献时看到哪个都算。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors（⚠️ 章名未核实，只记书名）
+
+#### 辛形式　`def.symplectic-form`
+*定义*　辛形式：非退化交错双线性型
+
+**在做什么**：把「面积」抽象成代数。交错型配上非退化条件，就是辛形式 —— 它换掉了内积（对称型）的位置，撑起另一门几何。
+
+设 $V$ 是域 $K$ 上的有限维向量空间。双线性型 $\omega : V \times V \to K$ 叫**辛形式**（symplectic form），若
+
+1. **交错**：$\omega(v, v) = 0$ 对一切 $v \in V$（等价于反对称，当 $\operatorname{char} K \ne 2$）；
+2. **非退化**：$\omega(v, w) = 0$ 对一切 $w$ $\implies$ $v = 0$。
+
+带辛形式的空间 $(V, \omega)$ 叫**辛向量空间**。
+
+**与内积的对照**：内积是对称的、正定的；辛形式是交错的（所以每个向量都迷向）、非退化的。一个是「量长度」，一个是「量面积」。
+
+⚠️ **交错 $\implies$ 每个向量都迷向**：$\omega(v,v) = 0$ 恒成立，所以辛空间里没有「长度」可言，只有「配对」。这正是它与内积的根本分歧 —— 内积空间里 $\langle v,v\rangle > 0$，辛空间里永远是 $0$。
+
+**为什么交错 = 反对称**：展开 $\omega(v+w, v+w) = 0$ 得 $\omega(v,w) + \omega(w,v) = 0$。$\operatorname{char} K \ne 2$ 时两者等价；特征 $2$ 时交错更强（反对称还允许 $\omega(v,v) \ne 0$），本图按 $\operatorname{char} K \ne 2$ 口径写（与 `thm.witt-cancellation` 一致）。
+
+⭐ **它是「有向面积」的代数化**：在 $\mathbb{R}^{2}$ 上 $\omega(u, w) = u_{1}w_{2} - u_{2}w_{1}$ 就是平行四边形面积（带符号）。推广到 $2n$ 维就是各坐标平面上的面积之和。所以辛形式的唯一作用就是**测量二维投影的面积**。
+
+⚠️ 辛形式**一定存在**于偶数维空间（`thm.symplectic-normal-form`），奇数维上只有退化的交错型 —— 这与内积（任意维都有）又一次分道扬镳。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛结构；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### 辛基　`def.symplectic-basis`
+*定义*　辛基：让辛形式变成标准形的那组基
+
+**在做什么**：辛空间里的「标准正交基」。这组基下辛形式的矩阵是固定的分块矩阵 —— 全部辛空间在这一点上长得一模一样。
+
+设 $(V, \omega)$ 是 $2n$ 维辛空间。基 $e_{1}, \ldots, e_{n}, f_{1}, \ldots, f_{n}$ 叫**辛基**，若
+
+$$\omega(e_{i}, e_{j}) = 0, \qquad \omega(f_{i}, f_{j}) = 0, \qquad \omega(e_{i}, f_{j}) = \delta_{ij} .$$
+
+在这组基下 $\omega$ 的矩阵是
+
+$$J_{0} = \begin{pmatrix} 0 & I_{n} \\ -I_{n} & 0\end{pmatrix} ,$$
+
+它满足 $J_{0}^{2} = -I_{2n}$（所以 $J_{0}$ 在 $\mathbb{R}^{2n}$ 上扮演「乘以 $i$」的角色）。
+
+**含义**：每个 $e_{i}$ 与 $f_{i}$ 配对成一块辛平面（`def.hyperbolic-plane` 的交错版），整块空间就是 $n$ 个辛平面的直和。
+
+**为什么叫「基」而不是「标准形」**：这两个说法是一回事 —— 找到辛基 $\iff$ 把 $\omega$ 化成 $J_{0}$。与「正交基把内积化成 $I$」完全平行（对照 `thm.sylvester-law-inertia`：对称型只能化成对角形，交错型却**总能**化成 $J_{0}$，因为不需要开平方）。
+
+⭐ **$J_{0}^{2} = -I$ 是复结构的来源**：$J_{0}$ 是 $\mathbb{R}^{2n}$ 上的复结构（$J^{2} = -I$），所以辛空间天然带一个「乘以 $i$」。这条把辛几何与复几何焊在一起（Kähler 流形就是这么来的：辛 + 复 + 相容度量）。
+
+⚠️ 辛基**不是唯一**的（可以连续变动），但 $\omega$ 的矩阵**总是** $J_{0}$ —— 说得准确些：任意两组辛基之间的过渡矩阵是辛矩阵（`def.symplectic-matrix`）。这一点与「内积的正交基」完全平行。
+
+⚠️ 别把 $J_{0}$ 与「Jordan 块」搞混：这里的 $J$ 是标准辛矩阵（也叫 Hamilton 矩阵），与 Jordan 形无关，记号撞车纯属历史。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛基；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### 辛标准形定理　`thm.symplectic-normal-form`
+*定理*　辛标准形定理：维数必偶，且总有辛基
+
+**在做什么**：辛空间的「分类定理」—— 比对称型的情形简单得多：**所有** $2n$ 维辛空间都同构，没有不变量可谈。
+
+设 $(V, \omega)$ 是有限维辛空间。则
+
+1. $\dim V$ 必为**偶数**，记 $\dim V = 2n$；
+2. $V$ 存在**辛基**，即存在基使 $\omega$ 的矩阵为 $J_{0}$；
+3. 因此任意两个同维数的辛空间都**等距同构**（保持 $\omega$ 的线性同构）。
+
+**与对称型的对照**：实对称型由惯性指数 $(p, q)$ 分类（`thm.sylvester-law-inertia`），有 $\frac{n(n+1)}{2}$ 种；辛形式只有**一个**不变量 —— 维数。
+
+**证明骨架**：取 $e_{1} \ne 0$，由非退化性存在 $f_{1}$ 使 $\omega(e_{1}, f_{1}) = 1$；则 $\operatorname{span}(e_{1}, f_{1})$ 是一块非退化辛平面，且 $V = \operatorname{span}(e_{1},f_{1}) \oplus \operatorname{span}(e_{1},f_{1})^{\perp}$（正交补仍是辛空间）。对维数归纳即可。**维数必偶**是这条归纳的副产物。
+
+⭐ **为什么比对称型简单**：对称型要化成对角形，得处理「同一个数能不能开平方」的问题（所以 $\mathbb{R}$ 上分正负、$\mathbb{C}$ 上只剩秩）；交错型的标准形 $J_{0}$ 里只有 $0$ 和 $\pm 1$，**没有待开方的系数**。这就是「辛几何在任意域（char$\ne$2）上都长一样」的原因。
+
+⚠️ **奇数维时只有退化交错型**：比如 $\mathbb{R}^{3}$ 上取 $\omega$ 的秩必为偶数，所以要么退化、要么为零。这与「$\mathbb{R}^{3}$ 上内积很多」形成鲜明对照。
+
+⚠️ 这条定理是**辛流形上 Darboux 定理的线性影子**：局部看每一点切空间都是标准辛空间，拼起来就是「局部没有不变量」。辛几何之所以「硬」（刚性），正是因为局部平凡、所有信息都在整体。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛空间；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Lagrange 子空间　`def.lagrangian-subspace`
+*定义*　Lagrange 子空间：维数刚好一半的极大迷向子空间
+
+**在做什么**：辛空间里「最大的一块什么都不测」的子空间。它是辛几何最重要的对象 —— 因为它恰好处在「迷向」与「非退化」的临界点。
+
+设 $(V, \omega)$ 是 $2n$ 维辛空间，$W \subseteq V$ 是子空间。称 $W$ **Lagrange 子空间**（Lagrangian subspace），若
+
+$$W = W^{\perp} , \qquad W^{\perp} := \{\, v : \omega(v, w) = 0\ \ \forall w \in W \,\} .$$
+
+**等价条件**（三条等价，任取其一）：
+
+1. $W = W^{\perp}$；
+2. $\dim W = n$ 且 $\omega|_{W} \equiv 0$（极大全迷向）；
+3. $W$ 是迷向的（`def.isotropic-subspace`）且 $\dim W = \frac{1}{2}\dim V$。
+
+**例子**：辛基里 $\operatorname{span}(e_{1}, \ldots, e_{n})$ 与 $\operatorname{span}(f_{1}, \ldots, f_{n})$ 都是 Lagrange 子空间；$\mathbb{R}^{2}$ 里每条过原点的直线都是。
+
+**为什么这个维数特殊**：非退化型下 $\dim W + \dim W^{\perp} = \dim V$（与内积空间同一个公式）。若 $W = W^{\perp}$，则 $2\dim W = \dim V$ —— Lagrange 子空间的维数**被逼成一半**，不是选出来的。
+
+⭐ **它是「迷向」与「极大」的交点**：比它小的迷向子空间有大把（任意一条辛直线就迷向），但再大一点就**不可能**仍然全迷向。所以 Lagrange 子空间就是迷向子空间里的**极大元**，这也是「极大全迷向子空间」这个别名。
+
+⚠️ **与内积空间对照**：内积空间里 $W \cap W^{\perp} = 0$ 永远成立，所以 $W = W^{\perp}$ 只能 $W = 0$。Lagrange 子空间是辛几何独有的现象。
+
+⚠️ 术语：「Lagrange 子空间」（线性）与「Lagrange 子流形」（`def.lagrangian-submanifold`，流形）是同一件事的两个尺度。中文也写「拉格朗日子空间 / 拉格朗日子流形」。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Lagrange 子空间；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### 辛矩阵与辛群　`def.symplectic-matrix`
+*定义*　辛矩阵与辛群 $\mathrm{Sp}(2n)$
+
+**在做什么**：辛空间的「对称群」—— 保持辛形式不变的线性变换。它是与正交群 $O(n)$、酉群 $U(n)$ 并列的第三类经典群。
+
+设 $A \in M_{2n}(K)$。称 $A$ **辛矩阵**，若
+
+$$A^{T} J_{0}\, A = J_{0} ,$$
+
+其中 $J_{0} = \begin{pmatrix} 0 & I_{n} \\ -I_{n} & 0\end{pmatrix}$（`def.symplectic-basis`）。等价说法：$A$ 保持 $\omega$ 不变，即 $\omega(Ax, Ay) = \omega(x, y)$。
+
+全体辛矩阵构成群，叫**辛群** $\mathrm{Sp}(2n, K)$（$K = \mathbb{R}$ 时记 $\mathrm{Sp}(2n, \mathbb{R})$）。
+
+**由上一条立刻得到**：$A^{T}J_{0}A = J_{0}$ $\implies$ $\det A = \pm 1$；事实上 $\det A = 1$ 恒成立（$\mathrm{Sp}$ 是 $\mathrm{SL}$ 的子群）。
+
+**为什么行列式必为 $1$**：取行列式得 $(\det A)^{2}\det J_{0} = \det J_{0}$，所以 $\det A = \pm 1$。要排除 $-1$：用 Pfaffian（$\operatorname{Pf}$）或「$\mathrm{Sp}(2n)$ 连通」—— 本图只记结论，证明属 Lie 群论。
+
+⭐ **三类经典群的分工**：$O(n)$ 保持对称正定型（内积）、$U(n)$ 保持 Hermite 型、$\mathrm{Sp}(2n)$ 保持非退化交错型（辛形式）。它们是**同一个判据**（保持某个型不变）在三个不同型上的结果 —— 这条对照本身就是 `def.orthogonally-similar` 那个「填上那一格」的辛版本。
+
+⚠️ **$\mathrm{Sp}(2n)$ 与紧群不同**：$O(n)$、$U(n)$ 都是紧群，而 $\mathrm{Sp}(2n,\mathbb{R})$ 非紧（它含有 $\begin{pmatrix} P & 0 \\ 0 & (P^{T})^{-1}\end{pmatrix}$ 这样任意拉伸的元）—— 这与「辛几何没有局部不变量（`thm.symplectic-normal-form`）」是同一件事的两面。
+
+⚠️ 命名撞车：物理文献里「辛矩阵」有时指 $\mathrm{Sp}(2)$（单模矩阵），那是**模形式**的对象，不是这里的 $2n$ 维辛群。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛群；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Lagrange 恒等式　`thm.lagrange-identity`
+*定理*　Lagrange 恒等式：内积与面积的关系
+
+**在做什么**：把 $\lVert u\rVert^{2}\lVert w\rVert^{2} - \langle u,w\rangle^{2}$ 写成「面积的平方」—— 它既是 Cauchy–Schwarz 不等式的等式来源，也是 Gram 行列式的二维情形。
+
+对 $u, w \in \mathbb{R}^{n}$（或任何实内积空间中的两个向量）有**Lagrange 恒等式**
+
+$$\lVert u\rVert^{2}\lVert w\rVert^{2} - \langle u, w\rangle^{2} = \sum_{1 \le i < j \le n}\bigl(u_{i}w_{j} - u_{j}w_{i}\bigr)^{2} .$$
+
+左边正是两者 Gram 矩阵的行列式
+
+$$\det\begin{pmatrix} \langle u,u\rangle & \langle u,w\rangle \\ \langle w,u\rangle & \langle w,w\rangle\end{pmatrix} ,$$
+
+所以几何上它说的是：**Gram 行列式 = 平行四边形的面积的平方**（`def.gram-matrix`）。
+
+**Cauchy–Schwarz 是它的推论**：右边是平方和，非负 $\implies$ 左边 $\ge 0$ $\implies$ $\lvert\langle u,w\rangle\rvert \le \lVert u\rVert\lVert w\rVert$。而且等号成立 $\iff$ 右边每项为零 $\iff$ $u, w$ 成比例。所以这条恒等式比 Cauchy–Schwarz **强**：它给出了差多少。
+
+⭐ **一般 $k$ 个向量**：Gram 行列式 $\det G$ 等于这 $k$ 个向量张成的平行体体积的平方（`def.gram-matrix` 的注）。$k=2$ 就是本条；$\det G \ge 0$ 就是「体积是实数」。
+
+⚠️ 它不是辛的：这里的 $\langle\cdot,\cdot\rangle$ 是**内积**（对称正定），不是辛形式。名字里的「Lagrange」与 `def.lagrangian-subspace` 是同一个人的不同贡献 —— 前者是内积几何，后者是辛几何，**别把两条接成因果关系**。
+
+⚠️ 复情形要小心：用 Hermite 内积时右边要改成模方 $\lvert u_{i}\bar{w}_{j} - u_{j}\bar{w}_{i}\rvert^{2}$，左边仍非负，结论不变。
+
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram 行列式；北大《高等代数》· Lagrange 恒等式
 
 ### 星团：群作用与置换
 > 造出「让群去搬东西」这套机器：群作用（轨道 / 稳定子）→ **轨道–稳定子定理** → 类方程 → Lagrange 定理 → 置换群 $S_n$ 与循环分解 → 符号与交错群 $A_n$ → Cayley 定理 → 循环群 → Sylow 定理。核心一句话：**数轨道的大小 = 算稳定子的指数**。
@@ -27996,6 +28147,164 @@ $$(F^{\ast}\omega)_{p}(v_{1},\ldots,v_{k}) := \omega_{F(p)}\bigl(\mathrm{d}F_{p}
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 拉回 F* 与它保持的运算
 
+### 星团：辛流形与 Hamilton 力学
+> 造出「经典力学的相空间」：辛流形（闭的非退化 2-形式）→ **Darboux 定理**（局部全一样，所以没有局部不变量）→ Hamilton 向量场（函数 ⟹ 流）→ Poisson 括号（函数代数的 Lie 结构）→ Lagrange 子流形（局部是函数的图像）→ Lagrange 括号（与 Poisson 互为逆矩阵，正则变换的旧写法）。线性那半在代数星系的「多重线性与张量」。
+
+#### 辛流形　`def.symplectic-manifold`
+*定义*　辛流形：闭的非退化 2-形式
+
+**在做什么**：把辛向量空间「铺到流形上」。每一处切空间都带一个辛形式，而且要求这些形式**整体闭**（$d\omega = 0$）—— 那一条微分条件就是整个辛几何的刚性来源。
+
+设 $M$ 是偶数维光滑流形。$M$ 上的**辛形式**是一个 2-形式 $\omega \in \Omega^{2}(M)$，满足
+
+1. **闭**：$d\omega = 0$；
+2. **非退化**：对每点 $p$，$\omega_{p} : T_{p}M \times T_{p}M \to \mathbb{R}$ 非退化（`def.symplectic-form` 的流形版）。
+
+称 $(M, \omega)$ 为**辛流形**。由非退化性知 $\dim M = 2n$（`thm.symplectic-normal-form` 逐点成立）。
+
+**标准例子**：$\mathbb{R}^{2n} = T^{*}\mathbb{R}^{n}$（余切丛）上取
+
+$$\omega_{0} = \sum_{i=1}^{n} dq_{i} \wedge dp_{i} ,$$
+
+这就是经典力学的相空间。
+
+⚠️ **「闭」这条不能去**：非退化 2-形式总是逐点存在（余切丛上就有），但「闭」是**整体**条件。去掉它得到的是「近辛流形」（almost symplectic），那门理论完全不同 —— 你甚至可以只要求「有非退化 2-形式」而不要求可积性。
+
+⭐ **为什么物理学需要它**：$\omega$ 给出「Hamilton 流」（`def.hamiltonian-vector-field`），而 $d\omega = 0$ 保证这些流**保持 $\omega$**（Lie 导数 $\mathcal{L}_{X_{H}}\omega = 0$）—— 这就是 Liouville 定理（相体积守恒）的根子。
+
+⚠️ 辛流形**必可定向**（$\omega^{n}$ 是无处为零的体积形式），但**不必**是 Kähler：Kähler 还要额外的复结构与相容度量。辛几何是比 Kähler 更宽的一层。
+
+⚠️ 紧辛流形有强限制：$[\omega] \in H^{2}(M)$ 非零（否则 $\omega$ 是恰当的、与最大非退化性矛盾 —— 这是「辛流形不能是 $S^{2n}$，$n \ge 2$」的原因）。本图不展开上同调论证。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛流形；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Darboux 定理　`thm.darboux`
+*定理*　Darboux 定理：辛流形局部都长一样
+
+**在做什么**：辛几何的「没有局部不变量」定理。每一点附近都能找到坐标使 $\omega$ 变成 $\omega_{0}$ —— 所以辛流形的全部信息都在**整体**。
+
+设 $(M^{2n}, \omega)$ 是辛流形，$p \in M$。则存在 $p$ 的坐标邻域与坐标 $(q_{1}, \ldots, q_{n}, p_{1}, \ldots, p_{n})$ 使
+
+$$\omega = \sum_{i=1}^{n} dq_{i} \wedge dp_{i}$$
+
+在该邻域上成立。这组坐标叫 **Darboux 坐标**（正则坐标）。
+
+**与 Riemann 几何的尖锐对照**：Riemann 度量**做不到**这一点 —— 曲率是局部不变量，$n \ge 2$ 时任何度量都不能局部化成 $\delta_{ij}$。而辛形式**永远**能。
+
+**证明骨架**（Moser 技巧）：先由线性代数（`thm.symplectic-normal-form`）在 $p$ 点找辛基，沿径向把 $\omega$ 拉成 $\omega_{0}$；再用 Moser 同伦 $\omega_{t} = (1-t)\omega_{0} + t\omega$ 构造一个流，其生成向量场 $X_{t}$ 由 $\iota_{X_{t}}\omega_{t} = -\theta$ 解出（$\theta$ 是 $\omega - \omega_{0}$ 的原函数，闭性在这里用上）。积分这个流就得到所需的微分同胚。**关键是 $\omega_{t}$ 始终非退化** —— 这靠「$\omega_{0}$ 与 $\omega$ 在 $p$ 点一致 + 邻域足够小」。
+
+⭐ **这条定理是辛几何的「分水岭」**：它意味着不能用局部坐标区分辛流形，所以所有辛不变量（Gromov–Witten 不变量、Floer 同调、容量）都是**整体**的。Riemann 几何靠局部（曲率）起家，辛几何只能靠整体。
+
+⚠️ 定理**不**说「辛流形都微分同胚于 $\mathbb{R}^{2n}$」：只给局部坐标，整体拓扑（如 $T^{2}$ 上的面积形式）不受约束。这是最常见的误读。
+
+⚠️ Darboux 这个名字在数学里有三处：本定理（辛几何）、Darboux 判据/上和下和（`thm.darboux-criterion`，Riemann 积分）、Darboux 定理（实分析：导函数有介值性）。三者无关。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Darboux 定理；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Hamilton 向量场　`def.hamiltonian-vector-field`
+*定义*　Hamilton 向量场：由函数生出流
+
+**在做什么**：辛流形上「函数 $\implies$ 向量场」的那台转换机。它把能量函数（Hamiltonian）变成运动方程 —— 这是整个分析力学的形式化核心。
+
+设 $(M, \omega)$ 是辛流形，$H \in C^{\infty}(M)$。由 $\omega$ 非退化，存在唯一的向量场 $X_{H}$ 使
+
+$$\iota_{X_{H}}\omega = -dH ,$$
+
+称 $X_{H}$ 为 $H$ 的 **Hamilton 向量场**（$\iota$ 是内乘，见 `def.interior-product`）。它的积分曲线满足**Hamilton 方程**：在 Darboux 坐标下
+
+$$\dot{q}_{i} = \frac{\partial H}{\partial p_{i}}, \qquad \dot{p}_{i} = -\frac{\partial H}{\partial q_{i}} .$$
+
+**关键性质**：$\mathcal{L}_{X_{H}}\omega = 0$（$H$ 的流保持 $\omega$），所以也保持体积形式 $\omega^{n}/n!$ —— 这就是 **Liouville 定理**。
+
+⚠️ **符号约定五花八门**：$\iota_{X_{H}}\omega = dH$、$= -dH$、$\omega(X_{H}, \cdot) = dH$ 三种都在用，差一个整体符号（等价于 $H \mapsto -H$）。本图取 $\iota_{X_{H}}\omega = -dH$，与 Arnold 一致；换书时**必须重新核对 Hamilton 方程的符号**。
+
+⭐ **「函数 $\implies$ 向量场」是辛几何独有的**：一般流形上函数只能求微分（$dH$，一个 1-形式），要有向量场就需要一个「把 1-形式变成向量场」的同构 —— 那正是 $\omega$ 干的事（$\flat : TM \to T^{*}M$，$v \mapsto \iota_{v}\omega$）。Riemann 度量也能这么干（音乐同构），但得到的流不保持度量。
+
+⚠️ **Hamilton 向量场 $\ne$ 任意向量场**：它是 $H$ 的「梯度旋转 90°」。判据：$\iota_{X}\omega$ 是**闭**的（即 $d(\iota_X\omega)=0$）。不闭的叫「局部 Hamilton 向量场」，闭的叫「辛向量场」—— 多数书不区分（因为 $H^{1}(M) = 0$ 时两者一致）。
+
+⚠️ 不是所有辛流形上的向量场都来自某个 $H$（需要 $\iota_{X}\omega$ 恰当）。所以「辛向量场」比「Hamilton 向量场」宽一层。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Hamilton 方程；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Poisson 括号　`def.poisson-bracket`
+*定义*　Poisson 括号：函数之间的辛配对
+
+**在做什么**：把「向量场」这一层再翻译回「函数」—— 两个函数配出一个函数。它让 $C^{\infty}(M)$ 变成一个 Lie 代数，也是量子化时 $\{,\}$ 变 $\frac{1}{i\hbar}[,]$ 的那个东西。
+
+设 $(M, \omega)$ 是辛流形，$f, g \in C^{\infty}(M)$。**Poisson 括号**定义为
+
+$$\{f, g\} := \omega(X_{f}, X_{g}) = -\iota_{X_{f}}\iota_{X_{g}}\omega = X_{g}(f) ,$$
+
+其中 $X_{f}, X_{g}$ 是 $f$ 与 $g$ 的 Hamilton 向量场。在 Darboux 坐标下
+
+$$\{f, g\} = \sum_{i=1}^{n}\Bigl(\frac{\partial f}{\partial q_{i}}\frac{\partial g}{\partial p_{i}} - \frac{\partial f}{\partial p_{i}}\frac{\partial g}{\partial q_{i}}\Bigr) .$$
+
+**性质**：双线性、反对称、满足 **Jacobi 恒等式**，且是**导子**（Leibniz 律）。
+
+**它是「$H$ 能否守恒」的判据**：$\frac{d}{dt}f = \{f, H\}$。所以 $f$ 是运动常数 $\iff$ $\{f, H\} = 0$。力学里的「守恒量」全部由这条代数条件刻画 —— 这也是 Noether 定理的辛版本（对称性 $\implies$ 守恒量）。
+
+⭐ **$C^{\infty}(M)$ 因此是 Lie 代数**：括号给出 Lie 括号，而 Hamilton 映射 $H \mapsto X_{H}$ 是 Lie 代数同态（差一个符号），即 $[X_{f}, X_{g}] = X_{\{f,g\}}$（注意 $\{f,g\}$ 与 $-[f,g]$ 的符号约定）。这条把「函数代数」与「向量场代数」焊在一起。
+
+⚠️ **Poisson 括号比辛结构更宽**：非退化性不是必需的 —— 允许退化的 Poisson 括号给的是 **Poisson 流形**（例如 Lie 代数对偶 $\mathfrak{g}^{*}$ 上的 Lie–Poisson 括号）。辛流形是 Poisson 流形的特例（非退化的那个）。本图只收辛的那一支。
+
+⚠️ **与量子力学的关系**：Dirac 的对应规则是 $\{f,g\} \mapsto \frac{1}{i\hbar}[\hat{f}, \hat{g}]$。这不是定理（没有唯一量子化），但它解释了为什么 Jacobi 恒等式必须成立 —— 它对应交换子的 Jacobi 恒等式。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Poisson 括号；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Lagrange 子流形　`def.lagrangian-submanifold`
+*定义*　Lagrange 子流形：维数刚好一半的辛子流形
+
+**在做什么**：把 `def.lagrangian-subspace` 逐点铺到流形上。它是辛几何里「最大的一块什么都不测」的子流形，也是物理里「构型空间」的数学身份。
+
+设 $(M^{2n}, \omega)$ 是辛流形。浸入子流形 $L \subseteq M$ 叫 **Lagrange 子流形**（Lagrangian submanifold），若
+
+1. $\dim L = n$（即 $\dim M$ 的一半）；
+2. $\omega|_{L} = 0$（$L$ 上 $\omega$ 恒为零，即 $L$ 迷向）。
+
+等价说法：对每个 $p \in L$，$T_{p}L$ 是 $T_{p}M$ 的 Lagrange 子空间。
+
+**标准例子**：
+
+- $\mathbb{R}^{2n}$ 的零截面 $\{p = 0\}$（这里是「位置空间」，动量全零）；
+- 更一般地，**任意函数的图像** $\{(q, p) : p = dF(q)\}$ 是 Lagrange 子流形 —— 因为 $\omega|_{L} = dq \wedge d(dF) = 0$。
+
+⭐ **「$\omega|_L = 0$」等价于「$p\,dq$ 在 $L$ 上闭」**：把 $\omega = d(p\,dq)$ 拿来，$L$ 上 $p\,dq$ 闭 $\iff$ 局部是 $dF$ $\iff$ $L$ 局部是函数的图像。所以 Lagrange 子流形 = 「局部的图像」，而 $F$ 叫**生成函数**。这条把几何与分析焊在一起（Hamilton–Jacobi 理论就建立在它上面）。
+
+⚠️ **$\dim L = n$ 不能由「迷向」推出来**：迷向子流形可以维数远小于 $n$（一条辛直线就迷向）。必须**额外**要求维数一半，或等价地要求「极大」（$T_pL = (T_pL)^{\perp}$）。这一点与线性情形（`def.lagrangian-subspace` 的注）完全一致。
+
+⚠️ **Lagrange 子流形不必闭、不必嵌入**：物理里常用的是「浸入」甚至「多重覆叠」（如 Bohr–Sommerfeld 量子化条件里的周期轨道）。本图按「浸入」口径写。
+
+⚠️ 命名：与「Lagrange 子空间」是同一个人、同一个概念的两个尺度；与 `thm.lagrange-identity`（内积几何）**无关**，别接成因果。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Lagrange 子流形；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+
+#### Lagrange 括号　`def.lagrange-bracket`
+*定义*　Lagrange 括号：Poisson 括号的逆矩阵
+
+**在做什么**：比 Poisson 括号更早（Lagrange 1808，Poisson 1809）的版本，本质是「Poisson 括号矩阵的逆」。它衡量的是「两族曲线之间的面积」，所以在正则变换理论里更自然。
+
+设 $(q, p)$ 是 Darboux 坐标，$u = (u_{1}, \ldots, u_{2n})$、$v = (v_{1}, \ldots, v_{2n})$ 是两组坐标函数。**Lagrange 括号**定义为
+
+$$[u, v]_{q,p} := \sum_{i=1}^{n}\Bigl(\frac{\partial q_{i}}{\partial u}\frac{\partial p_{i}}{\partial v} - \frac{\partial p_{i}}{\partial u}\frac{\partial q_{i}}{\partial v}\Bigr) .$$
+
+**与 Poisson 括号的关系**：把 Poisson 括号矩阵 $\bigl(\{u_{i}, u_{j}\}\bigr)$ 记为 $P$，Lagrange 括号矩阵记为 $L$，则
+
+$$L \cdot P = I ,$$
+
+即 $L = P^{-1}$ —— 两者互为逆矩阵。
+
+**正则性的判据**：变换 $(q, p) \mapsto (Q, P)$ 是**正则变换**（辛同胚）$\iff$ 对每个 $i, j$ 有 $[Q_{i}, Q_{j}] = [P_{i}, P_{j}] = 0$ 且 $[Q_{i}, P_{j}] = \delta_{ij}$。
+
+**为什么历史上先有 Lagrange 括号**：变分法与正则变换的研究（Lagrange 的《分析力学》）先出现，那时还没有「辛流形」这个概念。Poisson 后来才发现「对偶的那个括号」满足优美的 Jacobi 恒等式，于是成了现代形式化的主角。**两个括号记的是同一份信息**（互为逆），只是 Lagrange 的那个不满足 Jacobi，所以现在只当工具用。
+
+⭐ **几何意义**：Lagrange 括号量的是「$u$、$v$ 的等值曲线族在相空间里围出的面积」。所以它天然是「面积」的语言，而 Poisson 括号是「流」的语言 —— 这就是为什么正则变换的条件用 Lagrange 括号写更直观（它直接说「面积不变」）。
+
+⚠️ **$L = P^{-1}$ 只在同一个坐标系下比较时成立**：写这两个矩阵必须用**同一组** $(u, v)$ 作基，否则无可比性。这条是最容易记错的地方。
+
+⚠️ 符号：有书把 Lagrange 括号写成 $\{u,v\}$（与 Poisson 撞），也有写 $[u,v]_{q,p}$ 的。本图用后者，下标标明参照坐标。
+
+参考：Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Lagrange 括号；Landau–Lifshitz, Mechanics（⚠️ 章名未核实，只记书名）
+
 ### 星团：Lie 群
 > 把群结构与流形结构绑在一起：Lie 群 → 左不变向量场与左不变形式 → Maurer–Cartan 方程 → Lie 第三定理（每个有限维 Lie 代数都来自一个 Lie 群）。
 
@@ -39760,6 +40069,142 @@ $AA^{+}$ 与 $A^{+}A$ 都是（正交）幂等算子，这是四条 Penrose 条�
 
 可逆时伪逆就是逆 —— 它是「逆」的推广，不是另一样东西。
 
+#### 定义引用：「交错型」→ 辛形式　`dep.sympl-alt`
+
+辛形式 = 交错型 + 非退化。交错那一半直接用这个词。
+
+#### 定义引用：「双线性型」→ 辛形式　`dep.sympl-bf`
+
+辛形式本身是双线性型，只是加了两个条件。
+
+#### 定义引用：「辛形式」→ 辛基　`dep.sb-sympl`
+
+辛基是「把辛形式化成标准形」的那组基。
+
+#### 定义引用：「向量空间的基」→ 辛基　`dep.sb-vs`
+
+要谈基，先有向量空间。
+
+#### 定义引用：「双曲平面」→ 辛基　`dep.sb-hyper`
+
+每一对 $e_i, f_i$ 就是一块辛平面（交错型的双曲平面）。
+
+#### 定义引用：「辛基」→ 辛标准形定理　`dep.snf-sb`
+
+定理断言：非退化交错型总有辛基，于是维数必偶。
+
+#### 定义引用：「迷向子空间」→ 辛标准形定理　`dep.snf-isosub`
+
+归纳里的正交补仍是非退化辛空间 —— 用的是正交补与迷向的语言。
+
+#### 定义引用：「迷向子空间」→ Lagrange 子空间　`dep.lag-isosub`
+
+Lagrange 子空间的本质是「极大全迷向子空间」。
+
+#### 定义引用：「正交补」→ Lagrange 子空间　`dep.lag-ocomp`
+
+定义条件 $W = W^{\perp}$ 直接用到正交补。
+
+#### 定义引用：「辛形式」→ Lagrange 子空间　`dep.lag-sympl`
+
+正交补是对辛形式取的，不是内积。
+
+#### 定义引用：「辛形式」→ 辛矩阵与辛群　`dep.spm-sympl`
+
+辛矩阵的定义就是「保持 $\omega$ 不变」。
+
+#### 定义引用：「辛基」→ 辛矩阵与辛群　`dep.spm-sb`
+
+判据 $A^{T}J_0A = J_0$ 里的 $J_0$ 来自辛基下的标准形。
+
+#### 定义引用：「可逆矩阵」→ 辛矩阵与辛群　`dep.spm-invert`
+
+辛矩阵可逆（行列式为 $1$），所以 $\mathrm{Sp}$ 是群。
+
+#### 定义引用：「Gram 矩阵」→ Lagrange 恒等式　`dep.lagid-gram`
+
+左边就是两个向量的 Gram 行列式。
+
+#### 定义引用：「行列式」→ Lagrange 恒等式　`dep.lagid-det`
+
+「面积的平方」的代数表达是 $2\times2$ 行列式。
+
+#### 定义引用：「内积」→ Lagrange 恒等式　`dep.lagid-inner`
+
+恒等式两边都用内积写。
+
+#### 定义引用：「微分形式」→ 辛流形　`dep.sm-form`
+
+辛形式是流形上的 2-形式 —— 用通名的流形版定义（`def.form-on-manifold`）。
+
+#### 定义引用：「外微分」→ 辛流形　`dep.sm-extd`
+
+「闭」$d\omega = 0$ 就是用流形上的外微分陈述的。
+
+#### 定义引用：「辛形式」→ 辛流形　`dep.sm-sympl`
+
+非退化性是逐点要求，用的正是线性那版辛形式。
+
+#### 定义引用：「光滑流形」→ 辛流形　`dep.sm-mf`
+
+辛流形首先是光滑流形。
+
+#### 定义引用：「余切丛」→ 辛流形　`dep.sm-cotb`
+
+标准例子 $T^{*}\mathbb{R}^{n}$ 就是余切丛 —— 相空间的数学身份。
+
+#### 定义引用：「辛流形」→ Darboux 定理　`dep.darb-sm`
+
+定理的主语就是辛流形：局部能化成标准形。
+
+#### 定义引用：「辛标准形定理」→ Darboux 定理　`dep.darb-snf`
+
+证明的第一步是逐点用线性标准形定理找辛基。
+
+#### 定义引用：「光滑流形」→ Darboux 定理　`dep.darb-mf`
+
+结论是「存在坐标邻域」—— 坐标系是流形上的东西。
+
+#### 定义引用：「辛流形」→ Hamilton 向量场　`dep.hvf-sm`
+
+$\iota_{X_H}\omega = -dH$ 里的 $\omega$ 是辛流形的辛形式。
+
+#### 定义引用：「向量场」→ Hamilton 向量场　`dep.hvf-vf`
+
+$X_H$ 本身就是向量场。
+
+#### 定义引用：「内乘」→ Hamilton 向量场　`dep.hvf-iota`
+
+定义式用的是内乘 $\iota$。
+
+#### 定义引用：「Hamilton 向量场」→ Poisson 括号　`dep.pb-hvf`
+
+$\{f,g\} = \omega(X_f, X_g)$ —— 括号由两个 Hamilton 向量场配对得到。
+
+#### 定义引用：「辛流形」→ Poisson 括号　`dep.pb-sm`
+
+整个构造活在辛流形上。
+
+#### 定义引用：「Lagrange 子空间」→ Lagrange 子流形　`dep.lsm-lag`
+
+逐点看，切空间是 Lagrange 子空间 —— 这就是「子流形」版的全部内容。
+
+#### 定义引用：「辛流形」→ Lagrange 子流形　`dep.lsm-sm`
+
+Lagrange 子流形是辛流形的子流形。
+
+#### 定义引用：「光滑流形」→ Lagrange 子流形　`dep.lsm-mf`
+
+「浸入子流形」这个概念本身要先有光滑流形。
+
+#### 定义引用：「Poisson 括号」→ Lagrange 括号　`dep.lb-pb`
+
+两个括号互为逆矩阵 —— 定义里必须先把 Poisson 括号矩阵写出来。
+
+#### 定义引用：「余切丛」→ Lagrange 括号　`dep.lb-cotb`
+
+$(q, p)$ 是余切丛上的 Darboux 坐标。
+
 #### Young 不等式 ⟹ Hölder 不等式　`imp.holder`
 *Young 不等式 $\implies$ Hölder 不等式*
 
@@ -46877,8 +47322,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **矩阵与行列式 ↔ 特征值与 Jordan 型**　3 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
-- **内积空间与正交性 ↔ 多重线性与张量**　9 条节点级连线
-- **矩阵与行列式 ↔ 多重线性与张量**　5 条节点级连线
+- **内积空间与正交性 ↔ 多重线性与张量**　11 条节点级连线
+- **矩阵与行列式 ↔ 多重线性与张量**　8 条节点级连线
 - **多元微分 ↔ 度量空间**　3 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
@@ -46990,8 +47435,14 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **微分形式、积分与 de Rham ↔ Lie 群**　4 条节点级连线
 - **内积空间与正交性 ↔ 矩阵与行列式**　2 条节点级连线
 - **内积空间与正交性 ↔ 线性映射与秩**　2 条节点级连线
+- **多重线性与张量 ↔ 向量空间的基**　2 条节点级连线
 - **内积空间与正交性 ↔ 矩阵分解与最小二乘**　10 条节点级连线
 - **矩阵与行列式 ↔ 矩阵分解与最小二乘**　2 条节点级连线
+- **微分形式、积分与 de Rham ↔ 辛流形与 Hamilton 力学**　2 条节点级连线
+- **多重线性与张量 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
+- **内蕴几何 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
+- **流形与向量丛 ↔ 辛流形与 Hamilton 力学**　2 条节点级连线
+- **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　2 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
 - **实数与极限 ↔ 数系的构造**　3 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线

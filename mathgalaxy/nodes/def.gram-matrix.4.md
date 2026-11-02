@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘 用
+- 被 [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式 用

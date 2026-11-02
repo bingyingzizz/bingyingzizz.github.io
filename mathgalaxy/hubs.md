@@ -16,4 +16,4 @@
 - **5** `def.representable` 表示函子 · layer 12 · 预层与米田
 - **5** `def.metric-space` 距离空间 · layer 13 · 度量空间
 
-（1372 个节点里 1365 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+（1384 个节点里 1377 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）

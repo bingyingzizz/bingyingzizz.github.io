@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.tensor-field`](../nodes/def.tensor-field.md) 张量场 用
+- 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
+- 被 [`def.lagrange-bracket`](../nodes/def.lagrange-bracket.md) Lagrange 括号 用

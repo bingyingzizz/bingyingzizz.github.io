@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.witt-cancellation`](../nodes/thm.witt-cancellation.md) Witt 消去定理 用
+- 被 [`def.symplectic-basis`](../nodes/def.symplectic-basis.md) 辛基 用

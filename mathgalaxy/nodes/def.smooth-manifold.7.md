@@ -10,3 +10,6 @@
 - 被 [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形 用
 - 被 [`def.singular-cube`](../nodes/def.singular-cube.md) 奇异方块 用
 - 被 [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式 用
+- 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
+
+> 续见 [nodes/def.smooth-manifold.8.md](./def.smooth-manifold.8.md)

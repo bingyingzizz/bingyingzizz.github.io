@@ -6,3 +6,4 @@
 - 被 [`def.rayleigh-quotient`](../nodes/def.rayleigh-quotient.md) Rayleigh 商 用
 - 被 [`def.gram-matrix`](../nodes/def.gram-matrix.md) Gram 矩阵 用
 - 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
+- 被 [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式 用

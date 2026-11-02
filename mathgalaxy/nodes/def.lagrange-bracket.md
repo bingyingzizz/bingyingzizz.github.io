@@ -1,0 +1,17 @@
+# Lagrange 括号　`def.lagrange-bracket`
+Lagrange 括号：Poisson 括号的逆矩阵
+layer 23 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
+[在星图里打开](../#n=def.lagrange-bracket)　·　[节点索引](../index.md)
+
+**在做什么**：比 Poisson 括号更早（Lagrange 1808，Poisson 1809）的版本，本质是「Poisson 括号矩阵的逆」。它衡量的是「两族曲线之间的面积」，所以在正则变换理论里更自
+> 陈述续见 [nodes/def.lagrange-bracket.2.md](./def.lagrange-bracket.2.md)
+
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.lagrange-bracket.3.md](./def.lagrange-bracket.3.md)
+
+refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Lagrange 括号；Landau–Lifshitz, Mechanics（⚠️ 章名未核实，只记书名）
+
+> 说明见 `notes/def.lagrange-bracket.md`
+
+引用：`def.lagrange-bracket`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

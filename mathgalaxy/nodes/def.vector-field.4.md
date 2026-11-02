@@ -11,3 +11,5 @@
 - 被 [`def.interior-product`](../nodes/def.interior-product.md) 内乘 用
 - 被 [`def.flow`](../nodes/def.flow.md) 流 用
 - ⇒ [`thm.flow-local`](../nodes/thm.flow-local.md) 局部流
+
+> 续见 [nodes/def.vector-field.5.md](./def.vector-field.5.md)

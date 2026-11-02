@@ -6,3 +6,4 @@
 - 被 [`thm.cartan-formula`](../nodes/thm.cartan-formula.md) Cartan 公式 用
 - 被 [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理 用
 - 被 [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程 用
+- 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用

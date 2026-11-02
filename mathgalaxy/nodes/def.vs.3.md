@@ -12,6 +12,6 @@
 - 被 [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛 用
 - 被 [`def.matrix-of-bilinear-form`](../nodes/def.matrix-of-bilinear-form.md) 双线性型的矩阵 用
 - 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
-- 被 [`thm.vsbasis`](../nodes/thm.vsbasis.md) 每个向量空间有基 用
+- 被 [`def.symplectic-basis`](../nodes/def.symplectic-basis.md) 辛基 用
 
 > 续见 [nodes/def.vs.4.md](./def.vs.4.md)

@@ -5,3 +5,5 @@
 - [`def.bilinear-form`](../nodes/def.bilinear-form.md) 双线性型：用到了定义 双线性型　[proofs/dep.isosub-bf.md](../proofs/dep.isosub-bf.md)
 - [`def.orthogonal-complement`](../nodes/def.orthogonal-complement.md) 正交补：用到了定义 正交补　[proofs/dep.isosub-ocomp.md](../proofs/dep.isosub-ocomp.md)
 - [`def.isotropic-vector`](../nodes/def.isotropic-vector.md) 迷向向量：用到了定义 迷向向量　[proofs/dep.isosub-isovec.md](../proofs/dep.isosub-isovec.md)
+
+> 续见 [nodes/def.isotropic-subspace.4.md](./def.isotropic-subspace.4.md)

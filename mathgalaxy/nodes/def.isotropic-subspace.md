@@ -10,6 +10,8 @@ layer 13 · 定义 · 多重线性与张量 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.witt-cancellation`](../nodes/thm.witt-cancellation.md) Witt 消去定理 用
 
+- …另有出边，续页见 [nodes/def.isotropic-subspace.4.md](./def.isotropic-subspace.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.isotropic-subspace.3.md](./def.isotropic-subspace.3.md)
 
