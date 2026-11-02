@@ -15,7 +15,7 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.normed-space.2.md](./def.normed-space.2.md)
 
-refs: Rudin, Functional Analysis, Ch. 1；Lang, Real and Functional Analysis, Ch. I
+refs: Rudin, Functional Analysis；Lang, Real and Functional Analysis, Ch. I
 
 > 说明见 `notes/def.normed-space.md`
 

@@ -10,7 +10,7 @@ $$\|\tilde u\| = \|u\| .$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.complete`](../nodes/def.complete.md) 完备：完备性 $\implies$ 稠密延拓存在　[proofs/imp.fa-extension.md](../proofs/imp.fa-extension.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有界算子
 
 > 说明见 `notes/thm.bounded-extension.md`
 

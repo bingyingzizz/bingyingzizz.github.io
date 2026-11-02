@@ -15,7 +15,7 @@ $$\varphi(x) = \langle x, y\rangle \qquad \forall x \in H , \qquad \text{且} \ 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.riesz-hilbert.2.md](./thm.riesz-hilbert.2.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.riesz-hilbert.md`
 

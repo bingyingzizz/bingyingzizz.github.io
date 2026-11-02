@@ -17,7 +17,7 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.ubp.3.md](./thm.ubp.3.md)
 
-refs: 泛函分析讲义 2026-10-26；Banach–Steinhaus 1927
+refs: Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像；Banach–Steinhaus 1927
 
 > 说明见 `notes/thm.ubp.md`
 

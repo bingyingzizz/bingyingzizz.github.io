@@ -2,16 +2,27 @@
 
 > page 1 `hubs.en.md`
 
-- **6** `def.left-invariant-form` left-invariant form · layer 26 · Lie 群
-- **6** `def.submanifold-volume` induced volume · layer 27 · 微分形式、积分与 de Rham
-- **6** `thm.de-rham` de Rham theorem · layer 28 · 微分形式、积分与 de Rham
-- **5** `thm.first-iso` first isomorphism theorem · layer 9 · 代数结构
-- **5** `def.cauchy-null` Cauchy sequences and null sequences · layer 11 · 数系的构造
+- **30 / 33** `def.limit` limit and colimit · 图与极限
+- **28 / 32** `def.adjoint` Adjunction · 伴随与反射
+- **28 / 29** `def.measure` measure · 测度的构造
+- **25 / 28** `def.compact` compact · 度量空间
 
-- **5** `def.representable` representable functor · layer 12 · 预层与米田
-- **5** `def.metric-space` metric space · layer 13 · 度量空间
-- **5** `def.essential-sup` essential supremum · layer 16 · L^p 空间
-- **5** `def.abelian-category` additive and abelian categories · layer 16 · 加法与阿贝尔范畴
-- **5** `def.product-measure` product measure · layer 17 · 乘积测度与 Fubini
+- **25 / 28** `def.sheaf` sheaf · 层与拓扑
+- **25 / 25** `def.topology` topology · 拓扑空间的基本语汇
+- **23 / 23** `def.function` mapping · 关系与函数
+- **23 / 23** `def.group` group · 代数结构
+
+- **22 / 22** `def.functor` functor · 函子与自然变换
+- **21 / 23** `def.chaus` compact Hausdorff · 紧 Hausdorff 空间
+- **21 / 21** `def.subset` subset · 集合的构造
+- **20 / 21** `def.projective-object` Projective and Injective · 紧 Hausdorff 空间
+
+- **20 / 20** `def.abs` absolute value · 实数的运算与不等式
+- **19 / 20** `def.integrable` integrable · 积分
+- **18 / 19** `def.sheaf-cohomology` sheaf cohomology · 层上同调
+
+## Comprehensive results
+
+## Cross-domain hubs
 
 > continued in `hubs.en.3.md`

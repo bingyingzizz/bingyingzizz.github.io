@@ -9,15 +9,15 @@ $$\|u\| := \sup_{\|x\| \le 1} \|u(x)\| = \sup_{\|x\| = 1} \|u(x)\| = \sup_{x \ne
 
 它使 $B(E, F)$ 成为赋范空间（$E = 0$ 时约定 $\|u\| = 0$）。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.linear-map`](../nodes/def.linear-map.md) 线性映射：用到了定义 线性映射　[proofs/def-link.fa-linmap-op.md](../proofs/def-link.fa-linmap-op.md)
-
-- …另有入边，续页见 [nodes/def.bounded-operator.2.md](./def.bounded-operator.2.md)
-
 ## 它能推出什么 / 谁在用它
+- ⇒ [`thm.linear-continuous-bounded`](../nodes/thm.linear-continuous-bounded.md) 连续 ⟺ 有界
+
 - …另有出边，续页见 [nodes/def.bounded-operator.3.md](./def.bounded-operator.3.md)
 
-refs: 泛函分析讲义 2026-09-28
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.bounded-operator.2.md](./def.bounded-operator.2.md)
+
+refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/def.bounded-operator.md`
 

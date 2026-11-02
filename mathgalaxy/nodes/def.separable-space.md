@@ -8,7 +8,7 @@ layer 22 · 定义 · 赋范空间与有界算子 · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间：用到了定义 L^p 是 Banach 空间　[proofs/def-link.fa-lpbanach-sep.md](../proofs/def-link.fa-lpbanach-sep.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.separable-space.md`
 

@@ -4,6 +4,6 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.hartogs`](../nodes/thm.hartogs.md) Hartogs 定理 用
 - 被 [`thm.cardinal-comparable`](../nodes/thm.cardinal-comparable.md) 基数可比定理 用
-- 被 [`def.cardinal`](../nodes/def.cardinal.md) 基数 |A| 用
+- 被 [`def.cardinal`](../nodes/def.cardinal.md) 基数 用
 - ⇒ [`thm.ordinal-trichotomy`](../nodes/thm.ordinal-trichotomy.md) 序数可比
 - ⇒ [`thm.burali-forti`](../nodes/thm.burali-forti.md) 序数全体不构成集合

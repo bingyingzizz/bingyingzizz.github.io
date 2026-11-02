@@ -1,11 +1,11 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T07:41:20.751Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T10:45:56.508Z
 > 15 星系 / 102 星团 / 1460 节点 / 2753 连线（强边 2736，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
-> ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
-> 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
-> 会拿到同样的开头。**要检索请走 `llms.txt` 里的检索协议**：
+> ⛔ **这是全量 bulk 导出（约 3.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
+> 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
+> 而且同一地址反复抓也只会拿到同样的开头。**要检索请走 `llms.txt` 里的检索协议**：
 > `index.md` → `index/<星团id>.md` → `nodes/<节点id>.md`。
 > 这份文件只在「一次性下载 / 离线打包 / 本地处理」时才用。
 
@@ -628,7 +628,7 @@ $\mathbb{R}$ 不可数（Cantor 对角线法）。
 #### 等势　`def.equinumerous`
 *定义*　等势
 
-集合 $A$ 与 $B$ **等势**（记 $|A| = |B|$ 或 $A \approx B$），当且仅当存在**双射**
+集合 $A$ 与 $B$ **等势**（记 $\#A = \#B$ 或 $A \approx B$），当且仅当存在**双射**
 
 $$f : A \to B$$
 
@@ -649,25 +649,25 @@ $$f : A \to B$$
 
 参考：Kunen, Set Theory, I.6
 
-#### 基数 |A|　`def.cardinal`
+#### 基数　`def.cardinal`
 *定义*　基数与基数的比较
 
-等势把「所有集合」分成一个个类。「集合 $A$ 的**基数**」$|A|$ 指的就是 $A$ 所在的这个等势类 —— 它衡量 $A$ 有多大，而不关心 $A$ 的元素是什么。
+等势把「所有集合」分成一个个类。「集合 $A$ 的**基数**」$\#A$ 指的就是 $A$ 所在的这个等势类 —— 它衡量 $A$ 有多大，而不关心 $A$ 的元素是什么。
 
 比较两个基数：
 
-- $|A| \le |B|$：存在**单射** $A \to B$；
-- $|A| = |B|$：存在**双射** $A \to B$（等势）；
-- $|A| < |B|$：$|A| \le |B|$ 但 $|A| \ne |B|$。
+- $\#A \le \#B$：存在**单射** $A \to B$；
+- $\#A = \#B$：存在**双射** $A \to B$（等势）；
+- $\#A < \#B$：$\#A \le \#B$ 但 $\#A \ne \#B$。
 
-若 $|A| \le |B|$ 且 $|B| \le |A|$，则 $|A| = |B|$（Schröder–Bernstein 定理）。
+若 $\#A \le \#B$ 且 $\#B \le \#A$，则 $\#A = \#B$（Schröder–Bernstein 定理）。
 
-⭐ 记号的用法：$|\mathbb{N}| = \aleph_0$（可数无限），$|\mathbb{R}| = 2^{\aleph_0}$，且 $\aleph_0 < 2^{\aleph_0}$。
+⭐ 记号的用法：$\#\mathbb{N} = \aleph_0$（可数无限），$\#\mathbb{R} = 2^{\aleph_0}$，且 $\aleph_0 < 2^{\aleph_0}$。
 
 ⚠ 严格说来「等势类」不构成集合，所以 ZFC 里的通行做法是：先有**序数**，再用良序定理（$\iff$ AC）取每个等势类里最小的那个序数作代表，那个序数就叫基数。
 
 
-> 本星图只用到「$|A| \le |B|$ 靠单射、$|A| = |B|$ 靠双射」这两件事 —— 它们不需要选代表就能用。
+> 本星图只用到「$\#A \le \#B$ 靠单射、$\#A = \#B$ 靠双射」这两件事 —— 它们不需要选代表就能用。
 
 ⚠ 任意两个基数**不一定可比**，这正是**基数可比定理**（要用 AC）的内容。
 
@@ -688,7 +688,7 @@ $$|A| < |\mathcal{P}(A)|$$
 
 $\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots$
 
-取 $A = \mathbb{N}$ 就得到「$\mathbb{R}$ 不可数」（$|\mathbb{R}| = 2^{\aleph_0}$）。
+取 $A = \mathbb{N}$ 就得到「$\mathbb{R}$ 不可数」（$\#\mathbb{R} = 2^{\aleph_0}$）。
 
 证明用的是**对角线法**（见边的证明）：那个「对角集」$D = \{ a \in A : a \notin f(a) \}$ 不在 $f$ 的像里。
 
@@ -712,7 +712,7 @@ $$|A| \le |B| \ \wedge \ |B| \le |A| \implies |A| = |B|$$
 #### 基数可比定理　`thm.cardinal-comparable`
 *定理*　基数可比定理（需要选择公理）
 
-在**选择公理**下：对任意两个集合 $A$、$B$，必有 $|A| \le |B|$ 或 $|B| \le |A|$。
+在**选择公理**下：对任意两个集合 $A$、$B$，必有 $\#A \le \#B$ 或 $\#B \le \#A$。
 
 即任意两个基数都可以比较大小。
 
@@ -1062,7 +1062,7 @@ $\implies$ 唯一性靠「$\mathbb{Q}$ 在 $K$ 中稠密」把两个同构逼成
 参考：Tao, Analysis I, Ch. 5（实数的构造）
 
 #### ℝ 不可数　`thm.real-uncountable`
-*定理*　实数集是稠密而不可数的：$|\mathbb{R}| = 2^{\aleph_0}$
+*定理*　实数集是稠密而不可数的：$\#\mathbb{R} = 2^{\aleph_0}$
 
 **实数集 $\mathbb{R}$ 不可数**：不存在从 $\mathbb{N}$ 到 $\mathbb{R}$ 的满射，即 $\mathbb{R}$ 不能排成一个序列。
 
@@ -1074,7 +1074,7 @@ $$|\mathbb{R}| = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0} > \aleph_0$$
 
 ⚠ 整段证明**只用到 $\mathbb{R}$ 的完备性**（确界原理），不需要基数理论；
 
-$|\mathbb{R}| = 2^{\aleph_0}$ 那一半是拿二进制展开与 $\mathcal{P}(\mathbb{N})$ 配对，再引用 Cantor 定理。
+$\#\mathbb{R} = 2^{\aleph_0}$ 那一半是拿二进制展开与 $\mathcal{P}(\mathbb{N})$ 配对，再引用 Cantor 定理。
 
 **这条定理最反直觉的地方**：$\mathbb{Q}$ 与 $\mathbb{R}$ 都稠密、都可以逼近彼此，但 $\mathbb{Q}$ 可数（排得成一个序列）、$\mathbb{R}$ 不可数。
 
@@ -5249,17 +5249,17 @@ $$v \mapsto [v]_{\mathcal{B}}$$
 
 于是可以无矛盾地定义 $V$ 的**维数**
 
-$$\dim_K V := |\mathcal{B}|$$
+$$\dim_K V := \#\mathcal{B}$$
 
 （$V = \{0\}$ 时约定 $\dim V = 0$；没有有限基时称 $V$ 是**无限维**的。）
 
 ⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。
 
-证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $|\mathcal{B}| \le |\mathcal{B}'|$ 与反向。
+证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\#\mathcal{B} \le |\mathcal{B}'|$ 与反向。
 
 ⚠ 有限维的情形交换引理就够了；
 
-无限维要证明「无限基等势」（用 $|A \times \mathbb{N}| = |A|$ 那一套基数算术），比有限情形麻烦得多。
+无限维要证明「无限基等势」（用 $|A \times \mathbb{N}| = \#A$ 那一套基数算术），比有限情形麻烦得多。
 
 ⭐ 维数的基本性质：$\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$；
 
@@ -9387,7 +9387,7 @@ $$a \le b \implies a + c \le b + c, \qquad a \le b,\ 0 \le c \implies ac \le bc$
 
 📌 由这三条推出来的、后面到处要用的性质：**阿基米德性质**与 **$\mathbb{Q}$ 在 $\mathbb{R}$ 中稠密**（见「阿基米德性质」）；
 
-$\mathbb{R}$ 还**不可数**（$|\mathbb{R}| = 2^{\aleph_0}$）—— 「稠密」与「一样多」是两件事。
+$\mathbb{R}$ 还**不可数**（$\#\mathbb{R} = 2^{\aleph_0}$）—— 「稠密」与「一样多」是两件事。
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 1；Ch. 3
 
@@ -11122,7 +11122,7 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 
 ⭐ 本图在凝聚态那一片另有 `def.semi-normed-ab-group`（半范数阿贝尔群）：那里的系数不是向量空间而是拓扑阿贝尔群，所以只能要半范数。
 
-参考：Rudin, Functional Analysis, Ch. 1；Lang, Real and Functional Analysis, Ch. I
+参考：Rudin, Functional Analysis；Lang, Real and Functional Analysis, Ch. I
 
 #### Banach 空间　`def.banach-space`
 *定义*　Banach 空间（完备赋范空间）
@@ -11139,7 +11139,7 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 
 整条「逆映射定理」的构造性证明都靠这一条撑着。
 
-参考：Rudin, Functional Analysis, Ch. 1；Zeidler, Nonlinear Functional Analysis I, Ch. 1
+参考：Rudin, Functional Analysis；Zeidler, Nonlinear Functional Analysis I, Ch. 1
 
 #### 偏导数　`def.partial-derivative`
 *定义*　偏导数
@@ -11795,7 +11795,7 @@ Sard 给出的门槛是 $C^{k}$、$k > n - m$。
 
 ⚠️ 半范数不等于范数：商掉零范数子空间才成为范数（$L^p$ 的构造里「$\|f\|_p = 0$ 只说明 $f = 0$ a.e.」就是这件事，见「$L^p$ 范数」）。
 
-参考：泛函分析讲义 2026-09-28；Rudin, Functional Analysis, Ch. 1
+参考：Rudin, Functional Analysis · 赋范空间与有限维；Rudin, Functional Analysis, Ch. 1
 
 #### 范数诱导的距离　`prop.norm-induces-metric`
 *命题*　范数诱导的距离：平移不变 + 齐次
@@ -11812,7 +11812,7 @@ Sard 给出的门槛是 $C^{k}$、$k > n - m$。
 
 ⭐ 球凸这一条后面要用两次：凸集上的最近点（Hilbert 的投影定理）、以及「开球的像是否开」（开映射定理）。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有限维
 
 #### 等价范数　`def.norm-equivalence`
 *定义*　强弱范数与等价范数
@@ -11829,7 +11829,7 @@ $$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 
 ⚠️ 等价不保完备性以外的一切：两个等价范数下完备性一样（Cauchy 列集合相同），但**极值问题**的答案可以不同（球不同）。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有限维
 
 #### 有限维范数等价　`thm.norm-equiv-finite-dim`
 *定理*　有限维空间上所有范数等价
@@ -11846,7 +11846,7 @@ $$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty :
 
 ⚠️ 反例（讲义没有列，但值得记）：$C[0,1]$ 上 $\|\cdot\|_\infty$ 严格强于 $\|\cdot\|_1$：$f_n(x) = x^n$ 在 $\|\cdot\|_1$ 下趋于 $0$，却**不**一致收敛于 $0$（点态极限是 $x = 1$ 处的跳变）。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有限维
 
 #### 几乎正交引理　`lem.almost-orthogonal`
 *引理*　闭真子空间外的单位向量（Riesz 引理）
@@ -11867,7 +11867,7 @@ $$\|e - y\| = \frac{\|x - y' - \|x - y'\| y\|}{\|x - y'\|} \ge \frac{d}{\|x - y'
 
 ⭐ 反面参照：Hilbert 空间里可以取 $\varepsilon = 0$（每个闭子空间都有正交补，见「闭子空间的正交投影」）—— 这也说明 Hilbert 空间在赋范空间里是「特殊的好」。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有限维
 
 #### 单位球紧 ⟺ 有限维　`thm.riesz-ball-compact`
 *定理*　闭单位球紧 $\iff$ 有限维（Riesz）
@@ -11886,7 +11886,7 @@ $$\|e - y\| = \frac{\|x - y' - \|x - y'\| y\|}{\|x - y'\|} \ge \frac{d}{\|x - y'
 
 ⭐ 这一条是「有限维  当且仅当  局部紧」的一半：有限维赋范空间局部紧，无穷维的**从不**局部紧。它也是「有界闭集紧」只在有限维成立的精确版本 —— 无穷维里 Heine–Borel 失效。
 
-参考：泛函分析讲义 2026-09-28；Riesz 1918
+参考：Rudin, Functional Analysis · 赋范空间与有限维；Riesz 1918
 
 #### 有界线性算子　`def.bounded-operator`
 *定义*　有界线性算子与算子范数
@@ -11903,7 +11903,7 @@ $$\|u\| := \sup_{\|x\| \le 1} \|u(x)\| = \sup_{\|x\| = 1} \|u(x)\| = \sup_{x \ne
 
 ⭐ 无穷维里 $L(E, F) \ne B(E, F)$：不连续的线性算子确实存在（要用选择公理造）。所以本图把「线性」与「有界」分成两个节点：$L(E,F)$ 是**代数**上的 Hom，$B(E,F)$ 是其中连续的那部分。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### 连续 ⟺ 有界　`thm.linear-continuous-bounded`
 *定理*　线性映射连续 $\iff$ 有界
@@ -11924,7 +11924,7 @@ $$\|u\| := \sup_{\|x\| \le 1} \|u(x)\| = \sup_{\|x\| = 1} \|u(x)\| = \sup_{x \ne
 
 ⭐ 于是「连续线性算子」「有界线性算子」「Lipschitz 线性算子」从此是同义词，$B(E,F)$ 这个名字里的「B」正是 bounded。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### 算子乘法的范数不等式　`prop.operator-algebra`
 *命题*　复合与算子范数：$\|vu\| \le \|v\|\,\|u\|$
@@ -11941,7 +11941,7 @@ $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
 $\|\cdot\|$ 是**次可乘**的（submultiplicative）——这条不等式就是「Banach 代数」定义里的第二条，也是 Neumann 级数能收敛的唯一依据。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### Banach 代数　`def.banach-algebra`
 *定义*　Banach 代数
@@ -11959,7 +11959,7 @@ $\|\cdot\|$ 是**次可乘**的（submultiplicative）——这条不等式就�
 
 ⭐ 这一族是「把分析问题化成代数问题」的通用容器：Gelfand 理论（交换 Banach 代数 $\cong C(\text{极大理想空间})$）就是从这条定义出发的。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有界算子
 
 #### B(E,F) 完备　`thm.bounded-operators-banach`
 *定理*　$F$ 完备 $\implies$ $B(E,F)$ 是 Banach 空间
@@ -11976,7 +11976,7 @@ $u$ 线性（极限保线性）、有界（取 $N$ 使 $n, m \ge N$ 时 $\|u_n -
 
 ⚠️ $E$ 不需要完备：完备性只用在 $F$ 上。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### 连续对偶空间　`def.dual-banach`
 *定义*　对偶空间 $E^*$（连续对偶）
@@ -11991,7 +11991,7 @@ $$E^* := B(E, \mathbb{K}) , \qquad \|\varphi\| := \sup_{\|x\| \le 1} |\varphi(x)
 
 ⭐ 对偶是把「空间」变成「函数」的唯一正经通道：弱拓扑、Riesz 表示、Hahn–Banach、对偶配对全在 $E^*$ 上进行。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### 有界算子的延拓　`thm.bounded-extension`
 *定理*　稠密子空间上的有界算子唯一延拓
@@ -12010,7 +12010,7 @@ $$\|\tilde u\| = \|u\| .$$
 
 ⚠️ $F$ 完备不能去掉（去掉就没有极限可拿）；$G$ 稠密也不能去掉（不稠密时延拓不唯一，只剩 Hahn–Banach 那种「保范但有选择」的延拓）。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 赋范空间与有界算子
 
 #### Neumann 级数　`thm.neumann-series`
 *定理*　$\|u\| < 1 \implies I - u$ 可逆（Neumann 级数）
@@ -12029,7 +12029,7 @@ $$(I - u)^{-1} = \sum_{k=0}^{\infty} u^k , \qquad \|(I - u)^{-1}\| \le \frac{1}{
 
 ⚠️ 反过来「$I - u$ 可逆 $\implies$ $\|u\| < 1$」是**错的**：$u = -2I$ 时 $I - u = 3I$ 可逆。有界逆定理给的是另一件事（双射 $implies$ 逆连续），不是这条。
 
-参考：泛函分析讲义 2026-09-28
+参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 #### 可分空间　`def.separable-space`
 *定义*　可分空间
@@ -12044,7 +12044,7 @@ $$(I - u)^{-1} = \sum_{k=0}^{\infty} u^k , \qquad \|(I - u)^{-1}\| \le \frac{1}{
 
 ⚠️ 可分性对**闭子空间**遗传、对**商**遗传，但对连续像不一定、对乘积不遗传（$\mathbb{R}^{\mathbb{R}}$ 不可分）。
 
-参考：泛函分析讲义 2026-09-28
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### Schauder 基　`def.schauder-basis`
 *定义*　Schauder 基
@@ -12061,7 +12061,7 @@ Schauder 基要求的是**级数收敛**，所以可以是可数的；而且 Sch
 
 ⚠️ 与 Hilbert 空间的「正交基」不同：Schauder 基不要求正交、也不要求唯一性来自内积；Hilbert 空间里正交基一定是 Schauder 基，反之不然。
 
-参考：泛函分析讲义 2026-09-28；Enflo, Acta Math. 130 (1973)
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Enflo, Acta Math. 130 (1973)
 
 #### ℓ²(I)　`def.ell2-space`
 *定义*　$\ell^2(I)$：任意指标集上的平方可和族
@@ -12078,7 +12078,7 @@ $$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 :=
 
 ⭐ 这条是「可分 Hilbert 空间 $\cong \ell^2$」里 $\ell^2$ 那一端：$I$ 取可数时就是通常的 $\ell^2$。
 
-参考：泛函分析讲义 2026-09-28 / 2026-10-19
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 ### 星团：Hilbert 空间
 > 范数来自内积的那一类：平行四边形法则把它挑出来 → 凸闭集上有投影 → $H^*\cong\overline H$（Riesz）→ 伴随算子 → 正交基与 $\ell^2$。
@@ -12096,7 +12096,7 @@ $$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 :=
 
 ⭐ Hilbert 空间 = 「自对偶的 Banach 空间」（见「Riesz 表示定理（Hilbert 版）」），这是它能把线性泛函当成向量用的根源。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 极化恒等式　`thm.polarization`
 *定理*　极化恒等式：内积由范数恢复
@@ -12115,7 +12115,7 @@ $$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
 
 ⚠️ 复情形的系数是 $i^k$（四个都要：$1, i, -1, -i$），不是 $(-1)^k$ ——写成 $(-1)^k$ 只能抽出实部，会把内积丢掉一半信息。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 平行四边形法则　`thm.parallelogram-inner-product`
 *定理*　平行四边形法则 $\iff$ 范数来自内积（Jordan–von Neumann）
@@ -12164,7 +12164,7 @@ $$\|x + y\|^2 + \|x - y\|^2 = 2\|x\|^2 + 2\|y\|^2 .$$
 
 ⚠️ 讲义里写的是「$\|x+y\|^2 + \|x-y\|^2 = 2\|x\|^2 + 2\|y\|^2$」加一句「平行四边行」——把几何里的「平行四边形两条对角线平方和 = 四边平方和」直接搬到了范数上。
 
-参考：泛函分析讲义 2026-10-12；Jordan–von Neumann, Ann. of Math. 36 (1935)
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Jordan–von Neumann, Ann. of Math. 36 (1935)
 
 #### 凸闭集的最近点　`thm.projection-convex`
 *定理*　凸闭集上的最近点（投影算子）
@@ -12192,7 +12192,7 @@ $$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + 
 
 ⭐ 这是无穷维里「极小元存在」最干净的样本：强制性（$\|x\| \to \infty$）+ 弱下半连续 + 凸，就能推出存在性；这里的凸集不然。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 闭子空间的正交投影　`thm.projection-subspace`
 *定理*　正交投影与正交分解：$H = E \oplus E^\perp$
@@ -12215,7 +12215,7 @@ $$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + 
 
 ⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \subset \ell^\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### Riesz 表示（Hilbert）　`thm.riesz-hilbert`
 *定理*　Riesz 表示：$H^* \cong \overline{H}$
@@ -12240,7 +12240,7 @@ $\|y\| = \|\varphi\|$ 由 $\|\varphi\| = \sup_{\|x\| \le 1} |\langle x, y\rangle
 
 ⚠️ 别与 $L^p$ 的 Riesz 表示混淆：那是 $(L^p)^* \cong L^q$（$1<p<\infty$，$1/p + 1/q = 1$），靠 Hölder 不等式；这条靠正交分解。两者只共享名字。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 伴随算子　`thm.adjoint-hilbert`
 *定理*　伴随算子存在且 $\|u^*\| = \|u\|$
@@ -12259,7 +12259,7 @@ $\|u^*\| = \|u\|$ 用两次 sup 交换。
 
 ⭐ 这解释了为什么 Banach 空间没有「伴随」而只有「转置/共轭」：转置活在**对偶**之间（${}^t\!: F^* \to E^*$），而 Hilbert 空间里 $H^* \cong H$ 让转置可以搬回空间上。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 酉算子　`def.unitary-operator`
 *定义*　酉算子与部分等距
@@ -12280,7 +12280,7 @@ $S^*S = I$ 而 $S\,S^* = I - P_{\ker S^*}$ 是投影。
 
 ⭐ 极分解 $u = V|u|$（$V$ 部分等距，$|u| = \sqrt{u^*u}$）就是部分等距的标准出场方式。有限维版本见 `def.unitary-matrix`。
 
-参考：泛函分析讲义 2026-10-12
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 正交基　`def.orthonormal-set`
 *定义*　标准正交集、完备性与正交基
@@ -12298,7 +12298,7 @@ $S^*S = I$ 而 $S\,S^* = I - P_{\ker S^*}$ 是投影。
 
 ⭐ 有了正交基，Hilbert 空间就变成「不带权重的 $\ell^2$」（见 Bessel/Parseval 与「可分 Hilbert $\cong \ell^2$」）。
 
-参考：泛函分析讲义 2026-10-19
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### Bessel 与 Parseval　`thm.bessel-parseval`
 *定理*　Bessel 不等式与 Parseval 等式
@@ -12319,7 +12319,7 @@ Bessel 的证明：对有限 $J$，$0 \le \|x - \sum_{j \in J}\langle x, e_j\ran
 
 ⚠️ 不可数 $I$ 时 $\sum_{i \in I}$ 要按「非零项至多可数」理解（见 $\ell^2(I)$ 的注），否则这个和没有定义。
 
-参考：泛函分析讲义 2026-10-19
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 正交基存在　`thm.orthonormal-basis-exists`
 *定理*　每个 Hilbert 空间都有正交基（Zorn）
@@ -12338,7 +12338,7 @@ Zorn 给极大元 $M$。
 
 ⚠️ 与 Gram–Schmidt 的分工：G–S 只从**可数**线性无关族出发、靠归纳造标准正交集（`thm.gram-schmidt`）；正交基一般不可数，只能靠 Zorn。
 
-参考：泛函分析讲义 2026-10-19
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 可分 Hilbert 空间等距于 ℓ²　`thm.separable-hilbert-is-l2`
 *定理*　可分 Hilbert 空间等距同构于 $\ell^2$
@@ -12353,9 +12353,9 @@ Zorn 给极大元 $M$。
 
 ⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。
 
-⚠️ 「可分」不能去掉：$\ell^2(I)$（不可数 $I$）与 $\ell^2(J)$ 同构 $\iff |I| = |J|$（用正交基的基数比）。
+⚠️ 「可分」不能去掉：$\ell^2(I)$（不可数 $I$）与 $\ell^2(J)$ 同构 $\iff \#I = \#J$（用正交基的基数比）。
 
-参考：泛函分析讲义 2026-10-19
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 ### 星团：$C(K)$ 与 Stone–Weierstrass
 > 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
@@ -12373,7 +12373,7 @@ $E$ 赋范时它就是一致范数 $\|f\| = \sup_x \|f(x)\|$。
 
 ⭐ 记号允许任意度量空间 $E$，所以这一团的结论（完备性、Arzelà–Ascoli）比经典的 $\mathbb{R}$-值版本更宽。
 
-参考：泛函分析讲义 2026-10-19
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### C(K,E) 完备　`thm.ck-complete`
 *定理*　$E$ 完备 $\implies$ $C(K,E)$ 完备
@@ -12384,7 +12384,7 @@ $E$ 赋范时它就是一致范数 $\|f\| = \sup_x \|f(x)\|$。
 
 ⭐ 为什么重要：一致收敛空间让人能「把连续函数的极限留在连续函数里」，这是 Stone–Weierstrass、Arzelà–Ascoli、乃至 $C^*$-代数全部的前提。
 
-参考：泛函分析讲义 2026-10-19
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### 等度连续　`def.equicontinuous`
 *定义*　等度连续与一致等度连续
@@ -12401,7 +12401,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 ⭐ 这是紧性（Arzelà–Ascoli）里**唯一非平凡**的假设：逐点全有界只是「不发散」，等度连续才是「不会越抖越厉害」。
 
-参考：泛函分析讲义 2026-10-19
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### 等度连续与一致等度连续　`thm.equicontinuous-uniform`
 *定理*　紧度量空间上等度连续 $\implies$ 一致等度连续
@@ -12418,7 +12418,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 ⭐ 讲义末尾用的是 **Lebesgue 数** $\lambda$（$\delta(x,y) < \lambda$ 就落在某个覆盖成员里）。两种写法等价；Lebesgue 数版本的好处是 $\lambda$ 只依赖覆盖。
 
-参考：泛函分析讲义 2026-10-19
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### 广义 Arzelà–Ascoli　`thm.arzela-ascoli-general`
 *定理*　广义 Arzelà–Ascoli：全有界 $\iff$ 等度连续 + 逐点全有界
@@ -12436,7 +12436,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 配合「$C(K,E)$ 完备」就是标准形式：**全有界 + 完备 $=$ 相对紧**。
 
-参考：泛函分析讲义 2026-10-19
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### 子代数与分离点　`def.subalgebra-separating`
 *定义*　子代数、分离点、格
@@ -12451,7 +12451,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 ⚠️ 自伴矩阵的例子（讲义）：自伴矩阵按 $A \ge B \iff A - B$ 半正定排序，一般**不是格**（两个自伴矩阵的逐点 min 未必自伴）。所以「格」不是自动的，要靠「闭 + 含单位」换。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 #### 闭子代数是格　`lem.closed-subalgebra-lattice`
 *引理*　含单位的闭子代数是格
@@ -12468,7 +12468,7 @@ $A$ 闭故 $\sqrt f \in A$。
 
 ⭐ 这是 Stone–Weierstrass 的**第一步**：先把「代数」升级成「格」，后面才能用 $\min/\max$ 上下夹住 $f$。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 #### Stone–Weierstrass 定理　`thm.stone-weierstrass`
 *定理*　Stone–Weierstrass 定理（实情形）
@@ -12509,7 +12509,7 @@ $\varepsilon$ 任意，于是 $f \in \overline{A}$，于是 $\overline{A} = C(K)
 
 ⭐ 这是「用**代数**性质换**逼近**能力」的样板：不需要光滑、不需要可数、不需要任何具体核。经典 Weierstrass 定理（多项式逼近）就是 $K = [a,b]$、$A = $ 多项式的特例。
 
-参考：泛函分析讲义 2026-10-26；Stone 1937
+参考：Rudin, Functional Analysis · Stone–Weierstrass 定理；Stone 1937
 
 #### Stone–Weierstrass（复情形）　`thm.stone-weierstrass-complex`
 *定理*　Stone–Weierstrass 定理（复情形）
@@ -12522,7 +12522,7 @@ $\varepsilon$ 任意，于是 $f \in \overline{A}$，于是 $\overline{A} = C(K)
 
 ⭐ 讲义在这里接上了表示论：紧群 $G$ 的矩阵系数 $e_{ij}$ 生成 $C(G)$（因 $\{e_{ij}\}$ 对共轭封闭），且 $\Delta : C(G) \to C(G) \otimes C(G)$，$e_{ij} \mapsto \sum_k e_{ik} \otimes e_{kj}$ —— Peter–Weyl 的代数骨架。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 #### Bernstein 多项式逼近　`thm.bernstein-approximation`
 *定理*　Bernstein 多项式逼近（Weierstrass 定理的显式证明）
@@ -12537,7 +12537,7 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 
 ⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。
 
-参考：泛函分析讲义 2026-10-26；Bernstein 1912
+参考：Rudin, Functional Analysis · Stone–Weierstrass 定理；Bernstein 1912
 
 ### 星团：Baire 纲与三大定理
 > 造出一把「拓扑大小」的尺子（无处稠密 → 第一/第二纲 → 剩余集），然后一次抽出三大定理：一致有界（Banach–Steinhaus）、开映射（含逆算子）、闭图像。
@@ -12553,7 +12553,7 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 
 ⭐ Cantor 集是最有教育意义的例子：它**无处稠密**却**不可数**。所以「无处稠密」与「基数小」是两件事。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### 第一纲 / 第二纲　`def.meager-set`
 *定义*　第一纲集、第二纲集与剩余集
@@ -12566,7 +12566,7 @@ $A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可�
 
 ⭐ 用法：想说「几乎所有点都满足 $P$」，就去证 $\{x : \neg P(x)\}$ 第一纲。在无穷维里这比测度论更顺手（很多函数空间没有自然测度，但有 Baire 纲）。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### G_δ 与 F_σ　`def.g-delta`
 *定义*　$G_\delta$ 集与 $F_\sigma$ 集
@@ -12577,7 +12577,7 @@ $A$ 叫 **$G_\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\sigma$
 
 ⭐ Baire 之后，「稠密 $G_\delta$」是「几乎全部的点」的标准写法：连续点集、可微点集、$C[0,1]$ 里无处可微函数的全体，全是稠密 $G_\delta$。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### Baire 纲定理　`thm.baire`
 *定理*　Baire 纲定理
@@ -12615,7 +12615,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⚠️ 完备性不能去掉：$\mathbb{Q}$ 上每个单点闭且无处稠密，$\mathbb{Q}$ 可数，故 $\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。
 
-参考：泛函分析讲义 2026-10-26；Baire 1899
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法；Baire 1899
 
 #### 局部紧 Hausdorff 是 Baire　`thm.locally-compact-baire`
 *定理*　局部紧 Hausdorff 空间是 Baire 空间
@@ -12626,7 +12626,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⭐ 意义：这条把 Baire 纲从「度量」里解放出来，于是它能用在 $C(K)$、紧群、Stone 空间这些非度量对象上 —— 凝聚态数学里的紧 Hausdorff 空间因此也能用「一般点」论证。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### Baire 的三条等价刻画　`prop.baire-characterizations`
 *命题*　Baire 空间的等价刻画与「纲的用法」
@@ -12643,7 +12643,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### Baire 的开子集是 Baire　`thm.baire-open-subset`
 *定理*　Baire 空间的开子集仍是 Baire 空间
@@ -12658,7 +12658,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 ⭐ 用处：开映射定理要在开集上做局部论证、UBP 要看开子集，这条保证「局部化之后 Baire 性质不丢」。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### 闭覆盖的内点　`lem.countable-closed-cover`
 *引理*　可数个闭集覆盖 $X$ $\implies$ 内点之并稠密
@@ -12669,7 +12669,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### 连续点集是稠密 G_δ　`thm.pointwise-limit-continuity`
 *定理*　连续函数点态极限的连续点集
@@ -12690,7 +12690,7 @@ $$\operatorname{cont}(f) := \{x : f \text{ 在 } x \text{ 连续}\}$$
 
 ⭐ 同一模板的经典产物：$C[0,1]$ 里「处处不可微」的函数构成稠密 $G_\delta$（Banach 1931）。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 #### 共鸣定理　`thm.ubp`
 *定理*　共鸣定理（一致有界原理 / Banach–Steinhaus）
@@ -12713,7 +12713,7 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 
 ⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\|u_n\| = n \to \infty$。
 
-参考：泛函分析讲义 2026-10-26；Banach–Steinhaus 1927
+参考：Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像；Banach–Steinhaus 1927
 
 #### 共振集是稠密 G_δ　`cor.ubp-resonance`
 *推论*　共振集：一致无界 $\implies$ 发散点稠密
@@ -12732,7 +12732,7 @@ $R = \bigcap_k \Omega_k$ 是 $G_\delta$。
 
 ⭐ 意义：「发散」不是个别点，而是**几乎处处**。经典应用：Fourier 级数部分和算子满足 $\|S_N\| \to \infty$，于是**存在**连续函数其 Fourier 级数在某点发散（du Bois-Reymond 1876）—— 而且这样的函数「很多」。
 
-参考：泛函分析讲义 2026-10-26
+参考：Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像
 
 #### 开映射定理（Banach 版）　`thm.open-mapping-banach`
 *定理*　开映射定理：满射有界算子把开集映成开集
@@ -12780,7 +12780,7 @@ $$E = \bigcup_{k \ge 1} \overline{k\,B_E} \quad\Longrightarrow\quad u(E) = F = \
 
 ⚠️ 与图中 `thm.open-mapping`（**非常数全纯函数**把开集映成开集）**同名不同物**：那条是复分析结论，这条是线性算子的（Baire + 级数逼近）。
 
-参考：Rudin, Functional Analysis, 2.11
+参考：Rudin, Functional Analysis · 开映射定理（Baire 纲的第一步）
 
 #### 逆算子定理　`thm.bounded-inverse`
 *定理*　逆算子定理：双射有界算子有有界逆
@@ -12793,7 +12793,7 @@ $$E = \bigcup_{k \ge 1} \overline{k\,B_E} \quad\Longrightarrow\quad u(E) = F = \
 
 ⭐ 与 `thm.inverse-function-banach`（Banach 版**逆映射定理**）分工：那条是**非线性**的（$f'(a)$ 可逆 $\implies$ 局部微分同胚，证明用 Neumann 级数 + 压缩映射）；这条是**线性**双射的（证明用 Baire）。两者常被混称，但内容与证法都不同。
 
-参考：Rudin, Functional Analysis, 2.12
+参考：Rudin, Functional Analysis · 开映射定理
 
 #### 闭图像定理　`thm.closed-graph`
 *定理*　闭图像定理
@@ -12822,7 +12822,7 @@ $$x_n \to x \ \text{且} \ u(x_n) \to y \quad \Longrightarrow \quad y = u(x) .$$
 
 ⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。
 
-参考：Rudin, Functional Analysis, 2.15
+参考：Rudin, Functional Analysis · 闭图像定理
 
 ## 星系：实变函数（Functions of a Real Variable）
 > 换一套更听话的积分：σ-代数 → 测度 → 可测函数 → Lebesgue 积分（单调收敛 / Fatou / 控制收敛）→ 乘积测度与 Fubini → 符号测度与 Radon–Nikodym → 微分定理 → $L^p$ 空间。
@@ -36288,7 +36288,7 @@ DCT 的证明是正负部各用一次 Fatou —— 又回到 $L^{+}$。
 3. 对 $S' := (v_2, \ldots, v_n)$ 与生成集 $T'$（$n - 1$ 与 $m$ 个元素）用归纳假设：得 $n - 1 \le m$，即 $n \le m + 1$，且可以从 $T'$ 中删 $n - 1$ 个换入 $S'$ 仍生成。
 4. 合并第 2、3 步：从 $T$ 中删去 $w_1$ 与那 $n - 1$ 个，换入 $v_1, \ldots, v_n$，仍生成 $V$。
 
-（归纳假设给出的其实是 $n - 1 \le m$，要得到 $n \le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $|S| \le |T|$ 且可交换。上面的第 3 步用 $T'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎
+（归纳假设给出的其实是 $n - 1 \le m$，要得到 $n \le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $\#S \le \#T$ 且可交换。上面的第 3 步用 $T'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎
 
 **基的存在性**：取 $T = $ 一组有限生成集、$S = \emptyset$ 逐步扩，或直接对无关集用 Zorn 引理（无限维情形），即得「每个向量空间有基」。
 
@@ -37740,7 +37740,7 @@ $$g_1 \sim g_2 \iff g_1^{-1} g_2 \in H \iff g_2 \in g_1 H,$$
 
 所以等价类正是左陪集。等价类构成划分，故**左陪集两两不交且覆盖 $G$**。
 
-**第二步：每个左陪集与 $H$ 等势。** 映射 $\varphi : H \to gH$，$h \mapsto gh$，有逆 $gh \mapsto h$（良定义：$gh_1 = gh_2 \implies h_1 = h_2$）。故 $|gH| = |H|$。
+**第二步：每个左陪集与 $H$ 等势。** 映射 $\varphi : H \to gH$，$h \mapsto gh$，有逆 $gh \mapsto h$（良定义：$gh_1 = gh_2 \implies h_1 = h_2$）。故 $|gH| = \#H$。
 
 **第三步：数个数。** 设不同左陪集为 $g_1H, \ldots, g_k H$。由第一步 $G = \bigsqcup_{i} g_i H$，两边取基数并用第二步：
 
@@ -49249,7 +49249,7 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
 等势的定义就是「存在**双射**」。
 
-#### 定义引用：「等势」→ 基数 |A|　`dep.equinumerous-cardinal`
+#### 定义引用：「等势」→ 基数　`dep.equinumerous-cardinal`
 
 基数就是等势类：先有「等势」，才谈得上「$A$ 有多大」。
 
@@ -49257,9 +49257,9 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
 可数 = 与 $\mathbb{N}$ **等势**；至多可数 = 能单射进 $\mathbb{N}$。
 
-#### 定义引用：「基数 |A|」→ Cantor 定理　`dep.cardinal-cantor`
+#### 定义引用：「基数」→ Cantor 定理　`dep.cardinal-cantor`
 
-「$|A| < |\mathcal{P}(A)|$」是一个关于**基数**的比较。
+「$\#A < |\mathcal{P}(A)|$」是一个关于**基数**的比较。
 
 #### 定义引用：「幂集 𝒫(X)」→ Cantor 定理　`dep.powerset-cantor`
 
@@ -49269,7 +49269,7 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
 前提与结论都由**单射 / 双射**写成。
 
-#### 定义引用：「基数 |A|」→ 基数可比定理　`dep.cardinal-comparable-thm`
+#### 定义引用：「基数」→ 基数可比定理　`dep.cardinal-comparable-thm`
 
 「任意两个基数可比」是关于**基数**的命题。
 
@@ -49343,10 +49343,10 @@ $$f(A^{*}) = \bigcup_{n} f(A_n) = \bigcup_{n} g^{-1}(A_{n+1}) \subseteq g^{-1}(A
 
 **③ 序数可比。** 对任意两个序数 $\alpha$、$\beta$，总有 $\alpha \in \beta$、$\alpha = \beta$、$\beta \in \alpha$ 三者之一成立（这一步是序数理论的基本事实，用的是良序性）。
 
-- 若 $\alpha \subseteq \beta$：序同构给出单射 $A \to B$，于是 $|A| \le |B|$；
-- 若 $\beta \subseteq \alpha$：同理 $|B| \le |A|$。
+- 若 $\alpha \subseteq \beta$：序同构给出单射 $A \to B$，于是 $\#A \le \#B$；
+- 若 $\beta \subseteq \alpha$：同理 $\#B \le \#A$。
 
-所以必有 $|A| \le |B|$ 或 $|B| \le |A|$。$\blacksquare$
+所以必有 $\#A \le \#B$ 或 $\#B \le \#A$。$\blacksquare$
 
 > 反过来说：**基数可比定理 $\implies$ 良序定理**（取 $A$、$B$ 中能单射进另一个的那个方向，可以良序化较小的集合，再把良序搬到较大集合上）。所以它与 AC、良序定理、佐恩引理是同一件事。
 
@@ -49526,9 +49526,9 @@ $L^1$ 的元素不是函数本身，而是**函数在 a.e. 相等下的等价类
 
 定理说的就是「$\mathbb{R}$ **不可数**」。
 
-#### 定义引用：「基数 |A|」→ ℝ 不可数　`dep.cardinal-uncountable`
+#### 定义引用：「基数」→ ℝ 不可数　`dep.cardinal-uncountable`
 
-结论写成基数就是 $|\mathbb{R}| = 2^{\aleph_0} > \aleph_0$。
+结论写成基数就是 $\#\mathbb{R} = 2^{\aleph_0} > \aleph_0$。
 
 #### 定义引用：「Cantor 定理」→ ℝ 不可数　`dep.cantor-uncountable`
 
@@ -49756,9 +49756,9 @@ $\blacksquare$
 
 **④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\mathbb{R} \hookrightarrow \mathcal{P}(\mathbb{N})$；
 
-反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $|\mathbb{R}| = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0}$。
+反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\#\mathbb{R} = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0}$。
 
-再由 **Cantor 定理** $|\mathcal{P}(\mathbb{N})| > |\mathbb{N}| = \aleph_0$，即
+再由 **Cantor 定理** $|\mathcal{P}(\mathbb{N})| > \#\mathbb{N} = \aleph_0$，即
 
 $$|\mathbb{R}| = 2^{\aleph_0} > \aleph_0$$
 
@@ -49798,9 +49798,9 @@ Hartogs 定理陈述里的「不能单射进 $X$ 的序数」直接用到序数�
 
 基数可比定理的证明路线是「先良序化 $\to$ 换成序数 $\to$ 序数一定可比」，落点正是序数。
 
-#### 定义引用：「序数」→ 基数 |A|　`def-link.ordinal-cardinal`
+#### 定义引用：「序数」→ 基数　`def-link.ordinal-cardinal`
 
-严格说来「等势类」装不进任何集合，通行做法是取每个等势类里最小的**序数**作代表 —— 那个序数才叫基数。（本图的 $|A|$ 只用到单射/双射，所以这条依赖是概念上的，不是定义上的。）
+严格说来「等势类」装不进任何集合，通行做法是取每个等势类里最小的**序数**作代表 —— 那个序数才叫基数。（本图的 $\#A$ 只用到单射/双射，所以这条依赖是概念上的，不是定义上的。）
 
 #### 定义引用：「超限递归」→ 良序定理　`def-link.recursion-wellordering`
 
@@ -55179,7 +55179,7 @@ $s - \varepsilon$ 不是 $\{x_n\}$ 的上界（$s$ 是最小上界），所以�
 
 现在构造子列：对每个 $k$，因为 $I_k$ 含无穷多项，可以取 $n_k > n_{k-1}$ 使 $x_{n_k} \in I_k$（这一步只用到「无穷多项」可以在选完前一项之后继续往下选）。
 
-于是 $x_{n_k}$ 与 $x$ 同属 $I_k$，而 $|I_k| = 2M/2^{k} \to 0$，故 $|x_{n_k} - x| \le 2M / 2^{k} \to 0$，即 $x_{n_k} \to x$。
+于是 $x_{n_k}$ 与 $x$ 同属 $I_k$，而 $\#I_k = 2M/2^{k} \to 0$，故 $|x_{n_k} - x| \le 2M / 2^{k} \to 0$，即 $x_{n_k} \to x$。
 
 ∎
 

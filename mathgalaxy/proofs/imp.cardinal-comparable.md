@@ -11,9 +11,9 @@
 
 **③ 序数可比。** 对任意两个序数 $\alpha$、$\beta$，总有 $\alpha \in \beta$、$\alpha = \beta$、$\beta \in \alpha$ 三者之一成立（这一步是序数理论的基本事实，用的是良序性）。
 
-- 若 $\alpha \subseteq \beta$：序同构给出单射 $A \to B$，于是 $|A| \le |B|$；
-- 若 $\beta \subseteq \alpha$：同理 $|B| \le |A|$。
+- 若 $\alpha \subseteq \beta$：序同构给出单射 $A \to B$，于是 $\#A \le \#B$；
+- 若 $\beta \subseteq \alpha$：同理 $\#B \le \#A$。
 
-所以必有 $|A| \le |B|$ 或 $|B| \le |A|$。$\blacksquare$
+所以必有 $\#A \le \#B$ 或 $\#B \le \#A$。$\blacksquare$
 
 > 续见 proofs/imp.cardinal-comparable.2.md

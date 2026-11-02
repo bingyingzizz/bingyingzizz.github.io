@@ -16,7 +16,7 @@ layer 11 · 定义 · Hilbert 空间 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.orthonormal-set.2.md](./def.orthonormal-set.2.md)
 
-refs: 泛函分析讲义 2026-10-19
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.orthonormal-set.md`
 

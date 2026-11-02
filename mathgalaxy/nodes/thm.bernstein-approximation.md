@@ -10,9 +10,9 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 则 $\|B_n f - f\|_\infty \to 0$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ck-space`](../nodes/def.ck-space.md) C(K,E)：用到了定义 C(K,E)　[proofs/def-link.fa-ck-bernstein.md](../proofs/def-link.fa-ck-bernstein.md)
+- …另有入边，续页见 [nodes/thm.bernstein-approximation.2.md](./thm.bernstein-approximation.2.md)
 
-refs: 泛函分析讲义 2026-10-26；Bernstein 1912
+refs: Rudin, Functional Analysis · Stone–Weierstrass 定理；Bernstein 1912
 
 > 说明见 `notes/thm.bernstein-approximation.md`
 

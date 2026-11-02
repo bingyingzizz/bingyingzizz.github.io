@@ -7,12 +7,15 @@ $A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可�
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密：用到了定义 无处稠密　[proofs/def-link.fa-nowhere-meager.md](../proofs/def-link.fa-nowhere-meager.md)
-- [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包：用到了定义 闭集与闭包　[proofs/dep-link.closedset-meager.md](../proofs/dep-link.closedset-meager.md)
+
+- …另有入边，续页见 [nodes/def.meager-set.2.md](./def.meager-set.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.meager-set.2.md](./def.meager-set.2.md)
+- 被 [`prop.baire-characterizations`](../nodes/prop.baire-characterizations.md) Baire 的三条等价刻画 用
 
-refs: 泛函分析讲义 2026-10-26
+- …另有出边，续页见 [nodes/def.meager-set.3.md](./def.meager-set.3.md)
+
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 > 说明见 `notes/def.meager-set.md`
 

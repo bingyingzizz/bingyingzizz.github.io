@@ -11,7 +11,7 @@ layer 11 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.stone-weierstrass.2.md](./thm.stone-weierstrass.2.md)
 
-refs: 泛函分析讲义 2026-10-26；Stone 1937
+refs: Rudin, Functional Analysis · Stone–Weierstrass 定理；Stone 1937
 
 > 说明见 `notes/thm.stone-weierstrass.md`
 

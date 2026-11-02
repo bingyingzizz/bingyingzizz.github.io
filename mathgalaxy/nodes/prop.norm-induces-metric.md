@@ -14,7 +14,7 @@ layer 14 · 命题 · 赋范空间与有界算子 · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.norm-induces-metric.2.md](./prop.norm-induces-metric.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/prop.norm-induces-metric.md`
 

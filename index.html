@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」三层组织，每个概念一页，边是推出、等价与定义引用。人可读，AI 可查。">
+<meta name="description" content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」三层知识尺度组织（外层还有一个「大板块」把星系归类），每个概念一页，边是推出、等价与定义引用。人可读，AI 可查。">
 <!-- Google Search Console 的站点所有权验证（用户 2026-10-14 从 GSC 取的）。
      ⛔ 别删这行：删掉 = Google 认为所有权失效，已经建好的索引会慢慢掉光。
      ⚠️ 只放首页 ——「网址前缀」资源的验证就是查 https://bingyingzizz.github.io/ 这一个 URL。
@@ -36,11 +36,24 @@
   <h1 class="enter" style="--i:0">数学星图 MathGalaxy</h1>
   <p class="sub enter" style="--i:1">bingyingzizz 的数学笔记与一些别的</p>
 
+  <!-- ⭐ 首屏就让人「能开始做一件事」（外部评审 2026-11-02 提的，认了）：
+       三个入口都只用**已有的**深链能力（#n= 节点 / #e= 连线 / all.html 索引），
+       不新增前端逻辑。项目目录往后排，因为它回答的是「这是什么」而不是「我能干什么」。 -->
+  <nav class="tasks enter" style="--i:2" aria-label="开始使用">
+    <a href="mathgalaxy/all.html"><b>查一个概念</b><span>中文名 / 英文名 / 常见叫法都行 —— 从索引找到那一页</span></a>
+    <a href="mathgalaxy/#n=thm.de-rham"><b>看前置知识</b><span>选一个目标，右侧面板列出它依赖什么、又被谁依赖</span></a>
+    <a href="mathgalaxy/"><b>随便探索</b><span>直接进完整星图：滚轮缩放、拖拽平移、点节点看详情</span></a>
+  </nav>
+  <p class="try enter" style="--i:2">试一个：
+    <a href="mathgalaxy/#e=imp.repl-to-sep">为什么分离公理模式可以由替换公理模式推出？</a>
+    <a href="mathgalaxy/#n=lem.zorn">Zorn 引理站在哪些前置上？</a></p>
+
   <h2 class="enter" style="--i:2">项目</h2>
 
   <a class="card enter" style="--i:3" href="mathgalaxy/">
     <b>数学星图 · MathGalaxy</b>
-    <span>可交互的数学知识图谱 —— 定理、定义、引理按「星系 / 星团 / 恒星」三层组织，
+    <span>可交互的数学知识图谱 —— 按「大板块 / 星系 / 星团 / 节点」四级导航组织，
+    后三级就是「星系 / 星团 / 恒星」三层知识尺度（大板块只是把星系再归一次类）；
     箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
     内容覆盖 15 星系 / 102 星团 / 1460 节点 / 2753 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
     <i class="go">→</i>
@@ -85,20 +98,21 @@
   </a>
   <a class="card enter" style="--i:9" href="read.html#hubs">
     <b data-vt>枢纽定理榜</b>
-    <span>按被引用次数排序 —— 哪些东西是真正的地基，值得优先学熟。</span>
+    <span>三个榜：<b>基础工具</b>（很多结论靠它，值得先学熟）·<b>综合结论</b>（由很多前置推出，
+    学之前得先懂一片）·<b>跨领域连接</b>（位置中心，但不是入门顺序）。</span>
     <i class="go">→</i>
   </a>
 
   <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
   <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
     <b>graph.md</b>
-    <span>整张星图的 Markdown 全量导出（约 420 KB）。适合一次下载、本地处理；
+    <span>整张星图的 Markdown 全量导出（约 3.3 MB）。适合一次下载、本地处理；
     ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
     <i class="go">↓</i>
   </a>
   <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
     <b>graph.json</b>
-    <span>机器可读的全量版本（约 550 KB），每条边带 strength（强边 / 弱边）与完整证明。
+    <span>机器可读的全量版本（约 4.7 MB），每条边带 strength（强边 / 弱边）与完整证明。
     同样只适合下载，不适合单次抓取。</span>
     <i class="go">↓</i>
   </a>

@@ -4,14 +4,13 @@ layer 18 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.arzela-ascoli-general)　·　[节点索引](../index.md)
 
 设 $K$ 紧、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。则下列**等价**：
+> 陈述续见 [nodes/thm.arzela-ascoli-general.2.md](./thm.arzela-ascoli-general.2.md)
 
-1. $\mathcal{H}$ 在 $(C(K,E), \Delta)$ 中**全有界**；
-2. (a) $\mathcal{H}$ 等度连续；(b) $\mathcal{H}(x) := \{f(x) : f \in \mathcal{H}\}$ 对每个 $x \in K$ **全有界**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.arzela-ascoli-general.2.md](./thm.arzela-ascoli-general.2.md)
+- …另有入边，续页见 [nodes/thm.arzela-ascoli-general.3.md](./thm.arzela-ascoli-general.3.md)
 
-refs: 泛函分析讲义 2026-10-19
+refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 > 说明见 `notes/thm.arzela-ascoli-general.md`
 

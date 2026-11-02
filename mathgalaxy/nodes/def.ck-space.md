@@ -11,12 +11,15 @@ $E$ 赋范时它就是一致范数 $\|f\| = \sup_x \|f(x)\|$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/def-link.fa-hausdorff-ck.md](../proofs/def-link.fa-hausdorff-ck.md)
-- [`def.uniform-convergence`](../nodes/def.uniform-convergence.md) 一致收敛：用到了定义 一致收敛　[proofs/def-link.fa-uniformconv-ck.md](../proofs/def-link.fa-uniformconv-ck.md)
+
+- …另有入边，续页见 [nodes/def.ck-space.2.md](./def.ck-space.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.ck-space.2.md](./def.ck-space.2.md)
+- ⇒ [`thm.ck-complete`](../nodes/thm.ck-complete.md) C(K,E) 完备
 
-refs: 泛函分析讲义 2026-10-19
+- …另有出边，续页见 [nodes/def.ck-space.3.md](./def.ck-space.3.md)
+
+refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 > 说明见 `notes/def.ck-space.md`
 

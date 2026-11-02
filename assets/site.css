@@ -54,6 +54,18 @@ footer a{color:var(--soft)}
 .about-en .meta-en{color:var(--faint);font-size:13.5px;margin-bottom:0}
 
 /* ------------------------------------------------------------ 卡片（首页） */
+/* 首屏的三个任务入口（查概念 / 看前置 / 随便探索）。
+   ⚠️ 窄屏必须降成一列：手机上三列会把字挤成竖线。 */
+.tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 10px}
+.tasks a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:12px;
+  color:inherit;transition:border-color .2s var(--ease),box-shadow .24s var(--ease)}
+.tasks a:hover{text-decoration:none;border-color:rgba(20,22,28,.20);
+  box-shadow:0 6px 20px rgba(16,20,30,.07)}
+.tasks b{display:block;font-size:14.5px;font-weight:650;margin-bottom:3px}
+.tasks span{display:block;color:var(--soft);font-size:12.5px;line-height:1.6}
+.try{margin:0 0 40px;color:var(--soft);font-size:13.5px}
+.try a{margin-right:14px;white-space:nowrap}
+@media (max-width:640px){.tasks{grid-template-columns:1fr}.try a{display:block;margin:4px 0;white-space:normal}}
 .card{position:relative;display:block;padding:18px 52px 18px 22px;border:1px solid var(--line);
   border-radius:14px;margin-bottom:12px;color:inherit;overflow:hidden;
   transition:border-color .2s var(--ease),box-shadow .28s var(--ease),

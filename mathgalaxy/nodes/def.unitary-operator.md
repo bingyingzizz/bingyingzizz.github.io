@@ -12,7 +12,7 @@ $$u\,u^* = u^*\,u = I .$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.unitary-matrix`](../nodes/def.unitary-matrix.md) 酉矩阵与正交矩阵：用到了定义 酉矩阵与正交矩阵　[proofs/def-link.fa-unitarymatrix.md](../proofs/def-link.fa-unitarymatrix.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.unitary-operator.md`
 

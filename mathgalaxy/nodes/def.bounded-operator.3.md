@@ -2,5 +2,4 @@
 [在星图里打开](../#n=def.bounded-operator)　·　第 1 页 [nodes/def.bounded-operator.md](./def.bounded-operator.md)　·　上一页 [nodes/def.bounded-operator.2.md](./def.bounded-operator.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- ⇒ [`thm.linear-continuous-bounded`](../nodes/thm.linear-continuous-bounded.md) 连续 ⟺ 有界
 - 被 [`prop.operator-algebra`](../nodes/prop.operator-algebra.md) 算子乘法的范数不等式 用

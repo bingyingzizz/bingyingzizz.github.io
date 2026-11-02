@@ -11,7 +11,7 @@ $A$ 叫 **$G_\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\sigma$
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.pointwise-limit-continuity`](../nodes/thm.pointwise-limit-continuity.md) 连续点集是稠密 G_δ 用
 
-refs: 泛函分析讲义 2026-10-26
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 > 说明见 `notes/def.g-delta.md`
 

@@ -15,9 +15,9 @@ $$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
 - [`def.induced-norm`](../nodes/def.induced-norm.md) 诱导范数与距离：用到了定义 诱导范数与距离　[proofs/def-link.fa-inducednorm-pol.md](../proofs/def-link.fa-inducednorm-pol.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.parallelogram-inner-product`](../nodes/thm.parallelogram-inner-product.md) 平行四边形法则
+- …另有出边，续页见 [nodes/thm.polarization.2.md](./thm.polarization.2.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.polarization.md`
 

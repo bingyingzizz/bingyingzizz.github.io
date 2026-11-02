@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.orthonormal-set`](../nodes/def.orthonormal-set.md) 正交基：用到了定义 正交基　[proofs/def-link.fa-orthonormal-bessel.md](../proofs/def-link.fa-orthonormal-bessel.md)
+
+> 续见 [nodes/thm.bessel-parseval.3.md](./thm.bessel-parseval.3.md)

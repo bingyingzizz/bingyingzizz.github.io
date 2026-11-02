@@ -12,9 +12,9 @@ layer 12 · 定理 · 赋范空间与有界算子 · 泛函分析
 5. $u$ 是 Lipschitz 的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子：有界 $\iff$ 连续（线性）　[proofs/imp.fa-lincont-bounded.md](../proofs/imp.fa-lincont-bounded.md)
+- …另有入边，续页见 [nodes/thm.linear-continuous-bounded.2.md](./thm.linear-continuous-bounded.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/thm.linear-continuous-bounded.md`
 

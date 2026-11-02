@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 709 nodes, 1398 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1460 nodes, 2753 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 709 nodes, 1398 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1460 nodes, 2753 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -1129,7 +1129,7 @@ window.addEventListener('error', function (e) {
 <body>
 
 <!-- ===== 首屏「加载中」 =====
-     为什么要有它：整页是「100 多个 <script> + 1287 个节点」，而启动时 computeLayout
+     为什么要有它：整页是「100 多个 <script> + 一千多个节点」，而启动时 computeLayout
      要一口气算 4 秒左右（O(n²) 的斥力迭代）—— 那 4 秒里主线程被占死，用户看到的是纯白。
      ⚠️ 这一块的样式、脚本全内联，不依赖任何模块；动画只用 transform / opacity。
      ⚠️ 收起它的时机是「**第一帧星图画完**」（app.js 的 frame()），不是 DOMContentLoaded ——
@@ -1303,8 +1303,10 @@ window.MG = window.MG || {};
     <div class="set-sep"></div>
     <div class="set-title" data-t="去别处">去别处</div>
     <a class="set-link" href="../" data-t="⌂ 站点首页">⌂ 站点首页</a>
-    <a class="set-link" href="all.html" id="set-link-all">全部概念索引（706 个）</a>
-    <a class="set-link" href="questions.html" id="set-link-q">常见问法（184 条）</a>
+    <!-- ⚠️ 这两个数字**由 app.js 启动时从图现算**（fixCounts / fixAllCount），这里是 无数字 的静态回退 ——
+        ⛔ 绝对不要在这里手写数量：以前写死的具体数字就是这么过时的（爬虫和禁用 JS 的人看到的也是它）。 -->
+    <a class="set-link" href="all.html" id="set-link-all">全部概念索引</a>
+    <a class="set-link" href="questions.html" id="set-link-q">常见问法</a>
     <a class="set-link" href="read.html" data-t="读图指南与记号表">读图指南与记号表</a>
     <a class="set-link" href="https://github.com/bingyingzizz/MathGalaxy" target="_blank" rel="noopener" data-t="↗ GitHub 源码">↗ GitHub 源码</a>
   </div>
@@ -1321,10 +1323,10 @@ window.MG = window.MG || {};
 
 <!-- ===== 底部：页面标题 + 说明 + 操作提示 =====
      ⚠️ 这一块**必须保持可读**（不能 display:none，也不能靠 sr-only 藏起来）：
-        /mathgalaxy/ 是 2.6 MB 的单文件应用，正文全在 JS 字符串里，渲染完页面上
+        /mathgalaxy/ 是几 MB 的单文件应用，正文全在 JS 字符串里，渲染完页面上
         只有 97 个字符的可见文本 —— 搜索引擎读不到任何内容，整页等于空壳，
         所以这个 URL 至今没被任何搜索引擎收录（实测 site: 查不到）。
-        这里是页面上唯一的静态可读内容，也是通往 706 个概念页与阅读页的入口。
+        这里是页面上唯一的静态可读内容，也是通往每个概念页与阅读页的入口。
      ⚠️ 首页（/）有它自己的内容，**替代不了这里** —— 搜索引擎按 URL 分别索引，
         而别人分享的链接正是这个 /mathgalaxy/。
      关于折叠：说明用 <details open>，默认展开 ⇒ 爬虫读到的就是展开状态；
@@ -1334,8 +1336,9 @@ window.MG = window.MG || {};
   <h1>数学星图 MathGalaxy</h1>
   <details>
     <summary data-t="这是什么 · 怎么用">这是什么 · 怎么用</summary>
-    <p class="hint-lead" data-t="把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 / 领域 / 星团 / 节点」四层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。">把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 / 领域 / 星团 / 节点」
-    四层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。</p>
+    <p class="hint-lead" data-t="把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 › 领域 › 星团 › 节点」四级导航组织成一张可交互的依赖图 —— 后三级就是星图的「星系 / 星团 / 恒星」三层尺度（大板块只是把领域再归一次类）。箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。">把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 › 领域 › 星团 › 节点」
+    四级导航组织成一张可交互的依赖图 —— 后三级就是星图的「星系 / 星团 / 恒星」三层尺度
+    （大板块只是把领域再归一次类）。箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。</p>
     <p class="hint-keys"><span data-t="拖拽平移 · 滚轮 / 双指缩放 · 点击节点聚焦 · 点击连线看推导 · 聚焦后 ←→ 沿边游走">拖拽平移 · 滚轮 / 双指缩放 · 点击节点聚焦 · 点击连线看推导 · 聚焦后 ←→ 沿边游走</span>
     ｜ <a href="all.html" data-t="全部概念索引">全部概念索引</a> · <a href="questions.html" data-t="常见问法">常见问法</a> · <a href="read.html" data-t="读图指南">读图指南</a> · <a href="llms.txt" data-t="检索协议">检索协议</a></p>
   </details>
@@ -1390,11 +1393,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
 
            · **`cluster.blank` 不是这里的旋钮**。只把它从 300 加到 620：
              用户那一屏（k=0.175、884×570）里的点数 379→359（只降 5%），
-             而**全图连线总长 1262k→1561k（+24%）**、超过 3000 的长边 25→84 条。
+             而**全图连线总长 +24%**、超长边多出好几倍。
              星系一胖就顶到邻居，中间反而没变松 —— 长边却全回来了。
            · **真正管用的是星系之间的距离**。它换来的是「那一屏里的点数」：
              1.55 → 322（1.70）→ **294（1.80）**，被挤掉的名字 92 → 77 → 71；
-             而凝聚态那 195 条边只从 174k 涨到 197k（+13%），全图 +7%。
+             而凝聚态那一块只 +13%，全图 +7%。
            · 附带把「两个团的盘真的叠在一起」从 3 对清成 **0 对**
              （它们本来就是「星团之间太近」的字面定义）。
 
@@ -1404,8 +1407,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
          （lod 阈值全是 rel/px 写法，跟着 k₀ 自动走，不用重标）。 */
       regionSpread: 1.55,
       /* ⭐ 2026-10-17 四层结构：**跨大板块的边只按这个折扣牵引**。
-         全库 2101 条边里有 302 条跨板块，它们的平均长 2008、同板块的只有 759 ——
-         不折扣的话这 302 条边会合力把四个板块往中间拽（实测板块质心几乎重合）。
+         跨板块的边平均长度是同板块的两倍多（当年实测），
+         不折扣的话它们会合力把四个板块往中间拽（实测板块质心几乎重合）。
          折扣只改「弹簧的拉力」，不改线的画法：跨板块的关系照旧画出来。 */
       crossSectorPull: 0.35,
       /* ⭐ 2026-10-18：**大板块之间的最小净空**（世界单位，见 layout.js 的
@@ -1473,8 +1476,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       maxFitZoom: 1.25,
       /* ⚠️ 这是「别缩成一粒灰」的下限，但它会**夹住「适配全部」**：
          夹住的时候内容就出血，适配全部名不副实。所以它必须 ≤ 内容真正需要的
-         缩放。内容以后再涨，先来看这个数 —— 现在 221 个点时实际需要 ≈0.20，
-         涨到上千个点会掉到 0.07 上下，那时 minZoom 也要一起降。 */
+         缩放。内容以后再涨，先来看这个数 —— 现在实际需要 ≈0.20，
+         涨到上万点时还会往下走，那时 minZoom 也要一起降。 */
       fitMinZoom: 0.06,
       animateMs: 420              // 相机平移动画时长
     },
@@ -2075,7 +2078,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
   /* ⛔ 这不是渲染（渲染走 KaTeX），也不是给 AI 的 LaTeX —— 只给**摘要**用。
      为什么要它：`plain()` 把公式整个换成空格，于是
        `设 $F$ 是一个集合族，且 $\emptyset \notin F$。`
-     变成「设 是一个集合族，且 。」—— 搜索结果行里就是这种空句（153/709 个节点）。
+     变成「设 是一个集合族，且 。」—— 搜索结果行里就是这种空句（当年约两成节点）。
      这里把**简单**的公式转成 Unicode 记号后留下：`设 F 是一个集合族，且 ∅ ∉ F。`
      长/嵌套的公式照样会剩下噪声，所以调用方还要过一道「够不够干净」的闸（见 search.js）。 */
   var TEX_SYM = {
@@ -5070,7 +5073,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       lodA.clusterName = smoothstep(1.50, 1.70, rRel) * (1 - smoothstep(3.85, 4.80, rRel));
       lodA.nodeName = rRel < 2.8 ? 0 : smoothstep(2.8, 3.0, rRel);
       lodA.trunkName = rRel < 2.4 ? 0 : smoothstep(2.4, 2.6, rRel);
-      /* ⭐⭐ 全景档（r<1.35）**不画节点**，只画团块 + 领域色场：1600×900 里铺 910 个点，
+      /* ⭐⭐ 全景档（r<1.35）**不画节点**，只画团块 + 领域色场：1600×900 里铺上千个点，
          任何布局都会变成均匀纹理（地图不在全览档画每栋楼）。r≥1.35 才淡入节点。 */
       lodA.nodeDot = smoothstep(1.32, 1.42, rRel);
     }
@@ -5132,7 +5135,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ------------------------------------------------------ 视口裁剪 */
     /*
       ⚠️ 「放大之后反而更卡」的根因就在这里：屏幕上只剩几十个点，每帧却仍为全部
-         700 个点、1400 条线算几何、描边、量名字（实测 k=1.6 时屏幕上一个点都没有，
+         上千个点、几千条线算几何、描边、量名字（实测 k=1.6 时屏幕上一个点都没有，
          一帧还要 6.3ms）。下面用裸乘加算屏幕坐标，不为判断分配对象。
 
       线做的是**保守**裁剪：只有所有端点都落在视口同一侧之外才丢 —— 多前提的推出线
@@ -7212,7 +7215,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
            而且**主干 / 枢纽 / 选中 / 悬停 / 搜索命中永远不吃预算**（labelMustDraw）。
            背景（用户 2026-10 在平板上报「一半节点名一直不显示，换个机位换一批」）：
            旧口径 max(70, viewW/10) 在 1200 CSS 宽上只有 120 条，还先被结构性名字吃掉一半 ⇒
-           实测 r=4 时严格屏内 462 个点里只有 39 个有名字（8.4%），r=8 时 43/100。
+           实测 r=4 时严格屏内只有 8.4% 的点有名字，r=8 时 43%。
            名字缺不缺跟相机停在哪有关、跟等多久无关 —— 正是这个确定性的截断。 */
         if (nodeDrawn >= st.budget && !labelMustDraw(n)) {
           st.cutBudget++;
@@ -8887,7 +8890,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
     /* ⭐ 结果行底下那行摘要（2026-10-16 改口径）。
        旧做法：`U.plain(statement)` —— 公式整个被换成空格，于是出现
          「设 是一个集合族，且 。 是 的选择函数，当且仅当 是函数， ； 。」
-       这种空句（709 个节点里 153 个，用户报的）。
+       这种空句（当年约两成节点，用户报的）。
        现在按「读得通」优先挑：
          ① 用 `plainMath`（简单公式转成 Unicode 记号后**留下**）：设 F 是一个集合族，且 ∅ ∉ F。
          ② 整段不通顺就取**第一句通顺的**（句子级挑，别把破句子端出去）
@@ -12894,10 +12897,10 @@ MG.aliases = {
       ② **只是碰巧用同一个词的普通说法** —— 「(A,·) 满足结合律」里的「满足」不是
          def.satisfaction，「由此推出」里的「推出」不是 def.fibered-product。
 
-    ①要链、②不能链。怎么分？实测（706 个面板的陈述+说明都跑一遍，比较
-    「2 字别名要不要邻域」两种口径）：放开之后多出 96 个词、平均链接数 6.05 → 8.21。
-    多出来的**大部分是真术语**（映射 124 个面板、态射 94、复形 62、可数 41、
-    满射 40、余积 39、零调 29…），但高频那一段全是行文词 —— 也就是下面这张表。
+    ①要链、②不能链。怎么分？实测（全库面板的陈述+说明都跑一遍，比较
+    「2 字别名要不要邻域」两种口径）：放开之后多出近百个词、平均链接数 6.05 → 8.21。
+    多出来的**大部分是真术语**（映射、态射、复形、可数、
+    满射、余积、零调… 按面板数降序），但高频那一段全是行文词 —— 也就是下面这张表。
 
     ⛔ 这张表**只影响内文跳转**：这些词在 `aka` 里照旧，**搜索一点不受影响**
       （搜「满足」还是照样能召回 def.satisfaction）。
@@ -12911,7 +12914,7 @@ MG.aliases = {
     '单位',   // 28 —— def.adjunction-unit，「单位元」的行文用法太多
     '无穷',   // 25 —— ax.inf（无穷公理），「无穷多个」是行文
     '包含',   // 22 —— def.subset，「包含」当动词用的比当名词多
-    '命题',   // 21 —— def.formula，图里 295 个节点都是「命题」
+    '命题',   // def.formula，图里绝大多数节点都是「命题」
     '反例',   // 18 —— prop.convergence-counterexamples，行文用词
     '正则',   // 18 —— ax.found（正则公理），也用来形容正则性
     '分离',   // 18 —— ax.sep（分离公理），也用来形容分离性
@@ -12937,7 +12940,7 @@ MG.aliases = {
   /*
     引擎默认 MIN_LEN = 2（中文没有词边界，单字匹配会满页错链）。这里是**人工放行的例外**。
 
-    怎么挑的：把每个候选字在全库（706 个节点、22 万字正文）里的出现上下文**全部 dump
+    怎么挑的：把每个候选字在全库正文里的出现上下文**全部 dump
     出来看**，只留那些确实只当术语用的。下面是落选的，附它们撞上的东西：
 
       ✗ 域 → 开邻域 / 紧邻域 / 定义域 ✗ 模 → 公理模式 / 模型 / 模板
@@ -15689,7 +15692,7 @@ MG.i18nStatements = {
       statement: {
         en:
         'Under the **axiom of choice**: for any two sets $A$ and $B$ we have ' +
-        '$|A| \\le |B|$ or $|B| \\le |A|$.\n\n' +
+        '$\\#A \\le \\#B$ or $\\#B \\le \\#A$.\n\n' +
         'That is, any two cardinals are comparable.',
         status: 'reviewed', basedOn: 'v0.9.1#65d602d2', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
       },
@@ -26128,7 +26131,7 @@ window.MG = window.MG || {};
       regions: ['set-theory'],
       tags: ['定义', '基数'],
       statement: [
-        '集合 $A$ 与 $B$ **等势**（记 $|A| = |B|$ 或 $A \\approx B$），当且仅当存在**双射**',
+        '集合 $A$ 与 $B$ **等势**（记 $\\#A = \\#B$ 或 $A \\approx B$），当且仅当存在**双射**',
         '',
         '$$f : A \\to B$$',
         '',
@@ -26143,22 +26146,22 @@ window.MG = window.MG || {};
       id: 'def.cardinal',
       cluster: 'set.cardinal',
       type: 'definition',
-      label: '基数 |A|',
+      label: '基数',
       title: '基数与基数的比较',
       regions: ['set-theory'],
       tags: ['定义', '基数'],
       statement: [
-        '等势把「所有集合」分成一个个类。「集合 $A$ 的**基数**」$|A|$ 指的就是 $A$ 所在的这个等势类 —— 它衡量 $A$ 有多大，而不关心 $A$ 的元素是什么。',
+        '等势把「所有集合」分成一个个类。「集合 $A$ 的**基数**」$\\#A$ 指的就是 $A$ 所在的这个等势类 —— 它衡量 $A$ 有多大，而不关心 $A$ 的元素是什么。',
         '',
         '比较两个基数：',
         '',
-        '- $|A| \\le |B|$：存在**单射** $A \\to B$；',
-        '- $|A| = |B|$：存在**双射** $A \\to B$（等势）；',
-        '- $|A| < |B|$：$|A| \\le |B|$ 但 $|A| \\ne |B|$。',
+        '- $\\#A \\le \\#B$：存在**单射** $A \\to B$；',
+        '- $\\#A = \\#B$：存在**双射** $A \\to B$（等势）；',
+        '- $\\#A < \\#B$：$\\#A \\le \\#B$ 但 $\\#A \\ne \\#B$。',
         '',
-        '若 $|A| \\le |B|$ 且 $|B| \\le |A|$，则 $|A| = |B|$（Schröder–Bernstein 定理）。'
+        '若 $\\#A \\le \\#B$ 且 $\\#B \\le \\#A$，则 $\\#A = \\#B$（Schröder–Bernstein 定理）。'
       ].join('\n'),
-      notes: '⭐ 记号的用法：$|\\mathbb{N}| = \\aleph_0$（可数无限），$|\\mathbb{R}| = 2^{\\aleph_0}$，且 $\\aleph_0 < 2^{\\aleph_0}$。\n\n⚠ 严格说来「等势类」不构成集合，所以 ZFC 里的通行做法是：先有**序数**，再用良序定理（$\\iff$ AC）取每个等势类里最小的那个序数作代表，那个序数就叫基数。\n\n\n> 本星图只用到「$|A| \\le |B|$ 靠单射、$|A| = |B|$ 靠双射」这两件事 —— 它们不需要选代表就能用。\n\n⚠ 任意两个基数**不一定可比**，这正是**基数可比定理**（要用 AC）的内容。',
+      notes: '⭐ 记号的用法：$\\#\\mathbb{N} = \\aleph_0$（可数无限），$\\#\\mathbb{R} = 2^{\\aleph_0}$，且 $\\aleph_0 < 2^{\\aleph_0}$。\n\n⚠ 严格说来「等势类」不构成集合，所以 ZFC 里的通行做法是：先有**序数**，再用良序定理（$\\iff$ AC）取每个等势类里最小的那个序数作代表，那个序数就叫基数。\n\n\n> 本星图只用到「$\\#A \\le \\#B$ 靠单射、$\\#A = \\#B$ 靠双射」这两件事 —— 它们不需要选代表就能用。\n\n⚠ 任意两个基数**不一定可比**，这正是**基数可比定理**（要用 AC）的内容。',
       refs: ['Kunen, Set Theory, I.6']
     },
 
@@ -26178,7 +26181,7 @@ window.MG = window.MG || {};
         '',
         '也就是说：**不存在**从 $A$ 到 $\\mathcal{P}(A)$ 的满射（当然也不存在双射），但 $a \\mapsto \\{a\\}$ 是单射。'
       ].join('\n'),
-      notes: '⭐ 推论：**没有最大的基数** —— 从任何集合出发，取幂集就得到更大的。\n\n于是\n\n$\\aleph_0 < 2^{\\aleph_0} < 2^{2^{\\aleph_0}} < \\cdots$\n\n取 $A = \\mathbb{N}$ 就得到「$\\mathbb{R}$ 不可数」（$|\\mathbb{R}| = 2^{\\aleph_0}$）。\n\n证明用的是**对角线法**（见边的证明）：那个「对角集」$D = \\{ a \\in A : a \\notin f(a) \\}$ 不在 $f$ 的像里。\n\n这是数学史上最会产定理的一个构造，往后 Cantor–Bernstein、Gödel 不完备定理、停机问题用的都是它。',
+      notes: '⭐ 推论：**没有最大的基数** —— 从任何集合出发，取幂集就得到更大的。\n\n于是\n\n$\\aleph_0 < 2^{\\aleph_0} < 2^{2^{\\aleph_0}} < \\cdots$\n\n取 $A = \\mathbb{N}$ 就得到「$\\mathbb{R}$ 不可数」（$\\#\\mathbb{R} = 2^{\\aleph_0}$）。\n\n证明用的是**对角线法**（见边的证明）：那个「对角集」$D = \\{ a \\in A : a \\notin f(a) \\}$ 不在 $f$ 的像里。\n\n这是数学史上最会产定理的一个构造，往后 Cantor–Bernstein、Gödel 不完备定理、停机问题用的都是它。',
       refs: ['Kunen, Set Theory, I.6']
     },
 
@@ -26210,7 +26213,7 @@ window.MG = window.MG || {};
       regions: ['set-theory'],
       tags: ['定理', '基数', '选择'],
       statement: [
-        '在**选择公理**下：对任意两个集合 $A$、$B$，必有 $|A| \\le |B|$ 或 $|B| \\le |A|$。',
+        '在**选择公理**下：对任意两个集合 $A$、$B$，必有 $\\#A \\le \\#B$ 或 $\\#B \\le \\#A$。',
         '',
         '即任意两个基数都可以比较大小。'
       ].join('\n'),
@@ -26255,7 +26258,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.cardinal',
       usedBy: 'thm.cantor',
-      note: '「$|A| < |\\mathcal{P}(A)|$」是一个关于**基数**的比较。'
+      note: '「$\\#A < |\\mathcal{P}(A)|$」是一个关于**基数**的比较。'
     },
     {
       id: 'dep.powerset-cantor',
@@ -26370,10 +26373,10 @@ window.MG = window.MG || {};
         '',
         '**③ 序数可比。** 对任意两个序数 $\\alpha$、$\\beta$，总有 $\\alpha \\in \\beta$、$\\alpha = \\beta$、$\\beta \\in \\alpha$ 三者之一成立（这一步是序数理论的基本事实，用的是良序性）。',
         '',
-        '- 若 $\\alpha \\subseteq \\beta$：序同构给出单射 $A \\to B$，于是 $|A| \\le |B|$；',
-        '- 若 $\\beta \\subseteq \\alpha$：同理 $|B| \\le |A|$。',
+        '- 若 $\\alpha \\subseteq \\beta$：序同构给出单射 $A \\to B$，于是 $\\#A \\le \\#B$；',
+        '- 若 $\\beta \\subseteq \\alpha$：同理 $\\#B \\le \\#A$。',
         '',
-        '所以必有 $|A| \\le |B|$ 或 $|B| \\le |A|$。$\\blacksquare$',
+        '所以必有 $\\#A \\le \\#B$ 或 $\\#B \\le \\#A$。$\\blacksquare$',
         '',
         '> 反过来说：**基数可比定理 $\\implies$ 良序定理**（取 $A$、$B$ 中能单射进另一个的那个方向，可以良序化较小的集合，再把良序搬到较大集合上）。所以它与 AC、良序定理、佐恩引理是同一件事。'
       ].join('\n')
@@ -27072,7 +27075,7 @@ window.MG = window.MG || {};
         '',
         '此外 $\\mathbb{Q}$ 的嵌入像在 $\\mathbb{R}$ 中**稠密**。'
       ].join('\n'),
-      notes: '⚠ **注意这一条的位置**：它是**定理**，不是定义 —— 先有构造（「实数系 $\\mathbb{R}$」），再证明造出来的东西满足这三组性质。\n\n⭐ **第 (iii) 条才是分析学的引擎**：没有它 $\\mathbb{Q}$ 也满足前两条，但 $\\{ x \\in \\mathbb{Q} : x^2 < 2 \\}$ 在 $\\mathbb{Q}$ 里没有上确界。\n\n（$\\mathbb{Q}$ 因此不是完备有序域 —— 这不是缺陷，而正是要把 $\\mathbb{Q}$ 补成 $\\mathbb{R}$ 的理由。）\n\n由 (iii) 推出分析里最常用的两件事：\n- **单调有界数列收敛**；\n\n\n- **闭区间套定理**、**Bolzano–Weierstrass**、**Cauchy 列收敛**。\n\n⚠ 完备性说的是「**上确界存在**」，不是「极限一定存在」—— 后者是它的推论。\n\n📌 (iii) 的走法分两步（见边的证明）：先证**「$\\mathbb{R}$ 里每个 Cauchy 列都收敛」**（用对角线法从代表元里抽出一个有理 Cauchy 列），再由 Cauchy 完备推出确界原理（二分法造递增列与递减上界列，夹逼到同一个极限）。\n\n📌 由这三条推出来的、后面到处要用的性质：**阿基米德性质**与 **$\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密**（见「阿基米德性质」）；\n\n$\\mathbb{R}$ 还**不可数**（$|\\mathbb{R}| = 2^{\\aleph_0}$）—— 「稠密」与「一样多」是两件事。',
+      notes: '⚠ **注意这一条的位置**：它是**定理**，不是定义 —— 先有构造（「实数系 $\\mathbb{R}$」），再证明造出来的东西满足这三组性质。\n\n⭐ **第 (iii) 条才是分析学的引擎**：没有它 $\\mathbb{Q}$ 也满足前两条，但 $\\{ x \\in \\mathbb{Q} : x^2 < 2 \\}$ 在 $\\mathbb{Q}$ 里没有上确界。\n\n（$\\mathbb{Q}$ 因此不是完备有序域 —— 这不是缺陷，而正是要把 $\\mathbb{Q}$ 补成 $\\mathbb{R}$ 的理由。）\n\n由 (iii) 推出分析里最常用的两件事：\n- **单调有界数列收敛**；\n\n\n- **闭区间套定理**、**Bolzano–Weierstrass**、**Cauchy 列收敛**。\n\n⚠ 完备性说的是「**上确界存在**」，不是「极限一定存在」—— 后者是它的推论。\n\n📌 (iii) 的走法分两步（见边的证明）：先证**「$\\mathbb{R}$ 里每个 Cauchy 列都收敛」**（用对角线法从代表元里抽出一个有理 Cauchy 列），再由 Cauchy 完备推出确界原理（二分法造递增列与递减上界列，夹逼到同一个极限）。\n\n📌 由这三条推出来的、后面到处要用的性质：**阿基米德性质**与 **$\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密**（见「阿基米德性质」）；\n\n$\\mathbb{R}$ 还**不可数**（$\\#\\mathbb{R} = 2^{\\aleph_0}$）—— 「稠密」与「一样多」是两件事。',
       refs: ['Rudin, Principles of Mathematical Analysis, Ch. 1', 'Ch. 3']
     },
 
@@ -27124,7 +27127,7 @@ window.MG = window.MG || {};
       cluster: 'set.numbers',
       type: 'theorem',
       label: 'ℝ 不可数',
-      title: '实数集是稠密而不可数的：$|\\mathbb{R}| = 2^{\\aleph_0}$',
+      title: '实数集是稠密而不可数的：$\\#\\mathbb{R} = 2^{\\aleph_0}$',
       regions: ['analysis', 'set-theory'],
       tags: ['定理', '实数', '不可数', '基数'],
       statement: [
@@ -27134,7 +27137,7 @@ window.MG = window.MG || {};
         '',
         '$$|\\mathbb{R}| = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0} > \\aleph_0$$'
       ].join('\n'),
-      notes: '⭐ 证明走**闭区间套 + 对角线**（见边）：假设 $\\mathbb{R}$ 可以排成 $x_1, x_2, \\ldots$，就用二分法造一串套起来的闭区间，把 $x_n$ 逐个排除出去，再用**完备性**取出它们唯一的公共点 —— 它不等于任何一个 $x_n$。\n\n⚠ 整段证明**只用到 $\\mathbb{R}$ 的完备性**（确界原理），不需要基数理论；\n\n$|\\mathbb{R}| = 2^{\\aleph_0}$ 那一半是拿二进制展开与 $\\mathcal{P}(\\mathbb{N})$ 配对，再引用 Cantor 定理。\n\n**这条定理最反直觉的地方**：$\\mathbb{Q}$ 与 $\\mathbb{R}$ 都稠密、都可以逼近彼此，但 $\\mathbb{Q}$ 可数（排得成一个序列）、$\\mathbb{R}$ 不可数。\n\n**「稠密」与「一样多」是两回事** —— 这也正是分析必须做实数、不能只做有理数的根本原因。',
+      notes: '⭐ 证明走**闭区间套 + 对角线**（见边）：假设 $\\mathbb{R}$ 可以排成 $x_1, x_2, \\ldots$，就用二分法造一串套起来的闭区间，把 $x_n$ 逐个排除出去，再用**完备性**取出它们唯一的公共点 —— 它不等于任何一个 $x_n$。\n\n⚠ 整段证明**只用到 $\\mathbb{R}$ 的完备性**（确界原理），不需要基数理论；\n\n$\\#\\mathbb{R} = 2^{\\aleph_0}$ 那一半是拿二进制展开与 $\\mathcal{P}(\\mathbb{N})$ 配对，再引用 Cantor 定理。\n\n**这条定理最反直觉的地方**：$\\mathbb{Q}$ 与 $\\mathbb{R}$ 都稠密、都可以逼近彼此，但 $\\mathbb{Q}$ 可数（排得成一个序列）、$\\mathbb{R}$ 不可数。\n\n**「稠密」与「一样多」是两回事** —— 这也正是分析必须做实数、不能只做有理数的根本原因。',
       refs: ['Tao, Analysis I, Ch. 8（可数性）', 'Rudin, Principles of Mathematical Analysis, Ch. 2']
     }
   ],
@@ -27319,7 +27322,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.cardinal',
       usedBy: 'thm.real-uncountable',
-      note: '结论写成基数就是 $|\\mathbb{R}| = 2^{\\aleph_0} > \\aleph_0$。'
+      note: '结论写成基数就是 $\\#\\mathbb{R} = 2^{\\aleph_0} > \\aleph_0$。'
     },
     {
       id: 'dep.cantor-uncountable',
@@ -27536,7 +27539,7 @@ window.MG = window.MG || {};
         '',
         '**③ 矛盾。** 由 ① 知 $x_n \\notin I_n$，由 ② 知 $a \\in I_n$，所以 $a \\ne x_n$ 对**一切** $n$ 成立 —— 但 $a \\in \\mathbb{R} = \\{x_1, x_2, \\ldots\\}$，与序列穷尽了 $\\mathbb{R}$ 矛盾。\n\n故 $\\mathbb{R}$ 不可数。\n\n$\\blacksquare$',
         '',
-        '**④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\\mathbb{R} \\hookrightarrow \\mathcal{P}(\\mathbb{N})$；\n\n反过来 $\\mathcal{P}(\\mathbb{N}) \\to \\mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $|\\mathbb{R}| = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0}$。\n\n再由 **Cantor 定理** $|\\mathcal{P}(\\mathbb{N})| > |\\mathbb{N}| = \\aleph_0$，即',
+        '**④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\\mathbb{R} \\hookrightarrow \\mathcal{P}(\\mathbb{N})$；\n\n反过来 $\\mathcal{P}(\\mathbb{N}) \\to \\mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\\#\\mathbb{R} = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0}$。\n\n再由 **Cantor 定理** $|\\mathcal{P}(\\mathbb{N})| > \\#\\mathbb{N} = \\aleph_0$，即',
         '',
         '$$|\\mathbb{R}| = 2^{\\aleph_0} > \\aleph_0$$'
       ].join('\n')
@@ -27860,7 +27863,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.ordinal',
       usedBy: 'def.cardinal',
-      note: '严格说来「等势类」装不进任何集合，通行做法是取每个等势类里最小的**序数**作代表 —— 那个序数才叫基数。（本图的 $|A|$ 只用到单射/双射，所以这条依赖是概念上的，不是定义上的。）'
+      note: '严格说来「等势类」装不进任何集合，通行做法是取每个等势类里最小的**序数**作代表 —— 那个序数才叫基数。（本图的 $\\#A$ 只用到单射/双射，所以这条依赖是概念上的，不是定义上的。）'
     },
     {
       id: 'def-link.recursion-wellordering',
@@ -44079,7 +44082,7 @@ window.MG = window.MG || {};
         '',
         '由闭区间套定理，$\\bigcap_k I_k$ 恰含一点 $x$。',
         '',
-        '现在构造子列：对每个 $k$，因为 $I_k$ 含无穷多项，可以取 $n_k > n_{k-1}$ 使 $x_{n_k} \\in I_k$（这一步只用到「无穷多项」可以在选完前一项之后继续往下选）。\n\n于是 $x_{n_k}$ 与 $x$ 同属 $I_k$，而 $|I_k| = 2M/2^{k} \\to 0$，故 $|x_{n_k} - x| \\le 2M / 2^{k} \\to 0$，即 $x_{n_k} \\to x$。\n\n∎',
+        '现在构造子列：对每个 $k$，因为 $I_k$ 含无穷多项，可以取 $n_k > n_{k-1}$ 使 $x_{n_k} \\in I_k$（这一步只用到「无穷多项」可以在选完前一项之后继续往下选）。\n\n于是 $x_{n_k}$ 与 $x$ 同属 $I_k$，而 $\\#I_k = 2M/2^{k} \\to 0$，故 $|x_{n_k} - x| \\le 2M / 2^{k} \\to 0$，即 $x_{n_k} \\to x$。\n\n∎',
         '',
         '「每个有界无限子集都有聚点」是同一句话的集合版本：把子集排成一个各项互异的数列即可。'
       ].join('\n'),
@@ -46856,11 +46859,11 @@ window.MG = window.MG || {};
         '',
         '于是可以无矛盾地定义 $V$ 的**维数**',
         '',
-        '$$\\dim_K V := |\\mathcal{B}|$$',
+        '$$\\dim_K V := \\#\\mathcal{B}$$',
         '',
         '（$V = \\{0\\}$ 时约定 $\\dim V = 0$；没有有限基时称 $V$ 是**无限维**的。）'
       ].join('\n'),
-      notes: '⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。\n\n证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $|\\mathcal{B}| \\le |\\mathcal{B}\'|$ 与反向。\n\n⚠ 有限维的情形交换引理就够了；\n\n无限维要证明「无限基等势」（用 $|A \\times \\mathbb{N}| = |A|$ 那一套基数算术），比有限情形麻烦得多。\n\n⭐ 维数的基本性质：$\\dim(U + W) + \\dim(U \\cap W) = \\dim U + \\dim W$；\n\n$\\dim(V/U) = \\dim V - \\dim U$。',
+      notes: '⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。\n\n证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\\#\\mathcal{B} \\le |\\mathcal{B}\'|$ 与反向。\n\n⚠ 有限维的情形交换引理就够了；\n\n无限维要证明「无限基等势」（用 $|A \\times \\mathbb{N}| = \\#A$ 那一套基数算术），比有限情形麻烦得多。\n\n⭐ 维数的基本性质：$\\dim(U + W) + \\dim(U \\cap W) = \\dim U + \\dim W$；\n\n$\\dim(V/U) = \\dim V - \\dim U$。',
       refs: ['Lang, Linear Algebra', 'Hoffman–Kunze, Linear Algebra, Ch. 2']
     }
   ],
@@ -46942,7 +46945,7 @@ window.MG = window.MG || {};
         '3. 对 $S\' := (v_2, \\ldots, v_n)$ 与生成集 $T\'$（$n - 1$ 与 $m$ 个元素）用归纳假设：得 $n - 1 \\le m$，即 $n \\le m + 1$，且可以从 $T\'$ 中删 $n - 1$ 个换入 $S\'$ 仍生成。',
         '4. 合并第 2、3 步：从 $T$ 中删去 $w_1$ 与那 $n - 1$ 个，换入 $v_1, \\ldots, v_n$，仍生成 $V$。',
         '',
-        '（归纳假设给出的其实是 $n - 1 \\le m$，要得到 $n \\le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $|S| \\le |T|$ 且可交换。上面的第 3 步用 $T\'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎',
+        '（归纳假设给出的其实是 $n - 1 \\le m$，要得到 $n \\le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $\\#S \\le \\#T$ 且可交换。上面的第 3 步用 $T\'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎',
         '',
         '**基的存在性**：取 $T = $ 一组有限生成集、$S = \\emptyset$ 逐步扩，或直接对无关集用 Zorn 引理（无限维情形），即得「每个向量空间有基」。'
       ].join('\n'),
@@ -49747,7 +49750,7 @@ window.MG = window.MG || {};
         '配了范数的 $V$ 叫**赋范空间**。它按 $d(v, w) := \\|v - w\\|$ 成为度量空间，于是「收敛」「连续」「完备」「紧」这些说法全都继承过来。'
       ].join('\n'),
       notes: '⭐ 范数是「长度」的公理化。\n\n三条公理里**只有三角不等式不是逐点的** —— 它管的是「能不能绕路」，也正是它把范数与凸性绑在一起（单位球是凸的）。\n\n⭐ 与内积的关系是单向的：内积 $\\implies$ 范数（`def.induced-norm`），但范数来自内积**当且仅当**满足**平行四边形法则** $\\|v+w\\|^{2} + \\|v-w\\|^{2} = 2\\|v\\|^{2} + 2\\|w\\|^{2}$。\n\n所以「有长度」比「有夹角」弱。\n\n⚠ 有限维时所有范数**等价**（诱导同一个拓扑、同一套收敛列）；\n\n无限维则不然 —— 这正是泛函分析开始变难的地方。\n\n⭐ 本图在凝聚态那一片另有 `def.semi-normed-ab-group`（半范数阿贝尔群）：那里的系数不是向量空间而是拓扑阿贝尔群，所以只能要半范数。',
-      refs: ['Rudin, Functional Analysis, Ch. 1', 'Lang, Real and Functional Analysis, Ch. I']
+      refs: ['Rudin, Functional Analysis', 'Lang, Real and Functional Analysis, Ch. I']
     },
     {
       id: 'def.banach-space',
@@ -49761,7 +49764,7 @@ window.MG = window.MG || {};
         '赋范空间 $V$ 叫**完备**的，当且仅当它按度量 $d(v, w) = \\|v - w\\|$ 完备，即每个 Cauchy 列都收敛。完备的赋范空间叫 **Banach 空间**。'
       ].join('\n'),
       notes: '⭐ 三个标准范例：$\\mathbb{R}^{n}$（完备性就是 `thm.real-complete-metric` 的有限维版本）、$L^{p}$（`thm.lp-banach`，Riesz–Fischer）、紧 Hausdorff 空间上的 $C(S)$ 配上确界范数。\n\n⚠ 完备性不是自动的：$C[0, 1]$ 配上 $\\|f\\|_{1} = \\int_0^1 |f|$ **不**完备（可以逼近出不连续函数）。\n\n同一批函数换个范数就完备、换回来就不完备 —— 「完备」是范数的性质，不是集合的性质。\n\n⭐ 完备性是下面压缩映射原理的引擎（`thm.banach-fixed-point`）：没有它只能拿到 Cauchy 列，拿不到不动点。\n\n整条「逆映射定理」的构造性证明都靠这一条撑着。',
-      refs: ['Rudin, Functional Analysis, Ch. 1', 'Zeidler, Nonlinear Functional Analysis I, Ch. 1']
+      refs: ['Rudin, Functional Analysis', 'Zeidler, Nonlinear Functional Analysis I, Ch. 1']
     },
 
     {
@@ -51268,7 +51271,7 @@ window.MG = window.MG || {};
         '',
         '所以等价类正是左陪集。等价类构成划分，故**左陪集两两不交且覆盖 $G$**。',
         '',
-        '**第二步：每个左陪集与 $H$ 等势。** 映射 $\\varphi : H \\to gH$，$h \\mapsto gh$，有逆 $gh \\mapsto h$（良定义：$gh_1 = gh_2 \\implies h_1 = h_2$）。故 $|gH| = |H|$。',
+        '**第二步：每个左陪集与 $H$ 等势。** 映射 $\\varphi : H \\to gH$，$h \\mapsto gh$，有逆 $gh \\mapsto h$（良定义：$gh_1 = gh_2 \\implies h_1 = h_2$）。故 $|gH| = \\#H$。',
         '',
         '**第三步：数个数。** 设不同左陪集为 $g_1H, \\ldots, g_k H$。由第一步 $G = \\bigsqcup_{i} g_i H$，两边取基数并用第二步：',
         '',
@@ -80402,7 +80405,7 @@ window.MG = window.MG || {};
         '范数比距离多的是**线性**：它只记住「离原点多远」，距离由平移得到（见「范数诱导的距离」）。所以赋范空间是「有原点、有尺度、平移不变」的度量空间。',
         '⚠️ 半范数不等于范数：商掉零范数子空间才成为范数（$L^p$ 的构造里「$\\|f\\|_p = 0$ 只说明 $f = 0$ a.e.」就是这件事，见「$L^p$ 范数」）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28', 'Rudin, Functional Analysis, Ch. 1']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维', 'Rudin, Functional Analysis, Ch. 1'],
     },
 
     /* ------------------------------------------------ 范数诱导的距离 */
@@ -80427,7 +80430,7 @@ window.MG = window.MG || {};
         '这条说清了「赋范」比「度量」多出来的是什么：**平移不变 + 齐次 + 球凸**。所以「这个度量是否来自范数」是一个有内容的问题（反例：$\\min(d, 1)$ 与 $\\sum_i 2^{-i}\\frac{|x_i - y_i|}{1 + |x_i - y_i|}$ 都不平移不变）。',
         '⭐ 球凸这一条后面要用两次：凸集上的最近点（Hilbert 的投影定理）、以及「开球的像是否开」（开映射定理）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维'],
     },
 
     /* -------------------------------------------------------- 等价范数 */
@@ -80451,7 +80454,7 @@ window.MG = window.MG || {};
         '⚠️ 强弱不对称，而且方向和直觉相反：**强**范数（$p$ 大）的球更小、开集更少、收敛更难、Cauchy 列更多。所以「换成强范数」会**减少**收敛的东西 —— 这也是为什么要挑最弱的、够用的范数（例如弱拓扑）。',
         '⚠️ 等价不保完备性以外的一切：两个等价范数下完备性一样（Cauchy 列集合相同），但**极值问题**的答案可以不同（球不同）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维'],
     },
 
     /* ---------------------------------------------- 有限维范数都等价 */
@@ -80473,7 +80476,7 @@ window.MG = window.MG || {};
         '⭐ 整条定理的实质是「**紧 + 连续 + 无零点 $implies$ 有正的最小值**」，也就是「单位球面紧」。所以它在无穷维必错（见「单位球紧 $\\iff$ 有限维」）。',
         '⚠️ 反例（讲义没有列，但值得记）：$C[0,1]$ 上 $\\|\\cdot\\|_\\infty$ 严格强于 $\\|\\cdot\\|_1$：$f_n(x) = x^n$ 在 $\\|\\cdot\\|_1$ 下趋于 $0$，却**不**一致收敛于 $0$（点态极限是 $x = 1$ 处的跳变）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维'],
     },
 
     /* -------------------------------------------- 几乎正交（Riesz 引理） */
@@ -80497,7 +80500,7 @@ window.MG = window.MG || {};
         '⭐ 这叫「几乎正交」：**在无穷维里拿不到真正的正交**（一般没有内积），只能拿到「$1 - \\varepsilon$ 的正交」。这一步是「有限维 $\\ne$ 无穷维」最省力的裂缝，单位球紧性的反方向全靠它。',
         '⭐ 反面参照：Hilbert 空间里可以取 $\\varepsilon = 0$（每个闭子空间都有正交补，见「闭子空间的正交投影」）—— 这也说明 Hilbert 空间在赋范空间里是「特殊的好」。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维'],
     },
 
     /* ------------------------------------------------ 单位球紧 ⟺ 有限维 */
@@ -80518,7 +80521,7 @@ window.MG = window.MG || {};
         '',
         '⭐ 这一条是「有限维  当且仅当  局部紧」的一半：有限维赋范空间局部紧，无穷维的**从不**局部紧。它也是「有界闭集紧」只在有限维成立的精确版本 —— 无穷维里 Heine–Borel 失效。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28', 'Riesz 1918']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有限维', 'Riesz 1918'],
     },
 
     /* -------------------------------------------------- 有界线性算子 */
@@ -80542,7 +80545,7 @@ window.MG = window.MG || {};
         '⚠️ 三个 sup 相等要求 $E \\ne 0$（否则球面空集、sup 无意义）。',
         '⭐ 无穷维里 $L(E, F) \\ne B(E, F)$：不连续的线性算子确实存在（要用选择公理造）。所以本图把「线性」与「有界」分成两个节点：$L(E,F)$ 是**代数**上的 Hom，$B(E,F)$ 是其中连续的那部分。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* -------------------------------------- 连续 ⟺ 有界（线性专属） */
@@ -80568,7 +80571,7 @@ window.MG = window.MG || {};
         '⭐ 「一点连续就处处连续」是**线性**的赠品（平移把任意点搬到 $0$）。对非线性映射这句话当然错。',
         '⭐ 于是「连续线性算子」「有界线性算子」「Lipschitz 线性算子」从此是同义词，$B(E,F)$ 这个名字里的「B」正是 bounded。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* ------------------------------------------------ 算子代数结构 */
@@ -80592,7 +80595,7 @@ window.MG = window.MG || {};
         '⚠️ $B(E)$ 一般**不交换**（$\\dim E \\ge 2$ 时），所以它是「非交换 Banach 代数」的原型，而不是函数代数的类比对象。',
         '$\\|\\cdot\\|$ 是**次可乘**的（submultiplicative）——这条不等式就是「Banach 代数」定义里的第二条，也是 Neumann 级数能收敛的唯一依据。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* ---------------------------------------------------- Banach 代数 */
@@ -80617,7 +80620,7 @@ window.MG = window.MG || {};
         '例：$B(E)$（$E$ Banach）、$C(K)$（上确界范数）、$L^1(\\mathbb{R})$（卷积乘法）、$\\ell^1(\\mathbb{Z})$、以及 $C^*$-代数（再要一条 $\\|x^* x\\| = \\|x\\|^2$）。',
         '⭐ 这一族是「把分析问题化成代数问题」的通用容器：Gelfand 理论（交换 Banach 代数 $\\cong C(\\text{极大理想空间})$）就是从这条定义出发的。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有界算子'],
     },
 
     /* -------------------------------------------- B(E,F) 是 Banach */
@@ -80637,7 +80640,7 @@ window.MG = window.MG || {};
         '⭐ 要害是「$\\|u_n\\|$ 一致有界」（Cauchy 列必一致有界），所以极限的范数不会跳。',
         '⚠️ $E$ 不需要完备：完备性只用在 $F$ 上。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* ------------------------------------------------------ 对偶空间 */
@@ -80660,7 +80663,7 @@ window.MG = window.MG || {};
         '⚠️ 与**代数对偶** $E^\\vee = \\operatorname{Hom}(E, \\mathbb{K})$ 区分：无穷维时 $E^* \\subset E^\\vee$，不连续的线性泛函属于后者而不属于前者（要选择公理才能造出来）。本图里 `def.dual-space` 是有限维的对偶（那时两者相同）。',
         '⭐ 对偶是把「空间」变成「函数」的唯一正经通道：弱拓扑、Riesz 表示、Hahn–Banach、对偶配对全在 $E^*$ 上进行。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* -------------------------------------------------- 稠密延拓定理 */
@@ -80684,7 +80687,7 @@ window.MG = window.MG || {};
         '⭐ 这是「**先在好用的稠密子集上造算子，再延拓**」的许可证：Fourier 变换（$L^1 \\cap L^2$ 上先定义）、Stieltjes 积分、特征值问题的变分形式，全走这一步。',
         '⚠️ $F$ 完备不能去掉（去掉就没有极限可拿）；$G$ 稠密也不能去掉（不稠密时延拓不唯一，只剩 Hahn–Banach 那种「保范但有选择」的延拓）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 赋范空间与有界算子'],
     },
 
     /* --------------------------------------------------- Neumann 级数 */
@@ -80708,7 +80711,7 @@ window.MG = window.MG || {};
         '⭐ 这是三大定理之外最常用的「开工工具」：它给的是**显式**的逆，且只要求 $\\|u\\| < 1$。摄动论（$A + tB$ 的谱、Kato 的解析扰动）、数值分析里的迭代收敛、Banach 逆映射定理里的局部逆，全靠它。',
         '⚠️ 反过来「$I - u$ 可逆 $\\implies$ $\\|u\\| < 1$」是**错的**：$u = -2I$ 时 $I - u = 3I$ 可逆。有界逆定理给的是另一件事（双射 $implies$ 逆连续），不是这条。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
 
     /* -------------------------------------------------------- 可分性 */
@@ -80729,7 +80732,7 @@ window.MG = window.MG || {};
         '⭐ 讲义里那句「不可分 $\\implies$ 不能由一个可数集作为代数生成」很值得记：它把「基」的直觉挡在门外 —— $\\ell^\\infty$ 连可数 Schauder 基都没有（见「Schauder 基」）。',
         '⚠️ 可分性对**闭子空间**遗传、对**商**遗传，但对连续像不一定、对乘积不遗传（$\\mathbb{R}^{\\mathbb{R}}$ 不可分）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ----------------------------------------------------- Schauder 基 */
@@ -80752,7 +80755,7 @@ window.MG = window.MG || {};
         '⚠️ 「有 Schauder 基」曾长期是开放问题：Enflo (1973) 造出无 Schauder 基的可分 Banach 空间，所以它**不能**当成默认假设。',
         '⚠️ 与 Hilbert 空间的「正交基」不同：Schauder 基不要求正交、也不要求唯一性来自内积；Hilbert 空间里正交基一定是 Schauder 基，反之不然。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28', 'Enflo, Acta Math. 130 (1973)']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基', 'Enflo, Acta Math. 130 (1973)'],
     },
 
     /* ---------------------------------------------------------- ℓ²(I) */
@@ -80776,7 +80779,7 @@ window.MG = window.MG || {};
         '于是 $(x_i) \\mapsto$（非零坐标的级数）是良定义的，$\\ell^2(I)$ 是 Hilbert 空间（完备性由「$\\ell^p(I)$ 是 Banach」那类逐项论证给出）。',
         '⭐ 这条是「可分 Hilbert 空间 $\\cong \\ell^2$」里 $\\ell^2$ 那一端：$I$ 取可数时就是通常的 $\\ell^2$。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-09-28 / 2026-10-19']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ============================================================ Hilbert 空间 */
@@ -80796,7 +80799,7 @@ window.MG = window.MG || {};
         '⚠️ 惯例冲突：数学文献常取「对第一变元线性」，物理（Dirac）取「对第二变元线性」。差一个共轭，但**改惯例会连带改 Riesz 表示里的共轭线性**（$y \\mapsto \\langle \\cdot , y\\rangle$ 是共轭线性还是线性），所以一份文档里必须统一。',
         '⭐ Hilbert 空间 = 「自对偶的 Banach 空间」（见「Riesz 表示定理（Hilbert 版）」），这是它能把线性泛函当成向量用的根源。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ------------------------------------------------------- 极化恒等式 */
@@ -80822,7 +80825,7 @@ window.MG = window.MG || {};
         '⭐ 意义：**内积完全由范数决定**。所以「两个内积空间等距」就等于「内积空间同构」；也所以判断「一个范数是否来自内积」才是一个真问题（下一条）。',
         '⚠️ 复情形的系数是 $i^k$（四个都要：$1, i, -1, -i$），不是 $(-1)^k$ ——写成 $(-1)^k$ 只能抽出实部，会把内积丢掉一半信息。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* -------------------------------------------- 平行四边形法则刻画内积 */
@@ -80861,7 +80864,7 @@ window.MG = window.MG || {};
         '⭐ 经典反例：$\\ell^1$、$\\ell^\\infty$、$C[0,1]$ 都不满足（取不交支撑的 $x, y$ 一看）。所以它们的范数**不是**内积给的 —— 这是「Hilbert 空间为什么特殊」的定量答案。',
         '⚠️ 讲义里写的是「$\\|x+y\\|^2 + \\|x-y\\|^2 = 2\\|x\\|^2 + 2\\|y\\|^2$」加一句「平行四边行」——把几何里的「平行四边形两条对角线平方和 = 四边平方和」直接搬到了范数上。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12', 'Jordan–von Neumann, Ann. of Math. 36 (1935)']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基', 'Jordan–von Neumann, Ann. of Math. 36 (1935)'],
     },
 
     /* ------------------------------------------------- 凸闭集上的投影 */
@@ -80891,7 +80894,7 @@ window.MG = window.MG || {};
         '⚠️ **凸**不能去掉：$\\mathbb{R}^2$ 的单位圆周上最近点不唯一；闭但不能去掉：开圆盘里没有最近点。',
         '⭐ 这是无穷维里「极小元存在」最干净的样本：强制性（$\\|x\\| \\to \\infty$）+ 弱下半连续 + 凸，就能推出存在性；这里的凸集不然。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ----------------------------------------------- 闭子空间的正交投影 */
@@ -80915,7 +80918,7 @@ window.MG = window.MG || {};
         '⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\\ell^2$ 里稠密但不闭，最近点存在但**不落在 $E$ 里**，正交分解也失效。',
         '⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \\subset \\ell^\\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* -------------------------------------------------- Riesz 表示（Hilbert） */
@@ -80940,7 +80943,7 @@ window.MG = window.MG || {};
         '⚠️ 共轭线性：$\\alpha y \\mapsto \\bar\\alpha\\,\\varphi$。所以严格说不是「同构」而是「共轭等距同构」（anti-linear isometry）。',
         '⚠️ 别与 $L^p$ 的 Riesz 表示混淆：那是 $(L^p)^* \\cong L^q$（$1<p<\\infty$，$1/p + 1/q = 1$），靠 Hölder 不等式；这条靠正交分解。两者只共享名字。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ------------------------------------------------------ 伴随算子存在 */
@@ -80965,7 +80968,7 @@ window.MG = window.MG || {};
         '$\\|u^*\\| = \\|u\\|$ 用两次 sup 交换。',
         '⭐ 这解释了为什么 Banach 空间没有「伴随」而只有「转置/共轭」：转置活在**对偶**之间（${}^t\\!: F^* \\to E^*$），而 Hilbert 空间里 $H^* \\cong H$ 让转置可以搬回空间上。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ------------------------------------------------------ 酉 / 部分等距 */
@@ -80989,7 +80992,7 @@ window.MG = window.MG || {};
         '⚠️ **无穷维里「等距」$\\ne$「酉」**：单侧移位 $S(x_1, x_2, \\ldots) = (0, x_1, x_2, \\ldots)$ 满足 $\\|Sx\\| = \\|x\\|$（等距），但不满；\n\n$S^*S = I$ 而 $S\\,S^* = I - P_{\\ker S^*}$ 是投影。\n\n这就是「部分等距」这个概念的用处：它把「在某个闭子空间上是等距」包起来。',
         '⭐ 极分解 $u = V|u|$（$V$ 部分等距，$|u| = \\sqrt{u^*u}$）就是部分等距的标准出场方式。有限维版本见 `def.unitary-matrix`。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-12']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ------------------------------------------------------ 正交集与正交基 */
@@ -81014,7 +81017,7 @@ window.MG = window.MG || {};
         '⚠️ 无穷维里正交基**不可数例子真实存在**：$L^2(\\mathbb{R})$ 的 Hermite 函数可数，但一般 $\\ell^2(I)$ 的正交基就是 $\\{e_i\\}_{i \\in I}$，$I$ 可以任意大。',
         '⭐ 有了正交基，Hilbert 空间就变成「不带权重的 $\\ell^2$」（见 Bessel/Parseval 与「可分 Hilbert $\\cong \\ell^2$」）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* -------------------------------------------------- Bessel / Parseval */
@@ -81042,7 +81045,7 @@ window.MG = window.MG || {};
         '⭐ 读法：Bessel 说「坐标投影不增加长度」（$x$ 在子空间上的影子不会比 $x$ 长）；Parseval 说「没有漏掉任何方向」。所以**完备性 $\\iff$ 等号成立**——这就是把「基」这件几何事实变成一个**数值等式**。',
         '⚠️ 不可数 $I$ 时 $\\sum_{i \\in I}$ 要按「非零项至多可数」理解（见 $\\ell^2(I)$ 的注），否则这个和没有定义。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ----------------------------------------------------- 正交基一定存在 */
@@ -81065,7 +81068,7 @@ window.MG = window.MG || {};
         '⭐ 这是**非构造**的存在性（Zorn = 选择公理）：能显式写出正交基的只有少数空间（$L^2[0,1]$ 的 Fourier 基、球面上的球谐函数、Hermite 函数）。',
         '⚠️ 与 Gram–Schmidt 的分工：G–S 只从**可数**线性无关族出发、靠归纳造标准正交集（`thm.gram-schmidt`）；正交基一般不可数，只能靠 Zorn。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     },
 
     /* ------------------------------------------- 可分 Hilbert ≅ ℓ² */
@@ -81085,9 +81088,9 @@ window.MG = window.MG || {};
         '由 Bessel 它入 $\\ell^2$、由 Parseval 它保范；\n\n' +
         '满射性：若 $(\\lambda_i) \\in \\ell^2$，则部分和 $\\sum_{i \\in J}\\lambda_i e_i$ 是 Cauchy（$\\|\\sum_{J \\setminus J\'}\\lambda_i e_i\\|^2 = \\sum_{J \\setminus J\'}|\\lambda_i|^2$），其极限的坐标就是 $\\lambda_i$。',
         '⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。',
-        '⚠️ 「可分」不能去掉：$\\ell^2(I)$（不可数 $I$）与 $\\ell^2(J)$ 同构 $\\iff |I| = |J|$（用正交基的基数比）。'
+        '⚠️ 「可分」不能去掉：$\\ell^2(I)$（不可数 $I$）与 $\\ell^2(J)$ 同构 $\\iff \\#I = \\#J$（用正交基的基数比）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
     }
   ],
 
@@ -81130,7 +81133,7 @@ window.MG = window.MG || {};
         '例：$\\mathbb{Z} \\subseteq \\mathbb{R}$、$\\{1/n\\}$、Cantor 集。',
         '⭐ Cantor 集是最有教育意义的例子：它**无处稠密**却**不可数**。所以「无处稠密」与「基数小」是两件事。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'def.meager-set',
@@ -81148,7 +81151,7 @@ window.MG = window.MG || {};
         '⚠️ 第二纲 $\\ne$ 稠密：$[0,1] \\cup \\{2\\}$ 也是第二纲。',
         '⭐ 用法：想说「几乎所有点都满足 $P$」，就去证 $\\{x : \\neg P(x)\\}$ 第一纲。在无穷维里这比测度论更顺手（很多函数空间没有自然测度，但有 Baire 纲）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'def.g-delta',
@@ -81165,7 +81168,7 @@ window.MG = window.MG || {};
         '在度量空间里单点闭、开集是可数多个球的并，所以「闭 $\\subseteq F_\\sigma$」「开 $\\subseteq G_\\delta$」。',
         '⭐ Baire 之后，「稠密 $G_\\delta$」是「几乎全部的点」的标准写法：连续点集、可微点集、$C[0,1]$ 里无处可微函数的全体，全是稠密 $G_\\delta$。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'thm.baire',
@@ -81197,7 +81200,7 @@ window.MG = window.MG || {};
         '⭐ 三种等价写法都要会用，转换只需取补集。',
         '⚠️ 完备性不能去掉：$\\mathbb{Q}$ 上每个单点闭且无处稠密，$\\mathbb{Q}$ 可数，故 $\\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26', 'Baire 1899']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法', 'Baire 1899'],
     },
     {
       id: 'thm.locally-compact-baire',
@@ -81212,7 +81215,7 @@ window.MG = window.MG || {};
         '证法与完备度量情形同构，只把「嵌套闭球半径 $\\to 0$」换成「嵌套紧邻域」：交非空由紧集的**有限交性质**保证（不需要半径趋于零）。',
         '⭐ 意义：这条把 Baire 纲从「度量」里解放出来，于是它能用在 $C(K)$、紧群、Stone 空间这些非度量对象上 —— 凝聚态数学里的紧 Hausdorff 空间因此也能用「一般点」论证。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'prop.baire-characterizations',
@@ -81234,7 +81237,7 @@ window.MG = window.MG || {};
         '⭐ **纲的用法（讲义原话）**：要证「满足性质 $P$ 的点存在」，就去证 $\\{x : P(x)\\}$ 是**稠密 $G_\\delta$**。这样拿到的不只是「存在」，而是「几乎处处存在」（generic）。',
         '⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'thm.baire-open-subset',
@@ -81253,7 +81256,7 @@ window.MG = window.MG || {};
         '于是 $\\bigcap_n(O_n\' \\cup \\Omega^c)$ 在 $X$ 稠密，与 $\\Omega$ 相交得 $\\bigcap_n O_n$ 在 $\\Omega$ 稠密。',
         '⭐ 用处：开映射定理要在开集上做局部论证、UBP 要看开子集，这条保证「局部化之后 Baire 性质不丢」。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'lem.countable-closed-cover',
@@ -81270,7 +81273,7 @@ window.MG = window.MG || {};
         '这是把「有一块闭集能被盖住」变成「有一个球里的东西一致地被控制」—— 正是 UBP 与开映射定理要的那一句。',
         '它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'thm.pointwise-limit-continuity',
@@ -81292,7 +81295,7 @@ window.MG = window.MG || {};
         '⚠️ 逐点极限**不必**连续（$f_n(x) = x^n$ 在 $[0,1]$ 上）；它只是「连续点很多」。',
         '⭐ 同一模板的经典产物：$C[0,1]$ 里「处处不可微」的函数构成稠密 $G_\\delta$（Banach 1931）。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Baire 纲定理与纲的用法'],
     },
     {
       id: 'thm.ubp',
@@ -81314,7 +81317,7 @@ window.MG = window.MG || {};
         '⭐ **名字**：讲义与很多中文书叫它「共鸣定理」（resonance theorem），也叫「一致有界原理」；本图两个都收进别名。三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。',
         '⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26', 'Banach–Steinhaus 1927']
+      refs: ['Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像', 'Banach–Steinhaus 1927'],
     },
     {
       id: 'cor.ubp-resonance',
@@ -81335,7 +81338,7 @@ window.MG = window.MG || {};
         '证法：令 $\\Omega_k = \\{x : M(x) = \\sup_i\\|u_i x\\| > k\\} = \\bigcup_i \\{x : \\|u_i x\\| > k\\}$，是开集；\n\n$R = \\bigcap_k \\Omega_k$ 是 $G_\\delta$。\n\n若某个 $\\Omega_k$ 不稠密，则存在球 $B(x_0, r) \\subseteq \\Omega_k^c$，球上 $M \\le k$，用与 UBP 同样的平移 + 伸缩得 $\\sup_i\\|u_i\\| \\le 2k/r$，矛盾。',
         '⭐ 意义：「发散」不是个别点，而是**几乎处处**。经典应用：Fourier 级数部分和算子满足 $\\|S_N\\| \\to \\infty$，于是**存在**连续函数其 Fourier 级数在某点发散（du Bois-Reymond 1876）—— 而且这样的函数「很多」。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像'],
     },
     {
       id: 'thm.open-mapping-banach',
@@ -81372,7 +81375,7 @@ window.MG = window.MG || {};
         '⚠️ **满射不能去掉**（稠密嵌入 $E \\hookrightarrow F$ 不开）；**两边完备都不能去掉**：$E$ 用来拿内点，$F$ 用来去闭包。',
         '⚠️ 与图中 `thm.open-mapping`（**非常数全纯函数**把开集映成开集）**同名不同物**：那条是复分析结论，这条是线性算子的（Baire + 级数逼近）。'
       ].join('\n\n'),
-      refs: ['Rudin, Functional Analysis, 2.11']
+      refs: ['Rudin, Functional Analysis · 开映射定理（Baire 纲的第一步）']
     },
     {
       id: 'thm.bounded-inverse',
@@ -81390,7 +81393,7 @@ window.MG = window.MG || {};
         '⭐ 这是「连续 + 双射 $\\implies$ 同胚」在**线性**世界的额外赠品 —— 一般拓扑里不成立。',
         '⭐ 与 `thm.inverse-function-banach`（Banach 版**逆映射定理**）分工：那条是**非线性**的（$f\'(a)$ 可逆 $\\implies$ 局部微分同胚，证明用 Neumann 级数 + 压缩映射）；这条是**线性**双射的（证明用 Baire）。两者常被混称，但内容与证法都不同。'
       ].join('\n\n'),
-      refs: ['Rudin, Functional Analysis, 2.12']
+      refs: ['Rudin, Functional Analysis · 开映射定理']
     },
     {
       id: 'thm.closed-graph',
@@ -81418,7 +81421,7 @@ window.MG = window.MG || {};
         '⚠️ **容易误读的地方**：「连续 $\\implies$ 图像闭」是初等的（连续函数的图像当然闭），所以容易以为两边差不多。其实反方向才是这条定理的内容，而且它**必须**要 Banach + 线性：在非完备空间上图像闭而不连续的线性映射是存在的。',
         '⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。'
       ].join('\n\n'),
-      refs: ['Rudin, Functional Analysis, 2.15']
+      refs: ['Rudin, Functional Analysis · 闭图像定理']
     },
 
     /* ============================================================ C(K) 与 Stone–Weierstrass */
@@ -81441,7 +81444,7 @@ window.MG = window.MG || {};
         '上确界取得到（紧 + 连续）。这个度量就是「一致收敛」的度量，不是「逐点收敛」的（与 `def.uniform-convergence` 同口径）。',
         '⭐ 记号允许任意度量空间 $E$，所以这一团的结论（完备性、Arzelà–Ascoli）比经典的 $\\mathbb{R}$-值版本更宽。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli'],
     },
     {
       id: 'thm.ck-complete',
@@ -81458,7 +81461,7 @@ window.MG = window.MG || {};
         '证法：Cauchy 列 $\\implies$ 逐点 Cauchy（$d(f_n(x), f_m(x)) \\le \\Delta(f_n, f_m)$）$\\implies$ 逐点极限 $f$（$E$ 完备）$\\implies$ $\\Delta$ 一致的估计给「$f_n \\to f$ 一致」$\\implies$ 一致极限保连续。',
         '⭐ 为什么重要：一致收敛空间让人能「把连续函数的极限留在连续函数里」，这是 Stone–Weierstrass、Arzelà–Ascoli、乃至 $C^*$-代数全部的前提。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli'],
     },
     {
       id: 'def.equicontinuous',
@@ -81480,7 +81483,7 @@ window.MG = window.MG || {};
         '$\\mathcal{H} = \\{f\\}$ 时等度连续 $\\iff$ $f$ 连续。',
         '⭐ 这是紧性（Arzelà–Ascoli）里**唯一非平凡**的假设：逐点全有界只是「不发散」，等度连续才是「不会越抖越厉害」。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli'],
     },
     {
       id: 'thm.equicontinuous-uniform',
@@ -81497,7 +81500,7 @@ window.MG = window.MG || {};
         '证法：给 $\\varepsilon > 0$。\n\n每点 $x$ 取 $\\eta_x > 0$ 使 $\\delta(y, x) < \\eta_x \\implies d(f(y), f(x)) < \\varepsilon/2$（对一切 $f$）。\n\n紧性给有限覆盖 $K = \\bigcup_i B(x_i, \\eta_{x_i}/2)$，取 $\\eta := \\min_i \\eta_{x_i}/2$。\n\n若 $\\delta(x, y) < \\eta$，取 $i$ 使 $x \\in B(x_i, \\eta_{x_i}/2)$（故 $y \\in B(x_i, \\eta_{x_i})$），于是 $d(f(x), f(y)) \\le d(f(x), f(x_i)) + d(f(x_i), f(y)) < \\varepsilon$。',
         '⭐ 讲义末尾用的是 **Lebesgue 数** $\\lambda$（$\\delta(x,y) < \\lambda$ 就落在某个覆盖成员里）。两种写法等价；Lebesgue 数版本的好处是 $\\lambda$ 只依赖覆盖。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli'],
     },
     {
       id: 'thm.arzela-ascoli-general',
@@ -81519,7 +81522,7 @@ window.MG = window.MG || {};
         '⚠️ 「逐点全有界」不能换成「逐点有界」：$E$ 不完备时相对紧需要「盖得住」，有界只是「不发散」。',
         '配合「$C(K,E)$ 完备」就是标准形式：**全有界 + 完备 $=$ 相对紧**。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-19']
+      refs: ['Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli'],
     },
     {
       id: 'def.subalgebra-separating',
@@ -81540,7 +81543,7 @@ window.MG = window.MG || {};
         '「分离点」是 Stone–Weierstrass 的必要条件：不分离两个点，就把它们粘成一点，$A$ 张不出粘出来的空间上的 $C$。',
         '⚠️ 自伴矩阵的例子（讲义）：自伴矩阵按 $A \\ge B \\iff A - B$ 半正定排序，一般**不是格**（两个自伴矩阵的逐点 min 未必自伴）。所以「格」不是自动的，要靠「闭 + 含单位」换。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理'],
     },
     {
       id: 'lem.closed-subalgebra-lattice',
@@ -81558,7 +81561,7 @@ window.MG = window.MG || {};
         '⚠️ 「含单位」不能去掉：不给 $1$ 的话 $\\sqrt{}$ 这一步没有常数可写。',
         '⭐ 这是 Stone–Weierstrass 的**第一步**：先把「代数」升级成「格」，后面才能用 $\\min/\\max$ 上下夹住 $f$。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理'],
     },
     {
       id: 'thm.stone-weierstrass',
@@ -81589,7 +81592,7 @@ window.MG = window.MG || {};
         '⚠️ 三条假设缺一不可：$A = \\{f : f(0) = 0\\}$ 缺单位；$A = $ 常数函数缺分离点。',
         '⭐ 这是「用**代数**性质换**逼近**能力」的样板：不需要光滑、不需要可数、不需要任何具体核。经典 Weierstrass 定理（多项式逼近）就是 $K = [a,b]$、$A = $ 多项式的特例。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26', 'Stone 1937']
+      refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理', 'Stone 1937'],
     },
     {
       id: 'thm.stone-weierstrass-complex',
@@ -81607,7 +81610,7 @@ window.MG = window.MG || {};
         '⚠️ 「对共轭封闭」不能去掉：取 $A = $ 圆盘代数 $\\mathrm{Alg}(z) \\subseteq C(S^1, \\mathbb{C})$（含单位、分离点），则 $\\bar z \\notin \\overline A$ —— 因为 $\\int_{S^1} p(z)\\,\\bar z\\,dz = 0$ 对一切多项式 $p$ 成立（Cauchy 定理），而 $\\int_{S^1} \\bar z\\,\\bar z\\,dz \\ne 0$。',
         '⭐ 讲义在这里接上了表示论：紧群 $G$ 的矩阵系数 $e_{ij}$ 生成 $C(G)$（因 $\\{e_{ij}\\}$ 对共轭封闭），且 $\\Delta : C(G) \\to C(G) \\otimes C(G)$，$e_{ij} \\mapsto \\sum_k e_{ik} \\otimes e_{kj}$ —— Peter–Weyl 的代数骨架。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26']
+      refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理'],
     },
     {
       id: 'thm.bernstein-approximation',
@@ -81628,7 +81631,7 @@ window.MG = window.MG || {};
         '这是 Weierstrass 逼近定理的**显式**证明：$B_n f(x) = \\mathbb{E}[f(S_n/n)]$（$S_n$ 服从参数 $x$ 的二项分布），用三条恒等式（$\\sum \\binom nk x^k(1-x)^{n-k} = 1$、$\\sum k\\binom nk x^k(1-x)^{n-k} = nx$、方差 $\\le n/4$）加 $f$ 的一致连续性把误差压住。',
         '⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。'
       ].join('\n\n'),
-      refs: ['泛函分析讲义 2026-10-26', 'Bernstein 1912']
+      refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理', 'Bernstein 1912'],
     }
   ],
 
@@ -85688,8 +85691,8 @@ MG.trunk = [
        英文模式下同时给 <html> 打 lang="en"（CSS 与读屏都靠它）。 */
     MG.applyStatic(document.body);
     if (MG.isEn) document.documentElement.setAttribute('lang', 'en');
-    /* 设置窗里那两个计数（全部概念索引 / 常见问法）原来是**写死的**（706 / 184），
-       内容长到 709 之后就没人更新它。这里改成从数据现算 —— 顺手修掉这个陈旧数字。 */
+    /* 设置窗里那两个计数原来是**写死的**，内容一长就没人更新（旧值早就错了）。
+       这里改成从数据现算 —— ⛔ 界面上的数量不许手写。 */
     (function fixCounts() {
       var q = document.getElementById('set-link-q');
       if (q) q.textContent = tf('常见问法（{n} 条）', { n: ((MG.aliases || {}).hooks || []).length });
@@ -86772,7 +86775,7 @@ MG.trunk = [
       lastExCount = { n: n, k: k };
       el.textContent = tf('导出当前视图（{n} 点 / {k} 线）', { n: n, k: k });
     }
-    /** 相机一动就重新计时；停稳 350ms 才真的去数一遍（数 910 个点不值得每帧做）
+    /** 相机一动就重新计时；停稳 350ms 才真的去数一遍（数上千个点不值得每帧做）
         ⚠️ 只有**签名真的变了**才重置计时器。写成「sig 相同但计时器还在也重置」
           会变成：只要还有零星重画（hover、已读脉冲、HUD），计时器永远被推后 → 数
           永远不更新（踩过：开页停在 42 点 / 14 线）。 */
@@ -87957,7 +87960,7 @@ MG.trunk = [
 
   function safeBoot() {
     /* ⭐ 先把「加载中」这一屏真的画出来，再进同步启动流程。
-       为什么必须这样：boot() 里的 computeLayout 一口气算 4 秒左右（1287 个点、O(n²) 的
+       为什么必须这样：boot() 里的 computeLayout 一口气算 4 秒左右（上千个点、O(n²) 的
        斥力迭代），期间主线程被占死 —— 要是连一帧都没画过，用户看到的就是纯白。
        两次 rAF：第一次让浏览器有机会排版绘制，第二次保证上面那帧真的提交了。 */
     /* ⚠️ 这一句**只换文案、不报百分比**：报百分比会把「爬行」动画关掉换内联 transform，

@@ -10,7 +10,7 @@ $$\|x + y\|^2 + \|x - y\|^2 = 2\|x\|^2 + 2\|y\|^2 .$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.parallelogram-inner-product.2.md](./thm.parallelogram-inner-product.2.md)
 
-refs: 泛函分析讲义 2026-10-12；Jordan–von Neumann, Ann. of Math. 36 (1935)
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Jordan–von Neumann, Ann. of Math. 36 (1935)
 
 > 说明见 `notes/thm.parallelogram-inner-product.md`
 

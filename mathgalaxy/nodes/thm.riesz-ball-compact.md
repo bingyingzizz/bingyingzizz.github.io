@@ -10,7 +10,7 @@ layer 16 · 定理 · 赋范空间与有界算子 · 泛函分析
 
 - …另有入边，续页见 [nodes/thm.riesz-ball-compact.2.md](./thm.riesz-ball-compact.2.md)
 
-refs: 泛函分析讲义 2026-09-28；Riesz 1918
+refs: Rudin, Functional Analysis · 赋范空间与有限维；Riesz 1918
 
 > 说明见 `notes/thm.riesz-ball-compact.md`
 

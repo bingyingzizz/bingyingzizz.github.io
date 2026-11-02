@@ -13,7 +13,7 @@ layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/def-link.fa-banach-banalg.md](../proofs/def-link.fa-banach-banalg.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有界算子
 
 > 说明见 `notes/def.banach-algebra.md`
 

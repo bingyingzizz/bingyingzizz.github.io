@@ -7,6 +7,6 @@
 - thm.schroder-bernstein　Schröder–Bernstein 定理　layer 7
 - thm.hartogs　Hartogs 定理　layer 8
 - def.countable　可数与不可数　layer 8
-- def.cardinal　基数 |A|　layer 8
+- def.cardinal　基数　layer 8
 - thm.cantor　Cantor 定理　layer 9
 - thm.cardinal-comparable　基数可比定理　layer 10

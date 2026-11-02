@@ -15,7 +15,7 @@ $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/prop.operator-algebra.2.md](./prop.operator-algebra.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/prop.operator-algebra.md`
 

@@ -11,9 +11,10 @@ $$E^* := B(E, \mathbb{K}) , \qquad \|\varphi\| := \sup_{\|x\| \le 1} |\varphi(x)
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.dual-space`](../nodes/def.dual-space.md) 对偶空间：用到了定义 对偶空间　[proofs/def-link.fa-dualspace.md](../proofs/def-link.fa-dualspace.md)
-- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/def-link.fa-banachspace-dual.md](../proofs/def-link.fa-banachspace-dual.md)
 
-refs: 泛函分析讲义 2026-09-28
+- …另有入边，续页见 [nodes/def.dual-banach.2.md](./def.dual-banach.2.md)
+
+refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/def.dual-banach.md`
 

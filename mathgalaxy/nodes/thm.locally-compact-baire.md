@@ -10,7 +10,7 @@ layer 16 · 定理 · Baire 纲与三大定理 · 泛函分析
 
 - …另有入边，续页见 [nodes/thm.locally-compact-baire.2.md](./thm.locally-compact-baire.2.md)
 
-refs: 泛函分析讲义 2026-10-26
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 > 说明见 `notes/thm.locally-compact-baire.md`
 

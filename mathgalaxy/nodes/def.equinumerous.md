@@ -3,7 +3,7 @@
 layer 7 · 定义 · 基数与等势 · 集合论
 [在星图里打开](../#n=def.equinumerous)　·　[节点索引](../index.md)
 
-集合 $A$ 与 $B$ **等势**（记 $|A| = |B|$ 或 $A \approx B$），当且仅当存在**双射**
+集合 $A$ 与 $B$ **等势**（记 $\#A = \#B$ 或 $A \approx B$），当且仅当存在**双射**
 
 $$f : A \to B$$
 
@@ -13,7 +13,7 @@ $$f : A \to B$$
 - [`def.bijection`](../nodes/def.bijection.md) 单射 / 满射 / 双射：用到了定义 单射 / 满射 / 双射　[proofs/dep.bijection-equinumerous.md](../proofs/dep.bijection-equinumerous.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.cardinal`](../nodes/def.cardinal.md) 基数 |A| 用
+- 被 [`def.cardinal`](../nodes/def.cardinal.md) 基数 用
 - 被 [`def.countable`](../nodes/def.countable.md) 可数与不可数 用
 
 refs: Kunen, Set Theory, I.6

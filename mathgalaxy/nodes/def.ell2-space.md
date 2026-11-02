@@ -15,7 +15,7 @@ $$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 :=
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.ell2-space.2.md](./def.ell2-space.2.md)
 
-refs: 泛函分析讲义 2026-09-28 / 2026-10-19
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.ell2-space.md`
 

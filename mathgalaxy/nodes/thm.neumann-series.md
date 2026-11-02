@@ -12,7 +12,7 @@ $$(I - u)^{-1} = \sum_{k=0}^{\infty} u^k , \qquad \|(I - u)^{-1}\| \le \frac{1}{
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.neumann-series.2.md](./thm.neumann-series.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/thm.neumann-series.md`
 

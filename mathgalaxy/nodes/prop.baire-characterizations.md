@@ -14,7 +14,7 @@ layer 16 · 命题 · Baire 纲与三大定理 · 泛函分析
 
 - …另有入边，续页见 [nodes/prop.baire-characterizations.2.md](./prop.baire-characterizations.2.md)
 
-refs: 泛函分析讲义 2026-10-26
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 > 说明见 `notes/prop.baire-characterizations.md`
 

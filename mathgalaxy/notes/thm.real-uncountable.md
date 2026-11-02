@@ -5,7 +5,7 @@
 
 ⚠ 整段证明**只用到 $\mathbb{R}$ 的完备性**（确界原理），不需要基数理论；
 
-$|\mathbb{R}| = 2^{\aleph_0}$ 那一半是拿二进制展开与 $\mathcal{P}(\mathbb{N})$ 配对，再引用 Cantor 定理。
+$\#\mathbb{R} = 2^{\aleph_0}$ 那一半是拿二进制展开与 $\mathcal{P}(\mathbb{N})$ 配对，再引用 Cantor 定理。
 
 **这条定理最反直觉的地方**：$\mathbb{Q}$ 与 $\mathbb{R}$ 都稠密、都可以逼近彼此，但 $\mathbb{Q}$ 可数（排得成一个序列）、$\mathbb{R}$ 不可数。
 

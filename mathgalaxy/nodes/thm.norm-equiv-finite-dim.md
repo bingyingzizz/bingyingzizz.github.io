@@ -13,7 +13,7 @@ $$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty :
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.norm-equiv-finite-dim.2.md](./thm.norm-equiv-finite-dim.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/thm.norm-equiv-finite-dim.md`
 

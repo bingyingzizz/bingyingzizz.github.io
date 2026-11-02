@@ -11,9 +11,9 @@ $$\|e\| = 1, \qquad d(e, F) := \inf_{y \in F} \|e - y\| \ge 1 - \varepsilon .$$
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.fa-norm-almostorth.md](../proofs/def-link.fa-norm-almostorth.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.riesz-ball-compact`](../nodes/thm.riesz-ball-compact.md) 单位球紧 ⟺ 有限维
+- …另有出边，续页见 [nodes/lem.almost-orthogonal.2.md](./lem.almost-orthogonal.2.md)
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/lem.almost-orthogonal.md`
 

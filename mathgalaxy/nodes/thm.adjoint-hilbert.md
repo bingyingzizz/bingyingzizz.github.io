@@ -14,7 +14,7 @@ $$\langle u^*(x), y\rangle_H = \langle x, \, u(y)\rangle_K \qquad (x \in K,\ y \
 
 - …另有入边，续页见 [nodes/thm.adjoint-hilbert.2.md](./thm.adjoint-hilbert.2.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.adjoint-hilbert.md`
 

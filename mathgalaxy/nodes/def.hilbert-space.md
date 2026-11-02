@@ -12,7 +12,7 @@ layer 16 · 定义 · Hilbert 空间 · 泛函分析
 
 - …另有入边，续页见 [nodes/def.hilbert-space.2.md](./def.hilbert-space.2.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.hilbert-space.md`
 

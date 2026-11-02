@@ -17,7 +17,7 @@ layer 15 · 定理 · Baire 纲与三大定理 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.baire.3.md](./thm.baire.3.md)
 
-refs: 泛函分析讲义 2026-10-26；Baire 1899
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法；Baire 1899
 
 > 说明见 `notes/thm.baire.md`
 

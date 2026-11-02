@@ -16,7 +16,7 @@ layer 15 · 定理 · Hilbert 空间 · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.projection-convex.2.md](./thm.projection-convex.2.md)
 
-refs: 泛函分析讲义 2026-10-12
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.projection-convex.md`
 

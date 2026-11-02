@@ -13,7 +13,7 @@ layer 8 · 引理 · Baire 纲与三大定理 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/lem.countable-closed-cover.3.md](./lem.countable-closed-cover.3.md)
 
-refs: 泛函分析讲义 2026-10-26
+refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
 
 > 说明见 `notes/lem.countable-closed-cover.md`
 

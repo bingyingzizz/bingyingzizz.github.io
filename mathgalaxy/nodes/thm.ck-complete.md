@@ -7,11 +7,10 @@ layer 17 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.ck-space`](../nodes/def.ck-space.md) C(K,E) + [`def.complete`](../nodes/def.complete.md) 完备：一致度量的完备性来自 $E$ 的完备性　[proofs/imp.fa-ck-banach.md](../proofs/imp.fa-ck-banach.md)
-- [`def.ck-space`](../nodes/def.ck-space.md) C(K,E)：用到了定义 C(K,E)　[proofs/def-link.fa-ck-complete.md](../proofs/def-link.fa-ck-complete.md)
 
 - …另有入边，续页见 [nodes/thm.ck-complete.2.md](./thm.ck-complete.2.md)
 
-refs: 泛函分析讲义 2026-10-19
+refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 > 说明见 `notes/thm.ck-complete.md`
 

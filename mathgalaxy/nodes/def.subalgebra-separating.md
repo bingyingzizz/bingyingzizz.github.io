@@ -15,7 +15,7 @@ layer 9 · 定义 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.subalgebra-separating.2.md](./def.subalgebra-separating.2.md)
 
-refs: 泛函分析讲义 2026-10-26
+refs: Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 > 说明见 `notes/def.subalgebra-separating.md`
 

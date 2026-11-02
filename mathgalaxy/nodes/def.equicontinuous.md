@@ -12,9 +12,10 @@ layer 6 · 定义 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.equicontinuous-uniform`](../nodes/thm.equicontinuous-uniform.md) 等度连续与一致等度连续
-- 被 [`thm.arzela-ascoli-general`](../nodes/thm.arzela-ascoli-general.md) 广义 Arzelà–Ascoli 用
 
-refs: 泛函分析讲义 2026-10-19
+- …另有出边，续页见 [nodes/def.equicontinuous.3.md](./def.equicontinuous.3.md)
+
+refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 > 说明见 `notes/def.equicontinuous.md`
 

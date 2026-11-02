@@ -13,13 +13,13 @@ layer 12 · 定理 · Hilbert 空间 · 泛函分析
 2. 对每个 $x$ 取等号（**Parseval**）：$\|x\|^2 = \sum_i |\langle x, e_i\rangle|^2$；
 3. 对每个 $x$：$x = \sum_{i \in I} \langle x, e_i\rangle\, e_i$（按范数收敛）。
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.separable-hilbert-is-l2`](../nodes/thm.separable-hilbert-is-l2.md) 可分 Hilbert 空间等距于 ℓ²
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.bessel-parseval.2.md](./thm.bessel-parseval.2.md)
 
-refs: 泛函分析讲义 2026-10-19
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.bessel-parseval.3.md](./thm.bessel-parseval.3.md)
+
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.bessel-parseval.md`
 

@@ -7,7 +7,7 @@
 
 $\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots$
 
-取 $A = \mathbb{N}$ 就得到「$\mathbb{R}$ 不可数」（$|\mathbb{R}| = 2^{\aleph_0}$）。
+取 $A = \mathbb{N}$ 就得到「$\mathbb{R}$ 不可数」（$\#\mathbb{R} = 2^{\aleph_0}$）。
 
 证明用的是**对角线法**（见边的证明）：那个「对角集」$D = \{ a \in A : a \notin f(a) \}$ 不在 $f$ 的像里。
 

@@ -10,7 +10,7 @@ $$x = \sum_{n=1}^{\infty} a_n e_n \qquad (\text{按范数收敛}) .$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.fa-norm-schauder.md](../proofs/def-link.fa-norm-schauder.md)
 
-refs: 泛函分析讲义 2026-09-28；Enflo, Acta Math. 130 (1973)
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Enflo, Acta Math. 130 (1973)
 
 > 说明见 `notes/def.schauder-basis.md`
 

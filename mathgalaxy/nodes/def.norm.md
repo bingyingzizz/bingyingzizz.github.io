@@ -19,7 +19,7 @@ layer 10 · 定义 · 赋范空间与有界算子 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.norm.3.md](./def.norm.3.md)
 
-refs: 泛函分析讲义 2026-09-28；Rudin, Functional Analysis, Ch. 1
+refs: Rudin, Functional Analysis · 赋范空间与有限维；Rudin, Functional Analysis, Ch. 1
 
 > 说明见 `notes/def.norm.md`
 

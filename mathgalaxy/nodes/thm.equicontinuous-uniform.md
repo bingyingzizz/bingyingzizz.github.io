@@ -5,13 +5,13 @@ layer 15 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 
 设 $(K, \delta)$ 紧度量、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$ 等度连续。则 $\mathcal{H}$ **一致等度连续**。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.equicontinuous`](../nodes/def.equicontinuous.md) 等度连续 + [`def.compact`](../nodes/def.compact.md) 紧：紧 $+$ 等度连续 $\implies$ 一致等度连续　[proofs/imp.fa-equi-uniform.md](../proofs/imp.fa-equi-uniform.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.equicontinuous-uniform.2.md](./thm.equicontinuous-uniform.2.md)
+- ⇒ [`thm.arzela-ascoli-general`](../nodes/thm.arzela-ascoli-general.md) 广义 Arzelà–Ascoli
 
-refs: 泛函分析讲义 2026-10-19
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.equicontinuous-uniform.2.md](./thm.equicontinuous-uniform.2.md)
+
+refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 > 说明见 `notes/thm.equicontinuous-uniform.md`
 

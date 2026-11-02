@@ -1,16 +1,17 @@
 # MathGalaxy · Hub theorems
 
-> English version: **reviewed** · bingyingzizz · 2026-11-01 · Chinese source is authoritative.
+> English version: **draft** · Chinese source is authoritative · machine-drafted, pending author review.
 
-Ranked by **in-degree**: how many strong edges point at it. It answers one question —
-**which things are the real foundation and worth learning first.** (Weak edges do not
-count.)
-Data root `./`: every entry can be followed to `nodes/<id>.md`.
+The direction of every edge is **prerequisite → what depends on it**, so in-edges and
+out-edges say opposite things:
+- **Foundations**: the most results take it as a prerequisite (out-edges) — learn these first.
+- **Comprehensive results**: derived from the most prerequisites (in-edges) — you need a lot
+  first; not a first read.
+- **Cross-domain hubs**: their dependents span the most clusters — central, but not a study order.
+Each row gives two numbers: distinct nodes / edges (Foundations, Comprehensive) or
+clusters / nodes (Cross-domain), ranked by the first. Weak (analogy) edges are
+excluded. Data root `./`.
 
-- **7** `lem.zorn` Zorn's lemma · layer 9 · 选择原理
-- **7** `thm.stokes` Stokes' Theorem · layer 27 · 内蕴几何
-- **6** `thm.bundle-classification` classification of bundles · layer 18 · 流形与向量丛
-- **6** `def.singular-homology` singular homology groups · layer 19 · 同调群
-- **6** `def.tensor-field` Tensor Field · layer 20 · 向量场与 Lie 结构
+## Foundations (most depended on)
 
 > continued in `hubs.en.2.md`

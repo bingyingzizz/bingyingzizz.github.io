@@ -8,7 +8,7 @@ layer 17 · 定理 · Hilbert 空间 · 泛函分析
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影：正交分解 $\implies$ 正交基存在（Zorn）　[proofs/imp.fa-orthbasis.md](../proofs/imp.fa-orthbasis.md)
 
-refs: 泛函分析讲义 2026-10-19
+refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.orthonormal-basis-exists.md`
 

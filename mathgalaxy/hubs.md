@@ -1,19 +1,26 @@
 # 数学星图 · 枢纽定理榜
 
-按**入边数**排序：有多少条强边指向它。回答一个问题 ——
-**哪些东西是真正的地基，值得优先学熟。**（弱边不计入。）
-数据根 `./`：每项都能顺着读 `nodes/<id>.md`。
+边是「前置 → 依赖它的结论」，**出和入说两件相反的事**：
+出边多 = **基础工具**（很多结论靠它）；入边多 = **综合结论**（得先懂一片）；
+下游横跨星团多 = **连接枢纽**（不是入门顺序）。
+每行两数按前者排；只数推出与定义，弱边、等价边不计。
+每榜前 3 条；完整清单在 `hubs/<榜>.md`（各 20 条）。
 
-- **7** `lem.zorn` Zorn 引理 · layer 9 · 选择原理
-- **7** `thm.stokes` Stokes 定理 · layer 27 · 内蕴几何
-- **6** `thm.bundle-classification` 丛的分类 · layer 18 · 流形与向量丛
-- **6** `def.singular-homology` 奇异同调群 · layer 19 · 同调群
-- **6** `def.tensor-field` 张量场 · layer 20 · 向量场与 Lie 结构
-- **6** `def.left-invariant-form` 左不变形式 · layer 26 · Lie 群
-- **6** `def.submanifold-volume` 诱导体积 · layer 27 · 微分形式、积分与 de Rham
-- **6** `thm.de-rham` de Rham 定理 · layer 28 · 微分形式、积分与 de Rham
-- **5** `thm.first-iso` 第一同构定理（Noether） · layer 9 · 代数结构
-- **5** `def.cauchy-null` Cauchy 列与零列 · layer 11 · 数系的构造
-- **5** `def.representable` 表示函子 · layer 12 · 预层与米田
+## 基础工具榜
+- **30 / 33** `def.limit` 极限 · 图与极限
+- **28 / 32** `def.adjoint` 伴随函子 · 伴随与反射
+- **28 / 29** `def.measure` 测度 · 测度的构造
+- 全部：`hubs/base.md`
 
-（1460 个节点里 1453 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+## 综合结论榜
+- **7 / 4** `thm.theorema-egregium` 绝妙定理 · 内蕴几何
+- **6 / 7** `thm.stokes` Stokes 定理 · 内蕴几何
+- **6 / 6** `def.singular-homology` 奇异同调群 · 同调群
+- 全部：`hubs/big.md`
+
+## 跨领域连接榜
+- **16 团 / 23 节点** `def.function` 映射 · 关系与函数
+- **13 团 / 25 节点** `def.topology` 拓扑空间与开集 · 拓扑空间的基本语汇
+- **13 团 / 25 节点** `def.compact` 紧 · 度量空间
+- 全部：`hubs/cross.md`
+

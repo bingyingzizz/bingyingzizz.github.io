@@ -15,7 +15,7 @@ $$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价 用
 
-refs: 泛函分析讲义 2026-09-28
+refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/def.norm-equivalence.md`
 
