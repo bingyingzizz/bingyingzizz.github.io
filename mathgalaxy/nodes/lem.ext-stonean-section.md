@@ -1,6 +1,6 @@
 # Stonean 上 Ext 的截面公式　`lem.ext-stonean-section`
 $\operatorname{Ext}^{n}(M, N)(S) \cong \operatorname{Ext}^{n}(M \cdot S,\ N)$
-layer 21 · 引理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 引理 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=lem.ext-stonean-section)　·　[节点索引](../index.md)
 
 设 $M, N$ 是凝聚态阿贝尔群，$S$ 是 **Stonean 空间**。记 $M \cdot S := M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$。则对一切 $n \ge 0$

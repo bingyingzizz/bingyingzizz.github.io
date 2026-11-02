@@ -1,4 +1,4 @@
-# Riesz 表示定理（Hilbert 版）　`thm.riesz-hilbert`　·　续页（第 2 页）
+# Riesz 表示（Hilbert）　`thm.riesz-hilbert`　·　续页（第 2 页）
 [在星图里打开](../#n=thm.riesz-hilbert)　·　第 1 页 [nodes/thm.riesz-hilbert.md](./thm.riesz-hilbert.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

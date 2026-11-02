@@ -1,6 +1,6 @@
 # 实 Banach 在紧 Hausdorff 上零调　`thm.real-banach-chaus-acyclic`
 实 Banach 空间在紧 Hausdorff 空间上零调
-layer 16 · 定理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 16 · 定理 · 凝聚态导出函子 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.real-banach-chaus-acyclic)　·　[节点索引](../index.md)
 
 设 $V$ 是**实 Banach 空间**，$S$ 是**紧 Hausdorff** 空间。则对一切 $n > 0$

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `RHom to Discrete Vanishes` (short) · `Derived Hom from Finite-Dimensional Banach Spaces to Discrete Groups Vanishes` (full)
 
 ## Statement and proof

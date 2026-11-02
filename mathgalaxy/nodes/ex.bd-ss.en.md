@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 17 · example · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 names: `Breen–Deligne Spectral Sequence` (short) · `The General Breen–Deligne Spectral Sequence` (full)
 
 ## Statement and proof

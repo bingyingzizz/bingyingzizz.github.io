@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 18 · lemma · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.stone-constant-acyclic.md` and `proofs/`.

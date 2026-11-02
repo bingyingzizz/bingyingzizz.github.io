@@ -1,6 +1,6 @@
 # 有限维 Banach 到离散群全零　`prop.rhom-banach-discrete-zero`
 $\operatorname{RHom}_{\mathbb{Z}}(M, N) = 0$（Banach 到 离散）
-layer 21 · 命题 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.rhom-banach-discrete-zero)　·　[节点索引](../index.md)
 
 设 $M$ 是**有限维实 Banach 空间**、$N$ 是**离散**阿贝尔群。则

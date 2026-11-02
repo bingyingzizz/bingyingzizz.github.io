@@ -10,7 +10,7 @@ $$\langle u^*(x), y\rangle_H = \langle x, \, u(y)\rangle_K \qquad (x \in K,\ y \
 且 $\|u^*\| = \|u\|$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示定理（Hilbert 版）：Riesz 表示 $\implies$ 伴随算子存在　[proofs/imp.fa-riesz-adjoint.md](../proofs/imp.fa-riesz-adjoint.md)
+- [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）：Riesz 表示 $\implies$ 伴随算子存在　[proofs/imp.fa-riesz-adjoint.md](../proofs/imp.fa-riesz-adjoint.md)
 
 - …另有入边，续页见 [nodes/thm.adjoint-hilbert.2.md](./thm.adjoint-hilbert.2.md)
 

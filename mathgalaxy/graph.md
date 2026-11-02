@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T05:34:18.280Z
-> 15 星系 / 100 星团 / 1458 节点 / 2737 连线（强边 2720，弱边 17；其中**不分层**的「推论」22 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T06:05:53.354Z
+> 15 星系 / 102 星团 / 1460 节点 / 2744 连线（强边 2727，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -10717,7 +10717,7 @@ $$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + 
 
 参考：泛函分析讲义 2026-10-12
 
-#### Riesz 表示定理（Hilbert 版）　`thm.riesz-hilbert`
+#### Riesz 表示（Hilbert）　`thm.riesz-hilbert`
 *定理*　Riesz 表示：$H^* \cong \overline{H}$
 
 设 $H$ 是 Hilbert 空间，$\varphi \in H^*$。则存在**唯一**的 $y \in H$ 使
@@ -11106,8 +11106,8 @@ $$\operatorname{cont}(f) := \{x : f \text{ 在 } x \text{ 连续}\}$$
 
 参考：泛函分析讲义 2026-10-26
 
-#### 一致有界原理　`thm.ubp`
-*定理*　一致有界原理（Banach–Steinhaus）
+#### 共鸣定理　`thm.ubp`
+*定理*　共鸣定理（一致有界原理 / Banach–Steinhaus）
 
 设 $E$ 是 Banach 空间，$F$ 赋范，$\{u_i\}_{i \in I} \subseteq B(E, F)$。若对每个 $x \in E$，
 
@@ -11117,7 +11117,7 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 
 证法：令 $F_k = \{x : \sup_i \|u_i x\| \le k\} = \bigcap_i \{x : \|u_i x\| \le k\}$，每个 $\{x : \|u_i x\| \le k\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；逐点有界 $\implies E = \bigcup_k F_k$。由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。于是对 $\|x\| \le r$：$\sup_i \|u_i x\| \le \sup_i \|u_i(x + x_0)\| + \sup_i \|u_i x_0\| \le 2k$，取 $x = r y/\|y\|$ 得 $\|u_i y\| \le 2k\|y\|/r$，故 $\sup_i\|u_i\| \le 2k/r$。
 
-⭐ 三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。
+⭐ **名字**：讲义与很多中文书叫它「共鸣定理」（resonance theorem），也叫「一致有界原理」；本图两个都收进别名。三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。
 
 ⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\|u_n\| = n \to \infty$。
 
@@ -22773,107 +22773,8 @@ $$\widehat{V} \;\cong\; V^{\ast} = \operatorname{Hom}_{\mathbb{R}}(V,\ \mathbb{R
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 6.8
 
-### 星团：凝聚态上同调
-> 造出「哪些空间的上同调会自动消失」：Stonean 上零调 → Stone 上常系数零调 → 局部紧上等于层上同调 → 半范数 / Banach 阿贝尔群与 $K$-有界正合 → 实 Banach 在紧 Hausdorff 上零调 → Breen–Deligne 分解 → $\operatorname{RHom}$ 的逐类计算 → 局部紧阿贝尔群只剩 $\operatorname{Ext}^{0}, \operatorname{Ext}^{1}$。
-
-#### Cond/X 到开集拓扑斯的态射　`prop.cond-slice-topos-morphism`
-*命题*　拓扑斯态射 $c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X)$
-
-设 $X$ 是拓扑空间。存在拓扑斯态射
-
-$$c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X),$$
-
-其中 $\mathrm{Open}(X)$ 是 $X$ 的开集所成的拓扑空间对应的拓扑斯（开集按含入组成的偏序，配上它的标准拓扑）。
-
-**逆像**把 $Y \in \mathrm{Cond}/X$ 送到 $U \mapsto \operatorname{Hom}_{/X}(\underline{U}, Y)$；
-**顺像**把 $F \in \mathrm{Open}(X)$ 送到 $\varinjlim_{U \subseteq X,\ s \in F(U)} \underline{U}$。
-
-**在做什么。** $\mathrm{Cond}/X$ 是「把 $X$ 当成基点、在上面做凝聚态数学」的世界；$\mathrm{Open}(X)$ 是「$X$ 的开集格」这个世界。这条态射把两边接起来：**两个世界算出来的上同调可以互相换算**。
-
-**逆像的形状怎么读**：$\operatorname{Hom}_{/X}(\underline{U}, Y)$ 是「越过 $X$ 的、从 $U$ 到 $Y$ 的映射」。$U$ 越小能给的映射越多 —— 这正是层的「限制」味道。
-
-**顺像的形状怎么读**：$\varinjlim \underline{U}$ 是「把所有开集拼起来」的余极限 —— 开集沿含入的余极限就是它们并起来。
-
-⭐ 这条是下面 Dyckhoff 定理那条谱序列的**构造基础**：有了这两个方向，$\mathrm{Cond}/X$ 上的上同调才能被 $\mathrm{Open}(X)$ 上的层上同调逼近。
-
-**证明。** 先看两个函子都有定义：逆像把 $Y \in \mathrm{Cond}/X$ 送到预层 $U \mapsto \operatorname{Hom}_{/X}(\underline{U}, Y)$，而 $\mathrm{Open}(X)$ 上的层条件只涉及开集的含入，逐条验即可；顺像 $\varinjlim_{U \subseteq X,\ s \in F(U)} \underline{U}$ 取的是**滤过**余极限（开集沿含入滤过），在 $\mathrm{Cond}$ 里存在。
-**逆像左正合**：$\varinjlim$ 在 $\mathrm{Cond}$ 里正合（AB5）。
-**伴随**：逐项算
-$$\operatorname{Hom}_{/X}\Bigl(\varinjlim_{U, s} \underline{U},\ Y\Bigr) = \varinjlim_{U, s} \operatorname{Hom}_{/X}(\underline{U}, Y) = \operatorname{Hom}(F, Y),$$
-第一式是余极限的泛性质，第二式就是把「从 $F$ 到 $Y$ 的映射」按 $F$ 的定义写成相容族 $\{F(U) \to \operatorname{Hom}_{/X}(\underline{U}, Y)\}$ —— 两者是同一件事。于是有伴随 $\varinjlim \underline{U} \dashv \bigl(U \mapsto \operatorname{Hom}_{/X}(\underline{U}, -)\bigr)$，逆像左正合，故 $c_{X}$ 是拓扑斯态射。∎
-
-参考：Le Stum, Proposition 8.1.3
-
-#### Stonean 上凝聚阿贝尔群零调　`prop.stonean-cond-acyclic`
-*命题*　Stonean 空间上一切凝聚态阿贝尔群零调
-
-设 $S$ 是 **Stonean 空间**（极不连通的紧 Hausdorff 空间），$M$ 是凝聚态阿贝尔群。则对一切 $n > 0$
-
-$$H^{n}_{\mathrm{cond}}(S,\ M) = 0.$$
-
-**一句话**：Stonean 空间对凝聚态上同调是**不可见的** —— 只要系数是凝聚态阿贝尔群，高次上同调一律消失。
-
-**为什么**。截面函子 $\Gamma(S, -) = \operatorname{Hom}(\mathbb{Z}[S], -)$ 在 Stonean 空间上是**正合**的：Stonean 的极不连通性让 $\mathbb{Z}[S]$ 是投射的，于是 $\operatorname{Hom}(\mathbb{Z}[S], -)$ 保满射，而右导出函子在 $n>0$ 上正好量度「保不保满射」。
-
-⭐ **这是整章的起点**：后面每一步「零调」都是把一般空间归约到 Stonean（先 Stone 化，再用 Čech 复杂度量偏差），而 Stonean 这一格已经归零。
-
-⚠️ 注意这条对**任意**凝聚态阿贝尔群 $M$ 成立，不要求 $M$ 来自拓扑群。
-
-**证明。** 截面函子是 $\Gamma(S, -) = \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$。
-- **$\mathbb{Z}[S]$ 在 $S$ Stonean 时是投射对象**：极不连通性给出 $S$ 的闭开集格上的投影性（$S = \beta I$ 时 $\mathbb{Z}[S] = \mathbb{Z}[\beta I]$ 是自由的，而自由对象投射）；
-- 于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ 把满射送到满射 —— 即**正合**；
-- 右导出函子 $R^{n}\Gamma(S,-)$ 量的正是「这个函子在第 $n$ 步有多大程度不正合」，函子本身正合故全为 $0$（$n>0$）。∎
-
-参考：Le Stum, Proposition 8.1.1
-
-#### Stone 上常系数零调　`lem.stone-constant-acyclic`
-*引理*　Stone 空间上常值系数的零调
-
-设 $S$ 是 **Stone 空间**（紧、Hausdorff、全不连通），$A$ 是普通阿贝尔群（看作常值凝聚态阿贝尔群 $\underline{A}$）。则对一切 $n > 0$
-
-$$H^{n}_{\mathrm{cond}}(S,\ \underline{A}) = 0.$$
-
-**与 Stonean 那条的区别**。Stonean 要求**极**不连通（开集的闭包还开），Stone 只要求**全**不连通（没有非平凡连通分支）。全不连通比极不连通弱，所以这条不能直接由上面那条得到，得另证 —— 但结论形状一样：零调。
-
-**证法**。把 $S$ 与它的一个 Stone 满射 $S_{0} \twoheadrightarrow S$ 都写成**有限离散空间**的滤过**逆**极限（Stone 空间按定义就是投射有限空间的逆极限）。增广 Čech 复形逐段零调（有限离散情形是好算的），而滤过逆极限沿着正合列取极限仍然正合，于是整体零调。
-
-**为什么值得单列**：常系数是最常用的系数，这条让「Stone 空间上的常系数上同调」这一整类计算直接归零。
-
-**证明（先有限、再取逆极限）。** 由「无环 $\iff$ Čech 上同调为零」，只需对 Stone 空间之间的**满射** $f : S_{0} \twoheadrightarrow S$ 证明增广 Čech 复形 $\check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr)$ 零调（有限**不交**覆盖那情形由「有限不交覆盖的高次 Čech 为零」给出）。
-- **$S, S_{0}$ 有限的情形**：此时它们是有限离散集，$f$ 是有限满射，增广 Čech 复形是**零伦**的（有截面的态射那条），故零调。
-- **一般情形**：Stone 空间是**投射有限空间**的滤过逆极限，写 $S_{0} = \varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），记 $S_{k}$ 为 $S_{0,k}$ 在 $S$ 里的像。$M$ **离散**，于是交叠上的连续函数就是逐块给定的，而逆极限的取值是滤过余极限：
-$$\check{C}^{\bullet}\bigl((S_{0}\to S)^{+},\ M\bigr) = \varinjlim_{k} \check{C}^{\bullet}\bigl((S_{0,k}\to S_{k})^{+},\ M\bigr).$$
-- **滤过余极限正合**（AB5），所以「每一项都零调」沿这个余极限传下去：整体零调。∎
-
-参考：Le Stum, Lemma 8.1.2
-
-#### 局部紧上凝聚态＝层上同调　`thm.dyckhoff`
-*定理*　Dyckhoff：$H^{n}_{\mathrm{cond}}(X, M) = H^{n}_{\mathrm{sheaf}}(X, M)$
-
-设 $X$ 是**局部紧 Hausdorff** 空间，$M$ 是**离散**阿贝尔群（看作常值凝聚态阿贝尔群）。则对一切 $n \ge 0$
-
-$$H^{n}_{\mathrm{cond}}(X,\ M) \cong H^{n}_{\mathrm{sheaf}}(X,\ M).$$
-
-⭐ **这条是把两套上同调接起来的桥。** 凝聚态上同调是从「$X$ 上的层」算的；层上同调是从「$X$ 的开集上的层」算的。这条说：只要 $X$ 局部紧、系数离散，两边**一样**。
-
-**怎么证**。用拓扑斯态射 $c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X)$ 及其导出函子，得到一条谱序列，其 $E_{2}$ 项是 $R^{q}c_{*}$ 作用在 $M$ 上。关键计算是 $R^{q}c_{*}\underline{M} = 0$（$q > 0$），它由**茎**上的计算给出：茎化之后 $M$ 是离散的，没有高阶信息。谱序列退化，两边同构。
-
-**为什么限定「系数离散」**。系数一旦带上拓扑（比如实 Banach 空间），$R^{q}c_{*}$ 一般不再消失，两边就对不上了 —— §8.2 要处理的就是这种情形。
-
-📌 **用法**：任何**局部紧**空间上的凝聚态上同调，可以**直接**用经典的层上同调来算（开覆盖、Čech、细层消解那一整套老工具全都能用）。
-
-**证明（用 $c_{X}$ 的谱序列，把 $R^{q}c_{X*}$ 算成零）。**
-- 由 $c_{X}^{-1}(X) = X$（$X$ 作为 $\mathrm{Open}(X)$ 里的对象，逆像取回它自己），得 Grothendieck 谱序列
-$$E^{p,q}_{2} = H^{p}_{\mathrm{sheaf}}\bigl(X,\ R^{q}c_{X*}M\bigr) \;\Longrightarrow\; H^{p+q}_{\mathrm{cond}}(X,\ M).$$
-- 又 $c_{X*}M = M$，所以**只需证 $R^{q}c_{X*}M = 0$（$q > 0$）**。
-- $R^{q}c_{X*}M$ 是预层 $U \mapsto H^{q}_{\mathrm{cond}}(U, M)$ 层化得到的层。$X$ **局部紧**，它在 $x$ 处的茎是
-$$(R^{q}c_{X*}M)_{x} = \varinjlim_{x \in U} H^{q}_{\mathrm{cond}}(U, M) = \varinjlim_{x \in K} H^{q}_{\mathrm{cond}}(K, M)$$
-（$U$ 跑 $x$ 的开邻域、$K$ 跑 $x$ 的紧邻域 —— 局部紧让两个滤过系统共尾）。
-- 固定 $x$ 的一个紧邻域 $K$ 与 Stone 空间 $K_{0}$ 连同满射 $K_{0} \twoheadrightarrow K$；对 $x$ 的每个紧邻域 $S \subseteq K$，拉回得 $S_{0} \to S$。**Stone 的积与子空间仍是 Stone**，所以 $S_{n}$ 全是 Stone 空间，于是由「紧 Hausdorff 上 Čech = 层上同调」与上一条「Stone 上常系数零调」
-$$H^{n}_{\mathrm{cond}}(S, M) = \check{H}^{n}(S_{\bullet}, M).$$
-- 滤过余极限正合，于是茎那个余极限化归到 $S = \{x\}$ 的情形；而单点的 Čech 复形由「有截面 $\implies$ 零调」直接给出零。故 $R^{q}c_{X*}M = 0$（$q>0$），谱序列退化，$H^{n}_{\mathrm{cond}}(X,M) \cong H^{n}_{\mathrm{sheaf}}(X,M)$。∎
-
-参考：Le Stum, Proposition 8.1.4
+### 星团：凝聚态导出函子
+> 造出「拿什么算 \operatorname{RHom}$」：半范数 / Banach 阿贝尔群 → **$K$-有界正合**（凝聚态的「可数极限意义上的正合」）→ $K$-有界正合在完备化与滤过余极限下保持 → 相邻两条 $K$-有界推出正合 → 实 Banach 在紧 Hausdorff 上零调（整个理论的地基）→ Banach 值 Tietze 延拓。⚠️ 2026-11-02 拆团：Breen–Deligne 谱序列拆到「Breen–Deligne 谱序列」，逐类计算拆到「导出 Hom 的具体计算」。
 
 #### 半范数阿贝尔群　`def.semi-normed-ab-group`
 *定义*　半范数阿贝尔群
@@ -22978,32 +22879,6 @@ $$\|s'_{i+1} - s'_{i}\| \le K\,\|d(s'_{i+1}-s'_{i})\| + \frac{1}{2^{i+1}} \le \f
 
 参考：Le Stum, Corollary 8.2.4
 
-#### Stone 满射的 Čech 复形 1-有界零调　`lem.stone-cech-1-bounded`
-*引理*　Stone 满射的增广 Čech 复形是 $1$-有界零调
-
-设 $M$ 是半范数阿贝尔群，$S_{0} \twoheadrightarrow S$ 是 **Stone 空间之间的满射**。则增广 Čech 复形
-
-$$\check{C}^{\bullet}\bigl((S_{0} \to S)^{+},\ M\bigr)$$
-
-是 **$1$-有界零调**的。
-
-**要做的事**：造一个零伦（contraction），把复形每一项的「闭链」都显式地写成边界，并且**范数不超过原来的 $1$ 倍**。$K = 1$ 是能得到的最好常数。
-
-**怎么造**。先归约到 $S_{0}$、$S$ 都**有限离散**的情形（Stone 空间是投射有限的逆极限，逆极限保持零伦）。有限离散时，满射 $S_{0} \twoheadrightarrow S$ 允许把一个函数「在 $S$ 的每个纤维内逐点常值化」—— 这一步是线性的、范数不增的，正好给出所需零伦，于是 $\|h\| \le 1$。
-
-**为什么只到 Stone / 有限离散为止。** 这一步只处理「Stone 空间之间的满射」。要把结论推到紧 Hausdorff，得先把它 Stone 化，再用 Čech 复形与层上同调的谱序列去比较偏差 —— 那正是下面两条要做的事。
-
-**证明。** 三步归约。
-- **归约到 $M$ 离散**：Stone 空间写 $S_{0} = \varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），$S_{k}$ 为它在 $S$ 里的像，则
-$$\varinjlim_{k} \check{C}^{\bullet}\bigl((S_{0,k}\to S_{k})^{+}, M\bigr) = \check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M^{\mathrm{disc}}\bigr) \hookrightarrow \check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr),$$
-左端的直极限拓扑就是**上确界范数**拓扑；而 $C(S, M^{\mathrm{disc}})$ 在 $C(S, M)$ 里**稠密**（极不连通性给出有限不交闭开细化，在每块上取常值逼近）。配上「$K$-有界正合在完备化下不变」与「滤过余极限保持 $K$-有界」，只需证**离散那一个**复形 $1$-有界零调（对它自己的拓扑）。
-- **归约到 $S, S_{0}$ 有限**：同一个余极限再把离散情形化归到有限。
-- **有限情形**：由「有截面的态射给出零调」，$\check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr)$ 是**零伦**的，且零伦有形式 $h^{n} : f \mapsto f \circ k_{n}$（逐纤维取一个截面点），于是 $\|h^{n}\| \le 1$。由 $\mathrm{id} = h\circ d + d\circ h$，对任意 $s$：
-$$\|s - d(hs)\| = \|h(ds)\| \le \|ds\| ,$$
-这正是 $K = 1$ 的 $K$-有界正合。∎
-
-参考：Le Stum, Lemma 8.2.5
-
 #### Banach 在 Stone 上零调　`prop.banach-stone-acyclic`
 *命题*　Banach 阿贝尔群在 Stone 空间上零调
 
@@ -23067,35 +22942,73 @@ $$\|f - dg\| = \Bigl\|\sum_{i} (\varphi_{i}\circ\pi_{n})\,(f - dG_{i})\Bigr\| \l
 
 参考：Le Stum, Theorem 8.2.8
 
-#### Stonean 上 Ext 的截面公式　`lem.ext-stonean-section`
-*引理*　$\operatorname{Ext}^{n}(M, N)(S) \cong \operatorname{Ext}^{n}(M \cdot S,\ N)$
+#### K-有界正合沿滤过余极限保持　`prop.k-bounded-exact-filtered-colimit`
+*命题*　命题：等距转移下的滤过余极限保持 $K$-有界正合
 
-设 $M, N$ 是凝聚态阿贝尔群，$S$ 是 **Stonean 空间**。记 $M \cdot S := M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$。则对一切 $n \ge 0$
+设 $M^{\bullet} = \varinjlim_{k} M^{\bullet}_{k}$ 是半范数阿贝尔群复形的**滤过余极限**，且转移映射都是**等距**的。若每个 $M^{\bullet}_{k}$ 在 $M^{n}_{k}$ 处 $K$-有界正合，则 $M^{\bullet}$ 在 $M^{n}$ 处 $K$-有界正合。
 
-$$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N)(S) \cong \operatorname{Ext}^{n}_{\mathbb{Z}}(M \cdot S,\ N).$$
+**证明。** 等距转移映射给出两条关键事实：余极限的**半范数就是代表元的半范数**（所有代表元范数相同，否则沿等距映射传递会矛盾）✓；微分与转移映射交换，因此 $\|d s\| = \|d s_{k}\|$ 对任何代表元 $s_{k} \mapsto s$ 成立 ✓。
+给定 $s \in M^{n}$ 与 $\varepsilon > 0$：取代表元 $s_{k} \in M^{n}_{k}$（余极限的元素都是某个有限阶段的元素）✓；在 $M^{\bullet}_{k}$ 里用 $K$-有界正合，得到 $s'_{k} \in M^{n+1}_{k}$ 使
+$$\|s_{k} - d^{n+1}s'_{k}\| \le K\,\|d^{n}s_{k}\| + \varepsilon.$$
+把 $s'_{k}$ 映进余极限得 $s' \in M^{n+1}$，再由等距性与微分的交换性，左边与右边逐项搬过去：
+$$\|s - d^{n+1}s'\| = \|s_{k} - d^{n+1}s'_{k}\| \le K\,\|d^{n}s_{k}\| + \varepsilon = K\,\|d^{n}s\| + \varepsilon ✓$$
+这正是 $K$-有界正合在 $M^{n}$ 处的要求 ✓。∎
 
-**在做什么。** 左边是「Ext 层在 $S$ 上的截面」，右边是「把一个普通 Ext 算出来」。这条把**层的** Ext 换成了**单次**的 Ext —— 于是「算 Ext 层」这件事变成「算一个具体的导出 Hom」。
+⭐ 用处：$K$-有界正合这件「带常数的解析性质」在**往大的复形里并**时不会丢 —— 于是可以先用有限 / 简单的复形验条件，再取余极限。
 
-**为什么 Stonean 可以。** Stonean 空间 $S$ 上，$\mathbb{Z}[S]$ 是**投射**的，于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ 正合。把这个正合函子搬到自然同构
+⚠️ **等距**这一条不能省：若转移映射只是连续而范数会缩小，余极限上的半范数就变成「代表元范数的下确界」，上面的 $\|d s\| = \|d s_{k}\|$ 立刻失效。
 
+参考：Le Stum, An introduction to condensed mathematics, §8.2
 
+#### 连续函数空间的范数　`prop.continuous-functions-normed`
+*命题*　命题：$C(S, M)$ 是（半）范数 / Banach 阿贝尔群，且 Stone 上离散值函数稠密
 
-$$\operatorname{Hom}_{\mathbb{Z}}(M \cdot S,\ N) \cong \operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S],\ \operatorname{Hom}_{\mathbb{Z}}(M, N)\bigr)$$
+设 $S$ 是**紧 Hausdorff** 空间，$M$ 是（半）范数阿贝尔群（相应地 Banach 阿贝尔群）。则
 
+1. 连续同态 $C(S, M) := \operatorname{Hom}_{\mathrm{top}}(S, M)$ 配以
+$$\|f\| := \sup_{x \in S}\|f(x)\|$$
+是（半）范数阿贝尔群（相应地 Banach 阿贝尔群）；
+2. 若 $S$ 还是 **Stone** 空间，则 $C(S, M^{\mathrm{disc}})$ 在 $C(S, M)$ 中**稠密**。
 
+**证明。**
+**1.** $\sup$ 有限：连续函数在紧空间上有界（$f(S)$ 紧，而范数球的半径有限）✓；三条半范数公理由 $M$ 的半范数逐点验证、再取上确界 ✓；$\|f\| = 0 \implies f = 0$ 当且仅当 $M$ 是 Hausdorff 的（即范数而非半范数）✓。
+**完备性**：设 $(f_{j})$ 是 $\|\cdot\|$ 下的 Cauchy 列，则每个 $x$ 处 $(f_{j}(x))$ 是 Cauchy 列，由 $M$ 完备有极限 $f(x)$ ✓；Cauchy 列是**一致**Cauchy 的（$\|f_{j}-f_{k}\| < \varepsilon$ 对每个 $x$ 成立），故 $f_{j} \to f$ **一致**，一致极限保持连续性 ✓，于是 $M$ 完备时 $C(S,M)$ 完备 ✓。
+**2.** 给 $f \in C(S, M)$ 与 $\varepsilon > 0$。开覆盖
+$$S = \bigcup_{m \in M} f^{-1}\bigl(B(m, \varepsilon/2)\bigr)$$
+由 $S$ 是 Stone 空间，它有**有限的、两两不交的闭开加细** $S = \bigsqcup_{r} S_{r}$（Stone 空间上任何开覆盖都有这样的加细）✓。在每个 $S_{r}$ 上任取 $m_{r}$ 使 $S_{r} \subseteq f^{-1}(B(m_{r},\varepsilon/2))$ ✓，令 $g := m_{r}$ 在 $S_{r}$ 上。则 $g$ **局部常值**，即映入离散群 $M^{\mathrm{disc}}$ 的连续函数 ✓，且逐点 $\|f - g\| \le \varepsilon/2$ ✓，故 $\|f-g\| \le \varepsilon/2 < \varepsilon$ ✓。于是 $C(S,M^{\mathrm{disc}})$ 稠密 ✓。∎
 
-两边，就得到了结论：右边是「内 Hom 的截面」，左边是「先张量再 Hom」。
+⭐ 第 2 条是「**离散值函数足够多**」的精确版本：Stone 空间上任何连续 $M$-值函数都可以用局部常值函数一致逼近。它在 Banach 系数零调（8.2.6 / 8.2.8）的证明里是关键一步。
 
-⚠️ 关键前提是 **Stonean**（极不连通），不是一般的紧 Hausdorff —— 极不连通性正是 $\mathbb{Z}[S]$ 投射的来源。
+参考：Le Stum, An introduction to condensed mathematics, §8.2
 
-⭐ 这条是下面谱序列的**接线口**：Breen–Deligne 分解把 Ext 展开成若干「自由对象」，而每一项的 Ext 恰好可以用这条把层的计算搬回普通计算。
+### 星团：Breen–Deligne 谱序列
+> 把 \operatorname{Ext}$ 展成一片可算的东西：**Breen–Deligne 分解**（把 $\mathbb{Z}[M]$ 换成一批「$p$ 阶乘同伦」的整系数组合）→ 谱序列 $E_{1}^{p,q} = \bigoplus_{i} H^{q}(M^{s_{p,i}}, N) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M,N)$ → Stonean / Stone 满射上的 $1$-有界零调（保证 $E_{1}$ 那一片真的可算）。
 
-**证明。** $S$ Stonean $\implies$ $\mathbb{Z}[S]$ 是**投射**对象，于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ **正合**。
-对自然同构
-$$\operatorname{Hom}_{\mathbb{Z}}(M \cdot S,\ N) \cong \operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S],\ \operatorname{Hom}_{\mathbb{Z}}(M, N)\bigr)$$
-（这是 $M \cdot S = M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$ 的伴随形式）两边取右导出：左端给出 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M\cdot S, N)$；右端因为 $\operatorname{Hom}(\mathbb{Z}[S],-)$ 正合，可以直接穿过导出函子，得 $\operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S], \operatorname{Ext}^{n}_{\mathbb{Z}}(M,N)\bigr)$，而后者按定义就是 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M,N)(S)$。两边一比即得。∎
+#### Stone 满射的 Čech 复形 1-有界零调　`lem.stone-cech-1-bounded`
+*引理*　Stone 满射的增广 Čech 复形是 $1$-有界零调
 
-参考：Le Stum, Lemma 8.3.1
+设 $M$ 是半范数阿贝尔群，$S_{0} \twoheadrightarrow S$ 是 **Stone 空间之间的满射**。则增广 Čech 复形
+
+$$\check{C}^{\bullet}\bigl((S_{0} \to S)^{+},\ M\bigr)$$
+
+是 **$1$-有界零调**的。
+
+**要做的事**：造一个零伦（contraction），把复形每一项的「闭链」都显式地写成边界，并且**范数不超过原来的 $1$ 倍**。$K = 1$ 是能得到的最好常数。
+
+**怎么造**。先归约到 $S_{0}$、$S$ 都**有限离散**的情形（Stone 空间是投射有限的逆极限，逆极限保持零伦）。有限离散时，满射 $S_{0} \twoheadrightarrow S$ 允许把一个函数「在 $S$ 的每个纤维内逐点常值化」—— 这一步是线性的、范数不增的，正好给出所需零伦，于是 $\|h\| \le 1$。
+
+**为什么只到 Stone / 有限离散为止。** 这一步只处理「Stone 空间之间的满射」。要把结论推到紧 Hausdorff，得先把它 Stone 化，再用 Čech 复形与层上同调的谱序列去比较偏差 —— 那正是下面两条要做的事。
+
+**证明。** 三步归约。
+- **归约到 $M$ 离散**：Stone 空间写 $S_{0} = \varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），$S_{k}$ 为它在 $S$ 里的像，则
+$$\varinjlim_{k} \check{C}^{\bullet}\bigl((S_{0,k}\to S_{k})^{+}, M\bigr) = \check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M^{\mathrm{disc}}\bigr) \hookrightarrow \check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr),$$
+左端的直极限拓扑就是**上确界范数**拓扑；而 $C(S, M^{\mathrm{disc}})$ 在 $C(S, M)$ 里**稠密**（极不连通性给出有限不交闭开细化，在每块上取常值逼近）。配上「$K$-有界正合在完备化下不变」与「滤过余极限保持 $K$-有界」，只需证**离散那一个**复形 $1$-有界零调（对它自己的拓扑）。
+- **归约到 $S, S_{0}$ 有限**：同一个余极限再把离散情形化归到有限。
+- **有限情形**：由「有截面的态射给出零调」，$\check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr)$ 是**零伦**的，且零伦有形式 $h^{n} : f \mapsto f \circ k_{n}$（逐纤维取一个截面点），于是 $\|h^{n}\| \le 1$。由 $\mathrm{id} = h\circ d + d\circ h$，对任意 $s$：
+$$\|s - d(hs)\| = \|h(ds)\| \le \|ds\| ,$$
+这正是 $K = 1$ 的 $K$-有界正合。∎
+
+参考：Le Stum, Lemma 8.2.5
 
 #### Breen–Deligne 分解　`thm.breen-deligne`
 *定理*　Breen–Deligne 分解：自由阿贝尔群的有限直和消解
@@ -23158,6 +23071,163 @@ $$E^{p,q}_{1} = \operatorname{Ext}^{q}_{\mathbb{Z}}\bigl(F(M)^{p}\cdot S,\ N\big
 两边一合就是所要的谱序列。∎
 
 参考：Le Stum, Proposition 8.3.4
+
+#### Breen–Deligne 的一般谱序列　`ex.bd-ss`
+*例*　$E^{p,q}_{1} = \bigoplus_{i} H^{q}(M^{s_{p,i}},\ N) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M, N)$
+
+设 $M, N$ 是拓扑斯中的阿贝尔群。由 Breen–Deligne 分解得到自然谱序列
+
+$$E^{p,q}_{1} = \bigoplus_{i=1}^{r_{p}} H^{q}\bigl(M^{s_{p,i}},\ N\bigr) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M, N).$$
+**把这条谱序列跑一遍要看的三个东西**
+
+1. **$E_{1}$ 页**：$E_{1}^{p,q} = \bigoplus_{i=1}^{r_{p}} H^{q}(M^{s_{p,i}}, N)$。注意 $p$ 是**分解的次数**、$q$ 是**上同调的次数**，两者完全独立 —— 所以 $E_{1}$ 是一整张「$p$-方向有限、$q$-方向一般是上同调的」的格子，不是一行一列。
+2. **$d_{1}$**：由 Breen–Deligne 消解的微分 $d_{0}, d_{1}, d_{2}$ 诱导，方向是 $p \mapsto p+1$（沿分解次数走）。因此 $E_{2}^{p,q} = H^{p}\bigl(E_{1}^{\bullet, q}, d_{1}\bigr)$ —— **一行一行地取同调**，行内 $q$ 固定。
+3. **收敛**：谱序列收敛到 $\operatorname{Ext}^{p+q}_{\mathbb{Z}}(M,N)$，并且这个收敛带**按分解次数的有限过滤**：$\operatorname{Ext}^{n}$ 上有一个长度有限的滤链 $F^{p}$，其各项商就是谱序列的 $E_{\infty}^{p,n-p}$。所以「算 $\operatorname{Ext}^{n}$」= 把对角线 $p+q = n$ 上所有 $E_{\infty}^{p,q}$ 按滤链拼起来；当格子里只剩一两项时就直接读出来。
+
+**什么时候算得动**：实际计算里几乎总是遇到下面两种退化情形，那时整张谱序列塌成一两条：
+
+- **某一行为零**：若对某个 $q_{0}$，$H^{q}(M^{s_{p,i}}, N) = 0$ 对所有 $p$ 与 $q \ne q_{0}$ 成立（也就是每个 $M^{s_{p,i}}$ 在「对 $N$ 取上同调」这件事上是零调的），则 $E_{1}$ 只在 $q = q_{0}$ 一行非零，于是所有 $d_{1}$ 都从这一行打到空的下一行、必然为零，于是 $E_{2} = E_{1}$，且 $\operatorname{Ext}^{n}(M,N) = E_{1}^{n-q_{0},q_{0}}$。**这就是「空间零调，于是 Ext 退化成一次上同调」的机制**，也是下面「具体计算」那一团的全部技术来源。
+- **某两行相邻存活**：则只有一个 $d_{1}$ 可能非零，$\operatorname{Ext}$ 被一个**短正合列**夹住（接着用长正合列算），这就是局部紧情形「只剩 $\operatorname{Ext}^{0},\operatorname{Ext}^{1}$」的来源。
+
+⚠️ 构造的显式公式（$d_{0},d_{1},d_{2}$ 的组合系数）本图不展开 —— 使用时只需要「$E_{1}$ 的形状 + 上面的退化判据」。
+
+**与 Stonean 那条的关系**：这条是**一般拓扑斯**里的版本（不带测试空间 $S$）；Stonean 那条是把两边都沿 $S$ 基变换（乘上 $\mathbb{Z}[S]$）之后的结果。两者是同一条谱序列的「无参数」与「有参数」两种形状。
+
+**用途**：在没有 Stonean 可用的一般拓扑斯上，仍然能用这条谱序列把 Ext 展成一批 $M^{s_{p,i}}$ 上的上同调 —— 这是「Breen–Deligne 分解是 CondAb 里一切 Ext 计算的引擎」这句话在一般拓扑斯上的版本。
+
+参考：Le Stum, Exercise 8.14
+
+### 星团：导出 Hom 的具体计算
+> 把那条谱序列**落到具体系数上**算完：Stonean / 离散空间上自由模、Stone 上常系数、\mathbb{R}/\mathbb{R}^{\mathrm{disc}}$ 的截面 → 截面公式 \operatorname{Ext}^{i}(\mathbb{Z}[S],N) \cong H^{i}(S,N)$ → 局部紧阿贝尔群的高次 \operatorname{Ext}$ 消失（只剩 \operatorname{Ext}^{0},\operatorname{Ext}^{1}$）→ \mathbb{Z}, \mathbb{R}, \mathbb{T}$ 的 \operatorname{RHom}$ 计算表 + 有限维 Banach / 连通局部紧 / 非局部紧三个例子。
+
+#### Cond/X 到开集拓扑斯的态射　`prop.cond-slice-topos-morphism`
+*命题*　拓扑斯态射 $c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X)$
+
+设 $X$ 是拓扑空间。存在拓扑斯态射
+
+$$c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X),$$
+
+其中 $\mathrm{Open}(X)$ 是 $X$ 的开集所成的拓扑空间对应的拓扑斯（开集按含入组成的偏序，配上它的标准拓扑）。
+
+**逆像**把 $Y \in \mathrm{Cond}/X$ 送到 $U \mapsto \operatorname{Hom}_{/X}(\underline{U}, Y)$；
+**顺像**把 $F \in \mathrm{Open}(X)$ 送到 $\varinjlim_{U \subseteq X,\ s \in F(U)} \underline{U}$。
+
+**在做什么。** $\mathrm{Cond}/X$ 是「把 $X$ 当成基点、在上面做凝聚态数学」的世界；$\mathrm{Open}(X)$ 是「$X$ 的开集格」这个世界。这条态射把两边接起来：**两个世界算出来的上同调可以互相换算**。
+
+**逆像的形状怎么读**：$\operatorname{Hom}_{/X}(\underline{U}, Y)$ 是「越过 $X$ 的、从 $U$ 到 $Y$ 的映射」。$U$ 越小能给的映射越多 —— 这正是层的「限制」味道。
+
+**顺像的形状怎么读**：$\varinjlim \underline{U}$ 是「把所有开集拼起来」的余极限 —— 开集沿含入的余极限就是它们并起来。
+
+⭐ 这条是下面 Dyckhoff 定理那条谱序列的**构造基础**：有了这两个方向，$\mathrm{Cond}/X$ 上的上同调才能被 $\mathrm{Open}(X)$ 上的层上同调逼近。
+
+**证明。** 先看两个函子都有定义：逆像把 $Y \in \mathrm{Cond}/X$ 送到预层 $U \mapsto \operatorname{Hom}_{/X}(\underline{U}, Y)$，而 $\mathrm{Open}(X)$ 上的层条件只涉及开集的含入，逐条验即可；顺像 $\varinjlim_{U \subseteq X,\ s \in F(U)} \underline{U}$ 取的是**滤过**余极限（开集沿含入滤过），在 $\mathrm{Cond}$ 里存在。
+**逆像左正合**：$\varinjlim$ 在 $\mathrm{Cond}$ 里正合（AB5）。
+**伴随**：逐项算
+$$\operatorname{Hom}_{/X}\Bigl(\varinjlim_{U, s} \underline{U},\ Y\Bigr) = \varinjlim_{U, s} \operatorname{Hom}_{/X}(\underline{U}, Y) = \operatorname{Hom}(F, Y),$$
+第一式是余极限的泛性质，第二式就是把「从 $F$ 到 $Y$ 的映射」按 $F$ 的定义写成相容族 $\{F(U) \to \operatorname{Hom}_{/X}(\underline{U}, Y)\}$ —— 两者是同一件事。于是有伴随 $\varinjlim \underline{U} \dashv \bigl(U \mapsto \operatorname{Hom}_{/X}(\underline{U}, -)\bigr)$，逆像左正合，故 $c_{X}$ 是拓扑斯态射。∎
+
+参考：Le Stum, Proposition 8.1.3
+
+#### Stonean 上凝聚阿贝尔群零调　`prop.stonean-cond-acyclic`
+*命题*　Stonean 空间上一切凝聚态阿贝尔群零调
+
+设 $S$ 是 **Stonean 空间**（极不连通的紧 Hausdorff 空间），$M$ 是凝聚态阿贝尔群。则对一切 $n > 0$
+
+$$H^{n}_{\mathrm{cond}}(S,\ M) = 0.$$
+
+**一句话**：Stonean 空间对凝聚态上同调是**不可见的** —— 只要系数是凝聚态阿贝尔群，高次上同调一律消失。
+
+**为什么**。截面函子 $\Gamma(S, -) = \operatorname{Hom}(\mathbb{Z}[S], -)$ 在 Stonean 空间上是**正合**的：Stonean 的极不连通性让 $\mathbb{Z}[S]$ 是投射的，于是 $\operatorname{Hom}(\mathbb{Z}[S], -)$ 保满射，而右导出函子在 $n>0$ 上正好量度「保不保满射」。
+
+⭐ **这是整章的起点**：后面每一步「零调」都是把一般空间归约到 Stonean（先 Stone 化，再用 Čech 复杂度量偏差），而 Stonean 这一格已经归零。
+
+⚠️ 注意这条对**任意**凝聚态阿贝尔群 $M$ 成立，不要求 $M$ 来自拓扑群。
+
+**证明。** 截面函子是 $\Gamma(S, -) = \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$。
+- **$\mathbb{Z}[S]$ 在 $S$ Stonean 时是投射对象**：极不连通性给出 $S$ 的闭开集格上的投影性（$S = \beta I$ 时 $\mathbb{Z}[S] = \mathbb{Z}[\beta I]$ 是自由的，而自由对象投射）；
+- 于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ 把满射送到满射 —— 即**正合**；
+- 右导出函子 $R^{n}\Gamma(S,-)$ 量的正是「这个函子在第 $n$ 步有多大程度不正合」，函子本身正合故全为 $0$（$n>0$）。∎
+
+参考：Le Stum, Proposition 8.1.1
+
+#### Stone 上常系数零调　`lem.stone-constant-acyclic`
+*引理*　Stone 空间上常值系数的零调
+
+设 $S$ 是 **Stone 空间**（紧、Hausdorff、全不连通），$A$ 是普通阿贝尔群（看作常值凝聚态阿贝尔群 $\underline{A}$）。则对一切 $n > 0$
+
+$$H^{n}_{\mathrm{cond}}(S,\ \underline{A}) = 0.$$
+
+**与 Stonean 那条的区别**。Stonean 要求**极**不连通（开集的闭包还开），Stone 只要求**全**不连通（没有非平凡连通分支）。全不连通比极不连通弱，所以这条不能直接由上面那条得到，得另证 —— 但结论形状一样：零调。
+
+**证法**。把 $S$ 与它的一个 Stone 满射 $S_{0} \twoheadrightarrow S$ 都写成**有限离散空间**的滤过**逆**极限（Stone 空间按定义就是投射有限空间的逆极限）。增广 Čech 复形逐段零调（有限离散情形是好算的），而滤过逆极限沿着正合列取极限仍然正合，于是整体零调。
+
+**为什么值得单列**：常系数是最常用的系数，这条让「Stone 空间上的常系数上同调」这一整类计算直接归零。
+
+**证明（先有限、再取逆极限）。** 由「无环 $\iff$ Čech 上同调为零」，只需对 Stone 空间之间的**满射** $f : S_{0} \twoheadrightarrow S$ 证明增广 Čech 复形 $\check{C}^{\bullet}\bigl((S_{0}\to S)^{+}, M\bigr)$ 零调（有限**不交**覆盖那情形由「有限不交覆盖的高次 Čech 为零」给出）。
+- **$S, S_{0}$ 有限的情形**：此时它们是有限离散集，$f$ 是有限满射，增广 Čech 复形是**零伦**的（有截面的态射那条），故零调。
+- **一般情形**：Stone 空间是**投射有限空间**的滤过逆极限，写 $S_{0} = \varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），记 $S_{k}$ 为 $S_{0,k}$ 在 $S$ 里的像。$M$ **离散**，于是交叠上的连续函数就是逐块给定的，而逆极限的取值是滤过余极限：
+$$\check{C}^{\bullet}\bigl((S_{0}\to S)^{+},\ M\bigr) = \varinjlim_{k} \check{C}^{\bullet}\bigl((S_{0,k}\to S_{k})^{+},\ M\bigr).$$
+- **滤过余极限正合**（AB5），所以「每一项都零调」沿这个余极限传下去：整体零调。∎
+
+参考：Le Stum, Lemma 8.1.2
+
+#### 局部紧上凝聚态＝层上同调　`thm.dyckhoff`
+*定理*　Dyckhoff：$H^{n}_{\mathrm{cond}}(X, M) = H^{n}_{\mathrm{sheaf}}(X, M)$
+
+设 $X$ 是**局部紧 Hausdorff** 空间，$M$ 是**离散**阿贝尔群（看作常值凝聚态阿贝尔群）。则对一切 $n \ge 0$
+
+$$H^{n}_{\mathrm{cond}}(X,\ M) \cong H^{n}_{\mathrm{sheaf}}(X,\ M).$$
+
+⭐ **这条是把两套上同调接起来的桥。** 凝聚态上同调是从「$X$ 上的层」算的；层上同调是从「$X$ 的开集上的层」算的。这条说：只要 $X$ 局部紧、系数离散，两边**一样**。
+
+**怎么证**。用拓扑斯态射 $c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X)$ 及其导出函子，得到一条谱序列，其 $E_{2}$ 项是 $R^{q}c_{*}$ 作用在 $M$ 上。关键计算是 $R^{q}c_{*}\underline{M} = 0$（$q > 0$），它由**茎**上的计算给出：茎化之后 $M$ 是离散的，没有高阶信息。谱序列退化，两边同构。
+
+**为什么限定「系数离散」**。系数一旦带上拓扑（比如实 Banach 空间），$R^{q}c_{*}$ 一般不再消失，两边就对不上了 —— §8.2 要处理的就是这种情形。
+
+📌 **用法**：任何**局部紧**空间上的凝聚态上同调，可以**直接**用经典的层上同调来算（开覆盖、Čech、细层消解那一整套老工具全都能用）。
+
+**证明（用 $c_{X}$ 的谱序列，把 $R^{q}c_{X*}$ 算成零）。**
+- 由 $c_{X}^{-1}(X) = X$（$X$ 作为 $\mathrm{Open}(X)$ 里的对象，逆像取回它自己），得 Grothendieck 谱序列
+$$E^{p,q}_{2} = H^{p}_{\mathrm{sheaf}}\bigl(X,\ R^{q}c_{X*}M\bigr) \;\Longrightarrow\; H^{p+q}_{\mathrm{cond}}(X,\ M).$$
+- 又 $c_{X*}M = M$，所以**只需证 $R^{q}c_{X*}M = 0$（$q > 0$）**。
+- $R^{q}c_{X*}M$ 是预层 $U \mapsto H^{q}_{\mathrm{cond}}(U, M)$ 层化得到的层。$X$ **局部紧**，它在 $x$ 处的茎是
+$$(R^{q}c_{X*}M)_{x} = \varinjlim_{x \in U} H^{q}_{\mathrm{cond}}(U, M) = \varinjlim_{x \in K} H^{q}_{\mathrm{cond}}(K, M)$$
+（$U$ 跑 $x$ 的开邻域、$K$ 跑 $x$ 的紧邻域 —— 局部紧让两个滤过系统共尾）。
+- 固定 $x$ 的一个紧邻域 $K$ 与 Stone 空间 $K_{0}$ 连同满射 $K_{0} \twoheadrightarrow K$；对 $x$ 的每个紧邻域 $S \subseteq K$，拉回得 $S_{0} \to S$。**Stone 的积与子空间仍是 Stone**，所以 $S_{n}$ 全是 Stone 空间，于是由「紧 Hausdorff 上 Čech = 层上同调」与上一条「Stone 上常系数零调」
+$$H^{n}_{\mathrm{cond}}(S, M) = \check{H}^{n}(S_{\bullet}, M).$$
+- 滤过余极限正合，于是茎那个余极限化归到 $S = \{x\}$ 的情形；而单点的 Čech 复形由「有截面 $\implies$ 零调」直接给出零。故 $R^{q}c_{X*}M = 0$（$q>0$），谱序列退化，$H^{n}_{\mathrm{cond}}(X,M) \cong H^{n}_{\mathrm{sheaf}}(X,M)$。∎
+
+参考：Le Stum, Proposition 8.1.4
+
+#### Stonean 上 Ext 的截面公式　`lem.ext-stonean-section`
+*引理*　$\operatorname{Ext}^{n}(M, N)(S) \cong \operatorname{Ext}^{n}(M \cdot S,\ N)$
+
+设 $M, N$ 是凝聚态阿贝尔群，$S$ 是 **Stonean 空间**。记 $M \cdot S := M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$。则对一切 $n \ge 0$
+
+$$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N)(S) \cong \operatorname{Ext}^{n}_{\mathbb{Z}}(M \cdot S,\ N).$$
+
+**在做什么。** 左边是「Ext 层在 $S$ 上的截面」，右边是「把一个普通 Ext 算出来」。这条把**层的** Ext 换成了**单次**的 Ext —— 于是「算 Ext 层」这件事变成「算一个具体的导出 Hom」。
+
+**为什么 Stonean 可以。** Stonean 空间 $S$ 上，$\mathbb{Z}[S]$ 是**投射**的，于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ 正合。把这个正合函子搬到自然同构
+
+
+
+$$\operatorname{Hom}_{\mathbb{Z}}(M \cdot S,\ N) \cong \operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S],\ \operatorname{Hom}_{\mathbb{Z}}(M, N)\bigr)$$
+
+
+
+两边，就得到了结论：右边是「内 Hom 的截面」，左边是「先张量再 Hom」。
+
+⚠️ 关键前提是 **Stonean**（极不连通），不是一般的紧 Hausdorff —— 极不连通性正是 $\mathbb{Z}[S]$ 投射的来源。
+
+⭐ 这条是下面谱序列的**接线口**：Breen–Deligne 分解把 Ext 展开成若干「自由对象」，而每一项的 Ext 恰好可以用这条把层的计算搬回普通计算。
+
+**证明。** $S$ Stonean $\implies$ $\mathbb{Z}[S]$ 是**投射**对象，于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}[S], -)$ **正合**。
+对自然同构
+$$\operatorname{Hom}_{\mathbb{Z}}(M \cdot S,\ N) \cong \operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S],\ \operatorname{Hom}_{\mathbb{Z}}(M, N)\bigr)$$
+（这是 $M \cdot S = M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$ 的伴随形式）两边取右导出：左端给出 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M\cdot S, N)$；右端因为 $\operatorname{Hom}(\mathbb{Z}[S],-)$ 正合，可以直接穿过导出函子，得 $\operatorname{Hom}_{\mathbb{Z}}\bigl(\mathbb{Z}[S], \operatorname{Ext}^{n}_{\mathbb{Z}}(M,N)\bigr)$，而后者按定义就是 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M,N)(S)$。两边一比即得。∎
+
+参考：Le Stum, Lemma 8.3.1
 
 #### 有限维 Banach 到离散群全零　`prop.rhom-banach-discrete-zero`
 *命题*　$\operatorname{RHom}_{\mathbb{Z}}(M, N) = 0$（Banach 到 离散）
@@ -23288,6 +23358,24 @@ $$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0.$$
 下表列出 $\operatorname{RHom}_{\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：
 
 $$\begin{array}{c|ccc} & \mathbb{Z} & \mathbb{R} & T \\ \hline \mathbb{Z} & \mathbb{Z} & \mathbb{R} & T \\ \mathbb{R} & 0 & \mathbb{R} & \mathbb{R} \\ T & \mathbb{Z}[-1] & 0 & \mathbb{Z} \end{array}$$
+**逐格推算：这台机器只用两个事实**
+
+1. **$\mathbb{Z}$ 是自由（投射）的**：$\mathbb{Z}$ 的消解可以取成一维的 $[\mathbb{Z}]$，于是 $\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z}, N) = \operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}, N) = N$，**没有高阶项**。这一条直接给出表的第一行。
+2. **$\mathbb{R}$ 可除，因此是 $\mathbb{Z}$-内射的**：$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, \mathbb{R}) = 0$ 对一切 $M$ 与 $n \ge 1$。于是「靶是 $\mathbb{R}$」的那些格只剩 $0$ 次：$\operatorname{RHom}(M, \mathbb{R}) = \operatorname{Hom}_{\mathbb{Z}}(M, \mathbb{R})$。
+
+**把 $T$ 那一列换成 $\mathbb{Z}$ 再升一次**：取短正合列 $0 \to \mathbb{Z} \to \mathbb{R} \to T \to 0$（$T = \mathbb{R}/\mathbb{Z}$）。对固定的 $M$ 取 $\operatorname{RHom}(M, -)$，得**长正合列**
+
+$$\cdots \to \operatorname{Ext}^{n}(M, \mathbb{R}) \to \operatorname{Ext}^{n}(M, T) \to \operatorname{Ext}^{n+1}(M, \mathbb{Z}) \to \operatorname{Ext}^{n+1}(M, \mathbb{R}) \to \cdots$$
+
+既然两端的 $\mathbb{R}$ 项在 $n \ge 1$ 全为零，中间就被夹死：
+
+$$\operatorname{Ext}^{n}(M, T) \;\cong\; \operatorname{Ext}^{n+1}(M, \mathbb{Z}) \qquad (n \ge 1),$$
+
+以及 $0 \to \operatorname{Hom}(M,\mathbb{Z}) \to \operatorname{Hom}(M,\mathbb{R}) \to \operatorname{Hom}(M,T) \to \operatorname{Ext}^{1}(M,\mathbb{Z}) \to 0$。**这就是表里 $T$ 列与 $\mathbb{Z}$ 列恰好差一次上标的来源**（例如第三行第一列是 $\mathbb{Z}[-1]$：$M = T$ 时 $\operatorname{Ext}^{0}(T,\mathbb{Z}) = 0$、$\operatorname{Ext}^{1}(T,\mathbb{Z}) \cong \operatorname{Ext}^{0}(T,T) = \mathbb{Z}$）。
+
+**为什么「实向量空间 $\to$ 离散」全零**：$\mathbb{R}^{n}$ 可除，可除群到任何群都满足「$n$ 倍可解」的条件，于是 $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{R}^{n}, \mathbb{Z}) = 0$（$1/n$ 的像必须能被 $n$ 整除地解出来，只有 $0$）；配合可除性 $\operatorname{Ext}^{1}(\mathbb{R}^{n}, \mathbb{Z}) = 0$，整条 $\operatorname{RHom}$ 为零。
+
+⚠️ 表中「$\mathbb{R}$ 行、$T$ 列 = $\mathbb{R}$」这一格不能只靠上面两条推出（它涉及连续同态 $\mathbb{R} \to T = \mathbb{R}/\mathbb{Z}$ 的分类，与万有覆盖 $\mathbb{R} \to T$ 有关）；本图按笔记的结论记录，**推导留待核对**。
 
 **怎么读这张表**（$T = \mathbb{R}/\mathbb{Z}$）：
 
@@ -23329,19 +23417,6 @@ $$\begin{array}{c|ccc} & \mathbb{Z} & \mathbb{R} & T \\ \hline \mathbb{Z} & \mat
 ⭐ 这条是「实 Banach 在紧 Hausdorff 上零调」那一步的**局部计算**：谱序列的每一格都是这种形状。
 
 参考：Le Stum, Exercise 8.12
-
-#### Breen–Deligne 的一般谱序列　`ex.bd-ss`
-*例*　$E^{p,q}_{1} = \bigoplus_{i} H^{q}(M^{s_{p,i}},\ N) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M, N)$
-
-设 $M, N$ 是拓扑斯中的阿贝尔群。由 Breen–Deligne 分解得到自然谱序列
-
-$$E^{p,q}_{1} = \bigoplus_{i=1}^{r_{p}} H^{q}\bigl(M^{s_{p,i}},\ N\bigr) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M, N).$$
-
-**与 Stonean 那条的关系**：这条是**一般拓扑斯**里的版本（不带测试空间 $S$）；Stonean 那条是把两边都沿 $S$ 基变换（乘上 $\mathbb{Z}[S]$）之后的结果。两者是同一条谱序列的「无参数」与「有参数」两种形状。
-
-**用途**：在没有 Stonean 可用的一般拓扑斯上，仍然能用这条谱序列把 Ext 展成一批 $M^{s_{p,i}}$ 上的上同调 —— 这是「Breen–Deligne 分解是 CondAb 里一切 Ext 计算的引擎」这句话在一般拓扑斯上的版本。
-
-参考：Le Stum, Exercise 8.14
 
 #### 连通局部紧到离散只剩 Ext一次　`ex.connected-lc-ext`
 *例*　$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0$（$n \ne 1$，$M$ 连通、$N$ 离散）
@@ -23508,45 +23583,6 @@ $$\operatorname{RHom}^{\mathrm{cond}}\bigl(\mathrm{c}(M),\ N\bigr) \cong \operat
 ⭐ 一句话：**离散群「感觉不到」凝聚态那一层结构** —— 在它们身上，凝聚态同调代数与抽象同调代数给出同一个答案（只差一个常层）。所以要真正用到凝聚态结构，就必须拿 $\mathbb{R}$、$\mathbb{Z}[S]$ 这类非离散对象来测。
 
 参考：Le Stum, An introduction to condensed mathematics, §8.3
-
-#### K-有界正合沿滤过余极限保持　`prop.k-bounded-exact-filtered-colimit`
-*命题*　命题：等距转移下的滤过余极限保持 $K$-有界正合
-
-设 $M^{\bullet} = \varinjlim_{k} M^{\bullet}_{k}$ 是半范数阿贝尔群复形的**滤过余极限**，且转移映射都是**等距**的。若每个 $M^{\bullet}_{k}$ 在 $M^{n}_{k}$ 处 $K$-有界正合，则 $M^{\bullet}$ 在 $M^{n}$ 处 $K$-有界正合。
-
-**证明。** 等距转移映射给出两条关键事实：余极限的**半范数就是代表元的半范数**（所有代表元范数相同，否则沿等距映射传递会矛盾）✓；微分与转移映射交换，因此 $\|d s\| = \|d s_{k}\|$ 对任何代表元 $s_{k} \mapsto s$ 成立 ✓。
-给定 $s \in M^{n}$ 与 $\varepsilon > 0$：取代表元 $s_{k} \in M^{n}_{k}$（余极限的元素都是某个有限阶段的元素）✓；在 $M^{\bullet}_{k}$ 里用 $K$-有界正合，得到 $s'_{k} \in M^{n+1}_{k}$ 使
-$$\|s_{k} - d^{n+1}s'_{k}\| \le K\,\|d^{n}s_{k}\| + \varepsilon.$$
-把 $s'_{k}$ 映进余极限得 $s' \in M^{n+1}$，再由等距性与微分的交换性，左边与右边逐项搬过去：
-$$\|s - d^{n+1}s'\| = \|s_{k} - d^{n+1}s'_{k}\| \le K\,\|d^{n}s_{k}\| + \varepsilon = K\,\|d^{n}s\| + \varepsilon ✓$$
-这正是 $K$-有界正合在 $M^{n}$ 处的要求 ✓。∎
-
-⭐ 用处：$K$-有界正合这件「带常数的解析性质」在**往大的复形里并**时不会丢 —— 于是可以先用有限 / 简单的复形验条件，再取余极限。
-
-⚠️ **等距**这一条不能省：若转移映射只是连续而范数会缩小，余极限上的半范数就变成「代表元范数的下确界」，上面的 $\|d s\| = \|d s_{k}\|$ 立刻失效。
-
-参考：Le Stum, An introduction to condensed mathematics, §8.2
-
-#### 连续函数空间的范数　`prop.continuous-functions-normed`
-*命题*　命题：$C(S, M)$ 是（半）范数 / Banach 阿贝尔群，且 Stone 上离散值函数稠密
-
-设 $S$ 是**紧 Hausdorff** 空间，$M$ 是（半）范数阿贝尔群（相应地 Banach 阿贝尔群）。则
-
-1. 连续同态 $C(S, M) := \operatorname{Hom}_{\mathrm{top}}(S, M)$ 配以
-$$\|f\| := \sup_{x \in S}\|f(x)\|$$
-是（半）范数阿贝尔群（相应地 Banach 阿贝尔群）；
-2. 若 $S$ 还是 **Stone** 空间，则 $C(S, M^{\mathrm{disc}})$ 在 $C(S, M)$ 中**稠密**。
-
-**证明。**
-**1.** $\sup$ 有限：连续函数在紧空间上有界（$f(S)$ 紧，而范数球的半径有限）✓；三条半范数公理由 $M$ 的半范数逐点验证、再取上确界 ✓；$\|f\| = 0 \implies f = 0$ 当且仅当 $M$ 是 Hausdorff 的（即范数而非半范数）✓。
-**完备性**：设 $(f_{j})$ 是 $\|\cdot\|$ 下的 Cauchy 列，则每个 $x$ 处 $(f_{j}(x))$ 是 Cauchy 列，由 $M$ 完备有极限 $f(x)$ ✓；Cauchy 列是**一致**Cauchy 的（$\|f_{j}-f_{k}\| < \varepsilon$ 对每个 $x$ 成立），故 $f_{j} \to f$ **一致**，一致极限保持连续性 ✓，于是 $M$ 完备时 $C(S,M)$ 完备 ✓。
-**2.** 给 $f \in C(S, M)$ 与 $\varepsilon > 0$。开覆盖
-$$S = \bigcup_{m \in M} f^{-1}\bigl(B(m, \varepsilon/2)\bigr)$$
-由 $S$ 是 Stone 空间，它有**有限的、两两不交的闭开加细** $S = \bigsqcup_{r} S_{r}$（Stone 空间上任何开覆盖都有这样的加细）✓。在每个 $S_{r}$ 上任取 $m_{r}$ 使 $S_{r} \subseteq f^{-1}(B(m_{r},\varepsilon/2))$ ✓，令 $g := m_{r}$ 在 $S_{r}$ 上。则 $g$ **局部常值**，即映入离散群 $M^{\mathrm{disc}}$ 的连续函数 ✓，且逐点 $\|f - g\| \le \varepsilon/2$ ✓，故 $\|f-g\| \le \varepsilon/2 < \varepsilon$ ✓。于是 $C(S,M^{\mathrm{disc}})$ 稠密 ✓。∎
-
-⭐ 第 2 条是「**离散值函数足够多**」的精确版本：Stone 空间上任何连续 $M$-值函数都可以用局部常值函数一致逼近。它在 Banach 系数零调（8.2.6 / 8.2.8）的证明里是关键一步。
-
-参考：Le Stum, An introduction to condensed mathematics, §8.2
 
 ### 星团：固态阿贝尔群
 > 造出凝聚态世界里的**完备化 / 完备张量积**：测度 $M(S,\mathbb{Z})$ → 自由固态 $Z[S]^{\blacksquare}$ → 固态群（唯一延拓）→ $C(S,\mathbb{Z})$ 自由（Specker–Nöbeling）→ 固态子范畴是阿贝尔的、以 $\prod_I \mathbb{Z}$ 为紧投射生成元 → 固态张量积 $\otimes^{\blacksquare}$。来源：Clausen–Scholze 讲义 Lectures V–VI。
@@ -28295,6 +28331,66 @@ $$\Phi(u\cdot g) = \bigl(\pi(u),\ \varphi(u)\,g\bigr).$$
 ⚠️ 「自由」这一条不能省：若允许 $u\cdot g = u$ 而 $g\ne e$，纤维上就有稳定化子，丛在纤维方向上会「粘住」，此时它不再是主丛、而是某个更小的群的主丛（或一般的纤维丛）。
 
 参考：Tu, Differential Geometry (GTM 275)（⚠️ 手头无该书，章名未核实，只记书名）· 主丛与配丛
+
+#### 帧丛　`def.frame-bundle`
+*定义*　帧丛：把向量丛变成主 $\mathrm{GL}(k)$-丛
+
+**在做什么**：向量丛的纤维是**向量空间**（有加法、有零元），主丛的纤维是**群**（有乘法、没有零元）。帧丛就是两者之间那座桥：把每根纤维里的「一组基」而不是「一个向量」取出来当新纤维。
+
+设 $\pi : E \to M$ 是秩 $k$ 的光滑实向量丛。**帧丛** $\mathrm{Fr}(E) \to M$ 的纤维是
+
+$$\mathrm{Fr}(E)_{p} := \{\, (e_{1}, \ldots, e_{k}) : e_{i} \in E_{p},\ (e_{i})\ \text{是}\ E_{p}\ \text{的一组基} \,\} ,$$
+
+全体帧丛取不交并 $\mathrm{Fr}(E) := \bigsqcup_{p} \mathrm{Fr}(E)_{p}$，投影取「忘记基、只留 $p$」。
+
+**结构**：$\mathrm{GL}(k,\mathbb{R})$ 在右侧自由作用（换一组基就是右乘一个矩阵），
+
+$$(e_{1}, \ldots, e_{k})\cdot A := \Bigl(\sum_{i} e_{i}A_{i1}, \ldots, \sum_{i} e_{i}A_{ik}\Bigr) ,$$
+
+于是 $\mathrm{Fr}(E) \to M$ 是**主 $\mathrm{GL}(k,\mathbb{R})$-丛**（`def.principal-bundle`）。
+
+**反过来**：给定主 $\mathrm{GL}(k)$-丛 $P \to M$，配丛 $P \times_{\mathrm{GL}(k)} \mathbb{R}^{k}$ 就是一个秩 $k$ 向量丛；这两个构造互逆（差一个自然同构）。
+
+⭐ **为什么需要它**：很多构造对「向量丛」不好讲、对「主丛」却很好讲（联络、曲率、特征类）。帧丛让你**把向量丛搬到主丛那边做完，再搬回来** —— 这就是「向量丛的理论 = 主 $\mathrm{GL}(k)$-丛的理论」的技术含义。
+
+**光滑性**：$\mathrm{Fr}(E)$ 上有唯一的流形结构使投影光滑且局部平凡（在 $E$ 的局部平凡化 $U \times \mathbb{R}^{k}$ 上，帧就是 $U \times \mathrm{GL}(k,\mathbb{R})$）。所以「帧丛是主丛」不是集合层面的巧合，而是光滑层面的同构。
+
+⚠️ **$\mathrm{Fr}(E)$ 的维数**是 $\dim M + k^{2}$（$\mathrm{GL}(k)$ 的维数是 $k^{2}$），而不是 $\dim M + k$。这一点常被写错：帧丛**比原丛大得多**（$k = 1$ 时两者维数才相同，因为 $\mathrm{GL}(1) = \mathbb{R}^{\times}$ 是一维的）。
+
+⚠️ **约化结构群 = 额外的几何结构**：$\mathrm{Fr}(E)$ 里挑出「关于某个度量标准正交」的帧，得到一个主 $\mathrm{O}(k)$-子丛；挑出「关于某个复结构是复线性」的帧，得到 $\mathrm{GL}(k,\mathbb{C})$。**反过来，主 $G$-子丛 与 向量丛上的 $G$-结构**（度量、复结构、定向、$\mathrm{Spin}$ 结构……）。这是「$G$-结构」这套语言的起点。
+
+参考：Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 帧丛与主丛；Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）
+
+#### 配丛　`def.associated-bundle`
+*定义*　配丛：主 $G$-丛配上一个 $G$-作用得到的新丛
+
+**在做什么**：主丛的纤维是群 $G$，但你要的纤维常常是别的空间 $F$（向量空间、球面、旗流形……）。**配丛**就是「把 $G$ 换成 $F$」的标准手术：拿 $G$ 在 $F$ 上的作用把两者粘起来。
+
+设 $P \to M$ 是主 $G$-丛（`def.principal-bundle`），$F$ 是带左 $G$-作用的流形。积空间 $P \times F$ 上令 $G$ 右作用
+
+$$(u, y)\cdot g := (u \cdot g,\ g^{-1}\cdot y) ,$$
+
+其轨道空间记
+
+$$P \times_{G} F := (P \times F)\big/ G ,$$
+
+投影 $[u, y] \mapsto \pi(u)$ 把它做成以 $F$ 为纤维的纤维丛，叫**配丛**（associated bundle）。
+
+**最重要的情形**：取 $F = \mathbb{R}^{k}$ 与 $G = \mathrm{GL}(k,\mathbb{R})$ 的标准作用，则
+
+$$\mathrm{Fr}(E) \times_{\mathrm{GL}(k)} \mathbb{R}^{k} \;\cong\; E ,$$
+
+即**每个向量丛都是其帧丛的配丛** —— 这与 `def.frame-bundle` 合起来就是「向量丛 $\leftrightarrow$ 秩 $k$ 向量丛的主 $\mathrm{GL}(k)$-丛」的一一对应（分类只在同构意义下说）。
+
+⭐ **$g^{-1}$ 不是笔误**：要让右作用真的成立，必须一边用 $g$、一边用 $g^{-1}$（否则 $(u,y)\cdot g\cdot h$ 会变成 $(u\cdot gh, h^{-1}g^{-1}y)$，与 $(u,y)\cdot(gh)$ 不一致）。这是配丛最容易写错的一处记号。
+
+**为什么用 $G$ 而不是「随便一个同构」**：配丛的定义里，$G$-作用就是**唯一的粘合数据**。所以「配丛」把「纤维丛 + 结构群落在 $G$ 里」这件事写成了一个具体构造 —— 这与 `def.fiber-bundle` 里「结构群是 $G$」那句话是同一件事的两种说法。
+
+⚠️ **截面 与 等变映射**：配丛的截面 $M \to P\times_{G}F$ 与「$G$-等变映射 $P \to F$」一一对应。这条对应是**物理里「规范场 与 主丛上的等变函数」**的数学形式，也是「向量丛的截面 = 帧丛上的 $\mathrm{GL}(k)$-等变 $\mathbb{R}^{k}$-值函数」的来源。
+
+⚠️ 配丛**不需要** $G$ 离散、也不需要 $F$ 线性。取 $F = G/H$ 得到「齐性空间丛」（例如 $F = S^{2} = \mathrm{SO}(3)/\mathrm{SO}(2)$ 给出「球面丛」），取 $F = G$ 且作用取左乘/右乘，可以造出伴主丛 —— 后者正是「$G$-丛的扭子」那类构造。
+
+参考：Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 配丛；Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）
 
 ### 星团：向量场与 Lie 结构
 > 在流形上做「微分」的那一套：向量场与 Lie 括号 → 流与流的不变量（Lie 导数、内乘、Cartan 公式）→ 张量场与缩并 → 切分布、对合分布与 Frobenius 定理 → Lie 代数。
@@ -42210,7 +42306,7 @@ $$\Lambda := \{\, (F, x) : F \in \mathcal{F},\ x \in F \,\} , \qquad (F, x) \le 
 
 > 讲义里只写了「$O_n' := O_n \cup \Omega^c$ 在 $X$ 稠密」，剩下就是这个补集论证。
 
-#### 闭覆盖的内点 ⟹ 一致有界原理　`imp.fa-closedcover-ubp`
+#### 闭覆盖的内点 ⟹ 共鸣定理　`imp.fa-closedcover-ubp`
 *闭覆盖有内点 $\implies$ 一致有界原理*
 
 令 $F_k := \{x \in E : \sup_i \|u_i x\| \le k\}$。每个 $\{x : \|u_i x\| \le k\}$ 是闭集（$u_i$ 与范数连续），故 $F_k$ 闭。
@@ -42219,7 +42315,7 @@ $$\Lambda := \{\, (F, x) : F \in \mathcal{F},\ x \in F \,\} , \qquad (F, x) \le 
 
 > 整条证明只有一处非平凡：某个 $F_k$ 必须有内点 —— 那就是 Baire。
 
-#### 一致有界原理 ⟹ 共振集是稠密 G_δ　`imp.fa-ubp-resonance`
+#### 共鸣定理 ⟹ 共振集是稠密 G_δ　`imp.fa-ubp-resonance`
 *UBP 的补集形态：共振集稠密*
 
 令 $M(x) := \sup_n \|u_n x\|$，$\Omega_k := \{x : M(x) > k\} = \bigcup_n \{x : \|u_n x\| > k\}$，每个 $\{\cdots\}$ 开，故 $\Omega_k$ 开；$R = \bigcap_k \Omega_k$ 是 $G_\delta$。
@@ -42339,7 +42435,7 @@ $$\|f(y) - f(x)\| \le \|f(y) - f_m(y)\| + \|f_m(y) - f_m(x)\| + \|f_m(x) - f(x)\
 
 > 这一步把「变分不等式」翻译成「正交」，也是 Riesz 表示的唯一工具。
 
-#### 闭子空间的正交投影 ⟹ Riesz 表示定理（Hilbert 版）　`imp.fa-projsubspace-riesz`
+#### 闭子空间的正交投影 ⟹ Riesz 表示（Hilbert）　`imp.fa-projsubspace-riesz`
 *正交分解 $\implies$ Riesz 表示*
 
 $\varphi = 0$ 取 $y = 0$。否则 $E := \ker\varphi$ 是闭真子空间，由正交分解取 $0 \ne z \in E^\perp$。
@@ -42348,7 +42444,7 @@ $\varphi = 0$ 取 $y = 0$。否则 $E := \ker\varphi$ 是闭真子空间，由�
 
 > 只用了三件事：$\ker\varphi$ 闭、正交分解、共轭线性的约定。
 
-#### Riesz 表示定理（Hilbert 版） ⟹ 伴随算子　`imp.fa-riesz-adjoint`
+#### Riesz 表示（Hilbert） ⟹ 伴随算子　`imp.fa-riesz-adjoint`
 *Riesz 表示 $\implies$ 伴随算子存在*
 
 固定 $x \in K$，令 $\psi_x(y) := \langle x, u(y)\rangle_K$；它线性、连续且 $|\psi_x(y)| \le \|x\|\,\|u\|\,\|y\|$，故 $\psi_x \in H^*$。
@@ -42434,7 +42530,7 @@ $A_{\mathbb{R}}$ 是含单位的实子代数（$\operatorname{Re}(fg)$ 是实部
 
 这里要的是 $F$ 的度量完备（Cauchy 列收敛）。
 
-#### 定义引用：「Banach 空间」→ 一致有界原理　`def-link.fa-banach-ubp`
+#### 定义引用：「Banach 空间」→ 共鸣定理　`def-link.fa-banach-ubp`
 
 一致有界原理唯一的完备性假设落在 $E$ 是 Banach 上。
 
@@ -42649,6 +42745,34 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 #### 定义引用：「Hausdorff 空间」→ 局部紧 Hausdorff 是 Baire　`def-link.fa-hausdorff-baire`
 
 局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。
+
+#### 定义引用：「向量丛」→ 帧丛　`dep.fr-vector`
+
+帧丛是「向量丛 + 每根纤维选一组基」，先有向量丛。
+
+#### 定义引用：「主丛」→ 帧丛　`dep.fr-principal`
+
+结论是「帧丛是主 $\mathrm{GL}(k)$-丛」—— 用的是主丛的定义。
+
+#### 定义引用：「局部平凡化」→ 帧丛　`dep.fr-localt`
+
+帧丛的局部平凡化来自向量丛的局部平凡化（$U \times \mathrm{GL}(k)$）。
+
+#### 定义引用：「主丛」→ 配丛　`dep.ab-principal`
+
+配丛是「主丛 + $G$-作用」粘出来的，主丛是全部输入。
+
+#### 定义引用：「纤维丛」→ 配丛　`dep.ab-fiber`
+
+配丛本身是以 $F$ 为纤维的纤维丛。
+
+#### 定义引用：「帧丛」→ 配丛　`dep.ab-frame`
+
+关键恒等式：每个向量丛 = 帧丛的配丛（$F = \mathbb{R}^{k}$）。
+
+#### 定义引用：「向量丛」→ 配丛　`dep.ab-vector`
+
+主要情形 $F = \mathbb{R}^{k}$ 的结论就是「又得到向量丛」。
 
 #### 定义引用：「实数系 ℝ」→ 扩充实数 [−∞,+∞]　`dep.real-extended`
 
@@ -49759,12 +49883,12 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **阿贝尔层 ↔ 层上同调**　4 条节点级连线
-- **凝聚态上同调 ↔ 层上同调**　5 条节点级连线
-- **凝聚态阿贝尔群 ↔ 凝聚态上同调**　9 条节点级连线
-- **凝聚态上同调 ↔ 凝聚态集**　3 条节点级连线
-- **凝聚态上同调 ↔ 拓扑阿贝尔群**　2 条节点级连线
-- **凝聚态上同调 ↔ 紧 Hausdorff 空间**　5 条节点级连线
-- **凝聚态上同调 ↔ 阿贝尔层**　2 条节点级连线
+- **导出 Hom 的具体计算 ↔ 层上同调**　4 条节点级连线
+- **凝聚态阿贝尔群 ↔ 导出 Hom 的具体计算**　8 条节点级连线
+- **导出 Hom 的具体计算 ↔ 凝聚态集**　3 条节点级连线
+- **导出 Hom 的具体计算 ↔ 拓扑阿贝尔群**　2 条节点级连线
+- **导出 Hom 的具体计算 ↔ 紧 Hausdorff 空间**　4 条节点级连线
+- **导出 Hom 的具体计算 ↔ 阿贝尔层**　2 条节点级连线
 - **图与极限 ↔ 复形与导出三角**　4 条节点级连线
 - **层与拓扑 ↔ 预层与米田**　8 条节点级连线
 - **函子与自然变换 ↔ 加法与阿贝尔范畴**　3 条节点级连线
@@ -49829,13 +49953,13 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **层上同调 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **图与极限 ↔ 层上同调**　2 条节点级连线
 - **图与极限 ↔ 凝聚态集**　3 条节点级连线
-- **拓扑斯 ↔ 凝聚态上同调**　2 条节点级连线
-- **凝聚态上同调 ↔ Stone 与 Stonean**　6 条节点级连线
-- **凝聚态上同调 ↔ 收敛与紧性**　3 条节点级连线
-- **凝聚态上同调 ↔ 度量空间**　2 条节点级连线
-- **凝聚态上同调 ↔ 复形与导出三角**　11 条节点级连线
-- **凝聚态上同调 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **凝聚态上同调 ↔ 过滤与谱序列**　2 条节点级连线
+- **导出 Hom 的具体计算 ↔ Stone 与 Stonean**　3 条节点级连线
+- **导出 Hom 的具体计算 ↔ 收敛与紧性**　3 条节点级连线
+- **凝聚态导出函子 ↔ 度量空间**　2 条节点级连线
+- **Breen–Deligne 谱序列 ↔ Stone 与 Stonean**　2 条节点级连线
+- **导出 Hom 的具体计算 ↔ 复形与导出三角**　9 条节点级连线
+- **Breen–Deligne 谱序列 ↔ 过滤与谱序列**　2 条节点级连线
+- **凝聚态导出函子 ↔ 导出 Hom 的具体计算**　4 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **实数完备性的等价刻画 ↔ 实数与极限**　5 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线

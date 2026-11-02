@@ -1,6 +1,6 @@
 # 紧空间对实 Banach 空间的导出 Hom　`ex.chaus-banach-rhom`
 $\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z} \cdot S,\ N) \cong C(S, N)$
-layer 16 · 例 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 16 · 例 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=ex.chaus-banach-rhom)　·　[节点索引](../index.md)
 
 设 $S$ 是紧 Hausdorff 空间、$N$ 是实 Banach 空间。则 $\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z} \cdot S,\ N) \cong C(S, N)$，集中在 **0 次**。

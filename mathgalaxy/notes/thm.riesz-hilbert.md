@@ -1,4 +1,4 @@
-# Riesz 表示定理（Hilbert 版）　`thm.riesz-hilbert`　·　说明
+# Riesz 表示（Hilbert）　`thm.riesz-hilbert`　·　说明
 根 `../`
 
 证法：$\varphi = 0$ 取 $y = 0$。否则 $E = \ker\varphi$ 是**闭真**子空间，由正交分解取 $0 \ne z \in E^\perp$，令 $y = \overline{\varphi(z)}\, z / \|z\|^2$；则 $x \mapsto \langle x, y\rangle$ 与 $\varphi$ 在 $E$ 上都为 $0$、在 $z$ 上相等，而 $H = E \oplus \mathbb{K} z$，故相等。$\|y\| = \|\varphi\|$ 由 $\|\varphi\| = \sup_{\|x\| \le 1} |\langle x, y\rangle| = \|y\|$。

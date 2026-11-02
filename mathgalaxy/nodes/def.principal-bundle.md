@@ -12,6 +12,9 @@ layer 26 · 定义 · 流形与向量丛 · 微分几何
 
 - …另有入边，续页见 [nodes/def.principal-bundle.4.md](./def.principal-bundle.4.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.principal-bundle.5.md](./def.principal-bundle.5.md)
+
 refs: Tu, Differential Geometry (GTM 275)（⚠️ 手头无该书，章名未核实，只记书名）· 主丛与配丛
 
 > 说明见 `notes/def.principal-bundle.md`

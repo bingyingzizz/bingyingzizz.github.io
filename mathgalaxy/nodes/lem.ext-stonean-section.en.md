@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · lemma · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · lemma · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Ext Sections` (short) · `Sections of Ext on Stonean Spaces` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Mathematical Analysis
+layer 7 · definition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.semi-normed-ab-group.md` and `proofs/`.

@@ -1,7 +1,7 @@
 # 闭覆盖有内点 $\implies$ 一致有界原理
 `imp.fa-closedcover-ubp` · 推出 · strong 边 · 根 `../`
 
-`lem.countable-closed-cover` 闭覆盖的内点 → `thm.ubp` 一致有界原理
+`lem.countable-closed-cover` 闭覆盖的内点 → `thm.ubp` 共鸣定理
 
 令 $F_k := \{x \in E : \sup_i \|u_i x\| \le k\}$。每个 $\{x : \|u_i x\| \le k\}$ 是闭集（$u_i$ 与范数连续），故 $F_k$ 闭。
 逐点有界 $\implies E = \bigcup_k F_k$。由「可数个闭集覆盖 Baire 空间 $\implies$ 内点之并稠密」，某个 $F_k$ 有内点，即存在 $B(x_0, r) \subseteq F_k$。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics
+layer 18 · lemma · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Finite Disjoint Covers` (short) · `Čech Acyclicity for Finite Disjoint Covers` (full)
 
 ## Statement and proof

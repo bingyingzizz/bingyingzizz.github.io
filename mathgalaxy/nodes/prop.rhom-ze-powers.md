@@ -1,6 +1,6 @@
 # 离散空间上自由模的导出 Hom　`prop.rhom-ze-powers`
 命题：$\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z}[E], N) \cong N^{E}$（$E$ 离散）
-layer 18 · 命题 · 凝聚态上同调 · 凝聚态数学
+layer 18 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=prop.rhom-ze-powers)　·　[节点索引](../index.md)
 
 设 $E$ 是**离散**拓扑空间，$N$ 是凝聚态阿贝尔群。则

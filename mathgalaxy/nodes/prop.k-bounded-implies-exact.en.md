@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 16 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `K-Bounded Exactness` (short) · `K-Bounded Exactness Implies Exactness` (full)
 
 ## Statement and proof

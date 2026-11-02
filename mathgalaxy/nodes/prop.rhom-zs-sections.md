@@ -1,6 +1,6 @@
 # Stonean 空间上自由模的导出 Hom　`prop.rhom-zs-sections`
 命题：$\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z}[S], N) \cong N(S)$（$S$ Stonean）
-layer 18 · 命题 · 凝聚态上同调 · 凝聚态数学
+layer 18 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=prop.rhom-zs-sections)　·　[节点索引](../index.md)
 
 设 $S$ 是 **Stonean** 空间，$N$ 是凝聚态阿贝尔群。则

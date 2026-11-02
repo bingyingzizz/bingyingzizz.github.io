@@ -1,6 +1,6 @@
 # Tietze 延拓（Banach 值）　`thm.tietze-banach`
 Tietze 延拓定理：$C(X, V) \twoheadrightarrow C(K, V)$
-layer 17 · 定理 · 凝聚态上同调 · 凝聚态数学+拓扑学
+layer 17 · 定理 · 凝聚态导出函子 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=thm.tietze-banach)　·　[节点索引](../index.md)
 
 设 $X$ 是**正规**拓扑空间，$K \subseteq X$ 是**紧**子集，$V$ 是**实 Banach 空间**。则限制映射

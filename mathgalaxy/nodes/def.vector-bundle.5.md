@@ -8,3 +8,5 @@
 - 被 [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类 用
 - ⇒ [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
+- 被 [`def.frame-bundle`](../nodes/def.frame-bundle.md) 帧丛 用
+- 被 [`def.associated-bundle`](../nodes/def.associated-bundle.md) 配丛 用

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · theorem · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Ext Vanishes for LCA Groups` (short) · `Ext Vanishes in High Degrees for Locally Compact Abelian Groups` (full)
 
 ## Statement and proof

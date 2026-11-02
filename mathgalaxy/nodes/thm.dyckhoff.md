@@ -1,6 +1,6 @@
 # 局部紧上凝聚态＝层上同调　`thm.dyckhoff`
 Dyckhoff：$H^{n}_{\mathrm{cond}}(X, M) = H^{n}_{\mathrm{sheaf}}(X, M)$
-layer 18 · 定理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 18 · 定理 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.dyckhoff)　·　[节点索引](../index.md)
 
 设 $X$ 是**局部紧 Hausdorff** 空间，$M$ 是**离散**阿贝尔群（看作常值凝聚态阿贝尔群）。则对一切 $n \ge 0$

@@ -1,5 +1,5 @@
-# 一致有界原理　`thm.ubp`
-一致有界原理（Banach–Steinhaus）
+# 共鸣定理　`thm.ubp`
+共鸣定理（一致有界原理 / Banach–Steinhaus）
 layer 16 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.ubp)　·　[节点索引](../index.md)
 
@@ -15,7 +15,7 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 - …另有入边，续页见 [nodes/thm.ubp.2.md](./thm.ubp.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.ubp-resonance`](../nodes/cor.ubp-resonance.md) 共振集是稠密 G_δ
+- …另有出边，续页见 [nodes/thm.ubp.3.md](./thm.ubp.3.md)
 
 refs: 泛函分析讲义 2026-10-26；Banach–Steinhaus 1927
 

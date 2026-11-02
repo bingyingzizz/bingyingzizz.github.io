@@ -1,7 +1,7 @@
 # 流形与向量丛 / Manifolds and Vector Bundles（diffgeom.manifold）· 节点清单（第 1/2 页）
 
 把「曲面」换成一般的流形：图卡与图册 → 光滑映射与光滑结构 → 切丛与向量丛 → 截面、纤维度量、丛的分类 → 定向与体积形式。这一团是后面三团的地基。
-中心天体 def.manifold-chart　·　16 个节点　·　根 `../`　·　续页 `index/diffgeom.manifold.2.md`
+中心天体 def.manifold-chart　·　18 个节点　·　根 `../`　·　续页 `index/diffgeom.manifold.2.md`
 
 - def.manifold-chart　图卡　layer 8
 - def.local-trivialization　局部平凡化　layer 8

@@ -10,3 +10,5 @@
 - 被 [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式 用
 - 被 [`def.principal-bundle`](../nodes/def.principal-bundle.md) 主丛 用
 - 被 [`def.tangent-distribution`](../nodes/def.tangent-distribution.md) 切分布 用
+
+> 续见 [nodes/def.local-trivialization.5.md](./def.local-trivialization.5.md)

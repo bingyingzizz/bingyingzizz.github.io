@@ -12,6 +12,6 @@
 - thm.polarization　极化恒等式　layer 16
 - thm.projection-subspace　闭子空间的正交投影　layer 16
 - thm.parallelogram-inner-product　平行四边形法则　layer 17
-- thm.riesz-hilbert　Riesz 表示定理（Hilbert 版）　layer 17
+- thm.riesz-hilbert　Riesz 表示（Hilbert）　layer 17
 - thm.orthonormal-basis-exists　正交基存在　layer 17
 - thm.adjoint-hilbert　伴随算子　layer 18

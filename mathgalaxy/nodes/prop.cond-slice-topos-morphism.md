@@ -1,6 +1,6 @@
 # Cond/X 到开集拓扑斯的态射　`prop.cond-slice-topos-morphism`
 拓扑斯态射 $c_{X} : \mathrm{Cond}/X \rightleftarrows \mathrm{Open}(X)$
-layer 18 · 命题 · 凝聚态上同调 · 凝聚态数学+范畴论
+layer 18 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+范畴论
 [在星图里打开](../#n=prop.cond-slice-topos-morphism)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间。存在拓扑斯态射

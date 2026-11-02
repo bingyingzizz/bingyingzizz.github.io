@@ -1,6 +1,6 @@
 # Banach 阿贝尔群　`def.banach-ab-group`
 Banach 阿贝尔群与 Banach 化
-layer 15 · 定义 · 凝聚态上同调 · 凝聚态数学+数学分析
+layer 15 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
 [在星图里打开](../#n=def.banach-ab-group)　·　[节点索引](../index.md)
 
 **Banach 阿贝尔群**是半范数阿贝尔群 $M$，且满足

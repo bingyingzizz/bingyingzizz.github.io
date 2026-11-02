@@ -1,6 +1,6 @@
 # Breen–Deligne 分解　`thm.breen-deligne`
 Breen–Deligne 分解：自由阿贝尔群的有限直和消解
-layer 18 · 定理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 18 · 定理 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.breen-deligne)　·　[节点索引](../index.md)
 
 设 $M$ 是拓扑斯中的阿贝尔群（例如 $M \in \mathrm{CondAb}$）。则存在**自然的左消解**

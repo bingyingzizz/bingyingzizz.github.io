@@ -4,8 +4,8 @@
 ## 陈述（续）
 - 一般地 $M^{\vee} \cong \operatorname{RHom}_{\mathbb{Z}}(M, T)$；
 - 若 $M$ **紧**，则 $M^{\vee} \cong \operatorname{RHom}_{\mathbb{Z}}(M, \mathbb{Z})[1]$；
-- 若 $M$ 是（有限维实）**Banach 空间**，则 $M^{\vee} \cong \operatorname{RHom}_{\mathbb{Z}}(M, 
-\mathbb{R})$。
+- 若 $M$ 是（有限维实）**Banach 空间**，则 $M^{\vee} \cong \operatorname{RHom}_{\mathbb{Z
+}}(M, \mathbb{R})$。
 其中 $T = \mathbb{R}/\mathbb{Z}$。
 
 > 续见 [nodes/prop.dual-rhom-characterization.3.md](./prop.dual-rhom-characterization.3.md)

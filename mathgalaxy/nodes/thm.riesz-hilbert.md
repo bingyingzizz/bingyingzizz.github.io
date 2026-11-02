@@ -1,4 +1,4 @@
-# Riesz 表示定理（Hilbert 版）　`thm.riesz-hilbert`
+# Riesz 表示（Hilbert）　`thm.riesz-hilbert`
 Riesz 表示：$H^* \cong \overline{H}$
 layer 17 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.riesz-hilbert)　·　[节点索引](../index.md)

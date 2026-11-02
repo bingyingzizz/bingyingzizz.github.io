@@ -1,6 +1,6 @@
 # Stone 上常系数零调　`lem.stone-constant-acyclic`
 Stone 空间上常值系数的零调
-layer 18 · 引理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 18 · 引理 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=lem.stone-constant-acyclic)　·　[节点索引](../index.md)
 
 设 $S$ 是 **Stone 空间**（紧、Hausdorff、全不连通），$A$ 是普通阿贝尔群（看作常值凝聚态阿贝尔群 $\underline{A}$）。则对一切 $n > 0$

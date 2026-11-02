@@ -12,7 +12,7 @@
 - prop.baire-characterizations　Baire 的三条等价刻画　layer 16
 - thm.baire-open-subset　Baire 的开子集是 Baire　layer 16
 - thm.pointwise-limit-continuity　连续点集是稠密 G_δ　layer 16
-- thm.ubp　一致有界原理　layer 16
+- thm.ubp　共鸣定理　layer 16
 - cor.ubp-resonance　共振集是稠密 G_δ　layer 17
 - thm.open-mapping-banach　开映射定理（Banach 版）　layer 24
 - thm.bounded-inverse　逆算子定理　layer 25

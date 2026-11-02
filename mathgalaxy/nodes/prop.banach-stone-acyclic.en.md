@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 17 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Banach on Stone` (short) · `Banach Groups Are Acyclic on Stone Spaces` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 16 · theorem · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Banach on Compact Hausdorff` (short) · `Real Banach Spaces Are Acyclic on Compact Hausdorff Spaces` (full)
 
 ## Statement and proof

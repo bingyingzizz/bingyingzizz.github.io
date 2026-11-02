@@ -1,6 +1,6 @@
 # 紧 Haus 到实 Banach 全零　`prop.rhom-chaus-banach-zero`
 $\operatorname{RHom}_{\mathbb{Z}}(M, N) = 0$（紧 Haus 到 Banach）
-layer 16 · 命题 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 16 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.rhom-chaus-banach-zero)　·　[节点索引](../index.md)
 
 设 $M$ 是**紧 Hausdorff 阿贝尔群**、$N$ 是**实 Banach 空间**。则

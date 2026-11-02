@@ -16,4 +16,4 @@
 - **5** `def.cauchy-null` Cauchy 列与零列 · layer 11 · 数系的构造
 - **5** `def.representable` 表示函子 · layer 12 · 预层与米田
 
-（1458 个节点里 1451 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+（1460 个节点里 1453 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）

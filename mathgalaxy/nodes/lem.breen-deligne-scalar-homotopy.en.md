@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · lemma · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 12 · lemma · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.breen-deligne-scalar-homotopy.md` and `proofs/`.

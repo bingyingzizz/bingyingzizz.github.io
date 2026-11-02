@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-02T05:34:18.280Z",
+  "generated": "2026-11-02T06:05:53.354Z",
   "counts": {
    "regions": 15,
-   "clusters": 100,
-   "nodes": 1458,
-   "edges": 2737,
-   "strong": 2720,
+   "clusters": 102,
+   "nodes": 1460,
+   "edges": 2744,
+   "strong": 2727,
    "weak": 17,
    "derived": 22,
-   "en_pages": 1458
+   "en_pages": 1460
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -149,7 +149,7 @@
    "en": "Differential Geometry",
    "desc": "曲面的活动标架与结构方程、第一与第二基本形式、Gauss–Codazzi、曲率与测地线的内蕴几何。",
    "color": "#C2703F",
-   "nodeCount": 126
+   "nodeCount": 128
   },
   {
    "id": "number",
@@ -1853,30 +1853,53 @@
   },
   {
    "id": "cond.cohomology",
-   "name": "凝聚态上同调",
-   "en": "Condensed Cohomology",
+   "name": "凝聚态导出函子",
+   "en": "Condensed Derived Functors",
    "parent": "condensed",
-   "desc": "造出「哪些空间的上同调会自动消失」：Stonean 上零调 → Stone 上常系数零调 → 局部紧上等于层上同调 → 半范数 / Banach 阿贝尔群与 $K$-有界正合 → 实 Banach 在紧 Hausdorff 上零调 → Breen–Deligne 分解 → $\\operatorname{RHom}$ 的逐类计算 → 局部紧阿贝尔群只剩 $\\operatorname{Ext}^{0}, \\operatorname{Ext}^{1}$。",
-   "nodeCount": 38,
+   "desc": "造出「拿什么算 \\operatorname{RHom}$」：半范数 / Banach 阿贝尔群 → **$K$-有界正合**（凝聚态的「可数极限意义上的正合」）→ $K$-有界正合在完备化与滤过余极限下保持 → 相邻两条 $K$-有界推出正合 → 实 Banach 在紧 Hausdorff 上零调（整个理论的地基）→ Banach 值 Tietze 延拓。⚠️ 2026-11-02 拆团：Breen–Deligne 谱序列拆到「Breen–Deligne 谱序列」，逐类计算拆到「导出 Hom 的具体计算」。",
+   "nodeCount": 11,
    "nodes": [
-    "prop.cond-slice-topos-morphism",
-    "prop.stonean-cond-acyclic",
-    "lem.stone-constant-acyclic",
-    "thm.dyckhoff",
     "def.semi-normed-ab-group",
     "def.banach-ab-group",
     "def.k-bounded-exact",
     "lem.k-bounded-completion",
     "prop.k-bounded-implies-exact",
     "cor.k-acyclic-acyclic",
-    "lem.stone-cech-1-bounded",
     "prop.banach-stone-acyclic",
     "thm.tietze-banach",
     "thm.real-banach-chaus-acyclic",
-    "lem.ext-stonean-section",
+    "prop.k-bounded-exact-filtered-colimit",
+    "prop.continuous-functions-normed"
+   ]
+  },
+  {
+   "id": "cond.ss",
+   "name": "Breen–Deligne 谱序列",
+   "en": "Breen-Deligne Spectral Sequences",
+   "parent": "condensed",
+   "desc": "把 \\operatorname{Ext}$ 展成一片可算的东西：**Breen–Deligne 分解**（把 $\\mathbb{Z}[M]$ 换成一批「$p$ 阶乘同伦」的整系数组合）→ 谱序列 $E_{1}^{p,q} = \\bigoplus_{i} H^{q}(M^{s_{p,i}}, N) \\implies \\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M,N)$ → Stonean / Stone 满射上的 $1$-有界零调（保证 $E_{1}$ 那一片真的可算）。",
+   "nodeCount": 5,
+   "nodes": [
+    "lem.stone-cech-1-bounded",
     "thm.breen-deligne",
     "lem.breen-deligne-scalar-homotopy",
     "prop.breen-deligne-ss-stonean",
+    "ex.bd-ss"
+   ]
+  },
+  {
+   "id": "cond.compute",
+   "name": "导出 Hom 的具体计算",
+   "en": "Computing Derived Hom",
+   "parent": "condensed",
+   "desc": "把那条谱序列**落到具体系数上**算完：Stonean / 离散空间上自由模、Stone 上常系数、\\mathbb{R}/\\mathbb{R}^{\\mathrm{disc}}$ 的截面 → 截面公式 \\operatorname{Ext}^{i}(\\mathbb{Z}[S],N) \\cong H^{i}(S,N)$ → 局部紧阿贝尔群的高次 \\operatorname{Ext}$ 消失（只剩 \\operatorname{Ext}^{0},\\operatorname{Ext}^{1}$）→ \\mathbb{Z}, \\mathbb{R}, \\mathbb{T}$ 的 \\operatorname{RHom}$ 计算表 + 有限维 Banach / 连通局部紧 / 非局部紧三个例子。",
+   "nodeCount": 22,
+   "nodes": [
+    "prop.cond-slice-topos-morphism",
+    "prop.stonean-cond-acyclic",
+    "lem.stone-constant-acyclic",
+    "thm.dyckhoff",
+    "lem.ext-stonean-section",
     "prop.rhom-banach-discrete-zero",
     "prop.rhom-chaus-banach-zero",
     "prop.rhom-dual-tensor",
@@ -1885,7 +1908,6 @@
     "table.rhom-zrt",
     "ex.finite-banach-rhom",
     "ex.chaus-banach-rhom",
-    "ex.bd-ss",
     "ex.connected-lc-ext",
     "ex.nonlc-rhom",
     "lem.cech-finite-disjoint-acyclic",
@@ -1894,9 +1916,7 @@
     "cor.ext-cond-set-section",
     "prop.rhom-zs-sections",
     "prop.rhom-ze-powers",
-    "prop.discrete-cond-rhom-constant",
-    "prop.k-bounded-exact-filtered-colimit",
-    "prop.continuous-functions-normed"
+    "prop.discrete-cond-rhom-constant"
    ]
   },
   {
@@ -2370,7 +2390,7 @@
    "en": "Manifolds and Vector Bundles",
    "parent": "diffgeom",
    "desc": "把「曲面」换成一般的流形：图卡与图册 → 光滑映射与光滑结构 → 切丛与向量丛 → 截面、纤维度量、丛的分类 → 定向与体积形式。这一团是后面三团的地基。",
-   "nodeCount": 16,
+   "nodeCount": 18,
    "nodes": [
     "def.manifold-chart",
     "prop.maximal-atlas",
@@ -2387,7 +2407,9 @@
     "def.cotangent-bundle",
     "def.local-trivialization",
     "def.fiber-bundle",
-    "def.principal-bundle"
+    "def.principal-bundle",
+    "def.frame-bundle",
+    "def.associated-bundle"
    ]
   },
   {
@@ -36779,7 +36801,7 @@
   {
    "id": "thm.riesz-hilbert",
    "type": "theorem",
-   "label": "Riesz 表示定理（Hilbert 版）",
+   "label": "Riesz 表示（Hilbert）",
    "title": "Riesz 表示：$H^* \\cong \\overline{H}$",
    "label_en": "Riesz Representation",
    "title_en": "Riesz Representation Theorem for Hilbert Spaces",
@@ -37670,8 +37692,8 @@
   {
    "id": "thm.ubp",
    "type": "theorem",
-   "label": "一致有界原理",
-   "title": "一致有界原理（Banach–Steinhaus）",
+   "label": "共鸣定理",
+   "title": "共鸣定理（一致有界原理 / Banach–Steinhaus）",
    "label_en": "Uniform Boundedness Principle",
    "title_en": "Uniform Boundedness Principle",
    "translations": {
@@ -37702,7 +37724,7 @@
     "Baire 纲"
    ],
    "statement": "设 $E$ 是 Banach 空间，$F$ 赋范，$\\{u_i\\}_{i \\in I} \\subseteq B(E, F)$。若对每个 $x \\in E$，\n\n$$\\sup_{i \\in I} \\|u_i(x)\\| < \\infty \\qquad (\\text{逐点有界}) ,$$\n\n则 $\\displaystyle \\sup_{i \\in I}\\|u_i\\| < \\infty$（**一致**有界）。",
-   "notes": "证法：令 $F_k = \\{x : \\sup_i \\|u_i x\\| \\le k\\} = \\bigcap_i \\{x : \\|u_i x\\| \\le k\\}$，每个 $\\{x : \\|u_i x\\| \\le k\\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；逐点有界 $\\implies E = \\bigcup_k F_k$。由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。于是对 $\\|x\\| \\le r$：$\\sup_i \\|u_i x\\| \\le \\sup_i \\|u_i(x + x_0)\\| + \\sup_i \\|u_i x_0\\| \\le 2k$，取 $x = r y/\\|y\\|$ 得 $\\|u_i y\\| \\le 2k\\|y\\|/r$，故 $\\sup_i\\|u_i\\| \\le 2k/r$。\n\n⭐ 三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。\n\n⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。",
+   "notes": "证法：令 $F_k = \\{x : \\sup_i \\|u_i x\\| \\le k\\} = \\bigcap_i \\{x : \\|u_i x\\| \\le k\\}$，每个 $\\{x : \\|u_i x\\| \\le k\\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；逐点有界 $\\implies E = \\bigcup_k F_k$。由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。于是对 $\\|x\\| \\le r$：$\\sup_i \\|u_i x\\| \\le \\sup_i \\|u_i(x + x_0)\\| + \\sup_i \\|u_i x_0\\| \\le 2k$，取 $x = r y/\\|y\\|$ 得 $\\|u_i y\\| \\le 2k\\|y\\|/r$，故 $\\sup_i\\|u_i\\| \\le 2k/r$。\n\n⭐ **名字**：讲义与很多中文书叫它「共鸣定理」（resonance theorem），也叫「一致有界原理」；本图两个都收进别名。三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。\n\n⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。",
    "refs": [
     "泛函分析讲义 2026-10-26",
     "Banach–Steinhaus 1927"
@@ -38268,6 +38290,92 @@
    "refs": [
     "泛函分析讲义 2026-10-26",
     "Bernstein 1912"
+   ]
+  },
+  {
+   "id": "def.frame-bundle",
+   "type": "definition",
+   "label": "帧丛",
+   "title": "帧丛：把向量丛变成主 $\\mathrm{GL}(k)$-丛",
+   "label_en": "Frame Bundle",
+   "title_en": "Frame Bundle",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.frame-bundle.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 27,
+   "tags": [
+    "定义",
+    "微分几何",
+    "帧丛",
+    "主丛",
+    "向量丛"
+   ],
+   "statement": "**在做什么**：向量丛的纤维是**向量空间**（有加法、有零元），主丛的纤维是**群**（有乘法、没有零元）。帧丛就是两者之间那座桥：把每根纤维里的「一组基」而不是「一个向量」取出来当新纤维。\n\n设 $\\pi : E \\to M$ 是秩 $k$ 的光滑实向量丛。**帧丛** $\\mathrm{Fr}(E) \\to M$ 的纤维是\n\n$$\\mathrm{Fr}(E)_{p} := \\{\\, (e_{1}, \\ldots, e_{k}) : e_{i} \\in E_{p},\\ (e_{i})\\ \\text{是}\\ E_{p}\\ \\text{的一组基} \\,\\} ,$$\n\n全体帧丛取不交并 $\\mathrm{Fr}(E) := \\bigsqcup_{p} \\mathrm{Fr}(E)_{p}$，投影取「忘记基、只留 $p$」。\n\n**结构**：$\\mathrm{GL}(k,\\mathbb{R})$ 在右侧自由作用（换一组基就是右乘一个矩阵），\n\n$$(e_{1}, \\ldots, e_{k})\\cdot A := \\Bigl(\\sum_{i} e_{i}A_{i1}, \\ldots, \\sum_{i} e_{i}A_{ik}\\Bigr) ,$$\n\n于是 $\\mathrm{Fr}(E) \\to M$ 是**主 $\\mathrm{GL}(k,\\mathbb{R})$-丛**（`def.principal-bundle`）。\n\n**反过来**：给定主 $\\mathrm{GL}(k)$-丛 $P \\to M$，配丛 $P \\times_{\\mathrm{GL}(k)} \\mathbb{R}^{k}$ 就是一个秩 $k$ 向量丛；这两个构造互逆（差一个自然同构）。",
+   "notes": "⭐ **为什么需要它**：很多构造对「向量丛」不好讲、对「主丛」却很好讲（联络、曲率、特征类）。帧丛让你**把向量丛搬到主丛那边做完，再搬回来** —— 这就是「向量丛的理论 = 主 $\\mathrm{GL}(k)$-丛的理论」的技术含义。\n\n**光滑性**：$\\mathrm{Fr}(E)$ 上有唯一的流形结构使投影光滑且局部平凡（在 $E$ 的局部平凡化 $U \\times \\mathbb{R}^{k}$ 上，帧就是 $U \\times \\mathrm{GL}(k,\\mathbb{R})$）。所以「帧丛是主丛」不是集合层面的巧合，而是光滑层面的同构。\n\n⚠️ **$\\mathrm{Fr}(E)$ 的维数**是 $\\dim M + k^{2}$（$\\mathrm{GL}(k)$ 的维数是 $k^{2}$），而不是 $\\dim M + k$。这一点常被写错：帧丛**比原丛大得多**（$k = 1$ 时两者维数才相同，因为 $\\mathrm{GL}(1) = \\mathbb{R}^{\\times}$ 是一维的）。\n\n⚠️ **约化结构群 = 额外的几何结构**：$\\mathrm{Fr}(E)$ 里挑出「关于某个度量标准正交」的帧，得到一个主 $\\mathrm{O}(k)$-子丛；挑出「关于某个复结构是复线性」的帧，得到 $\\mathrm{GL}(k,\\mathbb{C})$。**反过来，主 $G$-子丛 与 向量丛上的 $G$-结构**（度量、复结构、定向、$\\mathrm{Spin}$ 结构……）。这是「$G$-结构」这套语言的起点。",
+   "refs": [
+    "Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 帧丛与主丛",
+    "Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.associated-bundle",
+   "type": "definition",
+   "label": "配丛",
+   "title": "配丛：主 $G$-丛配上一个 $G$-作用得到的新丛",
+   "label_en": "Associated Bundle",
+   "title_en": "Associated Bundle",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.associated-bundle.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 28,
+   "tags": [
+    "定义",
+    "微分几何",
+    "配丛",
+    "主丛",
+    "纤维丛"
+   ],
+   "statement": "**在做什么**：主丛的纤维是群 $G$，但你要的纤维常常是别的空间 $F$（向量空间、球面、旗流形……）。**配丛**就是「把 $G$ 换成 $F$」的标准手术：拿 $G$ 在 $F$ 上的作用把两者粘起来。\n\n设 $P \\to M$ 是主 $G$-丛（`def.principal-bundle`），$F$ 是带左 $G$-作用的流形。积空间 $P \\times F$ 上令 $G$ 右作用\n\n$$(u, y)\\cdot g := (u \\cdot g,\\ g^{-1}\\cdot y) ,$$\n\n其轨道空间记\n\n$$P \\times_{G} F := (P \\times F)\\big/ G ,$$\n\n投影 $[u, y] \\mapsto \\pi(u)$ 把它做成以 $F$ 为纤维的纤维丛，叫**配丛**（associated bundle）。\n\n**最重要的情形**：取 $F = \\mathbb{R}^{k}$ 与 $G = \\mathrm{GL}(k,\\mathbb{R})$ 的标准作用，则\n\n$$\\mathrm{Fr}(E) \\times_{\\mathrm{GL}(k)} \\mathbb{R}^{k} \\;\\cong\\; E ,$$\n\n即**每个向量丛都是其帧丛的配丛** —— 这与 `def.frame-bundle` 合起来就是「向量丛 $\\leftrightarrow$ 秩 $k$ 向量丛的主 $\\mathrm{GL}(k)$-丛」的一一对应（分类只在同构意义下说）。",
+   "notes": "⭐ **$g^{-1}$ 不是笔误**：要让右作用真的成立，必须一边用 $g$、一边用 $g^{-1}$（否则 $(u,y)\\cdot g\\cdot h$ 会变成 $(u\\cdot gh, h^{-1}g^{-1}y)$，与 $(u,y)\\cdot(gh)$ 不一致）。这是配丛最容易写错的一处记号。\n\n**为什么用 $G$ 而不是「随便一个同构」**：配丛的定义里，$G$-作用就是**唯一的粘合数据**。所以「配丛」把「纤维丛 + 结构群落在 $G$ 里」这件事写成了一个具体构造 —— 这与 `def.fiber-bundle` 里「结构群是 $G$」那句话是同一件事的两种说法。\n\n⚠️ **截面 与 等变映射**：配丛的截面 $M \\to P\\times_{G}F$ 与「$G$-等变映射 $P \\to F$」一一对应。这条对应是**物理里「规范场 与 主丛上的等变函数」**的数学形式，也是「向量丛的截面 = 帧丛上的 $\\mathrm{GL}(k)$-等变 $\\mathbb{R}^{k}$-值函数」的来源。\n\n⚠️ 配丛**不需要** $G$ 离散、也不需要 $F$ 线性。取 $F = G/H$ 得到「齐性空间丛」（例如 $F = S^{2} = \\mathrm{SO}(3)/\\mathrm{SO}(2)$ 给出「球面丛」），取 $F = G$ 且作用取左乘/右乘，可以造出伴主丛 —— 后者正是「$G$-丛的扭子」那类构造。",
+   "refs": [
+    "Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 配丛",
+    "Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）"
    ]
   },
   {
@@ -51575,7 +51683,7 @@
     "condensed",
     "category"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -51617,7 +51725,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -51659,7 +51767,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -51701,7 +51809,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -51994,7 +52102,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.ss",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -52164,7 +52272,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52206,7 +52314,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.ss",
    "layer": 18,
    "tags": [
     "凝聚态数学",
@@ -52248,7 +52356,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.ss",
    "layer": 12,
    "tags": [
     "凝聚态数学",
@@ -52290,7 +52398,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.ss",
    "layer": 17,
    "tags": [
     "凝聚态数学",
@@ -52332,7 +52440,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52374,7 +52482,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 16,
    "tags": [
     "凝聚态数学",
@@ -52416,7 +52524,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52458,7 +52566,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52500,7 +52608,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52542,7 +52650,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52550,7 +52658,7 @@
     "计算表",
     "Ex 8.17"
    ],
-   "statement": "下表列出 $\\operatorname{RHom}_{\\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：\n\n$$\\begin{array}{c|ccc} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\hline \\mathbb{Z} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\mathbb{R} & 0 & \\mathbb{R} & \\mathbb{R} \\\\ T & \\mathbb{Z}[-1] & 0 & \\mathbb{Z} \\end{array}$$",
+   "statement": "下表列出 $\\operatorname{RHom}_{\\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：\n\n$$\\begin{array}{c|ccc} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\hline \\mathbb{Z} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\mathbb{R} & 0 & \\mathbb{R} & \\mathbb{R} \\\\ T & \\mathbb{Z}[-1] & 0 & \\mathbb{Z} \\end{array}$$\n**逐格推算：这台机器只用两个事实**\n\n1. **$\\mathbb{Z}$ 是自由（投射）的**：$\\mathbb{Z}$ 的消解可以取成一维的 $[\\mathbb{Z}]$，于是 $\\operatorname{RHom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = N$，**没有高阶项**。这一条直接给出表的第一行。\n2. **$\\mathbb{R}$ 可除，因此是 $\\mathbb{Z}$-内射的**：$\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, \\mathbb{R}) = 0$ 对一切 $M$ 与 $n \\ge 1$。于是「靶是 $\\mathbb{R}$」的那些格只剩 $0$ 次：$\\operatorname{RHom}(M, \\mathbb{R}) = \\operatorname{Hom}_{\\mathbb{Z}}(M, \\mathbb{R})$。\n\n**把 $T$ 那一列换成 $\\mathbb{Z}$ 再升一次**：取短正合列 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$（$T = \\mathbb{R}/\\mathbb{Z}$）。对固定的 $M$ 取 $\\operatorname{RHom}(M, -)$，得**长正合列**\n\n$$\\cdots \\to \\operatorname{Ext}^{n}(M, \\mathbb{R}) \\to \\operatorname{Ext}^{n}(M, T) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{R}) \\to \\cdots$$\n\n既然两端的 $\\mathbb{R}$ 项在 $n \\ge 1$ 全为零，中间就被夹死：\n\n$$\\operatorname{Ext}^{n}(M, T) \\;\\cong\\; \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\qquad (n \\ge 1),$$\n\n以及 $0 \\to \\operatorname{Hom}(M,\\mathbb{Z}) \\to \\operatorname{Hom}(M,\\mathbb{R}) \\to \\operatorname{Hom}(M,T) \\to \\operatorname{Ext}^{1}(M,\\mathbb{Z}) \\to 0$。**这就是表里 $T$ 列与 $\\mathbb{Z}$ 列恰好差一次上标的来源**（例如第三行第一列是 $\\mathbb{Z}[-1]$：$M = T$ 时 $\\operatorname{Ext}^{0}(T,\\mathbb{Z}) = 0$、$\\operatorname{Ext}^{1}(T,\\mathbb{Z}) \\cong \\operatorname{Ext}^{0}(T,T) = \\mathbb{Z}$）。\n\n**为什么「实向量空间 $\\to$ 离散」全零**：$\\mathbb{R}^{n}$ 可除，可除群到任何群都满足「$n$ 倍可解」的条件，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$（$1/n$ 的像必须能被 $n$ 整除地解出来，只有 $0$）；配合可除性 $\\operatorname{Ext}^{1}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$，整条 $\\operatorname{RHom}$ 为零。\n\n⚠️ 表中「$\\mathbb{R}$ 行、$T$ 列 = $\\mathbb{R}$」这一格不能只靠上面两条推出（它涉及连续同态 $\\mathbb{R} \\to T = \\mathbb{R}/\\mathbb{Z}$ 的分类，与万有覆盖 $\\mathbb{R} \\to T$ 有关）；本图按笔记的结论记录，**推导留待核对**。",
    "notes": "**怎么读这张表**（$T = \\mathbb{R}/\\mathbb{Z}$）：\n\n\n\n- 第一行（源是 $\\mathbb{Z}$）：$\\operatorname{RHom}(\\mathbb{Z}, N) = N$ —— 自由对象上没有高阶，只剩 0 次；\n- 第二行第一列 $0$：**实向量空间 $\\to$ 离散**全零（可除性塌掉）；\n- 第二行其余：有限维实 Banach 之间的 RHom 只有 0 次，值为 $\\operatorname{Hom}_{\\mathbb{R}}(M, N)$ —— 这里是 $\\operatorname{Hom}_{\\mathbb{R}}(\\mathbb{R}, \\mathbb{R}) = \\mathbb{R}$ 与 $\\operatorname{Hom}_{\\mathbb{R}}(\\mathbb{R}, T)$；\n- 第三行第二列 $0$：**紧 Hausdorff $\\to$ 实 Banach** 全零；\n- 第三行第一列 $\\mathbb{Z}[-1]$：由 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$，中间项是 $0$，只剩下一步降一次的 $\\mathbb{Z}$；\n- 右下角 $\\mathbb{Z}$：同样由 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$ 与 $\\operatorname{RHom}(T, \\mathbb{R}) = 0$ 得到。\n\n\n\n这张表是全章计算的**浓缩总结**：三条归零定理（$\\mathbb{R} \\to$ 离散、紧 $\\to \\mathbb{R}$、以及自由源）加上 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$ 这一条正合列，就能把三类基本对象之间的所有 RHom 全部算出来。",
    "refs": [
     "Le Stum, Exercise 8.17"
@@ -52584,7 +52692,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52626,7 +52734,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 16,
    "tags": [
     "凝聚态数学",
@@ -52669,7 +52777,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.ss",
    "layer": 17,
    "tags": [
     "凝聚态数学",
@@ -52678,7 +52786,7 @@
     "拓扑斯",
     "Ex 8.14"
    ],
-   "statement": "设 $M, N$ 是拓扑斯中的阿贝尔群。由 Breen–Deligne 分解得到自然谱序列\n\n$$E^{p,q}_{1} = \\bigoplus_{i=1}^{r_{p}} H^{q}\\bigl(M^{s_{p,i}},\\ N\\bigr) \\implies \\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M, N).$$",
+   "statement": "设 $M, N$ 是拓扑斯中的阿贝尔群。由 Breen–Deligne 分解得到自然谱序列\n\n$$E^{p,q}_{1} = \\bigoplus_{i=1}^{r_{p}} H^{q}\\bigl(M^{s_{p,i}},\\ N\\bigr) \\implies \\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M, N).$$\n**把这条谱序列跑一遍要看的三个东西**\n\n1. **$E_{1}$ 页**：$E_{1}^{p,q} = \\bigoplus_{i=1}^{r_{p}} H^{q}(M^{s_{p,i}}, N)$。注意 $p$ 是**分解的次数**、$q$ 是**上同调的次数**，两者完全独立 —— 所以 $E_{1}$ 是一整张「$p$-方向有限、$q$-方向一般是上同调的」的格子，不是一行一列。\n2. **$d_{1}$**：由 Breen–Deligne 消解的微分 $d_{0}, d_{1}, d_{2}$ 诱导，方向是 $p \\mapsto p+1$（沿分解次数走）。因此 $E_{2}^{p,q} = H^{p}\\bigl(E_{1}^{\\bullet, q}, d_{1}\\bigr)$ —— **一行一行地取同调**，行内 $q$ 固定。\n3. **收敛**：谱序列收敛到 $\\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M,N)$，并且这个收敛带**按分解次数的有限过滤**：$\\operatorname{Ext}^{n}$ 上有一个长度有限的滤链 $F^{p}$，其各项商就是谱序列的 $E_{\\infty}^{p,n-p}$。所以「算 $\\operatorname{Ext}^{n}$」= 把对角线 $p+q = n$ 上所有 $E_{\\infty}^{p,q}$ 按滤链拼起来；当格子里只剩一两项时就直接读出来。\n\n**什么时候算得动**：实际计算里几乎总是遇到下面两种退化情形，那时整张谱序列塌成一两条：\n\n- **某一行为零**：若对某个 $q_{0}$，$H^{q}(M^{s_{p,i}}, N) = 0$ 对所有 $p$ 与 $q \\ne q_{0}$ 成立（也就是每个 $M^{s_{p,i}}$ 在「对 $N$ 取上同调」这件事上是零调的），则 $E_{1}$ 只在 $q = q_{0}$ 一行非零，于是所有 $d_{1}$ 都从这一行打到空的下一行、必然为零，于是 $E_{2} = E_{1}$，且 $\\operatorname{Ext}^{n}(M,N) = E_{1}^{n-q_{0},q_{0}}$。**这就是「空间零调，于是 Ext 退化成一次上同调」的机制**，也是下面「具体计算」那一团的全部技术来源。\n- **某两行相邻存活**：则只有一个 $d_{1}$ 可能非零，$\\operatorname{Ext}$ 被一个**短正合列**夹住（接着用长正合列算），这就是局部紧情形「只剩 $\\operatorname{Ext}^{0},\\operatorname{Ext}^{1}$」的来源。\n\n⚠️ 构造的显式公式（$d_{0},d_{1},d_{2}$ 的组合系数）本图不展开 —— 使用时只需要「$E_{1}$ 的形状 + 上面的退化判据」。",
    "notes": "**与 Stonean 那条的关系**：这条是**一般拓扑斯**里的版本（不带测试空间 $S$）；Stonean 那条是把两边都沿 $S$ 基变换（乘上 $\\mathbb{Z}[S]$）之后的结果。两者是同一条谱序列的「无参数」与「有参数」两种形状。\n\n**用途**：在没有 Stonean 可用的一般拓扑斯上，仍然能用这条谱序列把 Ext 展成一批 $M^{s_{p,i}}$ 上的上同调 —— 这是「Breen–Deligne 分解是 CondAb 里一切 Ext 计算的引擎」这句话在一般拓扑斯上的版本。",
    "refs": [
     "Le Stum, Exercise 8.14"
@@ -52712,7 +52820,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -52755,7 +52863,7 @@
     "condensed",
     "homology"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 21,
    "tags": [
     "凝聚态数学",
@@ -53844,7 +53952,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "引理",
@@ -53885,7 +53993,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "命题",
@@ -53926,7 +54034,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "命题",
@@ -53967,7 +54075,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "推论",
@@ -54008,7 +54116,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "命题",
@@ -54049,7 +54157,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "命题",
@@ -54090,7 +54198,7 @@
    "regions": [
     "condensed"
    ],
-   "cluster": "cond.cohomology",
+   "cluster": "cond.compute",
    "layer": 18,
    "tags": [
     "命题",
@@ -77414,6 +77522,62 @@
    "note": "局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。"
   },
   {
+   "id": "dep.fr-vector",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.vector-bundle",
+   "usedBy": "def.frame-bundle",
+   "note": "帧丛是「向量丛 + 每根纤维选一组基」，先有向量丛。"
+  },
+  {
+   "id": "dep.fr-principal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.principal-bundle",
+   "usedBy": "def.frame-bundle",
+   "note": "结论是「帧丛是主 $\\mathrm{GL}(k)$-丛」—— 用的是主丛的定义。"
+  },
+  {
+   "id": "dep.fr-localt",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.local-trivialization",
+   "usedBy": "def.frame-bundle",
+   "note": "帧丛的局部平凡化来自向量丛的局部平凡化（$U \\times \\mathrm{GL}(k)$）。"
+  },
+  {
+   "id": "dep.ab-principal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.principal-bundle",
+   "usedBy": "def.associated-bundle",
+   "note": "配丛是「主丛 + $G$-作用」粘出来的，主丛是全部输入。"
+  },
+  {
+   "id": "dep.ab-fiber",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fiber-bundle",
+   "usedBy": "def.associated-bundle",
+   "note": "配丛本身是以 $F$ 为纤维的纤维丛。"
+  },
+  {
+   "id": "dep.ab-frame",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.frame-bundle",
+   "usedBy": "def.associated-bundle",
+   "note": "关键恒等式：每个向量丛 = 帧丛的配丛（$F = \\mathbb{R}^{k}$）。"
+  },
+  {
+   "id": "dep.ab-vector",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.vector-bundle",
+   "usedBy": "def.associated-bundle",
+   "note": "主要情形 $F = \\mathbb{R}^{k}$ 的结论就是「又得到向量丛」。"
+  },
+  {
    "id": "dep.real-extended",
    "kind": "definition",
    "strength": "strong",
@@ -89689,42 +89853,42 @@
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "hom.sheafcoh",
-   "count": 5,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
    "a": "cond.ab",
-   "b": "cond.cohomology",
-   "count": 9,
+   "b": "cond.compute",
+   "count": 8,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "cond.set",
    "count": 3,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "cond.topo",
    "count": 2,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "topo.chaus",
-   "count": 5,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "hom.sheaf",
    "count": 2,
    "label": "",
@@ -90179,21 +90343,14 @@
    "explicit": false
   },
   {
-   "a": "cat.topos",
-   "b": "cond.cohomology",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "topo.stone",
-   "count": 6,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
    "b": "topology.convergence",
    "count": 3,
    "label": "",
@@ -90207,23 +90364,30 @@
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
-   "b": "hom.complex",
-   "count": 11,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cond.cohomology",
-   "b": "topology.general",
+   "a": "cond.ss",
+   "b": "topo.stone",
    "count": 2,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
+   "a": "cond.compute",
+   "b": "hom.complex",
+   "count": 9,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.ss",
    "b": "hom.spectral",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.cohomology",
+   "b": "cond.compute",
+   "count": 4,
    "label": "",
    "explicit": false
   },

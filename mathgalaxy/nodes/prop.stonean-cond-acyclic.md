@@ -1,6 +1,6 @@
 # Stonean 上凝聚阿贝尔群零调　`prop.stonean-cond-acyclic`
 Stonean 空间上一切凝聚态阿贝尔群零调
-layer 18 · 命题 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 18 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.stonean-cond-acyclic)　·　[节点索引](../index.md)
 
 设 $S$ 是 **Stonean 空间**（极不连通的紧 Hausdorff 空间），$M$ 是凝聚态阿贝尔群。则对一切 $n > 0$

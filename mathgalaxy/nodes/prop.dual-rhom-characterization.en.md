@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Dual as RHom` (short) · `Pontryagin Dual as a Derived Hom` (full)
 
 ## Statement and proof

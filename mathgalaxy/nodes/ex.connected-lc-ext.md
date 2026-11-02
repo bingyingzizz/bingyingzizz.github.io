@@ -1,6 +1,6 @@
 # 连通局部紧到离散只剩 Ext一次　`ex.connected-lc-ext`
 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0$（$n \ne 1$，$M$ 连通、$N$ 离散）
-layer 21 · 例 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 例 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=ex.connected-lc-ext)　·　[节点索引](../index.md)
 
 设 $M$ 是**连通**局部紧 Hausdorff 阿贝尔群、$N$ 是**离散**阿贝尔群。则 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0$，对一切 $n \ne 1$。

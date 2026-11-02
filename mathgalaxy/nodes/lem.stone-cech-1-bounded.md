@@ -1,6 +1,6 @@
 # Stone 满射的 Čech 复形 1-有界零调　`lem.stone-cech-1-bounded`
 Stone 满射的增广 Čech 复形是 $1$-有界零调
-layer 18 · 引理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 18 · 引理 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
 [在星图里打开](../#n=lem.stone-cech-1-bounded)　·　[节点索引](../index.md)
 
 设 $M$ 是半范数阿贝尔群，$S_{0} \twoheadrightarrow S$ 是 **Stone 空间之间的满射**。则增广 Čech 复形

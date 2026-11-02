@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `RHom Table` (short) · `Table of Derived Hom for Z, R and T` (full)
 
 ## Statement and proof

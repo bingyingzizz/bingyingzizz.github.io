@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics
+layer 16 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
 names: `Continuous Functions` (short) · `Continuous Functions Form a Normed Banach Group` (full)
 
 ## Statement and proof

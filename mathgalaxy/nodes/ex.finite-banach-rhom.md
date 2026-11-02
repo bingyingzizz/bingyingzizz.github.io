@@ -1,6 +1,6 @@
 # 有限维 Banach 空间之间的导出 Hom　`ex.finite-banach-rhom`
 $\operatorname{RHom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{R}}(M, N)$
-layer 21 · 例 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 例 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=ex.finite-banach-rhom)　·　[节点索引](../index.md)
 
 设 $M, N$ 是有限维实 Banach 空间。则 $\operatorname{RHom}_{\mathbb{Z}}(M, N) = \operatorname{Hom}_{\mathbb{R}}(M, N)$，其中右边集中在 **0 次**。
