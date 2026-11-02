@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版） 用
+- 被 [`def.orthogonally-similar`](../nodes/def.orthogonally-similar.md) 正交相似 用
+- 被 [`thm.qr-decomposition`](../nodes/thm.qr-decomposition.md) QR 分解 用

@@ -15,6 +15,8 @@ $\{0\}$ 与 $V$ 永远是 $T$-不变的（**平凡**不变子空间）；$T$ 的
 - 被 [`def.eigenvalue`](../nodes/def.eigenvalue.md) 特征值与特征向量 用
 - ⇒ [`thm.diagonalizable`](../nodes/thm.diagonalizable.md) 可对角化判据
 
+- …另有出边，续页见 [nodes/def.invariant-subspace.3.md](./def.invariant-subspace.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.invariant-subspace.2.md](./def.invariant-subspace.2.md)
 

@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.hermitian-matrix`](../nodes/def.hermitian-matrix.md) Hermite 矩阵与对称矩阵：用到了定义 Hermite 矩阵与对称矩阵　[proofs/dep.ln-posdef-hermite.md](../proofs/dep.ln-posdef-hermite.md)
 - [`def.quadratic-form`](../nodes/def.quadratic-form.md) 二次型：用到了定义 二次型　[proofs/dep.ln-posdef-qform.md](../proofs/dep.ln-posdef-qform.md)
+
+> 续见 [nodes/def.positive-definite-matrix.4.md](./def.positive-definite-matrix.4.md)

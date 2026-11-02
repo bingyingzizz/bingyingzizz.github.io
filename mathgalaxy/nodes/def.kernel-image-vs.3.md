@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.first-iso-vs`](../nodes/thm.first-iso-vs.md) 第一同构定理（向量空间版）
 - ⇒ [`thm.linear-system-solutions`](../nodes/thm.linear-system-solutions.md) 线性方程组的解结构
+- 被 [`def.eigenspace`](../nodes/def.eigenspace.md) 特征子空间 用

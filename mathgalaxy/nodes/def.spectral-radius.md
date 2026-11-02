@@ -7,7 +7,7 @@ layer 12 · 定义 · 内积空间与正交性 · 抽象代数
 
 设 $A \in M_{n}(\mathbb{C})$。**谱半径**是
 
-$$\rho(A) := \max\bigl\{\, \lvert\lambda\rvert : \lambda\ \text{是}\ A\ \text{的特征值} \,\bigr\} .$$
+$\rho(A) := \max\bigl\{\, \lvert\lambda\rvert : \lambda$ 是 $A$ 的特征值 $\, \bigr\}$
 
 **基本性质**：
 > 陈述续见 [nodes/def.spectral-radius.2.md](./def.spectral-radius.2.md)
@@ -15,6 +15,7 @@ $$\rho(A) := \max\bigl\{\, \lvert\lambda\rvert : \lambda\ \text{是}\ A\ \text{�
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.trace`](../nodes/def.trace.md) 迹 用
+- 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.spectral-radius.3.md](./def.spectral-radius.3.md)

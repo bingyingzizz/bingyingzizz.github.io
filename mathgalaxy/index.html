@@ -10665,6 +10665,14 @@ MG.clusters = [
     hub: 'thm.rank-nullity',
     desc: '造出「线性映射」这套语言：线性映射 → 核与像 → 商空间与第一同构定理 → **秩-零化度定理** → 对偶空间与零化子。它是「群同态 → 正规子群 → 第一同构定理」那套模板在向量空间上的重演。'
   },
+  {
+    id: 'algebra.numeric',
+    name: '矩阵分解与最小二乘',
+    en: 'Matrix Factorizations and Least Squares',
+    parent: 'algebra',
+    hub: 'thm.least-squares',
+    desc: '造出「真的把 $Ax = b$ 解出来」这台机器：矩阵范数（量「大小」）→ LU（消元的矩阵形式）→ QR（Gram–Schmidt 的矩阵形式）→ **最小二乘**（无解时求最近的解，即正交投影）→ 伪逆（连「解不唯一」也能挑出规范的那个）。⛔ 只写数学（存在性/唯一性/变分刻画），不写数值算法。'
+  },
 
   /* ------------------------------------------------ 星系：拓扑学 */
   {
@@ -12855,6 +12863,25 @@ MG.i18n = {
   generatedBy: 'tools/i18n-backfill.mjs',
   updated: '2026-11-01',
   nodes: {
+    'def.matrix-of-bilinear-form': { title_en: 'Matrix of a Bilinear Form', label_en: 'Matrix of a Bilinear Form', from: 'explicit' },
+    'def.gram-matrix': { title_en: 'Gram Matrix', label_en: 'Gram Matrix', from: 'explicit' },
+    'def.congruent-matrices': { title_en: 'Congruent Matrices', label_en: 'Congruent Matrices', from: 'explicit' },
+    'def.isotropic-vector': { title_en: 'Isotropic Vector', label_en: 'Isotropic Vector', from: 'explicit' },
+    'def.isotropic-subspace': { title_en: 'Isotropic Subspace', label_en: 'Isotropic Subspace', from: 'explicit' },
+    'def.hyperbolic-plane': { title_en: 'Hyperbolic Plane', label_en: 'Hyperbolic Plane', from: 'explicit' },
+    'def.inertia-index': { title_en: 'Inertia Index', label_en: 'Inertia Index', from: 'explicit' },
+    'thm.sylvester-law-inertia': { title_en: "Sylvester's Law of Inertia", label_en: "Sylvester's Law of Inertia", from: 'explicit' },
+    'thm.witt-cancellation': { title_en: 'Witt Cancellation Theorem', label_en: 'Witt Cancellation', from: 'explicit' },
+    'def.eigenspace': { title_en: 'Eigenspace', label_en: 'Eigenspace', from: 'explicit' },
+    'def.generalized-eigenvector': { title_en: 'Generalized Eigenvector', label_en: 'Generalized Eigenvector', from: 'explicit' },
+    'def.nilpotent': { title_en: 'Nilpotent Operator', label_en: 'Nilpotent', from: 'explicit' },
+    'def.idempotent': { title_en: 'Idempotent Operator', label_en: 'Idempotent', from: 'explicit' },
+    'def.orthogonally-similar': { title_en: 'Orthogonally Similar Matrices', label_en: 'Orthogonally Similar', from: 'explicit' },
+    'def.matrix-norm': { title_en: 'Matrix Norm', label_en: 'Matrix Norm', from: 'explicit' },
+    'thm.lu-decomposition': { title_en: 'LU Decomposition', label_en: 'LU Decomposition', from: 'explicit' },
+    'thm.qr-decomposition': { title_en: 'QR Decomposition', label_en: 'QR Decomposition', from: 'explicit' },
+    'thm.least-squares': { title_en: 'Least Squares', label_en: 'Least Squares', from: 'explicit' },
+    'def.pseudoinverse': { title_en: 'Moore-Penrose Pseudoinverse', label_en: 'Pseudoinverse', from: 'explicit' },
     'ax.choice': { title_en: 'axiom of choice', label_en: 'axiom of choice', from: 'explicit' },
     'ax.ext': { title_en: 'extensionality', label_en: 'extensionality', from: 'aka' },
     'ax.found': { title_en: 'foundation', label_en: 'foundation', from: 'explicit' },
@@ -76044,7 +76071,7 @@ window.MG = window.MG || {};
         '',
         '设 $A \\in M_{n}(\\mathbb{C})$。则',
         '',
-        '$$A\\ \\text{正规} \\iff \\exists\\, U\\ \\text{酉},\\ U^{*}AU = \\operatorname{diag}(\\lambda_{1}, \\ldots, \\lambda_{n}) .$$',
+        '$A$ 正规 $\\iff$ 存在酉矩阵 $U$ 使 $U^{*}AU = \\operatorname{diag}(\\lambda_{1}, \\ldots, \\lambda_{n})$',
         '',
         '即：**正规 $\\iff$ 有一组标准正交的特征向量基**。此时',
         '',
@@ -76113,7 +76140,7 @@ window.MG = window.MG || {};
         '',
         '设 $A \\in M_{n}(\\mathbb{C})$。**谱半径**是',
         '',
-        '$$\\rho(A) := \\max\\bigl\\{\\, \\lvert\\lambda\\rvert : \\lambda\\ \\text{是}\\ A\\ \\text{的特征值} \\,\\bigr\\} .$$',
+        '$\\rho(A) := \\max\\bigl\\{\\, \\lvert\\lambda\\rvert : \\lambda$ 是 $A$ 的特征值 $\\, \\bigr\\}$',
         '',
         '**基本性质**：',
         '',
@@ -76304,6 +76331,906 @@ window.MG = window.MG || {};
     { id: 'dep.ln-trace-spectral', kind: 'definition',
       definition: 'def.spectral-radius', usedBy: 'def.trace',
       note: '迹等于特征值之和；谱半径给的是「模最大的那个」，两者从不同角度记账。' }
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
+   内容包 · 线性代数补洞（二）：双线性型的几何
+   --------------------------------------------------------------------------
+   9 个节点。补的是**双线性型/二次型那一侧的几何** —— 用户原话：「我查迷向子空间
+   就查不到呀」。
+
+   ⛔ 补之前：`def.bilinear-form`、`def.quadratic-form`、`def.alternating-form`、
+      `thm.sylvester-criterion` 在图里，但
+        · 「迷向子空间 / 迷向向量 / Witt 消去」**全库 0 次**；
+        · 「合同 / 惯性定理 / 正惯性指数 / 双曲平面 / 对称双线性型」只在别的节点正文里
+          被提到，自己**没有定义**。
+      也就是说：二次型理论只有「判正定」这半截，**分类的那半截（惯性、合同、迷向）缺着**。
+
+   归属：`algebra.multilinear`（多重线性与张量，8 → 17 点）。
+   为什么不开新团：双线性型本身就是那个团的对象；惯性/迷向是它的**几何**，不是新装置。
+
+   ⚠️ 层号：`def.bilinear-form` 在 L10，所以这一批从 L11 起，
+      合同/惯性/迷向依次往上，Witt 最高。
+   ⚠️ `def.congruence` 这个 id 已被**数论的同余**占用（`145-number-basic.js`），
+      所以这里叫 `def.congruent-matrices`（矩阵合同）。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数补洞：双线性型的几何',
+
+  nodes: [
+
+    {
+      id: 'def.matrix-of-bilinear-form',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '双线性型的矩阵',
+      title: '双线性型的矩阵表示',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '双线性型', '矩阵表示'],
+      statement: [
+        '**在做什么**：把双线性型写成矩阵，于是「双线性型的理论」变成「矩阵在合同下的理论」—— 这一步是整章的分水岭。',
+        '',
+        '设 $V$ 是 $K$ 上有限维向量空间，$\\beta : V \\times V \\to K$ 双线性，$e_{1}, \\ldots, e_{n}$ 是一组基。$\\beta$ 在这组基下的**矩阵**是',
+        '',
+        '$$A := \\bigl(\\beta(e_{i}, e_{j})\\bigr)_{1 \\le i,j \\le n} ,$$',
+        '',
+        '于是对 $x = \\sum x_{i}e_{i}$、$y = \\sum y_{j}e_{j}$ 有',
+        '',
+        '$$\\beta(x, y) = x^{T} A\\, y .$$',
+        '',
+        '**换基**：若新基由 $P$ 给出（新基 = 旧基乘以 $P$），则 $\\beta$ 的新矩阵是',
+        '',
+        '$$A\' = P^{T} A\\, P .$$',
+        '',
+        '⚠️ 注意这不是相似（$P^{-1}AP$），而是**合同**（`def.congruent-matrices`）—— 双线性型在换基下的不变量，与线性算子的不变量是**两套**。'
+      ].join('\n'),
+      notes: [
+        '**为什么是 $P^{T}AP$ 而不是 $P^{-1}AP$**：向量坐标按 $x \\mapsto Px$ 变（还是 $P^{-1}x$，取决于约定），而双线性型有**两个**变元，两个都跟着变 $\\implies$ 一边一个 $P$。线性算子的矩阵只有一个变元（$Ax$），所以出现的是 $P^{-1}$（为了抵消）。这个差别是所有混淆的根源。',
+        '**对称 / 交错**：$\\beta$ 对称 $\\iff$ $A$ 对称；$\\beta$ 交错 $\\iff$ $A$ 反对称且对角为零（`def.alternating-form`）。这两种是主要研究对象 —— 对称型给出二次型，交错型给出辛结构。',
+        '⚠️ 「$\\beta$ 非退化 $\\iff$ $A$ 可逆」是**良定义**的（合同保持可逆性），所以可以谈「非退化的双线性型」而不必指定基。这是后面「正交补」「迷向」全部概念的前提。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双线性型的矩阵',
+        '北大《高等代数》· 双线性函数与矩阵'
+      ]
+    },
+
+    {
+      id: 'def.gram-matrix',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: 'Gram 矩阵',
+      title: 'Gram 矩阵：内积的矩阵',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', 'Gram 矩阵', '内积', '正定'],
+      statement: [
+        '**在做什么**：内积也是双线性型（实情形对称、复情形 Hermite），所以它也有矩阵。这个矩阵永远是**正定**的 —— 反过来每个正定矩阵都给出一个内积。',
+        '',
+        '设 $V$ 是实内积空间，$v_{1}, \\ldots, v_{k} \\in V$。它们的 **Gram 矩阵**是',
+        '',
+        '$$G := \\bigl(\\langle v_{i}, v_{j}\\rangle\\bigr)_{1 \\le i,j \\le k} ,$$',
+        '',
+        '其行列式 $\\det G$ 叫 **Gram 行列式**。',
+        '',
+        '**核心性质**：',
+        '',
+        '1. $G$ 对称、**半正定**；$G$ 正定 $\\iff$ $v_{1}, \\ldots, v_{k}$ 线性无关；',
+        '2. $\\det G \\ge 0$，且 $\\det G = 0 \\iff$ 这些向量线性相关；',
+        '3. 若 $V = \\mathbb{R}^{n}$ 且向量是矩阵 $A$ 的列，则 $G = A^{T}A$（复情形 $A^{*}A$）。'
+      ].join('\n'),
+      notes: [
+        '**它是「会算的内积」**：内积是抽象的双线性型，Gram 矩阵是它在一组向量上的全部读数。有了 $G$，投影、正交化、最小二乘全都变成解线性方程组（见 `thm.least-squares`）。',
+        '⭐ **Gram–Schmidt 的行列式读法**：正交化之后 $\\det G = \\prod \\lVert u_{i}\\rVert^{2}$（$u_i$ 是正交化后的向量），所以 $\\sqrt{\\det G}$ 就是这组向量张成的平行体体积。这条把「体积」与「行列式」焊在一起，也是积分换元公式的几何来源。',
+        '⚠️ 复情形要写 $G_{ij} = \\langle v_i, v_j\\rangle$ 且用共轭对称：$G^{*} = G$（Hermite），不是对称。若把内积约定成对第二个变元共轭，则矩阵要整体转置共轭 —— 约定不同，公式差一个星号。',
+        '⚠️ $A^{T}A$ 正定 $\\iff$ $A$ 的列线性无关（满列秩）。这条在最小二乘里是「法方程有唯一解」的充要条件，不满列秩就得用伪逆（`def.pseudoinverse`）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram 矩阵',
+        'Axler, Linear Algebra Done Right, 「Inner Product Spaces」· Gram 矩阵'
+      ]
+    },
+
+    {
+      id: 'def.congruent-matrices',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '合同矩阵',
+      title: '合同：双线性型在换基下的等价',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '合同', '二次型'],
+      statement: [
+        '**在做什么**：给「同一个双线性型在不同基下的矩阵」一个名字 —— 它是等价关系，而且比相似**粗得多**，这正是二次型能被完全分类的原因。',
+        '',
+        '设 $A, B \\in M_{n}(K)$。称 $A$ 与 $B$ **合同**（congruent），若存在**可逆** $P$ 使',
+        '',
+        '$$B = P^{T} A\\, P .$$',
+        '',
+        '复情形用',
+        '',
+        '$$B = P^{*} A\\, P .$$',
+        '',
+        '**合同保持的量**：秩、对称性、交错性、正定性、半正定性，以及实对称情形下的**惯性指数**（`def.inertia-index`）。',
+        '',
+        '**不保持**：特征值、迹、行列式的具体值。'
+      ].join('\n'),
+      notes: [
+        '**合同 vs 相似，一句话分清**：相似 $P^{-1}AP$ 是「同一个**线性算子**换基」；合同 $P^{T}AP$ 是「同一个**双线性型**换基」。前者保持特征值，后者保持惯性 —— 两者只在 $P$ 正交（$P^{-1} = P^{T}$）时重合，那时也叫**正交相似**（`def.orthogonally-similar`）。',
+        '⭐ **为什么合同这么粗**：$P$ 有 $n^{2}$ 个自由度，而 $A$ 只有 $n(n+1)/2$ 个独立分量（对称时），所以能把 $A$ 化简得非常厉害。实对称情形下，合同类恰好由**一对整数** $(p,q)$ 决定（`thm.sylvester-law-inertia`）—— 秩只给出 $p+q$，还差一个信息。',
+        '⚠️ 合同是等价关系，但要**先固定域**：在 $\\mathbb{R}$ 上由 $(p,q)$ 分类；在 $\\mathbb{C}$ 上只看秩（因为可以开平方，把系数吸收进 $P$）。同一个矩阵在 $\\mathbb{R}$ 与 $\\mathbb{C}$ 上的合同类不同。',
+        '⚠️ 与数论里的同余不是一回事（那是 `def.congruence`）：中文都叫「合同/同余」，靠上下文分辨。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra,「Bilinear Forms」· 合同',
+        '北大《高等代数》'
+      ]
+    },
+
+    {
+      id: 'def.isotropic-vector',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '迷向向量',
+      title: '迷向向量：自己与自己正交的非零向量',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '迷向', '双线性型', '二次型'],
+      statement: [
+        '**在做什么**：在有内积的空间里，$\\langle v,v\\rangle = 0$ 只有零解。但一般双线性型没有这个性质 —— 能让「长度为零」的非零向量叫**迷向向量**，它是这门几何与内积几何分道扬镳的地方。',
+        '',
+        '设 $\\beta$ 是 $V$ 上的对称双线性型（或对应的二次型 $q$）。称 $v \\ne 0$ **迷向**，若',
+        '',
+        '$\\beta(v, v) = 0$（即 $q(v) = 0$）',
+        '',
+        '这样的 $v$ 自己就与自己正交。若 $\\beta$ 非退化且存在迷向向量，就称 $\\beta$ 是**迷向型**（isotropic form）；不存在非零迷向向量时叫**非迷向**（各向异性，anisotropic）。',
+        '',
+        '**例子**：$\\mathbb{R}^{2}$ 上 $\\beta(x,y) = x_{1}y_{1} - x_{2}y_{2}$ 中，$(1,1)$ 与 $(1,-1)$ 都迷向；而标准内积没有迷向向量。'
+      ].join('\n'),
+      notes: [
+        '**几何直观**：把 $q(x) = 1$ 想成「单位球面」。正定型给的是椭球（各向异性）；不定型给的是双曲面，而双曲面**穿过原点的那两条直线**上的点满足 $q = 0$ —— 那就是迷向向量。所以「迷向」= 「光锥方向」。',
+        '⚠️ 迷向向量的存在与**基**无关（$q(v) = 0$ 是坐标无关的陈述），但它是否存在取决于**型**：实对称型由惯性指数决定 —— 只要 $q$ 不定（$p, q$ 都非零），就一定有迷向向量；正定或负定则没有。',
+        '⭐ 在相对论里这个就是「类光线」：$\\beta$ 取 Minkowski 型，迷向向量 = 光速方向。数学上同一条东西叫「零向量 / 迷向向量」，名字不同而已。',
+        '⚠️ 别把「迷向」与「零向量」搞混：迷向向量**必须非零**，只是它的「长度平方」是零。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 迷向向量',
+        '北大《高等代数》· 二次型的几何'
+      ]
+    },
+
+    {
+      id: 'def.isotropic-subspace',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '迷向子空间',
+      title: '迷向子空间：整块都互相正交的子空间',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '迷向子空间', '双线性型', '辛'],
+      statement: [
+        '**在做什么**：把「一个迷向向量」放大成「一整块」—— 子空间里任意两个向量都互相正交（包括自己与自己）。这是理解非退化型结构的关键概念。',
+        '',
+        '设 $\\beta$ 是 $V$ 上的对称（或交错）双线性型，$W \\subseteq V$ 是子空间。称 $W$ **迷向**（totally isotropic），若',
+        '',
+        '$\\beta(x, y) = 0$（对一切 $x, y \\in W$）',
+        '',
+        '等价说法：$W \\subseteq W^{\\perp}$（其中 $W^{\\perp} = \\{v : \\beta(v, w) = 0\\ \\forall w \\in W\\}$ 是**正交补**）。',
+        '',
+        '迷向子空间中**最大的那个维数**叫型的 **Witt 指标**（或迷向指标）。',
+        '',
+        '**与内积空间的对照**：内积正定时 $W \\cap W^{\\perp} = 0$ 恒成立，所以没有非零迷向子空间；一般非退化型则可能有，且 $\\dim W + \\dim W^{\\perp} = \\dim V$ 仍成立，只是 $W$ 与 $W^{\\perp}$ 会**相交**。'
+      ].join('\n'),
+      notes: [
+        '**为什么它重要**：非退化型的结构定理（`thm.witt-cancellation`）说，任何非退化型都能拆成「非迷向部分」+「一堆双曲平面（`def.hyperbolic-plane`）」。而 Witt 指标就是「这对双曲平面有多少」的个数 —— 它是比秩更细的不变量。',
+        '⭐ **辛几何的入口**：交错型（$\\beta(v,v) = 0$ 恒成立）时**整个空间**都是迷向的（每个向量都迷向），这时没人用「迷向子空间」这个词，而改用「拉格朗日子空间」（$W = W^{\\perp}$，维数恰为 $\\dim V/2$）。两者是同一个正交补条件的不同命名。',
+        '⚠️ 对称型的迷向子空间与交错型的习惯不同：对称型里通常只要求「$\\beta|_W$ 恒为零」，交错型里这个条件自动对每个向量成立 $\\implies$ 必须额外要求「$W$ 是维数一半的极大者」才有内容。读文献时先确认作者用的是哪种口径。',
+        '⚠️ 迷向子空间**不一定**是奇异子空间：$W$ 自身可以非退化（$W \\cap W^{\\perp} = 0$）而仍然迷向 —— 这正说明「迷向」与「退化」是两件事。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 迷向子空间',
+        'Chevalley, The Algebraic Theory of Spinors（迷向子空间与 Witt 指标，⚠️ 章名未核实，只记书名）'
+      ]
+    },
+
+    {
+      id: 'def.hyperbolic-plane',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '双曲平面',
+      title: '双曲平面：最标准的一块迷向构件',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '双曲平面', '迷向', 'Witt'],
+      statement: [
+        '**在做什么**：这是「一块不可再分的迷向结构」—— 两个迷向向量，互相不为零地配对。非退化型的结构定理说：任何型都是「非迷向的」加若干块这个。',
+        '',
+        '设 $\\beta$ 是 $V$ 上的对称双线性型。二维子空间 $H = \\operatorname{span}(u, w)$ 叫**双曲平面**，若',
+        '',
+        '$$\\beta(u, u) = 0, \\qquad \\beta(w, w) = 0, \\qquad \\beta(u, w) = 1 .$$',
+        '',
+        '在这组基下 $\\beta$ 的矩阵是',
+        '',
+        '$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0\\end{pmatrix} ,$$',
+        '',
+        '它非退化（行列式 $-1$），且明显有迷向向量（$u, w$ 都是）。',
+        '',
+        '**用途**：任何非退化对称型的空间都能正交分解为若干个双曲平面再加一块**非迷向**的空间；双曲平面的个数就是 Witt 指标。'
+      ].join('\n'),
+      notes: [
+        '**为什么叫「双曲」**：在这块平面上 $q(xu + yw) = 2xy$，等值线 等值线 $xy = c$（$c$ 为常数） 是双曲线。这与「$x^{2} - y^{2}$ 型」是同一件事，只是基选得让 $q$ 更好看。',
+        '⭐ **它是「正交基不存在」的最小反例**：在这块平面上，任何一组正交基都不存在（因为每个向量都迷向）。所以「对称型总能正交对角化」这句话**只在正定（或复情形、或惯性指数一侧为零）时成立** —— 一般对称型只能化成「对角 + 这些 2$\\times$2 块」的**标准形**。',
+        '⚠️ 交错型的对应物就是「辛平面」：$\\beta(u,w) = 1$（无需 $\\beta(u,u) = \\beta(w,w) = 0$，因为交错型自动如此）。所以辛空间永远能拆成辛平面，维数必为偶数 —— 这是「辛空间维数偶」的真正原因。',
+        '⚠️ 一块双曲平面**自身**是非退化的，但它内部全是迷向向量 —— 所以「迷向」与「退化」完全不是一回事（另见 `def.isotropic-subspace` 的注）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双曲平面',
+        'Chevalley, The Algebraic Theory of Spinors（⚠️ 章名未核实，只记书名）'
+      ]
+    },
+
+    {
+      id: 'def.inertia-index',
+      cluster: 'algebra.multilinear',
+      type: 'definition',
+      label: '惯性指数',
+      title: '惯性指数与符号差',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '惯性指数', '符号差', '二次型'],
+      statement: [
+        '**在做什么**：给实对称型配一对整数，把它的「形状」量化 —— 正方向有多少维、负方向有多少维。这对整数在合同下**完全不变**，所以它是实二次型的**完备不变量**。',
+        '',
+        '设 $A$ 是 $n$ 阶实对称矩阵，$\\beta$ 是它对应的对称双线性型。把 $A$ 合同对角化后，对角元中正、负、零的个数分别记为 $p, q, z$（$p + q + z = n$）。称',
+        '',
+        '- $p$ 为**正惯性指数**；',
+        '- $q$ 为**负惯性指数**；',
+        '- $p - q$ 为**符号差**（signature）。',
+        '',
+        '三者由 $A$ 唯一确定（不依赖所选的合同变换、不依赖对角化方式）—— 这就是**惯性定理**（`thm.sylvester-law-inertia`）。',
+        '',
+        '秩 $= p + q$；$A$ 正定 $\\iff p = n$；半正定 $\\iff q = 0$；不定 $\\iff p \\ge 1$ 且 $q \\ge 1$。'
+      ].join('\n'),
+      notes: [
+        '**符号差的几何读法**：$q(x) = 1$ 的等值面拓扑类型由 $(p,q)$ 决定 —— $(n,0)$ 是椭球、$(n-1,1)$ 是双叶双曲面、更一般地是 $\\mathbb{R}^{p}$ 上的椭球与 $\\mathbb{R}^{q}$ 上的双曲部分的积。所以「惯性指数 = 等值面的拓扑」。',
+        '⚠️ **符号差不是「行列式的符号」**：$2\\times2$ 矩阵 $\\operatorname{diag}(1,-1)$ 的符号差是 $0$ 而行列式是 $-1$。符号差是 $p - q$，行列式是 $\\prod\\lambda_i$ —— 前者是「有多少个负方向」，后者是「负方向的个数奇偶」。',
+        '⭐ 在几何里它叫 **index**：伪黎曼度量 $(M, g)$ 的「指标」就是每点切空间上 $g$ 的负惯性指数（$1$ $\\implies$ Lorentz 型，$0$ $\\implies$ Riemann 型）。所以这个词在相对论/伪黎曼几何里天天出现。',
+        '⚠️ 惯性指数**只在实对称（或 Hermite）情形有意义**。复对称型在合同下只看秩（可以开方把 $-1$ 吸收），没有 $p,q$ 之分。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 惯性指数',
+        '北大《高等代数》· 惯性指数与符号差'
+      ]
+    },
+
+    {
+      id: 'thm.sylvester-law-inertia',
+      cluster: 'algebra.multilinear',
+      type: 'theorem',
+      label: '惯性定理',
+      title: 'Sylvester 惯性定理：实对称型由惯性指数完全分类',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '惯性定理', 'Sylvester', '合同分类'],
+      statement: [
+        '**在做什么**：回答「两个实对称矩阵什么时候合同」。答案极漂亮：**当且仅当惯性指数相同**。于是合同分类被一对整数穷尽。',
+        '',
+        '设 $A$ 是 $n$ 阶实对称矩阵。则存在可逆 $P$ 使',
+        '',
+        '$$P^{T} A\\, P = \\operatorname{diag}(\\underbrace{1,\\ldots,1}_{p},\\ \\underbrace{-1,\\ldots,-1}_{q},\\ \\underbrace{0,\\ldots,0}_{z}) ,$$',
+        '',
+        '且 $p, q, z$ 由 $A$ 唯一确定（`def.inertia-index`）。',
+        '',
+        '**推论（合同分类）**：两个实对称矩阵合同 $\\iff$ 它们有相同的 $(p, q)$。',
+        '',
+        '**推论（正定性）**：$A$ 正定 $\\iff p = n$ $\\iff$ $A$ 合同于 $I$。'
+      ].join('\n'),
+      notes: [
+        '**证明骨架**：存在性用配方法（对 $n$ 归纳：先找一个 $q(e) \\ne 0$ 的向量，把它所在的二维平面上的交叉项消掉，剩下正交补上归纳）。**唯一性**是真正的要点：若有两组对角形，要证 $p$ 相同 —— 反设 $p > p\'$，考虑「$A$ 的正定子空间」与「$B$ 的负半定子空间」，它们的维数和 $> n$ $\\implies$ 有交，于是同一个 $x \\ne 0$ 同时满足 $x^{T}Ax > 0$ 与 $x^{T}Bx \\le 0$，而合同变换下 $x^{T}Ax$ 与 $x^{T}Bx$ 符号必须一致 —— 矛盾。',
+        '⭐ **这个唯一性论证是「维数计数」的典范**：不去算变换矩阵，而是比较两个子空间的维数。同一个套路在 `thm.courant-fischer` 里也用过。',
+        '**它和谱定理的关系**：谱定理（`thm.spectral-matrix`）也给出对角化，但用的是**正交**变换。惯性定理只要**可逆**变换，代价是看不到特征值、只看到符号 —— 更粗，但对「分类」正好够。',
+        '⚠️ 复情形**没有**这个唯一性：$\\mathbb{C}$ 上任何非退化对称型都合同于 $I$（因为 $\\sqrt{c}$ 存在），只剩秩一个不变量。所以「惯性定理是实情形的特权」。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Sylvester 惯性定理',
+        '北大《高等代数》· 惯性定理'
+      ]
+    },
+
+    {
+      id: 'thm.witt-cancellation',
+      cluster: 'algebra.multilinear',
+      type: 'theorem',
+      label: 'Witt 消去定理',
+      title: 'Witt 消去：非退化型的分解是唯一的',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', 'Witt', '消去', '二次型'],
+      statement: [
+        '**在做什么**：保证「正交分解」是可消去的 —— 若两块型加上同一个东西后同构，则它们本来就同构。有了它，才能谈「型」的**唯一分解**，而不是「某一种分解」。',
+        '',
+        '设 $\\beta$ 是域 $K$（$\\operatorname{char} K \\ne 2$）上向量空间 $V$ 上的**非退化**对称双线性型，$U, W \\subseteq V$ 是**非退化**子空间。若存在等距（保持 $\\beta$ 的线性同构）',
+        '',
+        '$$U \\perp W \\ \\cong\\ U\' \\perp W ,$$',
+        '',
+        '则 $U \\cong U\'$（作为带型的空间）。',
+        '',
+        '**推论（唯一分解）**：非退化型总能正交分解为若干个双曲平面（`def.hyperbolic-plane`）加一块**非迷向**空间，且双曲平面的个数（Witt 指标）与非迷向部分（的同构类）都由型唯一确定。'
+      ].join('\n'),
+      notes: [
+        '**为什么需要「非退化」这个前提**：退化情形下消去律会失败（$\\beta = 0$ 时左式恒为 $0$）。这也是为什么整个二次型理论都要先假设非退化 —— 不是技术洁癖，而是消去律的生死线。',
+        '⭐ **它是「分类」的最后一块砖**：惯性定理（实情形，`thm.sylvester-law-inertia`）给的是「对角形的符号个数唯一」；Witt 消去给的是「**任意**域上分解的块数唯一」。前者只在 $\\mathbb{R}$ 上有效，后者在任意域（char $\\ne$ 2）上都成立。',
+        '⚠️ $\\operatorname{char} K \\ne 2$ 不能去：特征 $2$ 时「对称」与「交错」重合、$\\frac{1}{2}$ 不存在，配方法与 Witt 理论都要重写（那是另一门学问）。本图不展开。',
+        '⚠️ 更强的版本叫 **Witt 延拓定理**：非退化子空间之间的等距总能延拓成整个空间的等距。它与消去定理等价，但表述不同 —— 读文献时看到哪个都算。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理',
+        'Chevalley, The Algebraic Theory of Spinors（⚠️ 章名未核实，只记书名）'
+      ]
+    }
+  ],
+
+  edges: [
+    { id: 'dep.bf-matrix-bf', kind: 'definition',
+      definition: 'def.bilinear-form', usedBy: 'def.matrix-of-bilinear-form',
+      note: '矩阵表示是双线性型的坐标写法，先有双线性型。' },
+    { id: 'dep.bf-matrix-basis', kind: 'definition',
+      definition: 'def.vs', usedBy: 'def.matrix-of-bilinear-form',
+      note: '要选一组基才能写出 $\\beta(e_i, e_j)$。' },
+    { id: 'dep.bf-matrix-transpose', kind: 'definition',
+      definition: 'def.transpose', usedBy: 'def.matrix-of-bilinear-form',
+      note: '$\\beta(x,y) = x^{T}Ay$ 与换基公式 $P^{T}AP$ 都用到转置。' },
+
+    { id: 'dep.gram-inner', kind: 'definition',
+      definition: 'def.inner-product', usedBy: 'def.gram-matrix',
+      note: 'Gram 矩阵的元素就是内积，没有内积无从谈起。' },
+    { id: 'dep.gram-posdef', kind: 'definition',
+      definition: 'def.positive-definite-matrix', usedBy: 'def.gram-matrix',
+      note: 'Gram 矩阵正定 $\\iff$ 向量线性无关 —— 用正定矩阵的判据来陈述。' },
+
+    { id: 'dep.cong-bf', kind: 'definition',
+      definition: 'def.matrix-of-bilinear-form', usedBy: 'def.congruent-matrices',
+      note: '合同就是「同一个双线性型在不同基下的两个矩阵」之间的关系。' },
+    { id: 'dep.cong-invertible', kind: 'definition',
+      definition: 'def.invertible-matrix', usedBy: 'def.congruent-matrices',
+      note: '合同要求变换矩阵可逆（换基必须是同构）。' },
+
+    { id: 'dep.iso-bf', kind: 'definition',
+      definition: 'def.bilinear-form', usedBy: 'def.isotropic-vector',
+      note: '迷向是双线性型（二次型）上的性质。' },
+    { id: 'dep.iso-qform', kind: 'definition',
+      definition: 'def.quadratic-form', usedBy: 'def.isotropic-vector',
+      note: '$\\beta(v,v) = q(v)$，所以「迷向」也可以直接用二次型说。' },
+
+    { id: 'dep.isosub-bf', kind: 'definition',
+      definition: 'def.bilinear-form', usedBy: 'def.isotropic-subspace',
+      note: '整块子空间上的双线性型恒为零。' },
+    { id: 'dep.isosub-ocomp', kind: 'definition',
+      definition: 'def.orthogonal-complement', usedBy: 'def.isotropic-subspace',
+      note: '判据 $W \\subseteq W^{\\perp}$ 用的就是正交补。' },
+    { id: 'dep.isosub-isovec', kind: 'definition',
+      definition: 'def.isotropic-vector', usedBy: 'def.isotropic-subspace',
+      note: '迷向子空间里的每个向量都迷向 —— 是单体概念的整块化。' },
+
+    { id: 'dep.hyp-bf', kind: 'definition',
+      definition: 'def.bilinear-form', usedBy: 'def.hyperbolic-plane',
+      note: '双曲平面是一块特殊的二维带型子空间。' },
+    { id: 'dep.hyp-isovec', kind: 'definition',
+      definition: 'def.isotropic-vector', usedBy: 'def.hyperbolic-plane',
+      note: '它的两个基向量都是迷向向量。' },
+
+    { id: 'dep.inertia-qform', kind: 'definition',
+      definition: 'def.quadratic-form', usedBy: 'def.inertia-index',
+      note: '惯性指数是二次型（实对称型）的对角化计数。' },
+    { id: 'dep.inertia-posdef', kind: 'definition',
+      definition: 'def.positive-definite-matrix', usedBy: 'def.inertia-index',
+      note: '「正定 $\\iff p = n$」把两个概念接起来。' },
+
+    { id: 'dep.syl-inertia', kind: 'definition',
+      definition: 'def.inertia-index', usedBy: 'thm.sylvester-law-inertia',
+      note: '定理的主语就是惯性指数；它断言 $(p,q,z)$ 唯一。' },
+    { id: 'dep.syl-cong', kind: 'definition',
+      definition: 'def.congruent-matrices', usedBy: 'thm.sylvester-law-inertia',
+      note: '定理给的是**合同**分类（不是相似分类）。' },
+
+    { id: 'dep.witt-hyp', kind: 'definition',
+      definition: 'def.hyperbolic-plane', usedBy: 'thm.witt-cancellation',
+      note: '唯一分解里的「块」就是双曲平面。' },
+    { id: 'dep.witt-isosub', kind: 'definition',
+      definition: 'def.isotropic-subspace', usedBy: 'thm.witt-cancellation',
+      note: 'Witt 指标 = 迷向子空间的最大维数；定理保证它良定义。' }
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
+   内容包 · 线性代数补洞（三）：几个被反复提到的基本操作
+   --------------------------------------------------------------------------
+   5 个节点。补的是**被别处用到、自己却没定义**的那几个词：
+     · 「特征子空间」在 3 个节点正文里出现，无定义；
+     · 「幂零」「幂等」分别在 3 / 8 个节点里出现，无定义；
+     · 「广义特征向量」在 `thm.primary-decomposition` 的正文里被用，无定义；
+     · 「正交相似」全库 0 次，但它是「相似」（`def.similarity`）与「酉相似」之间缺的那一格。
+
+   归属：`def.eigenspace` / `def.nilpotent` / `def.generalized-eigenvector` 进 `algebra.spectral`
+        （特征值与 Jordan 型，12 → 15）；
+        `def.idempotent` 进 `algebra.linmap`（线性映射与秩，13 → 14）；
+        `def.orthogonally-similar` 进 `algebra.inner`（28 → 29）。
+       ⚠️ `algebra.inner` 已 28 点，接近 40 的上限，所以后面若再加这一侧的内容要考虑拆团。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数补洞：特征子空间、幂零、幂等、广义特征向量、正交相似',
+
+  nodes: [
+
+    {
+      id: 'def.eigenspace',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '特征子空间',
+      title: '特征子空间：一个特征值对应的全部特征向量',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '特征子空间', '特征值'],
+      statement: [
+        '**在做什么**：把「属于同一个特征值的所有特征向量」收成一个子空间。有了它，「可对角化」就有了干净的判据（特征子空间维数之和等于全空间）。',
+        '',
+        '设 $T : V \\to V$ 线性，$\\lambda$ 是 $T$ 的特征值（`def.eigenvalue`）。$\\lambda$ 的**特征子空间**是',
+        '',
+        '$$V_{\\lambda} := \\ker(T - \\lambda I) = \\{\\, v \\in V : T(v) = \\lambda v \\,\\} .$$',
+        '',
+        '它是 $T$-不变子空间，维数 $\\dim V_{\\lambda}$ 叫 $\\lambda$ 的**几何重数**；而 $\\lambda$ 在特征多项式里的重数叫**代数重数**。',
+        '',
+        '**恒有**：$1 \\le$ 几何重数 $\\le$ 代数重数。',
+        '',
+        '**可对角化判据**：$T$ 可对角化 $\\iff$ $\\sum_{\\lambda} \\dim V_{\\lambda} = \\dim V$ $\\iff$ 每个特征值的两种重数相等。'
+      ].join('\n'),
+      notes: [
+        '**为什么是「子空间」**：$\\ker(T - \\lambda I)$ 是核，当然是子空间。关键在于它**不是随便的子空间** —— 它由单个特征值决定，且不同的 $V_{\\lambda}$ 之和是**直和**（对应不同特征值的特征向量线性无关）。',
+        '**两种重数为什么不同**：$\\begin{pmatrix} 1 & 1 \\\\ 0 & 1\\end{pmatrix}$ 的特征值只有 $1$，代数重数 $2$，但 $\\ker(T - I)$ 只有一维（几何重数 $1$）—— 差的那一维就是 Jordan 块的来源（`thm.jordan-canonical-form`）。',
+        '⭐ **广义特征子空间**是它的推广：把 $\\ker(T - \\lambda I)^{k}$ 取到稳定为止，维数正好等于代数重数。Jordan 形的分块就是按这个来的（见 `thm.primary-decomposition`）。',
+        '⚠️ 记号约定不一致：有书写 $E_{\\lambda}$（eigenspace）、有写 $V(\\lambda)$。本图用 $V_{\\lambda}$，与 `def.eigenvalue` 的记法对齐。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 特征子空间',
+        '北大《高等代数》· 特征子空间'
+      ]
+    },
+
+    {
+      id: 'def.generalized-eigenvector',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '广义特征向量',
+      title: '广义特征向量与广义特征子空间',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '广义特征向量', 'Jordan', '幂零'],
+      statement: [
+        '**在做什么**：特征向量不够用时（几何重数 < 代数重数）就退一步：不要求 $T(v) = \\lambda v$，只要求「反复作用几次之后被 $\\lambda$ 吃掉」。这样就能凑够维数。',
+        '',
+        '设 $T : V \\to V$ 线性，$\\lambda$ 是特征值。$v \\ne 0$ 叫 $\\lambda$ 的**广义特征向量**，若',
+        '',
+        '$\\Bigl(T - \\lambda I\\Bigr)^{k}(v) = 0$（对某个 $k \\ge 1$）',
+        '',
+        '最小的这样的 $k$ 叫 $v$ 的**阶**。全体广义特征向量加上 $0$ 构成**广义特征子空间**',
+        '',
+        '$$G_{\\lambda} := \\bigcup_{k \\ge 1}\\ker(T - \\lambda I)^{k} = \\ker(T - \\lambda I)^{m} ,$$',
+        '',
+        '其中 $m$ 是 $\\lambda$ 的代数重数（取到这个幂就稳定了）。',
+        '',
+        '**核心事实**：$\\dim G_{\\lambda} = $ 代数重数，且 $V = \\bigoplus_{\\lambda} G_{\\lambda}$（`thm.primary-decomposition` 的根子空间分解）。'
+      ].join('\n'),
+      notes: [
+        '**为什么这能把维数补上**：$T - \\lambda I$ 在 $V_{\\lambda}$ 上为零，但在 $G_{\\lambda}$ 上是**幂零**的（`def.nilpotent`）。幂零算子的结构非常简单（一串链），所以把 $T$ 限制在 $G_{\\lambda}$ 上就是「$\\lambda I$ + 一个幂零算子」—— 这正是 Jordan 块。',
+        '**阶的含义**：$k = 1$ 就是普通特征向量；$k = 2$ 意味着 $T(v) = \\lambda v + u$（$u$ 是特征向量）—— 这就是 Jordan 链的第二项。所以「广义特征向量」= 「Jordan 链上的点」。',
+        '⚠️ 广义特征子空间**不是** $T$ 的特征子空间，但它是 $T$-不变的；而且 $T$ 在其上不可对角化（除非它就等于 $V_{\\lambda}$）。',
+        '⚠️ 只有**特征值**才有广义特征向量（$\\lambda$ 必须满足 $\\det(T - \\lambda I) = 0$），否则 $T - \\lambda I$ 可逆、幂次永不为零。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 广义特征向量',
+        '北大《高等代数》· 广义特征向量'
+      ]
+    },
+
+    {
+      id: 'def.nilpotent',
+      cluster: 'algebra.spectral',
+      type: 'definition',
+      label: '幂零',
+      title: '幂零算子与幂零矩阵',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '幂零', 'Jordan', '特征值'],
+      statement: [
+        '**在做什么**：刻画「反复作用就归零」的那类算子。它是幂零部分的结构定理（Jordan 形里除了对角之外的全部内容）的主角。',
+        '',
+        '设 $T : V \\to V$ 线性（$\\dim V = n < \\infty$）。称 $T$ **幂零**，若',
+        '',
+        '$T^{k} = 0$（对某个 $k \\ge 1$）',
+        '',
+        '矩阵情形：$A^{k} = 0$ 时称 $A$ **幂零矩阵**。',
+        '',
+        '**等价条件（这几条常用来判定）**：',
+        '',
+        '1. $T$ 的特征值全是 $0$；',
+        '2. 特征多项式是 $x^{n}$；',
+        '3. $T^{n} = 0$（$n = \\dim V$ 就够了 —— Cayley–Hamilton）。',
+        '',
+        '**结构**：幂零算子总可以化成若当块 $J_{k}(0)$ 的直和；最大块的阶数等于 $T$ 的**幂零指数**（最小的使 $T^{k} = 0$ 的 $k$）。'
+      ].join('\n'),
+      notes: [
+        '**最标准的例子**：移位算子 $T(x_{1}, \\ldots, x_{n}) = (0, x_{1}, \\ldots, x_{n-1})$，$T^{n} = 0$ 而 $T^{n-1} \\ne 0$。它的矩阵是「上移一位」的矩阵，正是单个 $J_{n}(0)$。',
+        '⭐ **为什么幂零这么重要**：任何算子都能拆成「可对角部分 + 幂零部分」$T = S + N$（$S$ 可对角、$N$ 幂零、$SN = NS$，这叫 **Jordan–Chevalley 分解**）。所以「理解幂零」= 「理解不可对角化的全部困难」。',
+        '⚠️ 幂零**不能**与「秩小于 $n$」混：$\\begin{pmatrix} 0 & 1 \\\\ 0 & 0\\end{pmatrix}$ 幂零，但 $\\begin{pmatrix} 0 & 0 \\\\ 0 & 1\\end{pmatrix}$ 秩也是 $1$ 而不幂零（它的特征值是 $1$ 和 $0$）。判据是**特征值全零**，不是秩。',
+        '⚠️ 幂零矩阵的迹与行列式都是 $0$，但**反过来不成立**（$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1\\end{pmatrix}$ 两者都是 $0$ 却不幂零）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 幂零算子',
+        '北大《高等代数》· 幂零矩阵'
+      ]
+    },
+
+    {
+      id: 'def.idempotent',
+      cluster: 'algebra.linmap',
+      type: 'definition',
+      label: '幂等',
+      title: '幂等算子与投影',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '幂等', '投影', '直和'],
+      statement: [
+        '**在做什么**：「做两次和做一次一样」的算子。它等价于「把空间劈成两块、扔掉其中一块」，所以幂等算子与直和分解是同一件事。',
+        '',
+        '设 $T : V \\to V$ 线性。称 $T$ **幂等**（idempotent），若',
+        '',
+        '$$T^{2} = T .$$',
+        '',
+        '矩阵情形：$A^{2} = A$。',
+        '',
+        '**与直和的对应**：$T$ 幂等 $\\iff$ $V = \\ker T \\oplus \\operatorname{im} T$，且 $T$ 就是沿 $\\ker T$ 到 $\\operatorname{im} T$ 的**投影**。此时 $I - T$ 也幂等，且 $\\ker T = \\operatorname{im}(I - T)$。',
+        '',
+        '**最小多项式**：幂等算子的最小多项式整除 $x^{2} - x = x(x-1)$，所以它一定可对角化、特征值只能是 $0$ 或 $1$。'
+      ].join('\n'),
+      notes: [
+        '⚠️ **幂等 $\\ne$ 正交投影**：一般的幂等算子（投影）只是「沿着某个补空间投出去」，**不保证与像垂直**。像与核正交的投影才是 `def.orthogonal-projection`（那要求 $T^{*} = T$，即自伴 + 幂等）。把两者混同会得出「投影总是最短距离」这种错误结论。',
+        '**两种投影的判据对照**：幂等 $\\iff T^{2} = T$；正交投影 $\\iff T^{2} = T$ 且 $T^{*} = T$。差的就是自伴那一条。',
+        '⭐ **谱分解的积木**：谱定理把 $A$ 写成 $\\sum \\lambda_i P_i$，其中每个 $P_i$ 都是**正交**幂等算子，且两两正交、和为 $I$（`thm.spectral-matrix` 的注）。所以幂等元是「把谱切开」的最小单位。',
+        '⚠️ 幂等与幂零是两个极端：$T^{2} = T$ 停止变化，$T^{k} = 0$ 最终归零。除了 $T = 0$（两者都满足）之外没有交集。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 投影',
+        '北大《高等代数》· 幂等变换'
+      ]
+    },
+
+    {
+      id: 'def.orthogonally-similar',
+      cluster: 'algebra.inner',
+      type: 'definition',
+      label: '正交相似',
+      title: '正交相似与酉相似',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '正交相似', '酉相似', '合同'],
+      statement: [
+        '**在做什么**：填「相似」与「合同」之间的那一格 —— 当变换既保持结构（相似）又保持长度（正交/酉）时，就是它。谱定理说的正是「对称矩阵正交相似于对角阵」。',
+        '',
+        '设 $A, B \\in M_{n}(\\mathbb{R})$。称 $A$ 与 $B$ **正交相似**，若存在**正交**矩阵 $Q$ 使',
+        '',
+        '$$B = Q^{T} A\\, Q = Q^{-1} A\\, Q .$$',
+        '',
+        '复情形把 $Q$ 换成**酉**矩阵 $U$，得到**酉相似** $B = U^{*}AU = U^{-1}AU$。',
+        '',
+        '**为什么这一格重要**：正交/酉矩阵同时满足 $P^{-1} = P^{T}$（或 $P^{*}$），所以',
+        '',
+        '正交相似 = 相似 + 合同（三者的区别见 `def.orthogonally-similar` 的注）',
+        '',
+        '它既保持特征值（相似的性质），又保持内积结构（合同的性质）—— 所以它是**稳定**的相似，条件数为 $1$。'
+      ].join('\n'),
+      notes: [
+        '⭐ **谁正交相似于对角阵**：实对称矩阵（`thm.spectral-matrix`）；更一般地，实正规矩阵正交相似于**分块对角**（$1\\times1$ 与 $2\\times2$ 块，因为非实特征值成对出现）。而**任意**矩阵都酉相似于上三角（`thm.schur-triangularization`）—— 这就是「正交相似能化简到什么程度」的完整答案。',
+        '⚠️ 三个概念的区别要牢牢记住：**相似** $P^{-1}AP$（任意可逆 $P$，保持特征值）；**合同** $P^{T}AP$（任意可逆 $P$，保持惯性）；**正交相似** $Q^{T}AQ$ 且 $Q^{-1} = Q^{T}$（两者都保持）。只在第三个里「$P^{-1}$ 与 $P^{T}$ 是同一个东西」。',
+        '⚠️ 本图 `def.similarity` 讲的是最一般的相似。别把「$A$ 相似于对角阵」与「$A$ 正交相似于对角阵」混起来 —— 前者只要求特征向量**够多**，后者还要求它们**互相垂直**（这就是正规，`def.normal-matrix`）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 酉等价',
+        'Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 谱定理'
+      ]
+    }
+  ],
+
+  edges: [
+    { id: 'dep.eigsp-eig', kind: 'definition',
+      definition: 'def.eigenvalue', usedBy: 'def.eigenspace',
+      note: '特征子空间是「属于某个特征值的全部特征向量」，先有特征值。' },
+    { id: 'dep.eigsp-ker', kind: 'definition',
+      definition: 'def.kernel-image-vs', usedBy: 'def.eigenspace',
+      note: '$V_{\\lambda} = \\ker(T - \\lambda I)$，直接是核。' },
+    { id: 'dep.eigsp-invariant', kind: 'definition',
+      definition: 'def.invariant-subspace', usedBy: 'def.eigenspace',
+      note: '特征子空间是 $T$-不变的，这是它能用来分解空间的前提。' },
+
+    { id: 'dep.genvec-eigsp', kind: 'definition',
+      definition: 'def.eigenspace', usedBy: 'def.generalized-eigenvector',
+      note: '阶为 $1$ 的广义特征向量就是普通特征向量：$V_{\\lambda} \\subseteq G_{\\lambda}$。' },
+    { id: 'dep.genvec-nilp', kind: 'definition',
+      definition: 'def.nilpotent', usedBy: 'def.generalized-eigenvector',
+      note: '$T - \\lambda I$ 在 $G_{\\lambda}$ 上是幂零的 —— 这就是「广义」二字的全部内容。' },
+
+    { id: 'dep.nilp-eig', kind: 'definition',
+      definition: 'def.eigenvalue', usedBy: 'def.nilpotent',
+      note: '判据「特征值全为 $0$」直接用特征值来陈述。' },
+    { id: 'dep.nilp-cayley', kind: 'definition',
+      definition: 'thm.cayley-hamilton', usedBy: 'def.nilpotent',
+      note: '$T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻得到。' },
+
+    { id: 'dep.idem-linmap', kind: 'definition',
+      definition: 'def.linear-map', usedBy: 'def.idempotent',
+      note: '幂等是线性算子的条件 $T^{2} = T$。' },
+    { id: 'dep.idem-directsum', kind: 'definition',
+      definition: 'def.direct-sum', usedBy: 'def.idempotent',
+      note: '幂等 $\\iff V = \\ker T \\oplus \\operatorname{im} T$，与直和是同一件事。' },
+    { id: 'dep.idem-orthproj', kind: 'definition',
+      definition: 'def.orthogonal-projection', usedBy: 'def.idempotent',
+      note: '正交投影是「幂等 + 自伴」的特例；在注里点明区别。' },
+
+    { id: 'dep.orthsim-similarity', kind: 'definition',
+      definition: 'def.similarity', usedBy: 'def.orthogonally-similar',
+      note: '正交相似是相似的加强（把 $P$ 限定成正交矩阵）。' },
+    { id: 'dep.orthsim-congruent', kind: 'definition',
+      definition: 'def.congruent-matrices', usedBy: 'def.orthogonally-similar',
+      note: '同一时候它也是合同 —— 因为 $Q^{T} = Q^{-1}$。这一条正是「填上那一格」的关键。' },
+    { id: 'dep.orthsim-unitary', kind: 'definition',
+      definition: 'def.unitary-matrix', usedBy: 'def.orthogonally-similar',
+      note: '复情形把正交矩阵换成酉矩阵。' }
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
+   内容包 · 线性代数补洞（四）：矩阵分解与最小二乘
+   --------------------------------------------------------------------------
+   5 个节点，**新开一个星团** `algebra.numeric`（矩阵分解与最小二乘）。
+
+   为什么开新团：前三个包补的都是「结构」（矩阵分类 / 双线性型的几何 / 基本操作），
+   而这 5 个是**同一件事的一整套做法** —— 「怎么真的把 $Ax = b$ 解出来、解不动时怎么
+   求最近解」。按本图的星团判据（为一个「能用的东西」而存在的一整套结果），
+   它就是「解线性方程组」那台机器，和「内积空间上的算子分类」不是同一台。
+
+   ⛔ 补之前：QR / LU / 最小二乘 / 伪逆 / 矩阵范数在全库**只有零星正文提及、无定义**
+      （各 1–2 次），而 `def.elementary-matrix`（初等变换）与 `thm.linear-system-solutions`
+      （解结构）已经在 —— 也就是说「消元的零件」有，「分解的成品」没有。
+
+   ⚠️ 口径：这一包写的是**数学内容**（分解的存在唯一性、最小二乘的变分刻画），
+      不写算法复杂度、不写浮点误差分析 —— 那些属于数值分析，本图未收录。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '线性代数补洞：矩阵分解与最小二乘',
+
+  nodes: [
+
+    {
+      id: 'def.matrix-norm',
+      cluster: 'algebra.numeric',
+      type: 'definition',
+      label: '矩阵范数',
+      title: '矩阵范数与算子范数',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '矩阵范数', '算子范数'],
+      statement: [
+        '**在做什么**：给矩阵量「大小」。有两套口径，必须分清：把矩阵当**一堆数**量（Frobenius），还是当**一个算子**量（算子范数）。',
+        '',
+        '**算子范数**（从属范数）：给定 $\\mathbb{R}^{n}$ 上的向量范数 $\\lVert\\cdot\\rVert$，定义',
+        '',
+        '$$\\lVert A\\rVert := \\sup_{x \\ne 0}\\frac{\\lVert Ax\\rVert}{\\lVert x\\rVert} = \\sup_{\\lVert x\\rVert = 1}\\lVert Ax\\rVert .$$',
+        '',
+        '**Frobenius 范数**：$\\lVert A\\rVert_{F} := \\bigl(\\sum_{i,j}\\lvert a_{ij}\\rvert^{2}\\bigr)^{1/2}$（就是把它当 $mn$ 维向量量长度）。',
+        '',
+        '**基本性质**：两者都是范数；都满足 $\\lVert AB\\rVert \\le \\lVert A\\rVert\\,\\lVert B\\rVert$（次乘性）；算子范数还额外满足 $\\lVert Ax\\rVert \\le \\lVert A\\rVert\\,\\lVert x\\rVert$。',
+        '',
+        '**与谱的关系**：$\\lVert A\\rVert_{2} = \\sigma_{\\max}(A) = \\sqrt{\\lambda_{\\max}(A^{*}A)}$（谱范数 = 最大奇异值）；$\\lVert A\\rVert_{F} = \\bigl(\\sum \\sigma_{i}^{2}\\bigr)^{1/2}$。'
+      ].join('\n'),
+      notes: [
+        '**两种口径为什么都要**：算子范数量的是「最大放大倍数」，直接对应谱半径与收敛性（$\\rho(A) \\le \\lVert A\\rVert$，`def.spectral-radius`）；Frobenius 范数量的是「一共有多大」，计算容易、且对低秩逼近天然合适（Eckart–Young 用它陈述）。',
+        '⚠️ **Frobenius 不是算子范数**（除了一维情形），它不满足「从某个向量范数诱导」；所以 $\\lVert I\\rVert_{F} = \\sqrt{n}$ 而任何算子范数都有 $\\lVert I\\rVert = 1$。判据就在这里。',
+        '⚠️ 谱范数用**奇异值**而不是特征值：$\\lVert A\\rVert_2 = \\sigma_{\\max}$，而 $\\rho(A) = \\max\\lvert\\lambda\\rvert$。两者只在正规矩阵上相等（`def.normal-matrix`）。',
+        '⭐ **为什么 $\\lVert\\cdot\\rVert$ 常用来估误差**：$\\lVert x - x_{0}\\rVert \\le \\lVert A^{-1}\\rVert\\,\\lVert b - Ax_{0}\\rVert$ —— 条件数 $\\kappa = \\lVert A\\rVert\\lVert A^{-1}\\rVert$ 就是这么来的（本图不展开数值分析，只记这个接口）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 范数',
+        'Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· 矩阵范数'
+      ]
+    },
+
+    {
+      id: 'thm.lu-decomposition',
+      cluster: 'algebra.numeric',
+      type: 'theorem',
+      label: 'LU 分解',
+      title: 'LU 分解：把消元写成两个三角矩阵',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', 'LU 分解', '消元'],
+      statement: [
+        '**在做什么**：高斯消元其实是在乘一串初等矩阵。把那些初等矩阵乘起来记成 $L$，消元的结果记成 $U$，就得到 $A = LU$。',
+        '',
+        '设 $A \\in M_{n}(K)$，且它的 $n$ 个**顺序主子式**全非零。则存在唯一的',
+        '',
+        '$$A = LU ,$$',
+        '',
+        '其中 $L$ 是**单位下三角**（对角元全为 $1$）、$U$ 是**上三角**。',
+        '',
+        '**置换版本（总是存在）**：对任意可逆 $A$ 都存在置换矩阵 $P$ 使 $PA = LU$（行交换让主元非零）。',
+        '',
+        '**用途**：解 $Ax = b$ 变成「解 $Ly = b$（前代）+ 解 $Ux = y$（回代）」，两个都是 $O(n^{2})$；而且 $A$ 不变时 $L, U$ 可以反复用。'
+      ].join('\n'),
+      notes: [
+        '**「顺序主子式全非零」不能去掉**：$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0\\end{pmatrix}$ 的顺序主子式第一个是 $0$，它没有不带置换的 $LU$ 分解（但 $PA = LU$ 有）。这条前提就是「消元时主元不为零」的矩阵语言。',
+        '⭐ **它和初等变换的关系**：`def.elementary-matrix` 里那三类初等矩阵，把「第三类（行加倍数）」按顺序乘起来就是 $L^{-1}$。所以 $LU$ 分解 = 高斯消元的矩阵形式，**没有新东西**，只是记账。',
+        '**与 Cholesky 的关系**：若 $A$ 还是**对称正定**，则 $LU$ 可以写成 $A = LL^{T}$（$L$ 下三角），叫 Cholesky 分解。本图未单独收录，它是正定矩阵（`def.positive-definite-matrix`）的直接推论：正定 $\\implies$ 顺序主子式全正（`thm.sylvester-criterion`）$\\implies$ 可做 Cholesky。',
+        '⚠️ 有 $PA = LU$ 之后不要再写 $A = LU$：行交换改变了矩阵，$P$ 必须写出来。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化与消元',
+        '北大《高等代数》· 矩阵的三角分解'
+      ]
+    },
+
+    {
+      id: 'thm.qr-decomposition',
+      cluster: 'algebra.numeric',
+      type: 'theorem',
+      label: 'QR 分解',
+      title: 'QR 分解：把列正交化写成三角矩阵',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', 'QR 分解', 'Gram–Schmidt'],
+      statement: [
+        '**在做什么**：Gram–Schmidt 正交化其实也是在乘一串矩阵 —— 把结果记成 $R$、正交化后的基记成 $Q$，就得到 $A = QR$。',
+        '',
+        '设 $A \\in M_{m\\times n}(\\mathbb{R})$ 的列线性无关（$m \\ge n$）。则存在**唯一**的分解',
+        '',
+        '$$A = QR ,$$',
+        '',
+        '其中 $Q \\in M_{m\\times n}$ 的列**标准正交**（$Q^{T}Q = I_{n}$），$R \\in M_{n}(\\mathbb{R})$ 是**上三角**且对角元全正。',
+        '',
+        '**复情形**：$A = QR$，$Q^{*}Q = I$，$R$ 上三角（对角元取正实数）。',
+        '',
+        '**方阵情形**：$A$ 可逆时 $Q$ 是正交（酉）矩阵 —— 这就是 $A$ 的「正交 $\\times$ 上三角」分解，与 LU 的「下三角 $\\times$ 上三角」互为对照。'
+      ].join('\n'),
+      notes: [
+        '**它其实就是 Gram–Schmidt**：把 $A$ 的列 $a_{1}, \\ldots, a_{n}$ 正交化成 $q_{1}, \\ldots, q_{n}$（`thm.gram-schmidt`），则 $a_{k} = \\sum_{i \\le k} r_{ik}q_{i}$，系数拼起来就是上三角 $R$。唯一的差别是 QR 通常要求 $R$ 的对角为正（这固定了 $q_k$ 的符号）。',
+        '⭐ **为什么不用 Gram–Schmidt 而用 QR**：数学上等价，但数值上不同 —— Gram–Schmidt 会损失正交性（$Q^{T}Q$ 偏离 $I$），实际算法用 Householder 反射或 Givens 旋转直接算 $Q$。**本图只做数学内容，不展开算法**（数值分析不在收录范围）。',
+        '**与最小二乘的关系**：$\\lVert Ax - b\\rVert^{2} = \\lVert Rx - Q^{T}b\\rVert^{2} + \\lVert (I - QQ^{T})b\\rVert^{2}$，最后一项与 $x$ 无关 —— 所以最小二乘解就是解 $Rx = Q^{T}b$（`thm.least-squares`）。这是 QR 在数值上受欢迎的真正原因。',
+        '⚠️ **列线性无关**这个前提不能去：否则 $Q$ 的列不全、$R$ 不可逆，分解仍可做但失去意义（那种情形要用列主元 QR 或伪逆）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt',
+        'Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· QR 分解'
+      ]
+    },
+
+    {
+      id: 'thm.least-squares',
+      cluster: 'algebra.numeric',
+      type: 'theorem',
+      label: '最小二乘',
+      title: '最小二乘：无解时求最近的解',
+      regions: ['algebra'],
+      tags: ['定理', '线性代数', '最小二乘', '法方程', '投影'],
+      statement: [
+        '**在做什么**：$Ax = b$ 可能无解（$b$ 不在列空间里）。那就退一步：找一个 $x$ 让 $Ax$ 离 $b$ 最近 —— 这就是最小二乘。',
+        '',
+        '设 $A \\in M_{m\\times n}(\\mathbb{R})$ 列满秩、$b \\in \\mathbb{R}^{m}$。**最小二乘解**是使',
+        '',
+        '$$\\lVert Ax - b\\rVert_{2}$$',
+        '',
+        '取最小的 $x$。它由**法方程**（normal equation）唯一确定：',
+        '',
+        '$$A^{T}A\\, x = A^{T} b .$$',
+        '',
+        '由于列满秩时 $A^{T}A$ 正定（可逆），解为 $x = (A^{T}A)^{-1}A^{T}b$。',
+        '',
+        '**几何意义**：$Ax^{*}$ 是 $b$ 在 $A$ 的列空间上的**正交投影**，残差 $b - Ax^{*}$ 与列空间正交。'
+      ].join('\n'),
+      notes: [
+        '**法方程就是「残差与列空间正交」**：$(b - Ax) \\perp \\operatorname{col}(A)$ $\\iff$ $A^{T}(b - Ax) = 0$ $\\iff$ $A^{T}Ax = A^{T}b$。所以它不是一个技巧，而是投影的定义（`def.orthogonal-projection`）。',
+        '⭐ **它是正交投影的具体算法**：把「往子空间投影」写成矩阵，就是 $P = A(A^{T}A)^{-1}A^{T}$。这个 $P$ 幂等且对称（`def.idempotent` 的注里说的「正交幂等」），正是那个投影算子。',
+        '⚠️ **不要真的去求 $A^{T}A$ 的逆**（数学上对、数值上有害：条件数被平方）。实际用 QR 或 SVD：$x = R^{-1}Q^{T}b$（`thm.qr-decomposition` 的注）。本图只记数学结论，不展开算法。',
+        '⚠️ **列不满秩时**最小二乘解**不唯一**（有无穷多，都给出同样的残差），这时要用**伪逆**取「范数最小」的那一个（`def.pseudoinverse`）。'
+      ].join('\n\n'),
+      refs: [
+        'Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 最佳逼近',
+        'Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· 最小二乘'
+      ]
+    },
+
+    {
+      id: 'def.pseudoinverse',
+      cluster: 'algebra.numeric',
+      type: 'definition',
+      label: '伪逆',
+      title: 'Moore–Penrose 伪逆：不可逆矩阵的「逆」',
+      regions: ['algebra'],
+      tags: ['定义', '线性代数', '伪逆', 'Moore–Penrose', 'SVD'],
+      statement: [
+        '**在做什么**：奇异矩阵、长方矩阵都没有逆，但仍然有「最好用的那个替代品」。伪逆 $A^{+}$ 是唯一满足四条 Penrose 条件的矩阵。',
+        '',
+        '设 $A \\in M_{m\\times n}(K)$。**Moore–Penrose 伪逆** $A^{+} \\in M_{n\\times m}(K)$ 是唯一满足下面四条的矩阵：',
+        '',
+        '$$A A^{+} A = A, \\qquad A^{+} A A^{+} = A^{+} ,$$',
+        '',
+        '$$(AA^{+})^{*} = AA^{+}, \\qquad (A^{+}A)^{*} = A^{+}A .$$',
+        '',
+        '**由 SVD 构造**：若 $A = U\\Sigma V^{*}$（`thm.svd`），则',
+        '',
+        '$$A^{+} = V\\Sigma^{+}U^{*} ,$$',
+        '',
+        '其中 $\\Sigma^{+}$ 是把 $\\Sigma$ 的非零对角元取倒数、再转置。',
+        '',
+        '**当 $A$ 可逆时** $A^{+} = A^{-1}$；若 $A$ 列满秩，则 $A^{+} = (A^{*}A)^{-1}A^{*}$（最小二乘解 $x = A^{+}b$）。'
+      ].join('\n'),
+      notes: [
+        '**四条条件的含义**：前两条说 $AA^{+}$ 与 $A^{+}A$ 是幂等（投影，`def.idempotent`），后两条说这两个投影**自伴**（正交投影）。所以 $A^{+}$ 干的事是：**把 $b$ 正交投影到列空间、再在核的方向上取零** —— 也就是「唯一的最小范数最小二乘解」。',
+        '⭐ **它是「解不唯一时挑一个」的规范办法**：$Ax = b$ 相容但解无穷多时，$A^{+}b$ 给出其中**范数最小**的那个；$Ax = b$ 不相容时，$A^{+}b$ 给出**残差最小**的那个。所以它同时接管了「最小范数解」与「最小二乘解」两件事。',
+        '⚠️ 伪逆**不**满足 $(AB)^{+} = B^{+}A^{+}$（一般不成立，只有特殊情形才对）。这与逆矩阵的 $(AB)^{-1} = B^{-1}A^{-1}$ 形成鲜明对照 —— 是本概念最容易记错的地方。',
+        '⚠️ 记号：$A^{+}$ 与 $A^{\\dagger}$ 都在用（后者在物理里常见）。本图用 $A^{+}$，以免与共轭转置 $A^{*}$ 混淆。'
+      ].join('\n\n'),
+      refs: [
+        'Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· 广义逆',
+        'Ben-Israel–Greville, Generalized Inverses（⚠️ 章名未核实，只记书名）'
+      ]
+    }
+  ],
+
+  edges: [
+    { id: 'dep.mnorm-vs', kind: 'definition',
+      definition: 'def.vs', usedBy: 'def.matrix-norm',
+      note: '算子范数由向量范数诱导，所以先有向量空间与它的范数概念。' },
+    { id: 'dep.mnorm-inner', kind: 'definition',
+      definition: 'def.inner-product', usedBy: 'def.matrix-norm',
+      note: 'Frobenius 范数就是把它当向量取欧氏长度；谱范数要用奇异值（内积的产物）。' },
+    { id: 'dep.mnorm-svd', kind: 'definition',
+      definition: 'thm.svd', usedBy: 'def.matrix-norm',
+      note: '$\\lVert A\\rVert_2 = \\sigma_{\\max}$、$\\lVert A\\rVert_F = (\\sum\\sigma_i^2)^{1/2}$ 都靠 SVD。' },
+    { id: 'dep.mnorm-radius', kind: 'definition',
+      definition: 'def.spectral-radius', usedBy: 'def.matrix-norm',
+      note: '$\\rho(A) \\le \\lVert A\\rVert$ —— 节里把两条「大小」的度量接上。' },
+
+    { id: 'dep.lu-elem', kind: 'definition',
+      definition: 'def.elementary-matrix', usedBy: 'thm.lu-decomposition',
+      note: 'LU 分解就是高斯消元（初等行变换）的矩阵形式。' },
+    { id: 'dep.lu-sylvester', kind: 'definition',
+      definition: 'thm.sylvester-criterion', usedBy: 'thm.lu-decomposition',
+      note: '「顺序主子式全非零」这个前提，与正定判据用的是同一批主子式。' },
+    { id: 'dep.lu-posdef', kind: 'definition',
+      definition: 'def.positive-definite-matrix', usedBy: 'thm.lu-decomposition',
+      note: '正定时 LU 变成 Cholesky $A = LL^{T}$，在注里点出。' },
+
+    { id: 'dep.qr-gs', kind: 'definition',
+      definition: 'thm.gram-schmidt', usedBy: 'thm.qr-decomposition',
+      note: 'QR 分解就是 Gram–Schmidt 的矩阵写法 —— 这一步是理解 QR 的全部。' },
+    { id: 'dep.qr-unitary', kind: 'definition',
+      definition: 'def.unitary-matrix', usedBy: 'thm.qr-decomposition',
+      note: '方阵情形 $Q$ 是正交（酉）矩阵。' },
+
+    { id: 'dep.ls-proj', kind: 'definition',
+      definition: 'def.orthogonal-projection', usedBy: 'thm.least-squares',
+      note: '最小二乘解的几何意义是「$b$ 在列空间上的正交投影」，法方程就是它的代数形式。' },
+    { id: 'dep.ls-gram', kind: 'definition',
+      definition: 'def.gram-matrix', usedBy: 'thm.least-squares',
+      note: '$A^{T}A$ 正是 $A$ 的列向量的 Gram 矩阵；正定 $\\iff$ 列满秩。' },
+    { id: 'dep.ls-posdef', kind: 'definition',
+      definition: 'def.positive-definite-matrix', usedBy: 'thm.least-squares',
+      note: '列满秩 $\\implies$ $A^{T}A$ 正定 $\\implies$ 法方程唯一可解。' },
+
+    { id: 'dep.pinv-svd', kind: 'definition',
+      definition: 'thm.svd', usedBy: 'def.pseudoinverse',
+      note: '伪逆的标准构造就是 SVD：$A^{+} = V\\Sigma^{+}U^{*}$。' },
+    { id: 'dep.pinv-idem', kind: 'definition',
+      definition: 'def.idempotent', usedBy: 'def.pseudoinverse',
+      note: '$AA^{+}$ 与 $A^{+}A$ 都是（正交）幂等算子，这是四条 Penrose 条件里两条的含义。' },
+    { id: 'dep.pinv-invertible', kind: 'definition',
+      definition: 'def.invertible-matrix', usedBy: 'def.pseudoinverse',
+      note: '可逆时伪逆就是逆 —— 它是「逆」的推广，不是另一样东西。' }
   ]
 });
 

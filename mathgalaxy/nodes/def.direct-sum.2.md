@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.flat-summand`](../nodes/prop.flat-summand.md) 平坦的直和项 用
+- 被 [`def.idempotent`](../nodes/def.idempotent.md) 幂等 用

@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.gram-schmidt`](../nodes/thm.gram-schmidt.md) Gram–Schmidt 正交化
 - ⇒ [`thm.projection-formula`](../nodes/thm.projection-formula.md) 最佳逼近与投影公式
+- 被 [`def.idempotent`](../nodes/def.idempotent.md) 幂等 用
+- 被 [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘 用

@@ -7,10 +7,10 @@
 - def.positive-definite-matrix　正定矩阵　layer 14
 - thm.schur-triangularization　Schur 三角化　layer 14
 - def.rayleigh-quotient　Rayleigh 商　layer 14
+- def.orthogonally-similar　正交相似　layer 14
 - def.induced-norm　诱导范数与距离　layer 15
 - thm.courant-fischer　Courant–Fischer 极小极大原理　layer 15
 - thm.cauchy-schwarz　Cauchy–Schwarz 不等式　layer 16
 - thm.spectral-matrix　谱定理（矩阵版）　layer 17
-- thm.spectral-theorem　谱定理（实对称）　layer 20
 
 > 续见 `index/algebra.inner.3.md`

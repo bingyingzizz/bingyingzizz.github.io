@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.cramer`](../nodes/thm.cramer.md) Cramer 法则
+- 被 [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵 用
+- 被 [`def.pseudoinverse`](../nodes/def.pseudoinverse.md) 伪逆 用

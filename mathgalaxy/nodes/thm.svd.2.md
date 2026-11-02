@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称） + [`def.operator-adjoint`](../nodes/def.operator-adjoint.md) 伴随算子：谱定理 $\implies$ 奇异值分解　[proofs/imp.svd.md](../proofs/imp.svd.md)
+
+> 续见 [nodes/thm.svd.3.md](./thm.svd.3.md)

@@ -13,6 +13,9 @@ layer 10 · 定义 · 矩阵与行列式 · 抽象代数
 > 陈述续见 [nodes/def.elementary-matrix.2.md](./def.elementary-matrix.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.elementary-matrix.3.md](./def.elementary-matrix.3.md)
 

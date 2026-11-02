@@ -16,6 +16,8 @@ $$(AB)^{T} = B^{T} A^{T}$$
 ## 它能推出什么 / 谁在用它
 - 被 [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置 用
 
+- …另有出边，续页见 [nodes/def.transpose.4.md](./def.transpose.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.transpose.3.md](./def.transpose.3.md)
 

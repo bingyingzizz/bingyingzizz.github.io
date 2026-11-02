@@ -12,6 +12,8 @@ $$\operatorname{span}(e_1, \ldots, e_j) = \operatorname{span}(v_1, \ldots, v_j),
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.projection-formula`](../nodes/thm.projection-formula.md) 最佳逼近与投影公式
 
+- …另有出边，续页见 [nodes/thm.gram-schmidt.3.md](./thm.gram-schmidt.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.gram-schmidt.2.md](./thm.gram-schmidt.2.md)
 

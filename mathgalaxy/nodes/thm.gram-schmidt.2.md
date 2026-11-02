@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.orthogonality`](../nodes/def.orthogonality.md) 正交 + [`def.orthogonal-projection`](../nodes/def.orthogonal-projection.md) 正交投影：正交性的定义 $\implies$ Gram–Schmidt　[proofs/imp.gram-schmidt.md](../proofs/imp.gram-schmidt.md)
+
+> 续见 [nodes/thm.gram-schmidt.3.md](./thm.gram-schmidt.3.md)

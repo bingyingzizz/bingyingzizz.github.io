@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.orthogonal-projection`](../nodes/def.orthogonal-projection.md) 正交投影 用
 - ⇒ [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称）
+- 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用
