@@ -1,18 +1,16 @@
 # 正则空间　`def.regular-space`
-正则空间（T3）：点与闭集可以分开
-layer 8 · 定义 · 拓扑空间 · 拓扑学
+正则空间 = $T_{3} + T_{1}$
+layer 18 · 定义 · 拓扑空间 · 拓扑学
 [在星图里打开](../#n=def.regular-space)　·　[节点索引](../index.md)
 
-**在做什么**：把 $T_{2}$ 的「点 vs 点」升级成「点 vs 不含它的闭集」。这是第一个能对**闭集**动手的分离公理。
+**在做什么**：$T_{3}$ 那条性质**再加上 $T_{1}$**。加了 $T_{1}$ 之后它才自动是 $T_{2}$ —— 这是「正则」这个名字真正的用处。
 
-拓扑空间 $X$ 叫**正则**（regular），若对任意闭集 $F$ 与任意 $x \notin F$，存在不交开集 $U, V$ 使
-
-$$x \in U, \qquad F \subseteq V .$$
+拓扑空间 $X$ 叫**正则空间**（regular space），若
 > 陈述续见 [nodes/def.regular-space.2.md](./def.regular-space.2.md)
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.t1-space`](../nodes/def.t1-space.md) T1 空间：用到了定义 T1 空间　[proofs/dep.reg-t1.md](../proofs/dep.reg-t1.md)
+- [`def.completely-regular-space`](../nodes/def.completely-regular-space.md) 完全正则空间：imp.cr-regular　[proofs/imp.cr-regular.md](../proofs/imp.cr-regular.md)
 
 - …另有入边，续页见 [nodes/def.regular-space.3.md](./def.regular-space.3.md)
 

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Metrizability (`topology.metrizable`) · Topology
+layer 17 · proposition · cluster Metrizability (`topology.metrizable`) · Topology
 names: `Metrizable Spaces` (short) · `Properties of Metrizable Spaces` (full)
 
 ## Statement and proof

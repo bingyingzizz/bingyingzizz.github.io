@@ -13,10 +13,10 @@
 - def.fiber-bundle　纤维丛　layer 10
 - def.orientable-manifold　可定向流形　layer 13
 - prop.volume-form-orientation　定向与体积形式　layer 14
-- thm.smooth-partition-unity　光滑单位分解　layer 17
 - def.tangent-bundle　切丛　layer 18
-- prop.bundle-metric　纤维度量　layer 18
 - thm.bundle-classification　丛的分类　layer 18
+- thm.smooth-partition-unity　光滑单位分解　layer 19
 - def.cotangent-bundle　余切丛　layer 19
+- prop.bundle-metric　纤维度量　layer 20
 
 > 续见 `index/diffgeom.manifold.2.md`

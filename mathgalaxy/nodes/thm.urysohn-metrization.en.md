@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **stale** · stale fields: abstract (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 
 > 续见 nodes/thm.urysohn-metrization.en.2.md

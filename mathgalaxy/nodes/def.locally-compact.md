@@ -12,7 +12,7 @@ $$x \in \mathring{K}$$
 ⚠️ 本图提到「局部紧」**而不另加限定**时，指的都是后者 —— 这是凝聚态数学里的标准用法：那里用得到的性质（局部紧 $\implies$ 紧生成、商映射 $\times$ 局部紧）都同时需要 Hausdorff。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.dyckhoff`](../nodes/thm.dyckhoff.md) 局部紧上凝聚态＝层上同调 用
+- ⇒ [`def.completely-regular-space`](../nodes/def.completely-regular-space.md) 完全正则空间
 
 - …另有出边，续页见 [nodes/def.locally-compact.3.md](./def.locally-compact.3.md)
 

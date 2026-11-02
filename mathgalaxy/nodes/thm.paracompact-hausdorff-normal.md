@@ -1,6 +1,6 @@
 # 仿紧 Hausdorff 空间正规　`thm.paracompact-hausdorff-normal`
 仿紧的 Hausdorff 空间是正规空间
-layer 8 · 定理 · 仿紧与单位分解 · 拓扑学
+layer 16 · 定理 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=thm.paracompact-hausdorff-normal)　·　[节点索引](../index.md)
 
 设 $X$ 是**仿紧**的 **Hausdorff** 空间。则 $X$ 是**正规**的；证明会先得到更强的中间结论：$X$ 已经是**正则**的。

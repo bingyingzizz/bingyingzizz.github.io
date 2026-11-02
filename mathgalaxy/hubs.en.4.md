@@ -8,4 +8,4 @@
 - **4** `thm.ring-monotone-sigma` when a ring is a sigma-ring · layer 5 · 集合族与 σ-代数
 - **4** `thm.monotone-class` monotone class theorem · layer 6 · 集合族与 σ-代数
 
-(1385 of 1392 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)
+(1387 of 1394 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)

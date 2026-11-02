@@ -5,6 +5,8 @@
 拓扑空间 $X$ 叫**完全正规**（completely normal，也叫**遗传正规** hereditarily normal），若 $X$ 的**每个子空间**都是正规的（`def.normal-space`）。
 **等价判据（Urysohn 的分离定理，最好用）**：$X$ 完全正规 $\iff$ 对任意两个**分离集** $A, B$（即 $\overline{A} \cap B = A \cap \overline{B} = \emptyset$）存在不交开集 $U \supseteq A$、$V \supseteq B$
 。
-**链的位置**：$T_{6} \implies T_{5} \implies T_{4}$（每步都是「条件变严」）。
+**链的位置**：$T_{6} \implies T_{5} \implies T_{4}$。
+
+⚠️ 这里**不需要**再补一句「+ $T_{1}$」：正规空间的定义里已经含 $T_{1}$，子空间也继承 $T_{1}$，所以完全正规自动是 $T_{1}$ 的。
 
 > 续见 [nodes/def.completely-normal-space.3.md](./def.completely-normal-space.3.md)

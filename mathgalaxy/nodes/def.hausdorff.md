@@ -8,11 +8,10 @@ layer 5 · 定义 · 拓扑空间 · 拓扑学
 $$\forall x \ne y \in X,\ \exists U \ni x,\ V \ni y\ \text{open}:\quad U \cap V = \emptyset$$
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.regular-space`](../nodes/def.regular-space.md) 正则空间：正则空间推出 Hausdorff（$T_2$）　[proofs/imp.regular-hausdorff.md](../proofs/imp.regular-hausdorff.md)
 - [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep.topology-hausdorff.md](../proofs/dep.topology-hausdorff.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.paracompact-hausdorff-normal`](../nodes/thm.paracompact-hausdorff-normal.md) 仿紧 Hausdorff 空间正规 用
-
 - …另有出边，续页见 [nodes/def.hausdorff.2.md](./def.hausdorff.2.md)
 
 refs: Munkres, Topology

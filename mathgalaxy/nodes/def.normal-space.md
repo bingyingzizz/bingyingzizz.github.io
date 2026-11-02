@@ -1,6 +1,6 @@
 # 正规空间　`def.normal-space`
 正规空间
-layer 6 · 定义 · 拓扑空间 · 拓扑学
+layer 16 · 定义 · 拓扑空间 · 拓扑学
 [在星图里打开](../#n=def.normal-space)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**正规的**，如果它是 $T_{1}$ 的，并且任意两个**不交闭集** $A, B$ 都能被开集分开：存在开集 $U \supseteq A$、$V \supseteq B$ 使 $U \cap V = \emptyset$。
@@ -8,7 +8,7 @@ layer 6 · 定义 · 拓扑空间 · 拓扑学
 把「不交闭集」换成「一点与不含该点的闭集」，得到的是**正则**空间；再换成「两点」，得到的就是 **Hausdorff**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/def-dep.normal-hausdorff.md](../proofs/def-dep.normal-hausdorff.md)
+- [`def.completely-normal-space`](../nodes/def.completely-normal-space.md) 完全正规空间：imp.cn-normal　[proofs/imp.cn-normal.md](../proofs/imp.cn-normal.md)
 
 - …另有入边，续页见 [nodes/def.normal-space.2.md](./def.normal-space.2.md)
 

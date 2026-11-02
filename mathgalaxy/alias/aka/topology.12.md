@@ -1,6 +1,16 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 单纯映射 → def.simplicial-map
+
+- 圆盘不收缩 → thm.no-retraction-disk
+
+- 圆周的基本群 → thm.pi1-circle
+
+- 边缘算子 → def.simplicial-boundary
+
+- 一致连续 → def.uniform-continuity
+
 - 覆叠的指数 → prop.covering-index
 
 - van Kampen 定理 → thm.van-kampen

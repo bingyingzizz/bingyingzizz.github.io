@@ -6,9 +6,9 @@
 - def.singular-cube　奇异方块　layer 18
 - def.form-on-manifold　微分形式　layer 18
 - def.singular-chain　奇异链　layer 19
-- prop.exterior-derivative-manifold　外微分　layer 19
 - def.boundary-operator　边界算子　layer 20
 - def.integral-on-chain　链上的积分　layer 20
+- prop.exterior-derivative-manifold　外微分　layer 20
 - prop.boundary-squared-zero　边界算子平方为零　layer 21
 - prop.integral-chain-linear　链上积分的双线性　layer 21
 - lem.single-cube-stokes　方块上的 Stokes 公式　layer 21

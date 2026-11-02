@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Topological Spaces (`topology.general`) · Topology
+layer 18 · proposition · cluster Topological Spaces (`topology.general`) · Topology
 
 > 续见 nodes/prop.paracompact-partition-unity.en.2.md

@@ -3,5 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
-- ⇒ [`def.completely-regular-space`](../nodes/def.completely-regular-space.md) 完全正则空间
 - 被 [`prop.paracompact-partition-unity`](../nodes/prop.paracompact-partition-unity.md) 仿紧性与单位分解 用

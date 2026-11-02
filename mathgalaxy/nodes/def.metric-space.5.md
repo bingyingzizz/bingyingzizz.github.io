@@ -9,8 +9,8 @@
 - 被 [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理 用
 - 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
 - 被 [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形 用
+- ⇒ [`def.perfectly-normal-space`](../nodes/def.perfectly-normal-space.md) 完美正规空间
+- ⇒ [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间
 - 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用
-- 被 [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数 用
-- 被 [`def.complete`](../nodes/def.complete.md) 完备 用
 
 > 续见 [nodes/def.metric-space.6.md](./def.metric-space.6.md)

@@ -1,6 +1,6 @@
 # 紧 Hausdorff 空间正规　`thm.compact-hausdorff-normal`
 紧 Hausdorff 空间是正规的
-layer 15 · 定理 · 拓扑空间 · 拓扑学
+layer 17 · 定理 · 拓扑空间 · 拓扑学
 [在星图里打开](../#n=thm.compact-hausdorff-normal)　·　[节点索引](../index.md)
 
 **在做什么**：$T_{2} + $ 紧 $\implies T_{4}$。这一条把「局部可分点」和「整体可分闭集」接起来，是整个拓扑学里被引用最多的引理之一 —— 因为它让 Urysohn 引理 / Tietze

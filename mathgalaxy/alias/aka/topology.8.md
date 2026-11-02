@@ -13,14 +13,14 @@
 
 - T1 | T_1 | T₁ | Fréchet 空间 | T1 空间 | 单点是闭集 → def.t1-space
 
-- 正则空间 | T3 | T_3 | T₃ | regular space → def.regular-space
+- 正则空间 | regular space | T3 空间（正则） → def.regular-space
 
-- 完全正则空间 | T3.5 | T_3.5 | Tychonoff 空间 | 完全正则 → def.completely-regular-space
+- T3 | T_3 | T₃ | 单点与闭集可分离 → def.t3-space
+
+- 完全正则空间 | Tychonoff 空间 | 完全正则 | T3.5 空间（完全正则） → def.completely-regular-space
+
+- T3.5 | T_3.5 | T3.5 空间 → def.t35-space
 
 - 完全正规空间 | T5 | T_5 | T₅ | 遗传正规 → def.completely-normal-space
-
-- 完美正规空间 | T6 | T_6 | T₆ | perfectly normal → def.perfectly-normal-space
-
-- 内部 | 开核 | interior | 边界 → def.interior
 
 > 续见 alias/aka/topology.9.md

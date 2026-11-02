@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 8 · theorem · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
+layer 16 · theorem · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 names: `Paracompact Is Normal` (short) · `Paracompact Hausdorff Spaces Are Normal` (full)
 
 ## Statement and proof

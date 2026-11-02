@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 20 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Fiber Metric` (short) · `Fiber Metric on a Vector Bundle` (full)
 
 ## Statement and proof

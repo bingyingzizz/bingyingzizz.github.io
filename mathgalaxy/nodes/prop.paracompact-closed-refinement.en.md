@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
+layer 18 · proposition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 names: `Closed Refinement` (short) · `Closed Refinements of Paracompact Spaces` (full)
 
 ## Statement and proof

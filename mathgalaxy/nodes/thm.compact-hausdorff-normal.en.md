@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Topological Spaces (`topology.general`) · Topology
+layer 17 · theorem · cluster Topological Spaces (`topology.general`) · Topology
 names: `Compact Hausdorff is Normal` (short) · `Compact Hausdorff Spaces are Normal` (full)
 
 ## Statement and proof
