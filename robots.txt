@@ -1,0 +1,5 @@
+# 全部允许抓取 —— 这张图就是给人看、给 AI 读的
+User-agent: *
+Allow: /
+
+Sitemap: https://bingyingzizz.github.io/sitemap.xml

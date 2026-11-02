@@ -1,0 +1,268 @@
+/* ==========================================================================
+   概念页 · 样式（nodes/<id>.html 与 all.html 共用）
+   --------------------------------------------------------------------------
+   这份文件是**站点源码**，由 tools/publish.mjs 原样拷到 dist-site/assets/。
+   它叠在 site.css 之上（site.css 先加载），只做两件事：
+     ① 把 U.md() 吐出来的标签（<p> <h5> <ul> <blockquote> <pre>）排好版；
+     ② 概念页自己的结构：面包屑、事实行、关系区、边、证明、总索引。
+   配色跟着 site.css 的变量走，只有星系色来自页面上的 --rc（内联在 <body>）。
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- 通用 */
+.wrap.wide{max-width:1080px}
+
+.crumb{
+  max-width:760px;margin:0 auto;padding:22px 24px 0;
+  font-size:13px;color:var(--faint);line-height:1.9;
+}
+.crumb a{color:var(--soft)}
+.crumb .sep{margin:0 .5em;color:var(--faint);opacity:.7}
+.wrap.wide ~ .crumb,.all-page .crumb{max-width:1080px}
+
+/* 概念页的大标题区 */
+.np-head{margin-bottom:8px}
+.np-head h1{font-size:clamp(24px,4.4vw,34px);line-height:1.3;margin:0 0 8px;font-weight:700}
+/* 英文名（T1.2）：与中文名并列在同一个 h1 里 —— 小一号、淡一档，
+   只在中文名里没有它的时候才出现（中文 title 本来就常带英文）。 */
+.np-head h1 .en{display:block;font-size:.52em;font-weight:600;line-height:1.35;color:var(--soft);margin-top:.22em}
+.np-head .full{margin:0 0 14px;color:var(--soft);font-size:16px;line-height:1.7}
+.facts{
+  display:flex;flex-wrap:wrap;gap:0 14px;list-style:none;margin:0 0 10px;padding:0;
+  font-size:13px;color:var(--soft);
+}
+.facts li{position:relative;padding-left:14px}
+.facts li::before{
+  content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;
+  background:var(--rc,#4f7cf5);opacity:.75;
+}
+.idline{margin:0;font-size:12.5px;color:var(--faint)}
+.idline code{font-family:var(--mono);font-size:12px;background:var(--code-bg);
+  padding:1px 6px;border-radius:5px}
+
+/* --------------------------------------------------------------- 小节 */
+.sec{margin:38px 0 0}
+.sec>h2,.rel-sec>h2{
+  font-size:13px;letter-spacing:.12em;color:var(--faint);font-weight:600;
+  margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);
+}
+.sec.statement>h2{color:var(--rc,#4f7cf5);border-bottom-color:color-mix(in srgb,var(--rc,#4f7cf5) 28%,transparent)}
+.kind-h{
+  font-size:12px;letter-spacing:.08em;color:var(--faint);font-weight:600;
+  margin:20px 0 8px;display:flex;align-items:center;gap:8px;
+}
+.kind-h:first-child{margin-top:0}
+.kind-h .n{
+  font-family:var(--mono);font-size:11px;background:var(--code-bg);
+  padding:0 6px;border-radius:5px;letter-spacing:0;
+}
+
+/* --------------------------------------------- U.md() 吐出来的标签排版 */
+/* 节点正文里的 `## 小标题` 走 util.md() 会变成 <h5>（面板里就是这么用的），
+   这里把它当三级标题排；**不改引擎**，只在样式层对齐语义。 */
+.sec h5{
+  font-size:15px;font-weight:650;color:var(--ink);margin:26px 0 10px;
+  letter-spacing:0;text-transform:none;
+}
+.sec h5:first-child{margin-top:0}
+.sec p{margin:0 0 14px;line-height:1.85}
+.sec ul,.sec ol{margin:0 0 14px;padding-left:1.4em}
+.sec li{margin:5px 0;line-height:1.8}
+.sec blockquote{
+  margin:16px 0;padding:2px 0 2px 16px;border-left:3px solid var(--line);
+  color:var(--soft);
+}
+.sec blockquote p:last-child{margin-bottom:0}
+.sec pre{
+  margin:16px 0;padding:14px 16px;overflow:auto;border-radius:10px;
+  background:var(--code-bg);font-family:var(--mono);font-size:13px;line-height:1.6;
+}
+.sec code{
+  font-family:var(--mono);font-size:.9em;background:var(--code-bg);
+  padding:1px 5px;border-radius:5px;
+}
+.sec pre code{background:none;padding:0;font-size:inherit}
+.sec strong{font-weight:650}
+.sec .empty{color:var(--faint)}
+
+/* 英文摘要（T2.2）：枢纽节点的英文导读。左边一条竖线把它和中文正文区分开，   顶上那行小字说明「状态 + 中文为准」—— 状态词由构建给出（draft/reviewed/stale）。 */
+.sec.abstract-en{border-left:3px solid color-mix(in srgb,var(--rc,#4f7cf5) 35%,transparent);
+  padding-left:18px;margin-left:-21px}
+.sec.abstract-en .abs-state{font-size:11.5px;font-weight:600;letter-spacing:.04em;
+  text-transform:lowercase;color:var(--soft);border:1px solid var(--line,#e6e8ee);
+  border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+.sec.abstract-en .abs-note{font-size:12.5px;color:var(--faint);margin:0 0 12px}
+
+/* 独立公式：给足上下留白，居中 */
+.sec .katex-display,.proof .katex-display{margin:18px 0;overflow-x:auto;overflow-y:hidden}
+.sec .katex-display:last-child,.proof .katex-display:last-child{margin-bottom:0}
+.math-block{
+  margin:18px 0;padding:12px 14px;background:var(--code-bg);border-radius:10px;
+  font-family:var(--mono);font-size:13px;white-space:pre-wrap;overflow-x:auto;
+}
+
+/* 长公式在小屏上横向溢出而不是撑破布局 */
+.katex{font-size:1.02em}
+
+/* ----------------------------------------------------------- 关系区 */
+.rel-sec{margin:38px 0 0}
+.edges{list-style:none;margin:0;padding:0}
+.edges>li.edge{
+  padding:12px 14px;border:1px solid var(--line);border-radius:11px;margin-bottom:9px;
+  background:#fff;
+}
+.edges>li.edge.weak{border-style:dashed;background:rgba(20,22,28,.014)}
+.edge-line{font-size:15px;line-height:1.7;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px}
+.edge-line a{font-weight:600}
+.edge-line .arrow,.edge-line .sym{color:var(--rc,#4f7cf5);font-weight:600}
+.edge-line .kind{
+  margin-left:auto;font-size:11px;letter-spacing:.06em;color:var(--faint);
+  border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap;
+}
+/* 边的名字（titleHtml：里面的 * 是数学记号，不做粗斜体） */
+.edge-title{margin-top:5px;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.7}
+/* 边的补充说明（走 md()，会有多段 / 列表，所以这里要把块级元素也收一收） */
+.edge-note{margin-top:8px;font-size:14px;color:var(--soft);line-height:1.78}
+.edge-note p{margin:0 0 8px}
+.edge-note p:last-child{margin-bottom:0}
+.edge-note ul,.edge-note ol{margin:6px 0;padding-left:1.3em}
+.edge-note li{margin:3px 0}
+.edge-note h5{margin:10px 0 6px;font-size:14px;font-weight:650;color:var(--ink)}
+.edge-note .katex-display{margin:10px 0}
+
+/* 证明：默认开着，但要和「边的说明」有区别 */
+.proof{
+  margin-top:10px;padding:10px 14px;border-radius:9px;
+  background:rgba(79,124,245,.045);border-left:3px solid rgba(79,124,245,.35);
+  font-size:14.5px;line-height:1.8;color:#2a2e36;
+}
+.proof .proof-label{
+  font-size:12px;letter-spacing:.06em;color:var(--faint);margin-bottom:6px;font-weight:600;
+}
+.proof p:last-child{margin-bottom:0}
+.proof .katex-display{margin:12px 0}
+
+/* 弱边要能一眼分辨 —— 它没有逻辑蕴含，只是联想 */
+.edges>li.edge.weak .proof{background:rgba(138,99,232,.05);border-left-color:rgba(138,99,232,.3)}
+
+.refs{list-style:none;padding:0;margin:0;font-size:14px;color:var(--soft)}
+.refs li{margin:4px 0;padding-left:14px;position:relative}
+.refs li::before{content:'';position:absolute;left:0;top:.68em;width:4px;height:4px;
+  border-radius:50%;background:var(--line)}
+
+.jump p{font-size:14.5px;line-height:2.2;color:var(--soft)}
+
+/* 别名：`label` 是标准叫法，人搜的是别的词。写进页面是术语表式的正常做法，
+   ⛔ 不是塞关键词 —— 每个词都真的是它的名字。 */
+.aka{margin:12px 0 0;font-size:13.5px;color:var(--soft);line-height:1.95}
+.aka-k{
+  display:inline-block;margin-right:7px;padding:1px 7px;border-radius:5px;
+  background:var(--code-bg);color:var(--faint);font-size:11.5px;letter-spacing:.04em;
+}
+.aka-s{margin:0 6px;color:var(--faint);opacity:.55}
+
+/* 图外条目（T2.3）：Wikipedia / nLab / Mathlib 的对应页。样式与「又称」同一套，
+   只是链接带 ↗ 表示出站。⛔ 不占视觉中心 —— 它是一条脚注性质的出路。 */
+.xref{margin:6px 0 0;font-size:13.5px;color:var(--soft);line-height:1.95}
+.xref-k{
+  display:inline-block;margin-right:7px;padding:1px 7px;border-radius:5px;
+  background:var(--code-bg);color:var(--faint);font-size:11.5px;letter-spacing:.04em;
+}
+.xref a{border-bottom:1px solid rgba(79,124,245,.28)}
+.xref a:hover{text-decoration:none;border-bottom-color:var(--accent);color:var(--accent)}
+
+/* 常见问法：人真正会敲进搜索框的那句话（不是术语） */
+.hook-sec .hooks{list-style:none;margin:0;padding:0}
+.hook-sec .hooks>li{
+  padding:11px 14px;border:1px solid var(--line);border-radius:11px;margin-bottom:8px;
+  border-left:3px solid var(--rc,#4f7cf5);
+}
+.hook-sec .q{margin:0;font-size:15px;line-height:1.65;color:var(--ink)}
+.hook-sec .q::before{content:'「';color:var(--faint)}
+.hook-sec .q::after{content:'」';color:var(--faint)}
+.hook-sec .also{display:block;margin-top:5px;font-size:13.5px;color:var(--soft)}
+.hook-sec .also a{font-weight:500}
+
+/* 常见问法总索引页 */
+.qlist{list-style:none;margin:0;padding:0}
+.qlist>li{padding:13px 0;border-bottom:1px solid var(--line)}
+.qlist>li:last-child{border-bottom:0}
+.qlist .q{margin:0 0 5px;font-size:16px;line-height:1.6;color:var(--ink);font-weight:550}
+.qlist .q::before{content:'「';color:var(--faint);font-weight:400}
+.qlist .q::after{content:'」';color:var(--faint);font-weight:400}
+.qlist .to{margin:0;font-size:14.5px;color:var(--soft);line-height:1.8}
+/* 同星团的其他概念：补齐内链（图里 52% 的节点出边为 0），也给读者一条接着读的路 */
+.sibs{list-style:none;margin:0;padding:0;display:grid;gap:2px 18px;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.sibs li{display:flex;align-items:baseline;gap:8px;font-size:14.5px;line-height:1.75;min-width:0}
+.sibs a{color:var(--ink);border-bottom:1px solid transparent;transition:border-color .15s}
+.sibs a:hover{text-decoration:none;border-bottom-color:var(--rc,#4f7cf5);color:var(--accent)}
+.sibs .lay{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap;margin-left:auto}
+
+/* ---------------------------------------------------------- 总索引页 */
+.all-page .lead{color:var(--soft);font-size:15px;line-height:1.8;margin:6px 0 0}
+
+.toc{
+  display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 8px;
+  padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.toc a{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 12px;border:1px solid var(--line);border-radius:999px;
+  color:var(--ink);font-size:14px;transition:border-color .18s var(--ease),background .18s var(--ease);
+}
+.toc a:hover{text-decoration:none;border-color:var(--rc);background:color-mix(in srgb,var(--rc) 7%,transparent)}
+.toc a::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--rc);opacity:.85}
+.toc .n{font-family:var(--mono);font-size:11px;color:var(--faint)}
+
+.rg{margin:52px 0 0;scroll-margin-top:20px}
+.rg>h2{
+  font-size:20px;font-weight:700;letter-spacing:-.01em;color:var(--ink);
+  margin:0 0 6px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  padding-bottom:10px;border-bottom:2px solid color-mix(in srgb,var(--rc,#4f7cf5) 30%,transparent);
+}
+.rg>h2 .en{font-size:13px;font-weight:500;color:var(--faint);letter-spacing:.02em}
+.rg>h2 .n{margin-left:auto;font-size:12px;font-weight:500;color:var(--faint);letter-spacing:0}
+.rd{color:var(--soft);font-size:14.5px;margin:10px 0 22px;line-height:1.8}
+
+.cl{margin:0 0 26px;padding-left:14px;border-left:2px solid color-mix(in srgb,var(--rc,#4f7cf5) 22%,transparent)}
+.cl h3{
+  font-size:15px;font-weight:650;margin:0 0 5px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+}
+.cl h3 .n{font-size:11.5px;font-weight:500;color:var(--faint);letter-spacing:.02em}
+.cd{color:var(--faint);font-size:13.5px;margin:0 0 10px;line-height:1.75}
+.nl{list-style:none;margin:0;padding:0;display:grid;gap:2px 18px;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.nl li{display:flex;align-items:baseline;gap:8px;font-size:14.5px;line-height:1.7;min-width:0}
+.nl a{color:var(--ink);border-bottom:1px solid transparent;transition:border-color .15s}
+.nl a:hover{text-decoration:none;border-bottom-color:var(--rc,#4f7cf5);color:var(--accent)}
+.nl .en{
+  font-size:11.5px;color:var(--faint);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;min-width:0;flex:1;
+}
+
+.read-list{list-style:none;padding:0;margin:0;font-size:14.5px;line-height:2}
+
+/* --------------------------------------------------------------- 页脚 */
+.np-foot{
+  max-width:760px;margin:64px auto 0;padding:20px 24px 60px;
+  border-top:1px solid var(--line);color:var(--faint);font-size:13px;line-height:1.9;
+}
+.all-page .np-foot{max-width:1080px}
+.np-foot p{margin:0}
+.np-foot a{color:var(--soft)}
+.np-foot code{font-family:var(--mono);font-size:12px;background:var(--code-bg);
+  padding:1px 6px;border-radius:5px}
+
+/* ------------------------------------------------------------ 小屏 */
+@media (max-width:640px){
+  .crumb,.np-foot{padding-left:18px;padding-right:18px}
+  .wrap{padding-left:18px;padding-right:18px}
+  .edge-line .kind{margin-left:0}
+  .nl{grid-template-columns:1fr}
+  .rg{margin-top:40px}
+}
+
+@media print{
+  .crumb,.toc,.jump{display:none}
+  .edges>li.edge{break-inside:avoid}
+}

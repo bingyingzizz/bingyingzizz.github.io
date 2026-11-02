@@ -1,0 +1,9 @@
+# k-闭等价关系与弱 Hausdorff 商　`prop.cg-kclosed-quotient`　·　说明
+根 `../`
+
+于是 $g(T) = \bigcup_{i} q(\tilde g_{i}(T_{i}))$，而每个 $q(K)$（$K \subseteq X$ 紧 Hausdorff）是闭的：$q^{-1}q(K)$ 是**饱和**的，其 $k$-闭性由 $R$ 的 $k$-闭性与「投影 $X\times K \to X$ 闭」给出，故 $q^{-1}q(K)$ 在紧生成的 $X$ 中闭，再由 $q$ 是商映射得 $q(K)$ 闭 ✓。
+
+有限并仍闭，故 $g(T)$ 闭。
+
+∎
+⭐ **读法**：这条把「商空间弱 Hausdorff」这个**拓扑**条件翻译成了「等价关系是 $k$-闭的」这个**关于 $X\times X$ 的子集**条件 —— 后者可以逐块验证。

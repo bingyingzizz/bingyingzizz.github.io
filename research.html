@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-site="bingyingzizz" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星图研究 · bingyingzizz</title>
+<meta name="description" content="星图研究：从整理数学星图过程中产生的推导笔记与论文稿。每条注明状态；未经同行评审。">
+<link rel="canonical" href="https://bingyingzizz.github.io/research.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="星图研究 · bingyingzizz">
+<meta property="og:description" content="星图研究：从整理数学星图过程中产生的推导笔记与论文稿。每条注明状态；未经同行评审。">
+<meta property="og:url" content="https://bingyingzizz.github.io/research.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"星图研究","url":"https://bingyingzizz.github.io/research.html","inLanguage":"zh-CN","description":"星图研究：从整理数学星图过程中产生的推导笔记与论文稿。每条注明状态；未经同行评审。","isPartOf":{"@type":"WebSite","name":"bingyingzizz.github.io","url":"https://bingyingzizz.github.io/"}}</script>
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  :root { --ink:#16181d; --dim:#5b6270; --line:#e2e6ec; --accent:#8a1c1c; }
+  body { font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+    color:var(--ink); background:#fff; }
+  .wrap { max-width:46rem; }
+  h1 { font-size:1.6rem; font-weight:600; margin:0 0 .4rem; }
+  .sub2 { color:var(--dim); font-size:.92rem; margin:0 0 2.2rem;
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .plist { list-style:none; padding:0; margin:0; }
+  .plist li { border-top:1px solid var(--line); padding:1.15rem 0; }
+  .plist li:last-child { border-bottom:1px solid var(--line); }
+  .meta { font-family:system-ui,sans-serif; font-size:.76rem; color:var(--dim);
+    letter-spacing:.04em; margin-bottom:.35rem; }
+  .meta .tag { display:inline-block; border:1px solid #c9d0da; border-radius:2px;
+    padding:.06em .45em; margin-right:.6em; }
+  .meta .tag.warn { border-color:#e0c9c9; color:var(--accent); }
+  .plist a.t { font-size:1.06rem; font-weight:600; color:var(--ink); text-decoration:none;
+    display:block; line-height:1.5; }
+  .plist a.t:hover { color:var(--accent); }
+  .plist p { margin:.35rem 0 0; font-size:.92rem; color:#31363f; line-height:1.72; }
+  .note { margin-top:2.4rem; padding-top:1rem; border-top:1px solid var(--line);
+    font-family:system-ui,sans-serif; font-size:.8rem; color:var(--dim); line-height:1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="enter" style="--i:0">星图研究</h1>
+  <p class="sub2 enter" style="--i:1">整理数学星图时产生的推导。每条都注明状态。</p>
+
+  <ol class="plist">
+    <li class="enter" style="--i:2">
+      <div class="meta"><span class="tag">预印本</span>2026-10-31</div>
+      <a class="t" href="research-p-liquid.html">紧群上 p-liquid 系数的正次数上同调：一般系数的反例</a>
+      <p>对 G = SU(2) 与 V<sub>p</sub> = coker(∂₄) 的平凡作用，证明三阶上同调非零，
+      从而在「任意 p-liquid 系数」的量词下否定 Question 0.10.4。
+      p-Banach 情形仍开，归约为一个显式标量下确界。</p>
+    </li>
+  </ol>
+
+  <p class="note">
+    本板块只收录有独立推导的条目，不含星图本身的节点内容（那些在
+    <a href="mathgalaxy/">数学星图</a>）。所有条目未经同行评审，引用请注明。
+    <br>最近更新：2026-11-02　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+  </p>
+
+</div>
+
+<script>
+(function () {
+  if (!window.katex) return;
+  var I = String.fromCharCode(36), D = I + I;
+  function mk(tex, display) {
+    var sp = document.createElement('span');
+    try { sp.innerHTML = katex.renderToString(tex, { throwOnError: false, displayMode: display }); }
+    catch (e) { sp.textContent = display ? D + tex + D : I + tex + I; }
+    return sp;
+  }
+  function one(node) {
+    var txt = node.nodeValue, out = [], i = 0, changed = false;
+    for (;;) {
+      var s = txt.indexOf(I, i);
+      if (s < 0) break;
+      if (txt.substr(s, 2) === D) {
+        var e = txt.indexOf(D, s + 2);
+        if (e < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 2, e), true));
+        i = e + 2; changed = true;
+      } else {
+        var e2 = txt.indexOf(I, s + 1);
+        if (e2 < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 1, e2), false));
+        i = e2 + 1; changed = true;
+      }
+    }
+    if (!changed) return;
+    if (i < txt.length) out.push(document.createTextNode(txt.slice(i)));
+    var frag = document.createDocumentFragment();
+    for (var k = 0; k < out.length; k++) frag.appendChild(out[k]);
+    node.parentNode.replaceChild(frag, node);
+  }
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), list = [];
+  while (w.nextNode()) list.push(w.currentNode);
+  for (var k = 0; k < list.length; k++) {
+    var n = list[k], par = n.parentNode;
+    if (!par || n.nodeValue.indexOf(I) < 0) continue;
+    if (par.closest('code, pre, script, style, .katex')) continue;
+    one(n);
+  }
+})();
+</script>
+</body>
+</html>
