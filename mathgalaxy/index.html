@@ -1176,7 +1176,13 @@ window.MG = window.MG || {};
     if (gone || !grab()) return;
     gone = true;
     if (watchdog) { G.clearTimeout(watchdog); watchdog = 0; }
-    box.classList.remove('mgl-real', 'mgl-fail');
+    /* ⛔ 这里**不能**移除 `mgl-real`：一移除，`mgl-creep` 那层 9s 爬行动画就重新挂上，
+       并从 4% 重播 —— 用户看到的就是「补满 → 跳回起点 → 再爬一小段 → 淡出」。
+       （布局进缓存后只要 ~90ms，这一跳特别刺眼。）保留 mgl-real + 补一句内联
+       scaleX(1)，条子就停在满格上淡出。 */
+    box.classList.add('mgl-real');
+    box.classList.remove('mgl-fail');
+    if (fill) fill.style.transform = 'scaleX(1)';
     box.classList.add('mgl-out');
     /* ⚠️ 先淡出再摘掉节点；但**别把引用留着** —— 摘掉之后 step() 都是空操作。 */
     G.setTimeout(function () {
@@ -1185,9 +1191,25 @@ window.MG = window.MG || {};
     }, delay === undefined ? 440 : delay);
   }
 
+  /* 加载屏的最小展示时长（毫秒）。布局有了 localStorage 缓存之后，启动可能只有
+     100ms 不到 —— 直接淡出就是一次「闪白」，比慢慢出现还难看。宁可多留 ~0.3s。 */
+  var MIN_SHOW = 420;
+  var born = (G.performance && G.performance.now) ? G.performance.now() : Date.now();
+  function nowMs() { return (G.performance && G.performance.now) ? G.performance.now() : Date.now(); }
+
   MG.loading = {
     step: step,
-    done: function () { step(100); hide(); },   // 画完第一帧：补满再淡出
+    done: function () {                            // 画完第一帧：补满再淡出
+      var wait = MIN_SHOW - (nowMs() - born);
+      if (wait > 0) {
+        /* 先补到满格（让人看见「好了」），再按剩余时间淡出 */
+        step(100);
+        G.setTimeout(function () { hide(); }, wait);
+      } else {
+        step(100);
+        hide();
+      }
+    },
     hide: function () { hide(0); },              // 出错兜底：立刻让位给错误框
     fail: function (msg) {
       if (gone || !grab()) return;
@@ -3642,6 +3664,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
     return true;
   }
 
+  /* -------------------------------------------------------------- 预判 */
+  /** 只比对签名，不动数据 —— 供「加载文案」之类的场景用（便宜，不碰 localStorage 的写路径） */
+  function peek(graph) {
+    var data = readJSON(KEY);
+    if (!data || !data.p) return false;
+    if (data.p.length !== graph.nodes.length * 2) return false;
+    return data.sig === signature(graph);
+  }
+
   /* -------------------------------------------------------------- 保存 */
   function save(graph) {
     var nodes = graph.nodes;
@@ -3700,6 +3731,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
   MG.layoutCache = {
     key: KEY, camKey: CAM_KEY,
     signature: signature,
+    peek: peek,
     restore: restore,
     save: save,
     clear: clear,
@@ -85964,6 +85996,11 @@ MG.trunk = [
     /* ------------------------------------------------------------ 建图 */
     var localPacks = (MG.packs || []).slice();
     var graph = MG.buildGraph(localPacks, MG.regions, MG.clusters);
+    /* 文案要说实话：布局有了缓存之后常常是「一眨眼」的事，
+       这时候还写「计算布局」会让人以为在算——其实是在读上次的结果。 */
+    if (MG.loading && MG.layoutCache && MG.layoutCache.peek(graph)) {
+      MG.loading.step(null, '恢复上次的布局…');
+    }
     MG.computeLayout(graph);
     if (MG.layoutCache && !graph.layoutFromCache) {
       try { MG.layoutCache.save(graph); } catch (e) { /* 存不下就算了，不影响打开 */ }
