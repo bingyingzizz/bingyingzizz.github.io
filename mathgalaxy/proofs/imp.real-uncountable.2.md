@@ -13,6 +13,6 @@ $\blacksquare$
 
 **④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\mathbb{R} \hookrightarrow \mathcal{P}(\mathbb{N})$；
 
-反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\#\mathbb{R} = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0}$。
+反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\#\mathbb{R} = \#\mathcal{P}(\mathbb{N}) = 2^{\aleph_0}$。
 
 > 续见 proofs/imp.real-uncountable.3.md

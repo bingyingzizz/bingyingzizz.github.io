@@ -3,4 +3,4 @@
 
 `def.cardinal` 基数 → `thm.cantor` Cantor 定理
 
-「$\#A < |\mathcal{P}(A)|$」是一个关于**基数**的比较。
+「$\#A < \#\mathcal{P}(A)$」是一个关于**基数**的比较。

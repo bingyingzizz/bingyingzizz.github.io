@@ -1,11 +1,11 @@
 # Cantor 定理　`thm.cantor`
-Cantor 定理：$|A| < |\mathcal{P}(A)|$
+Cantor 定理：$\#A < \#\mathcal{P}(A)$
 layer 9 · 定理 · 基数与等势 · 集合论
 [在星图里打开](../#n=thm.cantor)　·　[节点索引](../index.md)
 
 对任意集合 $A$：
 
-$$|A| < |\mathcal{P}(A)|$$
+$$\#A < \#\mathcal{P}(A)$$
 
 也就是说：**不存在**从 $A$ 到 $\mathcal{P}(A)$ 的满射（当然也不存在双射），但 $a \mapsto \{a\}$ 是单射。
 

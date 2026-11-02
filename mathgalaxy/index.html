@@ -2653,7 +2653,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
       };
     }
 
-    var cam = {
+  
+  /* 镜头「动完」的通知：app 用它把相机存进 localStorage（见 app.js 的 persistCam）。
+     ⚠️ 只是**通知**，camera 不认识 localStorage，也不该认识。 */
+  function settled() {
+    if (MG.onCameraSettle) { try { MG.onCameraSettle(); } catch (e) { /* 忽略 */ } }
+  }
+
+  var cam = {
       k: 1, tx: 0, ty: 0,
       viewW: 1, viewH: 1,
 
@@ -2709,6 +2716,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
       panBy: function (dx, dy) {
         cam.tx += dx; cam.ty += dy;
         cam._anim = null;
+        settled();
       },
 
       /** 把世界坐标点移到**可用区**中心（扣掉面板之后） */
@@ -2746,7 +2754,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
         cam._anim = { t0: now(), dur: ms == null ? CFG.animateMs : ms, k0: k0, tx0: tx0, ty0: ty0, k1: k1, tx1: tx1, ty1: ty1 };
       },
 
-      stopAnimation: function () { cam._anim = null; },
+      stopAnimation: function () { cam._anim = null; settled(); },
 
       /** 每帧调用；返回 true 表示还在动画中 */
       tick: function () {
@@ -2757,7 +2765,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
         cam.k = U.lerp(a.k0, a.k1, e);
         cam.tx = U.lerp(a.tx0, a.tx1, e);
         cam.ty = U.lerp(a.ty0, a.ty1, e);
-        if (p >= 1) cam._anim = null;
+        if (p >= 1) { cam._anim = null; settled(); }
         return true;
       },
 
@@ -3497,6 +3505,212 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
 </script>
 <script>
 /* ==========================================================================
+   数学星图 · 布局缓存（localStorage）
+   --------------------------------------------------------------------------
+   为什么要有它：`MG.computeLayout` 每次启动都要跑一遍
+   「解领域中心 → 星团装箱 → 精化 → 行星-卫星锚点」，1460 个点要几百毫秒到
+   一秒多。而布局**是确定性的**（layout.js 末尾自己写着「⛔ 不含随机，跑几次都
+   一样」），所以完全可以算一次、存下来、下次直接用。
+
+   ⛔ 三条边界（都很重要）：
+     1. **只在签名一致时用缓存**。签名包含：内容版本、节点 id 顺序、团归属、
+        星系基准中心、以及 `config.layout` / `config.cluster` 的**全部常量**。
+        任何一项变了 ⇒ 缓存作废，重新算。宁可白算一次，不可用错坐标。
+     2. **不缓存语义字段**。`n.target / n.degree / n.galaxy / n.regionObjs /
+        n._sector` 这些是准备阶段算出来的（很便宜），每次仍然现算；
+        缓存里只有坐标与几个半径 —— 它们是纯几何量。
+     3. **任何异常都静默放过**。localStorage 可能被禁用（隐私模式）、
+        可能满了、可能被别的东西写坏。缓存失败绝不能让星图打不开。
+
+   存储格式（尽量小）：节点坐标取整后摊平成一个数组，团 / 星系的圆心与半径
+   各一个数组。1460 点大约 20 KB，远低于配额。
+   ========================================================================== */
+(function (global) {
+  'use strict';
+  var MG = (global.MG = global.MG || {});
+
+  var KEY = 'mathgalaxy.layout.v1';       /* ⛔ 改名 = 缓存失效（无损失，只是重算一次） */
+  var CAM_KEY = 'mathgalaxy.camera.v1';   /* 相机（k, tx, ty）单独存，与布局无关 */
+  var CAM_MARGIN = 1e-6;
+
+  /* ---------------------------------------------------------------- 签名 */
+  /* FNV-1a 32 位 + 长度。碰撞概率对「内容变了但签名没变」这种场景足够低；
+     再加一个长度做二次校验。 */
+  function hash32(str) {
+    var h = 0x811c9dc5;
+    for (var i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h = (h + ((h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24))) >>> 0;
+    }
+    return h >>> 0;
+  }
+
+  function signature(graph) {
+    var parts = [];
+    /* ① 内容版本（dist/graph.json 里 meta.contentVersion；页面内由 build 注入） */
+    parts.push('v:' + (MG.contentVersion || MG.version || '?'));
+    /* ② 节点 id 顺序（渲染与索引用的是同一个顺序，变了就不能复用坐标） */
+    parts.push('n:' + graph.nodes.length);
+    var ids = [];
+    for (var i = 0; i < graph.nodes.length; i++) ids.push(graph.nodes[i].id);
+    /* ③ 团归属（装箱与锚点都按团走） */
+    var cls = [];
+    for (var c = 0; c < graph.clusters.length; c++) {
+      var cl = graph.clusters[c];
+      cls.push(cl.id + '=' + ((cl.nodes && cl.nodes.length) || 0));
+    }
+    /* ④ 星系基准中心（regions.js 的手写方位是布局输入） */
+    var regs = [];
+    for (var r = 0; r < graph.regions.length; r++) {
+      var g = graph.regions[r];
+      var base = g._baseCenter || g.center || { x: 0, y: 0 };
+      regs.push(g.id + '@' + (base.x | 0) + ',' + (base.y | 0));
+    }
+    /* ⑤ 布局与团云的全部常量（改了任何一个，坐标就该重算） */
+    var cfgTxt = '';
+    try {
+      cfgTxt = JSON.stringify(MG.config && MG.config.layout) + '|' +
+        JSON.stringify(MG.config && MG.config.cluster);
+    } catch (e) { cfgTxt = 'cfg?'; }
+
+    var payload = parts.join(';') + '|' + ids.join('\u0001') + '|' +
+      cls.join(',') + '|' + regs.join(',') + '|' + cfgTxt;
+    return ids.length + ':' + hash32(payload).toString(36);
+  }
+
+  /* ---------------------------------------------------------------- 存取 */
+  function store() {
+    try { return global.localStorage || null; } catch (e) { return null; }
+  }
+
+  function readJSON(key) {
+    var ls = store();
+    if (!ls) return null;
+    try {
+      var raw = ls.getItem(key);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function writeJSON(key, val) {
+    var ls = store();
+    if (!ls) return false;
+    try { ls.setItem(key, JSON.stringify(val)); return true; }
+    catch (e) {
+      /* 配额满了：把旧缓存删掉重试一次，还不行就算了 */
+      try { ls.removeItem(key); ls.setItem(key, JSON.stringify(val)); return true; }
+      catch (e2) { return false; }
+    }
+  }
+
+  /* -------------------------------------------------------------- 恢复 */
+  /** 把缓存里的坐标写回 graph。返回 true 表示**用得上的**缓存（调用方应跳过求解）。 */
+  function restore(graph) {
+    var data = readJSON(KEY);
+    if (!data || data.sig !== signature(graph)) return false;
+    if (!data.p || data.p.length !== graph.nodes.length * 2) return false;
+
+    var nodes = graph.nodes;
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].x = data.p[i * 2];
+      nodes[i].y = data.p[i * 2 + 1];
+    }
+    /* 星系：基准中心 + 外扩（与 computeLayout 第 0 步同口径），以及存下来的 stat */
+    var cfg = MG.config.layout;
+    for (var r = 0; r < graph.regions.length; r++) {
+      var reg = graph.regions[r];
+      if (!reg._baseCenter && reg.center) reg._baseCenter = { x: reg.center.x, y: reg.center.y };
+      if (reg._baseCenter) {
+        reg.center = {
+          x: reg._baseCenter.x * cfg.regionSpread,
+          y: reg._baseCenter.y * cfg.regionSpread
+        };
+      }
+      var rs = data.r && data.r[r];
+      reg.stat = rs ? { cx: rs[0], cy: rs[1], nameX: rs[2], nameY: rs[3], count: rs[4], radius: rs[5] } : null;
+    }
+    /* 星团：stat + center（画团级连线要用 center） */
+    for (var c = 0; c < graph.clusters.length; c++) {
+      var cl = graph.clusters[c];
+      var cs = data.c && data.c[c];
+      if (!cs) { cl.stat = null; cl.center = null; continue; }
+      cl.stat = { cx: cs[0], cy: cs[1], count: cs[2], radius: cs[3] };
+      cl.center = { x: cs[0], y: cs[1] };
+    }
+    graph.layoutFromCache = true;
+    graph.layoutMs = 0;
+    return true;
+  }
+
+  /* -------------------------------------------------------------- 保存 */
+  function save(graph) {
+    var nodes = graph.nodes;
+    var p = new Array(nodes.length * 2);
+    for (var i = 0; i < nodes.length; i++) {
+      /* 取整：画布上不需要亚像素，四舍五入能把 JSON 体积压掉一半 */
+      p[i * 2] = Math.round(nodes[i].x);
+      p[i * 2 + 1] = Math.round(nodes[i].y);
+    }
+    var r = graph.regions.map(function (reg) {
+      var s = reg.stat;
+      return s ? [Math.round(s.cx), Math.round(s.cy), Math.round(s.nameX), Math.round(s.nameY), s.count, Math.round(s.radius)] : null;
+    });
+    var c = graph.clusters.map(function (cl) {
+      var s = cl.stat;
+      return s ? [Math.round(s.cx), Math.round(s.cy), s.count, Math.round(s.radius)] : null;
+    });
+    return writeJSON(KEY, { sig: signature(graph), p: p, r: r, c: c });
+  }
+
+  function clear() {
+    var ls = store();
+    if (!ls) return;
+    try { ls.removeItem(KEY); } catch (e) { /* 忽略 */ }
+  }
+
+  /* -------------------------------------------------------------- 相机 */
+  /* 「上次看到哪」也存一下：否则每次刷新都从「全部适配」重新开始动画。 */
+  function saveCam(cam) {
+    if (!cam || !isFinite(cam.k) || cam.k <= 0) return false;
+    return writeJSON(CAM_KEY, { k: cam.k, tx: cam.tx, ty: cam.ty });
+  }
+
+  /** 读出相机的历史值；没有 / 不合法 / 明显跑到世界外面 ⇒ null */
+  function loadCam(graph) {
+    var d = readJSON(CAM_KEY);
+    if (!d) return null;
+    /* ⚠️ 不能只用 isFinite：JSON 把 NaN 写成 null，而 isFinite(null) 是 **true**
+       （Number(null) === 0）—— 这样坏值会一路流进来。必须逐字段查 typeof。 */
+    if (typeof d.k !== 'number' || typeof d.tx !== 'number' || typeof d.ty !== 'number') return null;
+    if (!isFinite(d.k) || !isFinite(d.tx) || !isFinite(d.ty)) return null;
+    if (d.k <= 0) return null;
+    var bb = graph.bbox && graph.bbox();
+    if (bb) {
+      /* 反解视图中心的世界坐标，要求它落在内容包围盒里（放宽一圈） */
+      var pad = 0.5 * Math.max(bb.maxX - bb.minX, bb.maxY - bb.minY) + 2000;
+      var cx = (d.tx * -1) / d.k, cy = (d.ty * -1) / d.k;
+      /* 注意：tx/ty 是屏幕平移量，视图中心 ≈ (-tx/k, -ty/k) + 视口中心/k，
+         这里只做粗略的合理性检查，真正的边界由 clamp 保证。 */
+      if (!isFinite(cx) || !isFinite(cy)) return null;
+      if (Math.abs(cx) > pad + 1e6 || Math.abs(cy) > pad + 1e6) return null;
+    }
+    return d;
+  }
+
+  MG.layoutCache = {
+    key: KEY, camKey: CAM_KEY,
+    signature: signature,
+    restore: restore,
+    save: save,
+    clear: clear,
+    saveCam: saveCam,
+    loadCam: loadCam
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+/* ==========================================================================
    数学星图 · 布局求解（三层：星系 → 星团 → 恒星）
    --------------------------------------------------------------------------
    1) 星系：regions.js 里声明的中心 + 半径
@@ -3716,6 +3930,22 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
       c.center = g ? { x: g.center.x, y: g.center.y } : { x: 0, y: 0 };
       liveClusters.push(c);
     });
+
+    /* ------------------------------------------- 1a. 布局缓存（可跳过求解）
+       `MG.layoutCache` 存的是上一次算出来的坐标 + 团/星系的圆心与半径。
+       签名（内容版本 / 节点顺序 / 团归属 / 星系基准中心 / 全部布局常量）一致才用。
+       ⛔ 命中时**跳过** 1b–4（团间耦合、解领域中心、装箱、精化、行星锚点），
+          那些是几百毫秒到一秒的开销；但收尾（包围盒 + 诊断）照常跑，
+          保证两条路径产出的 graph 完全一致。
+       ⛔ 缓存里没有语义字段（target / degree / galaxy …），它们在上面第 0 步刚算过。 */
+    var _cacheHit = false;
+    if (MG.layoutCache) {
+      try { _cacheHit = MG.layoutCache.restore(graph); } catch (e) { _cacheHit = false; }
+    }
+    if (_cacheHit) {
+      finishLayout(graph, liveClusters, 0, tAll);
+      return;
+    }
 
     /* -------------------------------------------- 1b. 团间耦合 → 摆放方向 */
     /* 每个团往「它连得最多的那些团所在的星系」那一侧靠。
@@ -4412,6 +4642,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.2';</script>
       c.center = { x: cx, y: cy };   // 用实际重心，便于画星团级连线
     });
 
+    finishLayout(graph, liveClusters, ranIters, tAll);
+  }
+
+  /* ------------------------------------------------------------------
+     收尾：包围盒 + 诊断 + 耗时。缓存命中与正常计算**都**走这里，
+     保证两条路径产出的 graph 字段完全一致。
+     ------------------------------------------------------------------ */
+  function finishLayout(graph, liveClusters, ranIters, tAll) {
+    var nodes = graph.nodes;
     /* ------------------------------------------------ 5. 内容包围盒 */
     graph.bbox = function () {
       var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
@@ -14998,13 +15237,13 @@ MG.i18nAbstracts = {
     'thm.real-uncountable': {
       en:
       '$\\mathbb{R}$ is uncountable — there is no surjection $\\mathbb{N} \\to \\mathbb{R}$ — ' +
-      'and in fact $|\\mathbb{R}| = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0} > \\aleph_0$. ' +
+      'and in fact $\\#\\mathbb{R} = \\#\\mathcal{P}(\\mathbb{N}) = 2^{\\aleph_0} > \\aleph_0$. ' +
       'Uncountability is proved by nested closed intervals and completeness alone, with no ' +
       'cardinal theory; the cardinality statement pairs binary expansions with ' +
       '$\\mathcal{P}(\\mathbb{N})$ and quotes Cantor. The counterintuitive point: $\\mathbb{Q}$ ' +
       'and $\\mathbb{R}$ are each dense in the other, yet $\\mathbb{Q}$ is countable — density ' +
       'and cardinality are different things, which is why analysis needs $\\mathbb{R}$.',
-      status: 'reviewed', basedOn: 'v0.9.2#6b754c3d', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
+      status: 'reviewed', basedOn: 'v0.9.2#2464e849', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
     },
 
     'prop.yoneda-embedding': {
@@ -16057,8 +16296,8 @@ MG.i18nStatements = {
         '$\\mathbb{N}$ onto $\\mathbb{R}$, that is, $\\mathbb{R}$ cannot be arranged as a ' +
         'sequence.\n\n' +
         'A stronger conclusion:\n\n' +
-        '$$|\\mathbb{R}| = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0} > \\aleph_0$$',
-        status: 'reviewed', basedOn: 'v0.9.2#40ca76c6', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
+        '$$\\#\\mathbb{R} = \\#\\mathcal{P}(\\mathbb{N}) = 2^{\\aleph_0} > \\aleph_0$$',
+        status: 'reviewed', basedOn: 'v0.9.2#75028b5a', reviewed: { by: 'bingyingzizz', date: '2026-10-16' },
       },
       notes: {
         en:
@@ -16069,7 +16308,7 @@ MG.i18nStatements = {
         '$x_n$.\n\n' +
         '⚠ The whole proof uses **only the completeness of $\\mathbb{R}$** (the ' +
         'least-upper-bound principle); cardinal theory is not needed. The half saying ' +
-        '$|\\mathbb{R}| = 2^{\\aleph_0}$ matches binary expansions against ' +
+        '$\\#\\mathbb{R} = 2^{\\aleph_0}$ matches binary expansions against ' +
         '$\\mathcal{P}(\\mathbb{N})$ and then quotes Cantor\'s theorem.\n\n' +
         '**The most counter-intuitive point of this theorem**: $\\mathbb{Q}$ and ' +
         '$\\mathbb{R}$ are both dense and each can be approximated by the other, yet ' +
@@ -26123,7 +26362,7 @@ window.MG = window.MG || {};
         '',
         '由**幂集公理**，$\\mathcal{P}(X)$ 确实是集合；由外延公理它唯一。',
         '',
-        '有限情形的元素个数：$|X| = n \\implies |\\mathcal{P}(X)| = 2^{n}$（每个元素「取或不取」）。'
+        '有限情形的元素个数：$\\#X = n \\implies \\#\\mathcal{P}(X) = 2^{n}$（每个元素「取或不取」）。'
       ].join('\n'),
       notes: '⭐ 幂集是「把性质变成对象」的那一步：想谈「$X$ 的所有子集」这件事本身（而不是逐个谈），就得有幂集。\n\n$\\mathcal{P}(X)$ 同时是几个重要构造的舞台：\n- 外测度定义在**全体子集**上：$\\mu^* : \\mathcal{P}(X) \\to [0, +\\infty]$；\n\n\n- 环、$\\sigma$-代数、单调类都是 $\\mathcal{P}(X)$ 的某一族子集；\n\n\n- 生成的 $\\sigma$-代数取的就是「一切包含 $\\mathcal{E}$ 的 $\\sigma$-代数之交」，而 $\\mathcal{P}(X)$ 保证这个交不空。\n\n⚠ $\\emptyset \\in \\mathcal{P}(X)$ 且 $X \\in \\mathcal{P}(X)$ 对一切 $X$ 成立 —— 幂集从来不是空的。',
       refs: ['Kunen, Set Theory, I.5']
@@ -26179,13 +26418,13 @@ window.MG = window.MG || {};
       cluster: 'set.cardinal',
       type: 'theorem',
       label: 'Cantor 定理',
-      title: 'Cantor 定理：$|A| < |\\mathcal{P}(A)|$',
+      title: 'Cantor 定理：$\\#A < \\#\\mathcal{P}(A)$',
       regions: ['set-theory'],
       tags: ['定理', '基数', '对角线'],
       statement: [
         '对任意集合 $A$：',
         '',
-        '$$|A| < |\\mathcal{P}(A)|$$',
+        '$$\\#A < \\#\\mathcal{P}(A)$$',
         '',
         '也就是说：**不存在**从 $A$ 到 $\\mathcal{P}(A)$ 的满射（当然也不存在双射），但 $a \\mapsto \\{a\\}$ 是单射。'
       ].join('\n'),
@@ -26205,7 +26444,7 @@ window.MG = window.MG || {};
       statement: [
         '若存在单射 $f : A \\to B$ 与单射 $g : B \\to A$，则存在**双射** $A \\to B$，即',
         '',
-        '$$|A| \\le |B| \\ \\wedge \\ |B| \\le |A| \\implies |A| = |B|$$'
+        '$$\\#A \\le \\#B \\ \\wedge \\ \\#B \\le \\#A \\implies \\#A = \\#B$$'
       ].join('\n'),
       notes: '⭐ 它的价值在于**省事**：要证两个集合等势，只要各造一个方向的单射，不必显式写出那个双射。（对比：Cantor 定理的另一条路 —— 有单射无满射 —— 用的是对称的说法。）\n\n⚠ 它**不需要**选择公理：证明是构造性的（见边的证明），这也是它比「任意两个基数可比」好用的地方。',
       refs: ['Kunen, Set Theory, I.6']
@@ -26266,7 +26505,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.cardinal',
       usedBy: 'thm.cantor',
-      note: '「$\\#A < |\\mathcal{P}(A)|$」是一个关于**基数**的比较。'
+      note: '「$\\#A < \\#\\mathcal{P}(A)$」是一个关于**基数**的比较。'
     },
     {
       id: 'dep.powerset-cantor',
@@ -26314,7 +26553,7 @@ window.MG = window.MG || {};
       target: 'thm.cantor',
       title: '幂集 $\\implies$ Cantor 定理（对角线法）',
       proof: [
-        '**① $|A| \\le |\\mathcal{P}(A)|$。** 映射 $a \\mapsto \\{a\\}$ 是单射：$\\{a\\} = \\{a\'\\} \\implies a = a\'$。',
+        '**① $\\#A \\le \\#\\mathcal{P}(A)$。** 映射 $a \\mapsto \\{a\\}$ 是单射：$\\{a\\} = \\{a\'\\} \\implies a = a\'$。',
         '',
         '**② 不存在满射 $f : A \\to \\mathcal{P}(A)$。** 反设存在。令',
         '',
@@ -26327,7 +26566,7 @@ window.MG = window.MG || {};
         '- 若 $a_0 \\in D$：由 $D$ 的定义 $a_0 \\notin f(a_0) = D$，矛盾；',
         '- 若 $a_0 \\notin D = f(a_0)$：那么 $a_0$ 满足「$a \\notin f(a)$」，按定义又该有 $a_0 \\in D$，矛盾。',
         '',
-        '两边都不成立，故不存在满射。结合 ① 得 $|A| < |\\mathcal{P}(A)|$。$\\blacksquare$',
+        '两边都不成立，故不存在满射。结合 ① 得 $\\#A < \\#\\mathcal{P}(A)$。$\\blacksquare$',
         '',
         '> $D$ 之所以叫「对角集」：把 $A$ 排成行、把 $\\mathcal{P}(A)$ 排成列，「$a \\in f(a)$」是一张表，$D$ 取的是这张表的**对角线**再逐格取反。'
       ].join('\n')
@@ -26363,7 +26602,7 @@ window.MG = window.MG || {};
         '',
         '**④ $h$ 是满射。** 若 $b \\in B$：令 $a = g(b) \\in A$。\n\n若 $a \\in A^{\\sharp}$，则 $h(a) = g^{-1}(a) = b$；若 $a \\in A^{*}$，则 $a \\in A_n$ 对某个 $n \\ge 1$（因为 $a = g(b)$ 落在 $g(B)$ 里），于是 $a = g(f(a\'))$ 对某个 $a\' \\in A_{n-1} \\subseteq A^{*}$，由 $g$ 单射得 $f(a\') = b$，即 $h(a\') = b$。',
         '',
-        '综上 $h$ 是双射，故 $|A| = |B|$。$\\blacksquare$'
+        '综上 $h$ 是双射，故 $\\#A = \\#B$。$\\blacksquare$'
       ].join('\n')
     },
     {
@@ -27143,7 +27382,7 @@ window.MG = window.MG || {};
         '',
         '更强的结论：',
         '',
-        '$$|\\mathbb{R}| = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0} > \\aleph_0$$'
+        '$$\\#\\mathbb{R} = \\#\\mathcal{P}(\\mathbb{N}) = 2^{\\aleph_0} > \\aleph_0$$'
       ].join('\n'),
       notes: '⭐ 证明走**闭区间套 + 对角线**（见边）：假设 $\\mathbb{R}$ 可以排成 $x_1, x_2, \\ldots$，就用二分法造一串套起来的闭区间，把 $x_n$ 逐个排除出去，再用**完备性**取出它们唯一的公共点 —— 它不等于任何一个 $x_n$。\n\n⚠ 整段证明**只用到 $\\mathbb{R}$ 的完备性**（确界原理），不需要基数理论；\n\n$\\#\\mathbb{R} = 2^{\\aleph_0}$ 那一半是拿二进制展开与 $\\mathcal{P}(\\mathbb{N})$ 配对，再引用 Cantor 定理。\n\n**这条定理最反直觉的地方**：$\\mathbb{Q}$ 与 $\\mathbb{R}$ 都稠密、都可以逼近彼此，但 $\\mathbb{Q}$ 可数（排得成一个序列）、$\\mathbb{R}$ 不可数。\n\n**「稠密」与「一样多」是两回事** —— 这也正是分析必须做实数、不能只做有理数的根本原因。',
       refs: ['Tao, Analysis I, Ch. 8（可数性）', 'Rudin, Principles of Mathematical Analysis, Ch. 2']
@@ -27337,7 +27576,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'thm.cantor',
       usedBy: 'thm.real-uncountable',
-      note: '后半句 $2^{\\aleph_0} > \\aleph_0$ 用的就是 Cantor 定理（$|A| < |\\mathcal{P}(A)|$）。'
+      note: '后半句 $2^{\\aleph_0} > \\aleph_0$ 用的就是 Cantor 定理（$\\#A < \\#\\mathcal{P}(A)$）。'
     },
 
     /* -------------------------------------------------- 带证明的推出 */
@@ -27547,9 +27786,9 @@ window.MG = window.MG || {};
         '',
         '**③ 矛盾。** 由 ① 知 $x_n \\notin I_n$，由 ② 知 $a \\in I_n$，所以 $a \\ne x_n$ 对**一切** $n$ 成立 —— 但 $a \\in \\mathbb{R} = \\{x_1, x_2, \\ldots\\}$，与序列穷尽了 $\\mathbb{R}$ 矛盾。\n\n故 $\\mathbb{R}$ 不可数。\n\n$\\blacksquare$',
         '',
-        '**④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\\mathbb{R} \\hookrightarrow \\mathcal{P}(\\mathbb{N})$；\n\n反过来 $\\mathcal{P}(\\mathbb{N}) \\to \\mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\\#\\mathbb{R} = |\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0}$。\n\n再由 **Cantor 定理** $|\\mathcal{P}(\\mathbb{N})| > \\#\\mathbb{N} = \\aleph_0$，即',
+        '**④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\\mathbb{R} \\hookrightarrow \\mathcal{P}(\\mathbb{N})$；\n\n反过来 $\\mathcal{P}(\\mathbb{N}) \\to \\mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\\#\\mathbb{R} = \\#\\mathcal{P}(\\mathbb{N}) = 2^{\\aleph_0}$。\n\n再由 **Cantor 定理** $\\#\\mathcal{P}(\\mathbb{N}) > \\#\\mathbb{N} = \\aleph_0$，即',
         '',
-        '$$|\\mathbb{R}| = 2^{\\aleph_0} > \\aleph_0$$'
+        '$$\\#\\mathbb{R} = 2^{\\aleph_0} > \\aleph_0$$'
       ].join('\n')
     },
   ]
@@ -46871,7 +47110,7 @@ window.MG = window.MG || {};
         '',
         '（$V = \\{0\\}$ 时约定 $\\dim V = 0$；没有有限基时称 $V$ 是**无限维**的。）'
       ].join('\n'),
-      notes: '⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。\n\n证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\\#\\mathcal{B} \\le |\\mathcal{B}\'|$ 与反向。\n\n⚠ 有限维的情形交换引理就够了；\n\n无限维要证明「无限基等势」（用 $|A \\times \\mathbb{N}| = \\#A$ 那一套基数算术），比有限情形麻烦得多。\n\n⭐ 维数的基本性质：$\\dim(U + W) + \\dim(U \\cap W) = \\dim U + \\dim W$；\n\n$\\dim(V/U) = \\dim V - \\dim U$。',
+      notes: '⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。\n\n证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\\#\\mathcal{B} \\le \\#\\mathcal{B}\'$ 与反向。\n\n⚠ 有限维的情形交换引理就够了；\n\n无限维要证明「无限基等势」（用 $\\#(A \\times \\mathbb{N}) = \\#A$ 那一套基数算术），比有限情形麻烦得多。\n\n⭐ 维数的基本性质：$\\dim(U + W) + \\dim(U \\cap W) = \\dim U + \\dim W$；\n\n$\\dim(V/U) = \\dim V - \\dim U$。',
       refs: ['Lang, Linear Algebra', 'Hoffman–Kunze, Linear Algebra, Ch. 2']
     }
   ],
@@ -46968,11 +47207,11 @@ window.MG = window.MG || {};
       proof: [
         '设 $\\mathcal{B}$ 与 $\\mathcal{B}\'$ 是 $V$ 的两组基。',
         '',
-        '1. 由 $\\mathcal{B}$ 是基，它线性无关；由 $\\mathcal{B}\'$ 是基，它生成 $V$。于是由交换引理（取 $S = \\mathcal{B}$、$T = \\mathcal{B}\'$）得 $|\\mathcal{B}| \\le |\\mathcal{B}\'|$。',
-        '2. 交换两者的角色（$S = \\mathcal{B}\'$、$T = \\mathcal{B}$）得 $|\\mathcal{B}\'| \\le |\\mathcal{B}|$。',
-        '3. 由 Bernstein 定理（或直接用两个方向的单射）得 $|\\mathcal{B}| = |\\mathcal{B}\'|$。',
+        '1. 由 $\\mathcal{B}$ 是基，它线性无关；由 $\\mathcal{B}\'$ 是基，它生成 $V$。于是由交换引理（取 $S = \\mathcal{B}$、$T = \\mathcal{B}\'$）得 $\\#\\mathcal{B} \\le \\#\\mathcal{B}\'$。',
+        '2. 交换两者的角色（$S = \\mathcal{B}\'$、$T = \\mathcal{B}$）得 $\\#\\mathcal{B}\' \\le \\#\\mathcal{B}$。',
+        '3. 由 Bernstein 定理（或直接用两个方向的单射）得 $\\#\\mathcal{B} = \\#\\mathcal{B}\'$。',
         '',
-        '于是映射 $\\mathcal{B} \\mapsto |\\mathcal{B}|$ 不依赖基的选取，$\\dim_K V := |\\mathcal{B}|$ 是良定义的。∎',
+        '于是映射 $\\mathcal{B} \\mapsto \\#\\mathcal{B}$ 不依赖基的选取，$\\dim_K V := \\#\\mathcal{B}$ 是良定义的。∎',
         '',
         '⚠ 上面第 1、2 步用的交换引理是**有限**版本；无限维时要用它的无限形式（或 Zorn 引理 + 基数算术），结论相同。'
       ].join('\n'),
@@ -51279,7 +51518,7 @@ window.MG = window.MG || {};
         '',
         '所以等价类正是左陪集。等价类构成划分，故**左陪集两两不交且覆盖 $G$**。',
         '',
-        '**第二步：每个左陪集与 $H$ 等势。** 映射 $\\varphi : H \\to gH$，$h \\mapsto gh$，有逆 $gh \\mapsto h$（良定义：$gh_1 = gh_2 \\implies h_1 = h_2$）。故 $|gH| = \\#H$。',
+        '**第二步：每个左陪集与 $H$ 等势。** 映射 $\\varphi : H \\to gH$，$h \\mapsto gh$，有逆 $gh \\mapsto h$（良定义：$gh_1 = gh_2 \\implies h_1 = h_2$）。故 $\\#gH = \\#H$。',
         '',
         '**第三步：数个数。** 设不同左陪集为 $g_1H, \\ldots, g_k H$。由第一步 $G = \\bigsqcup_{i} g_i H$，两边取基数并用第二步：',
         '',
@@ -52923,7 +53162,7 @@ window.MG = window.MG || {};
       tags: ['推论', '固态', '乘积'],
       refs: ['Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Corollary 5.5'],
       statement: [
-        '对任意 profinite 集 $S$，存在集合 $I$（$|I| \\le 2^{|S|}$）与凝聚态阿贝尔群的同构',
+        '对任意 profinite 集 $S$，存在集合 $I$（$\\#I \\le 2^{\\#S}$）与凝聚态阿贝尔群的同构',
         '',
         '$$Z[S]^{\\blacksquare} \\cong \\prod_{I} \\mathbb{Z}.$$',
         '',
@@ -75433,7 +75672,7 @@ window.MG = window.MG || {};
       notes: [
         '证明：$n = 1$ 显然。设 $n = p_{1}^{e_{1}}\\cdots p_{r}^{e_{r}}$，$r \\ge 1$。含平方因子的 $d$ 贡献 $0$，所以只需对「由互异素因子组成的 $d$」求和：',
         '',
-        '$$\\sum_{d\\mid n}\\mu(d) = \\sum_{S \\subseteq \\{1,\\cdots,r\\}} (-1)^{|S|} = (1 - 1)^{r} = 0 .$$',
+        '$$\\sum_{d\\mid n}\\mu(d) = \\sum_{S \\subseteq \\{1,\\cdots,r\\}} (-1)^{\\#S} = (1 - 1)^{r} = 0 .$$',
         '',
         '即二项式展开。这条恒等式是 $\\mu$ 的**唯一**用处：它把「求和」变成「投影到 $n = 1$ 上」。',
       ].join('\n\n'),
@@ -75646,7 +75885,7 @@ window.MG = window.MG || {};
         '',
         '$n > 1$：设 $n = p_{1}^{e_{1}}\\cdots p_{r}^{e_{r}}$，$r \\ge 1$。$\\mu(d) \\ne 0$ 只当 $d$ 由**互异**素因子组成，故',
         '',
-        '$$\\sum_{d \\mid n}\\mu(d) = \\sum_{S \\subseteq \\{1,\\cdots,r\\}} (-1)^{|S|} = \\sum_{k=0}^{r}\\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$',
+        '$$\\sum_{d \\mid n}\\mu(d) = \\sum_{S \\subseteq \\{1,\\cdots,r\\}} (-1)^{\\#S} = \\sum_{k=0}^{r}\\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$',
         '',
         '正负项按 $|S|$ 配对抵消 —— 这就是全部内容。',
       ].join('\n\n'),
@@ -76252,7 +76491,7 @@ window.MG = window.MG || {};
         '**推论**：$A \\ne 0$ 时取 $I = 0$，得极大理想存在；再由「$M$ 极大 $\\iff$ $A/M$ 是域」（`prop.prime-ideal` 的等价刻画），得「每个非零环都有域作为商」。\n\n' +
         '\n\n' +
         '⚠ 这一步**只**用了 Zorn；\n\n' +
-        '$\u0060prop.prime-ideal` 正文此前写明「存在性不在本条里」，本边把它补上。',
+        '\u0060prop.prime-ideal` 正文此前写明「存在性不在本条里」，本边把它补上。',
       ].join('\n\n'),
     },
     {
@@ -85726,6 +85965,9 @@ MG.trunk = [
     var localPacks = (MG.packs || []).slice();
     var graph = MG.buildGraph(localPacks, MG.regions, MG.clusters);
     MG.computeLayout(graph);
+    if (MG.layoutCache && !graph.layoutFromCache) {
+      try { MG.layoutCache.save(graph); } catch (e) { /* 存不下就算了，不影响打开 */ }
+    }
     if (MG.loading) MG.loading.step(null, '铺开星云…');   // 同样只换文案，见 safeBoot 的注释
     MG.computeLayers(graph);          // 依赖深度（层号）—— 每次现算，不写进内容
     /* 画布上的显示名（节点 / 星团 / 星系）：**启动时算一次**，渲染循环只读 `labelShow`。
@@ -87845,10 +88087,18 @@ MG.trunk = [
       var fitK = cam.k;
       var cx = (bb.minX + bb.maxX) / 2, cy = (bb.minY + bb.maxY) / 2;
       if (!applyHash()) {
-        // 初始视角：先稍微留白，再平滑推进到「全部适配」
-        cam.k = fitK * 0.72;
-        cam.centerOn(cx, cy);
-        cam.animateTo({ k: fitK, cx: cx, cy: cy }, REDUCE_MOTION ? 1 : 700);
+        /* 上次看到哪儿了？有记录就直接还原（不再播「全部适配」那段动画）。
+           ⚠️ 只在没有深链时才用 —— URL 里的 #n= / #v= 优先级更高。 */
+        var savedCam = MG.layoutCache ? MG.layoutCache.loadCam(graph) : null;
+        if (savedCam) {
+          cam.k = U.clamp(savedCam.k, C.camera.minZoom, C.camera.maxZoom);
+          cam.tx = savedCam.tx; cam.ty = savedCam.ty;
+        } else {
+          // 初始视角：先稍微留白，再平滑推进到「全部适配」
+          cam.k = fitK * 0.72;
+          cam.centerOn(cx, cy);
+          cam.animateTo({ k: fitK, cx: cx, cy: cy }, REDUCE_MOTION ? 1 : 700);
+        }
       }
       /* 图例是**适配之前**渲染的（必须先有 DOM 才量得出可用矩形）⇒ 里面那个
          「导出当前视图（N 点 / K 线）」是拿适配前的相机数的。这里补一次真数。 */
@@ -87857,6 +88107,29 @@ MG.trunk = [
     }
 
     start();
+
+    /* ---------------------------------------------------- 相机持久化
+       「上次看到哪」单独存（`mathgalaxy.camera.v1`）：下次打开直接回到那一屏，
+       不再每次从「全部适配」重新播动画。
+       ⚠️ 只在**没有深链**时写：带 #n= / #v= 打开时镜头由深链决定，
+          这时写回会把用户的深链视角覆盖成旧镜头。 */
+    (function persistCam() {
+      if (!MG.layoutCache) return;
+      var timer = 0;
+      function saveNow() {
+        if (location.hash && /(^|[#&])(n|v)=/.test(location.hash)) return;
+        try { MG.layoutCache.saveCam(cam); } catch (e) { /* 忽略 */ }
+      }
+      /* 停手后再存（拖动/缩放过程中不写，省 IO） */
+      MG.onCameraSettle = function () {
+        clearTimeout(timer);
+        timer = setTimeout(saveNow, 600);
+      };
+      window.addEventListener('pagehide', saveNow);
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'hidden') saveNow();
+      });
+    })();
 
     /* ------------------------------------------------ Phase A：世界位图图层
        载体乙（DOM canvas + CSS transform）：拖动只改 transform，合成器搬图层。
@@ -87912,6 +88185,9 @@ MG.trunk = [
         var packs = localPacks.concat(res.packs);
         graph = MG.buildGraph(packs, MG.regions, MG.clusters);
         MG.computeLayout(graph);
+    if (MG.layoutCache && !graph.layoutFromCache) {
+      try { MG.layoutCache.save(graph); } catch (e) { /* 存不下就算了，不影响打开 */ }
+    }
         MG.localizeDisplay(graph);    // ⭐ 并入外部内容包之后要把显示名再算一遍
         view.graph = graph;
         vis.rebind(graph);            // 挑选结果保留，丢掉已经不存在的 id

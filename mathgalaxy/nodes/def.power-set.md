@@ -11,7 +11,7 @@ $$\mathcal{P}(X) := \{ A : A \subseteq X \}$$
 
 由**幂集公理**，$\mathcal{P}(X)$ 确实是集合；由外延公理它唯一。
 
-有限情形的元素个数：$|X| = n \implies |\mathcal{P}(X)| = 2^{n}$（每个元素「取或不取」）。
+有限情形的元素个数：$\#X = n \implies \#\mathcal{P}(X) = 2^{n}$（每个元素「取或不取」）。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/dep.subset-powerset.md](../proofs/dep.subset-powerset.md)

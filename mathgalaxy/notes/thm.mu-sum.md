@@ -5,7 +5,7 @@
 
 
 
-$$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = (1 - 1)^{r} = 0 .$$
+$$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{\#S} = (1 - 1)^{r} = 0 .$$
 
 
 

@@ -7,6 +7,6 @@ English entry · root `../`
 
 A stronger conclusion:
 
-$$|\mathbb{R}| = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0} > \aleph_0$$
+$$\#\mathbb{R} = \#\mathcal{P}(\mathbb{N}) = 2^{\aleph_0} > \aleph_0$$
 
 > 续见 nodes/thm.real-uncountable.en.4.md

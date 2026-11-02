@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T10:55:55.190Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T14:20:33.206Z
 > 15 星系 / 102 星团 / 1460 节点 / 2753 连线（强边 2736，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -413,7 +413,7 @@ $$\mathcal{P}(X) := \{ A : A \subseteq X \}$$
 
 由**幂集公理**，$\mathcal{P}(X)$ 确实是集合；由外延公理它唯一。
 
-有限情形的元素个数：$|X| = n \implies |\mathcal{P}(X)| = 2^{n}$（每个元素「取或不取」）。
+有限情形的元素个数：$\#X = n \implies \#\mathcal{P}(X) = 2^{n}$（每个元素「取或不取」）。
 
 ⭐ 幂集是「把性质变成对象」的那一步：想谈「$X$ 的所有子集」这件事本身（而不是逐个谈），就得有幂集。
 
@@ -674,11 +674,11 @@ $$f : A \to B$$
 参考：Kunen, Set Theory, I.6
 
 #### Cantor 定理　`thm.cantor`
-*定理*　Cantor 定理：$|A| < |\mathcal{P}(A)|$
+*定理*　Cantor 定理：$\#A < \#\mathcal{P}(A)$
 
 对任意集合 $A$：
 
-$$|A| < |\mathcal{P}(A)|$$
+$$\#A < \#\mathcal{P}(A)$$
 
 也就是说：**不存在**从 $A$ 到 $\mathcal{P}(A)$ 的满射（当然也不存在双射），但 $a \mapsto \{a\}$ 是单射。
 
@@ -701,7 +701,7 @@ $\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots$
 
 若存在单射 $f : A \to B$ 与单射 $g : B \to A$，则存在**双射** $A \to B$，即
 
-$$|A| \le |B| \ \wedge \ |B| \le |A| \implies |A| = |B|$$
+$$\#A \le \#B \ \wedge \ \#B \le \#A \implies \#A = \#B$$
 
 ⭐ 它的价值在于**省事**：要证两个集合等势，只要各造一个方向的单射，不必显式写出那个双射。（对比：Cantor 定理的另一条路 —— 有单射无满射 —— 用的是对称的说法。）
 
@@ -1068,7 +1068,7 @@ $\implies$ 唯一性靠「$\mathbb{Q}$ 在 $K$ 中稠密」把两个同构逼成
 
 更强的结论：
 
-$$|\mathbb{R}| = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0} > \aleph_0$$
+$$\#\mathbb{R} = \#\mathcal{P}(\mathbb{N}) = 2^{\aleph_0} > \aleph_0$$
 
 ⭐ 证明走**闭区间套 + 对角线**（见边）：假设 $\mathbb{R}$ 可以排成 $x_1, x_2, \ldots$，就用二分法造一串套起来的闭区间，把 $x_n$ 逐个排除出去，再用**完备性**取出它们唯一的公共点 —— 它不等于任何一个 $x_n$。
 
@@ -5255,11 +5255,11 @@ $$\dim_K V := \#\mathcal{B}$$
 
 ⭐ 这条定理的唯一内容是「**良定义**」：基可以有很多组，但势是同一个数 —— 所以「维数」这个词才说得通。
 
-证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\#\mathcal{B} \le |\mathcal{B}'|$ 与反向。
+证明全部来自 Steinitz：两组基互为无关集与生成集，两次使用交换引理即得 $\#\mathcal{B} \le \#\mathcal{B}'$ 与反向。
 
 ⚠ 有限维的情形交换引理就够了；
 
-无限维要证明「无限基等势」（用 $|A \times \mathbb{N}| = \#A$ 那一套基数算术），比有限情形麻烦得多。
+无限维要证明「无限基等势」（用 $\#(A \times \mathbb{N}) = \#A$ 那一套基数算术），比有限情形麻烦得多。
 
 ⭐ 维数的基本性质：$\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$；
 
@@ -26882,7 +26882,7 @@ $$C(S, \mathbb{Z}) = \{\, f : S \to \mathbb{Z}\ \mid f \text{continuous}\, \}$$
 #### 自由固态群是大乘积　`cor.free-solid-product`
 *推论*　推论：$Z[S]^{\blacksquare} \cong \prod_I \mathbb{Z}$
 
-对任意 profinite 集 $S$，存在集合 $I$（$|I| \le 2^{|S|}$）与凝聚态阿贝尔群的同构
+对任意 profinite 集 $S$，存在集合 $I$（$\#I \le 2^{\#S}$）与凝聚态阿贝尔群的同构
 
 $$Z[S]^{\blacksquare} \cong \prod_{I} \mathbb{Z}.$$
 
@@ -34285,7 +34285,7 @@ $$\sum_{d \mid n} \mu(d) = \begin{cases} 1, & n = 1, \\ 0, & n > 1 . \end{cases}
 
 
 
-$$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = (1 - 1)^{r} = 0 .$$
+$$\sum_{d\mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{\#S} = (1 - 1)^{r} = 0 .$$
 
 
 
@@ -36299,11 +36299,11 @@ DCT 的证明是正负部各用一次 Fatou —— 又回到 $L^{+}$。
 
 设 $\mathcal{B}$ 与 $\mathcal{B}'$ 是 $V$ 的两组基。
 
-1. 由 $\mathcal{B}$ 是基，它线性无关；由 $\mathcal{B}'$ 是基，它生成 $V$。于是由交换引理（取 $S = \mathcal{B}$、$T = \mathcal{B}'$）得 $|\mathcal{B}| \le |\mathcal{B}'|$。
-2. 交换两者的角色（$S = \mathcal{B}'$、$T = \mathcal{B}$）得 $|\mathcal{B}'| \le |\mathcal{B}|$。
-3. 由 Bernstein 定理（或直接用两个方向的单射）得 $|\mathcal{B}| = |\mathcal{B}'|$。
+1. 由 $\mathcal{B}$ 是基，它线性无关；由 $\mathcal{B}'$ 是基，它生成 $V$。于是由交换引理（取 $S = \mathcal{B}$、$T = \mathcal{B}'$）得 $\#\mathcal{B} \le \#\mathcal{B}'$。
+2. 交换两者的角色（$S = \mathcal{B}'$、$T = \mathcal{B}$）得 $\#\mathcal{B}' \le \#\mathcal{B}$。
+3. 由 Bernstein 定理（或直接用两个方向的单射）得 $\#\mathcal{B} = \#\mathcal{B}'$。
 
-于是映射 $\mathcal{B} \mapsto |\mathcal{B}|$ 不依赖基的选取，$\dim_K V := |\mathcal{B}|$ 是良定义的。∎
+于是映射 $\mathcal{B} \mapsto \#\mathcal{B}$ 不依赖基的选取，$\dim_K V := \#\mathcal{B}$ 是良定义的。∎
 
 ⚠ 上面第 1、2 步用的交换引理是**有限**版本；无限维时要用它的无限形式（或 Zorn 引理 + 基数算术），结论相同。
 
@@ -37740,7 +37740,7 @@ $$g_1 \sim g_2 \iff g_1^{-1} g_2 \in H \iff g_2 \in g_1 H,$$
 
 所以等价类正是左陪集。等价类构成划分，故**左陪集两两不交且覆盖 $G$**。
 
-**第二步：每个左陪集与 $H$ 等势。** 映射 $\varphi : H \to gH$，$h \mapsto gh$，有逆 $gh \mapsto h$（良定义：$gh_1 = gh_2 \implies h_1 = h_2$）。故 $|gH| = \#H$。
+**第二步：每个左陪集与 $H$ 等势。** 映射 $\varphi : H \to gH$，$h \mapsto gh$，有逆 $gh \mapsto h$（良定义：$gh_1 = gh_2 \implies h_1 = h_2$）。故 $\#gH = \#H$。
 
 **第三步：数个数。** 设不同左陪集为 $g_1H, \ldots, g_k H$。由第一步 $G = \bigsqcup_{i} g_i H$，两边取基数并用第二步：
 
@@ -46605,7 +46605,7 @@ $n > 1$：设 $n = p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$，$r \ge 1$。$\mu(d) \ne 
 
 
 
-$$\sum_{d \mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = \sum_{k=0}^{r}\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$
+$$\sum_{d \mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{\#S} = \sum_{k=0}^{r}\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$
 
 
 
@@ -46900,7 +46900,7 @@ $$\mathcal{S} := \{\, J \trianglelefteq A : I \subseteq J,\ J \ne A \,\},$$
 
 ⚠ 这一步**只**用了 Zorn；
 
-$`prop.prime-ideal` 正文此前写明「存在性不在本条里」，本边把它补上。
+`prop.prime-ideal` 正文此前写明「存在性不在本条里」，本边把它补上。
 
 #### Zorn 引理 ⟹ 满射的极小闭子集　`imp.zorn-minimal-closed`
 *Zorn 引理：紧 Hausdorff 满射有极小的闭定义域*
@@ -49259,7 +49259,7 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
 #### 定义引用：「基数」→ Cantor 定理　`dep.cardinal-cantor`
 
-「$\#A < |\mathcal{P}(A)|$」是一个关于**基数**的比较。
+「$\#A < \#\mathcal{P}(A)$」是一个关于**基数**的比较。
 
 #### 定义引用：「幂集 𝒫(X)」→ Cantor 定理　`dep.powerset-cantor`
 
@@ -49284,7 +49284,7 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 #### 幂集 𝒫(X) ⟹ Cantor 定理　`imp.cantor`
 *幂集 $\implies$ Cantor 定理（对角线法）*
 
-**① $|A| \le |\mathcal{P}(A)|$。** 映射 $a \mapsto \{a\}$ 是单射：$\{a\} = \{a'\} \implies a = a'$。
+**① $\#A \le \#\mathcal{P}(A)$。** 映射 $a \mapsto \{a\}$ 是单射：$\{a\} = \{a'\} \implies a = a'$。
 
 **② 不存在满射 $f : A \to \mathcal{P}(A)$。** 反设存在。令
 
@@ -49297,7 +49297,7 @@ $$D := \{ a \in A : a \notin f(a) \}$$
 - 若 $a_0 \in D$：由 $D$ 的定义 $a_0 \notin f(a_0) = D$，矛盾；
 - 若 $a_0 \notin D = f(a_0)$：那么 $a_0$ 满足「$a \notin f(a)$」，按定义又该有 $a_0 \in D$，矛盾。
 
-两边都不成立，故不存在满射。结合 ① 得 $|A| < |\mathcal{P}(A)|$。$\blacksquare$
+两边都不成立，故不存在满射。结合 ① 得 $\#A < \#\mathcal{P}(A)$。$\blacksquare$
 
 > $D$ 之所以叫「对角集」：把 $A$ 排成行、把 $\mathcal{P}(A)$ 排成列，「$a \in f(a)$」是一张表，$D$ 取的是这张表的**对角线**再逐格取反。
 
@@ -49330,7 +49330,7 @@ $$f(A^{*}) = \bigcup_{n} f(A_n) = \bigcup_{n} g^{-1}(A_{n+1}) \subseteq g^{-1}(A
 
 若 $a \in A^{\sharp}$，则 $h(a) = g^{-1}(a) = b$；若 $a \in A^{*}$，则 $a \in A_n$ 对某个 $n \ge 1$（因为 $a = g(b)$ 落在 $g(B)$ 里），于是 $a = g(f(a'))$ 对某个 $a' \in A_{n-1} \subseteq A^{*}$，由 $g$ 单射得 $f(a') = b$，即 $h(a') = b$。
 
-综上 $h$ 是双射，故 $|A| = |B|$。$\blacksquare$
+综上 $h$ 是双射，故 $\#A = \#B$。$\blacksquare$
 
 #### 良序定理 ⟹ 基数可比定理　`imp.cardinal-comparable`
 *良序定理 $\implies$ 任意两个基数可比*
@@ -49532,7 +49532,7 @@ $L^1$ 的元素不是函数本身，而是**函数在 a.e. 相等下的等价类
 
 #### 定义引用：「Cantor 定理」→ ℝ 不可数　`dep.cantor-uncountable`
 
-后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$|A| < |\mathcal{P}(A)|$）。
+后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$\#A < \#\mathcal{P}(A)$）。
 
 #### 绝对值 |x| ⟹ 三角不等式　`imp.triangle`
 *绝对值的定义 $\implies$ 三角不等式*
@@ -49756,11 +49756,11 @@ $\blacksquare$
 
 **④ 基数版本。** 把实数写成二进制小数（约定不用最后全 1 的写法以避开歧义）得到 $\mathbb{R} \hookrightarrow \mathcal{P}(\mathbb{N})$；
 
-反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\#\mathbb{R} = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0}$。
+反过来 $\mathcal{P}(\mathbb{N}) \to \mathbb{R}$ 用三进制展开即可，两边都有单射，由 Schröder–Bernstein 得 $\#\mathbb{R} = \#\mathcal{P}(\mathbb{N}) = 2^{\aleph_0}$。
 
-再由 **Cantor 定理** $|\mathcal{P}(\mathbb{N})| > \#\mathbb{N} = \aleph_0$，即
+再由 **Cantor 定理** $\#\mathcal{P}(\mathbb{N}) > \#\mathbb{N} = \aleph_0$，即
 
-$$|\mathbb{R}| = 2^{\aleph_0} > \aleph_0$$
+$$\#\mathbb{R} = 2^{\aleph_0} > \aleph_0$$
 
 #### 定义引用：「映射」→ 域　`dep.function-field`
 

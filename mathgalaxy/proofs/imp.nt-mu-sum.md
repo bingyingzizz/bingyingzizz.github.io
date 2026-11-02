@@ -11,7 +11,7 @@ $n > 1$：设 $n = p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$，$r \ge 1$。$\mu(d) \ne 
 
 
 
-$$\sum_{d \mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{|S|} = \sum_{k=0}^{r}\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$
+$$\sum_{d \mid n}\mu(d) = \sum_{S \subseteq \{1,\cdots,r\}} (-1)^{\#S} = \sum_{k=0}^{r}\binom{r}{k}(-1)^{k} = (1-1)^{r} = 0 .$$
 
 
 

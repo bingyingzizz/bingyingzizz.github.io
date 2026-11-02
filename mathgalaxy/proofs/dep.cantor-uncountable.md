@@ -3,4 +3,4 @@
 
 `thm.cantor` Cantor 定理 → `thm.real-uncountable` ℝ 不可数
 
-后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$|A| < |\mathcal{P}(A)|$）。
+后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$\#A < \#\mathcal{P}(A)$）。
