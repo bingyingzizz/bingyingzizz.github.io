@@ -1437,7 +1437,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       regionRadial: true,
       regionRadialInner: 520,   // 最连通的星系离全域重心的目标半径
       regionRadialOuter: 2300,  // 最孤立的星系的目标半径（取当前地图的实际量级）
-      regionRadialK: 0.10,      // 径向项的力度
+      regionRadialK: 0.10,
+      /* ⭐ 2026-11-02：「星系相切」按**画出来的云**结算，不是按容量盘。
+         容量盘（按节点数估）比云（节点分布 88 分位）大 30% 左右 ⇒ 有关系的两个星系
+         明明连线很多，中间仍稳定留一条空带。0.78 ≈ 实测的 云/盘 比值。 */
+      regionTouchK: 0.78,      // 径向项的力度
 
       /* ⭐ 2026-11-02：**团心松弛**（layout.js 的 relaxClusterCenters）。
          星团只在「自己星系内部」打过包 ⇒ 跨星系的团之间没有碰撞保护：
@@ -1451,8 +1455,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       clusterKeep: 0.10,          // 回家：朝打包给它的位置，防止星系被拉散
       clusterMaxStep: 18,         // 每步位移上限（世界单位）
       clusterReach: 0.45,         // 离家的硬上限 = 星系容量盘 × 这个比例
-      clusterFar: 2.1,            // 无关的两团靠得比「两盘相切」的 1.7 倍还近 ⇒ 中程斥力
-      clusterRepelFar: 0.32,      // 中程斥力的力度（只对**无边**的团对生效）
+      clusterFar: 2.45,            // 无关的两团靠得比「两盘相切」的 1.7 倍还近 ⇒ 中程斥力
+      clusterRepelFar: 0.40,      // 中程斥力的力度（只对**无边**的团对生效）
 
       temp0: 62,                  // 初始温度（同时是每步位移上限）
       temp1: 0.5,                 // 终止温度
@@ -3762,6 +3766,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var wsum0 = 0, wn0 = 0;
       Object.keys(wt).forEach(function (k2) { wsum0 += wt[k2]; wn0++; });
       var wMean = wn0 ? wsum0 / wn0 : 1;
+      /* ⭐ 2026-11-02：「相切」按**画出来的云**结算，不是按容量盘。
+         用户：「数学分析和集合论按理说不应该再近一点？中间有很多线但还有个空」
+         量出来：两者的**容量盘**早就在相切以内（盘心距 1360 < 1020+586=1605），
+         但**实际画的云**只有 687 + 422 = 1109 半径 ⇒ 中间稳定空出 250。
+         病根就是容量盘（按节点数估的）比云（按节点实际分布量的 88 分位）大 30% 左右。
+         取 touchK 把两者对齐：距离近到「云该碰上了」才停。 */
+      var touchK = cfg.regionTouchK == null ? 0.78 : cfg.regionTouchK;
       /* ⭐ 2026-11-02：**按连通性径向排布**。
          ------------------------------------------------------------------
          用户：「实分析这一块和外面有一大圈空，说明它和别的团没啥关系啊，为啥会被
@@ -3799,7 +3810,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             var dx = B.center.x - A.center.x, dy = B.center.y - A.center.y;
             var d = Math.sqrt(dx * dx + dy * dy) || 0.01, ux = dx / d, uy = dy / d;
             var key = A.id < B.id ? A.id + '|' + B.id : B.id + '|' + A.id;
-            var w = wt[key] || 0, touch = A._cap + B._cap + 8;
+            var w = wt[key] || 0, touch = (A._cap + B._cap) * touchK + 8;
             /* ⭐ 2026-10-19：权重不封顶 —— 原来 min(1, w/6) 让「一条 4400 长的强边」只拿到
                0.5 的权重，等于承认它不重要。现在按「相对平均权重」放大（上限 3×），
                强关系优先被拉近，长边清单才降得下来。 */
