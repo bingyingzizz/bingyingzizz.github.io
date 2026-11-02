@@ -6,3 +6,4 @@
 - 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
 - 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用
+- 被 [`def.dual-banach`](../nodes/def.dual-banach.md) 连续对偶空间 用

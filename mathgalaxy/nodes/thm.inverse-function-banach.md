@@ -10,6 +10,8 @@ layer 24 · 定理 · 多元微分 · 数学分析
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.implicit-function-banach`](../nodes/thm.implicit-function-banach.md) 隐函数定理（Banach 版）
 
+- …另有出边，续页见 [nodes/thm.inverse-function-banach.4.md](./thm.inverse-function-banach.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.inverse-function-banach.3.md](./thm.inverse-function-banach.3.md)
 

@@ -7,3 +7,5 @@
 - 被 [`def.gram-matrix`](../nodes/def.gram-matrix.md) Gram 矩阵 用
 - 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
 - 被 [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式 用
+- 被 [`def.hilbert-space`](../nodes/def.hilbert-space.md) Hilbert 空间 用
+- 被 [`def.ell2-space`](../nodes/def.ell2-space.md) ℓ²(I) 用

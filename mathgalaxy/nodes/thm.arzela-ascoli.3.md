@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.bolzano-weierstrass`](../nodes/thm.bolzano-weierstrass.md) Bolzano–Weierstrass 定理 + [`def.uniform-convergence`](../nodes/def.uniform-convergence.md) 一致收敛：对角线段 + 有限 ε-网 $\implies$ 一致收敛子列　[proofs/e10:implication.md](../proofs/e10:implication.md)
+
+> 续见 [nodes/thm.arzela-ascoli.4.md](./thm.arzela-ascoli.4.md)

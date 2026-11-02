@@ -9,6 +9,9 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 
 配了范数的 $V$ 叫**赋范空间**。它按 $d(v, w) := \|v - w\|$ 成为度量空间，于是「收敛」「连续」「完备」「紧」这些说法全都继承过来。
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.norm`](../nodes/def.norm.md) 范数 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.normed-space.2.md](./def.normed-space.2.md)
 

@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T04:19:39.509Z
-> 14 星系 / 94 星团 / 1399 节点 / 2637 连线（强边 2620，弱边 17；其中**不分层**的「推论」22 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T04:51:22.621Z
+> 15 星系 / 98 星团 / 1458 节点 / 2737 连线（强边 2720，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -1541,6 +1541,116 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 ⚠️ **约定**：完美正规的定义已经含正规，所以自动含 $T_{1}$，不需要再补 $T_{1}$。
 
 参考：Engelking, General Topology（⚠️ 章节未核实，只记书名）· 分离公理；Munkres, Topology（⚠️ 章节未核实，只记书名）
+
+#### 紧化　`def.compactification`
+*定义*　紧化：把空间塞进紧空间里
+
+**在做什么**：把非紧空间「补上一些点」让它变紧，同时不破坏原来的结构。这是把紧性定理搬到非紧空间上的标准手法 —— 先在紧化上做、再把补的点挖掉。
+
+设 $X$ 是拓扑空间。$X$ 的**紧化**（compactification）是一个紧空间 $Y$（`def.compact`）连同一个嵌入
+
+$$e : X \hookrightarrow Y ,$$
+
+使得像 $e(X)$ 在 $Y$ 中**稠密**（`def.closed-set`）。通常把 $X$ 与 $e(X)$ 等同，直接写 $X \subseteq Y$、$\overline{X} = Y$。
+
+**两个极端**：
+
+- **一点紧化**（`def.one-point-compactification`）：只补**一个**点，$Y$ 最小；
+- **Stone–Čech 紧化** $\beta X$：补的点最多，$Y$ 最大，且满足泛性质（每个到紧 Hausdorff 空间的连续映射唯一地穿过它）。
+
+**基本事实**：$X$ 有 Hausdorff 紧化 $\iff$ $X$ 是完全正则的（Tychonoff）。
+
+⭐ **为什么要求稠密**：否则「补点」可以乱补 —— 取 $Y = X \sqcup \{*\}$（$*$ 是孤立点）永远是紧化，毫无信息。稠密性保证 $Y$ 里**没有多余的孤立点**，每一点都由 $X$ 逼近而来。
+
+⭐ **紧化 = 「紧 Hausdorff 反射」的几何形态**：`prop.chaus-reflective` 里的 $\beta X$ 就是 Stone–Čech 紧化，泛性质说的是「$\beta$ 是**反射**」（从 Top 到紧 Hausdorff 的自由函子）。所以「最大紧化」这个说法与「左伴随」是同一件事。
+
+⚠️ **存在性不是白给的**：$X$ 要能嵌进**紧 Hausdorff** 空间，$X$ 必须是完全正则的（$T_{3.5}$ + $T_{1}$，见 `def.completely-regular-space`）。反过来有 Tychonoff 定理（嵌入方体）保证 $\beta X$ 存在。所以「每个空间都有 Hausdorff 紧化」是**假**的，而「每个空间都有一点紧化」也是假的 —— 一点紧化要**局部紧**。
+
+⚠️ **紧化不唯一**，所以谈「紧化」时通常按大小排序（部分序：$Y_{1} \le Y_{2}$ 若存在连续满射 $Y_{2} \to Y_{1}$ 固定 $X$）。一点紧化是最小元，$\beta X$ 是最大元。
+
+参考：Engelking, General Topology（⚠️ 章节未核实，只记书名）· 紧化；Munkres, Topology（⚠️ 章节未核实，只记书名）
+
+#### 一点紧化　`def.one-point-compactification`
+*定义*　一点紧化：只补一个无穷远点
+
+**在做什么**：最省的一点补法 —— 加**一个**点 $\infty$，让每个跑向无穷的序列都收敛到它。$\mathbb{R}^{n}$ 变成 $S^{n}$、$\mathbb{C}$ 变成 Riemann 球面，都是这个构造。
+
+设 $X$ 是拓扑空间。取 $X^{*} := X \sqcup \{\infty\}$，赋拓扑：开集是
+
+1. $X$ 中的开集；
+2. 形如 $U \cup \{\infty\}$ 的集合，其中 $U \subseteq X$ 开且 $X \setminus U$ 在 $X$ 中**紧**。
+
+称 $X^{*}$ 为 $X$ 的**一点紧化**（one-point compactification，也叫 Alexandrov 紧化）。
+
+**定理**：
+
+- $X^{*}$ **紧**（对任意 $X$）；
+- $X^{*}$ **Hausdorff** $\iff$ $X$ 是局部紧的 Hausdorff 空间（`def.locally-compact`）。
+
+⭐ **拓扑的直觉**：$U \cup \{\infty\}$ 开 $\iff$ 补集紧。所以「$X$ 的补集紧」就是「$\infty$ 的一个邻域」—— 无穷远点周围的空间正是「$X$ 跑出去以后剩下的部分」。于是 $\mathbb{R}^{n}$ 的 $\infty$ 邻域是「球外面」，$S^{n}$ 的北极。
+
+⭐ **标准例子**：$(\mathbb{R}^{n})^{*} \cong S^{n}$（球极投影；$n = 1$ 时 $\mathbb{R} \cup \{\infty\} \cong S^{1}$）；$\mathbb{C}^{*} \cong S^{2}$ 就是 **Riemann 球面**，复分析里全靠它把 $\infty$ 当普通点处理；$\mathbb{N}$ 的一点紧化是 $\{1/n\} \cup \{0\}$。
+
+⚠️ **为什么必须有局部紧**：$X$ 不局部紧时 $X^{*}$ 不 Hausdorff —— 直观上「$\infty$ 的邻域」太大，会与某些点的邻域永远相交。所以一点紧化存在性与 Hausdorff 性是**两件事**：$X^{*}$ 总是紧的，但要它 Hausdorff 就得付局部紧的代价。
+
+⚠️ **与 `imp.lch-cr` 的关系**：那条证明「局部紧 Hausdorff 空间完全正则」时，用的正是「$X^{*}$ 是紧 Hausdorff $\implies$ 正规 $\implies$ 可在 $X^{*}$ 上造 Urysohn 函数再拉回」。一点紧化是把**紧空间的好性质搬到 $X$ 上**的标准接口。
+
+参考：Munkres, Topology（⚠️ 章节未核实，只记书名）· 一点紧化；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+
+#### 网　`def.net`
+*定义*　网与网的收敛：一般拓扑里的序列
+
+**在做什么**：一般拓扑里**序列不够用** —— 紧性、连续性都不能用序列刻画（除非空间是第一可数）。把 $\mathbb{N}$ 换成任意**有向集**，就得到「网」，于是序列的所有定理都能搬过来。
+
+**有向集**：预序集 $(\Lambda, \le)$，且任意 $\lambda, \mu \in \Lambda$ 有上界（存在 $\nu$ 使 $\lambda, \mu \le \nu$）。
+
+**网**：映射 $x : \Lambda \to X$，记 $(x_{\lambda})_{\lambda \in \Lambda}$。
+
+**收敛**：称网 $x_{\lambda}$ **收敛到** $x$（记 $x_{\lambda} \to x$），若对 $x$ 的每个邻域 $U$，存在 $\lambda_{0}$ 使
+
+$$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
+
+**两个刻画定理**：
+
+- $f : X \to Y$ 连续 $\iff$ $f$ 把每个收敛网送到收敛网（`def.continuous-map`）；
+- $X$ 紧 $\iff$ $X$ 中每个网有收敛的**子网**（`def.compact`）。
+
+⚠️ **为什么序列不够**：在不可数空间里，单点集可以闭而不是「序列闭」（例如 $[0,\omega_{1}]$ 里的 $\omega_{1}$：没有序列能从下面逼近它，但它仍在闭包里）。所以「$x \in \overline{A}$ $\iff$ 存在 $A$ 中的序列收敛到 $x$」**只在第一可数空间成立**。网把 $\mathbb{N}$ 换成「$x$ 的邻域族的反向序」，立刻修好。
+
+⭐ **子网 $\ne$ 子序列**：子网允许「取更粗的指标集」，因此比子序列灵活得多（子序列要求保序嵌入 $\mathbb{N} \to \mathbb{N}$，会漏掉很多情形）。所以紧性的网刻画必须用**子网**，用「子序列」是错的。
+
+⭐ **网的来源是 Riemann 和**：Moore–Smith（1922）发明网正是为了给「$\int f$ 是 Riemann 和的极限」一个严格说法 —— 那些和的指标集是分划的加细序，不是 $\mathbb{N}$。所以「网」不是抽象洁癖，它解决的是分析里真实存在的问题。
+
+⚠️ 网与滤子是**等价**的两套语言（`eq.net-filter`）：每个网对应一个滤子、收敛性一致。用哪套看习惯 —— 分析书多用网，集合论与拓扑书多用滤子。
+
+参考：Munkres, Topology（⚠️ 章节未核实，只记书名）· 网的收敛；Kelley, General Topology（⚠️ 章节未核实，只记书名）
+
+#### 滤子　`def.filter`
+*定义*　滤子与超滤子：收敛的另一套语言
+
+**在做什么**：把「收敛」改写成**集合族**的语言。滤子把「最终落进某个集合」这件事抽象出来，于是极限可以不提指标、只谈族 —­— 这是集合论与拓扑学交界处最顺手的工具。
+
+设 $X$ 是拓扑空间。非空族 $\mathcal{F} \subseteq \mathcal{P}(X)$ 叫**滤子**（filter），若
+
+1. $\emptyset \notin \mathcal{F}$、$X \in \mathcal{F}$；
+2. 上闭：$F \in \mathcal{F}$ 且 $F \subseteq G$ $\implies$ $G \in \mathcal{F}$；
+3. 对有限交封闭：$F, G \in \mathcal{F}$ $\implies$ $F \cap G \in \mathcal{F}$。
+
+**收敛**：$\mathcal{F} \to x$，若 $x$ 的每个邻域都属于 $\mathcal{F}$（即 $\mathcal{N}(x) \subseteq \mathcal{F}$）。
+
+**超滤子**（ultrafilter）：极大的滤子。等价地，对每个 $A \subseteq X$，$A$ 与 $X \setminus A$ 中**恰有**一个属于 $\mathcal{U}$。
+
+**超滤子引理**：每个滤子都含在一个超滤子中（用 Zorn 引理，`lem.zorn`）。
+
+⭐ **滤子的用处：紧性的干净刻画**：$X$ 紧 $\iff$ 每个超滤子都收敛（或每个滤子有聚点）。比网的版本更短，因为「子网」这一步被超滤子的极大性吸收了。
+
+⭐ **超滤子引理不可省**：它不是定理而是**选择公理的一小块**（严格弱于 AC，但与布尔素理想定理等价）。所以凡是「取一个超滤子」的证明，背后都在用选择 —— 这条与 `thm.paracompact-hausdorff-normal` 那一族「只用紧性」的论证形成对照。
+
+⚠️ **滤子 $\ne$ 拓扑的邻域系**：$\mathcal{N}(x)$ 本身是个滤子（邻域滤子），而一般滤子可以**不收敛**。收敛与否取决于它是否包含某个 $\mathcal{N}(x)$。
+
+⚠️ **与范畴论里的「滤子」撞名**：`prop.covering-sieves-filter` 讲的是 Grothendieck 拓扑里筛子的滤过性，与这里的集合论滤子**无关**。
+
+参考：Munkres, Topology（⚠️ 章节未核实，只记书名）· 滤子；Engelking, General Topology（⚠️ 章节未核实，只记书名）
 
 #### 拓扑空间与开集　`def.topology`
 *定义*　拓扑空间 / 开集
@@ -10222,6 +10332,859 @@ $$f\bigl( \{ x \in U : \operatorname{rank} Df(x) < m \} \bigr) \subseteq \mathbb
 
 参考：Milnor, Topology from the Differentiable Viewpoint, §3；Sternberg, Lectures on Differential Geometry, §II.3；Guillemin–Pollack, Differential Topology, §2
 
+## 星系：泛函分析（Functional Analysis）
+> 把「函数」本身当点：赋范空间与 Banach 空间、有界线性算子与对偶、$H^*\cong H$ 的 Hilbert 空间，再用 Baire 纲一次抽出三大定理（一致有界 / 开映射 / 闭图像）。
+
+### 星团：赋范空间与有界算子
+> 选出「度量」里能算长度的那一层（范数 → 等价范数 → 单位球紧 ⟺ 有限维），再把线性算子装上算子范数：有界 ⟺ 连续 → B(E,F) 是 Banach → 对偶 $E^*$。
+
+#### 范数　`def.norm`
+*定义*　范数（赋范空间）
+
+设 $E$ 是 $\mathbb{K}$（$\mathbb{K} = \mathbb{R}$ 或 $\mathbb{C}$）上的向量空间。函数 $\|\cdot\| : E \to [0, +\infty)$ 叫**范数**，若
+
+1. $\|x\| = 0 \iff x = 0$；
+2. $\|\lambda x\| = |\lambda|\,\|x\|$；
+3. $\|x + y\| \le \|x\| + \|y\|$。
+
+带范数的空间叫**赋范空间**。只满足 2、3（允许非零元素有零范数）叫**半范数**。
+
+范数比距离多的是**线性**：它只记住「离原点多远」，距离由平移得到（见「范数诱导的距离」）。所以赋范空间是「有原点、有尺度、平移不变」的度量空间。
+
+⚠️ 半范数不等于范数：商掉零范数子空间才成为范数（$L^p$ 的构造里「$\|f\|_p = 0$ 只说明 $f = 0$ a.e.」就是这件事，见「$L^p$ 范数」）。
+
+参考：泛函分析讲义 2026-09-28；Rudin, Functional Analysis, Ch. 1
+
+#### 范数诱导的距离　`prop.norm-induces-metric`
+*命题*　范数诱导的距离：平移不变 + 齐次
+
+令 $d(x, y) := \|x - y\|$。则 $d$ 是 $E$ 上的距离，并且
+
+- **平移不变**：$d(x + z,\ y + z) = d(x, y)$；
+- **齐次**：$d(\lambda x,\ \lambda y) = |\lambda|\,d(x, y)$；
+- 每个球 $B(x, r)$ 都是**凸**的。
+
+反过来，若距离满足平移不变与齐次，则 $\|x\| := d(x, 0)$ 是范数，且它诱导回这个距离。
+
+这条说清了「赋范」比「度量」多出来的是什么：**平移不变 + 齐次 + 球凸**。所以「这个度量是否来自范数」是一个有内容的问题（反例：$\min(d, 1)$ 与 $\sum_i 2^{-i}\frac{|x_i - y_i|}{1 + |x_i - y_i|}$ 都不平移不变）。
+
+⭐ 球凸这一条后面要用两次：凸集上的最近点（Hilbert 的投影定理）、以及「开球的像是否开」（开映射定理）。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 等价范数　`def.norm-equivalence`
+*定义*　强弱范数与等价范数
+
+设 $p, q$ 是 $E$ 上两个范数。称 $p$ **强于** $q$（记 $q \preceq p$），若存在 $C > 0$ 使
+
+$$q(x) \le C\,p(x) \qquad \forall x \in E .$$
+
+若互相强于，称 $p$ 与 $q$ **等价**，记 $p \sim q$。
+
+等价 $\iff$ 诱导同一个拓扑 $\iff$ 同一批 Cauchy 列 $\iff$ 同一批收敛列。
+
+⚠️ 强弱不对称，而且方向和直觉相反：**强**范数（$p$ 大）的球更小、开集更少、收敛更难、Cauchy 列更多。所以「换成强范数」会**减少**收敛的东西 —— 这也是为什么要挑最弱的、够用的范数（例如弱拓扑）。
+
+⚠️ 等价不保完备性以外的一切：两个等价范数下完备性一样（Cauchy 列集合相同），但**极值问题**的答案可以不同（球不同）。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 有限维范数等价　`thm.norm-equiv-finite-dim`
+*定理*　有限维空间上所有范数等价
+
+设 $\dim E < \infty$。则 $E$ 上任意两个范数等价；等价地，任取一组基 $e_1, \ldots, e_n$，则存在 $\alpha, \beta > 0$ 使
+
+$$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty := \max_{1 \le k \le n} |x_k| .$$
+
+证法只有两步：**上界**用三角不等式 $\|x\| \le \sum |x_k|\,\|e_k\| \le \|x\|_\infty \sum \|e_k\|$；**下界**把 $\|\cdot\|$ 看成单位球面 $S = \{x : \|x\|_\infty = 1\}$ 上的连续函数 —— $S$ 紧、$\|\cdot\|$ 无处为零，故取下确界 $\alpha > 0$。
+
+⭐ 整条定理的实质是「**紧 + 连续 + 无零点 $implies$ 有正的最小值**」，也就是「单位球面紧」。所以它在无穷维必错（见「单位球紧 $\iff$ 有限维」）。
+
+⚠️ 反例（讲义没有列，但值得记）：$C[0,1]$ 上 $\|\cdot\|_\infty$ 严格强于 $\|\cdot\|_1$：$f_n(x) = x^n$ 在 $\|\cdot\|_1$ 下趋于 $0$，却**不**一致收敛于 $0$（点态极限是 $x = 1$ 处的跳变）。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 几乎正交引理　`lem.almost-orthogonal`
+*引理*　闭真子空间外的单位向量（Riesz 引理）
+
+设 $F \subset E$ 是赋范空间 $E$ 的**闭**真子空间。则对每个 $\varepsilon \in (0,1)$ 存在 $e \in E$ 使
+
+$$\|e\| = 1, \qquad d(e, F) := \inf_{y \in F} \|e - y\| \ge 1 - \varepsilon .$$
+
+证明：取 $x \notin F$，因 $F$ 闭有 $d := d(x, F) > 0$；取 $y' \in F$ 使 $\|x - y'\| \le d/(1 - \varepsilon)$，令 $e = (x - y')/\|x - y'\|$。对任意 $y \in F$，$y' + \|x - y'\|\,y \in F$，于是
+
+
+
+$$\|e - y\| = \frac{\|x - y' - \|x - y'\| y\|}{\|x - y'\|} \ge \frac{d}{\|x - y'\|} \ge 1 - \varepsilon .$$
+
+⭐ 这叫「几乎正交」：**在无穷维里拿不到真正的正交**（一般没有内积），只能拿到「$1 - \varepsilon$ 的正交」。这一步是「有限维 $\ne$ 无穷维」最省力的裂缝，单位球紧性的反方向全靠它。
+
+⭐ 反面参照：Hilbert 空间里可以取 $\varepsilon = 0$（每个闭子空间都有正交补，见「闭子空间的正交投影」）—— 这也说明 Hilbert 空间在赋范空间里是「特殊的好」。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 单位球紧 ⟺ 有限维　`thm.riesz-ball-compact`
+*定理*　闭单位球紧 $\iff$ 有限维（Riesz）
+
+赋范空间 $E$ 的闭单位球 $B_E = \{x \in E : \|x\| \le 1\}$ 紧 $\iff \dim E < \infty$。
+
+「$\Longleftarrow$」：有限维时范数都等价，用 $\|\cdot\|_\infty$ 的坐标球（有界闭集）套 Heine–Borel。
+
+「$\Longrightarrow$」：若 $\dim E = \infty$，用几乎正交引理递归取 $e_1, e_2, \ldots$，满足 $\|e_n\| = 1$ 且 $d(e_n, \operatorname{span}\{e_1,\ldots,e_{n-1}\}) \ge 1/2$。于是 $\|e_n - e_m\| \ge 1/2$（$n \ne m$），这列没有收敛子列，与 $B_E$ 紧（列紧）矛盾。
+
+⭐ 这是「有限维 / 无穷维」的分水岭：**闭有界集不再紧**。所以优化里的「闭有界 $implies$ 有极小元」在无穷维全废 —— 必须换全有界（相对紧）、或弱拓扑（Banach–Alaoglu）、或强制条件（coercivity）。
+
+参考：泛函分析讲义 2026-09-28；Riesz 1918
+
+#### 有界线性算子　`def.bounded-operator`
+*定义*　有界线性算子与算子范数
+
+设 $u : E \to F$ 线性。称 $u$ **有界**，若存在 $C$ 使 $\|u(x)\| \le C\|x\|$ 对一切 $x$ 成立。全体记 $B(E, F)$，并记 $B(E) := B(E, E)$。定义
+
+$$\|u\| := \sup_{\|x\| \le 1} \|u(x)\| = \sup_{\|x\| = 1} \|u(x)\| = \sup_{x \ne 0} \frac{\|u(x)\|}{\|x\|} ,$$
+
+它使 $B(E, F)$ 成为赋范空间（$E = 0$ 时约定 $\|u\| = 0$）。
+
+⚠️ **名字是个历史误会**：这里「有界」**不是**「函数有界」（只有 $E = 0$ 时才等价）。真正的含义是「把有界集送到有界集」，等价于**连续**（下一条）。读老书时别被这个名字带歪。
+
+⚠️ 三个 sup 相等要求 $E \ne 0$（否则球面空集、sup 无意义）。
+
+⭐ 无穷维里 $L(E, F) \ne B(E, F)$：不连续的线性算子确实存在（要用选择公理造）。所以本图把「线性」与「有界」分成两个节点：$L(E,F)$ 是**代数**上的 Hom，$B(E,F)$ 是其中连续的那部分。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 连续 ⟺ 有界　`thm.linear-continuous-bounded`
+*定理*　线性映射连续 $\iff$ 有界
+
+设 $E, F$ 是赋范空间，$u : E \to F$ 线性。则下列**等价**：
+
+1. $u$ 连续；
+2. $u$ 在**某一点**连续；
+3. $u$ 在 $0$ 连续；
+4. $u$ 有界（即 $\|u(x)\| \le C\|x\|$）；
+5. $u$ 是 Lipschitz 的。
+
+唯一有内容的一步是「在 0 连续 $\implies$ 有界」，而且必须反证：若不存在这样的 $C$，则对每个 $n$ 有 $x_n$ 使 $\|u(x_n)\| \ge n\|x_n\|$；令 $y_n = x_n / (n\|x_n\|)$，则 $\|y_n\| \to 0$ 而 $\|u(y_n)\| \ge 1$ —— 与在 $0$ 连续矛盾。
+
+⭐ 「一点连续就处处连续」是**线性**的赠品（平移把任意点搬到 $0$）。对非线性映射这句话当然错。
+
+⭐ 于是「连续线性算子」「有界线性算子」「Lipschitz 线性算子」从此是同义词，$B(E,F)$ 这个名字里的「B」正是 bounded。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 算子乘法的范数不等式　`prop.operator-algebra`
+*命题*　复合与算子范数：$\|vu\| \le \|v\|\,\|u\|$
+
+设 $u \in B(E, F)$，$v \in B(F, G)$。则 $v \circ u \in B(E, G)$ 且
+
+$$\|v \circ u\| \le \|v\| \, \|u\| .$$
+
+特别地 $B(E)$ 是**赋范代数**（乘法连续），且 $\|\mathrm{id}\| = 1$。
+
+一句话：$\|vu(x)\| \le \|v\|\,\|u(x)\| \le \|v\|\,\|u\|\,\|x\|$。
+
+⚠️ $B(E)$ 一般**不交换**（$\dim E \ge 2$ 时），所以它是「非交换 Banach 代数」的原型，而不是函数代数的类比对象。
+
+$\|\cdot\|$ 是**次可乘**的（submultiplicative）——这条不等式就是「Banach 代数」定义里的第二条，也是 Neumann 级数能收敛的唯一依据。
+
+参考：泛函分析讲义 2026-09-28
+
+#### Banach 代数　`def.banach-algebra`
+*定义*　Banach 代数
+
+结合代数 $\mathcal{A}$ 配范数 $\|\cdot\|$ 叫 **Banach 代数**，若
+
+1. $(\mathcal{A}, \|\cdot\|)$ 是 Banach 空间；
+2. 乘法次可乘：$\|xy\| \le \|x\|\,\|y\|$。
+
+若还有单位元且 $\|1\| = 1$，叫**含单位 Banach 代数**。
+
+2 保证乘法连续（双线性 + 有界）。
+
+例：$B(E)$（$E$ Banach）、$C(K)$（上确界范数）、$L^1(\mathbb{R})$（卷积乘法）、$\ell^1(\mathbb{Z})$、以及 $C^*$-代数（再要一条 $\|x^* x\| = \|x\|^2$）。
+
+⭐ 这一族是「把分析问题化成代数问题」的通用容器：Gelfand 理论（交换 Banach 代数 $\cong C(\text{极大理想空间})$）就是从这条定义出发的。
+
+参考：泛函分析讲义 2026-09-28
+
+#### B(E,F) 完备　`thm.bounded-operators-banach`
+*定理*　$F$ 完备 $\implies$ $B(E,F)$ 是 Banach 空间
+
+设 $E$ 赋范、$F$ Banach。则 $(B(E, F), \|\cdot\|)$ 是 Banach 空间。特别地，对偶空间 $E^* = B(E, \mathbb{K})$ **总是** Banach（不论 $E$ 是否完备）。
+
+证法（逐点取极限）：取 $B(E,F)$ 里的 Cauchy 列 $u_n$。对每个 $x$，$\|u_n x - u_m x\| \le \|u_n - u_m\|\,\|x\| \to 0$，故 $(u_n x)$ 在 $F$ 里 Cauchy，有极限 $u(x)$。$u$ 线性（极限保线性）、有界（取 $N$ 使 $n, m \ge N$ 时 $\|u_n - u_m\| < \varepsilon$，则 $\|u(x)\| \le \|u(x) - u_N(x)\| + \|u_N(x)\| \le (\varepsilon + \|u_N\|)\|x\|$），且 $\|u_n - u\| \to 0$。
+
+⭐ 要害是「$\|u_n\|$ 一致有界」（Cauchy 列必一致有界），所以极限的范数不会跳。
+
+⚠️ $E$ 不需要完备：完备性只用在 $F$ 上。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 连续对偶空间　`def.dual-banach`
+*定义*　对偶空间 $E^*$（连续对偶）
+
+赋范空间 $E$ 的**对偶空间**指
+
+$$E^* := B(E, \mathbb{K}) , \qquad \|\varphi\| := \sup_{\|x\| \le 1} |\varphi(x)| .$$
+
+由「$B(E,F)$ 完备」，$E^*$ 永远是 Banach 空间。
+
+⚠️ 与**代数对偶** $E^\vee = \operatorname{Hom}(E, \mathbb{K})$ 区分：无穷维时 $E^* \subset E^\vee$，不连续的线性泛函属于后者而不属于前者（要选择公理才能造出来）。本图里 `def.dual-space` 是有限维的对偶（那时两者相同）。
+
+⭐ 对偶是把「空间」变成「函数」的唯一正经通道：弱拓扑、Riesz 表示、Hahn–Banach、对偶配对全在 $E^*$ 上进行。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 有界算子的延拓　`thm.bounded-extension`
+*定理*　稠密子空间上的有界算子唯一延拓
+
+设 $E, F$ 都是 Banach 空间，$G \subseteq E$ 是**稠密**子空间，$u : G \to F$ 有界（线性）。则存在**唯一**的有界线性 $\tilde u : E \to F$ 使 $\tilde u|_G = u$，并且
+
+$$\|\tilde u\| = \|u\| .$$
+
+证法：给 $x \in E$ 取 $g_n \in G$，$g_n \to x$。由 $\|u(g_n) - u(g_m)\| \le \|u\|\,\|g_n - g_m\|$ 知 $(u(g_n))$ 是 Cauchy 列，$F$ 完备给出极限；定义 $\tilde u(x) := \lim_n u(g_n)$（与取法无关），逐条验证线性、$\|\tilde u\| \le \|u\|$，而在 $G$ 上 $\tilde u = u$ 又给出 $\|\tilde u\| \ge \|u\|$。
+
+⭐ 这是「**先在好用的稠密子集上造算子，再延拓**」的许可证：Fourier 变换（$L^1 \cap L^2$ 上先定义）、Stieltjes 积分、特征值问题的变分形式，全走这一步。
+
+⚠️ $F$ 完备不能去掉（去掉就没有极限可拿）；$G$ 稠密也不能去掉（不稠密时延拓不唯一，只剩 Hahn–Banach 那种「保范但有选择」的延拓）。
+
+参考：泛函分析讲义 2026-09-28
+
+#### Neumann 级数　`thm.neumann-series`
+*定理*　$\|u\| < 1 \implies I - u$ 可逆（Neumann 级数）
+
+设 $E$ Banach，$u \in B(E)$，$\|u\| < 1$。则 $I - u$ 可逆，且
+
+$$(I - u)^{-1} = \sum_{k=0}^{\infty} u^k , \qquad \|(I - u)^{-1}\| \le \frac{1}{1 - \|u\|} ,$$
+
+右端按算子范数绝对收敛。
+
+证法：$\|u^k\| \le \|u\|^k$（次可乘），故 $\sum \|u^k\| \le (1 - \|u\|)^{-1} < \infty$；$B(E)$ 完备（$E$ 完备 +「$B(E,F)$ 完备」）故级数收敛到某 $v$。部分和满足 $(I - u)\sum_{k<n} u^k = I - u^n \to I$，同法右乘，得 $v = (I-u)^{-1}$。
+
+⭐ 这是三大定理之外最常用的「开工工具」：它给的是**显式**的逆，且只要求 $\|u\| < 1$。摄动论（$A + tB$ 的谱、Kato 的解析扰动）、数值分析里的迭代收敛、Banach 逆映射定理里的局部逆，全靠它。
+
+⚠️ 反过来「$I - u$ 可逆 $\implies$ $\|u\| < 1$」是**错的**：$u = -2I$ 时 $I - u = 3I$ 可逆。有界逆定理给的是另一件事（双射 $implies$ 逆连续），不是这条。
+
+参考：泛函分析讲义 2026-09-28
+
+#### 可分空间　`def.separable-space`
+*定义*　可分空间
+
+拓扑空间（特别地赋范空间）$E$ 叫**可分**，若它含一个可数稠密子集。
+
+**可分的**：$\ell^p(\mathbb{N})$（$1 \le p < \infty$）、$L^p(\Omega)$、$C(K)$（$K$ 紧度量）、任何有限维空间。
+
+**不可分的**：$\ell^\infty(\mathbb{N})$。证法：取 $A = \{(e_n) : e_n = \pm 1\}$（$2^{\aleph_0}$ 个点），任意两点距离 $\ge 2$，故半径 $1$ 的两两不交球有不可数多个 —— 可数稠密集顶多覆盖可数多个。
+
+⭐ 讲义里那句「不可分 $\implies$ 不能由一个可数集作为代数生成」很值得记：它把「基」的直觉挡在门外 —— $\ell^\infty$ 连可数 Schauder 基都没有（见「Schauder 基」）。
+
+⚠️ 可分性对**闭子空间**遗传、对**商**遗传，但对连续像不一定、对乘积不遗传（$\mathbb{R}^{\mathbb{R}}$ 不可分）。
+
+参考：泛函分析讲义 2026-09-28
+
+#### Schauder 基　`def.schauder-basis`
+*定义*　Schauder 基
+
+赋范空间 $E$ 的序列 $(e_n)_{n \in \mathbb{N}}$ 叫 **Schauder 基**，若对每个 $x \in E$ 存在**唯一**的标量列 $(a_n)$ 使
+
+$$x = \sum_{n=1}^{\infty} a_n e_n \qquad (\text{按范数收敛}) .$$
+
+🆚 **Hamel 基（代数基）**：只允许**有限**线性组合。无穷维 Banach 空间的 Hamel 基一定**不可数**（Baire 纲定理的经典应用：若可数，则 $E$ 是可数个有限维闭子空间之并，与 Baire 矛盾）。
+
+Schauder 基要求的是**级数收敛**，所以可以是可数的；而且 Schauder 基 $implies$ **可分**（有理系数的有限组合稠密）。
+
+⚠️ 「有 Schauder 基」曾长期是开放问题：Enflo (1973) 造出无 Schauder 基的可分 Banach 空间，所以它**不能**当成默认假设。
+
+⚠️ 与 Hilbert 空间的「正交基」不同：Schauder 基不要求正交、也不要求唯一性来自内积；Hilbert 空间里正交基一定是 Schauder 基，反之不然。
+
+参考：泛函分析讲义 2026-09-28；Enflo, Acta Math. 130 (1973)
+
+#### ℓ²(I)　`def.ell2-space`
+*定义*　$\ell^2(I)$：任意指标集上的平方可和族
+
+对任意指标集 $I$，令
+
+$$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 := \sup_{\substack{J \subseteq I \\ |J| < \infty}} \Bigl( \sum_{j \in J} |x_j|^2 \Bigr)^{1/2} < \infty \right\} ,$$
+
+内积 $\langle x, y\rangle := \sum_{i \in I} x_i \overline{y_i}$。
+
+⭐ 那个「上确界」是为了绕开「不可数求和」：$\|x\|_2 < \infty$ 时，$\{i : x_i \ne 0\}$ 一定**至多可数**（否则取 $J_n$ 含 $n$ 个 $|x_j| > 1/n$ 的指标，得 $\|x\|_2^2 \ge n \cdot 1/n^2 = 1/n \to 0$ 的矛盾），于是求和其实是对一个可数集求和。
+
+于是 $(x_i) \mapsto$（非零坐标的级数）是良定义的，$\ell^2(I)$ 是 Hilbert 空间（完备性由「$\ell^p(I)$ 是 Banach」那类逐项论证给出）。
+
+⭐ 这条是「可分 Hilbert 空间 $\cong \ell^2$」里 $\ell^2$ 那一端：$I$ 取可数时就是通常的 $\ell^2$。
+
+参考：泛函分析讲义 2026-09-28 / 2026-10-19
+
+### 星团：Hilbert 空间
+> 范数来自内积的那一类：平行四边形法则把它挑出来 → 凸闭集上有投影 → $H^*\cong\overline H$（Riesz）→ 伴随算子 → 正交基与 $\ell^2$。
+
+#### Hilbert 空间　`def.hilbert-space`
+*定义*　Hilbert 空间（完备的内积空间）
+
+设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（本图约定：**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。若 $(H, \|\cdot\|)$ 完备，则叫 **Hilbert 空间**。
+
+原型：$L^2(\Omega, \mu)$（完备性来自 Riesz–Fischer），以及 $\ell^2(I)$。有限维内积空间自动完备，所以它们是退化的 Hilbert 空间。
+
+⚠️ 惯例冲突：数学文献常取「对第一变元线性」，物理（Dirac）取「对第二变元线性」。差一个共轭，但**改惯例会连带改 Riesz 表示里的共轭线性**（$y \mapsto \langle \cdot , y\rangle$ 是共轭线性还是线性），所以一份文档里必须统一。
+
+⭐ Hilbert 空间 = 「自对偶的 Banach 空间」（见「Riesz 表示定理（Hilbert 版）」），这是它能把线性泛函当成向量用的根源。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 极化恒等式　`thm.polarization`
+*定理*　极化恒等式：内积由范数恢复
+
+在实内积空间：
+
+$$\langle x, y\rangle = \tfrac{1}{4}\bigl( \|x + y\|^2 - \|x - y\|^2 \bigr) .$$
+
+在复内积空间：
+
+$$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
+
+直接把 $\|x \pm y\|^2 = \|x\|^2 \pm 2\,\operatorname{Re}\langle x,y\rangle + \|y\|^2$ 相减即得实情形；复情形多取一个 $iy$ 把虚部抽出来。
+
+⭐ 意义：**内积完全由范数决定**。所以「两个内积空间等距」就等于「内积空间同构」；也所以判断「一个范数是否来自内积」才是一个真问题（下一条）。
+
+⚠️ 复情形的系数是 $i^k$（四个都要：$1, i, -1, -i$），不是 $(-1)^k$ ——写成 $(-1)^k$ 只能抽出实部，会把内积丢掉一半信息。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 平行四边形法则　`thm.parallelogram-inner-product`
+*定理*　平行四边形法则 $\iff$ 范数来自内积（Jordan–von Neumann）
+
+赋范空间 $E$ 的范数来自某个内积 $\iff$ 它对一切 $x, y$ 满足**平行四边形法则**
+
+$$\|x + y\|^2 + \|x - y\|^2 = 2\|x\|^2 + 2\|y\|^2 .$$
+
+「$\implies$」直接展开。「$\Longleftarrow$」用极化恒等式**定义** $\langle x,y\rangle$，再逐条验公理：对实情形，写 $\langle x, y+z\rangle$ 并与 $\langle x,y\rangle + \langle x,z\rangle$ 相减，用平行四边形法则化简得 $0$；齐次性先对有理数成立，再用**连续性**放到实数上（范数连续）；复情形再多验一步 $\langle x, iy\rangle = i\langle x,y\rangle$。
+
+⭐ 经典反例：$\ell^1$、$\ell^\infty$、$C[0,1]$ 都不满足（取不交支撑的 $x, y$ 一看）。所以它们的范数**不是**内积给的 —— 这是「Hilbert 空间为什么特殊」的定量答案。
+
+⚠️ 讲义里写的是「$\|x+y\|^2 + \|x-y\|^2 = 2\|x\|^2 + 2\|y\|^2$」加一句「平行四边行」——把几何里的「平行四边形两条对角线平方和 = 四边平方和」直接搬到了范数上。
+
+参考：泛函分析讲义 2026-10-12；Jordan–von Neumann, Ann. of Math. 36 (1935)
+
+#### 凸闭集的最近点　`thm.projection-convex`
+*定理*　凸闭集上的最近点（投影算子）
+
+设 $H$ 是 Hilbert 空间，$C \subseteq H$ 非空、**凸**、**闭**。则
+
+1. 每个 $x \in H$ 有**唯一**的 $y = P_C(x) \in C$ 使 $\|x - y\| = d(x, C)$；
+2. $y = P_C(x) \iff \operatorname{Re}\langle x - y, z - y\rangle \le 0$ 对一切 $z \in C$；
+3. $\|P_C(x) - P_C(x')\| \le \|x - x'\|$（非扩张）；
+4. $P_C \circ P_C = P_C$。
+
+(1) 的证明全靠平行四边形法则：取极小化序列 $y_n$，则
+
+
+
+$$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + y_m}{2} \Bigr\|^2 \le 2(d^2 + \tfrac1n) + 2(d^2 + \tfrac1m) - 4d^2 \to 0 ,$$
+
+
+
+（中间那个点落在 $C$ 里，所以它的距离 $\ge d$）—— Cauchy 列 + $C$ 闭给出极限。唯一性同式取两个最小点即得。
+
+(2) 是「变分不等式」：对 $z \in C$、$t \in (0,1)$，$y + t(z-y) \in C$，展开 $\|x - (y + t(z-y))\|^2 \ge d^2$、舍 $t^2$ 项。
+
+⚠️ **凸**不能去掉：$\mathbb{R}^2$ 的单位圆周上最近点不唯一；闭但不能去掉：开圆盘里没有最近点。
+
+⭐ 这是无穷维里「极小元存在」最干净的样本：强制性（$\|x\| \to \infty$）+ 弱下半连续 + 凸，就能推出存在性；这里的凸集不然。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 闭子空间的正交投影　`thm.projection-subspace`
+*定理*　正交投影与正交分解：$H = E \oplus E^\perp$
+
+设 $H$ 是 Hilbert 空间，$E \subseteq H$ 是**闭**子空间。则
+
+1. $y = P_E(x) \iff y \in E$ 且 $x - y \in E^\perp$；
+2. $P_E$ 线性，且 $\|P_E\| \le 1$（$E \ne 0$ 时为 $1$）；
+3. 正交分解 $H = E \oplus E^\perp$，且 $\|x\|^2 = \|x - P_E x\|^2 + \|P_E x\|^2$。
+
+证法：由凸闭集投影，(1) 的「$\implies$」把 $z$ 换成 $\pm z$ 消掉实部得 $\operatorname{Re}\langle x - y, z\rangle \le 0$ 对所有 $z \in E$，即 $x - y \perp E$；「$\Longleftarrow$」用 $\|x - z\|^2 = \|x - y\|^2 + \|y - z\|^2 \ge \|x - y\|^2$。(2) 用 $\alpha_1 x_1 + \alpha_2 x_2 - \alpha_1 P x_1 - \alpha_2 P x_2 \perp E$。(3) 勾股定理。
+
+⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\ell^2$ 里稠密但不闭，最近点存在但**不落在 $E$ 里**，正交分解也失效。
+
+⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \subset \ell^\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。
+
+参考：泛函分析讲义 2026-10-12
+
+#### Riesz 表示定理（Hilbert 版）　`thm.riesz-hilbert`
+*定理*　Riesz 表示：$H^* \cong \overline{H}$
+
+设 $H$ 是 Hilbert 空间，$\varphi \in H^*$。则存在**唯一**的 $y \in H$ 使
+
+$$\varphi(x) = \langle x, y\rangle \qquad \forall x \in H , \qquad \text{且} \ \|y\| = \|\varphi\| .$$
+
+于是 $y \mapsto \langle \cdot, y\rangle$ 是 $H \to H^*$ 的等距同构（复情形为共轭线性）。
+
+证法：$\varphi = 0$ 取 $y = 0$。否则 $E = \ker\varphi$ 是**闭真**子空间，由正交分解取 $0 \ne z \in E^\perp$，令 $y = \overline{\varphi(z)}\, z / \|z\|^2$；则 $x \mapsto \langle x, y\rangle$ 与 $\varphi$ 在 $E$ 上都为 $0$、在 $z$ 上相等，而 $H = E \oplus \mathbb{K} z$，故相等。$\|y\| = \|\varphi\|$ 由 $\|\varphi\| = \sup_{\|x\| \le 1} |\langle x, y\rangle| = \|y\|$。
+
+⭐ 意义：**Hilbert 空间是自己的对偶**（共轭线性）。Banach 空间一般不是：$(\ell^1)^* = \ell^\infty$、$(\ell^\infty)^* \supsetneq \ell^1$。这让 Hilbert 空间在「像有限维」这条路上走得最远：泛函与向量可以互换。
+
+⚠️ 共轭线性：$\alpha y \mapsto \bar\alpha\,\varphi$。所以严格说不是「同构」而是「共轭等距同构」（anti-linear isometry）。
+
+⚠️ 别与 $L^p$ 的 Riesz 表示混淆：那是 $(L^p)^* \cong L^q$（$1<p<\infty$，$1/p + 1/q = 1$），靠 Hölder 不等式；这条靠正交分解。两者只共享名字。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 伴随算子　`thm.adjoint-hilbert`
+*定理*　伴随算子存在且 $\|u^*\| = \|u\|$
+
+设 $H, K$ 是 Hilbert 空间，$u \in B(H, K)$。则存在**唯一**的 $u^* \in B(K, H)$ 使
+
+$$\langle u^*(x), y\rangle_H = \langle x, \, u(y)\rangle_K \qquad (x \in K,\ y \in H) ,$$
+
+且 $\|u^*\| = \|u\|$。
+
+存在性完全靠 Riesz：固定 $x \in K$，泛函 $y \mapsto \langle x, u(y)\rangle_K$ 在 $H$ 上连续（界 $\le \|x\|\,\|u\|$），由 Riesz 表示得唯一的 $u^*(x)$。再验 $u^*$ 线性（由 $\langle x, u(\cdot)\rangle$ 对 $x$ 线性）与有界；$\|u^*\| = \|u\|$ 用两次 sup 交换。
+
+⭐ 这解释了为什么 Banach 空间没有「伴随」而只有「转置/共轭」：转置活在**对偶**之间（${}^t\!: F^* \to E^*$），而 Hilbert 空间里 $H^* \cong H$ 让转置可以搬回空间上。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 酉算子　`def.unitary-operator`
+*定义*　酉算子与部分等距
+
+设 $u \in B(H)$。称 $u$ 是**酉算子**（unitary），若
+
+$$u\,u^* = u^*\,u = I .$$
+
+称 $u$ 是**部分等距**（partial isometry），若 $u\,u^*$ 与 $u^*u$ 都是正交投影。
+
+酉 $\iff$ 保内积的可逆算子（$\langle ux, uy\rangle = \langle x, y\rangle$ 且满射）。
+
+⚠️ **无穷维里「等距」$\ne$「酉」**：单侧移位 $S(x_1, x_2, \ldots) = (0, x_1, x_2, \ldots)$ 满足 $\|Sx\| = \|x\|$（等距），但不满；$S^*S = I$ 而 $S\,S^* = I - P_{\ker S^*}$ 是投影。这就是「部分等距」这个概念的用处：它把「在某个闭子空间上是等距」包起来。
+
+⭐ 极分解 $u = V|u|$（$V$ 部分等距，$|u| = \sqrt{u^*u}$）就是部分等距的标准出场方式。有限维版本见 `def.unitary-matrix`。
+
+参考：泛函分析讲义 2026-10-12
+
+#### 正交基　`def.orthonormal-set`
+*定义*　标准正交集、完备性与正交基
+
+设 $\{f_i\}_{i \in I} \subseteq H$。
+
+- **正交**：$f_i \perp f_j$（$i \ne j$）；
+- **标准正交**：正交 + $\|f_i\| = 1$；
+- **完备**：$\overline{\operatorname{span}\{f_i\}} = H$；
+- **正交基**：标准正交 + 完备。
+
+⚠️ 完备不是「张成 $H$」而是「张成的**闭包**是整个空间」：$\{e_n\}$ 在 $\ell^2$ 里的代数张成是有限支撑序列，稠密但不等于 $\ell^2$。
+
+⚠️ 无穷维里正交基**不可数例子真实存在**：$L^2(\mathbb{R})$ 的 Hermite 函数可数，但一般 $\ell^2(I)$ 的正交基就是 $\{e_i\}_{i \in I}$，$I$ 可以任意大。
+
+⭐ 有了正交基，Hilbert 空间就变成「不带权重的 $\ell^2$」（见 Bessel/Parseval 与「可分 Hilbert $\cong \ell^2$」）。
+
+参考：泛函分析讲义 2026-10-19
+
+#### Bessel 与 Parseval　`thm.bessel-parseval`
+*定理*　Bessel 不等式与 Parseval 等式
+
+设 $\{e_i\}_{i \in I}$ 标准正交。则对每个 $x \in H$，
+
+**Bessel**：$\displaystyle \|x\|^2 \ge \sum_{i \in I} |\langle x, e_i\rangle|^2$；
+
+且下列等价：
+
+1. $\{e_i\}$ 是正交基；
+2. 对每个 $x$ 取等号（**Parseval**）：$\|x\|^2 = \sum_i |\langle x, e_i\rangle|^2$；
+3. 对每个 $x$：$x = \sum_{i \in I} \langle x, e_i\rangle\, e_i$（按范数收敛）。
+
+Bessel 的证明：对有限 $J$，$0 \le \|x - \sum_{j \in J}\langle x, e_j\rangle e_j\|^2 = \|x\|^2 - \sum_{j \in J}|\langle x,e_j\rangle|^2$，再对 $J$ 取上确界。
+
+⭐ 读法：Bessel 说「坐标投影不增加长度」（$x$ 在子空间上的影子不会比 $x$ 长）；Parseval 说「没有漏掉任何方向」。所以**完备性 $\iff$ 等号成立**——这就是把「基」这件几何事实变成一个**数值等式**。
+
+⚠️ 不可数 $I$ 时 $\sum_{i \in I}$ 要按「非零项至多可数」理解（见 $\ell^2(I)$ 的注），否则这个和没有定义。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 正交基存在　`thm.orthonormal-basis-exists`
+*定理*　每个 Hilbert 空间都有正交基（Zorn）
+
+每个 Hilbert 空间都含一组正交基。
+
+证法：令 $\mathcal{S} = \{ A \subseteq H : A \text{ 标准正交} \}$，按包含成偏序。全序子族的并仍标准正交（每个元素只与族里有限多个打交道），故有上界；Zorn 给极大元 $M$。若 $\overline{\operatorname{span} M} \ne H$，由正交分解取出 $0 \ne z \perp \overline{\operatorname{span} M}$，则 $M \cup \{z/\|z\|\}$ 严格更大，矛盾。
+
+⭐ 这是**非构造**的存在性（Zorn = 选择公理）：能显式写出正交基的只有少数空间（$L^2[0,1]$ 的 Fourier 基、球面上的球谐函数、Hermite 函数）。
+
+⚠️ 与 Gram–Schmidt 的分工：G–S 只从**可数**线性无关族出发、靠归纳造标准正交集（`thm.gram-schmidt`）；正交基一般不可数，只能靠 Zorn。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 可分 Hilbert 空间等距于 ℓ²　`thm.separable-hilbert-is-l2`
+*定理*　可分 Hilbert 空间等距同构于 $\ell^2$
+
+设 $H$ 是 Hilbert 空间，$\dim H = |I|$（Hilbert 维数）。则 $H$ 等距同构于 $\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\ell^2(\mathbb{N})$。
+
+映射 $U : H \to \ell^2(I)$，$U(x) := (\langle x, e_i\rangle)_{i \in I}$。由 Bessel 它入 $\ell^2$、由 Parseval 它保范；满射性：若 $(\lambda_i) \in \ell^2$，则部分和 $\sum_{i \in J}\lambda_i e_i$ 是 Cauchy（$\|\sum_{J \setminus J'}\lambda_i e_i\|^2 = \sum_{J \setminus J'}|\lambda_i|^2$），其极限的坐标就是 $\lambda_i$。
+
+⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。
+
+⚠️ 「可分」不能去掉：$\ell^2(I)$（不可数 $I$）与 $\ell^2(J)$ 同构 $\iff |I| = |J|$（用正交基的基数比）。
+
+参考：泛函分析讲义 2026-10-19
+
+### 星团：$C(K)$ 与 Stone–Weierstrass
+> 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
+
+#### C(K,E)　`def.ck-space`
+*定义*　$C(K,E)$ 与一致度量
+
+设 $K$ 紧 Hausdorff，$(E, d)$ 度量。在 $C(K, E)$ 上定义
+
+$$\Delta(f, g) := \sup_{x \in K} d\bigl(f(x), g(x)\bigr) .$$
+
+$E$ 赋范时它就是一致范数 $\|f\| = \sup_x \|f(x)\|$。
+
+上确界取得到（紧 + 连续）。这个度量就是「一致收敛」的度量，不是「逐点收敛」的（与 `def.uniform-convergence` 同口径）。
+
+⭐ 记号允许任意度量空间 $E$，所以这一团的结论（完备性、Arzelà–Ascoli）比经典的 $\mathbb{R}$-值版本更宽。
+
+参考：泛函分析讲义 2026-10-19
+
+#### C(K,E) 完备　`thm.ck-complete`
+*定理*　$E$ 完备 $\implies$ $C(K,E)$ 完备
+
+设 $K$ 紧 Hausdorff。$E$ 完备 $\implies$ $(C(K, E), \Delta)$ 完备。$E$ 赋范时 $C(K, E)$ 是 Banach 空间。
+
+证法：Cauchy 列 $\implies$ 逐点 Cauchy（$d(f_n(x), f_m(x)) \le \Delta(f_n, f_m)$）$\implies$ 逐点极限 $f$（$E$ 完备）$\implies$ $\Delta$ 一致的估计给「$f_n \to f$ 一致」$\implies$ 一致极限保连续。
+
+⭐ 为什么重要：一致收敛空间让人能「把连续函数的极限留在连续函数里」，这是 Stone–Weierstrass、Arzelà–Ascoli、乃至 $C^*$-代数全部的前提。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 等度连续　`def.equicontinuous`
+*定义*　等度连续与一致等度连续
+
+设 $K$ 拓扑空间、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。
+
+- $\mathcal{H}$ 在 $x_0 \in K$ **等度连续**：$\forall \varepsilon > 0$ 存在 $x_0$ 的邻域 $U$ 使 $d(f(x), f(x_0)) < \varepsilon$ 对**一切** $f \in \mathcal{H}$、$x \in U$ 同时成立。
+- $\mathcal{H}$ 在 $K$ 上等度连续：在每点 $x \in K$ 等度连续。
+- $K$ 度量空间时，$\mathcal{H}$ **一致等度连续**：$\forall \varepsilon > 0$ $\exists \eta > 0$ 使 $\delta(x, y) < \eta \implies d(f(x), f(y)) < \varepsilon$ 对一切 $f \in \mathcal{H}$ 同时成立。
+
+⚠️ 要害在「**对一切 $f$ 同时**」。去掉这一条就只是「每个 $f$ 各自连续」—— 那是 $\mathcal{H} \subseteq C(K,E)$ 的定义，什么也没说。
+
+$\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
+
+⭐ 这是紧性（Arzelà–Ascoli）里**唯一非平凡**的假设：逐点全有界只是「不发散」，等度连续才是「不会越抖越厉害」。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 等度连续与一致等度连续　`thm.equicontinuous-uniform`
+*定理*　紧度量空间上等度连续 $\implies$ 一致等度连续
+
+设 $(K, \delta)$ 紧度量、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$ 等度连续。则 $\mathcal{H}$ **一致等度连续**。
+
+证法：给 $\varepsilon > 0$。每点 $x$ 取 $\eta_x > 0$ 使 $\delta(y, x) < \eta_x \implies d(f(y), f(x)) < \varepsilon/2$（对一切 $f$）。紧性给有限覆盖 $K = \bigcup_i B(x_i, \eta_{x_i}/2)$，取 $\eta := \min_i \eta_{x_i}/2$。若 $\delta(x, y) < \eta$，取 $i$ 使 $x \in B(x_i, \eta_{x_i}/2)$（故 $y \in B(x_i, \eta_{x_i})$），于是 $d(f(x), f(y)) \le d(f(x), f(x_i)) + d(f(x_i), f(y)) < \varepsilon$。
+
+⭐ 讲义末尾用的是 **Lebesgue 数** $\lambda$（$\delta(x,y) < \lambda$ 就落在某个覆盖成员里）。两种写法等价；Lebesgue 数版本的好处是 $\lambda$ 只依赖覆盖。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 广义 Arzelà–Ascoli　`thm.arzela-ascoli-general`
+*定理*　广义 Arzelà–Ascoli：全有界 $\iff$ 等度连续 + 逐点全有界
+
+设 $K$ 紧、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。则下列**等价**：
+
+1. $\mathcal{H}$ 在 $(C(K,E), \Delta)$ 中**全有界**；
+2. (a) $\mathcal{H}$ 等度连续；(b) $\mathcal{H}(x) := \{f(x) : f \in \mathcal{H}\}$ 对每个 $x \in K$ **全有界**。
+
+「1 $\implies$ 2」：全有界给有限 $\varepsilon$-网 $f_1, \ldots, f_n$，则 $\mathcal{H} \cup \{f_1,\ldots,f_n\}$ 仍等度连续（有限多个连续函数 + 一个等度连续族）。
+
+⭐ 与本图 `thm.arzela-ascoli`（$\mathbb{R}$ 值、紧距离空间、一致有界）是同一个定理的两档：这条允许 $E$ 是任意度量空间，并把「一致有界」精确化成「逐点全有界」。
+
+⚠️ 「逐点全有界」不能换成「逐点有界」：$E$ 不完备时相对紧需要「盖得住」，有界只是「不发散」。
+
+配合「$C(K,E)$ 完备」就是标准形式：**全有界 + 完备 $=$ 相对紧**。
+
+参考：泛函分析讲义 2026-10-19
+
+#### 子代数与分离点　`def.subalgebra-separating`
+*定义*　子代数、分离点、格
+
+设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{K})$。
+
+- $A$ 是**子代数**：是向量空间且对乘法封闭；
+- $A$ **分离点**：$x \ne y \implies \exists f \in A$，$f(x) \ne f(y)$；
+- $A$ 是**格**（lattice）：对 $\min, \max$ 封闭。
+
+「分离点」是 Stone–Weierstrass 的必要条件：不分离两个点，就把它们粘成一点，$A$ 张不出粘出来的空间上的 $C$。
+
+⚠️ 自伴矩阵的例子（讲义）：自伴矩阵按 $A \ge B \iff A - B$ 半正定排序，一般**不是格**（两个自伴矩阵的逐点 min 未必自伴）。所以「格」不是自动的，要靠「闭 + 含单位」换。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 闭子代数是格　`lem.closed-subalgebra-lattice`
+*引理*　含单位的闭子代数是格
+
+设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{R})$ 是**含单位**的**闭**子代数。则 $A$ 对 $\min, \max$ 封闭。
+
+证法：$\max(f, g) = \frac12(f + g + |f - g|)$，所以只需证「$f \ge 0$、$f \in A$ $\implies$ $\sqrt f \in A$」。不妨 $\|f\| < 1$：$\sqrt{1 - u}$ 在 $[-1+\varepsilon, 1-\varepsilon]$ 上解析，其 Taylor 级数一致逼近，代 $u = 2 - \varepsilon - f^2 \in A$ 得多项式 $p(2-\varepsilon-f^2) \in A$，它一致逼近 $\sqrt f$；$A$ 闭故 $\sqrt f \in A$。
+
+⚠️ 「含单位」不能去掉：不给 $1$ 的话 $\sqrt{}$ 这一步没有常数可写。
+
+⭐ 这是 Stone–Weierstrass 的**第一步**：先把「代数」升级成「格」，后面才能用 $\min/\max$ 上下夹住 $f$。
+
+参考：泛函分析讲义 2026-10-26
+
+#### Stone–Weierstrass 定理　`thm.stone-weierstrass`
+*定理*　Stone–Weierstrass 定理（实情形）
+
+设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{R})$ 是**含单位**的**子代数**，且 $A$ **分离点**。则 $\overline A = C(K, \mathbb{R})$。
+
+证明三步：
+
+① 取闭包：$\overline A$ 仍含单位、分离点，并由「含单位的闭子代数是格」成为**格**。
+
+② **两点插值**：$x \ne y$、目标值 $\alpha, \beta \in \mathbb{R}$。取 $g \in A$ 使 $g(x) \ne g(y)$，解二元一次方程组得 $f = a\cdot 1 + b g \in A$ 使 $f(x) = \alpha$、$f(y) = \beta$。
+
+③ **上下夹**：固定 $f \in C(K)$ 与 $\varepsilon$。先逐点从上方压：每个 $x$ 有邻域与某个 $h \in \overline A$ 使 $h > f - \varepsilon$；紧性取有限覆盖并用 $\max$；再对有限多个 $x$ 用 $\min$ 压到 $h < f + \varepsilon$。得 $\|f - h\| < 2\varepsilon$。
+
+⚠️ 三条假设缺一不可：$A = \{f : f(0) = 0\}$ 缺单位；$A = $ 常数函数缺分离点。
+
+⭐ 这是「用**代数**性质换**逼近**能力」的样板：不需要光滑、不需要可数、不需要任何具体核。经典 Weierstrass 定理（多项式逼近）就是 $K = [a,b]$、$A = $ 多项式的特例。
+
+参考：泛函分析讲义 2026-10-26；Stone 1937
+
+#### Stone–Weierstrass（复情形）　`thm.stone-weierstrass-complex`
+*定理*　Stone–Weierstrass 定理（复情形）
+
+设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{C})$ 是含单位的子代数、分离点，且**对共轭封闭**（$f \in A \implies \bar f \in A$）。则 $\overline A = C(K, \mathbb{C})$。
+
+归结到实情形：$\operatorname{Re}\, f = (f + \bar f)/2$、$\operatorname{Im}\, f = (f - \bar f)/(2i)$ 都在 $A$ 里。
+
+⚠️ 「对共轭封闭」不能去掉：取 $A = $ 圆盘代数 $\mathrm{Alg}(z) \subseteq C(S^1, \mathbb{C})$（含单位、分离点），则 $\bar z \notin \overline A$ —— 因为 $\int_{S^1} p(z)\,\bar z\,dz = 0$ 对一切多项式 $p$ 成立（Cauchy 定理），而 $\int_{S^1} \bar z\,\bar z\,dz \ne 0$。
+
+⭐ 讲义在这里接上了表示论：紧群 $G$ 的矩阵系数 $e_{ij}$ 生成 $C(G)$（因 $\{e_{ij}\}$ 对共轭封闭），且 $\Delta : C(G) \to C(G) \otimes C(G)$，$e_{ij} \mapsto \sum_k e_{ik} \otimes e_{kj}$ —— Peter–Weyl 的代数骨架。
+
+参考：泛函分析讲义 2026-10-26
+
+#### Bernstein 多项式逼近　`thm.bernstein-approximation`
+*定理*　Bernstein 多项式逼近（Weierstrass 定理的显式证明）
+
+对 $f \in C[0, 1]$，令
+
+$$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x)^{n-k} .$$
+
+则 $\|B_n f - f\|_\infty \to 0$。
+
+这是 Weierstrass 逼近定理的**显式**证明：$B_n f(x) = \mathbb{E}[f(S_n/n)]$（$S_n$ 服从参数 $x$ 的二项分布），用三条恒等式（$\sum \binom nk x^k(1-x)^{n-k} = 1$、$\sum k\binom nk x^k(1-x)^{n-k} = nx$、方差 $\le n/4$）加 $f$ 的一致连续性把误差压住。
+
+⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。
+
+参考：泛函分析讲义 2026-10-26；Bernstein 1912
+
+### 星团：Baire 纲与三大定理
+> 造出一把「拓扑大小」的尺子（无处稠密 → 第一/第二纲 → 剩余集），然后一次抽出三大定理：一致有界（Banach–Steinhaus）、开映射（含逆算子）、闭图像。
+
+#### 无处稠密　`def.nowhere-dense`
+*定义*　无处稠密集
+
+设 $A \subseteq X$ 是拓扑空间。称 $A$ **无处稠密**（nowhere dense），若 $(\overline{A})^\circ = \emptyset$；等价地：每个非空开集都含一个非空开子集与 $A$ 不交。
+
+⚠️ 「无处稠密」不是「不稠密」：$(0,1) \cup (1,2)$ 在 $\mathbb{R}$ 里既不稠密也无处稠密 —— 它要求「连闭包都没肉」。
+
+例：$\mathbb{Z} \subseteq \mathbb{R}$、$\{1/n\}$、Cantor 集。
+
+⭐ Cantor 集是最有教育意义的例子：它**无处稠密**却**不可数**。所以「无处稠密」与「基数小」是两件事。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 第一纲 / 第二纲　`def.meager-set`
+*定义*　第一纲集、第二纲集与剩余集
+
+$A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可数个无处稠密集之并；不是第一纲的叫**第二纲集**。称 $A$ **剩余**（residual），若 $A^c$ 第一纲。
+
+「纲」是「大小」的第三种口径，既不是基数也不是测度：$\mathbb{Q}$ 可数、稠密但是第一纲（每个单点无处稠密）；Cantor 集不可数、测度为零但是第一纲（它本身无处稠密）；$[0,1] \setminus \mathbb{Q}$ 是第二纲且剩余。
+
+⚠️ 第二纲 $\ne$ 稠密：$[0,1] \cup \{2\}$ 也是第二纲。
+
+⭐ 用法：想说「几乎所有点都满足 $P$」，就去证 $\{x : \neg P(x)\}$ 第一纲。在无穷维里这比测度论更顺手（很多函数空间没有自然测度，但有 Baire 纲）。
+
+参考：泛函分析讲义 2026-10-26
+
+#### G_δ 与 F_σ　`def.g-delta`
+*定义*　$G_\delta$ 集与 $F_\sigma$ 集
+
+$A$ 叫 **$G_\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\sigma$ 集**，若 $A$ 是可数个闭集之并。
+
+在度量空间里单点闭、开集是可数多个球的并，所以「闭 $\subseteq F_\sigma$」「开 $\subseteq G_\delta$」。
+
+⭐ Baire 之后，「稠密 $G_\delta$」是「几乎全部的点」的标准写法：连续点集、可微点集、$C[0,1]$ 里无处可微函数的全体，全是稠密 $G_\delta$。
+
+参考：泛函分析讲义 2026-10-26
+
+#### Baire 纲定理　`thm.baire`
+*定理*　Baire 纲定理
+
+设 $X$ 是完备度量空间（或局部紧 Hausdorff 空间）。则可数个稠密开集之交仍**稠密**。等价地：
+
+1. 可数个无处稠密闭集之并的内部为空；
+2. 每个非空开集都是**第二纲**的。
+
+证法（球套法）：设 $O_n$ 稠密开。任给 $x, \varepsilon$，$B(x, \varepsilon) \cap O_1$ 是非空开，取 $x_1, \varepsilon_1 < \varepsilon$ 使 $\overline{B(x_1, \varepsilon_1)} \subseteq B(x, \varepsilon) \cap O_1$；归纳取 $\varepsilon_n < 1/n$ 且 $\overline{B(x_{n+1}, \varepsilon_{n+1})} \subseteq B(x_n, \varepsilon_n) \cap O_{n+1}$。嵌套闭球半径 $\to 0$ 且空间完备，故交非空；交中一点落在每个 $O_n$ 里，也落在 $B(x, \varepsilon)$ 里。
+
+⭐ 三种等价写法都要会用，转换只需取补集。
+
+⚠️ 完备性不能去掉：$\mathbb{Q}$ 上每个单点闭且无处稠密，$\mathbb{Q}$ 可数，故 $\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。
+
+参考：泛函分析讲义 2026-10-26；Baire 1899
+
+#### 局部紧 Hausdorff 是 Baire　`thm.locally-compact-baire`
+*定理*　局部紧 Hausdorff 空间是 Baire 空间
+
+局部紧 Hausdorff 空间是 Baire 空间。
+
+证法与完备度量情形同构，只把「嵌套闭球半径 $\to 0$」换成「嵌套紧邻域」：交非空由紧集的**有限交性质**保证（不需要半径趋于零）。
+
+⭐ 意义：这条把 Baire 纲从「度量」里解放出来，于是它能用在 $C(K)$、紧群、Stone 空间这些非度量对象上 —— 凝聚态数学里的紧 Hausdorff 空间因此也能用「一般点」论证。
+
+参考：泛函分析讲义 2026-10-26
+
+#### Baire 的三条等价刻画　`prop.baire-characterizations`
+*命题*　Baire 空间的等价刻画与「纲的用法」
+
+下列**等价**：
+
+1. $X$ 是 Baire 空间（可数个稠密开集之交稠密）；
+2. $X$ 的每个非空开集是第二纲的；
+3. 可数个无处稠密闭集之并不含非空开集（内部为空）。
+
+三条就是同一条取补集：稠密开 $\leftrightarrow$ 无处稠密闭、交 $\leftrightarrow$ 并、「稠密」$\leftrightarrow$「内部为空」。
+
+⭐ **纲的用法（讲义原话）**：要证「满足性质 $P$ 的点存在」，就去证 $\{x : P(x)\}$ 是**稠密 $G_\delta$**。这样拿到的不只是「存在」，而是「几乎处处存在」（generic）。
+
+⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。
+
+参考：泛函分析讲义 2026-10-26
+
+#### Baire 的开子集是 Baire　`thm.baire-open-subset`
+*定理*　Baire 空间的开子集仍是 Baire 空间
+
+$X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）是 Baire 空间。
+
+证法：设 $O_n$ 在 $\Omega$ 里稠密开，写 $O_n = \Omega \cap O_n'$（$O_n'$ 在 $X$ 中开）。则 $O_n' \cup \Omega^c$ 在 $X$ 中**稠密开**；于是 $\bigcap_n(O_n' \cup \Omega^c)$ 在 $X$ 稠密，与 $\Omega$ 相交得 $\bigcap_n O_n$ 在 $\Omega$ 稠密。
+
+⭐ 用处：开映射定理要在开集上做局部论证、UBP 要看开子集，这条保证「局部化之后 Baire 性质不丢」。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 闭覆盖的内点　`lem.countable-closed-cover`
+*引理*　可数个闭集覆盖 $X$ $\implies$ 内点之并稠密
+
+设 $X$ 是 Baire 空间，$F_n \subseteq X$ 闭，且 $X = \bigcup_n F_n$。则 $\bigcup_n \operatorname{int} F_n$ 在 $X$ 中**稠密**。特别地，至少有一个 $F_n$ 有非空内部。
+
+这是把「有一块闭集能被盖住」变成「有一个球里的东西一致地被控制」—— 正是 UBP 与开映射定理要的那一句。
+
+它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 连续点集是稠密 G_δ　`thm.pointwise-limit-continuity`
+*定理*　连续函数点态极限的连续点集
+
+设 $X$ 是 Baire 空间，$f_n : X \to E$ 连续（$E$ 度量），且 $f_n \to f$ **逐点**。则
+
+$$\operatorname{cont}(f) := \{x : f \text{ 在 } x \text{ 连续}\}$$
+
+是**稠密 $G_\delta$**。特别地 $f$ 至少在一个稠密 $G_\delta$ 上连续。
+
+证法（骨架）：令 $F_{n,k} = \{x : \|f_i(x) - f_j(x)\| \le 1/k\ (\forall i, j \ge n)\}$，它是闭集且 $X = \bigcup_n F_{n,k}$；由 Baire，$O_k := \bigcup_n \operatorname{int} F_{n,k}$ 稠密开。令 $O := \bigcap_k O_k$（稠密 $G_\delta$），在 $O$ 上用「$x$ 落在一个 $\operatorname{int} F_{n,k}$ 里 $\implies$ 邻域上 $f_n$ 一致接近」得连续性。
+
+⚠️ 逐点极限**不必**连续（$f_n(x) = x^n$ 在 $[0,1]$ 上）；它只是「连续点很多」。
+
+⭐ 同一模板的经典产物：$C[0,1]$ 里「处处不可微」的函数构成稠密 $G_\delta$（Banach 1931）。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 一致有界原理　`thm.ubp`
+*定理*　一致有界原理（Banach–Steinhaus）
+
+设 $E$ 是 Banach 空间，$F$ 赋范，$\{u_i\}_{i \in I} \subseteq B(E, F)$。若对每个 $x \in E$，
+
+$$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
+
+则 $\displaystyle \sup_{i \in I}\|u_i\| < \infty$（**一致**有界）。
+
+证法：令 $F_k = \{x : \sup_i \|u_i x\| \le k\} = \bigcap_i \{x : \|u_i x\| \le k\}$，每个 $\{x : \|u_i x\| \le k\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；逐点有界 $\implies E = \bigcup_k F_k$。由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。于是对 $\|x\| \le r$：$\sup_i \|u_i x\| \le \sup_i \|u_i(x + x_0)\| + \sup_i \|u_i x_0\| \le 2k$，取 $x = r y/\|y\|$ 得 $\|u_i y\| \le 2k\|y\|/r$，故 $\sup_i\|u_i\| \le 2k/r$。
+
+⭐ 三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。
+
+⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\|u_n\| = n \to \infty$。
+
+参考：泛函分析讲义 2026-10-26；Banach–Steinhaus 1927
+
+#### 共振集是稠密 G_δ　`cor.ubp-resonance`
+*推论*　共振集：一致无界 $\implies$ 发散点稠密
+
+设 $E$ Banach，$F$ 赋范，$u_n \in B(E, F)$，且 $\sup_n \|u_n\| = \infty$。则
+
+$$R := \Bigl\{ x \in E : \sup_n \|u_n(x)\| = \infty \Bigr\}$$
+
+是**稠密 $G_\delta$**（特别地非空）。
+
+证法：令 $\Omega_k = \{x : M(x) = \sup_i\|u_i x\| > k\} = \bigcup_i \{x : \|u_i x\| > k\}$，是开集；$R = \bigcap_k \Omega_k$ 是 $G_\delta$。若某个 $\Omega_k$ 不稠密，则存在球 $B(x_0, r) \subseteq \Omega_k^c$，球上 $M \le k$，用与 UBP 同样的平移 + 伸缩得 $\sup_i\|u_i\| \le 2k/r$，矛盾。
+
+⭐ 意义：「发散」不是个别点，而是**几乎处处**。经典应用：Fourier 级数部分和算子满足 $\|S_N\| \to \infty$，于是**存在**连续函数其 Fourier 级数在某点发散（du Bois-Reymond 1876）—— 而且这样的函数「很多」。
+
+参考：泛函分析讲义 2026-10-26
+
+#### 开映射定理（Banach 版）　`thm.open-mapping-banach`
+*定理*　开映射定理：满射有界算子把开集映成开集
+
+设 $E, F$ 都是 Banach 空间，$u \in B(E, F)$ 是**满射**。则 $u$ 是**开映射**：开集的像是开集。等价地，存在 $r > 0$ 使
+
+$$u(B_E) \supseteq r\, B_F .$$
+
+证明分三段（**骨架**，细节见 Rudin 2.11）：
+
+① **取内点（Baire）**：$E = \bigcup_k \overline{u(kB_E)}$，由「闭覆盖有内点」某个 $\overline{u(kB_E)}$ 含球，再用线性把它搬回 $0$，得 $\overline{u(B_E)} \supseteq r B_F$。
+
+② **去掉闭包（完备性）**：递归取 $x_n$ 使余项按 $\varepsilon^n$ 缩小而 $\|x_n\|$ 按 $\varepsilon^{n-1}$ 放大；$E$ 完备使 $x = \sum x_n$ 收敛，连续性给出 $u(x) = y$ 且 $\|x\| \le \|y\|/r$。
+
+③ **得到开性**：$\|x\| < 1 \implies u(x)$ 覆盖 $rB_F$，平移伸缩即得「开球的像含开球」。
+
+⚠️ **满射不能去掉**（稠密嵌入 $E \hookrightarrow F$ 不开）；**两边完备都不能去掉**：$E$ 用来拿内点，$F$ 用来去闭包。
+
+⚠️ 与图中 `thm.open-mapping`（**非常数全纯函数**把开集映成开集）**同名不同物**：那条是复分析结论，这条是线性算子的（Baire + 级数逼近）。
+
+参考：Rudin, Functional Analysis, 2.11
+
+#### 逆算子定理　`thm.bounded-inverse`
+*定理*　逆算子定理：双射有界算子有有界逆
+
+设 $E, F$ 都是 Banach 空间，$u \in B(E, F)$ 是**双射**。则 $u^{-1} \in B(F, E)$。
+
+证明一行：$u$ 开（开映射定理）$\iff$ $u^{-1}$ 连续。
+
+⭐ 这是「连续 + 双射 $\implies$ 同胚」在**线性**世界的额外赠品 —— 一般拓扑里不成立。
+
+⭐ 与 `thm.inverse-function-banach`（Banach 版**逆映射定理**）分工：那条是**非线性**的（$f'(a)$ 可逆 $\implies$ 局部微分同胚，证明用 Neumann 级数 + 压缩映射）；这条是**线性**双射的（证明用 Baire）。两者常被混称，但内容与证法都不同。
+
+参考：Rudin, Functional Analysis, 2.12
+
+#### 闭图像定理　`thm.closed-graph`
+*定理*　闭图像定理
+
+设 $E, F$ 都是 Banach 空间，$u : E \to F$ 线性。若 $u$ 的图像
+
+$$G(u) := \{(x, u(x)) : x \in E\}$$
+
+在 $E \times F$ 中**闭**，则 $u \in B(E, F)$。
+
+证明：图像闭 $\implies G(u)$ 是 Banach 空间（闭子空间 + 乘积空间完备）。两个投影有界，$\pi_1 : G(u) \to E$ 是有界双射，由**逆算子定理** $\pi_1^{-1}$ 有界，于是 $u = \pi_2 \circ \pi_1^{-1}$ 有界。
+
+⚠️ 「图像闭」比「有界」好验证得多：只需「$x_n \to x$ 且 $u x_n \to y$ $\implies$ $y = ux$」，不用估计 $\|ux\|$。这就是它的实用价值。
+
+⭐ 反过来总成立：连续 $\implies$ 图像闭。所以「图像闭 $\iff$ 有界」意味着：在 Banach 空间里，这个纯拓扑条件已经足够刻划连续性。
+
+⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。
+
+参考：Rudin, Functional Analysis, 2.15
+
 ## 星系：实变函数（Functions of a Real Variable）
 > 换一套更听话的积分：σ-代数 → 测度 → 可测函数 → Lebesgue 积分（单调收敛 / Fatou / 控制收敛）→ 乘积测度与 Fubini → 符号测度与 Radon–Nikodym → 微分定理 → $L^p$ 空间。
 
@@ -17295,6 +18258,29 @@ $$B_{n}(K) := \operatorname{im} d_{n+1} ,$$
 
 参考：Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调；Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）
 
+#### 零调复形　`def.acyclic-complex`
+*定义*　零调复形：同调处处为零
+
+**在做什么**：把「没有洞」翻译成复形的语言。零调 = 每个闭链都是边缘 —— 于是「用零调复形去算同调」这个想法（消解）才有意义。
+
+设 $K$ 是复形。称 $K$ **零调**（acyclic），若
+
+$$H^{n}(K) = 0 \qquad \text{对一切}\ n .$$
+
+**等价说法**：$K$ 在每个位置都**正合**，即 $\ker d^{n} = \operatorname{im} d^{n-1}$ 对一切 $n$（`def.exact-sequence`）。所以零调 $\iff$ 处处正合。
+
+**变体（最常用）**：若 $H^{n}(K) = 0$ 只对 $n \ne 0$ 成立（$n = 0$ 处可以非零），也叫**零调**（除一处之外）—— 这正是**消解**的情形：消解就是把一个对象换成「除了 $0$ 次都零调」的复形（`def.resolution`）。
+
+⚠️ **两种含义要分清**：绝对的「零调复形」（$H^{n}$ 全为 $0$）与 $F$-相对的「$F$-零调**对象**」（`def.f-acyclic`，要求 $R^{n}F(M) = 0$ 对 $n \ne 0$）。后者是对**函子**说的、前者是对**复形**说的。两者的联系正是「用 $F$-零调对象作消解，$RF$ 可以用 $F$ 直接算」（因为零调消解上的导出函子退化）。
+
+⭐ **为什么零调复形有用**：它让「上同调」变成**可计算的**。给定 $M$，造一个零调的复形 $\cdots \to I^{1} \to I^{0} \to M \to 0$（右消解），则 $R^{n}F(M) = H^{n}(F(I^{\bullet}))$ —— 也就是说，把 $F$ 逐项作用到一个「本身没有同调」的复形上，剩下的同调**全部**是 $M$ 的信息。这是导出函子整套机器的技术核心。
+
+⚠️ **零调不等于可缩**：零调说的是同调为 $0$，可缩说的是复形同伦等价于 $0$（更强）。存在零调但不与 $0$ 同伦等价的复形（例如带分歧的无界复形）—— 差别在于 $\ker d^{n} \to \operatorname{im}$ 的「分裂」是否自然。本图不展开。
+
+⭐ **拓扑版**：空间 $X$ 的**奇异链复形**零调 $\iff$ $X$ 可缩到一点？不是 —— 那是「约化同调全为 $0$」，即 $X$ 零调（acyclic space）。所以同一个词在空间上也有对应物：零调空间（同调同于一点，但不必同伦于一点）。
+
+参考：Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）· 消解与导出函子；Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）
+
 #### 上链复形　`def.cochain-complex`
 *定义*　复形
 
@@ -17943,6 +18929,33 @@ $$\mathbf{K}^{+}(\mathcal{A}) \xrightarrow{\ F\ } \mathbf{K}^{+}(\mathcal{A}') \
 
 ### 星团：同调与正合列
 > 造出「把复形读成不变量」这件事：同调 → 上同调函子 → 长正合列 → 拟同构与零调 → 内射对象。
+
+#### 上同调类　`def.cohomology-class`
+*定义*　上同调类：闭链模掉边缘
+
+**在做什么**：同调群 $H^{n} = Z^{n}/B^{n}$ 的**元素**。它是同调代数里真正被搬运、被比较的对象 —— 定理说得再好，最后总是落在一句「这两个上同调类相等」。
+
+设 $K$ 是复形。对闭链 $z \in Z^{n}(K)$（`def.cycle`），它在商里的像
+
+$$[z] := z + B^{n}(K) \in H^{n}(K)$$
+
+叫 $z$ 的**上同调类**（cohomology class），$z$ 叫它的**代表**（representative）。
+
+**相等判据**：$[z] = [z']$ $\iff$ $z - z' \in B^{n}(K)$，即两者相差一个**上边缘**（`def.boundary`）。特别地
+
+$$[z] = 0 \iff z \ \text{是上边缘} .$$
+
+所以「$H^{n} = 0$」这句话的完整意思是：**每个闭链都恰当**（每个上同调类都是零类）。
+
+⭐ **类 $\ne$ 代表**：同一个上同调类有无穷多个代表（差任意上边缘）。所有关于类的运算都必须先验证「换代表不改变结果」—— 这就是同调代数里每一次「良定义性」检查的来源。模掉 $B^{n}$ 的唯一目的就是让这种检查变成一句话。
+
+**几何含义**：de Rham 情形下 $[\omega] \in H^{k}_{dR}(M)$ 是「$\omega$ 的积分只依赖同调类」的那一半 —— Stokes 定理说 $\int_{c} \omega$ 在 $\omega \mapsto \omega + d\eta$ 与 $c \mapsto c + \partial b$ 下都不变，于是它其实是**上同调类与同调类的配对** $H^{k} \times H_{k} \to \mathbb{R}$。这条配对是 de Rham 定理的骨架。
+
+⚠️ **记号**：$[z]$ 与 $\bar z$ 都在用；有文献用 $\{z\}$。⚠️ 与「同调类」$[z] \in H_{n}$ 只差上下标，写证明时务必标清楚 $H^{n}$ 还是 $H_{n}$ —— 这是同调代数最常见的低级错误来源。
+
+⚠️ 本图不单独收录「同调类」：它是同一个定义在链复形一侧的写法（下标换成上标），与 `def.cycle` / `def.boundary` 同一个口径 —— 不为一个上标差异开第二个节点。
+
+参考：Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调；Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）
 
 #### 同调　`def.cohomology`
 *定义*　同调
@@ -41081,6 +42094,556 @@ Minkowski 就是 L^p 范数的三角不等式。
 
 定义走 $\mathbb{Z} \to K$ 这个环同态，要先有环与理想。
 
+#### 定义引用：「同调」→ 上同调类　`dep.cc-hom`
+
+上同调类是 $H^{n}$ 的元素，先有 $H^{n}$。
+
+#### 定义引用：「闭链」→ 上同调类　`dep.cc-cycle`
+
+类的代表是**闭链**。
+
+#### 定义引用：「边缘」→ 上同调类　`dep.cc-boundary`
+
+「相差一个上边缘」决定两个代表是否同类。
+
+#### 定义引用：「同调」→ 零调复形　`dep.ac-hom`
+
+零调的定义就是同调全为 $0$。
+
+#### 定义引用：「一般正合列」→ 零调复形　`dep.ac-exact`
+
+「处处正合」是与零调等价的另一种说法。
+
+#### 定义引用：「消解」→ 零调复形　`dep.ac-res`
+
+消解就是「除 $0$ 次外零调」的复形 —— 本条的变体。
+
+#### 定义引用：「紧」→ 紧化　`dep-cp-compact`
+
+紧化的目标空间是紧的。
+
+#### 定义引用：「闭集与闭包」→ 紧化　`dep-cp-dense`
+
+要求像是**稠密**的（稠密的定义在闭包那个节点里）。
+
+#### 定义引用：「紧化」→ 一点紧化　`dep-opc-cp`
+
+一点紧化是紧化的特例（只补一个点）。
+
+#### 定义引用：「局部紧 Hausdorff 空间」→ 一点紧化　`dep-opc-lc`
+
+「$X^{*}$ Hausdorff $\iff$ $X$ 局部紧 Hausdorff」这一条要用局部紧。
+
+#### 定义引用：「紧」→ 一点紧化　`dep-opc-compact`
+
+开集族第二条用「补集紧」定义 $\infty$ 的邻域。
+
+#### 定义引用：「拓扑空间与开集」→ 网　`dep-net-top`
+
+收敛用邻域说，所以先有拓扑空间。
+
+#### 定义引用：「连续映射」→ 网　`dep-net-cont`
+
+「连续 $\iff$ 保网收敛」是本条的主要用途之一。
+
+#### 定义引用：「紧」→ 网　`dep-net-compact`
+
+「紧 $\iff$ 每个网有收敛子网」是另一条主要用途。
+
+#### 定义引用：「拓扑空间与开集」→ 滤子　`dep-flt-top`
+
+收敛用邻域滤子说。
+
+#### 定义引用：「Zorn 引理」→ 滤子　`dep-flt-zorn`
+
+超滤子引理（每个滤子含于超滤子）要用 Zorn 引理。
+
+#### 网 ⟺ 滤子　`eq.net-filter`
+*网收敛与滤子收敛等价*
+
+**网 → 滤子**
+
+设 $(x_{\lambda})_{\lambda \in \Lambda}$ 是网。令
+
+$$\mathcal{F} := \bigl\{\, A \subseteq X : \exists \lambda_{0},\ \forall \lambda \ge \lambda_{0},\ x_{\lambda} \in A \,\bigr\} ,$$
+
+即「网最终落在其中」的集合族。**验证滤子公理**：$\emptyset \notin \mathcal{F}$（网总有值）、$X \in \mathcal{F}$；上闭显然；$A, B \in \mathcal{F}$ 时取两个 $\lambda_{0}$ 的上界 $\nu$，则 $\lambda \ge \nu$ 时 $x_{\lambda} \in A \cap B$，故 $A \cap B \in \mathcal{F}$ ✓。
+
+**收敛一致**：$x_{\lambda} \to x$ $\iff$ 每个邻域 $U \ni x$ 都有「最终落在 $U$」$\iff$ $\mathcal{N}(x) \subseteq \mathcal{F}$ $\iff$ $\mathcal{F} \to x$ ✓。
+
+**滤子 → 网**
+
+设 $\mathcal{F}$ 是滤子。取指标集
+
+$$\Lambda := \{\, (F, x) : F \in \mathcal{F},\ x \in F \,\} , \qquad (F, x) \le (G, y) \iff G \subseteq F .$$
+
+任意两个 $(F, x), (G, y)$ 有上界 $(F \cap G, z)$（$F \cap G \ne \emptyset$，取其中任一点 $z$）✓，故 $\Lambda$ 是有向集。令 $x_{(F,x)} := x$，得到网。
+
+**收敛一致**：若 $\mathcal{F} \to x$，则每个邻域 $U \ni x$ 属于 $\mathcal{F}$；取 $\lambda_{0} = (U, x)$，则 $(F, y) \ge (U, x)$ 时 $F \subseteq U$ 且 $y \in F \subseteq U$，故 $x_{(F,y)} \in U$，即网收敛到 $x$ ✓。反向由上一条同理。
+
+⛔ 附件：**超滤子 $\leftrightarrow$ 极大网**（不能进一步加粗的网）也一一对应。
+
+> 两套语言等价：一个是「指标集 + 最终落在」，一个是「集合族 + 包含」。分析书多用网，集合论与拓扑书多用滤子。
+
+#### Baire 纲定理 ⟹ Baire 的三条等价刻画　`imp.fa-baire-characterizations`
+*Baire 的三种说法等价*
+
+设 (1)：可数个稠密开集之交稠密。
+(1) $\iff$ (3)：令 $A_n$ 闭且无处稠密，则 $X \setminus A_n$ 稠密开；$\bigcap_n (X \setminus A_n) = X \setminus \bigcup_n A_n$ 稠密 $\iff$ $\bigcup_n A_n$ 不含非空开集。
+(2) $\iff$ (3)：非空开集 $U$ 是第一纲 $\iff$ $U \subseteq \bigcup_n A_n$（$A_n$ 闭且无处稠密），即 $\bigcup_n A_n$ 含非空开集。
+所以三条是同一条取补集。$\blacksquare$
+
+> ⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。
+
+#### Baire 纲定理 ⟹ Baire 的开子集是 Baire　`imp.fa-baire-opensubset`
+*Baire $\implies$ 开子集是 Baire*
+
+设 $O_n$ 在 $\Omega$ 中稠密开，写 $O_n = \Omega \cap O_n'$（$O_n'$ 在 $X$ 中开）。
+断言 $O_n' \cup \Omega^c$ 在 $X$ 中稠密：任取非空开 $U$，若 $U \cap \Omega = \emptyset$ 则 $U \subseteq \Omega^c$；否则 $U \cap \Omega$ 是 $\Omega$ 中非空开，与 $O_n$ 稠密故交非空，于是 $U \cap O_n' \ne \emptyset$。
+由 Baire，$\bigcap_n (O_n' \cup \Omega^c)$ 在 $X$ 稠密。任取 $\Omega$ 中非空开 $V$，它与该稠密集相交，交点必在 $\Omega$ 里，故它属于每个 $O_n' \cap \Omega = O_n$。于是 $\bigcap_n O_n$ 与 $V$ 相交。$\blacksquare$
+
+> 讲义里只写了「$O_n' := O_n \cup \Omega^c$ 在 $X$ 稠密」，剩下就是这个补集论证。
+
+#### 闭覆盖的内点 ⟹ 一致有界原理　`imp.fa-closedcover-ubp`
+*闭覆盖有内点 $\implies$ 一致有界原理*
+
+令 $F_k := \{x \in E : \sup_i \|u_i x\| \le k\}$。每个 $\{x : \|u_i x\| \le k\}$ 是闭集（$u_i$ 与范数连续），故 $F_k$ 闭。
+逐点有界 $\implies E = \bigcup_k F_k$。由「可数个闭集覆盖 Baire 空间 $\implies$ 内点之并稠密」，某个 $F_k$ 有内点，即存在 $B(x_0, r) \subseteq F_k$。
+对 $\|x\| \le r$：$\sup_i\|u_i x\| \le \sup_i\|u_i(x + x_0)\| + \sup_i\|u_i x_0\| \le 2k$（两项分别落在 $F_k$ 的两点上）。对任意 $y \ne 0$ 取 $x = r y/\|y\|$，得 $\|u_i y\| \le 2k\|y\|/r$ 对一切 $i$，故 $\sup_i \|u_i\| \le 2k/r < \infty$。$\blacksquare$
+
+> 整条证明只有一处非平凡：某个 $F_k$ 必须有内点 —— 那就是 Baire。
+
+#### 一致有界原理 ⟹ 共振集是稠密 G_δ　`imp.fa-ubp-resonance`
+*UBP 的补集形态：共振集稠密*
+
+令 $M(x) := \sup_n \|u_n x\|$，$\Omega_k := \{x : M(x) > k\} = \bigcup_n \{x : \|u_n x\| > k\}$，每个 $\{\cdots\}$ 开，故 $\Omega_k$ 开；$R = \bigcap_k \Omega_k$ 是 $G_\delta$。
+稠密性：若某 $\Omega_k$ 不稠密，则存在球 $B(x_0, r) \subseteq \Omega_k^c$，即球上 $M \le k$。与 UBP 同样的平移 + 伸缩给出 $\sup_n \|u_n\| \le 2k/r < \infty$，与 $\sup_n\|u_n\| = \infty$ 矛盾。故每个 $\Omega_k$ 稠密，交也稠密（Baire）。$\blacksquare$
+
+> ⭐ 这条把「一致有界原理」的否定形式写成「发散集是稠密 $G_\delta$」—— 这才是它在 Fourier 级数、插值算子、数值求积公式里被引用的形态。
+
+#### 闭覆盖的内点 + Banach 空间 ⟹ 开映射定理（Banach 版）　`imp.fa-openmap`
+*闭覆盖有内点 + 完备 $\implies$ 开映射定理*
+
+**① 取内点。** $E = \bigcup_k \overline{u(kB_E)}$（满射 + 每个 $x$ 缩放后落在某个 $kB_E$ 里）。由「闭覆盖有内点」与 Baire，某个 $\overline{u(kB_E)}$ 含内点；由线性（$u(kB_E) = k\,u(B_E)$）可把内点搬回 $0$，得 $r > 0$ 使 $\overline{u(B_E)} \supseteq rB_F$。
+**② 去掉闭包。** 归一化后等价于：$u(B_E)$ 在 $B_F$ 里稠密。给定 $y \in B_F$，递归构造：取 $x_n$ 使 $\|y_n - u(x_n)\| < \varepsilon/2^n$、$\|x_n\| \le \varepsilon/2^{n-1}$，令 $y_{n+1} := y_n - u(x_n)$。$E$ 完备使 $x := \sum x_n$ 收敛且 $\|x\| \le 2\varepsilon$；$u$ 连续给 $u(x) = \sum u(x_n) = y$（望远镜求和）。
+**③ 结论。** 于是 $u$ 把单位球映满 $B_F$ 的一个固定倍数；平移即得任意点的邻域被映满一个球，故 $u$ 把开集映成开集。$\blacksquare$
+
+> ⚠️ 第 ② 步是最容易被跳过去的地方（很多笔记只写「由 Baire 得稠密，剩下是标准论证」）。这里的骨架也没把常数的对齐逐字写出 —— 那是 Rudin 2.11 的做法。
+
+#### 开映射定理（Banach 版） ⟹ 逆算子定理　`imp.fa-bounded-inverse`
+*开映射 $\implies$ 逆算子有界*
+
+$u$ 双射，故 $u^{-1} : F \to E$ 存在且线性。
+$u^{-1}$ 连续 $\iff$ 每个开集 $\Omega \subseteq E$ 的原像 $(u^{-1})^{-1}(\Omega) = u(\Omega)$ 在 $F$ 中开；而开映射定理恰好说 $u$ 把开集映成开集。故 $u^{-1}$ 连续。$\blacksquare$
+
+> 一行推导，但它依赖开映射定理的**全部**假设（两边完备 + 满射）。
+
+#### 逆算子定理 ⟹ 闭图像定理　`imp.fa-closed-graph`
+*逆算子定理 $\implies$ 闭图像定理*
+
+$G(u) \subseteq E \times F$ 是闭子空间，$E \times F$ 按 $\|(x,y)\| = \|x\| + \|y\|$ 是 Banach，故 $G(u)$ 是 Banach 空间。
+两个投影 $\pi_1(x, u(x)) = x$、$\pi_2(x, u(x)) = u(x)$ 都有界。$\pi_1$ 是双射（满射显然；单射：$\pi_1(x, u(x)) = 0 \implies x = 0$），故由逆算子定理 $\pi_1^{-1} : E \to G(u)$ 有界。于是 $u = \pi_2 \circ \pi_1^{-1}$ 有界，$\|u\| \le \|\pi_2\|\,\|\pi_1^{-1}\|$。$\blacksquare$
+
+> 思路极干净：把「$u$ 的图像」当成空间，把「$u$ 有界」化成「$G(u)$ 上的投影有界」。
+
+#### Baire 纲定理 + Hausdorff 空间 ⟹ 局部紧 Hausdorff 是 Baire　`imp.fa-locallycompact-baire`
+*球套法换成紧邻域链*
+
+设 $X$ 局部紧 Hausdorff，$O_n$ 稠密开。任给非空开 $U$，因 $O_1$ 稠密有 $U \cap O_1 \ne \emptyset$；取 $x_1 \in U \cap O_1$ 与其**紧**邻域 $V_1 \subseteq U \cap O_1$（局部紧 Hausdorff 有紧邻域基）。
+归纳：已有 $V_n$，取 $x_{n+1} \in \operatorname{int}V_n \cap O_{n+1}$ 与紧邻域 $V_{n+1} \subseteq \operatorname{int}V_n \cap O_{n+1}$。
+紧集族 $\{V_n\}$ 嵌套且每个非空，由**有限交性质** $\bigcap_n V_n \ne \emptyset$；取 $x \in \bigcap V_n$，则 $x \in U$ 且 $x \in O_n$ 对一切 $n$。故 $\bigcap O_n$ 与任意非空开 $U$ 相交。$\blacksquare$
+
+> 与完备度量的证明逐字对应，唯一的替换是「半径 $\to 0$」$	o$「紧集的有限交性质」。这也说明 Baire 纲根本不依赖度量。
+
+#### Baire 纲定理 + 闭覆盖的内点 ⟹ 连续点集是稠密 G_δ　`imp.fa-baire-pointwise`
+*Baire $\implies$ 连续点集是稠密 $G_\delta$*
+
+对每个 $k$，令 $F_{n,k} := \{x : \|f_i(x) - f_j(x)\| \le 1/k,\ \forall i, j \ge n\}$，是闭集（连续函数集的交）。由「$f_n(x)$ 收敛 $\implies$ Cauchy」得 $X = \bigcup_n F_{n,k}$。
+由 Baire（闭覆盖有内点），$O_k := \bigcup_n \operatorname{int}F_{n,k}$ 是稠密开集；$O := \bigcap_k O_k$ 是稠密 $G_\delta$。
+在 $x \in O$：给 $\varepsilon$，取 $k$ 使 $1/k < \varepsilon/3$；$x \in \operatorname{int}F_{n,k}$ 对某个 $n$，取邻域 $U$ 在其内；再取 $m \ge n$ 使 $\|f_m(x) - f(x)\| < \varepsilon/3$、取小邻域 $V \subseteq U$ 使 $f_m$ 在 $V$ 上变化 $< \varepsilon/3$。则 $y \in V$ 时
+
+$$\|f(y) - f(x)\| \le \|f(y) - f_m(y)\| + \|f_m(y) - f_m(x)\| + \|f_m(x) - f(x)\| < \varepsilon . \blacksquare$$
+
+> 三个 $\varepsilon/3$ 分别来自：$F_{n,k}$ 里的一致接近、$f_m$ 的连续、$f_m \to f$ 的逐点收敛。
+
+#### 范数 ⟹ 范数诱导的距离　`imp.fa-norm-metric`
+*范数 $\implies$ 平移不变、齐次、球凸的距离*
+
+距离公理：$d(x,y) = 0 \iff \|x - y\| = 0 \iff x = y$；对称与三角不等式由范数第 2、3 条直接给。
+平移不变：$d(x+z, y+z) = \|x - y\|$。齐次：$d(\lambda x, \lambda y) = |\lambda|\,\|x - y\|$。
+球凸：$\|u - x\|, \|v - x\| \le r \implies \|tu + (1-t)v - x\| \le t\|u-x\| + (1-t)\|v-x\| \le r$。
+反方向：若 $d$ 平移不变且齐次，令 $\|x\| := d(x, 0)$，则 $d(x,y) = d(x-y, 0) = \|x-y\|$，且三角不等式由 $d(x,0) \le d(x,-z) + d(-z,0)$ 配合平移不变得到。$\blacksquare$
+
+> 这条把「赋范」的全部几何内容一次摆出来：平移不变 + 齐次 + 球凸。
+
+#### 有限维范数等价 ⟹ 单位球紧 ⟺ 有限维　`imp.fa-findim-riesz`
+*有限维 $\implies$ 单位球紧*
+
+由范数等价，$\alpha\|x\|_\infty \le \|x\| \le \beta\|x\|_\infty$，故 $B_E \subseteq \{x : \|x\|_\infty \le 1/\alpha\}$，右端按坐标范数有界闭，由 Heine–Borel 紧；$B_E$ 是其闭子集（$\|\cdot\|$ 连续），故紧。$\blacksquare$
+
+> 只要「有限维 $implies$ 范数等价」，剩下全是 Heine–Borel。
+
+#### 几乎正交引理 ⟹ 单位球紧 ⟺ 有限维　`imp.fa-almostorth-riesz`
+*无穷维 $\implies$ 单位球不紧*
+
+递归取 $e_n$：$e_1$ 任取 $\|e_1\| = 1$；已有 $e_1..e_{n-1}$ 时，$F_{n-1} = \operatorname{span}\{e_1,..,e_{n-1}\}$ 是有限维闭真子空间，由几乎正交引理取 $e_n$，$\|e_n\| = 1$、$d(e_n, F_{n-1}) \ge 1/2$。
+于是 $\|e_n - e_m\| \ge 1/2$（$n > m$ 时 $e_m \in F_{n-1}$）。这列在 $B_E$ 里但没有收敛子列，故 $B_E$ 不列紧，由「紧 $\iff$ 列紧」（度量空间）得它不紧。$\blacksquare$
+
+> ⭐ 这是「无穷维没有紧单位球」的标准论证。
+
+#### 有界线性算子 ⟹ 连续 ⟺ 有界　`imp.fa-lincont-bounded`
+*有界 $\iff$ 连续（线性）*
+
+有界 $\implies$ Lipschitz：$\|u(x) - u(y)\| \le C\|x - y\|$。
+在 $0$ 连续 $\implies$ 有界：反证。若不存在 $C$，则对每个 $n$ 有 $x_n \ne 0$ 使 $\|u(x_n)\| > n\|x_n\|$；令 $y_n = x_n/(n\|x_n\|)$，则 $\|y_n\| = 1/n \to 0$ 而 $\|u(y_n)\| > 1$，与 $u$ 在 $0$ 连续矛盾。
+一点连续 $\implies$ 在 $0$ 连续：$x \to 0$ 时 $x + x_0 \to x_0$，故 $u(x) = u(x + x_0) - u(x_0) \to 0$。$\blacksquare$
+
+> 「一点连续 $implies$ 处处连续」只因为线性（平移是连续双射）。
+
+#### 算子乘法的范数不等式 + B(E,F) 完备 ⟹ Neumann 级数　`imp.fa-neumann`
+*次可乘 + 完备 $\implies$ Neumann 级数*
+
+由次可乘性归纳得 $\|u^k\| \le \|u\|^k$，故 $\sum_{k \ge 0}\|u^k\| \le (1 - \|u\|)^{-1} < \infty$；由 $B(E)$ 完备，级数收敛，记为 $v$。
+部分和 $s_n = \sum_{k<n} u^k$ 满足 $(I - u)s_n = s_n(I - u) = I - u^n$，而 $\|u^n\| \to 0$，用乘法连续性取极限得 $(I-u)v = v(I-u) = I$。故 $v = (I-u)^{-1}$ 且 $\|v\| \le (1-\|u\|)^{-1}$。$\blacksquare$
+
+> 两个前提都不能少：次可乘给「几何级数收敛」，完备给「收敛就等于有一个算子」。
+
+#### 完备 ⟹ 有界算子的延拓　`imp.fa-extension`
+*完备性 $\implies$ 稠密延拓存在*
+
+给 $x \in E$，取 $g_n \in G$ 使 $g_n \to x$。则 $\|u(g_n) - u(g_m)\| \le \|u\|\,\|g_n - g_m\| \to 0$，故 $(u(g_n))$ 在 $F$ 中 Cauchy；$F$ 完备，定义 $\tilde u(x) := \lim_n u(g_n)$。
+与取法无关：换一列 $g_n'$ 时 $\|u(g_n) - u(g_n')\| \to 0$。线性与界：$\|\tilde u(x)\| \le \|u\|\,\|x\|$，且在 $G$ 上与 $u$ 相同故 $\|\tilde u\| \ge \|u\|$。唯一性：$G$ 稠密、两者都连续。$\blacksquare$
+
+> 这条常被当成「显然」跳过，但它依赖 $F$ 完备。
+
+#### 极化恒等式 ⟹ 平行四边形法则　`imp.fa-polarization-parallelogram`
+*极化恒等式 $\implies$ 平行四边形法则刻画内积*
+
+必要性：展开 $\|x \pm y\|^2 = \|x\|^2 \pm 2\operatorname{Re}\langle x,y\rangle + \|y\|^2$，两式相加即得。
+充分性（实情形）：令 $\langle x,y\rangle := \frac14(\|x+y\|^2 - \|x-y\|^2)$。对称性显然；线性性把 $\langle x + x', y\rangle - \langle x,y\rangle - \langle x',y\rangle$ 展开成两两差平方，用平行四边形法则整理得 $0$；齐次性先对整数、再对有理数，最后用范数的**连续性**推到实数。复情形另验 $\langle x, iy\rangle = i\langle x,y\rangle$。$\blacksquare$
+
+> 充分性里唯一的「分析」输入是范数的连续性；其余全是代数。
+
+#### 凸闭集的最近点 ⟹ 闭子空间的正交投影　`imp.fa-projconvex-subspace`
+*凸闭集投影 $\implies$ 闭子空间的正交投影*
+
+闭子空间是凸闭集，故 $P_E$ 存在唯一，变分不等式给 $\operatorname{Re}\langle x - P_E x, z - P_E x\rangle \le 0$（$z \in E$）。
+把 $z$ 换成 $P_E x \pm z$（$z \in E$）得 $\operatorname{Re}\langle x - P_E x, z\rangle = 0$；再换成 $iz$ 得虚部也为零。故 $x - P_E x \perp E$。
+线性：$\alpha x_1 + \beta x_2 - \alpha P x_1 - \beta P x_2 \perp E$，而 $\alpha P x_1 + \beta P x_2 \in E$，由唯一性即得。界：$\|x\|^2 = \|x - P_E x\|^2 + \|P_E x\|^2$。分解：$x \in E + E^\perp$，且两者交为零。$\blacksquare$
+
+> 这一步把「变分不等式」翻译成「正交」，也是 Riesz 表示的唯一工具。
+
+#### 闭子空间的正交投影 ⟹ Riesz 表示定理（Hilbert 版）　`imp.fa-projsubspace-riesz`
+*正交分解 $\implies$ Riesz 表示*
+
+$\varphi = 0$ 取 $y = 0$。否则 $E := \ker\varphi$ 是闭真子空间，由正交分解取 $0 \ne z \in E^\perp$。
+令 $y := \overline{\varphi(z)}\,z/\|z\|^2$。对 $x = e + \lambda z$（$e \in E$）：$\langle x, y\rangle = \lambda\langle z, y\rangle = \lambda\varphi(z) = \varphi(\lambda z) = \varphi(x)$。
+范数：$|\varphi(x)| = |\langle x,y\rangle| \le \|x\|\,\|y\|$ 给 $\|\varphi\| \le \|y\|$；取 $x = y/\|y\|$ 得 $\varphi(x) = \|y\|$，故相等。唯一性：差 $\perp H$ 故为零。$\blacksquare$
+
+> 只用了三件事：$\ker\varphi$ 闭、正交分解、共轭线性的约定。
+
+#### Riesz 表示定理（Hilbert 版） ⟹ 伴随算子　`imp.fa-riesz-adjoint`
+*Riesz 表示 $\implies$ 伴随算子存在*
+
+固定 $x \in K$，令 $\psi_x(y) := \langle x, u(y)\rangle_K$；它线性、连续且 $|\psi_x(y)| \le \|x\|\,\|u\|\,\|y\|$，故 $\psi_x \in H^*$。
+由 Riesz 表示，存在唯一 $u^*(x) \in H$ 使 $\psi_x = \langle \cdot, u^*(x)\rangle$。线性由 $\psi_x$ 对 $x$ 线性 + 表示唯一性得到；有界靠 $\|u^*(x)\| = \|\psi_x\| \le \|u\|\,\|x\|$；$\|u^*\| = \|u\|$ 用两次 sup 交换。$\blacksquare$
+
+> 存在性完全没用到 $u$ 的结构，只用了 $H$ 自对偶。
+
+#### 闭子空间的正交投影 ⟹ 正交基存在　`imp.fa-orthbasis`
+*正交分解 $\implies$ 正交基存在（Zorn）*
+
+令 $\mathcal{S} := \{A \subseteq H : A$ 标准正交$\}$，按包含成偏序。若 $\mathcal{T}$ 全序，令 $A := \bigcup_{B \in \mathcal{T}} B$：任取 $x, y \in A$，它们分别落在某个 $B_1 \subseteq B_2$ 里，故正交且单位长；所以 $A \in \mathcal{S}$ 且是上界。
+Zorn 给极大元 $M$。若 $\overline{\operatorname{span} M} \ne H$，由正交分解取 $0 \ne z \perp \overline{\operatorname{span} M}$，则 $M \cup \{z/\|z\|\}$ 仍标准正交且严格更大，矛盾。$\blacksquare$
+
+> Zorn 在这里只干一件事：把「不断加向量」这个超限过程一次走完。
+
+#### Bessel 与 Parseval ⟹ 可分 Hilbert 空间等距于 ℓ²　`imp.fa-bessel-l2`
+*Bessel/Parseval $\implies$ 可分 Hilbert $\cong \ell^2$*
+
+取正交基 $\{e_i\}$（上一条），定义 $U(x) := (\langle x, e_i\rangle)_i$。Bessel 保证 $U(x) \in \ell^2$，Parseval（完备性）保证 $\|U(x)\|_2 = \|x\|$，故 $U$ 是等距。
+满射：给 $(\lambda_i) \in \ell^2$，令 $s_J := \sum_{i \in J}\lambda_i e_i$；由 $\|s_J - s_{J'}\|^2 = \sum_{J \triangle J'}|\lambda_i|^2 \to 0$ 知它是 Cauchy 列，$H$ 完备故收敛到某 $x$，且 $\langle x, e_i\rangle = \lambda_i$。
+可分时正交基可数（不可数正交基给出不可数个两两距离 $\sqrt2$ 的点），故 $H \cong \ell^2(\mathbb{N})$。$\blacksquare$
+
+> 三个工具各司其职：Zorn 给基、Bessel 给「入 $\ell^2$」、Parseval 给「保范」。
+
+#### C(K,E) + 完备 ⟹ C(K,E) 完备　`imp.fa-ck-banach`
+*一致度量的完备性来自 $E$ 的完备性*
+
+设 $(f_n)$ 是 $(C(K,E), \Delta)$ 中的 Cauchy 列。给 $x$：$d(f_n(x), f_m(x)) \le \Delta(f_n, f_m) \to 0$，故 $(f_n(x))$ 在 $E$ 中 Cauchy，$E$ 完备给出极限 $f(x)$。
+$f_n \to f$ 在 $\Delta$ 下：给 $\varepsilon$，取 $N$ 使 $n, m \ge N \implies \Delta(f_n, f_m) < \varepsilon/2$；固定 $x$ 令 $m \to \infty$ 得 $d(f_n(x), f(x)) \le \varepsilon/2$，再对 $x$ 取上确界。
+$f$ 连续：$d(f(x), f(y)) \le \Delta(f, f_n) + d(f_n(x), f_n(y)) + \Delta(f_n, f)$。$\blacksquare$
+
+> 这三步（逐点取极限 $	o$ 一致收敛 $	o$ 保连续）是「一致收敛」语言的万能模板。
+
+#### 等度连续 + 紧 ⟹ 等度连续与一致等度连续　`imp.fa-equi-uniform`
+*紧 $+$ 等度连续 $\implies$ 一致等度连续*
+
+给 $\varepsilon$。对每个 $x$ 由等度连续取 $\eta_x > 0$ 使 $\delta(y,x) < \eta_x \implies d(f(y), f(x)) < \varepsilon/2$（一切 $f$）。
+$\{B(x, \eta_x/2)\}$ 覆盖紧集，取有限子覆盖 $B(x_1, \eta_{x_1}/2), .., B(x_N, \eta_{x_N}/2)$，令 $\eta := \min_i \eta_{x_i}/2 > 0$。
+若 $\delta(x,y) < \eta$，取 $i$ 使 $x \in B(x_i, \eta_{x_i}/2)$，则 $\delta(y, x_i) < \eta_{x_i}$，于是 $d(f(x), f(y)) \le d(f(x), f(x_i)) + d(f(x_i), f(y)) < \varepsilon$。$\blacksquare$
+
+> 「有限」用两次：一次有界、一次取 min 后仍 $>0$ —— 无限个正数的下确界可以是 0，这正是紧性的用处。
+
+#### 等度连续与一致等度连续 + Arzelà–Ascoli 定理 ⟹ 广义 Arzelà–Ascoli　`imp.fa-ascoli`
+*一致等度连续 + 逐点全有界 $\implies$ 全有界*
+
+等度连续在紧度量上自动升为一致等度连续。给 $\varepsilon$，取 $\eta > 0$ 使 $\delta(x,y) < \eta \implies d(f(x), f(y)) < \varepsilon/3$（一切 $f$）。
+取有限 $\eta$-网 $x_1,..,x_N$ 覆盖 $K$。每个 $\mathcal{H}(x_i)$ 全有界，取有限 $\varepsilon/3$-网，把这些点合起来得有限集 $T \subseteq E$。
+对每个 $f$ 与每个 $i$ 取 $t_i \in T$ 使 $d(f(x_i), t_i) < \varepsilon/3$；由「网点取值落在有限集 $T$ 里」给出**有限**多个候选函数 $\Phi$。对任意 $f$ 与任意 $x \in B(x_i, \eta)$：
+
+$$d(f(x), \varphi(x)) \le \underbrace{d(f(x), f(x_i))}_{< \varepsilon/3} + \underbrace{d(f(x_i), \varphi(x_i))}_{< \varepsilon/3} + \underbrace{d(\varphi(x_i), \varphi(x))}_{< \varepsilon/3} < \varepsilon ,$$
+
+故 $\Phi$ 是 $\mathcal{H}$ 的有限 $\varepsilon$-网，$\mathcal{H}$ 全有界。$\blacksquare$
+
+> ⚠️ 这段是**骨架**：第三段「$\Phi$ 的构造」（把网点取值按最近网点常值延拓）在不同的书里写法不同。方向是对的，细节没逐字展开。
+
+#### 闭子代数是格 + 子代数与分离点 ⟹ Stone–Weierstrass 定理　`imp.fa-closedsubalg-sw`
+*闭子代数是格 $\implies$ Stone–Weierstrass*
+
+记 $\bar A$ 为 $A$ 在 $C(K,\mathbb{R})$ 中的闭包：仍含单位、分离点，且由引理是**格**。
+**两点插值**：$x \ne y$、$\alpha, \beta \in \mathbb{R}$。取 $g \in A$，$g(x) \ne g(y)$；解 $a + b\,g(x) = \alpha$、$a + b\,g(y) = \beta$（行列式 $g(x)-g(y) \ne 0$），得 $f = a\cdot 1 + b g \in A$ 在两点取指定值。
+**上下夹**：固定 $f \in C(K)$、$\varepsilon > 0$。对每个 $x$ 用插值取 $h_x \in \bar A$ 在 $x$ 附近 $> f - \varepsilon$；紧性取有限覆盖并用 $\max$ 得 $h > f - \varepsilon$；再对有限多个点用 $\min$ 压到 $h < f + \varepsilon$。故 $\|f - h\| < 2\varepsilon$。$\blacksquare$
+
+> ⚠️ 讲义里这一段用了两次有限子覆盖（$U^c_{x,y}$ 与 $V_x^\varepsilon$），这里按同样逻辑压缩成「先压上、再压下」。
+
+#### Stone–Weierstrass 定理 ⟹ Stone–Weierstrass（复情形）　`imp.fa-sw-complex`
+*实情形 $\implies$ 复情形（多一条共轭封闭）*
+
+令 $A_{\mathbb{R}} := \{\operatorname{Re}\,f : f \in A\}$。对共轭封闭 $\implies$ $\operatorname{Re}\,f = (f + \bar f)/2 \in A$、$\operatorname{Im}\,f \in A$；而 $f = \operatorname{Re}\,f + i\,\operatorname{Im}\,f$。
+$A_{\mathbb{R}}$ 是含单位的实子代数（$\operatorname{Re}(fg)$ 是实部的多项式组合）且分离点。由实情形 $\overline{A_{\mathbb{R}}} = C(K,\mathbb{R})$。
+于是任意 $f \in C(K,\mathbb{C})$ 的实部、虚部都能被 $A$ 中元素逼近，故 $f \in \overline A$。$\blacksquare$
+
+> 反例（圆盘代数 $\mathrm{Alg}(z)$）缺的正是「对共轭封闭」：$\bar z$ 不在闭包里。
+
+#### 定义引用：「向量空间的基」→ 范数　`def-link.fa-vs-norm`
+
+范数加在向量空间上：第二条公理就是「与标量乘法相容」。
+
+#### 定义引用：「距离空间」→ 范数诱导的距离　`def-link.fa-metric-normind`
+
+范数诱导的距离就是度量空间那条定义里的距离，额外要求平移不变与齐次。
+
+#### 定义引用：「完备」→ B(E,F) 完备　`def-link.fa-complete-BEF`
+
+这里要的是 $F$ 的度量完备（Cauchy 列收敛）。
+
+#### 定义引用：「Banach 空间」→ 一致有界原理　`def-link.fa-banach-ubp`
+
+一致有界原理唯一的完备性假设落在 $E$ 是 Banach 上。
+
+#### 定义引用：「Banach 空间」→ 开映射定理（Banach 版）　`def-link.fa-banach-openmap`
+
+$E$ 的完备性用来取内点（Baire），$F$ 的用来去掉闭包。
+
+#### 定义引用：「Banach 空间」→ 闭图像定理　`def-link.fa-banach-closedgraph`
+
+两边都必须是 Banach：乘积空间要完备，逆算子定理才能用。
+
+#### 定义引用：「Banach 空间」→ Neumann 级数　`def-link.fa-banach-neumann`
+
+级数要收敛，先要有 $B(E)$ 完备，而它靠 $E$ 完备。
+
+#### 定义引用：「线性映射」→ 有界线性算子　`def-link.fa-linmap-op`
+
+有界算子是线性映射里**连续**的那部分：$L(E,F) \supseteq B(E,F)$。
+
+#### 定义引用：「范数」→ 有界线性算子　`def-link.fa-norm-op`
+
+算子范数就是 $B(E,F)$ 上的那个范数。
+
+#### 定义引用：「等价范数」→ 有限维范数等价　`def-link.fa-normequiv-findim`
+
+定理的结论就是「两两等价」，用强弱范数的语言写出来。
+
+#### 定义引用：「紧」→ 单位球紧 ⟺ 有限维　`def-link.fa-compact-riesz`
+
+这里的紧是拓扑紧；在度量空间里等价于列紧 —— 证明用的是后者。
+
+#### 定义引用：「对偶空间」→ 连续对偶空间　`def-link.fa-dualspace`
+
+有限维时代数对偶与连续对偶相同；无穷维时 $E^* \subset E^\vee$。
+
+#### 定义引用：「内积」→ Hilbert 空间　`def-link.fa-inner-hilbert`
+
+Hilbert 空间 = 内积空间 + 由内积诱导的范数完备。
+
+#### 定义引用：「诱导范数与距离」→ 极化恒等式　`def-link.fa-inducednorm-pol`
+
+极化恒等式里的 $\|\cdot\|$ 就是内积诱导的范数。
+
+#### 定义引用：「正交」→ 正交基　`def-link.fa-orth-orthonormal`
+
+「正交基」里的正交就是 $f_i \perp f_j$；「完备」是额外一条拓扑条件。
+
+#### 定义引用：「正交补」→ 闭子空间的正交投影　`def-link.fa-orthcompl`
+
+正交分解用的就是 $E^\perp$ 这个定义。
+
+#### 定义引用：「正交投影」→ 闭子空间的正交投影　`def-link.fa-orthproj`
+
+有限维里的正交投影是这里的特例（那时每个子空间都闭）。
+
+#### 定义引用：「最佳逼近与投影公式」→ 凸闭集的最近点　`def-link.fa-projformula`
+
+有限维的最佳逼近公式是这条的有限维特例：那时最近点由内积显式给出。
+
+#### 定义引用：「酉矩阵与正交矩阵」→ 酉算子　`def-link.fa-unitarymatrix`
+
+有限维酉矩阵是酉算子的一种；无穷维还多出「等距但不满」的移位算子。
+
+#### 定义引用：「伴随算子」→ 伴随算子　`def-link.fa-adjoint-finitedim`
+
+有限维的伴随算子（共轭转置）是这里的特例；无穷维靠 Riesz 表示才存在。
+
+#### 定义引用：「L^p 是 Banach 空间」→ 可分空间　`def-link.fa-lpbanach-sep`
+
+$\ell^p$、$L^p$ 能当「可分」的例子，前提是它们是 Banach 空间。
+
+#### 定义引用：「ℓ²(I)」→ 可分 Hilbert 空间等距于 ℓ²　`def-link.fa-ell2`
+
+$\ell^2(I)$ 是这条同构的靶空间。
+
+#### 定义引用：「无处稠密」→ 第一纲 / 第二纲　`def-link.fa-nowhere-meager`
+
+「第一纲」的定义就是「可数个无处稠密集的并」。
+
+#### 定义引用：「G_δ 与 F_σ」→ 连续点集是稠密 G_δ　`def-link.fa-gdelta`
+
+结论里那个「稠密 $G_\delta$」用的就是这条定义。
+
+#### 定义引用：「第一纲 / 第二纲」→ Baire 的三条等价刻画　`def-link.fa-meager-bairechar`
+
+三条等价刻画里的「第二纲」「无处稠密」都按这套定义读。
+
+#### 定义引用：「C(K,E)」→ C(K,E) 完备　`def-link.fa-ck-complete`
+
+完备性是对 $\Delta$ 这个一致度量说的。
+
+#### 定义引用：「Hausdorff 空间」→ C(K,E)　`def-link.fa-hausdorff-ck`
+
+$K$ 要 Hausdorff：紧 Hausdorff 才是「好」的紧空间（连续函数分离点、Urysohn 等）。
+
+#### 定义引用：「一致收敛」→ C(K,E)　`def-link.fa-uniformconv-ck`
+
+$\Delta$ 距离收敛就是一致收敛 —— 同一概念的度量写法。
+
+#### 定义引用：「等度连续」→ 广义 Arzelà–Ascoli　`def-link.fa-equi-ascoli`
+
+广义 A–A 里的 (a) 就是等度连续这条定义。
+
+#### 定义引用：「全有界」→ 广义 Arzelà–Ascoli　`def-link.fa-totbdd-ascoli`
+
+结论里的「全有界」与逐点的「全有界」都是这条定义（后者在 $E$ 里取）。
+
+#### 定义引用：「子代数与分离点」→ Stone–Weierstrass 定理　`def-link.fa-subalgebra-sw`
+
+「含单位的子代数 + 分离点」就是这条定义的三个词。
+
+#### 定义引用：「Arzelà–Ascoli 定理」→ 广义 Arzelà–Ascoli　`def-link.fa-arzela-classic`
+
+本图先有的经典版（$\mathbb{R}$ 值、紧距离空、一致有界）是这条的特例：取 $E = \mathbb{R}$ 即得。
+
+#### 定义引用：「逆映射定理（Banach 版）」→ 逆算子定理　`def-link.fa-invfn-banach`
+
+⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。
+
+#### 定义引用：「开映射定理」→ 开映射定理（Banach 版）　`def-link.fa-openmapping-holo`
+
+⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。
+
+#### 定义引用：「向量空间的基」→ 范数　`def-link.fa-vs-norm2`
+
+范数的定义域是向量空间；第三条公理用的就是向量空间的加法。
+
+#### 定义引用：「范数」→ 等价范数　`def-link.fa-norm-normeq`
+
+强弱范数比较的是两个范数 —— 两者都按范数那三条公理。
+
+#### 定义引用：「紧」→ 有限维范数等价　`def-link.fa-compact-normeq`
+
+下界 $\alpha > 0$ 靠的是「单位球面紧 + 连续函数取到最小值」。
+
+#### 定义引用：「范数」→ 几乎正交引理　`def-link.fa-norm-almostorth`
+
+距离 $d(e, F) = \inf_{y \in F}\|e - y\|$ 是范数给的距离。
+
+#### 定义引用：「有界线性算子」→ 算子乘法的范数不等式　`def-link.fa-boundedop-opalgebra`
+
+不等式 $\|vu\| \le \|v\|\,\|u\|$ 里的三个范数都是算子范数（那条定义）。
+
+#### 定义引用：「Banach 空间」→ Banach 代数　`def-link.fa-banach-banalg`
+
+Banach 代数的第一条要求就是「底层是 Banach 空间」。
+
+#### 定义引用：「范数」→ Schauder 基　`def-link.fa-norm-schauder`
+
+「级数按范数收敛」用的是范数诱导的收敛（不是逐点收敛）。
+
+#### 定义引用：「内积」→ ℓ²(I)　`def-link.fa-inner-ell2`
+
+$\ell^2(I)$ 的内积就是 $\sum x_i\overline{y_i}$，逐条对应内积公理。
+
+#### 定义引用：「正交基」→ Bessel 与 Parseval　`def-link.fa-orthonormal-bessel`
+
+Bessel / Parseval 的假设与结论都在说「标准正交」与「完备」这两件事。
+
+#### 定义引用：「闭集与闭包」→ 无处稠密　`def-link.fa-closed-nowhere`
+
+「无处稠密」用的是闭包 $\overline{A}$ 与内部 —— 两者都在闭集那条定义里。
+
+#### 定义引用：「拓扑空间与开集」→ G_δ 与 F_σ　`def-link.fa-topology-gdelta`
+
+$G_\delta$ / $F_\sigma$ 是拿开集（拓扑那条定义）与闭集堆出来的。
+
+#### 定义引用：「距离空间」→ Baire 纲定理　`def-link.fa-metric-baire`
+
+球套法里的 $B(x, \varepsilon)$ 是度量空间的球；「半径 $\to 0$ 的嵌套闭球交非空」是完备性。
+
+#### 定义引用：「完备」→ Baire 纲定理　`def-link.fa-complete-baire`
+
+Baire 的两条证明路线分别用完备性（度量情形）与紧性（局部紧情形）。
+
+#### 定义引用：「闭集与闭包」→ 闭覆盖的内点　`def-link.fa-closed-closedcover`
+
+引理说的是「闭集」的覆盖，内部的补与外部的并要用闭集的运算律。
+
+#### 定义引用：「连续映射」→ 等度连续　`def-link.fa-continuous-equi`
+
+等度连续 = 「每个 $f$ 连续」再加一条**对全体一致**的 $\varepsilon$-$\delta$。
+
+#### 定义引用：「向量空间的基」→ 子代数与分离点　`def-link.fa-vs-subalgebra`
+
+子代数先是向量空间（对加法与标量乘法封闭），再加对乘法封闭。
+
+#### 定义引用：「子代数与分离点」→ 闭子代数是格　`def-link.fa-subalg-lattice`
+
+引理的假设「含单位的闭子代数」就是这条定义里的子代数 + 闭 + $1 \in A$。
+
+#### 定义引用：「C(K,E)」→ Bernstein 多项式逼近　`def-link.fa-ck-bernstein`
+
+「$\|B_n f - f\|_\infty \to 0$」里的 $\|\cdot\|_\infty$ 就是 $C[0,1]$ 上的一致范数。
+
+#### 定义引用：「赋范空间」→ 范数　`def-link.fa-normedspace-norm`
+
+本图先有的「赋范空间」那条是同一概念的先行版（在多元微分团里）；这条把它作为独立对象重述并补全半范数的区分。
+
+#### 定义引用：「Banach 空间」→ Hilbert 空间　`def-link.fa-banachspace-hilbert`
+
+Hilbert 空间首先是一个 Banach 空间（完备赋范空间），只是范数还额外来自内积。
+
+#### 定义引用：「Banach 空间」→ 连续对偶空间　`def-link.fa-banachspace-dual`
+
+$E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，而 $\mathbb{K}$ 完备。
+
+#### 定义引用：「全有界」→ C(K,E) 完备　`def-link.fa-totbdd-ck`
+
+（配套）相对紧 = 全有界 + 完备，两条拼起来才能从 $C(K,E)$ 的完备性拿到紧性。
+
+#### 定义引用：「Hausdorff 空间」→ 局部紧 Hausdorff 是 Baire　`def-link.fa-hausdorff-baire`
+
+局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。
+
 #### 定义引用：「实数系 ℝ」→ 扩充实数 [−∞,+∞]　`dep.real-extended`
 
 扩充实数就是在 $\mathbb{R}$ 上添两个记号。
@@ -48046,8 +49609,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **加法与阿贝尔范畴 ↔ 消解与维数**　3 条节点级连线
 - **代数结构 ↔ 消解与维数**　2 条节点级连线
 - **代数结构 ↔ 平坦模**　2 条节点级连线
-- **同调与正合列 ↔ 复形与导出三角**　16 条节点级连线
-- **加法与阿贝尔范畴 ↔ 复形与导出三角**　10 条节点级连线
+- **同调与正合列 ↔ 复形与导出三角**　20 条节点级连线
+- **加法与阿贝尔范畴 ↔ 复形与导出三角**　11 条节点级连线
 - **拓扑空间 ↔ 仿紧与单位分解**　10 条节点级连线
 - **度量空间 ↔ 可度量化**　4 条节点级连线
 - **拓扑空间 ↔ 可度量化**　6 条节点级连线
@@ -48114,6 +49677,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
 - **整除与同余 ↔ 数论函数与素数分布**　6 条节点级连线
 - **选择原理 ↔ 紧 Hausdorff 空间**　2 条节点级连线
+- **选择原理 ↔ 拓扑空间**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 符号测度与分解**　5 条节点级连线
 - **有界变差与绝对连续 ↔ 测度的构造**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 积分**　4 条节点级连线
@@ -48128,10 +49692,21 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **内蕴几何 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
 - **流形与向量丛 ↔ 辛流形与 Hamilton 力学**　2 条节点级连线
 - **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　2 条节点级连线
-- **拓扑空间 ↔ 度量空间**　8 条节点级连线
+- **拓扑空间 ↔ 度量空间**　11 条节点级连线
 - **度量空间 ↔ 仿紧与单位分解**　2 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
+- **多元微分 ↔ Baire 纲与三大定理**　5 条节点级连线
+- **Baire 纲与三大定理 ↔ 拓扑空间**　5 条节点级连线
+- **赋范空间与有界算子 ↔ 度量空间**　5 条节点级连线
+- **$C(K)$ 与 Stone–Weierstrass ↔ 度量空间**　4 条节点级连线
+- **共形映射与正规族 ↔ $C(K)$ 与 Stone–Weierstrass**　2 条节点级连线
+- **向量空间的基 ↔ 赋范空间与有界算子**　2 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　4 条节点级连线
+- **线性映射与秩 ↔ 赋范空间与有界算子**　2 条节点级连线
+- **内积空间与正交性 ↔ Hilbert 空间**　8 条节点级连线
+- **$C(K)$ 与 Stone–Weierstrass ↔ 拓扑空间**　2 条节点级连线
+- **Baire 纲与三大定理 ↔ 度量空间**　2 条节点级连线
 - **实数与极限 ↔ 数系的构造**　3 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线
 - **集合的构造 ↔ 关系与函数**　3 条节点级连线

@@ -8,8 +8,8 @@
 - 被 [`def.tangent-bundle`](../nodes/def.tangent-bundle.md) 切丛 用
 - 被 [`def.covering-space`](../nodes/def.covering-space.md) 覆叠空间 用
 - ⇒ [`def.t1-space`](../nodes/def.t1-space.md) T1 空间
-- 被 [`prop.hausdorff-reflective`](../nodes/prop.hausdorff-reflective.md) Hausdorff 空间是反射子范畴 用
-- 被 [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴 用
-- 被 [`cor.cg-product`](../nodes/cor.cg-product.md) 紧生成空间对积封闭 用
+- ⇒ [`thm.locally-compact-baire`](../nodes/thm.locally-compact-baire.md) 局部紧 Hausdorff 是 Baire
+- 被 [`def.ck-space`](../nodes/def.ck-space.md) C(K,E) 用
+- 被 [`thm.locally-compact-baire`](../nodes/thm.locally-compact-baire.md) 局部紧 Hausdorff 是 Baire 用
 
 > 续见 [nodes/def.hausdorff.3.md](./def.hausdorff.3.md)

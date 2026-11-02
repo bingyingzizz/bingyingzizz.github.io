@@ -10,6 +10,9 @@ layer 21 · 定理 · L^p 空间 · 实变函数+数学分析
 
 - …另有入边，续页见 [nodes/thm.lp-banach.2.md](./thm.lp-banach.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.lp-banach.3.md](./thm.lp-banach.3.md)
+
 refs: Folland, Real Analysis, Theorem 6.6
 
 > 说明见 `notes/thm.lp-banach.md`

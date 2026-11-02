@@ -7,3 +7,4 @@
 - 被 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群 用
 - 被 [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调 用
 - 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
+- 被 [`def.cohomology-class`](../nodes/def.cohomology-class.md) 上同调类 用

@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.gram-schmidt`](../nodes/thm.gram-schmidt.md) Gram–Schmidt 正交化
+- 被 [`def.orthonormal-set`](../nodes/def.orthonormal-set.md) 正交基 用

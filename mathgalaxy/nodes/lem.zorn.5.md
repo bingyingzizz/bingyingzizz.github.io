@@ -9,4 +9,5 @@
 - ⇒ [`lem.minimal-closed-surjection`](../nodes/lem.minimal-closed-surjection.md) 满射的极小闭子集
 - ⇒ [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据
 - ⇒ [`def.integral-manifold`](../nodes/def.integral-manifold.md) 积分流形
+- 被 [`def.filter`](../nodes/def.filter.md) 滤子 用
 - ～弱边 [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域

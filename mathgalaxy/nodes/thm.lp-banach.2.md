@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数：用到了定义 L^p 范数　[proofs/def-link.lp-banach.md](../proofs/def-link.lp-banach.md)
+
+> 续见 [nodes/thm.lp-banach.3.md](./thm.lp-banach.3.md)

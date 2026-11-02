@@ -1,7 +1,7 @@
-# 拓扑空间 / Topological Spaces（topology.general）· 节点清单（第 1/2 页）
+# 拓扑空间 / Topological Spaces（topology.general）· 节点清单（第 1/3 页）
 
 造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。
-中心天体 def.topology　·　33 个节点　·　根 `../`　·　续页 `index/topology.general.2.md`
+中心天体 def.topology　·　37 个节点　·　根 `../`　·　续页 `index/topology.general.2.md`
 
 - def.topology　拓扑空间与开集　layer 4
 - def.closed-set　闭集与闭包　layer 5

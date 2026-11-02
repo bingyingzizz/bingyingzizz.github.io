@@ -10,7 +10,8 @@
 - 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
 - 被 [`def.t0-space`](../nodes/def.t0-space.md) T0 空间 用
 - 被 [`def.interior`](../nodes/def.interior.md) 内部 用
-- 被 [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包 用
-- 被 [`def.topology-base`](../nodes/def.topology-base.md) 基与子基 用
+- 被 [`def.net`](../nodes/def.net.md) 网 用
+- 被 [`def.filter`](../nodes/def.filter.md) 滤子 用
+- 被 [`def.g-delta`](../nodes/def.g-delta.md) G_δ 与 F_σ 用
 
 > 续见 [nodes/def.topology.4.md](./def.topology.4.md)

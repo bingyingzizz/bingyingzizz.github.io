@@ -7,7 +7,10 @@
 - 被 [`def.t3-space`](../nodes/def.t3-space.md) T3 空间 用
 - 被 [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间 用
 - 被 [`def.completely-normal-space`](../nodes/def.completely-normal-space.md) 完全正规空间 用
+- 被 [`def.compactification`](../nodes/def.compactification.md) 紧化 用
+- 被 [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密 用
+- 被 [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点 用
 - 被 [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的 用
 - 被 [`def.clopen`](../nodes/def.clopen.md) 闭开集 用
-- 被 [`prop.closed-map-neighborhood-basis`](../nodes/prop.closed-map-neighborhood-basis.md) 闭映射的邻域基 用
-- 被 [`def.normal-space`](../nodes/def.normal-space.md) 正规空间 用
+
+> 续见 [nodes/def.closed-set.5.md](./def.closed-set.5.md)

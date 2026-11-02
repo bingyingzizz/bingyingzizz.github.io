@@ -16,6 +16,8 @@ $$\|v\| = 0 \iff v = 0, \qquad \|cv\| = |c|\,\|v\|, \qquad \|u + v\| \le \|u\| +
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.cauchy-schwarz`](../nodes/thm.cauchy-schwarz.md) Cauchy–Schwarz 不等式
 
+- …另有出边，续页见 [nodes/def.induced-norm.3.md](./def.induced-norm.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.induced-norm.2.md](./def.induced-norm.2.md)
 

@@ -6,3 +6,4 @@
 - ⇒ [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称）
 - 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用
 - 被 [`def.lagrangian-subspace`](../nodes/def.lagrangian-subspace.md) Lagrange 子空间 用
+- 被 [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影 用

@@ -4,6 +4,7 @@
 - def.derived-category　导出范畴　layer 19
 - thm.derived-long-exact　导出函子的长正合列　layer 19
 - prop.injective-complex-homotopy　内射复形：零调、拟同构与同伦　layer 19
+- def.acyclic-complex　零调复形　layer 20
 - prop.hom-k-eq-hom-d　Hom 在同伦范畴与导出范畴里一样　layer 20
 - thm.k-plus-injectives　内射复形就是导出范畴　layer 20
 - def.ext　扩展群 Ext　layer 20

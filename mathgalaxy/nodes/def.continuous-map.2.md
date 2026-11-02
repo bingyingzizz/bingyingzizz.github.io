@@ -9,7 +9,8 @@
 - 被 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群 用
 - 被 [`def.homotopy-maps`](../nodes/def.homotopy-maps.md) 映射同伦 用
 - 被 [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间 用
+- 被 [`def.net`](../nodes/def.net.md) 网 用
+- 被 [`def.equicontinuous`](../nodes/def.equicontinuous.md) 等度连续 用
 - 被 [`def.homeomorphism`](../nodes/def.homeomorphism.md) 同胚 用
-- 被 [`prop.closed-map-neighborhood-basis`](../nodes/prop.closed-map-neighborhood-basis.md) 闭映射的邻域基 用
 
 > 续见 [nodes/def.continuous-map.3.md](./def.continuous-map.3.md)

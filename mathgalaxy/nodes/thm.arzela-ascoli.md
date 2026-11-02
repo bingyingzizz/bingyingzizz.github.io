@@ -10,6 +10,9 @@ layer 17 · 定理 · 共形映射与正规族 · 复变函数+数学分析
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.montel`](../nodes/thm.montel.md) Montel 定理
 - ⇒ [`thm.montel`](../nodes/thm.montel.md) Montel 定理
+- ⇒ [`thm.arzela-ascoli-general`](../nodes/thm.arzela-ascoli-general.md) 广义 Arzelà–Ascoli
+
+- …另有出边，续页见 [nodes/thm.arzela-ascoli.4.md](./thm.arzela-ascoli.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.arzela-ascoli.3.md](./thm.arzela-ascoli.3.md)

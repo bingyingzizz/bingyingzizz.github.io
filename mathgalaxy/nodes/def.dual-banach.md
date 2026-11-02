@@ -1,0 +1,20 @@
+# 连续对偶空间　`def.dual-banach`
+对偶空间 $E^*$（连续对偶）
+layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析
+[在星图里打开](../#n=def.dual-banach)　·　[节点索引](../index.md)
+
+赋范空间 $E$ 的**对偶空间**指
+
+$$E^* := B(E, \mathbb{K}) , \qquad \|\varphi\| := \sup_{\|x\| \le 1} |\varphi(x)| .$$
+
+由「$B(E,F)$ 完备」，$E^*$ 永远是 Banach 空间。
+
+## 为什么成立（入边，证明在 proofs/）
+- [`def.dual-space`](../nodes/def.dual-space.md) 对偶空间：用到了定义 对偶空间　[proofs/def-link.fa-dualspace.md](../proofs/def-link.fa-dualspace.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/def-link.fa-banachspace-dual.md](../proofs/def-link.fa-banachspace-dual.md)
+
+refs: 泛函分析讲义 2026-09-28
+
+> 说明见 `notes/def.dual-banach.md`
+
+引用：`def.dual-banach`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

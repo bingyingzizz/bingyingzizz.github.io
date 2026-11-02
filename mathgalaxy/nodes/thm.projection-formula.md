@@ -16,6 +16,9 @@ $$P_U v = \sum_{j=1}^{k} \langle e_j, v \rangle\, e_j, \qquad \|v\|^{2} = \|P_U 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.projection-formula.3.md](./thm.projection-formula.3.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.projection-formula.4.md](./thm.projection-formula.4.md)
+
 refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/thm.projection-formula.md`
