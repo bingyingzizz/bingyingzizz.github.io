@@ -5,7 +5,7 @@ layer 15 · 定义 · 拓扑空间 · 拓扑学
 
 拓扑空间 $X$ 叫**局部紧**的，如果**每个点都有紧邻域**：对每个 $x \in X$，存在紧集 $K$ 使
 
-$$x \in \operatorname{int} K$$
+$$x \in \mathring{K}$$
 
 再要求它是 Hausdorff 的，就叫**局部紧 Hausdorff** 空间。
 

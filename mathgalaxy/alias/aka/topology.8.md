@@ -7,16 +7,20 @@
 
 - 指数伴随 | Corollary 2.3.7 | Cor 2.3.7 | 余极限万有 → cor.cg-exponential-adjoint
 
-- 正规空间 | normal space | 正则空间 | 分离公理 | Definition 2.1.1 | Def 2.1.1 → def.normal-space
+- 正规空间 | normal space | T4 | T_4 | Definition 2.1.1 | Def 2.1.1 → def.normal-space
 
-- Urysohn 引理 | Urysohn | Lemma 2.1.2 | 连续函数足够多 → lem.urysohn
+- T0 | T_0 | T₀ | Kolmogorov 空间 | T0 空间 | 分离公理 → def.t0-space
 
-- 拓扑阿贝尔群 | topological abelian group | AbTop | 连续同态 | CZ(M,N) → def.topo-ab-group
+- T1 | T_1 | T₁ | Fréchet 空间 | T1 空间 | 单点是闭集 → def.t1-space
 
-- 局部紧阿贝尔群 | pre-abelian | Exercise 6.4 | R-disc 不是严格 → prop.lc-ab-preabelian
+- 正则空间 | T3 | T_3 | T₃ | regular space → def.regular-space
 
-- Pontryagin-van Kampen | 庞特里亚金对偶定理 | Theorem 6.2.4 | Thm 6.2.4 | 自等价 | Exercise 6.7 → thm.pontryagin-van-kampen
+- 完全正则空间 | T3.5 | T_3.5 | Tychonoff 空间 | 完全正则 → def.completely-regular-space
 
-- Tietze 延拓 | Tietze | Banach 值 Tietze | Theorem 8.2.7 → thm.tietze-banach
+- 完全正规空间 | T5 | T_5 | T₅ | 遗传正规 → def.completely-normal-space
+
+- 完美正规空间 | T6 | T_6 | T₆ | perfectly normal → def.perfectly-normal-space
+
+- 内部 | 开核 | interior | 边界 → def.interior
 
 > 续见 alias/aka/topology.9.md

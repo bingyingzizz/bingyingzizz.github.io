@@ -1,7 +1,7 @@
 # 局部紧 Hausdorff 空间　`def.locally-compact`　·　说明
 根 `../`
 
-**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \ni x$ 里都能找到一个紧邻域 $K$ 使 $x \in \operatorname{int}K \subseteq K \subseteq U$）。这条更强的形式正是「商映射 $\times$ 局部紧」那条定理要用的。
+**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \ni x$ 里都能找到一个紧邻域 $K$ 使 $x \in \mathring{K} \subseteq K \subseteq U$）。这条更强的形式正是「商映射 $\times$ 局部紧」那条定理要用的。
 
 **例子**：$\mathbb{R}^{n}$、任何离散空间、任何紧 Hausdorff 空间。**反例**：$\mathbb{Q}$（不是局部紧）、无穷维 Banach 空间（闭单位球不紧）。
 

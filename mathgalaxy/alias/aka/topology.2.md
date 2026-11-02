@@ -11,7 +11,7 @@
 
 - 商拓扑 | quotient topology | 商空间 | 粘合空间 → def.quotient-topology
 
-- Hausdorff | 豪斯多夫 | T2 | 分离公理 | Tychonoff | 正则空间 | 正规空间 | Definition 2.1.1 | Def 2.1.1 → def.hausdorff
+- Hausdorff | 豪斯多夫 | T2 | T_2 | 分离公理 | Definition 2.1.1 | Def 2.1.1 → def.hausdorff
 
 - 连通 | connected | 连通分量 | 连通分支 | Definition 2.2.5 | Def 2.2.5 | Exercise 2.14 → def.connected
 

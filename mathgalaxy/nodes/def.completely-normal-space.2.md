@@ -1,0 +1,10 @@
+# 完全正规空间　`def.completely-normal-space`　·　续页（第 2 页）
+[在星图里打开](../#n=def.completely-normal-space)　·　第 1 页 [nodes/def.completely-normal-space.md](./def.completely-normal-space.md)
+
+## 陈述（续）
+拓扑空间 $X$ 叫**完全正规**（completely normal，也叫**遗传正规** hereditarily normal），若 $X$ 的**每个子空间**都是正规的（`def.normal-space`）。
+**等价判据（Urysohn 的分离定理，最好用）**：$X$ 完全正规 $\iff$ 对任意两个**分离集** $A, B$（即 $\overline{A} \cap B = A \cap \overline{B} = \emptyset$）存在不交开集 $U \supseteq A$、$V \supseteq B$
+。
+**链的位置**：$T_{6} \implies T_{5} \implies T_{4}$（每步都是「条件变严」）。
+
+> 续见 [nodes/def.completely-normal-space.3.md](./def.completely-normal-space.3.md)

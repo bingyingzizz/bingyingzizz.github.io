@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-02T02:32:46.157Z",
+  "generated": "2026-11-02T03:02:33.263Z",
   "counts": {
    "regions": 14,
    "clusters": 94,
-   "nodes": 1384,
-   "edges": 2585,
-   "strong": 2568,
+   "nodes": 1392,
+   "edges": 2607,
+   "strong": 2590,
    "weak": 17,
-   "derived": 21,
-   "en_pages": 1384
+   "derived": 22,
+   "en_pages": 1392
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -69,7 +69,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 150
+   "nodeCount": 158
   },
   {
    "id": "algebra",
@@ -576,10 +576,18 @@
    "en": "Topological Spaces",
    "parent": "topology",
    "desc": "造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集与闭包 → 基 → 连续映射 → 同胚。",
-   "nodeCount": 24,
+   "nodeCount": 32,
    "nodes": [
     "def.second-countable",
     "def.first-countable",
+    "def.t0-space",
+    "def.t1-space",
+    "def.interior",
+    "def.regular-space",
+    "def.completely-regular-space",
+    "def.completely-normal-space",
+    "def.perfectly-normal-space",
+    "thm.compact-hausdorff-normal",
     "def.topology",
     "def.closed-set",
     "def.topology-base",
@@ -17822,7 +17830,7 @@
     "仿紧"
    ],
    "statement": "设 $X$ 是拓扑空间，$\\mathcal{A} = \\{ A_{s} \\}_{s \\in S}$ 是 $X$ 的一族子集。$\\mathcal{A}$ 叫**局部有限的**，如果每个点都有**开邻域**只与**有限多个**成员相交：对每个 $x \\in X$ 都存在开集 $U \\ni x$，使\n\n$$\\{\\, s \\in S : U \\cap A_{s} \\ne \\emptyset \\,\\}\\ \\text{finite}.$$\n\n把「开邻域」换成「点本身」，得到弱一些的**点有限族**：每个点只属于有限多个 $A_{s}$。",
-   "notes": "**为什么要「局部」**：一个族整体上可以无穷（$\\mathbb{R}$ 上的 $\\{\\, (n, n+2) \\,\\}_{n \\in \\mathbb{Z}}$ 有无穷多个成员），但只要每点附近只碰到有限多个，任何逐点求和就自动是**局部有限和**、任何逐点判断都只需看有限多项。仿紧、单位分解、层论里的细部论证全靠这一条。\n\n**三条常用性质**（后两条才是它真正被用到的形式）：\n\n- 局部有限 $\\implies$ 点有限：取只碰有限多个成员的邻域 $U \\ni x$，含 $x$ 的成员只能更少；\n- **并的闭包等于闭包之并**：$\\operatorname{cl}\\bigcup_{s} A_{s} = \\bigcup_{s} \\operatorname{cl} A_{s}$（$\\supseteq$ 恒成立，$\\subseteq$ 那一半用局部有限性）；\n- 若每个 $A_{s}$ 都**闭**，则 $\\bigcup_{s} A_{s}$ 也闭（上一条的直接推论）。\n\n⚠️ 局部有限**不等于**「成员可以很多」，**也不等于**点有限：$\\mathbb{R}$ 上的族 $\\{\\, \\{ 1/n \\} : n \\ge 1 \\,\\}$ 点有限（每点至多属于一个成员）却不局部有限（$0$ 的任何邻域都碰到无穷多个成员）。",
+   "notes": "**为什么要「局部」**：一个族整体上可以无穷（$\\mathbb{R}$ 上的 $\\{\\, (n, n+2) \\,\\}_{n \\in \\mathbb{Z}}$ 有无穷多个成员），但只要每点附近只碰到有限多个，任何逐点求和就自动是**局部有限和**、任何逐点判断都只需看有限多项。仿紧、单位分解、层论里的细部论证全靠这一条。\n\n**三条常用性质**（后两条才是它真正被用到的形式）：\n\n- 局部有限 $\\implies$ 点有限：取只碰有限多个成员的邻域 $U \\ni x$，含 $x$ 的成员只能更少；\n- **并的闭包等于闭包之并**：$\\overline{\\bigcup_{s} A_{s}} = \\bigcup_{s} \\overline{A_{s}}$（$\\supseteq$ 恒成立，$\\subseteq$ 那一半用局部有限性）；\n- 若每个 $A_{s}$ 都**闭**，则 $\\bigcup_{s} A_{s}$ 也闭（上一条的直接推论）。\n\n⚠️ 局部有限**不等于**「成员可以很多」，**也不等于**点有限：$\\mathbb{R}$ 上的族 $\\{\\, \\{ 1/n \\} : n \\ge 1 \\,\\}$ 点有限（每点至多属于一个成员）却不局部有限（$0$ 的任何邻域都碰到无穷多个成员）。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 39",
     "Engelking, General Topology, Ch. 5"
@@ -18031,8 +18039,8 @@
     "局部有限",
     "收缩"
    ],
-   "statement": "设 $X$ 是**正规**空间，$\\mathcal{U} = \\{ U_{i} \\}_{i \\in I}$ 是 $X$ 的**局部有限开覆盖**。则存在 $X$ 的开覆盖 $\\mathcal{V} = \\{ V_{i} \\}_{i \\in I}$（**指标集相同**）使\n\n$$V_{i} \\subseteq \\operatorname{cl} V_{i} \\subseteq U_{i}\\qquad (i \\in I),$$\n\n并且 $\\mathcal{V}$ 仍然局部有限。这样的 $\\mathcal{V}$ 叫 $\\mathcal{U}$ 的一个**收缩**（shrinking）。",
-   "notes": "**证明（对指标集良序化，逐个收缩）** 在 $I$ 上取一个良序（这里用到选择公理）。要造开集 $V_{i}$ 使 $\\operatorname{cl} V_{i} \\subseteq U_{i}$，同时保持覆盖。维护不变量：对每个 $i$，族\n$$\\mathcal{W}_{i} := \\{\\, V_{j} : j < i \\,\\} \\cup \\{\\, U_{k} : k \\ge i \\,\\}$$\n都是 $X$ 的覆盖。\n**后继步**（$i \\to i^{+}$）：令 $A_{i} := X \\setminus \\bigcup \\mathcal{W}_{i^{+}}$。$A_{i}$ 是**闭**集；而 $x \\notin \\mathcal{W}_{i^{+}}$ 意味着 $x \\notin V_{j}$（$j < i$）且 $x \\notin U_{k}$（$k > i$），不变量再把 $x$ 逼进 $U_{i}$ —— 所以 $A_{i} \\subseteq U_{i}$。对不交闭集 $A_{i}$ 与 $X \\setminus U_{i}$ 用正规性，得到开集 $V_{i}$ 使 $A_{i} \\subseteq V_{i}$ 且 $\\operatorname{cl} V_{i} \\subseteq U_{i}$（「闭集含于开集，就能夹一个开集使它的闭包仍含于那个开集」是正规性的标准变形）。于是 $\\mathcal{W}_{i^{+}}$ 仍覆盖 $X$。\n**极限步**（$i$ 是极限序数）：设 $x \\in X$。若 $x \\in U_{k}$ 对某个 $k \\ge i$ 成立，已被覆盖。否则 $x \\notin U_{k}$ 对一切 $k \\ge i$，而 $\\mathcal{W}_{i}$ 覆盖给出某个 $j < i$ 使 $x \\in U_{j}$。由**点有限性**（局部有限 $\\implies$ 点有限），$J := \\{\\, j < i : x \\in U_{j} \\,\\}$ 有限且非空；取 $j := \\max J$，则对一切 $k > j$ 有 $x \\notin U_{k}$，故 $x \\in A_{j} \\subseteq V_{j}$。\n**收尾**：由 $V_{i} \\subseteq U_{i}$，只碰有限多个 $U_{i}$ 的开邻域也只碰有限多个 $V_{i}$，故 $\\mathcal{V}$ 局部有限；覆盖性：给定 $x$，点有限性给出下标 $i$ 大于一切含 $x$ 的 $U_{j}$，再对 $\\mathcal{W}_{i}$ 用覆盖性即得 $x \\in V_{j}$（某个 $j < i$）。∎\n\n**为什么必须局部有限**：极限序数那一步用了「含 $x$ 的成员只有有限多个」。一般的开覆盖没有这条，收缩就可能不存在 —— 这正好解释了「正规」为什么推不出「仿紧」。\n\n⭐ 用处有两处：把仿紧的局部有限开加细换成**局部有限闭加细**（取闭包）；把局部有限开加细换成**单位分解**（在 $A_{i}$ 与 $X \\setminus U_{i}$ 之间用 Urysohn 引理取函数，再归一化）。\n\n⚠️ 收缩之后**闭包也含于原来的成员**，这是它比「再加细一次」强的地方：又一次加细只能保住覆盖与局部有限，保不住「贴着原来那个成员」。",
+   "statement": "设 $X$ 是**正规**空间，$\\mathcal{U} = \\{ U_{i} \\}_{i \\in I}$ 是 $X$ 的**局部有限开覆盖**。则存在 $X$ 的开覆盖 $\\mathcal{V} = \\{ V_{i} \\}_{i \\in I}$（**指标集相同**）使\n\n$$V_{i} \\subseteq \\overline{V_{i}} \\subseteq U_{i}\\qquad (i \\in I),$$\n\n并且 $\\mathcal{V}$ 仍然局部有限。这样的 $\\mathcal{V}$ 叫 $\\mathcal{U}$ 的一个**收缩**（shrinking）。",
+   "notes": "**证明（对指标集良序化，逐个收缩）** 在 $I$ 上取一个良序（这里用到选择公理）。要造开集 $V_{i}$ 使 $\\overline{V_{i}} \\subseteq U_{i}$，同时保持覆盖。维护不变量：对每个 $i$，族\n$$\\mathcal{W}_{i} := \\{\\, V_{j} : j < i \\,\\} \\cup \\{\\, U_{k} : k \\ge i \\,\\}$$\n都是 $X$ 的覆盖。\n**后继步**（$i \\to i^{+}$）：令 $A_{i} := X \\setminus \\bigcup \\mathcal{W}_{i^{+}}$。$A_{i}$ 是**闭**集；而 $x \\notin \\mathcal{W}_{i^{+}}$ 意味着 $x \\notin V_{j}$（$j < i$）且 $x \\notin U_{k}$（$k > i$），不变量再把 $x$ 逼进 $U_{i}$ —— 所以 $A_{i} \\subseteq U_{i}$。对不交闭集 $A_{i}$ 与 $X \\setminus U_{i}$ 用正规性，得到开集 $V_{i}$ 使 $A_{i} \\subseteq V_{i}$ 且 $\\overline{V_{i}} \\subseteq U_{i}$（「闭集含于开集，就能夹一个开集使它的闭包仍含于那个开集」是正规性的标准变形）。于是 $\\mathcal{W}_{i^{+}}$ 仍覆盖 $X$。\n**极限步**（$i$ 是极限序数）：设 $x \\in X$。若 $x \\in U_{k}$ 对某个 $k \\ge i$ 成立，已被覆盖。否则 $x \\notin U_{k}$ 对一切 $k \\ge i$，而 $\\mathcal{W}_{i}$ 覆盖给出某个 $j < i$ 使 $x \\in U_{j}$。由**点有限性**（局部有限 $\\implies$ 点有限），$J := \\{\\, j < i : x \\in U_{j} \\,\\}$ 有限且非空；取 $j := \\max J$，则对一切 $k > j$ 有 $x \\notin U_{k}$，故 $x \\in A_{j} \\subseteq V_{j}$。\n**收尾**：由 $V_{i} \\subseteq U_{i}$，只碰有限多个 $U_{i}$ 的开邻域也只碰有限多个 $V_{i}$，故 $\\mathcal{V}$ 局部有限；覆盖性：给定 $x$，点有限性给出下标 $i$ 大于一切含 $x$ 的 $U_{j}$，再对 $\\mathcal{W}_{i}$ 用覆盖性即得 $x \\in V_{j}$（某个 $j < i$）。∎\n\n**为什么必须局部有限**：极限序数那一步用了「含 $x$ 的成员只有有限多个」。一般的开覆盖没有这条，收缩就可能不存在 —— 这正好解释了「正规」为什么推不出「仿紧」。\n\n⭐ 用处有两处：把仿紧的局部有限开加细换成**局部有限闭加细**（取闭包）；把局部有限开加细换成**单位分解**（在 $A_{i}$ 与 $X \\setminus U_{i}$ 之间用 Urysohn 引理取函数，再归一化）。\n\n⚠️ 收缩之后**闭包也含于原来的成员**，这是它比「再加细一次」强的地方：又一次加细只能保住覆盖与局部有限，保不住「贴着原来那个成员」。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 41",
     "Engelking, General Topology, Ch. 5"
@@ -18075,7 +18083,7 @@
     "分离公理"
    ],
    "statement": "设 $X$ 是**仿紧**的 **Hausdorff** 空间。则 $X$ 是**正规**的；证明会先得到更强的中间结论：$X$ 已经是**正则**的。",
-   "notes": "**第 1 步：仿紧 Hausdorff $\\implies$ 正则。** 设 $x \\in X$、$F \\subseteq X$ 闭、$x \\notin F$。对每个 $y \\in F$，Hausdorff 性给出不交开集 $O_{1} \\ni y$、$O_{2} \\ni x$；取 $G_{y} := O_{1}$，由 $O_{1} \\subseteq X \\setminus O_{2}$ 得 $\\operatorname{cl} G_{y} \\subseteq X \\setminus O_{2}$，故 $x \\notin \\operatorname{cl} G_{y}$。于是\n$$\\mathcal{A} := \\{\\, X \\setminus F \\,\\} \\cup \\{\\, G_{y} : y \\in F \\,\\}$$\n是开覆盖。取它的局部有限开加细 $\\mathcal{C}$，令 $W := \\bigcup \\{\\, C \\in \\mathcal{C} : C \\cap F \\ne \\emptyset \\,\\}$。则 $F \\subseteq W$：$F$ 的点 $y$ 落在某个 $C$ 里，而 $C \\subseteq X \\setminus F$ 不可能（它含 $y$），故 $C \\subseteq G_{y}$，于是 $C$ 被计入 $W$。另一方面，每个计入 $W$ 的 $C$ 都落在某个 $G_{y}$ 里，故 $x \\notin \\operatorname{cl} C$；由局部有限族的「并的闭包等于闭包之并」，$\\operatorname{cl} W = \\bigcup \\{\\, \\operatorname{cl} C : C \\cap F \\ne \\emptyset \\,\\}$ 不含 $x$。所以 $W \\ni F$ 与 $X \\setminus \\operatorname{cl} W \\ni x$ 是分开 $F$ 与 $x$ 的不交开集。\n**第 2 步：正则 $+$ 仿紧 $\\implies$ 正规。** 设 $A, B$ 是不交闭集。对每个 $x \\in A$，正则性（$x \\notin B$）给出开集 $O_{x} \\ni x$ 使 $\\operatorname{cl} O_{x} \\cap B = \\emptyset$。于是 $\\mathcal{A} := \\{\\, X \\setminus A \\,\\} \\cup \\{\\, O_{x} : x \\in A \\,\\}$ 是开覆盖，取局部有限开加细 $\\mathcal{D}$，令 $U := \\bigcup \\{\\, D \\in \\mathcal{D} : D \\cap A \\ne \\emptyset \\,\\}$。同上：$A \\subseteq U$，且每个这样的 $D$ 含于某个 $O_{x}$，给出 $\\operatorname{cl} D \\cap B = \\emptyset$，故 $\\operatorname{cl} U \\cap B = \\emptyset$。于是 $U \\supseteq A$ 与 $X \\setminus \\operatorname{cl} U \\supseteq B$ 是分开 $A, B$ 的不交开集。∎\n\n⭐ 这条把「仿紧」接进了分离公理的层级：**紧 Hausdorff $\\implies$ 仿紧 Hausdorff $\\implies$ 正规 $\\implies$ 正则 $\\implies$ Hausdorff**。40 号包里的正规性与 Urysohn 引理从此有了来处：紧 Hausdorff 空间（$[0,1]$、$\\beta I$）都是仿紧的。\n\n⚠️ **Hausdorff 不能省**：只有两个点的 Sierpiński 空间是仿紧的（它的开覆盖都有限，局部有限性自动成立）却不是 $T_{1}$，因而非正规。\n\n⚠️ **反方向也不成立**：正规不必仿紧（$[0, \\omega_{1})$）。所以「仿紧」是真的一条新条件，而不是正规的改写。",
+   "notes": "**第 1 步：仿紧 Hausdorff $\\implies$ 正则。** 设 $x \\in X$、$F \\subseteq X$ 闭、$x \\notin F$。对每个 $y \\in F$，Hausdorff 性给出不交开集 $O_{1} \\ni y$、$O_{2} \\ni x$；取 $G_{y} := O_{1}$，由 $O_{1} \\subseteq X \\setminus O_{2}$ 得 $\\overline{G_{y}} \\subseteq X \\setminus O_{2}$，故 $x \\notin \\overline{G_{y}}$。于是\n$$\\mathcal{A} := \\{\\, X \\setminus F \\,\\} \\cup \\{\\, G_{y} : y \\in F \\,\\}$$\n是开覆盖。取它的局部有限开加细 $\\mathcal{C}$，令 $W := \\bigcup \\{\\, C \\in \\mathcal{C} : C \\cap F \\ne \\emptyset \\,\\}$。则 $F \\subseteq W$：$F$ 的点 $y$ 落在某个 $C$ 里，而 $C \\subseteq X \\setminus F$ 不可能（它含 $y$），故 $C \\subseteq G_{y}$，于是 $C$ 被计入 $W$。另一方面，每个计入 $W$ 的 $C$ 都落在某个 $G_{y}$ 里，故 $x \\notin \\overline{C}$；由局部有限族的「并的闭包等于闭包之并」，$\\overline{W} = \\bigcup \\{\\, \\overline{C} : C \\cap F \\ne \\emptyset \\,\\}$ 不含 $x$。所以 $W \\ni F$ 与 $X \\setminus \\overline{W} \\ni x$ 是分开 $F$ 与 $x$ 的不交开集。\n**第 2 步：正则 $+$ 仿紧 $\\implies$ 正规。** 设 $A, B$ 是不交闭集。对每个 $x \\in A$，正则性（$x \\notin B$）给出开集 $O_{x} \\ni x$ 使 $\\overline{O_{x}} \\cap B = \\emptyset$。于是 $\\mathcal{A} := \\{\\, X \\setminus A \\,\\} \\cup \\{\\, O_{x} : x \\in A \\,\\}$ 是开覆盖，取局部有限开加细 $\\mathcal{D}$，令 $U := \\bigcup \\{\\, D \\in \\mathcal{D} : D \\cap A \\ne \\emptyset \\,\\}$。同上：$A \\subseteq U$，且每个这样的 $D$ 含于某个 $O_{x}$，给出 $\\overline{D} \\cap B = \\emptyset$，故 $\\overline{U} \\cap B = \\emptyset$。于是 $U \\supseteq A$ 与 $X \\setminus \\overline{U} \\supseteq B$ 是分开 $A, B$ 的不交开集。∎\n\n⭐ 这条把「仿紧」接进了分离公理的层级：**紧 Hausdorff $\\implies$ 仿紧 Hausdorff $\\implies$ 正规 $\\implies$ 正则 $\\implies$ Hausdorff**。40 号包里的正规性与 Urysohn 引理从此有了来处：紧 Hausdorff 空间（$[0,1]$、$\\beta I$）都是仿紧的。\n\n⚠️ **Hausdorff 不能省**：只有两个点的 Sierpiński 空间是仿紧的（它的开覆盖都有限，局部有限性自动成立）却不是 $T_{1}$，因而非正规。\n\n⚠️ **反方向也不成立**：正规不必仿紧（$[0, \\omega_{1})$）。所以「仿紧」是真的一条新条件，而不是正规的改写。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 41",
     "Engelking, General Topology, Ch. 5"
@@ -18118,7 +18126,7 @@
     "局部有限"
    ],
    "statement": "设 $X$ 是**仿紧 Hausdorff** 空间，$\\mathcal{U}$ 是 $X$ 的开覆盖。则 $\\mathcal{U}$ 有**局部有限的闭加细** $\\mathcal{F} = \\{ F_{i} \\}_{i \\in I}$：每个 $F_{i}$ 是闭集、含于 $\\mathcal{U}$ 的某个成员、族 $\\mathcal{F}$ 局部有限，且 $\\bigcup_{i} F_{i} = X$。",
-   "notes": "**证明。** 由仿紧性取局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}_{i \\in I}$；由定理，$X$ 正规，于是对 $\\mathcal{V}$ 用收缩引理得开覆盖 $\\{ W_{i} \\}$ 使 $\\operatorname{cl} W_{i} \\subseteq V_{i}$。令 $F_{i} := \\operatorname{cl} W_{i}$，则：\n- $F_{i}$ 闭，且 $F_{i} \\subseteq V_{i} \\subseteq$ 某个 $\\mathcal{U}$ 的成员（加细的传递性）；\n- $\\{ F_{i} \\}$ 覆盖 $X$（$\\{ W_{i} \\}$ 已经覆盖）；\n- $\\{ F_{i} \\}$ 局部有限：只碰有限多个 $V_{i}$ 的开邻域也只碰有限多个 $\\operatorname{cl} W_{i}$ —— 这里用的是 $\\operatorname{cl} W_{i} \\subseteq V_{i}$。∎\n\n⭐ **为什么值得单独写一条**：闭加细让「局部有限」可以**逐个成员**去验证（闭族之并仍闭、闭包的运算和覆盖的运算可以交换）。单位分解的构造就是从闭加细开始的：先在闭族与开族的补之间用 Urysohn 引理取函数。\n\n**反向是一条判据**：在正则空间里，「每个开覆盖都有局部有限的**闭**加细」$\\implies$「每个开覆盖都有局部有限加细」$\\implies$ 仿紧（后者是 Michael 判别法）。所以在正则前提下，闭加细的存在性是仿紧的**等价刻画**，不是额外条件。\n\n⚠️ **把「局部有限」换成「$\\sigma$-局部有限」时，命题照样成立且更好证**；困难在反方向：$\\sigma$-局部有限的加细只在层内局部有限，合回一层要靠「正规 $+$ 逐层收缩」，那一步正是 Stone 定理与 Nagata–Smirnov 定理之间最技术的地方。",
+   "notes": "**证明。** 由仿紧性取局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}_{i \\in I}$；由定理，$X$ 正规，于是对 $\\mathcal{V}$ 用收缩引理得开覆盖 $\\{ W_{i} \\}$ 使 $\\overline{W_{i}} \\subseteq V_{i}$。令 $F_{i} := \\overline{W_{i}}$，则：\n- $F_{i}$ 闭，且 $F_{i} \\subseteq V_{i} \\subseteq$ 某个 $\\mathcal{U}$ 的成员（加细的传递性）；\n- $\\{ F_{i} \\}$ 覆盖 $X$（$\\{ W_{i} \\}$ 已经覆盖）；\n- $\\{ F_{i} \\}$ 局部有限：只碰有限多个 $V_{i}$ 的开邻域也只碰有限多个 $\\overline{W_{i}}$ —— 这里用的是 $\\overline{W_{i}} \\subseteq V_{i}$。∎\n\n⭐ **为什么值得单独写一条**：闭加细让「局部有限」可以**逐个成员**去验证（闭族之并仍闭、闭包的运算和覆盖的运算可以交换）。单位分解的构造就是从闭加细开始的：先在闭族与开族的补之间用 Urysohn 引理取函数。\n\n**反向是一条判据**：在正则空间里，「每个开覆盖都有局部有限的**闭**加细」$\\implies$「每个开覆盖都有局部有限加细」$\\implies$ 仿紧（后者是 Michael 判别法）。所以在正则前提下，闭加细的存在性是仿紧的**等价刻画**，不是额外条件。\n\n⚠️ **把「局部有限」换成「$\\sigma$-局部有限」时，命题照样成立且更好证**；困难在反方向：$\\sigma$-局部有限的加细只在层内局部有限，合回一层要靠「正规 $+$ 逐层收缩」，那一步正是 Stone 定理与 Nagata–Smirnov 定理之间最技术的地方。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 41",
     "Engelking, General Topology, Ch. 5"
@@ -18161,7 +18169,7 @@
     "判别法"
    ],
    "statement": "设 $X$ 是**正则**空间。则 $X$ **仿紧**，当且仅当它的每个开覆盖都有**局部有限的加细**（加细的成员不必是开集）：\n\n$X$ **仿紧** $\\iff$ 每个开覆盖都有局部有限的加细",
-   "notes": "**$(\\Longleftarrow)$ 才是内容，$(\\implies)$ 是废话**：仿紧的加细按定义就是局部有限的，而开加细当然是加细。所以这条定理的全部难点在一句话 —— **把「不必开」的局部有限加细撑成开加细，同时不毁掉局部有限性**。\n**思路（Michael）**：给定开覆盖 $\\mathcal{U}$ 与它的局部有限加细 $\\{ E_{s} \\}$。\n- 先做归约：由局部有限可设加细是**点有限**的（局部有限 $\\implies$ 点有限）；\n- 逐点撑开：对 $x \\in E_{s}$，正则性给出开集 $O_{x}$ 使 $x \\in O_{x} \\subseteq \\operatorname{cl} O_{x} \\subseteq$ 覆盖中含 $E_{s}$ 的那个成员，再令 $V_{s} := \\bigcup \\{\\, O_{x} : x \\in E_{s} \\,\\}$；\n- 此时 $\\{ V_{s} \\}$ 已经是**开加细并覆盖 $X$**，但一般**不再局部有限**（$V_{s} \\supseteq E_{s}$，一个邻域可能碰到很多 $V_{s}$ 而只碰到很少 $E_{s}$）；\n- 收尾：用点有限性把每一族成员**重新排序**，把第 $s$ 个换成「$E_{s}$ 挖掉前面那些开膨胀的闭包，再取内部」，新族就既开、又覆盖、又局部有限。\n**收尾引理（Michael）**：正则空间中，若开覆盖有局部有限加细，则它有局部有限的**开**加细。证明用「良序化 + 逐个膨胀」：把加细的成员良序化，依次膨胀进覆盖中对应的成员，每次只膨胀到尚未被前面成员盖住的点；局部有限性由原族的局部有限性接管（每点有邻域只碰到有限多个原成员，膨胀也只发生在这些成员里）。取这条引理即得仿紧。∎\n\n⭐ **当判据用的姿势**：实际验证仿紧时，往往只先拿到「闭的 / 不必开的 / 加细但很粗」的东西 —— 这时配上正则性就够，不必再构造开加细。本图的闭加细命题就是往这个方向走的。\n\n⚠️ **前提「正则」只在 $(\\Longleftarrow)$ 用到**；$(\\implies)$ 不需要任何分离性。\n\n⚠️ 定理里的「加细」如果是**闭**加细，结论同样成立（闭加细是加细的特例）—— 所以「正则 $+$ 每个开覆盖有局部有限闭加细」$\\implies$ 仿紧，这条常被当成仿紧的实用判据。",
+   "notes": "**$(\\Longleftarrow)$ 才是内容，$(\\implies)$ 是废话**：仿紧的加细按定义就是局部有限的，而开加细当然是加细。所以这条定理的全部难点在一句话 —— **把「不必开」的局部有限加细撑成开加细，同时不毁掉局部有限性**。\n**思路（Michael）**：给定开覆盖 $\\mathcal{U}$ 与它的局部有限加细 $\\{ E_{s} \\}$。\n- 先做归约：由局部有限可设加细是**点有限**的（局部有限 $\\implies$ 点有限）；\n- 逐点撑开：对 $x \\in E_{s}$，正则性给出开集 $O_{x}$ 使 $x \\in O_{x} \\subseteq \\overline{O_{x}} \\subseteq$ 覆盖中含 $E_{s}$ 的那个成员，再令 $V_{s} := \\bigcup \\{\\, O_{x} : x \\in E_{s} \\,\\}$；\n- 此时 $\\{ V_{s} \\}$ 已经是**开加细并覆盖 $X$**，但一般**不再局部有限**（$V_{s} \\supseteq E_{s}$，一个邻域可能碰到很多 $V_{s}$ 而只碰到很少 $E_{s}$）；\n- 收尾：用点有限性把每一族成员**重新排序**，把第 $s$ 个换成「$E_{s}$ 挖掉前面那些开膨胀的闭包，再取内部」，新族就既开、又覆盖、又局部有限。\n**收尾引理（Michael）**：正则空间中，若开覆盖有局部有限加细，则它有局部有限的**开**加细。证明用「良序化 + 逐个膨胀」：把加细的成员良序化，依次膨胀进覆盖中对应的成员，每次只膨胀到尚未被前面成员盖住的点；局部有限性由原族的局部有限性接管（每点有邻域只碰到有限多个原成员，膨胀也只发生在这些成员里）。取这条引理即得仿紧。∎\n\n⭐ **当判据用的姿势**：实际验证仿紧时，往往只先拿到「闭的 / 不必开的 / 加细但很粗」的东西 —— 这时配上正则性就够，不必再构造开加细。本图的闭加细命题就是往这个方向走的。\n\n⚠️ **前提「正则」只在 $(\\Longleftarrow)$ 用到**；$(\\implies)$ 不需要任何分离性。\n\n⚠️ 定理里的「加细」如果是**闭**加细，结论同样成立（闭加细是加细的特例）—— 所以「正则 $+$ 每个开覆盖有局部有限闭加细」$\\implies$ 仿紧，这条常被当成仿紧的实用判据。",
    "refs": [
     "Michael, A note on paracompact spaces, Proc. Amer. Math. Soc. 4 (1953)",
     "Engelking, General Topology, Ch. 5"
@@ -18203,7 +18211,7 @@
     "局部有限",
     "连续函数"
    ],
-   "statement": "设 $\\mathcal{U} = \\{ U_{i} \\}_{i \\in I}$ 是 $X$ 的开覆盖。一族连续函数 $\\rho_{i} : X \\to [0, 1]$（$i \\in I$）叫**从属于 $\\mathcal{U}$ 的单位分解**，如果\n1. **支撑在成员里**：$\\operatorname{supp} \\rho_{i} := \\operatorname{cl}\\{\\, x : \\rho_{i}(x) \\ne 0 \\,\\} \\subseteq U_{i}$；\n2. **支撑族局部有限**：$\\{\\, \\operatorname{supp} \\rho_{i} \\,\\}_{i \\in I}$ 是局部有限的族；\n3. **和恒为 1**：$\\sum_{i \\in I} \\rho_{i}(x) = 1$ 对每个 $x \\in X$ 成立。\n\n由 2，每点附近只有有限多个 $\\rho_{i}$ 不恒为零，所以 3 里的和是**局部有限和**：它逐点有意义，并且作为函数连续（有限个连续函数之和）。",
+   "statement": "设 $\\mathcal{U} = \\{ U_{i} \\}_{i \\in I}$ 是 $X$ 的开覆盖。一族连续函数 $\\rho_{i} : X \\to [0, 1]$（$i \\in I$）叫**从属于 $\\mathcal{U}$ 的单位分解**，如果\n1. **支撑在成员里**：$\\operatorname{supp} \\rho_{i} := \\overline{\\{\\, x : \\rho_{i}(x) \\ne 0 \\,\\}} \\subseteq U_{i}$；\n2. **支撑族局部有限**：$\\{\\, \\operatorname{supp} \\rho_{i} \\,\\}_{i \\in I}$ 是局部有限的族；\n3. **和恒为 1**：$\\sum_{i \\in I} \\rho_{i}(x) = 1$ 对每个 $x \\in X$ 成立。\n\n由 2，每点附近只有有限多个 $\\rho_{i}$ 不恒为零，所以 3 里的和是**局部有限和**：它逐点有意义，并且作为函数连续（有限个连续函数之和）。",
    "notes": "**它是「把局部的信息粘成整体」的机器**：若每个 $f_{i}$ 只在 $U_{i}$ 附近有定义，就把它们乘上 $\\rho_{i}$ 再相加，得到整体定义的对象；光滑情形取 $\\rho_{i}$ 光滑，就是流形上光滑化的那一招。\n\n**支撑为什么要取闭包**：若改成「$\\rho_{i}$ 在 $U_{i}$ **之外**恒为零」，这套语言在取极限时不稳定（零点集可能跑到 $U_{i}$ 外面去）；取闭包之后「在哪里为零」对极限稳定，局部有限性才有地方落脚。\n\n**它与仿紧的关系（两边都能走）**：$\\{\\, \\rho_{i}^{-1}((0, 1]) \\,\\}$ 是 $\\mathcal{U}$ 的局部有限**开**加细，所以「任意开覆盖都有从属单位分解」蕴含「有局部有限开加细」；反方向由本包的收缩引理 $+$ Urysohn 引理给出。61 号包里已有的 prop.paracompact-partition-unity 说的正是这两条合起来。\n\n⚠️ 单说「单位分解」没有意义：它必须**从属于某个覆盖**。同一个空间上换一个覆盖，能拿到的单位分解完全不同（最粗的情形：$\\mathcal{U} = \\{\\, X \\,\\}$，取 $\\rho \\equiv 1$ 就够了）。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 41",
@@ -18287,7 +18295,7 @@
     "邻域基"
    ],
    "statement": "$X$ 叫**第一可数的**，如果每个点都有**可数局部基**：存在含 $x$ 的开集族 $\\{\\, B_{n} \\,\\}_{n \\ge 1}$，使每个含 $x$ 的开集 $U$ 都包含某个 $B_{n}$。",
-   "notes": "⭐ **它的意义是：极限可以用序列说完**。第一可数空间里，$x \\in \\operatorname{cl} A$ 当且仅当 $A$ 中有序列收敛到 $x$；连续当且仅当序列连续。所以「先取可数局部基、再取一列」这种论证在距离空间里永远合法。\n\n**两个箭头**：第二可数 $\\implies$ 第一可数（每点处筛出含该点的基元）；可度量化 $\\implies$ 第一可数（$B(x, 1/n)$）。两个反向都不成立：不可数离散空间第一可数但不第二可数；Sorgenfrey 直线第一可数、可分，却不可度量化。\n\n⚠️ 第一可数是序列语言的**充分**条件，不是必要：还有 Fréchet–Urysohn 空间与序列空间这两个更宽的类，那些地方序列仍够用。本图不展开这条支线。",
+   "notes": "⭐ **它的意义是：极限可以用序列说完**。第一可数空间里，$x \\in \\overline{A}$ 当且仅当 $A$ 中有序列收敛到 $x$；连续当且仅当序列连续。所以「先取可数局部基、再取一列」这种论证在距离空间里永远合法。\n\n**两个箭头**：第二可数 $\\implies$ 第一可数（每点处筛出含该点的基元）；可度量化 $\\implies$ 第一可数（$B(x, 1/n)$）。两个反向都不成立：不可数离散空间第一可数但不第二可数；Sorgenfrey 直线第一可数、可分，却不可度量化。\n\n⚠️ 第一可数是序列语言的**充分**条件，不是必要：还有 Fréchet–Urysohn 空间与序列空间这两个更宽的类，那些地方序列仍够用。本图不展开这条支线。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 30"
    ]
@@ -18386,7 +18394,7 @@
    "abstract_en": "A regular $T_{1}$ space with a countable base is metrisable. The proof embeds $X$ into a countable product of copies of $[0,1]$: second countability makes $X$ Lindelof, regularity together with Lindelof makes it normal, and Urysohn functions attached to pairs $\\operatorname{cl}B_{m}\\subseteq B_{n}$ of basic open sets separate points from closed sets. The embedding is a homeomorphism onto its image, and the metric of the product pulls back to a metric inducing the topology of $X$.",
    "translations": {
     "en": {
-     "status": "reviewed",
+     "status": "stale",
      "version": "v0.9.1",
      "fields": [
       "abstract",
@@ -18396,10 +18404,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "reviewed",
+      "abstract": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "abstract"
+     ],
      "basedOn": {
       "abstract": "v0.9.1#60c5ccbe"
      }
@@ -18420,7 +18430,7 @@
     "正则"
    ],
    "statement": "设 $X$ 是**正则**（含 $T_{1}$）的**第二可数**空间。则 $X$ 是**可度量化的**：存在与 $X$ 的拓扑相容的距离。",
-   "notes": "**证明（嵌入可分度量空间）**\n1. **第二可数 $\\implies$ Lindelöf**：每个开覆盖有可数子覆盖（对基元做筛子）。\n2. **正则 $+$ Lindelöf $\\implies$ 正规**：$T_{1}$ 与「点与闭集可分开」配上 Lindelöf 的逐点归纳，给出两个不交闭集可分开。于是 **Urysohn 引理可用**。\n3. **挑可数多个分离函数**：取可数基 $\\{\\, B_{n} \\,\\}$。对每一对 $(m, n)$ 满足 $\\operatorname{cl} B_{m} \\subseteq B_{n}$，由 Urysohn 引理取连续函数\n$$f_{m,n} : X \\to [0, 1],\\qquad f_{m,n}|_{\\operatorname{cl} B_{m}} \\equiv 0,\\qquad f_{m,n}|_{X \\setminus B_{n}} \\equiv 1.$$\n这样的函数只有可数多个，把它们按可数集编号成 $f_{k}$（$k \\ge 1$）。\n4. **嵌入**：令 $F : X \\to [0, 1]^{\\mathbb{N}}$，$F(x) := (\\, f_{k}(x)/k \\,)_{k \\ge 1}$。$F$ 连续（每个分量连续，且级数一致收敛）；**单射**：$x \\ne y$ 时正则性给出基元 $B_{n}$ 使 $x \\in B_{n} \\subseteq \\operatorname{cl} B_{n} \\subseteq X \\setminus \\{\\, y \\,\\}$，于是某一对 $(m, n)$ 的 $f_{m,n}$ 把两者分开；**逆连续**：同样用基对，把「$f_{k}$ 很接近」翻译回「落在同一个基元里」。所以 $F$ 是到像上的同胚。\n5. **像空间可度量化**：$\\rho(a, b) := \\sum_{k \\ge 1} 2^{-k} |a_{k} - b_{k}|$ 是 $[0, 1]^{\\mathbb{N}}$ 上与积拓扑一致的度量；在像上取诱导度量即可。\n因此 $X$ 同胚于可分度量空间的子空间，即可度量化。∎\n\n⚠️ **反向不成立**：可度量化不必第二可数 —— 不可数离散空间是可度量化的（离散度量），却不第二可数。所以这条定理是**充分条件**，不是刻画。\n\n⭐ 要把「充分」变「充要」，就得把「第二可数」换成更合适的基条件：Nagata–Smirnov（$\\sigma$-局部有限基）与 Bing（$\\sigma$-离散基）就是干这件事的。",
+   "notes": "**证明（嵌入可分度量空间）**\n1. **第二可数 $\\implies$ Lindelöf**：每个开覆盖有可数子覆盖（对基元做筛子）。\n2. **正则 $+$ Lindelöf $\\implies$ 正规**：$T_{1}$ 与「点与闭集可分开」配上 Lindelöf 的逐点归纳，给出两个不交闭集可分开。于是 **Urysohn 引理可用**。\n3. **挑可数多个分离函数**：取可数基 $\\{\\, B_{n} \\,\\}$。对每一对 $(m, n)$ 满足 $\\overline{B_{m}} \\subseteq B_{n}$，由 Urysohn 引理取连续函数\n$$f_{m,n} : X \\to [0, 1],\\qquad f_{m,n}|_{\\overline{B_{m}}} \\equiv 0,\\qquad f_{m,n}|_{X \\setminus B_{n}} \\equiv 1.$$\n这样的函数只有可数多个，把它们按可数集编号成 $f_{k}$（$k \\ge 1$）。\n4. **嵌入**：令 $F : X \\to [0, 1]^{\\mathbb{N}}$，$F(x) := (\\, f_{k}(x)/k \\,)_{k \\ge 1}$。$F$ 连续（每个分量连续，且级数一致收敛）；**单射**：$x \\ne y$ 时正则性给出基元 $B_{n}$ 使 $x \\in B_{n} \\subseteq \\overline{B_{n}} \\subseteq X \\setminus \\{\\, y \\,\\}$，于是某一对 $(m, n)$ 的 $f_{m,n}$ 把两者分开；**逆连续**：同样用基对，把「$f_{k}$ 很接近」翻译回「落在同一个基元里」。所以 $F$ 是到像上的同胚。\n5. **像空间可度量化**：$\\rho(a, b) := \\sum_{k \\ge 1} 2^{-k} |a_{k} - b_{k}|$ 是 $[0, 1]^{\\mathbb{N}}$ 上与积拓扑一致的度量；在像上取诱导度量即可。\n因此 $X$ 同胚于可分度量空间的子空间，即可度量化。∎\n\n⚠️ **反向不成立**：可度量化不必第二可数 —— 不可数离散空间是可度量化的（离散度量），却不第二可数。所以这条定理是**充分条件**，不是刻画。\n\n⭐ 要把「充分」变「充要」，就得把「第二可数」换成更合适的基条件：Nagata–Smirnov（$\\sigma$-局部有限基）与 Bing（$\\sigma$-离散基）就是干这件事的。",
    "refs": [
     "Munkres, Topology (2nd ed.), Section 34",
     "Engelking, General Topology, Ch. 4"
@@ -34325,6 +34335,353 @@
    ]
   },
   {
+   "id": "def.t0-space",
+   "type": "definition",
+   "label": "T0 空间",
+   "title": "T0 空间（Kolmogorov）：点可被开集区分",
+   "label_en": "T0 Space",
+   "title_en": "T0 Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.t0-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 6,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T0",
+    "Kolmogorov"
+   ],
+   "statement": "**在做什么**：分离公理里最弱的一条 —— 只要求「任意两个不同点，存在某个开集恰好只含其中一个」。它保证拓扑能**看见**点是不同的。\n\n拓扑空间 $X$ 叫 **$T_{0}$ 空间**（或 **Kolmogorov 空间**），若对任意 $x \\ne y \\in X$，存在开集 $U$ 使\n\n$$x \\in U,\\ y \\notin U \\qquad \\text{或} \\qquad y \\in U,\\ x \\notin U .$$\n\n**等价说法**：任意两个不同点的**邻域族不同**，即 $x, y$ 不可能有完全相同的开邻域集。\n\n所以 $T_{0}$ 的含义是：**拓扑能分辨点**。",
+   "notes": "⚠️ **不可分空间的反例**（这把 $T_{0}$ 的必要性说死）：取 $X = \\{a, b\\}$，拓扑 $\\mathcal{T} = \\{\\emptyset, X\\}$。两个点的邻域族都是 $\\{X\\}$，拓扑**完全看不见** $a$ 与 $b$ 的区别 —— 这就是「不可分」的原意，也是 $T_{0}$ 名字的来历（Kolmogorov 用它区分「同一拓扑下的等价点」）。\n\n**商空间里天天遇到**：任何拓扑空间都能商掉关系 $x \\sim y \\iff$ 邻域族相同，得到 $T_{0}$ 空间；这个商叫 **Kolmogorov 商**。它是把任意空间「$T_{0}$ 化」的标准手术，也是 $T_{0}$ 唯一能普遍做到的位置（再往上都要额外条件）。\n\n⚠️ $T_{0}$ **不**保证极限唯一：$\\{a,b\\}$ 的那两个拓扑里，常数列 $a,a,\\ldots$ 同时收敛到 $a$ 与 $b$。极限唯一要 $T_{2}$（`def.hausdorff`）。\n\n⭐ 链的位置：$T_{0}$ 是最底下的一格。$T_{1}$ 往上每加一条，就多「看见」一点结构 —— 见 `def.t1-space` 的注里的那张表。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.t1-space",
+   "type": "definition",
+   "label": "T1 空间",
+   "title": "T1 空间（Fréchet）：单点是闭集",
+   "label_en": "T1 Space",
+   "title_en": "T1 Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.t1-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 7,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T1",
+    "Fréchet"
+   ],
+   "statement": "**在做什么**：$T_{1}$ 的判据极其好用，只有五个字：**单点是闭集**。等价地说，两个不同点各自都有一个不含对方的开邻域（但两个邻域**不必**不交）。\n\n拓扑空间 $X$ 叫 **$T_{1}$ 空间**（或 **Fréchet 空间**），若下列等价条件之一成立：\n\n1. 每个单点集 $\\{x\\}$ 是**闭集**；\n2. 对任意 $x \\ne y$，存在开集 $U \\ni x$ 使 $y \\notin U$，**并且**存在开集 $V \\ni y$ 使 $x \\notin V$；\n3. 每个有限子集是闭集；\n4. 对任意 $x$，$\\bigcap\\{\\, U : U \\ni x \\ \\text{开} \\,\\} = \\{x\\}$（即 $x$ 的闭包就是它自己：$\\overline{\\{x\\}} = \\{x\\}$）。\n\n**$T_{1}$ 与 $T_{2}$ 的差别**：$T_{1}$ 只要求「各自有一个不含对方的邻域」，两个邻域可以**相交**；$T_{2}$ 要求它们**不交**。所以 $T_{2} \\implies T_{1} \\implies T_{0}$，反向都不成立。",
+   "notes": "⭐ **为什么「单点闭」是最好的判据**：闭集可以做交、做有限并，于是 $T_{1}$ 下所有有限集都闭 —— 这让「从闭集里挖掉有限个点仍闭」「分离点与有限集」这类操作全部合法。几乎每个用到 $T_{1}$ 的证明，实际用的都是这条。\n\n⚠️ **$T_{1}$ 不够用的典型例子**（余有限拓扑）：$X$ 无穷，开集取 $\\emptyset$ 与余有限集。它 $T_{1}$（单点闭 ✓）但不 $T_{2}$：任意两个非空开集的交是余有限的、非空，永远交不停。所以「极限唯一」在这里失效 —— 序列可以收敛到**任意**点。\n\n⚠️ **约定差异**：多数教材把「正则」记作 $T_{3}$ 时，指的是「正则 **且** $T_{1}$」；单纯的正则（不含 $T_{1}$）弱于 $T_{3}$。本图在 `def.regular-space` 里写明了这个约定。\n\n**在链里的位置**：$T_{1}$ 是第一格「能分开点」的公理。再往上 $T_{2}$ 才能分开邻域，$T_{3}$ 才能拿点对闭集，$T_{4}$ 才能拿闭集对闭集。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.interior",
+   "type": "definition",
+   "label": "内部",
+   "title": "内部：闭包的对偶",
+   "label_en": "Interior",
+   "title_en": "Interior",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.interior.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 6,
+   "tags": [
+    "定义",
+    "拓扑",
+    "内部",
+    "开核",
+    "边界"
+   ],
+   "statement": "**在做什么**：闭包的反面。闭包是「把 $A$ 撑到最小闭集」，内部是「把 $A$ 缩到最大开集」—— 两者由取补互相翻译。\n\n设 $(X, \\mathcal{T})$ 是拓扑空间，$A \\subseteq X$。$A$ 的**内部**（interior，也叫开核）是\n\n$$\\mathring{A} := \\bigcup\\{\\, U : U \\subseteq A,\\ U\\ \\text{开} \\,\\} ,$$\n\n即「一切含于 $A$ 的开集之并」，也就是**包含在 $A$ 里的最大开集**。\n\n**与闭包的对偶**（把闭包的公理照抄一遍、开闭互换即可得到）：\n\n- $\\mathring{A} \\subseteq A$，且 $\\mathring{A}$ 开；$A$ 开 $\\iff$ $\\mathring{A} = A$；\n- $X \\setminus \\mathring{A} = \\overline{X \\setminus A}$，等价地 $\\mathring{A} = X \\setminus \\overline{X \\setminus A}$；\n- $\\mathring{(A \\cap B)} = \\mathring{A} \\cap \\mathring{B}$（内部**对交**保号，对并不保号）。\n\n**边界**：$\\partial A := \\overline{A} \\setminus \\mathring{A} = \\overline{A} \\cap \\overline{X \\setminus A}$。",
+   "notes": "⭐ **对偶公式是唯一的记忆法**：$\\mathring{A} = X \\setminus \\overline{X \\setminus A}$。所以关于闭包的一切定理（对任意交闭、对有限并闭）都能一字不改地翻译成内部的定理（对任意并开、对有限交开）。\n\n⚠️ **内部不保并**：$\\mathring{(A \\cup B)} \\supseteq \\mathring{A} \\cup \\mathring{B}$ 可能**严格**变大。例：$X = \\mathbb{R}$，$A = [0,1]$、$B = [1,2]$，则 $\\mathring{A} = (0,1)$、$\\mathring{B} = (1,2)$，而 $\\mathring{(A \\cup B)} = (0,2)$ —— 多出了点 $1$。**闭包对并不出问题、对交会出问题**，内部正好反过来。\n\n⚠️ **别把「内部」与「开核」当成两个东西**：开核（open kernel）就是内部的另一个名字，中文文献两种都常见。也不要把内部与「内点集」搞混 —— 后者是「存在开球含于 $A$ 的点」，在一般拓扑里要换成开邻域，结论仍是 $\\mathring{A}$。\n\n⚠️ 记号：本图用 $\\mathring{A}$（字母上方加圈），与闭包的 $\\overline{A}$（上方加线）配套。⚠️ 有些书用 $A^{\\circ}$（右上角）、$\\operatorname{Int} A$、$A^{\\mathrm{o}}$，读到时要认出来。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 闭集与极限点",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.regular-space",
+   "type": "definition",
+   "label": "正则空间",
+   "title": "正则空间（T3）：点与闭集可以分开",
+   "label_en": "Regular Space",
+   "title_en": "Regular Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.regular-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 8,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T3",
+    "正则"
+   ],
+   "statement": "**在做什么**：把 $T_{2}$ 的「点 vs 点」升级成「点 vs 不含它的闭集」。这是第一个能对**闭集**动手的分离公理。\n\n拓扑空间 $X$ 叫**正则**（regular），若对任意闭集 $F$ 与任意 $x \\notin F$，存在不交开集 $U, V$ 使\n\n$$x \\in U, \\qquad F \\subseteq V .$$\n\n若再要求 $X$ 是 $T_{1}$ 的（`def.t1-space`），就称 $X$ 是 **$T_{3}$ 空间**。\n\n**等价说法**（常用、更好用）：对任意 $x$ 与它的开邻域 $U \\ni x$，存在开集 $W$ 使\n\n$$x \\in W \\subseteq \\overline{W} \\subseteq U ,$$\n\n即**每个开邻域里还夹着一个开集的闭包**。\n\n**链的位置**：$T_{3} \\implies T_{2} \\implies T_{1} \\implies T_{0}$（反向都不成立）。",
+   "notes": "⚠️ **约定分歧最严重的一格**：多数教材（Munkres 之外的欧洲学派）把「正则」本身就理解成含 $T_{1}$；Munkres 则明确说「正则 + $T_{1}$ = $T_{3}$」。差别不是无关紧要的 —— 有「正则但不 $T_{1}$」的空间（例如在不可分拓扑上加 $T_{1}$ 反例的构造），它们连 $T_{2}$ 都不是。**本图取「正则 = 不含 $T_{1}$，$T_{3}$ = 正则 + $T_{1}$」的口径**，与 Munkres 一致。\n\n⭐ **「闭包还含在邻域里」这个等价形式是正则性的真正用法**：它允许你把开集**收缩**一点点，给旁边腾出空间。所有「先造开覆盖、再收缩、再取有限子覆盖」的论证（紧性、仿紧性、单位分解）都靠这一手。对照 `prop.normal-locally-closed`（正规空间的同一手法）。\n\n⚠️ **正则不蕴含正规**：`def.normal-space` 要求两个**闭集**分开，比「点与闭集」强。反例是 Sorgenfrey 平面（两个「Sorgenfrey 直线」的积）：它正则但不正规 —— 这是拓扑学里最著名的反例之一，也说明 $T_{3}$ 与 $T_{4}$ 之间**没有捷径**。\n\n⚠️ **$T_{3}$ 不等于「点与闭集之间有连续函数」** —— 那是 $T_{3.5}$（`def.completely-regular-space`）。$T_{3}$ 只给开集，不给函数。这个落差正是 Urysohn 引理要补的（而 Urysohn 引理需要 $T_{4}$，不是 $T_{3}$）。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.completely-regular-space",
+   "type": "definition",
+   "label": "完全正则空间",
+   "title": "完全正则空间（T3.5 / Tychonoff）：点与闭集可用连续函数分开",
+   "label_en": "Completely Regular Space",
+   "title_en": "Completely Regular Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.completely-regular-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 9,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T3.5",
+    "Tychonoff",
+    "完全正则"
+   ],
+   "statement": "**在做什么**：把「用开集分开」升级成「用**连续函数**分开」。这是分离公理链里第一次请出函数 —— 也是紧化与度量化理论的入口。\n\n拓扑空间 $X$ 叫**完全正则**（completely regular，也叫 **Tychonoff 空间**这个术语的弱版），若对任意闭集 $F$ 与任意 $x \\notin F$，存在连续函数 $f : X \\to [0, 1]$ 使\n\n$$f(x) = 0, \\qquad f|_{F} \\equiv 1 .$$\n\n若再要求 $T_{1}$，就称 $X$ 是 **$T_{3.5}$ 空间**（**Tychonoff 空间**）。\n\n**等价说法**：$X$ 能嵌入某个方体 $[0,1]^{I}$（即「有足够多的连续函数」）。\n\n**链的位置**：$T_{4} \\implies T_{3.5} \\implies T_{3} \\implies T_{2}$ —— 唯一的非平凡一步是 $T_{4} \\implies T_{3.5}$（用 Urysohn 引理 `lem.urysohn`，注意它要的是**正规**，不是正则）。",
+   "notes": "⭐ **为什么这一格特别重要**：$T_{3.5}$ 恰好是「能嵌入方体」的那一档，因此它的紧化（Stone–Čech）理论研究得最透；同时它也是度量化定理（Urysohn / Nagata–Smirnov / Bing）假设里的那一档 —— 因为度量空间一定完全正则，而完全正则比正规更「函数友好」。\n\n**为什么 $T_{4} \\implies T_{3.5}$ 要靠 Urysohn**：正规只保证「两闭集有不交开邻域」，要把开集变成 $[0,1]$ 上的连续函数，需要二分逼近构造（Urysohn 引理）。反过来 $T_{3.5} \\implies T_{3}$ 只要取 $U = f^{-1}([0, 1/2))$、$V = f^{-1}((1/2, 1])$ 即可，是一行。\n\n⚠️ **约定**：有的书把「完全正则」直接当 $T_{3.5}$（隐含 $T_{1}$），有的把两者分开（本图分开写）。差别只在于要不要额外假设 $T_{1}$。\n\n⚠️ **Tychonoff 撞名**：`thm.tykhonov` 是**乘积紧性**定理（任意积紧空间紧），与本概念同一个人、不同贡献，别混。\n\n⚠️ **完全正则不等于正规**：Sorgenfrey 平面完全正则（其实正则 + 完全正则那档），但不正规。所以 $T_{3.5}$ 严格弱于 $T_{4}$。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 完全正则空间",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.completely-normal-space",
+   "type": "definition",
+   "label": "完全正规空间",
+   "title": "完全正规空间（T5）：连子空间都正规",
+   "label_en": "Completely Normal Space",
+   "title_en": "Completely Normal Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.completely-normal-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 7,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T5",
+    "完全正规"
+   ],
+   "statement": "**在做什么**：正规性是「闭集 vs 闭集」。它**不遗传**给子空间 —— 所以要求「所有子空间都正规」是一条真加强，这就是 $T_{5}$。\n\n拓扑空间 $X$ 叫**完全正规**（completely normal，也叫**遗传正规** hereditarily normal），若 $X$ 的**每个子空间**都是正规的（`def.normal-space`）。\n\n**等价判据（Urysohn 的分离定理，最好用）**：$X$ 完全正规 $\\iff$ 对任意两个**分离集** $A, B$（即 $\\overline{A} \\cap B = A \\cap \\overline{B} = \\emptyset$）存在不交开集 $U \\supseteq A$、$V \\supseteq B$。\n\n**链的位置**：$T_{6} \\implies T_{5} \\implies T_{4}$（每步都是「条件变严」）。",
+   "notes": "⭐ **「分离集」为什么是自然的加强**：两个闭集天然是分离的（$\\overline{A} = A$，$A \\cap B = \\emptyset$ $\\implies$ $A \\cap \\overline{B} \\subseteq A \\cap B = \\emptyset$）。所以分离集比闭集对**宽**，要求能分开更宽的一类集合，等价于要求更强的空间。这条判据把「遗传」这个绕口的定义换成了可操作的集合条件。\n\n⚠️ **正规不遗传，是 $T_{5}$ 存在的唯一理由**：经典例子是 Tychonoff plank，或更简单的「Sorgenfrey 平面」变体 —— 正规空间的子空间可能不正规。所以 $T_{5}$ 不是「把 $T_{4}$ 换个写法」，而是真的加了一条。\n\n⚠️ **度量化空间都是 $T_{5}$**：距离空间的所有子空间都是距离空间、都正规，所以度量空间完全正规。这也是为什么在分析里很少需要 $T_{5}$ —— 它自动成立。\n\n⚠️ 有的书把 $T_{5}$ 定义为「完全正规 + $T_{1}$」。本图沿用「$\\implies T_{4}$」的惯例，把 $T_{1}$ 部分并入 $T_{4}$（因为 $T_{4}$ 已含 $T_{1}$）。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.perfectly-normal-space",
+   "type": "definition",
+   "label": "完美正规空间",
+   "title": "完美正规空间（T6）：每个闭集都可数交开集",
+   "label_en": "Perfectly Normal Space",
+   "title_en": "Perfectly Normal Space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.perfectly-normal-space.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 8,
+   "tags": [
+    "定义",
+    "拓扑",
+    "分离公理",
+    "T6",
+    "完美正规",
+    "G-delta"
+   ],
+   "statement": "**在做什么**：链顶端的最后一格。它用「可数」这一条把正规性再拧紧一格 —— 每个闭集都是一列开集之交。\n\n先记两个记号：集合 $A$ 叫 **$G_{\\delta}$ 集**，若它是**可数**多个开集之交；叫 **$F_{\\sigma}$ 集**，若它是可数多个闭集之并。\n\n拓扑空间 $X$ 叫**完美正规**（perfectly normal），若\n\n1. $X$ 正规（`def.normal-space`）；\n2. 每个闭集都是 $G_{\\delta}$ 集。\n\n（等价地：每个开集都是 $F_{\\sigma}$ 集，取补即得。）\n\n**链的位置**：$T_{6} \\implies T_{5} \\implies T_{4}$。",
+   "notes": "⭐ **为什么「每个闭集都可数交开集」值得单列**：它保证存在**连续函数把闭集精确地写成零点集**（$F = f^{-1}(0)$），而不只是「$f$ 在 $F$ 上为 0」。这一条在无穷维分析里非常关键（如 $C^{*}$-代数里的「$G_{\\delta}$ 点」、Baire 纲定理的加强版）。\n\n⚠️ **度量空间都是完美正规**：$d(x, F)$ 连续，$F = \\{\\, x : d(x, F) = 0 \\,\\}$ 且 $\\{\\, x : d(x,F) < 1/n \\,\\}$ 是一列开集 —— 于是闭集 = 可数交开集 ✓。所以 $T_{6}$ 在分析里几乎总是自动成立，反而在一般拓扑里才是真条件。\n\n⚠️ **$T_{6} \\implies T_{5}$ 不是白给的**：证明要用「可数交开集可推出「可用连续函数编码」」把分离集分开，属于 Urysohn 引理的加强版。本图只记链的方向，证明从略。\n\n⚠️ **约定**：有的书把完美正规定义为「完全正规 + 每个闭集都可数交开集」；由于 $T_{6}$ 蕴含 $T_{5}$，两种写法等价。",
+   "refs": [
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）· 分离公理",
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "thm.compact-hausdorff-normal",
+   "type": "theorem",
+   "label": "紧 Hausdorff 空间正规",
+   "title": "紧 Hausdorff 空间是正规的",
+   "label_en": "Compact Hausdorff is Normal",
+   "title_en": "Compact Hausdorff Spaces are Normal",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.compact-hausdorff-normal.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.general",
+   "layer": 15,
+   "tags": [
+    "定理",
+    "拓扑",
+    "紧",
+    "Hausdorff",
+    "正规",
+    "T4"
+   ],
+   "statement": "**在做什么**：$T_{2} + $ 紧 $\\implies T_{4}$。这一条把「局部可分点」和「整体可分闭集」接起来，是整个拓扑学里被引用最多的引理之一 —— 因为它让 Urysohn 引理 / Tietze 延拓 / 单位分解在**紧流形**上全部可用。\n\n设 $X$ 是**紧**的 Hausdorff 空间（`def.compact`、`def.hausdorff`）。则 $X$ 是**正规**的（`def.normal-space`）：任意两个不交闭集 $A, B$ 存在不交开集 $U \\supseteq A$、$V \\supseteq B$。\n\n**用途**：\n\n- 紧流形（局部结构）$\\implies$ 可度量化 / 可嵌入欧氏空间；\n- $[0,1]$、$\\mathbb{S}^{n}$、$\\mathbb{T}^{n}$ 都正规，于是上文提到的 Urysohn 型论证全部可用，不必逐个验证。",
+   "notes": "⭐ **证明思路（两步，都是紧性的标准用法）**：先把「点 vs 闭集」做出来（对每点 $b \\in B$ 用 $T_{2}$ 造 $b$ 的开邻域，其闭包仍避开 $x$；再用紧性取有限多个的并），得到「点与闭集可分开」（即 $X$ 正则）；再对 $x \\in A$ 重复一次同一手法（这次用 $A$ 的紧性取有限并），得到两个不交开集。两次都是「对每个点造一点余量、再用紧性取有限多」。完整证明在边上（`imp.compact-hausdorff-normal`）。\n\n⚠️ **紧性与 Hausdorff 缺一不可**：只有紧性不行（不 $T_{2}$ 的紧空间可以完全不正规），只有 $T_{2}$ 也不行（$T_{2}$ 一般不给正规 —— 例如 Sorgenfrey 平面）。所以这条定理的字面里两个前提都不能删。\n\n⚠️ **不能推广成「紧 + 正则」**：正则 + 紧确实蕴含正规（因为紧 + $T_{2}$ 蕴含正则，反之不必然）—— 但「紧 + 正则」这一条**也不**等价，历史上有人以为紧正则就够，实际仍需 $T_{2}$（有的书用「紧 + 正则」的变体，注意口径）。\n\n**与仿紧版的关系**：`thm.paracompact-hausdorff-normal` 证明「仿紧 $+$ Hausdorff $\\implies$ 正规」，紧空间都仿紧，所以那条也能推到本条 —— 但两条证明难度不同，本条只用紧性，不引入仿紧性。",
+   "refs": [
+    "Munkres, Topology（⚠️ 章节未核实，只记书名）· 紧 Hausdorff 空间",
+    "Engelking, General Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
    "id": "def.lp-norm",
    "type": "definition",
    "label": "L^p 范数",
@@ -35985,8 +36342,8 @@
     "拓扑",
     "闭集"
    ],
-   "statement": "设 $(X, \\mathcal{T})$ 是拓扑空间。\n\n- $F \\subseteq X$ 是**闭集**：$X \\setminus F$ 是开集；\n- $A \\subseteq X$ 的**闭包** $\\operatorname{cl} A$：一切包含 $A$ 的闭集之交（最小的那个闭集）；\n- $A$ **稠密**：$\\operatorname{cl} A = X$；\n- $x$ 的**邻域**：任何含 $x$ 的开集（的包含者）。\n\n由 De Morgan 律，开集的三条公理翻译成闭集就是：$\\emptyset, X$ 闭；**任意**交闭；**有限**并闭。",
-   "notes": "⭐ 开与闭不是互斥的：$\\emptyset$ 与 $X$ 既开又闭；在 $\\mathbb{R}$ 里 $[0, 1]$ 是闭的，$[0, 1)$ 既不开也不闭。\n\n闭包是「把极限点都收进来」：在距离空间里 $\\operatorname{cl} A$ 恰好是「$A$ 中某个序列的极限」全体。",
+   "statement": "设 $(X, \\mathcal{T})$ 是拓扑空间。\n\n- $F \\subseteq X$ 是**闭集**：$X \\setminus F$ 是开集；\n- $A \\subseteq X$ 的**闭包** $\\overline{A}$：一切包含 $A$ 的闭集之交（最小的那个闭集）；\n- $A$ **稠密**：$\\overline{A} = X$；\n- $x$ 的**邻域**：任何含 $x$ 的开集（的包含者）。\n\n由 De Morgan 律，开集的三条公理翻译成闭集就是：$\\emptyset, X$ 闭；**任意**交闭；**有限**并闭。",
+   "notes": "⭐ 开与闭不是互斥的：$\\emptyset$ 与 $X$ 既开又闭；在 $\\mathbb{R}$ 里 $[0, 1]$ 是闭的，$[0, 1)$ 既不开也不闭。\n\n闭包是「把极限点都收进来」：在距离空间里 $\\overline{A}$ 恰好是「$A$ 中某个序列的极限」全体。",
    "refs": [
     "Munkres, Topology, Ch. 2"
    ]
@@ -44559,7 +44916,7 @@
     "闭集"
    ],
    "statement": "拓扑空间 $X$ 叫**正规的**，如果它是 $T_{1}$ 的，并且任意两个**不交闭集** $A, B$ 都能被开集分开：存在开集 $U \\supseteq A$、$V \\supseteq B$ 使 $U \\cap V = \\emptyset$。\n\n把「不交闭集」换成「一点与不含该点的闭集」，得到的是**正则**空间；再换成「两点」，得到的就是 **Hausdorff**。",
-   "notes": "**分离公理的层级**（都是往上加强）：\n\n\n\n- $T_{1}$：单点是闭集；\n- Hausdorff：两点可被开集分开；\n- 正则：点与不含它的闭集可分开 $\\implies$ Hausdorff；\n- **正规**：两个不交闭集可分开 $\\implies$ 正则。\n\n\n\n**紧 Hausdorff $\\implies$ 正规**（这是紧性最常用的一个推论：两个不交闭集在紧空间里能被有限多个开集对分开）。所以 $[0,1]$、$\\beta I$ 这些空间都是正规的 —— 于是 Urysohn 引理在那里永远能用。\n\n⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。",
+   "notes": "**分离公理的层级**（都是往上加强）：\n\n\n\n- $T_{1}$：单点是闭集；\n- Hausdorff：两点可被开集分开；\n- 正则：点与不含它的闭集可分开 $\\implies$ Hausdorff；\n- **正规**：两个不交闭集可分开 $\\implies$ 正则。\n\n\n\n**紧 Hausdorff $\\implies$ 正规**（这是紧性最常用的一个推论：两个不交闭集在紧空间里能被有限多个开集对分开）。所以 $[0,1]$、$\\beta I$ 这些空间都是正规的 —— 于是 Urysohn 引理在那里永远能用。\n\n**完整证明**见 `thm.compact-hausdorff-normal`（两步都靠紧性把无穷族压成有限族）；⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。",
    "refs": [
     "Munkres, Topology"
    ]
@@ -46258,8 +46615,8 @@
     "Hausdorff",
     "紧邻域"
    ],
-   "statement": "拓扑空间 $X$ 叫**局部紧**的，如果**每个点都有紧邻域**：对每个 $x \\in X$，存在紧集 $K$ 使\n\n$$x \\in \\operatorname{int} K$$\n\n再要求它是 Hausdorff 的，就叫**局部紧 Hausdorff** 空间。\n\n⚠️ 本图提到「局部紧」**而不另加限定**时，指的都是后者 —— 这是凝聚态数学里的标准用法：那里用得到的性质（局部紧 $\\implies$ 紧生成、商映射 $\\times$ 局部紧）都同时需要 Hausdorff。",
-   "notes": "**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \\ni x$ 里都能找到一个紧邻域 $K$ 使 $x \\in \\operatorname{int}K \\subseteq K \\subseteq U$）。这条更强的形式正是「商映射 $\\times$ 局部紧」那条定理要用的。\n\n**例子**：$\\mathbb{R}^{n}$、任何离散空间、任何紧 Hausdorff 空间。**反例**：$\\mathbb{Q}$（不是局部紧）、无穷维 Banach 空间（闭单位球不紧）。\n\n⭐ **它在凝聚态数学里的位置**：$\\mathbf{CHaus}$ 是场地，而**局部紧 Hausdorff**是「能用紧 Hausdorff 逼近」的最小一族 —— 局部紧 Hausdorff 空间都是**紧生成**的（例 1），所以都能忠实地变成凝聚态集。Pontryagin 对偶也只在局部紧 Hausdorff 阿贝尔群那一条线上成立。\n\n⚠️ 「局部紧」这个条件**不能省**：商映射乘 id 那条定理、Tychonoff 以外的积性质、以及「紧提升条件」都要它。",
+   "statement": "拓扑空间 $X$ 叫**局部紧**的，如果**每个点都有紧邻域**：对每个 $x \\in X$，存在紧集 $K$ 使\n\n$$x \\in \\mathring{K}$$\n\n再要求它是 Hausdorff 的，就叫**局部紧 Hausdorff** 空间。\n\n⚠️ 本图提到「局部紧」**而不另加限定**时，指的都是后者 —— 这是凝聚态数学里的标准用法：那里用得到的性质（局部紧 $\\implies$ 紧生成、商映射 $\\times$ 局部紧）都同时需要 Hausdorff。",
+   "notes": "**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \\ni x$ 里都能找到一个紧邻域 $K$ 使 $x \\in \\mathring{K} \\subseteq K \\subseteq U$）。这条更强的形式正是「商映射 $\\times$ 局部紧」那条定理要用的。\n\n**例子**：$\\mathbb{R}^{n}$、任何离散空间、任何紧 Hausdorff 空间。**反例**：$\\mathbb{Q}$（不是局部紧）、无穷维 Banach 空间（闭单位球不紧）。\n\n⭐ **它在凝聚态数学里的位置**：$\\mathbf{CHaus}$ 是场地，而**局部紧 Hausdorff**是「能用紧 Hausdorff 逼近」的最小一族 —— 局部紧 Hausdorff 空间都是**紧生成**的（例 1），所以都能忠实地变成凝聚态集。Pontryagin 对偶也只在局部紧 Hausdorff 阿贝尔群那一条线上成立。\n\n⚠️ 「局部紧」这个条件**不能省**：商映射乘 id 那条定理、Tychonoff 以外的积性质、以及「紧提升条件」都要它。",
    "refs": [
     "Munkres, Topology"
    ]
@@ -50554,8 +50911,8 @@
     "余核",
     "严格正合"
    ],
-   "statement": "设 $\\mathbf{AbHaus}$ 是 **Hausdorff 拓扑阿贝尔群**（态射取连续同态）的范畴。则\n\n1. 对连续同态 $f : M \\to N$：$\\ker f = f^{-1}(0)$（带子空间拓扑），$\\operatorname{coker} f = N/\\operatorname{cl}\\bigl(f(M)\\bigr)$（带商拓扑）；\n2. 连续同态是核 $\\iff$ 它是**到闭子群上的同胚嵌入**；是余核 $\\iff$ 它是**开满射**；\n3. 列 $0 \\to M' \\xrightarrow{\\varphi} M \\xrightarrow{\\psi} M'' \\to 0$ **严格正合** $\\iff$ 它作为抽象阿贝尔群正合、且 $\\varphi$ 是闭嵌入、$\\psi$ 是开满射。",
-   "notes": "**证明。**\n**1.** 核是 $f$ 与 $0$ 的等化子；在拓扑阿贝尔群里等化子就是 $\\{x : f(x) = 0\\}$ 配**子空间拓扑**（$f$ 连续而 $N$ 是 Hausdorff，所以这个集合闭）✓。余核是余等化子：$\\mathbf{AbHaus}$ 里的商必须仍然 Hausdorff，而 $N/f(M)$ 只有在 $f(M)$ **闭**时才 Hausdorff，故余等化子只能是 $N/\\operatorname{cl}(f(M))$（带商拓扑）✓ —— 一般连续同态的像**不必闭**（$\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ 的像稠密而不闭），所以闭包不能省；像已经闭时就退化成 $N/f(M)$ ✓。\n**2.** 「核」是带子空间拓扑的那个等化子，所以它作为映射必然是到闭子群上的同胚嵌入 ✓；反过来，闭嵌入 $\\varphi : M' \\to M$ 恰好是 $\\varphi$ 与 $0$ 的等化子（等化子带的就是子空间拓扑，像闭保证商/余核那边也对）✓。余核那条同理：商映射是开满射 ✓，反之开满射正是它自己核的余等化子 ✓ —— 「开」不能省：$\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ 满，但不是余核。\n**3.** 若列严格正合，则 $\\varphi$ 实现 $\\ker\\psi$、$\\psi$ 实现 $\\operatorname{coker}\\varphi$，由 2 得 $\\varphi$ 闭嵌入、$\\psi$ 开满射 ✓。反过来，若作为抽象群正合、且 $\\varphi$ 闭嵌入、$\\psi$ 开满射，则 $\\varphi$ 与「$\\psi^{-1}(0)$ 带子空间拓扑」一致、$\\psi$ 与「商去 $\\operatorname{cl}\\varphi(M)$」一致，而 $\\varphi(M)$ 闭、故就是商去像 ✓。于是这条列是核-余核列，即严格正合 ✓。∎\n\n⭐ **「严格」不是装饰**：在拓扑阿贝尔群里，「正合」与「严格正合」是实打实的差别 —— 拓扑阿贝尔群**不是**阿贝尔范畴，缺的正是「每个态射都由它的核与余核刻画」这一条。凝聚态数学把这一层补回来的方式，是把拓扑群嵌进 $\\mathrm{CondAb}$。",
+   "statement": "设 $\\mathbf{AbHaus}$ 是 **Hausdorff 拓扑阿贝尔群**（态射取连续同态）的范畴。则\n\n1. 对连续同态 $f : M \\to N$：$\\ker f = f^{-1}(0)$（带子空间拓扑），$\\operatorname{coker} f = N/\\overline{f(M)}$（带商拓扑）；\n2. 连续同态是核 $\\iff$ 它是**到闭子群上的同胚嵌入**；是余核 $\\iff$ 它是**开满射**；\n3. 列 $0 \\to M' \\xrightarrow{\\varphi} M \\xrightarrow{\\psi} M'' \\to 0$ **严格正合** $\\iff$ 它作为抽象阿贝尔群正合、且 $\\varphi$ 是闭嵌入、$\\psi$ 是开满射。",
+   "notes": "**证明。**\n**1.** 核是 $f$ 与 $0$ 的等化子；在拓扑阿贝尔群里等化子就是 $\\{x : f(x) = 0\\}$ 配**子空间拓扑**（$f$ 连续而 $N$ 是 Hausdorff，所以这个集合闭）✓。余核是余等化子：$\\mathbf{AbHaus}$ 里的商必须仍然 Hausdorff，而 $N/f(M)$ 只有在 $f(M)$ **闭**时才 Hausdorff，故余等化子只能是 $N/\\overline{f(M)}$（带商拓扑）✓ —— 一般连续同态的像**不必闭**（$\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ 的像稠密而不闭），所以闭包不能省；像已经闭时就退化成 $N/f(M)$ ✓。\n**2.** 「核」是带子空间拓扑的那个等化子，所以它作为映射必然是到闭子群上的同胚嵌入 ✓；反过来，闭嵌入 $\\varphi : M' \\to M$ 恰好是 $\\varphi$ 与 $0$ 的等化子（等化子带的就是子空间拓扑，像闭保证商/余核那边也对）✓。余核那条同理：商映射是开满射 ✓，反之开满射正是它自己核的余等化子 ✓ —— 「开」不能省：$\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ 满，但不是余核。\n**3.** 若列严格正合，则 $\\varphi$ 实现 $\\ker\\psi$、$\\psi$ 实现 $\\operatorname{coker}\\varphi$，由 2 得 $\\varphi$ 闭嵌入、$\\psi$ 开满射 ✓。反过来，若作为抽象群正合、且 $\\varphi$ 闭嵌入、$\\psi$ 开满射，则 $\\varphi$ 与「$\\psi^{-1}(0)$ 带子空间拓扑」一致、$\\psi$ 与「商去 $\\overline{\\varphi(M)}$」一致，而 $\\varphi(M)$ 闭、故就是商去像 ✓。于是这条列是核-余核列，即严格正合 ✓。∎\n\n⭐ **「严格」不是装饰**：在拓扑阿贝尔群里，「正合」与「严格正合」是实打实的差别 —— 拓扑阿贝尔群**不是**阿贝尔范畴，缺的正是「每个态射都由它的核与余核刻画」这一条。凝聚态数学把这一层补回来的方式，是把拓扑群嵌进 $\\mathrm{CondAb}$。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.1"
    ]
@@ -65315,7 +65672,7 @@
    ],
    "target": "thm.paracompact-hausdorff-normal",
    "title": "",
-   "proof": "**先证正则。** 设 $x \\notin F$、$F$ 闭。对每个 $y \\in F$ 取不交开集 $O_{1} \\ni y$、$O_{2} \\ni x$ 并令 $G_{y} := O_{1}$：由 $O_{1} \\subseteq X \\setminus O_{2}$ 得 $\\operatorname{cl} G_{y} \\cap O_{2} = \\emptyset$，故 $x \\notin \\operatorname{cl} G_{y}$。开覆盖 $\\{\\, X \\setminus F \\,\\} \\cup \\{\\, G_{y} \\,\\}$ 由仿紧性有局部有限开加细 $\\mathcal{C}$；令 $W := \\bigcup \\{\\, C \\in \\mathcal{C} : C \\cap F \\ne \\emptyset \\,\\}$。\n- $F \\subseteq W$：$y \\in F$ 落在某个 $C$ 里，而 $C \\subseteq X \\setminus F$ 不可能，故 $C \\subseteq G_{y}$，于是 $C$ 计入 $W$；\n- $x \\notin \\operatorname{cl} W$：计入的每个 $C$ 都含于某个 $G_{y}$，故 $x \\notin \\operatorname{cl} C$；由局部有限族的并的闭包等于闭包之并，$\\operatorname{cl} W$ 是这些 $\\operatorname{cl} C$ 的并，不含 $x$。\n所以 $W \\ni F$ 与 $X \\setminus \\operatorname{cl} W \\ni x$ 是不交开集：正则 ✓。\n**再证正规。** 设 $A, B$ 不交闭。对 $x \\in A$ 用正则性取开集 $O_{x} \\ni x$ 使 $\\operatorname{cl} O_{x} \\cap B = \\emptyset$。开覆盖 $\\{\\, X \\setminus A \\,\\} \\cup \\{\\, O_{x} \\,\\}$ 有局部有限开加细 $\\mathcal{D}$；令 $U := \\bigcup \\{\\, D \\in \\mathcal{D} : D \\cap A \\ne \\emptyset \\,\\}$。同上 $A \\subseteq U$，且每个计入的 $D \\subseteq O_{x}$ 给出 $\\operatorname{cl} D \\cap B = \\emptyset$，由局部有限性得 $\\operatorname{cl} U \\cap B = \\emptyset$。于是 $U$ 与 $X \\setminus \\operatorname{cl} U$ 分开 $A, B$ ✓。∎",
+   "proof": "**先证正则。** 设 $x \\notin F$、$F$ 闭。对每个 $y \\in F$ 取不交开集 $O_{1} \\ni y$、$O_{2} \\ni x$ 并令 $G_{y} := O_{1}$：由 $O_{1} \\subseteq X \\setminus O_{2}$ 得 $\\overline{G_{y}} \\cap O_{2} = \\emptyset$，故 $x \\notin \\overline{G_{y}}$。开覆盖 $\\{\\, X \\setminus F \\,\\} \\cup \\{\\, G_{y} \\,\\}$ 由仿紧性有局部有限开加细 $\\mathcal{C}$；令 $W := \\bigcup \\{\\, C \\in \\mathcal{C} : C \\cap F \\ne \\emptyset \\,\\}$。\n- $F \\subseteq W$：$y \\in F$ 落在某个 $C$ 里，而 $C \\subseteq X \\setminus F$ 不可能，故 $C \\subseteq G_{y}$，于是 $C$ 计入 $W$；\n- $x \\notin \\overline{W}$：计入的每个 $C$ 都含于某个 $G_{y}$，故 $x \\notin \\overline{C}$；由局部有限族的并的闭包等于闭包之并，$\\overline{W}$ 是这些 $\\overline{C}$ 的并，不含 $x$。\n所以 $W \\ni F$ 与 $X \\setminus \\overline{W} \\ni x$ 是不交开集：正则 ✓。\n**再证正规。** 设 $A, B$ 不交闭。对 $x \\in A$ 用正则性取开集 $O_{x} \\ni x$ 使 $\\overline{O_{x}} \\cap B = \\emptyset$。开覆盖 $\\{\\, X \\setminus A \\,\\} \\cup \\{\\, O_{x} \\,\\}$ 有局部有限开加细 $\\mathcal{D}$；令 $U := \\bigcup \\{\\, D \\in \\mathcal{D} : D \\cap A \\ne \\emptyset \\,\\}$。同上 $A \\subseteq U$，且每个计入的 $D \\subseteq O_{x}$ 给出 $\\overline{D} \\cap B = \\emptyset$，由局部有限性得 $\\overline{U} \\cap B = \\emptyset$。于是 $U$ 与 $X \\setminus \\overline{U}$ 分开 $A, B$ ✓。∎",
    "note": ""
   },
   {
@@ -65328,7 +65685,7 @@
    ],
    "target": "prop.paracompact-closed-refinement",
    "title": "",
-   "proof": "设 $\\mathcal{U}$ 是仿紧 Hausdorff 空间 $X$ 的开覆盖。仿紧性给出局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}$；由上一条定理 $X$ 正规，于是可以对 $\\mathcal{V}$ 用收缩引理，得到开覆盖 $\\{ W_{i} \\}$ 使 $\\operatorname{cl} W_{i} \\subseteq V_{i}$。取 $F_{i} := \\operatorname{cl} W_{i}$：\n- 闭 ✓，且 $F_{i} \\subseteq V_{i} \\subseteq$ 某个 $\\mathcal{U}$ 的成员（加细可传递）；\n- 覆盖 $X$ ✓（$\\{ W_{i} \\}$ 已覆盖）；\n- 局部有限 ✓：只碰有限多个 $V_{i}$ 的开邻域也只碰有限多个 $\\operatorname{cl} W_{i}$，用的是 $\\operatorname{cl} W_{i} \\subseteq V_{i}$。∎",
+   "proof": "设 $\\mathcal{U}$ 是仿紧 Hausdorff 空间 $X$ 的开覆盖。仿紧性给出局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}$；由上一条定理 $X$ 正规，于是可以对 $\\mathcal{V}$ 用收缩引理，得到开覆盖 $\\{ W_{i} \\}$ 使 $\\overline{W_{i}} \\subseteq V_{i}$。取 $F_{i} := \\overline{W_{i}}$：\n- 闭 ✓，且 $F_{i} \\subseteq V_{i} \\subseteq$ 某个 $\\mathcal{U}$ 的成员（加细可传递）；\n- 覆盖 $X$ ✓（$\\{ W_{i} \\}$ 已覆盖）；\n- 局部有限 ✓：只碰有限多个 $V_{i}$ 的开邻域也只碰有限多个 $\\overline{W_{i}}$，用的是 $\\overline{W_{i}} \\subseteq V_{i}$。∎",
    "note": ""
   },
   {
@@ -65341,7 +65698,7 @@
    ],
    "target": "prop.paracompact-partition-unity",
    "title": "",
-   "proof": "这是已有命题里「仿紧 Hausdorff $\\implies$ 任意开覆盖有从属单位分解」的那一半，逐步重复一遍以显示它不额外需要任何东西：\n设 $\\mathcal{U} = \\{ U_{i} \\}$ 是开覆盖。仿紧给局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}$，正规性（上一条定理）加收缩引理给开覆盖 $\\{ W_{i} \\}$ 使 $\\operatorname{cl} W_{i} \\subseteq V_{i}$。\n对不交闭集 $\\operatorname{cl} W_{i}$ 与 $X \\setminus V_{i}$ 用 Urysohn 引理，取连续 $g_{i} : X \\to [0, 1]$，$g_{i} \\equiv 1$ 在 $\\operatorname{cl} W_{i}$ 上、$g_{i} \\equiv 0$ 在 $X \\setminus V_{i}$ 上。令 $g := \\sum_{i} g_{i}$：局部有限性保证这是局部有限和，故 $g$ 连续；$\\{ W_{i} \\}$ 覆盖说明每点处 $g \\ge 1$。于是\n$$\\rho_{i} := g_{i}/g$$\n满足：$\\rho_{i} \\ge 0$、$\\sum_{i} \\rho_{i} \\equiv 1$、$\\operatorname{supp} \\rho_{i} \\subseteq \\operatorname{cl} V_{i} \\subseteq$ 某个 $U_{i}$（把 $\\rho_{i}$ 的指标跟着 $V_{i}$ 的指标走）、支撑族局部有限 ✓。这就是从属于 $\\mathcal{U}$ 的单位分解。∎\n反方向（单位分解 $\\implies$ 局部有限开加细）在已有命题的证明里，本图不重复。",
+   "proof": "这是已有命题里「仿紧 Hausdorff $\\implies$ 任意开覆盖有从属单位分解」的那一半，逐步重复一遍以显示它不额外需要任何东西：\n设 $\\mathcal{U} = \\{ U_{i} \\}$ 是开覆盖。仿紧给局部有限开加细 $\\mathcal{V} = \\{ V_{i} \\}$，正规性（上一条定理）加收缩引理给开覆盖 $\\{ W_{i} \\}$ 使 $\\overline{W_{i}} \\subseteq V_{i}$。\n对不交闭集 $\\overline{W_{i}}$ 与 $X \\setminus V_{i}$ 用 Urysohn 引理，取连续 $g_{i} : X \\to [0, 1]$，$g_{i} \\equiv 1$ 在 $\\overline{W_{i}}$ 上、$g_{i} \\equiv 0$ 在 $X \\setminus V_{i}$ 上。令 $g := \\sum_{i} g_{i}$：局部有限性保证这是局部有限和，故 $g$ 连续；$\\{ W_{i} \\}$ 覆盖说明每点处 $g \\ge 1$。于是\n$$\\rho_{i} := g_{i}/g$$\n满足：$\\rho_{i} \\ge 0$、$\\sum_{i} \\rho_{i} \\equiv 1$、$\\operatorname{supp} \\rho_{i} \\subseteq \\overline{V_{i}} \\subseteq$ 某个 $U_{i}$（把 $\\rho_{i}$ 的指标跟着 $V_{i}$ 的指标走）、支撑族局部有限 ✓。这就是从属于 $\\mathcal{U}$ 的单位分解。∎\n反方向（单位分解 $\\implies$ 局部有限开加细）在已有命题的证明里，本图不重复。",
    "note": ""
   },
   {
@@ -72693,6 +73050,193 @@
    "note": "$(q, p)$ 是余切丛上的 Darboux 坐标。"
   },
   {
+   "id": "dep.t0-closed",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "def.t0-space",
+   "note": "判据用「点与闭包的区分」陈述，直接借闭包的记号。"
+  },
+  {
+   "id": "dep.t0-top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.t0-space",
+   "note": "分离公理都是拓扑空间的性质，开集是最基本的语汇。"
+  },
+  {
+   "id": "dep.t1-closed",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "def.t1-space",
+   "note": "主判据就是「单点是闭集」。"
+  },
+  {
+   "id": "dep.t1-t0",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.t0-space",
+   "usedBy": "def.t1-space",
+   "note": "$T_1 \\implies T_0$：链上的相邻格，定义时先立住下面的。"
+  },
+  {
+   "id": "dep.int-closed",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "def.interior",
+   "note": "内部是闭包的对偶（$\\mathring{A} = X \\setminus \\overline{X \\setminus A}$），必须先有闭包。"
+  },
+  {
+   "id": "dep.int-top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.interior",
+   "note": "「含于 $A$ 的开集之并」直接用开集。"
+  },
+  {
+   "id": "dep.reg-t1",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.t1-space",
+   "usedBy": "def.regular-space",
+   "note": "$T_3$ = 正则 + $T_1$，定义里要说明这一层。"
+  },
+  {
+   "id": "dep.reg-closed",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "def.regular-space",
+   "note": "分离的对象是「点与闭集」。"
+  },
+  {
+   "id": "dep.reg-haus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "def.regular-space",
+   "note": "$T_3 \\implies T_2$：链上紧邻的一格。"
+  },
+  {
+   "id": "dep.cr-reg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.regular-space",
+   "usedBy": "def.completely-regular-space",
+   "note": "$T_{3.5} \\implies T_3$：把开集换成连续函数，强一格。"
+  },
+  {
+   "id": "dep.cr-cont",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.continuous-map",
+   "usedBy": "def.completely-regular-space",
+   "note": "定义的核心就是「存在连续函数」。"
+  },
+  {
+   "id": "dep.cn-norm",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-space",
+   "usedBy": "def.completely-normal-space",
+   "note": "定义就是「每个子空间都正规」。"
+  },
+  {
+   "id": "dep.cn-sub",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.subspace-topology",
+   "usedBy": "def.completely-normal-space",
+   "note": "「遗传」的对象是子空间拓扑。"
+  },
+  {
+   "id": "dep.cn-closed",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "def.completely-normal-space",
+   "note": "分离集的判据用闭包写：$\\overline{A} \\cap B = A \\cap \\overline{B} = \\emptyset$。"
+  },
+  {
+   "id": "dep.pn-norm",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-space",
+   "usedBy": "def.perfectly-normal-space",
+   "note": "完美正规的第一条就要求正规。"
+  },
+  {
+   "id": "dep.pn-cn",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.completely-normal-space",
+   "usedBy": "def.perfectly-normal-space",
+   "note": "$T_6 \\implies T_5$：链顶两格相邻。"
+  },
+  {
+   "id": "dep.pn-int",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.interior",
+   "usedBy": "def.perfectly-normal-space",
+   "note": "$G_\\delta$ / $F_\\sigma$ 的说法要与开闭集、内部的对偶语言配套。"
+  },
+  {
+   "id": "dep.chn-compact",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact",
+   "usedBy": "thm.compact-hausdorff-normal",
+   "note": "第一条前提是紧。"
+  },
+  {
+   "id": "dep.chn-haus",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hausdorff",
+   "usedBy": "thm.compact-hausdorff-normal",
+   "note": "第二条前提是 $T_2$。"
+  },
+  {
+   "id": "dep.chn-normal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-space",
+   "usedBy": "thm.compact-hausdorff-normal",
+   "note": "结论是 $T_4$。"
+  },
+  {
+   "id": "imp.normal-completely-regular",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.normal-space",
+    "lem.urysohn"
+   ],
+   "target": "def.completely-regular-space",
+   "layer": false,
+   "title": "正规推出完全正则（Urysohn 引理的推论）",
+   "proof": "设 $X$ 正规（$T_4$），$F \\subseteq X$ 闭、$x \\notin F$。则 $F$ 与单点集 $\\{x\\}$ 是两个不交闭集（$T_4$ 含 $T_1$，故 $\\{x\\}$ 闭）。\n\n由 Urysohn 引理（`lem.urysohn`：正规空间中两个不交闭集可由 $[0,1]$ 上的连续函数分开）存在连续 $f : X \\to [0, 1]$ 使\n\n$$f|_{F} \\equiv 0, \\qquad f(x) = 1 .$$\n\n于是对任意闭集 $F$ 与 $x \\notin F$ 都有这样的 $f$，即 $X$ 完全正则。再加上 $X$ 已 $T_1$，得 $T_{3.5}$ ✓。\n\n⭐ **方向不能反**：这里用到的是**正规**（$T_4$），不是正则（$T_3$）。$T_3$ 只给不交开集、不给连续函数，所以 $T_3 \\implies T_{3.5}$ 是**假**的（Sorgenfrey 平面之外的经典反例都要靠这条差别）。\n⚠️ 反过来 $T_{3.5} \\implies T_3$ 只要一行：取 $U = f^{-1}([0, 1/2))$、$V = f^{-1}((1/2, 1])$。",
+   "note": ""
+  },
+  {
+   "id": "imp.compact-hausdorff-normal",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.compact",
+    "def.hausdorff"
+   ],
+   "target": "thm.compact-hausdorff-normal",
+   "title": "",
+   "proof": "**第 0 步（预备）**：紧空间的闭子集紧（`prop.compact-basic-operations`）；$T_{2}$ 空间中，若 $x \\notin B$ 且 $B$ 紧，则存在不交开集分开 $x$ 与 $B$。\n\n**第 1 步：$X$ 正则（点 vs 闭集）。** 设 $F \\subseteq X$ 闭、$x \\notin F$。对每个 $y \\in F$，由 $T_{2}$ 取不交开集 $U_{y} \\ni y$、$W_{y} \\ni x$；令 $G_{y} := U_{y}$，则 $\\overline{G_{y}} \\subseteq X \\setminus W_{y}$，故 $x \\notin \\overline{G_{y}}$。\n\n族 $\\{\\, G_{y} : y \\in F \\,\\}$ 是紧集 $F$ 的开覆盖（$F$ 闭于紧空间，故紧），取有限子覆盖 $G_{y_{1}}, \\ldots, G_{y_{n}}$。令\n\n$$V := G_{y_{1}} \\cup \\cdots \\cup G_{y_{n}}, \\qquad U := X \\setminus (\\overline{G_{y_{1}}} \\cup \\cdots \\cup \\overline{G_{y_{n}}}) .$$\n\n则 $U$ 开（有限个闭集之并闭）、$V$ 开、$F \\subseteq V$；且 $x \\notin \\overline{G_{y_{i}}}$ 给出 $x \\in U$；最后由 $G_{y_{i}} \\subseteq \\overline{G_{y_{i}}}$ 得 $U \\cap V = \\emptyset$。所以 $x$ 与 $F$ 被不交开集分开：$X$ 正则 ✓。\n\n**第 2 步：$X$ 正规（闭集 vs 闭集）。** 设 $A, B$ 不交闭。对每个 $x \\in A$，用第 1 步（把闭集 $B$ 与点 $x$ 分开）得到不交开集 $O_{x} \\ni x$、$W_{x} \\supseteq B$。族 $\\{\\, O_{x} : x \\in A \\,\\}$ 覆盖紧集 $A$，取有限子覆盖 $O_{x_{1}}, \\ldots, O_{x_{m}}$。令\n\n$$U := O_{x_{1}} \\cup \\cdots \\cup O_{x_{m}}, \\qquad V := W_{x_{1}} \\cap \\cdots \\cap W_{x_{m}} .$$\n\n则 $U$ 开、$V$ 开（有限交）、$A \\subseteq U$、$B \\subseteq V$，且 $U \\cap V = \\emptyset$（每个 $O_{x_{i}}$ 都与 $W_{x_{i}}$ 不交，故 $U$ 与全体 $W_{x_{j}}$ 的交不交）。于是 $X$ 正规 ✓。∎\n\n**⭐ 两次都是同一个模板**：对每个点造「一点余量」（邻域取到闭包仍避开对面），再用紧性把无穷族压成有限族 —— 有限性正是为了取「有限并 / 有限交」时开闭性不乱。这两步在 `thm.paracompact-hausdorff-normal` 里换成了局部有限族，是同一条思路的仿紧版。",
+   "note": ""
+  },
+  {
    "id": "imp.holder",
    "kind": "implication",
    "strength": "strong",
@@ -74367,7 +74911,7 @@
    "strength": "strong",
    "definition": "def.kernel-cokernel",
    "usedBy": "prop.abhaus-strict-exact",
-   "note": "核与余核在这里被具体算成 $f^{-1}(0)$ 与 $N/\\operatorname{cl}f(M)$。"
+   "note": "核与余核在这里被具体算成 $f^{-1}(0)$ 与 $N/\\overline{f}(M)$。"
   },
   {
    "id": "def-link.abhaus-exact",
@@ -84687,6 +85231,13 @@
    "explicit": false
   },
   {
+   "a": "topology.general",
+   "b": "topology.metric",
+   "count": 8,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "analysis.integral",
    "b": "analysis.lp",
    "count": 4,
@@ -84781,13 +85332,6 @@
    "a": "set.rel",
    "b": "topology.general",
    "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "topology.general",
-   "b": "topology.metric",
-   "count": 6,
    "label": "",
    "explicit": false
   },

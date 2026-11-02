@@ -5,7 +5,7 @@ layer 10 · 引理 · 仿紧与单位分解 · 拓扑学
 
 设 $X$ 是**正规**空间，$\mathcal{U} = \{ U_{i} \}_{i \in I}$ 是 $X$ 的**局部有限开覆盖**。则存在 $X$ 的开覆盖 $\mathcal{V} = \{ V_{i} \}_{i \in I}$（**指标集相同**）使
 
-$$V_{i} \subseteq \operatorname{cl} V_{i} \subseteq U_{i}\qquad (i \in I),$$
+$$V_{i} \subseteq \overline{V_{i}} \subseteq U_{i}\qquad (i \in I),$$
 
 并且 $\mathcal{V}$ 仍然局部有限。这样的 $\mathcal{V}$ 叫 $\mathcal{U}$ 的一个**收缩**（shrinking）。
 

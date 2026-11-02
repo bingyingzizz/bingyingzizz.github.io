@@ -1,6 +1,30 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- Euler 示性数 → thm.euler-characteristic
+
+- Mayer–Vietoris（同调） → thm.mv-homology
+
+- H₀ 与分支 → prop.h0-components
+
+- 对的长正合列 → thm.long-exact-pair
+
+- 单纯逼近 → thm.simplicial-approximation
+
+- 奇异同调群 → def.singular-homology
+
+- 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
+
+- 有界闭 ⟺ 紧（ℝⁿ） → cor.heine-borel
+
+- 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
+
+- 链同伦 → def.chain-homotopy
+
+- 诱导同态 → prop.induced-homomorphism
+
+- 单纯同调群 → def.simplicial-homology
+
 - 道路拼接 → lem.path-product
 
 - 基点变换 → prop.pi1-basepoint
@@ -20,31 +44,5 @@
 - 边缘算子 → def.simplicial-boundary
 
 - 一致连续 → def.uniform-continuity
-
-- 覆叠的指数 → prop.covering-index
-
-- van Kampen 定理 → thm.van-kampen
-
-- 单纯复形 → def.simplicial-complex
-
-- 道路同伦 → def.path-homotopy
-
-- 单连通 → def.simply-connected
-
-- 标准单纯形 → def.standard-simplex
-
-- 第二可数空间 → def.second-countable
-
-- 第一可数空间 → def.first-countable
-
-- 映射同伦 → def.homotopy-maps
-
-- 基本群 → def.fundamental-group
-
-- 覆叠空间 → def.covering-space
-
-- 提升定理 → thm.lifting
-
-- 仿紧豪斯多夫空间正规 | 豪斯多夫 → thm.paracompact-hausdorff-normal
 
 > 续见 alias/aka/topology.12.md

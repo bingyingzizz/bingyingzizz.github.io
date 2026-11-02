@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.urysohn-metrization)　·　[Chinese page (authoritative)](./thm.urysohn-metrization.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **stale** · stale fields: abstract (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
 layer 16 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 
