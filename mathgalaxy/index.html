@@ -1430,6 +1430,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       /* ⭐ 2026-10-19：领域中心改由**跨领域边权**求解（见 layout.js 的 solveRegionCenters）。
          打开后 packSectors 整段跳过 —— 两条规则会打架。regions.js 的 center 降级成初始锚。 */
       regionSolve: true,
+      /* ⭐ 2026-11-02：**按连通性径向排布星系**。
+         用户向：「实分析和外面有一大圈空，说明它跟别的团没啥关系，为啥在中间？」
+         病根：没有边的星系对之间没力 ⇒ 星系基本停在 regions.js 的种子位置。
+         现在按「跨星系度数」把最连通的放在内圈、孤岛推到外围。 */
+      regionRadial: true,
+      regionRadialInner: 520,   // 最连通的星系离全域重心的目标半径
+      regionRadialOuter: 2300,  // 最孤立的星系的目标半径（取当前地图的实际量级）
+      regionRadialK: 0.10,      // 径向项的力度
 
       /* ⭐ 2026-11-02：**团心松弛**（layout.js 的 relaxClusterCenters）。
          星团只在「自己星系内部」打过包 ⇒ 跨星系的团之间没有碰撞保护：
@@ -3754,6 +3762,31 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
       var wsum0 = 0, wn0 = 0;
       Object.keys(wt).forEach(function (k2) { wsum0 += wt[k2]; wn0++; });
       var wMean = wn0 ? wsum0 / wn0 : 1;
+      /* ⭐ 2026-11-02：**按连通性径向排布**。
+         ------------------------------------------------------------------
+         用户：「实分析这一块和外面有一大圈空，说明它和别的团没啥关系啊，为啥会被
+         算在星图的中间呢？」—— 量出来坐实了：实变函数只有 42 条跨星系边（倒数第 5），
+         却比同调代数（164）、范畴论（146）、数学分析（91）更靠全域重心（803 vs
+         1668 / 1704 / 2110），而且它最近的邻居（数论）之间**一条边都没有**。
+
+         病根：下面那个循环里，**没边的星系对之间完全没有力**（只有 0.002 的微弱
+         向心）⇒ 星系最终落在哪里，基本由 `regions.js` 的**种子坐标**决定。
+         实变函数的种子 (170,1010) 本来就偏中间，于是它「不接线却被留在中心」。
+
+         新增一项：先算每个星系的**跨星系度数**，归一化后映射到目标半径 ——
+         最连通的靠近重心、孤岛推到外围。范围取当前地图的实际量级
+         （离重心的实测区间 518~2361），所以世界盒不会因此变大。 */
+      var deg = Object.create(null);
+      Object.keys(wt).forEach(function (k3) {
+        var p3 = k3.split('|');
+        deg[p3[0]] = (deg[p3[0]] || 0) + wt[k3];
+        deg[p3[1]] = (deg[p3[1]] || 0) + wt[k3];
+      });
+      var degMax = 1;
+      regs.forEach(function (r) { degMax = Math.max(degMax, deg[r.id] || 0); });
+      var rIn = cfg.regionRadialInner == null ? 520 : cfg.regionRadialInner;
+      var rOut = cfg.regionRadialOuter == null ? 2300 : cfg.regionRadialOuter;
+      var kRad = cfg.regionRadialK == null ? 0.02 : cfg.regionRadialK;
       var c0x = 0, c0y = 0;
       regs.forEach(function (r) { c0x += r.center.x; c0y += r.center.y; });
       c0x /= regs.length; c0y /= regs.length;
@@ -3774,6 +3807,18 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.1';</script>
             if (d < touch) { var push = (touch - d) * 0.25; fx -= ux * push; fy -= uy * push; }
           });
           fx += (c0x - A.center.x) * 0.002; fy += (c0y - A.center.y) * 0.002;
+          /* ⭐ 连通性径向项：最连通的靠中心，孤岛推到外围（见上面那段注释） */
+          if (cfg.regionRadial) {
+            var dn = (deg[A.id] || 0) / degMax;
+            var rWant = rIn + (rOut - rIn) * (1 - dn);
+            var rx = A.center.x - c0x, ry = A.center.y - c0y;
+            var rr = Math.sqrt(rx * rx + ry * ry);
+            /* 正好在重心上时给一个确定性方向（用下标奇偶），不用随机数 */
+            var uxr = rr > 1e-6 ? rx / rr : (i % 2 ? 1 : -1);
+            var uyr = rr > 1e-6 ? ry / rr : 0;
+            fx += uxr * (rWant - rr) * kRad;
+            fy += uyr * (rWant - rr) * kRad;
+          }
           A._fx = fx; A._fy = fy;
         });
         regs.forEach(function (A) {
