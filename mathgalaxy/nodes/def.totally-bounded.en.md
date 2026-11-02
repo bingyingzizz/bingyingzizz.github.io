@@ -10,5 +10,5 @@ layer 14 · definition · cluster Metric Spaces (`topology.metric`) · Topology
 Chinese only — see the Chinese page `nodes/def.totally-bounded.md` and `proofs/`.
 
 
-Cite: `def.totally-bounded` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.totally-bounded` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

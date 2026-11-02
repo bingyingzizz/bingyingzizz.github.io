@@ -10,5 +10,5 @@ layer 13 · theorem · cluster Arithmetic Functions and Distribution of Primes (
 Chinese only — see the Chinese page `nodes/thm.divisor-formula.md` and `proofs/`.
 
 
-Cite: `thm.divisor-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.divisor-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

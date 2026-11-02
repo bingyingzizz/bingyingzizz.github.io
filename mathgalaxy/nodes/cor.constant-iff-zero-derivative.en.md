@@ -10,5 +10,5 @@ layer 22 · corollary · cluster Mean Value Theorems and Taylor (`analysis.mvt`)
 Chinese only — see the Chinese page `nodes/cor.constant-iff-zero-derivative.md` and `proofs/`.
 
 
-Cite: `cor.constant-iff-zero-derivative` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.constant-iff-zero-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

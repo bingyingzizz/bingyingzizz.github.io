@@ -11,5 +11,5 @@ names: `Alternative Topology Axiom` (short) · `Alternative Axiom for a Grothend
 Chinese only — see the Chinese page `nodes/prop.topology-alternative-axiom.md` and `proofs/`.
 
 
-Cite: `prop.topology-alternative-axiom` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.topology-alternative-axiom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

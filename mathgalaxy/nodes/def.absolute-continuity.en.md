@@ -10,5 +10,5 @@ layer 16 · definition · cluster Signed Measures and Decompositions (`analysis.
 Chinese only — see the Chinese page `nodes/def.absolute-continuity.md` and `proofs/`.
 
 
-Cite: `def.absolute-continuity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.absolute-continuity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

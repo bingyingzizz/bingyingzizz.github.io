@@ -12,4 +12,4 @@ refs: Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 > 说明见 `notes/thm.stone-weierstrass-complex.md`
 
-引用：`thm.stone-weierstrass-complex`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.stone-weierstrass-complex`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

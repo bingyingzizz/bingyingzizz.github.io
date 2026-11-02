@@ -11,5 +11,5 @@ names: `Slice Covering Sieves` (short) · `Covering Sieves in a Slice` (full)
 Chinese only — see the Chinese page `nodes/prop.slice-covering-sieve.md` and `proofs/`.
 
 
-Cite: `prop.slice-covering-sieve` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.slice-covering-sieve` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

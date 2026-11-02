@@ -10,5 +10,5 @@ layer 16 · lemma · cluster Condensed Derived Functors (`cond.cohomology`) · C
 Chinese only — see the Chinese page `nodes/lem.k-bounded-completion.md` and `proofs/`.
 
 
-Cite: `lem.k-bounded-completion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.k-bounded-completion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

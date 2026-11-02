@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed 
 Chinese only — see the Chinese page `nodes/thm.solid-derived.md` and `proofs/`.
 
 
-Cite: `thm.solid-derived` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.solid-derived` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

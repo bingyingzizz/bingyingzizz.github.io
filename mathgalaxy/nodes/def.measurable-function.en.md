@@ -10,5 +10,5 @@ layer 6 · definition · cluster Measurable Functions and Convergence (`analysis
 Chinese only — see the Chinese page `nodes/def.measurable-function.md` and `proofs/`.
 
 
-Cite: `def.measurable-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.measurable-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

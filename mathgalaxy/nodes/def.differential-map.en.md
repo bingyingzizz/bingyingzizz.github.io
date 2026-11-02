@@ -11,5 +11,5 @@ names: `Differential` (short) · `Differential of a Smooth Map` (full)
 Chinese only — see the Chinese page `nodes/def.differential-map.md` and `proofs/`.
 
 
-Cite: `def.differential-map` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.differential-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

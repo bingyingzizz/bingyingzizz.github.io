@@ -11,5 +11,5 @@ names: `Inverse Function (Banach)` (short) · `Inverse Function Theorem in Banac
 Chinese only — see the Chinese page `nodes/thm.inverse-function-banach.md` and `proofs/`.
 
 
-Cite: `thm.inverse-function-banach` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.inverse-function-banach` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

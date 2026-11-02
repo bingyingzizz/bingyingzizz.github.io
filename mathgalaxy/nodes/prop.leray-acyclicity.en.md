@@ -11,5 +11,5 @@ names: `Leray Acyclicity` (short) · `Leray's Acyclicity Criterion` (full)
 Chinese only — see the Chinese page `nodes/prop.leray-acyclicity.md` and `proofs/`.
 
 
-Cite: `prop.leray-acyclicity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.leray-acyclicity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

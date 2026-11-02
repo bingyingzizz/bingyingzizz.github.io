@@ -11,5 +11,5 @@ names: `Boundary Squares to Zero` (short) · `The Boundary Operator Squares to Z
 Chinese only — see the Chinese page `nodes/prop.boundary-squared-zero.md` and `proofs/`.
 
 
-Cite: `prop.boundary-squared-zero` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.boundary-squared-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

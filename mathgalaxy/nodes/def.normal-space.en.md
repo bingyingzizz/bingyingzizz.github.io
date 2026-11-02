@@ -10,5 +10,5 @@ layer 16 · definition · cluster Separation Axioms (`topology.separation`) · T
 Chinese only — see the Chinese page `nodes/def.normal-space.md` and `proofs/`.
 
 
-Cite: `def.normal-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.normal-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

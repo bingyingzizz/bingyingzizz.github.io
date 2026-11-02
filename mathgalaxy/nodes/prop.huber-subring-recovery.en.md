@@ -10,5 +10,5 @@ layer 10 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spa
 Chinese only — see the Chinese page `nodes/prop.huber-subring-recovery.md` and `proofs/`.
 
 
-Cite: `prop.huber-subring-recovery` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.huber-subring-recovery` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

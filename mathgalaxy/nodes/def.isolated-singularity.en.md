@@ -11,5 +11,5 @@ names: `Isolated Singularity` (short) · `Isolated Singularity and Its Types` (f
 Chinese only — see the Chinese page `nodes/def.isolated-singularity.md` and `proofs/`.
 
 
-Cite: `def.isolated-singularity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.isolated-singularity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

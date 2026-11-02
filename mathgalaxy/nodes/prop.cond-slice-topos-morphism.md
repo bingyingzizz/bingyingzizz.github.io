@@ -18,4 +18,4 @@ refs: Le Stum, Proposition 8.1.3
 
 > 说明见 `notes/prop.cond-slice-topos-morphism.md`
 
-引用：`prop.cond-slice-topos-morphism`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cond-slice-topos-morphism`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

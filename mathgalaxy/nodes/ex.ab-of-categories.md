@@ -17,4 +17,4 @@ refs: Mac Lane, Categories for the Working Mathematician, III.6
 
 > 说明见 `notes/ex.ab-of-categories.md`
 
-引用：`ex.ab-of-categories`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.ab-of-categories`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

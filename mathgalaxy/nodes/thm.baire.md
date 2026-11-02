@@ -17,8 +17,8 @@ layer 15 · 定理 · Baire 纲与三大定理 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.baire.3.md](./thm.baire.3.md)
 
-refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法；Baire 1899
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）；Baire 1899
 
 > 说明见 `notes/thm.baire.md`
 
-引用：`thm.baire`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.baire`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

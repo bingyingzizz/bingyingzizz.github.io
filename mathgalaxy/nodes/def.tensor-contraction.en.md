@@ -10,5 +10,5 @@ layer 21 · definition · cluster Vector Fields and Lie Structures (`diffgeom.ve
 Chinese only — see the Chinese page `nodes/def.tensor-contraction.md` and `proofs/`.
 
 
-Cite: `def.tensor-contraction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.tensor-contraction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

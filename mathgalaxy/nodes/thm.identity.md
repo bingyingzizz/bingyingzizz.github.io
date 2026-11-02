@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 唯一性定理与解析延拓；Ahlfors, Co
 
 > 说明见 `notes/thm.identity.md`
 
-引用：`thm.identity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.identity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

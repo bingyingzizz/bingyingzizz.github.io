@@ -21,4 +21,4 @@ refs: Le Stum, Proposition 6.2.1
 
 > 说明见 `notes/prop.abtop-to-abcond.md`
 
-引用：`prop.abtop-to-abcond`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.abtop-to-abcond`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

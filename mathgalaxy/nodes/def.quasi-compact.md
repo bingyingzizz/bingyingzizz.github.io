@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 ## 说明
 这就是**紧性**在剥掉拓扑之后剩下的形状：**任何覆盖都有有限子覆盖**。紧 Hausdorff 空间在 $\mathrm{Cond}$ 里正是「拟紧」的那批对象 —— 后面凝聚态集的定义就是靠它写下来的，所以这个名字值得记牢。
 
-引用：`def.quasi-compact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.quasi-compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

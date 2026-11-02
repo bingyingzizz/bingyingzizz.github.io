@@ -19,4 +19,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1（the prism operator / homo
 
 > 说明见 `notes/thm.homotopy-invariance.md`
 
-引用：`thm.homotopy-invariance`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.homotopy-invariance`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

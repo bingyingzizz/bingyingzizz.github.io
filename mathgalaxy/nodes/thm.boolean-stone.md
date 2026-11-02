@@ -19,4 +19,4 @@ refs: Le Stum, Exercise 2.22
 
 > 说明见 `notes/thm.boolean-stone.md`
 
-引用：`thm.boolean-stone`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.boolean-stone`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

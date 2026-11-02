@@ -11,5 +11,5 @@ names: `Čech Equals Sheaf Cohomology` (short) · `Čech Cohomology Equals Sheaf
 Chinese only — see the Chinese page `nodes/thm.paracompact-cech-equals-sheaf.md` and `proofs/`.
 
 
-Cite: `thm.paracompact-cech-equals-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.paracompact-cech-equals-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

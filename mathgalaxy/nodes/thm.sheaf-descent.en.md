@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category 
 Chinese only — see the Chinese page `nodes/thm.sheaf-descent.md` and `proofs/`.
 
 
-Cite: `thm.sheaf-descent` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.sheaf-descent` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

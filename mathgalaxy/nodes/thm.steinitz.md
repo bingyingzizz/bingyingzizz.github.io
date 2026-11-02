@@ -18,4 +18,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
 
 > 说明见 `notes/thm.steinitz.md`
 
-引用：`thm.steinitz`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.steinitz`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 7 · definition · cluster Paracompact Spaces and Partitions of Unity (`to
 Chinese only — see the Chinese page `nodes/def.partition-of-unity.md` and `proofs/`.
 
 
-Cite: `def.partition-of-unity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.partition-of-unity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

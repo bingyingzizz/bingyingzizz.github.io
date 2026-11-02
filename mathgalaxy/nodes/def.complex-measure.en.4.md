@@ -10,5 +10,5 @@ So in the world of complex measures the headaches of "finiteness" and "rearrange
 Wikipedia: https://en.wikipedia.org/wiki/Complex_measure
 
 
-Cite: `def.complex-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.complex-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

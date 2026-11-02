@@ -11,5 +11,5 @@ names: `Banach on Compact Hausdorff` (short) · `Real Banach Spaces Are Acyclic 
 Chinese only — see the Chinese page `nodes/thm.real-banach-chaus-acyclic.md` and `proofs/`.
 
 
-Cite: `thm.real-banach-chaus-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.real-banach-chaus-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

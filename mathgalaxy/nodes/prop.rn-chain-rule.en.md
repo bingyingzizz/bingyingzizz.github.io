@@ -10,5 +10,5 @@ layer 21 · proposition · cluster Signed Measures and Decompositions (`analysis
 Chinese only — see the Chinese page `nodes/prop.rn-chain-rule.md` and `proofs/`.
 
 
-Cite: `prop.rn-chain-rule` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rn-chain-rule` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 15 · definition · cluster Condensed Derived Functors (`cond.cohomology`)
 Chinese only — see the Chinese page `nodes/def.banach-ab-group.md` and `proofs/`.
 
 
-Cite: `def.banach-ab-group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.banach-ab-group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

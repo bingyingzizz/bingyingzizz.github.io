@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Constructing Measures (`analysis.measure`) ·
 Chinese only — see the Chinese page `nodes/prop.ls-premeasure.md` and `proofs/`.
 
 
-Cite: `prop.ls-premeasure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ls-premeasure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 18 · lemma · cluster Foundations of Complex Analysis (`analysis.complex`
 Chinese only — see the Chinese page `nodes/lem.cauchy-green.md` and `proofs/`.
 
 
-Cite: `lem.cauchy-green` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.cauchy-green` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

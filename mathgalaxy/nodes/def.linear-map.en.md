@@ -10,5 +10,5 @@ layer 9 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abst
 Chinese only — see the Chinese page `nodes/def.linear-map.md` and `proofs/`.
 
 
-Cite: `def.linear-map` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.linear-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

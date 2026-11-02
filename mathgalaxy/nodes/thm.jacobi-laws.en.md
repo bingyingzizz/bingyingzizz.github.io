@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Quadratic Residues and Primitive Roots (`number.q
 Chinese only — see the Chinese page `nodes/thm.jacobi-laws.md` and `proofs/`.
 
 
-Cite: `thm.jacobi-laws` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.jacobi-laws` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

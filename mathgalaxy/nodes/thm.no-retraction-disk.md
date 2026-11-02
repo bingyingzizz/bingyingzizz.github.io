@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Retractions and Fixed Points；Hatch
 
 > 说明见 `notes/thm.no-retraction-disk.md`
 
-引用：`thm.no-retraction-disk`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.no-retraction-disk`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

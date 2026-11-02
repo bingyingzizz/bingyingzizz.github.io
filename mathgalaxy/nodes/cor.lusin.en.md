@@ -10,5 +10,5 @@ layer 22 · corollary · cluster Measurable Functions and Convergence (`analysis
 Chinese only — see the Chinese page `nodes/cor.lusin.md` and `proofs/`.
 
 
-Cite: `cor.lusin` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.lusin` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

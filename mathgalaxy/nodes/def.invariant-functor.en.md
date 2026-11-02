@@ -11,5 +11,5 @@ names: `Invariants` (short) · `Invariant Functor` (full)
 Chinese only — see the Chinese page `nodes/def.invariant-functor.md` and `proofs/`.
 
 
-Cite: `def.invariant-functor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.invariant-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -16,5 +16,5 @@ By extensionality such a $B$ is unique, and one writes $B = \{ x \in A : \varphi
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `ax.sep` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.sep` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

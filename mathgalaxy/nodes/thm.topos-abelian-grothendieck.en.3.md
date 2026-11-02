@@ -2,6 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.topos-abelian-grothendieck)　·　[Chinese page (authoritative)](./thm.topos-abelian-grothendieck.md)
 
-tive.
+jective.
 
 > 续见 nodes/thm.topos-abelian-grothendieck.en.4.md

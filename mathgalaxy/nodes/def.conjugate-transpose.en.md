@@ -11,5 +11,5 @@ names: `Conjugate Transpose` (short) · `Conjugate Transpose (Adjugate)` (full)
 Chinese only — see the Chinese page `nodes/def.conjugate-transpose.md` and `proofs/`.
 
 
-Cite: `def.conjugate-transpose` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.conjugate-transpose` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

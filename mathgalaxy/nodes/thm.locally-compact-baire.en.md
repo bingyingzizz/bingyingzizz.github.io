@@ -11,5 +11,5 @@ names: `Locally Compact Hausdorff Is Baire` (short) · `Locally Compact Hausdorf
 Chinese only — see the Chinese page `nodes/thm.locally-compact-baire.md` and `proofs/`.
 
 
-Cite: `thm.locally-compact-baire` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.locally-compact-baire` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

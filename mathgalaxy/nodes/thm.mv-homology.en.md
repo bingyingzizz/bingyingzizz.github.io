@@ -10,5 +10,5 @@ layer 21 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 Chinese only — see the Chinese page `nodes/thm.mv-homology.md` and `proofs/`.
 
 
-Cite: `thm.mv-homology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mv-homology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

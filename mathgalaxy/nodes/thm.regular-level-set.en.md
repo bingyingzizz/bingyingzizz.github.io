@@ -10,5 +10,5 @@ layer 25 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Diff
 Chinese only — see the Chinese page `nodes/thm.regular-level-set.md` and `proofs/`.
 
 
-Cite: `thm.regular-level-set` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.regular-level-set` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

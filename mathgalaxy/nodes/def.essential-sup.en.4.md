@@ -12,5 +12,5 @@ What the word "essential" means: **bad values on null sets simply do not count**
 Wikipedia: https://en.wikipedia.org/wiki/Essential_supremum · nLab: https://ncatlab.org/nlab/show/essential+supremum
 
 
-Cite: `def.essential-sup` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.essential-sup` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

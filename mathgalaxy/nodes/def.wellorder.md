@@ -22,4 +22,4 @@ refs: Kunen, Set Theory, I.11
 
 > 说明见 `notes/def.wellorder.md`
 
-引用：`def.wellorder`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.wellorder`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

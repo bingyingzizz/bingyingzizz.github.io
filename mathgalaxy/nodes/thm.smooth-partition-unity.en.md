@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`
 Chinese only — see the Chinese page `nodes/thm.smooth-partition-unity.md` and `proofs/`.
 
 
-Cite: `thm.smooth-partition-unity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.smooth-partition-unity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

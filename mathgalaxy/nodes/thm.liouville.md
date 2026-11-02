@@ -22,4 +22,4 @@ refs: 王晓光《复变函数》笔记，第 9 章 · Liouville 定理；Ahlfor
 
 > 说明见 `notes/thm.liouville.md`
 
-引用：`thm.liouville`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.liouville`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -12,4 +12,4 @@ layer 18 · 定理 · Stone 与 Stonean · 拓扑学
 
 refs: Le Stum, An introduction to condensed mathematics, §2.2
 
-引用：`thm.stone-profinite`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.stone-profinite`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

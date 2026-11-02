@@ -10,5 +10,5 @@ layer 16 · definition · cluster Convergence Tests for Series (`analysis.series
 Chinese only — see the Chinese page `nodes/def.conditional-convergence.md` and `proofs/`.
 
 
-Cite: `def.conditional-convergence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.conditional-convergence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

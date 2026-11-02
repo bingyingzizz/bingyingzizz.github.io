@@ -11,5 +11,5 @@ names: `Laurent Expansion` (short) · `Laurent Expansion Theorem` (full)
 Chinese only — see the Chinese page `nodes/thm.laurent.md` and `proofs/`.
 
 
-Cite: `thm.laurent` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.laurent` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -14,4 +14,4 @@ refs: Le Stum, Proposition 7.3.12
 
 > 说明见 `notes/prop.filtered-limit-cohomology.md`
 
-引用：`prop.filtered-limit-cohomology`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.filtered-limit-cohomology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -14,4 +14,4 @@ refs: Le Stum, Exercise 8.15
 
 > 说明见 `notes/ex.finite-banach-rhom.md`
 
-引用：`ex.finite-banach-rhom`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.finite-banach-rhom`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

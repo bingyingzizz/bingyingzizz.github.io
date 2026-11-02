@@ -17,4 +17,4 @@ refs: Munkres, Elements of Algebraic Topology · 单纯逼近定理（本图不�
 
 > 说明见 `notes/thm.simplicial-approximation.md`
 
-引用：`thm.simplicial-approximation`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.simplicial-approximation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

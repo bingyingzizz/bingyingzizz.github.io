@@ -11,5 +11,5 @@ names: `Symplectic Matrix` (short) · `Symplectic Matrix and Symplectic Group` (
 Chinese only — see the Chinese page `nodes/def.symplectic-matrix.md` and `proofs/`.
 
 
-Cite: `def.symplectic-matrix` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.symplectic-matrix` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

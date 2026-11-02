@@ -11,5 +11,5 @@ names: `Equicontinuous` (short) · `Equicontinuity` (full)
 Chinese only — see the Chinese page `nodes/def.equicontinuous.md` and `proofs/`.
 
 
-Cite: `def.equicontinuous` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.equicontinuous` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

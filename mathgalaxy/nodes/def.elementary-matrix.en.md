@@ -10,5 +10,5 @@ layer 10 · definition · cluster Matrices and Determinants (`algebra.matrix`) �
 Chinese only — see the Chinese page `nodes/def.elementary-matrix.md` and `proofs/`.
 
 
-Cite: `def.elementary-matrix` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.elementary-matrix` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

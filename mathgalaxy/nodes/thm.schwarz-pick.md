@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· Schwarz–Pick 定理；Ahlfors, Complex Ana
 
 > 说明见 `notes/thm.schwarz-pick.md`
 
-引用：`thm.schwarz-pick`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.schwarz-pick`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

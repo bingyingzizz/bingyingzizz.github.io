@@ -10,5 +10,5 @@ layer 17 · definition · cluster Filtrations and Spectral Sequences (`hom.spect
 Chinese only — see the Chinese page `nodes/def.exact-couple.md` and `proofs/`.
 
 
-Cite: `def.exact-couple` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.exact-couple` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

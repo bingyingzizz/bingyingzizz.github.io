@@ -14,4 +14,4 @@ refs: Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· �
 
 > 说明见 `notes/prop.volume-density-well-defined.md`
 
-引用：`prop.volume-density-well-defined`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.volume-density-well-defined`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

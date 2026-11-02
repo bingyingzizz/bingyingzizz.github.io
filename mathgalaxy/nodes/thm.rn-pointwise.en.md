@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Differentiation Theorems (`analysis.differentiati
 Chinese only — see the Chinese page `nodes/thm.rn-pointwise.md` and `proofs/`.
 
 
-Cite: `thm.rn-pointwise` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rn-pointwise` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

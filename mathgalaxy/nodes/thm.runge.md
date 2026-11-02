@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》· Runge 定理与有理函数逼近；Ahlfors,
 
 > 说明见 `notes/thm.runge.md`
 
-引用：`thm.runge`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.runge`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

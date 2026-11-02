@@ -10,5 +10,5 @@ layer 15 · theorem · cluster Convergence Tests for Series (`analysis.series`) 
 Chinese only — see the Chinese page `nodes/thm.comparison-test.md` and `proofs/`.
 
 
-Cite: `thm.comparison-test` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.comparison-test` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

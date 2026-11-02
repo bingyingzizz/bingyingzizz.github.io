@@ -10,5 +10,5 @@ layer 22 · example · cluster Solid Abelian Groups (`cond.solid`) · Condensed 
 Chinese only — see the Chinese page `nodes/ex.solid-tensor-computations.md` and `proofs/`.
 
 
-Cite: `ex.solid-tensor-computations` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.solid-tensor-computations` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

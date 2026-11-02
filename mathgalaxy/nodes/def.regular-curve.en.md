@@ -10,5 +10,5 @@ layer 16 · definition · cluster Moving Frames and Structure Equations (`diffge
 Chinese only — see the Chinese page `nodes/def.regular-curve.md` and `proofs/`.
 
 
-Cite: `def.regular-curve` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.regular-curve` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

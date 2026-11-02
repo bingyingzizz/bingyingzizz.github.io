@@ -11,5 +11,5 @@ names: `Point Morphism` (short) · `The Topos Morphism Induced by a Point` (full
 Chinese only — see the Chinese page `nodes/prop.topos-morphism-point.md` and `proofs/`.
 
 
-Cite: `prop.topos-morphism-point` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.topos-morphism-point` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

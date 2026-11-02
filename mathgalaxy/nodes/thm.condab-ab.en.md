@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Condensed Abelian Groups (`cond.ab`) · Condensed
 Chinese only — see the Chinese page `nodes/thm.condab-ab.md` and `proofs/`.
 
 
-Cite: `thm.condab-ab` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.condab-ab` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

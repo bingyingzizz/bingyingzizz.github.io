@@ -10,5 +10,5 @@ layer 15 · definition · cluster Signed Measures and Decompositions (`analysis.
 Chinese only — see the Chinese page `nodes/def.signed-measure.md` and `proofs/`.
 
 
-Cite: `def.signed-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.signed-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

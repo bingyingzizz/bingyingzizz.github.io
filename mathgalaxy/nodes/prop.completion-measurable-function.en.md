@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Measurable Functions and Convergence (`analys
 Chinese only — see the Chinese page `nodes/prop.completion-measurable-function.md` and `proofs/`.
 
 
-Cite: `prop.completion-measurable-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.completion-measurable-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

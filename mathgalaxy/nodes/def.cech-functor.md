@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 ## 说明
 「沿越来越大的覆盖筛取极限」在 $T$ 这一侧翻成了余极限 —— 因为 $\operatorname{Hom}(-, T)$ 是**反变**的，反变函子沿滤子取极限等于共变函子的滤过余极限。$\widehat{H}$ 是把预层朝层的方向推一把的第一步。
 
-引用：`def.cech-functor`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cech-functor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

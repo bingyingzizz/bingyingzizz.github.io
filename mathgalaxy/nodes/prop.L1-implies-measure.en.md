@@ -10,5 +10,5 @@ layer 21 · proposition · cluster Measurable Functions and Convergence (`analys
 Chinese only — see the Chinese page `nodes/prop.L1-implies-measure.md` and `proofs/`.
 
 
-Cite: `prop.L1-implies-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.L1-implies-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

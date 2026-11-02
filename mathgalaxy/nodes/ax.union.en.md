@@ -16,5 +16,5 @@ It is written $\bigcup F$. Together with the pairing axiom it yields the binary 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `ax.union` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.union` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

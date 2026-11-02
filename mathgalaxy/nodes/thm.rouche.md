@@ -24,4 +24,4 @@ refs: 王晓光《复变函数》· Rouché 定理；Stein–Shakarchi, Complex 
 
 > 说明见 `notes/thm.rouche.md`
 
-引用：`thm.rouche`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.rouche`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

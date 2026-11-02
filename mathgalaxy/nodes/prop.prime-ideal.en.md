@@ -11,5 +11,5 @@ names: `Prime Ideals` (short) · `Prime and Maximal Ideals` (full)
 Chinese only — see the Chinese page `nodes/prop.prime-ideal.md` and `proofs/`.
 
 
-Cite: `prop.prime-ideal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.prime-ideal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

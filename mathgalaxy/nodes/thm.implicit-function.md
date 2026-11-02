@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Spivak, Calculus on Ma
 
 > 说明见 `notes/thm.implicit-function.md`
 
-引用：`thm.implicit-function`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.implicit-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

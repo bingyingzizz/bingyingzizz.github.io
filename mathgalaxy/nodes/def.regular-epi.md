@@ -17,4 +17,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 ## 说明
 在 $\mathbf{Set}$ 里**每个满射都是正则的**：取 $W = X \times_{Y} X$ 与两个投影，它们的余等化子正是 $f$。在一般范畴里不然 —— 「满」（右可消）比「正则满」弱得多，差的那部分正是「$Y$ 是不是真的由 $X$ 商出来的」。
 
-引用：`def.regular-epi`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.regular-epi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

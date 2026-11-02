@@ -10,5 +10,5 @@ layer 10 · proposition · cluster Functors and Natural Transformations (`cat.fu
 Chinese only — see the Chinese page `nodes/prop.forgetful-faithful-not-full.md` and `proofs/`.
 
 
-Cite: `prop.forgetful-faithful-not-full` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.forgetful-faithful-not-full` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

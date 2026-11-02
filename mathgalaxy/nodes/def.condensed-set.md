@@ -23,4 +23,4 @@ refs: Le Stum, An introduction to condensed mathematics, §4
 
 > 说明见 `notes/def.condensed-set.md`
 
-引用：`def.condensed-set`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.condensed-set`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

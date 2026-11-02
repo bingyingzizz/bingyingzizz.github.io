@@ -10,5 +10,5 @@ layer 13 · definition · cluster Flat Modules (`hom.flat`) · Homological Algeb
 Chinese only — see the Chinese page `nodes/def.tor.md` and `proofs/`.
 
 
-Cite: `def.tor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.tor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

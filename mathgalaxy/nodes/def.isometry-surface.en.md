@@ -11,5 +11,5 @@ names: `Isometry` (short) · `Isometry of Surfaces` (full)
 Chinese only — see the Chinese page `nodes/def.isometry-surface.md` and `proofs/`.
 
 
-Cite: `def.isometry-surface` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.isometry-surface` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

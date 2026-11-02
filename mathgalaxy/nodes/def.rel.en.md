@@ -18,5 +18,5 @@ A **relation** $R$ consists of ordered pairs; $R \subseteq A \times B$ means tha
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `def.rel` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.rel` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

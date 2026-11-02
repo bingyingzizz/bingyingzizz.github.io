@@ -10,5 +10,5 @@ layer 16 · corollary · cluster Continuity and Compactness (`analysis.continuit
 Chinese only — see the Chinese page `nodes/cor.zero-point.md` and `proofs/`.
 
 
-Cite: `cor.zero-point` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.zero-point` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

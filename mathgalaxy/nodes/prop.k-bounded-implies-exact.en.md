@@ -11,5 +11,5 @@ names: `K-Bounded Exactness` (short) · `K-Bounded Exactness Implies Exactness` 
 Chinese only — see the Chinese page `nodes/prop.k-bounded-implies-exact.md` and `proofs/`.
 
 
-Cite: `prop.k-bounded-implies-exact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.k-bounded-implies-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

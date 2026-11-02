@@ -10,5 +10,5 @@ layer 18 · lemma · cluster Bounded Variation and Absolute Continuity (`analysi
 Chinese only — see the Chinese page `nodes/lem.nbv-variation.md` and `proofs/`.
 
 
-Cite: `lem.nbv-variation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.nbv-variation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

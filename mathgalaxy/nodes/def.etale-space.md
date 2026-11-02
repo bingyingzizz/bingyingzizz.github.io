@@ -19,4 +19,4 @@ refs: Godement, Topologie algébrique et théorie des faisceaux, Chapitre II（�
 
 > 说明见 `notes/def.etale-space.md`
 
-引用：`def.etale-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.etale-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

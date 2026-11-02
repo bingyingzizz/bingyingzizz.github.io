@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 迷向子空间；
 
 > 说明见 `notes/def.isotropic-subspace.md`
 
-引用：`def.isotropic-subspace`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isotropic-subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

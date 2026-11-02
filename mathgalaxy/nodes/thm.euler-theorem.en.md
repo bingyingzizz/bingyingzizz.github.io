@@ -10,5 +10,5 @@ layer 9 · theorem · cluster Divisibility and Congruences (`number.basic`) · N
 Chinese only — see the Chinese page `nodes/thm.euler-theorem.md` and `proofs/`.
 
 
-Cite: `thm.euler-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.euler-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

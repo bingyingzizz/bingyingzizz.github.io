@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 Chinese only — see the Chinese page `nodes/thm.bing-metrization.md` and `proofs/`.
 
 
-Cite: `thm.bing-metrization` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bing-metrization` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

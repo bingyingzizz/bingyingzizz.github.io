@@ -21,4 +21,4 @@ refs: Le Stum, Lemma 6.1.3
 
 > 说明见 `notes/prop.condab-section.md`
 
-引用：`prop.condab-section`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.condab-section`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

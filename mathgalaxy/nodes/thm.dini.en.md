@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Sequences of Functions, Power Series and Elementa
 Chinese only — see the Chinese page `nodes/thm.dini.md` and `proofs/`.
 
 
-Cite: `thm.dini` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.dini` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

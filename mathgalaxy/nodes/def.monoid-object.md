@@ -23,4 +23,4 @@ refs: Mac Lane, Categories for the Working Mathematician, III.6
 
 > 说明见 `notes/def.monoid-object.md`
 
-引用：`def.monoid-object`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.monoid-object`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

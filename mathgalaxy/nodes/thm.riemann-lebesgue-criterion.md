@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 11；Folland, Real Analysi
 
 > 说明见 `notes/thm.riemann-lebesgue-criterion.md`
 
-引用：`thm.riemann-lebesgue-criterion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riemann-lebesgue-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

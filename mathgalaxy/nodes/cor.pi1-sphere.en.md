@@ -10,5 +10,5 @@ layer 15 · corollary · cluster The Fundamental Group (`topology.fg`) · Topolo
 Chinese only — see the Chinese page `nodes/cor.pi1-sphere.md` and `proofs/`.
 
 
-Cite: `cor.pi1-sphere` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.pi1-sphere` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 14 · theorem · cluster Arithmetic Functions and Distribution of Primes (
 Chinese only — see the Chinese page `nodes/thm.chebyshev-estimate.md` and `proofs/`.
 
 
-Cite: `thm.chebyshev-estimate` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.chebyshev-estimate` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

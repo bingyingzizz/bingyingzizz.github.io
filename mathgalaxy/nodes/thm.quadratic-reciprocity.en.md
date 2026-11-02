@@ -10,5 +10,5 @@ layer 15 · theorem · cluster Quadratic Residues and Primitive Roots (`number.q
 Chinese only — see the Chinese page `nodes/thm.quadratic-reciprocity.md` and `proofs/`.
 
 
-Cite: `thm.quadratic-reciprocity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.quadratic-reciprocity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

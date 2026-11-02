@@ -11,5 +11,5 @@ names: `Sheaves of Groups in a Topos` (short) · `Abelian Sheaves Are Abelian Gr
 Chinese only — see the Chinese page `nodes/thm.abelian-sheaf-equiv.md` and `proofs/`.
 
 
-Cite: `thm.abelian-sheaf-equiv` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.abelian-sheaf-equiv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

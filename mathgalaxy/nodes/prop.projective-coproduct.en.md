@@ -11,5 +11,5 @@ names: `Projective Coproducts` (short) · `Coproducts of Projectives Are Project
 Chinese only — see the Chinese page `nodes/prop.projective-coproduct.md` and `proofs/`.
 
 
-Cite: `prop.projective-coproduct` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.projective-coproduct` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

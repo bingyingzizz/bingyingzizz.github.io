@@ -11,5 +11,5 @@ names: `Bernstein Approximation` (short) · `Bernstein Polynomial Approximation`
 Chinese only — see the Chinese page `nodes/thm.bernstein-approximation.md` and `proofs/`.
 
 
-Cite: `thm.bernstein-approximation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bernstein-approximation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Sequences of Functions, Power Series and Elem
 Chinese only — see the Chinese page `nodes/prop.weierstrass-m-test.md` and `proofs/`.
 
 
-Cite: `prop.weierstrass-m-test` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.weierstrass-m-test` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

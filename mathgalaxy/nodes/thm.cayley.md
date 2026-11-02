@@ -18,4 +18,4 @@ refs: Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
 
 > 说明见 `notes/thm.cayley.md`
 
-引用：`thm.cayley`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cayley`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

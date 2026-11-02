@@ -17,4 +17,4 @@ refs: Folland, Real Analysis, §2.2；Rudin, Real and Complex Analysis, Ch. 1
 ## 说明
 a.e. 收敛时 $\liminf f_n = f$，直接套 Fatou 引理即可。
 
-引用：`cor.fatou`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.fatou`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

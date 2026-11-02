@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Anal
 Chinese only — see the Chinese page `nodes/thm.cauchy-goursat.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-goursat` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-goursat` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

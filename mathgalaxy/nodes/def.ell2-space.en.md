@@ -11,5 +11,5 @@ names: `ell-2(I)` (short) · `The Space ell-2 of Index I` (full)
 Chinese only — see the Chinese page `nodes/def.ell2-space.md` and `proofs/`.
 
 
-Cite: `def.ell2-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ell2-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

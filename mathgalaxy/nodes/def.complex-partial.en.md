@@ -10,5 +10,5 @@ layer 16 · definition · cluster Foundations of Complex Analysis (`analysis.com
 Chinese only — see the Chinese page `nodes/def.complex-partial.md` and `proofs/`.
 
 
-Cite: `def.complex-partial` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.complex-partial` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

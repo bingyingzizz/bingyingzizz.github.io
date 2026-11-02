@@ -11,5 +11,5 @@ names: `Čech as Colimit` (short) · `Čech Cohomology as a Colimit` (full)
 Chinese only — see the Chinese page `nodes/prop.cech-as-colim.md` and `proofs/`.
 
 
-Cite: `prop.cech-as-colim` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-as-colim` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

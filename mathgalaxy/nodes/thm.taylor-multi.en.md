@@ -11,5 +11,5 @@ names: `Taylor Formula` (short) · `Taylor Formula in Several Variables` (full)
 Chinese only — see the Chinese page `nodes/thm.taylor-multi.md` and `proofs/`.
 
 
-Cite: `thm.taylor-multi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.taylor-multi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,7 +1,9 @@
 # 张量场　`def.tensor-field`　·　续页（第 5 页）
 [在星图里打开](../#n=def.tensor-field)　·　第 1 页 [nodes/def.tensor-field.md](./def.tensor-field.md)　·　上一页 [nodes/def.tensor-field.4.md](./def.tensor-field.4.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative（续）
-A tensor field is the smooth version of a multilinear form attached to each point: an $(r,s)$-tensor at $p$ eats $r$ covectors and $s$ vectors and returns a number, and the tensor bundle $T^{(r,s)}M$ collects these into a manifold of dimension $n+n^{r+s}$ whose transition maps are products of Jacobi matrices. Smooth sections of that bundle are the $(r,s)$-tensor fields. Metrics, differential forms, symplectic forms and the curvature tensor are all instances, and because the transition law involves only first derivatives, tensor components neve
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.vector-field`](../nodes/def.vector-field.md) 向量场 + [`def.exterior-algebra`](../nodes/def.exterior-algebra.md) 外代数：张量积与外幂 $\implies$ 张量场是多重线性场的统一外壳　[proofs/imp.mf-tensor-field-smooth.md](../proofs/imp.mf-tensor-field-smooth.md)
+- [`def.exterior-algebra`](../nodes/def.exterior-algebra.md) 外代数：用到了定义 外代数　[proofs/dep.mf-exterior-tensorfield.md](../proofs/dep.mf-exterior-tensorfield.md)
+- [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积：用到了定义 张量积　[proofs/dep.mf-tensorprod-tensorfield.md](../proofs/dep.mf-tensorprod-tensorfield.md)
 
 > 续见 [nodes/def.tensor-field.6.md](./def.tensor-field.6.md)

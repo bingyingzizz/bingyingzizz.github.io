@@ -10,5 +10,5 @@ layer 11 · definition · cluster Complexes and Distinguished Triangles (`hom.co
 Chinese only — see the Chinese page `nodes/def.right-derived-functor.md` and `proofs/`.
 
 
-Cite: `def.right-derived-functor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.right-derived-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

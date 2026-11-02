@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 整函数与亚纯函数；Stein–Shakarchi
 
 > 说明见 `notes/def.entire-meromorphic.md`
 
-引用：`def.entire-meromorphic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.entire-meromorphic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

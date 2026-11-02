@@ -10,5 +10,5 @@ layer 16 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Catego
 Chinese only — see the Chinese page `nodes/def.crystalline-sheaf.md` and `proofs/`.
 
 
-Cite: `def.crystalline-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.crystalline-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

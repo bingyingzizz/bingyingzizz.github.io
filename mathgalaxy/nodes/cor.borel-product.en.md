@@ -10,5 +10,5 @@ layer 14 · corollary · cluster Product Measures and Fubini (`analysis.product`
 Chinese only — see the Chinese page `nodes/cor.borel-product.md` and `proofs/`.
 
 
-Cite: `cor.borel-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.borel-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

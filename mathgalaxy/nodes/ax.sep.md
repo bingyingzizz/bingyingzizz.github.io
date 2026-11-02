@@ -24,4 +24,4 @@ refs: Kunen, Set Theory, I.4
 
 限制 `$x \in A$` 是关键——不能写成 $\{ x : x \notin x \}$，否则就是罗素悖论。
 
-引用：`ax.sep`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.sep`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

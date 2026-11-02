@@ -10,5 +10,5 @@ layer 17 · definition · cluster Signed Measures and Decompositions (`analysis.
 Chinese only — see the Chinese page `nodes/def.rn-derivative.md` and `proofs/`.
 
 
-Cite: `def.rn-derivative` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.rn-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

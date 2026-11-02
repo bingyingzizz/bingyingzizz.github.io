@@ -10,5 +10,5 @@ layer 10 · proposition · cluster Bases of Vector Spaces (`algebra.vectorspace`
 Chinese only — see the Chinese page `nodes/prop.subspace-criterion.md` and `proofs/`.
 
 
-Cite: `prop.subspace-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.subspace-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

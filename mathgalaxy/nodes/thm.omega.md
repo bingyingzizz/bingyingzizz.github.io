@@ -23,4 +23,4 @@ refs: Kunen, Set Theory, I.5
 ## 说明
 $\omega$ 同时也是最小的极限序数。构造它需要无穷公理 + 幂集公理 + 分离公理模式三者合力。
 
-引用：`thm.omega`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.omega`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

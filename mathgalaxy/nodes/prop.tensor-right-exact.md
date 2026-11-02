@@ -17,4 +17,4 @@ refs: Cartan–Eilenberg, Homological Algebra, Chapter II, right exactness of th
 
 > 说明见 `notes/prop.tensor-right-exact.md`
 
-引用：`prop.tensor-right-exact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.tensor-right-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

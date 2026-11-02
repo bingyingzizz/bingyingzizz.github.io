@@ -13,8 +13,8 @@ layer 15 · 定义 · 多元微分 · 数学分析
 
 - …另有出边，续页见 [nodes/def.banach-space.2.md](./def.banach-space.2.md)
 
-refs: Rudin, Functional Analysis；Zeidler, Nonlinear Functional Analysis I, Ch. 1
+refs: Rudin, Functional Analysis, Ch. 1；Zeidler, Nonlinear Functional Analysis I, Ch. 1
 
 > 说明见 `notes/def.banach-space.md`
 
-引用：`def.banach-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.banach-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

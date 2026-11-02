@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multili
 Chinese only — see the Chinese page `nodes/thm.lagrange-identity.md` and `proofs/`.
 
 
-Cite: `thm.lagrange-identity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lagrange-identity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

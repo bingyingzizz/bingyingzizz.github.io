@@ -10,5 +10,5 @@ layer 10 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abs
 Chinese only — see the Chinese page `nodes/def.kernel-image-vs.md` and `proofs/`.
 
 
-Cite: `def.kernel-image-vs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.kernel-image-vs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

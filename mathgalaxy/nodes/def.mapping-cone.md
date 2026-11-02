@@ -22,4 +22,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 ## 说明
 用处：给出短正合列 $0 \to L \to M(f) \to K[1] \to 0$（一般不分裂）。于是**每个态射都能嵌进一条「几乎正合」的序列**，这是三角范畴的出发点 —— 后面所有导出三角的定义都靠它。
 
-引用：`def.mapping-cone`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.mapping-cone`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

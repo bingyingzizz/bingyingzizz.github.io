@@ -22,4 +22,4 @@ refs: Munkres, Topology, §28 与 §43
 
 > 说明见 `notes/thm.metric-compact-equiv.md`
 
-引用：`thm.metric-compact-equiv`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.metric-compact-equiv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Signed Measures and Decompositions (`analysis
 Chinese only — see the Chinese page `nodes/prop.total-variation-basics.md` and `proofs/`.
 
 
-Cite: `prop.total-variation-basics` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.total-variation-basics` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

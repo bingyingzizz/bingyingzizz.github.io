@@ -10,5 +10,5 @@ layer 15 · definition · cluster Measurable Functions and Convergence (`analysi
 Chinese only — see the Chinese page `nodes/def.cauchy-in-measure.md` and `proofs/`.
 
 
-Cite: `def.cauchy-in-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cauchy-in-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

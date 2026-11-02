@@ -24,4 +24,4 @@ refs: Lang, Linear Algebra
 ## 说明
 等价说法：$S$ 是基 $\iff V$ 中每个向量都能唯一地写成 $S$ 的有限线性组合。
 
-引用：`def.vs`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.vs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

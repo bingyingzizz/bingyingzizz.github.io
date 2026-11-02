@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff
 Chinese only — see the Chinese page `nodes/prop.cgwh-fiber-product.md` and `proofs/`.
 
 
-Cite: `prop.cgwh-fiber-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cgwh-fiber-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

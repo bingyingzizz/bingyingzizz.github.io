@@ -16,4 +16,4 @@ refs: 华罗庚《数论导引》第九、十章；Apostol, Ch. 4, 12
 
 > 说明见 `notes/thm.prime-number-theorem.md`
 
-引用：`thm.prime-number-theorem`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.prime-number-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

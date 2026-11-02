@@ -10,5 +10,5 @@ layer 23 · definition · cluster Differential Forms, Integration and de Rham Co
 Chinese only — see the Chinese page `nodes/def.closed-form.md` and `proofs/`.
 
 
-Cite: `def.closed-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.closed-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

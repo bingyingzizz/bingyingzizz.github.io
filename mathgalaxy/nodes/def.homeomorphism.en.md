@@ -10,5 +10,5 @@ layer 7 · definition · cluster Topological Spaces and Basic Constructions (`to
 Chinese only — see the Chinese page `nodes/def.homeomorphism.md` and `proofs/`.
 
 
-Cite: `def.homeomorphism` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.homeomorphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

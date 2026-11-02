@@ -24,4 +24,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6；Spivak, Calculus, Ch. 
 
 > 说明见 `notes/def.partition.md`
 
-引用：`def.partition`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.partition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `CG Equivalences` (short) · `Equivalent Characterizations of Compact Gen
 Chinese only — see the Chinese page `nodes/prop.cg-equivalent-conditions.md` and `proofs/`.
 
 
-Cite: `prop.cg-equivalent-conditions` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cg-equivalent-conditions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

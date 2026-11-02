@@ -17,4 +17,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/cor.solid-compact-generators.md`
 
-引用：`cor.solid-compact-generators`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.solid-compact-generators`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

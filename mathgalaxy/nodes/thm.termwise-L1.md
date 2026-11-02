@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 2.25
 
 > 说明见 `notes/thm.termwise-L1.md`
 
-引用：`thm.termwise-L1`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.termwise-L1`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

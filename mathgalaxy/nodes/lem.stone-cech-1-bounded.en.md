@@ -11,5 +11,5 @@ names: `1-Bounded Čech Complex` (short) · `The Augmented Čech Complex of a St
 Chinese only — see the Chinese page `nodes/lem.stone-cech-1-bounded.md` and `proofs/`.
 
 
-Cite: `lem.stone-cech-1-bounded` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.stone-cech-1-bounded` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

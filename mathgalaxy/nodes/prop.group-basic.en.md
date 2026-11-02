@@ -11,5 +11,5 @@ names: `Group Properties` (short) · `Basic Properties of Groups` (full)
 Chinese only — see the Chinese page `nodes/prop.group-basic.md` and `proofs/`.
 
 
-Cite: `prop.group-basic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.group-basic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Exponential Adjunction` (short) · `Exponential Adjunction for Compactly
 Chinese only — see the Chinese page `nodes/cor.cg-exponential-adjoint.md` and `proofs/`.
 
 
-Cite: `cor.cg-exponential-adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.cg-exponential-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

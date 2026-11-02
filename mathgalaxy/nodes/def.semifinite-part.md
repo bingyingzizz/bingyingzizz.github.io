@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, §1.2
 
 若 $\mu$ 本身半有限，则 $\mu _{0} = \mu$ —— 所以这是「半有限化」操作。
 
-引用：`def.semifinite-part`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.semifinite-part`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

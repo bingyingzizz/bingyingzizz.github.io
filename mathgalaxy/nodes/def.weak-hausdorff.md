@@ -15,4 +15,4 @@ layer 6 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 
 refs: Le Stum, An introduction to condensed mathematics, §2.3
 
-引用：`def.weak-hausdorff`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.weak-hausdorff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

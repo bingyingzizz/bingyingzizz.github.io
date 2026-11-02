@@ -10,5 +10,5 @@ An abelian category is the **working environment** of homological algebra as a w
 Wikipedia: https://en.wikipedia.org/wiki/Abelian_category · nLab: https://ncatlab.org/nlab/show/abelian+category
 
 
-Cite: `def.abelian-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.abelian-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

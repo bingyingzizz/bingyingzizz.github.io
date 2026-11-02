@@ -10,5 +10,5 @@ layer 2 · definition · cluster First-Order Languages and Formulas (`logic.fol`
 Chinese only — see the Chinese page `nodes/def.satisfaction.md` and `proofs/`.
 
 
-Cite: `def.satisfaction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.satisfaction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Tensor–Hom Pairing` (short) · `Pairing of Tensor with Derived Hom` (f
 Chinese only — see the Chinese page `nodes/prop.tensor-rhom-natural-map.md` and `proofs/`.
 
 
-Cite: `prop.tensor-rhom-natural-map` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tensor-rhom-natural-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

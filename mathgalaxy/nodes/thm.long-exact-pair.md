@@ -17,4 +17,4 @@ refs: Munkres, Elements of Algebraic Topology · 对 (X, A) 的长正合列（�
 
 > 说明见 `notes/thm.long-exact-pair.md`
 
-引用：`thm.long-exact-pair`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.long-exact-pair`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

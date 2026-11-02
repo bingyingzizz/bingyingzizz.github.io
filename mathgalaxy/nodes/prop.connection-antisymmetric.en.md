@@ -11,5 +11,5 @@ names: `Connection Antisymmetry` (short) · `Antisymmetry of the Connection Form
 Chinese only — see the Chinese page `nodes/prop.connection-antisymmetric.md` and `proofs/`.
 
 
-Cite: `prop.connection-antisymmetric` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.connection-antisymmetric` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

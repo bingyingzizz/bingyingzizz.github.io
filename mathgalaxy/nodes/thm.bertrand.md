@@ -12,4 +12,4 @@ refs: 华罗庚《数论导引》第九章；Apostol, Ch. 4
 
 > 说明见 `notes/thm.bertrand.md`
 
-引用：`thm.bertrand`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bertrand`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

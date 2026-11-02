@@ -11,5 +11,5 @@ names: `Discrete Function Spaces` (short) · `Function Spaces on Discrete Spaces
 Chinese only — see the Chinese page `nodes/prop.compact-open-discrete.md` and `proofs/`.
 
 
-Cite: `prop.compact-open-discrete` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.compact-open-discrete` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

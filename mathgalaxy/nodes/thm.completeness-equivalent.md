@@ -22,4 +22,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3；Tao, Analysis I, Ch. 6
 
 > 说明见 `notes/thm.completeness-equivalent.md`
 
-引用：`thm.completeness-equivalent`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.completeness-equivalent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

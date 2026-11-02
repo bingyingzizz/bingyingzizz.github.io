@@ -10,5 +10,5 @@ layer 18 · corollary · cluster Stone and Stonean Spaces (`topo.stone`) · Topo
 Chinese only — see the Chinese page `nodes/cor.stonean-retract.md` and `proofs/`.
 
 
-Cite: `cor.stonean-retract` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.stonean-retract` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

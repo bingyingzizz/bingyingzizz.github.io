@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/prop.stalk-separated.md`
 
-引用：`prop.stalk-separated`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.stalk-separated`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

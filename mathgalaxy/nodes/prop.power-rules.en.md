@@ -10,5 +10,5 @@ layer 9 · proposition · cluster Arithmetic and Inequalities on the Reals (`ana
 Chinese only — see the Chinese page `nodes/prop.power-rules.md` and `proofs/`.
 
 
-Cite: `prop.power-rules` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.power-rules` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Convergence and Compactness (`topology.conver
 Chinese only — see the Chinese page `nodes/prop.quotient-of-compact.md` and `proofs/`.
 
 
-Cite: `prop.quotient-of-compact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.quotient-of-compact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

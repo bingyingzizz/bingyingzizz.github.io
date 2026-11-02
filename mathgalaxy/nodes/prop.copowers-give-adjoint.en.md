@@ -11,5 +11,5 @@ names: `Copowers and Adjoints` (short) · `Copowers Give Adjoints to Representab
 Chinese only — see the Chinese page `nodes/prop.copowers-give-adjoint.md` and `proofs/`.
 
 
-Cite: `prop.copowers-give-adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.copowers-give-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

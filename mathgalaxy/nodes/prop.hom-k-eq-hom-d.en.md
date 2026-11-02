@@ -11,5 +11,5 @@ names: `Hom in K and D` (short) · `Hom in the Homotopy and Derived Categories` 
 Chinese only — see the Chinese page `nodes/prop.hom-k-eq-hom-d.md` and `proofs/`.
 
 
-Cite: `prop.hom-k-eq-hom-d` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.hom-k-eq-hom-d` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

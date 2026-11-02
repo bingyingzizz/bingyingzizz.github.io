@@ -10,5 +10,5 @@ layer 5 · theorem · cluster Constructing the Number Systems (`set.numbers`) ·
 Chinese only — see the Chinese page `nodes/thm.omega.md` and `proofs/`.
 
 
-Cite: `thm.omega` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.omega` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

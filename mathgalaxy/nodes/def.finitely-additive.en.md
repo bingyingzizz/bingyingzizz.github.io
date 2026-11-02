@@ -10,5 +10,5 @@ layer 15 · definition · cluster Constructing Measures (`analysis.measure`) · 
 Chinese only — see the Chinese page `nodes/def.finitely-additive.md` and `proofs/`.
 
 
-Cite: `def.finitely-additive` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.finitely-additive` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

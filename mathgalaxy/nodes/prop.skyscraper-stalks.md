@@ -21,4 +21,4 @@ refs: Iversen, Cohomology of Sheaves —— 茎与 skyscraper sheaf 一章
 
 > 说明见 `notes/prop.skyscraper-stalks.md`
 
-引用：`prop.skyscraper-stalks`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.skyscraper-stalks`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

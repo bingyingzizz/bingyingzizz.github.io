@@ -10,5 +10,5 @@ layer 29 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Diff
 Chinese only — see the Chinese page `nodes/thm.theorema-egregium.md` and `proofs/`.
 
 
-Cite: `thm.theorema-egregium` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.theorema-egregium` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

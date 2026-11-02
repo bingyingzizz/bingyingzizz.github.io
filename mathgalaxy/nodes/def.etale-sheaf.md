@@ -23,4 +23,4 @@ refs: Milne, Étale Cohomology —— étale 拓扑与 étale 层；Stacks Proje
 
 > 说明见 `notes/def.etale-sheaf.md`
 
-引用：`def.etale-sheaf`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.etale-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

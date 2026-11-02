@@ -10,5 +10,5 @@ layer 20 · proposition · cluster Differentiation Theorems (`analysis.different
 Chinese only — see the Chinese page `nodes/prop.L1-signed.md` and `proofs/`.
 
 
-Cite: `prop.L1-signed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.L1-signed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -20,4 +20,4 @@ refs: Kunen, Set Theory, I.3
 ## 说明
 有了配对公理，「{a, b}」才是集合；它也是构造有序对 $(a,b) = \{\{a\},\{a,b\}\}$ 的第一步。
 
-引用：`ax.pair`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.pair`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Chart` (short) · `Chart and Transition Maps` (full)
 Chinese only — see the Chinese page `nodes/def.manifold-chart.md` and `proofs/`.
 
 
-Cite: `def.manifold-chart` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.manifold-chart` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

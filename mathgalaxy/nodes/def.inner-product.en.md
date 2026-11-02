@@ -10,5 +10,5 @@ layer 9 · definition · cluster Inner Product Spaces and Orthogonality (`algebr
 Chinese only — see the Chinese page `nodes/def.inner-product.md` and `proofs/`.
 
 
-Cite: `def.inner-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.inner-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

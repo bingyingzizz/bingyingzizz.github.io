@@ -14,4 +14,4 @@ refs: Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 链�
 
 > 说明见 `notes/prop.integral-chain-linear.md`
 
-引用：`prop.integral-chain-linear`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integral-chain-linear`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

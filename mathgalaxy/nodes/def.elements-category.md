@@ -23,4 +23,4 @@ refs: Mac Lane, Categories for the Working Mathematician, III.7
 
 > 说明见 `notes/def.elements-category.md`
 
-引用：`def.elements-category`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.elements-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

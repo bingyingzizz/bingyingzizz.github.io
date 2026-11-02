@@ -10,5 +10,5 @@ layer 13 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
 Chinese only — see the Chinese page `nodes/lem.path-product.md` and `proofs/`.
 
 
-Cite: `lem.path-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.path-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

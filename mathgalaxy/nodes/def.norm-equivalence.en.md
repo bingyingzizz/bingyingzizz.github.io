@@ -10,5 +10,5 @@ layer 11 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`
 Chinese only — see the Chinese page `nodes/def.norm-equivalence.md` and `proofs/`.
 
 
-Cite: `def.norm-equivalence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.norm-equivalence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

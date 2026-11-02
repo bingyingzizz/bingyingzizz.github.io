@@ -10,5 +10,5 @@ layer 24 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Dif
 Chinese only — see the Chinese page `nodes/def.first-fundamental-form.md` and `proofs/`.
 
 
-Cite: `def.first-fundamental-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.first-fundamental-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

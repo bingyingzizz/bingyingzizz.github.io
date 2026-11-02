@@ -11,5 +11,5 @@ names: `Bounded Operator Extension` (short) · `Extension of a Bounded Operator 
 Chinese only — see the Chinese page `nodes/thm.bounded-extension.md` and `proofs/`.
 
 
-Cite: `thm.bounded-extension` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bounded-extension` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

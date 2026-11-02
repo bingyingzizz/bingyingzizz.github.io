@@ -10,5 +10,5 @@ layer 22 · definition · cluster Matrix Factorizations and Least Squares (`alge
 Chinese only — see the Chinese page `nodes/def.matrix-norm.md` and `proofs/`.
 
 
-Cite: `def.matrix-norm` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.matrix-norm` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

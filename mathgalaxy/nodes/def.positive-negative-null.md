@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, §3.1
 
 ⚠ 与 $\mu$零集区分：这里的「零集」是关于符号测度 $\nu$ 说的（$\nu(F) = 0$），不是关于测度 $\mu$ 的。
 
-引用：`def.positive-negative-null`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.positive-negative-null`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

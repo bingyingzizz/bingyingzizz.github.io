@@ -10,5 +10,5 @@ layer 11 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstra
 Chinese only — see the Chinese page `nodes/thm.first-iso-vs.md` and `proofs/`.
 
 
-Cite: `thm.first-iso-vs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.first-iso-vs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

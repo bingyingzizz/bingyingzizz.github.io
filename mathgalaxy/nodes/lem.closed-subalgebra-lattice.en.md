@@ -11,5 +11,5 @@ names: `Closed Subalgebra Is a Lattice` (short) · `Closed Unital Subalgebras Ar
 Chinese only — see the Chinese page `nodes/lem.closed-subalgebra-lattice.md` and `proofs/`.
 
 
-Cite: `lem.closed-subalgebra-lattice` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.closed-subalgebra-lattice` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

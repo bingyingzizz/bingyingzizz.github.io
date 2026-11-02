@@ -11,5 +11,5 @@ names: `Orthogonally Similar` (short) · `Orthogonally Similar Matrices` (full)
 Chinese only — see the Chinese page `nodes/def.orthogonally-similar.md` and `proofs/`.
 
 
-Cite: `def.orthogonally-similar` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.orthogonally-similar` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

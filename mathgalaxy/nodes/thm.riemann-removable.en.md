@@ -11,5 +11,5 @@ names: `Removable Singularity` (short) · `Riemann's Removable Singularity Theor
 Chinese only — see the Chinese page `nodes/thm.riemann-removable.md` and `proofs/`.
 
 
-Cite: `thm.riemann-removable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.riemann-removable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 15 · definition · cluster Convergence and Compactness (`topology.converg
 Chinese only — see the Chinese page `nodes/def.net.md` and `proofs/`.
 
 
-Cite: `def.net` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.net` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

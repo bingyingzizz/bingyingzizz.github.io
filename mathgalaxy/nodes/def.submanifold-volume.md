@@ -10,11 +10,11 @@ layer 27 · 定义 · 微分形式、积分与 de Rham · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.submanifold-volume.7.md](./def.submanifold-volume.7.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
 > English abstract 续见 [nodes/def.submanifold-volume.5.md](./def.submanifold-volume.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 子流形上的诱导度量与体积；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 黎曼体积与正交余标架
 
 > 说明见 `notes/def.submanifold-volume.md`
 
-引用：`def.submanifold-volume`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.submanifold-volume`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

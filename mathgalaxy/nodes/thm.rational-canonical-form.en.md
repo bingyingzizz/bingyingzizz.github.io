@@ -10,5 +10,5 @@ layer 15 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) 
 Chinese only — see the Chinese page `nodes/thm.rational-canonical-form.md` and `proofs/`.
 
 
-Cite: `thm.rational-canonical-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rational-canonical-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

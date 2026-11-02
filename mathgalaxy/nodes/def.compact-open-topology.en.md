@@ -10,5 +10,5 @@ layer 15 · definition · cluster Compactly Generated Spaces and Weak Hausdorff 
 Chinese only — see the Chinese page `nodes/def.compact-open-topology.md` and `proofs/`.
 
 
-Cite: `def.compact-open-topology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.compact-open-topology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

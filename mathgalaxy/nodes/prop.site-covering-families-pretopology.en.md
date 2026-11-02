@@ -11,5 +11,5 @@ names: `Covering Families` (short) · `Covering Families Form a Pretopology` (fu
 Chinese only — see the Chinese page `nodes/prop.site-covering-families-pretopology.md` and `proofs/`.
 
 
-Cite: `prop.site-covering-families-pretopology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.site-covering-families-pretopology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

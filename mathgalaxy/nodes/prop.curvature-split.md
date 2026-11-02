@@ -16,4 +16,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯
 
 > 说明见 `notes/prop.curvature-split.md`
 
-引用：`prop.curvature-split`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.curvature-split`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

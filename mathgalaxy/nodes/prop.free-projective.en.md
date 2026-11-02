@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · To
 Chinese only — see the Chinese page `nodes/prop.free-projective.md` and `proofs/`.
 
 
-Cite: `prop.free-projective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-projective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

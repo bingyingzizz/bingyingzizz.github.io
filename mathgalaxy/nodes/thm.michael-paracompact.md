@@ -14,4 +14,4 @@ refs: Michael, A note on paracompact spaces, Proc. Amer. Math. Soc. 4 (1953)；E
 
 > 说明见 `notes/thm.michael-paracompact.md`
 
-引用：`thm.michael-paracompact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.michael-paracompact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

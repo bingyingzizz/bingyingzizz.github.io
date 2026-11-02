@@ -14,4 +14,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 广
 
 > 说明见 `notes/def.generalized-eigenvector.md`
 
-引用：`def.generalized-eigenvector`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.generalized-eigenvector`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

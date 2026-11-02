@@ -10,5 +10,5 @@ layer 15 · definition · cluster Convergence Tests for Series (`analysis.series
 Chinese only — see the Chinese page `nodes/def.absolute-convergence.md` and `proofs/`.
 
 
-Cite: `def.absolute-convergence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.absolute-convergence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -19,4 +19,4 @@ refs: 华罗庚《数论导引》第七、九章；Apostol, Ch. 4
 
 > 说明见 `notes/def.prime-counting.md`
 
-引用：`def.prime-counting`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.prime-counting`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

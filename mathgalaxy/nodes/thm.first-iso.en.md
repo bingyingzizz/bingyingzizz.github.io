@@ -2,8 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.first-iso)　·　[Chinese page (authoritative)](./thm.first-iso.md)
 
-> English: **stale** · stale fields: abstract, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
-> fields: abstract stale · statement reviewed · notes stale · name derived
+> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Set Theory
 

@@ -11,5 +11,5 @@ names: `Condensed Criterion` (short) · `Criterion for a Presheaf to Be Condense
 Chinese only — see the Chinese page `nodes/prop.condensed-criterion.md` and `proofs/`.
 
 
-Cite: `prop.condensed-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.condensed-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -19,4 +19,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/def.norm-equivalence.md`
 
-引用：`def.norm-equivalence`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.norm-equivalence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

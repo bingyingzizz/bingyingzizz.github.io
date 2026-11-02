@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §5.3
 ## 说明
 例：**通常的阿贝尔群平坦 $\iff$ 无挠**。由此立刻得到：$\mathbb{Z}\cdot X$ **总是平坦的** —— 先归结到预层、再归结到通常的阿贝尔群，而自由阿贝尔群无挠。
 
-引用：`def.flat-abelian-sheaf`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.flat-abelian-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

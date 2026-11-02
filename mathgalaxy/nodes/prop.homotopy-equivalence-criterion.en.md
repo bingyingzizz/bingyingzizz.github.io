@@ -11,5 +11,5 @@ names: `Homotopy Equivalence Criterion` (short) · `Criterion for Homotopy Equiv
 Chinese only — see the Chinese page `nodes/prop.homotopy-equivalence-criterion.md` and `proofs/`.
 
 
-Cite: `prop.homotopy-equivalence-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.homotopy-equivalence-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

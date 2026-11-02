@@ -23,4 +23,4 @@ refs: Le Stum, §6.2
 
 > 说明见 `notes/def.pontryagin-dual.md`
 
-引用：`def.pontryagin-dual`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pontryagin-dual`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

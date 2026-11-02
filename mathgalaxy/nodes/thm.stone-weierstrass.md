@@ -15,4 +15,4 @@ refs: Rudin, Functional Analysis · Stone–Weierstrass 定理；Stone 1937
 
 > 说明见 `notes/thm.stone-weierstrass.md`
 
-引用：`thm.stone-weierstrass`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.stone-weierstrass`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

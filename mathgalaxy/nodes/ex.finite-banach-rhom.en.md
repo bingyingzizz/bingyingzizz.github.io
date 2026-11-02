@@ -11,5 +11,5 @@ names: `Finite Banach RHom` (short) · `Derived Hom between Finite-Dimensional B
 Chinese only — see the Chinese page `nodes/ex.finite-banach-rhom.md` and `proofs/`.
 
 
-Cite: `ex.finite-banach-rhom` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.finite-banach-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Continuity and Compactness (`analysis.continu
 Chinese only — see the Chinese page `nodes/prop.continuous-arithmetic.md` and `proofs/`.
 
 
-Cite: `prop.continuous-arithmetic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.continuous-arithmetic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

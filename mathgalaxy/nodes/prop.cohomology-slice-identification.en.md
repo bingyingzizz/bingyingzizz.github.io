@@ -11,5 +11,5 @@ names: `Slice Cohomology` (short) · `Cohomology on the Slice Is Cohomology of t
 Chinese only — see the Chinese page `nodes/prop.cohomology-slice-identification.md` and `proofs/`.
 
 
-Cite: `prop.cohomology-slice-identification` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cohomology-slice-identification` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

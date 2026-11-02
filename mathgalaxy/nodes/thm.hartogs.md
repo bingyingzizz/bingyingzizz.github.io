@@ -19,4 +19,4 @@ refs: Hartogs (1915)；Kunen, Set Theory, I.11；Jech, The Axiom of Choice, Ch. 
 
 > 说明见 `notes/thm.hartogs.md`
 
-引用：`thm.hartogs`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hartogs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

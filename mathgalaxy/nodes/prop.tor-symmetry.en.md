@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Flat Modules (`hom.flat`) · Homological Alge
 Chinese only — see the Chinese page `nodes/prop.tor-symmetry.md` and `proofs/`.
 
 
-Cite: `prop.tor-symmetry` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tor-symmetry` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

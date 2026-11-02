@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differ
 Chinese only — see the Chinese page `nodes/thm.codazzi-mainardi.md` and `proofs/`.
 
 
-Cite: `thm.codazzi-mainardi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.codazzi-mainardi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

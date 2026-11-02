@@ -22,5 +22,5 @@ An $n$-tuple is defined recursively: $(a_{1}$ …$a_{n}) = ( (a_{1}$ …$a_{n-1}
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `def.pair` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pair` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

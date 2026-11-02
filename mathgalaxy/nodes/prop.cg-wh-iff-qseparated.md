@@ -15,4 +15,4 @@ refs: Le Stum, Proposition 4.2.12
 
 > 说明见 `notes/prop.cg-wh-iff-qseparated.md`
 
-引用：`prop.cg-wh-iff-qseparated`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cg-wh-iff-qseparated`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

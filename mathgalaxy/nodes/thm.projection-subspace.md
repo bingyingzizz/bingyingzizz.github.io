@@ -21,4 +21,4 @@ refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/thm.projection-subspace.md`
 
-引用：`thm.projection-subspace`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.projection-subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

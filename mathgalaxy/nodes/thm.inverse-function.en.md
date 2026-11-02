@@ -10,5 +10,5 @@ layer 23 · theorem · cluster Multivariable Differentiation (`analysis.multivar
 Chinese only — see the Chinese page `nodes/thm.inverse-function.md` and `proofs/`.
 
 
-Cite: `thm.inverse-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.inverse-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

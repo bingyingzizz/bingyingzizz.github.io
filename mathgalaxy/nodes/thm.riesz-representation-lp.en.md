@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.riesz-representation-lp.md` and
 Wikipedia: https://en.wikipedia.org/wiki/Riesz_representation_theorem
 
 
-Cite: `thm.riesz-representation-lp` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.riesz-representation-lp` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Countable Closed Cover` (short) · `Countable Closed Covers and Interior
 Chinese only — see the Chinese page `nodes/lem.countable-closed-cover.md` and `proofs/`.
 
 
-Cite: `lem.countable-closed-cover` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.countable-closed-cover` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

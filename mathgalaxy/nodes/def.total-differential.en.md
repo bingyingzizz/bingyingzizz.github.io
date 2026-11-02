@@ -11,5 +11,5 @@ names: `Total Differential` (short) · `Differentiability and the Total Differen
 Chinese only — see the Chinese page `nodes/def.total-differential.md` and `proofs/`.
 
 
-Cite: `def.total-differential` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.total-differential` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

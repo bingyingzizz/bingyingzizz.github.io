@@ -11,5 +11,5 @@ names: `Unit and Counit Examples` (short) · `Units and Counits in Common Adjunc
 Chinese only — see the Chinese page `nodes/prop.unit-counit-examples.md` and `proofs/`.
 
 
-Cite: `prop.unit-counit-examples` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.unit-counit-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

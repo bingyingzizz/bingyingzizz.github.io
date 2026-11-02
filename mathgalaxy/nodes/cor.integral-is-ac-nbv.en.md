@@ -10,5 +10,5 @@ layer 20 · corollary · cluster Bounded Variation and Absolute Continuity (`ana
 Chinese only — see the Chinese page `nodes/cor.integral-is-ac-nbv.md` and `proofs/`.
 
 
-Cite: `cor.integral-is-ac-nbv` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.integral-is-ac-nbv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

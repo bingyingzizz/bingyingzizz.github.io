@@ -11,5 +11,5 @@ names: `Forgetful Adjoints` (short) · `Forgetful Functors and Their Adjoints` (
 Chinese only — see the Chinese page `nodes/prop.forgetful-adjoints-examples.md` and `proofs/`.
 
 
-Cite: `prop.forgetful-adjoints-examples` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.forgetful-adjoints-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 10 · definition · cluster Diagrams and Limits (`cat.limit`) · Category 
 Chinese only — see the Chinese page `nodes/def.filtered-category.md` and `proofs/`.
 
 
-Cite: `def.filtered-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.filtered-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -18,4 +18,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「联络」· 仿射
 
 > 说明见 `notes/def.affine-connection.md`
 
-引用：`def.affine-connection`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.affine-connection`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

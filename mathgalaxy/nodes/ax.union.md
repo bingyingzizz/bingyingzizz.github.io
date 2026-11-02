@@ -18,4 +18,4 @@ refs: Kunen, Set Theory, I.3
 ## 说明
 注意 $\bigcup F$ 是「$F$ 中元素的元素」，不是 $F$ 自身；$\bigcup \{a,b\} = a \cup b$ 正是我们要的二元并。
 
-引用：`ax.union`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.union`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

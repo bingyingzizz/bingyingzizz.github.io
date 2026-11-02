@@ -10,5 +10,5 @@ layer 18 · definition · cluster Conformal Maps and Normal Families (`analysis.
 Chinese only — see the Chinese page `nodes/def.cross-ratio.md` and `proofs/`.
 
 
-Cite: `def.cross-ratio` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cross-ratio` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

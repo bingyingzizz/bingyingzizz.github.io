@@ -22,4 +22,4 @@ refs: Munkres, Topology, §28
 
 注意子列收敛到的是 $X$ 中的点：列紧是内蕴性质，不看外面那个空间。
 
-引用：`def.sequentially-compact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.sequentially-compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

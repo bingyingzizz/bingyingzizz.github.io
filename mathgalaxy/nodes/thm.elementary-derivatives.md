@@ -18,4 +18,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 
 > 说明见 `notes/thm.elementary-derivatives.md`
 
-引用：`thm.elementary-derivatives`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.elementary-derivatives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -14,8 +14,8 @@ layer 16 · 命题 · Baire 纲与三大定理 · 泛函分析
 
 - …另有入边，续页见 [nodes/prop.baire-characterizations.2.md](./prop.baire-characterizations.2.md)
 
-refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/prop.baire-characterizations.md`
 
-引用：`prop.baire-characterizations`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.baire-characterizations`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

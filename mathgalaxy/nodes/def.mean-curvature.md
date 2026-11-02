@@ -16,4 +16,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/def.mean-curvature.md`
 
-引用：`def.mean-curvature`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.mean-curvature`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

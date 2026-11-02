@@ -11,5 +11,5 @@ names: `Generalized Arzela-Ascoli` (short) · `Generalized Arzela-Ascoli Theorem
 Chinese only — see the Chinese page `nodes/thm.arzela-ascoli-general.md` and `proofs/`.
 
 
-Cite: `thm.arzela-ascoli-general` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.arzela-ascoli-general` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

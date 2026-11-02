@@ -17,4 +17,4 @@ refs: Lang, Undergraduate Analysis, Ch. XVI；Guillemin–Pollack, Differential 
 
 > 说明见 `notes/def.submersion-immersion.md`
 
-引用：`def.submersion-immersion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.submersion-immersion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Riemann Implies Lebesgue` (short) · `Riemann Integrability Implies Lebe
 Chinese only — see the Chinese page `nodes/prop.riemann-implies-lebesgue.md` and `proofs/`.
 
 
-Cite: `prop.riemann-implies-lebesgue` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.riemann-implies-lebesgue` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

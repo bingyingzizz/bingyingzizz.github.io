@@ -18,4 +18,4 @@ refs: Borsuk–Ulam 的标准推论；见 Matoušek, Using the Borsuk–Ulam The
 
 > 说明见 `notes/thm.ham-sandwich.md`
 
-引用：`thm.ham-sandwich`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ham-sandwich`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

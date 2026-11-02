@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Foundations of Complex Analysis (`analysis.comple
 Chinese only — see the Chinese page `nodes/thm.winding-homotopy.md` and `proofs/`.
 
 
-Cite: `thm.winding-homotopy` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.winding-homotopy` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

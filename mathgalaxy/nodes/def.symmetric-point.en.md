@@ -10,5 +10,5 @@ layer 19 · definition · cluster Conformal Maps and Normal Families (`analysis.
 Chinese only — see the Chinese page `nodes/def.symmetric-point.md` and `proofs/`.
 
 
-Cite: `def.symmetric-point` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.symmetric-point` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

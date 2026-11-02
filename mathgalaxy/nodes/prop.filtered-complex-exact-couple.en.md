@@ -10,5 +10,5 @@ layer 19 · proposition · cluster Filtrations and Spectral Sequences (`hom.spec
 Chinese only — see the Chinese page `nodes/prop.filtered-complex-exact-couple.md` and `proofs/`.
 
 
-Cite: `prop.filtered-complex-exact-couple` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.filtered-complex-exact-couple` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

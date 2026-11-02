@@ -14,4 +14,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 6.5（扩张与二
 
 > 说明见 `notes/thm.h2-group-extensions.md`
 
-引用：`thm.h2-group-extensions`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.h2-group-extensions`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

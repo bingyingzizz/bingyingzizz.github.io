@@ -10,5 +10,5 @@ layer 7 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysi
 Chinese only — see the Chinese page `nodes/thm.bernoulli.md` and `proofs/`.
 
 
-Cite: `thm.bernoulli` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bernoulli` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

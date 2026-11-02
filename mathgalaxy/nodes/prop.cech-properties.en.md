@@ -11,5 +11,5 @@ names: `Čech Functor Properties` (short) · `Properties of the Čech Functor` (
 Chinese only — see the Chinese page `nodes/prop.cech-properties.md` and `proofs/`.
 
 
-Cite: `prop.cech-properties` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-properties` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

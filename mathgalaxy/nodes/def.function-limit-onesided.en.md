@@ -10,5 +10,5 @@ layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · M
 Chinese only — see the Chinese page `nodes/def.function-limit-onesided.md` and `proofs/`.
 
 
-Cite: `def.function-limit-onesided` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.function-limit-onesided` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

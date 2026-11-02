@@ -9,7 +9,7 @@ $$G \big/ \ker\varphi \;\cong\; \operatorname{im}\varphi, \qquad g \ker\varphi \
 
 In particular: **the image of a surjective homomorphism is the quotient group** ($G/\ker\varphi \cong G'$ when $\varphi$ is surjective).
 
-## Notes · **stale**
+## Notes · **reviewed**
 **The three steps of the proof.** Write $K = \ker\varphi$.
 
 > 续见 nodes/thm.first-iso.en.4.md

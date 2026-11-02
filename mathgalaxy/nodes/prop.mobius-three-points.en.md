@@ -10,5 +10,5 @@ layer 19 · proposition · cluster Conformal Maps and Normal Families (`analysis
 Chinese only — see the Chinese page `nodes/prop.mobius-three-points.md` and `proofs/`.
 
 
-Cite: `prop.mobius-three-points` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.mobius-three-points` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

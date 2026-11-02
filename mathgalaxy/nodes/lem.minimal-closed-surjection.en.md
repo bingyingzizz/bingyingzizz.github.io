@@ -10,5 +10,5 @@ layer 15 · lemma · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 Chinese only — see the Chinese page `nodes/lem.minimal-closed-surjection.md` and `proofs/`.
 
 
-Cite: `lem.minimal-closed-surjection` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.minimal-closed-surjection` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

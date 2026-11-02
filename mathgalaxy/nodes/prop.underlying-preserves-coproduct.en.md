@@ -11,5 +11,5 @@ names: `Underlying and Coproducts` (short) · `The Underlying Functor Preserves 
 Chinese only — see the Chinese page `nodes/prop.underlying-preserves-coproduct.md` and `proofs/`.
 
 
-Cite: `prop.underlying-preserves-coproduct` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.underlying-preserves-coproduct` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

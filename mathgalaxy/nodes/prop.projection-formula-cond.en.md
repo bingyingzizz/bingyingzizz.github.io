@@ -11,5 +11,5 @@ names: `Projection Formula` (short) · `Projection Formula for Condensed Sets` (
 Chinese only — see the Chinese page `nodes/prop.projection-formula-cond.md` and `proofs/`.
 
 
-Cite: `prop.projection-formula-cond` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.projection-formula-cond` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

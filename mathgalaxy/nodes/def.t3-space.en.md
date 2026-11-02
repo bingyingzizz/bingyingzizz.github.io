@@ -10,5 +10,5 @@ layer 7 · definition · cluster Separation Axioms (`topology.separation`) · To
 Chinese only — see the Chinese page `nodes/def.t3-space.md` and `proofs/`.
 
 
-Cite: `def.t3-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.t3-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

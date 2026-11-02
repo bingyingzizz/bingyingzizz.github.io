@@ -21,4 +21,4 @@ refs: Le Stum, Proposition 4.2.6
 
 > 说明见 `notes/prop.cond-internal-hom.md`
 
-引用：`prop.cond-internal-hom`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cond-internal-hom`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

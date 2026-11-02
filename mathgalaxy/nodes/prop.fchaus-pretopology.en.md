@@ -11,5 +11,5 @@ names: `FCHaus Pretopology` (short) · `Pretopology on Finite Compact Hausdorff 
 Chinese only — see the Chinese page `nodes/prop.fchaus-pretopology.md` and `proofs/`.
 
 
-Cite: `prop.fchaus-pretopology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.fchaus-pretopology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

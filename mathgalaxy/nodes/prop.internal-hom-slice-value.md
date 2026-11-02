@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 7.60
 
 > 说明见 `notes/prop.internal-hom-slice-value.md`
 
-引用：`prop.internal-hom-slice-value`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.internal-hom-slice-value`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group of the Circle�
 
 > 说明见 `notes/thm.pi1-circle.md`
 
-引用：`thm.pi1-circle`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pi1-circle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

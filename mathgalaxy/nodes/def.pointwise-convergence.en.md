@@ -10,5 +10,5 @@ layer 14 · definition · cluster Sequences of Functions, Power Series and Eleme
 Chinese only — see the Chinese page `nodes/def.pointwise-convergence.md` and `proofs/`.
 
 
-Cite: `def.pointwise-convergence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pointwise-convergence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

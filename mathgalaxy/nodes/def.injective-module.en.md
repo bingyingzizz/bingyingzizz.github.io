@@ -10,5 +10,5 @@ layer 15 · definition · cluster Injective Modules and Divisible Groups (`hom.i
 Chinese only — see the Chinese page `nodes/def.injective-module.md` and `proofs/`.
 
 
-Cite: `def.injective-module` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.injective-module` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

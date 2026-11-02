@@ -13,8 +13,8 @@ layer 25 · 定理 · Baire 纲与三大定理 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.closed-graph`](../nodes/thm.closed-graph.md) 闭图像定理
 
-refs: Rudin, Functional Analysis · 开映射定理
+refs: Rudin, Functional Analysis, 2.12
 
 > 说明见 `notes/thm.bounded-inverse.md`
 
-引用：`thm.bounded-inverse`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bounded-inverse`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Categories and Diagrams (`cat.basic`) · Cate
 Chinese only — see the Chinese page `nodes/prop.cat-final-initial-products.md` and `proofs/`.
 
 
-Cite: `prop.cat-final-initial-products` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cat-final-initial-products` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

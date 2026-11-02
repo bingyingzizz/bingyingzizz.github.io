@@ -11,5 +11,5 @@ names: `Cohomology by Bar Resolution` (short) · `Computing Group Cohomology via
 Chinese only — see the Chinese page `nodes/prop.group-cohom-compute.md` and `proofs/`.
 
 
-Cite: `prop.group-cohom-compute` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.group-cohom-compute` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

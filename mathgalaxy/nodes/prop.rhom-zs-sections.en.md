@@ -11,5 +11,5 @@ names: `RHom of Free Modules` (short) · `Derived Hom of Free Modules over Stone
 Chinese only — see the Chinese page `nodes/prop.rhom-zs-sections.md` and `proofs/`.
 
 
-Cite: `prop.rhom-zs-sections` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-zs-sections` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

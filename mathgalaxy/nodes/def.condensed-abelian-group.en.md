@@ -10,5 +10,5 @@ layer 17 · definition · cluster Condensed Abelian Groups (`cond.ab`) · Conden
 Chinese only — see the Chinese page `nodes/def.condensed-abelian-group.md` and `proofs/`.
 
 
-Cite: `def.condensed-abelian-group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.condensed-abelian-group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

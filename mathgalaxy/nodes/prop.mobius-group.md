@@ -17,4 +17,4 @@ refs: Ahlfors, Complex Analysis (3rd ed.), Ch. 3 · Linear Transformations；王
 
 > 说明见 `notes/prop.mobius-group.md`
 
-引用：`prop.mobius-group`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.mobius-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

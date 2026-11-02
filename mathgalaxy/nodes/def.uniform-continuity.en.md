@@ -10,5 +10,5 @@ layer 15 · definition · cluster Continuity and Compactness (`analysis.continui
 Chinese only — see the Chinese page `nodes/def.uniform-continuity.md` and `proofs/`.
 
 
-Cite: `def.uniform-continuity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.uniform-continuity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

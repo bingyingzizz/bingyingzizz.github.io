@@ -14,4 +14,4 @@ refs: 王晓光《复变函数》· 多值函数、单值分支与支割线；Ah
 
 > 说明见 `notes/prop.single-valued-branch.md`
 
-引用：`prop.single-valued-branch`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.single-valued-branch`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

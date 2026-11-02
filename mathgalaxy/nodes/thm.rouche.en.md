@@ -10,5 +10,5 @@ layer 22 · theorem · cluster Residues and the Argument Principle (`analysis.re
 Chinese only — see the Chinese page `nodes/thm.rouche.md` and `proofs/`.
 
 
-Cite: `thm.rouche` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rouche` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

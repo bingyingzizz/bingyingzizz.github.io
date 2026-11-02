@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Anal
 Chinese only — see the Chinese page `nodes/thm.cauchy-integral-formula.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-integral-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-integral-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

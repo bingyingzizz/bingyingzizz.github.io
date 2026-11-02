@@ -12,8 +12,8 @@ $$\operatorname{cont}(f) := \{x : f \text{ 在 } x \text{ 连续}\}$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.pointwise-limit-continuity.2.md](./thm.pointwise-limit-continuity.2.md)
 
-refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/thm.pointwise-limit-continuity.md`
 
-引用：`thm.pointwise-limit-continuity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pointwise-limit-continuity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

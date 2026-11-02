@@ -10,5 +10,5 @@ One more fact along the way: $\mathbb{Z}\cdot X$ is **projective** in $\mathcal{
 Wikipedia: https://en.wikipedia.org/wiki/Grothendieck_category · nLab: https://ncatlab.org/nlab/show/Grothendieck+category
 
 
-Cite: `thm.topos-abelian-grothendieck` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.topos-abelian-grothendieck` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

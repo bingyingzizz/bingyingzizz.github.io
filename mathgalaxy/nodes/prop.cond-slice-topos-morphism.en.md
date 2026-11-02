@@ -11,5 +11,5 @@ names: `Cond/X to Open(X)` (short) · `A Topos Morphism from Cond over X to Shea
 Chinese only — see the Chinese page `nodes/prop.cond-slice-topos-morphism.md` and `proofs/`.
 
 
-Cite: `prop.cond-slice-topos-morphism` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-slice-topos-morphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

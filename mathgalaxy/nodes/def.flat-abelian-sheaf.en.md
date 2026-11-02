@@ -10,5 +10,5 @@ layer 19 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological A
 Chinese only — see the Chinese page `nodes/def.flat-abelian-sheaf.md` and `proofs/`.
 
 
-Cite: `def.flat-abelian-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.flat-abelian-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

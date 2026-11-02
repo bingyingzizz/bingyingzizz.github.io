@@ -11,5 +11,5 @@ names: `Precanonical Sheaves` (short) · `Sheaves for the Precanonical Topology`
 Chinese only — see the Chinese page `nodes/prop.precanonical-sheaf.md` and `proofs/`.
 
 
-Cite: `prop.precanonical-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.precanonical-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

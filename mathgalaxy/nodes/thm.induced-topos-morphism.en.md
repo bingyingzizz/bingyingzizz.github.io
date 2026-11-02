@@ -11,5 +11,5 @@ names: `Induced Topos Morphism` (short) · `Every Functor Induces a Topos Morphi
 Chinese only — see the Chinese page `nodes/thm.induced-topos-morphism.md` and `proofs/`.
 
 
-Cite: `thm.induced-topos-morphism` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.induced-topos-morphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Unit Ball Compact iff Finite-Dimensional` (short) · `Closed Unit Ball I
 Chinese only — see the Chinese page `nodes/thm.riesz-ball-compact.md` and `proofs/`.
 
 
-Cite: `thm.riesz-ball-compact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.riesz-ball-compact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Internal Hom Values` (short) · `Values of the Internal Hom` (full)
 Chinese only — see the Chinese page `nodes/prop.internal-hom-slice-value.md` and `proofs/`.
 
 
-Cite: `prop.internal-hom-slice-value` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.internal-hom-slice-value` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

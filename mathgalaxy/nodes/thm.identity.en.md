@@ -10,5 +10,5 @@ layer 23 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Anal
 Chinese only — see the Chinese page `nodes/thm.identity.md` and `proofs/`.
 
 
-Cite: `thm.identity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.identity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

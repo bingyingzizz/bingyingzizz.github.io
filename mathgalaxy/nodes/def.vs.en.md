@@ -10,5 +10,5 @@ layer 8 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) 
 Chinese only — see the Chinese page `nodes/def.vs.md` and `proofs/`.
 
 
-Cite: `def.vs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.vs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

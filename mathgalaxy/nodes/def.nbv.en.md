@@ -10,5 +10,5 @@ layer 17 · definition · cluster Bounded Variation and Absolute Continuity (`an
 Chinese only — see the Chinese page `nodes/def.nbv.md` and `proofs/`.
 
 
-Cite: `def.nbv` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.nbv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

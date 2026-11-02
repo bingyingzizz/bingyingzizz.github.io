@@ -10,5 +10,5 @@ layer 15 · definition · cluster Arithmetic Functions and Distribution of Prime
 Chinese only — see the Chinese page `nodes/def.mobius-function.md` and `proofs/`.
 
 
-Cite: `def.mobius-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.mobius-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

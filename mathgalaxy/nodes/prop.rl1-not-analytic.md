@@ -16,4 +16,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/prop.rl1-not-analytic.md`
 
-引用：`prop.rl1-not-analytic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.rl1-not-analytic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

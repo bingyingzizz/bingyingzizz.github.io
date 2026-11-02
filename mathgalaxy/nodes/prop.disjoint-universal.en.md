@@ -11,5 +11,5 @@ names: `Disjoint Coproducts` (short) · `Disjoint Universal Coproducts and Subca
 Chinese only — see the Chinese page `nodes/prop.disjoint-universal.md` and `proofs/`.
 
 
-Cite: `prop.disjoint-universal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.disjoint-universal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

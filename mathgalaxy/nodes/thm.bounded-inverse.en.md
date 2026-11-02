@@ -10,5 +10,5 @@ layer 25 · theorem · cluster Baire Category and the Three Big Theorems (`fa.ba
 Chinese only — see the Chinese page `nodes/thm.bounded-inverse.md` and `proofs/`.
 
 
-Cite: `thm.bounded-inverse` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bounded-inverse` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

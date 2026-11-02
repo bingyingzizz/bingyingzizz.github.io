@@ -10,5 +10,5 @@ layer 28 · theorem · cluster Differential Forms, Integration and de Rham Cohom
 Chinese only — see the Chinese page `nodes/thm.divergence-theorem.md` and `proofs/`.
 
 
-Cite: `thm.divergence-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.divergence-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

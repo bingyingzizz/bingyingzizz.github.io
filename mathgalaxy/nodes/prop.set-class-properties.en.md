@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Families of Sets and Sigma-Algebras (`analysi
 Chinese only — see the Chinese page `nodes/prop.set-class-properties.md` and `proofs/`.
 
 
-Cite: `prop.set-class-properties` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.set-class-properties` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

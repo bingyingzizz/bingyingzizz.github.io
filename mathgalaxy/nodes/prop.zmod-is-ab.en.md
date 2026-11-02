@@ -11,5 +11,5 @@ names: `Z-Mod and Ab` (short) · `Z-Modules Are Abelian Groups` (full)
 Chinese only — see the Chinese page `nodes/prop.zmod-is-ab.md` and `proofs/`.
 
 
-Cite: `prop.zmod-is-ab` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.zmod-is-ab` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

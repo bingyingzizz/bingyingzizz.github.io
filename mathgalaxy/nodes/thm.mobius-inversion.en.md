@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Arithmetic Functions and Distribution of Primes (
 Chinese only — see the Chinese page `nodes/thm.mobius-inversion.md` and `proofs/`.
 
 
-Cite: `thm.mobius-inversion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mobius-inversion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

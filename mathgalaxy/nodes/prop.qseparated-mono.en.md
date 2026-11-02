@@ -11,5 +11,5 @@ names: `Quasi-Separated Is Mono` (short) · `Quasi-Separated Condensed Sets Embe
 Chinese only — see the Chinese page `nodes/prop.qseparated-mono.md` and `proofs/`.
 
 
-Cite: `prop.qseparated-mono` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.qseparated-mono` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

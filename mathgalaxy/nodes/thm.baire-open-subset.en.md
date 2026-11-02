@@ -11,5 +11,5 @@ names: `Open Subset of Baire Is Baire` (short) · `Open Subsets of Baire Spaces 
 Chinese only — see the Chinese page `nodes/thm.baire-open-subset.md` and `proofs/`.
 
 
-Cite: `thm.baire-open-subset` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.baire-open-subset` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

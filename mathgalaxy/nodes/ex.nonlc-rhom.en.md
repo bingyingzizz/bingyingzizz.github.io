@@ -11,5 +11,5 @@ names: `Non-Locally-Compact RHom` (short) · `Derived Hom in the Non-Locally-Com
 Chinese only — see the Chinese page `nodes/ex.nonlc-rhom.md` and `proofs/`.
 
 
-Cite: `ex.nonlc-rhom` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.nonlc-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

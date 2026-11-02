@@ -10,5 +10,5 @@ layer 17 · definition · cluster Moving Frames and Structure Equations (`diffge
 Chinese only — see the Chinese page `nodes/def.arc-length.md` and `proofs/`.
 
 
-Cite: `def.arc-length` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.arc-length` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

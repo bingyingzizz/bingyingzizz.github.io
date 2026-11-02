@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Condensed Derived Functors (`cond.cohomology`) ·
 Chinese only — see the Chinese page `nodes/thm.tietze-banach.md` and `proofs/`.
 
 
-Cite: `thm.tietze-banach` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.tietze-banach` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -26,4 +26,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 ⚠ 收敛级数**可以重排**的只有绝对收敛的情形；条件收敛的级数重排后可能收敛到别的值（Riemann 重排定理）。
 
-引用：`def.series`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.series`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

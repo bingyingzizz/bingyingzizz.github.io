@@ -10,5 +10,5 @@ layer 17 · definition · cluster Topological Abelian Groups (`cond.topo`) · Co
 Chinese only — see the Chinese page `nodes/def.pontryagin-dual.md` and `proofs/`.
 
 
-Cite: `def.pontryagin-dual` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pontryagin-dual` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

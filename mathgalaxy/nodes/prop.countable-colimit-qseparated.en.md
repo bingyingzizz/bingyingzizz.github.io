@@ -11,5 +11,5 @@ names: `Countable Colimits` (short) · `Countable Increasing Colimits Are Quasi-
 Chinese only — see the Chinese page `nodes/prop.countable-colimit-qseparated.md` and `proofs/`.
 
 
-Cite: `prop.countable-colimit-qseparated` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.countable-colimit-qseparated` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Limits and Colimits` (short) · `Limits and Colimits of Condensed Sets` 
 Chinese only — see the Chinese page `nodes/prop.cond-limits-colimits.md` and `proofs/`.
 
 
-Cite: `prop.cond-limits-colimits` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-limits-colimits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 11 · theorem · cluster Functors and Natural Transformations (`cat.functo
 Chinese only — see the Chinese page `nodes/thm.equivalence-criterion.md` and `proofs/`.
 
 
-Cite: `thm.equivalence-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.equivalence-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

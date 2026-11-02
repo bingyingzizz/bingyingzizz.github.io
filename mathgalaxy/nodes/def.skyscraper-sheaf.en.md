@@ -10,5 +10,5 @@ layer 16 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homologic
 Chinese only — see the Chinese page `nodes/def.skyscraper-sheaf.md` and `proofs/`.
 
 
-Cite: `def.skyscraper-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.skyscraper-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

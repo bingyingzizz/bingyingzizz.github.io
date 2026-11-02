@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/prop.nbv-derivative.md`
 
-引用：`prop.nbv-derivative`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.nbv-derivative`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

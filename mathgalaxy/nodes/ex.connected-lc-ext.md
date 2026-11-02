@@ -14,4 +14,4 @@ refs: Le Stum, Exercise 8.18
 
 > 说明见 `notes/ex.connected-lc-ext.md`
 
-引用：`ex.connected-lc-ext`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.connected-lc-ext`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

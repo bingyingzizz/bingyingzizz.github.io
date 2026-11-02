@@ -11,5 +11,5 @@ names: `Unitary Operator` (short) · `Unitary Operators and Partial Isometries` 
 Chinese only — see the Chinese page `nodes/def.unitary-operator.md` and `proofs/`.
 
 
-Cite: `def.unitary-operator` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.unitary-operator` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 22 · proposition · cluster Cauchy Theory (`analysis.cauchy`) · Complex 
 Chinese only — see the Chinese page `nodes/prop.zero-isolated.md` and `proofs/`.
 
 
-Cite: `prop.zero-isolated` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.zero-isolated` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

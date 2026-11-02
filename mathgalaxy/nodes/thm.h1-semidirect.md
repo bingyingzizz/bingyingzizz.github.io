@@ -16,4 +16,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 6.5（分裂扩张
 
 > 说明见 `notes/thm.h1-semidirect.md`
 
-引用：`thm.h1-semidirect`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.h1-semidirect`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

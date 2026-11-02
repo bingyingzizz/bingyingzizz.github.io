@@ -10,5 +10,5 @@ layer 11 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · A
 Chinese only — see the Chinese page `nodes/thm.change-of-basis.md` and `proofs/`.
 
 
-Cite: `thm.change-of-basis` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.change-of-basis` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

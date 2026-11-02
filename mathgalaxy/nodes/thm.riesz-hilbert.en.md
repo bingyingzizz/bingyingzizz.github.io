@@ -11,5 +11,5 @@ names: `Riesz Representation` (short) · `Riesz Representation Theorem for Hilbe
 Chinese only — see the Chinese page `nodes/thm.riesz-hilbert.md` and `proofs/`.
 
 
-Cite: `thm.riesz-hilbert` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.riesz-hilbert` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

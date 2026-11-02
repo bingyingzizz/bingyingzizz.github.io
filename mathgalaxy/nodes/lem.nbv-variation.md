@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Lemma 3.30
 
 > 说明见 `notes/lem.nbv-variation.md`
 
-引用：`lem.nbv-variation`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.nbv-variation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

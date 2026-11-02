@@ -23,4 +23,4 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 
 refs: Le Stum, An introduction to condensed mathematics, §7.1–7.3
 
-引用：`thm.long-exact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.long-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

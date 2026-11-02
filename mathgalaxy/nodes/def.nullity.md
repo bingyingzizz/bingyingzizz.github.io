@@ -22,4 +22,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 3
 
 ⚠ $\operatorname{null} T = 0 \iff \ker T = \{0\} \iff T$ 单射 —— 零化度是最便宜的「单射判据」。
 
-引用：`def.nullity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.nullity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

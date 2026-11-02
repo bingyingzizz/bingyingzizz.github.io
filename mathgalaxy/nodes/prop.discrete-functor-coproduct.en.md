@@ -10,5 +10,5 @@ layer 18 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Conde
 Chinese only — see the Chinese page `nodes/prop.discrete-functor-coproduct.md` and `proofs/`.
 
 
-Cite: `prop.discrete-functor-coproduct` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.discrete-functor-coproduct` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

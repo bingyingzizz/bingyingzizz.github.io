@@ -11,5 +11,5 @@ names: `Tensor of Sheaves` (short) · `Tensor Product of Abelian Sheaves` (full)
 Chinese only — see the Chinese page `nodes/def.tensor-abelian-sheaf.md` and `proofs/`.
 
 
-Cite: `def.tensor-abelian-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.tensor-abelian-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

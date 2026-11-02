@@ -10,5 +10,5 @@ It cannot be proved in ZF; but ZF together with it proves AC, so the two are equ
 Wikipedia: https://en.wikipedia.org/wiki/Well-ordering_theorem
 
 
-Cite: `thm.wellordering` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.wellordering` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

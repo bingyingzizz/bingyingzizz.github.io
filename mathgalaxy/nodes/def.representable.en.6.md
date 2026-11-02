@@ -12,5 +12,5 @@ English entry · root `../`
 Wikipedia: https://en.wikipedia.org/wiki/Representable_functor · nLab: https://ncatlab.org/nlab/show/representable+functor
 
 
-Cite: `def.representable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.representable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

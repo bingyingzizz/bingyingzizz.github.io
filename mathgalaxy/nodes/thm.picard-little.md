@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Picard 小定理（介绍）；Ahlfors, Comp
 
 > 说明见 `notes/thm.picard-little.md`
 
-引用：`thm.picard-little`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.picard-little`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

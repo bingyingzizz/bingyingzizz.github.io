@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Conformal Maps and Normal Families (`analysis.map
 Chinese only — see the Chinese page `nodes/thm.arzela-ascoli.md` and `proofs/`.
 
 
-Cite: `thm.arzela-ascoli` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.arzela-ascoli` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

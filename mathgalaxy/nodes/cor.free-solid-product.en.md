@@ -10,5 +10,5 @@ layer 15 · corollary · cluster Solid Abelian Groups (`cond.solid`) · Condense
 Chinese only — see the Chinese page `nodes/cor.free-solid-product.md` and `proofs/`.
 
 
-Cite: `cor.free-solid-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.free-solid-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

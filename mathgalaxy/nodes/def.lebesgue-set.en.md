@@ -10,5 +10,5 @@ layer 22 · definition · cluster Differentiation Theorems (`analysis.differenti
 Chinese only — see the Chinese page `nodes/def.lebesgue-set.md` and `proofs/`.
 
 
-Cite: `def.lebesgue-set` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.lebesgue-set` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 8 · proposition · cluster The Fundamental Group (`topology.fg`) · Topol
 Chinese only — see the Chinese page `nodes/prop.covering-index.md` and `proofs/`.
 
 
-Cite: `prop.covering-index` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.covering-index` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

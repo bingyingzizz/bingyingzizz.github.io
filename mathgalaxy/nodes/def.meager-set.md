@@ -15,8 +15,8 @@ $A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可�
 
 - …另有出边，续页见 [nodes/def.meager-set.3.md](./def.meager-set.3.md)
 
-refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/def.meager-set.md`
 
-引用：`def.meager-set`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.meager-set`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -18,4 +18,4 @@ refs: Munkres, Topology
 
 > 说明见 `notes/def.hausdorff.md`
 
-引用：`def.hausdorff`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.hausdorff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

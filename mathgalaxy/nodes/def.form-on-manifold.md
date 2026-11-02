@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/def.form-on-manifold.md`
 
-引用：`def.form-on-manifold`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.form-on-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

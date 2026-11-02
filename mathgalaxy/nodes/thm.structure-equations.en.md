@@ -10,5 +10,5 @@ layer 22 · theorem · cluster Moving Frames and Structure Equations (`diffgeom.
 Chinese only — see the Chinese page `nodes/thm.structure-equations.md` and `proofs/`.
 
 
-Cite: `thm.structure-equations` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.structure-equations` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

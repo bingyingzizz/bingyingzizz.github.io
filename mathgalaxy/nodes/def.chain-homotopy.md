@@ -16,4 +16,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1（chain homotopy / 链映�
 
 > 说明见 `notes/def.chain-homotopy.md`
 
-引用：`def.chain-homotopy`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chain-homotopy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

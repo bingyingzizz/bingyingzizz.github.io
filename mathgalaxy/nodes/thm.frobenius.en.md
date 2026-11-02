@@ -10,5 +10,5 @@ layer 22 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vecto
 Chinese only — see the Chinese page `nodes/thm.frobenius.md` and `proofs/`.
 
 
-Cite: `thm.frobenius` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.frobenius` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

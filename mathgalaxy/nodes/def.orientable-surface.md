@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲面」· 定向
 
 > 说明见 `notes/def.orientable-surface.md`
 
-引用：`def.orientable-surface`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.orientable-surface`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

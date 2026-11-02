@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Foundations of Complex Analysis (`analysis.co
 Chinese only — see the Chinese page `nodes/prop.stereographic-circle.md` and `proofs/`.
 
 
-Cite: `prop.stereographic-circle` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.stereographic-circle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

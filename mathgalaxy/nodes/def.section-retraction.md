@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.1
 ## 说明
 两条等式方向相反：截面是「先 $g$ 再 $f$，回到 $Y$ 原地」，收缩是「先 $f$ 再 $g$，回到 $X$ 原地」。换句话说，截面是 $f$ 的右逆，收缩是 $f$ 的左逆 —— 名字不同是因为复合的写法与映射的写法反着来。
 
-引用：`def.section-retraction`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.section-retraction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

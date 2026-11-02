@@ -14,4 +14,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（change of ba
 
 > 说明见 `notes/prop.pi1-basepoint.md`
 
-引用：`prop.pi1-basepoint`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pi1-basepoint`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

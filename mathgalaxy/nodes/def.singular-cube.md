@@ -21,4 +21,4 @@ refs: Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 奇�
 
 > 说明见 `notes/def.singular-cube.md`
 
-引用：`def.singular-cube`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.singular-cube`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ Once $\mathcal{C}$ is embedded in $\widehat{\mathcal{C}}$, questions inside $\ma
 Wikipedia: https://en.wikipedia.org/wiki/Yoneda_embedding · nLab: https://ncatlab.org/nlab/show/Yoneda+embedding
 
 
-Cite: `prop.yoneda-embedding` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.yoneda-embedding` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

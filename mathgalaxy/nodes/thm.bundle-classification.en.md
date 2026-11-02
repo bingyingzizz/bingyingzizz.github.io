@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`
 Chinese only — see the Chinese page `nodes/thm.bundle-classification.md` and `proofs/`.
 
 
-Cite: `thm.bundle-classification` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bundle-classification` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

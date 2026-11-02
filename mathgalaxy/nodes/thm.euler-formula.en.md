@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Sequences of Functions, Power Series and Elementa
 Chinese only — see the Chinese page `nodes/thm.euler-formula.md` and `proofs/`.
 
 
-Cite: `thm.euler-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.euler-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

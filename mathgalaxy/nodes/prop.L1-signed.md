@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, §3.3
 
 > 说明见 `notes/prop.L1-signed.md`
 
-引用：`prop.L1-signed`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.L1-signed`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

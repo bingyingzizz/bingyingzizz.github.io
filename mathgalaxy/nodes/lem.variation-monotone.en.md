@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Bounded Variation and Absolute Continuity (`analysi
 Chinese only — see the Chinese page `nodes/lem.variation-monotone.md` and `proofs/`.
 
 
-Cite: `lem.variation-monotone` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.variation-monotone` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

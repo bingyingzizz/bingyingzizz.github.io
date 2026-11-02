@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological 
 Chinese only — see the Chinese page `nodes/thm.leray-spectral-sequence.md` and `proofs/`.
 
 
-Cite: `thm.leray-spectral-sequence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.leray-spectral-sequence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

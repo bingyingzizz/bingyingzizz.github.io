@@ -11,5 +11,5 @@ names: `Equicontinuity and Uniform Equicontinuity` (short) · `Equicontinuity Im
 Chinese only — see the Chinese page `nodes/thm.equicontinuous-uniform.md` and `proofs/`.
 
 
-Cite: `thm.equicontinuous-uniform` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.equicontinuous-uniform` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

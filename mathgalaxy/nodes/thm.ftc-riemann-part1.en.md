@@ -11,5 +11,5 @@ names: `FTC Part I` (short) · `Fundamental Theorem of Calculus, Part I` (full)
 Chinese only — see the Chinese page `nodes/thm.ftc-riemann-part1.md` and `proofs/`.
 
 
-Cite: `thm.ftc-riemann-part1` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ftc-riemann-part1` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

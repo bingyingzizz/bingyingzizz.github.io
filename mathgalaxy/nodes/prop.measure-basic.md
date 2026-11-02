@@ -15,4 +15,4 @@ refs: Halmos, Measure Theory, §9；Folland, Real Analysis, Prop. 1.3
 
 > 说明见 `notes/prop.measure-basic.md`
 
-引用：`prop.measure-basic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.measure-basic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

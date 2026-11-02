@@ -10,5 +10,5 @@ layer 28 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differ
 Chinese only — see the Chinese page `nodes/lem.gauss-lemma.md` and `proofs/`.
 
 
-Cite: `lem.gauss-lemma` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.gauss-lemma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

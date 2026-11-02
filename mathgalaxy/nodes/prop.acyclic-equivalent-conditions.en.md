@@ -11,5 +11,5 @@ names: `Acyclicity Conditions` (short) · `Equivalent Conditions for Acyclicity`
 Chinese only — see the Chinese page `nodes/prop.acyclic-equivalent-conditions.md` and `proofs/`.
 
 
-Cite: `prop.acyclic-equivalent-conditions` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.acyclic-equivalent-conditions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

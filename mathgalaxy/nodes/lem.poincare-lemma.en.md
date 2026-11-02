@@ -10,5 +10,5 @@ layer 23 · lemma · cluster Differential Forms, Integration and de Rham Cohomol
 Chinese only — see the Chinese page `nodes/lem.poincare-lemma.md` and `proofs/`.
 
 
-Cite: `lem.poincare-lemma` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.poincare-lemma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

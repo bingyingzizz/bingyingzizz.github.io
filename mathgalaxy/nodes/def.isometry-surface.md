@@ -19,4 +19,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面
 
 > 说明见 `notes/def.isometry-surface.md`
 
-引用：`def.isometry-surface`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isometry-surface`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

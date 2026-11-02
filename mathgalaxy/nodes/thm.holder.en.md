@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.holder.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality
 
 
-Cite: `thm.holder` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.holder` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

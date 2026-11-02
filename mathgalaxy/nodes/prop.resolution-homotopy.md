@@ -18,4 +18,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), 关于消解（r
 
 > 说明见 `notes/prop.resolution-homotopy.md`
 
-引用：`prop.resolution-homotopy`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.resolution-homotopy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

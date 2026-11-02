@@ -11,5 +11,5 @@ names: `Open Surjections` (short) · `Open Surjections Are Epimorphisms of Conde
 Chinese only — see the Chinese page `nodes/prop.cond-epi-open-surjective.md` and `proofs/`.
 
 
-Cite: `prop.cond-epi-open-surjective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-epi-open-surjective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

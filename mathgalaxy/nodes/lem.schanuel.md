@@ -23,4 +23,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), 合冲（syzygie
 
 > 说明见 `notes/lem.schanuel.md`
 
-引用：`lem.schanuel`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.schanuel`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

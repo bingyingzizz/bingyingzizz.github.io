@@ -10,5 +10,5 @@ This theorem is the technical core of the monotone class theorem: it is precisel
 Wikipedia: https://en.wikipedia.org/wiki/Sigma-ring
 
 
-Cite: `thm.ring-monotone-sigma` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ring-monotone-sigma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

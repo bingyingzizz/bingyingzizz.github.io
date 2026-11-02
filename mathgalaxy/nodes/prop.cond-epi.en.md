@@ -11,5 +11,5 @@ names: `Epimorphisms` (short) · `Epimorphisms of Condensed Sets` (full)
 Chinese only — see the Chinese page `nodes/prop.cond-epi.md` and `proofs/`.
 
 
-Cite: `prop.cond-epi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-epi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

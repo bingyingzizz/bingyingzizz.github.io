@@ -11,5 +11,5 @@ names: `Parallelogram Law` (short) · `Parallelogram Law and Inner Products` (fu
 Chinese only — see the Chinese page `nodes/thm.parallelogram-inner-product.md` and `proofs/`.
 
 
-Cite: `thm.parallelogram-inner-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.parallelogram-inner-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

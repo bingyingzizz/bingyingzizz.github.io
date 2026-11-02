@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Hadamard 分解定理；Ahlfors, Complex Ana
 
 > 说明见 `notes/thm.hadamard-factorization.md`
 
-引用：`thm.hadamard-factorization`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hadamard-factorization`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

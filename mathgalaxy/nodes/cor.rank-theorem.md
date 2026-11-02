@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Lang, Undergraduate An
 
 > 说明见 `notes/cor.rank-theorem.md`
 
-引用：`cor.rank-theorem`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.rank-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

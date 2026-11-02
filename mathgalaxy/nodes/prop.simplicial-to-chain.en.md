@@ -11,5 +11,5 @@ names: `Simplicial to Complex` (short) · `Alternating Sum of a Simplicial Objec
 Chinese only — see the Chinese page `nodes/prop.simplicial-to-chain.md` and `proofs/`.
 
 
-Cite: `prop.simplicial-to-chain` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.simplicial-to-chain` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

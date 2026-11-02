@@ -14,4 +14,4 @@ refs: Le Stum, Exercise 8.12
 
 > 说明见 `notes/ex.chaus-banach-rhom.md`
 
-引用：`ex.chaus-banach-rhom`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.chaus-banach-rhom`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 1.16
 
 > 说明见 `notes/def.lebesgue-stieltjes.md`
 
-引用：`def.lebesgue-stieltjes`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lebesgue-stieltjes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

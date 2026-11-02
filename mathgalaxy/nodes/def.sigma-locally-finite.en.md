@@ -11,5 +11,5 @@ names: `Sigma-Locally Finite` (short) · `Sigma-Locally Finite Family` (full)
 Chinese only — see the Chinese page `nodes/def.sigma-locally-finite.md` and `proofs/`.
 
 
-Cite: `def.sigma-locally-finite` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.sigma-locally-finite` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

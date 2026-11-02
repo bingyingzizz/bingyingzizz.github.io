@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · 
 Chinese only — see the Chinese page `nodes/thm.comparison-theorem.md` and `proofs/`.
 
 
-Cite: `thm.comparison-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.comparison-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

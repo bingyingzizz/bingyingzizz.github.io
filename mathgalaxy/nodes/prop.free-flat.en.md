@@ -11,5 +11,5 @@ names: `Free and Projective Are Flat` (short) · `Free and Projective Modules Ar
 Chinese only — see the Chinese page `nodes/prop.free-flat.md` and `proofs/`.
 
 
-Cite: `prop.free-flat` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-flat` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

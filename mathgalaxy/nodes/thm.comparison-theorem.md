@@ -19,4 +19,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), 关于消解（r
 
 > 说明见 `notes/thm.comparison-theorem.md`
 
-引用：`thm.comparison-theorem`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.comparison-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

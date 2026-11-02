@@ -22,4 +22,4 @@ refs: Le Stum, Theorem 6.2.5；Morris, Pontryagin Duality and the Structure of L
 
 > 说明见 `notes/thm.lc-structure.md`
 
-引用：`thm.lc-structure`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lc-structure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

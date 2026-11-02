@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Integration (`analysis.integral`) · Function
 Chinese only — see the Chinese page `nodes/prop.simple-integral-props.md` and `proofs/`.
 
 
-Cite: `prop.simple-integral-props` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.simple-integral-props` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

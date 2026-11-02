@@ -11,5 +11,5 @@ names: `Stone-Weierstrass (Complex)` (short) · `Stone-Weierstrass Theorem, Comp
 Chinese only — see the Chinese page `nodes/thm.stone-weierstrass-complex.md` and `proofs/`.
 
 
-Cite: `thm.stone-weierstrass-complex` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.stone-weierstrass-complex` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

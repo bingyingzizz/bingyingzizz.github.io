@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Matrices and Determinants (`algebra.matrix`) 
 Chinese only — see the Chinese page `nodes/prop.det-laplace.md` and `proofs/`.
 
 
-Cite: `prop.det-laplace` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.det-laplace` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

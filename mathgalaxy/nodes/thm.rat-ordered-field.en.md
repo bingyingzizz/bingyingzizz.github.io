@@ -10,5 +10,5 @@ layer 10 · theorem · cluster Constructing the Number Systems (`set.numbers`) �
 Chinese only — see the Chinese page `nodes/thm.rat-ordered-field.md` and `proofs/`.
 
 
-Cite: `thm.rat-ordered-field` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rat-ordered-field` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

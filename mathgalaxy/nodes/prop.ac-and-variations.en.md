@@ -10,5 +10,5 @@ layer 20 · proposition · cluster Signed Measures and Decompositions (`analysis
 Chinese only — see the Chinese page `nodes/prop.ac-and-variations.md` and `proofs/`.
 
 
-Cite: `prop.ac-and-variations` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ac-and-variations` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

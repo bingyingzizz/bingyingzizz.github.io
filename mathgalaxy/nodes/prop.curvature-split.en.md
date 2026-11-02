@@ -11,5 +11,5 @@ names: `Curvature Split` (short) · `Splitting of the Curvature of a Curve` (ful
 Chinese only — see the Chinese page `nodes/prop.curvature-split.md` and `proofs/`.
 
 
-Cite: `prop.curvature-split` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.curvature-split` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

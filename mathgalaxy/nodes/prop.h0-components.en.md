@@ -10,5 +10,5 @@ layer 20 · proposition · cluster Homology Groups (`topology.homology`) · Topo
 Chinese only — see the Chinese page `nodes/prop.h0-components.md` and `proofs/`.
 
 
-Cite: `prop.h0-components` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.h0-components` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

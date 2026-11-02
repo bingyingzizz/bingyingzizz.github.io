@@ -11,5 +11,5 @@ names: `B(E,F) Is Banach` (short) · `B(E,F) Is Complete When F Is` (full)
 Chinese only — see the Chinese page `nodes/thm.bounded-operators-banach.md` and `proofs/`.
 
 
-Cite: `thm.bounded-operators-banach` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bounded-operators-banach` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

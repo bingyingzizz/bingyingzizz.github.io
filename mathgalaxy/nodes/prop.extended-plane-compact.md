@@ -14,4 +14,4 @@ refs: 王晓光《复变函数》· 扩充复平面的拓扑；Ahlfors, Complex 
 
 > 说明见 `notes/prop.extended-plane-compact.md`
 
-引用：`prop.extended-plane-compact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.extended-plane-compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

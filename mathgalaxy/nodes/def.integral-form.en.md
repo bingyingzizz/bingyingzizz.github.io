@@ -11,5 +11,5 @@ names: `Integral of a Form` (short) · `Integral of a Differential Form` (full)
 Chinese only — see the Chinese page `nodes/def.integral-form.md` and `proofs/`.
 
 
-Cite: `def.integral-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.integral-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

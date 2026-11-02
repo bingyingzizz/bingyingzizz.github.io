@@ -10,5 +10,5 @@ layer 10 · proposition · cluster Algebraic Structures (`algebra.structures`) �
 Chinese only — see the Chinese page `nodes/prop.abelianization.md` and `proofs/`.
 
 
-Cite: `prop.abelianization` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.abelianization` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 19 · definition · cluster Complexes and Distinguished Triangles (`hom.co
 Chinese only — see the Chinese page `nodes/def.derived-category.md` and `proofs/`.
 
 
-Cite: `def.derived-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.derived-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

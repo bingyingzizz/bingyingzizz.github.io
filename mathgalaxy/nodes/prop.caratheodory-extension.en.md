@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Constructing Measures (`analysis.measure`) ·
 Chinese only — see the Chinese page `nodes/prop.caratheodory-extension.md` and `proofs/`.
 
 
-Cite: `prop.caratheodory-extension` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.caratheodory-extension` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

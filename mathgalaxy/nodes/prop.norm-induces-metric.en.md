@@ -11,5 +11,5 @@ names: `Norm-Induced Metric` (short) · `Metric Induced by a Norm` (full)
 Chinese only — see the Chinese page `nodes/prop.norm-induces-metric.md` and `proofs/`.
 
 
-Cite: `prop.norm-induces-metric` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.norm-induces-metric` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

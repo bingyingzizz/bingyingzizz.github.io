@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Injective Modules and Divisible Groups (`hom.inje
 Chinese only — see the Chinese page `nodes/thm.baer-criterion.md` and `proofs/`.
 
 
-Cite: `thm.baer-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.baer-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

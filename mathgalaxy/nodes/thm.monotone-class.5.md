@@ -3,5 +3,3 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.generated-sigma`](../nodes/def.generated-sigma.md) 生成的 σ-代数：用到了定义 生成的 σ-代数　[proofs/def-link.generated-monotone-lemma.md](../proofs/def-link.generated-monotone-lemma.md)
-
-> 续见 [nodes/thm.monotone-class.6.md](./thm.monotone-class.6.md)

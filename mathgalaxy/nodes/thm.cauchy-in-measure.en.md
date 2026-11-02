@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Measurable Functions and Convergence (`analysis.m
 Chinese only — see the Chinese page `nodes/thm.cauchy-in-measure.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-in-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-in-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

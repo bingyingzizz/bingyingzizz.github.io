@@ -19,4 +19,4 @@ refs: Knopp, Theory and Application of Infinite Series；Rudin, Principles of Ma
 
 > 说明见 `notes/thm.kummer.md`
 
-引用：`thm.kummer`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.kummer`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

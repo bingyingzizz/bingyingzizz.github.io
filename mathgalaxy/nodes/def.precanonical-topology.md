@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 ## 说明
 生成它的其实是两类覆盖：**有限不交并**（$\coprod_{i \in I} X_{i} \cong X$）与**满射** $(X_{i} \to X)$。名字里的「预」是因为它比标准拓扑**粗** —— 但仍然是次标准的。
 
-引用：`def.precanonical-topology`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.precanonical-topology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

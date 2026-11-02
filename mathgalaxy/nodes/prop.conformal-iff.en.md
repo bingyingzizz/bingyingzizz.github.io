@@ -11,5 +11,5 @@ names: `Conformality` (short) · `Nonvanishing Derivative and Conformality` (ful
 Chinese only — see the Chinese page `nodes/prop.conformal-iff.md` and `proofs/`.
 
 
-Cite: `prop.conformal-iff` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.conformal-iff` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

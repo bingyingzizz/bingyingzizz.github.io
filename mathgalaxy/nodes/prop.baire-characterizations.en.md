@@ -11,5 +11,5 @@ names: `Baire Space Characterizations` (short) · `Equivalent Characterizations 
 Chinese only — see the Chinese page `nodes/prop.baire-characterizations.md` and `proofs/`.
 
 
-Cite: `prop.baire-characterizations` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.baire-characterizations` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

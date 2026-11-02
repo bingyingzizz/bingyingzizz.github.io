@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 7.61
 
 > 说明见 `notes/prop.slice-shriek-projection.md`
 
-引用：`prop.slice-shriek-projection`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.slice-shriek-projection`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

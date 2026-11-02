@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Diff
 Chinese only — see the Chinese page `nodes/thm.stokes.md` and `proofs/`.
 
 
-Cite: `thm.stokes` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.stokes` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

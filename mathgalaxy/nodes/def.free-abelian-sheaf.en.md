@@ -10,5 +10,5 @@ layer 17 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological A
 Chinese only — see the Chinese page `nodes/def.free-abelian-sheaf.md` and `proofs/`.
 
 
-Cite: `def.free-abelian-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.free-abelian-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

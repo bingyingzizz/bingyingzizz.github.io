@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Diagrams and Limits (`cat.limit`) · Category
 Chinese only — see the Chinese page `nodes/prop.poset-limit-join.md` and `proofs/`.
 
 
-Cite: `prop.poset-limit-join` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.poset-limit-join` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

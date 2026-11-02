@@ -10,5 +10,5 @@ layer 9 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · 
 Chinese only — see the Chinese page `nodes/thm.steinitz.md` and `proofs/`.
 
 
-Cite: `thm.steinitz` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.steinitz` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

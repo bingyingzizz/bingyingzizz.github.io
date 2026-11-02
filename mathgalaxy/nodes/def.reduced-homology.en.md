@@ -10,5 +10,5 @@ layer 20 · definition · cluster Homology Groups (`topology.homology`) · Topol
 Chinese only — see the Chinese page `nodes/def.reduced-homology.md` and `proofs/`.
 
 
-Cite: `def.reduced-homology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.reduced-homology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

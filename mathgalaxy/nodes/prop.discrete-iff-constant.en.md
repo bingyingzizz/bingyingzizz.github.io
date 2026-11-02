@@ -11,5 +11,5 @@ names: `Discrete iff Constant` (short) · `Discrete, Constant and Quotients of C
 Chinese only — see the Chinese page `nodes/prop.discrete-iff-constant.md` and `proofs/`.
 
 
-Cite: `prop.discrete-iff-constant` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.discrete-iff-constant` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

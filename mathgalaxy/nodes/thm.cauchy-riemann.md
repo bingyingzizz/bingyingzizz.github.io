@@ -23,4 +23,4 @@ refs: 王晓光《复变函数》笔记，第 4 章 · 复偏导数与复可微�
 
 > 说明见 `notes/thm.cauchy-riemann.md`
 
-引用：`thm.cauchy-riemann`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-riemann`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

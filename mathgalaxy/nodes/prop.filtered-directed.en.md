@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Diagrams and Limits (`cat.limit`) · Category
 Chinese only — see the Chinese page `nodes/prop.filtered-directed.md` and `proofs/`.
 
 
-Cite: `prop.filtered-directed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.filtered-directed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 11 · definition · cluster Multilinear Algebra and Tensors (`algebra.mult
 Chinese only — see the Chinese page `nodes/def.tensor-product-vs.md` and `proofs/`.
 
 
-Cite: `def.tensor-product-vs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.tensor-product-vs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

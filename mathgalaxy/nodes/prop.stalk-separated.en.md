@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Categ
 Chinese only — see the Chinese page `nodes/prop.stalk-separated.md` and `proofs/`.
 
 
-Cite: `prop.stalk-separated` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.stalk-separated` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

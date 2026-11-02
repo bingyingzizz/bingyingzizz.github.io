@@ -19,4 +19,4 @@ refs: Le Stum, Definition 7.2.17
 
 > 说明见 `notes/def.bicomplex.md`
 
-引用：`def.bicomplex`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.bicomplex`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Tensor Products and Scalar Restriction (`hom.
 Chinese only — see the Chinese page `nodes/prop.scalar-extension-adjunction.md` and `proofs/`.
 
 
-Cite: `prop.scalar-extension-adjunction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.scalar-extension-adjunction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

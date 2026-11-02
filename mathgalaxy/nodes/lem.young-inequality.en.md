@@ -10,5 +10,5 @@ layer 16 · lemma · cluster L^p Spaces (`analysis.lp`) · Functions of a Real V
 Chinese only — see the Chinese page `nodes/lem.young-inequality.md` and `proofs/`.
 
 
-Cite: `lem.young-inequality` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.young-inequality` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

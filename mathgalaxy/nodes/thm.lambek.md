@@ -17,4 +17,4 @@ refs: Lambek, Lectures on Rings and Modules (1966), criterion for flatness via f
 
 > 说明见 `notes/thm.lambek.md`
 
-引用：`thm.lambek`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lambek`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

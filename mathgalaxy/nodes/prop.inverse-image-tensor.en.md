@@ -11,5 +11,5 @@ names: `Inverse Image and Tensor` (short) · `Inverse Image Is Compatible with H
 Chinese only — see the Chinese page `nodes/prop.inverse-image-tensor.md` and `proofs/`.
 
 
-Cite: `prop.inverse-image-tensor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.inverse-image-tensor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

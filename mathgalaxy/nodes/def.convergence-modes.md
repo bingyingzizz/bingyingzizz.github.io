@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, §2.4
 
 > 说明见 `notes/def.convergence-modes.md`
 
-引用：`def.convergence-modes`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.convergence-modes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Finite Products` (short) · `The Underlying Space Preserves Finite Produ
 Chinese only — see the Chinese page `nodes/cor.cond-ktop-finite-products.md` and `proofs/`.
 
 
-Cite: `cor.cond-ktop-finite-products` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.cond-ktop-finite-products` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

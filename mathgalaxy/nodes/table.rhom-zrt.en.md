@@ -11,5 +11,5 @@ names: `RHom Table` (short) · `Table of Derived Hom for Z, R and T` (full)
 Chinese only — see the Chinese page `nodes/table.rhom-zrt.md` and `proofs/`.
 
 
-Cite: `table.rhom-zrt` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `table.rhom-zrt` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

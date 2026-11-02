@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Arithmetic Functions and Distribution of Primes (
 Chinese only — see the Chinese page `nodes/thm.mu-sum.md` and `proofs/`.
 
 
-Cite: `thm.mu-sum` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mu-sum` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

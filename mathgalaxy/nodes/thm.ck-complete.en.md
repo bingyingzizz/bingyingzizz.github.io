@@ -11,5 +11,5 @@ names: `C(K,E) Is Complete` (short) · `C(K,E) Is Complete When E Is` (full)
 Chinese only — see the Chinese page `nodes/thm.ck-complete.md` and `proofs/`.
 
 
-Cite: `thm.ck-complete` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ck-complete` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

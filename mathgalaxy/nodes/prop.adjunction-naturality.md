@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.55
 ## 说明
 **证明。** 代 $\Phi(f) = G(f) \circ \eta_{X}$ 与 $\Phi^{-1}(h) = \varepsilon_{X'} \circ F(h)$ ✓，两边都用单位与余单位的自然性即得那条等式 ✓。∎
 
-引用：`prop.adjunction-naturality`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.adjunction-naturality`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -14,4 +14,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有界算子
 
 > 说明见 `notes/thm.bounded-extension.md`
 
-引用：`thm.bounded-extension`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bounded-extension`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

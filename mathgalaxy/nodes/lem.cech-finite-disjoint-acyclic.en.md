@@ -11,5 +11,5 @@ names: `Finite Disjoint Covers` (short) · `Čech Acyclicity for Finite Disjoint
 Chinese only — see the Chinese page `nodes/lem.cech-finite-disjoint-acyclic.md` and `proofs/`.
 
 
-Cite: `lem.cech-finite-disjoint-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.cech-finite-disjoint-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

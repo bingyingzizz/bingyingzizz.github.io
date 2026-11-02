@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Conden
 Chinese only — see the Chinese page `nodes/prop.solid-hypercover.md` and `proofs/`.
 
 
-Cite: `prop.solid-hypercover` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.solid-hypercover` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

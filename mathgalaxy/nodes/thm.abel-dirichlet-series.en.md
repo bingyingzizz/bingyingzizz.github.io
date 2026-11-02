@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Convergence Tests for Series (`analysis.series`) 
 Chinese only — see the Chinese page `nodes/thm.abel-dirichlet-series.md` and `proofs/`.
 
 
-Cite: `thm.abel-dirichlet-series` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.abel-dirichlet-series` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

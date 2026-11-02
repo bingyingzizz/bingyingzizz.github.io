@@ -10,5 +10,5 @@ layer 15 · definition · cluster Additive and Abelian Categories (`hom.ab`) · 
 Chinese only — see the Chinese page `nodes/def.enough-projectives.md` and `proofs/`.
 
 
-Cite: `def.enough-projectives` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.enough-projectives` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

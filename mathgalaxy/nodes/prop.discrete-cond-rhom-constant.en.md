@@ -11,5 +11,5 @@ names: `Discrete RHom Is Constant` (short) · `Derived Hom and Tensor of Discret
 Chinese only — see the Chinese page `nodes/prop.discrete-cond-rhom-constant.md` and `proofs/`.
 
 
-Cite: `prop.discrete-cond-rhom-constant` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.discrete-cond-rhom-constant` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

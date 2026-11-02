@@ -11,5 +11,5 @@ names: `Image and Cokernel` (short) · `The Image Is the Kernel of the Cokernel`
 Chinese only — see the Chinese page `nodes/prop.image-kernel-cokernel.md` and `proofs/`.
 
 
-Cite: `prop.image-kernel-cokernel` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.image-kernel-cokernel` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

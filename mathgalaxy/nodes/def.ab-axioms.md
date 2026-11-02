@@ -24,4 +24,4 @@ refs: Le Stum, Definition 5.2.5
 
 > 说明见 `notes/def.ab-axioms.md`
 
-引用：`def.ab-axioms`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ab-axioms`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

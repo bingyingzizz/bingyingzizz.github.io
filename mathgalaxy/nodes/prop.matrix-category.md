@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.19
 ## 说明
 **证明。** 矩阵乘法满足结合律与单位律 ✓；取一组基给出到有限维空间的函子，它是全忠实且本质满的 ✓，但没有同构 —— 左边是小范畴、右边是大范畴 ✓。∎
 
-引用：`prop.matrix-category`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.matrix-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

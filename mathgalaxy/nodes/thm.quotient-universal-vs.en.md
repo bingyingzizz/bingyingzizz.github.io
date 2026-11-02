@@ -10,5 +10,5 @@ layer 7 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstrac
 Chinese only — see the Chinese page `nodes/thm.quotient-universal-vs.md` and `proofs/`.
 
 
-Cite: `thm.quotient-universal-vs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.quotient-universal-vs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

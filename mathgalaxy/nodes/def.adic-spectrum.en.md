@@ -10,5 +10,5 @@ layer 9 · definition · cluster Adic Spaces (`analytic.adic`) · Analytic Space
 Chinese only — see the Chinese page `nodes/def.adic-spectrum.md` and `proofs/`.
 
 
-Cite: `def.adic-spectrum` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.adic-spectrum` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

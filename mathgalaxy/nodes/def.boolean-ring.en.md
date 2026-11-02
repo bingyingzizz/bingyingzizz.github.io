@@ -10,5 +10,5 @@ layer 8 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topo
 Chinese only — see the Chinese page `nodes/def.boolean-ring.md` and `proofs/`.
 
 
-Cite: `def.boolean-ring` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.boolean-ring` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

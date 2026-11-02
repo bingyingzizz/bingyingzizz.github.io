@@ -11,5 +11,5 @@ names: `CGWH Is Closed` (short) · `Open, Closed Subspaces and Filtered Colimits
 Chinese only — see the Chinese page `nodes/prop.cgwh-closed.md` and `proofs/`.
 
 
-Cite: `prop.cgwh-closed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cgwh-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

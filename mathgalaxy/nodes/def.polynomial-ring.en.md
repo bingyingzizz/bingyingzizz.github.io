@@ -10,5 +10,5 @@ layer 9 · definition · cluster Polynomials and Factorization (`algebra.polynom
 Chinese only — see the Chinese page `nodes/def.polynomial-ring.md` and `proofs/`.
 
 
-Cite: `def.polynomial-ring` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.polynomial-ring` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

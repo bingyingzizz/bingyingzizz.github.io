@@ -14,4 +14,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有限维；Riesz 1918
 
 > 说明见 `notes/thm.riesz-ball-compact.md`
 
-引用：`thm.riesz-ball-compact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riesz-ball-compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

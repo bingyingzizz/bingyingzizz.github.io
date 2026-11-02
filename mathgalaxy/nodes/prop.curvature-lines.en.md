@@ -10,5 +10,5 @@ layer 28 · proposition · cluster Theory of Surfaces (`diffgeom.surface`) · Di
 Chinese only — see the Chinese page `nodes/prop.curvature-lines.md` and `proofs/`.
 
 
-Cite: `prop.curvature-lines` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.curvature-lines` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

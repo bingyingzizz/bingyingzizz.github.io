@@ -11,5 +11,5 @@ names: `Implicit Function (Banach)` (short) · `Implicit Function Theorem in Ban
 Chinese only — see the Chinese page `nodes/thm.implicit-function-banach.md` and `proofs/`.
 
 
-Cite: `thm.implicit-function-banach` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.implicit-function-banach` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

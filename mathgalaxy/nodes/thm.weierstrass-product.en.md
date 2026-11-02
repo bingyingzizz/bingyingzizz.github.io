@@ -10,5 +10,5 @@ layer 24 · theorem · cluster Analytic Continuation and Entire Functions (`anal
 Chinese only — see the Chinese page `nodes/thm.weierstrass-product.md` and `proofs/`.
 
 
-Cite: `thm.weierstrass-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.weierstrass-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

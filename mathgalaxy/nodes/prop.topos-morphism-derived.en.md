@@ -11,5 +11,5 @@ names: `Derived Functors of a Morphism` (short) · `Derived Functors of a Topos 
 Chinese only — see the Chinese page `nodes/prop.topos-morphism-derived.md` and `proofs/`.
 
 
-Cite: `prop.topos-morphism-derived` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.topos-morphism-derived` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

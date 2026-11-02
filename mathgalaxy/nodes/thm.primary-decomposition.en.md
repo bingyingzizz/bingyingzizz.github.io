@@ -10,5 +10,5 @@ layer 15 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) 
 Chinese only — see the Chinese page `nodes/thm.primary-decomposition.md` and `proofs/`.
 
 
-Cite: `thm.primary-decomposition` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.primary-decomposition` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

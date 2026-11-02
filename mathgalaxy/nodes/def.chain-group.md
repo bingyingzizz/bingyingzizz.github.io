@@ -23,4 +23,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Chains and the chain gro
 
 > 说明见 `notes/def.chain-group.md`
 
-引用：`def.chain-group`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chain-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,7 +10,7 @@ layer 14 · 定理 · 数系的构造 · 集合论+数学分析
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.real-uncountable.5.md](./thm.real-uncountable.5.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
 > English abstract 续见 [nodes/thm.real-uncountable.3.md](./thm.real-uncountable.3.md)
 
 refs: Tao, Analysis I, Ch. 8（可数性）；Rudin, Principles of Mathematical Analysis, Ch. 2
@@ -19,4 +19,4 @@ refs: Tao, Analysis I, Ch. 8（可数性）；Rudin, Principles of Mathematical 
 
 > 说明见 `notes/thm.real-uncountable.md`
 
-引用：`thm.real-uncountable`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.real-uncountable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

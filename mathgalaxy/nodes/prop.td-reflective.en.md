@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Stone and Stonean Spaces (`topo.stone`) · To
 Chinese only — see the Chinese page `nodes/prop.td-reflective.md` and `proofs/`.
 
 
-Cite: `prop.td-reflective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.td-reflective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

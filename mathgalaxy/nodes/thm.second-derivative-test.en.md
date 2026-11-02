@@ -10,5 +10,5 @@ layer 24 · theorem · cluster Multivariable Differentiation (`analysis.multivar
 Chinese only — see the Chinese page `nodes/thm.second-derivative-test.md` and `proofs/`.
 
 
-Cite: `thm.second-derivative-test` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.second-derivative-test` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

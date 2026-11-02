@@ -19,4 +19,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 5（正合偶给�
 
 > 说明见 `notes/thm.exact-couple-spectral.md`
 
-引用：`thm.exact-couple-spectral`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.exact-couple-spectral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

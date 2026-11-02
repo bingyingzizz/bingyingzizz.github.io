@@ -10,5 +10,5 @@ layer 21 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`
 Chinese only — see the Chinese page `nodes/thm.coherent-duality.md` and `proofs/`.
 
 
-Cite: `thm.coherent-duality` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.coherent-duality` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

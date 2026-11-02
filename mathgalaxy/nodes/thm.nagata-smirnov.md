@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Section 40；Nagata (1950) 与 Smirnov (1951)
 
 > 说明见 `notes/thm.nagata-smirnov.md`
 
-引用：`thm.nagata-smirnov`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.nagata-smirnov`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

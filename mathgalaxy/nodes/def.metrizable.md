@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Sections 20 and 40
 
 > 说明见 `notes/def.metrizable.md`
 
-引用：`def.metrizable`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.metrizable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

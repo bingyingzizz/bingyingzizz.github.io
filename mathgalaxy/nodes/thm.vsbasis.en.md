@@ -10,5 +10,5 @@ layer 10 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) ·
 Chinese only — see the Chinese page `nodes/thm.vsbasis.md` and `proofs/`.
 
 
-Cite: `thm.vsbasis` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.vsbasis` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

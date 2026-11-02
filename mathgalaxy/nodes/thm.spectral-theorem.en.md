@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.
 Chinese only — see the Chinese page `nodes/thm.spectral-theorem.md` and `proofs/`.
 
 
-Cite: `thm.spectral-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.spectral-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

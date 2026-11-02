@@ -17,4 +17,4 @@ refs: Munkres, Elements of Algebraic Topology · Mayer–Vietoris 序列（本�
 
 > 说明见 `notes/thm.mv-homology.md`
 
-引用：`thm.mv-homology`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mv-homology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

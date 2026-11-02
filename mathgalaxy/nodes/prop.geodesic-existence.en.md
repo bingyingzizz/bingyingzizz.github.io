@@ -11,5 +11,5 @@ names: `Geodesic Existence` (short) · `Local Existence and Uniqueness of Geodes
 Chinese only — see the Chinese page `nodes/prop.geodesic-existence.md` and `proofs/`.
 
 
-Cite: `prop.geodesic-existence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.geodesic-existence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

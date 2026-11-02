@@ -11,5 +11,5 @@ names: `Immersion and Submersion` (short) · `Immersion, Submersion and Embeddin
 Chinese only — see the Chinese page `nodes/def.submersion-immersion.md` and `proofs/`.
 
 
-Cite: `def.submersion-immersion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.submersion-immersion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

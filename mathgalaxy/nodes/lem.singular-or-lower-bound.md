@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Lemma 3.8
 
 > 说明见 `notes/lem.singular-or-lower-bound.md`
 
-引用：`lem.singular-or-lower-bound`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.singular-or-lower-bound`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

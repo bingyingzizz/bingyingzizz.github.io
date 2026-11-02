@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实
 
 > 说明见 `notes/def.boundary.md`
 
-引用：`def.boundary`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.boundary`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

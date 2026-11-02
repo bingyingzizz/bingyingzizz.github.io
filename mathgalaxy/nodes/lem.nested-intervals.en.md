@@ -10,5 +10,5 @@ layer 15 · lemma · cluster Equivalent Forms of Completeness of the Reals (`ana
 Chinese only — see the Chinese page `nodes/lem.nested-intervals.md` and `proofs/`.
 
 
-Cite: `lem.nested-intervals` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.nested-intervals` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -16,4 +16,4 @@ refs: Le Stum, Proposition 8.1.4
 
 > 说明见 `notes/thm.dyckhoff.md`
 
-引用：`thm.dyckhoff`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.dyckhoff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

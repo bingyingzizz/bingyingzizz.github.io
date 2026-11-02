@@ -10,5 +10,5 @@ layer 20 · definition · cluster Differentiation Theorems (`analysis.differenti
 Chinese only — see the Chinese page `nodes/def.locally-integrable.md` and `proofs/`.
 
 
-Cite: `def.locally-integrable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.locally-integrable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

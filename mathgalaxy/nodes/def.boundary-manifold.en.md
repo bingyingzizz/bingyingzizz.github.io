@@ -10,5 +10,5 @@ layer 9 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifol
 Chinese only — see the Chinese page `nodes/def.boundary-manifold.md` and `proofs/`.
 
 
-Cite: `def.boundary-manifold` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.boundary-manifold` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

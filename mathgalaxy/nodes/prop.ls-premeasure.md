@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, Theorem 1.16
 
 > 说明见 `notes/prop.ls-premeasure.md`
 
-引用：`prop.ls-premeasure`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ls-premeasure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

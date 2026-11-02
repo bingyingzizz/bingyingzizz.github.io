@@ -14,4 +14,4 @@ refs: Le Stum, Lemma 8.2.2
 
 > 说明见 `notes/lem.k-bounded-completion.md`
 
-引用：`lem.k-bounded-completion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.k-bounded-completion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

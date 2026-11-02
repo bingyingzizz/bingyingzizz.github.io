@@ -21,4 +21,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Simplicial Complexes；H
 
 > 说明见 `notes/def.simplicial-complex.md`
 
-引用：`def.simplicial-complex`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simplicial-complex`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

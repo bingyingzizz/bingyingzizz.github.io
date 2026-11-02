@@ -10,5 +10,5 @@ layer 13 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Catego
 Chinese only — see the Chinese page `nodes/def.finitely-presented.md` and `proofs/`.
 
 
-Cite: `def.finitely-presented` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.finitely-presented` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

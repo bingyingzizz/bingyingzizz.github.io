@@ -11,5 +11,5 @@ names: `Cohomology Exact Sequences` (short) · `Short Exact Sequences Computing 
 Chinese only — see the Chinese page `nodes/prop.cohomology-short-exact.md` and `proofs/`.
 
 
-Cite: `prop.cohomology-short-exact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cohomology-short-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

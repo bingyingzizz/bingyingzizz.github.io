@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Brouwer 不动点定理的复分析证明（
 
 > 说明见 `notes/thm.brouwer-fixed-point.md`
 
-引用：`thm.brouwer-fixed-point`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.brouwer-fixed-point`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

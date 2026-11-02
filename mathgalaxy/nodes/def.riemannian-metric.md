@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「黎曼度量」· 
 
 > 说明见 `notes/def.riemannian-metric.md`
 
-引用：`def.riemannian-metric`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.riemannian-metric`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

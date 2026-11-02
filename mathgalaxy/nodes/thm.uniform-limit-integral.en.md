@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Sequences of Functions, Power Series and Elementa
 Chinese only — see the Chinese page `nodes/thm.uniform-limit-integral.md` and `proofs/`.
 
 
-Cite: `thm.uniform-limit-integral` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.uniform-limit-integral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

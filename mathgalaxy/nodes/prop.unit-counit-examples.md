@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.61
 ## 说明
 **证明。** 逐例用 $\eta_{X} = \Phi(1_{FX})$、$\varepsilon_{Y} = \Phi^{-1}(1_{GY})$ 算即可 ✓。∎
 
-引用：`prop.unit-counit-examples`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.unit-counit-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

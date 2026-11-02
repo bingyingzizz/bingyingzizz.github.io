@@ -10,5 +10,5 @@ layer 25 · theorem · cluster Topological Applications of Complex Analysis (`an
 Chinese only — see the Chinese page `nodes/thm.ham-sandwich.md` and `proofs/`.
 
 
-Cite: `thm.ham-sandwich` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ham-sandwich` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

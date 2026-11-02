@@ -10,5 +10,5 @@ Corollary: **any limit of compact Hausdorff spaces is again compact Hausdorff**.
 Wikipedia: https://en.wikipedia.org/wiki/Stone%E2%80%93%C4%8Cech_compactification · nLab: https://ncatlab.org/nlab/show/Stone-Cech+compactification
 
 
-Cite: `prop.chaus-reflective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.chaus-reflective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

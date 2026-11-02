@@ -11,5 +11,5 @@ names: `Flat Not Projective` (short) · `Flat but Not Projective` (full)
 Chinese only — see the Chinese page `nodes/ex.flat-not-projective.md` and `proofs/`.
 
 
-Cite: `ex.flat-not-projective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.flat-not-projective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

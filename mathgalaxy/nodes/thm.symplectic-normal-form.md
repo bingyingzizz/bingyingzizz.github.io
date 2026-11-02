@@ -19,4 +19,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/thm.symplectic-normal-form.md`
 
-引用：`thm.symplectic-normal-form`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.symplectic-normal-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

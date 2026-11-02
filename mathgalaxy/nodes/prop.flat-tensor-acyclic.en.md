@@ -11,5 +11,5 @@ names: `Flat Tensors` (short) · `Flat Tensors Preserve Acyclicity` (full)
 Chinese only — see the Chinese page `nodes/prop.flat-tensor-acyclic.md` and `proofs/`.
 
 
-Cite: `prop.flat-tensor-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.flat-tensor-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

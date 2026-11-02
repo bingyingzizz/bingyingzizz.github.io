@@ -10,5 +10,5 @@ layer 16 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Top
 Chinese only — see the Chinese page `nodes/def.free-presentation.md` and `proofs/`.
 
 
-Cite: `def.free-presentation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.free-presentation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

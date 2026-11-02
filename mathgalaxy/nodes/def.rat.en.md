@@ -10,5 +10,5 @@ layer 9 · definition · cluster Constructing the Number Systems (`set.numbers`)
 Chinese only — see the Chinese page `nodes/def.rat.md` and `proofs/`.
 
 
-Cite: `def.rat` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.rat` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

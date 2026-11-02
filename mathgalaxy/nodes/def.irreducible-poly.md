@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
 
 > 说明见 `notes/def.irreducible-poly.md`
 
-引用：`def.irreducible-poly`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.irreducible-poly`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -19,4 +19,4 @@ refs: Engelking, General Topology（⚠️ 章节未核实，只记书名）· �
 
 > 说明见 `notes/def.compactification.md`
 
-引用：`def.compactification`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.compactification`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

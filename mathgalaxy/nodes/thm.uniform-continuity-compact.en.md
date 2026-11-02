@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Continuity and Compactness (`analysis.continuity`
 Chinese only — see the Chinese page `nodes/thm.uniform-continuity-compact.md` and `proofs/`.
 
 
-Cite: `thm.uniform-continuity-compact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.uniform-continuity-compact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

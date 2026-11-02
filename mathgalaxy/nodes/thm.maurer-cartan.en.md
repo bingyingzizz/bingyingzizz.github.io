@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Lie Groups (`diffgeom.lieg`) · Differential Geom
 Chinese only — see the Chinese page `nodes/thm.maurer-cartan.md` and `proofs/`.
 
 
-Cite: `thm.maurer-cartan` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.maurer-cartan` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

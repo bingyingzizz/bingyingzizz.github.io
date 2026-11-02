@@ -10,5 +10,5 @@ layer 19 · proposition · cluster Topological Abelian Groups (`cond.topo`) · C
 Chinese only — see the Chinese page `nodes/prop.chaus-two-term-resolution.md` and `proofs/`.
 
 
-Cite: `prop.chaus-two-term-resolution` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.chaus-two-term-resolution` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

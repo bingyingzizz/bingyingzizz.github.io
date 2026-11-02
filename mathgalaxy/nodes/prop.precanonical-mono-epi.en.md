@@ -11,5 +11,5 @@ names: `Precanonical Mono and Epi` (short) · `Monomorphisms and Epimorphisms un
 Chinese only — see the Chinese page `nodes/prop.precanonical-mono-epi.md` and `proofs/`.
 
 
-Cite: `prop.precanonical-mono-epi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.precanonical-mono-epi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

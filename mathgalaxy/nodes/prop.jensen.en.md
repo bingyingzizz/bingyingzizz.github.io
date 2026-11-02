@@ -10,5 +10,5 @@ layer 23 · proposition · cluster Analytic Continuation and Entire Functions (`
 Chinese only — see the Chinese page `nodes/prop.jensen.md` and `proofs/`.
 
 
-Cite: `prop.jensen` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.jensen` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

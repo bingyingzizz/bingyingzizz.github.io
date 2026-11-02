@@ -10,5 +10,5 @@ layer 14 · proposition · cluster The Fundamental Group (`topology.fg`) · Topo
 Chinese only — see the Chinese page `nodes/prop.induced-homomorphism.md` and `proofs/`.
 
 
-Cite: `prop.induced-homomorphism` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.induced-homomorphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

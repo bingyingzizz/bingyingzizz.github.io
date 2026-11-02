@@ -28,4 +28,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
 
 > 说明见 `notes/thm.det-exists-unique.md`
 
-引用：`thm.det-exists-unique`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.det-exists-unique`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

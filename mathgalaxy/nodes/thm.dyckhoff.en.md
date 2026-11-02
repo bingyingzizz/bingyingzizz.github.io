@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Computing Derived Hom (`cond.compute`) · Condens
 Chinese only — see the Chinese page `nodes/thm.dyckhoff.md` and `proofs/`.
 
 
-Cite: `thm.dyckhoff` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.dyckhoff` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

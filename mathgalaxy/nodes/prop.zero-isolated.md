@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· 解析函数的零点及其孤立性；Ahlfo
 
 > 说明见 `notes/prop.zero-isolated.md`
 
-引用：`prop.zero-isolated`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.zero-isolated`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

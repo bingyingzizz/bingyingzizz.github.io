@@ -22,4 +22,4 @@ refs: Kunen, Set Theory, I.6
 ## 说明
 替换公理模式是 $Z$ 与 ZF 的分水岭。由它（加上任取一个集合 $A$）可以推出分离公理模式。
 
-引用：`ax.repl`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.repl`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

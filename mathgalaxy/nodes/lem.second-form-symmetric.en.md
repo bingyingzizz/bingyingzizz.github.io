@@ -11,5 +11,5 @@ names: `Second Form Symmetry` (short) · `Symmetry of the Second Fundamental For
 Chinese only — see the Chinese page `nodes/lem.second-form-symmetric.md` and `proofs/`.
 
 
-Cite: `lem.second-form-symmetric` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.second-form-symmetric` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

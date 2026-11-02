@@ -21,4 +21,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.isometry.md`
 
-引用：`def.isometry`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isometry`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

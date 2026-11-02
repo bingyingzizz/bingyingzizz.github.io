@@ -11,5 +11,5 @@ names: `Filtered Colimits` (short) · `K-Bounded Exactness Is Stable under Filte
 Chinese only — see the Chinese page `nodes/prop.k-bounded-exact-filtered-colimit.md` and `proofs/`.
 
 
-Cite: `prop.k-bounded-exact-filtered-colimit` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.k-bounded-exact-filtered-colimit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

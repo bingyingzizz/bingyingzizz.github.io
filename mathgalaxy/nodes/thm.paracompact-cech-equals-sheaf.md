@@ -14,4 +14,4 @@ refs: Godement, Topologie algébrique et théorie des faisceaux —— 仿紧空
 
 > 说明见 `notes/thm.paracompact-cech-equals-sheaf.md`
 
-引用：`thm.paracompact-cech-equals-sheaf`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.paracompact-cech-equals-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

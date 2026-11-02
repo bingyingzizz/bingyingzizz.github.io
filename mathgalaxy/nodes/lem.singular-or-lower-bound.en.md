@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Signed Measures and Decompositions (`analysis.signe
 Chinese only — see the Chinese page `nodes/lem.singular-or-lower-bound.md` and `proofs/`.
 
 
-Cite: `lem.singular-or-lower-bound` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.singular-or-lower-bound` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

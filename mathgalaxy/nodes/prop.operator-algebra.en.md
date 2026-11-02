@@ -11,5 +11,5 @@ names: `Operator Product Inequality` (short) · `Norm Inequality for Operator Pr
 Chinese only — see the Chinese page `nodes/prop.operator-algebra.md` and `proofs/`.
 
 
-Cite: `prop.operator-algebra` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.operator-algebra` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

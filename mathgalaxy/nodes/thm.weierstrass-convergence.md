@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Weierstrass 收敛性定理；Ahlfors, Compl
 
 > 说明见 `notes/thm.weierstrass-convergence.md`
 
-引用：`thm.weierstrass-convergence`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.weierstrass-convergence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

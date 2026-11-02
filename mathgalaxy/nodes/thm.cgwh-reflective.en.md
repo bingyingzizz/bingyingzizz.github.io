@@ -11,5 +11,5 @@ names: `CGWH Is Reflective` (short) · `CGWH Is a Reflective Subcategory of CG` 
 Chinese only — see the Chinese page `nodes/thm.cgwh-reflective.md` and `proofs/`.
 
 
-Cite: `thm.cgwh-reflective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cgwh-reflective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

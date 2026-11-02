@@ -10,5 +10,5 @@ layer 12 · theorem · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 Chinese only — see the Chinese page `nodes/thm.adic-structure-sheaf.md` and `proofs/`.
 
 
-Cite: `thm.adic-structure-sheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.adic-structure-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -14,4 +14,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Chapter 2, tenso
 
 > 说明见 `notes/prop.scalar-extension-coproduct.md`
 
-引用：`prop.scalar-extension-coproduct`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.scalar-extension-coproduct`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

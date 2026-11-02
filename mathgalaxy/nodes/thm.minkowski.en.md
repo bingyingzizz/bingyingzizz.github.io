@@ -10,5 +10,5 @@ layer 20 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real
 Chinese only — see the Chinese page `nodes/thm.minkowski.md` and `proofs/`.
 
 
-Cite: `thm.minkowski` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.minkowski` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

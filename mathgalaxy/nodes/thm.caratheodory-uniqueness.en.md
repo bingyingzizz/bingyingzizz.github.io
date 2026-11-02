@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Constructing Measures (`analysis.measure`) · Fun
 Chinese only — see the Chinese page `nodes/thm.caratheodory-uniqueness.md` and `proofs/`.
 
 
-Cite: `thm.caratheodory-uniqueness` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.caratheodory-uniqueness` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

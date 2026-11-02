@@ -10,5 +10,5 @@ layer 23 · proposition · cluster Coherent Duality (`analytic.dual`) · Analyti
 Chinese only — see the Chinese page `nodes/prop.regular-immersion-dualizing.md` and `proofs/`.
 
 
-Cite: `prop.regular-immersion-dualizing` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.regular-immersion-dualizing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

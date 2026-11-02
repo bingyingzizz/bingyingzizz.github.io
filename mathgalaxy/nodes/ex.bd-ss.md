@@ -21,4 +21,4 @@ refs: Le Stum, Exercise 8.14
 
 > 说明见 `notes/ex.bd-ss.md`
 
-引用：`ex.bd-ss`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.bd-ss`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

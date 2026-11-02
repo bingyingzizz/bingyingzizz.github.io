@@ -23,4 +23,4 @@ refs: Halmos, Measure Theory, §6；Folland, Real Analysis, §1.2
 
 > 说明见 `notes/def.generated-sigma.md`
 
-引用：`def.generated-sigma`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.generated-sigma`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Mean Value Theorem` (short) · `Mean Value Theorem in Several Variables`
 Chinese only — see the Chinese page `nodes/thm.mean-value-multi.md` and `proofs/`.
 
 
-Cite: `thm.mean-value-multi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mean-value-multi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

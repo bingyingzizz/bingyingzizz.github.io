@@ -10,5 +10,5 @@ layer 10 · theorem · cluster Group Actions and Permutations (`algebra.group-ac
 Chinese only — see the Chinese page `nodes/thm.orbit-stabilizer.md` and `proofs/`.
 
 
-Cite: `thm.orbit-stabilizer` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.orbit-stabilizer` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· 曲线绕数的积分表示；Ahlfors, Compl
 
 > 说明见 `notes/prop.winding-integral.md`
 
-引用：`prop.winding-integral`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.winding-integral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

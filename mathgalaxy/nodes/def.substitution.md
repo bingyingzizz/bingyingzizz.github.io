@@ -21,4 +21,4 @@ refs: Enderton, A Mathematical Introduction to Logic, §2.4
 
 > 说明见 `notes/def.substitution.md`
 
-引用：`def.substitution`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.substitution`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

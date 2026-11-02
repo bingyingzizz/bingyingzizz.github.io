@@ -25,4 +25,4 @@ refs: Folland, Real Analysis, Theorem 2.24
 
 > 说明见 `notes/thm.dct.md`
 
-引用：`thm.dct`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.dct`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》笔记，第 21 章 · 孤立奇点的分类；
 
 > 说明见 `notes/def.isolated-singularity.md`
 
-引用：`def.isolated-singularity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isolated-singularity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Witt Cancellation` (short) · `Witt Cancellation Theorem` (full)
 Chinese only — see the Chinese page `nodes/thm.witt-cancellation.md` and `proofs/`.
 
 
-Cite: `thm.witt-cancellation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.witt-cancellation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

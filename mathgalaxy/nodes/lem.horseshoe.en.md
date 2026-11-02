@@ -10,5 +10,5 @@ layer 19 · lemma · cluster Resolutions and Dimensions (`hom.resolution`) · Ho
 Chinese only — see the Chinese page `nodes/lem.horseshoe.md` and `proofs/`.
 
 
-Cite: `lem.horseshoe` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.horseshoe` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

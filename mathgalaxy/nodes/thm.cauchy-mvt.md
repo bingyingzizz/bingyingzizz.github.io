@@ -20,4 +20,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5
 
 > 说明见 `notes/thm.cauchy-mvt.md`
 
-引用：`thm.cauchy-mvt`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-mvt`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

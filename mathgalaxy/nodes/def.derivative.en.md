@@ -10,5 +10,5 @@ layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · M
 Chinese only — see the Chinese page `nodes/def.derivative.md` and `proofs/`.
 
 
-Cite: `def.derivative` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 复平面与扩充复平面（球极投影�
 
 > 说明见 `notes/def.riemann-sphere.md`
 
-引用：`def.riemann-sphere`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.riemann-sphere`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

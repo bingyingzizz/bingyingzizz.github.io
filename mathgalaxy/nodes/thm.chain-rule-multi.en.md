@@ -11,5 +11,5 @@ names: `Chain Rule` (short) · `Chain Rule in Several Variables` (full)
 Chinese only — see the Chinese page `nodes/thm.chain-rule-multi.md` and `proofs/`.
 
 
-Cite: `thm.chain-rule-multi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.chain-rule-multi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

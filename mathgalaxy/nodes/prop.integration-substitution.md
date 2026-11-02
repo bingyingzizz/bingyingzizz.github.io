@@ -14,4 +14,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.integration-substitution.md`
 
-引用：`prop.integration-substitution`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integration-substitution`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Breen–Deligne Spectral Sequence` (short) · `The General Breen–Delig
 Chinese only — see the Chinese page `nodes/ex.bd-ss.md` and `proofs/`.
 
 
-Cite: `ex.bd-ss` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.bd-ss` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

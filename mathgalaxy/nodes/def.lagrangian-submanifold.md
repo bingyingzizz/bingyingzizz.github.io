@@ -14,4 +14,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/def.lagrangian-submanifold.md`
 
-引用：`def.lagrangian-submanifold`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lagrangian-submanifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

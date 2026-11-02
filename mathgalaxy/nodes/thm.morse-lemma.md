@@ -20,4 +20,4 @@ refs: Milnor, Morse Theory, §2；Guillemin–Pollack, Differential Topology, §
 
 > 说明见 `notes/thm.morse-lemma.md`
 
-引用：`thm.morse-lemma`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.morse-lemma`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

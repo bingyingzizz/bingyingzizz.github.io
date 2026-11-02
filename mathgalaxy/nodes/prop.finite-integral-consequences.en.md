@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Integration (`analysis.integral`) · Function
 Chinese only — see the Chinese page `nodes/prop.finite-integral-consequences.md` and `proofs/`.
 
 
-Cite: `prop.finite-integral-consequences` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.finite-integral-consequences` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

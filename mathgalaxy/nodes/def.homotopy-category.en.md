@@ -10,5 +10,5 @@ layer 12 · definition · cluster Complexes and Distinguished Triangles (`hom.co
 Chinese only — see the Chinese page `nodes/def.homotopy-category.md` and `proofs/`.
 
 
-Cite: `def.homotopy-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.homotopy-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Constant Sheaf and Limits` (short) · `The Constant Sheaf Functor Preser
 Chinese only — see the Chinese page `nodes/prop.constant-sheaf-preserves-limits.md` and `proofs/`.
 
 
-Cite: `prop.constant-sheaf-preserves-limits` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.constant-sheaf-preserves-limits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

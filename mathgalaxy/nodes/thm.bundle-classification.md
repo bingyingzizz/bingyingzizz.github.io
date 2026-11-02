@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」�
 
 > 说明见 `notes/thm.bundle-classification.md`
 
-引用：`thm.bundle-classification`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bundle-classification`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

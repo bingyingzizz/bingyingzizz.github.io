@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, §3.5
 
 > 说明见 `notes/prop.bv-examples.md`
 
-引用：`prop.bv-examples`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.bv-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

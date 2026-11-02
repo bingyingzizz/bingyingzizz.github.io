@@ -11,5 +11,5 @@ names: `Object to Topos Morphism` (short) · `An Object Induces a Topos Morphism
 Chinese only — see the Chinese page `nodes/prop.topos-morphism-from-object.md` and `proofs/`.
 
 
-Cite: `prop.topos-morphism-from-object` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.topos-morphism-from-object` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

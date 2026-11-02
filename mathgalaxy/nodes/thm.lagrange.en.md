@@ -10,5 +10,5 @@ layer 8 · theorem · cluster Group Actions and Permutations (`algebra.group-act
 Chinese only — see the Chinese page `nodes/thm.lagrange.md` and `proofs/`.
 
 
-Cite: `thm.lagrange` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lagrange` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

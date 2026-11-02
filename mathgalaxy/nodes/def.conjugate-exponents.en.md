@@ -10,5 +10,5 @@ layer 14 · definition · cluster L^p Spaces (`analysis.lp`) · Functions of a R
 Chinese only — see the Chinese page `nodes/def.conjugate-exponents.md` and `proofs/`.
 
 
-Cite: `def.conjugate-exponents` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.conjugate-exponents` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

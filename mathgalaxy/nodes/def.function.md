@@ -21,4 +21,4 @@ refs: Kunen, Set Theory, I.5
 
 > 说明见 `notes/def.function.md`
 
-引用：`def.function`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

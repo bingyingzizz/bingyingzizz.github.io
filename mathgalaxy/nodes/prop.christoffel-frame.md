@@ -18,4 +18,4 @@ refs: do Carmo, Differential Forms and Applications, 第 3 章「联络形式」
 
 > 说明见 `notes/prop.christoffel-frame.md`
 
-引用：`prop.christoffel-frame`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.christoffel-frame`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

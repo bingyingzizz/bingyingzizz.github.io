@@ -14,4 +14,4 @@ refs: Fuchs, Infinite Abelian Groups, Vol. I, divisible groups and the Prüfer p
 
 > 说明见 `notes/ex.divisible-groups.md`
 
-引用：`ex.divisible-groups`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.divisible-groups`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

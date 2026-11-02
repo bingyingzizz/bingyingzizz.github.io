@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. II；Dummit & Foote, Abstract Algebra, §7.1
 
 > 说明见 `notes/def.ring.md`
 
-引用：`def.ring`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

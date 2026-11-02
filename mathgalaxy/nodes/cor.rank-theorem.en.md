@@ -11,5 +11,5 @@ names: `Rank Theorem` (short) · `Constant Rank Theorem` (full)
 Chinese only — see the Chinese page `nodes/cor.rank-theorem.md` and `proofs/`.
 
 
-Cite: `cor.rank-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.rank-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 
 > 说明见 `notes/prop.precanonical-sheaf.md`
 
-引用：`prop.precanonical-sheaf`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.precanonical-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

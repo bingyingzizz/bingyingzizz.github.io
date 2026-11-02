@@ -10,5 +10,5 @@ layer 13 · theorem · cluster Divisibility and Congruences (`number.basic`) · 
 Chinese only — see the Chinese page `nodes/thm.bezout.md` and `proofs/`.
 
 
-Cite: `thm.bezout` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bezout` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Representables Are Acyclic` (short) · `Representable Presheaves Are Acy
 Chinese only — see the Chinese page `nodes/prop.presheaf-representable-acyclic.md` and `proofs/`.
 
 
-Cite: `prop.presheaf-representable-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.presheaf-representable-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -17,4 +17,4 @@ refs: 华罗庚《数论导引》第五章；Apostol, Ch. 10
 
 > 说明见 `notes/def.discrete-log.md`
 
-引用：`def.discrete-log`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.discrete-log`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

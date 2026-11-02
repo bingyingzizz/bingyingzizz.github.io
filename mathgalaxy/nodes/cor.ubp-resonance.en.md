@@ -11,5 +11,5 @@ names: `Resonance Set` (short) · `The Resonance Set Is a Dense G-delta` (full)
 Chinese only — see the Chinese page `nodes/cor.ubp-resonance.md` and `proofs/`.
 
 
-Cite: `cor.ubp-resonance` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.ubp-resonance` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

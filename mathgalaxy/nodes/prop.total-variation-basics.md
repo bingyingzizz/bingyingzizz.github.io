@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, §3.3；Rudin, Real and Complex Analysis, Ch. 6
 
 > 说明见 `notes/prop.total-variation-basics.md`
 
-引用：`prop.total-variation-basics`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.total-variation-basics`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

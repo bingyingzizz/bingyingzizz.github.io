@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) �
 Chinese only — see the Chinese page `nodes/prop.limit-adjoint.md` and `proofs/`.
 
 
-Cite: `prop.limit-adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.limit-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

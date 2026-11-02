@@ -11,5 +11,5 @@ names: `Resolution Homotopy` (short) · `Homotopy Uniqueness of Projective Resol
 Chinese only — see the Chinese page `nodes/prop.resolution-homotopy.md` and `proofs/`.
 
 
-Cite: `prop.resolution-homotopy` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.resolution-homotopy` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

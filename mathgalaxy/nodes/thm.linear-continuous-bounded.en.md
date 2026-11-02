@@ -11,5 +11,5 @@ names: `Continuous iff Bounded` (short) · `A Linear Map Is Continuous iff Bound
 Chinese only — see the Chinese page `nodes/thm.linear-continuous-bounded.md` and `proofs/`.
 
 
-Cite: `thm.linear-continuous-bounded` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.linear-continuous-bounded` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

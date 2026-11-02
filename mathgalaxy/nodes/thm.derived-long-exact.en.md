@@ -11,5 +11,5 @@ names: `Derived Long Exact Sequence` (short) · `Long Exact Sequence of Derived 
 Chinese only — see the Chinese page `nodes/thm.derived-long-exact.md` and `proofs/`.
 
 
-Cite: `thm.derived-long-exact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.derived-long-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

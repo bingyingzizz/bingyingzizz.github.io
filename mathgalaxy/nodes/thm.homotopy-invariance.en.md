@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 Chinese only — see the Chinese page `nodes/thm.homotopy-invariance.md` and `proofs/`.
 
 
-Cite: `thm.homotopy-invariance` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.homotopy-invariance` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

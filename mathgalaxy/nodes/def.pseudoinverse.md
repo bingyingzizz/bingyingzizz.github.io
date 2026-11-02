@@ -16,4 +16,4 @@ refs: Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）
 
 > 说明见 `notes/def.pseudoinverse.md`
 
-引用：`def.pseudoinverse`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pseudoinverse`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》笔记，第 8 章 · Cauchy 积分公式；Ahl
 
 > 说明见 `notes/thm.cauchy-integral-formula.md`
 
-引用：`thm.cauchy-integral-formula`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-integral-formula`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

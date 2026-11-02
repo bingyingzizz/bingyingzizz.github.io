@@ -10,5 +10,5 @@ layer 15 · example · cluster Algebraic Structures in a Category (`cat.algebra`
 Chinese only — see the Chinese page `nodes/ex.ab-of-categories.md` and `proofs/`.
 
 
-Cite: `ex.ab-of-categories` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.ab-of-categories` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

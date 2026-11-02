@@ -11,5 +11,5 @@ names: `Breen–Deligne on Stonean` (short) · `The Breen–Deligne Spectral Seq
 Chinese only — see the Chinese page `nodes/prop.breen-deligne-ss-stonean.md` and `proofs/`.
 
 
-Cite: `prop.breen-deligne-ss-stonean` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.breen-deligne-ss-stonean` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

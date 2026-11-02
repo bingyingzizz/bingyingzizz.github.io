@@ -18,4 +18,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/prop.norm-induces-metric.md`
 
-引用：`prop.norm-induces-metric`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.norm-induces-metric`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

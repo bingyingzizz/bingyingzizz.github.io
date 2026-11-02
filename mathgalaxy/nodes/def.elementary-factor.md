@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Weierstrass 初等因子；Ahlfors, Complex 
 
 > 说明见 `notes/def.elementary-factor.md`
 
-引用：`def.elementary-factor`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.elementary-factor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

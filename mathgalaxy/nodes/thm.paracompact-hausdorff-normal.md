@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch.
 
 > 说明见 `notes/thm.paracompact-hausdorff-normal.md`
 
-引用：`thm.paracompact-hausdorff-normal`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.paracompact-hausdorff-normal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

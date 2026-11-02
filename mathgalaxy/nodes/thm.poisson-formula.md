@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· Poisson 积分公式；Ahlfors, Complex Anal
 
 > 说明见 `notes/thm.poisson-formula.md`
 
-引用：`thm.poisson-formula`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.poisson-formula`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

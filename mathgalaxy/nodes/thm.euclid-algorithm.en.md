@@ -10,5 +10,5 @@ layer 12 · theorem · cluster Divisibility and Congruences (`number.basic`) · 
 Chinese only — see the Chinese page `nodes/thm.euclid-algorithm.md` and `proofs/`.
 
 
-Cite: `thm.euclid-algorithm` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.euclid-algorithm` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

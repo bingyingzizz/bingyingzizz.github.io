@@ -11,5 +11,5 @@ names: `CG Examples` (short) · `Examples of Compactly Generated Spaces` (full)
 Chinese only — see the Chinese page `nodes/ex.cg-examples.md` and `proofs/`.
 
 
-Cite: `ex.cg-examples` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.cg-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

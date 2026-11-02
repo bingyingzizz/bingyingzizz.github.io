@@ -14,4 +14,4 @@ refs: 王晓光《复变函数》· 单值性定理（monodromy theorem）；Ahl
 
 > 说明见 `notes/thm.monodromy.md`
 
-引用：`thm.monodromy`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.monodromy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

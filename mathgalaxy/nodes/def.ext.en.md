@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/def.ext.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Ext_functor · nLab: https://ncatlab.org/nlab/show/Ext
 
 
-Cite: `def.ext` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ext` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

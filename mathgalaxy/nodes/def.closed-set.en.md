@@ -10,5 +10,5 @@ layer 5 · definition · cluster Topological Spaces and Basic Constructions (`to
 Chinese only — see the Chinese page `nodes/def.closed-set.md` and `proofs/`.
 
 
-Cite: `def.closed-set` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.closed-set` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

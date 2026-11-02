@@ -10,5 +10,5 @@ layer 11 · definition · cluster Diagrams and Limits (`cat.limit`) · Category 
 Chinese only — see the Chinese page `nodes/def.limit.md` and `proofs/`.
 
 
-Cite: `def.limit` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.limit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

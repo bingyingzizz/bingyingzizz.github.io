@@ -10,5 +10,5 @@ layer 11 · definition · cluster Group Actions and Permutations (`algebra.group
 Chinese only — see the Chinese page `nodes/def.alternating-group.md` and `proofs/`.
 
 
-Cite: `def.alternating-group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.alternating-group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

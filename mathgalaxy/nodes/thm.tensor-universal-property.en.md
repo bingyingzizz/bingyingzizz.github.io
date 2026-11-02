@@ -10,5 +10,5 @@ layer 12 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multili
 Chinese only — see the Chinese page `nodes/thm.tensor-universal-property.md` and `proofs/`.
 
 
-Cite: `thm.tensor-universal-property` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.tensor-universal-property` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 3.18
 
 > 说明见 `notes/thm.lebesgue-differentiation.md`
 
-引用：`thm.lebesgue-differentiation`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lebesgue-differentiation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Polynomials and Factorization (`algebra.polyn
 Chinese only — see the Chinese page `nodes/prop.root-bound.md` and `proofs/`.
 
 
-Cite: `prop.root-bound` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.root-bound` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

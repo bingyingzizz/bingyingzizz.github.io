@@ -11,5 +11,5 @@ names: `Coverings in a Topos` (short) · `Covering Families in a Topos` (full)
 Chinese only — see the Chinese page `nodes/prop.topos-covering-epi.md` and `proofs/`.
 
 
-Cite: `prop.topos-covering-epi` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.topos-covering-epi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

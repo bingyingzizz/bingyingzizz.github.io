@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Math
 Chinese only — see the Chinese page `nodes/prop.cond-epi-regular.md` and `proofs/`.
 
 
-Cite: `prop.cond-epi-regular` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-epi-regular` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

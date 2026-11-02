@@ -18,4 +18,4 @@ refs: SGA 4, I.0；Mac Lane, Categories for the Working Mathematician, I.6；Jec
 
 > 说明见 `notes/ax.grothendieck-universe.md`
 
-引用：`ax.grothendieck-universe`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.grothendieck-universe`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

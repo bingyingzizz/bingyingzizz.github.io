@@ -6,5 +6,5 @@ English entry · root `../`
 Chinese only — see the Chinese page `nodes/prop.paracompact-partition-unity.md` and `proofs/`.
 
 
-Cite: `prop.paracompact-partition-unity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.paracompact-partition-unity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

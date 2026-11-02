@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Conde
 Chinese only — see the Chinese page `nodes/prop.condab-generated.md` and `proofs/`.
 
 
-Cite: `prop.condab-generated` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.condab-generated` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

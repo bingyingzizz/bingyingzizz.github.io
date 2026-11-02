@@ -10,5 +10,5 @@ layer 18 · proposition · cluster Topological Abelian Groups (`cond.topo`) · C
 Chinese only — see the Chinese page `nodes/prop.pontryagin-discrete-compact-duality.md` and `proofs/`.
 
 
-Cite: `prop.pontryagin-discrete-compact-duality` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.pontryagin-discrete-compact-duality` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

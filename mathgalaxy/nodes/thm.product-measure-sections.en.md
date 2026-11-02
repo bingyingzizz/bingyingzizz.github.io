@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Product Measures and Fubini (`analysis.product`) 
 Chinese only — see the Chinese page `nodes/thm.product-measure-sections.md` and `proofs/`.
 
 
-Cite: `thm.product-measure-sections` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.product-measure-sections` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

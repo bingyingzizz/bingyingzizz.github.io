@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Theorem 3.29
 
 > 说明见 `notes/thm.borel-measure-nbv.md`
 
-引用：`thm.borel-measure-nbv`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.borel-measure-nbv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Dual, RHom and Tensor` (short) · `Derived Hom of the Discrete Dual and 
 Chinese only — see the Chinese page `nodes/prop.rhom-dual-tensor.md` and `proofs/`.
 
 
-Cite: `prop.rhom-dual-tensor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-dual-tensor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -14,5 +14,5 @@ Chinese only — see the Chinese page `nodes/def.adjoint.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Adjoint_functors · nLab: https://ncatlab.org/nlab/show/adjoint+functor
 
 
-Cite: `def.adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

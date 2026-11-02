@@ -22,4 +22,4 @@ refs: 王晓光《复变函数》笔记，第 6 章 · 复积分；Ahlfors, Comp
 
 > 说明见 `notes/def.contour-integral.md`
 
-引用：`def.contour-integral`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.contour-integral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

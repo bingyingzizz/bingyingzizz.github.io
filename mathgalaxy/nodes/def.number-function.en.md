@@ -12,5 +12,5 @@ Let $X$ be a set and $f : X \to Y$ a **map**. If its values lie in a **set of nu
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `def.number-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.number-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

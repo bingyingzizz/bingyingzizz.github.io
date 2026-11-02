@@ -16,4 +16,4 @@ refs: Lang, Algebra, Ch. XVI；Mac Lane, Categories for the Working Mathematicia
 
 > 说明见 `notes/prop.tensor-hom-adjunction.md`
 
-引用：`prop.tensor-hom-adjunction`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.tensor-hom-adjunction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

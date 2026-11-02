@@ -11,5 +11,5 @@ names: `Paracompact Is Normal` (short) · `Paracompact Hausdorff Spaces Are Norm
 Chinese only — see the Chinese page `nodes/thm.paracompact-hausdorff-normal.md` and `proofs/`.
 
 
-Cite: `thm.paracompact-hausdorff-normal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.paracompact-hausdorff-normal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

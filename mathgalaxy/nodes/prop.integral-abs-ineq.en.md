@@ -10,5 +10,5 @@ layer 20 · proposition · cluster Integration (`analysis.integral`) · Function
 Chinese only — see the Chinese page `nodes/prop.integral-abs-ineq.md` and `proofs/`.
 
 
-Cite: `prop.integral-abs-ineq` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.integral-abs-ineq` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

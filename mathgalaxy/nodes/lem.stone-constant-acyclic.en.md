@@ -10,5 +10,5 @@ layer 18 · lemma · cluster Computing Derived Hom (`cond.compute`) · Condensed
 Chinese only — see the Chinese page `nodes/lem.stone-constant-acyclic.md` and `proofs/`.
 
 
-Cite: `lem.stone-constant-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.stone-constant-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

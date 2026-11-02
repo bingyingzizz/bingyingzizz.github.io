@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathemat
 Chinese only — see the Chinese page `nodes/thm.cond-topos.md` and `proofs/`.
 
 
-Cite: `thm.cond-topos` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cond-topos` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

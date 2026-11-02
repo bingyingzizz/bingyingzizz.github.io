@@ -11,5 +11,5 @@ names: `Coreflective Monoids` (short) · `Monoids in a Coreflective Subcategory`
 Chinese only — see the Chinese page `nodes/prop.coreflective-monoids-full.md` and `proofs/`.
 
 
-Cite: `prop.coreflective-monoids-full` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.coreflective-monoids-full` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -16,4 +16,4 @@ refs: 华罗庚《数论导引》第三章；Apostol, Ch. 2
 
 > 说明见 `notes/thm.mobius-inversion.md`
 
-引用：`thm.mobius-inversion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mobius-inversion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

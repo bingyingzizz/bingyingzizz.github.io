@@ -11,5 +11,5 @@ names: `Exterior Derivative (Euclidean Open Sets)` (short) · `Exterior Derivati
 Chinese only — see the Chinese page `nodes/def.exterior-derivative.md` and `proofs/`.
 
 
-Cite: `def.exterior-derivative` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.exterior-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

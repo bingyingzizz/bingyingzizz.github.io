@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Real Numbers and Limits (`analysis.real`) · 
 Chinese only — see the Chinese page `nodes/prop.limit-basic.md` and `proofs/`.
 
 
-Cite: `prop.limit-basic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.limit-basic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

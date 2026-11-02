@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.12
 ## 说明
 **证明。** $(\text{域}, \text{余域})$ 把 $f : X \to Y$ 送到 $X$（resp. $Y$）✓；切片里把 $(A \to X)$ 送到 $A$，态射的复合按定义就相容 ✓。∎
 
-引用：`def.mor-domain-codomain`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.mor-domain-codomain`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

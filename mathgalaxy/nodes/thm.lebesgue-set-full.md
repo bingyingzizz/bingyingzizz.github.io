@@ -21,4 +21,4 @@ refs: Folland, Real Analysis, Theorem 3.20
 
 > 说明见 `notes/thm.lebesgue-set-full.md`
 
-引用：`thm.lebesgue-set-full`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lebesgue-set-full`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

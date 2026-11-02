@@ -11,5 +11,5 @@ names: `Slice Projection Formula` (short) · `Projection Formula on the Slice` (
 Chinese only — see the Chinese page `nodes/prop.slice-shriek-projection.md` and `proofs/`.
 
 
-Cite: `prop.slice-shriek-projection` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.slice-shriek-projection` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

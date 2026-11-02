@@ -19,4 +19,4 @@ refs: Iversen, Cohomology of Sheaves —— 内射层与 skyscraper sheaf 一章
 
 > 说明见 `notes/prop.skyscraper-injective.md`
 
-引用：`prop.skyscraper-injective`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.skyscraper-injective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

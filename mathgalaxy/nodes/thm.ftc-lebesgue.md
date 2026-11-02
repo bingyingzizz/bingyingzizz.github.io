@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/thm.ftc-lebesgue.md`
 
-引用：`thm.ftc-lebesgue`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ftc-lebesgue`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

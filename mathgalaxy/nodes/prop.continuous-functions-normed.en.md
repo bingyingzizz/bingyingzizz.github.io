@@ -11,5 +11,5 @@ names: `Continuous Functions` (short) · `Continuous Functions Form a Normed Ban
 Chinese only — see the Chinese page `nodes/prop.continuous-functions-normed.md` and `proofs/`.
 
 
-Cite: `prop.continuous-functions-normed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.continuous-functions-normed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

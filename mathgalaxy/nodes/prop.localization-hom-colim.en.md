@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Categories and Diagrams (`cat.basic`) · Cate
 Chinese only — see the Chinese page `nodes/prop.localization-hom-colim.md` and `proofs/`.
 
 
-Cite: `prop.localization-hom-colim` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.localization-hom-colim` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

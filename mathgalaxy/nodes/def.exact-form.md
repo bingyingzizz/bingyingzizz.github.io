@@ -16,4 +16,4 @@ refs: Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名�
 
 > 说明见 `notes/def.exact-form.md`
 
-引用：`def.exact-form`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exact-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

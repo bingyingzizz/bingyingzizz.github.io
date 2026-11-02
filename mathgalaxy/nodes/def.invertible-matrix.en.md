@@ -10,5 +10,5 @@ layer 11 · definition · cluster Matrices and Determinants (`algebra.matrix`) �
 Chinese only — see the Chinese page `nodes/def.invertible-matrix.md` and `proofs/`.
 
 
-Cite: `def.invertible-matrix` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.invertible-matrix` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Cauchy 定理的逆命题；Ahlfors, Complex
 
 > 说明见 `notes/thm.morera.md`
 
-引用：`thm.morera`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.morera`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

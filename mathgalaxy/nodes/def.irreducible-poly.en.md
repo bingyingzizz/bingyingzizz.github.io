@@ -10,5 +10,5 @@ layer 10 · definition · cluster Polynomials and Factorization (`algebra.polyno
 Chinese only — see the Chinese page `nodes/def.irreducible-poly.md` and `proofs/`.
 
 
-Cite: `def.irreducible-poly` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.irreducible-poly` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

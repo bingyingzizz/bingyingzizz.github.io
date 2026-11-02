@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`
 Chinese only — see the Chinese page `nodes/thm.analytic-modules.md` and `proofs/`.
 
 
-Cite: `thm.analytic-modules` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.analytic-modules` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

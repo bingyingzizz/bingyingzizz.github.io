@@ -10,5 +10,5 @@ layer 2 · definition · cluster Constructing Sets (`set.construct`) · Set Theo
 Chinese only — see the Chinese page `nodes/def.union-inter.md` and `proofs/`.
 
 
-Cite: `def.union-inter` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.union-inter` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

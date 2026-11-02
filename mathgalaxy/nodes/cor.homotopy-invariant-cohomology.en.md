@@ -11,5 +11,5 @@ names: `Homotopy Invariance` (short) · `Sheaf Cohomology Is a Homotopy Invarian
 Chinese only — see the Chinese page `nodes/cor.homotopy-invariant-cohomology.md` and `proofs/`.
 
 
-Cite: `cor.homotopy-invariant-cohomology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.homotopy-invariant-cohomology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲率」· 截面
 
 > 说明见 `notes/def.sectional-curvature.md`
 
-引用：`def.sectional-curvature`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.sectional-curvature`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.9
 
 > 说明见 `notes/prop.rn-chain-rule.md`
 
-引用：`prop.rn-chain-rule`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.rn-chain-rule`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

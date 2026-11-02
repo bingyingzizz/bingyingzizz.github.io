@@ -14,4 +14,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 2 · the Euler characteristic
 
 > 说明见 `notes/thm.euler-characteristic.md`
 
-引用：`thm.euler-characteristic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.euler-characteristic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

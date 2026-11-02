@@ -23,4 +23,4 @@ refs: Jech, The Axiom of Choice, Ch. 2
 
 > 说明见 `notes/def.finchar.md`
 
-引用：`def.finchar`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.finchar`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 11 · definition · cluster Condensed Derived Functors (`cond.cohomology`)
 Chinese only — see the Chinese page `nodes/def.k-bounded-exact.md` and `proofs/`.
 
 
-Cite: `def.k-bounded-exact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.k-bounded-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

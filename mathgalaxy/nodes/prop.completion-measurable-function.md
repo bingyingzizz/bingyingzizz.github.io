@@ -14,4 +14,4 @@ refs: Folland, Real Analysis, Prop. 2.12
 
 > 说明见 `notes/prop.completion-measurable-function.md`
 
-引用：`prop.completion-measurable-function`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.completion-measurable-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

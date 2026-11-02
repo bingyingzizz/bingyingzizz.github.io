@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Multilinear Algebra and Tensors (`algebra.mul
 Chinese only — see the Chinese page `nodes/prop.tensor-hom-adjunction.md` and `proofs/`.
 
 
-Cite: `prop.tensor-hom-adjunction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tensor-hom-adjunction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

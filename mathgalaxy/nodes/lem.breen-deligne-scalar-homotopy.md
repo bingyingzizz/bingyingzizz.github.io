@@ -12,4 +12,4 @@ refs: Le Stum, Lemma 8.3.3
 
 > 说明见 `notes/lem.breen-deligne-scalar-homotopy.md`
 
-引用：`lem.breen-deligne-scalar-homotopy`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.breen-deligne-scalar-homotopy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

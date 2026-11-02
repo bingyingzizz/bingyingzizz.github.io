@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 ## 说明
 推论：**映射锥在 $\mathbf{K}(\mathcal{C})$ 中唯一**（同伦意义下唯一）。所以「$f$ 的锥」在 $\mathbf{K}(\mathcal{C})$ 里是一个定义良好的对象 —— 尽管 $M(f)$ 的显式写法依赖于 $f$ 的表示。
 
-引用：`prop.triangle-rotation`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.triangle-rotation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

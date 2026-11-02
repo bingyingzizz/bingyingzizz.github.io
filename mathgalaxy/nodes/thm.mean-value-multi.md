@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Lang, Undergraduate An
 
 > 说明见 `notes/thm.mean-value-multi.md`
 
-引用：`thm.mean-value-multi`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mean-value-multi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

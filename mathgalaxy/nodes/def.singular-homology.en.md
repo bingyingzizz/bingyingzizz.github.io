@@ -10,5 +10,5 @@ layer 19 · definition · cluster Homology Groups (`topology.homology`) · Topol
 Chinese only — see the Chinese page `nodes/def.singular-homology.md` and `proofs/`.
 
 
-Cite: `def.singular-homology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.singular-homology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

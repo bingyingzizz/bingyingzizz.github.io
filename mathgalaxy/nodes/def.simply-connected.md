@@ -22,4 +22,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（simply conne
 
 > 说明见 `notes/def.simply-connected.md`
 
-引用：`def.simply-connected`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simply-connected`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

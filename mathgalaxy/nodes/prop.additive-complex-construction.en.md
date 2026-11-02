@@ -11,5 +11,5 @@ names: `Functors and Complexes` (short) · `Additive Functors Commute with the C
 Chinese only — see the Chinese page `nodes/prop.additive-complex-construction.md` and `proofs/`.
 
 
-Cite: `prop.additive-complex-construction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.additive-complex-construction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

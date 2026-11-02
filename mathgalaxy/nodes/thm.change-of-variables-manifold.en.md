@@ -11,5 +11,5 @@ names: `Change of Variables` (short) · `Change of Variables on Manifolds` (full
 Chinese only — see the Chinese page `nodes/thm.change-of-variables-manifold.md` and `proofs/`.
 
 
-Cite: `thm.change-of-variables-manifold` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.change-of-variables-manifold` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

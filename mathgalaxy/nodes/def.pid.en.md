@@ -10,5 +10,5 @@ layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.r
 Chinese only — see the Chinese page `nodes/def.pid.md` and `proofs/`.
 
 
-Cite: `def.pid` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pid` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

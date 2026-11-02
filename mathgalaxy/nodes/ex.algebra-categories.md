@@ -19,4 +19,4 @@ refs: Lang, Algebra
 
 > 说明见 `notes/ex.algebra-categories.md`
 
-引用：`ex.algebra-categories`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.algebra-categories`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

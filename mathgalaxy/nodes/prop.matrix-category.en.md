@@ -10,5 +10,5 @@ layer 8 · proposition · cluster Categories and Diagrams (`cat.basic`) · Categ
 Chinese only — see the Chinese page `nodes/prop.matrix-category.md` and `proofs/`.
 
 
-Cite: `prop.matrix-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.matrix-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

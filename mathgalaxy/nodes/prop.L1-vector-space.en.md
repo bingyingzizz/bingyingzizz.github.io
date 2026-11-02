@@ -10,5 +10,5 @@ layer 20 · proposition · cluster Integration (`analysis.integral`) · Function
 Chinese only — see the Chinese page `nodes/prop.L1-vector-space.md` and `proofs/`.
 
 
-Cite: `prop.L1-vector-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.L1-vector-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

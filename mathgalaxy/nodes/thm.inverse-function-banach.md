@@ -19,4 +19,4 @@ refs: Lang, Real and Functional Analysis, Ch. I；Zeidler, Nonlinear Functional 
 
 > 说明见 `notes/thm.inverse-function-banach.md`
 
-引用：`thm.inverse-function-banach`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.inverse-function-banach`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

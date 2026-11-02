@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, Prop. 6.4
 
 > 说明见 `notes/prop.lq-in-lp-plus-lr.md`
 
-引用：`prop.lq-in-lp-plus-lr`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.lq-in-lp-plus-lr`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

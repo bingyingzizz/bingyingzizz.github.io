@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 5（正合偶）�
 
 > 说明见 `notes/def.exact-couple.md`
 
-引用：`def.exact-couple`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exact-couple`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

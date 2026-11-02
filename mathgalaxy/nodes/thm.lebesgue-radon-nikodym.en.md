@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.lebesgue-radon-nikodym.md` and 
 Wikipedia: https://en.wikipedia.org/wiki/Radon%E2%80%93Nikodym_theorem
 
 
-Cite: `thm.lebesgue-radon-nikodym` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lebesgue-radon-nikodym` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

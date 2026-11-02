@@ -10,5 +10,5 @@ layer 10 · definition · cluster Toposes (`cat.topos`) · Category Theory
 Chinese only — see the Chinese page `nodes/def.generator.md` and `proofs/`.
 
 
-Cite: `def.generator` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.generator` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Euler's Formula` (short) · `Euler's Formula for Principal Curvatures` (
 Chinese only — see the Chinese page `nodes/thm.euler-formula-surface.md` and `proofs/`.
 
 
-Cite: `thm.euler-formula-surface` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.euler-formula-surface` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

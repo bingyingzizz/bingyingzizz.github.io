@@ -11,5 +11,5 @@ names: `Effective Relations` (short) · `Equivalence Relations in Condensed Sets
 Chinese only — see the Chinese page `nodes/prop.cond-equivalence-effective.md` and `proofs/`.
 
 
-Cite: `prop.cond-equivalence-effective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cond-equivalence-effective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

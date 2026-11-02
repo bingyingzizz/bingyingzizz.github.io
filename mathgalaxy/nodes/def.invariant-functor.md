@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（不变量函�
 
 > 说明见 `notes/def.invariant-functor.md`
 
-引用：`def.invariant-functor`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.invariant-functor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

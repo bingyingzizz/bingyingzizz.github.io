@@ -11,5 +11,5 @@ names: `Diagonal and Weak Hausdorff` (short) · `Diagonal, Kernels and Weak Haus
 Chinese only — see the Chinese page `nodes/prop.weak-hausdorff-k-closed.md` and `proofs/`.
 
 
-Cite: `prop.weak-hausdorff-k-closed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.weak-hausdorff-k-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Stone and Stonean Spaces (`topo.stone`) · To
 Chinese only — see the Chinese page `nodes/prop.component-clopen.md` and `proofs/`.
 
 
-Cite: `prop.component-clopen` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.component-clopen` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

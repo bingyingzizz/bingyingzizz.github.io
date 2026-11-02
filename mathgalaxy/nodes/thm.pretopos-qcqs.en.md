@@ -11,5 +11,5 @@ names: `Pretopos Is QCQS` (short) · `A Pretopos Is Determined by Its Topos` (fu
 Chinese only — see the Chinese page `nodes/thm.pretopos-qcqs.md` and `proofs/`.
 
 
-Cite: `thm.pretopos-qcqs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.pretopos-qcqs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

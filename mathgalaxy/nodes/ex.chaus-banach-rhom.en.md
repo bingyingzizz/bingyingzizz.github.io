@@ -11,5 +11,5 @@ names: `Compact to Banach RHom` (short) · `Derived Hom from Compact Spaces to R
 Chinese only — see the Chinese page `nodes/ex.chaus-banach-rhom.md` and `proofs/`.
 
 
-Cite: `ex.chaus-banach-rhom` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.chaus-banach-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

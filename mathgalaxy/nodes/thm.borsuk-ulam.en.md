@@ -10,5 +10,5 @@ layer 24 · theorem · cluster Topological Applications of Complex Analysis (`an
 Chinese only — see the Chinese page `nodes/thm.borsuk-ulam.md` and `proofs/`.
 
 
-Cite: `thm.borsuk-ulam` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.borsuk-ulam` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

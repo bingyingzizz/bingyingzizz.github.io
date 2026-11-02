@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲线」· 曲线
 
 > 说明见 `notes/thm.curve-fundamental-theorem.md`
 
-引用：`thm.curve-fundamental-theorem`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.curve-fundamental-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

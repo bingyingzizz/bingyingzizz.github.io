@@ -10,5 +10,5 @@ layer 15 · lemma · cluster Differentiation Theorems (`analysis.differentiation
 Chinese only — see the Chinese page `nodes/lem.covering.md` and `proofs/`.
 
 
-Cite: `lem.covering` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.covering` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

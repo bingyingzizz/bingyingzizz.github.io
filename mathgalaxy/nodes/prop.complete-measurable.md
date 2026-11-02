@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, Prop. 2.11
 
 > 说明见 `notes/prop.complete-measurable.md`
 
-引用：`prop.complete-measurable`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.complete-measurable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

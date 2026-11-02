@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Conden
 Chinese only — see the Chinese page `nodes/prop.free-solid-solid.md` and `proofs/`.
 
 
-Cite: `prop.free-solid-solid` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-solid-solid` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

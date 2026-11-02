@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, Prop. 3.5
 ## 说明
 把「积分给出绝对连续测度」与上一条 $\varepsilon$–$\delta$ 刻画拼起来即可（注意 $f \in L^{1} \implies \nu (E) = \int _E f d\mu$ 是**有限**符号测度，符合前提）。
 
-引用：`cor.ac-integral-continuity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.ac-integral-continuity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

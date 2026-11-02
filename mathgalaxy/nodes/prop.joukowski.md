@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 共形映射的例子；Ahlfors, Complex Ana
 
 > 说明见 `notes/prop.joukowski.md`
 
-引用：`prop.joukowski`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.joukowski`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

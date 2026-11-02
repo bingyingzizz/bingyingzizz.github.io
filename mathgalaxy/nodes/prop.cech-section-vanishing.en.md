@@ -11,5 +11,5 @@ names: `Čech Vanishing for Split Covers` (short) · `Covers with Sections Have 
 Chinese only — see the Chinese page `nodes/prop.cech-section-vanishing.md` and `proofs/`.
 
 
-Cite: `prop.cech-section-vanishing` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-section-vanishing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

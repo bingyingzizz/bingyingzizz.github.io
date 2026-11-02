@@ -10,5 +10,5 @@ layer 16 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`
 Chinese only — see the Chinese page `nodes/def.higher-derivative.md` and `proofs/`.
 
 
-Cite: `def.higher-derivative` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.higher-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

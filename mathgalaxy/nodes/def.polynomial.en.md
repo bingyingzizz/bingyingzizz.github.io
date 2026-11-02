@@ -10,5 +10,5 @@ layer 8 · definition · cluster Polynomials and Factorization (`algebra.polynom
 Chinese only — see the Chinese page `nodes/def.polynomial.md` and `proofs/`.
 
 
-Cite: `def.polynomial` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.polynomial` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

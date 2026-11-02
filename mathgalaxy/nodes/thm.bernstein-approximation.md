@@ -16,4 +16,4 @@ refs: Rudin, Functional Analysis · Stone–Weierstrass 定理；Bernstein 1912
 
 > 说明见 `notes/thm.bernstein-approximation.md`
 
-引用：`thm.bernstein-approximation`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bernstein-approximation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

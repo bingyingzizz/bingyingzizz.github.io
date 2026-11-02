@@ -10,5 +10,5 @@ English entry · root `../`
 Wikipedia: https://en.wikipedia.org/wiki/First_isomorphism_theorem
 
 
-Cite: `thm.first-iso` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.first-iso` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

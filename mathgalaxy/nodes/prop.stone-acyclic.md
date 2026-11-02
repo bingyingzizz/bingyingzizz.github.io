@@ -12,4 +12,4 @@ refs: Le Stum, Exercise 7.50
 
 > 说明见 `notes/prop.stone-acyclic.md`
 
-引用：`prop.stone-acyclic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.stone-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

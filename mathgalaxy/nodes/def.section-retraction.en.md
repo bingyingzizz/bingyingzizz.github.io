@@ -10,5 +10,5 @@ layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Catego
 Chinese only — see the Chinese page `nodes/def.section-retraction.md` and `proofs/`.
 
 
-Cite: `def.section-retraction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.section-retraction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

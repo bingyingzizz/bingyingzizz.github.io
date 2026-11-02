@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 迷向向量；北
 
 > 说明见 `notes/def.isotropic-vector.md`
 
-引用：`def.isotropic-vector`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isotropic-vector`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

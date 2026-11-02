@@ -10,5 +10,5 @@ layer 21 · corollary · cluster Inner Product Spaces and Orthogonality (`algebr
 Chinese only — see the Chinese page `nodes/cor.spectral-normal.md` and `proofs/`.
 
 
-Cite: `cor.spectral-normal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.spectral-normal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

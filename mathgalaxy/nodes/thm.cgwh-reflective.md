@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.3
 
 > 说明见 `notes/thm.cgwh-reflective.md`
 
-引用：`thm.cgwh-reflective`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cgwh-reflective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

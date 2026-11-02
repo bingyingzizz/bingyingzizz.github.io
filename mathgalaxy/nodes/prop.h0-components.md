@@ -21,4 +21,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 4 · H_0 and components；Hat
 
 > 说明见 `notes/prop.h0-components.md`
 
-引用：`prop.h0-components`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.h0-components`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

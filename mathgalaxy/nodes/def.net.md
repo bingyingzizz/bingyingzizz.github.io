@@ -21,4 +21,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 网的收�
 
 > 说明见 `notes/def.net.md`
 
-引用：`def.net`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.net`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

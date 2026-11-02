@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲率」· Ricci 
 
 > 说明见 `notes/def.ricci-curvature.md`
 
-引用：`def.ricci-curvature`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ricci-curvature`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 20 · proposition · cluster L^p Spaces (`analysis.lp`) · Functions of a 
 Chinese only — see the Chinese page `nodes/prop.bounded-functional-gives-lq.md` and `proofs/`.
 
 
-Cite: `prop.bounded-functional-gives-lq` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.bounded-functional-gives-lq` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

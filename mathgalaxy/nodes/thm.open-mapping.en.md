@@ -10,5 +10,5 @@ layer 23 · theorem · cluster Conformal Maps and Normal Families (`analysis.map
 Chinese only — see the Chinese page `nodes/thm.open-mapping.md` and `proofs/`.
 
 
-Cite: `thm.open-mapping` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.open-mapping` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

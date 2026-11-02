@@ -10,5 +10,5 @@ layer 23 · theorem · cluster Differentiation Theorems (`analysis.differentiati
 Chinese only — see the Chinese page `nodes/thm.maximal-theorem.md` and `proofs/`.
 
 
-Cite: `thm.maximal-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.maximal-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

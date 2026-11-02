@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》· 调和函数；Ahlfors, Complex Analysis · 
 
 > 说明见 `notes/def.harmonic.md`
 
-引用：`def.harmonic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.harmonic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

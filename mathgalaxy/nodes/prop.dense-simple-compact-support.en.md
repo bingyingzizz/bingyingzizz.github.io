@@ -10,5 +10,5 @@ layer 19 · proposition · cluster L^p Spaces (`analysis.lp`) · Functions of a 
 Chinese only — see the Chinese page `nodes/prop.dense-simple-compact-support.md` and `proofs/`.
 
 
-Cite: `prop.dense-simple-compact-support` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.dense-simple-compact-support` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

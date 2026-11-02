@@ -11,5 +11,5 @@ names: `Banach on Stone` (short) · `Banach Groups Are Acyclic on Stone Spaces` 
 Chinese only — see the Chinese page `nodes/prop.banach-stone-acyclic.md` and `proofs/`.
 
 
-Cite: `prop.banach-stone-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.banach-stone-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

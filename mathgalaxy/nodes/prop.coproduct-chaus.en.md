@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · To
 Chinese only — see the Chinese page `nodes/prop.coproduct-chaus.md` and `proofs/`.
 
 
-Cite: `prop.coproduct-chaus` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.coproduct-chaus` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 7 · proposition · cluster Product Measures and Fubini (`analysis.product
 Chinese only — see the Chinese page `nodes/prop.product-sigma-base.md` and `proofs/`.
 
 
-Cite: `prop.product-sigma-base` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.product-sigma-base` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

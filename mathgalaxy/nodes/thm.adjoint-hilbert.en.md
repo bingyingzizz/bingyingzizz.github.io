@@ -11,5 +11,5 @@ names: `Adjoint Operator` (short) · `Adjoint Operator on a Hilbert Space` (full
 Chinese only — see the Chinese page `nodes/thm.adjoint-hilbert.md` and `proofs/`.
 
 
-Cite: `thm.adjoint-hilbert` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.adjoint-hilbert` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

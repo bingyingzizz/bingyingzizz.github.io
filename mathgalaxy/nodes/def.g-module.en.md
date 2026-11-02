@@ -10,5 +10,5 @@ layer 9 · definition · cluster Group Cohomology (`hom.group`) · Homological A
 Chinese only — see the Chinese page `nodes/def.g-module.md` and `proofs/`.
 
 
-Cite: `def.g-module` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.g-module` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

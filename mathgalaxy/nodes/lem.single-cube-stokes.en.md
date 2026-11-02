@@ -11,5 +11,5 @@ names: `Stokes on a Cube` (short) · `Stokes' Formula on a Single Cube` (full)
 Chinese only — see the Chinese page `nodes/lem.single-cube-stokes.md` and `proofs/`.
 
 
-Cite: `lem.single-cube-stokes` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.single-cube-stokes` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

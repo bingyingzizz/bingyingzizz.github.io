@@ -14,4 +14,4 @@ refs: Le Stum, Exercise 1.33
 
 > 说明见 `notes/def.strict-morphism.md`
 
-引用：`def.strict-morphism`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.strict-morphism`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

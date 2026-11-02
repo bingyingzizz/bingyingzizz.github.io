@@ -10,5 +10,5 @@ layer 19 · definition · cluster Integration (`analysis.integral`) · Functions
 Chinese only — see the Chinese page `nodes/def.integrable.md` and `proofs/`.
 
 
-Cite: `def.integrable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.integrable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

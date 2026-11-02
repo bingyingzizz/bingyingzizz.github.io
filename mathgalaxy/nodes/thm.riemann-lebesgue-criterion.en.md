@@ -11,5 +11,5 @@ names: `Lebesgue Criterion` (short) · `Lebesgue Criterion for Riemann Integrabi
 Chinese only — see the Chinese page `nodes/thm.riemann-lebesgue-criterion.md` and `proofs/`.
 
 
-Cite: `thm.riemann-lebesgue-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.riemann-lebesgue-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

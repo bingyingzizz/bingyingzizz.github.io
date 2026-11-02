@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.fubini-tonelli.md` and `proofs/
 Wikipedia: https://en.wikipedia.org/wiki/Fubini%27s_theorem · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/Integral/Prod.html
 
 
-Cite: `thm.fubini-tonelli` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.fubini-tonelli` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

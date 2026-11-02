@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Anal
 Chinese only — see the Chinese page `nodes/thm.morera.md` and `proofs/`.
 
 
-Cite: `thm.morera` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.morera` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 5 · axiom · cluster Categories and Diagrams (`cat.basic`) · Category Th
 Chinese only — see the Chinese page `nodes/ax.grothendieck-universe.md` and `proofs/`.
 
 
-Cite: `ax.grothendieck-universe` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.grothendieck-universe` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

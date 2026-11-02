@@ -14,4 +14,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), a flat module th
 
 > 说明见 `notes/ex.flat-not-projective.md`
 
-引用：`ex.flat-not-projective`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.flat-not-projective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -14,4 +14,4 @@ refs: 华罗庚《数论导引》§1
 
 > 说明见 `notes/def.gcd.md`
 
-引用：`def.gcd`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.gcd`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

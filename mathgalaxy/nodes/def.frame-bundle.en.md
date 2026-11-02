@@ -10,5 +10,5 @@ layer 27 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifo
 Chinese only — see the Chinese page `nodes/def.frame-bundle.md` and `proofs/`.
 
 
-Cite: `def.frame-bundle` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.frame-bundle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

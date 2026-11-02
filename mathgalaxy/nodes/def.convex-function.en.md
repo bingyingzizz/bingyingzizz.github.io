@@ -10,5 +10,5 @@ layer 14 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`
 Chinese only — see the Chinese page `nodes/def.convex-function.md` and `proofs/`.
 
 
-Cite: `def.convex-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.convex-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

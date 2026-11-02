@@ -10,5 +10,5 @@ layer 22 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vecto
 Chinese only — see the Chinese page `nodes/thm.cartan-formula.md` and `proofs/`.
 
 
-Cite: `thm.cartan-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cartan-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

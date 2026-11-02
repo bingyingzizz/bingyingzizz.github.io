@@ -11,5 +11,5 @@ names: `RHom to Banach Vanishes` (short) · `Derived Hom from Compact Hausdorff 
 Chinese only — see the Chinese page `nodes/prop.rhom-chaus-banach-zero.md` and `proofs/`.
 
 
-Cite: `prop.rhom-chaus-banach-zero` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-chaus-banach-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

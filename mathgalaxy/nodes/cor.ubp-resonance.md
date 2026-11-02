@@ -12,8 +12,8 @@ $$R := \Bigl\{ x \in E : \sup_n \|u_n(x)\| = \infty \Bigr\}$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.ubp`](../nodes/thm.ubp.md) 共鸣定理：UBP 的补集形态：共振集稠密　[proofs/imp.fa-ubp-resonance.md](../proofs/imp.fa-ubp-resonance.md)
 
-refs: Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/cor.ubp-resonance.md`
 
-引用：`cor.ubp-resonance`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.ubp-resonance`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -18,4 +18,4 @@ refs: Le Stum, Lemma 8.2.5
 
 > 说明见 `notes/lem.stone-cech-1-bounded.md`
 
-引用：`lem.stone-cech-1-bounded`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.stone-cech-1-bounded`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

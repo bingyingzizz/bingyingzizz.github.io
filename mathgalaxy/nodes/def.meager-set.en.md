@@ -11,5 +11,5 @@ names: `Meager Set` (short) · `Meager and Comeager Sets` (full)
 Chinese only — see the Chinese page `nodes/def.meager-set.md` and `proofs/`.
 
 
-Cite: `def.meager-set` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.meager-set` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

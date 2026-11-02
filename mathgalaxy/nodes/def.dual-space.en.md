@@ -10,5 +10,5 @@ layer 10 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abs
 Chinese only — see the Chinese page `nodes/def.dual-space.md` and `proofs/`.
 
 
-Cite: `def.dual-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.dual-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

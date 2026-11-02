@@ -18,4 +18,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化�
 
 > 说明见 `notes/thm.lu-decomposition.md`
 
-引用：`thm.lu-decomposition`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lu-decomposition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

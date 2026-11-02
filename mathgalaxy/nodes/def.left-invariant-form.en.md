@@ -10,5 +10,5 @@ layer 26 · definition · cluster Lie Groups (`diffgeom.lieg`) · Differential G
 Chinese only — see the Chinese page `nodes/def.left-invariant-form.md` and `proofs/`.
 
 
-Cite: `def.left-invariant-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.left-invariant-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

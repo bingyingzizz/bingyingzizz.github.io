@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, Theorem 3.4.2, Corollar
 
 > 说明见 `notes/thm.induced-topos-morphism.md`
 
-引用：`thm.induced-topos-morphism`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.induced-topos-morphism`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

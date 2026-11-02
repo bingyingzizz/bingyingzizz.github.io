@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. I §4；Dummit–Foote, Abstract Algebra, §3.2
 
 > 说明见 `notes/thm.lagrange.md`
 
-引用：`thm.lagrange`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lagrange`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

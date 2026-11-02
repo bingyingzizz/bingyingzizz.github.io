@@ -11,5 +11,5 @@ names: `Left-Invariant Fields` (short) · `Left-Invariant Vector Fields` (full)
 Chinese only — see the Chinese page `nodes/prop.left-invariant-fields.md` and `proofs/`.
 
 
-Cite: `prop.left-invariant-fields` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.left-invariant-fields` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

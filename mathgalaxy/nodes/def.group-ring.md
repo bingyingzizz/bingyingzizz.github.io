@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（群环与群�
 
 > 说明见 `notes/def.group-ring.md`
 
-引用：`def.group-ring`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

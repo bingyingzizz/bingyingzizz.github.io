@@ -28,4 +28,4 @@ refs: Kunen, Set Theory, I.11
 ## 说明
 「链」这个词是佐恩引理、Hausdorff 极大原理的中心概念——它们说的都是「链能长到多大」。
 
-引用：`def.chain`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chain`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

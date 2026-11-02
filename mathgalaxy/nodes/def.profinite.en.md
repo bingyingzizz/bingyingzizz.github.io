@@ -10,5 +10,5 @@ layer 12 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Top
 Chinese only — see the Chinese page `nodes/def.profinite.md` and `proofs/`.
 
 
-Cite: `def.profinite` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.profinite` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

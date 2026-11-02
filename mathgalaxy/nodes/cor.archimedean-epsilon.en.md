@@ -10,5 +10,5 @@ layer 15 · corollary · cluster Arithmetic and Inequalities on the Reals (`anal
 Chinese only — see the Chinese page `nodes/cor.archimedean-epsilon.md` and `proofs/`.
 
 
-Cite: `cor.archimedean-epsilon` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.archimedean-epsilon` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

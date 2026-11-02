@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.cauchy-criterion-series.md`
 
-引用：`thm.cauchy-criterion-series`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-criterion-series`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

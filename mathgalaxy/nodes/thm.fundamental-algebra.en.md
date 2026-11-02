@@ -10,5 +10,5 @@ layer 24 · theorem · cluster Polynomials and Factorization (`algebra.polynomia
 Chinese only — see the Chinese page `nodes/thm.fundamental-algebra.md` and `proofs/`.
 
 
-Cite: `thm.fundamental-algebra` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.fundamental-algebra` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

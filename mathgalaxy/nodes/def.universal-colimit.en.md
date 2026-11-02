@@ -11,5 +11,5 @@ names: `Universal Colimits` (short) · `Universal Colimits and Disjoint Coproduc
 Chinese only — see the Chinese page `nodes/def.universal-colimit.md` and `proofs/`.
 
 
-Cite: `def.universal-colimit` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.universal-colimit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

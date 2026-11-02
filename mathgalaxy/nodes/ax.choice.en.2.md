@@ -12,5 +12,5 @@ The choice function $f$ is the device for "picking all at once"; AC asserts that
 Wikipedia: https://en.wikipedia.org/wiki/Axiom_of_choice · nLab: https://ncatlab.org/nlab/show/axiom+of+choice
 
 
-Cite: `ax.choice` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.choice` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

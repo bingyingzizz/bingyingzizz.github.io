@@ -27,4 +27,4 @@ refs: Kunen, Set Theory, Ch. I；Enderton, Elements of Set Theory, Ch. 4
 
 > 说明见 `notes/thm.nat-arith-laws.md`
 
-引用：`thm.nat-arith-laws`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.nat-arith-laws`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

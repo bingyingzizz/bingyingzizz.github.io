@@ -10,5 +10,5 @@ layer 17 · corollary · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topo
 Chinese only — see the Chinese page `nodes/cor.chaus-free-presentation.md` and `proofs/`.
 
 
-Cite: `cor.chaus-free-presentation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.chaus-free-presentation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 11 · proposition · cluster Functors and Natural Transformations (`cat.fu
 Chinese only — see the Chinese page `nodes/prop.nat-iso-invariants.md` and `proofs/`.
 
 
-Cite: `prop.nat-iso-invariants` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.nat-iso-invariants` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 7 · proposition · cluster Measurable Functions and Convergence (`analysi
 Chinese only — see the Chinese page `nodes/prop.measurable-criterion.md` and `proofs/`.
 
 
-Cite: `prop.measurable-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.measurable-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

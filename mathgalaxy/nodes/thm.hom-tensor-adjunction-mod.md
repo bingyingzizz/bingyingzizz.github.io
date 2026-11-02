@@ -19,4 +19,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Chapter 2, Propo
 
 > 说明见 `notes/thm.hom-tensor-adjunction-mod.md`
 
-引用：`thm.hom-tensor-adjunction-mod`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hom-tensor-adjunction-mod`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

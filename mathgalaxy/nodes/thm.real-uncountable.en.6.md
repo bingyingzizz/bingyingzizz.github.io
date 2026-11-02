@@ -10,5 +10,5 @@ English entry · root `../`
 Wikipedia: https://en.wikipedia.org/wiki/Uncountable_set · nLab: https://ncatlab.org/nlab/show/Cantor%27s+theorem
 
 
-Cite: `thm.real-uncountable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.real-uncountable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

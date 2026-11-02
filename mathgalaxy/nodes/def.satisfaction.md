@@ -16,4 +16,4 @@ refs: Enderton, A Mathematical Introduction to Logic, §2.2；Marker, Model Theo
 
 > 说明见 `notes/def.satisfaction.md`
 
-引用：`def.satisfaction`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.satisfaction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

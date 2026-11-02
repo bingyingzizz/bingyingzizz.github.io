@@ -28,4 +28,4 @@ refs: Folland, Real Analysis, §2.5
 
 截口是 Fubini 定理的语言：重积分 $\iint f d(\mu \times \nu)$ 就是「先沿截口积一次，再把各条截口的积分对另一变量积一次」。
 
-引用：`def.section`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.section`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

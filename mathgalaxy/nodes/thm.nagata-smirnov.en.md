@@ -11,5 +11,5 @@ names: `Nagata–Smirnov Theorem` (short) · `Nagata–Smirnov Metrization Theor
 Chinese only — see the Chinese page `nodes/thm.nagata-smirnov.md` and `proofs/`.
 
 
-Cite: `thm.nagata-smirnov` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.nagata-smirnov` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

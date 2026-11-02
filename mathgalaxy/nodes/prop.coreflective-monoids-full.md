@@ -12,4 +12,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.72
 
 > 说明见 `notes/prop.coreflective-monoids-full.md`
 
-引用：`prop.coreflective-monoids-full`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.coreflective-monoids-full`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

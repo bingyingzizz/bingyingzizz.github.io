@@ -16,8 +16,8 @@ $$x_n \to x \ \text{且} \ u(x_n) \to y \quad \Longrightarrow \quad y = u(x) .$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.closed-graph.2.md](./thm.closed-graph.2.md)
 
-refs: Rudin, Functional Analysis · 闭图像定理
+refs: Rudin, Functional Analysis, 2.15
 
 > 说明见 `notes/thm.closed-graph.md`
 
-引用：`thm.closed-graph`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.closed-graph`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

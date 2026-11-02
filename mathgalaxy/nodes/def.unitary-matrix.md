@@ -23,4 +23,4 @@ refs: Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」�
 
 > 说明见 `notes/def.unitary-matrix.md`
 
-引用：`def.unitary-matrix`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.unitary-matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

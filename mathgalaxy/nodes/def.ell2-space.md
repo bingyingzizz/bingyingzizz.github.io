@@ -19,4 +19,4 @@ refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.ell2-space.md`
 
-引用：`def.ell2-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ell2-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

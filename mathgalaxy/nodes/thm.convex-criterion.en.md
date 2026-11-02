@@ -10,5 +10,5 @@ layer 22 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) �
 Chinese only — see the Chinese page `nodes/thm.convex-criterion.md` and `proofs/`.
 
 
-Cite: `thm.convex-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.convex-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

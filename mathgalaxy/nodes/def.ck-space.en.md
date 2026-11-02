@@ -11,5 +11,5 @@ names: `C(K,E)` (short) · `The Space C(K,E) with the Uniform Metric` (full)
 Chinese only — see the Chinese page `nodes/def.ck-space.md` and `proofs/`.
 
 
-Cite: `def.ck-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ck-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

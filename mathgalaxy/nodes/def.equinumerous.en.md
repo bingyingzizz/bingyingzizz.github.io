@@ -10,5 +10,5 @@ layer 7 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) �
 Chinese only — see the Chinese page `nodes/def.equinumerous.md` and `proofs/`.
 
 
-Cite: `def.equinumerous` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.equinumerous` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

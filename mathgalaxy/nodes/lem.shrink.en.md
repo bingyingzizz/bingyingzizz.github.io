@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Paracompact Spaces and Partitions of Unity (`topolo
 Chinese only — see the Chinese page `nodes/lem.shrink.md` and `proofs/`.
 
 
-Cite: `lem.shrink` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.shrink` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

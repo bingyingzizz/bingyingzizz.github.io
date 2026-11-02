@@ -20,4 +20,4 @@ refs: Mac Lane–Moerdijk, Sheaves in Geometry and Logic, Appendix
 
 > 说明见 `notes/thm.giraud.md`
 
-引用：`thm.giraud`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.giraud`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

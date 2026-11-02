@@ -11,5 +11,5 @@ names: `Left Adjoint Uniqueness` (short) · `Uniqueness of Left Adjoints` (full)
 Chinese only — see the Chinese page `nodes/prop.left-adjoint-unique.md` and `proofs/`.
 
 
-Cite: `prop.left-adjoint-unique` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.left-adjoint-unique` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

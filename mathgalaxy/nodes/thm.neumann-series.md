@@ -16,4 +16,4 @@ refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级�
 
 > 说明见 `notes/thm.neumann-series.md`
 
-引用：`thm.neumann-series`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.neumann-series`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

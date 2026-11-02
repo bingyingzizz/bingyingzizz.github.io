@@ -11,5 +11,5 @@ names: `Fundamental Theorem of Surfaces` (short) · `Fundamental Theorem of Surf
 Chinese only — see the Chinese page `nodes/thm.fundamental-theorem-surfaces.md` and `proofs/`.
 
 
-Cite: `thm.fundamental-theorem-surfaces` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.fundamental-theorem-surfaces` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

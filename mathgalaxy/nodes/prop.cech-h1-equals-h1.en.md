@@ -11,5 +11,5 @@ names: `H1 Čech and H1` (short) · `First Čech Cohomology Equals First Cohomol
 Chinese only — see the Chinese page `nodes/prop.cech-h1-equals-h1.md` and `proofs/`.
 
 
-Cite: `prop.cech-h1-equals-h1` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-h1-equals-h1` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

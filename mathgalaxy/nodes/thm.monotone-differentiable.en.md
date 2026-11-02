@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Bounded Variation and Absolute Continuity (`analy
 Chinese only — see the Chinese page `nodes/thm.monotone-differentiable.md` and `proofs/`.
 
 
-Cite: `thm.monotone-differentiable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.monotone-differentiable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

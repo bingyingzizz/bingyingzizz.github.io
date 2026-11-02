@@ -11,5 +11,5 @@ names: `Zeroth Cohomology` (short) · `Zeroth de Rham Cohomology` (full)
 Chinese only — see the Chinese page `nodes/thm.de-rham-h0.md` and `proofs/`.
 
 
-Cite: `thm.de-rham-h0` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.de-rham-h0` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

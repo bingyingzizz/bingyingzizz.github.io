@@ -11,5 +11,5 @@ names: `Michael's Theorem` (short) · `Michael's Theorem on Paracompactness` (fu
 Chinese only — see the Chinese page `nodes/thm.michael-paracompact.md` and `proofs/`.
 
 
-Cite: `thm.michael-paracompact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.michael-paracompact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 20 · definition · cluster Vector Fields and Lie Structures (`diffgeom.ve
 Chinese only — see the Chinese page `nodes/def.flow.md` and `proofs/`.
 
 
-Cite: `def.flow` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.flow` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

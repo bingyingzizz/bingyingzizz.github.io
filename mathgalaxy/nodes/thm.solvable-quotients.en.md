@@ -10,5 +10,5 @@ layer 10 · theorem · cluster Composition Series and Solvable Groups (`algebra.
 Chinese only — see the Chinese page `nodes/thm.solvable-quotients.md` and `proofs/`.
 
 
-Cite: `thm.solvable-quotients` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.solvable-quotients` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 24 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · D
 Chinese only — see the Chinese page `nodes/def.gauss-curvature.md` and `proofs/`.
 
 
-Cite: `def.gauss-curvature` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.gauss-curvature` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

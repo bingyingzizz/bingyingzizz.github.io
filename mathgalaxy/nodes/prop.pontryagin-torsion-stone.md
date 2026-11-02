@@ -17,4 +17,4 @@ refs: Le Stum, §6.2；Le Stum, Exercise 6.9
 
 > 说明见 `notes/prop.pontryagin-torsion-stone.md`
 
-引用：`prop.pontryagin-torsion-stone`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pontryagin-torsion-stone`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

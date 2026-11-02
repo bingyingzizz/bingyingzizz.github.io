@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 ## 说明
 「pro-finite」= 有限者的投射极限。直观上它是「越来越细的有限分辨率」堆出来的对象：$X_{i}$ 是第 $i$ 层分辨率下的样子，$I$ 有向保证任意两层分辨率都能同时加细。
 
-引用：`def.profinite`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.profinite`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

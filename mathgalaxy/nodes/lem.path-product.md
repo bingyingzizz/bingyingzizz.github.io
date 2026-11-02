@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Homotopy of Paths（道路的乘积�
 
 > 说明见 `notes/lem.path-product.md`
 
-引用：`lem.path-product`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.path-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

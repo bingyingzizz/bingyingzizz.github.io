@@ -10,5 +10,5 @@ layer 12 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral
 Chinese only — see the Chinese page `nodes/def.eigenspace.md` and `proofs/`.
 
 
-Cite: `def.eigenspace` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.eigenspace` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

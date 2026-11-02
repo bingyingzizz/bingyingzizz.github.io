@@ -8,8 +8,8 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理：Baire $\implies$ 开子集是 Baire　[proofs/imp.fa-baire-opensubset.md](../proofs/imp.fa-baire-opensubset.md)
 
-refs: Rudin, Functional Analysis · Baire 纲定理与纲的用法
+refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/thm.baire-open-subset.md`
 
-引用：`thm.baire-open-subset`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.baire-open-subset`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

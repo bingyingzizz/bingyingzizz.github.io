@@ -11,5 +11,5 @@ names: `Comparison Test` (short) · `Comparison Test for Improper Integrals` (fu
 Chinese only — see the Chinese page `nodes/prop.improper-comparison.md` and `proofs/`.
 
 
-Cite: `prop.improper-comparison` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.improper-comparison` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 7 · definition · cluster Measurable Functions and Convergence (`analysis
 Chinese only — see the Chinese page `nodes/def.simple-function.md` and `proofs/`.
 
 
-Cite: `def.simple-function` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.simple-function` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

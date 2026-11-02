@@ -11,5 +11,5 @@ names: `Divisible Groups` (short) · `Examples of Divisible Groups` (full)
 Chinese only — see the Chinese page `nodes/ex.divisible-groups.md` and `proofs/`.
 
 
-Cite: `ex.divisible-groups` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.divisible-groups` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

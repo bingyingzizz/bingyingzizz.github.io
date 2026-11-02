@@ -14,4 +14,4 @@ refs: Bing, Metrization of topological spaces, Canad. J. Math. 3 (1951)；Engelk
 
 > 说明见 `notes/thm.bing-metrization.md`
 
-引用：`thm.bing-metrization`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bing-metrization`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

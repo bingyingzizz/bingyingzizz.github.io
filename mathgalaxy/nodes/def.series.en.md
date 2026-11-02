@@ -10,5 +10,5 @@ layer 14 · definition · cluster Real Numbers and Limits (`analysis.real`) · M
 Chinese only — see the Chinese page `nodes/def.series.md` and `proofs/`.
 
 
-Cite: `def.series` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.series` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

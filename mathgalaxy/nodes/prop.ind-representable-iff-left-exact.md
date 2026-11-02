@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 3.8
 
 > 说明见 `notes/prop.ind-representable-iff-left-exact.md`
 
-引用：`prop.ind-representable-iff-left-exact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ind-representable-iff-left-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

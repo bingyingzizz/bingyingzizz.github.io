@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 3.10
 
 > 说明见 `notes/prop.sieve-generated-by-family.md`
 
-引用：`prop.sieve-generated-by-family`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.sieve-generated-by-family`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

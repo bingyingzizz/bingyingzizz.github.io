@@ -11,5 +11,5 @@ names: `Nearest Point in Convex Set` (short) · `Nearest Point in a Closed Conve
 Chinese only — see the Chinese page `nodes/thm.projection-convex.md` and `proofs/`.
 
 
-Cite: `thm.projection-convex` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.projection-convex` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

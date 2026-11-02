@@ -11,5 +11,5 @@ names: `Kan Extension Existence` (short) · `Left Kan Extensions Exist Given Col
 Chinese only — see the Chinese page `nodes/prop.kan-extension-exists.md` and `proofs/`.
 
 
-Cite: `prop.kan-extension-exists` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.kan-extension-exists` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

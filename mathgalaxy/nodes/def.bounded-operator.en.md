@@ -11,5 +11,5 @@ names: `Bounded Operator` (short) · `Bounded Linear Operator and Operator Norm`
 Chinese only — see the Chinese page `nodes/def.bounded-operator.md` and `proofs/`.
 
 
-Cite: `def.bounded-operator` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.bounded-operator` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

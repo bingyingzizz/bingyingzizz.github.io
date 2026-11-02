@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/def.topos.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Topos · nLab: https://ncatlab.org/nlab/show/topos
 
 
-Cite: `def.topos` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.topos` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

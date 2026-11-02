@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, §2.5
 
 > 说明见 `notes/prop.product-incomplete.md`
 
-引用：`prop.product-incomplete`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.product-incomplete`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

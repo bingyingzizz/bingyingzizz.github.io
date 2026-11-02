@@ -2,11 +2,11 @@
  "meta": {
   "name": "数学星图 MathGalaxy",
   "schema": "mathgalaxy/v1",
-  "version": "v0.9.1",
+  "version": "v0.9.2",
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-02T10:45:56.508Z",
+  "generated": "2026-11-02T10:55:55.190Z",
   "counts": {
    "regions": 15,
    "clusters": 102,
@@ -2654,7 +2654,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2668,7 +2668,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#db41f727"
+      "statement": "v0.9.2#db41f727"
      }
     }
    },
@@ -2701,7 +2701,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2715,7 +2715,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#e310c0cf"
+      "statement": "v0.9.2#e310c0cf"
      }
     }
    },
@@ -2748,7 +2748,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2762,7 +2762,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#9aad67c7"
+      "statement": "v0.9.2#9aad67c7"
      }
     }
    },
@@ -2793,7 +2793,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2807,7 +2807,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#ae9c0db1"
+      "statement": "v0.9.2#ae9c0db1"
      }
     }
    },
@@ -2838,7 +2838,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2852,7 +2852,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#9417a12a"
+      "statement": "v0.9.2#9417a12a"
      }
     }
    },
@@ -2884,7 +2884,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2898,7 +2898,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#ccdf2115"
+      "statement": "v0.9.2#ccdf2115"
      }
     }
    },
@@ -2931,7 +2931,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2945,7 +2945,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#0835fe0f"
+      "statement": "v0.9.2#0835fe0f"
      }
     }
    },
@@ -2978,7 +2978,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -2992,7 +2992,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#ccfc3b6b"
+      "statement": "v0.9.2#ccfc3b6b"
      }
     }
    },
@@ -3025,7 +3025,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3039,7 +3039,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#96318197"
+      "statement": "v0.9.2#96318197"
      }
     }
    },
@@ -3078,7 +3078,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3092,7 +3092,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#6fb94ac5"
+      "statement": "v0.9.2#6fb94ac5"
      }
     }
    },
@@ -3124,7 +3124,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3138,7 +3138,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#a830b9b2"
+      "statement": "v0.9.2#a830b9b2"
      }
     }
    },
@@ -3170,7 +3170,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3184,7 +3184,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#ebf411a5"
+      "statement": "v0.9.2#ebf411a5"
      }
     }
    },
@@ -3216,7 +3216,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3230,7 +3230,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#2c875827"
+      "statement": "v0.9.2#2c875827"
      }
     }
    },
@@ -3263,7 +3263,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -3277,7 +3277,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#0f3927eb"
+      "statement": "v0.9.2#0f3927eb"
      }
     }
    },
@@ -3749,7 +3749,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -3769,9 +3769,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#5ba4f775",
-      "statement": "v0.9.1#f0e20930",
-      "notes": "v0.9.1#bf8c5d7a"
+      "abstract": "v0.9.2#5ba4f775",
+      "statement": "v0.9.2#f0e20930",
+      "notes": "v0.9.2#bf8c5d7a"
      }
     }
    },
@@ -3811,7 +3811,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -3831,9 +3831,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#bb7411b4",
-      "statement": "v0.9.1#88c083ff",
-      "notes": "v0.9.1#4e157a1c"
+      "abstract": "v0.9.2#bb7411b4",
+      "statement": "v0.9.2#88c083ff",
+      "notes": "v0.9.2#4e157a1c"
      }
     }
    },
@@ -3875,7 +3875,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -3895,9 +3895,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#dece7db3",
-      "statement": "v0.9.1#317a7f66",
-      "notes": "v0.9.1#53809b5a"
+      "abstract": "v0.9.2#dece7db3",
+      "statement": "v0.9.2#317a7f66",
+      "notes": "v0.9.2#53809b5a"
      }
     }
    },
@@ -4102,7 +4102,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -4122,9 +4122,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#00da69f8",
-      "statement": "v0.9.1#31649b03",
-      "notes": "v0.9.1#a1cebdb4"
+      "abstract": "v0.9.2#00da69f8",
+      "statement": "v0.9.2#31649b03",
+      "notes": "v0.9.2#a1cebdb4"
      }
     }
    },
@@ -4325,7 +4325,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -4345,9 +4345,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#90481f72",
-      "statement": "v0.9.1#8c5b3033",
-      "notes": "v0.9.1#8e05fc76"
+      "abstract": "v0.9.2#90481f72",
+      "statement": "v0.9.2#8c5b3033",
+      "notes": "v0.9.2#8e05fc76"
      }
     }
    },
@@ -4719,7 +4719,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -4739,9 +4739,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#a6257d0e",
-      "statement": "v0.9.1#5d3aa74a",
-      "notes": "v0.9.1#ce1b4b57"
+      "abstract": "v0.9.2#a6257d0e",
+      "statement": "v0.9.2#5d3aa74a",
+      "notes": "v0.9.2#ce1b4b57"
      }
     }
    },
@@ -4820,11 +4820,11 @@
    "title_en": "monotone class theorem",
    "abstract_en": "For $\\mathcal{E} \\subseteq \\mathcal{P}(X)$, the $\\sigma$-algebra generated by $\\mathcal{E}$ equals the monotone class generated by $\\mathcal{E}$ if complements of members of $\\mathcal{E}$ and unions of two members of $\\mathcal{E}$ lie in that monotone class. With \"$\\mathcal{E}$ is an algebra\" this is the standard monotone class theorem; the form above weakens that hypothesis to the two closure conditions, and the proof is the same two-step argument with the monotone class as the running object.",
    "statement_en": "Let $\\mathcal{E} \\subseteq \\mathcal{P}(X)$. Then\n\n$$\\mathcal{M}(\\mathcal{E}) = \\mathfrak{m}(\\mathcal{E}) \\iff \\forall A \\in \\mathcal{E} : A^c \\in \\mathfrak{m}(\\mathcal{E})\\ \\wedge\\ \\forall A, B \\in \\mathcal{E} : A \\cup B \\in \\mathfrak{m}(\\mathcal{E})$$",
-   "notes_en": "**This is the combined \"standard + strengthened\" version.**\n\n**Standard version** (Halmos §6 / Folland 2.37): if $\\mathcal{A}$ is an **algebra** then $\\mathfrak{m}(\\mathcal{A}) = \\mathcal{M}(\\mathcal{A})$.\n\nWhat is stated above is the **strengthened version**: \"$mathcal{E}$ is an algebra\" is replaced by two weaker conditions — the **complements** and the **unions** of sets in $\\mathcal{E}$ only have to land in $\\mathfrak{m}(\\mathcal{E})$. The proof is still the usual three steps of the monotone class theorem:\n\n**①** Let $\\mathcal{K}_{1} = \\{A \\in \\mathfrak{m} : A^{c} \\in \\mathfrak{m}\\}$. It contains $\\mathcal{E}$ (first condition), and is itself a monotone class ($\\mathfrak{m}$ is monotone $\\implies$ limits stay in $\\mathfrak{m}$; complements use one decreasing limit) $\\implies \\mathcal{K}_{1} = \\mathfrak{m}$, i.e. $\\mathfrak{m}$ is closed under **complements**.\n\n**②** Fix $A \\in \\mathcal{E}$ and let $\\mathcal{K}_{2} = \\{B \\in \\mathfrak{m} : A \\cup B \\in \\mathfrak{m}\\}$. By the second condition $\\mathcal{K}_{2} \\supseteq \\mathcal{E} \\implies \\mathcal{K}_{2} = \\mathfrak{m}$.\n\n**③** Fix $B \\in \\mathfrak{m}$ and let $\\mathcal{K}_{3} = \\{A \\in \\mathfrak{m} : A \\cup B \\in \\mathfrak{m}\\}$. By ②, $\\mathcal{K}_{3} \\supseteq \\mathcal{E} \\implies \\mathcal{K}_{3} = \\mathfrak{m}$, i.e. $\\mathfrak{m}$ is closed under **unions**.\n\nHence $\\mathfrak{m}$ is closed under $\\cup$ and complements, and is a monotone class $\\implies$ $\\mathfrak{m}$ is a $\\sigma$-algebra $\\implies \\mathcal{M}(\\mathcal{E}) \\subseteq \\mathfrak{m}(\\mathcal{E})$; the reverse inclusion always holds, so the two sides are equal. (One needs $\\mathcal{E} \\ne \\emptyset$, otherwise $\\mathfrak{m}(\\mathcal{E}) = \\{\\emptyset \\}$.)\n\n⚠ Replacing $\\cup$ by $\\cap$ or $\\setminus$ gives the same conclusion — once complements are available, the various closure properties imply each other, so the symbol used here does not affect whether the theorem is true.\n\n**How it is used** (the same for either version): to prove that a property holds for all sets in $\\mathcal{M}(\\mathcal{E})$, it suffices to ($i$) prove it for $\\mathcal{E}$ and (ii) prove that \"it holds\" is preserved by increasing unions and decreasing intersections — then the sets for which it holds form a monotone class containing $\\mathcal{E}$, hence one containing $\\mathfrak{m}(\\mathcal{E}) = \\mathcal{M}(\\mathcal{E})$. Uniqueness of the measure extension, the section formula for product measures and the approximation of measurable functions all follow this pattern.\n\n⚠ It is a sister result of \"the criterion for a ring to be a $\\sigma$-ring\": that one says ring $+$ monotone $\\implies$ $\\sigma$-ring, this one says algebra $\\implies$ monotone class and $\\sigma$-algebra coincide.",
+   "notes_en": "**This is the combined \"standard + strengthened\" version.**\n\n**Standard version** (Halmos §6 / Folland 2.37): if $\\mathcal{A}$ is an **algebra** then $\\mathfrak{m}(\\mathcal{A}) = \\mathcal{M}(\\mathcal{A})$.\n\nWhat is stated above is the **strengthened version**: \"$\\mathcal{E}$ is an algebra\" is replaced by two weaker conditions — the **complements** and the **unions** of sets in $\\mathcal{E}$ only have to land in $\\mathfrak{m}(\\mathcal{E})$. The proof is still the usual three steps of the monotone class theorem:\n\n**①** Let $\\mathcal{K}_{1} = \\{A \\in \\mathfrak{m} : A^{c} \\in \\mathfrak{m}\\}$. It contains $\\mathcal{E}$ (first condition), and is itself a monotone class ($\\mathfrak{m}$ is monotone $\\implies$ limits stay in $\\mathfrak{m}$; complements use one decreasing limit) $\\implies \\mathcal{K}_{1} = \\mathfrak{m}$, i.e. $\\mathfrak{m}$ is closed under **complements**.\n\n**②** Fix $A \\in \\mathcal{E}$ and let $\\mathcal{K}_{2} = \\{B \\in \\mathfrak{m} : A \\cup B \\in \\mathfrak{m}\\}$. By the second condition $\\mathcal{K}_{2} \\supseteq \\mathcal{E} \\implies \\mathcal{K}_{2} = \\mathfrak{m}$.\n\n**③** Fix $B \\in \\mathfrak{m}$ and let $\\mathcal{K}_{3} = \\{A \\in \\mathfrak{m} : A \\cup B \\in \\mathfrak{m}\\}$. By ②, $\\mathcal{K}_{3} \\supseteq \\mathcal{E} \\implies \\mathcal{K}_{3} = \\mathfrak{m}$, i.e. $\\mathfrak{m}$ is closed under **unions**.\n\nHence $\\mathfrak{m}$ is closed under $\\cup$ and complements, and is a monotone class $\\implies$ $\\mathfrak{m}$ is a $\\sigma$-algebra $\\implies \\mathcal{M}(\\mathcal{E}) \\subseteq \\mathfrak{m}(\\mathcal{E})$; the reverse inclusion always holds, so the two sides are equal. (One needs $\\mathcal{E} \\ne \\emptyset$, otherwise $\\mathfrak{m}(\\mathcal{E}) = \\{\\emptyset \\}$.)\n\n⚠ Replacing $\\cup$ by $\\cap$ or $\\setminus$ gives the same conclusion — once complements are available, the various closure properties imply each other, so the symbol used here does not affect whether the theorem is true.\n\n**How it is used** (the same for either version): to prove that a property holds for all sets in $\\mathcal{M}(\\mathcal{E})$, it suffices to ($i$) prove it for $\\mathcal{E}$ and (ii) prove that \"it holds\" is preserved by increasing unions and decreasing intersections — then the sets for which it holds form a monotone class containing $\\mathcal{E}$, hence one containing $\\mathfrak{m}(\\mathcal{E}) = \\mathcal{M}(\\mathcal{E})$. Uniqueness of the measure extension, the section formula for product measures and the approximation of measurable functions all follow this pattern.\n\n⚠ It is a sister result of \"the criterion for a ring to be a $\\sigma$-ring\": that one says ring $+$ monotone $\\implies$ $\\sigma$-ring, this one says algebra $\\implies$ monotone class and $\\sigma$-algebra coincide.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -4837,19 +4837,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#6d41f268",
-      "statement": "v0.9.1#48f20867",
-      "notes": "v0.9.1#15101468"
+      "abstract": "v0.9.2#d6fb12ae",
+      "statement": "v0.9.2#48f20867",
+      "notes": "v0.9.2#42f670ae"
      }
     }
    },
@@ -5429,7 +5426,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -5449,9 +5446,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#1d1a972f",
-      "statement": "v0.9.1#24d3359e",
-      "notes": "v0.9.1#32c28e62"
+      "abstract": "v0.9.2#1d1a972f",
+      "statement": "v0.9.2#24d3359e",
+      "notes": "v0.9.2#32c28e62"
      }
     }
    },
@@ -10257,7 +10254,7 @@
    "statement": "设 $V$ 是 $K$-向量空间（$K = \\mathbb{R}$ 或 $\\mathbb{C}$）。映射 $\\|\\cdot\\| : V \\to \\mathbb{R}$ 叫 $V$ 上的**范数**，当且仅当对一切 $v, w \\in V$、$c \\in K$：\n\n$$\\|v\\| \\ge 0, \\qquad \\|v\\| = 0 \\iff v = 0; \\qquad \\|cv\\| = |c|\\,\\|v\\|; \\qquad \\|v + w\\| \\le \\|v\\| + \\|w\\|$$\n\n配了范数的 $V$ 叫**赋范空间**。它按 $d(v, w) := \\|v - w\\|$ 成为度量空间，于是「收敛」「连续」「完备」「紧」这些说法全都继承过来。",
    "notes": "⭐ 范数是「长度」的公理化。\n\n三条公理里**只有三角不等式不是逐点的** —— 它管的是「能不能绕路」，也正是它把范数与凸性绑在一起（单位球是凸的）。\n\n⭐ 与内积的关系是单向的：内积 $\\implies$ 范数（`def.induced-norm`），但范数来自内积**当且仅当**满足**平行四边形法则** $\\|v+w\\|^{2} + \\|v-w\\|^{2} = 2\\|v\\|^{2} + 2\\|w\\|^{2}$。\n\n所以「有长度」比「有夹角」弱。\n\n⚠ 有限维时所有范数**等价**（诱导同一个拓扑、同一套收敛列）；\n\n无限维则不然 —— 这正是泛函分析开始变难的地方。\n\n⭐ 本图在凝聚态那一片另有 `def.semi-normed-ab-group`（半范数阿贝尔群）：那里的系数不是向量空间而是拓扑阿贝尔群，所以只能要半范数。",
    "refs": [
-    "Rudin, Functional Analysis",
+    "Rudin, Functional Analysis, Ch. 1",
     "Lang, Real and Functional Analysis, Ch. I"
    ]
   },
@@ -10298,7 +10295,7 @@
    "statement": "赋范空间 $V$ 叫**完备**的，当且仅当它按度量 $d(v, w) = \\|v - w\\|$ 完备，即每个 Cauchy 列都收敛。完备的赋范空间叫 **Banach 空间**。",
    "notes": "⭐ 三个标准范例：$\\mathbb{R}^{n}$（完备性就是 `thm.real-complete-metric` 的有限维版本）、$L^{p}$（`thm.lp-banach`，Riesz–Fischer）、紧 Hausdorff 空间上的 $C(S)$ 配上确界范数。\n\n⚠ 完备性不是自动的：$C[0, 1]$ 配上 $\\|f\\|_{1} = \\int_0^1 |f|$ **不**完备（可以逼近出不连续函数）。\n\n同一批函数换个范数就完备、换回来就不完备 —— 「完备」是范数的性质，不是集合的性质。\n\n⭐ 完备性是下面压缩映射原理的引擎（`thm.banach-fixed-point`）：没有它只能拿到 Cauchy 列，拿不到不动点。\n\n整条「逆映射定理」的构造性证明都靠这一条撑着。",
    "refs": [
-    "Rudin, Functional Analysis",
+    "Rudin, Functional Analysis, Ch. 1",
     "Zeidler, Nonlinear Functional Analysis I, Ch. 1"
    ]
   },
@@ -14581,7 +14578,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -14601,9 +14598,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#1b243432",
-      "statement": "v0.9.1#174abecd",
-      "notes": "v0.9.1#15d8cb14"
+      "abstract": "v0.9.2#1b243432",
+      "statement": "v0.9.2#174abecd",
+      "notes": "v0.9.2#15d8cb14"
      }
     }
    },
@@ -14644,7 +14641,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -14664,9 +14661,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#0a85dee1",
-      "statement": "v0.9.1#ad479275",
-      "notes": "v0.9.1#8645e773"
+      "abstract": "v0.9.2#0a85dee1",
+      "statement": "v0.9.2#ad479275",
+      "notes": "v0.9.2#8645e773"
      }
     }
    },
@@ -14700,7 +14697,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -14720,9 +14717,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#56ffe956",
-      "statement": "v0.9.1#2db4532b",
-      "notes": "v0.9.1#bd705c8a"
+      "abstract": "v0.9.2#56ffe956",
+      "statement": "v0.9.2#2db4532b",
+      "notes": "v0.9.2#bd705c8a"
      }
     }
    },
@@ -18550,11 +18547,11 @@
    "title": "正则且第二可数的空间可度量化",
    "label_en": "Urysohn Metrization Theorem",
    "title_en": "Urysohn Metrization Theorem",
-   "abstract_en": "A regular $T_{1}$ space with a countable base is metrisable. The proof embeds $X$ into a countable product of copies of $[0,1]$: second countability makes $X$ Lindelof, regularity together with Lindelof makes it normal, and Urysohn functions attached to pairs $\\operatorname{cl}B_{m}\\subseteq B_{n}$ of basic open sets separate points from closed sets. The embedding is a homeomorphism onto its image, and the metric of the product pulls back to a metric inducing the topology of $X$.",
+   "abstract_en": "A regular $T_{1}$ space with a countable base is metrisable. The proof embeds $X$ into a countable product of copies of $[0,1]$: second countability makes $X$ Lindelöf, regularity together with Lindelöf makes it normal, and Urysohn functions attached to pairs $\\operatorname{cl}B_{m}\\subseteq B_{n}$ of basic open sets separate points from closed sets. The embedding is a homeomorphism onto its image, and the metric of the product pulls back to a metric inducing the topology of $X$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -18563,14 +18560,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#60c5ccbe"
+      "abstract": "v0.9.2#46d84e3a"
      }
     }
    },
@@ -20225,8 +20220,8 @@
    "abstract_en": "For a compact orientable surface $M\\subseteq\\mathbb{R}^{3}$, possibly with piecewise smooth boundary, $\\int_{M}K\\,\\mathrm{d}A + \\int_{\\partial M}k_{g}\\,\\mathrm{d}s = 2\\pi\\chi(M)$, where $K$ is the Gaussian curvature, $k_{g}$ the geodesic curvature and $\\chi$ the Euler characteristic. In particular a closed surface satisfies $\\int_{M}K\\,\\mathrm{d}A = 2\\pi\\chi(M)$, so total curvature is a topological invariant: $4\\pi$ for the sphere, $0$ for the torus and $4\\pi(1-g)$ in genus $g$. The local statement for a disc bounded by a simple closed curve is the heart of the proof; the global one follows by summing over a triangulation.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -20235,14 +20230,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#a2b71cd8"
+      "abstract": "v0.9.2#f50628dc"
      }
     }
    },
@@ -20708,8 +20701,8 @@
    "abstract_en": "A smooth manifold is a Hausdorff second countable space covered by charts $(U,\\varphi)$ into $\\mathbb{R}^{n}$ whose transition maps $\\psi\\circ\\varphi^{-1}$ are $C^{\\infty}$, equipped with a maximal atlas. Maximising the atlas is what makes smoothness a property of the manifold rather than of a chosen family of charts. Hausdorff separates points, while second countability gives paracompactness and hence partitions of unity, the tool that glues local constructions into global ones. A smooth structure is extra data, not a topological invariant: one topological space can carry inequivalent smooth structures.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -20718,14 +20711,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#f864fff8"
+      "abstract": "v0.9.2#8fbaf65c"
      }
     }
    },
@@ -21846,7 +21837,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -21866,9 +21857,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#38afc3f7",
-      "statement": "v0.9.1#bde1a964",
-      "notes": "v0.9.1#e5f47458"
+      "abstract": "v0.9.2#38afc3f7",
+      "statement": "v0.9.2#bde1a964",
+      "notes": "v0.9.2#e5f47458"
      }
     }
    },
@@ -23271,8 +23262,8 @@
    "abstract_en": "A tensor field is the smooth version of a multilinear form attached to each point: an $(r,s)$-tensor at $p$ eats $r$ covectors and $s$ vectors and returns a number, and the tensor bundle $T^{(r,s)}M$ collects these into a manifold of dimension $n+n^{r+s}$ whose transition maps are products of Jacobi matrices. Smooth sections of that bundle are the $(r,s)$-tensor fields. Metrics, differential forms, symplectic forms and the curvature tensor are all instances, and because the transition law involves only first derivatives, tensor components never pick up second derivatives.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -23281,14 +23272,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#549cebae"
+      "abstract": "v0.9.2#06e55f52"
      }
     }
    },
@@ -25753,8 +25742,8 @@
    "abstract_en": "Integrating forms pairs de Rham cohomology, closed forms modulo exact ones, with singular homology, and the de Rham theorem says the pairing is perfect: for every $k$ there is an isomorphism $H^{k}_{\\mathrm{dR}}(M)\\to H^{k}_{\\mathrm{sing}}(M;\\mathbb{R})$ sending $[\\omega]$ to the functional $[c]\\mapsto\\int_{c}\\omega$. The maps are compatible with pullbacks, so they form a natural isomorphism of graded algebras. The theorem welds analysis, geometry and topology into a single object.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -25763,14 +25752,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#ab97968c"
+      "abstract": "v0.9.2#9a6ce556"
      }
     }
    },
@@ -26115,8 +26102,8 @@
    "abstract_en": "The volume form of an $n$-manifold cannot simply be pulled back to a $k$-dimensional submanifold: for $k<n$ every $n$-form restricts to the zero form. The volume of a submanifold therefore comes from the induced metric $g_{N} := i^{*}g$, whose volume form in an oriented chart is $\\sqrt{\\det(g_{ab})}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\mathrm{d}x^{k}$ with $g_{ab} := g(\\partial_{a}i,\\partial_{b}i)$. For a hypersurface this reduces to the interior product $\\iota_{\\nu}\\,\\mathrm{d}V_{g}$ with the unit normal, which is exactly where the surface element in the divergence theorem comes from.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -26125,14 +26112,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#06b84746"
+      "abstract": "v0.9.2#0f5e4425"
      }
     }
    },
@@ -27769,11 +27754,11 @@
    "title_en": "shrinking",
    "abstract_en": "A family $\\{E_r\\}_{r > 0}$ of Borel subsets of $\\mathbb{R}^n$ shrinks nicely to $x$ when $E_r \\subseteq B(r,x)$ for every $r$ and there is $\\alpha > 0$ with $m(E_r) > \\alpha \\cdot m(B(r,x))$ for all $r$. The two conditions say \"fits inside the ball\" and \"is not too thin\". Balls themselves qualify, as does any fixed shape rescaled inside them; a thin sliver does not. The notion exists so that differentiation theorems do not depend on the shape of the sets being shrunk.",
    "statement_en": "A family $\\{E_r\\}_{r > 0}$ of Borel subsets of $\\mathbb{R}^n$ is said to **shrink nicely to $x$** iff\n\n$\\cdot$ $E_r \\subseteq B(r, x)$ holds for every $r$;\n$\\cdot$ there is $\\alpha > 0$ with $m(E_r) > \\alpha\\cdot m(B(r, x))$ for every $r$.",
-   "notes_en": "What the two conditions say: **it fits inside** ($E_r$ lies in the ball) and **it is not too flat** (its volume is at least $alpha$ times that of the ball).\n\nTypical examples: take $E_r = B(r, x)$ itself ($alpha = 1$); or take $E_r$ to be a fixed shape inside the ball (a cube, say), rescaled proportionally.\n\nCounterexample: let $E_r$ be a long thin sliver inside the ball — the volume ratio can tend to 0, and such a family does not shrink nicely to $x$.\n\n⭐ The notion was introduced so that differentiation theorems **do not depend on the shape of the ball**: as long as it is not flat, the conclusion stands.",
+   "notes_en": "What the two conditions say: **it fits inside** ($E_r$ lies in the ball) and **it is not too flat** (its volume is at least $\\alpha$ times that of the ball).\n\nTypical examples: take $E_r = B(r, x)$ itself ($\\alpha = 1$); or take $E_r$ to be a fixed shape inside the ball (a cube, say), rescaled proportionally.\n\nCounterexample: let $E_r$ be a long thin sliver inside the ball — the volume ratio can tend to 0, and such a family does not shrink nicely to $x$.\n\n⭐ The notion was introduced so that differentiation theorems **do not depend on the shape of the ball**: as long as it is not flat, the conclusion stands.",
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -27793,9 +27778,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#a792035c",
-      "statement": "v0.9.1#def659f2",
-      "notes": "v0.9.1#cd8d3dd5"
+      "abstract": "v0.9.2#a792035c",
+      "statement": "v0.9.2#def659f2",
+      "notes": "v0.9.2#cd8d3dd5"
      }
     }
    },
@@ -27991,7 +27976,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -28005,7 +27990,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#bb2f0476"
+      "abstract": "v0.9.2#bb2f0476"
      }
     }
    },
@@ -32065,7 +32050,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -32085,9 +32070,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#aa637905",
-      "statement": "v0.9.1#2fff7b16",
-      "notes": "v0.9.1#e730d43c"
+      "abstract": "v0.9.2#aa637905",
+      "statement": "v0.9.2#2fff7b16",
+      "notes": "v0.9.2#e730d43c"
      }
     }
    },
@@ -32328,8 +32313,8 @@
    "statement_en": "**What it does**: it replaces \"the $k$-form written in coordinates\" by a **chart-free** description. Once that is done, a form really is an object on the manifold, and not \"an expression inside some chart\".\n\nLet $M$ be a smooth $n$-manifold. A **differential $k$-form** $\\omega$ on $M$ assigns to each point $p\\in M$ an **alternating $k$-linear form**\n\n$$\\omega_{p} : T_{p}M\\times\\cdots\\times T_{p}M\\longrightarrow\\mathbb{R},$$\n\nand it **depends smoothly**: for every chart $(U,x)$ the function $p\\mapsto\\omega_{p}\\bigl(\\partial_{i_{1}}\\big|_{p},\\ldots,\\partial_{i_{k}}\\big|_{p}\\bigr)$ is smooth on $U$. The set of all $k$-forms on $M$ is denoted $\\Omega^{k}(M)$.\n\n**Smoothness is equivalent to smooth coefficients**: on $(U,x)$ the form $\\omega$ is uniquely written as\n\n$$\\omega\\big|_{U} = \\sum_{I}a_{I}\\,\\mathrm{d}x^{I},\\qquad \\mathrm{d}x^{I} := \\mathrm{d}x^{i_{1}}\\wedge\\cdots\\wedge\\mathrm{d}x^{i_{k}},$$\n\nwhere $I$ runs over all $i_{1}<\\cdots<i_{k}$ and the coefficients are given by $a_{I} := \\omega\\bigl(\\partial_{i_{1}},\\ldots,\\partial_{i_{k}}\\bigr)$. On the overlap of two charts the two sets of coefficients are converted into one another by the $k$-minors of the Jacobian matrix — and minors are smooth, so \"the coefficients are smooth\" does not depend on the chart chosen. This step is what makes the definition work at all: **it welds a local expression into a global object**.\n\n**Conventions**: $\\Omega^{0}(M) := C^{\\infty}(M)$; $\\Omega^{1}(M)$ consists of the 1-forms; and $\\Omega^{k}(M) = 0$ for $k > n$ (there is no nonzero alternating $k$-linear form on an $n$-dimensional space). The direct sum $\\Omega^{\\bullet}(M) = \\bigoplus_{k\\ge 0}\\Omega^{k}(M)$, with the wedge product, is a graded algebra.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32338,14 +32323,12 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "stale",
+      "statement": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "statement"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#d05c11a4"
+      "statement": "v0.9.2#5038a87a"
      }
     }
    },
@@ -32380,7 +32363,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32394,7 +32377,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#3a0efaf9"
+      "statement": "v0.9.2#3a0efaf9"
      }
     }
    },
@@ -32429,7 +32412,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32443,7 +32426,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#c76f8521"
+      "statement": "v0.9.2#c76f8521"
      }
     }
    },
@@ -32478,7 +32461,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32492,7 +32475,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#2b81febc"
+      "statement": "v0.9.2#2b81febc"
      }
     }
    },
@@ -32527,7 +32510,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32541,7 +32524,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#0cf9dc1d"
+      "statement": "v0.9.2#0cf9dc1d"
      }
     }
    },
@@ -32576,8 +32559,8 @@
    "statement_en": "**What it says**: a vector bundle only requires the fiber to be a vector space. Replacing the vector space by an **arbitrary manifold $F$** gives a fiber bundle — covering spaces, principal bundles and vector bundles all fall under this one definition.\n\nLet $E, B, F$ be smooth manifolds and $\\pi : E\\to B$ a smooth surjection. One calls $\\pi$ (together with $E$) a **fiber bundle with fiber $F$ and base $B$** if every point $b\\in B$ has an open neighbourhood $U$ and a diffeomorphism\n\n$$\\Phi : \\pi^{-1}(U)\\longrightarrow U\\times F,\\qquad \\operatorname{pr}_{1}\\circ\\Phi = \\pi ,$$\n\nthat is, $\\Phi$ commutes with the projection. Such a $\\Phi$ is called a **local trivialization**, $E_{b} := \\pi^{-1}(b)$ the **fiber** over $b$, and $E$ the **total space**.\n\n**Transition functions**: two trivializations over the same open cover necessarily differ over their overlap by a fiberwise self-homeomorphism\n\n$$\\Phi_{\\alpha}\\circ\\Phi_{\\beta}^{-1}\\,(b, y) = \\bigl(b,\\ g_{\\alpha\\beta}(b)\\,y\\bigr),$$\n\nwhere $g_{\\alpha\\beta} : U_{\\alpha}\\cap U_{\\beta}\\to\\operatorname{Diff}(F)$ is the **transition function**. They satisfy the cocycle conditions $g_{\\alpha\\alpha} = \\operatorname{id}$ and $g_{\\alpha\\beta}\\,g_{\\beta\\gamma}\\,g_{\\gamma\\alpha} = \\operatorname{id}$ (on overlaps), and they measure how twisted the bundle is.\n\nIf a Lie group $G$ acts on $F$ and the trivializations can always be chosen so that all $g_{\\alpha\\beta}$ take values in $G$, one says the bundle has **structure group** $G$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32586,14 +32569,12 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "stale",
+      "statement": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "statement"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#ffd3f1e4"
+      "statement": "v0.9.2#32b532b4"
      }
     }
    },
@@ -32628,7 +32609,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "statement",
       "name"
@@ -32642,7 +32623,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.1#2fbdf8a3"
+      "statement": "v0.9.2#2fbdf8a3"
      }
     }
    },
@@ -34993,7 +34974,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -35007,7 +34988,7 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#361b9f22"
+      "abstract": "v0.9.2#361b9f22"
      }
     }
    },
@@ -35252,7 +35233,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -35272,9 +35253,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#0d075471",
-      "statement": "v0.9.1#fd63d442",
-      "notes": "v0.9.1#667e877a"
+      "abstract": "v0.9.2#0d075471",
+      "statement": "v0.9.2#fd63d442",
+      "notes": "v0.9.2#667e877a"
      }
     }
    },
@@ -37383,7 +37364,7 @@
    "statement": "设 $A \\subseteq X$ 是拓扑空间。称 $A$ **无处稠密**（nowhere dense），若 $(\\overline{A})^\\circ = \\emptyset$；等价地：每个非空开集都含一个非空开子集与 $A$ 不交。",
    "notes": "⚠️ 「无处稠密」不是「不稠密」：$(0,1) \\cup (1,2)$ 在 $\\mathbb{R}$ 里既不稠密也无处稠密 —— 它要求「连闭包都没肉」。\n\n例：$\\mathbb{Z} \\subseteq \\mathbb{R}$、$\\{1/n\\}$、Cantor 集。\n\n⭐ Cantor 集是最有教育意义的例子：它**无处稠密**却**不可数**。所以「无处稠密」与「基数小」是两件事。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37422,7 +37403,7 @@
    "statement": "$A \\subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可数个无处稠密集之并；不是第一纲的叫**第二纲集**。称 $A$ **剩余**（residual），若 $A^c$ 第一纲。",
    "notes": "「纲」是「大小」的第三种口径，既不是基数也不是测度：$\\mathbb{Q}$ 可数、稠密但是第一纲（每个单点无处稠密）；Cantor 集不可数、测度为零但是第一纲（它本身无处稠密）；$[0,1] \\setminus \\mathbb{Q}$ 是第二纲且剩余。\n\n⚠️ 第二纲 $\\ne$ 稠密：$[0,1] \\cup \\{2\\}$ 也是第二纲。\n\n⭐ 用法：想说「几乎所有点都满足 $P$」，就去证 $\\{x : \\neg P(x)\\}$ 第一纲。在无穷维里这比测度论更顺手（很多函数空间没有自然测度，但有 Baire 纲）。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37461,7 +37442,7 @@
    "statement": "$A$ 叫 **$G_\\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\\sigma$ 集**，若 $A$ 是可数个闭集之并。",
    "notes": "在度量空间里单点闭、开集是可数多个球的并，所以「闭 $\\subseteq F_\\sigma$」「开 $\\subseteq G_\\delta$」。\n\n⭐ Baire 之后，「稠密 $G_\\delta$」是「几乎全部的点」的标准写法：连续点集、可微点集、$C[0,1]$ 里无处可微函数的全体，全是稠密 $G_\\delta$。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37501,7 +37482,7 @@
    "statement": "设 $X$ 是完备度量空间（或局部紧 Hausdorff 空间）。则可数个稠密开集之交仍**稠密**。等价地：\n\n1. 可数个无处稠密闭集之并的内部为空；\n2. 每个非空开集都是**第二纲**的。",
    "notes": "证法（球套法）分四步：\n\n1. **起点**：记 $B_0 := B(x, \\varepsilon)$。\n\n$O_1$ 稠密开 $implies$ $B_0 \\cap O_1$ 是非空开，于是可取 $x_1$ 与 $\\varepsilon_1 < \\min(\\varepsilon/2,\\ 1)$ 使\n\n$$\\overline{B(x_1, \\varepsilon_1)} \\subseteq B(x, \\varepsilon) \\cap O_1 .$$\n\n2. **归纳**：已取 $x_n, \\varepsilon_n$（且 $\\varepsilon_n < 1/n$）。\n\n由 $O_{n+1}$ 稠密开，$B(x_n, \\varepsilon_n) \\cap O_{n+1}$ 仍是非空开，取\n\n$$\\overline{B(x_{n+1}, \\varepsilon_{n+1})} \\subseteq B(x_n, \\varepsilon_n) \\cap O_{n+1}, \\qquad \\varepsilon_{n+1} < \\frac{1}{n+1} .$$\n\n3. **嵌套闭球取点**：半径 $\\varepsilon_n \\to 0$，而 $X$ 完备，于是 $\\bigcap_n \\overline{B(x_n, \\varepsilon_n)} \\ne \\emptyset$，取其中一点 $y$。\n\n（这里「半径趋于 $0$」不能省：完备性只保证半径趋于 $0$ 的嵌套闭球有公共点。）\n\n4. **收尾**：对每个 $n$，$y \\in \\overline{B(x_n, \\varepsilon_n)} \\subseteq B_0 \\cap O_n$，所以 $y \\in B_0$ 且 $y \\in \\bigcap_n O_n$。\n\n$B_0$ 是任取的，于是 $\\bigcap_n O_n$ 与每个非空开集相交 ，故稠密。\n\n∎\n\n⭐ 三种等价写法都要会用，转换只需取补集。\n\n⚠️ 完备性不能去掉：$\\mathbb{Q}$ 上每个单点闭且无处稠密，$\\mathbb{Q}$ 可数，故 $\\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法",
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）",
     "Baire 1899"
    ]
   },
@@ -37541,7 +37522,7 @@
    "statement": "局部紧 Hausdorff 空间是 Baire 空间。",
    "notes": "证法与完备度量情形同构，只把「嵌套闭球半径 $\\to 0$」换成「嵌套紧邻域」：交非空由紧集的**有限交性质**保证（不需要半径趋于零）。\n\n⭐ 意义：这条把 Baire 纲从「度量」里解放出来，于是它能用在 $C(K)$、紧群、Stone 空间这些非度量对象上 —— 凝聚态数学里的紧 Hausdorff 空间因此也能用「一般点」论证。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37580,7 +37561,7 @@
    "statement": "下列**等价**：\n\n1. $X$ 是 Baire 空间（可数个稠密开集之交稠密）；\n2. $X$ 的每个非空开集是第二纲的；\n3. 可数个无处稠密闭集之并不含非空开集（内部为空）。",
    "notes": "三条就是同一条取补集：稠密开 $\\leftrightarrow$ 无处稠密闭、交 $\\leftrightarrow$ 并、「稠密」$\\leftrightarrow$「内部为空」。\n\n⭐ **纲的用法（讲义原话）**：要证「满足性质 $P$ 的点存在」，就去证 $\\{x : P(x)\\}$ 是**稠密 $G_\\delta$**。这样拿到的不只是「存在」，而是「几乎处处存在」（generic）。\n\n⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37619,7 +37600,7 @@
    "statement": "$X$ Baire、$\\Omega \\subseteq X$ 开 $\\implies$ $\\Omega$（带子空间拓扑）是 Baire 空间。",
    "notes": "证法：设 $O_n$ 在 $\\Omega$ 里稠密开，写 $O_n = \\Omega \\cap O_n'$（$O_n'$ 在 $X$ 中开）。\n\n则 $O_n' \\cup \\Omega^c$ 在 $X$ 中**稠密开**；\n\n于是 $\\bigcap_n(O_n' \\cup \\Omega^c)$ 在 $X$ 稠密，与 $\\Omega$ 相交得 $\\bigcap_n O_n$ 在 $\\Omega$ 稠密。\n\n⭐ 用处：开映射定理要在开集上做局部论证、UBP 要看开子集，这条保证「局部化之后 Baire 性质不丢」。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37658,7 +37639,7 @@
    "statement": "设 $X$ 是 Baire 空间，$F_n \\subseteq X$ 闭，且 $X = \\bigcup_n F_n$。则 $\\bigcup_n \\operatorname{int} F_n$ 在 $X$ 中**稠密**。特别地，至少有一个 $F_n$ 有非空内部。",
    "notes": "这是把「有一块闭集能被盖住」变成「有一个球里的东西一致地被控制」—— 正是 UBP 与开映射定理要的那一句。\n\n它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37697,7 +37678,7 @@
    "statement": "设 $X$ 是 Baire 空间，$f_n : X \\to E$ 连续（$E$ 度量），且 $f_n \\to f$ **逐点**。则\n\n$$\\operatorname{cont}(f) := \\{x : f \\text{ 在 } x \\text{ 连续}\\}$$\n\n是**稠密 $G_\\delta$**。特别地 $f$ 至少在一个稠密 $G_\\delta$ 上连续。",
    "notes": "证法（骨架）：令 $F_{n,k} = \\{x : \\|f_i(x) - f_j(x)\\| \\le 1/k\\ (\\forall i, j \\ge n)\\}$，它是闭集且 $X = \\bigcup_n F_{n,k}$；\n\n由 Baire，$O_k := \\bigcup_n \\operatorname{int} F_{n,k}$ 稠密开。\n\n令 $O := \\bigcap_k O_k$（稠密 $G_\\delta$），在 $O$ 上用「$x$ 落在一个 $\\operatorname{int} F_{n,k}$ 里 $\\implies$ 邻域上 $f_n$ 一致接近」得连续性。\n\n⚠️ 逐点极限**不必**连续（$f_n(x) = x^n$ 在 $[0,1]$ 上）；它只是「连续点很多」。\n\n⭐ 同一模板的经典产物：$C[0,1]$ 里「处处不可微」的函数构成稠密 $G_\\delta$（Banach 1931）。",
    "refs": [
-    "Rudin, Functional Analysis · Baire 纲定理与纲的用法"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37737,7 +37718,7 @@
    "statement": "设 $E$ 是 Banach 空间，$F$ 赋范，$\\{u_i\\}_{i \\in I} \\subseteq B(E, F)$。若对每个 $x \\in E$，\n\n$$\\sup_{i \\in I} \\|u_i(x)\\| < \\infty \\qquad (\\text{逐点有界}) ,$$\n\n则 $\\displaystyle \\sup_{i \\in I}\\|u_i\\| < \\infty$（**一致**有界）。",
    "notes": "证法：令 $F_k = \\{x : \\sup_i \\|u_i x\\| \\le k\\} = \\bigcap_i \\{x : \\|u_i x\\| \\le k\\}$，每个 $\\{x : \\|u_i x\\| \\le k\\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；\n\n逐点有界 $\\implies E = \\bigcup_k F_k$。\n\n由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。\n\n于是对 $\\|x\\| \\le r$：$\\sup_i \\|u_i x\\| \\le \\sup_i \\|u_i(x + x_0)\\| + \\sup_i \\|u_i x_0\\| \\le 2k$，取 $x = r y/\\|y\\|$ 得 $\\|u_i y\\| \\le 2k\\|y\\|/r$，故 $\\sup_i\\|u_i\\| \\le 2k/r$。\n\n⭐ **名字**：讲义与很多中文书叫它「共鸣定理」（resonance theorem），也叫「一致有界原理」；本图两个都收进别名。三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。\n\n⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。",
    "refs": [
-    "Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像",
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）",
     "Banach–Steinhaus 1927"
    ]
   },
@@ -37778,7 +37759,7 @@
    "statement": "设 $E$ Banach，$F$ 赋范，$u_n \\in B(E, F)$，且 $\\sup_n \\|u_n\\| = \\infty$。则\n\n$$R := \\Bigl\\{ x \\in E : \\sup_n \\|u_n(x)\\| = \\infty \\Bigr\\}$$\n\n是**稠密 $G_\\delta$**（特别地非空）。",
    "notes": "证法：令 $\\Omega_k = \\{x : M(x) = \\sup_i\\|u_i x\\| > k\\} = \\bigcup_i \\{x : \\|u_i x\\| > k\\}$，是开集；\n\n$R = \\bigcap_k \\Omega_k$ 是 $G_\\delta$。\n\n若某个 $\\Omega_k$ 不稠密，则存在球 $B(x_0, r) \\subseteq \\Omega_k^c$，球上 $M \\le k$，用与 UBP 同样的平移 + 伸缩得 $\\sup_i\\|u_i\\| \\le 2k/r$，矛盾。\n\n⭐ 意义：「发散」不是个别点，而是**几乎处处**。经典应用：Fourier 级数部分和算子满足 $\\|S_N\\| \\to \\infty$，于是**存在**连续函数其 Fourier 级数在某点发散（du Bois-Reymond 1876）—— 而且这样的函数「很多」。",
    "refs": [
-    "Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像"
+    "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
    ]
   },
   {
@@ -37818,7 +37799,7 @@
    "statement": "设 $E, F$ 都是 Banach 空间，$u \\in B(E, F)$ 是**满射**。则 $u$ 是**开映射**：开集的像是开集。等价地，存在 $r > 0$ 使\n\n$$u(B_E) \\supseteq r\\, B_F .$$\n**纲版表述（教科书里最常见的那一版）**：设 $E, F$ 是 Banach 空间、$u \\in B(E,F)$ 满射。\n\n则\n\n$$\\text{对 } F \\text{ 的每个非空开集 } \\Omega,\\quad u(E) \\cap \\Omega \\ \\text{是第二纲的（在 } \\Omega \\text{ 中）},$$\n\n特别地 $u(E) = F$ **不是第一纲集**（也就是说：$F$ 不能被 $u(E)$ 的可数个无处稠密子集覆盖 —— 由于 $u$ 满射，这句话在 $F$ 上自动成立，真正的信息是「$u(B_E)$ 含内点」）。\n\n**为什么这三句话是同一件事**：\n\n1. 若 $u(B_E) \\supseteq r B_F$（含球版），则 $u$ 把开集映成开集（把球平移到任意点即得开映射版）；\n\n\n2. 若 $u$ 是开映射，则 $u(B_E)$ 是含 $0$ 的开集，自然含球；\n\n\n3. 若 $u(E)$ 在某个开集里是第二纲的，则 $u(E)$ 不可能被可数个无处稠密集覆盖 —— 而 $E = \\bigcup_k \\overline{kB_E}$，于是某个 $\\overline{u(kB_E)}$ 必含内点（否则可数个无处稠密集覆盖了 $u(E)$ 的一个开集，与第二纲矛盾）。\n\n**证明的第一步就是纲**（这也是你看到的版本为何那样陈述）：\n\n$$E = \\bigcup_{k \\ge 1} \\overline{k\\,B_E} \\quad\\Longrightarrow\\quad u(E) = F = \\bigcup_{k} \\overline{u(kB_E)} ,$$\n\n右端是可数个闭集之并，由纲定理（`thm.baire`）其中某个 $\\overline{u(kB_E)}$ 必须含内点；\n\n再用「$k$ 倍」与「平移」把它搬回 $0$，得 $\\overline{u(B_E)} \\supseteq r B_F$。\n\n之后第二步才用 $E$ 的**完备性**去掉闭包（`imp.fa-openmap`）。",
    "notes": "证明分三段（**骨架**，细节见 Rudin 2.11）：\n\n① **取内点（Baire）**：$E = \\bigcup_k \\overline{u(kB_E)}$，由「闭覆盖有内点」某个 $\\overline{u(kB_E)}$ 含球，再用线性把它搬回 $0$，得 $\\overline{u(B_E)} \\supseteq r B_F$。\n\n② **去掉闭包（完备性）**：递归取 $x_n$ 使余项按 $\\varepsilon^n$ 缩小而 $\\|x_n\\|$ 按 $\\varepsilon^{n-1}$ 放大；$E$ 完备使 $x = \\sum x_n$ 收敛，连续性给出 $u(x) = y$ 且 $\\|x\\| \\le \\|y\\|/r$。\n\n③ **得到开性**：$\\|x\\| < 1 \\implies u(x)$ 覆盖 $rB_F$，平移伸缩即得「开球的像含开球」。\n\n⚠️ **满射不能去掉**（稠密嵌入 $E \\hookrightarrow F$ 不开）；**两边完备都不能去掉**：$E$ 用来拿内点，$F$ 用来去闭包。\n\n⚠️ 与图中 `thm.open-mapping`（**非常数全纯函数**把开集映成开集）**同名不同物**：那条是复分析结论，这条是线性算子的（Baire + 级数逼近）。",
    "refs": [
-    "Rudin, Functional Analysis · 开映射定理（Baire 纲的第一步）"
+    "Rudin, Functional Analysis, 2.11"
    ]
   },
   {
@@ -37858,7 +37839,7 @@
    "statement": "设 $E, F$ 都是 Banach 空间，$u \\in B(E, F)$ 是**双射**。则 $u^{-1} \\in B(F, E)$。",
    "notes": "证明一行：$u$ 开（开映射定理）$\\iff$ $u^{-1}$ 连续。\n\n⭐ 这是「连续 + 双射 $\\implies$ 同胚」在**线性**世界的额外赠品 —— 一般拓扑里不成立。\n\n⭐ 与 `thm.inverse-function-banach`（Banach 版**逆映射定理**）分工：那条是**非线性**的（$f'(a)$ 可逆 $\\implies$ 局部微分同胚，证明用 Neumann 级数 + 压缩映射）；这条是**线性**双射的（证明用 Baire）。两者常被混称，但内容与证法都不同。",
    "refs": [
-    "Rudin, Functional Analysis · 开映射定理"
+    "Rudin, Functional Analysis, 2.12"
    ]
   },
   {
@@ -37898,7 +37879,7 @@
    "statement": "设 $E, F$ 都是 Banach 空间，$u : E \\to F$ 线性。按「映射」那条的约定，**映射就是它的图像**：\n\n$$G(u) = \\{(x, u(x)) : x \\in E\\} \\subseteq E \\times F .$$\n\n把 $G(u)$ 当作乘积空间 $E \\times F$ 的子集。若它在**乘积拓扑**下闭，则 $u$ 有界（亦即连续）。\n\n实际用起来就是这一条判据：\n\n$$x_n \\to x \\ \\text{且} \\ u(x_n) \\to y \\quad \\Longrightarrow \\quad y = u(x) .$$",
    "notes": "⭐ **$G(u)$ 不是新造的对象**：按集合论的约定映射就是它的图像（见「映射」），所以 $G(u)$ 与 $u$ 是同一个集合，只是看它的角度不同 —— 写作 $\\{(x, u(x))\\}$ 是为了把它放进 $E \\times F$。\n\n理由很简单：**闭是拓扑性质，而映射本身没有「闭」可言**（它只是一个集合），有意义的说法是「它作为 $E\\times F$ 的子集在这两个空间的乘积拓扑下闭」。\n\n换成 $u : E \\to F$ 的「图像」而不另立定义，正是为了不让人以为这是两个不同的东西。\n\n证明：图像闭 $\\implies G(u)$ 是 Banach 空间（闭子集 + 乘积空间完备）。两个投影有界，$\\pi_1 : G(u) \\to E$ 是有界双射，由**逆算子定理** $\\pi_1^{-1}$ 有界，于是 $u = \\pi_2 \\circ \\pi_1^{-1}$ 有界。\n\n⚠️ 「图像闭」比「有界」好验证得多：只需上面那条判据，不用估计 $\\|u x\\|$。这就是它的实用价值。\n\n⚠️ **容易误读的地方**：「连续 $\\implies$ 图像闭」是初等的（连续函数的图像当然闭），所以容易以为两边差不多。其实反方向才是这条定理的内容，而且它**必须**要 Banach + 线性：在非完备空间上图像闭而不连续的线性映射是存在的。\n\n⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。",
    "refs": [
-    "Rudin, Functional Analysis · 闭图像定理"
+    "Rudin, Functional Analysis, 2.15"
    ]
   },
   {
@@ -39152,13 +39133,13 @@
    "title": "基数可比定理（需要选择公理）",
    "label_en": "comparability of cardinals",
    "title_en": "comparability of cardinals",
-   "abstract_en": "Assuming the axiom of choice, any two sets $A$, $B$ satisfy $|A| \\le |B|$ or $|B| \\le |A|$, that is, any two cardinals are comparable. This is the licence for ordering cardinals at all: without it even \"$A$ is bigger than $B$\" can be meaningless. The proof runs through the well-ordering theorem: well-order both sets, compare the corresponding ordinals, and read off an injection in one direction. Without AC there really are incomparable cardinals.",
+   "abstract_en": "Assuming the axiom of choice, any two sets $A$, $B$ satisfy $\\#A \\le \\#B$ or $\\#B \\le \\#A$, that is, any two cardinals are comparable. This is the licence for ordering cardinals at all: without it even \"$A$ is bigger than $B$\" can be meaningless. The proof runs through the well-ordering theorem: well-order both sets, compare the corresponding ordinals, and read off an injection in one direction. Without AC there really are incomparable cardinals.",
    "statement_en": "Under the **axiom of choice**: for any two sets $A$ and $B$ we have $\\#A \\le \\#B$ or $\\#B \\le \\#A$.\n\nThat is, any two cardinals are comparable.",
    "notes_en": "⭐ This is the licence to *order* cardinals: without it, even the sentence \"$A$ is bigger than $B$\" can be meaningless.\n\nRoute of the proof (see the edge): the **well-ordering theorem** well-orders both $A$ and $B$, the corresponding ordinals are comparable, and hence one direction admits an injection. So this theorem, AC and the well-ordering theorem are three ways of saying the same thing.\n\n⚠ Without AC there really are incomparable cardinals (Jech, *The Axiom of Choice*).",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -39171,20 +39152,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
-      "statement": "stale",
-      "notes": "stale",
+      "abstract": "reviewed",
+      "statement": "reviewed",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#ac47a0af",
-      "statement": "v0.9.1#65d602d2",
-      "notes": "v0.9.1#f4afd520"
+      "abstract": "v0.9.2#cdc1cc69",
+      "statement": "v0.9.2#ffeadee2",
+      "notes": "v0.9.2#90e06db8"
      }
     }
    },
@@ -39785,7 +39762,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -39805,9 +39782,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#481df90f",
-      "statement": "v0.9.1#5c26a908",
-      "notes": "v0.9.1#fe258a30"
+      "abstract": "v0.9.2#481df90f",
+      "statement": "v0.9.2#5c26a908",
+      "notes": "v0.9.2#fe258a30"
      }
     }
    },
@@ -39966,8 +39943,8 @@
    "notes_en": "⭐ **Why divide by the null sequences**: the same real number has many approximating sequences — for instance $(1, 1, 1, \\ldots)$ and $(1.1,\\ 1.01,\\ 1.001,\\ \\ldots)$ should both represent $1$, and their difference is a null sequence. Equivalence classes glue \"different approximations of one and the same number\" into a single object.\n\n⚠ Here we use **only the order and the absolute value of $\\mathbb{Q}$** ($\\varepsilon$ ranges over positive rationals, and the absolute value is the one on $\\mathbb{Q}$), so there is **no circularity**: this step makes perfect sense before $\\mathbb{R}$ is constructed. The language of \"distance, Cauchy sequence, completeness\" in metric spaces is exactly what was abstracted out of this construction.\n\nThree facts needed later:\n- a Cauchy sequence is **bounded**;\n- **sum, difference and product of Cauchy sequences are again Cauchy**;\n- **a Cauchy sequence that is not a null sequence satisfies $|x_n| \\ge \\delta$ from some index on** (for some positive rational $\\delta$) — hence its reciprocal, after discarding finitely many terms, is again Cauchy. The third fact is the entire basis for \"multiplication has inverses\".",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -39980,19 +39957,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#d376e5cb",
-      "statement": "v0.9.1#4ba3632c",
-      "notes": "v0.9.1#a43dd73a"
+      "abstract": "v0.9.2#fa570817",
+      "statement": "v0.9.2#4ba3632c",
+      "notes": "v0.9.2#bf2a2534"
      }
     }
    },
@@ -40201,8 +40175,8 @@
    "notes_en": "⭐ The proof goes by **nested closed intervals + diagonalisation** (see the edge): assume $\\mathbb{R}$ can be arranged as $x_1, x_2, \\ldots$, then bisect to build a nested sequence of closed intervals, ruling out the $x_n$ one by one, and use **completeness** to extract their unique common point — which differs from every $x_n$.\n\n⚠ The whole proof uses **only the completeness of $\\mathbb{R}$** (the least-upper-bound principle); cardinal theory is not needed. The half saying $|\\mathbb{R}| = 2^{\\aleph_0}$ matches binary expansions against $\\mathcal{P}(\\mathbb{N})$ and then quotes Cantor's theorem.\n\n**The most counter-intuitive point of this theorem**: $\\mathbb{Q}$ and $\\mathbb{R}$ are both dense and each can be approximated by the other, yet $\\mathbb{Q}$ is countable (it can be arranged as a sequence) while $\\mathbb{R}$ is not. **\"Dense\" and \"equally many\" are two different things** — and this is precisely why analysis has to be done over the reals rather than over the rationals.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -40215,19 +40189,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#ea2cb38a",
-      "statement": "v0.9.1#40ca76c6",
-      "notes": "v0.9.1#4475a98b"
+      "abstract": "v0.9.2#6b754c3d",
+      "statement": "v0.9.2#40ca76c6",
+      "notes": "v0.9.2#f1e86a60"
      }
     }
    },
@@ -41819,8 +41790,8 @@
    "notes_en": "In one sentence: **all the data of $F$ is generated by one element $s$ of $X$**. Given any other $t$, there is a unique $f$ pushing $s$ across to it — so elements elsewhere do not come from nowhere; they are pushed out of $s$.\n\nAn equivalent phrasing: $(X, s)$ is universal $\\iff$ $(X, s)$ is an initial object of the category of elements $\\operatorname{el}(F)$ — the word \"universal\" is used in the same way on this level and on the level below.\n\nExamples:\n\n- Let $k \\in \\operatorname{Ob}(\\mathbf{CRng})$ and let $F : k\\text{-}\\mathbf{Alg} \\to \\mathbf{Set}$ be the forgetful functor. Then $(k[t],\\ t)$ represents $F$: for $A \\in k\\text{-}\\mathbf{Alg}$ and $a \\in F(A)$, sending $t \\mapsto a$ induces a unique $k$-algebra homomorphism $k[t] \\to A$.\n- Let $F : \\mathbf{Ring} \\to \\mathbf{Set}$ be the constant functor at the one-point set. Then $\\mathbb{Z}$ represents $F$: every ring has a unique $\\mathbb{Z} \\to R$.\n- Fix a topological space $X$ and a subspace $Y \\subseteq X$, and take the contravariant functor\n\n  $$F : \\mathbf{Top}^{\\mathrm{op}} \\to \\mathbf{Set}, \\qquad Z \\mapsto \\{\\, f \\in \\mathcal{C}(Z, X) \\ \\mid\\ f(Z) \\subseteq Y \\,\\}$$\n\n  (here $\\mathcal{C}(Z, X)$ denotes the set of continuous maps $Z \\to X$). It is represented by the natural element $i : Y \\rightarrowtail X$ of $F(Y)$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -41833,19 +41804,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#db3381b4",
-      "statement": "v0.9.1#befbd619",
-      "notes": "v0.9.1#d1444966"
+      "abstract": "v0.9.2#5839abf6",
+      "statement": "v0.9.2#befbd619",
+      "notes": "v0.9.2#c93883dc"
      }
     }
    },
@@ -41968,7 +41936,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -41988,9 +41956,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#1bc8f10f",
-      "statement": "v0.9.1#f759aee2",
-      "notes": "v0.9.1#94b15f1c"
+      "abstract": "v0.9.2#1bc8f10f",
+      "statement": "v0.9.2#f759aee2",
+      "notes": "v0.9.2#94b15f1c"
      }
     }
    },
@@ -42312,7 +42280,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -42332,9 +42300,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#c81ceb51",
-      "statement": "v0.9.1#315d7da7",
-      "notes": "v0.9.1#9b807211"
+      "abstract": "v0.9.2#c81ceb51",
+      "statement": "v0.9.2#315d7da7",
+      "notes": "v0.9.2#9b807211"
      }
     }
    },
@@ -42453,7 +42421,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -42473,9 +42441,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#5b78b019",
-      "statement": "v0.9.1#f6d84124",
-      "notes": "v0.9.1#bdd6e136"
+      "abstract": "v0.9.2#5b78b019",
+      "statement": "v0.9.2#f6d84124",
+      "notes": "v0.9.2#bdd6e136"
      }
     }
    },
@@ -42673,7 +42641,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -42693,9 +42661,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#118bf379",
-      "statement": "v0.9.1#15b421bb",
-      "notes": "v0.9.1#77203f35"
+      "abstract": "v0.9.2#118bf379",
+      "statement": "v0.9.2#15b421bb",
+      "notes": "v0.9.2#77203f35"
      }
     }
    },
@@ -42814,7 +42782,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -42834,9 +42802,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#f1673aca",
-      "statement": "v0.9.1#2b01d3a4",
-      "notes": "v0.9.1#5e7e6161"
+      "abstract": "v0.9.2#f1673aca",
+      "statement": "v0.9.2#2b01d3a4",
+      "notes": "v0.9.2#5e7e6161"
      }
     }
    },
@@ -45676,8 +45644,8 @@
    "notes_en": "In an abelian category one says **injective / surjective** rather than monomorphism / epimorphism — because condition 1 guarantees that \"regular\" and \"cancellable\" are the same thing.\n\nExamples: $A\\text{-}\\mathbf{Mod}$ is abelian; so is $\\mathbf{Ab}(\\mathcal{T})$ for a topos; so is $\\mathbf{AbCHaus}$. But $\\mathbf{AbTop}$ is **not** (the identity map $\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ is not strict), and neither is $\\mathbf{AbHaus}$.\n\nAn abelian category is the **working environment** of homological algebra as a whole: with kernels and cokernels one can even state \"exact sequence\"; an additive category only supplies the additive skeleton (zero object and direct sums).",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -45690,19 +45658,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#b132a277",
-      "statement": "v0.9.1#70512d43",
-      "notes": "v0.9.1#a8da619b"
+      "abstract": "v0.9.2#99eb2ae5",
+      "statement": "v0.9.2#70512d43",
+      "notes": "v0.9.2#9884bb71"
      }
     }
    },
@@ -46457,8 +46422,8 @@
    "notes_en": "The proof has three parts:\n\n- **Abelian**: first verify componentwise in the presheaf category $\\widehat{\\mathcal{C}}(\\mathbf{Ab})$ (there one simply has pointwise abelian groups) — concretely, for an arbitrary morphism $u$ verify $\\operatorname{coker}(\\ker u) \\cong \\ker(\\operatorname{coker} u)$; then transport these identities back to the sheaf category along the **exact reflection** (sheafification). The same argument gives exactness of filtered colimits.\n- **All limits and colimits exist**: because the sheaf category is a reflective subcategory of the presheaf category.\n- **Small set of generators**: if $S$ is a small set of generators of $\\mathcal{T}$, then $\\{\\mathbb{Z}\\cdot X : X \\in S\\}$ generates $\\mathcal{T}(\\mathbf{Ab})$ — their coproduct is a generator.\n\nOne more fact along the way: $\\mathbb{Z}\\cdot X$ is **projective** in $\\mathcal{T}(\\mathbf{Ab})$ (look at presheaves first: $M \\mapsto \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot h_{X}, M) \\cong M(X)$ is exact on presheaves).",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -46471,19 +46436,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#d5dcdf37",
-      "statement": "v0.9.1#f13b85f8",
-      "notes": "v0.9.1#66118814"
+      "abstract": "v0.9.2#3239a1df",
+      "statement": "v0.9.2#f13b85f8",
+      "notes": "v0.9.2#07b048c8"
      }
     }
    },
@@ -46843,8 +46805,8 @@
    "notes_en": "**What has to be shown**: for every compactly generated space $X$ and every topological space $Y$,\n\n$$\\operatorname{Hom}_{\\mathbf{Top}}(X,\\ Y) \\;\\cong\\; \\operatorname{Hom}_{k\\mathbf{Top}}\\bigl(X,\\ kY\\bigr).$$\n\n**Proof.** The counit is $\\varepsilon_{Y} : kY \\to Y$ (the identity map, topology from finer to coarser, continuous).\n\n- First, $kY$ really is compactly generated: compose every continuous map $S \\to Y$ ($S$ compact Hausdorff) with $\\varepsilon_{Y}$ to lift it to $S \\to kY$, then use the definition of $kY$ (how $k$-open sets are taken) to verify that \"the topology is determined by these maps\".\n- So whenever $f : X \\to Y$ is continuous (with $X$ compactly generated), $f = \\varepsilon_{Y} \\circ f': X \\to kY$ yields a continuous map $f'$ into $kY$: let $U \\subseteq kY$ be open; we must show that $f'^{-1}(U)$ is open in $X$. Since $X$ is compactly generated, it suffices to check for every compact $L \\subseteq X$ that $f'^{-1}(U) \\cap L$ is open in $L$. But $f|_{L} : L \\to Y$ is continuous and $L$ is compact, so $f(L)$ is compact; $U \\cap f(L)$ is open in $f(L)$, hence $(f|_{L})^{-1}\\bigl(U \\cap f(L)\\bigr) = f'^{-1}(U) \\cap L$ is open in $L$. ∎\n- The converse direction follows directly from continuity of $\\varepsilon_{Y}$. The two directions are mutually inverse, which is the isomorphism.\n\n⭐ Keep this side by side with compact Hausdorff: $\\mathbf{CHaus}$ is a **reflective** subcategory of $\\mathbf{Top}$ (the inclusion has a **left** adjoint $\\beta$), whereas $k\\mathbf{Top}$ is **coreflective** (the inclusion has a **right** adjoint $k$). One \"tightens\" a space, the other \"loosens\" it — hence the former is closed under limits and the latter under **colimits**.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -46857,19 +46819,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#7b38c5fc",
-      "statement": "v0.9.1#0d2ec83c",
-      "notes": "v0.9.1#66941903"
+      "abstract": "v0.9.2#99cc7668",
+      "statement": "v0.9.2#0d2ec83c",
+      "notes": "v0.9.2#b6c3c8a9"
      }
     }
    },
@@ -46909,7 +46868,7 @@
    "translations": {
     "en": {
      "status": "reviewed",
-     "version": "v0.9.1",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -46929,9 +46888,9 @@
      },
      "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#b724ea06",
-      "statement": "v0.9.1#aca983a4",
-      "notes": "v0.9.1#34fccb9f"
+      "abstract": "v0.9.2#b724ea06",
+      "statement": "v0.9.2#aca983a4",
+      "notes": "v0.9.2#34fccb9f"
      }
     }
    },
@@ -47705,8 +47664,8 @@
    "notes_en": "**The three steps of the proof.** Write $K = \\ker\\varphi$.\n\n- **Well defined**: if $gK = g'K$ then $g' = gk$ for some $k \\in K$, hence $\\varphi(g') = \\varphi(g)\\varphi(k) = \\varphi(g)e' = \\varphi(g)$ — elements of the same coset are sent to the same value.\n- **Homomorphism**: $\\overline{\\varphi}\\bigl((gK)(g'K)\\bigr) = \\overline{\\varphi}(gg'K) = \\varphi(gg') = \\varphi(g)\\varphi(g') = \\overline{\\varphi}(gK)\\,\\overline{\\varphi}(g'K)$.\n- **Bijection**: injective, because $\\overline{\\varphi}(gK) = e'$ means $\\varphi(g) = e'$, i.e. $g \\in K$, so $gK = K$; surjective, because the image is $\\varphi(G)$ by construction. ∎\n\n⭐ **It is really a theorem about the format \"set + operations + axioms\", not a privilege of groups.** The same proof carries over verbatim, provided one replaces \"homomorphism\" by the corresponding notion:\n\n$$A \\big/ \\ker f \\;\\cong\\; \\operatorname{im} f.$$\n\n⭐ **The set-level prototype**: for any map $f : A \\to B$, put $a \\sim a' \\iff f(a) = f(a')$ on $A$; then $f$ induces a **bijection** $A/{\\sim} \\;\\to\\; \\operatorname{im} f$ (see \"quotient set and equivalence classes\"). The group version adds exactly one sentence: **after dividing by the kernel, what remains is a group**. The first two steps (well defined, bijection) are the set-level content; only the third (homomorphism) is new.\n\n**What question does it answer?** \"Where does a homomorphism send a group?\" has a two-part answer: the **kernel** (what is collapsed) and the **image** (what survives), locked together by a single isomorphism. So studying homomorphisms is studying normal subgroups — which is why group theory turns into the study of the lattice of subgroups.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "statement",
@@ -47719,19 +47678,16 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "statement": "reviewed",
-      "notes": "stale",
+      "notes": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#d50659a4",
-      "statement": "v0.9.1#1f75f342",
-      "notes": "v0.9.1#8164331f"
+      "abstract": "v0.9.2#36bc4b18",
+      "statement": "v0.9.2#1f75f342",
+      "notes": "v0.9.2#3edf241b"
      }
     }
    },
@@ -54747,8 +54703,8 @@
    "abstract_en": "For a topological space $X$: $X$ is paracompact Hausdorff exactly when every open cover has a subordinate partition of unity, and $X$ is normal exactly when every locally finite open cover has one. In one direction the supports of the partition give a locally finite open refinement of the cover; in the other, normality produces the functions one at a time. This is the standard bridge from local data to global objects, for instance from local metrics to a Riemannian metric.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "v0.9.1",
+     "status": "reviewed",
+     "version": "v0.9.2",
      "fields": [
       "abstract",
       "name"
@@ -54757,14 +54713,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "stale",
+      "abstract": "reviewed",
       "name": "derived"
      },
-     "staleFields": [
-      "abstract"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "abstract": "v0.9.1#0982b826"
+      "abstract": "v0.9.2#ed13b078"
      }
     }
    },

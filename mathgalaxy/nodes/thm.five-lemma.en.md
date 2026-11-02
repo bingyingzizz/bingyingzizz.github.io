@@ -10,5 +10,5 @@ layer 18 · lemma · cluster Additive and Abelian Categories (`hom.ab`) · Homol
 Chinese only — see the Chinese page `nodes/thm.five-lemma.md` and `proofs/`.
 
 
-Cite: `thm.five-lemma` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.five-lemma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 10 · theorem · cluster Polynomials and Factorization (`algebra.polynomia
 Chinese only — see the Chinese page `nodes/thm.division-algorithm.md` and `proofs/`.
 
 
-Cite: `thm.division-algorithm` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.division-algorithm` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

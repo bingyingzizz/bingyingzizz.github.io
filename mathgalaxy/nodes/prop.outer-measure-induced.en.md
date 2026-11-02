@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Constructing Measures (`analysis.measure`) ·
 Chinese only — see the Chinese page `nodes/prop.outer-measure-induced.md` and `proofs/`.
 
 
-Cite: `prop.outer-measure-induced` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.outer-measure-induced` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

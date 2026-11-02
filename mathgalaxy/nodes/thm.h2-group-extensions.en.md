@@ -11,5 +11,5 @@ names: `H2 and Extensions` (short) · `Second Cohomology Classifies Group Extens
 Chinese only — see the Chinese page `nodes/thm.h2-group-extensions.md` and `proofs/`.
 
 
-Cite: `thm.h2-group-extensions` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.h2-group-extensions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Boundary Sign Convention` (short) · `Sign Convention for Boundaries` (f
 Chinese only — see the Chinese page `nodes/prop.boundary-sign-convention.md` and `proofs/`.
 
 
-Cite: `prop.boundary-sign-convention` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.boundary-sign-convention` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

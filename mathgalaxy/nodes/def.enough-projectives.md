@@ -19,4 +19,4 @@ refs: Le Stum, Definition 1.4.8
 
 > 说明见 `notes/def.enough-projectives.md`
 
-引用：`def.enough-projectives`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.enough-projectives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

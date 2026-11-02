@@ -10,5 +10,5 @@ layer 16 · definition · cluster Toposes (`cat.topos`) · Category Theory
 Chinese only — see the Chinese page `nodes/def.cocontinuous-functor.md` and `proofs/`.
 
 
-Cite: `def.cocontinuous-functor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cocontinuous-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

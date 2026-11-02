@@ -19,4 +19,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公�
 
 > 说明见 `notes/def.completely-normal-space.md`
 
-引用：`def.completely-normal-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.completely-normal-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

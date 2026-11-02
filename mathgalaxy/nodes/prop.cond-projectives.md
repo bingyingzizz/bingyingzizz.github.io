@@ -15,4 +15,4 @@ refs: Le Stum, Exercise 4.3
 
 > 说明见 `notes/prop.cond-projectives.md`
 
-引用：`prop.cond-projectives`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cond-projectives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

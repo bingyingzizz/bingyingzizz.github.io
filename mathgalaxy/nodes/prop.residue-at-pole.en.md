@@ -11,5 +11,5 @@ names: `Residue at a Pole` (short) · `Residue Formula at a Pole` (full)
 Chinese only — see the Chinese page `nodes/prop.residue-at-pole.md` and `proofs/`.
 
 
-Cite: `prop.residue-at-pole` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.residue-at-pole` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

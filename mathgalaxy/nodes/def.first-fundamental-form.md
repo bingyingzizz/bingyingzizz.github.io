@@ -22,4 +22,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则
 
 > 说明见 `notes/def.first-fundamental-form.md`
 
-引用：`def.first-fundamental-form`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.first-fundamental-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

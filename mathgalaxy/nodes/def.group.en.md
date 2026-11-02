@@ -10,5 +10,5 @@ layer 6 · definition · cluster Algebraic Structures (`algebra.structures`) · 
 Chinese only — see the Chinese page `nodes/def.group.md` and `proofs/`.
 
 
-Cite: `def.group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

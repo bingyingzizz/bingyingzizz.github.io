@@ -10,5 +10,5 @@ layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · 
 Chinese only — see the Chinese page `nodes/thm.crt.md` and `proofs/`.
 
 
-Cite: `thm.crt` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.crt` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

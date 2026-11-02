@@ -19,4 +19,4 @@ refs: Le Stum, §8.2
 
 > 说明见 `notes/def.semi-normed-ab-group.md`
 
-引用：`def.semi-normed-ab-group`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.semi-normed-ab-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

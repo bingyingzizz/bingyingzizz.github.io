@@ -18,4 +18,4 @@ refs: 王晓光《复变函数》笔记，第 1 章 · 两个不等式；Ahlfors
 
 > 说明见 `notes/prop.complex-triangle.md`
 
-引用：`prop.complex-triangle`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.complex-triangle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

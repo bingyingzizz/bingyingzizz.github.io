@@ -11,5 +11,5 @@ names: `Pullback (Open Sets)` (short) · `Pullback: Between Open Sets` (full)
 Chinese only — see the Chinese page `nodes/prop.pullback-forms.md` and `proofs/`.
 
 
-Cite: `prop.pullback-forms` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.pullback-forms` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

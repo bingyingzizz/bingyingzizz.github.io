@@ -11,5 +11,5 @@ names: `Continuity Points of Pointwise Limit` (short) · `Continuity Points of a
 Chinese only — see the Chinese page `nodes/thm.pointwise-limit-continuity.md` and `proofs/`.
 
 
-Cite: `thm.pointwise-limit-continuity` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.pointwise-limit-continuity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

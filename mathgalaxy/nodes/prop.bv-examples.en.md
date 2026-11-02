@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Bounded Variation and Absolute Continuity (`a
 Chinese only — see the Chinese page `nodes/prop.bv-examples.md` and `proofs/`.
 
 
-Cite: `prop.bv-examples` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.bv-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Quasi-Compact Sheaves` (short) · `Quasi-Compact Sheaves and Compact Ét
 Chinese only — see the Chinese page `nodes/prop.qc-sheaf-etale.md` and `proofs/`.
 
 
-Cite: `prop.qc-sheaf-etale` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.qc-sheaf-etale` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

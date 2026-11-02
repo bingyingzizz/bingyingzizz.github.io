@@ -10,5 +10,5 @@ layer 16 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral
 Chinese only — see the Chinese page `nodes/def.generalized-eigenvector.md` and `proofs/`.
 
 
-Cite: `def.generalized-eigenvector` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.generalized-eigenvector` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

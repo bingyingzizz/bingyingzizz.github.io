@@ -21,4 +21,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 滤子；En
 
 > 说明见 `notes/def.filter.md`
 
-引用：`def.filter`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.filter`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.alge
 Chinese only — see the Chinese page `nodes/prop.forgetful-preserves-limits.md` and `proofs/`.
 
 
-Cite: `prop.forgetful-preserves-limits` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.forgetful-preserves-limits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

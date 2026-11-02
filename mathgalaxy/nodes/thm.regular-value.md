@@ -21,4 +21,4 @@ refs: Guillemin–Pollack, Differential Topology, §1；Spivak, Calculus on Mani
 
 > 说明见 `notes/thm.regular-value.md`
 
-引用：`thm.regular-value`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.regular-value`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

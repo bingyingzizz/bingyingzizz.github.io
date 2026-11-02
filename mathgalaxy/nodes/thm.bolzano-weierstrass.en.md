@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Equivalent Forms of Completeness of the Reals (`a
 Chinese only — see the Chinese page `nodes/thm.bolzano-weierstrass.md` and `proofs/`.
 
 
-Cite: `thm.bolzano-weierstrass` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bolzano-weierstrass` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Unitary / Orthogonal Matrix` (short) · `Unitary and Orthogonal Matrices
 Chinese only — see the Chinese page `nodes/def.unitary-matrix.md` and `proofs/`.
 
 
-Cite: `def.unitary-matrix` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.unitary-matrix` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

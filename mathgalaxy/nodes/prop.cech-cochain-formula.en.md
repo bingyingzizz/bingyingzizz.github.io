@@ -11,5 +11,5 @@ names: `Čech Cochains` (short) · `Explicit Formula for Čech Cochains` (full)
 Chinese only — see the Chinese page `nodes/prop.cech-cochain-formula.md` and `proofs/`.
 
 
-Cite: `prop.cech-cochain-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-cochain-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

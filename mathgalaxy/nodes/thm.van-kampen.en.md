@@ -10,5 +10,5 @@ layer 14 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
 Chinese only — see the Chinese page `nodes/thm.van-kampen.md` and `proofs/`.
 
 
-Cite: `thm.van-kampen` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.van-kampen` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

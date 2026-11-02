@@ -11,5 +11,5 @@ names: `Differential Form (Euclidean Open Sets)` (short) · `Differential Form: 
 Chinese only — see the Chinese page `nodes/def.differential-form.md` and `proofs/`.
 
 
-Cite: `def.differential-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.differential-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

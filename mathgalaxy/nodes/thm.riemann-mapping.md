@@ -18,4 +18,4 @@ refs: 王晓光《复变函数》· Riemann 映射定理（正规族证明）；
 
 > 说明见 `notes/thm.riemann-mapping.md`
 
-引用：`thm.riemann-mapping`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riemann-mapping`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 11 · theorem · cluster Divisibility and Congruences (`number.basic`) · 
 Chinese only — see the Chinese page `nodes/thm.int-division.md` and `proofs/`.
 
 
-Cite: `thm.int-division` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.int-division` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

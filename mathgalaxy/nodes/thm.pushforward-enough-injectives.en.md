@@ -11,5 +11,5 @@ names: `Enough Injectives` (short) · `Abelian Sheaves Have Enough Injectives` (
 Chinese only — see the Chinese page `nodes/thm.pushforward-enough-injectives.md` and `proofs/`.
 
 
-Cite: `thm.pushforward-enough-injectives` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.pushforward-enough-injectives` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

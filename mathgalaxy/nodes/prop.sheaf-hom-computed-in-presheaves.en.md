@@ -11,5 +11,5 @@ names: `Hom of Sheaves` (short) · `Hom of Sheaves Computed in Presheaves` (full
 Chinese only — see the Chinese page `nodes/prop.sheaf-hom-computed-in-presheaves.md` and `proofs/`.
 
 
-Cite: `prop.sheaf-hom-computed-in-presheaves` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sheaf-hom-computed-in-presheaves` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

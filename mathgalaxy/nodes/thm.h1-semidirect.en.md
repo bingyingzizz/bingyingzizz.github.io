@@ -11,5 +11,5 @@ names: `H1 and Split Extensions` (short) · `First Cohomology and Split Extensio
 Chinese only — see the Chinese page `nodes/thm.h1-semidirect.md` and `proofs/`.
 
 
-Cite: `thm.h1-semidirect` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.h1-semidirect` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

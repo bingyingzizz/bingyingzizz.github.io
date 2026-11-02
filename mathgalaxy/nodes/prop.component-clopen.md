@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/prop.component-clopen.md`
 
-引用：`prop.component-clopen`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.component-clopen`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Analytic Continuation and Entire Functions (`anal
 Chinese only — see the Chinese page `nodes/thm.picard-great.md` and `proofs/`.
 
 
-Cite: `thm.picard-great` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.picard-great` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

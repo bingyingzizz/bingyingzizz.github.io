@@ -10,5 +10,5 @@ layer 13 · theorem · cluster Arithmetic Functions and Distribution of Primes (
 Chinese only — see the Chinese page `nodes/thm.prime-number-theorem.md` and `proofs/`.
 
 
-Cite: `thm.prime-number-theorem` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.prime-number-theorem` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Regular Surface` (short) · `Regular Surface and Gauss Map` (full)
 Chinese only — see the Chinese page `nodes/def.regular-surface.md` and `proofs/`.
 
 
-Cite: `def.regular-surface` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.regular-surface` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

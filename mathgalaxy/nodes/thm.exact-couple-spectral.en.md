@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Filtrations and Spectral Sequences (`hom.spectral
 Chinese only — see the Chinese page `nodes/thm.exact-couple-spectral.md` and `proofs/`.
 
 
-Cite: `thm.exact-couple-spectral` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.exact-couple-spectral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

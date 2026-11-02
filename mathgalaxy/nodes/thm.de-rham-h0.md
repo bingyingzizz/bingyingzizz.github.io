@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology
 
 > 说明见 `notes/thm.de-rham-h0.md`
 
-引用：`thm.de-rham-h0`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.de-rham-h0`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

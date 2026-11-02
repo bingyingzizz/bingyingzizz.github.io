@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 分式线性变换的确定；Ahlfors, Compl
 
 > 说明见 `notes/prop.mobius-three-points.md`
 
-引用：`prop.mobius-three-points`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.mobius-three-points`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

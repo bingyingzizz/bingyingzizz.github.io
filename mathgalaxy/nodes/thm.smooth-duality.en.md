@@ -10,5 +10,5 @@ layer 24 · theorem · cluster Coherent Duality (`analytic.dual`) · Analytic Sp
 Chinese only — see the Chinese page `nodes/thm.smooth-duality.md` and `proofs/`.
 
 
-Cite: `thm.smooth-duality` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.smooth-duality` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 27 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · D
 Chinese only — see the Chinese page `nodes/def.geodesic-curvature.md` and `proofs/`.
 
 
-Cite: `def.geodesic-curvature` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.geodesic-curvature` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

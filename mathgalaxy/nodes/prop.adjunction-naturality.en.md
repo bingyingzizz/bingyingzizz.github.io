@@ -11,5 +11,5 @@ names: `Adjunction Naturality` (short) · `Naturality of the Adjunction Bijectio
 Chinese only — see the Chinese page `nodes/prop.adjunction-naturality.md` and `proofs/`.
 
 
-Cite: `prop.adjunction-naturality` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.adjunction-naturality` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

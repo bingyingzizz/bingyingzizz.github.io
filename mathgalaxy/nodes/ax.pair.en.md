@@ -16,5 +16,5 @@ By extensionality $A$ is unique; it is written { a, b } (the unordered pair). Ta
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `ax.pair` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.pair` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

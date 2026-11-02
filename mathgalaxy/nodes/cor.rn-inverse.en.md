@@ -10,5 +10,5 @@ layer 18 · corollary · cluster Signed Measures and Decompositions (`analysis.s
 Chinese only — see the Chinese page `nodes/cor.rn-inverse.md` and `proofs/`.
 
 
-Cite: `cor.rn-inverse` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.rn-inverse` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

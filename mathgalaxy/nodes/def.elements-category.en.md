@@ -10,5 +10,5 @@ layer 11 · definition · cluster Monos, Epis, Subobjects and Images (`cat.struc
 Chinese only — see the Chinese page `nodes/def.elements-category.md` and `proofs/`.
 
 
-Cite: `def.elements-category` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.elements-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

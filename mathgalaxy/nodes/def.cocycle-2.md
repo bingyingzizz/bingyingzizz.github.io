@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 6.5（上圈与上
 
 > 说明见 `notes/def.cocycle-2.md`
 
-引用：`def.cocycle-2`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cocycle-2`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

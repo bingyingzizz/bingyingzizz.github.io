@@ -10,5 +10,5 @@ layer 13 · theorem · cluster Equivalent Forms of Completeness of the Reals (`a
 Chinese only — see the Chinese page `nodes/thm.real-ordered-field.md` and `proofs/`.
 
 
-Cite: `thm.real-ordered-field` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.real-ordered-field` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

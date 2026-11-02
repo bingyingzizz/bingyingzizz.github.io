@@ -11,5 +11,5 @@ names: `Symplectic Normal Form` (short) · `Symplectic Normal Form Theorem` (ful
 Chinese only — see the Chinese page `nodes/thm.symplectic-normal-form.md` and `proofs/`.
 
 
-Cite: `thm.symplectic-normal-form` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.symplectic-normal-form` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -22,4 +22,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 ## 说明
 导出三角是「短正合列」的**同伦版**：它不要求 $M$ 是商，只要求 $K \to L \to M \to K[1]$ 在形状上接得上。加上位移这一步之后，一个态射就能嵌进一条任意长度的序列里 —— 这正是三角范畴要的形式。
 
-引用：`def.distinguished-triangle`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.distinguished-triangle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

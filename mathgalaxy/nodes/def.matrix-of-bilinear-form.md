@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双线性型的矩
 
 > 说明见 `notes/def.matrix-of-bilinear-form.md`
 
-引用：`def.matrix-of-bilinear-form`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.matrix-of-bilinear-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

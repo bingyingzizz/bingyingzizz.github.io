@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 3.27
 
 > 说明见 `notes/prop.bv-regularity.md`
 
-引用：`prop.bv-regularity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.bv-regularity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

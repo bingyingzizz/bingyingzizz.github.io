@@ -10,5 +10,5 @@ layer 17 · definition · cluster Analytic Rings and Solid Modules (`cond.analyt
 Chinese only — see the Chinese page `nodes/def.pre-analytic-ring.md` and `proofs/`.
 
 
-Cite: `def.pre-analytic-ring` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pre-analytic-ring` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

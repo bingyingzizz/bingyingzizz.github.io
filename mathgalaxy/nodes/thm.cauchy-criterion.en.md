@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Equivalent Forms of Completeness of the Reals (`a
 Chinese only — see the Chinese page `nodes/thm.cauchy-criterion.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 13 · definition · cluster Multilinear Algebra and Tensors (`algebra.mult
 Chinese only — see the Chinese page `nodes/def.hyperbolic-plane.md` and `proofs/`.
 
 
-Cite: `def.hyperbolic-plane` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.hyperbolic-plane` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

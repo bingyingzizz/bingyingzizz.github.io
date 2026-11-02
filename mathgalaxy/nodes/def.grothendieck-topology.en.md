@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/def.grothendieck-topology.md` and `
 Wikipedia: https://en.wikipedia.org/wiki/Grothendieck_topology · nLab: https://ncatlab.org/nlab/show/Grothendieck+topology
 
 
-Cite: `def.grothendieck-topology` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.grothendieck-topology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 18 · definition · cluster Solid Abelian Groups (`cond.solid`) · Condens
 Chinese only — see the Chinese page `nodes/def.solid-group.md` and `proofs/`.
 
 
-Cite: `def.solid-group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.solid-group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

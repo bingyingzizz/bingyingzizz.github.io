@@ -11,5 +11,5 @@ names: `Complexes Are Additive` (short) · `The Category of Complexes Is Additiv
 Chinese only — see the Chinese page `nodes/prop.complex-additive.md` and `proofs/`.
 
 
-Cite: `prop.complex-additive` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.complex-additive` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

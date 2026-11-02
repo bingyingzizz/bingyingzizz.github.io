@@ -11,5 +11,5 @@ names: `Stone's Theorem` (short) · `A. H. Stone's Theorem` (full)
 Chinese only — see the Chinese page `nodes/thm.metric-paracompact.md` and `proofs/`.
 
 
-Cite: `thm.metric-paracompact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.metric-paracompact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

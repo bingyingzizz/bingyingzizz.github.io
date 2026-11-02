@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/prop.category-into-complexes.md`
 
-引用：`prop.category-into-complexes`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.category-into-complexes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

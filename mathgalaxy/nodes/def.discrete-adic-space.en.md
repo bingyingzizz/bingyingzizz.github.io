@@ -10,5 +10,5 @@ layer 10 · definition · cluster Adic Spaces (`analytic.adic`) · Analytic Spac
 Chinese only — see the Chinese page `nodes/def.discrete-adic-space.md` and `proofs/`.
 
 
-Cite: `def.discrete-adic-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.discrete-adic-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

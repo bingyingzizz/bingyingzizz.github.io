@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 本性奇点与 Casorati–Weierstrass 定�
 
 > 说明见 `notes/thm.casorati-weierstrass.md`
 
-引用：`thm.casorati-weierstrass`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.casorati-weierstrass`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

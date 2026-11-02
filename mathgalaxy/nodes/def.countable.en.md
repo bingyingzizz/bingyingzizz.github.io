@@ -10,5 +10,5 @@ layer 8 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) �
 Chinese only — see the Chinese page `nodes/def.countable.md` and `proofs/`.
 
 
-Cite: `def.countable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.countable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

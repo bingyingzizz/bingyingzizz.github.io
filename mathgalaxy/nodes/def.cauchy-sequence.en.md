@@ -10,5 +10,5 @@ layer 14 · definition · cluster Real Numbers and Limits (`analysis.real`) · M
 Chinese only — see the Chinese page `nodes/def.cauchy-sequence.md` and `proofs/`.
 
 
-Cite: `def.cauchy-sequence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cauchy-sequence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

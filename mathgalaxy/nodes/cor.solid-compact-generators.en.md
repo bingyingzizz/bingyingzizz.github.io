@@ -10,5 +10,5 @@ layer 19 · corollary · cluster Solid Abelian Groups (`cond.solid`) · Condense
 Chinese only — see the Chinese page `nodes/cor.solid-compact-generators.md` and `proofs/`.
 
 
-Cite: `cor.solid-compact-generators` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.solid-compact-generators` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

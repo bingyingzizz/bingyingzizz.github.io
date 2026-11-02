@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Topological Abelian Groups (`cond.topo`) · Conde
 Chinese only — see the Chinese page `nodes/thm.pontryagin-van-kampen.md` and `proofs/`.
 
 
-Cite: `thm.pontryagin-van-kampen` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.pontryagin-van-kampen` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
 Chinese only — see the Chinese page `nodes/prop.subset-compact-equiv.md` and `proofs/`.
 
 
-Cite: `prop.subset-compact-equiv` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.subset-compact-equiv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

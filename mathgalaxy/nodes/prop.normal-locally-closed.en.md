@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Separation Axioms (`topology.separation`) · 
 Chinese only — see the Chinese page `nodes/prop.normal-locally-closed.md` and `proofs/`.
 
 
-Cite: `prop.normal-locally-closed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.normal-locally-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

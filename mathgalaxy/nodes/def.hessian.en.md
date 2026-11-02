@@ -11,5 +11,5 @@ names: `Hessian` (short) · `Hessian Matrix` (full)
 Chinese only — see the Chinese page `nodes/def.hessian.md` and `proofs/`.
 
 
-Cite: `def.hessian` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.hessian` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

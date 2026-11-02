@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Continuity and Compactness (`analysis.continu
 Chinese only — see the Chinese page `nodes/prop.discontinuity-types.md` and `proofs/`.
 
 
-Cite: `prop.discontinuity-types` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.discontinuity-types` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

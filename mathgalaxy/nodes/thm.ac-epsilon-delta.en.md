@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Signed Measures and Decompositions (`analysis.sig
 Chinese only — see the Chinese page `nodes/thm.ac-epsilon-delta.md` and `proofs/`.
 
 
-Cite: `thm.ac-epsilon-delta` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ac-epsilon-delta` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

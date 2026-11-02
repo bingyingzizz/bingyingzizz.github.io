@@ -10,5 +10,5 @@ layer 8 · definition · cluster Adic Spaces (`analytic.adic`) · Analytic Space
 Chinese only — see the Chinese page `nodes/def.discrete-huber-pair.md` and `proofs/`.
 
 
-Cite: `def.discrete-huber-pair` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.discrete-huber-pair` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

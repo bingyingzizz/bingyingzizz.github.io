@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/cor.integral-is-ac-nbv.md`
 
-引用：`cor.integral-is-ac-nbv`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.integral-is-ac-nbv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

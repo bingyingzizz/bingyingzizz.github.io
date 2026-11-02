@@ -11,5 +11,5 @@ names: `Rings and Tensor` (short) · `Fiber Coproducts of Commutative Rings Are 
 Chinese only — see the Chinese page `nodes/prop.ring-tensor-coproduct.md` and `proofs/`.
 
 
-Cite: `prop.ring-tensor-coproduct` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ring-tensor-coproduct` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

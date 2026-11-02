@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Stone and Stonean Spaces (`topo.stone`) · Topolo
 Chinese only — see the Chinese page `nodes/thm.stone-profinite.md` and `proofs/`.
 
 
-Cite: `thm.stone-profinite` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.stone-profinite` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 8 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · S
 Chinese only — see the Chinese page `nodes/thm.hartogs.md` and `proofs/`.
 
 
-Cite: `thm.hartogs` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.hartogs` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

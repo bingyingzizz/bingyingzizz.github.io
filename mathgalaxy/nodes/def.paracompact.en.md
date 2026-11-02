@@ -10,5 +10,5 @@ layer 15 · definition · cluster Paracompact Spaces and Partitions of Unity (`t
 Chinese only — see the Chinese page `nodes/def.paracompact.md` and `proofs/`.
 
 
-Cite: `def.paracompact` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.paracompact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

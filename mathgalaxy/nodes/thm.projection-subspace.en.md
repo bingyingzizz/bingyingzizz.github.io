@@ -11,5 +11,5 @@ names: `Orthogonal Projection` (short) · `Orthogonal Projection onto a Closed S
 Chinese only — see the Chinese page `nodes/thm.projection-subspace.md` and `proofs/`.
 
 
-Cite: `thm.projection-subspace` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.projection-subspace` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -17,4 +17,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/prop.ac-iff-measure-ac.md`
 
-引用：`prop.ac-iff-measure-ac`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ac-iff-measure-ac`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

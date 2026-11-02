@@ -6,5 +6,5 @@ English entry · root `../`
 Wikipedia: https://en.wikipedia.org/wiki/Metric_space · nLab: https://ncatlab.org/nlab/show/metric+space · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/MetricSpace/Basic.html
 
 
-Cite: `def.metric-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.metric-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

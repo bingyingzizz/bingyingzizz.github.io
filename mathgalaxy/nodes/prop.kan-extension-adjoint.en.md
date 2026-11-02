@@ -11,5 +11,5 @@ names: `Kan Extensions and Adjoints` (short) · `Kan Extensions and the Existenc
 Chinese only — see the Chinese page `nodes/prop.kan-extension-adjoint.md` and `proofs/`.
 
 
-Cite: `prop.kan-extension-adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.kan-extension-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

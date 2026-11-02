@@ -24,4 +24,4 @@ refs: Kunen, Set Theory, I.11；Davey & Priestley, Introduction to Lattices and 
 
 反对称性是说：只允许「相等」这一种互相 $\le$ 的方式，所以偏序可以看成「$\le$ 的抽象」。
 
-引用：`def.poset`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.poset`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

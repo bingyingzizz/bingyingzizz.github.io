@@ -10,5 +10,5 @@ layer 8 · theorem · cluster Measurable Functions and Convergence (`analysis.me
 Chinese only — see the Chinese page `nodes/thm.simple-approximation.md` and `proofs/`.
 
 
-Cite: `thm.simple-approximation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.simple-approximation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

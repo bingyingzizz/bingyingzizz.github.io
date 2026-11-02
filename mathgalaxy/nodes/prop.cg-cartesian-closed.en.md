@@ -11,5 +11,5 @@ names: `CG Is Cartesian Closed` (short) · `Compactly Generated Spaces Are Carte
 Chinese only — see the Chinese page `nodes/prop.cg-cartesian-closed.md` and `proofs/`.
 
 
-Cite: `prop.cg-cartesian-closed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cg-cartesian-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

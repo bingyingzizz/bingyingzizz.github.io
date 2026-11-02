@@ -11,5 +11,5 @@ names: `Triangle Inequality` (short) · `Triangle Inequality for Moduli` (full)
 Chinese only — see the Chinese page `nodes/prop.complex-triangle.md` and `proofs/`.
 
 
-Cite: `prop.complex-triangle` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.complex-triangle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

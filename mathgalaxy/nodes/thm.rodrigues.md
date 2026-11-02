@@ -19,4 +19,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/thm.rodrigues.md`
 
-引用：`thm.rodrigues`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.rodrigues`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

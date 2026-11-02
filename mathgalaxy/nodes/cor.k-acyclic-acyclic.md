@@ -13,4 +13,4 @@ refs: Le Stum, Corollary 8.2.4
 
 > 说明见 `notes/cor.k-acyclic-acyclic.md`
 
-引用：`cor.k-acyclic-acyclic`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.k-acyclic-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

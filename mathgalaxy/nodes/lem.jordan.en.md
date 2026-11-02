@@ -10,5 +10,5 @@ layer 18 · lemma · cluster Residues and the Argument Principle (`analysis.resi
 Chinese only — see the Chinese page `nodes/lem.jordan.md` and `proofs/`.
 
 
-Cite: `lem.jordan` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.jordan` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

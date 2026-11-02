@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.11
 ## 说明
 **证明。** $f \circ g = 1$ 与 $g \circ f = 1$ 在函子下仍是同样的等式（函子保恒等、保复合）✓。∎
 
-引用：`prop.functor-preserves-sections`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.functor-preserves-sections`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

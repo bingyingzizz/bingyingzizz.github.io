@@ -10,5 +10,5 @@ layer 17 · definition · cluster Integration (`analysis.integral`) · Functions
 Chinese only — see the Chinese page `nodes/def.integral-nonneg.md` and `proofs/`.
 
 
-Cite: `def.integral-nonneg` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.integral-nonneg` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

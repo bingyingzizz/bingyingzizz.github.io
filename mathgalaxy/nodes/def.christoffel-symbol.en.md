@@ -10,5 +10,5 @@ layer 25 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · D
 Chinese only — see the Chinese page `nodes/def.christoffel-symbol.md` and `proofs/`.
 
 
-Cite: `def.christoffel-symbol` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.christoffel-symbol` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 19 · theorem · cluster Flat Modules (`hom.flat`) · Homological Algebra
 Chinese only — see the Chinese page `nodes/thm.lambek.md` and `proofs/`.
 
 
-Cite: `thm.lambek` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lambek` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

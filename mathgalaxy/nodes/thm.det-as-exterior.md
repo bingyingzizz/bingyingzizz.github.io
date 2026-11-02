@@ -18,4 +18,4 @@ refs: Lang, Algebra, Ch. XIX；Roman, Advanced Linear Algebra, Ch. 14
 
 > 说明见 `notes/thm.det-as-exterior.md`
 
-引用：`thm.det-as-exterior`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.det-as-exterior`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

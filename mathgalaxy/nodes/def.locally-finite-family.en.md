@@ -10,5 +10,5 @@ layer 6 · definition · cluster Paracompact Spaces and Partitions of Unity (`to
 Chinese only — see the Chinese page `nodes/def.locally-finite-family.md` and `proofs/`.
 
 
-Cite: `def.locally-finite-family` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.locally-finite-family` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

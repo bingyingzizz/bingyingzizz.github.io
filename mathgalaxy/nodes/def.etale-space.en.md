@@ -10,5 +10,5 @@ layer 5 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homologica
 Chinese only — see the Chinese page `nodes/def.etale-space.md` and `proofs/`.
 
 
-Cite: `def.etale-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.etale-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

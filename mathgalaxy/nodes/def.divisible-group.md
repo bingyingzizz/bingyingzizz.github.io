@@ -21,4 +21,4 @@ refs: Fuchs, Infinite Abelian Groups, Vol. I, divisible groups；Rotman, An Intr
 
 > 说明见 `notes/def.divisible-group.md`
 
-引用：`def.divisible-group`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.divisible-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

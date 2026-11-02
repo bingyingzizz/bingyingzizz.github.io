@@ -11,5 +11,5 @@ names: `Almost Orthogonal Lemma` (short) · `Riesz's Almost Orthogonal Lemma` (f
 Chinese only — see the Chinese page `nodes/lem.almost-orthogonal.md` and `proofs/`.
 
 
-Cite: `lem.almost-orthogonal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.almost-orthogonal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

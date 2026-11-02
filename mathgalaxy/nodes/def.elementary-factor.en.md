@@ -10,5 +10,5 @@ layer 18 · definition · cluster Analytic Continuation and Entire Functions (`a
 Chinese only — see the Chinese page `nodes/def.elementary-factor.md` and `proofs/`.
 
 
-Cite: `def.elementary-factor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.elementary-factor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

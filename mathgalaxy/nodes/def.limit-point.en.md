@@ -10,5 +10,5 @@ layer 14 · definition · cluster Equivalent Forms of Completeness of the Reals 
 Chinese only — see the Chinese page `nodes/def.limit-point.md` and `proofs/`.
 
 
-Cite: `def.limit-point` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.limit-point` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

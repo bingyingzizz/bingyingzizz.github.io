@@ -10,5 +10,5 @@ layer 21 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.
 Chinese only — see the Chinese page `nodes/thm.svd.md` and `proofs/`.
 
 
-Cite: `thm.svd` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.svd` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

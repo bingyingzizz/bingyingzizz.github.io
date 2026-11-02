@@ -10,5 +10,5 @@ layer 17 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Math
 Chinese only — see the Chinese page `nodes/thm.darboux-criterion.md` and `proofs/`.
 
 
-Cite: `thm.darboux-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.darboux-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》笔记，第 9 章 · 最大模原理；Ahlfors
 
 > 说明见 `notes/thm.max-modulus.md`
 
-引用：`thm.max-modulus`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.max-modulus`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Dual as RHom` (short) · `Pontryagin Dual as a Derived Hom` (full)
 Chinese only — see the Chinese page `nodes/prop.dual-rhom-characterization.md` and `proofs/`.
 
 
-Cite: `prop.dual-rhom-characterization` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.dual-rhom-characterization` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

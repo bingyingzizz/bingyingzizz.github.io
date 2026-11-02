@@ -11,5 +11,5 @@ names: `Tensor Functoriality` (short) · `Functoriality of the Tensor Product` (
 Chinese only — see the Chinese page `nodes/prop.tensor-functor-properties.md` and `proofs/`.
 
 
-Cite: `prop.tensor-functor-properties` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tensor-functor-properties` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

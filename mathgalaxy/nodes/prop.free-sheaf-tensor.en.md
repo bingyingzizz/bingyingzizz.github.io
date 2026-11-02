@@ -11,5 +11,5 @@ names: `Free Sheaf Tensor` (short) · `Tensor Product of Free Sheaves` (full)
 Chinese only — see the Chinese page `nodes/prop.free-sheaf-tensor.md` and `proofs/`.
 
 
-Cite: `prop.free-sheaf-tensor` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-sheaf-tensor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

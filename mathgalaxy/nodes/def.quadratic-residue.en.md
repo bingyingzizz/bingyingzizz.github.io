@@ -10,5 +10,5 @@ layer 12 · definition · cluster Quadratic Residues and Primitive Roots (`numbe
 Chinese only — see the Chinese page `nodes/def.quadratic-residue.md` and `proofs/`.
 
 
-Cite: `def.quadratic-residue` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.quadratic-residue` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

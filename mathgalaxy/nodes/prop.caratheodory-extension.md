@@ -19,4 +19,4 @@ refs: Halmos, Measure Theory, §12；Folland, Real Analysis, Theorem 1.14
 
 > 说明见 `notes/prop.caratheodory-extension.md`
 
-引用：`prop.caratheodory-extension`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.caratheodory-extension`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

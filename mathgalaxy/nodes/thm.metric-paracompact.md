@@ -15,4 +15,4 @@ refs: Stone, Paracompactness and product spaces, Bull. Amer. Math. Soc. 54 (1948
 
 > 说明见 `notes/thm.metric-paracompact.md`
 
-引用：`thm.metric-paracompact`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.metric-paracompact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

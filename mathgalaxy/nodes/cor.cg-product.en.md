@@ -11,5 +11,5 @@ names: `CG and Products` (short) · `Compactly Generated Spaces Are Closed under
 Chinese only — see the Chinese page `nodes/cor.cg-product.md` and `proofs/`.
 
 
-Cite: `cor.cg-product` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.cg-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

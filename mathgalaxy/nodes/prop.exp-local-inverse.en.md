@@ -10,5 +10,5 @@ layer 18 · proposition · cluster Foundations of Complex Analysis (`analysis.co
 Chinese only — see the Chinese page `nodes/prop.exp-local-inverse.md` and `proofs/`.
 
 
-Cite: `prop.exp-local-inverse` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.exp-local-inverse` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

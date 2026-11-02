@@ -10,5 +10,5 @@ layer 27 · definition · cluster Differential Forms, Integration and de Rham Co
 Chinese only — see the Chinese page `nodes/def.divergence.md` and `proofs/`.
 
 
-Cite: `def.divergence` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.divergence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

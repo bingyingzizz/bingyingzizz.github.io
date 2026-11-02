@@ -11,5 +11,5 @@ names: `Complexes Are Abelian` (short) · `The Category of Complexes Is Abelian`
 Chinese only — see the Chinese page `nodes/prop.complexes-abelian.md` and `proofs/`.
 
 
-Cite: `prop.complexes-abelian` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.complexes-abelian` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

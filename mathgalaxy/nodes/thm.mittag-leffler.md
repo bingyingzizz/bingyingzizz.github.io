@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· Mittag-Leffler 定理；Stein–Shakarchi, C
 
 > 说明见 `notes/thm.mittag-leffler.md`
 
-引用：`thm.mittag-leffler`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mittag-leffler`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

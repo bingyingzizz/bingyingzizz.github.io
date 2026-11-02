@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲率」· 比安
 
 > 说明见 `notes/thm.bianchi-identity.md`
 
-引用：`thm.bianchi-identity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bianchi-identity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Signed Measures and Decompositions (`analysis.sig
 Chinese only — see the Chinese page `nodes/thm.rn-complex.md` and `proofs/`.
 
 
-Cite: `thm.rn-complex` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rn-complex` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

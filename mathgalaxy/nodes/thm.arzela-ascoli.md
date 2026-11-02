@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis (3rd ed.), Ch. 7 · The Arzelà
 
 > 说明见 `notes/thm.arzela-ascoli.md`
 
-引用：`thm.arzela-ascoli`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.arzela-ascoli`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

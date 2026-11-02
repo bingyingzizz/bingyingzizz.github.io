@@ -24,4 +24,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 1；Ch. 3
 
 > 说明见 `notes/thm.real-ordered-field.md`
 
-引用：`thm.real-ordered-field`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.real-ordered-field`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

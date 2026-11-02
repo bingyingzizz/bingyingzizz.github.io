@@ -11,5 +11,5 @@ names: `Finite-Dimensional Norm Equivalence` (short) · `All Norms Are Equivalen
 Chinese only — see the Chinese page `nodes/thm.norm-equiv-finite-dim.md` and `proofs/`.
 
 
-Cite: `thm.norm-equiv-finite-dim` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.norm-equiv-finite-dim` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

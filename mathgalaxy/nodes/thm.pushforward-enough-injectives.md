@@ -17,4 +17,4 @@ refs: Iversen, Cohomology of Sheaves —— 内射层一章；Godement, Topologi
 
 > 说明见 `notes/thm.pushforward-enough-injectives.md`
 
-引用：`thm.pushforward-enough-injectives`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pushforward-enough-injectives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/def.stone-space.md`
 
-引用：`def.stone-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.stone-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

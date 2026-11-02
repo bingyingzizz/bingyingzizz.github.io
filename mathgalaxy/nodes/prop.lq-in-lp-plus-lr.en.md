@@ -10,5 +10,5 @@ layer 19 · proposition · cluster L^p Spaces (`analysis.lp`) · Functions of a 
 Chinese only — see the Chinese page `nodes/prop.lq-in-lp-plus-lr.md` and `proofs/`.
 
 
-Cite: `prop.lq-in-lp-plus-lr` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.lq-in-lp-plus-lr` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

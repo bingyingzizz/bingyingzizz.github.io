@@ -11,5 +11,5 @@ names: `Discrete Acyclicity` (short) · `Acyclicity on Discrete and Discrete Tim
 Chinese only — see the Chinese page `nodes/prop.condab-discrete-acyclic.md` and `proofs/`.
 
 
-Cite: `prop.condab-discrete-acyclic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.condab-discrete-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -12,4 +12,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.16
 
 > 说明见 `notes/prop.totally-disconnected-subspace.md`
 
-引用：`prop.totally-disconnected-subspace`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.totally-disconnected-subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

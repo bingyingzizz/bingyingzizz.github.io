@@ -10,5 +10,5 @@ layer 21 · theorem · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 Chinese only — see the Chinese page `nodes/thm.adic-gluing.md` and `proofs/`.
 
 
-Cite: `thm.adic-gluing` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.adic-gluing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

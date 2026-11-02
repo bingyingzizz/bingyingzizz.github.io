@@ -10,5 +10,5 @@ layer 22 · definition · cluster Symplectic Manifolds and Hamiltonian Mechanics
 Chinese only — see the Chinese page `nodes/def.hamiltonian-vector-field.md` and `proofs/`.
 
 
-Cite: `def.hamiltonian-vector-field` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.hamiltonian-vector-field` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

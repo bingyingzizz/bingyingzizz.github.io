@@ -10,5 +10,5 @@ layer 14 · definition · cluster Families of Sets and Sigma-Algebras (`analysis
 Chinese only — see the Chinese page `nodes/def.fundamental-class.md` and `proofs/`.
 
 
-Cite: `def.fundamental-class` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.fundamental-class` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

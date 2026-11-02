@@ -11,5 +11,5 @@ names: `Connection Coefficients` (short) · `Connection Coefficients in an Ortho
 Chinese only — see the Chinese page `nodes/prop.christoffel-frame.md` and `proofs/`.
 
 
-Cite: `prop.christoffel-frame` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.christoffel-frame` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

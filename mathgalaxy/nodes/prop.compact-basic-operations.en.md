@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Convergence and Compactness (`topology.conver
 Chinese only — see the Chinese page `nodes/prop.compact-basic-operations.md` and `proofs/`.
 
 
-Cite: `prop.compact-basic-operations` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.compact-basic-operations` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

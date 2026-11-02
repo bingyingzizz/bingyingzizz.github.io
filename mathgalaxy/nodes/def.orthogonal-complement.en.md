@@ -10,5 +10,5 @@ layer 11 · definition · cluster Inner Product Spaces and Orthogonality (`algeb
 Chinese only — see the Chinese page `nodes/def.orthogonal-complement.md` and `proofs/`.
 
 
-Cite: `def.orthogonal-complement` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.orthogonal-complement` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

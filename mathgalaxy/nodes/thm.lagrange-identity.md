@@ -16,4 +16,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/thm.lagrange-identity.md`
 
-引用：`thm.lagrange-identity`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lagrange-identity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

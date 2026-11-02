@@ -10,5 +10,5 @@ layer 27 · theorem · cluster Lie Groups (`diffgeom.lieg`) · Differential Geom
 Chinese only — see the Chinese page `nodes/thm.lie-third.md` and `proofs/`.
 
 
-Cite: `thm.lie-third` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lie-third` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

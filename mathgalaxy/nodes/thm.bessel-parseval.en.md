@@ -11,5 +11,5 @@ names: `Bessel and Parseval` (short) · `Bessel's Inequality and Parseval's Iden
 Chinese only — see the Chinese page `nodes/thm.bessel-parseval.md` and `proofs/`.
 
 
-Cite: `thm.bessel-parseval` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bessel-parseval` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

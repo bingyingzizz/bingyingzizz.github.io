@@ -10,5 +10,5 @@ layer 9 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifol
 Chinese only — see the Chinese page `nodes/def.smooth-map.md` and `proofs/`.
 
 
-Cite: `def.smooth-map` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.smooth-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

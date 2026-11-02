@@ -14,4 +14,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 5.4（过滤复形
 
 > 说明见 `notes/prop.filtered-complex-exact-couple.md`
 
-引用：`prop.filtered-complex-exact-couple`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.filtered-complex-exact-couple`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

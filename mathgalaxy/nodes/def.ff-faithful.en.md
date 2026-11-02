@@ -10,5 +10,5 @@ layer 9 · definition · cluster Functors and Natural Transformations (`cat.func
 Chinese only — see the Chinese page `nodes/def.ff-faithful.md` and `proofs/`.
 
 
-Cite: `def.ff-faithful` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ff-faithful` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 15 · definition · cluster Arithmetic and Inequalities on the Reals (`ana
 Chinese only — see the Chinese page `nodes/def.real-power.md` and `proofs/`.
 
 
-Cite: `def.real-power` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.real-power` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

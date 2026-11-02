@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spa
 Chinese only — see the Chinese page `nodes/prop.scheme-embeds-adic.md` and `proofs/`.
 
 
-Cite: `prop.scheme-embeds-adic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.scheme-embeds-adic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

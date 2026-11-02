@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》· 调和函数的最大值原理；Ahlfors, Co
 
 > 说明见 `notes/thm.harmonic-maximum.md`
 
-引用：`thm.harmonic-maximum`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.harmonic-maximum`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

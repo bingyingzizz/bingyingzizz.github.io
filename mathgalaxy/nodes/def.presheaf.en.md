@@ -10,5 +10,5 @@ layer 9 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Categor
 Chinese only — see the Chinese page `nodes/def.presheaf.md` and `proofs/`.
 
 
-Cite: `def.presheaf` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.presheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

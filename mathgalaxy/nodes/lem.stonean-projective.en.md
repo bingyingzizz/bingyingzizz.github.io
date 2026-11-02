@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Condensed Abelian Groups (`cond.ab`) · Condensed M
 Chinese only — see the Chinese page `nodes/lem.stonean-projective.md` and `proofs/`.
 
 
-Cite: `lem.stonean-projective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.stonean-projective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

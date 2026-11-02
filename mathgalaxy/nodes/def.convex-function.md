@@ -20,4 +20,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5；Rockafellar, Convex An
 
 > 说明见 `notes/def.convex-function.md`
 
-引用：`def.convex-function`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.convex-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

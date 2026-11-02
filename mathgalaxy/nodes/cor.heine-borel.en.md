@@ -10,5 +10,5 @@ layer 17 · corollary · cluster Equivalent Forms of Completeness of the Reals (
 Chinese only — see the Chinese page `nodes/cor.heine-borel.md` and `proofs/`.
 
 
-Cite: `cor.heine-borel` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.heine-borel` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

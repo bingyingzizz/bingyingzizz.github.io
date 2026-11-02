@@ -18,4 +18,4 @@ refs: Horn–Johnson, Matrix Analysis, Ch. 7
 
 > 说明见 `notes/thm.sylvester-criterion.md`
 
-引用：`thm.sylvester-criterion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.sylvester-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

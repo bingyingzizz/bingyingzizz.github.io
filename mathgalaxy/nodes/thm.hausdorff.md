@@ -25,4 +25,4 @@ refs: Hausdorff (1914)；Kunen, Set Theory, I.12
 
 极大链的存在性正是「从下往上一点点加元素直到加不动」这一直觉的严格化。
 
-引用：`thm.hausdorff`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hausdorff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

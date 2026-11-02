@@ -10,5 +10,5 @@ layer 13 · definition · cluster Categories and Diagrams (`cat.basic`) · Categ
 Chinese only — see the Chinese page `nodes/def.mor-domain-codomain.md` and `proofs/`.
 
 
-Cite: `def.mor-domain-codomain` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.mor-domain-codomain` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

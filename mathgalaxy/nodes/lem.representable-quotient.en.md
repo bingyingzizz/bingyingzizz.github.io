@@ -11,5 +11,5 @@ names: `Representability Descent` (short) · `Descent for Representability` (ful
 Chinese only — see the Chinese page `nodes/lem.representable-quotient.md` and `proofs/`.
 
 
-Cite: `lem.representable-quotient` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.representable-quotient` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

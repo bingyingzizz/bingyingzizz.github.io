@@ -11,5 +11,5 @@ names: `Pseudoinverse` (short) · `Moore-Penrose Pseudoinverse` (full)
 Chinese only — see the Chinese page `nodes/def.pseudoinverse.md` and `proofs/`.
 
 
-Cite: `def.pseudoinverse` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pseudoinverse` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

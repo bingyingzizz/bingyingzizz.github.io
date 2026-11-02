@@ -19,4 +19,4 @@ refs: S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结�
 
 > 说明见 `notes/thm.structure-equations.md`
 
-引用：`thm.structure-equations`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.structure-equations`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Adjoints Are Additive` (short) · `Adjoints between Additive Categories 
 Chinese only — see the Chinese page `nodes/prop.adjoint-additive.md` and `proofs/`.
 
 
-Cite: `prop.adjoint-additive` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.adjoint-additive` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

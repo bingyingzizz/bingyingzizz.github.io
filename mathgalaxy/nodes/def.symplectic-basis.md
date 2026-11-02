@@ -19,4 +19,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/def.symplectic-basis.md`
 
-引用：`def.symplectic-basis`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.symplectic-basis`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》· Picard 大定理（介绍）；Ahlfors, Comp
 
 > 说明见 `notes/thm.picard-great.md`
 
-引用：`thm.picard-great`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.picard-great`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

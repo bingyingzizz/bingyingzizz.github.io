@@ -17,4 +17,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.9
 
 > 说明见 `notes/prop.chaus-quotient-equiv.md`
 
-引用：`prop.chaus-quotient-equiv`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.chaus-quotient-equiv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

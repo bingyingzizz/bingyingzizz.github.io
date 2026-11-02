@@ -20,4 +20,4 @@ refs: Mac Lane, Categories for the Working Mathematician, X.3
 ## 说明
 两条合起来看：**余极限和右伴随都是 Kan 延拓的特例**。Kan 延拓是这一整团的统一出口 —— 前面分散的定义（极限、伴随、反射）在其中都能各就各位。
 
-引用：`ex.kan-extension`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.kan-extension`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

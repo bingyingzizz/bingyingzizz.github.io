@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Complexes and Distinguished Triangles (`hom.compl
 Chinese only — see the Chinese page `nodes/thm.universal-coefficients.md` and `proofs/`.
 
 
-Cite: `thm.universal-coefficients` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.universal-coefficients` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

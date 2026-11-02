@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Zeidler, Nonlinear Fun
 
 > 说明见 `notes/thm.banach-fixed-point.md`
 
-引用：`thm.banach-fixed-point`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.banach-fixed-point`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

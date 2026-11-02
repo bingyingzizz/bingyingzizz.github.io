@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T10:45:56.508Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T10:55:55.190Z
 > 15 星系 / 102 星团 / 1460 节点 / 2753 连线（强边 2736，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -10,7 +10,7 @@
 > 这份文件只在「一次性下载 / 离线打包 / 本地处理」时才用。
 
 许可：内容 **CC BY 4.0**（署名即可，可转载 / 镜像 / 商用）、代码 MIT。
-引用请写明节点 id 与内容版本，例如 `thm.cantor`（内容 v0.9.1）。
+引用请写明节点 id 与内容版本，例如 `thm.cantor`（内容 v0.9.2）。
 条款与引用格式见 `LICENSE.txt`，CC BY 4.0 法律文本见 `LICENSE-CC-BY-4.0.txt`。
 
 两个检索模式（见文末「强弱边」）：
@@ -11122,7 +11122,7 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 
 ⭐ 本图在凝聚态那一片另有 `def.semi-normed-ab-group`（半范数阿贝尔群）：那里的系数不是向量空间而是拓扑阿贝尔群，所以只能要半范数。
 
-参考：Rudin, Functional Analysis；Lang, Real and Functional Analysis, Ch. I
+参考：Rudin, Functional Analysis, Ch. 1；Lang, Real and Functional Analysis, Ch. I
 
 #### Banach 空间　`def.banach-space`
 *定义*　Banach 空间（完备赋范空间）
@@ -11139,7 +11139,7 @@ $$\|v\| \ge 0, \qquad \|v\| = 0 \iff v = 0; \qquad \|cv\| = |c|\,\|v\|; \qquad \
 
 整条「逆映射定理」的构造性证明都靠这一条撑着。
 
-参考：Rudin, Functional Analysis；Zeidler, Nonlinear Functional Analysis I, Ch. 1
+参考：Rudin, Functional Analysis, Ch. 1；Zeidler, Nonlinear Functional Analysis I, Ch. 1
 
 #### 偏导数　`def.partial-derivative`
 *定义*　偏导数
@@ -12553,7 +12553,7 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 
 ⭐ Cantor 集是最有教育意义的例子：它**无处稠密**却**不可数**。所以「无处稠密」与「基数小」是两件事。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### 第一纲 / 第二纲　`def.meager-set`
 *定义*　第一纲集、第二纲集与剩余集
@@ -12566,7 +12566,7 @@ $A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可�
 
 ⭐ 用法：想说「几乎所有点都满足 $P$」，就去证 $\{x : \neg P(x)\}$ 第一纲。在无穷维里这比测度论更顺手（很多函数空间没有自然测度，但有 Baire 纲）。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### G_δ 与 F_σ　`def.g-delta`
 *定义*　$G_\delta$ 集与 $F_\sigma$ 集
@@ -12577,7 +12577,7 @@ $A$ 叫 **$G_\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\sigma$
 
 ⭐ Baire 之后，「稠密 $G_\delta$」是「几乎全部的点」的标准写法：连续点集、可微点集、$C[0,1]$ 里无处可微函数的全体，全是稠密 $G_\delta$。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### Baire 纲定理　`thm.baire`
 *定理*　Baire 纲定理
@@ -12615,7 +12615,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⚠️ 完备性不能去掉：$\mathbb{Q}$ 上每个单点闭且无处稠密，$\mathbb{Q}$ 可数，故 $\mathbb{Q}$ 是第一纲 —— 它不是 Baire 空间。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法；Baire 1899
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）；Baire 1899
 
 #### 局部紧 Hausdorff 是 Baire　`thm.locally-compact-baire`
 *定理*　局部紧 Hausdorff 空间是 Baire 空间
@@ -12626,7 +12626,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⭐ 意义：这条把 Baire 纲从「度量」里解放出来，于是它能用在 $C(K)$、紧群、Stone 空间这些非度量对象上 —— 凝聚态数学里的紧 Hausdorff 空间因此也能用「一般点」论证。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### Baire 的三条等价刻画　`prop.baire-characterizations`
 *命题*　Baire 空间的等价刻画与「纲的用法」
@@ -12643,7 +12643,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 ⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### Baire 的开子集是 Baire　`thm.baire-open-subset`
 *定理*　Baire 空间的开子集仍是 Baire 空间
@@ -12658,7 +12658,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 ⭐ 用处：开映射定理要在开集上做局部论证、UBP 要看开子集，这条保证「局部化之后 Baire 性质不丢」。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### 闭覆盖的内点　`lem.countable-closed-cover`
 *引理*　可数个闭集覆盖 $X$ $\implies$ 内点之并稠密
@@ -12669,7 +12669,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### 连续点集是稠密 G_δ　`thm.pointwise-limit-continuity`
 *定理*　连续函数点态极限的连续点集
@@ -12690,7 +12690,7 @@ $$\operatorname{cont}(f) := \{x : f \text{ 在 } x \text{ 连续}\}$$
 
 ⭐ 同一模板的经典产物：$C[0,1]$ 里「处处不可微」的函数构成稠密 $G_\delta$（Banach 1931）。
 
-参考：Rudin, Functional Analysis · Baire 纲定理与纲的用法
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### 共鸣定理　`thm.ubp`
 *定理*　共鸣定理（一致有界原理 / Banach–Steinhaus）
@@ -12713,7 +12713,7 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 
 ⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\|u_n\| = n \to \infty$。
 
-参考：Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像；Banach–Steinhaus 1927
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）；Banach–Steinhaus 1927
 
 #### 共振集是稠密 G_δ　`cor.ubp-resonance`
 *推论*　共振集：一致无界 $\implies$ 发散点稠密
@@ -12732,7 +12732,7 @@ $R = \bigcap_k \Omega_k$ 是 $G_\delta$。
 
 ⭐ 意义：「发散」不是个别点，而是**几乎处处**。经典应用：Fourier 级数部分和算子满足 $\|S_N\| \to \infty$，于是**存在**连续函数其 Fourier 级数在某点发散（du Bois-Reymond 1876）—— 而且这样的函数「很多」。
 
-参考：Rudin, Functional Analysis · 一致有界、开映射、逆算子与闭图像
+参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 #### 开映射定理（Banach 版）　`thm.open-mapping-banach`
 *定理*　开映射定理：满射有界算子把开集映成开集
@@ -12780,7 +12780,7 @@ $$E = \bigcup_{k \ge 1} \overline{k\,B_E} \quad\Longrightarrow\quad u(E) = F = \
 
 ⚠️ 与图中 `thm.open-mapping`（**非常数全纯函数**把开集映成开集）**同名不同物**：那条是复分析结论，这条是线性算子的（Baire + 级数逼近）。
 
-参考：Rudin, Functional Analysis · 开映射定理（Baire 纲的第一步）
+参考：Rudin, Functional Analysis, 2.11
 
 #### 逆算子定理　`thm.bounded-inverse`
 *定理*　逆算子定理：双射有界算子有有界逆
@@ -12793,7 +12793,7 @@ $$E = \bigcup_{k \ge 1} \overline{k\,B_E} \quad\Longrightarrow\quad u(E) = F = \
 
 ⭐ 与 `thm.inverse-function-banach`（Banach 版**逆映射定理**）分工：那条是**非线性**的（$f'(a)$ 可逆 $\implies$ 局部微分同胚，证明用 Neumann 级数 + 压缩映射）；这条是**线性**双射的（证明用 Baire）。两者常被混称，但内容与证法都不同。
 
-参考：Rudin, Functional Analysis · 开映射定理
+参考：Rudin, Functional Analysis, 2.12
 
 #### 闭图像定理　`thm.closed-graph`
 *定理*　闭图像定理
@@ -12822,7 +12822,7 @@ $$x_n \to x \ \text{且} \ u(x_n) \to y \quad \Longrightarrow \quad y = u(x) .$$
 
 ⚠️ 两边完备都不能去掉；$u$ 的**线性**也不能去掉（非线性映射可以图像闭而不连续）。
 
-参考：Rudin, Functional Analysis · 闭图像定理
+参考：Rudin, Functional Analysis, 2.15
 
 ## 星系：实变函数（Functions of a Real Variable）
 > 换一套更听话的积分：σ-代数 → 测度 → 可测函数 → Lebesgue 积分（单调收敛 / Fatou / 控制收敛）→ 乘积测度与 Fubini → 符号测度与 Radon–Nikodym → 微分定理 → $L^p$ 空间。

@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Solid Abelian Groups (`cond.solid`) · Condensed Ma
 Chinese only — see the Chinese page `nodes/lem.solid-completion-criterion.md` and `proofs/`.
 
 
-Cite: `lem.solid-completion-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.solid-completion-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

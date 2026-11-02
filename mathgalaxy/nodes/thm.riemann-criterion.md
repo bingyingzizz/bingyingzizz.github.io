@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6；Spivak, Calculus, Ch. 
 
 > 说明见 `notes/thm.riemann-criterion.md`
 
-引用：`thm.riemann-criterion`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riemann-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

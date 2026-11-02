@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 开映射定理与单叶解析函数；Ahlfo
 
 > 说明见 `notes/thm.open-mapping.md`
 
-引用：`thm.open-mapping`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.open-mapping`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

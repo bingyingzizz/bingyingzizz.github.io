@@ -10,5 +10,5 @@ layer 20 · theorem · cluster Integration (`analysis.integral`) · Functions of
 Chinese only — see the Chinese page `nodes/thm.termwise-L1.md` and `proofs/`.
 
 
-Cite: `thm.termwise-L1` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.termwise-L1` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

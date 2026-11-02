@@ -10,5 +10,5 @@ layer 11 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abs
 Chinese only — see the Chinese page `nodes/def.annihilator.md` and `proofs/`.
 
 
-Cite: `def.annihilator` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.annihilator` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

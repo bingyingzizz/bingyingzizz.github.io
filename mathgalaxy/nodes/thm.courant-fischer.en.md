@@ -11,5 +11,5 @@ names: `Courant–Fischer Minimax` (short) · `Courant–Fischer Minimax Princip
 Chinese only — see the Chinese page `nodes/thm.courant-fischer.md` and `proofs/`.
 
 
-Cite: `thm.courant-fischer` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.courant-fischer` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

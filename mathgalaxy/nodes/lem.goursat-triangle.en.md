@@ -11,5 +11,5 @@ names: `Goursat Triangle Lemma` (short) · `Goursat's Triangle Lemma` (full)
 Chinese only — see the Chinese page `nodes/lem.goursat-triangle.md` and `proofs/`.
 
 
-Cite: `lem.goursat-triangle` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.goursat-triangle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -10,5 +10,5 @@ layer 14 · definition · cluster Metrizability (`topology.metrizable`) · Topol
 Chinese only — see the Chinese page `nodes/def.metrizable.md` and `proofs/`.
 
 
-Cite: `def.metrizable` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.metrizable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

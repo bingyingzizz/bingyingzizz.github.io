@@ -11,5 +11,5 @@ names: `Quotient R Sections` (short) · `Sections of the Quotient of R by Its Di
 Chinese only — see the Chinese page `nodes/prop.condab-quotient-r-disc.md` and `proofs/`.
 
 
-Cite: `prop.condab-quotient-r-disc` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.condab-quotient-r-disc` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

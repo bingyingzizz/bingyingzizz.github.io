@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.22
 
 > 说明见 `notes/prop.solution-functor-representable.md`
 
-引用：`prop.solution-functor-representable`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.solution-functor-representable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

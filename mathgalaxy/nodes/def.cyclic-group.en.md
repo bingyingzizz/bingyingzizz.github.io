@@ -10,5 +10,5 @@ layer 7 · definition · cluster Group Actions and Permutations (`algebra.group-
 Chinese only — see the Chinese page `nodes/def.cyclic-group.md` and `proofs/`.
 
 
-Cite: `def.cyclic-group` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cyclic-group` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

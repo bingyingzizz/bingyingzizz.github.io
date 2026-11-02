@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/lem.fatou.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Fatou%27s_lemma
 
 
-Cite: `lem.fatou` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.fatou` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

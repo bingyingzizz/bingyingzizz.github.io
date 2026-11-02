@@ -17,4 +17,4 @@ refs: Spivak, Calculus on Manifolds, 第 3 章「Integration」· 换元公式�
 
 > 说明见 `notes/thm.change-of-variables-manifold.md`
 
-引用：`thm.change-of-variables-manifold`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.change-of-variables-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

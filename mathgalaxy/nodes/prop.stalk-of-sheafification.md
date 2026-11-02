@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 3.57
 ## 说明
 **证明。** 茎是沿 $x$ 的开邻域取的**滤过余极限** ✓，而层化是保滤过余极限的（它是保余极限的左伴随）✓；两侧都归结到 $T$ 在同一批邻域上的取值 ✓。∎
 
-引用：`prop.stalk-of-sheafification`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.stalk-of-sheafification`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

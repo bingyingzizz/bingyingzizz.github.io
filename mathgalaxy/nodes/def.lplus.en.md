@@ -10,5 +10,5 @@ layer 15 · definition · cluster Integration (`analysis.integral`) · Functions
 Chinese only — see the Chinese page `nodes/def.lplus.md` and `proofs/`.
 
 
-Cite: `def.lplus` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.lplus` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

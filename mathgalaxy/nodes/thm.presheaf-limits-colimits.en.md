@@ -10,5 +10,5 @@ layer 11 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category 
 Chinese only — see the Chinese page `nodes/thm.presheaf-limits-colimits.md` and `proofs/`.
 
 
-Cite: `thm.presheaf-limits-colimits` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.presheaf-limits-colimits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

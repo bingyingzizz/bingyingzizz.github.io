@@ -10,5 +10,5 @@ layer 18 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Compl
 Chinese only — see the Chinese page `nodes/thm.harmonic-conjugate.md` and `proofs/`.
 
 
-Cite: `thm.harmonic-conjugate` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.harmonic-conjugate` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

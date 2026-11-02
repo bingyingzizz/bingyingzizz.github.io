@@ -11,5 +11,5 @@ names: `Frenet Frame` (short) · `Frenet Frame, Curvature and Torsion` (full)
 Chinese only — see the Chinese page `nodes/def.frenet-frame.md` and `proofs/`.
 
 
-Cite: `def.frenet-frame` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.frenet-frame` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

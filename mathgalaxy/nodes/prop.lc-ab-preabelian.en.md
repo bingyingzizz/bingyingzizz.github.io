@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Topological Abelian Groups (`cond.topo`) · C
 Chinese only — see the Chinese page `nodes/prop.lc-ab-preabelian.md` and `proofs/`.
 
 
-Cite: `prop.lc-ab-preabelian` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.lc-ab-preabelian` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

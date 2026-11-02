@@ -19,4 +19,4 @@ refs: Munkres, Elements of Algebraic Topology · 球面的同调（用 Mayer–V
 
 > 说明见 `notes/thm.sphere-homology.md`
 
-引用：`thm.sphere-homology`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.sphere-homology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

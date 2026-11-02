@@ -23,4 +23,4 @@ refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equat
 
 > 说明见 `notes/def.ck-space.md`
 
-引用：`def.ck-space`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ck-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

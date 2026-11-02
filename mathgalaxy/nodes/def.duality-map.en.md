@@ -10,5 +10,5 @@ layer 19 · definition · cluster L^p Spaces (`analysis.lp`) · Functions of a R
 Chinese only — see the Chinese page `nodes/def.duality-map.md` and `proofs/`.
 
 
-Cite: `def.duality-map` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.duality-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

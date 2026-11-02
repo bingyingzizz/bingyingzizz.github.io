@@ -14,4 +14,4 @@ refs: Fuchs, Infinite Abelian Groups, Vol. I, quotients of divisible groups；Ro
 
 > 说明见 `notes/prop.divisible-quotient.md`
 
-引用：`prop.divisible-quotient`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.divisible-quotient`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

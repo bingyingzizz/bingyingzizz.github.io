@@ -24,4 +24,4 @@ refs: Le Stum, Proposition 4.1.1；Le Stum, Corollary 4.1.2
 
 > 说明见 `notes/def.chaus-pretopos.md`
 
-引用：`def.chaus-pretopos`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chaus-pretopos`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -25,4 +25,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 
 > 说明见 `notes/def.continuous.md`
 
-引用：`def.continuous`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.continuous`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

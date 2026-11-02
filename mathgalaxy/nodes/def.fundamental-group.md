@@ -23,4 +23,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group；Hatcher, Alg
 
 > 说明见 `notes/def.fundamental-group.md`
 
-引用：`def.fundamental-group`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.fundamental-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

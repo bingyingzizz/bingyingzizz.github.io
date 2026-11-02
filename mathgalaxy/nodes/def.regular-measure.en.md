@@ -10,5 +10,5 @@ layer 17 · definition · cluster Differentiation Theorems (`analysis.differenti
 Chinese only — see the Chinese page `nodes/def.regular-measure.md` and `proofs/`.
 
 
-Cite: `def.regular-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.regular-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

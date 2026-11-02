@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, C
 
 > 说明见 `notes/def.inner-product.md`
 
-引用：`def.inner-product`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.inner-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

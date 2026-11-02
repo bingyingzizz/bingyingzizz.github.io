@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), Sections 32 and 41
 
 > 说明见 `notes/prop.metrizable-normal.md`
 
-引用：`prop.metrizable-normal`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.metrizable-normal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

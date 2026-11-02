@@ -11,5 +11,5 @@ names: `Injective Splitting` (short) · `Splitting of Monomorphisms into an Inje
 Chinese only — see the Chinese page `nodes/prop.injective-splitting.md` and `proofs/`.
 
 
-Cite: `prop.injective-splitting` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.injective-splitting` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

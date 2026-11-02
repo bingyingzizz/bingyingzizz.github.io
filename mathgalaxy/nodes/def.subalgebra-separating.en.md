@@ -11,5 +11,5 @@ names: `Subalgebra and Separating Points` (short) · `Subalgebras, Separating Po
 Chinese only — see the Chinese page `nodes/def.subalgebra-separating.md` and `proofs/`.
 
 
-Cite: `def.subalgebra-separating` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.subalgebra-separating` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

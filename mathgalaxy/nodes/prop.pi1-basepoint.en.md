@@ -10,5 +10,5 @@ layer 15 · proposition · cluster The Fundamental Group (`topology.fg`) · Topo
 Chinese only — see the Chinese page `nodes/prop.pi1-basepoint.md` and `proofs/`.
 
 
-Cite: `prop.pi1-basepoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.pi1-basepoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

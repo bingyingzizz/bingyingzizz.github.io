@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) �
 Chinese only — see the Chinese page `nodes/thm.neumann-series.md` and `proofs/`.
 
 
-Cite: `thm.neumann-series` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.neumann-series` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实
 
 > 说明见 `notes/def.cohomology-class.md`
 
-引用：`def.cohomology-class`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cohomology-class`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

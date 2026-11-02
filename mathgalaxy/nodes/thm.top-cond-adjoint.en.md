@@ -11,5 +11,5 @@ names: `Top-Cond Adjunction` (short) · `Adjunction between Topological Spaces a
 Chinese only — see the Chinese page `nodes/thm.top-cond-adjoint.md` and `proofs/`.
 
 
-Cite: `thm.top-cond-adjoint` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.top-cond-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

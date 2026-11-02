@@ -10,5 +10,5 @@ layer 13 · definition · cluster Solid Abelian Groups (`cond.solid`) · Condens
 Chinese only — see the Chinese page `nodes/def.cond-measure.md` and `proofs/`.
 
 
-Cite: `def.cond-measure` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cond-measure` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

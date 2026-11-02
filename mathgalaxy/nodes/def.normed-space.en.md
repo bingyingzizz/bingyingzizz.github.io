@@ -10,5 +10,5 @@ layer 9 · definition · cluster Multivariable Differentiation (`analysis.multiv
 Chinese only — see the Chinese page `nodes/def.normed-space.md` and `proofs/`.
 
 
-Cite: `def.normed-space` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.normed-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

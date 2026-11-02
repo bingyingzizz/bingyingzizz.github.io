@@ -10,5 +10,5 @@ layer 23 · theorem · cluster Sequences of Functions, Power Series and Elementa
 Chinese only — see the Chinese page `nodes/thm.power-series-analytic.md` and `proofs/`.
 
 
-Cite: `thm.power-series-analytic` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.power-series-analytic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

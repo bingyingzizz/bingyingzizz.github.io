@@ -22,4 +22,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/cor.free-solid-product.md`
 
-引用：`cor.free-solid-product`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.free-solid-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

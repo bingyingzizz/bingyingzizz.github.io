@@ -23,4 +23,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有限维；Rudin, Functional
 
 > 说明见 `notes/def.norm.md`
 
-引用：`def.norm`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.norm`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

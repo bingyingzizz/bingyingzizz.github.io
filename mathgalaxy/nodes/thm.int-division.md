@@ -20,4 +20,4 @@ refs: 华罗庚《数论导引》§1；Borevich–Shafarevich, Number Theory, Ch
 
 > 说明见 `notes/thm.int-division.md`
 
-引用：`thm.int-division`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.int-division`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

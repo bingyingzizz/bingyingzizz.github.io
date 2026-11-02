@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 ## 说明
 这把一件看起来属于「拓扑」的事（什么算覆盖）翻译成一句纯范畴的话（余积是不是满射）。从此「$\{X_{i} \to X\}$ 覆盖 $X$」与「$\coprod_{i} X_{i} \to X$ 满」可以随意换着用。
 
-引用：`prop.covering-sieve-epi`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.covering-sieve-epi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

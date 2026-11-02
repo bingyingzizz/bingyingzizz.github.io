@@ -11,5 +11,5 @@ names: `Density and Orientation` (short) · `Volume Density Is Independent of Or
 Chinese only — see the Chinese page `nodes/prop.volume-density-well-defined.md` and `proofs/`.
 
 
-Cite: `prop.volume-density-well-defined` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.volume-density-well-defined` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

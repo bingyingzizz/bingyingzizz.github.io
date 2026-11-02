@@ -11,5 +11,5 @@ names: `Ricci Curvature` (short) · `Ricci Curvature and Scalar Curvature` (full
 Chinese only — see the Chinese page `nodes/def.ricci-curvature.md` and `proofs/`.
 
 
-Cite: `def.ricci-curvature` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ricci-curvature` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `RHom to Discrete Vanishes` (short) · `Derived Hom from Finite-Dimension
 Chinese only — see the Chinese page `nodes/prop.rhom-banach-discrete-zero.md` and `proofs/`.
 
 
-Cite: `prop.rhom-banach-discrete-zero` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-banach-discrete-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

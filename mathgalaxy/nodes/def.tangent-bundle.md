@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」
 
 > 说明见 `notes/def.tangent-bundle.md`
 
-引用：`def.tangent-bundle`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tangent-bundle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

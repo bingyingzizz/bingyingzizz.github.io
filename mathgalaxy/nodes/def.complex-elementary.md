@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 初等解析函数（指数、三角、双�
 
 > 说明见 `notes/def.complex-elementary.md`
 
-引用：`def.complex-elementary`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.complex-elementary`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

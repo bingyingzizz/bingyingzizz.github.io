@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· 多值函数与分支；Ahlfors, Complex Ana
 
 > 说明见 `notes/def.branch.md`
 
-引用：`def.branch`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.branch`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

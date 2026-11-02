@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, Cor. 2.23
 
 > 说明见 `notes/prop.integrals-equal-iff.md`
 
-引用：`prop.integrals-equal-iff`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integrals-equal-iff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

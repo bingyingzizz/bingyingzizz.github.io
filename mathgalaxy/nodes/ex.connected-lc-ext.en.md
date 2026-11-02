@@ -11,5 +11,5 @@ names: `Connected Group Ext` (short) · `Connected Locally Compact to Discrete H
 Chinese only — see the Chinese page `nodes/ex.connected-lc-ext.md` and `proofs/`.
 
 
-Cite: `ex.connected-lc-ext` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.connected-lc-ext` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

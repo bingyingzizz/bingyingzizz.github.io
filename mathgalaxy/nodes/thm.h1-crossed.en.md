@@ -11,5 +11,5 @@ names: `H1 and Crossed Homomorphisms` (short) · `First Cohomology and Crossed H
 Chinese only — see the Chinese page `nodes/thm.h1-crossed.md` and `proofs/`.
 
 
-Cite: `thm.h1-crossed` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.h1-crossed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

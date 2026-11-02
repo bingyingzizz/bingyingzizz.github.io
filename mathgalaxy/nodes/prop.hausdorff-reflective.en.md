@@ -10,5 +10,5 @@ layer 11 · proposition · cluster Separation Axioms (`topology.separation`) · 
 Chinese only — see the Chinese page `nodes/prop.hausdorff-reflective.md` and `proofs/`.
 
 
-Cite: `prop.hausdorff-reflective` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.hausdorff-reflective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

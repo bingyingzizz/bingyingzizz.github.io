@@ -10,5 +10,5 @@ layer 16 · theorem · cluster Convergence Tests for Series (`analysis.series`) 
 Chinese only — see the Chinese page `nodes/thm.cauchy-condensation.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-condensation` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-condensation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

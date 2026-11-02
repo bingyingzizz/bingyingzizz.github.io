@@ -12,4 +12,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.5
 
 > 说明见 `notes/prop.normal-locally-closed.md`
 
-引用：`prop.normal-locally-closed`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.normal-locally-closed`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, §2.1；Halmos, Measure Theory, §18
 ## 说明
 连续的定义就是「开集的原像开」；而开集生成 $\mathfrak{B}_Y$，用上一条的判定准则 (2) 立刻得到。
 
-引用：`cor.continuous-measurable`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.continuous-measurable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -16,4 +16,4 @@ refs: Le Stum, Theorem 8.3.9
 
 > 说明见 `notes/thm.lc-ext-vanishing.md`
 
-引用：`thm.lc-ext-vanishing`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lc-ext-vanishing`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Tensor Universal Property` (short) · `Universal Property of the Tensor 
 Chinese only — see the Chinese page `nodes/prop.module-tensor-universal.md` and `proofs/`.
 
 
-Cite: `prop.module-tensor-universal` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.module-tensor-universal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

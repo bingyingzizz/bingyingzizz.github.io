@@ -11,5 +11,5 @@ names: `Cond Is Sheaves on FCHaus` (short) · `Condensed Sets Are Sheaves on Fin
 Chinese only — see the Chinese page `nodes/thm.cond-equiv-fchaus.md` and `proofs/`.
 
 
-Cite: `thm.cond-equiv-fchaus` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cond-equiv-fchaus` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

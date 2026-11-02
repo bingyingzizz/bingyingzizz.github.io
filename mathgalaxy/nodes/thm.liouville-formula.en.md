@@ -10,5 +10,5 @@ layer 28 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Diff
 Chinese only — see the Chinese page `nodes/thm.liouville-formula.md` and `proofs/`.
 
 
-Cite: `thm.liouville-formula` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.liouville-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

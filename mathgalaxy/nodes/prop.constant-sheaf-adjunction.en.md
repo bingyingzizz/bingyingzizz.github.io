@@ -11,5 +11,5 @@ names: `Constant Sheaf Adjunction` (short) · `Adjunction for Constant Sheaves` 
 Chinese only — see the Chinese page `nodes/prop.constant-sheaf-adjunction.md` and `proofs/`.
 
 
-Cite: `prop.constant-sheaf-adjunction` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.constant-sheaf-adjunction` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

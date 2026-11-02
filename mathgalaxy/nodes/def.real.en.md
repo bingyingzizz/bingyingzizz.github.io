@@ -10,5 +10,5 @@ layer 12 · definition · cluster Constructing the Number Systems (`set.numbers`
 Chinese only — see the Chinese page `nodes/def.real.md` and `proofs/`.
 
 
-Cite: `def.real` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.real` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

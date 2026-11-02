@@ -20,4 +20,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Ext 与 Tor 的�
 
 > 说明见 `notes/prop.dimension-shift.md`
 
-引用：`prop.dimension-shift`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.dimension-shift`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

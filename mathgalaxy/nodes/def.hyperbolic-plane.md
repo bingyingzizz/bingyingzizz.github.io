@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双曲平面；Che
 
 > 说明见 `notes/def.hyperbolic-plane.md`
 
-引用：`def.hyperbolic-plane`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.hyperbolic-plane`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

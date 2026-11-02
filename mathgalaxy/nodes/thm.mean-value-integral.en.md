@@ -11,5 +11,5 @@ names: `Integral Mean Value Theorem` (short) · `Mean Value Theorem for Integral
 Chinese only — see the Chinese page `nodes/thm.mean-value-integral.md` and `proofs/`.
 
 
-Cite: `thm.mean-value-integral` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mean-value-integral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -11,5 +11,5 @@ names: `Limits of Ab(C)` (short) · `Limits in Categories of Abelian Group Objec
 Chinese only — see the Chinese page `nodes/prop.ab-limits-forgetful.md` and `proofs/`.
 
 
-Cite: `prop.ab-limits-forgetful` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ab-limits-forgetful` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

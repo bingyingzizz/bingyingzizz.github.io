@@ -11,5 +11,5 @@ names: `Category into Complexes` (short) · `Embedding a Category into Its Compl
 Chinese only — see the Chinese page `nodes/prop.category-into-complexes.md` and `proofs/`.
 
 
-Cite: `prop.category-into-complexes` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.category-into-complexes` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

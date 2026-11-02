@@ -10,5 +10,5 @@ layer 15 · proposition · cluster Homology and Exact Sequences (`hom.cohomology
 Chinese only — see the Chinese page `nodes/prop.injective-criterion.md` and `proofs/`.
 
 
-Cite: `prop.injective-criterion` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.injective-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

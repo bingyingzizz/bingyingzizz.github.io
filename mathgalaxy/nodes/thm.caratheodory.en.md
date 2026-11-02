@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.caratheodory.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Carath%C3%A9odory%27s_extension_theorem
 
 
-Cite: `thm.caratheodory` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.caratheodory` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

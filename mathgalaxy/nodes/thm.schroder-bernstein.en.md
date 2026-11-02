@@ -10,5 +10,5 @@ layer 7 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · S
 Chinese only — see the Chinese page `nodes/thm.schroder-bernstein.md` and `proofs/`.
 
 
-Cite: `thm.schroder-bernstein` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.schroder-bernstein` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

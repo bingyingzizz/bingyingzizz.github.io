@@ -10,5 +10,5 @@ layer 23 · proposition · cluster Mean Value Theorems and Taylor (`analysis.mvt
 Chinese only — see the Chinese page `nodes/prop.taylor-peano.md` and `proofs/`.
 
 
-Cite: `prop.taylor-peano` (content v0.9.1) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.taylor-peano` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 
