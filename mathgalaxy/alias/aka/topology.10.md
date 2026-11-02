@@ -1,8 +1,6 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
-- 挠与 Stonean | 无挠与连通 | torsion Stonean | Exercise 6.9 → prop.pontryagin-torsion-stone
-
 - 布尔环 | Boolean ring | 幂等环 → def.boolean-ring
 
 - Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 → thm.boolean-stone
@@ -28,5 +26,9 @@
 - Exercise 2.13 → prop.connected-image-closure
 
 - Exercise 2.9 → prop.chaus-quotient-equiv
+
+- Exercise 2.36 | Exercise 2.37 → prop.weak-hausdorff-k-closed
+
+- 最值定理 → thm.evt
 
 > 续见 alias/aka/topology.11.md

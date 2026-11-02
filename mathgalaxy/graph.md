@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T03:39:18.764Z
-> 14 星系 / 94 星团 / 1394 节点 / 2618 连线（强边 2601，弱边 17；其中**不分层**的「推论」22 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-02T03:53:09.001Z
+> 14 星系 / 94 星团 / 1393 节点 / 2614 连线（强边 2597，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 390 KB），不要单次抓取** —— 抓取工具单次只能返回
 > 约 1000 词元（中文约 3 KB），你会只看到开头一小段，而且同一地址反复抓也只
@@ -1542,26 +1542,6 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 
 参考：Engelking, General Topology（⚠️ 章节未核实，只记书名）· 分离公理；Munkres, Topology（⚠️ 章节未核实，只记书名）
 
-#### 紧 Hausdorff 空间正规　`thm.compact-hausdorff-normal`
-*定理*　紧 Hausdorff 空间是正规的
-
-**在做什么**：$T_{2} + $ 紧 $\implies T_{4}$。这一条把「局部可分点」和「整体可分闭集」接起来，是整个拓扑学里被引用最多的引理之一 —— 因为它让 Urysohn 引理 / Tietze 延拓 / 单位分解在**紧流形**上全部可用。
-
-设 $X$ 是**紧**的 Hausdorff 空间（`def.compact`、`def.hausdorff`）。则 $X$ 是**正规**的（`def.normal-space`）：任意两个不交闭集 $A, B$ 存在不交开集 $U \supseteq A$、$V \supseteq B$。
-
-**用途**：
-
-- 紧流形（局部结构）$\implies$ 可度量化 / 可嵌入欧氏空间；
-- $[0,1]$、$\mathbb{S}^{n}$、$\mathbb{T}^{n}$ 都正规 $\implies$ 上面的一切 Urysohn 型论证都成立，不必逐个验证。
-
-⭐ **证明思路（两步，都是紧性的标准用法）**：先把「点 vs 闭集」做出来（对每点 $b \in B$ 用 $T_{2}$ 造 $b$ 的开邻域，其闭包仍避开 $x$；再用紧性取有限多个的并），得到「点与闭集可分开」；再对 $x \in A$ 重复一次同一手法（这次用 $A$ 的紧性取有限并），得到两个不交开集。两次都是「对每个点造一点余量、再用紧性取有限多」。完整证明在边上（`imp.compact-hausdorff-normal`）。
-
-⚠️ **紧性与 Hausdorff 缺一不可**：只有紧性不行（不 $T_{2}$ 的紧空间可以完全不正规），只有 $T_{2}$ 也不行（$T_{2}$ 一般不给正规 —— 例如 Sorgenfrey 平面）。
-
-**与仿紧版的关系**：`thm.paracompact-hausdorff-normal` 证明「仿紧 + Hausdorff $\implies$ 正规」，紧空间都仿紧，所以那条也能推到本条 —— 但两条证明难度不同，本条只用紧性，不引入仿紧性。
-
-参考：Munkres, Topology（⚠️ 章节未核实，只记书名）· 紧 Hausdorff 空间；Engelking, General Topology（⚠️ 章节未核实，只记书名）
-
 #### 拓扑空间与开集　`def.topology`
 *定义*　拓扑空间 / 开集
 
@@ -1750,7 +1730,7 @@ $X$ 的子集 $K$ 叫**闭开集**，如果它同时是开集与闭集。等价�
 
 **紧 Hausdorff $\implies$ 正规**（这是紧性最常用的一个推论：两个不交闭集在紧空间里能被有限多个开集对分开）。所以 $[0,1]$、$\beta I$ 这些空间都是正规的 —— 于是 Urysohn 引理在那里永远能用。
 
-**完整证明**见 `thm.compact-hausdorff-normal`（两步都靠紧性把无穷族压成有限族）；⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。
+**完整证明**沿「紧 $\implies$ 仿紧」+「仿紧 $+$ Hausdorff $\implies$ 正规」两步走，见 `thm.paracompact-hausdorff-normal`；⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。
 
 参考：Munkres, Topology
 
@@ -40510,18 +40490,6 @@ $(q, p)$ 是余切丛上的 Darboux 坐标。
 
 $G_\delta$ / $F_\sigma$ 的说法要与开闭集、内部的对偶语言配套。
 
-#### 定义引用：「紧」→ 紧 Hausdorff 空间正规　`dep.chn-compact`
-
-第一条前提是紧。
-
-#### 定义引用：「Hausdorff 空间」→ 紧 Hausdorff 空间正规　`dep.chn-haus`
-
-第二条前提是 $T_2$。
-
-#### 定义引用：「正规空间」→ 紧 Hausdorff 空间正规　`dep.chn-normal`
-
-结论是 $T_4$。
-
 #### T1 空间 ⟹ T0 空间　`imp.t1-t0`
 
 设 $x \ne y \in X$。由 $T_{1}$，单点集 $\{y\}$ 是**闭集**，于是 $U := X \setminus \{y\}$ 是**开集**，且 $x \in U$、$y \notin U$。
@@ -40614,7 +40582,7 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 设 $F$ 闭、$x \notin F$。因 $X \setminus F$ 是 $x$ 的开邻域、且 $x$ 有紧邻域，可取**紧邻域** $K \ni x$ 使 $K \subseteq X \setminus F$（把原来的紧邻域与 $X \setminus F$ 取交，紧集的闭子集仍紧）。于是 $K \cap F = \emptyset$。
 
-记 $\partial K := K \setminus \mathring{K}$（紧集，闭）。$x \in \mathring{K}$ 故 $x \notin \partial K$。$K$ 作为紧 Hausdorff 空间是**正规**的（`thm.compact-hausdorff-normal`），于是由 Urysohn 引理存在连续 $h : K \to [0,1]$ 使
+记 $\partial K := K \setminus \mathring{K}$（紧集，闭）。$x \in \mathring{K}$ 故 $x \notin \partial K$。$K$ 作为紧 Hausdorff 空间是**正规**的（紧 $\implies$ 仿紧 $\implies$（加 Hausdorff）正规，见 `thm.paracompact-hausdorff-normal`），于是由 Urysohn 引理存在连续 $h : K \to [0,1]$ 使
 
 $$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
 
@@ -40623,26 +40591,6 @@ $$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
 所以 $X$ 是 $T_{3.5}$，加上 $T_{1}$ 得完全正则 ✓。∎
 
 ⭐ 这条是**一点紧化**理论的前置：局部紧 Hausdorff 的一点紧化是紧 Hausdorff，其上的函数全靠这条从 $X$ 上「拉回来」。
-
-#### 紧 + Hausdorff 空间 ⟹ 紧 Hausdorff 空间正规　`imp.compact-hausdorff-normal`
-
-**第 0 步（预备）**：紧空间的闭子集紧（`prop.compact-basic-operations`）。
-
-**第 1 步：$X$ 满足 $T_{3}$（点 vs 闭集）。** 设 $F \subseteq X$ 闭、$x \notin F$。对每个 $y \in F$，由 $T_{2}$ 取不交开集 $U_{y} \ni y$、$W_{y} \ni x$；令 $G_{y} := U_{y}$，则 $\overline{G_{y}} \subseteq X \setminus W_{y}$，故 $x \notin \overline{G_{y}}$。
-
-族 $\{\, G_{y} : y \in F \,\}$ 是紧集 $F$ 的开覆盖（$F$ 闭于紧空间 $\implies$ 紧），取有限子覆盖 $G_{y_{1}}, \ldots, G_{y_{n}}$。令
-
-$$V := G_{y_{1}} \cup \cdots \cup G_{y_{n}}, \qquad U := X \setminus (\overline{G_{y_{1}}} \cup \cdots \cup \overline{G_{y_{n}}}) .$$
-
-则 $U$ 开（有限个闭集之并闭）、$V$ 开、$F \subseteq V$；且 $x \notin \overline{G_{y_{i}}}$ 给出 $x \in U$；最后由 $G_{y_{i}} \subseteq \overline{G_{y_{i}}}$ 得 $U \cap V = \emptyset$。所以 $x$ 与 $F$ 被不交开集分开 ✓。
-
-**第 2 步：$X$ 满足 $T_{4}$（闭集 vs 闭集）。** 设 $A, B$ 不交闭。对每个 $x \in A$，用第 1 步（把闭集 $B$ 与点 $x$ 分开）得到不交开集 $O_{x} \ni x$、$W_{x} \supseteq B$。族 $\{\, O_{x} : x \in A \,\}$ 覆盖紧集 $A$，取有限子覆盖 $O_{x_{1}}, \ldots, O_{x_{m}}$。令
-
-$$U := O_{x_{1}} \cup \cdots \cup O_{x_{m}}, \qquad V := W_{x_{1}} \cap \cdots \cap W_{x_{m}} .$$
-
-则 $U$ 开、$V$ 开（有限交）、$A \subseteq U$、$B \subseteq V$，且 $U \cap V = \emptyset$（每个 $O_{x_{i}}$ 都与 $W_{x_{i}}$ 不交，故 $U$ 与全体 $W_{x_{j}}$ 的交不交）。于是 $X$ 正规 ✓。∎
-
-**⭐ 两次都是同一个模板**：对每个点造「一点余量」（邻域取到闭包仍避开对面），再用紧性把无穷族压成有限族 —— 有限性正是为了取「有限并 / 有限交」时开闭性不乱。这两步在 `thm.paracompact-hausdorff-normal` 里换成了局部有限族，是同一条思路的仿紧版。
 
 #### 紧 ⟹ 局部紧 Hausdorff 空间　`imp.compact-locally-compact`
 
@@ -47919,7 +47867,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **内蕴几何 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
 - **流形与向量丛 ↔ 辛流形与 Hamilton 力学**　2 条节点级连线
 - **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　2 条节点级连线
-- **拓扑空间 ↔ 度量空间**　10 条节点级连线
+- **拓扑空间 ↔ 度量空间**　8 条节点级连线
 - **度量空间 ↔ 仿紧与单位分解**　2 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
 - **实数与极限 ↔ 数系的构造**　3 条节点级连线

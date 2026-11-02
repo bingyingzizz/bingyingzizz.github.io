@@ -10,6 +10,7 @@
 - 被 [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画 用
 - 被 [`thm.flow-complete`](../nodes/thm.flow-complete.md) 流完备性 用
 - ⇒ [`thm.flow-complete`](../nodes/thm.flow-complete.md) 流完备性
-- 被 [`thm.compact-hausdorff-normal`](../nodes/thm.compact-hausdorff-normal.md) 紧 Hausdorff 空间正规 用
+- ⇒ [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间
+- ⇒ [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间
 
 > 续见 [nodes/def.compact.3.md](./def.compact.3.md)
