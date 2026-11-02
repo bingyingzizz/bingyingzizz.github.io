@@ -2,7 +2,9 @@
 [在星图里打开](../#n=def.mean-curvature)　·　第 1 页 [nodes/def.mean-curvature.md](./def.mean-curvature.md)
 
 ## 陈述（续）
-。这两个数就是形状算子 $W$ 的全部不变量（一个 $2\times2$ 对称矩阵只有迹与行列式两个）。
+$H$ 与「极小曲面」（肥皂膜）有关，$K$ 与「曲面弯不弯得平」有关。
+
+这两个数就是形状算子 $W$ 的全部不变量（一个 $2\times2$ 对称矩阵只有迹与行列式两个）。
 $$H := \frac{1}{2}\operatorname{tr}W = \frac{1}{2}(k_{1}+k_{2}),\qquad K := \det W = k_{1}k_{2}.$$
 
 $H$ 叫**平均曲率**，$K$ 叫 **Gauss 曲率**（与 `thm.gauss-equation` 的定义一致）。用 $I, II$ 的分量写：

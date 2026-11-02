@@ -2,14 +2,15 @@
 [在星图里打开](../#n=def.cauchy-null)　·　第 1 页 [nodes/def.cauchy-null.md](./def.cauchy-null.md)
 
 ## 陈述（续）
+hbb{Q}$ 上的绝对值，$\varepsilon$ 一律取**正有理数**（此时还不需要实数）。
 $(x_n)$ 是 **Cauchy 列**：
-
-$$\forall \varepsilon > 0,\ \exists N,\ \forall m, n \ge N : |x_m - x_n| < \varepsilon$$
+$$\forall \varepsilon > 0,\ \exists N,\ \forall m, n \ge N : |x
+_m - x_n| < \varepsilon$$
 $(x_n)$ 是**零列**：
-
-$$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N : |x_n| < \varepsilon$$
-两个 Cauchy 列**等价**（记作 $(x_n) \sim (y_n)$）当且仅当 $(x_n - y_n)$ 是零列。
-
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N : |x_n
+| < \varepsilon$$
+两个 Cauchy 列**等价**（记作 $(x_n) \sim (y_n)$）当且仅当 $(x_n - y_n)$ 是零列
+。
 （$\sim$ 是等价关系：自反、对称显然，传递由三角不等式。）
 
 > 续见 [nodes/def.cauchy-null.3.md](./def.cauchy-null.3.md)

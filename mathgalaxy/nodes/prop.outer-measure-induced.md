@@ -3,7 +3,9 @@
 layer 16 · 命题 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=prop.outer-measure-induced)　·　[节点索引](../index.md)
 
-设 $\mathcal{E} \subseteq \mathcal{P}(X)$，$\emptyset \in \mathcal{E}$，$X \in \mathcal{E}$，$\rho : \mathcal{E} \to [0, +\infty ]$ 满足 $\rho (\emptyset ) = 0$。对 $A \subseteq X$ 定义
+设 $\mathcal{E} \subseteq \mathcal{P}(X)$，$\emptyset \in \mathcal{E}$，$X \in \mathcal{E}$，$\rho : \mathcal{E} \to [0, +\infty ]$ 满足 $\rho (\emptyset ) = 0$。
+
+对 $A \subseteq X$ 定义
 > 陈述续见 [nodes/prop.outer-measure-induced.2.md](./prop.outer-measure-induced.2.md)
 
 

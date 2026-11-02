@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.mobius)　·　第 1 页 [nodes/def.mobius.md](./def.mobius.md)　·　上一页 [nodes/def.mobius.3.md](./def.mobius.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理
 - 被 [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理 用
 - ⇒ [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比
 - ⇒ [`prop.mobius-circle`](../nodes/prop.mobius-circle.md) 保圆性

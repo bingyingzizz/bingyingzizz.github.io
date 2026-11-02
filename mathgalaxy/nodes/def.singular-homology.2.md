@@ -11,6 +11,7 @@ $$H_{p}(X) := \ker\partial_{p}\, \big/\, \operatorname{im}\partial_{p+1}$$
 
 叫 $X$ 的**$p$ 维奇异同调群**。
 **函子性**：连续映射 $f : X \to Y$ 给出链映射 $f_{\#}(\sigma) := f \circ \sigma$，它满足 $f_{\#}\partial = \partial f_{\#}$，故诱导 $f_{*} : H_{p}(X) \to H_{p}(Y)$；并且 $(1_{X})_{*} = \operatorname{id}$、$(g \ci
-rc f)_{*} = g_{*} \circ f_{*}$。同伦的映射诱导相同的映射：$f \simeq g \implies f_{*} = g_{*}$。
+rc f)_{*} = g_{*} \circ f_{*}$。
+同伦的映射诱导相同的映射：$f \simeq g \implies f_{*} = g_{*}$。
 
 > 续见 [nodes/def.singular-homology.3.md](./def.singular-homology.3.md)

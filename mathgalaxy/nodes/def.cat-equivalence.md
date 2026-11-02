@@ -7,7 +7,9 @@ layer 10 · 定义 · 函子与自然变换 · 范畴论
 
 $$F \circ G \cong 1_{\mathcal{C}'}, \qquad G \circ F \cong 1_{\mathcal{C}}$$
 
-这时记 $\mathcal{C} \simeq \mathcal{C}'$。若把两个 $\cong$ 加强成等号 $F \circ G = 1_{\mathcal{C}'}$、$G \circ F = 1_{\mathcal{C}}$，则叫**范畴同构**，记 $\mathcal{C} \cong \mathcal{C}'$。
+这时记 $\mathcal{C} \simeq \mathcal{C}'$。
+
+若把两个 $\cong$ 加强成等号 $F \circ G = 1_{\mathcal{C}'}$、$G \circ F = 1_{\mathcal{C}}$，则叫**范畴同构**，记 $\mathcal{C} \cong \mathcal{C}'$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.cat-equivalence.2.md](./def.cat-equivalence.2.md)

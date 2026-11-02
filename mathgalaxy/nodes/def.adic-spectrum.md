@@ -3,7 +3,11 @@ adic 谱 $\operatorname{Spa}(A,A^+)$
 layer 9 · 定义 · adic 空间 · 解析空间
 [在星图里打开](../#n=def.adic-spectrum)　·　[节点索引](../index.md)
 
-白话：**把环 $A$ 的元素「量大小」的所有方式收集起来，就得到 adic 谱**。每个点是一个「绝对值」（valuation，赋值），$A^+$ 的作用是筛掉「把某个有界元量成 $>1$」的那些点。这是 $\operatorname{Spec}$ 的「带大小」版本 —— $\operatorname{Spec}$ 只记「哪些理想的元素为零」，$\operatorname{Spa}$ 还记「多小」。
+白话：**把环 $A$ 的元素「量大小」的所有方式收集起来，就得到 adic 谱**。
+
+每个点是一个「绝对值」（valuation，赋值），$A^+$ 的作用是筛掉「把某个有界元量成 $>1$」的那些点。
+
+这是 $\operatorname{Spec}$ 的「带大小」版本 —— $\operatorname{Spec}$ 只记「哪些理想的元素为零」，$\operatorname{Spa}$ 还记「多小」。
 > 陈述续见 [nodes/def.adic-spectrum.2.md](./def.adic-spectrum.2.md)
 
 

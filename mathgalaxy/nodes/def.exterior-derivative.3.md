@@ -6,7 +6,9 @@ athrm{d}\omega\wedge\eta+(-1)^{k}\omega\wedge\mathrm{d}\eta$；
 3. **$\mathrm{d}^{2} = 0$**：混合偏导可交换的直接推论；
 4. 与坐标选取无关（等价说法：与拉回
 交换，见 `prop.pullback-forms`）。
-$\mathrm{d}\omega = 0$ 的 $\omega$ 叫**闭形式**，$\omega = \mathrm{d}\eta$ 的叫**恰当形式**。由 $\mathrm{d}^{2}=0$，恰当必闭；反之不成立（$\mathbb{R}^{2}\setmi
-nus\{0\}$ 上的 $\frac{x\,\mathrm{d}y-y\,\mathrm{d}x}{x^{2}+y^{2}}$ 闭而不恰当）。
+$\mathrm{d}\omega = 0$ 的 $\omega$ 叫**闭形式**，$\omega = \mathrm{d}\eta$ 的叫**恰当形式**。
+
+由 $\mathrm{d}^{2}=0$，恰当必闭；
+反之不成立（$\mathbb{R}^{2}\setminus\{0\}$ 上的 $\frac{x\,\mathrm{d}y-y\,\mathrm{d}x}{x^{2}+y^{2}}$ 闭而不恰当）。
 
 > 续见 [nodes/def.exterior-derivative.4.md](./def.exterior-derivative.4.md)

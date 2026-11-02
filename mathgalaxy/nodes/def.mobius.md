@@ -8,6 +8,8 @@ layer 17 · 定义 · 复变函数基础 · 复变函数
 形如
 
 $$f(z) = \frac{az + b}{cz + d}, \qquad a, b, c, d \in \mathbb{C},\ ad - bc \ne 0$$
+
+的映射称为**分式线性变换**（Möbius 变换）。
 > 陈述续见 [nodes/def.mobius.2.md](./def.mobius.2.md)
 
 
@@ -17,8 +19,6 @@ $$f(z) = \frac{az + b}{cz + d}, \qquad a, b, c, d \in \mathbb{C},\ ad - bc \ne 0
 - …另有入边，续页见 [nodes/def.mobius.3.md](./def.mobius.3.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理
-
 - …另有出边，续页见 [nodes/def.mobius.4.md](./def.mobius.4.md)
 
 refs: 王晓光《复变函数》笔记，第 13 章 · 分式线性变换；Ahlfors, Complex Analysis, Ch. 3 · Conformal Mapping

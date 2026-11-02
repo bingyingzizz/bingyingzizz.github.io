@@ -6,6 +6,8 @@ layer 5 · 定义 · 仿紧与单位分解 · 拓扑学
 设 $\mathcal{U} = \{ U_{i} \}_{i \in I}$ 与 $\mathcal{V} = \{ V_{s} \}_{s \in S}$ 都是 $X$ 的覆盖。$\mathcal{V}$ 是 $\mathcal{U}$ 的**加细**，如果每个 $V_{s}$ 都落在某个 $U_{i}$ 里：
 
 $$\forall s \in S,\ \exists i \in I :\quad V_{s} \subseteq U_{i}.$$
+
+不要求指标集相同，也不要求单射：多个 $V_{s}$ 可以落在同一个 $U_{i}$ 里。
 > 陈述续见 [nodes/def.refinement.2.md](./def.refinement.2.md)
 
 

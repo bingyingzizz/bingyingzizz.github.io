@@ -3,7 +3,11 @@
 layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.cohomology-short-exact)　·　[节点索引](../index.md)
 
-设 $\mathcal{A}$ 是阿贝尔范畴，$K^{\bullet}$ 是 $\mathcal{A}$ 中的上链复形。记 $Z^{k} := \ker d^{k}$（**闭链**）、$B^{k} := \operatorname{im} d^{k-1}$（**上边缘**），于是 $H^{k} = Z^{k}/B^{k}$。则对每个 $k$ 有处处正合的列
+设 $\mathcal{A}$ 是阿贝尔范畴，$K^{\bullet}$ 是 $\mathcal{A}$ 中的上链复形。
+
+记 $Z^{k} := \ker d^{k}$（**闭链**）、$B^{k} := \operatorname{im} d^{k-1}$（**上边缘**），于是 $H^{k} = Z^{k}/B^{k}$。
+
+则对每个 $k$ 有处处正合的列
 > 陈述续见 [nodes/prop.cohomology-short-exact.2.md](./prop.cohomology-short-exact.2.md)
 
 

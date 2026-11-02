@@ -3,7 +3,7 @@
 layer 14 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.op-category-is-modules)　·　[节点索引](../index.md)
 
-记 $\operatorname{Op}(\mathcal{C}) \subseteq \operatorname{Mor}(\mathcal{C})$ 为由「域 = 余域」的态射组成的**满子范畴**（带算子的对象）。$k$ 交换时 $\operatorn
+记 $\operatorname{Op}(\mathcal{C}) \subseteq \operatorname{Mor}(\mathcal{C})$ 为由「域 = 余域」的态射组成的**满子范畴**（带算子的对象）。
 > 陈述续见 [nodes/prop.op-category-is-modules.2.md](./prop.op-category-is-modules.2.md)
 
 

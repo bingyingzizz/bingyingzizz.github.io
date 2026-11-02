@@ -3,7 +3,7 @@
 layer 13 · 命题 · 范畴与图 · 范畴论
 [在星图里打开](../#n=prop.cat-final-initial-products)　·　[节点索引](../index.md)
 
-$\mathbf{Cat}$ 有**终对象**（单对象范畴 $\mathbf{1}$）、有**始对象**（空范畴 $\mathbf{0}$）、有**有限积**（积范畴 $\mathcal{C} \times \mathcal{C}'$）；并且 $\operatorname{Op}(\mathcal{C})$ 是域
+$\mathbf{Cat}$ 有**终对象**（单对象范畴 $\mathbf{1}$）、有**始对象**（空范畴 $\mathbf{0}$）、有**有限积**（积范畴 $\mathcal{C} \times \mathcal{C}'$）；
 > 陈述续见 [nodes/prop.cat-final-initial-products.2.md](./prop.cat-final-initial-products.2.md)
 
 

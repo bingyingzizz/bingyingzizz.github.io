@@ -3,5 +3,3 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.f-shriek-base-change`](../nodes/prop.f-shriek-base-change.md) 对偶函子的扭转与基变换 + [`def.f-shriek`](../nodes/def.f-shriek.md) 紧支撑推前 f_!：Koszul 复形 $\implies$ 正则闭浸入的对偶复形　[proofs/imp.regular-immersion-dualizing.md](../proofs/imp.regular-immersion-dualizing.md)
-
-> 续见 [nodes/prop.regular-immersion-dualizing.4.md](./prop.regular-immersion-dualizing.4.md)

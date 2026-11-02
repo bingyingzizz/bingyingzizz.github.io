@@ -2,6 +2,6 @@
 [在星图里打开](../#n=prop.cat-final-initial-products)　·　第 1 页 [nodes/prop.cat-final-initial-products.md](./prop.cat-final-initial-products.md)
 
 ## 陈述（续）
-与余域函子 $\operatorname{Mor}(\mathcal{C}) \rightrightarrows \mathcal{C}$ 的**核**。
+并且 $\operatorname{Op}(\mathcal{C})$ 是域与余域函子 $\operatorname{Mor}(\mathcal{C}) \rightrightarrows \mathcal{C}$ 的**核**。
 
 > 续见 [nodes/prop.cat-final-initial-products.3.md](./prop.cat-final-initial-products.3.md)

@@ -9,7 +9,9 @@ in \Omega^{k}(G)$ 叫**左不变**，如果
 $$L_{g}^{\ast}\omega = \omega\qquad (g \in G),$$
 等价地 $\omega_{g}(v_{1},\ldots,v_{k}) = \omega_{e}\bigl(\mathrm{d}(L_{
 g^{-1}})_{g}v_{1},\ldots,\mathrm{d}(L_{g^{-1}})_{g}v_{k}\bigr)$ —— 即 $
-\omega$ 在 $G$ 上的值由 $\omega_{e}$ 唯一决定。于是赋值
+\omega$ 在 $G$ 上的值由 $\omega_{e}$ 唯一决定。
+于是赋值
+
 $$\omega \longmapsto \omega_{e}$$
 是「左不变 $k$-形式」的空间到 $\bigwedge^{k}\mathfrak{g}^{\ast}$ 的线性同构，维数为 $\bino
 m{n}{k}$。

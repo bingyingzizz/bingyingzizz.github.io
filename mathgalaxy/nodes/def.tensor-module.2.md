@@ -31,15 +31,16 @@ qquad m \otimes
 imes n$ 的**有限和
 ** $\sum_{i}
  m_{i} \otimes
- n_{i}$。像满足两条双加
-性关系与一条**平衡**
-关系 $m r \otimes
- n = m \otimes 
-r n$；并且对每个**平衡
-双加性**映射 $B : M
- \times N \to 
-P$（$P$ 是阿贝尔群），存在
-**唯一**的群同态
+ n_{i}$。
+像满足两条双加性关系与一条*
+*平衡**关系 $m r 
+\otimes n = m 
+\otimes r n$；
+并且对每个**平衡双加性*
+*映射 $B : M \ti
+mes N \to P$（$P
+$ 是阿贝尔群），存在**唯
+一**的群同态
 $$\widetilde{B}
  : M \otimes_{
 R} N \longright

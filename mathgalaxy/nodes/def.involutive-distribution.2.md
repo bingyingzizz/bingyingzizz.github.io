@@ -3,8 +3,9 @@
 
 ## 陈述（续）
 被拼成薄片」的全部障碍。
-设 $\mathcal{D}$ 是 $M$ 上的光滑 $k$ 阶切分布。称 $\mathcal{D}$ **对合**（involutive），如果对任意开集 $U \subseteq M$
- 与任意 $X, Y \in \Gamma(\mathcal{D}|_{U})$（取值落在 $\mathcal{D}$ 里的光滑向量场），都有
+设 $\mathcal{D}$ 是 $M$ 上的光滑 $k$ 阶切分布。
+称 $\mathcal{D}$ **对合**（involutive），如果对任意开集 $U \subseteq M$ 与任意 $X, Y \in \Gamma(\mathcal{D}|
+_{U})$（取值落在 $\mathcal{D}$ 里的光滑向量场），都有
 $$[X,Y] \in \Gamma(\mathcal{D}|_{U}),$$
 
 其中 $[\cdot,\cdot]$ 是向量场的 Lie 括号。

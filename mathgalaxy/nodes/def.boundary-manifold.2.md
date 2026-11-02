@@ -10,5 +10,6 @@ $$\mathbb{H}^{n} := \{x\in\mathbb{R}^{n} : x^{n}\le 0\},\qquad \partial\mathbb{H
 的**开**子集，且任意两张卡的转移映射 $\psi\circ\varphi^{-1}$ 光滑。
 $p\in M$ 叫**内点**，如果存在一张卡使 $\varphi(p)^{n}<0$；否则叫**边界点**。这两类与卡的选取无关。全部边界点记 $\partial M$，全部内点记 $\operatorname{Int}M$。
 $\partial M$ 自带一个 $(n-1)$ 维**无边**光滑流形结构：把每张卡与 $\partial\mathbb{H}^{n}$ 求交，$\varphi$ 限制成 $U\cap\partial M\to\{x^{n} = 0\}\cong\mathbb{R}^{n-1}$，重叠处的
+转移映射仍是光滑映射的限制。
 
 > 续见 [nodes/def.boundary-manifold.3.md](./def.boundary-manifold.3.md)

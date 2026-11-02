@@ -7,7 +7,11 @@ layer 9 · 定义 · 合成列与可解群 · 抽象代数
 
 $$\{e\} = G_0 \trianglelefteq G_1 \trianglelefteq \cdots \trianglelefteq G_n = G$$
 
-（每步只要求 $G_{i} \trianglelefteq G_{i+1}$，**不**要求 $G_i \trianglelefteq G$）。若每个商 $G_i / G_{i-1}$ 都是**单群**（$i = 1, \ldots, n$），这条链叫**合成列**。这些单群叫 $G$ 的**合成因子**，$n$ 叫链的**长度**。
+（每步只要求 $G_{i} \trianglelefteq G_{i+1}$，**不**要求 $G_i \trianglelefteq G$）。
+
+若每个商 $G_i / G_{i-1}$ 都是**单群**（$i = 1, \ldots, n$），这条链叫**合成列**。
+
+这些单群叫 $G$ 的**合成因子**，$n$ 叫链的**长度**。
 > 陈述续见 [nodes/def.composition-series.2.md](./def.composition-series.2.md)
 
 

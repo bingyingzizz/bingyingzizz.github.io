@@ -1,8 +1,8 @@
 # 核与余核　`def.kernel-cokernel`　·　续页（第 3 页）
 [在星图里打开](../#n=def.kernel-cokernel)　·　第 1 页 [nodes/def.kernel-cokernel.md](./def.kernel-cokernel.md)　·　上一页 [nodes/def.kernel-cokernel.2.md](./def.kernel-cokernel.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.cycle`](../nodes/def.cycle.md) 闭链 用
-- 被 [`prop.abhaus-strict-exact`](../nodes/prop.abhaus-strict-exact.md) Hausdorff 拓扑阿贝尔群的核与余核 用
-- 被 [`prop.image-kernel-cokernel`](../nodes/prop.image-kernel-cokernel.md) 像就是余核的核 用
-- 被 [`prop.exact-at-points`](../nodes/prop.exact-at-points.md) 正合就是逐点正合 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-link.kernel-eq.md](../proofs/def-link.kernel-eq.md)
+- [`def.zero-object`](../nodes/def.zero-object.md) 零对象与直和：用到了定义 零对象与直和　[proofs/def-link.kernel-zero.md](../proofs/def-link.kernel-zero.md)
+
+> 续见 [nodes/def.kernel-cokernel.4.md](./def.kernel-cokernel.4.md)

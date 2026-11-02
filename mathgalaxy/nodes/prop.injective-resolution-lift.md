@@ -3,7 +3,9 @@
 layer 16 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.injective-resolution-lift)　·　[节点索引](../index.md)
 
-设 $\mathcal{A}$ 是阿贝尔范畴，$I^{\bullet} \to M$、$J^{\bullet} \to N$ 是 $\mathcal{C}^{+}(\mathcal{A})$ 中的**内射消解**（$I^{n}$、$J^{n}$ 内射、有界下方、拟同构于 $M$、$N$）。则对每个态射 $f : M \to N$：
+设 $\mathcal{A}$ 是阿贝尔范畴，$I^{\bullet} \to M$、$J^{\bullet} \to N$ 是 $\mathcal{C}^{+}(\mathcal{A})$ 中的**内射消解**（$I^{n}$、$J^{n}$ 内射、有界下方、拟同构于 $M$、$N$）。
+
+则对每个态射 $f : M \to N$：
 > 陈述续见 [nodes/prop.injective-resolution-lift.2.md](./prop.injective-resolution-lift.2.md)
 
 

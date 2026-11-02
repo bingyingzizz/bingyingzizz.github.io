@@ -22,6 +22,8 @@ $$f^{n} - g^{n} \;=\; s^{n+1} \circ d_{K}^{n} + d_{L}^{n-1} \circ s^{n}$$
 refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 ## 说明
-零伦态射构成 $\operatorname{Hom}_{\mathcal{C}(\mathcal{C})}(K, L)$ 的一个**子群**；而且同伦是**两边都相容于复合**的等价关系（$f \sim g$ 时 $h \circ f \circ k \sim h \circ g \circ k$）。两条合起来，才允许把「同伦」当成要商掉的东西。
+零伦态射构成 $\operatorname{Hom}_{\mathcal{C}(\mathcal{C})}(K, L)$ 的一个**子群**；而且同伦是**两边都相容于复合**的等价关系（$f \sim g$ 时 $h \circ f \circ k \sim h \circ g \circ k$）。
+
+两条合起来，才允许把「同伦」当成要商掉的东西。
 
 引用：`def.homotopy`（内容 v0.9.1）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

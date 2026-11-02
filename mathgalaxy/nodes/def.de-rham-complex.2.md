@@ -10,6 +10,5 @@ $$Z^{k}(M) := \ker\bigl(\mathrm{d} : \Omega^{k}(M) \to \Omega^{k+1}(M)\bigr),$$
 $$B^{k}(M) := \operatorname{im}\bigl(\mathrm{d} : \Omega^{k-1}(M) \to \Omega^{k}(M)\bigr),$$
 
 （$\Omega^{-1} := 0$，故 $B^{0} = 0$）。**de Rham 上同调群**是商空间
-$$H^{k}_{\mathrm{dR}}(M) := Z^{k}(M) / B^{k}(M).$$
 
 > 续见 [nodes/def.de-rham-complex.3.md](./def.de-rham-complex.3.md)

@@ -4,6 +4,8 @@ layer 8 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.manifold-chart)　·　[节点索引](../index.md)
 
 **在说什么**：流形没有天生的坐标，所以「坐标」必须一张张地发 —— 一张卡就是「一块地皮 + 一块坐标牌」，换牌子时必须换得光滑。
+
+设 $M$ 是拓扑空间，$n \ge 0$。
 > 陈述续见 [nodes/def.manifold-chart.2.md](./def.manifold-chart.2.md)
 
 

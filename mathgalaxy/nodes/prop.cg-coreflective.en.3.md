@@ -9,7 +9,7 @@ $$k : \mathbf{Top} \longrightarrow k\mathbf{Top}, \qquad X \mapsto kX$$
 
 that is, $i \dashv k$. The space $kX$ has the same underlying set as $X$, with the topology replaced by the $k$-topology.
 
-## Notes · **reviewed**
+## Notes · **stale**
 **What has to be shown**: for every compactly generated space $X$ and every topological space $Y$,
 
 > 续见 nodes/prop.cg-coreflective.en.4.md

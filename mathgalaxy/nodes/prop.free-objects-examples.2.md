@@ -2,6 +2,8 @@
 [在星图里打开](../#n=prop.free-objects-examples)　·　第 1 页 [nodes/prop.free-objects-examples.md](./prop.free-objects-examples.md)
 
 ## 陈述（续）
-是 $A^{(X)}$；$k\text{-}\mathbf{Alg}$ 里是**张量代数**。
+$A\text{-}\mathbf{Mod}$ 里是 $A^{(X)}$；
+
+$k\text{-}\mathbf{Alg}$ 里是**张量代数**。
 
 > 续见 [nodes/prop.free-objects-examples.3.md](./prop.free-objects-examples.3.md)

@@ -5,7 +5,8 @@
 曲率只有一个数、四维有两个张量」的算术来源。
 设 $(M,g)$ 是黎曼流形，曲率算子 $R(X,Y)Z = \nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}Z-\nabla_{[X,Y]}Z$，分量 $R_{ijk\ell} = \lan
 gle R(\partial_{i},\partial_{j})\partial_{k},\partial_{\ell}\rangle$（约定与 `def.curvature-tensor`、`def.gauss-curvature
-` 相同）。则
+` 相同）。
+则
 1. **对前两个指标反称**：$R_{ijk\ell} = -R_{jik\ell}$；
 2. **对后两个指标反称**：$R_{ijk\ell} = -R_{ij\ell k}$；
 3. **两对指标

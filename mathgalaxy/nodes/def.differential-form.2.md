@@ -10,6 +10,6 @@ $$\omega_{p} : (\mathbb{R}^{n})^{k}\longrightarrow\mathbb{R},$$
 $$\omega = \sum_{i_{1}<\cdots<i_{k}}a_{i_{1}\cdots i_{k}}(x)\,\mathrm{d}x^{i_{1}}\wedge\cdots\wedge\mathrm{d}x^{i_{k}} ,\qquad a_{I}\in C^{\infty}(U),$$
 其中 $\mathrm{d}x^{i}(v) := v^{i}$ 是坐标函数的微分，$\wedge$ 是外积（$\mathrm{d}x^{i}\wedge\mathrm{d}x^{j} = -\mathrm{d}x^{j}\wedge\mathrm{d}x^{i}$）。
 全体记 $\Omega^{k}(U)$。
-$\Omega^{0}(U) = C^{\infty}(U)$（函数就是 $0$-形式）；$k>n$ 时 $\Omega^{k}(U) = 0$；$k$-形式是 $\binom{n}{k}$ 个光滑函数的组合。**楔积**逐点
+$\Omega^{0}(U) = C^{\infty}(U)$（函数就是 $0$-形式）；$k>n$ 时 $\Omega^{k}(U) = 0$；$k$-形式是 $\binom{n}{k}$ 个光滑函数的组合。
 
 > 续见 [nodes/def.differential-form.3.md](./def.differential-form.3.md)

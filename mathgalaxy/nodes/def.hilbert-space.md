@@ -3,7 +3,9 @@ Hilbert 空间（完备的内积空间）
 layer 16 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.hilbert-space)　·　[节点索引](../index.md)
 
-设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（本图约定：**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。若 $(H, \|\cdot\|)$ 完备，则叫 **Hilbert 空间**。
+设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（本图约定：**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。
+
+若 $(H, \|\cdot\|)$ 完备，则叫 **Hilbert 空间**。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.inner-product`](../nodes/def.inner-product.md) 内积：用到了定义 内积　[proofs/def-link.fa-inner-hilbert.md](../proofs/def-link.fa-inner-hilbert.md)

@@ -3,7 +3,9 @@
 layer 17 · 命题 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=prop.caratheodory-extension)　·　[节点索引](../index.md)
 
-设 $\mathfrak{A} \subseteq \mathcal{P}(X)$ 是**代数**，$\mu _{0}$ 是 $\mathfrak{A}$ 上的**预测度**，$\mu^{*}$ 是由 $\mu _{0}$ 诱导的外测度（按上一条命题，取 $\mathcal{E} = \mathfrak{A}$、$\rho = \mu _{0}$）。则
+设 $\mathfrak{A} \subseteq \mathcal{P}(X)$ 是**代数**，$\mu _{0}$ 是 $\mathfrak{A}$ 上的**预测度**，$\mu^{*}$ 是由 $\mu _{0}$ 诱导的外测度（按上一条命题，取 $\mathcal{E} = \mathfrak{A}$、$\rho = \mu _{0}$）。
+
+则
 > 陈述续见 [nodes/prop.caratheodory-extension.2.md](./prop.caratheodory-extension.2.md)
 
 
