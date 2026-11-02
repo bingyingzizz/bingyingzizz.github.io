@@ -1,7 +1,7 @@
 # Hessian 矩阵　`def.hessian`　·　说明
 根 `../`
 
-⭐ $H_f(a)$ 就是二阶导数 $D^{2} f(a)$ 写成矩阵 —— 而 $D^{2}f(a)$ 本身是 $\mathbb{R}^{n}$ 上的**对称双线性型**（`def.bilinear-form`），$H_f$ 只是它在标准基下的系数。$f \in C^{2}$ 时对称性来自 Schwarz 定理（`thm.mixed-partials`）。
+⭐ $H_f(a)$ 就是二阶导数 $D^{2} f(a)$ 写成矩阵 —— 而 $D^{2}f(a)$ 本身是 $\mathbb{R}^{n}$ 上的**对称双线性型**，$H_f$ 只是它在标准基下的系数。$f \in C^{2}$ 时对称性来自 Schwarz 定理（`thm.mixed-partials`）。
 
 ⭐ 对称矩阵可以**正交对角化**（`thm.spectral-theorem`），对角元是特征值；于是「$H$ 正定 / 负定 / 不定」就是判极值用的那把尺（`thm.sylvester-criterion`）。这一步是「微积分 $\times$ 线性代数」在本科阶段最漂亮的一次交汇。
 

@@ -1,6 +1,6 @@
 # Tychonoff 定理　`thm.tykhonov`
 Tychonoff 定理：紧空间的任意积紧
-layer 15 · 定理 · 拓扑空间 · 拓扑学
+layer 15 · 定理 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=thm.tykhonov)　·　[节点索引](../index.md)
 
 任意一族紧空间的**积**（带积拓扑）仍然紧 —— 任意多个，包括不可数多个。

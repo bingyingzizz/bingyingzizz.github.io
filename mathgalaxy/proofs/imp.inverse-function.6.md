@@ -3,14 +3,8 @@
 
 `thm.banach-fixed-point` 压缩映射原理 + `thm.mean-value-multi` 多元中值定理 + `thm.chain-rule-multi` 多元链式法则 → `thm.inverse-function` 逆映射定理
 
-**第五步：逆映射连续。** 对 $y_1, y_2 \in W$，记 $x_i := g(y_i)$。由第三步的论证
+两边作用 $Df(x)^{-1}$ 并用第五步的 $\|h\| \le 2\|k\|$：$h = Df(x)^{-1}(k) + o(\|k\|)$。按定义这就是 $g$ 在 $y$ 可微，且 $Dg(y) = Df(g(y))^{-1}$。
 
-$$\|x_1 - x_2\| = \|f(x_1) - f(x_2) + \Phi(x_2) - \Phi(x_1)\| \le \|y_1 - y_2\| + \tfrac{1}{2}\|x_1 - x_2\|$$
+**第七步：$Dg$ 连续。** $Dg = (Df \circ g)^{-1}$；$g$ 连续、$Df$ 连续、求逆（在 $GL_n$ 上）连续（`thm.inverse-function` 那类论证：逆的表达式含 $1/\det$ 与伴随矩阵，都连续），故 $Dg$ 连续，即 $g \in C^{1}$。∎
 
-故 $\|g(y_1) - g(y_2)\| \le 2\|y_1 - y_2\|$：$g$ 甚至 Lipschitz。
-
-**第六步：$g$ 可导且 $Dg(y) = (Df(g(y)))^{-1}$。** 对 $y, y + k \in W$ 记 $x := g(y)$、$x + h := g(y + k)$（即 $h = g(y+k) - g(y)$）。由 $f$ 在 $x$ 可微
-
-$$k = f(x + h) - f(x) = Df(x)(h) + o(\|h\|)$$
-
-> 续见 proofs/imp.inverse-function.7.md
+> ⭐ 第 2 步的化归（把 $Df(a)$ 变成 $I$）是全部技巧所在：**一旦导数是恒等，$x - f(x)$ 就成为压缩的**，于是「解方程」就变成了「找不动点」。第 6 步则说明「逆映射的导数是导数的逆」是定义的自然产物，不是额外结论。

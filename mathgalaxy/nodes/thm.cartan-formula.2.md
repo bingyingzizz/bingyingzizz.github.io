@@ -6,8 +6,8 @@ $$\mathcal{L}_{X}\omega = \mathrm{d}\bigl(\iota_{X}\omega\bigr) + \iota_{X}\bigl
 
 等价地，作为 $\Omega^{\bullet}(M)$ 上的算子
 $$\mathcal{L}_{X} = \mathrm{d}\,\iota_{X} + \iota_{X}\,\mathrm{d},$$
-其中 $\mathcal{L}_{X}$ 是 Lie 导数（`def.lie-derivative`）、$\iota_{X}$ 是内乘（`def.interior-product`）、$\mathrm{d}$ 是外微分（`def.exterior-derivative`），并规定 $\iota
-_{X}$ 作用在函数上为 $0$。
+其中 $\mathcal{L}_{X}$ 是 Lie 导数、$\iota_{X}$ 是内乘、$\mathrm{d}$ 是外微分（`def.exterior-derivative`），并规定 $\iota_{X}$ 作用在函数上为 $0$。
+
 **推论**：
 1. $\mathcal{L}_{X}\mathrm{d} = \mathrm{d}\mathcal{L}_{X}$（因为 $\mathrm{d}^{2} = 0$）；
 2. 在闭形式上有 $\mathcal{L}_{X}\omega = \mathrm{d}\iota_{X}\omega

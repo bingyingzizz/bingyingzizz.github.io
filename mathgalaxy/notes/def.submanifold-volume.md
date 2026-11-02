@@ -7,7 +7,7 @@
 
 $$\mathrm{d}V_{N} = \pm\,\iota_{\nu}\,\mathrm{d}V_{g},$$
 
-符号取决于 $\nu$ 与 $N$ 的定向是否相容。这就是 Gauss 公式与散度定理（`thm.divergence-theorem`）里「边界上的面积元」的来历：内乘（`def.interior-product`）把 $n$-形式沿法向缩成 $(n-1)$-形式。
+符号取决于 $\nu$ 与 $N$ 的定向是否相容。这就是 Gauss 公式与散度定理里「边界上的面积元」的来历：内乘把 $n$-形式沿法向缩成 $(n-1)$-形式。
 
 **二维情形就是面积元**：$i : S \to \mathbb{R}^{3}$ 时 $g_{ab}$ 是曲面的第一基本形式 $E, F, G$，$\sqrt{\det} = \sqrt{EG - F^{2}}$，与 `def.area-element` 逐字相同。所以「曲面的面积」是这条的一般情形，不是另一套定义。
 

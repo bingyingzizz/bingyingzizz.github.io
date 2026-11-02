@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Topological Spaces (`topology.general`) · Topology
+layer 11 · proposition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.hausdorff-reflective.md` and `proofs/`.

@@ -3,11 +3,11 @@
 
 ## 陈述（续）
 被拼成薄片」的全部障碍。
-设 $\mathcal{D}$ 是 $M$ 上的光滑 $k$ 阶切分布（`def.tangent-distribution`）。称 $\mathcal{D}$ **对合**（involu
-tive），如果对任意开集 $U \subseteq M$ 与任意 $X, Y \in \Gamma(\mathcal{D}|_{U})$（取值落在 $\mathcal{D}$ 里的光滑向量
-场），都有
+设 $\mathcal{D}$ 是 $M$ 上的光滑 $k$ 阶切分布。称 $\mathcal{D}$ **对合**（involutive），如果对任意开集 $U \subseteq M$
+ 与任意 $X, Y \in \Gamma(\mathcal{D}|_{U})$（取值落在 $\mathcal{D}$ 里的光滑向量场），都有
 $$[X,Y] \in \Gamma(\mathcal{D}|_{U}),$$
-其中 $[\cdot,\cdot]$ 是向量场的 Lie 括号（`def.lie-bracket`）。
+
+其中 $[\cdot,\cdot]$ 是向量场的 Lie 括号。
 **只需查生成元**：设 $\mathcal{D}$ 在 $U$ 上由 $X_{1},\ldots,X_{k}$ 生成，则 $\mathcal{D}$ 在 $U$ 上对合，当且仅当每个
 括号都能写成生成元的 $C^{\infty}$-线性组合
 $$[X_{i},X_{j}] = \sum_{l=1}^{k} a^{l}_{\ ij}\,X_{l},\qquad a^{l}_{\ ij} \in C^{\infty

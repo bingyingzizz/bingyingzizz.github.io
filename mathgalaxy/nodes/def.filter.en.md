@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Topological Spaces (`topology.general`) · Topology
+layer 15 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 names: `Filter` (short) · `Filter and Ultrafilter` (full)
 
 ## Statement and proof

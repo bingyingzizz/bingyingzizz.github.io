@@ -1,7 +1,7 @@
 # 纤维丛　`def.fiber-bundle`　·　说明
 根 `../`
 
-**为什么要这个概念**：向量丛（`def.vector-bundle`）是 $F = \mathbb{R}^{k}$、$G\subseteq\operatorname{GL}(k,\mathbb{R})$ 的特例；覆叠空间（`def.covering-space`）是 $F$ 离散的特例；主丛（`def.principal-bundle`）是 $F = G$ 本身那一个特例。三件事被这一条统一，判据都是同一句话：**局部长得像「底 $\times$ 纤维」**。
+**为什么要这个概念**：向量丛是 $F = \mathbb{R}^{k}$、$G\subseteq\operatorname{GL}(k,\mathbb{R})$ 的特例；覆叠空间是 $F$ 离散的特例；主丛是 $F = G$ 本身那一个特例。三件事被这一条统一，判据都是同一句话：**局部长得像「底 $\times$ 纤维」**。
 
 **「纤维」这个词为什么不分下标也说得通**：局部平凡化在每根纤维上是 $\{b\}\times F$ 上的同胚，所以每根纤维都同胚于 $F$。但**没有自然同胚** —— 沿底空间绕一圈回来可能换掉一个自同胚，这个「绕一圈的变形」（monodromy）正是纤维丛不是平凡积的全部原因。
 

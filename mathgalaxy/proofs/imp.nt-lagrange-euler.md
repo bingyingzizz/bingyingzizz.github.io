@@ -7,7 +7,7 @@
 
 
 
-对任意 $[a] \in G$，考虑由 $[a]$ 生成的循环子群 $H = \langle [a] \rangle$。由 Lagrange 定理（`thm.lagrange`），$|H| \mid |G|$，即 $|G| = |H| \cdot m$。
+对任意 $[a] \in G$，考虑由 $[a]$ 生成的循环子群 $H = \langle [a] \rangle$。由 Lagrange 定理，$|H| \mid |G|$，即 $|G| = |H| \cdot m$。
 
 
 

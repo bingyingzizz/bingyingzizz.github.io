@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Topological Spaces (`topology.general`) · Topology
+layer 15 · theorem · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.tykhonov.md` and `proofs/`.

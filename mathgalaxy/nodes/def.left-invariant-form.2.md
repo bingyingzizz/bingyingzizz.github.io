@@ -4,8 +4,8 @@
 ## 陈述（续）
 重线性型完全决定 —— 于是 $G$ 上的左不变 $k$-形式与 $\bigwedge^{k}\mathfrak{g}^{\ast}$ 是
 同一个东西。
-设 $G$ 是 $n$ 维 Lie 群（`def.lie-group`），$\mathfrak{g} = T_{e}G$，$L_{g}$ 是左平移
-。$k$-形式 $\omega \in \Omega^{k}(G)$ 叫**左不变**，如果
+设 $G$ 是 $n$ 维 Lie 群，$\mathfrak{g} = T_{e}G$，$L_{g}$ 是左平移。$k$-形式 $\omega \
+in \Omega^{k}(G)$ 叫**左不变**，如果
 $$L_{g}^{\ast}\omega = \omega\qquad (g \in G),$$
 等价地 $\omega_{g}(v_{1},\ldots,v_{k}) = \omega_{e}\bigl(\mathrm{d}(L_{
 g^{-1}})_{g}v_{1},\ldots,\mathrm{d}(L_{g^{-1}})_{g}v_{k}\bigr)$ —— 即 $

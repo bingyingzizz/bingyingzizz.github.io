@@ -1,6 +1,6 @@
 # Urysohn 引理　`lem.urysohn`
 Urysohn 引理
-layer 17 · 引理 · 拓扑空间 · 拓扑学
+layer 17 · 引理 · 分离公理 · 拓扑学
 [在星图里打开](../#n=lem.urysohn)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间。则 $X$ **正规** $\iff$ 对任意两个不交闭集 $A, B \subseteq X$，存在连续函数

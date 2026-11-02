@@ -9,6 +9,8 @@ $$\varphi^{(j)}(t) = D^{j} f(a + th)\underbrace{(h, \ldots, h)}_{j \text{ 个}} 
 
 其中 $D^{j}f$ 是 $j$ 重线性型（$j = 2$ 时即对称双线性型 $D^{2}f(a)(h,h) = h^{\mathsf{T}} H_f(a) h$）。
 
-**第二步：一元 Taylor。** 对 $\varphi$ 在 $[0,1]$ 上用带 Lagrange 余项的一元 Taylor 公式（`thm.taylor`），存在 $\theta \in (0,1)$ 使
+**第二步：一元 Taylor。** 对 $\varphi$ 在 $[0,1]$ 上用带 Lagrange 余项的一元 Taylor 公式，存在 $\theta \in (0,1)$ 使
+
+$$\varphi(1) = \sum_{j=0}^{k} \frac{\varphi^{(j)}(0)}{j!} + \frac{\varphi^{(k+1)}(\theta)}{(k+1)!}$$
 
 > 续见 proofs/imp.taylor-multi.2.md

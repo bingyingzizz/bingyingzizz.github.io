@@ -1,6 +1,6 @@
 # 连通的像与闭包　`prop.connected-image-closure`
 命题：连通空间的像连通；连通子集的闭包连通
-layer 6 · 命题 · 拓扑空间 · 拓扑学
+layer 6 · 命题 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=prop.connected-image-closure)　·　[节点索引](../index.md)
 
 1. **连通**空间在连续映射下的像是连通的；

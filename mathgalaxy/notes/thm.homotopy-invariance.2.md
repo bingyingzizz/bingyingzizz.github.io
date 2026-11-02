@@ -1,8 +1,6 @@
 # 同伦不变性　`thm.homotopy-invariance`　·　说明
 根 `../`
 
-$$\partial P(\sigma) = g \circ \sigma - f \circ \sigma + P(\partial \sigma),$$
-
 即 $\partial P + P\partial = g_{\#} - f_{\#}$。由 `def.chain-homotopy`，$f$ 与 $g$ 在同调上诱导同一同态。∎
 
 ⭐ **这一步正是整条链缺的那环**：`thm.sphere-homology` 的归纳法（把 $S^{n}$ 拆成两个半球）要用「两个半球各自可缩 $\implies$ 它们的恒等映射与常值映射在同调上相同」。没有这条，那个归纳只能算「算出来是 0 和 $\mathbb{Z}$」，不能说「所以球面同调就是这样」。

@@ -8,7 +8,7 @@
 **三种特例对齐。**
 
 - $r = 0, s = 1$：$T_{p}^{\ast}M$ 的元素就是余向量，光滑截面即 $1$-形式；
-- $r = 1, s = 0$：$T_{p}M$ 的元素就是切向量，光滑截面即向量场（`def.vector-field`）；
+- $r = 1, s = 0$：$T_{p}M$ 的元素就是切向量，光滑截面即向量场；
 - $r = 0, s = k$ 且对调任两变元变号：就是交错 $k$-线性型，光滑截面即 $k$-形式 —— 这正是 `def.exterior-algebra` 里每点取的 $\bigwedge^{k}$（`def.alternating-form`）。
 
 **丛的构造。** $T^{(r,s)}M := \bigsqcup_{p} T^{(r,s)}_{p}M$ 带投影 $\pi$。取卡 $(U,\varphi)$，令

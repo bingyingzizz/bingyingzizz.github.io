@@ -1,6 +1,6 @@
 # 闭集与闭包　`def.closed-set`
 闭集 / 闭包 / 稠密
-layer 5 · 定义 · 拓扑空间 · 拓扑学
+layer 5 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.closed-set)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{T})$ 是拓扑空间。
@@ -12,13 +12,11 @@ layer 5 · 定义 · 拓扑空间 · 拓扑学
 > 陈述续见 [nodes/def.closed-set.2.md](./def.closed-set.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`def.t0-space`](../nodes/def.t0-space.md) T0 空间 用
-
-- …另有出边，续页见 [nodes/def.closed-set.4.md](./def.closed-set.4.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.closed-set.3.md](./def.closed-set.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.closed-set.4.md](./def.closed-set.4.md)
 
 refs: Munkres, Topology, Ch. 2
 

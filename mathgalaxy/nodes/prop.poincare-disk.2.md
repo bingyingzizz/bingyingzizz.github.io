@@ -8,8 +8,7 @@ $$\mathrm{d}s^{2} = \frac{4\,|\mathrm{d}z|^{2}}{\left(1
 与边界圆周正交**的圆弧（直径是特例）；
 (3) 双全纯 $\varphi : \mathbb{D} \to \mathbb{D}$ 恰
 是这个度量的**等距**，而 **Schwarz–Pick 定
-理**（`thm.schwarz-pick`）正是这句话的微分形
-式。
+理**正是这句话的微分形式。
 经 `thm.riemann-mapping`，任何单连通真区域 $\O
 mega \subset \mathbb{C}$ 都由此获得一个曲率 $-1
 $ 的完备度量。

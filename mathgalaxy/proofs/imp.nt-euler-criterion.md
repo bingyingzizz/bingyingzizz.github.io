@@ -7,7 +7,7 @@
 
 
 
-由 Fermat 小定理（`thm.fermat-little`），$\left(a^{n}\right)^{2} = a^{p-1} \equiv 1 \pmod p$。于是 $a^{n}$ 是 $x^{2} \equiv 1$ 的根，而 $\mathbb{Z}/p\mathbb{Z}$ 是域，$x^{2} - 1 = (x-1)(x+1)$ 只有两根，故 $a^{n} \equiv \pm 1$。
+由 Fermat 小定理，$\left(a^{n}\right)^{2} = a^{p-1} \equiv 1 \pmod p$。于是 $a^{n}$ 是 $x^{2} \equiv 1$ 的根，而 $\mathbb{Z}/p\mathbb{Z}$ 是域，$x^{2} - 1 = (x-1)(x+1)$ 只有两根，故 $a^{n} \equiv \pm 1$。
 
 
 

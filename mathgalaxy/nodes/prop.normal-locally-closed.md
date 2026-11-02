@@ -1,6 +1,6 @@
 # 正规空间的邻域里有闭邻域　`prop.normal-locally-closed`
 命题：正规 Hausdorff $\implies$ 每个邻域含闭邻域
-layer 17 · 命题 · 拓扑空间 · 拓扑学
+layer 17 · 命题 · 分离公理 · 拓扑学
 [在星图里打开](../#n=prop.normal-locally-closed)　·　[节点索引](../index.md)
 
 设 $X$ 是**正规** Hausdorff 空间、$x \in X$。则 $x$ 的每个邻域都含一个**闭**邻域。

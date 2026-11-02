@@ -1,6 +1,6 @@
 # 紧性的基本操作　`prop.compact-basic-operations`
 命题：闭子集紧、连续像紧、紧 Hausdorff 正规
-layer 15 · 命题 · 拓扑空间 · 拓扑学
+layer 15 · 命题 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=prop.compact-basic-operations)　·　[节点索引](../index.md)
 
 1. 紧空间的**闭子空间**紧；

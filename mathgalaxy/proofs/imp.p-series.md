@@ -5,7 +5,7 @@
 
 **$p \le 0$**：$1/n^{p} \ge 1$，通项不趋于 $0$，发散。
 
-**$p > 0$**：$a_n = n^{-p}$ 非负且单调递减。由 Cauchy 凝聚判别法（`thm.cauchy-condensation`），
+**$p > 0$**：$a_n = n^{-p}$ 非负且单调递减。由 Cauchy 凝聚判别法，
 
 $$\sum_{n \ge 1} \frac{1}{n^{p}} \ \text{收敛} \iff \sum_{k \ge 0} 2^{k} \cdot \frac{1}{(2^{k})^{p}} = \sum_{k \ge 0} \left(2^{1-p}\right)^{k} \ \text{收敛}.$$
 

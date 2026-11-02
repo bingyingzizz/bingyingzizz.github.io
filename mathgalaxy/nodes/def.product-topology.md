@@ -1,6 +1,6 @@
 # 积拓扑　`def.product-topology`
 积拓扑与乘积空间
-layer 6 · 定义 · 拓扑空间 · 拓扑学
+layer 6 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.product-topology)　·　[节点索引](../index.md)
 
 设 $(X_{i}, \mathcal{T}_{i})_{i \in I}$ 是一族拓扑空间。$\prod_{i \in I} X_{i}$ 上的**积拓扑**是以

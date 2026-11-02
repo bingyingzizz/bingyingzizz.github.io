@@ -3,15 +3,19 @@
 layer 15 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.banach-fixed-point)　·　[节点索引](../index.md)
 
-设 $(X, d)$ 是**完备**度量空间（`def.complete`），$T : X \to X$ 是以 $q < 1$ 为系数的压缩映射（`def.contraction`）。则
+设 $(X, d)$ 是**完备**度量空间（`def.complete`），$T : X \to X$ 是以 $q < 1$ 为系数的压缩映射。则
+
+- $T$ 有**唯一**不动点 $x^{\ast} \in X$（即 $Tx^{\ast} = x^{\ast}$）；
+- 对**任意**初值 $x_0 \in X$，迭代列 $x_{k+1} := T x_k$ 收敛到 $x^{\ast}$；
+- 并有先验误差估计与后验误差估计
 > 陈述续见 [nodes/thm.banach-fixed-point.2.md](./thm.banach-fixed-point.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.contraction`](../nodes/def.contraction.md) 压缩映射 + [`def.complete`](../nodes/def.complete.md) 完备：压缩 + 完备 $\implies$ 唯一不动点（含误差估计）　[proofs/imp.banach-fixed-point.md](../proofs/imp.banach-fixed-point.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.banach-fixed-point.3.md](./thm.banach-fixed-point.3.md)
+- ⇒ [`thm.inverse-function`](../nodes/thm.inverse-function.md) 逆映射定理
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.banach-fixed-point.3.md](./thm.banach-fixed-point.3.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Zeidler, Nonlinear Functional Analysis I, Ch. 1
 

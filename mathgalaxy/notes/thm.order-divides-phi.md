@@ -1,7 +1,7 @@
 # 阶整除 Euler 函数　`thm.order-divides-phi`　·　说明
 根 `../`
 
-**证明**：设 $k = \operatorname{ord}_{n}(a)$，$H = \{[1], [a], \cdots, [a]^{k-1}\}$ 是单位群里的循环子群，$|H| = k$。由 Lagrange 定理（`thm.lagrange`），$k \mid |G| = \varphi(n)$。
+**证明**：设 $k = \operatorname{ord}_{n}(a)$，$H = \{[1], [a], \cdots, [a]^{k-1}\}$ 是单位群里的循环子群，$|H| = k$。由 Lagrange 定理，$k \mid |G| = \varphi(n)$。
 
 
 

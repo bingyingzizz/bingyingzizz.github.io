@@ -6,6 +6,7 @@
 
 $$U \perp W \ \cong\ U' \perp W ,$$
 则 $U \cong U'$（作为带型的空间）。
-**推论（唯一分解）**：非退化型总能正交分解为若干个双曲平面（`def.hyperbolic-plane`）加一块**非迷向**空间，且双曲平面的个数（Witt 指标）与非迷向部分（的同构类）都由型唯一确定。
+
+**推论（唯一分解）**：非退化型总能正交分解为若干个双曲平面加一块**非迷向**空间，且双曲平面的个数（Witt 指标）与非迷向部分（的同构类）都由型唯一确定。
 
 > 续见 [nodes/thm.witt-cancellation.3.md](./thm.witt-cancellation.3.md)

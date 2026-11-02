@@ -15,7 +15,7 @@ $|H| = k$：这 $k$ 个元素互不相同（若 $[a]^{i} = [a]^{j}$，$0 \le i <
 
 
 
-由 Lagrange 定理（`thm.lagrange`），$|H|$ 整除 $|G| = \varphi(n)$，故 $k \mid \varphi(n)$。
+由 Lagrange 定理，$|H|$ 整除 $|G| = \varphi(n)$，故 $k \mid \varphi(n)$。
 
 
 

@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.lie-third)　·　第 1 页 [nodes/thm.lie-third.md](./thm.lie-third.md)
 
 ## 陈述（续）
-设 $\mathfrak{g}$ 是有限维**实** Lie 代数（`def.lie-algebra`）。则存在连通且单连通的 Lie 群 $G$ 与 Lie 代数同构
+设 $\mathfrak{g}$ 是有限维**实** Lie 代数。则存在连通且单连通的 Lie 群 $G$ 与 Lie 代数同构
 
 $$\operatorname{Lie}(G) \cong \mathfrak{g},$$
 其中 $\operatorname{Lie}(G) := T_{e}G$ 配上左不变向量场的括号（`prop.left-invariant-fields`）。

@@ -1,7 +1,7 @@
 # Euler 定理　`thm.euler-theorem`　·　说明
 根 `../`
 
-证明只有一行，但是群论的：$[a]$ 落在单位群 $G = (\mathbb{Z}/n\mathbb{Z})^{\times}$ 里，$|G| = \varphi(n)$，由 Lagrange 定理（`thm.lagrange`）得 $[a]^{|G|} = 1$。
+证明只有一行，但是群论的：$[a]$ 落在单位群 $G = (\mathbb{Z}/n\mathbb{Z})^{\times}$ 里，$|G| = \varphi(n)$，由 Lagrange 定理得 $[a]^{|G|} = 1$。
 
 
 

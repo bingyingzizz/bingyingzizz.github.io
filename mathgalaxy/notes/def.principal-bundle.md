@@ -5,6 +5,6 @@
 
 ⚠️ 右作用还是左作用：约定取**右**作用，好处是转移函数可以顺着写在坐标后面（$\Phi(u\cdot g) = (\pi(u),\varphi(u)g)$），不必写成 $\varphi(g^{-1}u)$ 这类反向的式子。换约定时整条公式都要改，混着用就是符号错误的来源。
 
-⭐ 特例串起来记：主 $G$-丛（纤维 $G$）$\rightsquigarrow$ 取 $G$ 在某个流形 $F$ 上的作用、把纤维换掉，得**配丛**（纤维 $F$；本图尚未收录）$\rightsquigarrow$ 取 $F = \mathbb{R}^{k}$、$G = \operatorname{GL}(k,\mathbb{R})$，得向量丛（`def.vector-bundle`）$\rightsquigarrow$ 取 $F$ 离散，得覆叠空间（`def.covering-space`）。反过来：任何向量丛都有帧丛，都在主丛这一层。
+⭐ 特例串起来记：主 $G$-丛（纤维 $G$）$\rightsquigarrow$ 取 $G$ 在某个流形 $F$ 上的作用、把纤维换掉，得**配丛**（纤维 $F$；本图尚未收录）$\rightsquigarrow$ 取 $F = \mathbb{R}^{k}$、$G = \operatorname{GL}(k,\mathbb{R})$，得向量丛$\rightsquigarrow$ 取 $F$ 离散，得覆叠空间。反过来：任何向量丛都有帧丛，都在主丛这一层。
 
 > 续见 notes/def.principal-bundle.2.md

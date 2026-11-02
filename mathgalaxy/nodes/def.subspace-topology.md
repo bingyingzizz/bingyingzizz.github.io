@@ -1,6 +1,6 @@
 # 子空间拓扑　`def.subspace-topology`
 子空间拓扑
-layer 5 · 定义 · 拓扑空间 · 拓扑学
+layer 5 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.subspace-topology)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{T})$ 是拓扑空间，$Y \subseteq X$。$Y$ 上的**子空间拓扑**取

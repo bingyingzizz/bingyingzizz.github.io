@@ -1,6 +1,6 @@
 # 局部紧 Hausdorff 空间　`def.locally-compact`
 局部紧 Hausdorff 空间
-layer 15 · 定义 · 拓扑空间 · 拓扑学
+layer 15 · 定义 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=def.locally-compact)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**局部紧**的，如果**每个点都有紧邻域**：对每个 $x \in X$，存在紧集 $K$ 使

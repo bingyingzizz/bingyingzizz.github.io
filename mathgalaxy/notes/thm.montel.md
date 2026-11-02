@@ -1,7 +1,7 @@
 # Montel 定理　`thm.montel`　·　说明
 根 `../`
 
-**证明**：取紧集穷竭 $K_{1} \subset K_{2} \subset \cdots$、$\bigcup K_{j} = \Omega$。在 $K_{j}$ 上由 **Cauchy 不等式**（`thm.cauchy-inequality`）：若 $|f| \le M_{j}$ 在 $K_{j}$ 的某个 $r$-邻域上，则 $|f'| \le M_{j}/r$ 在 $K_{j}$ 上 —— 界与 $f$ 无关，所以 $\mathcal{F}$ 在 $K_{j}$ 上**等度连续**。一致有界是假设给的，于是 `thm.arzela-ascoli` 给出在 $K_{j}$ 上的收敛子列；对 $j = 1, 2, \ldots$ 逐层取对角线，得到在**每个** $K_{j}$ 上一致收敛的子列，即内闭一致收敛。
+**证明**：取紧集穷竭 $K_{1} \subset K_{2} \subset \cdots$、$\bigcup K_{j} = \Omega$。在 $K_{j}$ 上由 **Cauchy 不等式**：若 $|f| \le M_{j}$ 在 $K_{j}$ 的某个 $r$-邻域上，则 $|f'| \le M_{j}/r$ 在 $K_{j}$ 上 —— 界与 $f$ 无关，所以 $\mathcal{F}$ 在 $K_{j}$ 上**等度连续**。一致有界是假设给的，于是 `thm.arzela-ascoli` 给出在 $K_{j}$ 上的收敛子列；对 $j = 1, 2, \ldots$ 逐层取对角线，得到在**每个** $K_{j}$ 上一致收敛的子列，即内闭一致收敛。
 
 **极限全纯**：由 `thm.weierstrass-convergence`。∎
 

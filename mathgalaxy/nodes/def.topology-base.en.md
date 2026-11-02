@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 5 · definition · cluster Topological Spaces (`topology.general`) · Topology
+layer 5 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.topology-base.md` and `proofs/`.

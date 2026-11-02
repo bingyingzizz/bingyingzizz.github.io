@@ -1,6 +1,6 @@
 # Hausdorff 空间是反射子范畴　`prop.hausdorff-reflective`
 命题：$\mathbf{Haus} \subset \mathbf{Top}$ 是反射子范畴
-layer 11 · 命题 · 拓扑空间 · 拓扑学
+layer 11 · 命题 · 分离公理 · 拓扑学
 [在星图里打开](../#n=prop.hausdorff-reflective)　·　[节点索引](../index.md)
 
 **Hausdorff 空间**构成 $\mathbf{Top}$ 的**反射子范畴**：反射是把每个拓扑空间送去它的「Hausdorff 化」$X \mapsto X/\!\sim$。

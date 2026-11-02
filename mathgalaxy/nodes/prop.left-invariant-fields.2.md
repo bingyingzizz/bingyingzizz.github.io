@@ -20,6 +20,6 @@ e}(v)\bigr)$），于是这个空间是 $\dim G$ 维的；
 3. **于是 $\mathfrak{g}$ 带 Lie 代数结构**
 ：定义 $[v,w] := [\tilde v,\tilde w]_{e
 }$（$\tilde v$ 是 $v$ 对应的左不变向量场），则 $(\mathf
-rak{g},[\cdot,\cdot])$ 是 Lie 代数（`def.l
+rak{g},[\cdot,\cdot])$ 是 Lie 代数，叫 $G$ 的
 
 > 续见 [nodes/prop.left-invariant-fields.3.md](./prop.left-invariant-fields.3.md)

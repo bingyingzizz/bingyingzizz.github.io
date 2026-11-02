@@ -3,7 +3,7 @@
 
 `lem.zorn` Zorn 引理 → `def.integral-manifold` 积分流形
 
-设 $\mathcal{D}$ 是流形 $M$ 上的对合分布（`def.involutive-distribution`）。局部版 Frobenius（`thm.frobenius`）只给：过每点有局部积分流形。
+设 $\mathcal{D}$ 是流形 $M$ 上的对合分布。局部版 Frobenius（`thm.frobenius`）只给：过每点有局部积分流形。
 
 要证明「过每点存在**极大**连通积分流形（叶）」，把
 
