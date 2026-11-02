@@ -1,6 +1,6 @@
 # 导出范畴　`def.derived-category`
 导出范畴 $D(\mathcal{A})$
-layer 15 · 定义 · 复形与导出三角 · 同调代数
+layer 19 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.derived-category)　·　[节点索引](../index.md)
 
 阿贝尔范畴 $\mathcal{A}$ 的**导出范畴** $D(\mathcal{A})$ 是**同伦范畴 $K(\mathcal{A})$ 关于拟同构的局部化**。

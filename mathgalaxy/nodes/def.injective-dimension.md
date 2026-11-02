@@ -1,6 +1,6 @@
 # 内射维数　`def.injective-dimension`
 内射维数：最短内射消解的长度
-layer 16 · 定义 · 消解与维数 · 同调代数
+layer 20 · 定义 · 消解与维数 · 同调代数
 [在星图里打开](../#n=def.injective-dimension)　·　[节点索引](../index.md)
 
 设 $M$ 是 $R$-模。说 $\operatorname{id}_{R} M \le n$，如果 $M$ 有一条**长度 $n$ 的内射消解**，即存在正合列

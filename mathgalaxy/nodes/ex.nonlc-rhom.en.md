@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Non-Locally-Compact RHom` (short) · `Derived Hom in the Non-Locally-Compact Case` (full)
 
 ## Statement and proof

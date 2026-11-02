@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · corollary · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 25 · corollary · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 names: `Global Dimension of a PID` (short) · `Global Dimension of a Principal Ideal Domain` (full)
 
 ## Statement and proof

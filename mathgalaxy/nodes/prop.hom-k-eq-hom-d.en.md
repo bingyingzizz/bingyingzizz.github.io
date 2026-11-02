@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 20 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Hom in K and D` (short) · `Hom in the Homotopy and Derived Categories` (full)
 
 ## Statement and proof

@@ -7,7 +7,7 @@
 - prop.continuous-functions-normed　连续函数空间的范数　layer 16
 - prop.banach-stone-acyclic　Banach 在 Stone 上零调　layer 17
 - thm.tietze-banach　Tietze 延拓（Banach 值）　layer 17
-- lem.ext-stonean-section　Stonean 上 Ext 的截面公式　layer 17
 - prop.breen-deligne-ss-stonean　Stonean 上 Breen–Deligne 的谱序列　layer 17
+- ex.bd-ss　Breen–Deligne 的一般谱序列　layer 17
 
 > 续见 `index/cond.cohomology.3.md`

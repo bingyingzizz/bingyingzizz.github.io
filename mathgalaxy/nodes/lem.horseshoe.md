@@ -1,6 +1,6 @@
 # 马蹄引理　`lem.horseshoe`
 马蹄引理：短正合列两端有投射消解则中间也有
-layer 18 · 引理 · 消解与维数 · 同调代数
+layer 19 · 引理 · 消解与维数 · 同调代数
 [在星图里打开](../#n=lem.horseshoe)　·　[节点索引](../index.md)
 
 设 $0 \to M_{1} \xrightarrow{\ i\ } M \xrightarrow{\ p\ } M_{2} \to 0$ 是 $R$-模的短正合列，两端各有投射消解

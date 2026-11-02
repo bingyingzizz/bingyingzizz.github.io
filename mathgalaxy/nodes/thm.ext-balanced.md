@@ -1,6 +1,6 @@
 # 扩展群的双边算法　`thm.ext-balanced`
 扩展群可以用任意一侧的消解计算
-layer 18 · 定理 · 消解与维数 · 同调代数
+layer 22 · 定理 · 消解与维数 · 同调代数
 [在星图里打开](../#n=thm.ext-balanced)　·　[节点索引](../index.md)
 
 设 $P_{\bullet} \twoheadrightarrow M$ 是 $M$ 的投射消解（取删除消解），$M \to I^{\bullet}$ 是内射消解。则对每个 $R$-模 $N$ 与

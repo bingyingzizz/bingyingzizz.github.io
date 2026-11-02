@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 20 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.comparison-theorem.md` and `proofs/`.

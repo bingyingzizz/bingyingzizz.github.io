@@ -1,6 +1,6 @@
 # 扩展群 Ext　`def.ext`
 扩展群 $\operatorname{Ext}^{n}$
-layer 16 · 定义 · 复形与导出三角 · 同调代数
+layer 20 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.ext)　·　[节点索引](../index.md)
 
 $L^{\bullet}$ 被 $K^{\bullet}$ 的**第 $n$ 个扩展群**是

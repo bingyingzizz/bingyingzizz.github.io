@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 19 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Injective Complexes` (short) · `Acyclic and Quasi-Isomorphic Complexes of Injectives` (full)
 
 ## Statement and proof

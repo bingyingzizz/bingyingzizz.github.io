@@ -1,6 +1,6 @@
 # 消解的同伦唯一性　`prop.resolution-homotopy`
 同一模的任意两条投射消解彼此同伦等价
-layer 17 · 命题 · 消解与维数 · 同调代数
+layer 21 · 命题 · 消解与维数 · 同调代数
 [在星图里打开](../#n=prop.resolution-homotopy)　·　[节点索引](../index.md)
 
 设 $P_{\bullet} \twoheadrightarrow 

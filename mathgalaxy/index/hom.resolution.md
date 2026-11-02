@@ -6,16 +6,16 @@
 - def.syzygy　合冲　layer 9
 - def.deleted-resolution　删除消解　layer 15
 - lem.schanuel　合冲比较引理　layer 15
-- thm.comparison-theorem　比较定理　layer 16
 - prop.syzygy-stability　合冲的稳定性　layer 16
-- def.projective-dimension　投射维数　layer 16
-- def.injective-dimension　内射维数　layer 16
-- prop.resolution-homotopy　消解的同伦唯一性　layer 17
-- def.global-dimension　整体维数　layer 17
-- lem.horseshoe　马蹄引理　layer 18
-- thm.ext-balanced　扩展群的双边算法　layer 18
-- prop.dimension-shift　维数转移　layer 19
-- thm.ext1-extensions　一阶扩展的分类　layer 20
-- prop.pd-vanishing　投射维数与消失　layer 21
+- lem.horseshoe　马蹄引理　layer 19
+- thm.comparison-theorem　比较定理　layer 20
+- def.projective-dimension　投射维数　layer 20
+- def.injective-dimension　内射维数　layer 20
+- prop.resolution-homotopy　消解的同伦唯一性　layer 21
+- def.global-dimension　整体维数　layer 21
+- prop.dimension-shift　维数转移　layer 22
+- thm.ext-balanced　扩展群的双边算法　layer 22
+- thm.ext1-extensions　一阶扩展的分类　layer 23
+- prop.pd-vanishing　投射维数与消失　layer 24
 
 > 续见 `index/hom.resolution.2.md`

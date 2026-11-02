@@ -781,6 +781,8 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.completely-regular-space.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.completely-normal-space.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.perfectly-normal-space.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cycle.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.boundary.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lp-norm.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.young-inequality.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.holder.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
@@ -974,23 +976,23 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.condab-ab.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.stonean-projective.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.condab-generated.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.abelian-category.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cochain-complex.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.complex-additive.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.homotopy.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.homotopy-category.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mapping-cone.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.distinguished-triangle.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.triangle-rotation.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.triangle-morphism.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cohomology.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.cohomology-exact-sequence.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cohomological-functor.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.long-exact.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-iso.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.injective-criterion.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.filtration.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.spectral-sequence.html</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.abelian-category.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cochain-complex.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.complex-additive.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.homotopy.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.homotopy-category.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mapping-cone.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.distinguished-triangle.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.triangle-rotation.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.triangle-morphism.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cohomology.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.cohomology-exact-sequence.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cohomological-functor.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.long-exact.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-iso.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.injective-criterion.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.filtration.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.spectral-sequence.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.presheaf-valued.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.abelian-sheaf.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.topos-abelian-grothendieck.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>

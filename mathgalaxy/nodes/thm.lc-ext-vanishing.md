@@ -1,6 +1,6 @@
 # 局部紧阿贝尔群高次 Ext 消失　`thm.lc-ext-vanishing`
 $\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0$（$n \ne 0, 1$）
-layer 17 · 定理 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 定理 · 凝聚态上同调 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.lc-ext-vanishing)　·　[节点索引](../index.md)
 
 设 $M, N$ 是**局部紧 Hausdorff 阿贝尔群**。则对一切 $n \ne 0, 1$

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 21 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Ext and Projectives` (short) · `Ext Vanishes on Projectives` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Finite Banach RHom` (short) · `Derived Hom between Finite-Dimensional Banach Spaces` (full)
 
 ## Statement and proof

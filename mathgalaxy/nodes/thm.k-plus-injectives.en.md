@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 20 · theorem · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `K+ of Injectives` (short) · `Bounded-Below Complexes of Injectives Model the Derived Category` (full)
 
 ## Statement and proof

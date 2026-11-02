@@ -1,6 +1,12 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 5.9 → prop.image-kernel-cokernel
+
+- Exercise 5.10 → prop.exact-at-points
+
+- Exercise 5.12 → prop.subcat-additive
+
 - Exercise 5.13 | Exercise 3.40 → prop.generator-coproduct-epi
 
 - Exercise 5.15 → thm.abelian-sheaf-equiv
@@ -26,9 +32,5 @@
 - Exercise 7.39 → prop.flat-tensor-acyclic
 
 - Exercise 7.40 → prop.cech-cochain-formula
-
-- Exercise 7.43 → prop.higher-cohomology-presheaf-zero
-
-- Exercise 7.45 → prop.cech-higher-cohomology-presheaf
 
 > 续见 alias/aka/homology.15.md

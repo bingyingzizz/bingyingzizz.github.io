@@ -1,6 +1,6 @@
 # 投射对象没有高次 Ext　`prop.ext-projective-vanishes`
 命题：$P$ 投射 $\implies \operatorname{Ext}^{n}(P, M) = 0$（$n > 0$）
-layer 17 · 命题 · 复形与导出三角 · 同调代数
+layer 21 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.ext-projective-vanishes)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$P \in \mathcal{A}$ 是**投射**对象，$M \in \mathcal{A}$ 任意。则

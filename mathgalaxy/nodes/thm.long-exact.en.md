@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 18 · theorem · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.long-exact.md` and `proofs/`.

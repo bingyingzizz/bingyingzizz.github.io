@@ -1,6 +1,6 @@
 # 非局部紧情形的导出 Hom　`ex.nonlc-rhom`
 $\operatorname{RHom}_{\mathbb{Z}}(\mathbb{R}^{I}, \mathbb{Z}) = 0$，$\operatorname{RHom}_{\mathbb{Z}}(\mathbb{Z}^{I}, \mathbb{Z}) = \mathbb{Z} \cdot I$
-layer 17 · 例 · 凝聚态上同调 · 凝聚态数学+同调代数
+layer 21 · 例 · 凝聚态上同调 · 凝聚态数学+同调代数
 [在星图里打开](../#n=ex.nonlc-rhom)　·　[节点索引](../index.md)
 
 记 $I$ 为任意指标集。则

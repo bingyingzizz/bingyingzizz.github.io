@@ -1,6 +1,10 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 7.43 → prop.higher-cohomology-presheaf-zero
+
+- Exercise 7.45 → prop.cech-higher-cohomology-presheaf
+
 - Exercise 7.47 → prop.cech-interval-vanishing
 
 - Exercise 7.48 → prop.cech-h1-equals-h1

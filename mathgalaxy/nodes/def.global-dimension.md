@@ -1,6 +1,6 @@
 # 整体维数　`def.global-dimension`
 环的整体维数
-layer 17 · 定义 · 消解与维数 · 同调代数
+layer 21 · 定义 · 消解与维数 · 同调代数
 [在星图里打开](../#n=def.global-dimension)　·　[节点索引](../index.md)
 
 环 $R$ 的**（左）整体维数**是全体左模的投射维数的上确界：

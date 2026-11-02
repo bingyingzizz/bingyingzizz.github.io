@@ -12,7 +12,7 @@ layer 22 · 定义 · 微分形式、积分与 de Rham · 微分几何
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.de-rham-h0`](../nodes/thm.de-rham-h0.md) 零次上同调
 
-- …另有出边，续页见 [nodes/def.de-rham-complex.5.md](./def.de-rham-complex.5.md)
+- …另有出边，续页见 [nodes/def.de-rham-complex.6.md](./def.de-rham-complex.6.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.de-rham-complex.4.md](./def.de-rham-complex.4.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 19 · theorem · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Derived Long Exact Sequence` (short) · `Long Exact Sequence of Derived Functors` (full)
 
 ## Statement and proof

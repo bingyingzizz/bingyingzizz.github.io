@@ -17,7 +17,7 @@ $$\sigma : \Delta^{p} \longrightarrow X,$$
 ## 它能推出什么 / 谁在用它
 - 被 [`def.reduced-homology`](../nodes/def.reduced-homology.md) 约化同调 用
 
-- …另有出边，续页见 [nodes/def.singular-homology.4.md](./def.singular-homology.4.md)
+- …另有出边，续页见 [nodes/def.singular-homology.5.md](./def.singular-homology.5.md)
 
 refs: Munkres, Elements of Algebraic Topology, Ch. 4 · Singular Homology；Hatcher, Algebraic Topology, Ch. 2 §2.1 · singular homology
 

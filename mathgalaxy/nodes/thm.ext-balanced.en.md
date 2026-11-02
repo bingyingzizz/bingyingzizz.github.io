@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 22 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 names: `Ext Is Balanced` (short) · `Balancedness of Ext` (full)
 
 ## Statement and proof

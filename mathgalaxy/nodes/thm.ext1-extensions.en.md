@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 23 · theorem · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 names: `Ext and Extensions` (short) · `First Ext Classifies Extensions` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 21 · example · cluster Condensed Cohomology (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Connected Group Ext` (short) · `Connected Locally Compact to Discrete Has Only First Ext` (full)
 
 ## Statement and proof

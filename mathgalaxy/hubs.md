@@ -7,6 +7,7 @@
 - **7** `lem.zorn` Zorn 引理 · layer 9 · 选择原理
 - **7** `thm.stokes` Stokes 定理 · layer 27 · 内蕴几何
 - **6** `thm.bundle-classification` 丛的分类 · layer 18 · 流形与向量丛
+- **6** `def.singular-homology` 奇异同调群 · layer 19 · 同调群
 - **6** `def.tensor-field` 张量场 · layer 20 · 向量场与 Lie 结构
 - **6** `def.left-invariant-form` 左不变形式 · layer 26 · Lie 群
 - **6** `def.submanifold-volume` 诱导体积 · layer 27 · 微分形式、积分与 de Rham
@@ -14,6 +15,5 @@
 - **5** `thm.first-iso` 第一同构定理（Noether） · layer 9 · 代数结构
 - **5** `def.cauchy-null` Cauchy 列与零列 · layer 11 · 数系的构造
 - **5** `def.representable` 表示函子 · layer 12 · 预层与米田
-- **5** `def.metric-space` 距离空间 · layer 13 · 度量空间
 
-（1393 个节点里 1386 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）
+（1395 个节点里 1388 个带强边入边，列了前 11 个；完整清单见 `graph.json`。）

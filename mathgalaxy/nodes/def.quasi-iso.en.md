@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 18 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.quasi-iso.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 比较定理　`thm.comparison-theorem`
 比较定理：两条投射消解之间的提升存在且同伦唯一
-layer 16 · 定理 · 消解与维数 · 同调代数
+layer 20 · 定理 · 消解与维数 · 同调代数
 [在星图里打开](../#n=thm.comparison-theorem)　·　[节点索引](../index.md)
 
 设 $R$ 是环，$M, N$ 是 $R$-模，$f : M \to N$ 

@@ -2,10 +2,10 @@
 
 > page 1 `hubs.en.md`
 
+- **5** `def.de-rham-complex` de Rham Cohomology · layer 22 · 微分形式、积分与 de Rham
+- **5** `thm.cartan-formula` Cartan's formula · layer 22 · 向量场与 Lie 结构
 - **5** `prop.boundary-sign-convention` Boundary Sign Convention · layer 27 · 微分形式、积分与 de Rham
 - **5** `thm.maurer-cartan` Maurer–Cartan equation · layer 27 · Lie 群
 - **5** `thm.gauss-bonnet` Gauss–Bonnet Theorem · layer 29 · 内蕴几何
-- **4** `thm.ring-monotone-sigma` when a ring is a sigma-ring · layer 5 · 集合族与 σ-代数
-- **4** `thm.monotone-class` monotone class theorem · layer 6 · 集合族与 σ-代数
 
-(1386 of 1393 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)
+(1388 of 1395 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)

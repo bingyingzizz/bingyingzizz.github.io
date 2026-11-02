@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-02T03:53:09.001Z",
+  "generated": "2026-11-02T04:03:56.271Z",
   "counts": {
    "regions": 14,
    "clusters": 94,
-   "nodes": 1393,
-   "edges": 2614,
-   "strong": 2597,
+   "nodes": 1395,
+   "edges": 2626,
+   "strong": 2609,
    "weak": 17,
    "derived": 22,
-   "en_pages": 1393
+   "en_pages": 1395
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -109,7 +109,7 @@
    "en": "Homological Algebra",
    "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
    "color": "#C89A2B",
-   "nodeCount": 219
+   "nodeCount": 221
   },
   {
    "id": "condensed",
@@ -1491,9 +1491,11 @@
    "en": "Complexes and Distinguished Triangles",
    "parent": "homology",
    "desc": "造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。",
-   "nodeCount": 35,
+   "nodeCount": 37,
    "nodes": [
     "thm.universal-coefficients",
+    "def.cycle",
+    "def.boundary",
     "def.cochain-complex",
     "prop.complex-additive",
     "def.homotopy",
@@ -15770,7 +15772,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "同调代数",
     "消解",
@@ -15814,7 +15816,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "同调代数",
     "消解",
@@ -15899,7 +15901,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "引理",
     "马蹄引理",
@@ -16071,7 +16073,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "定义",
     "投射维数",
@@ -16113,7 +16115,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "定义",
     "内射维数",
@@ -16156,7 +16158,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "定义",
     "整体维数",
@@ -16199,7 +16201,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 21,
+   "layer": 24,
    "tags": [
     "命题",
     "投射维数",
@@ -16242,7 +16244,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 22,
+   "layer": 25,
    "tags": [
     "推论",
     "整体维数",
@@ -16285,7 +16287,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 19,
+   "layer": 22,
    "tags": [
     "命题",
     "维数转移",
@@ -16328,7 +16330,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 18,
+   "layer": 22,
    "tags": [
     "定理",
     "Ext",
@@ -16371,7 +16373,7 @@
     "homology"
    ],
    "cluster": "hom.resolution",
-   "layer": 20,
+   "layer": 23,
    "tags": [
     "定理",
     "Ext",
@@ -34725,6 +34727,92 @@
    ]
   },
   {
+   "id": "def.cycle",
+   "type": "definition",
+   "label": "闭链",
+   "title": "闭链与上闭链：被微分杀掉的元素",
+   "label_en": "Cycles",
+   "title_en": "Cycles and Cocycles",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.cycle.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.complex",
+   "layer": 15,
+   "tags": [
+    "定义",
+    "同调代数",
+    "闭链",
+    "上闭链",
+    "复形"
+   ],
+   "statement": "**在做什么**：把同调公式 $H^{n} = Z^{n}/B^{n}$ 里那个分子说清楚。闭链就是**被微分杀掉**的元素 —— 整门同调代数都在问「杀掉的里面，有多少是真的来了、有多少是绕了远路」。\n\n设 $K$ 是加法范畴 $\\mathcal{C}$ 中的复形，微分 $d^{n} : K^{n} \\to K^{n+1}$（`def.cochain-complex`）。\n\n**上链情形**：第 $n$ 阶**上闭链群**（cocycles）是\n\n$$Z^{n}(K) := \\ker d^{n} = \\{\\, x \\in K^{n} : d^{n}x = 0 \\,\\} ;$$\n\n它的元素叫**上闭链**（cocycle）。\n\n**链情形**（箭头反向，$d_{n} : K_{n} \\to K_{n-1}$）：第 $n$ 阶**闭链群**（cycles）是\n\n$$Z_{n}(K) := \\ker d_{n} ,$$\n\n它的元素叫**闭链**（cycle）。\n\n⚠️ 两个名字指的是**同一个东西**（$d$ 的核），只是复形的分次方向不同：上链复形的核记 $Z^{n}$、链复形的核记 $Z_{n}$。",
+   "notes": "⭐ **「闭」这个字是拓扑来的**：单形复形里 $\\partial z = 0$ 的链是「没有边界的链」—— 直觉上就是一串闭起来的单形（一个圈、一个球面）。de Rham 复形里 $d\\omega = 0$ 的形式就叫**闭形式**，完全同一条定义。所以「闭链 / 闭形式 / 上闭链」是一句话的三种说法。\n\n⚠️ **字母 $Z$ 的来源**：德语 *Zyklus*（循环）。$B$ 来自 *boundary*（边缘）—— 见 `def.boundary`。老文献里也写 $C^{n}$（cocycle）与 $B^{n}$，读到时对一下记号。\n\n⚠️ **$Z^{n}$ 是 $K^{n}$ 的子对象**（核），但它**不是**复形的子复形：把 $d$ 限制到 $Z^{n}$ 上得零映射，于是 $Z$ 自带一个「处处为零」的复形结构。用它的时侯要分清是在说子对象还是子复形。\n\n⭐ **同调就是量「闭链里有多少不是边缘」**：$H^{n} = Z^{n}/B^{n}$（`def.cohomology`）。所以 $H^{n} = 0 \\iff$ 每个闭链都是边缘 $\\iff$ 复形在 $n$ 处正合。这是把「同调为 0」翻译成「闭 = 边缘」的唯一桥梁。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调",
+    "Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.boundary",
+   "type": "definition",
+   "label": "边缘",
+   "title": "边缘与上边缘：被微分打出来的元素",
+   "label_en": "Boundaries",
+   "title_en": "Boundaries and Coboundaries",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.boundary.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.complex",
+   "layer": 16,
+   "tags": [
+    "定义",
+    "同调代数",
+    "边缘",
+    "上边缘",
+    "复形"
+   ],
+   "statement": "**在做什么**：把同调公式 $H^{n} = Z^{n}/B^{n}$ 里那个分母说清楚。边缘是**从上一层打过来**的元素 —— 它们是「平凡的闭链」，同调要做的就是把它们除掉。\n\n设 $K$ 是加法范畴 $\\mathcal{C}$ 中的复形，微分 $d^{n} : K^{n} \\to K^{n+1}$。\n\n**上链情形**：第 $n$ 阶**上边缘群**（coboundaries）是\n\n$$B^{n}(K) := \\operatorname{im} d^{n-1} = \\{\\, d^{n-1}x : x \\in K^{n-1} \\,\\} ,$$\n\n它的元素叫**上边缘**（coboundary）。\n\n**链情形**：第 $n$ 阶**边缘群**（boundaries）是\n\n$$B_{n}(K) := \\operatorname{im} d_{n+1} ,$$\n\n它的元素叫**边缘**（boundary）。\n\n**为什么 $B \\subseteq Z$**：由复形的定义 $d^{n} \\circ d^{n-1} = 0$，对 $x = d^{n-1}y$ 有 $d^{n}x = d^{n}d^{n-1}y = 0$，所以每个上边缘都是上闭链。因此商 $Z^{n}/B^{n}$ 有意义。",
+   "notes": "⭐ **$d^{2} = 0$ 的全部内容就是这一条**：$B^{n} \\subseteq Z^{n}$。复形的公理（$d\\circ d = 0$）没有别的用处 —— 它存在的唯一理由就是让「闭链 / 边缘」这个商能取。所以复形 = 「一个能让同调有定义的装置」。\n\n⚠️ **「边缘」与拓扑的「边界」撞名**：流形的边界 $\\partial M$、单形复形的边界算子 $\\partial_{n}$ 里的「边界」在复形语言里就是这里的边缘（$\\partial_{n}$ 就是 $d_{n}$）。但**一般范畴里没有「点集边界」这个概念**，只有像。读「边缘」时一律按 $\\operatorname{im} d$ 理解。\n\n⚠️ **记号**：$B^{n}$（boundary）、$\\operatorname{im} d^{n-1}$、$d(K^{n-1})$ 三种都在用。$B$ 与 $Z$ 一起出现时注意台阶：$B^{n} = \\operatorname{im} d^{n-1}$ 比 $Z^{n} = \\ker d^{n}$ **低一阶的微分**，这个「错位」是同调代数里所有符号错误的来源。\n\n⭐ **de Rham 版**：$d\\omega = 0$ 的叫闭形式（= 闭链），$\\omega = d\\eta$ 的叫**恰当形式**（= 边缘）。所以「闭形式恰当」$\\iff$ $H^{1} = 0$ 的那部分 —— 这正是 Poincaré 引理（`lem.poincare-lemma`）的内容。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调",
+    "Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
    "id": "def.lp-norm",
    "type": "definition",
    "label": "L^p 范数",
@@ -43164,13 +43252,13 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 13,
+   "layer": 17,
    "tags": [
     "同调代数",
     "同调",
     "复形"
    ],
-   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴，$K$ 是 $\\mathcal{A}$ 中的上链复形。$K$ 的**第 $n$ 阶同调**是\n\n$$H^{n}(K) \\;:=\\; Z^{n}(K) \\big/ B^{n}(K) \\;=\\; \\ker d^{n} \\big/ \\operatorname{im} d^{n-1}$$\n\n链复形 $K_{n}$ 的第 $n$ 阶同调取它在 $\\mathcal{A}^{\\mathrm{op}}$ 中的 $(1-n)$ 阶上同调。",
+   "statement": "设 $\\mathcal{A}$ 是阿贝尔范畴，$K$ 是 $\\mathcal{A}$ 中的上链复形。$K$ 的**第 $n$ 阶同调**是\n\n$$H^{n}(K) \\;:=\\; Z^{n}(K) \\big/ B^{n}(K) \\;=\\; \\ker d^{n} \\big/ \\operatorname{im} d^{n-1}$$\n\n其中 $Z^{n}(K) := \\ker d^{n}$ 是**上闭链**群、$B^{n}(K) := \\operatorname{im} d^{n-1}$ 是**上边缘**群（见 `def.cycle`、`def.boundary`）；由 $d^{2} = 0$ 得 $B^{n} \\subseteq Z^{n}$，商才有意义。\n\n链复形 $K_{n}$ 的第 $n$ 阶同调取它在 $\\mathcal{A}^{\\mathrm{op}}$ 中的 $(1-n)$ 阶上同调。",
    "notes": "例：$H^{n}(K[k]) = H^{n+k}(K)$；$M \\in \\mathcal{A}$ 时 $H^{0}([M]) = M$、其余为 $0$；$H^{0}([M \\to N]) = \\ker f$、$H^{1}([M \\to N]) = \\operatorname{coker} f$。\n\n$H^{n}$ 是**函子**，但它是**加法而不正合**的 —— 同调不可交换性是整个同调代数的起点。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.1–7.3"
@@ -43243,7 +43331,7 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 15,
+   "layer": 18,
    "tags": [
     "同调代数",
     "上同调函子",
@@ -43283,7 +43371,7 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 16,
+   "layer": 18,
    "tags": [
     "同调代数",
     "长正合列",
@@ -43323,7 +43411,7 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 14,
+   "layer": 18,
    "tags": [
     "同调代数",
     "拟同构",
@@ -47558,7 +47646,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 15,
+   "layer": 19,
    "tags": [
     "同调代数",
     "导出范畴",
@@ -47640,7 +47728,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "同调代数",
     "导出范畴",
@@ -47681,7 +47769,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "同调代数",
     "导出范畴",
@@ -47764,7 +47852,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 17,
+   "layer": 19,
    "tags": [
     "同调代数",
     "导出函子",
@@ -47804,7 +47892,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "同调代数",
     "Ext",
@@ -47849,7 +47937,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 18,
+   "layer": 21,
    "tags": [
     "同调代数",
     "Ext",
@@ -49389,7 +49477,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "Ext",
@@ -49557,7 +49645,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "RHom",
@@ -49641,7 +49729,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 19,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "RHom",
@@ -49683,7 +49771,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 18,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "Pontryagin 对偶",
@@ -49725,7 +49813,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "Ext",
@@ -49767,7 +49855,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "RHom",
@@ -49809,7 +49897,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "RHom",
@@ -49937,7 +50025,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "Ext",
@@ -49980,7 +50068,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "凝聚态数学",
     "RHom",
@@ -51601,7 +51689,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "命题",
     "同调",
@@ -51642,7 +51730,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 16,
+   "layer": 19,
    "tags": [
     "命题",
     "内射对象",
@@ -51935,7 +52023,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "命题",
     "Ext",
@@ -51976,7 +52064,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 17,
+   "layer": 21,
    "tags": [
     "命题",
     "Ext",
@@ -52634,7 +52722,7 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 15,
+   "layer": 19,
    "tags": [
     "定义",
     "消解",
@@ -53593,7 +53681,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 16,
+   "layer": 20,
    "tags": [
     "命题",
     "全复形",
@@ -73378,6 +73466,102 @@
    "note": ""
   },
   {
+   "id": "dep.cyc-cocomplex",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cochain-complex",
+   "usedBy": "def.cycle",
+   "note": "闭链是复形的微分的核 —— 先有复形与 $d$。"
+  },
+  {
+   "id": "dep.cyc-kernel",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.kernel-cokernel",
+   "usedBy": "def.cycle",
+   "note": "$Z^{n} = \\ker d^{n}$ 用的是加法范畴里的核。"
+  },
+  {
+   "id": "dep.bnd-cocomplex",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cochain-complex",
+   "usedBy": "def.boundary",
+   "note": "边缘是微分的像 —— 同样先有复形。"
+  },
+  {
+   "id": "dep.bnd-image",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.image",
+   "usedBy": "def.boundary",
+   "note": "$B^{n} = \\operatorname{im} d^{n-1}$ 用的是像。"
+  },
+  {
+   "id": "dep.cyc-hom",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cycle",
+   "usedBy": "def.cohomology",
+   "note": "同调的定义 $H^{n} = Z^{n}/B^{n}$ 的分子就是闭链。"
+  },
+  {
+   "id": "dep.bnd-hom",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.boundary",
+   "usedBy": "def.cohomology",
+   "note": "分母是边缘。"
+  },
+  {
+   "id": "dep.cyc-simplicial",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cycle",
+   "usedBy": "def.simplicial-homology",
+   "note": "单纯同调 $H_{p} = Z_{p}/B_{p}$ 里的 $Z_{p}$ 就是闭链群。"
+  },
+  {
+   "id": "dep.bnd-simplicial",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.boundary",
+   "usedBy": "def.simplicial-homology",
+   "note": "同一个公式里的 $B_{p}$ 是边缘群。"
+  },
+  {
+   "id": "dep.cyc-singular",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cycle",
+   "usedBy": "def.singular-homology",
+   "note": "奇异同调同样取闭链模边缘。"
+  },
+  {
+   "id": "dep.bnd-singular",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.boundary",
+   "usedBy": "def.singular-homology",
+   "note": "奇异同调里的边缘群。"
+  },
+  {
+   "id": "dep.cyc-derham",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cycle",
+   "usedBy": "def.de-rham-complex",
+   "note": "de Rham 复形里的闭链就是**闭形式**（$d\\omega = 0$）。"
+  },
+  {
+   "id": "dep.bnd-derham",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.boundary",
+   "usedBy": "def.de-rham-complex",
+   "note": "de Rham 复形里的边缘就是**恰当形式**（$\\omega = d\\eta$）。"
+  },
+  {
    "id": "imp.holder",
    "kind": "implication",
    "strength": "strong",
@@ -84800,14 +84984,14 @@
   {
    "a": "hom.cohomology",
    "b": "hom.complex",
-   "count": 14,
+   "count": 16,
    "label": "",
    "explicit": false
   },
   {
    "a": "hom.ab",
    "b": "hom.complex",
-   "count": 9,
+   "count": 10,
    "label": "",
    "explicit": false
   },
@@ -85199,7 +85383,7 @@
   {
    "a": "hom.complex",
    "b": "topology.homology",
-   "count": 2,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -85381,6 +85565,13 @@
   {
    "a": "topology.metric",
    "b": "topology.paracompact",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "diffgeom.form",
+   "b": "hom.complex",
    "count": 2,
    "label": "",
    "explicit": false

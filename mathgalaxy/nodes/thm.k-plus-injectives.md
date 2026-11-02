@@ -1,6 +1,6 @@
 # 内射复形就是导出范畴　`thm.k-plus-injectives`
 $K^{+}(\mathcal{I}) \simeq D^{+}(\mathcal{A})$
-layer 16 · 定理 · 复形与导出三角 · 同调代数
+layer 20 · 定理 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=thm.k-plus-injectives)　·　[节点索引](../index.md)
 
 若 $\mathcal{A}$ **有足够多内射对象**，则含入函子
