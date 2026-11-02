@@ -1,7 +1,7 @@
-# 微分形式、积分与 de Rham / Differential Forms, Integration and de Rham Cohomology（diffgeom.form）· 节点清单（第 1/2 页）
+# 微分形式、积分与 de Rham / Differential Forms, Integration and de Rham Cohomology（diffgeom.form）· 节点清单（第 1/3 页）
 
 让「积分」在流形上跑起来：奇异方块与链 → 边界算子与 ∂²=0 → 链上的积分与换元、Stokes 与散度定理 → 体积形式与密度 → de Rham 复形、Poincaré 引理、Mayer–Vietoris，最后到 de Rham 定理。
-中心天体 thm.stokes-chain　·　24 个节点　·　根 `../`　·　续页 `index/diffgeom.form.2.md`
+中心天体 thm.stokes-chain　·　26 个节点　·　根 `../`　·　续页 `index/diffgeom.form.2.md`
 
 - def.singular-cube　奇异方块　layer 18
 - def.form-on-manifold　微分形式　layer 18

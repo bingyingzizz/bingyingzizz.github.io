@@ -8,6 +8,6 @@
 - diffgeom.intrinsic　内蕴几何 / Intrinsic Geometry　中心天体 def.geodesic　27 点
 - diffgeom.manifold　流形与向量丛 / Manifolds and Vector Bundles　中心天体 def.manifold-chart　16 点
 - diffgeom.vector　向量场与 Lie 结构 / Vector Fields and Lie Structures　中心天体 def.vector-field　16 点
-- diffgeom.form　微分形式、积分与 de Rham / Differential Forms, Integration and de Rham Cohomology　中心天体 thm.stokes-chain　24 点
+- diffgeom.form　微分形式、积分与 de Rham / Differential Forms, Integration and de Rham Cohomology　中心天体 thm.stokes-chain　26 点
 - diffgeom.symplectic　辛流形与 Hamilton 力学 / Symplectic Manifolds and Hamiltonian Mechanics　中心天体 thm.darboux　6 点
 - diffgeom.lieg　Lie 群 / Lie Groups　中心天体 def.lie-group　5 点

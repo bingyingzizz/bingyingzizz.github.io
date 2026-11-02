@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.jordan-uniqueness`](../nodes/cor.jordan-uniqueness.md) Jordan 型的唯一性
 - 被 [`def.orthogonally-similar`](../nodes/def.orthogonally-similar.md) 正交相似 用
+- 被 [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形 用

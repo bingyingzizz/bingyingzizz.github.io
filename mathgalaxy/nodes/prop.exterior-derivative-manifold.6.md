@@ -7,3 +7,5 @@
 - 被 [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理 用
 - 被 [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程 用
 - 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
+- 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
+- 被 [`def.exact-form`](../nodes/def.exact-form.md) 恰当形式 用

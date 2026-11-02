@@ -8,4 +8,4 @@
 - **5** `thm.maurer-cartan` Maurer–Cartan equation · layer 27 · Lie 群
 - **5** `thm.gauss-bonnet` Gauss–Bonnet Theorem · layer 29 · 内蕴几何
 
-(1388 of 1395 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)
+(1392 of 1399 nodes have at least one strong in-edge; the top 30 are listed; the full ranking is in `graph.json`.)

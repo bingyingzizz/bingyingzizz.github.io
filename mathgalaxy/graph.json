@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-02T04:03:56.271Z",
+  "generated": "2026-11-02T04:19:39.509Z",
   "counts": {
    "regions": 14,
    "clusters": 94,
-   "nodes": 1395,
-   "edges": 2626,
-   "strong": 2609,
+   "nodes": 1399,
+   "edges": 2637,
+   "strong": 2620,
    "weak": 17,
    "derived": 22,
-   "en_pages": 1395
+   "en_pages": 1399
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 184
+   "nodeCount": 186
   },
   {
    "id": "analysis",
@@ -141,7 +141,7 @@
    "en": "Differential Geometry",
    "desc": "曲面的活动标架与结构方程、第一与第二基本形式、Gauss–Codazzi、曲率与测地线的内蕴几何。",
    "color": "#C2703F",
-   "nodeCount": 124
+   "nodeCount": 126
   },
   {
    "id": "number",
@@ -314,11 +314,12 @@
    "en": "Algebraic Structures",
    "parent": "algebra",
    "desc": "造出代数语言本身：**群** = 集合 + 运算 + 公理 → 子群 → 正规子群 → 商群 → 第一同构定理；再往上叠**域**（= 两个阿贝尔群 + 分配律）与**有序域**。",
-   "nodeCount": 20,
+   "nodeCount": 21,
    "nodes": [
     "prop.group-basic",
     "prop.ideal-basic",
     "prop.prime-ideal",
+    "def.characteristic",
     "def.field",
     "def.ordered-field",
     "def.group",
@@ -361,7 +362,7 @@
    "en": "Eigenvalues and Jordan Form",
    "parent": "algebra",
    "desc": "造出「一个算子在换基下长什么样」的完整答案：特征值与特征多项式 → Cayley–Hamilton → 极小多项式 → **可对角化判据** → 根子空间分解 → **Jordan 标准形**（代数闭域上相似分类的最终形态）。多项式环 $K[x]$ 那套语言（唯一分解整环）在这里第三次出场。",
-   "nodeCount": 15,
+   "nodeCount": 16,
    "nodes": [
     "def.invariant-subspace",
     "def.eigenvalue",
@@ -377,7 +378,8 @@
     "cor.jordan-uniqueness",
     "def.eigenspace",
     "def.generalized-eigenvector",
-    "def.nilpotent"
+    "def.nilpotent",
+    "thm.rational-canonical-form"
    ]
   },
   {
@@ -2293,7 +2295,7 @@
    "en": "Differential Forms, Integration and de Rham Cohomology",
    "parent": "diffgeom",
    "desc": "让「积分」在流形上跑起来：奇异方块与链 → 边界算子与 ∂²=0 → 链上的积分与换元、Stokes 与散度定理 → 体积形式与密度 → de Rham 复形、Poincaré 引理、Mayer–Vietoris，最后到 de Rham 定理。",
-   "nodeCount": 24,
+   "nodeCount": 26,
    "nodes": [
     "def.volume-form",
     "def.de-rham-complex",
@@ -2318,7 +2320,9 @@
     "def.submanifold-volume",
     "def.form-on-manifold",
     "prop.exterior-derivative-manifold",
-    "prop.pullback-form-manifold"
+    "prop.pullback-form-manifold",
+    "def.closed-form",
+    "def.exact-form"
    ]
   },
   {
@@ -8919,7 +8923,7 @@
     "谱",
     "多项式"
    ],
-   "statement": "设 $\\dim V < \\infty$，$T : V \\to V$。集合\n\n$$I_T := \\{\\, p \\in K[x] : p(T) = 0 \\,\\}$$\n\n是 $K[x]$ 的一个非零理想（由 Cayley–Hamilton，$\\chi_T \\in I_T$）。由于 $K[x]$ 是主理想整环，存在**唯一**的首一多项式 $\\mu_T$ 使 $I_T = (\\mu_T)$。\n\n$\\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的首一多项式（唯一）。\n\n⚠️ 与域论里的「代数元的极小多项式」（`def.minimal-poly-element`）区分：一个是零化算子的、一个是零化代数元的，形式上是一回事，名字要分开。",
+   "statement": "设 $\\dim V < \\infty$，$T : V \\to V$。集合\n\n$$I_T := \\{\\, p \\in K[x] : p(T) = 0 \\,\\}$$\n\n是 $K[x]$ 的一个非零理想（由 Cayley–Hamilton，$\\chi_T \\in I_T$）。由于 $K[x]$ 是主理想整环，存在**唯一**的首一多项式 $\\mu_T$ 使 $I_T = (\\mu_T)$。\n\n$\\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的首一多项式（唯一）。\n\n⚠️ 与域论里的「代数元的极小多项式」（那个概念本图未单独收录）区分：一个是零化算子的、一个是零化代数元的，形式上是一回事，名字要分开。",
    "notes": "⭐ 极小多项式是**相似完全不变量**中最细的那一个（与特征多项式合起来）：Jordan 型完全由它们决定，而两个矩阵相似 $\\iff$ 它们有相同的**不变因子**（等价于相同的 Jordan 型）。\n\n⭐ $I_T$ 是理想这件事本身很重要：$p(T) = 0$、$q(T) = 0 \\implies (p + q)(T) = 0$，且 $r\\,p$ 也在里面 —— 于是 $T$ 在 $K[x]$ 上成了**模**（$x$ 作用 = $T$），后面 Jordan 型的证明全在这个模里做。\n\n⚠ 极小多项式与特征多项式的根**相同**（差一个重数）：两者都等于「$T$ 的特征值全体」。",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, Ch. 6",
@@ -10346,7 +10350,7 @@
     "线性代数"
    ],
    "statement": "设 $U \\subseteq \\mathbb{R}^{n}$ 开，$f = (f_1, \\ldots, f_m) : U \\to \\mathbb{R}^{m}$ 在 $a$ 处各偏导都存在。$f$ 在 $a$ 的 **Jacobi 矩阵**是\n\n$$J_f(a) := \\Bigl( \\frac{\\partial f_i}{\\partial x_j}(a) \\Bigr)_{\\substack{1 \\le i \\le m \\\\ 1 \\le j \\le n}} \\in M_{m \\times n}(\\mathbb{R})$$\n\n若 $f$ 在 $a$ 可微，则 $J_f(a)$ 正是线性映射 $Df(a)$ 在标准基下的矩阵。",
-   "notes": "⭐ 链式法则的矩阵形式就是**矩阵乘法**：$J_{g \\circ f}(a) = J_g(f(a))\\, J_f(a)$（`thm.chain-rule-multi`）。线性映射的复合对应矩阵乘法 —— 全微分做的就是把这条线性代数的事实搬进微积分。\n\n⭐ 三个特殊情形值得记住：\n- $n = 1$：$J$ 是一列，即曲线的切向量；\n- $m = 1$：$J$ 是一行，即 $(\\nabla f)^{\\mathsf{T}}$；\n- $m = n$：$\\det J_f(a)$ 是**局部体积缩放因子**（`cor.jacobian-volume`）。\n\n⚠ 记号约定：有些书把 Jacobi 矩阵写成转置（把它们把 $Df$ 当列向量存）。本图一律**行对应像空间坐标、列对应定义域坐标**，于是链式法则是「从左往右乘」。",
+   "notes": "⭐ 链式法则的矩阵形式就是**矩阵乘法**：$J_{g \\circ f}(a) = J_g(f(a))\\, J_f(a)$（`thm.chain-rule-multi`）。线性映射的复合对应矩阵乘法 —— 全微分做的就是把这条线性代数的事实搬进微积分。\n\n⭐ 三个特殊情形值得记住：\n- $n = 1$：$J$ 是一列，即曲线的切向量；\n- $m = 1$：$J$ 是一行，即 $(\\nabla f)^{\\mathsf{T}}$；\n- $m = n$：$\\det J_f(a)$ 是**局部体积缩放因子**（这条就是 `thm.change-of-variables-manifold` 里那个行列式因子）。\n\n⚠ 记号约定：有些书把 Jacobi 矩阵写成转置（把它们把 $Df$ 当列向量存）。本图一律**行对应像空间坐标、列对应定义域坐标**，于是链式法则是「从左往右乘」。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 9",
     "Spivak, Calculus on Manifolds, Ch. 2"
@@ -35580,6 +35584,178 @@
    "notes": "**证明。** 设 $1 < p < \\infty$，$q$ 是共轭指数（$\\frac1p+\\frac1q = 1$，于是也有 $1 < q < \\infty$）。\n- 由「$L^{p}$ 的对偶是 $L^{q}$」（Riesz 表示）：$(L^{p})^{*} \\cong L^{q}$ ✓；\n- 把同一条定理用在 $q$ 上：$(L^{q})^{*} \\cong L^{p}$ ✓；\n- 于是\n$$(L^{p})^{**} \\cong (L^{q})^{*} \\cong L^{p},$$\n即 $L^{p}$ **自反** ✓。∎\n⚠️ $p = 1$ 与 $p = \\infty$ 时**不**自反：$(L^{1})^{*} \\cong L^{\\infty}$，而 $(L^{\\infty})^{*}$ 严格大于 $L^{1}$（有非绝对连续的函数）✓。\n⭐ 自反的价值：自反 Banach 空间里**有界序列必有弱收敛子列**（Eberlein–Šmulian），这是 $L^{p}$ 上变分 / 存在性论证的常用工具。\n\n把对偶定理用两次即可：$(L^p)^* \\cong L^q$，而 $q$ 的共轭又回到 $p$，故 $(L^p)^{**} \\cong (L^q)^* \\cong L^p$。\n\n⚠ $p = 1$ 与 $p = \\infty$ 时**不**自反。\n\n⭐ 自反性的价值：自反 Banach 空间里**有界序列必有弱收敛子列**（Banach–Alaoglu / Eberlein–Šmulian），这是变分法与 PDE 里取极限的基本工具。",
    "refs": [
     "Folland, Real Analysis, §6.2"
+   ]
+  },
+  {
+   "id": "def.closed-form",
+   "type": "definition",
+   "label": "闭形式",
+   "title": "闭形式：外微分为零的微分形式",
+   "label_en": "Closed Form",
+   "title_en": "Closed Form",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.closed-form.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.form",
+   "layer": 23,
+   "tags": [
+    "定义",
+    "微分几何",
+    "闭形式",
+    "de Rham",
+    "外微分"
+   ],
+   "statement": "**在做什么**：de Rham 复形里的**闭链**。它是「局部上没有旋度 / 没有源」的微分形式 —— 整门 de Rham 理论都在问「闭的里面有多少是真恰当的」。\n\n设 $M$ 是光滑流形，$\\omega \\in \\Omega^{k}(M)$。称 $\\omega$ 是**闭形式**（closed form），若\n\n$$d\\omega = 0 .$$\n\n记全体 $k$ 次闭形式为 $Z^{k}(M) := \\ker\\bigl(d : \\Omega^{k}(M) \\to \\Omega^{k+1}(M)\\bigr)$。\n\n**局部坐标中的样子**：$\\omega = \\sum_{I} \\omega_{I}\\, dx^{I}$ 时，$d\\omega = 0$ 等价于对每个 $I$ 有一组偏微分方程（例如 1 次时 $\\partial_{i}\\omega_{j} = \\partial_{j}\\omega_{i}$，即 $\\nabla \\times \\omega = 0$）。",
+   "notes": "⭐ **它就是同调代数里的「闭链」**：de Rham 复形 $\\Omega^{0} \\xrightarrow{d} \\Omega^{1} \\xrightarrow{d} \\cdots$ 中的闭链群 $Z^{k}$ 就是这里的闭形式。所以「闭形式 / 闭链」是同一句话在分析与代数两侧的说法。\n\n**闭 vs 退化的判据**：$d^{2} = 0$ 保证了一切恰当形式都闭（$d(d\\eta) = 0$），所以 $B^{k} \\subseteq Z^{k}$（`def.exact-form`）。而反过来「闭 $\\implies$ 恰当」**不是**普遍成立的 —— 它成立的范围由一个上同调群 $H^{k}$ 量出来。\n\n⚠️ **不是「闭集」那个「闭」**：这里的闭是 $d\\omega = 0$，与拓扑的闭集无关。中文两个「闭」撞车，读文献时靠上下文（有没有 $d$）。\n\n⭐ **常见例子**：$\\mathbb{R}^{n}$ 上一切 $n$ 次形式都闭（$d$ 打到 $\\Omega^{n+1} = 0$）；$S^{1}$ 上的角形式 $d\\theta$ 闭但不恰当 —— 这是 $H^{1}(S^{1}) \\ne 0$ 的最简单证据。",
+   "refs": [
+    "Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名）· 闭形式与恰当形式",
+    "Bott–Tu, Differential Forms in Algebraic Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "def.exact-form",
+   "type": "definition",
+   "label": "恰当形式",
+   "title": "恰当形式：某个形式的微分",
+   "label_en": "Exact Form",
+   "title_en": "Exact Form",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.exact-form.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.form",
+   "layer": 23,
+   "tags": [
+    "定义",
+    "微分几何",
+    "恰当形式",
+    "de Rham",
+    "外微分"
+   ],
+   "statement": "**在做什么**：de Rham 复形里的**边缘**。它是「能写成别人的微分」的形式，也就是同调上平凡的那一类。\n\n设 $M$ 是光滑流形，$\\omega \\in \\Omega^{k}(M)$（$k \\ge 1$）。称 $\\omega$ 是**恰当形式**（exact form），若存在 $(k-1)$ 次形式 $\\eta$ 使\n\n$$\\omega = d\\eta .$$\n\n记全体 $k$ 次恰当形式为 $B^{k}(M) := \\operatorname{im}\\bigl(d : \\Omega^{k-1}(M) \\to \\Omega^{k}(M)\\bigr)$。$\\eta$ 叫 $\\omega$ 的**原形式**（primitive）。\n\n**每个恰当形式都闭**：$d\\omega = d(d\\eta) = 0$（因为 $d^{2} = 0$）。所以 $B^{k}(M) \\subseteq Z^{k}(M)$，可以取商\n\n$$H^{k}_{dR}(M) := Z^{k}(M) \\big/ B^{k}(M) ,$$\n\n这就是 **de Rham 上同调**。",
+   "notes": "⭐ **它就是同调代数里的「边缘」**：$B^{k} = \\operatorname{im} d$ 正是 `def.boundary` 里的边缘群。所以「恰当形式 / 边缘」也是一句话两种说法。\n\n⭐ **「闭而恰当」是 Poincaré 引理的内容**：星形区域（更一般地，可缩空间）上每个闭形式都恰当 —— 这就是 `lem.poincare-lemma`。所以 $H^{k}$ 量的是「空间有多少洞」，不是「形式有多复杂」。\n\n⚠️ **原形式一般不唯一**：$\\eta$ 可以换成 $\\eta + d\\alpha$（$\\alpha$ 是 $(k-2)$ 次，$k \\ge 2$）或 $\\eta + c$（$k = 1$），$\\omega$ 不变。所以「求原形式」是求解 $d\\eta = \\omega$ 的一个特解问题，只在同调类层面有唯一性。\n\n⚠️ **$k = 0$**：恰当 $0$ 形式按定义是 $d\\eta$ 形的 $0$ 形式，而 $d$ 打在 $\\Omega^{-1}$ 上（约定为 $0$）$\\implies$ 只有 $0$。这与「$B^{0} = 0$」一致，也正是「$H^{0}_{dR}(M)$ 就是 $M$ 上的局部常值函数」这条结论的来源。",
+   "refs": [
+    "Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名）· 闭形式与恰当形式",
+    "Bott–Tu, Differential Forms in Algebraic Topology（⚠️ 章节未核实，只记书名）"
+   ]
+  },
+  {
+   "id": "thm.rational-canonical-form",
+   "type": "theorem",
+   "label": "有理标准形",
+   "title": "有理标准形：任意域上都成立的标准形",
+   "label_en": "Rational Canonical Form",
+   "title_en": "Rational Canonical Form",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.rational-canonical-form.en.md",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.spectral",
+   "layer": 15,
+   "tags": [
+    "定理",
+    "线性代数",
+    "有理标准形",
+    "不变因子",
+    "标准形"
+   ],
+   "statement": "**在做什么**：Jordan 标准形要求「特征多项式在域里分裂」（特征值都在域里）。有理标准形**不需要这个条件** —— 只要 $K$ 是域，任何矩阵都能化成它。\n\n设 $K$ 是域，$A \\in M_{n}(K)$。则 $A$ 在 $M_{n}(K)$ 中相似于**唯一**的分块对角矩阵\n\n$$\\operatorname{diag}\\bigl(C_{d_{1}}, C_{d_{2}}, \\ldots, C_{d_{s}}\\bigr) ,$$\n\n其中每个 $C_{d}$ 是**友矩阵**（companion matrix）：$d(x) = x^{m} + a_{m-1}x^{m-1} + \\cdots + a_{0}$ 是首一多项式，\n\n$$C_{d} := \\begin{pmatrix} 0 & & & & -a_{0} \\\\ 1 & 0 & & & -a_{1} \\\\ & \\ddots & \\ddots & & \\vdots \\\\ & & 1 & 0 & -a_{m-2} \\\\ & & & 1 & -a_{m-1} \\end{pmatrix} ,$$\n\n且 $d_{1} \\mid d_{2} \\mid \\cdots \\mid d_{s}$（依次整除）。这些 $d_{i}$ 叫**不变因子**。\n\n**与 Jordan 形的分工**：$K$ 上特征多项式分裂时，有理标准形与 Jordan 形都是完整不变量；不分裂时**只有**有理标准形（在 $K$ 上）可用 —— Jordan 形要到扩域上才存在。",
+   "notes": "⭐ **为什么叫「有理」**：历史上指 $K = \\mathbb{Q}$ 的情形 —— 正是「特征多项式在 $\\mathbb{Q}$ 上不分裂」的典型场合。名字沿用下来，现在指「对任意域都成立」。\n\n**与极小多项式的关系**：不变因子 $d_{s}$ 就是矩阵的**极小多项式**，$d_{1} d_{2} \\cdots d_{s}$ 是特征多项式。所以两个多项式链在有理标准形里被**同时**编码 —— 这是它比 Jordan 形更「代数」的地方。\n\n⚠️ **实矩阵的坑**：$A \\in M_{n}(\\mathbb{R})$ 的特征值可能是复数，所以「实 Jordan 形」只能给到 $1\\times1$ 与 $2\\times2$ 块（复特征值成对出现）。要对 $\\mathbb{R}$ 上的矩阵讲唯一标准形，有两条路：实 Jordan 形（带 $2\\times2$ 块）或有理标准形（纯 $\\mathbb{R}$ 系数）。本图 `thm.jordan-canonical-form` 讲的是复情形。\n\n⚠️ **本条的证明**走「$K[x]$-模」：$M_{n}(K)$ 的相似类 $\\leftrightarrow$ $K[x]$-模 $K^{n}$ 的同构类，再用 $K[x]$ 是 PID $\\implies$ 有限生成模分解为循环模（主分解定理）$\\implies$ 每个循环模由 $d_{i}$ 决定。**这条路线正是 PID 上的结构定理**，所以两个定理其实是一件事。本图只给陈述与骨架。",
+   "refs": [
+    "Hoffman–Kunze, Linear Algebra（⚠️ 章节未核实，只记书名）· 有理标准形",
+    "北大《高等代数》· 有理标准形"
+   ]
+  },
+  {
+   "id": "def.characteristic",
+   "type": "definition",
+   "label": "域的特征",
+   "title": "域的特征：$1$ 加多少次回到 $0$",
+   "label_en": "Characteristic",
+   "title_en": "Characteristic of a Field",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.characteristic.en.md",
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 8,
+   "tags": [
+    "定义",
+    "代数",
+    "域",
+    "特征",
+    "素域"
+   ],
+   "statement": "**在做什么**：给域配一个数，记「$1$ 要加多少次才回到 $0$」。它决定了域里能不能做除法以外的「模 $p$ 运算」，也决定素域是哪个。\n\n设 $K$ 是域。考虑唯一环同态\n\n$$\\varphi : \\mathbb{Z} \\to K, \\qquad \\varphi(n) = \\underbrace{1 + 1 + \\cdots + 1}_{n} .$$\n\n它的核是 $\\mathbb{Z}$ 的理想，故为 $(0)$ 或 $(p)$（$p$ 素数）。称\n\n- $\\ker\\varphi = (p)$ 的情形为**特征 $p$**，记 $\\operatorname{char} K = p$；\n- $\\ker\\varphi = (0)$ 的情形为**特征 $0$**，记 $\\operatorname{char} K = 0$（此时 $\\varphi$ 单射，$K$ 含一份 $\\mathbb{Q}$）。\n\n**素域**：$K$ 的最小子域（叫**素域**）同构于 $\\mathbb{F}_{p} = \\mathbb{Z}/p\\mathbb{Z}$（特征 $p$）或 $\\mathbb{Q}$（特征 $0$）。所以「特征」决定了域的**最小地基**。\n\n**关键性质**：$\\operatorname{char} K = p$ 时，对一切 $a \\in K$ 有 $pa = 0$，且 $(a + b)^{p} = a^{p} + b^{p}$（**Frobenius**：二项式系数 $\\binom{p}{k}$ 都被 $p$ 整除）。",
+   "notes": "⭐ **为什么必须是素数**：若 $1$ 加 $n$ 次回到 $0$ 而 $n = ab$ 可分解，则 $0 = n\\cdot 1 = (a\\cdot 1)(b\\cdot 1)$，域无零因子 $\\implies$ $a \\cdot 1 = 0$ 或 $b\\cdot 1 = 0$ $\\implies$ $n$ 不是最小的。所以核只能是 $(0)$ 或 $(p)$，**不存在特征 $4$ 的域**。\n\n⚠️ **$\\operatorname{char}$ 不是「元素个数」**：$\\mathbb{F}_{p^{n}}$ 的特征是 $p$，不是 $p^{n}$。特征只记「$\\mathbb{Z}$ 怎么映进来」，元数记 $\\lvert K\\rvert$。两者对有限域由 $\\lvert K\\rvert = p^{n}$ 联系（$p$ 是特征），但特征本身是那个 $p$。\n\n⚠️ **与 `def.finchar`（有限特征族）无关**：那是序论 / Tukey 引理里的概念（「有限特征族」），只是中文撞了「特征」两个字。名字里带「特征」的东西在图上还有特征值、特征子空间、特征多项式、特征类 —— 各自独立。\n\n⭐ **Frobenius 是特征 $p$ 的标志性现象**：$x \\mapsto x^{p}$ 是域同态（在有限域上还是自同构），而特征 $0$ 里完全没有对应物。$\\mathbb{F}_{p^{n}}$ 的 Galois 群就是 Frobenius 生成的循环群。",
+   "refs": [
+    "Dummit–Foote, Abstract Algebra（⚠️ 章节未核实，只记书名）· 域的特征",
+    "北大《高等代数》· 域的特征与素域"
    ]
   },
   {
@@ -62909,7 +63085,7 @@
    ],
    "target": "thm.inverse-function",
    "title": "压缩映射原理 $\\implies$ 逆映射定理（有限维）",
-   "proof": "记 $A := Df(a)$，$b := f(a)$。\n\n**第一步：化归到 $a = 0$、$b = 0$、$Df(0) = I$。** 令 $\\widetilde f(x) := A^{-1}\\bigl( f(a + x) - b \\bigr)$。则 $\\widetilde f(0) = 0$、$D\\widetilde f(0) = A^{-1}A = I$，而 $f$ 的局部可逆性与逆的光滑性等价于 $\\widetilde f$ 的。以下就设 $a = 0$、$f(0) = 0$、$Df(0) = I$。\n\n**第二步：$\\Phi(x) := x - f(x)$ 在小球上是压缩。** 由 $D\\Phi(0) = I - I = 0$ 与 $D\\Phi$ 的连续性，存在 $r > 0$ 使 $\\|x\\| \\le r$ 时 $\\|D\\Phi(x)\\| \\le \\frac{1}{2}$。于是对 $\\|x\\|, \\|y\\| \\le r$，由中值不等式（`thm.mean-value-multi`）\n\n$$\\|\\Phi(x) - \\Phi(y)\\| \\le \\tfrac{1}{2}\\|x - y\\|$$\n\n**第三步：对每个小 $y$，解 $f(x) = y$。** 设 $\\|y\\| \\le r/2$。定义 $\\Psi_y(x) := y + \\Phi(x)$。若 $\\|x\\| \\le r$ 则 $\\|\\Psi_y(x)\\| \\le \\|y\\| + \\|\\Phi(x) - \\Phi(0)\\| + \\|\\Phi(0)\\| \\le \\frac{r}{2} + \\frac{r}{2} = r$（注意 $\\Phi(0) = 0$），故 $\\Psi_y$ 把闭球 $\\overline{B}(0, r)$ 映入自身；它又是系数 $\\frac{1}{2}$ 的压缩映射。闭球在 $\\mathbb{R}^{n}$ 中**完备**，由压缩映射原理（`thm.banach-fixed-point`）$\\Psi_y$ 有唯一不动点 $x \\in \\overline{B}(0,r)$，即 $f(x) = y$。\n\n**第四步：唯一性（局部单射）。** 若 $f(x_1) = f(x_2) = y$ 且 $\\|x_i\\| \\le r$，则 $\\Phi(x_1) - \\Phi(x_2) = (x_1 - x_2) - (f(x_1) - f(x_2)) = x_1 - x_2$，取范数得 $\\|x_1 - x_2\\| \\le \\frac{1}{2}\\|x_1 - x_2\\|$，故 $x_1 = x_2$。于是记 $V := B(0, r) \\cap f^{-1}(B(0, r/2))$、$W := B(0, r/2)$，则 $f|_V : V \\to W$ 是双射。（把 $V$ 取成开球与开原像之交，$V$、$W$ 都开。）\n\n**第五步：逆映射连续。** 对 $y_1, y_2 \\in W$，记 $x_i := g(y_i)$。由第三步的论证\n\n$$\\|x_1 - x_2\\| = \\|f(x_1) - f(x_2) + \\Phi(x_2) - \\Phi(x_1)\\| \\le \\|y_1 - y_2\\| + \\tfrac{1}{2}\\|x_1 - x_2\\|$$\n\n故 $\\|g(y_1) - g(y_2)\\| \\le 2\\|y_1 - y_2\\|$：$g$ 甚至 Lipschitz。\n\n**第六步：$g$ 可导且 $Dg(y) = (Df(g(y)))^{-1}$。** 对 $y, y + k \\in W$ 记 $x := g(y)$、$x + h := g(y + k)$（即 $h = g(y+k) - g(y)$）。由 $f$ 在 $x$ 可微\n\n$$k = f(x + h) - f(x) = Df(x)(h) + o(\\|h\\|)$$\n\n两边作用 $Df(x)^{-1}$ 并用第五步的 $\\|h\\| \\le 2\\|k\\|$：$h = Df(x)^{-1}(k) + o(\\|k\\|)$。按定义这就是 $g$ 在 $y$ 可微，且 $Dg(y) = Df(g(y))^{-1}$。\n\n**第七步：$Dg$ 连续。** $Dg = (Df \\circ g)^{-1}$；$g$ 连续、$Df$ 连续、求逆（在 $GL_n$ 上）连续（`prop.inverse-continuous` 型的论证：逆的表达式含 $1/\\det$ 与伴随矩阵，都连续），故 $Dg$ 连续，即 $g \\in C^{1}$。∎",
+   "proof": "记 $A := Df(a)$，$b := f(a)$。\n\n**第一步：化归到 $a = 0$、$b = 0$、$Df(0) = I$。** 令 $\\widetilde f(x) := A^{-1}\\bigl( f(a + x) - b \\bigr)$。则 $\\widetilde f(0) = 0$、$D\\widetilde f(0) = A^{-1}A = I$，而 $f$ 的局部可逆性与逆的光滑性等价于 $\\widetilde f$ 的。以下就设 $a = 0$、$f(0) = 0$、$Df(0) = I$。\n\n**第二步：$\\Phi(x) := x - f(x)$ 在小球上是压缩。** 由 $D\\Phi(0) = I - I = 0$ 与 $D\\Phi$ 的连续性，存在 $r > 0$ 使 $\\|x\\| \\le r$ 时 $\\|D\\Phi(x)\\| \\le \\frac{1}{2}$。于是对 $\\|x\\|, \\|y\\| \\le r$，由中值不等式（`thm.mean-value-multi`）\n\n$$\\|\\Phi(x) - \\Phi(y)\\| \\le \\tfrac{1}{2}\\|x - y\\|$$\n\n**第三步：对每个小 $y$，解 $f(x) = y$。** 设 $\\|y\\| \\le r/2$。定义 $\\Psi_y(x) := y + \\Phi(x)$。若 $\\|x\\| \\le r$ 则 $\\|\\Psi_y(x)\\| \\le \\|y\\| + \\|\\Phi(x) - \\Phi(0)\\| + \\|\\Phi(0)\\| \\le \\frac{r}{2} + \\frac{r}{2} = r$（注意 $\\Phi(0) = 0$），故 $\\Psi_y$ 把闭球 $\\overline{B}(0, r)$ 映入自身；它又是系数 $\\frac{1}{2}$ 的压缩映射。闭球在 $\\mathbb{R}^{n}$ 中**完备**，由压缩映射原理（`thm.banach-fixed-point`）$\\Psi_y$ 有唯一不动点 $x \\in \\overline{B}(0,r)$，即 $f(x) = y$。\n\n**第四步：唯一性（局部单射）。** 若 $f(x_1) = f(x_2) = y$ 且 $\\|x_i\\| \\le r$，则 $\\Phi(x_1) - \\Phi(x_2) = (x_1 - x_2) - (f(x_1) - f(x_2)) = x_1 - x_2$，取范数得 $\\|x_1 - x_2\\| \\le \\frac{1}{2}\\|x_1 - x_2\\|$，故 $x_1 = x_2$。于是记 $V := B(0, r) \\cap f^{-1}(B(0, r/2))$、$W := B(0, r/2)$，则 $f|_V : V \\to W$ 是双射。（把 $V$ 取成开球与开原像之交，$V$、$W$ 都开。）\n\n**第五步：逆映射连续。** 对 $y_1, y_2 \\in W$，记 $x_i := g(y_i)$。由第三步的论证\n\n$$\\|x_1 - x_2\\| = \\|f(x_1) - f(x_2) + \\Phi(x_2) - \\Phi(x_1)\\| \\le \\|y_1 - y_2\\| + \\tfrac{1}{2}\\|x_1 - x_2\\|$$\n\n故 $\\|g(y_1) - g(y_2)\\| \\le 2\\|y_1 - y_2\\|$：$g$ 甚至 Lipschitz。\n\n**第六步：$g$ 可导且 $Dg(y) = (Df(g(y)))^{-1}$。** 对 $y, y + k \\in W$ 记 $x := g(y)$、$x + h := g(y + k)$（即 $h = g(y+k) - g(y)$）。由 $f$ 在 $x$ 可微\n\n$$k = f(x + h) - f(x) = Df(x)(h) + o(\\|h\\|)$$\n\n两边作用 $Df(x)^{-1}$ 并用第五步的 $\\|h\\| \\le 2\\|k\\|$：$h = Df(x)^{-1}(k) + o(\\|k\\|)$。按定义这就是 $g$ 在 $y$ 可微，且 $Dg(y) = Df(g(y))^{-1}$。\n\n**第七步：$Dg$ 连续。** $Dg = (Df \\circ g)^{-1}$；$g$ 连续、$Df$ 连续、求逆（在 $GL_n$ 上）连续（`thm.inverse-function` 那类论证：逆的表达式含 $1/\\det$ 与伴随矩阵，都连续），故 $Dg$ 连续，即 $g \\in C^{1}$。∎",
    "note": "⭐ 第 2 步的化归（把 $Df(a)$ 变成 $I$）是全部技巧所在：**一旦导数是恒等，$x - f(x)$ 就成为压缩的**，于是「解方程」就变成了「找不动点」。第 6 步则说明「逆映射的导数是导数的逆」是定义的自然产物，不是额外结论。"
   },
   {
@@ -73713,6 +73889,94 @@
    "definition": "def.lp-norm",
    "usedBy": "cor.lp-reflexive",
    "note": "自反性谈的是 L^p 与它的二次对偶。"
+  },
+  {
+   "id": "dep.closed-derham",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.de-rham-complex",
+   "usedBy": "def.closed-form",
+   "note": "闭形式是 de Rham 复形里 $d$ 的核。"
+  },
+  {
+   "id": "dep.closed-cycle",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cycle",
+   "usedBy": "def.closed-form",
+   "note": "闭形式就是 de Rham 复形的**闭链**（$Z^{k} = \\ker d$）。"
+  },
+  {
+   "id": "dep.closed-extd",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "prop.exterior-derivative-manifold",
+   "usedBy": "def.closed-form",
+   "note": "定义 $d\\omega = 0$ 用的是流形上的外微分。"
+  },
+  {
+   "id": "dep.exact-derham",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.de-rham-complex",
+   "usedBy": "def.exact-form",
+   "note": "恰当形式是 de Rham 复形里 $d$ 的像。"
+  },
+  {
+   "id": "dep.exact-boundary",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.boundary",
+   "usedBy": "def.exact-form",
+   "note": "恰当形式就是 de Rham 复形的**边缘**（$B^{k} = \\operatorname{im} d$）。"
+  },
+  {
+   "id": "dep.exact-extd",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "prop.exterior-derivative-manifold",
+   "usedBy": "def.exact-form",
+   "note": "定义 $\\omega = d\\eta$ 用的是外微分。"
+  },
+  {
+   "id": "dep.rcf-minpoly",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.minimal-poly",
+   "usedBy": "thm.rational-canonical-form",
+   "note": "不变因子里最大的那个 $d_{s}$ 就是极小多项式。"
+  },
+  {
+   "id": "dep.rcf-similarity",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.similarity",
+   "usedBy": "thm.rational-canonical-form",
+   "note": "结论是「相似于」某个分块对角阵 —— 分类的是相似类。"
+  },
+  {
+   "id": "dep.rcf-poly",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.char-poly",
+   "usedBy": "thm.rational-canonical-form",
+   "note": "不变因子之积是特征多项式，两条多项式链在这里对齐。"
+  },
+  {
+   "id": "dep.char-field",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.field",
+   "usedBy": "def.characteristic",
+   "note": "特征是对**域**说的（更一般地对整环也能定义）。"
+  },
+  {
+   "id": "dep.char-primering",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "def.characteristic",
+   "note": "定义走 $\\mathbb{Z} \\to K$ 这个环同态，要先有环与理想。"
   },
   {
    "id": "dep.real-extended",
@@ -85572,7 +85836,7 @@
   {
    "a": "diffgeom.form",
    "b": "hom.complex",
-   "count": 2,
+   "count": 4,
    "label": "",
    "explicit": false
   },

@@ -6,3 +6,5 @@
 - ⇒ [`thm.mayer-vietoris`](../nodes/thm.mayer-vietoris.md) Mayer–Vietoris 序列
 - 被 [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理 用
 - ⇒ [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理
+- 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
+- 被 [`def.exact-form`](../nodes/def.exact-form.md) 恰当形式 用
