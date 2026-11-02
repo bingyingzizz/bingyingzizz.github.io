@@ -10,6 +10,6 @@ $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 
 **两个刻画定理**：
 - $f : X \to Y$ 连续 $\iff$ $f$ 把每个收敛网送到收敛网（`def.continuous-map`）；
-- $X$ 紧 $\iff$ $X$ 中每个网有收敛的**子网**（`def.compact`）。
+- $X$ 紧 $\iff$ $X$ 中每个网有收敛的**子网**。
 
 > 续见 [nodes/def.net.3.md](./def.net.3.md)

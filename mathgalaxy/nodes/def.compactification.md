@@ -5,7 +5,7 @@ layer 15 · 定义 · 拓扑空间 · 拓扑学
 
 **在做什么**：把非紧空间「补上一些点」让它变紧，同时不破坏原来的结构。这是把紧性定理搬到非紧空间上的标准手法 —— 先在紧化上做、再把补的点挖掉。
 
-设 $X$ 是拓扑空间。$X$ 的**紧化**（compactification）是一个紧空间 $Y$（`def.compact`）连同一个嵌入
+设 $X$ 是拓扑空间。$X$ 的**紧化**（compactification）是一个紧空间 $Y$ 连同一个嵌入
 > 陈述续见 [nodes/def.compactification.2.md](./def.compactification.2.md)
 
 
