@@ -35,6 +35,9 @@
 ### 概率　出现 6 次
 `def.lebesgue-stieltjes` · `thm.cauchy-schwarz` · `def.tangent-distribution` · `def.jacobi-symbol` · `def.convex-function`
 
+### 代数闭包　出现 5 次
+`thm.minimal-poly-divisor` · `thm.diagonalizable` · `def.nilpotent`
+
 ### 偏微分方程　出现 5 次
 `thm.frobenius` · `thm.fundamental-theorem-surfaces` · `def.involutive-distribution` · `def.closed-form`
 
@@ -49,9 +52,6 @@
 
 ### 闭曲面　出现 3 次
 `thm.gauss-bonnet` · `def.orientable-surface` · `def.orientable-manifold`
-
-### 代数闭包　出现 3 次
-`thm.minimal-poly-divisor`
 
 ### 群的阶　出现 1 次
 `def.primitive-root`

@@ -1,7 +1,11 @@
 # 拓扑斯　`def.topos`　·　续页（第 2 页）
 [在星图里打开](../#n=def.topos)　·　第 1 页 [nodes/def.topos.md](./def.topos.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.generator`](../nodes/def.generator.md) 生成元集：用到了定义 生成元集　[proofs/def-dep.generator-topos.md](../proofs/def-dep.generator-topos.md)
+## 陈述（续）
+- **① 小生成元集**：**这是“小性”条件，预拓扑斯没有它**。它保证拓扑斯有足够好的表现（能做内语言、能取层化），也是「\(\mathcal{T} \simeq \operatorname{Sh}(\mathcal{C}, J)\) 且 \(\mathcal{C}\) 小」的前提。⚠️ 少了它，范畴可能“太大”而无法化为层范畴。
+- **② 有限极限**：与预拓扑斯相同，纯结构要求。
+- **③ 余积存在且不交万有**（等价：**所有**余极限存在）：**比预拓扑斯强了一档** —— 预拓扑斯只要求**有限*
+*余积。这一条加上 ② 得到「余极限都能算」，才使「层化」可行（层化是沿筛取余极限）。
+- **④ 等价关系有效且万有**：与预拓扑斯相同。
 
 > 续见 [nodes/def.topos.3.md](./def.topos.3.md)

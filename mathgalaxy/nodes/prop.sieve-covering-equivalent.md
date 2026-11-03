@@ -10,7 +10,7 @@ layer 19 · 命题 · 层与拓扑 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sieve`](../nodes/def.sieve.md) 筛：用到了定义 筛　[proofs/def-dep.sieveequiv-sieve.md](../proofs/def-dep.sieveequiv-sieve.md)
 
-- …另有入边，续页见 [nodes/prop.sieve-covering-equivalent.3.md](./prop.sieve-covering-equivalent.3.md)
+- …另有入边，续页见 [nodes/prop.sieve-covering-equivalent.5.md](./prop.sieve-covering-equivalent.5.md)
 
 refs: Le Stum, Proposition 3.2.12；Le Stum, Exercise 3.26
 

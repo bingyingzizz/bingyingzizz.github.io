@@ -1,9 +1,8 @@
 # 预拓扑斯　`def.pretopos`　·　续页（第 3 页）
 [在星图里打开](../#n=def.pretopos)　·　第 1 页 [nodes/def.pretopos.md](./def.pretopos.md)　·　上一页 [nodes/def.pretopos.2.md](./def.pretopos.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解 用
-- 被 [`prop.condensed-criterion`](../nodes/prop.condensed-criterion.md) 凝聚态集的刻画 用
-- 被 [`def.precanonical-topology`](../nodes/def.precanonical-topology.md) 预标准拓扑 用
-- 被 [`def.topos`](../nodes/def.topos.md) 拓扑斯 用
-- 被 [`def.chaus-pretopos`](../nodes/def.chaus-pretopos.md) 紧 Hausdorff 空间构成预拓扑斯 用
+## 陈述（续）
+③ 等价关系有效且万有**：**这一条保证“商”与“关系”对应**（有效 = 每个等价关系都是某个满态射的核对；万有 = 在拉回下保持）。⚠️ 缺了它，「商对象」与「等价关系」就对不上，第一同构定理无从谈起。
+- **④ 满态射正则且万有**：**这一条最技术**（正则 = 是某个核对的第一分量）。⚠️ 它与 ③ 有重叠但**不互相蕴含**：③ 说的是等价关系$\to$满态射，④ 说的是满态射$\to$等价关系。
+
+> 续见 [nodes/def.pretopos.4.md](./def.pretopos.4.md)

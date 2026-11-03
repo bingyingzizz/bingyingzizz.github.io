@@ -1,12 +1,9 @@
 # 拓扑斯　`def.topos`　·　续页（第 3 页）
 [在星图里打开](../#n=def.topos)　·　第 1 页 [nodes/def.topos.md](./def.topos.md)　·　上一页 [nodes/def.topos.2.md](./def.topos.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.stalk-separated`](../nodes/prop.stalk-separated.md) 茎与分离预层 用
-- 被 [`prop.abelian-slice-adjunction`](../nodes/prop.abelian-slice-adjunction.md) 切片上的正合左伴随 用
-- 被 [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理 用
-- 被 [`prop.topos-covering-epi`](../nodes/prop.topos-covering-epi.md) 拓扑斯中覆盖即余积满射 用
-- 被 [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
-- 被 [`def.topos-morphism`](../nodes/def.topos-morphism.md) 拓扑斯的态射 用
-- 被 [`def.internal-hom`](../nodes/def.internal-hom.md) 内 Hom 用
-- 被 [`thm.breen-deligne`](../nodes/thm.breen-deligne.md) Breen–Deligne 分解 用
+## 陈述（续）
+**与预拓扑斯合起来看**：拓扑斯 \(=\) 预拓扑斯 \(+\)「小生成元 \(+\) 任意余极限」。所以「预拓扑斯」是“缺小性与大余极限的拓扑斯”，很多构造（内部等价关系、有效满射、核对）在那一层就能做。
+⚠️ **四条不能随便删**：删 ①，\(\operatorname{Sh}(\mathcal{C})\)（\(\mathcal{C}\) 大）仍满足 ②③④ 但不是拓扑斯（无小生成元）；删 ③ 的“不交万有”只剩“余积存在”，\(\mathbf{Grp}^{\mathrm{op}}\) 之类会混进来；删 ④，「商 = 等价关系」失效，内语言里的“集合”语义就崩了。
+⚠️ **② 里的“不交且万有”是最常被忽略的**：只说「余积存在」不算拓扑斯 —— 拓扑斯里的余积必须在拉回下**稳定**（万有），这是内部语言中「不交并」的行为来源。
+
+> 续见 [nodes/def.topos.4.md](./def.topos.4.md)

@@ -1,15 +1,11 @@
 # 距离空间　`def.metric-space`　·　续页（第 5 页）
 [在星图里打开](../#n=def.metric-space)　·　第 1 页 [nodes/def.metric-space.md](./def.metric-space.md)　·　上一页 [nodes/def.metric-space.4.md](./def.metric-space.4.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.induced-norm`](../nodes/def.induced-norm.md) 诱导范数与距离 用
-- 被 [`def.contraction`](../nodes/def.contraction.md) 压缩映射 用
-- 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
-- ⇒ [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间
-- 被 [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理 用
-- 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
-- 被 [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形 用
-- ⇒ [`def.perfectly-normal-space`](../nodes/def.perfectly-normal-space.md) 完美正规空间
-- ⇒ [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-metric.md](../proofs/def-link.abs-metric.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.real-metric.md](../proofs/dep.real-metric.md)
+- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep.topology-metric.md](../proofs/dep.topology-metric.md)
+- [`def.topology-base`](../nodes/def.topology-base.md) 基与子基：用到了定义 基与子基　[proofs/dep.base-metric.md](../proofs/dep.base-metric.md)
+- [`def.function`](../nodes/def.function.md) 映射：用到了定义 映射　[proofs/def-dep.function-metric-space.md](../proofs/def-dep.function-metric-space.md)
 
 > 续见 [nodes/def.metric-space.6.md](./def.metric-space.6.md)

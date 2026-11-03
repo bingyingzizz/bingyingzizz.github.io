@@ -9,16 +9,17 @@ layer 16 · 定义 · 拓扑斯 · 范畴论
 2. 有限极限存在；
 3. 余积存在，并且是不交的、万有的（等价地说：所有余极限存在）；
 4. 等价关系是有效的且万有的。
+**四条里“哪条是拓扑斯独有的”**（这一组与预拓扑斯的差别全在第 1 条与第 3 条的加强上）：
+> 陈述续见 [nodes/def.topos.2.md](./def.topos.2.md)
+
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.pretopos`](../nodes/def.pretopos.md) 预拓扑斯：用到了定义 预拓扑斯　[proofs/def-dep.pretopos-topos.md](../proofs/def-dep.pretopos-topos.md)
 
-- …另有入边，续页见 [nodes/def.topos.2.md](./def.topos.2.md)
+- …另有入边，续页见 [nodes/def.topos.4.md](./def.topos.4.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理
-
-- …另有出边，续页见 [nodes/def.topos.3.md](./def.topos.3.md)
+- …另有出边，续页见 [nodes/def.topos.5.md](./def.topos.5.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.3
 
