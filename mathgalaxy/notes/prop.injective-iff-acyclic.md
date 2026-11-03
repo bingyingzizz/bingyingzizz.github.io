@@ -15,3 +15,5 @@ $(3) \implies (1)$：对每个 $M$，$I$ 对 $\operatorname{Hom}(M,-)$ 零调意
 ∎
 
 ⭐ 用途：验「内射」时可以从**任何**左正合函子那一侧下手 —— 而在凝聚态 / 层的情形里，最方便的左正合函子就是取截面 $\Gamma(S, -)$。
+
+> 续见 notes/prop.injective-iff-acyclic.2.md

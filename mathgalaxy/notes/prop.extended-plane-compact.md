@@ -6,3 +6,5 @@
 ⭐ **它的用处**：把「$\infty$ 附近的行为」变成「球面上一点附近的行为」，于是「整函数在 $\infty$ 处是什么奇点」这种说法才有意义 —— 这是 `thm.picard-great` 与`def.entire-meromorphic` 里「亚纯 = 扩充平面上除极点外全纯」的前提。
 
 ⚠️ 紧性属于 $\widehat{\mathbb{C}}$，不属于 $\mathbb{C}$：$z_{n} = n$ 在 $\mathbb{C}$ 里没有收敛子列，在 $\widehat{\mathbb{C}}$ 里收敛到 $\infty$。
+
+> 续见 notes/prop.extended-plane-compact.2.md

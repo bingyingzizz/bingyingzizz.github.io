@@ -7,10 +7,8 @@
 
 **例 2**：$f : X \to [-\infty, +\infty]$ 可测，且 $\int f^+ d\mu$、$\int f^- d\mu$ 中至少一个有限 $\implies$
 
-
-
 $$\nu(E) := \int_E f d\mu$$
 
-
-
 是符号测度。这样的 $f$ 叫**广义可积函数**（extended integrable function）。
+
+> 续见 notes/def.signed-measure.2.md

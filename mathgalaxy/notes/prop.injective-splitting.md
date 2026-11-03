@@ -12,3 +12,7 @@ $$P := (I \oplus B) / \{\, (f(a),\ -a) : a \in A \,\},$$
 **2 与 3 等价**：由 `def.split-exact` 的判据，短正合列分裂当且仅当单射端有收缩 ✓。∎
 
 📌 与 `prop.injective-criterion`（阿贝尔范畴里内射对象的四条等价）是同一条：那里第 2、4 条就是本条的两种说法；本条的证明可以逐字搬到任何阿贝尔范畴，因为只用了推出与核。
+
+**三条里 (1)$\implies$(2) 是定义、(2)$\implies$(3) 要用推出、(3)$\implies$(1) 才是真判据**：
+
+> 续见 notes/prop.injective-splitting.2.md

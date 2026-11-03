@@ -10,3 +10,5 @@ $fg \sim 1_{L}$ 同理。
 **2.** 「同伦平凡」的定义就是「与零对象同构」；而 $\mathbf{K}(\mathcal{C})$ 中的零对象是零复形，$K \to 0 \to K$ 的复合是 $0_{K}$。故存在同构 $\iff$ $1_{K} \sim 0_{K}$ ✓。∎
 
 ⚠️ 注意「同伦等价」**不是**「逐项同构」：$1 \sim 0$ 意味着 $K^{\bullet}$ 的两个相邻层之间有一族映射 $s^{n}$ 把恒等收缩掉，这样的复形（例如 $0 \to M \xrightarrow{1} M \to 0$）每一层都非零，但整体同伦平凡。
+
+> 续见 notes/prop.homotopy-equivalence-criterion.2.md

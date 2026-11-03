@@ -2,7 +2,6 @@
 [在星图里打开](../#n=def.poset)　·　第 1 页 [nodes/def.poset.md](./def.poset.md)　·　上一页 [nodes/def.poset.3.md](./def.poset.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.ordered-field`](../nodes/def.ordered-field.md) 有序域 用
 - 被 [`def.order-iso`](../nodes/def.order-iso.md) 序同构 用
 - 被 [`def.chain`](../nodes/def.chain.md) 链 用
 - 被 [`def.bound`](../nodes/def.bound.md) 界与确界 用

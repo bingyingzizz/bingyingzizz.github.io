@@ -11,11 +11,11 @@
 
 ## 一、提到了但没有节点（31 个）
 
-### 单位圆　出现 24 次
-`thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.max-modulus` · `thm.mayer-vietoris` 等 20 个节点
+### 单位圆　出现 25 次
+`thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.rodrigues` · `thm.max-modulus` 等 21 个节点
 
-### 原函数　出现 14 次
-`thm.ftc-riemann-part2` · `thm.cauchy-goursat` · `def.residue` · `prop.single-valued-branch` · `thm.taylor-complex` · `thm.winding-homotopy` 等 9 个节点
+### 原函数　出现 16 次
+`prop.single-valued-branch` · `thm.ftc-riemann-part2` · `thm.cauchy-goursat` · `def.residue` · `thm.taylor-complex` · `thm.winding-homotopy` 等 10 个节点
 
 ### 角度　出现 10 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.isometry` · `def.intrinsic-quantity` · `def.riemannian-metric` · `def.trig-function` 等 7 个节点
@@ -23,11 +23,14 @@
 ### 三角剖分　出现 9 次
 `def.singular-homology` · `thm.simplicial-approximation` · `thm.gauss-bonnet` · `def.simplicial-complex` · `thm.euler-characteristic` · `thm.homotopy-invariance`
 
-### 环面　出现 8 次
-`def.orientable-surface` · `thm.gauss-bonnet` · `def.vector-field` · `def.integral-manifold` · `thm.frobenius` · `def.simply-connected` 等 7 个节点
+### 环面　出现 9 次
+`def.orientable-surface` · `thm.gauss-bonnet` · `def.vector-field` · `def.integral-manifold` · `thm.frobenius` · `def.simply-connected` 等 8 个节点
 
-### 素因子　出现 6 次
-`def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.bertrand` · `thm.quadratic-reciprocity`
+### 素因子　出现 7 次
+`thm.minimal-poly-divisor` · `def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.bertrand` 等 7 个节点
+
+### 代数闭包　出现 6 次
+`thm.minimal-poly-divisor` · `thm.diagonalizable` · `def.nilpotent`
 
 ### Fourier 变换　出现 6 次
 `thm.riemann-lebesgue` · `thm.bounded-extension` · `thm.closed-graph` · `def.pontryagin-dual` · `thm.pontryagin-van-kampen`
@@ -35,8 +38,8 @@
 ### 概率　出现 6 次
 `def.lebesgue-stieltjes` · `thm.cauchy-schwarz` · `def.tangent-distribution` · `def.jacobi-symbol` · `def.convex-function`
 
-### 代数闭包　出现 5 次
-`thm.minimal-poly-divisor` · `thm.diagonalizable` · `def.nilpotent`
+### 完备性定理　出现 5 次
+`def.satisfaction`
 
 ### 偏微分方程　出现 5 次
 `thm.frobenius` · `thm.fundamental-theorem-surfaces` · `def.involutive-distribution` · `def.closed-form`
@@ -91,9 +94,6 @@
 
 ### 紧致性定理　出现 1 次
 `lem.zorn`
-
-### 完备性定理　出现 1 次
-`def.satisfaction`
 
 ### 一阶逻辑的完备性　出现 1 次
 `def.satisfaction`

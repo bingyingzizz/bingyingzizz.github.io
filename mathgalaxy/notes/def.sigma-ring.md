@@ -8,3 +8,5 @@
 由差 + 可数并，**可数交**自动可用：$\bigcap_n A_n = A_1 \setminus \bigcup_{n \ge 2} (A_1 \setminus A_n)$。
 
 与单调类的关系：**环是 $\sigma$环 $\iff$ 它是单调类 $\iff$ 它对可数不交并封闭**。
+
+> 续见 notes/def.sigma-ring.2.md

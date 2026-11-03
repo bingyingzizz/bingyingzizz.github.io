@@ -9,3 +9,5 @@
 $M$ 不是无挠 $\iff$ 存在非平凡的**有限**子群单射 $M' \hookrightarrow M$ $\iff$ 存在非平凡有限商 $\widehat M \twoheadrightarrow \widehat{M'}$（对偶把单射翻成满射）$\iff$ $\widehat M$ **不连通** ✓。
 （最后一步：紧 Hausdorff 空间不连通 $\iff$ 有开闭真子集 $\iff$ 有到非平凡有限离散空间的满连续映射。）∎
 ⭐ 「挠子群 $\leftrightarrow$ 连通分支」「无挠商 $\leftrightarrow$ Stonean 部分」两个字典都可以从这两条链逐字读出。
+
+> 续见 notes/prop.pontryagin-torsion-stone.3.md

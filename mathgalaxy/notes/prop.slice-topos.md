@@ -8,3 +8,5 @@
 (3) 把两边的函子按定义写出来即得 ✓。
 
 ∎
+
+> 续见 notes/prop.slice-topos.2.md

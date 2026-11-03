@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.ring-monotone-sigma)　·　[Chinese page (authoritative)](./thm.ring-monotone-sigma.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **stale** · stale fields: abstract, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: abstract stale · statement reviewed · notes stale · name derived
 
 layer 5 · theorem · cluster Families of Sets and Sigma-Algebras (`analysis.setclass`) · Functions of a Real Variable / Mathematical Analysis
 

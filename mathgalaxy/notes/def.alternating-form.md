@@ -8,3 +8,5 @@
 本图默认 $\operatorname{char} K = 0$ 或至少 $\ne 2$（$\mathbb{R}, \mathbb{C}, \mathbb{Q}$ 都满足）。
 
 ⭐ 交错性是行列式之所以为行列式的**核心性质**：交换两行变号（$\operatorname{sgn}(\sigma)$）、两行相同则为零。
+
+> 续见 notes/def.alternating-form.2.md

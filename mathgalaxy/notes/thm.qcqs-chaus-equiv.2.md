@@ -14,3 +14,5 @@ qs 由「紧 Hausdorff 的两块相交还是紧 Hausdorff」给出）。
 本质满则是上一条与拟分离的刻画拼起来。
 
 ∎
+
+> 续见 notes/thm.qcqs-chaus-equiv.3.md

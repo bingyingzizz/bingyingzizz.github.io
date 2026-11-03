@@ -8,3 +8,5 @@
 反向由 $\mu_T \mid \chi_T$ 得到。
 
 ⚠ 第三个断言的「在代数闭包上看」不能省：$\mu_T$ 是否无重根要到扩域里判（$\mathbb{R}$ 上的旋转：$\mu_T = x^{2} + 1$ 无重根，在 $\mathbb{C}$ 上可对角化，在 $\mathbb{R}$ 上不能）。
+
+> 续见 notes/thm.minimal-poly-divisor.2.md

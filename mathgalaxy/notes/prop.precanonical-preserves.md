@@ -6,3 +6,5 @@
 商的情形是把正合列 $F(X/R) \to F(X) \rightrightarrows F(R)$ 读成 $\operatorname{Hom}(X/R, F) \cong \ker\bigl(\operatorname{Hom}(X, F) \rightrightarrows \operatorname{Hom}(R, F)\bigr)$。
 
 ∎
+
+> 续见 notes/prop.precanonical-preserves.2.md

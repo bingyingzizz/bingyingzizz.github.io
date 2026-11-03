@@ -8,3 +8,5 @@
 两个复合都是恒等（在 $Y$ 上）或与恒等自然同构（在 $X$ 上，$x \le$ 代表 $\le x$）✓。
 
 ∎
+
+> 续见 notes/prop.preorder-as-category.2.md

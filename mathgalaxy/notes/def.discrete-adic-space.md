@@ -5,8 +5,6 @@
 
 两者都保粘合，且有比较映射 $X_{\mathrm{ad}} \to X_{\mathrm{ad}/R}$。
 
-
-
 ⭐ 点的另一种描述（后面证固有性要用）：$X_{\mathrm{ad}}$ 的点 = 映射 $\operatorname{Spec} V \to X$（$V$ 是赋值环），模掉「忠实平坦的赋值环扩张」；
 
 $X_{\mathrm{ad}/R}$ 的点 = 带交换图的
@@ -14,3 +12,5 @@ $X_{\mathrm{ad}/R}$ 的点 = 带交换图的
 $$\begin{array}{ccc} \operatorname{Spec} K & \to & X \\ \downarrow & & \downarrow \\ \operatorname{Spec} V & \to & \operatorname{Spec} R \end{array}$$
 
 ⚠ 这不是「拓扑空间加环层」那么简单：赋值是**逐点**的额外数据，它决定了「哪些函数有界」。
+
+> 续见 notes/def.discrete-adic-space.2.md

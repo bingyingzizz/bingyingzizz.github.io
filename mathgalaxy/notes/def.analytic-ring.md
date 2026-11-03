@@ -10,3 +10,5 @@
 ⚠ 为什么要求**所有**这样的复形而不只是单个模？因为要得到导出范畴层面的结论（`thm.analytic-modules` (ii)），单点的同构不够，需要它对复形也成立。
 
 ⭐ 判定「是不是解析环」通常靠 `prop.analytic-examples` 与 `thm.za-analytic` 这类具体定理，而不是逐条验证定义。
+
+> 续见 notes/def.analytic-ring.2.md

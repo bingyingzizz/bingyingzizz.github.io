@@ -12,3 +12,5 @@
 ⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\ell^2$ 里稠密但不闭，最近点存在但**不落在 $E$ 里**，正交分解也失效。
 
 ⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \subset \ell^\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。
+
+> 续见 notes/thm.projection-subspace.2.md

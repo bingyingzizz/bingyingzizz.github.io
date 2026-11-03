@@ -12,3 +12,5 @@
 ⚠️ **Lagrange 子流形不必闭、不必嵌入**：物理里常用的是「浸入」甚至「多重覆叠」（如 Bohr–Sommerfeld 量子化条件里的周期轨道）。本图按「浸入」口径写。
 
 ⚠️ 命名：与「Lagrange 子空间」是同一个人、同一个概念的两个尺度；与 `thm.lagrange-identity`（内积几何）**无关**，别接成因果。
+
+> 续见 notes/def.lagrangian-submanifold.2.md

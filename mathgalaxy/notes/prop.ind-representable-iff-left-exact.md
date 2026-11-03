@@ -8,3 +8,5 @@
 反过来左正合的预层由它自己的元素范畴给出的表达是滤过的 ✓。
 
 ∎
+
+> 续见 notes/prop.ind-representable-iff-left-exact.2.md

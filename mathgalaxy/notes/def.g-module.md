@@ -13,3 +13,5 @@ $$\operatorname{Hom}_{\mathbf{Ring}}\bigl(R[G],\ \operatorname{End}_{R}(M)\bigr)
 - **符号模**：当 $G$ 有一个到 $\{\pm 1\}$ 的同态时，取 $g \cdot n := \operatorname{sgn}(g)\, n$（$M = \mathbb{Z}$）。
 
 ⚠️ **左右之别**：$R[G]^{\mathrm{op}} \cong R[G]$（取逆），所以左 $G$-模与右 $G$-模是同一件事的两面；本图一律用左模。
+
+> 续见 notes/def.g-module.2.md

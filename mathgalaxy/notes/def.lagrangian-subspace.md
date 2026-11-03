@@ -8,3 +8,5 @@
 ⚠️ **与内积空间对照**：内积空间里 $W \cap W^{\perp} = 0$ 永远成立，所以 $W = W^{\perp}$ 只能 $W = 0$。Lagrange 子空间是辛几何独有的现象。
 
 ⚠️ 术语：「Lagrange 子空间」（线性）与「Lagrange 子流形」（`def.lagrangian-submanifold`，流形）是同一件事的两个尺度。中文也写「拉格朗日子空间 / 拉格朗日子流形」。
+
+> 续见 notes/def.lagrangian-subspace.2.md

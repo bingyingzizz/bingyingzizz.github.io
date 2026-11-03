@@ -6,3 +6,5 @@
 ⚠ 「是单射/满射」必须相对**指定的 $B$** 说：同一个函数 $f : \mathbb{R} \to \mathbb{R}$，$x \mapsto x^2$ 既不单也不满；
 
 把陪域改成 $[0, \infty)$ 就满了。
+
+> 续见 notes/def.bijection.2.md

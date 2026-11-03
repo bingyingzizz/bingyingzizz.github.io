@@ -8,3 +8,5 @@
 (2) 是 (1) 加上「$X$ 上的层范畴 $\simeq$ étale 空间范畴」这条标准等价 ✓。
 
 ∎
+
+> 续见 notes/prop.crystalline-sheaf-equiv.2.md

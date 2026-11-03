@@ -8,20 +8,21 @@ layer 5 · 定义 · 序结构 · 序理论
 - **自反**：$\forall x \in A, x \preceq x$；
 - **反对称**：$\forall x, y \in A ( x \preceq y \wedge y \preceq x \to x = y )$；
 - **传递**：$\forall x, y, z \in A ( x \preceq y \wedge y \preceq z \to x \preceq z )$。
+
+若还满足 **可比性** $\forall x, y \in A ( x \preceq y \vee y \preceq x )$，则 $\preceq$ 称为 **$A$ 上的全序**（线性序），$(A, \preceq )$ 称为全序集。
 > 陈述续见 [nodes/def.poset.2.md](./def.poset.2.md)
 
+
+## 它能推出什么 / 谁在用它
+- 被 [`def.ordered-field`](../nodes/def.ordered-field.md) 有序域 用
+
+- …另有出边，续页见 [nodes/def.poset.4.md](./def.poset.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.poset.3.md](./def.poset.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.poset.4.md](./def.poset.4.md)
-
 refs: Kunen, Set Theory, I.11；Davey & Priestley, Introduction to Lattices and Order
 
-## 说明
-典型例子：$\langle \mathcal{P}(S), \subseteq \rangle$ 是偏序集但不是全序集；$\langle \mathbb{R}, \le \rangle$ 是全序集。
-
-反对称性是说：只允许「相等」这一种互相 $\le$ 的方式，所以偏序可以看成「$\le$ 的抽象」。
+> 说明见 `notes/def.poset.md`
 
 引用：`def.poset`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

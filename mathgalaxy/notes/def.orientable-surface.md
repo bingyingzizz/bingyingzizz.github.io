@@ -10,3 +10,5 @@
 **用在哪里**：整体 Gauss 映射 $n : S\to S^{2}$ 与 $\int_{S}K\,\mathrm{d}A = 4\pi\deg(n)$；Stokes 定理的边界定向；以及 `thm.gauss-bonnet` 里「需要可定向」那一句。
 
 ⚠️ **不可定向曲面上仍能积分**：$\mathrm{d}A$ 本身不变号，面积照样有定义；丢掉的只是「带符号的积分」与「整体法向」。
+
+> 续见 notes/def.orientable-surface.2.md

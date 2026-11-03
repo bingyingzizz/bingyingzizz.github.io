@@ -8,3 +8,5 @@
 ⚠ **$\alpha \in \beta$ 与 $\alpha < \beta$ 是同一件事**：序数上的 $\in$ 就是它的序。写 $\alpha < \beta$ 时，背后用的其实是 $\in$。
 
 ⚠ 序数不只是「$\mathbb{N}$ 的推广」。$\omega$ 之后的序数一个比一个长，但它们的**大小**（基数）可以一直停在 $\aleph_0$ —— 在序数里，「更长」与「更大」是两件事。
+
+> 续见 notes/def.ordinal.2.md

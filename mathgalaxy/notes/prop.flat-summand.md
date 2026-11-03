@@ -12,3 +12,5 @@ $$A \otimes_{R} F \;\cong\; (A \otimes_{R} M) \oplus (A \otimes_{R} M_{2}).$$
 直和情形同理：$(-) \otimes \bigoplus_{i} M_{i} \cong \bigoplus_{i} ((-) \otimes M_{i})$ 正合当且仅当每个分量正合 ✓。∎
 
 📌 注意方向：结论只对**直和**成立。直积没有「逐分量判定」这种便利 —— 张量不保积，所以平坦性对直积并不自动封闭（相干环才保证「平坦模的积仍平坦」）。
+
+> 续见 notes/prop.flat-summand.2.md

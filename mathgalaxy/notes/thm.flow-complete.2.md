@@ -8,3 +8,5 @@ $M = \mathbb{R}$、$X = x^{2}\partial_{x}$ 的解在有限时刻爆破。
 前者是「流形本身的洞」，后者是「场长得太快」—— 两种病不同，但都表现为「在有限时刻离开每个紧集」。
 
 **Riemann 情形**：$(M,g)$ 度量完备时测地流也完备（Hopf–Rinow 的一半）。本图只用「紧 $\implies$ 完备」这一条，Hopf–Rinow 不展开。
+
+> 续见 notes/thm.flow-complete.3.md

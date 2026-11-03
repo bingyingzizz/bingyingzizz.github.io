@@ -7,4 +7,6 @@
 - 于是：有限余积不交（先在 $\mathbf{Set}$ 里不交，再注意到那个余积本身紧 Hausdorff）、满射万有（拉回仍是满射，仍在紧 Hausdorff 里）、闭等价关系有效（商对象紧 Hausdorff）；
 - 第 4 条：紧 Hausdorff 空间之间的**连续满射是商映射** —— 这正是「满 $\implies$ 正则」。∎
 
-第 2、3 条也可以从 $\mathbf{Set}$ 继承：不交性、万有性、有效性都是「逐点」的性质，而 $\mathbf{CHaus}$ 里的构造逐点继承集合。
+**四条公理在 $\mathbf{CHaus}$ 里各自“靠什么”成立**（这条例子最能说明预拓扑斯公理的分量）：
+
+> 续见 notes/def.chaus-pretopos.3.md

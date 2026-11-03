@@ -8,3 +8,7 @@
 ⚠ **$\models$ 与 $\vdash$ 是两回事**：前者是**语义**（在结构里为真），后者是**语法**（由公理按规则形式推出）。
 
 一阶逻辑的完备性定理说的正是两者在一阶情形下重合 —— 那也是「$\mathrm{ZFC} \vdash \varphi$ 与 $\mathrm{ZFC} \models \varphi$ 可以混着用」的依据。
+
+**满足关系是递归定义，但递归的“起点”与“量词”两步代价不同**：
+
+> 续见 notes/def.satisfaction.2.md
