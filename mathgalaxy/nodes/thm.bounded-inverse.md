@@ -1,9 +1,9 @@
 # 逆算子定理　`thm.bounded-inverse`
-逆算子定理：双射有界算子有有界逆
+逆算子定理：双射有界算子的逆也有界
 layer 25 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.bounded-inverse)　·　[节点索引](../index.md)
 
-设 $E, F$ 都是 Banach 空间，$u \in B(E, F)$ 是**双射**。则 $u^{-1} \in B(F, E)$。
+设 $E, F$ 是 Banach 空间，$u \in B(E, F)$ 是**双射**。则 $u^{-1} : F \to E$ 也是有界线性算子，即 $u$ 是同胚。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版）：开映射 $\implies$ 逆算子有界　[proofs/imp.fa-bounded-inverse.md](../proofs/imp.fa-bounded-inverse.md)
