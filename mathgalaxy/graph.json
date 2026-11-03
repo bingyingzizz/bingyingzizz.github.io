@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-03T06:03:43.637Z",
+  "generated": "2026-11-03T06:14:53.137Z",
   "counts": {
    "regions": 15,
    "clusters": 102,
@@ -18784,7 +18784,7 @@
    "statement": "设 $U_{0} \\subseteq S$ 是曲面上的开集。**活动标架**是三个 $C^{1}$ 向量场 $e_{1}, e_{2}, e_{3}$，使每点的 $(e_{1}, e_{2}, e_{3})$ 都是 $\\mathbb{R}^{3}$ 的标准正交基（随点移动而变，故名「活动」）。**对偶余标架**是\n\n$$\\omega^{i}(v) := \\langle v, e_{i}\\rangle ,\\qquad i = 1,2,3,$$\n\n它们是 $1$-形式，满足 $\\omega^{i}(e_{j}) = \\delta^{i}_{\\ j}$。位置向量的微分按标架展开：\n\n$$\\mathrm{d}r = \\omega^{1}e_{1}+\\omega^{2}e_{2}+\\omega^{3}e_{3}.$$\n\n这叫**焊接方程**（soldering）：它把「$r$ 怎么动」翻译成「沿标架的各分量动多少」。",
    "notes": "**为什么值得换一套说法**：坐标路线要算 $r_{uu}, r_{uv}, r_{vv}$ 以及 $n$ 的偏导；标架路线只把 $\\mathrm{d}r$、$\\mathrm{d}e_{i}$ **展开一次**，此后全是 $1$-形式之间的代数（外积、比较系数）。这正是用户要的「用活动标架代替复杂计算」。\n\n**曲面上的标准取法**：$e_{3} = n$（法向），$e_{1}, e_{2}$ 是与 $n$ 正交的单位切向量场。这时 $\\omega^{3} = \\langle \\mathrm{d}r, n\\rangle = 0$：曲面上没有法向增量。\n\n⚠️ $(e_{1}, e_{2})$ 只在局部存在，且不唯一（可差一次转动）。凡要写出来的量都要写成与转动无关的形式（如 $I = (\\omega^{1})^{2}+(\\omega^{2})^{2}$），否则一换标架就变形。\n\n**记号**：$\\omega^{i}$ 的上标是编号、不是幂；$(e_{1}, e_{2}, e_{3})$ 与 $(\\omega^{1}, \\omega^{2}, \\omega^{3})$ 互为对偶对，这是活动标架法的全部记账规则。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架",
     "陈维桓《微分几何讲义》, 「曲面的局部理论」· 活动标架法"
    ]
   },
@@ -18826,7 +18826,7 @@
    "statement": "白话：标架**自己也会转** —— 沿某个方向走一小步，$(e_{1},e_{2},e_{3})$ 就微微转动一点。**联络形式**就是把这件「转动」记下来的九个 $1$-形式：喂给它一个方向，它告诉你标架绕哪个轴、转多快。和 Christoffel 符号是一回事，只是换了正交标架来记。\n\n把 $\\mathrm{d}e_{i}$ 按标架展开，系数记作 $\\omega^{j}_{\\ i}$：\n\n$$\\mathrm{d}e_{i} = \\sum_{j=1}^{3}\\omega^{j}_{\\ i}\\,e_{j},\\qquad \\omega^{j}_{\\ i} = \\langle \\mathrm{d}e_{i}, e_{j}\\rangle .$$\n\n这九个 $1$-形式叫**联络形式**（$\\Gamma$-形式）。矩阵 $(\\omega^{i}_{\\ j})$ 反称（见 `prop.connection-antisymmetric`），故只有三个独立：$\\omega^{1}_{\\ 2}, \\omega^{1}_{\\ 3}, \\omega^{2}_{\\ 3}$。\n\n取 $e_{3} = n$（法向）后它们分成两类：\n\n- $\\omega^{1}_{\\ 2}$：**内蕴**部分 —— 曲面的 Levi-Civita 联络，Gauss 曲率由它算出；\n- $\\omega^{1}_{\\ 3}, \\omega^{2}_{\\ 3}$：**外蕴**部分 —— 第二基本形式由它们算出。",
    "notes": "**名字的来历**：$\\omega^{j}_{\\ i}$ 描述「沿某个方向走时，标架怎么转」。它不是无端造出来的外形式：每一点上是 $\\mathbb{R}^{3}$ 的一个 $3\\times3$ 反称矩阵（$3$ 个自由度），沿方向取值就成了 $1$-形式。\n\n⭐ **这一拆分就是曲面论**：$\\mathbb{R}^{3}$ 里曲率形式恒为零；限制到曲面上，$\\omega^{1}_{\\ 2}$ 那部分由内蕴度量决定（Gauss 方程），剩下的外蕴部分给出 $II$ 与 Codazzi 方程。整本曲面论都在读这两类形式的系数。\n\n⚠️ $\\omega^{i}_{\\ j}$ 与 $\\omega^{j}_{\\ i}$ 差一个负号，是全图最容易抄错的地方。判据只有一条：对 $\\langle e_{i}, e_{j}\\rangle = \\delta_{ij}$ 取外微分，不要凭记忆。\n\n**与 Christoffel 符号的关系**：在**不正交**的标架 $\\{r_{u}, r_{v}, n\\}$ 上把它写开，系数就是 $\\Gamma^{k}_{\\ ij}$ 与 $h_{ij}$ 的混合体（对照 `def.second-fundamental-form` 与 `def.christoffel-symbol`）；\n\n只有在正交标架下它才变成干净的反对称矩阵。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式",
     "陈维桓《微分几何讲义》, 「曲面的局部理论」· 联络形式"
    ]
   },
@@ -18868,7 +18868,7 @@
    "statement": "设 $(e_{1}, e_{2}, e_{3})$ 是活动标架（正交标架），$\\omega^{i}_{\\ j}$ 是联络形式。则对一切 $i,j$：\n\n$$\\omega^{i}_{\\ j}+\\omega^{j}_{\\ i} = 0 ;$$\n\n特别地 $\\omega^{i}_{\\ i} = 0$。于是九个联络形式只剩三个独立分量 $\\omega^{1}_{\\ 2}, \\omega^{1}_{\\ 3}, \\omega^{2}_{\\ 3}$。",
    "notes": "证明走的是「内积是常数」这一条，不需要任何坐标：对 $\\langle e_{i}, e_{j}\\rangle = \\delta_{ij}$ 取外微分即得（见入边）。\n\n⭐ **这条是正交标架法的地基**：它把 $\\mathrm{O}(3)$ 的转动自由度（$3$ 个参数）写成 $3$ 个 $1$-形式，后面结构方程里的两两外积才有意义。\n\n⚠️ 若改用**不正交**的标架（如 $\\{r_{u}, r_{v}, n\\}$），$g_{ij}$ 不是 $\\delta_{ij}$，反对称性不成立，$\\omega$ 就退化成 $\\Gamma$ 与 $h$ 的混合体 —— 那正是里那套公式的样子。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性",
     "Kühnel, Differential Geometry: Curves - Surfaces - Manifolds, 「Surfaces in three-space」· 结构方程"
    ]
   },
@@ -18911,7 +18911,7 @@
    "statement": "白话：**这两条方程管着「标架怎么动」**。第一式（挠率为零）说「余标架的变化完全由联络形式决定，没有额外的拧劲」；第二式（$\\mathbb{R}^{3}$ 是平的）说「沿两个方向各转一次，结果与先后顺序无关」。合起来就是 $\\mathrm{d}^{2} = 0$ 在标架下的样子。\n\n设 $\\omega^{i}$ 是对偶余标架（$\\mathrm{d}r = \\sum_{i}\\omega^{i}e_{i}$）、$\\omega^{i}_{\\ j}$ 是联络形式。则\n\n**第一结构方程**（挠率为零）\n\n$$\\mathrm{d}\\omega^{i} = \\sum_{j}\\omega^{j}\\wedge\\omega^{i}_{\\ j} ;$$\n\n**第二结构方程**（$\\mathbb{R}^{3}$ 平坦）\n\n$$\\mathrm{d}\\omega^{i}_{\\ j}+\\sum_{k}\\omega^{i}_{\\ k}\\wedge\\omega^{k}_{\\ j} = 0 ,\\qquad \\mathrm{d}\\omega^{i}_{\\ j} = \\sum_{k}\\omega^{k}_{\\ j}\\wedge\\omega^{i}_{\\ k}.$$\n\n两条合起来就是 $\\mathrm{d}^{2}=0$ 在标架上的样子：对 $\\mathrm{d}r$ 取外微分得第一式，对 $\\mathrm{d}e_{i}$ 取外微分得第二式。",
    "notes": "**为什么叫「结构」**：这两条方程决定「标架怎么动」的全部约束。给定余标架与联络，曲面的形状连同它在 $\\mathbb{R}^{3}$ 里的位置就定了；反过来要检查的相容性只有 $\\mathrm{d}^{2}=0$。曲面论基本定理就是把这句话做成定理。\n\n**曲率形式**：一般流形上第二式的右端不为零，那一项叫曲率形式 $\\Omega^{i}_{\\ j} := \\mathrm{d}\\omega^{i}_{\\ j}+\\sum_{k}\\omega^{i}_{\\ k}\\wedge\\omega^{k}_{\\ j}$；\n\n$\\mathbb{R}^{3}$ 上 $\\Omega \\equiv 0$。\n\n限制到曲面上时它变成 $\\Omega^{i}_{\\ j} = \\omega^{i}_{\\ 3}\\wedge\\omega^{j}_{\\ 3}$ —— 这就是 Gauss 方程。\n\n把同一件事写成「$r_{ij} = \\Gamma^{k}_{\\ ij}r_{k}+h_{ij}n$、$n_{i} = -h^{j}_{\\ i}r_{j}$ 的混合偏导可交换（可积性条件）」。这里只是把「混合偏导」换成 $\\mathrm{d}^{2}=0$、把 $\\Gamma$ 换成 $\\omega$：同一个相容性，写法更短。\n\n⚠️ **符号约定**：本包取 $\\omega^{j}_{\\ i} = \\langle \\mathrm{d}e_{i}, e_{j}\\rangle$，即 $\\mathrm{d}e_{i} = \\sum_{j}\\omega^{j}_{\\ i}e_{j}$。上下指标换一种位置，第二式整体变号；引用前先对齐这一条。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程",
     "陈维桓《微分几何讲义》, 「曲面的局部理论」· 结构方程"
    ]
   },
@@ -18953,7 +18953,7 @@
    "statement": "设标架取成适配于曲面的：$e_{3} = n$（法向）。则沿曲面\n\n$$\\omega^{3} = 0,\\qquad \\omega^{i}_{\\ 3} = \\sum_{j=1}^{2}c_{ij}\\,\\omega^{j}\\quad (i = 1,2),$$\n\n即外蕴联络形式全部落在 $\\{\\omega^{1}, \\omega^{2}\\}$ 张成的空间里，由三个函数 $c_{11}, c_{12}, c_{22}$ 决定（$c_{12} = c_{21}$ 见 `lem.second-form-symmetric`）。",
    "notes": "**为什么 $\\omega^{3} = 0$**：$\\omega^{3}(v) = \\langle \\mathrm{d}r(v), e_{3}\\rangle$，而 $\\mathrm{d}r(v)$ 是曲面的切向量、$e_{3}$ 是法向。等价说法：$r$ 沿曲面移动时没有法向分量。\n\n⭐ **方程组因此变短**：第一结构方程取 $i=3$ 变成恒等式 $0 = \\omega^{1}\\wedge\\omega^{3}_{\\ 1}+\\omega^{2}\\wedge\\omega^{3}_{\\ 2}$；\n\n第二结构方程取 $i,j \\in \\{1,2\\}$ 时只剩 $k=3$ 那一项「多出来」—— 那一项就是 Gauss 曲率。\n\n⭐ 这一步正是「省掉复杂计算」的入口：用坐标求偏导 $r_{uu}, r_{uv}$ 才拿得到的 $h_{ij}$，在这里只是 $\\omega^{i}_{\\ 3}$ 的系数。\n\n⚠️ $\\omega^{3} = 0$ 是**沿曲面**成立，不是标架本身的性质：在 $\\mathbb{R}^{3}$ 的开集上 $\\omega^{3}$ 一般不为零，那正对应「曲面朝法向弯出去」。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架",
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· Gauss 映射"
    ]
   },
@@ -18995,7 +18995,7 @@
    "statement": "在 $e_{3} = n$ 的标架下记 $\\omega^{i}_{\\ 3} = \\sum_{j}c_{ij}\\omega^{j}$（$i, j = 1,2$）。则\n\n$$c_{12} = c_{21}.$$\n\n令 $h_{ij} := -c_{ij}$，则 $(h_{ij})$ 也对称，于是\n\n$$II = \\sum_{i,j=1}^{2}h_{ij}\\,\\omega^{i}\\omega^{j} = h_{11}(\\omega^{1})^{2}+2h_{12}\\omega^{1}\\omega^{2}+h_{22}(\\omega^{2})^{2}$$\n\n是对称双线性形式（$\\omega^{i}\\omega^{j}$ 指对称积）。",
    "notes": "**证明只有一行**：把 $\\mathrm{d}\\omega^{3} = 0$ 代进第一结构方程，得 $(c_{12}-c_{21})\\,\\omega^{1}\\wedge\\omega^{2} = 0$。见入边。\n\n**坐标版对照**：是在 $\\{r_{u}, r_{v}\\}$ 下用「$W$ 的矩阵 $h^{j}_{\\ i}$ 由混合偏导相等而自伴」得到对称性的。$\\mathrm{d}^{2}=0$ 是同一件事的坐标无关版本，且不必假设参数网特殊。\n\n⭐ **对称性的回报**：实对称矩阵有正交的实特征方向（谱定理）—— 这正是主方向、Euler 公式、Rodrigues 定理的来源。\n\n⚠️ 对称的是**相对正交标架**的矩阵 $(c_{ij})$ 与 $(h_{ij})$；若改用不正交的 $\\{r_{u}, r_{v}\\}$，对称的是 $h_{ij}$，而 $(h^{j}_{\\ i}) = g^{jk}h_{ki}$ 一般不对称。 $\\det(h-kg)=0$ 用的正是 $h_{ij}$ 这一支。",
    "refs": [
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 第二基本形式的对称性",
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 第二基本形式的对称性",
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 第二基本形式的对称性"
    ]
   },
@@ -19208,7 +19208,7 @@
    "notes": "⭐ **本包的枢纽**：一个偏导数都不用展开。$\\mathbb{R}^{3}$ 上曲率形式恒为零，拆项后残留的 $\\omega^{1}_{\\ 3}\\wedge\\omega^{2}_{\\ 3}$ 就是曲率 —— 曲率等于两个外蕴形式的外积。\n\n**坐标版对照**：用 $r_{ij} = \\Gamma^{k}_{\\ ij}r_{k}+h_{ij}n$ 的混合偏导可交换推出 Gauss 方程，并写成 $R_{ijkl} = h_{ik}h_{jl}-h_{il}h_{jk}$、$R_{1212} = LN-M^{2} = K(EG-F^{2})$。\n\n这里改用 $\\mathrm{d}\\omega^{i}_{\\ j}$ 读系数，是同一组方程的更短写法。\n\n⚠️ **指标次序是约定**：若记 $R_{ijkl} = \\langle R(e_{i}, e_{j})e_{k}, e_{l}\\rangle$，上面的向量形式写成 $R_{ijkl} = h_{jk}h_{il}-h_{ik}h_{jl}$，符号与另一种指标次序相反；\n\n若取 $R_{ijkl} = h_{ik}h_{jl}-h_{il}h_{jk}$ 对应把 $W$ 放在后一对位置的约定，那时 $R_{1212} = LN-M^{2} = K(EG-F^{2})$ 成立。\n\n用指标式之前先对齐 $R$ 的约定，符号才有意义。\n\n**二维只剩一个独立分量**：$R_{ijkl}$ 的分量被对称性锁死，二维时只有一个（$R_{1212}$），所以二维的 Gauss 方程是**一个**方程 —— 这也是二维曲面论能算得动的原因。\n\n**点的分类**：$K > 0$ 椭圆点、$K = 0$ 且主曲率不全为零是抛物点、$K < 0$ 双曲点；$k_{1} = k_{2}$ 为脐点。\n\n⭐ **读出来的推论（绝妙定理）**：$K = \\mathrm{d}\\omega^{1}_{\\ 2}/(\\omega^{1}\\wedge\\omega^{2})$ 里只出现 $\\omega^{1},\\omega^{2}$；\n\n而 $\\omega^{1}_{\\ 2}$ 由 $\\mathrm{d}\\omega^{1},\\mathrm{d}\\omega^{2}$ 加挠率为零的条件唯一解出（写 $\\omega^{1}_{\\ 2} = a_{1}\\omega^{1}+a_{2}\\omega^{2}$，两个方程给两个系数），所以 $K$ 只依赖 $I$ —— 即 Gauss 曲率是**内蕴**量。\n\n这条结果在 `diffgeom.intrinsic` 里有独立节点 `thm.theorema-egregium`（证明走标架与测地极坐标两条路），本包按「一个概念一个节点」不再重复建点，只把这一步记在这里。\n\n**面积读法**：Gauss 映射把面积元放大 $\\det(\\mathrm{d}n) = \\det W = K$ 倍（带符号），所以 $K = \\pm|n_{u}\\times n_{v}|/|r_{u}\\times r_{v}|$。这与 $\\det h$ 是同一个量。",
    "refs": [
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· Gauss 方程",
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程"
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程"
    ]
   },
   {
@@ -19592,7 +19592,7 @@
    "notes": "⭐ **为什么 Gauss–Codazzi 恰好是充要条件**：结构方程 $\\mathrm{d}r = \\sum_{i}\\omega^{i}e_{i}$、$\\mathrm{d}e_{i} = \\sum_{j}\\omega^{j}_{\\ i}e_{j}$ 是关于 $(r, e_{1}, e_{2}, e_{3})$ 的一阶线性偏微分方程组，系数 $\\omega^{i}, \\omega^{i}_{\\ j}$ 由 $g, h$ 代数地给出。\n\n相容性条件只有 $\\mathrm{d}^{2} = 0$，它拆成两块：$\\Omega^{1}_{\\ 2} = 0$（Gauss）与 $\\Omega^{i}_{\\ 3} = 0$（Codazzi）。\n\n这就是「Gauss–Codazzi 是唯一障碍」的全部内容。\n\n**三步构造**：(i) 由 $g$ 取正交余标架 $\\omega^{1}, \\omega^{2}$，用挠率为零的条件解出 $\\omega^{1}_{\\ 2}$；(ii) 由 $h$ 定 $\\omega^{i}_{\\ 3}$，Gauss–Codazzi 保证 $\\mathrm{d}^{2} = 0$，于是（Frobenius 定理）局部解出正交标架 $(e_{1}, e_{2}, e_{3})$；\n\n(iii) 再解 $\\mathrm{d}r = \\sum_{i}\\omega^{i}e_{i}$ —— 这一支只需 $\\mathrm{d}^{2}r = 0$，而它正是第一结构方程。\n\n**唯一性**：两组解之差是一个平行的（常）正交变换加平移；把初始标架对齐就重合。\n\n⚠️ **单连通去不掉**：否则整体平行移动会出现和乐（holonomy），局部解拼不成整体曲面。\n\n📌 结论是「既给 C–C 方程是结构方程可积性条件；满足 C–C 方程的曲面局部存在解」，正是本定理的两半。这里把「可积性条件」明确成 $\\Omega = 0$ 的两组分量。",
    "refs": [
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 曲面论基本定理",
-    "S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面论基本定理（Bonnet）"
+    "陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面论基本定理（Bonnet）"
    ]
   },
   {
@@ -38607,8 +38607,8 @@
     "向量丛",
     "上同调"
    ],
-   "statement": "**要解决什么问题**：丛的同构类由 $\\check{H}^{1}(B; \\mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合是非阿贝尔的、没法直接算。示性类把「丛」翻译成「上同调类」—— 上同调是群，能算，于是「两个丛不同构」有了可验证的判据。\n\n设 $E \\to B$ 是光滑流形上的秩 $k$ 实向量丛。$E$ 的**示性类**（characteristic class）是一族对应\n\n$$c_{i}(E) \\in H^{i}(B; \\Lambda),$$\n\n（$\\Lambda$ 取 $\\mathbb{Z}$、$\\mathbb{Z}/2$ 或 $\\mathbb{R}$，看具体类）满足两条公理：\n\n1. **自然性**：对任意光滑映射 $f : B' \\to B$ 有 $c_{i}(f^{*}E) = f^{*}c_{i}(E)$；\n2. **同构不变**：$E \\cong E'$ $\\implies$ $c_{i}(E) = c_{i}(E')$。\n\n因此示性类是**从「$B$ 上的向量丛」到「$B$ 的上同调」的自然变换**。\n\n**两条最基本的**：\n\n- 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2)$（$i = 0, \\ldots, k$），$w_{1}(E) \\ne 0$ 当且仅当 $E$ 不可定向；\n- 秩 $k$ 复丛的 **Chern 类** $c_{i}(E) \\in H^{2i}(B; \\mathbb{Z})$（$i = 0, \\ldots, k$），$c_{1}$ 是那个「第一障碍」。",
-   "notes": "**为什么它接在分类定理后面**：分类定理把丛变成 $\\check{H}^{1}(B; G)$（一个只带基点、没有群结构的集合），示性类把它接到 $H^{\\bullet}(B)$（真正的环）。这样做的代价是**丢失信息**：不同的丛可以有相同的示性类（例如所有平凡丛的示性类都平凡）。所以示性类是**必要条件、不是充分条件** —— 它的用处是「证明两个丛不同构」，不是「证明同构」。\n\n**和「换结构群」的关系**：示性类正是结构群约化的**障碍**。最典型的一条：$w_{1}(E) = 0$ 等价于 $E$ 的结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$（即可定向，见 `def.orientable-manifold`）；同理 $w_{2} = 0$ 是 $\\mathrm{Spin}$ 结构存在的先决条件（还有一条额外的整系数条件）。这与 `def.structure-group` 的注里说的「能不能约化是障碍理论问题」是同一件事的两面。\n\n**怎么算出来**：实用算法是 **Chern–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算它的曲率形式，示性类就是曲率形式的多项式（不变量），并且**与联络的选取无关**（差一个恰当形式）。本图只到「联络 / 曲率形式」为止，Chern–Weil 同态、分裂原理、示性类的公理刻画都**未收录**。\n\n⚠️ **示性类不是丛的不变量，是「丛的同构类」的不变量**：同一个类可以由不同丛给出，所以它给的是 $\\check{H}^{1} \\to H^{\\bullet}$ 的**映射**，不是同构。若想要「完全」不变量，需要用 $K$ 理论或更细的工具。\n\n⚠️ **特征类 / 示性类 / characteristic class 是同一个东西**的中英几种叫法；注意别与「域的特征」（`def.characteristic`）混淆 —— 那个是 $\\mathrm{char}\\,K$。\n\n\n\n**两条公理不够唯一地确定示性类 —— 这是它最容易误解的地方**：\n\n- **自然性**：把「丛的拉回」与「上同调的拉回」对齐。这是**函子性**，不给具体数值。\n- **同构不变**：只保证它是丛的**同构类**的函数。\n- ⚠️ 两条加起来仍有无穷多解（$c_{1}$ 的任何多项式都满足），所以真正的定义要再补**规范化**（例如 $w_{0} = 1$、$c_{0} = 1$，以及“高阶类在被直和分解时的乘性”，或等价的“万有丛上取定生成元”）。**本节只给了公理骨架，没有钉死归一化** —— 这是有意为之，规范化的完整陈述属于 Chern–Weil 理论。\n\n⚠️ **方向只能“证不同构”**：$c_{i}(E) \\ne c_{i}(E')$ $\\implies$ $E \\not\\cong E'$；反之不成立（不同丛可以有相同示性类）。所以示性类是**必要条件**，不构成分类。\n⚠️ **与结构群约化的关系是“障碍”而非“判据”**：$w_{1}(E) = 0$ $\\iff$ 可定向（这条是等价）；但 $w_{2} = 0$ 只是 $\\mathrm{Spin}$ 结构存在的**先决条件**，还要一个整系数条件。别把「某类消失」当成分结构存在的充要条件。\n\n\n\n\n**各方向用到的假设**（自然性定义免费，障碍判据另有定理）：\n- 同构不变的类赋值满足拉回自然性 $\\iff$ 它给出丛同构类函子到上同调函子的自然变换，是定义展开；这两条不唯一确定具体示性类，零赋值也满足。\n- 丛同构 $\\implies$ 各示性类相同只用同构不变性；类不同 $\\implies$ 不同构是其逆否命题。反向不免费，例如 $TS^2$ 与平凡实二平面丛的 Stiefel–Whitney 类全相同，但 Euler 类不同，故不同构。\n- 对实向量丛，$w_1=0$ $\\iff$ 可定向是定向障碍定理；约化到 $\\mathrm{SO}(k)$ 还使用流形上度量的存在，后者可由单位分解构造。\n- 已定向实丛具有 Spin 提升 $\\iff$ $w_2=0$，是双覆盖提升的障碍理论结论；原注所谓还需额外整系数条件不适用于通常 Spin 判据。未定向时须先要求 $w_1=0$。\n",
+   "statement": "**要解决什么问题**：丛的同构类由 $\\check{H}^{1}(B; \\mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合是非阿贝尔的、没法直接算。示性类把「丛」翻译成「上同调类」—— 上同调是群，能算，于是「两个丛不同构」有了可验证的判据。\n\n设 $E \\to B$ 是光滑流形上的秩 $k$ 实向量丛。$E$ 的**示性类**（characteristic class）是一族对应\n\n$$c_{i}(E) \\in H^{i}(B; \\Lambda),$$\n\n（$\\Lambda$ 取 $\\mathbb{Z}$、$\\mathbb{Z}/2$ 或 $\\mathbb{R}$，看具体类）满足两条公理：\n\n1. **自然性**：对任意光滑映射 $f : B' \\to B$ 有 $c_{i}(f^{*}E) = f^{*}c_{i}(E)$；\n2. **同构不变**：$E \\cong E'$ $\\implies$ $c_{i}(E) = c_{i}(E')$。\n\n因此示性类是**从「$B$ 上的向量丛」到「$B$ 的上同调」的自然变换**。\n\n**两条最基本的**：\n\n- 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2)$（$i = 0, \\ldots, k$），$w_{1}(E) \\ne 0$ 当且仅当 $E$ 不可定向；\n- 秩 $k$ 复丛的 **陈类** $c_{i}(E) \\in H^{2i}(B; \\mathbb{Z})$（$i = 0, \\ldots, k$），$c_{1}$ 是那个「第一障碍」。",
+   "notes": "**为什么它接在分类定理后面**：分类定理把丛变成 $\\check{H}^{1}(B; G)$（一个只带基点、没有群结构的集合），示性类把它接到 $H^{\\bullet}(B)$（真正的环）。这样做的代价是**丢失信息**：不同的丛可以有相同的示性类（例如所有平凡丛的示性类都平凡）。所以示性类是**必要条件、不是充分条件** —— 它的用处是「证明两个丛不同构」，不是「证明同构」。\n\n**和「换结构群」的关系**：示性类正是结构群约化的**障碍**。最典型的一条：$w_{1}(E) = 0$ 等价于 $E$ 的结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$（即可定向，见 `def.orientable-manifold`）；同理 $w_{2} = 0$ 是 $\\mathrm{Spin}$ 结构存在的先决条件（还有一条额外的整系数条件）。这与 `def.structure-group` 的注里说的「能不能约化是障碍理论问题」是同一件事的两面。\n\n**怎么算出来**：实用算法是 **陈–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算它的曲率形式，示性类就是曲率形式的多项式（不变量），并且**与联络的选取无关**（差一个恰当形式）。本图只到「联络 / 曲率形式」为止，陈–Weil 同态、分裂原理、示性类的公理刻画都**未收录**。\n\n⚠️ **示性类不是丛的不变量，是「丛的同构类」的不变量**：同一个类可以由不同丛给出，所以它给的是 $\\check{H}^{1} \\to H^{\\bullet}$ 的**映射**，不是同构。若想要「完全」不变量，需要用 $K$ 理论或更细的工具。\n\n⚠️ **特征类 / 示性类 / characteristic class 是同一个东西**的中英几种叫法；注意别与「域的特征」（`def.characteristic`）混淆 —— 那个是 $\\mathrm{char}\\,K$。\n\n\n\n**两条公理不够唯一地确定示性类 —— 这是它最容易误解的地方**：\n\n- **自然性**：把「丛的拉回」与「上同调的拉回」对齐。这是**函子性**，不给具体数值。\n- **同构不变**：只保证它是丛的**同构类**的函数。\n- ⚠️ 两条加起来仍有无穷多解（$c_{1}$ 的任何多项式都满足），所以真正的定义要再补**规范化**（例如 $w_{0} = 1$、$c_{0} = 1$，以及“高阶类在被直和分解时的乘性”，或等价的“万有丛上取定生成元”）。**本节只给了公理骨架，没有钉死归一化** —— 这是有意为之，规范化的完整陈述属于 陈–Weil 理论。\n\n⚠️ **方向只能“证不同构”**：$c_{i}(E) \\ne c_{i}(E')$ $\\implies$ $E \\not\\cong E'$；反之不成立（不同丛可以有相同示性类）。所以示性类是**必要条件**，不构成分类。\n⚠️ **与结构群约化的关系是“障碍”而非“判据”**：$w_{1}(E) = 0$ $\\iff$ 可定向（这条是等价）；但 $w_{2} = 0$ 只是 $\\mathrm{Spin}$ 结构存在的**先决条件**，还要一个整系数条件。别把「某类消失」当成分结构存在的充要条件。\n\n\n\n\n**各方向用到的假设**（自然性定义免费，障碍判据另有定理）：\n- 同构不变的类赋值满足拉回自然性 $\\iff$ 它给出丛同构类函子到上同调函子的自然变换，是定义展开；这两条不唯一确定具体示性类，零赋值也满足。\n- 丛同构 $\\implies$ 各示性类相同只用同构不变性；类不同 $\\implies$ 不同构是其逆否命题。反向不免费，例如 $TS^2$ 与平凡实二平面丛的 Stiefel–Whitney 类全相同，但 Euler 类不同，故不同构。\n- 对实向量丛，$w_1=0$ $\\iff$ 可定向是定向障碍定理；约化到 $\\mathrm{SO}(k)$ 还使用流形上度量的存在，后者可由单位分解构造。\n- 已定向实丛具有 Spin 提升 $\\iff$ $w_2=0$，是双覆盖提升的障碍理论结论；原注所谓还需额外整系数条件不适用于通常 Spin 判据。未定向时须先要求 $w_1=0$。\n",
    "refs": [
     "Milnor–Stasheff, Characteristic Classes · 示性类",
     "Bott–Tu, Differential Forms in Algebraic Topology"

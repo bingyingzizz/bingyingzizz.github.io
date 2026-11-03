@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.connection-form)　·　第 1 页 [nodes/def.connection-form.md](./def.connection-form.md)
 
 ## 陈述（续）
-交标架来记。
+是一回事，只是换了正交标架来记。
 把 $\mathrm{d}e_{i}$ 按标架展开，系数记作 $\omega^{j}_{\ i}$：
 
 $$\mathrm{d}e_{i} = \sum_{j=1}^{3}\omega^{j}_{\ i}\,e_{j},\qquad \omega^{j}_{\ i} = \langle \mathrm{d}e_{i}, e_{j}\rangle .$$

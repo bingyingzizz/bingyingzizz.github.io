@@ -14,6 +14,6 @@ $$c_{i}(E) \in H^{i}(B; \Lambda),$$
 
 **两条最基本的**：
 - 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \in H^{i}(B; \mathbb{Z}/2)$（$i = 0, \ldots, k$），$w_{1}(E) \ne 0$ 当且仅当 $E$ 不可定向；
-- 秩 $k$ 复丛的 **Chern 类** $c_{i}(E) \in H^{2i}(B; \mathbb{Z})$（$i = 0, \ldots, k$），$c_{1}$ 是那个「第一障碍」。
+- 秩 $k$ 复丛的 **陈类** $c_{i}(E) \in H^{2i}(B; \mathbb{Z})$（$i = 0, \ldots, k$），$c_{1}$ 是那个「第一障碍」。
 
 > 续见 [nodes/def.characteristic-class.3.md](./def.characteristic-class.3.md)

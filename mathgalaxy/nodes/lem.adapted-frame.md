@@ -18,7 +18,7 @@ $$\omega^{3} = 0,\qquad \omega^{i}_{\ 3} = \sum_{j=1}^{2}c_{ij}\,\omega^{j}\quad
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/lem.adapted-frame.3.md](./lem.adapted-frame.3.md)
 
-refs: S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· Gauss 映射
+refs: 陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· Gauss 映射
 
 > 说明见 `notes/lem.adapted-frame.md`
 

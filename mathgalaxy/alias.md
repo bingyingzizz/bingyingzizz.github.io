@@ -17,6 +17,6 @@
 - 凝聚态数学　`alias/condensed.md` / `alias/aka/condensed.md` 40+108
 - 解析空间　`alias/aka/analytic.md` 0+15
 - 复变函数　`alias/aka/complex.md` 0+79
-- 微分几何　`alias/diffgeom.md` / `alias/aka/diffgeom.md` 3+53
+- 微分几何　`alias/diffgeom.md` / `alias/aka/diffgeom.md` 3+54
 - 数论　`alias/number.md` / `alias/aka/number.md` 1+37
 

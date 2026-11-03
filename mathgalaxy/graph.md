@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-03T06:03:43.637Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-03T06:14:53.137Z
 > 15 星系 / 102 星团 / 1472 节点 / 2799 连线（强边 2782，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.4 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -31353,7 +31353,7 @@ $$\mathrm{d}r = \omega^{1}e_{1}+\omega^{2}e_{2}+\omega^{3}e_{3}.$$
 
 **记号**：$\omega^{i}$ 的上标是编号、不是幂；$(e_{1}, e_{2}, e_{3})$ 与 $(\omega^{1}, \omega^{2}, \omega^{3})$ 互为对偶对，这是活动标架法的全部记账规则。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架；陈维桓《微分几何讲义》, 「曲面的局部理论」· 活动标架法
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架；陈维桓《微分几何讲义》, 「曲面的局部理论」· 活动标架法
 
 #### 联络形式　`def.connection-form`
 *定义*　联络形式
@@ -31381,7 +31381,7 @@ $$\mathrm{d}e_{i} = \sum_{j=1}^{3}\omega^{j}_{\ i}\,e_{j},\qquad \omega^{j}_{\ i
 
 只有在正交标架下它才变成干净的反对称矩阵。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 联络形式
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 联络形式
 
 #### 联络形式反对称　`prop.connection-antisymmetric`
 *命题*　正交标架给出反对称的联络形式
@@ -31398,7 +31398,7 @@ $$\omega^{i}_{\ j}+\omega^{j}_{\ i} = 0 ;$$
 
 ⚠️ 若改用**不正交**的标架（如 $\{r_{u}, r_{v}, n\}$），$g_{ij}$ 不是 $\delta_{ij}$，反对称性不成立，$\omega$ 就退化成 $\Gamma$ 与 $h$ 的混合体 —— 那正是里那套公式的样子。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性；Kühnel, Differential Geometry: Curves - Surfaces - Manifolds, 「Surfaces in three-space」· 结构方程
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性；Kühnel, Differential Geometry: Curves - Surfaces - Manifolds, 「Surfaces in three-space」· 结构方程
 
 #### 结构方程　`thm.structure-equations`
 *定理*　第一与第二结构方程
@@ -31429,7 +31429,7 @@ $\mathbb{R}^{3}$ 上 $\Omega \equiv 0$。
 
 ⚠️ **符号约定**：本包取 $\omega^{j}_{\ i} = \langle \mathrm{d}e_{i}, e_{j}\rangle$，即 $\mathrm{d}e_{i} = \sum_{j}\omega^{j}_{\ i}e_{j}$。上下指标换一种位置，第二式整体变号；引用前先对齐这一条。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程；陈维桓《微分几何讲义》, 「曲面的局部理论」· 结构方程
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程；陈维桓《微分几何讲义》, 「曲面的局部理论」· 结构方程
 
 #### 适配标架　`lem.adapted-frame`
 *引理*　沿曲面取法向标架
@@ -31450,7 +31450,7 @@ $$\omega^{3} = 0,\qquad \omega^{i}_{\ 3} = \sum_{j=1}^{2}c_{ij}\,\omega^{j}\quad
 
 ⚠️ $\omega^{3} = 0$ 是**沿曲面**成立，不是标架本身的性质：在 $\mathbb{R}^{3}$ 的开集上 $\omega^{3}$ 一般不为零，那正对应「曲面朝法向弯出去」。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· Gauss 映射
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面上的标准标架；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· Gauss 映射
 
 #### 第二基本形式对称　`lem.second-form-symmetric`
 *引理*　第二基本形式的系数矩阵对称
@@ -31473,7 +31473,7 @@ $$II = \sum_{i,j=1}^{2}h_{ij}\,\omega^{i}\omega^{j} = h_{11}(\omega^{1})^{2}+2h_
 
 ⚠️ 对称的是**相对正交标架**的矩阵 $(c_{ij})$ 与 $(h_{ij})$；若改用不正交的 $\{r_{u}, r_{v}\}$，对称的是 $h_{ij}$，而 $(h^{j}_{\ i}) = g^{jk}h_{ki}$ 一般不对称。 $\det(h-kg)=0$ 用的正是 $h_{ij}$ 这一支。
 
-参考：S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 第二基本形式的对称性；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 第二基本形式的对称性
+参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 第二基本形式的对称性；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 第二基本形式的对称性
 
 #### 正则曲线　`def.regular-curve`
 *定义*　正则曲线与切线
@@ -31885,7 +31885,7 @@ $$\langle R(X,Y)Z, W\rangle = II(Y,Z)II(X,W)-II(X,Z)II(Y,W).$$
 
 **面积读法**：Gauss 映射把面积元放大 $\det(\mathrm{d}n) = \det W = K$ 倍（带符号），所以 $K = \pm|n_{u}\times n_{v}|/|r_{u}\times r_{v}|$。这与 $\det h$ 是同一个量。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· Gauss 方程；S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程
+参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· Gauss 方程；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程
 
 #### Codazzi–Mainardi 方程　`thm.codazzi-mainardi`
 *定理*　Codazzi–Mainardi 方程
@@ -32097,7 +32097,7 @@ $$I = \sum_{i,j}g_{ij}\,\mathrm{d}u^{i}\mathrm{d}u^{j},\qquad II = \sum_{i,j}h_{
 
 📌 结论是「既给 C–C 方程是结构方程可积性条件；满足 C–C 方程的曲面局部存在解」，正是本定理的两半。这里把「可积性条件」明确成 $\Omega = 0$ 的两组分量。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 曲面论基本定理；S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面论基本定理（Bonnet）
+参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 曲面论基本定理；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 曲面论基本定理（Bonnet）
 
 #### 面积元　`def.area-element`
 *定义*　面积元与曲面面积
@@ -33682,13 +33682,13 @@ $$c_{i}(E) \in H^{i}(B; \Lambda),$$
 **两条最基本的**：
 
 - 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \in H^{i}(B; \mathbb{Z}/2)$（$i = 0, \ldots, k$），$w_{1}(E) \ne 0$ 当且仅当 $E$ 不可定向；
-- 秩 $k$ 复丛的 **Chern 类** $c_{i}(E) \in H^{2i}(B; \mathbb{Z})$（$i = 0, \ldots, k$），$c_{1}$ 是那个「第一障碍」。
+- 秩 $k$ 复丛的 **陈类** $c_{i}(E) \in H^{2i}(B; \mathbb{Z})$（$i = 0, \ldots, k$），$c_{1}$ 是那个「第一障碍」。
 
 **为什么它接在分类定理后面**：分类定理把丛变成 $\check{H}^{1}(B; G)$（一个只带基点、没有群结构的集合），示性类把它接到 $H^{\bullet}(B)$（真正的环）。这样做的代价是**丢失信息**：不同的丛可以有相同的示性类（例如所有平凡丛的示性类都平凡）。所以示性类是**必要条件、不是充分条件** —— 它的用处是「证明两个丛不同构」，不是「证明同构」。
 
 **和「换结构群」的关系**：示性类正是结构群约化的**障碍**。最典型的一条：$w_{1}(E) = 0$ 等价于 $E$ 的结构群可从 $\mathrm{GL}(k)$ 约化到 $\mathrm{SO}(k)$（即可定向，见 `def.orientable-manifold`）；同理 $w_{2} = 0$ 是 $\mathrm{Spin}$ 结构存在的先决条件（还有一条额外的整系数条件）。这与 `def.structure-group` 的注里说的「能不能约化是障碍理论问题」是同一件事的两面。
 
-**怎么算出来**：实用算法是 **Chern–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算它的曲率形式，示性类就是曲率形式的多项式（不变量），并且**与联络的选取无关**（差一个恰当形式）。本图只到「联络 / 曲率形式」为止，Chern–Weil 同态、分裂原理、示性类的公理刻画都**未收录**。
+**怎么算出来**：实用算法是 **陈–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算它的曲率形式，示性类就是曲率形式的多项式（不变量），并且**与联络的选取无关**（差一个恰当形式）。本图只到「联络 / 曲率形式」为止，陈–Weil 同态、分裂原理、示性类的公理刻画都**未收录**。
 
 ⚠️ **示性类不是丛的不变量，是「丛的同构类」的不变量**：同一个类可以由不同丛给出，所以它给的是 $\check{H}^{1} \to H^{\bullet}$ 的**映射**，不是同构。若想要「完全」不变量，需要用 $K$ 理论或更细的工具。
 
@@ -33700,7 +33700,7 @@ $$c_{i}(E) \in H^{i}(B; \Lambda),$$
 
 - **自然性**：把「丛的拉回」与「上同调的拉回」对齐。这是**函子性**，不给具体数值。
 - **同构不变**：只保证它是丛的**同构类**的函数。
-- ⚠️ 两条加起来仍有无穷多解（$c_{1}$ 的任何多项式都满足），所以真正的定义要再补**规范化**（例如 $w_{0} = 1$、$c_{0} = 1$，以及“高阶类在被直和分解时的乘性”，或等价的“万有丛上取定生成元”）。**本节只给了公理骨架，没有钉死归一化** —— 这是有意为之，规范化的完整陈述属于 Chern–Weil 理论。
+- ⚠️ 两条加起来仍有无穷多解（$c_{1}$ 的任何多项式都满足），所以真正的定义要再补**规范化**（例如 $w_{0} = 1$、$c_{0} = 1$，以及“高阶类在被直和分解时的乘性”，或等价的“万有丛上取定生成元”）。**本节只给了公理骨架，没有钉死归一化** —— 这是有意为之，规范化的完整陈述属于 陈–Weil 理论。
 
 ⚠️ **方向只能“证不同构”**：$c_{i}(E) \ne c_{i}(E')$ $\implies$ $E \not\cong E'$；反之不成立（不同丛可以有相同示性类）。所以示性类是**必要条件**，不构成分类。
 ⚠️ **与结构群约化的关系是“障碍”而非“判据”**：$w_{1}(E) = 0$ $\iff$ 可定向（这条是等价）；但 $w_{2} = 0$ 只是 $\mathrm{Spin}$ 结构存在的**先决条件**，还要一个整系数条件。别把「某类消失」当成分结构存在的充要条件。

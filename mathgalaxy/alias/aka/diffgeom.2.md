@@ -1,6 +1,8 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- 丛的分类 | 平凡丛 | 平凡向量丛 → thm.bundle-classification
+
 - 对合分布 → def.involutive-distribution
 
 - 积分流形 → def.integral-manifold
@@ -42,9 +44,5 @@
 - 罗德里格斯定理 → thm.rodrigues
 
 - 弗雷内–塞雷公式 → thm.frenet-serret
-
-- 里奇曲率 → def.ricci-curvature
-
-- 斯托克斯定理 | 斯托克斯公式 → thm.stokes
 
 > 续见 alias/aka/diffgeom.3.md

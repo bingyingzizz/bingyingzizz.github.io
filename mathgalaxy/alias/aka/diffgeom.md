@@ -11,7 +11,9 @@
 
 - 曲率形式 | 联络形式 | connection form | curvature form → def.connection-form
 
-- 特征类 | 示性类 | characteristic class | Stiefel–Whitney 类 | Chern 类 | 陈类 → def.characteristic-class
+- 陈类 | 陈氏类 | Chern class | 总陈类 → def.chern-class
+
+- 特征类 | 示性类 | characteristic class | Stiefel–Whitney 类 | 陈类 → def.characteristic-class
 
 - 余切向量 | covector → def.cotangent-bundle
 
@@ -32,7 +34,5 @@
 - 诱导体积 → def.submanifold-volume
 
 - Lie 第三定理 → thm.lie-third
-
-- 丛的分类 | 平凡丛 | 平凡向量丛 → thm.bundle-classification
 
 > 续见 alias/aka/diffgeom.2.md

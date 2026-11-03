@@ -16,7 +16,7 @@ $$\mathrm{d}\omega^{1}_{\ 2} = \omega^{1}_{\ 3}\wedge\omega^{2}_{\ 3}.$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.gauss-equation.3.md](./thm.gauss-equation.3.md)
 
-refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· Gauss 方程；S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程
+refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· Gauss 方程；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· Gauss 方程与结构方程
 
 > 说明见 `notes/thm.gauss-equation.md`
 

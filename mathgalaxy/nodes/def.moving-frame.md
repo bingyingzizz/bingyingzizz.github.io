@@ -16,7 +16,7 @@ layer 20 · 定义 · 活动标架与结构方程 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.moving-frame.3.md](./def.moving-frame.3.md)
 
-refs: S. S. Chern, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架；陈维桓《微分几何讲义》, 「曲面的局部理论」· 活动标架法
+refs: 陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 活动标架与余标架；陈维桓《微分几何讲义》, 「曲面的局部理论」· 活动标架法
 
 > 说明见 `notes/def.moving-frame.md`
 
