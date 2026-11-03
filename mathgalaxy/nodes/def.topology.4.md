@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.topology)　·　第 1 页 [nodes/def.topology.md](./def.topology.md)　·　上一页 [nodes/def.topology.3.md](./def.topology.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
 - 被 [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包 用
 - 被 [`def.topology-base`](../nodes/def.topology-base.md) 基与子基 用
 - 被 [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射 用
@@ -11,6 +12,5 @@
 - 被 [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑 用
 - 被 [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑 用
 - 被 [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间 用
-- 被 [`def.connected`](../nodes/def.connected.md) 连通与连通分量 用
 
 > 续见 [nodes/def.topology.5.md](./def.topology.5.md)

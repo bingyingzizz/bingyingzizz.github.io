@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-02T15:31:06.477Z
-> 15 星系 / 102 星团 / 1460 节点 / 2753 连线（强边 2736，弱边 17；其中**不分层**的「推论」22 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-03T02:05:48.228Z
+> 15 星系 / 102 星团 / 1462 节点 / 2758 连线（强边 2741，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -2368,6 +2368,35 @@ $A$ **紧** $\iff$ $A$ 闭**且** $A$ **全有界**。
 ⚠️ 「$X$ 完备 $\implies$ $A$ 完备」那一步正是标题里那个前提的用处（见上一条说明）。
 
 参考：Munkres, Topology, §28；Rudin, Principles of Mathematical Analysis, Ch. 2
+
+#### 勒贝格数　`def.lebesgue-number`
+*定义*　勒贝格数：紧度量空间上开覆盖的一致尺度
+
+**要解决什么问题**：紧性只保证「每个开覆盖有有限子覆盖」，但**没说每个点周围能有多小**。连续性的 $\varepsilon$-论证需要「存在一个统一的尺度 $\delta$，使任何直径小于 $\delta$ 的集合都落在某个覆盖成员里」—— 这就是勒贝格数。
+
+设 $(X, d)$ 是**紧**度量空间，$\mathcal{U} = \{U_{i}\}_{i \in I}$ 是它的开覆盖。称 $\lambda > 0$ 为该覆盖的**勒贝格数**，若
+
+$$\operatorname{diam}(A) < \lambda \ \Longrightarrow\ A \subseteq U_{i} \ \text{对某个}\ i .$$
+
+**引理**：紧度量空间的每个开覆盖都有正勒贝格数。
+
+**证明。** 由紧性取有限子覆盖 $U_{1}, \ldots, U_{n}$。令
+
+$$f(x) := \max_{1 \le j \le n} d(x,\, X \setminus U_{j}) = \max_{j}\ \inf_{y \notin U_{j}} d(x, y) ,$$
+
+每个 $x \mapsto d(x, X\setminus U_{j})$ 是连续函数（距离函数连续），有限个的 max 仍连续；又因为 $\{U_{j}\}$ 覆盖 $X$，每个 $x$ 至少属于某个 $U_{j}$，于是 $d(x, X \setminus U_{j}) > 0$，故 $f(x) > 0$ 处处成立。$X$ 紧、$f$ 连续 $\implies$ $f$ 取到最小值 $\lambda := \min f > 0$（这里用到 $f > 0$ 处处成立：最小值不可能为 $0$）。
+
+于是任取 $A$ 且 $\operatorname{diam}(A) < \lambda$，取 $x \in A$，设 $f(x) = d(x, X \setminus U_{k})$ 取到（某个 $k$）。对任意 $y \in A$ 有 $d(x, y) \le \operatorname{diam}(A) < \lambda \le d(x, X\setminus U_{k})$，故 $y \notin X \setminus U_{k}$，即 $y \in U_{k}$。因此 $A \subseteq U_{k}$。$\square$
+
+**它最常见的用途**：紧度量空间上**连续 $\implies$ 一致连续**。证明只用三行：给 $\varepsilon > 0$，取覆盖 $\{B(x, \varepsilon/2)\}_{x \in X}$ 的勒贝格数 $\lambda$，则 $d(p,q) < \lambda$ 推出 $p,q$ 落在同一个半径 $\varepsilon/2$ 的球里，于是 $d(f p, f q) < \varepsilon$。**开覆盖换成半径 $\varepsilon/2$ 的球族**这一步，就是把「逐点的连续性」升级成「一致」的全部内容。
+
+⚠️ **勒贝格数只能保证存在，不能算出**：证明用的是 $f$ 的最小值（$f$ 由覆盖决定），实际求不出来，也不唯一（任何更小的正数也是勒贝格数）。所以它在证明里出现时永远是「取一个勒贝格数 $\lambda$」，而不是具体数字。
+
+⚠️ **紧性不能去掉**：$(0,1)$ 上取覆盖 $\{(0, 1 - 1/n)\}_{n \ge 2}$，任何 $\lambda > 0$ 都能取到直径更小却跨过所有 $1 - 1/n$ 的集合，故没有正勒贝格数。$\mathbb{Q} \cap [0,1]$ 也一样（不紧）。
+
+⚠️ **与「$\varepsilon$-网」不是一回事**：$\varepsilon$-网是「选有限多个点覆盖」，勒贝格数是对**任意集族**说的尺度。紧度量空间上两者都由紧性保证，但一个给点集，一个给尺度。
+
+参考：Munkres, Topology, 27（Lebesgue number lemma）；Rudin, Principles of Mathematical Analysis
 
 ### 星团：紧 Hausdorff 空间
 > 造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → 自由表示。它是一切「紧块」的来源。
@@ -10066,6 +10095,59 @@ $$f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}\,(x - x_0)^{k} + o\bigl( (x - x_
 
 ### 星团：Riemann 积分
 > 造出「曲线下的面积」这套工具：分割 → 上和 / 下和 → 可积性判据 → 微积分基本定理（Newton–Leibniz）。顶点是那条**把可积性翻译成零测集语言**的判据 —— 它在这里与 Lebesgue 积分那一侧正式接头。
+
+#### Riemann–Lebesgue 引理　`thm.riemann-lebesgue`
+*定理*　Riemann–Lebesgue 引理：Fourier 系数趋于零
+
+**在说什么**：高频振荡把积分抹平。它既是 Fourier 级数收敛性的第一步，也是「Riemann 可积函数在频率轴上衰减」的定量说法。
+
+设 $f$ 在 $[a, b]$ 上 **Riemann 可积**。则
+
+$$\lim_{|\lambda| \to \infty} \int_{a}^{b} f(x)\, e^{i\lambda x}\, dx = 0 .$$
+
+取实部、虚部（或把 $e^{i\lambda x}$ 换成 $\cos \lambda x$、$\sin \lambda x$）就是最常见的两条形式：**Fourier 系数 $\hat{f}(n) \to 0$（$|n| \to \infty$）**。
+
+**证明（阶梯函数逼近）。** 分三步，核心是「可积函数可以用阶梯函数一致逼近到任意精度」。
+
+
+
+① **阶梯函数**：设 $\psi = \sum_{k} c_{k}\,\mathbf{1}_{[x_{k-1}, x_{k}]}$ 是阶梯函数。直接算
+
+
+
+$$\int_{a}^{b} \psi(x)\,e^{i\lambda x}dx = \sum_{k} c_{k}\int_{x_{k-1}}^{x_{k}} e^{i\lambda x}dx = \sum_{k} c_{k}\,\frac{e^{i\lambda x_{k}} - e^{i\lambda x_{k-1}}}{i\lambda} ,$$
+
+
+
+右端绝对值不超过 $\frac{2\sum_{k}|c_{k}|}{|\lambda|} \to 0$。所以结论对阶梯函数成立。
+
+
+
+② **逼近**：对 $\varepsilon > 0$，取阶梯函数 $\psi$ 使 $\int_{a}^{b}|f - \psi| < \varepsilon/2$（Riemann 可积的定义直接给这一步：可积函数被阶梯函数在 $L^{1}$ 意义下逼近）。
+
+
+
+③ **合并**：
+
+
+
+$$\Bigl|\int_{a}^{b} f e^{i\lambda x}\Bigr| \le \int_{a}^{b} |f - \psi| + \Bigl|\int_{a}^{b}\psi\, e^{i\lambda x}\Bigr| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} ,$$
+
+
+
+最后一个不等号对足够大的 $|\lambda|$ 成立（由①）。$\square$
+
+
+
+**为什么它重要**：Fourier 系数趋于 $0$ 是 Fourier 级数收敛理论的入口（Riemann–Lebesgue 本身不足以给出逐点收敛，那需要 Dirichlet 核与分段光滑性）；在测度论里它升级成「$L^{1}$ 函数的 Fourier 变换在无穷远处趋于 $0$」（$L^{1}$ 情形的 Riemann–Lebesgue），进一步就是「$L^{2}$ 里 Fourier 变换是酉算子」。
+
+
+
+⚠️ **名字里两个人都要提**：只说「Riemann 引理」或「Lebesgue 引理」都不对（后者另有所指：可积的 Lebesgue 判据）。本图把它记作 `thm.riemann-lebesgue`，与 `thm.riemann-lebesgue-criterion`（可积  $\iff$  不连续点零测，那是 **Lebesgue 判据**）是两个不同的东西 —— 搜的时候容易撞。
+
+⚠️ **「Riemann 可积」不能换成「有界」**：反例是 $f = \mathbf{1}_{\mathbb{Q}}$（Dirichlet 函数）—— 有界但不 Riemann 可积，且它的「积分」没有意义，定理无从谈起。至于 Lebesgue 可积情形，同样的证明用 $L^{1}$ 逼近（简单函数代替阶梯函数）即可。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 6（振荡与逼近）；Zygmund, Trigonometric Series
 
 #### 分割　`def.partition`
 *定义*　分割与加细
@@ -49102,6 +49184,26 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 
 「局部紧 Hausdorff 是 Baire 空间」说的是它上面每个非空开集都是第二纲。
 
+#### 定义引用：「紧」→ 勒贝格数　`dep-ln-compact`
+
+勒贝格数的存在性完全靠紧性（先取有限子覆盖）。
+
+#### 定义引用：「距离空间」→ 勒贝格数　`dep-ln-metric`
+
+「直径」与「距离函数」都要求有度量。
+
+#### 定义引用：「拓扑空间与开集」→ 勒贝格数　`dep-ln-cover`
+
+开覆盖是拓扑概念，先有开集。
+
+#### 定义引用：「Riemann 可积」→ Riemann–Lebesgue 引理　`dep-rl-int`
+
+定理的假设（Riemann 可积）与证明里的阶梯函数逼近都在这条定义上。
+
+#### 定义引用：「Riemann 和」→ Riemann–Lebesgue 引理　`dep-rl-sum`
+
+Riemann 积分由 Riemann 和定义 —— 证明里算阶梯函数的积分要用它。
+
 #### 定义引用：「实数系 ℝ」→ 扩充实数 [−∞,+∞]　`dep.real-extended`
 
 扩充实数就是在 $\mathbb{R}$ 上添两个记号。
@@ -56641,6 +56743,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **内积空间与正交性 ↔ Hilbert 空间**　8 条节点级连线
 - **Baire 纲与三大定理 ↔ 拓扑空间的基本语汇**　4 条节点级连线
 - **Baire 纲与三大定理 ↔ 度量空间**　2 条节点级连线
+- **拓扑空间的基本语汇 ↔ 度量空间**　4 条节点级连线
 - **实数与极限 ↔ 数系的构造**　3 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线
 - **集合的构造 ↔ 关系与函数**　3 条节点级连线
@@ -56654,7 +56757,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **测度的构造 ↔ 集合的构造**　3 条节点级连线
 - **集合的构造 ↔ 拓扑空间的基本语汇**　4 条节点级连线
 - **关系与函数 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **拓扑空间的基本语汇 ↔ 度量空间**　3 条节点级连线
 - **数系的构造 ↔ 关系与函数**　6 条节点级连线
 - **代数结构 ↔ 数系的构造**　2 条节点级连线
 - **实数完备性的等价刻画 ↔ 数系的构造**　2 条节点级连线

@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 几乎处处 | a.e. | almost everywhere | a.e. 收敛 → def.ae
+
+- 预测度还原 → prop.caratheodory-extension
+
 - 扩张唯一性 → thm.caratheodory-uniqueness
 
 - 分布函数与测度 → thm.ls-exists
@@ -26,7 +30,5 @@
 - 完备与可测 → prop.complete-measurable
 
 - 完备化可改零集 → prop.completion-measurable-function
-
-- 依测度收敛 | 依测度 Cauchy 收敛 → thm.cauchy-in-measure
 
 > 续见 alias/aka/analysis.5.md

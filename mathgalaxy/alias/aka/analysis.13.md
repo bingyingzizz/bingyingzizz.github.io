@@ -1,6 +1,16 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- L'Hôpital 法则 → thm.lhopital
+
+- Taylor 公式 → thm.taylor
+
+- 导数与极限交换 → thm.uniform-limit-derivative
+
+- Taylor 公式（Peano 余项） → prop.taylor-peano
+
+- 单调有界定理 → thm.monotone-convergence
+
 - 导数为零 ⟺ 常函数 → cor.constant-iff-zero-derivative
 
 - 导数符号 ⟹ 单调性 → prop.derivative-monotone
@@ -28,13 +38,5 @@
 - Abel 第二定理 → thm.abel-endpoint
 
 - 求导法则 → thm.derivative-rules
-
-- Arzelà–Ascoli 定理 → thm.arzela-ascoli
-
-- 闭区间套定理 → lem.nested-intervals
-
-- 完备性的六条等价 → thm.completeness-equivalent
-
-- 有界闭 ⟺ 紧（ℝⁿ） → cor.heine-borel
 
 > 续见 alias/aka/analysis.14.md

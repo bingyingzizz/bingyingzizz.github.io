@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 集合族的性质 → prop.set-class-properties
+
+- 测度 | measure | 可数可加 → def.measure
+
 - 外测度 | outer measure → def.outer-measure
 
 - 预测度 | premeasure → def.premeasure
@@ -26,9 +30,5 @@
 - Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 → thm.caratheodory
 
 - F 给出的预测度 → prop.ls-premeasure
-
-- 几乎处处 | a.e. | almost everywhere | a.e. 收敛 → def.ae
-
-- 预测度还原 → prop.caratheodory-extension
 
 > 续见 alias/aka/analysis.4.md

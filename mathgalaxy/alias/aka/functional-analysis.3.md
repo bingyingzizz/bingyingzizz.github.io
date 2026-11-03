@@ -19,10 +19,8 @@
 
 - 连续点集 | Baire-Osgood | 逐点极限连续点 → thm.pointwise-limit-continuity
 
-- 共鸣定理 | 共振定理 | Banach-Steinhaus | Banach-Steinhaus 定理 | 一致有界 | 一致有界定理 | 一致有界性原理 | 共鸣 | uniform boundedness → thm.ubp
+- 共鸣定理 | 共振定理 | Banach-Steinhaus | Banach-Steinhaus 定理 | 一致有界 | 一致有界定理 | 一致有界性原理 | 共鸣 | uniform boundedness | Banach Steinhaus | 一致有界原理 | UBP → thm.ubp
 
 - 共振集 | 共鸣集 | 发散点稠密 → cor.ubp-resonance
-
-- 开映射定理（线性） | 巴拿赫开映射定理 | 开映射（线性算子） | open mapping for operators → thm.open-mapping-banach
 
 > 续见 alias/aka/functional-analysis.4.md

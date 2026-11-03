@@ -29,6 +29,4 @@
 
 - Exercise 2.36 | Exercise 2.37 → prop.weak-hausdorff-k-closed
 
-- 最值定理 → thm.evt
-
 > 续见 alias/aka/topology.11.md

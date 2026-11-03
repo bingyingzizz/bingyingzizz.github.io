@@ -1,6 +1,14 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Arzelà–Ascoli 定理 → thm.arzela-ascoli
+
+- 闭区间套定理 → lem.nested-intervals
+
+- 完备性的六条等价 → thm.completeness-equivalent
+
+- 有界闭 ⟺ 紧（ℝⁿ） → cor.heine-borel
+
 - 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
 
 - Fermat 引理 → thm.fermat
@@ -32,13 +40,5 @@
 - Riemann 重排定理 → thm.riemann-rearrangement
 
 - Euler 公式 → thm.euler-formula
-
-- Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
-
-- n 次方根 → thm.nth-root
-
-- 连续函数的运算 → prop.continuous-arithmetic
-
-- 零点定理 → cor.zero-point
 
 > 续见 alias/aka/analysis.15.md

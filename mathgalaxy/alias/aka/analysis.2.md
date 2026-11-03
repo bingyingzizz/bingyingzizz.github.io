@@ -1,7 +1,7 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
-- 确界原理 | 实数完备 | 完备性 | least upper bound property | completeness of R → thm.real-ordered-field
+- 确界原理 | 实数完备 | 完备性 | least upper bound property | completeness of R | 实数的运算律 | ℝ 上的运算律 | 实数加法交换律 | 实数的加法交换律 | 实数的乘法交换律 → thm.real-ordered-field
 
 - 级数 | series | 级数收敛 → def.series
 
@@ -26,9 +26,5 @@
 - Borel | Borel 集 | Borel σ代数 → def.borel
 
 - 基本类 | fundamental class → def.fundamental-class
-
-- 集合族的性质 → prop.set-class-properties
-
-- 测度 | measure | 可数可加 → def.measure
 
 > 续见 alias/aka/analysis.3.md

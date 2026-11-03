@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.norm-induces-metric`](../nodes/prop.norm-induces-metric.md) 范数诱导的距离 用
 - 被 [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理 用
+- 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
 - 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用
 - 被 [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数 用
 - 被 [`def.complete`](../nodes/def.complete.md) 完备 用

@@ -1,6 +1,14 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
+
+- n 次方根 → thm.nth-root
+
+- 连续函数的运算 → prop.continuous-arithmetic
+
+- 零点定理 → cor.zero-point
+
 - 反函数连续 → thm.monotone-inverse
 
 - Kummer 判别法 → thm.kummer
@@ -40,13 +48,5 @@
 - Bernoulli 不等式 → thm.bernoulli
 
 - 一致连续 → def.uniform-continuity
-
-- 圆周率 π → def.pi
-
-- 绝对值的运算性质 → prop.abs-properties
-
-- 整数幂 → def.power
-
-- 高阶导数与 C^k → def.higher-derivative
 
 > 续见 alias/aka/analysis.16.md

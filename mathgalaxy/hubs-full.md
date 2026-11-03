@@ -13,9 +13,9 @@
 - **30 / 33** `def.limit` 极限 · layer 11 · 图与极限
 - **28 / 32** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
 - **28 / 29** `def.measure` 测度 · layer 14 · 测度的构造
-- **25 / 28** `def.compact` 紧 · layer 14 · 度量空间
+- **26 / 29** `def.compact` 紧 · layer 14 · 度量空间
+- **26 / 26** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **25 / 28** `def.sheaf` 层 · layer 15 · 层与拓扑
-- **25 / 25** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **23 / 23** `def.function` 映射 · layer 5 · 关系与函数
 - **23 / 23** `def.group` 群 · layer 6 · 代数结构
 - **22 / 22** `def.functor` 函子 · layer 8 · 函子与自然变换
@@ -26,10 +26,10 @@
 - **19 / 20** `def.integrable` 可积 / L¹ · layer 19 · 积分
 - **18 / 19** `def.sheaf-cohomology` 层上同调 · layer 17 · 层上同调
 - **18 / 18** `def.cochain-complex` 上链复形 · layer 10 · 复形与导出三角
+- **17 / 19** `def.metric-space` 距离空间 · layer 13 · 度量空间
 - **17 / 17** `def.category` 范畴 · layer 7 · 范畴与图
 - **17 / 17** `def.ring` 环 · layer 7 · 代数结构
 - **17 / 17** `def.inner-product` 内积 · layer 9 · 内积空间与正交性
-- **17 / 17** `def.abelian-category` 加法 / 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
 
 （共 865 个节点有非零计数；这里列前 20 条。）
 
@@ -58,20 +58,20 @@
 - **5 / 5** `thm.urysohn-metrization` Urysohn 度量化定理 · layer 18 · 可度量化
 - **5 / 5** `def.form-on-manifold` 微分形式 · layer 18 · 微分形式、积分与 de Rham
 
-（共 1453 个节点有非零计数；这里列前 20 条。）
+（共 1455 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
 下游节点横跨的星团最多 —— 位置枢纽，但**不**代表该先学。
 
 - **16 团 / 23 节点** `def.function` 映射 · layer 5 · 关系与函数
-- **13 团 / 25 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
-- **13 团 / 25 节点** `def.compact` 紧 · layer 14 · 度量空间
+- **13 团 / 26 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
+- **13 团 / 26 节点** `def.compact` 紧 · layer 14 · 度量空间
 - **13 团 / 23 节点** `def.group` 群 · layer 6 · 代数结构
 - **13 团 / 20 节点** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
-- **11 团 / 16 节点** `def.metric-space` 距离空间 · layer 13 · 度量空间
+- **11 团 / 17 节点** `def.metric-space` 距离空间 · layer 13 · 度量空间
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 9 · 实数的运算与不等式
 - **10 团 / 16 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
 - **10 团 / 15 节点** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理

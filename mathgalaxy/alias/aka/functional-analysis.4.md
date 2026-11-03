@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 开映射定理（线性） | 巴拿赫开映射定理 | 开映射（线性算子） | open mapping for operators → thm.open-mapping-banach
+
 - 逆算子定理 | 有界逆定理 | 连续性定理 → thm.bounded-inverse
 
 - 闭图像定理 | 闭图定理 | closed graph → thm.closed-graph
@@ -23,6 +25,4 @@
 
 - 复 Stone-Weierstrass | 圆盘代数 → thm.stone-weierstrass-complex
 
-- Bernstein 多项式 | 伯恩斯坦多项式 | Bernstein → thm.bernstein-approximation
-
-见 `../../alias.md`。
+> 续见 alias/aka/functional-analysis.5.md

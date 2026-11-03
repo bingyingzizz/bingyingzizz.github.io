@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.contour-integral`](../nodes/def.contour-integral.md) 复围道积分 用
+- 被 [`thm.riemann-lebesgue`](../nodes/thm.riemann-lebesgue.md) Riemann–Lebesgue 引理 用

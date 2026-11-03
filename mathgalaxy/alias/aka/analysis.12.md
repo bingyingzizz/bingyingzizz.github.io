@@ -7,6 +7,10 @@
 
 - Banach 阿贝尔群 | Banach abelian group | Banach 化 → def.banach-ab-group
 
+- Riemann 积分 | 定积分 | Riemann 积分定义 | Riemann 积分的定义 | 黎曼积分 → def.riemann-integrable
+
+- Riemann-Lebesgue 引理 | Riemann–Lebesgue | Riemann-Lebesgue | 傅里叶系数趋于零 | 黎曼-勒贝格引理 → thm.riemann-lebesgue
+
 - Lagrange 中值定理 → thm.mvt
 
 - 代数基本定理 → thm.fundamental-algebra
@@ -26,15 +30,5 @@
 - 幂级数的逐项运算 → thm.power-series-analytic
 
 - 初等函数的导数 → thm.elementary-derivatives
-
-- L'Hôpital 法则 → thm.lhopital
-
-- Taylor 公式 → thm.taylor
-
-- 导数与极限交换 → thm.uniform-limit-derivative
-
-- Taylor 公式（Peano 余项） → prop.taylor-peano
-
-- 单调有界定理 → thm.monotone-convergence
 
 > 续见 alias/aka/analysis.13.md

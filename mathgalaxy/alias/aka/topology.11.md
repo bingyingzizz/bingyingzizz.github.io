@@ -1,6 +1,10 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- Riemann-Lebesgue 引理 | Riemann–Lebesgue | Riemann-Lebesgue | 傅里叶系数趋于零 | 黎曼-勒贝格引理 → thm.riemann-lebesgue
+
+- 最值定理 → thm.evt
+
 - 球面的同调 → thm.sphere-homology
 
 - 同伦不变性 → thm.homotopy-invariance
@@ -34,15 +38,5 @@
 - 基点变换 → prop.pi1-basepoint
 
 - 高维球面的基本群 → cor.pi1-sphere
-
-- 链群 → def.chain-group
-
-- 约化同调 → def.reduced-homology
-
-- 单纯映射 → def.simplicial-map
-
-- 圆盘不收缩 → thm.no-retraction-disk
-
-- 圆周的基本群 → thm.pi1-circle
 
 > 续见 alias/aka/topology.12.md
