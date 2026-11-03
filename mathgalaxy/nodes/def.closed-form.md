@@ -12,6 +12,9 @@ layer 23 · 定义 · 微分形式、积分与 de Rham · 微分几何
 
 - …另有入边，续页见 [nodes/def.closed-form.3.md](./def.closed-form.3.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.closed-form.4.md](./def.closed-form.4.md)
+
 refs: Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名）· 闭形式与恰当形式；Bott–Tu, Differential Forms in Algebraic Topology（⚠️ 章节未核实，只记书名）
 
 > 说明见 `notes/def.closed-form.md`

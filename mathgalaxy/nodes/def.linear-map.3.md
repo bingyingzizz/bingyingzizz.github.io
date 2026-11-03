@@ -10,3 +10,4 @@
 - 被 [`def.total-differential`](../nodes/def.total-differential.md) 可微与全微分 用
 - 被 [`def.idempotent`](../nodes/def.idempotent.md) 幂等 用
 - 被 [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子 用
+- 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用

@@ -5,3 +5,4 @@
 - 被 [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法 用
 - 被 [`def.irreducible-poly`](../nodes/def.irreducible-poly.md) 不可约多项式 用
 - 被 [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式 用
+- 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用

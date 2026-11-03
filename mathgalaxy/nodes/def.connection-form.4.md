@@ -7,3 +7,5 @@
 - ⇒ [`thm.structure-equations`](../nodes/thm.structure-equations.md) 结构方程
 - 被 [`prop.christoffel-frame`](../nodes/prop.christoffel-frame.md) 标架下的联络系数 用
 - ⇒ [`def.affine-connection`](../nodes/def.affine-connection.md) 仿射联络
+- 被 [`thm.chern-weil`](../nodes/thm.chern-weil.md) 陈–Weil 同态 用
+- 被 [`prop.chern-class-line-bundle`](../nodes/prop.chern-class-line-bundle.md) 线丛的陈类计算 用

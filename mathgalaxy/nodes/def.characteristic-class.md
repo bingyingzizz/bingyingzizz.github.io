@@ -7,6 +7,9 @@ layer 31 · 定义 · 流形与向量丛 · 微分几何
 > 陈述续见 [nodes/def.characteristic-class.2.md](./def.characteristic-class.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.chern-class`](../nodes/def.chern-class.md) 陈类 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.characteristic-class.3.md](./def.characteristic-class.3.md)
 

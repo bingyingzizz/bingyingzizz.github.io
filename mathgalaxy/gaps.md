@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1467 节点 / 2785 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1472 节点 / 2799 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -104,8 +104,9 @@
 ### 调和形式　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（141 处）
+## 二、陈述用到更深的定义却没有边（143 处）
 
+- `def.invariant-polynomial`（不变多项式 · L10）用到 `def.characteristic-class`（示性类 · L31）　落差 21
 - `def.fiber-bundle`（纤维丛 · L10）用到 `def.lie-group`（Lie 群 · L25）　落差 15
 - `def.t35-space`（T3.5 空间 · L6）用到 `def.regular-space`（正则空间 · L18）　落差 12
 - `def.discrete-huber-pair`（离散 Huber pair · L8）用到 `def.analytic-ring`（解析环 · L18）　落差 10
@@ -118,6 +119,7 @@
 - `def.bundle-section`（丛的截面 · L10）用到 `def.form-on-manifold`（微分形式 · L18）　落差 8
 - `thm.simple-approximation`（简单函数逼近 · L8）用到 `def.uniform-convergence`（一致收敛 · L15）　落差 7
 - `prop.mobius-classification`（分式线性变换的分类 · L19）用到 `def.geodesic`（测地线 · L26）　落差 7
+- `thm.chern-weil`（陈–Weil 同态 · L24）用到 `def.characteristic-class`（示性类 · L31）　落差 7
 - `thm.simple-approximation`（简单函数逼近 · L8）用到 `def.pointwise-convergence`（逐点收敛 · L14）　落差 6
 - `def.connection-form`（联络形式 · L21）用到 `def.second-fundamental-form`（第二基本形式 · L26）　落差 5
 - `prop.single-valued-branch`（单值支的存在判据 · L19）用到 `def.analytic-continuation`（解析延拓 · L24）　落差 5
