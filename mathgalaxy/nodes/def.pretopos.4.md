@@ -1,8 +1,0 @@
-# 预拓扑斯　`def.pretopos`　·　续页（第 4 页）
-[在星图里打开](../#n=def.pretopos)　·　第 1 页 [nodes/def.pretopos.md](./def.pretopos.md)　·　上一页 [nodes/def.pretopos.3.md](./def.pretopos.3.md)
-
-## 陈述（续）
-**预拓扑斯 vs 拓扑斯：差的那一条**。拓扑斯 = 预拓扑斯 **+**（有效满射 + 局部可表性，或等价的 Giraud 公理组）。所以「预拓扑斯」这四个字母的全部意义是：**它已经具备做“商、纤维积、等价关系”的全部装置，还没具备做“层”的那一层**。这也是为什么很多构造（如内部等价关系、有效满射的稳定性）在预拓扑斯上就能做。
-⚠️ **最常用的对照**：$\mathbf{Set}$ 是拓扑斯；$\mathbf{Grp}$、$\mathbf{Ring}$、$\mathbf{Cat}$ 都**不是**预拓扑斯（余积不万有）。判断一个具体范畴是不是预拓扑斯，**先查 ②** —— 它是最容易失败的一条。
-
-> 续见 [nodes/def.pretopos.5.md](./def.pretopos.5.md)

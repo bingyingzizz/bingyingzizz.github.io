@@ -9,6 +9,3 @@
 5. $X \to Y$ 连续 $\iff$ 对每个连续 $f : S \to X$，复合 $S \to X \to Y$ 连续；
 6. $X$ 是所有连续映射 $S \
 to X$（$S$ 紧 Hausdorff）的余极限。
-**各方向用到的假设**（这张清单就是“六条等价”的实际内容 —— 有些方向几乎是定义展开，有些方向真有代价）：
-
-> 续见 [nodes/prop.cg-equivalent-conditions.3.md](./prop.cg-equivalent-conditions.3.md)

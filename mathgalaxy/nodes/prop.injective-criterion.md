@@ -15,10 +15,10 @@ layer 15 · 命题 · 同调与正合列 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.injective-criterion.5.md](./prop.injective-criterion.5.md)
+- …另有入边，续页见 [nodes/prop.injective-criterion.3.md](./prop.injective-criterion.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.injective-criterion.6.md](./prop.injective-criterion.6.md)
+- …另有出边，续页见 [nodes/prop.injective-criterion.4.md](./prop.injective-criterion.4.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.1–7.3
 

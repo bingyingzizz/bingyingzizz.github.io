@@ -104,7 +104,7 @@
 ### 调和形式　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（146 处）
+## 二、陈述用到更深的定义却没有边（141 处）
 
 - `def.fiber-bundle`（纤维丛 · L10）用到 `def.lie-group`（Lie 群 · L25）　落差 15
 - `def.t35-space`（T3.5 空间 · L6）用到 `def.regular-space`（正则空间 · L18）　落差 12
@@ -136,12 +136,10 @@
 - `def.frenet-frame`（曲率与挠率 · L17）用到 `def.moving-frame`（活动标架 · L20）　落差 3
 - `prop.pullback-forms`（拉回（开集间） · L16）用到 `def.vector-field`（向量场 · L19）　落差 3
 - `thm.darboux`（Darboux 定理 · L22）用到 `def.riemannian-metric`（Riemann 度量 · L25）　落差 3
-- `thm.linear-continuous-bounded`（连续 ⟺ 有界 · L12）用到 `def.banach-space`（Banach 空间 · L15）　落差 3
 - `thm.separable-hilbert-is-l2`（可分 Hilbert 空间等距于 ℓ² · L13）用到 `def.hilbert-space`（Hilbert 空间 · L16）　落差 3
 - `def.cauchy-null`（Cauchy 列与零列 · L11）用到 `def.cauchy-sequence`（Cauchy 列 · L14）　落差 3
 - `prop.quasi-compact-properties`（拟紧的性质 · L13）用到 `def.precanonical-topology`（预标准拓扑 · L16）　落差 3
 - `prop.quasi-compact-properties`（拟紧的性质 · L13）用到 `def.topos`（拓扑斯 · L16）　落差 3
-- `prop.injective-criterion`（内射对象的判据 · L15）用到 `def.grothendieck-category`（Grothendieck 范畴 · L18）　落差 3
 - `prop.k-calculus-fractions`（K(A) 允许分式演算 · L15）用到 `def.quasi-iso`（拟同构 · L18）　落差 3
 - `prop.slice-topos`（切片拓扑斯 · L13）用到 `def.topos`（拓扑斯 · L16）　落差 3
 - `def.bound`（界与确界 · L6）用到 `def.ordered-field`（有序域 · L8）　落差 2
@@ -155,7 +153,6 @@
 - `def.tor`（挠积 · L13）用到 `def.deleted-resolution`（删除消解 · L15）　落差 2
 - `def.gauss-curvature`（Gauss 曲率 · L24）用到 `def.second-fundamental-form`（第二基本形式 · L26）　落差 2
 - `def.ac-function`（绝对连续函数 · L14）用到 `def.absolute-continuity`（绝对连续 · L16）　落差 2
-- `def.spectral-radius`（谱半径 · L12）用到 `def.orthogonally-similar`（正交相似 · L14）　落差 2
 - `def.congruent-matrices`（合同矩阵 · L13）用到 `def.inertia-index`（惯性指数 · L15）　落差 2
 - `def.real`（实数系 ℝ · L12）用到 `def.cauchy-sequence`（Cauchy 列 · L14）　落差 2
 - `lem.representable-quotient`（可表示性的下降 · L14）用到 `def.topos`（拓扑斯 · L16）　落差 2
@@ -181,7 +178,6 @@
 - `thm.cartan-formula`（Cartan 公式 · L22）用到 `def.exact-form`（恰当形式 · L23）　落差 1
 - `prop.poincare-disk`（Poincaré 圆盘与双曲几何 · L25）用到 `def.geodesic`（测地线 · L26）　落差 1
 - `def.form-on-manifold`（微分形式 · L18）用到 `def.jacobian`（Jacobi 矩阵 · L19）　落差 1
-- `def.spectral-radius`（谱半径 · L12）用到 `def.char-poly`（特征多项式 · L13）　落差 1
 - `def.eigenspace`（特征子空间 · L12）用到 `def.char-poly`（特征多项式 · L13）　落差 1
 - `thm.projection-convex`（凸闭集的最近点 · L15）用到 `def.hilbert-space`（Hilbert 空间 · L16）　落差 1
 - `def.universal-colimit`（万有关系 · L13）用到 `def.regular-epi`（正则满态射 · L14）　落差 1
@@ -198,7 +194,6 @@
 - `def.direct-sum`（直和与补空间 · L10）用到 `def.linear-isomorphism`（线性同构 · L10）
 - `def.invariant-subspace`（不变子空间 · L10）用到 `def.kernel-image-vs`（核与像 · L10）
 - `def.similarity`（相似 · L12）用到 `def.determinant`（行列式 · L12）
-- `def.orthogonality`（正交 · L10）用到 `def.bilinear-form`（双线性型 · L10）
 - `thm.det-as-exterior`（行列式 = 最高外幂上的作用 · L12）用到 `def.determinant`（行列式 · L12）
 - `thm.solid-abelian`（固态群构成阿贝尔子范畴 · L18）用到 `def.solid-group`（固态阿贝尔群 · L18）
 - `prop.tensor-functor-properties`（张量积的函子性质 · L12）用到 `def.tensor-product-vs`（张量积（向量空间） · L12）

@@ -12,3 +12,7 @@ $$0 \longrightarrow \operatorname{Tor}_{1}^{R}(R/I, N) \longrightarrow I \otimes
 **4 蕴含 1**：只需对一切单射检验；先化到 $M$ 有限生成（$(-)\otimes N$ 保滤过余极限），再对生成元个数归纳，每一步用理想情形 —— 完整论证见 `thm.lambek` ✓。
 
 ⭐ **第 4 条是唯一能算的**：理想通常比子模少得多，而乘法映射 $I \otimes N \to N$ 又常能显式写出来。PID 上理想只有主理想，判据几乎自动（这就是「无挠即平坦」的来源）。
+
+**各方向用到的假设**（平坦的五条说法里，差别全在“用多大的模去检验”）：
+
+> 续见 notes/prop.flat-equivalences.2.md

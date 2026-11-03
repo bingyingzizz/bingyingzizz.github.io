@@ -13,7 +13,7 @@ $$m(D) = 0$$
 - ⇒ [`prop.riemann-implies-lebesgue`](../nodes/prop.riemann-implies-lebesgue.md) Riemann 可积蕴含 Lebesgue 可积
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.riemann-lebesgue-criterion.4.md](./thm.riemann-lebesgue-criterion.4.md)
+- …另有入边，续页见 [nodes/thm.riemann-lebesgue-criterion.3.md](./thm.riemann-lebesgue-criterion.3.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 11；Folland, Real Analysis, Ch. 2
 

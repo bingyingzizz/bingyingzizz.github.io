@@ -11,7 +11,5 @@
 **定理**：
 - $X^{*}$ **紧**（对任意 $X$）；
 - $X^{*}$ **Hausdorff** $\iff$ $X$ 是局部紧的 Hausdorff 空间（`def.locally-compact`）。
-**两条结论的依赖完全不同**（这也是它值得单列的原因）：
-- **$X^{*}$ 紧：不需要任何假设**。任取 $X^{*}$ 的开覆盖，必有一个成员含 $\infty$（记 $U\cup\{\infty\}$），于是 $X\setminus U$ 紧；它被剩下的开集盖住，由**紧性**取有限子覆
 
 > 续见 [nodes/def.one-point-compactification.3.md](./def.one-point-compactification.3.md)

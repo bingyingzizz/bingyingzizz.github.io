@@ -13,7 +13,7 @@ $$x_0 + \ker A = \{\, x_0 + u : u \in \ker A \,\}$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.linear-system-solutions.5.md](./thm.linear-system-solutions.5.md)
+- …另有入边，续页见 [nodes/thm.linear-system-solutions.3.md](./thm.linear-system-solutions.3.md)
 
 refs: Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
 

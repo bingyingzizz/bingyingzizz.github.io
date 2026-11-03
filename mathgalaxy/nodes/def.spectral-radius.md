@@ -18,7 +18,7 @@ $\rho(A) := \max\bigl\{\, \lvert\lambda\rvert : \lambda$ 是 $A$ 的特征值 $\
 - 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.spectral-radius.6.md](./def.spectral-radius.6.md)
+- …另有入边，续页见 [nodes/def.spectral-radius.3.md](./def.spectral-radius.3.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 谱；北大《高等代数》· 特征值与谱
 

@@ -1,10 +1,7 @@
 # T1 空间　`def.t1-space`　·　续页（第 4 页）
 [在星图里打开](../#n=def.t1-space)　·　第 1 页 [nodes/def.t1-space.md](./def.t1-space.md)　·　上一页 [nodes/def.t1-space.3.md](./def.t1-space.3.md)
 
-## 陈述（续）
-**这四条都不需要任何额外假设**（不选 AC、不用可数性、不用 Hausdorff）—— $T_{1}$ 是纯开集语言的公理，这也是它常被当成「闭集语言的 $T_{0}$」。
-⚠️ **最常见的误推**：以为 (3) 能加强成「可数集闭」。**不成立**：余可数拓扑里可数集未必闭（它只保证有限集闭）；那正是 $T_{1}$ 与 $T_{2}$ 的分界线 —— `def.hausdorff` 的注里给了余有限拓扑这个反例。
-⚠️ **另一个误推**：$T_{1}$ 不蕴含「两个不同点有不交邻域」。那是 $T_{2}$；$T_{1}$ 只给「各自有一
-个不含对方的邻域」，两个邻域**可以相交**。
-
-> 续见 [nodes/def.t1-space.5.md](./def.t1-space.5.md)
+## 它能推出什么 / 谁在用它（续）
+- 被 [`def.regular-space`](../nodes/def.regular-space.md) 正则空间 用
+- 被 [`def.completely-regular-space`](../nodes/def.completely-regular-space.md) 完全正则空间 用
+- ⇒ [`def.t0-space`](../nodes/def.t0-space.md) T0 空间

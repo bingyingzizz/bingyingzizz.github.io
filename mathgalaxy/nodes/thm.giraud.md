@@ -9,15 +9,12 @@ layer 17 · 定理 · 拓扑斯 · 范畴论
 2. $\mathcal{T}$ 上对**标准拓扑**而言的层都是**可表示的**，且存在小生成元集；
 3. 存在景 $\mathcal{C}$ 使 $\mathcal{T} \simeq \widehat{\mathcal{C}}$；
 4. 存在范畴使 $\mathcal{T}$ 是它的**反射子范畴**，且反射**正合**（保有限极限）。
-**四条是四个不同层次的说法**（这条定理的价值就在于把「公理式」「层论式」「反射式」三种刻画焊在一起）：
-> 陈述续见 [nodes/thm.giraud.2.md](./thm.giraud.2.md)
-
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.cond-topos`](../nodes/thm.cond-topos.md) Cond 是拓扑斯
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.giraud.5.md](./thm.giraud.5.md)
+- …另有入边，续页见 [nodes/thm.giraud.2.md](./thm.giraud.2.md)
 
 refs: Mac Lane–Moerdijk, Sheaves in Geometry and Logic, Appendix
 

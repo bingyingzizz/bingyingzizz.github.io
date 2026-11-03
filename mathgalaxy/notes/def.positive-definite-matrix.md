@@ -8,3 +8,5 @@
 ⭐ **正定 $\implies$ 可开方**：存在唯一的半正定 $\sqrt{A}$ 使 $(\sqrt A)^{2} = A$（在正交基下把特征值开方）。这正是**极分解** $A = UP$ 里那个 $P$ 的来源（`thm.polar-decomposition`）。
 
 ⚠️ 「$A^{T}A$ 总是半正定」这句话在复数域要写成 $A^{*}A$；并且它正定当且仅当 $A$ 的列线性无关（否则有非零核向量）。这条在回归/最小二乘里反复出现。
+
+> 续见 notes/def.positive-definite-matrix.2.md

@@ -9,17 +9,16 @@ layer 15 · 定义 · 拓扑斯 · 范畴论
 2. **有限余积存在**，并且是**不交的**与**万有的**；
 3. **等价关系是有效的且万有的**；
 4. **满态射是正则的且万有的**。
-**四条公理的“权重”不一样**（预拓扑斯与拓扑斯的差别就藏在这里）：
-> 陈述续见 [nodes/def.pretopos.2.md](./def.pretopos.2.md)
-
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.universal-colimit`](../nodes/def.universal-colimit.md) 万有关系：用到了定义 万有关系　[proofs/def-dep.universal-pretopos.md](../proofs/def-dep.universal-pretopos.md)
 
-- …另有入边，续页见 [nodes/def.pretopos.5.md](./def.pretopos.5.md)
+- …另有入边，续页见 [nodes/def.pretopos.2.md](./def.pretopos.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.pretopos.6.md](./def.pretopos.6.md)
+- ⇒ [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解
+
+- …另有出边，续页见 [nodes/def.pretopos.3.md](./def.pretopos.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.3
 

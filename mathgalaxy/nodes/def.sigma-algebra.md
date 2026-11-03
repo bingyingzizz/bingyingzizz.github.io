@@ -13,7 +13,7 @@ layer 4 · 定义 · 集合族与 σ-代数 · 实变函数+数学分析
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.ring-monotone-sigma`](../nodes/thm.ring-monotone-sigma.md) 环 → σ-环 的判据 用
 
-- …另有出边，续页见 [nodes/def.sigma-algebra.5.md](./def.sigma-algebra.5.md)
+- …另有出边，续页见 [nodes/def.sigma-algebra.3.md](./def.sigma-algebra.3.md)
 
 refs: Halmos, Measure Theory, §4；Folland, Real Analysis, §1.2；Rudin, Real and Complex Analysis, Ch. 1
 

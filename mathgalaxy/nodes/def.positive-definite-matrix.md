@@ -14,10 +14,10 @@ $$x^{*}Ax > 0 ;$$
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.polar-decomposition`](../nodes/thm.polar-decomposition.md) 极分解 用
 
-- …另有出边，续页见 [nodes/def.positive-definite-matrix.8.md](./def.positive-definite-matrix.8.md)
+- …另有出边，续页见 [nodes/def.positive-definite-matrix.4.md](./def.positive-definite-matrix.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.positive-definite-matrix.7.md](./def.positive-definite-matrix.7.md)
+- …另有入边，续页见 [nodes/def.positive-definite-matrix.3.md](./def.positive-definite-matrix.3.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正定；北大《高等代数》· 正定二次型
 

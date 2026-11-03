@@ -11,8 +11,5 @@ $，乘法映射 $I \otimes_{R} N \to N$、$a \otimes n \mapsto a n$，是单射
 5. 对每个
 由有限表现模给出的短正合列 $0 \to K \to R^{n} \to M \to 0$，张量后 $0 \to K \otimes N \to N^{n} \to M \otimes N \to 
 0$ 仍正合。
-**各方向用到的假设**（平坦的五条说法里，差别全在“用多大的模去检验”）：
-- (1) $\iff$ (2)：**定义展开**。(1) 说 $(-)\otimes N$ 正合，正合 = 保核，而“保核”对单射就是 (2)。
-- (2) $\implies$ (3)：**这一步
 
 > 续见 [nodes/prop.flat-equivalences.3.md](./prop.flat-equivalences.3.md)
