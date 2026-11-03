@@ -8,7 +8,7 @@ layer 16 · 定义 · 收敛与紧性 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.one-point-compactification.3.md](./def.one-point-compactification.3.md)
+- …另有入边，续页见 [nodes/def.one-point-compactification.6.md](./def.one-point-compactification.6.md)
 
 refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 一点紧化；Engelking, General Topology（⚠️ 章节未核实，只记书名）
 

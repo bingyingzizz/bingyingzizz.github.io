@@ -9,9 +9,12 @@ layer 16 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 2. $\pi$ 是**正则满态射**；
 3. $\pi$ 是**满态射**；
 4. $\pi$ 是**满射**。
+**四条里真正的“桥”是 (2) $\iff$ (3)**，而它完全靠**紧 Hausdorff**：
+> 陈述续见 [nodes/prop.chaus-quotient-equiv.2.md](./prop.chaus-quotient-equiv.2.md)
+
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.chaus-quotient-equiv.2.md](./prop.chaus-quotient-equiv.2.md)
+- …另有入边，续页见 [nodes/prop.chaus-quotient-equiv.5.md](./prop.chaus-quotient-equiv.5.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 2.9
 
