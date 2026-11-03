@@ -4,3 +4,5 @@
 - def.principal-bundle　主丛　layer 26
 - def.frame-bundle　帧丛　layer 27
 - def.associated-bundle　配丛　layer 28
+- def.structure-group　结构群　layer 29
+- thm.bundle-classification　丛的分类　layer 30

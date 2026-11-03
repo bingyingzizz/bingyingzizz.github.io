@@ -9,6 +9,9 @@ layer 20 · 命题 · 流形与向量丛 · 微分几何
 > 陈述续见 [nodes/prop.bundle-metric.2.md](./prop.bundle-metric.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.structure-group`](../nodes/def.structure-group.md) 结构群 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.bundle-metric.3.md](./prop.bundle-metric.3.md)
 

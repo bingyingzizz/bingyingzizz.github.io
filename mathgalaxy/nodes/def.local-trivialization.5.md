@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.frame-bundle`](../nodes/def.frame-bundle.md) 帧丛 用
+- 被 [`def.transition-function`](../nodes/def.transition-function.md) 转移函数 用

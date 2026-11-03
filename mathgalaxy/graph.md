@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-03T02:05:48.228Z
-> 15 星系 / 102 星团 / 1462 节点 / 2758 连线（强边 2741，弱边 17；其中**不分层**的「推论」22 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-03T02:28:26.812Z
+> 15 星系 / 102 星团 / 1464 节点 / 2769 连线（强边 2752，弱边 17；其中**不分层**的「推论」22 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -32394,6 +32394,60 @@ $$\mathrm{Fr}(E) \times_{\mathrm{GL}(k)} \mathbb{R}^{k} \;\cong\; E ,$$
 
 参考：Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 配丛；Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）
 
+#### 转移函数　`def.transition-function`
+*定义*　转移函数：一块丛「怎么粘」的全部数据
+
+**在做什么**：丛不是由一片片「$U \times F$」决定的，而是由**重叠处怎么对齐**决定的。这些对齐就是转移函数 —— 丛的一切（同构类、结构群、联络、特征类）都从它读出来。
+
+设 $\pi : E \to B$ 是以 $F$ 为纤维的纤维丛，$\{U_{\alpha}\}$ 是一组**局部平凡化** $\Phi_{\alpha} : \pi^{-1}(U_{\alpha}) \to U_{\alpha} \times F$ 的覆盖（`def.local-trivialization`）。在重叠 $U_{\alpha\beta} := U_{\alpha} \cap U_{\beta}$ 上，两条平凡化相差一个纤维自同胚：
+
+$$\Phi_{\alpha} \circ \Phi_{\beta}^{-1} (b, y) = \bigl(b,\ g_{\alpha\beta}(b)\, y\bigr), \qquad g_{\alpha\beta} : U_{\alpha\beta} \longrightarrow \mathrm{Homeo}(F) .$$
+
+光滑丛要求 $g_{\alpha\beta}$ 光滑（$F$ 是流形时取 $\mathrm{Diff}(F)$）；向量丛要求它逐纤维线性（于是取值在 $\mathrm{GL}(k)$ 里）。这些 $g_{\alpha\beta}$ 就叫**转移函数**。
+
+**上闭链条件**：三个覆盖相交处，两次换基必须与一次换基一致 —— 因为左端 $(\Phi_{\alpha}\Phi_{\beta}^{-1})(\Phi_{\beta}\Phi_{\gamma}^{-1}) = \Phi_{\alpha}\Phi_{\gamma}^{-1}$，于是
+
+$$g_{\alpha\alpha} = \mathrm{id}, \qquad g_{\alpha\beta}\, g_{\beta\gamma}\, g_{\gamma\alpha} = \mathrm{id} \quad \text{在}\ U_{\alpha\beta\gamma}\ \text{上} .$$
+
+**反过来**（丛的粘合构造）：给定覆盖 $\{U_{\alpha}\}$、纤维 $F$ 与满足上闭链条件的一族 $g_{\alpha\beta}$，在不交并 $\bigsqcup_{\alpha} U_{\alpha} \times F$ 上令
+
+$$(b, y) \sim (b,\ g_{\alpha\beta}(b)\,y) \quad (b \in U_{\alpha\beta}) ,$$
+
+取商即得以 $F$ 为纤维的丛。**这两个方向互逆**（差一个自然同构），所以说「丛 = 覆盖 + 满足上闭链的转移函数」。
+
+**为什么它是「全部数据」**：局部上丛永远是平凡的（$U \times F$），所以丛的全部区别都在重叠处。换句话说，丛的几何 = 转移函数的几何。这也解释了为什么分类丛要模掉换基：换一组平凡化（$\Phi_{\alpha} \mapsto h_{\alpha}\Phi_{\alpha}$）会把 $g_{\alpha\beta}$ 换成 $h_{\alpha} g_{\alpha\beta} h_{\beta}^{-1}$，而丛本身没变 —— 这就是分类定理里的「等价」关系（见 `thm.bundle-classification`）。
+
+**取值落在哪里，就决定了是什么丛**：$g_{\alpha\beta}$ 落在 $\mathrm{GL}(k,\mathbb{R})$ $\implies$ 实向量丛；落在 $\mathrm{O}(k)$ $\implies$ 配了纤维度量的丛；落在 $\mathrm{GL}(k,\mathbb{C})$ $\implies$ 复丛；落在离散群 $\implies$ 平坦丛。这个「落在哪」的群就叫**结构群**（`def.structure-group`），所以「换结构群」在技术上就是「把转移函数的取值限制在更小的子群里」。
+
+⚠️ **上闭链不是可选项**：$g_{\alpha\beta} g_{\beta\alpha} = \mathrm{id}$ 与三重叠条件是**丛存在**的必要条件（它们只是「换基的自洽性」）。但仅有上闭链条件并不保证丛是平凡的 —— 恰恰相反，**第一个障碍**就在三重叠处：那正是 Čech $H^{1}$（非阿贝尔情形）度量的东西。
+
+⚠️ **记号有两套**：$g_{\alpha\beta}$（上闭链，丛的粘合）与 $g_{ij}$（流形图卡之间的坐标变换）长得一样，但后者只是 $\mathrm{id}$ 平凡丛的转移函数。读文献时看上下文：讲丛分类时是前者。
+
+参考：Tu, Differential Geometry（⚠️ 章名未核实，只记书名）· 转移函数；Milnor–Stasheff, Characteristic Classes
+
+#### 结构群　`def.structure-group`
+*定义*　结构群：转移函数允许落在哪个群
+
+**在做什么**：同一个纤维 $F$ 可以粘成很多互不同构的丛。**结构群**就是「允许用哪些自同胚去粘」—— 它把「丛的类型」压成一个群。
+
+设 $\pi : E \to B$ 是以 $F$ 为纤维的纤维丛，$G \le \mathrm{Homeo}(F)$（光滑情形 $G \le \mathrm{Diff}(F)$；向量丛 $F = \mathbb{R}^{k}$ 时 $G \le \mathrm{GL}(k,\mathbb{R})$）。称 $E$ 的**结构群**是 $G$，若存在一组局部平凡化，使全部**转移函数**（`def.transition-function`）都取值在 $G$ 里：
+
+$$g_{\alpha\beta}(U_{\alpha\beta}) \subseteq G \quad \text{对一切}\ \alpha, \beta .$$
+
+**等价说法**：$E$ 可以由一个主 $G$-丛（`def.principal-bundle`）配上一个 $G$-作用在 $F$ 上的作用**配出来**（`def.associated-bundle`）。
+
+**同一根纤维、不同的结构群**：$F = \mathbb{R}^{k}$ 时，取 $G = \mathrm{GL}(k)$ 得到一般向量丛；取 $G = \mathrm{O}(k)$ 得到「带纤维度量的丛」（由 `prop.bundle-metric`，每个丛都能这样约化）；取 $G = \mathrm{SL}(k)$ 得到「带体积形式的丛」；取 $G = \mathrm{GL}(k,\mathbb{C}) \subset \mathrm{GL}(2k,\mathbb{R})$ 得到复丛。
+
+**一句话**：结构群 = **转移函数的允许取值**。所以「这个丛有没有某某结构」等于问「它的转移函数能不能都塞进某个子群 $G$ 里」。丛的分类到此变成「按群分类」（见 `thm.bundle-classification`：秩 $k$ 的 $G$-丛由 $\check{H}^{1}(B; G)$ 分类）。
+
+**约化**：一个丛可能同时容许多个结构群。若 $H \le G$，把转移函数从 $G$ 塞进 $H$ 叫**结构群约化**（从 $G$ 约化到 $H$）。这是几何里最常用的手法：**每个向量丛都能约化到 $\mathrm{O}(k)$**（配一个纤维度量，`prop.bundle-metric`），却**不能**总约化到 $\mathrm{SO}(k)$（那要求可定向）。**「能不能约化」是障碍理论问题**，障碍住在 $H^{1}(B; G/H)$ 一类的地方。
+
+⚠️ **结构群不是唯一的**：一个丛可以同时是 $\mathrm{GL}(k)$-丛与 $\mathrm{O}(k)$-丛（后者更精细）。所以「这个丛的结构群是 $G$」这句话的准确读法是「**存在**使转移函数落在 $G$ 里的平凡化」—— 不是「只有 $G$」。
+
+⚠️ **主丛是「结构群 = 纤维」的极端**：主 $G$-丛的纤维就是 $G$ 自己（`def.principal-bundle`），此时结构群与纤维重合，丛的信息全在 $G$ 的右作用里。向量丛与主丛的对应（帧丛 / 配丛）就是「结构群」这个概念的两侧。
+
+参考：Milnor–Stasheff, Characteristic Classes · 结构群；Tu, Differential Geometry（⚠️ 章名未核实，只记书名）
+
 ### 星团：向量场与 Lie 结构
 > 在流形上做「微分」的那一套：向量场与 Lie 括号 → 流与流的不变量（Lie 导数、内乘、Cartan 公式）→ 张量场与缩并 → 切分布、对合分布与 Frobenius 定理 → Lie 代数。
 
@@ -49204,6 +49258,50 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 
 Riemann 积分由 Riemann 和定义 —— 证明里算阶梯函数的积分要用它。
 
+#### 定义引用：「局部平凡化」→ 转移函数　`dep-tf-localt`
+
+转移函数是两条**局部平凡化**在重叠处的差。
+
+#### 定义引用：「纤维丛」→ 转移函数　`dep-tf-fiber`
+
+它是纤维丛的粘合数据。
+
+#### 定义引用：「光滑流形」→ 转移函数　`dep-tf-smooth`
+
+光滑丛要求转移函数光滑（$F$ 是流形）。
+
+#### 定义引用：「向量丛」→ 转移函数　`dep-tf-vector`
+
+向量丛的情形：转移函数逐纤维线性，取值在 $\mathrm{GL}(k)$。
+
+#### 定义引用：「转移函数」→ 丛的分类　`dep-tf-class`
+
+分类定理的主语就是转移函数：丛的同构类 = 上闭链模换基。
+
+#### 定义引用：「转移函数」→ 结构群　`dep-sg-tf`
+
+结构群是用转移函数的**取值**定义的。
+
+#### 定义引用：「纤维丛」→ 结构群　`dep-sg-fiber`
+
+结构群是对纤维丛说的。
+
+#### 定义引用：「主丛」→ 结构群　`dep-sg-principal`
+
+等价刻画用主 $G$-丛（结构群与纤维重合的那一类）。
+
+#### 定义引用：「配丛」→ 结构群　`dep-sg-assoc`
+
+「由主 $G$-丛配上 $G$-作用配出来」= 配丛。
+
+#### 定义引用：「纤维度量」→ 结构群　`dep-sg-metric`
+
+每个向量丛都能约化到 $\mathrm{O}(k)$ —— 这条是「结构群可约化」最常用的例子。
+
+#### 定义引用：「结构群」→ 丛的分类　`dep-sg-class`
+
+分类定理的结论按结构群陈述：秩 $k$ 的 $G$-丛由 $\check{H}^{1}(B;G)$ 分类。
+
 #### 定义引用：「实数系 ℝ」→ 扩充实数 [−∞,+∞]　`dep.real-extended`
 
 扩充实数就是在 $\mathbb{R}$ 上添两个记号。
@@ -56658,7 +56756,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **内蕴几何 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **多元微分 ↔ 内蕴几何**　4 条节点级连线
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线
-- **内蕴几何 ↔ 流形与向量丛**　7 条节点级连线
+- **内蕴几何 ↔ 流形与向量丛**　8 条节点级连线
 - **积分 ↔ 符号测度与分解**　5 条节点级连线
 - **测度的构造 ↔ 符号测度与分解**　8 条节点级连线
 - **复变函数基础 ↔ 数系的构造**　6 条节点级连线

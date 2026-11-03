@@ -13,9 +13,9 @@
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
+- **7 / 8** `thm.bundle-classification` 丛的分类 · 流形与向量丛
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · 内蕴几何
 - **6 / 7** `thm.stokes` Stokes 定理 · 内蕴几何
-- **6 / 6** `def.singular-homology` 奇异同调群 · 同调群
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
