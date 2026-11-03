@@ -9,7 +9,7 @@
 - 被 [`thm.riesz-ball-compact`](../nodes/thm.riesz-ball-compact.md) 单位球紧 ⟺ 有限维 用
 - 被 [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价 用
 - 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
+- 被 [`def.relatively-compact`](../nodes/def.relatively-compact.md) 相对紧 用
 - ⇒ [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴
-- 被 [`prop.compact-basic-operations`](../nodes/prop.compact-basic-operations.md) 紧性的基本操作 用
 
 > 续见 [nodes/def.compact.4.md](./def.compact.4.md)

@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
+
 - Young 不等式 | Young → lem.young-inequality
 
 - 本性上界 | essential supremum | L-infinity | L∞ 范数 → def.essential-sup
@@ -30,7 +32,5 @@
 - 等距 | isometry | 范数相等 → prop.duality-isometry
 
 - 有界泛函给出 Lq → prop.bounded-functional-gives-lq
-
-- Banach | 巴拿赫空间 | Lp 完备 → thm.lp-banach
 
 > 续见 alias/aka/analysis.12.md

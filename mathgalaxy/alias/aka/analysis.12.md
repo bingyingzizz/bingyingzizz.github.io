@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Banach | 巴拿赫空间 | Lp 完备 → thm.lp-banach
+
 - Riesz 表示 | 对偶空间 | dual space | (Lp)* = Lq → thm.riesz-representation-lp
 
 - 半范数阿贝尔群 | semi-normed abelian group | 半范数 → def.semi-normed-ab-group
@@ -28,7 +30,5 @@
 - 比较判别法 → thm.comparison-test
 
 - 幂级数的逐项运算 → thm.power-series-analytic
-
-- 初等函数的导数 → thm.elementary-derivatives
 
 > 续见 alias/aka/analysis.13.md

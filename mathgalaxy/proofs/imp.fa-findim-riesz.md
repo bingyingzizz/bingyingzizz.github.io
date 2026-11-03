@@ -9,4 +9,4 @@ $B_E$ 是其闭子集（$\|\cdot\|$ 连续），故紧。
 
 $\blacksquare$
 
-> 只要「有限维 $implies$ 范数等价」，剩下全是 Heine–Borel。
+> 只要「有限维 $\implies$ 范数等价」，剩下全是 Heine–Borel。

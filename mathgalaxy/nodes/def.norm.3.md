@@ -7,3 +7,4 @@
 - 被 [`def.norm-equivalence`](../nodes/def.norm-equivalence.md) 等价范数 用
 - 被 [`lem.almost-orthogonal`](../nodes/lem.almost-orthogonal.md) 几乎正交引理 用
 - 被 [`def.schauder-basis`](../nodes/def.schauder-basis.md) Schauder 基 用
+- 被 [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数 用

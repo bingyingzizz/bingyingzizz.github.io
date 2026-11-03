@@ -1,6 +1,20 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`
 
+- 切向量 | 切向量空间 | tangent vector → def.tangent-space-manifold
+
+- 坐标卡 | 坐标邻域 | 局部坐标 | chart → def.manifold-chart
+
+- 线丛 | 实线丛 | 复线丛 | 秩一的向量丛 | vector bundle → def.vector-bundle
+
+- 全空间 | 底空间 | 纤维 | fiber bundle → def.fiber-bundle
+
+- 曲率形式 | 联络形式 | connection form | curvature form → def.connection-form
+
+- 特征类 | 示性类 | characteristic class | Stiefel–Whitney 类 | Chern 类 | 陈类 → def.characteristic-class
+
+- 余切向量 | covector → def.cotangent-bundle
+
 - de Rham 定理 → thm.de-rham
 
 - Frobenius 定理 → thm.frobenius
@@ -19,34 +33,6 @@
 
 - Lie 第三定理 → thm.lie-third
 
-- 丛的分类 → thm.bundle-classification
+- 丛的分类 | 平凡丛 | 平凡向量丛 → thm.bundle-classification
 
-- 对合分布 → def.involutive-distribution
-
-- 积分流形 → def.integral-manifold
-
-- Lie 导数 → def.lie-derivative
-
-- 内乘 → def.interior-product
-
-- 流 → def.flow
-
-- 缩并 → def.tensor-contraction
-
-- 切分布 → def.tangent-distribution
-
-- 刘维尔公式 | 刘维尔 → thm.liouville-formula
-
-- 高斯引理 → lem.gauss-lemma
-
-- 黎曼曲率张量 → def.curvature-tensor
-
-- 高斯曲率 → def.gauss-curvature
-
-- 高斯博内定理 → thm.gauss-bonnet
-
-- 黎曼度量 → def.riemannian-metric
-
-- 黎曼体积 | 黎曼 → def.volume-form
-
-见 `../../alias.md`。
+> 续见 alias/aka/diffgeom.2.md

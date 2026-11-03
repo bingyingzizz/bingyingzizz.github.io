@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Euler 公式 → thm.euler-formula
+
 - Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
 
 - n 次方根 → thm.nth-root
@@ -46,7 +48,5 @@
 - 二项式定理 → thm.binomial
 
 - Bernoulli 不等式 → thm.bernoulli
-
-- 一致连续 → def.uniform-continuity
 
 > 续见 alias/aka/analysis.16.md

@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.operator-algebra`](../nodes/prop.operator-algebra.md) 算子乘法的范数不等式 用
+- 被 [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数 用

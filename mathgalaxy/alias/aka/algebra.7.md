@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 置换群与对称群 → def.permutation-group
+
+- 符号与交错群 → def.alternating-group
+
+- 循环群 → def.cyclic-group
+
 - 单群 → def.simple-group
 
 - 合成列 → def.composition-series

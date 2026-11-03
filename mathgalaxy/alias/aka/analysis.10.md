@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 有界变差 | bounded variation | BV | 变差 → def.bounded-variation
+
 - 单调函数可导 | 单调函数几乎处处可导 → thm.monotone-differentiable
 
 - BV 的例子 → prop.bv-examples
@@ -28,7 +30,5 @@
 - 函数绝对连续等价于测度绝对连续 → prop.ac-iff-measure-ac
 
 - 微积分基本定理 | FTC | fundamental theorem of calculus | Newton-Leibniz 定理 | 牛顿-莱布尼茨 → thm.ftc-lebesgue
-
-- 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
 
 > 续见 alias/aka/analysis.11.md

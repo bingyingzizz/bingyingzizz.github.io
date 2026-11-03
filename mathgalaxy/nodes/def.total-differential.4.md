@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.chain-rule-multi`](../nodes/thm.chain-rule-multi.md) 多元链式法则
 - 被 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化 用
+- 被 [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数 用

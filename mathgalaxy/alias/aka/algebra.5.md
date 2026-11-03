@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Steinitz 交换引理 → thm.steinitz
+
 - M_n(K) 是环 → thm.matrix-ring
 
 - 基变换与相似 → thm.change-of-basis
@@ -39,7 +41,7 @@
 
 - 坐标 → def.coordinate
 
-- 线性映射 → def.linear-map
+- 线性映射 | 恒等映射 | 恒等线性映射 → def.linear-map
 
 - 线性同构 → def.linear-isomorphism
 
@@ -48,11 +50,5 @@
 - 商空间的万有性质 → thm.quotient-universal-vs
 
 - 零化度 → def.nullity
-
-- 对偶空间 → def.dual-space
-
-- 对偶基 → def.dual-basis
-
-- 零化子 → def.annihilator
 
 > 续见 alias/aka/algebra.6.md

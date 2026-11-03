@@ -1,6 +1,10 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 连续 | continuous | 连续函数 → def.continuous
+
+- Borel | Borel 集 | Borel σ代数 → def.borel
+
 - 连续可测 | 连续推出可测 → cor.continuous-measurable
 
 - 积 σ-代数 | product sigma-algebra | 乘积 σ代数 → def.product-sigma
@@ -20,7 +24,5 @@
 - 闭映射的邻域基 | Exercise 8.6 → prop.closed-map-neighborhood-basis
 
 - 仿紧与单位分解 | 正规与单位分解 | Exercise 8.7 → prop.paracompact-partition-unity
-
-- Stone 空间的闭开加细 | Exercise 2.20 | Exercise 2.19 → prop.stone-clopen-refinement
 
 > 续见 alias/aka/topology.3.md

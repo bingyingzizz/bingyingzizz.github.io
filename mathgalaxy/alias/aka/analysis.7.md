@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 截口 | section | 切片 → def.section
+
 - 积 σ代数的生成基 → prop.product-sigma-base
 
 - 可数积的生成 → prop.product-sigma-generated
@@ -28,7 +30,5 @@
 - 绝对连续 | absolutely continuous | 测度绝对连续 → def.absolute-continuity
 
 - 复测度 | complex measure → def.complex-measure
-
-- 正集封闭 → prop.positive-set-closure
 
 > 续见 alias/aka/analysis.8.md

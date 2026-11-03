@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 初等函数的导数 → thm.elementary-derivatives
+
 - L'Hôpital 法则 → thm.lhopital
 
 - Taylor 公式 → thm.taylor
@@ -36,7 +38,5 @@
 - 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
 
 - Abel 第二定理 → thm.abel-endpoint
-
-- 求导法则 → thm.derivative-rules
 
 > 续见 alias/aka/analysis.14.md

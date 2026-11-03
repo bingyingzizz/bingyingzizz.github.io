@@ -1,0 +1,10 @@
+# 全有界　`def.totally-bounded`　·　续页（第 5 页）
+[在星图里打开](../#n=def.totally-bounded)　·　第 1 页 [nodes/def.totally-bounded.md](./def.totally-bounded.md)　·　上一页 [nodes/def.totally-bounded.4.md](./def.totally-bounded.4.md)
+
+## 它能推出什么 / 谁在用它（续）
+- ⇒ [`def.sequentially-compact`](../nodes/def.sequentially-compact.md) 列紧
+- 被 [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画 用
+- 被 [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画 用
+- 被 [`thm.arzela-ascoli-general`](../nodes/thm.arzela-ascoli-general.md) 广义 Arzelà–Ascoli 用
+- 被 [`thm.ck-complete`](../nodes/thm.ck-complete.md) C(K,E) 完备 用
+- 被 [`def.relatively-compact`](../nodes/def.relatively-compact.md) 相对紧 用

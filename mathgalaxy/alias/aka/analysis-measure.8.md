@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 极大函数 | maximal function | Hardy–Littlewood 极大函数 → def.maximal-function
+
 - Lebesgue 集 | Lebesgue point | 勒贝格点 → def.lebesgue-set
 
 - 极大定理 | maximal theorem | Hardy–Littlewood 极大不等式 → thm.maximal-theorem
@@ -28,7 +30,5 @@
 - AC 包含于 BV → lem.ac-subset-bv
 
 - BV 的 Jordan 分解 → thm.bv-jordan
-
-- 全变差的 NBV 性质 → lem.nbv-variation
 
 > 续见 alias/aka/analysis-measure.9.md

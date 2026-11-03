@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- Hahn 分解 | Hahn decomposition | 哈恩分解 → thm.hahn-decomposition
+
 - 导数互逆 → cor.rn-inverse
 
 - Jordan 分解 | Jordan decomposition | 若尔当分解 → thm.jordan-decomposition
@@ -30,7 +32,5 @@
 - 平均算子 | average operator → def.average-operator
 
 - 平均算子连续 → lem.average-continuous
-
-- 极大函数 | maximal function | Hardy–Littlewood 极大函数 → def.maximal-function
 
 > 续见 alias/aka/analysis-measure.8.md

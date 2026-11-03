@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 一致连续 → def.uniform-continuity
+
 - 圆周率 π → def.pi
 
 - 绝对值的运算性质 → prop.abs-properties

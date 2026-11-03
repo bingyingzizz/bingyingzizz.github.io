@@ -5,7 +5,7 @@
 
 1. **起点**：记 $B_0 := B(x, \varepsilon)$。
 
-$O_1$ 稠密开 $implies$ $B_0 \cap O_1$ 是非空开，于是可取 $x_1$ 与 $\varepsilon_1 < \min(\varepsilon/2,\ 1)$ 使
+$O_1$ 稠密开 $\implies$ $B_0 \cap O_1$ 是非空开，于是可取 $x_1$ 与 $\varepsilon_1 < \min(\varepsilon/2,\ 1)$ 使
 
 $$\overline{B(x_1, \varepsilon_1)} \subseteq B(x, \varepsilon) \cap O_1 .$$
 

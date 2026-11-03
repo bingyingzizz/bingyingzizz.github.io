@@ -7,14 +7,15 @@ layer 11 · 定义 · 流形与向量丛 · 微分几何
 > 陈述续见 [nodes/def.transition-function.2.md](./def.transition-function.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类 用
-- 被 [`def.structure-group`](../nodes/def.structure-group.md) 结构群 用
-
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.transition-function.5.md](./def.transition-function.5.md)
+- [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep-tf-localt.md](../proofs/dep-tf-localt.md)
 
-refs: Tu, Differential Geometry（⚠️ 章名未核实，只记书名）· 转移函数；Milnor–Stasheff, Characteristic Classes
+- …另有入边，续页见 [nodes/def.transition-function.4.md](./def.transition-function.4.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.transition-function.5.md](./def.transition-function.5.md)
+
+refs: Milnor–Stasheff, Characteristic Classes · 转移函数；Tu, Differential Geometry
 
 > 说明见 `notes/def.transition-function.md`
 

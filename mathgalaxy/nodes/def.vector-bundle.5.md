@@ -11,3 +11,5 @@
 - 被 [`def.frame-bundle`](../nodes/def.frame-bundle.md) 帧丛 用
 - 被 [`def.associated-bundle`](../nodes/def.associated-bundle.md) 配丛 用
 - 被 [`def.transition-function`](../nodes/def.transition-function.md) 转移函数 用
+
+> 续见 [nodes/def.vector-bundle.6.md](./def.vector-bundle.6.md)

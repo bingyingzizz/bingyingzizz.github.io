@@ -5,7 +5,7 @@
 
 - 两个函数积分处处相同 → prop.integrals-equal-iff
 
-- 控制收敛 | DCT | dominated convergence | Lebesgue 控制收敛定理 | 积分与极限交换 → thm.dct
+- 控制收敛 | DCT | dominated convergence | Lebesgue 控制收敛定理 | 积分与极限交换 | 控制函数 | 控制函数可积 → thm.dct
 
 - L1 逐项积分 | L1 的级数积分 → thm.termwise-L1
 
@@ -26,7 +26,5 @@
 - 可数积的 Borel 代数 → cor.borel-product
 
 - 乘积测度 | product measure → def.product-measure
-
-- 乘积测度由截口给出 → thm.product-measure-sections
 
 > 续见 alias/aka/analysis-measure.6.md

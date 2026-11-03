@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 对偶空间 → def.dual-space
+
+- 对偶基 → def.dual-basis
+
+- 零化子 → def.annihilator
+
 - 直和与补空间 → def.direct-sum
 
 - 矩阵 → def.matrix
@@ -21,7 +27,7 @@
 
 - 不变子空间 → def.invariant-subspace
 
-- 特征值与特征向量 → def.eigenvalue
+- 特征值与特征向量 | 几何重数 → def.eigenvalue
 
 - 内积 → def.inner-product
 
@@ -42,11 +48,5 @@
 - 外幂 → def.exterior-power
 
 - 对称代数 → def.symmetric-algebra
-
-- 置换群与对称群 → def.permutation-group
-
-- 符号与交错群 → def.alternating-group
-
-- 循环群 → def.cyclic-group
 
 > 续见 alias/aka/algebra.7.md

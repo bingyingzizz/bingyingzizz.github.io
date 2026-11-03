@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 正集封闭 → prop.positive-set-closure
+
 - 绝对连续的 ε-δ 刻画 | 绝对连续等价刻画 → thm.ac-epsilon-delta
 
 - 要么奇异要么有下界 → lem.singular-or-lower-bound
@@ -28,7 +30,5 @@
 - 链式法则 | RN 链式法则 → prop.rn-chain-rule
 
 - 覆盖引理 | covering lemma | Vitali 覆盖 → lem.covering
-
-- 可缩族 | shrinking | 缩族 → def.shrinks-nicely
 
 > 续见 alias/aka/analysis.9.md

@@ -15,7 +15,7 @@
 
 - complete | Cauchy 列收敛 | 完备性 | 完备度量空间 → def.complete
 
-- 全有界 | totally bounded | 预紧 → def.totally-bounded
+- 全有界 | totally bounded | 预紧 | 完全有界 | 完全有界性 | Cauchy 子列 | 每个序列都有 Cauchy 子列 → def.totally-bounded
 
 - 列紧 | sequentially compact → def.sequentially-compact
 
@@ -26,9 +26,5 @@
 - 紧子集是闭的 → prop.compact-subset-closed
 
 - 子集的紧性 → prop.subset-compact-equiv
-
-- 连续 | continuous | 连续函数 → def.continuous
-
-- Borel | Borel 集 | Borel σ代数 → def.borel
 
 > 续见 alias/aka/topology.2.md

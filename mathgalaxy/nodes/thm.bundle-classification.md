@@ -7,6 +7,9 @@ layer 30 · 定理 · 流形与向量丛 · 微分几何
 > 陈述续见 [nodes/thm.bundle-classification.2.md](./thm.bundle-classification.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.bundle-classification.4.md](./thm.bundle-classification.4.md)
 

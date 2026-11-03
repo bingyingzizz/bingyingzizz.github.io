@@ -41,6 +41,4 @@
 
 - Lagrange 定理 → thm.lagrange
 
-- 特征多项式 → def.char-poly
-
 > 续见 alias/aka/algebra.4.md

@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 求导法则 → thm.derivative-rules
+
 - Arzelà–Ascoli 定理 → thm.arzela-ascoli
 
 - 闭区间套定理 → lem.nested-intervals
@@ -38,7 +40,5 @@
 - p-级数 → thm.p-series
 
 - Riemann 重排定理 → thm.riemann-rearrangement
-
-- Euler 公式 → thm.euler-formula
 
 > 续见 alias/aka/analysis.15.md

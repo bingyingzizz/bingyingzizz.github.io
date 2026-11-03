@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 全变差的 NBV 性质 → lem.nbv-variation
+
 - 递增函数的导数积分不等式 → prop.monotone-integral-derivative
 
 - BV 函数的正则性 → prop.bv-regularity
@@ -26,7 +28,5 @@
 - Hölder | Holder 不等式 | 赫尔德不等式 → thm.holder
 
 - 稠密 | dense | 简单函数稠密 → prop.dense-simple-compact-support
-
-- Lq 落在 Lp 加 Lr → prop.lq-in-lp-plus-lr
 
 > 续见 alias/aka/analysis-measure.10.md

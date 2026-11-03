@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1464 nodes, 2769 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2781 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1464 nodes, 2769 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2781 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -12031,7 +12031,7 @@ MG.aliases = {
     /* 度量空间 */
     { id: 'def.metric-space', aka: ['距离空间', '度量空间', 'metric space', '距离'] },
     { id: 'def.complete', aka: ['complete', 'Cauchy 列收敛', '完备性', '完备度量空间'] },
-    { id: 'def.totally-bounded', aka: ['全有界', 'totally bounded', '预紧'] },
+    { id: 'def.totally-bounded', aka: ['全有界', 'totally bounded', '预紧', '完全有界', '完全有界性', 'Cauchy 子列', '每个序列都有 Cauchy 子列'] },
     { id: 'def.sequentially-compact', aka: ['列紧', 'sequentially compact'] },
     { id: 'def.compact', aka: ['紧', '紧集', 'compact', '开覆盖', 'Definition 2.1.3', 'Def 2.1.3'] },
     { id: 'thm.metric-compact-equiv', aka: ['紧的等价刻画', '紧 等价', 'Heine-Borel'] },
@@ -12116,7 +12116,7 @@ MG.aliases = {
     { id: 'prop.integral-abs-ineq', en: 'triangle inequality for the integral', aka: ['积分绝对值不等式'] },
     { id: 'prop.L1-support-sigma-finite', en: 'the support of an L1 function is sigma-finite', aka: ['支撑 σ-有限'] },
     { id: 'prop.integrals-equal-iff', en: 'when two functions have equal integrals everywhere', aka: ['两个函数积分处处相同'] },
-    { id: 'thm.dct', aka: ['控制收敛', 'DCT', 'dominated convergence', 'Lebesgue 控制收敛定理', '积分与极限交换'] },
+    { id: 'thm.dct', aka: ['控制收敛', 'DCT', 'dominated convergence', 'Lebesgue 控制收敛定理', '积分与极限交换', '控制函数', '控制函数可积'] },
     { id: 'thm.termwise-L1', en: 'termwise integration of L1 series', aka: ['L1 逐项积分', 'L1 的级数积分'] },
     { id: 'thm.approximation-L1', en: 'approximation in L1', aka: ['L1 逼近', 'L1 里的逼近'] },
     { id: 'thm.differentiate-under-integral', aka: ['积分号下求导', '交换极限与积分', 'differentiation under the integral sign', '积分和极限换顺序'] },
@@ -12781,6 +12781,14 @@ MG.aliases = {
     { id: 'lem.schwarz', aka: ['施瓦兹引理', 'Schwarz lemma'] },
     { id: 'thm.schwarz-christoffel', en: 'Schwarz–Christoffel formula', aka: ['S-C 公式', '许瓦兹-克里斯托费尔公式', 'Schwarz-Christoffel 变换'] },
     { id: 'def.mobius', aka: ['莫比乌斯变换', '莫比乌斯映射', '线性分式变换', '线性分式映射', 'Möbius transformation', 'Mobius transformation'] },
+    /* ⭐ 2026-11-02 补：这些术语在正文里就地定义过，但没有别名条目 ⇒ 搜不到、也点不进去 */
+    { id: 'def.tangent-space-manifold', aka: ['切向量', '切向量空间', 'tangent vector'] },
+    { id: 'def.manifold-chart', aka: ['坐标卡', '坐标邻域', '局部坐标', 'chart'] },
+    { id: 'def.vector-bundle', aka: ['线丛', '实线丛', '复线丛', '秩一的向量丛', 'vector bundle'] },
+    { id: 'def.fiber-bundle', aka: ['全空间', '底空间', '纤维', 'fiber bundle'] },
+    { id: 'def.connection-form', aka: ['曲率形式', '联络形式', 'connection form', 'curvature form'] },
+    { id: 'def.characteristic-class', aka: ['特征类', '示性类', 'characteristic class', 'Stiefel–Whitney 类', 'Chern 类', '陈类'] },
+    { id: 'def.cotangent-bundle', aka: ['余切向量', 'covector'] },
     { id: 'def.riemann-sphere', aka: ['黎曼球面', 'Riemann sphere', '扩充平面', '复射影直线'] },
     { id: 'prop.stereographic-circle', aka: ['球极投影', '赤平投影', 'stereographic projection'] },
     { id: 'thm.picard-little', en: 'little Picard theorem', aka: ['皮卡小定理', 'Picard 定理'] },
@@ -12925,7 +12933,7 @@ MG.aliases = {
     { id: 'thm.geometric-series', en: 'geometric series', aka: ['几何级数'] },
     { id: 'prop.free-solid-solid', en: 'the free solid group is solid', aka: ['自由固态群是固态的'] },
     { id: 'lem.jordan', en: 'Jordan\'s lemma', aka: ['Jordan 引理'] },
-    { id: 'thm.bundle-classification', en: 'classification of bundles', aka: ['丛的分类'] },
+    { id: 'thm.bundle-classification', en: 'classification of bundles', aka: ['丛的分类', '平凡丛', '平凡向量丛'] },
     { id: 'prop.joukowski', en: 'the Joukowski map', aka: ['Joukowski 映射'] },
     { id: 'thm.root-test', en: 'root test', aka: ['根值判别法'] },
     { id: 'thm.integral-test', en: 'integral test', aka: ['积分判别法'] },
@@ -12967,7 +12975,7 @@ MG.aliases = {
     { id: 'thm.monotone-inverse', en: 'continuity of the inverse of a strictly monotone function', aka: ['反函数连续'] },
     { id: 'thm.kummer', en: 'Kummer\'s test', aka: ['Kummer 判别法'] },
     { id: 'thm.dini', en: 'Dini\'s theorem', aka: ['Dini 定理'] },
-    { id: 'def.char-poly', en: 'characteristic polynomial', aka: ['特征多项式'] },
+    { id: 'def.char-poly', en: 'characteristic polynomial', aka: ['特征多项式', '代数重数'] },
     { id: 'thm.gram-schmidt', en: 'Gram–Schmidt orthogonalisation', aka: ['Gram–Schmidt 正交化'] },
     { id: 'def.real-power', en: 'rational and real powers', aka: ['有理指数与实数指数幂'] },
     { id: 'prop.rational-localization', en: 'localisation on rational open sets', aka: ['有理开集上的局部化'] },
@@ -13059,7 +13067,7 @@ MG.aliases = {
     { id: 'def.standard-simplex', en: 'standard simplex', aka: ['标准单纯形'] },
     { id: 'def.subspace', en: 'subspace', aka: ['子空间'] },
     { id: 'def.coordinate', en: 'coordinates', aka: ['坐标'] },
-    { id: 'def.linear-map', en: 'linear map', aka: ['线性映射'] },
+    { id: 'def.linear-map', en: 'linear map', aka: ['线性映射', '恒等映射', '恒等线性映射'] },
     { id: 'def.linear-isomorphism', en: 'linear isomorphism', aka: ['线性同构'] },
     { id: 'def.quotient-vs', en: 'quotient vector space', aka: ['商空间'] },
     { id: 'thm.quotient-universal-vs', en: 'universal property of the quotient space', aka: ['商空间的万有性质'] },
@@ -13077,7 +13085,7 @@ MG.aliases = {
     { id: 'def.polynomial-ring', en: 'polynomial ring', aka: ['多项式环'] },
     { id: 'def.irreducible-poly', en: 'irreducible polynomial', aka: ['不可约多项式'] },
     { id: 'def.invariant-subspace', en: 'invariant subspace', aka: ['不变子空间'] },
-    { id: 'def.eigenvalue', en: 'eigenvalue and eigenvector', aka: ['特征值与特征向量'] },
+    { id: 'def.eigenvalue', en: 'eigenvalue and eigenvector', aka: ['特征值与特征向量', '几何重数'] },
     { id: 'def.inner-product', en: 'inner product', aka: ['内积'] },
     { id: 'def.orthogonality', en: 'orthogonality', aka: ['正交'] },
     { id: 'def.orthogonal-complement', en: 'orthogonal complement', aka: ['正交补'] },
@@ -13557,6 +13565,9 @@ MG.i18n = {
   generatedBy: 'tools/i18n-backfill.mjs',
   updated: '2026-11-01',
   nodes: {
+    'def.relatively-compact': { title_en: "Relatively Compact", label_en: "Relatively Compact", from: 'explicit' },
+    'thm.frechet-derivative': { title_en: "Fréchet Derivative", label_en: "Fréchet Derivative", from: 'explicit' },
+    'def.characteristic-class': { title_en: "Characteristic Class", label_en: "Characteristic Class", from: 'explicit' },
     'def.transition-function': { title_en: "Transition Function", label_en: "Transition Function", from: 'explicit' },
     'def.structure-group': { title_en: "Structure Group", label_en: "Structure Group", from: 'explicit' },
     'def.lebesgue-number': { title_en: "Lebesgue Number", label_en: "Lebesgue Number", from: 'explicit' },
@@ -19168,6 +19179,22 @@ window.MG = window.MG || {};
         '$$\\forall\\varepsilon > 0,\\ \\exists x_1, \\ldots , x_n \\in X : X = \\bigcup_{i=1}^{n} B(x_i, \\varepsilon)$$',
         '',
         '等价说法：对每个 $\\varepsilon > 0$，$X$ 都能被**有限个**半径 $\\varepsilon$ 的开球盖住。'
+        ,
+        '**等价刻画（序列版，最常用的一条）**：在度量空间里，「全有界」有一条**不提 $\\varepsilon$-网**的等价说法 ——\n' +
+        '\n' +
+        '$$X\\ \\text{全有界} \\iff X\\ \\text{中每个序列都有 Cauchy 子列} .$$\n' +
+        '\n' +
+        '**证明（$\\implies$）**：设 $X$ 全有界，$(x_n)$ 是序列。用 $\\varepsilon = 1$ 取有限 $1$-网，有限多个球里必有一个含无穷多项，取其中的子列（仍记作 $(x_n)$），于是这子列的两两距离 $< 2$。再对这子列用 $\\varepsilon = 1/2$ 的网、取含无穷多项的那个球，得更细的子列，两两距离 $< 1$。依此取对角线子列 $(x_{n_k})$：对每个 $j$，第 $k \\ge j$ 步之后它的项两两距离 $< 2^{-j+1}$，故它是 Cauchy 列。$(\\Leftarrow)$ 反过来：若 $X$ 不全有界，则存在 $\\varepsilon > 0$ 使任何有限球族都盖不住它 —— 于是可递归取 $x_n$ 使 $d(x_n, x_m) \\ge \\varepsilon$ 对一切 $m < n$ 成立，这个序列没有 Cauchy 子列。$\\square$\n' +
+        '\n' +
+        '**⚠️ 三条要分清**（这是最容易被混掉的地方）：\n' +
+        '\n' +
+        '| 说法 | 要求 | 名字 |\n' +
+        '|---|---|---|\n' +
+        '| 每个序列有 **Cauchy** 子列 | 极限可以**不存在** | **全有界**（本节点） |\n' +
+        '| 每个序列有**收敛于 $X$ 中**的子列 | 要求 $X$ 完备才能由全有界推出 | **紧**（$=$ 全有界 $+$ 完备） |\n' +
+        '| 每个序列有收敛子列（极限在 $X$ 里） | 等价于上一行 | **序列紧**（`def.sequentially-compact`） |\n' +
+        '\n' +
+        '所以：**全有界是「Cauchy 层面」的紧性，紧是「完备化之后」的全有界**。这正是「紧 $=$ 全有界 $+$ 完备」这条分解的来历 —— 全有界负责「有子列可缩」，完备负责「缩到的那点是空间里的点」。'
       ].join('\n'),
       notes: [
         '关键词是**有限**。它只要求「存在」一组有限的球，不要求你写得出来。',
@@ -27310,11 +27337,11 @@ window.MG = window.MG || {};
       regions: ['set-theory', 'analysis'],
       tags: ['定义', '绝对值', '序'],
       statement: [
-        '设 $K$ 是**有序域**（$mathbb{Q}$ 与 $mathbb{R}$ 都是），$x in K$。定义',
+        '设 $K$ 是**有序域**（$\\mathbb{Q}$ 与 $\\mathbb{R}$ 都是），$x \\in K$。定义',
         '',
         '$$|x| := \\begin{cases} x, & x \\ge 0 \\\\ -x, & x < 0 \\end{cases} \\qquad\\text{i.e.}\\qquad |x| = \\max\\{x, -x\\}$$',
         '',
-        '于是 $|x| ge 0$ 恒成立，且 $|x| = 0 iff x = 0$。'
+        '于是 $|x| \\ge 0$ 恒成立，且 $|x| = 0 \\iff x = 0$。'
       ].join('\n'),
       notes: '⭐ 读法：$|x|$ 是**到原点的距离**，与符号无关。\n\n两点之间的距离就是 $|x - y|$ —— 这就是后来**距离空间**里那个距离的原型：把「差」扔掉，只留下「距离」这个概念本身。\n\n立刻能验证的两条（都由定义分情形）：\n- $|-x| = |x|$；\n\n\n- $|xy| = |x|\\,|y|$。\n\n⚠ **不等号那一侧的估计不属于定义**：$|x + y| \\le |x| + |y|$ 是一条**定理**（见「三角不等式」）—— 定义里只有分情形，没有不等式。',
       refs: ['Rudin, Principles of Mathematical Analysis, Ch. 1']
@@ -69954,7 +69981,7 @@ window.MG = window.MG || {};
         '',
         '$$i(ri) = (1_{M}-sp)\\,i = i - s(pi) = i \\quad\\text{（用到 } pi = 0\\text{）}\\Longrightarrow ri = 1_{M_{1}}.$$',
         '',
-        '于是 $\\{i, p, r, s\\}$ 满足双积的三条等式 $ri = 1_{M_{1}}$、$ps = 1_{M_{2}}$、$ir+sp = 1_{M}$。\n\n由「直和就是积」，这三条等式连同 $pi = 0$ 使 $M$ 成为 $M_{1}$ 与 $M_{2}$ 的**双积**：$(M,p)$ 是积、$(M,i)$ 是余积，特别地 $M \\cong M_{1}\\oplus M_{2}$ 且该列同构于标准列，即分裂。',
+        '于是 $\\{i, p, r, s\\}$ 满足双积的三条等式 $ri = 1_{M_{1}}$、$ps = 1_{M_{2}}$、$ir+sp = 1_{M}$。\n\n由「直和就是积」，这三条等式连同 $\\pi = 0$ 使 $M$ 成为 $M_{1}$ 与 $M_{2}$ 的**双积**：$(M,p)$ 是积、$(M,i)$ 是余积，特别地 $M \\cong M_{1}\\oplus M_{2}$ 且该列同构于标准列，即分裂。',
         '',
         '**分裂就有截面。** 分裂时该列同构于 $0 \\to M_{1} \\xrightarrow{\\operatorname{pr}_{1}} M_{1}\\oplus M_{2} \\xrightarrow{\\operatorname{pr}_{2}} M_{2} \\to 0$，而 $\\operatorname{pr}_{2}$ 有显然的截面 $m_{2}\\mapsto (0,m_{2})$。',
         '',
@@ -80887,15 +80914,15 @@ window.MG = window.MG || {};
         '',
         '$$(b, y) \\sim (b,\\ g_{\\alpha\\beta}(b)\\,y) \\quad (b \\in U_{\\alpha\\beta}) ,$$',
         '',
-        '取商即得以 $F$ 为纤维的丛。**这两个方向互逆**（差一个自然同构），所以说「丛 = 覆盖 + 满足上闭链的转移函数」。'
+        '取商即得以 $F$ 为纤维的丛。**两方向互逆**（差自然同构），故「丛 = 覆盖 + 满足上闭链的转移函数」。'
       ].join('\n'),
       notes: [
-        '**为什么它是「全部数据」**：局部上丛永远是平凡的（$U \\times F$），所以丛的全部区别都在重叠处。换句话说，丛的几何 = 转移函数的几何。这也解释了为什么分类丛要模掉换基：换一组平凡化（$\\Phi_{\\alpha} \\mapsto h_{\\alpha}\\Phi_{\\alpha}$）会把 $g_{\\alpha\\beta}$ 换成 $h_{\\alpha} g_{\\alpha\\beta} h_{\\beta}^{-1}$，而丛本身没变 —— 这就是分类定理里的「等价」关系（见 `thm.bundle-classification`）。',
+        '**为什么它是「全部数据」**：局部上丛总是平凡的（$U \\times F$），全部区别都在重叠处：丛的几何 = 转移函数的几何。这也解释了为什么分类丛要模掉换基：换一组平凡化（$\\Phi_{\\alpha} \\mapsto h_{\\alpha}\\Phi_{\\alpha}$）会把 $g_{\\alpha\\beta}$ 换成 $h_{\\alpha} g_{\\alpha\\beta} h_{\\beta}^{-1}$，而丛本身没变 —— 这就是分类定理里的「等价」关系（见 `thm.bundle-classification`）。',
         '**取值落在哪里，就决定了是什么丛**：$g_{\\alpha\\beta}$ 落在 $\\mathrm{GL}(k,\\mathbb{R})$ $\\implies$ 实向量丛；落在 $\\mathrm{O}(k)$ $\\implies$ 配了纤维度量的丛；落在 $\\mathrm{GL}(k,\\mathbb{C})$ $\\implies$ 复丛；落在离散群 $\\implies$ 平坦丛。这个「落在哪」的群就叫**结构群**（`def.structure-group`），所以「换结构群」在技术上就是「把转移函数的取值限制在更小的子群里」。',
         '⚠️ **上闭链不是可选项**：$g_{\\alpha\\beta} g_{\\beta\\alpha} = \\mathrm{id}$ 与三重叠条件是**丛存在**的必要条件（它们只是「换基的自洽性」）。但仅有上闭链条件并不保证丛是平凡的 —— 恰恰相反，**第一个障碍**就在三重叠处：那正是 Čech $H^{1}$（非阿贝尔情形）度量的东西。',
         '⚠️ **记号有两套**：$g_{\\alpha\\beta}$（上闭链，丛的粘合）与 $g_{ij}$（流形图卡之间的坐标变换）长得一样，但后者只是 $\\mathrm{id}$ 平凡丛的转移函数。读文献时看上下文：讲丛分类时是前者。'
       ].join('\n\n'),
-      refs: ['Tu, Differential Geometry（⚠️ 章名未核实，只记书名）· 转移函数', 'Milnor–Stasheff, Characteristic Classes']
+      refs: ['Milnor–Stasheff, Characteristic Classes · 转移函数', 'Tu, Differential Geometry']
     },
 
     {
@@ -80962,6 +80989,219 @@ window.MG = window.MG || {};
     { id: 'dep-sg-class', kind: 'definition',
       definition: 'def.structure-group', usedBy: 'thm.bundle-classification',
       note: '分类定理的结论按结构群陈述：秩 $k$ 的 $G$-丛由 $\\check{H}^{1}(B;G)$ 分类。' }
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
+   内容包 · 补「示性类」（FACT 待办里挂了两轮的那个）
+   --------------------------------------------------------------------------
+   用户：「wait，再查查别的啊」
+
+   扫描（`_tools/_termbatch2.mjs`）：**示性类 / 特征类** 在 4 个节点的正文里被提到
+   （`def.local-trivialization`、`def.principal-bundle`、`def.frame-bundle`、
+   `def.transition-function`、`def.vector-field`、`def.smooth-map`），
+   而**没有任何节点以它命名**。FACT 的待办里也一直挂着「还缺：示性类」。
+
+   为什么它重要：丛的分类（`thm.bundle-classification`）说同构类 = Čech $H^{1}$，
+   而那个集合**算不出来**；示性类是「从 $H^{1}$ 到可计算的 $H^{*}(B)$ 的函子」，
+   于是「两个丛是否同构」有了可判定的必要条件。没有这一环，分类定理是悬空的。
+
+   ⚠️ 本节点只写**定义 + 两条最基本的例子（$w_{1}$、$c_{1}$）**，
+      一般的示性类理论（Chern–Weil、分裂原理、示性类的公理刻画）本图未收录，
+      正文里明说了这一点 —— 不装作覆盖了。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '示性类',
+
+  nodes: [
+    {
+      id: 'def.characteristic-class',
+      cluster: 'diffgeom.manifold',
+      type: 'definition',
+      label: '示性类',
+      title: '示性类：向量丛到上同调的函子',
+      regions: ['diffgeom'],
+      tags: ['定义', '微分几何', '示性类', '特征类', '向量丛', '上同调'],
+      statement: [
+        '**要解决什么问题**：丛的同构类由 $\\check{H}^{1}(B; \\mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合是非阿贝尔的、没法直接算。示性类把「丛」翻译成「上同调类」—— 上同调是群，能算，于是「两个丛不同构」有了可验证的判据。',
+        '',
+        '设 $E \\to B$ 是光滑流形上的秩 $k$ 实向量丛。$E$ 的**示性类**（characteristic class）是一族对应',
+        '',
+        '$$c_{i}(E) \\in H^{i}(B; \\Lambda),$$',
+        '',
+        '（$\\Lambda$ 取 $\\mathbb{Z}$、$\\mathbb{Z}/2$ 或 $\\mathbb{R}$，看具体类）满足两条公理：',
+        '',
+        '1. **自然性**：对任意光滑映射 $f : B\' \\to B$ 有 $c_{i}(f^{*}E) = f^{*}c_{i}(E)$；',
+        '2. **同构不变**：$E \\cong E\'$ $\\implies$ $c_{i}(E) = c_{i}(E\')$。',
+        '',
+        '因此示性类是**从「$B$ 上的向量丛」到「$B$ 的上同调」的自然变换**。',
+        '',
+        '**两条最基本的**：',
+        '',
+        '- 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2)$（$i = 0, \\ldots, k$），$w_{1}(E) \\ne 0$ 当且仅当 $E$ 不可定向；',
+        '- 秩 $k$ 复丛的 **Chern 类** $c_{i}(E) \\in H^{2i}(B; \\mathbb{Z})$（$i = 0, \\ldots, k$），$c_{1}$ 是那个「第一障碍」。'
+      ].join('\n'),
+      notes: [
+        '**为什么它接在分类定理后面**：分类定理把丛变成 $\\check{H}^{1}(B; G)$（一个只带基点、没有群结构的集合），示性类把它接到 $H^{\\bullet}(B)$（真正的环）。这样做的代价是**丢失信息**：不同的丛可以有相同的示性类（例如所有平凡丛的示性类都平凡）。所以示性类是**必要条件、不是充分条件** —— 它的用处是「证明两个丛不同构」，不是「证明同构」。',
+        '**和「换结构群」的关系**：示性类正是结构群约化的**障碍**。最典型的一条：$w_{1}(E) = 0$ 等价于 $E$ 的结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$（即可定向，见 `def.orientable-manifold`）；同理 $w_{2} = 0$ 是 $\\mathrm{Spin}$ 结构存在的先决条件（还有一条额外的整系数条件）。这与 `def.structure-group` 的注里说的「能不能约化是障碍理论问题」是同一件事的两面。',
+        '**怎么算出来**：实用算法是 **Chern–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算它的曲率形式，示性类就是曲率形式的多项式（不变量），并且**与联络的选取无关**（差一个恰当形式）。本图只到「联络 / 曲率形式」为止，Chern–Weil 同态、分裂原理、示性类的公理刻画都**未收录**。',
+        '⚠️ **示性类不是丛的不变量，是「丛的同构类」的不变量**：同一个类可以由不同丛给出，所以它给的是 $\\check{H}^{1} \\to H^{\\bullet}$ 的**映射**，不是同构。若想要「完全」不变量，需要用 $K$ 理论或更细的工具。',
+        '⚠️ **特征类 / 示性类 / characteristic class 是同一个东西**的中英几种叫法；注意别与「域的特征」（`def.characteristic`）混淆 —— 那个是 $\\mathrm{char}\\,K$。'
+      ].join('\n\n'),
+      refs: ['Milnor–Stasheff, Characteristic Classes · 示性类', 'Bott–Tu, Differential Forms in Algebraic Topology']
+    }
+  ],
+
+  edges: [
+    { id: 'dep-cc-vector', kind: 'definition',
+      definition: 'def.vector-bundle', usedBy: 'def.characteristic-class',
+      note: '示性类是**向量丛**的不变量。' },
+    { id: 'dep-cc-class', kind: 'definition',
+      definition: 'thm.bundle-classification', usedBy: 'def.characteristic-class',
+      note: '它的存在理由就是「分类定理给出一个算不出的集合」—— 示性类把它接到可算的上同调。' },
+    { id: 'dep-cc-sg', kind: 'definition',
+      definition: 'def.structure-group', usedBy: 'def.characteristic-class',
+      note: '示性类正是「结构群能不能约化」的障碍（$w_1$ 对应可定向）。' },
+    { id: 'dep-cc-tf', kind: 'definition',
+      definition: 'def.transition-function', usedBy: 'def.characteristic-class',
+      note: '从转移函数看，示性类是「上闭链的上同调不变量」—— 换基不变，正是上闭链模换基的自然产物。' }
+  ]
+});
+
+</script>
+  <script>
+/* ==========================================================================
+   内容包 · 紧性的三件套补全 + Fréchet 导数
+   --------------------------------------------------------------------------
+   用户原话：
+     「相对紧没有节点，和等价表述（每个序列有收敛在 X 中子列），完全有界也没有那个
+       每个序列都有 Cauchy 子列的表述，我之前说过要把这种等价的性质或者描述都加上，
+       赋范向量空间的 Fréchet 导数节点也没有啊」
+
+   查证（补前）：
+     · 「相对紧」全库只在 `thm.arzela-ascoli` 的正文里出现 3 次，**没有节点**。
+     · `def.totally-bounded` 的陈述只有「有限 $\varepsilon$-网」一种写法，
+       **没有**「每个序列有 Cauchy 子列」这个等价刻画。
+     · 「Fréchet 导数」0 命中（`def.derivative` 是一维的；`def.total-differential` 是
+       $\mathbb{R}^{n}$ 上的全微分；流形上是 `def.differential-manifold`）。
+       赋范空间之间的 Fréchet 导数（$f'(a)$ 作为有界线性算子）确实缺。
+
+   本包：
+     · def.relatively-compact 相对紧（新节点，含序列刻画）
+     · thm.frechet-derivative  Fréchet 导数（新节点，含与 Gâteaux 导数的关系）
+     · 给 `def.totally-bounded` **补一段**「每个序列有 Cauchy 子列」的等价刻画（只追加注释）
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '相对紧 · 全有界的序列刻画 · Fréchet 导数',
+
+  nodes: [
+
+    {
+      id: 'def.relatively-compact',
+      cluster: 'topology.metric',
+      type: 'definition',
+      label: '相对紧',
+      title: '相对紧：闭包紧的子集',
+      regions: ['topology'],
+      tags: ['定义', '拓扑', '度量空间', '相对紧', '紧', '序列紧'],
+      statement: [
+        '**在做什么**：把紧性从「整个空间」放宽到「一个子集」：**不必自己紧，只要闭包紧**。分析里到处是这种子集（连续函数空间里的相对紧集、有界序列的收敛子列），所以它值得单独立一个名字。',
+        '',
+        '设 $X$ 是拓扑空间，$A \\subseteq X$。称 $A$ **相对紧**（relatively compact，也叫**预紧**），若它在 $X$ 中的闭包 $\\overline{A}$ 是紧集。',
+        '',
+        '在度量空间（更一般地：第一可数空间）里，它可以换成**序列**的说法，三种等价：',
+        '',
+        '1. $\\overline{A}$ 紧（定义）；',
+        '2. **$A$ 中每个序列都有在 $X$ 中收敛的子列** —— 注意极限**允许落在 $A$ 外面**，只要求落在 $X$ 里；',
+        '3. $A$ 中每个序列都有**在 $X$ 中收敛的**子列，且 $A$ 全有界（这一条只是把 2 拆开说）。',
+        '',
+        '**与紧的区别只在极限的位置**：若要求子列的极限**落在 $A$ 里**，那是「$A$ 序列紧」，等价于「$A$ 紧 + 闭」。所以',
+        '',
+        '$$A\\ \\text{紧} \\iff A\\ \\text{相对紧且闭} .$$'
+      ].join('\n'),
+      notes: [
+        '**为什么要把「极限落在哪」讲清楚**：这是相对紧最容易错的地方。$A = (0,1) \\subseteq \\mathbb{R}$ 相对紧（闭包 $[0,1]$ 紧），其中任何序列都有收敛子列 —— 但极限可能是 $0$，不在 $A$ 里。所以 $A$ **不**紧。反过来，$A = \\mathbb{R}$ 里没有有界子列，连相对紧都不是。',
+        '**在度量空间里的判据（最常用）**：$A$ 相对紧 $\\iff$ **$A$ 完全有界**（`def.totally-bounded`）。于是「相对紧」在日常使用中几乎总是靠「全有界 + 完备空间的闭包」来验证：完备度量空间里，相对紧 = 全有界。这也是为什么紧性的证明常常分成「先证全有界、再用完备性取极限」两段。',
+        '⭐ **它在函数空间里才是主角**：$C(K)$、$L^{p}$、全纯函数空间里，「什么样的函数族相对紧」是一门专门的学问 —— Arzelà–Ascoli（`thm.arzela-ascoli`：等度连续 + 逐点相对紧 $\\implies$ 相对紧）、Montel 定理（局部一致有界的全纯函数族相对紧）、Rellich–Kondrachov（Sobolev 嵌入的紧性）。这些定理的结论都是「某族函数相对紧」，而不是「紧」。',
+        '⚠️ **相对紧不传递到任意子集**：相对紧集的子集相对紧（闭包更小），但**相对紧集的闭包**才是紧的；不要反过来推「相对紧集的每个子集都紧」。'
+      ].join('\n\n'),
+      refs: ['Munkres, Topology · 相对紧', 'Rudin, Functional Analysis · 紧性']
+    },
+
+    {
+      id: 'thm.frechet-derivative',
+      cluster: 'fa.norm',
+      type: 'definition',
+      label: 'Fréchet 导数',
+      title: 'Fréchet 导数：赋范空间之间的导数就是有界线性算子',
+      regions: ['functional-analysis'],
+      tags: ['定义', '泛函分析', 'Fréchet 导数', '微分', '有界算子'],
+      statement: [
+        '**在做什么**：把「导数是一个线性映射」这句话搬到赋范空间上。关键不是「$f$ 有多光滑」，而是 **「线性主部」必须是连续的**（即有界算子）—— 这一条是赋范空间版本与有限维版本唯一实质的差别。',
+        '',
+        '设 $E, F$ 是赋范空间，$\\Omega \\subseteq E$ 开，$f : \\Omega \\to F$，$a \\in \\Omega$。称 $f$ 在 $a$ 处 **Fréchet 可微**，若存在**有界线性算子** $T \\in B(E, F)$ 使',
+        '',
+        '$$f(a + h) = f(a) + T h + o(\\|h\\|) \\qquad (\\|h\\| \\to 0),$$',
+        '',
+        '即',
+        '',
+        '$$\\lim_{\\|h\\| \\to 0} \\frac{\\|f(a+h) - f(a) - Th\\|}{\\|h\\|} = 0 .$$',
+        '',
+        '这样的 $T$ 若存在则**唯一**（取 $h = t v$、$t \\to 0$ 即看出 $T$ 在每条射线上被钉死），记 $f\'(a) := T \\in B(E, F)$。',
+        '',
+        '**与 Gâteaux 导数的区别**：Gâteaux 导数只要求沿每条射线 $t \\mapsto f(a + tv)$ 的导数存在（得到一个线性映射，甚至未必连续）；Fréchet 可微则要求**一致的**余项估计。于是',
+        '',
+        '$$\\text{Fréchet 可微} \\implies \\text{Gâteaux 可微，且两者相等} ,$$',
+        '',
+        '反过来不成立（Gâteaux 导数的存在不保证余项一致小）。'
+      ].join('\n'),
+      notes: [
+        '**为什么要求 $T$ 有界**：$E$ 无穷维时「线性」不足以谈极限 —— 无界线性算子照样能写下 $f(a) + Th$，但它在 $a$ 处根本不连续，$o(\\|h\\|)$ 的估计不可能成立。所以定义里把 $B(E,F)$ 写死，**不是偷懒**：有限维时自动满足，无穷维时是实质条件。',
+        '**几个基本事实**（证明与一元情形同构，只是把绝对值换成范数）：',
+        '',
+        '- **链式法则**：$f$ 在 $a$、$g$ 在 $f(a)$ 处 Fréchet 可微 $\\implies$ $g \\circ f$ 在 $a$ 处可微，且 $(g\\circ f)\'(a) = g\'(f(a)) \\circ f\'(a)$（算子的复合，注意顺序）；',
+        '- **可微 $\\implies$ 连续**；',
+        '- **中值不等式**：$\\|f(b) - f(a)\\| \\le \\sup_{[a,b]}\\|f\'\\| \\cdot \\|b - a\\|$ —— 这是把一元中值定理搬过来时**唯一能用的形式**（等号形式不再成立，因为有界线性算子不能「取某点处的值」）；',
+        '- **逆映射定理（Banach 版）**（`thm.inverse-function-banach`）：$f\'(a)$ **可逆**（作为 $B(E,F)$ 的元素，从而 $E \\cong F$）+ 连续可微 $\\implies$ $f$ 在 $a$ 附近是局部同胚。那条定理的假设就写在这个导数上。',
+        '⚠️ **与另外两个「导数」的分工**：`def.derivative` 是一元实函数；`def.total-differential` 是 $\\mathbb{R}^{n} \\to \\mathbb{R}^{m}$ 的全微分（Jacobian 矩阵）；流形之间的微分是 `def.differential-manifold`（切空间之间的线性映射）。本节点是**赋范空间之间**的版本 —— 它把前两个都收成特例（有限维时 $f\'(a)$ 就是 Jacobian 矩阵）。',
+        '⚠️ **高阶导数**要小心：$f\'\' (a)$ 是 $B(E, B(E,F)) \\cong B(E \\times E, F)$ 的元素（双线性型），不是「二阶矩阵」。赋范空间上写 Taylor 公式（`thm.taylor`）时必须按这个理解。'
+      ].join('\n\n'),
+      refs: ['Rudin, Functional Analysis · Fréchet 导数', 'Brezis, Functional Analysis, Sobolev Spaces and PDE · 微分']
+    }
+  ],
+
+  edges: [
+    { id: 'dep-rc-compact', kind: 'definition',
+      definition: 'def.compact', usedBy: 'def.relatively-compact',
+      note: '相对紧 = 闭包紧，定义直接用紧。' },
+    { id: 'dep-rc-closed', kind: 'definition',
+      definition: 'def.closed-set', usedBy: 'def.relatively-compact',
+      note: '要用闭包（$\\overline{A}$）与「闭」刻画「相对紧 vs 紧」。' },
+    { id: 'dep-rc-totbdd', kind: 'definition',
+      definition: 'def.totally-bounded', usedBy: 'def.relatively-compact',
+      note: '度量空间里相对紧 $\\iff$ 全有界 —— 最常用的判据。' },
+    { id: 'dep-rc-seq', kind: 'definition',
+      definition: 'def.sequentially-compact', usedBy: 'def.relatively-compact',
+      note: '序列刻画与「序列紧」只差「极限落在哪里」。' },
+
+    { id: 'dep-fd-bounded', kind: 'definition',
+      definition: 'def.bounded-operator', usedBy: 'thm.frechet-derivative',
+      note: 'Fréchet 导数取值在 $B(E,F)$（有界算子）里，这是无穷维时的实质条件。' },
+    { id: 'dep-fd-norm', kind: 'definition',
+      definition: 'def.norm', usedBy: 'thm.frechet-derivative',
+      note: '余项估计 $o(\\|h\\|)$ 与范数有关。' },
+    { id: 'dep-fd-total', kind: 'definition',
+      definition: 'def.total-differential', usedBy: 'thm.frechet-derivative',
+      note: '有限维时 $f\'(a)$ 就是全微分（Jacobian 矩阵），本条是它的推广。' },
+    { id: 'dep-fd-invfn', kind: 'definition',
+      definition: 'thm.inverse-function-banach', usedBy: 'thm.frechet-derivative',
+      note: 'Banach 版逆映射定理的假设「$f\'(a)$ 可逆」用的就是这个导数。' }
   ]
 });
 
@@ -81074,7 +81314,7 @@ window.MG = window.MG || {};
       ].join('\n'),
       notes: [
         '证法只有两步：**上界**用三角不等式 $\\|x\\| \\le \\sum |x_k|\\,\\|e_k\\| \\le \\|x\\|_\\infty \\sum \\|e_k\\|$；\n\n**下界**把 $\\|\\cdot\\|$ 看成单位球面 $S = \\{x : \\|x\\|_\\infty = 1\\}$ 上的连续函数 —— $S$ 紧、$\\|\\cdot\\|$ 无处为零，故取下确界 $\\alpha > 0$。',
-        '⭐ 整条定理的实质是「**紧 + 连续 + 无零点 $implies$ 有正的最小值**」，也就是「单位球面紧」。所以它在无穷维必错（见「单位球紧 $\\iff$ 有限维」）。',
+        '⭐ 整条定理的实质是「**紧 + 连续 + 无零点 $\\implies$ 有正的最小值**」，也就是「单位球面紧」。所以它在无穷维必错（见「单位球紧 $\\iff$ 有限维」）。',
         '⚠️ 反例（讲义没有列，但值得记）：$C[0,1]$ 上 $\\|\\cdot\\|_\\infty$ 严格强于 $\\|\\cdot\\|_1$：$f_n(x) = x^n$ 在 $\\|\\cdot\\|_1$ 下趋于 $0$，却**不**一致收敛于 $0$（点态极限是 $x = 1$ 处的跳变）。'
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis · 赋范空间与有限维'],
@@ -81310,7 +81550,7 @@ window.MG = window.MG || {};
       notes: [
         '证法：$\\|u^k\\| \\le \\|u\\|^k$（次可乘），故 $\\sum \\|u^k\\| \\le (1 - \\|u\\|)^{-1} < \\infty$；$B(E)$ 完备（$E$ 完备 +「$B(E,F)$ 完备」）故级数收敛到某 $v$。\n\n部分和满足 $(I - u)\\sum_{k<n} u^k = I - u^n \\to I$，同法右乘，得 $v = (I-u)^{-1}$。',
         '⭐ 这是三大定理之外最常用的「开工工具」：它给的是**显式**的逆，且只要求 $\\|u\\| < 1$。摄动论（$A + tB$ 的谱、Kato 的解析扰动）、数值分析里的迭代收敛、Banach 逆映射定理里的局部逆，全靠它。',
-        '⚠️ 反过来「$I - u$ 可逆 $\\implies$ $\\|u\\| < 1$」是**错的**：$u = -2I$ 时 $I - u = 3I$ 可逆。有界逆定理给的是另一件事（双射 $implies$ 逆连续），不是这条。'
+        '⚠️ 反过来「$I - u$ 可逆 $\\implies$ $\\|u\\| < 1$」是**错的**：$u = -2I$ 时 $I - u = 3I$ 可逆。有界逆定理给的是另一件事（双射 $\\implies$ 逆连续），不是这条。'
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数'],
     },
@@ -81352,7 +81592,7 @@ window.MG = window.MG || {};
       ].join('\n'),
       notes: [
         '🆚 **Hamel 基（代数基）**：只允许**有限**线性组合。无穷维 Banach 空间的 Hamel 基一定**不可数**（Baire 纲定理的经典应用：若可数，则 $E$ 是可数个有限维闭子空间之并，与 Baire 矛盾）。',
-        'Schauder 基要求的是**级数收敛**，所以可以是可数的；而且 Schauder 基 $implies$ **可分**（有理系数的有限组合稠密）。',
+        'Schauder 基要求的是**级数收敛**，所以可以是可数的；而且 Schauder 基 $\\implies$ **可分**（有理系数的有限组合稠密）。',
         '⚠️ 「有 Schauder 基」曾长期是开放问题：Enflo (1973) 造出无 Schauder 基的可分 Banach 空间，所以它**不能**当成默认假设。',
         '⚠️ 与 Hilbert 空间的「正交基」不同：Schauder 基不要求正交、也不要求唯一性来自内积；Hilbert 空间里正交基一定是 Schauder 基，反之不然。'
       ].join('\n\n'),
@@ -81788,7 +82028,7 @@ window.MG = window.MG || {};
       notes: [
         '证法（球套法）分四步：\n\n' +
         '1. **起点**：记 $B_0 := B(x, \\varepsilon)$。\n\n' +
-        '$O_1$ 稠密开 $implies$ $B_0 \\cap O_1$ 是非空开，于是可取 $x_1$ 与 $\\varepsilon_1 < \\min(\\varepsilon/2,\\ 1)$ 使\n\n' +
+        '$O_1$ 稠密开 $\\implies$ $B_0 \\cap O_1$ 是非空开，于是可取 $x_1$ 与 $\\varepsilon_1 < \\min(\\varepsilon/2,\\ 1)$ 使\n\n' +
         '$$\\overline{B(x_1, \\varepsilon_1)} \\subseteq B(x, \\varepsilon) \\cap O_1 .$$\n\n' +
         '2. **归纳**：已取 $x_n, \\varepsilon_n$（且 $\\varepsilon_n < 1/n$）。\n\n' +
         '由 $O_{n+1}$ 稠密开，$B(x_n, \\varepsilon_n) \\cap O_{n+1}$ 仍是非空开，取\n\n' +
@@ -82379,7 +82619,7 @@ window.MG = window.MG || {};
       proof: [
         '由范数等价，$\\alpha\\|x\\|_\\infty \\le \\|x\\| \\le \\beta\\|x\\|_\\infty$，故 $B_E \\subseteq \\{x : \\|x\\|_\\infty \\le 1/\\alpha\\}$，右端按坐标范数有界闭，由 Heine–Borel 紧；\n\n$B_E$ 是其闭子集（$\\|\\cdot\\|$ 连续），故紧。\n\n$\\blacksquare$'
       ].join('\n'),
-      note: '只要「有限维 $implies$ 范数等价」，剩下全是 Heine–Borel。'
+      note: '只要「有限维 $\\implies$ 范数等价」，剩下全是 Heine–Borel。'
     },
     {
       id: 'imp.fa-almostorth-riesz',
@@ -82404,7 +82644,7 @@ window.MG = window.MG || {};
         '在 $0$ 连续 $\\implies$ 有界：反证。\n\n若不存在 $C$，则对每个 $n$ 有 $x_n \\ne 0$ 使 $\\|u(x_n)\\| > n\\|x_n\\|$；令 $y_n = x_n/(n\\|x_n\\|)$，则 $\\|y_n\\| = 1/n \\to 0$ 而 $\\|u(y_n)\\| > 1$，与 $u$ 在 $0$ 连续矛盾。',
         '一点连续 $\\implies$ 在 $0$ 连续：$x \\to 0$ 时 $x + x_0 \\to x_0$，故 $u(x) = u(x + x_0) - u(x_0) \\to 0$。$\\blacksquare$'
       ].join('\n'),
-      note: '「一点连续 $implies$ 处处连续」只因为线性（平移是连续双射）。'
+      note: '「一点连续 $\\implies$ 处处连续」只因为线性（平移是连续双射）。'
     },
     {
       id: 'imp.fa-neumann',

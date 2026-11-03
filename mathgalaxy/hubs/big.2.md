@@ -10,6 +10,6 @@
 - **5 / 5** `thm.urysohn-metrization` Urysohn 度量化定理 · layer 18 · 可度量化
 - **5 / 5** `def.form-on-manifold` 微分形式 · layer 18 · 微分形式、积分与 de Rham
 
-（共 1457 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1460 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

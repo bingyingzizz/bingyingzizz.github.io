@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 特征多项式 | 代数重数 → def.char-poly
+
 - Gram–Schmidt 正交化 → thm.gram-schmidt
 
 - 秩-零化度定理 → thm.rank-nullity
@@ -40,7 +42,5 @@
 - 可解性对子群与商群封闭 → thm.solvable-quotients
 
 - 对称群的可解性 → prop.sn-solvable
-
-- Steinitz 交换引理 → thm.steinitz
 
 > 续见 alias/aka/algebra.5.md

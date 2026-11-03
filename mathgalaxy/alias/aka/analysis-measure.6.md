@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 乘积测度由截口给出 → thm.product-measure-sections
+
 - 乘积测度不完备 → prop.product-incomplete
 
 - Fubini | Tonelli | 富比尼 | 富比尼定理 | 交换积分次序 | 重积分换序 → thm.fubini-tonelli
@@ -26,7 +28,5 @@
 - Radon–Nikodym 导数 | RN 导数 | 密度 | Radon-Nikodym derivative → def.rn-derivative
 
 - 全变差 | total variation → prop.total-variation-basics
-
-- Hahn 分解 | Hahn decomposition | 哈恩分解 → thm.hahn-decomposition
 
 > 续见 alias/aka/analysis-measure.7.md

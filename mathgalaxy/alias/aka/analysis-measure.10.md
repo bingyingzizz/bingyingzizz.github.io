@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- Lq 落在 Lp 加 Lr → prop.lq-in-lp-plus-lr
+
 - Lp 交 Lr 包含于 Lq → prop.lp-inter-lr-in-lq
 
 - 小 l p 空间 | 序列空间包含 | ℓp → prop.ell-p-inclusion
