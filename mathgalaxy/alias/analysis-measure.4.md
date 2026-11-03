@@ -5,4 +5,8 @@
 
 - Lp 之间能不能互相包含 → prop.lp-inclusion-finite prop.lp-inter-lr-in-lq prop.lq-in-lp-plus-lr
 
+- 测度和长度有什么区别 → def.measure def.outer-measure
+
+- 为什么积分和求和可以换顺序 → thm.mct thm.termwise-integration thm.dct
+
 见 `../alias.md`。

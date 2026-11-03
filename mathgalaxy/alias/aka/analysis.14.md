@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
+
+- Abel 第二定理 → thm.abel-endpoint
+
 - 求导法则 → thm.derivative-rules
 
 - Arzelà–Ascoli 定理 → thm.arzela-ascoli
@@ -9,7 +13,7 @@
 
 - 完备性的六条等价 → thm.completeness-equivalent
 
-- 有界闭 ⟺ 紧（ℝⁿ） → cor.heine-borel
+- 有界闭 ⟺ 紧（ℝⁿ） | 海涅–博雷尔定理 | 海涅–博雷尔 → cor.heine-borel
 
 - 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
 
@@ -34,11 +38,5 @@
 - 一致收敛保连续 → thm.uniform-limit-continuous
 
 - 积分与极限交换 → thm.uniform-limit-integral
-
-- 阿基米德的 ε 形式与取整 | 阿基米德 → cor.archimedean-epsilon
-
-- p-级数 → thm.p-series
-
-- Riemann 重排定理 → thm.riemann-rearrangement
 
 > 续见 alias/aka/analysis.15.md

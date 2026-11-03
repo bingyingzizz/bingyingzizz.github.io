@@ -4,17 +4,17 @@
 中心天体 def.exterior-algebra　·　23 个节点　·　根 `../`　·　续页 `index/algebra.multilinear.2.md`
 
 - def.bilinear-form　双线性型　layer 10
-- def.tensor-product-vs　张量积　layer 11
 - def.exterior-power　外幂　layer 11
 - def.symplectic-form　辛形式　layer 11
-- thm.tensor-universal-property　张量积的万有性质　layer 12
-- def.exterior-algebra　外代数　layer 12
-- def.symmetric-algebra　对称代数　layer 12
+- def.tensor-product-vs　张量积（向量空间）　layer 12
 - thm.det-as-exterior　行列式 = 最高外幂上的作用　layer 12
 - def.matrix-of-bilinear-form　双线性型的矩阵　layer 12
 - def.isotropic-vector　迷向向量　layer 12
-- prop.tensor-hom-adjunction　张量 ⊣ 内 Hom　layer 13
+- thm.tensor-universal-property　张量积的万有性质　layer 13
+- def.exterior-algebra　外代数　layer 13
+- def.symmetric-algebra　对称代数　layer 13
 - def.congruent-matrices　合同矩阵　layer 13
 - def.isotropic-subspace　迷向子空间　layer 13
+- def.hyperbolic-plane　双曲平面　layer 13
 
 > 续见 `index/algebra.multilinear.2.md`

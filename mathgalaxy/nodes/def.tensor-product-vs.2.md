@@ -1,4 +1,4 @@
-# 张量积　`def.tensor-product-vs`　·　续页（第 2 页）
+# 张量积（向量空间）　`def.tensor-product-vs`　·　续页（第 2 页）
 [在星图里打开](../#n=def.tensor-product-vs)　·　第 1 页 [nodes/def.tensor-product-vs.md](./def.tensor-product-vs.md)
 
 ## 陈述（续）

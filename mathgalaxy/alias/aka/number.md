@@ -1,5 +1,5 @@
 # 别名 → 节点 · 数论
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../number.md`
 
 - a|b | 整除关系 → def.divides
 
@@ -38,7 +38,5 @@
 - 除数公式 | 因数和公式 → thm.divisor-formula
 
 - 莫比乌斯和恒等式 | μ 的和 → thm.mu-sum
-
-- 莫比乌斯反演公式 → thm.mobius-inversion
 
 > 续见 alias/aka/number.2.md

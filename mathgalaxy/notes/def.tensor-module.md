@@ -1,4 +1,4 @@
-# 模的张量积　`def.tensor-module`　·　说明
+# 张量积　`def.tensor-module`　·　说明
 根 `../`
 
 **读法**：三个关系各管一件事 —— 前两条说 $\otimes$ 对两个变元分别可加，第三条 $m r \otimes n = m \otimes r n$ 说「$R$ 的作用可以从一边搬到另一边」。交换环上第三条写成 $r m \otimes n = m \otimes r n$，最眼熟。

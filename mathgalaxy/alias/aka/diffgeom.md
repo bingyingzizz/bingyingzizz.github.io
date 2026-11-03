@@ -1,5 +1,5 @@
 # 别名 → 节点 · 微分几何
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
 - 切向量 | 切向量空间 | tangent vector → def.tangent-space-manifold
 

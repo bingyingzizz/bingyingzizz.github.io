@@ -10,5 +10,6 @@
 3. 存在可逆 $P$ 使 $A = P^{*}P$（半正定：$A = P^{*}P$ 不必可逆）；
 4. $x \mapsto \sqrt{x^{*}Ax}$ 是范数（半正定时是
 半范数）。
+**各方向用到的假设**（四条里，前两条是“谱/主子式”判据，后两条是“分解/范数”判据，依赖的东西不一样）：
 
 > 续见 [nodes/def.positive-definite-matrix.3.md](./def.positive-definite-matrix.3.md)

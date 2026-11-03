@@ -1,7 +1,7 @@
 # 多重线性与张量 / Multilinear Algebra and Tensors（algebra.multilinear）· 节点清单（第 2/2 页）
 根 `../`　·　第 1 页 `index/algebra.multilinear.md`
 
-- def.hyperbolic-plane　双曲平面　layer 13
+- prop.tensor-hom-adjunction　张量 ⊣ 内 Hom　layer 14
 - thm.witt-cancellation　Witt 消去定理　layer 14
 - def.symplectic-basis　辛基　layer 14
 - def.lagrangian-subspace　Lagrange 子空间　layer 14

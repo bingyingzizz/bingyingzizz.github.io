@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 15 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Orientation and Volume` (short) · `Orientation and Volume Forms` (full)
 
 ## Statement and proof

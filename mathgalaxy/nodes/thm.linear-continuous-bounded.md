@@ -10,9 +10,12 @@ layer 12 · 定理 · 赋范空间与有界算子 · 泛函分析
 3. $u$ 在 $0$ 连续；
 4. $u$ 有界（即 $\|u(x)\| \le C\|x\|$）；
 5. $u$ 是 Lipschitz 的。
+**各方向用到的假设**（五条里前四条几乎免费，真正的代价在最后一条）：
+> 陈述续见 [nodes/thm.linear-continuous-bounded.2.md](./thm.linear-continuous-bounded.2.md)
+
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.linear-continuous-bounded.2.md](./thm.linear-continuous-bounded.2.md)
+- …另有入边，续页见 [nodes/thm.linear-continuous-bounded.5.md](./thm.linear-continuous-bounded.5.md)
 
 refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 

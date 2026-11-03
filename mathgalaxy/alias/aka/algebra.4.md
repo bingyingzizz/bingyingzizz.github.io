@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Lagrange 定理 | 拉格朗日定理 | 拉格朗日 → thm.lagrange
+
 - 特征多项式 | 代数重数 → def.char-poly
 
 - Gram–Schmidt 正交化 → thm.gram-schmidt
@@ -17,7 +19,7 @@
 
 - 轨道–稳定子定理 → thm.orbit-stabilizer
 
-- Sylow 定理 → thm.sylow
+- Sylow 定理 | 西罗定理 | 西罗 → thm.sylow
 
 - 第一同构定理（向量空间版） → thm.first-iso-vs
 
@@ -38,9 +40,5 @@
 - 极小多项式 → def.minimal-poly
 
 - 行列式 = 最高外幂上的作用 → thm.det-as-exterior
-
-- 可解性对子群与商群封闭 → thm.solvable-quotients
-
-- 对称群的可解性 → prop.sn-solvable
 
 > 续见 alias/aka/algebra.5.md

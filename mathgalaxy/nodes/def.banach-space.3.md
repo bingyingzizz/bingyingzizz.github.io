@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.dual-banach`](../nodes/def.dual-banach.md) 连续对偶空间 用
+- 被 [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间 用

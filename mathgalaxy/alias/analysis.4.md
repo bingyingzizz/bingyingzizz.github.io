@@ -21,4 +21,6 @@
 
 - 有限维 Banach 之间的 RHom → ex.finite-banach-rhom prop.rhom-banach-discrete-zero def.banach-ab-group
 
-见 `../alias.md`。
+- 为什么有理数不够用 → thm.real-ordered-field def.real thm.real-complete-metric
+
+> 续见 alias/analysis.5.md

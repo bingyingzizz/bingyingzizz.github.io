@@ -1,4 +1,4 @@
-# 张量积　`def.tensor-product-vs`　·　说明
+# 张量积（向量空间）　`def.tensor-product-vs`　·　说明
 根 `../`
 
 ⭐ 元素分两类：**可分解张量** $v \otimes w$ 与它们的**有限和**。

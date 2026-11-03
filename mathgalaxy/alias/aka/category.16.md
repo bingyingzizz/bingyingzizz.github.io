@@ -9,9 +9,9 @@
 
 - Theorem 1.2.4 | Thm 1.2.4 → thm.equivalence-criterion
 
-- Proposition 1.5.10 | Prop 1.5.10 → prop.kan-extension-adjoint
+- Proposition 1.5.10 | Prop 1.5.10 | 坎延拓 → prop.kan-extension-adjoint
 
-- Proposition 1.5.11 | Prop 1.5.11 → prop.kan-extension-exists
+- Proposition 1.5.11 | Prop 1.5.11 | 坎延拓 → prop.kan-extension-exists
 
 - Theorem 3.1.2 | Thm 3.1.2 | Exercise 1.67 → thm.presheaf-limits-colimits
 
@@ -21,6 +21,6 @@
 
 - Exercise 7.51 → prop.topos-morphism-abelian-adjunction
 
-- Exercise 7.52 | Exercise 3.51 → prop.inverse-image-tensor
+- Exercise 7.52 | Exercise 3.51 | 拉回与内 Hom → prop.inverse-image-tensor
 
 > 续见 alias/aka/category.17.md

@@ -21,7 +21,7 @@
 
 - 闭子代数是格 | 格子代数引理 → lem.closed-subalgebra-lattice
 
-- Stone-Weierstrass | 斯通-魏尔斯特拉斯 | Weierstrass 逼近定理 → thm.stone-weierstrass
+- Stone-Weierstrass | 斯通-魏尔斯特拉斯 | Weierstrass 逼近定理 | 斯通–魏尔斯特拉斯定理 → thm.stone-weierstrass
 
 - 复 Stone-Weierstrass | 圆盘代数 → thm.stone-weierstrass-complex
 

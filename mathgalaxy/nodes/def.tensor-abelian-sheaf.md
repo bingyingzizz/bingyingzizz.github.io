@@ -1,5 +1,5 @@
 # 阿贝尔层的张量积　`def.tensor-abelian-sheaf`
-张量积与封闭幺半结构
+阿贝尔层的张量积与封闭幺半结构
 layer 18 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.tensor-abelian-sheaf)　·　[节点索引](../index.md)
 

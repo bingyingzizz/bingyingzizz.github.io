@@ -1,7 +1,7 @@
 # 平衡双加性的万有性质 $\implies$ 张量–内 Hom 伴随
 `imp.hom-tensor-adjunction-mod` · 推出 · strong 边 · 根 `../`
 
-`prop.module-tensor-universal` 张量积对双线性映射万有 + `def.tensor-module` 模的张量积 → `thm.hom-tensor-adjunction-mod` 张量与内同态的伴随
+`prop.module-tensor-universal` 张量积对双线性映射万有 + `def.tensor-module` 张量积 → `thm.hom-tensor-adjunction-mod` 张量与内同态的伴随
 
 复合两个双射即得同构。**自然性**：同构由显式公式 $f \mapsto \bigl(m \mapsto (n \mapsto f(m \otimes n))\bigr)$ 给出，公式里没有任何选取，故对 $M$ 与 $P$ 都自然 ✓。∎
 

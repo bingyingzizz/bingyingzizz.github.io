@@ -1,6 +1,8 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 5.18 | Exercise 5.24 → def.free-abelian-sheaf
+
 - Exercise 5.9 → prop.image-kernel-cokernel
 
 - Exercise 5.10 → prop.exact-at-points
@@ -30,7 +32,5 @@
 - Exercise 7.35 → prop.derived-functor-exact-factor
 
 - Exercise 7.39 → prop.flat-tensor-acyclic
-
-- Exercise 7.40 → prop.cech-cochain-formula
 
 > 续见 alias/aka/homology.15.md

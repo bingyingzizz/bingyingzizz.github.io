@@ -1,6 +1,16 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 正弦与余弦 → def.trig-function
+
+- 诱导范数与距离 → def.induced-norm
+
+- 序与四则运算 → prop.order-rules
+
+- 二项式定理 → thm.binomial
+
+- Bernoulli 不等式 → thm.bernoulli
+
 - 一致连续 → def.uniform-continuity
 
 - 圆周率 π → def.pi
@@ -29,4 +39,12 @@
 
 - 逐点收敛 → def.pointwise-convergence
 
-见 `../../alias.md`。
+- 巴拿赫空间 → def.banach-space
+
+- 雅可比矩阵 → def.jacobian
+
+- 海森矩阵 | 黑塞矩阵 → def.hessian
+
+- 多元泰勒公式 | 泰勒公式（多元） → thm.taylor-multi
+
+> 续见 alias/aka/analysis.17.md

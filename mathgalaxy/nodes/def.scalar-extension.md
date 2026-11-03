@@ -8,7 +8,7 @@ layer 12 · 定义 · 模的张量积与标量限制 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.tensor-module`](../nodes/def.tensor-module.md) 模的张量积：用到了定义 模的张量积　[proofs/def-link.scalarext-tensor.md](../proofs/def-link.scalarext-tensor.md)
+- [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积：用到了定义 张量积　[proofs/def-link.scalarext-tensor.md](../proofs/def-link.scalarext-tensor.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.scalar-extension.3.md](./def.scalar-extension.3.md)

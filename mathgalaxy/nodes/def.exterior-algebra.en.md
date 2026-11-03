@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 13 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.exterior-algebra.md` and `proofs/`.

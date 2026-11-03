@@ -1,5 +1,7 @@
 # 别名 → 节点 · 数论
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../number.md`
+
+- 莫比乌斯反演公式 → thm.mobius-inversion
 
 - 素数计数函数 | 切比雪夫函数 | Чебышёв 函数 → def.prime-counting
 
@@ -31,8 +33,4 @@
 
 - 原根 | 本原根 → def.primitive-root
 
-- 模素数原根存在 | 单位群循环 → thm.primitive-root-exists
-
-- 离散对数 | 指标 → def.discrete-log
-
-见 `../../alias.md`。
+> 续见 alias/aka/number.3.md

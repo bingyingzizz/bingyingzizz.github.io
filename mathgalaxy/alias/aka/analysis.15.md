@@ -1,7 +1,13 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
-- Euler 公式 → thm.euler-formula
+- 阿基米德的 ε 形式与取整 | 阿基米德 → cor.archimedean-epsilon
+
+- p-级数 → thm.p-series
+
+- Riemann 重排定理 → thm.riemann-rearrangement
+
+- Euler 公式 | 欧拉公式 | 欧拉恒等式 → thm.euler-formula
 
 - Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
 
@@ -38,15 +44,5 @@
 - 一致 Cauchy 列 → def.uniform-cauchy
 
 - 指数函数 → def.exp-function
-
-- 正弦与余弦 → def.trig-function
-
-- 诱导范数与距离 → def.induced-norm
-
-- 序与四则运算 → prop.order-rules
-
-- 二项式定理 → thm.binomial
-
-- Bernoulli 不等式 → thm.bernoulli
 
 > 续见 alias/aka/analysis.16.md

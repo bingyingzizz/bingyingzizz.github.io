@@ -21,8 +21,6 @@
 
 - Lemma 7.3.2 → lem.covering-free-acyclic
 
-- Corollary 7.3.8 | Cor 7.3.8 → cor.cech-cohomology-spectral
-
-- Exercise 5.18 | Exercise 5.24 → def.free-abelian-sheaf
+- Corollary 7.3.8 | Cor 7.3.8 | 切赫谱序列 → cor.cech-cohomology-spectral
 
 > 续见 alias/aka/homology.14.md

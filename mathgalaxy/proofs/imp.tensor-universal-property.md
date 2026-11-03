@@ -1,7 +1,7 @@
 # 张量积的构造 $\implies$ 万有性质
 `imp.tensor-universal-property` · 推出 · strong 边 · 根 `../`
 
-`def.tensor-product-vs` 张量积 + `def.quotient-vs` 商空间 → `thm.tensor-universal-property` 张量积的万有性质
+`def.tensor-product-vs` 张量积（向量空间） + `def.quotient-vs` 商空间 → `thm.tensor-universal-property` 张量积的万有性质
 
 **存在性**：给定双线性 $B : V \times W \to U$。
 

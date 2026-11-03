@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 基本类 | fundamental class → def.fundamental-class
+
 - 集合族的性质 → prop.set-class-properties
 
 - 测度 | measure | 可数可加 → def.measure

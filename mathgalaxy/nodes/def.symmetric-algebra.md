@@ -1,6 +1,6 @@
 # 对称代数　`def.symmetric-algebra`
 对称代数 $\operatorname{Sym}^{\bullet} V$
-layer 12 · 定义 · 多重线性与张量 · 抽象代数
+layer 13 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.symmetric-algebra)　·　[节点索引](../index.md)
 
 与外幂平行地，对称幂定义为 $V^{\otimes k}$ 商掉由 $v \otimes w - w \otimes v$ 张成的子空间，记像为 $v \cdot w$（交换）；再把各次直和起来得**对称代数**

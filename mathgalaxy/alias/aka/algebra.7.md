@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 向量空间的张量积 → def.tensor-product-vs
+
+- 外幂 → def.exterior-power
+
+- 对称代数 → def.symmetric-algebra
+
 - 置换群与对称群 → def.permutation-group
 
 - 符号与交错群 → def.alternating-group
@@ -17,7 +23,7 @@
 
 - 不可约元 | 素元 | 相伴元 → def.irreducible-element
 
-- 最大公因子整环 → def.gcd-domain
+- 最大公因子整环 | 最大公因子的整环 → def.gcd-domain
 
 - Bézout 整环 | 裴蜀整环 → def.bezout-domain
 
@@ -31,4 +37,8 @@
 
 - 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
 
-见 `../../alias.md`。
+- 埃塔勒层 | 平展层 → def.etale-sheaf
+
+- 埃塔勒层的例子 → prop.etale-sheaf-examples
+
+> 续见 alias/aka/algebra.8.md

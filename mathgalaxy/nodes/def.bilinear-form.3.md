@@ -3,9 +3,9 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.quadratic-form`](../nodes/def.quadratic-form.md) 二次型 用
-- 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积 用
+- 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积（向量空间） 用
 - 被 [`def.hessian`](../nodes/def.hessian.md) Hessian 矩阵 用
-- 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 模的张量积 用
+- 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积 用
 - 被 [`def.matrix-of-bilinear-form`](../nodes/def.matrix-of-bilinear-form.md) 双线性型的矩阵 用
 - 被 [`def.isotropic-vector`](../nodes/def.isotropic-vector.md) 迷向向量 用
 - 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用

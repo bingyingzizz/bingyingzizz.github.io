@@ -1,9 +1,9 @@
-# 模的张量积　`def.tensor-module`
+# 张量积　`def.tensor-module`
 模的张量积 $M \otimes_{R} N$
 layer 11 · 定义 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=def.tensor-module)　·　[节点索引](../index.md)
 
-设 $R$ 是含幺环，$M$ 是
+设 $R$ 是含幺环，$M$ 是右 
 > 陈述续见 [nodes/def.tensor-module.2.md](./def.tensor-module.2.md)
 
 

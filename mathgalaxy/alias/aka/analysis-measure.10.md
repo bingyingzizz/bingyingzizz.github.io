@@ -23,6 +23,6 @@
 
 - Banach | 巴拿赫空间 | Lp 完备 → thm.lp-banach
 
-- Riesz 表示 | 对偶空间 | dual space | (Lp)* = Lq → thm.riesz-representation-lp
+- Riesz 表示 | 对偶空间 | dual space | (Lp)* = Lq | 里斯表示定理 → thm.riesz-representation-lp
 
 见 `../../alias.md`。

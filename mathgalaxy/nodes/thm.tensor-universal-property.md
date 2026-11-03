@@ -1,6 +1,6 @@
 # 张量积的万有性质　`thm.tensor-universal-property`
 定理：张量积把双线性映射换成线性映射
-layer 12 · 定理 · 多重线性与张量 · 抽象代数
+layer 13 · 定理 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=thm.tensor-universal-property)　·　[节点索引](../index.md)
 
 对每个线性映射（更一般地：双线性映射）$B : V \times W \to U$，存在**唯一**的线性映射

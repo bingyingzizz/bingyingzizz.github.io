@@ -1,6 +1,8 @@
 # 别名 → 节点 · 集合论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../set-theory.md`
 
+- 对角线论证 | diagonal argument | 幂集比原集大 | 康托 | 康托尔 | 康托尔定理 → thm.cantor
+
 - 基数可比 | 三分律 | comparability of cardinals → thm.cardinal-comparable
 
 - 自然数 | natural numbers | ℕ → thm.omega
@@ -28,7 +30,5 @@
 - 完备有序域唯一 | 实数唯一 → thm.real-unique
 
 - 序数 | ordinal | 序数定义 → def.ordinal
-
-- 超限归纳 | 超限递归 | transfinite recursion | transfinite induction → thm.recursion-wellorder
 
 > 续见 alias/aka/set-theory.4.md

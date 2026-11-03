@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.module)　·　第 1 页 [nodes/def.module.md](./def.module.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 模的张量积 用
+- 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积 用
 - 被 [`thm.mod-enough-injectives`](../nodes/thm.mod-enough-injectives.md) 足够多内射对象 用
 - 被 [`def.syzygy`](../nodes/def.syzygy.md) 合冲 用
 - 被 [`lem.schanuel`](../nodes/lem.schanuel.md) 合冲比较引理 用

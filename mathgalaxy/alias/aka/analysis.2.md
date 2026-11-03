@@ -7,7 +7,7 @@
 
 - 连续 | continuous | 连续函数 → def.continuous
 
-- 导数 | derivative | 可导 → def.derivative
+- 导数 | derivative | 可导 | 微分 | 求导 → def.derivative
 
 - 环 | 代数 | ring of sets | algebra of sets | 集合环 → def.set-ring
 
@@ -24,7 +24,5 @@
 - 单调类定理 | monotone class theorem → thm.monotone-class
 
 - Borel | Borel 集 | Borel σ代数 → def.borel
-
-- 基本类 | fundamental class → def.fundamental-class
 
 > 续见 alias/aka/analysis.3.md

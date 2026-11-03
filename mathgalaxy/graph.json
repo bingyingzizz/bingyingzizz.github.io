@@ -6,13 +6,13 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-03T03:25:08.277Z",
+  "generated": "2026-11-03T04:19:33.450Z",
   "counts": {
    "regions": 15,
    "clusters": 102,
    "nodes": 1467,
-   "edges": 2781,
-   "strong": 2764,
+   "edges": 2785,
+   "strong": 2768,
    "weak": 17,
    "derived": 22,
    "en_pages": 1467
@@ -4628,7 +4628,7 @@
     "可测空间",
     "测度论"
    ],
-   "statement": "设 $X$ 是集合，$\\mathfrak{A} \\subseteq \\mathcal{P}(X)$。$\\mathfrak{A}$ 是 $X$ 上的一个 **$\\sigma$代数**，当且仅当它同时满足三条：\n\n1. **含全集**：$X \\in \\mathfrak{A}$\n2. **对补封闭**：$A \\in \\mathfrak{A} \\implies A^c := X \\setminus A \\in \\mathfrak{A}$\n3. **对可数并封闭**：$A_1, A_2, \\ldots \\in \\mathfrak{A} \\implies \\bigcup_{n=1}^{\\infty} A_n \\in \\mathfrak{A}$\n\n二元组 $(X, \\mathfrak{A})$ 称为**可测空间**（measurable space），$\\mathfrak{A}$ 的元素称为**可测集**（measurable set）。",
+   "statement": "设 $X$ 是集合，$\\mathfrak{A} \\subseteq \\mathcal{P}(X)$。$\\mathfrak{A}$ 是 $X$ 上的一个 **$\\sigma$代数**，当且仅当它同时满足三条：\n\n1. **含全集**：$X \\in \\mathfrak{A}$\n2. **对补封闭**：$A \\in \\mathfrak{A} \\implies A^c := X \\setminus A \\in \\mathfrak{A}$\n3. **对可数并封闭**：$A_1, A_2, \\ldots \\in \\mathfrak{A} \\implies \\bigcup_{n=1}^{\\infty} A_n \\in \\mathfrak{A}$\n\n二元组 $(X, \\mathfrak{A})$ 称为**可测空间**（measurable space），$\\mathfrak{A}$ 的元素称为**可测集**（measurable set）。\n**三条公理之间其实只有一条“硬”的**（其余两条几乎可以互相换）：\n\n- **含全集 $\\iff$ 含空集**：由对补封闭即得（$\\emptyset = X^{c}$）。所以写成「含 $\\emptyset$」或「含 $X$」等价，**只要同时有对补封闭**。\n- **对可数并封闭 $\\iff$ 对可数交封闭**：**用两次 de Morgan**：$\\bigcap_{n} A_{n} = \\bigl(\\bigcup_{n} A_{n}^{c}\\bigr)^{c}$。所以「可数并对」与「可数交」两条只留一条即可 —— **但必须配「对补封闭」**，缺了它两条都推不出来。\n- **「可数并」不能弱化成「有限并」**：只有有限并 + 对补 得到的是**代数**（Boolean algebra），不是 $\\sigma$-代数。差别是实质的：有理数集在 $2^{\\mathbb{R}}$ 的有限并代数里可以被包含，但 $\\{q\\}$ 的可数并（$= \\mathbb{Q}$）就不一定 —— 而测度论的全部内容都要数可数并。\n- **「可数」不能加强成「任意」**：$\\sigma$-代数**不**对任意并封闭。反例：$\\mathbb{R}$ 上的 Borel $\\sigma$-代数对所有开集取并（开集全体是任意并封闭的）是对的，但对**任意**子集取并会跑出去（每个单点是 Borel，但其任意并可以是不可测集，前提是 $2^{\\aleph_{0}}$ 个并——这需要选择公理构造 Vitali 集）。\n\n⚠️ 一句话记法：**$\\sigma$-代数 = 「含全集 + 对补封闭 + 对可数并封闭」，其余全是这两条的推论**；而「对补 + 有限并」只是代数，弱的不是一点。",
    "notes": "三条是配套的，缺一不可：只留 (2)(3) 就是**$\\sigma$环**；把 (3) 降成「有限并」就是**代数**。\n\n由 (2)(3) 用 De Morgan 立得对**可数交**封闭：$\\Big( \\bigcap_n A_n \\Big)^c = \\bigcup_n A_n^c \\in \\mathfrak{A}$。于是有限并、有限交、差、对称差全都可用 —— 真正超出「代数」的，只有**可数**这一件事。\n\n⚠ 方向不能反：$\\sigma$代数一定是代数，代数不一定是 $\\sigma$代数。\n\n反例：$X = \\mathbb{R}$ 上「有限集与余有限集」全体是代数，而 $\\mathbb{N} = \\{1\\} \\cup \\{2\\} \\cup \\{3\\} \\cup \\cdots$ 是其中可数多个元素的并、本身既非有限也非余有限，所以那个代数不封闭于可数并。\n\n记号里的「$\\sigma$」表示**可数**（取自德文 Summe / 法文 somme 的首字母），和标准差那个 $\\sigma$ 无关。\n\n为什么非要有它：测度的可数可加性 $\\mu (\\bigcup A_{n}) = \\sum \\mu (A_{n})$ 需要一个对**可数**运算封闭的定义域，否则等式两边根本不在同一个集合族里。整条测度构造就是从这里起步的。",
    "refs": [
     "Halmos, Measure Theory, §4",
@@ -5436,7 +5436,7 @@
    "notes_en": "An outer measure is defined on **all** subsets ($\\mathcal{P}(X)$, not on some $\\sigma$-algebra); the price is that it only has **sub**additivity.\n\nSo an outer measure is not a measure — it is too large even to be additive on $\\mathcal{P}(X)$. Carathéodory's idea is to single out the sets that \"behave well\" (the next definition); on those the outer measure does become a genuine measure.\n\nWhat Lebesgue first constructed was an outer measure: $\\mu^{*}(A) = \\inf\\{ \\sum (b_{n} - a_{n}) : A \\subseteq \\bigcup (a_{n}, b_{n}) \\}$.",
    "translations": {
     "en": {
-     "status": "reviewed",
+     "status": "stale",
      "version": "v0.9.2",
      "fields": [
       "abstract",
@@ -5450,12 +5450,15 @@
       "notes"
      ],
      "fieldStatus": {
-      "abstract": "reviewed",
+      "abstract": "stale",
       "statement": "reviewed",
-      "notes": "reviewed",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "abstract",
+      "notes"
+     ],
      "basedOn": {
       "abstract": "v0.9.2#1d1a972f",
       "statement": "v0.9.2#24d3359e",
@@ -5477,7 +5480,7 @@
     "次可加"
    ],
    "statement": "设 $X$ 是非空集合。函数 $\\mu^* : \\mathcal{P}(X) \\to [0, +\\infty]$ 是一个**外测度**，当且仅当\n\n- $\\mu^*(\\emptyset) = 0$\n- **单调**：$A \\subseteq B \\implies \\mu^*(A) \\le \\mu^*(B)$\n- **可数次可加**：$\\mu^*( \\bigcup_{j=1}^{\\infty} A_j ) \\le \\sum_{j=1}^{\\infty} \\mu^*(A_j)$",
-   "notes": "外测度定义在**全体**子集上（$\\mathcal{P}(X)$，不是某个 $\\sigma$代数），代价是它只有**次**可加性。\n\n所以外测度不是测度 —— 它太大了，连 $\\mathcal{P}(X)$ 上都没有可加性。Carathéodory 的想法是在其中挑出一批「表现良好」的集合（下一条定义），外测度在它们上面才变成真正的测度。\n\nLebesgue 最初构造的就是外测度：$\\mu^{*}(A) = \\inf\\{ \\sum (b_{n} - a_{n}) : A \\subseteq \\bigcup (a_{n}, b_{n}) \\}$。",
+   "notes": "外测度定义在**全体**子集上（$\\mathcal{P}(X)$，不是某个 $\\sigma$代数），代价是它只有**次**可加性。\n\n所以外测度不是测度 —— 它太大了，连 $\\mathcal{P}(X)$ 上都没有可加性。Carathéodory 的想法是在其中挑出一批「表现良好」的集合（下一条定义），外测度在它们上面才变成真正的测度。\n\nLebesgue 最初构造的就是外测度：$\\mu^{*}(A) = \\inf\\{ \\sum (b_{n} - a_{n}) : A \\subseteq \\bigcup (a_{n}, b_{n}) \\}$。\n\n\n\n**三条里哪条是“硬”的**（外测度的三条不对称 —— 一条是规范化，一条是免费的，一条是真条件）：\n\n- $\\mu^{*}(\\emptyset) = 0$：**规范化**，只为让后面的 $0 \\le \\mu^{*}$ 有意义（否则常数 $+\\infty$ 也满足后两条）。\n- **单调**：**几乎是免费的**，但要用**可数次可加**来推：$B = A \\cup (B \\setminus A)$ $\\implies$ $\\mu^{*}(B) \\le \\mu^{*}(A) + \\mu^{*}(B\\setminus A)$，所以单调性本身常被列成公理以省去这步；在具体构造（Carathéodory 外测度）里它是直接验证的。\n- **可数次可加**：**这才是真条件**，也是唯一有内容的 —— 它把「单点测度」与「可数运算」绑在一起。⚠️ 注意它是**不等式**：外测度**不**可加（对不交并可加才是测度，那是 Carathéodory 可测集上的额外结论）。\n\n**两个必须分清的点**：\n\n- **外测度定义在 $\\mathcal{P}(X)$ 上**（所有子集），而测度（`def.measure`）只定义在 $\\sigma$-代数上 —— 这是外测度作为「构造工具」的全部意义：先在全部子集上给一个粗略的「大小」，再挑出那些「可加」的子集作为可测集。\n- **单调 + 可数次可加 不蕴含「对可数并取值等于极限」**：外测度在递增并上只保证 $\\mu^{*}(\\bigcup A_{n}) \\le \\lim \\mu^{*}(A_{n})$，等式要靠下连续性，而那需要可测性 —— 这正是 Carathéodory 条件要补的东西。\n\n⚠️ 记号：$\\mu^{*}$ 上的星号表示「在 $\\mathcal{P}(X)$ 上」，不是「关于某个东西的对偶」。有些书用 $m^{*}$、$\\nu^{*}$。",
    "refs": [
     "Halmos, Measure Theory, §11",
     "Folland, Real Analysis, §1.4"
@@ -8962,7 +8965,7 @@
     "谱"
    ],
    "statement": "两个方阵 $A, B \\in M_n(K)$ 叫**相似**，记 $A \\sim B$，当且仅当存在可逆矩阵 $P$ 使\n\n$$B = P^{-1} A\\, P$$\n\n$P$ 叫**过渡矩阵**。相似的**等价**说法：$A$ 与 $B$ 是同一个线性映射在两组基下的矩阵。\n\n相似的不变量：秩、迹、行列式、特征多项式（从而特征值与它们的代数重数）、极小多项式。",
-   "notes": "⭐ 相似是**等价关系**（自反 / 对称 / 传递），所以 $M_n(K)$ 被分成相似类；**分类问题就是「描述所有相似类」**。\n\n⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。\n\n图上两条边（`thm.change-of-basis` 与 `dep.linearmap-similarity`）说的就是这件事。\n\n⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。\n\n$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 与 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ 等价但不相似。",
+   "notes": "⭐ 相似是**等价关系**（自反 / 对称 / 传递），所以 $M_n(K)$ 被分成相似类；**分类问题就是「描述所有相似类」**。\n\n⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。\n\n图上两条边（`thm.change-of-basis` 与 `dep.changeofbasis-similarity`）说的就是这件事。\n\n⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。\n\n$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 与 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ 等价但不相似。",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, Ch. 6"
    ]
@@ -9947,7 +9950,7 @@
   {
    "id": "def.tensor-product-vs",
    "type": "definition",
-   "label": "张量积",
+   "label": "张量积（向量空间）",
    "title": "向量空间的张量积 $V \\otimes W$",
    "label_en": "tensor product",
    "title_en": "tensor product",
@@ -9972,7 +9975,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 11,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数",
@@ -10012,7 +10015,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数",
@@ -10052,7 +10055,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "命题",
     "线性代数",
@@ -10135,7 +10138,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -10175,7 +10178,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -14923,7 +14926,7 @@
   {
    "id": "def.tensor-module",
    "type": "definition",
-   "label": "模的张量积",
+   "label": "张量积",
    "title": "模的张量积 $M \\otimes_{R} N$",
    "label_en": "Tensor Product",
    "title_en": "Tensor Product of Modules",
@@ -19446,7 +19449,7 @@
     "法曲率"
    ],
    "statement": "取主方向标架：$e_{1}, e_{2}$ 是单位正交主方向，$W(e_{i}) = k_{i}e_{i}$。设单位向量 $V = \\cos\\theta\\,e_{1}+\\sin\\theta\\,e_{2}$，则\n\n$$k_{n}(V) = k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta .$$",
-   "notes": "**含义**：两个数 $k_{1}, k_{2}$ 决定所有方向的法曲率 —— 法曲率作为方向的函数只是 $\\cos^{2}$ 的插值。\n\n**极值**：$\\theta = 0$ 与 $\\theta = \\pi/2$ 分别给出 $k_{1}, k_{2}$，其余方向夹在两者之间。这解释了「主方向 $=$ 法曲率取极值的方向」，也是$k_{n}(v) = k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta$。\n\n**矩阵说法**：主方向标架下 $h = \\operatorname{diag}(k_{1}, k_{2})$，$V = (\\cos\\theta, \\sin\\theta)$，于是 $k_{n} = V^{T}hV$。\n\n**平均曲率的名字**：$H = \\frac{1}{2\\pi}\\int_{0}^{2\\pi}k_{n}(\\theta)\\,\\mathrm{d}\\theta$ —— 法曲率在整圈上的平均，这正是「平均」二字的来处。",
+   "notes": "**含义**：两个数 $k_{1}, k_{2}$ 决定所有方向的法曲率 —— 法曲率作为方向的函数只是 $\\cos^{2}$ 的插值。\n\n**极值**：$\\theta = 0$ 与 $\\theta = \\pi/2$ 分别给出 $k_{1}, k_{2}$，其余方向夹在两者之间。这解释了「主方向 $=$ 法曲率取极值的方向」，也是$k_{n}(v) = k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta$。\n\n**矩阵说法**：主方向标架下 $h = \\operatorname{diag}(k_{1}, k_{2})$，$V = (\\cos\\theta, \\sin\\theta)$，于是 $k_{n} = V^{T}hV$。\n\n**平均曲率的名字**：$H = \\frac{1}{2\\pi}\\int_{0}^{2\\pi}k_{n}(\\theta)\\,\\mathrm{d}\\theta$ —— 法曲率在整圈上的平均，这正是「平均」二字的来处。\n\n⚠ **同名不同物**：复变里那条「Euler 公式」$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ 是另一回事（见 `thm.euler-formula`）。",
    "refs": [
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· Euler 公式",
     "陈维桓《微分几何讲义》, 「曲面的局部理论」· Euler 公式"
@@ -20515,7 +20518,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "定义",
     "微分几何",
@@ -20558,7 +20561,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "微分几何",
@@ -20601,7 +20604,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "命题",
     "微分几何",
@@ -21125,7 +21128,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "定义",
     "微分几何",
@@ -23595,7 +23598,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "微分流形",
@@ -32907,7 +32910,7 @@
     "半正定",
     "二次型"
    ],
-   "statement": "**在做什么**：把「这个二次型处处为正」写成矩阵条件。物理上它是「能量形式」，几何上它是「内积的另一种写法」。\n\n设 $A \\in M_{n}(\\mathbb{C})$ 是 Hermite 矩阵。称 $A$ **正定**，若对一切 $x \\ne 0$\n\n$$x^{*}Ax > 0 ;$$\n\n把 $>$ 换成 $\\ge$ 就得**半正定**。实对称矩阵的情形把 $x^{*}$ 换成 $x^{T}$。\n\n**等价刻画**（前两条最常用）：\n\n1. 所有特征值 $> 0$（半正定：$\\ge 0$）；\n2. 所有**顺序主子式** $> 0$（Sylvester 判据，`thm.sylvester-criterion`）；\n3. 存在可逆 $P$ 使 $A = P^{*}P$（半正定：$A = P^{*}P$ 不必可逆）；\n4. $x \\mapsto \\sqrt{x^{*}Ax}$ 是范数（半正定时是半范数）。",
+   "statement": "**在做什么**：把「这个二次型处处为正」写成矩阵条件。物理上它是「能量形式」，几何上它是「内积的另一种写法」。\n\n设 $A \\in M_{n}(\\mathbb{C})$ 是 Hermite 矩阵。称 $A$ **正定**，若对一切 $x \\ne 0$\n\n$$x^{*}Ax > 0 ;$$\n\n把 $>$ 换成 $\\ge$ 就得**半正定**。实对称矩阵的情形把 $x^{*}$ 换成 $x^{T}$。\n\n**等价刻画**（前两条最常用）：\n\n1. 所有特征值 $> 0$（半正定：$\\ge 0$）；\n2. 所有**顺序主子式** $> 0$（Sylvester 判据，`thm.sylvester-criterion`）；\n3. 存在可逆 $P$ 使 $A = P^{*}P$（半正定：$A = P^{*}P$ 不必可逆）；\n4. $x \\mapsto \\sqrt{x^{*}Ax}$ 是范数（半正定时是半范数）。\n**各方向用到的假设**（四条里，前两条是“谱/主子式”判据，后两条是“分解/范数”判据，依赖的东西不一样）：\n\n- (定义) $\\iff$ (1)：**要用谱定理**（Hermite 矩阵可正交对角化，`thm.spectral-matrix`）。对角化后 $x^{*}Ax = \\sum \\lambda_{i}\\lvert y_{i}\\rvert^{2}$，于是「恒正」$\\iff$「每个 $\\lambda_{i} > 0$」。**这一条只在 Hermite（实对称）时成立**：非对称矩阵可以有正的特征值却不正定（$x^{T}Ax$ 里混着反对称部分）。\n- (1) $\\implies$ (2)：**只对**顺序主子式**成立，不对「所有主子式」**。Sylvester 判据说的是「$n$ 个顺序主子式全正」；而「所有主子式非负」才是半正定的判据（两者不是一回事，半正定情形顺序主子式可以为零）。这一条**不用谱定理**，只用配方法 —— 所以它是纯代数的，在任意有序域上都成立。\n- (2) $\\implies$ (定义)：**需要实（或 Hermite）对称**。做法是分块高斯消元（LDL 分解）：顺序主子式非零保证消元可行，得到的对角元正是主子式之比。\n- (定义) $\\iff$ (3)：**这一步用谱定理或 Cholesky**。$A = P^{*}P$ 时 $x^{*}Ax = \\lVert Px\\rVert^{2}$，可逆 $P$ 给出严格正；反向取 $P = \\Lambda^{1/2}U^{*}$。**注意这里必须允许复/实矩阵用共轭转置**，写成 $A = P^{T}P$ 只在实对称时对。\n- (3) $\\iff$ (4)：**三角不等式验证**即得（$\\sqrt{x^{*}Ax} = \\lVert Px\\rVert$ 是范数）。反向用 $x^{*}Ax$ 的平方根定义 —— 需要先证它是二次型。\n\n⚠️ **三处最容易错的地方**：(a) 忘掉「Hermite/实对称」这个前提（复情形要用 $x^{*}$，用 $x^{T}Ax > 0$ 讨论复矩阵是没有意义的，它可能不是实数）；(b) 把「顺序主子式全正」换成「所有主子式全正」—— 后者是**更强**的条件（对正定也对，但半正定时只有后者能用）；(c) 半正定时 $P$ 不可逆、特征值可为 $0$、平方根只是半范数 —— 三条要同时放宽。",
    "notes": "**它是「内积的矩阵」**：任意内积在基下的矩阵就是正定 Hermite 矩阵；反过来每个正定矩阵都给出一个内积。所以「正定」= 「合法的内积矩阵」，这条对应比任何判据都好用。\n\n**为什么顺序主子式就够了**：Sylvester 判据—— 做 LDL 分解时第 $k$ 个主元等于 $k$ 阶顺序主子式之比，主元全正则正定。⚠️ 只查**顺序**主子式，不是所有主子式（所有主子式 $>0$ 是更强的条件，只在特殊场合等价）。\n\n⭐ **正定 $\\implies$ 可开方**：存在唯一的半正定 $\\sqrt{A}$ 使 $(\\sqrt A)^{2} = A$（在正交基下把特征值开方）。这正是**极分解** $A = UP$ 里那个 $P$ 的来源（`thm.polar-decomposition`）。\n\n⚠️ 「$A^{T}A$ 总是半正定」这句话在复数域要写成 $A^{*}A$；并且它正定当且仅当 $A$ 的列线性无关（否则有非零核向量）。这条在回归/最小二乘里反复出现。",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正定",
@@ -36232,7 +36235,7 @@
     "有界算子",
     "连续"
    ],
-   "statement": "设 $E, F$ 是赋范空间，$u : E \\to F$ 线性。则下列**等价**：\n\n1. $u$ 连续；\n2. $u$ 在**某一点**连续；\n3. $u$ 在 $0$ 连续；\n4. $u$ 有界（即 $\\|u(x)\\| \\le C\\|x\\|$）；\n5. $u$ 是 Lipschitz 的。",
+   "statement": "设 $E, F$ 是赋范空间，$u : E \\to F$ 线性。则下列**等价**：\n\n1. $u$ 连续；\n2. $u$ 在**某一点**连续；\n3. $u$ 在 $0$ 连续；\n4. $u$ 有界（即 $\\|u(x)\\| \\le C\\|x\\|$）；\n5. $u$ 是 Lipschitz 的。\n**各方向用到的假设**（五条里前四条几乎免费，真正的代价在最后一条）：\n\n- (1) $\\iff$ (2) $\\iff$ (3)：**只需要「线性」+「平移」**。线性映射把 $a$ 处的连续性平移到 $0$：$u(x) - u(x_{0}) = u(x - x_{0})$；反过来 $0$ 处连续也平移到任意点。这一步**不用完备性、不用有限维**。\n- (3) $\\implies$ (4)：**只用 $\\varepsilon$-$\\delta$ 的定义**。取 $\\varepsilon = 1$，得 $\\delta > 0$ 使 $\\lVert x\\rVert \\le \\delta \\implies \\lVert u(x)\\rVert \\le 1$；再由齐次性 $\\lVert u(x)\\rVert \\le \\frac{1}{\\delta}\\lVert x\\rVert$。**注意这里用到的正是线性**（齐次性），非线性映射即使连续也不「有界」。\n- (4) $\\implies$ (1)：**一行**：$\\lVert u(x) - u(y)\\rVert \\le C\\lVert x - y\\rVert$。\n- (4) $\\iff$ (5)：**只差一个常数**。有界 $\\implies$ Lipschitz（取 $C$）；Lipschitz $\\implies$ 有界（$x = 0$ 处取 $C$ 并平移）。\n- ⚠️ **「某一点连续」不能弱成「某一点处有界」**：后者对任意映射都无意义（有界性对线性映射才是全局概念）。这一条的实质是「一点连续 $\\implies$ 处处连续」，而它**只对线性映射成立**。\n\n**几个需要留意的边界**：\n\n- **不需要完备性**：五条等价在任意赋范空间（哪怕不完备）上都成立。这一点常被误记成「Banach 空间才成立」——其实只有**开映射/闭图像/一致有界**那三条才要完备性。\n- **不能去掉线性**：$f : \\mathbb{R} \\to \\mathbb{R}$，$f(x) = x^{2}$ 处处连续但不 Lipschitz、也不「有界」（在 $\\lVert f(x)\\rVert \\le C\\lVert x\\rVert$ 的意义下）。\n- **有界 $\\ne$ 函数值有界**：线性映射的「有界」是「把有界集送到有界集」，与「$\\sup\\lVert u\\rVert < \\infty$ 于整个空间」无关（后者对非零线性映射永远不成立）。",
    "notes": "唯一有内容的一步是「在 0 连续 $\\implies$ 有界」，而且必须反证：若不存在这样的 $C$，则对每个 $n$ 有 $x_n$ 使 $\\|u(x_n)\\| \\ge n\\|x_n\\|$；\n\n令 $y_n = x_n / (n\\|x_n\\|)$，则 $\\|y_n\\| \\to 0$ 而 $\\|u(y_n)\\| \\ge 1$ —— 与在 $0$ 连续矛盾。\n\n⭐ 「一点连续就处处连续」是**线性**的赠品（平移把任意点搬到 $0$）。对非线性映射这句话当然错。\n\n⭐ 于是「连续线性算子」「有界线性算子」「Lipschitz 线性算子」从此是同义词，$B(E,F)$ 这个名字里的「B」正是 bounded。",
    "refs": [
     "Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数"
@@ -37569,7 +37572,7 @@
     "Baire 纲",
     "拓扑学"
    ],
-   "statement": "下列**等价**：\n\n1. $X$ 是 Baire 空间（可数个稠密开集之交稠密）；\n2. $X$ 的每个非空开集是第二纲的；\n3. 可数个无处稠密闭集之并不含非空开集（内部为空）。",
+   "statement": "下列**等价**：\n\n1. $X$ 是 Baire 空间（可数个稠密开集之交稠密）；\n2. $X$ 的每个非空开集是第二纲的；\n3. 可数个无处稠密闭集之并不含非空开集（内部为空）。\n**三条为什么等价、各自用什么**（这一条最容易“看起来显然，其实要用补集与可数性各一次”）：\n\n- (1) $\\implies$ (2)：**反证 + 取补**。若某非空开集 $U$ 是第一纲（$U \\subseteq \\bigcup_{n} F_{n}$，$F_{n}$ 无处稠密闭），则 $U^{c} \\cup \\bigcup_{n} F_{n} = X$ —— 于是 $U = \\bigcap_{n}(X \\setminus F_{n})$ 中那族稠密开集的交**不含** $U$ 里任何点，与「交稠密」矛盾。**这一步只用到「稠密开集之交错密」的定义**。\n- (2) $\\implies$ (3)：**同上反向**，仍只做补集：若可数个无处稠密闭集之并含有非空开集 $U$，则 $U$ 就是第一纲，与 (2) 矛盾。\n- (3) $\\implies$ (1)：**这一步要用可数交的构造**。设 $O_{n}$ 稠密开，令 $F_{n} := X \\setminus O_{n}$（无处稠密闭）。要证 $\\bigcap O_{n}$ 稠密，即证它的补 $\\bigcup F_{n}$ 内部为空 —— 那正是 (3)。\n- **注意 (1) 里的「可数」不能换成「有限」**：有限个稠密开集之交稠密在**任何**拓扑空间都成立（不用任何假设），所以 Baire 性完全是「可数」带来的。\n\n**三条之外还必须记住的假设**：\n\n- 三条的等价**不需要**任何前提（纯拓扑，任意空间都对）—— 需要假设的是「什么样的空间满足它们」：**完备度量空间**（`thm.baire`）与**局部紧 Hausdorff 空间**（`thm.locally-compact-baire`）。这两条的证明用的是完全不同的工具（前者用球套 / 完备性，后者用紧性取有限子覆盖 + 局部紧性）。\n- ⚠️ **「Baire」不是「完备」的推论本身**，而是「完备 $\\implies$ Baire」这一条定理；$\\mathbb{Q}$ 是（不完备的）度量空间且**不是** Baire 空间（每个单点无处稠密、$\\mathbb{Q}$ 可数），正好说明完备性不能去掉。",
    "notes": "三条就是同一条取补集：稠密开 $\\leftrightarrow$ 无处稠密闭、交 $\\leftrightarrow$ 并、「稠密」$\\leftrightarrow$「内部为空」。\n\n⭐ **纲的用法（讲义原话）**：要证「满足性质 $P$ 的点存在」，就去证 $\\{x : P(x)\\}$ 是**稠密 $G_\\delta$**。这样拿到的不只是「存在」，而是「几乎处处存在」（generic）。\n\n⚠️ (2) 里的「第二纲」作用对象是**非空开集**，不是任意集合。",
    "refs": [
     "Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）"
@@ -38681,7 +38684,7 @@
     "有界算子"
    ],
    "statement": "**在做什么**：把「导数是一个线性映射」这句话搬到赋范空间上。关键不是「$f$ 有多光滑」，而是 **「线性主部」必须是连续的**（即有界算子）—— 这一条是赋范空间版本与有限维版本唯一实质的差别。\n\n设 $E, F$ 是赋范空间，$\\Omega \\subseteq E$ 开，$f : \\Omega \\to F$，$a \\in \\Omega$。称 $f$ 在 $a$ 处 **Fréchet 可微**，若存在**有界线性算子** $T \\in B(E, F)$ 使\n\n$$f(a + h) = f(a) + T h + o(\\|h\\|) \\qquad (\\|h\\| \\to 0),$$\n\n即\n\n$$\\lim_{\\|h\\| \\to 0} \\frac{\\|f(a+h) - f(a) - Th\\|}{\\|h\\|} = 0 .$$\n\n这样的 $T$ 若存在则**唯一**（取 $h = t v$、$t \\to 0$ 即看出 $T$ 在每条射线上被钉死），记 $f'(a) := T \\in B(E, F)$。\n\n**与 Gâteaux 导数的区别**：Gâteaux 导数只要求沿每条射线 $t \\mapsto f(a + tv)$ 的导数存在（得到一个线性映射，甚至未必连续）；Fréchet 可微则要求**一致的**余项估计。于是\n\n$$\\text{Fréchet 可微} \\implies \\text{Gâteaux 可微，且两者相等} ,$$\n\n反过来不成立（Gâteaux 导数的存在不保证余项一致小）。",
-   "notes": "**为什么要求 $T$ 有界**：$E$ 无穷维时「线性」不足以谈极限 —— 无界线性算子照样能写下 $f(a) + Th$，但它在 $a$ 处根本不连续，$o(\\|h\\|)$ 的估计不可能成立。所以定义里把 $B(E,F)$ 写死，**不是偷懒**：有限维时自动满足，无穷维时是实质条件。\n\n**几个基本事实**（证明与一元情形同构，只是把绝对值换成范数）：\n\n\n\n- **链式法则**：$f$ 在 $a$、$g$ 在 $f(a)$ 处 Fréchet 可微 $\\implies$ $g \\circ f$ 在 $a$ 处可微，且 $(g\\circ f)'(a) = g'(f(a)) \\circ f'(a)$（算子的复合，注意顺序）；\n\n- **可微 $\\implies$ 连续**；\n\n- **中值不等式**：$\\|f(b) - f(a)\\| \\le \\sup_{[a,b]}\\|f'\\| \\cdot \\|b - a\\|$ —— 这是把一元中值定理搬过来时**唯一能用的形式**（等号形式不再成立，因为有界线性算子不能「取某点处的值」）；\n\n- **逆映射定理（Banach 版）**（`thm.inverse-function-banach`）：$f'(a)$ **可逆**（作为 $B(E,F)$ 的元素，从而 $E \\cong F$）+ 连续可微 $\\implies$ $f$ 在 $a$ 附近是局部同胚。那条定理的假设就写在这个导数上。\n\n⚠️ **与另外两个「导数」的分工**：`def.derivative` 是一元实函数；`def.total-differential` 是 $\\mathbb{R}^{n} \\to \\mathbb{R}^{m}$ 的全微分（Jacobian 矩阵）；流形之间的微分是 `def.differential-manifold`（切空间之间的线性映射）。本节点是**赋范空间之间**的版本 —— 它把前两个都收成特例（有限维时 $f'(a)$ 就是 Jacobian 矩阵）。\n\n⚠️ **高阶导数**要小心：$f'' (a)$ 是 $B(E, B(E,F)) \\cong B(E \\times E, F)$ 的元素（双线性型），不是「二阶矩阵」。赋范空间上写 Taylor 公式（`thm.taylor`）时必须按这个理解。",
+   "notes": "**为什么要求 $T$ 有界**：$E$ 无穷维时「线性」不足以谈极限 —— 无界线性算子照样能写下 $f(a) + Th$，但它在 $a$ 处根本不连续，$o(\\|h\\|)$ 的估计不可能成立。所以定义里把 $B(E,F)$ 写死，**不是偷懒**：有限维时自动满足，无穷维时是实质条件。\n\n**几个基本事实**（证明与一元情形同构，只是把绝对值换成范数）：\n\n\n\n- **链式法则**：$f$ 在 $a$、$g$ 在 $f(a)$ 处 Fréchet 可微 $\\implies$ $g \\circ f$ 在 $a$ 处可微，且 $(g\\circ f)'(a) = g'(f(a)) \\circ f'(a)$（算子的复合，注意顺序）；\n\n- **可微 $\\implies$ 连续**；\n\n- **中值不等式**：$\\|f(b) - f(a)\\| \\le \\sup_{[a,b]}\\|f'\\| \\cdot \\|b - a\\|$ —— 这是把一元中值定理搬过来时**唯一能用的形式**（等号形式不再成立，因为有界线性算子不能「取某点处的值」）；\n\n- **逆映射定理（Banach 版）**（`thm.inverse-function-banach`）：$f'(a)$ **可逆**（作为 $B(E,F)$ 的元素，从而 $E \\cong F$）+ 连续可微 $\\implies$ $f$ 在 $a$ 附近是局部同胚。那条定理的假设就写在这个导数上。\n\n⚠️ **与另外两个「导数」的分工**：`def.derivative` 是一元实函数；`def.total-differential` 是 $\\mathbb{R}^{n} \\to \\mathbb{R}^{m}$ 的全微分（Jacobian 矩阵）；流形之间的微分是 `def.differential-map`（切空间之间的线性映射）。本节点是**赋范空间之间**的版本 —— 它把前两个都收成特例（有限维时 $f'(a)$ 就是 Jacobian 矩阵）。\n\n⚠️ **高阶导数**要小心：$f'' (a)$ 是 $B(E, B(E,F)) \\cong B(E \\times E, F)$ 的元素（双线性型），不是「二阶矩阵」。赋范空间上写 Taylor 公式（`thm.taylor`）时必须按这个理解。",
    "refs": [
     "Rudin, Functional Analysis · Fréchet 导数",
     "Brezis, Functional Analysis, Sobolev Spaces and PDE · 微分"
@@ -46832,7 +46835,7 @@
    "id": "def.tensor-abelian-sheaf",
    "type": "definition",
    "label": "阿贝尔层的张量积",
-   "title": "张量积与封闭幺半结构",
+   "title": "阿贝尔层的张量积与封闭幺半结构",
    "label_en": "Tensor of Sheaves",
    "title_en": "Tensor Product of Abelian Sheaves",
    "translations": {
@@ -63863,7 +63866,7 @@
     "初等函数"
    ],
    "statement": "对一切实数（或复数）$\\theta$，\n\n$$\\exp(i\\theta) = e^{i\\theta} = \\cos\\theta + i\\sin\\theta$$\n\n特别地 $e^{i\\pi} = -1$。",
-   "notes": "⭐ 这条公式把**指数、三角、复数**三件事焊成一件：$\\theta \\mapsto e^{i\\theta}$ 是单位圆上以弧长 $\\theta$ 为参数的运动，实部是 $\\cos$、虚部是 $\\sin$。\n\n⭐ 证明就是**重排级数**（见下面的证明）：把 $\\exp$ 的级数按奇偶项拆开。\n\n表面上看只是换了个写法，实际上它给出了「$\\cos$ 与 $\\sin$ 是同一个指数函数的两个分量」这个结构性事实。\n\n⚠ 注意这里**不需要**任何几何输入：弧长、角度、单位圆这些词都只是事后对公式的**解释**。\n\n反过来，正因为有这条公式，三角函数才可能有周期（周期来自 $e^{2\\pi i} = 1$）。",
+   "notes": "⭐ 这条公式把**指数、三角、复数**三件事焊成一件：$\\theta \\mapsto e^{i\\theta}$ 是单位圆上以弧长 $\\theta$ 为参数的运动，实部是 $\\cos$、虚部是 $\\sin$。\n\n⭐ 证明就是**重排级数**（见下面的证明）：把 $\\exp$ 的级数按奇偶项拆开。\n\n表面上看只是换了个写法，实际上它给出了「$\\cos$ 与 $\\sin$ 是同一个指数函数的两个分量」这个结构性事实。\n\n⚠ 注意这里**不需要**任何几何输入：弧长、角度、单位圆这些词都只是事后对公式的**解释**。\n\n反过来，正因为有这条公式，三角函数才可能有周期（周期来自 $e^{2\\pi i} = 1$）。\n\n⚠ **同名不同物**：微分几何里还有一条「Euler 公式」（法曲率 $k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta$，见 `thm.euler-formula-surface`），与这条没有关系。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 8"
    ]
@@ -78255,6 +78258,38 @@
    "note": "非负项级数取的就是部分和的**上确界**。"
   },
   {
+   "id": "dep.gaussbonnet-eulerchar",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.euler-characteristic",
+   "usedBy": "thm.gauss-bonnet",
+   "note": "Gauss–Bonnet 的结论里直接出现 $\\chi(M)$，而 $\\chi$ 此前在几何侧是「外部输入」。两边接上之后：把曲面三角剖分，$\\int_M K\\,\\mathrm{d}A = 2\\pi\\chi(M) = 2\\pi(V-E+F)$ —— 这就是「曲率积分 = 拓扑不变量」的完整走法。"
+  },
+  {
+   "id": "dep.lpbanach-norm",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.norm",
+   "usedBy": "thm.lp-banach",
+   "note": "「$L^{p}$ 是 Banach 空间」这句话里的「空间」是**赋范空间**：先有 $\\|\\cdot\\|_{p}$ 这个范数，完备性才是相对它说的。此前 `def.lp-norm` 的出边全在测度/分析内部，一条也没通向泛函分析。"
+  },
+  {
+   "id": "dep.lpbanach-banach",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.banach-space",
+   "usedBy": "thm.lp-banach",
+   "note": "同理：结论的谓词「是 Banach 空间」本人没被引用。`def.banach-space` 原来的入边只有 `def.complete` 一条 —— 于是 $L^{p}$ 与泛函分析互不相认。"
+  },
+  {
+   "id": "dep.tensormodule-tensorvs",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.tensor-module",
+   "usedBy": "def.tensor-product-vs",
+   "note": "$K$-向量空间就是 $K$-模，所以「向量空间的张量积」是模的张量积的特例（$R = K$）。⛔ 反方向的 `imp.derived-multilinear-tensor-dual` 是**粉边**（`layer:false`，用高级工具回头证），所以完整图上会出现一个可视环 —— 那是粉边的语义，不参与分层，不必消除。"
+  },
+  {
    "id": "dep.subset-union-inter",
    "kind": "definition",
    "strength": "strong",
@@ -89373,6 +89408,13 @@
    "explicit": false
   },
   {
+   "a": "algebra.multilinear",
+   "b": "hom.module",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.functor",
    "b": "hom.flat",
    "count": 3,
@@ -90160,6 +90202,13 @@
    "a": "algebra.inner",
    "b": "fa.hilbert",
    "count": 8,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.lp",
+   "b": "fa.norm",
+   "count": 2,
    "label": "",
    "explicit": false
   },

@@ -1,15 +1,17 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 幂级数的逐项运算 → thm.power-series-analytic
+
 - 初等函数的导数 → thm.elementary-derivatives
 
 - L'Hôpital 法则 → thm.lhopital
 
-- Taylor 公式 → thm.taylor
+- Taylor 公式 | 泰勒 | 泰勒公式 → thm.taylor
 
 - 导数与极限交换 → thm.uniform-limit-derivative
 
-- Taylor 公式（Peano 余项） → prop.taylor-peano
+- Taylor 公式（Peano 余项） | 皮亚诺余项 → prop.taylor-peano
 
 - 单调有界定理 → thm.monotone-convergence
 
@@ -34,9 +36,5 @@
 - Cauchy 乘积 → thm.series-product
 
 - ℝ 是完备度量空间 → thm.real-complete-metric
-
-- 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
-
-- Abel 第二定理 → thm.abel-endpoint
 
 > 续见 alias/aka/analysis.14.md

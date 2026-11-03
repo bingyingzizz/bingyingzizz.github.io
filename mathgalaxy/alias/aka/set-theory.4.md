@@ -1,6 +1,8 @@
 # 别名 → 节点 · 集合论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../set-theory.md`
 
+- 超限归纳 | 超限递归 | transfinite recursion | transfinite induction → thm.recursion-wellorder
+
 - 序数可比 | 序数三分 → thm.ordinal-trichotomy
 
 - 序型 | order type | 序数表示 → thm.wellorder-ordinal
@@ -18,7 +20,5 @@
 - 确界原理 | 实数完备 | 完备性 | least upper bound property | completeness of R | 实数的运算律 | ℝ 上的运算律 | 实数加法交换律 | 实数的加法交换律 | 实数的乘法交换律 → thm.real-ordered-field
 
 - 基本类 | fundamental class → def.fundamental-class
-
-- 宇宙公理 | Grothendieck 公理 | Universes Axiom | universe axiom | Tarski–Grothendieck | TG 集合论 | 不可达基数无界 → ax.grothendieck-universe
 
 > 续见 alias/aka/set-theory.5.md

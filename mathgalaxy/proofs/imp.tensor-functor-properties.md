@@ -1,7 +1,7 @@
 # 万有性质 $\implies$ 双函子性、结合、对称与保直和
 `imp.tensor-functor-properties` · 推出 · strong 边 · 根 `../`
 
-`def.tensor-module` 模的张量积 → `prop.tensor-functor-properties` 张量积的函子性质
+`def.tensor-module` 张量积 → `prop.tensor-functor-properties` 张量积的函子性质
 
 五个性质全都由**同一个办法**得到：要造 $M \otimes N \to P$，只需给出一个平衡双加性映射 $M \times N \to P$；要证两个张量积之间的映射互逆，在一组生成元（纯张量）上验证即可。
 

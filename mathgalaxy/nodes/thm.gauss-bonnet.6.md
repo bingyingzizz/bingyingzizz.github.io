@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.area-element`](../nodes/def.area-element.md) 面积元：用到了定义 面积元　[proofs/dep.tu-area-bonnet.md](../proofs/dep.tu-area-bonnet.md)
 - [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面：用到了定义 可定向曲面　[proofs/dep.tu-orient-bonnet.md](../proofs/dep.tu-orient-bonnet.md)
+- [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数：用到了定义 Euler 示性数　[proofs/dep.gaussbonnet-eulerchar.md](../proofs/dep.gaussbonnet-eulerchar.md)

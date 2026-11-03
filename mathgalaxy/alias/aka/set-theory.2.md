@@ -17,14 +17,12 @@
 
 - 等势 | 一样大 | 基数相同 | equipotent | same cardinality → def.equinumerous
 
-- Cantor–Bernstein | 施罗德-伯恩斯坦 | Cantor-Bernstein-Schroeder → thm.schroder-bernstein
+- Cantor–Bernstein | 施罗德-伯恩斯坦 | Cantor-Bernstein-Schroeder | 施罗德–伯恩斯坦定理 → thm.schroder-bernstein
 
 - Hartogs | 哈托格斯 → thm.hartogs
 
 - 可数 | countable | 可数无穷 | 可列 → def.countable
 
 - 基数 | cardinality | 势 | cardinal number → def.cardinal
-
-- 对角线论证 | diagonal argument | 幂集比原集大 → thm.cantor
 
 > 续见 alias/aka/set-theory.3.md

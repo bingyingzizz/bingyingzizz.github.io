@@ -1,6 +1,10 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 可解性对子群与商群封闭 → thm.solvable-quotients
+
+- 对称群的可解性 → prop.sn-solvable
+
 - Steinitz 交换引理 → thm.steinitz
 
 - M_n(K) 是环 → thm.matrix-ring
@@ -13,7 +17,7 @@
 
 - 群作用 → def.group-action
 
-- Cayley 定理 → thm.cayley
+- Cayley 定理 | 凯莱定理 | 凯莱 → thm.cayley
 
 - 序与四则运算 → prop.order-rules
 
@@ -44,11 +48,5 @@
 - 线性映射 | 恒等映射 | 恒等线性映射 → def.linear-map
 
 - 线性同构 → def.linear-isomorphism
-
-- 商空间 → def.quotient-vs
-
-- 商空间的万有性质 → thm.quotient-universal-vs
-
-- 零化度 → def.nullity
 
 > 续见 alias/aka/algebra.6.md

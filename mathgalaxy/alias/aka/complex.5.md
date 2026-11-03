@@ -11,4 +11,16 @@
 
 - Riemann 曲面 → def.riemann-surface
 
+- 柯西–格林恒等式 → lem.cauchy-green
+
+- 古尔萨引理 → lem.goursat-triangle
+
+- 柯西不等式 | 柯西估计 → thm.cauchy-inequality
+
+- 泰勒展开 | 泰勒级数 → thm.taylor-complex
+
+- 洛朗展开 | 洛朗级数 → thm.laurent
+
+- 黎曼可去奇点 → thm.riemann-removable
+
 见 `../../alias.md`。

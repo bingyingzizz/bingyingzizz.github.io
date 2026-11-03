@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 16 · proposition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Pullback (Open Sets)` (short) · `Pullback: Between Open Sets` (full)
 
 ## Statement and proof

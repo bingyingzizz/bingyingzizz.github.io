@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2781 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2785 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2781 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1467 nodes, 2785 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -11928,7 +11928,7 @@ MG.aliases = {
   version: 1,
   updated: '2026-09-23',
 
-  intro: '同一个东西的别的叫法；常见问法该看哪几个节点。',
+  intro: '别的叫法与常见问法。',
 
   /* ------------------------------------------------------------ 别名 */
   nodes: [
@@ -11971,11 +11971,11 @@ MG.aliases = {
 
     /* 基数与等势 */
     { id: 'def.equinumerous', en: 'equipotent', aka: ['等势', '一样大', '基数相同', 'equipotent', 'same cardinality'] },
-    { id: 'thm.schroder-bernstein', en: 'Schröder–Bernstein theorem', aka: ['Cantor–Bernstein', '施罗德-伯恩斯坦', 'Cantor-Bernstein-Schroeder'] },
+    { id: 'thm.schroder-bernstein', en: 'Schröder–Bernstein theorem', aka: ['Cantor–Bernstein', '施罗德-伯恩斯坦', 'Cantor-Bernstein-Schroeder', '施罗德–伯恩斯坦定理'] },
     { id: 'thm.hartogs', aka: ['Hartogs', '哈托格斯'] },
     { id: 'def.countable', aka: ['可数', 'countable', '可数无穷', '可列'] },
     { id: 'def.cardinal', en: 'cardinality', aka: ['基数', 'cardinality', '势', 'cardinal number'] },
-    { id: 'thm.cantor', aka: ['对角线论证', 'diagonal argument', '幂集比原集大'] },
+    { id: 'thm.cantor', aka: ['对角线论证', 'diagonal argument', '幂集比原集大', '康托', '康托尔', '康托尔定理'] },
     { id: 'thm.cardinal-comparable', aka: ['基数可比', '三分律', 'comparability of cardinals'] },
 
     /* 数系的构造 */
@@ -12045,7 +12045,7 @@ MG.aliases = {
     { id: 'thm.real-ordered-field', en: 'least upper bound property', aka: ['确界原理', '实数完备', '完备性', 'least upper bound property', 'completeness of R', '实数的运算律', 'ℝ 上的运算律', '实数加法交换律', '实数的加法交换律', '实数的乘法交换律'] },
     { id: 'def.series', aka: ['级数', 'series', '级数收敛'] },
     { id: 'def.continuous', aka: ['连续', 'continuous', '连续函数'] },
-    { id: 'def.derivative', aka: ['导数', 'derivative', '可导'] },
+    { id: 'def.derivative', aka: ['导数', 'derivative', '可导', '微分', '求导'] },
 
     /* 集合族与 σ-代数 */
     { id: 'def.set-ring', en: 'ring of sets', aka: ['环', '代数', 'ring of sets', 'algebra of sets', '集合环'] },
@@ -12207,7 +12207,7 @@ MG.aliases = {
     { id: 'prop.duality-isometry', aka: ['等距', 'isometry', '范数相等'] },
     { id: 'prop.bounded-functional-gives-lq', en: 'bounded functionals on Lp land in Lq', aka: ['有界泛函给出 Lq'] },
     { id: 'thm.lp-banach', aka: ['Banach', '巴拿赫空间', 'Lp 完备'] },
-    { id: 'thm.riesz-representation-lp', en: 'Riesz representation theorem for Lp', aka: ['Riesz 表示', '对偶空间', 'dual space', '(Lp)* = Lq'] },
+    { id: 'thm.riesz-representation-lp', en: 'Riesz representation theorem for Lp', aka: ['Riesz 表示', '对偶空间', 'dual space', '(Lp)* = Lq', '里斯表示定理'] },
 
     /* 拓扑：子空间 / 商 / 分离 / 连通 */
     { id: 'def.subspace-topology', aka: ['子空间拓扑', 'subspace topology', '相对拓扑', '诱导拓扑'] },
@@ -12544,7 +12544,7 @@ MG.aliases = {
     { id: 'prop.sieve-covering-equivalent', aka: ['覆盖筛的四条等价', '覆盖筛等价条件', 'Proposition 3.2.12', 'Prop 3.2.12', '层化 覆盖筛'] },
 
     /* 同调代数 */
-    { id: 'def.cochain-complex', en: 'cochain complex', aka: ['复形', 'complex', '上链复形', 'cochain complex', '链复形', '微分', 'Definition 7.1.1', 'Def 7.1.1'] },
+    { id: 'def.cochain-complex', en: 'cochain complex', aka: ['复形', 'complex', '上链复形', 'cochain complex', '链复形', 'Definition 7.1.1', 'Def 7.1.1'] },
     { id: 'prop.complex-additive', aka: ['复形范畴是加法范畴', '逐项计算', 'Exercise 7.1', 'Exercise 7.7'] },
     { id: 'def.homotopy', en: 'homotopy', aka: ['同伦', 'homotopy', '零伦', 'null-homotopic', '链同伦', 'Exercise 7.4', 'Exercise 7.5', 'Definition 7.1.2', 'Def 7.1.2'] },
     { id: 'def.homotopy-category', aka: ['同伦范畴', 'homotopy category', 'K(C)', '同伦等价', 'Definition 7.1.3', 'Def 7.1.3'] },
@@ -12623,8 +12623,8 @@ MG.aliases = {
     { id: 'thm.boolean-stone', aka: ['Stone 表示定理', '布尔环与 Stone 空间', 'Stone representation', 'Exercise 2.22'] },
     { id: 'prop.closed-inclusion-filtered-limit', aka: ['紧块沿闭含入', 'Proposition 2.3.9', 'Exercise 2.42'] },
     { id: 'thm.equivalence-criterion', en: 'criterion for an equivalence of categories', aka: ['Theorem 1.2.4', 'Thm 1.2.4'] },
-    { id: 'prop.kan-extension-adjoint', aka: ['Proposition 1.5.10', 'Prop 1.5.10'] },
-    { id: 'prop.kan-extension-exists', aka: ['Proposition 1.5.11', 'Prop 1.5.11'] },
+    { id: 'prop.kan-extension-adjoint', aka: ['Proposition 1.5.10', 'Prop 1.5.10', '坎延拓'] },
+    { id: 'prop.kan-extension-exists', aka: ['Proposition 1.5.11', 'Prop 1.5.11', '坎延拓'] },
     { id: 'thm.presheaf-limits-colimits', en: 'limits and colimits in presheaf categories', aka: ['Theorem 3.1.2', 'Thm 3.1.2', 'Exercise 1.67'] },
     { id: 'def.associated-sheaf', aka: ['Definition 3.2.10', 'Def 3.2.10'] },
     { id: 'thm.induced-topos-morphism', aka: ['Theorem 3.4.2', 'Thm 3.4.2', 'Corollary 3.4.3', 'Cor 3.4.3'] },
@@ -12632,13 +12632,13 @@ MG.aliases = {
     { id: 'def.resolution', en: 'resolution', aka: ['Definition 7.1.20', 'Def 7.1.20'] },
     { id: 'prop.bicomplex-spectral', en: 'a bicomplex gives a spectral sequence', aka: ['Proposition 7.2.18', 'Prop 7.2.18', 'Exercise 7.32', 'Exercise 7.33'] },
     { id: 'lem.covering-free-acyclic', aka: ['Lemma 7.3.2'] },
-    { id: 'cor.cech-cohomology-spectral', aka: ['Corollary 7.3.8', 'Cor 7.3.8'] },
+    { id: 'cor.cech-cohomology-spectral', aka: ['Corollary 7.3.8', 'Cor 7.3.8', '切赫谱序列'] },
     { id: 'def.free-abelian-sheaf', aka: ['Exercise 5.18', 'Exercise 5.24'] },
     { id: 'prop.image-kernel-cokernel', aka: ['Exercise 5.9'] },
     { id: 'prop.projection-formula-cond', aka: ['Exercise 4.11'] },
     { id: 'prop.cond-epi-open-surjective', aka: ['Proposition 4.2.5', 'Prop 4.2.5', 'Exercise 4.9'] },
     { id: 'prop.open-covering-covering', aka: ['Exercise 4.6'] },
-    { id: 'prop.hom-presheaf-sheaf', aka: ['Exercise 4.7'] },
+    { id: 'prop.hom-presheaf-sheaf', aka: ['Exercise 4.7', 'Hom 预层'] },
     { id: 'prop.countable-colimit-qseparated', aka: ['Exercise 4.12'] },
     { id: 'prop.qseparated-mono', aka: ['Exercise 4.13'] },
     { id: 'prop.exact-at-points', aka: ['Exercise 5.10'] },
@@ -12655,72 +12655,72 @@ MG.aliases = {
     { id: 'prop.total-complex-injective-resolution', aka: ['Exercise 7.34'] },
     { id: 'prop.derived-functor-exact-factor', en: 'an exact factor degenerates the spectral sequence', aka: ['Exercise 7.35'] },
     { id: 'prop.flat-tensor-acyclic', aka: ['Exercise 7.39'] },
-    { id: 'prop.cech-cochain-formula', aka: ['Exercise 7.40'] },
+    { id: 'prop.cech-cochain-formula', aka: ['Exercise 7.40', '切赫上链公式'] },
     { id: 'prop.higher-cohomology-presheaf-zero', aka: ['Exercise 7.43'] },
-    { id: 'prop.cech-higher-cohomology-presheaf', aka: ['Exercise 7.45'] },
-    { id: 'prop.cech-interval-vanishing', aka: ['Exercise 7.47'] },
-    { id: 'prop.cech-h1-equals-h1', aka: ['Exercise 7.48'] },
+    { id: 'prop.cech-higher-cohomology-presheaf', aka: ['Exercise 7.45', '切赫上同调'] },
+    { id: 'prop.cech-interval-vanishing', aka: ['Exercise 7.47', '切赫上同调'] },
+    { id: 'prop.cech-h1-equals-h1', aka: ['Exercise 7.48', '切赫上同调'] },
     { id: 'prop.acyclic-equivalent-conditions', aka: ['Exercise 7.49'] },
     { id: 'prop.topos-morphism-abelian-adjunction', aka: ['Exercise 7.51'] },
-    { id: 'prop.inverse-image-tensor', aka: ['Exercise 7.52', 'Exercise 3.51'] },
+    { id: 'prop.inverse-image-tensor', aka: ['Exercise 7.52', 'Exercise 3.51', '拉回与内 Hom'] },
     { id: 'prop.cohomology-functoriality', aka: ['Exercise 7.54'] },
     { id: 'prop.derived-pushforward-composition', aka: ['Exercise 7.55'] },
-    { id: 'thm.leray-spectral-sequence', aka: ['Exercise 7.56'] },
+    { id: 'thm.leray-spectral-sequence', aka: ['Exercise 7.56', '勒雷谱序列'] },
     { id: 'prop.abelian-slice-adjunction', aka: ['Exercise 7.57'] },
-    { id: 'prop.slice-shriek-z', aka: ['Exercise 7.58'] },
+    { id: 'prop.slice-shriek-z', aka: ['Exercise 7.58', '切片函子'] },
     { id: 'prop.cohomology-slice-identification', aka: ['Exercise 7.59'] },
-    { id: 'prop.internal-hom-slice-value', aka: ['Exercise 7.60', 'Exercise 3.66'] },
+    { id: 'prop.internal-hom-slice-value', aka: ['Exercise 7.60', 'Exercise 3.66', '内 Hom'] },
     { id: 'prop.slice-shriek-projection', aka: ['Exercise 7.61'] },
     { id: 'prop.fully-faithful-injective', en: 'a fully faithful functor is essentially injective', aka: ['Exercise 1.17'] },
-    { id: 'prop.preorder-as-category', en: 'a preorder is a category with at most one arrow', aka: ['Exercise 1.15', 'Exercise 1.18'] },
+    { id: 'prop.preorder-as-category', en: 'a preorder is a category with at most one arrow', aka: ['Exercise 1.15', 'Exercise 1.18', '预序范畴'] },
     { id: 'prop.slice-fully-faithful-mono', en: 'slice characterisation of monomorphisms', aka: ['Exercise 1.32'] },
     { id: 'prop.projective-universal-epi', en: 'projective objects and sections of epimorphisms', aka: ['Exercise 1.49'] },
     { id: 'prop.functor-preserves-monoid-objects', en: 'functors preserving finite products act on algebraic objects', aka: ['Exercise 1.53'] },
     { id: 'prop.adjunction-extends-to-diagrams', aka: ['Exercise 1.63'] },
-    { id: 'prop.kan-extension-fully-faithful', aka: ['Exercise 1.74'] },
-    { id: 'prop.hausdorff-reflective', en: 'Hausdorff spaces are a reflective subcategory', aka: ['Exercise 2.3'] },
+    { id: 'prop.kan-extension-fully-faithful', aka: ['Exercise 1.74', '坎延拓'] },
+    { id: 'prop.hausdorff-reflective', en: 'Hausdorff spaces are a reflective subcategory', aka: ['Exercise 2.3', '豪斯多夫反射'] },
     { id: 'prop.normal-locally-closed', en: 'closed neighbourhoods inside neighbourhoods in a normal space', aka: ['Exercise 2.5'] },
     { id: 'prop.compact-basic-operations', en: 'basic operations on compact spaces', aka: ['Exercise 2.6', 'Exercise 2.7'] },
     { id: 'prop.quotient-of-compact', en: 'quotients of compact spaces are compact', aka: ['Exercise 2.8'] },
     { id: 'prop.totally-disconnected-subspace', en: 'total disconnectedness passes to subspaces', aka: ['Exercise 2.16'] },
     { id: 'prop.profinite-sets-spaces', en: 'profinite sets are profinite spaces', aka: ['Exercise 2.21'] },
-    { id: 'prop.continuous-map-space-metric', aka: ['Exercise 2.29'] },
-    { id: 'prop.ind-representable-iff-left-exact', en: 'ind-representable iff left exact', aka: ['Exercise 3.8'] },
+    { id: 'prop.continuous-map-space-metric', aka: ['Exercise 2.29', '函数空间'] },
+    { id: 'prop.ind-representable-iff-left-exact', en: 'ind-representable iff left exact', aka: ['Exercise 3.8', 'ind-可表示'] },
     { id: 'prop.covering-sieves-filter', aka: ['Exercise 3.11'] },
     { id: 'prop.site-covering-families-pretopology', aka: ['Exercise 3.14'] },
     { id: 'prop.sheafification-image', aka: ['Exercise 3.20'] },
     { id: 'prop.sheafification-slice-colimit', aka: ['Exercise 3.26'] },
-    { id: 'prop.sheaf-hom-computed-in-presheaves', aka: ['Exercise 3.45'] },
+    { id: 'prop.sheaf-hom-computed-in-presheaves', aka: ['Exercise 3.45', '层 Hom'] },
     { id: 'prop.inverse-image-constant-sheaf', aka: ['Exercise 3.50'] },
     { id: 'prop.stalk-of-sheafification', aka: ['Exercise 3.57'] },
     { id: 'prop.module-tensor-universal', en: 'universal property of the tensor product of modules', aka: ['Exercise 1.21'] },
-    { id: 'prop.set-top-ab-complete', en: 'Set, Top and Ab are complete', aka: ['Exercise 1.38', 'Exercise 1.45'] },
+    { id: 'prop.set-top-ab-complete', en: 'Set, Top and Ab are complete', aka: ['Exercise 1.38', 'Exercise 1.45', '完备范畴'] },
     { id: 'prop.adjunction-composition', aka: ['Exercise 1.59'] },
-    { id: 'prop.coproduct-chaus', en: 'disjoint unions are coproducts of compact Hausdorff spaces', aka: ['Exercise 2.12'] },
+    { id: 'prop.coproduct-chaus', en: 'disjoint unions are coproducts of compact Hausdorff spaces', aka: ['Exercise 2.12', '余积'] },
     { id: 'prop.connected-image-closure', en: 'images and closures of connected sets', aka: ['Exercise 2.13'] },
     { id: 'prop.sieve-generated-by-family', aka: ['Exercise 3.10'] },
-    { id: 'prop.pontryagin-finite-dim-banach', en: 'the dual of a finite-dimensional Banach space', aka: ['Exercise 6.8'] },
-    { id: 'prop.chaus-quotient-equiv', en: 'four characterisations of quotient maps of compact Hausdorff spaces', aka: ['Exercise 2.9'] },
-    { id: 'prop.weak-hausdorff-k-closed', aka: ['Exercise 2.36', 'Exercise 2.37'] },
+    { id: 'prop.pontryagin-finite-dim-banach', en: 'the dual of a finite-dimensional Banach space', aka: ['Exercise 6.8', '庞特里亚金对偶'] },
+    { id: 'prop.chaus-quotient-equiv', en: 'four characterisations of quotient maps of compact Hausdorff spaces', aka: ['Exercise 2.9', '商映射'] },
+    { id: 'prop.weak-hausdorff-k-closed', aka: ['Exercise 2.36', 'Exercise 2.37', '弱 Hausdorff'] },
     { id: 'prop.topology-alternative-axiom', aka: ['Exercise 3.12'] },
     { id: 'prop.constant-sheaf-adjunction', aka: ['Exercise 3.22'] },
     { id: 'prop.constant-sheaf-top', aka: ['Exercise 3.23'] },
     { id: 'prop.slice-topos', aka: ['Exercise 3.63', 'Exercise 3.64'] },
     { id: 'def.crystalline-sheaf', aka: ['Exercise 3.67'] },
-    { id: 'prop.crystalline-sheaf-equiv', aka: ['Exercise 3.68', 'Exercise 3.69'] },
-    { id: 'prop.qc-sheaf-etale', aka: ['Exercise 3.70'] },
+    { id: 'prop.crystalline-sheaf-equiv', aka: ['Exercise 3.68', 'Exercise 3.69', '晶体层'] },
+    { id: 'prop.qc-sheaf-etale', aka: ['Exercise 3.70', '拟紧层'] },
     { id: 'prop.discrete-iff-constant', aka: ['Exercise 4.5'] },
     { id: 'prop.underlying-preserves-coproduct', aka: ['Exercise 4.8'] },
     { id: 'prop.discrete-functor-coproduct', en: 'the discrete functor preserves direct sums', aka: ['Exercise 6.3'] },
     { id: 'prop.cond-quotient-topological', en: 'condensed quotients agree with topological quotients', aka: ['Exercise 6.5'] },
-    { id: 'prop.derived-functor-kan-extension', aka: ['Exercise 7.22'] },
+    { id: 'prop.derived-functor-kan-extension', aka: ['Exercise 7.22', '导出函子'] },
     { id: 'prop.cohomology-via-associated-sheaf', aka: ['Exercise 7.36'] },
     { id: 'prop.cohomology-presheaf-H', aka: ['Exercise 7.42'] },
     { id: 'prop.topos-morphism-from-object', aka: ['Exercise 3.52'] },
     { id: 'prop.topos-morphism-final-map', aka: ['Exercise 3.55'] },
     { id: 'prop.topos-morphism-point', aka: ['Exercise 3.56'] },
     { id: 'prop.free-objects-examples', en: 'examples of free objects', aka: ['Exercise 1.8'] },
-    { id: 'prop.zmod-is-ab', aka: ['Exercise 1.10'] },
+    { id: 'prop.zmod-is-ab', aka: ['Exercise 1.10', 'Z-模'] },
     { id: 'prop.functor-preserves-sections', en: 'functors preserve sections and retractions', aka: ['Exercise 1.11'] },
     { id: 'def.mor-domain-codomain', en: 'domain and codomain functors on the arrow category', aka: ['Exercise 1.12'] },
     { id: 'prop.op-category-is-modules', en: 'objects with operators are modules', aka: ['Exercise 1.13'] },
@@ -12731,7 +12731,7 @@ MG.aliases = {
     { id: 'prop.solution-functor-representable', en: 'the solution set functor is representable', aka: ['Exercise 1.22'] },
     { id: 'prop.universal-unique-iso', en: 'a universal element is unique up to unique isomorphism', aka: ['Exercise 1.23'] },
     { id: 'prop.algebra-categories-limits', en: 'limits and colimits in categories of algebras', aka: ['Exercise 1.28'] },
-    { id: 'prop.cat-final-initial-products', en: 'terminal and initial objects and finite products in Cat', aka: ['Exercise 1.31'] },
+    { id: 'prop.cat-final-initial-products', en: 'terminal and initial objects and finite products in Cat', aka: ['Exercise 1.31', '终始对象'] },
     { id: 'prop.bialgebra-examples', en: 'examples of bialgebras', aka: ['Exercise 1.50'] },
     { id: 'prop.localization-functor-exact', en: 'the localisation functor is exact for right fractions', aka: ['Exercise 1.54'] },
     { id: 'prop.adjunction-naturality', aka: ['Exercise 1.55'] },
@@ -12744,7 +12744,7 @@ MG.aliases = {
     { id: 'prop.reflection-criterion', aka: ['Exercise 1.71'] },
     { id: 'prop.coreflective-monoids-full', aka: ['Exercise 1.72'] },
     { id: 'prop.slice-covering-sieve', aka: ['Exercise 3.62'] },
-    { id: 'prop.spectral-sequence-page-picture', en: 'pages of a spectral sequence in the (p,q) plane', aka: ['Exercise 7.28'] },
+    { id: 'prop.spectral-sequence-page-picture', en: 'pages of a spectral sequence in the (p,q) plane', aka: ['Exercise 7.28', '谱序列'] },
 
     /* — 凝聚态 / 解析几何：2026-10-27 可读性审计补的检索别名 — */
     /* 起因：用户搜「完备模」搜不到。图上这个词只在正文里出现（「自由完备模」），
@@ -12764,7 +12764,7 @@ MG.aliases = {
     /* ⭐ 2026-11-02 用户报「搜 Riemann 积分，那个节点在第五位、搜不出来」：
        节点 label 是「Riemann 可积」（正文讲的是 Riemann 积分的定义与可积性），
        于是「积分」二字进不了名字档 ⇒ 补上人们真正会敲的叫法。 */
-    { id: 'def.riemann-integrable', aka: ['Riemann 积分', '定积分', 'Riemann 积分定义', 'Riemann 积分的定义', '黎曼积分'] },
+    { id: 'def.riemann-integrable', aka: ['Riemann 积分', '定积分', 'Riemann 积分定义', 'Riemann 积分的定义', '黎曼积分', '积分'] },
     { id: 'thm.riemann-lebesgue', aka: ['Riemann-Lebesgue 引理', 'Riemann–Lebesgue', 'Riemann-Lebesgue', '傅里叶系数趋于零', '黎曼-勒贝格引理'] },
     { id: 'thm.riemann-mapping', aka: ['Riemann映照定理', 'Riemann 映照定理', '黎曼映照定理', '黎曼映射定理', 'Riemann映射定理', 'Riemann mapping theorem', '共形映射基本定理', '保形映射定理'] },
     { id: 'def.holomorphic', aka: ['解析函数', 'analytic function', '正则函数'] },
@@ -12830,7 +12830,7 @@ MG.aliases = {
     { id: 'thm.smooth-duality', en: 'dualizing complex of a smooth map', aka: ['光滑映射的对偶复形'] },
     { id: 'prop.zero-isolated', en: 'isolated zeros and their order', aka: ['零点的孤立性与阶'] },
     { id: 'thm.borsuk-ulam', en: 'Borsuk–Ulam theorem in dimension two', aka: ['Borsuk–Ulam 定理（二维）'] },
-    { id: 'thm.bolzano-weierstrass', en: 'Bolzano–Weierstrass theorem', aka: ['Bolzano–Weierstrass 定理'] },
+    { id: 'thm.bolzano-weierstrass', en: 'Bolzano–Weierstrass theorem', aka: ['Bolzano–Weierstrass 定理', '波尔查诺–魏尔斯特拉斯定理'] },
     { id: 'thm.rolle', en: 'Rolle\'s theorem', aka: ['Rolle 中值定理'] },
     { id: 'prop.regular-immersion-dualizing', en: 'dualizing complex of a regular closed immersion', aka: ['正则闭浸入的对偶复形'] },
     { id: 'thm.poincare-solid', en: 'solid Serre duality', aka: ['固态 Serre 对偶'] },
@@ -12850,7 +12850,7 @@ MG.aliases = {
     { id: 'thm.winding-homotopy', en: 'homotopy invariance of the winding number', aka: ['绕数的同伦不变性'] },
     { id: 'prop.standard-maps', en: 'standard conformal maps', aka: ['标准共形映射'] },
     { id: 'thm.lhopital', en: 'l\'Hôpital\'s rule', aka: ['L\'Hôpital 法则'] },
-    { id: 'thm.taylor', en: 'Taylor\'s formula', aka: ['Taylor 公式'] },
+    { id: 'thm.taylor', en: 'Taylor\'s formula', aka: ['Taylor 公式', '泰勒', '泰勒公式'] },
     { id: 'thm.uniform-limit-derivative', en: 'interchange of derivative and uniform limit', aka: ['导数与极限交换'] },
     { id: 'thm.sylvester-criterion', en: 'Sylvester\'s criterion', aka: ['Sylvester 判据'] },
     { id: 'cor.solid-compact-generators', en: 'compact projective objects in solid modules', aka: ['固态的紧投射对象'] },
@@ -12861,7 +12861,7 @@ MG.aliases = {
     { id: 'thm.mv-homology', en: 'Mayer–Vietoris sequence in homology', aka: ['Mayer–Vietoris（同调）'] },
     { id: 'prop.mobius-circle', en: 'Möbius transformations preserve circles', aka: ['保圆性'] },
     { id: 'def.symmetric-point', en: 'symmetric point with respect to a circle', aka: ['关于圆的对称点'] },
-    { id: 'prop.taylor-peano', en: 'Taylor\'s formula with Peano remainder', aka: ['Taylor 公式（Peano 余项）'] },
+    { id: 'prop.taylor-peano', en: 'Taylor\'s formula with Peano remainder', aka: ['Taylor 公式（Peano 余项）', '皮亚诺余项'] },
     { id: 'thm.csz-free', en: 'C(S,Z) is a free abelian group', aka: ['连续函数群是自由的'] },
     { id: 'thm.solid-tensor', en: 'solid tensor product', aka: ['固态张量积'] },
     { id: 'ex.solid-tensor-computations', en: 'computations with solid tensor products', aka: ['固态张量积的计算'] },
@@ -12920,7 +12920,7 @@ MG.aliases = {
     { id: 'prop.mobius-classification', en: 'classification of Möbius transformations', aka: ['分式线性变换的分类'] },
     { id: 'lem.nested-intervals', en: 'nested interval theorem', aka: ['闭区间套定理'] },
     { id: 'thm.completeness-equivalent', en: 'six equivalent forms of completeness', aka: ['完备性的六条等价'] },
-    { id: 'cor.heine-borel', en: 'closed and bounded iff compact in Rn', aka: ['有界闭 ⟺ 紧（ℝⁿ）'] },
+    { id: 'cor.heine-borel', en: 'closed and bounded iff compact in Rn', aka: ['有界闭 ⟺ 紧（ℝⁿ）', '海涅–博雷尔定理', '海涅–博雷尔'] },
     { id: 'thm.uniform-continuity-compact', en: 'continuous on a compact set implies uniformly continuous', aka: ['紧集上连续 ⟹ 一致连续'] },
     { id: 'thm.fermat', en: 'Fermat\'s lemma on interior extrema', aka: ['Fermat 引理'] },
     { id: 'def.uniform-convergence', en: 'uniform convergence', aka: ['一致收敛'] },
@@ -12928,7 +12928,7 @@ MG.aliases = {
     { id: 'thm.convergence-radius', en: 'radius of convergence', aka: ['收敛半径'] },
     { id: 'def.determinant', en: 'determinant', aka: ['行列式'] },
     { id: 'thm.diagonalizable', en: 'criterion for diagonalisability', aka: ['可对角化判据'] },
-    { id: 'thm.jordan-canonical-form', en: 'Jordan canonical form', aka: ['Jordan 标准形'] },
+    { id: 'thm.jordan-canonical-form', en: 'Jordan canonical form', aka: ['Jordan 标准形', '若尔当标准形', '约当标准形'] },
     { id: 'prop.differentiable-implies-continuous', en: 'differentiable implies continuous', aka: ['可导 ⟹ 连续'] },
     { id: 'thm.geometric-series', en: 'geometric series', aka: ['几何级数'] },
     { id: 'prop.free-solid-solid', en: 'the free solid group is solid', aka: ['自由固态群是固态的'] },
@@ -12941,7 +12941,7 @@ MG.aliases = {
     { id: 'thm.uniform-limit-continuous', en: 'a uniform limit of continuous functions is continuous', aka: ['一致收敛保连续'] },
     { id: 'thm.uniform-limit-integral', en: 'interchange of integral and limit', aka: ['积分与极限交换'] },
     { id: 'thm.det-exists-unique', en: 'existence and uniqueness of the determinant', aka: ['行列式的存在唯一性'] },
-    { id: 'prop.det-laplace', en: 'Laplace expansion', aka: ['Laplace 展开'] },
+    { id: 'prop.det-laplace', en: 'Laplace expansion', aka: ['Laplace 展开', '拉普拉斯展开'] },
     { id: 'thm.factor-theorem', en: 'factor theorem and roots', aka: ['因式定理与根'] },
     { id: 'thm.minimal-poly-divisor', en: 'the minimal polynomial divides the characteristic polynomial', aka: ['极小多项式整除特征多项式'] },
     { id: 'thm.primary-decomposition', en: 'primary decomposition into generalised eigenspaces', aka: ['根子空间分解'] },
@@ -12957,12 +12957,12 @@ MG.aliases = {
     { id: 'prop.extended-plane-compact', en: 'the extended complex plane is compact', aka: ['扩充复平面是紧的'] },
     { id: 'def.chain-homotopy', en: 'chain homotopy', aka: ['链同伦'] },
     { id: 'thm.riemann-rearrangement', en: 'Riemann rearrangement theorem', aka: ['Riemann 重排定理'] },
-    { id: 'thm.euler-formula', en: 'Euler\'s formula', aka: ['Euler 公式'] },
+    { id: 'thm.euler-formula', en: 'Euler\'s formula', aka: ['Euler 公式', '欧拉公式', '欧拉恒等式'] },
     { id: 'thm.matrix-linear-map', en: 'linear maps and matrices', aka: ['线性映射 ⟷ 矩阵'] },
     { id: 'thm.cayley-hamilton', en: 'Cayley–Hamilton theorem', aka: ['Cayley–Hamilton 定理'] },
     { id: 'thm.cauchy-schwarz', en: 'Cauchy–Schwarz inequality', aka: ['Cauchy–Schwarz 不等式'] },
     { id: 'thm.tensor-universal-property', en: 'universal property of the tensor product of vector spaces', aka: ['张量积的万有性质'] },
-    { id: 'thm.lagrange', en: 'Lagrange\'s theorem', aka: ['Lagrange 定理'] },
+    { id: 'thm.lagrange', en: 'Lagrange\'s theorem', aka: ['Lagrange 定理', '拉格朗日定理', '拉格朗日'] },
     { id: 'thm.nth-root', en: 'nth roots', aka: ['n 次方根'] },
     { id: 'prop.continuous-arithmetic', en: 'arithmetic of continuous functions', aka: ['连续函数的运算'] },
     { id: 'def.winding-number', en: 'winding number', aka: ['绕数'] },
@@ -12991,7 +12991,7 @@ MG.aliases = {
     { id: 'prop.root-bound', en: 'a polynomial has at most as many roots as its degree', aka: ['根的个数不超过次数'] },
     { id: 'thm.projection-formula', en: 'best approximation and the projection formula', aka: ['最佳逼近与投影公式'] },
     { id: 'thm.orbit-stabilizer', en: 'orbit-stabiliser theorem', aka: ['轨道–稳定子定理'] },
-    { id: 'thm.sylow', en: 'Sylow theorems', aka: ['Sylow 定理'] },
+    { id: 'thm.sylow', en: 'Sylow theorems', aka: ['Sylow 定理', '西罗定理', '西罗'] },
     { id: 'prop.limit-basic', en: 'basic properties of limits', aka: ['极限的基本性质'] },
     { id: 'prop.huber-subring-recovery', en: 'the integrally closed subring is determined by the spectrum', aka: ['A⁺ 由谱决定'] },
     { id: 'thm.adic-structure-sheaf', en: 'the adic structure sheaf is a sheaf', aka: ['adic 结构层是层'] },
@@ -13031,7 +13031,7 @@ MG.aliases = {
     { id: 'def.multilinear-form', en: 'multilinear form', aka: ['多重线性型'] },
     { id: 'def.induced-norm', en: 'induced norm and distance', aka: ['诱导范数与距离'] },
     { id: 'def.group-action', en: 'group action', aka: ['群作用'] },
-    { id: 'thm.cayley', en: 'Cayley\'s theorem', aka: ['Cayley 定理'] },
+    { id: 'thm.cayley', en: 'Cayley\'s theorem', aka: ['Cayley 定理', '凯莱定理', '凯莱'] },
     { id: 'prop.order-rules', en: 'order and the arithmetic operations', aka: ['序与四则运算'] },
     { id: 'thm.binomial', en: 'binomial theorem', aka: ['二项式定理'] },
     { id: 'thm.bernoulli', en: 'Bernoulli\'s inequality', aka: ['Bernoulli 不等式'] },
@@ -13085,7 +13085,7 @@ MG.aliases = {
     { id: 'def.polynomial-ring', en: 'polynomial ring', aka: ['多项式环'] },
     { id: 'def.irreducible-poly', en: 'irreducible polynomial', aka: ['不可约多项式'] },
     { id: 'def.invariant-subspace', en: 'invariant subspace', aka: ['不变子空间'] },
-    { id: 'def.eigenvalue', en: 'eigenvalue and eigenvector', aka: ['特征值与特征向量', '几何重数'] },
+    { id: 'def.eigenvalue', en: 'eigenvalue and eigenvector', aka: ['特征值与特征向量', '几何重数', '特征值'] },
     { id: 'def.inner-product', en: 'inner product', aka: ['内积'] },
     { id: 'def.orthogonality', en: 'orthogonality', aka: ['正交'] },
     { id: 'def.orthogonal-complement', en: 'orthogonal complement', aka: ['正交补'] },
@@ -13093,7 +13093,8 @@ MG.aliases = {
     { id: 'def.isometry', en: 'isometry and orthogonal transformation', aka: ['等距与正交变换'] },
     { id: 'def.quadratic-form', en: 'quadratic form', aka: ['二次型'] },
     { id: 'def.bilinear-form', en: 'bilinear form', aka: ['双线性型'] },
-    { id: 'def.tensor-product-vs', en: 'tensor product', aka: ['张量积'] },
+    { id: 'def.tensor-product-vs', en: 'tensor product', aka: ['向量空间的张量积'] },
+    { id: 'def.tensor-module', en: 'tensor product of modules', aka: ['张量积', '模的张量积', '张量积（模）'] },
     { id: 'def.exterior-power', en: 'exterior power', aka: ['外幂'] },
     { id: 'def.symmetric-algebra', en: 'symmetric algebra', aka: ['对称代数'] },
     { id: 'def.permutation-group', en: 'permutation and symmetric group', aka: ['置换群与对称群'] },
@@ -13141,7 +13142,7 @@ MG.aliases = {
     { id: 'cor.wilson', en: 'Wilson theorem', aka: ['威尔逊定理'] },
     { id: 'def.int-domain', en: 'integral domain', aka: ['整环（另一种叫法）', '无零因子环'] },
     { id: 'def.irreducible-element', en: 'associate irreducible and prime elements', aka: ['不可约元', '素元', '相伴元'] },
-    { id: 'def.gcd-domain', en: 'GCD domain', aka: ['最大公因子整环'] },
+    { id: 'def.gcd-domain', en: 'GCD domain', aka: ['最大公因子整环', '最大公因子的整环'] },
     { id: 'def.bezout-domain', en: 'Bézout domain', aka: ['Bézout 整环', '裴蜀整环'] },
     { id: 'def.euclidean-domain', en: 'Euclidean domain', aka: ['欧几里得整环', '欧氏整环'] },
     { id: 'def.pid', en: 'principal ideal domain', aka: ['主理想整环', 'PID'] },
@@ -13226,9 +13227,67 @@ MG.aliases = {
     { id: 'thm.arzela-ascoli-general', en: 'general Arzela-Ascoli theorem', aka: ['广义 Arzela-Ascoli', '阿尔泽拉-阿斯科利', 'Arzela-Ascoli（一般版）'] },
     { id: 'def.subalgebra-separating', en: 'subalgebra and separating points', aka: ['分离点', '子代数', '格子代数'] },
     { id: 'lem.closed-subalgebra-lattice', en: 'a closed unital subalgebra is a lattice', aka: ['闭子代数是格', '格子代数引理'] },
-    { id: 'thm.stone-weierstrass', en: 'Stone-Weierstrass theorem', aka: ['Stone-Weierstrass', '斯通-魏尔斯特拉斯', 'Weierstrass 逼近定理'] },
+    { id: 'thm.stone-weierstrass', en: 'Stone-Weierstrass theorem', aka: ['Stone-Weierstrass', '斯通-魏尔斯特拉斯', 'Weierstrass 逼近定理', '斯通–魏尔斯特拉斯定理'] },
     { id: 'thm.stone-weierstrass-complex', en: 'Stone-Weierstrass theorem, complex case', aka: ['复 Stone-Weierstrass', '圆盘代数'] },
     { id: 'thm.bernstein-approximation', en: 'Bernstein polynomial approximation', aka: ['Bernstein 多项式', '伯恩斯坦多项式', 'Bernstein'] },
+    { id: 'def.banach-space', aka: ['巴拿赫空间'] },
+    { id: 'def.jacobian', aka: ['雅可比矩阵'] },
+    { id: 'def.hessian', aka: ['海森矩阵', '黑塞矩阵'] },
+    { id: 'thm.taylor-multi', aka: ['多元泰勒公式', '泰勒公式（多元）'] },
+    { id: 'thm.second-derivative-test', aka: ['二阶导数判别法', '海森判据'] },
+    { id: 'thm.inverse-function-banach', aka: ['巴拿赫逆映射定理'] },
+    { id: 'thm.implicit-function-banach', aka: ['巴拿赫隐函数定理'] },
+    { id: 'thm.lagrange-multiplier', aka: ['拉格朗日乘子法', '拉格朗日乘数法'] },
+    { id: 'thm.morse-lemma', aka: ['莫尔斯引理'] },
+    { id: 'thm.sard', aka: ['萨德定理'] },
+    { id: 'thm.paracompact-cech-equals-sheaf', aka: ['切赫上同调'] },
+    { id: 'def.etale-space', aka: ['埃塔勒空间', '平展空间'] },
+    { id: 'def.etale-sheaf', aka: ['埃塔勒层', '平展层'] },
+    { id: 'prop.etale-sheaf-examples', aka: ['埃塔勒层的例子'] },
+    { id: 'def.weingarten-map', aka: ['魏因加滕变换'] },
+    { id: 'thm.gauss-equation', aka: ['高斯方程'] },
+    { id: 'thm.codazzi-mainardi', aka: ['科达齐–迈纳尔迪方程'] },
+    { id: 'thm.meusnier', aka: ['默尼耶定理'] },
+    { id: 'thm.euler-formula-surface', aka: ['欧拉公式（法曲率）'] },
+    { id: 'thm.rodrigues', aka: ['罗德里格斯定理'] },
+    { id: 'thm.frenet-serret', aka: ['弗雷内–塞雷公式'] },
+    { id: 'def.ricci-curvature', aka: ['里奇曲率'] },
+    { id: 'thm.stokes', aka: ['斯托克斯定理', '斯托克斯公式'] },
+    { id: 'thm.stokes-chain', aka: ['斯托克斯定理（链上）'] },
+    { id: 'lem.single-cube-stokes', aka: ['斯托克斯公式（方块）'] },
+    { id: 'lem.cauchy-green', aka: ['柯西–格林恒等式'] },
+    { id: 'lem.goursat-triangle', aka: ['古尔萨引理'] },
+    { id: 'thm.cauchy-inequality', aka: ['柯西不等式', '柯西估计'] },
+    { id: 'thm.taylor-complex', aka: ['泰勒展开', '泰勒级数'] },
+    { id: 'thm.laurent', aka: ['洛朗展开', '洛朗级数'] },
+    { id: 'thm.riemann-removable', aka: ['黎曼可去奇点'] },
+    { id: 'def.lie-bracket', aka: ['李括号'] },
+    { id: 'def.de-rham-complex', aka: ['德拉姆上同调', 'de Rham 复形'] },
+    { id: 'lem.poincare-lemma', aka: ['庞加莱引理'] },
+    { id: 'thm.mayer-vietoris', aka: ['迈耶–维托里斯序列'] },
+    { id: 'def.lie-group', aka: ['李群'] },
+    { id: 'def.lie-algebra', aka: ['李代数'] },
+    { id: 'def.hermitian-matrix', aka: ['埃尔米特矩阵', '厄米矩阵'] },
+    { id: 'thm.schur-triangularization', aka: ['舒尔三角化'] },
+    { id: 'def.rayleigh-quotient', aka: ['瑞利商'] },
+    { id: 'thm.courant-fischer', aka: ['库朗–费舍尔极小极大原理'] },
+    { id: 'def.gram-matrix', aka: ['格拉姆矩阵'] },
+    { id: 'thm.witt-cancellation', aka: ['维特消去定理'] },
+    { id: 'def.lagrangian-subspace', aka: ['拉格朗日子空间'] },
+    { id: 'thm.lagrange-identity', aka: ['拉格朗日恒等式'] },
+    { id: 'thm.lu-decomposition', aka: ['三角分解'] },
+    { id: 'thm.qr-decomposition', aka: ['正交三角分解'] },
+    { id: 'thm.darboux', aka: ['达布定理'] },
+    { id: 'def.hamiltonian-vector-field', aka: ['哈密顿向量场'] },
+    { id: 'def.poisson-bracket', aka: ['泊松括号'] },
+    { id: 'def.lagrangian-submanifold', aka: ['拉格朗日子流形'] },
+    { id: 'def.lagrange-bracket', aka: ['拉格朗日括号'] },
+    { id: 'thm.frechet-derivative', aka: ['弗雷歇导数'] },
+    { id: 'def.riemann-sum', aka: ['黎曼和'] },
+    { id: 'thm.darboux-criterion', aka: ['达布判据'] },
+    { id: 'thm.ftc-riemann-part2', aka: ['牛顿–莱布尼茨公式', '牛顿莱布尼茨公式'] },
+    { id: 'prop.riemann-implies-lebesgue', aka: ['黎曼可积'] },
+    { id: 'def.total-differential', aka: ['微分', '可微'] },
   ],
 
   /* -------------------------------------------------- 内文**不链**的别名 */
@@ -13531,6 +13590,23 @@ MG.aliases = {
     { q: '紧块拼起来的空间上同调怎么算', to: ['prop.filtered-limit-cohomology', 'prop.closed-inclusion-filtered-limit', 'def.sheaf-cohomology'] },
     { q: 'Stone 表示定理是什么', to: ['thm.boolean-stone', 'def.boolean-ring', 'def.stone-space'] },
     { q: '布尔环和 Stone 空间什么关系', to: ['thm.boolean-stone', 'def.boolean-ring', 'def.stone-space'] },
+    /* — 白话好奇心问法（2026-11-03 补；A4：原来 184 条全是专业问法） — */
+    { q: '为什么咖啡杯和甜甜圈在拓扑上是同一个东西', to: ['thm.euler-characteristic', 'thm.gauss-bonnet'] },
+    { q: '为什么球面和甜甜圈不一样', to: ['thm.euler-characteristic', 'thm.gauss-bonnet'] },
+    { q: '有没有比无穷大还大的无穷大', to: ['thm.cantor', 'thm.cardinal-comparable'] },
+    { q: '为什么两个无穷集合可以有一样多的元素', to: ['thm.schroder-bernstein', 'def.cardinal'] },
+    { q: '为什么素数有无穷多个', to: ['thm.euclid-infinite-primes'] },
+    { q: '为什么有理数不够用', to: ['thm.real-ordered-field', 'def.real', 'thm.real-complete-metric'] },
+    { q: '为什么闭区间上的连续函数一定一致连续', to: ['thm.uniform-continuity-compact', 'def.uniform-continuity'] },
+    { q: '连续一定可导吗', to: ['def.derivative', 'def.continuous', 'thm.uniform-limit-derivative'] },
+    { q: '为什么五次方程没有根式解', to: ['prop.sn-solvable', 'def.solvable-group'] },
+    { q: '为什么要选择公理', to: ['ax.choice', 'thm.wellordering', 'lem.zorn'] },
+    { q: '集合能不能自己装进自己', to: ['ax.found'] },
+    { q: '测度和长度有什么区别', to: ['def.measure', 'def.outer-measure'] },
+    { q: '为什么积分和求和可以换顺序', to: ['thm.mct', 'thm.termwise-integration', 'thm.dct'] },
+    { q: '为什么两条平行线在球面上会相交', to: ['def.riemannian-metric', 'def.curvature-tensor'] },
+    { q: '群和环到底差在哪', to: ['def.group', 'def.ring'] },
+    { q: '为什么矩阵乘法不能交换', to: ['thm.matrix-ring', 'def.linear-map'] },
   ],
 };
 
@@ -19701,6 +19777,15 @@ window.MG = window.MG || {};
         '3. **对可数并封闭**：$A_1, A_2, \\ldots \\in \\mathfrak{A} \\implies \\bigcup_{n=1}^{\\infty} A_n \\in \\mathfrak{A}$',
         '',
         '二元组 $(X, \\mathfrak{A})$ 称为**可测空间**（measurable space），$\\mathfrak{A}$ 的元素称为**可测集**（measurable set）。'
+        ,
+        '**三条公理之间其实只有一条“硬”的**（其余两条几乎可以互相换）：\n' +
+        '\n' +
+        '- **含全集 $\\iff$ 含空集**：由对补封闭即得（$\\emptyset = X^{c}$）。所以写成「含 $\\emptyset$」或「含 $X$」等价，**只要同时有对补封闭**。\n' +
+        '- **对可数并封闭 $\\iff$ 对可数交封闭**：**用两次 de Morgan**：$\\bigcap_{n} A_{n} = \\bigl(\\bigcup_{n} A_{n}^{c}\\bigr)^{c}$。所以「可数并对」与「可数交」两条只留一条即可 —— **但必须配「对补封闭」**，缺了它两条都推不出来。\n' +
+        '- **「可数并」不能弱化成「有限并」**：只有有限并 + 对补 得到的是**代数**（Boolean algebra），不是 $\\sigma$-代数。差别是实质的：有理数集在 $2^{\\mathbb{R}}$ 的有限并代数里可以被包含，但 $\\{q\\}$ 的可数并（$= \\mathbb{Q}$）就不一定 —— 而测度论的全部内容都要数可数并。\n' +
+        '- **「可数」不能加强成「任意」**：$\\sigma$-代数**不**对任意并封闭。反例：$\\mathbb{R}$ 上的 Borel $\\sigma$-代数对所有开集取并（开集全体是任意并封闭的）是对的，但对**任意**子集取并会跑出去（每个单点是 Borel，但其任意并可以是不可测集，前提是 $2^{\\aleph_{0}}$ 个并——这需要选择公理构造 Vitali 集）。\n' +
+        '\n' +
+        '⚠️ 一句话记法：**$\\sigma$-代数 = 「含全集 + 对补封闭 + 对可数并封闭」，其余全是这两条的推论**；而「对补 + 有限并」只是代数，弱的不是一点。'
       ].join('\n'),
       notes: [
         '三条是配套的，缺一不可：只留 (2)(3) 就是**$\\sigma$环**；把 (3) 降成「有限并」就是**代数**。',
@@ -20376,7 +20461,20 @@ window.MG = window.MG || {};
       notes: [
         '外测度定义在**全体**子集上（$\\mathcal{P}(X)$，不是某个 $\\sigma$代数），代价是它只有**次**可加性。',
         '所以外测度不是测度 —— 它太大了，连 $\\mathcal{P}(X)$ 上都没有可加性。Carathéodory 的想法是在其中挑出一批「表现良好」的集合（下一条定义），外测度在它们上面才变成真正的测度。',
-        'Lebesgue 最初构造的就是外测度：$\\mu^{*}(A) = \\inf\\{ \\sum (b_{n} - a_{n}) : A \\subseteq \\bigcup (a_{n}, b_{n}) \\}$。'
+        'Lebesgue 最初构造的就是外测度：$\\mu^{*}(A) = \\inf\\{ \\sum (b_{n} - a_{n}) : A \\subseteq \\bigcup (a_{n}, b_{n}) \\}$。',
+        ,
+        '**三条里哪条是“硬”的**（外测度的三条不对称 —— 一条是规范化，一条是免费的，一条是真条件）：\n' +
+        '\n' +
+        '- $\\mu^{*}(\\emptyset) = 0$：**规范化**，只为让后面的 $0 \\le \\mu^{*}$ 有意义（否则常数 $+\\infty$ 也满足后两条）。\n' +
+        '- **单调**：**几乎是免费的**，但要用**可数次可加**来推：$B = A \\cup (B \\setminus A)$ $\\implies$ $\\mu^{*}(B) \\le \\mu^{*}(A) + \\mu^{*}(B\\setminus A)$，所以单调性本身常被列成公理以省去这步；在具体构造（Carathéodory 外测度）里它是直接验证的。\n' +
+        '- **可数次可加**：**这才是真条件**，也是唯一有内容的 —— 它把「单点测度」与「可数运算」绑在一起。⚠️ 注意它是**不等式**：外测度**不**可加（对不交并可加才是测度，那是 Carathéodory 可测集上的额外结论）。\n' +
+        '\n' +
+        '**两个必须分清的点**：\n' +
+        '\n' +
+        '- **外测度定义在 $\\mathcal{P}(X)$ 上**（所有子集），而测度（`def.measure`）只定义在 $\\sigma$-代数上 —— 这是外测度作为「构造工具」的全部意义：先在全部子集上给一个粗略的「大小」，再挑出那些「可加」的子集作为可测集。\n' +
+        '- **单调 + 可数次可加 不蕴含「对可数并取值等于极限」**：外测度在递增并上只保证 $\\mu^{*}(\\bigcup A_{n}) \\le \\lim \\mu^{*}(A_{n})$，等式要靠下连续性，而那需要可测性 —— 这正是 Carathéodory 条件要补的东西。\n' +
+        '\n' +
+        '⚠️ 记号：$\\mu^{*}$ 上的星号表示「在 $\\mathcal{P}(X)$ 上」，不是「关于某个东西的对偶」。有些书用 $m^{*}$、$\\nu^{*}$。'
       ].join('\n\n'),
       refs: ['Halmos, Measure Theory, §11', 'Folland, Real Analysis, §1.4']
     },
@@ -33053,7 +33151,7 @@ window.MG = window.MG || {};
       cluster: 'hom.sheaf',
       type: 'definition',
       label: '阿贝尔层的张量积',
-      title: '张量积与封闭幺半结构',
+      title: '阿贝尔层的张量积与封闭幺半结构',
       regions: ['homology'],
       tags: ['同调代数', '张量积', '封闭幺半'],
       statement: [
@@ -46897,7 +46995,7 @@ window.MG = window.MG || {};
         '',
         '特别地 $e^{i\\pi} = -1$。'
       ].join('\n'),
-      notes: '⭐ 这条公式把**指数、三角、复数**三件事焊成一件：$\\theta \\mapsto e^{i\\theta}$ 是单位圆上以弧长 $\\theta$ 为参数的运动，实部是 $\\cos$、虚部是 $\\sin$。\n\n⭐ 证明就是**重排级数**（见下面的证明）：把 $\\exp$ 的级数按奇偶项拆开。\n\n表面上看只是换了个写法，实际上它给出了「$\\cos$ 与 $\\sin$ 是同一个指数函数的两个分量」这个结构性事实。\n\n⚠ 注意这里**不需要**任何几何输入：弧长、角度、单位圆这些词都只是事后对公式的**解释**。\n\n反过来，正因为有这条公式，三角函数才可能有周期（周期来自 $e^{2\\pi i} = 1$）。',
+      notes: '⭐ 这条公式把**指数、三角、复数**三件事焊成一件：$\\theta \\mapsto e^{i\\theta}$ 是单位圆上以弧长 $\\theta$ 为参数的运动，实部是 $\\cos$、虚部是 $\\sin$。\n\n⭐ 证明就是**重排级数**（见下面的证明）：把 $\\exp$ 的级数按奇偶项拆开。\n\n表面上看只是换了个写法，实际上它给出了「$\\cos$ 与 $\\sin$ 是同一个指数函数的两个分量」这个结构性事实。\n\n⚠ 注意这里**不需要**任何几何输入：弧长、角度、单位圆这些词都只是事后对公式的**解释**。\n\n反过来，正因为有这条公式，三角函数才可能有周期（周期来自 $e^{2\\pi i} = 1$）。\n\n⚠ **同名不同物**：微分几何里还有一条「Euler 公式」（法曲率 $k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta$，见 `thm.euler-formula-surface`），与这条没有关系。',
       refs: ['Rudin, Principles of Mathematical Analysis, Ch. 8']
     }
   ],
@@ -48913,7 +49011,7 @@ window.MG = window.MG || {};
         '',
         '相似的不变量：秩、迹、行列式、特征多项式（从而特征值与它们的代数重数）、极小多项式。'
       ].join('\n'),
-      notes: '⭐ 相似是**等价关系**（自反 / 对称 / 传递），所以 $M_n(K)$ 被分成相似类；**分类问题就是「描述所有相似类」**。\n\n⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。\n\n图上两条边（`thm.change-of-basis` 与 `dep.linearmap-similarity`）说的就是这件事。\n\n⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。\n\n$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 与 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ 等价但不相似。',
+      notes: '⭐ 相似是**等价关系**（自反 / 对称 / 传递），所以 $M_n(K)$ 被分成相似类；**分类问题就是「描述所有相似类」**。\n\n⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。\n\n图上两条边（`thm.change-of-basis` 与 `dep.changeofbasis-similarity`）说的就是这件事。\n\n⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。\n\n$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 与 $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ 等价但不相似。',
       refs: ['Hoffman–Kunze, Linear Algebra, Ch. 6']
     },
     {
@@ -49869,7 +49967,7 @@ window.MG = window.MG || {};
       id: 'def.tensor-product-vs',
       cluster: 'algebra.multilinear',
       type: 'definition',
-      label: '张量积',
+      label: '张量积（向量空间）',
       title: '向量空间的张量积 $V \\otimes W$',
       regions: ['algebra'],
       tags: ['定义', '线性代数', '张量'],
@@ -54947,7 +55045,7 @@ window.MG = window.MG || {};
       id: 'def.tensor-module',
       cluster: 'hom.module',
       type: 'definition',
-      label: '模的张量积',
+      label: '张量积',
       title: '模的张量积 $M \\otimes_{R} N$',
       regions: ['homology'],
       tags: ['定义', '同调代数', '模', '张量积'],
@@ -60400,7 +60498,7 @@ window.MG = window.MG || {};
         '**含义**：两个数 $k_{1}, k_{2}$ 决定所有方向的法曲率 —— 法曲率作为方向的函数只是 $\\cos^{2}$ 的插值。',
         '**极值**：$\\theta = 0$ 与 $\\theta = \\pi/2$ 分别给出 $k_{1}, k_{2}$，其余方向夹在两者之间。这解释了「主方向 $=$ 法曲率取极值的方向」，也是$k_{n}(v) = k_{1}\\cos^{2}\\theta+k_{2}\\sin^{2}\\theta$。',
         '**矩阵说法**：主方向标架下 $h = \\operatorname{diag}(k_{1}, k_{2})$，$V = (\\cos\\theta, \\sin\\theta)$，于是 $k_{n} = V^{T}hV$。',
-        '**平均曲率的名字**：$H = \\frac{1}{2\\pi}\\int_{0}^{2\\pi}k_{n}(\\theta)\\,\\mathrm{d}\\theta$ —— 法曲率在整圈上的平均，这正是「平均」二字的来处。'
+        '**平均曲率的名字**：$H = \\frac{1}{2\\pi}\\int_{0}^{2\\pi}k_{n}(\\theta)\\,\\mathrm{d}\\theta$ —— 法曲率在整圈上的平均，这正是「平均」二字的来处。\n\n⚠ **同名不同物**：复变里那条「Euler 公式」$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ 是另一回事（见 `thm.euler-formula`）。'
       ].join('\n\n'),
       refs: [
         'do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· Euler 公式',
@@ -77455,6 +77553,16 @@ window.MG = window.MG || {};
         '2. 所有**顺序主子式** $> 0$（Sylvester 判据，`thm.sylvester-criterion`）；',
         '3. 存在可逆 $P$ 使 $A = P^{*}P$（半正定：$A = P^{*}P$ 不必可逆）；',
         '4. $x \\mapsto \\sqrt{x^{*}Ax}$ 是范数（半正定时是半范数）。'
+        ,
+        '**各方向用到的假设**（四条里，前两条是“谱/主子式”判据，后两条是“分解/范数”判据，依赖的东西不一样）：\n' +
+        '\n' +
+        '- (定义) $\\iff$ (1)：**要用谱定理**（Hermite 矩阵可正交对角化，`thm.spectral-matrix`）。对角化后 $x^{*}Ax = \\sum \\lambda_{i}\\lvert y_{i}\\rvert^{2}$，于是「恒正」$\\iff$「每个 $\\lambda_{i} > 0$」。**这一条只在 Hermite（实对称）时成立**：非对称矩阵可以有正的特征值却不正定（$x^{T}Ax$ 里混着反对称部分）。\n' +
+        '- (1) $\\implies$ (2)：**只对**顺序主子式**成立，不对「所有主子式」**。Sylvester 判据说的是「$n$ 个顺序主子式全正」；而「所有主子式非负」才是半正定的判据（两者不是一回事，半正定情形顺序主子式可以为零）。这一条**不用谱定理**，只用配方法 —— 所以它是纯代数的，在任意有序域上都成立。\n' +
+        '- (2) $\\implies$ (定义)：**需要实（或 Hermite）对称**。做法是分块高斯消元（LDL 分解）：顺序主子式非零保证消元可行，得到的对角元正是主子式之比。\n' +
+        '- (定义) $\\iff$ (3)：**这一步用谱定理或 Cholesky**。$A = P^{*}P$ 时 $x^{*}Ax = \\lVert Px\\rVert^{2}$，可逆 $P$ 给出严格正；反向取 $P = \\Lambda^{1/2}U^{*}$。**注意这里必须允许复/实矩阵用共轭转置**，写成 $A = P^{T}P$ 只在实对称时对。\n' +
+        '- (3) $\\iff$ (4)：**三角不等式验证**即得（$\\sqrt{x^{*}Ax} = \\lVert Px\\rVert$ 是范数）。反向用 $x^{*}Ax$ 的平方根定义 —— 需要先证它是二次型。\n' +
+        '\n' +
+        '⚠️ **三处最容易错的地方**：(a) 忘掉「Hermite/实对称」这个前提（复情形要用 $x^{*}$，用 $x^{T}Ax > 0$ 讨论复矩阵是没有意义的，它可能不是实数）；(b) 把「顺序主子式全正」换成「所有主子式全正」—— 后者是**更强**的条件（对正定也对，但半正定时只有后者能用）；(c) 半正定时 $P$ 不可逆、特征值可为 $0$、平方根只是半范数 —— 三条要同时放宽。'
       ].join('\n'),
       notes: [
         '**它是「内积的矩阵」**：任意内积在基下的矩阵就是正定 Hermite 矩阵；反过来每个正定矩阵都给出一个内积。所以「正定」= 「合法的内积矩阵」，这条对应比任何判据都好用。',
@@ -81129,7 +81237,7 @@ window.MG = window.MG || {};
      · `def.totally-bounded` 的陈述只有「有限 $\varepsilon$-网」一种写法，
        **没有**「每个序列有 Cauchy 子列」这个等价刻画。
      · 「Fréchet 导数」0 命中（`def.derivative` 是一维的；`def.total-differential` 是
-       $\mathbb{R}^{n}$ 上的全微分；流形上是 `def.differential-manifold`）。
+       $\mathbb{R}^{n}$ 上的全微分；流形上是 `def.differential-map`）。
        赋范空间之间的 Fréchet 导数（$f'(a)$ 作为有界线性算子）确实缺。
 
    本包：
@@ -81211,7 +81319,7 @@ window.MG = window.MG || {};
         '- **可微 $\\implies$ 连续**；',
         '- **中值不等式**：$\\|f(b) - f(a)\\| \\le \\sup_{[a,b]}\\|f\'\\| \\cdot \\|b - a\\|$ —— 这是把一元中值定理搬过来时**唯一能用的形式**（等号形式不再成立，因为有界线性算子不能「取某点处的值」）；',
         '- **逆映射定理（Banach 版）**（`thm.inverse-function-banach`）：$f\'(a)$ **可逆**（作为 $B(E,F)$ 的元素，从而 $E \\cong F$）+ 连续可微 $\\implies$ $f$ 在 $a$ 附近是局部同胚。那条定理的假设就写在这个导数上。',
-        '⚠️ **与另外两个「导数」的分工**：`def.derivative` 是一元实函数；`def.total-differential` 是 $\\mathbb{R}^{n} \\to \\mathbb{R}^{m}$ 的全微分（Jacobian 矩阵）；流形之间的微分是 `def.differential-manifold`（切空间之间的线性映射）。本节点是**赋范空间之间**的版本 —— 它把前两个都收成特例（有限维时 $f\'(a)$ 就是 Jacobian 矩阵）。',
+        '⚠️ **与另外两个「导数」的分工**：`def.derivative` 是一元实函数；`def.total-differential` 是 $\\mathbb{R}^{n} \\to \\mathbb{R}^{m}$ 的全微分（Jacobian 矩阵）；流形之间的微分是 `def.differential-map`（切空间之间的线性映射）。本节点是**赋范空间之间**的版本 —— 它把前两个都收成特例（有限维时 $f\'(a)$ 就是 Jacobian 矩阵）。',
         '⚠️ **高阶导数**要小心：$f\'\' (a)$ 是 $B(E, B(E,F)) \\cong B(E \\times E, F)$ 的元素（双线性型），不是「二阶矩阵」。赋范空间上写 Taylor 公式（`thm.taylor`）时必须按这个理解。'
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis · Fréchet 导数', 'Brezis, Functional Analysis, Sobolev Spaces and PDE · 微分']
@@ -81451,6 +81559,20 @@ window.MG = window.MG || {};
         '3. $u$ 在 $0$ 连续；',
         '4. $u$ 有界（即 $\\|u(x)\\| \\le C\\|x\\|$）；',
         '5. $u$ 是 Lipschitz 的。'
+        ,
+        '**各方向用到的假设**（五条里前四条几乎免费，真正的代价在最后一条）：\n' +
+        '\n' +
+        '- (1) $\\iff$ (2) $\\iff$ (3)：**只需要「线性」+「平移」**。线性映射把 $a$ 处的连续性平移到 $0$：$u(x) - u(x_{0}) = u(x - x_{0})$；反过来 $0$ 处连续也平移到任意点。这一步**不用完备性、不用有限维**。\n' +
+        '- (3) $\\implies$ (4)：**只用 $\\varepsilon$-$\\delta$ 的定义**。取 $\\varepsilon = 1$，得 $\\delta > 0$ 使 $\\lVert x\\rVert \\le \\delta \\implies \\lVert u(x)\\rVert \\le 1$；再由齐次性 $\\lVert u(x)\\rVert \\le \\frac{1}{\\delta}\\lVert x\\rVert$。**注意这里用到的正是线性**（齐次性），非线性映射即使连续也不「有界」。\n' +
+        '- (4) $\\implies$ (1)：**一行**：$\\lVert u(x) - u(y)\\rVert \\le C\\lVert x - y\\rVert$。\n' +
+        '- (4) $\\iff$ (5)：**只差一个常数**。有界 $\\implies$ Lipschitz（取 $C$）；Lipschitz $\\implies$ 有界（$x = 0$ 处取 $C$ 并平移）。\n' +
+        '- ⚠️ **「某一点连续」不能弱成「某一点处有界」**：后者对任意映射都无意义（有界性对线性映射才是全局概念）。这一条的实质是「一点连续 $\\implies$ 处处连续」，而它**只对线性映射成立**。\n' +
+        '\n' +
+        '**几个需要留意的边界**：\n' +
+        '\n' +
+        '- **不需要完备性**：五条等价在任意赋范空间（哪怕不完备）上都成立。这一点常被误记成「Banach 空间才成立」——其实只有**开映射/闭图像/一致有界**那三条才要完备性。\n' +
+        '- **不能去掉线性**：$f : \\mathbb{R} \\to \\mathbb{R}$，$f(x) = x^{2}$ 处处连续但不 Lipschitz、也不「有界」（在 $\\lVert f(x)\\rVert \\le C\\lVert x\\rVert$ 的意义下）。\n' +
+        '- **有界 $\\ne$ 函数值有界**：线性映射的「有界」是「把有界集送到有界集」，与「$\\sup\\lVert u\\rVert < \\infty$ 于整个空间」无关（后者对非零线性映射永远不成立）。'
       ].join('\n'),
       notes: [
         '唯一有内容的一步是「在 0 连续 $\\implies$ 有界」，而且必须反证：若不存在这样的 $C$，则对每个 $n$ 有 $x_n$ 使 $\\|u(x_n)\\| \\ge n\\|x_n\\|$；\n\n令 $y_n = x_n / (n\\|x_n\\|)$，则 $\\|y_n\\| \\to 0$ 而 $\\|u(y_n)\\| \\ge 1$ —— 与在 $0$ 连续矛盾。',
@@ -82117,6 +82239,18 @@ window.MG = window.MG || {};
         '1. $X$ 是 Baire 空间（可数个稠密开集之交稠密）；',
         '2. $X$ 的每个非空开集是第二纲的；',
         '3. 可数个无处稠密闭集之并不含非空开集（内部为空）。'
+        ,
+        '**三条为什么等价、各自用什么**（这一条最容易“看起来显然，其实要用补集与可数性各一次”）：\n' +
+        '\n' +
+        '- (1) $\\implies$ (2)：**反证 + 取补**。若某非空开集 $U$ 是第一纲（$U \\subseteq \\bigcup_{n} F_{n}$，$F_{n}$ 无处稠密闭），则 $U^{c} \\cup \\bigcup_{n} F_{n} = X$ —— 于是 $U = \\bigcap_{n}(X \\setminus F_{n})$ 中那族稠密开集的交**不含** $U$ 里任何点，与「交稠密」矛盾。**这一步只用到「稠密开集之交错密」的定义**。\n' +
+        '- (2) $\\implies$ (3)：**同上反向**，仍只做补集：若可数个无处稠密闭集之并含有非空开集 $U$，则 $U$ 就是第一纲，与 (2) 矛盾。\n' +
+        '- (3) $\\implies$ (1)：**这一步要用可数交的构造**。设 $O_{n}$ 稠密开，令 $F_{n} := X \\setminus O_{n}$（无处稠密闭）。要证 $\\bigcap O_{n}$ 稠密，即证它的补 $\\bigcup F_{n}$ 内部为空 —— 那正是 (3)。\n' +
+        '- **注意 (1) 里的「可数」不能换成「有限」**：有限个稠密开集之交稠密在**任何**拓扑空间都成立（不用任何假设），所以 Baire 性完全是「可数」带来的。\n' +
+        '\n' +
+        '**三条之外还必须记住的假设**：\n' +
+        '\n' +
+        '- 三条的等价**不需要**任何前提（纯拓扑，任意空间都对）—— 需要假设的是「什么样的空间满足它们」：**完备度量空间**（`thm.baire`）与**局部紧 Hausdorff 空间**（`thm.locally-compact-baire`）。这两条的证明用的是完全不同的工具（前者用球套 / 完备性，后者用紧性取有限子覆盖 + 局部紧性）。\n' +
+        '- ⚠️ **「Baire」不是「完备」的推论本身**，而是「完备 $\\implies$ Baire」这一条定理；$\\mathbb{Q}$ 是（不完备的）度量空间且**不是** Baire 空间（每个单点无处稠密、$\\mathbb{Q}$ 可数），正好说明完备性不能去掉。'
       ].join('\n'),
       notes: [
         '三条就是同一条取补集：稠密开 $\\leftrightarrow$ 无处稠密闭、交 $\\leftrightarrow$ 并、「稠密」$\\leftrightarrow$「内部为空」。',
@@ -82995,6 +83129,81 @@ window.MG = window.MG || {};
     { id: 'def-link.fa-hausdorff-baire', kind: 'definition', definition: 'def.hausdorff', usedBy: 'thm.locally-compact-baire',
       note: '局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。' }
   ]
+});
+
+</script>
+  <script>
+/* ============================================================================
+   内容包 · 审计接线（2026-11-03，B1 批）：只加边 + 一处通名归位
+   ----------------------------------------------------------------------------
+   来源：`_audit/星图问题清单-2026-11-03.md` 的 C2 / D3 / D4（T5 / T6 / T7）。
+   这一包**不改任何节点正文**，只干两件事：
+     ① 补三条「本来就该有」的连线（两个词都写在陈述里，却一条边都没有）；
+     ② 张量积的通名归位（§10 已定决议：通名给**模**的那版）。
+
+   为什么单独开一包：上面三处分散在 126 / 141 / 16 / 161 / 107 / 120 / 106 七个包里，
+   逐包改会和同时在写内容的人撞车；边单独成包，依赖关系一眼可见。
+
+   判据（每条边都要说得出「为什么是这条方向」）：
+     · `definition` 边的语义是「结论用到了这个概念/结果」（definition → usedBy）；
+     · 因此 `definition` 一旦指向更深的节点，层号会自己跟着动 —— 那是派生量，不为它将就。
+   ========================================================================== */
+(window.MG.packs = window.MG.packs || []).push({
+  name: '审计接线：Gauss–Bonnet↔χ、L^p↔Banach、张量积通名',
+
+  nodes: [],
+
+  edges: [
+    /* ------------------------------------------------ C2：微分几何 ↔ 拓扑 */
+    /* 现状（审计 C2）：`thm.gauss-bonnet` 的 title 就叫「Gauss–Bonnet 定理与
+       Euler 示性数」，陈述里写着 $\int_M K\,dA = 2\pi\chi(M)$，而它的 7 条入边
+       **全在几何侧**；`thm.euler-characteristic` 又是另一片叶子。两边都 out=0。
+       ⇒ 微分几何与拓扑之间最有名的那座桥，在图上是断的。*/
+    {
+      id: 'dep.gaussbonnet-eulerchar',
+      kind: 'definition',
+      definition: 'thm.euler-characteristic',
+      usedBy: 'thm.gauss-bonnet',
+      note: 'Gauss–Bonnet 的结论里直接出现 $\\chi(M)$，而 $\\chi$ 此前在几何侧是「外部输入」。' +
+        '两边接上之后：把曲面三角剖分，$\\int_M K\\,\\mathrm{d}A = 2\\pi\\chi(M) = 2\\pi(V-E+F)$ —— ' +
+        '这就是「曲率积分 = 拓扑不变量」的完整走法。',
+    },
+
+    /* ------------------------------------------------ D3：测度 ↔ 泛函 */
+    /* 现状（审计 D3）：测度 ↔ 泛函分析整片只有 1 条边，而且是无关的。
+       `thm.lp-banach`（$L^p$ 是 Banach 空间）的陈述里两个词都在，却一条边都不接。*/
+    {
+      id: 'dep.lpbanach-norm',
+      kind: 'definition',
+      definition: 'def.norm',
+      usedBy: 'thm.lp-banach',
+      note: '「$L^{p}$ 是 Banach 空间」这句话里的「空间」是**赋范空间**：先有 $\\|\\cdot\\|_{p}$ 这个范数，' +
+        '完备性才是相对它说的。此前 `def.lp-norm` 的出边全在测度/分析内部，一条也没通向泛函分析。',
+    },
+    {
+      id: 'dep.lpbanach-banach',
+      kind: 'definition',
+      definition: 'def.banach-space',
+      usedBy: 'thm.lp-banach',
+      note: '同理：结论的谓词「是 Banach 空间」本人没被引用。' +
+        '`def.banach-space` 原来的入边只有 `def.complete` 一条 —— 于是 $L^{p}$ 与泛函分析互不相认。',
+    },
+
+    /* ------------------------------ D4 / T7：张量积的通名归位（§10 已定） */
+    /* 现状：`def.tensor-product-vs`（**向量空间**版）的 label 是「张量积」，
+       `def.tensor-module`（**模**版，更一般）叫「模的张量积」，两者零边。
+       通名该归模版：$K$-向量空间就是 $K$-模；而且模版用自由群 $F/K$ 构造、
+       **不依赖选择公理**，向量空间版「取一组基」反而要 AC。*/
+    {
+      id: 'dep.tensormodule-tensorvs',
+      kind: 'definition',
+      definition: 'def.tensor-module',
+      usedBy: 'def.tensor-product-vs',
+      note: '$K$-向量空间就是 $K$-模，所以「向量空间的张量积」是模的张量积的特例（$R = K$）。' +
+        '⛔ 反方向的 `imp.derived-multilinear-tensor-dual` 是**粉边**（`layer:false`，用高级工具回头证），' +
+        '所以完整图上会出现一个可视环 —— 那是粉边的语义，不参与分层，不必消除。',
+    },
+  ],
 });
 
 </script>

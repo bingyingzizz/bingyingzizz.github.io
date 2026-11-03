@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 商空间 → def.quotient-vs
+
+- 商空间的万有性质 → thm.quotient-universal-vs
+
+- 零化度 → def.nullity
+
 - 对偶空间 → def.dual-space
 
 - 对偶基 → def.dual-basis
@@ -27,7 +33,7 @@
 
 - 不变子空间 → def.invariant-subspace
 
-- 特征值与特征向量 | 几何重数 → def.eigenvalue
+- 特征值与特征向量 | 几何重数 | 特征值 → def.eigenvalue
 
 - 内积 → def.inner-product
 
@@ -42,11 +48,5 @@
 - 二次型 → def.quadratic-form
 
 - 双线性型 → def.bilinear-form
-
-- 张量积 → def.tensor-product-vs
-
-- 外幂 → def.exterior-power
-
-- 对称代数 → def.symmetric-algebra
 
 > 续见 alias/aka/algebra.7.md

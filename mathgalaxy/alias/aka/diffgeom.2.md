@@ -1,5 +1,5 @@
 # 别名 → 节点 · 微分几何
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
 - 对合分布 → def.involutive-distribution
 
@@ -29,4 +29,22 @@
 
 - 黎曼体积 | 黎曼 → def.volume-form
 
-见 `../../alias.md`。
+- 魏因加滕变换 → def.weingarten-map
+
+- 高斯方程 → thm.gauss-equation
+
+- 科达齐–迈纳尔迪方程 → thm.codazzi-mainardi
+
+- 默尼耶定理 → thm.meusnier
+
+- 欧拉公式（法曲率） → thm.euler-formula-surface
+
+- 罗德里格斯定理 → thm.rodrigues
+
+- 弗雷内–塞雷公式 → thm.frenet-serret
+
+- 里奇曲率 → def.ricci-curvature
+
+- 斯托克斯定理 | 斯托克斯公式 → thm.stokes
+
+> 续见 alias/aka/diffgeom.3.md

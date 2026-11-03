@@ -1,7 +1,7 @@
 # 万有性质 $\implies$ 双函子性、结合、对称与保直和
 `imp.tensor-functor-properties` · 推出 · strong 边 · 根 `../`
 
-`def.tensor-module` 模的张量积 → `prop.tensor-functor-properties` 张量积的函子性质
+`def.tensor-module` 张量积 → `prop.tensor-functor-properties` 张量积的函子性质
 
 **单位**：$r \otimes n \mapsto r n$ 有反向 $n \mapsto 1 \otimes n$，且 $r \otimes n = (1 \cdot r) \otimes n = 1 \otimes r n$ 由平衡关系成立，故 $R \otimes_{R} N \cong N$ ✓。
 

@@ -8,3 +8,5 @@
 **矩阵说法**：主方向标架下 $h = \operatorname{diag}(k_{1}, k_{2})$，$V = (\cos\theta, \sin\theta)$，于是 $k_{n} = V^{T}hV$。
 
 **平均曲率的名字**：$H = \frac{1}{2\pi}\int_{0}^{2\pi}k_{n}(\theta)\,\mathrm{d}\theta$ —— 法曲率在整圈上的平均，这正是「平均」二字的来处。
+
+⚠ **同名不同物**：复变里那条「Euler 公式」$e^{i\theta} = \cos\theta + i\sin\theta$ 是另一回事（见 `thm.euler-formula`）。

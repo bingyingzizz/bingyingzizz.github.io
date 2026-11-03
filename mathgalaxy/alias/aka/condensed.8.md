@@ -17,13 +17,13 @@
 
 - Exercise 4.6 → prop.open-covering-covering
 
-- Exercise 4.7 → prop.hom-presheaf-sheaf
+- Exercise 4.7 | Hom 预层 → prop.hom-presheaf-sheaf
 
 - Exercise 4.12 → prop.countable-colimit-qseparated
 
 - Exercise 4.13 → prop.qseparated-mono
 
-- Exercise 6.8 → prop.pontryagin-finite-dim-banach
+- Exercise 6.8 | 庞特里亚金对偶 → prop.pontryagin-finite-dim-banach
 
 - Exercise 4.5 → prop.discrete-iff-constant
 

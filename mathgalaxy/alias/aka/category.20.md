@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 1.50 → prop.bialgebra-examples
+
 - Exercise 1.54 → prop.localization-functor-exact
 
 - Exercise 1.55 → prop.adjunction-naturality

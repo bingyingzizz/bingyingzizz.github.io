@@ -31,7 +31,7 @@
 - **17 / 17** `def.ring` 环 · layer 7 · 代数结构
 - **17 / 17** `def.inner-product` 内积 · layer 9 · 内积空间与正交性
 
-（共 870 个节点有非零计数；这里列前 20 条。）
+（共 871 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -42,8 +42,10 @@
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 27 · 内蕴几何
 - **6 / 6** `def.singular-homology` 奇异同调群 · layer 19 · 同调群
 - **6 / 6** `def.submanifold-volume` 诱导体积 · layer 27 · 微分形式、积分与 de Rham
+- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 29 · 内蕴几何
 - **6 / 5** `lem.zorn` Zorn 引理 · layer 9 · 选择原理
 - **6 / 5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 18 · 仿紧与单位分解
+- **6 / 4** `thm.lp-banach` L^p 是 Banach 空间 · layer 21 · L^p 空间
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 22 · 向量场与 Lie 结构
 - **6 / 1** `thm.completeness-equivalent` 完备性的六条等价 · layer 19 · 实数完备性的等价刻画
 - **5 / 6** `def.tensor-field` 张量场 · layer 20 · 向量场与 Lie 结构
@@ -55,8 +57,6 @@
 - **5 / 5** `def.essential-sup` 本性上界与 L^∞ · layer 16 · L^p 空间
 - **5 / 5** `def.abelian-category` 加法 / 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
 - **5 / 5** `def.product-measure` 乘积测度 · layer 17 · 乘积测度与 Fubini
-- **5 / 5** `thm.urysohn-metrization` Urysohn 度量化定理 · layer 18 · 可度量化
-- **5 / 5** `def.form-on-manifold` 微分形式 · layer 18 · 微分形式、积分与 de Rham
 
 （共 1460 个节点有非零计数；这里列前 20 条。）
 
@@ -85,5 +85,5 @@
 - **8 团 / 19 节点** `def.integrable` 可积 / L¹ · layer 19 · 积分
 - **8 团 / 17 节点** `def.category` 范畴 · layer 7 · 范畴与图
 
-（共 870 个节点有非零计数；这里列前 20 条。）
+（共 871 个节点有非零计数；这里列前 20 条。）
 

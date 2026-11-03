@@ -1,7 +1,7 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- Exercise 1.10 → prop.zmod-is-ab
+- Exercise 1.10 | Z-模 → prop.zmod-is-ab
 
 - 代数基本定理 → thm.fundamental-algebra
 
@@ -17,11 +17,11 @@
 
 - 可对角化判据 → thm.diagonalizable
 
-- Jordan 标准形 → thm.jordan-canonical-form
+- Jordan 标准形 | 若尔当标准形 | 约当标准形 → thm.jordan-canonical-form
 
 - 行列式的存在唯一性 → thm.det-exists-unique
 
-- Laplace 展开 → prop.det-laplace
+- Laplace 展开 | 拉普拉斯展开 → prop.det-laplace
 
 - 因式定理与根 → thm.factor-theorem
 
@@ -38,7 +38,5 @@
 - Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
 
 - 张量积的万有性质 → thm.tensor-universal-property
-
-- Lagrange 定理 → thm.lagrange
 
 > 续见 alias/aka/algebra.4.md

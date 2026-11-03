@@ -5,7 +5,7 @@
 
 ⭐ 两个世界对同一个问题的两种说法：矩阵侧是「$B = P^{-1}AP$」，映射侧是「同一个 $T$、两组基」。
 
-图上两条边（`thm.change-of-basis` 与 `dep.linearmap-similarity`）说的就是这件事。
+图上两条边（`thm.change-of-basis` 与 `dep.changeofbasis-similarity`）说的就是这件事。
 
 ⚠ 相似比**等价**（$B = PAQ$）严格：等价只要求秩相同，相似还要求特征多项式相同。
 
