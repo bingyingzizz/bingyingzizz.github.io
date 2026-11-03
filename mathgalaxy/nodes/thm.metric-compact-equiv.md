@@ -3,7 +3,7 @@
 layer 15 · 定理 · 度量空间 · 拓扑学
 [在星图里打开](../#n=thm.metric-compact-equiv)　·　[节点索引](../index.md)
 
-设 (X, d) 是距离空间。则下列三条**彼此等价**：$X$ 紧 $\iff$ $X$ 列紧 $\if
+设
 > 陈述续见 [nodes/thm.metric-compact-equiv.2.md](./thm.metric-compact-equiv.2.md)
 
 
@@ -13,7 +13,7 @@ layer 15 · 定理 · 度量空间 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.metric-compact-equiv.6.md](./thm.metric-compact-equiv.6.md)
 
-## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
+## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.metric-compact-equiv.3.md](./thm.metric-compact-equiv.3.md)
 
 refs: Munkres, Topology, §28 与 §43

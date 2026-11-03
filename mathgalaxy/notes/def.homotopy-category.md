@@ -1,7 +1,7 @@
 # 同伦范畴　`def.homotopy-category`　·　说明
 根 `../`
 
-等价的说法：$f : K \to L$ 是同伦等价 $\iff$ 存在 $g : L \to K$ 使 $g \circ f \sim 1_{K}$、$f \circ g \sim 1_{L}$；$K$ 同伦平凡 $\iff$ $1_{K} \sim 0_{K}$。
+- (a) 等价的说法：$f : K \to L$ 是同伦等价- (b) 存在 $g : L \to K$ 使 $g \circ f \sim 1_{K}$、$f \circ g \sim 1_{L}$；$K$ 同伦平凡- (c) $1_{K} \sim 0_{K}$。
 
 $\mathbf{K}(\mathcal{C})$ 是**加法范畴**，且 $\mathcal{C}(\mathcal{C}) \to \mathbf{K}(\mathcal{C})$ 加法；
 
