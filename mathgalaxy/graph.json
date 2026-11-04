@@ -6,13 +6,13 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-04T07:09:29.299Z",
+  "generated": "2026-11-04T07:26:33.398Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
    "nodes": 1537,
-   "edges": 3152,
-   "strong": 3113,
+   "edges": 3155,
+   "strong": 3116,
    "weak": 39,
    "derived": 33,
    "en_pages": 1533
@@ -39910,7 +39910,7 @@
     "三角剖分"
    ],
    "statement": "每个**紧曲面**（紧、连通、$2$ 维拓扑流形，可带边界）都可三角剖分（`def.triangulation`）。\n\n等价的常用写法：每个紧连通曲面都同胚于某个**有限**单纯复形的几何实现。",
-   "notes": "⚠️ **本节点只给陈述 + 骨架，不是证明。** 它原本在分类定理里被当作「外部输入」一句话带过 —— 本图把「三角剖分存在性」单列成一个节点，是为了把缺口的形状写清楚，而不是假装证过；\n\n完整证明在 Radó 原文（1925）里很长，而且它依赖本图还缺的两层地形：紧曲面的**共形结构存在性**\n\n（Radó 自己的路线，要 uniformization）或**光滑结构存在性**（Munkres / Whitehead 的路线）。\n\n\n\n两条经典路线（都只到骨架）：\n\n1. **复分析路线**：紧可定向曲面可赋一个复结构（成为 Riemann 面），再用分支覆盖 + 有限性得到剖分。\n\n2. **微分拓扑路线**：每个紧曲面有（本质唯一的）光滑结构，再用 Morse 理论 / 管状邻域割出三角形。\n\n\n\n⭐ **这是低维现象，不是普遍事实** —— 这一条最容易被误记成「每个流形都能剖分」：\n\n\n\n- $\\dim \\le 2$：Radó (1925)；$\\dim = 3$：Moise (1952)，所以 $\\dim \\le 3$ 都能三角剖分；\n\n- $\\dim = 4$：**不行** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；\n\n- $\\dim \\ge 5$：有 Kirby–Siebenmann 的充要条件（存在一个上同调障碍，非零就不可剖分）。\n\n\n\n⚠️ 与 `thm.simplicial-approximation` 区分：那条说的是「奇异同调 $=$ 单纯同调」，它**假设**已经有剖分；\n\n这条说的是「剖分存在」。两条常被攬在一起。\n\n⚠️ 与 `def.smooth-manifold` 区分：光滑流形可剖分是另一个定理（Whitehead），不要拿光滑结构当既成事实。",
+   "notes": "⚠️ **本节点只给陈述 + 骨架，不是证明。** 它原本在分类定理里被当作「外部输入」一句话带过 —— 本图把「三角剖分存在性」单列成一个节点，是为了把缺口的形状写清楚，而不是假装证过；\n\n完整证明在 Radó 原文（1925）里很长，而且它依赖本图还缺的两层地形：紧曲面的**共形结构存在性**\n\n（Radó 自己的路线，要 uniformization）或**光滑结构存在性**（Munkres / Whitehead 的路线）。\n\n\n\n两条经典路线（都只到骨架）：\n\n1. **复分析路线**：紧可定向曲面可赋一个复结构（成为 Riemann 面），再用分支覆盖 + 有限性得到剖分。\n\n2. **微分拓扑路线**：每个紧曲面有（本质唯一的）光滑结构，再用 Morse 理论 / 管状邻域割出三角形。\n\n\n\n⭐ **这是低维现象，不是普遍事实** —— 这一条最容易被误记成「每个流形都能剖分」：\n\n\n\n- $\\dim \\le 2$：Radó (1925)；$\\dim = 3$：Moise (1952)，所以 $\\dim \\le 3$ 都能三角剖分；\n\n- $\\dim = 4$：**不行** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；\n\n- $\\dim \\ge 5$：有 Kirby–Siebenmann 的充要条件（存在一个上同调障碍，非零就不可剖分）。\n\n\n\n⚠️ 与「单纯逼近定理」（奇异同调 $=$ 单纯同调）区分：那条**假设**已经有剖分；\n\n这条说的是「剖分存在」。两条常被攬在一起。\n\n⚠️ 与「光滑流形」区分：光滑流形可剖分是另一个定理（Whitehead），不要拿光滑结构当既成事实。",
    "refs": [
     "Radó, Über den Begriff der Riemannschen Fläche (1925)",
     "Moise, Affine structures in 3-manifolds (1952)",
@@ -81749,6 +81749,30 @@
    "note": "闭可定向曲面上 $\\chi(M) = 2 - 2g(M)$ —— 两个数互相决定，所以「数 Betti 数」与「数洞」是同一件事。\n\n⚠ 本图把这条**留成类比**而不是 implication：它需要一个正经的定理节点（下一刀补），现在写死成推出关系就等于把「还没写的证明」当成已证。"
   },
   {
+   "id": "dep.topology-triangulation",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topology",
+   "usedBy": "def.triangulation",
+   "note": "三角刨分的定义域是**拓扑空间**（同胚是有拓扑才能谈的）。之前这条没接，所以「拓扑空间」在三角刨分那里只是个词。"
+  },
+  {
+   "id": "dep.triangulation-eulerchar",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.triangulation",
+   "usedBy": "prop.eulerchar-genus",
+   "note": "“chi 与刨分无关”这条命题本身就**得先有刨分**（chi 是用刨分算出来的），而且它做的正是三角刨分那条注里说的「用刨分定义的量先证与刨分无关」。"
+  },
+  {
+   "id": "dep.topmanifold-rado",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topological-manifold",
+   "usedBy": "thm.rado",
+   "note": "Radó 的主角是「紧曲面」= 2 维拓扑流形 + 紧（可带边界），所以它直接用拓扑流形这条定义。"
+  },
+  {
    "id": "dep.simpcomp-triangulation",
    "kind": "definition",
    "strength": "strong",
@@ -96586,14 +96610,14 @@
    "explicit": false
   },
   {
-   "a": "diffgeom.manifold",
+   "a": "topology.general",
    "b": "topology.surfaces",
-   "count": 2,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
-   "a": "topology.general",
+   "a": "diffgeom.manifold",
    "b": "topology.surfaces",
    "count": 3,
    "label": "",

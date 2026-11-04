@@ -6,7 +6,7 @@
 - **30 / 31** `def.measure` 测度 · layer 15 · 测度的构造
 - **29 / 32** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
 - **29 / 32** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
-- **28 / 28** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
+- **29 / 29** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **27 / 27** `def.group` 群 · layer 7 · 代数结构
 - **25 / 28** `def.sheaf` 层 · layer 15 · 层与拓扑
 - **24 / 24** `def.function` 映射 · layer 5 · 关系与函数

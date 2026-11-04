@@ -7,7 +7,7 @@
 - **29 / 32** `def.adjoint` Adjunction · 伴随与反射
 - **29 / 32** `def.compact` compact · 拓扑空间的基本语汇
 
-- **28 / 28** `def.topology` topology · 拓扑空间的基本语汇
+- **29 / 29** `def.topology` topology · 拓扑空间的基本语汇
 - **27 / 27** `def.group` group · 代数结构
 - **25 / 28** `def.sheaf` sheaf · 层与拓扑
 - **24 / 24** `def.function` mapping · 关系与函数

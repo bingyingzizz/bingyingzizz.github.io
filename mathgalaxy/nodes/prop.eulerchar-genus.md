@@ -10,7 +10,7 @@ $$\chi(S) = 2 - 2g .$$
 于是 $\chi$ 与 $g$ 互相决定：$g = (2 - \chi)/2$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理：用到了定义 闭曲面分类定理　[proofs/dep.classification-eulerchargenus.md](../proofs/dep.classification-eulerchargenus.md)
+- [`def.triangulation`](../nodes/def.triangulation.md) 三角剖分：用到了定义 三角剖分　[proofs/dep.triangulation-eulerchar.md](../proofs/dep.triangulation-eulerchar.md)
 
 - …另有入边，续页见 [nodes/prop.eulerchar-genus.2.md](./prop.eulerchar-genus.2.md)
 

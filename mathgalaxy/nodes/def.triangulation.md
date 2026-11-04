@@ -11,13 +11,11 @@ layer 17 · 定义 · 曲面的地形 · 拓扑学
 若这样的 $(K, h)$ 存在，称 $X$ **可三角剖分**。把每个单形在 $h$ 下的像叫 $X$ 的一个**面**
 （顶点 / 边 / 三角形），于是 $X$ 被写成一堆三角形的并，任意两个三角形只沿**整条边**或一个顶点相交。
 
-## 它能推出什么 / 谁在用它
-- 被 [`thm.rado`](../nodes/thm.rado.md) Radó 定理 用
-
-- …另有出边，续页见 [nodes/def.triangulation.3.md](./def.triangulation.3.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.triangulation.2.md](./def.triangulation.2.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.triangulation.3.md](./def.triangulation.3.md)
 
 refs: Munkres, Topology, Ch. 12；Hatcher, Algebraic Topology, §2.1
 
