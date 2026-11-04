@@ -1,6 +1,16 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 连通和 | connect sum | M#N → def.connected-sum
+
+- 亏格 | genus | 洞的个数 → def.genus
+
+- 拓扑流形 | n 维拓扑流形 → def.topological-manifold
+
+- 闭曲面 | 紧曲面 → def.closed-surface
+
+- 闭曲面分类定理 | 曲面分类定理 → thm.classification-surfaces
+
 - 欧拉示性数与亏格 | chi=2-2g | χ=2-2g → prop.eulerchar-genus
 
 - 欧拉示性数与不可定向亏格 | chi=2-k | χ=2-k → prop.eulerchar-nonorientable

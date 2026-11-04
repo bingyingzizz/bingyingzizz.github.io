@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-04T07:26:33.398Z",
+  "generated": "2026-11-04T07:44:26.961Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1537,
-   "edges": 3155,
-   "strong": 3116,
+   "nodes": 1540,
+   "edges": 3165,
+   "strong": 3126,
    "weak": 39,
    "derived": 33,
-   "en_pages": 1533
+   "en_pages": 1536
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -69,7 +69,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 183
+   "nodeCount": 186
   },
   {
    "id": "algebra",
@@ -141,7 +141,7 @@
    "en": "Complex Analysis",
    "desc": "全纯函数与 Cauchy–Riemann、Cauchy 定理与积分公式、幂级数与 Laurent 展开、留数定理与围道积分、共形映射与调和函数。",
    "color": "#3E7FB8",
-   "nodeCount": 89
+   "nodeCount": 92
   },
   {
    "id": "diffgeom",
@@ -2619,7 +2619,7 @@
    "en": "Surfaces: connected sum and genus",
    "parent": "topology",
    "desc": "闭曲面分类之前必须先有地形：连通和（挖球 + 沿边界粘）与亏格（一阶同调的秩的一半）。这两个概念都刻意避开「分类定理」：亏格用同调定义，所以不会绕回分类。下一刀才放拓扑流形 / 闭曲面 / 分类定理。",
-   "nodeCount": 13,
+   "nodeCount": 16,
    "nodes": [
     "def.connected-sum",
     "def.genus",
@@ -2633,7 +2633,10 @@
     "ex.torus",
     "ex.projective-plane",
     "ex.klein-bottle",
-    "def.mobius-band"
+    "def.mobius-band",
+    "def.branched-cover",
+    "def.ramification-index",
+    "thm.riemann-hurwitz"
    ]
   },
   {
@@ -25161,8 +25164,8 @@
    "statement": "**白话**：Riemann 曲面是把多值函数的各支「叠」在一起得到的一层一层的曲面 —— 在它上面，原本多值的函数变成单值全纯函数；平面上看起来的「绕一圈换一支」，在曲面上就是「走到另一层」。\n\n**定义（一维复流形）**：设 $S$ 是连通、Hausdorff、第二可数的拓扑空间，带一族开覆盖 $\\{U_{\\alpha}\\}$ 与同胚\n\n$$\\varphi_{\\alpha}: U_{\\alpha} \\to \\varphi_{\\alpha}(U_{\\alpha}) \\subset \\mathbb{C},$$\n\n使得对任意 $\\alpha, \\beta$，转移映射 $\\varphi_{\\beta} \\circ \\varphi_{\\alpha}^{-1}$ 在其定义域上**全纯**。这样的一张 $(S, \\{\\varphi_{\\alpha}\\})$ 称为 **Riemann 曲面**。\n\n**多值函数的展开**：若 $F$ 在平面区域上有多个值，令 $S$ 由「点对 $(z, w)$，其中 $w$ 是 $F$ 在 $z$ 处的一个值」连成一个连通空间，投影 $\\pi: S \\to \\mathbb{C}$、$(z, w) \\mapsto z$ 在局部是一对一的全纯映射，则 $F$ 提升成 $S$ 上的**单值**全纯函数。",
    "notes": "⭐ 例子（只要形状对，不必会证）：\n\n① 对数的曲面是**无穷叶螺旋面**：每绕原点一圈就爬上一层，永不回到原处。\n\n② $z^{1/n}$ 的曲面是 $n$ 叶的，绕原点一圈换一叶，绕 $n$ 圈才回到原处 —— 所以它在 $S$ 上是单值的。\n\n③ Riemann 球面 $\\hat{\\mathbb{C}} = \\mathbb{C} \\cup \\{\\infty\\}$ 是最简单的紧 Riemann 曲面：两张坐标卡 $z$ 与 $w = 1/z$，转移映射 $z \\mapsto 1/z$ 在 $\\mathbb{C}^{\\times}$ 上全纯。\n\n⭐ 关键的一句话：**分支切割换成了「层」**。割开平面是为了让映射单值，叠成曲面则是把被割掉的部分再接回去 —— 曲线绕过分支点时，走的其实是另一层。\n\n⚠ 单值化定理（任何 Riemann 曲面都全纯同构于商 $\\tilde{S}/\\Gamma$，$\\tilde{S}$ 是球面、平面或圆盘之一）是深定理，这里只作**定义与例子**，不证。\n\n📌 曲面上「全纯」的意义就靠转移映射：一个函数在每张坐标卡里读出来都全纯，就叫全纯。$\\hat{\\mathbb{C}}$ 上的全纯函数只有常数，但全纯**映射**可以非常多（$\\hat{\\mathbb{C}} \\to \\hat{\\mathbb{C}}$ 恰当的就是分式线性变换）。",
    "refs": [
-    "Ahlfors, Complex Analysis · 多值函数与 Riemann 曲面",
-    "Stein–Shakarchi, Complex Analysis, Ch. 3 · Meromorphic Functions and the Logarithm"
+    "Ahlfors, Complex Analysis",
+    "Stein–Shakarchi, Complex Analysis, Ch. 3"
    ]
   },
   {
@@ -42629,6 +42632,136 @@
    "refs": [
     "Milnor–Stasheff, Characteristic Classes · Pontryagin 类",
     "Bott–Tu, Differential Forms in Algebraic Topology"
+   ]
+  },
+  {
+   "id": "def.branched-cover",
+   "type": "definition",
+   "label": "分支覆盖",
+   "title": "分支覆盖（紧 Riemann 面之间）",
+   "title_en": "branched cover of Riemann surfaces",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.branched-cover.en.md",
+   "region": "topology",
+   "regions": [
+    "topology",
+    "complex"
+   ],
+   "cluster": "topology.surfaces",
+   "layer": 23,
+   "tags": [
+    "定义",
+    "Riemann 面",
+    "覆叠",
+    "曲面"
+   ],
+   "statement": "设 $X, Y$ 是紧 Riemann 面（`def.riemann-surface`），$p : Y \\to X$ 是**非常数全纯**映射（`def.holomorphic`）。则\n\n- 存在有限集 $B \\subset X$，使 $p$ 限制在 $Y \\setminus p^{-1}(B) \\to X \\setminus B$ 上是**覆叠映射**（`def.covering-space`）；\n- 这时的层数 $d$（与点无关，见下面「分歧指数」那条的求和恒等式）叫 $p$ 的**次数**；\n- $B$ 叫**分支点集**，$p^{-1}(B)$ 的点叫**分歧点**；$p$ 叫 $X$ 上的 $d$ 次**分支覆盖**。",
+   "notes": "⭐ **为什么必须「紧 + 全纯」才能这样定义**：紧性保证层数有限、$B$ 有限（否则同一点可以有无限多个原像、分支点可以累积）；\n\n全纯性（开映射 + 零点的孤立性）保证局部形状只有 $z \\mapsto z^{e}$ 这一种 —— 纯拓扑的分支覆盖得把「有限层 + 有限分支集」当额外假设写进去。\n\n⚠️ 分支覆盖**不是**覆叠映射：去掉 $B$ 之后才是。最常见的例子：\n\n\n\n$$p : \\mathbb{P}^{1} \\to \\mathbb{P}^{1}, \\qquad z \\mapsto z^{2}$$\n\n\n\n它是 $2$ 次分支覆盖，分支点是 $0$ 与 $\\infty$（这两点处 $2$ 对 $1$），其余处处 $2$ 对 $1$。\n\n📌 一句话记法：分支覆盖 = 「有限覆叠 $+$ 有限个允许出问题（分歧）的点」。",
+   "refs": [
+    "Miranda, Algebraic Curves and Riemann Surfaces, Ch. II",
+    "Forster, Lectures on Riemann Surfaces, §4"
+   ]
+  },
+  {
+   "id": "def.ramification-index",
+   "type": "definition",
+   "label": "分歧指数",
+   "title": "分歧指数（局部的 $e$ 对 $1$）",
+   "label_en": "ramification index",
+   "title_en": "ramification index",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.ramification-index.en.md",
+   "region": "topology",
+   "regions": [
+    "topology",
+    "complex"
+   ],
+   "cluster": "topology.surfaces",
+   "layer": 24,
+   "tags": [
+    "定义",
+    "Riemann 面",
+    "覆叠",
+    "曲面"
+   ],
+   "statement": "设 $p : Y \\to X$ 是紧 Riemann 面之间的非常数全纯映射，$q \\in Y$、$p(q) = r$。取 $q, r$ 附近的局部坐标，把 $p$ 写成\n\n$$p(z) - r = (z - q)^{e}\\, u(z), \\qquad u \\text{ 在 } q \\text{ 附近全纯且 } u(q) \\ne 0 .$$\n\n这个正整数 $e = e_{q}$ 叫 $p$ 在 $q$ 的**分歧指数**（ramification index）。\n$e_{q} > 1$ 时 $q$ 叫**分歧点**、$r$ 叫**分支点**；$e_{q} = 1$ 时 $p$ 在 $q$ 局部双全纯。",
+   "notes": "局部形状就是 $z \\mapsto z^{e}$ 乘一个不消失的全纯函数 —— 所以「$e$ 对 $1$」是唯一的局部模型，没有第二种可能。\n\n⭐ **求和恒等式（RH 里那个求和的意义所在）**：对每个 $r \\in X$，\n\n\n\n$$\\sum_{q \\in p^{-1}(r)} e_{q} = d ,$$\n\n\n\n即「按分歧指数计重数的原像个数恒等于次数 $d$」。它保证了 $d$ 与 $r$ 无关（下面的 RH 公式要用）。\n\n⚠️ $e_{q}$ 就是**零点重数**：$p - r$ 是 $Y$ 上的全纯函数（常值 $r$ 的拉回），$q$ 是它的 $e_{q}$ 重零点。\n\n所以「分歧」不是新现象，就是「$p - r$ 的零点不单重」。\n\n📌 对 $d$ 次分支覆盖，$\\sum_{q}(e_{q} - 1)$ 是一个**有限和**：只有分歧点贡献（$e_q = 1$ 时贡献 $0$）。",
+   "refs": [
+    "Miranda, Algebraic Curves and Riemann Surfaces, Ch. II",
+    "Forster, Lectures on Riemann Surfaces, §4"
+   ]
+  },
+  {
+   "id": "thm.riemann-hurwitz",
+   "type": "theorem",
+   "label": "Riemann–Hurwitz 公式",
+   "title": "Riemann–Hurwitz：分支覆盖下亏格怎么变",
+   "status": "skeleton",
+   "label_en": "Riemann-Hurwitz formula",
+   "title_en": "Riemann-Hurwitz formula",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.riemann-hurwitz.en.md",
+   "region": "topology",
+   "regions": [
+    "topology",
+    "complex"
+   ],
+   "cluster": "topology.surfaces",
+   "layer": 26,
+   "tags": [
+    "定理",
+    "Riemann 面",
+    "亏格",
+    "曲面"
+   ],
+   "statement": "设 $p : Y \\to X$ 是紧 Riemann 面之间的 $d$ 次**分支覆盖**（`def.branched-cover`），$g_{X}, g_{Y}$ 是两边的亏格（`def.genus`），$\\{e_{q}\\}$ 是分歧指数（`def.ramification-index`）。则\n\n$$2g_{Y} - 2 = d\\,(2g_{X} - 2) + \\sum_{q \\in Y} (e_{q} - 1) .$$\n\n换成 Euler 示性数的写法更整齐（`prop.eulerchar-genus`）：\n\n$$\\chi(Y) = d\\,\\chi(X) - \\sum_{q \\in Y}(e_{q} - 1) .$$",
+   "notes": "⚠️ **本节点只给陈述与结构，不是完整证明。** 证明要用两件本图还没细做的东西：\n\n\n\n1. **拉回剖分**：把 $X$ 的一个三角剖分沿 $p$ 拉回成 $Y$ 的三角剖分（这要用三角剖分的局部结构 + 紧性）。\n\n2. **分支点局部计数**：在一个分支点附近，$d$ 个原像里有 $e_{q}$ 个「粘成一点」，于是顶点数少了 $e_{q} - 1$；把所有点加起来就是求和号。\n\n\n\n两步拼起来就是 $\\chi(Y) = d\\,\\chi(X) - \\sum(e_{q}-1)$，再用 $\\chi = 2 - 2g$ 换回亏格。\n\n⭐ **两个立刻可用的推论**：\n\n\n\n- $g_{Y} \\ge g_{X}$（$d \\ge 1$、求和项 $\\ge 0$），等号只在 $d = 1$ 且无分歧时成立 —— 那时 $p$ 是双全纯；\n\n- **算亏格**：$\\mathbb{P}^{1}$ 上 $d$ 次分支覆盖的亏格由「分支点总分歧量」决定。经典例子：超椭圆曲线\n\n\n\n$$y^{2} = \\prod_{i=1}^{2g+2}(x - a_{i})$$\n\n\n\n是 $\\mathbb{P}^{1}$ 的 $2$ 次分支覆盖、恰有 $2g+2$ 个分支点（每个 $e = 2$），代入得 $2g_{Y} - 2 = 2(-2) + (2g+2) \\implies g_{Y} = g$。\n\n⚠️ 与 `thm.gauss-bonnet` 分工：GB 是 $\\chi$ 的**积分**版本（曲率），RH 是 $\\chi$ 的**乘性**版本（覆盖次数）——\n\n两者通过同一个 $\\chi$ 相认，但谁也不能替代谁。\n\n📌 出处：Riemann (1857) 的原型 + Hurwitz (1891) 的公式化；现代叙述见 Miranda Ch. II §2。",
+   "refs": [
+    "Hurwitz, Über Riemannsche Flächen mit gegebenen Verzweigungspunkten (1891)",
+    "Miranda, Algebraic Curves and Riemann Surfaces, Ch. II §2",
+    "Forster, Lectures on Riemann Surfaces, §17"
    ]
   },
   {
@@ -84935,6 +85068,86 @@
    "note": "注里用它举例（$\\mathbb{CP}^{2}$ 的符号差、可定向流形上的 $\\int p_{1}$）。"
   },
   {
+   "id": "dep.cover-branchedcover",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.covering-space",
+   "usedBy": "def.branched-cover",
+   "note": "分支覆盖 = 去掉有限个分支点之后的**覆叠映射**，所以那条定义的「层」「局部同胚」直接搬过来用。"
+  },
+  {
+   "id": "dep.riemannsurface-branchedcover",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.riemann-surface",
+   "usedBy": "def.branched-cover",
+   "note": "两边都是**紧** Riemann 面；紧性保证层数与分支点有限。"
+  },
+  {
+   "id": "dep.holomorphic-branchedcover",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.holomorphic",
+   "usedBy": "def.branched-cover",
+   "note": "局部形状 $z \\mapsto z^{e}$ 是「非常数全纯」的推论（开映射 + 零点孤立），不是额外假设。"
+  },
+  {
+   "id": "dep.riemannsurface-ramification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.riemann-surface",
+   "usedBy": "def.ramification-index",
+   "note": "局部坐标要靠复结构才写得出来。"
+  },
+  {
+   "id": "dep.branchedcover-ramification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.branched-cover",
+   "usedBy": "def.ramification-index",
+   "note": "「次数 $d$」「分支点」这些词都是从分支覆盖那条定义来的；分歧指数是给它们配的数。"
+  },
+  {
+   "id": "dep.holomorphic-ramification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.holomorphic",
+   "usedBy": "def.ramification-index",
+   "note": "分歧指数是「非常数全纯映射」的局部不变量。"
+  },
+  {
+   "id": "dep.branchedcover-riemannhurwitz",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.branched-cover",
+   "usedBy": "thm.riemann-hurwitz",
+   "note": "公式的假设就是「$d$ 次分支覆盖」。"
+  },
+  {
+   "id": "dep.ramification-riemannhurwitz",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ramification-index",
+   "usedBy": "thm.riemann-hurwitz",
+   "note": "公式里的求和号 $\\sum(e_{q} - 1)$ 就是分歧指数在分歧点上求和。"
+  },
+  {
+   "id": "dep.genus-riemannhurwitz",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.genus",
+   "usedBy": "thm.riemann-hurwitz",
+   "note": "公式两边都是亏格；亏格在这里用同调定义（$g = \\tfrac12 \\operatorname{rank} H_{1}$），所以不会绕回分类定理。"
+  },
+  {
+   "id": "dep.eulerchar-riemannhurwitz",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "prop.eulerchar-genus",
+   "usedBy": "thm.riemann-hurwitz",
+   "note": "换成 $\\chi$ 的写法要用 $\\chi = 2 - 2g$ 这条命题。"
+  },
+  {
    "id": "dep.powerset-topology",
    "kind": "definition",
    "strength": "strong",
@@ -96704,6 +96917,13 @@
    "a": "analysis.lp",
    "b": "set.numbers",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.complex",
+   "b": "topology.surfaces",
+   "count": 5,
    "label": "",
    "explicit": false
   },

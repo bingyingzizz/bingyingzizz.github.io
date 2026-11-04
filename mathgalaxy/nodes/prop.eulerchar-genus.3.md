@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`ex.torus`](../nodes/ex.torus.md) 环面 T² 用
+- 被 [`thm.riemann-hurwitz`](../nodes/thm.riemann-hurwitz.md) Riemann–Hurwitz 公式 用

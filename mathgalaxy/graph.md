@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-04T07:26:33.398Z
-> 15 星系 / 105 星团 / 1537 节点 / 3155 连线（强边 3116，弱边 39；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-04T07:44:26.961Z
+> 15 星系 / 105 星团 / 1540 节点 / 3165 连线（强边 3126，弱边 39；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.7 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -5415,6 +5415,110 @@ $$(0, t) \sim (1, 1 - t), \qquad 0 \le t \le 1.$$
 📌 **Euler 示性数**：$M$ 与圆柱同伦等价（都是 $S^{1}$），所以 $\chi(M) = \chi(S^{1}) = 0$ —— 同伦不变量看不出「扭没扭」，可定向性才看得出。
 
 参考：Munkres, Topology, Ch. 12（商空间与曲面）
+
+#### 分支覆盖　`def.branched-cover`
+*定义*　分支覆盖（紧 Riemann 面之间）
+
+设 $X, Y$ 是紧 Riemann 面（`def.riemann-surface`），$p : Y \to X$ 是**非常数全纯**映射（`def.holomorphic`）。则
+
+- 存在有限集 $B \subset X$，使 $p$ 限制在 $Y \setminus p^{-1}(B) \to X \setminus B$ 上是**覆叠映射**（`def.covering-space`）；
+- 这时的层数 $d$（与点无关，见下面「分歧指数」那条的求和恒等式）叫 $p$ 的**次数**；
+- $B$ 叫**分支点集**，$p^{-1}(B)$ 的点叫**分歧点**；$p$ 叫 $X$ 上的 $d$ 次**分支覆盖**。
+
+⭐ **为什么必须「紧 + 全纯」才能这样定义**：紧性保证层数有限、$B$ 有限（否则同一点可以有无限多个原像、分支点可以累积）；
+
+全纯性（开映射 + 零点的孤立性）保证局部形状只有 $z \mapsto z^{e}$ 这一种 —— 纯拓扑的分支覆盖得把「有限层 + 有限分支集」当额外假设写进去。
+
+⚠️ 分支覆盖**不是**覆叠映射：去掉 $B$ 之后才是。最常见的例子：
+
+
+
+$$p : \mathbb{P}^{1} \to \mathbb{P}^{1}, \qquad z \mapsto z^{2}$$
+
+
+
+它是 $2$ 次分支覆盖，分支点是 $0$ 与 $\infty$（这两点处 $2$ 对 $1$），其余处处 $2$ 对 $1$。
+
+📌 一句话记法：分支覆盖 = 「有限覆叠 $+$ 有限个允许出问题（分歧）的点」。
+
+参考：Miranda, Algebraic Curves and Riemann Surfaces, Ch. II；Forster, Lectures on Riemann Surfaces, §4
+
+#### 分歧指数　`def.ramification-index`
+*定义*　分歧指数（局部的 $e$ 对 $1$）
+
+设 $p : Y \to X$ 是紧 Riemann 面之间的非常数全纯映射，$q \in Y$、$p(q) = r$。取 $q, r$ 附近的局部坐标，把 $p$ 写成
+
+$$p(z) - r = (z - q)^{e}\, u(z), \qquad u \text{ 在 } q \text{ 附近全纯且 } u(q) \ne 0 .$$
+
+这个正整数 $e = e_{q}$ 叫 $p$ 在 $q$ 的**分歧指数**（ramification index）。
+$e_{q} > 1$ 时 $q$ 叫**分歧点**、$r$ 叫**分支点**；$e_{q} = 1$ 时 $p$ 在 $q$ 局部双全纯。
+
+局部形状就是 $z \mapsto z^{e}$ 乘一个不消失的全纯函数 —— 所以「$e$ 对 $1$」是唯一的局部模型，没有第二种可能。
+
+⭐ **求和恒等式（RH 里那个求和的意义所在）**：对每个 $r \in X$，
+
+
+
+$$\sum_{q \in p^{-1}(r)} e_{q} = d ,$$
+
+
+
+即「按分歧指数计重数的原像个数恒等于次数 $d$」。它保证了 $d$ 与 $r$ 无关（下面的 RH 公式要用）。
+
+⚠️ $e_{q}$ 就是**零点重数**：$p - r$ 是 $Y$ 上的全纯函数（常值 $r$ 的拉回），$q$ 是它的 $e_{q}$ 重零点。
+
+所以「分歧」不是新现象，就是「$p - r$ 的零点不单重」。
+
+📌 对 $d$ 次分支覆盖，$\sum_{q}(e_{q} - 1)$ 是一个**有限和**：只有分歧点贡献（$e_q = 1$ 时贡献 $0$）。
+
+参考：Miranda, Algebraic Curves and Riemann Surfaces, Ch. II；Forster, Lectures on Riemann Surfaces, §4
+
+#### Riemann–Hurwitz 公式　`thm.riemann-hurwitz`
+*定理*　Riemann–Hurwitz：分支覆盖下亏格怎么变
+
+设 $p : Y \to X$ 是紧 Riemann 面之间的 $d$ 次**分支覆盖**（`def.branched-cover`），$g_{X}, g_{Y}$ 是两边的亏格（`def.genus`），$\{e_{q}\}$ 是分歧指数（`def.ramification-index`）。则
+
+$$2g_{Y} - 2 = d\,(2g_{X} - 2) + \sum_{q \in Y} (e_{q} - 1) .$$
+
+换成 Euler 示性数的写法更整齐（`prop.eulerchar-genus`）：
+
+$$\chi(Y) = d\,\chi(X) - \sum_{q \in Y}(e_{q} - 1) .$$
+
+⚠️ **本节点只给陈述与结构，不是完整证明。** 证明要用两件本图还没细做的东西：
+
+
+
+1. **拉回剖分**：把 $X$ 的一个三角剖分沿 $p$ 拉回成 $Y$ 的三角剖分（这要用三角剖分的局部结构 + 紧性）。
+
+2. **分支点局部计数**：在一个分支点附近，$d$ 个原像里有 $e_{q}$ 个「粘成一点」，于是顶点数少了 $e_{q} - 1$；把所有点加起来就是求和号。
+
+
+
+两步拼起来就是 $\chi(Y) = d\,\chi(X) - \sum(e_{q}-1)$，再用 $\chi = 2 - 2g$ 换回亏格。
+
+⭐ **两个立刻可用的推论**：
+
+
+
+- $g_{Y} \ge g_{X}$（$d \ge 1$、求和项 $\ge 0$），等号只在 $d = 1$ 且无分歧时成立 —— 那时 $p$ 是双全纯；
+
+- **算亏格**：$\mathbb{P}^{1}$ 上 $d$ 次分支覆盖的亏格由「分支点总分歧量」决定。经典例子：超椭圆曲线
+
+
+
+$$y^{2} = \prod_{i=1}^{2g+2}(x - a_{i})$$
+
+
+
+是 $\mathbb{P}^{1}$ 的 $2$ 次分支覆盖、恰有 $2g+2$ 个分支点（每个 $e = 2$），代入得 $2g_{Y} - 2 = 2(-2) + (2g+2) \implies g_{Y} = g$。
+
+⚠️ 与 `thm.gauss-bonnet` 分工：GB 是 $\chi$ 的**积分**版本（曲率），RH 是 $\chi$ 的**乘性**版本（覆盖次数）——
+
+两者通过同一个 $\chi$ 相认，但谁也不能替代谁。
+
+📌 出处：Riemann (1857) 的原型 + Hurwitz (1891) 的公式化；现代叙述见 Miranda Ch. II §2。
+
+参考：Hurwitz, Über Riemannsche Flächen mit gegebenen Verzweigungspunkten (1891)；Miranda, Algebraic Curves and Riemann Surfaces, Ch. II §2；Forster, Lectures on Riemann Surfaces, §17
 
 ## 星系：抽象代数（Abstract Algebra）
 > 群、环、域、模与线性代数；佐恩引理的经典应用场。
@@ -30526,7 +30630,7 @@ $$\varphi_{\alpha}: U_{\alpha} \to \varphi_{\alpha}(U_{\alpha}) \subset \mathbb{
 
 📌 曲面上「全纯」的意义就靠转移映射：一个函数在每张坐标卡里读出来都全纯，就叫全纯。$\hat{\mathbb{C}}$ 上的全纯函数只有常数，但全纯**映射**可以非常多（$\hat{\mathbb{C}} \to \hat{\mathbb{C}}$ 恰当的就是分式线性变换）。
 
-参考：Ahlfors, Complex Analysis · 多值函数与 Riemann 曲面；Stein–Shakarchi, Complex Analysis, Ch. 3 · Meromorphic Functions and the Logarithm
+参考：Ahlfors, Complex Analysis；Stein–Shakarchi, Complex Analysis, Ch. 3
 
 #### 复数初等函数　`def.complex-elementary`
 *定义*　复数初等超越函数（指数、三角、双曲）
@@ -54126,6 +54230,46 @@ Pontryagin 类是实丛的示性类，继承自然性与同构不变。
 
 注里用它举例（$\mathbb{CP}^{2}$ 的符号差、可定向流形上的 $\int p_{1}$）。
 
+#### 定义引用：「覆叠空间」→ 分支覆盖　`dep.cover-branchedcover`
+
+分支覆盖 = 去掉有限个分支点之后的**覆叠映射**，所以那条定义的「层」「局部同胚」直接搬过来用。
+
+#### 定义引用：「Riemann 曲面」→ 分支覆盖　`dep.riemannsurface-branchedcover`
+
+两边都是**紧** Riemann 面；紧性保证层数与分支点有限。
+
+#### 定义引用：「全纯函数」→ 分支覆盖　`dep.holomorphic-branchedcover`
+
+局部形状 $z \mapsto z^{e}$ 是「非常数全纯」的推论（开映射 + 零点孤立），不是额外假设。
+
+#### 定义引用：「Riemann 曲面」→ 分歧指数　`dep.riemannsurface-ramification`
+
+局部坐标要靠复结构才写得出来。
+
+#### 定义引用：「分支覆盖」→ 分歧指数　`dep.branchedcover-ramification`
+
+「次数 $d$」「分支点」这些词都是从分支覆盖那条定义来的；分歧指数是给它们配的数。
+
+#### 定义引用：「全纯函数」→ 分歧指数　`dep.holomorphic-ramification`
+
+分歧指数是「非常数全纯映射」的局部不变量。
+
+#### 定义引用：「分支覆盖」→ Riemann–Hurwitz 公式　`dep.branchedcover-riemannhurwitz`
+
+公式的假设就是「$d$ 次分支覆盖」。
+
+#### 定义引用：「分歧指数」→ Riemann–Hurwitz 公式　`dep.ramification-riemannhurwitz`
+
+公式里的求和号 $\sum(e_{q} - 1)$ 就是分歧指数在分歧点上求和。
+
+#### 定义引用：「亏格」→ Riemann–Hurwitz 公式　`dep.genus-riemannhurwitz`
+
+公式两边都是亏格；亏格在这里用同调定义（$g = \tfrac12 \operatorname{rank} H_{1}$），所以不会绕回分类定理。
+
+#### 定义引用：「Euler 示性数与亏格」→ Riemann–Hurwitz 公式　`dep.eulerchar-riemannhurwitz`
+
+换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。
+
 #### 定义引用：「幂集 𝒫(X)」→ 拓扑空间与开集　`dep.powerset-topology`
 
 拓扑是**幂集**的一族子集：$\mathcal{T} \subseteq \mathcal{P}(X)$。
@@ -61646,6 +61790,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **基数与等势 ↔ 数系的构造**　4 条节点级连线
 - **有界变差与绝对连续 ↔ 实数与极限**　3 条节点级连线
 - **L^p 空间 ↔ 数系的构造**　2 条节点级连线
+- **复变函数基础 ↔ 曲面的地形**　5 条节点级连线
 - **可测函数与收敛 ↔ 函数列、幂级数与初等函数**　2 条节点级连线
 - **拓扑斯 ↔ 阿贝尔层**　9 条节点级连线
 - **固态阿贝尔群 ↔ 复形与导出三角**　2 条节点级连线

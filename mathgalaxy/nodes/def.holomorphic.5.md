@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.harmonic`](../nodes/def.harmonic.md) 调和函数 用
 - 被 [`def.riemann-zeta`](../nodes/def.riemann-zeta.md) 黎曼 ζ 函数 用
+- 被 [`def.branched-cover`](../nodes/def.branched-cover.md) 分支覆盖 用
+- 被 [`def.ramification-index`](../nodes/def.ramification-index.md) 分歧指数 用

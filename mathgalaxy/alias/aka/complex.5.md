@@ -13,6 +13,12 @@
 
 - Riemann 曲面 → def.riemann-surface
 
+- 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
+
+- 分歧指数 | 分歧点 | 分支点 | ramification index | ramification point → def.ramification-index
+
+- Riemann-Hurwitz 公式 | RH 公式 | Hurwitz 公式 | Riemann-Hurwitz | riemann hurwitz formula → thm.riemann-hurwitz
+
 - 柯西–格林恒等式 → lem.cauchy-green
 
 - 古尔萨引理 → lem.goursat-triangle
@@ -27,6 +33,4 @@
 
 - 单位根 | 分圆多项式 | n 次单位根 | roots of unity → def.roots-of-unity
 
-- dz/z 的围道积分 → ex.contour-1-over-z
-
-见 `../../alias.md`。
+> 续见 alias/aka/complex.6.md

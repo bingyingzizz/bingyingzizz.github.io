@@ -9,6 +9,12 @@
 
 - 三角剖分存在性 | 曲面可三角剖分 | Rado 定理 | Radó 定理 | Radó | Rado | triangulability of surfaces → thm.rado
 
+- 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
+
+- 分歧指数 | 分歧点 | 分支点 | ramification index | ramification point → def.ramification-index
+
+- Riemann-Hurwitz 公式 | RH 公式 | Hurwitz 公式 | Riemann-Hurwitz | riemann hurwitz formula → thm.riemann-hurwitz
+
 - 切赫上同调 → thm.paracompact-cech-equals-sheaf
 
 - 埃塔勒空间 | 平展空间 → def.etale-space
@@ -24,15 +30,5 @@
 - 网 → def.net
 
 - 滤子 → def.filter
-
-- 连通和 | connect sum | M#N → def.connected-sum
-
-- 亏格 | genus | 洞的个数 → def.genus
-
-- 拓扑流形 | n 维拓扑流形 → def.topological-manifold
-
-- 闭曲面 | 紧曲面 → def.closed-surface
-
-- 闭曲面分类定理 | 曲面分类定理 → thm.classification-surfaces
 
 > 续见 alias/aka/topology.14.md
