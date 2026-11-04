@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-04T04:38:10.811Z",
+  "generated": "2026-11-04T05:07:15.222Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1531,
-   "edges": 3120,
-   "strong": 3081,
+   "nodes": 1535,
+   "edges": 3146,
+   "strong": 3107,
    "weak": 39,
    "derived": 33,
-   "en_pages": 1531
+   "en_pages": 1535
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -149,7 +149,7 @@
    "en": "Differential Geometry",
    "desc": "曲面的活动标架与结构方程、第一与第二基本形式、Gauss–Codazzi、曲率与测地线的内蕴几何。",
    "color": "#C2703F",
-   "nodeCount": 147
+   "nodeCount": 151
   },
   {
    "id": "number",
@@ -595,8 +595,9 @@
    "en": "Topological Spaces and Basic Constructions",
    "parent": "topology",
    "desc": "造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集、闭包与内部 → 基与子基 → 连续映射 → 子空间 / 积 / 商 → 连通与闭开集 → 同胚。⚠️ 2026-11-02 拆团：分离公理（T0–T6、Urysohn、正规与正则那一条线）拆到「分离公理」，网 / 滤子 / 紧化 / 可数性拆到「收敛与紧性」。",
-   "nodeCount": 14,
+   "nodeCount": 15,
    "nodes": [
+    "def.compact",
     "def.interior",
     "ex.sierpinski-space",
     "def.topology",
@@ -662,13 +663,12 @@
    "en": "Metric Spaces",
    "parent": "topology",
    "desc": "造出「用距离算出来的拓扑」：完备、全有界、列紧，以及紧性的几种等价刻画。",
-   "nodeCount": 10,
+   "nodeCount": 9,
    "nodes": [
     "def.metric-space",
     "def.complete",
     "def.totally-bounded",
     "def.sequentially-compact",
-    "def.compact",
     "thm.metric-compact-equiv",
     "prop.compact-subset-closed",
     "prop.subset-compact-equiv",
@@ -2421,7 +2421,7 @@
    "en": "Manifolds and Vector Bundles",
    "parent": "diffgeom",
    "desc": "把「曲面」换成一般的流形：图卡与图册 → 光滑映射与光滑结构 → 切丛与向量丛 → 截面、纤维度量 → 定向与体积形式。这一团是后面几团的地基（丛上「多一层结构」的东西在「示性类与丛的分类」那团）。",
-   "nodeCount": 18,
+   "nodeCount": 22,
    "nodes": [
     "def.manifold-chart",
     "prop.maximal-atlas",
@@ -2440,7 +2440,11 @@
     "def.transition-function",
     "def.invariant-polynomial",
     "def.topological-manifold",
-    "ex.s1-tangent-bundle"
+    "ex.s1-tangent-bundle",
+    "def.stiefel-whitney-class",
+    "prop.orientable-iff-w1",
+    "def.euler-class",
+    "def.pontryagin-class"
    ]
   },
   {
@@ -4380,7 +4384,7 @@
    "id": "def.compact",
    "type": "definition",
    "label": "紧",
-   "title": "紧空间",
+   "title": "紧空间（开覆盖定义）",
    "label_en": "compact",
    "title_en": "compact",
    "translations": {
@@ -4403,17 +4407,17 @@
    "regions": [
     "topology"
    ],
-   "cluster": "topology.metric",
+   "cluster": "topology.general",
    "layer": 16,
    "tags": [
     "定义",
     "紧",
     "开覆盖"
    ],
-   "statement": "距离空间 $(X, d)$ **紧**，当且仅当 $X$ 的每个**开覆盖**都有有限子覆盖。展开说：若族 $\\{U_i\\}_{i \\in I}$ 满足「每个 $U_i$ 都是开集」且 $X = \\bigcup_{i \\in I} U_i$，则存在有限个下标使\n\n$$X = \\bigcup_{k=1}^{n} U_{i_k}$$",
-   "notes": "紧性是**拓扑**性质，只依赖开集，跟 $d$ 的具体取值无关。\n\n例子：$\\mathbb{R}$ 中的闭区间 [a, b] 紧（Heine–Borel）；$\\mathbb{R}$ 本身不紧（{(-n, n)} 没有有限子覆盖）；(0, 1] 不紧。\n\n紧性的一个常用等价形式：**有限交性质** —— 若一族闭集的任意有限子族都有交，则整族的交非空。",
+   "statement": "设 $X$ 是**拓扑空间**。$X$ **紧**，当且仅当它的每个**开覆盖**都有有限子覆盖：若族 $\\{U_{i}\\}_{i \\in I}$ 满足「每个 $U_{i}$ 都是开集」且 $X = \\bigcup_{i \\in I} U_{i}$，则存在有限个下标使\n\n$$X = \\bigcup_{k=1}^{n} U_{i_{k}}.$$\n\n子集 $K \\subseteq X$ 叫**紧集**，如果 $K$ 配子空间拓扑后是紧空间。",
+   "notes": "⭐ **只用到开集**：定义里没有任何度量、也没有 $\\mathbb{R}^{n}$ —— 紧性是纯拓扑性质，所以它在连续映射下保持、在同胚下不变（`def.continuous-map` / `def.homeomorphism`）。\n\n📌 **等价形式（闭集版）**：每个有限交性质都满足的闭集族必有非空交 —— 即「$\\{F_{i}\\}$ 闭且任意有限子族交非空 $\\implies$ 全族交非空」。这一条在反证时最常用。\n\n📌 **度量空间里的样子**：距离空间上「紧 $\\iff$ 列紧 $\\iff$ 完备 + 全有界」（`thm.metric-compact-equiv`）—— 那是**定理**（用度量才证得出来），不是定义的一部分。一般拓扑空间里列紧严格更强，两者不等价。\n\n例子：$[a, b] \\subseteq \\mathbb{R}$ 紧（Heine–Borel，`cor.heine-borel`）；$\\mathbb{R}$ 不紧（$\\{(-n, n)\\}$ 没有有限子覆盖）；$(0, 1]$ 不紧。一般拓扑里的标准例子见 `def.chaus`、`thm.tykhonov`（任意积仍紧）。",
    "refs": [
-    "Munkres, Topology, §26"
+    "Munkres, Topology, §26（紧空间）"
    ]
   },
   {
@@ -19273,7 +19277,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 29,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -19315,7 +19319,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -19358,7 +19362,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 30,
+   "layer": 34,
    "tags": [
     "定理",
     "微分几何",
@@ -19443,7 +19447,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 30,
+   "layer": 32,
    "tags": [
     "定理",
     "微分几何",
@@ -19528,7 +19532,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 36,
    "tags": [
     "定义",
     "微分几何",
@@ -19701,7 +19705,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 32,
+   "layer": 35,
    "tags": [
     "定理",
     "微分几何",
@@ -19745,7 +19749,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -20085,7 +20089,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "命题",
     "微分几何",
@@ -20306,7 +20310,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -20349,7 +20353,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 32,
+   "layer": 34,
    "tags": [
     "定理",
     "微分几何",
@@ -20403,7 +20407,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -41283,7 +41287,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 34,
    "tags": [
     "例",
     "微分几何",
@@ -41907,7 +41911,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 33,
    "tags": [
     "例",
     "微分几何",
@@ -42030,7 +42034,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 33,
    "tags": [
     "定义",
     "微分几何",
@@ -42073,7 +42077,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 32,
+   "layer": 35,
    "tags": [
     "定义",
     "微分几何",
@@ -42115,7 +42119,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 33,
+   "layer": 37,
    "tags": [
     "定理",
     "微分几何",
@@ -42158,7 +42162,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 36,
    "tags": [
     "定理",
     "微分几何",
@@ -42436,6 +42440,178 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Cardinal_number",
     "nlab": "https://ncatlab.org/nlab/show/cardinal+number"
    }
+  },
+  {
+   "id": "def.stiefel-whitney-class",
+   "type": "definition",
+   "label": "Stiefel–Whitney 类",
+   "title": "Stiefel–Whitney 类：实向量丛的 $\\mathbb{Z}/2$ 示性类",
+   "label_en": "Stiefel–Whitney Class",
+   "title_en": "Stiefel–Whitney Class",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.stiefel-whitney-class.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 36,
+   "tags": [
+    "定义",
+    "微分几何",
+    "示性类",
+    "Stiefel–Whitney",
+    "可定向"
+   ],
+   "statement": "**在做什么**：实向量丛的「$\\mathbb{Z}/2$ 版陈类」。系数取 $\\mathbb{Z}/2$ 是**被迫**的 —— 实丛的复化才带复结构，而 $w_{i}$ 要避开复数与符号（见注里的挠问题）。\n\n设 $E \\to B$ 是秩 $k$ 的实向量丛。$E$ 的 **Stiefel–Whitney 类**是一族\n\n$$w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2), \\qquad i = 0, 1, \\ldots, k ,$$\n\n由下列公理唯一确定：\n\n1. $w_{0} = 1$，$i > k$ 时 $w_{i} = 0$；\n2. **自然性**：$w_{i}(f^{*}E) = f^{*}w_{i}(E)$；\n3. **Whitney 乘积公式**：$w(E \\oplus E') = w(E) \\smile w(E')$，其中 $w = 1 + w_{1} + \\cdots$；\n4. **规范化**：线丛 $L$ 的 $w_{1}(L)$ 是 $H^{1}(B;\\mathbb{Z}/2)$ 里那个「定向双重覆叠」对应的类（等价地：非平凡实线丛的 $w_{1} \\ne 0$）。\n\n**最低一条的含义**：$w_{1}(E) = 0$ 当且仅当 $E$ **可定向**（见 `prop.orientable-iff-w1`）。",
+   "notes": "**怎么算出来（与陈类对照）**：把实丛 $E$ 复化得 $E \\otimes \\mathbb{C}$，它是复丛，有陈类 $c_{i}$。**Pontryagin 类**取 $p_{i} = (-1)^{i}c_{2i}(E\\otimes\\mathbb{C})$；而 $w_{i}$ 是 $c_{i}$ 模 $2$ 的「影子」：$w_{i}(E) \\equiv c_{i}(E\\otimes\\mathbb{C}) \\bmod 2$（这条给出可计算的定义，公理版只是它的最小刻画）。⚠️ 严格陈述要用 Thom–Wu 或 Steenrod 平方才能把模 $2$ 讲清楚，本图不展开。\n\n**为什么系数是 $\\mathbb{Z}/2$ 而不是 $\\mathbb{Z}$**：实丛没有「复数相位」，其示性类天然带 $2$-挠。用 $\\mathbb{Z}$ 系数时 $p_{i}$ 只能取到偶次类、且丢掉奇次信息；这正是 $w_{2}$ 与 $p_{1}$ 分工的原因（$w_{2}$ 还能测「非 Spin」这类纯 $2$-挠现象）。\n\n⚠️ **$w_{i}$ 不能用来判同构**：它只给必要条件（$w \\ne w' \\implies E \\not\\cong E'$）。所有平凡丛的 $w$ 都是 $1$，但 $w = 1$ 的丛未必平凡。\n\n⚠️ **$w_{1}$ 与「定向」的等价是本图最常用的那条**：见 `prop.orientable-iff-w1`，它把「结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$」翻译成一个上同调类的消失。",
+   "refs": [
+    "Milnor–Stasheff, Characteristic Classes · Stiefel–Whitney 类",
+    "Bott–Tu, Differential Forms in Algebraic Topology"
+   ]
+  },
+  {
+   "id": "prop.orientable-iff-w1",
+   "type": "proposition",
+   "label": "定向与 w1 消失",
+   "title": "命题：可定向 当且仅当第一 Stiefel–Whitney 类为零",
+   "label_en": "Orientability and w1",
+   "title_en": "Orientability iff w1 Vanishes",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/prop.orientable-iff-w1.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 37,
+   "tags": [
+    "命题",
+    "微分几何",
+    "可定向",
+    "Stiefel–Whitney",
+    "结构群约化"
+   ],
+   "statement": "**在做什么**：把「能不能定向」这个几何问题变成一个**上同调类是否为零**的代数判据 —— 这是示性类作为「约化障碍」的第一个实例。\n\n设 $E \\to B$ 是秩 $k$ 的实向量丛。则\n\n$$E\\ \\text{可定向} \\iff w_{1}(E) = 0 .$$\n\n**等价说法（结构群口径）**：$E$ 的结构群可从 $\\mathrm{GL}(k, \\mathbb{R})$ **约化**到 $\\mathrm{SO}(k)$（`def.structure-group`）。\n\n**对切丛**：$M$ 可定向（`def.orientable-manifold`）$\\iff$ $w_{1}(TM) = 0$。",
+   "notes": "**为什么是 $w_{1}$ 而不是别的**：约化 $\\mathrm{GL}(k) \\rightsquigarrow \\mathrm{SO}(k)$ 等价于「转移函数（`def.transition-function`）可以全部取在 $\\mathrm{SO}(k)$ 里」，即行列式处处为正。而行列式取值 $\\pm 1$ 给出一个 $\\mathbb{Z}/2$-值上闭链 —— 那正是 $w_{1}$：它记的是「绕一圈回来符号是否翻转」。所以 $w_{1} = 0$ 就是「能统一符号」。\n\n⭐ **同一件事的三种说法**：$w_{1} = 0$ $\\iff$ 存在处处非零的 $k$-形式（体积形式，`def.orientable-manifold`）$\\iff$ 定向双重覆叠 $\\tilde B \\to B$ 分裂（有截面）。三者互为翻译，但**计算上只有第一条方便** —— 它就是这条命题的价值。\n\n⚠️ **$w_{1}$ 不为零的例子要能举**：$\\mathbb{RP}^{2}$ 的切丛 $w_{1} \\ne 0$（不可定向），$\\mathbb{RP}^{2}$ 上的 tautological 线丛 $w_{1} \\ne 0$。而 $S^{2}$、环面都可定向。\n\n⚠️ **别把它推成「$w_{2} = 0 \\iff$ Spin 结构」**：$w_{2} = 0$ 只是 Spin 结构存在的**先决条件**，还要一个整系数（$\\beta w_{2}$ 型）条件配合。这是「障碍的层级」问题，不是一条等价就能解决的。",
+   "refs": [
+    "Milnor–Stasheff, Characteristic Classes · 第一 Stiefel–Whitney 类与定向",
+    "Bott–Tu, Differential Forms in Algebraic Topology"
+   ]
+  },
+  {
+   "id": "def.euler-class",
+   "type": "definition",
+   "label": "Euler 类",
+   "title": "Euler 类：可定向实丛的顶维示性类",
+   "label_en": "Euler Class",
+   "title_en": "Euler Class",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.euler-class.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 38,
+   "tags": [
+    "定义",
+    "微分几何",
+    "Euler 类",
+    "Pfaffian",
+    "Gauss–Bonnet"
+   ],
+   "statement": "**在做什么**：可定向实丛上唯一一个「整系数、顶维」的示性类。它在曲面情形就是高斯曲率的积分（Gauss–Bonnet），在一般维数由 Pfaffian 给出。\n\n设 $E \\to B$ 是秩 $k = 2m$ 的**可定向**实向量丛（$w_{1}(E) = 0$，`prop.orientable-iff-w1`），配一个与定向相容的联络，曲率 $F$。**Euler 类**定义为\n\n$$e(E) := \\Bigl[\\, \\operatorname{Pf}\\Bigl(\\frac{F}{2\\pi}\\Bigr) \\,\\Bigr] \\in H^{2m}(B; \\mathbb{Z}) ,$$\n\n其中 $\\operatorname{Pf}$ 是 **Pfaffian**（对反对称矩阵 $A$ 定义 $\\operatorname{Pf}(A)^{2} = \\det A$，且 $\\operatorname{Pf}$ 在 $\\mathrm{SO}(k)$ 共轭下不变）。\n\n**基本性质**：\n\n1. **自然性**：$e(f^{*}E) = f^{*}e(E)$；\n2. **与顶陈类的关系**：$e(E) = c_{m}(E \\otimes \\mathbb{C})$（$k = 2m$ 时；⚠️ 见注的符号约定）；\n3. **Gauss–Bonnet（曲面情形）**：$\\Sigma$ 为闭可定向曲面时\n\n$$\\int_{\\Sigma} e(T\\Sigma) = \\chi(\\Sigma) ,$$\n\n右端是 Euler 示性数 —— 这就是 `thm.gauss-bonnet` 的上同调说法。",
+   "notes": "**为什么用 Pfaffian 而不是行列式**：$\\det$ 在 $\\mathrm{SO}(k)$ 共轭下也不变，但它对反对称矩阵是**完全平方**，取 $\\sqrt{\\det}$ 有符号歧义；$\\operatorname{Pf}$ 对 $\\mathrm{SO}(k)$ 不变而**对 $\\mathrm{O}(k)$ 变号** —— 那个符号**正好**记的事「定向」。所以 Pfaffian 是唯一能把「定向」编码进去的不变多项式（`def.invariant-polynomial` 在 $\\mathfrak{o}(k)$ 上的版本）。\n\n⭐ **它为什么只在偶数秩时存在**：Pfaffian 只对偶数阶反对称矩阵有定义。$k$ 为奇数时 $e(E)$ 按定义为 $0$ —— 这与「奇数维闭流形的 Euler 示性数为零」（Poincaré 对偶的推论）一致。\n\n⚠️ **符号约定要留意**：$e(E) = c_{m}(E\\otimes\\mathbb{C})$ 与 $e(E) = (-1)^{m}c_{m}(E\\otimes\\mathbb{C})$ 两种约定都在用（差 $(-1)^{m}$，取决于曲率与 Pfaffian 的符号）。本图取 $\\operatorname{Pf}(F/2\\pi)$ 直接定义，不做换算。\n\n⚠️ **$e(E) \\ne 0$ 的用处**：它常用来证「某丛非平凡」。例如 $S^{2}$ 的切丛满足 $\\int e(T S^{2}) = 2 \\ne 0$，所以 $T S^{2}$ 不是平凡丛 —— 这是「$S^{2}$ 不能平行化」的示性类证明（比用 $\\chi = 2$ 更本质）。",
+   "refs": [
+    "Milnor–Stasheff, Characteristic Classes · Euler 类",
+    "Bott–Tu, Differential Forms in Algebraic Topology"
+   ]
+  },
+  {
+   "id": "def.pontryagin-class",
+   "type": "definition",
+   "label": "Pontryagin 类",
+   "title": "Pontryagin 类：实丛复化之后的偶次陈类",
+   "label_en": "Pontryagin Class",
+   "title_en": "Pontryagin Class",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.pontryagin-class.en.md",
+   "region": "diffgeom",
+   "regions": [
+    "diffgeom"
+   ],
+   "cluster": "diffgeom.manifold",
+   "layer": 37,
+   "tags": [
+    "定义",
+    "微分几何",
+    "Pontryagin 类",
+    "示性类",
+    "复化"
+   ],
+   "statement": "**在做什么**：实丛本身没有「$\\mathbb{Z}$ 系数」的示性类（只有 $\\mathbb{Z}/2$ 的 $w_{i}$ 与可定向时的 $e$）。取复化 $E \\otimes \\mathbb{C}$ 之后就有整系数陈类了 —— **取其中偶次的那几个**，就是 Pontryagin 类。\n\n设 $E \\to B$ 是秩 $k$ 的实向量丛。第 $i$ 个 **Pontryagin 类**定义为\n\n$$p_{i}(E) := (-1)^{i}\\, c_{2i}\\bigl(E \\otimes_{\\mathbb{R}} \\mathbb{C}\\bigr) \\in H^{4i}(B; \\mathbb{Z}) , \\qquad i = 1, 2, \\ldots , \\Bigl\\lfloor \\frac{k}{2} \\Bigr\\rfloor .$$\n\n**基本性质**：\n\n1. $p_{0} = 1$；\n2. **自然性**：$p_{i}(f^{*}E) = f^{*}p_{i}(E)$；\n3. **Whitney 乘积公式**（模 $2$-挠才严格成立）$p(E \\oplus E') = p(E) \\smile p(E')$；\n4. **复丛的实化**：若 $E = F_{\\mathbb{R}}$ 是复丛 $F$ 的实化，则 $p_{i}(E) = (-1)^{i}c_{i}(F)^{2}$ 型关系（**$p$ 丢掉了 $c$ 的奇次信息**，这正是「实化丢相位」的表现）。",
+   "notes": "**为什么只取偶次**：复化 $E\\otimes\\mathbb{C}$ 带一个**共轭**结构（把 $i$ 变成 $-i$），于是 $c_{2i+1}(E\\otimes\\mathbb{C}) = -c_{2i+1}$ 型地成对抵消（在 $\\mathbb{Z}$ 系数下变成 $2$-挠元）。所以整系数里只剩偶次是真不变量，奇次的信息要用 $\\mathbb{Z}/2$ 的 $w_{i}$ 去补 —— **这就是 $w$ 与 $p$ 的分工**。\n\n⚠️ **$p_{1}$ 的一个具体例子**：$S^{4}$ 上的切丛满足 $\\int_{S^{4}} p_{1}(TS^{4}) = \\pm 2\\chi$ 型关系（符号看约定），非零 —— 所以 $TS^{4}$ 非平凡。更著名的是 $\\mathbb{CP}^{2}$ 的 $p_{1}$ 与符号差定理（signature theorem）：$\\sigma(M) = \\frac{1}{3}\\int p_{1}$（四维闭可定向流形），这是 Hirzebruch 指标定理的特例。\n\n⚠️ **Whitney 公式的 $2$-挠警告**：$p(E\\oplus E') = p(E)p(E')$ 在 $H^{*}(B;\\mathbb{Z})$ 里**只对模 $2$-挠**成立（严格版要写到 $H^{*}(B;\\mathbb{Z})/\\text{挠}$，或用 $\\mathbb{Z}[1/2]$ 系数）。这一点与陈类形成鲜明对照（陈类的 Whitney 公式是无条件的）—— 因为复化会引入 $2$-挠。\n\n⚠️ **三种实示性类的角色**：$w_{i}$（$\\mathbb{Z}/2$，全维数、能测定向与 Spin）、$e$（$\\mathbb{Z}$，只在可定向且偶数秩、顶维）、$p_{i}$（$\\mathbb{Z}$，$4$ 的倍数维、丢奇次信息）。三者不互相包含 —— 判断某个实丛非平凡时，可能要几种一起用。",
+   "refs": [
+    "Milnor–Stasheff, Characteristic Classes · Pontryagin 类",
+    "Bott–Tu, Differential Forms in Algebraic Topology"
+   ]
   },
   {
    "id": "def.topology",
@@ -67048,11 +67224,11 @@
    "note": "度量空间里「每个开覆盖有有限子覆盖」与「每个序列有收敛子列」是同一件事；两个方向分开证，合起来才是这条等价。",
    "proofs": [
     {
-     "label": "紧 ⇒ 列紧",
+     "label": "紧 $\\implies$ 列紧",
      "text": "设 $\\{x_{n}\\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。\n\n**① 点集 $\\{x_{n} : n \\in \\mathbb{N}\\}$ 是闭的。** 任取 $y$ 不在这个点集中。\n\n若 $y$ 是某个 $x_{n}$，那 $y$ 显然不在余集里；以下设 $y \\notin \\{x_{n}\\}$。\n\n由于 $\\{x_{n}\\}$ 没有收敛子列，$\\{x_{n}\\}$ 中任何子列都不趋于 $y$，于是存在 $\\varepsilon > 0$ 使 $B(y, \\varepsilon )$ 中只含**有限个** $x_{n}$（否则可以挑出趋于 $y$ 的子列）。\n\n删掉这有限多个点，就得到一个含 $y$ 的开球不碰 $\\{x_{n}\\}$。\n\n故余集开，$\\{x_{n}\\}$ 闭。\n\n**② 每个 $x_{n}$ 有一个只含有限多个 $x_{m}$ 的开邻域。** $x_{n}$ 自己也被排除在子列之外，同上可得。\n\n**③ 造一个开覆盖。** 取\n\n$$\\mathcal{U} = \\{ U_n : n \\in \\mathbb{N} \\} \\cup \\{ X \\setminus \\{x_n : n \\in \\mathbb{N}\\} \\}$$\n\n其中 $U_{n}$ 是 ② 中给 $x_{n}$ 的那个邻域（只含有限个 $x_{m}$）。再补上闭集的余集，$\\mathcal{U}$ 就是 $X$ 的开覆盖。\n\n**④ 由紧性取有限子覆盖** $\\mathcal{V} \\subseteq \\mathcal{U}$。\n\n若 $\\mathcal{V}$ 包含那个余集，则没盖住任何 $x_{n}$；\n\n若只含有限个 $U_{n}$，而每个 $U_{n}$ 只含有限个 $x_{m}$，则 $\\mathcal{V}$ 总共只盖住**有限多个** $x_{m}$ —— 与 $\\{x_{n}\\}$ 是无限集矛盾（没有收敛子列迫使它无限）。\n\n故 $\\{x_{n}\\}$ 必有收敛子列，$X$ 列紧。∎\n\n⭐ 只有这一步不需要选择公理。"
     },
     {
-     "label": "列紧 ⇒ 紧",
+     "label": "列紧 $\\implies$ 紧",
      "text": "用**反证 + 一串不断缩小的「坏球」**。设 $X$ 列紧。\n\n**① $X$ 全有界** —— 用另一条箭头「列紧 $\\implies$ 全有界」。\n\n**② 造嵌套的坏球。** 设 $\\mathcal{U}$ 是 $X$ 的开覆盖，且它**没有**有限子覆盖。\n\n由全有界，$X$ 能被有限个半径 1 的开球盖住；其中必有一个球不能被 $\\mathcal{U}$ 的有限多个成员盖住 —— 否则把每个球各自的有限覆盖并起来，就得到 $\\mathcal{U}$ 的一个有限子覆盖。\n\n称这样的球为**坏球**，取一个记作 $B_{1}$。\n\n再把 $B_{1}$ 用有限个半径 1/2 的球盖住（$B_{1} \\subseteq X$，全有界性对它同样管用），其中必有一个坏球 $B_{2} \\subseteq B_{1}$。如此继续，得到\n\n$$B_1 \\supseteq B_2 \\supseteq B_3 \\supseteq \\cdots, \\quad  B_k\\text{ 的半径} \\le 1/k, \\quad \\text{ 每个} B_k\\text{ 都是坏的}$$\n\n（每一步都只是在**有限**多个球里挑一个，可以规定「取编号最小的那个」，所以这里不动用选择公理。）\n\n**③ 取点，得到 Cauchy 列。** 取 $x_{k} \\in B_{k}$。由嵌套与半径趋于 0，对 $m \\le n$ 有 $x_{m}, x_{n} \\in B_{m}$ 而 $B_{m}$ 的半径 $\\le 1/m$，于是\n\n$$d(x_m, x_n) \\le 2/m\\quad  \\implies\\quad  \\{x_k\\}\\text{ 是} Cauchy\\text{ 列}$$\n\n**④** 由列紧它有子列收敛到某点 $x \\in X$；Cauchy 列一旦有收敛子列就整体收敛，故 $x_{k} \\to x$。\n\n**⑤ 收尾。** $x$ 落在某个 $U \\in \\mathcal{U}$ 中。$U$ 开，故存在 $r > 0$ 使 $B(x, r) \\subseteq U$。取 $k$ 充分大，使 $1/k < r/2$ 且 $d(x_{k}, x) < r/2$；则对任意 $y \\in B_{k}$，\n\n$$d(y, x) \\le d(y, x_k) + d(x_k, x) < 1/k + r/2 < r$$\n\n即 $B_{k} \\subseteq B(x, r) \\subseteq U$。于是 $B_{k}$ 被 $\\mathcal{U}$ 的**一个**成员盖住了，与「$B_{k}$ 是坏球」矛盾。\n\n故 $\\mathcal{U}$ 必有有限子覆盖，$X$ 紧。∎\n\n⭐ 「坏球」这一招的直觉是：让一串被架空的小球缩到一个极限点，再用极限点的开邻域一口吞掉它。整段只用全有界，没用选择公理。"
     }
    ]
@@ -84461,6 +84637,214 @@
    "note": ""
   },
   {
+   "id": "dep-sw-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.characteristic-class",
+   "usedBy": "def.stiefel-whitney-class",
+   "note": "Stiefel–Whitney 类是实丛的示性类，满足自然性与同构不变。"
+  },
+  {
+   "id": "dep-sw-vector",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.vector-bundle",
+   "usedBy": "def.stiefel-whitney-class",
+   "note": "定义在实向量丛上。"
+  },
+  {
+   "id": "dep-sw-w1",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stiefel-whitney-class",
+   "usedBy": "prop.orientable-iff-w1",
+   "note": "命题的主语就是 $w_1$。"
+  },
+  {
+   "id": "dep-w1-orient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.orientable-manifold",
+   "usedBy": "prop.orientable-iff-w1",
+   "note": "结论翻译成「流形可定向」（切丛的 $w_1$ 为零）。"
+  },
+  {
+   "id": "dep-w1-sg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.structure-group",
+   "usedBy": "prop.orientable-iff-w1",
+   "note": "等价说法是「结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$」。"
+  },
+  {
+   "id": "dep-w1-tf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.transition-function",
+   "usedBy": "prop.orientable-iff-w1",
+   "note": "证明看的是转移函数的行列式符号。"
+  },
+  {
+   "id": "dep-ec-cw",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.chern-weil",
+   "usedBy": "def.euler-class",
+   "note": "Euler 类用陈–Weil 同态算：把 Pfaffian 当成不变多项式。"
+  },
+  {
+   "id": "dep-ec-ip",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.invariant-polynomial",
+   "usedBy": "def.euler-class",
+   "note": "$\\operatorname{Pf}$ 是 $\\mathfrak{o}(k)$ 上的不变多项式。"
+  },
+  {
+   "id": "dep-ec-sw",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "prop.orientable-iff-w1",
+   "usedBy": "def.euler-class",
+   "note": "Euler 类只在可定向（$w_1 = 0$）时定义。"
+  },
+  {
+   "id": "dep-ec-gb",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.gauss-bonnet",
+   "usedBy": "def.euler-class",
+   "note": "曲面情形 $\\int e(T\\Sigma) = \\chi(\\Sigma)$ 正是 Gauss–Bonnet。"
+  },
+  {
+   "id": "dep-pc-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chern-class",
+   "usedBy": "def.pontryagin-class",
+   "note": "Pontryagin 类是「复化后的偶次陈类」。"
+  },
+  {
+   "id": "dep-pc-vector",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.vector-bundle",
+   "usedBy": "def.pontryagin-class",
+   "note": "定义在实向量丛上（复化之后再取陈类）。"
+  },
+  {
+   "id": "dep-pc-sw",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.stiefel-whitney-class",
+   "usedBy": "def.pontryagin-class",
+   "note": "整系数的 $p_i$ 丢掉奇次信息，那部分要由 $w_i$ 补 —— 两者分工。"
+  },
+  {
+   "id": "def-link.ds-egregium",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.theorema-egregium",
+   "usedBy": "def.developable-surface",
+   "note": "「纸不能拉 $\\implies$ K 不变」这一步用绝妙定理（$K$ 是等距不变量）。"
+  },
+  {
+   "id": "def-link.dif-cgc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.constant-gauss-curvature",
+   "usedBy": "thm.developable-iff-flat",
+   "note": "$K \\equiv 0 \\implies$ 局部等距于平面，这一步就是常曲率分类的 $K = 0$ 情形。"
+  },
+  {
+   "id": "def-link.mc-ds",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.developable-surface",
+   "usedBy": "def.mean-curvature",
+   "note": "平均曲率那条注里比较「极小曲面（$H = 0$）」与「可展曲面（$K = 0$）」，平面是唯一交点。"
+  },
+  {
+   "id": "def-link.cod-gauss",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.gauss-equation",
+   "usedBy": "thm.codazzi-mainardi",
+   "note": "Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。"
+  },
+  {
+   "id": "def-link.sf-rodrigues",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.rodrigues",
+   "usedBy": "def.second-fundamental-form",
+   "note": "Rodrigues 定理是第二基本形式在**主方向**上的一条具体结论。"
+  },
+  {
+   "id": "def-link.sf-eulerformula",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.euler-formula-surface",
+   "usedBy": "def.second-fundamental-form",
+   "note": "Euler 公式（$\\kappa_{n} = \\kappa_{1}\\cos^{2}\\theta + \\kappa_{2}\\sin^{2}\\theta$）同样写在第二基本形式上。"
+  },
+  {
+   "id": "def-link.ec-echar",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.euler-characteristic",
+   "usedBy": "def.euler-class",
+   "note": "Euler 类与 Euler 示性数由 $\\int e = \\chi$ 相连 —— 一个是上同调类、一个是整数。"
+  },
+  {
+   "id": "def-link.ec-k",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.gauss-curvature",
+   "usedBy": "def.euler-class",
+   "note": "曲面情形 $e(T\\Sigma)$ 就是 $K\\,\\mathrm{d}A$ 的上同调类（Gauss–Bonnet 的被积式）。"
+  },
+  {
+   "id": "def-link.sw-cohclass",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cohomology-class",
+   "usedBy": "def.stiefel-whitney-class",
+   "note": "$w_{i}$ 的取值就是上同调类，不是数。"
+  },
+  {
+   "id": "def-link.sw-sg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.structure-group",
+   "usedBy": "def.stiefel-whitney-class",
+   "note": "$w_{1} = 0$ 等价于结构群可约化到 $\\mathrm{SO}(k)$ —— 这是示性类作为约化障碍的入口。"
+  },
+  {
+   "id": "def-link.w1-volume",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.volume-form",
+   "usedBy": "prop.orientable-iff-w1",
+   "note": "「可定向」的等价说法之一就是「存在处处非零的体积形式」。"
+  },
+  {
+   "id": "def-link.pc-char",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.characteristic-class",
+   "usedBy": "def.pontryagin-class",
+   "note": "Pontryagin 类是实丛的示性类，继承自然性与同构不变。"
+  },
+  {
+   "id": "def-link.pc-orient",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.orientable-manifold",
+   "usedBy": "def.pontryagin-class",
+   "note": "注里用它举例（$\\mathbb{CP}^{2}$ 的符号差、可定向流形上的 $\\int p_{1}$）。"
+  },
+  {
    "id": "dep.powerset-topology",
    "kind": "definition",
    "strength": "strong",
@@ -94890,6 +95274,13 @@
    "explicit": false
   },
   {
+   "a": "topology.general",
+   "b": "topology.metric",
+   "count": 14,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "analysis.product",
    "b": "analysis.setclass",
    "count": 6,
@@ -95312,7 +95703,7 @@
   {
    "a": "topology.general",
    "b": "topology.paracompact",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -95326,7 +95717,7 @@
   {
    "a": "topology.convergence",
    "b": "topology.general",
-   "count": 8,
+   "count": 15,
    "label": "",
    "explicit": false
   },
@@ -95403,7 +95794,7 @@
   {
    "a": "diffgeom.intrinsic",
    "b": "diffgeom.surface",
-   "count": 26,
+   "count": 28,
    "label": "",
    "explicit": false
   },
@@ -95431,7 +95822,7 @@
   {
    "a": "diffgeom.intrinsic",
    "b": "diffgeom.manifold",
-   "count": 10,
+   "count": 12,
    "label": "",
    "explicit": false
   },
@@ -95606,7 +95997,7 @@
   {
    "a": "diffgeom.form",
    "b": "diffgeom.manifold",
-   "count": 7,
+   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -95662,7 +96053,7 @@
   {
    "a": "diffgeom.characteristic",
    "b": "diffgeom.manifold",
-   "count": 18,
+   "count": 24,
    "label": "",
    "explicit": false
   },
@@ -95682,7 +96073,7 @@
   },
   {
    "a": "diffgeom.vector",
-   "b": "topology.metric",
+   "b": "topology.general",
    "count": 2,
    "label": "",
    "explicit": false
@@ -95968,20 +96359,6 @@
    "explicit": false
   },
   {
-   "a": "topology.convergence",
-   "b": "topology.metric",
-   "count": 7,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "topology.metric",
-   "b": "topology.paracompact",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "diffgeom.form",
    "b": "hom.complex",
    "count": 4,
@@ -96012,14 +96389,21 @@
   {
    "a": "fa.norm",
    "b": "topology.metric",
-   "count": 5,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "fa.ck",
    "b": "topology.metric",
-   "count": 4,
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "fa.ck",
+   "b": "topology.general",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -96040,6 +96424,13 @@
   {
    "a": "algebra.linmap",
    "b": "fa.norm",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "fa.norm",
+   "b": "topology.general",
    "count": 2,
    "label": "",
    "explicit": false
@@ -96069,13 +96460,6 @@
    "a": "fa.baire",
    "b": "topology.metric",
    "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "topology.general",
-   "b": "topology.metric",
-   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -96132,6 +96516,13 @@
    "a": "topology.homology",
    "b": "topology.surfaces",
    "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "topology.general",
+   "b": "topology.surfaces",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -96325,16 +96716,9 @@
    "explicit": false
   },
   {
-   "a": "analysis.real",
-   "b": "topology.metric",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "analysis.completeness",
    "b": "topology.metric",
-   "count": 4,
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -96389,6 +96773,13 @@
   },
   {
    "a": "set.rel",
+   "b": "topology.general",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.real",
    "b": "topology.general",
    "count": 2,
    "label": "",
@@ -96459,15 +96850,8 @@
   },
   {
    "a": "topo.chaus",
-   "b": "topology.metric",
-   "count": 4,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "topo.chaus",
    "b": "topology.general",
-   "count": 2,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -96733,7 +97117,7 @@
   {
    "a": "analysis.differentiation",
    "b": "topology.metric",
-   "count": 3,
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -96810,7 +97194,7 @@
   {
    "a": "topo.cg",
    "b": "topology.general",
-   "count": 11,
+   "count": 12,
    "label": "",
    "explicit": false
   },
@@ -97004,15 +97388,15 @@
    "explicit": false
   },
   {
-   "a": "cond.cohomology",
-   "b": "topology.metric",
+   "a": "cond.ss",
+   "b": "topo.stone",
    "count": 2,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cond.ss",
-   "b": "topo.stone",
+   "a": "cond.cohomology",
+   "b": "topology.general",
    "count": 2,
    "label": "",
    "explicit": false

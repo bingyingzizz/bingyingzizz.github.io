@@ -1,6 +1,6 @@
 # 曲率分解　`prop.curvature-split`
 法曲率与测地曲率的分解
-layer 31 · 命题 · 内蕴几何 · 微分几何
+layer 32 · 命题 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=prop.curvature-split)　·　[节点索引](../index.md)
 
 设 $\gamma$ 是 $S$ 上按弧长参数化的曲线，$n$ 是 $S$ 的单位法向，$\kappa$、$\kappa_{n}$、$k_{g}$ 分别是它在 $\mathbb{R}^{3}$ 中的曲率、关于 $n$ 的法曲率和

@@ -1,6 +1,6 @@
 # Gauss 方程　`thm.gauss-equation`
 Gauss 方程
-layer 31 · 定理 · 曲面论 · 微分几何
+layer 33 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.gauss-equation)　·　[节点索引](../index.md)
 
 在适配标架 $e_{3} = n$ 下，把第二结构方程按 $k = 1,2,3$ 拆开，$k = 3$ 那一项留下来就是曲面的曲率：
@@ -12,6 +12,8 @@ $$\mathrm{d}\omega^{1}_{\ 2} = \omega^{1}_{\ 3}\wedge\omega^{2}_{\ 3}.$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.fundamental-theorem-surfaces`](../nodes/thm.fundamental-theorem-surfaces.md) 曲面论基本定理
 - ⇒ [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理
+
+- …另有出边，续页见 [nodes/thm.gauss-equation.5.md](./thm.gauss-equation.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.gauss-equation.3.md](./thm.gauss-equation.3.md)

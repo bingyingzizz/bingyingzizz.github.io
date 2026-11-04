@@ -6,3 +6,5 @@
 - 被 [`def.chern-class`](../nodes/def.chern-class.md) 陈类 用
 - 被 [`def.fiber-bundle`](../nodes/def.fiber-bundle.md) 纤维丛 用
 - 被 [`ex.s1-tangent-bundle`](../nodes/ex.s1-tangent-bundle.md) 圆的切丛是平凡丛 用
+- 被 [`def.stiefel-whitney-class`](../nodes/def.stiefel-whitney-class.md) Stiefel–Whitney 类 用
+- 被 [`def.pontryagin-class`](../nodes/def.pontryagin-class.md) Pontryagin 类 用

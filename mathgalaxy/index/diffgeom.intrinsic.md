@@ -18,6 +18,5 @@
 - def.geodesic　测地线　layer 29
 - thm.regular-level-set　正则水平集定理　layer 29
 - def.sectional-curvature　截面曲率　layer 29
-- def.intrinsic-quantity　内蕴量　layer 30
 
 > 续见 `index/diffgeom.intrinsic.2.md`

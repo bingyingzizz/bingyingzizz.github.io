@@ -6,3 +6,5 @@
 - [`def.connection-form`](../nodes/def.connection-form.md) 联络形式：用到了定义 联络形式　[proofs/dep-cw-conn.md](../proofs/dep-cw-conn.md)
 - [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调：用到了定义 de Rham 上同调　[proofs/dep-cw-derham.md](../proofs/dep-cw-derham.md)
 - [`def.closed-form`](../nodes/def.closed-form.md) 闭形式：用到了定义 闭形式　[proofs/dep-cw-closed.md](../proofs/dep-cw-closed.md)
+
+> 续见 [nodes/thm.chern-weil.4.md](./thm.chern-weil.4.md)

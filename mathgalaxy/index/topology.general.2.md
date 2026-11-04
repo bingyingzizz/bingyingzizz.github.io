@@ -3,3 +3,4 @@
 
 - prop.connected-image-closure　连通的像与闭包　layer 6
 - def.homeomorphism　同胚　layer 7
+- def.compact　紧　layer 16

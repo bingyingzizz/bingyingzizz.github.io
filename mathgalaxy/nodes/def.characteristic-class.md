@@ -10,6 +10,8 @@ layer 35 · 定义 · 丛的示性类 · 微分几何
 ## 它能推出什么 / 谁在用它
 - 被 [`def.chern-class`](../nodes/def.chern-class.md) 陈类 用
 
+- …另有出边，续页见 [nodes/def.characteristic-class.4.md](./def.characteristic-class.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.characteristic-class.3.md](./def.characteristic-class.3.md)
 

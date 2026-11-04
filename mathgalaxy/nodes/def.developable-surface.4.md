@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.developable-iff-flat`](../nodes/thm.developable-iff-flat.md) 可展的判据 用
 - 被 [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面 用
+- 被 [`def.mean-curvature`](../nodes/def.mean-curvature.md) 平均曲率 用

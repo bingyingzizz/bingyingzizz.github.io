@@ -1,6 +1,6 @@
 # Gauss–Bonnet 定理　`thm.gauss-bonnet`
 Gauss–Bonnet 定理与 Euler 示性数
-layer 32 · 定理 · 内蕴几何 · 微分几何
+layer 33 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.gauss-bonnet)　·　[节点索引](../index.md)
 
 设 $M \
@@ -10,6 +10,8 @@ layer 32 · 定理 · 内蕴几何 · 微分几何
 ## 它能推出什么 / 谁在用它
 - ～弱边 [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理
 - 被 [`ex.sphere-curvature`](../nodes/ex.sphere-curvature.md) 球面的曲率 用
+
+- …另有出边，续页见 [nodes/thm.gauss-bonnet.7.md](./thm.gauss-bonnet.7.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.gauss-bonnet.5.md](./thm.gauss-bonnet.5.md)

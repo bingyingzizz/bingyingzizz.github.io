@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1531 nodes, 3120 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1535 nodes, 3146 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1531 nodes, 3120 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1535 nodes, 3146 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -13873,6 +13873,10 @@ MG.i18n = {
   generatedBy: 'tools/i18n-backfill.mjs',
   updated: '2026-11-04',
   nodes: {
+    'def.stiefel-whitney-class': { title_en: "Stiefel–Whitney Class", label_en: "Stiefel–Whitney Class", from: 'explicit' },
+    'prop.orientable-iff-w1': { title_en: "Orientability iff w1 Vanishes", label_en: "Orientability and w1", from: 'explicit' },
+    'def.euler-class': { title_en: "Euler Class", label_en: "Euler Class", from: 'explicit' },
+    'def.pontryagin-class': { title_en: "Pontryagin Class", label_en: "Pontryagin Class", from: 'explicit' },
     'ax.choice': { title_en: 'axiom of choice', label_en: 'axiom of choice', from: 'explicit' },
     'ax.ext': { title_en: 'extensionality', label_en: 'extensionality', from: 'aka' },
     'ax.found': { title_en: 'foundation', label_en: 'foundation', from: 'explicit' },
@@ -19650,23 +19654,32 @@ window.MG = window.MG || {};
 
     {
       id: 'def.compact',
-      cluster: 'topology.metric',
+      cluster: 'topology.general',
       type: 'definition',
       label: '紧',
-      title: '紧空间',
+      title: '紧空间（开覆盖定义）',
       regions: ['topology'],
       tags: ['定义', '紧', '开覆盖'],
       statement: [
-        '距离空间 $(X, d)$ **紧**，当且仅当 $X$ 的每个**开覆盖**都有有限子覆盖。展开说：若族 $\\{U_i\\}_{i \\in I}$ 满足「每个 $U_i$ 都是开集」且 $X = \\bigcup_{i \\in I} U_i$，则存在有限个下标使',
+        '设 $X$ 是**拓扑空间**。$X$ **紧**，当且仅当它的每个**开覆盖**都有有限子覆盖：若族 $\\{U_{i}\\}_{i \\in I}$ 满足「每个 $U_{i}$ 都是开集」且 $X = \\bigcup_{i \\in I} U_{i}$，则存在有限个下标使',
         '',
-        '$$X = \\bigcup_{k=1}^{n} U_{i_k}$$'
+        '$$X = \\bigcup_{k=1}^{n} U_{i_{k}}.$$',
+        '',
+        '子集 $K \\subseteq X$ 叫**紧集**，如果 $K$ 配子空间拓扑后是紧空间。'
       ].join('\n'),
       notes: [
-        '紧性是**拓扑**性质，只依赖开集，跟 $d$ 的具体取值无关。',
-        '例子：$\\mathbb{R}$ 中的闭区间 [a, b] 紧（Heine–Borel）；$\\mathbb{R}$ 本身不紧（{(-n, n)} 没有有限子覆盖）；(0, 1] 不紧。',
-        '紧性的一个常用等价形式：**有限交性质** —— 若一族闭集的任意有限子族都有交，则整族的交非空。'
+        '⭐ **只用到开集**：定义里没有任何度量、也没有 $\\mathbb{R}^{n}$ —— 紧性是纯拓扑性质，' +
+          '所以它在连续映射下保持、在同胚下不变（`def.continuous-map` / `def.homeomorphism`）。',
+        '📌 **等价形式（闭集版）**：每个有限交性质都满足的闭集族必有非空交 —— ' +
+          '即「$\\{F_{i}\\}$ 闭且任意有限子族交非空 $\\implies$ 全族交非空」。这一条在反证时最常用。',
+        '📌 **度量空间里的样子**：距离空间上「紧 $\\iff$ 列紧 $\\iff$ 完备 + 全有界」' +
+          '（`thm.metric-compact-equiv`）—— 那是**定理**（用度量才证得出来），不是定义的一部分。' +
+          '一般拓扑空间里列紧严格更强，两者不等价。',
+        '例子：$[a, b] \\subseteq \\mathbb{R}$ 紧（Heine–Borel，`cor.heine-borel`）；' +
+          '$\\mathbb{R}$ 不紧（$\\{(-n, n)\\}$ 没有有限子覆盖）；$(0, 1]$ 不紧。' +
+          '一般拓扑里的标准例子见 `def.chaus`、`thm.tykhonov`（任意积仍紧）。'
       ].join('\n\n'),
-      refs: ['Munkres, Topology, §26']
+      refs: ['Munkres, Topology, §26（紧空间）']
     },
 
     {
@@ -19782,7 +19795,7 @@ window.MG = window.MG || {};
       note: '度量空间里「每个开覆盖有有限子覆盖」与「每个序列有收敛子列」是同一件事；两个方向分开证，合起来才是这条等价。',
       proofs: [
         {
-          label: '紧 ⇒ 列紧',
+          label: '紧 $\\implies$ 列紧',
           text: [
             '设 $\\{x_{n}\\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。',
             '',
@@ -19806,7 +19819,7 @@ window.MG = window.MG || {};
           ].join('\n')
         },
         {
-          label: '列紧 ⇒ 紧',
+          label: '列紧 $\\implies$ 紧',
           text: [
             '用**反证 + 一串不断缩小的「坏球」**。设 $X$ 列紧。',
             '',
@@ -89307,6 +89320,260 @@ window.MG = window.MG || {};
       note: '$K = 0$ 的解就是可展曲面 —— 两个概念在这里接上。' },
     { id: 'dep-cgc-iso', kind: 'definition', definition: 'def.isometry-surface', usedBy: 'thm.constant-gauss-curvature',
       note: '结论是「等距于三种模型之一」。' }
+  ]
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 实丛的示性类：Stiefel–Whitney · Euler · Pontryagin
+   --------------------------------------------------------------------------
+   承接 `def.characteristic-class`（定义与公理）与 170 包（陈–Weil 同态 + 陈类）。
+   那一套是**复丛**的；实丛对应物是三种，本包补齐，并接上「结构群约化」那条线：
+
+     Stiefel–Whitney 类（$\\mathbb{Z}/2$ 系数，$w_{1}$ 判可定向）
+     Euler 类（$\\mathrm{Pfaffian}$，只在可定向丛上，顶维）
+     Pontryagin 类（复化后取陈类）
+     + 定向 当且仅当 $w_{1} = 0$（结构群可约化到 $\\mathrm{SO}(k)$）
+
+   ⚠️ 本图口径：人名用汉字（陈类 / 陈省身），**欧美名字照惯例写拉丁**（Stiefel–Whitney、
+      Pontryagin、Euler）—— 与 `Чебышёв 估计` 那种「用本人语言」的规则不冲突：
+      那三条只在有本语写法时适用。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '实丛的示性类：Stiefel–Whitney · Euler · Pontryagin',
+
+  nodes: [
+    {
+      id: 'def.stiefel-whitney-class',
+      cluster: 'diffgeom.manifold',
+      type: 'definition',
+      label: 'Stiefel–Whitney 类',
+      title: 'Stiefel–Whitney 类：实向量丛的 $\\mathbb{Z}/2$ 示性类',
+      regions: ['diffgeom'],
+      tags: ['定义', '微分几何', '示性类', 'Stiefel–Whitney', '可定向'],
+      statement: [
+        '**在做什么**：实向量丛的「$\\mathbb{Z}/2$ 版陈类」。系数取 $\\mathbb{Z}/2$ 是**被迫**的 —— 实丛的复化才带复结构，而 $w_{i}$ 要避开复数与符号（见注里的挠问题）。',
+        '',
+        '设 $E \\to B$ 是秩 $k$ 的实向量丛。$E$ 的 **Stiefel–Whitney 类**是一族',
+        '',
+        '$$w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2), \\qquad i = 0, 1, \\ldots, k ,$$',
+        '',
+        '由下列公理唯一确定：',
+        '',
+        '1. $w_{0} = 1$，$i > k$ 时 $w_{i} = 0$；',
+        '2. **自然性**：$w_{i}(f^{*}E) = f^{*}w_{i}(E)$；',
+        '3. **Whitney 乘积公式**：$w(E \\oplus E\') = w(E) \\smile w(E\')$，其中 $w = 1 + w_{1} + \\cdots$；',
+        '4. **规范化**：线丛 $L$ 的 $w_{1}(L)$ 是 $H^{1}(B;\\mathbb{Z}/2)$ 里那个「定向双重覆叠」对应的类（等价地：非平凡实线丛的 $w_{1} \\ne 0$）。',
+        '',
+        '**最低一条的含义**：$w_{1}(E) = 0$ 当且仅当 $E$ **可定向**（见 `prop.orientable-iff-w1`）。'
+      ].join('\n'),
+      notes: [
+        '**怎么算出来（与陈类对照）**：把实丛 $E$ 复化得 $E \\otimes \\mathbb{C}$，它是复丛，有陈类 $c_{i}$。**Pontryagin 类**取 $p_{i} = (-1)^{i}c_{2i}(E\\otimes\\mathbb{C})$；而 $w_{i}$ 是 $c_{i}$ 模 $2$ 的「影子」：$w_{i}(E) \\equiv c_{i}(E\\otimes\\mathbb{C}) \\bmod 2$（这条给出可计算的定义，公理版只是它的最小刻画）。⚠️ 严格陈述要用 Thom–Wu 或 Steenrod 平方才能把模 $2$ 讲清楚，本图不展开。',
+        '**为什么系数是 $\\mathbb{Z}/2$ 而不是 $\\mathbb{Z}$**：实丛没有「复数相位」，其示性类天然带 $2$-挠。用 $\\mathbb{Z}$ 系数时 $p_{i}$ 只能取到偶次类、且丢掉奇次信息；这正是 $w_{2}$ 与 $p_{1}$ 分工的原因（$w_{2}$ 还能测「非 Spin」这类纯 $2$-挠现象）。',
+        '⚠️ **$w_{i}$ 不能用来判同构**：它只给必要条件（$w \\ne w\' \\implies E \\not\\cong E\'$）。所有平凡丛的 $w$ 都是 $1$，但 $w = 1$ 的丛未必平凡。',
+        '⚠️ **$w_{1}$ 与「定向」的等价是本图最常用的那条**：见 `prop.orientable-iff-w1`，它把「结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$」翻译成一个上同调类的消失。'
+      ].join('\n\n'),
+      refs: ['Milnor–Stasheff, Characteristic Classes · Stiefel–Whitney 类', 'Bott–Tu, Differential Forms in Algebraic Topology']
+    },
+
+    {
+      id: 'prop.orientable-iff-w1',
+      cluster: 'diffgeom.manifold',
+      type: 'proposition',
+      label: '定向与 w1 消失',
+      title: '命题：可定向 当且仅当第一 Stiefel–Whitney 类为零',
+      regions: ['diffgeom'],
+      tags: ['命题', '微分几何', '可定向', 'Stiefel–Whitney', '结构群约化'],
+      statement: [
+        '**在做什么**：把「能不能定向」这个几何问题变成一个**上同调类是否为零**的代数判据 —— 这是示性类作为「约化障碍」的第一个实例。',
+        '',
+        '设 $E \\to B$ 是秩 $k$ 的实向量丛。则',
+        '',
+        '$$E\\ \\text{可定向} \\iff w_{1}(E) = 0 .$$',
+        '',
+        '**等价说法（结构群口径）**：$E$ 的结构群可从 $\\mathrm{GL}(k, \\mathbb{R})$ **约化**到 $\\mathrm{SO}(k)$（`def.structure-group`）。',
+        '',
+        '**对切丛**：$M$ 可定向（`def.orientable-manifold`）$\\iff$ $w_{1}(TM) = 0$。'
+      ].join('\n'),
+      notes: [
+        '**为什么是 $w_{1}$ 而不是别的**：约化 $\\mathrm{GL}(k) \\rightsquigarrow \\mathrm{SO}(k)$ 等价于「转移函数（`def.transition-function`）可以全部取在 $\\mathrm{SO}(k)$ 里」，即行列式处处为正。而行列式取值 $\\pm 1$ 给出一个 $\\mathbb{Z}/2$-值上闭链 —— 那正是 $w_{1}$：它记的是「绕一圈回来符号是否翻转」。所以 $w_{1} = 0$ 就是「能统一符号」。',
+        '⭐ **同一件事的三种说法**：$w_{1} = 0$ $\\iff$ 存在处处非零的 $k$-形式（体积形式，`def.orientable-manifold`）$\\iff$ 定向双重覆叠 $\\tilde B \\to B$ 分裂（有截面）。三者互为翻译，但**计算上只有第一条方便** —— 它就是这条命题的价值。',
+        '⚠️ **$w_{1}$ 不为零的例子要能举**：$\\mathbb{RP}^{2}$ 的切丛 $w_{1} \\ne 0$（不可定向），$\\mathbb{RP}^{2}$ 上的 tautological 线丛 $w_{1} \\ne 0$。而 $S^{2}$、环面都可定向。',
+        '⚠️ **别把它推成「$w_{2} = 0 \\iff$ Spin 结构」**：$w_{2} = 0$ 只是 Spin 结构存在的**先决条件**，还要一个整系数（$\\beta w_{2}$ 型）条件配合。这是「障碍的层级」问题，不是一条等价就能解决的。'
+      ].join('\n\n'),
+      refs: ['Milnor–Stasheff, Characteristic Classes · 第一 Stiefel–Whitney 类与定向', 'Bott–Tu, Differential Forms in Algebraic Topology']
+    },
+
+    {
+      id: 'def.euler-class',
+      cluster: 'diffgeom.manifold',
+      type: 'definition',
+      label: 'Euler 类',
+      title: 'Euler 类：可定向实丛的顶维示性类',
+      regions: ['diffgeom'],
+      tags: ['定义', '微分几何', 'Euler 类', 'Pfaffian', 'Gauss–Bonnet'],
+      statement: [
+        '**在做什么**：可定向实丛上唯一一个「整系数、顶维」的示性类。它在曲面情形就是高斯曲率的积分（Gauss–Bonnet），在一般维数由 Pfaffian 给出。',
+        '',
+        '设 $E \\to B$ 是秩 $k = 2m$ 的**可定向**实向量丛（$w_{1}(E) = 0$，`prop.orientable-iff-w1`），配一个与定向相容的联络，曲率 $F$。**Euler 类**定义为',
+        '',
+        '$$e(E) := \\Bigl[\\, \\operatorname{Pf}\\Bigl(\\frac{F}{2\\pi}\\Bigr) \\,\\Bigr] \\in H^{2m}(B; \\mathbb{Z}) ,$$',
+        '',
+        '其中 $\\operatorname{Pf}$ 是 **Pfaffian**（对反对称矩阵 $A$ 定义 $\\operatorname{Pf}(A)^{2} = \\det A$，且 $\\operatorname{Pf}$ 在 $\\mathrm{SO}(k)$ 共轭下不变）。',
+        '',
+        '**基本性质**：',
+        '',
+        '1. **自然性**：$e(f^{*}E) = f^{*}e(E)$；',
+        '2. **与顶陈类的关系**：$e(E) = c_{m}(E \\otimes \\mathbb{C})$（$k = 2m$ 时；⚠️ 见注的符号约定）；',
+        '3. **Gauss–Bonnet（曲面情形）**：$\\Sigma$ 为闭可定向曲面时',
+        '',
+        '$$\\int_{\\Sigma} e(T\\Sigma) = \\chi(\\Sigma) ,$$',
+        '',
+        '右端是 Euler 示性数 —— 这就是 `thm.gauss-bonnet` 的上同调说法。'
+      ].join('\n'),
+      notes: [
+        '**为什么用 Pfaffian 而不是行列式**：$\\det$ 在 $\\mathrm{SO}(k)$ 共轭下也不变，但它对反对称矩阵是**完全平方**，取 $\\sqrt{\\det}$ 有符号歧义；$\\operatorname{Pf}$ 对 $\\mathrm{SO}(k)$ 不变而**对 $\\mathrm{O}(k)$ 变号** —— 那个符号**正好**记的事「定向」。所以 Pfaffian 是唯一能把「定向」编码进去的不变多项式（`def.invariant-polynomial` 在 $\\mathfrak{o}(k)$ 上的版本）。',
+        '⭐ **它为什么只在偶数秩时存在**：Pfaffian 只对偶数阶反对称矩阵有定义。$k$ 为奇数时 $e(E)$ 按定义为 $0$ —— 这与「奇数维闭流形的 Euler 示性数为零」（Poincaré 对偶的推论）一致。',
+        '⚠️ **符号约定要留意**：$e(E) = c_{m}(E\\otimes\\mathbb{C})$ 与 $e(E) = (-1)^{m}c_{m}(E\\otimes\\mathbb{C})$ 两种约定都在用（差 $(-1)^{m}$，取决于曲率与 Pfaffian 的符号）。本图取 $\\operatorname{Pf}(F/2\\pi)$ 直接定义，不做换算。',
+        '⚠️ **$e(E) \\ne 0$ 的用处**：它常用来证「某丛非平凡」。例如 $S^{2}$ 的切丛满足 $\\int e(T S^{2}) = 2 \\ne 0$，所以 $T S^{2}$ 不是平凡丛 —— 这是「$S^{2}$ 不能平行化」的示性类证明（比用 $\\chi = 2$ 更本质）。'
+      ].join('\n\n'),
+      refs: ['Milnor–Stasheff, Characteristic Classes · Euler 类', 'Bott–Tu, Differential Forms in Algebraic Topology']
+    },
+
+    {
+      id: 'def.pontryagin-class',
+      cluster: 'diffgeom.manifold',
+      type: 'definition',
+      label: 'Pontryagin 类',
+      title: 'Pontryagin 类：实丛复化之后的偶次陈类',
+      regions: ['diffgeom'],
+      tags: ['定义', '微分几何', 'Pontryagin 类', '示性类', '复化'],
+      statement: [
+        '**在做什么**：实丛本身没有「$\\mathbb{Z}$ 系数」的示性类（只有 $\\mathbb{Z}/2$ 的 $w_{i}$ 与可定向时的 $e$）。取复化 $E \\otimes \\mathbb{C}$ 之后就有整系数陈类了 —— **取其中偶次的那几个**，就是 Pontryagin 类。',
+        '',
+        '设 $E \\to B$ 是秩 $k$ 的实向量丛。第 $i$ 个 **Pontryagin 类**定义为',
+        '',
+        '$$p_{i}(E) := (-1)^{i}\\, c_{2i}\\bigl(E \\otimes_{\\mathbb{R}} \\mathbb{C}\\bigr) \\in H^{4i}(B; \\mathbb{Z}) , \\qquad i = 1, 2, \\ldots , \\Bigl\\lfloor \\frac{k}{2} \\Bigr\\rfloor .$$',
+        '',
+        '**基本性质**：',
+        '',
+        '1. $p_{0} = 1$；',
+        '2. **自然性**：$p_{i}(f^{*}E) = f^{*}p_{i}(E)$；',
+        '3. **Whitney 乘积公式**（模 $2$-挠才严格成立）$p(E \\oplus E\') = p(E) \\smile p(E\')$；',
+        '4. **复丛的实化**：若 $E = F_{\\mathbb{R}}$ 是复丛 $F$ 的实化，则 $p_{i}(E) = (-1)^{i}c_{i}(F)^{2}$ 型关系（**$p$ 丢掉了 $c$ 的奇次信息**，这正是「实化丢相位」的表现）。'
+      ].join('\n'),
+      notes: [
+        '**为什么只取偶次**：复化 $E\\otimes\\mathbb{C}$ 带一个**共轭**结构（把 $i$ 变成 $-i$），于是 $c_{2i+1}(E\\otimes\\mathbb{C}) = -c_{2i+1}$ 型地成对抵消（在 $\\mathbb{Z}$ 系数下变成 $2$-挠元）。所以整系数里只剩偶次是真不变量，奇次的信息要用 $\\mathbb{Z}/2$ 的 $w_{i}$ 去补 —— **这就是 $w$ 与 $p$ 的分工**。',
+        '⚠️ **$p_{1}$ 的一个具体例子**：$S^{4}$ 上的切丛满足 $\\int_{S^{4}} p_{1}(TS^{4}) = \\pm 2\\chi$ 型关系（符号看约定），非零 —— 所以 $TS^{4}$ 非平凡。更著名的是 $\\mathbb{CP}^{2}$ 的 $p_{1}$ 与符号差定理（signature theorem）：$\\sigma(M) = \\frac{1}{3}\\int p_{1}$（四维闭可定向流形），这是 Hirzebruch 指标定理的特例。',
+        '⚠️ **Whitney 公式的 $2$-挠警告**：$p(E\\oplus E\') = p(E)p(E\')$ 在 $H^{*}(B;\\mathbb{Z})$ 里**只对模 $2$-挠**成立（严格版要写到 $H^{*}(B;\\mathbb{Z})/\\text{挠}$，或用 $\\mathbb{Z}[1/2]$ 系数）。这一点与陈类形成鲜明对照（陈类的 Whitney 公式是无条件的）—— 因为复化会引入 $2$-挠。',
+        '⚠️ **三种实示性类的角色**：$w_{i}$（$\\mathbb{Z}/2$，全维数、能测定向与 Spin）、$e$（$\\mathbb{Z}$，只在可定向且偶数秩、顶维）、$p_{i}$（$\\mathbb{Z}$，$4$ 的倍数维、丢奇次信息）。三者不互相包含 —— 判断某个实丛非平凡时，可能要几种一起用。'
+      ].join('\n\n'),
+      refs: ['Milnor–Stasheff, Characteristic Classes · Pontryagin 类', 'Bott–Tu, Differential Forms in Algebraic Topology']
+    }
+  ],
+
+  edges: [
+    { id: 'dep-sw-cc', kind: 'definition', definition: 'def.characteristic-class', usedBy: 'def.stiefel-whitney-class',
+      note: 'Stiefel–Whitney 类是实丛的示性类，满足自然性与同构不变。' },
+    { id: 'dep-sw-vector', kind: 'definition', definition: 'def.vector-bundle', usedBy: 'def.stiefel-whitney-class',
+      note: '定义在实向量丛上。' },
+    { id: 'dep-sw-w1', kind: 'definition', definition: 'def.stiefel-whitney-class', usedBy: 'prop.orientable-iff-w1',
+      note: '命题的主语就是 $w_1$。' },
+    { id: 'dep-w1-orient', kind: 'definition', definition: 'def.orientable-manifold', usedBy: 'prop.orientable-iff-w1',
+      note: '结论翻译成「流形可定向」（切丛的 $w_1$ 为零）。' },
+    { id: 'dep-w1-sg', kind: 'definition', definition: 'def.structure-group', usedBy: 'prop.orientable-iff-w1',
+      note: '等价说法是「结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$」。' },
+    { id: 'dep-w1-tf', kind: 'definition', definition: 'def.transition-function', usedBy: 'prop.orientable-iff-w1',
+      note: '证明看的是转移函数的行列式符号。' },
+
+    { id: 'dep-ec-cw', kind: 'definition', definition: 'thm.chern-weil', usedBy: 'def.euler-class',
+      note: 'Euler 类用陈–Weil 同态算：把 Pfaffian 当成不变多项式。' },
+    { id: 'dep-ec-ip', kind: 'definition', definition: 'def.invariant-polynomial', usedBy: 'def.euler-class',
+      note: '$\\operatorname{Pf}$ 是 $\\mathfrak{o}(k)$ 上的不变多项式。' },
+    { id: 'dep-ec-sw', kind: 'definition', definition: 'prop.orientable-iff-w1', usedBy: 'def.euler-class',
+      note: 'Euler 类只在可定向（$w_1 = 0$）时定义。' },
+    { id: 'dep-ec-gb', kind: 'definition', definition: 'thm.gauss-bonnet', usedBy: 'def.euler-class',
+      note: '曲面情形 $\\int e(T\\Sigma) = \\chi(\\Sigma)$ 正是 Gauss–Bonnet。' },
+
+    { id: 'dep-pc-cc', kind: 'definition', definition: 'def.chern-class', usedBy: 'def.pontryagin-class',
+      note: 'Pontryagin 类是「复化后的偶次陈类」。' },
+    { id: 'dep-pc-vector', kind: 'definition', definition: 'def.vector-bundle', usedBy: 'def.pontryagin-class',
+      note: '定义在实向量丛上（复化之后再取陈类）。' },
+    { id: 'dep-pc-sw', kind: 'definition', definition: 'def.stiefel-whitney-class', usedBy: 'def.pontryagin-class',
+      note: '整系数的 $p_i$ 丢掉奇次信息，那部分要由 $w_i$ 补 —— 两者分工。' }
+  ]
+});
+
+</script>
+<script>
+/* ==========================================================================
+   内容包 · 接线：clustercheck 报出来的「真依赖缺边」
+   --------------------------------------------------------------------------
+   用户要求补完后跑 `clustercheck`。跑完发现两类要处理：
+
+   (a) 「提示（有链接但图上无边）」—— 正文里有反引号承诺（读者会点），但图里没边。
+       这一类**必须**要么补边、要么把反引号降成中文词。
+   (b) 「提到名字但无边」—— 名字出现过。手册说分三种：真依赖补边 / 同名不同物消歧 /
+       顺带一提不管。本包只处理**真依赖**那部分；`det` `map` `sec` `flat` `tan`
+       `group` `function` `subset` 这类是 aka 撞词的**误报**，不动。
+
+   ⚠️ 层号不是约束：`layer` 由 longest path 算出来，加边后自动重算；
+      只有**成环**才是真问题（构建的 Tarjan 缩点会把环压平而不报错，
+      所以这里刻意只加「概念引用」方向明确、不可能成环的边）。
+   ========================================================================== */
+window.MG = window.MG || {};
+(window.MG.packs = window.MG.packs || []).push({
+
+  name: '接线：曲面论与实示性类的缺边',
+
+  nodes: [],
+
+  edges: [
+    /* ---------------- 曲面论（diffgeom.surface / intrinsic） ---------------- */
+    { id: 'def-link.ds-egregium', kind: 'definition',
+      definition: 'thm.theorema-egregium', usedBy: 'def.developable-surface',
+      note: '「纸不能拉 $\\implies$ K 不变」这一步用绝妙定理（$K$ 是等距不变量）。' },
+    { id: 'def-link.dif-cgc', kind: 'definition',
+      definition: 'thm.constant-gauss-curvature', usedBy: 'thm.developable-iff-flat',
+      note: '$K \\equiv 0 \\implies$ 局部等距于平面，这一步就是常曲率分类的 $K = 0$ 情形。' },
+    { id: 'def-link.mc-ds', kind: 'definition',
+      definition: 'def.developable-surface', usedBy: 'def.mean-curvature',
+      note: '平均曲率那条注里比较「极小曲面（$H = 0$）」与「可展曲面（$K = 0$）」，平面是唯一交点。' },
+    { id: 'def-link.cod-gauss', kind: 'definition',
+      definition: 'thm.gauss-equation', usedBy: 'thm.codazzi-mainardi',
+      note: 'Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。' },
+    { id: 'def-link.sf-rodrigues', kind: 'definition',
+      definition: 'thm.rodrigues', usedBy: 'def.second-fundamental-form',
+      note: 'Rodrigues 定理是第二基本形式在**主方向**上的一条具体结论。' },
+    { id: 'def-link.sf-eulerformula', kind: 'definition',
+      definition: 'thm.euler-formula-surface', usedBy: 'def.second-fundamental-form',
+      note: 'Euler 公式（$\\kappa_{n} = \\kappa_{1}\\cos^{2}\\theta + \\kappa_{2}\\sin^{2}\\theta$）同样写在第二基本形式上。' },
+
+    /* ---------------- 实示性类（diffgeom.manifold） ---------------- */
+    { id: 'def-link.ec-echar', kind: 'definition',
+      definition: 'thm.euler-characteristic', usedBy: 'def.euler-class',
+      note: 'Euler 类与 Euler 示性数由 $\\int e = \\chi$ 相连 —— 一个是上同调类、一个是整数。' },
+    { id: 'def-link.ec-k', kind: 'definition',
+      definition: 'def.gauss-curvature', usedBy: 'def.euler-class',
+      note: '曲面情形 $e(T\\Sigma)$ 就是 $K\\,\\mathrm{d}A$ 的上同调类（Gauss–Bonnet 的被积式）。' },
+    { id: 'def-link.sw-cohclass', kind: 'definition',
+      definition: 'def.cohomology-class', usedBy: 'def.stiefel-whitney-class',
+      note: '$w_{i}$ 的取值就是上同调类，不是数。' },
+    { id: 'def-link.sw-sg', kind: 'definition',
+      definition: 'def.structure-group', usedBy: 'def.stiefel-whitney-class',
+      note: '$w_{1} = 0$ 等价于结构群可约化到 $\\mathrm{SO}(k)$ —— 这是示性类作为约化障碍的入口。' },
+    { id: 'def-link.w1-volume', kind: 'definition',
+      definition: 'def.volume-form', usedBy: 'prop.orientable-iff-w1',
+      note: '「可定向」的等价说法之一就是「存在处处非零的体积形式」。' },
+    { id: 'def-link.pc-char', kind: 'definition',
+      definition: 'def.characteristic-class', usedBy: 'def.pontryagin-class',
+      note: 'Pontryagin 类是实丛的示性类，继承自然性与同构不变。' },
+    { id: 'def-link.pc-orient', kind: 'definition',
+      definition: 'def.orientable-manifold', usedBy: 'def.pontryagin-class',
+      note: '注里用它举例（$\\mathbb{CP}^{2}$ 的符号差、可定向流形上的 $\\int p_{1}$）。' }
   ]
 });
 

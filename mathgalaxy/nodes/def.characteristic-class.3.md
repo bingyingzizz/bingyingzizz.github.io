@@ -6,3 +6,5 @@
 - [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类：用到了定义 丛的分类　[proofs/dep-cc-class.md](../proofs/dep-cc-class.md)
 - [`def.structure-group`](../nodes/def.structure-group.md) 结构群：用到了定义 结构群　[proofs/dep-cc-sg.md](../proofs/dep-cc-sg.md)
 - [`def.transition-function`](../nodes/def.transition-function.md) 转移函数：用到了定义 转移函数　[proofs/dep-cc-tf.md](../proofs/dep-cc-tf.md)
+
+> 续见 [nodes/def.characteristic-class.4.md](./def.characteristic-class.4.md)

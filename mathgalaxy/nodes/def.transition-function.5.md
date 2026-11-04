@@ -5,3 +5,4 @@
 - 被 [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类 用
 - 被 [`def.structure-group`](../nodes/def.structure-group.md) 结构群 用
 - 被 [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类 用
+- 被 [`prop.orientable-iff-w1`](../nodes/prop.orientable-iff-w1.md) 定向与 w1 消失 用

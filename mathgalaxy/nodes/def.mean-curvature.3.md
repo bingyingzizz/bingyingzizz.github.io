@@ -5,3 +5,4 @@
 - [`def.determinant`](../nodes/def.determinant.md) 行列式：用到了定义 行列式　[proofs/dep.dg-ext-det.md](../proofs/dep.dg-ext-det.md)
 - [`def.principal-curvature`](../nodes/def.principal-curvature.md) 主曲率：用到了定义 主曲率　[proofs/dep.dg-principal-H.md](../proofs/dep.dg-principal-H.md)
 - [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：用到了定义 Gauss 曲率　[proofs/dep.gap-mean-curvature-gauss-curvature.md](../proofs/dep.gap-mean-curvature-gauss-curvature.md)
+- [`def.developable-surface`](../nodes/def.developable-surface.md) 可展曲面：用到了定义 可展曲面　[proofs/def-link.mc-ds.md](../proofs/def-link.mc-ds.md)

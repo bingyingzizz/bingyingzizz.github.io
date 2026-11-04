@@ -7,6 +7,9 @@ layer 30 · 定理 · 曲面论 · 微分几何
 
 $$k_{n}(V) = k_{1}\cos^{2}\theta+k_{2}\sin^{2}\theta .$$
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.second-fundamental-form`](../nodes/def.second-fundamental-form.md) 第二基本形式 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.euler-formula-surface.2.md](./thm.euler-formula-surface.2.md)
 

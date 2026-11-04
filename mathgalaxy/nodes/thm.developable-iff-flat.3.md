@@ -5,3 +5,4 @@
 - [`def.ruled-surface`](../nodes/def.ruled-surface.md) 直纹面：用到了定义 直纹面　[proofs/dep-dif-rs.md](../proofs/dep-dif-rs.md)
 - [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：用到了定义 Gauss 曲率　[proofs/dep-dif-k.md](../proofs/dep-dif-k.md)
 - [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理：用到了定义 绝妙定理　[proofs/dep-dif-egregium.md](../proofs/dep-dif-egregium.md)
+- [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面：用到了定义 常 Gauss 曲率曲面　[proofs/def-link.dif-cgc.md](../proofs/def-link.dif-cgc.md)

@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.gauss-equation`](../nodes/thm.gauss-equation.md) Gauss 方程 + [`thm.structure-equations`](../nodes/thm.structure-equations.md) 结构方程：Gauss 方程 + 结构方程 $\implies$ 高斯曲率只依赖第一基本形式　[proofs/imp.gauss-egregium.md](../proofs/imp.gauss-egregium.md)
 - [`def.intrinsic-quantity`](../nodes/def.intrinsic-quantity.md) 内蕴量：用到了定义 内蕴量　[proofs/dep.intrinsic-egregium.md](../proofs/dep.intrinsic-egregium.md)
+
+> 续见 [nodes/thm.theorema-egregium.5.md](./thm.theorema-egregium.5.md)

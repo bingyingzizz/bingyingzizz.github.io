@@ -12,6 +12,9 @@ layer 18 · 定义 · 同调与正合列 · 同调代数
 
 - …另有入边，续页见 [nodes/def.cohomology-class.3.md](./def.cohomology-class.3.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.cohomology-class.4.md](./def.cohomology-class.4.md)
+
 refs: Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调；Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）
 
 > 说明见 `notes/def.cohomology-class.md`

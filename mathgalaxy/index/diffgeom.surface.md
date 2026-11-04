@@ -8,14 +8,14 @@
 - def.weingarten-map　Weingarten 变换　layer 28
 - def.normal-curvature　法曲率　layer 28
 - def.area-element　面积元　layer 28
-- def.second-fundamental-form　第二基本形式　layer 29
 - def.principal-curvature　主曲率　layer 29
 - def.orientable-surface　R³ 中的可定向曲面　layer 29
-- thm.codazzi-mainardi　Codazzi–Mainardi 方程　layer 30
-- thm.meusnier　Meusnier 定理　layer 30
 - thm.euler-formula-surface　Euler 公式　layer 30
 - thm.rodrigues　Rodrigues 定理　layer 30
-- thm.gauss-equation　Gauss 方程　layer 31
-- def.mean-curvature　平均曲率　layer 31
+- def.second-fundamental-form　第二基本形式　layer 31
+- prop.curvature-lines　曲率线网　layer 31
+- thm.meusnier　Meusnier 定理　layer 32
+- thm.gauss-equation　Gauss 方程　layer 33
+- ex.cylinder-first-form　圆柱的第一基本形式　layer 33
 
 > 续见 `index/diffgeom.surface.2.md`

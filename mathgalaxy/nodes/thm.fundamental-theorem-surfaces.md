@@ -1,6 +1,6 @@
 # 曲面论基本定理　`thm.fundamental-theorem-surfaces`
 曲面论基本定理
-layer 32 · 定理 · 曲面论 · 微分几何
+layer 35 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.fundamental-theorem-surfaces)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{2}$ 

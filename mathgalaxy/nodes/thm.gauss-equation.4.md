@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：用到了定义 Gauss 曲率　[proofs/dep.gap-thm.gauss-equation-gauss-curvature.md](../proofs/dep.gap-thm.gauss-equation-gauss-curvature.md)
+
+> 续见 [nodes/thm.gauss-equation.5.md](./thm.gauss-equation.5.md)

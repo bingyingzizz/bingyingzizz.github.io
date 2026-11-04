@@ -6,3 +6,5 @@
 - [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面：用到了定义 R³ 中的可定向曲面　[proofs/dep.tu-orient-bonnet.md](../proofs/dep.tu-orient-bonnet.md)
 - [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数：用到了定义 Euler 示性数　[proofs/dep.gaussbonnet-eulerchar.md](../proofs/dep.gaussbonnet-eulerchar.md)
 - [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理：分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起　[proofs/e176.analogy.md](../proofs/e176.analogy.md)
+
+> 续见 [nodes/thm.gauss-bonnet.7.md](./thm.gauss-bonnet.7.md)

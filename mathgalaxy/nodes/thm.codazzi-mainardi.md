@@ -1,6 +1,6 @@
 # Codazzi–Mainardi 方程　`thm.codazzi-mainardi`
 Codazzi–Mainardi 方程
-layer 30 · 定理 · 曲面论 · 微分几何
+layer 34 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.codazzi-mainardi)　·　[节点索引](../index.md)
 
 在适配标架下取第二结构方程的 $j = 3$ 分量（即 $\mathbb{R}^{3}$ 曲率的法向分量为零）：

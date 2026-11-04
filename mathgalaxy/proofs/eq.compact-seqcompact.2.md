@@ -19,6 +19,6 @@ $$\mathcal{U} = \{ U_n : n \in \mathbb{N} \} \cup \{ X \setminus \{x_n : n \in \
 
 ⭐ 只有这一步不需要选择公理。
 
-**列紧 ⇒ 紧**
+**列紧 $\implies$ 紧**
 
 > 续见 proofs/eq.compact-seqcompact.3.md

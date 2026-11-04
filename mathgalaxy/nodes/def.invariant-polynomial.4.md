@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.chern-weil`](../nodes/thm.chern-weil.md) 陈–Weil 同态 用
+- 被 [`def.euler-class`](../nodes/def.euler-class.md) Euler 类 用

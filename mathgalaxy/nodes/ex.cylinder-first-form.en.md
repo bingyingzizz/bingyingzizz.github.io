@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · example · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry / geometry
+layer 33 · example · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry / geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.cylinder-first-form.md` and `proofs/`.

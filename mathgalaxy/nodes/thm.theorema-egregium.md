@@ -1,6 +1,6 @@
 # 绝妙定理　`thm.theorema-egregium`
 Gauss 曲率是内蕴量
-layer 32 · 定理 · 内蕴几何 · 微分几何
+layer 34 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.theorema-egregium)　·　[节点索引](../index.md)
 
 高斯曲率 $K$ 只依赖第一基本形式 $I$。准确地说：若 $\varphi : S_{1}\to S_{2}$ 是局部等距，则
@@ -12,6 +12,8 @@ $$K_{1}(p) = K_{2}(\varphi(p))\qquad (p \in S_{1}).$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`def.isometry-surface`](../nodes/def.isometry-surface.md) 等距
 - 被 [`thm.developable-iff-flat`](../nodes/thm.developable-iff-flat.md) 可展的判据 用
+
+- …另有出边，续页见 [nodes/thm.theorema-egregium.5.md](./thm.theorema-egregium.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.theorema-egregium.3.md](./thm.theorema-egregium.3.md)
