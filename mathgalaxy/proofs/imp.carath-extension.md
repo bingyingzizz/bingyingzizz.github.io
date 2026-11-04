@@ -11,7 +11,7 @@ $$\mu^*(A) \le \mu_0(A) + 0 + 0 + \cdots = \mu_0(A)$$
 
 **② $\mu^{*}|_\mathfrak{A} \ge \mu _{0}$。** 设 $\{E_{j}\} \subseteq \mathfrak{A}$ 是 $A$ 的覆盖。
 
-令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_\{j-1\})$，则 $F_{j} \in \mathfrak{A}$ 两两不交且 $\bigcup F_{j} \supseteq A$、$F_{j} \subseteq E_{j}$。
+令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_{j-1})$，则 $F_{j} \in \mathfrak{A}$ 两两不交且 $\bigcup F_{j} \supseteq A$、$F_{j} \subseteq E_{j}$。
 
 于是
 

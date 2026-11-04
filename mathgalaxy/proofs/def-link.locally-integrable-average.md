@@ -3,4 +3,4 @@
 
 `def.locally-integrable` 局部可积 → `def.average-operator` 平均算子 Aᵣ
 
-平均算子只在 $L^{1}_{l}oc$ 上定义。
+平均算子只在 $L^{1}_{loc}$ 上定义。

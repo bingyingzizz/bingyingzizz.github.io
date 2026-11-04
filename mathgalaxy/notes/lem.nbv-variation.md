@@ -13,4 +13,4 @@ $$(3/2)\alpha - \varepsilon \le T_F(x+h) - T_F(x) < \varepsilon + \alpha$$
 
 于是 $\alpha < 4\varepsilon$，由 $\varepsilon$ 任意得 $\alpha = 0$。∎
 
-⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \in NBV \implies T_F \in NBV$，正是下一条定理里 $|\mu _F| = \mu _\{T_F\}$ 的根据。
+⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \in NBV \implies T_F \in NBV$，正是下一条定理里 $|\mu _F| = \mu _{T_F}$ 的根据。

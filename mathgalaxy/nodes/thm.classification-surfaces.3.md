@@ -2,8 +2,8 @@
 [在星图里打开](../#n=thm.classification-surfaces)　·　第 1 页 [nodes/thm.classification-surfaces.md](./thm.classification-surfaces.md)　·　上一页 [nodes/thm.classification-surfaces.2.md](./thm.classification-surfaces.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.rado`](../nodes/thm.rado.md) Radó 定理：用到了定义 Radó 定理　[proofs/dep.rado-classification.md](../proofs/dep.rado-classification.md)
 - [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面：用到了定义 闭曲面　[proofs/dep.closedsurface-classification.md](../proofs/dep.closedsurface-classification.md)
 - [`def.connected-sum`](../nodes/def.connected-sum.md) 连通和：用到了定义 连通和　[proofs/dep.connectedsum-classification.md](../proofs/dep.connectedsum-classification.md)
-- [`def.genus`](../nodes/def.genus.md) 亏格：用到了定义 亏格　[proofs/dep.genus-classification.md](../proofs/dep.genus-classification.md)
 
 > 续见 [nodes/thm.classification-surfaces.4.md](./thm.classification-surfaces.4.md)

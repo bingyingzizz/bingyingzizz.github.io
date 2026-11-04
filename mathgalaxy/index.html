@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1535 nodes, 3146 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1537 nodes, 3152 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1535 nodes, 3146 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1537 nodes, 3152 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -13283,6 +13283,9 @@ MG.aliases = {
     { id: 'def.primitive-root', en: 'primitive root', aka: ['原根', '本原根'] },
     { id: 'thm.primitive-root-exists', en: 'a primitive root exists modulo a prime', aka: ['模素数原根存在', '单位群循环'] },
     { id: 'def.discrete-log', en: 'discrete logarithm', aka: ['离散对数', '指标'] },
+    /* ⭐ 2026-11-04 三角剖分 / Radó：让 gaps.md 里「三角剖分存在性」这个说法有节点可落 */
+    { id: 'def.triangulation', en: 'triangulation of a space', aka: ['三角剖分', '可三角剖分', '剖分', 'triangulation'] },
+    { id: 'thm.rado', en: 'Rado theorem: every compact surface is triangulable', aka: ['三角剖分存在性', '曲面可三角剖分', 'Rado 定理', 'Radó 定理', 'Radó', 'Rado', 'triangulability of surfaces'] },
 
     /* ================================================== 泛函分析（2026-11-02） */
     /* ⚠️ 这一批的主要作用不是「又名」，是**让搜索能中**：这些节点的名字里带
@@ -13873,10 +13876,6 @@ MG.i18n = {
   generatedBy: 'tools/i18n-backfill.mjs',
   updated: '2026-11-04',
   nodes: {
-    'def.stiefel-whitney-class': { title_en: "Stiefel–Whitney Class", label_en: "Stiefel–Whitney Class", from: 'explicit' },
-    'prop.orientable-iff-w1': { title_en: "Orientability iff w1 Vanishes", label_en: "Orientability and w1", from: 'explicit' },
-    'def.euler-class': { title_en: "Euler Class", label_en: "Euler Class", from: 'explicit' },
-    'def.pontryagin-class': { title_en: "Pontryagin Class", label_en: "Pontryagin Class", from: 'explicit' },
     'ax.choice': { title_en: 'axiom of choice', label_en: 'axiom of choice', from: 'explicit' },
     'ax.ext': { title_en: 'extensionality', label_en: 'extensionality', from: 'aka' },
     'ax.found': { title_en: 'foundation', label_en: 'foundation', from: 'explicit' },
@@ -14496,6 +14495,7 @@ MG.i18n = {
     'def.trace': { title_en: 'trace', label_en: 'trace', from: 'explicit' },
     'def.transition-function': { title_en: 'Transition Function', label_en: 'Transition Function', from: 'explicit' },
     'def.transpose': { title_en: 'Transpose of a Matrix', label_en: 'Transpose', from: 'manual' },
+    'def.triangulation': { title_en: 'triangulation of a space', label_en: 'triangulation of a space', from: 'explicit' },
     'def.trig-function': { title_en: 'sine and cosine', label_en: 'sine and cosine', from: 'explicit' },
     'def.ufd': { title_en: 'unique factorisation domain', label_en: 'unique factorisation domain', from: 'explicit' },
     'def.underlying-topological-space': { title_en: 'underlying topological space', label_en: 'underlying topological space', from: 'aka' },
@@ -15305,6 +15305,7 @@ MG.i18n = {
     'thm.quotient-product': { title_en: 'quotient map product', label_en: 'quotient map product', from: 'aka' },
     'thm.quotient-universal-vs': { title_en: 'universal property of the quotient space', label_en: null, from: 'explicit' },
     'thm.radical-solvable': { title_en: 'solvable by radicals', label_en: 'solvable by radicals', from: 'explicit' },
+    'thm.rado': { title_en: 'Rado theorem: every compact surface is triangulable', label_en: null, from: 'explicit' },
     'thm.rank-nullity': { title_en: 'rank-nullity theorem', label_en: 'rank-nullity theorem', from: 'explicit' },
     'thm.rank-row-col': { title_en: 'row rank equals column rank', label_en: 'row rank equals column rank', from: 'explicit' },
     'thm.rat-ordered-field': { title_en: 'Q is an ordered field', label_en: 'Q is an ordered field', from: 'explicit' },
@@ -18245,6 +18246,13 @@ MG.notation = {
       { re: '\\\\Longleftrightarrow', fix: '\\\\iff', why: '同字形，元语言的等价一律 \\iff' },
       { re: 'B\\(\\s*r[a-z_]*(?:\\^\\{[^}]*\\})?\\s*,', fix: 'B(x, r)',
         why: '开球参数顺序是 (中心, 半径)：写 B(x, r)，不写 B(r, x)；复变圆盘同样写 B(z, r)，不写 D(z, r)' },
+      /* v2 §11-A：两类纯机械错，做成硬门防回退（2026-11-04） */
+      { re: '[_^]\\\\{', fix: '_{ 或 ^{',
+        why: '下标/上标的花括号被写成了转义的 `\\{`（`_\\{n\\}`）—— 要写 `_{n}`，' +
+          '不然 KaTeX 会把 `\\{` 当成字面花括号排出来（v2 §11-A4，全库曾 13 个字段）' },
+      { re: '\\\\u[0-9a-fA-F]{4}', fix: '直接写中文',
+        why: '字段里出现了**字面**的 `\\uXXXX`（中文被多转义了一层）—— 读者会看到一串转义码' +
+          '（v2 §11-A5，曾有一整段证明是 224 个转义码）' },
     ],
   },
 
@@ -19402,7 +19410,7 @@ window.MG = window.MG || {};
       target: 'ax.choice',
       title: '佐恩引理 $\\implies$ 选择公理（路线 $2\\implies1$）',
       proof: [
-        '设 $\\{A_i\\}_\\{i \\in I\\}$ 是一族非空集合。要对它造出一个选择函数。',
+        '设 $\\{A_i\\}_{i \\in I}$ 是一族非空集合。要对它造出一个选择函数。',
         '',
         '**① 舞台：部分选择函数全体**。令',
         '',
@@ -19415,18 +19423,18 @@ window.MG = window.MG || {};
         '**② 每个链有上界**：设 $\\mathcal{D} \\subseteq \\mathcal{F}$ 是 $\\subseteq$链，令 $f = \\bigcup \\mathcal{D}$。',
         '',
         '$f$ 是函数：若 $(i, a), (i, a\') \\in f$，则它们分别属于某个 $f_{1}, f_{2} \\in \\mathcal{D}$；$\\mathcal{D}$ 是链，不妨设 $f_{1} \\subseteq f_{2}$，于是 $(i, a), (i, a\') \\in f_{2}$，而 $f_{2}$ 是函数，故 $a = a\'$。',
-        '$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _\\{g \\in \\mathcal{D}\\} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。',
+        '$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _{g \\in \\mathcal{D}} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。',
         '$f$ 是 $\\mathcal{D}$ 的上界：$f \\supseteq g$ 对一切 $g \\in \\mathcal{D}$ 成立。',
         '',
         '**③ 用佐恩引理**，取 $(\\mathcal{F}, \\subseteq )$ 的极大元 $f$。',
         '',
-        '**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_\\{i_{0}\\} \\ne \\emptyset$ 取 $a \\in A_\\{i_{0}\\}$，则',
+        '**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_{i_{0}} \\ne \\emptyset$ 取 $a \\in A_{i_{0}}$，则',
         '',
         '$$f\' = f \\cup \\{ (i_0, a) \\}$$',
         '',
         '仍是 $\\mathcal{F}$ 中的元素（$i_{0} \\notin \\operatorname{dom} f$，不破坏函数性），且 $f \\subset f\'$ —— 与 $f$ 的极大性矛盾。故 $\\operatorname{dom} f = I$。',
         '',
-        '**⑤** 于是 $f : I \\to \\bigcup _\\{i \\in I\\} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎'
+        '**⑤** 于是 $f : I \\to \\bigcup _{i \\in I} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎'
       ].join('\n'),
       note: '「按包含序取极大元，再证明它已经没法再大」—— 这是用佐恩引理造存在性对象的典型手法。'
     }
@@ -19795,7 +19803,7 @@ window.MG = window.MG || {};
       note: '度量空间里「每个开覆盖有有限子覆盖」与「每个序列有收敛子列」是同一件事；两个方向分开证，合起来才是这条等价。',
       proofs: [
         {
-          label: '紧 $\\implies$ 列紧',
+          label: '紧 ⟹ 列紧',
           text: [
             '设 $\\{x_{n}\\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。',
             '',
@@ -19819,7 +19827,7 @@ window.MG = window.MG || {};
           ].join('\n')
         },
         {
-          label: '列紧 $\\implies$ 紧',
+          label: '列紧 ⟹ 紧',
           text: [
             '用**反证 + 一串不断缩小的「坏球」**。设 $X$ 列紧。',
             '',
@@ -19890,9 +19898,9 @@ window.MG = window.MG || {};
       proof: [
         '设 $X$ 列紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。',
         '',
-        '**①** 由列紧，$\\{x_{n}\\}$ 有收敛子列 $x_\\{n_{k}\\} \\to x \\in X$。',
+        '**①** 由列紧，$\\{x_{n}\\}$ 有收敛子列 $x_{n_{k}} \\to x \\in X$。',
         '',
-        '**② Cauchy 列只要有收敛子列，就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N$ 使 $m, n \\ge N$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n再取 $K$ 使 $k \\ge K$ 时 $n_{k} \\ge N$ 且 $d(x_\\{n_{k}\\}, x) < \\varepsilon /2$。\n\n于是对 $n \\ge N$，取 $k \\ge K$ 使 $n_{k} \\ge N$，得',
+        '**② Cauchy 列只要有收敛子列，就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N$ 使 $m, n \\ge N$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n再取 $K$ 使 $k \\ge K$ 时 $n_{k} \\ge N$ 且 $d(x_{n_{k}}, x) < \\varepsilon /2$。\n\n于是对 $n \\ge N$，取 $k \\ge K$ 使 $n_{k} \\ge N$，得',
         '',
         '$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$',
         '',
@@ -19911,9 +19919,9 @@ window.MG = window.MG || {};
       proof: [
         '设 $X$ 紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。要证它收敛。',
         '',
-        '**①** 由「紧 $\\implies$ 列紧」（见那条箭头），$\\{x_{n}\\}$ 有收敛子列 $x_\\{n_{k}\\} \\to x \\in X$。',
+        '**①** 由「紧 $\\implies$ 列紧」（见那条箭头），$\\{x_{n}\\}$ 有收敛子列 $x_{n_{k}} \\to x \\in X$。',
         '',
-        '**② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N_{1}$ 使 $m, n \\ge N_{1}$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n取 $K$ 使 $n_{k} \\ge N_{1}$ 且 $d(x_\\{n_{k}\\}, x) < \\varepsilon /2$ 对 $k \\ge K$ 成立。\n\n则对 $n \\ge N_{1}$，取一个 $k \\ge K$ 使 $n_{k} \\ge N_{1}$，得',
+        '**② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N_{1}$ 使 $m, n \\ge N_{1}$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n取 $K$ 使 $n_{k} \\ge N_{1}$ 且 $d(x_{n_{k}}, x) < \\varepsilon /2$ 对 $k \\ge K$ 成立。\n\n则对 $n \\ge N_{1}$，取一个 $k \\ge K$ 使 $n_{k} \\ge N_{1}$，得',
         '',
         '$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$',
         '',
@@ -19962,7 +19970,7 @@ window.MG = window.MG || {};
         '',
         '其中第 $k$ 个子列的项全部落在某个半径 1/k 的球内，因此它任意两项的距离 $< 2/k$。',
         '',
-        '**② 对角线。** 取 $y_{k} = x^\\{(k)\\}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\\{y_{k}\\}$ 是 $\\{x_{n}\\}$ 的子列；且对 $k, l \\ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\\ge K$ 的项都在里面），故',
+        '**② 对角线。** 取 $y_{k} = x^{(k)}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\\{y_{k}\\}$ 是 $\\{x_{n}\\}$ 的子列；且对 $k, l \\ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\\ge K$ 的项都在里面），故',
         '',
         '$$d(y_k, y_l) < 2/K$$',
         '',
@@ -20340,7 +20348,7 @@ window.MG = window.MG || {};
       regions: ['analysis', 'topology'],
       tags: ['定义', '积', '柱集'],
       statement: [
-        '设 $\\{ (X_\\alpha , \\mathcal{M}_\\alpha ) \\}_\\{\\alpha \\in A\\}$ 是一族可测空间，$X = \\prod_{\\alpha \\in A} X_\\alpha$，投影 $\\pi _\\alpha : X \\to X_\\alpha$。\n\n**积 $\\sigma$代数**定义为',
+        '设 $\\{ (X_\\alpha , \\mathcal{M}_\\alpha ) \\}_{\\alpha \\in A}$ 是一族可测空间，$X = \\prod_{\\alpha \\in A} X_\\alpha$，投影 $\\pi _\\alpha : X \\to X_\\alpha$。\n\n**积 $\\sigma$代数**定义为',
         '',
         '$$\\otimes _{\\alpha \\in A} \\mathcal{M}_\\alpha := \\mathcal{M}(\\{ \\pi _\\alpha^{-1}(E_\\alpha) : E_\\alpha \\in \\mathcal{M}_\\alpha, \\alpha \\in A \\})$$'
       ].join('\n'),
@@ -20424,7 +20432,7 @@ window.MG = window.MG || {};
         '',
         '$$\\{ B(c, r) : c \\in C_j, r \\in \\mathbb{Q} \\}$$',
         '',
-        '是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\\mathfrak{B}_\\{X_{j}\\}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\\mathfrak{B}_X \\subseteq \\otimes\\mathfrak{B}_\\{X_{j}\\}$。',
+        '是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\\mathfrak{B}_{X_{j}}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\\mathfrak{B}_X \\subseteq \\otimes\\mathfrak{B}_{X_{j}}$。',
         '⚠ 可分性不能省：$\\mathbb{R}^\\mathbb{R}$（不可数积）上，积 $\\sigma$代数真包含于 $Borel \\sigma$代数。'
       ].join('\n\n'),
       refs: ['Folland, Real Analysis, §2.1']
@@ -20746,8 +20754,8 @@ window.MG = window.MG || {};
       ].join('\n'),
       notes: [
         '(a)：把 $F$ 拆成 $F = E \\cup (F \\setminus E)$ 用可数可加（把余下的位置补 $\\emptyset$）。',
-        '(b)：把 $\\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $\\mu (\\bigcup E_{j}) = \\sum \\mu (F_{j}) \\le \\sum \\mu (E_{j})$。',
-        '(c)：令 $A_{j} = E_{j} \\setminus E_\\{j-1\\}$（$E_{0} = \\emptyset$），则 $\\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\\mu (E_{n}) = \\sum _\\{j\\le n\\} \\mu (A_{j})$ —— 两边取极限即可。',
+        '(b)：把 $\\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $\\mu (\\bigcup E_{j}) = \\sum \\mu (F_{j}) \\le \\sum \\mu (E_{j})$。',
+        '(c)：令 $A_{j} = E_{j} \\setminus E_{j-1}$（$E_{0} = \\emptyset$），则 $\\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\\mu (E_{n}) = \\sum _{j\\le n} \\mu (A_{j})$ —— 两边取极限即可。',
         '(d)：**「$\\mu (E_{1}) < \\infty$」不能省。** 反例：$X = \\mathbb{N}$，$\\mu =$ 计数测度，$E_{j} = \\{j, j+1$ …}，则每个 $\\mu (E_{j}) = \\infty$ 但交集为 $\\emptyset$、$\\mu (\\emptyset ) = 0$。',
         '(c) 与 (d) 合起来说明：测度在集合的**单调极限**下连续 —— 这正与「单调类」这个词呼应。'
       ].join('\n\n'),
@@ -21068,11 +21076,11 @@ window.MG = window.MG || {};
         '',
         '**(a) 单调。** 设 $E \\subseteq F$。则 $F = E \\cup (F \\setminus E)$，两项不交，故 $\\mu (F) = \\mu (E) + \\mu (F \\setminus E) \\ge \\mu (E)$（取值非负）。',
         '',
-        '**(b) 次可加。** 令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $F_{j}$ 两两不交、$\\bigcup F_{j} = \\bigcup E_{j}$ 且 $F_{j} \\subseteq E_{j}$。由可数可加与 (a)，',
+        '**(b) 次可加。** 令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $F_{j}$ 两两不交、$\\bigcup F_{j} = \\bigcup E_{j}$ 且 $F_{j} \\subseteq E_{j}$。由可数可加与 (a)，',
         '',
         '$$\\mu(\\bigcup_j E_j) = \\mu(\\bigcup_j F_j) = \\sum_j \\mu(F_j) \\le \\sum_j \\mu(E_j)$$',
         '',
-        '**(c) 下连续。** 设 $E_{1} \\subseteq E_{2} \\subseteq \\cdots$。\n\n令 $A_{1} = E_{1}$，$A_{j} = E_{j} \\setminus E_\\{j-1\\}$（$j \\ge 2$），则 $A_{j}$ 两两不交且 $\\bigcup A_{j} = \\bigcup E_{j}$。\n\n由可数可加，',
+        '**(c) 下连续。** 设 $E_{1} \\subseteq E_{2} \\subseteq \\cdots$。\n\n令 $A_{1} = E_{1}$，$A_{j} = E_{j} \\setminus E_{j-1}$（$j \\ge 2$），则 $A_{j}$ 两两不交且 $\\bigcup A_{j} = \\bigcup E_{j}$。\n\n由可数可加，',
         '',
         '$$\\mu(\\bigcup_j E_j) = \\sum_j \\mu(A_j) = \\lim_{n\\to\\infty} \\sum_{j=1}^{n} \\mu(A_j) = \\lim_{n\\to\\infty} \\mu(E_n)$$',
         '',
@@ -21103,7 +21111,7 @@ window.MG = window.MG || {};
         '',
         '**③ 单调**：$A \\subseteq B$ 时，$B$ 的每个覆盖也是 $A$ 的覆盖，故 $A$ 的下确界集合更大，$\\mu^{*}(A) \\le \\mu^{*}$(B)。',
         '',
-        '**④ 可数次可加**：设 $A_{j} \\subseteq X$。若某个 $\\mu^{*}(A_{j}) = \\infty$ 则不等式平凡；否则给定 $\\varepsilon > 0$，对每个 $j$ 取 $\\mathfrak{A}$ 中的覆盖 $\\{E_\\{j,k\\}\\}_{k}$ 使',
+        '**④ 可数次可加**：设 $A_{j} \\subseteq X$。若某个 $\\mu^{*}(A_{j}) = \\infty$ 则不等式平凡；否则给定 $\\varepsilon > 0$，对每个 $j$ 取 $\\mathfrak{A}$ 中的覆盖 $\\{E_{j,k}\\}_{k}$ 使',
         '',
         '$$\\sum_k \\mu_0(E_{j,k}) < \\mu^*(A_j) + (\\varepsilon/2)^j$$',
         '',
@@ -21167,7 +21175,7 @@ window.MG = window.MG || {};
         '',
         '$$\\mu^*(A) \\le \\mu_0(A) + 0 + 0 + \\cdots = \\mu_0(A)$$',
         '',
-        '**② $\\mu^{*}|_\\mathfrak{A} \\ge \\mu _{0}$。** 设 $\\{E_{j}\\} \\subseteq \\mathfrak{A}$ 是 $A$ 的覆盖。\n\n令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $F_{j} \\in \\mathfrak{A}$ 两两不交且 $\\bigcup F_{j} \\supseteq A$、$F_{j} \\subseteq E_{j}$。\n\n于是',
+        '**② $\\mu^{*}|_\\mathfrak{A} \\ge \\mu _{0}$。** 设 $\\{E_{j}\\} \\subseteq \\mathfrak{A}$ 是 $A$ 的覆盖。\n\n令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $F_{j} \\in \\mathfrak{A}$ 两两不交且 $\\bigcup F_{j} \\supseteq A$、$F_{j} \\subseteq E_{j}$。\n\n于是',
         '',
         '$$\\mu_0(A) = \\mu_0( \\bigcup_j (A \\cap F_j) ) = \\sum_j \\mu_0(A \\cap F_j) \\le \\sum_j \\mu_0(F_j) \\le \\sum_j \\mu_0(E_j)$$',
         '',
@@ -23308,7 +23316,7 @@ window.MG = window.MG || {};
         '',
         '$$\\mu \\times \\nu(D) = \\int \\nu(D_x) d\\mu(x) = 0$$',
         '',
-        '**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\\mathfrak{B}_\\{[0,1]\\}$）的子集 $N \\subseteq [0,1]$，令',
+        '**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\\mathfrak{B}_{[0,1]}$）的子集 $N \\subseteq [0,1]$，令',
         '',
         '$$G = \\{(x, x) : x \\in N\\} \\subseteq D$$',
         '',
@@ -24358,8 +24366,8 @@ window.MG = window.MG || {};
       ].join('\n'),
       notes: [
         '直觉：$f$ 可能「在无穷远处爆掉」，但在每个有限范围里都还好。',
-        '例：常函数 1 属于 $L^{1}_{l}oc$ 但不属于 $L^{1}(\\mathbb{R}^{n})$；$1/|x|$ 在 $\\mathbb{R}^{n}$ 上属于 $L^{1}_{l}oc$（$n \\ge 2$ 时不属于 $L^{1}$）。',
-        '⚠ 微分理论里必须是 $L^{1}_{l}oc$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。'
+        '例：常函数 1 属于 $L^{1}_{loc}$ 但不属于 $L^{1}(\\mathbb{R}^{n})$；$1/|x|$ 在 $\\mathbb{R}^{n}$ 上属于 $L^{1}_{loc}$（$n \\ge 2$ 时不属于 $L^{1}$）。',
+        '⚠ 微分理论里必须是 $L^{1}_{loc}$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。'
       ].join('\n\n'),
       refs: ['Folland, Real Analysis, §3.4']
     },
@@ -24676,7 +24684,7 @@ window.MG = window.MG || {};
       target: 'thm.lebesgue-differentiation',
       title: '极大定理 + 连续函数逼近 $\\implies$ Lebesgue 微分定理',
       proof: [
-        '**① 先局部化。** 由 $L^{1}_{l}oc$ 的定义与测度的可数可加性，只需对每个 $N \\in \\mathbb{N}$ 证明在球 $\\{|x| \\le N\\}$ 上几乎处处成立；把 $f$ 换成 $f\\cdot\\chi_{B(N+1, 0)}$ 后即可**设 $f \\in L^1$**。',
+        '**① 先局部化。** 由 $L^{1}_{loc}$ 的定义与测度的可数可加性，只需对每个 $N \\in \\mathbb{N}$ 证明在球 $\\{|x| \\le N\\}$ 上几乎处处成立；把 $f$ 换成 $f\\cdot\\chi_{B(N+1, 0)}$ 后即可**设 $f \\in L^1$**。',
         '',
         '**② 用连续函数逼近。** 给定 $\\varepsilon > 0$，由「$L^{1}$ 里的逼近」，取**连续函数** $g$ 使',
         '',
@@ -24716,7 +24724,7 @@ window.MG = window.MG || {};
       target: 'thm.lebesgue-set-full',
       title: '微分定理 + 可数稠密子集 $\\implies$ Lebesgue 集几乎处处',
       proof: [
-        '**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \\in \\mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{l}oc$ 的）：存在零集 $E_c$，使对 $x \\notin E_c$，',
+        '**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \\in \\mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{loc}$ 的）：存在零集 $E_c$，使对 $x \\notin E_c$，',
         '',
         '$$\\lim_{r\\to0} \\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - c| dy = |f(x) - c|$$',
         '',
@@ -24825,7 +24833,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.locally-integrable',
       usedBy: 'def.average-operator',
-      note: '平均算子只在 $L^{1}_{l}oc$ 上定义。'
+      note: '平均算子只在 $L^{1}_{loc}$ 上定义。'
     },
     {
       id: 'def-link.average-maximal',
@@ -24839,7 +24847,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.locally-integrable',
       usedBy: 'def.maximal-function',
-      note: '极大函数的定义域是 $L^{1}_{l}oc$。'
+      note: '极大函数的定义域是 $L^{1}_{loc}$。'
     },
     {
       id: 'def-link.maximal-theorem-lm',
@@ -24888,7 +24896,7 @@ window.MG = window.MG || {};
       kind: 'definition',
       definition: 'def.locally-integrable',
       usedBy: 'thm.rn-pointwise',
-      note: '证明中间要推出 $f \\in L^{1}_{l}oc$。'
+      note: '证明中间要推出 $f \\in L^{1}_{loc}$。'
     }
   ]
 });
@@ -25125,7 +25133,7 @@ window.MG = window.MG || {};
         '$$(3/2)\\alpha - \\varepsilon \\le T_F(x+h) - T_F(x) < \\varepsilon + \\alpha$$',
         '',
         '于是 $\\alpha < 4\\varepsilon$，由 $\\varepsilon$ 任意得 $\\alpha = 0$。∎',
-        '⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \\in NBV \\implies T_F \\in NBV$，正是下一条定理里 $|\\mu _F| = \\mu _\\{T_F\\}$ 的根据。'
+        '⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \\in NBV \\implies T_F \\in NBV$，正是下一条定理里 $|\\mu _F| = \\mu _{T_F}$ 的根据。'
       ].join('\n\n'),
       refs: ['Folland, Real Analysis, Lemma 3.30']
     },
@@ -25405,7 +25413,7 @@ window.MG = window.MG || {};
         '',
         '（用 NBV 版本的 Jordan 分解，注意右连续与 $F(-\\infty ) = 0$ 都被差保留。）每个递增右连续、$F(-\\infty ) = 0$ 的函数唯一对应一个有限 Borel 测度（取 $\\mu ((a,b]) = F(b) - F(a)$，由 Lebesgue–Stieltjes 那一套扩张）；\n\n四块加起来即得 $\\mu _F$。\n\n**唯一性**来自「$\\mu$ 由它在 $(-\\infty , x]$ 上的值唯一决定」，而后者生成整个 $\\mathfrak{B}_\\mathbb{R}$。',
         '',
-        '**$(3) |\\mu _F| = \\mu _\\{T_F\\}$。** 由**引理**，$F \\in NBV \\implies T_F \\in NBV$，所以 $\\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，',
+        '**$(3) |\\mu _F| = \\mu _{T_F}$。** 由**引理**，$F \\in NBV \\implies T_F \\in NBV$，所以 $\\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，',
         '',
         '$$\\mu_{T_F}((-\\infty, x]) = T_F(x) = \\sup\\{ \\sum|F(x_j) - F(x_{j-1})| \\} = |\\mu_F|((-\\infty, x])$$',
         '',
@@ -25590,7 +25598,7 @@ window.MG = window.MG || {};
         '',
         '以及',
         '',
-        '$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} :\\ \\|f|_p < \\infty \\,$$',
+        '$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} :\\ \\|f\\|_p < \\infty\\,\\}$$',
         '其中 $f$ 是**可测**函数。'
       ].join('\n'),
       notes: [
@@ -31070,7 +31078,7 @@ window.MG = window.MG || {};
         '设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：',
         '',
         '$C(x)$ 是**所有包含 $x$ 的闭开子集之交**：',
-        '$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : x \\in K \\,$$'
+        '$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : x \\in K,\\ K \\text{ 闭开}\\,\\}$$'
       ].join('\n'),
       notes: '证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。',
       refs: ['Le Stum, An introduction to condensed mathematics, §2.2']
@@ -39981,7 +39989,7 @@ window.MG = window.MG || {};
         '',
         '$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\\pi^{-1}(U)$ 全体是',
         '',
-        '$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\in \\mathcal{N}_{X}(A) \\,$$',
+        '$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\in \\mathcal{N}_{X}(A) \\, \\bigr\\}$$',
         '',
         '构成 $\\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。'
       ].join('\n'),
@@ -49395,7 +49403,7 @@ window.MG = window.MG || {};
         },
         {
           label: '证法二：外代数（⋀ⁿV ≅ K，几行读完）',
-          text: '\\u8BBE $\\dim V = n$\\u3002\\u5916\\u5E42 $\\bigwedge^{n} V$ \\u662F\\u4E00\\u7EF4\\u7684\\uFF0C\\u4E14 $v_{1} \\wedge \\cdots \\wedge v_{n} = 0$ \\u5F53\\u4E14\\u4EC5\\u5F53 $v_{1}, \\ldots, v_{n}$ \\u7EBF\\u6027\\u76F8\\u5173\\u3002\n\n\\u4E8E\\u662F\\u53EF\\u4EE5\\u7528\\u5B83**\\u5B9A\\u4E49** $D(v_{1}, \\ldots, v_{n})$\\uFF1A$v_{1} \\wedge \\cdots \\wedge v_{n} = D(v_{1}, \\ldots, v_{n})\\, e_{1} \\wedge \\cdots \\wedge e_{n}$\\u3002\n\n\\u4E09\\u6761\\u516C\\u7406\\u5404\\u81EA\\u514D\\u8D39\\uFF1A**\\u591A\\u91CD\\u7EBF\\u6027**\\u6765\\u81EA $\\wedge$ \\u5BF9\\u6BCF\\u4E2A\\u53D8\\u5143\\u7EBF\\u6027\\uFF1B**\\u4EA4\\u9519\\u6027**\\u6765\\u81EA $v \\wedge v = 0$\\uFF08\\u5546\\u7A7A\\u95F4\\u6784\\u9020\\u91CC\\u76F4\\u63A5\\u6740\\u6389\\u7684\\uFF09\\uFF1B**\\u89C4\\u8303\\u6027**\\u6765\\u81EA $e_{1} \\wedge \\cdots \\wedge e_{n}$ \\u53D6\\u4F5C\\u57FA\\u3001\\u7CFB\\u6570\\u5B9A\\u4E3A $1$\\u3002\n\n**\\u552F\\u4E00\\u6027**\\u4E5F\\u662F\\u514D\\u8D39\\u7684\\uFF1A\\u4E00\\u7EF4\\u7A7A\\u95F4\\u4E0A\\u7684\\u7EBF\\u6027\\u6620\\u5C04\\u53EA\\u80FD\\u4E58\\u4E00\\u4E2A\\u6570\\uFF0C\\u800C\\u90A3\\u4E2A\\u6570\\u88AB $D(e_{1}, \\ldots, e_{n}) = 1$ \\u9489\\u6B7B\\u3002\\u220E\n\n\\u2B50 \\u4E24\\u79CD\\u8BC1\\u6CD5\\u5206\\u5DE5\\u4E0D\\u540C\\uFF1ALeibniz \\u90A3\\u4E00\\u8DEF\\u7ED9\\u51FA**\\u663E\\u5F0F\\u516C\\u5F0F**\\uFF08\\u80FD\\u7B97\\uFF09\\uFF0C\\u5916\\u4EE3\\u6570\\u8FD9\\u4E00\\u8DEF\\u7ED9\\u51FA**\\u4E3A\\u4EC0\\u4E48\\u975E\\u8FD9\\u6837\\u4E0D\\u53EF**\\uFF08$\\bigwedge^{n}V$ \\u4E00\\u7EF4\\u8FD9\\u4EF6\\u4E8B\\u672C\\u8EAB\\u5C31\\u8BF4\\u660E\\u4E86\\uFF09\\u3002\n\n\\u26A0 \\u8FD9\\u4E00\\u8DEF\\u4F9D\\u8D56\\u5916\\u5E42\\uFF08\\`def.exterior-power\\`\\uFF09\\uFF1A\\u672C\\u56FE\\u90A3\\u6761\\u94FE\\u662F \\`imp.det-as-exterior\\`\\uFF0C\\u5B83\\u4ECE\\u672C\\u6761\\u51FA\\u53D1\\u8BB2\\u5916\\u79EF \\u2014\\u2014 \\u6240\\u4EE5\\u8FD9\\u91CC\\u53EA\\u8BB0\\u601D\\u8DEF\\uFF0C\\u4E0D\\u58F0\\u79F0\\u300C\\u4E0D\\u4F9D\\u8D56\\u884C\\u5217\\u5F0F\\u300D\\u3002',
+          text: '\设 $\\dim V = n$\。\外\幂 $\\bigwedge^{n} V$ \是\一\维\的\，\且 $v_{1} \\wedge \\cdots \\wedge v_{n} = 0$ \当\且\仅\当 $v_{1}, \\ldots, v_{n}$ \线\性\相\关\。\n\n\于\是\可\以\用\它**\定\义** $D(v_{1}, \\ldots, v_{n})$\：$v_{1} \\wedge \\cdots \\wedge v_{n} = D(v_{1}, \\ldots, v_{n})\\, e_{1} \\wedge \\cdots \\wedge e_{n}$\。\n\n\三\条\公\理\各\自\免\费\：**\多\重\线\性**\来\自 $\\wedge$ \对\每\个\变\元\线\性\；**\交\错\性**\来\自 $v \\wedge v = 0$\（\商\空\间\构\造\里\直\接\杀\掉\的\）\；**\规\范\性**\来\自 $e_{1} \\wedge \\cdots \\wedge e_{n}$ \取\作\基\、\系\数\定\为 $1$\。\n\n**\唯\一\性**\也\是\免\费\的\：\一\维\空\间\上\的\线\性\映\射\只\能\乘\一\个\数\，\而\那\个\数\被 $D(e_{1}, \\ldots, e_{n}) = 1$ \钉\死\。\∎\n\n\⭐ \两\种\证\法\分\工\不\同\：Leibniz \那\一\路\给\出**\显\式\公\式**\（\能\算\）\，\外\代\数\这\一\路\给\出**\为\什\么\非\这\样\不\可**\（$\\bigwedge^{n}V$ \一\维\这\件\事\本\身\就\说\明\了\）\。\n\n\⚠ \这\一\路\依\赖\外\幂\（\\`def.exterior-power\\`\）\：\本\图\那\条\链\是 \\`imp.det-as-exterior\\`\，\它\从\本\条\出\发\讲\外\积 \—\— \所\以\这\里\只\记\思\路\，\不\声\称\「\不\依\赖\行\列\式\」\。',
         },
       ],
       note: '**唯一性先证、存在性后验**：这是「用泛性质定义对象」的标准套路 —— 先把任何满足条件的对象都逼成一个显式公式，再把那个公式拿回来验证它确实满足条件。'
@@ -68375,7 +68383,7 @@ window.MG = window.MG || {};
       target: 'lem.goursat-triangle',
       title: '全纯 + 围道积分 $\\implies$ 三角形上的积分为零',
       proof: [
-        '设 $T$ 是 $\\Omega$ 内的闭三角形，$\\eta=\\oint_{\\partial T} f\\,\\mathrm{d}z$。把 $T$ 的四条边中点连起来，分成四个全等的小三角形 $T_1,\\ldots,T_4$；沿内部边界的积分两两抵消，故',
+        '设 $T$ 是 $\\Omega$ 内的闭三角形，$\\eta=\\oint_{\\partial T} f\\,\\mathrm{d}z$。把 $T$ 的三条边中点连起来，分成四个全等的小三角形 $T_1,\\ldots,T_4$；沿内部边界的积分两两抵消，故',
         '',
         '$$\\eta=\\sum_{j=1}^{4}\\eta_j,\\qquad \\eta_j=\\oint_{\\partial T_j}f\\,\\mathrm{d}z.$$',
         '',
@@ -69148,7 +69156,7 @@ window.MG = window.MG || {};
         '',
         '**第一步：沿折线的积分与路径无关。** 对 $z = x + iy \\in B(a, r)$，取 $a = x_0 + i y_0$，沿「先水平后竖直」的折线定义',
         '',
-        '$$F(z) := \\int_{x_0}^{x} f(t + i y_0)\\,\\mathrm{d}t + \\int_{y_0}^{y} f(x + i t)\\,\\mathrm{d}t.$$',
+        '$$F(z) := \\int_{x_0}^{x} f(t + i y_0)\\,\\mathrm{d}t + i\\int_{y_0}^{y} f(x + i t)\\,\\mathrm{d}t.$$',
         '',
         '要说明它与折线的具体走法无关：两条从 $a$ 到 $z$ 的折线围成一个多边形，把多边形三角剖分，每个三角形的边界积分都是零（假设），内部边两两抵消，故两条折线的积分相等。（这就是「矩形假设」的用处：矩形沿对角线分成两个三角形。）',
         '',
@@ -85620,7 +85628,7 @@ window.MG = window.MG || {};
         '⚠ **本节点只给骨架，不是完整证明。** 本图的证明分三步，其中**第一步没有证**：',
         '',
         '1. **三角剖分的存在性（Radó 定理）**：每个紧曲面都可三角剖分。' +
-          '⛔ **这是外部输入** —— 本图没有「三角剖分」节点，这一步只有名字，没有证明。',
+          '这一步**不在本图里证**：它自成一个节点（`thm.rado`，陈述 + 骨架），本图只把它当**外部输入**。',
         '2. **组合层面化简**：在三角剖分上做「删去一个三角形」「翻边」这类操作，把三角剖分化成标准形' +
           '（每张面都是三角形、每条边恰好属于两个三角形，且顶点图是「扇」或「花」）。' +
           '这一步是纯组合的，长但初等 —— 本图没有展开。',
@@ -85643,9 +85651,124 @@ window.MG = window.MG || {};
         'Radó, Über den Begriff der Riemannschen Fläche (1925)——三角剖分存在性',
       ],
     },
+
+    /* ---------------------------------------------------------- 三角剖分 */
+    {
+      id: 'def.triangulation',
+      cluster: 'topology.surfaces',
+      type: 'definition',
+      label: '三角剖分',
+      title: '三角剖分（可剖分空间）',
+      regions: ['topology'],
+      tags: ['定义', '拓扑', '曲面', '单纯复形'],
+      statement: [
+        '设 $X$ 是拓扑空间。$X$ 的一个**三角剖分**是一对 $(K, h)$：',
+        '',
+        '- $K$ 是**单纯复形**（`def.simplicial-complex`），$|K|$ 是它的几何实现；',
+        '- $h : |K| \\to X$ 是一个**同胚**。',
+        '',
+        '若这样的 $(K, h)$ 存在，称 $X$ **可三角剖分**。把每个单形在 $h$ 下的像叫 $X$ 的一个**面**',
+        '（顶点 / 边 / 三角形），于是 $X$ 被写成一堆三角形的并，任意两个三角形只沿**整条边**或一个顶点相交。',
+      ].join('\n'),
+      notes: [
+        '⚠️ 三角剖分是「**组合骨架 + 把它放进空间的那个同胚**」两件东西，不是单纯复形本身。',
+        '所以「$X$ 可剖分」是拓扑性质，而「$K$ 长什么样」是组合数据 —— 两者必须分开看。',
+        '⚠️ 剖分极不唯一：同一个 $S^{2}$ 有无穷多个本质不同的剖分（四面体、八面体、任意细分…）。',
+        '所以任何「用剖分定义」的量，都必须先证**与剖分无关** —— $\\chi$ 那条（`prop.eulerchar-genus`）做的就是这件事。',
+        '⭐ 单向蕴含：单纯复形自己总是可剖分的（取恒等），但**拓扑空间未必能** —— 这正是下一节要说的。',
+        '📌 定义里没要求 $K$ 有限。紧空间上的剖分自动有限；非紧的（比如开曲面）只能用**局部有限**剖分。',
+      ].join('\n\n'),
+      refs: ['Munkres, Topology, Ch. 12', 'Hatcher, Algebraic Topology, §2.1'],
+    },
+
+    /* ---------------------------------------------------------- Radó */
+    {
+      id: 'thm.rado',
+      cluster: 'topology.surfaces',
+      type: 'theorem',
+      label: 'Radó 定理',
+      title: 'Radó 定理：三角剖分存在性（紧曲面可三角剖分）',
+      regions: ['topology'],
+      tags: ['定理', '拓扑', '曲面', '三角剖分'],
+      status: 'skeleton',
+      statement: [
+        '每个**紧曲面**（紧、连通、$2$ 维拓扑流形，可带边界）都可三角剖分（`def.triangulation`）。',
+        '',
+        '等价的常用写法：每个紧连通曲面都同胚于某个**有限**单纯复形的几何实现。',
+      ].join('\n'),
+      notes: [
+        '⚠️ **本节点只给陈述 + 骨架，不是证明。** 它原本在分类定理里被当作「外部输入」一句话带过 ——'
+        + ' 本图把「三角剖分存在性」单列成一个节点，是为了把缺口的形状写清楚，而不是假装证过；',
+        '完整证明在 Radó 原文（1925）里很长，而且它依赖本图还缺的两层地形：紧曲面的**共形结构存在性**',
+        '（Radó 自己的路线，要 uniformization）或**光滑结构存在性**（Munkres / Whitehead 的路线）。',
+        '',
+        '两条经典路线（都只到骨架）：',
+        '1. **复分析路线**：紧可定向曲面可赋一个复结构（成为 Riemann 面），再用分支覆盖 + 有限性得到剖分。',
+        '2. **微分拓扑路线**：每个紧曲面有（本质唯一的）光滑结构，再用 Morse 理论 / 管状邻域割出三角形。',
+        '',
+        '⭐ **这是低维现象，不是普遍事实** —— 这一条最容易被误记成「每个流形都能剖分」：',
+        '',
+        '- $\\dim \\le 2$：Radó (1925)；$\\dim = 3$：Moise (1952)，所以 $\\dim \\le 3$ 都能三角剖分；',
+        '- $\\dim = 4$：**不行** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；',
+        '- $\\dim \\ge 5$：有 Kirby–Siebenmann 的充要条件（存在一个上同调障碍，非零就不可剖分）。',
+        '',
+        '⚠️ 与 `thm.simplicial-approximation` 区分：那条说的是「奇异同调 $=$ 单纯同调」，它**假设**已经有剖分；',
+        '这条说的是「剖分存在」。两条常被攬在一起。',
+        '⚠️ 与 `def.smooth-manifold` 区分：光滑流形可剖分是另一个定理（Whitehead），不要拿光滑结构当既成事实。',
+      ].join('\n\n'),
+      refs: [
+        'Radó, Über den Begriff der Riemannschen Fläche (1925)',
+        'Moise, Affine structures in 3-manifolds (1952)',
+        'Freedman, The topology of four-dimensional manifolds (1982)',
+        'Munkres, Topology, Ch. 12',
+      ],
+    },
   ],
 
   edges: [
+    /* -------- 三角剖分：它的两块原料 -------- */
+    {
+      id: 'dep.simpcomp-triangulation',
+      kind: 'definition',
+      definition: 'def.simplicial-complex',
+      usedBy: 'def.triangulation',
+      note: '三角剖分的骨架就是单纯复形；$|K|$ 是它的几何实现。',
+    },
+    {
+      id: 'dep.topmanifold-triangulation',
+      kind: 'definition',
+      definition: 'def.topological-manifold',
+      usedBy: 'def.triangulation',
+      note: '被剖分的对象是拓扑空间（实际上就是曲面）：剖分只用到拓扑，不用光滑结构。',
+    },
+    {
+      id: 'dep.triangulation-rado',
+      kind: 'definition',
+      definition: 'def.triangulation',
+      usedBy: 'thm.rado',
+      note: 'Radó 定理的结论就是「这种 $(K,h)$ 存在」。',
+    },
+    {
+      id: 'dep.compact-rado',
+      kind: 'definition',
+      definition: 'def.compact',
+      usedBy: 'thm.rado',
+      note: '「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。',
+    },
+    {
+      id: 'dep.rado-classification',
+      kind: 'definition',
+      definition: 'thm.rado',
+      usedBy: 'thm.classification-surfaces',
+      note: '分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。',
+    },
+    {
+      id: 'dep.triangulation-simphomology',
+      kind: 'definition',
+      definition: 'def.triangulation',
+      usedBy: 'thm.simplicial-approximation',
+      note: '「奇异同调 $=$ 单纯同调」这条**默默假设了**曲面可剖分（要拿剖分算单纯同调）。以前这个假设在图上是隐形的。',
+    },
     /* -------- 拓扑流形的原料 -------- */
     {
       id: 'dep.topology-topmanifold',
@@ -89736,7 +89859,7 @@ window.MG = window.MG || {};
       statement: [
         '集合 $S$ 上的**（二元）运算**就是一个映射',
         '',
-        '$\\ast : S \\times S \\longrightarrow S, \\qquad (a, b) \\longmapsto a \\ast b .$$',
+        '$$\\ast : S \\times S \\longrightarrow S, \\qquad (a, b) \\longmapsto a \\ast b .$$',
         '',
         '「像落在 $S$ 里」这一条就是常说的**封闭性** —— 它是定义的一部分，不是额外要求。',
       ].join('\n'),

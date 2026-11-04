@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-04T05:07:15.222Z
-> 15 星系 / 105 星团 / 1535 节点 / 3146 连线（强边 3107，弱边 39；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-04T07:09:29.299Z
+> 15 星系 / 105 星团 / 1537 节点 / 3152 连线（强边 3113，弱边 39；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.7 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -1815,7 +1815,7 @@ $X$ 的子集 $K$ 叫**闭开集**，如果它同时是开集与闭集。等价�
 
 $U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\pi^{-1}(U)$ 全体是
 
-$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \,$$
+$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \, \bigr\}$$
 
 构成 $\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。
 
@@ -2979,7 +2979,7 @@ $$\hat{\mathbb{Z}} := \varprojlim_{n \ge 1} \mathbb{Z}/n\mathbb{Z} \;\subseteq\;
 设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
 
 $C(x)$ 是**所有包含 $x$ 的闭开子集之交**：
-$$C(x) \;=\; \bigcap \{\, K \subseteq S : x \in K \,$$
+$$C(x) \;=\; \bigcap \{\, K \subseteq S : x \in K,\ K \text{ 闭开}\,\}$$
 
 证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。
 
@@ -5187,7 +5187,7 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 
 
 
-1. **三角剖分的存在性（Radó 定理）**：每个紧曲面都可三角剖分。⛔ **这是外部输入** —— 本图没有「三角剖分」节点，这一步只有名字，没有证明。
+1. **三角剖分的存在性（Radó 定理）**：每个紧曲面都可三角剖分。这一步**不在本图里证**：它自成一个节点（`thm.rado`，陈述 + 骨架），本图只把它当**外部输入**。
 
 2. **组合层面化简**：在三角剖分上做「删去一个三角形」「翻边」这类操作，把三角剖分化成标准形（每张面都是三角形、每条边恰好属于两个三角形，且顶点图是「扇」或「花」）。这一步是纯组合的，长但初等 —— 本图没有展开。
 
@@ -5204,6 +5204,74 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 📌 这条定理是**拓扑**定理：它只说拓扑型。要谈曲率（Gauss–Bonnet：$\int K\,dA = 2\pi\chi$）得先给曲面一个度量 —— 那条桥是 `thm.gauss-bonnet`，与本定理通过 $\chi$ 相认（见下面的类比边）。
 
 参考：Munkres, Topology, Ch. 12（Classification of Surfaces）；Massey, A Basic Course in Algebraic Topology, Ch. 1；Radó, Über den Begriff der Riemannschen Fläche (1925)——三角剖分存在性
+
+#### 三角剖分　`def.triangulation`
+*定义*　三角剖分（可剖分空间）
+
+设 $X$ 是拓扑空间。$X$ 的一个**三角剖分**是一对 $(K, h)$：
+
+- $K$ 是**单纯复形**（`def.simplicial-complex`），$|K|$ 是它的几何实现；
+- $h : |K| \to X$ 是一个**同胚**。
+
+若这样的 $(K, h)$ 存在，称 $X$ **可三角剖分**。把每个单形在 $h$ 下的像叫 $X$ 的一个**面**
+（顶点 / 边 / 三角形），于是 $X$ 被写成一堆三角形的并，任意两个三角形只沿**整条边**或一个顶点相交。
+
+⚠️ 三角剖分是「**组合骨架 + 把它放进空间的那个同胚**」两件东西，不是单纯复形本身。
+
+所以「$X$ 可剖分」是拓扑性质，而「$K$ 长什么样」是组合数据 —— 两者必须分开看。
+
+⚠️ 剖分极不唯一：同一个 $S^{2}$ 有无穷多个本质不同的剖分（四面体、八面体、任意细分…）。
+
+所以任何「用剖分定义」的量，都必须先证**与剖分无关** —— $\chi$ 那条（`prop.eulerchar-genus`）做的就是这件事。
+
+⭐ 单向蕴含：单纯复形自己总是可剖分的（取恒等），但**拓扑空间未必能** —— 这正是下一节要说的。
+
+📌 定义里没要求 $K$ 有限。紧空间上的剖分自动有限；非紧的（比如开曲面）只能用**局部有限**剖分。
+
+参考：Munkres, Topology, Ch. 12；Hatcher, Algebraic Topology, §2.1
+
+#### Radó 定理　`thm.rado`
+*定理*　Radó 定理：三角剖分存在性（紧曲面可三角剖分）
+
+每个**紧曲面**（紧、连通、$2$ 维拓扑流形，可带边界）都可三角剖分（`def.triangulation`）。
+
+等价的常用写法：每个紧连通曲面都同胚于某个**有限**单纯复形的几何实现。
+
+⚠️ **本节点只给陈述 + 骨架，不是证明。** 它原本在分类定理里被当作「外部输入」一句话带过 —— 本图把「三角剖分存在性」单列成一个节点，是为了把缺口的形状写清楚，而不是假装证过；
+
+完整证明在 Radó 原文（1925）里很长，而且它依赖本图还缺的两层地形：紧曲面的**共形结构存在性**
+
+（Radó 自己的路线，要 uniformization）或**光滑结构存在性**（Munkres / Whitehead 的路线）。
+
+
+
+两条经典路线（都只到骨架）：
+
+1. **复分析路线**：紧可定向曲面可赋一个复结构（成为 Riemann 面），再用分支覆盖 + 有限性得到剖分。
+
+2. **微分拓扑路线**：每个紧曲面有（本质唯一的）光滑结构，再用 Morse 理论 / 管状邻域割出三角形。
+
+
+
+⭐ **这是低维现象，不是普遍事实** —— 这一条最容易被误记成「每个流形都能剖分」：
+
+
+
+- $\dim \le 2$：Radó (1925)；$\dim = 3$：Moise (1952)，所以 $\dim \le 3$ 都能三角剖分；
+
+- $\dim = 4$：**不行** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；
+
+- $\dim \ge 5$：有 Kirby–Siebenmann 的充要条件（存在一个上同调障碍，非零就不可剖分）。
+
+
+
+⚠️ 与 `thm.simplicial-approximation` 区分：那条说的是「奇异同调 $=$ 单纯同调」，它**假设**已经有剖分；
+
+这条说的是「剖分存在」。两条常被攬在一起。
+
+⚠️ 与 `def.smooth-manifold` 区分：光滑流形可剖分是另一个定理（Whitehead），不要拿光滑结构当既成事实。
+
+参考：Radó, Über den Begriff der Riemannschen Fläche (1925)；Moise, Affine structures in 3-manifolds (1952)；Freedman, The topology of four-dimensional manifolds (1982)；Munkres, Topology, Ch. 12
 
 #### Euler 示性数与亏格　`prop.eulerchar-genus`
 *命题*　闭可定向曲面：$\chi = 2 - 2g$
@@ -5472,7 +5540,7 @@ $$\varphi : \mathbb{Z} \to K, \qquad \varphi(n) = \underbrace{1 + 1 + \cdots + 1
 
 集合 $S$ 上的**（二元）运算**就是一个映射
 
-$\ast : S \times S \longrightarrow S, \qquad (a, b) \longmapsto a \ast b .$$
+$$\ast : S \times S \longrightarrow S, \qquad (a, b) \longmapsto a \ast b .$$
 
 「像落在 $S$ 里」这一条就是常说的**封闭性** —— 它是定义的一部分，不是额外要求。
 
@@ -14742,9 +14810,9 @@ $\sigma$有限是**最常用的技术假设**：$\mathbb{R}$ 上的 Lebesgue 测
 
 (a)：把 $F$ 拆成 $F = E \cup (F \setminus E)$ 用可数可加（把余下的位置补 $\emptyset$）。
 
-(b)：把 $\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_\{j-1\})$，则 $\mu (\bigcup E_{j}) = \sum \mu (F_{j}) \le \sum \mu (E_{j})$。
+(b)：把 $\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_{j-1})$，则 $\mu (\bigcup E_{j}) = \sum \mu (F_{j}) \le \sum \mu (E_{j})$。
 
-(c)：令 $A_{j} = E_{j} \setminus E_\{j-1\}$（$E_{0} = \emptyset$），则 $\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\mu (E_{n}) = \sum _\{j\le n\} \mu (A_{j})$ —— 两边取极限即可。
+(c)：令 $A_{j} = E_{j} \setminus E_{j-1}$（$E_{0} = \emptyset$），则 $\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\mu (E_{n}) = \sum _{j\le n} \mu (A_{j})$ —— 两边取极限即可。
 
 (d)：**「$\mu (E_{1}) < \infty$」不能省。** 反例：$X = \mathbb{N}$，$\mu =$ 计数测度，$E_{j} = \{j, j+1$ …}，则每个 $\mu (E_{j}) = \infty$ 但交集为 $\emptyset$、$\mu (\emptyset ) = 0$。
 
@@ -15885,7 +15953,7 @@ $$F'(t) = \int_X \partial f / \partial t(x, t) d\mu(x)$$
 #### 积 σ-代数　`def.product-sigma`
 *定义*　积 σ-代数（Product σ-Algebra）
 
-设 $\{ (X_\alpha , \mathcal{M}_\alpha ) \}_\{\alpha \in A\}$ 是一族可测空间，$X = \prod_{\alpha \in A} X_\alpha$，投影 $\pi _\alpha : X \to X_\alpha$。
+设 $\{ (X_\alpha , \mathcal{M}_\alpha ) \}_{\alpha \in A}$ 是一族可测空间，$X = \prod_{\alpha \in A} X_\alpha$，投影 $\pi _\alpha : X \to X_\alpha$。
 
 **积 $\sigma$代数**定义为
 
@@ -15975,7 +16043,7 @@ $$\{ B(c, r) : c \in C_j, r \in \mathbb{Q} \}$$
 
 
 
-是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\mathfrak{B}_\{X_{j}\}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\mathfrak{B}_X \subseteq \otimes\mathfrak{B}_\{X_{j}\}$。
+是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\mathfrak{B}_{X_{j}}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\mathfrak{B}_X \subseteq \otimes\mathfrak{B}_{X_{j}}$。
 
 ⚠ 可分性不能省：$\mathbb{R}^\mathbb{R}$（不可数积）上，积 $\sigma$代数真包含于 $Borel \sigma$代数。
 
@@ -16682,9 +16750,9 @@ $$\int_K |f(x)| dx < \infty$$
 
 直觉：$f$ 可能「在无穷远处爆掉」，但在每个有限范围里都还好。
 
-例：常函数 1 属于 $L^{1}_{l}oc$ 但不属于 $L^{1}(\mathbb{R}^{n})$；$1/|x|$ 在 $\mathbb{R}^{n}$ 上属于 $L^{1}_{l}oc$（$n \ge 2$ 时不属于 $L^{1}$）。
+例：常函数 1 属于 $L^{1}_{loc}$ 但不属于 $L^{1}(\mathbb{R}^{n})$；$1/|x|$ 在 $\mathbb{R}^{n}$ 上属于 $L^{1}_{loc}$（$n \ge 2$ 时不属于 $L^{1}$）。
 
-⚠ 微分理论里必须是 $L^{1}_{l}oc$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。
+⚠ 微分理论里必须是 $L^{1}_{loc}$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。
 
 参考：Folland, Real Analysis, §3.4
 
@@ -17105,7 +17173,7 @@ $$(3/2)\alpha - \varepsilon \le T_F(x+h) - T_F(x) < \varepsilon + \alpha$$
 
 于是 $\alpha < 4\varepsilon$，由 $\varepsilon$ 任意得 $\alpha = 0$。∎
 
-⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \in NBV \implies T_F \in NBV$，正是下一条定理里 $|\mu _F| = \mu _\{T_F\}$ 的根据。
+⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \in NBV \implies T_F \in NBV$，正是下一条定理里 $|\mu _F| = \mu _{T_F}$ 的根据。
 
 参考：Folland, Real Analysis, Lemma 3.30
 
@@ -17312,7 +17380,7 @@ $$\|f\|_p := \left[ \int |f|^p \, d\mu \right]^{1/p}$$
 
 以及
 
-$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} :\ \|f|_p < \infty \,$$
+$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} :\ \|f\|_p < \infty\,\}$$
 其中 $f$ 是**可测**函数。
 
 基本事实（都可直接验证）：
@@ -38365,7 +38433,7 @@ $>$ 这一路线的分工很干净：**AC 负责「挑」，Hartogs 负责「停
 #### Zorn 引理 ⟹ 选择公理　`imp.zorn-choice`
 *佐恩引理 $\implies$ 选择公理（路线 $2\implies1$）*
 
-设 $\{A_i\}_\{i \in I\}$ 是一族非空集合。要对它造出一个选择函数。
+设 $\{A_i\}_{i \in I}$ 是一族非空集合。要对它造出一个选择函数。
 
 **① 舞台：部分选择函数全体**。令
 
@@ -38378,18 +38446,18 @@ $\mathcal{F} = \{ f : \operatorname{dom} f \subseteq I, \forall i \in \operatorn
 **② 每个链有上界**：设 $\mathcal{D} \subseteq \mathcal{F}$ 是 $\subseteq$链，令 $f = \bigcup \mathcal{D}$。
 
 $f$ 是函数：若 $(i, a), (i, a') \in f$，则它们分别属于某个 $f_{1}, f_{2} \in \mathcal{D}$；$\mathcal{D}$ 是链，不妨设 $f_{1} \subseteq f_{2}$，于是 $(i, a), (i, a') \in f_{2}$，而 $f_{2}$ 是函数，故 $a = a'$。
-$f \in \mathcal{F}$：$\operatorname{dom} f = \bigcup _\{g \in \mathcal{D}\} \operatorname{dom} g \subseteq I$，且对 $i \in \operatorname{dom} f$ 有 $f(i) \in A_i$。
+$f \in \mathcal{F}$：$\operatorname{dom} f = \bigcup _{g \in \mathcal{D}} \operatorname{dom} g \subseteq I$，且对 $i \in \operatorname{dom} f$ 有 $f(i) \in A_i$。
 $f$ 是 $\mathcal{D}$ 的上界：$f \supseteq g$ 对一切 $g \in \mathcal{D}$ 成立。
 
 **③ 用佐恩引理**，取 $(\mathcal{F}, \subseteq )$ 的极大元 $f$。
 
-**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \in I \setminus \operatorname{dom} f$，由 $A_\{i_{0}\} \ne \emptyset$ 取 $a \in A_\{i_{0}\}$，则
+**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \in I \setminus \operatorname{dom} f$，由 $A_{i_{0}} \ne \emptyset$ 取 $a \in A_{i_{0}}$，则
 
 $$f' = f \cup \{ (i_0, a) \}$$
 
 仍是 $\mathcal{F}$ 中的元素（$i_{0} \notin \operatorname{dom} f$，不破坏函数性），且 $f \subset f'$ —— 与 $f$ 的极大性矛盾。故 $\operatorname{dom} f = I$。
 
-**⑤** 于是 $f : I \to \bigcup _\{i \in I\} A_i$ 且 $f(i) \in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎
+**⑤** 于是 $f : I \to \bigcup _{i \in I} A_i$ 且 $f(i) \in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎
 
 > 「按包含序取极大元，再证明它已经没法再大」—— 这是用佐恩引理造存在性对象的典型手法。
 
@@ -38426,7 +38494,7 @@ $\mathcal{D}$ 是链且只有有限多个 $D_{i}$，故其中有一个最大的 
 #### 紧 ⟺ 列紧　`eq.compact-seqcompact`
 *紧 $\iff$ 列紧*
 
-**紧 $\implies$ 列紧**
+**紧 ⟹ 列紧**
 
 设 $\{x_{n}\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。
 
@@ -38458,7 +38526,7 @@ $$\mathcal{U} = \{ U_n : n \in \mathbb{N} \} \cup \{ X \setminus \{x_n : n \in \
 
 ⭐ 只有这一步不需要选择公理。
 
-**列紧 $\implies$ 紧**
+**列紧 ⟹ 紧**
 
 用**反证 + 一串不断缩小的「坏球」**。设 $X$ 列紧。
 
@@ -38520,11 +38588,11 @@ $>$ ⚠ ② 是「取了一个点才能决定下一个点在哪」的递归选�
 
 设 $X$ 列紧，$\{x_{n}\}$ 是 $X$ 中的 Cauchy 列。
 
-**①** 由列紧，$\{x_{n}\}$ 有收敛子列 $x_\{n_{k}\} \to x \in X$。
+**①** 由列紧，$\{x_{n}\}$ 有收敛子列 $x_{n_{k}} \to x \in X$。
 
 **② Cauchy 列只要有收敛子列，就整体收敛到同一个极限**：给定 $\varepsilon > 0$，取 $N$ 使 $m, n \ge N$ 时 $d(x_{m}, x_{n}) < \varepsilon /2$；
 
-再取 $K$ 使 $k \ge K$ 时 $n_{k} \ge N$ 且 $d(x_\{n_{k}\}, x) < \varepsilon /2$。
+再取 $K$ 使 $k \ge K$ 时 $n_{k} \ge N$ 且 $d(x_{n_{k}}, x) < \varepsilon /2$。
 
 于是对 $n \ge N$，取 $k \ge K$ 使 $n_{k} \ge N$，得
 
@@ -38539,11 +38607,11 @@ $$d(x_n, x) \le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \varepsilon/2 + \varepsilon/2 
 
 设 $X$ 紧，$\{x_{n}\}$ 是 $X$ 中的 Cauchy 列。要证它收敛。
 
-**①** 由「紧 $\implies$ 列紧」（见那条箭头），$\{x_{n}\}$ 有收敛子列 $x_\{n_{k}\} \to x \in X$。
+**①** 由「紧 $\implies$ 列紧」（见那条箭头），$\{x_{n}\}$ 有收敛子列 $x_{n_{k}} \to x \in X$。
 
 **② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\varepsilon > 0$，取 $N_{1}$ 使 $m, n \ge N_{1}$ 时 $d(x_{m}, x_{n}) < \varepsilon /2$；
 
-取 $K$ 使 $n_{k} \ge N_{1}$ 且 $d(x_\{n_{k}\}, x) < \varepsilon /2$ 对 $k \ge K$ 成立。
+取 $K$ 使 $n_{k} \ge N_{1}$ 且 $d(x_{n_{k}}, x) < \varepsilon /2$ 对 $k \ge K$ 成立。
 
 则对 $n \ge N_{1}$，取一个 $k \ge K$ 使 $n_{k} \ge N_{1}$，得
 
@@ -38581,7 +38649,7 @@ $$\{x_n\} \supseteq \{x^{(1)}_n\} \supseteq \{x^{(2)}_n\} \supseteq \cdots$$
 
 其中第 $k$ 个子列的项全部落在某个半径 1/k 的球内，因此它任意两项的距离 $< 2/k$。
 
-**② 对角线。** 取 $y_{k} = x^\{(k)\}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\{y_{k}\}$ 是 $\{x_{n}\}$ 的子列；且对 $k, l \ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\ge K$ 的项都在里面），故
+**② 对角线。** 取 $y_{k} = x^{(k)}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\{y_{k}\}$ 是 $\{x_{n}\}$ 的子列；且对 $k, l \ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\ge K$ 的项都在里面），故
 
 $$d(y_k, y_l) < 2/K$$
 
@@ -38729,13 +38797,13 @@ $Borel \sigma$代数就是「由开集这个生成元生成的 $\sigma$代数」
 
 **(a) 单调。** 设 $E \subseteq F$。则 $F = E \cup (F \setminus E)$，两项不交，故 $\mu (F) = \mu (E) + \mu (F \setminus E) \ge \mu (E)$（取值非负）。
 
-**(b) 次可加。** 令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_\{j-1\})$，则 $F_{j}$ 两两不交、$\bigcup F_{j} = \bigcup E_{j}$ 且 $F_{j} \subseteq E_{j}$。由可数可加与 (a)，
+**(b) 次可加。** 令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_{j-1})$，则 $F_{j}$ 两两不交、$\bigcup F_{j} = \bigcup E_{j}$ 且 $F_{j} \subseteq E_{j}$。由可数可加与 (a)，
 
 $$\mu(\bigcup_j E_j) = \mu(\bigcup_j F_j) = \sum_j \mu(F_j) \le \sum_j \mu(E_j)$$
 
 **(c) 下连续。** 设 $E_{1} \subseteq E_{2} \subseteq \cdots$。
 
-令 $A_{1} = E_{1}$，$A_{j} = E_{j} \setminus E_\{j-1\}$（$j \ge 2$），则 $A_{j}$ 两两不交且 $\bigcup A_{j} = \bigcup E_{j}$。
+令 $A_{1} = E_{1}$，$A_{j} = E_{j} \setminus E_{j-1}$（$j \ge 2$），则 $A_{j}$ 两两不交且 $\bigcup A_{j} = \bigcup E_{j}$。
 
 由可数可加，
 
@@ -38766,7 +38834,7 @@ $$\mu^*(A) = \inf \{ \sum_j \mu_0(E_j) : E_j \in \mathfrak{A}, A \subseteq \bigc
 
 **③ 单调**：$A \subseteq B$ 时，$B$ 的每个覆盖也是 $A$ 的覆盖，故 $A$ 的下确界集合更大，$\mu^{*}(A) \le \mu^{*}$(B)。
 
-**④ 可数次可加**：设 $A_{j} \subseteq X$。若某个 $\mu^{*}(A_{j}) = \infty$ 则不等式平凡；否则给定 $\varepsilon > 0$，对每个 $j$ 取 $\mathfrak{A}$ 中的覆盖 $\{E_\{j,k\}\}_{k}$ 使
+**④ 可数次可加**：设 $A_{j} \subseteq X$。若某个 $\mu^{*}(A_{j}) = \infty$ 则不等式平凡；否则给定 $\varepsilon > 0$，对每个 $j$ 取 $\mathfrak{A}$ 中的覆盖 $\{E_{j,k}\}_{k}$ 使
 
 $$\sum_k \mu_0(E_{j,k}) < \mu^*(A_j) + (\varepsilon/2)^j$$
 
@@ -38824,7 +38892,7 @@ $$\mu^*(A) \le \mu_0(A) + 0 + 0 + \cdots = \mu_0(A)$$
 
 **② $\mu^{*}|_\mathfrak{A} \ge \mu _{0}$。** 设 $\{E_{j}\} \subseteq \mathfrak{A}$ 是 $A$ 的覆盖。
 
-令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_\{j-1\})$，则 $F_{j} \in \mathfrak{A}$ 两两不交且 $\bigcup F_{j} \supseteq A$、$F_{j} \subseteq E_{j}$。
+令 $F_{j} = E_{j} \setminus (E_{1} \cup \cdots \cup E_{j-1})$，则 $F_{j} \in \mathfrak{A}$ 两两不交且 $\bigcup F_{j} \supseteq A$、$F_{j} \subseteq E_{j}$。
 
 于是
 
@@ -42419,7 +42487,7 @@ $$D = \{(x, x) : x \in [0, 1]\}$$
 
 $$\mu \times \nu(D) = \int \nu(D_x) d\mu(x) = 0$$
 
-**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\mathfrak{B}_\{[0,1]\}$）的子集 $N \subseteq [0,1]$，令
+**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\mathfrak{B}_{[0,1]}$）的子集 $N \subseteq [0,1]$，令
 
 $$G = \{(x, x) : x \in N\} \subseteq D$$
 
@@ -46582,7 +46650,7 @@ $$\int_{U}g^{\ast}\omega = \int_{U}(\beta\circ g)\,\det\Bigl(\frac{\partial g}{\
 #### 全纯函数 + 复围道积分 ⟹ Goursat 三角形引理　`imp.goursat-triangle-proof`
 *全纯 + 围道积分 $\implies$ 三角形上的积分为零*
 
-设 $T$ 是 $\Omega$ 内的闭三角形，$\eta=\oint_{\partial T} f\,\mathrm{d}z$。把 $T$ 的四条边中点连起来，分成四个全等的小三角形 $T_1,\ldots,T_4$；沿内部边界的积分两两抵消，故
+设 $T$ 是 $\Omega$ 内的闭三角形，$\eta=\oint_{\partial T} f\,\mathrm{d}z$。把 $T$ 的三条边中点连起来，分成四个全等的小三角形 $T_1,\ldots,T_4$；沿内部边界的积分两两抵消，故
 
 $$\eta=\sum_{j=1}^{4}\eta_j,\qquad \eta_j=\oint_{\partial T_j}f\,\mathrm{d}z.$$
 
@@ -46617,7 +46685,7 @@ $\blacksquare$
 
 **第一步：沿折线的积分与路径无关。** 对 $z = x + iy \in B(a, r)$，取 $a = x_0 + i y_0$，沿「先水平后竖直」的折线定义
 
-$$F(z) := \int_{x_0}^{x} f(t + i y_0)\,\mathrm{d}t + \int_{y_0}^{y} f(x + i t)\,\mathrm{d}t.$$
+$$F(z) := \int_{x_0}^{x} f(t + i y_0)\,\mathrm{d}t + i\int_{y_0}^{y} f(x + i t)\,\mathrm{d}t.$$
 
 要说明它与折线的具体走法无关：两条从 $a$ 到 $z$ 的折线围成一个多边形，把多边形三角剖分，每个三角形的边界积分都是零（假设），内部边两两抵消，故两条折线的积分相等。（这就是「矩形假设」的用处：矩形沿对角线分成两个三角形。）
 
@@ -48416,7 +48484,7 @@ $$m(E_\alpha) \le (3^n/\alpha)\cdot\int |f| dy$$
 #### 极大定理 + L¹ 里的逼近 + 平均算子联合连续 ⟹ Lebesgue 微分定理　`imp.lebesgue-differentiation`
 *极大定理 + 连续函数逼近 $\implies$ Lebesgue 微分定理*
 
-**① 先局部化。** 由 $L^{1}_{l}oc$ 的定义与测度的可数可加性，只需对每个 $N \in \mathbb{N}$ 证明在球 $\{|x| \le N\}$ 上几乎处处成立；把 $f$ 换成 $f\cdot\chi_{B(N+1, 0)}$ 后即可**设 $f \in L^1$**。
+**① 先局部化。** 由 $L^{1}_{loc}$ 的定义与测度的可数可加性，只需对每个 $N \in \mathbb{N}$ 证明在球 $\{|x| \le N\}$ 上几乎处处成立；把 $f$ 换成 $f\cdot\chi_{B(N+1, 0)}$ 后即可**设 $f \in L^1$**。
 
 **② 用连续函数逼近。** 给定 $\varepsilon > 0$，由「$L^{1}$ 里的逼近」，取**连续函数** $g$ 使
 
@@ -48451,7 +48519,7 @@ $$\lim_{r\to0} A_r f(x) = f(x)\quad \text{ 对一切} x \notin \bigcup_{m\in\mat
 #### Lebesgue 微分定理 ⟹ Lebesgue 集几乎处处　`imp.lebesgue-set`
 *微分定理 + 可数稠密子集 $\implies$ Lebesgue 集几乎处处*
 
-**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \in \mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{l}oc$ 的）：存在零集 $E_c$，使对 $x \notin E_c$，
+**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \in \mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{loc}$ 的）：存在零集 $E_c$，使对 $x \notin E_c$，
 
 $$\lim_{r\to0} \frac{1}{m(B(x, r))} \int_{B(x, r)} |f(y) - c| dy = |f(x) - c|$$
 
@@ -48545,7 +48613,7 @@ $L^{1}(\nu )$ 的定义直接搬用 $L^{1}(|\nu |)$。
 
 #### 定义引用：「局部可积」→ 平均算子 Aᵣ　`def-link.locally-integrable-average`
 
-平均算子只在 $L^{1}_{l}oc$ 上定义。
+平均算子只在 $L^{1}_{loc}$ 上定义。
 
 #### 定义引用：「平均算子 Aᵣ」→ 极大函数　`def-link.average-maximal`
 
@@ -48553,7 +48621,7 @@ $L^{1}(\nu )$ 的定义直接搬用 $L^{1}(|\nu |)$。
 
 #### 定义引用：「局部可积」→ 极大函数　`def-link.locally-maximal`
 
-极大函数的定义域是 $L^{1}_{l}oc$。
+极大函数的定义域是 $L^{1}_{loc}$。
 
 #### 定义引用：「极大函数」→ 极大定理　`def-link.maximal-theorem-lm`
 
@@ -48581,7 +48649,7 @@ $L^{1}(\nu )$ 的定义直接搬用 $L^{1}(|\nu |)$。
 
 #### 定义引用：「局部可积」→ Radon–Nikodym 导数的点态公式　`def-link.locally-pointwise`
 
-证明中间要推出 $f \in L^{1}_{l}oc$。
+证明中间要推出 $f \in L^{1}_{loc}$。
 
 #### 定义引用：「连续映射」→ 映射同伦　`e51.definition`
 
@@ -50071,7 +50139,7 @@ $$F = F_1^+ - F_1^- + i(F_2^+ - F_2^-)$$
 
 **唯一性**来自「$\mu$ 由它在 $(-\infty , x]$ 上的值唯一决定」，而后者生成整个 $\mathfrak{B}_\mathbb{R}$。
 
-**$(3) |\mu _F| = \mu _\{T_F\}$。** 由**引理**，$F \in NBV \implies T_F \in NBV$，所以 $\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，
+**$(3) |\mu _F| = \mu _{T_F}$。** 由**引理**，$F \in NBV \implies T_F \in NBV$，所以 $\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，
 
 $$\mu_{T_F}((-\infty, x]) = T_F(x) = \sup\{ \sum|F(x_j) - F(x_{j-1})| \} = |\mu_F|((-\infty, x])$$
 
@@ -52412,6 +52480,30 @@ $\mathfrak{gl}(k)$ 的元素是线性映射，多项式取在它的矩阵元上�
 #### 定义引用：「连通和」→ 亏格　`dep.connectedsum-genus`
 
 「$g$ 就是几个环面的连通和」这个直觉要靠连通和才说得出来；但那件事本身是**定理**（分类定理，下一刀），定义里不用它。
+
+#### 定义引用：「单纯复形」→ 三角剖分　`dep.simpcomp-triangulation`
+
+三角剖分的骨架就是单纯复形；$|K|$ 是它的几何实现。
+
+#### 定义引用：「拓扑流形」→ 三角剖分　`dep.topmanifold-triangulation`
+
+被剖分的对象是拓扑空间（实际上就是曲面）：剖分只用到拓扑，不用光滑结构。
+
+#### 定义引用：「三角剖分」→ Radó 定理　`dep.triangulation-rado`
+
+Radó 定理的结论就是「这种 $(K,h)$ 存在」。
+
+#### 定义引用：「紧」→ Radó 定理　`dep.compact-rado`
+
+「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。
+
+#### 定义引用：「Radó 定理」→ 闭曲面分类定理　`dep.rado-classification`
+
+分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。
+
+#### 定义引用：「三角剖分」→ 单纯逼近　`dep.triangulation-simphomology`
+
+「奇异同调 $=$ 单纯同调」这条**默默假设了**曲面可剖分（要拿剖分算单纯同调）。以前这个假设在图上是隐形的。
 
 #### 定义引用：「拓扑空间与开集」→ 拓扑流形　`dep.topology-topmanifold`
 
@@ -61527,8 +61619,9 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **代数结构 ↔ 向量空间与基**　4 条节点级连线
 - **微分形式、积分与 de Rham ↔ 同调群**　3 条节点级连线
 - **内蕴几何 ↔ 曲面的地形**　2 条节点级连线
-- **同调群 ↔ 曲面的地形**　5 条节点级连线
-- **拓扑空间的基本语汇 ↔ 曲面的地形**　2 条节点级连线
+- **同调群 ↔ 曲面的地形**　7 条节点级连线
+- **流形与向量丛 ↔ 曲面的地形**　2 条节点级连线
+- **拓扑空间的基本语汇 ↔ 曲面的地形**　3 条节点级连线
 - **曲面论 ↔ 曲面的地形**　3 条节点级连线
 - **Galois 理论 ↔ 代数结构**　5 条节点级连线
 - **Galois 理论 ↔ 向量空间与基**　2 条节点级连线

@@ -3,4 +3,4 @@
 
 `def.locally-integrable` 局部可积 → `thm.rn-pointwise` Radon–Nikodym 导数的点态公式
 
-证明中间要推出 $f \in L^{1}_{l}oc$。
+证明中间要推出 $f \in L^{1}_{loc}$。

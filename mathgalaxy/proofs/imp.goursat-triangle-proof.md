@@ -3,7 +3,7 @@
 
 `def.holomorphic` 全纯函数 + `def.contour-integral` 复围道积分 → `lem.goursat-triangle` Goursat 三角形引理
 
-设 $T$ 是 $\Omega$ 内的闭三角形，$\eta=\oint_{\partial T} f\,\mathrm{d}z$。把 $T$ 的四条边中点连起来，分成四个全等的小三角形 $T_1,\ldots,T_4$；沿内部边界的积分两两抵消，故
+设 $T$ 是 $\Omega$ 内的闭三角形，$\eta=\oint_{\partial T} f\,\mathrm{d}z$。把 $T$ 的三条边中点连起来，分成四个全等的小三角形 $T_1,\ldots,T_4$；沿内部边界的积分两两抵消，故
 
 $$\eta=\sum_{j=1}^{4}\eta_j,\qquad \eta_j=\oint_{\partial T_j}f\,\mathrm{d}z.$$
 

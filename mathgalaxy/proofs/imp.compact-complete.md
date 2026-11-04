@@ -5,11 +5,11 @@
 
 设 $X$ 紧，$\{x_{n}\}$ 是 $X$ 中的 Cauchy 列。要证它收敛。
 
-**①** 由「紧 $\implies$ 列紧」（见那条箭头），$\{x_{n}\}$ 有收敛子列 $x_\{n_{k}\} \to x \in X$。
+**①** 由「紧 $\implies$ 列紧」（见那条箭头），$\{x_{n}\}$ 有收敛子列 $x_{n_{k}} \to x \in X$。
 
 **② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\varepsilon > 0$，取 $N_{1}$ 使 $m, n \ge N_{1}$ 时 $d(x_{m}, x_{n}) < \varepsilon /2$；
 
-取 $K$ 使 $n_{k} \ge N_{1}$ 且 $d(x_\{n_{k}\}, x) < \varepsilon /2$ 对 $k \ge K$ 成立。
+取 $K$ 使 $n_{k} \ge N_{1}$ 且 $d(x_{n_{k}}, x) < \varepsilon /2$ 对 $k \ge K$ 成立。
 
 则对 $n \ge N_{1}$，取一个 $k \ge K$ 使 $n_{k} \ge N_{1}$，得
 

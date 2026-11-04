@@ -9,4 +9,6 @@
 
 **证法二：外代数（⋀ⁿV ≅ K，几行读完）**
 
+设 $\dim V = n$。外幂 $\bigwedge^{n} V$ 是一维的，且 $v_{1} \wedge \cdots \wedge v_{n} = 0$ 当且仅当 $v_{1}, \ldots, v_{n}$ 线性相关。
+
 > 续见 proofs/imp.det-exists-unique.4.md

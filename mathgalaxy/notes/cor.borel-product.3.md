@@ -5,6 +5,6 @@
 
 $$\{ B(c, r) : c \in C_j, r \in \mathbb{Q} \}$$
 
-是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\mathfrak{B}_\{X_{j}\}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\mathfrak{B}_X \subseteq \otimes\mathfrak{B}_\{X_{j}\}$。
+是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\mathfrak{B}_{X_{j}}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\mathfrak{B}_X \subseteq \otimes\mathfrak{B}_{X_{j}}$。
 
 ⚠ 可分性不能省：$\mathbb{R}^\mathbb{R}$（不可数积）上，积 $\sigma$代数真包含于 $Borel \sigma$代数。

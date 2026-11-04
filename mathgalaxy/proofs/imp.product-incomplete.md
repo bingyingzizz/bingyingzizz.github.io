@@ -11,7 +11,7 @@ $$D = \{(x, x) : x \in [0, 1]\}$$
 
 $$\mu \times \nu(D) = \int \nu(D_x) d\mu(x) = 0$$
 
-**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\mathfrak{B}_\{[0,1]\}$）的子集 $N \subseteq [0,1]$，令
+**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\mathfrak{B}_{[0,1]}$）的子集 $N \subseteq [0,1]$，令
 
 $$G = \{(x, x) : x \in N\} \subseteq D$$
 

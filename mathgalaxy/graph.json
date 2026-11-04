@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-04T05:07:15.222Z",
+  "generated": "2026-11-04T07:09:29.299Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1535,
-   "edges": 3146,
-   "strong": 3107,
+   "nodes": 1537,
+   "edges": 3152,
+   "strong": 3113,
    "weak": 39,
    "derived": 33,
-   "en_pages": 1535
+   "en_pages": 1533
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -69,7 +69,7 @@
    "en": "Topology",
    "desc": "开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。",
    "color": "#D9649F",
-   "nodeCount": 181
+   "nodeCount": 183
   },
   {
    "id": "algebra",
@@ -2619,12 +2619,14 @@
    "en": "Surfaces: connected sum and genus",
    "parent": "topology",
    "desc": "闭曲面分类之前必须先有地形：连通和（挖球 + 沿边界粘）与亏格（一阶同调的秩的一半）。这两个概念都刻意避开「分类定理」：亏格用同调定义，所以不会绕回分类。下一刀才放拓扑流形 / 闭曲面 / 分类定理。",
-   "nodeCount": 11,
+   "nodeCount": 13,
    "nodes": [
     "def.connected-sum",
     "def.genus",
     "def.closed-surface",
     "thm.classification-surfaces",
+    "def.triangulation",
+    "thm.rado",
     "prop.eulerchar-genus",
     "prop.eulerchar-nonorientable",
     "ex.sphere",
@@ -5063,7 +5065,7 @@
     "积",
     "柱集"
    ],
-   "statement": "设 $\\{ (X_\\alpha , \\mathcal{M}_\\alpha ) \\}_\\{\\alpha \\in A\\}$ 是一族可测空间，$X = \\prod_{\\alpha \\in A} X_\\alpha$，投影 $\\pi _\\alpha : X \\to X_\\alpha$。\n\n**积 $\\sigma$代数**定义为\n\n$$\\otimes _{\\alpha \\in A} \\mathcal{M}_\\alpha := \\mathcal{M}(\\{ \\pi _\\alpha^{-1}(E_\\alpha) : E_\\alpha \\in \\mathcal{M}_\\alpha, \\alpha \\in A \\})$$",
+   "statement": "设 $\\{ (X_\\alpha , \\mathcal{M}_\\alpha ) \\}_{\\alpha \\in A}$ 是一族可测空间，$X = \\prod_{\\alpha \\in A} X_\\alpha$，投影 $\\pi _\\alpha : X \\to X_\\alpha$。\n\n**积 $\\sigma$代数**定义为\n\n$$\\otimes _{\\alpha \\in A} \\mathcal{M}_\\alpha := \\mathcal{M}(\\{ \\pi _\\alpha^{-1}(E_\\alpha) : E_\\alpha \\in \\mathcal{M}_\\alpha, \\alpha \\in A \\})$$",
    "notes": "即由全体**柱集**生成的 $\\sigma$代数。柱集 $\\pi _\\alpha ^{-1}(E_\\alpha )$ 就是「只对第 $\\alpha$ 个坐标提要求」的集合。\n\n⚠ 一般**不能**定义成「$\\prod E_\\alpha$ 的全体生成的 $\\sigma$代数」—— 那只在**可数**指标集时等价（见下一条）。\n\n这样定义的原因：投影 $\\pi _\\alpha$ 应当是可测的，而 $\\sigma$代数要对逆像封闭 —— 取最小的那一个就够了。",
    "refs": [
     "Folland, Real Analysis, §2.1"
@@ -5186,7 +5188,7 @@
     "可分"
    ],
    "statement": "若每个 $X_j$ 都**可分**，则积 $\\sigma$-代数与 Borel $\\sigma$-代数重合：\n\n$\\bigotimes_{j=1}^{\\infty} \\mathfrak{B}_{X_j} = \\mathfrak{B}_{X}$",
-   "notes": "**证明。**\n- **$\\subseteq$**：投影 $\\pi_{j}$ 连续，故 $\\pi_{j}^{-1}(\\text{开集})$ 是 $X$ 的开集（柱集），即每个 $\\pi_{j}^{-1}(U_{j}) \\in \\mathfrak{B}_{X}$；\n\n于是生成它们的 $\\sigma$代数 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}} \\subseteq \\mathfrak{B}_{X}$ ✓。\n- **$\\supseteq$（需要可分）**：每个 $X_{j}$ **可分**，取可数稠密集 $C_{j}$，则 $\\{ B(c, r) : c \\in C_{j},\\ r \\in \\mathbb{Q}_{>0} \\}$ 是 $X_{j}$ 的**可数基** ✓。\n  $X$ 的基本开集形如 $\\bigcap_{j \\in F}\\pi_{j}^{-1}(U_{j})$（$F$ 有限、$U_{j}$ 取基元素）；每个 $\\pi_{j}^{-1}(U_{j}) \\in \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$，有限交仍在其中，而**开集是基本开集之并**、基又可数 $\\implies$ 一切开集属于 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ $\\implies$ $\\mathfrak{B}_{X} \\subseteq \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ ✓。\n两边互包即得等号。∎\n⚠️ **可分性不能省**：$\\mathbb{R}^{\\mathbb{R}}$（不可数积）上，积 $\\sigma$代数**真包含于** Borel $\\sigma$代数 —— 那些「只看可数多个坐标」的集合撑不满 Borel 结构。\n\n$\\subseteq$ 的原因很直接：投影 $\\pi _{j}$ 连续，所以 $\\pi _{j}^{-1}($开集) 是开集，那些柱集都在 $\\mathfrak{B}_X$ 里。\n\n反方向登场的又是「可分」：$X_{j}$ 可分时取可数稠密集 $C_{j}$，则\n\n\n\n$$\\{ B(c, r) : c \\in C_j, r \\in \\mathbb{Q} \\}$$\n\n\n\n是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\\mathfrak{B}_\\{X_{j}\\}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\\mathfrak{B}_X \\subseteq \\otimes\\mathfrak{B}_\\{X_{j}\\}$。\n\n⚠ 可分性不能省：$\\mathbb{R}^\\mathbb{R}$（不可数积）上，积 $\\sigma$代数真包含于 $Borel \\sigma$代数。",
+   "notes": "**证明。**\n- **$\\subseteq$**：投影 $\\pi_{j}$ 连续，故 $\\pi_{j}^{-1}(\\text{开集})$ 是 $X$ 的开集（柱集），即每个 $\\pi_{j}^{-1}(U_{j}) \\in \\mathfrak{B}_{X}$；\n\n于是生成它们的 $\\sigma$代数 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}} \\subseteq \\mathfrak{B}_{X}$ ✓。\n- **$\\supseteq$（需要可分）**：每个 $X_{j}$ **可分**，取可数稠密集 $C_{j}$，则 $\\{ B(c, r) : c \\in C_{j},\\ r \\in \\mathbb{Q}_{>0} \\}$ 是 $X_{j}$ 的**可数基** ✓。\n  $X$ 的基本开集形如 $\\bigcap_{j \\in F}\\pi_{j}^{-1}(U_{j})$（$F$ 有限、$U_{j}$ 取基元素）；每个 $\\pi_{j}^{-1}(U_{j}) \\in \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$，有限交仍在其中，而**开集是基本开集之并**、基又可数 $\\implies$ 一切开集属于 $\\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ $\\implies$ $\\mathfrak{B}_{X} \\subseteq \\bigotimes_{j}\\mathfrak{B}_{X_{j}}$ ✓。\n两边互包即得等号。∎\n⚠️ **可分性不能省**：$\\mathbb{R}^{\\mathbb{R}}$（不可数积）上，积 $\\sigma$代数**真包含于** Borel $\\sigma$代数 —— 那些「只看可数多个坐标」的集合撑不满 Borel 结构。\n\n$\\subseteq$ 的原因很直接：投影 $\\pi _{j}$ 连续，所以 $\\pi _{j}^{-1}($开集) 是开集，那些柱集都在 $\\mathfrak{B}_X$ 里。\n\n反方向登场的又是「可分」：$X_{j}$ 可分时取可数稠密集 $C_{j}$，则\n\n\n\n$$\\{ B(c, r) : c \\in C_j, r \\in \\mathbb{Q} \\}$$\n\n\n\n是 $X_{j}$ 的**可数**拓扑基，它已经生成 $\\mathfrak{B}_{X_{j}}$。于是 $X$ 的拓扑基由这些基的有限积组成，仍然可数，从而 $\\mathfrak{B}_X \\subseteq \\otimes\\mathfrak{B}_{X_{j}}$。\n\n⚠ 可分性不能省：$\\mathbb{R}^\\mathbb{R}$（不可数积）上，积 $\\sigma$代数真包含于 $Borel \\sigma$代数。",
    "refs": [
     "Folland, Real Analysis, §2.1"
    ]
@@ -5396,7 +5398,7 @@
     "连续性"
    ],
    "statement": "设 $(X, \\mathcal{M}, \\mu )$ 是测度空间，以下集合都取自 $\\mathcal{M}$。\n\n- **(a) 单调**：$E \\subseteq F \\implies \\mu(E) \\le \\mu(F)$\n- **(b) 次可加**：$\\mu( \\bigcup_j E_j ) \\le \\sum_j \\mu(E_j)$（不要求不交）\n- **(c) 下连续**：$E_1 \\subseteq E_2 \\subseteq \\cdots \\implies \\mu( \\bigcup_j E_j ) = \\lim_{j\\to\\infty} \\mu(E_j)$\n- **(d) 上连续**：$\\mu(E_1) < \\infty, \\quad  E_1 \\supseteq E_2 \\supseteq \\cdots \\implies \\mu( \\bigcap_j E_j ) = \\lim_{j\\to\\infty} \\mu(E_j)$",
-   "notes": "(a)：把 $F$ 拆成 $F = E \\cup (F \\setminus E)$ 用可数可加（把余下的位置补 $\\emptyset$）。\n\n(b)：把 $\\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $\\mu (\\bigcup E_{j}) = \\sum \\mu (F_{j}) \\le \\sum \\mu (E_{j})$。\n\n(c)：令 $A_{j} = E_{j} \\setminus E_\\{j-1\\}$（$E_{0} = \\emptyset$），则 $\\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\\mu (E_{n}) = \\sum _\\{j\\le n\\} \\mu (A_{j})$ —— 两边取极限即可。\n\n(d)：**「$\\mu (E_{1}) < \\infty$」不能省。** 反例：$X = \\mathbb{N}$，$\\mu =$ 计数测度，$E_{j} = \\{j, j+1$ …}，则每个 $\\mu (E_{j}) = \\infty$ 但交集为 $\\emptyset$、$\\mu (\\emptyset ) = 0$。\n\n(c) 与 (d) 合起来说明：测度在集合的**单调极限**下连续 —— 这正与「单调类」这个词呼应。",
+   "notes": "(a)：把 $F$ 拆成 $F = E \\cup (F \\setminus E)$ 用可数可加（把余下的位置补 $\\emptyset$）。\n\n(b)：把 $\\bigcup E_{j}$ 改成不交并：$F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $\\mu (\\bigcup E_{j}) = \\sum \\mu (F_{j}) \\le \\sum \\mu (E_{j})$。\n\n(c)：令 $A_{j} = E_{j} \\setminus E_{j-1}$（$E_{0} = \\emptyset$），则 $\\bigcup E_{j}$ 是 $A_{j}$ 的不交并，而 $\\mu (E_{n}) = \\sum _{j\\le n} \\mu (A_{j})$ —— 两边取极限即可。\n\n(d)：**「$\\mu (E_{1}) < \\infty$」不能省。** 反例：$X = \\mathbb{N}$，$\\mu =$ 计数测度，$E_{j} = \\{j, j+1$ …}，则每个 $\\mu (E_{j}) = \\infty$ 但交集为 $\\emptyset$、$\\mu (\\emptyset ) = 0$。\n\n(c) 与 (d) 合起来说明：测度在集合的**单调极限**下连续 —— 这正与「单调类」这个词呼应。",
    "refs": [
     "Halmos, Measure Theory, §9",
     "Folland, Real Analysis, Prop. 1.3"
@@ -27666,7 +27668,7 @@
     "局部可积"
    ],
    "statement": "可测函数 $f : \\mathbb{R}^n \\to \\mathbb{C}$ 是**局部可积的**，当且仅当\n\n对每个**有界可测集** $K \\subseteq \\mathbb{R}^n$ 都有\n$$\\int_K |f(x)| dx < \\infty$$\n\n局部可积函数全体记作 $L^1_{loc}$（或 $L^1_{loc}(\\mathbb{R}^n)$）。",
-   "notes": "直觉：$f$ 可能「在无穷远处爆掉」，但在每个有限范围里都还好。\n\n例：常函数 1 属于 $L^{1}_{l}oc$ 但不属于 $L^{1}(\\mathbb{R}^{n})$；$1/|x|$ 在 $\\mathbb{R}^{n}$ 上属于 $L^{1}_{l}oc$（$n \\ge 2$ 时不属于 $L^{1}$）。\n\n⚠ 微分理论里必须是 $L^{1}_{l}oc$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。",
+   "notes": "直觉：$f$ 可能「在无穷远处爆掉」，但在每个有限范围里都还好。\n\n例：常函数 1 属于 $L^{1}_{loc}$ 但不属于 $L^{1}(\\mathbb{R}^{n})$；$1/|x|$ 在 $\\mathbb{R}^{n}$ 上属于 $L^{1}_{loc}$（$n \\ge 2$ 时不属于 $L^{1}$）。\n\n⚠ 微分理论里必须是 $L^{1}_{loc}$ 而不是 $L^{1}$：因为讨论的是**逐点**行为，而局部信息就够。",
    "refs": [
     "Folland, Real Analysis, §3.4"
    ]
@@ -32183,7 +32185,7 @@
     "NBV"
    ],
    "statement": "设 $F \\in BV$。则\n\n- $T_F(-\\infty) = 0$；\n- 若 $F$ **右连续**，则 $T_F$ 也右连续。",
-   "notes": "第一部分：给定 $\\varepsilon > 0$ 与 $x$，取分划使 $\\sum \\ge T_F(x) - \\varepsilon$；于是对 $y \\le x_0$ 有 $T_F(y) \\le \\varepsilon$。由 $\\varepsilon$ 任意，$T_F(-\\infty) = 0$。\n\n第二部分：设 $\\alpha = T_F(x+) - T_F(x)$。由 $F$ 右连续，对充分小的 $h$ 有 $|F(x+h) - F(x)| < \\varepsilon$ 且 $T_F(x+h) - T_F(x+) < \\varepsilon$；再从两边各取分划夹住，得到\n\n\n\n$$(3/2)\\alpha - \\varepsilon \\le T_F(x+h) - T_F(x) < \\varepsilon + \\alpha$$\n\n\n\n于是 $\\alpha < 4\\varepsilon$，由 $\\varepsilon$ 任意得 $\\alpha = 0$。∎\n\n⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \\in NBV \\implies T_F \\in NBV$，正是下一条定理里 $|\\mu _F| = \\mu _\\{T_F\\}$ 的根据。",
+   "notes": "第一部分：给定 $\\varepsilon > 0$ 与 $x$，取分划使 $\\sum \\ge T_F(x) - \\varepsilon$；于是对 $y \\le x_0$ 有 $T_F(y) \\le \\varepsilon$。由 $\\varepsilon$ 任意，$T_F(-\\infty) = 0$。\n\n第二部分：设 $\\alpha = T_F(x+) - T_F(x)$。由 $F$ 右连续，对充分小的 $h$ 有 $|F(x+h) - F(x)| < \\varepsilon$ 且 $T_F(x+h) - T_F(x+) < \\varepsilon$；再从两边各取分划夹住，得到\n\n\n\n$$(3/2)\\alpha - \\varepsilon \\le T_F(x+h) - T_F(x) < \\varepsilon + \\alpha$$\n\n\n\n于是 $\\alpha < 4\\varepsilon$，由 $\\varepsilon$ 任意得 $\\alpha = 0$。∎\n\n⭐ 这条保证「全变差」这个操作**保持 NBV**：$F \\in NBV \\implies T_F \\in NBV$，正是下一条定理里 $|\\mu _F| = \\mu _{T_F}$ 的根据。",
    "refs": [
     "Folland, Real Analysis, Lemma 3.30"
    ]
@@ -35249,7 +35251,7 @@
    "abstract_en": "For a measure space $(X,\\mathcal{M},\\mu)$ and $0<p<\\infty$ one sets $\\|f\\|_p := [\\int |f|^{p}\\,\\mathrm{d}\\mu]^{1/p}$, and $L^{p}$ is the space of measurable $f$ with $\\|f\\|_p<\\infty$. Its elements are classes of functions equal almost everywhere, which is what makes $\\|f\\|_p = 0$ imply $f = 0$. For $p<1$ the triangle inequality fails, so one only gets a quasi-norm, although the space stays complete.",
    "translations": {
     "en": {
-     "status": "reviewed",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "abstract",
@@ -35259,10 +35261,12 @@
       "abstract"
      ],
      "fieldStatus": {
-      "abstract": "reviewed",
+      "abstract": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "abstract"
+     ],
      "basedOn": {
       "abstract": "v0.9.3#361b9f22"
      }
@@ -35281,7 +35285,7 @@
     "Lp",
     "范数"
    ],
-   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu)$。对可测 $f$ 与 $0 < p < \\infty$ 定义\n\n$$\\|f\\|_p := \\left[ \\int |f|^p \\, d\\mu \\right]^{1/p}$$\n\n以及\n\n$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} :\\ \\|f|_p < \\infty \\,$$\n其中 $f$ 是**可测**函数。",
+   "statement": "固定测度空间 $(X, \\mathcal{M}, \\mu)$。对可测 $f$ 与 $0 < p < \\infty$ 定义\n\n$$\\|f\\|_p := \\left[ \\int |f|^p \\, d\\mu \\right]^{1/p}$$\n\n以及\n\n$$L^p(X, \\mathcal{M}, \\mu) := \\{\\, f : X \\to \\mathbb{C} :\\ \\|f\\|_p < \\infty\\,\\}$$\n其中 $f$ 是**可测**函数。",
    "notes": "基本事实（都可直接验证）：\n\n\n\n- $\\|f\\|_p = 0 \\iff f = 0$ a.e.；\n- $\\|cf\\|_p = |c| \\, \\|f\\|_p$；\n- $f, g \\in L^p \\implies f + g \\in L^p$（这一步用 $|f+g|^p \\le 2^p(|f|^p + |g|^p)$）。\n\n\n\n⚠ **$p < 1$ 时三角不等式失效**，所以那时 $L^p$ 只是拟范数空间（虽然它仍然是完备的）。\n\n和 $L^1$ 一样，$L^p$ 的元素其实是**函数的等价类**（a.e. 相等视为同一个），这正是 $\\|f\\|_p = 0 \\implies f = 0$ 得以成立的前提。",
    "refs": [
     "Folland, Real Analysis, §6.1"
@@ -39821,11 +39825,97 @@
     "曲面"
    ],
    "statement": "设 $S$ 是**闭曲面**（`def.closed-surface`）。则 $S$ 同胚于下列之一，且这些互不同胚：\n\n- **球面** $S^{2}$；\n- $g$ 个**环面**的连通和 $T^{2}\\#\\cdots\\# T^{2}$（$g \\ge 1$），这叫**可定向**闭曲面，亏格 $g$；\n- $k$ 个**射影平面**的连通和 $\\mathbb{RP}^{2}\\#\\cdots\\#\\mathbb{RP}^{2}$（$k \\ge 1$），这叫**不可定向**闭曲面，不可定向亏格 $k$。\n\n并且两族互不重合：可定向与不可定向的闭曲面（除球面外）永不**同胚**。",
-   "notes": "⚠ **本节点只给骨架，不是完整证明。** 本图的证明分三步，其中**第一步没有证**：\n\n\n\n1. **三角剖分的存在性（Radó 定理）**：每个紧曲面都可三角剖分。⛔ **这是外部输入** —— 本图没有「三角剖分」节点，这一步只有名字，没有证明。\n\n2. **组合层面化简**：在三角剖分上做「删去一个三角形」「翻边」这类操作，把三角剖分化成标准形（每张面都是三角形、每条边恰好属于两个三角形，且顶点图是「扇」或「花」）。这一步是纯组合的，长但初等 —— 本图没有展开。\n\n3. **读出标准形**：标准形只由两个量决定：可定向性与一个非负整数（$2-\\chi$），于是分类成立。不同胚性靠的是（2）里化出来的**不变量**：$\\chi$ 与可定向性在同胚下不变（`thm.euler-characteristic`）。\n\n\n\n⭐ **判据（可定向侧）**：$g = \\tfrac{1}{2}\\operatorname{rank} H_{1}(S;\\mathbb{Z})$（`def.genus`），且 $\\chi(S) = 2 - 2g$。所以「两个闭可定向曲面同胚 $\\iff$ 亏格相同 $\\iff$ $\\chi$ 相同」——分类定理说的「只有一个整数不变量」。\n\n⭐ **判据（不可定向侧）**：$\\chi(S) = 2 - k$，而 $H_{1}(S;\\mathbb{Z}) \\cong \\mathbb{Z}^{k-1} \\oplus \\mathbb{Z}/2$，所以 $k$ 由「$H_{1}$ 的自由秩加一」和「有没有 2-挠」一起定出。\n\n⚠ **$\\chi = 2 - 2g$ 与 $\\chi = 2 - k$ 在本图都还不是节点**（上面两条是陈述级的结论）。这两条该各成一个命题节点，排在第三刀。\n\n📌 这条定理是**拓扑**定理：它只说拓扑型。要谈曲率（Gauss–Bonnet：$\\int K\\,dA = 2\\pi\\chi$）得先给曲面一个度量 —— 那条桥是 `thm.gauss-bonnet`，与本定理通过 $\\chi$ 相认（见下面的类比边）。",
+   "notes": "⚠ **本节点只给骨架，不是完整证明。** 本图的证明分三步，其中**第一步没有证**：\n\n\n\n1. **三角剖分的存在性（Radó 定理）**：每个紧曲面都可三角剖分。这一步**不在本图里证**：它自成一个节点（`thm.rado`，陈述 + 骨架），本图只把它当**外部输入**。\n\n2. **组合层面化简**：在三角剖分上做「删去一个三角形」「翻边」这类操作，把三角剖分化成标准形（每张面都是三角形、每条边恰好属于两个三角形，且顶点图是「扇」或「花」）。这一步是纯组合的，长但初等 —— 本图没有展开。\n\n3. **读出标准形**：标准形只由两个量决定：可定向性与一个非负整数（$2-\\chi$），于是分类成立。不同胚性靠的是（2）里化出来的**不变量**：$\\chi$ 与可定向性在同胚下不变（`thm.euler-characteristic`）。\n\n\n\n⭐ **判据（可定向侧）**：$g = \\tfrac{1}{2}\\operatorname{rank} H_{1}(S;\\mathbb{Z})$（`def.genus`），且 $\\chi(S) = 2 - 2g$。所以「两个闭可定向曲面同胚 $\\iff$ 亏格相同 $\\iff$ $\\chi$ 相同」——分类定理说的「只有一个整数不变量」。\n\n⭐ **判据（不可定向侧）**：$\\chi(S) = 2 - k$，而 $H_{1}(S;\\mathbb{Z}) \\cong \\mathbb{Z}^{k-1} \\oplus \\mathbb{Z}/2$，所以 $k$ 由「$H_{1}$ 的自由秩加一」和「有没有 2-挠」一起定出。\n\n⚠ **$\\chi = 2 - 2g$ 与 $\\chi = 2 - k$ 在本图都还不是节点**（上面两条是陈述级的结论）。这两条该各成一个命题节点，排在第三刀。\n\n📌 这条定理是**拓扑**定理：它只说拓扑型。要谈曲率（Gauss–Bonnet：$\\int K\\,dA = 2\\pi\\chi$）得先给曲面一个度量 —— 那条桥是 `thm.gauss-bonnet`，与本定理通过 $\\chi$ 相认（见下面的类比边）。",
    "refs": [
     "Munkres, Topology, Ch. 12（Classification of Surfaces）",
     "Massey, A Basic Course in Algebraic Topology, Ch. 1",
     "Radó, Über den Begriff der Riemannschen Fläche (1925)——三角剖分存在性"
+   ]
+  },
+  {
+   "id": "def.triangulation",
+   "type": "definition",
+   "label": "三角剖分",
+   "title": "三角剖分（可剖分空间）",
+   "label_en": "triangulation of a space",
+   "title_en": "triangulation of a space",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.triangulation.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.surfaces",
+   "layer": 17,
+   "tags": [
+    "定义",
+    "拓扑",
+    "曲面",
+    "单纯复形"
+   ],
+   "statement": "设 $X$ 是拓扑空间。$X$ 的一个**三角剖分**是一对 $(K, h)$：\n\n- $K$ 是**单纯复形**（`def.simplicial-complex`），$|K|$ 是它的几何实现；\n- $h : |K| \\to X$ 是一个**同胚**。\n\n若这样的 $(K, h)$ 存在，称 $X$ **可三角剖分**。把每个单形在 $h$ 下的像叫 $X$ 的一个**面**\n（顶点 / 边 / 三角形），于是 $X$ 被写成一堆三角形的并，任意两个三角形只沿**整条边**或一个顶点相交。",
+   "notes": "⚠️ 三角剖分是「**组合骨架 + 把它放进空间的那个同胚**」两件东西，不是单纯复形本身。\n\n所以「$X$ 可剖分」是拓扑性质，而「$K$ 长什么样」是组合数据 —— 两者必须分开看。\n\n⚠️ 剖分极不唯一：同一个 $S^{2}$ 有无穷多个本质不同的剖分（四面体、八面体、任意细分…）。\n\n所以任何「用剖分定义」的量，都必须先证**与剖分无关** —— $\\chi$ 那条（`prop.eulerchar-genus`）做的就是这件事。\n\n⭐ 单向蕴含：单纯复形自己总是可剖分的（取恒等），但**拓扑空间未必能** —— 这正是下一节要说的。\n\n📌 定义里没要求 $K$ 有限。紧空间上的剖分自动有限；非紧的（比如开曲面）只能用**局部有限**剖分。",
+   "refs": [
+    "Munkres, Topology, Ch. 12",
+    "Hatcher, Algebraic Topology, §2.1"
+   ]
+  },
+  {
+   "id": "thm.rado",
+   "type": "theorem",
+   "label": "Radó 定理",
+   "title": "Radó 定理：三角剖分存在性（紧曲面可三角剖分）",
+   "status": "skeleton",
+   "title_en": "Rado theorem: every compact surface is triangulable",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.rado.en.md",
+   "region": "topology",
+   "regions": [
+    "topology"
+   ],
+   "cluster": "topology.surfaces",
+   "layer": 18,
+   "tags": [
+    "定理",
+    "拓扑",
+    "曲面",
+    "三角剖分"
+   ],
+   "statement": "每个**紧曲面**（紧、连通、$2$ 维拓扑流形，可带边界）都可三角剖分（`def.triangulation`）。\n\n等价的常用写法：每个紧连通曲面都同胚于某个**有限**单纯复形的几何实现。",
+   "notes": "⚠️ **本节点只给陈述 + 骨架，不是证明。** 它原本在分类定理里被当作「外部输入」一句话带过 —— 本图把「三角剖分存在性」单列成一个节点，是为了把缺口的形状写清楚，而不是假装证过；\n\n完整证明在 Radó 原文（1925）里很长，而且它依赖本图还缺的两层地形：紧曲面的**共形结构存在性**\n\n（Radó 自己的路线，要 uniformization）或**光滑结构存在性**（Munkres / Whitehead 的路线）。\n\n\n\n两条经典路线（都只到骨架）：\n\n1. **复分析路线**：紧可定向曲面可赋一个复结构（成为 Riemann 面），再用分支覆盖 + 有限性得到剖分。\n\n2. **微分拓扑路线**：每个紧曲面有（本质唯一的）光滑结构，再用 Morse 理论 / 管状邻域割出三角形。\n\n\n\n⭐ **这是低维现象，不是普遍事实** —— 这一条最容易被误记成「每个流形都能剖分」：\n\n\n\n- $\\dim \\le 2$：Radó (1925)；$\\dim = 3$：Moise (1952)，所以 $\\dim \\le 3$ 都能三角剖分；\n\n- $\\dim = 4$：**不行** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；\n\n- $\\dim \\ge 5$：有 Kirby–Siebenmann 的充要条件（存在一个上同调障碍，非零就不可剖分）。\n\n\n\n⚠️ 与 `thm.simplicial-approximation` 区分：那条说的是「奇异同调 $=$ 单纯同调」，它**假设**已经有剖分；\n\n这条说的是「剖分存在」。两条常被攬在一起。\n\n⚠️ 与 `def.smooth-manifold` 区分：光滑流形可剖分是另一个定理（Whitehead），不要拿光滑结构当既成事实。",
+   "refs": [
+    "Radó, Über den Begriff der Riemannschen Fläche (1925)",
+    "Moise, Affine structures in 3-manifolds (1952)",
+    "Freedman, The topology of four-dimensional manifolds (1982)",
+    "Munkres, Topology, Ch. 12"
    ]
   },
   {
@@ -41007,7 +41097,7 @@
     "定义",
     "代数"
    ],
-   "statement": "集合 $S$ 上的**（二元）运算**就是一个映射\n\n$\\ast : S \\times S \\longrightarrow S, \\qquad (a, b) \\longmapsto a \\ast b .$$\n\n「像落在 $S$ 里」这一条就是常说的**封闭性** —— 它是定义的一部分，不是额外要求。",
+   "statement": "集合 $S$ 上的**（二元）运算**就是一个映射\n\n$$\\ast : S \\times S \\longrightarrow S, \\qquad (a, b) \\longmapsto a \\ast b .$$\n\n「像落在 $S$ 里」这一条就是常说的**封闭性** —— 它是定义的一部分，不是额外要求。",
    "notes": "⭐ **群、环、域、格、半群全部建立在它上面**：`def.group` 说的是「一个运算 + 三条公理」，环是两个运算 + 分配律，格是两条幂等交换运算 + 吸收律。此前这些定义各自**内联**了一次「$S \\times S \\to S$」，没有通名节点。\n\n⚠ **运算 vs 关系**：$S \\times S \\to S$ 是**运算**（有返回值），$S \\times S \\to \\{\\text{真}, \\text{假}\\}$是**二元关系**（如 $\\le$、$\\in$）。两者不能混：关系没有「封闭性」问题，因为它不往 $S$ 里取值。\n\n⭐ **结合律不是运算的定义的一部分**：$a \\ast (b \\ast c) = (a \\ast b) \\ast c$ 是**额外条件**，满足它的叫半群。这是初学者最常见的混淆点。\n\n📌 例子：$\\mathbb{Z}$ 上的加法与乘法都是二元运算；$\\mathbb{Z}$ 上的除法**不是**（$1/2 \\notin \\mathbb{Z}$，不封闭）；$\\mathbb{R}^{\\times}$ 上的乘法是（去掉 0 之后才封闭）。",
    "refs": [
     "Lang, Algebra, Ch. I §1",
@@ -42446,24 +42536,6 @@
    "type": "definition",
    "label": "Stiefel–Whitney 类",
    "title": "Stiefel–Whitney 类：实向量丛的 $\\mathbb{Z}/2$ 示性类",
-   "label_en": "Stiefel–Whitney Class",
-   "title_en": "Stiefel–Whitney Class",
-   "translations": {
-    "en": {
-     "status": "derived",
-     "version": null,
-     "fields": [
-      "name"
-     ],
-     "creative": [],
-     "fieldStatus": {
-      "name": "derived"
-     },
-     "staleFields": [],
-     "basedOn": {}
-    }
-   },
-   "en_page": "nodes/def.stiefel-whitney-class.en.md",
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -42489,24 +42561,6 @@
    "type": "proposition",
    "label": "定向与 w1 消失",
    "title": "命题：可定向 当且仅当第一 Stiefel–Whitney 类为零",
-   "label_en": "Orientability and w1",
-   "title_en": "Orientability iff w1 Vanishes",
-   "translations": {
-    "en": {
-     "status": "derived",
-     "version": null,
-     "fields": [
-      "name"
-     ],
-     "creative": [],
-     "fieldStatus": {
-      "name": "derived"
-     },
-     "staleFields": [],
-     "basedOn": {}
-    }
-   },
-   "en_page": "nodes/prop.orientable-iff-w1.en.md",
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -42532,24 +42586,6 @@
    "type": "definition",
    "label": "Euler 类",
    "title": "Euler 类：可定向实丛的顶维示性类",
-   "label_en": "Euler Class",
-   "title_en": "Euler Class",
-   "translations": {
-    "en": {
-     "status": "derived",
-     "version": null,
-     "fields": [
-      "name"
-     ],
-     "creative": [],
-     "fieldStatus": {
-      "name": "derived"
-     },
-     "staleFields": [],
-     "basedOn": {}
-    }
-   },
-   "en_page": "nodes/def.euler-class.en.md",
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -42575,24 +42611,6 @@
    "type": "definition",
    "label": "Pontryagin 类",
    "title": "Pontryagin 类：实丛复化之后的偶次陈类",
-   "label_en": "Pontryagin Class",
-   "title_en": "Pontryagin Class",
-   "translations": {
-    "en": {
-     "status": "derived",
-     "version": null,
-     "fields": [
-      "name"
-     ],
-     "creative": [],
-     "fieldStatus": {
-      "name": "derived"
-     },
-     "staleFields": [],
-     "basedOn": {}
-    }
-   },
-   "en_page": "nodes/def.pontryagin-class.en.md",
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -46566,7 +46584,7 @@
     "连通分量",
     "闭开集"
    ],
-   "statement": "设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：\n\n$C(x)$ 是**所有包含 $x$ 的闭开子集之交**：\n$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : x \\in K \\,$$",
+   "statement": "设 $S$ 是紧 Hausdorff 空间，$x \\in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：\n\n$C(x)$ 是**所有包含 $x$ 的闭开子集之交**：\n$$C(x) \\;=\\; \\bigcap \\{\\, K \\subseteq S : x \\in K,\\ K \\text{ 闭开}\\,\\}$$",
    "notes": "证明见边上那条推导。要点是「**紧 Hausdorff 里有无穷多闭开集可用**」：紧 Hausdorff 空间是正规的（$T_{4}$），所以两个不交闭集能被开集分开，而紧性又把「开集分开」升级成「闭开集分开」。这条把 $\\pi_{0}$ 这个反射函子变得可算：连通分量不是抽象地取出来的，而是闭开集的交。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.2"
@@ -58125,7 +58143,7 @@
     "闭映射",
     "邻域基"
    ],
-   "statement": "设 $\\pi : Y \\to X$ 是**闭**连续映射，$A \\subseteq X$。则「$A$ 的邻域的原像」\n\n$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\\pi^{-1}(U)$ 全体是\n\n$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\in \\mathcal{N}_{X}(A) \\,$$\n\n构成 $\\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。",
+   "statement": "设 $\\pi : Y \\to X$ 是**闭**连续映射，$A \\subseteq X$。则「$A$ 的邻域的原像」\n\n$U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\\pi^{-1}(U)$ 全体是\n\n$$\\bigl\\{\\, \\pi^{-1}(U) \\;:\\; U \\in \\mathcal{N}_{X}(A) \\, \\bigr\\}$$\n\n构成 $\\pi^{-1}(A)$ 在 $Y$ 中的一个**邻域基**。",
    "notes": "**证明。** 设 $V \\subseteq Y$ 是 $\\pi^{-1}(A)$ 的开邻域。取\n$$U := X \\setminus \\pi(Y \\setminus V).$$\n$\\pi$ **闭**说明 $\\pi(Y\\setminus V)$ 闭，故 $U$ 是开集 ✓。逐条验：\n- **$A \\subseteq U$**：若 $a \\in A$，则 $\\pi^{-1}(a) \\subseteq \\pi^{-1}(A) \\subseteq V$，故 $\\pi^{-1}(a) \\cap (Y\\setminus V) = \\emptyset$，即 $a \\notin \\pi(Y\\setminus V)$，于是 $a \\in U$ ✓；\n\n\n- **$\\pi^{-1}(U) \\subseteq V$**：若 $y \\in \\pi^{-1}(U)$，则 $\\pi(y) \\notin \\pi(Y\\setminus V)$，特别地 $y \\notin Y \\setminus V$，即 $y \\in V$ ✓。\n于是每个 $\\pi^{-1}(A)$ 的开邻域 $V$ 都含着一个形如 $\\pi^{-1}(U)$ 的邻域，即这一族构成邻域基 ✓。∎\n\n⭐ 一句话：**闭映射把「$A$ 的邻域」原样搬成「$\\pi^{-1}(A)$ 的邻域」**。这条在构造延拓时用来把「局部定义域」从 $X$ 抬到 $Y$ 而不丢失信息（延拓定理证明里的标准一步）。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §8.3"
@@ -67199,7 +67217,7 @@
    ],
    "target": "ax.choice",
    "title": "佐恩引理 $\\implies$ 选择公理（路线 $2\\implies1$）",
-   "proof": "设 $\\{A_i\\}_\\{i \\in I\\}$ 是一族非空集合。要对它造出一个选择函数。\n\n**① 舞台：部分选择函数全体**。令\n\n（即：$f$ 是函数，定义域含于 $I$，且在每个 $i$ 上取到 $A_i$ 里的值）\n\n$\\mathcal{F} = \\{ f : \\operatorname{dom} f \\subseteq I, \\forall i \\in \\operatorname{dom} f, f(i) \\in A_i \\}$\n\n按包含关系 $\\subseteq$ 排序。$\\mathcal{F} \\ne \\emptyset$（空函数在 $\\mathcal{F}$ 中），且 $(\\mathcal{F}, \\subseteq )$ 是偏序集。\n\n**② 每个链有上界**：设 $\\mathcal{D} \\subseteq \\mathcal{F}$ 是 $\\subseteq$链，令 $f = \\bigcup \\mathcal{D}$。\n\n$f$ 是函数：若 $(i, a), (i, a') \\in f$，则它们分别属于某个 $f_{1}, f_{2} \\in \\mathcal{D}$；$\\mathcal{D}$ 是链，不妨设 $f_{1} \\subseteq f_{2}$，于是 $(i, a), (i, a') \\in f_{2}$，而 $f_{2}$ 是函数，故 $a = a'$。\n$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _\\{g \\in \\mathcal{D}\\} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。\n$f$ 是 $\\mathcal{D}$ 的上界：$f \\supseteq g$ 对一切 $g \\in \\mathcal{D}$ 成立。\n\n**③ 用佐恩引理**，取 $(\\mathcal{F}, \\subseteq )$ 的极大元 $f$。\n\n**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_\\{i_{0}\\} \\ne \\emptyset$ 取 $a \\in A_\\{i_{0}\\}$，则\n\n$$f' = f \\cup \\{ (i_0, a) \\}$$\n\n仍是 $\\mathcal{F}$ 中的元素（$i_{0} \\notin \\operatorname{dom} f$，不破坏函数性），且 $f \\subset f'$ —— 与 $f$ 的极大性矛盾。故 $\\operatorname{dom} f = I$。\n\n**⑤** 于是 $f : I \\to \\bigcup _\\{i \\in I\\} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎",
+   "proof": "设 $\\{A_i\\}_{i \\in I}$ 是一族非空集合。要对它造出一个选择函数。\n\n**① 舞台：部分选择函数全体**。令\n\n（即：$f$ 是函数，定义域含于 $I$，且在每个 $i$ 上取到 $A_i$ 里的值）\n\n$\\mathcal{F} = \\{ f : \\operatorname{dom} f \\subseteq I, \\forall i \\in \\operatorname{dom} f, f(i) \\in A_i \\}$\n\n按包含关系 $\\subseteq$ 排序。$\\mathcal{F} \\ne \\emptyset$（空函数在 $\\mathcal{F}$ 中），且 $(\\mathcal{F}, \\subseteq )$ 是偏序集。\n\n**② 每个链有上界**：设 $\\mathcal{D} \\subseteq \\mathcal{F}$ 是 $\\subseteq$链，令 $f = \\bigcup \\mathcal{D}$。\n\n$f$ 是函数：若 $(i, a), (i, a') \\in f$，则它们分别属于某个 $f_{1}, f_{2} \\in \\mathcal{D}$；$\\mathcal{D}$ 是链，不妨设 $f_{1} \\subseteq f_{2}$，于是 $(i, a), (i, a') \\in f_{2}$，而 $f_{2}$ 是函数，故 $a = a'$。\n$f \\in \\mathcal{F}$：$\\operatorname{dom} f = \\bigcup _{g \\in \\mathcal{D}} \\operatorname{dom} g \\subseteq I$，且对 $i \\in \\operatorname{dom} f$ 有 $f(i) \\in A_i$。\n$f$ 是 $\\mathcal{D}$ 的上界：$f \\supseteq g$ 对一切 $g \\in \\mathcal{D}$ 成立。\n\n**③ 用佐恩引理**，取 $(\\mathcal{F}, \\subseteq )$ 的极大元 $f$。\n\n**④ 极大元必须「定义在全体 $I$ 上」**：若存在 $i_{0} \\in I \\setminus \\operatorname{dom} f$，由 $A_{i_{0}} \\ne \\emptyset$ 取 $a \\in A_{i_{0}}$，则\n\n$$f' = f \\cup \\{ (i_0, a) \\}$$\n\n仍是 $\\mathcal{F}$ 中的元素（$i_{0} \\notin \\operatorname{dom} f$，不破坏函数性），且 $f \\subset f'$ —— 与 $f$ 的极大性矛盾。故 $\\operatorname{dom} f = I$。\n\n**⑤** 于是 $f : I \\to \\bigcup _{i \\in I} A_i$ 且 $f(i) \\in A_i$ 对一切 $i$ 成立，即 $f$ 是这族集合的选择函数。由族的任意性，AC 成立。∎",
    "note": "「按包含序取极大元，再证明它已经没法再大」—— 这是用佐恩引理造存在性对象的典型手法。"
   },
   {
@@ -67224,11 +67242,11 @@
    "note": "度量空间里「每个开覆盖有有限子覆盖」与「每个序列有收敛子列」是同一件事；两个方向分开证，合起来才是这条等价。",
    "proofs": [
     {
-     "label": "紧 $\\implies$ 列紧",
+     "label": "紧 ⟹ 列紧",
      "text": "设 $\\{x_{n}\\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。\n\n**① 点集 $\\{x_{n} : n \\in \\mathbb{N}\\}$ 是闭的。** 任取 $y$ 不在这个点集中。\n\n若 $y$ 是某个 $x_{n}$，那 $y$ 显然不在余集里；以下设 $y \\notin \\{x_{n}\\}$。\n\n由于 $\\{x_{n}\\}$ 没有收敛子列，$\\{x_{n}\\}$ 中任何子列都不趋于 $y$，于是存在 $\\varepsilon > 0$ 使 $B(y, \\varepsilon )$ 中只含**有限个** $x_{n}$（否则可以挑出趋于 $y$ 的子列）。\n\n删掉这有限多个点，就得到一个含 $y$ 的开球不碰 $\\{x_{n}\\}$。\n\n故余集开，$\\{x_{n}\\}$ 闭。\n\n**② 每个 $x_{n}$ 有一个只含有限多个 $x_{m}$ 的开邻域。** $x_{n}$ 自己也被排除在子列之外，同上可得。\n\n**③ 造一个开覆盖。** 取\n\n$$\\mathcal{U} = \\{ U_n : n \\in \\mathbb{N} \\} \\cup \\{ X \\setminus \\{x_n : n \\in \\mathbb{N}\\} \\}$$\n\n其中 $U_{n}$ 是 ② 中给 $x_{n}$ 的那个邻域（只含有限个 $x_{m}$）。再补上闭集的余集，$\\mathcal{U}$ 就是 $X$ 的开覆盖。\n\n**④ 由紧性取有限子覆盖** $\\mathcal{V} \\subseteq \\mathcal{U}$。\n\n若 $\\mathcal{V}$ 包含那个余集，则没盖住任何 $x_{n}$；\n\n若只含有限个 $U_{n}$，而每个 $U_{n}$ 只含有限个 $x_{m}$，则 $\\mathcal{V}$ 总共只盖住**有限多个** $x_{m}$ —— 与 $\\{x_{n}\\}$ 是无限集矛盾（没有收敛子列迫使它无限）。\n\n故 $\\{x_{n}\\}$ 必有收敛子列，$X$ 列紧。∎\n\n⭐ 只有这一步不需要选择公理。"
     },
     {
-     "label": "列紧 $\\implies$ 紧",
+     "label": "列紧 ⟹ 紧",
      "text": "用**反证 + 一串不断缩小的「坏球」**。设 $X$ 列紧。\n\n**① $X$ 全有界** —— 用另一条箭头「列紧 $\\implies$ 全有界」。\n\n**② 造嵌套的坏球。** 设 $\\mathcal{U}$ 是 $X$ 的开覆盖，且它**没有**有限子覆盖。\n\n由全有界，$X$ 能被有限个半径 1 的开球盖住；其中必有一个球不能被 $\\mathcal{U}$ 的有限多个成员盖住 —— 否则把每个球各自的有限覆盖并起来，就得到 $\\mathcal{U}$ 的一个有限子覆盖。\n\n称这样的球为**坏球**，取一个记作 $B_{1}$。\n\n再把 $B_{1}$ 用有限个半径 1/2 的球盖住（$B_{1} \\subseteq X$，全有界性对它同样管用），其中必有一个坏球 $B_{2} \\subseteq B_{1}$。如此继续，得到\n\n$$B_1 \\supseteq B_2 \\supseteq B_3 \\supseteq \\cdots, \\quad  B_k\\text{ 的半径} \\le 1/k, \\quad \\text{ 每个} B_k\\text{ 都是坏的}$$\n\n（每一步都只是在**有限**多个球里挑一个，可以规定「取编号最小的那个」，所以这里不动用选择公理。）\n\n**③ 取点，得到 Cauchy 列。** 取 $x_{k} \\in B_{k}$。由嵌套与半径趋于 0，对 $m \\le n$ 有 $x_{m}, x_{n} \\in B_{m}$ 而 $B_{m}$ 的半径 $\\le 1/m$，于是\n\n$$d(x_m, x_n) \\le 2/m\\quad  \\implies\\quad  \\{x_k\\}\\text{ 是} Cauchy\\text{ 列}$$\n\n**④** 由列紧它有子列收敛到某点 $x \\in X$；Cauchy 列一旦有收敛子列就整体收敛，故 $x_{k} \\to x$。\n\n**⑤ 收尾。** $x$ 落在某个 $U \\in \\mathcal{U}$ 中。$U$ 开，故存在 $r > 0$ 使 $B(x, r) \\subseteq U$。取 $k$ 充分大，使 $1/k < r/2$ 且 $d(x_{k}, x) < r/2$；则对任意 $y \\in B_{k}$，\n\n$$d(y, x) \\le d(y, x_k) + d(x_k, x) < 1/k + r/2 < r$$\n\n即 $B_{k} \\subseteq B(x, r) \\subseteq U$。于是 $B_{k}$ 被 $\\mathcal{U}$ 的**一个**成员盖住了，与「$B_{k}$ 是坏球」矛盾。\n\n故 $\\mathcal{U}$ 必有有限子覆盖，$X$ 紧。∎\n\n⭐ 「坏球」这一招的直觉是：让一串被架空的小球缩到一个极限点，再用极限点的开邻域一口吞掉它。整段只用全有界，没用选择公理。"
     }
    ]
@@ -67254,7 +67272,7 @@
    ],
    "target": "def.complete",
    "title": "列紧 $\\implies$ 完备",
-   "proof": "设 $X$ 列紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。\n\n**①** 由列紧，$\\{x_{n}\\}$ 有收敛子列 $x_\\{n_{k}\\} \\to x \\in X$。\n\n**② Cauchy 列只要有收敛子列，就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N$ 使 $m, n \\ge N$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n再取 $K$ 使 $k \\ge K$ 时 $n_{k} \\ge N$ 且 $d(x_\\{n_{k}\\}, x) < \\varepsilon /2$。\n\n于是对 $n \\ge N$，取 $k \\ge K$ 使 $n_{k} \\ge N$，得\n\n$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$\n\n故 $x_{n} \\to x$。所以 $X$ 完备。∎",
+   "proof": "设 $X$ 列紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。\n\n**①** 由列紧，$\\{x_{n}\\}$ 有收敛子列 $x_{n_{k}} \\to x \\in X$。\n\n**② Cauchy 列只要有收敛子列，就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N$ 使 $m, n \\ge N$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n再取 $K$ 使 $k \\ge K$ 时 $n_{k} \\ge N$ 且 $d(x_{n_{k}}, x) < \\varepsilon /2$。\n\n于是对 $n \\ge N$，取 $k \\ge K$ 使 $n_{k} \\ge N$，得\n\n$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$\n\n故 $x_{n} \\to x$。所以 $X$ 完备。∎",
    "note": "和「紧 $\\implies$ 完备」是同一个套路，只是把「紧」换成它的直接推论「列紧」。"
   },
   {
@@ -67266,7 +67284,7 @@
    ],
    "target": "def.complete",
    "title": "紧 $\\implies$ 完备",
-   "proof": "设 $X$ 紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。要证它收敛。\n\n**①** 由「紧 $\\implies$ 列紧」（见那条箭头），$\\{x_{n}\\}$ 有收敛子列 $x_\\{n_{k}\\} \\to x \\in X$。\n\n**② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N_{1}$ 使 $m, n \\ge N_{1}$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n取 $K$ 使 $n_{k} \\ge N_{1}$ 且 $d(x_\\{n_{k}\\}, x) < \\varepsilon /2$ 对 $k \\ge K$ 成立。\n\n则对 $n \\ge N_{1}$，取一个 $k \\ge K$ 使 $n_{k} \\ge N_{1}$，得\n\n$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$\n\n故 $x_{n} \\to x \\in X$。所以 $X$ 完备。∎",
+   "proof": "设 $X$ 紧，$\\{x_{n}\\}$ 是 $X$ 中的 Cauchy 列。要证它收敛。\n\n**①** 由「紧 $\\implies$ 列紧」（见那条箭头），$\\{x_{n}\\}$ 有收敛子列 $x_{n_{k}} \\to x \\in X$。\n\n**② Cauchy 列只要有收敛子列就整体收敛到同一个极限**：给定 $\\varepsilon > 0$，取 $N_{1}$ 使 $m, n \\ge N_{1}$ 时 $d(x_{m}, x_{n}) < \\varepsilon /2$；\n\n取 $K$ 使 $n_{k} \\ge N_{1}$ 且 $d(x_{n_{k}}, x) < \\varepsilon /2$ 对 $k \\ge K$ 成立。\n\n则对 $n \\ge N_{1}$，取一个 $k \\ge K$ 使 $n_{k} \\ge N_{1}$，得\n\n$$d(x_n, x) \\le d(x_n, x_{n_k}) + d(x_{n_k}, x) < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon$$\n\n故 $x_{n} \\to x \\in X$。所以 $X$ 完备。∎",
    "note": "关键引理：「Cauchy 列 + 有一个收敛子列 $\\implies$ 收敛」，这在任何度量空间里都对。"
   },
   {
@@ -67291,7 +67309,7 @@
    ],
    "target": "def.sequentially-compact",
    "title": "完备 + 全有界 $\\implies$ 列紧（对角线法）",
-   "proof": "设 $X$ 完备且全有界，$\\{x_{n}\\}$ 是 $X$ 中任一序列。要抽出一个收敛子列。\n\n**① 抽一个「直径越来越小」的子列。** 对 $k = 1, 2, 3$ … 依次操作：由全有界，$X$ 能被有限个半径 1/k 的球盖住，于是**其中一个球含有当前子列中的无穷多项**（抽屉原理：有限个球盖住无穷多项，必有一个球含无穷多项）。把子列限制到这个球里。\n\n这样得到一串子列\n\n$$\\{x_n\\} \\supseteq \\{x^{(1)}_n\\} \\supseteq \\{x^{(2)}_n\\} \\supseteq \\cdots$$\n\n其中第 $k$ 个子列的项全部落在某个半径 1/k 的球内，因此它任意两项的距离 $< 2/k$。\n\n**② 对角线。** 取 $y_{k} = x^\\{(k)\\}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\\{y_{k}\\}$ 是 $\\{x_{n}\\}$ 的子列；且对 $k, l \\ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\\ge K$ 的项都在里面），故\n\n$$d(y_k, y_l) < 2/K$$\n\n于是 $\\{y_{k}\\}$ 是 Cauchy 列。\n\n**③** 由 $X$ 完备，$\\{y_{k}\\}$ 收敛。于是 $\\{x_{n}\\}$ 有收敛子列，$X$ 列紧。∎",
+   "proof": "设 $X$ 完备且全有界，$\\{x_{n}\\}$ 是 $X$ 中任一序列。要抽出一个收敛子列。\n\n**① 抽一个「直径越来越小」的子列。** 对 $k = 1, 2, 3$ … 依次操作：由全有界，$X$ 能被有限个半径 1/k 的球盖住，于是**其中一个球含有当前子列中的无穷多项**（抽屉原理：有限个球盖住无穷多项，必有一个球含无穷多项）。把子列限制到这个球里。\n\n这样得到一串子列\n\n$$\\{x_n\\} \\supseteq \\{x^{(1)}_n\\} \\supseteq \\{x^{(2)}_n\\} \\supseteq \\cdots$$\n\n其中第 $k$ 个子列的项全部落在某个半径 1/k 的球内，因此它任意两项的距离 $< 2/k$。\n\n**② 对角线。** 取 $y_{k} = x^{(k)}_{k}$（第 $k$ 个子列的第 $k$ 项）。则 $\\{y_{k}\\}$ 是 $\\{x_{n}\\}$ 的子列；且对 $k, l \\ge K$，$y_{k}$ 与 $y_{l}$ 都是第 $K$ 个子列的项（下标 $\\ge K$ 的项都在里面），故\n\n$$d(y_k, y_l) < 2/K$$\n\n于是 $\\{y_{k}\\}$ 是 Cauchy 列。\n\n**③** 由 $X$ 完备，$\\{y_{k}\\}$ 收敛。于是 $\\{x_{n}\\}$ 有收敛子列，$X$ 列紧。∎",
    "note": "① 里「无穷多项落进某一个球」用到抽屉原理（有限情形，不需要选择）。② 的对角线抽取也不需要选择 —— 所有选取都由「取第 $k$ 个子列的第 $k$ 项」唯一确定。"
   },
   {
@@ -67540,7 +67558,7 @@
    ],
    "target": "prop.measure-basic",
    "title": "测度 $\\implies$ 单调 / 次可加 / 上下连续",
-   "proof": "设 $\\mu$ 是测度。\n\n**(a) 单调。** 设 $E \\subseteq F$。则 $F = E \\cup (F \\setminus E)$，两项不交，故 $\\mu (F) = \\mu (E) + \\mu (F \\setminus E) \\ge \\mu (E)$（取值非负）。\n\n**(b) 次可加。** 令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $F_{j}$ 两两不交、$\\bigcup F_{j} = \\bigcup E_{j}$ 且 $F_{j} \\subseteq E_{j}$。由可数可加与 (a)，\n\n$$\\mu(\\bigcup_j E_j) = \\mu(\\bigcup_j F_j) = \\sum_j \\mu(F_j) \\le \\sum_j \\mu(E_j)$$\n\n**(c) 下连续。** 设 $E_{1} \\subseteq E_{2} \\subseteq \\cdots$。\n\n令 $A_{1} = E_{1}$，$A_{j} = E_{j} \\setminus E_\\{j-1\\}$（$j \\ge 2$），则 $A_{j}$ 两两不交且 $\\bigcup A_{j} = \\bigcup E_{j}$。\n\n由可数可加，\n\n$$\\mu(\\bigcup_j E_j) = \\sum_j \\mu(A_j) = \\lim_{n\\to\\infty} \\sum_{j=1}^{n} \\mu(A_j) = \\lim_{n\\to\\infty} \\mu(E_n)$$\n\n**(d) 上连续。** 设 $E_{1} \\supseteq E_{2} \\supseteq \\cdots$ 且 $\\mu (E_{1}) < \\infty$。\n\n令 $F_{j} = E_{1} \\setminus E_{j}$，则 $F_{1} \\subseteq F_{2} \\subseteq \\cdots$ 且 $\\bigcup F_{j} = E_{1} \\setminus \\bigcap E_{j}$。\n\n由 (c) 与 (a)，\n\n$$\\mu(E_1) - \\mu(\\bigcap_j E_j) = \\mu(E_1 \\setminus \\bigcap_j E_j) = \\lim_j \\mu(F_j) = \\lim_j ( \\mu(E_1) - \\mu(E_j) )$$\n\n因为 $\\mu (E_{1}) < \\infty$ 是个有限数，可以从两边同时减掉，得 $\\mu (\\bigcap E_{j}) = \\lim \\mu (E_{j})$。∎\n\n$>$ ⚠ (d) 里的「$\\mu (E_{1}) < \\infty$」正是为了让 $\\mu (E_{1})$ 能被减掉。没有它，等式会退化成 $\\infty = \\infty$。",
+   "proof": "设 $\\mu$ 是测度。\n\n**(a) 单调。** 设 $E \\subseteq F$。则 $F = E \\cup (F \\setminus E)$，两项不交，故 $\\mu (F) = \\mu (E) + \\mu (F \\setminus E) \\ge \\mu (E)$（取值非负）。\n\n**(b) 次可加。** 令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $F_{j}$ 两两不交、$\\bigcup F_{j} = \\bigcup E_{j}$ 且 $F_{j} \\subseteq E_{j}$。由可数可加与 (a)，\n\n$$\\mu(\\bigcup_j E_j) = \\mu(\\bigcup_j F_j) = \\sum_j \\mu(F_j) \\le \\sum_j \\mu(E_j)$$\n\n**(c) 下连续。** 设 $E_{1} \\subseteq E_{2} \\subseteq \\cdots$。\n\n令 $A_{1} = E_{1}$，$A_{j} = E_{j} \\setminus E_{j-1}$（$j \\ge 2$），则 $A_{j}$ 两两不交且 $\\bigcup A_{j} = \\bigcup E_{j}$。\n\n由可数可加，\n\n$$\\mu(\\bigcup_j E_j) = \\sum_j \\mu(A_j) = \\lim_{n\\to\\infty} \\sum_{j=1}^{n} \\mu(A_j) = \\lim_{n\\to\\infty} \\mu(E_n)$$\n\n**(d) 上连续。** 设 $E_{1} \\supseteq E_{2} \\supseteq \\cdots$ 且 $\\mu (E_{1}) < \\infty$。\n\n令 $F_{j} = E_{1} \\setminus E_{j}$，则 $F_{1} \\subseteq F_{2} \\subseteq \\cdots$ 且 $\\bigcup F_{j} = E_{1} \\setminus \\bigcap E_{j}$。\n\n由 (c) 与 (a)，\n\n$$\\mu(E_1) - \\mu(\\bigcap_j E_j) = \\mu(E_1 \\setminus \\bigcap_j E_j) = \\lim_j \\mu(F_j) = \\lim_j ( \\mu(E_1) - \\mu(E_j) )$$\n\n因为 $\\mu (E_{1}) < \\infty$ 是个有限数，可以从两边同时减掉，得 $\\mu (\\bigcap E_{j}) = \\lim \\mu (E_{j})$。∎\n\n$>$ ⚠ (d) 里的「$\\mu (E_{1}) < \\infty$」正是为了让 $\\mu (E_{1})$ 能被减掉。没有它，等式会退化成 $\\infty = \\infty$。",
    "note": ""
   },
   {
@@ -67552,7 +67570,7 @@
    ],
    "target": "prop.outer-measure-induced",
    "title": "预测度 $\\implies$ 诱导的外测度",
-   "proof": "设 $\\mathfrak{A}$ 是代数，$\\mu _{0}$ 是 $\\mathfrak{A}$ 上的预测度。对 $A \\subseteq X$ 令\n\n$$\\mu^*(A) = \\inf \\{ \\sum_j \\mu_0(E_j) : E_j \\in \\mathfrak{A}, A \\subseteq \\bigcup_j E_j \\}$$\n\n**① 定义合理**：$A \\subseteq X$ 且 $X \\in \\mathfrak{A}$，所以总有覆盖，inf 是对非空集合取。\n\n**② $\\mu^{*}(\\emptyset ) = 0$**：取 $E_{1} = \\emptyset$、$E_{2} = E_{3} = \\cdots = \\emptyset$，则 $\\sum \\mu _{0}(E_{j}) = 0$，故 $0 \\le \\mu^{*}(\\emptyset ) \\le 0$。\n\n**③ 单调**：$A \\subseteq B$ 时，$B$ 的每个覆盖也是 $A$ 的覆盖，故 $A$ 的下确界集合更大，$\\mu^{*}(A) \\le \\mu^{*}$(B)。\n\n**④ 可数次可加**：设 $A_{j} \\subseteq X$。若某个 $\\mu^{*}(A_{j}) = \\infty$ 则不等式平凡；否则给定 $\\varepsilon > 0$，对每个 $j$ 取 $\\mathfrak{A}$ 中的覆盖 $\\{E_\\{j,k\\}\\}_{k}$ 使\n\n$$\\sum_k \\mu_0(E_{j,k}) < \\mu^*(A_j) + (\\varepsilon/2)^j$$\n\n把 {E_{j,k}}_{j,k} 按 (j, k) 之外再用双射排成一列（可数个可数集之并仍可数），它是 $\\bigcup _{j} A_{j}$ 的一个覆盖，于是\n\n$$\\mu^*(\\bigcup_j A_j) \\le \\sum_{j,k} \\mu_0(E_{j,k}) \\le \\sum_j \\mu^*(A_j) + \\varepsilon$$\n\n令 $\\varepsilon \\to 0$ 即得。∎\n\n$>$ ⚠ ④ 的每一步都只需取**一个**覆盖 —— 这用的是 $\\mathbb{N}$ 上的可数选择（可以从自然数的良序性显式给出），不需要完整的 AC。",
+   "proof": "设 $\\mathfrak{A}$ 是代数，$\\mu _{0}$ 是 $\\mathfrak{A}$ 上的预测度。对 $A \\subseteq X$ 令\n\n$$\\mu^*(A) = \\inf \\{ \\sum_j \\mu_0(E_j) : E_j \\in \\mathfrak{A}, A \\subseteq \\bigcup_j E_j \\}$$\n\n**① 定义合理**：$A \\subseteq X$ 且 $X \\in \\mathfrak{A}$，所以总有覆盖，inf 是对非空集合取。\n\n**② $\\mu^{*}(\\emptyset ) = 0$**：取 $E_{1} = \\emptyset$、$E_{2} = E_{3} = \\cdots = \\emptyset$，则 $\\sum \\mu _{0}(E_{j}) = 0$，故 $0 \\le \\mu^{*}(\\emptyset ) \\le 0$。\n\n**③ 单调**：$A \\subseteq B$ 时，$B$ 的每个覆盖也是 $A$ 的覆盖，故 $A$ 的下确界集合更大，$\\mu^{*}(A) \\le \\mu^{*}$(B)。\n\n**④ 可数次可加**：设 $A_{j} \\subseteq X$。若某个 $\\mu^{*}(A_{j}) = \\infty$ 则不等式平凡；否则给定 $\\varepsilon > 0$，对每个 $j$ 取 $\\mathfrak{A}$ 中的覆盖 $\\{E_{j,k}\\}_{k}$ 使\n\n$$\\sum_k \\mu_0(E_{j,k}) < \\mu^*(A_j) + (\\varepsilon/2)^j$$\n\n把 {E_{j,k}}_{j,k} 按 (j, k) 之外再用双射排成一列（可数个可数集之并仍可数），它是 $\\bigcup _{j} A_{j}$ 的一个覆盖，于是\n\n$$\\mu^*(\\bigcup_j A_j) \\le \\sum_{j,k} \\mu_0(E_{j,k}) \\le \\sum_j \\mu^*(A_j) + \\varepsilon$$\n\n令 $\\varepsilon \\to 0$ 即得。∎\n\n$>$ ⚠ ④ 的每一步都只需取**一个**覆盖 —— 这用的是 $\\mathbb{N}$ 上的可数选择（可以从自然数的良序性显式给出），不需要完整的 AC。",
    "note": ""
   },
   {
@@ -67578,7 +67596,7 @@
    ],
    "target": "prop.caratheodory-extension",
    "title": "Carathéodory + 预测度 $\\implies$ 原代数上的值不变",
-   "proof": "设 $\\mathfrak{A}$ 是代数，$\\mu _{0}$ 是 $\\mathfrak{A}$ 上的预测度，$\\mu^{*}$ 是由 $\\mu _{0}$ 诱导的外测度，$\\mathcal{M}$ 是全体 $\\mu^{*}$-可测集。\n\n**① $\\mu^{*}|_\\mathfrak{A} \\le \\mu _{0}$。** 取 $A \\in \\mathfrak{A}$，则 $A \\subseteq A$ 是一个（只含一层的）覆盖，故\n\n$$\\mu^*(A) \\le \\mu_0(A) + 0 + 0 + \\cdots = \\mu_0(A)$$\n\n**② $\\mu^{*}|_\\mathfrak{A} \\ge \\mu _{0}$。** 设 $\\{E_{j}\\} \\subseteq \\mathfrak{A}$ 是 $A$ 的覆盖。\n\n令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_\\{j-1\\})$，则 $F_{j} \\in \\mathfrak{A}$ 两两不交且 $\\bigcup F_{j} \\supseteq A$、$F_{j} \\subseteq E_{j}$。\n\n于是\n\n$$\\mu_0(A) = \\mu_0( \\bigcup_j (A \\cap F_j) ) = \\sum_j \\mu_0(A \\cap F_j) \\le \\sum_j \\mu_0(F_j) \\le \\sum_j \\mu_0(E_j)$$\n\n（第一个等号用 $A$ 是那些不交集合之并；第二个用 $\\mu _{0}$ 可数可加；不等号用单调性。）对所有覆盖取下确界得 $\\mu _{0}(A) \\le \\mu^{*}$(A)。\n\n**③ $\\mathfrak{A} \\subseteq \\mathcal{M}$。** 设 $A \\in \\mathfrak{A}$，$E \\subseteq X$，要证 $\\mu^{*}(E) \\ge \\mu^{*}(E\\cap A) + \\mu^{*}(E\\cap A^{c})$。\n\n给定 $\\varepsilon > 0$，取 $\\mathfrak{A}$ 中 $\\{E_{j}\\}$ 覆盖 $E$ 使\n\n$$\\sum_j \\mu_0(E_j) < \\mu^*(E) + \\varepsilon$$\n\n由 ②，$\\mu _{0}(E_{j}) = \\mu^{*}(E_{j})$；又 $\\mathfrak{A}$ 是代数，$E_{j} \\cap A$ 与 $E_{j} \\cap A^{c}$ 都在 $\\mathfrak{A}$ 中且不交、并为 $E_{j}$，于是\n\n$$\\mu^*(E \\cap A) + \\mu^*(E \\cap A^c) \\le \\sum_j \\mu_0(E_j \\cap A) + \\sum_j \\mu_0(E_j \\cap A^c) = \\sum_j \\mu_0(E_j) < \\mu^*(E) + \\varepsilon$$\n\n令 $\\varepsilon \\to 0$ 即得。\n\n所以 $\\mathfrak{A} \\subseteq \\mathcal{M}$；而 $\\mathcal{M}$ 是 $\\sigma$代数（Carathéodory），故 $\\mathcal{M}(\\mathfrak{A}) \\subseteq \\mathcal{M}$。\n\n∎",
+   "proof": "设 $\\mathfrak{A}$ 是代数，$\\mu _{0}$ 是 $\\mathfrak{A}$ 上的预测度，$\\mu^{*}$ 是由 $\\mu _{0}$ 诱导的外测度，$\\mathcal{M}$ 是全体 $\\mu^{*}$-可测集。\n\n**① $\\mu^{*}|_\\mathfrak{A} \\le \\mu _{0}$。** 取 $A \\in \\mathfrak{A}$，则 $A \\subseteq A$ 是一个（只含一层的）覆盖，故\n\n$$\\mu^*(A) \\le \\mu_0(A) + 0 + 0 + \\cdots = \\mu_0(A)$$\n\n**② $\\mu^{*}|_\\mathfrak{A} \\ge \\mu _{0}$。** 设 $\\{E_{j}\\} \\subseteq \\mathfrak{A}$ 是 $A$ 的覆盖。\n\n令 $F_{j} = E_{j} \\setminus (E_{1} \\cup \\cdots \\cup E_{j-1})$，则 $F_{j} \\in \\mathfrak{A}$ 两两不交且 $\\bigcup F_{j} \\supseteq A$、$F_{j} \\subseteq E_{j}$。\n\n于是\n\n$$\\mu_0(A) = \\mu_0( \\bigcup_j (A \\cap F_j) ) = \\sum_j \\mu_0(A \\cap F_j) \\le \\sum_j \\mu_0(F_j) \\le \\sum_j \\mu_0(E_j)$$\n\n（第一个等号用 $A$ 是那些不交集合之并；第二个用 $\\mu _{0}$ 可数可加；不等号用单调性。）对所有覆盖取下确界得 $\\mu _{0}(A) \\le \\mu^{*}$(A)。\n\n**③ $\\mathfrak{A} \\subseteq \\mathcal{M}$。** 设 $A \\in \\mathfrak{A}$，$E \\subseteq X$，要证 $\\mu^{*}(E) \\ge \\mu^{*}(E\\cap A) + \\mu^{*}(E\\cap A^{c})$。\n\n给定 $\\varepsilon > 0$，取 $\\mathfrak{A}$ 中 $\\{E_{j}\\}$ 覆盖 $E$ 使\n\n$$\\sum_j \\mu_0(E_j) < \\mu^*(E) + \\varepsilon$$\n\n由 ②，$\\mu _{0}(E_{j}) = \\mu^{*}(E_{j})$；又 $\\mathfrak{A}$ 是代数，$E_{j} \\cap A$ 与 $E_{j} \\cap A^{c}$ 都在 $\\mathfrak{A}$ 中且不交、并为 $E_{j}$，于是\n\n$$\\mu^*(E \\cap A) + \\mu^*(E \\cap A^c) \\le \\sum_j \\mu_0(E_j \\cap A) + \\sum_j \\mu_0(E_j \\cap A^c) = \\sum_j \\mu_0(E_j) < \\mu^*(E) + \\varepsilon$$\n\n令 $\\varepsilon \\to 0$ 即得。\n\n所以 $\\mathfrak{A} \\subseteq \\mathcal{M}$；而 $\\mathcal{M}$ 是 $\\sigma$代数（Carathéodory），故 $\\mathcal{M}(\\mathfrak{A}) \\subseteq \\mathcal{M}$。\n\n∎",
    "note": ""
   },
   {
@@ -68377,7 +68395,7 @@
     },
     {
      "label": "证法二：外代数（⋀ⁿV ≅ K，几行读完）",
-     "text": "\\u8BBE $\\dim V = n$\\u3002\\u5916\\u5E42 $\\bigwedge^{n} V$ \\u662F\\u4E00\\u7EF4\\u7684\\uFF0C\\u4E14 $v_{1} \\wedge \\cdots \\wedge v_{n} = 0$ \\u5F53\\u4E14\\u4EC5\\u5F53 $v_{1}, \\ldots, v_{n}$ \\u7EBF\\u6027\\u76F8\\u5173\\u3002\n\n\\u4E8E\\u662F\\u53EF\\u4EE5\\u7528\\u5B83**\\u5B9A\\u4E49** $D(v_{1}, \\ldots, v_{n})$\\uFF1A$v_{1} \\wedge \\cdots \\wedge v_{n} = D(v_{1}, \\ldots, v_{n})\\, e_{1} \\wedge \\cdots \\wedge e_{n}$\\u3002\n\n\\u4E09\\u6761\\u516C\\u7406\\u5404\\u81EA\\u514D\\u8D39\\uFF1A**\\u591A\\u91CD\\u7EBF\\u6027**\\u6765\\u81EA $\\wedge$ \\u5BF9\\u6BCF\\u4E2A\\u53D8\\u5143\\u7EBF\\u6027\\uFF1B**\\u4EA4\\u9519\\u6027**\\u6765\\u81EA $v \\wedge v = 0$\\uFF08\\u5546\\u7A7A\\u95F4\\u6784\\u9020\\u91CC\\u76F4\\u63A5\\u6740\\u6389\\u7684\\uFF09\\uFF1B**\\u89C4\\u8303\\u6027**\\u6765\\u81EA $e_{1} \\wedge \\cdots \\wedge e_{n}$ \\u53D6\\u4F5C\\u57FA\\u3001\\u7CFB\\u6570\\u5B9A\\u4E3A $1$\\u3002\n\n**\\u552F\\u4E00\\u6027**\\u4E5F\\u662F\\u514D\\u8D39\\u7684\\uFF1A\\u4E00\\u7EF4\\u7A7A\\u95F4\\u4E0A\\u7684\\u7EBF\\u6027\\u6620\\u5C04\\u53EA\\u80FD\\u4E58\\u4E00\\u4E2A\\u6570\\uFF0C\\u800C\\u90A3\\u4E2A\\u6570\\u88AB $D(e_{1}, \\ldots, e_{n}) = 1$ \\u9489\\u6B7B\\u3002\\u220E\n\n\\u2B50 \\u4E24\\u79CD\\u8BC1\\u6CD5\\u5206\\u5DE5\\u4E0D\\u540C\\uFF1ALeibniz \\u90A3\\u4E00\\u8DEF\\u7ED9\\u51FA**\\u663E\\u5F0F\\u516C\\u5F0F**\\uFF08\\u80FD\\u7B97\\uFF09\\uFF0C\\u5916\\u4EE3\\u6570\\u8FD9\\u4E00\\u8DEF\\u7ED9\\u51FA**\\u4E3A\\u4EC0\\u4E48\\u975E\\u8FD9\\u6837\\u4E0D\\u53EF**\\uFF08$\\bigwedge^{n}V$ \\u4E00\\u7EF4\\u8FD9\\u4EF6\\u4E8B\\u672C\\u8EAB\\u5C31\\u8BF4\\u660E\\u4E86\\uFF09\\u3002\n\n\\u26A0 \\u8FD9\\u4E00\\u8DEF\\u4F9D\\u8D56\\u5916\\u5E42\\uFF08\\`def.exterior-power\\`\\uFF09\\uFF1A\\u672C\\u56FE\\u90A3\\u6761\\u94FE\\u662F \\`imp.det-as-exterior\\`\\uFF0C\\u5B83\\u4ECE\\u672C\\u6761\\u51FA\\u53D1\\u8BB2\\u5916\\u79EF \\u2014\\u2014 \\u6240\\u4EE5\\u8FD9\\u91CC\\u53EA\\u8BB0\\u601D\\u8DEF\\uFF0C\\u4E0D\\u58F0\\u79F0\\u300C\\u4E0D\\u4F9D\\u8D56\\u884C\\u5217\\u5F0F\\u300D\\u3002"
+     "text": "设 $\\dim V = n$。外幂 $\\bigwedge^{n} V$ 是一维的，且 $v_{1} \\wedge \\cdots \\wedge v_{n} = 0$ 当且仅当 $v_{1}, \\ldots, v_{n}$ 线性相关。\n\n于是可以用它**定义** $D(v_{1}, \\ldots, v_{n})$：$v_{1} \\wedge \\cdots \\wedge v_{n} = D(v_{1}, \\ldots, v_{n})\\, e_{1} \\wedge \\cdots \\wedge e_{n}$。\n\n三条公理各自免费：**多重线性**来自 $\\wedge$ 对每个变元线性；**交错性**来自 $v \\wedge v = 0$（商空间构造里直接杀掉的）；**规范性**来自 $e_{1} \\wedge \\cdots \\wedge e_{n}$ 取作基、系数定为 $1$。\n\n**唯一性**也是免费的：一维空间上的线性映射只能乘一个数，而那个数被 $D(e_{1}, \\ldots, e_{n}) = 1$ 钉死。∎\n\n⭐ 两种证法分工不同：Leibniz 那一路给出**显式公式**（能算），外代数这一路给出**为什么非这样不可**（$\\bigwedge^{n}V$ 一维这件事本身就说明了）。\n\n⚠ 这一路依赖外幂（\\`def.exterior-power\\`）：本图那条链是 \\`imp.det-as-exterior\\`，它从本条出发讲外积 —— 所以这里只记思路，不声称「不依赖行列式」。"
     }
    ]
   },
@@ -70701,7 +70719,7 @@
    ],
    "target": "prop.product-incomplete",
    "title": "乘积测度通常不完备",
-   "proof": "取 $X = Y = [0, 1]$，$\\mu = \\nu = Lebesgue$ 测度（都是完备的）。令\n\n$$D = \\{(x, x) : x \\in [0, 1]\\}$$\n\n则 $D$ 是闭集，故属于 $\\mathfrak{B}_{[0,1]} \\otimes  \\mathfrak{B}_{[0,1]}$；且 $\\mu \\times \\nu(D)$ 可以用截口公式算：对每个 $x$，$\\nu(D_x) = \\nu(\\{x\\}) = 0$，故\n\n$$\\mu \\times \\nu(D) = \\int \\nu(D_x) d\\mu(x) = 0$$\n\n**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\\mathfrak{B}_\\{[0,1]\\}$）的子集 $N \\subseteq [0,1]$，令\n\n$$G = \\{(x, x) : x \\in N\\} \\subseteq D$$\n\n则 $G \\subseteq D$ 而 $\\mu \\times \\nu (D) = 0$，但 $G$ **不属于** $\\mathfrak{B} \\otimes  \\mathfrak{B}$（它的截口给出的正是 $N$ —— 若 $G \\in \\mathfrak{B} \\otimes  \\mathfrak{B}$，由截口可测性，对每个 $x$ 都有 $G_x \\in \\mathfrak{B}$，而 $G_x$ 是 {x} 或 $\\emptyset$ …… 需要用「$G$ 的截面沿对角线还原出 $N$」这一论证）。\n\n故 $\\mu \\times \\nu$ 不完备。\n\n∎\n\n$>$ ⭐ 一句话总结：**完备性可以被「零集的子集」打破，而乘积里零集特别多**。所以实用时必须先完备化 —— 这就是上一条定理存在的理由。",
+   "proof": "取 $X = Y = [0, 1]$，$\\mu = \\nu = Lebesgue$ 测度（都是完备的）。令\n\n$$D = \\{(x, x) : x \\in [0, 1]\\}$$\n\n则 $D$ 是闭集，故属于 $\\mathfrak{B}_{[0,1]} \\otimes  \\mathfrak{B}_{[0,1]}$；且 $\\mu \\times \\nu(D)$ 可以用截口公式算：对每个 $x$，$\\nu(D_x) = \\nu(\\{x\\}) = 0$，故\n\n$$\\mu \\times \\nu(D) = \\int \\nu(D_x) d\\mu(x) = 0$$\n\n**关键**：取一个 Lebesgue 测度为 0 但**不可测**（不属 $\\mathfrak{B}_{[0,1]}$）的子集 $N \\subseteq [0,1]$，令\n\n$$G = \\{(x, x) : x \\in N\\} \\subseteq D$$\n\n则 $G \\subseteq D$ 而 $\\mu \\times \\nu (D) = 0$，但 $G$ **不属于** $\\mathfrak{B} \\otimes  \\mathfrak{B}$（它的截口给出的正是 $N$ —— 若 $G \\in \\mathfrak{B} \\otimes  \\mathfrak{B}$，由截口可测性，对每个 $x$ 都有 $G_x \\in \\mathfrak{B}$，而 $G_x$ 是 {x} 或 $\\emptyset$ …… 需要用「$G$ 的截面沿对角线还原出 $N$」这一论证）。\n\n故 $\\mu \\times \\nu$ 不完备。\n\n∎\n\n$>$ ⭐ 一句话总结：**完备性可以被「零集的子集」打破，而乘积里零集特别多**。所以实用时必须先完备化 —— 这就是上一条定理存在的理由。",
    "note": "⚠ 「$G \\notin \\mathfrak{B} \\otimes \\mathfrak{B}$」那一步的细节（如何从截面还原出 $N$）这里只给了骨架；要写严格版，建议改用「对角线论证 + Fubini 定理给矛盾」的路线。"
   },
   {
@@ -74762,7 +74780,7 @@
    ],
    "target": "lem.goursat-triangle",
    "title": "全纯 + 围道积分 $\\implies$ 三角形上的积分为零",
-   "proof": "设 $T$ 是 $\\Omega$ 内的闭三角形，$\\eta=\\oint_{\\partial T} f\\,\\mathrm{d}z$。把 $T$ 的四条边中点连起来，分成四个全等的小三角形 $T_1,\\ldots,T_4$；沿内部边界的积分两两抵消，故\n\n$$\\eta=\\sum_{j=1}^{4}\\eta_j,\\qquad \\eta_j=\\oint_{\\partial T_j}f\\,\\mathrm{d}z.$$\n\n于是有某个 $j$ 使 $|\\eta_j|\\ge|\\eta|/4$。取 $T^{(1)}=T_j$，重复这一分法，得到嵌套的闭三角形 $T\\supset T^{(1)}\\supset T^{(2)}\\supset\\cdots$，满足\n\n$$|\\eta|\\le 4^{n}\\,|\\eta_n|,\\qquad \\eta_n=\\oint_{\\partial T^{(n)}}f\\,\\mathrm{d}z.$$\n\n它们的直径按 $2^{-n}$ 收缩，故交集是唯一一点 $z_0\\in T$。$f$ 在 $z_0$ 复可微：对任意 $\\varepsilon>0$，当 $|z-z_0|$ 足够小时\n\n$$f(z)=f(z_0)+f'(z_0)(z-z_0)+\\rho(z),\\qquad |\\rho(z)|\\le\\varepsilon\\,|z-z_0|.$$\n\n线性函数 $f(z_0)+f'(z_0)(z-z_0)$ 有原函数，沿闭曲线积分为零，因此\n\n$$\\eta_n=\\oint_{\\partial T^{(n)}}\\rho(z)\\,\\mathrm{d}z.$$\n\n在 $\\partial T^{(n)}$ 上 $|z-z_0|\\le \\operatorname{diam}T^{(n)}=2^{-n}\\operatorname{diam}T$，且周长 $\\le 2^{-n}\\operatorname{perim}T$，由 ML 估计\n\n$$|\\eta_n|\\le \\varepsilon\\cdot 2^{-n}\\operatorname{diam}T\\cdot 2^{-n}\\operatorname{perim}T.$$\n\n代回得 $|\\eta|\\le 4^{n}\\cdot\\varepsilon\\,4^{-n}\\operatorname{diam}T\\operatorname{perim}T=\\varepsilon\\operatorname{diam}T\\operatorname{perim}T$。\n\n$\\varepsilon$ 任意，故 $\\eta=0$。\n\n$\\blacksquare$",
+   "proof": "设 $T$ 是 $\\Omega$ 内的闭三角形，$\\eta=\\oint_{\\partial T} f\\,\\mathrm{d}z$。把 $T$ 的三条边中点连起来，分成四个全等的小三角形 $T_1,\\ldots,T_4$；沿内部边界的积分两两抵消，故\n\n$$\\eta=\\sum_{j=1}^{4}\\eta_j,\\qquad \\eta_j=\\oint_{\\partial T_j}f\\,\\mathrm{d}z.$$\n\n于是有某个 $j$ 使 $|\\eta_j|\\ge|\\eta|/4$。取 $T^{(1)}=T_j$，重复这一分法，得到嵌套的闭三角形 $T\\supset T^{(1)}\\supset T^{(2)}\\supset\\cdots$，满足\n\n$$|\\eta|\\le 4^{n}\\,|\\eta_n|,\\qquad \\eta_n=\\oint_{\\partial T^{(n)}}f\\,\\mathrm{d}z.$$\n\n它们的直径按 $2^{-n}$ 收缩，故交集是唯一一点 $z_0\\in T$。$f$ 在 $z_0$ 复可微：对任意 $\\varepsilon>0$，当 $|z-z_0|$ 足够小时\n\n$$f(z)=f(z_0)+f'(z_0)(z-z_0)+\\rho(z),\\qquad |\\rho(z)|\\le\\varepsilon\\,|z-z_0|.$$\n\n线性函数 $f(z_0)+f'(z_0)(z-z_0)$ 有原函数，沿闭曲线积分为零，因此\n\n$$\\eta_n=\\oint_{\\partial T^{(n)}}\\rho(z)\\,\\mathrm{d}z.$$\n\n在 $\\partial T^{(n)}$ 上 $|z-z_0|\\le \\operatorname{diam}T^{(n)}=2^{-n}\\operatorname{diam}T$，且周长 $\\le 2^{-n}\\operatorname{perim}T$，由 ML 估计\n\n$$|\\eta_n|\\le \\varepsilon\\cdot 2^{-n}\\operatorname{diam}T\\cdot 2^{-n}\\operatorname{perim}T.$$\n\n代回得 $|\\eta|\\le 4^{n}\\cdot\\varepsilon\\,4^{-n}\\operatorname{diam}T\\operatorname{perim}T=\\varepsilon\\operatorname{diam}T\\operatorname{perim}T$。\n\n$\\varepsilon$ 任意，故 $\\eta=0$。\n\n$\\blacksquare$",
    "note": "二分法只用「$f$ 复可微」，不需要 $f'$ 连续 —— 这正是 Goursat 对 Cauchy 的改进。"
   },
   {
@@ -74775,7 +74793,7 @@
    ],
    "target": "thm.morera",
    "title": "连续 + 沿闭三角形积分为零 $\\implies$ 全纯",
-   "proof": "在 $\\Omega$ 内任取一个圆盘 $B(a, r) \\subset \\Omega$，只要在圆盘上造出原函数就够（全纯是局部性质）。\n\n**第一步：沿折线的积分与路径无关。** 对 $z = x + iy \\in B(a, r)$，取 $a = x_0 + i y_0$，沿「先水平后竖直」的折线定义\n\n$$F(z) := \\int_{x_0}^{x} f(t + i y_0)\\,\\mathrm{d}t + \\int_{y_0}^{y} f(x + i t)\\,\\mathrm{d}t.$$\n\n要说明它与折线的具体走法无关：两条从 $a$ 到 $z$ 的折线围成一个多边形，把多边形三角剖分，每个三角形的边界积分都是零（假设），内部边两两抵消，故两条折线的积分相等。（这就是「矩形假设」的用处：矩形沿对角线分成两个三角形。）\n\n**第二步：$F' = f$。** 沿水平方向把终点挪 $h$（$h$ 为实数）：\n\n$$F(z + h) - F(z) = \\int_{x}^{x + h} f(t + i y)\\,\\mathrm{d}t,$$\n\n除以 $h$ 后用 $f$ 的**连续性**：$\\dfrac{1}{h}\\displaystyle\\int_x^{x+h} f(t + iy)\\,\\mathrm{d}t \\to f(x + iy) = f(z)$（$h \\to 0$）。竖直方向同理。所以 $F$ 在 $B(a, r)$ 内复可微且 $F' = f$。\n\n**第三步：$f$ 全纯。** $F$ 全纯 $\\implies$ $F$ 无穷次可微（Taylor 展开）$\\implies$ $F' = f$ 也全纯，且 $f$ 在该点有 Taylor 展开。圆盘任取，故 $f$ 在 $\\Omega$ 上全纯。$\\blacksquare$",
+   "proof": "在 $\\Omega$ 内任取一个圆盘 $B(a, r) \\subset \\Omega$，只要在圆盘上造出原函数就够（全纯是局部性质）。\n\n**第一步：沿折线的积分与路径无关。** 对 $z = x + iy \\in B(a, r)$，取 $a = x_0 + i y_0$，沿「先水平后竖直」的折线定义\n\n$$F(z) := \\int_{x_0}^{x} f(t + i y_0)\\,\\mathrm{d}t + i\\int_{y_0}^{y} f(x + i t)\\,\\mathrm{d}t.$$\n\n要说明它与折线的具体走法无关：两条从 $a$ 到 $z$ 的折线围成一个多边形，把多边形三角剖分，每个三角形的边界积分都是零（假设），内部边两两抵消，故两条折线的积分相等。（这就是「矩形假设」的用处：矩形沿对角线分成两个三角形。）\n\n**第二步：$F' = f$。** 沿水平方向把终点挪 $h$（$h$ 为实数）：\n\n$$F(z + h) - F(z) = \\int_{x}^{x + h} f(t + i y)\\,\\mathrm{d}t,$$\n\n除以 $h$ 后用 $f$ 的**连续性**：$\\dfrac{1}{h}\\displaystyle\\int_x^{x+h} f(t + iy)\\,\\mathrm{d}t \\to f(x + iy) = f(z)$（$h \\to 0$）。竖直方向同理。所以 $F$ 在 $B(a, r)$ 内复可微且 $F' = f$。\n\n**第三步：$f$ 全纯。** $F$ 全纯 $\\implies$ $F$ 无穷次可微（Taylor 展开）$\\implies$ $F' = f$ 也全纯，且 $f$ 在该点有 Taylor 展开。圆盘任取，故 $f$ 在 $\\Omega$ 上全纯。$\\blacksquare$",
    "note": "连续性只用在「差商极限」那一步 —— 这正是 Morera 比 Cauchy 定理弱的地方：它假设了结论要用的东西（连续），却不需要预先知道可微。"
   },
   {
@@ -76402,7 +76420,7 @@
    ],
    "target": "thm.lebesgue-differentiation",
    "title": "极大定理 + 连续函数逼近 $\\implies$ Lebesgue 微分定理",
-   "proof": "**① 先局部化。** 由 $L^{1}_{l}oc$ 的定义与测度的可数可加性，只需对每个 $N \\in \\mathbb{N}$ 证明在球 $\\{|x| \\le N\\}$ 上几乎处处成立；把 $f$ 换成 $f\\cdot\\chi_{B(N+1, 0)}$ 后即可**设 $f \\in L^1$**。\n\n**② 用连续函数逼近。** 给定 $\\varepsilon > 0$，由「$L^{1}$ 里的逼近」，取**连续函数** $g$ 使\n\n$$\\int |g(y) - f(y)| dy < \\varepsilon$$\n\n**③ 连续情形是白送的。** 若 $g$ 连续，则对**每一个** $x$ 都有 $A_r g(x) \\to g(x)$（$r \\to 0$）—— 因为 $g$ 在 $x$ 附近近似为常数。\n\n**④ 把差值压住。** 对任意 $x$，\n\n$$\\sup_{r>0} |A_r f(x) - f(x)| = \\sup_r |A_r(f - g)(x) + (A_r g - g)(x) + (g - f)(x)| \\le H(f - g)(x) + |f - g|(x)$$\n\n（第一项用 $|A_r(f-g)| \\le A_r|f-g| \\le H(f-g)$，第二项由 ③ 取 $r \\to 0$）。\n\n**⑤ 估计坏集。** 令\n\n$$E_\\alpha = \\{x : \\sup_{r>0} |A_r f(x) - f(x)| > \\alpha\\}$$\n\n由 ④，$E_\\alpha \\subseteq F_{\\alpha/2} \\cup \\{x : H(f-g)(x) > \\alpha/2\\}$，其中 $F_{\\alpha/2} = \\{|f - g| > \\alpha/2\\}$。于是\n\n$$m(E_\\alpha) \\le 2\\varepsilon / \\alpha + 2C\\varepsilon / \\alpha$$\n\n（第一项用 Markov 不等式，第二项用**极大定理**。）\n\n**⑥ 令 $\\varepsilon \\to 0$。** 右边对**任意** $\\varepsilon > 0$ 成立，故 $m(E_\\alpha) = 0$ 对一切 $\\alpha > 0$ 成立。于是\n\n$$\\lim_{r\\to0} A_r f(x) = f(x)\\quad \\text{ 对一切} x \\notin \\bigcup_{m\\in\\mathbb{N}} E_{1/m}$$\n\n而右边是可数个零集之并，仍是零集。∎",
+   "proof": "**① 先局部化。** 由 $L^{1}_{loc}$ 的定义与测度的可数可加性，只需对每个 $N \\in \\mathbb{N}$ 证明在球 $\\{|x| \\le N\\}$ 上几乎处处成立；把 $f$ 换成 $f\\cdot\\chi_{B(N+1, 0)}$ 后即可**设 $f \\in L^1$**。\n\n**② 用连续函数逼近。** 给定 $\\varepsilon > 0$，由「$L^{1}$ 里的逼近」，取**连续函数** $g$ 使\n\n$$\\int |g(y) - f(y)| dy < \\varepsilon$$\n\n**③ 连续情形是白送的。** 若 $g$ 连续，则对**每一个** $x$ 都有 $A_r g(x) \\to g(x)$（$r \\to 0$）—— 因为 $g$ 在 $x$ 附近近似为常数。\n\n**④ 把差值压住。** 对任意 $x$，\n\n$$\\sup_{r>0} |A_r f(x) - f(x)| = \\sup_r |A_r(f - g)(x) + (A_r g - g)(x) + (g - f)(x)| \\le H(f - g)(x) + |f - g|(x)$$\n\n（第一项用 $|A_r(f-g)| \\le A_r|f-g| \\le H(f-g)$，第二项由 ③ 取 $r \\to 0$）。\n\n**⑤ 估计坏集。** 令\n\n$$E_\\alpha = \\{x : \\sup_{r>0} |A_r f(x) - f(x)| > \\alpha\\}$$\n\n由 ④，$E_\\alpha \\subseteq F_{\\alpha/2} \\cup \\{x : H(f-g)(x) > \\alpha/2\\}$，其中 $F_{\\alpha/2} = \\{|f - g| > \\alpha/2\\}$。于是\n\n$$m(E_\\alpha) \\le 2\\varepsilon / \\alpha + 2C\\varepsilon / \\alpha$$\n\n（第一项用 Markov 不等式，第二项用**极大定理**。）\n\n**⑥ 令 $\\varepsilon \\to 0$。** 右边对**任意** $\\varepsilon > 0$ 成立，故 $m(E_\\alpha) = 0$ 对一切 $\\alpha > 0$ 成立。于是\n\n$$\\lim_{r\\to0} A_r f(x) = f(x)\\quad \\text{ 对一切} x \\notin \\bigcup_{m\\in\\mathbb{N}} E_{1/m}$$\n\n而右边是可数个零集之并，仍是零集。∎",
    "note": "⭐ 这是分析里最漂亮的标准套路之一：**用「连续函数是稠密的」把问题搬到好情形，再用极大不等式把误差控制住**。两边一夹，坏集测度为零。"
   },
   {
@@ -76414,7 +76432,7 @@
    ],
    "target": "thm.lebesgue-set-full",
    "title": "微分定理 + 可数稠密子集 $\\implies$ Lebesgue 集几乎处处",
-   "proof": "**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \\in \\mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{l}oc$ 的）：存在零集 $E_c$，使对 $x \\notin E_c$，\n\n$$\\lim_{r\\to0} \\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - c| dy = |f(x) - c|$$\n\n**② 只取可数多个 $c$。** 取 $\\mathbb{C}$ 的一个**可数稠密子集** $D$（比如 $\\mathbb{Q} + i\\mathbb{Q}$），令\n\n$$E = \\bigcup_{c \\in D} E_c$$\n\n可数多个零集之并仍是零集，故 $m(E) = 0$。\n\n**③ 在 $E$ 外验证**。设 $x \\notin E$，任给 $\\varepsilon > 0$，取 $c \\in D$ 使 $|f(x) - c| < \\varepsilon$。则\n\n$$\\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - f(x)| dy \\le \\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - c| dy + |f(x) - c|$$\n\n右边第一项由 ①（$x \\notin E_c$）在 $r \\to 0$ 时趋于 $|f(x) - c|$，于是整个右端的极限 $\\le$ $|f(x) - c| + \\varepsilon < 2\\varepsilon$。令 $\\varepsilon \\to 0$ 得极限为 0，即 $x \\in L_f$。\n\n故 $L_f^c \\subseteq E$，从而 $m(L_f^c) = 0$。∎",
+   "proof": "**① 对每个复数 $c$ 用一次微分定理。** 固定 $c \\in \\mathbb{C}$，把微分定理用在函数 $h(x) = |f(x) - c|$ 上（它是 $L^{1}_{loc}$ 的）：存在零集 $E_c$，使对 $x \\notin E_c$，\n\n$$\\lim_{r\\to0} \\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - c| dy = |f(x) - c|$$\n\n**② 只取可数多个 $c$。** 取 $\\mathbb{C}$ 的一个**可数稠密子集** $D$（比如 $\\mathbb{Q} + i\\mathbb{Q}$），令\n\n$$E = \\bigcup_{c \\in D} E_c$$\n\n可数多个零集之并仍是零集，故 $m(E) = 0$。\n\n**③ 在 $E$ 外验证**。设 $x \\notin E$，任给 $\\varepsilon > 0$，取 $c \\in D$ 使 $|f(x) - c| < \\varepsilon$。则\n\n$$\\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - f(x)| dy \\le \\frac{1}{m(B(x, r))} \\int_{B(x, r)} |f(y) - c| dy + |f(x) - c|$$\n\n右边第一项由 ①（$x \\notin E_c$）在 $r \\to 0$ 时趋于 $|f(x) - c|$，于是整个右端的极限 $\\le$ $|f(x) - c| + \\varepsilon < 2\\varepsilon$。令 $\\varepsilon \\to 0$ 得极限为 0，即 $x \\in L_f$。\n\n故 $L_f^c \\subseteq E$，从而 $m(L_f^c) = 0$。∎",
    "note": "⭐ 「把不可数条件化归成可数」这一步是可数性论证的典型手笔，和 Borel–Cantelli 是同一种精神。"
   },
   {
@@ -76466,7 +76484,7 @@
    "strength": "strong",
    "definition": "def.locally-integrable",
    "usedBy": "def.average-operator",
-   "note": "平均算子只在 $L^{1}_{l}oc$ 上定义。"
+   "note": "平均算子只在 $L^{1}_{loc}$ 上定义。"
   },
   {
    "id": "def-link.average-maximal",
@@ -76482,7 +76500,7 @@
    "strength": "strong",
    "definition": "def.locally-integrable",
    "usedBy": "def.maximal-function",
-   "note": "极大函数的定义域是 $L^{1}_{l}oc$。"
+   "note": "极大函数的定义域是 $L^{1}_{loc}$。"
   },
   {
    "id": "def-link.maximal-theorem-lm",
@@ -76538,7 +76556,7 @@
    "strength": "strong",
    "definition": "def.locally-integrable",
    "usedBy": "thm.rn-pointwise",
-   "note": "证明中间要推出 $f \\in L^{1}_{l}oc$。"
+   "note": "证明中间要推出 $f \\in L^{1}_{loc}$。"
   },
   {
    "id": "e51.definition",
@@ -78002,7 +78020,7 @@
    ],
    "target": "thm.borel-measure-nbv",
    "title": "NBV 的性质 $\\implies$ 测度与函数的一一对应",
-   "proof": "**(1) 测度 $\\implies$ 函数。** 复测度拆成四个正测度 $\\mu = \\mu_1^+ - \\mu_1^- + i(\\mu_2^+ - \\mu_2^-)$。令\n\n$$F_j^{\\pm }(x) := \\mu_j^{\\pm }((-\\infty, x])$$\n\n每个 $F_j^{\\pm }$ 递增、右连续、$F_j^{\\pm }(-\\infty) = 0$、$F_j^{\\pm }(+\\infty) = \\mu_j^{\\pm }(\\mathbb{R}) < \\infty$。于是 $F$ 是四个这样的函数之组合，属于 NBV。\n\n**(2) 函数 $\\implies$ 测度。** 反之任意 $F \\in NBV$ 可以写成\n\n$$F = F_1^+ - F_1^- + i(F_2^+ - F_2^-)$$\n\n（用 NBV 版本的 Jordan 分解，注意右连续与 $F(-\\infty ) = 0$ 都被差保留。）每个递增右连续、$F(-\\infty ) = 0$ 的函数唯一对应一个有限 Borel 测度（取 $\\mu ((a,b]) = F(b) - F(a)$，由 Lebesgue–Stieltjes 那一套扩张）；\n\n四块加起来即得 $\\mu _F$。\n\n**唯一性**来自「$\\mu$ 由它在 $(-\\infty , x]$ 上的值唯一决定」，而后者生成整个 $\\mathfrak{B}_\\mathbb{R}$。\n\n**$(3) |\\mu _F| = \\mu _\\{T_F\\}$。** 由**引理**，$F \\in NBV \\implies T_F \\in NBV$，所以 $\\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，\n\n$$\\mu_{T_F}((-\\infty, x]) = T_F(x) = \\sup\\{ \\sum|F(x_j) - F(x_{j-1})| \\} = |\\mu_F|((-\\infty, x])$$\n\n（中间那个等号是 $|\\mu |$ 的全变差定义 + 测度的可数可加性。）由 $(-\\infty , x]$ 生成 $\\mathfrak{B}_\\mathbb{R}$，两个测度相等。∎",
+   "proof": "**(1) 测度 $\\implies$ 函数。** 复测度拆成四个正测度 $\\mu = \\mu_1^+ - \\mu_1^- + i(\\mu_2^+ - \\mu_2^-)$。令\n\n$$F_j^{\\pm }(x) := \\mu_j^{\\pm }((-\\infty, x])$$\n\n每个 $F_j^{\\pm }$ 递增、右连续、$F_j^{\\pm }(-\\infty) = 0$、$F_j^{\\pm }(+\\infty) = \\mu_j^{\\pm }(\\mathbb{R}) < \\infty$。于是 $F$ 是四个这样的函数之组合，属于 NBV。\n\n**(2) 函数 $\\implies$ 测度。** 反之任意 $F \\in NBV$ 可以写成\n\n$$F = F_1^+ - F_1^- + i(F_2^+ - F_2^-)$$\n\n（用 NBV 版本的 Jordan 分解，注意右连续与 $F(-\\infty ) = 0$ 都被差保留。）每个递增右连续、$F(-\\infty ) = 0$ 的函数唯一对应一个有限 Borel 测度（取 $\\mu ((a,b]) = F(b) - F(a)$，由 Lebesgue–Stieltjes 那一套扩张）；\n\n四块加起来即得 $\\mu _F$。\n\n**唯一性**来自「$\\mu$ 由它在 $(-\\infty , x]$ 上的值唯一决定」，而后者生成整个 $\\mathfrak{B}_\\mathbb{R}$。\n\n**$(3) |\\mu _F| = \\mu _{T_F}$。** 由**引理**，$F \\in NBV \\implies T_F \\in NBV$，所以 $\\mu_{T_F}$ 有意义。两边都是 NBV 函数，逐点比较：对任意 $x$，\n\n$$\\mu_{T_F}((-\\infty, x]) = T_F(x) = \\sup\\{ \\sum|F(x_j) - F(x_{j-1})| \\} = |\\mu_F|((-\\infty, x])$$\n\n（中间那个等号是 $|\\mu |$ 的全变差定义 + 测度的可数可加性。）由 $(-\\infty , x]$ 生成 $\\mathfrak{B}_\\mathbb{R}$，两个测度相等。∎",
    "note": ""
   },
   {
@@ -81729,6 +81747,54 @@
    "b": "thm.euler-characteristic",
    "title": "亏格与 Euler 示性数：同一个数换了身衣服",
    "note": "闭可定向曲面上 $\\chi(M) = 2 - 2g(M)$ —— 两个数互相决定，所以「数 Betti 数」与「数洞」是同一件事。\n\n⚠ 本图把这条**留成类比**而不是 implication：它需要一个正经的定理节点（下一刀补），现在写死成推出关系就等于把「还没写的证明」当成已证。"
+  },
+  {
+   "id": "dep.simpcomp-triangulation",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.simplicial-complex",
+   "usedBy": "def.triangulation",
+   "note": "三角剖分的骨架就是单纯复形；$|K|$ 是它的几何实现。"
+  },
+  {
+   "id": "dep.topmanifold-triangulation",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.topological-manifold",
+   "usedBy": "def.triangulation",
+   "note": "被剖分的对象是拓扑空间（实际上就是曲面）：剖分只用到拓扑，不用光滑结构。"
+  },
+  {
+   "id": "dep.triangulation-rado",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.triangulation",
+   "usedBy": "thm.rado",
+   "note": "Radó 定理的结论就是「这种 $(K,h)$ 存在」。"
+  },
+  {
+   "id": "dep.compact-rado",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.compact",
+   "usedBy": "thm.rado",
+   "note": "「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。"
+  },
+  {
+   "id": "dep.rado-classification",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "thm.rado",
+   "usedBy": "thm.classification-surfaces",
+   "note": "分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。"
+  },
+  {
+   "id": "dep.triangulation-simphomology",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.triangulation",
+   "usedBy": "thm.simplicial-approximation",
+   "note": "「奇异同调 $=$ 单纯同调」这条**默默假设了**曲面可剖分（要拿剖分算单纯同调）。以前这个假设在图上是隐形的。"
   },
   {
    "id": "dep.topology-topmanifold",
@@ -96515,14 +96581,21 @@
   {
    "a": "topology.homology",
    "b": "topology.surfaces",
-   "count": 5,
+   "count": 7,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "diffgeom.manifold",
+   "b": "topology.surfaces",
+   "count": 2,
    "label": "",
    "explicit": false
   },
   {
    "a": "topology.general",
    "b": "topology.surfaces",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },

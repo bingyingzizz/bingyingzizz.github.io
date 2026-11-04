@@ -5,6 +5,10 @@
 
 - 乌雷松度量化定理 | 乌雷松 → thm.urysohn-metrization
 
+- 三角剖分 | 可三角剖分 | 剖分 | triangulation → def.triangulation
+
+- 三角剖分存在性 | 曲面可三角剖分 | Rado 定理 | Radó 定理 | Radó | Rado | triangulability of surfaces → thm.rado
+
 - 切赫上同调 → thm.paracompact-cech-equals-sheaf
 
 - 埃塔勒空间 | 平展空间 → def.etale-space
@@ -30,13 +34,5 @@
 - 闭曲面 | 紧曲面 → def.closed-surface
 
 - 闭曲面分类定理 | 曲面分类定理 → thm.classification-surfaces
-
-- 欧拉示性数与亏格 | chi=2-2g | χ=2-2g → prop.eulerchar-genus
-
-- 欧拉示性数与不可定向亏格 | chi=2-k | χ=2-k → prop.eulerchar-nonorientable
-
-- 球面 | S^2 | 二维球面 | sphere → ex.sphere
-
-- 环面 | T^2 | 甜甜圈 | 咖啡杯 | torus → ex.torus
 
 > 续见 alias/aka/topology.14.md

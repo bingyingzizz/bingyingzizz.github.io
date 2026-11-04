@@ -3,7 +3,7 @@
 
 `def.compact` 紧 → `def.sequentially-compact` 列紧
 
-**紧 $\implies$ 列紧**
+**紧 ⟹ 列紧**
 
 设 $\{x_{n}\}$ 是 $X$ 中的序列。反证：假设它没有收敛的子列。
 

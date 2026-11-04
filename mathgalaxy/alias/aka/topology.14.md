@@ -1,6 +1,14 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 欧拉示性数与亏格 | chi=2-2g | χ=2-2g → prop.eulerchar-genus
+
+- 欧拉示性数与不可定向亏格 | chi=2-k | χ=2-k → prop.eulerchar-nonorientable
+
+- 球面 | S^2 | 二维球面 | sphere → ex.sphere
+
+- 环面 | T^2 | 甜甜圈 | 咖啡杯 | torus → ex.torus
+
 - 射影平面 | RP^2 | 实射影平面 → ex.projective-plane
 
 - 克莱因瓶 | 克莱因壶 | Klein 瓶 → ex.klein-bottle

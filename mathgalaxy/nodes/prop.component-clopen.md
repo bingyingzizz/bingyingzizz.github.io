@@ -6,7 +6,7 @@ layer 18 · 命题 · Stone 与 Stonean · 拓扑学
 设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
 
 $C(x)$ 是**所有包含 $x$ 的闭开子集之交**：
-$$C(x) \;=\; \bigcap \{\, K \subseteq S : x \in K \,$$
+$$C(x) \;=\; \bigcap \{\, K \subseteq S : x \in K,\ K \text{ 闭开}\,\}$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.component-clopen.2.md](./prop.component-clopen.2.md)

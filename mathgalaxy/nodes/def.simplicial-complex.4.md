@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.simplicial-map`](../nodes/def.simplicial-map.md) 单纯映射 用
 - 被 [`def.chain-group`](../nodes/def.chain-group.md) 链群 用
+- 被 [`def.triangulation`](../nodes/def.triangulation.md) 三角剖分 用

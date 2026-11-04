@@ -3,6 +3,8 @@
 
 `def.multilinear-form` 多重线性型 + `def.alternating-form` 交错型 → `thm.det-exists-unique` 行列式的存在唯一性
 
-\u4E09\u6761\u516C\u7406\u5404\u81EA\u514D\u8D39\uFF1A**\u591A\u91CD\u7EBF\u6027**\u6765\u81EA $\wedge$ \u5BF9\u6BCF\u4E2A\u53D8\u5143\u7EBF\u6027\uFF1B**\u4EA4\u9519\u6027**\u6765\u81EA $v \wedge v = 0$\uFF08\u5546\u7A7A\u95F4\u6784\u9020\u91CC\u76F4\u63A5\u6740\u6389\u7684\uFF09\uFF1B**\u89C4\u8303\u6027**\u6765\u81EA $e_{1} \wedge \cdots \wedge e_{n}$ \u53D6\u4F5C\u57FA\u3001\u7CFB\u6570\u5B9A\u4E3A $1$\u3002
+⭐ 两种证法分工不同：Leibniz 那一路给出**显式公式**（能算），外代数这一路给出**为什么非这样不可**（$\bigwedge^{n}V$ 一维这件事本身就说明了）。
 
-> 续见 proofs/imp.det-exists-unique.6.md
+⚠ 这一路依赖外幂（\`def.exterior-power\`）：本图那条链是 \`imp.det-as-exterior\`，它从本条出发讲外积 —— 所以这里只记思路，不声称「不依赖行列式」。
+
+> **唯一性先证、存在性后验**：这是「用泛性质定义对象」的标准套路 —— 先把任何满足条件的对象都逼成一个显式公式，再把那个公式拿回来验证它确实满足条件。

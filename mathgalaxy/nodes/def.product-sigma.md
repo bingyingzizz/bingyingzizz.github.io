@@ -3,7 +3,7 @@
 layer 6 · 定义 · 乘积测度与 Fubini · 实变函数+数学分析+拓扑学
 [在星图里打开](../#n=def.product-sigma)　·　[节点索引](../index.md)
 
-设 $\{ (X_\alpha , \mathcal{M}_\alpha ) \}_\{\alpha \in A\}$ 是一族可测空间，$X = \prod_{\alpha \in A} X_\alpha$，投影 $\pi _\alpha : X \to X_\alpha$。
+设 $\{ (X_\alpha , \mathcal{M}_\alpha ) \}_{\alpha \in A}$ 是一族可测空间，$X = \prod_{\alpha \in A} X_\alpha$，投影 $\pi _\alpha : X \to X_\alpha$。
 
 **积 $\sigma$代数**定义为
 

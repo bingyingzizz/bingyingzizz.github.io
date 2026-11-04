@@ -7,7 +7,7 @@ layer 6 · 命题 · 拓扑空间的基本语汇 · 拓扑学
 
 $U$ 取遍 $A$ 在 $X$ 中的**邻域**，对应的 $\pi^{-1}(U)$ 全体是
 
-$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \,$$
+$$\bigl\{\, \pi^{-1}(U) \;:\; U \in \mathcal{N}_{X}(A) \, \bigr\}$$
 > 陈述续见 [nodes/prop.closed-map-neighborhood-basis.2.md](./prop.closed-map-neighborhood-basis.2.md)
 
 

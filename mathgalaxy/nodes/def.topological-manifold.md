@@ -12,7 +12,7 @@ layer 8 · 定义 · 流形与向量丛 · 微分几何+拓扑学
 这样的 $(U, \varphi)$ 叫 $M$ 的一张**图卡**，$n$ 叫**维数**。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面 用
+- 被 [`def.triangulation`](../nodes/def.triangulation.md) 三角剖分 用
 
 - …另有出边，续页见 [nodes/def.topological-manifold.4.md](./def.topological-manifold.4.md)
 
