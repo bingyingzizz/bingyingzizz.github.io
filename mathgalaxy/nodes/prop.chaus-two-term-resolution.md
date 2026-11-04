@@ -1,6 +1,6 @@
 # 紧阿贝尔群的两项消解　`prop.chaus-two-term-resolution`
 命题：紧 Hausdorff 阿贝尔群有两项连通消解
-layer 19 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
+layer 21 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.chaus-two-term-resolution)　·　[节点索引](../index.md)
 
 设 $M$ 是**紧 Hausdorff 阿贝尔群**。则存在短正合列（一个「两项消解」）
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §6.2
 
 > 说明见 `notes/prop.chaus-two-term-resolution.md`
 
-引用：`prop.chaus-two-term-resolution`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.chaus-two-term-resolution`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

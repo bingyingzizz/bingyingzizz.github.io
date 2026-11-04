@@ -8,15 +8,13 @@ layer 6 · 定义 · 收敛与紧性 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.topology-base`](../nodes/def.topology-base.md) 基与子基：用到了定义 基与子基　[proofs/dep.pcp-base-second.md](../proofs/dep.pcp-base-second.md)
 
-- …另有入边，续页见 [nodes/def.second-countable.2.md](./def.second-countable.2.md)
-
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
 
-- …另有出边，续页见 [nodes/def.second-countable.3.md](./def.second-countable.3.md)
+- …另有出边，续页见 [nodes/def.second-countable.2.md](./def.second-countable.2.md)
 
 refs: Munkres, Topology (2nd ed.), Section 30
 
 > 说明见 `notes/def.second-countable.md`
 
-引用：`def.second-countable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.second-countable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

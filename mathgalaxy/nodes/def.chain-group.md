@@ -1,6 +1,6 @@
 # 链群　`def.chain-group`
 链群 $C_{p}(K)$：以 $p$-单纯形为基的自由阿贝尔群
-layer 16 · 定义 · 同调群 · 拓扑学
+layer 17 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.chain-group)　·　[节点索引](../index.md)
 
 设 $K$ 是单纯复形，记 $K_{p}$ 为它全体 $p$-单纯形之集（有限集）。**$p$-链群** $C_{p}(K)$ 是**以 $K_{p}$ 为基的自由阿贝尔群**，它的具体构造是
@@ -23,4 +23,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Chains and the chain gro
 
 > 说明见 `notes/def.chain-group.md`
 
-引用：`def.chain-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chain-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

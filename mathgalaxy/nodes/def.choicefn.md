@@ -25,4 +25,4 @@ refs: Jech, The Axiom of Choice
 ## 说明
 若 $F$ 有限，逐个挑选即可，无需 AC。难点只在无穷族，尤其是不可数族。
 
-引用：`def.choicefn`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.choicefn`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

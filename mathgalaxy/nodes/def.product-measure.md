@@ -1,6 +1,6 @@
 # 乘积测度　`def.product-measure`
 乘积测度（Product Measure $\mu \times \nu$）
-layer 17 · 定义 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 18 · 定义 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=def.product-measure)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$ 与 $(Y, \mathcal{N}, \nu )$ 是测度空间。
@@ -24,4 +24,4 @@ refs: Folland, Real Analysis, §2.5；Halmos, Measure Theory, §35
 
 > 说明见 `notes/def.product-measure.md`
 
-引用：`def.product-measure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.product-measure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

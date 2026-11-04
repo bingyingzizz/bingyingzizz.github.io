@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.chern-weil`](../nodes/thm.chern-weil.md) 陈–Weil 同态 用
+- 被 [`thm.cartan-formula`](../nodes/thm.cartan-formula.md) Cartan 公式 用
+- 被 [`lem.poincare-lemma`](../nodes/lem.poincare-lemma.md) Poincaré 引理 用

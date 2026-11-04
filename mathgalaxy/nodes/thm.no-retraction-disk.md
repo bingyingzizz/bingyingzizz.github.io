@@ -1,6 +1,6 @@
 # 圆盘不收缩　`thm.no-retraction-disk`
 不存在从圆盘到其边界的收缩：$S^{1}$ 不是 $D^{2}$ 的收缩核
-layer 10 · 定理 · 基本群 · 拓扑学
+layer 17 · 定理 · 基本群 · 拓扑学
 [在星图里打开](../#n=thm.no-retraction-disk)　·　[节点索引](../index.md)
 
 令 $D^{2} := \{\, z \in \mathbb{C} : |z| \le 1 \,\}$，$S^{1} = \partial D^{2}$。则**不存在**连续映射
@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Retractions and Fixed Points；Hatch
 
 > 说明见 `notes/thm.no-retraction-disk.md`
 
-引用：`thm.no-retraction-disk`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.no-retraction-disk`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

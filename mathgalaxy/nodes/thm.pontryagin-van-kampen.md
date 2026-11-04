@@ -1,6 +1,6 @@
 # Pontryagin–van Kampen 对偶　`thm.pontryagin-van-kampen`
 Pontryagin–van Kampen 对偶定理
-layer 18 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 20 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=thm.pontryagin-van-kampen)　·　[节点索引](../index.md)
 
 函子
@@ -23,4 +23,4 @@ refs: Le Stum, Theorem 6.2.4；Morris, Pontryagin Duality and the Structure of L
 
 > 说明见 `notes/thm.pontryagin-van-kampen.md`
 
-引用：`thm.pontryagin-van-kampen`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pontryagin-van-kampen`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

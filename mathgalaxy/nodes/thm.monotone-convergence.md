@@ -1,6 +1,6 @@
 # 单调有界定理　`thm.monotone-convergence`
 单调有界定理
-layer 14 · 定理 · 实数完备性的等价刻画 · 数学分析
+layer 18 · 定理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=thm.monotone-convergence)　·　[节点索引](../index.md)
 
 设 $\{x_n\} \subseteq \mathbb{R}$。
@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.monotone-convergence.md`
 
-引用：`thm.monotone-convergence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.monotone-convergence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 乘积测度由截口给出　`thm.product-measure-sections`
 定理：$\mu \times \nu(E) = \int \nu(E_{x}) d\mu(x) = \int \mu(E^{y}) d\nu(y)$
-layer 18 · 定理 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 19 · 定理 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=thm.product-measure-sections)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$、$(Y, \mathcal{N}, \nu )$ 都是 **$\sigma$有限**的，$E \in \mathcal{M} \otimes  \mathcal{N}$。则
@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 2.36
 
 > 说明见 `notes/thm.product-measure-sections.md`
 
-引用：`thm.product-measure-sections`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.product-measure-sections`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

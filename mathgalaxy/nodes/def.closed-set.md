@@ -25,4 +25,4 @@ refs: Munkres, Topology, Ch. 2
 
 闭包是「把极限点都收进来」：在距离空间里 $\overline{A}$ 恰好是「$A$ 中某个序列的极限」全体。
 
-引用：`def.closed-set`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.closed-set`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

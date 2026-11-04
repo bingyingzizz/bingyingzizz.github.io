@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-dep.rcbz-banach.md](../proofs/def-dep.rcbz-banach.md)
+
+> 续见 [nodes/prop.rhom-chaus-banach-zero.3.md](./prop.rhom-chaus-banach-zero.3.md)

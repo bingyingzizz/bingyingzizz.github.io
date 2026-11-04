@@ -1,6 +1,6 @@
 # 扩张的唯一性　`thm.caratheodory-uniqueness`
 定理：Carathéodory 扩张是最大的，σ-有限时唯一
-layer 18 · 定理 · 测度的构造 · 实变函数+数学分析
+layer 19 · 定理 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=thm.caratheodory-uniqueness)　·　[节点索引](../index.md)
 
 设 $\mu _{0}$ 是代数 $\mathfrak{A}$ 上的预测度，$\mu := \mu^{*}|_\mathcal{M}$ 是它经 Carathéodory 得到的扩张。若 $\nu$ 是 $\mathcal{M}(\mathfrak{A})$ 上**另一个**扩张 $\mu _{0}$ 的测度，则
@@ -19,4 +19,4 @@ refs: Halmos, Measure Theory, §13；Folland, Real Analysis, Theorem 1.14
 
 > 说明见 `notes/thm.caratheodory-uniqueness.md`
 
-引用：`thm.caratheodory-uniqueness`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.caratheodory-uniqueness`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

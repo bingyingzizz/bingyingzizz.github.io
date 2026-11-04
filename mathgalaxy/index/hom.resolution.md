@@ -3,15 +3,15 @@
 把「算导出函子」变成可操作的机器：投射/内射消解 → 删除消解与比较定理（消解在同伦意义下唯一）→ 马蹄引理（短正合列的三个消解拼成双复形）→ 合冲 → 维数转移 → 投射维数与内射维数。
 中心天体 thm.comparison-theorem　·　15 个节点　·　根 `../`　·　续页 `index/hom.resolution.2.md`
 
-- def.syzygy　合冲　layer 9
+- def.syzygy　合冲　layer 10
 - def.deleted-resolution　删除消解　layer 15
 - lem.schanuel　合冲比较引理　layer 15
 - prop.syzygy-stability　合冲的稳定性　layer 16
-- lem.horseshoe　马蹄引理　layer 19
 - thm.comparison-theorem　比较定理　layer 20
+- lem.horseshoe　马蹄引理　layer 20
 - def.projective-dimension　投射维数　layer 20
-- def.injective-dimension　内射维数　layer 20
 - prop.resolution-homotopy　消解的同伦唯一性　layer 21
+- def.injective-dimension　内射维数　layer 21
 - def.global-dimension　整体维数　layer 21
 - prop.dimension-shift　维数转移　layer 22
 - thm.ext-balanced　扩展群的双边算法　layer 22

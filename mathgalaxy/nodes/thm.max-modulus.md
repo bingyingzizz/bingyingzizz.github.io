@@ -1,6 +1,6 @@
 # 最大模原理　`thm.max-modulus`
 定理：最大模原理
-layer 21 · 定理 · 共形映射与正规族 · 复变函数
+layer 25 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.max-modulus)　·　[节点索引](../index.md)
 
 **白话**：全纯函数的模，不可能在区域内部取到最大值 —— 除非它是常数。最大值只可能出现在边界上。
@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》笔记，第 9 章 · 最大模原理；Ahlfors
 
 > 说明见 `notes/thm.max-modulus.md`
 
-引用：`thm.max-modulus`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.max-modulus`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

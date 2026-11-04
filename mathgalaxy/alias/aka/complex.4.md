@@ -1,5 +1,7 @@
 # 别名 → 节点 · 复变函数
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
+
+- Morera 定理 → thm.morera
 
 - 调和函数的最大值原理 → thm.harmonic-maximum
 
@@ -38,7 +40,5 @@
 - Jordan 引理 → lem.jordan
 
 - Joukowski 映射 → prop.joukowski
-
-- 调和函数 → def.harmonic
 
 > 续见 alias/aka/complex.5.md

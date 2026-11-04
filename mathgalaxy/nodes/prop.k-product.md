@@ -1,6 +1,6 @@
 # k-化与积　`prop.k-product`
 $k(kX \times Y) = k(X \times Y)$
-layer 18 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 20 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.k-product)　·　[节点索引](../index.md)
 
 对任何 $X, Y \in \mathbf{Top}$，
@@ -23,4 +23,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.3
 
 > 说明见 `notes/prop.k-product.md`
 
-引用：`prop.k-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.k-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 6 · definition · cluster Order Structures (`order.structure`) · Order T
 Chinese only — see the Chinese page `nodes/def.chain.md` and `proofs/`.
 
 
-Cite: `def.chain` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.chain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

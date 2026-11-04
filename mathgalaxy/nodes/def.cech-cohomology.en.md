@@ -10,5 +10,5 @@ layer 17 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homologic
 Chinese only — see the Chinese page `nodes/def.cech-cohomology.md` and `proofs/`.
 
 
-Cite: `def.cech-cohomology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cech-cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

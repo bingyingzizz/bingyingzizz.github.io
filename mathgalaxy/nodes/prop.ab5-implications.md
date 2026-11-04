@@ -14,4 +14,4 @@ refs: Le Stum, Proposition 5.2.7；Freyd, Abelian Categories；Roos, Derived fun
 
 > 说明见 `notes/prop.ab5-implications.md`
 
-引用：`prop.ab5-implications`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ab5-implications`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

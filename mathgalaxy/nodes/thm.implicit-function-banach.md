@@ -1,6 +1,6 @@
 # 隐函数定理（Banach 版）　`thm.implicit-function-banach`
 定理：Banach 空间上的隐函数定理
-layer 25 · 定理 · 多元微分 · 数学分析
+layer 29 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.implicit-function-banach)　·　[节点索引](../index.md)
 
 设 $E, F, G$ 是 Banach 空间，$U \subseteq E \times F$ 开，$F_0 : U \to G$ 是 $C^{1}$，$(a, b) \in U$ 满足 $F_0(a, b) = 0$ 且偏导
@@ -16,4 +16,4 @@ refs: Lang, Real and Functional Analysis, Ch. I；Zeidler, Nonlinear Functional 
 
 > 说明见 `notes/thm.implicit-function-banach.md`
 
-引用：`thm.implicit-function-banach`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.implicit-function-banach`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

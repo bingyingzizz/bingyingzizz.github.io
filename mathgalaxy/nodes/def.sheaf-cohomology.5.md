@@ -7,4 +7,3 @@
 - 被 [`lem.stone-constant-acyclic`](../nodes/lem.stone-constant-acyclic.md) Stone 上常系数零调 用
 - 被 [`thm.dyckhoff`](../nodes/thm.dyckhoff.md) 局部紧上凝聚态＝层上同调 用
 - 被 [`method.simplicial-cohomology`](../nodes/method.simplicial-cohomology.md) 单纯方法算层上同调 用
-- 被 [`prop.filtered-limit-cohomology`](../nodes/prop.filtered-limit-cohomology.md) 滤过极限的上同调 用

@@ -10,5 +10,5 @@ layer 6 · definition · cluster Convergence and Compactness (`topology.converge
 Chinese only — see the Chinese page `nodes/def.second-countable.md` and `proofs/`.
 
 
-Cite: `def.second-countable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.second-countable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

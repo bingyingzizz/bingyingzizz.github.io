@@ -5,3 +5,4 @@
 - 被 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群 用
 - ⇒ [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数
 - ⇒ [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近
+- 被 [`def.genus`](../nodes/def.genus.md) 亏格 用

@@ -1,6 +1,6 @@
 # 流形上的换元公式　`thm.change-of-variables-manifold`
 流形上的换元公式
-layer 22 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.change-of-variables-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：换元公式在流形上的样子 —— 沿微分同胚把形式搬过去，积分不变；搬的方向反了
@@ -17,4 +17,4 @@ refs: Spivak, Calculus on Manifolds, 第 3 章「Integration」· 换元公式�
 
 > 说明见 `notes/thm.change-of-variables-manifold.md`
 
-引用：`thm.change-of-variables-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.change-of-variables-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

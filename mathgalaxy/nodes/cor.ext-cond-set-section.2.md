@@ -2,5 +2,6 @@
 [在星图里打开](../#n=cor.ext-cond-set-section)　·　第 1 页 [nodes/cor.ext-cond-set-section.md](./cor.ext-cond-set-section.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`lem.ext-stonean-section`](../nodes/lem.ext-stonean-section.md) Stonean 上 Ext 的截面公式：截面公式（$M = \mathbb{Z}\cdot X$）$\implies$ 凝聚态集的版本　[proofs/imp.section-formula-condset.md](../proofs/imp.section-formula-condset.md)
 - [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集：用到了定义 凝聚态集　[proofs/def-link.exsx-condset.md](../proofs/def-link.exsx-condset.md)
 - [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/def-link.exsx-cond.md](../proofs/def-link.exsx-cond.md)

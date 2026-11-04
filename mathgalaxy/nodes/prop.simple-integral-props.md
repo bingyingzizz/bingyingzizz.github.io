@@ -1,6 +1,6 @@
 # 简单函数积分的性质　`prop.simple-integral-props`
 命题：简单函数积分的四条基本性质
-layer 17 · 命题 · 积分 · 实变函数+数学分析
+layer 18 · 命题 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=prop.simple-integral-props)　·　[节点索引](../index.md)
 
 设 $\varphi, \psi$ 是简单函数。
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Theorem 2.13
 
 > 说明见 `notes/prop.simple-integral-props.md`
 
-引用：`prop.simple-integral-props`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.simple-integral-props`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

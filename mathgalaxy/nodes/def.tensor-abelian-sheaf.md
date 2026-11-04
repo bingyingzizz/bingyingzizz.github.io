@@ -1,6 +1,6 @@
 # 阿贝尔层的张量积　`def.tensor-abelian-sheaf`
 阿贝尔层的张量积与封闭幺半结构
-layer 18 · 定义 · 阿贝尔层 · 同调代数
+layer 20 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.tensor-abelian-sheaf)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯、$M, N \in \mathcal{T}(\mathbf{Ab})$。函子
@@ -23,4 +23,4 @@ refs: Le Stum, An introduction to condensed mathematics, §5.3
 
 > 说明见 `notes/def.tensor-abelian-sheaf.md`
 
-引用：`def.tensor-abelian-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tensor-abelian-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

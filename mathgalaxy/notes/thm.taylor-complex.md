@@ -7,7 +7,7 @@
 
 $$\frac{1}{\zeta - z} = \frac{1}{(\zeta - a) - (z - a)} = \sum_{n=0}^{\infty} \frac{(z - a)^n}{(\zeta - a)^{n+1}},$$
 
-比值 $|z - a|/\rho < 1$，级数关于 $\zeta \in \partial D(a, \rho)$ 一致收敛，故可逐项积分；
+比值 $|z - a|/\rho < 1$，级数关于 $\zeta \in \partial B(a, \rho)$ 一致收敛，故可逐项积分；
 
 逐项积分的系数正是 $f^{(n)}(a)/n!$（高阶导数公式）。
 
@@ -17,4 +17,4 @@ $$\frac{1}{\zeta - z} = \frac{1}{(\zeta - a) - (z - a)} = \sum_{n=0}^{\infty} \f
 
 ⚠ 收敛半径至少是 $a$ 到最近奇点的距离 —— 这正是「奇点在哪」那一讲的主题（书第 12 章）。
 
-📌 同节还有「级数形式的 Cauchy 不等式」：若 $f = \sum a_n (z - a)^n$ 在 $D(a, R)$ 内成立，则 $|a_n| \le M(r)/r^n$（$0 < r < R$）。
+📌 同节还有「级数形式的 Cauchy 不等式」：若 $f = \sum a_n (z - a)^n$ 在 $B(a, R)$ 内成立，则 $|a_n| \le M(r)/r^n$（$0 < r < R$）。

@@ -1,6 +1,6 @@
 # Cauchy 收敛准则　`thm.cauchy-criterion`
 定理：收敛 $\iff$ Cauchy
-layer 17 · 定理 · 实数完备性的等价刻画 · 数学分析
+layer 21 · 定理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=thm.cauchy-criterion)　·　[节点索引](../index.md)
 
 实数列 $\{x_n\}$ 收敛（到某个实数），当且仅当它是 Cauchy 列。
@@ -18,4 +18,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.cauchy-criterion.md`
 
-引用：`thm.cauchy-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

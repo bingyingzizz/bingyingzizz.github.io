@@ -1,6 +1,6 @@
 # 积分中值定理　`thm.mean-value-integral`
 定理：积分中值定理（第一形式）
-layer 20 · 定理 · Riemann 积分 · 数学分析
+layer 24 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.mean-value-integral)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上连续、$g$ 可积且**不变号**（$g \ge 0$ 或 $g \le 0$）。则存在 $\xi \in [a, b]$ 使
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/thm.mean-value-integral.md`
 
-引用：`thm.mean-value-integral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mean-value-integral`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

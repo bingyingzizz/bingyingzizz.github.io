@@ -1,6 +1,6 @@
 # 模　`def.module`
 模与模同态
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 9 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.module)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺环、$M$ 是**阿贝尔群**。称 $M$ 是一个 **$A$-模**，如果给定了一个映射
@@ -22,4 +22,4 @@ refs: Lang, Algebra
 
 > 说明见 `notes/def.module.md`
 
-引用：`def.module`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.module`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

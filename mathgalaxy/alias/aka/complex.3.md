@@ -1,5 +1,5 @@
 # 别名 → 节点 · 复变函数
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
 - 调和函数的均值性质 → thm.harmonic-mean-value
 
@@ -42,7 +42,5 @@
 - 保圆性 → prop.mobius-circle
 
 - 关于圆的对称点 → def.symmetric-point
-
-- Morera 定理 → thm.morera
 
 > 续见 alias/aka/complex.4.md

@@ -1,6 +1,6 @@
 # 固态化把超覆盖变成正合列　`prop.solid-hypercover`
 命题：超覆盖的固态化正合
-layer 15 · 命题 · 固态阿贝尔群 · 凝聚态数学
+layer 20 · 命题 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.solid-hypercover)　·　[节点索引](../index.md)
 
 设 $S_\bullet \to S$ 是 profinite 集的一个 hypercover（**超覆盖**：一般的「覆盖」只铺一层 $S_0 \to S$，超覆盖用一列 $S_0, S_1, S_2, \ldots$ 层层记录「上一层哪里重叠、重叠又怎么重叠」，形如单纯对象 $S_\bullet$ 配上增广 $S_\bullet \to S$，且每一层的退化都是同伦等价）。
@@ -19,4 +19,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/prop.solid-hypercover.md`
 
-引用：`prop.solid-hypercover`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.solid-hypercover`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 要么奇异、要么有下界　`lem.singular-or-lower-bound`
 引理：两个有限测度，要么相互奇异，要么在某个正测度集上成比例
-layer 17 · 引理 · 符号测度与分解 · 实变函数+数学分析
+layer 19 · 引理 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=lem.singular-or-lower-bound)　·　[节点索引](../index.md)
 
 设 $\nu$、$\mu$ 都是**有限**测度。则二者必有一个成立：
@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Lemma 3.8
 
 > 说明见 `notes/lem.singular-or-lower-bound.md`
 
-引用：`lem.singular-or-lower-bound`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.singular-or-lower-bound`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

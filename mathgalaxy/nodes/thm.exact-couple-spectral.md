@@ -1,6 +1,6 @@
 # 正合偶给出谱序列　`thm.exact-couple-spectral`
 正合偶给出谱序列
-layer 18 · 定理 · 过滤与谱序列 · 同调代数
+layer 21 · 定理 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=thm.exact-couple-spectral)　·　[节点索引](../index.md)
 
 设 $(D, E, i, j, k)$ 是双分次正合偶，$i, j, k$ 的双次数分别是 $(-1, 1)$、$(0, 0)$、$(1, 0)$。令 $E_{1} := E$，并递推地取导出偶：$E_{r+1} := H(E_{r}, d_{r})$、$d_{r} := j_{r} k_{r}$。则：
@@ -19,4 +19,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 5（正合偶给�
 
 > 说明见 `notes/thm.exact-couple-spectral.md`
 
-引用：`thm.exact-couple-spectral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.exact-couple-spectral`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

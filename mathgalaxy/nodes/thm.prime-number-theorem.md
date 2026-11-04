@@ -1,6 +1,6 @@
 # 素数定理　`thm.prime-number-theorem`
 $\pi(x) \sim x/\log x$
-layer 13 · 定理 · 数论函数与素数分布 · 数论
+layer 14 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.prime-number-theorem)　·　[节点索引](../index.md)
 
 $$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
@@ -12,8 +12,11 @@ $$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
 
 - …另有入边，续页见 [nodes/thm.prime-number-theorem.2.md](./thm.prime-number-theorem.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.prime-number-theorem.3.md](./thm.prime-number-theorem.3.md)
+
 refs: 华罗庚《数论导引》第九、十章；Apostol, Ch. 4, 12
 
 > 说明见 `notes/thm.prime-number-theorem.md`
 
-引用：`thm.prime-number-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.prime-number-theorem`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

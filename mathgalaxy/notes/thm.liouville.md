@@ -1,7 +1,7 @@
 # Liouville 定理　`thm.liouville`　·　说明
 根 `../`
 
-⭐ 证明（用 Cauchy 不等式）：对任意 $z$ 与任意 $R > 0$，$f$ 在 $D(z, R)$ 上全纯，故 $|f'(z)| \le M/R$。
+⭐ 证明（用 Cauchy 不等式）：对任意 $z$ 与任意 $R > 0$，$f$ 在 $B(z, R)$ 上全纯，故 $|f'(z)| \le M/R$。
 
 令 $R \to \infty$ 得 $f'(z) = 0$；
 

@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.de-rham-h0`](../nodes/thm.de-rham-h0.md) 零次上同调
+- 被 [`ex.sierpinski-space`](../nodes/ex.sierpinski-space.md) Sierpiński 空间 用
 - ⇒ [`prop.component-clopen`](../nodes/prop.component-clopen.md) 连通分量是闭开邻域之交
 - 被 [`prop.connected-image-closure`](../nodes/prop.connected-image-closure.md) 连通的像与闭包 用
 - 被 [`prop.component-clopen`](../nodes/prop.component-clopen.md) 连通分量是闭开邻域之交 用

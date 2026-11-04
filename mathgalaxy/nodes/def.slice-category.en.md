@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 13 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.slice-category.md` and `proofs/`.
 
 
-Cite: `def.slice-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.slice-category` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 指数函数的局部逆　`prop.exp-local-inverse`
 指数函数在每点局部双全纯，逆即对数的一个分支
-layer 18 · 命题 · 复变函数基础 · 复变函数
+layer 22 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.exp-local-inverse)　·　[节点索引](../index.md)
 
 对每个 $z_{0} \in \mathbb{C}$，存在 $z_{0}$ 的邻域 $U$ 与开集 $V$，使 $\exp : U \to V$ 是双全纯映射，且其逆
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 对数函数与幂函数（多值性与分�
 
 > 说明见 `notes/prop.exp-local-inverse.md`
 
-引用：`prop.exp-local-inverse`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.exp-local-inverse`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

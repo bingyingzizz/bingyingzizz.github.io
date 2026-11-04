@@ -1,6 +1,6 @@
 # 整除　`def.divides`
 整除与它的基本性质
-layer 10 · 定义 · 整除与同余 · 数论
+layer 11 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.divides)　·　[节点索引](../index.md)
 
 设 $a, b \in \mathbb{Z}$。若存在 $c \in \mathbb{Z}$ 使 $b = ac$，就说 **$a$ 整除 $b$**，记 $a \mid b$；否则记 $a \nmid b$。
@@ -21,4 +21,4 @@ refs: 华罗庚《数论导引》第一章
 
 > 说明见 `notes/def.divides.md`
 
-引用：`def.divides`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.divides`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

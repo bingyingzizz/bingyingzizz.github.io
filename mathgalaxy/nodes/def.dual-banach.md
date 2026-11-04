@@ -1,6 +1,6 @@
 # 连续对偶空间　`def.dual-banach`
 对偶空间 $E^*$（连续对偶）
-layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.dual-banach)　·　[节点索引](../index.md)
 
 赋范空间 $E$ 的**对偶空间**指
@@ -18,4 +18,4 @@ refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级�
 
 > 说明见 `notes/def.dual-banach.md`
 
-引用：`def.dual-banach`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.dual-banach`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

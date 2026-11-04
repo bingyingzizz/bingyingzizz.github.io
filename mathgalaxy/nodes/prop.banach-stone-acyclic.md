@@ -1,6 +1,6 @@
 # Banach 在 Stone 上零调　`prop.banach-stone-acyclic`
 Banach 阿贝尔群在 Stone 空间上零调
-layer 17 · 命题 · 凝聚态导出函子 · 凝聚态数学+同调代数
+layer 19 · 命题 · 凝聚态导出函子 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.banach-stone-acyclic)　·　[节点索引](../index.md)
 
 设 $M$ 是 Banach 阿贝尔群，$S$ 是 Stone 空间。则对一切 $n > 0$
@@ -16,4 +16,4 @@ refs: Le Stum, Proposition 8.2.6
 
 > 说明见 `notes/prop.banach-stone-acyclic.md`
 
-引用：`prop.banach-stone-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.banach-stone-acyclic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 正交补　`def.orthogonal-complement`
 正交补 $U^{\perp}$ 与直和分解
-layer 11 · 定义 · 内积空间与正交性 · 抽象代数
+layer 16 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.orthogonal-complement)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是子空间。$U$ 的**正交补**定义为
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.orthogonal-complement.md`
 
-引用：`def.orthogonal-complement`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.orthogonal-complement`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

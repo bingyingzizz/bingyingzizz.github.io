@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Separation Axioms (`topology.separation`) · Topology
+layer 6 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.t0-space.md` and `proofs/`.
 
 
-Cite: `def.t0-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.t0-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

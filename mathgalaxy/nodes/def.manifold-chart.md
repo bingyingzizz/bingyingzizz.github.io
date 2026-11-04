@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 图
 
 > 说明见 `notes/def.manifold-chart.md`
 
-引用：`def.manifold-chart`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.manifold-chart`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

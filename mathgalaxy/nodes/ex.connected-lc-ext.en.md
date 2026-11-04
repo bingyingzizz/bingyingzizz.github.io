@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
+layer 22 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Connected Group Ext` (short) · `Connected Locally Compact to Discrete Has Only First Ext` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.connected-lc-ext.md` and `proofs/`.
 
 
-Cite: `ex.connected-lc-ext` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.connected-lc-ext` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

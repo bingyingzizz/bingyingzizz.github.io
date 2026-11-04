@@ -1,6 +1,6 @@
 # 局部极值　`def.local-extremum`
 局部极大与局部极小
-layer 16 · 定义 · 微分中值定理与 Taylor · 数学分析
+layer 17 · 定义 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=def.local-extremum)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 的某个邻域上有定义。称 $x_0$ 是 $f$ 的
@@ -22,4 +22,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5；Spivak, Calculus, Ch. 
 
 > 说明见 `notes/def.local-extremum.md`
 
-引用：`def.local-extremum`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.local-extremum`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

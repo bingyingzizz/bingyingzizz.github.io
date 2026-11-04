@@ -3,4 +3,3 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.splitting-principle`](../nodes/thm.splitting-principle.md) 分裂原理 用
-- 被 [`thm.splitting-principle`](../nodes/thm.splitting-principle.md) 分裂原理 用

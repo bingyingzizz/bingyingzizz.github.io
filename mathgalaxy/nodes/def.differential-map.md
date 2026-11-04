@@ -1,6 +1,6 @@
 # 切映射　`def.differential-map`
 切映射（微分）
-layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 21 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.differential-map)　·　[节点索引](../index.md)
 
 **在说什么**：光滑映射在每点给出一个线性映射，把「沿曲线的方向」送到像上的方向 —— 这就是流形上的导数；流形上没有减法，唯一能做的是「跟着曲线走」。
@@ -23,4 +23,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」
 
 > 说明见 `notes/def.differential-map.md`
 
-引用：`def.differential-map`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.differential-map`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

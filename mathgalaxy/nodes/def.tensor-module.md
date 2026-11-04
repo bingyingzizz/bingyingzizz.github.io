@@ -1,6 +1,6 @@
 # 张量积　`def.tensor-module`
 模的张量积 $M \otimes_{R} N$
-layer 11 · 定义 · 模的张量积与标量限制 · 同调代数
+layer 14 · 定义 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=def.tensor-module)　·　[节点索引](../index.md)
 
 设 $R$ 是含幺环，$M$ 是右 
@@ -19,4 +19,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Chapter 2「Hom 
 
 > 说明见 `notes/def.tensor-module.md`
 
-引用：`def.tensor-module`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tensor-module`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

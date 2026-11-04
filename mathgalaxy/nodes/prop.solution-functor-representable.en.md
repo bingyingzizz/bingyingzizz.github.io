@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Categ
 Chinese only — see the Chinese page `nodes/prop.solution-functor-representable.md` and `proofs/`.
 
 
-Cite: `prop.solution-functor-representable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.solution-functor-representable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

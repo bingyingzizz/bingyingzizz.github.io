@@ -5,10 +5,10 @@
 
 $$c < 3^n \sum_i m(B_{x_i}) \le 3^n k \sum_i \lambda(B_{x_i}) \le 3^n k\cdot\lambda(V_\varepsilon) \le 3^n k \varepsilon$$
 
-**⑦ 令 $\varepsilon \to 0$。** 得 $m(V_\varepsilon) = 0$，故某个零集包含了一切 $F_k$，即 $F_k$ 全是零集，从而 $\lim_{r\to0} \lambda(B(r,x))/m(B(r,x)) = 0$ 对 m-a.e. x 成立。
+**⑦ 令 $\varepsilon \to 0$。** 得 $m(V_\varepsilon) = 0$，故某个零集包含了一切 $F_k$，即 $F_k$ 全是零集，从而 $\lim_{r\to0} \lambda(B(x, r))/m(B(x, r)) = 0$ 对 m-a.e. x 成立。
 
 **⑧ 从球换到可缩族。** 上面用的是球；要换成一般的可缩族 $E_r$，用
 
-$$\lambda(E_r) / m(E_r) \le \lambda(B(r,x)) / m(E_r) \le (1/\alpha)\cdot\lambda(B(r,x)) / m(B(r,x)) \to 0$$
+$$\lambda(E_r) / m(E_r) \le \lambda(B(x, r)) / m(E_r) \le (1/\alpha)\cdot\lambda(B(x, r)) / m(B(x, r)) \to 0$$
 
 > 续见 proofs/imp.rn-pointwise.5.md

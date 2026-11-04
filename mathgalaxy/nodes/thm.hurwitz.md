@@ -1,6 +1,6 @@
 # Hurwitz 定理　`thm.hurwitz`
 定理：Hurwitz 定理（零点的极限）
-layer 23 · 定理 · 留数与辐角原理 · 复变函数
+layer 27 · 定理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=thm.hurwitz)　·　[节点索引](../index.md)
 
 **白话**：一列都没有零点的全纯函数，如果在内闭一致收敛，那么极限函数要么恒等于零，要么也没有零点。
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· Hurwitz 定理；Stein–Shakarchi, Complex 
 
 > 说明见 `notes/thm.hurwitz.md`
 
-引用：`thm.hurwitz`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hurwitz`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

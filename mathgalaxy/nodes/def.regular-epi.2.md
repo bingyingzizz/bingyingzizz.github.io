@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构：用到了定义 单态射 / 满态射 / 同构　[proofs/def-dep.mono-regular-epi.md](../proofs/def-dep.mono-regular-epi.md)
 - [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-dep.equalizer-regular-epi.md](../proofs/def-dep.equalizer-regular-epi.md)
+
+> 续见 [nodes/def.regular-epi.3.md](./def.regular-epi.3.md)

@@ -14,4 +14,4 @@ refs: Folland, Real Analysis, Prop. 2.3
 
 > 说明见 `notes/prop.measurable-product-and-realimag.md`
 
-引用：`prop.measurable-product-and-realimag`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.measurable-product-and-realimag`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

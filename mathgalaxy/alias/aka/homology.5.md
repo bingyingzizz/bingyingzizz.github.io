@@ -9,7 +9,7 @@
 
 - Grothendieck 谱序列 | Corollary 7.2.13 | Cor 7.2.13 | Corollary 7.2.21 | Proposition 7.2.20 → cor.grothendieck-spectral
 
-- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 → def.sheaf-cohomology
+- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 | H^i(X,F) | 层上同调 H^i → def.sheaf-cohomology
 
 - Čech 上同调 | Cech 上同调 | Čech cohomology | Definition 7.3.5 | Def 7.3.5 → def.cech-cohomology
 

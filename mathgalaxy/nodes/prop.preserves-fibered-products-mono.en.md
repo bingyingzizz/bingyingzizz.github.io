@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Functors and Natural Transformations (`cat.fu
 Chinese only — see the Chinese page `nodes/prop.preserves-fibered-products-mono.md` and `proofs/`.
 
 
-Cite: `prop.preserves-fibered-products-mono` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.preserves-fibered-products-mono` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

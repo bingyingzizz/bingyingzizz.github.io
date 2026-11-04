@@ -11,5 +11,5 @@ names: `Skyscraper Is Injective` (short) · `Skyscraper Sheaves Are Injective` (
 Chinese only — see the Chinese page `nodes/prop.skyscraper-injective.md` and `proofs/`.
 
 
-Cite: `prop.skyscraper-injective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.skyscraper-injective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

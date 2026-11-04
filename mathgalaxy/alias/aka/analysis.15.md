@@ -1,6 +1,16 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 根值判别法 → thm.root-test
+
+- 积分判别法 → thm.integral-test
+
+- Cauchy 凝聚判别法 → thm.cauchy-condensation
+
+- 一致收敛保连续 → thm.uniform-limit-continuous
+
+- 积分与极限交换 → thm.uniform-limit-integral
+
 - 阿基米德的 ε 形式与取整 | 阿基米德 → cor.archimedean-epsilon
 
 - p-级数 → thm.p-series
@@ -32,17 +42,5 @@
 - 绝对收敛 → def.absolute-convergence
 
 - 幂级数 → def.power-series
-
-- 对数函数与 e → def.log-function
-
-- 函数极限 → def.function-limit
-
-- 局部极值 → def.local-extremum
-
-- 条件收敛 → def.conditional-convergence
-
-- 一致 Cauchy 列 → def.uniform-cauchy
-
-- 指数函数 → def.exp-function
 
 > 续见 alias/aka/analysis.16.md

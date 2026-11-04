@@ -1,6 +1,6 @@
 # 转置　`def.transpose`
 矩阵的转置与它的性质
-layer 11 · 定义 · 内积空间与正交性 · 抽象代数
+layer 14 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.transpose)　·　[节点索引](../index.md)
 
 **在做什么**：把矩阵沿主对角线翻过来。看起来只是个记号操作，但它正是**对偶空间上诱导的映射**在矩阵语言里的样子。
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 转置与�
 
 > 说明见 `notes/def.transpose.md`
 
-引用：`def.transpose`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.transpose`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

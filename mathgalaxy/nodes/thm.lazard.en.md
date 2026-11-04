@@ -10,5 +10,5 @@ layer 15 · theorem · cluster Flat Modules (`hom.flat`) · Homological Algebra
 Chinese only — see the Chinese page `nodes/thm.lazard.md` and `proofs/`.
 
 
-Cite: `thm.lazard` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lazard` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

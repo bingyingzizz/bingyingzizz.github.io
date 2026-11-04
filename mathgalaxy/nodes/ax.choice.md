@@ -1,6 +1,6 @@
 # 选择公理　`ax.choice`
 选择公理
-layer 9 · 公理 · 选择原理 · 序理论+集合论
+layer 8 · 公理 · 选择原理 · 序理论+集合论
 [在星图里打开](../#n=ax.choice)　·　[节点索引](../index.md)
 
 任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：
@@ -26,4 +26,4 @@ refs: Jech, The Axiom of Choice；Kunen, Set Theory, I.12
 
 > 说明见 `notes/ax.choice.md`
 
-引用：`ax.choice`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.choice`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

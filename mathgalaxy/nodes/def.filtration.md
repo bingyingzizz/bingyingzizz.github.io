@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.2
 ## 说明
 命题：$\mathbf{F}(\mathcal{C}(\mathcal{A})) \cong \mathcal{C}(\mathbf{F}(\mathcal{A}))$ —— **「带过滤」与「取复形」可以交换**。所以可以先把复形过滤好，再逐层算同调。
 
-引用：`def.filtration`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.filtration`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -3,7 +3,7 @@
 
 `thm.cauchy-integral-formula` Cauchy 积分公式 + `def.harmonic` 调和函数 → `thm.poisson-formula` Poisson 积分公式
 
-设 $f$ 在 $D(0, R)$ 的邻域上全纯，$|z| < r < R$，记 $u = \operatorname{Re} f$。
+设 $f$ 在 $B(0, R)$ 的邻域上全纯，$|z| < r < R$，记 $u = \operatorname{Re} f$。
 
 **第一步：把圆周积分写成 $\theta$。** 在 $|\zeta| = r$ 上 $\mathrm{d}\zeta = i\zeta\,\mathrm{d}\theta$，故
 

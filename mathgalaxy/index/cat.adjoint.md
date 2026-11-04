@@ -12,10 +12,10 @@
 - prop.adjunction-naturality　伴随双射的自然性　layer 10
 - prop.forgetful-adjoints-examples　遗忘函子的伴随　layer 10
 - prop.currying　函数的柯里化　layer 10
-- prop.copowers-give-adjoint　有余幂则可表示函子有伴随　layer 10
 - prop.adjoint-full-faithful　全忠实与单位　layer 11
 - prop.counit-epi-iff-faithful　余单位与忠实性　layer 11
 - prop.kan-extension-adjoint　Kan 延拓与伴随的存在性　layer 11
 - prop.unit-counit-examples　常见伴随的单位与余单位　layer 11
+- prop.reflection-criterion　反射的判据　layer 11
 
 > 续见 `index/cat.adjoint.2.md`

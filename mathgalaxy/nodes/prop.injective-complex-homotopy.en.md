@@ -11,5 +11,5 @@ names: `Injective Complexes` (short) · `Acyclic and Quasi-Isomorphic Complexes 
 Chinese only — see the Chinese page `nodes/prop.injective-complex-homotopy.md` and `proofs/`.
 
 
-Cite: `prop.injective-complex-homotopy` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.injective-complex-homotopy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

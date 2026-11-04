@@ -1,6 +1,6 @@
 # Gauss 曲率　`def.gauss-curvature`
 Gauss 曲率的内蕴定义
-layer 24 · 定义 · 内蕴几何 · 微分几何
+layer 30 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.gauss-curvature)　·　[节点索引](../index.md)
 
 白话：二维曲面上「曲率」其实只有**一个数**，这个数就是高斯曲率 $K$。这里用曲率张量的一个分量算出它，下一节点（绝妙定理）再说明它和 $k_{1}k_{2}$ 是同一个数。
@@ -20,4 +20,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面
 
 > 说明见 `notes/def.gauss-curvature.md`
 
-引用：`def.gauss-curvature`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.gauss-curvature`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

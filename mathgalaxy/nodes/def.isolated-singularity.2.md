@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.isolated-singularity)　·　第 1 页 [nodes/def.isolated-singularity.md](./def.isolated-singularity.md)
 
 ## 陈述（续）
-设 $f$ 在去心邻域 $D(a, \varepsilon) \setminus \{a\}$ 上全纯，称 $a$ 是 $f$ 的**孤立奇点**。按 $z \to a$ 时的行为分三类：
+设 $f$ 在去心邻域 $B(a, \varepsilon) \setminus \{a\}$ 上全纯，称 $a$ 是 $f$ 的**孤立奇点**。按 $z \to a$ 时的行为分三类：
 
 **(1) 可去奇点**：$\lim_{z \to a} f(z) = w_0 \in \mathbb{C}$ 存在；
 

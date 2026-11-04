@@ -1,6 +1,6 @@
 # 混合偏导相等　`thm.mixed-partials`
 定理（Schwarz）：混合偏导数与次序无关
-layer 22 · 定理 · 多元微分 · 数学分析
+layer 26 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.mixed-partials)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}$ 的二阶偏导 $\partial_i \partial_j f$ 与 $\partial_j \partial_i f$ 都在 $a$ 的某邻域里存在，且在 $a$ 处连续。则
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Spivak, Calculus on Ma
 
 > 说明见 `notes/thm.mixed-partials.md`
 
-引用：`thm.mixed-partials`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mixed-partials`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

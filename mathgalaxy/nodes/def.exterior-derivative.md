@@ -1,6 +1,6 @@
 # 外微分（欧氏开集）　`def.exterior-derivative`
 外微分：欧氏开集上的坐标公式
-layer 15 · 定义 · 活动标架与结构方程 · 微分几何
+layer 18 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.exterior-derivative)　·　[节点索引](../index.md)
 
 **在做什么**：给形式配一个导数，把 $k$-形式送到 $(k+1)$-形式，并满足 $\mathrm{d}^{2} = 0$ —— 这一步把微积分写成不依赖坐标的样子。
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 
 
 > 说明见 `notes/def.exterior-derivative.md`
 
-引用：`def.exterior-derivative`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exterior-derivative`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

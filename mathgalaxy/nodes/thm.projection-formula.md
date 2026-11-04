@@ -1,6 +1,6 @@
 # 最佳逼近与投影公式　`thm.projection-formula`
 定理：正交投影是最佳逼近，且可用标准正交基算出
-layer 14 · 定理 · 内积空间与正交性 · 抽象代数
+layer 20 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.projection-formula)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是有限维子空间，$v \in V$。则
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/thm.projection-formula.md`
 
-引用：`thm.projection-formula`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.projection-formula`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

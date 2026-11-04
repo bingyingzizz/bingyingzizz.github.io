@@ -5,3 +5,5 @@
 $$0 \to M \to I^{0} \to I^{1} \to \cdots \to I^{n} \to 0$$
 而每项 $I^{k}$ 都内射。$M$ 的**内射维数** $\operatorname{id}_{R} M$ 是使此式成立的最小 $n$（不存在则记 $\infty$）。
 对偶地，它等于 $M$ 看作**右**模时的投射维数：$\operatorname{id}_{R} M = \operatorname{pd}_{R^{\mathrm{op}}} M$。
+
+> 续见 [nodes/def.injective-dimension.3.md](./def.injective-dimension.3.md)

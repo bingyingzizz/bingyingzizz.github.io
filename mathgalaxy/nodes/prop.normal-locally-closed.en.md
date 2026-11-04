@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Separation Axioms (`topology.separation`) · Topology
+layer 7 · proposition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.normal-locally-closed.md` and `proofs/`.
 
 
-Cite: `prop.normal-locally-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.normal-locally-closed` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
+layer 29 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.hadamard-factorization.md` and `proofs/`.
 
 
-Cite: `thm.hadamard-factorization` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.hadamard-factorization` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

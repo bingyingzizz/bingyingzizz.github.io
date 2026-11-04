@@ -1,6 +1,6 @@
 # 法坐标的欧氏性　`lem.normal-coord-euclidean`
 法坐标只在一阶上像欧氏坐标
-layer 28 · 引理 · 内蕴几何 · 微分几何
+layer 31 · 引理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=lem.normal-coord-euclidean)　·　[节点索引](../index.md)
 
 设 $(x^{1},x^{2})$ 是 $p$ 处的法坐标。则在该点
@@ -14,4 +14,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯
 
 > 说明见 `notes/lem.normal-coord-euclidean.md`
 
-引用：`lem.normal-coord-euclidean`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.normal-coord-euclidean`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

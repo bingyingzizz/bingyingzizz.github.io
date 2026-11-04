@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
+layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Dual, RHom and Tensor` (short) · `Derived Hom of the Discrete Dual and Derived Tensor` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.rhom-dual-tensor.md` and `proofs/`.
 
 
-Cite: `prop.rhom-dual-tensor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-dual-tensor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

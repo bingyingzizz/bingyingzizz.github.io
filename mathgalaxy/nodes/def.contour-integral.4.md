@@ -10,3 +10,4 @@
 - 被 [`lem.jordan`](../nodes/lem.jordan.md) Jordan 引理 用
 - ⇒ [`prop.winding-integral`](../nodes/prop.winding-integral.md) 绕数的积分表示
 - ⇒ [`thm.winding-homotopy`](../nodes/thm.winding-homotopy.md) 绕数的同伦不变性
+- 被 [`ex.contour-1-over-z`](../nodes/ex.contour-1-over-z.md) ∮dz/z 用

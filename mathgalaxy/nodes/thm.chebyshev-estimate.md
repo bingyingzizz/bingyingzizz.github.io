@@ -1,6 +1,6 @@
 # Чебышёв 估计　`thm.chebyshev-estimate`
 $\pi(x)$ 与 $x/\log x$ 同阶（初等上下界）
-layer 14 · 定理 · 数论函数与素数分布 · 数论
+layer 15 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.chebyshev-estimate)　·　[节点索引](../index.md)
 
 存在常数 $0 < c_{1} < c_{2}$ 使对一切 $x \ge 2$，
@@ -21,4 +21,4 @@ refs: 华罗庚《数论导引》第九章；Apostol, Ch. 4
 
 > 说明见 `notes/thm.chebyshev-estimate.md`
 
-引用：`thm.chebyshev-estimate`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.chebyshev-estimate`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

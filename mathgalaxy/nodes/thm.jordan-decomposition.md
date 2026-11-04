@@ -1,6 +1,6 @@
 # Jordan 分解定理　`thm.jordan-decomposition`
 Jordan 分解定理
-layer 19 · 定理 · 符号测度与分解 · 实变函数+数学分析
+layer 21 · 定理 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=thm.jordan-decomposition)　·　[节点索引](../index.md)
 
 设 $\nu$ 是符号测度。则存在**测度** $\mu_1, \mu_2$ 使
@@ -25,4 +25,4 @@ refs: Folland, Real Analysis, Theorem 3.4
 
 > 说明见 `notes/thm.jordan-decomposition.md`
 
-引用：`thm.jordan-decomposition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.jordan-decomposition`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

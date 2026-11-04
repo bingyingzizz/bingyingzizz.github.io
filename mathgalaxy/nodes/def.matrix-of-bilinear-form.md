@@ -1,6 +1,6 @@
 # 双线性型的矩阵　`def.matrix-of-bilinear-form`
 双线性型的矩阵表示
-layer 12 · 定义 · 多重线性与张量 · 抽象代数
+layer 15 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.matrix-of-bilinear-form)　·　[节点索引](../index.md)
 
 **在做什么**：把双线性型写成矩阵，于是「双线性型的理论」变成「矩阵在合同下的理论」—— 这一步是整章的分水岭。
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双线性型的矩
 
 > 说明见 `notes/def.matrix-of-bilinear-form.md`
 
-引用：`def.matrix-of-bilinear-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.matrix-of-bilinear-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

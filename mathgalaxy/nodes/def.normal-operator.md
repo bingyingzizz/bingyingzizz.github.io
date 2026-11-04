@@ -1,6 +1,6 @@
 # 正规算子　`def.normal-operator`
 自伴、正规与酉算子
-layer 11 · 定义 · 内积空间与正交性 · 抽象代数
+layer 18 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.normal-operator)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 是有限维内积空间上的线性算子。
@@ -21,4 +21,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, C
 
 > 说明见 `notes/def.normal-operator.md`
 
-引用：`def.normal-operator`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.normal-operator`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

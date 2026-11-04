@@ -1,6 +1,6 @@
 # Jordan 型的唯一性　`cor.jordan-uniqueness`
 推论：Jordan 型在块的排列之外唯一
-layer 17 · 推论 · 特征值与 Jordan 型 · 抽象代数
+layer 20 · 推论 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=cor.jordan-uniqueness)　·　[节点索引](../index.md)
 
 Jordan 标准形在「Jordan 块的排列顺序」之外是**唯一**的，即 $A \sim B$ 当且仅当 $A$ 与 $B$ 有相同的 Jordan 型（不计块的次序）：
@@ -16,4 +16,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 7
 
 > 说明见 `notes/cor.jordan-uniqueness.md`
 
-引用：`cor.jordan-uniqueness`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.jordan-uniqueness`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

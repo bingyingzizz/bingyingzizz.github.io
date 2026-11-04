@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 15 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 names: `Stone's Theorem` (short) · `A. H. Stone's Theorem` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.metric-paracompact.md` and `proofs/`.
 
 
-Cite: `thm.metric-paracompact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.metric-paracompact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

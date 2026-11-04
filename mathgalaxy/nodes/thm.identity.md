@@ -1,6 +1,6 @@
 # 唯一性定理　`thm.identity`
 唯一性定理（解析延拓原理）
-layer 23 · 定理 · Cauchy 理论 · 复变函数
+layer 27 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.identity)　·　[节点索引](../index.md)
 
 设 $f, g$ 在**区域** $\Omega$ 上全纯。若集合
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 唯一性定理与解析延拓；Ahlfors, Co
 
 > 说明见 `notes/thm.identity.md`
 
-引用：`thm.identity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.identity`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

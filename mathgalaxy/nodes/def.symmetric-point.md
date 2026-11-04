@@ -1,6 +1,6 @@
 # 关于圆的对称点　`def.symmetric-point`
 对称点：关于圆与关于直线的「反演」的统一说法
-layer 19 · 定义 · 共形映射与正规族 · 复变函数
+layer 23 · 定义 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=def.symmetric-point)　·　[节点索引](../index.md)
 
 设圆 $C$ 的圆心为 $a$、半径为 $R$。称 $z$ 与 $z^{*}$ **关于 $C$ 对称**，如果
@@ -23,4 +23,4 @@ refs: 王晓光《复变函数》· 对称点与分式线性变换；Ahlfors, Co
 
 > 说明见 `notes/def.symmetric-point.md`
 
-引用：`def.symmetric-point`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.symmetric-point`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

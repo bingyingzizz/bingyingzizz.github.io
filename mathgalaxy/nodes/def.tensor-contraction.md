@@ -1,6 +1,6 @@
 # 缩并　`def.tensor-contraction`
 张量缩并
-layer 21 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.tensor-contraction)　·　[节点索引](../index.md)
 
 **白话**：张量上有一个上标和一个下标时，可以把它们「配对吃掉」，得到一个少两阶的张量 —— 这就是缩并；矩阵的取迹是它最熟悉的特例。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/def.tensor-contraction.md`
 
-引用：`def.tensor-contraction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tensor-contraction`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

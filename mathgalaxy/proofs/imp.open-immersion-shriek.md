@@ -9,10 +9,6 @@ $$\prod_I A \otimes_{A_\blacksquare} A[1/f]_\blacksquare \;\cong\; \prod_I A[1/f
 
 在抽象 $A$-模里，左边是 $\prod_I A[1/f]$ 的**子集**（$\prod$ 与局部化不交换），一般不相等；在固态 $A$-模里，$\prod_I A$ 是紧投射对象（`cor.solid-compact-generators`），$\otimes_{A_\blacksquare}$ 保它，且 $A[1/f]_\blacksquare$ 与 $\prod$ 相容。
 
-
-
 仿射、有限型情形由 `thm.za-analytic` 的 $j_!$ 给出；
 
-一般情形取仿射开覆盖逐步粘合。
-
-$\blacksquare$
+> 续见 proofs/imp.open-immersion-shriek.2.md

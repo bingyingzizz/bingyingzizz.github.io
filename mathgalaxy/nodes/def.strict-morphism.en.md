@@ -10,5 +10,5 @@ layer 16 · definition · cluster Monos, Epis, Subobjects and Images (`cat.struc
 Chinese only — see the Chinese page `nodes/def.strict-morphism.md` and `proofs/`.
 
 
-Cite: `def.strict-morphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.strict-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

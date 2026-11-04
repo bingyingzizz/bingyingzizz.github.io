@@ -11,5 +11,5 @@ names: `Exact Sequence to Triangle` (short) · `Short Exact Sequences Give Disti
 Chinese only — see the Chinese page `nodes/prop.exact-to-triangle.md` and `proofs/`.
 
 
-Cite: `prop.exact-to-triangle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.exact-to-triangle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

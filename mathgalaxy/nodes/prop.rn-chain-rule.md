@@ -1,6 +1,6 @@
 # Radon–Nikodym 导数的链式法则　`prop.rn-chain-rule`
 命题：Radon–Nikodym 导数的换元公式与链式法则
-layer 21 · 命题 · 符号测度与分解 · 实变函数+数学分析
+layer 23 · 命题 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=prop.rn-chain-rule)　·　[节点索引](../index.md)
 
 设 $\nu$ 是 $\sigma$有限符号测度、$\mu$ 与 $\lambda$ 是 $\sigma$有限测度，且
@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.9
 
 > 说明见 `notes/prop.rn-chain-rule.md`
 
-引用：`prop.rn-chain-rule`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.rn-chain-rule`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

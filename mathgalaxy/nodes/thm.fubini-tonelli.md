@@ -1,6 +1,6 @@
 # Fubini–Tonelli 定理　`thm.fubini-tonelli`
 Fubini–Tonelli 定理（重积分可交换次序）
-layer 20 · 定理 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 22 · 定理 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=thm.fubini-tonelli)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$、$(Y, \mathcal{N}, \nu )$ 是 **$\sigma$有限**的测度空间。
@@ -25,4 +25,4 @@ refs: Folland, Real Analysis, Theorem 2.37
 
 > 说明见 `notes/thm.fubini-tonelli.md`
 
-引用：`thm.fubini-tonelli`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.fubini-tonelli`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

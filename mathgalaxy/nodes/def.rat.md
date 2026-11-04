@@ -1,6 +1,6 @@
 # 有理数 ℚ　`def.rat`
 有理数 $\mathbb{Q}$（由 $\mathbb{Z} \times (\mathbb{Z}\setminus\{0\})$ 构造）
-layer 9 · 定义 · 数系的构造 · 集合论
+layer 10 · 定义 · 数系的构造 · 集合论
 [在星图里打开](../#n=def.rat)　·　[节点索引](../index.md)
 
 在 $\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})$ 上定义
@@ -27,4 +27,4 @@ refs: Kunen, Set Theory, I.5
 
 > 说明见 `notes/def.rat.md`
 
-引用：`def.rat`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.rat`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

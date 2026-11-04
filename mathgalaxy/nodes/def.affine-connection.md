@@ -1,6 +1,6 @@
 # 仿射联络　`def.affine-connection`
 仿射联络与协变导数
-layer 22 · 定义 · 内蕴几何 · 微分几何
+layer 25 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.affine-connection)　·　[节点索引](../index.md)
 
 **在做什么**：规定「把一个向量沿某个方向搬运时怎么变」—— 有了这条规则才能对向量场求导，进而谈加速度、测地线与曲率。
@@ -18,4 +18,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「联络」· 仿射
 
 > 说明见 `notes/def.affine-connection.md`
 
-引用：`def.affine-connection`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.affine-connection`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

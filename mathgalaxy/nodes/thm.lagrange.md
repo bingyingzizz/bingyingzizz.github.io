@@ -1,6 +1,6 @@
 # Lagrange 定理　`thm.lagrange`
 定理（Lagrange）：$|H|$ 整除 $|G|$
-layer 8 · 定理 · 群作用与置换 · 抽象代数
+layer 9 · 定理 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=thm.lagrange)　·　[节点索引](../index.md)
 
 设 $G$ 是有限群、$H \le G$。对 $g \in G$ 记**左陪集** $gH := \{\, gh : h \in H \,\}$。则左陪集构成 $G$ 的一个划分，每个左陪集与 $H$ 等势，于是
@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. I §4；Dummit–Foote, Abstract Algebra, §3.2
 
 > 说明见 `notes/thm.lagrange.md`
 
-引用：`thm.lagrange`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lagrange`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

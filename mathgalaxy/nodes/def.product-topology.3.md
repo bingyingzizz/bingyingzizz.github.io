@@ -5,6 +5,5 @@
 - 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
 - 被 [`thm.quotient-product`](../nodes/thm.quotient-product.md) 商映射与局部紧空间作积 用
 - 被 [`prop.weak-hausdorff-basic`](../nodes/prop.weak-hausdorff-basic.md) 弱 Hausdorff 的基本性质 用
-- 被 [`thm.quotient-product`](../nodes/thm.quotient-product.md) 商映射与局部紧空间作积 用
 - 被 [`prop.k-product`](../nodes/prop.k-product.md) k-化与积 用
 - 被 [`thm.tykhonov`](../nodes/thm.tykhonov.md) Tychonoff 定理 用

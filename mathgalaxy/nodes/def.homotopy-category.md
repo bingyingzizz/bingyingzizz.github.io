@@ -1,6 +1,6 @@
 # 同伦范畴　`def.homotopy-category`
 同伦范畴
-layer 12 · 定义 · 复形与导出三角 · 同调代数
+layer 13 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.homotopy-category)　·　[节点索引](../index.md)
 
 **同伦范畴** $\mathbf{K}(\mathcal{C})$ 的对象与 $\mathcal{C}(\mathcal{C})$ 相同，态射取
@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/def.homotopy-category.md`
 
-引用：`def.homotopy-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.homotopy-category`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

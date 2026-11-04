@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · lemma · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 22 · lemma · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Stokes on a Cube` (short) · `Stokes' Formula on a Single Cube` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.single-cube-stokes.md` and `proofs/`.
 
 
-Cite: `lem.single-cube-stokes` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.single-cube-stokes` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

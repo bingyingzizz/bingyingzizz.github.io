@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.csz-free`](../nodes/thm.csz-free.md) 连续函数群是自由的 + [`def.cond-measure`](../nodes/def.cond-measure.md) 整值测度：常层上同调消没 $\implies$ 固态化正合　[proofs/imp.solid-hypercover.md](../proofs/imp.solid-hypercover.md)
+- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/dep.gap-solid-hypercover-condensed-abelian-group.md](../proofs/dep.gap-solid-hypercover-condensed-abelian-group.md)
 
 > 续见 [nodes/prop.solid-hypercover.4.md](./prop.solid-hypercover.4.md)

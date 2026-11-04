@@ -1,6 +1,6 @@
 # Archimedes 性质　`lem.archimedean`
 Archimedes 性质与 $\mathbb{Q}$ 的稠密性
-layer 14 · 引理 · 实数的运算与不等式 · 数学分析+集合论
+layer 18 · 引理 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=lem.archimedean)　·　[节点索引](../index.md)
 
 设 $K$ 是一个**完备有序域**（比如 $\mathbb{R}$）。则：
@@ -27,4 +27,4 @@ refs: Tao, Analysis I, Ch. 5（实数的构造）；Rudin, Principles of Mathema
 
 > 说明见 `notes/lem.archimedean.md`
 
-引用：`lem.archimedean`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.archimedean`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

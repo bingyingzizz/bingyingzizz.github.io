@@ -1,6 +1,6 @@
 # 可数积的 Borel 代数　`cor.borel-product`
 推论：可数积距离空间的 Borel σ-代数（可分时相等）
-layer 14 · 推论 · 乘积测度与 Fubini · 实变函数+数学分析+拓扑学
+layer 15 · 推论 · 乘积测度与 Fubini · 实变函数+数学分析+拓扑学
 [在星图里打开](../#n=cor.borel-product)　·　[节点索引](../index.md)
 
 若每个 $X_j$ 都**可分**，则积 $\sigma$-代数与 Borel $\sigma$-代数重合：
@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, §2.1
 
 > 说明见 `notes/cor.borel-product.md`
 
-引用：`cor.borel-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.borel-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

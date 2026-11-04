@@ -1,6 +1,6 @@
 # 三点决定分式线性变换　`prop.mobius-three-points`
 三对点唯一决定一个分式线性变换
-layer 19 · 命题 · 共形映射与正规族 · 复变函数
+layer 23 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.mobius-three-points)　·　[节点索引](../index.md)
 
 设 $z_{1}, z_{2}, z_{3}$ 与 $w_{1}, w_{2}, w_{3}$ 分别是 $\widehat{\mathbb{C}}$ 中三个互不相同的点。则存在**唯一**的分式线性变换 $T$ 使 $T(z_{k}) = w_{k}$（$k = 1, 2, 3$）。
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 分式线性变换的确定；Ahlfors, Compl
 
 > 说明见 `notes/prop.mobius-three-points.md`
 
-引用：`prop.mobius-three-points`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.mobius-three-points`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

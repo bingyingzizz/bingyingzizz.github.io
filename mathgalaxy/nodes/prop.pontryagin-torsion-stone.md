@@ -1,6 +1,6 @@
 # 挠 与 Stonean，无挠 与 连通　`prop.pontryagin-torsion-stone`
 Pontryagin 对偶下的挠与连通
-layer 18 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 20 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=prop.pontryagin-torsion-stone)　·　[节点索引](../index.md)
 
 设 $M$ 是**离散**阿贝尔群，$\widehat{M} = C_{\mathbb{Z}}(M, \mathbb{T})$ 是它的 Pontryagin 对偶（由另一条对偶定理，$\widehat{M}$ 紧 Hausdorff）。则
@@ -17,4 +17,4 @@ refs: Le Stum, §6.2；Le Stum, Exercise 6.9
 
 > 说明见 `notes/prop.pontryagin-torsion-stone.md`
 
-引用：`prop.pontryagin-torsion-stone`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pontryagin-torsion-stone`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

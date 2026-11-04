@@ -1,6 +1,6 @@
 # Fermat 引理　`thm.fermat`
 Fermat 引理：内点极值 $\implies$ 导数为零
-layer 17 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 18 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.fermat)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 的某个邻域上有定义、在 $x_0$ 处可导，且 $x_0$ 是 $f$ 的**内点**局部极值点。则
@@ -17,4 +17,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5
 
 > 说明见 `notes/thm.fermat.md`
 
-引用：`thm.fermat`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.fermat`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

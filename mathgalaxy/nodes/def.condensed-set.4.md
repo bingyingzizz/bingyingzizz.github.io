@@ -2,9 +2,12 @@
 [在星图里打开](../#n=def.condensed-set)　·　第 1 页 [nodes/def.condensed-set.md](./def.condensed-set.md)　·　上一页 [nodes/def.condensed-set.3.md](./def.condensed-set.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群 用
-- 被 [`prop.cond-internal-hom`](../nodes/prop.cond-internal-hom.md) 内部 Hom 的函数空间刻画 用
-- 被 [`prop.cond-slice-topos-morphism`](../nodes/prop.cond-slice-topos-morphism.md) Cond/X 到开集拓扑斯的态射 用
-- 被 [`prop.cond-limits-colimits`](../nodes/prop.cond-limits-colimits.md) Cond 的极限与余极限 用
-- 被 [`prop.cond-epi-regular`](../nodes/prop.cond-epi-regular.md) Cond 的满态射都是正则的 用
-- 被 [`prop.cond-equivalence-effective`](../nodes/prop.cond-equivalence-effective.md) Cond 的等价关系有效 用
+- 被 [`prop.countable-colimit-qseparated`](../nodes/prop.countable-colimit-qseparated.md) 可数递增余极限是拟分离的 用
+- ⇒ [`thm.top-cond-adjoint`](../nodes/thm.top-cond-adjoint.md) Top 与 Cond 的伴随
+- 被 [`prop.condab-discrete-acyclic`](../nodes/prop.condab-discrete-acyclic.md) 离散空间上零调 用
+- 被 [`cor.ext-cond-set-section`](../nodes/cor.ext-cond-set-section.md) Ext 的截面公式 用
+- 被 [`prop.discrete-iff-constant`](../nodes/prop.discrete-iff-constant.md) 离散即常 用
+- 被 [`prop.condensed-criterion`](../nodes/prop.condensed-criterion.md) 凝聚态集的刻画 用
+- 被 [`thm.cond-topos`](../nodes/thm.cond-topos.md) Cond 是拓扑斯 用
+
+> 续见 [nodes/def.condensed-set.5.md](./def.condensed-set.5.md)

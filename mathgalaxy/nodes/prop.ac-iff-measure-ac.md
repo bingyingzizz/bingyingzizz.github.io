@@ -1,6 +1,6 @@
 # 函数绝对连续 ⟺ 测度绝对连续　`prop.ac-iff-measure-ac`
 命题：F 绝对连续 $\iff \mu_F \ll m$
-layer 21 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 23 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=prop.ac-iff-measure-ac)　·　[节点索引](../index.md)
 
 设 $F \in NBV$。则 $F$ **绝对连续**当且仅当它对应的测度 $\mu_F$ 关于 Lebesgue 测度绝对连续：
@@ -17,4 +17,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/prop.ac-iff-measure-ac.md`
 
-引用：`prop.ac-iff-measure-ac`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ac-iff-measure-ac`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

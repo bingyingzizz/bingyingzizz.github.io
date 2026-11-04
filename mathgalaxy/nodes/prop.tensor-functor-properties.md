@@ -1,6 +1,6 @@
 # 张量积的函子性质　`prop.tensor-functor-properties`
 张量积的双函子性、与直和交换、结合、对称与单位
-layer 12 · 命题 · 模的张量积与标量限制 · 同调代数
+layer 15 · 命题 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=prop.tensor-functor-properties)　·　[节点索引](../index.md)
 
 张
@@ -17,4 +17,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Chapter 2「Hom 
 
 > 说明见 `notes/prop.tensor-functor-properties.md`
 
-引用：`prop.tensor-functor-properties`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.tensor-functor-properties`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

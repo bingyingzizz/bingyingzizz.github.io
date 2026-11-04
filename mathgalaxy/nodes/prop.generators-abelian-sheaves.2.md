@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.generators-abelian-sheaves)　·　第 1 页 [nodes/prop.generators-abelian-sheaves.md](./prop.generators-abelian-sheaves.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/dep.gap-generators-abelian-sheaves-topos.md](../proofs/dep.gap-generators-abelian-sheaves-topos.md)
 - [`def.generator`](../nodes/def.generator.md) 生成元集：用到了定义 生成元集　[proofs/def-link.gensab-generator.md](../proofs/def-link.gensab-generator.md)

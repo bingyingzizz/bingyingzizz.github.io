@@ -5,7 +5,7 @@
 
 
 
-$$f(x) = \lim_{r\to0} \nu(B(r, x)) / m(B(r, x))$$
+$$f(x) = \lim_{r\to0} \nu(B(x, r)) / m(B(x, r))$$
 
 
 

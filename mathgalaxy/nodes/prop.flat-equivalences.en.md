@@ -11,5 +11,5 @@ names: `Flatness Equivalences` (short) · `Equivalent Characterizations of Flatn
 Chinese only — see the Chinese page `nodes/prop.flat-equivalences.md` and `proofs/`.
 
 
-Cite: `prop.flat-equivalences` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.flat-equivalences` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

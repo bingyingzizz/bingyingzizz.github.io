@@ -11,5 +11,5 @@ names: `Injective iff Acyclic` (short) · `Injective Objects Are Exactly the Acy
 Chinese only — see the Chinese page `nodes/prop.injective-iff-acyclic.md` and `proofs/`.
 
 
-Cite: `prop.injective-iff-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.injective-iff-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

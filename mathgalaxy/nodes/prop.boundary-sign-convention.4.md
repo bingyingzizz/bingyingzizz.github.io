@@ -2,5 +2,5 @@
 [在星图里打开](../#n=prop.boundary-sign-convention)　·　第 1 页 [nodes/prop.boundary-sign-convention.md](./prop.boundary-sign-convention.md)　·　上一页 [nodes/prop.boundary-sign-convention.3.md](./prop.boundary-sign-convention.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面：用到了定义 可定向曲面　[proofs/dep.spivak-surface-boundary.md](../proofs/dep.spivak-surface-boundary.md)
+- [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面：用到了定义 R³ 中的可定向曲面　[proofs/dep.spivak-surface-boundary.md](../proofs/dep.spivak-surface-boundary.md)
 - [`def.orientable-manifold`](../nodes/def.orientable-manifold.md) 可定向流形：用到了定义 可定向流形　[proofs/dep.mf3-bsign-orientmanifold.md](../proofs/dep.mf3-bsign-orientmanifold.md)

@@ -1,6 +1,6 @@
 # 一元多项式　`def.polynomial`
 一元多项式
-layer 8 · 定义 · 多项式与因式分解 · 抽象代数
+layer 9 · 定义 · 多项式与因式分解 · 抽象代数
 [在星图里打开](../#n=def.polynomial)　·　[节点索引](../index.md)
 
 设 $K$ 是域。$K$ 上的一个**一元多项式**是形式表达式
@@ -25,4 +25,4 @@ refs: Lang, Algebra, Ch. IV；Dummit–Foote, Abstract Algebra, Ch. 9
 
 > 说明见 `notes/def.polynomial.md`
 
-引用：`def.polynomial`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.polynomial`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

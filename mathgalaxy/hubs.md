@@ -8,19 +8,19 @@
 
 ## 基础工具榜
 - **30 / 33** `def.limit` 极限 · 图与极限
-- **28 / 32** `def.adjoint` 伴随函子 · 伴随与反射
-- **28 / 29** `def.measure` 测度 · 测度的构造
+- **30 / 31** `def.measure` 测度 · 测度的构造
+- **29 / 32** `def.adjoint` 伴随函子 · 伴随与反射
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
-- **7 / 8** `thm.bundle-classification` 丛的分类 · 流形与向量丛
+- **7 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
+- **7 / 7** `def.singular-homology` 奇异同调群 · 同调群
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · 内蕴几何
-- **6 / 7** `thm.stokes` Stokes 定理 · 内蕴几何
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
-- **16 团 / 23 节点** `def.function` 映射 · 关系与函数
-- **13 团 / 27 节点** `def.compact` 紧 · 度量空间
-- **13 团 / 26 节点** `def.topology` 拓扑空间与开集 · 拓扑空间的基本语汇
+- **16 团 / 24 节点** `def.function` 映射 · 关系与函数
+- **15 团 / 27 节点** `def.group` 群 · 代数结构
+- **14 团 / 28 节点** `def.compact` 紧 · 度量空间
 - 全部：`hubs/cross.md`
 

@@ -1,5 +1,7 @@
 # 别名 → 节点 · 复变函数
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
+
+- 调和函数 → def.harmonic
 
 - 扩充复平面是紧的 → prop.extended-plane-compact
 
@@ -22,5 +24,9 @@
 - 洛朗展开 | 洛朗级数 → thm.laurent
 
 - 黎曼可去奇点 → thm.riemann-removable
+
+- 单位根 | 分圆多项式 | n 次单位根 | roots of unity → def.roots-of-unity
+
+- dz/z 的围道积分 → ex.contour-1-over-z
 
 见 `../../alias.md`。

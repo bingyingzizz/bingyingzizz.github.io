@@ -1,6 +1,6 @@
 # Breen–Deligne 分解　`thm.breen-deligne`
 Breen–Deligne 分解：自由阿贝尔群的有限直和消解
-layer 18 · 定理 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
+layer 20 · 定理 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.breen-deligne)　·　[节点索引](../index.md)
 
 设 $M$ 是拓扑斯中的阿贝尔群（例如 $M \in \mathrm{CondAb}$）。则存在**自然的左消解**
@@ -16,8 +16,11 @@ $$F(M)_{n} = \bigoplus_{i=1}^{r_{n}} \mathbb{Z} \cdot M^{s_{n,i}}.$$
 
 - …另有入边，续页见 [nodes/thm.breen-deligne.2.md](./thm.breen-deligne.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.breen-deligne.3.md](./thm.breen-deligne.3.md)
+
 refs: Le Stum, Theorem 8.3.2
 
 > 说明见 `notes/thm.breen-deligne.md`
 
-引用：`thm.breen-deligne`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.breen-deligne`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

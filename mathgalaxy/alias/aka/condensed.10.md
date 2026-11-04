@@ -11,4 +11,6 @@
 
 - 整值测度 → def.cond-measure
 
+- Banach 空间是凝聚态阿贝尔群 → prop.banach-as-condensed
+
 见 `../../alias.md`。

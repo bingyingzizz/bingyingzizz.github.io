@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 16 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `H2 and Extensions` (short) · `Second Cohomology Classifies Group Extensions` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.h2-group-extensions.md` and `proofs/`.
 
 
-Cite: `thm.h2-group-extensions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.h2-group-extensions` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

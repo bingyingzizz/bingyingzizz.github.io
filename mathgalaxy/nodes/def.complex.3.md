@@ -8,6 +8,9 @@
 - 被 [`def.mobius`](../nodes/def.mobius.md) 分式线性变换 用
 - 被 [`def.logarithm-branch`](../nodes/def.logarithm-branch.md) 对数与幂的分支 用
 - ⇒ [`def.riemann-sphere`](../nodes/def.riemann-sphere.md) 扩充复平面与球极投影
+- 被 [`def.algebraically-closed`](../nodes/def.algebraically-closed.md) 代数闭域 用
+- 被 [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根 用
 - 被 [`def.integral-complex`](../nodes/def.integral-complex.md) 复函数的积分 用
 - 被 [`def.complex-measure`](../nodes/def.complex-measure.md) 复测度 用
-- 被 [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数 用
+
+> 续见 [nodes/def.complex.4.md](./def.complex.4.md)

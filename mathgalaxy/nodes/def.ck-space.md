@@ -1,6 +1,6 @@
 # C(K,E)　`def.ck-space`
 $C(K,E)$ 与一致度量
-layer 16 · 定义 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 17 · 定义 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=def.ck-space)　·　[节点索引](../index.md)
 
 设 $K$ 紧 Hausdorff，$(E, d)$ 度量。在 $C(K, E)$ 上定义
@@ -23,4 +23,4 @@ refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equat
 
 > 说明见 `notes/def.ck-space.md`
 
-引用：`def.ck-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ck-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
+layer 21 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.chaus-two-term-resolution.md` and `proofs/`.
 
 
-Cite: `prop.chaus-two-term-resolution` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.chaus-two-term-resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

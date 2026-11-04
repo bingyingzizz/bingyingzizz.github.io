@@ -1,6 +1,6 @@
 # L¹ 收敛 ⟹ 依测度收敛　`prop.L1-implies-measure`
 命题：$L^{1}$ 收敛蕴含依测度收敛（Markov 不等式）
-layer 21 · 命题 · 可测函数与收敛 · 实变函数+数学分析
+layer 23 · 命题 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=prop.L1-implies-measure)　·　[节点索引](../index.md)
 
 若 $f_n \to f$ 于 $L^1$，则 $f_n \to f$ 依测度：
@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, Prop. 2.29
 
 > 说明见 `notes/prop.L1-implies-measure.md`
 
-引用：`prop.L1-implies-measure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.L1-implies-measure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 10 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) ·
 Chinese only — see the Chinese page `nodes/def.kan-extension.md` and `proofs/`.
 
 
-Cite: `def.kan-extension` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.kan-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

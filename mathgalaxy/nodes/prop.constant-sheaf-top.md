@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 3.23
 
 > 说明见 `notes/prop.constant-sheaf-top.md`
 
-引用：`prop.constant-sheaf-top`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.constant-sheaf-top`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

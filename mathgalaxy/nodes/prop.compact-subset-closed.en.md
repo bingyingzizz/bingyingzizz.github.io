@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
+layer 17 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.compact-subset-closed.md` and `proofs/`.
 
 
-Cite: `prop.compact-subset-closed` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.compact-subset-closed` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 24 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
+layer 28 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.borsuk-ulam.md` and `proofs/`.
 
 
-Cite: `thm.borsuk-ulam` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.borsuk-ulam` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

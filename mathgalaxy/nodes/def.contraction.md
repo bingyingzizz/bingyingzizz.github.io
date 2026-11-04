@@ -1,6 +1,6 @@
 # 压缩映射　`def.contraction`
 压缩映射
-layer 14 · 定义 · 多元微分 · 数学分析
+layer 15 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.contraction)　·　[节点索引](../index.md)
 
 设 $(X, d)$ 是度量空间，$T : X \to X$。$T$ 叫**压缩映射**，当且仅当存在常数 $q \in [0, 1)$ 使
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Zeidler, Nonlinear Fun
 
 > 说明见 `notes/def.contraction.md`
 
-引用：`def.contraction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.contraction`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 局部紧 Hausdorff 是 Baire　`thm.locally-compact-baire`
 局部紧 Hausdorff 空间是 Baire 空间
-layer 16 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 19 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.locally-compact-baire)　·　[节点索引](../index.md)
 
 局部紧 Hausdorff 空间是 Baire 空间。
@@ -14,4 +14,4 @@ refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/thm.locally-compact-baire.md`
 
-引用：`thm.locally-compact-baire`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.locally-compact-baire`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

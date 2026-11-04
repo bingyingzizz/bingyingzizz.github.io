@@ -14,6 +14,6 @@
 - 被 [`def.chain`](../nodes/def.chain.md) 链 用
 - 被 [`def.bound`](../nodes/def.bound.md) 界与确界 用
 - 被 [`def.wellorder`](../nodes/def.wellorder.md) 良序集 用
-- 被 [`def.vs`](../nodes/def.vs.md) 向量空间的基 用
+- 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用
 
 > 续见 [nodes/def.subset.3.md](./def.subset.3.md)

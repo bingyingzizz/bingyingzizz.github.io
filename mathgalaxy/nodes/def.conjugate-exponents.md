@@ -1,6 +1,6 @@
 # 共轭指数　`def.conjugate-exponents`
 共轭指数
-layer 14 · 定义 · L^p 空间 · 实变函数+数学分析
+layer 15 · 定义 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=def.conjugate-exponents)　·　[节点索引](../index.md)
 
 设 $1 \le p \le \infty$。称 $q$ 是 $p$ 的**共轭指数**，当且仅当
@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, §6.2
 
 > 说明见 `notes/def.conjugate-exponents.md`
 
-引用：`def.conjugate-exponents`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.conjugate-exponents`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

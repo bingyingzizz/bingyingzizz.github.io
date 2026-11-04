@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.functor`](../nodes/def.functor.md) 函子：用到了定义 函子　[proofs/def-link.invariant-functor-functor.md](../proofs/def-link.invariant-functor-functor.md)
 - [`def.g-module`](../nodes/def.g-module.md) 群模：用到了定义 群模　[proofs/def-link.invariant-functor-gmodule.md](../proofs/def-link.invariant-functor-gmodule.md)
+- [`def.linear-map`](../nodes/def.linear-map.md) 线性映射：用到了定义 线性映射　[proofs/dep.gap-invariant-functor-linear-map.md](../proofs/dep.gap-invariant-functor-linear-map.md)
 
 > 续见 [nodes/def.invariant-functor.4.md](./def.invariant-functor.4.md)

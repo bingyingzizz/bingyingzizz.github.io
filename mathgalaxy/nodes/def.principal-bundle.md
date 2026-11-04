@@ -1,6 +1,6 @@
 # 主丛　`def.principal-bundle`
 主丛：纤维就是结构群本身的纤维丛
-layer 26 · 定义 · 流形与向量丛 · 微分几何
+layer 30 · 定义 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=def.principal-bundle)　·　[节点索引](../index.md)
 
 **在说什么**：纤维丛里最「自指」的那一类 —— 纤维不是随便一个流形，就是结构群 $G$ 自己，而且 $G$ 在丛上自由地右作用。向量丛都能从主丛造出来（取配丛）。
@@ -19,4 +19,4 @@ refs: Tu, Differential Geometry (GTM 275)（⚠️ 手头无该书，章名未�
 
 > 说明见 `notes/def.principal-bundle.md`
 
-引用：`def.principal-bundle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.principal-bundle`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 挠积　`def.tor`
 挠积：张量函子的左导出函子
-layer 13 · 定义 · 平坦模 · 同调代数
+layer 16 · 定义 · 平坦模 · 同调代数
 [在星图里打开](../#n=def.tor)　·　[节点索引](../index.md)
 
 设 $R$ 是环，$M$ 是右 $R$-模、$N$ 是左 $R$-模，取 $M$ 的一条投射消解 $P_{\bullet} \twoheadrightarrow M$（用删除消解）。**挠积**定义为 $H_{n}(P_{\bullet} \otimes_{R} N)$，即
@@ -20,4 +20,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Ext 与 Tor 的�
 
 > 说明见 `notes/def.tor.md`
 
-引用：`def.tor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

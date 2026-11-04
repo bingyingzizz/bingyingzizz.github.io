@@ -1,6 +1,6 @@
 # 集合族的基本性质　`prop.set-class-properties`
 命题：基本类 / 环 / σ-代数的几条基本性质
-layer 15 · 命题 · 集合族与 σ-代数 · 实变函数+数学分析
+layer 16 · 命题 · 集合族与 σ-代数 · 实变函数+数学分析
 [在星图里打开](../#n=prop.set-class-properties)　·　[节点索引](../index.md)
 
 (1) 基本类包含 $\emptyset$。
@@ -24,4 +24,4 @@ refs: Halmos, Measure Theory, §4
 
 > 说明见 `notes/prop.set-class-properties.md`
 
-引用：`prop.set-class-properties`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.set-class-properties`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

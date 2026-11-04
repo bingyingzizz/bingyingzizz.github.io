@@ -1,6 +1,6 @@
 # 诱导同态　`prop.induced-homomorphism`
 连续映射诱导 $\pi_{1}$ 的同态；$\pi_{1}$ 是同伦不变函子
-layer 14 · 命题 · 基本群 · 拓扑学
+layer 15 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.induced-homomorphism)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 连续，$f(x_{0}) = y_{0}$。定义
@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（induced homo
 
 > 说明见 `notes/prop.induced-homomorphism.md`
 
-引用：`prop.induced-homomorphism`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.induced-homomorphism`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

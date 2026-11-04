@@ -1,6 +1,6 @@
 # M_n(K) 是环　`thm.matrix-ring`
 定理：$M_n(K)$ 是环，对加法构成 $K$-向量空间
-layer 11 · 定理 · 矩阵与行列式 · 抽象代数
+layer 14 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.matrix-ring)　·　[节点索引](../index.md)
 
 在 $M_n(K)$ 上定义逐分量加法与矩阵乘法。则
@@ -18,4 +18,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 > 说明见 `notes/thm.matrix-ring.md`
 
-引用：`thm.matrix-ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.matrix-ring`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

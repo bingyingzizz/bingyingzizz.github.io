@@ -1,6 +1,6 @@
 # 收敛半径　`thm.convergence-radius`
 定理：Cauchy–Hadamard 收敛半径
-layer 17 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 21 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.convergence-radius)　·　[节点索引](../index.md)
 
 设 $\sum a_n (x - x_0)^{n}$ 是幂级数，令（约定 $1/0 = +\infty$、$1/{+\infty} = 0$）
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 
 > 说明见 `notes/thm.convergence-radius.md`
 
-引用：`thm.convergence-radius`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.convergence-radius`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -3,7 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.top-cond-adjoint`](../nodes/thm.top-cond-adjoint.md) Top 与 Cond 的伴随 用
-- 被 [`prop.cg-coreflective`](../nodes/prop.cg-coreflective.md) 紧生成空间是余反射子范畴 用
 - 被 [`thm.cgwh-reflective`](../nodes/thm.cgwh-reflective.md) 弱 Hausdorff 紧生成空间是紧生成空间的反射子范畴 用
 - 被 [`def.k-topology`](../nodes/def.k-topology.md) k-开、k-闭与 k-拓扑 用
 - 被 [`prop.ktx-colimit`](../nodes/prop.ktx-colimit.md) kX 是紧空间的余极限 用

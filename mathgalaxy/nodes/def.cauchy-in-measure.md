@@ -1,6 +1,6 @@
 # 依测度 Cauchy　`def.cauchy-in-measure`
 依测度 Cauchy 序列
-layer 15 · 定义 · 可测函数与收敛 · 实变函数+数学分析
+layer 16 · 定义 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=def.cauchy-in-measure)　·　[节点索引](../index.md)
 
 可测函数列 $\{f_n\}$ 是**依测度 Cauchy 的**，当且仅当
@@ -21,4 +21,4 @@ refs: Folland, Real Analysis, §2.4
 
 > 说明见 `notes/def.cauchy-in-measure.md`
 
-引用：`def.cauchy-in-measure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cauchy-in-measure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

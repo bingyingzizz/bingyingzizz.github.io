@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 30 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.lagrange-multiplier.md` and `proofs/`.
 
 
-Cite: `thm.lagrange-multiplier` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lagrange-multiplier` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

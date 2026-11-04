@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 9 · axiom · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
+layer 8 · axiom · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
 
 ## Statement · **reviewed**
 From any family of non-empty sets one can pick one element from each, "all at once". Written in terms of a choice function:

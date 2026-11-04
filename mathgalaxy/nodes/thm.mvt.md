@@ -1,6 +1,6 @@
 # Lagrange 中值定理　`thm.mvt`
 Lagrange 中值定理
-layer 21 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 25 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.mvt)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上连续、在 $(a, b)$ 内可导。则存在 $\xi \in (a, b)$ 使
@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5；Spivak, Calculus, Ch. 
 
 > 说明见 `notes/thm.mvt.md`
 
-引用：`thm.mvt`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mvt`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 8 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`)
 Chinese only — see the Chinese page `nodes/thm.ordinal-trichotomy.md` and `proofs/`.
 
 
-Cite: `thm.ordinal-trichotomy` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ordinal-trichotomy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

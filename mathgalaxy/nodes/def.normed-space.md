@@ -1,6 +1,6 @@
 # 赋范空间　`def.normed-space`
 赋范空间
-layer 9 · 定义 · 多元微分 · 数学分析
+layer 12 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.normed-space)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间（$K = \mathbb{R}$ 或 $\mathbb{C}$）。映射 $\|\cdot\| : V \to \mathbb{R}$ 叫 $V$ 上的**范数**，当且仅当对一切 $v, w \in V$、$c \in K$：
@@ -19,4 +19,4 @@ refs: Rudin, Functional Analysis, Ch. 1；Lang, Real and Functional Analysis, Ch
 
 > 说明见 `notes/def.normed-space.md`
 
-引用：`def.normed-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.normed-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

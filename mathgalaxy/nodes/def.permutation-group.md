@@ -1,6 +1,6 @@
 # 置换群与对称群　`def.permutation-group`
 对称群 $S_n$、置换与循环分解
-layer 10 · 定义 · 群作用与置换 · 抽象代数
+layer 11 · 定义 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=def.permutation-group)　·　[节点索引](../index.md)
 
 $n$ 元集合（不妨取 $\{1, 2, \ldots, n\}$）的全体双射在**复合**下构成群，记 $S_n$，叫 **$n$ 次对称群**；它的元素叫**置换**，$|S_n| = n!$。$S_n$ 的子群统称**置换群**。
@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §3.1
 
 > 说明见 `notes/def.permutation-group.md`
 
-引用：`def.permutation-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.permutation-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

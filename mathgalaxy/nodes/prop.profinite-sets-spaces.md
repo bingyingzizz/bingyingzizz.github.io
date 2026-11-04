@@ -12,4 +12,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.21
 
 > 说明见 `notes/prop.profinite-sets-spaces.md`
 
-引用：`prop.profinite-sets-spaces`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.profinite-sets-spaces`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

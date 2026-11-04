@@ -10,5 +10,5 @@ layer 17 · definition · cluster Homology and Exact Sequences (`hom.cohomology`
 Chinese only — see the Chinese page `nodes/def.cohomology.md` and `proofs/`.
 
 
-Cite: `def.cohomology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

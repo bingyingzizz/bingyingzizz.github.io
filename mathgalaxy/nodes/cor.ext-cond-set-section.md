@@ -1,6 +1,6 @@
 # Ext 的截面公式　`cor.ext-cond-set-section`
 推论：$\operatorname{Ext}^{n}(\mathbb{Z}\cdot X, N)(S) \cong H^{n}(X \times S, N)$
-layer 18 · 推论 · 导出 Hom 的具体计算 · 凝聚态数学
+layer 22 · 推论 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=cor.ext-cond-set-section)　·　[节点索引](../index.md)
 
 设 $X$ 是凝聚态集、$N$ 是凝聚态阿贝尔群、$S$ 是 **Stonean** 空间。则对一切 $n \ge 0$
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, §8.3
 
 > 说明见 `notes/cor.ext-cond-set-section.md`
 
-引用：`cor.ext-cond-set-section`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.ext-cond-set-section`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

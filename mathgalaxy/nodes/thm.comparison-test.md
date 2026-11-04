@@ -1,6 +1,6 @@
 # 比较判别法　`thm.comparison-test`
 定理：比较判别法
-layer 15 · 定理 · 数项级数的敛散性 · 数学分析
+layer 19 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.comparison-test)　·　[节点索引](../index.md)
 
 设 $0 \le a_n \le b_n$ 对充分大的 $n$ 成立。则
@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.comparison-test.md`
 
-引用：`thm.comparison-test`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.comparison-test`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

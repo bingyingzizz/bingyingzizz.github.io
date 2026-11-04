@@ -11,3 +11,5 @@
 - 被 [`def.idempotent`](../nodes/def.idempotent.md) 幂等 用
 - 被 [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子 用
 - 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用
+
+> 续见 [nodes/def.linear-map.4.md](./def.linear-map.4.md)

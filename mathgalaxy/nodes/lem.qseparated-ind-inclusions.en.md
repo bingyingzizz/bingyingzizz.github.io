@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · lemma · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 20 · lemma · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Ind(CHaus)` (short) · `Quasi-Separated Condensed Sets as Filtered Colimits` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.qseparated-ind-inclusions.md` and `proofs/`.
 
 
-Cite: `lem.qseparated-ind-inclusions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.qseparated-ind-inclusions` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

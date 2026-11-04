@@ -10,5 +10,5 @@ layer 9 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysi
 Chinese only — see the Chinese page `nodes/thm.binomial.md` and `proofs/`.
 
 
-Cite: `thm.binomial` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.binomial` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

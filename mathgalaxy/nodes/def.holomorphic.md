@@ -1,6 +1,6 @@
 # 全纯函数　`def.holomorphic`
 定义：全纯函数与复导数
-layer 16 · 定义 · 复变函数基础 · 复变函数
+layer 20 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.holomorphic)　·　[节点索引](../index.md)
 
 **白话**：复可微就是「差商在复意义下收敛」—— $h$ 可以从**任何方向、任何方式**趋于 $0$，但差商必须落到同一个复数。
@@ -23,4 +23,4 @@ refs: 王晓光《复变函数》笔记，第 4 章 · 全纯函数；Ahlfors, C
 
 > 说明见 `notes/def.holomorphic.md`
 
-引用：`def.holomorphic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.holomorphic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

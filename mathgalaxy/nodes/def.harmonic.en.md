@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
+layer 21 · definition · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.harmonic.md` and `proofs/`.
 
 
-Cite: `def.harmonic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.harmonic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

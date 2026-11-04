@@ -9,8 +9,6 @@
 
 - 拓扑斯上的阿贝尔群 | Ab(T) 是 Grothendieck 范畴 | abelian groups in a topos form a Grothendieck category | Theorem 5.3.2 → thm.topos-abelian-grothendieck
 
-- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom | Exercise 3.43 | Proposition 3.3.7 | Proposition 6.1.8 | Exercise 5.21 | Exercise 5.23 | Exercise 5.30 | Exercise 3.44 → def.internal-hom
-
-- 阿贝尔层的张量积 | 封闭对称幺半 | closed symmetric monoidal | Tensor | internal hom | 封闭张量结构 | Exercise 5.25 | Exercise 5.28 | Exercise 5.26 | Exercise 5.27 → def.tensor-abelian-sheaf
+- 内 Hom | internal hom | Hom(X,M) | 内层 | 内部 Hom | Exercise 3.43 | Proposition 3.3.7 | Proposition 6.1.8 | Exercise 5.21 | Exercise 5.23 | Exercise 5.30 | Exercise 3.44 | Hom(-,-) | 内 Hom Hom → def.internal-hom
 
 > 续见 alias/aka/homology.8.md

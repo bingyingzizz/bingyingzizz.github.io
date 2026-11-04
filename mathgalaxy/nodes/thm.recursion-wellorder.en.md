@@ -10,5 +10,5 @@ layer 7 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`)
 Chinese only — see the Chinese page `nodes/thm.recursion-wellorder.md` and `proofs/`.
 
 
-Cite: `thm.recursion-wellorder` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.recursion-wellorder` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

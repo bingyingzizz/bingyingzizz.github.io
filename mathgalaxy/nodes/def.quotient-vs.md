@@ -1,6 +1,6 @@
 # 商空间　`def.quotient-vs`
 商空间 $V / U$
-layer 6 · 定义 · 线性映射与秩 · 抽象代数
+layer 13 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.quotient-vs)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是子空间。在 $V$ 上定义等价关系
@@ -25,4 +25,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
 > 说明见 `notes/def.quotient-vs.md`
 
-引用：`def.quotient-vs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.quotient-vs`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -22,4 +22,4 @@ refs: Kunen, Set Theory, I.2；Jech, Set Theory, 1.2
 
 去掉它，就可以有元素完全相同却彼此不同的对象（例如带原子 ur-element 的集合论）。
 
-引用：`ax.ext`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.ext`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

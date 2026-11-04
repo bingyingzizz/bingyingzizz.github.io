@@ -9,5 +9,5 @@ Integrating forms pairs de Rham cohomology, closed forms modulo exact ones, with
 Chinese only — see the Chinese page `nodes/thm.de-rham.md` and `proofs/`.
 
 
-Cite: `thm.de-rham` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.de-rham` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

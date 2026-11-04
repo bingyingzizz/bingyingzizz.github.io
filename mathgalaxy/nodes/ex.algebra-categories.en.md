@@ -11,5 +11,5 @@ names: `Algebraic Categories` (short) · `Categories of Algebraic Structures` (f
 Chinese only — see the Chinese page `nodes/ex.algebra-categories.md` and `proofs/`.
 
 
-Cite: `ex.algebra-categories` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.algebra-categories` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

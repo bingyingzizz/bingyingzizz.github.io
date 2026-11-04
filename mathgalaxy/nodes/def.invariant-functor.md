@@ -1,6 +1,6 @@
 # 不变量函子　`def.invariant-functor`
 不变量函子 $(-)^{G}$
-layer 10 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 13 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.invariant-functor)　·　[节点索引](../index.md)
 
 设 $M$ 是 $G$-模。对 $g \in G$ 记 $g - 1 : M \to M$ 为 $R$-线性映射 $m \mapsto g \cdot m - m$。$M$ 的**不变量子模**是
@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（不变量函�
 
 > 说明见 `notes/def.invariant-functor.md`
 
-引用：`def.invariant-functor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.invariant-functor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

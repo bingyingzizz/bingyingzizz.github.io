@@ -11,5 +11,5 @@ names: `Generator Criterion` (short) · `Generators via Coproduct Epimorphisms` 
 Chinese only — see the Chinese page `nodes/prop.generator-coproduct-epi.md` and `proofs/`.
 
 
-Cite: `prop.generator-coproduct-epi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.generator-coproduct-epi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

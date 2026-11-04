@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
+layer 13 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
 names: `Filtered Colimits` (short) · `K-Bounded Exactness Is Stable under Filtered Colimits` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.k-bounded-exact-filtered-colimit.md` and `proofs/`.
 
 
-Cite: `prop.k-bounded-exact-filtered-colimit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.k-bounded-exact-filtered-colimit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

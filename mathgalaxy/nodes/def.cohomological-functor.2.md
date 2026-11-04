@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.distinguished-triangle`](../nodes/def.distinguished-triangle.md) 导出三角：用到了定义 导出三角　[proofs/def-dep.triangle-cohomological.md](../proofs/def-dep.triangle-cohomological.md)
+
+> 续见 [nodes/def.cohomological-functor.3.md](./def.cohomological-functor.3.md)

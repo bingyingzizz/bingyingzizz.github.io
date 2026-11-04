@@ -1,6 +1,6 @@
 # 线丛的陈类计算　`prop.chern-class-line-bundle`
 命题：线丛的陈类就是曲率（差一个 $\frac{i}{2\pi}$）
-layer 33 · 命题 · 流形与向量丛 · 微分几何
+layer 37 · 命题 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=prop.chern-class-line-bundle)　·　[节点索引](../index.md)
 
 **在做什么**：秩 $1$ 时整台装置退化成一个可算的公式 —— 这是陈类唯一能「手算」的情形，也是分裂原理把它化归到的情形。
@@ -19,4 +19,4 @@ refs: Milnor–Stasheff, Characteristic Classes · 线丛；Bott–Tu, Different
 
 > 说明见 `notes/prop.chern-class-line-bundle.md`
 
-引用：`prop.chern-class-line-bundle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.chern-class-line-bundle`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

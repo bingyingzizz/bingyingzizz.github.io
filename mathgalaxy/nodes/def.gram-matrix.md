@@ -1,6 +1,6 @@
 # Gram 矩阵　`def.gram-matrix`
 Gram 矩阵：内积的矩阵
-layer 15 · 定义 · 多重线性与张量 · 抽象代数
+layer 21 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.gram-matrix)　·　[节点索引](../index.md)
 
 **在做什么**：内积也是双线性型（实情形对称、复情形 Hermite），所以它也有矩阵。这个矩阵永远是**正定**的 —— 反过来每个正定矩阵都给出一个内积。
@@ -21,4 +21,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/def.gram-matrix.md`
 
-引用：`def.gram-matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.gram-matrix`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

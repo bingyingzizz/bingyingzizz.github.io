@@ -1,6 +1,6 @@
 # 拟紧的性质　`prop.quasi-compact-properties`
 拟紧对象的性质
-layer 13 · 命题 · 拓扑斯 · 范畴论
+layer 18 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.quasi-compact-properties)　·　[节点索引](../index.md)
 
 1. 景 $\mathcal{C}$ 中 $X$ 拟紧 $\iff$ $X$ 在标准拓扑下拟紧；
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 
 > 说明见 `notes/prop.quasi-compact-properties.md`
 
-引用：`prop.quasi-compact-properties`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.quasi-compact-properties`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

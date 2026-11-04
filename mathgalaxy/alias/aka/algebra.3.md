@@ -13,7 +13,7 @@
 
 - 奇异值分解 → thm.svd
 
-- 行列式 → def.determinant
+- 行列式 | det | det A → def.determinant
 
 - 可对角化判据 → thm.diagonalizable
 

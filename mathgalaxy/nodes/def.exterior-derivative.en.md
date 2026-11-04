@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 18 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Exterior Derivative (Euclidean Open Sets)` (short) · `Exterior Derivative: Coordinate Formula on Euclidean Open Sets` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.exterior-derivative.md` and `proofs/`.
 
 
-Cite: `def.exterior-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.exterior-derivative` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

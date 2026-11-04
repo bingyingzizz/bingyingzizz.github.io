@@ -1,6 +1,6 @@
 # 级数收敛　`def.series`
 级数 $\sum a_n$
-layer 14 · 定义 · 实数与极限 · 数学分析
+layer 15 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.series)　·　[节点索引](../index.md)
 
 给定数列 $\{a_n\}$，令**部分和** $s_N := \sum_{n=1}^{N} a_n$。
@@ -26,4 +26,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 ⚠ 收敛级数**可以重排**的只有绝对收敛的情形；条件收敛的级数重排后可能收敛到别的值（Riemann 重排定理）。
 
-引用：`def.series`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.series`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

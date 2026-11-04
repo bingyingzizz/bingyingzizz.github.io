@@ -1,6 +1,6 @@
 # T0 空间　`def.t0-space`
 T0 空间（Kolmogorov）：点可被开集区分
-layer 7 · 定义 · 分离公理 · 拓扑学
+layer 6 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.t0-space)　·　[节点索引](../index.md)
 
 **在做什么**：分离公理里最弱的一条 —— 只要求「任意两个不同点，存在某个开集恰好只含其中一个」。它保证拓扑能**看见**点是不同的。
@@ -18,4 +18,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公�
 
 > 说明见 `notes/def.t0-space.md`
 
-引用：`def.t0-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.t0-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

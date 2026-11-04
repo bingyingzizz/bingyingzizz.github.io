@@ -1,6 +1,6 @@
 # 离散 与 紧 Hausdorff　`prop.pontryagin-discrete-compact-duality`
 Pontryagin 对偶把离散与紧互换
-layer 18 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 20 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=prop.pontryagin-discrete-compact-duality)　·　[节点索引](../index.md)
 
 设 $M$ 是局部紧 Hausdorff 阿贝尔群，$\widehat{M} = C_{\mathbb{Z}}(M, \mathbb{T})$ 是它的 Pontryagin 对偶。则
@@ -14,4 +14,4 @@ refs: Le Stum, §6.2；Le Stum, Exercise 6.9
 
 > 说明见 `notes/prop.pontryagin-discrete-compact-duality.md`
 
-引用：`prop.pontryagin-discrete-compact-duality`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pontryagin-discrete-compact-duality`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

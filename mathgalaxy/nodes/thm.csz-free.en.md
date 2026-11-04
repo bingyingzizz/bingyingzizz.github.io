@@ -10,5 +10,5 @@ layer 14 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed 
 Chinese only — see the Chinese page `nodes/thm.csz-free.md` and `proofs/`.
 
 
-Cite: `thm.csz-free` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.csz-free` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

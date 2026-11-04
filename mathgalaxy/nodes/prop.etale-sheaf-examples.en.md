@@ -11,5 +11,5 @@ names: `Étale Sheaf Examples` (short) · `Examples of Étale Sheaves` (full)
 Chinese only — see the Chinese page `nodes/prop.etale-sheaf-examples.md` and `proofs/`.
 
 
-Cite: `prop.etale-sheaf-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.etale-sheaf-examples` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

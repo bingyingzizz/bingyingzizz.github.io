@@ -10,5 +10,5 @@ layer 9 · definition · cluster Additive and Abelian Categories (`hom.ab`) · H
 Chinese only — see the Chinese page `nodes/def.additive-functor.md` and `proofs/`.
 
 
-Cite: `def.additive-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.additive-functor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

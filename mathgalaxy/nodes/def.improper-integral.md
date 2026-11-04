@@ -1,6 +1,6 @@
 # 反常积分　`def.improper-integral`
 反常积分：无穷区间与无界函数
-layer 17 · 定义 · Riemann 积分 · 数学分析
+layer 18 · 定义 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=def.improper-integral)　·　[节点索引](../index.md)
 
 **无穷区间**：若 $f$ 在每个 $[a, R]$ 上可积，定义
@@ -25,4 +25,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/def.improper-integral.md`
 
-引用：`def.improper-integral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.improper-integral`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 坐标　`def.coordinate`
 坐标与有序基
-layer 9 · 定义 · 向量空间的基 · 抽象代数
+layer 12 · 定义 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=def.coordinate)　·　[节点索引](../index.md)
 
 设 $\mathcal{B} = (v_1, \ldots, v_n)$ 是 $V$ 的**有序**基（顺序算进去）。由「基」的定义，每个 $v \in V$ 都能**唯一**地写成
@@ -27,4 +27,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
 > 说明见 `notes/def.coordinate.md`
 
-引用：`def.coordinate`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.coordinate`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

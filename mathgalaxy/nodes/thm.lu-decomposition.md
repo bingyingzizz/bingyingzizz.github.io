@@ -1,6 +1,6 @@
 # LU 分解　`thm.lu-decomposition`
 LU 分解：把消元写成两个三角矩阵
-layer 22 · 定理 · 矩阵分解与最小二乘 · 抽象代数
+layer 26 · 定理 · 矩阵分解与最小二乘 · 抽象代数
 [在星图里打开](../#n=thm.lu-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：高斯消元其实是在乘一串初等矩阵。把那些初等矩阵乘起来记成 $L$，消元的结果记成 $U$，就得到 $A = LU$。
@@ -18,4 +18,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化�
 
 > 说明见 `notes/thm.lu-decomposition.md`
 
-引用：`thm.lu-decomposition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lu-decomposition`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,7 +1,7 @@
 # 留数定理　`thm.residue`　·　说明
 根 `../`
 
-⭐ 证明：以每个 $z_k$ 为心挖去半径 $\varepsilon$ 的闭圆盘（互不相交、都含在 $\Omega$ 内），得 $\Omega_\varepsilon = \Omega \setminus \bigcup_k \overline{D(z_k, \varepsilon)}$。
+⭐ 证明：以每个 $z_k$ 为心挖去半径 $\varepsilon$ 的闭圆盘（互不相交、都含在 $\Omega$ 内），得 $\Omega_\varepsilon = \Omega \setminus \bigcup_k \overline{B(z_k, \varepsilon)}$。
 
 $f$ 在 $\Omega_\varepsilon$ 上全纯，由**多连通** Cauchy–Goursat，$\oint_{\partial\Omega_\varepsilon} f = 0$，也就是
 

@@ -1,6 +1,6 @@
 # 高维球面的基本群　`cor.pi1-sphere`
 $\pi_{1}(S^{n}) = 1$ 对 $n \ge 2$
-layer 15 · 推论 · 基本群 · 拓扑学
+layer 16 · 推论 · 基本群 · 拓扑学
 [在星图里打开](../#n=cor.pi1-sphere)　·　[节点索引](../index.md)
 
 对每个 $n \ge 2$，$S^{n}$ 单连通，即
@@ -18,4 +18,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group of S^n；Hatch
 
 > 说明见 `notes/cor.pi1-sphere.md`
 
-引用：`cor.pi1-sphere`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.pi1-sphere`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

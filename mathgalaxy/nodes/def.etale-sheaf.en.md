@@ -10,5 +10,5 @@ layer 16 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homologic
 Chinese only — see the Chinese page `nodes/def.etale-sheaf.md` and `proofs/`.
 
 
-Cite: `def.etale-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.etale-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 最值定理　`thm.evt`
 最值定理
-layer 19 · 定理 · 连续与紧性 · 数学分析+拓扑学
+layer 23 · 定理 · 连续与紧性 · 数学分析+拓扑学
 [在星图里打开](../#n=thm.evt)　·　[节点索引](../index.md)
 
 设 $X$ 是紧度量空间，$f : X \to \mathbb{R}$ 连续。则 $f$ **取到**最大值与最小值：存在 $x_{\min}, x_{\max} \in X$，使对一切 $x \in X$ 有
@@ -17,4 +17,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 
 > 说明见 `notes/thm.evt.md`
 
-引用：`thm.evt`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.evt`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

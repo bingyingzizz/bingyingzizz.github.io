@@ -11,3 +11,5 @@
 - 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用
 - 被 [`def.hyperbolic-plane`](../nodes/def.hyperbolic-plane.md) 双曲平面 用
 - 被 [`def.symplectic-form`](../nodes/def.symplectic-form.md) 辛形式 用
+
+> 续见 [nodes/def.bilinear-form.4.md](./def.bilinear-form.4.md)

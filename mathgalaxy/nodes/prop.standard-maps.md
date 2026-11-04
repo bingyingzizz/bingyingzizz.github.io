@@ -1,6 +1,6 @@
 # 标准共形映射　`prop.standard-maps`
 几个典型区域之间的标准共形映射
-layer 22 · 命题 · 共形映射与正规族 · 复变函数
+layer 26 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.standard-maps)　·　[节点索引](../index.md)
 
 常用的一批「把区域搬到标准位置」的映射（$\mathbb{H}$ = 上半平面，$\mathbb{D}$ = 单位圆盘）：
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 共形映射的例子；Ahlfors, Complex Ana
 
 > 说明见 `notes/prop.standard-maps.md`
 
-引用：`prop.standard-maps`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.standard-maps`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

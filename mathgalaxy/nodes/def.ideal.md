@@ -1,6 +1,6 @@
 # 理想　`def.ideal`
 理想与商环
-layer 9 · 定义 · 代数结构 · 抽象代数
+layer 10 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.ideal)　·　[节点索引](../index.md)
 
 设 $A$ 是环。子集 $I \subseteq A$ 叫**（双边）理想**，如果 $(I, +)$ 是加法子群，并且对一切 $a \in A$、$x \in I$ 有
@@ -25,4 +25,4 @@ refs: Lang, Algebra
 
 > 说明见 `notes/def.ideal.md`
 
-引用：`def.ideal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ideal`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

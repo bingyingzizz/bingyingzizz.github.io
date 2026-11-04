@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) �
 Chinese only — see the Chinese page `nodes/prop.filtered-exact.md` and `proofs/`.
 
 
-Cite: `prop.filtered-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.filtered-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

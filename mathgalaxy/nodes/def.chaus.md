@@ -1,6 +1,6 @@
 # 紧 Hausdorff 空间范畴　`def.chaus`
 紧 Hausdorff 空间范畴 $\mathbf{CHaus}$
-layer 15 · 定义 · 紧 Hausdorff 空间 · 拓扑学
+layer 17 · 定义 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=def.chaus)　·　[节点索引](../index.md)
 
 **紧 Hausdorff 空间**是既紧又 Hausdorff 的拓扑空间。以它们为对象、连续映射为态射，得到范畴 $\mathbf{CHaus}$。含入函子记 $\mathbf{CHaus} \hookrightarrow \mathbf{Top}$。
@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
 
 > 说明见 `notes/def.chaus.md`
 
-引用：`def.chaus`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chaus`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

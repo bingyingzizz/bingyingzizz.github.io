@@ -6,3 +6,6 @@
 - 被 [`def.irreducible-poly`](../nodes/def.irreducible-poly.md) 不可约多项式 用
 - 被 [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式 用
 - 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用
+- 被 [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式 用
+- 被 [`def.splitting-field`](../nodes/def.splitting-field.md) 分裂域 用
+- 被 [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根 用

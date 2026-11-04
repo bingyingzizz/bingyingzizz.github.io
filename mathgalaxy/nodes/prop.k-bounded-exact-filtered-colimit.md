@@ -1,6 +1,6 @@
 # K-有界正合沿滤过余极限保持　`prop.k-bounded-exact-filtered-colimit`
 命题：等距转移下的滤过余极限保持 $K$-有界正合
-layer 12 · 命题 · 凝聚态导出函子 · 凝聚态数学
+layer 13 · 命题 · 凝聚态导出函子 · 凝聚态数学
 [在星图里打开](../#n=prop.k-bounded-exact-filtered-colimit)　·　[节点索引](../index.md)
 
 设 $M^{\bullet} = \varinjlim_{k} M^{\bullet}_{k}$ 是半范数阿贝尔群复形的**滤过余极限**，且转移映射都是**等距**的。
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, §8.2
 
 > 说明见 `notes/prop.k-bounded-exact-filtered-colimit.md`
 
-引用：`prop.k-bounded-exact-filtered-colimit`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.k-bounded-exact-filtered-colimit`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

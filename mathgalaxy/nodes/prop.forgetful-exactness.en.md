@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.alge
 Chinese only — see the Chinese page `nodes/prop.forgetful-exactness.md` and `proofs/`.
 
 
-Cite: `prop.forgetful-exactness` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.forgetful-exactness` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

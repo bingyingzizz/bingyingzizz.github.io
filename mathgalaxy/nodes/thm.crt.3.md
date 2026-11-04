@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
 - 被 [`def.mobius-function`](../nodes/def.mobius-function.md) Möbius 函数 用
+- 被 [`def.profinite-integers`](../nodes/def.profinite-integers.md) profinite 整数 ℤ̂ 用

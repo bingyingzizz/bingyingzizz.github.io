@@ -1,6 +1,6 @@
 # 有界变差函数的例子与基本性质　`prop.bv-examples`
 命题：有界变差函数的几个例子与封闭性
-layer 17 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 18 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=prop.bv-examples)　·　[节点索引](../index.md)
 
 1. 若 $F : \mathbb{R} \to \mathbb{R}$ **有界递增**，则 $F \in BV$（此时 $T_F = F - F(-\infty)$）。
@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, §3.5
 
 > 说明见 `notes/prop.bv-examples.md`
 
-引用：`prop.bv-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.bv-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

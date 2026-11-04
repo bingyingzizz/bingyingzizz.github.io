@@ -39,7 +39,7 @@
 
 - 映射同伦 → def.homotopy-maps
 
-- 基本群 → def.fundamental-group
+- 基本群 | π_1 | π₁ | pi_1 → def.fundamental-group
 
 - 覆叠空间 → def.covering-space
 

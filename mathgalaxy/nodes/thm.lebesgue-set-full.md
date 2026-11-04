@@ -1,6 +1,6 @@
 # Lebesgue 集几乎处处　`thm.lebesgue-set-full`
 定理：$f \in L^{1}_{\text{loc}} \implies m(L_f^{c}) = 0$
-layer 25 · 定理 · 微分定理 · 实变函数+数学分析
+layer 27 · 定理 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=thm.lebesgue-set-full)　·　[节点索引](../index.md)
 
 若 $f \in L^1_{loc}$，则
@@ -21,4 +21,4 @@ refs: Folland, Real Analysis, Theorem 3.20
 
 > 说明见 `notes/thm.lebesgue-set-full.md`
 
-引用：`thm.lebesgue-set-full`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lebesgue-set-full`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

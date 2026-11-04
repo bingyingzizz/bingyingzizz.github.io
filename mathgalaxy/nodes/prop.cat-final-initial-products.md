@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.31
 ## 说明
 **证明。** 终/始对象与积范畴的泛性质逐条验证 ✓；「域 = 余域」正是两条函子的等化子 ✓。∎
 
-引用：`prop.cat-final-initial-products`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cat-final-initial-products`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -8,7 +8,7 @@
 - 被 [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集 用
 - 被 [`def.underlying-topological-space`](../nodes/def.underlying-topological-space.md) 底拓扑空间 用
 - 被 [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 用
-- 被 [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 用
 - 被 [`prop.chaus-cech-eq-h`](../nodes/prop.chaus-cech-eq-h.md) 紧 Hausdorff 上 Čech 就是上同调 用
+- 被 [`thm.real-banach-chaus-acyclic`](../nodes/thm.real-banach-chaus-acyclic.md) 实 Banach 在紧 Hausdorff 上零调 用
 
 > 续见 [nodes/def.chaus.5.md](./def.chaus.5.md)

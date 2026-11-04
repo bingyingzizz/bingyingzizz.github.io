@@ -1,6 +1,6 @@
 # 离散函子保直和　`prop.discrete-functor-coproduct`
 命题：$\bigl(\bigoplus_{i} M_{i}\bigr)^{\mathrm{disc}} \cong \bigoplus_{i} M_{i}^{\mathrm{disc}}$
-layer 18 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
+layer 20 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.discrete-functor-coproduct)　·　[节点索引](../index.md)
 
 设 $(M_{i})_{i \in I}$ 是一族阿贝尔群。则
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 6.3
 
 > 说明见 `notes/prop.discrete-functor-coproduct.md`
 
-引用：`prop.discrete-functor-coproduct`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.discrete-functor-coproduct`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

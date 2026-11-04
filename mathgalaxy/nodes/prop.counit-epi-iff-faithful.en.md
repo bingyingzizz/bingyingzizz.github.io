@@ -11,5 +11,5 @@ names: `Counit and Faithfulness` (short) · `The Counit Is an Epimorphism iff th
 Chinese only — see the Chinese page `nodes/prop.counit-epi-iff-faithful.md` and `proofs/`.
 
 
-Cite: `prop.counit-epi-iff-faithful` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.counit-epi-iff-faithful` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

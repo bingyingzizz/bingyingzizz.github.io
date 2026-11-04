@@ -1,6 +1,6 @@
 # 球面的同调　`thm.sphere-homology`
 $H_{p}(S^{n})$：只有在 $p = 0$ 与 $p = n$ 处非平凡
-layer 22 · 定理 · 同调群 · 拓扑学
+layer 24 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.sphere-homology)　·　[节点索引](../index.md)
 
 对 $n \ge 1$：
@@ -19,4 +19,4 @@ refs: Munkres, Elements of Algebraic Topology · 球面的同调（用 Mayer–V
 
 > 说明见 `notes/thm.sphere-homology.md`
 
-引用：`thm.sphere-homology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.sphere-homology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

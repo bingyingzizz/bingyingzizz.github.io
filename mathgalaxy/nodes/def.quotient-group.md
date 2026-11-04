@@ -1,6 +1,6 @@
 # 商群　`def.quotient-group`
 商群
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 9 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.quotient-group)　·　[节点索引](../index.md)
 
 设 $N \trianglelefteq G$。全体左陪集 $\{\, gN : g \in G \,\}$ 记作 $G/N$，在上面定义
@@ -23,4 +23,4 @@ refs: Lang, Algebra
 
 > 说明见 `notes/def.quotient-group.md`
 
-引用：`def.quotient-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.quotient-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

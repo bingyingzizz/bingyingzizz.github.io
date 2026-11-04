@@ -1,7 +1,7 @@
 # 线性无关与生成的定义 $\implies$ 交换引理
 `imp.steinitz` · 推出 · strong 边 · 根 `../`
 
-`def.vs` 向量空间的基 → `thm.steinitz` Steinitz 交换引理
+`def.vs` 线性无关与基 → `thm.steinitz` Steinitz 交换引理
 
 （归纳假设给出的其实是 $n - 1 \le m$，要得到 $n \le m$ 需要一个更精细的归纳陈述：若 $S$ 无关、$T$ 生成，则 $\#S \le \#T$ 且可交换。上面的第 3 步用 $T'$ 而非 $T$ 正是为此 —— 交换掉 $v_1$ 之后生成集的势没有变。）∎
 

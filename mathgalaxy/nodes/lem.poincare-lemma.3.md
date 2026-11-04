@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调 + [`def.exterior-derivative`](../nodes/def.exterior-derivative.md) 外微分（欧氏开集）：链同伦 $\mathrm{d}K + K\mathrm{d} = \operatorname{id}$ $\implies$ 闭形式恰当　[proofs/imp.mf-poincare.md](../proofs/imp.mf-poincare.md)
+- [`def.closed-form`](../nodes/def.closed-form.md) 闭形式：用到了定义 闭形式　[proofs/dep.gap-poincare-lemma-closed-form.md](../proofs/dep.gap-poincare-lemma-closed-form.md)

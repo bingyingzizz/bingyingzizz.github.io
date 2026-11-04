@@ -9,7 +9,7 @@
 
 - 斯托克斯公式（方块） → lem.single-cube-stokes
 
-- 李括号 → def.lie-bracket
+- 李括号 | [X,Y] | 李括号 [X,Y] → def.lie-bracket
 
 - 德拉姆上同调 | de Rham 复形 → def.de-rham-complex
 
@@ -31,4 +31,18 @@
 
 - 拉格朗日括号 → def.lagrange-bracket
 
-见 `../../alias.md`。
+- 不变多项式 → def.invariant-polynomial
+
+- 分裂原理 → thm.splitting-principle
+
+- 转移函数 → def.transition-function
+
+- 结构群 → def.structure-group
+
+- 帧丛 → def.frame-bundle
+
+- 配丛 → def.associated-bundle
+
+- 闭形式 → def.closed-form
+
+> 续见 alias/aka/diffgeom.4.md

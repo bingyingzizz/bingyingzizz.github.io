@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.geometric-series`](../nodes/thm.geometric-series.md) 几何级数
+- 被 [`def.riemann-zeta`](../nodes/def.riemann-zeta.md) 黎曼 ζ 函数 用
 - ～弱边 [`thm.mct`](../nodes/thm.mct.md) 单调收敛定理
 - 被 [`def.absolute-convergence`](../nodes/def.absolute-convergence.md) 绝对收敛 用
 - ⇒ [`thm.cauchy-criterion-series`](../nodes/thm.cauchy-criterion-series.md) 级数的 Cauchy 准则

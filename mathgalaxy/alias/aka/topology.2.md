@@ -1,7 +1,7 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
-- 连续 | continuous | 连续函数 → def.continuous
+- 连续 | continuous | 连续函数 | 连续 ε-δ | ε-δ → def.continuous
 
 - Borel | Borel 集 | Borel σ代数 → def.borel
 

@@ -1,6 +1,6 @@
 # Lie 括号　`def.lie-bracket`
 向量场的 Lie 括号
-layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.lie-bracket)　·　[节点索引](../index.md)
 
 **在说什么**：两个向量场各自都不能与另一个「合成」出新的向量场，但它们的交换子可以 —— 两次方向导数相减，二阶项自动抵消，剩下的仍是向量场。这个差值就是 Lie 括号。
@@ -23,4 +23,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」
 
 > 说明见 `notes/def.lie-bracket.md`
 
-引用：`def.lie-bracket`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lie-bracket`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

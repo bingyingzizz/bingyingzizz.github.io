@@ -1,6 +1,6 @@
 # Rouché 定理　`thm.rouche`
 定理：Rouché 定理
-layer 22 · 定理 · 留数与辐角原理 · 复变函数
+layer 26 · 定理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=thm.rouche)　·　[节点索引](../index.md)
 
 **白话**：如果两个全纯函数在闭曲线的边界上，「扰动项」的模严格小于「主项」的模，那么加上扰动不会改变曲线内部的零点个数。
@@ -24,4 +24,4 @@ refs: 王晓光《复变函数》· Rouché 定理；Stein–Shakarchi, Complex 
 
 > 说明见 `notes/thm.rouche.md`
 
-引用：`thm.rouche`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.rouche`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

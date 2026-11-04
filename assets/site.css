@@ -54,7 +54,7 @@ footer a{color:var(--soft)}
 .about-en .meta-en{color:var(--faint);font-size:13.5px;margin-bottom:0}
 
 /* ------------------------------------------------------------ 卡片（首页） */
-/* 首屏的三个任务入口（查概念 / 看前置 / 随便探索）。
+/* 首屏的三个任务入口（浏览索引 / 看前置 / 随便探索）—— 搜索框单独在它们上面。
    ⚠️ 窄屏必须降成一列：手机上三列会把字挤成竖线。 */
 .tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 10px}
 .tasks a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:12px;
@@ -65,7 +65,22 @@ footer a{color:var(--soft)}
 .tasks span{display:block;color:var(--soft);font-size:12.5px;line-height:1.6}
 .try{margin:0 0 40px;color:var(--soft);font-size:13.5px}
 .try a{margin-right:14px;white-space:nowrap}
-@media (max-width:640px){.tasks{grid-template-columns:1fr}.try a{display:block;margin:4px 0;white-space:normal}}
+
+/* 首屏搜索框（K1，2026-11-03）：提交后跳到 `mathgalaxy/#q=<词>`，星图页把词
+   填进搜索框并列出结果。⛔ 不引 JS 框架 —— 只有 index.html 里那几行内联。 */
+.find{display:flex;gap:8px;margin:0 0 12px}
+.find input[type=search]{flex:1;min-width:0;font:inherit;font-size:14.5px;
+  padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;color:inherit;
+  transition:border-color .2s var(--ease),box-shadow .24s var(--ease)}
+.find input[type=search]::placeholder{color:var(--faint)}
+.find input[type=search]:focus{outline:none;border-color:rgba(20,22,28,.28);
+  box-shadow:0 0 0 3px rgba(79,124,245,.14)}
+.find button{font:inherit;font-size:14px;font-weight:650;padding:13px 18px;white-space:nowrap;
+  border:1px solid transparent;border-radius:12px;background:var(--accent);color:#fff;cursor:pointer;
+  transition:filter .2s var(--ease),box-shadow .24s var(--ease)}
+.find button:hover{filter:brightness(.95);box-shadow:0 6px 20px rgba(79,124,245,.22)}
+@media (max-width:640px){.tasks{grid-template-columns:1fr}.try a{display:block;margin:4px 0;white-space:normal}
+  .find{flex-direction:column}}
 .card{position:relative;display:block;padding:18px 52px 18px 22px;border:1px solid var(--line);
   border-radius:14px;margin-bottom:12px;color:inherit;overflow:hidden;
   transition:border-color .2s var(--ease),box-shadow .28s var(--ease),

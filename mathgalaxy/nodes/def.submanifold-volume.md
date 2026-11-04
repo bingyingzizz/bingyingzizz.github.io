@@ -1,6 +1,6 @@
 # 诱导体积　`def.submanifold-volume`
 子流形的诱导体积
-layer 27 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 31 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.submanifold-volume)　·　[节点索引](../index.md)
 
 *
@@ -17,4 +17,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/def.submanifold-volume.md`
 
-引用：`def.submanifold-volume`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.submanifold-volume`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,3 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.dual-banach`](../nodes/def.dual-banach.md) 连续对偶空间 用
 - 被 [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间 用
+- 被 [`thm.bounded-operators-banach`](../nodes/thm.bounded-operators-banach.md) B(E,F) 完备 用
+- 被 [`thm.bounded-extension`](../nodes/thm.bounded-extension.md) 有界算子的延拓 用
+- 被 [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值） 用
+- 被 [`prop.banach-as-condensed`](../nodes/prop.banach-as-condensed.md) Banach 空间都是凝聚态阿贝尔群 用

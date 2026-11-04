@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-dep.lcext-ext.md](../proofs/def-dep.lcext-ext.md)
+
+> 续见 [nodes/thm.lc-ext-vanishing.3.md](./thm.lc-ext-vanishing.3.md)

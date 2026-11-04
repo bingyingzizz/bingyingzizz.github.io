@@ -1,6 +1,6 @@
 # 流　`def.flow`
 流与单参数群
-layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.flow)　·　[节点索引](../index.md)
 
 **白话**：向量场给每点一个「该往哪走」，沿着走得出的曲线叫积分曲线；把「从 $p$ 出发走 $t$ 时间到哪」记成 $\varphi_{t}(p)$，这一族映射就是流。它是向量场的「解」。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie
 
 > 说明见 `notes/def.flow.md`
 
-引用：`def.flow`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.flow`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

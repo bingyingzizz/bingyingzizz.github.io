@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 18 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.smooth-partition-unity.md` and `proofs/`.
 
 
-Cite: `thm.smooth-partition-unity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.smooth-partition-unity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

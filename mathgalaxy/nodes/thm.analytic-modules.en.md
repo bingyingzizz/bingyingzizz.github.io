@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 21 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.analytic-modules.md` and `proofs/`.
 
 
-Cite: `thm.analytic-modules` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.analytic-modules` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

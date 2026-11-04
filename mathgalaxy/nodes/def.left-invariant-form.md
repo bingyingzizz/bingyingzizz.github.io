@@ -1,6 +1,6 @@
 # 左不变形式　`def.left-invariant-form`
 左不变形式与左不变余标架
-layer 26 · 定义 · Lie 群 · 微分几何
+layer 30 · 定义 · Lie 群 · 微分几何
 [在星图里打开](../#n=def.left-invariant-form)　·　[节点索引](../index.md)
 
 **白话**：Lie 群上的微分形式如果对左平移「纹丝不动」，它就被单位元处的一个多
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie
 
 > 说明见 `notes/def.left-invariant-form.md`
 
-引用：`def.left-invariant-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.left-invariant-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

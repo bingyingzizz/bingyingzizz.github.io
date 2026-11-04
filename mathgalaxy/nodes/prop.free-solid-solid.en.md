@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 21 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.free-solid-solid.md` and `proofs/`.
 
 
-Cite: `prop.free-solid-solid` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-solid-solid` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

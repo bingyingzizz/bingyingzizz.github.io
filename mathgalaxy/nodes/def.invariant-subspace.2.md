@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.linear-map`](../nodes/def.linear-map.md) 线性映射：用到了定义 线性映射　[proofs/dep.linearmap-invariant.md](../proofs/dep.linearmap-invariant.md)
+- [`def.kernel-image-vs`](../nodes/def.kernel-image-vs.md) 核与像：用到了定义 核与像　[proofs/dep.gap-invariant-subspace-kernel-image-vs.md](../proofs/dep.gap-invariant-subspace-kernel-image-vs.md)
 
 > 续见 [nodes/def.invariant-subspace.3.md](./def.invariant-subspace.3.md)

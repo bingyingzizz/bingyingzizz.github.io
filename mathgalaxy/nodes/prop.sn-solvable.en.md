@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · proposition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
+layer 15 · proposition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.sn-solvable.md` and `proofs/`.
 
 
-Cite: `prop.sn-solvable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sn-solvable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

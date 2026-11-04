@@ -13,5 +13,5 @@ Read the two together: **colimits and right adjoints are special cases of Kan ex
 Wikipedia: https://en.wikipedia.org/wiki/Kan_extension · nLab: https://ncatlab.org/nlab/show/Kan+extension
 
 
-Cite: `ex.kan-extension` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.kan-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

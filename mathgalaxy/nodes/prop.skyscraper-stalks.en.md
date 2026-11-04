@@ -11,5 +11,5 @@ names: `Skyscraper Stalks` (short) · `Stalks of a Skyscraper Sheaf` (full)
 Chinese only — see the Chinese page `nodes/prop.skyscraper-stalks.md` and `proofs/`.
 
 
-Cite: `prop.skyscraper-stalks` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.skyscraper-stalks` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

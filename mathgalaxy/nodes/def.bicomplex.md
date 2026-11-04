@@ -1,6 +1,6 @@
 # 双复形　`def.bicomplex`
 双复形
-layer 11 · 定义 · 过滤与谱序列 · 同调代数
+layer 12 · 定义 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=def.bicomplex)　·　[节点索引](../index.md)
 
 加法范畴里的**双复形**就是**复形的复形**：即 $(\mathbb{Z}, \preceq)^{2}$ 上的图 $(K^{p,q}, d^{p,q}, d'^{p,q})$，使对一切 $p, q$
@@ -19,4 +19,4 @@ refs: Le Stum, Definition 7.2.17
 
 > 说明见 `notes/def.bicomplex.md`
 
-引用：`def.bicomplex`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.bicomplex`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

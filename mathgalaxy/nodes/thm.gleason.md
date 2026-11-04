@@ -1,6 +1,6 @@
 # Gleason 定理　`thm.gleason`
 Gleason 定理：$\mathbf{CHaus}$ 的投射对象
-layer 17 · 定理 · Stone 与 Stonean · 拓扑学
+layer 19 · 定理 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=thm.gleason)　·　[节点索引](../index.md)
 
 $\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。
@@ -15,4 +15,6 @@ $\mathbf{CHaus}$ 中的**投射对象恰好是 Stonean 空间**。
 
 refs: Le Stum, An introduction to condensed mathematics, §2.2
 
-引用：`thm.gleason`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+> 说明见 `notes/thm.gleason.md`
+
+引用：`thm.gleason`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 多项式环　`def.polynomial-ring`
 多项式环 $K[x]$
-layer 9 · 定义 · 多项式与因式分解 · 抽象代数
+layer 10 · 定义 · 多项式与因式分解 · 抽象代数
 [在星图里打开](../#n=def.polynomial-ring)　·　[节点索引](../index.md)
 
 在 $K$ 上全体一元多项式构成的集合 $K[x]$ 上定义
@@ -25,4 +25,4 @@ refs: Lang, Algebra, Ch. IV
 
 > 说明见 `notes/def.polynomial-ring.md`
 
-引用：`def.polynomial-ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.polynomial-ring`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

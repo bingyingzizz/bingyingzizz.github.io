@@ -1,6 +1,6 @@
 # 可缩族的微分定理　`thm.differentiation-general`
 定理：对可缩族，Lebesgue 微分定理仍然成立
-layer 26 · 定理 · 微分定理 · 实变函数+数学分析
+layer 28 · 定理 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=thm.differentiation-general)　·　[节点索引](../index.md)
 
 设 $f \in L^1_{loc}$，$x \in L_f$。则对**每一个**可缩地趋于 $x$ 的族 $\{E_r\}_{r>0}$：
@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 3.21
 
 > 说明见 `notes/thm.differentiation-general.md`
 
-引用：`thm.differentiation-general`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.differentiation-general`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

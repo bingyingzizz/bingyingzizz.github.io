@@ -1,6 +1,6 @@
 # 凸性的导数判据　`thm.convex-criterion`
 定理：凸 $\iff$ 导数递增 $\iff f'' \ge 0$
-layer 22 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 26 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.convex-criterion)　·　[节点索引](../index.md)
 
 设 $f$ 在区间 $I$ 上可导。则 $f$ 是凸函数，当且仅当 $f'$ 在 $I$ 上递增。
@@ -14,4 +14,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5；Rockafellar, Convex An
 
 > 说明见 `notes/thm.convex-criterion.md`
 
-引用：`thm.convex-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.convex-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

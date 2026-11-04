@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.geodesic-existence`](../nodes/prop.geodesic-existence.md) 测地线的局部存在唯一性
+- 被 [`ex.polar-christoffel`](../nodes/ex.polar-christoffel.md) 极坐标的 Christoffel 符号 用

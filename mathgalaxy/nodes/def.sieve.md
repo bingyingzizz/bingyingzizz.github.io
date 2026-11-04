@@ -1,6 +1,6 @@
 # 筛　`def.sieve`
 筛
-layer 10 · 定义 · 层与拓扑 · 范畴论
+layer 11 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.sieve)　·　[节点索引](../index.md)
 
 设 $X \in \mathcal{C}$。
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 ## 说明
 直觉：**$X$ 上一族「允许的映射」，而且凡是能再往下接的都算进来**。所以筛不是随便一族箭头，它「对预复合封闭」—— 这正是一个子函子该有的样子。
 
-引用：`def.sieve`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.sieve`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

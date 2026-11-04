@@ -1,6 +1,6 @@
 # Carathéodory 定理　`thm.caratheodory`
 Carathéodory 定理：$\mu^{*}$-可测集构成 σ-代数，$\mu^{*}$ 在其上是完备测度
-layer 16 · 定理 · 测度的构造 · 实变函数+数学分析
+layer 17 · 定理 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=thm.caratheodory)　·　[节点索引](../index.md)
 
 设 $\mu^{*}$ 是 $X$ 上的外测度，$\mathcal{M}$ 是全体 $\mu^{*}$-可测集。则
@@ -21,4 +21,4 @@ refs: Halmos, Measure Theory, §11；Folland, Real Analysis, Theorem 1.11
 
 > 说明见 `notes/thm.caratheodory.md`
 
-引用：`thm.caratheodory`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.caratheodory`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

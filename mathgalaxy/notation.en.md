@@ -17,11 +17,11 @@ are not. Whole table: `notation-full.md`.
 - `notation/set.md` Logic and sets 39
 - `notation/order.md` Order, cardinals, ordinals 19
 - `notation/num.md` Number systems and real analysis 26
-- `notation/topo.md` Topology and metrics 6
+- `notation/topo.md` Topology and metrics 7
 - `notation/measure.md` Measure and σ-algebras 25
 - `notation/integral.md` Integration and function spaces 16
-- `notation/linalg.md` 线性代数 16
-- `notation/layout.md` Typesetting and arrows 13
+- `notation/linalg.md` Linear algebra 16
+- `notation/layout.md` Typesetting and arrows 16
 - `notation/cat.md` Categories and homology 21
-- `notation/letters.md` Letter conventions 22
+- `notation/letters.md` Letter conventions 23
 

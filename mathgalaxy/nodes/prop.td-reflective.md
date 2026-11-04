@@ -1,6 +1,6 @@
 # 全不连通空间是反射子范畴　`prop.td-reflective`
 全不连通空间是 $\mathbf{Top}$ 的反射子范畴
-layer 17 · 命题 · Stone 与 Stonean · 拓扑学
+layer 19 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.td-reflective)　·　[节点索引](../index.md)
 
 全不连通空间构成的范畴是 $\mathbf{Top}$ 的**反射子范畴**，反射是
@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/prop.td-reflective.md`
 
-引用：`prop.td-reflective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.td-reflective`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

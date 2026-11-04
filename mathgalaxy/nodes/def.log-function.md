@@ -1,6 +1,6 @@
 # 对数函数与 e　`def.log-function`
 对数函数 $\log$ 与常数 $e$
-layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 18 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.log-function)　·　[节点索引](../index.md)
 
 $\exp$ 在 $\mathbb{R}$ 上严格递增（因为 $(\exp x)' = \exp x > 0$），其像为 $(0, +\infty)$。定义 $\log : (0, +\infty) \to \mathbb{R}$ 为它的反函数：
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 
 > 说明见 `notes/def.log-function.md`
 
-引用：`def.log-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.log-function`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

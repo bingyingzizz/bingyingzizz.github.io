@@ -1,6 +1,6 @@
 # 有理指数与实数指数幂　`def.real-power`
 有理指数与实数指数幂
-layer 15 · 定义 · 实数的运算与不等式 · 数学分析
+layer 19 · 定义 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=def.real-power)　·　[节点索引](../index.md)
 
 设 $a > 0$。
@@ -27,4 +27,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 1
 
 > 说明见 `notes/def.real-power.md`
 
-引用：`def.real-power`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.real-power`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

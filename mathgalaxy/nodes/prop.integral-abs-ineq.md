@@ -1,6 +1,6 @@
 # 积分绝对值不等式　`prop.integral-abs-ineq`
 命题：$|\int f| \le \int |f|$
-layer 20 · 命题 · 积分 · 实变函数+数学分析
+layer 22 · 命题 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=prop.integral-abs-ineq)　·　[节点索引](../index.md)
 
 设 $f \in L^1(\mu)$，则
@@ -16,4 +16,4 @@ refs: Folland, Real Analysis, Prop. 2.22
 
 > 说明见 `notes/prop.integral-abs-ineq.md`
 
-引用：`prop.integral-abs-ineq`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integral-abs-ineq`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

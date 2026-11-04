@@ -1,6 +1,6 @@
 # 适配标架　`lem.adapted-frame`
 沿曲面取法向标架
-layer 23 · 引理 · 活动标架与结构方程 · 微分几何
+layer 26 · 引理 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=lem.adapted-frame)　·　[节点索引](../index.md)
 
 设标架取成适配于曲面的：$e_{3} = n$（法向）。则沿曲面
@@ -22,4 +22,4 @@ refs: 陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Sur
 
 > 说明见 `notes/lem.adapted-frame.md`
 
-引用：`lem.adapted-frame`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.adapted-frame`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

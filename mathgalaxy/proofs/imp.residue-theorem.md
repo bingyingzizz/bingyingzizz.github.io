@@ -3,9 +3,9 @@
 
 `thm.cauchy-goursat` Cauchy–Goursat 积分定理 + `def.residue` 留数 → `thm.residue` 留数定理
 
-**挖洞。** 取 $\varepsilon > 0$ 足够小，使闭圆盘 $\overline{D(z_k, \varepsilon)}$（$k = 1, \cdots, n$）两两不交、且都含在 $\Omega$ 内。令
+**挖洞。** 取 $\varepsilon > 0$ 足够小，使闭圆盘 $\overline{B(z_k, \varepsilon)}$（$k = 1, \cdots, n$）两两不交、且都含在 $\Omega$ 内。令
 
-$$\Omega_\varepsilon := \Omega \setminus \bigcup_{k=1}^{n}\overline{D(z_k, \varepsilon)}.$$
+$$\Omega_\varepsilon := \Omega \setminus \bigcup_{k=1}^{n}\overline{B(z_k, \varepsilon)}.$$
 
 $\Omega_\varepsilon$ 是 $n$ 连通的，而 $f$ 在它上面全纯（挖掉的正是全部奇点）。
 

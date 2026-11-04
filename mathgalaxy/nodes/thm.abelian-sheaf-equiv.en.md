@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 20 · theorem · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Sheaves of Groups in a Topos` (short) · `Abelian Sheaves Are Abelian Groups in a Topos` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.abelian-sheaf-equiv.md` and `proofs/`.
 
 
-Cite: `thm.abelian-sheaf-equiv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.abelian-sheaf-equiv` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

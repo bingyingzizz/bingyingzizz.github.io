@@ -12,5 +12,5 @@ The name is a historical accident: Zorn popularised the statement in the 1940s, 
 Wikipedia: https://en.wikipedia.org/wiki/Zorn%27s_lemma · nLab: https://ncatlab.org/nlab/show/Zorn%27s+lemma · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/Order/Zorn.html
 
 
-Cite: `lem.zorn` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.zorn` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

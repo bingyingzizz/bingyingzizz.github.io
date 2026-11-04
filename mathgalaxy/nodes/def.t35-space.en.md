@@ -10,5 +10,5 @@ layer 6 · definition · cluster Separation Axioms (`topology.separation`) · To
 Chinese only — see the Chinese page `nodes/def.t35-space.md` and `proofs/`.
 
 
-Cite: `def.t35-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.t35-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

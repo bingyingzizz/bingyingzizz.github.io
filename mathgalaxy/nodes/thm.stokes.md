@@ -1,6 +1,6 @@
 # Stokes 定理　`thm.stokes`
 Stokes 定理
-layer 27 · 定理 · 内蕴几何 · 微分几何
+layer 30 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.stokes)　·　[节点索引](../index.md)
 
 **在做什么**：把微积分基本定理升到任意维 —— 边界上的积分等于内部外微分的积分，一个公式吃掉 Green、Gauss–Ostrogradsky 与 Kelvin–Stokes。
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式的积
 
 > 说明见 `notes/thm.stokes.md`
 
-引用：`thm.stokes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.stokes`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

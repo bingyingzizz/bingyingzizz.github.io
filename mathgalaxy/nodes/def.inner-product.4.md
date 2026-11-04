@@ -2,10 +2,14 @@
 [在星图里打开](../#n=def.inner-product)　·　第 1 页 [nodes/def.inner-product.md](./def.inner-product.md)　·　上一页 [nodes/def.inner-product.3.md](./def.inner-product.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.hermitian-matrix`](../nodes/def.hermitian-matrix.md) Hermite 矩阵与对称矩阵 用
-- 被 [`def.rayleigh-quotient`](../nodes/def.rayleigh-quotient.md) Rayleigh 商 用
-- 被 [`def.gram-matrix`](../nodes/def.gram-matrix.md) Gram 矩阵 用
-- 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
-- 被 [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式 用
-- 被 [`def.hilbert-space`](../nodes/def.hilbert-space.md) Hilbert 空间 用
-- 被 [`def.ell2-space`](../nodes/def.ell2-space.md) ℓ²(I) 用
+- 被 [`def.orthogonality`](../nodes/def.orthogonality.md) 正交 用
+- 被 [`def.operator-adjoint`](../nodes/def.operator-adjoint.md) 伴随算子 用
+- 被 [`def.isometry`](../nodes/def.isometry.md) 等距与正交变换 用
+- ⇒ [`thm.cauchy-schwarz`](../nodes/thm.cauchy-schwarz.md) Cauchy–Schwarz 不等式
+- 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
+- 被 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化 用
+- 被 [`def.arc-length`](../nodes/def.arc-length.md) 弧长 用
+- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量 用
+- 被 [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置 用
+
+> 续见 [nodes/def.inner-product.5.md](./def.inner-product.5.md)

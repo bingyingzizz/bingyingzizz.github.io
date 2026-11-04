@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.exterior-power`](../nodes/def.exterior-power.md) 外幂 + [`thm.det-exists-unique`](../nodes/thm.det-exists-unique.md) 行列式的存在唯一性：外幂的一维性 + 存在唯一性 $\implies$ 行列式就是那个系数　[proofs/imp.det-as-exterior.md](../proofs/imp.det-as-exterior.md)
+- [`def.determinant`](../nodes/def.determinant.md) 行列式：用到了定义 行列式　[proofs/dep.gap-det-as-exterior-determinant.md](../proofs/dep.gap-det-as-exterior-determinant.md)

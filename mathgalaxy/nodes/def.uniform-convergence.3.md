@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.ck-space`](../nodes/def.ck-space.md) C(K,E) 用
+- 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
 - 被 [`def.uniform-cauchy`](../nodes/def.uniform-cauchy.md) 一致 Cauchy 列 用
 - ⇒ [`thm.uniform-limit-continuous`](../nodes/thm.uniform-limit-continuous.md) 一致收敛保连续
 - ⇒ [`thm.uniform-limit-integral`](../nodes/thm.uniform-limit-integral.md) 积分与极限交换

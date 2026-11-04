@@ -8,3 +8,4 @@
 - ⇒ [`def.first-fundamental-form`](../nodes/def.first-fundamental-form.md) 第一基本形式
 - 被 [`prop.christoffel-frame`](../nodes/prop.christoffel-frame.md) 标架下的联络系数 用
 - ⇒ [`def.affine-connection`](../nodes/def.affine-connection.md) 仿射联络
+- 被 [`def.frenet-frame`](../nodes/def.frenet-frame.md) 曲率与挠率 用

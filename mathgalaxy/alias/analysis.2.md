@@ -1,6 +1,10 @@
 # 问法 → 节点 · 数学分析
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/analysis.md`
 
+- 几乎处处收敛和依测度收敛有什么关系 → def.convergence-modes prop.convergence-counterexamples thm.egorov
+
+- 收敛和一致收敛差在哪 → def.convergence-modes thm.egorov cor.lusin
+
 - Egorov 定理说的是什么 → thm.egorov def.convergence-modes
 
 - 怎么从一个外测度造出测度 → def.outer-measure thm.caratheodory def.caratheodory-measurable
@@ -18,9 +22,5 @@
 - 可测函数长什么样 → def.measurable-function thm.simple-approximation def.simple-function
 
 - 简单函数是什么 → def.simple-function def.integral-simple
-
-- 连续函数一定可测吗 → cor.continuous-measurable def.measurable-function
-
-- 一个测度相对于另一个测度的密度 → def.rn-derivative thm.lebesgue-radon-nikodym
 
 > 续见 alias/analysis.3.md

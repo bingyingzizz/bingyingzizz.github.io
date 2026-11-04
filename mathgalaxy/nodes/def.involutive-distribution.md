@@ -1,6 +1,6 @@
 # 对合分布　`def.involutive-distribution`
 对合分布
-layer 21 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.involutive-distribution)　·　[节点索引](../index.md)
 
 **白话**：一族方向「对合」，说的是：沿其中两个方向各走一步、交换次序后的那点偏差，仍然落在这族方向里。这一条就是「能
@@ -17,4 +17,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem�
 
 > 说明见 `notes/def.involutive-distribution.md`
 
-引用：`def.involutive-distribution`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.involutive-distribution`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

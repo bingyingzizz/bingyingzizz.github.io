@@ -1,6 +1,6 @@
 # Gauss 方程　`thm.gauss-equation`
 Gauss 方程
-layer 27 · 定理 · 曲面论 · 微分几何
+layer 31 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.gauss-equation)　·　[节点索引](../index.md)
 
 在适配标架 $e_{3} = n$ 下，把第二结构方程按 $k = 1,2,3$ 拆开，$k = 3$ 那一项留下来就是曲面的曲率：
@@ -20,4 +20,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面
 
 > 说明见 `notes/thm.gauss-equation.md`
 
-引用：`thm.gauss-equation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.gauss-equation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

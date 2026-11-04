@@ -1,6 +1,6 @@
 # 积分有限的后果　`prop.finite-integral-consequences`
 命题：$\int f < \infty$ 时，f 几乎处处有限、支撑 σ-有限
-layer 16 · 命题 · 积分 · 实变函数+数学分析
+layer 17 · 命题 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=prop.finite-integral-consequences)　·　[节点索引](../index.md)
 
 设 $f \in L^+$ 且 $\int f < \infty$。则
@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, Prop. 2.20
 
 > 说明见 `notes/prop.finite-integral-consequences.md`
 
-引用：`prop.finite-integral-consequences`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.finite-integral-consequences`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Čech Spectral Sequence` (short) · `Čech-to-Cohomology Spectral Sequen
 Chinese only — see the Chinese page `nodes/cor.cech-cohomology-spectral.md` and `proofs/`.
 
 
-Cite: `cor.cech-cohomology-spectral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.cech-cohomology-spectral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

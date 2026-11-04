@@ -1,6 +1,6 @@
 # 群环　`def.group-ring`
 群环 $R[G]$
-layer 8 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 9 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.group-ring)　·　[节点索引](../index.md)
 
 设 $R$ 是有 $1$ 的交换环、$G$ 是群。**群环** $R[G]$ 的元素是**形式有限和**
@@ -23,4 +23,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（群环与群�
 
 > 说明见 `notes/def.group-ring.md`
 
-引用：`def.group-ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-ring`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

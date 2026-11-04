@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/def-dep.bd-topos.md](../proofs/def-dep.bd-topos.md)
+
+> 续见 [nodes/thm.breen-deligne.3.md](./thm.breen-deligne.3.md)

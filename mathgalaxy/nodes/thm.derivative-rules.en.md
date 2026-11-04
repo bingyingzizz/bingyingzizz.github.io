@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 18 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.derivative-rules.md` and `proofs/`.
 
 
-Cite: `thm.derivative-rules` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.derivative-rules` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

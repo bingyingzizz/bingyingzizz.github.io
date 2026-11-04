@@ -10,5 +10,5 @@ layer 17 · proposition · cluster Filtrations and Spectral Sequences (`hom.spec
 Chinese only — see the Chinese page `nodes/prop.spectral-sequence-page-picture.md` and `proofs/`.
 
 
-Cite: `prop.spectral-sequence-page-picture` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.spectral-sequence-page-picture` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

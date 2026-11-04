@@ -11,5 +11,5 @@ names: `Stalks of Sheafification` (short) · `Sheafification Does Not Change Sta
 Chinese only — see the Chinese page `nodes/prop.stalk-of-sheafification.md` and `proofs/`.
 
 
-Cite: `prop.stalk-of-sheafification` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.stalk-of-sheafification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

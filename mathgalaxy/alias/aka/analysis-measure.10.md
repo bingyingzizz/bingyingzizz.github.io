@@ -25,4 +25,8 @@
 
 - Riesz 表示 | 对偶空间 | dual space | (Lp)* = Lq | 里斯表示定理 → thm.riesz-representation-lp
 
+- 密度型测度绝对连续 → ex.density-abs-continuous
+
+- Riesz-Markov 表示定理 | Riesz–Markov 表示 → thm.riesz-markov
+
 见 `../../alias.md`。

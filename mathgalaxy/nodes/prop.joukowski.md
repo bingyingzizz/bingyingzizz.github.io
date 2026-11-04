@@ -1,6 +1,6 @@
 # Joukowski 映射　`prop.joukowski`
 Joukowski 映射：机翼剖面的来历
-layer 18 · 命题 · 共形映射与正规族 · 复变函数
+layer 22 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.joukowski)　·　[节点索引](../index.md)
 
 **Joukowski 映射** $w = \dfrac{1}{2}\left(z + \dfrac{1}{z}\right)$ 把
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 共形映射的例子；Ahlfors, Complex Ana
 
 > 说明见 `notes/prop.joukowski.md`
 
-引用：`prop.joukowski`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.joukowski`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

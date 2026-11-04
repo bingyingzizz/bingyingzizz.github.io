@@ -1,6 +1,6 @@
 # 覆叠的指数　`prop.covering-index`
 纤维与 $\pi_{1}$ 的陪集一一对应（层数 = 指数）
-layer 8 · 命题 · 基本群 · 拓扑学
+layer 15 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.covering-index)　·　[节点索引](../index.md)
 
 设 $p : (E, e_{0}) \to (B, b_{0})$ 是覆叠映射，$E, B$ 道路连通且局部道路连通。则
@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Covering Spaces（lifts 与 indices�
 
 > 说明见 `notes/prop.covering-index.md`
 
-引用：`prop.covering-index`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.covering-index`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

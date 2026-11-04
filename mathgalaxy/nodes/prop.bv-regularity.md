@@ -1,6 +1,6 @@
 # 有界变差函数的正则性　`prop.bv-regularity`
 命题：有界变差函数的单侧极限都存在、不连续点可数、几乎处处可导
-layer 19 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 20 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=prop.bv-regularity)　·　[节点索引](../index.md)
 
 设 $F \in BV$。则
@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 3.27
 
 > 说明见 `notes/prop.bv-regularity.md`
 
-引用：`prop.bv-regularity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.bv-regularity`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

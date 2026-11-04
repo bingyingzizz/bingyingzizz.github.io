@@ -1,6 +1,6 @@
 # 剩余类环　`def.zmodn`
 剩余类环：把同余类收成一个元素
-layer 12 · 定义 · 整除与同余 · 数论
+layer 13 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.zmodn)　·　[节点索引](../index.md)
 
 记 $\mathbb{Z}/n\mathbb{Z} = \{[0], [1], \cdots, [n-1]\}$，其中 $[a]$ 是 $a$ 所在的同余类，运算由代表元定义：
@@ -22,4 +22,4 @@ refs: 华罗庚《数论导引》§2
 
 > 说明见 `notes/def.zmodn.md`
 
-引用：`def.zmodn`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.zmodn`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

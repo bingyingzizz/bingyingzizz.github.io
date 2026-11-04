@@ -11,5 +11,5 @@ names: `Total Complex` (short) · `The Total Complex Is Still an Injective Resol
 Chinese only — see the Chinese page `nodes/prop.total-complex-injective-resolution.md` and `proofs/`.
 
 
-Cite: `prop.total-complex-injective-resolution` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.total-complex-injective-resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 可积 ⟺ 不连续点零测　`thm.riemann-lebesgue-criterion`
 定理（Lebesgue 判据）：有界可积 $\iff$ 不连续点集是零测集
-layer 19 · 定理 · Riemann 积分 · 数学分析
+layer 20 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.riemann-lebesgue-criterion)　·　[节点索引](../index.md)
 
 设 $f : [a, b] \to \mathbb{R}$ 有界，记 $D$ 为 $f$ 在 $[a, b]$ 上的**不连续点**全体。则 $f$ 在 $[a, b]$ 上 Riemann 可积，当且仅当 $D$ 是 Lebesgue 零测集，即
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 11；Folland, Real Analysi
 
 > 说明见 `notes/thm.riemann-lebesgue-criterion.md`
 
-引用：`thm.riemann-lebesgue-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riemann-lebesgue-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

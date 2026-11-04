@@ -1,6 +1,6 @@
 # 反常积分的比较判敛　`prop.improper-comparison`
 命题：比较判别法与绝对收敛
-layer 18 · 命题 · Riemann 积分 · 数学分析
+layer 22 · 命题 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=prop.improper-comparison)　·　[节点索引](../index.md)
 
 设 $f, g$ 在不含端点的区间上可积，且 $|f(x)| \le g(x)$ 在近端成立。
@@ -16,4 +16,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.improper-comparison.md`
 
-引用：`prop.improper-comparison`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.improper-comparison`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

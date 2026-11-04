@@ -16,4 +16,4 @@ refs: Le Stum, Proposition 3.2.12；Le Stum, Exercise 3.26
 
 > 说明见 `notes/prop.sieve-covering-equivalent.md`
 
-引用：`prop.sieve-covering-equivalent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.sieve-covering-equivalent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

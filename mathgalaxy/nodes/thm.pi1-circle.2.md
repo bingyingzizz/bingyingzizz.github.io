@@ -2,6 +2,8 @@
 [在星图里打开](../#n=thm.pi1-circle)　·　第 1 页 [nodes/thm.pi1-circle.md](./thm.pi1-circle.md)
 
 ## 陈述（续）
+$$\deg[\alpha] := \tilde{\alpha}(1) \in \mathbb{Z}$$
+
 （**绕数**，也叫**度数**）。则 $\deg$ 是良定义的群同构
 
 $$\deg : \pi_{1}(S^{1}, 1) \xrightarrow{\ \cong\ } \mathbb{Z}.$$

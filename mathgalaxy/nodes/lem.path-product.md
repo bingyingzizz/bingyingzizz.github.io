@@ -1,6 +1,6 @@
 # 道路拼接　`lem.path-product`
 道路的拼接与同伦类上的群算律
-layer 13 · 引理 · 基本群 · 拓扑学
+layer 14 · 引理 · 基本群 · 拓扑学
 [在星图里打开](../#n=lem.path-product)　·　[节点索引](../index.md)
 
 设 $\alpha$ 是从 $x_{0}$ 到 $x_{1}$ 的道路、$\beta$ 是从 $x_{1}$ 到 $x_{2}$ 的道路。它们的**拼接**是「先走 $\alpha$，再走 $\beta$，各用一半时间」：
@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Homotopy of Paths（道路的乘积�
 
 > 说明见 `notes/lem.path-product.md`
 
-引用：`lem.path-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.path-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

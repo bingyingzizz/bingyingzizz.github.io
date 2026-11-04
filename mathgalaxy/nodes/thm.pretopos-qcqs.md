@@ -1,6 +1,6 @@
 # 预拓扑斯由拓扑斯唯一确定　`thm.pretopos-qcqs`
 预拓扑斯 $\simeq$ 拟紧拟分离层
-layer 17 · 定理 · 拓扑斯 · 范畴论
+layer 20 · 定理 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=thm.pretopos-qcqs)　·　[节点索引](../index.md)
 
 若 $\mathcal{C}$ 是预拓扑斯（配预标准拓扑），则函子
@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 
 > 说明见 `notes/thm.pretopos-qcqs.md`
 
-引用：`thm.pretopos-qcqs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pretopos-qcqs`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

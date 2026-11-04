@@ -1,6 +1,6 @@
 # Boolean 环与 Stone 空间等价　`thm.boolean-stone`
 Stone 表示定理：$\mathbf{BoolRing}^{\mathrm{op}} \simeq \mathbf{Stone}$
-layer 17 · 定理 · Stone 与 Stonean · 拓扑学+抽象代数
+layer 19 · 定理 · Stone 与 Stonean · 拓扑学+抽象代数
 [在星图里打开](../#n=thm.boolean-stone)　·　[节点索引](../index.md)
 
 布尔环范畴与 Stone 空间范畴**反等价**：
@@ -15,8 +15,11 @@ $$\mathbf{BoolRing}^{\mathrm{op}}\;\simeq\;\mathbf{Stone}.$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.boolean-stone.2.md](./thm.boolean-stone.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.boolean-stone.3.md](./thm.boolean-stone.3.md)
+
 refs: Le Stum, Exercise 2.22
 
 > 说明见 `notes/thm.boolean-stone.md`
 
-引用：`thm.boolean-stone`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.boolean-stone`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

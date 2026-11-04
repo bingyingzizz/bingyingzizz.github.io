@@ -1,6 +1,6 @@
 # Hamilton 向量场　`def.hamiltonian-vector-field`
 Hamilton 向量场：由函数生出流
-layer 22 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
+layer 30 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 [在星图里打开](../#n=def.hamiltonian-vector-field)　·　[节点索引](../index.md)
 
 **在做什么**：辛流形上「函数 $\implies$ 向量场」的那台转换机。它把
@@ -19,4 +19,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/def.hamiltonian-vector-field.md`
 
-引用：`def.hamiltonian-vector-field`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.hamiltonian-vector-field`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Enough Injectives` (short) · `Modules Have Enough Injectives` (full)
 Chinese only — see the Chinese page `nodes/thm.mod-enough-injectives.md` and `proofs/`.
 
 
-Cite: `thm.mod-enough-injectives` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mod-enough-injectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

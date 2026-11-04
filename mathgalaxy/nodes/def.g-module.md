@@ -1,6 +1,6 @@
 # 群模　`def.g-module`
 $G$-模（$R[G]$-模）
-layer 9 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 10 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.g-module)　·　[节点索引](../index.md)
 
 设 $R$ 是有 $1$ 的交换环、$G$ 是群。一个**左 $G$-模**是一个 $R$-模 $M$ 配上一个作用映射 $G \times M \to M$，$(g, m) \mapsto g \cdot m$，满足
@@ -22,4 +22,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（群模与群�
 
 > 说明见 `notes/def.g-module.md`
 
-引用：`def.g-module`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.g-module`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

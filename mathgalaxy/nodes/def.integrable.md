@@ -1,6 +1,6 @@
 # 可积 / L¹　`def.integrable`
 可积函数与 $L^{1}$ 空间
-layer 19 · 定义 · 积分 · 实变函数+数学分析
+layer 21 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integrable)　·　[节点索引](../index.md)
 
 实值可测 $f$ **可积**，当且仅当 $\int f^+ < \infty$ 且 $\int f^- < \infty$。等价地，$f$ 可积当且仅当 $|f|$ 的积分有限：
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, §2.3
 
 > 说明见 `notes/def.integrable.md`
 
-引用：`def.integrable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.integrable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

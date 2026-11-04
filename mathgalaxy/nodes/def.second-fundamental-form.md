@@ -1,6 +1,6 @@
 # 第二基本形式　`def.second-fundamental-form`
 第二基本形式
-layer 26 · 定义 · 曲面论 · 微分几何
+layer 29 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.second-fundamental-form)　·　[节点索引](../index.md)
 
 曲面的**第二基本形式**是
@@ -21,4 +21,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/def.second-fundamental-form.md`
 
-引用：`def.second-fundamental-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.second-fundamental-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

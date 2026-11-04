@@ -3,7 +3,7 @@
 
 - Huber 对 → def.discrete-huber-pair
 
-- 赋值谱 → def.adic-spectrum
+- 赋值谱 | Spa | Spa(A,A⁺) → def.adic-spectrum
 
 - 对偶函子的扭转与基变换 → prop.f-shriek-base-change
 

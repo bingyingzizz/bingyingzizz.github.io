@@ -1,7 +1,7 @@
 # 「取一切包含它的 X 之交」——生成同一个模板
 `ana.generated-closure` · 类比（弱边） · weak 边 · 根 `../`
 
-`def.generated-sigma` 生成的 σ-代数 → `def.vs` 向量空间的基
+`def.generated-sigma` 生成的 σ-代数 → `def.vs` 线性无关与基
 
 两处都在做同一件事：**给定一点种子，造出包含它的最小结构**。
 

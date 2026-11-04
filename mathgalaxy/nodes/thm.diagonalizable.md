@@ -1,6 +1,6 @@
 # 可对角化判据　`thm.diagonalizable`
 定理：可对角化的几个等价条件
-layer 16 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 19 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.diagonalizable)　·　[节点索引](../index.md)
 
 设 $\dim V = n < \infty$，$T : V \to V$ 线性，$\lambda_1, \ldots, \lambda_m$ 是它在 $K$ 中互异的特征值。则下列命题等价：
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 6
 
 > 说明见 `notes/thm.diagonalizable.md`
 
-引用：`thm.diagonalizable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.diagonalizable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

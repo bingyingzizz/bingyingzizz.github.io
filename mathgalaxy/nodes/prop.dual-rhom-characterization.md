@@ -1,6 +1,6 @@
 # Pontryagin 对偶的导出 Hom 刻画　`prop.dual-rhom-characterization`
 $M^{\vee} \cong \operatorname{RHom}_{\mathbb{Z}}(M, T)$
-layer 21 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
+layer 23 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.dual-rhom-characterization)　·　[节点索引](../index.md)
 
 设 $M$ 是**局部紧 Hausdorff 阿贝尔群**，$M^{\vee}$ 是它的 Pontryagin 对偶。则
@@ -8,12 +8,10 @@ layer 21 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.pontryagin-dual`](../nodes/def.pontryagin-dual.md) Pontryagin 对偶：用到了定义 Pontryagin 对偶　[proofs/def-dep.drc-dual.md](../proofs/def-dep.drc-dual.md)
-
 - …另有入边，续页见 [nodes/prop.dual-rhom-characterization.3.md](./prop.dual-rhom-characterization.3.md)
 
 refs: Le Stum, Proposition 8.3.8
 
 > 说明见 `notes/prop.dual-rhom-characterization.md`
 
-引用：`prop.dual-rhom-characterization`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.dual-rhom-characterization`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

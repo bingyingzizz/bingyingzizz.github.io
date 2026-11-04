@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.schwarz-reflection`](../nodes/thm.schwarz-reflection.md) Schwarz 反射原理 用
+- 被 [`prop.single-valued-branch`](../nodes/prop.single-valued-branch.md) 单值支的存在判据 用
+- 被 [`def.riemann-zeta`](../nodes/def.riemann-zeta.md) 黎曼 ζ 函数 用

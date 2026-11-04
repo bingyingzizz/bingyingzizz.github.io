@@ -1,6 +1,6 @@
 # Breen–Deligne 的一般谱序列　`ex.bd-ss`
 $E^{p,q}_{1} = \bigoplus_{i} H^{q}(M^{s_{p,i}},\ N) \implies \operatorname{Ext}^{p+q}_{\mathbb{Z}}(M, N)$
-layer 17 · 例 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
+layer 22 · 例 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
 [在星图里打开](../#n=ex.bd-ss)　·　[节点索引](../index.md)
 
 设 $M, N$ 是拓扑斯中的阿贝尔群。由 Breen–Deligne 分解得到自然谱序列
@@ -21,4 +21,4 @@ refs: Le Stum, Exercise 8.14
 
 > 说明见 `notes/ex.bd-ss.md`
 
-引用：`ex.bd-ss`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.bd-ss`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

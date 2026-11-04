@@ -1,6 +1,6 @@
 # 滤过范畴　`def.filtered-category`
 滤过范畴与滤过余极限
-layer 10 · 定义 · 图与极限 · 范畴论
+layer 11 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.filtered-category)　·　[节点索引](../index.md)
 
 范畴 $I$ 叫**滤过的**（filtered），如果：
@@ -21,4 +21,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.3
 
 > 说明见 `notes/def.filtered-category.md`
 
-引用：`def.filtered-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.filtered-category`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

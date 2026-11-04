@@ -11,5 +11,5 @@ names: `Simplicial Hypercover` (short) · `Simplicial Method for Sheaf Cohomolog
 Chinese only — see the Chinese page `nodes/method.simplicial-cohomology.md` and `proofs/`.
 
 
-Cite: `method.simplicial-cohomology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `method.simplicial-cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

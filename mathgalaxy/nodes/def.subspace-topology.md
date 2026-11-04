@@ -20,4 +20,4 @@ refs: Munkres, Topology
 ## 说明
 直观：**子空间的开集就是「大空间的开集切一刀」**。所以「$Y$ 中闭」「$Y$ 中紧」都要按切出来的那片来判断，不能直接看大空间里的样子 —— 例如 $(0, 1) \subseteq \mathbb{R}$ 在自身中是闭的，在 $\mathbb{R}$ 中不是。
 
-引用：`def.subspace-topology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.subspace-topology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

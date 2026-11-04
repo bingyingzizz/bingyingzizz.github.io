@@ -1,6 +1,6 @@
 # Zorn 引理　`lem.zorn`
 Zorn 引理（Zorn's Lemma）
-layer 9 · 引理 · 选择原理 · 序理论+集合论
+layer 8 · 引理 · 选择原理 · 序理论+集合论
 [在星图里打开](../#n=lem.zorn)　·　[节点索引](../index.md)
 
 设 $(P, \preceq )$ 是**非空**偏序集。若 $P$ 的每个链在 $P$ 中都有上界，则 $P$ 有**极大元**。
@@ -22,4 +22,4 @@ refs: Zorn (1935)；Kunen, Set Theory, I.12
 
 > 说明见 `notes/lem.zorn.md`
 
-引用：`lem.zorn`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.zorn`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

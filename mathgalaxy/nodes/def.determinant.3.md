@@ -11,3 +11,5 @@
 - 被 [`def.volume-density`](../nodes/def.volume-density.md) 体积密度与体积形式 用
 - 被 [`thm.change-of-variables-manifold`](../nodes/thm.change-of-variables-manifold.md) 流形上的换元公式 用
 - 被 [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式 用
+
+> 续见 [nodes/def.determinant.4.md](./def.determinant.4.md)

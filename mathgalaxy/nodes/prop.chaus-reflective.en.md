@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 18 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
 > 续见 nodes/prop.chaus-reflective.en.2.md

@@ -1,6 +1,6 @@
 # 常秩定理　`cor.rank-theorem`
 推论（秩定理）：常秩映射的局部标准形
-layer 25 · 推论 · 多元微分 · 数学分析
+layer 29 · 推论 · 多元微分 · 数学分析
 [在星图里打开](../#n=cor.rank-theorem)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$ 是 $C^{1}$，且 Jacobi 矩阵的秩在 $U$ 上**恒等于** $r$（即 $\operatorname{rank} Df(x) = r$ 对一切 $x \in U$）。
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Lang, Undergraduate An
 
 > 说明见 `notes/cor.rank-theorem.md`
 
-引用：`cor.rank-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.rank-theorem`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

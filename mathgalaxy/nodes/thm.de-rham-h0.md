@@ -1,6 +1,6 @@
 # 零次上同调　`thm.de-rham-h0`
 零次上同调群与连通分支
-layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 24 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.de-rham-h0)　·　[节点索引](../index.md)
 
 **在做什么**：把最低那一格算出来 —— $0$-形式是函数，「闭」就是「局部常」，于是 $H^{0}$ 精确地数连通分支的个数。
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology
 
 > 说明见 `notes/thm.de-rham-h0.md`
 
-引用：`thm.de-rham-h0`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.de-rham-h0`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 切片范畴　`def.slice-category`
 预层的切片范畴
-layer 12 · 定义 · 预层与米田 · 范畴论
+layer 13 · 定义 · 预层与米田 · 范畴论
 [在星图里打开](../#n=def.slice-category)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是范畴，$T$ 是 $\mathcal{C}$ 上的预层。**切片范畴** $\mathcal{C}/T$（也记 $\mathcal{C}_{T}$）定义如下：
@@ -13,7 +13,7 @@ layer 12 · 定义 · 预层与米田 · 范畴论
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.density`](../nodes/thm.density.md) 稠密性定理
+- 被 [`prop.slice-cartesian`](../nodes/prop.slice-cartesian.md) 切片范畴是拉回 用
 
 - …另有出边，续页见 [nodes/def.slice-category.4.md](./def.slice-category.4.md)
 
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
 
 > 说明见 `notes/def.slice-category.md`
 
-引用：`def.slice-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.slice-category`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

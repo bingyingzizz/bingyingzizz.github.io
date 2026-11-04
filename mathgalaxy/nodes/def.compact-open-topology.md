@@ -1,6 +1,6 @@
 # 紧开拓扑　`def.compact-open-topology`
 紧开拓扑
-layer 15 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 17 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=def.compact-open-topology)　·　[节点索引](../index.md)
 
 设 $X, Y \in \mathbf{Top}$。对每个连续映射 $g : S \to X$（$S$ 紧 Hausdorff）与每个开集 $V \subseteq Y$，令
@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.3
 
 > 说明见 `notes/def.compact-open-topology.md`
 
-引用：`def.compact-open-topology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.compact-open-topology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -17,4 +17,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
 
 > 说明见 `notes/thm.density.md`
 
-引用：`thm.density`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.density`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

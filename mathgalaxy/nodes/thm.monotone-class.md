@@ -22,4 +22,4 @@ refs: Halmos, Measure Theory, §6；Folland, Real Analysis, Theorem 2.37
 
 > 说明见 `notes/thm.monotone-class.md`
 
-引用：`thm.monotone-class`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.monotone-class`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

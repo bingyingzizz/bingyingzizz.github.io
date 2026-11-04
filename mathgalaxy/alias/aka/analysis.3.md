@@ -5,7 +5,7 @@
 
 - 集合族的性质 → prop.set-class-properties
 
-- 测度 | measure | 可数可加 → def.measure
+- 测度 | measure | 可数可加 | μ(A) | 测度 μ → def.measure
 
 - 外测度 | outer measure → def.outer-measure
 
@@ -30,7 +30,5 @@
 - 由预测度诱导外测度 → prop.outer-measure-induced
 
 - Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 → thm.caratheodory
-
-- F 给出的预测度 → prop.ls-premeasure
 
 > 续见 alias/aka/analysis.4.md

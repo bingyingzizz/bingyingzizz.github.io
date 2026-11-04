@@ -1,6 +1,6 @@
 # μ*-可测集　`def.caratheodory-measurable`
 Carathéodory 可测性（$\mu^{*}$-Measurable Set）
-layer 15 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.caratheodory-measurable)　·　[节点索引](../index.md)
 
 设 $\mu^{*}$ 是 $X$ 上的外测度。$A \subseteq X$ 称为 **$\mu^{*}$-可测的**，当且仅当 $A$ 把每个集合都「干净地切成两块」：
@@ -19,4 +19,4 @@ refs: Halmos, Measure Theory, §11；Folland, Real Analysis, Theorem 1.11
 
 > 说明见 `notes/def.caratheodory-measurable.md`
 
-引用：`def.caratheodory-measurable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.caratheodory-measurable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

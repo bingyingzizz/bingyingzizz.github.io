@@ -11,5 +11,5 @@ names: `Sheafification` (short) · `Sheafification and the Sheaf Reflection` (fu
 Chinese only — see the Chinese page `nodes/thm.sheafification.md` and `proofs/`.
 
 
-Cite: `thm.sheafification` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.sheafification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

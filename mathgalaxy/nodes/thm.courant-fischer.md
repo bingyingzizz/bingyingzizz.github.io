@@ -1,6 +1,6 @@
 # Courant–Fischer 极小极大原理　`thm.courant-fischer`
 Courant–Fischer：第 $k$ 个特征值的变分刻画
-layer 15 · 定理 · 内积空间与正交性 · 抽象代数
+layer 21 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.courant-fischer)　·　[节点索引](../index.md)
 
 **在做什么**：Rayleigh 商只能抓**最大**与**最小**特征值。要抓「第 $k$ 个」，就得让子空间参与竞争 —— 这就是极小极大。
@@ -16,4 +16,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/thm.courant-fischer.md`
 
-引用：`thm.courant-fischer`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.courant-fischer`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

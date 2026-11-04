@@ -10,5 +10,5 @@ layer 6 · definition · cluster Product Measures and Fubini (`analysis.product`
 Chinese only — see the Chinese page `nodes/def.product-sigma.md` and `proofs/`.
 
 
-Cite: `def.product-sigma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.product-sigma` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

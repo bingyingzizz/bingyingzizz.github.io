@@ -1,6 +1,6 @@
 # 子空间判据　`prop.subspace-criterion`
 命题：子空间的两条判据
-layer 10 · 命题 · 向量空间的基 · 抽象代数
+layer 13 · 命题 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=prop.subspace-criterion)　·　[节点索引](../index.md)
 
 **(合并版)** 非空子集 $U \subseteq V$ 是子空间，当且仅当对一切 $u, v \in U$ 与 $c \in K$ 有 $cu + v \in U$。
@@ -18,4 +18,4 @@ refs: Lang, Linear Algebra
 
 > 说明见 `notes/prop.subspace-criterion.md`
 
-引用：`prop.subspace-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.subspace-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 几乎处处　`def.ae`
 几乎处处
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 17 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.ae)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu)$ 是测度空间。称一个关于点 $x$ 的命题 $P(x)$ **几乎处处成立**（记 a.e.），当且仅当
@@ -23,4 +23,4 @@ refs: Rudin, Real and Complex Analysis, Ch. 1
 
 > 说明见 `notes/def.ae.md`
 
-引用：`def.ae`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ae`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

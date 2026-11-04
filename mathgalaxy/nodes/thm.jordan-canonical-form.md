@@ -1,6 +1,6 @@
 # Jordan 标准形　`thm.jordan-canonical-form`
 定理（Jordan）：代数闭域上的相似标准形
-layer 16 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 19 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.jordan-canonical-form)　·　[节点索引](../index.md)
 
 设 $K$ 代数闭、$T : V \to V$，$\dim V < \infty$。则存在 $V$ 的一组基，使 $T$ 的矩阵是**分块对角**的
@@ -17,4 +17,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
 
 > 说明见 `notes/thm.jordan-canonical-form.md`
 
-引用：`thm.jordan-canonical-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.jordan-canonical-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

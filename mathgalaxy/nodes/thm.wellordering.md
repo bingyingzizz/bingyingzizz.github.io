@@ -1,6 +1,6 @@
 # 良序定理　`thm.wellordering`
 良序定理 / 良序原理
-layer 9 · 定理 · 选择原理 · 序理论+集合论
+layer 8 · 定理 · 选择原理 · 序理论+集合论
 [在星图里打开](../#n=thm.wellordering)　·　[节点索引](../index.md)
 
 每个集合都能被赋予一个良序：对任何集合 $X$，都存在 $X$ 上的良序关系 $\preceq$。
@@ -26,4 +26,4 @@ refs: Zermelo (1904)；Kunen, Set Theory, I.12
 
 > 说明见 `notes/thm.wellordering.md`
 
-引用：`thm.wellordering`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.wellordering`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 群作用　`def.group-action`
 群作用、轨道与稳定子
-layer 9 · 定义 · 群作用与置换 · 抽象代数
+layer 10 · 定义 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=def.group-action)　·　[节点索引](../index.md)
 
 设 $G$ 是群、$X$ 是集合。$G$ 在 $X$ 上的**（左）作用**是一个映射
@@ -28,4 +28,4 @@ refs: Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
 
 > 说明见 `notes/def.group-action.md`
 
-引用：`def.group-action`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-action`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

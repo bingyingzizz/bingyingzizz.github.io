@@ -1,6 +1,6 @@
 # 单调收敛定理　`thm.mct`
 单调收敛定理
-layer 18 · 定理 · 积分 · 实变函数+数学分析
+layer 19 · 定理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=thm.mct)　·　[节点索引](../index.md)
 
 设 $\{f_n\} \subseteq L^+$ 是**逐点递增**序列：
@@ -25,4 +25,4 @@ refs: Folland, Real Analysis, Theorem 2.14
 
 > 说明见 `notes/thm.mct.md`
 
-引用：`thm.mct`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mct`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

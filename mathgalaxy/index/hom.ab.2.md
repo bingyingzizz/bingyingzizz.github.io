@@ -12,7 +12,7 @@
 - def.grothendieck-category　Grothendieck 范畴　layer 18
 - thm.five-lemma　五引理　layer 18
 - prop.ab6　AB6：滤过余极限与积交换　layer 18
-- prop.ab-axioms-examples　AB 公理的例子表　layer 18
 - prop.subcat-additive　子范畴继承加法与阿贝尔性　layer 18
+- prop.grothendieck-enough-injectives　Grothendieck 范畴有足够多内射　layer 19
 
 > 续见 `index/hom.ab.3.md`

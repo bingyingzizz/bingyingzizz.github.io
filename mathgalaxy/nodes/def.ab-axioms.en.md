@@ -11,5 +11,5 @@ names: `AB Axioms` (short) · `Grothendieck's AB Axioms` (full)
 Chinese only — see the Chinese page `nodes/def.ab-axioms.md` and `proofs/`.
 
 
-Cite: `def.ab-axioms` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ab-axioms` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

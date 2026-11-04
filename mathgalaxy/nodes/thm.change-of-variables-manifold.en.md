@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 23 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Change of Variables` (short) · `Change of Variables on Manifolds` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.change-of-variables-manifold.md` and `proofs/`.
 
 
-Cite: `thm.change-of-variables-manifold` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.change-of-variables-manifold` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

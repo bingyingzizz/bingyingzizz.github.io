@@ -8,3 +8,4 @@
 - 被 [`def.involutive-distribution`](../nodes/def.involutive-distribution.md) 对合分布 用
 - ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
 - ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
+- 被 [`ex-sl2-commutator`](../nodes/ex-sl2-commutator.md) sl₂ 的交换子 用

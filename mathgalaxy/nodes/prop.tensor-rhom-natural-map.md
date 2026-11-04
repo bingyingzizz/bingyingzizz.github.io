@@ -1,6 +1,6 @@
 # 张量与导出 Hom 的配对　`prop.tensor-rhom-natural-map`
 命题：$M \otimes^{\mathbf{L}} \operatorname{RHom}(P, N) \to \operatorname{RHom}(\operatorname{RHom}(M, P), N)$
-layer 19 · 命题 · 阿贝尔层 · 同调代数
+layer 21 · 命题 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=prop.tensor-rhom-natural-map)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯，$M, N, P$ 是 $\mathcal{T}$ 中的阿贝尔群。则存在自然映射
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §8.3
 
 > 说明见 `notes/prop.tensor-rhom-natural-map.md`
 
-引用：`prop.tensor-rhom-natural-map`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.tensor-rhom-natural-map`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 导出范畴按无穷范畴粘合　`thm.adic-gluing`
 定理：$U \mapsto D((\mathcal{O}_X(U),\mathcal{O}_X^+(U))_\blacksquare)$ 是 $\infty$-范畴层（Thm 9.8）
-layer 21 · 定理 · adic 空间 · 解析空间
+layer 26 · 定理 · adic 空间 · 解析空间
 [在星图里打开](../#n=thm.adic-gluing)　·　[节点索引](../index.md)
 
 白话：**在 adic 空间上，「层」这件事要按无穷范畴来做，不能按普通层（阿贝尔范畴）做**。原因很具体：把「在每个仿射开集上给出的导出范畴」沿开集粘起来时，阿贝尔层面的基变换不保持正合，粘不上；只有把同伦也留住（$\infty$-范畴层）才能粘。
@@ -14,4 +14,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/thm.adic-gluing.md`
 
-引用：`thm.adic-gluing`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.adic-gluing`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

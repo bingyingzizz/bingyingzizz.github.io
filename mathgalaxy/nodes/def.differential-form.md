@@ -1,6 +1,6 @@
 # 微分形式（欧氏开集）　`def.differential-form`
 微分形式：欧氏开集上的坐标模型
-layer 14 · 定义 · 活动标架与结构方程 · 微分几何
+layer 17 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.differential-form)　·　[节点索引](../index.md)
 
 **在做什么**：把「在每点吃进 $k$ 个切向量、吐出一个数，并且对换两个变元要变号」这件事做成光滑对象 —— 微分形式就是
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 
 
 > 说明见 `notes/def.differential-form.md`
 
-引用：`def.differential-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.differential-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

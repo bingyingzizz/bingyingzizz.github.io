@@ -1,6 +1,6 @@
 # 完美正规空间　`def.perfectly-normal-space`
 完美正规空间（T6）：每个闭集都可数交开集
-layer 14 · 定义 · 分离公理 · 拓扑学
+layer 15 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.perfectly-normal-space)　·　[节点索引](../index.md)
 
 **在做什么**：链顶端的最后一格。它用「可数」这一条把正规性再拧紧一格 —— 每个闭集都是一列开集之交。
@@ -19,4 +19,4 @@ refs: Engelking, General Topology（⚠️ 章节未核实，只记书名）· �
 
 > 说明见 `notes/def.perfectly-normal-space.md`
 
-引用：`def.perfectly-normal-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.perfectly-normal-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

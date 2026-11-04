@@ -10,5 +10,5 @@ layer 8 · theorem · cluster Constructing the Number Systems (`set.numbers`) ·
 Chinese only — see the Chinese page `nodes/thm.nat-arith-laws.md` and `proofs/`.
 
 
-Cite: `thm.nat-arith-laws` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.nat-arith-laws` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

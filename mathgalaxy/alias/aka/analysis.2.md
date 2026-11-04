@@ -5,9 +5,9 @@
 
 - 级数 | series | 级数收敛 → def.series
 
-- 连续 | continuous | 连续函数 → def.continuous
+- 连续 | continuous | 连续函数 | 连续 ε-δ | ε-δ → def.continuous
 
-- 导数 | derivative | 可导 | 微分 | 求导 → def.derivative
+- 导数 | derivative | 可导 | 微分 | 求导 | d/dx | f' | df/dx → def.derivative
 
 - 环 | 代数 | ring of sets | algebra of sets | 集合环 → def.set-ring
 

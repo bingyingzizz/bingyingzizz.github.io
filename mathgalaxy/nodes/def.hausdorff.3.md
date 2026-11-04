@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.hausdorff)　·　第 1 页 [nodes/def.hausdorff.md](./def.hausdorff.md)　·　上一页 [nodes/def.hausdorff.2.md](./def.hausdorff.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用
 - 被 [`prop.hausdorff-reflective`](../nodes/prop.hausdorff-reflective.md) Hausdorff 空间是反射子范畴 用
 - 被 [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴 用
 - 被 [`cor.cg-product`](../nodes/cor.cg-product.md) 紧生成空间对积封闭 用
@@ -9,4 +10,5 @@
 - 被 [`def.weak-hausdorff`](../nodes/def.weak-hausdorff.md) 弱 Hausdorff 空间 用
 - 被 [`thm.cgwh-reflective`](../nodes/thm.cgwh-reflective.md) 弱 Hausdorff 紧生成空间是紧生成空间的反射子范畴 用
 - 被 [`def.normal-space`](../nodes/def.normal-space.md) 正规空间 用
-- 被 [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间 用
+
+> 续见 [nodes/def.hausdorff.4.md](./def.hausdorff.4.md)

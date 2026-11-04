@@ -1,6 +1,6 @@
 # 极点处的留数公式　`prop.residue-at-pole`
 命题：极点处的留数公式
-layer 19 · 命题 · 留数与辐角原理 · 复变函数
+layer 20 · 命题 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=prop.residue-at-pole)　·　[节点索引](../index.md)
 
 **白话**：如果奇点是 $m$ 阶极点，留数不必真去积分 —— 用 $(z - a)^m f(z)$ 在 $a$ 处的第 $m - 1$ 阶导数就能算出来。
@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》笔记，第 23 章 · 留数定理（极点的
 
 > 说明见 `notes/prop.residue-at-pole.md`
 
-引用：`prop.residue-at-pole`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.residue-at-pole`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

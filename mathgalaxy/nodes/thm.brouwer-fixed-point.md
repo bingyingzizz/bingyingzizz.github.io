@@ -1,6 +1,6 @@
 # Brouwer 不动点定理（圆盘）　`thm.brouwer-fixed-point`
 Brouwer 不动点定理：闭圆盘到自身的连续映射必有不动点
-layer 23 · 定理 · 复分析的拓扑应用 · 复变函数
+layer 27 · 定理 · 复分析的拓扑应用 · 复变函数
 [在星图里打开](../#n=thm.brouwer-fixed-point)　·　[节点索引](../index.md)
 
 设
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Brouwer 不动点定理的复分析证明（
 
 > 说明见 `notes/thm.brouwer-fixed-point.md`
 
-引用：`thm.brouwer-fixed-point`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.brouwer-fixed-point`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

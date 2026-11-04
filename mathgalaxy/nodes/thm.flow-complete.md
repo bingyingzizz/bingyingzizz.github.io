@@ -1,6 +1,6 @@
 # 流完备性　`thm.flow-complete`
 流的完备性与紧流形
-layer 22 · 定理 · 向量场与 Lie 结构 · 微分几何
+layer 25 · 定理 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=thm.flow-complete)　·　[节点索引](../index.md)
 
 **白话**：一条积分曲线走不下去，只可能是「跑向无穷远」，不会是「走到时间的尽头」；于是在紧流形上没有地方可逃，每个向量场都完备。
@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie
 
 > 说明见 `notes/thm.flow-complete.md`
 
-引用：`thm.flow-complete`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.flow-complete`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

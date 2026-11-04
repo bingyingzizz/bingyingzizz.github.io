@@ -21,4 +21,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.1
 ## 说明
 两条等式各管一头。把它们画成方块就是「图的态射」这个名字的全部内容 —— 顶点那层与边那层各自连续，并且方向对得上。
 
-引用：`def.graph-morphism`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.graph-morphism`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

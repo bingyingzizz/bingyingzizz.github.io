@@ -10,5 +10,5 @@ layer 13 · definition · cluster Complexes and Distinguished Triangles (`hom.co
 Chinese only — see the Chinese page `nodes/def.mapping-cone.md` and `proofs/`.
 
 
-Cite: `def.mapping-cone` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.mapping-cone` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

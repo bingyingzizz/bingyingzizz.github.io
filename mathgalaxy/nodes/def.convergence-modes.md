@@ -1,6 +1,6 @@
 # 五种收敛　`def.convergence-modes`
 收敛的类型：一致 / 近一致 / a.e. / 依测度 / $L^{1}$
-layer 20 · 定义 · 可测函数与收敛 · 实变函数+数学分析
+layer 22 · 定义 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=def.convergence-modes)　·　[节点索引](../index.md)
 
 设 $f_n, f : X \to \mathbb{C}$ 可测，$X$ 带测度 $\mu$。
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, §2.4
 
 > 说明见 `notes/def.convergence-modes.md`
 
-引用：`def.convergence-modes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.convergence-modes`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

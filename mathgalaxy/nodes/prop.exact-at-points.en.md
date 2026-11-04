@@ -11,5 +11,5 @@ names: `Pointwise Exactness` (short) · `Exactness Is Pointwise Exactness` (full
 Chinese only — see the Chinese page `nodes/prop.exact-at-points.md` and `proofs/`.
 
 
-Cite: `prop.exact-at-points` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.exact-at-points` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

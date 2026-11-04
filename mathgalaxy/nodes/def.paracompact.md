@@ -1,6 +1,6 @@
 # 仿紧空间　`def.paracompact`
 每个开覆盖都有局部有限开加细
-layer 15 · 定义 · 仿紧与单位分解 · 拓扑学
+layer 7 · 定义 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=def.paracompact)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**仿紧的**，如果它的**每个开覆盖都有局部有限的开加细**：对每个开覆盖 $\mathcal{U}$，都存在开覆盖 $\mathcal{V}$，使
@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch.
 
 > 说明见 `notes/def.paracompact.md`
 
-引用：`def.paracompact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.paracompact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

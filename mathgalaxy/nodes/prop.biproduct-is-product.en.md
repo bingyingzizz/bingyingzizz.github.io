@@ -11,5 +11,5 @@ names: `Biproducts` (short) · `Biproducts Are Products and Coproducts` (full)
 Chinese only — see the Chinese page `nodes/prop.biproduct-is-product.md` and `proofs/`.
 
 
-Cite: `prop.biproduct-is-product` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.biproduct-is-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

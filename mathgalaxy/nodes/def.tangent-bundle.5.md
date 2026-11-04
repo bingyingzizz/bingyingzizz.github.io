@@ -5,3 +5,4 @@
 - 被 [`def.vector-field`](../nodes/def.vector-field.md) 向量场 用
 - 被 [`def.tangent-distribution`](../nodes/def.tangent-distribution.md) 切分布 用
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
+- 被 [`ex.s1-tangent-bundle`](../nodes/ex.s1-tangent-bundle.md) 圆的切丛是平凡丛 用

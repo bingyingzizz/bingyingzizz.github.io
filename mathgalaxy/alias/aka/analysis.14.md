@@ -1,6 +1,14 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Abel–Dirichlet 判别法 → thm.abel-dirichlet-series
+
+- 绝对收敛 ⟹ 收敛 → thm.absolute-implies-convergent
+
+- Cauchy 乘积 → thm.series-product
+
+- ℝ 是完备度量空间 → thm.real-complete-metric
+
 - 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
 
 - Abel 第二定理 → thm.abel-endpoint
@@ -28,15 +36,5 @@
 - 可导 ⟹ 连续 → prop.differentiable-implies-continuous
 
 - 几何级数 → thm.geometric-series
-
-- 根值判别法 → thm.root-test
-
-- 积分判别法 → thm.integral-test
-
-- Cauchy 凝聚判别法 → thm.cauchy-condensation
-
-- 一致收敛保连续 → thm.uniform-limit-continuous
-
-- 积分与极限交换 → thm.uniform-limit-integral
 
 > 续见 alias/aka/analysis.15.md

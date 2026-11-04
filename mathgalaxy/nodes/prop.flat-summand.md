@@ -1,6 +1,6 @@
 # 平坦的直和项　`prop.flat-summand`
 平坦模的直和项平坦，直和平坦当且仅当每个平坦
-layer 16 · 命题 · 平坦模 · 同调代数
+layer 17 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.flat-summand)　·　[节点索引](../index.md)
 
 若 $F$ 平坦且 $M$ 是 $F$ 的**直和项**（$F \cong M \oplus M_{2}$），则 $M$ 平坦。特别地：
@@ -16,4 +16,4 @@ refs: Rotman, An Introduction to Homological Algebra (2nd ed.), direct summands 
 
 > 说明见 `notes/prop.flat-summand.md`
 
-引用：`prop.flat-summand`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.flat-summand`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

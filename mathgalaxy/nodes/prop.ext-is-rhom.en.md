@@ -10,5 +10,5 @@ layer 21 · proposition · cluster Complexes and Distinguished Triangles (`hom.c
 Chinese only — see the Chinese page `nodes/prop.ext-is-rhom.md` and `proofs/`.
 
 
-Cite: `prop.ext-is-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ext-is-rhom` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 惯性指数　`def.inertia-index`
 惯性指数与符号差
-layer 15 · 定义 · 多重线性与张量 · 抽象代数
+layer 21 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.inertia-index)　·　[节点索引](../index.md)
 
 **在做什么**：给实对称型配一对整数，把它的「形状」量化 —— 正方向有多少维、负方向有多少维。这对整数在合同下**完全不变**，所以它是实二次型的**完备不变量**。
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 惯性指数；北
 
 > 说明见 `notes/def.inertia-index.md`
 
-引用：`def.inertia-index`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.inertia-index`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

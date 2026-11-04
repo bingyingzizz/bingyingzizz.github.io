@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.66
 ## 说明
 **证明。** 保极限见「代数遗忘函子保极限」✓；不保余极限：$M \oplus N$ 的底集合不是 $M \sqcup N$ ✓；层化是左伴随又左正合，故正合 ✓。∎
 
-引用：`prop.forgetful-exactness`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.forgetful-exactness`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

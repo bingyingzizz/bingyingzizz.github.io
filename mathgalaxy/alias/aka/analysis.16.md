@@ -1,6 +1,18 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 对数函数与 e → def.log-function
+
+- 函数极限 → def.function-limit
+
+- 局部极值 → def.local-extremum
+
+- 条件收敛 → def.conditional-convergence
+
+- 一致 Cauchy 列 → def.uniform-cauchy
+
+- 指数函数 → def.exp-function
+
 - 正弦与余弦 → def.trig-function
 
 - 诱导范数与距离 → def.induced-norm
@@ -36,15 +48,5 @@
 - 聚点 → def.limit-point
 
 - 凸函数 → def.convex-function
-
-- 逐点收敛 → def.pointwise-convergence
-
-- 巴拿赫空间 → def.banach-space
-
-- 雅可比矩阵 → def.jacobian
-
-- 海森矩阵 | 黑塞矩阵 → def.hessian
-
-- 多元泰勒公式 | 泰勒公式（多元） → thm.taylor-multi
 
 > 续见 alias/aka/analysis.17.md

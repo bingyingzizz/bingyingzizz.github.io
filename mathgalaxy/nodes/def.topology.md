@@ -21,4 +21,4 @@ refs: Munkres, Topology, Ch. 2
 
 > 说明见 `notes/def.topology.md`
 
-引用：`def.topology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.topology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

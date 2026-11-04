@@ -1,6 +1,6 @@
 # 夹逼定理　`thm.squeeze`
 夹逼定理
-layer 15 · 定理 · 实数与极限 · 数学分析
+layer 16 · 定理 · 实数与极限 · 数学分析
 [在星图里打开](../#n=thm.squeeze)　·　[节点索引](../index.md)
 
 **(数列版)** 设存在 $N_0$，使 $n \ge N_0$ 时 $a_n \le x_n \le b_n$。若 $a_n \to L$ 且 $b_n \to L$，则 $x_n \to L$。
@@ -20,4 +20,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.squeeze.md`
 
-引用：`thm.squeeze`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.squeeze`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

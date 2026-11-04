@@ -1,6 +1,6 @@
 # 矩阵　`def.matrix`
 矩阵
-layer 9 · 定义 · 矩阵与行列式 · 抽象代数
+layer 12 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.matrix)　·　[节点索引](../index.md)
 
 设 $K$ 是域，$m, n \ge 1$。一个 $m \times n$ 的**矩阵**是 $K$ 中元素排成的长方形阵列
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
 
 > 说明见 `notes/def.matrix.md`
 
-引用：`def.matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.matrix`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # Hahn 分解定理　`thm.hahn-decomposition`
 Hahn 分解定理
-layer 18 · 定理 · 符号测度与分解 · 实变函数+数学分析
+layer 20 · 定理 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=thm.hahn-decomposition)　·　[节点索引](../index.md)
 
 设 $\nu$ 是 $(X, \mathcal{M})$ 上的符号测度。则存在 $P, N \in \mathcal{M}$ 使
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, Theorem 3.3；Halmos, Measure Theory, §29
 
 > 说明见 `notes/thm.hahn-decomposition.md`
 
-引用：`thm.hahn-decomposition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hahn-decomposition`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 17 · definition · cluster Toposes (`cat.topos`) · Category Theory
 Chinese only — see the Chinese page `nodes/def.morphism-of-sites.md` and `proofs/`.
 
 
-Cite: `def.morphism-of-sites` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.morphism-of-sites` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

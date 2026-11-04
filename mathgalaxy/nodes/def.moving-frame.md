@@ -1,6 +1,6 @@
 # 活动标架　`def.moving-frame`
 活动标架与对偶余标架
-layer 20 · 定义 · 活动标架与结构方程 · 微分几何
+layer 23 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.moving-frame)　·　[节点索引](../index.md)
 
 设 $U_{0} \subseteq S$ 是曲面上的开集。**活动标架**是三个 $C^{1}$ 向量场 $e_{1}, e_{2}, e_{3}$，使每点的 $(e_{1}, e_{2}, e_{3})$ 都是 $\mathbb{R}^{3}$ 的标准正交基（随点移动而变，故名「活动」）。**对偶余标架**是
@@ -20,4 +20,4 @@ refs: 陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Sur
 
 > 说明见 `notes/def.moving-frame.md`
 
-引用：`def.moving-frame`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.moving-frame`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

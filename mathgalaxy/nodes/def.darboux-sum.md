@@ -1,6 +1,6 @@
 # 上和与下和　`def.darboux-sum`
 上和 $U(f, P)$ 与下和 $L(f, P)$
-layer 15 · 定义 · Riemann 积分 · 数学分析
+layer 16 · 定义 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=def.darboux-sum)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上有界，$P = \{ x_0 < \cdots < x_n \}$ 是分割。记
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/def.darboux-sum.md`
 
-引用：`def.darboux-sum`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.darboux-sum`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

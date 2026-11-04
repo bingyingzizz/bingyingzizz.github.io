@@ -1,6 +1,6 @@
 # 群上同调　`def.group-cohomology`
 群上同调 $H^{n}(G, M)$
-layer 11 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 14 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.group-cohomology)　·　[节点索引](../index.md)
 
 设 $M$ 是 $G$-模。群 $G$ 系数在 $M$ 里的**第 $n$ 个上同调群**是**不变量函子的右导出函子**：
@@ -25,4 +25,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 6.5；Rotman, An I
 
 > 说明见 `notes/def.group-cohomology.md`
 
-引用：`def.group-cohomology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-cohomology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

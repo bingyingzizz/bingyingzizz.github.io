@@ -4,8 +4,8 @@
 中心天体 ax.choice　·　6 个节点　·　根 `../`
 
 - def.choicefn　选择函数　layer 6
-- ax.choice　选择公理　layer 9
-- thm.wellordering　良序定理　layer 9
-- lem.zorn　Zorn 引理　layer 9
-- thm.hausdorff　Hausdorff 极大原理　layer 9
-- lem.tukey　Tukey 引理　layer 9
+- ax.choice　选择公理　layer 8
+- thm.wellordering　良序定理　layer 8
+- lem.zorn　Zorn 引理　layer 8
+- thm.hausdorff　Hausdorff 极大原理　layer 8
+- lem.tukey　Tukey 引理　layer 8

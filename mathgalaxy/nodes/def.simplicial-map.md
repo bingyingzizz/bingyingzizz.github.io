@@ -1,6 +1,6 @@
 # 单纯映射　`def.simplicial-map`
 单纯映射：顶点层面的映射，以及它诱导的链映射
-layer 19 · 定义 · 同调群 · 拓扑学
+layer 20 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.simplicial-map)　·　[节点索引](../index.md)
 
 设 $K, L$ 是单纯复形。映射 $f : V(K) \to V(L)$ 叫**单纯映射**（simplicial map），如果
@@ -18,4 +18,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Simplicial maps；Hatche
 
 > 说明见 `notes/def.simplicial-map.md`
 
-引用：`def.simplicial-map`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simplicial-map`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

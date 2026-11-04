@@ -1,6 +1,6 @@
 # 规范有界变差函数的导数与测度的关系　`prop.nbv-derivative`
 命题：$\mu_F \perp m \iff F' = 0 \text{a.e.}$；$\mu_F \ll m \iff F(x) = \int_{-\infty}^{x} F'$
-layer 20 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 22 · 命题 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=prop.nbv-derivative)　·　[节点索引](../index.md)
 
 设 $F \in
@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/prop.nbv-derivative.md`
 
-引用：`prop.nbv-derivative`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.nbv-derivative`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

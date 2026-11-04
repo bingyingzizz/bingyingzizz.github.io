@@ -1,5 +1,5 @@
 # 别名 → 节点 · 复变函数
-根 `../../`　·　索引 `../../alias.md`
+根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
 - Riemann映照定理 | Riemann 映照定理 | 黎曼映照定理 | 黎曼映射定理 | Riemann映射定理 | Riemann mapping theorem | 共形映射基本定理 | 保形映射定理 → thm.riemann-mapping
 

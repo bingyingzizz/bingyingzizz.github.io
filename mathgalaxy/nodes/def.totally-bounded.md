@@ -1,6 +1,6 @@
 # 全有界　`def.totally-bounded`
 全有界 / 预紧
-layer 14 · 定义 · 度量空间 · 拓扑学
+layer 16 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.totally-bounded)　·　[节点索引](../index.md)
 
 距离空间 $(X, d)$ **全有界**（也叫**预紧**），当且仅当对每个 $\varepsilon > 0$ 都存在**有限的 $\varepsilon$-网**：
@@ -24,4 +24,4 @@ refs: Munkres, Topology, §43
 
 > 说明见 `notes/def.totally-bounded.md`
 
-引用：`def.totally-bounded`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.totally-bounded`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

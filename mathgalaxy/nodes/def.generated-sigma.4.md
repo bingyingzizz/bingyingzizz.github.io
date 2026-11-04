@@ -5,5 +5,4 @@
 - 被 [`def.borel`](../nodes/def.borel.md) Borel σ-代数 用
 - 被 [`def.product-sigma`](../nodes/def.product-sigma.md) 积 σ-代数 用
 - 被 [`prop.product-sigma-base`](../nodes/prop.product-sigma-base.md) 积 σ-代数的生成基 用
-- 被 [`thm.monotone-class`](../nodes/thm.monotone-class.md) 单调类定理 用
-- ～弱边 [`def.vs`](../nodes/def.vs.md) 向量空间的基
+- ～弱边 [`def.vs`](../nodes/def.vs.md) 线性无关与基

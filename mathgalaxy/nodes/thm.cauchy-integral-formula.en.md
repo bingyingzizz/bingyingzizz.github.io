@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 24 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.cauchy-integral-formula.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-integral-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-integral-formula` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

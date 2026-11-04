@@ -1,6 +1,6 @@
 # 过滤复形给出正合偶　`prop.filtered-complex-exact-couple`
 过滤复形给出正合偶，从而给出谱序列
-layer 19 · 命题 · 过滤与谱序列 · 同调代数
+layer 22 · 命题 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=prop.filtered-complex-exact-couple)　·　[节点索引](../index.md)
 
 设 $K$ 是带**递降过滤** $F^{p}K$ 的复形（$d$ 保过滤，即 $d(F^{p}K^{n}) \subseteq F^{p}K^{
@@ -14,4 +14,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 5.4（过滤复形
 
 > 说明见 `notes/prop.filtered-complex-exact-couple.md`
 
-引用：`prop.filtered-complex-exact-couple`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.filtered-complex-exact-couple`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 21 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Tensor–Hom Pairing` (short) · `Pairing of Tensor with Derived Hom` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.tensor-rhom-natural-map.md` and `proofs/`.
 
 
-Cite: `prop.tensor-rhom-natural-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tensor-rhom-natural-map` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

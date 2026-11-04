@@ -10,5 +10,5 @@ layer 13 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Catego
 Chinese only — see the Chinese page `nodes/def.pretopology.md` and `proofs/`.
 
 
-Cite: `def.pretopology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pretopology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

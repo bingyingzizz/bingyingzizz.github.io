@@ -2,9 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.metric-space)　·　[Chinese page (authoritative)](./def.metric-space.md)
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Metric_space · nLab: https://ncatlab.org/nlab/show/metric+space · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/MetricSpace/Basic.html
+⚠ Completeness is **not** a topological property: $\mathbb{R}$ and the open interval (0, 1) are homeomorphic, yet only the first is complete.**Only one of the three axioms is "hard"** (they are usually listed side by side, but they carry very different weight):
 
-
-Cite: `def.metric-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/def.metric-space.en.6.md

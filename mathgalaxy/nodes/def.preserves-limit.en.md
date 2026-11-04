@@ -10,5 +10,5 @@ layer 12 · definition · cluster Functors and Natural Transformations (`cat.fun
 Chinese only — see the Chinese page `nodes/def.preserves-limit.md` and `proofs/`.
 
 
-Cite: `def.preserves-limit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.preserves-limit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

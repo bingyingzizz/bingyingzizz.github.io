@@ -5,6 +5,7 @@
 - ⇒ [`thm.hahn-decomposition`](../nodes/thm.hahn-decomposition.md) Hahn 分解定理
 - 被 [`def.positive-negative-null`](../nodes/def.positive-negative-null.md) 正集 / 负集 / 零集 用
 - 被 [`thm.jordan-decomposition`](../nodes/thm.jordan-decomposition.md) Jordan 分解定理 用
+- 被 [`def.mutually-singular`](../nodes/def.mutually-singular.md) 相互奇异 用
 - 被 [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质 用
 - 被 [`def.absolute-continuity`](../nodes/def.absolute-continuity.md) 绝对连续 用
 - 被 [`def.complex-measure`](../nodes/def.complex-measure.md) 复测度 用

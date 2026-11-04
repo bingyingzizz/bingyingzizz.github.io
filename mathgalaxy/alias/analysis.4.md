@@ -1,6 +1,10 @@
 # 问法 → 节点 · 数学分析
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/analysis.md`
 
+- Lp 空间是不是完备的 → thm.lp-banach def.lp-norm
+
+- Lp 的对偶空间是什么 → thm.riesz-representation-lp def.conjugate-exponents def.duality-map
+
 - Hölder 不等式怎么用 → thm.holder def.conjugate-exponents lem.young-inequality
 
 - Lp 之间能不能互相包含 → prop.lp-inclusion-finite prop.lp-inter-lr-in-lq prop.lq-in-lp-plus-lr
@@ -18,9 +22,5 @@
 - 连续映射怎么定义 → def.continuous-map def.topology def.closed-set
 
 - 什么是 Banach 阿贝尔群 → def.banach-ab-group def.semi-normed-ab-group prop.banach-stone-acyclic
-
-- 有限维 Banach 之间的 RHom → ex.finite-banach-rhom prop.rhom-banach-discrete-zero def.banach-ab-group
-
-- 为什么有理数不够用 → thm.real-ordered-field def.real thm.real-complete-metric
 
 > 续见 alias/analysis.5.md

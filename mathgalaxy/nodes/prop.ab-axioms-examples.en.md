@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · example · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 19 · example · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `AB Axiom Examples` (short) · `Examples of AB Axioms` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.ab-axioms-examples.md` and `proofs/`.
 
 
-Cite: `prop.ab-axioms-examples` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ab-axioms-examples` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

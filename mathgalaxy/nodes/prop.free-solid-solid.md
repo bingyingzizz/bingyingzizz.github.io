@@ -1,6 +1,6 @@
 # 自由固态群是固态的　`prop.free-solid-solid`
 命题：$Z[S]^{\blacksquare}$ 是固态的（作为模与复形）
-layer 16 · 命题 · 固态阿贝尔群 · 凝聚态数学
+layer 21 · 命题 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.free-solid-solid)　·　[节点索引](../index.md)
 
 对任意 profinite 集 $S$，$Z[S]^{\blacksquare}$ 是固态阿贝尔群；并且 $Z[S]^{\blacksquare}[0] \in D(\operatorname{Cond}(\mathbf{Ab}))$ 是固态复形。
@@ -15,4 +15,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/prop.free-solid-solid.md`
 
-引用：`prop.free-solid-solid`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.free-solid-solid`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

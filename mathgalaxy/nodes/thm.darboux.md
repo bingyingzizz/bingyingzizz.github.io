@@ -1,6 +1,6 @@
 # Darboux 定理　`thm.darboux`
 Darboux 定理：辛流形局部都长一样
-layer 22 · 定理 · 辛流形与 Hamilton 力学 · 微分几何
+layer 24 · 定理 · 辛流形与 Hamilton 力学 · 微分几何
 [在星图里打开](../#n=thm.darboux)　·　[节点索引](../index.md)
 
 **在做什么**：辛几何的「没有局部不变量」定理。每一点附近都能找到坐标使 $\omega$ 变成 $\omega_{0}$ —— 所以辛流形的全部信息都在**整体**。
@@ -16,4 +16,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/thm.darboux.md`
 
-引用：`thm.darboux`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.darboux`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Triangle Morphisms` (short) · `Morphisms of Distinguished Triangles` (f
 Chinese only — see the Chinese page `nodes/lem.triangle-morphism.md` and `proofs/`.
 
 
-Cite: `lem.triangle-morphism` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.triangle-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

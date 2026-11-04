@@ -1,6 +1,6 @@
 # 内部 Hom 的函数空间刻画　`prop.cond-internal-hom`
 $C(X(\bullet), Y) \cong \operatorname{Hom}(X, Y)$
-layer 17 · 命题 · 凝聚态集 · 凝聚态数学
+layer 19 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-internal-hom)　·　[节点索引](../index.md)
 
 设 $X$ 是凝聚态集、$Y$ 是紧生成空间（视为凝聚态集 $\underline{Y}$）。则凝聚态集之间有自然同构
@@ -21,4 +21,4 @@ refs: Le Stum, Proposition 4.2.6
 
 > 说明见 `notes/prop.cond-internal-hom.md`
 
-引用：`prop.cond-internal-hom`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cond-internal-hom`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

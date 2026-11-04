@@ -1,6 +1,6 @@
 # Sylow 定理　`thm.sylow`
 定理（Sylow）：存在性、共轭性、计数
-layer 12 · 定理 · 群作用与置换 · 抽象代数
+layer 13 · 定理 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=thm.sylow)　·　[节点索引](../index.md)
 
 设 $G$ 是有限群，$|G| = p^{a} m$，其中 $p$ 是素数、$p \nmid m$。则
@@ -25,4 +25,4 @@ refs: Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.5
 
 > 说明见 `notes/thm.sylow.md`
 
-引用：`thm.sylow`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.sylow`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

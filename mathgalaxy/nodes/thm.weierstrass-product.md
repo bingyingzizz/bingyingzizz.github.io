@@ -1,6 +1,6 @@
 # Weierstrass 乘积定理　`thm.weierstrass-product`
 Weierstrass 乘积定理：给定零点就能造出整函数
-layer 24 · 定理 · 解析延拓与整函数 · 复变函数
+layer 28 · 定理 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=thm.weierstrass-product)　·　[节点索引](../index.md)
 
 设 $\{a_{n}\}$ 是 $\mathbb{C}$ 中一列趋于 $\infty$ 的点（可重复，重复次数 = 零点重数）
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Weierstrass 乘积定理；Ahlfors, Complex 
 
 > 说明见 `notes/thm.weierstrass-product.md`
 
-引用：`thm.weierstrass-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.weierstrass-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

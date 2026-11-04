@@ -1,6 +1,6 @@
 # 陈–Weil 同态　`thm.chern-weil`
 陈–Weil 同态：用曲率算出的上同调类与联络无关
-layer 24 · 定理 · 流形与向量丛 · 微分几何
+layer 25 · 定理 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=thm.chern-weil)　·　[节点索引](../index.md)
 
 **在做什么**：把「不变多项式」变成「上同调类」，并证明它**不依赖联络的选取** —— 这一步是示性类可计算的根据。
@@ -19,4 +19,4 @@ refs: Milnor–Stasheff, Characteristic Classes · 陈–Weil 理论；Bott–Tu
 
 > 说明见 `notes/thm.chern-weil.md`
 
-引用：`thm.chern-weil`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.chern-weil`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

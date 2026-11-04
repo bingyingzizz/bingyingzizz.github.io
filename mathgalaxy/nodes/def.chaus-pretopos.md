@@ -1,6 +1,6 @@
 # 紧 Hausdorff 空间构成预拓扑斯　`def.chaus-pretopos`
 $\mathbf{CHaus}$ 是预拓扑斯
-layer 16 · 定理 · 凝聚态集 · 凝聚态数学
+layer 18 · 定理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=def.chaus-pretopos)　·　[节点索引](../index.md)
 
 在 $\mathbf{CHaus}$ 中：
@@ -24,4 +24,4 @@ refs: Le Stum, Proposition 4.1.1；Le Stum, Corollary 4.1.2
 
 > 说明见 `notes/def.chaus-pretopos.md`
 
-引用：`def.chaus-pretopos`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chaus-pretopos`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

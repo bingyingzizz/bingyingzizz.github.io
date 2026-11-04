@@ -1,6 +1,6 @@
 # 张量积对双线性映射万有　`prop.module-tensor-universal`
 命题：$\operatorname{Bil}(M \times N,\ P) \cong \operatorname{Hom}(M \otimes N,\ P)$
-layer 12 · 命题 · 代数结构 · 抽象代数
+layer 15 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.module-tensor-universal)　·　[节点索引](../index.md)
 
 张量积 $M \otimes_{\mathbb{Z}} N$（resp. $M \otimes_{k} N$）对 $\mathbb{Z}$-双线性（resp. $k$-双线性）映射**万有**：
@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.21
 
 > 说明见 `notes/prop.module-tensor-universal.md`
 
-引用：`prop.module-tensor-universal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.module-tensor-universal`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -6,3 +6,5 @@
 - **跳跃间断**：两个单侧极限不相等，差 $f(x_0^{+}) - f(x_0^{-})$ 叫**跳跃**。
 
 **第二类**：至少有一个单侧极限不存在，或为 $\pm\infty$。
+
+> 续见 [nodes/prop.discontinuity-types.3.md](./prop.discontinuity-types.3.md)

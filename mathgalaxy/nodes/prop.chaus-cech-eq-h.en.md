@@ -11,5 +11,5 @@ names: `Čech on Compact Hausdorff` (short) · `Čech Cohomology on Compact Haus
 Chinese only — see the Chinese page `nodes/prop.chaus-cech-eq-h.md` and `proofs/`.
 
 
-Cite: `prop.chaus-cech-eq-h` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.chaus-cech-eq-h` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
+layer 16 · proposition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.measure-basic.md` and `proofs/`.
 
 
-Cite: `prop.measure-basic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.measure-basic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

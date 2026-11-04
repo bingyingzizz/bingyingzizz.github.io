@@ -1,6 +1,6 @@
 # 连续点集是稠密 G_δ　`thm.pointwise-limit-continuity`
 连续函数点态极限的连续点集
-layer 16 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 19 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.pointwise-limit-continuity)　·　[节点索引](../index.md)
 
 设 $X$ 是 Baire 空间，$f_n : X \to E$ 连续（$E$ 度量），且 $f_n \to f$ **逐点**。则
@@ -16,4 +16,4 @@ refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/thm.pointwise-limit-continuity.md`
 
-引用：`thm.pointwise-limit-continuity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.pointwise-limit-continuity`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

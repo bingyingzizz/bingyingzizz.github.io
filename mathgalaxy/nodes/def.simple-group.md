@@ -1,6 +1,6 @@
 # 单群　`def.simple-group`
 单群
-layer 8 · 定义 · 合成列与可解群 · 抽象代数
+layer 9 · 定义 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=def.simple-group)　·　[节点索引](../index.md)
 
 群 $G \ne \{e\}$ 叫**单群**，当且仅当它只有两个正规子群：$\{e\}$ 与 $G$ 自身（即它没有非平凡的**真**正规子群）。
@@ -16,4 +16,4 @@ refs: Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §3.4
 
 > 说明见 `notes/def.simple-group.md`
 
-引用：`def.simple-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simple-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

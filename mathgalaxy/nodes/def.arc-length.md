@@ -1,6 +1,6 @@
 # 弧长　`def.arc-length`
 弧长与弧长参数化
-layer 17 · 定义 · 活动标架与结构方程 · 微分几何
+layer 18 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.arc-length)　·　[节点索引](../index.md)
 
 **在做什么**：给曲线装一把尺 —— 把速度的模长一路累加得到长度，再用长度当参数，把曲线改写成匀速的。
@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲线」· 弧长
 
 > 说明见 `notes/def.arc-length.md`
 
-引用：`def.arc-length`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.arc-length`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

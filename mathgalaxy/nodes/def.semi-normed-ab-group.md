@@ -1,6 +1,6 @@
 # 半范数阿贝尔群　`def.semi-normed-ab-group`
 半范数阿贝尔群
-layer 7 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
+layer 8 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
 [在星图里打开](../#n=def.semi-normed-ab-group)　·　[节点索引](../index.md)
 
 **半范数阿贝尔群**是一个阿贝尔群 $M$ 配上函数 $\|\cdot\| : M \to \mathbb{R}_{\ge 0}$，满足
@@ -19,4 +19,4 @@ refs: Le Stum, §8.2
 
 > 说明见 `notes/def.semi-normed-ab-group.md`
 
-引用：`def.semi-normed-ab-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.semi-normed-ab-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

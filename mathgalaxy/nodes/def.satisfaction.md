@@ -12,8 +12,11 @@ layer 2 · 定义 · 一阶语言与公式 · 数理逻辑
 
 - …另有入边，续页见 [nodes/def.satisfaction.4.md](./def.satisfaction.4.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.satisfaction.5.md](./def.satisfaction.5.md)
+
 refs: Enderton, A Mathematical Introduction to Logic, §2.2；Marker, Model Theory: An Introduction, §1.1
 
 > 说明见 `notes/def.satisfaction.md`
 
-引用：`def.satisfaction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.satisfaction`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

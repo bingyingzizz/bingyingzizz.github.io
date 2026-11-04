@@ -1,6 +1,6 @@
 # 绝对值的运算性质　`prop.abs-properties`
 命题：绝对值的运算性质
-layer 10 · 命题 · 实数的运算与不等式 · 数学分析
+layer 11 · 命题 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=prop.abs-properties)　·　[节点索引](../index.md)
 
 设 $K$ 是有序域，$x, y \in K$，$c \ge 0$。则
@@ -22,4 +22,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 1
 
 > 说明见 `notes/prop.abs-properties.md`
 
-引用：`prop.abs-properties`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.abs-properties`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

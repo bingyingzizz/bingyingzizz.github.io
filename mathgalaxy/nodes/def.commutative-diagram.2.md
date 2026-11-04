@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.commutative-diagram)　·　第 1 页 [nodes/def.commutative-diagram.md](./def.commutative-diagram.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.natural-transformation`](../nodes/def.natural-transformation.md) 自然变换：用到了定义 自然变换　[proofs/dep.gap-commutative-diagram-natural-transformation.md](../proofs/dep.gap-commutative-diagram-natural-transformation.md)
 - [`def.functor`](../nodes/def.functor.md) 函子：用到了定义 函子　[proofs/def-dep.functor-diagram.md](../proofs/def-dep.functor-diagram.md)
 - [`def.category`](../nodes/def.category.md) 范畴：用到了定义 范畴　[proofs/def-dep.category-diagram.md](../proofs/def-dep.category-diagram.md)
 

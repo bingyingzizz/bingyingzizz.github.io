@@ -1,6 +1,6 @@
 # ℓ^p 包含于 ℓ^q　`prop.ell-p-inclusion`
 命题（只有衰减的场合）：$\ell^p \subseteq \ell^q$（$0 < p < q \le \infty$）
-layer 19 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 21 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.ell-p-inclusion)　·　[节点索引](../index.md)
 
 设 $0 < p < q \le \infty$，$A$ 是任意指标集。则
@@ -14,4 +14,4 @@ refs: Folland, Real Analysis, §6.1
 
 > 说明见 `notes/prop.ell-p-inclusion.md`
 
-引用：`prop.ell-p-inclusion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ell-p-inclusion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

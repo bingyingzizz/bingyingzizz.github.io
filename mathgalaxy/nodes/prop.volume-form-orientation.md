@@ -1,6 +1,6 @@
 # 定向与体积形式　`prop.volume-form-orientation`
 可定向当且仅当存在处处非零的最高次形式
-layer 15 · 命题 · 流形与向量丛 · 微分几何
+layer 18 · 命题 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=prop.volume-form-orientation)　·　[节点索引](../index.md)
 
 **在做什么**：给「可定向」一个不需要图册的判据 —— 只要能在整张流形上写出一个处处不为零的 $n$-形式。
@@ -16,4 +16,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/prop.volume-form-orientation.md`
 
-引用：`prop.volume-form-orientation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.volume-form-orientation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

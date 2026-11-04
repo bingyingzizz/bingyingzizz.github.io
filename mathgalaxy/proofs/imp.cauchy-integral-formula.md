@@ -3,7 +3,7 @@
 
 `thm.cauchy-goursat` Cauchy–Goursat 积分定理 → `thm.cauchy-integral-formula` Cauchy 积分公式
 
-**挖洞。** 固定 $z \in \Omega$，令 $d = \operatorname{dist}(z, \partial\Omega) > 0$，取 $0 < r < d$，令 $\Omega_r = \Omega \setminus \overline{D(z, r)}$。
+**挖洞。** 固定 $z \in \Omega$，令 $d = \operatorname{dist}(z, \partial\Omega) > 0$，取 $0 < r < d$，令 $\Omega_r = \Omega \setminus \overline{B(z, r)}$。
 
 $\Omega_r$ 是二连通区域，而 $g(\zeta) := f(\zeta)/(\zeta - z)$ 在 $\Omega_r$ 上全纯（分母在 $\Omega_r$ 上不为零）。
 

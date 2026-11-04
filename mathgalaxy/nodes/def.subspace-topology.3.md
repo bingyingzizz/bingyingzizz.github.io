@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.completely-normal-space`](../nodes/def.completely-normal-space.md) 完全正规空间 用
+- ～弱边 [`def.subspace`](../nodes/def.subspace.md) 子空间
 - 被 [`prop.cgwh-closed`](../nodes/prop.cgwh-closed.md) 弱 Hausdorff 紧生成空间的开闭子空间与滤过余极限 用

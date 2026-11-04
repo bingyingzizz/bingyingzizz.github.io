@@ -1,6 +1,6 @@
 # 相伴、不可约与素　`def.irreducible-element`
 相伴、不可约元与素元
-layer 8 · 定义 · 整环与分解 · 抽象代数
+layer 9 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.irreducible-element)　·　[节点索引](../index.md)
 
 设 $A$ 是整环，$a, b \in A$ 非零。
@@ -19,4 +19,4 @@ refs: Atiyah–Macdonald, Ch. 1
 
 > 说明见 `notes/def.irreducible-element.md`
 
-引用：`def.irreducible-element`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.irreducible-element`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

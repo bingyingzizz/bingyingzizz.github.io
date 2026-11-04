@@ -1,6 +1,6 @@
 # 范畴嵌入复形　`prop.category-into-complexes`
 命题：$M \mapsto [M]$ 把范畴全忠实地嵌进复形范畴
-layer 11 · 命题 · 复形与导出三角 · 同调代数
+layer 12 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.category-into-complexes)　·　[节点索引](../index.md)
 
 把整数集看成偏序范畴 $(\mathbb{Z}, \le)$。由含入 $\{0\} \hookrightarrow (\mathbb{Z},\le)$ 得到函子
@@ -18,4 +18,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/prop.category-into-complexes.md`
 
-引用：`prop.category-into-complexes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.category-into-complexes`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 拉回（开集间）　`prop.pullback-forms`
 拉回：开集之间的形式
-layer 16 · 命题 · 活动标架与结构方程 · 微分几何
+layer 19 · 命题 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=prop.pullback-forms)　·　[节点索引](../index.md)
 
 **在做什么**：把形式沿着光滑映射「搬回去」—— 这是形式特有的能力（向量场只能正着推），也是「$\mathrm{d}$ 与坐标无关」的正式说法。
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 
 
 > 说明见 `notes/prop.pullback-forms.md`
 
-引用：`prop.pullback-forms`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pullback-forms`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

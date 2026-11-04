@@ -1,6 +1,6 @@
 # Cauchy–Schwarz 不等式　`thm.cauchy-schwarz`
 定理：Cauchy–Schwarz 不等式
-layer 16 · 定理 · 内积空间与正交性 · 抽象代数+数学分析
+layer 20 · 定理 · 内积空间与正交性 · 抽象代数+数学分析
 [在星图里打开](../#n=thm.cauchy-schwarz)　·　[节点索引](../index.md)
 
 设 $V$ 是内积空间，$u, v \in V$。则
@@ -16,4 +16,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/thm.cauchy-schwarz.md`
 
-引用：`thm.cauchy-schwarz`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-schwarz`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

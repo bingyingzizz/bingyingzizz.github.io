@@ -1,6 +1,6 @@
 # 张量场　`def.tensor-field`
 张量场与张量丛
-layer 20 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.tensor-field)　·　[节点索引](../index.md)
 
 **在说什么**：把「每点一个多重线性型」做
@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/def.tensor-field.md`
 
-引用：`def.tensor-field`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tensor-field`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

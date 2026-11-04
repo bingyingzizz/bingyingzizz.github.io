@@ -1,6 +1,6 @@
 # de Rham 定理　`thm.de-rham`
 de Rham 定理
-layer 28 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 31 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.de-rham)　·　[节点索引](../index.md)
 
 **白话**：用微积分造出来的上同调（
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology
 
 > 说明见 `notes/thm.de-rham.md`
 
-引用：`thm.de-rham`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.de-rham`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

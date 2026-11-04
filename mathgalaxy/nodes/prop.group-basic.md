@@ -1,6 +1,6 @@
 # 群的基本性质　`prop.group-basic`
 命题：群的消去律与逆的公式
-layer 7 · 命题 · 代数结构 · 抽象代数
+layer 8 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.group-basic)　·　[节点索引](../index.md)
 
 设 $G$ 是群，$a, b, c \in G$。则：
@@ -18,4 +18,4 @@ refs: Lang, Algebra, Ch. I
 
 > 说明见 `notes/prop.group-basic.md`
 
-引用：`prop.group-basic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.group-basic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

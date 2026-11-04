@@ -6,3 +6,5 @@ $$\cdots \to H^{k}_{\mathrm{dR}}(M) \to H^{k}_{\mathrm{dR}}(U) \oplus H^{k}_{\ma
 其中第二个箭头是 $(\omega_{U},\omega_{V}) \mapsto \omega_{U}\big|_{U \cap V} - \omega_{V}\big|_{U \cap V}$，$\delta$ 叫**连接同态**。
 
 **本节点只给陈述**：$\delta$ 的显式构造与正合性的逐项验证，本图不写（要先把「形式的拆分」这套机器架起来，篇幅与收益不成比例）。此条按参考书陈述，不附证明。
+
+> 续见 [nodes/thm.mayer-vietoris.3.md](./thm.mayer-vietoris.3.md)

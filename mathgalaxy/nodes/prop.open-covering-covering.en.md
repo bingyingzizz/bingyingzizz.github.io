@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 19 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Open Coverings` (short) · `Open Coverings Are Coverings` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.open-covering-covering.md` and `proofs/`.
 
 
-Cite: `prop.open-covering-covering` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.open-covering-covering` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

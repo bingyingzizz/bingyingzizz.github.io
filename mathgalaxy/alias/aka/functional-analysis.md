@@ -1,7 +1,7 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
-- 范数公理 | 赋范空间 → def.norm
+- 范数公理 | 赋范空间 | ‖x‖ | ||x|| | 范数 ‖·‖ → def.norm
 
 - 诱导距离 | 平移不变度量 → prop.norm-induces-metric
 
@@ -28,7 +28,5 @@
 - 延拓定理 | 稠密延拓 | 唯一延拓 → thm.bounded-extension
 
 - Neumann 级数 | 诺伊曼级数 | 几何级数算子 → thm.neumann-series
-
-- 可分 | 可分空间 | 不可分 → def.separable-space
 
 > 续见 alias/aka/functional-analysis.2.md

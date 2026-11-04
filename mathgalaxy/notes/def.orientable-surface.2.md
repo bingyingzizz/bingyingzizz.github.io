@@ -1,4 +1,4 @@
-# 可定向曲面　`def.orientable-surface`　·　说明
+# R³ 中的可定向曲面　`def.orientable-surface`　·　说明
 根 `../`
 
 **各方向用到的假设**（法向、保向图册与面积形式是同一定向的三种描述）：

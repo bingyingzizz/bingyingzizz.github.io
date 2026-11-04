@@ -3,5 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.rn-pointwise`](../nodes/thm.rn-pointwise.md) Radon–Nikodym 导数的点态公式 用
+- 被 [`ex.density-abs-continuous`](../nodes/ex.density-abs-continuous.md) 密度型测度绝对连续 用
 - 被 [`cor.rn-inverse`](../nodes/cor.rn-inverse.md) 互为绝对连续时导数互逆 用
 - 被 [`prop.nbv-derivative`](../nodes/prop.nbv-derivative.md) 规范有界变差函数的导数与测度的关系 用

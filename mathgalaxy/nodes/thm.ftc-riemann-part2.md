@@ -1,6 +1,6 @@
 # Newton–Leibniz 公式　`thm.ftc-riemann-part2`
 定理（第二基本定理）：$\int_a^b F' = F(b) - F(a)$
-layer 21 · 定理 · Riemann 积分 · 数学分析
+layer 25 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.ftc-riemann-part2)　·　[节点索引](../index.md)
 
 设 $F : [a, b] \to \mathbb{R}$ 可导、$F'$ 在 $[a, b]$ 上可积。则
@@ -20,4 +20,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/thm.ftc-riemann-part2.md`
 
-引用：`thm.ftc-riemann-part2`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ftc-riemann-part2`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

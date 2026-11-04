@@ -1,6 +1,6 @@
 # 微积分基本定理（Lebesgue 版）　`thm.ftc-lebesgue`
 定理：以下几条等价 —— 绝对连续、是 $L^{1}$ 函数的积分、导数的积分还原
-layer 22 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 24 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=thm.ftc-lebesgue)　·　[节点索引](../index.md)
 
 设 $F : [a, b] \to \mathbb{C}$，区间紧。则下列三条**彼此等价**：
@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/thm.ftc-lebesgue.md`
 
-引用：`thm.ftc-lebesgue`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ftc-lebesgue`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

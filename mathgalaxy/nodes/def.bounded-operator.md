@@ -1,6 +1,6 @@
 # 有界线性算子　`def.bounded-operator`
 有界线性算子与算子范数
-layer 11 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 14 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.bounded-operator)　·　[节点索引](../index.md)
 
 设 $u : E \to F$ 线性。称 $u$ **有界**，若存在 $C$ 使 $\|u(x)\| \le C\|x\|$ 对一切 $x$ 成立。全体记 $B(E, F)$，并记 $B(E) := B(E, E)$。定义
@@ -21,4 +21,4 @@ refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级�
 
 > 说明见 `notes/def.bounded-operator.md`
 
-引用：`def.bounded-operator`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.bounded-operator`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

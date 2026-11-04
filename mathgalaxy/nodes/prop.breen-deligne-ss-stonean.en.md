@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
+layer 21 · proposition · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 names: `Breen–Deligne on Stonean` (short) · `The Breen–Deligne Spectral Sequence on Stonean Spaces` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.breen-deligne-ss-stonean.md` and `proofs/`.
 
 
-Cite: `prop.breen-deligne-ss-stonean` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.breen-deligne-ss-stonean` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

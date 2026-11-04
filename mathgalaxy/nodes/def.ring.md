@@ -1,6 +1,6 @@
 # 环　`def.ring`
 环与交换环
-layer 7 · 定义 · 代数结构 · 抽象代数
+layer 8 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.ring)　·　[节点索引](../index.md)
 
 设 $A$ 是**集合**，$+$ 与 $\cdot$ 是 $A$ 上的两个**二元运算**。称 $(A, +, \cdot)$ 是一个**环**，当且仅当：
@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. II；Dummit & Foote, Abstract Algebra, §7.1
 
 > 说明见 `notes/def.ring.md`
 
-引用：`def.ring`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ring`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Ext Vanishes for LCA Groups` (short) · `Ext Vanishes in High Degrees fo
 Chinese only — see the Chinese page `nodes/thm.lc-ext-vanishing.md` and `proofs/`.
 
 
-Cite: `thm.lc-ext-vanishing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.lc-ext-vanishing` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

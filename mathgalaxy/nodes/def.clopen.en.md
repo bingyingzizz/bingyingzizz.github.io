@@ -10,5 +10,5 @@ layer 6 · definition · cluster Topological Spaces and Basic Constructions (`to
 Chinese only — see the Chinese page `nodes/def.clopen.md` and `proofs/`.
 
 
-Cite: `def.clopen` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.clopen` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

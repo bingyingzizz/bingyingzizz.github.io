@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量：用到了定义 Riemann 度量　[proofs/dep.mf-riemannian-volume.md](../proofs/dep.mf-riemannian-volume.md)
 - [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf3-vform-form.md](../proofs/dep.mf3-vform-form.md)
+
+> 续见 [nodes/def.volume-form.4.md](./def.volume-form.4.md)

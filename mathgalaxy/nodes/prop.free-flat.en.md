@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 16 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Free and Projective Are Flat` (short) · `Free and Projective Modules Are Flat` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.free-flat.md` and `proofs/`.
 
 
-Cite: `prop.free-flat` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-flat` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

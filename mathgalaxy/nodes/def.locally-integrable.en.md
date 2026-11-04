@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · definition · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.locally-integrable.md` and `proofs/`.
 
 
-Cite: `def.locally-integrable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.locally-integrable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

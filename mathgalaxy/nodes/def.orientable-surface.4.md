@@ -1,4 +1,4 @@
-# 可定向曲面　`def.orientable-surface`　·　续页（第 4 页）
+# R³ 中的可定向曲面　`def.orientable-surface`　·　续页（第 4 页）
 [在星图里打开](../#n=def.orientable-surface)　·　第 1 页 [nodes/def.orientable-surface.md](./def.orientable-surface.md)　·　上一页 [nodes/def.orientable-surface.3.md](./def.orientable-surface.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）

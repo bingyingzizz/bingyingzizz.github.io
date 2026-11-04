@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Monos, Epis, Subobjects and Images (`cat.stru
 Chinese only — see the Chinese page `nodes/prop.slice-fully-faithful-mono.md` and `proofs/`.
 
 
-Cite: `prop.slice-fully-faithful-mono` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.slice-fully-faithful-mono` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

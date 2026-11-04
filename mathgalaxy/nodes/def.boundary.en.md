@@ -5,11 +5,10 @@ English entry · root `../`
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
-names: `Boundaries` (short) · `Boundaries and Coboundaries` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.boundary.md` and `proofs/`.
 
 
-Cite: `def.boundary` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.boundary` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

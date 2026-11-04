@@ -1,6 +1,6 @@
 # A⁺ 由谱决定　`prop.huber-subring-recovery`
 命题：整闭子环与谱的开闭子集一一对应（Prop 9.2）
-layer 10 · 命题 · adic 空间 · 解析空间
+layer 23 · 命题 · adic 空间 · 解析空间
 [在星图里打开](../#n=prop.huber-subring-recovery)　·　[节点索引](../index.md)
 
 白话：**$A^+$ 看着像「额外数据」，其实由谱自己决定** —— 「整闭子环 $A^+$」与「谱里形如 $\bigcap U_{1,f}$ 的那块子集 $U$」一一对应。所以 $(A,A^+)$ 与「环 $A$ 加上谱里的一块区域」是同一件事，这就是把环论翻译成几何的那一步。
@@ -17,4 +17,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/prop.huber-subring-recovery.md`
 
-引用：`prop.huber-subring-recovery`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.huber-subring-recovery`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

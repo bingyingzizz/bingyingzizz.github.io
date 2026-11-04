@@ -1,6 +1,6 @@
 # 拓扑阿贝尔群　`def.topo-ab-group`
 拓扑阿贝尔群与连续同态
-layer 16 · 定义 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 18 · 定义 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=def.topo-ab-group)　·　[节点索引](../index.md)
 
 **拓扑阿贝尔群** $(M, +, \tau)$ 是一个**阿贝尔群** $M$ 连带一个拓扑 $\tau$，使运算连续：
@@ -25,4 +25,4 @@ refs: Le Stum, An introduction to condensed mathematics, §6.2
 
 > 说明见 `notes/def.topo-ab-group.md`
 
-引用：`def.topo-ab-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.topo-ab-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

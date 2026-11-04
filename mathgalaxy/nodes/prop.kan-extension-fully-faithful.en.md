@@ -11,5 +11,5 @@ names: `Kan Extension along Inclusion` (short) · `Kan Extension along a Fully F
 Chinese only — see the Chinese page `nodes/prop.kan-extension-fully-faithful.md` and `proofs/`.
 
 
-Cite: `prop.kan-extension-fully-faithful` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.kan-extension-fully-faithful` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

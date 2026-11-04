@@ -5,12 +5,12 @@
 
 - def.cond-measure　整值测度　layer 13
 - thm.csz-free　连续函数群是自由的　layer 14
-- cor.free-solid-product　自由固态群是大乘积　layer 15
-- prop.solid-hypercover　固态化把超覆盖变成正合列　layer 15
-- prop.free-solid-solid　自由固态群是固态的　layer 16
-- lem.solid-completion-criterion　完备化判据　layer 17
-- def.solid-group　固态阿贝尔群　layer 18
-- thm.solid-abelian　固态群构成阿贝尔子范畴　layer 18
-- thm.solid-derived　固态复形与导出范畴　layer 19
+- def.solid-group　固态阿贝尔群　layer 20
+- cor.free-solid-product　自由固态群是大乘积　layer 20
+- prop.solid-hypercover　固态化把超覆盖变成正合列　layer 20
+- lem.solid-completion-criterion　完备化判据　layer 20
+- prop.free-solid-solid　自由固态群是固态的　layer 21
+- thm.solid-abelian　固态群构成阿贝尔子范畴　layer 22
+- thm.solid-derived　固态复形与导出范畴　layer 23
 
 > 续见 `index/cond.solid.2.md`

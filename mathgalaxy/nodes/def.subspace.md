@@ -1,6 +1,6 @@
 # 子空间　`def.subspace`
 线性子空间
-layer 9 · 定义 · 向量空间的基 · 抽象代数
+layer 12 · 定义 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=def.subspace)　·　[节点索引](../index.md)
 
 设 $V$ 是域 $K$ 上的向量空间。$U \subseteq V$ 叫 $V$ 的**（线性）子空间**，当且仅当
@@ -25,4 +25,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
 
 > 说明见 `notes/def.subspace.md`
 
-引用：`def.subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.subspace`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

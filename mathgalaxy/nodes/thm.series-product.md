@@ -1,6 +1,6 @@
 # Cauchy 乘积　`thm.series-product`
 定理：绝对收敛级数的 Cauchy 乘积
-layer 21 · 定理 · 数项级数的敛散性 · 数学分析
+layer 25 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.series-product)　·　[节点索引](../index.md)
 
 设 $\sum a_n$ 与 $\sum b_n$ 都**绝对收敛**，记
@@ -18,4 +18,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.series-product.md`
 
-引用：`thm.series-product`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.series-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

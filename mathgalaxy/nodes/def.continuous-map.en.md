@@ -10,5 +10,5 @@ layer 5 · definition · cluster Topological Spaces and Basic Constructions (`to
 Chinese only — see the Chinese page `nodes/def.continuous-map.md` and `proofs/`.
 
 
-Cite: `def.continuous-map` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.continuous-map` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

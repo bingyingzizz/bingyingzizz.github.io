@@ -11,5 +11,5 @@ names: `Subcategory Additivity` (short) · `Subcategories Inherit Additivity and
 Chinese only — see the Chinese page `nodes/prop.subcat-additive.md` and `proofs/`.
 
 
-Cite: `prop.subcat-additive` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.subcat-additive` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

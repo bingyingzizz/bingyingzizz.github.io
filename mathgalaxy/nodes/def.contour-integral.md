@@ -1,6 +1,6 @@
 # 复围道积分　`def.contour-integral`
 定义：复围道积分
-layer 17 · 定义 · 复变函数基础 · 复变函数
+layer 18 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.contour-integral)　·　[节点索引](../index.md)
 
 **白话**：把路径切成很多小段，每段用 $f$ 在该点的值乘上这一小段对应的**复位移**，加起来取极限 —— 就是沿这条路径的积分。
@@ -22,4 +22,4 @@ refs: 王晓光《复变函数》笔记，第 6 章 · 复积分；Ahlfors, Comp
 
 > 说明见 `notes/def.contour-integral.md`
 
-引用：`def.contour-integral`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.contour-integral`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

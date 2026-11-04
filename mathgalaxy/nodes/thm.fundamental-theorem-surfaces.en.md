@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 28 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 32 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 names: `Fundamental Theorem of Surfaces` (short) · `Fundamental Theorem of Surface Theory` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.fundamental-theorem-surfaces.md` and `proofs/`.
 
 
-Cite: `thm.fundamental-theorem-surfaces` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.fundamental-theorem-surfaces` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

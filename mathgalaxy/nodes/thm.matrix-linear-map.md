@@ -1,6 +1,6 @@
 # 线性映射 ⟷ 矩阵　`thm.matrix-linear-map`
 定理：选定基后，线性映射与矩阵一一对应
-layer 10 · 定理 · 矩阵与行列式 · 抽象代数
+layer 13 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.matrix-linear-map)　·　[节点索引](../index.md)
 
 设 $V$ 有有序基 $\mathcal{B} = (v_1, \ldots, v_n)$、$W$ 有有序基 $\mathcal{C} = (w_1, \ldots, w_m)$，都是有限维 $K$-向量空间。
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 3；Lang, Linear Algebra
 
 > 说明见 `notes/thm.matrix-linear-map.md`
 
-引用：`thm.matrix-linear-map`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.matrix-linear-map`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

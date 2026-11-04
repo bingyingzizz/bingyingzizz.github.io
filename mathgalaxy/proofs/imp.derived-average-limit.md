@@ -5,7 +5,7 @@
 
 平均算子定义为
 
-$$A_{r}f(x) := \frac{1}{m\bigl(B(r,x)\bigr)}\int_{B(r,x)} f\,\mathrm{d}m,$$
+$$A_{r}f(x) := \frac{1}{m\bigl(B(x, r)\bigr)}\int_{B(x, r)} f\,\mathrm{d}m,$$
 
 即 $f$ 在球上的平均值。Lebesgue 微分定理说：对 $f \in L^{1}_{\mathrm{loc}}$，
 
@@ -17,6 +17,4 @@ $$\lim_{r\to 0} A_{r}f(x) = f(x) \qquad \text{a.e.}$$
 
 所以「$A_{r}f \to f$ 处处」是错的，「a.e.」不能换成「处处」。
 
-$\blacksquare$
-
-> 定义本身只写了「怎么平均」，没有写「平均收敛到谁」；后一半是定理的内容，而它恰好就是 Lebesgue 微分定理。
+> 续见 proofs/imp.derived-average-limit.2.md

@@ -1,6 +1,6 @@
 # 双线性型　`def.bilinear-form`
 双线性型
-layer 10 · 定义 · 多重线性与张量 · 抽象代数
+layer 13 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.bilinear-form)　·　[节点索引](../index.md)
 
 设 $V, W, U$ 是 $K$-向量空间。映射 $B : V \times W \to U$ 叫**双线性**的，当且仅当固定一个变元后，对另一个变元是线性的：
@@ -21,4 +21,4 @@ refs: Lang, Algebra, Ch. XVI；Roman, Advanced Linear Algebra, Ch. 14
 
 > 说明见 `notes/def.bilinear-form.md`
 
-引用：`def.bilinear-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.bilinear-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

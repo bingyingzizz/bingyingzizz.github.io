@@ -17,4 +17,4 @@ refs: Kunen, Set Theory, I.9
 ## 说明
 这条定理说明罗素悖论里的「集合 $R = \{ x : x \notin x \}$」不可能存在——否则 $R \in R$ 与 $R \notin R$ 同时成立。
 
-引用：`thm.noself`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.noself`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

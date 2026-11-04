@@ -1,6 +1,6 @@
 # Riemann 度量　`def.riemannian-metric`
 Riemann 度量
-layer 25 · 定义 · 内蕴几何 · 微分几何
+layer 28 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.riemannian-metric)　·　[节点索引](../index.md)
 
 **在做什么**：在每点的切空间上放一个内积，并要求它随点光滑变化 —— 有了它，流形上才有长度、角度、体积，也才有测地线与曲率。
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「黎曼度量」· 
 
 > 说明见 `notes/def.riemannian-metric.md`
 
-引用：`def.riemannian-metric`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.riemannian-metric`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

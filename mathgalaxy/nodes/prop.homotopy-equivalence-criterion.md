@@ -1,6 +1,6 @@
 # 同伦等价的判据　`prop.homotopy-equivalence-criterion`
 命题：$f$ 是同伦等价 $\iff$ 存在同伦逆
-layer 13 · 命题 · 复形与导出三角 · 同调代数
+layer 14 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.homotopy-equivalence-criterion)　·　[节点索引](../index.md)
 
 设 $f : K^{\bullet} \to L^{\bullet}$ 是复形态射。则
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/prop.homotopy-equivalence-criterion.md`
 
-引用：`prop.homotopy-equivalence-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.homotopy-equivalence-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

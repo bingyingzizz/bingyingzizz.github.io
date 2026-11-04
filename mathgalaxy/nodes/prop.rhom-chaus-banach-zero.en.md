@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
+layer 18 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `RHom to Banach Vanishes` (short) · `Derived Hom from Compact Hausdorff Spaces to Real Banach Spaces Vanishes` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.rhom-chaus-banach-zero.md` and `proofs/`.
 
 
-Cite: `prop.rhom-chaus-banach-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.rhom-chaus-banach-zero` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

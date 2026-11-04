@@ -31,9 +31,10 @@
   <header class="np-head">
     <h1>Stone 上常系数零调<span class="en" lang="en">Stone acyclic constant</span></h1>
     <p class="full">Stone 空间上常值系数的零调</p>
-    <ul class="facts"><li>引理</li><li>依赖深度 layer 18</li><li>凝聚态数学</li><li>同调代数</li><li>导出 Hom 的具体计算</li></ul>
+    <ul class="facts"><li>引理</li><li>依赖深度 layer 20</li><li>凝聚态数学</li><li>同调代数</li><li>导出 Hom 的具体计算</li></ul>
     <p class="idline"><code>lem.stone-constant-acyclic</code> · 凝聚态数学 · Stone 空间 · 常系数 · Čech</p>
     <p class="aka"><span class="aka-k">又称</span>Stone 上常系数零调<span class="aka-s">·</span>Stone acyclic constant<span class="aka-s">·</span>Lemma 8.1.2</p>
+    
     
   </header>
 
@@ -58,9 +59,21 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 
   
 
-  
-  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">2</span></h3>
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">推出 <span class="n">1</span></h3>
 <ul class="edges"><li class="edge">
+  <div class="edge-line">本页 <span class="arrow">⟹</span> <a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a><span class="kind">推出</span></div>
+  <div class="edge-title">Stone 上常系数无高次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 局部紧上凝聚态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span></span></span></span> 层上同调</div>
+  <div class="proof"><p>两边都是「层」的上同调，差别只在算它的范畴：右边是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上开集景里的层上同调，左边是凝聚态（紧 Hausdorff 测试空间上的层）的上同调。</p><p>比较的办法：先在 <strong>Stone 空间</strong>上比 —— 常系数在 Stone 上没有高次（本包引用的引理），两边的谱序列在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">E_{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处就对齐了；再把一般局部紧 Hausdorff 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 写成紧块／紧子集的滤过余极限，用「上同调与滤过余极限交换」（紧块都是 Stone 的商/子空间）搬过去。</p><p>⚠ <strong>骨架说明</strong>：本图没有把「上同调沿滤过余极限的行为」单独立节点，这一步只记机制；完整的比较需要 Clausen–Scholze 里那一套解析环上同调的估计。</p></div>
+  
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">3</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.condensed-abelian-group.html">凝聚态阿贝尔群</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>陈述里提到「凝聚态阿贝尔群」：「设 （式子） 是 <strong>Stone 空间</strong>（紧、Hausdorff、全不连通），…」 —— 读者顺着这个词要落到它的定义上，所以接上。</p></div>
+</li>
+<li class="edge">
   <div class="edge-line"><a href="def.stone-space.html">全不连通与 Stone 空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
   
   
@@ -77,13 +90,13 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 
   <section class="rel-sec hook-sec"><h2>常见问法 <span class="n">1 条</span></h2><ul class="hooks"><li><span class="q">什么空间上凝聚态上同调会消失</span><span class="also">也看 <a href="prop.stonean-cond-acyclic.html">Stonean 上凝聚阿贝尔群零调</a>、<a href="thm.real-banach-chaus-acyclic.html">实 Banach 在紧 Hausdorff 上零调</a></span></li></ul></section>
 
-  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">22 个</span></h2><ul class="sibs"><li><a href="ex.chaus-banach-rhom.html">紧空间对实 Banach 空间的导出 Hom</a><span class="lay">layer 16</span></li><li><a href="prop.rhom-chaus-banach-zero.html">紧 Haus 到实 Banach 全零</a><span class="lay">layer 16</span></li><li><a href="cor.ext-cond-set-section.html">Ext 的截面公式</a><span class="lay">layer 18</span></li><li><a href="lem.cech-finite-disjoint-acyclic.html">有限不交覆盖的 Čech 零调</a><span class="lay">layer 18</span></li><li><a href="prop.cond-slice-topos-morphism.html">Cond/X 到开集拓扑斯的态射</a><span class="lay">layer 18</span></li><li><a href="prop.condab-discrete-acyclic.html">离散空间上零调</a><span class="lay">layer 18</span></li><li><a href="prop.condab-quotient-r-disc.html">R/R_disc 在 Stone 上的截面</a><span class="lay">layer 18</span></li><li><a href="prop.discrete-cond-rhom-constant.html">离散群的导出 Hom 是常层</a><span class="lay">layer 18</span></li><li><a href="prop.rhom-ze-powers.html">离散空间上自由模的导出 Hom</a><span class="lay">layer 18</span></li><li><a href="prop.rhom-zs-sections.html">Stonean 空间上自由模的导出 Hom</a><span class="lay">layer 18</span></li><li><a href="prop.stonean-cond-acyclic.html">Stonean 上凝聚阿贝尔群零调</a><span class="lay">layer 18</span></li><li><a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a><span class="lay">layer 18</span></li><li><a href="ex.connected-lc-ext.html">连通局部紧到离散只剩 Ext一次</a><span class="lay">layer 21</span></li><li><a href="ex.finite-banach-rhom.html">有限维 Banach 空间之间的导出 Hom</a><span class="lay">layer 21</span></li><li><a href="ex.nonlc-rhom.html">非局部紧情形的导出 Hom</a><span class="lay">layer 21</span></li><li><a href="lem.ext-stonean-section.html">Stonean 上 Ext 的截面公式</a><span class="lay">layer 21</span></li><li><a href="prop.dual-rhom-characterization.html">Pontryagin 对偶的导出 Hom 刻画</a><span class="lay">layer 21</span></li><li><a href="prop.rhom-banach-discrete-zero.html">有限维 Banach 到离散群全零</a><span class="lay">layer 21</span></li><li><a href="prop.rhom-dual-tensor.html">离散对偶的导出 Hom 与导出张量</a><span class="lay">layer 21</span></li><li><a href="table.rhom-zrt.html">Z、R、T 的导出 Hom 计算表</a><span class="lay">layer 21</span></li><li><a href="thm.lc-ext-vanishing.html">局部紧阿贝尔群高次 Ext 消失</a><span class="lay">layer 21</span></li></ul></section>
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">21 个</span></h2><ul class="sibs"><li><a href="prop.rhom-chaus-banach-zero.html">紧 Haus 到实 Banach 全零</a><span class="lay">layer 18</span></li><li><a href="lem.cech-finite-disjoint-acyclic.html">有限不交覆盖的 Čech 零调</a><span class="lay">layer 20</span></li><li><a href="prop.condab-quotient-r-disc.html">R/R_disc 在 Stone 上的截面</a><span class="lay">layer 20</span></li><li><a href="prop.discrete-cond-rhom-constant.html">离散群的导出 Hom 是常层</a><span class="lay">layer 20</span></li><li><a href="prop.rhom-ze-powers.html">离散空间上自由模的导出 Hom</a><span class="lay">layer 20</span></li><li><a href="ex.finite-banach-rhom.html">有限维 Banach 空间之间的导出 Hom</a><span class="lay">layer 21</span></li><li><a href="lem.ext-stonean-section.html">Stonean 上 Ext 的截面公式</a><span class="lay">layer 21</span></li><li><a href="prop.condab-discrete-acyclic.html">离散空间上零调</a><span class="lay">layer 21</span></li><li><a href="prop.rhom-banach-discrete-zero.html">有限维 Banach 到离散群全零</a><span class="lay">layer 21</span></li><li><a href="thm.dyckhoff.html">局部紧上凝聚态＝层上同调</a><span class="lay">layer 21</span></li><li><a href="thm.lc-ext-vanishing.html">局部紧阿贝尔群高次 Ext 消失</a><span class="lay">layer 21</span></li><li><a href="cor.ext-cond-set-section.html">Ext 的截面公式</a><span class="lay">layer 22</span></li><li><a href="ex.connected-lc-ext.html">连通局部紧到离散只剩 Ext一次</a><span class="lay">layer 22</span></li><li><a href="ex.nonlc-rhom.html">非局部紧情形的导出 Hom</a><span class="lay">layer 22</span></li><li><a href="prop.rhom-dual-tensor.html">离散对偶的导出 Hom 与导出张量</a><span class="lay">layer 22</span></li><li><a href="prop.rhom-zs-sections.html">Stonean 空间上自由模的导出 Hom</a><span class="lay">layer 22</span></li><li><a href="ex.chaus-banach-rhom.html">紧空间对实 Banach 空间的导出 Hom</a><span class="lay">layer 23</span></li><li><a href="prop.dual-rhom-characterization.html">Pontryagin 对偶的导出 Hom 刻画</a><span class="lay">layer 23</span></li><li><a href="prop.stonean-cond-acyclic.html">Stonean 上凝聚阿贝尔群零调</a><span class="lay">layer 23</span></li><li><a href="table.rhom-zrt.html">Z、R、T 的导出 Hom 计算表</a><span class="lay">layer 23</span></li></ul></section>
 
   <section class="sec jump">
     <h2>继续</h2>
     <p>
       <a href="../#n=lem.stone-constant-acyclic">在星图里打开「Stone 上常系数零调」</a>　·　
-      <a href="../all.html">全部 1472 个概念</a>　·　
+      <a href="../all.html">全部 1531 个概念</a>　·　
       <a href="lem.stone-constant-acyclic.md">Markdown 原文</a>　·　
       <a href="lem.stone-constant-acyclic.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
     </p>
@@ -92,7 +105,7 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 </main>
 
 <footer class="np-foot">
-  <p>数学星图 MathGalaxy · 内容 v0.9.2 · 内容以
+  <p>数学星图 MathGalaxy · 内容 v0.9.3 · 内容以
      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
   <p>引用请写节点 id <code>lem.stone-constant-acyclic</code> 与内容版本 ·
     条款见 <a href="../LICENSE.txt">LICENSE</a> ·

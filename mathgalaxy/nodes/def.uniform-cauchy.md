@@ -1,6 +1,6 @@
 # 一致 Cauchy 列　`def.uniform-cauchy`
 一致 Cauchy 列
-layer 16 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.uniform-cauchy)　·　[节点索引](../index.md)
 
 称 $\{f_n\}$ 是**一致 Cauchy 列**，当且仅当
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 7
 
 > 说明见 `notes/def.uniform-cauchy.md`
 
-引用：`def.uniform-cauchy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.uniform-cauchy`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

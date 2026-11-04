@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理 用
+- 被 [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵 用

@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1–7.3
 
 $H^{n}$ 是**函子**，但它是**加法而不正合**的 —— 同调不可交换性是整个同调代数的起点。
 
-引用：`def.cohomology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cohomology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

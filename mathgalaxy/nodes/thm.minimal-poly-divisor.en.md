@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 18 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.minimal-poly-divisor.md` and `proofs/`.
 
 
-Cite: `thm.minimal-poly-divisor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.minimal-poly-divisor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

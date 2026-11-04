@@ -1,6 +1,6 @@
 # 陈类　`def.chern-class`
 陈类：由曲率算出的示性类
-layer 32 · 定理 · 流形与向量丛 · 微分几何
+layer 36 · 定理 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=def.chern-class)　·　[节点索引](../index.md)
 
 **在做什么**：把陈–Weil 同态用在**特定的不变多项式**上，得到 $k$ 个类 —— 这是复向量丛最完整的示性类。
@@ -25,4 +25,4 @@ refs: Milnor–Stasheff, Characteristic Classes · 陈类；Bott–Tu, Different
 
 > 说明见 `notes/def.chern-class.md`
 
-引用：`def.chern-class`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.chern-class`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

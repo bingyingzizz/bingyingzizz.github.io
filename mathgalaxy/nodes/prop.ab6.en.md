@@ -11,5 +11,5 @@ names: `AB6` (short) · `AB6: Filtered Colimits Commute with Products` (full)
 Chinese only — see the Chinese page `nodes/prop.ab6.md` and `proofs/`.
 
 
-Cite: `prop.ab6` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ab6` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

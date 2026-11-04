@@ -1,6 +1,6 @@
 # 闭形式　`def.closed-form`
 闭形式：外微分为零的微分形式
-layer 23 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 24 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.closed-form)　·　[节点索引](../index.md)
 
 **在做什么**：de Rham 复形里的**闭链**。它是「局部上没有旋度 / 没有源」的微分形式 —— 整门 de Rham 理论都在问「闭的里面有多少是真恰当的」。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名�
 
 > 说明见 `notes/def.closed-form.md`
 
-引用：`def.closed-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.closed-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

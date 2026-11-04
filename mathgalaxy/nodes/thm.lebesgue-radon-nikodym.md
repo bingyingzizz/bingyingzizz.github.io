@@ -1,6 +1,6 @@
 # Lebesgue–Radon–Nikodym 定理　`thm.lebesgue-radon-nikodym`
 Lebesgue–Radon–Nikodym 定理：$\nu = \lambda + \rho$，$\lambda \perp \mu$，$\rho \ll \mu$
-layer 21 · 定理 · 符号测度与分解 · 实变函数+数学分析
+layer 23 · 定理 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=thm.lebesgue-radon-nikodym)　·　[节点索引](../index.md)
 
 设 $\nu$ 是 **$\sigma$有限**符号测度、$\mu$ 是 **$\sigma$有限**正测度，都在 $(X, \mathcal{M})$ 上。则存在**唯一**的一对 $\sigma$有限符号测度 $\lambda$、$\rho$ 使
@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, Theorem 3.8
 
 > 说明见 `notes/thm.lebesgue-radon-nikodym.md`
 
-引用：`thm.lebesgue-radon-nikodym`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lebesgue-radon-nikodym`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

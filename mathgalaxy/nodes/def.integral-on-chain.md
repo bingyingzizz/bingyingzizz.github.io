@@ -1,6 +1,6 @@
 # 链上的积分　`def.integral-on-chain`
 链上的积分
-layer 20 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 21 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.integral-on-chain)　·　[节点索引](../index.md)
 
 **在做什么**：链上的积分不是一种新积分 —— 把形式沿方块拉回坐标里，剩下的就是一个普通的重积分。方块自带的坐标次序就是它的定向，所以不必另外选定向。
@@ -19,4 +19,4 @@ refs: Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 方�
 
 > 说明见 `notes/def.integral-on-chain.md`
 
-引用：`def.integral-on-chain`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.integral-on-chain`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

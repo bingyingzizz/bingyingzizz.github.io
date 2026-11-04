@@ -15,4 +15,4 @@ refs: Le Stum, Proposition 7.4.2；Le Stum, Corollary 7.4.3
 
 > 说明见 `notes/cor.homotopy-invariant-cohomology.md`
 
-引用：`cor.homotopy-invariant-cohomology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.homotopy-invariant-cohomology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

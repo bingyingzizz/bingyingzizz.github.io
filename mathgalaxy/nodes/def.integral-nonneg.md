@@ -1,6 +1,6 @@
 # 非负函数的积分　`def.integral-nonneg`
 非负可测函数的积分：从下面取上确界
-layer 17 · 定义 · 积分 · 实变函数+数学分析
+layer 18 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integral-nonneg)　·　[节点索引](../index.md)
 
 设 $f \in L^+$。定义 $f$ 的积分为「不超过它的简单函数积分」的上确界：
@@ -21,4 +21,4 @@ refs: Folland, Real Analysis, §2.2
 
 > 说明见 `notes/def.integral-nonneg.md`
 
-引用：`def.integral-nonneg`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.integral-nonneg`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

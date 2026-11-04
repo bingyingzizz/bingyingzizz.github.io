@@ -10,5 +10,5 @@ layer 9 · definition · cluster Functors and Natural Transformations (`cat.func
 Chinese only — see the Chinese page `nodes/def.natural-transformation.md` and `proofs/`.
 
 
-Cite: `def.natural-transformation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.natural-transformation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

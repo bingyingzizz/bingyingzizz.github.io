@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.manifold-chart`](../nodes/def.manifold-chart.md) 图卡：用到了定义 图卡　[proofs/dep.mf-chart-tangentbundle.md](../proofs/dep.mf-chart-tangentbundle.md)
 - [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep.mf3-triv-tbundle.md](../proofs/dep.mf3-triv-tbundle.md)
+- [`def.jacobian`](../nodes/def.jacobian.md) Jacobi 矩阵：用到了定义 Jacobi 矩阵　[proofs/dep.gap-tangent-bundle-jacobian.md](../proofs/dep.gap-tangent-bundle-jacobian.md)
 
 > 续见 [nodes/def.tangent-bundle.5.md](./def.tangent-bundle.5.md)

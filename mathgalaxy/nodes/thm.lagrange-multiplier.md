@@ -1,6 +1,6 @@
 # Lagrange 乘子法　`thm.lagrange-multiplier`
 定理（Lagrange 乘子法）：约束极值的必要条件
-layer 26 · 定理 · 多元微分 · 数学分析
+layer 30 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.lagrange-multiplier)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}$ 与 $g = (g_1, \ldots, g_m) : U \to \mathbb{R}^{m}$ 都是 $C^{1}$，$a \in U$ 满足
@@ -16,4 +16,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Spivak, Calculus on Ma
 
 > 说明见 `notes/thm.lagrange-multiplier.md`
 
-引用：`thm.lagrange-multiplier`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lagrange-multiplier`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

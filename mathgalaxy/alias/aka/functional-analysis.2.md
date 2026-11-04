@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 可分 | 可分空间 | 不可分 → def.separable-space
+
 - Schauder 基 | 绍德尔基 | Hamel 基 → def.schauder-basis
 
 - l2 空间 | ell2 | 平方可和序列 → def.ell2-space
@@ -26,7 +28,5 @@
 - Bessel 不等式 | Parseval 等式 | 贝塞尔不等式 | 帕塞瓦尔等式 → thm.bessel-parseval
 
 - 正交基存在 | Zorn 正交基 → thm.orthonormal-basis-exists
-
-- 可分 Hilbert | Hilbert 空间同构 | l2 唯一 → thm.separable-hilbert-is-l2
 
 > 续见 alias/aka/functional-analysis.3.md

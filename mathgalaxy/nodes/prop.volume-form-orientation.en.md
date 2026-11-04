@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 18 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Orientation and Volume` (short) · `Orientation and Volume Forms` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.volume-form-orientation.md` and `proofs/`.
 
 
-Cite: `prop.volume-form-orientation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.volume-form-orientation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

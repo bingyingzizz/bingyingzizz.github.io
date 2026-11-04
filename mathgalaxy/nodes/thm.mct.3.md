@@ -7,4 +7,5 @@
 - ⇒ [`thm.fubini-tonelli`](../nodes/thm.fubini-tonelli.md) Fubini–Tonelli 定理
 - ⇒ [`thm.lebesgue-radon-nikodym`](../nodes/thm.lebesgue-radon-nikodym.md) Lebesgue–Radon–Nikodym 定理
 - ⇒ [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间
+- ⇒ [`cor.mct-ae`](../nodes/cor.mct-ae.md) 单调收敛定理（几乎处处版本）
 - ～弱边 [`def.series`](../nodes/def.series.md) 级数收敛

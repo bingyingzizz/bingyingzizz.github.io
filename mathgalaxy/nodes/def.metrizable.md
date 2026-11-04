@@ -1,6 +1,6 @@
 # 可度量化空间　`def.metrizable`
 拓扑可由一个度量给出
-layer 14 · 定义 · 可度量化 · 拓扑学
+layer 15 · 定义 · 可度量化 · 拓扑学
 [在星图里打开](../#n=def.metrizable)　·　[节点索引](../index.md)
 
 拓扑空间 $(X, \mathcal{T})$ 叫**可度量化的**，如果存在 $X$ 上的距离 $d$，使 $d$ 诱导的拓扑恰是 $\mathcal{T}$：
@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Sections 20 and 40
 
 > 说明见 `notes/def.metrizable.md`
 
-引用：`def.metrizable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.metrizable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

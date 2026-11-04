@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Projection Formula` (short) · `Projection Formula for Condensed Sets` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.projection-formula-cond.md` and `proofs/`.
 
 
-Cite: `prop.projection-formula-cond` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.projection-formula-cond` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

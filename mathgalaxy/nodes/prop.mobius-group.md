@@ -1,6 +1,6 @@
 # 分式线性变换成群　`prop.mobius-group`
 分式线性变换构成群：$\operatorname{PGL}(2, \mathbb{C})$
-layer 18 · 命题 · 共形映射与正规族 · 复变函数
+layer 22 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.mobius-group)　·　[节点索引](../index.md)
 
 所有分式线性变换在复合下构成一个群，记作 $\operatorname{PGL}(2, \mathbb{C})$，它同构于 $2 \times 2$ 复矩阵群模去非零纯量：
@@ -17,4 +17,4 @@ refs: Ahlfors, Complex Analysis (3rd ed.), Ch. 3 · Linear Transformations；王
 
 > 说明见 `notes/prop.mobius-group.md`
 
-引用：`prop.mobius-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.mobius-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 解析环的例子　`prop.analytic-examples`
 命题：$\mathbb{Z}_{p,\blacksquare}$ 与 $(A,\mathbb{Z})_\blacksquare$ 是解析环（Prop 7.9）
-layer 19 · 命题 · 解析环与固态模 · 凝聚态数学
+layer 23 · 命题 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=prop.analytic-examples)　·　[节点索引](../index.md)
 
 下列预解析环是解析环：
@@ -23,4 +23,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/prop.analytic-examples.md`
 
-引用：`prop.analytic-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.analytic-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 14 · definition · cluster Algebraic Structures in a Category (`cat.algeb
 Chinese only — see the Chinese page `nodes/def.group-object.md` and `proofs/`.
 
 
-Cite: `def.group-object` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.group-object` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

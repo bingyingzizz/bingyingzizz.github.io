@@ -10,5 +10,5 @@ layer 11 · example · cluster Algebraic Structures (`algebra.structures`) · Ab
 Chinese only — see the Chinese page `nodes/prop.ring-localization.md` and `proofs/`.
 
 
-Cite: `prop.ring-localization` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.ring-localization` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -14,4 +14,4 @@ refs: Cartan–Eilenberg, Homological Algebra, Chapter II, enough injectives via
 
 > 说明见 `notes/thm.mod-enough-injectives.md`
 
-引用：`thm.mod-enough-injectives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mod-enough-injectives`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

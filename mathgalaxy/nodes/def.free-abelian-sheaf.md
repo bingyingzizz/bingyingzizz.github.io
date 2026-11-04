@@ -1,6 +1,6 @@
 # 自由阿贝尔群层　`def.free-abelian-sheaf`
 定义：$\mathbb{Z}\cdot X$，遗忘函子的左伴随
-layer 17 · 定义 · 阿贝尔层 · 同调代数
+layer 18 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.free-abelian-sheaf)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯。遗忘函子
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 5.18, Exercise
 
 > 说明见 `notes/def.free-abelian-sheaf.md`
 
-引用：`def.free-abelian-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.free-abelian-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

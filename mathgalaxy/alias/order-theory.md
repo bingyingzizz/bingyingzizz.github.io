@@ -1,6 +1,10 @@
 # 问法 → 节点 · 序理论
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/order-theory.md`
 
+- 为什么可以用 Zorn 引理 → lem.zorn ax.choice
+
+- 能不能给每个集合都排个序 → def.wellorder thm.wellordering
+
 - 不用选择公理能不能比较基数 → thm.cardinal-comparable ax.choice
 
 - 为什么实数有确界原理 → thm.real-ordered-field def.cauchy-null def.bound

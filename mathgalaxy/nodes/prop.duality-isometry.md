@@ -1,6 +1,6 @@
 # 对偶等距：范数相等　`prop.duality-isometry`
 命题：$\|\varphi_g\| = \|g\|_q$（$\mu$ 半有限时也含 $q = \infty$）
-layer 20 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 22 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.duality-isometry)　·　[节点索引](../index.md)
 
 设 $p, q$ 共轭。则
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Prop. 6.8
 
 > 说明见 `notes/prop.duality-isometry.md`
 
-引用：`prop.duality-isometry`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.duality-isometry`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

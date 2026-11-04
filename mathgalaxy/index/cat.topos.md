@@ -4,19 +4,19 @@
 中心天体 def.topos　·　36 个节点　·　根 `../`　·　续页 `index/cat.topos.2.md`
 
 - def.generator　生成元集　layer 10
-- prop.quasi-compact-properties　拟紧的性质　layer 13
-- prop.slice-topos　切片拓扑斯　layer 13
-- lem.representable-quotient　可表示性的下降　layer 14
-- prop.slice-covering-sieve　切片里的覆盖筛　layer 14
-- def.pretopos　预拓扑斯　layer 15
-- prop.subobject-lattice　子对象构成有界格　layer 15
-- def.quasi-compact　拟紧对象　layer 15
-- prop.pretopos-factorization　满-单分解　layer 16
-- def.precanonical-topology　预标准拓扑　layer 16
-- prop.precanonical-sheaf　预标准拓扑下的层　layer 16
-- prop.precanonical-mono-epi　单满在层化后不变　layer 16
-- def.topos　拓扑斯　layer 16
-- prop.topos-sheaf-limits　拓扑斯上的层即保极限的预层　layer 16
-- def.quasi-separated　拟分离对象　layer 16
+- def.pretopos　预拓扑斯　layer 16
+- def.continuous-functor　连续函子（景之间）　layer 16
+- def.cocontinuous-functor　余连续函子　layer 16
+- prop.pretopos-factorization　满-单分解　layer 17
+- prop.subobject-lattice　子对象构成有界格　layer 17
+- def.precanonical-topology　预标准拓扑　layer 17
+- def.topos　拓扑斯　layer 17
+- def.morphism-of-sites　景的态射　layer 17
+- def.induced-topology　诱导拓扑　layer 17
+- prop.precanonical-sheaf　预标准拓扑下的层　layer 18
+- prop.precanonical-preserves　余积与商在层范畴中不变　layer 18
+- prop.precanonical-mono-epi　单满在层化后不变　layer 18
+- lem.representable-quotient　可表示性的下降　layer 18
+- prop.topos-covering-epi　拓扑斯中覆盖即余积满射　layer 18
 
 > 续见 `index/cat.topos.2.md`

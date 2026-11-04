@@ -1,6 +1,6 @@
 # Lie 群　`def.lie-group`
 Lie 群
-layer 25 · 定义 · Lie 群 · 微分几何
+layer 29 · 定义 · Lie 群 · 微分几何
 [在星图里打开](../#n=def.lie-group)　·　[节点索引](../index.md)
 
 **在说什么**：既是群又是光滑流形，而且两种结构互相尊重 —— 乘法与取逆都光滑。于是「群运算」可以用微积分研究。
@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie
 
 > 说明见 `notes/def.lie-group.md`
 
-引用：`def.lie-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lie-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

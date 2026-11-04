@@ -1,6 +1,6 @@
 # Cond 的极限与余极限　`prop.cond-limits-colimits`
 $\mathrm{Cond}$ 的极限逐点算，余极限要先层化
-layer 17 · 命题 · 凝聚态集 · 凝聚态数学
+layer 19 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-limits-colimits)　·　[节点索引](../index.md)
 
 $\mathrm{Cond}$ 有所有（小）极限与余极限。**极限逐点计算**：对每个紧 Hausdorff 空间 $S$，
@@ -18,4 +18,4 @@ refs: Le Stum, Corollary 4.1.6；Le Stum, §4.1
 
 > 说明见 `notes/prop.cond-limits-colimits.md`
 
-引用：`prop.cond-limits-colimits`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cond-limits-colimits`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,5 +10,5 @@ layer 14 · proposition · cluster Categories and Diagrams (`cat.basic`) · Cate
 Chinese only — see the Chinese page `nodes/prop.iso-unique-section.md` and `proofs/`.
 
 
-Cite: `prop.iso-unique-section` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.iso-unique-section` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

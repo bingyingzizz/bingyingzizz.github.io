@@ -1,6 +1,6 @@
 # 同伦不变性　`thm.homotopy-invariance`
 同伦不变性：$f \simeq g$ 蕴含 $f_{*} = g_{*}$（棱柱算子）
-layer 20 · 定理 · 同调群 · 拓扑学
+layer 22 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.homotopy-invariance)　·　[节点索引](../index.md)
 
 设
@@ -19,4 +19,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 1（the prism operator / homo
 
 > 说明见 `notes/thm.homotopy-invariance.md`
 
-引用：`thm.homotopy-invariance`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.homotopy-invariance`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

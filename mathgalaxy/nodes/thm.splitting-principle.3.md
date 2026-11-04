@@ -3,4 +3,3 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.chern-class-line-bundle`](../nodes/prop.chern-class-line-bundle.md) 线丛的陈类计算：用到了定义 线丛的陈类计算　[proofs/dep-sp-clb.md](../proofs/dep-sp-clb.md)
-- [`def.chern-class`](../nodes/def.chern-class.md) 陈类：用到了定义 陈类　[proofs/dep-sp-cc2.md](../proofs/dep-sp-cc2.md)

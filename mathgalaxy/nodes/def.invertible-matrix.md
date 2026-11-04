@@ -1,6 +1,6 @@
 # 可逆矩阵　`def.invertible-matrix`
 可逆矩阵与 $\operatorname{GL}_n(K)$
-layer 11 · 定义 · 矩阵与行列式 · 抽象代数
+layer 14 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.invertible-matrix)　·　[节点索引](../index.md)
 
 方阵 $A \in M_n(K)$ 叫**可逆**，当且仅当存在 $B \in M_n(K)$ 使
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 1
 
 > 说明见 `notes/def.invertible-matrix.md`
 
-引用：`def.invertible-matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.invertible-matrix`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

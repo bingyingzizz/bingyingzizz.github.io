@@ -1,6 +1,6 @@
 # 弱 Hausdorff 推出 拟分离　`lem.weak-hausdorff-qseparated`
 弱 Hausdorff 的紧块相交还是紧块
-layer 17 · 引理 · 凝聚态集 · 凝聚态数学
+layer 20 · 引理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=lem.weak-hausdorff-qseparated)　·　[节点索引](../index.md)
 
 设 $X$ 是弱 Hausdorff 空间（且 $X$ 紧生成），$X_{1}, X_{2} \hookrightarrow X$ 是**拟紧**子空间。则纤维积
@@ -16,4 +16,4 @@ refs: Le Stum, Lemma 4.2.9
 
 > 说明见 `notes/lem.weak-hausdorff-qseparated.md`
 
-引用：`lem.weak-hausdorff-qseparated`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.weak-hausdorff-qseparated`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

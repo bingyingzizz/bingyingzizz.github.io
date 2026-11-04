@@ -11,5 +11,5 @@ names: `RAPL` (short) · `Right Adjoints Preserve Limits` (full)
 Chinese only — see the Chinese page `nodes/thm.right-adjoint-preserves-limits.md` and `proofs/`.
 
 
-Cite: `thm.right-adjoint-preserves-limits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.right-adjoint-preserves-limits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 线性映射　`def.linear-map`
 线性映射
-layer 9 · 定义 · 线性映射与秩 · 抽象代数
+layer 12 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.linear-map)　·　[节点索引](../index.md)
 
 设 $V, W$ 是域 $K$ 上的向量空间。映射 $T : V \to W$ 叫 **$K$-线性的**（或线性映射），当且仅当
@@ -27,4 +27,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
 > 说明见 `notes/def.linear-map.md`
 
-引用：`def.linear-map`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.linear-map`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

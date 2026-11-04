@@ -1,6 +1,6 @@
 # 正则空间　`def.regular-space`
 正则空间 = $T_{3} + T_{1}$
-layer 18 · 定义 · 分离公理 · 拓扑学
+layer 8 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.regular-space)　·　[节点索引](../index.md)
 
 **在做什么**：$T_{3}$ 那条性质**再加上 $T_{1}$**。加了 $T_{1}$ 之后它才自动是 $T_{2}$ —— 这是「正则」这个名字真正的用处。
@@ -21,4 +21,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公�
 
 > 说明见 `notes/def.regular-space.md`
 
-引用：`def.regular-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.regular-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

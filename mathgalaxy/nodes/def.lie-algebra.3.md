@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.lie-bracket`](../nodes/def.lie-bracket.md) Lie 括号：反称 $+$ Jacobi $\implies$ 向量场的括号是一个 Lie 代数　[proofs/imp.mf-bracket-liealgebra.md](../proofs/imp.mf-bracket-liealgebra.md)
 - [`def.lie-bracket`](../nodes/def.lie-bracket.md) Lie 括号：用到了定义 Lie 括号　[proofs/dep.mf-bracket-liealgebra.md](../proofs/dep.mf-bracket-liealgebra.md)
+
+> 续见 [nodes/def.lie-algebra.4.md](./def.lie-algebra.4.md)

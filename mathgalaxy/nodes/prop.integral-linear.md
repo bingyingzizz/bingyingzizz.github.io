@@ -1,6 +1,6 @@
 # 积分的线性与区间可加　`prop.integral-linear`
 命题：积分的线性性与区间可加性
-layer 19 · 命题 · Riemann 积分 · 数学分析
+layer 20 · 命题 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=prop.integral-linear)　·　[节点索引](../index.md)
 
 设 $f, g$ 在 $[a, b]$ 上可积，$c \in \mathbb{R}$。则 $f + g$ 与 $cf$ 都可积，且
@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.integral-linear.md`
 
-引用：`prop.integral-linear`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integral-linear`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

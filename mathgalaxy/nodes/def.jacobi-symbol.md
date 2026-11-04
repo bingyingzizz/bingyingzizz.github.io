@@ -1,6 +1,6 @@
 # Jacobi 符号　`def.jacobi-symbol`
 Jacobi 符号：把 Legendre 符号乘起来
-layer 15 · 定义 · 二次剩余与原根 · 数论
+layer 16 · 定义 · 二次剩余与原根 · 数论
 [在星图里打开](../#n=def.jacobi-symbol)　·　[节点索引](../index.md)
 
 设 $n = q_{1}^{e_{1}}\cdots q_{r}^{e_{r}}$ 是正奇数（$q_{i}$ 为奇素数），$a \in \mathbb{Z}$。定义
@@ -21,4 +21,4 @@ refs: 华罗庚《数论导引》第四章
 
 > 说明见 `notes/def.jacobi-symbol.md`
 
-引用：`def.jacobi-symbol`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.jacobi-symbol`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

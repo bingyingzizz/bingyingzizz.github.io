@@ -5,7 +5,7 @@
 
 $$f(z) = \frac{1}{2\pi}\int_0^{2\pi} f(z + re^{i\theta})\,\mathrm{d}\theta$$
 
-（只要 $\overline{D(z, r)} \subset \Omega$）。
+（只要 $\overline{B(z, r)} \subset \Omega$）。
 
 若 $|f|$ 在**内部**某点 $z_0$ 取到最大值 $M$，则 $M = |f(z_0)| \le \frac{1}{2\pi}\int_0^{2\pi} |f(z_0 + re^{i\theta})|\,\mathrm{d}\theta \le M$，两端相等迫使圆上 $|f| \equiv M$。
 

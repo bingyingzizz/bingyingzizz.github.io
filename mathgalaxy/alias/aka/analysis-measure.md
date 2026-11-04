@@ -21,7 +21,7 @@
 
 - 集合族的性质 → prop.set-class-properties
 
-- 测度 | measure | 可数可加 → def.measure
+- 测度 | measure | 可数可加 | μ(A) | 测度 μ → def.measure
 
 - 外测度 | outer measure → def.outer-measure
 

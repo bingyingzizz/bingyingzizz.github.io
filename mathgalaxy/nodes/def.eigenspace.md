@@ -1,6 +1,6 @@
 # 特征子空间　`def.eigenspace`
 特征子空间：一个特征值对应的全部特征向量
-layer 12 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.eigenspace)　·　[节点索引](../index.md)
 
 **在做什么**：把「属于同一个特征值的所有特征向量」收成一个子空间。有了它，「可对角化」就有了干净的判据（特征子空间维数之和等于全空间）。
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 特
 
 > 说明见 `notes/def.eigenspace.md`
 
-引用：`def.eigenspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.eigenspace`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

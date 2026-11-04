@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 34 · theorem · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.bundle-classification.md` and `proofs/`.
 
 
-Cite: `thm.bundle-classification` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.bundle-classification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

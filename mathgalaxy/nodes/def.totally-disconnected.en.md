@@ -10,5 +10,5 @@ layer 6 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topo
 Chinese only — see the Chinese page `nodes/def.totally-disconnected.md` and `proofs/`.
 
 
-Cite: `def.totally-disconnected` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.totally-disconnected` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

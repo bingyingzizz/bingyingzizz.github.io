@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
+layer 23 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Compact to Banach RHom` (short) · `Derived Hom from Compact Spaces to Real Banach Spaces` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.chaus-banach-rhom.md` and `proofs/`.
 
 
-Cite: `ex.chaus-banach-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.chaus-banach-rhom` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

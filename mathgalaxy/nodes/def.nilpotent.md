@@ -1,6 +1,6 @@
 # 幂零　`def.nilpotent`
 幂零算子与幂零矩阵
-layer 15 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 18 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.nilpotent)　·　[节点索引](../index.md)
 
 **在做什么**：刻画「反复作用就归零」的那类算子。它是幂零部分的结构定理（Jordan 形里除了对角之外的全部内容）的主角。
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「The Rational and Jordan Forms」· 幂
 
 > 说明见 `notes/def.nilpotent.md`
 
-引用：`def.nilpotent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.nilpotent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,7 +1,7 @@
 # 面积形式的整体选取 $\iff$ 可定向
 `imp.tu-area-orientation` · 推出 · strong 边 · 根 `../`
 
-`def.regular-surface` 曲面与参数化 + `def.area-element` 面积元 → `def.orientable-surface` 可定向曲面
+`def.regular-surface` 曲面与参数化 + `def.area-element` 面积元 → `def.orientable-surface` R³ 中的可定向曲面
 
 设 $S$ 被参数化族 $\{r_{\alpha}\}$ 覆盖。
 

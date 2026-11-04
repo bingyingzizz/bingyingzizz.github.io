@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 14 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.divisor-formula.md` and `proofs/`.
 
 
-Cite: `thm.divisor-formula` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.divisor-formula` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

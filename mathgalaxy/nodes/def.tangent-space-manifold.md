@@ -1,6 +1,6 @@
 # 切空间　`def.tangent-space-manifold`
 流形上的切空间
-layer 17 · 定义 · 内蕴几何 · 微分几何
+layer 18 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.tangent-space-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：在流形上定义「某点的所有方向」。没有外围空间可用，于是改用「过该点的曲线」来抓方向：两条曲线只要在某张卡里速度相同，就规定它们同
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 切向
 
 > 说明见 `notes/def.tangent-space-manifold.md`
 
-引用：`def.tangent-space-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tangent-space-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

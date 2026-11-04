@@ -10,5 +10,5 @@ layer 12 · proposition · cluster Diagrams and Limits (`cat.limit`) · Category
 Chinese only — see the Chinese page `nodes/prop.filtered-finite-colimits.md` and `proofs/`.
 
 
-Cite: `prop.filtered-finite-colimits` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.filtered-finite-colimits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

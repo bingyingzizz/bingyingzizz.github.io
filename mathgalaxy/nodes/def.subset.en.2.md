@@ -8,5 +8,5 @@ Let $A$ and $B$ be sets.\n\n- **$A$ is a subset of $B$** (written $A \subseteq B
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `def.subset` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.subset` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

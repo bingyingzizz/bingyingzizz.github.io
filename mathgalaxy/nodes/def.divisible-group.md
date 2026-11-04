@@ -1,6 +1,6 @@
 # 可除群　`def.divisible-group`
 可除群（可除 $\mathbb{Z}$-模）
-layer 7 · 定义 · 内射模与可除群 · 同调代数
+layer 8 · 定义 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=def.divisible-group)　·　[节点索引](../index.md)
 
 阿贝尔群 $D$ 叫**可除的**（divisible），如果对每个 $d \in D$ 与每个 $0 \ne n \in \mathbb{Z}$，方程
@@ -21,4 +21,4 @@ refs: Fuchs, Infinite Abelian Groups, Vol. I, divisible groups；Rotman, An Intr
 
 > 说明见 `notes/def.divisible-group.md`
 
-引用：`def.divisible-group`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.divisible-group`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/def-link.etale-space-topology.md](../proofs/def-link.etale-space-topology.md)
+- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/dep.gap-etale-space-continuous-map.md](../proofs/dep.gap-etale-space-continuous-map.md)

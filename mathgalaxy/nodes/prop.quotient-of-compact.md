@@ -1,6 +1,6 @@
 # 紧空间的商紧　`prop.quotient-of-compact`
 命题：$S$ 紧 $\implies S/R$ 紧
-layer 16 · 命题 · 收敛与紧性 · 拓扑学
+layer 18 · 命题 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=prop.quotient-of-compact)　·　[节点索引](../index.md)
 
 设 $S$ 是紧拓扑空间、$R$ 是 $S$ 上的等价关系。则商空间 $S/R$ 也是**紧**的。
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.8
 
 > 说明见 `notes/prop.quotient-of-compact.md`
 
-引用：`prop.quotient-of-compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.quotient-of-compact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

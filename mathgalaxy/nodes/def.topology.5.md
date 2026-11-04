@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.topology)　·　第 1 页 [nodes/def.topology.md](./def.topology.md)　·　上一页 [nodes/def.topology.4.md](./def.topology.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑 用
+- 被 [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间 用
 - 被 [`def.connected`](../nodes/def.connected.md) 连通与连通分量 用
 - 被 [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 用
 - 被 [`def.product-topology`](../nodes/def.product-topology.md) 积拓扑 用

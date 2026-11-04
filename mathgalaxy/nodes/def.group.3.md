@@ -2,16 +2,16 @@
 [在星图里打开](../#n=def.group)　·　第 1 页 [nodes/def.group.md](./def.group.md)　·　上一页 [nodes/def.group.2.md](./def.group.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.cyclic-group`](../nodes/def.cyclic-group.md) 循环群 用
+- ⇒ [`prop.group-basic`](../nodes/prop.group-basic.md) 群的基本性质
+- 被 [`def.divisible-group`](../nodes/def.divisible-group.md) 可除群 用
+- 被 [`def.group-ring`](../nodes/def.group-ring.md) 群环 用
+- 被 [`def.semidirect-product`](../nodes/def.semidirect-product.md) 半直积 用
+- 被 [`def.group-extension`](../nodes/def.group-extension.md) 群扩张 用
+- 被 [`def.lie-group`](../nodes/def.lie-group.md) Lie 群 用
+- 被 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群 用
+- 被 [`def.chain-group`](../nodes/def.chain-group.md) 链群 用
 - 被 [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理 用
 - 被 [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶 用
-- 被 [`def.subgroup`](../nodes/def.subgroup.md) 子群 用
-- 被 [`def.normal-subgroup`](../nodes/def.normal-subgroup.md) 正规子群 用
-- 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用
-- 被 [`def.field`](../nodes/def.field.md) 域 用
-- 被 [`def.topo-ab-group`](../nodes/def.topo-ab-group.md) 拓扑阿贝尔群 用
-- 被 [`def.ring`](../nodes/def.ring.md) 环 用
-- 被 [`def.module`](../nodes/def.module.md) 模 用
-- 被 [`def.group-object`](../nodes/def.group-object.md) 群对象与阿贝尔群对象 用
-- 被 [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子 用
 
 > 续见 [nodes/def.group.4.md](./def.group.4.md)

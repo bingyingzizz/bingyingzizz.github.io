@@ -3,7 +3,7 @@
 
 全纯函数与 Cauchy–Riemann、Cauchy 定理与积分公式、幂级数与 Laurent 展开、留数定理与围道积分、共形映射与调和函数。
 
-- analysis.complex　复变函数基础 / Foundations of Complex Analysis　中心天体 def.holomorphic　22 点
+- analysis.complex　复变函数基础 / Foundations of Complex Analysis　中心天体 def.holomorphic　23 点
 - analysis.cauchy　Cauchy 理论 / Cauchy Theory　中心天体 thm.cauchy-goursat　16 点
 - analysis.residue　留数与辐角原理 / Residues and the Argument Principle　中心天体 thm.residue　10 点
 - analysis.mapping　共形映射与正规族 / Conformal Maps and Normal Families　中心天体 thm.riemann-mapping　20 点

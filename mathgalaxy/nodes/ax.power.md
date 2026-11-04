@@ -23,4 +23,4 @@ refs: Kunen, Set Theory, I.3
 ## 说明
 它是笛卡尔积 $A \times B$ 存在性的关键：{{a},{a,b}} 落在 $\mathcal{P}(\mathcal{P}(A \cup B))$ 里。
 
-引用：`ax.power`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.power`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # Jensen 公式　`prop.jensen`
 Jensen 公式：零点个数被平均值控制
-layer 23 · 命题 · 解析延拓与整函数 · 复变函数
+layer 27 · 命题 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=prop.jensen)　·　[节点索引](../index.md)
 
 设 $f$ 在 $|z| \le R$ 上全纯、$f(0) \ne 0$，零点为 $z_{1}, \ldots, z_{n}$（按重数计，$0 < |z_{j}| \le R$）。则
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Jensen 公式与零点计数；Ahlfors, Comp
 
 > 说明见 `notes/prop.jensen.md`
 
-引用：`prop.jensen`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.jensen`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

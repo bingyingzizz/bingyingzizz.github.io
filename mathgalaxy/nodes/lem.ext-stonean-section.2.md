@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间：用到了定义 全不连通与 Stone 空间　[proofs/def-dep.extsec-stone.md](../proofs/def-dep.extsec-stone.md)
 - [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-dep.extsec-ext.md](../proofs/def-dep.extsec-ext.md)
+
+> 续见 [nodes/lem.ext-stonean-section.3.md](./lem.ext-stonean-section.3.md)

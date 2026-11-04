@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · corollary · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 20 · corollary · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Finite Products` (short) · `The Underlying Space Preserves Finite Products` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.cond-ktop-finite-products.md` and `proofs/`.
 
 
-Cite: `cor.cond-ktop-finite-products` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.cond-ktop-finite-products` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

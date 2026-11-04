@@ -11,5 +11,5 @@ names: `Covering Sieve Equivalences` (short) · `Equivalent Characterizations of
 Chinese only — see the Chinese page `nodes/prop.sieve-covering-equivalent.md` and `proofs/`.
 
 
-Cite: `prop.sieve-covering-equivalent` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sieve-covering-equivalent` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

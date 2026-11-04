@@ -8,5 +8,4 @@
 - 被 [`def.outer-measure`](../nodes/def.outer-measure.md) 外测度 用
 - ⇒ [`thm.cantor`](../nodes/thm.cantor.md) Cantor 定理
 - 被 [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集 用
-- 被 [`def.outer-measure`](../nodes/def.outer-measure.md) 外测度 用
 - 被 [`def.universe`](../nodes/def.universe.md) Grothendieck 宇宙 用

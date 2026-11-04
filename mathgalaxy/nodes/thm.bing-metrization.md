@@ -1,6 +1,6 @@
 # 离散基度量化定理　`thm.bing-metrization`
 正则且基为可数层离散族的空间可度量化
-layer 16 · 定理 · 可度量化 · 拓扑学
+layer 17 · 定理 · 可度量化 · 拓扑学
 [在星图里打开](../#n=thm.bing-metrization)　·　[节点索引](../index.md)
 
 设 $X$ 是**正则**（含 $T_{1}$）空间，且它的拓扑有 **$\sigma$-离散的基**。则 $X$ 是**可度量化的**。
@@ -14,4 +14,4 @@ refs: Bing, Metrization of topological spaces, Canad. J. Math. 3 (1951)；Engelk
 
 > 说明见 `notes/thm.bing-metrization.md`
 
-引用：`thm.bing-metrization`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bing-metrization`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

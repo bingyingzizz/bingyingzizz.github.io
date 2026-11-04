@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 15 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.crt.md` and `proofs/`.
 
 
-Cite: `thm.crt` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.crt` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

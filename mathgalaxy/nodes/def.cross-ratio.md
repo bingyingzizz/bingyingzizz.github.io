@@ -1,6 +1,6 @@
 # 交比　`def.cross-ratio`
 交比：分式线性变换下唯一不变的四点量
-layer 18 · 定义 · 共形映射与正规族 · 复变函数
+layer 22 · 定义 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=def.cross-ratio)　·　[节点索引](../index.md)
 
 对互不相同的 $z_{1}, z_{2}, z_{3}, z_{4} \in \widehat{\mathbb{C}}$，定义它们的**交比**
@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》· 分式线性变换（交比）；Ahlfors, Co
 
 > 说明见 `notes/def.cross-ratio.md`
 
-引用：`def.cross-ratio`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cross-ratio`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

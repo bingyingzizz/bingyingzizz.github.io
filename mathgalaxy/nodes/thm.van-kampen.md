@@ -1,6 +1,6 @@
 # van Kampen 定理　`thm.van-kampen`
 Seifert–van Kampen：把 $\pi_{1}$ 从两块拼起来
-layer 14 · 定理 · 基本群 · 拓扑学
+layer 15 · 定理 · 基本群 · 拓扑学
 [在星图里打开](../#n=thm.van-kampen)　·　[节点索引](../index.md)
 
 设 $X = U \cup V$，$U, V \subseteq X$ 是**开集**，$U, V, U \cap V$ 都**道路连通**，取基点 $x_{0} \in U \cap V$。记 $i : U \cap V \hookrightarrow U$、$j : U \cap V \hookrightarrow V$ 为包含映射。则
@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), 论 Seifert–van Kampen 定理的那一章�
 
 > 说明见 `notes/thm.van-kampen.md`
 
-引用：`thm.van-kampen`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.van-kampen`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

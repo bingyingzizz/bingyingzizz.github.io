@@ -1,6 +1,6 @@
 # 积分流形　`def.integral-manifold`
 积分流形与叶片坐标
-layer 21 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.integral-manifold)　·　[节点索引](../index.md)
 
 **白话**：一块 $k$ 维薄片，如果它在每点的切空间正好是分布给的那个子空间，它就是这分布的**积分流形** —— 「积分」就是把一堆方向积成一整块地。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem�
 
 > 说明见 `notes/def.integral-manifold.md`
 
-引用：`def.integral-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.integral-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

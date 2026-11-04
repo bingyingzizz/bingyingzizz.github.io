@@ -10,3 +10,5 @@ $I$ 是 $\mathbb{R}^{3}$ 的内积沿 $r$ 的**拉回**：$\mathrm{d}r$ 把参�
 **矩阵**：$(g_{ij}) = \begin{pmatrix} E & F \\ F & G \end{pmatrix}$，$\det g = EG-F^{2} > 0$。后面所有「$h$ 相对 $g$ 的特征值」都在用这个矩阵。
 
 ⚠️ 换参数化会改 $E,F,G$ 的表达式，$I$ 作为张量不变。正交参数化（$F = 0$）能让公式短一半 —— 那串 $\Gamma$ 就只在那种情形写出来。
+
+📌 例：半径 $R$ 的圆柱用 $r(u,v) = (R\cos u, R\sin u, v)$ 参数化时 $\mathrm{I} = R^{2}\mathrm{d}u^{2} + \mathrm{d}v^{2}$（$E = R^{2}$、$F = 0$、$G = 1$），于是 $K = 0$（见 `ex.cylinder-first-form`）。

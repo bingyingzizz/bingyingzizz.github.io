@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.13
 
 > 说明见 `notes/prop.connected-image-closure.md`
 
-引用：`prop.connected-image-closure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.connected-image-closure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

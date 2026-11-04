@@ -1,6 +1,6 @@
 # 拓扑阿贝尔群嵌入凝聚态　`prop.abtop-to-abcond`
 $\mathbf{AbTop} \to \mathrm{AbCond}$ 保所有极限
-layer 18 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
+layer 20 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.abtop-to-abcond)　·　[节点索引](../index.md)
 
 存在**保所有极限**的**忠实**函子
@@ -21,4 +21,4 @@ refs: Le Stum, Proposition 6.2.1
 
 > 说明见 `notes/prop.abtop-to-abcond.md`
 
-引用：`prop.abtop-to-abcond`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.abtop-to-abcond`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

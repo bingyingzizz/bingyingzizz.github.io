@@ -3,6 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.module`](../nodes/def.module.md) 模：用到了定义 模　[proofs/def-link.flat-module.md](../proofs/def-link.flat-module.md)
-- [`def.exact-functor`](../nodes/def.exact-functor.md) 正合函子：用到了定义 正合函子　[proofs/def-link.flat-exact.md](../proofs/def-link.flat-exact.md)
 
 > 续见 [nodes/def.flat-module.4.md](./def.flat-module.4.md)

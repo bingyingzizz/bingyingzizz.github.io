@@ -1,6 +1,6 @@
 # Hausdorff 极大原理　`thm.hausdorff`
 Hausdorff 极大原理 / 极大公理
-layer 9 · 定理 · 选择原理 · 序理论
+layer 8 · 定理 · 选择原理 · 序理论
 [在星图里打开](../#n=thm.hausdorff)　·　[节点索引](../index.md)
 
 设 $(P, \preceq )$ 是偏序集，$C_{0} \subseteq P$ 是链。则存在 $P$ 的**极大链** $M$ 使 $C_{0} \subsete
@@ -25,4 +25,4 @@ refs: Hausdorff (1914)；Kunen, Set Theory, I.12
 
 极大链的存在性正是「从下往上一点点加元素直到加不动」这一直觉的严格化。
 
-引用：`thm.hausdorff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.hausdorff`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -23,4 +23,4 @@ refs: Kunen, Set Theory, I.9
 
 正则公理等价于「集合论宇宙 $V$ 是累积层级 $\bigcup_{\alpha} V_\alpha$」，这条公理让 $\in$归纳法成为合法的证明方法。
 
-引用：`ax.found`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ax.found`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

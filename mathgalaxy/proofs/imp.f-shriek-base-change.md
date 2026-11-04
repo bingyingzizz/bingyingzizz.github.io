@@ -1,7 +1,7 @@
 # 仿射情形 + 基变换
 `imp.f-shriek-base-change` · 推出 · strong 边 · 根 `../`
 
-`prop.f-shriek-base-change` 对偶函子的扭转与基变换 + `thm.za-analytic` 有限生成代数的解析环 → `prop.f-shriek-base-change` 对偶函子的扭转与基变换
+`def.f-shriek` 紧支撑推前 f_! + `thm.za-analytic` 有限生成代数的解析环 → `prop.f-shriek-base-change` 对偶函子的扭转与基变换
 
 一切局部化良好，归约到 $f : R \to A$ 是 $A = R[T]$ 或 $f$ 满射两种情形。
 

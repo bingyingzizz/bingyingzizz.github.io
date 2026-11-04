@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 17 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.operator-adjoint.md` and `proofs/`.
 
 
-Cite: `def.operator-adjoint` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.operator-adjoint` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

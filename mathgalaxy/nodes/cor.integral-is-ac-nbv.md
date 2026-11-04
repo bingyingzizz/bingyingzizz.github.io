@@ -1,6 +1,6 @@
 # 积分得到的函数绝对连续且规范有界变差　`cor.integral-is-ac-nbv`
 推论：$f \in L^{1}(m) \implies F(x) = \int_{-\infty}^{x} f$ 绝对连续且规范有界变差；反之亦然
-layer 20 · 推论 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 22 · 推论 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=cor.integral-is-ac-nbv)　·　[节点索引](../index.md)
 
 **(1)** 若 $f \in L^1(m)$，则
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Theorem 3.35
 
 > 说明见 `notes/cor.integral-is-ac-nbv.md`
 
-引用：`cor.integral-is-ac-nbv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.integral-is-ac-nbv`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

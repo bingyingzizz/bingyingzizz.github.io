@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.2
 
 > 说明见 `notes/def.essentially-surjective.md`
 
-引用：`def.essentially-surjective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.essentially-surjective`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

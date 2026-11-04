@@ -1,6 +1,6 @@
 # 唯一分解整环　`def.ufd`
 唯一分解整环（UFD）：分解存在且唯一
-layer 11 · 定义 · 整环与分解 · 抽象代数
+layer 12 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.ufd)　·　[节点索引](../index.md)
 
 整环 $A$ 叫**唯一分解整环**（UFD），若
@@ -22,4 +22,4 @@ refs: Atiyah–Macdonald, Ch. 1；Kaplansky, Commutative Rings, Ch. 1
 
 > 说明见 `notes/def.ufd.md`
 
-引用：`def.ufd`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ufd`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

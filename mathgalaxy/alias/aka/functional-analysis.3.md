@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 可分 Hilbert | Hilbert 空间同构 | l2 唯一 → thm.separable-hilbert-is-l2
+
 - 无处稠密 | 稀疏集 | nowhere dense → def.nowhere-dense
 
 - 第一纲 | 第二纲 | 剩余集 | 贫集 | meager → def.meager-set

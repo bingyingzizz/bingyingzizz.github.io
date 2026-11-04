@@ -1,6 +1,6 @@
 # 幂等　`def.idempotent`
 幂等算子与投影
-layer 13 · 定义 · 线性映射与秩 · 抽象代数
+layer 19 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.idempotent)　·　[节点索引](../index.md)
 
 **在做什么**：「做两次和做一次一样」的算子。它等价于「把空间劈成两块、扔掉其中一块」，所以幂等算子与直和分解是同一件事。
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/def.idempotent.md`
 
-引用：`def.idempotent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.idempotent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

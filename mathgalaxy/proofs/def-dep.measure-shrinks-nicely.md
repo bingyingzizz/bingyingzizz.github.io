@@ -3,4 +3,4 @@
 
 `def.measure` 测度 → `def.shrinks-nicely` 可缩族
 
-「$m(E_r) > \alpha \cdot m(B(r, x))$」里的 $m$ 是一个**测度**。
+「$m(E_r) > \alpha \cdot m(B(x, r))$」里的 $m$ 是一个**测度**。

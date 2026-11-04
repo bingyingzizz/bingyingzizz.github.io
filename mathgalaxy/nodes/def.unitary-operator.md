@@ -1,6 +1,6 @@
 # 酉算子　`def.unitary-operator`
 酉算子与部分等距
-layer 14 · 定义 · Hilbert 空间 · 泛函分析
+layer 20 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.unitary-operator)　·　[节点索引](../index.md)
 
 设 $u \in B(H)$。称 $u$ 是**酉算子**（unitary），若
@@ -16,4 +16,4 @@ refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.unitary-operator.md`
 
-引用：`def.unitary-operator`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.unitary-operator`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 半有限部分　`def.semifinite-part`
 半有限部分
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 17 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.semifinite-part)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间。定义
@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, §1.2
 
 若 $\mu$ 本身半有限，则 $\mu _{0} = \mu$ —— 所以这是「半有限化」操作。
 
-引用：`def.semifinite-part`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.semifinite-part`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

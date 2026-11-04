@@ -1,6 +1,6 @@
 # 调和函数　`def.harmonic`
 定义：调和函数
-layer 17 · 定义 · 调和函数 · 复变函数
+layer 21 · 定义 · 调和函数 · 复变函数
 [在星图里打开](../#n=def.harmonic)　·　[节点索引](../index.md)
 
 **白话**：二阶偏导连续、并且满足 Laplace 方程 $\Delta u = 0$ 的实值函数。通俗说就是「处处不会比周围更凸也不会更凹」的函数。
@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》· 调和函数；Ahlfors, Complex Analysis · 
 
 > 说明见 `notes/def.harmonic.md`
 
-引用：`def.harmonic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.harmonic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

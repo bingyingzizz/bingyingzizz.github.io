@@ -1,6 +1,6 @@
 # 不变子空间　`def.invariant-subspace`
 不变子空间
-layer 10 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 14 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.invariant-subspace)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 线性。子空间 $U \subseteq V$ 叫 $T$-**不变**的，当且仅当
@@ -24,4 +24,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 > 说明见 `notes/def.invariant-subspace.md`
 
-引用：`def.invariant-subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.invariant-subspace`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

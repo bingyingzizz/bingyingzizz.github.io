@@ -1,6 +1,6 @@
 # 单纯同调群　`def.simplicial-homology`
 单纯同调群 $H_{p}(K) = Z_{p} / B_{p}$
-layer 18 · 定义 · 同调群 · 拓扑学
+layer 19 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.simplicial-homology)　·　[节点索引](../index.md)
 
 设 $K$ 是单纯复形，$(C_{*}(K), \partial)$ 是它的链复形。由 $\partial^{2} = 0$ 得 $B_{p} \subseteq Z_{p}$，而 $C_{p}(K)$ 是阿贝尔群，所以子群都是正规的，可以取商。**$p$ 维单纯同调群**定义为商群
@@ -19,4 +19,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 2 · Simplicial Homology；Ha
 
 > 说明见 `notes/def.simplicial-homology.md`
 
-引用：`def.simplicial-homology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simplicial-homology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

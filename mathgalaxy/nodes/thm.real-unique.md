@@ -1,6 +1,6 @@
 # 完备有序域的唯一性　`thm.real-unique`
 任何完备有序域都与 $\mathbb{R}$ 同构（构造无关性）
-layer 15 · 定理 · 数系的构造 · 集合论+数学分析
+layer 19 · 定理 · 数系的构造 · 集合论+数学分析
 [在星图里打开](../#n=thm.real-unique)　·　[节点索引](../index.md)
 
 设 $K$ 是**完备有序域**。则存在**唯一**的双射 $f : \mathbb{R} \to K$，它同时保持加法、乘法与序：
@@ -16,4 +16,4 @@ refs: Tao, Analysis I, Ch. 5（实数的构造）
 
 > 说明见 `notes/thm.real-unique.md`
 
-引用：`thm.real-unique`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.real-unique`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

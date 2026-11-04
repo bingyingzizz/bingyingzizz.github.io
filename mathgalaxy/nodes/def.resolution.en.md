@@ -10,5 +10,5 @@ layer 19 · definition · cluster Homology and Exact Sequences (`hom.cohomology`
 Chinese only — see the Chinese page `nodes/def.resolution.md` and `proofs/`.
 
 
-Cite: `def.resolution` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

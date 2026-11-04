@@ -3,4 +3,4 @@
 
 `def.subset` 子集 → `def.shrinks-nicely` 可缩族
 
-第一条是 $E_r \subseteq B(r, x)$——一个**子集**关系。
+第一条是 $E_r \subseteq B(x, r)$——一个**子集**关系。

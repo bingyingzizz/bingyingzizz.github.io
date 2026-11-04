@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
+layer 19 · theorem · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.real-unique.md` and `proofs/`.
 
 
-Cite: `thm.real-unique` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.real-unique` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

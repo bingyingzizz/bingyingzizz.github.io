@@ -1,6 +1,6 @@
 # 预拓扑斯　`def.pretopos`
 预拓扑斯
-layer 15 · 定义 · 拓扑斯 · 范畴论
+layer 16 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.pretopos)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 叫**预拓扑斯**，如果
@@ -16,7 +16,7 @@ layer 15 · 定义 · 拓扑斯 · 范畴论
 - …另有入边，续页见 [nodes/def.pretopos.2.md](./def.pretopos.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解
+- 被 [`prop.quasi-compact-properties`](../nodes/prop.quasi-compact-properties.md) 拟紧的性质 用
 
 - …另有出边，续页见 [nodes/def.pretopos.3.md](./def.pretopos.3.md)
 
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 
 > 说明见 `notes/def.pretopos.md`
 
-引用：`def.pretopos`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pretopos`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

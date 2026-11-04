@@ -1,0 +1,7 @@
+# R³ 中的可定向曲面　`def.orientable-surface`　·　续页（第 6 页）
+[在星图里打开](../#n=def.orientable-surface)　·　第 1 页 [nodes/def.orientable-surface.md](./def.orientable-surface.md)　·　上一页 [nodes/def.orientable-surface.5.md](./def.orientable-surface.5.md)
+
+## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.boundary-sign-convention`](../nodes/prop.boundary-sign-convention.md) 边界的符号约定 用
+- ～弱边 [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面
+- 被 [`def.mobius-band`](../nodes/def.mobius-band.md) 莫比乌斯带 用

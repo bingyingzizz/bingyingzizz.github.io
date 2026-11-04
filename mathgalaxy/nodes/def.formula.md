@@ -12,7 +12,7 @@ $$\varphi ::= R(t_{1}, \ldots, t_{n}) \;\mid\; \neg \varphi \;\mid\; (\varphi \w
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.substitution`](../nodes/def.substitution.md) 代入 用
+- 被 [`def.provability`](../nodes/def.provability.md) 可证明性 用
 
 - …另有出边，续页见 [nodes/def.formula.4.md](./def.formula.4.md)
 
@@ -23,4 +23,4 @@ refs: Enderton, A Mathematical Introduction to Logic, Ch. 1；Kunen, Set Theory,
 
 > 说明见 `notes/def.formula.md`
 
-引用：`def.formula`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.formula`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.copowers-give-adjoint)　·　第 1 页 [nodes/prop.copowers-give-adjoint.md](./prop.copowers-give-adjoint.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.representable`](../nodes/def.representable.md) 表示函子：用到了定义 表示函子　[proofs/dep.gap-copowers-give-adjoint-representable.md](../proofs/dep.gap-copowers-give-adjoint-representable.md)
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-link.copowers-adjoint.md](../proofs/def-link.copowers-adjoint.md)

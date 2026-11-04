@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`lem.solid-completion-criterion`](../nodes/lem.solid-completion-criterion.md) 完备化判据 + [`prop.free-solid-solid`](../nodes/prop.free-solid-solid.md) 自由固态群是固态的 + [`cor.free-solid-product`](../nodes/cor.free-solid-product.md) 自由固态群是大乘积：完备化判据 + 关键计算 $\implies$ $\mathbf{Solid}$ 是阿贝尔子范畴　[proofs/imp.solid-abelian.md](../proofs/imp.solid-abelian.md)
+- [`def.solid-group`](../nodes/def.solid-group.md) 固态阿贝尔群：用到了定义 固态阿贝尔群　[proofs/dep.gap-solid-abelian-solid-group.md](../proofs/dep.gap-solid-abelian-solid-group.md)
 
 > 续见 [nodes/thm.solid-abelian.4.md](./thm.solid-abelian.4.md)

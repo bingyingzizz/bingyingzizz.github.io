@@ -1,6 +1,6 @@
 # 外幂　`def.exterior-power`
 外幂 $\bigwedge^{k} V$
-layer 11 · 定义 · 多重线性与张量 · 抽象代数
+layer 14 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.exterior-power)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间。$V$ 的 **$k$ 次外幂** $\bigwedge^{k} V$ 是 $V^{\otimes k}$ 商掉由
@@ -23,4 +23,4 @@ refs: Lang, Algebra, Ch. XIX；Roman, Advanced Linear Algebra, Ch. 14
 
 > 说明见 `notes/def.exterior-power.md`
 
-引用：`def.exterior-power`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exterior-power`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

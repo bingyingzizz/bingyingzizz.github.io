@@ -10,5 +10,5 @@ layer 13 · definition · cluster Functors and Natural Transformations (`cat.fun
 Chinese only — see the Chinese page `nodes/def.exact-functor.md` and `proofs/`.
 
 
-Cite: `def.exact-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.exact-functor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

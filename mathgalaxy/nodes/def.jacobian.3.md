@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.differential-map`](../nodes/def.differential-map.md) 切映射 用
 - ⇒ [`def.differential-map`](../nodes/def.differential-map.md) 切映射
+- 被 [`def.tangent-bundle`](../nodes/def.tangent-bundle.md) 切丛 用
+- 被 [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式 用

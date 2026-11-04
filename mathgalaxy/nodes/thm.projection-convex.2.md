@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.projection-formula`](../nodes/thm.projection-formula.md) 最佳逼近与投影公式：用到了定义 最佳逼近与投影公式　[proofs/def-link.fa-projformula.md](../proofs/def-link.fa-projformula.md)
+- [`def.hilbert-space`](../nodes/def.hilbert-space.md) Hilbert 空间：用到了定义 Hilbert 空间　[proofs/dep.gap-projection-convex-hilbert-space.md](../proofs/dep.gap-projection-convex-hilbert-space.md)

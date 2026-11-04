@@ -31,9 +31,10 @@
   <header class="np-head">
     <h1>Riemann 曲面<span class="en" lang="en">Riemann surface</span></h1>
     <p class="full">定义：Riemann 曲面（多值函数的「定义域」）</p>
-    <ul class="facts"><li>定义</li><li>依赖深度 layer 18</li><li>复变函数</li><li>复变函数基础</li></ul>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 22</li><li>复变函数</li><li>复变函数基础</li></ul>
     <p class="idline"><code>def.riemann-surface</code> · 定义 · Riemann 曲面 · 复流形 · 单值化</p>
     <p class="aka"><span class="aka-k">又称</span>Riemann 曲面</p>
+    
     
   </header>
 
@@ -53,19 +54,26 @@
   
   
   <div class="edge-note"><p>Riemann 曲面存在的理由就是「把分支全部接起来」：平面上割开才能取的单值分支，在曲面上每层放一支，于是整体单值。所以「分支」是理解这个定义的前置。</p></div>
+</li></ul>
+<h3 class="kind-h">类比 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge weak">
+  <div class="edge-line"><a href="def.closed-surface.html">闭曲面</a><span class="kind">类比</span></div>
+  <div class="edge-title">两个「曲面」：拓扑的 2 维流形 vs 一维复流形</div>
+  
+  <div class="edge-note"><p><strong>同名不同物</strong>，而且维数说法都不一样：</p><ul><li>拓扑曲面是<strong>实 2 维</strong>（局部同胚于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>）；</li></ul><ul><li>Riemann 曲面是<strong>复 1 维</strong>（局部双全纯于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">C</mi></mrow><annotation encoding="application/x-tex">\mathbb{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">C</span></span></span></span> 的开集），它额外带一个<strong>复结构</strong>。</li></ul><p>⭐ 每个 Riemann 曲面都是拓扑曲面（忘记复结构即可），但反过来不成立 —— 球面恰好只有<strong>一个</strong>复结构（Riemann 映射定理的推论），环面却有一整族（模空间）。这条差别正是「复结构是额外数据」的体现。</p><p>⛔ 不能连 implication：本图的 Riemann 曲面是从「一维复流形」定义的，而闭曲面是从拓扑定义的，两边的前提不同（真要连得先有「忘记复结构」这个函子）。</p></div>
 </li></ul></section>
 
   <section class="sec"><h2>参考</h2><ul class="refs"><li>Ahlfors, Complex Analysis · 多值函数与 Riemann 曲面</li><li>Stein–Shakarchi, Complex Analysis, Ch. 3 · Meromorphic Functions and the Logarithm</li></ul></section>
 
   
 
-  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">22 个</span></h2><ul class="sibs"><li><a href="def.complex-partial.html">复偏导数</a><span class="lay">layer 16</span></li><li><a href="def.holomorphic.html">全纯函数</a><span class="lay">layer 16</span></li><li><a href="def.riemann-sphere.html">扩充复平面与球极投影</a><span class="lay">layer 16</span></li><li><a href="prop.complex-triangle.html">模长的三角不等式</a><span class="lay">layer 16</span></li><li><a href="def.branch.html">多值函数与分支</a><span class="lay">layer 17</span></li><li><a href="def.complex-elementary.html">复数初等函数</a><span class="lay">layer 17</span></li><li><a href="def.contour-integral.html">复围道积分</a><span class="lay">layer 17</span></li><li><a href="def.isolated-singularity.html">孤立奇点及其分类</a><span class="lay">layer 17</span></li><li><a href="def.mobius.html">分式线性变换</a><span class="lay">layer 17</span></li><li><a href="prop.complex-partial-rules.html">复偏导数的运算法则</a><span class="lay">layer 17</span></li><li><a href="prop.extended-plane-compact.html">扩充复平面是紧的</a><span class="lay">layer 17</span></li><li><a href="prop.stereographic-circle.html">球极投影保圆且共形</a><span class="lay">layer 17</span></li><li><a href="thm.cauchy-riemann.html">Cauchy–Riemann 方程</a><span class="lay">layer 17</span></li><li><a href="def.logarithm-branch.html">对数与幂的分支</a><span class="lay">layer 18</span></li><li><a href="def.winding-number.html">绕数</a><span class="lay">layer 18</span></li><li><a href="lem.cauchy-green.html">Cauchy–Green 恒等式</a><span class="lay">layer 18</span></li><li><a href="prop.conformal-iff.html">保角性</a><span class="lay">layer 18</span></li><li><a href="prop.exp-local-inverse.html">指数函数的局部逆</a><span class="lay">layer 18</span></li><li><a href="prop.single-valued-branch.html">单值支的存在判据</a><span class="lay">layer 19</span></li><li><a href="prop.winding-integral.html">绕数的积分表示</a><span class="lay">layer 19</span></li><li><a href="thm.winding-homotopy.html">绕数的同伦不变性</a><span class="lay">layer 20</span></li></ul></section>
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">23 个</span></h2><ul class="sibs"><li><a href="def.contour-integral.html">复围道积分</a><span class="lay">layer 18</span></li><li><a href="def.isolated-singularity.html">孤立奇点及其分类</a><span class="lay">layer 18</span></li><li><a href="def.winding-number.html">绕数</a><span class="lay">layer 19</span></li><li><a href="def.complex-partial.html">复偏导数</a><span class="lay">layer 20</span></li><li><a href="def.holomorphic.html">全纯函数</a><span class="lay">layer 20</span></li><li><a href="def.riemann-sphere.html">扩充复平面与球极投影</a><span class="lay">layer 20</span></li><li><a href="ex.contour-1-over-z.html">∮dz/z</a><span class="lay">layer 20</span></li><li><a href="prop.complex-triangle.html">模长的三角不等式</a><span class="lay">layer 20</span></li><li><a href="prop.winding-integral.html">绕数的积分表示</a><span class="lay">layer 20</span></li><li><a href="def.branch.html">多值函数与分支</a><span class="lay">layer 21</span></li><li><a href="def.complex-elementary.html">复数初等函数</a><span class="lay">layer 21</span></li><li><a href="def.mobius.html">分式线性变换</a><span class="lay">layer 21</span></li><li><a href="prop.complex-partial-rules.html">复偏导数的运算法则</a><span class="lay">layer 21</span></li><li><a href="prop.extended-plane-compact.html">扩充复平面是紧的</a><span class="lay">layer 21</span></li><li><a href="prop.stereographic-circle.html">球极投影保圆且共形</a><span class="lay">layer 21</span></li><li><a href="thm.cauchy-riemann.html">Cauchy–Riemann 方程</a><span class="lay">layer 21</span></li><li><a href="thm.winding-homotopy.html">绕数的同伦不变性</a><span class="lay">layer 21</span></li><li><a href="def.logarithm-branch.html">对数与幂的分支</a><span class="lay">layer 22</span></li><li><a href="lem.cauchy-green.html">Cauchy–Green 恒等式</a><span class="lay">layer 22</span></li><li><a href="prop.conformal-iff.html">保角性</a><span class="lay">layer 22</span></li><li><a href="prop.exp-local-inverse.html">指数函数的局部逆</a><span class="lay">layer 22</span></li><li><a href="prop.single-valued-branch.html">单值支的存在判据</a><span class="lay">layer 29</span></li></ul></section>
 
   <section class="sec jump">
     <h2>继续</h2>
     <p>
       <a href="../#n=def.riemann-surface">在星图里打开「Riemann 曲面」</a>　·　
-      <a href="../all.html">全部 1472 个概念</a>　·　
+      <a href="../all.html">全部 1531 个概念</a>　·　
       <a href="def.riemann-surface.md">Markdown 原文</a>　·　
       <a href="def.riemann-surface.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
     </p>
@@ -74,7 +82,7 @@
 </main>
 
 <footer class="np-foot">
-  <p>数学星图 MathGalaxy · 内容 v0.9.2 · 内容以
+  <p>数学星图 MathGalaxy · 内容 v0.9.3 · 内容以
      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
   <p>引用请写节点 id <code>def.riemann-surface</code> 与内容版本 ·
     条款见 <a href="../LICENSE.txt">LICENSE</a> ·

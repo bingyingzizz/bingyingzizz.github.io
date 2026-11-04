@@ -27,4 +27,4 @@ refs: Le Stum, Definition 5.2.3
 
 > 说明见 `notes/def.exact-sequence.md`
 
-引用：`def.exact-sequence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exact-sequence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

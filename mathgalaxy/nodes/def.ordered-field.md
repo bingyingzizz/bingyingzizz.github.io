@@ -1,6 +1,6 @@
 # 有序域　`def.ordered-field`
 有序域
-layer 8 · 定义 · 代数结构 · 抽象代数+序理论
+layer 9 · 定义 · 代数结构 · 抽象代数+序理论
 [在星图里打开](../#n=def.ordered-field)　·　[节点索引](../index.md)
 
 设 $(F, +, \cdot)$ 是**域**，$\le$ 是 $F$ 上的**全序**（偏序，且任意两元可比）。若 $\le$ 与两个运算**相容**：
@@ -23,4 +23,4 @@ refs: Lang, Algebra, Ch. VI；Rudin, Principles of Mathematical Analysis, Ch. 1
 
 > 说明见 `notes/def.ordered-field.md`
 
-引用：`def.ordered-field`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ordered-field`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 7.43
 
 > 说明见 `notes/prop.higher-cohomology-presheaf-zero.md`
 
-引用：`prop.higher-cohomology-presheaf-zero`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.higher-cohomology-presheaf-zero`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

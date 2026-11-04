@@ -10,5 +10,5 @@ layer 16 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Categ
 Chinese only — see the Chinese page `nodes/prop.sheaf-epi-criterion.md` and `proofs/`.
 
 
-Cite: `prop.sheaf-epi-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sheaf-epi-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

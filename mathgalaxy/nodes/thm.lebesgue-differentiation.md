@@ -1,6 +1,6 @@
 # Lebesgue 微分定理　`thm.lebesgue-differentiation`
 Lebesgue 微分定理：$A_{r} f(x) \to f(x) \text{a.e.}$
-layer 24 · 定理 · 微分定理 · 实变函数+数学分析
+layer 26 · 定理 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=thm.lebesgue-differentiation)　·　[节点索引](../index.md)
 
 设 $f \in L^1_{loc}$。则
@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Theorem 3.18
 
 > 说明见 `notes/thm.lebesgue-differentiation.md`
 
-引用：`thm.lebesgue-differentiation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lebesgue-differentiation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

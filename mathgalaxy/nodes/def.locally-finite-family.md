@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Section 39；Engelking, General Topology, Ch.
 
 > 说明见 `notes/def.locally-finite-family.md`
 
-引用：`def.locally-finite-family`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.locally-finite-family`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

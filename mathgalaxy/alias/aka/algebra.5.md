@@ -23,7 +23,7 @@
 
 - 子空间判据 → prop.subspace-criterion
 
-- 迹 → def.trace
+- 迹 | tr | Tr A → def.trace
 
 - 正交投影 → def.orthogonal-projection
 
@@ -46,7 +46,5 @@
 - 坐标 → def.coordinate
 
 - 线性映射 | 恒等映射 | 恒等线性映射 → def.linear-map
-
-- 线性同构 → def.linear-isomorphism
 
 > 续见 alias/aka/algebra.6.md

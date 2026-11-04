@@ -1,6 +1,6 @@
 # Pontryagin 对偶　`def.pontryagin-dual`
 Pontryagin 对偶
-layer 17 · 定义 · 拓扑阿贝尔群 · 凝聚态数学
+layer 19 · 定义 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=def.pontryagin-dual)　·　[节点索引](../index.md)
 
 记**圆群**
@@ -23,4 +23,4 @@ refs: Le Stum, §6.2
 
 > 说明见 `notes/def.pontryagin-dual.md`
 
-引用：`def.pontryagin-dual`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pontryagin-dual`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

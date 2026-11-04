@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 10 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.bar-resolution.md` and `proofs/`.
 
 
-Cite: `def.bar-resolution` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.bar-resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

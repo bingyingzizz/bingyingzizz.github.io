@@ -1,6 +1,6 @@
 # 一致收敛保连续　`thm.uniform-limit-continuous`
 定理：一致收敛的连续函数列的极限连续
-layer 16 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 17 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.uniform-limit-continuous)　·　[节点索引](../index.md)
 
 设 $f_n : X \to \mathbb{R}$ 都连续，且 $f_n \rightrightarrows f$。则 $f$ 连续。
@@ -17,4 +17,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 7
 
 > 说明见 `notes/thm.uniform-limit-continuous.md`
 
-引用：`thm.uniform-limit-continuous`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.uniform-limit-continuous`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

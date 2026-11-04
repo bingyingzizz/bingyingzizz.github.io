@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.unitary-matrix`](../nodes/def.unitary-matrix.md) 酉矩阵与正交矩阵：用到了定义 酉矩阵与正交矩阵　[proofs/dep.qr-unitary.md](../proofs/dep.qr-unitary.md)
+
+> 续见 [nodes/thm.qr-decomposition.4.md](./thm.qr-decomposition.4.md)

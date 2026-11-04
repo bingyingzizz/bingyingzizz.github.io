@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.formula`](../nodes/def.formula.md) 公式：用到了定义 公式　[proofs/dep.formula-satisfaction.md](../proofs/dep.formula-satisfaction.md)
+
+> 续见 [nodes/def.satisfaction.5.md](./def.satisfaction.5.md)

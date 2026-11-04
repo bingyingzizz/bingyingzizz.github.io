@@ -1,6 +1,6 @@
 # 拉回　`prop.pullback-form-manifold`
 拉回：流形之间光滑映射的拉回
-layer 21 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 22 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.pullback-form-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：把 $k$-形式沿**流形之间**的光滑映射搬回去。$\mathbb{R}^{n}$ 开集那版只是它的局部样子。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/prop.pullback-form-manifold.md`
 
-引用：`prop.pullback-form-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.pullback-form-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

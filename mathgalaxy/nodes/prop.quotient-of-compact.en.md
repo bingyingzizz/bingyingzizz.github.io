@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
+layer 18 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.quotient-of-compact.md` and `proofs/`.
 
 
-Cite: `prop.quotient-of-compact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.quotient-of-compact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

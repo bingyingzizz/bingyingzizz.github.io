@@ -1,6 +1,6 @@
 # 基数可比定理　`thm.cardinal-comparable`
 基数可比定理（需要选择公理）
-layer 10 · 定理 · 基数与等势 · 集合论
+layer 9 · 定理 · 基数与等势 · 集合论
 [在星图里打开](../#n=thm.cardinal-comparable)　·　[节点索引](../index.md)
 
 在**选择公理**下：对任意两个集合 $A$、$B$，必有 $\#A \le \#B$ 或 $\#B \le \#A$。
@@ -19,4 +19,4 @@ refs: Jech, The Axiom of Choice, Ch. 3
 
 > 说明见 `notes/thm.cardinal-comparable.md`
 
-引用：`thm.cardinal-comparable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cardinal-comparable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

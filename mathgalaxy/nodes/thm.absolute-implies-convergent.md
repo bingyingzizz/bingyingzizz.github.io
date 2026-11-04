@@ -1,6 +1,6 @@
 # 绝对收敛 ⟹ 收敛　`thm.absolute-implies-convergent`
 定理：绝对收敛蕴含收敛
-layer 19 · 定理 · 数项级数的敛散性 · 数学分析
+layer 23 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.absolute-implies-convergent)　·　[节点索引](../index.md)
 
 若 $\sum |a_n|$ 收敛，则 $\sum a_n$ 收敛，且
@@ -17,4 +17,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.absolute-implies-convergent.md`
 
-引用：`thm.absolute-implies-convergent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.absolute-implies-convergent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

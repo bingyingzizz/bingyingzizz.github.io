@@ -10,5 +10,5 @@ layer 19 · proposition · cluster Additive and Abelian Categories (`hom.ab`) ·
 Chinese only — see the Chinese page `nodes/prop.grothendieck-enough-injectives.md` and `proofs/`.
 
 
-Cite: `prop.grothendieck-enough-injectives` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.grothendieck-enough-injectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

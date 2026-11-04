@@ -1,6 +1,6 @@
 # 根值判别法　`thm.root-test`
 定理：根值判别法（Cauchy，用 $\limsup \sqrt[n]{a_n}$）
-layer 16 · 定理 · 数项级数的敛散性 · 数学分析
+layer 20 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.root-test)　·　[节点索引](../index.md)
 
 设 $a_n \ge 0$，记
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.root-test.md`
 
-引用：`thm.root-test`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.root-test`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

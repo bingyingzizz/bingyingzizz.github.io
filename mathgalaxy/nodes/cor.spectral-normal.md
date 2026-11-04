@@ -1,6 +1,6 @@
 # 谱定理（复正规）　`cor.spectral-normal`
 推论：复正规算子可酉对角化
-layer 21 · 推论 · 内积空间与正交性 · 抽象代数
+layer 25 · 推论 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=cor.spectral-normal)　·　[节点索引](../index.md)
 
 设 $V$ 是有限维**复**内积空间，$T : V \to V$ **正规**（$T^{\ast}T = TT^{\ast}$）。则存在 $V$ 的**标准正交基**使 $T$ 是对角阵：
@@ -20,4 +20,4 @@ refs: Roman, Advanced Linear Algebra, Ch. 11
 
 > 说明见 `notes/cor.spectral-normal.md`
 
-引用：`cor.spectral-normal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.spectral-normal`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 28 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 31 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Normal Coordinates` (short) · `Normal Coordinates Are Euclidean to First Order` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.normal-coord-euclidean.md` and `proofs/`.
 
 
-Cite: `lem.normal-coord-euclidean` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.normal-coord-euclidean` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

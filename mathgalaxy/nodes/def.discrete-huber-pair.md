@@ -1,6 +1,6 @@
 # 离散 Huber pair　`def.discrete-huber-pair`
 离散 Huber pair
-layer 8 · 定义 · adic 空间 · 解析空间
+layer 21 · 定义 · adic 空间 · 解析空间
 [在星图里打开](../#n=def.discrete-huber-pair)　·　[节点索引](../index.md)
 
 白话：**Huber pair = 一个环 $A$，加上「哪些元素算有界」这个额外指定 $A^+$**。
@@ -23,4 +23,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/def.discrete-huber-pair.md`
 
-引用：`def.discrete-huber-pair`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.discrete-huber-pair`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

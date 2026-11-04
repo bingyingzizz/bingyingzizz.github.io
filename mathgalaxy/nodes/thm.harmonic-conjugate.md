@@ -1,6 +1,6 @@
 # 调和函数的共轭　`thm.harmonic-conjugate`
 定理：调和函数局部是全纯函数的实部
-layer 18 · 定理 · 调和函数 · 复变函数
+layer 22 · 定理 · 调和函数 · 复变函数
 [在星图里打开](../#n=thm.harmonic-conjugate)　·　[节点索引](../index.md)
 
 **白话**：在单连通区域上，每个调和函数都是某个全纯函数的实部 —— 那个虚部叫它的「共轭调和函数」，只差一个常数。
@@ -21,4 +21,4 @@ refs: 王晓光《复变函数》· 共轭调和函数；Ahlfors, Complex Analys
 
 > 说明见 `notes/thm.harmonic-conjugate.md`
 
-引用：`thm.harmonic-conjugate`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.harmonic-conjugate`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

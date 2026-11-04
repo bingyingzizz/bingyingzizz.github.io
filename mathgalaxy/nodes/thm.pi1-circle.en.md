@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 16 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.pi1-circle.md` and `proofs/`.
 
 
-Cite: `thm.pi1-circle` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.pi1-circle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

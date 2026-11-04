@@ -1,11 +1,11 @@
 # 可缩族的微分定理　`thm.differentiation-general`　·　说明
 根 `../`
 
-证明是一行估计：由 $E_r \subseteq B(r,x)$ 与 $m(E_r) > \alpha m(B(r,x))$，
+证明是一行估计：由 $E_r \subseteq B(x, r)$ 与 $m(E_r) > \alpha m(B(x, r))$，
 
 
 
-$$\frac{1}{m(E_r)} \int_{E_r} |f - f(x)| \le \frac{1}{m(E_r)} \int_{B(r,x)} |f - f(x)| \le (1/\alpha)\cdot m(B(r,x)) \int_{B(r,x)} |f - f(x)|$$
+$$\frac{1}{m(E_r)} \int_{E_r} |f - f(x)| \le \frac{1}{m(E_r)} \int_{B(x, r)} |f - f(x)| \le (1/\alpha)\cdot m(B(x, r)) \int_{B(x, r)} |f - f(x)|$$
 
 
 

@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.bessel-parseval`](../nodes/thm.bessel-parseval.md) Bessel 与 Parseval 用
+- 被 [`def.operator-adjoint`](../nodes/def.operator-adjoint.md) 伴随算子 用

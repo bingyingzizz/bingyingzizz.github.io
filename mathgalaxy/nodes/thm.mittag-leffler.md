@@ -1,6 +1,6 @@
 # Mittag-Leffler 定理　`thm.mittag-leffler`
 定理：Mittag-Leffler 定理（只陈述）
-layer 19 · 定理 · 留数与辐角原理 · 复变函数
+layer 22 · 定理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=thm.mittag-leffler)　·　[节点索引](../index.md)
 
 **白话**：给定一串没有聚点的点和每个点处的一截「极点主部」，总能造出一个亚纯函数，使它在这些点处的行为恰好就是给定的那些主部。
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· Mittag-Leffler 定理；Stein–Shakarchi, C
 
 > 说明见 `notes/thm.mittag-leffler.md`
 
-引用：`thm.mittag-leffler`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mittag-leffler`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

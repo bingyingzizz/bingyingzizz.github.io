@@ -1,7 +1,9 @@
 # 第二可数空间　`def.second-countable`　·　续页（第 2 页）
 [在星图里打开](../#n=def.second-countable)　·　第 1 页 [nodes/def.second-countable.md](./def.second-countable.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.topology-base`](../nodes/def.topology-base.md) 基与子基：用到了定义 基与子基　[proofs/def-link.second-countable-base.md](../proofs/def-link.second-countable-base.md)
-
-> 续见 [nodes/def.second-countable.3.md](./def.second-countable.3.md)
+## 它能推出什么 / 谁在用它（续）
+- ⇒ [`def.first-countable`](../nodes/def.first-countable.md) 第一可数空间
+- ⇒ [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理
+- 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
+- 被 [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解 用
+- 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用

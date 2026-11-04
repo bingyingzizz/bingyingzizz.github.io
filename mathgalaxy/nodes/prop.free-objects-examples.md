@@ -17,4 +17,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.8
 ## 说明
 **证明。** 逐条核对自由对象的万有性质 $\operatorname{Hom}(FX, -) \cong \operatorname{Hom}_{\mathbf{Set}}\bigl(X, U(-)\bigr)$ ✓。∎
 
-引用：`prop.free-objects-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.free-objects-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

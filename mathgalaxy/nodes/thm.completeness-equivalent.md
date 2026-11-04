@@ -1,6 +1,6 @@
 # 完备性的六条等价　`thm.completeness-equivalent`
 定理：下列六条彼此等价
-layer 19 · 定理 · 实数完备性的等价刻画 · 数学分析
+layer 23 · 定理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=thm.completeness-equivalent)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}$ 上，下列六条**彼此等价**：
@@ -22,4 +22,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3；Tao, Analysis I, Ch. 6
 
 > 说明见 `notes/thm.completeness-equivalent.md`
 
-引用：`thm.completeness-equivalent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.completeness-equivalent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

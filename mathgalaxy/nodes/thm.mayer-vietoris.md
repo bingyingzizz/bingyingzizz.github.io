@@ -1,6 +1,6 @@
 # Mayer–Vietoris 序列　`thm.mayer-vietoris`
 Mayer–Vietoris 长正合列
-layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 24 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.mayer-vietoris)　·　[节点索引](../index.md)
 
 **在做什么**：把一个大流形的上同调，拆成两块以及它们交叠的上同调 —— 这是「打补丁」计算上同调的标准机器。
@@ -12,8 +12,13 @@ layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调：形式的短正合列取上同调 $\implies$ 长正合列　[proofs/imp.mf-mayer-vietoris.md](../proofs/imp.mf-mayer-vietoris.md)
 
+- …另有入边，续页见 [nodes/thm.mayer-vietoris.3.md](./thm.mayer-vietoris.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.mayer-vietoris.4.md](./thm.mayer-vietoris.4.md)
+
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Mayer–Vietoris 序列
 
 > 说明见 `notes/thm.mayer-vietoris.md`
 
-引用：`thm.mayer-vietoris`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mayer-vietoris`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

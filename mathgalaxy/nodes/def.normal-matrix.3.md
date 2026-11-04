@@ -5,3 +5,5 @@
 - [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置：用到了定义 共轭转置　[proofs/dep.ln-normal-ctranspose.md](../proofs/dep.ln-normal-ctranspose.md)
 - [`def.normal-operator`](../nodes/def.normal-operator.md) 正规算子：用到了定义 正规算子　[proofs/dep.ln-normal-operator.md](../proofs/dep.ln-normal-operator.md)
 - [`def.hermitian-matrix`](../nodes/def.hermitian-matrix.md) Hermite 矩阵与对称矩阵：用到了定义 Hermite 矩阵与对称矩阵　[proofs/dep.ln-normal-unitary.md](../proofs/dep.ln-normal-unitary.md)
+
+> 续见 [nodes/def.normal-matrix.4.md](./def.normal-matrix.4.md)

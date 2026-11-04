@@ -1,6 +1,6 @@
 # 等价范数　`def.norm-equivalence`
 强弱范数与等价范数
-layer 11 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 14 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.norm-equivalence)　·　[节点索引](../index.md)
 
 设 $p, q$ 是 $E$ 上两个范数。称 $p$ **强于** $q$（记 $q \preceq p$），若存在 $C > 0$ 使
@@ -19,4 +19,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 > 说明见 `notes/def.norm-equivalence.md`
 
-引用：`def.norm-equivalence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.norm-equivalence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

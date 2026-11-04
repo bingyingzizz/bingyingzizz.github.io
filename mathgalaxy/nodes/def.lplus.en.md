@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 16 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.lplus.md` and `proofs/`.
 
 
-Cite: `def.lplus` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.lplus` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

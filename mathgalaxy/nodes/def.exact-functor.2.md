@@ -2,7 +2,6 @@
 [在星图里打开](../#n=def.exact-functor)　·　第 1 页 [nodes/def.exact-functor.md](./def.exact-functor.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.flat-module`](../nodes/def.flat-module.md) 平坦模 用
 - 被 [`thm.watts`](../nodes/thm.watts.md) 张量函子的刻画 用
 - 被 [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据 用
 - 被 [`prop.left-exact-iff-R0`](../nodes/prop.left-exact-iff-R0.md) 左正合性与 R⁰ 用

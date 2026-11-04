@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.solid-hypercover`](../nodes/prop.solid-hypercover.md) 固态化把超覆盖变成正合列
 - 被 [`def.solid-group`](../nodes/def.solid-group.md) 固态阿贝尔群 用
+- ～弱边 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示

@@ -10,5 +10,5 @@ layer 15 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Catego
 Chinese only — see the Chinese page `nodes/def.canonical-topology.md` and `proofs/`.
 
 
-Cite: `def.canonical-topology` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.canonical-topology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

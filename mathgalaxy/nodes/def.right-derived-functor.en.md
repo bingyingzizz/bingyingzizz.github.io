@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 12 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.right-derived-functor.md` and `proofs/`.
 
 
-Cite: `def.right-derived-functor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.right-derived-functor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

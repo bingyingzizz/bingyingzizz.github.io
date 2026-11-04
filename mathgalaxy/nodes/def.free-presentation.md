@@ -1,6 +1,6 @@
 # 自由表示　`def.free-presentation`
 自由表示
-layer 16 · 定义 · 紧 Hausdorff 空间 · 拓扑学
+layer 19 · 定义 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=def.free-presentation)　·　[节点索引](../index.md)
 
 紧 Hausdorff 空间之间的连续满射 $F \twoheadrightarrow S$ 叫 $S$ 的**自由表示**，如果
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
 
 > 说明见 `notes/def.free-presentation.md`
 
-引用：`def.free-presentation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.free-presentation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,14 @@
 # 问法 → 节点 · 数学分析
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/analysis.md`
 
+- 0.999… 是不是等于 1 → def.real thm.real-ordered-field
+
+- 无穷大 → def.extended-real ax.inf
+
+- 无穷大算不算一个数 → def.extended-real ax.inf
+
+- 为什么调和级数会发散 → def.series thm.kummer
+
 - 什么时候积分和极限能换顺序 → thm.mct lem.fatou thm.dct thm.fubini-tonelli
 
 - 积分和极限交换的条件 → thm.dct thm.mct lem.fatou
@@ -20,9 +28,5 @@
 - 积分为零是什么意思 → prop.integral-zero-iff def.ae def.null-set
 
 - 有哪几种收敛 → def.convergence-modes prop.convergence-counterexamples
-
-- 几乎处处收敛和依测度收敛有什么关系 → def.convergence-modes prop.convergence-counterexamples thm.egorov
-
-- 收敛和一致收敛差在哪 → def.convergence-modes thm.egorov cor.lusin
 
 > 续见 alias/analysis.2.md

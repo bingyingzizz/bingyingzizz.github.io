@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 18 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.tangent-space-manifold.md` and `proofs/`.
 
 
-Cite: `def.tangent-space-manifold` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.tangent-space-manifold` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

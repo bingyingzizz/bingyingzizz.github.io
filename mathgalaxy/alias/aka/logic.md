@@ -9,4 +9,10 @@
 
 - 满足 | satisfaction | 模型 | semantics | 语义 → def.satisfaction
 
+- 可证明 | 可证 | 证明论 | 句法 | 推演 → def.provability
+
+- 完备性定理 | 哥德尔完备性定理 | 一阶逻辑完备性 → thm.completeness-first-order
+
+- 紧致性定理 | 紧致性 | 有限可满足 → thm.compactness
+
 见 `../../alias.md`。

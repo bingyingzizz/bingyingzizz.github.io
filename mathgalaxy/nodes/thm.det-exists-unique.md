@@ -1,6 +1,6 @@
 # 行列式的存在唯一性　`thm.det-exists-unique`
 定理：交错 $n$ 重线性规范函数存在且唯一
-layer 11 · 定理 · 矩阵与行列式 · 抽象代数
+layer 14 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.det-exists-unique)　·　[节点索引](../index.md)
 
 设 $\dim_K V = n$。则存在**唯一**的函数
@@ -28,4 +28,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
 
 > 说明见 `notes/thm.det-exists-unique.md`
 
-引用：`thm.det-exists-unique`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.det-exists-unique`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

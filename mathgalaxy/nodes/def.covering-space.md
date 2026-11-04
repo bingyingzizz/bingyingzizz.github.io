@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · Covering Spaces；Hatcher, Algebraic
 
 > 说明见 `notes/def.covering-space.md`
 
-引用：`def.covering-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.covering-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

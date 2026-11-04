@@ -1,6 +1,6 @@
 # Morera 定理　`thm.morera`
 定理：Morera 定理（Cauchy 定理的逆）
-layer 18 · 定理 · Cauchy 理论 · 复变函数
+layer 21 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.morera)　·　[节点索引](../index.md)
 
 **白话**：一个连续函数，只要沿每个闭三角形（等价地每个小矩形）的积分都是零，它就是全纯的 —— 这是 Cauchy 定理的逆命题。
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· Cauchy 定理的逆命题；Ahlfors, Complex
 
 > 说明见 `notes/thm.morera.md`
 
-引用：`thm.morera`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.morera`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

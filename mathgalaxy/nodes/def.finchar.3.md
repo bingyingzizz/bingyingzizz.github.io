@@ -5,6 +5,6 @@
 - 被 [`lem.tukey`](../nodes/lem.tukey.md) Tukey 引理 用
 - ～弱边 [`def.wellorder`](../nodes/def.wellorder.md) 良序集
 - ～弱边 [`ax.sep`](../nodes/ax.sep.md) 分离公理模式
-- ～弱边 [`def.vs`](../nodes/def.vs.md) 向量空间的基
+- ～弱边 [`def.vs`](../nodes/def.vs.md) 线性无关与基
 - ～弱边 [`def.maximal-function`](../nodes/def.maximal-function.md) 极大函数
-- 被 [`def.vs`](../nodes/def.vs.md) 向量空间的基 用
+- 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用

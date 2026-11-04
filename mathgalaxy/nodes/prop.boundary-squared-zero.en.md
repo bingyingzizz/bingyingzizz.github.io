@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 22 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Boundary Squares to Zero` (short) · `The Boundary Operator Squares to Zero` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.boundary-squared-zero.md` and `proofs/`.
 
 
-Cite: `prop.boundary-squared-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.boundary-squared-zero` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

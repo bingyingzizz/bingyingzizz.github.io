@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · corollary · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 25 · corollary · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.spectral-normal.md` and `proofs/`.
 
 
-Cite: `cor.spectral-normal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.spectral-normal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 伴随算子　`def.operator-adjoint`
 伴随算子 $T^{\ast}$
-layer 10 · 定义 · 内积空间与正交性 · 抽象代数
+layer 17 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.operator-adjoint)　·　[节点索引](../index.md)
 
 设 $V, W$ 是有限维内积空间，$T : V \to W$ 线性。则存在**唯一**的线性映射 $T^{\ast} : W \to V$ 使
@@ -23,4 +23,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.operator-adjoint.md`
 
-引用：`def.operator-adjoint`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.operator-adjoint`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

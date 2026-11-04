@@ -1,6 +1,6 @@
 # 可微与全微分　`def.total-differential`
 可微与全微分
-layer 18 · 定义 · 多元微分 · 数学分析
+layer 19 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.total-differential)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$，$a \in U$。称 $f$ 在 $a$ **可微**，当且仅当存在**线性映射** $L : \mathbb{R}^{n} \to \mathbb{R}^{m}$ 使
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Spivak, Calculus on Ma
 
 > 说明见 `notes/def.total-differential.md`
 
-引用：`def.total-differential`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.total-differential`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

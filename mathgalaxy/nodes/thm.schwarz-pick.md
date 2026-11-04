@@ -1,6 +1,6 @@
 # Schwarz–Pick 定理　`thm.schwarz-pick`
 定理：Schwarz–Pick 定理
-layer 23 · 定理 · 共形映射与正规族 · 复变函数
+layer 27 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.schwarz-pick)　·　[节点索引](../index.md)
 
 **白话**：把「圆盘到圆盘」的全纯映射用分式线性变换把两个点各自挪到原点之后，Schwarz 引理就成了一条不含原点的、对任意基准点都成立的估计。
@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· Schwarz–Pick 定理；Ahlfors, Complex Ana
 
 > 说明见 `notes/thm.schwarz-pick.md`
 
-引用：`thm.schwarz-pick`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.schwarz-pick`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

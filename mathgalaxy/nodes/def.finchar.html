@@ -35,6 +35,7 @@
     <p class="idline"><code>def.finchar</code> · 定义 · 有限特征 · Tukey</p>
     <p class="aka"><span class="aka-k">又称</span>有限特征<span class="aka-s">·</span>finite character</p>
     
+    
   </header>
 
   <section class="sec statement">
@@ -54,7 +55,7 @@
   <div class="edge-note"><p>Tukey 引理的唯一前提就是「该集合族具有有限特征」。</p></div>
 </li>
 <li class="edge">
-  <div class="edge-line"><a href="def.vs.html">向量空间的基</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  <div class="edge-line"><a href="def.vs.html">线性无关与基</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
   
   
   <div class="edge-note"><p>正因为逐有限子集定义，线性无关性<strong>具有有限特征</strong>（注里点明了这一步）。</p></div>
@@ -64,13 +65,13 @@
   <div class="edge-line"><a href="def.wellorder.html">良序集</a><span class="kind">类比</span></div>
   <div class="edge-title">两种「用有限/最小的东西控制无穷」的手法</div>
   
-  <div class="edge-note"><p>两个定义都在回答同一个问题：<strong>面对一个无穷对象，怎么下手？</strong></p><p><strong>良序</strong>（<code>def.wellorder</code>）：要求「每个非空子集都有<strong>最小元</strong>」。 有了最小元，就能做超限归纳、超限递归 —— 把「一步」规范化，无穷就被结构化了。</p><p><strong>有限特征</strong>：要求「整体属于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">A</mi><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\mathcal{A} \iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7073em;vertical-align:-0.024em;"></span><span class="mord mathcal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 每个<strong>有限</strong>子集都属于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">A</mi></mrow><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal">A</span></span></span></span>」。 于是验证一个无穷对象，只需要逐个检查它的有限片段 —— 无穷被压缩成有限。</p><p><strong>共同的招</strong>：都不去正面描述无穷，而是找一个<strong>有限的抓手</strong> （一个最小元 / 一个有限子集），让无穷变得可验证、可操作。</p><p>💡 这个招在数学里到处都是（紧致性、有限生成、可数逼近……）。</p></div>
+  <div class="edge-note"><p>两个定义都在回答同一个问题：<strong>面对一个无穷对象，怎么下手？</strong></p><p><strong>良序</strong>（<a class="pn-xlink" data-xlink="def.wellorder" href="#" title="def.wellorder">良序集</a>）：要求「每个非空子集都有<strong>最小元</strong>」。 有了最小元，就能做超限归纳、超限递归 —— 把「一步」规范化，无穷就被结构化了。</p><p><strong>有限特征</strong>：要求「整体属于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">A</mi><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\mathcal{A} \iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7073em;vertical-align:-0.024em;"></span><span class="mord mathcal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 每个<strong>有限</strong>子集都属于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">A</mi></mrow><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal">A</span></span></span></span>」。 于是验证一个无穷对象，只需要逐个检查它的有限片段 —— 无穷被压缩成有限。</p><p><strong>共同的招</strong>：都不去正面描述无穷，而是找一个<strong>有限的抓手</strong> （一个最小元 / 一个有限子集），让无穷变得可验证、可操作。</p><p>💡 这个招在数学里到处都是（紧致性、有限生成、可数逼近……）。</p></div>
 </li>
 <li class="edge weak">
-  <div class="edge-line"><a href="def.vs.html">向量空间的基</a><span class="kind">类比</span></div>
+  <div class="edge-line"><a href="def.vs.html">线性无关与基</a><span class="kind">类比</span></div>
   <div class="edge-title">「有限特征」这个抽象概念，在向量空间里有一个现成的实例</div>
   
-  <div class="edge-note"><p>严格说这不只是类比 —— 它是一个<strong>实例</strong>，但方向不是逻辑蕴含： <code>def.finchar</code> 不推出 <code>def.vs</code>，<code>def.vs</code> 也不推出 <code>def.finchar</code>； 它们是「抽象工具」和「具体落地」的关系。</p><p>线性无关性恰好是有限特征的： 「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 线性无关 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>S</mi></mrow><annotation encoding="application/x-tex">\iff S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 的每个<strong>有限</strong>子集线性无关」—— 这就是 <code>def.finchar</code> 的定义，一字不差。</p><p><strong>所以「每个向量空间有基」的证明里，那个「链的并仍线性无关」的关键一步， 本质上是在验证有限特征在链条下保持。</strong> Tukey 引理正是为此而生的。</p><p>💡 这条边是「跨星团」的：序理论 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span> 抽象代数。 它不提供新的定理，但它告诉你<strong>两块内容为什么长得像</strong>。</p></div>
+  <div class="edge-note"><p>严格说这不只是类比 —— 它是一个<strong>实例</strong>，但方向不是逻辑蕴含： <a class="pn-xlink" data-xlink="def.finchar" href="#" title="def.finchar">有限特征</a> 不推出 <a class="pn-xlink" data-xlink="def.vs" href="#" title="def.vs">线性无关与基</a>，<a class="pn-xlink" data-xlink="def.vs" href="#" title="def.vs">线性无关与基</a> 也不推出 <a class="pn-xlink" data-xlink="def.finchar" href="#" title="def.finchar">有限特征</a>； 它们是「抽象工具」和「具体落地」的关系。</p><p>线性无关性恰好是有限特征的： 「<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 线性无关 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>S</mi></mrow><annotation encoding="application/x-tex">\iff S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 的每个<strong>有限</strong>子集线性无关」—— 这就是 <a class="pn-xlink" data-xlink="def.finchar" href="#" title="def.finchar">有限特征</a> 的定义，一字不差。</p><p><strong>所以「每个向量空间有基」的证明里，那个「链的并仍线性无关」的关键一步， 本质上是在验证有限特征在链条下保持。</strong> Tukey 引理正是为此而生的。</p><p>💡 这条边是「跨星团」的：序理论 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span> 抽象代数。 它不提供新的定理，但它告诉你<strong>两块内容为什么长得像</strong>。</p></div>
 </li></ul></section>
   <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">3</span></h3>
 <ul class="edges"><li class="edge">
@@ -115,7 +116,7 @@
     <h2>继续</h2>
     <p>
       <a href="../#n=def.finchar">在星图里打开「有限特征」</a>　·　
-      <a href="../all.html">全部 1472 个概念</a>　·　
+      <a href="../all.html">全部 1531 个概念</a>　·　
       <a href="def.finchar.md">Markdown 原文</a>　·　
       <a href="def.finchar.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
     </p>
@@ -124,7 +125,7 @@
 </main>
 
 <footer class="np-foot">
-  <p>数学星图 MathGalaxy · 内容 v0.9.2 · 内容以
+  <p>数学星图 MathGalaxy · 内容 v0.9.3 · 内容以
      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
   <p>引用请写节点 id <code>def.finchar</code> 与内容版本 ·
     条款见 <a href="../LICENSE.txt">LICENSE</a> ·

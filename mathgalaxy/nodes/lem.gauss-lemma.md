@@ -1,6 +1,6 @@
 # Gauss 引理　`lem.gauss-lemma`
 Gauss 引理与测地极坐标
-layer 28 · 引理 · 内蕴几何 · 微分几何
+layer 31 · 引理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=lem.gauss-lemma)　·　[节点索引](../index.md)
 
 设 $p \in S$、$v \in T_{p}S$、$w \in T_{v}(T_{p}S)$。则
@@ -19,4 +19,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面
 
 > 说明见 `notes/lem.gauss-lemma.md`
 
-引用：`lem.gauss-lemma`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.gauss-lemma`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

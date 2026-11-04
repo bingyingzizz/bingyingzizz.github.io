@@ -27,6 +27,6 @@
 
 - 区间 | interval → def.interval
 
-- 数列极限 | 极限 | limit | 收敛 | convergence → def.sequence-limit
+- 数列极限 | 极限 | limit | 收敛 | convergence | lim_{n→∞} | lim a_n → def.sequence-limit
 
 > 续见 alias/aka/analysis.2.md

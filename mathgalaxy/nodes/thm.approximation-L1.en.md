@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.approximation-L1.md` and `proofs/`.
 
 
-Cite: `thm.approximation-L1` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.approximation-L1` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

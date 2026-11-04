@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 11 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Hom of Sheaves` (short) · `Hom of Sheaves Computed in Presheaves` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.sheaf-hom-computed-in-presheaves.md` and `proofs/`.
 
 
-Cite: `prop.sheaf-hom-computed-in-presheaves` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sheaf-hom-computed-in-presheaves` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

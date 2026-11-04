@@ -7,7 +7,7 @@
 
 
 
-$$\lim_{r\to0} \frac{1}{m(B(r,x))} \int_{B(r,x)} |f(y) - f(x)| dy \le |f(x) - c| + \varepsilon < 2\varepsilon$$
+$$\lim_{r\to0} \frac{1}{m(B(x, r))} \int_{B(x, r)} |f(y) - f(x)| dy \le |f(x) - c| + \varepsilon < 2\varepsilon$$
 
 
 

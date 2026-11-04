@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.cycle`](../nodes/def.cycle.md) 闭链：用到了定义 闭链　[proofs/dep.cyc-singular.md](../proofs/dep.cyc-singular.md)
 - [`def.boundary`](../nodes/def.boundary.md) 边缘：用到了定义 边缘　[proofs/dep.bnd-singular.md](../proofs/dep.bnd-singular.md)
+- [`def.singular-chain`](../nodes/def.singular-chain.md) 奇异链：用到了定义 奇异链　[proofs/dep.gap-singular-homology-singular-chain.md](../proofs/dep.gap-singular-homology-singular-chain.md)
 
 > 续见 [nodes/def.singular-homology.5.md](./def.singular-homology.5.md)

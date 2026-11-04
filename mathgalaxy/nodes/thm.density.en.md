@@ -10,5 +10,5 @@ layer 14 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category 
 Chinese only — see the Chinese page `nodes/thm.density.md` and `proofs/`.
 
 
-Cite: `thm.density` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.density` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

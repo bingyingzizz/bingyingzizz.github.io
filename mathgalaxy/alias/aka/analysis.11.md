@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 微积分基本定理 | FTC | fundamental theorem of calculus | Newton-Leibniz 定理 | 牛顿-莱布尼茨 → thm.ftc-lebesgue
+
 - 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
 
 - Young 不等式 | Young → lem.young-inequality
@@ -26,11 +28,5 @@
 - 自反 | reflexive | Lp 自反 → cor.lp-reflexive
 
 - Minkowski | 闵可夫斯基不等式 → thm.minkowski
-
-- L∞ 的性质 | Linfinity 性质 → thm.linf-properties
-
-- 等距 | isometry | 范数相等 → prop.duality-isometry
-
-- 有界泛函给出 Lq → prop.bounded-functional-gives-lq
 
 > 续见 alias/aka/analysis.12.md

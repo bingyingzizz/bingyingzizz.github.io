@@ -1,6 +1,6 @@
 # 行列式　`def.determinant`
 行列式 $\det A$
-layer 12 · 定义 · 矩阵与行列式 · 抽象代数
+layer 15 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.determinant)　·　[节点索引](../index.md)
 
 对 $A = (a_{ij}) \in M_n(K)$，定义**行列式**
@@ -25,4 +25,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 5
 
 > 说明见 `notes/def.determinant.md`
 
-引用：`def.determinant`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.determinant`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

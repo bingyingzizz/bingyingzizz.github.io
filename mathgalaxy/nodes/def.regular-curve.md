@@ -1,6 +1,6 @@
 # 正则曲线　`def.regular-curve`
 正则曲线与切线
-layer 16 · 定义 · 活动标架与结构方程 · 微分几何
+layer 17 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.regular-curve)　·　[节点索引](../index.md)
 
 **在做什么**：先把「一条能走的线」钉死 —— 它要有速度，而且速度处处不为零，这样才有切线、才能量弧长、才能谈弯曲。
@@ -17,4 +17,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲线」· 正则
 
 > 说明见 `notes/def.regular-curve.md`
 
-引用：`def.regular-curve`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.regular-curve`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

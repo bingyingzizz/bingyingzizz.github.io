@@ -11,5 +11,5 @@ names: `Ext Sections` (short) · `Sections of Ext on Stonean Spaces` (full)
 Chinese only — see the Chinese page `nodes/lem.ext-stonean-section.md` and `proofs/`.
 
 
-Cite: `lem.ext-stonean-section` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.ext-stonean-section` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

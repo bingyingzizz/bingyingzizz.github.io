@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
+layer 22 · example · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 names: `Breen–Deligne Spectral Sequence` (short) · `The General Breen–Deligne Spectral Sequence` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.bd-ss.md` and `proofs/`.
 
 
-Cite: `ex.bd-ss` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.bd-ss` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

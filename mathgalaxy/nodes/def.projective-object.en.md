@@ -11,5 +11,5 @@ names: `Projective and Injective` (short) · `Projective and Injective Objects` 
 Chinese only — see the Chinese page `nodes/def.projective-object.md` and `proofs/`.
 
 
-Cite: `def.projective-object` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.projective-object` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

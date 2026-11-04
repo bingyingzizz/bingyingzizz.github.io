@@ -1,6 +1,6 @@
 # 导数与极限交换　`thm.uniform-limit-derivative`
 定理：导数与极限可交换（需要导数一致收敛）
-layer 22 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 26 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.uniform-limit-derivative)　·　[节点索引](../index.md)
 
 设 $f_n$ 在 $[a, b]$ 上可导、$f_n'$ 都连续，且
@@ -24,4 +24,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 7
 
 > 说明见 `notes/thm.uniform-limit-derivative.md`
 
-引用：`thm.uniform-limit-derivative`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.uniform-limit-derivative`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.associated-bundle)　·　第 1 页 [nodes/def.associated-bundle.md](./def.associated-bundle.md)
 
 ## 陈述（续）
-两者粘起来。
+者粘起来。
 设 $P \to M$ 是主 $G$-丛（`def.principal-bundle`），$F$ 是带左 $G$-作用的流形。积空间 $P \times F$ 上令 $G$ 右作用
 
 $$(u, y)\cdot g := (u \cdot g,\ g^{-1}\cdot y) ,$$

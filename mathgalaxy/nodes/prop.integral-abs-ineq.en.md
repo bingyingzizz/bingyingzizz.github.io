@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.integral-abs-ineq.md` and `proofs/`.
 
 
-Cite: `prop.integral-abs-ineq` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.integral-abs-ineq` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

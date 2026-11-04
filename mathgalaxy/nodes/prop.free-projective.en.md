@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 19 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.free-projective.md` and `proofs/`.
 
 
-Cite: `prop.free-projective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.free-projective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

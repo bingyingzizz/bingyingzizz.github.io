@@ -1,6 +1,6 @@
 # Euler 公式　`thm.euler-formula-surface`
 Euler 公式
-layer 27 · 定理 · 曲面论 · 微分几何
+layer 30 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.euler-formula-surface)　·　[节点索引](../index.md)
 
 取主方向标架：$e_{1}, e_{2}$ 是单位正交主方向，$W(e_{i}) = k_{i}e_{i}$。设单位向量 $V = \cos\theta\,e_{1}+\sin\theta\,e_{2}$，则
@@ -14,4 +14,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/thm.euler-formula-surface.md`
 
-引用：`thm.euler-formula-surface`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.euler-formula-surface`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

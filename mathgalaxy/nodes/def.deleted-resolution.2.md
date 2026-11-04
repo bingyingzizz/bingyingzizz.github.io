@@ -15,3 +15,5 @@ htarrow{\ d_{2}\ } P_{1} \xrightarrow{\ d_{1
 换句话说：把 $M$ 支在 $-1$ 次的那
 条正合复形，删掉 $-1$ 次的那一
 项，其余原样保留。
+
+> 续见 [nodes/def.deleted-resolution.3.md](./def.deleted-resolution.3.md)

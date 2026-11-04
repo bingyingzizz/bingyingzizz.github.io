@@ -10,5 +10,5 @@ layer 17 · theorem · cluster Filtrations and Spectral Sequences (`hom.spectral
 Chinese only — see the Chinese page `nodes/thm.filtered-complex-spectral.md` and `proofs/`.
 
 
-Cite: `thm.filtered-complex-spectral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.filtered-complex-spectral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

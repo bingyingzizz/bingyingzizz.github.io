@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.pullback-form-manifold`](../nodes/prop.pullback-form-manifold.md) 拉回 用
+- 被 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化 用

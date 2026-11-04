@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 30 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Boundary Sign Convention` (short) · `Sign Convention for Boundaries` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.boundary-sign-convention.md` and `proofs/`.
 
 
-Cite: `prop.boundary-sign-convention` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.boundary-sign-convention` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

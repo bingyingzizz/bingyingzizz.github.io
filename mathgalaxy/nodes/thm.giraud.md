@@ -1,6 +1,6 @@
 # Giraud 定理　`thm.giraud`
 Giraud 定理
-layer 17 · 定理 · 拓扑斯 · 范畴论
+layer 19 · 定理 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=thm.giraud)　·　[节点索引](../index.md)
 
 对范畴 $\mathcal{T}$，下列四条等价：
@@ -20,4 +20,4 @@ refs: Mac Lane–Moerdijk, Sheaves in Geometry and Logic, Appendix
 
 > 说明见 `notes/thm.giraud.md`
 
-引用：`thm.giraud`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.giraud`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

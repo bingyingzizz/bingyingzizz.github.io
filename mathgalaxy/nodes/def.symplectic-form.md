@@ -1,6 +1,6 @@
 # 辛形式　`def.symplectic-form`
 辛形式：非退化交错双线性型
-layer 11 · 定义 · 多重线性与张量 · 抽象代数
+layer 14 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.symplectic-form)　·　[节点索引](../index.md)
 
 **在做什么**：把「面积」抽象成代数。交错型配上非退化条件，就是辛形式 —— 它换掉了内积（对称型）的位置，撑起另一门几何。
@@ -19,4 +19,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/def.symplectic-form.md`
 
-引用：`def.symplectic-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.symplectic-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

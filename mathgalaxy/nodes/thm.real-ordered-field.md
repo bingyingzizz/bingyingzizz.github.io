@@ -1,6 +1,6 @@
 # ℝ 是完备有序域　`thm.real-ordered-field`
 $\mathbb{R}$ 是完备有序域（确界原理）
-layer 13 · 定理 · 实数完备性的等价刻画 · 数学分析+集合论
+layer 17 · 定理 · 实数完备性的等价刻画 · 数学分析+集合论
 [在星图里打开](../#n=thm.real-ordered-field)　·　[节点索引](../index.md)
 
 上面构造出来的 $(\mathbb{R}, +, \cdot, \le)$ 满足三组性质：
@@ -15,7 +15,7 @@ $$a \le b \implies a + c \le b + c, \qquad a \le b,\ 0 \le c \implies ac \le bc$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根
 
-- …另有出边，续页见 [nodes/thm.real-ordered-field.4.md](./thm.real-ordered-field.4.md)
+- …另有出边，续页见 [nodes/thm.real-ordered-field.5.md](./thm.real-ordered-field.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.real-ordered-field.3.md](./thm.real-ordered-field.3.md)
@@ -24,4 +24,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 1；Ch. 3
 
 > 说明见 `notes/thm.real-ordered-field.md`
 
-引用：`thm.real-ordered-field`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.real-ordered-field`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

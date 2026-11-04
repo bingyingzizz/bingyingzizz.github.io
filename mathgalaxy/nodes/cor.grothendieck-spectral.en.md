@@ -10,5 +10,5 @@ layer 17 · corollary · cluster Filtrations and Spectral Sequences (`hom.spectr
 Chinese only — see the Chinese page `nodes/cor.grothendieck-spectral.md` and `proofs/`.
 
 
-Cite: `cor.grothendieck-spectral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.grothendieck-spectral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

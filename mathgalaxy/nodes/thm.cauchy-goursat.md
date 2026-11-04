@@ -1,6 +1,6 @@
 # Cauchy–Goursat 积分定理　`thm.cauchy-goursat`
 定理：Cauchy–Goursat 积分定理
-layer 19 · 定理 · Cauchy 理论 · 复变函数
+layer 23 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.cauchy-goursat)　·　[节点索引](../index.md)
 
 **白话**：单连通区域上全纯的函数，沿任何闭曲线的积分都是 $0$ —— 这是整个复分析的引擎。
@@ -23,4 +23,4 @@ refs: 王晓光《复变函数》笔记，第 7 章 · Cauchy–Goursat 积分�
 
 > 说明见 `notes/thm.cauchy-goursat.md`
 
-引用：`thm.cauchy-goursat`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-goursat`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

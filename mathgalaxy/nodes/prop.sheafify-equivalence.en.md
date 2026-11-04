@@ -11,5 +11,5 @@ names: `Sheafification and Quotients` (short) · `Sheafification Commutes with E
 Chinese only — see the Chinese page `nodes/prop.sheafify-equivalence.md` and `proofs/`.
 
 
-Cite: `prop.sheafify-equivalence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sheafify-equivalence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

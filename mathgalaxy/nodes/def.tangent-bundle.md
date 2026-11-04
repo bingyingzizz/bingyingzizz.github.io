@@ -1,6 +1,6 @@
 # 切丛　`def.tangent-bundle`
 切丛与切丛的流形结构
-layer 18 · 定义 · 流形与向量丛 · 微分几何
+layer 21 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.tangent-bundle)　·　[节点索引](../index.md)
 
 **在说什么**：把所有点的切空间按「住在哪个点」摞起来，得到一个维数翻倍的新流形 —— 流形上每点长着一根切线，切丛就是这束线的全体。
@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」
 
 > 说明见 `notes/def.tangent-bundle.md`
 
-引用：`def.tangent-bundle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tangent-bundle`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

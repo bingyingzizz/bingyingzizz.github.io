@@ -1,6 +1,6 @@
 # 保圆性　`prop.mobius-circle`
 分式线性变换把圆与直线映成圆与直线
-layer 21 · 命题 · 共形映射与正规族 · 复变函数
+layer 25 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.mobius-circle)　·　[节点索引](../index.md)
 
 分式线性变换把 $\widehat{\mathbb{C}}$ 中的**圆与直线**（合称「圆」）映成圆或直线。等价说法：把 $\mathbb{R} \cup \{\infty\}$ 的像总是一个圆或一条直线。
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 分式线性变换的保圆性；Ahlfors, Co
 
 > 说明见 `notes/prop.mobius-circle.md`
 
-引用：`prop.mobius-circle`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.mobius-circle`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

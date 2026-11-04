@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 5.13
 
 > 说明见 `notes/prop.generator-coproduct-epi.md`
 
-引用：`prop.generator-coproduct-epi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.generator-coproduct-epi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

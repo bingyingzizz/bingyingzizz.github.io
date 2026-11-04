@@ -11,5 +11,5 @@ names: `Constant Sheaf on Spaces` (short) · `The Constant Sheaf on a Topologica
 Chinese only — see the Chinese page `nodes/prop.constant-sheaf-top.md` and `proofs/`.
 
 
-Cite: `prop.constant-sheaf-top` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.constant-sheaf-top` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

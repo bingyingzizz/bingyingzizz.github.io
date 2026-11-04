@@ -3,10 +3,10 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.adic-gluing`](../nodes/thm.adic-gluing.md) 导出范畴按无穷范畴粘合 用
-- 被 [`lem.cech-finite-disjoint-acyclic`](../nodes/lem.cech-finite-disjoint-acyclic.md) 有限不交覆盖的 Čech 零调 用
-- 被 [`prop.condab-discrete-acyclic`](../nodes/prop.condab-discrete-acyclic.md) 离散空间上零调 用
-- 被 [`prop.condab-quotient-r-disc`](../nodes/prop.condab-quotient-r-disc.md) R/R_disc 在 Stone 上的截面 用
-- 被 [`cor.ext-cond-set-section`](../nodes/cor.ext-cond-set-section.md) Ext 的截面公式 用
-- 被 [`prop.rhom-zs-sections`](../nodes/prop.rhom-zs-sections.md) Stonean 空间上自由模的导出 Hom 用
+- 被 [`cor.free-solid-product`](../nodes/cor.free-solid-product.md) 自由固态群是大乘积 用
+- 被 [`prop.solid-hypercover`](../nodes/prop.solid-hypercover.md) 固态化把超覆盖变成正合列 用
+- 被 [`prop.condab-generated`](../nodes/prop.condab-generated.md) CondAb 由有限表现投射对象生成 用
+- 被 [`lem.stonean-projective`](../nodes/lem.stonean-projective.md) Stonean 给出有限表现投射对象 用
+- 被 [`prop.continuous-hom-condensed`](../nodes/prop.continuous-hom-condensed.md) 连续同态与内部 Hom 用
 
 > 续见 [nodes/def.condensed-abelian-group.4.md](./def.condensed-abelian-group.4.md)

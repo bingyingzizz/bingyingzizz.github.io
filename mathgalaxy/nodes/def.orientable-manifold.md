@@ -1,6 +1,6 @@
 # 可定向流形　`def.orientable-manifold`
 可定向流形与定向
-layer 13 · 定义 · 流形与向量丛 · 微分几何
+layer 16 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.orientable-manifold)　·　[节点索引](../index.md)
 
 **在说什么**：能不能在整张流形上一致地规定「哪个方向是正的」—— 判据是换卡时 Jacobi 行列式恒为正，也就是搬坐标牌时不出现镜像翻转。
@@ -21,4 +21,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/def.orientable-manifold.md`
 
-引用：`def.orientable-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.orientable-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

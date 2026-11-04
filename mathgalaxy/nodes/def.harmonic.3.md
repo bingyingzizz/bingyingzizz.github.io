@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.partial-derivative`](../nodes/def.partial-derivative.md) 偏导数：用到了定义 偏导数　[proofs/def-link.harmonic-partial.md](../proofs/def-link.harmonic-partial.md)
+- [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数：用到了定义 全纯函数　[proofs/dep.gap-harmonic-holomorphic.md](../proofs/dep.gap-harmonic-holomorphic.md)
 
 > 续见 [nodes/def.harmonic.4.md](./def.harmonic.4.md)

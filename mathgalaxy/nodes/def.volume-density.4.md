@@ -5,5 +5,6 @@
 - [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量：用到了定义 Riemann 度量　[proofs/dep.spivak-metric-density.md](../proofs/dep.spivak-metric-density.md)
 - [`def.determinant`](../nodes/def.determinant.md) 行列式：用到了定义 行列式　[proofs/dep.spivak-det-density.md](../proofs/dep.spivak-det-density.md)
 - [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式：用到了定义 微分形式　[proofs/dep.mf3-vdensity-form.md](../proofs/dep.mf3-vdensity-form.md)
+- [`def.volume-form`](../nodes/def.volume-form.md) 体积形式：用到了定义 体积形式　[proofs/dep.gap-volume-density-volume-form.md](../proofs/dep.gap-volume-density-volume-form.md)
 
 > 续见 [nodes/def.volume-density.5.md](./def.volume-density.5.md)

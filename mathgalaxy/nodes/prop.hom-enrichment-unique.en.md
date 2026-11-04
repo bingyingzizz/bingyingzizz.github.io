@@ -11,5 +11,5 @@ names: `Hom Enrichment Is Unique` (short) · `Uniqueness of the Abelian Group St
 Chinese only — see the Chinese page `nodes/prop.hom-enrichment-unique.md` and `proofs/`.
 
 
-Cite: `prop.hom-enrichment-unique` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.hom-enrichment-unique` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

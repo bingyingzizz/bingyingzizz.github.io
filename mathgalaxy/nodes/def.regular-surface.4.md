@@ -1,10 +1,8 @@
 # 曲面与参数化　`def.regular-surface`　·　续页（第 4 页）
 [在星图里打开](../#n=def.regular-surface)　·　第 1 页 [nodes/def.regular-surface.md](./def.regular-surface.md)　·　上一页 [nodes/def.regular-surface.3.md](./def.regular-surface.3.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.moving-frame`](../nodes/def.moving-frame.md) 活动标架 用
-- ⇒ [`def.moving-frame`](../nodes/def.moving-frame.md) 活动标架
-- ⇒ [`lem.adapted-frame`](../nodes/lem.adapted-frame.md) 适配标架
-- 被 [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面 用
-- ⇒ [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量
-- ⇒ [`def.orientable-surface`](../nodes/def.orientable-surface.md) 可定向曲面
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：用到了定义 光滑流形　[proofs/dep.regsurf-smooth.md](../proofs/dep.regsurf-smooth.md)
+- [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形：「曲面」的两个意思：内蕴的流形 $\leftrightarrow$ $\mathbb{R}^{3}$ 里的参数曲面　[proofs/ana.topo-regsurf.md](../proofs/ana.topo-regsurf.md)
+
+> 续见 [nodes/def.regular-surface.5.md](./def.regular-surface.5.md)

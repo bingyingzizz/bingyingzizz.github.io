@@ -1,6 +1,6 @@
 # F-零调对象　`def.f-acyclic`
 $F$-零调对象（$F$-Acyclic）
-layer 12 · 定义 · 复形与导出三角 · 同调代数
+layer 13 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.f-acyclic)　·　[节点索引](../index.md)
 
 设 $F$ 是**左正合**加法函子、有足够多内射。对象 $M \in \mathcal{A}$ 叫（右）**$F$-零调的**，如果
@@ -21,4 +21,4 @@ refs: Le Stum, Definition 7.2.11
 
 > 说明见 `notes/def.f-acyclic.md`
 
-引用：`def.f-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.f-acyclic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

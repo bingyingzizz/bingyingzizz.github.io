@@ -1,6 +1,6 @@
 # AB 公理的例子表　`prop.ab-axioms-examples`
 哪些范畴满足哪些 AB 公理
-layer 18 · 例 · 加法与阿贝尔范畴 · 同调代数
+layer 19 · 例 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.ab-axioms-examples)　·　[节点索引](../index.md)
 
 - $\mathbf{Ab}$：**AB6** 与 **AB4\***；
@@ -19,4 +19,4 @@ refs: Le Stum, §5.2
 
 > 说明见 `notes/prop.ab-axioms-examples.md`
 
-引用：`prop.ab-axioms-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ab-axioms-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

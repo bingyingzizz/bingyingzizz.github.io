@@ -1,6 +1,6 @@
 # 外微分　`prop.exterior-derivative-manifold`
 外微分：流形上的存在唯一性与图卡无关
-layer 20 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 22 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.exterior-derivative-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：$\mathbb{R}^{n}$ 上的 $\mathrm{d}$ 是按坐标公式写的，搬到流形上必须回答一句「换一张图卡算出来的 $\mathrm{d}\omega$ 是不是同一个」。这一条把它钉死，于是 $\mathrm{d}$ 可以
@@ -17,4 +17,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms
 
 > 说明见 `notes/prop.exterior-derivative-manifold.md`
 
-引用：`prop.exterior-derivative-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.exterior-derivative-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

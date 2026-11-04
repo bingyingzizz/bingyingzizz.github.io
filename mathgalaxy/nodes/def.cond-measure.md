@@ -21,4 +21,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/def.cond-measure.md`
 
-引用：`def.cond-measure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cond-measure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

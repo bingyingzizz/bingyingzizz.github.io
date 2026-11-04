@@ -1,6 +1,6 @@
 # 绝对连续函数　`def.ac-function`
 绝对连续函数
-layer 14 · 定义 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 15 · 定义 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=def.ac-function)　·　[节点索引](../index.md)
 
 函数 $F : [a, b] \to \mathbb{C}$ 是**绝对连续的**，当且仅当：对每个 $\varepsilon > 0$ 都有 $\delta > 0$，使得对**任意有限个两两不交的区间** $(a_j, b_j) \subseteq [a, b]$，
@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, §3.5
 
 > 说明见 `notes/def.ac-function.md`
 
-引用：`def.ac-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.ac-function`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

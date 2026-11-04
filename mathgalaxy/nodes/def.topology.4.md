@@ -3,6 +3,8 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
+- 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用
+- 被 [`ex.sierpinski-space`](../nodes/ex.sierpinski-space.md) Sierpiński 空间 用
 - 被 [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包 用
 - 被 [`def.topology-base`](../nodes/def.topology-base.md) 基与子基 用
 - 被 [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射 用
@@ -10,7 +12,5 @@
 - 被 [`def.borel`](../nodes/def.borel.md) Borel σ-代数 用
 - 被 [`def.continuous`](../nodes/def.continuous.md) 连续 用
 - 被 [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑 用
-- 被 [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑 用
-- 被 [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间 用
 
 > 续见 [nodes/def.topology.5.md](./def.topology.5.md)

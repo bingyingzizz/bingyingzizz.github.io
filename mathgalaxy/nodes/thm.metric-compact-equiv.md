@@ -1,9 +1,9 @@
 # 紧的三个等价刻画　`thm.metric-compact-equiv`
 度量空间中：紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
-layer 15 · 定理 · 度量空间 · 拓扑学
+layer 17 · 定理 · 度量空间 · 拓扑学
 [在星图里打开](../#n=thm.metric-compact-equiv)　·　[节点索引](../index.md)
 
-设
+设 $X$ 是距离空间，度量记作 $d$。则以下三条**彼此等价**：
 > 陈述续见 [nodes/thm.metric-compact-equiv.2.md](./thm.metric-compact-equiv.2.md)
 
 
@@ -13,7 +13,7 @@ layer 15 · 定理 · 度量空间 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.metric-compact-equiv.6.md](./thm.metric-compact-equiv.6.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
 > English abstract 续见 [nodes/thm.metric-compact-equiv.3.md](./thm.metric-compact-equiv.3.md)
 
 refs: Munkres, Topology, §28 与 §43
@@ -22,4 +22,4 @@ refs: Munkres, Topology, §28 与 §43
 
 > 说明见 `notes/thm.metric-compact-equiv.md`
 
-引用：`thm.metric-compact-equiv`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.metric-compact-equiv`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 固态 Serre 对偶　`thm.poincare-solid`
 定理：光滑映射的紧支撑推前与对偶（Thm 11.1）
-layer 25 · 定理 · 相干对偶 · 解析空间
+layer 30 · 定理 · 相干对偶 · 解析空间
 [在星图里打开](../#n=thm.poincare-solid)　·　[节点索引](../index.md)
 
 白话：**这就是固态版的 Serre 对偶 / Poincaré 对偶 —— 一句话：「上同调上的内积非退化」**。
@@ -20,4 +20,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/thm.poincare-solid.md`
 
-引用：`thm.poincare-solid`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.poincare-solid`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Cohomology via Sheafification` (short) · `Cohomology via the Associated
 Chinese only — see the Chinese page `nodes/prop.cohomology-via-associated-sheaf.md` and `proofs/`.
 
 
-Cite: `prop.cohomology-via-associated-sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cohomology-via-associated-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

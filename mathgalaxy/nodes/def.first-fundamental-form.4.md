@@ -7,3 +7,5 @@
 - 被 [`def.isometry-surface`](../nodes/def.isometry-surface.md) 等距 用
 - 被 [`def.area-element`](../nodes/def.area-element.md) 面积元 用
 - ⇒ [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量
+- 被 [`ex.cylinder-first-form`](../nodes/ex.cylinder-first-form.md) 圆柱的第一基本形式 用
+- 被 [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面 用

@@ -1,6 +1,6 @@
 # 极端不连通的基本性质　`prop.stonean-basic`
 极端不连通的性质
-layer 17 · 命题 · Stone 与 Stonean · 拓扑学
+layer 19 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.stonean-basic)　·　[节点索引](../index.md)
 
 **(a)** 若 $X$ 极端不连通，则任意两个不交开集 $U, V$ 的闭包仍不交：$\overline{U} \cap \overline{V} = \emptyset$。
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/prop.stonean-basic.md`
 
-引用：`prop.stonean-basic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.stonean-basic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

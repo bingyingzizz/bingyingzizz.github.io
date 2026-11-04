@@ -10,5 +10,5 @@ layer 0 · definition · cluster Constructing Sets (`set.construct`) · Set Theo
 Chinese only — see the Chinese page `nodes/def.empty.md` and `proofs/`.
 
 
-Cite: `def.empty` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.empty` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

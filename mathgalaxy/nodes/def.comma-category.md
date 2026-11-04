@@ -12,6 +12,7 @@ $$\bigl\{(A, B, f) : A \in \mathcal{A},\ B \in \mathcal{B},\ f : F(A) \to G(B)\b
 
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.slice-category`](../nodes/def.slice-category.md) 切片范畴 用
 - ⇒ [`thm.saft`](../nodes/thm.saft.md) 伴随函子定理
 
 - …另有出边，续页见 [nodes/def.comma-category.4.md](./def.comma-category.4.md)
@@ -23,4 +24,4 @@ refs: Mac Lane, Categories for the Working Mathematician, II.6
 
 > 说明见 `notes/def.comma-category.md`
 
-引用：`def.comma-category`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.comma-category`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

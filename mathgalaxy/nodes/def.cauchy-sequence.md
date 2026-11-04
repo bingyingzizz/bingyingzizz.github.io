@@ -1,6 +1,6 @@
 # Cauchy 列　`def.cauchy-sequence`
 Cauchy 列
-layer 14 · 定义 · 实数与极限 · 数学分析
+layer 15 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.cauchy-sequence)　·　[节点索引](../index.md)
 
 实数列 $\{x_n\}$ 是 **Cauchy 列**，当且仅当
@@ -15,10 +15,12 @@ $$\forall \varepsilon > 0,\ \exists N,\ \forall m, n \ge N :\ |x_m - x_n| < \var
 - …另有入边，续页见 [nodes/def.cauchy-sequence.2.md](./def.cauchy-sequence.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.cauchy-criterion`](../nodes/thm.cauchy-criterion.md) Cauchy 收敛准则 用
+- 被 [`def.complete`](../nodes/def.complete.md) 完备 用
+
+- …另有出边，续页见 [nodes/def.cauchy-sequence.3.md](./def.cauchy-sequence.3.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/def.cauchy-sequence.md`
 
-引用：`def.cauchy-sequence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.cauchy-sequence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

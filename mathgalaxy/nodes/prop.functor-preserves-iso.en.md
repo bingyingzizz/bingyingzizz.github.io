@@ -10,5 +10,5 @@ layer 9 · proposition · cluster Functors and Natural Transformations (`cat.fun
 Chinese only — see the Chinese page `nodes/prop.functor-preserves-iso.md` and `proofs/`.
 
 
-Cite: `prop.functor-preserves-iso` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.functor-preserves-iso` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

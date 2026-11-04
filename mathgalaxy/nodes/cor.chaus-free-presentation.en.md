@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · corollary · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 20 · corollary · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.chaus-free-presentation.md` and `proofs/`.
 
 
-Cite: `cor.chaus-free-presentation` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.chaus-free-presentation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

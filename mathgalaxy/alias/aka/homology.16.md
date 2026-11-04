@@ -5,7 +5,7 @@
 
 - 正合偶 → def.exact-couple
 
-- 张量积 | 模的张量积 | 张量积（模） → def.tensor-module
+- 张量积 | 模的张量积 | 张量积（模） | ⊗ | ⊗_R | M⊗N → def.tensor-module
 
 - 切赫上同调 → thm.paracompact-cech-equals-sheaf
 
@@ -14,5 +14,9 @@
 - 埃塔勒层 | 平展层 → def.etale-sheaf
 
 - 埃塔勒层的例子 → prop.etale-sheaf-examples
+
+- 上同调类 → def.cohomology-class
+
+- 零调复形 → def.acyclic-complex
 
 见 `../../alias.md`。

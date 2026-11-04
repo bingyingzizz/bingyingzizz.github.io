@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理 + [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理：圆盘上的度量、等距群 = 自同构，Schwarz–Pick 是等距性　[proofs/e14.implication.md](../proofs/e14.implication.md)
+- [`def.geodesic`](../nodes/def.geodesic.md) 测地线：用到了定义 测地线　[proofs/dep.gap-prop.poincare-disk-geodesic.md](../proofs/dep.gap-prop.poincare-disk-geodesic.md)

@@ -1,6 +1,6 @@
 # 联络形式　`def.connection-form`
 联络形式
-layer 21 · 定义 · 活动标架与结构方程 · 微分几何
+layer 24 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.connection-form)　·　[节点索引](../index.md)
 
 白话：标架**自己也会转** —— 沿某个方向走一小步，$(e_{1},e_{2},e_{3})$ 就微微转动一点。**联络形式**就是把这件「转动」记下来的九个 $1$-形式：喂给它一个方向，它告诉你标架绕哪个轴、转多快。和 Christoffel 符号
@@ -19,4 +19,4 @@ refs: 陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Sur
 
 > 说明见 `notes/def.connection-form.md`
 
-引用：`def.connection-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.connection-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

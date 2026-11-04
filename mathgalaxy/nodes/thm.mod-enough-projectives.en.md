@@ -11,5 +11,5 @@ names: `Enough Projectives` (short) · `Modules Have Enough Projectives` (full)
 Chinese only — see the Chinese page `nodes/thm.mod-enough-projectives.md` and `proofs/`.
 
 
-Cite: `thm.mod-enough-projectives` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mod-enough-projectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

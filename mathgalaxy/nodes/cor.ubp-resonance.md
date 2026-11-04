@@ -1,6 +1,6 @@
 # 共振集是稠密 G_δ　`cor.ubp-resonance`
 共振集：一致无界 $\implies$ 发散点稠密
-layer 17 · 推论 · Baire 纲与三大定理 · 泛函分析
+layer 19 · 推论 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=cor.ubp-resonance)　·　[节点索引](../index.md)
 
 设 $E$ Banach，$F$ 赋范，$u_n \in B(E, F)$，且 $\sup_n \|u_n\| = \infty$。则
@@ -16,4 +16,4 @@ refs: Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 > 说明见 `notes/cor.ubp-resonance.md`
 
-引用：`cor.ubp-resonance`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.ubp-resonance`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

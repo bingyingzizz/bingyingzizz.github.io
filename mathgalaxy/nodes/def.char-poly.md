@@ -1,6 +1,6 @@
 # 特征多项式　`def.char-poly`
 特征多项式 $\chi_T(x) = \det(x I - T)$
-layer 13 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 16 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.char-poly)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 线性、$\dim V = n < \infty$。任取一组基把 $T$ 写成矩阵 $A$，定义
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 > 说明见 `notes/def.char-poly.md`
 
-引用：`def.char-poly`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.char-poly`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

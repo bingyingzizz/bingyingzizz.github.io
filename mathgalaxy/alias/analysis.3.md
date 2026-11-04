@@ -1,6 +1,10 @@
 # 问法 → 节点 · 数学分析
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/analysis.md`
 
+- 连续函数一定可测吗 → cor.continuous-measurable def.measurable-function
+
+- 一个测度相对于另一个测度的密度 → def.rn-derivative thm.lebesgue-radon-nikodym
+
 - 什么时候一个测度有密度 → thm.lebesgue-radon-nikodym def.absolute-continuity def.rn-derivative
 
 - 符号测度怎么拆成两个正测度 → thm.hahn-decomposition thm.jordan-decomposition def.signed-measure
@@ -16,9 +20,5 @@
 - Lebesgue 微分定理说的是什么 → thm.lebesgue-differentiation def.lebesgue-set def.average-operator
 
 - 有界变差函数有什么性质 → def.bounded-variation thm.bv-jordan prop.bv-regularity
-
-- Lp 空间是不是完备的 → thm.lp-banach def.lp-norm
-
-- Lp 的对偶空间是什么 → thm.riesz-representation-lp def.conjugate-exponents def.duality-map
 
 > 续见 alias/analysis.4.md

@@ -1,6 +1,6 @@
 # 离散空间上零调　`prop.condab-discrete-acyclic`
 命题：凝聚态阿贝尔群在离散空间与「离散 $\times$ Stonean」上零调
-layer 18 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
+layer 21 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=prop.condab-discrete-acyclic)　·　[节点索引](../index.md)
 
 设 $M$ 是凝聚态阿贝尔群。则
@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, §8.1
 
 > 说明见 `notes/prop.condab-discrete-acyclic.md`
 
-引用：`prop.condab-discrete-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.condab-discrete-acyclic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

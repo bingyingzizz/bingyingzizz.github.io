@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 8 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 9 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Z-Mod and Ab` (short) · `Z-Modules Are Abelian Groups` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.zmod-is-ab.md` and `proofs/`.
 
 
-Cite: `prop.zmod-is-ab` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.zmod-is-ab` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 网　`def.net`
 网与网的收敛：一般拓扑里的序列
-layer 15 · 定义 · 收敛与紧性 · 拓扑学
+layer 17 · 定义 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=def.net)　·　[节点索引](../index.md)
 
 **在做什么**：一般拓扑里**序列不够用** —— 紧性、连续性都不能用序列刻画（除非空间是第一可数）。把 $\mathbb{N}$ 换成任意**有向集**，就得到「网」，于是序列的所有定理都能搬过来。
@@ -21,4 +21,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 网的收�
 
 > 说明见 `notes/def.net.md`
 
-引用：`def.net`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.net`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

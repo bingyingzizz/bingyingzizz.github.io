@@ -2,4 +2,5 @@
 [在星图里打开](../#n=def.weak-hausdorff)　·　第 1 页 [nodes/def.weak-hausdorff.md](./def.weak-hausdorff.md)　·　上一页 [nodes/def.weak-hausdorff.2.md](./def.weak-hausdorff.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.cg-wh-iff-qseparated`](../nodes/prop.cg-wh-iff-qseparated.md) 紧生成：弱 Hausdorff ⟺ 拟分离 用
 - 被 [`prop.closed-inclusion-filtered-limit`](../nodes/prop.closed-inclusion-filtered-limit.md) 紧块沿闭含入拼出的空间 用

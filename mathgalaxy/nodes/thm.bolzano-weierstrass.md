@@ -1,6 +1,6 @@
 # Bolzano–Weierstrass 定理　`thm.bolzano-weierstrass`
 Bolzano–Weierstrass 定理（有界列必有收敛子列）
-layer 16 · 定理 · 实数完备性的等价刻画 · 数学分析
+layer 20 · 定理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=thm.bolzano-weierstrass)　·　[节点索引](../index.md)
 
 每个有界实数列都有收敛子列。等价地：$\mathbb{R}$ 的每个有界无限子集都有聚点。
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.bolzano-weierstrass.md`
 
-引用：`thm.bolzano-weierstrass`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bolzano-weierstrass`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

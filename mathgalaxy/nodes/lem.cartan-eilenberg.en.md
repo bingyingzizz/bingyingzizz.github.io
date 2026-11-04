@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Al
 Chinese only — see the Chinese page `nodes/lem.cartan-eilenberg.md` and `proofs/`.
 
 
-Cite: `lem.cartan-eilenberg` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.cartan-eilenberg` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

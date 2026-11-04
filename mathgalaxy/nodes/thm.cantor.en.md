@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/thm.cantor.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Cantor%27s_theorem · nLab: https://ncatlab.org/nlab/show/Cantor%27s+theorem
 
 
-Cite: `thm.cantor` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cantor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

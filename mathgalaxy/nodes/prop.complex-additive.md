@@ -1,6 +1,6 @@
 # 复形范畴是加法范畴　`prop.complex-additive`
 复形范畴的性质
-layer 13 · 命题 · 复形与导出三角 · 同调代数
+layer 15 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.complex-additive)　·　[节点索引](../index.md)
 
 复形构成 $\mathcal{C}$ 的**加法满子范畴** $\mathcal{C}(\mathcal{C})$：
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/prop.complex-additive.md`
 
-引用：`prop.complex-additive`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.complex-additive`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

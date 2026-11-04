@@ -1,6 +1,6 @@
 # Stone 定理　`thm.metric-paracompact`
 度量空间必为仿紧空间
-layer 14 · 定理 · 可度量化 · 拓扑学
+layer 15 · 定理 · 可度量化 · 拓扑学
 [在星图里打开](../#n=thm.metric-paracompact)　·　[节点索引](../index.md)
 
 设 $(X, d)$ 是距离空间。则 $X$（带 $d$ 诱导的拓扑）是**仿紧**的：它的每个开覆盖都有局部有限的开加细。
@@ -15,4 +15,4 @@ refs: Stone, Paracompactness and product spaces, Bull. Amer. Math. Soc. 54 (1948
 
 > 说明见 `notes/thm.metric-paracompact.md`
 
-引用：`thm.metric-paracompact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.metric-paracompact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

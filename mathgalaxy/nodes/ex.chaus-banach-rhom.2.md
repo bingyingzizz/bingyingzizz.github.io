@@ -2,4 +2,5 @@
 [在星图里打开](../#n=ex.chaus-banach-rhom)　·　第 1 页 [nodes/ex.chaus-banach-rhom.md](./ex.chaus-banach-rhom.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-dep.cbr-chaus.md](../proofs/def-dep.cbr-chaus.md)
 - [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-dep.cbr-banach.md](../proofs/def-dep.cbr-banach.md)

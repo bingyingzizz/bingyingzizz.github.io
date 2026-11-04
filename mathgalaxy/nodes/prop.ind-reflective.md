@@ -1,6 +1,6 @@
 # C 是 Ind(C) 的反射子范畴　`prop.ind-reflective`
 $\mathcal{C} \hookrightarrow \operatorname{Ind}(\mathcal{C})$ 是反射
-layer 12 · 命题 · 图与极限 · 范畴论
+layer 13 · 命题 · 图与极限 · 范畴论
 [在星图里打开](../#n=prop.ind-reflective)　·　[节点索引](../index.md)
 
 若 $\mathcal{C}$ 有滤过余极限，则 $\mathcal{C}$ 是 $\operatorname{Ind}(\mathcal{C})$ 的**反射子范畴**。
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.3
 
 > 说明见 `notes/prop.ind-reflective.md`
 
-引用：`prop.ind-reflective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.ind-reflective`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

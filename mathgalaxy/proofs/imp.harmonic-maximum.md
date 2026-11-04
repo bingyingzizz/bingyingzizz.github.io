@@ -9,7 +9,7 @@ $$E := \{\, z \in \Omega : u(z) = M \,\} \ne \emptyset.$$
 
 **第二步：$E$ 是闭的。** $u$ 连续，$E$ 是闭集 $\{M\}$ 在 $\Omega$ 中的原像。
 
-**第三步：$E$ 是开的。** 取 $a \in E$，取 $r > 0$ 使 $\overline{D(a, r)} \subset \Omega$。由均值性质
+**第三步：$E$ 是开的。** 取 $a \in E$，取 $r > 0$ 使 $\overline{B(a, r)} \subset \Omega$。由均值性质
 
 $$M = u(a) = \frac{1}{2\pi}\int_0^{2\pi} u(a + r e^{i\theta})\,\mathrm{d}\theta.$$
 
@@ -17,6 +17,6 @@ $$M = u(a) = \frac{1}{2\pi}\int_0^{2\pi} u(a + r e^{i\theta})\,\mathrm{d}\theta.
 
 所以圆周落在 $E$ 里；
 
-对每个 $0 < \rho \le r$ 同理，于是 $D(a, r) \subset E$。
+对每个 $0 < \rho \le r$ 同理，于是 $B(a, r) \subset E$。
 
 > 续见 proofs/imp.harmonic-maximum.2.md

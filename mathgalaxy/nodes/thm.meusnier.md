@@ -1,6 +1,6 @@
 # Meusnier 定理　`thm.meusnier`
 Meusnier 定理
-layer 27 · 定理 · 曲面论 · 微分几何
+layer 30 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.meusnier)　·　[节点索引](../index.md)
 
 设曲线 $\gamma$ 落在曲面 $S$ 上，$\gamma(0) = p$，$\lVert \gamma'(0)\rVert = 1$，曲率 $k_{\gamma}(0) = k > 0$，主法向为 $N_{\gamma}$。则
@@ -16,4 +16,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/thm.meusnier.md`
 
-引用：`thm.meusnier`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.meusnier`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

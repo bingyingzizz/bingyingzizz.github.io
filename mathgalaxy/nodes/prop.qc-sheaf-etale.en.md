@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 19 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Quasi-Compact Sheaves` (short) · `Quasi-Compact Sheaves and Compact Étale Spaces` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.qc-sheaf-etale.md` and `proofs/`.
 
 
-Cite: `prop.qc-sheaf-etale` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.qc-sheaf-etale` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

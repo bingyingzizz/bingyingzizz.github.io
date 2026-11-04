@@ -3,9 +3,9 @@
 
 row` ↓ ↑　**竖直箭头** — 交换图里竖边的方向。
 - `\varinjlim, \varprojlim` lim→／lim←　**余极限 / 极限** — 带指标的极限写作 $\varinjlim_{(X,s)} h_{X}$；不带指标时可以用 $\lim$、$\operatorname{colim}$。
-- `\dashv` ⊣　**左伴随 $F \dashv G$** — 写 $F \dashv G$ 表示 $F$ 是 $G$ 的**左**伴随。箭头朝右也朝下，别写成 $\vdash$（那是有穷逻辑的可推导）。
-- `\checkmark` ✓　**证毕时的对勾** — 证明里「这一步已经验完」的记号，写在**公式内部**要写 $\checkmark$，⛔ 别把 $✓$ 直接塞进 $\text{…}$ 或数学模式（KaTeX 在文本模式下没有它的字形）。整句叙述里的 $✓$ 是装饰符，可以照写。
-- `\coprod, \bigoplus, \sqcup` ∐ ∐ ⊔　**余积 / 直和 / 不交并** — 集合的余积写 $\coprod$，加法群的余积写 $\bigoplus$，两个空间的不交并写 $\sqcup$。
-- `\underline{E}` E̲　**常预层 / 强调** — 常预层 $\underline{E}$ 取常值 $E$。
+- `A \cong B` ≅　**同构（结构相同）** — 全图最泛的关系符：群 / 环 / 模 / 拓扑空间 / 层**同构**，以及函子的**自然同构**，一律 $\cong$。⛔ 不要用 $\simeq$ 表示同构 —— 分工见下一条。
+- `f \simeq g` ≃　**同伦 / 范畴等价 / 近似（一符三义）** — 靠上下文分：① 映射的**同伦** $f \simeq g$（拓扑、基本群、同伦不变性）；② 范畴或复形范畴的**等价**（$D(\mathbf{Solid})^{\omega} \simeq D^{b}(\mathbb Z)$）；③ 非正式的「近似于」。
+- `a \approx b` ≈　**数值近似相等** — 只用于数值估计，不进陈述；陈述里写不等式。
+- `\dashv` ⊣　**左伴随 $F \dashv G$** — 写 $F \dashv G$ 表示 $F$ 是 $G$ 的**左**伴随。箭头朝右也朝下，别写
 
-索引 `notation.md`。
+> 续见 notation/layout.3.md

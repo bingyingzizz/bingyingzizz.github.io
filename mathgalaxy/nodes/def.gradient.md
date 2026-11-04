@@ -1,6 +1,6 @@
 # 梯度　`def.gradient`
 梯度
-layer 11 · 定义 · 多元微分 · 数学分析
+layer 15 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.gradient)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}$ 在 $a$ 可微。
@@ -22,4 +22,4 @@ refs: Spivak, Calculus on Manifolds, Ch. 2；Rudin, Principles of Mathematical A
 
 > 说明见 `notes/def.gradient.md`
 
-引用：`def.gradient`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.gradient`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

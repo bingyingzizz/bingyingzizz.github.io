@@ -1,6 +1,6 @@
 # 同伦　`def.homotopy`
 同伦
-layer 11 · 定义 · 复形与导出三角 · 同调代数
+layer 12 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.homotopy)　·　[节点索引](../index.md)
 
 复形态射 $f, g : K \to L$ 叫**同伦的**，如果存在一族态射
@@ -26,4 +26,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.1
 
 两条合起来，才允许把「同伦」当成要商掉的东西。
 
-引用：`def.homotopy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.homotopy`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

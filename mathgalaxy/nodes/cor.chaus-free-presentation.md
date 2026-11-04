@@ -1,6 +1,6 @@
 # 紧 Haus 都有自由表示　`cor.chaus-free-presentation`
 每个紧 Hausdorff 空间都有自由表示
-layer 17 · 推论 · 紧 Hausdorff 空间 · 拓扑学
+layer 20 · 推论 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=cor.chaus-free-presentation)　·　[节点索引](../index.md)
 
 每个紧 Hausdorff 空间 $S$ 都有自由表示。
@@ -12,4 +12,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
 
 > 说明见 `notes/cor.chaus-free-presentation.md`
 
-引用：`cor.chaus-free-presentation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.chaus-free-presentation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

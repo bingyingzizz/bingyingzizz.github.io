@@ -1,6 +1,6 @@
 # L^p 范数　`def.lp-norm`
 $L^p$ 范数与 $L^p$ 空间
-layer 18 · 定义 · L^p 空间 · 实变函数+数学分析
+layer 20 · 定义 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=def.lp-norm)　·　[节点索引](../index.md)
 
 固定测度空间 $(X, \mathcal{M}, \mu)$。对可测 $f$ 与 $0 < p < \infty$ 定义
@@ -27,4 +27,4 @@ refs: Folland, Real Analysis, §6.1
 
 > 说明见 `notes/def.lp-norm.md`
 
-引用：`def.lp-norm`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lp-norm`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

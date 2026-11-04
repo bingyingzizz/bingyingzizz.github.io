@@ -1,6 +1,6 @@
 # 生成元给出阿贝尔层的生成元　`prop.generators-abelian-sheaves`
 命题：$S$ 生成 $\mathcal{T}$ $\implies$ $\{\mathbb{Z}\cdot X\}$ 生成 $\mathcal{T}(\mathbf{Ab})$
-layer 11 · 命题 · 阿贝尔层 · 同调代数
+layer 18 · 命题 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=prop.generators-abelian-sheaves)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯、$S$ 是它的一组**生成元**。则
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 5.20
 
 > 说明见 `notes/prop.generators-abelian-sheaves.md`
 
-引用：`prop.generators-abelian-sheaves`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.generators-abelian-sheaves`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

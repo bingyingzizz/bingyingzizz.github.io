@@ -1,6 +1,6 @@
 # 局部紧阿贝尔群不是阿贝尔范畴　`prop.lc-ab-preabelian`
 局部紧 Hausdorff 阿贝尔群：预阿贝尔但非阿贝尔
-layer 17 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 19 · 命题 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=prop.lc-ab-preabelian)　·　[节点索引](../index.md)
 
 局部紧 Hausdorff 阿贝尔群构成的范畴是**预阿贝尔**的，但**不是阿贝尔**范畴。
@@ -18,4 +18,4 @@ refs: Le Stum, Exercise 6.4
 
 > 说明见 `notes/prop.lc-ab-preabelian.md`
 
-引用：`prop.lc-ab-preabelian`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.lc-ab-preabelian`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

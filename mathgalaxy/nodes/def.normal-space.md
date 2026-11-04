@@ -1,6 +1,6 @@
 # 正规空间　`def.normal-space`
 正规空间
-layer 16 · 定义 · 分离公理 · 拓扑学
+layer 6 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.normal-space)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**正规的**，如果它是 $T_{1}$ 的，并且任意两个**不交闭集** $A, B$ 都能被开集分开：存在开集 $U \supseteq A$、$V \supseteq B$ 使 $U \cap V = \emptyset$。
@@ -19,4 +19,4 @@ refs: Munkres, Topology
 
 > 说明见 `notes/def.normal-space.md`
 
-引用：`def.normal-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.normal-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 一致连续　`def.uniform-continuity`
 一致连续
-layer 15 · 定义 · 连续与紧性 · 数学分析+拓扑学
+layer 16 · 定义 · 连续与紧性 · 数学分析+拓扑学
 [在星图里打开](../#n=def.uniform-continuity)　·　[节点索引](../index.md)
 
 设 $X \subseteq \mathbb{R}$，$f : X \to \mathbb{R}$。称 $f$ **一致连续**，当且仅当
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 
 > 说明见 `notes/def.uniform-continuity.md`
 
-引用：`def.uniform-continuity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.uniform-continuity`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

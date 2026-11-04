@@ -1,6 +1,6 @@
 # 双曲平面　`def.hyperbolic-plane`
 双曲平面：最标准的一块迷向构件
-layer 13 · 定义 · 多重线性与张量 · 抽象代数
+layer 16 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.hyperbolic-plane)　·　[节点索引](../index.md)
 
 **在做什么**：这是「一块不可再分的迷向结构」—— 两个迷向向量，互相不为零地配对。非退化型的结构定理说：任何型都是「非迷向的」加若干块这个。
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 双曲平面；Che
 
 > 说明见 `notes/def.hyperbolic-plane.md`
 
-引用：`def.hyperbolic-plane`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.hyperbolic-plane`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 谱定理（矩阵版）　`thm.spectral-matrix`
 谱定理（矩阵版）：正规矩阵恰好是酉可对角化的那些
-layer 17 · 定理 · 内积空间与正交性 · 抽象代数
+layer 21 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.spectral-matrix)　·　[节点索引](../index.md)
 
 **在做什么**：把两条已有的算子版谱定理（`thm.spectral-theorem` 实对称、`cor.spectral-normal` 复正规）落到**矩阵**上，并给出精确的充要条件。
@@ -21,4 +21,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/thm.spectral-matrix.md`
 
-引用：`thm.spectral-matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.spectral-matrix`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · proposition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
 > 续见 nodes/prop.nbv-derivative.en.2.md

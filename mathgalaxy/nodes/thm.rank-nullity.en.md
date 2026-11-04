@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 15 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.rank-nullity.md` and `proofs/`.
 
 
-Cite: `thm.rank-nullity` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.rank-nullity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

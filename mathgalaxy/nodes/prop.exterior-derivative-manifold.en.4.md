@@ -7,5 +7,5 @@ where $\mathrm{d}x^{I} := \mathrm{d}x^{i_{1}}\wedge\cdots\wedge\mathrm{d}x^{i_{k
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `prop.exterior-derivative-manifold` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.exterior-derivative-manifold` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

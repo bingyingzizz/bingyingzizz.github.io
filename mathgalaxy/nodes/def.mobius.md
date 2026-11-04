@@ -1,6 +1,6 @@
 # 分式线性变换　`def.mobius`
 定义：分式线性变换（Möbius 变换）
-layer 17 · 定义 · 复变函数基础 · 复变函数
+layer 21 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.mobius)　·　[节点索引](../index.md)
 
 **白话**：分式线性变换是复球面上最「刚性」的一类全纯双射 —— 它把圆（含直线）送到圆，并且保持交比不变。
@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》笔记，第 13 章 · 分式线性变换；Ahl
 
 > 说明见 `notes/def.mobius.md`
 
-引用：`def.mobius`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.mobius`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

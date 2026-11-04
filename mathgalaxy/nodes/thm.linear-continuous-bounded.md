@@ -1,6 +1,6 @@
 # 连续 ⟺ 有界　`thm.linear-continuous-bounded`
 线性映射连续 $\iff$ 有界
-layer 12 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 15 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.linear-continuous-bounded)　·　[节点索引](../index.md)
 
 设 $E, F$ 是赋范空间，$u : E \to F$ 线性。则下列**等价**：
@@ -18,4 +18,4 @@ refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级�
 
 > 说明见 `notes/thm.linear-continuous-bounded.md`
 
-引用：`thm.linear-continuous-bounded`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.linear-continuous-bounded`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

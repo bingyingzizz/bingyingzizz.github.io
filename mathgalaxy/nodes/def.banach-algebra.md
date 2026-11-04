@@ -1,6 +1,6 @@
 # Banach 代数　`def.banach-algebra`
 Banach 代数
-layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.banach-algebra)　·　[节点索引](../index.md)
 
 结合代数 $\mathcal{A}$ 配范数 $\|\cdot\|$ 叫 **Banach 代数**，若
@@ -17,4 +17,4 @@ refs: Rudin, Functional Analysis · 赋范空间与有界算子
 
 > 说明见 `notes/def.banach-algebra.md`
 
-引用：`def.banach-algebra`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.banach-algebra`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

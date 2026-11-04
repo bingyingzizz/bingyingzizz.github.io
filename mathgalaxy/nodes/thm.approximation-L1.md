@@ -1,6 +1,6 @@
 # L¹ 里的逼近　`thm.approximation-L1`
 定理：$L^{1}$ 中可用简单函数 / 连续函数逼近
-layer 20 · 定理 · 积分 · 实变函数+数学分析
+layer 22 · 定理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=thm.approximation-L1)　·　[节点索引](../index.md)
 
 设 $f \in L^1(\mu)$。则对任意 $\varepsilon > 0$，存在简单函数 $\varphi = \sum_j a_j \chi_{E_j}$ 使
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, Theorem 2.26
 
 > 说明见 `notes/thm.approximation-L1.md`
 
-引用：`thm.approximation-L1`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.approximation-L1`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

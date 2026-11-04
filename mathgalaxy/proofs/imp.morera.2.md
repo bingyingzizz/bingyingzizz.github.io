@@ -9,6 +9,6 @@
 
 $$F(z + h) - F(z) = \int_{x}^{x + h} f(t + i y)\,\mathrm{d}t,$$
 
-除以 $h$ 后用 $f$ 的**连续性**：$\dfrac{1}{h}\displaystyle\int_x^{x+h} f(t + iy)\,\mathrm{d}t \to f(x + iy) = f(z)$（$h \to 0$）。竖直方向同理。所以 $F$ 在 $D(a, r)$ 内复可微且 $F' = f$。
+除以 $h$ 后用 $f$ 的**连续性**：$\dfrac{1}{h}\displaystyle\int_x^{x+h} f(t + iy)\,\mathrm{d}t \to f(x + iy) = f(z)$（$h \to 0$）。竖直方向同理。所以 $F$ 在 $B(a, r)$ 内复可微且 $F' = f$。
 
 > 续见 proofs/imp.morera.3.md

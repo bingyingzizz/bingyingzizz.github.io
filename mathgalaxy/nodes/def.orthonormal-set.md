@@ -1,6 +1,6 @@
 # 正交基　`def.orthonormal-set`
 标准正交集、完备性与正交基
-layer 11 · 定义 · Hilbert 空间 · 泛函分析
+layer 16 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.orthonormal-set)　·　[节点索引](../index.md)
 
 设 $\{f_i\}_{i \in I} \subseteq H$。
@@ -20,4 +20,4 @@ refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.orthonormal-set.md`
 
-引用：`def.orthonormal-set`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.orthonormal-set`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

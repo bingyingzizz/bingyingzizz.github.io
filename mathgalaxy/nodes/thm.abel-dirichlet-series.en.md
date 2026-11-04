@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 23 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.abel-dirichlet-series.md` and `proofs/`.
 
 
-Cite: `thm.abel-dirichlet-series` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.abel-dirichlet-series` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

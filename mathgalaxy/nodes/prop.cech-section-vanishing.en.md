@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 18 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Čech Vanishing for Split Covers` (short) · `Covers with Sections Have Acyclic Čech Complexes` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.cech-section-vanishing.md` and `proofs/`.
 
 
-Cite: `prop.cech-section-vanishing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cech-section-vanishing` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

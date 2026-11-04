@@ -1,6 +1,6 @@
 # 紧　`def.compact`
 紧空间
-layer 14 · 定义 · 度量空间 · 拓扑学
+layer 16 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.compact)　·　[节点索引](../index.md)
 
 距离空间 $(X, d)$ **紧**，当且仅当 $X$ 的每个**开覆盖**都有有限子覆盖。展开说：若族 $\{U_i\}_{i \in I}$ 满足「每个 $U_i$ 都是开集」且 $X = \bigcup_{i \in I} U_i$，则存在有限个下标使
@@ -9,13 +9,15 @@ $$X = \bigcup_{k=1}^{n} U_{i_k}$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sequentially-compact`](../nodes/def.sequentially-compact.md) 列紧：紧 $\iff$ 列紧　[proofs/eq.compact-seqcompact.md](../proofs/eq.compact-seqcompact.md)
-- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-dep.metric-compact.md](../proofs/def-dep.metric-compact.md)
+- [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理：两种「紧」：有限可满足 vs 有限子覆盖　[proofs/e166.analogy.md](../proofs/e166.analogy.md)
+
+- …另有入边，续页见 [nodes/def.compact.2.md](./def.compact.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.compact.2.md](./def.compact.2.md)
+- …另有出边，续页见 [nodes/def.compact.3.md](./def.compact.3.md)
 
 refs: Munkres, Topology, §26
 
 > 说明见 `notes/def.compact.md`
 
-引用：`def.compact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.compact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

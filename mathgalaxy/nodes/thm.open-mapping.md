@@ -1,6 +1,6 @@
 # 开映射定理　`thm.open-mapping`
 开映射定理：非常数全纯函数把开集映成开集
-layer 23 · 定理 · 共形映射与正规族 · 复变函数
+layer 27 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.open-mapping)　·　[节点索引](../index.md)
 
 设 $f$ 在区域 $\Omega$ 上全纯且**不是常数**。则 $f$ 是开映射：$\Omega$ 中每个开集的像都是开集。
@@ -19,4 +19,4 @@ refs: 王晓光《复变函数》· 开映射定理与单叶解析函数；Ahlfo
 
 > 说明见 `notes/thm.open-mapping.md`
 
-引用：`thm.open-mapping`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.open-mapping`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
+layer 19 · lemma · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 names: `1-Bounded Čech Complex` (short) · `The Augmented Čech Complex of a Stone Surjection Is 1-Bounded Acyclic` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.stone-cech-1-bounded.md` and `proofs/`.
 
 
-Cite: `lem.stone-cech-1-bounded` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.stone-cech-1-bounded` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

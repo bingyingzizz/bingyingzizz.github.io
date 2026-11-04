@@ -1,6 +1,6 @@
 # 中国剩余定理　`thm.crt`
 中国剩余定理：模两两互素的分解
-layer 14 · 定理 · 整除与同余 · 数论
+layer 15 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.crt)　·　[节点索引](../index.md)
 
 设 $n_{1}, \cdots, n_{k}$ 两两互素，$N = n_{1} \cdots n_{k}$。则
@@ -21,4 +21,4 @@ refs: 华罗庚《数论导引》§2
 
 > 说明见 `notes/thm.crt.md`
 
-引用：`thm.crt`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.crt`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

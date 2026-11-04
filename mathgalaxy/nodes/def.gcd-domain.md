@@ -1,6 +1,6 @@
 # gcd 整环　`def.gcd-domain`
 gcd 整环：任意两元素都有最大公因子
-layer 12 · 定义 · 整环与分解 · 抽象代数
+layer 13 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.gcd-domain)　·　[节点索引](../index.md)
 
 整环 $A$ 叫 **gcd 整环**，若任意 $a, b \in A$ 都有**最大公因子**：存在 $d$ 使
@@ -19,4 +19,4 @@ refs: Kaplansky, Commutative Rings, Ch. 1
 
 > 说明见 `notes/def.gcd-domain.md`
 
-引用：`def.gcd-domain`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.gcd-domain`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

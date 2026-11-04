@@ -12,5 +12,5 @@ The proof is the derivation on the edge.
 Wikipedia: https://en.wikipedia.org/wiki/Adjoint_functor_theorem · nLab: https://ncatlab.org/nlab/show/adjoint+functor+theorem
 
 
-Cite: `thm.saft` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.saft` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

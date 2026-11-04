@@ -11,5 +11,5 @@ names: `Sheafification and Images` (short) · `Sheafification Commutes with Imag
 Chinese only — see the Chinese page `nodes/prop.sheafification-image.md` and `proofs/`.
 
 
-Cite: `prop.sheafification-image` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.sheafification-image` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

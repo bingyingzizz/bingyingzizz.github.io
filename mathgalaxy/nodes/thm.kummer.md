@@ -1,6 +1,6 @@
 # Kummer 判别法　`thm.kummer`
 定理：Kummer 判别法（正项级数判据的总纲）
-layer 16 · 定理 · 数项级数的敛散性 · 数学分析
+layer 20 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.kummer)　·　[节点索引](../index.md)
 
 设 $\sum a_n$ 是**正项**级数（$a_n > 0$），$\{c_n\}$ 是一列正数。令
@@ -19,4 +19,4 @@ refs: Knopp, Theory and Application of Infinite Series；Rudin, Principles of Ma
 
 > 说明见 `notes/thm.kummer.md`
 
-引用：`thm.kummer`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.kummer`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

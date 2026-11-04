@@ -11,5 +11,5 @@ names: `Left Exact and R0` (short) · `Left Exactness and the Zeroth Derived Fun
 Chinese only — see the Chinese page `nodes/prop.left-exact-iff-R0.md` and `proofs/`.
 
 
-Cite: `prop.left-exact-iff-R0` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.left-exact-iff-R0` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 根子空间分解　`thm.primary-decomposition`
 定理（主分解）：$V = \bigoplus_i \ker (T - \lambda_i I)^{m_i}$
-layer 15 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 18 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.primary-decomposition)　·　[节点索引](../index.md)
 
 设 $K$ **代数闭**，$T : V \to V$，$\dim V = n < \infty$。设
@@ -21,4 +21,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
 
 > 说明见 `notes/thm.primary-decomposition.md`
 
-引用：`thm.primary-decomposition`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.primary-decomposition`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

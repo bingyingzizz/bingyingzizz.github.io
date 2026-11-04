@@ -1,6 +1,6 @@
 # 可测函数的封闭性　`prop.measurable-closure`
 命题：可测函数对和、积、sup、max、极限封闭
-layer 15 · 命题 · 可测函数与收敛 · 实变函数+数学分析
+layer 18 · 命题 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=prop.measurable-closure)　·　[节点索引](../index.md)
 
 以下都设函数取值在 $\overline{\mathbb{R}} = [-\infty , +\infty ]$ 或 $\mathbb{C}$ 中，且可测。
@@ -17,4 +17,4 @@ refs: Folland, Real Analysis, Prop. 2.7
 
 > 说明见 `notes/prop.measurable-closure.md`
 
-引用：`prop.measurable-closure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.measurable-closure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

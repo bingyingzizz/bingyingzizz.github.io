@@ -1,6 +1,6 @@
 # 解析延拓　`def.analytic-continuation`
 解析延拓：函数元素、沿曲线的延拓与完全解析函数
-layer 24 · 定义 · 解析延拓与整函数 · 复变函数
+layer 28 · 定义 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=def.analytic-continuation)　·　[节点索引](../index.md)
 
 **函数元素**是一个二元组 $(f, D)$：$D$ 是开圆盘，$f$ 在 $D$ 上全纯。
@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· 解析延拓与完全解析函数；Ahlfors,
 
 > 说明见 `notes/def.analytic-continuation.md`
 
-引用：`def.analytic-continuation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.analytic-continuation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

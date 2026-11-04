@@ -1,6 +1,6 @@
 # Rayleigh 商　`def.rayleigh-quotient`
 Rayleigh 商：用二次型读出特征值
-layer 14 · 定义 · 内积空间与正交性 · 抽象代数
+layer 20 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.rayleigh-quotient)　·　[节点索引](../index.md)
 
 **在做什么**：把「特征值」变成一个**极值问题**。这样特征值就能被「优化」而不是只能「解方程」。
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」·
 
 > 说明见 `notes/def.rayleigh-quotient.md`
 
-引用：`def.rayleigh-quotient`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.rayleigh-quotient`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

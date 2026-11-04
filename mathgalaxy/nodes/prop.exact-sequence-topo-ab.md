@@ -1,6 +1,6 @@
 # 拓扑阿贝尔群正合列的搬运　`prop.exact-sequence-topo-ab`
 拓扑正合列 $\implies$ 凝聚态正合列
-layer 19 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
+layer 21 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.exact-sequence-topo-ab)　·　[节点索引](../index.md)
 
 设
@@ -22,4 +22,4 @@ refs: Le Stum, Proposition 6.2.3
 
 > 说明见 `notes/prop.exact-sequence-topo-ab.md`
 
-引用：`prop.exact-sequence-topo-ab`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.exact-sequence-topo-ab`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

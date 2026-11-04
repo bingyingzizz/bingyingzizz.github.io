@@ -23,4 +23,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 闭集与�
 
 > 说明见 `notes/def.interior.md`
 
-引用：`def.interior`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.interior`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

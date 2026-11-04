@@ -4,15 +4,15 @@
 中心天体 def.sequence-limit　·　13 个节点　·　根 `../`
 
 - def.limsup-liminf　上极限与下极限　layer 7
-- def.extended-real　扩充实数 [−∞,+∞]　layer 13
-- def.interval　区间　layer 13
-- def.sequence-limit　数列极限　layer 13
-- prop.limit-basic　极限的基本性质　layer 14
-- def.series　级数收敛　layer 14
-- def.continuous　连续　layer 14
-- def.function-limit　函数极限　layer 14
-- def.cauchy-sequence　Cauchy 列　layer 14
-- def.derivative　导数　layer 15
-- def.function-limit-onesided　单侧极限　layer 15
-- thm.squeeze　夹逼定理　layer 15
-- prop.limit-arithmetic　极限的四则运算与保序性　layer 15
+- def.extended-real　扩充实数 [−∞,+∞]　layer 14
+- def.interval　区间　layer 14
+- def.sequence-limit　数列极限　layer 14
+- prop.limit-basic　极限的基本性质　layer 15
+- def.series　级数收敛　layer 15
+- def.continuous　连续　layer 15
+- def.function-limit　函数极限　layer 15
+- def.cauchy-sequence　Cauchy 列　layer 15
+- def.derivative　导数　layer 16
+- def.function-limit-onesided　单侧极限　layer 16
+- thm.squeeze　夹逼定理　layer 16
+- prop.limit-arithmetic　极限的四则运算与保序性　layer 16

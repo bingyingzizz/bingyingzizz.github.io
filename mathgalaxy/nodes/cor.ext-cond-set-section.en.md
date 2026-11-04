@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · corollary · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 22 · corollary · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Ext Section Formula` (short) · `Section Formula for Ext` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.ext-cond-set-section.md` and `proofs/`.
 
 
-Cite: `cor.ext-cond-set-section` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `cor.ext-cond-set-section` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

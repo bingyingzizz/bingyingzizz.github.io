@@ -1,6 +1,6 @@
 # 秩　`def.rank`
 秩 $\operatorname{rank} T$
-layer 11 · 定义 · 线性映射与秩 · 抽象代数
+layer 14 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.rank)　·　[节点索引](../index.md)
 
 设 $T : V \to W$ 线性。$T$ 的**秩**定义为像的维数：
@@ -22,4 +22,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 3
 
 > 说明见 `notes/def.rank.md`
 
-引用：`def.rank`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.rank`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

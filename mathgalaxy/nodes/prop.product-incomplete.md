@@ -1,6 +1,6 @@
 # 乘积测度通常不完备　`prop.product-incomplete`
 注记：$\mu$、$\nu$ 完备时，$\mu \times \nu$ 常常不完备
-layer 18 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 19 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=prop.product-incomplete)　·　[节点索引](../index.md)
 
 即使 $\mu$ 与 $\nu$ 都**完备**，$\mu \times \nu$ 也**经常是不完备的**：存在 $E \in \mathcal{M} \otimes  \mathcal{N}$ 使 $\mu \times \nu(E) = 0$，但 $E$ 有子集不属于 $\mathcal{M} \otimes  \mathcal{N}$。
@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, §2.5
 
 > 说明见 `notes/prop.product-incomplete.md`
 
-引用：`prop.product-incomplete`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.product-incomplete`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

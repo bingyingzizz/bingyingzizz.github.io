@@ -1,6 +1,6 @@
 # Casorati–Weierstrass 定理　`thm.casorati-weierstrass`
 本性奇点附近函数值稠密（Casorati–Weierstrass）
-layer 22 · 定理 · Cauchy 理论 · 复变函数
+layer 26 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.casorati-weierstrass)　·　[节点索引](../index.md)
 
 设 $z_{0}$ 
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 本性奇点与 Casorati–Weierstrass 定�
 
 > 说明见 `notes/thm.casorati-weierstrass.md`
 
-引用：`thm.casorati-weierstrass`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.casorati-weierstrass`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

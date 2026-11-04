@@ -1,6 +1,6 @@
 # 酉矩阵与正交矩阵　`def.unitary-matrix`
 酉矩阵与正交矩阵：保持内积的矩阵
-layer 13 · 定义 · 内积空间与正交性 · 抽象代数
+layer 19 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.unitary-matrix)　·　[节点索引](../index.md)
 
 **在做什么**：把「保持长度与夹角」这件事写成矩阵条件。复情形叫**酉**，实情形叫**正交** —— 同一个条件在两种域上的两副面孔。
@@ -23,4 +23,4 @@ refs: Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」�
 
 > 说明见 `notes/def.unitary-matrix.md`
 
-引用：`def.unitary-matrix`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.unitary-matrix`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

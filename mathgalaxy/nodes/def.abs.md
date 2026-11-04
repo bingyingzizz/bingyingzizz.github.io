@@ -1,6 +1,6 @@
 # 绝对值 |x|　`def.abs`
 绝对值 $|x|$
-layer 9 · 定义 · 实数的运算与不等式 · 数学分析+集合论
+layer 10 · 定义 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=def.abs)　·　[节点索引](../index.md)
 
 设 $K$ 是**有序域**（$\mathbb{Q}$ 与 $\mathbb{R}$ 都是），$x \in K$。定义
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 1
 
 > 说明见 `notes/def.abs.md`
 
-引用：`def.abs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.abs`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

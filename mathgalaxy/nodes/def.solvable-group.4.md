@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.sn-solvable`](../nodes/prop.sn-solvable.md) 对称群的可解性
+- 被 [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解 用
+- 被 [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解 用

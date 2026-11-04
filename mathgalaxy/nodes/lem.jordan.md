@@ -1,6 +1,6 @@
 # Jordan 引理　`lem.jordan`
 引理：Jordan 引理（大圆弧上的指数衰减）
-layer 18 · 引理 · 留数与辐角原理 · 复变函数
+layer 19 · 引理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=lem.jordan)　·　[节点索引](../index.md)
 
 **白话**：上半平面的大半圆弧上，$e^{iaz}$（$a > 0$）在圆弧顶部指数衰减；只要 $f$ 在弧上一致趋于零，$f e^{iaz}$ 在弧上的积分就趋于零 —— 比「弧长乘最大模」的粗糙估计强得多。
@@ -18,4 +18,4 @@ refs: 王晓光《复变函数》第 23–24 章 · 用留数计算实积分；A
 
 > 说明见 `notes/lem.jordan.md`
 
-引用：`lem.jordan`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.jordan`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

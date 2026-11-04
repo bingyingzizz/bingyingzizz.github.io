@@ -10,5 +10,5 @@ layer 2 · definition · cluster Families of Sets and Sigma-Algebras (`analysis.
 Chinese only — see the Chinese page `nodes/def.set-ring.md` and `proofs/`.
 
 
-Cite: `def.set-ring` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.set-ring` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

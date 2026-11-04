@@ -1,6 +1,6 @@
 # 拉回与内 Hom、张量积相容　`prop.inverse-image-tensor`
 命题：$f_{*}\operatorname{Hom}(f^{-1}M, N) = \operatorname{Hom}(M, f_{*}N)$，$f^{-1}(M \otimes N) \cong f^{-1}M \otimes f^{-1}N$
-layer 19 · 命题 · 拓扑斯 · 范畴论
+layer 21 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.inverse-image-tensor)　·　[节点索引](../index.md)
 
 设 $f : \mathcal{T} \to \mathcal{T}'$ 是拓扑斯态射、$M, N$ 是阿贝尔群层。则
@@ -17,4 +17,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 7.52
 
 > 说明见 `notes/prop.inverse-image-tensor.md`
 
-引用：`prop.inverse-image-tensor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.inverse-image-tensor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

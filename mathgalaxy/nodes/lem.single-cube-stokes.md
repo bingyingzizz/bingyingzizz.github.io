@@ -1,6 +1,6 @@
 # 方块上的 Stokes 公式　`lem.single-cube-stokes`
 单个方块上的 Stokes 公式
-layer 21 · 引理 · 微分形式、积分与 de Rham · 微分几何
+layer 22 · 引理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=lem.single-cube-stokes)　·　[节点索引](../index.md)
 
 **在做什么**：把 Stokes 定理先在一块标准方块上算穿 —— 左边是一个重积分、右边是 $2k$ 个面上的积分，两边逐项对上
@@ -17,4 +17,4 @@ refs: Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 方�
 
 > 说明见 `notes/lem.single-cube-stokes.md`
 
-引用：`lem.single-cube-stokes`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.single-cube-stokes`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

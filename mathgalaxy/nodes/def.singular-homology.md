@@ -1,6 +1,6 @@
 # 奇异同调群　`def.singular-homology`
 奇异单纯形、奇异链复形与奇异同调群 $H_{p}(X)$
-layer 19 · 定义 · 同调群 · 拓扑学
+layer 21 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.singular-homology)　·　[节点索引](../index.md)
 
 设 $X$ 是任意拓扑空间。一个**奇异 $p$-单纯形**是任意连续映射
@@ -23,4 +23,4 @@ refs: Munkres, Elements of Algebraic Topology, Ch. 4 · Singular Homology；Hatc
 
 > 说明见 `notes/def.singular-homology.md`
 
-引用：`def.singular-homology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.singular-homology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

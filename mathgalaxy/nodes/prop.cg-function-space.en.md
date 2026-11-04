@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 18 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `Function Spaces` (short) · `Function Spaces into Weakly Hausdorff Spaces` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.cg-function-space.md` and `proofs/`.
 
 
-Cite: `prop.cg-function-space` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cg-function-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

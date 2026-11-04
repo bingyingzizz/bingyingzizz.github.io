@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.cgwh-closed)　·　第 1 页 [nodes/prop.cgwh-closed.md](./prop.cgwh-closed.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑：用到了定义 子空间拓扑　[proofs/def-dep.cgwhclosed-subspace.md](../proofs/def-dep.cgwhclosed-subspace.md)
 - [`def.weak-hausdorff`](../nodes/def.weak-hausdorff.md) 弱 Hausdorff 空间：用到了定义 弱 Hausdorff 空间　[proofs/def-dep.cgwhclosed-weakhaus.md](../proofs/def-dep.cgwhclosed-weakhaus.md)

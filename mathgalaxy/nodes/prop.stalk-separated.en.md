@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.stalk-separated.md` and `proofs/`.
 
 
-Cite: `prop.stalk-separated` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.stalk-separated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # Schwarz 反射原理　`thm.schwarz-reflection`
 Schwarz 反射原理：跨越实轴解析地延拓
-layer 25 · 定理 · 解析延拓与整函数 · 复变函数
+layer 29 · 定理 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=thm.schwarz-reflection)　·　[节点索引](../index.md)
 
 设 $\Omega$ 关于实轴对称，$\Omega^{+} = \Omega \cap \{\, \operatorname{Im} z > 0 \,\}$。若 $f$ 在 $\Omega^{+}$ 上
@@ -17,4 +17,4 @@ refs: 王晓光《复变函数》· 对称原理与解析延拓；Ahlfors, Compl
 
 > 说明见 `notes/thm.schwarz-reflection.md`
 
-引用：`thm.schwarz-reflection`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.schwarz-reflection`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

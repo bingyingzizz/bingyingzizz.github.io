@@ -21,4 +21,4 @@ refs: Le Stum, An introduction to condensed mathematics, Definition 3.2.10
 
 > 说明见 `notes/def.associated-sheaf.md`
 
-引用：`def.associated-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.associated-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

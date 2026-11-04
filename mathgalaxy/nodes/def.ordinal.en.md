@@ -10,5 +10,5 @@ layer 7 · definition · cluster Ordinals and Transfinite Recursion (`set.ordina
 Chinese only — see the Chinese page `nodes/def.ordinal.md` and `proofs/`.
 
 
-Cite: `def.ordinal` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.ordinal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

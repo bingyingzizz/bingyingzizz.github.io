@@ -1,6 +1,6 @@
 # Riemann 曲率张量　`def.curvature-tensor`
 Riemann 曲率张量与局部平坦性
-layer 23 · 定义 · 内蕴几何 · 微分几何
+layer 26 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.curvature-tensor)　·　[节点索引](../index.md)
 
 白话：**曲率张量量的是「沿两个方向搬来搬去，顺序换一下，结果差多少」**。在平坦的平面里怎么换都对，差为零；在球面上换顺序就会差一点，那一点就是曲
@@ -20,4 +20,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面
 
 > 说明见 `notes/def.curvature-tensor.md`
 
-引用：`def.curvature-tensor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.curvature-tensor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

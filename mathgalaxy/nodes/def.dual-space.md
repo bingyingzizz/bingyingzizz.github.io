@@ -1,6 +1,6 @@
 # 对偶空间　`def.dual-space`
 对偶空间 $V^{\ast}$
-layer 10 · 定义 · 线性映射与秩 · 抽象代数
+layer 13 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.dual-space)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间。$V$ 的**对偶空间**定义为从 $V$ 到 $K$ 的线性映射全体：
@@ -27,4 +27,4 @@ refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
 > 说明见 `notes/def.dual-space.md`
 
-引用：`def.dual-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.dual-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

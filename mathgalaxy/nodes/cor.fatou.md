@@ -1,6 +1,6 @@
 # Fatou 的推论　`cor.fatou`
 推论：$f_{n} \to f \text{a.e.} \implies \int f \le \lim \int f_{n}$
-layer 20 · 推论 · 积分 · 实变函数+数学分析
+layer 21 · 推论 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=cor.fatou)　·　[节点索引](../index.md)
 
 设 $\{f_n\} \subseteq L^+$，$f \in L^+$，且 $f_n \to f$ a.e.。则
@@ -17,4 +17,4 @@ refs: Folland, Real Analysis, §2.2；Rudin, Real and Complex Analysis, Ch. 1
 ## 说明
 a.e. 收敛时 $\liminf f_n = f$，直接套 Fatou 引理即可。
 
-引用：`cor.fatou`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.fatou`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

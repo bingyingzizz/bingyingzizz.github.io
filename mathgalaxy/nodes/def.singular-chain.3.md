@@ -6,3 +6,4 @@
 - 被 [`def.integral-on-chain`](../nodes/def.integral-on-chain.md) 链上的积分 用
 - 被 [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理 用
 - ⇒ [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理
+- 被 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群 用

@@ -1,6 +1,6 @@
 # Hausdorff 拓扑阿贝尔群的核与余核　`prop.abhaus-strict-exact`
 命题：$\mathbf{AbHaus}$ 中的核、余核与严格正合列
-layer 17 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
+layer 19 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.abhaus-strict-exact)　·　[节点索引](../index.md)
 
 设 $\mathbf{AbHaus}$ 是 **Hausdorff 拓扑阿贝尔群**（态射取连续同态）的范畴。则
@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §5.1
 
 > 说明见 `notes/prop.abhaus-strict-exact.md`
 
-引用：`prop.abhaus-strict-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.abhaus-strict-exact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

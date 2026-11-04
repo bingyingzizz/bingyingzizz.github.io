@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.divisible-group`](../nodes/def.divisible-group.md) 可除群 + [`thm.pid-injective-divisible`](../nodes/thm.pid-injective-divisible.md) 内射等价于可除：可除的定义 $\implies$ 三个标准例子　[proofs/imp.divisible-examples.md](../proofs/imp.divisible-examples.md)
+- [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根：用到了定义 单位根　[proofs/dep.gap-divisible-groups-roots-of-unity.md](../proofs/dep.gap-divisible-groups-roots-of-unity.md)

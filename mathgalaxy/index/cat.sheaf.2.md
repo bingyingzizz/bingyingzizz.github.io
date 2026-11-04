@@ -14,6 +14,6 @@
 - prop.stalk-of-sheafification　层化不改变茎　layer 16
 - prop.constant-sheaf-adjunction　常层的伴随　layer 16
 - def.crystalline-sheaf　晶体层　layer 16
-- prop.crystalline-sheaf-equiv　晶体层就是 X 上的层　layer 16
+- prop.cech-properties　Čech 函子的性质　layer 17
 
 > 续见 `index/cat.sheaf.3.md`

@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.first-fundamental-form`](../nodes/def.first-fundamental-form.md) 第一基本形式：用到了定义 第一基本形式　[proofs/dep.iff-intrinsic.md](../proofs/dep.iff-intrinsic.md)
+- [`def.second-fundamental-form`](../nodes/def.second-fundamental-form.md) 第二基本形式：用到了定义 第二基本形式　[proofs/dep.gap-intrinsic-quantity-second-fundamental-form.md](../proofs/dep.gap-intrinsic-quantity-second-fundamental-form.md)
 
 > 续见 [nodes/def.intrinsic-quantity.4.md](./def.intrinsic-quantity.4.md)

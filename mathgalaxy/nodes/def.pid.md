@@ -1,6 +1,6 @@
 # 主理想整环　`def.pid`
 主理想整环（PID）：每个理想都由一个元素生成
-layer 10 · 定义 · 整环与分解 · 抽象代数
+layer 11 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.pid)　·　[节点索引](../index.md)
 
 整环 $A$ 叫**主理想整环**（PID），若每个理想都是主理想：对任意理想 $I$ 存在 $a$ 使 $I = (a) = aA$。
@@ -16,4 +16,4 @@ refs: Atiyah–Macdonald, Ch. 1
 
 > 说明见 `notes/def.pid.md`
 
-引用：`def.pid`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pid`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

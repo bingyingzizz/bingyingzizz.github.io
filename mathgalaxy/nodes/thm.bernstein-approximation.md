@@ -1,6 +1,6 @@
 # Bernstein 多项式逼近　`thm.bernstein-approximation`
 Bernstein 多项式逼近（Weierstrass 定理的显式证明）
-layer 17 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 18 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.bernstein-approximation)　·　[节点索引](../index.md)
 
 对 $f \in C[0, 1]$，令
@@ -16,4 +16,4 @@ refs: Rudin, Functional Analysis · Stone–Weierstrass 定理；Bernstein 1912
 
 > 说明见 `notes/thm.bernstein-approximation.md`
 
-引用：`thm.bernstein-approximation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bernstein-approximation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

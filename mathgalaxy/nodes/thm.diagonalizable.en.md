@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 19 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.diagonalizable.md` and `proofs/`.
 
 
-Cite: `thm.diagonalizable` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.diagonalizable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

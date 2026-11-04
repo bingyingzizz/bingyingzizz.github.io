@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 完备化可改零集 → prop.completion-measurable-function
+
 - 依测度收敛 | 依测度 Cauchy 收敛 → thm.cauchy-in-measure
 
 - 收敛方式 | 五种收敛 | modes of convergence | 几乎处处收敛 | 一致收敛 → def.convergence-modes
@@ -28,7 +30,5 @@
 - MCT a.e. | 单调收敛 a.e. → cor.mct-ae
 
 - 单调收敛 | MCT | monotone convergence theorem | Levi 定理 → thm.mct
-
-- 复函数的积分 | 复积分 → def.integral-complex
 
 > 续见 alias/aka/analysis.6.md

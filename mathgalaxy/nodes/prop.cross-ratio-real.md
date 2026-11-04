@@ -1,6 +1,6 @@
 # 交比为实 ⟺ 四点共圆　`prop.cross-ratio-real`
 交比取实值当且仅当四点共圆或共线
-layer 20 · 命题 · 共形映射与正规族 · 复变函数
+layer 24 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.cross-ratio-real)　·　[节点索引](../index.md)
 
 设 $z_{1}, z_{2}, z_{3}, z_{4}$ 互不相同。则
@@ -20,4 +20,4 @@ refs: 王晓光《复变函数》· 交比与共圆判据；Ahlfors, Complex Ana
 
 > 说明见 `notes/prop.cross-ratio-real.md`
 
-引用：`prop.cross-ratio-real`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.cross-ratio-real`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

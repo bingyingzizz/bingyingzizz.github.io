@@ -1,6 +1,6 @@
 # 拓扑斯上的层即保极限的预层　`prop.topos-sheaf-limits`
 拓扑斯上的层 $\iff$ 保持所有极限
-layer 16 · 命题 · 拓扑斯 · 范畴论
+layer 18 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.topos-sheaf-limits)　·　[节点索引](../index.md)
 
 拓扑斯 $\mathcal{T}$（配标准拓扑）上的预层 $F : \mathcal{T}^{\mathrm{op}} \to \mathbf{Set}$ 是层 $\iff$ $F$ 保持所有极限。
@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.3
 
 > 说明见 `notes/prop.topos-sheaf-limits.md`
 
-引用：`prop.topos-sheaf-limits`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.topos-sheaf-limits`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

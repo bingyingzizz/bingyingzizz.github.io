@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 29 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Connection Coefficients` (short) · `Connection Coefficients in an Orthonormal Frame` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.christoffel-frame.md` and `proofs/`.
 
 
-Cite: `prop.christoffel-frame` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.christoffel-frame` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

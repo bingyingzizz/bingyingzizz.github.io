@@ -1,6 +1,6 @@
 # 圆周率 π　`def.pi`
 常数 $\pi$（由余弦的最小正零点定义）
-layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 18 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.pi)　·　[节点索引](../index.md)
 
 由 $\cos$ 的幂级数可以证明：$\cos$ 在 $(0, 2)$ 内**恰有一个**零点。把它记为 $\pi / 2$，即
@@ -16,4 +16,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 
 > 说明见 `notes/def.pi.md`
 
-引用：`def.pi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

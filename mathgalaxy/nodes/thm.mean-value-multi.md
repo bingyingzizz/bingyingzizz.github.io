@@ -1,6 +1,6 @@
 # 多元中值定理　`thm.mean-value-multi`
 定理：多元中值定理与中值不等式
-layer 22 · 定理 · 多元微分 · 数学分析
+layer 26 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.mean-value-multi)　·　[节点索引](../index.md)
 
 **中值定理**：设 $f : U \to \mathbb{R}$ 在开集 $U \subseteq \mathbb{R}^{n}$ 上可微，$a, a + h \in U$ 且线段 $[a, a+h] \subset U$。则存在 $\theta \in (0, 1)$ 使
@@ -23,4 +23,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Lang, Undergraduate An
 
 > 说明见 `notes/thm.mean-value-multi.md`
 
-引用：`thm.mean-value-multi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mean-value-multi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

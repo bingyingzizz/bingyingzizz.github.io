@@ -23,6 +23,6 @@
 
 - 可数 | countable | 可数无穷 | 可列 → def.countable
 
-- 基数 | cardinality | 势 | cardinal number → def.cardinal
+- 基数 | cardinality | 势 | cardinal number | #A | |A| | card → def.cardinal
 
 > 续见 alias/aka/set-theory.3.md

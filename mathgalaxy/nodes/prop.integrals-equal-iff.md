@@ -1,6 +1,6 @@
 # 何时两个函数积分处处相同　`prop.integrals-equal-iff`
 命题：$\int_E f = \int_E g$ 对一切 $E \iff f = g \text{a.e.}$
-layer 20 · 命题 · 积分 · 实变函数+数学分析
+layer 22 · 命题 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=prop.integrals-equal-iff)　·　[节点索引](../index.md)
 
 设 $f, g \in L^1(\mu)$。则下列三条等价：
@@ -19,4 +19,4 @@ refs: Folland, Real Analysis, Cor. 2.23
 
 > 说明见 `notes/prop.integrals-equal-iff.md`
 
-引用：`prop.integrals-equal-iff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integrals-equal-iff`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

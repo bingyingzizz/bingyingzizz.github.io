@@ -1,6 +1,6 @@
 # 每个向量空间有基　`thm.vsbasis`
 每个向量空间都有基（Zorn 引理的经典应用）
-layer 10 · 定理 · 向量空间的基 · 抽象代数
+layer 12 · 定理 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=thm.vsbasis)　·　[节点索引](../index.md)
 
 设 $V$ 是域 $K$ 上的向量空间。则
@@ -20,4 +20,4 @@ refs: Lang, Linear Algebra；Brunner, The Axiom of Choice in Topology
 
 这是「序理论的结论在代数里落地」的标准范例，也是本星图上跨板块连线的一个实例。
 
-引用：`thm.vsbasis`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.vsbasis`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

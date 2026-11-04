@@ -1,6 +1,6 @@
 # 哪些函数可积　`prop.integrable-examples`
 命题：连续、单调 $\implies$ 可积；Dirichlet 函数不可积
-layer 20 · 命题 · Riemann 积分 · 数学分析
+layer 24 · 命题 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=prop.integrable-examples)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上有界。
@@ -18,4 +18,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.integrable-examples.md`
 
-引用：`prop.integrable-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integrable-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

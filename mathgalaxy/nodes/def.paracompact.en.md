@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
+layer 7 · definition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.paracompact.md` and `proofs/`.
 
 
-Cite: `def.paracompact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.paracompact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

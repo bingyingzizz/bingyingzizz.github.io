@@ -1,6 +1,6 @@
 # 环与域的基本等式　`prop.field-rules`
 命题：环与域里的基本等式
-layer 8 · 命题 · 实数的运算与不等式 · 数学分析+抽象代数
+layer 9 · 命题 · 实数的运算与不等式 · 数学分析+抽象代数
 [在星图里打开](../#n=prop.field-rules)　·　[节点索引](../index.md)
 
 设 $A$ 是环，$a, b \in A$。则
@@ -22,4 +22,4 @@ refs: Lang, Algebra, Ch. I；Atiyah–Macdonald, Introduction to Commutative Alg
 
 > 说明见 `notes/prop.field-rules.md`
 
-引用：`prop.field-rules`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.field-rules`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

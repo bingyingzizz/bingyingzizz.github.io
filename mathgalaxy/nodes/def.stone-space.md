@@ -1,6 +1,6 @@
 # 全不连通与 Stone 空间　`def.stone-space`
 Stone 空间与 Stonean 空间
-layer 16 · 定义 · Stone 与 Stonean · 拓扑学
+layer 18 · 定义 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=def.stone-space)　·　[节点索引](../index.md)
 
 - $X$ **全不连通**（totally disconnected），如果其中每个连通分量都是单点；
@@ -20,4 +20,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/def.stone-space.md`
 
-引用：`def.stone-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.stone-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

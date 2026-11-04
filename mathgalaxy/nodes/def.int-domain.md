@@ -1,6 +1,6 @@
 # 整环　`def.int-domain`
 整环：没有零因子的交换幺环
-layer 8 · 定义 · 整环与分解 · 抽象代数
+layer 9 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.int-domain)　·　[节点索引](../index.md)
 
 设 $A$ 是交换、含幺、且 $A \ne \{0\}$ 的环。若 $ab = 0$ 只可能 $a = 0$ 或 $b = 0$，就称 $A$ 是**整环**（$A$ 没有零因子）。
@@ -20,4 +20,4 @@ refs: Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Borevich�
 
 > 说明见 `notes/def.int-domain.md`
 
-引用：`def.int-domain`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.int-domain`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

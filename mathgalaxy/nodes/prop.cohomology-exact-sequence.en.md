@@ -10,5 +10,5 @@ layer 13 · proposition · cluster Homology and Exact Sequences (`hom.cohomology
 Chinese only — see the Chinese page `nodes/prop.cohomology-exact-sequence.md` and `proofs/`.
 
 
-Cite: `prop.cohomology-exact-sequence` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cohomology-exact-sequence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

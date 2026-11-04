@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
+layer 23 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.huber-subring-recovery.md` and `proofs/`.
 
 
-Cite: `prop.huber-subring-recovery` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.huber-subring-recovery` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

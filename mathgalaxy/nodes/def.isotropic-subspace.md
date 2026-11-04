@@ -1,6 +1,6 @@
 # 迷向子空间　`def.isotropic-subspace`
 迷向子空间：整块都互相正交的子空间
-layer 13 · 定义 · 多重线性与张量 · 抽象代数
+layer 17 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.isotropic-subspace)　·　[节点索引](../index.md)
 
 **在做什么**：把「一个迷向向量」放大成「一整块」—— 子空间里任意两个向量都互相正交（包括自己与自己）。这是理解非退化型结构的关
@@ -19,4 +19,4 @@ refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· 迷向子空间；
 
 > 说明见 `notes/def.isotropic-subspace.md`
 
-引用：`def.isotropic-subspace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.isotropic-subspace`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

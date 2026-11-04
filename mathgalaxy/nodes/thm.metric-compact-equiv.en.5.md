@@ -4,13 +4,6 @@ English entry · root `../`
 
 So "sequentially compact $\implies$ totally bounded $\implies$ compact" and "compact $\implies$ sequentially compact" close the circle, and the three notions agree.
 
-⚠ In a general topological space only "compact $\implies$ sequentially compact" holds — **the converse fails**: sequential compactness is a piece of luck peculiar to metric spaces.
+⚠ In a general topological space only "compact $\implies$ sequentially compact" holds — **the converse fails**: sequential compactness is a piece of luck peculiar to metric spaces.**What each direction uses, and whether any extra hypothesis is needed** (this list *is* the content of the equivalence):
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Sequentially_compact_space · nLab: https://ncatlab.org/nlab/show/compact+space
-
-
-Cite: `thm.metric-compact-equiv` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/thm.metric-compact-equiv.en.6.md

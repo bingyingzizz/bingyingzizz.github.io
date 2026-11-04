@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 等距与正交变换 → def.isometry
+
+- 二次型 → def.quadratic-form
+
+- 双线性型 → def.bilinear-form
+
 - 向量空间的张量积 → def.tensor-product-vs
 
 - 外幂 → def.exterior-power
@@ -36,9 +42,5 @@
 - 互素理想 | 互极大理想 → def.comaximal
 
 - 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
-
-- 埃塔勒层 | 平展层 → def.etale-sheaf
-
-- 埃塔勒层的例子 → prop.etale-sheaf-examples
 
 > 续见 alias/aka/algebra.8.md

@@ -9,10 +9,12 @@ layer 6 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/def-dep.weakhaus-hausdorff.md](../proofs/def-dep.weakhaus-hausdorff.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.cond-epi-open-surjective`](../nodes/prop.cond-epi-open-surjective.md) 开满射是满态射 用
+- 被 [`ex.cg-examples`](../nodes/ex.cg-examples.md) 紧生成空间的例子 用
 
 - …另有出边，续页见 [nodes/def.weak-hausdorff.2.md](./def.weak-hausdorff.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §2.3
 
-引用：`def.weak-hausdorff`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+> 说明见 `notes/def.weak-hausdorff.md`
+
+引用：`def.weak-hausdorff`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

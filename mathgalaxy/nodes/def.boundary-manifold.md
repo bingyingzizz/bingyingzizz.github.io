@@ -1,9 +1,9 @@
 # 带边流形　`def.boundary-manifold`
 带边流形与边界
-layer 9 · 定义 · 流形与向量丛 · 微分几何
+layer 19 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.boundary-manifold)　·　[节点索引](../index.md)
 
-**在做什么**：把一个方向上砍掉一边，让「闭区间」「闭圆盘」这类带边的对象也成了流形 —— 有了它，「边界」才能有自己的维度、自己的积分、自己的
+**在做什么**：把一个方向上砍掉一边，让「闭区间」「闭圆盘」这类带边的对象也成了流形 —— 有了它，「边界」才能有自己的维度、自己的积分、自己
 > 陈述续见 [nodes/def.boundary-manifold.2.md](./def.boundary-manifold.2.md)
 
 
@@ -19,4 +19,4 @@ refs: Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· �
 
 > 说明见 `notes/def.boundary-manifold.md`
 
-引用：`def.boundary-manifold`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.boundary-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 光滑映射的对偶复形　`thm.smooth-duality`
 定理：光滑 $f$ 的 $f^!R \cong \det(\Omega^1_{A/R})[d]$（Thm 11.6）
-layer 24 · 定理 · 相干对偶 · 解析空间
+layer 29 · 定理 · 相干对偶 · 解析空间
 [在星图里打开](../#n=thm.smooth-duality)　·　[节点索引](../index.md)
 
 白话：**光滑映射情形下 $f^!R$ 是一条「扭过来的线丛」，由微分形式的行列式给出**。这就是经典几何里的**对偶丛** $\omega_{X/Y}$（典范丛）。
@@ -17,4 +17,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/thm.smooth-duality.md`
 
-引用：`thm.smooth-duality`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.smooth-duality`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 群扩张　`def.group-extension`
 群扩张 $1 \to A \to E \to G \to 1$
-layer 8 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 9 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.group-extension)　·　[节点索引](../index.md)
 
 设 $A$ 是阿贝尔群。$A$ 被 $G$ 的**扩张**是短正合列
@@ -25,4 +25,4 @@ refs: Weibel, An Introduction to Homological Algebra, Chapter 6（群扩张）
 
 > 说明见 `notes/def.group-extension.md`
 
-引用：`def.group-extension`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-extension`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

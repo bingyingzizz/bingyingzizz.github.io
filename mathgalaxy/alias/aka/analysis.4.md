@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- F 给出的预测度 → prop.ls-premeasure
+
 - 几乎处处 | a.e. | almost everywhere | a.e. 收敛 → def.ae
 
 - 预测度还原 → prop.caratheodory-extension
@@ -28,7 +30,5 @@
 - 依测度 Cauchy | 依测度基本列 → def.cauchy-in-measure
 
 - 完备与可测 → prop.complete-measurable
-
-- 完备化可改零集 → prop.completion-measurable-function
 
 > 续见 alias/aka/analysis.5.md

@@ -11,5 +11,5 @@ names: `Higher Cohomology Presheaves` (short) · `Higher Cohomology Presheaves S
 Chinese only — see the Chinese page `nodes/prop.higher-cohomology-presheaf-zero.md` and `proofs/`.
 
 
-Cite: `prop.higher-cohomology-presheaf-zero` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.higher-cohomology-presheaf-zero` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

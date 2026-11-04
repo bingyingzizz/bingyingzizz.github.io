@@ -11,6 +11,6 @@
 - 被 [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间 用
 - 被 [`def.net`](../nodes/def.net.md) 网 用
 - 被 [`def.equicontinuous`](../nodes/def.equicontinuous.md) 等度连续 用
-- 被 [`def.homeomorphism`](../nodes/def.homeomorphism.md) 同胚 用
+- 被 [`def.etale-space`](../nodes/def.etale-space.md) étale 空间 用
 
 > 续见 [nodes/def.continuous-map.3.md](./def.continuous-map.3.md)

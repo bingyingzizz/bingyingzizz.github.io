@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 26 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Mean Value Theorem` (short) · `Mean Value Theorem in Several Variables` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.mean-value-multi.md` and `proofs/`.
 
 
-Cite: `thm.mean-value-multi` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.mean-value-multi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

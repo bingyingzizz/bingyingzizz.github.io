@@ -1,6 +1,6 @@
 # 张量 ⊣ 内 Hom　`prop.tensor-hom-adjunction`
 命题：$(-) \otimes V \dashv \operatorname{Hom}(V, -)$
-layer 14 · 命题 · 多重线性与张量 · 抽象代数
+layer 17 · 命题 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=prop.tensor-hom-adjunction)　·　[节点索引](../index.md)
 
 固定 $V$。则对一切 $K$-向量空间 $W, U$ 有自然同构
@@ -16,4 +16,4 @@ refs: Lang, Algebra, Ch. XVI；Mac Lane, Categories for the Working Mathematicia
 
 > 说明见 `notes/prop.tensor-hom-adjunction.md`
 
-引用：`prop.tensor-hom-adjunction`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.tensor-hom-adjunction`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

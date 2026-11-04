@@ -10,5 +10,5 @@ layer 7 · definition · cluster Constructing the Number Systems (`set.numbers`)
 Chinese only — see the Chinese page `nodes/def.nat-arith.md` and `proofs/`.
 
 
-Cite: `def.nat-arith` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.nat-arith` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

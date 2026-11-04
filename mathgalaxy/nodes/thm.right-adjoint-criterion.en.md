@@ -10,5 +10,5 @@ layer 13 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Ca
 Chinese only — see the Chinese page `nodes/thm.right-adjoint-criterion.md` and `proofs/`.
 
 
-Cite: `thm.right-adjoint-criterion` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.right-adjoint-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

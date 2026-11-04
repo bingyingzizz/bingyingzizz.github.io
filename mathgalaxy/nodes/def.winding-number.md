@@ -1,6 +1,6 @@
 # 绕数　`def.winding-number`
 定义：绕数（闭曲线关于一点的指数）
-layer 18 · 定义 · 复变函数基础 · 复变函数
+layer 19 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.winding-number)　·　[节点索引](../index.md)
 
 **白话**：绕数是一个整数，数的是「绕某点转了几圈」—— 逆时针一圈 $+1$，顺时针 $-1$，没绕 $0$。
@@ -23,4 +23,4 @@ refs: 王晓光《复变函数》· 辐角原理（曲线的绕数）；Ahlfors,
 
 > 说明见 `notes/def.winding-number.md`
 
-引用：`def.winding-number`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.winding-number`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

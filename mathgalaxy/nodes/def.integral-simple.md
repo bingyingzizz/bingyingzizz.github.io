@@ -1,6 +1,6 @@
 # 简单函数的积分　`def.integral-simple`
 简单函数的积分：加权和
-layer 16 · 定义 · 积分 · 实变函数+数学分析
+layer 17 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integral-simple)　·　[节点索引](../index.md)
 
 设 $\varphi \in L^+$ 是简单函数，写成标准形式 —— 系数非负、底集两两不交且都在 $\mathcal{M}$ 里：
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, §2.2
 
 > 说明见 `notes/def.integral-simple.md`
 
-引用：`def.integral-simple`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.integral-simple`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

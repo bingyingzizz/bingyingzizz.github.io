@@ -6,5 +6,5 @@ English entry · root `../`
 Chinese only — see the Chinese page `nodes/thm.gauss-bonnet.md` and `proofs/`.
 
 
-Cite: `thm.gauss-bonnet` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.gauss-bonnet` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

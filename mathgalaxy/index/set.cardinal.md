@@ -9,4 +9,4 @@
 - def.countable　可数与不可数　layer 8
 - def.cardinal　基数　layer 8
 - thm.cantor　Cantor 定理　layer 9
-- thm.cardinal-comparable　基数可比定理　layer 10
+- thm.cardinal-comparable　基数可比定理　layer 9

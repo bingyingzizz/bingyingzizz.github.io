@@ -13,7 +13,7 @@
 
 - 环的纤维余积 | 张量积是推出 | Exercise 1.29 → prop.ring-tensor-coproduct
 
-- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 → def.sheaf-cohomology
+- 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 | H^i(X,F) | 层上同调 H^i → def.sheaf-cohomology
 
 - Čech 上同调 | Cech 上同调 | Čech cohomology | Definition 7.3.5 | Def 7.3.5 → def.cech-cohomology
 

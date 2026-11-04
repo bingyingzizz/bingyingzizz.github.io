@@ -16,4 +16,4 @@ refs: Milne, Étale Cohomology —— étale 拓扑与有限 étale 覆叠；Sta
 
 > 说明见 `notes/prop.etale-sheaf-examples.md`
 
-引用：`prop.etale-sheaf-examples`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.etale-sheaf-examples`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

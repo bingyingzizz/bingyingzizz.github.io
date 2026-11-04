@@ -23,4 +23,4 @@ refs: Le Stum, An introduction to condensed mathematics, §5.3
 
 > 说明见 `notes/def.abelian-sheaf.md`
 
-引用：`def.abelian-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.abelian-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

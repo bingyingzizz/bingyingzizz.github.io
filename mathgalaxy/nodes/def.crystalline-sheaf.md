@@ -9,6 +9,9 @@ $$\alpha_{f} : f^{-1}\mathcal{F}_{Y} \longrightarrow \mathcal{F}_{Z} \qquad (f :
 
 若所有 $\alpha_{f}$ 都是**同构**，就叫 $\mathcal{F}$ 是**晶体层**（crystalline sheaf）。
 
+## 它能推出什么 / 谁在用它
+- 被 [`prop.crystalline-sheaf-equiv`](../nodes/prop.crystalline-sheaf-equiv.md) 晶体层就是 X 上的层 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.crystalline-sheaf.2.md](./def.crystalline-sheaf.2.md)
 
@@ -16,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 3.67
 
 > 说明见 `notes/def.crystalline-sheaf.md`
 
-引用：`def.crystalline-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.crystalline-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

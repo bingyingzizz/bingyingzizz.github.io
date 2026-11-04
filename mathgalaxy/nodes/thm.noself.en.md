@@ -10,5 +10,5 @@ layer 1 · theorem · cluster The ZFC Axioms (`set.zfc`) · Set Theory
 Chinese only — see the Chinese page `nodes/thm.noself.md` and `proofs/`.
 
 
-Cite: `thm.noself` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.noself` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 全变差的规范有界变差性质　`lem.nbv-variation`
 引理：$T_F(-\infty) = 0$；F 右连续 $\implies T_F$ 右连续
-layer 18 · 引理 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 19 · 引理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=lem.nbv-variation)　·　[节点索引](../index.md)
 
 设 $F \in BV$。则
@@ -18,4 +18,4 @@ refs: Folland, Real Analysis, Lemma 3.30
 
 > 说明见 `notes/lem.nbv-variation.md`
 
-引用：`lem.nbv-variation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.nbv-variation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

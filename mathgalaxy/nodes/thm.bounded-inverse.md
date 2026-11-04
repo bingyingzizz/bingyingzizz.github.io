@@ -1,6 +1,6 @@
 # 逆算子定理　`thm.bounded-inverse`
 逆算子定理：双射有界算子的逆也有界
-layer 25 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 29 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.bounded-inverse)　·　[节点索引](../index.md)
 
 设 $E, F$ 是 Banach 空间，$u \in B(E, F)$ 是**双射**。则 $u^{-1} : F \to E$ 也是有界线性算子，即 $u$ 是同胚。
@@ -17,4 +17,4 @@ refs: Rudin, Functional Analysis, 2.12
 
 > 说明见 `notes/thm.bounded-inverse.md`
 
-引用：`thm.bounded-inverse`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.bounded-inverse`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

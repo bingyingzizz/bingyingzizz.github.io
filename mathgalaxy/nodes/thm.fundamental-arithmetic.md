@@ -1,6 +1,6 @@
 # 算术基本定理　`thm.fundamental-arithmetic`
 唯一分解：每个整数拆成素数乘积恰好一种方式
-layer 12 · 定理 · 整除与同余 · 数论
+layer 13 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.fundamental-arithmetic)　·　[节点索引](../index.md)
 
 每个整数 $n > 1$ 都能唯一地写成
@@ -21,4 +21,4 @@ refs: 华罗庚《数论导引》§1
 
 > 说明见 `notes/thm.fundamental-arithmetic.md`
 
-引用：`thm.fundamental-arithmetic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.fundamental-arithmetic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

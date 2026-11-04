@@ -1,6 +1,6 @@
 # 截面函子保极限余极限　`prop.condab-section`
 截面函子 $\Gamma(F, -)$
-layer 17 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
+layer 19 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.condab-section)　·　[节点索引](../index.md)
 
 设 $F \in \mathbf{FCHaus}$。则**截面函子**
@@ -21,4 +21,4 @@ refs: Le Stum, Lemma 6.1.3
 
 > 说明见 `notes/prop.condab-section.md`
 
-引用：`prop.condab-section`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.condab-section`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

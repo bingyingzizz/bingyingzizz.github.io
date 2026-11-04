@@ -1,6 +1,6 @@
 # L'Hôpital 法则　`thm.lhopital`
 L'Hôpital 法则（不定式极限）
-layer 22 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 26 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.lhopital)　·　[节点索引](../index.md)
 
 设 $f, g$ 在 $x_0$ 的某去心邻域内可导、$g' \ne 0$，且
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 5
 
 > 说明见 `notes/thm.lhopital.md`
 
-引用：`thm.lhopital`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.lhopital`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

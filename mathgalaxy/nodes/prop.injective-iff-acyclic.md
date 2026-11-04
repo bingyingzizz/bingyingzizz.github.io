@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.2
 
 > 说明见 `notes/prop.injective-iff-acyclic.md`
 
-引用：`prop.injective-iff-acyclic`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.injective-iff-acyclic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

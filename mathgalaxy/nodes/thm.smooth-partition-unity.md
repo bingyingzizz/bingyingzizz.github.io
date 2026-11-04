@@ -1,6 +1,6 @@
 # 光滑单位分解　`thm.smooth-partition-unity`
 流形上的光滑单位分解
-layer 19 · 定理 · 流形与向量丛 · 微分几何
+layer 18 · 定理 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=thm.smooth-partition-unity)　·　[节点索引](../index.md)
 
 **在做什么**：把「局部造出来的东西」粘成整体的通用工具 —— 在每块地皮上各造一份，乘上权重函
@@ -20,4 +20,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 单
 
 > 说明见 `notes/thm.smooth-partition-unity.md`
 
-引用：`thm.smooth-partition-unity`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.smooth-partition-unity`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.boundary`](../nodes/def.boundary.md) 边缘：用到了定义 边缘　[proofs/dep.exact-boundary.md](../proofs/dep.exact-boundary.md)
 - [`prop.exterior-derivative-manifold`](../nodes/prop.exterior-derivative-manifold.md) 外微分：用到了定义 外微分　[proofs/dep.exact-extd.md](../proofs/dep.exact-extd.md)
+
+> 续见 [nodes/def.exact-form.4.md](./def.exact-form.4.md)

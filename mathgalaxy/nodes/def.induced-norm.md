@@ -1,6 +1,6 @@
 # 诱导范数与距离　`def.induced-norm`
 由内积诱导的范数与距离
-layer 15 · 定义 · 内积空间与正交性 · 抽象代数+数学分析
+layer 19 · 定义 · 内积空间与正交性 · 抽象代数+数学分析
 [在星图里打开](../#n=def.induced-norm)　·　[节点索引](../index.md)
 
 设 $(V, \langle \cdot, \cdot \rangle)$ 是内积空间。定义
@@ -25,4 +25,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.induced-norm.md`
 
-引用：`def.induced-norm`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.induced-norm`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

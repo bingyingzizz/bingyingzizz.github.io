@@ -1,6 +1,6 @@
 # Möbius 反演　`thm.mobius-inversion`
 从和函数还原原函数
-layer 17 · 定理 · 数论函数与素数分布 · 数论
+layer 18 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.mobius-inversion)　·　[节点索引](../index.md)
 
 设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则
@@ -16,4 +16,4 @@ refs: 华罗庚《数论导引》第三章；Apostol, Ch. 2
 
 > 说明见 `notes/thm.mobius-inversion.md`
 
-引用：`thm.mobius-inversion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mobius-inversion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

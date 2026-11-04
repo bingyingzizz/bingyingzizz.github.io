@@ -1,11 +1,11 @@
 # 调和函数的均值性质　`thm.harmonic-mean-value`
 定理：调和函数的均值性质
-layer 21 · 定理 · 调和函数 · 复变函数
+layer 25 · 定理 · 调和函数 · 复变函数
 [在星图里打开](../#n=thm.harmonic-mean-value)　·　[节点索引](../index.md)
 
 **白话**：调和函数在一点的值，等于它在以该点为心、任意半径的圆周上的平均值；也等于圆盘上的面积平均值。
 
-设 $u$ 在 $D(a, R)$ 上调和，$0 < r < R$。则
+设 $u$ 在 $B(a, R)$ 上调和，$0 < r < R$。则
 
 $$u(a) = \frac{1}{2\pi}\int_0^{2\pi} u(a + r e^{i\theta})\,\mathrm{d}\theta,$$
 
@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》· 调和函数的均值性质；Ahlfors, Compl
 
 > 说明见 `notes/thm.harmonic-mean-value.md`
 
-引用：`thm.harmonic-mean-value`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.harmonic-mean-value`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

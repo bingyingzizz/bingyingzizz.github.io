@@ -1,6 +1,6 @@
 # 积分给出绝对连续测度　`prop.integral-gives-ac`
 命题：$\nu(E) = \int_E f d\mu$ 关于 $\mu$ 绝对连续
-layer 20 · 命题 · 符号测度与分解 · 实变函数+数学分析
+layer 22 · 命题 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=prop.integral-gives-ac)　·　[节点索引](../index.md)
 
 设 $\mu$ 是测度，$f$ 是广义 $\mu$可积函数，定义
@@ -21,4 +21,4 @@ refs: Folland, Real Analysis, §3.2
 
 > 说明见 `notes/prop.integral-gives-ac.md`
 
-引用：`prop.integral-gives-ac`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integral-gives-ac`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

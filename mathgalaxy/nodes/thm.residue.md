@@ -1,6 +1,6 @@
 # 留数定理　`thm.residue`
 定理：留数定理
-layer 20 · 定理 · 留数与辐角原理 · 复变函数
+layer 24 · 定理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=thm.residue)　·　[节点索引](../index.md)
 
 **白话**：沿闭曲线的积分等于 $2\pi i$ 乘上曲线内部所有奇点的留数之和 —— 一个二维的积分问题被压缩成有限个代数计算。
@@ -21,4 +21,4 @@ refs: 王晓光《复变函数》笔记，第 23 章 · 留数定理；Ahlfors, 
 
 > 说明见 `notes/thm.residue.md`
 
-引用：`thm.residue`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.residue`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

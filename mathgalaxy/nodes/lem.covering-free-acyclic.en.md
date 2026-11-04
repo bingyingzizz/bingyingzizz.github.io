@@ -11,5 +11,5 @@ names: `Free Complex of a Cover` (short) · `The Free Complex of a Cover Is Acyc
 Chinese only — see the Chinese page `nodes/lem.covering-free-acyclic.md` and `proofs/`.
 
 
-Cite: `lem.covering-free-acyclic` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.covering-free-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

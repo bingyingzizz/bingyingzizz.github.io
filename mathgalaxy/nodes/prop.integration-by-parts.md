@@ -1,6 +1,6 @@
 # 分部积分　`prop.integration-by-parts`
 命题：分部积分公式
-layer 22 · 命题 · Riemann 积分 · 数学分析
+layer 26 · 命题 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=prop.integration-by-parts)　·　[节点索引](../index.md)
 
 设 $F, G : [a, b] \to \mathbb{R}$ 可导、$F', G'$ 可积。则
@@ -16,4 +16,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.integration-by-parts.md`
 
-引用：`prop.integration-by-parts`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.integration-by-parts`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

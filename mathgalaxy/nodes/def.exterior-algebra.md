@@ -1,6 +1,6 @@
 # 外代数　`def.exterior-algebra`
 外代数 $\bigwedge^{\bullet} V$
-layer 13 · 定义 · 多重线性与张量 · 抽象代数
+layer 16 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.exterior-algebra)　·　[节点索引](../index.md)
 
 把各次外幂直和起来：
@@ -25,4 +25,4 @@ refs: Lang, Algebra, Ch. XIX
 
 > 说明见 `notes/def.exterior-algebra.md`
 
-引用：`def.exterior-algebra`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.exterior-algebra`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

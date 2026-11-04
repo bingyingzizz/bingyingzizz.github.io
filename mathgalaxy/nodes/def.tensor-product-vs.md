@@ -1,6 +1,6 @@
 # 张量积（向量空间）　`def.tensor-product-vs`
 向量空间的张量积 $V \otimes W$
-layer 12 · 定义 · 多重线性与张量 · 抽象代数
+layer 15 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.tensor-product-vs)　·　[节点索引](../index.md)
 
 设 $V, W$ 是 $K$-向量空间。取它们的一组基 $(e_i)$、$(f_j)$，定义形式符号 $e_i \otimes f_j$ 的**形式线性组合**全体
@@ -23,4 +23,4 @@ refs: Lang, Algebra, Ch. XVI；Roman, Advanced Linear Algebra, Ch. 14
 
 > 说明见 `notes/def.tensor-product-vs.md`
 
-引用：`def.tensor-product-vs`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.tensor-product-vs`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

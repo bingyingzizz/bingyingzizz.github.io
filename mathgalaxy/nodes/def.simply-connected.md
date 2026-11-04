@@ -1,6 +1,6 @@
 # 单连通　`def.simply-connected`
 单连通：道路连通且基本群平凡
-layer 14 · 定义 · 基本群 · 拓扑学
+layer 15 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.simply-connected)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**单连通的**，如果
@@ -22,4 +22,4 @@ refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（simply conne
 
 > 说明见 `notes/def.simply-connected.md`
 
-引用：`def.simply-connected`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.simply-connected`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 二次型　`def.quadratic-form`
 二次型与正定性
-layer 11 · 定义 · 内积空间与正交性 · 抽象代数
+layer 14 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.quadratic-form)　·　[节点索引](../index.md)
 
 设 $A \in M_n(\mathbb{R})$ 对称。由它给出的函数
@@ -27,4 +27,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, C
 
 > 说明见 `notes/def.quadratic-form.md`
 
-引用：`def.quadratic-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.quadratic-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

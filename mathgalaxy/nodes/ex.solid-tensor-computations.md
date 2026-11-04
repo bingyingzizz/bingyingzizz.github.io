@@ -1,6 +1,6 @@
 # 固态张量积的计算　`ex.solid-tensor-computations`
 例：$\mathbb{Z}_p \otimes^{L\blacksquare} \mathbb{R} = 0$ 及其它
-layer 22 · 例 · 固态阿贝尔群 · 凝聚态数学
+layer 26 · 例 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=ex.solid-tensor-computations)　·　[节点索引](../index.md)
 
 设 $p \ne \ell$ 是两个素数。则
@@ -14,4 +14,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/ex.solid-tensor-computations.md`
 
-引用：`ex.solid-tensor-computations`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`ex.solid-tensor-computations`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

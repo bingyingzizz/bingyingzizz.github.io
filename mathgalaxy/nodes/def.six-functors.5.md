@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.poincare-solid`](../nodes/thm.poincare-solid.md) 固态 Serre 对偶
+- 被 [`prop.open-immersion-shriek`](../nodes/prop.open-immersion-shriek.md) 开浸入的 j_! 用

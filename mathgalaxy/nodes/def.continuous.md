@@ -1,6 +1,6 @@
 # 连续　`def.continuous`
 连续
-layer 14 · 定义 · 实数与极限 · 数学分析+拓扑学
+layer 15 · 定义 · 实数与极限 · 数学分析+拓扑学
 [在星图里打开](../#n=def.continuous)　·　[节点索引](../index.md)
 
 $f : \mathbb{R} \to \mathbb{R}$ 在 $x_0$ **连续**，当且仅当
@@ -25,4 +25,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 
 > 说明见 `notes/def.continuous.md`
 
-引用：`def.continuous`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.continuous`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

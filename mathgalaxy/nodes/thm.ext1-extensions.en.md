@@ -11,5 +11,5 @@ names: `Ext and Extensions` (short) · `First Ext Classifies Extensions` (full)
 Chinese only — see the Chinese page `nodes/thm.ext1-extensions.md` and `proofs/`.
 
 
-Cite: `thm.ext1-extensions` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.ext1-extensions` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

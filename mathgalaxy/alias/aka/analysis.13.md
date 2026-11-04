@@ -1,6 +1,14 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Bolzano–Weierstrass 定理 | 波尔查诺–魏尔斯特拉斯定理 → thm.bolzano-weierstrass
+
+- Rolle 中值定理 → thm.rolle
+
+- Cauchy 收敛准则 → thm.cauchy-criterion
+
+- 比较判别法 → thm.comparison-test
+
 - 幂级数的逐项运算 → thm.power-series-analytic
 
 - 初等函数的导数 → thm.elementary-derivatives
@@ -28,13 +36,5 @@
 - 极限的四则运算与保序性 → prop.limit-arithmetic
 
 - 介值定理 → thm.ivt
-
-- Abel–Dirichlet 判别法 → thm.abel-dirichlet-series
-
-- 绝对收敛 ⟹ 收敛 → thm.absolute-implies-convergent
-
-- Cauchy 乘积 → thm.series-product
-
-- ℝ 是完备度量空间 → thm.real-complete-metric
 
 > 续见 alias/aka/analysis.14.md

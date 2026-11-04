@@ -19,4 +19,4 @@ refs: Le Stum, An introduction to condensed mathematics, Theorem 3.1.2
 
 > 说明见 `notes/thm.presheaf-limits-colimits.md`
 
-引用：`thm.presheaf-limits-colimits`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.presheaf-limits-colimits`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

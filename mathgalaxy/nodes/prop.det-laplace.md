@@ -1,6 +1,6 @@
 # Laplace 展开　`prop.det-laplace`
 命题：Laplace 展开（按一行或一列展开）
-layer 13 · 命题 · 矩阵与行列式 · 抽象代数
+layer 16 · 命题 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=prop.det-laplace)　·　[节点索引](../index.md)
 
 设 $A = (a_{ij}) \in M_n(K)$，记 $A_{ij}$ 为划掉第 $i$ 行与第 $j$ 列后得到的 $(n-1)$ 阶矩阵，$M_{ij} := \det A_{ij}$（**余子式**），$C_{ij} := (-1)^{i+j} M_{ij}$（**代数余子式**）。则对每个固定的 $i$：
@@ -20,4 +20,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 5
 
 > 说明见 `notes/prop.det-laplace.md`
 
-引用：`prop.det-laplace`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.det-laplace`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 初等函数的导数　`thm.elementary-derivatives`
 定理：初等函数的导数表
-layer 24 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 28 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.elementary-derivatives)　·　[节点索引](../index.md)
 
 在各自的定义域内：
@@ -18,4 +18,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 
 > 说明见 `notes/thm.elementary-derivatives.md`
 
-引用：`thm.elementary-derivatives`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.elementary-derivatives`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

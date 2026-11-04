@@ -22,4 +22,4 @@ refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 
 例：在 $\mathbf{Set}$ 上取 $\operatorname{Cov}(X) = \{(X_{i} \to X) : X = \bigcup_{i} X_{i}\}$，三条都成立 —— 这就是「覆盖」两个字的原型。
 
-引用：`def.pretopology`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.pretopology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

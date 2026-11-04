@@ -1,6 +1,6 @@
 # 低次正合列　`prop.low-degree-exact`
 低次的那几项正合列
-layer 11 · 命题 · 群上同调 · 同调代数+抽象代数
+layer 14 · 命题 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=prop.low-degree-exact)　·　[节点索引](../index.md)
 
 设 $M$ 是 $G$-模。标准上链复形的低次项给出正合列
@@ -18,4 +18,4 @@ refs: Weibel, An Introduction to Homological Algebra, Section 6.5（低次正合
 
 > 说明见 `notes/prop.low-degree-exact.md`
 
-引用：`prop.low-degree-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.low-degree-exact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

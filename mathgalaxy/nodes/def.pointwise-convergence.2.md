@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限：用到了定义 数列极限　[proofs/dep.seqlimit-pointwise.md](../proofs/dep.seqlimit-pointwise.md)
+
+> 续见 [nodes/def.pointwise-convergence.3.md](./def.pointwise-convergence.3.md)

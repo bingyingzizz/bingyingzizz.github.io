@@ -1,6 +1,6 @@
 # 火腿三明治定理　`thm.ham-sandwich`
 火腿三明治定理：一个平面同时平分三块体
-layer 25 · 定理 · 复分析的拓扑应用 · 复变函数
+layer 29 · 定理 · 复分析的拓扑应用 · 复变函数
 [在星图里打开](../#n=thm.ham-sandwich)　·　[节点索引](../index.md)
 
 设 $A_{1}, A_{2}, A_{3} \subset \mathbb{R}^{3}$ 是**有界可测**集（三块「火腿、奶酪、面包」）。则存在一个平面 $P$，使每个 $A_{i}$ 的体积被 $P$ 两侧**平分**：
@@ -18,4 +18,4 @@ refs: Borsuk–Ulam 的标准推论；见 Matoušek, Using the Borsuk–Ulam The
 
 > 说明见 `notes/thm.ham-sandwich.md`
 
-引用：`thm.ham-sandwich`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ham-sandwich`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

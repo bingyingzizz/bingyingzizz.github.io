@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间：商映射 $\implies$ 万有性质　[proofs/imp.quotient-universal-vs.md](../proofs/imp.quotient-universal-vs.md)
+- [`def.subspace`](../nodes/def.subspace.md) 子空间：用到了定义 子空间　[proofs/dep.gap-quotient-universal-vs-subspace.md](../proofs/dep.gap-quotient-universal-vs-subspace.md)
+- [`def.linear-map`](../nodes/def.linear-map.md) 线性映射：用到了定义 线性映射　[proofs/dep.gap-quotient-universal-vs-linear-map.md](../proofs/dep.gap-quotient-universal-vs-linear-map.md)

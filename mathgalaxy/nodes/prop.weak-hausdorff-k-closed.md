@@ -1,6 +1,6 @@
 # 弱 Hausdorff 的对角线与核　`prop.weak-hausdorff-k-closed`
 命题：对角线 $k$-闭 $\iff$ 弱 Hausdorff；$\ker(f,g)$ 也 $k$-闭
-layer 18 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 20 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.weak-hausdorff-k-closed)　·　[节点索引](../index.md)
 
 1. 若 $X$ 弱 Hausdorff，则对角线 $X \subseteq X \times X$ 是 **$k$-闭**的；$X$ 紧生成时反过来也对；
@@ -13,4 +13,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 2.36, Exercise
 
 > 说明见 `notes/prop.weak-hausdorff-k-closed.md`
 
-引用：`prop.weak-hausdorff-k-closed`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.weak-hausdorff-k-closed`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

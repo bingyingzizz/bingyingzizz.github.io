@@ -1,6 +1,6 @@
 # 辛基　`def.symplectic-basis`
 辛基：让辛形式变成标准形的那组基
-layer 14 · 定义 · 多重线性与张量 · 抽象代数
+layer 17 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.symplectic-basis)　·　[节点索引](../index.md)
 
 **在做什么**：辛空间里的「标准正交基」。这组基下辛形式的矩阵是固定的分块矩阵 —— 全部辛空间在这一点上长得一模一样。
@@ -19,4 +19,4 @@ refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核�
 
 > 说明见 `notes/def.symplectic-basis.md`
 
-引用：`def.symplectic-basis`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.symplectic-basis`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

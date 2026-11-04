@@ -1,6 +1,6 @@
 # 勒贝格数　`def.lebesgue-number`
 勒贝格数：紧度量空间上开覆盖的一致尺度
-layer 15 · 定义 · 度量空间 · 拓扑学
+layer 17 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.lebesgue-number)　·　[节点索引](../index.md)
 
 **要解决什么问题**：紧性只保证「每个开覆盖有有限子覆盖」，但**没说每个点周围能有多小**。连续性的 $\varepsilon$-论证需要「存在一个统一的尺度 $\delta$，使任何直径小于 $\delta$ 的集合都落在某个覆盖成员里」—— 这就是勒贝格数。
@@ -16,4 +16,4 @@ refs: Munkres, Topology, 27（Lebesgue number lemma）；Rudin, Principles of Ma
 
 > 说明见 `notes/def.lebesgue-number.md`
 
-引用：`def.lebesgue-number`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lebesgue-number`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

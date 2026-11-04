@@ -1,6 +1,6 @@
 # C(K,E) 完备　`thm.ck-complete`
 $E$ 完备 $\implies$ $C(K,E)$ 完备
-layer 17 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 18 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.ck-complete)　·　[节点索引](../index.md)
 
 设 $K$ 紧 Hausdorff。$E$ 完备 $\implies$ $(C(K, E), \Delta)$ 完备。$E$ 赋范时 $C(K, E)$ 是 Banach 空间。
@@ -14,4 +14,4 @@ refs: Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equat
 
 > 说明见 `notes/thm.ck-complete.md`
 
-引用：`thm.ck-complete`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ck-complete`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

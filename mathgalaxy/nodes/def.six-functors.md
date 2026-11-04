@@ -1,6 +1,6 @@
 # 6-函子形式　`def.six-functors`
 6-函子形式
-layer 19 · 定义 · 相干对偶 · 解析空间
+layer 21 · 定义 · 相干对偶 · 解析空间
 [在星图里打开](../#n=def.six-functors)　·　[节点索引](../index.md)
 
 白话：**6-函子形式 = 给每个空间配「换底、推前、对偶」六个操作，并且要求它们像经典的 Poincaré / Serre 对偶那样相容**。目的只有一个：把「上同调」变成「内积」，于是能把上同调类互相点乘、并算出结果。经典几何（层、$\ell$-进上同调）和固态几何都各自有一套这样的六个函子。
@@ -21,4 +21,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/def.six-functors.md`
 
-引用：`def.six-functors`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.six-functors`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -13,5 +13,5 @@ Chinese only — see the Chinese page `nodes/def.sheaf.md` and `proofs/`.
 Wikipedia: https://en.wikipedia.org/wiki/Sheaf_(mathematics) · nLab: https://ncatlab.org/nlab/show/sheaf · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/CategoryTheory/Sites/Sheaf.html
 
 
-Cite: `def.sheaf` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

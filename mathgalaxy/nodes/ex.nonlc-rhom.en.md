@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
+layer 22 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Non-Locally-Compact RHom` (short) · `Derived Hom in the Non-Locally-Compact Case` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.nonlc-rhom.md` and `proofs/`.
 
 
-Cite: `ex.nonlc-rhom` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ex.nonlc-rhom` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

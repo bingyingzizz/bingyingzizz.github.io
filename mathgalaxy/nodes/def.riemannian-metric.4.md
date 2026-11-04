@@ -6,3 +6,4 @@
 - 被 [`def.volume-density`](../nodes/def.volume-density.md) 体积密度与体积形式 用
 - ⇒ [`prop.volume-density-well-defined`](../nodes/prop.volume-density-well-defined.md) 密度与定向无关
 - 被 [`def.submanifold-volume`](../nodes/def.submanifold-volume.md) 诱导体积 用
+- 被 [`def.hodge-star`](../nodes/def.hodge-star.md) Hodge 星号 用

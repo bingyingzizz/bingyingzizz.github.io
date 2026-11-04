@@ -1,6 +1,6 @@
 # 非负可测函数类　`def.lplus`
 $L^{+}$：非负可测函数全体
-layer 15 · 定义 · 积分 · 实变函数+数学分析
+layer 16 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.lplus)　·　[节点索引](../index.md)
 
 固定测度空间 $(X, \mathcal{M}, \mu )$。记 $L^+$ 为取值在**扩充**非负实数里的**可测**函数全体：
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, §2.2
 
 > 说明见 `notes/def.lplus.md`
 
-引用：`def.lplus`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.lplus`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

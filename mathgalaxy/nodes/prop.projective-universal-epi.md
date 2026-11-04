@@ -14,4 +14,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.49
 
 > 说明见 `notes/prop.projective-universal-epi.md`
 
-引用：`prop.projective-universal-epi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.projective-universal-epi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

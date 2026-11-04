@@ -1,6 +1,6 @@
 # 简单函数逼近　`thm.simple-approximation`
 定理：可测函数都是简单函数列的极限
-layer 8 · 定理 · 可测函数与收敛 · 实变函数+数学分析
+layer 17 · 定理 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=thm.simple-approximation)　·　[节点索引](../index.md)
 
 **(a)** 若 $f : X \to [0, +\infty]$ 可测，则存在简单函数列 $\{\varphi_n\}$，**逐点递增**地逼近 $f$：
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, Theorem 2.10
 
 > 说明见 `notes/thm.simple-approximation.md`
 
-引用：`thm.simple-approximation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.simple-approximation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

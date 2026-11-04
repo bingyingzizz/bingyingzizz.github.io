@@ -1,6 +1,6 @@
 # 有限 / σ-有限 / 半有限　`def.measure-space`
 测度空间的几种「大小」：有限、σ-有限、半有限
-layer 15 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.measure-space)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间。
@@ -23,4 +23,4 @@ refs: Folland, Real Analysis, §1.2
 
 > 说明见 `notes/def.measure-space.md`
 
-引用：`def.measure-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.measure-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

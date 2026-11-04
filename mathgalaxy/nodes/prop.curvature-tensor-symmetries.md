@@ -1,6 +1,6 @@
 # 曲率张量的对称性　`prop.curvature-tensor-symmetries`
 曲率张量的对称性与独立分量数
-layer 24 · 命题 · 内蕴几何 · 微分几何
+layer 27 · 命题 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=prop.curvature-tensor-symmetries)　·　[节点索引](../index.md)
 
 **在做什么**：清点曲率张量到底有几个独立分量 —— 四条对称性把它从 $n^{4}$ 砍到 $n^{2}(n^{2}-1)/12$。这是「二维
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲率」· 曲率
 
 > 说明见 `notes/prop.curvature-tensor-symmetries.md`
 
-引用：`prop.curvature-tensor-symmetries`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.curvature-tensor-symmetries`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

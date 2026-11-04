@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.long-exact-pair`](../nodes/thm.long-exact-pair.md) 对的长正合列：对 $(X, U)$ 的长正合列 $+$ 重心重分 $\implies$ Mayer–Vietoris　[proofs/e81.implication.md](../proofs/e81.implication.md)
+- [`thm.mayer-vietoris`](../nodes/thm.mayer-vietoris.md) Mayer–Vietoris 序列：Mayer–Vietoris：de Rham 版与奇异同调版　[proofs/e163.analogy.md](../proofs/e163.analogy.md)

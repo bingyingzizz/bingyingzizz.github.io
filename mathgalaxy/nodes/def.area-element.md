@@ -1,6 +1,6 @@
 # 面积元　`def.area-element`
 面积元与曲面面积
-layer 25 · 定义 · 曲面论 · 微分几何
+layer 28 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.area-element)　·　[节点索引](../index.md)
 
 **在做什么**：给曲面装一把量面积的尺 —— 把参数域里的小矩形映成切平面上的小平行四边形，用它的面积当权重。
@@ -19,4 +19,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲面」· 面积
 
 > 说明见 `notes/def.area-element.md`
 
-引用：`def.area-element`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.area-element`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

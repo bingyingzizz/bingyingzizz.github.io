@@ -1,6 +1,6 @@
 # 第一基本形式　`def.first-fundamental-form`
 第一基本形式
-layer 24 · 定义 · 曲面论 · 微分几何
+layer 27 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.first-fundamental-form)　·　[节点索引](../index.md)
 
 曲面的**第一基本形式**是 $T_{p}U$ 上的对称双线性形式
@@ -22,4 +22,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则
 
 > 说明见 `notes/def.first-fundamental-form.md`
 
-引用：`def.first-fundamental-form`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.first-fundamental-form`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

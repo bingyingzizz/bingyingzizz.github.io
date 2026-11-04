@@ -10,5 +10,5 @@ layer 14 · theorem · cluster Diagrams and Limits (`cat.limit`) · Category The
 Chinese only — see the Chinese page `nodes/thm.cofinal-colimit.md` and `proofs/`.
 
 
-Cite: `thm.cofinal-colimit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cofinal-colimit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

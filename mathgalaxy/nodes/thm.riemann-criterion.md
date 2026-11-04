@@ -1,6 +1,6 @@
 # 可积的振幅判据　`thm.riemann-criterion`
 定理（Riemann 判据）：可积 $\iff$ 振幅和可以任意小
-layer 18 · 定理 · Riemann 积分 · 数学分析
+layer 19 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.riemann-criterion)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上有界。则 $f$ 可积，当且仅当对每个 $\varepsilon > 0$ 都存在分割 $P$ 使
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6；Spivak, Calculus, Ch. 
 
 > 说明见 `notes/thm.riemann-criterion.md`
 
-引用：`thm.riemann-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.riemann-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

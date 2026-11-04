@@ -1,6 +1,6 @@
 # Fatou 引理　`lem.fatou`
 Fatou 引理（Fatou's Lemma）
-layer 19 · 引理 · 积分 · 实变函数+数学分析
+layer 20 · 引理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=lem.fatou)　·　[节点索引](../index.md)
 
 设 $\{f_n\} \subseteq L^+$，则
@@ -20,4 +20,4 @@ refs: Folland, Real Analysis, Theorem 2.18
 
 > 说明见 `notes/lem.fatou.md`
 
-引用：`lem.fatou`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.fatou`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

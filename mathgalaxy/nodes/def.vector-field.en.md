@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
+layer 22 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.vector-field.md` and `proofs/`.
 
 
-Cite: `def.vector-field` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.vector-field` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.regular-curve`](../nodes/def.regular-curve.md) 正则曲线：用到了定义 正则曲线　[proofs/dep.tu-curve-frenet.md](../proofs/dep.tu-curve-frenet.md)
+- [`def.moving-frame`](../nodes/def.moving-frame.md) 活动标架：用到了定义 活动标架　[proofs/dep.gap-frenet-frame-moving-frame.md](../proofs/dep.gap-frenet-frame-moving-frame.md)

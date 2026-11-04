@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 14 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.mor-domain-codomain.md` and `proofs/`.
 
 
-Cite: `def.mor-domain-codomain` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.mor-domain-codomain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

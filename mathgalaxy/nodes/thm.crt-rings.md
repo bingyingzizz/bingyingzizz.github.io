@@ -1,6 +1,6 @@
 # 中国剩余定理（环论形式）　`thm.crt-rings`
 中国剩余定理：互素理想给出环的直积分解
-layer 10 · 定理 · 整环与分解 · 抽象代数
+layer 11 · 定理 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=thm.crt-rings)　·　[节点索引](../index.md)
 
 设 $I, J$ 是环 $A$ 的两个理想且 $I + J = A$。则
@@ -23,4 +23,4 @@ refs: Atiyah–Macdonald, Ch. 1；Borevich–Shafarevich, Number Theory, Ch. 2
 
 > 说明见 `notes/thm.crt-rings.md`
 
-引用：`thm.crt-rings`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.crt-rings`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

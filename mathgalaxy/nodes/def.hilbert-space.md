@@ -1,6 +1,6 @@
 # Hilbert 空间　`def.hilbert-space`
 Hilbert 空间（完备的内积空间）
-layer 16 · 定义 · Hilbert 空间 · 泛函分析
+layer 18 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.hilbert-space)　·　[节点索引](../index.md)
 
 设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（本图约定：**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。
@@ -12,8 +12,11 @@ layer 16 · 定义 · Hilbert 空间 · 泛函分析
 
 - …另有入边，续页见 [nodes/def.hilbert-space.2.md](./def.hilbert-space.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.hilbert-space.3.md](./def.hilbert-space.3.md)
+
 refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 > 说明见 `notes/def.hilbert-space.md`
 
-引用：`def.hilbert-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.hilbert-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

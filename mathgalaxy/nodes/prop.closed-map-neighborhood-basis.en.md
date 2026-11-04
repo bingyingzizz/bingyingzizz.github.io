@@ -10,5 +10,5 @@ layer 6 · proposition · cluster Topological Spaces and Basic Constructions (`t
 Chinese only — see the Chinese page `nodes/prop.closed-map-neighborhood-basis.md` and `proofs/`.
 
 
-Cite: `prop.closed-map-neighborhood-basis` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.closed-map-neighborhood-basis` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

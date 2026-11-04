@@ -11,5 +11,5 @@ names: `Unit and Counit` (short) · `Unit and Counit of an Adjunction` (full)
 Chinese only — see the Chinese page `nodes/def.adjunction-unit.md` and `proofs/`.
 
 
-Cite: `def.adjunction-unit` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.adjunction-unit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

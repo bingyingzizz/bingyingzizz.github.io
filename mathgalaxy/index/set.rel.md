@@ -8,4 +8,4 @@
 - def.quotient-set　商集与等价类　layer 5
 - def.bijection　单射 / 满射 / 双射　layer 6
 - def.preimage　像与原像　layer 6
-- def.number-function　函数　layer 13
+- def.number-function　函数　layer 14

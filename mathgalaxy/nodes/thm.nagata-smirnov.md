@@ -1,6 +1,6 @@
 # 局部有限基度量化定理　`thm.nagata-smirnov`
 正则且基为可数层局部有限族的空间可度量化
-layer 15 · 定理 · 可度量化 · 拓扑学
+layer 16 · 定理 · 可度量化 · 拓扑学
 [在星图里打开](../#n=thm.nagata-smirnov)　·　[节点索引](../index.md)
 
 设 $X$ 是**正则**（含 $T_{1}$）空间，且它的拓扑有一个 **$\sigma$-局部有限的基**（基可以写成可数多个局部有限的子族之并）。则 $X$ 是**可度量化的**。
@@ -19,4 +19,4 @@ refs: Munkres, Topology (2nd ed.), Section 40；Nagata (1950) 与 Smirnov (1951)
 
 > 说明见 `notes/thm.nagata-smirnov.md`
 
-引用：`thm.nagata-smirnov`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.nagata-smirnov`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

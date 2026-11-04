@@ -10,5 +10,5 @@ layer 6 · definition · cluster Choice Principles (`order.choice`) · Order The
 Chinese only — see the Chinese page `nodes/def.choicefn.md` and `proofs/`.
 
 
-Cite: `def.choicefn` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.choicefn` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

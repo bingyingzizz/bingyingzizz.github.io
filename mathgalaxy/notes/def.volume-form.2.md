@@ -6,3 +6,4 @@
 这也是「曲面上 $\mathrm{d}A = \omega^{1}\wedge\omega^{2}$」的来源。
 
 **它不是度量的一部分**：同一个度量配两个定向，给出两个只差符号的体积形式；同一个定向配不同度量，给出不同的 $\sqrt{\det g}$。体积形式 = 定向 + 度量，两部分都要交代。
+📌 例：$\mathbb{R}^{3}$ 上的 $\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z$；$S^{2}_{R}$ 上取 $R^{2}\sin\theta\,\mathrm{d}\theta\wedge\mathrm{d}\varphi$，它的积分是 $4\pi R^{2}$（正好是球面积）。

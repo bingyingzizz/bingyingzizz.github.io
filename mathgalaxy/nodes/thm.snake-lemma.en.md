@@ -10,5 +10,5 @@ layer 17 · lemma · cluster Additive and Abelian Categories (`hom.ab`) · Homol
 Chinese only — see the Chinese page `nodes/thm.snake-lemma.md` and `proofs/`.
 
 
-Cite: `thm.snake-lemma` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.snake-lemma` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

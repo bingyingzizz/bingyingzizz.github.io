@@ -39,8 +39,19 @@
   <!-- ⭐ 首屏就让人「能开始做一件事」（外部评审 2026-11-02 提的，认了）：
        三个入口都只用**已有的**深链能力（#n= 节点 / #e= 连线 / all.html 索引），
        不新增前端逻辑。项目目录往后排，因为它回答的是「这是什么」而不是「我能干什么」。 -->
+  <!-- ⭐ 落地页搜索（2026-11-03 加，K1）：星图页一直没有 `#q=`，所以这里只能把人
+       送到索引页重新开始。现在星图支持 `#q=<关键词>`，这里就能放一个真搜索框：
+       提交后直接把词带过去、结果已经在图上列好。
+       ⛔ 不引 JS 框架：这里只有 8 行内联脚本；无脚本时退回 all.html（索引页也能搜）。 -->
+  <form class="find enter" style="--i:2" role="search" aria-label="在星图里搜索"
+        onsubmit="var v=this.q.value.trim();if(!v){return false;}location.href='mathgalaxy/#q='+encodeURIComponent(v);return false;">
+    <input type="search" name="q" placeholder="搜一个概念：一致收敛 · 紧 · 示性类 …" aria-label="搜索节点" autocomplete="off">
+    <button type="submit">在星图里搜</button>
+    <noscript><a href="mathgalaxy/all.html">索引页</a></noscript>
+  </form>
+
   <nav class="tasks enter" style="--i:2" aria-label="开始使用">
-    <a href="mathgalaxy/all.html"><b>查一个概念</b><span>中文名 / 英文名 / 常见叫法都行 —— 从索引找到那一页</span></a>
+    <a href="mathgalaxy/all.html"><b>浏览索引</b><span>按星系 / 星团列出全部节点 —— 不想打字时从这里看</span></a>
     <a href="mathgalaxy/#n=thm.de-rham"><b>看前置知识</b><span>选一个目标，右侧面板列出它依赖什么、又被谁依赖</span></a>
     <a href="mathgalaxy/"><b>随便探索</b><span>直接进完整星图：滚轮缩放、拖拽平移、点节点看详情</span></a>
   </nav>
@@ -55,7 +66,7 @@
     <span>可交互的数学知识图谱 —— 按「大板块 / 星系 / 星团 / 节点」四级导航组织，
     后三级就是「星系 / 星团 / 恒星」三层知识尺度（大板块只是把星系再归一次类）；
     箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
-    内容覆盖 15 星系 / 102 星团 / 1472 节点 / 2799 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
+    内容覆盖 15 星系 / 105 星团 / 1531 节点 / 3120 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
     <i class="go">→</i>
   </a>
 
@@ -106,13 +117,13 @@
   <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
   <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
     <b>graph.md</b>
-    <span>整张星图的 Markdown 全量导出（约 3.4 MB）。适合一次下载、本地处理；
+    <span>整张星图的 Markdown 全量导出（约 3.6 MB）。适合一次下载、本地处理；
     ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
     <i class="go">↓</i>
   </a>
   <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
     <b>graph.json</b>
-    <span>机器可读的全量版本（约 4.9 MB），每条边带 strength（强边 / 弱边）与完整证明。
+    <span>机器可读的全量版本（约 5.2 MB），每条边带 strength（强边 / 弱边）与完整证明。
     同样只适合下载，不适合单次抓取。</span>
     <i class="go">↓</i>
   </a>
@@ -144,7 +155,7 @@
   </section>
 
   <footer class="enter" style="--i:15">
-    最近更新：2026-11-03 ·
+    最近更新：2026-11-04 ·
     由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
     <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
   </footer>

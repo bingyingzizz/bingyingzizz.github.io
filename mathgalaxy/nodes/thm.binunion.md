@@ -17,4 +17,4 @@ refs: Kunen, Set Theory, I.3
 ## 说明
 $a \cup b$ 是包含 $a$ 与 $b$ 的最小集合（$\subseteq$意义下）。
 
-引用：`thm.binunion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.binunion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

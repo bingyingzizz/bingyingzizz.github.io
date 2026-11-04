@@ -16,4 +16,4 @@ refs: Le Stum, An introduction to condensed mathematics, §7.3
 ## 说明
 ⚠️ 专门提醒：**这个定义依赖景 $\mathcal{C}$，不只是依赖拓扑斯 $\widetilde{\mathcal{C}}$** —— 换个景（同一拓扑斯）无环性可能变。这一点和「层的概念只依赖拓扑斯」形成对比。
 
-引用：`def.acyclic-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.acyclic-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # 变上限积分的导数　`thm.ftc-riemann-part1`
 定理（第一基本定理）：变上限积分及其导数
-layer 20 · 定理 · Riemann 积分 · 数学分析
+layer 21 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.ftc-riemann-part1)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上可积，定义
@@ -15,6 +15,9 @@ $$F(x) := \int_a^x f, \qquad x \in [a, b]$$
 
 $$F'(x_0) = f(x_0)$$
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.antiderivative`](../nodes/def.antiderivative.md) 原函数 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.ftc-riemann-part1.2.md](./thm.ftc-riemann-part1.2.md)
 
@@ -22,4 +25,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/thm.ftc-riemann-part1.md`
 
-引用：`thm.ftc-riemann-part1`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ftc-riemann-part1`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

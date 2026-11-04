@@ -1,6 +1,6 @@
 # 凝聚态集满态射的判据　`prop.cond-epi`
 凝聚态集的满态射
-layer 17 · 命题 · 凝聚态集 · 凝聚态数学
+layer 20 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-epi)　·　[节点索引](../index.md)
 
 凝聚态集的态射 $X \to Y$ 是满态射 $\iff$ 对每个**自由**紧 Hausdorff 空间 $F$，$X(F) \to Y(F)$ 是满射。
@@ -16,4 +16,6 @@ layer 17 · 命题 · 凝聚态集 · 凝聚态数学
 
 refs: Le Stum, An introduction to condensed mathematics, §4
 
-引用：`prop.cond-epi`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+> 说明见 `notes/prop.cond-epi.md`
+
+引用：`prop.cond-epi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -7,7 +7,9 @@
 
 - 有序域 | ordered field → def.ordered-field
 
-- 线性无关 | 张成 | 基 | basis | span | linearly independent | 向量空间 → def.vs
+- 线性无关 | 张成 | 基 | basis | span | linearly independent → def.vs
+
+- 向量空间 | 线性空间 | vector space | K-向量空间 → def.vector-space
 
 - 每个向量空间有基 | Hamel 基 | 基的存在性 → thm.vsbasis
 

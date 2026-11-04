@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, Exercise 1.13
 ## 说明
 **证明。** 「$k$-模 $M$ 带上一个自同态 $T : M \to M$」与「$k[T]$-模结构」是同一份数据（$T$ 给出 $k[T] \to \operatorname{End}(M)$）✓。∎
 
-引用：`prop.op-category-is-modules`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.op-category-is-modules`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -11,5 +11,5 @@ names: `Dimension and Ext` (short) · `Projective Dimension and the Vanishing of
 Chinese only — see the Chinese page `nodes/prop.pd-vanishing.md` and `proofs/`.
 
 
-Cite: `prop.pd-vanishing` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.pd-vanishing` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

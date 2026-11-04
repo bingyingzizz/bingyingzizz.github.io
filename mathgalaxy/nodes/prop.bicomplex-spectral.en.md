@@ -10,5 +10,5 @@ layer 18 · proposition · cluster Filtrations and Spectral Sequences (`hom.spec
 Chinese only — see the Chinese page `nodes/prop.bicomplex-spectral.md` and `proofs/`.
 
 
-Cite: `prop.bicomplex-spectral` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.bicomplex-spectral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

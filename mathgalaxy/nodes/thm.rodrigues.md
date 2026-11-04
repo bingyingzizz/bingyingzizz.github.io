@@ -1,6 +1,6 @@
 # Rodrigues 定理　`thm.rodrigues`
 Rodrigues 定理
-layer 27 · 定理 · 曲面论 · 微分几何
+layer 30 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.rodrigues)　·　[节点索引](../index.md)
 
 设 $v \in T_{p}U$，$v \ne 0$，$k := k_{n}(v)$。则下列三条等价：
@@ -19,4 +19,4 @@ refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 
 
 > 说明见 `notes/thm.rodrigues.md`
 
-引用：`thm.rodrigues`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.rodrigues`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

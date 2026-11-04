@@ -11,5 +11,5 @@ names: `Tensor Is Right Exact` (short) · `Right Exactness of the Tensor Functor
 Chinese only — see the Chinese page `nodes/prop.tensor-right-exact.md` and `proofs/`.
 
 
-Cite: `prop.tensor-right-exact` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.tensor-right-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

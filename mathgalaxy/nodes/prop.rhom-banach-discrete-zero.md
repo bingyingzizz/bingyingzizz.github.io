@@ -12,8 +12,11 @@ $$\operatorname{RHom}_{\mathbb{Z}}(M,\ N) = 0.$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.rhom-banach-discrete-zero.2.md](./prop.rhom-banach-discrete-zero.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.rhom-banach-discrete-zero.3.md](./prop.rhom-banach-discrete-zero.3.md)
+
 refs: Le Stum, Proposition 8.3.5
 
 > 说明见 `notes/prop.rhom-banach-discrete-zero.md`
 
-引用：`prop.rhom-banach-discrete-zero`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.rhom-banach-discrete-zero`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

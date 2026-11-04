@@ -1,6 +1,6 @@
 # Frobenius 定理　`thm.frobenius`
 Frobenius 定理
-layer 22 · 定理 · 向量场与 Lie 结构 · 微分几何
+layer 25 · 定理 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=thm.frobenius)　·　[节点索引](../index.md)
 
 **白话**：一族光滑方向能被拼成薄片，当且仅当这族方向对合 —— 没有别的障碍。这是一阶偏微分方程组可解的几何版本，也是叶状结构的出生证。
@@ -14,4 +14,4 @@ refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem�
 
 > 说明见 `notes/thm.frobenius.md`
 
-引用：`thm.frobenius`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.frobenius`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

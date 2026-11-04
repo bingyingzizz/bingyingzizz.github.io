@@ -1,6 +1,6 @@
 # 隐函数定理　`thm.implicit-function`
 定理（隐函数定理）：$D_y F$ 可逆 $\implies$ 局部能解出 $y = g(x)$
-layer 24 · 定理 · 多元微分 · 数学分析
+layer 28 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.implicit-function)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n} \times \mathbb{R}^{m}$ 开，$F : U \to \mathbb{R}^{m}$ 是 $C^{1}$，$(a, b) \in U$ 满足 $F(a, b) = 0$，且 $D_y F(a, b)$ **可逆**：
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Spivak, Calculus on Ma
 
 > 说明见 `notes/thm.implicit-function.md`
 
-引用：`thm.implicit-function`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.implicit-function`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

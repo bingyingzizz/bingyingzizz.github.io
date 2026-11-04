@@ -11,5 +11,5 @@ names: `Exact Sequence Subcategory` (short) · `Exact Sequences Form a Subcatego
 Chinese only — see the Chinese page `nodes/prop.exact-sequence-subcategory.md` and `proofs/`.
 
 
-Cite: `prop.exact-sequence-subcategory` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.exact-sequence-subcategory` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

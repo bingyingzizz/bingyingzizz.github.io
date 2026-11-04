@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 10 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
+layer 9 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
 > 续见 nodes/thm.cardinal-comparable.en.2.md

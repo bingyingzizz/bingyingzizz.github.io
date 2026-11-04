@@ -8,9 +8,9 @@ layer 5 · 定理 · 集合族与 σ-代数 · 实变函数+数学分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.ring-monotone-sigma.5.md](./thm.ring-monotone-sigma.5.md)
+- …另有入边，续页见 [nodes/thm.ring-monotone-sigma.4.md](./thm.ring-monotone-sigma.4.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
 > English abstract 续见 [nodes/thm.ring-monotone-sigma.3.md](./thm.ring-monotone-sigma.3.md)
 
 refs: Halmos, Measure Theory, §6
@@ -19,4 +19,4 @@ refs: Halmos, Measure Theory, §6
 
 > 说明见 `notes/thm.ring-monotone-sigma.md`
 
-引用：`thm.ring-monotone-sigma`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.ring-monotone-sigma`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

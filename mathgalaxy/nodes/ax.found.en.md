@@ -18,5 +18,5 @@ $$x_0 \ni  x_1 \ni  x_2 \ni  \cdots$$
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 
-Cite: `ax.found` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `ax.found` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 符号测度　`def.signed-measure`
 符号测度
-layer 15 · 定义 · 符号测度与分解 · 实变函数+数学分析
+layer 17 · 定义 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=def.signed-measure)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M})$ 是可测空间。$\nu : \mathcal{M} \to [-\infty, +\infty]$ 是**符号测度**，当且仅当
@@ -22,4 +22,4 @@ refs: Folland, Real Analysis, §3.1；Halmos, Measure Theory, §28
 
 > 说明见 `notes/def.signed-measure.md`
 
-引用：`def.signed-measure`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.signed-measure`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

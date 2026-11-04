@@ -11,6 +11,6 @@
 - prop.bialgebra-examples　双代数的例子　layer 14
 - prop.forgetful-preserves-limits　代数遗忘函子保极限　layer 14
 - prop.forgetful-exactness　遗忘与含入函子的正合性　layer 14
-- ex.ab-of-categories　Ab(C) 的例子　layer 15
+- prop.functor-preserves-monoid-objects　保有限积的函子作用于代数对象　layer 15
 
 > 续见 `index/cat.algebra.2.md`

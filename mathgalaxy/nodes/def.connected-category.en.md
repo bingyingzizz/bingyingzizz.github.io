@@ -10,5 +10,5 @@ layer 9 · definition · cluster Diagrams and Limits (`cat.limit`) · Category T
 Chinese only — see the Chinese page `nodes/def.connected-category.md` and `proofs/`.
 
 
-Cite: `def.connected-category` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.connected-category` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

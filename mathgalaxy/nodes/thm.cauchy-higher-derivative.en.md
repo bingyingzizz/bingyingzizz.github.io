@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 25 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 names: `Formula for Derivatives` (short) · `Cauchy Integral Formula for Derivatives` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.cauchy-higher-derivative.md` and `proofs/`.
 
 
-Cite: `thm.cauchy-higher-derivative` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.cauchy-higher-derivative` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -8,7 +8,7 @@ layer 12 · 定义 · 预层与米田 · 范畴论
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.right-adjoint-criterion`](../nodes/thm.right-adjoint-criterion.md) 右伴随存在的判据
+- 被 [`prop.copowers-give-adjoint`](../nodes/prop.copowers-give-adjoint.md) 有余幂则可表示函子有伴随 用
 
 - …另有出边，续页见 [nodes/def.representable.6.md](./def.representable.6.md)
 
@@ -24,4 +24,4 @@ refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
 
 > 说明见 `notes/def.representable.md`
 
-引用：`def.representable`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.representable`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

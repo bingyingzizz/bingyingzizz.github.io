@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 17 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 
 > 续见 nodes/thm.urysohn-metrization.en.2.md

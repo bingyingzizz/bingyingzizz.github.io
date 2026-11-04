@@ -1,6 +1,6 @@
 # 完全正规空间　`def.completely-normal-space`
 完全正规空间（T5）：连子空间都正规
-layer 15 · 定义 · 分离公理 · 拓扑学
+layer 16 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.completely-normal-space)　·　[节点索引](../index.md)
 
 **在做什么**：正规性是「闭集 vs 闭集」。它**不遗传**给子空间 —— 所以要求「所有子空间都正规」是一条真加强，这就是 $T_{5}$。
@@ -19,4 +19,4 @@ refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公�
 
 > 说明见 `notes/def.completely-normal-space.md`
 
-引用：`def.completely-normal-space`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.completely-normal-space`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

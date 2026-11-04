@@ -4,12 +4,12 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 19 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Unitary / Orthogonal Matrix` (short) · `Unitary and Orthogonal Matrices` (full)
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.unitary-matrix.md` and `proofs/`.
 
 
-Cite: `def.unitary-matrix` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.unitary-matrix` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · lemma · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 26 · lemma · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.schwarz.md` and `proofs/`.
 
 
-Cite: `lem.schwarz` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `lem.schwarz` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

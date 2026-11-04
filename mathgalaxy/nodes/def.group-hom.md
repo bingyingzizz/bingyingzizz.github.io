@@ -1,6 +1,6 @@
 # 群同态、核与像　`def.group-hom`
 群同态
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 9 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.group-hom)　·　[节点索引](../index.md)
 
 设 $(G, \cdot)$、$(G', \ast)$ 是群。映射 $\varphi : G \to G'$ 叫**群同态**，如果
@@ -23,4 +23,4 @@ refs: Lang, Algebra
 
 > 说明见 `notes/def.group-hom.md`
 
-引用：`def.group-hom`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.group-hom`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

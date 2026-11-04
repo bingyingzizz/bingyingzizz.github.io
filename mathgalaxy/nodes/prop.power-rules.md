@@ -1,6 +1,6 @@
 # 指数律与幂的单调性　`prop.power-rules`
 命题：指数律
-layer 9 · 命题 · 实数的运算与不等式 · 数学分析
+layer 10 · 命题 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=prop.power-rules)　·　[节点索引](../index.md)
 
 设 $A$ 是交换环，$a, b \in A$，$m, n \in \mathbb{Z}$（出现负指数时要求 $a, b$ 可逆）。则
@@ -20,4 +20,4 @@ refs: Lang, Algebra, Ch. I
 
 > 说明见 `notes/prop.power-rules.md`
 
-引用：`prop.power-rules`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.power-rules`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

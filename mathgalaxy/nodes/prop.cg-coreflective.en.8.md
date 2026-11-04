@@ -6,5 +6,5 @@ English entry · root `../`
 Wikipedia: https://en.wikipedia.org/wiki/Compactly_generated_space · nLab: https://ncatlab.org/nlab/show/compactly+generated+space
 
 
-Cite: `prop.cg-coreflective` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.cg-coreflective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

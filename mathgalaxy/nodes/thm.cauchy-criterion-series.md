@@ -1,6 +1,6 @@
 # 级数的 Cauchy 准则　`thm.cauchy-criterion-series`
 定理：级数收敛 $\iff$ 尾部可以任意小
-layer 18 · 定理 · 数项级数的敛散性 · 数学分析
+layer 22 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.cauchy-criterion-series)　·　[节点索引](../index.md)
 
 设 $\{a_n\} \subseteq \mathbb{R}$，$s_N := \sum_{n=1}^{N} a_n$。则 $\sum a_n$ 收敛，当且仅当
@@ -19,4 +19,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.cauchy-criterion-series.md`
 
-引用：`thm.cauchy-criterion-series`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-criterion-series`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

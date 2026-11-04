@@ -5,4 +5,5 @@
 - 被 [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理 用
 - 被 [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群 用
 - ⇒ [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理
+- 被 [`ex.trivial-group`](../nodes/ex.trivial-group.md) 平凡群 用
 - 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用

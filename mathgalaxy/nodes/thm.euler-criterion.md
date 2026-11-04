@@ -1,6 +1,6 @@
 # Euler 判别法　`thm.euler-criterion`
 $\left(\frac{a}{p}\right) \equiv a^{(p-1)/2}$
-layer 15 · 定理 · 二次剩余与原根 · 数论
+layer 16 · 定理 · 二次剩余与原根 · 数论
 [在星图里打开](../#n=thm.euler-criterion)　·　[节点索引](../index.md)
 
 设 $p$ 是奇素数，$p \nmid a$。则
@@ -18,4 +18,4 @@ refs: 华罗庚《数论导引》第四章
 
 > 说明见 `notes/thm.euler-criterion.md`
 
-引用：`thm.euler-criterion`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.euler-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

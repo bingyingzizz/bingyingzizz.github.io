@@ -1,6 +1,6 @@
 # Möbius 和的恒等式　`thm.mu-sum`
 $\mu$ 的和：只有 $n=1$ 剩下 $1$
-layer 16 · 定理 · 数论函数与素数分布 · 数论
+layer 17 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.mu-sum)　·　[节点索引](../index.md)
 
 对 $n \ge 1$，
@@ -18,4 +18,4 @@ refs: 华罗庚《数论导引》第三章
 
 > 说明见 `notes/thm.mu-sum.md`
 
-引用：`thm.mu-sum`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.mu-sum`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

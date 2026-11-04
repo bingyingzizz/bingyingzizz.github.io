@@ -11,5 +11,5 @@ names: `Terminal and Initial` (short) · `Terminal and Initial Objects` (full)
 Chinese only — see the Chinese page `nodes/def.final-initial.md` and `proofs/`.
 
 
-Cite: `def.final-initial` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.final-initial` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

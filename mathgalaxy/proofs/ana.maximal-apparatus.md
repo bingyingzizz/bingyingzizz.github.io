@@ -1,7 +1,7 @@
 # 「有限特征」这个抽象概念，在向量空间里有一个现成的实例
 `ana.maximal-apparatus` · 类比（弱边） · weak 边 · 根 `../`
 
-`def.finchar` 有限特征 → `def.vs` 向量空间的基
+`def.finchar` 有限特征 → `def.vs` 线性无关与基
 
 严格说这不只是类比 —— 它是一个**实例**，但方向不是逻辑蕴含：
 `def.finchar` 不推出 `def.vs`，`def.vs` 也不推出 `def.finchar`；

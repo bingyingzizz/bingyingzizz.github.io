@@ -3,4 +3,4 @@
 
 `def.measure` 测度 → `def.average-operator` 平均算子 Aᵣ
 
-平均值里的 $m(B(r, x))$ 是 **Lebesgue 测度**。
+平均值里的 $m(B(x, r))$ 是 **Lebesgue 测度**。

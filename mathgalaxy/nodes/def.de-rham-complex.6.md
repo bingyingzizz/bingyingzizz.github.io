@@ -9,3 +9,4 @@
 - 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
 - 被 [`def.exact-form`](../nodes/def.exact-form.md) 恰当形式 用
 - 被 [`thm.chern-weil`](../nodes/thm.chern-weil.md) 陈–Weil 同态 用
+- 被 [`ex.h1-circle`](../nodes/ex.h1-circle.md) 圆的 H¹ 用

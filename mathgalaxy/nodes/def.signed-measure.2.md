@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.signed-measure)　·　第 1 页 [nodes/def.signed-measure.md](./def.signed-measure.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.absolute-convergence`](../nodes/def.absolute-convergence.md) 绝对收敛：用到了定义 绝对收敛　[proofs/dep.gap-signed-measure-absolute-convergence.md](../proofs/dep.gap-signed-measure-absolute-convergence.md)
 - [`def.sigma-algebra`](../nodes/def.sigma-algebra.md) σ-代数：用到了定义 σ-代数　[proofs/def-dep.sigma-algebra-signed-measure.md](../proofs/def-dep.sigma-algebra-signed-measure.md)
 - [`def.measure`](../nodes/def.measure.md) 测度：用到了定义 测度　[proofs/def-dep.measure-signed-measure.md](../proofs/def-dep.measure-signed-measure.md)
 

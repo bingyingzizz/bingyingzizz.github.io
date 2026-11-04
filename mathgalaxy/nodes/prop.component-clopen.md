@@ -1,6 +1,6 @@
 # 连通分量是闭开邻域之交　`prop.component-clopen`
 紧 Hausdorff 空间中连通分量 = 闭开邻域之交
-layer 16 · 命题 · Stone 与 Stonean · 拓扑学
+layer 18 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.component-clopen)　·　[节点索引](../index.md)
 
 设 $S$ 是紧 Hausdorff 空间，$x \in S$。则 $x$ 的连通分量等于一切包含 $x$ 的闭开集之交：
@@ -15,4 +15,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.2
 
 > 说明见 `notes/prop.component-clopen.md`
 
-引用：`prop.component-clopen`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.component-clopen`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

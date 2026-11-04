@@ -10,5 +10,5 @@ layer 9 · proposition · cluster Categories and Diagrams (`cat.basic`) · Categ
 Chinese only — see the Chinese page `nodes/prop.functor-preserves-sections.md` and `proofs/`.
 
 
-Cite: `prop.functor-preserves-sections` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `prop.functor-preserves-sections` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

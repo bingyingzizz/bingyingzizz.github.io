@@ -1,6 +1,6 @@
 # 谱定理（实对称）　`thm.spectral-theorem`
 定理（谱定理）：实对称算子可正交对角化
-layer 20 · 定理 · 内积空间与正交性 · 抽象代数
+layer 24 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.spectral-theorem)　·　[节点索引](../index.md)
 
 设 $V$ 是有限维**实**内积空间，$T : V \to V$ **自伴**（即实对称）。则存在 $V$ 的**标准正交基**，使 $T$ 在其中是对角阵：
@@ -24,4 +24,4 @@ refs: Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, C
 
 > 说明见 `notes/thm.spectral-theorem.md`
 
-引用：`thm.spectral-theorem`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.spectral-theorem`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

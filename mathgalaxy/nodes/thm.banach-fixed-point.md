@@ -1,6 +1,6 @@
 # 压缩映射原理　`thm.banach-fixed-point`
 定理（Banach）：完备度量空间上的压缩映射有唯一不动点
-layer 15 · 定理 · 多元微分 · 数学分析
+layer 17 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.banach-fixed-point)　·　[节点索引](../index.md)
 
 设 $(X, d)$ 是**完备**度量空间（`def.complete`），$T : X \to X$ 是以 $q < 1$ 为系数的压缩映射。则
@@ -21,4 +21,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 9；Zeidler, Nonlinear Fun
 
 > 说明见 `notes/thm.banach-fixed-point.md`
 
-引用：`thm.banach-fixed-point`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.banach-fixed-point`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

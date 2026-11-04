@@ -17,4 +17,4 @@ refs: Iversen, Cohomology of Sheaves —— 层的构造一章（skyscraper shea
 
 > 说明见 `notes/def.skyscraper-sheaf.md`
 
-引用：`def.skyscraper-sheaf`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.skyscraper-sheaf`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

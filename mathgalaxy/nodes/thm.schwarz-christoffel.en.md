@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 30 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.schwarz-christoffel.md` and `proofs/`.
 
 
-Cite: `thm.schwarz-christoffel` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.schwarz-christoffel` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

@@ -1,6 +1,6 @@
 # 可度量化空间的性质　`prop.metrizable-normal`
 可度量化空间正规、仿紧且第一可数
-layer 17 · 命题 · 可度量化 · 拓扑学
+layer 16 · 命题 · 可度量化 · 拓扑学
 [在星图里打开](../#n=prop.metrizable-normal)　·　[节点索引](../index.md)
 
 设 $X$ 是**可度量化的**拓扑空间。则 $X$
@@ -17,4 +17,4 @@ refs: Munkres, Topology (2nd ed.), Sections 32 and 41
 
 > 说明见 `notes/prop.metrizable-normal.md`
 
-引用：`prop.metrizable-normal`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.metrizable-normal`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

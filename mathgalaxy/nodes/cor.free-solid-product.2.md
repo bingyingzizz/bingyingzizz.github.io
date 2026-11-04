@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.csz-free`](../nodes/thm.csz-free.md) 连续函数群是自由的：$C(S,\mathbb{Z})$ 自由 $\implies$ $Z[S]^{\blacksquare} \cong \prod_I\mathbb{Z}$　[proofs/imp.free-solid-product.md](../proofs/imp.free-solid-product.md)
+- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/dep.gap-free-solid-product-condensed-abelian-group.md](../proofs/dep.gap-free-solid-product-condensed-abelian-group.md)
 
 > 续见 [nodes/cor.free-solid-product.3.md](./cor.free-solid-product.3.md)

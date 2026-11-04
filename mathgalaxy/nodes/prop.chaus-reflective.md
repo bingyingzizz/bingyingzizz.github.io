@@ -1,6 +1,6 @@
 # 紧 Haus 是反射子范畴　`prop.chaus-reflective`
 Stone–Čech 紧化
-layer 16 · 命题 · 紧 Hausdorff 空间 · 拓扑学
+layer 18 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=prop.chaus-reflective)　·　[节点索引](../index.md)
 
 $\mathbf{CHa
@@ -22,4 +22,4 @@ refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
 
 > 说明见 `notes/prop.chaus-reflective.md`
 
-引用：`prop.chaus-reflective`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`prop.chaus-reflective`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

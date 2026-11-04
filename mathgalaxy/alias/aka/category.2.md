@@ -9,12 +9,10 @@
 
 - 锥 | cone | 余锥 | cocone | Definition 1.3.3 | Def 1.3.3 → def.cone
 
-- 极限 | limit | 余极限 | colimit | 泛锥 | 有限极限 | Definition 1.3.4 | Def 1.3.4 | Exercise 1.26 | Exercise 1.34 → def.limit
+- 极限 | limit | 余极限 | colimit | 泛锥 | 有限极限 | Definition 1.3.4 | Def 1.3.4 | Exercise 1.26 | Exercise 1.34 | lim | 极限 lim → def.limit
 
 - 终对象 | 始对象 | terminal object | initial object | 零对象 | Definition 1.3.5 | Def 1.3.5 → def.final-initial
 
-- 积 | 余积 | product | coproduct | 直积 | 直和 | Definition 1.3.6 | Def 1.3.6 → def.product
-
-- 纤维积 | 拉回 | pullback | fibered product | 推出 | pushout | 笛卡尔方块 | Definition 1.3.7 | Def 1.3.7 → def.fibered-product
+- 积 | 余积 | product | coproduct | 直积 | 直和 | Definition 1.3.6 | Def 1.3.6 | ∏ | × → def.product
 
 > 续见 alias/aka/category.3.md

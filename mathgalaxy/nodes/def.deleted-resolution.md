@@ -10,8 +10,11 @@ layer 15 · 定义 · 消解与维数 · 同调代数
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-link.deleted-projobj.md](../proofs/def-link.deleted-projobj.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.deleted-resolution.3.md](./def.deleted-resolution.3.md)
+
 refs: Rotman, An Introduction to Homological Algebra (2nd ed.), 关于消解（resolutions）的部分 · 删除消解（deleted resolution）；Weibel, An Introduction to Homological Algebra, 投射消解（projective resolutions）一节 · 用删除消解定义 Ext 与 Tor
 
 > 说明见 `notes/def.deleted-resolution.md`
 
-引用：`def.deleted-resolution`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.deleted-resolution`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,6 +1,6 @@
 # K-有界正合　`def.k-bounded-exact`
 $K$-有界正合与 $K$-有界零调
-layer 11 · 定义 · 凝聚态导出函子 · 凝聚态数学+同调代数
+layer 12 · 定义 · 凝聚态导出函子 · 凝聚态数学+同调代数
 [在星图里打开](../#n=def.k-bounded-exact)　·　[节点索引](../index.md)
 
 设 $M^{\bullet}$ 是**半范数阿贝尔群**的复形，$K \in \mathbb{R}$。称 $M^{\bullet}$ 在 $M^{n}$ 处 **$K$-有界正合**，如果
@@ -21,4 +21,4 @@ refs: Le Stum, Definition 8.2.1
 
 > 说明见 `notes/def.k-bounded-exact.md`
 
-引用：`def.k-bounded-exact`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.k-bounded-exact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

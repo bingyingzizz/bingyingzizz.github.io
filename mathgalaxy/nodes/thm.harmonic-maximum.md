@@ -1,6 +1,6 @@
 # 调和函数的最大值原理　`thm.harmonic-maximum`
 定理：调和函数的最大值原理
-layer 22 · 定理 · 调和函数 · 复变函数
+layer 26 · 定理 · 调和函数 · 复变函数
 [在星图里打开](../#n=thm.harmonic-maximum)　·　[节点索引](../index.md)
 
 **白话**：非常数的调和函数在区域内部既取不到最大值，也取不到最小值 —— 要取极值只能跑到边界上去。
@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》· 调和函数的最大值原理；Ahlfors, Co
 
 > 说明见 `notes/thm.harmonic-maximum.md`
 
-引用：`thm.harmonic-maximum`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.harmonic-maximum`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

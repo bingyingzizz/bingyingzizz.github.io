@@ -10,5 +10,5 @@ layer 5 · theorem · cluster Constructing Sets (`set.construct`) · Set Theory
 Chinese only — see the Chinese page `nodes/thm.empty.md` and `proofs/`.
 
 
-Cite: `thm.empty` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.empty` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

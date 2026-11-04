@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/dep.char-primering.md](../proofs/dep.char-primering.md)
+
+> 续见 [nodes/def.characteristic.4.md](./def.characteristic.4.md)

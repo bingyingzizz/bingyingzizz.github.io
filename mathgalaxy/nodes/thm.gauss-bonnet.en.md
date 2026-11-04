@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 29 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 32 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 > 续见 nodes/thm.gauss-bonnet.en.2.md

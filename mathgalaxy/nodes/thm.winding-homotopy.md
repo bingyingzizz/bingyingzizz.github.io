@@ -1,6 +1,6 @@
 # 绕数的同伦不变性　`thm.winding-homotopy`
 同伦的闭曲线有相同的绕数（Cauchy 定理的同伦形式）
-layer 20 · 定理 · 复变函数基础 · 复变函数
+layer 21 · 定理 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=thm.winding-homotopy)　·　[节点索引](../index.md)
 
 设 $\gamma_{0}, \gamma_{1}$ 是 $\mathbb{C} \setminus \{a\}$ 中同伦的闭曲线（同伦 $H
@@ -18,4 +18,4 @@ refs: 王晓光《复变函数》· 复围道积分的同伦不变性；Ahlfors,
 
 > 说明见 `notes/thm.winding-homotopy.md`
 
-引用：`thm.winding-homotopy`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.winding-homotopy`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

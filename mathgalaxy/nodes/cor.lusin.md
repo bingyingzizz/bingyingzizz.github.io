@@ -1,6 +1,6 @@
 # Lusin 定理　`cor.lusin`
 Lusin 定理：可测函数几乎处处连续
-layer 22 · 推论 · 可测函数与收敛 · 实变函数+数学分析
+layer 24 · 推论 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=cor.lusin)　·　[节点索引](../index.md)
 
 设 $f : [a, b] \to \mathbb{C}$ 是 Lebesgue 可测的。则对任意 $\varepsilon > 0$，存在**紧集** $E \subseteq [a, b]$ 使
@@ -15,4 +15,4 @@ refs: Folland, Real Analysis, Theorem 2.34
 
 > 说明见 `notes/cor.lusin.md`
 
-引用：`cor.lusin`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`cor.lusin`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

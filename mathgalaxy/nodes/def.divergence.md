@@ -1,6 +1,6 @@
 # 散度　`def.divergence`
 散度
-layer 27 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 31 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.divergence)　·　[节点索引](../index.md)
 
 **在做什么**：散度回答「一点附近向量场往外冒得多快」。定义成「沿 $X$ 推着走时体积形式的变化率」—— 不用坐标，而且一写下来就得到散度定理。
@@ -17,4 +17,4 @@ refs: Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· �
 
 > 说明见 `notes/def.divergence.md`
 
-引用：`def.divergence`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.divergence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

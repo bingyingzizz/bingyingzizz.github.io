@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 13 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.poly-ufd.md` and `proofs/`.
 
 
-Cite: `thm.poly-ufd` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.poly-ufd` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

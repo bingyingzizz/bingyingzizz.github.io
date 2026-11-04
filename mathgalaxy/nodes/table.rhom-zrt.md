@@ -1,6 +1,6 @@
 # Z、R、T 的导出 Hom 计算表　`table.rhom-zrt`
 $\operatorname{RHom}_{\mathbb{Z}}(M, N)$ 在 $\mathbb{Z}, \mathbb{R}, T$ 上的取值
-layer 21 · 例 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
+layer 23 · 例 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=table.rhom-zrt)　·　[节点索引](../index.md)
 
 下表列出 $\operatorname{RHom}_{\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：
@@ -17,4 +17,4 @@ refs: Le Stum, Exercise 8.17
 
 > 说明见 `notes/table.rhom-zrt.md`
 
-引用：`table.rhom-zrt`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`table.rhom-zrt`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

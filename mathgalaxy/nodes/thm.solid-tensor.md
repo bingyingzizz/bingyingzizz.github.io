@@ -1,6 +1,6 @@
 # 固态张量积　`thm.solid-tensor`
 定理：$\mathbf{Solid}$ 上的对称幺半张量积 $\otimes^{\blacksquare}$
-layer 20 · 定理 · 固态阿贝尔群 · 凝聚态数学
+layer 24 · 定理 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=thm.solid-tensor)　·　[节点索引](../index.md)
 
 **(i)** $\mathbf{Solid}$ 上有唯一的对称幺半张量积 $\otimes^{\blacksquare}$，使固态化函子 $M \mapsto M^{\blacksquare}$ 对称幺半；具体地
@@ -19,4 +19,4 @@ refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture 
 
 > 说明见 `notes/thm.solid-tensor.md`
 
-引用：`thm.solid-tensor`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.solid-tensor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

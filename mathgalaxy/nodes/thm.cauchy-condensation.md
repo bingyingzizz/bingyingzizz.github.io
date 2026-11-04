@@ -1,6 +1,6 @@
 # Cauchy 凝聚判别法　`thm.cauchy-condensation`
 定理：Cauchy 凝聚判别法（按 $2^{k}$ 分组）
-layer 16 · 定理 · 数项级数的敛散性 · 数学分析
+layer 20 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.cauchy-condensation)　·　[节点索引](../index.md)
 
 设 $a_n \ge 0$ 且**递减**。则原级数与「按 $2^{k}$ 抽出来的那一个」同敛散，即
@@ -17,4 +17,4 @@ refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.cauchy-condensation.md`
 
-引用：`thm.cauchy-condensation`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.cauchy-condensation`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

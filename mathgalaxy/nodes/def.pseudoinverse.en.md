@@ -4,12 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · definition · cluster Matrix Factorizations and Least Squares (`algebra.numeric`) · Abstract Algebra
-names: `Pseudoinverse` (short) · `Moore-Penrose Pseudoinverse` (full)
+layer 26 · definition · cluster Matrix Factorizations and Least Squares (`algebra.numeric`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.pseudoinverse.md` and `proofs/`.
 
 
-Cite: `def.pseudoinverse` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `def.pseudoinverse` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

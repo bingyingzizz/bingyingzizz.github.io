@@ -7,3 +7,4 @@
 - ⇒ [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近
 - ～弱边 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群
 - ⇒ [`thm.homotopy-invariance`](../nodes/thm.homotopy-invariance.md) 同伦不变性
+- 被 [`ex.h1-circle`](../nodes/ex.h1-circle.md) 圆的 H¹ 用

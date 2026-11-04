@@ -4,11 +4,11 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 23 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.solid-derived.md` and `proofs/`.
 
 
-Cite: `thm.solid-derived` (content v0.9.2) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Cite: `thm.solid-derived` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 

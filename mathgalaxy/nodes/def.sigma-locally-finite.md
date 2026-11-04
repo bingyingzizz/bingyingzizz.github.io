@@ -21,4 +21,4 @@ refs: Munkres, Topology (2nd ed.), Sections 39 and 40；Engelking, General Topol
 
 > 说明见 `notes/def.sigma-locally-finite.md`
 
-引用：`def.sigma-locally-finite`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.sigma-locally-finite`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

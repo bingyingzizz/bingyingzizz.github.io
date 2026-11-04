@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 复函数的积分 | 复积分 → def.integral-complex
+
 - 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
 
 - Fatou | Fatou's lemma | 法图引理 | 法都引理 → lem.fatou
@@ -24,7 +26,5 @@
 - L1 逼近 | L1 里的逼近 → thm.approximation-L1
 
 - 积分号下求导 | 交换极限与积分 | differentiation under the integral sign | 积分和极限换顺序 → thm.differentiate-under-integral
-
-- 积 σ-代数 | product sigma-algebra | 乘积 σ代数 → def.product-sigma
 
 > 续见 alias/aka/analysis.7.md

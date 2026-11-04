@@ -1,6 +1,6 @@
 # Laurent 展开定理　`thm.laurent`
 定理：Laurent 展开定理
-layer 21 · 定理 · Cauchy 理论 · 复变函数
+layer 25 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.laurent)　·　[节点索引](../index.md)
 
 **白话**：环域上的全纯函数一定能展成 Laurent 级数，而且系数由积分**唯一**确定。
@@ -21,4 +21,4 @@ refs: 王晓光《复变函数》笔记，第 21 章 · Laurent 级数；Ahlfors
 
 > 说明见 `notes/thm.laurent.md`
 
-引用：`thm.laurent`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.laurent`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

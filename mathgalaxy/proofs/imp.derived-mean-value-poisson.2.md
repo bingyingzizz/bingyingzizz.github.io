@@ -7,7 +7,7 @@
 
 **面积平均。** 对 $s \in (0,r)$ 用一圈的均值 $u(a) = \frac{1}{2\pi}\int_{0}^{2\pi}u(a+se^{i\theta})\,\mathrm{d}\theta$，再乘 $2\pi s$ 对 $s$ 积分并用极坐标：
 
-$$\iint_{D(a,r)} u\,\mathrm{d}x\,\mathrm{d}y = \int_{0}^{r} 2\pi s\, u(a)\,\mathrm{d}s = \pi r^{2} u(a).$$
+$$\iint_{B(a, r)} u\,\mathrm{d}x\,\mathrm{d}y = \int_{0}^{r} 2\pi s\, u(a)\,\mathrm{d}s = \pi r^{2} u(a).$$
 
 两条合起来就是均值性质。$\blacksquare$
 

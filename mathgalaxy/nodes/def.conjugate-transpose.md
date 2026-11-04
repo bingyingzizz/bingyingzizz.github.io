@@ -1,6 +1,6 @@
 # 共轭转置　`def.conjugate-transpose`
 共轭转置：复数情形下的「伴随」
-layer 12 · 定义 · 内积空间与正交性 · 抽象代数
+layer 18 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.conjugate-transpose)　·　[节点索引](../index.md)
 
 **在做什么**：复数域上，光是转置不够 —— 内积对第二个变元是共轭线性的，所以「搬 $A$ 到另一边」时要连共轭一起搬。于是有了共轭转置。
@@ -19,4 +19,4 @@ refs: Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」�
 
 > 说明见 `notes/def.conjugate-transpose.md`
 
-引用：`def.conjugate-transpose`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`def.conjugate-transpose`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

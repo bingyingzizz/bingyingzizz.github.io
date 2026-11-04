@@ -11,7 +11,7 @@
 
 - 同伦不变性 → thm.homotopy-invariance
 
-- Euler 示性数 → thm.euler-characteristic
+- Euler 示性数 | χ | χ(M) → thm.euler-characteristic
 
 - Mayer–Vietoris（同调） → thm.mv-homology
 

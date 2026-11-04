@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-dep.rbnd-banach.md](../proofs/def-dep.rbnd-banach.md)
 - [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-dep.rbnd-rhom.md](../proofs/def-dep.rbnd-rhom.md)
+
+> 续见 [nodes/prop.rhom-banach-discrete-zero.3.md](./prop.rhom-banach-discrete-zero.3.md)

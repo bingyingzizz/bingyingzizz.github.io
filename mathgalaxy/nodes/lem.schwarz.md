@@ -1,6 +1,6 @@
 # Schwarz 引理　`lem.schwarz`
 引理：Schwarz 引理
-layer 22 · 引理 · 共形映射与正规族 · 复变函数
+layer 26 · 引理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=lem.schwarz)　·　[节点索引](../index.md)
 
 **白话**：把单位圆盘映到自身、并且固定原点的全纯映射，一定被 $z \mapsto z$ 压住：像点比原像更靠近圆心。
@@ -25,4 +25,4 @@ refs: 王晓光《复变函数》· Schwarz 引理；Ahlfors, Complex Analysis, 
 
 > 说明见 `notes/lem.schwarz.md`
 
-引用：`lem.schwarz`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`lem.schwarz`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

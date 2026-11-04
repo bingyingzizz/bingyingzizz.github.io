@@ -1,6 +1,6 @@
 # 实轴上有理函数的积分　`thm.integral-rational`
 定理：用留数计算实轴上有理函数的积分
-layer 21 · 定理 · 留数与辐角原理 · 复变函数
+layer 25 · 定理 · 留数与辐角原理 · 复变函数
 [在星图里打开](../#n=thm.integral-rational)　·　[节点索引](../index.md)
 
 **白话**：分母比分子至少高两次、并且在实轴上没有零点的有理函数，它在整条实轴上的积分等于 $2\pi i$ 乘上半平面所有极点的留数之和。
@@ -16,4 +16,4 @@ refs: 王晓光《复变函数》第 23–24 章 · 用留数计算实积分；A
 
 > 说明见 `notes/thm.integral-rational.md`
 
-引用：`thm.integral-rational`（内容 v0.9.2）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
+引用：`thm.integral-rational`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
