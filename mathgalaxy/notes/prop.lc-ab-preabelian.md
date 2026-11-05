@@ -9,4 +9,8 @@ $\mathbb{R}^{\mathrm{disc}} \to \mathbb{R}$ 是单态射（它同构于自己的
 
 于是「余核的核」不是原来的对象，严格性破掉。
 
+**证明。**
+- **预阿贝尔**：有有限积与有限余积（积 = 积群配积拓扑；余积 = 直和配「余积拓扑」）、核与余核都存在 —— 核是通常的核配**子空间拓扑**；余核是 $N/\overline{f(M)}$ 配**商拓扑**（$f(M)$ 未必闭，必须商掉**闭包**：对闭子群商群配商拓扑才是局部紧 Hausdorff）✓。
+- **不是阿贝尔**：取 $\mathrm{id} : \mathbb{R}^{\mathrm{disc}} \to \mathbb{R}$。
+
 > 续见 notes/prop.lc-ab-preabelian.2.md

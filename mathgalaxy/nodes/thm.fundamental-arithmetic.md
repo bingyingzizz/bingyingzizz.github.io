@@ -7,7 +7,7 @@ layer 13 · 定理 · 整除与同余 · 数论
 
 $$n = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{r}^{e_{r}},$$
 
-其中 $p_{1} < p_{2} < \cdots < p_{r}$ 是素数，$e_{i} \ge 1$。
+其中 $p_{1} < p_{2} < \cdots < p_{r}$ 是素数，$e_{i} \in \mathbb{Z}_{\ge 1}$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法：唯一分解：归纳 + Euclid 引理　[proofs/imp.nt-fta.md](../proofs/imp.nt-fta.md)

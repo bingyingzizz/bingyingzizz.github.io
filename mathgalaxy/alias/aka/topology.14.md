@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 滤子 → def.filter
+
 - 连通和 | connect sum | M#N → def.connected-sum
 
 - 亏格 | genus | 洞的个数 → def.genus
@@ -29,6 +31,6 @@
 
 - 圆的同调 | 圆的 H1 → ex.h1-circle
 
-- Sierpinski 空间 | Sierpiński 空间 → ex.sierpinski-space
+- Sierpinski 空间 | Sierpiński 空间 | 谢尔宾斯基空间 | 谢尔宾斯基 → ex.sierpinski-space
 
 见 `../../alias.md`。

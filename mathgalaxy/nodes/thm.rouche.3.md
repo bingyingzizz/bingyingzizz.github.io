@@ -2,4 +2,5 @@
 [在星图里打开](../#n=thm.rouche)　·　第 1 页 [nodes/thm.rouche.md](./thm.rouche.md)　·　上一页 [nodes/thm.rouche.2.md](./thm.rouche.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`thm.open-mapping`](../nodes/thm.open-mapping.md) 开映射定理
 - ⇒ [`thm.brouwer-fixed-point`](../nodes/thm.brouwer-fixed-point.md) Brouwer 不动点定理（圆盘）

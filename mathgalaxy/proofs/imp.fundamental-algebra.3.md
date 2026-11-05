@@ -1,7 +1,7 @@
-# 最值定理 + 介值定理 + 因式定理 $\implies$ 代数基本定理
+# 最值定理 + 复数的 $k$ 次方根 + 因式定理 $\implies$ 代数基本定理
 `imp.fundamental-algebra` · 推出 · strong 边 · 根 `../`
 
-`thm.evt` 最值定理 + `thm.ivt` 介值定理 + `thm.factor-theorem` 因式定理与根 → `thm.fundamental-algebra` 代数基本定理
+`thm.evt` 最值定理 + `thm.factor-theorem` 因式定理与根 → `thm.fundamental-algebra` 代数基本定理
 
 对充分小的 $t$ 成立，与 $z_0$ 的最小性矛盾。
 3. 故 $m = 0$，即 $p(z_0) = 0$：$p$ 有根。

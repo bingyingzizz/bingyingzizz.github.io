@@ -1,12 +1,7 @@
 # 平坦与挠积消失　`prop.tor-flat-vanishing`　·　说明
 根 `../`
 
-**各方向用到的假设**（平坦的定义是张量正合，Tor 判据需要导出工具）：
-- 平坦 $\iff$ $F\otimes_R-$ 正合才是定义展开；(1) $\implies$ (3) 还要用左模 $N$ 的投射消解计算 Tor，及正合函子保持消解的正合性。
-- (3) $\implies$ (2)：取 $n=1$，纯逻辑特例；(2) $\implies$ (1)：用短正合列的 Tor 长正合列得张量保持单射，再合并张量固有的右正合性，并非仅仅定义。
-- 这些方向对任意有单位环成立，不要求交换、Noether 或 PID；但 $F$ 为右模、$N$ 为左模的搭配不可省，非交换情形不能任意交换两个输入。
-- 必须对所有 $N$ 消失；仅验 $N=R$ 对任何 $F$ 都成立，例如 $F=\mathbb Z/2$ 却不平坦。平坦也不能替换为投射，$\mathbb Q$ 是平坦而非投射的 $\mathbb Z$-模。
-
-⭐ **它把「平坦」变成了可以逐项验算的条件**：不必考察所有单射，只要对每一个 $N$ 算 $\operatorname{Tor}_{1}$。实践中这条常与「只需要对有限生成理想验」的 Lambek 判据合用。
+⚠️ **与“投射”的对照**：投射 $\iff$ $\operatorname{Ext}^{n}(M,-) = 0$ 对所有 $n \ge 1$；平坦 $\iff$ $\operatorname{Tor}_{n}(-,N) = 0$ 对所有 $n \ge 1$。两者形状对称，但**平坦比投射弱**（投射 $\implies$ 平坦，反之不成立；反例：$\mathbb{Q}$ 在 $\mathbb{Z}$ 上平坦但不投射）。
+⚠️ $\operatorname{Tor}$ 对**两个变元**都可以算：本节用 $F$ 在左、$N$ 在右；换了顺序结果同构（$\operatorname{Tor}$ 平衡）—— 但非交换环上必须同时换到反环：$\operatorname{Tor}_{n}^{R}(M,N) \cong \operatorname{Tor}_{n}^{R^{\mathrm{op}}}(N,M)$（如 $R = M_{2}(k)$ 时，按原结构 $N$ 与 $M$ 根本不在同一侧）。
 
 > 续见 notes/prop.tor-flat-vanishing.4.md

@@ -8,7 +8,7 @@ layer 19 · 命题 · 拓扑斯 · 范畴论
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.internal-hom-slice-value.3.md](./prop.internal-hom-slice-value.3.md)
+- …另有入边，续页见 [nodes/prop.internal-hom-slice-value.4.md](./prop.internal-hom-slice-value.4.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 7.60
 

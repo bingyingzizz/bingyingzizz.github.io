@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.vector-bundle)　·　第 1 页 [nodes/def.vector-bundle.md](./def.vector-bundle.md)
 
 ## 陈述（续）
+设 $M$ 是光滑流形。一个**秩 $k$ 的光滑向量丛**是映射 $\pi : E \to M$（**不要求先假定 $\pi$ 光滑**：由局部平凡化 $\operatorname{pr}_{1}\circ\Phi = \pi$ 与 $\operatorname{pr}_{1}$ 光滑即得），连同两件事：
 1. 每根**纤维** $E_{p} := \pi^{-1}(p)$ 上给定 $k$ 维实向量空间结构；
 2. **局部平凡化**：每点有开邻域 $U$ 与微分同胚 $\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^{k}$，使 $\Phi$ 与投影交换（$\operatorname{pr}_{1} \circ \Phi = \pi$），且在每个纤维上是线性同构。
 $E$ 叫**全空间**，$M$ 叫**底**，$\dim E = \dim M + k$。两条平凡化 $\Phi_{\alpha}, \Phi_{\beta}$ 在重叠处给出**转移函数**

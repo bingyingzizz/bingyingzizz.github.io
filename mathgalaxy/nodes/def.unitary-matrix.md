@@ -7,7 +7,7 @@ layer 19 · 定义 · 内积空间与正交性 · 抽象代数
 
 设 $U \in M_{n}(\mathbb{C})$。称 $U$ 是**酉矩阵**，若
 
-$$U^{*}U = UU^{*} = I ,$$
+$$U^{*}U = I ,$$
 > 陈述续见 [nodes/def.unitary-matrix.2.md](./def.unitary-matrix.2.md)
 
 

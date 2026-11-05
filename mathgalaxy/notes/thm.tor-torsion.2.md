@@ -11,8 +11,6 @@ $$a\otimes 1 = a\otimes\Bigl(k\cdot\frac{1}{k}\Bigr) = (ka)\otimes\frac{1}{k} = 
 
 ⭐ **读法**：$\mathbb{Q}/\mathbb{Z}$ 是「所有有限阶循环群 $\mathbb{Z}/k$ 装在一起的容器」，而 $\operatorname{Tor}_{1}(\mathbb{Q}/\mathbb{Z}, A)$ 恰好把 $A$ 里所有有限阶的元素挑出来。
 
-同一条现象在 $\operatorname{Hom}$ 那一侧对应 $\operatorname{Hom}(\mathbb{Q}/\mathbb{Z}, A) = A_{\mathrm{tors}}$（对偶的那一半，Pontryagin 对偶里到处在用）。
-
-📌 **一个健康检查**：若 $A$ 无挠（例如 $A = \mathbb{Z}$、$\mathbb{Q}$、$\mathbb{R}$），结论说 $\operatorname{Tor}_{1}^{\mathbb{Z}}(\mathbb{Q}/\mathbb{Z}, A) = 0$ —— 与「无挠 $\iff$ 平坦（PID 上）」一致 ✓。
+⚠️ 别把它搬到 $\operatorname{Hom}$ 那一侧：$\operatorname{Hom}(\mathbb{Q}/\mathbb{Z}, A)$ **一般不是** $A_{\mathrm{tors}}$（$A = \mathbb{Z}/2$ 时它为零 —— 任意 $h$ 满足 $h(x) = 2h(x/2) = 0$）。对偶那一侧的正确对应是 $\operatorname{Hom}(\mathbb{Z}/n, A) \cong A[n]$。
 
 > 续见 notes/thm.tor-torsion.3.md

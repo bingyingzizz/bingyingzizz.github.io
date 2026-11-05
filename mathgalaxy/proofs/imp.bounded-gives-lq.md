@@ -3,11 +3,11 @@
 
 `thm.holder` Hölder 不等式 + `def.duality-map` 对偶配对 φ_g → `prop.bounded-functional-gives-lq` 有界 ⟹ g ∈ L^q
 
-**Step 1：有限支可测的 $f$ 也满足 $|\int fg| \le M_g(g)$。**
+**Step 1：有限支可测的 $f$ 也满足 $|\int fg| \le M(g)$。**
 
 设 $f$ 有限支可测、$\|f\|_p = 1$。取**有限支简单函数列** $\{f_n\} \to f$ a.e.，且 $|f_n| \le |f|$、$|f_n| \le \|f\|_\infty \chi_E$（$E$ 是 $f$ 的支集，有限测度）。由 **DCT**，
 
-$$\left| \int fg \right| = \lim_n \left| \int f_n g \right| \le M_g(g)$$
+$$\left| \int fg \right| = \lim_n \left| \int f_n g \right| \le M(g)$$
 
 **Step 2：$q < \infty$。** 不妨设 $g \ne 0$，且设 $\{g \ne 0\}$ $\sigma$有限（$\mu$ 半有限时这一点自动成立）。
 

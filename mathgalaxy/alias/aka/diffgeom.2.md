@@ -1,6 +1,8 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- Lie 第三定理 | 李第三定理 → thm.lie-third
+
 - 丛的分类 | 平凡丛 | 平凡向量丛 → thm.bundle-classification
 
 - 对合分布 → def.involutive-distribution
@@ -42,7 +44,5 @@
 - 欧拉公式（法曲率） → thm.euler-formula-surface
 
 - 罗德里格斯定理 → thm.rodrigues
-
-- 弗雷内–塞雷公式 → thm.frenet-serret
 
 > 续见 alias/aka/diffgeom.3.md

@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.chain-group)　·　第 1 页 [nodes/def.chain-group.md](./def.chain-group.md)
 
 ## 陈述（续）
+其中 $n(\sigma) = 0$ 除有限多个 $\sigma$ 之外（这就是「有限形式和」的意思）。
+
 加法逐点（$n + m$ 表示 $(n + m)(\sigma) = n(\sigma) + m(\sigma)$）。元素写成有限形式和
 
 $$c = \sum_{\sigma \in K_{p}} n_{\sigma}\,\sigma,\qquad n_{\sigma} \in \mathbb{Z},$$

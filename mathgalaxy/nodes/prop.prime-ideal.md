@@ -3,7 +3,7 @@
 layer 12 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.prime-ideal)　·　[节点索引](../index.md)
 
-设 $A$ 是含幺交换环，$P, M \subset A$ 是理想。
+设 $A$ 是含幺交换环，$P, M \subset A$ 是**真理想**（proper；若允许 $P = A$，则「$A/P$ 是整环」失效；若允许 $M = A$，「极大」也失效）。
 
 **(i)** $P$ 叫**素理想**，若 $ab \in P \implies a \in P$ 或 $b \in P$。等价地：$A/P$ 是**整环**。
 

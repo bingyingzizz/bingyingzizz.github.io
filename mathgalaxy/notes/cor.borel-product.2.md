@@ -5,8 +5,6 @@
 - **$\supseteq$（需要可分）**：每个 $X_{j}$ **可分**，取可数稠密集 $C_{j}$，则 $\{ B(c, r) : c \in C_{j},\ r \in \mathbb{Q}_{>0} \}$ 是 $X_{j}$ 的**可数基** ✓。
   $X$ 的基本开集形如 $\bigcap_{j \in F}\pi_{j}^{-1}(U_{j})$（$F$ 有限、$U_{j}$ 取基元素）；每个 $\pi_{j}^{-1}(U_{j}) \in \bigotimes_{j}\mathfrak{B}_{X_{j}}$，有限交仍在其中，而**开集是基本开集之并**、基又可数 $\implies$ 一切开集属于 $\bigotimes_{j}\mathfrak{B}_{X_{j}}$ $\implies$ $\mathfrak{B}_{X} \subseteq \bigotimes_{j}\mathfrak{B}_{X_{j}}$ ✓。
 两边互包即得等号。∎
-⚠️ **可分性不能省**：$\mathbb{R}^{\mathbb{R}}$（不可数积）上，积 $\sigma$代数**真包含于** Borel $\sigma$代数 —— 那些「只看可数多个坐标」的集合撑不满 Borel 结构。
-
-$\subseteq$ 的原因很直接：投影 $\pi _{j}$ 连续，所以 $\pi _{j}^{-1}($开集) 是开集，那些柱集都在 $\mathfrak{B}_X$ 里。
+⚠️ **积的可数性不能省**：$\mathbb{R}^{\mathbb{R}}$ 是**不可数积**，其积 $\sigma$ 代数**真包含于** Borel $\sigma$ 代数（每个因子 $\mathbb{R}$ 都可分，坏在积不可数）；充分条件是「每个因子可分 **且** 积可数」。
 
 > 续见 notes/cor.borel-product.3.md

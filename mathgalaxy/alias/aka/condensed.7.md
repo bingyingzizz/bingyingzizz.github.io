@@ -1,6 +1,8 @@
 # 别名 → 节点 · 凝聚态数学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../condensed.md`
 
+- 紧 Haus 到 Banach 全零 | Proposition 8.3.6 → prop.rhom-chaus-banach-zero
+
 - 对偶的 RHom | 导出张量 | Proposition 8.3.7 → prop.rhom-dual-tensor
 
 - 对偶的 RHom 刻画 | Pontryagin 对偶与 RHom | Proposition 8.3.8 → prop.dual-rhom-characterization

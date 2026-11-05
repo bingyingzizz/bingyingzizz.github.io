@@ -5,7 +5,7 @@ layer 26 · 定理 · 留数与辐角原理 · 复变函数
 
 **白话**：如果两个全纯函数在闭曲线的边界上，「扰动项」的模严格小于「主项」的模，那么加上扰动不会改变曲线内部的零点个数。
 
-设 $\gamma$ 是分段光滑闭曲线，$f, g$ 在 $\gamma$ 及其内部全纯，且在 $\gamma$ 上处处
+设 $\gamma$ 是**正向、简单**的分段光滑闭曲线（逆时针、不自交），$f, g$ 在 $\gamma$ 及其内部全纯，且在 $\gamma$ 上处处
 
 $$|g(z)| < |f(z)|.$$
 
@@ -13,7 +13,6 @@ $$|g(z)| < |f(z)|.$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.hurwitz`](../nodes/thm.hurwitz.md) Hurwitz 定理
-- ⇒ [`thm.open-mapping`](../nodes/thm.open-mapping.md) 开映射定理
 
 - …另有出边，续页见 [nodes/thm.rouche.3.md](./thm.rouche.3.md)
 

@@ -5,7 +5,7 @@
 
 **几何图像**：一个奇异单形 $\sigma : \Delta^{n} \to X$ 与 $F$ 一起给出「棱柱」$F \circ (\sigma \times \mathrm{id}) : \Delta^{n} \times [0,1] \to Y$。
 
-棱柱有 $n+2$ 个面：$n+1$ 个「侧面」加底（$f \circ \sigma$）和顶（$g \circ \sigma$）。
+棱柱有 $n+3$ 个面：$n+1$ 个「侧面」加底（$f \circ \sigma$）和顶（$g \circ \sigma$）—— $n+1+2 = n+3$，$n = 1$ 时正方形确有 $4$ 条边。
 
 把 $\Delta^{n} \times [0,1]$ 三角剖分成 $n+1$ 个 $\Delta^{n+1}$，按定向取侧面之和：
 

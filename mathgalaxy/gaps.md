@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1540 节点 / 3165 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1540 节点 / 3164 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -9,7 +9,7 @@
 
 ⚠️ 第二节会误报（「顺嘴提一句」也算），所以只列出来给人看，不做断言。
 
-## 一、提到了但没有节点（16 个）
+## 一、提到了但没有节点（15 个）
 
 ### 单位圆　出现 27 次
 `thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.rodrigues` · `thm.max-modulus` 等 23 个节点
@@ -20,11 +20,11 @@
 ### 素因子　出现 8 次
 `thm.minimal-poly-divisor` · `def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.bertrand` 等 8 个节点
 
+### 概率　出现 8 次
+`def.lebesgue-stieltjes` · `thm.dct` · `thm.termwise-L1` · `thm.cauchy-schwarz` · `def.tangent-distribution` · `def.jacobi-symbol` 等 7 个节点
+
 ### Fourier 变换　出现 6 次
 `thm.riemann-lebesgue` · `thm.bounded-extension` · `thm.closed-graph` · `def.pontryagin-dual` · `thm.pontryagin-van-kampen`
-
-### 概率　出现 6 次
-`def.lebesgue-stieltjes` · `thm.cauchy-schwarz` · `def.tangent-distribution` · `def.jacobi-symbol` · `def.convex-function`
 
 ### 偏微分方程　出现 6 次
 `thm.frobenius` · `thm.fundamental-theorem-surfaces` · `def.involutive-distribution` · `def.closed-form` · `thm.developable-iff-flat`
@@ -52,9 +52,6 @@
 
 ### 黎曼猜想　出现 1 次
 `def.riemann-zeta`
-
-### 模形式　出现 1 次
-`def.symplectic-matrix`
 
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
@@ -108,6 +105,6 @@
 
 ⚠️ **过期白名单 1 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.differential-form`
 
-## 三、候选词表里从没被提到的（20 个）
+## 三、候选词表里从没被提到的（21 个）
 
-换底公式 · 自然对数 · 反正弦 · 反三角函数 · zeta 函数 · ζ 函数 · 狄利克雷级数 · 求根公式 · 尺规作图 · 命题逻辑 · Riesz–Markov · 图论 · 组合数学 · 负负得正 · 除以零 · 芝诺 · 费马大定理 · 哥德巴赫猜想 · 连续统假设 · 哥德尔不完备定理
+换底公式 · 自然对数 · 反正弦 · 反三角函数 · zeta 函数 · ζ 函数 · 狄利克雷级数 · 模形式 · 求根公式 · 尺规作图 · 命题逻辑 · Riesz–Markov · 图论 · 组合数学 · 负负得正 · 除以零 · 芝诺 · 费马大定理 · 哥德巴赫猜想 · 连续统假设 · 哥德尔不完备定理

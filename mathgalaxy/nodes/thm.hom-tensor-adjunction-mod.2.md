@@ -276,7 +276,29 @@ R
  
 N
 $
+（
+值
+域
+是
  
+$
+\
+m
+a
+t
+h
+b
+f
+{
+A
+b
+}
+$
+）
+的
+左
+伴
+随
 是
  
 $
@@ -300,27 +322,6 @@ m
 }
 _
 {
-R
-}
-(
-N
-,
- 
--
-)
-$
- 
-的
-*
-*
-左
-伴
-随
-*
-*
-：
-$
-$
-(
+\
 
 > 续见 [nodes/thm.hom-tensor-adjunction-mod.3.md](./thm.hom-tensor-adjunction-mod.3.md)

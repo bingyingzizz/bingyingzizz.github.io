@@ -3,20 +3,19 @@ Stone 表示定理：$\mathbf{BoolRing}^{\mathrm{op}} \simeq \mathbf{Stone}$
 layer 19 · 定理 · Stone 与 Stonean · 拓扑学+抽象代数
 [在星图里打开](../#n=thm.boolean-stone)　·　[节点索引](../index.md)
 
-布尔环范畴与 Stone 空间范畴**反等价**：
+设 $\mathbf{BoolRing}$ 是**含单位元**的布尔环配上**保单位**的环同态（缺这一条，反等价不成立：$\mathbb{F}_{2}$ 上允许零映射时，$\operatorname{Spec}$ 会把两点粘成一点，还原出来是 $4$ 元环）。在这个约定下，布尔环范畴与 Stone 空间范畴**反等价**：
 
 $$\mathbf{BoolRing}^{\mathrm{op}}\;\simeq\;\mathbf{Stone}.$$
 
 两个方向是
+> 陈述续见 [nodes/thm.boolean-stone.2.md](./thm.boolean-stone.2.md)
 
-- $B \mapsto \operatorname{Spec}(B) := \operatorname{Hom}_{\mathbf{Rng}}(B,\ \mathbb{F}_{2})$，配上 $\mathbb{F}_{2}$（取离散拓扑）上的**乘积拓扑**；
-- $S \mapsto \operatorname{Clopen}(S)$ —— $S$ 的**开闭子集**全体，**加法取对称差**、**乘法取交**。
-
-## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.boolean-stone.2.md](./thm.boolean-stone.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.boolean-stone.3.md](./thm.boolean-stone.3.md)
+- ～弱边 [`def.provability`](../nodes/def.provability.md) 可证明性
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.boolean-stone.3.md](./thm.boolean-stone.3.md)
 
 refs: Le Stum, Exercise 2.22
 

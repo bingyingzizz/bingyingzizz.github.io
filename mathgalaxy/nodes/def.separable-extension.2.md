@@ -5,4 +5,3 @@
 - [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式：用到了定义 代数元与极小多项式　[proofs/dep.algelem-separable.md](../proofs/dep.algelem-separable.md)
 - [`def.characteristic`](../nodes/def.characteristic.md) 域的特征：用到了定义 域的特征　[proofs/dep.characteristic-separable.md](../proofs/dep.characteristic-separable.md)
 - [`def.algebraic-extension`](../nodes/def.algebraic-extension.md) 代数扩张：用到了定义 代数扩张　[proofs/dep.algext-separable.md](../proofs/dep.algext-separable.md)
-- [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式：用到了定义 代数元与极小多项式　[proofs/dep.gap-separable-extension-algebraic-element.md](../proofs/dep.gap-separable-extension-algebraic-element.md)

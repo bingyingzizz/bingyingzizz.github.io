@@ -5,10 +5,9 @@ layer 25 · 定理 · 内积空间与正交性 · 抽象代数
 
 设 $A \in M_n(\mathbb{R})$ 对称。记 $D_k$ 为 $A$ 的**左上角** $k \times k$ 子矩阵的行列式（**顺序主子式**）。则
 
-$$D_1 > 0,\quad D_2 > 0,\quad \ldots,\quad D_n > 0$$
+$$A\ \text{ 正定} \iff D_1 > 0,\quad D_2 > 0,\quad \ldots,\quad D_n > 0.$$
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.second-derivative-test`](../nodes/thm.second-derivative-test.md) 极值判别（Hessian 判据）
 - 被 [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解 用
 
 ## 为什么成立（入边，证明在 proofs/）

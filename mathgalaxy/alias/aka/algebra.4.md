@@ -1,6 +1,10 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Cauchy–Schwarz 不等式 | 柯西-施瓦茨不等式 | 柯西-施瓦兹不等式 | 柯西-施瓦茨 → thm.cauchy-schwarz
+
+- 张量积的万有性质 → thm.tensor-universal-property
+
 - Lagrange 定理 | 拉格朗日定理 | 拉格朗日 → thm.lagrange
 
 - 特征多项式 | 代数重数 → def.char-poly
@@ -9,7 +13,7 @@
 
 - 秩-零化度定理 → thm.rank-nullity
 
-- Cramer 法则 → thm.cramer
+- Cramer 法则 | 克莱姆法则 | 克莱姆 → thm.cramer
 
 - 带余除法 → thm.division-algorithm
 
@@ -30,15 +34,5 @@
 - K[x] 是唯一分解整环 → thm.poly-ufd
 
 - 张量 ⊣ 内 Hom → prop.tensor-hom-adjunction
-
-- 类方程 → thm.class-equation
-
-- 维数良定义 → thm.dimension
-
-- 行秩 = 列秩 → thm.rank-row-col
-
-- 极小多项式 → def.minimal-poly
-
-- 行列式 = 最高外幂上的作用 → thm.det-as-exterior
 
 > 续见 alias/aka/algebra.5.md

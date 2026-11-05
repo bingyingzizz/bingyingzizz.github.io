@@ -3,7 +3,7 @@
 layer 14 · 定理 · 平坦模 · 同调代数
 [在星图里打开](../#n=thm.watts)　·　[节点索引](../index.md)
 
-设 $R$ 是**交换环**，$F : R\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}$ 是**右正合**的加性函子，且 $F$ 与**任意直和**交换（$F\bigl(\bigoplus_{i} M_{i}\bigr) \cong \bigoplus_{i} F(M_{i})$，自然
+设 $R$ 是**交换环**，$F : R\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}$ 是**右正合**的 **$R$-线性**加性函子（只有加性不够：复共轭扭曲 $F(M)$，标量作用取 $a \cdot m = \bar a m$，它加性、正
 > 陈述续见 [nodes/thm.watts.2.md](./thm.watts.2.md)
 
 

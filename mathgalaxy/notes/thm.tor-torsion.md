@@ -1,7 +1,7 @@
 # 挠积给出挠元　`thm.tor-torsion`　·　说明
 根 `../`
 
-**证明（一条两项消解 + 一次长正合列）。** $\mathbb{Q}/\mathbb{Z}$ 有长度 $1$ 的自由消解
+**证明（一条两项消解 + 一次长正合列）。** $\mathbb{Q}/\mathbb{Z}$ 有长度 $1$ 的**平坦**消解（$\mathbb{Q}$ 不是自由 $\mathbb{Z}$-模 —— 非零可除群没有基）
 $$0 \to \mathbb{Z} \to \mathbb{Q} \to \mathbb{Q}/\mathbb{Z} \to 0 ,$$
 （$\mathbb{Z} \hookrightarrow \mathbb{Q}$ 单、$\mathbb{Q} \twoheadrightarrow \mathbb{Q}/\mathbb{Z}$ 满，核恰好是 $\mathbb{Z}$）。张量 $A$ 取长正合列：
 $$\operatorname{Tor}_{1}^{\mathbb{Z}}(\mathbb{Q}, A) \to \operatorname{Tor}_{1}^{\mathbb{Z}}(\mathbb{Q}/\mathbb{Z}, A) \to \mathbb{Z}\otimes A \xrightarrow{\ \alpha\ } \mathbb{Q}\otimes A .$$

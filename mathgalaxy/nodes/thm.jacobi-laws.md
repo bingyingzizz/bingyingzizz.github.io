@@ -3,14 +3,14 @@ Jacobi 符号的互反与乘性
 layer 17 · 定理 · 二次剩余与原根 · 数论
 [在星图里打开](../#n=thm.jacobi-laws)　·　[节点索引](../index.md)
 
-设 $m, n$ 是正奇数，$a, b \in \mathbb{Z}$。则
+设 $m, n$ 是正奇数，$a, b \in \mathbb{Z}$。则（前两个式子是**定义**，无需互素；**互反律（第三个）要 $\gcd(m,n) = 1$** —— 取 $m = n = 3$：左端 $0\cdot 0 = 0$，右端 $(-1)^{1} = -1$）
 
 $$\left(\frac{ab}{n}\right) = \left(\frac{a}{n}\right)\left(\frac{b}{n}\right), \qquad \left(\frac{a}{mn}\right) = \left(\frac{a}{m}\right)\left(\frac{a}{n}\right),$$
+> 陈述续见 [nodes/thm.jacobi-laws.2.md](./thm.jacobi-laws.2.md)
 
-$$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}, \qquad \left(\frac{-1}{n}\right) = (-1)^{\frac{n-1}{2}}, \qquad \left(\frac{2}{n}\right) = (-1)^{\frac{n^{2}-1}{8}} .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.jacobi-laws.2.md](./thm.jacobi-laws.2.md)
+- [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号：用到了定义 Jacobi 符号　[proofs/e153.definition.md](../proofs/e153.definition.md)
 
 refs: 华罗庚《数论导引》第四章
 

@@ -4,6 +4,6 @@
 ## 陈述（续）
 $$\int_{\partial\Omega} f(z)\,\mathrm{d}z = 2i \iint_{\Omega} \frac{\partial f}{\partial \bar z}(z)\,\mathrm{d}x\,\mathrm{d}y.$$
 
-特别地，若 $f$ 全纯**且 $f'$ 连续**，则右端为零，即 $\displaystyle\oint_{\partial\Omega} f\,\mathrm{d}z = 0$。
+特别地，若 $f$ 全纯（**不必再写「$f'$ 连续」**：全纯函数的导数仍全纯、因而连续），则右端为零，即 $\displaystyle\oint_{\partial\Omega} f\,\mathrm{d}z = 0$。
 
 > 续见 [nodes/lem.cauchy-green.3.md](./lem.cauchy-green.3.md)

@@ -3,11 +3,7 @@
 layer 22 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.bounded-functional-gives-lq)　·　[节点索引](../index.md)
 
-设 $g$ 在 $(X, \mathcal{M})$ 上可测，且对**每个有限支集的简单函数** $f$ 都有 $fg \in L^1$。记
-
-$$M_g(g) := \sup \left\{ \, \left| \int fg \right| : f \in \Sigma,\ \|f\|_p = 1 \,\right\}$$
-
-（$\Sigma$ $=$ 有限支集简单函数全体。）若 $M_g(g) < \infty$，且
+设 $1 \le p \le \infty$，$q$ 是它的**共轭指数**（$1/p + 1/q = 1$，约定 $p=1$ 时 $q=\infty$、$p=\infty$ 时 $q=1$）。设 $g$ 在 $(X, \mathcal{M})$ 上可测，且对**每个有限支集的简单函数** $f$ 都有 $fg \in L^{1}$。记
 > 陈述续见 [nodes/prop.bounded-functional-gives-lq.2.md](./prop.bounded-functional-gives-lq.2.md)
 
 

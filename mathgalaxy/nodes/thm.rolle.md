@@ -3,7 +3,7 @@ Rolle 中值定理（Rolle's Theorem）
 layer 24 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.rolle)　·　[节点索引](../index.md)
 
-设 $f$ 在闭区间 $[a, b]$ 上连续、在开区间 $(a, b)$ 内可导，且 $f(a) = f(b)$。则存在 $\xi \in (a, b)$ 使
+设 $a < b$，$f$ 在闭区间 $[a, b]$ 上连续、在开区间 $(a, b)$ 内可导，且 $f(a) = f(b)$。则存在 $\xi \in (a, b)$ 使
 
 $$f'(\xi) = 0$$
 

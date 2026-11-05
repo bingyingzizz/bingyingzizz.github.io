@@ -10,6 +10,8 @@ $$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 这样得到的拓扑是使含入映射 $Y \hookrightarrow X$ 连续的最粗拓扑。
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.subspace`](../nodes/def.subspace.md) 子空间：两个「子空间」：线性代数的 vs 拓扑的子空间拓扑　[proofs/e178.analogy.md](../proofs/e178.analogy.md)
+
 - …另有入边，续页见 [nodes/def.subspace-topology.2.md](./def.subspace-topology.2.md)
 
 ## 它能推出什么 / 谁在用它
@@ -17,7 +19,6 @@ $$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 
 refs: Munkres, Topology
 
-## 说明
-直观：**子空间的开集就是「大空间的开集切一刀」**。所以「$Y$ 中闭」「$Y$ 中紧」都要按切出来的那片来判断，不能直接看大空间里的样子 —— 例如 $(0, 1) \subseteq \mathbb{R}$ 在自身中是闭的，在 $\mathbb{R}$ 中不是。
+> 说明见 `notes/def.subspace-topology.md`
 
 引用：`def.subspace-topology`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

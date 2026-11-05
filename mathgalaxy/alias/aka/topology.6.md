@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 紧生成空间 | compactly generated | k-space | k-空间 | k空间 | k化 | 紧生成 → def.compactly-generated
+
 - 紧生成空间是余反射的 | compactly generated spaces form a coreflective subcategory | 紧生成是余反射子范畴 | k 是右伴随 | Proposition 2.3.4 | Prop 2.3.4 → prop.cg-coreflective
 
 - 紧生成空间的例子 | 局部紧空间是紧生成的 | R^I 不紧生成 | Exercise 6.2 → ex.cg-examples

@@ -14,3 +14,5 @@ $\|y\| = \|\varphi\|$ 由 $\|\varphi\| = \sup_{\|x\| \le 1} |\langle x, y\rangle
 ⚠️ 共轭线性：$\alpha y \mapsto \bar\alpha\,\varphi$。所以严格说不是「同构」而是「共轭等距同构」（anti-linear isometry）。
 
 ⚠️ 别与 $L^p$ 的 Riesz 表示混淆：那是 $(L^p)^* \cong L^q$（$1<p<\infty$，$1/p + 1/q = 1$），靠 Hölder 不等式；这条靠正交分解。两者只共享名字。
+
+> 续见 notes/thm.riesz-hilbert.2.md

@@ -1,5 +1,5 @@
 # Hodge 星号　`def.hodge-star`
-Hodge 星号 $*$：$\Omega^{k} \to \Omega^{n-k}$，由度量与体积形式**构造**
+Hodge 星号 $*$：$\Omega^{k} \to \Omega^{n-k}$，由度量与体积形式构造
 layer 30 · 定义 · 微分形式、积分与 de Rham · 微分几何+geometry
 [在星图里打开](../#n=def.hodge-star)　·　[节点索引](../index.md)
 

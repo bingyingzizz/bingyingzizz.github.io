@@ -1,7 +1,7 @@
 # 中国剩余定理　`thm.crt`　·　说明
 根 `../`
 
-存在性（构造式）：由 Bézout，取 $e_{i}$ 满足 $e_{i} \equiv 1 \pmod{n_{i}}$、$e_{i} \equiv 0 \pmod{n_{j}}$（$j \ne i$），即 $e_{i} = (N/n_{i})\,u_{i}$，其中 $u_{i}(N/n_{i}) \equiv 1 \pmod{n_{i}}$；
+存在性（构造式）：由 Bézout，取 $e_{i}$ 满足 $e_{i} \equiv 1 \pmod{n_{i}}$、$e_{i} \equiv 0 \pmod{n_{j}}$（$j \ne i$），即 $e_{i} = (N/n_{i})\,u_{i}$，其中 $u_{i}(N/n_{i}) \equiv 1 \pmod{n_{i}}$（要求 $n_{i} \ne 0$，否则 $N/n_{i}$ 无定义）；
 
 于是 $x = \sum_{i} a_{i} e_{i}$ 就是解。
 

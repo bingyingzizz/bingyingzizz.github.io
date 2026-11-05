@@ -1,16 +1,12 @@
 # 相邻两条 K-有界 推出 正合　`prop.k-bounded-implies-exact`　·　说明
 根 `../`
 
-**这是「定量 $\implies$ 定性」的核心一步。** 给定闭链 $s \in M^{n}$（即 $d^{n}s = 0$），要造出 $s' \in M^{n+1}$ 使 $ds' = s$。
+**这是「定量 $\implies$ 定性」的核心一步 —— 但必须先补一条闭性假设。** 给定闭链 $s \in M^{n}$（即 $d^{n}s = 0$），要证 $s \in \operatorname{im} d^{n+1}$。
 
-**造法（几何级数）**。
+**证明（只要两步）。** 由 $M^{n}$ 处的 $K$-有界正合，对每个 $\varepsilon > 0$ 都存在 $s' \in M^{n+1}$ 使 $\|s - d^{n+1}s'\| \le K\|d^{n}s\| + \varepsilon = \varepsilon$（末步用了 $d^{n}s = 0$）。$\varepsilon$ 任意，故 $s$ 落在 $\operatorname{im} d^{n+1}$ 的**闭包**里。
 
-由上一条 $K$-有界条件，先取一个几乎的原像 $s'_{1}$，误差 $e_{1} = s - ds'_{1}$ 满足 $\|e_{1}\| \le K\|ds\| + \varepsilon = \varepsilon$（用了 $ds = 0$）。
+由**假设 $\operatorname{im} d^{n+1}$ 闭**，闭包就是它自己，于是 $s \in \operatorname{im} d^{n+1}$；反向包含 $\operatorname{im} d^{n+1} \subseteq \ker d^{n}$ 由 $d \circ d = 0$ 给出。故 $\ker d^{n} = \operatorname{im} d^{n+1}$，即正合。∎
 
-现在 $e_{1}$ 又是 $M^{n}$ 里的闭链（因为 $de_{1} = ds - d^{2}s'_{1} = 0$），可以对它再取一次几乎的原像，误差 $\le \varepsilon/2$，如此迭代。
-
-**关键的第二处 $K$-有界**：为保证迭代出的 $s'_{i}$ 本身**收敛**，每一步都要用 $M^{n-1}$ 处的 $K$-有界正合把「原像之间差了多少」控制住 —— 这样 $\|s'_{i} - s'_{i+1}\|$ 被一个几何级数控制，$M^{n+1}$ 完备保证极限存在。
-
-**结论**：$s' = \sum_{i \ge 1}(s'_{i+1} - s'_{i})$ 的收敛和的 $d$ 正好是 $s$。于是每个闭链都是边界，即正合。
+⚠️ **闭值域这条不能省**：$\ell^{2}$ 上取 $d(x_{j}) := (x_{j}/j)$，$\operatorname{im} d$ 稠密而不闭，此时 $K$-有界正合可以成立却没有正合 —— **稠密正合 $\ne$ 正合**。
 
 > 续见 notes/prop.k-bounded-implies-exact.2.md

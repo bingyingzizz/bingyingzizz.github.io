@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- σ-有限 | sigma-finite | 有限测度 | 半有限 | 测度空间 → def.measure-space
+
 - 测度的性质 | 测度基本性质 → prop.measure-basic
 
 - 零集 | null set | 零测集 → def.null-set
@@ -15,7 +17,7 @@
 
 - 由预测度诱导外测度 → prop.outer-measure-induced
 
-- Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 → thm.caratheodory
+- Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 | 卡拉泰奥多里定理 | 卡拉泰奥多里 → thm.caratheodory
 
 - F 给出的预测度 → prop.ls-premeasure
 
@@ -26,11 +28,5 @@
 - 扩张唯一性 → thm.caratheodory-uniqueness
 
 - 分布函数与测度 → thm.ls-exists
-
-- 可测函数 | measurable function | 可测 → def.measurable-function
-
-- 可测的判定 → prop.measurable-criterion
-
-- Lebesgue 可测 | 勒贝格可测 → def.lebesgue-measurable
 
 > 续见 alias/aka/analysis-measure.3.md

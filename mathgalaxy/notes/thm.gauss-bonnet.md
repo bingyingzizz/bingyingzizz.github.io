@@ -3,9 +3,9 @@
 
 **局部版是核心**（Gauss–Bonnet）：对由一条分段光滑简单闭曲线围成的区域 $D$，
 
-$$\int_{D}K\,\mathrm{d}A+\int_{\partial D}k_{g}\,\mathrm{d}s = 2\pi .$$
+$$\int_{D}K\,\mathrm{d}A+\int_{\partial D}k_{g}\,\mathrm{d}s+\sum_{i}(\pi-\alpha_{i}) = 2\pi .$$
 
-整体版就是把它沿三角剖分求和，角落项在求和时自动整理成 $2\pi\chi$。详细的提纲在边上。
+（$\alpha_{i}$ 是 $\partial D$ 在角点处的内角。）整体版就是把它沿三角剖分求和，角落项在求和时自动整理成 $2\pi\chi$。详细的提纲在边上。
 
 **测地三角形的特例**：若 $\partial T$ 的三条边都是测地线（$k_{g}\equiv0$），则 $\alpha_{1}+\alpha_{2}+\alpha_{3}-\pi = \int_{T}K\,\mathrm{d}A$ —— 内角和超出 $\pi$ 的部分，正好是高斯曲率的总量。
 

@@ -3,7 +3,7 @@ Cauchy 中值定理（广义中值定理）
 layer 25 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.cauchy-mvt)　·　[节点索引](../index.md)
 
-设 $f, g$ 在 $[a, b]$ 上连续、在 $(a, b)$ 内可导，且 $g'(x) \ne 0$ 在 $(a, b)$ 内处处成立。则存在 $\xi \in (a, b)$ 使
+设 $a < b$，$f, g$ 在 $[a, b]$ 上连续、在 $(a, b)$ 内可导，且 $g'(x) \ne 0$ 在 $(a, b)$ 内处处成立。则存在 $\xi \in (a, b)$ 使
 
 $$\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(\xi)}{g'(\xi)}$$
 

@@ -1,7 +1,7 @@
-# 最值定理 + 介值定理 + 因式定理 $\implies$ 代数基本定理
+# 最值定理 + 复数的 $k$ 次方根 + 因式定理 $\implies$ 代数基本定理
 `imp.fundamental-algebra` · 推出 · strong 边 · 根 `../`
 
-`thm.evt` 最值定理 + `thm.ivt` 介值定理 + `thm.factor-theorem` 因式定理与根 → `thm.fundamental-algebra` 代数基本定理
+`thm.evt` 最值定理 + `thm.factor-theorem` 因式定理与根 → `thm.fundamental-algebra` 代数基本定理
 
 记最小值点为 $z_0$，$m := |p(z_0)|$。
 2. **若 $m > 0$ 则矛盾**：记 $w := z - z_0$，把 $p$ 在 $z_0$ 处展开成 $w$ 的多项式：

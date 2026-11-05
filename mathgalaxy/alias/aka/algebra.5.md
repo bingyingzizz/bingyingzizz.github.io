@@ -1,11 +1,21 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 类方程 → thm.class-equation
+
+- 维数良定义 → thm.dimension
+
+- 行秩 = 列秩 → thm.rank-row-col
+
+- 极小多项式 → def.minimal-poly
+
+- 行列式 = 最高外幂上的作用 → thm.det-as-exterior
+
 - 可解性对子群与商群封闭 → thm.solvable-quotients
 
 - 对称群的可解性 → prop.sn-solvable
 
-- Steinitz 交换引理 → thm.steinitz
+- Steinitz 交换引理 | 施泰尼茨交换引理 | 施泰尼茨 → thm.steinitz
 
 - M_n(K) 是环 → thm.matrix-ring
 
@@ -27,24 +37,10 @@
 
 - 正交投影 → def.orthogonal-projection
 
-- Jordan–Hölder 定理 → thm.jordan-holder
+- Jordan–Hölder 定理 | 若尔当-赫尔德定理 | 若尔当-赫尔德 → thm.jordan-holder
 
 - 秩 → def.rank
 
 - 正规算子 → def.normal-operator
-
-- 核与像 → def.kernel-image-vs
-
-- 相似 → def.similarity
-
-- 外代数 → def.exterior-algebra
-
-- 环与域的基本等式 → prop.field-rules
-
-- 子空间 → def.subspace
-
-- 坐标 → def.coordinate
-
-- 线性映射 | 恒等映射 | 恒等线性映射 → def.linear-map
 
 > 续见 alias/aka/algebra.6.md

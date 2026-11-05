@@ -3,16 +3,17 @@
 
 `thm.adic-structure-sheaf` adic 结构层是层 + `prop.analytic-base-change` 解析环的 base change → `thm.adic-gluing` 导出范畴按无穷范畴粘合
 
-（Prop 10.5 的一般判据；这里用在 $\mathcal{C}$ 上。）条件 1 给出一族仿射；条件 2 保证胶合数据一致：由第三步，纤维积存在且仍是仿射；由第四步，可用标准覆盖细化；由第一步，胶合出的层与 $\Phi$ 的像一致。
+化到 $Y = \operatorname{Spec}(A,A^+)$ 仿射：一个「空间」映射 $X \to \operatorname{Spec}(A,A^+)$ 等价于 Huber 对映射 $(A,A^+) \to (\mathcal{O}_X(X), \mathcal{O}_X(X)^\circ)$ —— 由第一步的层性，$\mathcal{O}_X(X)$ 上带自然的拓扑与整环，逐点取局部化即得 adic 空间映射。
 
-**第六步：构造逆函子。** 给定满足 1、2 的 $F$，取所有 $F_i \to F$，按第四步把覆盖细化为标准覆盖，用第三步的笛卡尔方块作转移映射。
+反方向显然。
 
-第五步的 2 保证 cocycle 条件；
+于是 $\Phi$ 全忠实。
 
-第一步的层性保证粘合唯一。
+**第三步：仿射的纤维积。** 对 Huber 对映射 $A \to B$、$A \to C$（$A^+$ 的情形同），
+$$\begin{aligned}
+&\operatorname{Spec}(B,B^+) \times_{\operatorname{Spec}(A,A^+)} \operatorname{Spec}(C,C^+) \\
+&\qquad \cong \operatorname{Spec}\big((B,B^+) \hat\otimes_{(A,A^+)} (C,C^+)\big),
+\end{aligned}$$
+即基变换方块是笛卡尔方块（Prop 10.2）；其中 $\hat\otimes$ 是 Huber 对的完备张量积。
 
-所得 adic 空间 $X$ 满足 $\Phi(X) \cong F$，且由第二步全忠实，$X$ 在等价意义下唯一。
-
-于是 $\Phi$ 本质满，因而是范畴等价。
-
-$\blacksquare$
+> 续见 proofs/imp.adic-gluing.5.md

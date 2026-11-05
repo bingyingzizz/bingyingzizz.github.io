@@ -1,5 +1,5 @@
 # 圆柱的第一基本形式　`ex.cylinder-first-form`
-圆柱面：$\mathrm{I} = R^{2}\,\mathrm{d}u^{2} + \mathrm{d}v^{2}$，$-\!-$ 平坦但**不**与平面等距
+圆柱面：$\mathrm{I} = R^{2}\,\mathrm{d}u^{2} + \mathrm{d}v^{2}$，$-\!-$ 平坦但不与平面等距
 layer 33 · 例 · 曲面论 · 微分几何+geometry
 [在星图里打开](../#n=ex.cylinder-first-form)　·　[节点索引](../index.md)
 

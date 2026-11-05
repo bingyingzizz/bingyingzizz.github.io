@@ -3,9 +3,7 @@
 layer 22 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.reduced-homology)　·　[节点索引](../index.md)
 
-设 $X \ne \emptyset$。定义**增广映射**（即「把每个点都算作 $1$」）
-
-$$\varepsilon : S_{0}(X) \longrightarrow \mathbb{Z},\qquad \varepsilon\left(\sum_{x} n_{x}\, x\right) := \sum_{x} n_{x}.$$
+设 $X$ 是任意拓扑空间（**不必非空**：$X = \emptyset$ 时各 $S_{n} = 0$，增广映射是 $0 \to \mathbb{Z}$，下面公式仍给出 $\tilde H_{p}(\emptyset) = 0$）。定义**增广映射**（即「把每个点都算作 $1$」）
 > 陈述续见 [nodes/def.reduced-homology.2.md](./def.reduced-homology.2.md)
 
 

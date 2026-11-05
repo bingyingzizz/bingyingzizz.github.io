@@ -1,11 +1,15 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 依测度 Cauchy | 依测度基本列 → def.cauchy-in-measure
+
+- 完备与可测 → prop.complete-measurable
+
 - 完备化可改零集 → prop.completion-measurable-function
 
 - 依测度收敛 | 依测度 Cauchy 收敛 → thm.cauchy-in-measure
 
-- 收敛方式 | 五种收敛 | modes of convergence | 几乎处处收敛 | 一致收敛 → def.convergence-modes
+- 收敛方式 | 五种收敛 | modes of convergence | 几乎处处收敛 → def.convergence-modes
 
 - 反例 | 收敛的反例 | 标准反例 → prop.convergence-counterexamples
 
@@ -26,9 +30,5 @@
 - 非负函数的积分 | 非负积分 → def.integral-nonneg
 
 - 积分为零 | 积分为零推出几乎处处为零 → prop.integral-zero-iff
-
-- MCT a.e. | 单调收敛 a.e. → cor.mct-ae
-
-- 单调收敛 | MCT | monotone convergence theorem | Levi 定理 → thm.mct
 
 > 续见 alias/aka/analysis.6.md

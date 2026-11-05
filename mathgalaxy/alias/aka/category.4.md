@@ -1,8 +1,6 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 预层范畴 | presheaf category | PSh | 函子范畴 → def.presheaf-cat
-
 - 表示函子 | representable functor | 表示对象 | 万有元素 | universal element | Definition 1.2.5 | Def 1.2.5 → def.representable
 
 - 米田引理 | Yoneda lemma | Yoneda | Lemma 1.2.6 → lem.yoneda

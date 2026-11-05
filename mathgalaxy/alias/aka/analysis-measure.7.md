@@ -1,6 +1,14 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 绝对连续的 ε-δ 刻画 | 绝对连续等价刻画 → thm.ac-epsilon-delta
+
+- 要么奇异要么有下界 → lem.singular-or-lower-bound
+
+- Radon–Nikodym 导数 | RN 导数 | 密度 | Radon-Nikodym derivative → def.rn-derivative
+
+- 全变差 | total variation → prop.total-variation-basics
+
 - Hahn 分解 | Hahn decomposition | 哈恩分解 → thm.hahn-decomposition
 
 - 导数互逆 → cor.rn-inverse
@@ -17,20 +25,8 @@
 
 - RN 定理 | 拉东-尼科迪姆 | Radon-Nikodym theorem → thm.lebesgue-radon-nikodym
 
-- 链式法则 | RN 链式法则 → prop.rn-chain-rule
+- 链式法则 | RN 链式法则 | 拉东-尼科迪姆链式法则 | 拉东-尼科迪姆 → prop.rn-chain-rule
 
 - 覆盖引理 | covering lemma | Vitali 覆盖 → lem.covering
-
-- 可缩族 | shrinking | 缩族 → def.shrinks-nicely
-
-- 正则测度 | regular measure | 正则 Borel 测度 → def.regular-measure
-
-- L1 与全变差 → prop.L1-signed
-
-- 局部可积 | locally integrable → def.locally-integrable
-
-- 平均算子 | average operator → def.average-operator
-
-- 平均算子连续 → lem.average-continuous
 
 > 续见 alias/aka/analysis-measure.8.md

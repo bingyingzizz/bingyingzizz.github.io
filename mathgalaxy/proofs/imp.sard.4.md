@@ -3,8 +3,6 @@
 
 `thm.taylor-multi` 多元 Taylor 公式 → `thm.sard` Sard 定理
 
-**为什么需要 $k > n - m$：** 上面 $m = 1$ 那一层用了二阶 Taylor 余项 $O(\|h\|^{2})$；一般情形每降一维就多要一阶导数，累加需要 $k^{(m)} > n - m$ 阶。Whitney 的 $C^{1}$ 反例正说明这个门槛不可省。
+**一般 $m$：Whitney 分解。** 令 $S_i := \{ x : \operatorname{rank} Df(x) = i \}$（$i = 0, 1, \ldots, m-1$；秩为 $m$ 的点不是临界点），临界集是 $\bigcup_{i<m} S_i$。要证每个 $f(S_i)$ 零测。外层对 $m$ 归纳、内层对 $n$ 归纳，而 **$i$ 要从小到大扫**（处理 $S_i$ 时要用到 $j<i$ 的 $S_j$ 已被剥掉；方向写反就循环了）：
 
-细节：Milnor《Topology from the Differentiable Viewpoint》§3；Sternberg《Lectures on Differential Geometry》§II.3；Guillemin–Pollack §2。∎（提纲）
-
-> ⚠ 「∎」在这里标记的是**提纲的完整交付**，不是定理的完整证明。这一条是本图上少数几条明确标注「不给完整证明」的定理之一 —— 理由是完整证明的篇幅与所用工具（Fubini + Whitney 分解）都超出了本团其余内容的层次。
+> 续见 proofs/imp.sard.5.md

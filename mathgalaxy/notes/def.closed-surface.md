@@ -13,6 +13,6 @@
 
 `def.regular-surface` / `def.orientable-surface` 是 $\mathbb{R}^{3}$ 里被参数化覆盖的点集（**外在**，还带着度量与曲率）；`def.riemann-surface` 是一维**复**流形；本节点**只有拓扑**，没有度量、没有复结构、也不预设嵌在某个欧氏空间里。
 
-⭐ 基本例子：球面 $S^{2}$、环面 $T^{2}$（亏格 1）、射影平面 $\mathbb{RP}^{2}$（不可定向）、克莱因瓶（不可定向）。⚠ 这四个的**节点本图还没有**，所以上面只写名字 —— 这是下一刀（例子层）要补的。
+⭐ 基本例子：球面 $S^{2}$、环面 $T^{2}$（亏格 1）、射影平面 $\mathbb{RP}^{2}$（不可定向）、克莱因瓶（不可定向）。⚠ 这四个都**已有节点**：`ex.sphere`、`ex.torus`、`ex.projective-plane`、`ex.klein-bottle`。
 
 > 续见 notes/def.closed-surface.2.md

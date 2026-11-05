@@ -1,6 +1,8 @@
 # 对合分布　`def.involutive-distribution`　·　说明
 根 `../`
 
+**为什么对合是「正确」的条件**：若**每点**都经过一块积分流形 $N$（`def.integral-manifold`）—— 不是「存在一块」就够 —— 则对落在 $\mathcal{D}$ 里的 $X, Y$ 与任一点 $p$，取过 $p$ 的 $N$，$X, Y$ 限制在 $N$ 上就是 $N$ 的向量场，于是 $[X,Y]_{p} \in T_{p}N = \mathcal{D}_{p}$。对合因此是必要条件，而且它只用括号就能验。
+
 Frobenius 定理说它也是**充分**的。
 
 **反例（Heisenberg 接触分布）**：$\mathbb{R}^{3}$ 上令 $\mathcal{D} = \ker\omega$，$\omega = \mathrm{d}z - x\,\mathrm{d}y$。
@@ -13,4 +15,4 @@ $$[X,Y] = [\partial_{x},\ \partial_{y} + x\,\partial_{z}] = \partial_{z},\qquad 
 
 故 $[X,Y] \notin \mathcal{D}$：这个秩 $2$ 的接触分布不对合，因而**不可能有积分曲面**。它每点附近都「绕着拧」，任何曲面都装不下 —— 这是 Frobenius 定理最省事的反例。
 
-⚠️ 「对合」是分布的性质，与生成元的选取无关（换生成元只是乘以 $\operatorname{GL}(k)$-值函数矩阵，括号的封闭性不变）。所以反例里只验一组生成元就够。
+> 续见 notes/def.involutive-distribution.3.md

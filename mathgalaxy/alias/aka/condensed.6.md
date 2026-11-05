@@ -7,7 +7,7 @@
 
 - Banach 在 Stone 上零调 | Proposition 8.2.6 → prop.banach-stone-acyclic
 
-- Tietze 延拓 | Tietze | Banach 值 Tietze | Theorem 8.2.7 → thm.tietze-banach
+- Tietze 延拓 | Tietze | Banach 值 Tietze | Theorem 8.2.7 | 蒂策-巴拿赫定理 | 蒂策 → thm.tietze-banach
 
 - 实 Banach 在紧 Haus 上零调 | Theorem 8.2.8 → thm.real-banach-chaus-acyclic
 
@@ -20,7 +20,5 @@
 - Breen-Deligne 谱序列 | Proposition 8.3.4 → prop.breen-deligne-ss-stonean
 
 - Banach 到离散全零 | Proposition 8.3.5 → prop.rhom-banach-discrete-zero
-
-- 紧 Haus 到 Banach 全零 | Proposition 8.3.6 → prop.rhom-chaus-banach-zero
 
 > 续见 alias/aka/condensed.7.md

@@ -29,6 +29,6 @@
 
 - Exercise 3.67 → def.crystalline-sheaf
 
-- Exercise 3.68 | Exercise 3.69 | 晶体层 → prop.crystalline-sheaf-equiv
+- Exercise 3.68 | Exercise 3.69 → prop.crystalline-sheaf-equiv
 
 > 续见 alias/aka/category.19.md

@@ -1,4 +1,4 @@
-# $C(K)$ 与 Stone–Weierstrass / $C(K)$ and Stone–Weierstrass（fa.ck）· 节点清单（第 1/1 页）
+# C(K) 与 Stone–Weierstrass / C(K) and Stone–Weierstrass（fa.ck）· 节点清单（第 1/1 页）
 
 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
 中心天体 thm.stone-weierstrass　·　10 个节点　·　根 `../`

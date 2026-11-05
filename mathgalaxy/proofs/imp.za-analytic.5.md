@@ -5,7 +5,7 @@
 
 **⑥ 全忠实与 $j_!$。** ⑤ 给出 $j^\ast : D(A^{\blacksquare}) \to D((A,\mathbb{Z})^{\blacksquare})$ 全忠实；
 
-其左伴随 $j^\ast = -\otimes^L_{(A,\mathbb{Z})^{\blacksquare}} A^{\blacksquare}$ 由 `prop.analytic-base-change`。
+其左伴随记作 $j_! = -\otimes^L_{(A,\mathbb{Z})^{\blacksquare}} A^{\blacksquare}$（由 `prop.analytic-base-change`；⚠️ 不能再写成 $j^\ast$ —— 同一个符号在前面刚被用来表示 $D(A^{\blacksquare}) \to D((A,\mathbb{Z})^{\blacksquare})$，方向相反）。
 
 $\ker j^\ast$ 恰为 $A_\infty$-模（Observation 8.10）。
 

@@ -1,6 +1,22 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 有界闭 ⟺ 紧（ℝⁿ） | 海涅–博雷尔定理 | 海涅–博雷尔 → cor.heine-borel
+
+- 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
+
+- Fermat 引理 | 费马引理 → thm.fermat
+
+- 一致收敛 → def.uniform-convergence
+
+- Weierstrass 判别法 → prop.weierstrass-m-test
+
+- 收敛半径 → thm.convergence-radius
+
+- 可导 ⟹ 连续 → prop.differentiable-implies-continuous
+
+- 几何级数 → thm.geometric-series
+
 - 根值判别法 → thm.root-test
 
 - 积分判别法 → thm.integral-test
@@ -15,32 +31,8 @@
 
 - p-级数 → thm.p-series
 
-- Riemann 重排定理 → thm.riemann-rearrangement
+- Riemann 重排定理 | 黎曼重排定理 → thm.riemann-rearrangement
 
 - Euler 公式 | 欧拉公式 | 欧拉恒等式 → thm.euler-formula
-
-- Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
-
-- n 次方根 → thm.nth-root
-
-- 连续函数的运算 → prop.continuous-arithmetic
-
-- 零点定理 → cor.zero-point
-
-- 反函数连续 → thm.monotone-inverse
-
-- Kummer 判别法 → thm.kummer
-
-- Dini 定理 → thm.dini
-
-- 有理指数与实数指数幂 → def.real-power
-
-- 夹逼定理 → thm.squeeze
-
-- 极限的基本性质 → prop.limit-basic
-
-- 绝对收敛 → def.absolute-convergence
-
-- 幂级数 → def.power-series
 
 > 续见 alias/aka/analysis.16.md

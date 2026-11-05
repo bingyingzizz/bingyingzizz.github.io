@@ -10,10 +10,10 @@ layer 28 · 定义 · 曲面论 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.first-fundamental-form`](../nodes/def.first-fundamental-form.md) 第一基本形式：用到了定义 第一基本形式　[proofs/dep.tu-I-area.md](../proofs/dep.tu-I-area.md)
 
-- …另有入边，续页见 [nodes/def.area-element.3.md](./def.area-element.3.md)
+- …另有入边，续页见 [nodes/def.area-element.4.md](./def.area-element.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.area-element.4.md](./def.area-element.4.md)
+- …另有出边，续页见 [nodes/def.area-element.5.md](./def.area-element.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「曲面」· 面积元与曲面积分；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· 面积
 

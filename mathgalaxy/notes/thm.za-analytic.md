@@ -5,7 +5,7 @@
 
 ⭐ 证明骨架（$A = \mathbb{Z}[T]$ 的情形）：把 $A_\infty := \mathbb{Z}((T^{-1}))$ 看成「$\operatorname{Spec} A$ 边界附近的函数」，它有短正合列
 
-$$0 \to \mathbb{Z}[[U]] \otimes_{\mathbb{Z}} A \xrightarrow{U \mapsto T^{-1}} \mathbb{Z}[[U]] \otimes_{\mathbb{Z}} A \to A_\infty \to 0,$$
+$$0 \to \mathbb{Z}[[U]] \otimes_{\mathbb{Z}} A \xrightarrow{1 - \mathrm{shift}\otimes T} \mathbb{Z}[[U]] \otimes_{\mathbb{Z}} A \to A_\infty \to 0,$$
 
 从而 $A_\infty$ 紧、幂等（幂等 = $A_\infty \otimes^{L} A_\infty \cong A_\infty$，即「乘两次等于乘一次」）、且 $\operatorname{RHom}_A(A_\infty, C) = 0$ 对一切由 $\prod A$ 的直和构成的复形成立；
 

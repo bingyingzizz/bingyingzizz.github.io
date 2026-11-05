@@ -1,9 +1,8 @@
 # Lie 群　`def.lie-group`　·　续页（第 4 页）
 [在星图里打开](../#n=def.lie-group)　·　第 1 页 [nodes/def.lie-group.md](./def.lie-group.md)　·　上一页 [nodes/def.lie-group.3.md](./def.lie-group.3.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.left-invariant-fields`](../nodes/prop.left-invariant-fields.md) 左不变向量场 用
-- ⇒ [`prop.left-invariant-fields`](../nodes/prop.left-invariant-fields.md) 左不变向量场
-- 被 [`def.left-invariant-form`](../nodes/def.left-invariant-form.md) 左不变形式 用
-- 被 [`thm.lie-third`](../nodes/thm.lie-third.md) Lie 第三定理 用
-- 被 [`def.principal-bundle`](../nodes/def.principal-bundle.md) 主丛 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：用到了定义 光滑流形　[proofs/dep.mf-smoothmanifold-liegroup.md](../proofs/dep.mf-smoothmanifold-liegroup.md)
+- [`thm.implicit-function`](../nodes/thm.implicit-function.md) 隐函数定理：用到了定义 隐函数定理　[proofs/dep.mf-ift-liegroup.md](../proofs/dep.mf-ift-liegroup.md)
+
+> 续见 [nodes/def.lie-group.5.md](./def.lie-group.5.md)

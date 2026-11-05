@@ -1,4 +1,6 @@
 # 单位分解　`def.partition-of-unity`　·　说明
 根 `../`
 
+61 号包里已有的 prop.paracompact-partition-unity 说的正是这两条合起来。
+
 ⚠️ 单说「单位分解」没有意义：它必须**从属于某个覆盖**。同一个空间上换一个覆盖，能拿到的单位分解完全不同（最粗的情形：$\mathcal{U} = \{\, X \,\}$，取 $\rho \equiv 1$ 就够了）。

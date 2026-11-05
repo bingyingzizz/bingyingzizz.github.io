@@ -23,6 +23,4 @@
 
 - 单调类定理 | monotone class theorem → thm.monotone-class
 
-- Borel | Borel 集 | Borel σ代数 → def.borel
-
 > 续见 alias/aka/analysis.3.md

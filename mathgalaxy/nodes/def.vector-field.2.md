@@ -9,7 +9,7 @@ $$X\big|_{U} = \sum_{i=1}^{n} X^{i}\,\frac{\partial}{\partial x^{i}},\qquad X^{i
 $X$ **作用在函数上**给出新函数
 
 $$(Xf)(p) := \mathrm{d}f_{p}\bigl(X_{p}\bigr) = \sum_{i} X^{i}(p)\,\frac{\partial f}{\partial x^{i}}(p),$$
-于是 $X$ 是 $C^{\infty}(M)$ 上的**导子**：$X(fg) = f\,Xg + g\,Xf$。反过来每个导子都来自唯一的向量场。
+当 $X$ **光滑**时，$X$ 是 $C^{\infty}(M)$ 上的**导子**：$X(fg) = f\,Xg + g\,Xf$；反过来每个导子都来自唯一的**光滑**向量场。⚠ 只满足 $\pi \circ X = \mathrm{id}$ 的**任意截面**不行：$X = |x|\partial_{x}$ 是截面，但取 $f = x$ 就有 $Xf = |x| \notin C^{\infty}$。
 
 $X$ 在 $p$ 处**为零**指 $X_{p} = 0_{p}$；$X$ 的**支集**是 $\overline{\{p \in M : X_{p} \ne 0\}}$。
 

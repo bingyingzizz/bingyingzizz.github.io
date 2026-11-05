@@ -21,10 +21,8 @@
 
 - 辐角原理 | argument principle → thm.argument-principle
 
-- 鲁歇定理 | Rouche 定理 → thm.rouche
+- 鲁歇定理 | Rouche 定理 | 儒歇定理 → thm.rouche
 
-- 施瓦兹-皮克定理 | Schwarz-Pick 定理 → thm.schwarz-pick
-
-- 施瓦兹引理 | Schwarz lemma → lem.schwarz
+- 施瓦兹-皮克定理 | Schwarz-Pick 定理 | 施瓦茨-皮克定理 | 施瓦茨-皮克 → thm.schwarz-pick
 
 > 续见 alias/aka/complex.2.md

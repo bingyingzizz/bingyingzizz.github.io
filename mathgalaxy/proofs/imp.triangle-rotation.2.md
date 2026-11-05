@@ -3,12 +3,8 @@
 
 `def.mapping-cone` 映射锥 + `def.distinguished-triangle` 导出三角 → `prop.triangle-rotation` 三角的旋转与延拓
 
-**延拓。** 给定 $f : K \to L$，直接取三角 $K \to L \to M(f) \to K[1]$ 即得第 3 条。
+再消掉一个**可缩直和项**：锥里带着 $L$ 的两次平移 $L^{n+2}\oplus L^{n+1}$，其中那一段的微分是恒等（可缩），消掉后剩下的正好是 $K[1]$。把这两步写成显式的链映射 $\varphi : K[1] \to M(g)$ 与 $\psi : M(g) \to K[1]$，配上同伦 $s$ 使 $\psi\varphi \sim 1$、$\varphi\psi \sim 1$，就得到两个三角在同伦范畴里同构，于是旋转后的三角也是导出的。
 
-给定三角态射的左边两步 $u : K' \to K''$、$v : L' \to L''$，先把 $f'$ 与 $f''$ 都取成映射锥的形式。要造 $w$，令其矩阵形式为
-
-$$w := \begin{pmatrix} s^{n+1} & v^{n} \end{pmatrix} : K'^{n+1} \oplus L'^{n} \longrightarrow K''^{n+1} \oplus L''^{n}$$
-
-其中 $s$ 是 $v \circ f' - f'' \circ u$ 的一个同伦（它零伦来自三角的交换性）。逐项验证 $w \circ d = d \circ w$ 即可，这一步用到同伦方程本身。∎
+⚠️ $\varphi, \psi, s$ 的矩阵本图**没有逐项写出**（$3\times3$ 分块、带符号），这里只说明**可以**显式消去；细节属于「矩阵硬算」。∎
 
 > 续见 proofs/imp.triangle-rotation.3.md

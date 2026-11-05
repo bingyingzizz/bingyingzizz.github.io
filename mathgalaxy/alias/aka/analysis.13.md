@@ -1,9 +1,17 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
-- Bolzano–Weierstrass 定理 | 波尔查诺–魏尔斯特拉斯定理 → thm.bolzano-weierstrass
+- Lagrange 中值定理 | 拉格朗日中值定理 → thm.mvt
 
-- Rolle 中值定理 → thm.rolle
+- 代数基本定理 → thm.fundamental-algebra
+
+- 最值定理 → thm.evt
+
+- Cauchy 中值定理 | 柯西中值定理 → thm.cauchy-mvt
+
+- Bolzano–Weierstrass 定理 | 波尔查诺–魏尔斯特拉斯定理 | 博尔扎诺-魏尔斯特拉斯定理 | 博尔扎诺 → thm.bolzano-weierstrass
+
+- Rolle 中值定理 | 罗尔中值定理 | 罗尔 → thm.rolle
 
 - Cauchy 收敛准则 → thm.cauchy-criterion
 
@@ -24,17 +32,5 @@
 - 单调有界定理 → thm.monotone-convergence
 
 - 导数为零 ⟺ 常函数 → cor.constant-iff-zero-derivative
-
-- 导数符号 ⟹ 单调性 → prop.derivative-monotone
-
-- 凸性的导数判据 → thm.convex-criterion
-
-- 级数的 Cauchy 准则 → thm.cauchy-criterion-series
-
-- 重排不变性 → thm.rearrangement
-
-- 极限的四则运算与保序性 → prop.limit-arithmetic
-
-- 介值定理 → thm.ivt
 
 > 续见 alias/aka/analysis.14.md

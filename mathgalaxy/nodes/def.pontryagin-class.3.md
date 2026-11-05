@@ -1,10 +1,7 @@
 # Pontryagin 类　`def.pontryagin-class`　·　续页（第 3 页）
 [在星图里打开](../#n=def.pontryagin-class)　·　第 1 页 [nodes/def.pontryagin-class.md](./def.pontryagin-class.md)　·　上一页 [nodes/def.pontryagin-class.2.md](./def.pontryagin-class.2.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.chern-class`](../nodes/def.chern-class.md) 陈类：用到了定义 陈类　[proofs/dep-pc-cc.md](../proofs/dep-pc-cc.md)
-- [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛：用到了定义 向量丛　[proofs/dep-pc-vector.md](../proofs/dep-pc-vector.md)
-- [`def.stiefel-whitney-class`](../nodes/def.stiefel-whitney-class.md) Stiefel–Whitney 类：用到了定义 Stiefel–Whitney 类　[proofs/dep-pc-sw.md](../proofs/dep-pc-sw.md)
-- [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类：用到了定义 示性类　[proofs/def-link.pc-char.md](../proofs/def-link.pc-char.md)
+## 陈述（续）
+erline{F})$（**一般不是** $c_{i}(F)^{2}$；对线丛 $F$ 才有 $p_{1}=c_{1}^{2}$，秩 $m$ 复丛的顶类 $p_{m}=c_{m}^{2}$；例：$F = \mathcal{O}(1) \to \mathbb{CP}^{2}$ 时 $p_{1} = c_{1}^{2} = h^{2}$）。**$p$ 丢掉了 $c$ 的奇次信息**，这正是「实化丢相位」的表现。
 
 > 续见 [nodes/def.pontryagin-class.4.md](./def.pontryagin-class.4.md)

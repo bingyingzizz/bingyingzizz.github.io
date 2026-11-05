@@ -11,7 +11,7 @@ $Df(a)$ 天生住在对偶空间 $(\mathbb{R}^{n})^{\ast}$ 里，而「搬回来
 - $D_v f(a) = \langle \nabla f(a), v \rangle$；
 
 
-- 在**单位**方向里，$v = \nabla f(a)/\|\nabla f(a)\|$ 给出最大的方向导数 $\|\nabla f(a)\|$（上升最快）；
+- 在**单位**方向里（当 $\nabla f(a) \ne 0$ 时），$v = \nabla f(a)/\|\nabla f(a)\|$ 给出最大的方向导数 $\|\nabla f(a)\|$（上升最快）；
 
 
 - $\nabla f(a)$ 垂直于过 $a$ 的等值面 $\{f = c\}$（因为沿等值面的方向导数为零）。

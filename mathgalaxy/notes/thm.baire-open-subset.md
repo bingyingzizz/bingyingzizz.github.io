@@ -3,7 +3,7 @@
 
 证法：设 $O_n$ 在 $\Omega$ 里稠密开，写 $O_n = \Omega \cap O_n'$（$O_n'$ 在 $X$ 中开）。
 
-则 $O_n' \cup \Omega^c$ 在 $X$ 中**稠密开**；
+则 $O_n' \cup (X \setminus \overline{\Omega})$ 在 $X$ 中**稠密开**（并上的是开集 $X \setminus \overline{\Omega}$；$\Omega^{c}$ 本身不必开 —— $\Omega = (0,1)$、$O_n' = (0,1) \setminus \{1/m\}$ 时 $\Omega^{c}$ 会让并集丢掉 $0$ 的邻域）；
 
 于是 $\bigcap_n(O_n' \cup \Omega^c)$ 在 $X$ 稠密，与 $\Omega$ 相交得 $\bigcap_n O_n$ 在 $\Omega$ 稠密。
 

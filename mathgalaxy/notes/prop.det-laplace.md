@@ -5,8 +5,8 @@
 
 实际计算里先用消元法把某一行化到只剩一个非零元，再展开 —— 两件事配合起来很快。
 
-⭐ 「错位展开等于零」这一条可以直接改写成矩阵等式 $A \cdot \operatorname{adj} A = (\det A) I_n$（$\operatorname{adj} A$ 是代数余子式的转置），也就是 $A^{-1} = (\det A)^{-1} \operatorname{adj} A$ —— Cramer 法则与逆矩阵公式都从这里出来。
+⭐ 「错位展开等于零」这一条可以直接改写成矩阵等式 $A \cdot \operatorname{adj} A = (\det A) I_n$（$\operatorname{adj} A$ 是代数余子式的转置），也就是**当 $\det A \ne 0$ 时** $A^{-1} = (\det A)^{-1} \operatorname{adj} A$ —— Cramer 法则与逆矩阵公式都从这里出来（$A = 0$ 时 $\operatorname{adj} A = 0$，两边都没定义）。
 
-⭐ 还有一个常用推论（$K = \mathbb{R}^{n \times n}$ 时把 $A$ 看成 $n$ 个行向量）：**行列式对每一行都是线性的**，所以对一行做初等变换时 det 的变化规律可以逐条写出（换行变号、倍加不变、乘 $c$ 则乘 $c$）。
+⭐ 还有一个常用推论（$K = \mathbb{R}$、$A \in \mathbb{R}^{n \times n}$ 时，把 $A$ 看成 $n$ 个行向量）：**行列式对每一行都是线性的**，所以对一行做初等变换时 det 的变化规律可以逐条写出（换行变号、倍加不变、乘 $c$ 则乘 $c$）。
 
 Gauss 消元正是靠这三条算行列式的。

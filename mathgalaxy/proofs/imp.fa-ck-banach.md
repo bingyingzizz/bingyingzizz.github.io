@@ -9,4 +9,4 @@ $f_n \to f$ 在 $\Delta$ 下：给 $\varepsilon$，取 $N$ 使 $n, m \ge N \impl
 固定 $x$ 令 $m \to \infty$ 得 $d(f_n(x), f(x)) \le \varepsilon/2$，再对 $x$ 取上确界。
 $f$ 连续：$d(f(x), f(y)) \le \Delta(f, f_n) + d(f_n(x), f_n(y)) + \Delta(f_n, f)$。$\blacksquare$
 
-> 这三步（逐点取极限 $	o$ 一致收敛 $	o$ 保连续）是「一致收敛」语言的万能模板。
+> 这三步（逐点取极限 $\to$ 一致收敛 $\to$ 保连续）是「一致收敛」语言的万能模板。

@@ -8,11 +8,12 @@ $$e(E) := \Bigl[\, \operatorname{Pf}\Bigl(\frac{F}{2\pi}\Bigr) \,\Bigr] \in H^{2
 
 **基本性质**：
 1. **自然性**：$e(f^{*}E) = f^{*}e(E)$；
-2. **与顶陈类的关系**：$e(E) = c_{m}(E \otimes \mathbb{C})$（$k = 2m$ 时；⚠️ 见注的符号约定）；
+2. **与 Pontryagin 类的关系**：$p_{m}(E) = e(E)^{2}$（$k = 2m$ 时）；
+
+$E$ **本身是复丛**时才有 $e(E) = c_{m}(E)$（实丛复化后 $c_{2m}(E\otimes\mathbb{C})$ 与 $e(E)^{2}$ 至多差一个符号，见注）；
 3. **Gauss–Bonnet（曲面情形）**：$\Sigma$ 为闭可定向曲面时
 
 $$\int_{\Sigma} e(T\Sigma) = \chi(\Sigma) ,$$
-
 右端是 Euler 示性数 —— 这就是 `thm.gauss-bonnet` 的上同调说法。
 
 > 续见 [nodes/def.euler-class.3.md](./def.euler-class.3.md)

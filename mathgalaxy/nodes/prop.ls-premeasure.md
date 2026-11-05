@@ -7,7 +7,7 @@ layer 17 · 命题 · 测度的构造 · 实变函数+数学分析
 
 $$\mu_0( (a, b] ) = F(b) - F(a)$$
 
-（并规定 $\mu _{0}(\emptyset ) = 0$，扩充到由这些区间做有限不交并得到的代数 $\mathfrak{A}$ 上。）则 $\mu _{0}$ 是 $\mathfrak{A}$ 上的一个**预测度**。
+（并规定 $\mu _{0}(\emptyset ) = 0$，扩充到由这些区间做有限不交并得到的**环** $\mathfrak{A}$ 上（它不含 $\mathbb{R}$、对补集不封闭 —— 是环不是代数）。）则 $\mu _{0}$ 是 $\mathfrak{A}$ 上的一个**预测度**。
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.ls-exists`](../nodes/thm.ls-exists.md) F ↔ Borel 测度

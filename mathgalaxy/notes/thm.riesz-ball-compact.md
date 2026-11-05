@@ -3,7 +3,7 @@
 
 「$\Longleftarrow$」：有限维时所有范数等价（`thm.norm-equiv-finite-dim`），于是可以用 $\|\cdot\|_\infty$ 的坐标球来判断紧性；
 
-而坐标球 $\overline{B}^{\infty}(0,1) = [-1,1]^{n}$ 是有界闭集，由 Heine–Borel（`cor.heine-borel`）紧。
+而坐标球 $\overline{B}^{\infty}(0,1)$ 是有界闭集（实情形就是 $[-1,1]^{n}$；复情形是单位多圆柱，看作 $\mathbb{R}^{2n}$ 的闭有界集），由 Heine–Borel（`cor.heine-borel`）紧。
 
 ∎
 

@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 连通分量是闭开邻域之交 | Proposition 2.2.6 | Prop 2.2.6 → prop.component-clopen
+
 - Stone 空间 | Stone space | Stonean 空间 | 极端不连通 | extremally disconnected | 全不连通 | totally disconnected → def.stone-space
 
 - 极端不连通的性质 | Lemma 2.2.10 | Exercise 2.23 → prop.stonean-basic
@@ -16,7 +18,5 @@
 - Gleason 定理 | Gleason | CHaus 的投射对象 | Theorem 2.2.11 | Thm 2.2.11 → thm.gleason
 
 - Stonean 是收缩核 | retract | 收缩核 | Corollary 2.2.12 | Cor 2.2.12 → cor.stonean-retract
-
-- 紧生成空间 | compactly generated | k-space | k-空间 | k空间 | k化 | 紧生成 → def.compactly-generated
 
 > 续见 alias/aka/topology.6.md

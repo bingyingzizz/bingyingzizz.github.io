@@ -1,7 +1,14 @@
 # L^p 范数　`def.lp-norm`　·　续页（第 2 页）
 [在星图里打开](../#n=def.lp-norm)　·　第 1 页 [nodes/def.lp-norm.md](./def.lp-norm.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative（续）
-For a measure space $(X,\mathcal{M},\mu)$ and $0<p<\infty$ one sets $\|f\|_p := [\int |f|^{p}\,\mathrm{d}\mu]^{1/p}$, and $L^{p}$ is the space of measurable $f$ with $\|f\|_p<\infty$. Its elements are classes of functions equal almost everywhere, which is what makes $\|f\|_p = 0$ imply $f = 0$. For $p<1$ the triangle inequality fails, so one only gets a quasi-norm, although the space stays complete.
+## 陈述（续）
+$$\|f\|_p := \left[ \int |f|^p \, d\mu \right]^{1/p}$$
+⚠ **只有 $p \ge 1$ 时它才真的是范数**（$0 < p < 1$ 时三角不等式**不成立**：取不交的 $A, B$ 且 $\mu(A) = \mu(B) = 1$，令 $f = \chi_{A}$、$g = \chi_{B}$、$p = \tfrac{1}{2}$，则 $\|f+g\|_p = (\mu(A)+\mu(B))^{1/p} = 2^{2} = 4$ 而 
+$\|f\|_p + \|g\|_p = 1 + 1 = 2$）。所以 $p \in (0,1)$ 时通常只记作 $L^{p}$ 空间（度量 $d(f,g) = \|f-g\|_p^{p}$ 下完备），**不称赋范空间**。
+以及
+
+$$L^p(X, \mathcal{M}, \mu) := \{\, f : X \to \mathbb{C} :\ \|f\|_p < \infty\,\}$$
+其中 $f$ 是**可测**函数。
+⚠ 严格说 $L^{p}$ 是上面那个集合**按「a.e. 相等」取商**之后的类空间 —— 否则 $\|f\|_p = 0$ 只说明 $f = 0$ a.e.，范数的第一条公理就过不去。（本图下文照惯例把等价类写成函数。）
 
 > 续见 [nodes/def.lp-norm.3.md](./def.lp-norm.3.md)

@@ -3,7 +3,7 @@
 layer 23 · 命题 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=prop.convergence-counterexamples)　·　[节点索引](../index.md)
 
-在 $\mathbb{R}$（或 [0, 1]）上取 Lebesgue 测度。
+在 $\mathbb{R}$ 上取 Lebesgue 测度。
 > 陈述续见 [nodes/prop.convergence-counterexamples.2.md](./prop.convergence-counterexamples.2.md)
 
 

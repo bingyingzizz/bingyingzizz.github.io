@@ -12,10 +12,10 @@ layer 29 · 定义 · Lie 群 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/dep.mf-group-liegroup.md](../proofs/dep.mf-group-liegroup.md)
 
-- …另有入边，续页见 [nodes/def.lie-group.3.md](./def.lie-group.3.md)
+- …另有入边，续页见 [nodes/def.lie-group.4.md](./def.lie-group.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.lie-group.4.md](./def.lie-group.4.md)
+- …另有出边，续页见 [nodes/def.lie-group.5.md](./def.lie-group.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 群与例子；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左平移与右平移
 

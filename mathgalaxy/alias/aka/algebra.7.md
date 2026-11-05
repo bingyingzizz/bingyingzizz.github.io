@@ -1,6 +1,16 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 特征值与特征向量 | 几何重数 | 特征值 → def.eigenvalue
+
+- 内积 | ⟨u,v⟩ | 内积 ⟨,⟩ → def.inner-product
+
+- 正交 → def.orthogonality
+
+- 正交补 → def.orthogonal-complement
+
+- 伴随算子 → def.operator-adjoint
+
 - 等距与正交变换 → def.isometry
 
 - 二次型 → def.quadratic-form
@@ -30,17 +40,5 @@
 - 不可约元 | 素元 | 相伴元 → def.irreducible-element
 
 - 最大公因子整环 | 最大公因子的整环 → def.gcd-domain
-
-- Bézout 整环 | 裴蜀整环 → def.bezout-domain
-
-- 欧几里得整环 | 欧氏整环 → def.euclidean-domain
-
-- 主理想整环 | PID → def.pid
-
-- 唯一分解整环 | UFD → def.ufd
-
-- 互素理想 | 互极大理想 → def.comaximal
-
-- 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
 
 > 续见 alias/aka/algebra.8.md

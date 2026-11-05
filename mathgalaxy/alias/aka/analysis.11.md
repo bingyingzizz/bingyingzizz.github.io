@@ -1,6 +1,12 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- NBV 的导数与测度 | derivative of an NBV function and its measure → prop.nbv-derivative
+
+- 积出来的函数是 AC → cor.integral-is-ac-nbv
+
+- 函数绝对连续等价于测度绝对连续 → prop.ac-iff-measure-ac
+
 - 微积分基本定理 | FTC | fundamental theorem of calculus | Newton-Leibniz 定理 | 牛顿-莱布尼茨 → thm.ftc-lebesgue
 
 - 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
@@ -22,11 +28,5 @@
 - 小 l p 空间 | 序列空间包含 | ℓp → prop.ell-p-inclusion
 
 - 有限测度时的包含方向 → prop.lp-inclusion-finite
-
-- 对偶配对 | dual pairing | 对偶 → def.duality-map
-
-- 自反 | reflexive | Lp 自反 → cor.lp-reflexive
-
-- Minkowski | 闵可夫斯基不等式 → thm.minkowski
 
 > 续见 alias/aka/analysis.12.md

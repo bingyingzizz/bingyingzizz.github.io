@@ -11,6 +11,4 @@ $$\nabla^{2}Z(X,Y)-\nabla^{2}Z(Y,X) = \nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}
 
 **计数**：(1)(2) 说明 $R$ 可看成 $\bigwedge^{2}T_{p}M$ 上的双线性型，(4) 说明它对称，故有 $\frac{N(N+1)}{2}$ 个分量（$N = \binom{n}{2}$）；
 
-再扣掉 (3) 给出的 $\binom{n}{3}$ 个独立关系，得 $\frac{n^{2}(n^{2}-1)}{12}$。
-
-∎
+> 续见 proofs/imp.tu-curvature-symmetries.4.md

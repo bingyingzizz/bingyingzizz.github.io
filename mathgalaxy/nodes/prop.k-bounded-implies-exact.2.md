@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.k-bounded-implies-exact)　·　第 1 页 [nodes/prop.k-bounded-implies-exact.md](./prop.k-bounded-implies-exact.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.k-bounded-exact`](../nodes/def.k-bounded-exact.md) K-有界正合：用到了定义 K-有界正合　[proofs/def-dep.kbimpl-kbexact.md](../proofs/def-dep.kbimpl-kbexact.md)
 - [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-dep.kbimpl-banach.md](../proofs/def-dep.kbimpl-banach.md)

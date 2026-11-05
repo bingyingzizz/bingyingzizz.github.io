@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 | 卡拉泰奥多里定理 | 卡拉泰奥多里 → thm.caratheodory
+
 - F 给出的预测度 → prop.ls-premeasure
 
 - 几乎处处 | a.e. | almost everywhere | a.e. 收敛 → def.ae
@@ -26,9 +28,5 @@
 - 连续可测 | 连续推出可测 → cor.continuous-measurable
 
 - 可测函数封闭 | 可测的封闭性 → prop.measurable-closure
-
-- 依测度 Cauchy | 依测度基本列 → def.cauchy-in-measure
-
-- 完备与可测 → prop.complete-measurable
 
 > 续见 alias/aka/analysis.5.md

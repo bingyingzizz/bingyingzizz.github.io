@@ -13,6 +13,6 @@ $$\frac{f(x)}{g(x)} = \frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \frac{f'(\xi)}{g'(\x
 
 当 $x \to x_0^{+}$ 时 $\xi \to x_0^{+}$，故右端的极限就是 $\lim_{x \to x_0^{+}} f'(x) / g'(x)$。左邻域与双侧的情形同法。
 
-$\infty/\infty$ 型要多一步：对给定的 $\varepsilon > 0$，先用 $g$ 在 $x_0$ 附近的单调性挑一个 $x_1$，把 $|g|$ 压得足够大，再用 Cauchy 中值定理处理 $[x_1, x]$，最后让 $x_1 \to x_0$。∎
+$\infty/\infty$ 型要多一步（$f, g \to \infty$、$g^{\prime} \ne 0$ 于 $x_0$ 右侧、$\lim f^{\prime}/g^{\prime} = L$ 存在）。
 
-> 注意证明里 $\xi$ **依赖**于 $x$ —— 但这不妨碍取极限，因为 $x \to x_0$ 时 $\xi$ 被夹在 $x_0$ 与 $x$ 之间，必然也趋于 $x_0$。
+> 续见 proofs/imp.lhopital.2.md

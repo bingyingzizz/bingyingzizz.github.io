@@ -7,13 +7,11 @@
 $$E_{p,q}^{1} = H_{q}\bigl(P_{p}\otimes Q_{\bullet}\bigr) = \begin{cases} P_{p}\otimes N , & q = 0 \\ 0 , & q \ne 0 \end{cases}$$
 （因为 $Q_{\bullet} \to N$ 是消解、$P_{p}$ 平坦，张量后仍正合）✓。
 
-于是谱序列在 $E^{1}$ 页就只剩一行，退化，得 $H_{n}(T_{\bullet}) \cong H_{n}(P_{\bullet}\otimes N) = \operatorname{Tor}_{n}^{R}(M, N)$ ✓。
+于是谱序列在 $E^{1}$ 页就只剩一行 —— 但一行仍可能有非零的 $d^{1}$（如该行是 $\mathbb{Z} \xrightarrow{2} \mathbb{Z}$），所以要看**这一行的同调**（也就是 $E^{2}$），此时才退化，得 $H_{n}(T_{\bullet}) \cong H_{n}(P_{\bullet}\otimes N) = \operatorname{Tor}_{n}^{R}(M, N)$ ✓。
 再按**列**过滤（交换环上 $P\otimes Q \cong Q\otimes P$，双复形转置）：同一步计算给出 $H_{n}(T_{\bullet}) \cong H_{n}(Q_{\bullet}\otimes M) = \operatorname{Tor}_{n}^{R}(N, M)$ ✓。
 
 同一个 $H_{n}(T_{\bullet})$ 被算出两次，故两者同构 ✓。
 
 ∎
-
-⚠️ **「交换」不能省**：非交换时 $M\otimes_{R} N$ 只在 $M$ 右、$N$ 左时有定义，$N\otimes_{R} M$ 一般**根本没有定义**。
 
 > 续见 notes/prop.tor-symmetry.2.md

@@ -19,4 +19,4 @@ $\mathcal{C}$ 对**递增并**封闭（用 MCT）；对**递减交**也封闭（
 
 于是 $\mathcal{C}$ 是一个**单调类**，含所有矩形。矩形族生成的代数由矩形构成，再由单调类定理升级到整个 $\mathcal{M} \otimes  \mathcal{N}$。
 
-最后把「有限」推广到「$\sigma$有限」：取 $X \times Y = \bigcup (X_i \times Y_i)$，对每个 $E \cap (X_i \times Y_i)$ 用已经证好的有限情形，再用 MCT 求和。
+最后把「有限」推广到「$\sigma$有限」：取 $X = \bigcup_i X_i$、$Y = \bigcup_j Y_j$（各段测度有限），则 $X \times Y = \bigcup_{i,j} (X_i \times Y_j)$；对每个 $E \cap (X_i \times Y_j)$ 用已经证好的有限情形，再用 MCT 求和。

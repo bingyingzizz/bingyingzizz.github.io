@@ -1,9 +1,9 @@
 # 转移函数　`def.transition-function`　·　续页（第 4 页）
 [在星图里打开](../#n=def.transition-function)　·　第 1 页 [nodes/def.transition-function.md](./def.transition-function.md)　·　上一页 [nodes/def.transition-function.3.md](./def.transition-function.3.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.fiber-bundle`](../nodes/def.fiber-bundle.md) 纤维丛：用到了定义 纤维丛　[proofs/dep-tf-fiber.md](../proofs/dep-tf-fiber.md)
-- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：用到了定义 光滑流形　[proofs/dep-tf-smooth.md](../proofs/dep-tf-smooth.md)
-- [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛：用到了定义 向量丛　[proofs/dep-tf-vector.md](../proofs/dep-tf-vector.md)
+## 陈述（续）
+$$(b, y) \sim (b,\ g_{\alpha\beta}(b)\,y) \quad (b \in U_{\alpha\beta}) ,$$
+
+取商即得以 $F$ 为纤维的丛。**两方向互逆**（差自然同构），故「丛 = 覆盖 + 满足上闭链的转移函数」。
 
 > 续见 [nodes/def.transition-function.5.md](./def.transition-function.5.md)

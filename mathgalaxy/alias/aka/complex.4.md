@@ -1,7 +1,21 @@
 # 别名 → 节点 · 复变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
-- Morera 定理 → thm.morera
+- 边界对应定理 → thm.boundary-correspondence
+
+- 绕数的同伦不变性 → thm.winding-homotopy
+
+- 标准共形映射 → prop.standard-maps
+
+- Poisson 积分公式 | 普瓦松积分公式 | 普瓦松 | 泊松积分公式 → thm.poisson-formula
+
+- 绕数的积分表示 → prop.winding-integral
+
+- 保圆性 → prop.mobius-circle
+
+- 关于圆的对称点 → def.symmetric-point
+
+- Morera 定理 | 莫雷拉定理 | 莫雷拉 → thm.morera
 
 - 调和函数的最大值原理 → thm.harmonic-maximum
 
@@ -15,30 +29,10 @@
 
 - 复数初等函数 → def.complex-elementary
 
-- Weierstrass 收敛性定理 → thm.weierstrass-convergence
+- Weierstrass 收敛性定理 | 魏尔斯特拉斯收敛性定理 → thm.weierstrass-convergence
 
-- Runge 逼近定理 → thm.runge
+- Runge 逼近定理 | 龙格逼近定理 | 龙格 → thm.runge
 
 - 三点决定分式线性变换 → prop.mobius-three-points
-
-- 调和函数的共轭 → thm.harmonic-conjugate
-
-- 指数函数的局部逆 → prop.exp-local-inverse
-
-- Weierstrass 初等因子 → def.elementary-factor
-
-- 分式线性变换保对称点 → prop.mobius-symmetry
-
-- 分式线性变换成群 → prop.mobius-group
-
-- 单值支的存在判据 → prop.single-valued-branch
-
-- Arzelà–Ascoli 定理 → thm.arzela-ascoli
-
-- 分式线性变换的分类 → prop.mobius-classification
-
-- Jordan 引理 → lem.jordan
-
-- Joukowski 映射 → prop.joukowski
 
 > 续见 alias/aka/complex.5.md

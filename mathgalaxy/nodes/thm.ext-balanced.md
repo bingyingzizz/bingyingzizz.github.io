@@ -3,7 +3,7 @@
 layer 22 · 定理 · 消解与维数 · 同调代数
 [在星图里打开](../#n=thm.ext-balanced)　·　[节点索引](../index.md)
 
-设 $P_{\bullet} \twoheadrightarrow M$ 是 $M$ 的投射消解（取删除消解），$M \to I^{\bullet}$ 是内射消解。则对每个 $R$-模 $N$ 与
+设 $P_{\bullet} \twoheadrightarrow M$ 是 $M$ 的投射消解（取删除消解），$N \to I^{\bullet}$ 是 $N$ 的内射消解（$N$ 为任意 $R$-模
 > 陈述续见 [nodes/thm.ext-balanced.2.md](./thm.ext-balanced.2.md)
 
 

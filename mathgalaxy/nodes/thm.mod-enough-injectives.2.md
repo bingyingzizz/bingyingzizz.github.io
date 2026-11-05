@@ -13,11 +13,9 @@ eratorname{Hom}_{\mathbb{Z}}(A, \mathbb{Q}/\mathbb{Z}
 2
 . 对左 $R$-模 $M$，先有单射 $M \hookrightarrow \operatorname{Ho
 m}_{\mathbb{Z}}(R, M)$、$m \mapsto (r \mapsto r m)$；
-取内射 $\mathbb{Z}$-模 $E$ 与单射 $M \hookrightarrow E$（第 1 步给
-出 $E = M^{\vee\vee}$），得 $R$-模单射 $M \hookrightarrow \o
-peratorname{Hom}_{\mathbb{Z}}(R, E)$。
-3. $\operatornam
-e{Hom}_{\mathbb{Z}}(R, E)$ 是**内射** $R$-模。
-于是每个模都有**内射消解** $0 \to M \to I^{0} \to I^{1} \to 
+取内射 $\mathbb{Z}$-模 $E$ 与单射 $M \hookrightarrow E$，得 $R$-
+模单射 $M \hookrightarrow \operatorname{Hom}_{\mathbb{Z}
+}(R, E)$。\n\n⚠ **$E$ 不能取成二次对偶 $M^{\vee\vee}$**（$M
+ = \mathbb{Z}/2$ 时它 $\cong \mathbb{Z}/2$，**不可除**，因
 
 > 续见 [nodes/thm.mod-enough-injectives.3.md](./thm.mod-enough-injectives.3.md)

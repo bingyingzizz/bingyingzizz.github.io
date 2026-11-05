@@ -3,7 +3,7 @@
 layer 31 · 定义 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=def.frame-bundle)　·　[节点索引](../index.md)
 
-**在做什么**：向量丛的纤维是**向量空间**（有加法、有零元），主丛的纤维是**群**（有乘法、没有零元）。帧丛就是两者之间那座桥：把每根纤维里的「一组基」而不是「一个向量」取出来当新纤维。
+**在做什么**：向量丛的纤维是**向量空间**（有加法、有零元）；主丛的纤维是 $G$-**挠集**（torsor：$G$ 自由且传递地作用，自身没有典范的单位元 —— 选定一个基点后才**非典范地**认成 $G$）。帧丛就是两
 > 陈述续见 [nodes/def.frame-bundle.2.md](./def.frame-bundle.2.md)
 
 
@@ -11,7 +11,7 @@ layer 31 · 定义 · 丛的示性类 · 微分几何
 - 被 [`def.associated-bundle`](../nodes/def.associated-bundle.md) 配丛 用
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.frame-bundle.3.md](./def.frame-bundle.3.md)
+- …另有入边，续页见 [nodes/def.frame-bundle.4.md](./def.frame-bundle.4.md)
 
 refs: Tu, Differential Geometry（⚠️ 章节未核实，只记书名）· 帧丛与主丛；Kobayashi–Nomizu, Foundations of Differential Geometry（⚠️ 章节未核实，只记书名）
 

@@ -3,7 +3,7 @@
 
 - 上同调函子 | cohomological functor | Exercise 7.15 | Definition 7.1.12 | Def 7.1.12 | Corollary 7.1.16 | Cor 7.1.16 | Proposition 7.1.13 | Corollary 7.1.10 | Cor 7.1.10 → def.cohomological-functor
 
-- 长正合列 | long exact sequence | 蛇引理 | snake lemma | 连接同态 | Theorem 7.1.15 | Thm 7.1.15 → thm.long-exact
+- snake lemma | 长正合列 | long exact sequence | 连接同态 | Theorem 7.1.15 | Thm 7.1.15 → thm.long-exact
 
 - 拟同构 | quasi-isomorphism | quasi-iso | 零调 | acyclic | Exercise 7.16 | Exercise 7.17 | Definition 7.1.17 | Def 7.1.17 → def.quasi-iso
 

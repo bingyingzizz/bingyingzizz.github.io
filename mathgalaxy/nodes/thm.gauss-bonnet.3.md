@@ -1,7 +1,89 @@
 # Gauss–Bonnet 定理　`thm.gauss-bonnet`　·　续页（第 3 页）
 [在星图里打开](../#n=thm.gauss-bonnet)　·　第 1 页 [nodes/thm.gauss-bonnet.md](./thm.gauss-bonnet.md)　·　上一页 [nodes/thm.gauss-bonnet.2.md](./thm.gauss-bonnet.2.md)
 
-## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative（续）
-For a compact orientable surface $M\subseteq\mathbb{R}^{3}$, possibly with piecewise smooth boundary, $\int_{M}K\,\mathrm{d}A + \int_{\partial M}k_{g}\,\mathrm{d}s = 2\pi\chi(M)$, where $K$ is the Gaussian curvature, $k_{g}$ the geodesic curvature and $\chi$ the Euler characteristic. In particular a closed surface satisfies $\int_{M}K\,\mathrm{d}A = 2\pi\chi(M)$, so total curvature is a topological invariant: $4\pi$ for the sphere, $0$ for the torus and $4\pi(1-g)$ in genus $g$. The local statement for a disc bounded by a simple closed curve is the heart of the proof; the glo
+## 陈述（续）
+d
+}
+A
+ 
+=
+ 
+2
+\
+p
+i
+\
+c
+h
+i
+(
+M
+)
+.
+$
+$
+于
+是
+ 
+$
+K
+$
+ 
+的
+全
+积
+分
+是
+一
+个
+*
+*
+拓
+扑
+*
+*
+量
+：
+球
+面
+ 
+$
+4
+\
+p
+i
+$
+、
+环
+面
+ 
+$
+0
+$
+、
+亏
+格
+ 
+$
+g
+$
+ 
+的
+闭
+曲
+面
+ 
+$
+4
+\
+p
+i
+(
+1
+-
+g
+)
+$
+。
 
 > 续见 [nodes/thm.gauss-bonnet.4.md](./thm.gauss-bonnet.4.md)

@@ -1,6 +1,20 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 有界变差 | bounded variation | BV | 变差 → def.bounded-variation
+
+- 单调函数可导 | 单调函数几乎处处可导 → thm.monotone-differentiable
+
+- BV 的例子 → prop.bv-examples
+
+- T_F ± F 递增 → lem.variation-monotone
+
+- NBV | 规范有界变差 → def.nbv
+
+- AC 包含于 BV → lem.ac-subset-bv
+
+- BV 的 Jordan 分解 → thm.bv-jordan
+
 - 全变差的 NBV 性质 → lem.nbv-variation
 
 - 递增函数的导数积分不等式 → prop.monotone-integral-derivative
@@ -16,17 +30,5 @@
 - 函数绝对连续等价于测度绝对连续 → prop.ac-iff-measure-ac
 
 - 微积分基本定理 | FTC | fundamental theorem of calculus | Newton-Leibniz 定理 | 牛顿-莱布尼茨 → thm.ftc-lebesgue
-
-- 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
-
-- Young 不等式 | Young → lem.young-inequality
-
-- 本性上界 | essential supremum | L-infinity | L∞ 范数 → def.essential-sup
-
-- Lp 范数 | Lp norm | L^p 空间 → def.lp-norm
-
-- Hölder | Holder 不等式 | 赫尔德不等式 → thm.holder
-
-- 稠密 | dense | 简单函数稠密 → prop.dense-simple-compact-support
 
 > 续见 alias/aka/analysis-measure.10.md

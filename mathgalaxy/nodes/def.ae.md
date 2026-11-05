@@ -7,17 +7,17 @@ layer 17 · 定义 · 测度的构造 · 实变函数+数学分析
 
 $$\exists E \in \mathcal{M}:\ \mu(E) = 0\ \wedge \ \forall x \in X \setminus E,\ P(x) .$$
 
-即：**使命题不成立的那些点构成一个零集**。
+即：**失败点集包含在某个可测零集中**（它本身未必可测 —— 非完备空间里 Cantor 集的非 Borel 子集就是反例；完备化之后两者才等价）。
 
 常见的用法：$f = g$ a.e.（$\{f \ne g\}$ 是零集）、$f_n \to f$ a.e.（不收敛的点是零集）、$F' = 0$ a.e.。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.null-set`](../nodes/def.null-set.md) 零集与完备：用到了定义 零集与完备　[proofs/dep.nullset-ae.md](../proofs/dep.nullset-ae.md)
-
-- …另有入边，续页见 [nodes/def.ae.2.md](./def.ae.2.md)
-
 ## 它能推出什么 / 谁在用它
+- 被 [`cor.mct-ae`](../nodes/cor.mct-ae.md) 单调收敛定理（几乎处处版本） 用
+
 - …另有出边，续页见 [nodes/def.ae.3.md](./def.ae.3.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.ae.2.md](./def.ae.2.md)
 
 refs: Rudin, Real and Complex Analysis, Ch. 1
 

@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **stale** · stale fields: abstract (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 

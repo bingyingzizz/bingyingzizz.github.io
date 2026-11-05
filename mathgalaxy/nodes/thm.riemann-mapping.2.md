@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.riemann-mapping)　·　第 1 页 [nodes/thm.riemann-mapping.md](./thm.riemann-mapping.md)
 
 ## 陈述（续）
-射
+存在唯一的双全纯映射
 $$f : \Omega \longrightarrow \mathbb{D} = \{\, |z| < 1 \,\}$$
 
 且 $f(z_{0}) = 0$、$f'(z_{0}) > 0$。

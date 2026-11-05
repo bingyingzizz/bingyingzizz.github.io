@@ -3,7 +3,7 @@
 
 - 拓扑 | 开集 | topology | open set | 拓扑空间 → def.topology
 
-- 闭集 | 闭包 | closed set | closure | 聚点 → def.closed-set
+- 闭集 | 闭包 | closed set | closure → def.closed-set
 
 - 基 | 子基 | base | subbase | 拓扑基 → def.topology-base
 

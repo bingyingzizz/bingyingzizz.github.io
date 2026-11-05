@@ -5,6 +5,6 @@
 
 ⭐ **它为什么只在偶数秩时存在**：Pfaffian 只对偶数阶反对称矩阵有定义。$k$ 为奇数时 $e(E)$ 按定义为 $0$ —— 这与「奇数维闭流形的 Euler 示性数为零」（Poincaré 对偶的推论）一致。
 
-⚠️ **符号约定要留意**：$e(E) = c_{m}(E\otimes\mathbb{C})$ 与 $e(E) = (-1)^{m}c_{m}(E\otimes\mathbb{C})$ 两种约定都在用（差 $(-1)^{m}$，取决于曲率与 Pfaffian 的符号）。本图取 $\operatorname{Pf}(F/2\pi)$ 直接定义，不做换算。
+⚠️ **不要把 $e$ 直接当成 $c_{m}$**：无歧义的那条是 $p_{m}(E) = e(E)^{2}$；而复化丛上 $c_{2m}(E\otimes\mathbb{C})$ 与 $e(E)^{2}$ 之间可能差一个 $(-1)^{m}$（取决于曲率与 Pfaffian 的符号约定）。本图取 $\operatorname{Pf}(F/2\pi)$ 直接定义 $e$，不做换算。
 
 > 续见 notes/def.euler-class.2.md

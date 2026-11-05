@@ -1,6 +1,6 @@
 # 广义 Arzelà–Ascoli　`thm.arzela-ascoli-general`
 广义 Arzelà–Ascoli：全有界 $\iff$ 等度连续 + 逐点全有界
-layer 22 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 22 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.arzela-ascoli-general)　·　[节点索引](../index.md)
 
 设 $K$ 紧、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。则下列**等价**：

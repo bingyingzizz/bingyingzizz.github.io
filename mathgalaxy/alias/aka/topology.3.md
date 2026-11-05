@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 仿紧与单位分解 | 正规与单位分解 | Exercise 8.7 → prop.paracompact-partition-unity
+
 - Stone 空间的闭开加细 | Exercise 2.20 | Exercise 2.19 → prop.stone-clopen-refinement
 
 - 完全不连通 | totally disconnected | 极不连通 | extremally disconnected | Definition 2.2.7 | Def 2.2.7 → def.totally-disconnected
@@ -16,7 +18,5 @@
 - Stone 空间上同调为零 | Exercise 7.50 → prop.stone-acyclic
 
 - 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
-
-- CHaus | 紧 Hausdorff 空间 | compact Hausdorff | 紧豪斯多夫空间 → def.chaus
 
 > 续见 alias/aka/topology.4.md

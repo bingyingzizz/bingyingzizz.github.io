@@ -1,6 +1,6 @@
 # Bernstein 多项式逼近　`thm.bernstein-approximation`
 Bernstein 多项式逼近（Weierstrass 定理的显式证明）
-layer 18 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 18 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.bernstein-approximation)　·　[节点索引](../index.md)
 
 对 $f \in C[0, 1]$，令

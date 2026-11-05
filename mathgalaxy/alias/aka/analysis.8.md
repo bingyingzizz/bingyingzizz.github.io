@@ -1,6 +1,12 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 正集 | 负集 | 零集 符号测度 → def.positive-negative-null
+
+- 相互奇异 | mutually singular | 奇异 → def.mutually-singular
+
+- 绝对连续 | absolutely continuous | 测度绝对连续 → def.absolute-continuity
+
 - 复测度 | complex measure → def.complex-measure
 
 - 正集封闭 → prop.positive-set-closure
@@ -24,11 +30,5 @@
 - 积分给出绝对连续 → prop.integral-gives-ac
 
 - 复测度的 RN 定理 → thm.rn-complex
-
-- 积分的绝对连续性 → cor.ac-integral-continuity
-
-- RN 定理 | 拉东-尼科迪姆 | Radon-Nikodym theorem → thm.lebesgue-radon-nikodym
-
-- 链式法则 | RN 链式法则 → prop.rn-chain-rule
 
 > 续见 alias/aka/analysis.9.md

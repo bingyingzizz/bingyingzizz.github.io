@@ -3,7 +3,7 @@ Gauss 引理与测地极坐标
 layer 31 · 引理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=lem.gauss-lemma)　·　[节点索引](../index.md)
 
-设 $p \in S$、$v \in T_{p}S$、$w \in T_{v}(T_{p}S)$。则
+设 $p \in S$、$v \in \operatorname{Dom}(\exp_{p})$、$w \in T_{v}(T_{p}S)$。则
 
 $$\langle (\mathrm{d}\exp_{p})_{v}(v),\,(\mathrm{d}\exp_{p})_{v}(w)\rangle = \langle v,w\rangle .$$
 > 陈述续见 [nodes/lem.gauss-lemma.2.md](./lem.gauss-lemma.2.md)

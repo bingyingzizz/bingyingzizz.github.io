@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.matrix`](../nodes/def.matrix.md) 矩阵：用到了定义 矩阵　[proofs/dep.matrix-elementary.md](../proofs/dep.matrix-elementary.md)
+
+> 续见 [nodes/def.elementary-matrix.4.md](./def.elementary-matrix.4.md)

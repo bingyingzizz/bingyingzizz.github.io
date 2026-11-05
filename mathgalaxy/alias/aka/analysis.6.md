@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- MCT a.e. | 单调收敛 a.e. → cor.mct-ae
+
+- 单调收敛 | MCT | monotone convergence theorem | Levi 定理 → thm.mct
+
 - 复函数的积分 | 复积分 → def.integral-complex
 
 - 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
@@ -24,7 +28,5 @@
 - L1 逐项积分 | L1 的级数积分 → thm.termwise-L1
 
 - L1 逼近 | L1 里的逼近 → thm.approximation-L1
-
-- 积分号下求导 | 交换极限与积分 | differentiation under the integral sign | 积分和极限换顺序 → thm.differentiate-under-integral
 
 > 续见 alias/aka/analysis.7.md

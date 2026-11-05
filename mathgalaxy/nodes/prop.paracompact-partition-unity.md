@@ -1,19 +1,19 @@
 # 仿紧性与单位分解　`prop.paracompact-partition-unity`
-命题：仿紧 Hausdorff / 正规 $\iff$ 单位分解存在
+命题：仿紧 Hausdorff / 正规 $\implies$ 单位分解存在
 layer 17 · 命题 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=prop.paracompact-partition-unity)　·　[节点索引](../index.md)
 
-对拓扑空间 $X$：
+对
 > 陈述续见 [nodes/prop.paracompact-partition-unity.2.md](./prop.paracompact-partition-unity.2.md)
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.paracompact-partition-unity.4.md](./prop.paracompact-partition-unity.4.md)
+- …另有入边，续页见 [nodes/prop.paracompact-partition-unity.5.md](./prop.paracompact-partition-unity.5.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.paracompact-partition-unity.6.md](./prop.paracompact-partition-unity.6.md)
+- …另有出边，续页见 [nodes/prop.paracompact-partition-unity.7.md](./prop.paracompact-partition-unity.7.md)
 
-## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
+## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/prop.paracompact-partition-unity.3.md](./prop.paracompact-partition-unity.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3

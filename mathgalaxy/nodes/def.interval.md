@@ -13,13 +13,16 @@ $$(a, b), \quad [a, b], \quad [a, b), \quad (a, b]$$
 
 按端点是否取到区分；另有 $(-\infty, b)$、$(a, +\infty)$、$\mathbb{R}$ 等无界区间，以及单点集 $[a, a]$。
 
-体积就是长度：$m((a, b]) = b - a$。
-
-## 为什么成立（入边，证明在 proofs/）
-- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.real-interval.md](../proofs/dep.real-interval.md)
+**长度**（Lebesgue 测度 $m$ 的约定）就是 $b - a$（要求 $a \le b$；$a > b$ 时 $(a, b] = \emptyset$，要另行约定）。
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.interval.2.md](./def.interval.2.md)
+- 被 [`def.fundamental-class`](../nodes/def.fundamental-class.md) 基本类 用
+- 被 [`def.ac-function`](../nodes/def.ac-function.md) 绝对连续函数 用
+
+- …另有出边，续页见 [nodes/def.interval.3.md](./def.interval.3.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.interval.2.md](./def.interval.2.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 2
 

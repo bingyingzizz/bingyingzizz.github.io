@@ -1,6 +1,12 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 可测函数 | measurable function | 可测 → def.measurable-function
+
+- 可测的判定 → prop.measurable-criterion
+
+- Lebesgue 可测 | 勒贝格可测 → def.lebesgue-measurable
+
 - 实虚部可测 | 积空间可测 → prop.measurable-product-and-realimag
 
 - 简单函数 | simple function | 示性函数 | 特征函数 → def.simple-function
@@ -19,14 +25,6 @@
 
 - 依测度收敛 | 依测度 Cauchy 收敛 → thm.cauchy-in-measure
 
-- 收敛方式 | 五种收敛 | modes of convergence | 几乎处处收敛 | 一致收敛 → def.convergence-modes
-
-- 反例 | 收敛的反例 | 标准反例 → prop.convergence-counterexamples
-
-- L1 收敛推出依测度 → prop.L1-implies-measure
-
-- Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
-
-- Lusin | 卢津 → cor.lusin
+- 收敛方式 | 五种收敛 | modes of convergence | 几乎处处收敛 → def.convergence-modes
 
 > 续见 alias/aka/analysis-measure.4.md

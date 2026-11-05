@@ -6,3 +6,5 @@
 - $y\in E$ 且 $x-y\in E^\perp\implies y=P_E x$：由勾股恒等式直接得唯一最小点，不要求闭性或完备性；正交补本身的条件才是定义展开。
 - 每个 $x$ 都有正交分解：调用 `thm.projection-convex`，用 Hilbert 完备性与 $E$ 闭；线性由分解唯一性推出，范数界由勾股恒等式推出。
 - 闭性不能删：$E=c_{00}\subset\ell^2$ 时，对 $x\in\ell^2\setminus c_{00}$ 距离为零却不取到，故不存在 $E$ 中最近点。
+
+📌 「正交投影」的定义在 `def.orthogonal-projection`；本节点讲的是「投影像恰是闭子空间」这条。

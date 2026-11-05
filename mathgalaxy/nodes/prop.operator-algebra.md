@@ -7,7 +7,7 @@ layer 15 · 命题 · 赋范空间与有界算子 · 泛函分析
 
 $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
-特别地 $B(E)$ 是**赋范代数**（乘法连续），且 $\|\mathrm{id}\| = 1$。
+特别地 $B(E)$ 是**赋范代数**（乘法连续）；$E \ne \{0\}$ 时 $\|\mathrm{id}\| = 1$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子：用到了定义 有界线性算子　[proofs/def-link.fa-boundedop-opalgebra.md](../proofs/def-link.fa-boundedop-opalgebra.md)

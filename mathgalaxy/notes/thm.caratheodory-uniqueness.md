@@ -5,7 +5,7 @@
 
 原因藏在 $\mu^{*}$ 的定义里 —— 它是用「覆盖取下确界」造的，而任何扩张 $\nu$ 都要满足次可加性，于是 $\nu (A) \le \sum \nu (E_{j}) = \sum \mu _{0}(E_{j})$，对所有覆盖取下确界就得到 $\nu \le \mu^{*}$。
 
-⚠ 不 $\sigma$有限时唯一性会**失效**：$\mathbb{R}$ 上取 $\mathfrak{A} =$ 有限并的半开区间，$\mu _{0} = Lebesgue$ 长度限制在 $\mathfrak{A}$ 上，则「Lebesgue 测度」与「Lebesgue 测度 + 集中在某个非 Lebesgue 可测集上的无穷值」都是扩张。
+⚠ 不 $\sigma$有限时唯一性会**失效**（$\mathbb{R}$ 上的 Lebesgue 长度是 $\sigma$ 有限的，换不掉）：取 $\mathfrak{A} =$ 有限不交并的半开区间、$\mu _{0}((a,b]) = +\infty$（$a < b$），它不 $\sigma$ 有限（每段都是 $\infty$）。两个扩张：$\mu _{1}(E) = +\infty$（$E \ne \emptyset$）、$\mu _{1}(\emptyset) = 0$；另一个 $\mu _{2}(E) = 0$（$E$ 是 Lebesgue 零集）、否则 $+\infty$。它们在 $\mathfrak{A}$ 上都取 $\infty$，却在单点集上分道扬镳。
 
 $\sigma$有限性正是用来堵住这种漏洞的。
 

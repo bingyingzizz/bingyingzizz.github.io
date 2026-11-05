@@ -5,7 +5,7 @@
 
 
 
-$\mathbb{Z}/n\mathbb{Z}$ 是域 $\iff$ $n$ 是素数（$n = p$ 时记 $\mathbb{F}_{p}$）：$n$ 合数时取 $n = ab$，$[a][b] = 0$ 而两者非零，有零因子。
+对 $n \ge 1$：$\mathbb{Z}/n\mathbb{Z}$ 是域 $\iff$ $n$ 是素数（$n = p$ 时记 $\mathbb{F}_{p}$；$n = 1$ 给零环，不是域）：$n$ 合数时取 $n = ab$，$[a][b] = 0$ 而两者非零，有零因子。
 
 
 

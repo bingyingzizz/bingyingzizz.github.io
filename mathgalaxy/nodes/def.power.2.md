@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.power)　·　第 1 页 [nodes/def.power.md](./def.power.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`prop.power-rules`](../nodes/prop.power-rules.md) 指数律与幂的单调性
 - ⇒ [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根
 - ⇒ [`thm.binomial`](../nodes/thm.binomial.md) 二项式定理
 - ⇒ [`thm.elementary-derivatives`](../nodes/thm.elementary-derivatives.md) 初等函数的导数

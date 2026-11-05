@@ -9,6 +9,6 @@
 
 若 $f = \chi _E$，$E = F \cup G$ 其中 $F \in \mathcal{M}\otimes\mathcal{N}$、$G \subseteq H$ 且 $\mu \times \nu (H) = 0$，设不交并，则 $f = \chi _F + \chi _G$。
 
-$\chi _F$ ✓（归 Fubini–Tonelli），$\chi _G$ ✓（因为每条截口的测度都是 0）。
+$\chi _F$ ✓（归 Fubini–Tonelli），$\chi_G$ ✓（由集合版 Tonelli，$H_x$ 对 **a.e.** $x$ 零测；再由 $\mu$ 完备，$G_x \subseteq H_x$ 在这些 $x$ 处可测且零测 —— 只是 a.e.，**不是每条**：$G = \{0\}\times[0,1]$ 在 $x = 0$ 处的截口测度是 $1$）。
 
 **应该是核心思想，其余都类似**。

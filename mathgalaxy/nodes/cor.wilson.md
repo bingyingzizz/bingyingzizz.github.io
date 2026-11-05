@@ -3,7 +3,7 @@ Wilson 定理：用阶乘同余判定素数
 layer 14 · 推论 · 整除与同余 · 数论
 [在星图里打开](../#n=cor.wilson)　·　[节点索引](../index.md)
 
-$p$ 是素数 $\iff$ $(p - 1)! \equiv -1 \pmod p$。
+整数 $p \ge 2$：$p$ 是素数 $\iff$ $(p - 1)! \equiv -1 \pmod p$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环：Wilson 定理：把单位群的元素两两配对成逆　[proofs/imp.nt-wilson.md](../proofs/imp.nt-wilson.md)

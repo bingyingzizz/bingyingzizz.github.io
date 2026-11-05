@@ -9,7 +9,7 @@
 
 - gcd | 最大公约数 → def.gcd
 
-- 裴蜀等式 | Bézout 等式 → thm.bezout
+- 裴蜀等式 | Bézout 等式 | 贝祖等式 | 贝祖 → thm.bezout
 
 - 质数 | 素元素 → def.prime
 
@@ -36,7 +36,5 @@
 - 除数函数 | 因子个数函数 | 因数和函数 → def.divisor-function
 
 - 除数公式 | 因数和公式 → thm.divisor-formula
-
-- 莫比乌斯和恒等式 | μ 的和 → thm.mu-sum
 
 > 续见 alias/aka/number.2.md

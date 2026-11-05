@@ -25,7 +25,7 @@
 
 - Exercise 7.42 → prop.cohomology-presheaf-H
 
-- Exercise 7.28 | 谱序列 → prop.spectral-sequence-page-picture
+- Exercise 7.28 → prop.spectral-sequence-page-picture
 
 - 正合偶给出谱序列 → thm.exact-couple-spectral
 

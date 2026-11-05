@@ -7,17 +7,17 @@ layer 13 · 定义 · 矩阵与行列式 · 抽象代数
 
 - 把第 $i$ 行与第 $j$ 行**互换**；
 - 把第 $i$ 行乘以非零常数 $c$；
-- 把第 $j$ 行的 $c$ 倍**加到**第 $i$ 行上。
+- 把第 $j$ 行的 $c$ 倍**加到**第 $i$ 行上（**要求 $i \ne j$**；$i = j$、$c = -1$ 会得到不可逆的 $\operatorname{diag}(0, 1)$）。
 
 对单位矩阵 $I_n$ 做一次上述操作得到的矩阵叫**初等矩阵**（记 $E$）。关键性质是：**对 $A$ 做一次初等行变换，等于在左边乘上相应的初等矩阵**，即把 $A$ 换成 $EA$。
 > 陈述续见 [nodes/def.elementary-matrix.2.md](./def.elementary-matrix.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解 用
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.elementary-matrix.3.md](./def.elementary-matrix.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.elementary-matrix.4.md](./def.elementary-matrix.4.md)
 
 refs: Hoffman–Kunze, Linear Algebra, Ch. 1
 

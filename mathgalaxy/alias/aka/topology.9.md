@@ -13,7 +13,7 @@
 
 - Pontryagin-van Kampen | 庞特里亚金对偶定理 | Theorem 6.2.4 | Thm 6.2.4 | 自等价 | Exercise 6.7 → thm.pontryagin-van-kampen
 
-- Tietze 延拓 | Tietze | Banach 值 Tietze | Theorem 8.2.7 → thm.tietze-banach
+- Tietze 延拓 | Tietze | Banach 值 Tietze | Theorem 8.2.7 | 蒂策-巴拿赫定理 | 蒂策 → thm.tietze-banach
 
 - 局部紧阿贝尔群结构定理 | 结构定理 | V⊕K | Theorem 6.2.5 → thm.lc-structure
 

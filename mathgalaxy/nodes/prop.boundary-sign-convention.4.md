@@ -2,5 +2,8 @@
 [在星图里打开](../#n=prop.boundary-sign-convention)　·　第 1 页 [nodes/prop.boundary-sign-convention.md](./prop.boundary-sign-convention.md)　·　上一页 [nodes/prop.boundary-sign-convention.3.md](./prop.boundary-sign-convention.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面：用到了定义 R³ 中的可定向曲面　[proofs/dep.spivak-surface-boundary.md](../proofs/dep.spivak-surface-boundary.md)
-- [`def.orientable-manifold`](../nodes/def.orientable-manifold.md) 可定向流形：用到了定义 可定向流形　[proofs/dep.mf3-bsign-orientmanifold.md](../proofs/dep.mf3-bsign-orientmanifold.md)
+- [`def.boundary-operator`](../nodes/def.boundary-operator.md) 边界算子 + [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形：逐面算行列式 $\implies$ 代数边界就是诱导定向的边界　[proofs/imp.spivak-boundary-sign.md](../proofs/imp.spivak-boundary-sign.md)
+- [`def.singular-cube`](../nodes/def.singular-cube.md) 奇异方块：用到了定义 奇异方块　[proofs/dep.spivak-cube-faces.md](../proofs/dep.spivak-cube-faces.md)
+- [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形：用到了定义 带边流形　[proofs/dep.spivak-boundary-sign.md](../proofs/dep.spivak-boundary-sign.md)
+
+> 续见 [nodes/prop.boundary-sign-convention.5.md](./prop.boundary-sign-convention.5.md)

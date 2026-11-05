@@ -8,10 +8,6 @@ layer 22 · 定义 · 多重线性与张量 · 抽象代数
 设 $A, B \in M_{n}(K)$。称 $A$ 与 $B$ **合同**（congruent），若存在**可逆** $P$ 使
 
 $$B = P^{T} A\, P .$$
-
-复情形用
-
-$$B = P^{*} A\, P .$$
 > 陈述续见 [nodes/def.congruent-matrices.2.md](./def.congruent-matrices.2.md)
 
 

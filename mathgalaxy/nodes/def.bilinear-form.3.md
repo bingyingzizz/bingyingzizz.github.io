@@ -1,15 +1,7 @@
 # 双线性型　`def.bilinear-form`　·　续页（第 3 页）
 [在星图里打开](../#n=def.bilinear-form)　·　第 1 页 [nodes/def.bilinear-form.md](./def.bilinear-form.md)　·　上一页 [nodes/def.bilinear-form.2.md](./def.bilinear-form.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.quadratic-form`](../nodes/def.quadratic-form.md) 二次型 用
-- 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积（向量空间） 用
-- 被 [`def.hessian`](../nodes/def.hessian.md) Hessian 矩阵 用
-- 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积 用
-- 被 [`def.matrix-of-bilinear-form`](../nodes/def.matrix-of-bilinear-form.md) 双线性型的矩阵 用
-- 被 [`def.isotropic-vector`](../nodes/def.isotropic-vector.md) 迷向向量 用
-- 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用
-- 被 [`def.hyperbolic-plane`](../nodes/def.hyperbolic-plane.md) 双曲平面 用
-- 被 [`def.symplectic-form`](../nodes/def.symplectic-form.md) 辛形式 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.multilinear-form`](../nodes/def.multilinear-form.md) 多重线性型：用到了定义 多重线性型　[proofs/dep.multilinearform-bilinear.md](../proofs/dep.multilinearform-bilinear.md)
 
 > 续见 [nodes/def.bilinear-form.4.md](./def.bilinear-form.4.md)

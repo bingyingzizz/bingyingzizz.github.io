@@ -3,10 +3,14 @@
 
 `thm.adic-structure-sheaf` adic 结构层是层 + `prop.analytic-base-change` 解析环的 base change → `thm.adic-gluing` 导出范畴按无穷范畴粘合
 
-**第四步：覆盖可细化。** 任一 $\mathcal{C}$ 的覆盖都能被标准覆盖细化（Lemma 10.4，Huber 的逼近论证）：把每个 $A \to A_i$ 换成有理局部化 $A \to A\langle T_1,\ldots,T_n\rangle/(\ldots)$ 的复合，用强 Noether 性与「开浸入的复合仍是开浸入」逐项对齐。
+**记号。** $\mathcal{C}$ = 离散 Huber 对构成的景，覆盖取「标准覆盖」；$\operatorname{Spec}(A,A^+)$ 表示对应的 adic 谱。
 
-**第五步：范畴判据。** 设 $F$ 是 $\mathcal{C}$ 上的层。$F$ 落在 $\Phi$ 的本质像中，当且仅当
-1. $F$ 有覆盖 $\{F_i \to F\}$，每个 $F_i \cong \operatorname{Spec}(A_i,A_i^+)$；
-2. 对每个 $i$，$F_i \times_F F_i$ 也是仿射的（$\cong \operatorname{Spec}$ 的某个有理局部化），且两个投影是开浸入。
+函子 $\Phi : X \mapsto (|X|, \mathcal{O}_X)$ 从离散 adic 空间到 $\mathcal{C}$ 上的「空间」（局部模型层 + 环层）之范畴。
+
+**第一步：$\operatorname{Spec}$ 是层。** 对标准覆盖 $\{(A,A^+) \to (A_i,A_i^+)\}$，$\operatorname{Spec}$ 的粘合条件逐点验证：覆盖在拓扑空间层面是开覆盖，结构层由 $A \to \varprojlim A_i$ 的完全性给出（Prop 10.1(a)）。
+
+**第二步：全忠实。** 对 adic 空间 $X, Y$，
+$$\operatorname{Hom}(X,Y) \longrightarrow \operatorname{Hom}\big((|X|,\mathcal{O}_X), (|Y|,\mathcal{O}_Y)\big)$$
+是双射（Prop 10.1(b)）。
 
 > 续见 proofs/imp.adic-gluing.4.md

@@ -1,7 +1,7 @@
 # 帧丛　`def.frame-bundle`　·　续页（第 3 页）
 [在星图里打开](../#n=def.frame-bundle)　·　第 1 页 [nodes/def.frame-bundle.md](./def.frame-bundle.md)　·　上一页 [nodes/def.frame-bundle.2.md](./def.frame-bundle.2.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛：用到了定义 向量丛　[proofs/dep.fr-vector.md](../proofs/dep.fr-vector.md)
-- [`def.principal-bundle`](../nodes/def.principal-bundle.md) 主丛：用到了定义 主丛　[proofs/dep.fr-principal.md](../proofs/dep.fr-principal.md)
-- [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep.fr-localt.md](../proofs/dep.fr-localt.md)
+## 陈述（续）
+**反过来**：给定主 $\mathrm{GL}(k)$-丛 $P \to M$，配丛 $P \times_{\mathrm{GL}(k)} \mathbb{R}^{k}$ 就是一个秩 $k$ 向量丛；这两个构造互逆（差一个自然同构）。
+
+> 续见 [nodes/def.frame-bundle.4.md](./def.frame-bundle.4.md)

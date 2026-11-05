@@ -2,7 +2,6 @@
 [在星图里打开](../#n=def.lp-norm)　·　第 1 页 [nodes/def.lp-norm.md](./def.lp-norm.md)　·　上一页 [nodes/def.lp-norm.4.md](./def.lp-norm.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`thm.holder`](../nodes/thm.holder.md) Hölder 不等式 用
 - 被 [`thm.minkowski`](../nodes/thm.minkowski.md) Minkowski 不等式 用
 - 被 [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间 用
 - 被 [`cor.lp-reflexive`](../nodes/cor.lp-reflexive.md) L^p 自反 用

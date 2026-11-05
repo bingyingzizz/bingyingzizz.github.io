@@ -1,0 +1,9 @@
+# 面积元　`def.area-element`　·　续页（第 5 页）
+[在星图里打开](../#n=def.area-element)　·　第 1 页 [nodes/def.area-element.md](./def.area-element.md)　·　上一页 [nodes/def.area-element.4.md](./def.area-element.4.md)
+
+## 它能推出什么 / 谁在用它（续）
+- 被 [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面 用
+- 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理 用
+- ⇒ [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面
+- 被 [`prop.volume-density-well-defined`](../nodes/prop.volume-density-well-defined.md) 密度与定向无关 用
+- 被 [`def.submanifold-volume`](../nodes/def.submanifold-volume.md) 诱导体积 用

@@ -3,7 +3,7 @@
 layer 2 · 定义 · 集合的构造 · 集合论
 [在星图里打开](../#n=def.union-inter)　·　[节点索引](../index.md)
 
-设 $\mathcal{A}$ 是一族集合（$A$ 的**并**与**交**是它只有两个成员时的特例）：
+设 $\mathcal{A}$ 是一族集合（**取交时要求 $\mathcal{A} \ne \emptyset$**：$\bigcap\emptyset$ 会是「全体集合」的类而不成集合；$A$ 的**并**与**交**是它只有两个成员时的特例）：
 
 $$\bigcup \mathcal{A} := \{ x : \exists A \in \mathcal{A},\ x \in A \}$$
 $$\bigcap \mathcal{A} := \{ x : \forall A \in \mathcal{A},\ x \in A \}$$
@@ -13,8 +13,6 @@ $$\bigcap \mathcal{A} := \{ x : \forall A \in \mathcal{A},\ x \in A \}$$
 显然 $A \cap B \subseteq A \subseteq A \cup B$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/dep.subset-union-inter.md](../proofs/dep.subset-union-inter.md)
-
 - …另有入边，续页见 [nodes/def.union-inter.2.md](./def.union-inter.2.md)
 
 ## 它能推出什么 / 谁在用它

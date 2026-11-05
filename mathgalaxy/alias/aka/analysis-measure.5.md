@@ -1,6 +1,14 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
+
+- Fatou 推论 → cor.fatou
+
+- L1 是向量空间 → prop.L1-vector-space
+
+- 积分绝对值不等式 → prop.integral-abs-ineq
+
 - 支撑 σ-有限 → prop.L1-support-sigma-finite
 
 - 两个函数积分处处相同 → prop.integrals-equal-iff
@@ -20,11 +28,5 @@
 - 积 σ代数的生成基 → prop.product-sigma-base
 
 - 可数积的生成 → prop.product-sigma-generated
-
-- 截口可测 | sections of measurable sets and functions → prop.section-measurable
-
-- 可数积的 Borel 代数 → cor.borel-product
-
-- 乘积测度 | product measure → def.product-measure
 
 > 续见 alias/aka/analysis-measure.6.md

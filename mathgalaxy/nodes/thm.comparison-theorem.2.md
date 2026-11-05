@@ -8,7 +8,10 @@ _{0} \xrightarrow{\ \varepsilon_{P}\ } M \to
 0, \qquad \cdots \to Q_{1} \xrightarrow{\ e_{
 1}\ } Q_{0} \xrightarrow{\ \varepsilon_{Q}\ }
  N \to 0$$
-是两条**投射消解**。则：
+其中 $P_{\bullet}$ 是**投射**消解、$Q_{\bulle
+t}$ 只需是**正合**消解（$Q_{n}$ 的投射性
+用不到，标准教材常习惯性地两条都写
+成投射的）。则：
 1. 存在**链映射** $\varphi : P_{\bullet} \to Q_{
 \bullet}$ 提升 $f$：即 $\varepsilon_{Q}\varphi_{0
 } = f\varepsilon_{P}$，且 $\varphi_{n-1}d_{n} = e
@@ -19,6 +22,5 @@ $$\varphi_{
 n} - \psi_{n} = e_{n+1}s_{n} + s_{n-1}d_{n},$$
 
 其中约定 $s_{-1} = 0$，并把 $e_{0}$ 读作 $\
-varepsilon_{Q}$、$d_{0}$ 读作 $\varepsilon_{P}$。
 
 > 续见 [nodes/thm.comparison-theorem.3.md](./thm.comparison-theorem.3.md)

@@ -3,7 +3,7 @@
 
 - 凝聚态阿贝尔群 | condensed abelian group | CondAb | Ab(Cond) | Definition 6.1.1 | Proposition 6.1.2 | Prop 6.1.2 → def.condensed-abelian-group
 
-- 截面函子 | Gamma(F,-) | sections functor | Exercise 5.17 → prop.condab-section
+- Gamma(F,-) | Exercise 5.17 → prop.condab-section
 
 - CondAb 满足 AB6 | AB4* | AB 公理 | Theorem 6.1.4 | Corollary 6.1.5 → thm.condab-ab
 

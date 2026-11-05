@@ -7,15 +7,18 @@ layer 13 · 定义 · 多重线性与张量 · 抽象代数
 
 $$B(v + cv', w) = B(v, w) + c\,B(v', w), \qquad B(v, w + cw') = B(v, w) + c\,B(v, w')$$
 
-$V = W$、$U = K$ 时叫 $V$ 上的**双线性型**。记全体为 $\operatorname{Bil}(V, W; U)$，它按逐点运算构成 $K$-向量空间。
+$V = W$、$U = K$ 时叫 $V$ 上的**双线性型**。记全体为 $\operatorname{Bil}(V, W; U)$，按逐点运算构成 $K$-向量空间。
+> 陈述续见 [nodes/def.bilinear-form.2.md](./def.bilinear-form.2.md)
 
-特例：内积（正定对称）、辛形式（非退化交错）、二次型的极化（对称）都是双线性型。
-
-## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.bilinear-form.2.md](./def.bilinear-form.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.bilinear-form.3.md](./def.bilinear-form.3.md)
+- 被 [`def.quadratic-form`](../nodes/def.quadratic-form.md) 二次型 用
+- 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积（向量空间） 用
+
+- …另有出边，续页见 [nodes/def.bilinear-form.4.md](./def.bilinear-form.4.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.bilinear-form.3.md](./def.bilinear-form.3.md)
 
 refs: Lang, Algebra, Ch. XVI；Roman, Advanced Linear Algebra, Ch. 14
 

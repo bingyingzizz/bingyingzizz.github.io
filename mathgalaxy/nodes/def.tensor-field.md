@@ -3,19 +3,20 @@
 layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.tensor-field)　·　[节点索引](../index.md)
 
-**在说什么**：把「每点一个多重线性型」做
+*
 > 陈述续见 [nodes/def.tensor-field.2.md](./def.tensor-field.2.md)
 
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.tensor-contraction`](../nodes/def.tensor-contraction.md) 缩并 用
-- 被 [`def.lie-derivative`](../nodes/def.lie-derivative.md) Lie 导数 用
+
+- …另有出边，续页见 [nodes/def.tensor-field.9.md](./def.tensor-field.9.md)
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.tensor-field.5.md](./def.tensor-field.5.md)
+- …另有入边，续页见 [nodes/def.tensor-field.7.md](./def.tensor-field.7.md)
 
-## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative
-> English abstract 续见 [nodes/def.tensor-field.4.md](./def.tensor-field.4.md)
+## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+> English abstract 续见 [nodes/def.tensor-field.5.md](./def.tensor-field.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 张量场与张量丛；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 交错张量与微分形式
 

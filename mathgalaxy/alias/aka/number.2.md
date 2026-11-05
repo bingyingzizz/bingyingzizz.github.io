@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../number.md`
 
+- 莫比乌斯和恒等式 | μ 的和 → thm.mu-sum
+
 - 莫比乌斯反演公式 → thm.mobius-inversion
 
 - 素数计数函数 | 切比雪夫函数 | Чебышёв 函数 → def.prime-counting
@@ -25,12 +27,8 @@
 
 - 雅可比符号 | Jacobi 记号 → def.jacobi-symbol
 
-- Jacobi 符号的计算法则 → thm.jacobi-laws
+- Jacobi 符号的计算法则 | 雅可比符号 | 雅可比符号计算法则 → thm.jacobi-laws
 
 - 模 n 的阶 | 元素的阶 → def.order-mod-n
-
-- 阶整除 φ(n) | 阶整除群阶 → thm.order-divides-phi
-
-- 原根 | 本原根 → def.primitive-root
 
 > 续见 alias/aka/number.3.md

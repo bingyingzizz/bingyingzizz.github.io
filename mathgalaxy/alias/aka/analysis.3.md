@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Borel | Borel 集 | Borel σ代数 | 博雷尔 | 博雷尔集 | 博雷尔 σ-代数 | 博雷尔代数 → def.borel
+
 - 基本类 | fundamental class → def.fundamental-class
 
 - 集合族的性质 → prop.set-class-properties
@@ -28,7 +30,5 @@
 - 半有限部分 → def.semifinite-part
 
 - 由预测度诱导外测度 → prop.outer-measure-induced
-
-- Carathéodory 定理 | Carathéodory 扩张 | 卡拉泰奥多里扩张 → thm.caratheodory
 
 > 续见 alias/aka/analysis.4.md

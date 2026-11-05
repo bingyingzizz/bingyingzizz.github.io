@@ -1,6 +1,12 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 积分的绝对连续性 → cor.ac-integral-continuity
+
+- RN 定理 | 拉东-尼科迪姆 | Radon-Nikodym theorem → thm.lebesgue-radon-nikodym
+
+- 链式法则 | RN 链式法则 | 拉东-尼科迪姆链式法则 | 拉东-尼科迪姆 → prop.rn-chain-rule
+
 - 覆盖引理 | covering lemma | Vitali 覆盖 → lem.covering
 
 - 可缩族 | shrinking | 缩族 → def.shrinks-nicely
@@ -20,13 +26,5 @@
 - Lebesgue 集 | Lebesgue point | 勒贝格点 → def.lebesgue-set
 
 - 极大定理 | maximal theorem | Hardy–Littlewood 极大不等式 → thm.maximal-theorem
-
-- Lebesgue 微分定理 | differentiation theorem | 勒贝格微分定理 → thm.lebesgue-differentiation
-
-- Lebesgue 集几乎处处 → thm.lebesgue-set-full
-
-- 可缩族的微分定理 → thm.differentiation-general
-
-- RN 导数的点态公式 → thm.rn-pointwise
 
 > 续见 alias/aka/analysis.10.md

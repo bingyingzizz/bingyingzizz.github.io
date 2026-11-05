@@ -13,6 +13,4 @@ $$[fX_{i},\,gX_{j}] = fg\,[X_{i},X_{j}] + f(X_{i}g)\,X_{j} - g(X_{j}f)\,X_{i},$$
 
 可积性是从秩 $2$ 才开始的问题 —— 这与「一个一阶常微分方程总有解、一阶偏微分方程组才有障碍」是同一句话。
 
-**为什么对合是「正确」的条件**：若有积分流形 $N$（`def.integral-manifold`），则「$X, Y$ 落在 $\mathcal{D}$ 里」等于「$X, Y$ 是 $N$ 上的向量场」，于是 $[X,Y]$ 必落在 $TN = \mathcal{D}$ 里 —— 对合是必要条件，而且它只用括号就能验。
-
 > 续见 notes/def.involutive-distribution.2.md

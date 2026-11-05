@@ -3,7 +3,7 @@
 layer 15 · 定义 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=def.partition)　·　[节点索引](../index.md)
 
-闭区间 $[a, b]$ 的一个**分割**是一组有限点
+设 $a < b$。闭区间 $[a, b]$ 的一个**分割**是一组有限点
 
 $$P = \{ a = x_0 < x_1 < \cdots < x_n = b \}$$
 
@@ -15,7 +15,8 @@ $$\|P\| := \max_{1 \le i \le n} \Delta x_i$$
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.riemann-sum`](../nodes/def.riemann-sum.md) Riemann 和 用
-- 被 [`def.darboux-sum`](../nodes/def.darboux-sum.md) 上和与下和 用
+
+- …另有出边，续页见 [nodes/def.partition.3.md](./def.partition.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.partition.2.md](./def.partition.2.md)

@@ -5,10 +5,6 @@
 
 所以这是良定义的配对 $H^{k}_{\mathrm{dR}} \otimes H^{\mathrm{sing}}_{k} \to \mathbb{R}$，等价地一个线性映射 $\Phi^{k} : H^{k}_{\mathrm{dR}} \to (H^{\mathrm{sing}}_{k})^{\ast} = H^{k}_{\mathrm{sing}}$。
 
-**第二步：把左边认成层上同调。** $\Omega^{\bullet}$ 是常层 $\underline{\mathbb{R}}$ 的消解：逐点的正合性就是 Poincaré 引理，逐点的核是 $\mathbb{R}$；
-
-而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（`thm.de-rham-h0` 的论证），即 $\underline{\mathbb{R}}$ 的截面。
-
-于是复形的上同调 $H^{\bullet}_{\mathrm{dR}}(M)$ 就是层上同调 $H^{\bullet}(M;\underline{\mathbb{R}})$。
+⚠️ **先得补一个前提**：$\int_{c}\omega$ 对**连续**奇异链按字面没定义（奇异 $k$-单形 $c:\Delta^{k}\to M$ 只连续，微分形式拉不回去）。正确做法是把链换成**光滑奇异链**（每个面 $C^{\infty}$、并能延拓到棱柱邻域），记复形 $C^{\infty}_{\ast}(M)$；光滑与连续奇异链的同调相同（单纯逼近 $+$ 光滑化），故不失一般性 —— ⚠️ 这个等价性本图**未证**（`e84.implication` 那条也只有骨架）。以下假定 $c$ 是光滑奇异链。
 
 > 续见 proofs/imp.mf2-de-rham.3.md

@@ -10,10 +10,10 @@ layer 20 · 定理 · 消解与维数 · 同调代数
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.resolution`](../nodes/def.resolution.md) 消解：用到了定义 消解　[proofs/def-link.comparison-res.md](../proofs/def-link.comparison-res.md)
 
-- …另有入边，续页见 [nodes/thm.comparison-theorem.3.md](./thm.comparison-theorem.3.md)
+- …另有入边，续页见 [nodes/thm.comparison-theorem.4.md](./thm.comparison-theorem.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.comparison-theorem.4.md](./thm.comparison-theorem.4.md)
+- …另有出边，续页见 [nodes/thm.comparison-theorem.5.md](./thm.comparison-theorem.5.md)
 
 refs: Rotman, An Introduction to Homological Algebra (2nd ed.), 关于消解（resolutions）的部分 · 比较定理（Comparison Theorem）；Weibel, An Introduction to Homological Algebra, 投射消解（projective resolutions）一节 · Comparison Theorem
 

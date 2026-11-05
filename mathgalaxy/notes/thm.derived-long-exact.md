@@ -13,3 +13,5 @@ $$\cdots \to H^{n}FK^{\bullet} \to H^{n}FL^{\bullet} \to H^{n}FM^{\bullet} \to H
 正是要的那条。∎
 
 ⭐ **这就是「求导」的全部收益**：原来 $F$ 只给半条，$RF$ 把连接同态 $\delta$ 补上，长正合列就活了。
+
+> 续见 notes/thm.derived-long-exact.2.md

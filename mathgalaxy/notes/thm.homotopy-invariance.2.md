@@ -1,7 +1,7 @@
 # 同伦不变性　`thm.homotopy-invariance`　·　说明
 根 `../`
 
-$$\partial P(\sigma) = g \circ \sigma - f \circ \sigma + P(\partial \sigma),$$
+$$\partial P(\sigma) = g \circ \sigma - f \circ \sigma - P(\partial \sigma),$$
 
 即 $\partial P + P\partial = g_{\#} - f_{\#}$。由 `def.chain-homotopy`，$f$ 与 $g$ 在同调上诱导同一同态。∎
 

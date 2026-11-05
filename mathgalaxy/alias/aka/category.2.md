@@ -5,7 +5,7 @@
 
 - 交换图 | commutative diagram | diagram | 图（函子） | 索引范畴 | 图范畴 | 常图函子 | 预序 | Definition 1.3.1 | Def 1.3.1 → def.commutative-diagram
 
-- 单纯对象 | simplicial object | 单纯形范畴 | 面映射 | 退化映射 | Definition 1.3.2 | Def 1.3.2 | Exercise 1.25 → def.simplicial
+- 单纯对象 | simplicial object | Definition 1.3.2 | Def 1.3.2 | Exercise 1.25 → def.simplicial
 
 - 锥 | cone | 余锥 | cocone | Definition 1.3.3 | Def 1.3.3 → def.cone
 

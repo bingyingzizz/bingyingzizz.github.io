@@ -15,7 +15,7 @@
 
 - 单调类定理 | monotone class theorem → thm.monotone-class
 
-- Borel | Borel 集 | Borel σ代数 → def.borel
+- Borel | Borel 集 | Borel σ代数 | 博雷尔 | 博雷尔集 | 博雷尔 σ-代数 | 博雷尔代数 → def.borel
 
 - 基本类 | fundamental class → def.fundamental-class
 
@@ -28,7 +28,5 @@
 - 预测度 | premeasure → def.premeasure
 
 - 有限可加 | finitely additive → def.finitely-additive
-
-- σ-有限 | sigma-finite | 有限测度 | 半有限 | 测度空间 → def.measure-space
 
 > 续见 alias/aka/analysis-measure.2.md

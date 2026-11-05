@@ -8,7 +8,7 @@ layer 32 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.lagrange-bracket.3.md](./def.lagrange-bracket.3.md)
+- …另有入边，续页见 [nodes/def.lagrange-bracket.4.md](./def.lagrange-bracket.4.md)
 
 refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Lagrange 括号；Landau–Lifshitz, Mechanics（⚠️ 章名未核实，只记书名）
 

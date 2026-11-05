@@ -1,6 +1,8 @@
 # Lagrange 子空间　`def.lagrangian-subspace`　·　说明
 根 `../`
 
+⚠️ 术语：「Lagrange 子空间」（线性）与「Lagrange 子流形」（`def.lagrangian-submanifold`，流形）是同一件事的两个尺度。中文也写「拉格朗日子空间 / 拉格朗日子流形」。
+
 **各方向用到的假设**（有限维非退化辛空间中的半维判据）：
 - (2) $\iff$ (3)：在 $\dim V=2n$ 下只是把「全迷向」展开为 $\omega|_{W\times W}=0$，没有额外代价。
 - (1) $\implies$ (2)：包含 $W\subseteq W^\perp$ 给出全迷向；非退化及有限维给出 $\dim W+\dim W^\perp=2n$，故维数为 $n$。

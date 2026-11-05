@@ -1,6 +1,8 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- 闭形式 → def.closed-form
+
 - 恰当形式 → def.exact-form
 
 - 辛流形 → def.symplectic-manifold

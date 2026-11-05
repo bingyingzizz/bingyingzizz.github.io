@@ -10,10 +10,10 @@ layer 21 · 定义 · 流形与向量丛 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep-tf-localt.md](../proofs/dep-tf-localt.md)
 
-- …另有入边，续页见 [nodes/def.transition-function.4.md](./def.transition-function.4.md)
+- …另有入边，续页见 [nodes/def.transition-function.5.md](./def.transition-function.5.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.transition-function.5.md](./def.transition-function.5.md)
+- …另有出边，续页见 [nodes/def.transition-function.6.md](./def.transition-function.6.md)
 
 refs: Milnor–Stasheff, Characteristic Classes · 转移函数；Tu, Differential Geometry
 

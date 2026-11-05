@@ -7,6 +7,6 @@
 - **正定**：$\langle v, v \rangle \ge 0$，且 $\langle v, v \rangle = 0 \iff v = 0$。
 
 配上内积的 $V$ 叫**内积空间**。实数情形下内积就是正定对称双线性型。
-标准例子：$K^{n}$ 上的内积 $\langle x, y \rangle := \sum_i \overline{x_i}\, y_i$。
+标准例子：$K^{n}$ 上的内积 $\langle x, y \rangle := \sum_i x_i\, \overline{y_i}$。
 
 > 续见 [nodes/def.inner-product.3.md](./def.inner-product.3.md)

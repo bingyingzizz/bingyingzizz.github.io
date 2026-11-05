@@ -1,6 +1,6 @@
 # Stone–Weierstrass 定理　`thm.stone-weierstrass`
 Stone–Weierstrass 定理（实情形）
-layer 14 · 定理 · $C(K)$ 与 Stone–Weierstrass · 泛函分析
+layer 14 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.stone-weierstrass)　·　[节点索引](../index.md)
 
 设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{R})$ 是**含单位**的**子代数**，且 $A$ **分离点**。则 $\overline A = C(K, \mathbb{R})$。

@@ -7,9 +7,9 @@ layer 16 · 定理 · 矩阵与行列式 · 抽象代数
 
 $$\det(AB) = \det A \cdot \det B, \qquad \det A^{\mathsf{T}} = \det A, \qquad \det(cA) = c^{n} \det A$$
 
-于是 $A$ 可逆时 $\det(A^{-1}) = (\det A)^{-1}$，并且
+于是 $A$ 可逆时 $\det(A^{-1}) = (\det A)^{-1}$；反过来 $A$ 可逆 $\iff \det A \ne 0$。
 
-$$\det A \ne 0$$
+（这一条与「$\det$ 是乘法同态」互为逆否：$\det A = 0$ $\iff$ $A$ 不可逆。）
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.det-multiplicative.2.md](./thm.det-multiplicative.2.md)

@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../number.md`
 
+- 阶整除 φ(n) | 阶整除群阶 → thm.order-divides-phi
+
+- 原根 | 本原根 → def.primitive-root
+
 - 模素数原根存在 | 单位群循环 → thm.primitive-root-exists
 
 - 离散对数 | 指标 → def.discrete-log

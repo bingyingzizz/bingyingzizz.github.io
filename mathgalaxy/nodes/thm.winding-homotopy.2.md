@@ -2,7 +2,8 @@
 [在星图里打开](../#n=thm.winding-homotopy)　·　第 1 页 [nodes/thm.winding-homotopy.md](./thm.winding-homotopy.md)
 
 ## 陈述（续）
- : [0,1]^{2} \to \mathbb{C}\setminus\{a\}$两端分别给出 $\gamma_{0}, \gamma_{1}$）。则
+ : [0,1]^{2} \to \mathbb{C}\setminus\{a\}$ 两端分别给出 $\gamma_{0}, \gamma_{1}$，且对
+每个 $s \in [0,1]$，$H(\cdot, s)$ 是闭曲线，即 $H(0, s) = H(1, s)$）。则
 $$n(\gamma_{0}, a) = n(\gamma_{1}, a).$$
 推论（Cauchy 定理的同伦形式）：$f$ 在区域 $\Omega$ 上全纯，$\gamma_{0}, \gam
 ma_{1}$ 在 $\Omega$ 内同伦，则 $\displaystyle\oint_{\gamma_{0}} f\,\mathrm{d}z = \oint_{\

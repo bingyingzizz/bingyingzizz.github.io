@@ -8,7 +8,8 @@
 2. $V$ 存在**辛基**，即存在基使 $\omega$ 的矩阵为 $J_
 {0}$；
 3. 因此任意两个同维数的辛空间都**等距同构**（保持 $\omega$ 的线性同构）。
-**与对称型的对照**：实对称型由惯性指数 $(p, q)$ 分类（`thm.sylvester-law-inertia`），有 $\frac{n
-(n+1)}{2}$ 种；辛形式只有**一个**不变量 —— 维数。
+**与对称型的对照**：实对称型由惯性指数 $(p, q)$ 分类（`thm.sylvester-law-inertia`），非退化情
+形按 $p + q = n$ 共 **$n+1$** 类（允许退化则是 $(n+1)(n+2)/2$ 类）；辛形式只有**一个**不变量 
+—— 维数。
 
 > 续见 [nodes/thm.symplectic-normal-form.3.md](./thm.symplectic-normal-form.3.md)

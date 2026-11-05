@@ -1,6 +1,30 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Cauchy–Schwarz 不等式 | 柯西-施瓦茨不等式 | 柯西-施瓦兹不等式 | 柯西-施瓦茨 → thm.cauchy-schwarz
+
+- n 次方根 → thm.nth-root
+
+- 连续函数的运算 → prop.continuous-arithmetic
+
+- 零点定理 → cor.zero-point
+
+- 反函数连续 → thm.monotone-inverse
+
+- Kummer 判别法 → thm.kummer
+
+- Dini 定理 | 迪尼定理 | 迪尼 → thm.dini
+
+- 有理指数与实数指数幂 → def.real-power
+
+- 夹逼定理 → thm.squeeze
+
+- 极限的基本性质 → prop.limit-basic
+
+- 绝对收敛 → def.absolute-convergence
+
+- 幂级数 → def.power-series
+
 - 对数函数与 e → def.log-function
 
 - 函数极限 → def.function-limit
@@ -20,33 +44,5 @@
 - 序与四则运算 → prop.order-rules
 
 - 二项式定理 → thm.binomial
-
-- Bernoulli 不等式 → thm.bernoulli
-
-- 一致连续 → def.uniform-continuity
-
-- 圆周率 π → def.pi
-
-- 绝对值的运算性质 → prop.abs-properties
-
-- 整数幂 → def.power
-
-- 高阶导数与 C^k → def.higher-derivative
-
-- 指数律与幂的单调性 → prop.power-rules
-
-- 单侧极限 → def.function-limit-onesided
-
-- 间断点分类 → prop.discontinuity-types
-
-- 环与域的基本等式 → prop.field-rules
-
-- Cauchy 列 → def.cauchy-sequence
-
-- 上极限与下极限 → def.limsup-liminf
-
-- 聚点 → def.limit-point
-
-- 凸函数 → def.convex-function
 
 > 续见 alias/aka/analysis.17.md

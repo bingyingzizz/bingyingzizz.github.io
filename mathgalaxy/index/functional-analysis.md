@@ -5,5 +5,5 @@
 
 - fa.norm　赋范空间与有界算子 / Normed Spaces and Bounded Operators　中心天体 def.norm　18 点
 - fa.hilbert　Hilbert 空间 / Hilbert Spaces　中心天体 def.hilbert-space　12 点
-- fa.ck　$C(K)$ 与 Stone–Weierstrass / $C(K)$ and Stone–Weierstrass　中心天体 thm.stone-weierstrass　10 点
+- fa.ck　C(K) 与 Stone–Weierstrass / C(K) and Stone–Weierstrass　中心天体 thm.stone-weierstrass　10 点
 - fa.baire　Baire 纲与三大定理 / Baire Category and the Three Big Theorems　中心天体 thm.baire　14 点

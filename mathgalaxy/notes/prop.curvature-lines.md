@@ -11,6 +11,6 @@
 
 **曲率线的微分方程**：曲线 $(u(t), v(t))$ 的切方向是主方向，当且仅当
 
-$$\begin{vmatrix} (\mathrm{d}u^{1})^{2} & -\mathrm{d}u^{1}\mathrm{d}u^{2} & (\mathrm{d}u^{2})^{2} \\ E & F & G \\ L & M & N \end{vmatrix} = 0 .$$
+$$(EM-FL)\,\mathrm{d}u^{2}+(EN-GL)\,\mathrm{d}u\,\mathrm{d}v+(FN-GM)\,\mathrm{d}v^{2} = 0 .$$
 
-> 续见 notes/prop.curvature-lines.2.md
+⭐ **它的用处**：只要 $F = M = 0$，所有公式都塌成对角形（$k_{1} = L/E$、$k_{2} = N/G$，Euler 公式里的 $\theta$ 就是坐标方向的夹角）—— 所以传统路线先找曲率线网再算。本包不需要：标架一取就是正交的。

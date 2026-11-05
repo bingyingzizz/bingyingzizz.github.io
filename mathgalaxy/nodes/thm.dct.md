@@ -3,7 +3,7 @@
 layer 22 · 定理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=thm.dct)　·　[节点索引](../index.md)
 
-设 $\{f_n\} \subseteq L^1$，$f_n \to f$ a.e.，且存在**控制函数** $g \in L^1$ 使
+设 $\{f_n\} \subseteq L^1$，$f$ **可测**，$f_n \to f$ a.e.，且存在**控制函数** $g \in L^1$ 使
 
 $$|f_n| \le g\quad  \text{a.e.}\quad  \forall n$$
 

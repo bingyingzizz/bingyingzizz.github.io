@@ -17,7 +17,7 @@
 
 - 三角不等式 | triangle inequality → thm.triangle
 
-- Cauchy 列 | 柯西列 | 零列 | Cauchy sequences and null sequences → def.cauchy-null
+- 柯西列 | 零列 | Cauchy sequences and null sequences → def.cauchy-null
 
 - 实数 | real numbers | ℝ | 实数系 | 实数构造 → def.real
 

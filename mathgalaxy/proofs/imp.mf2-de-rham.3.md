@@ -3,14 +3,10 @@
 
 `def.de-rham-complex` de Rham 上同调 + `def.singular-chain` 奇异链 + `def.integral-on-chain` 链上的积分 → `thm.de-rham` de Rham 定理
 
-**第三步：Čech–de Rham 双复形。** 取「好的覆盖」$\mathfrak{U}$（每点邻域与每个有限交都可缩），把 $\check{C}^{p}(\mathfrak{U},\Omega^{q})$ 排成双复形：横向是 Čech 微分 $\delta$、纵向是 $\mathrm{d}$。
+**第二步：把左边认成层上同调。** $\Omega^{\bullet}$ 是常层 $\underline{\mathbb{R}}$ 的消解：逐点的正合性就是 Poincaré 引理，逐点的核是 $\mathbb{R}$；
 
-两条谱序列算出同一个全上同调：
+而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（`thm.de-rham-h0` 的论证），即 $\underline{\mathbb{R}}$ 的截面。
 
-- 沿 $q$ 先算：每行是 $\Omega^{\bullet}$ 在可缩开集上的截面，由 Poincaré 引理正合，得 $\check{H}^{\bullet}(\mathfrak{U};\underline{\mathbb{R}})$；
-
-- 沿 $p$ 先算：Čech 方向正合（层条件），得 $H^{\bullet}_{\mathrm{dR}}(M)$。
-
-两者收敛到同一极限，故 $H^{\bullet}_{\mathrm{dR}}(M) \cong \check{H}^{\bullet}(M;\underline{\mathbb{R}})$。
+于是复形的上同调 $H^{\bullet}_{\mathrm{dR}}(M)$ 就是层上同调 $H^{\bullet}(M;\underline{\mathbb{R}})$。
 
 > 续见 proofs/imp.mf2-de-rham.4.md

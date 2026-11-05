@@ -2,7 +2,6 @@
 [在星图里打开](../#n=def.ae)　·　第 1 页 [nodes/def.ae.md](./def.ae.md)　·　上一页 [nodes/def.ae.2.md](./def.ae.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`cor.mct-ae`](../nodes/cor.mct-ae.md) 单调收敛定理（几乎处处版本） 用
 - 被 [`prop.integral-zero-iff`](../nodes/prop.integral-zero-iff.md) 积分为零 ⟺ 几乎处处为零 用
 - 被 [`prop.complete-measurable`](../nodes/prop.complete-measurable.md) 完备性 ⟺ 不破坏可测性 用
 - 被 [`prop.completion-measurable-function`](../nodes/prop.completion-measurable-function.md) 完备化后可改在零集上 用

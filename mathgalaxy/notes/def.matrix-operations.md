@@ -9,4 +9,4 @@
 
 例 $A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$、$B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ 给 $AB = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \ne BA$。
 
-⚠ $AB = 0$ 不必有 $A = 0$ 或 $B = 0$ —— 这就是「$M_n(K)$ 是环但不是整环」的意思，也解释了行列式为什么必要（det 把这件事管住了）。
+⚠ $AB = 0$ 不必有 $A = 0$ 或 $B = 0$ —— 这就是「**$n \ge 2$ 时** $M_n(K)$ 是环但不是整环」的意思（$n = 1$ 时 $M_1(K) \cong K$ 是域，当然是整环；反例用 $E_{12}^{2} = 0$），也解释了行列式为什么必要（det 把这件事管住了）。

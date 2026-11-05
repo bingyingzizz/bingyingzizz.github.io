@@ -1,6 +1,14 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 反例 | 收敛的反例 | 标准反例 → prop.convergence-counterexamples
+
+- L1 收敛推出依测度 → prop.L1-implies-measure
+
+- Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
+
+- Lusin | 卢津 → cor.lusin
+
 - L+ | L⁺ | 非负可测函数 | 非负函数空间 → def.lplus
 
 - 简单函数的积分 | 简单积分 → def.integral-simple
@@ -22,13 +30,5 @@
 - 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
 
 - Fatou | Fatou's lemma | 法图引理 | 法都引理 → lem.fatou
-
-- 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
-
-- Fatou 推论 → cor.fatou
-
-- L1 是向量空间 → prop.L1-vector-space
-
-- 积分绝对值不等式 → prop.integral-abs-ineq
 
 > 续见 alias/aka/analysis-measure.5.md

@@ -3,7 +3,9 @@
 layer 22 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.slice-shriek-projection)　·　[节点索引](../index.md)
 
-设 $\mathcal{T}$ 是拓扑斯、$X \in \mathcal{T}$、$M, N$ 是阿贝尔群层。则
+设 $\mathcal{T}$ 是拓扑斯、$X \in \mathcal{T}$。则对 $M \in \mathrm{Ab}(\mathcal{T}/X)$、$N \in \mathrm{Ab}(\mathcal{T})$ 有
+
+$$j_{X!}\bigl(M \otimes_{\mathbb{Z}} j_{X}^{-1}N\bigr) = j_{X!}M \otimes_{\mathbb{Z}} N,$$
 > 陈述续见 [nodes/prop.slice-shriek-projection.2.md](./prop.slice-shriek-projection.2.md)
 
 

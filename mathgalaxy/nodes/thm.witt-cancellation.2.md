@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.witt-cancellation)　·　第 1 页 [nodes/thm.witt-cancellation.md](./thm.witt-cancellation.md)
 
 ## 陈述（续）
-设 $\beta$ 是域 $K$（$\operatorname{char} K \ne 2$）上向量空间 $V$ 上的**非退化**对称双线性型，$U, W \subseteq V$ 是**非退化**子空间。若存在等距（保持 $\beta$ 的线性同构）
+设 $V$ 是**有限维**向量空间，$\beta$ 是域 $K$（$\operatorname{char} K \ne 2$）上的**非退化**对称双线性型，$U, W \subseteq V$ 是**非退化**子空间。若存在等距（保持 $\beta$ 的线性同构）
 
 $$U \perp W \ \cong\ U' \perp W ,$$
 则 $U \cong U'$（作为带型的空间）。

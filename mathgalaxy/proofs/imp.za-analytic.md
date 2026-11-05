@@ -6,7 +6,7 @@
 设 $A = \mathbb{Z}[T]$，$A_\infty = \mathbb{Z}((T^{-1}))$。
 
 **① $A_\infty$ 紧。** 有短正合列
-$$0 \to \mathbb{Z}[[U]] \otimes A \xrightarrow{U \mapsto T^{-1}} \mathbb{Z}[[U]] \otimes A \to A_\infty \to 0,$$
+$$0 \to \mathbb{Z}[[U]] \otimes A \xrightarrow{1 - \mathrm{shift}\otimes T} \mathbb{Z}[[U]] \otimes A \to A_\infty \to 0,$$
 前两项在 $\operatorname{Mod}^{cond}_{(A,\mathbb{Z})^{\blacksquare}}$ 中紧投射（它们是 $\prod_I \mathbb{Z} \otimes A$ 的形状），故 $A_\infty$ 紧。
 
 **② $A_\infty$ 幂等。** 由 ① 的表现直接算 $A_\infty \otimes^L A_\infty \cong A_\infty$。

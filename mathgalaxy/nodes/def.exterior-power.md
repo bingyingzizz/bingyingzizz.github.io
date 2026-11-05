@@ -10,14 +10,14 @@ $$v_1 \otimes \cdots \otimes v_k \quad \text{with}\ v_i = v_j\ (i \ne j)$$
 张成的子空间所得的商空间；记像为 $v_1 \wedge \cdots \wedge v_k$。于是
 
 $$v \wedge v = 0, \qquad v \wedge w = -\, w \wedge v$$
+> 陈述续见 [nodes/def.exterior-power.2.md](./def.exterior-power.2.md)
 
-并且 $\dim \bigwedge^{k} V = \binom{n}{k}$（$n = \dim V$）；$k > n$ 时 $\bigwedge^{k}V = 0$。
-
-## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.exterior-power.2.md](./def.exterior-power.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.exterior-power.3.md](./def.exterior-power.3.md)
+- ⇒ [`thm.det-as-exterior`](../nodes/thm.det-as-exterior.md) 行列式 = 最高外幂上的作用
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.exterior-power.3.md](./def.exterior-power.3.md)
 
 refs: Lang, Algebra, Ch. XIX；Roman, Advanced Linear Algebra, Ch. 14
 

@@ -9,4 +9,4 @@
 
 而 $V \cong V^{\ast\ast}$ 有自然同构 $v \mapsto (\varphi \mapsto \varphi(v))$，这是「对偶的对偶回到自己」。
 
-⚠ 无限维时 $V^{\ast}$ 严格大于 $V$（$\dim V^{\ast} = |K|^{\dim V}$），所以上述同构不成立。
+⚠ 无限维时 $V^{\ast}$ 严格大于 $V$：$\dim V^{\ast} = |K|^{\dim V}$ 是 **Erdős–Kaplansky** 的基数定理（依赖 AC；$|V^{\ast}| = |K|^{\dim V}$ 是初等的，但「维数等于这个基数」不是），所以上述同构不成立。

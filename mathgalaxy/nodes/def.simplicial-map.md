@@ -12,7 +12,7 @@ $$\sigma \in K \ \implies \ f(\sigma) \in L.$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.simplicial-map.3.md](./def.simplicial-map.3.md)
+- …另有入边，续页见 [nodes/def.simplicial-map.4.md](./def.simplicial-map.4.md)
 
 refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Simplicial maps；Hatcher, Algebraic Topology, Ch. 2 §2.1 · simplicial maps and induced homomorphisms
 

@@ -9,6 +9,4 @@
 
 所以缩并是取迹的推广，`def.trace` 里那条「$\operatorname{tr}(AB) = \operatorname{tr}(BA)$」在这里读作「缩并的次序可以调换」。
 
-**例子**：曲率张量是 $(1,3)$ 型的，缩并一次（上标与第二个下标）得 Ricci 张量（`def.ricci-curvature`），再缩并一次得标量曲率。Einstein 张量是 Ricci 张量与 $g$ 的组合 —— 所以「曲率的三个层次」就是「缩并 $0/1/2$ 次」。
-
 > 续见 notes/def.tensor-contraction.2.md

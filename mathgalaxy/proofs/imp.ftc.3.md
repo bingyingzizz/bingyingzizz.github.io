@@ -3,6 +3,10 @@
 
 `lem.ac-subset-bv` 绝对连续蕴含有界变差 + `prop.ac-iff-measure-ac` 函数绝对连续 ⟺ 测度绝对连续 + `prop.nbv-derivative` 规范有界变差函数的导数与测度的关系 → `thm.ftc-lebesgue` 微积分基本定理（Lebesgue 版）
 
+再由 (b) 的构造（$\mu _G \ll m$ 且密度为 $F' - F' = 0$）得 $G \equiv$ **常数**（其值为 $G(a) = F(a)$，不是 $0$）。
+
+于是 $F(x) = F(a) + \int_a^x F^{\prime}$ 是绝对连续的。
+
 ∎
 
 $>$ ⭐ 最容易错的直觉是「a.e. 可导 $F' \in L^{1}$ 就够」——**Cantor 函数**正是反例：它 a.e. 可导、$F' \equiv 0 \in L^{1}$，但 $\int _{0}^{1} F' = 0 \ne 1$。**绝对连续这一条不能省。**

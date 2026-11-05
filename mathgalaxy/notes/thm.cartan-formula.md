@@ -7,6 +7,4 @@
 
 差别在于 $\mathcal{L}_{X}$ 不必是 $\operatorname{id}$：给定 $\mathcal{L}_{X}$ 后想解 $\iota_{X}\omega = \eta$，就是一个「同伦方程」。
 
-**为什么物理里爱用它**：$\mathcal{L}_{X}$ 是沿流的变化率，$\mathrm{d}\iota_{X}$ 与 $\iota_{X}\mathrm{d}$ 分掉了「恰当部分」与「闭部分」。像「场的对称性」这类陈述（$\mathcal{L}_{X}F = 0$）以及规范变换的存在性，都从这条公式出发。
-
 > 续见 notes/thm.cartan-formula.2.md

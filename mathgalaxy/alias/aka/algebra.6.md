@@ -1,6 +1,20 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 核与像 → def.kernel-image-vs
+
+- 相似 → def.similarity
+
+- 外代数 → def.exterior-algebra
+
+- 环与域的基本等式 → prop.field-rules
+
+- 子空间 → def.subspace
+
+- 坐标 → def.coordinate
+
+- 线性映射 | 恒等映射 | 恒等线性映射 → def.linear-map
+
 - 线性同构 → def.linear-isomorphism
 
 - 商空间 → def.quotient-vs
@@ -34,15 +48,5 @@
 - 不可约多项式 → def.irreducible-poly
 
 - 不变子空间 → def.invariant-subspace
-
-- 特征值与特征向量 | 几何重数 | 特征值 → def.eigenvalue
-
-- 内积 | ⟨u,v⟩ | 内积 ⟨,⟩ → def.inner-product
-
-- 正交 → def.orthogonality
-
-- 正交补 → def.orthogonal-complement
-
-- 伴随算子 → def.operator-adjoint
 
 > 续见 alias/aka/algebra.7.md

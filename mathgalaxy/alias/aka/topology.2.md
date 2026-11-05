@@ -3,7 +3,7 @@
 
 - 连续 | continuous | 连续函数 | 连续 ε-δ | ε-δ → def.continuous
 
-- Borel | Borel 集 | Borel σ代数 → def.borel
+- Borel | Borel 集 | Borel σ代数 | 博雷尔 | 博雷尔集 | 博雷尔 σ-代数 | 博雷尔代数 → def.borel
 
 - 连续可测 | 连续推出可测 → cor.continuous-measurable
 
@@ -22,7 +22,5 @@
 - 闭开集 | clopen | 既开又闭 | Definition 2.2.5 | Def 2.2.5 → def.clopen
 
 - 闭映射的邻域基 | Exercise 8.6 → prop.closed-map-neighborhood-basis
-
-- 仿紧与单位分解 | 正规与单位分解 | Exercise 8.7 → prop.paracompact-partition-unity
 
 > 续见 alias/aka/topology.3.md

@@ -2,9 +2,8 @@
 [在星图里打开](../#n=thm.gauss-bonnet)　·　第 1 页 [nodes/thm.gauss-bonnet.md](./thm.gauss-bonnet.md)　·　上一页 [nodes/thm.gauss-bonnet.5.md](./thm.gauss-bonnet.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.area-element`](../nodes/def.area-element.md) 面积元：用到了定义 面积元　[proofs/dep.tu-area-bonnet.md](../proofs/dep.tu-area-bonnet.md)
-- [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面：用到了定义 R³ 中的可定向曲面　[proofs/dep.tu-orient-bonnet.md](../proofs/dep.tu-orient-bonnet.md)
-- [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数：用到了定义 Euler 示性数　[proofs/dep.gaussbonnet-eulerchar.md](../proofs/dep.gaussbonnet-eulerchar.md)
-- [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理：分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起　[proofs/e176.analogy.md](../proofs/e176.analogy.md)
+- [`thm.liouville-formula`](../nodes/thm.liouville-formula.md) Liouville 公式 + [`def.geodesic-curvature`](../nodes/def.geodesic-curvature.md) 测地曲率 + [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：imp.gauss-bonnet　[proofs/imp.gauss-bonnet.md](../proofs/imp.gauss-bonnet.md)
+- [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：用到了定义 Gauss 曲率　[proofs/dep.gauss-bonnet.md](../proofs/dep.gauss-bonnet.md)
+- [`def.geodesic-curvature`](../nodes/def.geodesic-curvature.md) 测地曲率：用到了定义 测地曲率　[proofs/dep.gcurv-bonnet.md](../proofs/dep.gcurv-bonnet.md)
 
 > 续见 [nodes/thm.gauss-bonnet.7.md](./thm.gauss-bonnet.7.md)

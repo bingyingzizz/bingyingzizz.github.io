@@ -13,13 +13,13 @@
 
 - 陈类 | 陈氏类 | Chern class | 总陈类 → def.chern-class
 
-- 特征类 | 示性类 | characteristic class | Stiefel–Whitney 类 | 陈类 → def.characteristic-class
+- 特征类 | 示性类 | characteristic class → def.characteristic-class
 
 - 余切向量 | covector → def.cotangent-bundle
 
 - de Rham 定理 → thm.de-rham
 
-- Frobenius 定理 → thm.frobenius
+- Frobenius 定理 | 弗罗贝尼乌斯定理 | 弗罗贝尼乌斯 → thm.frobenius
 
 - Maurer–Cartan 方程 → thm.maurer-cartan
 
@@ -29,10 +29,8 @@
 
 - 流完备性 → thm.flow-complete
 
-- Cartan 公式 → thm.cartan-formula
+- Cartan 公式 | 嘉当公式 | 嘉当 → thm.cartan-formula
 
 - 诱导体积 → def.submanifold-volume
-
-- Lie 第三定理 → thm.lie-third
 
 > 续见 alias/aka/diffgeom.2.md

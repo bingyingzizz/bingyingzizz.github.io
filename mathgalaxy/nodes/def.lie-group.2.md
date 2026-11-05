@@ -14,8 +14,5 @@ $$L_{g} : G \to G,\quad L_{g}(h) := gh ;\qquad R_{g} : G \to G,\quad R_{g}(h) :=
 $\operatorname{SL}(n,\mathbb{R})$、$\operatorname{O}(n)$、$\operatorname{SO}(n)$、$\operatorname{U}(n)$（由方程切出来，见 `thm.regular-level-set`）；
 
 $(\mathbb{R}^{n},+)$；
-$S^{1} \subseteq \mathbb{C}^{\times}$；
-
-任意离散群（$0$ 维）。
 
 > 续见 [nodes/def.lie-group.3.md](./def.lie-group.3.md)

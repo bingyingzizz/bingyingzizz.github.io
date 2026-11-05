@@ -7,7 +7,7 @@
 
 - Exercise 7.59 → prop.cohomology-slice-identification
 
-- Exercise 7.60 | Exercise 3.66 | 内 Hom → prop.internal-hom-slice-value
+- Exercise 7.60 | Exercise 3.66 → prop.internal-hom-slice-value
 
 - Exercise 7.61 → prop.slice-shriek-projection
 

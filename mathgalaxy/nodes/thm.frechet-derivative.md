@@ -8,7 +8,7 @@ layer 29 · 定义 · 赋范空间与有界算子 · 泛函分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.frechet-derivative.3.md](./thm.frechet-derivative.3.md)
+- …另有入边，续页见 [nodes/thm.frechet-derivative.4.md](./thm.frechet-derivative.4.md)
 
 refs: Rudin, Functional Analysis · Fréchet 导数；Brezis, Functional Analysis, Sobolev Spaces and PDE · 微分
 

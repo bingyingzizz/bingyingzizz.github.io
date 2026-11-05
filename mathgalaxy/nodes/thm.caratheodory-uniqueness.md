@@ -3,9 +3,7 @@
 layer 19 · 定理 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=thm.caratheodory-uniqueness)　·　[节点索引](../index.md)
 
-设 $\mu _{0}$ 是代数 $\mathfrak{A}$ 上的预测度，$\mu := \mu^{*}|_\mathcal{M}$ 是它经 Carathéodory 得到的扩张。若 $\nu$ 是 $\mathcal{M}(\mathfrak{A})$ 上**另一个**扩张 $\mu _{0}$ 的测度，则
-
-$$\nu(E) \le \mu(E)\quad  \forall E \in \mathcal{M}(\mathfrak{A})$$
+设 $\mu _{0}$ 是**环** $\mathfrak{A}$ 上的预测度（Carathéodory 唯一性对环已成立；$\mathfrak{A}$ 是代数时是特例），$\mu := \mu^{*}|_\mathcal{M}$ 是它经 Carathéodory 得到的扩张。若 $\nu$ 是 $\mathcal{M}(\mathfrak{A})$ 上**另一个**扩张 $\mu _{0}$ 的测度，则
 > 陈述续见 [nodes/thm.caratheodory-uniqueness.2.md](./thm.caratheodory-uniqueness.2.md)
 
 

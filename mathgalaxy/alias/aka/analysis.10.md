@@ -1,6 +1,14 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- Lebesgue 微分定理 | differentiation theorem | 勒贝格微分定理 → thm.lebesgue-differentiation
+
+- Lebesgue 集几乎处处 → thm.lebesgue-set-full
+
+- 可缩族的微分定理 → thm.differentiation-general
+
+- RN 导数的点态公式 → thm.rn-pointwise
+
 - 绝对连续函数 | absolutely continuous function | AC 函数 → def.ac-function
 
 - 有界变差 | bounded variation | BV | 变差 → def.bounded-variation
@@ -24,11 +32,5 @@
 - BV 函数的正则性 → prop.bv-regularity
 
 - 测度与 NBV 一一对应 → thm.borel-measure-nbv
-
-- NBV 的导数与测度 | derivative of an NBV function and its measure → prop.nbv-derivative
-
-- 积出来的函数是 AC → cor.integral-is-ac-nbv
-
-- 函数绝对连续等价于测度绝对连续 → prop.ac-iff-measure-ac
 
 > 续见 alias/aka/analysis.11.md

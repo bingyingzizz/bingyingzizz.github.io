@@ -7,7 +7,7 @@
 
 - 谱定理（实对称） → thm.spectral-theorem
 
-- Sylvester 判据 → thm.sylvester-criterion
+- Sylvester 判据 | 西尔维斯特判据 | 西尔维斯特 → thm.sylvester-criterion
 
 - 谱定理（复正规） → cor.spectral-normal
 
@@ -33,10 +33,6 @@
 
 - 线性映射 ⟷ 矩阵 → thm.matrix-linear-map
 
-- Cayley–Hamilton 定理 → thm.cayley-hamilton
-
-- Cauchy–Schwarz 不等式 → thm.cauchy-schwarz
-
-- 张量积的万有性质 → thm.tensor-universal-property
+- Cayley–Hamilton 定理 | 凯莱-哈密顿定理 | 哈密顿-凯莱定理 → thm.cayley-hamilton
 
 > 续见 alias/aka/algebra.4.md

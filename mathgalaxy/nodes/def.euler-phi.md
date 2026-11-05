@@ -7,7 +7,7 @@ layer 14 · 定义 · 整除与同余 · 数论
 
 $$\varphi(n) = \#\{\, 1 \le a \le n : \gcd(a, n) = 1 \,\} .$$
 
-若 $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$，则
+若 $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$（$p_{i}$ **两两不同**；$n = 1$ 取空积），则
 
 $$\varphi(n) = n \prod_{i=1}^{r} \left( 1 - \frac{1}{p_{i}} \right).$$
 

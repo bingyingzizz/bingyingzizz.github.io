@@ -3,7 +3,7 @@
 layer 16 · 定理 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=thm.tensor-universal-property)　·　[节点索引](../index.md)
 
-对每个线性映射（更一般地：双线性映射）$B : V \times W \to U$，存在**唯一**的线性映射
+对每个**双线性映射** $B : V \times W \to U$（积空间上的线性映射未必双线性，如 $B(v,w) = v$），存在**唯一**的线性映射
 
 $$\widetilde{B} : V \otimes W \to U, \qquad \widetilde{B}(v \otimes w) = B(v, w)$$
 

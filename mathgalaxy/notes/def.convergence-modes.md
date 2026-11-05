@@ -17,4 +17,4 @@ $$L^1 \implies\text{ 依测度}$$
 
 ⚠ **a.e. 收敛与依测度收敛互不包含**：$\text{a.e.} \implies$ 依测度在**有限测度**空间上成立（Egorov 的推论），反过来依测度 $\nRightarrow$ a.e.（见反例 iv）。
 
-⚠ $L^{1}$ 收敛 $\nRightarrow$ a.e. 收敛，a.e. 收敛 + 控制函数 $\implies L^{1}$ 收敛（这就是 DCT）。
+⚠ $L^{1}$ 收敛 $\nRightarrow$ a.e. 收敛，a.e. 收敛 + 存在**可积**控制函数 $g \in L^{1}$（$|f_n| \le g$ a.e.）$\implies L^{1}$ 收敛（这就是 DCT；只有「有界」不够：$\mathbb{R}$ 上 $f_n \equiv 1/n$、$g \equiv 1$ 时 $f_n \to 0$ 处处，但 $\int|f_n| = \infty$）。

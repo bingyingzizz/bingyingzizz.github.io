@@ -5,4 +5,4 @@
 
 典型用法：$\mathbb{R}$ 上取 $\mathcal{E} =$ 半开区间 { (a, b] }（它生成 $\mathfrak{B}_\mathbb{R}$），于是 $\mathfrak{B}_\mathbb{R} \otimes \mathfrak{B}_\mathbb{R}$ 已经由形如 $(a, b] \times (c, d]$ 的矩形生成 —— 这正是后面 Fubini 定理要用的事实。
 
-证明是「生成」的通用套路：两边都等于「包含 $\mathcal{F}$ 的最小 $\sigma$代数」，各自验证 $\mathcal{F} \subseteq$ 一边、另一边 $\subseteq \mathcal{F}$。
+证明是「生成」的通用套路：两边都等于「包含 $\mathcal{F}$ 的最小 $\sigma$ 代数」，验证只需**一个**方向 —— $\mathcal{F} \subseteq$ 积 $\sigma$ 代数，且每个 $\{E : \pi_\alpha^{-1}(E) \in \sigma(\mathcal{F})\}$ 是含 $\mathcal{E}_\alpha$ 的 $\sigma$ 代数，故含 $\mathcal{M}_\alpha$，由此积 $\sigma$ 代数 $\subseteq \sigma(\mathcal{F})$。（⚠️ 反向的 $\sigma(\mathcal{F}) \subseteq \mathcal{F}$ 是**假**的，别那样写。）

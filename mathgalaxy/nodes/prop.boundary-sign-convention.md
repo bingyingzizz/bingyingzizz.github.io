@@ -11,7 +11,7 @@ layer 30 · 命题 · 微分形式、积分与 de Rham · 微分几何
 - ⇒ [`thm.divergence-theorem`](../nodes/thm.divergence-theorem.md) 散度定理
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.boundary-sign-convention.3.md](./prop.boundary-sign-convention.3.md)
+- …另有入边，续页见 [nodes/prop.boundary-sign-convention.4.md](./prop.boundary-sign-convention.4.md)
 
 refs: Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 方块的边界与定向；Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· 边界的诱导定向
 

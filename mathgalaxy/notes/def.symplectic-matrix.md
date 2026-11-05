@@ -11,4 +11,4 @@
 
 ⚠️ **$\mathrm{Sp}(2n)$ 与紧群不同**：$O(n)$、$U(n)$ 都是紧群，而 $\mathrm{Sp}(2n,\mathbb{R})$ 非紧（它含有 $\begin{pmatrix} P & 0 \\ 0 & (P^{T})^{-1}\end{pmatrix}$ 这样任意拉伸的元）—— 这与「辛几何没有局部不变量（`thm.symplectic-normal-form`）」是同一件事的两面。
 
-⚠️ 命名撞车：物理文献里「辛矩阵」有时指 $\mathrm{Sp}(2)$（单模矩阵），那是**模形式**的对象，不是这里的 $2n$ 维辛群。
+> 续见 notes/def.symplectic-matrix.2.md

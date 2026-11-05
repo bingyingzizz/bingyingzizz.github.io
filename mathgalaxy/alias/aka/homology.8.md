@@ -11,7 +11,7 @@
 
 - 复形范畴是加法范畴 | 逐项计算 | Exercise 7.1 | Exercise 7.7 → prop.complex-additive
 
-- 同伦 | homotopy | 零伦 | null-homotopic | 链同伦 | Exercise 7.4 | Exercise 7.5 | Definition 7.1.2 | Def 7.1.2 → def.homotopy
+- 同伦 | homotopy | 零伦 | null-homotopic | Exercise 7.4 | Exercise 7.5 | Definition 7.1.2 | Def 7.1.2 → def.homotopy
 
 - 同伦范畴 | homotopy category | K(C) | 同伦等价 | Definition 7.1.3 | Def 7.1.3 → def.homotopy-category
 

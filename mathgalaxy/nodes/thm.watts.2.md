@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.watts)　·　第 1 页 [nodes/thm.watts.md](./thm.watts.md)
 
 ## 陈述（续）
-）。
+合、保直和，却不 $R$-线性，结论也不成立），且 $F$ 与**任意直和**交换（$F\bigl(\bigoplus_{i} M_{i}\bigr) \cong \bigoplus_{i} F(M_{i})$，自然）。
 则存在自然同构
 
 $$F(M) \;\cong\; M \otimes_{R} F(R) ,$$
