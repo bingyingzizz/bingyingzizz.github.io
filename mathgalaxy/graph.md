@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-07T12:20:52.712Z
-> 15 星系 / 105 星团 / 1550 节点 / 3192 连线（强边 3150，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-07T13:39:14.350Z
+> 15 星系 / 105 星团 / 1551 节点 / 3194 连线（强边 3152，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.9 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -5399,9 +5399,9 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 
 **第 (1) 步（引用，未证）。** Radó 定理：紧曲面存在有限三角剖分。`thm.rado` 仍是 skeleton，本图没有它的证明；这里只把它当输入，并明确它没有把「任意两个剖分组合等价」一起给出——后者正是第 (2) 步要做的事。
 
-**第 (2) 步：精确陈述（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\ge 0$）或 $c_{1}c_{1}\cdots c_{k}c_{k}$（不可定向，$k\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心，本图没有证明它。**
+**第 (2) 步：陈述与未完成核查（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\ge 0$）或 $c_{1}c_{1}\cdots c_{k}c_{k}$（不可定向，$k\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心，本图没有证明它。**
 
-**对第 (2) 步的三项核查（都不完整，这正是缺口）。** - **$2$–$2$ 翻边**：本图只写「一条边两侧的两个三角形换成另两个三角形，顶点集不变」。这只在两张三角形沿一条边粘成一个四边形、且四个顶点互不相同时成立；若两张三角形还共用另一个顶点（四边形退化）、或第四顶点与第一顶点重合（结果是两个三角形而非四边形），必须先单独讨论。本图没有这些前提与退化情形。 - **切-粘**：本图只说「沿闭曲线剪开再粘回」。要在三角剖分内部做，闭曲线须先变成单纯闭曲线（加细 $+$ 一般位置，正规同位），剪开后要说明得到的是新的三角剖分、粘回保持同胚型；这两步本图都没写。 - **终止性**：本图原句「配对边数严格下降」**不成立**：$2$–$2$ 翻边不改边数，切-粘可能增加边数。真正需要的是一个良序测度（例如按多边形边数归纳，Munkres 的证明分有限种情形；或用「边数 $+$ 顶点数」的字典序），并逐操作验证它下降。本图没给测度，也没验证。 - **另缺一整步**：把剖分化成「一个多边形」之前要先做顶点归约（所有顶点并成一个），本图的操作清单没有这一条，而它正是退化情形最多的一步。
+**对第 (2) 步的三项核查（都不完整，这正是缺口）。** - **$2$–$2$ 翻边**：本图只写「一条边两侧的两个三角形换成另两个三角形，顶点集不变」。这只在两张三角形沿一条边粘成一个四边形、且四个顶点互不相同时成立；若两张三角形还共用另一个顶点（四边形退化）、或第四顶点与第一顶点重合（结果是两个三角形而非四边形），必须先单独讨论。本图没有这些前提与退化情形。 - **切-粘**：本图只说「沿闭曲线剪开再粘回」。要在三角剖分内部做，闭曲线须先变成单纯闭曲线（加细 $+$ 一般位置，正规同位），剪开后要说明得到的是新的三角剖分、粘回保持同胚型；这两步本图都没写。 - **终止性**：本图原句「配对边数严格下降」**不成立**：$2$–$2$ 翻边不改边数，切-粘可能增加边数。真正需要的是一个良序测度（例如按多边形边数归纳，Munkres 的证明分有限种情形；或用「边数 $+$ 顶点数」的字典序），并逐操作验证它下降。本图没给测度，也没验证。 - **顶点归约没写构造**：把剖分化成「一个多边形」之前要先把所有顶点并成一个（操作清单里的 (iv)）；这一步本图只列了名字、没写构造，而它正是退化情形最多的一步。
 
 **第 (3) 步（完整）。** 标准形 $4g$ 边形的中心扇形剖分：$V=2$（中心与一个边界顶点类）、$E=6g$、$F=4g$，故 $\chi=2-2g$；$2k$ 边形：$V=2$、$E=3k$、$F=2k$，故 $\chi=2-k$。两族互不同胚：可定向性不同（一侧可定向、一侧不可定向）；同族内 $\chi$ 不同，由 $\chi$ 的拓扑不变性（`thm.euler-characteristic`）不同胚。注意这里的「标准形」是引理 K 的**结论**，不是定义；不要用「闭曲面按定义就是标准形」循环。
 
@@ -5449,6 +5449,8 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 
 **定理。** 紧曲面可三角剖分（等价地：紧拓扑 $2$-流形有有限单纯剖分）；可定向时还有相容的复结构。等价形式的准确范围见下面的维数对照。
 
+**带边界情形。** 陈述写「可带边界」，但下面两条路线都只处理**闭**曲面 —— 这不是自动的。标准办法是**沿边界加倍**：取两份 $S$，沿 $\partial S$ 用恒等映射粘起来，得闭曲面 $D(S)$；对 $D(S)$ 用下述任一路线得剖分，再限制回 $S$（前提是剖分取得使 $\partial S$ 落在 $1$-骨架里，见缺口 (vi)）。也可把每个边界圆盘粘成一点得闭曲面。
+
 **路线 A（复分析）。** 可定向紧曲面 $\rightarrow$ 复结构（Riemann 面）$\rightarrow$ 非常数亚纯函数存在 $\rightarrow$ 亚纯函数是到 $\mathbb{CP}^{1}$ 的分支覆盖 $\rightarrow$ 把 $\mathbb{CP}^{1}$ 上一张剖分拉回并加细（分支值取作顶点；分支点附近局部模型 $z\mapsto z^{m}$，按扇形细分）$\rightarrow$ 得有限剖分。缺口：(i) 复结构存在性（单值化定理 / Riemann–Roch 的曲面情形）；(ii) 亚纯函数存在性（Riemann–Roch，或 Runge 逼近 $+$ Mittag-Leffler）；(iii) 分支覆盖拉回的加细与一致性。**注意**：这里的分支覆盖 $z\mapsto z^{m}$ 与下面不可定向情形用的定向双覆盖是两回事。
 
 **路线 B（微分拓扑）。** 光滑结构存在（Whitehead：$C^{1}$ 结构即够，或直接做 $C^{\infty}$）$\rightarrow$ Morse 函数 $\rightarrow$ 柄分解 $\rightarrow$ 每个柄是 $0/1/2$-柄，按粘贴顺序给 CW 剖分 $\rightarrow$ 三角化每个柄并细分到相容 $\rightarrow$ 得剖分。缺口：(iv) 光滑结构存在性；(v) Morse 函数存在性（需要 $C^{2}$ 逼近）；(vi) 柄分解与三角剖分的相容（$1$-柄的处理、柄与柄之间的粘合）。
@@ -5459,7 +5461,7 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 
 **两个易混。** (a) Radó 的「三角剖分存在」不等于「任意两个剖分都组合等价」——后者是 Hauptvermutung（$\dim\ge 4$ 假，$\dim=2$ 真），正是 `thm.classification-surfaces` 第 (2) 步要做的事。(b) 复结构与光滑结构的存在性在 $\dim=2$ 等价（单值化），在 $\dim\ge 4$ 不等价。
 
-**缺口清单。** (i) 复结构存在性（单值化定理 / Riemann–Roch）；(ii) 亚纯函数存在性；(iii) 分支覆盖拉回的加细；(iv) 自由对合的等变三角剖分引理；(v) 光滑结构存在性 $+$ Morse $+$ 柄分解（路线 B）。本图没有这些节点；本条因此保持 skeleton。若下一轮补，建议先立两个节点：「等变三角剖分（重心重分两次）」——它可顺带救活不可定向情形；「单值化定理」——它是路线 A 的总闸。
+**缺口清单。** (i) 复结构存在性（单值化定理 / Riemann–Roch）；(ii) 亚纯函数存在性；(iii) 分支覆盖拉回的加细；(iv) 自由对合的等变三角剖分引理；(v) 光滑结构存在性 $+$ Morse $+$ 柄分解（路线 B）；(vi) 带边界情形：沿边界加倍得闭曲面，且剖分可取得让边界落在 $1$-骨架里（加倍对合的等变性）。本图没有这些节点；本条因此保持 skeleton。若下一轮补，建议先立两个节点：「等变三角剖分（重心重分两次）」——它可顺带救活不可定向情形；「单值化定理」——它是路线 A 的总闸。
 
 参考：Radó, Über den Begriff der Riemannschen Fläche (1925)；Moise, Affine structures in 3-manifolds (1952)；Freedman, The topology of four-dimensional manifolds (1982)；Munkres, Topology, Ch. 12
 
@@ -5524,6 +5526,33 @@ $$\chi(S) = 2 - k .$$
 ⭐ 读数：$\mathbb{RP}^{2}$ 的 $k=1$、$\chi=1$；克莱因瓶的 $k=2$、$\chi=0$；三个射影平面的连通和 $k=3$、$\chi=-1$。
 
 参考：Munkres, Topology, Ch. 12；Massey, A Basic Course in Algebraic Topology, Ch. 1
+
+#### 拓扑可定向性　`def.topological-orientability`
+*定义*　定义：拓扑流形的可定向性（定向图册 / 定向双覆盖）
+
+设 $M$ 是 $n$ 维拓扑流形（$n\ge 1$）。称 $M$ 是**可定向的**，若存在一组图卡 $(U_{\alpha},\varphi_{\alpha})$ 覆盖 $M$，使得任意两个图卡之间的转移映射
+
+$$\varphi_{\beta}\circ\varphi_{\alpha}^{-1}:\ \varphi_{\alpha}(U_{\alpha}\cap U_{\beta})\longrightarrow \varphi_{\beta}(U_{\alpha}\cap U_{\beta})$$
+
+都**保向**（$\mathbb{R}^{n}$ 取标准定向；保向的精确定义见注）。这样的图册叫**定向图册**。不存在定向图册时称 $M$ **不可定向**。
+
+**一、保向是什么意思。** $\mathbb{R}^{n}$ 的标准定向由局部同调的标准生成元给出：对 $x\in\mathbb{R}^{n}$，$H_{n}(\mathbb{R}^{n},\mathbb{R}^{n}\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$，取定一个生成元作为「正定向」。设 $h:V\to W$ 是 $\mathbb{R}^{n}$ 两个开集之间的同胚，$x\in V$。$h$ 在 $x$ 处**保向**，指诱导同构 $H_{n}(V,V\setminus\{x\})\to H_{n}(W,W\setminus\{h(x)\})$ 把标准生成元送到标准生成元；否则称**反向**。若 $V$ 连通，则「在一点保向」蕴含「处处保向」（局部同调沿连通性连续变化，只能取两个值）。$n=1$ 时这就是通常的单调递增；$n=2$ 时就是通常的保向同胚。
+
+**二、定向双覆盖。** 令 $\widehat{M}$ 为所有二元组 $(x,\mathfrak{o}_{x})$，其中 $x\in M$、$\mathfrak{o}_{x}$ 是 $T_{x}M$ 的「局部定向」——即 $x$ 的某个图卡给出的 $\mathbb{R}^{n}$ 标准定向在该图卡下的拉回，两个图卡给同一 $\mathfrak{o}_{x}$ 当且仅当转移映射在 $x$ 处保向。用图卡把 $\widehat{M}$ 局部写成 $U\times\{\pm1\}$，即得拓扑；投影 $p:\widehat{M}\to M$ 是二重覆叠，叫**定向双覆盖**。$M$ 可定向 $\iff$ $p$ 平凡 $\iff$ $p$ 有连续截面 $\iff$ $\widehat{M}$ 恰有两个连通分支（$M$ 连通时）。不可定向时 $\widehat{M}$ 连通，且 $\mathbb{Z}/2$ 自由地作用在它上面（无不动点）。
+
+**三、同调刻画。** 设 $M$ 是闭连通 $n$-流形。对任意 $x$，$H_{n}(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$；自然映射 $H_{n}(M;\mathbb{Z})\to H_{n}(M,M\setminus\{x\};\mathbb{Z})$ 的像只能是 $0$ 或 $\mathbb{Z}$（Hatcher §3.3）。$M$ 可定向 $\iff$ 这个像是 $\mathbb{Z}$（等价地：存在**基本类** $[M]\in H_{n}(M;\mathbb{Z})$，它在每个 $x$ 处都给出局部定向）。不可定向时 $H_{n}(M;\mathbb{Z})=0$。证明思路：用定向双覆盖的转移函数粘一个「局部同调系数」的常层，可定向性正是这个局部系统平凡；基本类的存在性与截面的存在性对偶。
+
+**四、曲面情形（本图主要用途）。** 对闭曲面 $S$：$S$ 可定向 $\iff$ $S$ 不含 Möbius 带作为子空间 $\iff$ $S$ 有三角剖分使所有 $2$-单形可**一致定向**（每条内边两侧诱导的边定向相反，`prop.eulerchar-genus` 的引理 D 用的正是这个形式）$\iff$ $H_{2}(S;\mathbb{Z})\cong\mathbb{Z}$。其中「一致定向的三角剖分」与定向图册的等价，就是引理 D 之前那一步：把每个单形放进图卡再用转移保向拼接。
+
+**五、例子。** $S^{2}$、$T^{2}$ 及一切可定向闭曲面可定向；$\mathbb{RP}^{2}$、克莱因瓶、Möbius 带不可定向。定向双覆盖的读数：$\mathbb{RP}^{2}$ 的定向双覆盖是 $S^{2}$（对径作用），克莱因瓶的定向双覆盖是 $T^{2}$，Möbius 带的定向双覆盖是平环。这些例子说明「不可定向」不是「没有局部定向」，而是「局部定向无法整体一致地选出来」。
+
+**六、与光滑定义的关系。** `def.orientable-manifold` 是光滑版本：转移映射的 Jacobi 行列式为正。光滑流形若按光滑意义可定向，则按本条可定向（光滑图册就是定向图册）；反之，光滑流形按本条可定向时，可用单位分解把局部 $n$-形式粘成处处非零的 $n$-形式（`prop.volume-form-orientation`），故两种定义在光滑流形上一致。`def.orientable-surface` 是 $\mathbb{R}^{3}$ 中的外在版本（存在连续单位法向量场），它只覆盖可嵌入 $\mathbb{R}^{3}$ 的曲面（例如 $\mathbb{RP}^{2}$ 不可嵌入，故不能被它描述）。本条不要求光滑，适用于任意拓扑曲面。
+
+**七、用途。** ①`prop.eulerchar-genus` 的引理 D：用定向图册给三角剖分的 $2$-单形一致定向，从而 $H_{2}\cong\mathbb{Z}$；②`thm.rado` 的不可定向情形：走定向双覆盖 $\widehat{S}\to S$（自由 $\mathbb{Z}/2$-作用、无分支点），对 $\widehat{S}$ 用可定向的三角剖分，再取等变加细让商也是剖分（等变三角剖分引理，本图无节点）；③`thm.classification-surfaces`：可定向性是同胚不变量，与 $\chi$ 一起区分标准形。
+
+⚠ **两个常见混淆。** ①「不可定向」不等于「不可三角剖分」：Radó 说每个紧曲面都可三角剖分，$\mathbb{RP}^{2}$ 就有（正二十面体对径粘合）。②「定向双覆盖」不是分支覆盖：它是自由二重覆叠，没有分支点；$z\mapsto z^{2}$ 那种带分支点的局部模型属于亚纯函数的分支覆盖（`thm.rado` 的复分析路线），不要与定向双覆盖混为一谈。
+
+参考：Hatcher, Algebraic Topology, §3.3；Munkres, Topology, Ch. 12；Milnor–Stasheff, Characteristic Classes, §9
 
 #### 球面 S²　`ex.sphere`
 *例*　球面 $S^{2}$：闭曲面，亏格 0，$\chi = 2$
@@ -32740,7 +32769,7 @@ $$f(z) = A\int^{z}_{z_{0}} g(\zeta)\,\mathrm{d}\zeta + B,\qquad g(\zeta) := \pro
 把 $\mathbb{H}$ 共形地映成该多边形内部，且 $f(x_{k})$ 是第 $k$ 个顶点（取 $A \ne 0$，否则 $f \equiv B$ 是常值、谈不上共形）。
 常数 $A, B$ 决定大小、旋转与位置。
 
-⚠️ **本节点仍标 skeleton**：下面只完整证明了「**形式**」这一半（若共形映射存在，则它必有这个形状）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的三步在末尾点明。
+⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的三步与两条外部引理在末尾点明。
 
 **记号**：外角和给出 $\sum_{k=1}^{n}(1 - \alpha_{k}) = 2$，等价于
 
@@ -32794,11 +32823,11 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 （ii）**辐角原理收尾**：确认边界简单后，对固定内点 $w \in P$ 数 $F - w$ 在 $\mathbb{H}$ 内的零点：边界上 $F - w$ 无零点，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，故恰有一个原像，$F$ 是双射，从而共形。
 
-（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点，且 Riemann 映射定理、边界对应定理本身仍是 skeleton。
+（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。
 
 这两步各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：
 
-**引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。多边形是 Jordan 区域，故 $F$ 的边界对应成立。
+**引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚（这就是 `thm.boundary-correspondence` 的内容，该节点仍 skeleton）。多边形是 Jordan 区域，故 $F$ 的边界对应成立。
 
 **引理 B（简单性与绕数）**：设 $F$ 在 $\mathbb{H}$ 内局部共形、连续到 $\partial\mathbb{H}$；若 $F(\partial\mathbb{H})$ 是简单闭曲线、$F(\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。标准做法是把多边形沿边反射拼接，用 Schwarz 反射（`thm.schwarz-reflection`）延拓 $F$ 并数覆盖重数；这一步同时给出（i）与（ii）。
 
@@ -32841,19 +32870,21 @@ $$f : \Omega \longrightarrow \mathbb{D}$$
 
 可以连续延拓到闭包 $\overline{\Omega}$，且延拓后的 $f : \overline{\Omega} \to \overline{\mathbb{D}}$ 是**同胚**，把边界同胚地映到单位圆周。
 
-**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，第 15 批已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。
+**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。
 
-**能独立验证的一半：延拓 + 边界单射 $\implies$ 同胚。** 设 $f:\Omega\to\mathbb{D}$ 已连续延拓到 $\overline{\Omega}$，且在 $\partial\Omega$ 上单射。则：
+**能独立验证的一半：延拓加边界单射，则同胚。** 设 $f:\Omega\to\mathbb{D}$ 已连续延拓到 $\overline{\Omega}$，且在 $\partial\Omega$ 上单射。则：
 
-① $f(\partial\Omega)\cap\mathbb{D}=\emptyset$。否则有 $\zeta\in\partial\Omega$ 使 $w=f(\zeta)\in\mathbb{D}=f(\Omega)$，取逆映射 $g=f^{-1}:\mathbb{D}\to\Omega$（$f$ 内部双全纯，故 $g$ 连续）。让 $z\to\zeta$ 时 $f(z)\to f(\zeta)=w$，由 $g$ 在 $w$ 连续得 $g(w)=\zeta$；但 $g(w)\in\Omega$，而 $\zeta\in\partial\Omega$，矛盾。
+① $f(\partial\Omega)\cap\mathbb{D}=\emptyset$。否则有 $\zeta\in\partial\Omega$ 使 $w=f(\zeta)\in\mathbb{D}=f(\Omega)$；取逆映射 $g=f^{-1}:\mathbb{D}\to\Omega$（$f$ 内部双全纯，故 $g$ 全纯）。让 $z\to\zeta$（$z\in\Omega$）时 $f(z)\to f(\zeta)=w$，由 $g$ 在 $w$ 连续得 $g(w)=\zeta$；但 $g(w)\in\Omega$，而 $\zeta\in\partial\Omega$，矛盾。注意这一步**不需要**边界单射，只需要延拓存在。
 
-② 于是 $f(\overline{\Omega})=f(\Omega)\cup f(\partial\Omega)\subseteq \mathbb{D}\cup\partial\mathbb{D}=\overline{\mathbb{D}}$，且包含 $\mathbb{D}$；$\overline{\Omega}$ 紧、$\overline{\mathbb{D}}$ Hausdorff，连续双射从紧空间到 Hausdorff 空间自动是同胚。（子引理）□（这一段是真正的证明，只用了紧性。）
+② 于是 $f(\overline{\Omega})=f(\Omega)\cup f(\partial\Omega)\subseteq\mathbb{D}\cup\partial\mathbb{D}=\overline{\mathbb{D}}$，且包含 $\mathbb{D}$；$\overline{\Omega}$ 紧、$\overline{\mathbb{D}}$ Hausdorff，连续双射从紧空间到 Hausdorff 空间自动是同胚。（子引理）□
 
-**缺口：延拓的存在与边界单射。** 这正是 Carathéodory 定理的内容：$\partial\Omega$ 局部连通 $\implies$ 连续延拓存在（Carathéodory 1913）；Jordan 曲线 $\implies$ $\partial\Omega$ 局部连通（Jordan 曲线是紧度量空间里的简单闭曲线，局部连通）。边界单射可用 crosscut / prime end 论证，或对逆映射 $f^{-1}:\mathbb{D}\to\Omega$ 同法延拓后比较。本图没有 Carathéodory 节点，也没有 crosscut / prime end 节点；`thm.schwarz-reflection` 只处理**解析弧**（圆、直线）的反射延拓，不能覆盖一般 Jordan 曲线。
+**缺口（已精确到一条定理）：Carathéodory–Osgood 定理。** 设 $\Omega$ 是 Jordan 区域（$\partial\Omega$ 是 Jordan 曲线），$f:\Omega\to\mathbb{D}$ 是 Riemann 映射。则：(a) $f$ 连续延拓到 $\overline{\Omega}$（Carathéodory 1913）；(b) 延拓在 $\partial\Omega$ 上单射（Osgood 1900 / Carathéodory）。两条都不可省：只有 (a) 时边界可能把两个点粘在一起；只有「单连通」而没有 Jordan 条件时连 (a) 都不成立（环域上的反例：延拓后的边界行为由两个边界分量共同决定）。
 
-**⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_k$ 对应多边形顶点」提供合法性。
+**为什么本图补不了。** (a) 的标准证明要用 crosscut / prime end（Carathéodory 拓扑），或境界的局部连通性加调和测度；(b) 要用 Jordan 曲线定理与 crosscut 论证。本图**没有** Carathéodory、crosscut、prime end、Jordan 曲线定理的节点；`thm.schwarz-reflection` 只处理解析弧（圆、直线）的反射，不能覆盖一般 Jordan 曲线。**多边形区域**是例外：此时 (a)(b) 可用 Schwarz 反射逐边拼接证明（见 `thm.schwarz-christoffel` 的注），但那只覆盖折线边界，不是本条的一般情形。因此本条保持 `status: 'skeleton'`，缺口就是这一条定理。
 
-**📌 记号。** 入边（原无显式 id，靠 src/core/graph.js 自动分配 e102.implication）只记录了「径向极限 $\to$ 连续 $\to$ 同胚」的路线；其中第一步「径向极限存在」正是 Carathéodory 定理，不是初等估计——不要把它当作已证。
+**⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_{k}$ 对应多边形顶点」提供合法性。
+
+**📌 记号与入边。** 入边（原无显式 id，靠 `src/core/graph.js` 自动分配 `e102.implication`）只记录了「径向极限、连续、同胚」的路线；其中第一步「径向极限存在」正是 Carathéodory 定理，不是初等估计——不要把它当作已证。
 
 参考：王晓光《复变函数》· 边界对应（介绍）；Ahlfors, Complex Analysis (3rd ed.), Ch. 6 · Conformal Mapping（boundary correspondence）；Pommerenke, Boundary Behaviour of Conformal Maps, Ch. 2
 
@@ -53988,6 +54019,14 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 #### 定义引用：「Euler 示性数与不可定向亏格」→ 克莱因瓶　`dep.eulercharnonor-klein`
 
 「$k = 2$、$\chi = 0$」同上。
+
+#### 定义引用：「拓扑可定向性」→ Euler 示性数与亏格　`def-link.toporient-eg`
+
+引理 D 用定向图册给 2-单形一致定向
+
+#### 定义引用：「拓扑可定向性」→ Euler 示性数与不可定向亏格　`def-link.toporient-nonor`
+
+不可定向=不存在定向图册；标准形 $k$ 个 $\mathbb{RP}^{2}$ 的连通和
 
 #### 定义引用：「域」→ 域扩张　`dep.field-fieldext`
 

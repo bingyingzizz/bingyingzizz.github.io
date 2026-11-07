@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1550 nodes, 3192 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1551 nodes, 3194 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1550 nodes, 3192 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1551 nodes, 3194 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -1746,6 +1746,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       blobsPerRegion: 12,         // 每个板块的云朵数
       blobAlpha: 0.075,
       splatRadius: 150,           // 单节点撒点的世界半径（smooth-tail 到 0，见 background.js）
+      /* 手机竖屏（≤700px）走屏幕空间点云（background.js buildParticles）：
+         每节点 mobileParticles 颗（枢纽 +1~3）、核心半径 mobileCore 世界单位、晕到 mobileHalo；
+         点径 0.9~1.6 CSS px，透明度 mobileAlpha + [0, mobileAlphaVar]，亮色主题再 ×1.15。
+         ⚠️ 3 颗/节点时适配档（390×844，k 被 minZoom 夹在 0.06）看起来「几乎啥也没有」——
+         云的整体形状全靠连线撑着。9~12 颗时节点密度才连成一片看得清的星云。 */
+      mobileParticles: 9,
+      mobileCore: 48,
+      mobileHalo: 130,
+      mobileAlpha: 0.26,
+      mobileAlphaVar: 0.24,
       centerAlpha: 0.025,         // 板块中心大团雾
       nodeAlpha: 0.025,           // 每个节点周围的小团雾
       spread: 0.52,               // 云朵分布半径 / 板块半径
@@ -5022,28 +5032,68 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
    */
   /** 手机竖屏：小点云。纹理缩小后粒子会被压成一片糊，直接按屏幕坐标画点。 */
   function buildParticles(graph, ok) {
-    var out = [];
+    var bc = MG.config.background;
+    var per = Math.max(4, bc.mobileParticles == null ? 9 : bc.mobileParticles);
+    var core = bc.mobileCore == null ? 48 : bc.mobileCore;     // 世界单位
+    var halo = Math.max(core, bc.mobileHalo == null ? 130 : bc.mobileHalo);
+    var a0 = bc.mobileAlpha == null ? 0.26 : bc.mobileAlpha;
+    var aVar = bc.mobileAlphaVar == null ? 0.24 : bc.mobileAlphaVar;
+    var count = 0;
+    /* 领域底光：只有一粒一粒的点时，整片云像浮在白底上的一层彩色噪点；
+       在每个领域统计圆的位置铺一层很淡的色晕（不是原来的纹理，纯屏幕空间渐变），
+       点云背后才有「深处还有一层云」的层次。alpha 只给 0.05 上下。 */
+    var regs = [];
+    (graph.regions || []).forEach(function (r) {
+      if (!r.stat) return;
+      var rr = U.hexToRgb(r.color || '#7A8699');
+      regs.push({
+        x: r.stat.cx, y: r.stat.cy,
+        r: Math.max(4, r.stat.radius),
+        css: rr.r + ',' + rr.g + ',' + rr.b
+      });
+    });
+    /* 粒子按「颜色 × 透明度档」分桶：每帧只切几十次 fillStyle/globalAlpha，
+       一万多个点只做 fillRect。逐点改样式的话，手机上一帧要切上万次状态。 */
+    var groups = [], gmap = {};
+    function bucket(col, alpha) {
+      var ai = Math.max(0, Math.min(9, Math.round((alpha - a0) / 0.04)));
+      var key = col + '|' + ai;
+      var g = gmap[key];
+      if (!g) {
+        g = gmap[key] = { col: col, a: a0 + ai * 0.04, pts: [] };
+        groups.push(g);
+      }
+      return g;
+    }
     (graph.nodes || []).forEach(function (n) {
       if (!ok(n.id)) return;
       var rid = (n.regions && n.regions[0]) || '';
       var reg = graph.regionById && graph.regionById[rid];
       var rgb = U.hexToRgb((reg && reg.color) || '#7A8699');
+      var col = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
       var seed = U.rngFrom(n.id + ':mobile-particle', MG.config.seed);
-      /* 每个节点撒 3 颗，围绕节点做小幅抖动；缩到适配档时正好是 1~2 CSS px 的点。 */
-      for (var j = 0; j < 3; j++) {
+      var deg = n.degree || 0;
+      /* 度大的枢纽点多撒几颗、亮一点 —— 适配档下整片云因此有「骨架」，
+         而不是均匀的一层噪点。 */
+      var cnt = per + (deg >= 10 ? 3 : deg >= 5 ? 2 : deg >= 2 ? 1 : 0);
+      var aBase = a0 + Math.min(0.06, deg * 0.006);
+      for (var j = 0; j < cnt; j++) {
         var ang = seed() * Math.PI * 2;
-        var rad = Math.sqrt(seed()) * 70;
-        out.push({
+        /* 七成落在核心（适配档 k≈0.06 ⇒ 约 3 CSS px 的一小团），三成拉到外圈做晕；
+           半径用 sqrt 抖动 ⇒ 面密度均匀，不会在核心边缘堆出一圈。 */
+        var rad = seed() < 0.7
+          ? Math.sqrt(seed()) * core
+          : core + Math.sqrt(seed()) * (halo - core);
+        var p = {
           x: n.x + Math.cos(ang) * rad,
           y: n.y + Math.sin(ang) * rad,
-          r: rgb.r, g: rgb.g, b: rgb.b,
-          col: 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')',
-          a: 0.18 + seed() * 0.22,
-          s: 0.9 + seed() * 0.8
-        });
+          s: 0.9 + seed() * 0.7 + (deg >= 10 ? 0.12 : 0)
+        };
+        bucket(col, aBase + seed() * aVar).pts.push(p);
+        count++;
       }
     });
-    return { mobile: true, particles: out };
+    return { mobile: true, groups: groups, count: count, regions: regs };
   }
 
   function buildTexture(graph, isVisible) {
@@ -5437,14 +5487,38 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     var k = cam.k, tx = cam.tx, ty = cam.ty;
     var vw = cam.viewW || (ctx.canvas.width / dpr);
     var vh = cam.viewH || (ctx.canvas.height / dpr);
-    var list = tex.particles;
-    for (var i = 0; i < list.length; i++) {
-      var p = list[i];
-      var x = p.x * k + tx, y = p.y * k + ty;
-      if (x < -2 || y < -2 || x > vw + 2 || y > vh + 2) continue;
-      ctx.globalAlpha = p.a;
-      ctx.fillStyle = p.col;
-      ctx.fillRect(x, y, p.s, p.s);
+    var dark = false;
+    try { dark = document.documentElement.getAttribute('data-theme') === 'dark'; } catch (e) {}
+    /* 白底上一颗 α≈0.3 的淡色点几乎看不见，暗底上反而发亮 ⇒ 亮色主题抬一点。
+       主题是运行时切换的（不重建云），所以倍率必须在每帧这里算，不能烘进粒子。 */
+    var ga = dark ? 1.0 : 1.15;
+    /* 先铺领域底光（远处的一层雾），再压点云。 */
+    var regs = tex.regions || [];
+    var glow = dark ? 0.075 : 0.055;
+    for (var ri = 0; ri < regs.length; ri++) {
+      var rg = regs[ri], R = rg.r * k;
+      if (R < 6) continue;
+      var cx = rg.x * k + tx, cy = rg.y * k + ty;
+      if (cx + R < -40 || cy + R < -40 || cx - R > vw + 40 || cy - R > vh + 40) continue;
+      var grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
+      grad.addColorStop(0, 'rgba(' + rg.css + ',' + glow + ')');
+      grad.addColorStop(0.55, 'rgba(' + rg.css + ',' + (glow * 0.62) + ')');
+      grad.addColorStop(0.85, 'rgba(' + rg.css + ',' + (glow * 0.20) + ')');
+      grad.addColorStop(1, 'rgba(' + rg.css + ',0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+    }
+    var groups = tex.groups || [];
+    for (var gi = 0; gi < groups.length; gi++) {
+      var g = groups[gi], pts = g.pts;
+      ctx.fillStyle = g.col;
+      ctx.globalAlpha = Math.min(0.92, g.a * ga);
+      for (var i = 0; i < pts.length; i++) {
+        var p = pts[i];
+        var x = p.x * k + tx, y = p.y * k + ty;
+        if (x < -2 || y < -2 || x > vw + 2 || y > vh + 2) continue;
+        ctx.fillRect(x, y, p.s, p.s);
+      }
     }
     ctx.globalAlpha = 1;
   }
@@ -13996,6 +14070,7 @@ MG.aliases = {
     { id: 'def.category-of-groups', en: 'category of groups', aka: ['群范畴', 'Grp'] },
     { id: 'def.category-of-abelian-groups', en: 'category of abelian groups', aka: ['阿贝尔群范畴', 'Ab'] },
     { id: 'def.module-category', en: 'category of modules', aka: ['模范畴', 'A-Mod'] },
+    { id: 'def.topological-orientability', en: 'topological orientability', aka: ['拓扑可定向性', '曲面的可定向性'] },
   ],
 
   /* -------------------------------------------------- 内文**不链**的别名 */
@@ -14989,6 +15064,7 @@ MG.i18n = {
     'def.tensor-product-vs': { title_en: 'tensor product', label_en: 'tensor product', from: 'explicit' },
     'def.topo-ab-group': { title_en: 'topological abelian group', label_en: 'topological abelian group', from: 'aka' },
     'def.topological-manifold': { title_en: 'topological manifold', label_en: 'topological manifold', from: 'explicit' },
+    'def.topological-orientability': { title_en: 'topological orientability', label_en: 'topological orientability', from: 'explicit' },
     'def.topologically-generating': { title_en: 'topologically generating', label_en: 'topologically generating', from: 'aka' },
     'def.topology': { title_en: 'topology', label_en: 'topology', from: 'explicit' },
     'def.topology-base': { title_en: 'base and subbase', label_en: 'base and subbase', from: 'explicit' },
@@ -76222,40 +76298,7 @@ window.MG = window.MG || {};
         '把 $\\mathbb{H}$ 共形地映成该多边形内部，且 $f(x_{k})$ 是第 $k$ 个顶点（取 $A \\ne 0$，否则 $f \\equiv B$ 是常值、谈不上共形）。',
         '常数 $A, B$ 决定大小、旋转与位置。',
       ].join('\n'),
-      notes: [
-        '⚠️ **本节点仍标 skeleton**：下面只完整证明了「**形式**」这一半（若共形映射存在，则它必有这个形状）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的三步在末尾点明。',
-        '**记号**：外角和给出 $\\sum_{k=1}^{n}(1 - \\alpha_{k}) = 2$，等价于',
-        '$$\\sum_{k=1}^{n} (\\alpha_{k} - 1) = -2.$$',
-        '这个 $-2$ 正是 $g(\\zeta) = O(\\zeta^{-2})$ 的来源，也是积分在无穷远收敛的原因。',
-        '**第一部分：形式唯一性（完整证明）**',
-        '命题：设 $f : \\mathbb{H} \\to P$ 是把上半平面共形映成多边形内部的映射，$f$ 连续到边界、把 $x_{k}$ 送到第 $k$ 个顶点，则存在 $A \\ne 0$、$B$，使 $f\'(z) = A\\,g(z)$。',
-        '证明分五小步。',
-        '（1）**规范化**：把 $\\infty \\in \\partial\\mathbb{H}$ 选在不是任何顶点原像的位置（圆 $\\partial\\mathbb{H}$ 上除去有限个顶点原像后仍有点，用 $\\operatorname{Aut}(\\mathbb{H})$ 把它送到 $\\infty$）。于是 $\\infty$ 对应的是多边形某条边的内部，而不是顶点。',
-        '（2）**角点的局部形状**：在 $x_{k}$ 附近，$f$ 有展开',
-        '$$f(z) - f(x_{k}) = (z - x_{k})^{\\alpha_{k}}\\,h_{k}(z),\\qquad h_{k}\\ \\text{在}\\ x_{k}\\ \\text{附近全纯且}\\ h_{k}(x_{k}) \\ne 0.$$',
-        '理由：把角的两边所在直线作反射，角的两侧被「展开」；等价地，令 $w = (f - f(x_{k}))^{1/\\alpha_{k}}$，它把角展成半平面，再用 Schwarz 反射（`thm.schwarz-reflection`）把 $f$ 延拓过 $x_{k}$，局部即得上式。',
-        '（3）**跨边延拓**：每条边 $f((x_{k}, x_{k+1}))$ 是直线段。沿这线段把多边形反射，同时把 $\\mathbb{H}$ 沿 $(x_{k}, x_{k+1})$ 反射；由 Schwarz 反射，$f$ 解析延拓过整个开区间 $(x_{k}, x_{k+1})$。定义',
-        '$$\\varphi(z) := \\frac{f\'(z)}{g(z)} = \\frac{f\'(z)}{\\prod_{k=1}^{n}(z - x_{k})^{\\alpha_{k}-1}}.$$',
-        '由（2），$\\varphi$ 在 $x_{k}$ 处有可去奇点且 $\\varphi(x_{k}) = h_{k}(x_{k}) \\ne 0$；由跨边反射，$\\varphi(\\bar z) = \\overline{\\varphi(z)}$，故 $\\varphi$ 延拓成 $\\mathbb{C}$ 上的整函数。',
-        '（4）**$\\varphi$ 无零点**：$\\mathbb{H}$ 内 $f\' \\ne 0$（共形）；每个开区间 $(x_{k}, x_{k+1})$ 上 $f$ 的参数化导数非零（边是直线段，$f$ 是双射）；由反射式，下半平面也无零点；角点处由（2）。故 $\\varphi$ 是处处非零的整函数。',
-        '（5）**$\\varphi$ 在无穷远有有限非零极限**：由（1），$\\infty$ 映到某条边内部，跨这条边反射给出 $f$ 在 $\\infty$ 的邻域内全纯；在坐标 $w = 1/z$ 下 $f$ 在 $w = 0$ 全纯，故 $f\'(z) = O(z^{-2})$。另一方面 $g(z) = \\prod(z - x_{k})^{\\alpha_{k}-1} = z^{-2}\\,(1 + O(1/z))$（用了指数和 $-2$）。于是 $\\varphi(z) \\to A \\ne 0$（$A$ 是某个非零常数），$\\varphi$ 在 $\\infty$ 有可去奇点。',
-        '于是 $\\varphi$ 与 $1/\\varphi$ 都是整函数且在 $\\infty$ 有界，由 Liouville 定理 $\\varphi \\equiv A$。积分得',
-        '$$f(z) = A\\int_{z_{0}}^{z} g(\\zeta)\\,\\mathrm{d}\\zeta + B.$$',
-        '这就证明了公式的**形式**（这一半完整）。',
-        '**第二部分：存在性（未完成，缺三步）**',
-        '反过来给定多边形与 $x_{k}$，令 $F(z) = A\\int^{z}_{z_{0}} g(\\zeta)\\,\\mathrm{d}\\zeta + B$。已知：',
-        '- $F\' = A g$ 在 $\\mathbb{H}$ 上无零点，故 $F$ 是局部共形的；',
-        '- 在每个区间 $(x_{k}, x_{k+1})$ 上 $\\arg g$ 是常值（因为 $(x - x_{k})$ 的辐角只取 $0$ 或 $\\pi$，符号由 $x > x_{k}$ 决定），故 $F$ 把每个区间映成一条直线段；走过 $x_{k}$ 时 $\\arg F\'$ 跳变 $\\pi(\\alpha_{k}-1)$，即内角为 $\\alpha_{k}\\pi$；',
-        '- $g(\\zeta) = O(\\zeta^{-2})$，积分在 $\\pm\\infty$ 都收敛，$F$ 连续到 $\\partial\\mathbb{H}$ 的整个边界（含 $\\infty$）。',
-        '⚠️ 缺的三步（本图不写，因此保留 skeleton）：',
-        '（i）**边界曲线的简单性**：要证 $F(\\partial\\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。',
-        '（ii）**辐角原理收尾**：确认边界简单后，对固定内点 $w \\in P$ 数 $F - w$ 在 $\\mathbb{H}$ 内的零点：边界上 $F - w$ 无零点，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，故恰有一个原像，$F$ 是双射，从而共形。',
-        '（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点，且 Riemann 映射定理、边界对应定理本身仍是 skeleton。',
-        '这两步各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：\n\n**引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。多边形是 Jordan 区域，故 $F$ 的边界对应成立。\n\n**引理 B（简单性与绕数）**：设 $F$ 在 $\\mathbb{H}$ 内局部共形、连续到 $\\partial\\mathbb{H}$；若 $F(\\partial\\mathbb{H})$ 是简单闭曲线、$F(\\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。标准做法是把多边形沿边反射拼接，用 Schwarz 反射（`thm.schwarz-reflection`）延拓 $F$ 并数覆盖重数；这一步同时给出（i）与（ii）。',
-        '**为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\\arg f\'$ 跳变 $\\pi(\\alpha_{k} - 1)$，恰好把切向转过去 $\\pi - \\alpha_{k}\\pi$ —— 正是外角。',
-        '⭐ **它是「造映射」的工业级工具**：机翼、渠道、电容器这些工程问题都归结为「先把区域近似成多边形，再用 S–C 公式搬到半平面」——搬到半平面之后 Laplace 方程的解就有现成的形式（Poisson 积分，`thm.poisson-formula`）。',
-        '⚠️ **三个参数定不下来**：$x_{k}$ 里可以任选三个（分式线性变换的自由度），$A, B$ 由多边形的位置与大小定 —— 实际计算就是解这几个方程。',
-      ].join('\n\n'),
+      notes: '⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f\'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的三步与两条外部引理在末尾点明。\n\n**记号**：外角和给出 $\\sum_{k=1}^{n}(1 - \\alpha_{k}) = 2$，等价于\n\n$$\\sum_{k=1}^{n} (\\alpha_{k} - 1) = -2.$$\n\n这个 $-2$ 正是 $g(\\zeta) = O(\\zeta^{-2})$ 的来源，也是积分在无穷远收敛的原因。\n\n**第一部分：形式唯一性（完整证明）**\n\n命题：设 $f : \\mathbb{H} \\to P$ 是把上半平面共形映成多边形内部的映射，$f$ 连续到边界、把 $x_{k}$ 送到第 $k$ 个顶点，则存在 $A \\ne 0$、$B$，使 $f\'(z) = A\\,g(z)$。\n\n证明分五小步。\n\n（1）**规范化**：把 $\\infty \\in \\partial\\mathbb{H}$ 选在不是任何顶点原像的位置（圆 $\\partial\\mathbb{H}$ 上除去有限个顶点原像后仍有点，用 $\\operatorname{Aut}(\\mathbb{H})$ 把它送到 $\\infty$）。于是 $\\infty$ 对应的是多边形某条边的内部，而不是顶点。\n\n（2）**角点的局部形状**：在 $x_{k}$ 附近，$f$ 有展开\n\n$$f(z) - f(x_{k}) = (z - x_{k})^{\\alpha_{k}}\\,h_{k}(z),\\qquad h_{k}\\ \\text{在}\\ x_{k}\\ \\text{附近全纯且}\\ h_{k}(x_{k}) \\ne 0.$$\n\n理由：把角的两边所在直线作反射，角的两侧被「展开」；等价地，令 $w = (f - f(x_{k}))^{1/\\alpha_{k}}$，它把角展成半平面，再用 Schwarz 反射（`thm.schwarz-reflection`）把 $f$ 延拓过 $x_{k}$，局部即得上式。\n\n（3）**跨边延拓**：每条边 $f((x_{k}, x_{k+1}))$ 是直线段。沿这线段把多边形反射，同时把 $\\mathbb{H}$ 沿 $(x_{k}, x_{k+1})$ 反射；由 Schwarz 反射，$f$ 解析延拓过整个开区间 $(x_{k}, x_{k+1})$。定义\n\n$$\\varphi(z) := \\frac{f\'(z)}{g(z)} = \\frac{f\'(z)}{\\prod_{k=1}^{n}(z - x_{k})^{\\alpha_{k}-1}}.$$\n\n由（2），$\\varphi$ 在 $x_{k}$ 处有可去奇点且 $\\varphi(x_{k}) = h_{k}(x_{k}) \\ne 0$；由跨边反射，$\\varphi(\\bar z) = \\overline{\\varphi(z)}$，故 $\\varphi$ 延拓成 $\\mathbb{C}$ 上的整函数。\n\n（4）**$\\varphi$ 无零点**：$\\mathbb{H}$ 内 $f\' \\ne 0$（共形）；每个开区间 $(x_{k}, x_{k+1})$ 上 $f$ 的参数化导数非零（边是直线段，$f$ 是双射）；由反射式，下半平面也无零点；角点处由（2）。故 $\\varphi$ 是处处非零的整函数。\n\n（5）**$\\varphi$ 在无穷远有有限非零极限**：由（1），$\\infty$ 映到某条边内部，跨这条边反射给出 $f$ 在 $\\infty$ 的邻域内全纯；在坐标 $w = 1/z$ 下 $f$ 在 $w = 0$ 全纯，故 $f\'(z) = O(z^{-2})$。另一方面 $g(z) = \\prod(z - x_{k})^{\\alpha_{k}-1} = z^{-2}\\,(1 + O(1/z))$（用了指数和 $-2$）。于是 $\\varphi(z) \\to A \\ne 0$（$A$ 是某个非零常数），$\\varphi$ 在 $\\infty$ 有可去奇点。\n\n于是 $\\varphi$ 与 $1/\\varphi$ 都是整函数且在 $\\infty$ 有界，由 Liouville 定理 $\\varphi \\equiv A$。积分得\n\n$$f(z) = A\\int_{z_{0}}^{z} g(\\zeta)\\,\\mathrm{d}\\zeta + B.$$\n\n这就证明了公式的**形式**（这一半完整）。\n\n**第二部分：存在性（未完成，缺三步）**\n\n反过来给定多边形与 $x_{k}$，令 $F(z) = A\\int^{z}_{z_{0}} g(\\zeta)\\,\\mathrm{d}\\zeta + B$。已知：\n\n- $F\' = A g$ 在 $\\mathbb{H}$ 上无零点，故 $F$ 是局部共形的；\n\n- 在每个区间 $(x_{k}, x_{k+1})$ 上 $\\arg g$ 是常值（因为 $(x - x_{k})$ 的辐角只取 $0$ 或 $\\pi$，符号由 $x > x_{k}$ 决定），故 $F$ 把每个区间映成一条直线段；走过 $x_{k}$ 时 $\\arg F\'$ 跳变 $\\pi(\\alpha_{k}-1)$，即内角为 $\\alpha_{k}\\pi$；\n\n- $g(\\zeta) = O(\\zeta^{-2})$，积分在 $\\pm\\infty$ 都收敛，$F$ 连续到 $\\partial\\mathbb{H}$ 的整个边界（含 $\\infty$）。\n\n⚠️ 缺的三步（本图不写，因此保留 skeleton）：\n\n（i）**边界曲线的简单性**：要证 $F(\\partial\\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。\n\n（ii）**辐角原理收尾**：确认边界简单后，对固定内点 $w \\in P$ 数 $F - w$ 在 $\\mathbb{H}$ 内的零点：边界上 $F - w$ 无零点，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，故恰有一个原像，$F$ 是双射，从而共形。\n\n（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。\n\n这两步各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：\n\n**引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚（这就是 `thm.boundary-correspondence` 的内容，该节点仍 skeleton）。多边形是 Jordan 区域，故 $F$ 的边界对应成立。\n\n**引理 B（简单性与绕数）**：设 $F$ 在 $\\mathbb{H}$ 内局部共形、连续到 $\\partial\\mathbb{H}$；若 $F(\\partial\\mathbb{H})$ 是简单闭曲线、$F(\\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。标准做法是把多边形沿边反射拼接，用 Schwarz 反射（`thm.schwarz-reflection`）延拓 $F$ 并数覆盖重数；这一步同时给出（i）与（ii）。\n\n**为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\\arg f\'$ 跳变 $\\pi(\\alpha_{k} - 1)$，恰好把切向转过去 $\\pi - \\alpha_{k}\\pi$ —— 正是外角。\n\n⭐ **它是「造映射」的工业级工具**：机翼、渠道、电容器这些工程问题都归结为「先把区域近似成多边形，再用 S–C 公式搬到半平面」——搬到半平面之后 Laplace 方程的解就有现成的形式（Poisson 积分，`thm.poisson-formula`）。\n\n⚠️ **三个参数定不下来**：$x_{k}$ 里可以任选三个（分式线性变换的自由度），$A, B$ 由多边形的位置与大小定 —— 实际计算就是解这几个方程。',
       refs: [
         'Ahlfors, Complex Analysis (3rd ed.), Ch. 6 §2 · Schwarz–Christoffel formula',
         'Driscoll–Trefethen, Schwarz–Christoffel Mapping, Cambridge, Ch. 1–2',
@@ -76318,7 +76361,7 @@ window.MG = window.MG || {};
         '可以连续延拓到闭包 $\\overline{\\Omega}$，且延拓后的 $f : \\overline{\\Omega} \\to ' +
           '\\overline{\\mathbb{D}}$ 是**同胚**，把边界同胚地映到单位圆周。',
       ].join('\n'),
-      notes: '**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，第 15 批已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。\n\n**能独立验证的一半：延拓 + 边界单射 $\\implies$ 同胚。** 设 $f:\\Omega\\to\\mathbb{D}$ 已连续延拓到 $\\overline{\\Omega}$，且在 $\\partial\\Omega$ 上单射。则：\n\n① $f(\\partial\\Omega)\\cap\\mathbb{D}=\\emptyset$。否则有 $\\zeta\\in\\partial\\Omega$ 使 $w=f(\\zeta)\\in\\mathbb{D}=f(\\Omega)$，取逆映射 $g=f^{-1}:\\mathbb{D}\\to\\Omega$（$f$ 内部双全纯，故 $g$ 连续）。让 $z\\to\\zeta$ 时 $f(z)\\to f(\\zeta)=w$，由 $g$ 在 $w$ 连续得 $g(w)=\\zeta$；但 $g(w)\\in\\Omega$，而 $\\zeta\\in\\partial\\Omega$，矛盾。\n\n② 于是 $f(\\overline{\\Omega})=f(\\Omega)\\cup f(\\partial\\Omega)\\subseteq \\mathbb{D}\\cup\\partial\\mathbb{D}=\\overline{\\mathbb{D}}$，且包含 $\\mathbb{D}$；$\\overline{\\Omega}$ 紧、$\\overline{\\mathbb{D}}$ Hausdorff，连续双射从紧空间到 Hausdorff 空间自动是同胚。（子引理）□（这一段是真正的证明，只用了紧性。）\n\n**缺口：延拓的存在与边界单射。** 这正是 Carathéodory 定理的内容：$\\partial\\Omega$ 局部连通 $\\implies$ 连续延拓存在（Carathéodory 1913）；Jordan 曲线 $\\implies$ $\\partial\\Omega$ 局部连通（Jordan 曲线是紧度量空间里的简单闭曲线，局部连通）。边界单射可用 crosscut / prime end 论证，或对逆映射 $f^{-1}:\\mathbb{D}\\to\\Omega$ 同法延拓后比较。本图没有 Carathéodory 节点，也没有 crosscut / prime end 节点；`thm.schwarz-reflection` 只处理**解析弧**（圆、直线）的反射延拓，不能覆盖一般 Jordan 曲线。\n\n**⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_k$ 对应多边形顶点」提供合法性。\n\n**📌 记号。** 入边（原无显式 id，靠 src/core/graph.js 自动分配 e102.implication）只记录了「径向极限 $\\to$ 连续 $\\to$ 同胚」的路线；其中第一步「径向极限存在」正是 Carathéodory 定理，不是初等估计——不要把它当作已证。',
+      notes: '**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。\n\n**能独立验证的一半：延拓加边界单射，则同胚。** 设 $f:\\Omega\\to\\mathbb{D}$ 已连续延拓到 $\\overline{\\Omega}$，且在 $\\partial\\Omega$ 上单射。则：\n\n① $f(\\partial\\Omega)\\cap\\mathbb{D}=\\emptyset$。否则有 $\\zeta\\in\\partial\\Omega$ 使 $w=f(\\zeta)\\in\\mathbb{D}=f(\\Omega)$；取逆映射 $g=f^{-1}:\\mathbb{D}\\to\\Omega$（$f$ 内部双全纯，故 $g$ 全纯）。让 $z\\to\\zeta$（$z\\in\\Omega$）时 $f(z)\\to f(\\zeta)=w$，由 $g$ 在 $w$ 连续得 $g(w)=\\zeta$；但 $g(w)\\in\\Omega$，而 $\\zeta\\in\\partial\\Omega$，矛盾。注意这一步**不需要**边界单射，只需要延拓存在。\n\n② 于是 $f(\\overline{\\Omega})=f(\\Omega)\\cup f(\\partial\\Omega)\\subseteq\\mathbb{D}\\cup\\partial\\mathbb{D}=\\overline{\\mathbb{D}}$，且包含 $\\mathbb{D}$；$\\overline{\\Omega}$ 紧、$\\overline{\\mathbb{D}}$ Hausdorff，连续双射从紧空间到 Hausdorff 空间自动是同胚。（子引理）□\n\n**缺口（已精确到一条定理）：Carathéodory–Osgood 定理。** 设 $\\Omega$ 是 Jordan 区域（$\\partial\\Omega$ 是 Jordan 曲线），$f:\\Omega\\to\\mathbb{D}$ 是 Riemann 映射。则：(a) $f$ 连续延拓到 $\\overline{\\Omega}$（Carathéodory 1913）；(b) 延拓在 $\\partial\\Omega$ 上单射（Osgood 1900 / Carathéodory）。两条都不可省：只有 (a) 时边界可能把两个点粘在一起；只有「单连通」而没有 Jordan 条件时连 (a) 都不成立（环域上的反例：延拓后的边界行为由两个边界分量共同决定）。\n\n**为什么本图补不了。** (a) 的标准证明要用 crosscut / prime end（Carathéodory 拓扑），或境界的局部连通性加调和测度；(b) 要用 Jordan 曲线定理与 crosscut 论证。本图**没有** Carathéodory、crosscut、prime end、Jordan 曲线定理的节点；`thm.schwarz-reflection` 只处理解析弧（圆、直线）的反射，不能覆盖一般 Jordan 曲线。**多边形区域**是例外：此时 (a)(b) 可用 Schwarz 反射逐边拼接证明（见 `thm.schwarz-christoffel` 的注），但那只覆盖折线边界，不是本条的一般情形。因此本条保持 `status: \'skeleton\'`，缺口就是这一条定理。\n\n**⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_{k}$ 对应多边形顶点」提供合法性。\n\n**📌 记号与入边。** 入边（原无显式 id，靠 `src/core/graph.js` 自动分配 `e102.implication`）只记录了「径向极限、连续、同胚」的路线；其中第一步「径向极限存在」正是 Carathéodory 定理，不是初等估计——不要把它当作已证。',
       refs: [
         '王晓光《复变函数》· 边界对应（介绍）',
         'Ahlfors, Complex Analysis (3rd ed.), Ch. 6 · Conformal Mapping（boundary correspondence）',
@@ -86671,7 +86714,7 @@ window.MG = window.MG || {};
         '',
         '并且两族互不重合：可定向与不可定向的闭曲面（除球面外）永不**同胚**。',
       ].join('\n'),
-      notes: '⚠ 本节点保持 status: skeleton。三步里第 (1) 步 Radó 与第 (2) 步组合归类都未证，第 (3) 步完整。**注意**：`prop.eulerchar-genus` 已不再依赖本条（它的注改走 Radó + 引理 D 的初等路线），所以本条不阻塞那条命题；反过来，本条也不把 `prop.eulerchar-genus` 当输入。\n\n**三步的结构。** (1) Radó：闭曲面可三角剖分（`thm.rado`，skeleton）。(2) 组合归类：任意三角剖分经有限步操作化成标准形。(3) 标准形上读不变量：可定向性与 $\\chi$ 给出 $(g)$ 或 $(k)$，且互不同胚。\n\n**第 (1) 步（引用，未证）。** Radó 定理：紧曲面存在有限三角剖分。`thm.rado` 仍是 skeleton，本图没有它的证明；这里只把它当输入，并明确它没有把「任意两个剖分组合等价」一起给出——后者正是第 (2) 步要做的事。\n\n**第 (2) 步：精确陈述（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\\ge 0$）或 $c_{1}c_{1}\\cdots c_{k}c_{k}$（不可定向，$k\\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心，本图没有证明它。**\n\n**对第 (2) 步的三项核查（都不完整，这正是缺口）。** - **$2$–$2$ 翻边**：本图只写「一条边两侧的两个三角形换成另两个三角形，顶点集不变」。这只在两张三角形沿一条边粘成一个四边形、且四个顶点互不相同时成立；若两张三角形还共用另一个顶点（四边形退化）、或第四顶点与第一顶点重合（结果是两个三角形而非四边形），必须先单独讨论。本图没有这些前提与退化情形。 - **切-粘**：本图只说「沿闭曲线剪开再粘回」。要在三角剖分内部做，闭曲线须先变成单纯闭曲线（加细 $+$ 一般位置，正规同位），剪开后要说明得到的是新的三角剖分、粘回保持同胚型；这两步本图都没写。 - **终止性**：本图原句「配对边数严格下降」**不成立**：$2$–$2$ 翻边不改边数，切-粘可能增加边数。真正需要的是一个良序测度（例如按多边形边数归纳，Munkres 的证明分有限种情形；或用「边数 $+$ 顶点数」的字典序），并逐操作验证它下降。本图没给测度，也没验证。 - **另缺一整步**：把剖分化成「一个多边形」之前要先做顶点归约（所有顶点并成一个），本图的操作清单没有这一条，而它正是退化情形最多的一步。\n\n**第 (3) 步（完整）。** 标准形 $4g$ 边形的中心扇形剖分：$V=2$（中心与一个边界顶点类）、$E=6g$、$F=4g$，故 $\\chi=2-2g$；$2k$ 边形：$V=2$、$E=3k$、$F=2k$，故 $\\chi=2-k$。两族互不同胚：可定向性不同（一侧可定向、一侧不可定向）；同族内 $\\chi$ 不同，由 $\\chi$ 的拓扑不变性（`thm.euler-characteristic`）不同胚。注意这里的「标准形」是引理 K 的**结论**，不是定义；不要用「闭曲面按定义就是标准形」循环。\n\n**为什么本条不能像 `prop.eulerchar-genus` 那样绕开。** 那条命题只要 $\\chi=2-2g$，可以用引理 D 直接算 $H_{2}$，不需要分类；本条要的是「任意剖分都能化成标准形」这一**结构定理**，它是分类本身，不能由同调的数值不变量推出。绕过它的代价正是把分类定理当假设。\n\n⭐ 判据（在引理 K 成立的前提下）：两个闭曲面同胚 $\\iff$ 可定向性相同且 $\\chi$ 相同（等价地：同为 $S^{2}$，或同为 $g$ 个环面的连通和且 $g$ 相同，或同为 $k$ 个 $\\mathbb{RP}^{2}$ 的连通和且 $k$ 相同）。$S^{2}$ 与 $\\mathbb{RP}^{2}$ 的 $\\chi$ 都是 $2$ 与 $1$，所以单看 $\\chi$ 不够，必须配可定向性。\n\n**缺口与建议。** 缺口 $=$ Radó（`thm.rado`）$+$ 引理 K（组合归类）。若下一轮要补，建议单独立节点：组合归类引理（含顶点归约与终止性测度）、$2$–$2$ 翻边的退化情形、单纯闭曲线的正规同位。本图现有的 `thm.rado`、`def.triangulation`、`def.simplicial-complex`、`thm.euler-characteristic` 可直接用。',
+      notes: '⚠ 本节点保持 status: skeleton。三步里第 (1) 步 Radó 与第 (2) 步组合归类都未证，第 (3) 步完整。**注意**：`prop.eulerchar-genus` 已不再依赖本条（它的注改走 Radó + 引理 D 的初等路线），所以本条不阻塞那条命题；反过来，本条也不把 `prop.eulerchar-genus` 当输入。\n\n**三步的结构。** (1) Radó：闭曲面可三角剖分（`thm.rado`，skeleton）。(2) 组合归类：任意三角剖分经有限步操作化成标准形。(3) 标准形上读不变量：可定向性与 $\\chi$ 给出 $(g)$ 或 $(k)$，且互不同胚。\n\n**第 (1) 步（引用，未证）。** Radó 定理：紧曲面存在有限三角剖分。`thm.rado` 仍是 skeleton，本图没有它的证明；这里只把它当输入，并明确它没有把「任意两个剖分组合等价」一起给出——后者正是第 (2) 步要做的事。\n\n**第 (2) 步：陈述与未完成核查（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\\ge 0$）或 $c_{1}c_{1}\\cdots c_{k}c_{k}$（不可定向，$k\\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心，本图没有证明它。**\n\n**对第 (2) 步的三项核查（都不完整，这正是缺口）。** - **$2$–$2$ 翻边**：本图只写「一条边两侧的两个三角形换成另两个三角形，顶点集不变」。这只在两张三角形沿一条边粘成一个四边形、且四个顶点互不相同时成立；若两张三角形还共用另一个顶点（四边形退化）、或第四顶点与第一顶点重合（结果是两个三角形而非四边形），必须先单独讨论。本图没有这些前提与退化情形。 - **切-粘**：本图只说「沿闭曲线剪开再粘回」。要在三角剖分内部做，闭曲线须先变成单纯闭曲线（加细 $+$ 一般位置，正规同位），剪开后要说明得到的是新的三角剖分、粘回保持同胚型；这两步本图都没写。 - **终止性**：本图原句「配对边数严格下降」**不成立**：$2$–$2$ 翻边不改边数，切-粘可能增加边数。真正需要的是一个良序测度（例如按多边形边数归纳，Munkres 的证明分有限种情形；或用「边数 $+$ 顶点数」的字典序），并逐操作验证它下降。本图没给测度，也没验证。 - **顶点归约没写构造**：把剖分化成「一个多边形」之前要先把所有顶点并成一个（操作清单里的 (iv)）；这一步本图只列了名字、没写构造，而它正是退化情形最多的一步。\n\n**第 (3) 步（完整）。** 标准形 $4g$ 边形的中心扇形剖分：$V=2$（中心与一个边界顶点类）、$E=6g$、$F=4g$，故 $\\chi=2-2g$；$2k$ 边形：$V=2$、$E=3k$、$F=2k$，故 $\\chi=2-k$。两族互不同胚：可定向性不同（一侧可定向、一侧不可定向）；同族内 $\\chi$ 不同，由 $\\chi$ 的拓扑不变性（`thm.euler-characteristic`）不同胚。注意这里的「标准形」是引理 K 的**结论**，不是定义；不要用「闭曲面按定义就是标准形」循环。\n\n**为什么本条不能像 `prop.eulerchar-genus` 那样绕开。** 那条命题只要 $\\chi=2-2g$，可以用引理 D 直接算 $H_{2}$，不需要分类；本条要的是「任意剖分都能化成标准形」这一**结构定理**，它是分类本身，不能由同调的数值不变量推出。绕过它的代价正是把分类定理当假设。\n\n⭐ 判据（在引理 K 成立的前提下）：两个闭曲面同胚 $\\iff$ 可定向性相同且 $\\chi$ 相同（等价地：同为 $S^{2}$，或同为 $g$ 个环面的连通和且 $g$ 相同，或同为 $k$ 个 $\\mathbb{RP}^{2}$ 的连通和且 $k$ 相同）。$S^{2}$ 与 $\\mathbb{RP}^{2}$ 的 $\\chi$ 都是 $2$ 与 $1$，所以单看 $\\chi$ 不够，必须配可定向性。\n\n**缺口与建议。** 缺口 $=$ Radó（`thm.rado`）$+$ 引理 K（组合归类）。若下一轮要补，建议单独立节点：组合归类引理（含顶点归约与终止性测度）、$2$–$2$ 翻边的退化情形、单纯闭曲线的正规同位。本图现有的 `thm.rado`、`def.triangulation`、`def.simplicial-complex`、`thm.euler-characteristic` 可直接用。',
       refs: [
         'Munkres, Topology, Ch. 12（Classification of Surfaces）',
         'Massey, A Basic Course in Algebraic Topology, Ch. 1',
@@ -86723,7 +86766,7 @@ window.MG = window.MG || {};
         '',
         '等价的常用写法：每个紧连通曲面都同胚于某个**有限**单纯复形的几何实现。',
       ].join('\n'),
-      notes: '⚠ 本节点保持 status: skeleton。Radó 定理有两条常用路线，本图都没走完；下面把两条路线写到「只差哪些具体引理」的程度，并纠正旧注里两处不准确的表述。\n\n**定理。** 紧曲面可三角剖分（等价地：紧拓扑 $2$-流形有有限单纯剖分）；可定向时还有相容的复结构。等价形式的准确范围见下面的维数对照。\n\n**路线 A（复分析）。** 可定向紧曲面 $\\rightarrow$ 复结构（Riemann 面）$\\rightarrow$ 非常数亚纯函数存在 $\\rightarrow$ 亚纯函数是到 $\\mathbb{CP}^{1}$ 的分支覆盖 $\\rightarrow$ 把 $\\mathbb{CP}^{1}$ 上一张剖分拉回并加细（分支值取作顶点；分支点附近局部模型 $z\\mapsto z^{m}$，按扇形细分）$\\rightarrow$ 得有限剖分。缺口：(i) 复结构存在性（单值化定理 / Riemann–Roch 的曲面情形）；(ii) 亚纯函数存在性（Riemann–Roch，或 Runge 逼近 $+$ Mittag-Leffler）；(iii) 分支覆盖拉回的加细与一致性。**注意**：这里的分支覆盖 $z\\mapsto z^{m}$ 与下面不可定向情形用的定向双覆盖是两回事。\n\n**路线 B（微分拓扑）。** 光滑结构存在（Whitehead：$C^{1}$ 结构即够，或直接做 $C^{\\infty}$）$\\rightarrow$ Morse 函数 $\\rightarrow$ 柄分解 $\\rightarrow$ 每个柄是 $0/1/2$-柄，按粘贴顺序给 CW 剖分 $\\rightarrow$ 三角化每个柄并细分到相容 $\\rightarrow$ 得剖分。缺口：(iv) 光滑结构存在性；(v) Morse 函数存在性（需要 $C^{2}$ 逼近）；(vi) 柄分解与三角剖分的相容（$1$-柄的处理、柄与柄之间的粘合）。\n\n**不可定向情形是否走可定向双覆盖？** 方向对，但**不是自动的**。设 $p:\\widetilde{S}\\to S$ 是可定向双覆盖，则 $S$ 上对应一个自由 $\\mathbb{Z}/2$-作用（无不动点，纤维两点）。即使 $\\widetilde{S}$ 已有三角剖分，要把剖分搬到 $S$，需要这个作用**等变地**作用在剖分上：即存在 $\\widetilde{S}$ 的三角剖分使对合是单纯自同构。这由等变三角剖分引理给出——重心重分两次即可：第一次让对合把单形映到单形，第二次让重心落在单形内部而成为顶点，此时对合在重心重分上是单纯的（更一般的定理见 Illman）。商复形 $\\widetilde{S}/(\\mathbb{Z}/2)$ 才是 $S$ 的三角剖分：商映射在每个开单形上是双射，粘合由单纯自同构给出。旧注写「分支点处用局部模型 $z\\mapsto z^{2}$」——**这是错的**：定向双覆盖无分支点（作用自由），$z\\mapsto z^{2}$ 是路线 A 里亚纯函数分支覆盖的局部模型，两者不能混用；混用会让人误以为取商是显然的。\n\n**为什么只到维数 2。** $\\dim\\le 2$：Radó（1925）。$\\dim=3$：Moise（1952）。$\\dim=4$：Freedman（1982，拓扑流形可三角剖分；同一维数的光滑/PL 情形有 $E_{8}$ 反例）。$\\dim\\ge 5$：Kirby–Siebenmann（1969）——存在不可三角化的紧拓扑流形。所以「紧流形都可三角剖分」只在小维数成立，本条不是一般定理的推论。\n\n**两个易混。** (a) Radó 的「三角剖分存在」不等于「任意两个剖分都组合等价」——后者是 Hauptvermutung（$\\dim\\ge 4$ 假，$\\dim=2$ 真），正是 `thm.classification-surfaces` 第 (2) 步要做的事。(b) 复结构与光滑结构的存在性在 $\\dim=2$ 等价（单值化），在 $\\dim\\ge 4$ 不等价。\n\n**缺口清单。** (i) 复结构存在性（单值化定理 / Riemann–Roch）；(ii) 亚纯函数存在性；(iii) 分支覆盖拉回的加细；(iv) 自由对合的等变三角剖分引理；(v) 光滑结构存在性 $+$ Morse $+$ 柄分解（路线 B）。本图没有这些节点；本条因此保持 skeleton。若下一轮补，建议先立两个节点：「等变三角剖分（重心重分两次）」——它可顺带救活不可定向情形；「单值化定理」——它是路线 A 的总闸。',
+      notes: '⚠ 本节点保持 status: skeleton。Radó 定理有两条常用路线，本图都没走完；下面把两条路线写到「只差哪些具体引理」的程度，并纠正旧注里两处不准确的表述。\n\n**定理。** 紧曲面可三角剖分（等价地：紧拓扑 $2$-流形有有限单纯剖分）；可定向时还有相容的复结构。等价形式的准确范围见下面的维数对照。\n\n**带边界情形。** 陈述写「可带边界」，但下面两条路线都只处理**闭**曲面 —— 这不是自动的。标准办法是**沿边界加倍**：取两份 $S$，沿 $\\partial S$ 用恒等映射粘起来，得闭曲面 $D(S)$；对 $D(S)$ 用下述任一路线得剖分，再限制回 $S$（前提是剖分取得使 $\\partial S$ 落在 $1$-骨架里，见缺口 (vi)）。也可把每个边界圆盘粘成一点得闭曲面。\n\n**路线 A（复分析）。** 可定向紧曲面 $\\rightarrow$ 复结构（Riemann 面）$\\rightarrow$ 非常数亚纯函数存在 $\\rightarrow$ 亚纯函数是到 $\\mathbb{CP}^{1}$ 的分支覆盖 $\\rightarrow$ 把 $\\mathbb{CP}^{1}$ 上一张剖分拉回并加细（分支值取作顶点；分支点附近局部模型 $z\\mapsto z^{m}$，按扇形细分）$\\rightarrow$ 得有限剖分。缺口：(i) 复结构存在性（单值化定理 / Riemann–Roch 的曲面情形）；(ii) 亚纯函数存在性（Riemann–Roch，或 Runge 逼近 $+$ Mittag-Leffler）；(iii) 分支覆盖拉回的加细与一致性。**注意**：这里的分支覆盖 $z\\mapsto z^{m}$ 与下面不可定向情形用的定向双覆盖是两回事。\n\n**路线 B（微分拓扑）。** 光滑结构存在（Whitehead：$C^{1}$ 结构即够，或直接做 $C^{\\infty}$）$\\rightarrow$ Morse 函数 $\\rightarrow$ 柄分解 $\\rightarrow$ 每个柄是 $0/1/2$-柄，按粘贴顺序给 CW 剖分 $\\rightarrow$ 三角化每个柄并细分到相容 $\\rightarrow$ 得剖分。缺口：(iv) 光滑结构存在性；(v) Morse 函数存在性（需要 $C^{2}$ 逼近）；(vi) 柄分解与三角剖分的相容（$1$-柄的处理、柄与柄之间的粘合）。\n\n**不可定向情形是否走可定向双覆盖？** 方向对，但**不是自动的**。设 $p:\\widetilde{S}\\to S$ 是可定向双覆盖，则 $S$ 上对应一个自由 $\\mathbb{Z}/2$-作用（无不动点，纤维两点）。即使 $\\widetilde{S}$ 已有三角剖分，要把剖分搬到 $S$，需要这个作用**等变地**作用在剖分上：即存在 $\\widetilde{S}$ 的三角剖分使对合是单纯自同构。这由等变三角剖分引理给出——重心重分两次即可：第一次让对合把单形映到单形，第二次让重心落在单形内部而成为顶点，此时对合在重心重分上是单纯的（更一般的定理见 Illman）。商复形 $\\widetilde{S}/(\\mathbb{Z}/2)$ 才是 $S$ 的三角剖分：商映射在每个开单形上是双射，粘合由单纯自同构给出。旧注写「分支点处用局部模型 $z\\mapsto z^{2}$」——**这是错的**：定向双覆盖无分支点（作用自由），$z\\mapsto z^{2}$ 是路线 A 里亚纯函数分支覆盖的局部模型，两者不能混用；混用会让人误以为取商是显然的。\n\n**为什么只到维数 2。** $\\dim\\le 2$：Radó（1925）。$\\dim=3$：Moise（1952）。$\\dim=4$：Freedman（1982，拓扑流形可三角剖分；同一维数的光滑/PL 情形有 $E_{8}$ 反例）。$\\dim\\ge 5$：Kirby–Siebenmann（1969）——存在不可三角化的紧拓扑流形。所以「紧流形都可三角剖分」只在小维数成立，本条不是一般定理的推论。\n\n**两个易混。** (a) Radó 的「三角剖分存在」不等于「任意两个剖分都组合等价」——后者是 Hauptvermutung（$\\dim\\ge 4$ 假，$\\dim=2$ 真），正是 `thm.classification-surfaces` 第 (2) 步要做的事。(b) 复结构与光滑结构的存在性在 $\\dim=2$ 等价（单值化），在 $\\dim\\ge 4$ 不等价。\n\n**缺口清单。** (i) 复结构存在性（单值化定理 / Riemann–Roch）；(ii) 亚纯函数存在性；(iii) 分支覆盖拉回的加细；(iv) 自由对合的等变三角剖分引理；(v) 光滑结构存在性 $+$ Morse $+$ 柄分解（路线 B）；(vi) 带边界情形：沿边界加倍得闭曲面，且剖分可取得让边界落在 $1$-骨架里（加倍对合的等变性）。本图没有这些节点；本条因此保持 skeleton。若下一轮补，建议先立两个节点：「等变三角剖分（重心重分两次）」——它可顺带救活不可定向情形；「单值化定理」——它是路线 A 的总闸。',
       refs: [
         'Radó, Über den Begriff der Riemannschen Fläche (1925)',
         'Moise, Affine structures in 3-manifolds (1952)',
@@ -86905,7 +86948,7 @@ window.MG = window.MG || {};
      ② 例子层：球面 / 环面 / 射影平面 / 克莱因瓶 —— E4 点名缺的四个，
         分类定理的三种标准形在图上连个指得着的对象都没有。
 
-   ⚠️ `prop.eulerchar-nonorientable` 已完整（标准形计数 + 连通和归纳，2026-11-07）；`prop.eulerchar-genus` 仍标 status: skeleton，但证明已改走「Radó + 引理 D（$H_2 \cong \mathbb{Z}$）」，缺口只剩 Radó 三角剖分存在性（thm.rado，skeleton）与拓扑可定向性定义节点缺失 —— **不再依赖 thm.classification-surfaces**（2026-11-07 第 18 批）。
+   ⚠️ `prop.eulerchar-nonorientable` 已完整（标准形计数 + 连通和归纳，2026-11-07）；`prop.eulerchar-genus` 也已完整（2026-11-07 第 19 批，status 已删）：证明走「Radó + 引理 D（$H_2 \cong \mathbb{Z}$）」，唯一外部输入是 `thm.rado`（skeleton），拓扑可定向性见 `def.topological-orientability` —— **不依赖 thm.classification-surfaces**。
    ========================================================================== */
 (window.MG.packs = window.MG.packs || []).push({
   name: '曲面地形（三）：Euler 示性数与四个标准例子',
@@ -86919,7 +86962,6 @@ window.MG = window.MG || {};
       title: '闭可定向曲面：$\\chi = 2 - 2g$',
       regions: ['topology'],
       tags: ['命题', '拓扑', '曲面', '同调'],
-      status: 'skeleton',
       statement: [
         '设 $S$ 是**闭可定向曲面**，亏格 $g = \\tfrac{1}{2}\\operatorname{rank} H_{1}(S;\\mathbb{Z})$（`def.genus`）。则',
         '',
@@ -86959,6 +87001,33 @@ window.MG = window.MG || {};
     },
 
     /* ---------------------------------------------------------- 四个标准例子 */
+    {
+      id: 'def.topological-orientability',
+      cluster: 'topology.surfaces',
+      type: 'definition',
+      label: '拓扑可定向性',
+      title: '定义：拓扑流形的可定向性（定向图册 / 定向双覆盖）',
+      regions: ['topology'],
+      tags: ['定义', '拓扑', '曲面', '可定向性'],
+      statement: [
+        '设 $M$ 是 $n$ 维拓扑流形（$n\\ge 1$）。称 $M$ 是**可定向的**，若存在一组图卡 $(U_{\\alpha},\\varphi_{\\alpha})$ 覆盖 $M$，使得任意两个图卡之间的转移映射',
+        '',
+        '$$\\varphi_{\\beta}\\circ\\varphi_{\\alpha}^{-1}:\\ \\varphi_{\\alpha}(U_{\\alpha}\\cap U_{\\beta})\\longrightarrow \\varphi_{\\beta}(U_{\\alpha}\\cap U_{\\beta})$$',
+        '',
+        '都**保向**（$\\mathbb{R}^{n}$ 取标准定向；保向的精确定义见注）。这样的图册叫**定向图册**。不存在定向图册时称 $M$ **不可定向**。',
+      ].join('\n'),
+      notes: [
+        '**一、保向是什么意思。** $\\mathbb{R}^{n}$ 的标准定向由局部同调的标准生成元给出：对 $x\\in\\mathbb{R}^{n}$，$H_{n}(\\mathbb{R}^{n},\\mathbb{R}^{n}\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$，取定一个生成元作为「正定向」。设 $h:V\\to W$ 是 $\\mathbb{R}^{n}$ 两个开集之间的同胚，$x\\in V$。$h$ 在 $x$ 处**保向**，指诱导同构 $H_{n}(V,V\\setminus\\{x\\})\\to H_{n}(W,W\\setminus\\{h(x)\\})$ 把标准生成元送到标准生成元；否则称**反向**。若 $V$ 连通，则「在一点保向」蕴含「处处保向」（局部同调沿连通性连续变化，只能取两个值）。$n=1$ 时这就是通常的单调递增；$n=2$ 时就是通常的保向同胚。',
+        '**二、定向双覆盖。** 令 $\\widehat{M}$ 为所有二元组 $(x,\\mathfrak{o}_{x})$，其中 $x\\in M$、$\\mathfrak{o}_{x}$ 是 $T_{x}M$ 的「局部定向」——即 $x$ 的某个图卡给出的 $\\mathbb{R}^{n}$ 标准定向在该图卡下的拉回，两个图卡给同一 $\\mathfrak{o}_{x}$ 当且仅当转移映射在 $x$ 处保向。用图卡把 $\\widehat{M}$ 局部写成 $U\\times\\{\\pm1\\}$，即得拓扑；投影 $p:\\widehat{M}\\to M$ 是二重覆叠，叫**定向双覆盖**。$M$ 可定向 $\\iff$ $p$ 平凡 $\\iff$ $p$ 有连续截面 $\\iff$ $\\widehat{M}$ 恰有两个连通分支（$M$ 连通时）。不可定向时 $\\widehat{M}$ 连通，且 $\\mathbb{Z}/2$ 自由地作用在它上面（无不动点）。',
+        '**三、同调刻画。** 设 $M$ 是闭连通 $n$-流形。对任意 $x$，$H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$；自然映射 $H_{n}(M;\\mathbb{Z})\\to H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})$ 的像只能是 $0$ 或 $\\mathbb{Z}$（Hatcher §3.3）。$M$ 可定向 $\\iff$ 这个像是 $\\mathbb{Z}$（等价地：存在**基本类** $[M]\\in H_{n}(M;\\mathbb{Z})$，它在每个 $x$ 处都给出局部定向）。不可定向时 $H_{n}(M;\\mathbb{Z})=0$。证明思路：用定向双覆盖的转移函数粘一个「局部同调系数」的常层，可定向性正是这个局部系统平凡；基本类的存在性与截面的存在性对偶。',
+        '**四、曲面情形（本图主要用途）。** 对闭曲面 $S$：$S$ 可定向 $\\iff$ $S$ 不含 Möbius 带作为子空间 $\\iff$ $S$ 有三角剖分使所有 $2$-单形可**一致定向**（每条内边两侧诱导的边定向相反，`prop.eulerchar-genus` 的引理 D 用的正是这个形式）$\\iff$ $H_{2}(S;\\mathbb{Z})\\cong\\mathbb{Z}$。其中「一致定向的三角剖分」与定向图册的等价，就是引理 D 之前那一步：把每个单形放进图卡再用转移保向拼接。',
+        '**五、例子。** $S^{2}$、$T^{2}$ 及一切可定向闭曲面可定向；$\\mathbb{RP}^{2}$、克莱因瓶、Möbius 带不可定向。定向双覆盖的读数：$\\mathbb{RP}^{2}$ 的定向双覆盖是 $S^{2}$（对径作用），克莱因瓶的定向双覆盖是 $T^{2}$，Möbius 带的定向双覆盖是平环。这些例子说明「不可定向」不是「没有局部定向」，而是「局部定向无法整体一致地选出来」。',
+        '**六、与光滑定义的关系。** `def.orientable-manifold` 是光滑版本：转移映射的 Jacobi 行列式为正。光滑流形若按光滑意义可定向，则按本条可定向（光滑图册就是定向图册）；反之，光滑流形按本条可定向时，可用单位分解把局部 $n$-形式粘成处处非零的 $n$-形式（`prop.volume-form-orientation`），故两种定义在光滑流形上一致。`def.orientable-surface` 是 $\\mathbb{R}^{3}$ 中的外在版本（存在连续单位法向量场），它只覆盖可嵌入 $\\mathbb{R}^{3}$ 的曲面（例如 $\\mathbb{RP}^{2}$ 不可嵌入，故不能被它描述）。本条不要求光滑，适用于任意拓扑曲面。',
+        '**七、用途。** ①`prop.eulerchar-genus` 的引理 D：用定向图册给三角剖分的 $2$-单形一致定向，从而 $H_{2}\\cong\\mathbb{Z}$；②`thm.rado` 的不可定向情形：走定向双覆盖 $\\widehat{S}\\to S$（自由 $\\mathbb{Z}/2$-作用、无分支点），对 $\\widehat{S}$ 用可定向的三角剖分，再取等变加细让商也是剖分（等变三角剖分引理，本图无节点）；③`thm.classification-surfaces`：可定向性是同胚不变量，与 $\\chi$ 一起区分标准形。',
+        '⚠ **两个常见混淆。** ①「不可定向」不等于「不可三角剖分」：Radó 说每个紧曲面都可三角剖分，$\\mathbb{RP}^{2}$ 就有（正二十面体对径粘合）。②「定向双覆盖」不是分支覆盖：它是自由二重覆叠，没有分支点；$z\\mapsto z^{2}$ 那种带分支点的局部模型属于亚纯函数的分支覆盖（`thm.rado` 的复分析路线），不要与定向双覆盖混为一谈。',
+      ].join('\n\n'),
+      refs: ['Hatcher, Algebraic Topology, §3.3', 'Munkres, Topology, Ch. 12', 'Milnor–Stasheff, Characteristic Classes, §9'],
+    },
     {
       id: 'ex.sphere',
       cluster: 'topology.surfaces',
@@ -87185,6 +87254,8 @@ window.MG = window.MG || {};
       usedBy: 'ex.klein-bottle',
       note: '「$k = 2$、$\\chi = 0$」同上。',
     },
+    { id: 'def-link.toporient-eg', kind: 'definition', definition: 'def.topological-orientability', usedBy: 'prop.eulerchar-genus', note: '引理 D 用定向图册给 2-单形一致定向' },
+    { id: 'def-link.toporient-nonor', kind: 'definition', definition: 'def.topological-orientability', usedBy: 'prop.eulerchar-nonorientable', note: '不可定向=不存在定向图册；标准形 $k$ 个 $\\mathbb{RP}^{2}$ 的连通和' },
   ],
 });
 

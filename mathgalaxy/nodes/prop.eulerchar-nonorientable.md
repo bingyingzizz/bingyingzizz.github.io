@@ -11,7 +11,7 @@ $$\chi(S) = 2 - k .$$
 - 被 [`ex.projective-plane`](../nodes/ex.projective-plane.md) 射影平面 RP² 用
 - 被 [`ex.klein-bottle`](../nodes/ex.klein-bottle.md) 克莱因瓶 用
 
-- …另有出边，续页见 [nodes/prop.eulerchar-nonorientable.3.md](./prop.eulerchar-nonorientable.3.md)
+- …另有出边，续页见 [nodes/prop.eulerchar-nonorientable.4.md](./prop.eulerchar-nonorientable.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.eulerchar-nonorientable.2.md](./prop.eulerchar-nonorientable.2.md)

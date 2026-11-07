@@ -5,4 +5,6 @@
 
 - 重心重分 | 重心剖分 → def.barycentric-subdivision
 
+- 拓扑可定向性 | 曲面的可定向性 → def.topological-orientability
+
 见 `../../alias.md`。
