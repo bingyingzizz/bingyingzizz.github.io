@@ -8,4 +8,4 @@ The assignment $\delta : \mathcal{C} \to \widehat{\mathcal{C}}$, $X \mapsto h_X 
 ## Statement · **reviewed**
 The correspondence
 
-> 续见 nodes/prop.yoneda-embedding.en.3.md
+> continued in nodes/prop.yoneda-embedding.en.3.md

@@ -13,4 +13,4 @@ $$
 ## Notes · **reviewed**
 An equivalent form: $\|f\|_\infty \le M \iff |f(x)| \le M$ holds for a.e. $x$.
 
-> 续见 nodes/def.essential-sup.en.4.md
+> continued in nodes/def.essential-sup.en.4.md

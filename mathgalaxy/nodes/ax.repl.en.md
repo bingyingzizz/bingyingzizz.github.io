@@ -13,4 +13,4 @@ $$\forall p [ \forall x\forall y\forall z ( \varphi(x,y,p) \wedge  \varphi(x,z,p
 
 It guarantees that "replacement" never leaves the set-theoretic universe: the image $B$ is a set too.
 
-> 续见 nodes/ax.repl.en.2.md
+> continued in nodes/ax.repl.en.2.md

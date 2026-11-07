@@ -10,4 +10,4 @@ English entry · root `../`
 ## Notes · **reviewed**
 The proof is the standard pattern "rectangles first, then $\sigma$-algebras". Let
 
-> 续见 nodes/prop.section-measurable.en.4.md
+> continued in nodes/prop.section-measurable.en.4.md

@@ -17,4 +17,4 @@ $$\nu( \bigsqcup_j E_j ) = \sum_j \nu(E_j)$$
 ## Notes · **reviewed**
 ⚠ Compared with a signed measure, a complex measure is **automatically finite** (its values lie in $\mathbb{C}$, no $\pm \infty$ is involved), and the series in countable additivity **converges absolutely automatically**.
 
-> 续见 nodes/def.complex-measure.en.4.md
+> continued in nodes/def.complex-measure.en.4.md

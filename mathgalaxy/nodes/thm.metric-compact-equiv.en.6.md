@@ -8,4 +8,4 @@ So "sequentially compact $\implies$ totally bounded $\implies$ compact" and "com
 
 ⚠ In a general topological space **both implications fail**:
 
-> 续见 nodes/thm.metric-compact-equiv.en.7.md
+> continued in nodes/thm.metric-compact-equiv.en.7.md

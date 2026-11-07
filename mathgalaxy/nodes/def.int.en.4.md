@@ -11,4 +11,4 @@ By-product: $\mathbb{Z}$ has an additive zero $[0, 0] = 0$ and additive inverses
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> 续见 nodes/def.int.en.5.md
+> continued in nodes/def.int.en.5.md

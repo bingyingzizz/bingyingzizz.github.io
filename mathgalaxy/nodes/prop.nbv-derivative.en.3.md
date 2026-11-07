@@ -12,4 +12,4 @@ $\cdot$ $\mu_F \perp  m$ means the absolutely continuous part vanishes, that is 
 
 $\cdot$ $\mu_F \ll  m$ means $\lambda = 0$, so $F(x) = \mu_F((-\infty,x]) = \int_{-\infty}^x f\cdot dm = \int_{-\infty}^x F'\cdot dt$.
 
-> 续见 nodes/prop.nbv-derivative.en.4.md
+> continued in nodes/prop.nbv-derivative.en.4.md

@@ -13,4 +13,4 @@ $\operatorname{dom}$ is defined only for functions, so the assertion says: "ther
 
 $\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$\
 
-> 续见 nodes/ax.choice.en.2.md
+> continued in nodes/ax.choice.en.2.md

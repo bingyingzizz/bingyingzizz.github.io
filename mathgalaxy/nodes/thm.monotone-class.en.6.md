@@ -6,4 +6,4 @@ English entry · root `../`
 
 Hence $\mathfrak{m}$ is closed under $\cup$ and complements, and is a monotone class $\implies$ $\mathfrak{m}$ is a $\sigma$-algebra $\implies \mathcal{M}(\mathcal{E}) \subseteq \mathfrak{m}(\mathcal{E})$; the reverse inclusion always holds, so the two sides are equal. (One needs $\mathcal{E} \ne \emptyset$, otherwise $\mathfrak{m}(\mathcal{E}) = \{\emptyset \}$.)
 
-> 续见 nodes/thm.monotone-class.en.7.md
+> continued in nodes/thm.monotone-class.en.7.md

@@ -7,4 +7,4 @@ In an abelian category one says **injective / surjective** rather than monomorph
 
 Examples: $A\text{-}\mathbf{Mod}$ is abelian; so is $\mathbf{Ab}(\mathcal{T})$ for a topos; so is $\mathbf{AbCHaus}$. But $\mathbf{AbTop}$ is **not** (the identity map $\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ is not strict), and neither is $\mathbf{AbHaus}$.
 
-> 续见 nodes/def.abelian-category.en.8.md
+> continued in nodes/def.abelian-category.en.8.md

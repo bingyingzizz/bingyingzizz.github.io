@@ -10,4 +10,4 @@ On $\mathbb{N} \times \mathbb{N}$ define
 
 $$(a, b) \sim (c, d) :\iff a + d = b + c$$
 
-> 续见 nodes/def.int.en.3.md
+> continued in nodes/def.int.en.3.md

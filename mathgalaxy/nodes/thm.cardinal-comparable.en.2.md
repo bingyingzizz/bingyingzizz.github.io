@@ -5,4 +5,4 @@ English entry · root `../`
 ## Abstract · **reviewed**
 Assuming the axiom of choice, any two sets $A$, $B$ satisfy $\#A \le \#B$ or $\#B \le \#A$, that is, any two cardinals are comparable. This is the licence for ordering cardinals at all: without it even "$A$ is bigger than $B$" can be meaningless. The proof runs through the well-ordering theorem: well-order both sets, compare the corresponding ordinals, and read off an injection in one direction. Without AC there really are incomparable cardinals.
 
-> 续见 nodes/thm.cardinal-comparable.en.3.md
+> continued in nodes/thm.cardinal-comparable.en.3.md

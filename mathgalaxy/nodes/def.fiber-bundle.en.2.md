@@ -10,4 +10,4 @@ that is, $\Phi$ commutes with the projection. Such a $\Phi$ is called a **local 
 
 **Transition functions**: two trivializations over the same open cover necessarily differ over their overlap by a fiberwise self-homeomorphism
 
-> 续见 nodes/def.fiber-bundle.en.3.md
+> continued in nodes/def.fiber-bundle.en.3.md

@@ -11,4 +11,4 @@ There exists an "inductive set" — a set containing $\emptyset$ and closed unde
 
 $$\exists I [ \emptyset \in I \wedge  \forall x ( x \in I \to x \cup \{ x \} \in I ) ]$$
 
-> 续见 nodes/ax.inf.en.2.md
+> continued in nodes/ax.inf.en.2.md

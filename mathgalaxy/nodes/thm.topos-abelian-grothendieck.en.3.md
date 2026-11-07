@@ -4,4 +4,4 @@ English entry · root `../`
 
 tive.
 
-> 续见 nodes/thm.topos-abelian-grothendieck.en.4.md
+> continued in nodes/thm.topos-abelian-grothendieck.en.4.md

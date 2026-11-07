@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 9 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
-> 续见 nodes/thm.cardinal-comparable.en.2.md
+> continued in nodes/thm.cardinal-comparable.en.2.md

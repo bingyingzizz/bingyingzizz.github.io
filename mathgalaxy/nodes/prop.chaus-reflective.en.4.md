@@ -11,4 +11,4 @@ and then take the closure $\beta X := \overline{e_{X}(X)}$. The cube is compact 
 
 ⭐ **$e_{X}$ is injective $\iff$ $X$ is a Tychonoff ($T_{3.5}$) space** — that is, there are enough continuous functions to separate distinct points. So for a general topological space, $\beta X$ is the compactification obtained after collecting all the information that continuous functions can see.
 
-> 续见 nodes/prop.chaus-reflective.en.5.md
+> continued in nodes/prop.chaus-reflective.en.5.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 15 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/def.outer-measure.en.2.md
+> continued in nodes/def.outer-measure.en.2.md

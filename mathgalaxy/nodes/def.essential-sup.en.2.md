@@ -10,4 +10,4 @@ Definition
 
 $$\|f\|_\infty := \inf \{\, a \ge 0 : \mu(\{\, |f| > a \,\}) = 0 \,\}$$
 
-> 续见 nodes/def.essential-sup.en.3.md
+> continued in nodes/def.essential-sup.en.3.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 11 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
-> 续见 nodes/prop.adjoint-full-faithful.en.2.md
+> continued in nodes/prop.adjoint-full-faithful.en.2.md

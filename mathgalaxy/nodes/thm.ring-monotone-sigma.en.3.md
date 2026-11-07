@@ -12,4 +12,4 @@ Let $\mathfrak{A}$ be a **ring**. Then the following three conditions are equiva
 ## Notes · **reviewed**
 Note that the hypothesis "$\mathfrak{A}$ is a ring" cannot be dropped — a monotone class is in general not closed under finite unions, so being a monotone class by itself does not imply being a $\sigma$-ring.
 
-> 续见 nodes/thm.ring-monotone-sigma.en.4.md
+> continued in nodes/thm.ring-monotone-sigma.en.4.md

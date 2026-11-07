@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 17 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 
-> 续见 nodes/thm.urysohn-metrization.en.2.md
+> continued in nodes/thm.urysohn-metrization.en.2.md

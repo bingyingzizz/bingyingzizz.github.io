@@ -16,4 +16,4 @@ $$[a, b] \le [c, d] :\iff a + d \le b + c$$
 
 Here addition and order come from those of $\mathbb{N}$, and the formula for multiplication is copied from $(a - b)(c - d) = ac + bd - (ad + bc)$.
 
-> 续见 nodes/def.int.en.4.md
+> continued in nodes/def.int.en.4.md

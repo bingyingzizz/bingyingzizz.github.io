@@ -9,4 +9,4 @@ English entry · root `../`
 
 Thus $F^{\ast} : \Omega^{\bullet}(N)\to\Omega^{\bullet}(M)$ is a homomorphism of **differential graded algebras**.
 
-> 续见 nodes/prop.pullback-form-manifold.en.4.md
+> continued in nodes/prop.pullback-form-manifold.en.4.md

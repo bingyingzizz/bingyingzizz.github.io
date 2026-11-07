@@ -11,4 +11,4 @@ layer 22 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifo
 
 Let $M$ be a smooth $n$-manifold. The **cotangent space** at $p$ is the dual space
 
-> 续见 nodes/def.cotangent-bundle.en.2.md
+> continued in nodes/def.cotangent-bundle.en.2.md

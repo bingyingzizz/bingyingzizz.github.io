@@ -6,4 +6,4 @@ English entry · root `../`
 - Let $F : \mathbf{Ring} \to \mathbf{Set}$ be the constant functor at the one-point set. Then $\mathbb{Z}$ represents $F$: every ring has a unique $\mathbb{Z} \to R$.
 - Fix a topological space $X$ and a subspace $Y \subseteq X$, and take the contravariant functor
 
-> 续见 nodes/def.representable.en.6.md
+> continued in nodes/def.representable.en.6.md

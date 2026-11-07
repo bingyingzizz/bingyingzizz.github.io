@@ -6,4 +6,4 @@ ect sums (equivalently: all finite products exist, or all finite coproducts exis
 - A **preabelian category** is an additive category in which every morphism has a kernel and a cokernel (equivalently: all finite limits and finite colimits exist);
 - An **abelian category** is a preabelian category satisfying one of the following **equivalent** conditions:
 
-> 续见 nodes/def.abelian-category.en.6.md
+> continued in nodes/def.abelian-category.en.6.md

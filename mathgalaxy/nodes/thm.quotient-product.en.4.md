@@ -10,4 +10,4 @@ where $V$ is open and $K$ is a **compact neighbourhood** of $z$ (a locally compa
 
 $$q^{-1}(V) \times K \;\subseteq\; W$$
 
-> 续见 nodes/thm.quotient-product.en.5.md
+> continued in nodes/thm.quotient-product.en.5.md

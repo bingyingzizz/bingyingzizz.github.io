@@ -15,4 +15,4 @@ $$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N : |x_n| < \varepsilon$$
 
 Two Cauchy sequences are **equivalent**:
 
-> 续见 nodes/def.cauchy-null.en.5.md
+> continued in nodes/def.cauchy-null.en.5.md

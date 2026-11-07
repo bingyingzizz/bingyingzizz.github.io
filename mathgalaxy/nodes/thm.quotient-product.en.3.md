@@ -12,4 +12,4 @@ is again a quotient map.
 ## Notes · **reviewed**
 ⭐ **This is the engine behind "compactly generated spaces are closed under products"**, and it is where a search for "quotient map" or "locally compact" should land.
 
-> 续见 nodes/thm.quotient-product.en.4.md
+> continued in nodes/thm.quotient-product.en.4.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 18 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
-> 续见 nodes/prop.chaus-reflective.en.2.md
+> continued in nodes/prop.chaus-reflective.en.2.md

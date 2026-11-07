@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 22 · proposition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/prop.nbv-derivative.en.2.md
+> continued in nodes/prop.nbv-derivative.en.2.md

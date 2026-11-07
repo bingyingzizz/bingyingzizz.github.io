@@ -6,4 +6,4 @@ English entry · root `../`
 
 **②** Fix $A \in \mathcal{E}$ and let $\mathcal{K}_{2} = \{B \in \mathfrak{m} : A \cup B \in \mathfrak{m}\}$. By the second condition $\mathcal{K}_{2} \supseteq \mathcal{E} \implies \mathcal{K}_{2} = \mathfrak{m}$.
 
-> 续见 nodes/thm.monotone-class.en.6.md
+> continued in nodes/thm.monotone-class.en.6.md

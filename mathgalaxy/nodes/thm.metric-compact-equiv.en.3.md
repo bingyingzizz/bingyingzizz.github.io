@@ -4,4 +4,4 @@ English entry · root `../`
 
 \}^{I}$ and $[0,\omega_1)$).
 
-> 续见 nodes/thm.metric-compact-equiv.en.4.md
+> continued in nodes/thm.metric-compact-equiv.en.4.md

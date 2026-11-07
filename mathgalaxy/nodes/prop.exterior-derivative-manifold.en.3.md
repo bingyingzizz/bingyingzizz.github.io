@@ -11,4 +11,4 @@ Moreover, in any chart $(U,x)$ it equals the coordinate formula
 
 $$\mathrm{d}\Bigl(\sum_{I}a_{I}\,\mathrm{d}x^{I}\Bigr) = \sum_{I}\mathrm{d}a_{I}\wedge\mathrm{d}x^{I},$$
 
-> 续见 nodes/prop.exterior-derivative-manifold.en.4.md
+> continued in nodes/prop.exterior-derivative-manifold.en.4.md

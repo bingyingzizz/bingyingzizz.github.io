@@ -8,4 +8,4 @@ A family $\{E_r\}_{r > 0}$ of Borel subsets of $\mathbb{R}^n$ shrinks nicely to 
 ## Statement · **stale**
 A family $\{E_r\}_{r > 0}$ of Borel subsets of $\mathbb{R}^n$ is said to **shrink nicely to $x$** iff
 
-> 续见 nodes/def.shrinks-nicely.en.3.md
+> continued in nodes/def.shrinks-nicely.en.3.md

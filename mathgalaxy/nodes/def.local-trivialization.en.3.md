@@ -6,4 +6,4 @@ Thus $\Phi$ flattens the piece of the bundle over $U$ into the **trivial product
 
 **Smooth case**: when $E, B, F$ are smooth manifolds and $\pi$ is smooth, one replaces "homeomorphism" by "**diffeomorphism**" in the definition; that is the local trivialization of a smooth bundle — without it even the tangent bundle would not be a smooth bundle.
 
-> 续见 nodes/def.local-trivialization.en.4.md
+> continued in nodes/def.local-trivialization.en.4.md

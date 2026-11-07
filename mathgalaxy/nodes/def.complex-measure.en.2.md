@@ -8,4 +8,4 @@ A complex measure on a measurable space $(X, \mathcal{M})$ is a map $\nu : \math
 ## Statement · **reviewed**
 A **complex measure** on a measurable space $(X, \mathcal{M})$ is a map
 
-> 续见 nodes/def.complex-measure.en.3.md
+> continued in nodes/def.complex-measure.en.3.md

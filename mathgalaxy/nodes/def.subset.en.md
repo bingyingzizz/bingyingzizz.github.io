@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 1 · definition · cluster Constructing Sets (`set.construct`) · Set Theory
 
-> 续见 nodes/def.subset.en.2.md
+> continued in nodes/def.subset.en.2.md

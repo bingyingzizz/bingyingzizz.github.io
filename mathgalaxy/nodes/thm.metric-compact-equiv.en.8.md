@@ -8,4 +8,4 @@ English entry · root `../`
 
 **What each direction uses, and whether any extra hypothesis is needed** (this list *is* the content of the equivalence):
 
-> 续见 nodes/thm.metric-compact-equiv.en.9.md
+> continued in nodes/thm.metric-compact-equiv.en.9.md

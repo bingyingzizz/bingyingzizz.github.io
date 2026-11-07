@@ -6,4 +6,4 @@ English entry · root `../`
 - **Homomorphism**: $\overline{\varphi}\bigl((gK)(g'K)\bigr) = \overline{\varphi}(gg'K) = \varphi(gg') = \varphi(g)\varphi(g') = \overline{\varphi}(gK)\,\overline{\varphi}(g'K)$.
 - **Bijection**: injective, because $\overline{\varphi}(gK) = e'$ means $\varphi(g) = e'$, i.e. $g \in K$, so $gK = K$; surjective, because the image is $\varphi(G)$ by construction. ∎
 
-> 续见 nodes/thm.first-iso.en.5.md
+> continued in nodes/thm.first-iso.en.5.md

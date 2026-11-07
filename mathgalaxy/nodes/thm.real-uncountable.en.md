@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 18 · theorem · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
 
-> 续见 nodes/thm.real-uncountable.en.2.md
+> continued in nodes/thm.real-uncountable.en.2.md

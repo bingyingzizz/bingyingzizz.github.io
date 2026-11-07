@@ -10,4 +10,4 @@ names: `Pullback` (short) · `Pullback Between Manifolds` (full)
 ## Statement · **reviewed**
 **What it does**: it carries a $k$-form back along a smooth map **between manifolds**. The version for open subsets of $\mathbb{R}^{n}$ is only its local appearance.
 
-> 续见 nodes/prop.pullback-form-manifold.en.2.md
+> continued in nodes/prop.pullback-form-manifold.en.2.md

@@ -4,4 +4,4 @@ English entry · root `../`
 
 **Two distinctions that must stay separate**:
 
-> 续见 nodes/def.outer-measure.en.8.md
+> continued in nodes/def.outer-measure.en.8.md

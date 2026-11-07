@@ -8,4 +8,4 @@ For $F$ of normalised bounded variation, $F' \in L^1(m)$ and $\mu_F \perp m \iff
 ## Statement · **reviewed**
 Let $F \in NBV$. Then $F' \in L^1(m)$, and
 
-> 续见 nodes/prop.nbv-derivative.en.3.md
+> continued in nodes/prop.nbv-derivative.en.3.md

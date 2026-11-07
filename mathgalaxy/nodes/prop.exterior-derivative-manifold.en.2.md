@@ -7,4 +7,4 @@ English entry · root `../`
 
 Let $M$ be a smooth manifold. There is a **unique** family of operators $\mathrm{d} : \Omega^{k}(M)\to\Omega^{k+1}(M)$ for $k\ge 0$ such that
 
-> 续见 nodes/prop.exterior-derivative-manifold.en.3.md
+> continued in nodes/prop.exterior-derivative-manifold.en.3.md

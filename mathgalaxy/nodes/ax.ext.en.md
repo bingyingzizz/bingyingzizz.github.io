@@ -13,4 +13,4 @@ $$\forall A \forall B [ \forall x ( x \in A \leftrightarrow  x \in B ) \to A = B
 
 The converse direction ($A = B \to$ the elements are exactly the same) holds automatically in first-order logic with equality, which is why the axiom is often written with $\leftrightarrow$. It guarantees that describing a set by a condition determines it uniquely, so a notation such as $\{ x \in A : \varphi (x) \}$ is never ambiguous.
 
-> 续见 nodes/ax.ext.en.2.md
+> continued in nodes/ax.ext.en.2.md

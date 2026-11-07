@@ -8,4 +8,4 @@ If $\mathcal{T}$ is a topos, then the category $\mathcal{T}(\mathbf{Ab})$ of abe
 ## Notes · **stale**
 The proof has three parts:
 
-> 续见 nodes/thm.topos-abelian-grothendieck.en.5.md
+> continued in nodes/thm.topos-abelian-grothendieck.en.5.md

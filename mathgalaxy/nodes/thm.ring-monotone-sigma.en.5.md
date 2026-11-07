@@ -8,4 +8,4 @@ English entry · root `../`
 - (3) $\implies$ (1): set $B_n = A_n \setminus \bigcup_{j<n} A_j$; the ring guarantees every $B_n$ lies in the family, and closure under disjoint unions finishes.
 - The ring hyp
 
-> 续见 nodes/thm.ring-monotone-sigma.en.6.md
+> continued in nodes/thm.ring-monotone-sigma.en.6.md

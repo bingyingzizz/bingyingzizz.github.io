@@ -7,4 +7,4 @@ English entry · root `../`
 
 layer 17 · theorem · cluster Metric Spaces (`topology.metric`) · Topology
 
-> 续见 nodes/thm.metric-compact-equiv.en.2.md
+> continued in nodes/thm.metric-compact-equiv.en.2.md

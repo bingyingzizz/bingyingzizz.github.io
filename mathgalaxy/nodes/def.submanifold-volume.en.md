@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 31 · definition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 
-> 续见 nodes/def.submanifold-volume.en.2.md
+> continued in nodes/def.submanifold-volume.en.2.md

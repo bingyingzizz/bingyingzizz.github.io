@@ -12,4 +12,4 @@ $$E_x := \{y \in Y : (x, y) \in E\}$$
 
 $$E^y := \{x \in X : (x, y) \in E\}$$
 
-> 续见 nodes/def.section.en.3.md
+> continued in nodes/def.section.en.3.md

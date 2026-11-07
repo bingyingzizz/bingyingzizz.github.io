@@ -6,4 +6,4 @@ English entry · root `../`
 
 $$A \big/ \ker f \;\cong\; \operatorname{im} f.$$
 
-> 续见 nodes/thm.first-iso.en.6.md
+> continued in nodes/thm.first-iso.en.6.md

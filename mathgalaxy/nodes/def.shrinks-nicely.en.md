@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 16 · definition · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/def.shrinks-nicely.en.2.md
+> continued in nodes/def.shrinks-nicely.en.2.md

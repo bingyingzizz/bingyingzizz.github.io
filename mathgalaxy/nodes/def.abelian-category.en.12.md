@@ -6,4 +6,4 @@ English entry · root `../`
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> 续见 nodes/def.abelian-category.en.13.md
+> continued in nodes/def.abelian-category.en.13.md

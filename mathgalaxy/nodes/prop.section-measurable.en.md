@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 7 · proposition · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/prop.section-measurable.en.2.md
+> continued in nodes/prop.section-measurable.en.2.md

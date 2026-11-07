@@ -8,4 +8,4 @@ English entry · root `../`
 
 $$\Phi(u\cdot g) = \bigl(\pi(u),\ \varphi(u)\,g\bigr).$$
 
-> 续见 nodes/def.principal-bundle.en.4.md
+> continued in nodes/def.principal-bundle.en.4.md

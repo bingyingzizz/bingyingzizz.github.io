@@ -6,4 +6,4 @@ English entry · root `../`
 - (2) $\implies$ (1): **almost free in reverse** ($N$ being isomorphic to the kernel of a cokernel simply says $i$ is a kernel, i.e. regular).
 - (1) $\iff$ (3): **this step needs kernels and cokernels** (i.e. preabelian). Factor $f = M \to N$ as $M \twoheadrightarrow \operatorname{im} f \rightarrowtail N$; "the epimorphism half is regular" i
 
-> 续见 nodes/def.abelian-category.en.10.md
+> continued in nodes/def.abelian-category.en.10.md

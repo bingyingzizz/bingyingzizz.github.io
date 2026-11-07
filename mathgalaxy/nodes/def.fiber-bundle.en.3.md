@@ -8,4 +8,4 @@ where $g_{\alpha\beta} : U_{\alpha}\cap U_{\beta}\to\operatorname{Diff}(F)$ is t
 
 If a Lie group $G$ acts on $F$ and the trivializations can always be chosen so that all $g_{\alpha\beta}$ take values in $G$, one says the bundle has **structure group** $G$.
 
-> 续见 nodes/def.fiber-bundle.en.4.md
+> continued in nodes/def.fiber-bundle.en.4.md

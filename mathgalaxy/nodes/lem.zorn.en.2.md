@@ -10,4 +10,4 @@ Neither hypothesis can be dropped: the empty poset has no maximal element, and "
 
 It is "the universal engine of existence proofs": every vector space has a basis, every ring has a maximal ideal, the compactness theorem, Hahn–Banach — all of them rely on it.
 
-> 续见 nodes/lem.zorn.en.3.md
+> continued in nodes/lem.zorn.en.3.md

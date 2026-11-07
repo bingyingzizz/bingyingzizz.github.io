@@ -10,4 +10,4 @@ $$T^{\ast}M := \bigsqcup_{p\in M}T_{p}^{\ast}M,$$
 
 with projection $\pi : T^{\ast}M\to M$ sending $\alpha\in T_{p}^{\ast}M$ to $\pi(\alpha) := p$.
 
-> 续见 nodes/def.cotangent-bundle.en.3.md
+> continued in nodes/def.cotangent-bundle.en.3.md

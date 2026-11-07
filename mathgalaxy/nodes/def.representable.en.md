@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 12 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-> 续见 nodes/def.representable.en.2.md
+> continued in nodes/def.representable.en.2.md

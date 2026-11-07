@@ -12,4 +12,4 @@ In particular: **the image of a surjective homomorphism is the quotient group** 
 ## Notes · **reviewed**
 **The three steps of the proof.** Write $K = \ker\varphi$.
 
-> 续见 nodes/thm.first-iso.en.4.md
+> continued in nodes/thm.first-iso.en.4.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 13 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 
-> 续见 nodes/def.path-homotopy.en.2.md
+> continued in nodes/def.path-homotopy.en.2.md

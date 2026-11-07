@@ -9,4 +9,4 @@ English entry · root `../`
 - compact $\implies$ complete, compact $\implies$ totally bounded
 - complete + totally bounded $\implies$ sequentially compact　(the diagonal argument; again no choice)
 
-> 续见 nodes/thm.metric-compact-equiv.en.6.md
+> continued in nodes/thm.metric-compact-equiv.en.6.md

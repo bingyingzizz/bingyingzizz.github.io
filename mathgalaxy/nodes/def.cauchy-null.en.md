@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 12 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
 
-> 续见 nodes/def.cauchy-null.en.2.md
+> continued in nodes/def.cauchy-null.en.2.md

@@ -4,4 +4,4 @@ English entry · root `../`
 
 s an **inequality**: an outer measure is **not** additive (additivity on disjoint unions is what makes it a measure, and that is an extra conclusion on Carathéodory-measurable sets).
 
-> 续见 nodes/def.outer-measure.en.7.md
+> continued in nodes/def.outer-measure.en.7.md

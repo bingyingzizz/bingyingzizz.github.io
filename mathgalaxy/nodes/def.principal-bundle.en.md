@@ -9,4 +9,4 @@ layer 30 · definition · cluster Characteristic Classes (`diffgeom.characterist
 ## Statement · **reviewed**
 **What it says**: the most self-referential class of fiber bundles — the fiber is not an arbitrary manifold but the structure group $G$ itself, and $G$ acts freely on the bundle from the right. Every vector bundle can be built from a principal bundle (by taking an associated bundle).
 
-> 续见 nodes/def.principal-bundle.en.2.md
+> continued in nodes/def.principal-bundle.en.2.md

@@ -9,4 +9,4 @@ layer 20 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifo
 ## Statement · **reviewed**
 **What it says**: a vector bundle only requires the fiber to be a vector space. Replacing the vector space by an **arbitrary manifold $F$** gives a fiber bundle — covering spaces, principal bundles and vector bundles all fall under this one definition.
 
-> 续见 nodes/def.fiber-bundle.en.2.md
+> continued in nodes/def.fiber-bundle.en.2.md

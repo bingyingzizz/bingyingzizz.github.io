@@ -9,4 +9,4 @@ An equivalent phrasing: $(X, s)$ is universal $\iff$ $(X, s)$ is an initial obje
 
 Examples:
 
-> 续见 nodes/def.representable.en.5.md
+> continued in nodes/def.representable.en.5.md

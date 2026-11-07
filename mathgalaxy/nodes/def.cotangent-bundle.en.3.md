@@ -8,4 +8,4 @@ $$\Phi : \pi^{-1}(U)\longrightarrow\varphi(U)\times\mathbb{R}^{n}$$
 
 $$\sum_{i=1}^{n}a_{i}\,\mathrm{d}x^{i}\big|_{p}\longmapsto\bigl(\varphi(p),\,a_{1},\ldots,a_{n}\bigr),$$
 
-> 续见 nodes/def.cotangent-bundle.en.4.md
+> continued in nodes/def.cotangent-bundle.en.4.md

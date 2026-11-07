@@ -6,4 +6,4 @@ $$\operatorname{Hom}_{\mathbf{Top}}(X,\ Y) \;\cong\; \operatorname{Hom}_{k\mathb
 
 **Proof.** The counit is $\varepsilon_{Y} : kY \to Y$ (the identity map, topology from finer to coarser, continuous).
 
-> 续见 nodes/prop.cg-coreflective.en.5.md
+> continued in nodes/prop.cg-coreflective.en.5.md

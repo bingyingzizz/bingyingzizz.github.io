@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 20 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
-> 续见 nodes/prop.cg-coreflective.en.2.md
+> continued in nodes/prop.cg-coreflective.en.2.md

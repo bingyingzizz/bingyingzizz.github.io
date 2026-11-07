@@ -4,4 +4,4 @@ English entry · root `../`
 
 containing a ball, which is precisely what the definition of "open" uses.
 
-> 续见 nodes/def.metric-space.en.8.md
+> continued in nodes/def.metric-space.en.8.md

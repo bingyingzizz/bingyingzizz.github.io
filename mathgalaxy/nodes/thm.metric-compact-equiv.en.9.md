@@ -6,4 +6,4 @@ English entry · root `../`
 - (a) $\implies$ (c), "complete": **no choice needed.** A Cauchy sequence with a convergent subsequence converges, and to the same point.
 - (a) $\implies$ (c), "totally bounded": **no choice needed.**
 
-> 续见 nodes/thm.metric-compact-equiv.en.10.md
+> continued in nodes/thm.metric-compact-equiv.en.10.md

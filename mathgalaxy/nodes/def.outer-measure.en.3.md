@@ -12,4 +12,4 @@ Let $X$ be a non-empty set. A function $\mu^* : \mathcal{P}(X) \to [0, +\infty]$
 ## Notes · **stale**
 An outer measure is defined on **all** subsets ($\mathcal{P}(X)$, not on some $\sigma$-algebra); the price is that it only has **sub**additivity.
 
-> 续见 nodes/def.outer-measure.en.4.md
+> continued in nodes/def.outer-measure.en.4.md

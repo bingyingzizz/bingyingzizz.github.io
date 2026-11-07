@@ -7,4 +7,4 @@ English entry · root `../`
 
 layer 16 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 
-> 续见 nodes/def.abelian-category.en.2.md
+> continued in nodes/def.abelian-category.en.2.md

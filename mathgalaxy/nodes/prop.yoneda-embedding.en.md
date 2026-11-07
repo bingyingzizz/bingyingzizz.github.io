@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 14 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-> 续见 nodes/prop.yoneda-embedding.en.2.md
+> continued in nodes/prop.yoneda-embedding.en.2.md

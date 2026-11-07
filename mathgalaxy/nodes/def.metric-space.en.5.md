@@ -4,4 +4,4 @@ English entry · root `../`
 
 ⚠ Completeness is **not** a topological property: $\mathbb{R}$ and the open interval (0, 1) are homeomorphic, yet only the first is complete.**Only one of the three axioms is "hard"** (they are usually listed side by side, but they carry very different weight):
 
-> 续见 nodes/def.metric-space.en.6.md
+> continued in nodes/def.metric-space.en.6.md

@@ -14,4 +14,4 @@ That is, $X$ compact $\iff$ $X$ sequentially compact $\iff$ $X$ complete $+$ tot
 ## Notes · **stale**
 The whole logical skeleton is in the arrows (click an arrow to see its proof):
 
-> 续见 nodes/thm.metric-compact-equiv.en.5.md
+> continued in nodes/thm.metric-compact-equiv.en.5.md

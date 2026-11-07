@@ -12,4 +12,4 @@ Typical examples: take $E_r = B(x, r)$ itself ($\alpha = 1$); or take $E_r$ to b
 
 Counterexample: let $E_r$ be a long thin sliver inside the ball — the volume ratio can tend to 0, and such a family does not shrink nicely to $x$.
 
-> 续见 nodes/def.shrinks-nicely.en.4.md
+> continued in nodes/def.shrinks-nicely.en.4.md

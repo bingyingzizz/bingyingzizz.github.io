@@ -7,4 +7,4 @@ English entry · root `../`
 
 layer 19 · theorem · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 
-> 续见 nodes/thm.topos-abelian-grothendieck.en.2.md
+> continued in nodes/thm.topos-abelian-grothendieck.en.2.md

@@ -13,4 +13,4 @@ From $d$ one defines the **open balls** $B(x, r) = \{ y \in X : d(x, y) < r \}$,
 
 Given $\varepsilon > 0$, a set $D \subseteq X$ is called an **$\varepsilon$-net** if $\forall x \in X, \exists y \in D : d(x, y) < \varepsilon$.
 
-> 续见 nodes/def.metric-space.en.4.md
+> continued in nodes/def.metric-space.en.4.md

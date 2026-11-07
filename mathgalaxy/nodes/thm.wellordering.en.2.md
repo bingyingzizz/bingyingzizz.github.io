@@ -14,4 +14,4 @@ Zermelo introduced the axiom of choice explicitly in 1904 in order to prove that
 
 The well-ordering theorem immediately yields the **comparability theorem for cardinals**: any two sets have comparable cardinalities.
 
-> 续见 nodes/thm.wellordering.en.3.md
+> continued in nodes/thm.wellordering.en.3.md

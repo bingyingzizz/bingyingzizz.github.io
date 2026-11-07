@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 31 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 
-> 续见 nodes/thm.de-rham.en.2.md
+> continued in nodes/thm.de-rham.en.2.md

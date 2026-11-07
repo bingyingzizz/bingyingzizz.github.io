@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 33 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-> 续见 nodes/thm.gauss-bonnet.en.2.md
+> continued in nodes/thm.gauss-bonnet.en.2.md

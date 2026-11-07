@@ -9,4 +9,4 @@ $$\mathcal{M}(\mathcal{E}) = \mathfrak{m}(\mathcal{E}) \iff \forall A \in \mathc
 
 **Standard version** (Halmos §6 / Folland 2.37): if $\mathcal{A}$ is an **algebra** then $\mathfrak{m}(\mathcal{A}) = \mathcal{M}(\mathcal{A})$.
 
-> 续见 nodes/thm.monotone-class.en.4.md
+> continued in nodes/thm.monotone-class.en.4.md

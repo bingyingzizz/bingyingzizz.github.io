@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 23 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
-> 续见 nodes/def.tensor-field.en.2.md
+> continued in nodes/def.tensor-field.en.2.md

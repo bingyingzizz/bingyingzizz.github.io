@@ -14,4 +14,4 @@ In form it predates Zorn's lemma (Hausdorff, 1914), and it is equivalent to it.
 
 The existence of a maximal chain is exactly the rigorous version of the intuition "keep adding elements from below until you can add no more".
 
-> 续见 nodes/thm.hausdorff.en.3.md
+> continued in nodes/thm.hausdorff.en.3.md

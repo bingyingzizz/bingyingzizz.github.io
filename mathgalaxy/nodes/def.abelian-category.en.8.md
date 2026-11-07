@@ -4,4 +4,4 @@ English entry · root `../`
 
 An abelian category is the **working environment** of homological algebra as a whole: with kernels and cokernels one can even state "exact sequence"; an additive category only supplies the additive skeleton (zero object and direct sums).**Which of the four is the real axiom, and which are its consequences** (they are usually listed side by side, but condition 4 is the weakest and behaves most like an axiom, while the first three each cost something):
 
-> 续见 nodes/def.abelian-category.en.9.md
+> continued in nodes/def.abelian-category.en.9.md

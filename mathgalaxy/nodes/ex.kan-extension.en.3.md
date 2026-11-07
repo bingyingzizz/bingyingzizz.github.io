@@ -11,4 +11,4 @@ $$(p_{!}D)(\ast) = \varinjlim_{i \in I} D(i) = X$$
 
 $$G = F_{!}1_{\mathcal{C}}, \qquad \operatorname{Hom}(F_{!}1_{\mathcal{C}},\ G) \cong \operatorname{Hom}(1_{\mathcal{C}},\ G \circ F)$$
 
-> 续见 nodes/ex.kan-extension.en.4.md
+> continued in nodes/ex.kan-extension.en.4.md

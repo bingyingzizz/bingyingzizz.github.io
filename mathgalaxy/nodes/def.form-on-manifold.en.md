@@ -10,4 +10,4 @@ names: `Differential Form` (short) · `Differential Form: Intrinsic Definition o
 ## Statement · **reviewed**
 **What it does**: it replaces "the $k$-form written in coordinates" by a **chart-free** description. Once that is done, a form really is an object on the manifold, and not "an expression inside some chart".
 
-> 续见 nodes/def.form-on-manifold.en.2.md
+> continued in nodes/def.form-on-manifold.en.2.md

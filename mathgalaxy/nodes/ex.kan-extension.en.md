@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
-> 续见 nodes/ex.kan-extension.en.2.md
+> continued in nodes/ex.kan-extension.en.2.md

@@ -4,4 +4,4 @@ English entry · root `../`
 
 gulation.
 
-> 续见 nodes/thm.gauss-bonnet.en.4.md
+> continued in nodes/thm.gauss-bonnet.en.4.md

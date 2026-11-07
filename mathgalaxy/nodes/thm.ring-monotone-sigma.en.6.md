@@ -4,4 +4,4 @@ English entry · root `../`
 
 othesis cannot be dropped: on a two-point set, the family of the two singletons is a monotone class, yet it does not contain their union.
 
-> 续见 nodes/thm.ring-monotone-sigma.en.7.md
+> continued in nodes/thm.ring-monotone-sigma.en.7.md

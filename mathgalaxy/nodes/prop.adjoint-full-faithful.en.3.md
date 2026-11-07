@@ -8,4 +8,4 @@ Let $F \dashv G$ with unit $\eta$ and counit $\varepsilon$. Then $F$ is **fully 
 ## Notes · **reviewed**
 So "a left adjoint is fully faithful" reduces to checking that every component of a single natural transformation is invertible — far easier than checking Hom-sets pair by pair.
 
-> 续见 nodes/prop.adjoint-full-faithful.en.4.md
+> continued in nodes/prop.adjoint-full-faithful.en.4.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 17 · proposition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 
-> 续见 nodes/prop.paracompact-partition-unity.en.2.md
+> continued in nodes/prop.paracompact-partition-unity.en.2.md

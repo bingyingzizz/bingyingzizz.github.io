@@ -10,4 +10,4 @@ One then also says that $F$ is **represented** by $(X, s)$.
 
 **(ii) Representable.** If $F \cong \operatorname{Hom}_{\mathcal{C}}(X, -)$, one says that $F$ is **represented** by $X$, and $X$ is called a **representing object** of $F$.
 
-> 续见 nodes/def.representable.en.4.md
+> continued in nodes/def.representable.en.4.md

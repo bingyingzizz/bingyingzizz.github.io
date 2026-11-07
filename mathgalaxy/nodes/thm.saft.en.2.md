@@ -12,4 +12,4 @@ $$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 ## Notes · **reviewed**
 **Preservation of limits is the only obstruction.** Together with "a right adjoint preserves limits" this gives a complete criterion: preservation of limits is necessary, and on a complete small category it is also sufficient.
 
-> 续见 nodes/thm.saft.en.3.md
+> continued in nodes/thm.saft.en.3.md

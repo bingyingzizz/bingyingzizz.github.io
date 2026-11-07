@@ -17,4 +17,4 @@ $$\mu_{0} (E) := \sum_{j=1}^{n} \mu(A_j) \nu(B_j)$$
 
 Then $\mu_{0}$ is a **premeasure** on the algebra $\mathcal{A}$.
 
-> 续见 nodes/def.product-measure.en.4.md
+> continued in nodes/def.product-measure.en.4.md

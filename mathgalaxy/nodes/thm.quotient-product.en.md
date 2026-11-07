@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 7 · theorem · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
-> 续见 nodes/thm.quotient-product.en.2.md
+> continued in nodes/thm.quotient-product.en.2.md

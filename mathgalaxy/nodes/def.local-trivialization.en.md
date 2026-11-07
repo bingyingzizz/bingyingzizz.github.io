@@ -9,4 +9,4 @@ layer 10 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifo
 ## Statement · **reviewed**
 **What it does**: this is the whole reason a bundle is called a bundle — locally it can always be flattened into a product. The clause "every point has a neighbourhood such that…" in the definitions of fiber bundles, vector bundles, principal bundles and covering spaces is exactly this statement.
 
-> 续见 nodes/def.local-trivialization.en.2.md
+> continued in nodes/def.local-trivialization.en.2.md

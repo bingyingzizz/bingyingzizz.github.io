@@ -8,4 +8,4 @@ $$(F^{\ast}\omega)_{p}(v_{1},\ldots,v_{k}) := \omega_{F(p)}\bigl(\mathrm{d}F_{p}
 
 for $v_{i}\in T_{p}M$. Then $F^{\ast}\omega$ is smooth, and
 
-> 续见 nodes/prop.pullback-form-manifold.en.3.md
+> continued in nodes/prop.pullback-form-manifold.en.3.md

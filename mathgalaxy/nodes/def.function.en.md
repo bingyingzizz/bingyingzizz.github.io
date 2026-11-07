@@ -13,4 +13,4 @@ $$\forall a \in A, \exists! b \in B, (a, b) \in f$$
 
 Uniqueness is what makes the notation $f(a) = b$ unambiguous; in that case $\operatorname{dom} f = A$, and the **image** of $f$ is $f(A) = \{ f(a) : a \in A \}$.
 
-> 续见 nodes/def.function.en.2.md
+> continued in nodes/def.function.en.2.md

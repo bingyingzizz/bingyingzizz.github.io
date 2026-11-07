@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 9 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-> 续见 nodes/def.smooth-manifold.en.2.md
+> continued in nodes/def.smooth-manifold.en.2.md

@@ -13,4 +13,4 @@ $$\operatorname{Hom}_{\mathbf{CHaus}}\bigl(\beta X,\ K\bigr) \;\cong\; \operator
 
 and the inclusion $X \to \beta X$ is an isomorphism whenever $X$ itself is compact Hausdorff.
 
-> 续见 nodes/prop.chaus-reflective.en.4.md
+> continued in nodes/prop.chaus-reflective.en.4.md

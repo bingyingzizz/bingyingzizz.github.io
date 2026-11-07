@@ -4,4 +4,4 @@ English entry · root `../`
 
  \to M)$. Abelian categories are the working environment of homological algebra — exactness needs kernels and cokernels. $A\text{-}\mathbf{Mod}$ and $\mathbf{Ab}(\mathcal{T})$ for a topos are abelian; $\mathbf{AbTop}$ is not.
 
-> 续见 nodes/def.abelian-category.en.4.md
+> continued in nodes/def.abelian-category.en.4.md

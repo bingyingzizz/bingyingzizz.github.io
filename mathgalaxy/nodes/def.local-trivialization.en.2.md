@@ -10,4 +10,4 @@ is called a **local trivialization** of $\pi$ over $U$ if $\Phi$ is a homeomorph
 
 $$\operatorname{pr}_{1}\circ\Phi = \pi .$$
 
-> 续见 nodes/def.local-trivialization.en.3.md
+> continued in nodes/def.local-trivialization.en.3.md

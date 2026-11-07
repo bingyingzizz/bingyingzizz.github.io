@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 14 · definition · cluster Metric Spaces (`topology.metric`) · Topology
 
-> 续见 nodes/def.metric-space.en.2.md
+> continued in nodes/def.metric-space.en.2.md

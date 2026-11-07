@@ -7,4 +7,4 @@ English entry · root `../`
 
 layer 6 · theorem · cluster Families of Sets and Sigma-Algebras (`analysis.setclass`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/thm.monotone-class.en.2.md
+> continued in nodes/thm.monotone-class.en.2.md

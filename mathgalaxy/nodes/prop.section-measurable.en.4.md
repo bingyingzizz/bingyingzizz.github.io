@@ -10,4 +10,4 @@ Then $\mathcal{R}$ contains all rectangles, and **$\mathcal{R}$ is a $\sigma$-al
 
 $$f_x^{-1}(B) = (f^{-1}(B))_x, \quad  f^{y-1}(B) = (f^{-1}(B))^y$$
 
-> 续见 nodes/prop.section-measurable.en.5.md
+> continued in nodes/prop.section-measurable.en.5.md

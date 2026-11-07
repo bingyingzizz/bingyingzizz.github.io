@@ -8,4 +8,4 @@ $$P\times G\longrightarrow P,\qquad (u,g)\longmapsto u\cdot g ,$$
 
 such that
 
-> 续见 nodes/def.principal-bundle.en.3.md
+> continued in nodes/def.principal-bundle.en.3.md

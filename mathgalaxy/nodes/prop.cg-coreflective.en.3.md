@@ -12,4 +12,4 @@ that is, $i \dashv k$. The space $kX$ has the same underlying set as $X$, with t
 ## Notes · **reviewed**
 **What has to be shown**: for every compactly generated space $X$ and every topological space $Y$,
 
-> 续见 nodes/prop.cg-coreflective.en.4.md
+> continued in nodes/prop.cg-coreflective.en.4.md

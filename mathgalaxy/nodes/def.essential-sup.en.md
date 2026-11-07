@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 17 · definition · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
-> 续见 nodes/def.essential-sup.en.2.md
+> continued in nodes/def.essential-sup.en.2.md

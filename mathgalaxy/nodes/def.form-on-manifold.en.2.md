@@ -10,4 +10,4 @@ and it **depends smoothly**: for every chart $(U,x)$ the function $p\mapsto\omeg
 
 **Smoothness is equivalent to smooth coefficients**: on $(U,x)$ the form $\omega$ is uniquely written as
 
-> 续见 nodes/def.form-on-manifold.en.3.md
+> continued in nodes/def.form-on-manifold.en.3.md

@@ -8,4 +8,4 @@ is an open neighbourhood of $(x, z)$ — hence $(x, z)$ is an interior point of 
 
 Terminology: some write this as "$Z$ locally compact Hausdorff $\implies$ the functor $- \times Z$ preserves quotient maps".
 
-> 续见 nodes/thm.quotient-product.en.6.md
+> continued in nodes/thm.quotient-product.en.6.md

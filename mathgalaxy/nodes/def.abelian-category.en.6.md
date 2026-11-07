@@ -7,4 +7,4 @@ English entry · root `../`
 3. every morphism factors (uniquely up to isomorphism) as an epimorphism followed by a monomorphism;
 4. for every $f : M \to N$, $\ker\bigl(N \to \operatorname{coker} f\bigr) \cong \operatorname{coker}\bigl(\ker f \to M\bigr)$.
 
-> 续见 nodes/def.abelian-category.en.7.md
+> continued in nodes/def.abelian-category.en.7.md

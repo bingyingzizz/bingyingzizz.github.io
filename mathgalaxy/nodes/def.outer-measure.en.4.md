@@ -6,4 +6,4 @@ So an outer measure is not a measure — it is too large even to be additive on 
 
 What Lebesgue first constructed was an outer measure: $\mu^{*}(A) = \inf\{ \sum (b_{n} - a_{n}) : A \subseteq \bigcup (a_{n}, b_{n}) \}$.**Which of the three conditions is "hard"** (the three are asymmetric — one is normalisation, one is almost free, one is a real condition):
 
-> 续见 nodes/def.outer-measure.en.5.md
+> continued in nodes/def.outer-measure.en.5.md

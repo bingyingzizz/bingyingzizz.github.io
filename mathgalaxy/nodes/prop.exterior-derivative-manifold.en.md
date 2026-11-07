@@ -7,4 +7,4 @@ English entry · root `../`
 layer 22 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Exterior Derivative` (short) · `Exterior Derivative on Manifolds` (full)
 
-> 续见 nodes/prop.exterior-derivative-manifold.en.2.md
+> continued in nodes/prop.exterior-derivative-manifold.en.2.md

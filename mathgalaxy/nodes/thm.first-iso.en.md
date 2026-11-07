@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 10 · theorem · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Set Theory
 
-> 续见 nodes/thm.first-iso.en.2.md
+> continued in nodes/thm.first-iso.en.2.md

@@ -6,4 +6,4 @@ English entry · root `../`
 
 layer 8 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
 
-> 续见 nodes/def.int.en.2.md
+> continued in nodes/def.int.en.2.md

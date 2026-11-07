@@ -8,4 +8,4 @@ A functor $F : \mathcal{C} \to \mathbf{Set}$ is represented by an object $X$ tog
 ## Statement · **reviewed**
 Let $F : \mathcal{C} \to \mathbf{Set}$ be a functor.
 
-> 续见 nodes/def.representable.en.3.md
+> continued in nodes/def.representable.en.3.md
