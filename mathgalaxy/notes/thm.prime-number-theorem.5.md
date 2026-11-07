@@ -1,8 +1,8 @@
 # 素数定理　`thm.prime-number-theorem`　·　说明
 根 `../`
 
-最后一个等号由 Abel 求和（分部积分）得到：$\sum_{n \le x}\Lambda(n) = \psi(x)$。于是 $\psi$ 的 Mellin 变换就是 $-\zeta'/(s\zeta)$；由命题 A，它在 $\{\operatorname{Re} s \ge 1\}$ 上除 $s = 1$ 外全纯，而 $s = 1$ 是单极点、留数为 $1$（因为 $\zeta$ 在 $1$ 附近形如 $1/(s-1) + O(1)$，故 $-\zeta'/\zeta \sim 1/(s-1)$）。把命题 B 用于 $f = \psi$（$\psi$ 非负、单调不减）得 $\psi(x) \sim x$，再由上面的等价性得素数定理。
+其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|\le4\log(\sigma-1)+O(1)$（零点阶 $\ge1$）；$\log|\zeta(\sigma+2it_{0})|=O(|\log(\sigma-1)|)$（$1+2it_{0}\ne1$，该点至多零点或全纯点）。故左端 $\le C+2\log(\sigma-1)\to-\infty$，与 $\ge0$ 矛盾；$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
 
-⚠️ **缺的正是命题 A 与命题 B 的证明**：命题 A 需要 $\zeta$ 的解析延拓（Euler–Maclaurin 或 Abel 求和）、$\zeta(1+it) \ne 0$ 的经典论证（$3 + 4\cos\theta + \cos 2\theta \ge 0$ 推出 $\zeta(1+it) \ne 0$）；命题 B 是 Ingham/Newman 的 Tauber 定理，需要围道积分与增长估计。两者都不在「中等档」的篇幅内，本图不硬编——这就是本节点保留 skeleton 的原因。
+**命题 B（唯一缺口）：Newman 的 Tauber 定理。** 设 $A:[1,\infty)\to\mathbb{R}$ 非负、单调不减，$F(s)=\int_{1}^{\infty}A(t)\,t^{-s-1}\,\mathrm{d}t$ 在 $\operatorname{Re}s>1$ 收敛，并解析延拓到 $\{\operatorname{Re}s\ge1\}$ 的一个邻域，除 $s=1$ 处单极点、留数 $1$ 外全纯。则 $A(x)\sim x$。
 
 > 续见 notes/thm.prime-number-theorem.6.md

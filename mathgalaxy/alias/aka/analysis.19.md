@@ -3,4 +3,8 @@
 
 - 反三角函数 | 反正弦 | 反余弦 | 反正切 | arcsin | arccos | arctan → def.inverse-trig
 
+- Radon 测度 | 拉东测度 → def.radon-measure
+
+- 集合上的积分 → def.integral-over-set
+
 见 `../../alias.md`。

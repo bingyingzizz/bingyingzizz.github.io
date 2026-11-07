@@ -7,7 +7,7 @@
 
 - Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
 
-- Lusin | 卢津 → cor.lusin
+- Lusin | Lusin 定理 | 卢津 | 卢津定理 → cor.lusin
 
 - L+ | L⁺ | 非负可测函数 | 非负函数空间 → def.lplus
 
@@ -28,7 +28,5 @@
 - 复函数的积分 | 复积分 → def.integral-complex
 
 - 逐项积分 | term-by-term integration | 级数逐项积分 → thm.termwise-integration
-
-- Fatou | Fatou's lemma | 法图引理 | 法都引理 → lem.fatou
 
 > 续见 alias/aka/analysis-measure.5.md

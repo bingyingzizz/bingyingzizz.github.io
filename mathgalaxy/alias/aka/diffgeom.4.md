@@ -37,4 +37,6 @@
 
 - Hodge 星号 | Hodge star operator → def.hodge-star
 
-见 `../../alias.md`。
+- 施蒂费尔–惠特尼类 | Stiefel-Whitney 类 → def.stiefel-whitney-class
+
+> 续见 alias/aka/diffgeom.5.md

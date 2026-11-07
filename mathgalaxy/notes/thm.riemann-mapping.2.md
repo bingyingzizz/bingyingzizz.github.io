@@ -1,12 +1,7 @@
 # Riemann 映射定理　`thm.riemann-mapping`　·　说明
 根 `../`
 
-族在 $\mathbb{D}$ 内一致有界，由 **Montel 定理**有内闭一致收敛子列，极限 $f$ 全纯，$f(z_{0}) = 0$、$|f'(z_{0})| = s$，且 $f$ 单叶（单叶性在一致收敛下保持：若 $f(z_{1}) = f(z_{2})$，用 Rouché 或 Hurwitz 反推 $\varphi_{n}$ 不单叶，矛盾）。
-
-**第三步：$f$ 满射。** 若 $f$ 漏掉某点 $w_{1} \in \mathbb{D}$，用 $\mathbb{D}$ 的自同构把 $w_{1}$ 搬到 $0$，再取平方根分支、再搬回去，构造 $\psi \in \mathcal{F}$ 使 $|\psi'(z_{0})| > s$ —— 与 $s$ 的极大性矛盾（这一步是纯计算，核心是 $|g'(0)| = \frac{1 + |a|}{2\sqrt{|a|}} > 1$）。故 $f$ 满。∎
-
-**唯一性**：两个这样的 $f, g$ 给出 $\mathbb{D}$ 到自身、固定 $0$、导数正实数的双全纯映射；由 **Schwarz 引理**它必须是恒等。
-
-⭐ **为什么叫「基本定理」**：它把「共形等价」这件事在单连通情形下一举归约到唯一的模型 $\mathbb{D}$。于是任何单连通区域上的问题都可以搬到圆盘上算 —— 双曲几何（`prop.poincare-disk`）就是这么来的。
+\Omega$ 单连通，故存在全纯 $g$ 使 $g^{2}=z-a$（`prop.single-valued-branch`：无零点全纯函数在单连通区域有单值对数支，再取 $\exp(\tfrac12\log)$）。$g$ 单叶：$g(z_{1})=g(z_{2})\implies z_{1}=z_{2}$。又 $g(\Omega)\cap(-g(\Omega))=\emptyset$：若 $g(z_{1})=-g(z_{2})$，平方得 $z_{1}=z_{2}$，于是 $g(z_{1})=-g(z_{1})$，故 $g(z_{1})=0$，与 $g^{2}=z-a\ne0$ 矛盾。令 $w_{0}=g(z_{0})$；$g(\Omega)$ 开，取 $r>0$ 使 $B(w_{0},r)\subset g(\Omega)$，则 $B(-w_{0},r)\subset-g(\Omega)$ 与 $g(\Omega)$ 不交，故 $|w+w_{0}|\ge r$（$w\in g(\Omega)$）。于是 $T(w):=1/(w+w_{0})$ 在 $g(\Omega)$ 上全纯单叶且 $|T|\le1/r$；$rT$ 把 $g(\Omega)$ 映入 $\mathbb{D}$。再用 $\mathbb{D}$ 的自同构（`def.mobius`：$\varphi_{b}(w)=(w-b)/(1-\bar b w)$）把 $rT(w_{0})$ 搬到 $0$，得单叶 $\psi:\Omega\to\mathbb{D}$、$\psi(z_{0})=0$；最后乘单位复数使 $\psi'(z_{0})>0$。故 $\mathcal{F}\ne\emptyset$。
+**第二步：极值元存在。** 由第 0 步（a），$s\le1/\rho<\infty$；$\mathcal{F}\ne
 
 > 续见 notes/thm.riemann-mapping.3.md

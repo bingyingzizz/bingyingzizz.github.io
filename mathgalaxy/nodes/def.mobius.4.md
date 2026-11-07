@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理
 - 被 [`thm.schwarz-pick`](../nodes/thm.schwarz-pick.md) Schwarz–Pick 定理 用
+- ⇒ [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理
 - ⇒ [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比
 - ⇒ [`prop.mobius-circle`](../nodes/prop.mobius-circle.md) 保圆性
 - ⇒ [`def.symmetric-point`](../nodes/def.symmetric-point.md) 关于圆的对称点

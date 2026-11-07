@@ -9,9 +9,6 @@ $$\rho := \limsup_{r \to \infty} \frac{\log^{+} \log^{+} M(r)}{\log r},\qquad M(
 > 陈述续见 [nodes/def.entire-order.2.md](./def.entire-order.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.hadamard-factorization`](../nodes/thm.hadamard-factorization.md) Hadamard 分解定理
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.entire-order.3.md](./def.entire-order.3.md)
 

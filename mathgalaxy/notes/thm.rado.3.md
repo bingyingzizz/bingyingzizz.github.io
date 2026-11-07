@@ -1,8 +1,6 @@
 # Radó 定理　`thm.rado`　·　说明
 根 `../`
 
-**为什么这是低维现象**：$\dim\le2$ 时成立（Radó 1925）；$\dim=3$ 也成立（Moise 1952）；$\dim=4$ **不成立** —— Freedman 的 $E_{8}$ 流形紧、拓扑，但不可三角剖分；$\dim\ge5$ 有 Kirby–Siebenmann 的上同调障碍。所以「每个流形都能剖分」是错的，本节点只处理 2 维。
+**路线 B（微分拓扑）。** 光滑结构存在（Whitehead：$C^{1}$ 结构即够，或直接做 $C^{\infty}$）$\rightarrow$ Morse 函数 $\rightarrow$ 柄分解 $\rightarrow$ 每个柄是 $0/1/2$-柄，按粘贴顺序给 CW 剖分 $\rightarrow$ 三角化每个柄并细分到相容 $\rightarrow$ 得剖分。缺口：(iv) 光滑结构存在性；(v) Morse 函数存在性（需要 $C^{2}$ 逼近）；(vi) 柄分解与三角剖分的相容（$1$-柄的处理、柄与柄之间的粘合）。
 
-⚠ **两条常见混淆**：① 与「单纯逼近定理」区分：那条假设已有剖分，结论是奇异同调等于单纯同调（`thm.simplicial-approximation`）；本节点说的是剖分存在。② 与「光滑流形」区分：光滑流形可剖分是另一个定理（Whitehead），不能把光滑结构当既成事实。
-
-**本图空白清单**（缺任意一条都补不上 Radó）：(i) 紧曲面的光滑结构或复结构存在性；(ii) Morse 理论或柄分解；(iii) 或等价的 uniformization 定理。三者都没有节点，所以本节点保持 skeleton，不勾 ∎。
+> 续见 notes/thm.rado.4.md

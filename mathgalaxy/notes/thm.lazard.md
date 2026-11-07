@@ -1,12 +1,14 @@
 # 平坦模的结构定理　`thm.lazard`　·　说明
 根 `../`
 
-**证明（给骨架与关键一步）。**
-$(\Longleftarrow)$ 有限生成自由模平坦；滤过余极限正合，故与 $\otimes$ 交换，于是「每个 $F_{i}$ 上 $\otimes$ 正合」升级为「$F$ 上正合」 ✓。
-$(\Longrightarrow)$ 方向的心是**用有限生成自由模把 $F$ 逼近**。
+**记号与路线。** $R$-Mod 记右 $R$-模范畴；$(F_i,f_{ij})$ 是有向集 $I$ 上的正向系，$F_i$ 有限生成自由。
 
-取遍所有 $R^{(n)} \to F$（有限生成自由模到 $F$ 的映射），按「映射的像被包含」排成有向集，显然有 $F = \varinjlim R^{(n)}$；
+**$(\Longleftarrow)$ 完整。** 有限生成自由模平坦；有向滤过余极限与 $\otimes_R$ 交换（张量积保余极限），正合列取滤过余极限仍正合。于是对任意左 $R$-模 $N$，$F\otimes_R N=\varinjlim_i (F_i\otimes_R N)$，每个 $F_i\otimes_R -$ 正合，故 $F\otimes_R -$ 正合。∎
 
-但这样得到的系统不一定「滤过」得足够好（余极限的正确性要逐元素核验）。
+**$(\implies)$ 的真正缺口：引理 L（平坦性的等式判据）。** 设 $F$ 平坦、$P$ 有限呈现、$\varphi:P\to F$ 是 $R$-线性映射。则存在有限生成自由模 $R^k$ 与分解
+
+$$P \xrightarrow{\ \psi\ } R^k \xrightarrow{\ \chi\ } F,\qquad \varphi=\chi\circ\psi .$$
+
+等价形式：$\operatorname{Hom}(P,F)$ 中任意有限组「在 $F$ 中相容」的数据都能在某个有限自由模中实现（Bourbaki, Commutative Algebra, Ch. I 的平坦性等式判据；Lazard 1969）。**本图没有这条引理的节点**，这是本节点保留 skeleton 的唯一原因。
 
 > 续见 notes/thm.lazard.2.md

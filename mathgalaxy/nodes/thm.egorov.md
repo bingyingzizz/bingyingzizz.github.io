@@ -14,7 +14,7 @@ $$\forall\varepsilon > 0,\ \exists E \subseteq X :\ \mu(E) < \varepsilon$$
 - …另有入边，续页见 [nodes/thm.egorov.2.md](./thm.egorov.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.lusin`](../nodes/cor.lusin.md) Lusin 定理
+- ⇒ [`cor.lusin`](../nodes/cor.lusin.md) Лузин 定理
 
 refs: Folland, Real Analysis, Theorem 2.33
 

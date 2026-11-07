@@ -1,4 +1,4 @@
-# Urysohn 度量化定理　`thm.urysohn-metrization`　·　续页（第 2 页）
+# Урысон 度量化定理　`thm.urysohn-metrization`　·　续页（第 2 页）
 [在星图里打开](../#n=thm.urysohn-metrization)　·　第 1 页 [nodes/thm.urysohn-metrization.md](./thm.urysohn-metrization.md)
 
 ## English abstract · reviewed by bingyingzizz (2026-11-01) · Chinese is authoritative（续）

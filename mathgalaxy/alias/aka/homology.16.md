@@ -19,4 +19,6 @@
 
 - 零调复形 → def.acyclic-complex
 
+- 模范畴 | A-Mod → def.module-category
+
 见 `../../alias.md`。

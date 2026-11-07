@@ -1,6 +1,6 @@
 # 边界对应定理　`thm.boundary-correspondence`
 边界对应：Jordan 区域的共形映射能延拓到边界
-layer 29 · 定理 · 共形映射与正规族 · 复变函数
+layer 31 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.boundary-correspondence)　·　[节点索引](../index.md)
 
 设 $\Omega \subset \mathbb{C}$ 是**单连通**区域，且边界 $\partial\Omega$ 是一

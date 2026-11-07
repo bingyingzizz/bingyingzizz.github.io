@@ -2,6 +2,7 @@
 索引 `hubs.md`
 
 由最多前置一起推出（入边多）—— 学它之前得先懂一片，**不是**入门首选。
+- **6 / 6** `def.submanifold-volume` 诱导体积 · layer 31 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
 - **6 / 6** `def.euler-class` Euler 类 · layer 38 · 流形与向量丛
 - **6 / 5** `lem.zorn` Zorn 引理 · layer 8 · 选择原理
@@ -9,7 +10,6 @@
 - **6 / 4** `thm.lp-banach` L^p 是 Banach 空间 · layer 23 · L^p 空间
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 25 · 向量场与 Lie 结构
 - **6 / 1** `thm.completeness-equivalent` 完备性的六条等价 · layer 23 · 实数完备性的等价刻画
-- **5 / 6** `def.tangent-bundle` 切丛 · layer 21 · 流形与向量丛
 
 （共 1543 个节点在这一榜上有非零计数；这里列前 20 条。）
 

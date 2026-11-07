@@ -9,7 +9,7 @@ layer 6 · 定义 · 收敛与紧性 · 拓扑学
 - [`def.topology-base`](../nodes/def.topology-base.md) 基与子基：用到了定义 基与子基　[proofs/dep.pcp-base-second.md](../proofs/dep.pcp-base-second.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Urysohn 度量化定理 用
+- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Урысон 度量化定理 用
 
 - …另有出边，续页见 [nodes/def.second-countable.2.md](./def.second-countable.2.md)
 

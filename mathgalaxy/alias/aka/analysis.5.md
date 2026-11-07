@@ -17,7 +17,7 @@
 
 - Egorov | 叶果洛夫 | 叶戈罗夫 | Егоров → thm.egorov
 
-- Lusin | 卢津 → cor.lusin
+- Lusin | Lusin 定理 | 卢津 | 卢津定理 → cor.lusin
 
 - L+ | L⁺ | 非负可测函数 | 非负函数空间 → def.lplus
 
@@ -28,7 +28,5 @@
 - 简单积分性质 → prop.simple-integral-props
 
 - 非负函数的积分 | 非负积分 → def.integral-nonneg
-
-- 积分为零 | 积分为零推出几乎处处为零 → prop.integral-zero-iff
 
 > 续见 alias/aka/analysis.6.md

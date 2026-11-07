@@ -1,6 +1,6 @@
 # Hadamard 分解定理　`thm.hadamard-factorization`
 Hadamard 分解定理：有限阶整函数的因子分解
-layer 28 · 定理 · 解析延拓与整函数 · 复变函数+数学分析
+layer 30 · 定理 · 解析延拓与整函数 · 复变函数+数学分析
 [在星图里打开](../#n=thm.hadamard-factorization)　·　[节点索引](../index.md)
 
 设 $f$ 是**有限阶** $\rho$ 

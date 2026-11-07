@@ -1,8 +1,10 @@
 # 边界对应定理　`thm.boundary-correspondence`　·　说明
 根 `../`
 
-**它补的是 Riemann 映射定理没说的那半句**：Riemann 映射只保证内部双全纯，不保证边界对应得好（区域边界可以有各种怪形状）。加上 Jordan 条件之后，「边界点对边界点、一一对应、连续」才成立。
+**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，第 15 批已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。
 
-⚠️ **证明是骨架**：完整证明（Carathéodory–Osgood）要先把 $\overline{\Omega}$ 与$\overline{\mathbb{D}}$ 之间的「径向极限」造出来，再证它对每个边界点存在且一一。本图给的是陈述与用途，不是逐行证明 —— 这一点如实标注。
+**能独立验证的一半：延拓 + 边界单射 $\implies$ 同胚。** 设 $f:\Omega\to\mathbb{D}$ 已连续延拓到 $\overline{\Omega}$，且在 $\partial\Omega$ 上单射。则：
 
-⭐ **它是 Schwarz–Christoffel（`thm.schwarz-christoffel`）的前提**：S–C 公式说「实轴上的 $x_{k}$ 对应多边形顶点」，这句话的合法性正来自边界对应。
+① $f(\partial\Omega)\cap\mathbb{D}=\emptyset$。否则有 $\zeta\in\partial\Omega$ 使 $w=f(\zeta)\in\mathbb{D}=f(\Omega)$，取逆映射 $g=f^{-1}:\mathbb{D}\to\Omega$（$f$ 内部双全纯，故 $g$ 连续）。让 $z\to\zeta$ 时 $f(z)\to f(\zeta)=w$，由 $g$ 在 $w$ 连续得 $g(w)=\zeta$；但 $g(w)\in\Omega$，而 $\zeta\in\partial\Omega$，矛盾。
+
+> 续见 notes/thm.boundary-correspondence.2.md

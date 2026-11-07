@@ -1,6 +1,6 @@
 # Riemann 映射定理　`thm.riemann-mapping`
 Riemann 映射定理：单连通真区域双全纯等价于单位圆盘
-layer 28 · 定理 · 共形映射与正规族 · 复变函数
+layer 30 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.riemann-mapping)　·　[节点索引](../index.md)
 
 设 $\Omega \subset \mathbb{C}$ 是**单连通**区域且 $\Omega \ne \mathbb{C}$，$z_{0} \in \Omega$。则

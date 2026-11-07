@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- Fatou | Fatou's lemma | 法图引理 | 法都引理 → lem.fatou
+
 - 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
 
 - Fatou 推论 → cor.fatou
@@ -26,7 +28,5 @@
 - 截口 | section | 切片 → def.section
 
 - 积 σ代数的生成基 → prop.product-sigma-base
-
-- 可数积的生成 → prop.product-sigma-generated
 
 > 续见 alias/aka/analysis-measure.6.md

@@ -1,4 +1,4 @@
-# Urysohn 度量化定理　`thm.urysohn-metrization`
+# Урысон 度量化定理　`thm.urysohn-metrization`
 正则且第二可数的空间可度量化
 layer 17 · 定理 · 可度量化 · 拓扑学
 [在星图里打开](../#n=thm.urysohn-metrization)　·　[节点索引](../index.md)

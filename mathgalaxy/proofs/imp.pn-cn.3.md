@@ -1,7 +1,7 @@
 # imp.pn-cn
 `imp.pn-cn` · 推出 · strong 边 · 根 `../`
 
-`def.perfectly-normal-space` 完美正规空间 + `lem.urysohn` Urysohn 引理 → `def.completely-normal-space` 完全正规空间
+`def.perfectly-normal-space` 完美正规空间 + `lem.urysohn` Урысон 引理 → `def.completely-normal-space` 完全正规空间
 
 **第三步：在 $H$ 上分离。** 在 $H$ 上 $f + g > 0$：若 $f(x) = g(x) = 0$，则 $x \in F \cap G \cap H = A \cap B = \emptyset$，矛盾。令
 $$h := \frac{f}{f + g}\Big|_{H} : H \to [0, 1] .$$

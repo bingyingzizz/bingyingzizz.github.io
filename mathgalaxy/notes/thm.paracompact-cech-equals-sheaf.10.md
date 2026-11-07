@@ -1,6 +1,6 @@
 # 仿紧空间上的 Čech 就是上同调　`thm.paracompact-cech-equals-sheaf`　·　说明
 根 `../`
 
-⭐ **与「紧 Hausdorff」那条的关系**：紧 Hausdorff 必仿紧，所以这一条把 `prop.chaus-cech-eq-h` 覆盖在内；但两条的**证明**完全不同 —— 紧性用的路子是「有限覆盖在滤过系统里共尾 + 有限直积可由可表对象控制」，仿紧性用的是「局部有限 + 单位分解给出的软性」。同一个结论，两套互不依赖的机制。
+**⑤ 好覆盖的情形可以收尾（用 `thm.cartan-leray`）。** 若覆盖 $\mathfrak{U}$ 的每个有限交 $U_{i_{0}\cdots i_{p}}$ 都满足 $H^{q}(U_{i_{0}\cdots i_{p}},\mathcal{M})=0$（$q>0$），则 Čech 复形 $C^{\bullet}(\mathfrak{U},H^{q}(\mathcal{M}))$ 的每一项都是这些 $H^{q}(U_{I},\mathcal{M})=0$ 的积（Čech 项按有限交取值，正是预层 $U\mapsto H^{q}(U,\mathcal{M})$ 的截面；这里只需预层在覆盖的交上消失，不必断言层 $H^{q}(\mathcal{M})$ 本身是零层），故 Cartan–Leray 谱序列的 $E_{2}^{p,q}=\check{H}^{p}(\mathfrak{U},H^{q}(\mathcal{M}))$ 在 $q>0$ 时为 $0$，谱序列退化，给出 $\check{H}^{n}(\mathfrak{U},\mathcal{M})\cong H^{n}(X,\mathcal{M})$。所以陈述中「好覆盖上逐覆盖同构」这一半已成立；一般局部有限覆盖的定向极限仍需 ② 与 ④。
 
-⚠️ **仿紧这个条件不能去掉**：在一般（甚至紧生成）的空间上，Čech 上同调与层上同调可以不同。「Čech 就是层上同调」是拓扑 / 层论里最常被无条件引用的一句话 —— 引用时一定要带上空间条件。
+> 续见 notes/thm.paracompact-cech-equals-sheaf.11.md

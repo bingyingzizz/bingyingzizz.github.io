@@ -3,4 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.montel`](../nodes/thm.montel.md) Montel 定理
+- ⇒ [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理
 - ⇒ [`def.entire-order`](../nodes/def.entire-order.md) 整函数的阶与型
+- ⇒ [`thm.hadamard-factorization`](../nodes/thm.hadamard-factorization.md) Hadamard 分解定理

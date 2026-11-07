@@ -1,6 +1,8 @@
 # Euler 示性数与亏格　`prop.eulerchar-genus`　·　说明
 根 `../`
 
-**二、连通和公式（完整）**：$\chi(M\#N)=\chi(M)+\chi(N)-2$。证：取 $M$、$N$ 的有限剖分使挖去的开球各是一个 $2$-单形的内部；删去一个开 $2$-单形后 $V$、$E$ 不变、$F$ 减一，故 $\chi(M\setminus D^{2})=\chi(M)-1$，$N$ 同理；沿边界圆 $S^{1}$ 粘回时用 $\chi(A\cup B)=\chi(A)+\chi(B)-\chi(A\cap B)$（对有限复形数胞腔，或由 `thm.mv-homology` 的长正合列取秩），而 $\chi(S^{1})=0$，故 $\chi(M\#N)=(\chi(M)-1)+(\chi(N)-1)-0=\chi(M)+\chi(N)-2$。归纳：$S^{2}$ 的 $\chi=2$，$T^{2}$ 的 $\chi=0$，$g$ 个环面的连通和 $\chi=2-2g$。
+**零、约定与记号。** $S$ 是闭曲面（`def.closed-surface`），$g=\tfrac12\operatorname{rank}H_{1}(S;\mathbb{Z})$（`def.genus`，直接当定义用）。$\chi(S)$ 由任一三角剖分算：`thm.euler-characteristic` 给 $\chi(K)=\sum_{p}(-1)^{p}\alpha_{p}=\sum_{p}(-1)^{p}\beta_{p}(K)$，`thm.simplicial-approximation` 给 $\beta_{p}(K)=\beta_{p}(S)$，故 $\sum_{p}(-1)^{p}\beta_{p}(S)$ 与剖分无关，把它记作 $\chi(S)$。本注把「$S$ 可定向」按拓扑意义理解：存在**定向图册**——图卡是同胚、转移映射在重叠处保向（这就是 `def.orientable-manifold` 去掉光滑性；本图缺这个定义节点，见第七节）。取定一个定向。
+
+**一、三角剖分（输入：Radó）。** `thm.rado`（skeleton）断言紧曲面可三角剖分：存在有限单纯复形 $K$ 与同胚 $h:|K|\to S$。这是本条唯一的外部定理输入。
 
 > 续见 notes/prop.eulerchar-genus.3.md

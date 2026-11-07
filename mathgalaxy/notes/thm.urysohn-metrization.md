@@ -1,4 +1,4 @@
-# Urysohn 度量化定理　`thm.urysohn-metrization`　·　说明
+# Урысон 度量化定理　`thm.urysohn-metrization`　·　说明
 根 `../`
 
 **证明（嵌入可分度量空间）**

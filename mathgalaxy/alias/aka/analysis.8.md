@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 符号测度 | signed measure → def.signed-measure
+
 - 正集 | 负集 | 零集 符号测度 → def.positive-negative-null
 
 - 相互奇异 | mutually singular | 奇异 → def.mutually-singular
@@ -28,7 +30,5 @@
 - 绝对连续与变差 → prop.ac-and-variations
 
 - 积分给出绝对连续 → prop.integral-gives-ac
-
-- 复测度的 RN 定理 → thm.rn-complex
 
 > 续见 alias/aka/analysis.9.md

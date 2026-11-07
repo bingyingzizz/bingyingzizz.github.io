@@ -1,4 +1,4 @@
-# Urysohn 度量化定理　`thm.urysohn-metrization`　·　说明
+# Урысон 度量化定理　`thm.urysohn-metrization`　·　说明
 根 `../`
 
 **逆连续**：同样用基对，把「$f_{k}$ 很接近」翻译回「落在同一个基元里」。

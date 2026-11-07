@@ -3,37 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lusin 定理：可测函数几乎处处连续 · 数学星图 MathGalaxy</title>
+<title>Лузин 定理：可测函数几乎处处连续（Lusin） · 数学星图 MathGalaxy</title>
 <meta name="description" content="设 f : [a, b] → ℂ 是 Lebesgue 可测的。则对任意 ε 0 ，存在紧集 E ⊆ [a, b] 使 μ(E^c) &lt; ε 且 f|E 连续。 · English: Lusin">
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html">
 <link rel="alternate" type="text/markdown" href="cor.lusin.md" title="Markdown 原文（给 AI 的按需检索版）">
 <link rel="alternate" type="text/markdown" hreflang="en" href="cor.lusin.en.md" title="English entry (Markdown)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="数学星图 MathGalaxy">
-<meta property="og:title" content="Lusin 定理：可测函数几乎处处连续 · 数学星图 MathGalaxy">
+<meta property="og:title" content="Лузин 定理：可测函数几乎处处连续（Lusin） · 数学星图 MathGalaxy">
 <meta property="og:description" content="设 f : [a, b] → ℂ 是 Lebesgue 可测的。则对任意 ε 0 ，存在紧集 E ⊆ [a, b] 使 μ(E^c) &lt; ε 且 f|E 连续。 · English: Lusin">
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#1C86B0">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html#concept","name":"Lusin 定理","alternateName":"Lusin","description":"设 f : [a, b] → ℂ 是 Lebesgue 可测的。则对任意 ε 0 ，存在紧集 E ⊆ [a, b] 使 μ(E^c) < ε 且 f|E 连续。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"推论, Lusin, 连续, 紧集"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"实变函数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure"},{"@type":"ListItem","position":3,"name":"可测函数与收敛","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measurable"},{"@type":"ListItem","position":4,"name":"Lusin 定理","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html#concept","name":"Лузин 定理","alternateName":"Lusin","description":"设 f : [a, b] → ℂ 是 Lebesgue 可测的。则对任意 ε 0 ，存在紧集 E ⊆ [a, b] 使 μ(E^c) < ε 且 f|E 连续。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"推论, Лузин, 连续, 紧集"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"实变函数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure"},{"@type":"ListItem","position":3,"name":"可测函数与收敛","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measurable"},{"@type":"ListItem","position":4,"name":"Лузин 定理","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/cor.lusin.html"}]}]}</script>
 <link rel="stylesheet" href="../../assets/katex.min.css">
 <link rel="stylesheet" href="../../assets/site.css">
 <link rel="stylesheet" href="../../assets/node.css">
 </head>
 <body class="node-page" style="--rc:#1C86B0">
 
-<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure">实变函数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measurable">可测函数与收敛</a><span class="sep">›</span><span aria-current="page">Lusin 定理</span></nav>
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis-measure">实变函数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#analysis.measurable">可测函数与收敛</a><span class="sep">›</span><span aria-current="page">Лузин 定理</span></nav>
 
 <main class="wrap">
 
   <header class="np-head">
-    <h1>Lusin 定理</h1>
-    <p class="full">Lusin 定理：可测函数几乎处处连续</p>
+    <h1>Лузин 定理<span class="en" lang="en">Lusin</span></h1>
+    <p class="full">Лузин 定理：可测函数几乎处处连续</p>
     <ul class="facts"><li>推论</li><li>依赖深度 layer 24</li><li>实变函数</li><li>数学分析</li><li>可测函数与收敛</li></ul>
-    <p class="idline"><code>cor.lusin</code> · 推论 · Lusin · 连续 · 紧集</p>
-    <p class="aka"><span class="aka-k">又称</span>Lusin<span class="aka-s">·</span>卢津</p>
+    <p class="idline"><code>cor.lusin</code> · 推论 · Лузин · 连续 · 紧集</p>
+    <p class="aka"><span class="aka-k">又称</span>Lusin<span class="aka-s">·</span>Lusin 定理<span class="aka-s">·</span>卢津<span class="aka-s">·</span>卢津定理</p>
     
     
   </header>
@@ -65,7 +65,7 @@
   <section class="sec jump">
     <h2>继续</h2>
     <p>
-      <a href="../#n=cor.lusin">在星图里打开「Lusin 定理」</a>　·　
+      <a href="../#n=cor.lusin">在星图里打开「Лузин 定理」</a>　·　
       <a href="../all.html">全部 1550 个概念</a>　·　
       <a href="cor.lusin.md">Markdown 原文</a>　·　
       <a href="cor.lusin.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>

@@ -9,8 +9,8 @@
 - def.entire-order　整函数的阶与型　layer 27
 - prop.jensen　Jensen 公式　layer 27
 - def.analytic-continuation　解析延拓　layer 28
-- thm.hadamard-factorization　Hadamard 分解定理　layer 28
 - thm.monodromy　单值性定理　layer 29
 - thm.schwarz-reflection　Schwarz 反射原理　layer 29
-- thm.picard-little　Picard 小定理　layer 29
-- thm.picard-great　Picard 大定理　layer 30
+- thm.hadamard-factorization　Hadamard 分解定理　layer 30
+- thm.picard-little　Picard 小定理　layer 31
+- thm.picard-great　Picard 大定理　layer 32

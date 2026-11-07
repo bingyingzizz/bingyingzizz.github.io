@@ -11,4 +11,10 @@
 
 - 狄利克雷特征标 → def.dirichlet-character
 
+- 群范畴 | Grp → def.category-of-groups
+
+- 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
+
+- 模范畴 | A-Mod → def.module-category
+
 见 `../../alias.md`。

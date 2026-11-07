@@ -42,6 +42,7 @@
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 21 · 同调群
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 34 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
+- **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
 - **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 25 · 向量场与 Lie 结构
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 30 · 内蕴几何
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
@@ -56,7 +57,6 @@
 - **6 / 4** `thm.lp-banach` L^p 是 Banach 空间 · layer 23 · L^p 空间
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 25 · 向量场与 Lie 结构
 - **6 / 1** `thm.completeness-equivalent` 完备性的六条等价 · layer 23 · 实数完备性的等价刻画
-- **5 / 6** `def.tangent-bundle` 切丛 · layer 21 · 流形与向量丛
 
 （共 1543 个节点有非零计数；这里列前 20 条。）
 

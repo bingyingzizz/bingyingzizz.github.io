@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理
+- ⇒ [`thm.hadamard-factorization`](../nodes/thm.hadamard-factorization.md) Hadamard 分解定理

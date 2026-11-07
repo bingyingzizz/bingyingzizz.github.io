@@ -7,6 +7,11 @@ layer 29 · 命题 · 复变函数基础 · 复变函数
 > 陈述续见 [nodes/prop.single-valued-branch.2.md](./prop.single-valued-branch.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理
+
+- …另有出边，续页见 [nodes/prop.single-valued-branch.4.md](./prop.single-valued-branch.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.single-valued-branch.3.md](./prop.single-valued-branch.3.md)
 

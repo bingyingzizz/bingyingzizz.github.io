@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 复测度的 RN 定理 → thm.rn-complex
+
 - 积分的绝对连续性 → cor.ac-integral-continuity
 
 - RN 定理 | 拉东-尼科迪姆 | Radon-Nikodym theorem → thm.lebesgue-radon-nikodym

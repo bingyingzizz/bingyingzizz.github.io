@@ -7,12 +7,12 @@
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 21 · 同调群
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 34 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
+- **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
 - **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 25 · 向量场与 Lie 结构
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 30 · 内蕴几何
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
 - **6 / 6** `def.form-on-manifold` 微分形式 · layer 21 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
-- **6 / 6** `def.submanifold-volume` 诱导体积 · layer 31 · 微分形式、积分与 de Rham
 
 > 续见 hubs/big.2.md

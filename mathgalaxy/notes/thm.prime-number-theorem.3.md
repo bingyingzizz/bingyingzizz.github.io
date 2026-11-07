@@ -1,12 +1,12 @@
 # 素数定理　`thm.prime-number-theorem`　·　说明
 根 `../`
 
-- 若 $\theta(x) \sim x$：由引理 3 第二式，$\pi(x) = \frac{x(1+o(1))}{\log x} + \int_{2}^{x}\frac{t(1+o(1))}{t\log^{2}t}\,\mathrm{d}t$。主项是 $x/\log x$；积分 $\int_{2}^{x}\frac{\mathrm{d}t}{\log^{2} t} = o\big(\frac{x}{\log x}\big)$（因为 $\log^{2} t$ 增长比 $\log t$ 快），故 $\pi(x) \sim x/\log x$。
+**命题 A（已证）：** $\zeta(s)=\sum_{n\ge1}n^{-s}$（$\operatorname{Re}s>1$）亚纯延拓到 $\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\in\mathbb{R}$ 有 $\zeta(1+it)\ne0$。
 
-- 若 $\pi(x) \sim x/\log x$：由引理 3 第一式，$\theta(x) = \pi(x)\log x - \int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t = x + o(x) - \int_{2}^{x}\frac{(1+o(1))\,\mathrm{d}t}{\log t}$。而 $\int_{2}^{x}\frac{\mathrm{d}t}{\log t} = o(x)$（对数积分 $\operatorname{li}(x) = O(x/\log x)$），故 $\theta(x) \sim x$。∎
+**命题 A 的第一部分（解析延拓）**：对 $\operatorname{Re}s>1$，分部求和给 $\sum_{n\le N}n^{-s}=N^{1-s}+s\int_{1}^{N}\lfloor x\rfloor x^{-s-1}\,\mathrm{d}x$。令 $N\to\infty$（$N^{1-s}\to0$），并写 $\lfloor x\rfloor=x-\{x\}$：
 
-于是素数定理 $\pi(x) \sim x/\log x$ 与 $\psi(x) \sim x$ 等价（引理 2 + 引理 4）。
+$$\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\{x\}\,x^{-s-1}\,\mathrm{d}x\qquad(\operatorname{Re}s>1).$$
 
-**剩下的解析主定理（本图未展开，正是 skeleton 的原因）**：
+右端积分对 $\operatorname{Re}s>0$ 绝对收敛（$|\{x\}x^{-s-1}|\le x^{-\operatorname{Re}s-1}$），故它给出 $\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。
 
 > 续见 notes/thm.prime-number-theorem.4.md

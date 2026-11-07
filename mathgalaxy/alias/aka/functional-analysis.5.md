@@ -7,4 +7,12 @@
 
 - 弗雷歇导数 → thm.frechet-derivative
 
+- 凸集 → def.convex-set
+
+- 星形集 | 星形区域 → def.star-shaped
+
+- 凸组合 → def.convex-combination
+
+- 凸包 → def.convex-hull
+
 见 `../../alias.md`。

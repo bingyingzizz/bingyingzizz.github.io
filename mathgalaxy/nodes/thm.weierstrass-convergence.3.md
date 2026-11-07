@@ -4,4 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.mittag-leffler`](../nodes/thm.mittag-leffler.md) Mittag-Leffler 定理
 - ⇒ [`thm.montel`](../nodes/thm.montel.md) Montel 定理
+- ⇒ [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理
 - ⇒ [`thm.weierstrass-product`](../nodes/thm.weierstrass-product.md) Weierstrass 乘积定理

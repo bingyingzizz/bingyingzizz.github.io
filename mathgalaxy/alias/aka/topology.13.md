@@ -1,9 +1,11 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 仿紧豪斯多夫空间正规 | 豪斯多夫 → thm.paracompact-hausdorff-normal
+
 - 斯通定理 | 斯通 → thm.metric-paracompact
 
-- 乌雷松度量化定理 | 乌雷松 → thm.urysohn-metrization
+- 乌雷松度量化定理 | 乌雷松 | Urysohn 度量化定理 → thm.urysohn-metrization
 
 - 三角剖分 | 可三角剖分 | 剖分 | triangulation → def.triangulation
 
@@ -22,11 +24,5 @@
 - 相对紧 → def.relatively-compact
 
 - 勒贝格数 → def.lebesgue-number
-
-- 紧化 → def.compactification
-
-- 一点紧化 → def.one-point-compactification
-
-- 网 → def.net
 
 > 续见 alias/aka/topology.14.md

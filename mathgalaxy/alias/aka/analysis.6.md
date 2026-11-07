@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 积分为零 | 积分为零推出几乎处处为零 → prop.integral-zero-iff
+
 - MCT a.e. | 单调收敛 a.e. → cor.mct-ae
 
 - 单调收敛 | MCT | monotone convergence theorem | Levi 定理 → thm.mct
@@ -26,7 +28,5 @@
 - 控制收敛 | DCT | dominated convergence | Lebesgue 控制收敛定理 | 积分与极限交换 | 控制函数 | 控制函数可积 → thm.dct
 
 - L1 逐项积分 | L1 的级数积分 → thm.termwise-L1
-
-- L1 逼近 | L1 里的逼近 → thm.approximation-L1
 
 > 续见 alias/aka/analysis.7.md

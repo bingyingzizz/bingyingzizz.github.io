@@ -11,4 +11,8 @@
 
 - Riesz-Markov 表示定理 | Riesz–Markov 表示 → thm.riesz-markov
 
+- Radon 测度 | 拉东测度 → def.radon-measure
+
+- 集合上的积分 → def.integral-over-set
+
 见 `../../alias.md`。

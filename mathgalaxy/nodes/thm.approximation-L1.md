@@ -12,7 +12,7 @@ $$\int |f - \varphi| d\mu < \varepsilon$$
 $$\int |f - g| d\mu < \varepsilon$$
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.lusin`](../nodes/cor.lusin.md) Lusin 定理
+- ⇒ [`cor.lusin`](../nodes/cor.lusin.md) Лузин 定理
 
 - …另有出边，续页见 [nodes/thm.approximation-L1.3.md](./thm.approximation-L1.3.md)
 

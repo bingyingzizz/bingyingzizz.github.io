@@ -31,4 +31,8 @@
 
 - 幂对象 | 指数对象 → def.power-object
 
+- 群范畴 | Grp → def.category-of-groups
+
+- 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
+
 见 `../../alias.md`。

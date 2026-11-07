@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 可数积的生成 → prop.product-sigma-generated
+
 - 截口可测 | sections of measurable sets and functions → prop.section-measurable
 
 - 可数积的 Borel 代数 → cor.borel-product
