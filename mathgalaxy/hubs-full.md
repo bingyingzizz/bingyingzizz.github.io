@@ -58,7 +58,7 @@
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 25 · 向量场与 Lie 结构
 - **6 / 1** `thm.completeness-equivalent` 完备性的六条等价 · layer 23 · 实数完备性的等价刻画
 
-（共 1543 个节点有非零计数；这里列前 20 条。）
+（共 1544 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 

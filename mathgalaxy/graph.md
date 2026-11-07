@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-07T13:39:14.350Z
-> 15 星系 / 105 星团 / 1551 节点 / 3194 连线（强边 3152，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-07T14:03:04.591Z
+> 15 星系 / 105 星团 / 1551 节点 / 3195 连线（强边 3153，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 3.9 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -5490,7 +5490,7 @@ $$\chi(S) = 2 - 2g .$$
 
 **六、收尾。** $\chi(S)=\beta_{0}-\beta_{1}+\beta_{2}=1-2g+1=2-2g$。∎（在第一节的 Radó 输入与上面「可定向」的定义下。）
 
-**七、缺口与状态。** ①本图未证的唯一外部定理：Radó（`thm.rado`，skeleton）。②缺节点：拓扑流形的可定向性（定向图册 / 定向双覆盖）。本图只有光滑版（`def.orientable-manifold`、`prop.volume-form-orientation`）与 $\mathbb{R}^{3}$ 外在版（`def.orientable-surface`）；光滑定义不能直接搬到拓扑曲面，除非先证光滑化（那又要 Radó/Whitehead）。本注因此在第二节就地给出拓扑定义。③因此本条仍 skeleton；若 Radó 补完、并把可定向性立成节点，本条即可删 status。④另一可选口径（不改陈述，由父会话定）：把假设改成「可三角剖分的闭可定向曲面」，则本条立刻完整——但那会把 Radó 从定理变成假设。
+**七、缺口与状态。** ①本图未证的唯一外部定理：Radó（`thm.rado`，skeleton）。②缺节点：拓扑流形的可定向性（定向图册 / 定向双覆盖）。本图只有光滑版（`def.orientable-manifold`、`prop.volume-form-orientation`）与 $\mathbb{R}^{3}$ 外在版（`def.orientable-surface`）；光滑定义不能直接搬到拓扑曲面，除非先证光滑化（那又要 Radó/Whitehead）。本注因此在第二节就地给出拓扑定义。③因此本条标 `status: 'skeleton'`：证明**条件于 Radó**（`thm.rado` 仍是 skeleton）；Radó 补完后可删本节点 status（可定向性那条缺节点只影响第二节的表述，不影响结论）。④另一可选口径（不改陈述，由父会话定）：把假设改成「可三角剖分的闭可定向曲面」，则本条立刻完整——但那会把 Radó 从定理变成假设。
 
 **八、与旧注的关系。** 旧注的标准形计数（$4g$ 边形得 $\chi=2-2g$）与连通和公式仍然正确，下面是它们的保留版，作为「标准形上的独立验证」；但它们不再是证明的必经之路。旧注所说的「(b) 基本类 / 定向对偶」也不需要了：引理 D 是它的初等替代，只对曲面、只算 $H_{2}$，不引定向对偶。
 
@@ -32880,7 +32880,7 @@ $$f : \Omega \longrightarrow \mathbb{D}$$
 
 **缺口（已精确到一条定理）：Carathéodory–Osgood 定理。** 设 $\Omega$ 是 Jordan 区域（$\partial\Omega$ 是 Jordan 曲线），$f:\Omega\to\mathbb{D}$ 是 Riemann 映射。则：(a) $f$ 连续延拓到 $\overline{\Omega}$（Carathéodory 1913）；(b) 延拓在 $\partial\Omega$ 上单射（Osgood 1900 / Carathéodory）。两条都不可省：只有 (a) 时边界可能把两个点粘在一起；只有「单连通」而没有 Jordan 条件时连 (a) 都不成立（环域上的反例：延拓后的边界行为由两个边界分量共同决定）。
 
-**为什么本图补不了。** (a) 的标准证明要用 crosscut / prime end（Carathéodory 拓扑），或境界的局部连通性加调和测度；(b) 要用 Jordan 曲线定理与 crosscut 论证。本图**没有** Carathéodory、crosscut、prime end、Jordan 曲线定理的节点；`thm.schwarz-reflection` 只处理解析弧（圆、直线）的反射，不能覆盖一般 Jordan 曲线。**多边形区域**是例外：此时 (a)(b) 可用 Schwarz 反射逐边拼接证明（见 `thm.schwarz-christoffel` 的注），但那只覆盖折线边界，不是本条的一般情形。因此本条保持 `status: 'skeleton'`，缺口就是这一条定理。
+**为什么本图补不了。** (a) 的标准证明要用 crosscut / prime end（Carathéodory 拓扑），或境界的局部连通性加调和测度；(b) 要用 Jordan 曲线定理与 crosscut 论证。本图**没有** Carathéodory、crosscut、prime end、Jordan 曲线定理的节点；`thm.schwarz-reflection` 只处理解析弧（圆、直线）的反射，不能覆盖一般 Jordan 曲线。**多边形区域**是例外：此时 (a)(b) 可用 Schwarz 反射逐边拼接证明；但 SC 的注也只给策略、本图未证（`thm.schwarz-christoffel` 仍 skeleton），所以这里不把它当作已证步骤。况且那只覆盖折线边界，不是本条的一般情形。因此本条保持 `status: 'skeleton'`，缺口就是这一条定理。
 
 **⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_{k}$ 对应多边形顶点」提供合法性。
 
@@ -54028,6 +54028,10 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 
 不可定向=不存在定向图册；标准形 $k$ 个 $\mathbb{RP}^{2}$ 的连通和
 
+#### 定义引用：「拓扑流形」→ 拓扑可定向性　`def-link.topmanifold-toporient`
+
+拓扑流形上才谈定向图册/定向双覆盖
+
 #### 定义引用：「域」→ 域扩张　`dep.field-fieldext`
 
 扩张的两端都是**域**；「子域」这个概念本身来自 `def.field` 的子结构。
@@ -63154,7 +63158,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **内蕴几何 ↔ 曲面的地形**　2 条节点级连线
 - **同调群 ↔ 曲面的地形**　7 条节点级连线
 - **拓扑空间的基本语汇 ↔ 曲面的地形**　4 条节点级连线
-- **流形与向量丛 ↔ 曲面的地形**　3 条节点级连线
+- **流形与向量丛 ↔ 曲面的地形**　4 条节点级连线
 - **曲面论 ↔ 曲面的地形**　3 条节点级连线
 - **Galois 理论 ↔ 代数结构**　5 条节点级连线
 - **Galois 理论 ↔ 向量空间与基**　2 条节点级连线
