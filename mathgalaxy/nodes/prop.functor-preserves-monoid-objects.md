@@ -3,7 +3,7 @@
 layer 15 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.functor-preserves-monoid-objects)　·　[节点索引](../index.md)
 
-若 $F : \mathcal{C} \to \mathcal{D}$ **保有限积**（含终对象），则它把
+若 $F : \mathcal{C} \to \mathcal{D}$ **保有限积**（含终对象），则
 > 陈述续见 [nodes/prop.functor-preserves-monoid-objects.2.md](./prop.functor-preserves-monoid-objects.2.md)
 
 

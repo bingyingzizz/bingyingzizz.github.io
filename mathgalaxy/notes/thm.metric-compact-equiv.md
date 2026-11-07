@@ -1,16 +1,10 @@
 # 紧的三个等价刻画　`thm.metric-compact-equiv`　·　说明
 根 `../`
 
-**每个方向用什么、要不要额外假设**（这张清单就是“等价”的全部内容）：
+**证明**（绕一圈：(a) $\implies$ (b) $\implies$ (c) $\implies$ (b) $\implies$ (a)）：
 
-- (a) $\implies$ (b)：**不需要任何假设**。取有限子覆盖后，用鸽笼原理挑出落在同一个覆盖成员里的子列（Lebesgue 数或直接归纳），再在该成员内取收敛子列。
+**① (a) $\implies$ (b)：紧 $\implies$ 列紧。** 设 $\{x_{n}\}$ 是 $X$ 中的序列，反设它没有收敛子列。令 $S = \{x_{n} : n \in \mathbb{N}\}$。$S$ 必无限：$S$ 有限时某个点出现无穷多次，给出常子列，它收敛。又对每个 $y \in X$ 存在 $\varepsilon_{y} > 0$ 使 $B(y, \varepsilon_{y})$ 只含 $S$ 中有限多个点：否则存在 $y$ 使每个球都含 $S$ 中无限多个点，于是可取 $n_{1} < n_{2} < \cdots$ 使 $x_{n_{k}} \in B(y, 1/k)$，得到收敛于 $y$ 的子列，矛盾。于是每个 $y \notin S$ 有开邻域不碰 $S$（把 $B(y, \varepsilon_{y})$ 里那有限个 $S$ 中的点去掉），故 $S$ 是闭集。开覆盖
 
-- (a) $\implies$ (c) 的「完备」：**不需要额外假设**。Cauchy 列若有收敛子列，则整列收敛到同一点。
-
-- (a) $\implies$ (c) 的「全有界」：**不需要额外假设**。开覆盖取所有半径 $\varepsilon$ 的球，有限子覆盖就是有限 $\varepsilon$-网。
-
-- (b) $\implies$ (a)：**只用全有界，不用选择公理**（“坏球”法：若不可有限覆盖，则递归造出两两距离 $\ge \varepsilon$ 的序列，它没有收敛子列）。
-
-- (b) $\implies$ (c) 的「完备」：**不需要额外假设**（收敛子列的极限给出 Cauchy 列的极限）。
+$$\{B(y, \varepsilon_{y})\}_{y \in X} \cup \{X \setminus S\}$$
 
 > 续见 notes/thm.metric-compact-equiv.2.md

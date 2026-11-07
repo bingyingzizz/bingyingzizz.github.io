@@ -3,20 +3,13 @@
 
 `def.rat` 有理数 ℚ + `thm.int-ring` ℤ 是交换整环 → `thm.rat-ordered-field` ℚ 是有序域
 
-**良定义。** 设 $a/b = a'/b'$、$c/d = c'/d'$（即 $ab' = a'b$、$cd' = c'd$，且分母非零）。
+**① 运算良定义。** 设 $a/b = a'/b'$、$c/d = c'/d'$，即 $ab' = a'b$、$cd' = c'd$（分母非零）。
 
-加法：要证 $(ad + bc)(b'd') = (a'd' + b'c')(bd)$，把 $ab' = a'b$ 乘 $dd'$、$cd' = c'd$ 乘 $bb'$，相加即得。
+加法：第一式乘 $dd'$、第二式乘 $bb'$ 后相加，得 $(ad + bc)b'd' = (a'd' + b'c')bd$。
 
-乘法同理（用 $ac b'd' = a'c' bd$）。
+乘法：两式相乘，得 $(ac)(b'd') = (a'c')(bd)$。
+**② 域公理。** 结合、交换、分配逐项搬到代表元，全部化成 $\mathbb{Z}$ 的环公理（`thm.int-ring`）。
 
-**域公理。** 全部搬到代表元上，就是 $\mathbb{Z}$ 的环公理（`thm.int-ring`）；加法逆元 $-a/b = (-a)/b$。
-
-**乘法逆元。** $a/b \ne 0$ 即 $a \ne 0$，此时 $(a/b)(b/a) = ab/ba = 1$（交换性用上了；$b a \ne 0$ 用到 $\mathbb{Z}$ 无零因子）。
-
-**序。** 把每个元素写成 $b > 0$ 的 $a/b$（分母取相反数即可）。
-
-定义 $a/b \le c/d :\iff ad \le bc$。
-
-良定义：换代表元时两边同乘正元 $b'd' > 0$，由 `thm.int-ring` 的序相容性不等号不变。
+零元是 $0/1$、幺元是 $1/1$、加法逆元是 $(-a)/b$；$0/1 \ne 1/1$ 因为 $0 \cdot 1 \ne 1 \cdot 1$。
 
 > 续见 proofs/imp.rat-ordered-field.2.md

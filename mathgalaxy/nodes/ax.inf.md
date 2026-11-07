@@ -7,7 +7,7 @@ layer 0 · 公理 · ZFC 公理系统 · 集合论
 
 $$\exists I [ \emptyset \in I \wedge  \forall x ( x \in I \to x \cup \{ x \} \in I ) ]$$
 
-公理本身只要求 $I$ **非空**且对后继封闭；写成 $\emptyset \in I$ 只是为了好看，$\emptyset$ 是原始对象（见「空集」）。
+$\emptyset \in I$ 这一项**不能省**：$I = \omega \setminus \{0\}$ 非空、对后继封闭（$x \ne 0 \implies S(x) \ne 0$），却不含 $\emptyset$ —— 「非空 + 对后继封闭」推不出 $\emptyset \in I$。（$\emptyset$ 是原始对象，见「空集」。）
 这条公理宣告了无穷集合的存在，是从中构造自然数集 $\omega$ 的唯一来源。
 
 ## 它能推出什么 / 谁在用它

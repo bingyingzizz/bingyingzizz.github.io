@@ -3,14 +3,12 @@
 
 ⭐ 一句话：这是「按主部插值」的存在定理。Weierstrass 乘积定理是它的**零点**版，Mittag-Leffler 是**极点**版 —— 一个指定零点的位置与重数，一个指定极点的位置与主部。
 
-⚠ 本条只**陈述**结论。完整证明要用 Runge 逼近或 Weierstrass 收敛因子逐项修正，属于逼近论，这里不展开；边上只记证明的骨架。
+**证明（Runge 版，完整写下来）。** 全程只用本图已有的 `thm.runge`（极点预先指定的形式）与紧集穷竭，不引用外部结果。
 
-⭐ 收敛的障碍在哪：极点无穷多个时 $\sum_k P_k$ 一般处处发散。修正的办法是逐项减去一个在 $a_k$ 附近全纯的函数（通常是 $P_k$ 在 $a_k$ 处的 Taylor 多项式），把它在越来越大的紧集上压得足够小。
+**第 0 步：约定。** $\Omega\subset\mathbb{C}$ 是区域；极点列 $\{a_k\}$ 在 $\Omega$ 内无聚点；主部记作 $P_k(w)=\sum_{j=1}^{m_k}c_{kj}w^{j}$，实际使用的是 $P_k\bigl(1/(z-a_k)\bigr)$。
 
-⭐ 例子（经典的两个）：
+**第 1 步：紧集穷竭与分层。** 令
 
-$$\pi^2 \csc^2(\pi z) = \sum_{n \in \mathbb{Z}} \frac{1}{(z - n)^2}, \qquad \pi \cot(\pi z) = \frac{1}{z} + \sum_{n \ne 0} \left( \frac{1}{z - n} + \frac{1}{n} \right).$$
+$$K_n=\bigl\{\,z\in\Omega:\ |z|\le n,\ \operatorname{dist}(z,\partial\Omega)\ge 1/n\,\bigr\}$$
 
-第二个里的 $+1/n$ 就是收敛因子。
-
-📌 与留数的接口：主部里的一次项系数 $c_{k 1}$ 正是 $\operatorname{Res}(f, a_k)$，所以 Mittag-Leffler 也可以读成「任意指定留数与高阶主部」。
+> 续见 notes/thm.mittag-leffler.2.md

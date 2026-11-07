@@ -13,7 +13,7 @@ layer 27 · 定理 · 复分析的拓扑应用 · 复变函数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.brouwer-fixed-point.3.md](./thm.brouwer-fixed-point.3.md)
 
-refs: 王晓光《复变函数》· Brouwer 不动点定理的复分析证明（全纯情形）；Ahlfors, Complex Analysis (3rd ed.), Ch. 5 §3 · Brouwer’s Fixed-Point Theorem；Hatcher, Algebraic Topology, §1.1 · 基本群（圆周的基本群是 ℤ，用覆叠空间证）；§2.2 · Brouwer 不动点定理
+refs: 王晓光《复变函数》· Brouwer 不动点定理的复分析证明（全纯情形）；Ahlfors, Complex Analysis (3rd ed.), Ch. 5 §3 · Brouwer’s Fixed-Point Theorem；Hatcher, Algebraic Topology, §1.1 · 基本群（圆周的基本群是 ℤ，用覆叠空间证）；§2.2 · Brouwer 不动点定理；Munkres, Topology (2nd ed.), Ch. 9 · Retractions and Fixed Points
 
 > 说明见 `notes/thm.brouwer-fixed-point.md`
 

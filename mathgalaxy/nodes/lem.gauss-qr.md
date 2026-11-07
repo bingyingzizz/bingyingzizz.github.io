@@ -12,6 +12,9 @@ $$\left(\frac{a}{p}\right) = (-1)^{\mu} .$$
 
 - …另有入边，续页见 [nodes/lem.gauss-qr.2.md](./lem.gauss-qr.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/lem.gauss-qr.3.md](./lem.gauss-qr.3.md)
+
 refs: 华罗庚《数论导引》第四章
 
 > 说明见 `notes/lem.gauss-qr.md`

@@ -4,4 +4,3 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.global-dimension`](../nodes/def.global-dimension.md) 整体维数 用
 - 被 [`cor.gldim-pid`](../nodes/cor.gldim-pid.md) 主理想整环的整体维数 用
-- 被 [`def.injective-dimension`](../nodes/def.injective-dimension.md) 内射维数 用

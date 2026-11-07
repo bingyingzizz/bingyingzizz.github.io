@@ -3,7 +3,7 @@
 
 `prop.continuous-bounded-on-compact` 紧集上连续 ⟹ 有界 + `thm.real-ordered-field` ℝ 是完备有序域 → `thm.evt` 最值定理
 
-设 $X$ 紧、$f : X \to \mathbb{R}$ 连续。由上一条，$f(X)$ 非空且有上界，令
+设 $X$ **非空**紧、$f : X \to \mathbb{R}$ 连续。由上一条，$f(X)$ 非空且有上界，令
 
 $$M := \sup f(X) \in \mathbb{R}$$
 

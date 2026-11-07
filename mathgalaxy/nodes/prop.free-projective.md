@@ -10,6 +10,9 @@ layer 19 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 
 - …另有入边，续页见 [nodes/prop.free-projective.2.md](./prop.free-projective.2.md)
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.cond-epi`](../nodes/prop.cond-epi.md) 凝聚态集满态射的判据
+
 refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
 
 > 说明见 `notes/prop.free-projective.md`

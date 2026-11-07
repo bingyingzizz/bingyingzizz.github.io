@@ -11,6 +11,4 @@ $$i\bigl(d(g_{1}g_{2})\bigr) s(g_{1}g_{2}) = i\bigl(d(g_{1})\bigr) s(g_{1})\, i\
 
 $$s(g) \longmapsto i(a)^{-1} s(g) i(a) = i\bigl(g \cdot a - a\bigr)\, s(g),$$
 
-也就是把 $d$ 换成 $d + (g \mapsto g \cdot a - a)$ —— 恰好加上一个**主**交叉同态。反过来任何保持 $i$ 与 $\pi$ 的扩张同构都能写成这样的共轭，于是 $A$-共轭类恰是 $H^{1}$ 的元素。∎
-
 > 续见 notes/thm.h1-semidirect.2.md

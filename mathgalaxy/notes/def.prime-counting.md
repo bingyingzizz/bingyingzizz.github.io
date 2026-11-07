@@ -9,7 +9,7 @@ $$\psi(x) = \sum_{n \le x} \Lambda(n), \qquad \Lambda(n) = \begin{cases}\log p, 
 
 
 
-（$\Lambda$ 叫 von Mangoldt 函数），而 $\log n! = \sum_{n \le x}\Lambda(n)\lfloor x/n\rfloor$ 把 $\psi$ 与阶乘直接连起来。
+（$\Lambda$ 叫 von Mangoldt 函数），而 $\log n! = \sum_{m \le n}\Lambda(m)\lfloor n/m\rfloor = \sum_{m \le n}\psi(n/m)$ 把 $\psi$ 与阶乘直接连起来。
 
 三者的关系是 $\theta \le \psi \le \theta + O(\sqrt{x}\log x)$ 与 $\pi(x) \sim \theta(x)/\log x$ —— 所以「三者同阶」这句话本身就是定理。
 

@@ -7,6 +7,6 @@
 
 它们既开又紧（quasicompact），这正是 adic 空间比概形好用的地方：仿射开集自带紧性。
 
-⚠ $\operatorname{Spa}(A,A^+)$ 一般**不是** Hausdorff 的，它是 spectral（紧、$T_0$、有开集基）。
+⚠ $\operatorname{Spa}(A,A^+)$ 一般**不是** Hausdorff 的，它是 spectral（紧、**sober**、**紧开集**构成基，且紧开集对有限交封闭）。
 
 所以不能拿度量空间的直觉套它。

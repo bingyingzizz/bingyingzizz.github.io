@@ -3,14 +3,10 @@
 
 `def.de-rham-complex` de Rham 上同调 → `thm.mayer-vietoris` Mayer–Vietoris 序列
 
-**短正合列。** 限制映射把 $M$ 上的形式送到 $U$、$V$ 上，差把两块送到重叠处：
+**短正合列。** 记 $W = U \cap V$。限制与差给出 
 
-$$0 \to \Omega^{k}(M) \xrightarrow{\ r\ } \Omega^{k}(U) \oplus \Omega^{k}(V) \xrightarrow{\ s\ } \Omega^{k}(U \cap V) \to 0 ,$$
+$$0 \to \Omega^{k}(M) \xrightarrow{\ r\ } \Omega^{k}(U) \oplus \Omega^{k}(V) \xrightarrow{\ s\ } \Omega^{k}(W) \to 0 ,$$
 
-$$r(\omega) := \bigl(\omega\big|_{U},\ \omega\big|_{V}\bigr),\qquad s(\omega_{U},\omega_{V}) := \omega_{U}\big|_{U \cap V} - \omega_{V}\big|_{U \cap V} .$$
-
-**单射。** $r(\omega) = 0$ 说明 $\omega$ 在 $U$ 与 $V$ 上都为零，而 $M = U \cup V$，故 $\omega = 0$。
-
-**满射（这是唯一要动手的一步）。** 给定 $\omega \in \Omega^{k}(U \cap V)$，取从属于 $\{U, V\}$ 的光滑单位分解 $\rho_{U} + \rho_{V} = 1$（`thm.smooth-partition-unity`）。
+$$r(\omega) = (\omega|_{U}, \omega|_{V}),\qquad s(\omega_{U}, \omega_{V}) = \omega_{U}|_{W} - \omega_{V}|_{W} .$$
 
 > 续见 proofs/imp.mf-mayer-vietoris.2.md

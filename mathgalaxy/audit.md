@@ -6,17 +6,18 @@
 
 （没有）
 
-## 二、近同名却没有任何边（7 对）
+## 二、近同名却没有任何边（8 对）
 
 判据：label 去掉括注/空格后相同或前缀相近（与 `_tools/_nov15.mjs` 同口径），且两颗星之间一条边都没有。
 
 - Euler 定理（`thm.euler-theorem` L10）⇸ Euler 类（`def.euler-class` L38）
 - Euler 函数（`def.euler-phi` L14）⇸ Euler 类（`def.euler-class` L38）
 - Euler 判别法（`thm.euler-criterion` L16）⇸ Euler 类（`def.euler-class` L38）
-- Euler 类（`def.euler-class` L38）⇸ Euler 公式（`thm.euler-formula` L18）
 - Pontryagin 类（`def.pontryagin-class` L37）⇸ Pontryagin 对偶（`def.pontryagin-dual` L19）
+- Euler 类（`def.euler-class` L38）⇸ Euler 公式（`thm.euler-formula` L23）
 - Euler 公式（`thm.euler-formula-surface` L30）⇸ Euler 类（`def.euler-class` L38）
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L38）
+- 阿贝尔群范畴（`def.category-of-abelian-groups` L8）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 
 ## 三、黑边子图上的环（2 个）
 
@@ -37,6 +38,8 @@
 - 该标未标：`def.algebraic-extension`
 - 该标未标：`def.riemann-zeta`
 - 该标未标：`thm.developable-iff-flat`
+- 该标未标：`def.simplicial`
+- 该标未标：`def.simplex-category`
 
 
 ## 五、假设标注（hypotheses）
@@ -54,6 +57,7 @@
   - def.compact  ‹紧›
   - prop.subset-compact-equiv  ‹完备›
   - cor.borel-product  ‹可分›
+  - def.radon-measure  ‹Hausdorff›
   - def.null-set  ‹完备›
   - thm.completion  ‹完备›
   - thm.caratheodory  ‹完备›
@@ -85,6 +89,5 @@
   - def.pre-analytic-ring  ‹Hausdorff›
   - def.analytic-ring  ‹完备›
   - thm.analytic-modules  ‹完备›
-  - def.discrete-huber-pair  ‹完备›
   - …还有 207 处
 

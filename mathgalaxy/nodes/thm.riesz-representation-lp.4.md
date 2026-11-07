@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.duality-map`](../nodes/def.duality-map.md) 对偶配对 φ_g：用到了定义 对偶配对 φ_g　[proofs/def-link.duality-riesz.md](../proofs/def-link.duality-riesz.md)
-- [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）：Riesz 表示定理：$L^{p}$ 版与 Hilbert 版　[proofs/e164.analogy.md](../proofs/e164.analogy.md)
+- [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）：Riesz 表示定理：$L^{p}$ 版与 Hilbert 版　[proofs/e175.analogy.md](../proofs/e175.analogy.md)

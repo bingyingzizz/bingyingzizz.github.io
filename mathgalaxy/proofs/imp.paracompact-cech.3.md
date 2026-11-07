@@ -1,10 +1,8 @@
-# 足够多内射 + 软层无环 $\implies$ 仿紧上 Čech 等于层上同调
+# Čech 消解 + 软层无环 $\implies$ 仿紧上 Čech 等于层上同调（路线，含缺口）
 `imp.paracompact-cech` · 推出 · strong 边 · 根 `../`
 
-`thm.pushforward-enough-injectives` 足够多内射层 + `prop.skyscraper-injective` 天际线层是内射层 → `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调
+`def.cech-cohomology` Čech 上同调 + `prop.paracompact-partition-unity` 仿紧性与单位分解 + `thm.cartan-leray` Cartan–Leray 谱序列 + `cor.cech-cohomology-spectral` Čech 到上同调的谱序列 + `def.right-derived-functor` 右导出函子 + `thm.derived-long-exact` 导出函子的长正合列 → `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调
 
-**第二步：每一项软。** 仿紧 Hausdorff 上每个开覆盖有局部有限的开细化，局部有限覆盖配**从属的单位分解**（`prop.paracompact-partition-unity`）：一族连续 $\varphi_{i} : X \to [0,1]$，支撑在 $U_{i}$ 里、局部有限、局部求和为 $1$。
-
-用 $\varphi_{i}$ 逐块切截面，就能把 $\check{\mathcal{C}}^{p}$ 的整体截面「拆成」各覆盖成员上的截面再拼回来 —— 这正是**软性**（soft：每个闭集上的截面都能延拓到全空间）。
+-1}}$，则 $\delta h+h\delta=\operatorname{id}$（$p\ge1$），$p=0$ 时 $\delta h$ 是增广；故 $0\to\mathcal{M}\to\check{\mathcal{C}}^{0}\to\check{\mathcal{C}}^{1}\to\cdots$ 正合。取整体截面：$\Gamma(X,\check{\mathcal{C}}^{p})=\check{C}^{p}(\mathfrak{U},\mathcal{M})$，其同调就是 $\check{H}^{\bullet}(\mathfrak{U},\mathcal{M
 
 > 续见 proofs/imp.paracompact-cech.4.md

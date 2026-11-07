@@ -2,9 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-** (the "bad ball" argument: if no finite cover existed, one would build recursively a sequence with pairwise distances $\ge \varepsilon$, which has no convergent subsequence).
-- (b) $\implies$ (c), "complete": **no extra hypothesis** (the limit of the convergent subsequence is the limit of the Cauchy sequence).
-- (b) $\implies$ (c), "totally bounded": **this step really uses countable choice (DC)** \u2014 the only place in the whole proof. For each $n$ one picks a $1/n$-ball containing infinitely many terms, and shrinks layer by layer.
-- (c) $\implies$ (b): **no choice needed** (diagonal argument: using $1/n$-nets, 
+(a) $\implies$ (b) fails: take $I = 2^{\mathbb{N}}$ and, for $A \in \{0, 1\}^{\mathbb{N}}$, put $x_{n}(A) = A(n)$, so $x_{n} \in \{0, 1\}^{I}$; Tychonoff makes $\{0, 1\}^{I}$ **compact**. Given any subsequence $n_{k}$, choose $A$ with $A(n_{2j}) = 1$ and $A(n_{2j+1}) = 0$; then $x_{n_{k}}(A)$ alternates between $1$ and $0$, so the subsequence does not converge; since $n_k$ was arbitrary, no subsequence of $(x_n)$ converges — **not sequentially compact**.
 
 > 续见 nodes/thm.metric-compact-equiv.en.8.md

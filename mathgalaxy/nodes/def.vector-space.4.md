@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.vector-space)　·　第 1 页 [nodes/def.vector-space.md](./def.vector-space.md)　·　上一页 [nodes/def.vector-space.3.md](./def.vector-space.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用
 - 被 [`def.subspace`](../nodes/def.subspace.md) 子空间 用
 - 被 [`def.linear-map`](../nodes/def.linear-map.md) 线性映射 用
 - 被 [`def.linear-isomorphism`](../nodes/def.linear-isomorphism.md) 线性同构 用

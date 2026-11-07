@@ -9,7 +9,7 @@
 
 ⭐ $\mathbb{Z}/n$ 的生成元个数是 Euler 函数 $\varphi(n)$（与 $n$ 互素的那些 $k$ 对应的 $g^{k}$）。
 
-⭐ $\mathbb{Z}/p$（$p$ 素）是**素域** $\mathbb{F}_p$ 的加法群，也是它唯一的真子群来源 —— 这是 `def.characteristic` 与有限域那条线的起点。
+⭐ $\mathbb{Z}/p$（$p$ 素）是**素域** $\mathbb{F}_p$ 的加法群；$p$ 素时它没有非平凡真子群 —— 这是 `def.characteristic` 与有限域那条线的起点。
 
 ⚠ 「循环」不是「$g$ 的幂总是循环排列」这种字面意思；
 

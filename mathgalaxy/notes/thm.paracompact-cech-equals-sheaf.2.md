@@ -1,14 +1,6 @@
 # 仿紧空间上的 Čech 就是上同调　`thm.paracompact-cech-equals-sheaf`　·　说明
 根 `../`
 
-**③ 无环消解算导出函子。** 由 ① ②，$\check{\mathcal{C}}^{\bullet}$ 是一个由 $\Gamma$-无环层组成的消解；由 Leray 零调性（零调消解算右导出函子），
-
-$$H^{n}(X, \mathcal{M}) = H^{n}\bigl(\Gamma(X, \check{\mathcal{C}}^{\bullet})\bigr) = \check{H}^{n}(\mathfrak{U}, \mathcal{M}) .$$
-
-再沿覆盖取余极限（Čech 上同调按定义就是沿覆盖的滤过余极限）得到一般结论。∎
-
-⭐ **与「紧 Hausdorff」那条的关系**：紧 Hausdorff 必仿紧，所以这一条把 `prop.chaus-cech-eq-h` 覆盖在内；但两条的**证明**完全不同 —— 紧性用的路子是「有限覆盖在滤过系统里共尾 + 有限直积可由可表对象控制」，仿紧性用的是「局部有限 + 单位分解给出的软性」。
-
-同一个结论，两套互不依赖的机制。
+**① 的证明。** 只需逐点看茎。固定 $x$，取 $i$ 使 $x \in U_{i}$。在茎上定义收缩同伦 $h^{p} : (\check{\mathcal{C}}^{p})_{x} \to (\check{\mathcal{C}}^{p-1})_{x}$：对 $\sigma \in (\check{\mathcal{C}}^{p})_{x}$ 令 $(h\sigma)_{i_{0} \cdots i_{p-1}} := \sigma_{i\,i_{0} \cdots i_{p-1}}$（其余分量取 $0$，在 $x$ 的充分小邻域里 $U_{i}$ 一直可用）。直接按 Čech 微分 $\delta$ 的符号计算得 $\delta h + h \delta = \operatorname{id}$（$p \ge 1$），而 $p = 0$ 时 $\delta h = \operatorname{id}$ 正是增广映射 $\mathcal{M}_{x} \to (\check{\mathcal{C}}^{0})_{x}$。所以增广复形 $0 \to \mathcal{M}_{x} \to (\check{\mathcal{C}}^{0})_{x} \to (\check{\mathcal{C}}^{1})_{x} \to \cdots$ 正合；逐点正合即层正合。取整体截面：$\Gamma(X, \check{\mathcal{C}}^{p}) = \check{C}^{p}(\mathfrak{U}, \mathcal{M})$，故其同调就是 $\check{H}^{\bullet}(\mathfrak{U}, \mathcal{M})$。
 
 > 续见 notes/thm.paracompact-cech-equals-sheaf.3.md

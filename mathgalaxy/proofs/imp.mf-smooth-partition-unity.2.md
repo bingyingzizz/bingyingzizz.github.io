@@ -3,10 +3,8 @@
 
 `prop.paracompact-partition-unity` 仿紧性与单位分解 + `def.partition-of-unity` 单位分解 → `thm.smooth-partition-unity` 光滑单位分解
 
-**第二步：局部有限加细。** 流形的第二可数性 + Hausdorff + 局部欧氏给出仿紧；连续版的命题（`prop.paracompact-partition-unity`）给一个局部有限的开加细 $\{V_{\alpha}\}$，每块可设 $\overline{V_{\alpha}}$ 紧且落在某张卡 $U_{\alpha}$ 里（先取卡内的球、再由局部有限性收紧）。
+**第三步：在每块上造正鼓包。** 固定 $\alpha$。$\overline{V_{\alpha}}$ 紧且含于开集 $W_{\alpha}$，取其有限覆盖 $B(x_{j}, s_{j})$，并取 $s_{j}>0$ 使 $B(x_{j}, 2s_{j}) \subseteq W_{\alpha}$；令 $r_{j}=2s_{j}$，则 $B(x_{j}, r_{j}/2)$ 仍覆盖 $\overline{V_{\alpha}}$ 且 $B(x_{j}, r_{j}) \subseteq W_{\alpha}$。在每个球上取鼓包 $\beta_{j} \ge 0$：在 $B(x_{j}, r_{j}/2)$ 内为正、在 $B(x_{j}, r_{j})$ 外为零。令
 
-**第三步：在每块上放鼓包。** 取 $p_{\alpha} \in V_{\alpha}$ 与 $\varepsilon_{\alpha} > 0$ 使 $V_{\alpha}$ 在卡像里含半径 $2\varepsilon_{\alpha}$ 的球、且球的闭包落在 $\varphi_{\alpha}(U_{\alpha})$ 内。
-
-令 $\psi_{\alpha} := \beta\bigl((\cdot - \varphi_{\alpha}(p_{\alpha}))/\varepsilon_{\alpha}\bigr) \circ \varphi_{\alpha}$，则
+$$\psi_{\alpha} := \sum_{j}\beta_{j} .$$
 
 > 续见 proofs/imp.mf-smooth-partition-unity.3.md

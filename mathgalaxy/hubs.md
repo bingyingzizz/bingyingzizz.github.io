@@ -7,20 +7,20 @@
 每榜前 3 条；完整清单在 `hubs/<榜>.md`（各 20 条）。
 
 ## 基础工具榜
+- **31 / 32** `def.measure` 测度 · 测度的构造
 - **30 / 33** `def.limit` 极限 · 图与极限
-- **30 / 31** `def.measure` 测度 · 测度的构造
 - **29 / 32** `def.adjoint` 伴随函子 · 伴随与反射
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
+- **8 / 6** `thm.de-rham` de Rham 定理 · 微分形式、积分与 de Rham
 - **7 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
 - **7 / 7** `def.singular-homology` 奇异同调群 · 同调群
-- **7 / 4** `thm.theorema-egregium` 绝妙定理 · 内蕴几何
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
+- **16 团 / 29 节点** `def.group` 群 · 代数结构
 - **16 团 / 24 节点** `def.function` 映射 · 关系与函数
-- **15 团 / 27 节点** `def.group` 群 · 代数结构
 - **14 团 / 29 节点** `def.topology` 拓扑空间与开集 · 拓扑空间的基本语汇
 - 全部：`hubs/cross.md`
 

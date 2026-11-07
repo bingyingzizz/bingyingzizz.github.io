@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.spectral-sequence`](../nodes/def.spectral-sequence.md) 谱序列：用到了定义 谱序列　[proofs/def-dep.cartanleray-ss.md](../proofs/def-dep.cartanleray-ss.md)
+
+> 续见 [nodes/thm.cartan-leray.3.md](./thm.cartan-leray.3.md)

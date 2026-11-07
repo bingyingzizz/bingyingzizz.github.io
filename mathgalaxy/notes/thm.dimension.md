@@ -11,4 +11,4 @@
 
 ⭐ 维数的基本性质：$\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$；
 
-$\dim(V/U) = \dim V - \dim U$。
+$V$ **有限维**时 $\dim(V/U) = \dim V - \dim U$；无限维时减法没有意义（基数不做减法），只有基数加法 $\dim V = \dim U + \dim(V/U)$。

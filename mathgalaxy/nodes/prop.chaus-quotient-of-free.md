@@ -9,6 +9,9 @@ $$F := \beta\, S^{\mathrm{disc}} \longrightarrow S$$
 
 是连续满射。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.cond-epi`](../nodes/prop.cond-epi.md) 凝聚态集满态射的判据
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.chaus-quotient-of-free.2.md](./prop.chaus-quotient-of-free.2.md)
 

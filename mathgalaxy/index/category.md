@@ -3,7 +3,7 @@
 
 范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。
 
-- cat.basic　范畴与图 / Categories and Diagrams　中心天体 def.category　19 点
+- cat.basic　范畴与图 / Categories and Diagrams　中心天体 def.category　21 点
 - cat.functor　函子与自然变换 / Functors and Natural Transformations　中心天体 def.natural-transformation　14 点
 - cat.limit　图与极限 / Diagrams and Limits　中心天体 def.limit　22 点
 - cat.structure　单满、子对象与像 / Monos, Epis, Subobjects and Images　中心天体 def.subobject　7 点

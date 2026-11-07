@@ -6,7 +6,7 @@ layer 24 · 引理 · 微分定理 · 实变函数+数学分析
 设 $f \in L^1_{loc}$。则 $A_r f(x)$ 作为 $(r, x)$ 的函数是**联合连续**的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.average-operator`](../nodes/def.average-operator.md) 平均算子 Aᵣ：用到了定义 平均算子 Aᵣ　[proofs/def-link.average-operator-continuous.md](../proofs/def-link.average-operator-continuous.md)
+- [`thm.dct`](../nodes/thm.dct.md) 控制收敛定理：控制收敛定理 $\implies$ 平均算子联合连续　[proofs/imp.dct-average-continuous.md](../proofs/imp.dct-average-continuous.md)
 
 - …另有入边，续页见 [nodes/lem.average-continuous.2.md](./lem.average-continuous.2.md)
 

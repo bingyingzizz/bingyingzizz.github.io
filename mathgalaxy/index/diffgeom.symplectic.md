@@ -4,8 +4,8 @@
 中心天体 thm.darboux　·　6 个节点　·　根 `../`
 
 - def.symplectic-manifold　辛流形　layer 23
-- thm.darboux　Darboux 定理　layer 24
 - def.lagrangian-submanifold　Lagrange 子流形　layer 24
+- thm.darboux　Darboux 定理　layer 26
 - def.hamiltonian-vector-field　Hamilton 向量场　layer 30
 - def.poisson-bracket　Poisson 括号　layer 31
 - def.lagrange-bracket　Lagrange 括号　layer 32

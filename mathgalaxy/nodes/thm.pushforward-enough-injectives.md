@@ -10,9 +10,6 @@ layer 19 · 定理 · 层上同调 · 同调代数+范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.pushforward-enough-injectives.3.md](./thm.pushforward-enough-injectives.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.pushforward-enough-injectives.4.md](./thm.pushforward-enough-injectives.4.md)
-
 refs: Iversen, Cohomology of Sheaves —— 内射层一章；Godement, Topologie algébrique et théorie des faisceaux, Chapitre II（软层与内射层）
 
 > 说明见 `notes/thm.pushforward-enough-injectives.md`

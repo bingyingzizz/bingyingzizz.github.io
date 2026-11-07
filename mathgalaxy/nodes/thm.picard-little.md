@@ -1,6 +1,6 @@
 # Picard 小定理　`thm.picard-little`
 Picard 小定理：非常数整函数至多漏掉一个值
-layer 30 · 定理 · 解析延拓与整函数 · 复变函数
+layer 29 · 定理 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=thm.picard-little)　·　[节点索引](../index.md)
 
 设 $f$ 是整函数且**不是常数**。则 $f$ 取遍 $\mathbb{C}$ 中除**至多一个**点以外的所有值。

@@ -1,10 +1,8 @@
 # de Rham 定理　`thm.de-rham`　·　说明
 根 `../`
 
-**为什么它是定理而不是定义**：两边的复形长得完全不同（一边是光滑形式、一边是拓扑单形），能对上不是形式化的。核心内容是第 2 步：「$\Omega^{\bullet}$ 是常层的消解」—— 也就是 Poincaré 引理的**整体化**。
+ullet}(\operatorname{Tot})\cong\check{H}^{\bullet}(\mathfrak{U};\underline{\mathbb{R}})$；先对 $\delta$ 取上同调（$\Omega^{q}$ 细、好覆盖上 Čech 复形在 $p>0$ 正合）得 $E_{1}^{0,q}=\Omega^{q}(M)$，故 $H^{\bullet}(\operatorname{Tot})\cong H^{\bullet}_{\mathrm{dR}}(M)$。于是 $H^{\bullet}_{\mathrm{dR}}(M)\cong\check{H}^{\bullet}(\mathfrak{U};\underline{\mathbb{R}})$。需要 **缺口 B（好覆盖存在）** 与 **缺口 C（双复形谱序列）**。
+**第 4 步：Čech = 层上同调。** 仿紧空间上 $\check{H}^{\bullet}(\mathfrak{U};\underline{\mathbb{R}})\cong H^{\bullet}(M;\underline{\mathbb{R}})$（`thm.paracompact-cech-equals-sheaf`）。⚠️ 该节点**本身仍是 skeleton**：它给出「细层推出软层、软层无环、零调消解」的路线，但把 Godement 引理与比较引理留作缺口；所以这一步在本图也不是已证事实，记 **缺口 E**。
+**第 5 步：层上同调 = 奇异上同调。** 两者都是「同伦不变 + 单点值与 $\mathbb{R}$ 一致 + 对好覆盖有长正合列」的函子，由 Eilenberg–Steenrod 唯一性定理自然
 
-**推论**：$H^{k}_{\mathrm{dR}}$ 是同伦不变量（函子性 + 同伦不变），紧流形上每个 $H^{k}_{\mathrm{dR}}$ 有限维，$k > \dim M$ 时为零。所以「闭而不恰当的形式有多少种」是纯拓扑数据 —— Betti 数。
-
-**与 131 那三条 de Rham 节点接得上**：$H^{0}$ 数连通分支（`thm.de-rham-h0`）、局部为零（`lem.poincare-lemma`）、加减开集有长正合列（`thm.mayer-vietoris`）—— 这三条恰好是上面路线里第 2、5 步的局部版本。
-
-⚠️ **本图的折衷**：这里给的是路线与关键计算，**不**给逐字证明。Čech–de Rham 双复形的谱序列论证、以及「层上同调 = 奇异上同调」都需要单独篇幅；这一条与 `thm.solid-abelian` 那批深定理同一口径：**结构 + 关键计算 + 出处**，如实声明。
+> 续见 notes/thm.de-rham.4.md

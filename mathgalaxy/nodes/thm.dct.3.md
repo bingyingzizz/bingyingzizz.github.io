@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.differentiate-under-integral`](../nodes/thm.differentiate-under-integral.md) 交换极限/导数与积分
+- ⇒ [`lem.average-continuous`](../nodes/lem.average-continuous.md) 平均算子联合连续
 - ⇒ [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间

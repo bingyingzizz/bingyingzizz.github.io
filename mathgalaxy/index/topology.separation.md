@@ -14,6 +14,6 @@
 - def.regular-space　正则空间　layer 8
 - prop.hausdorff-reflective　Hausdorff 空间是反射子范畴　layer 11
 - def.perfectly-normal-space　完美正规空间　layer 15
-- def.completely-normal-space　完全正规空间　layer 16
+- lem.urysohn　Urysohn 引理　layer 16
 
 > 续见 `index/topology.separation.2.md`

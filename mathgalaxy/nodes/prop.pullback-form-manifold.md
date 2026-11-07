@@ -3,7 +3,7 @@
 layer 22 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.pullback-form-manifold)　·　[节点索引](../index.md)
 
-**在做什么**：把 $k$-形式沿**流形之间**的光滑映射搬回去。$\mathbb{R}^{n}$ 开集那版只是它的局部样子。
+**在做什么**：把 $k$-形式沿**流形之间**的光滑映射搬回去。$\mathbb{R}^{n}$ 开
 > 陈述续见 [nodes/prop.pullback-form-manifold.2.md](./prop.pullback-form-manifold.2.md)
 
 
@@ -15,7 +15,7 @@ layer 22 · 命题 · 微分形式、积分与 de Rham · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/prop.pullback-form-manifold.5.md](./prop.pullback-form-manifold.5.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 拉回 F* 与它保持的运算
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 拉回 F* 与它保持的运算；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 14 · Differential Forms
 
 > 说明见 `notes/prop.pullback-form-manifold.md`
 

@@ -1,22 +1,18 @@
 # 素数定理　`thm.prime-number-theorem`　·　说明
 根 `../`
 
-⛔ **这条只有陈述与骨架，证明不在本图**：所有已知证明都要复分析或等价的重型工具（Riemann 的 $\zeta$ 函数、或 Selberg–Erdős 的初等证明 —— 后者虽叫「初等」，但论证极长）。
+⚠️ **本节点仍标 skeleton**：下面把「素数定理 $\iff$ $\psi(x) \sim x$」这一段**完整证明**，并把剩下的解析主定理写成可检验的命题；但那条解析主定理（$\zeta$ 在 $\operatorname{Re} s = 1$ 上无零点 $+$ Tauber 型收尾）本图没有展开，所以不勾 ∎。
 
+**记号**：$\Lambda(n) = \log p$（$n = p^{k}$）或 $0$（其它），
 
+$$\psi(x) = \sum_{n \le x} \Lambda(n),\qquad \theta(x) = \sum_{p \le x} \log p,\qquad \pi(x) = \#\{p \le x\}.$$
 
-主流路线（Riemann 1859）的骨架：
+**引理 1（$\psi$ 与 $\theta$ 的关系）**：
 
+$$\psi(x) = \sum_{k \ge 1} \theta\big(x^{1/k}\big).$$
 
+证明：按 $n = p^{k}$ 的 $k$ 分组，$p^{k} \le x \iff p \le x^{1/k}$，每组贡献 $\log p$，求和即 $\theta(x^{1/k})$；$k > \log_{2} x$ 时 $x^{1/k} < 2$，对应项为 $0$。∎
 
-1. $\zeta(s) = \sum n^{-s}$ 在 $\operatorname{Re}\,s > 1$ 全纯，经解析延拓成为亚纯函数，唯一极点在 $s = 1$（留数 $1$）；
+**引理 2（$\psi \sim x \iff \theta \sim x$）**：由引理 1，
 
-2. $\zeta$ 在直线 $\operatorname{Re}\,s = 1$ 上无零点 —— 这一步就是素数定理的全部难点；
-
-3. 由 Perron 公式 / 显式公式把 $\psi(x)$ 写成 $x - \sum_{\rho} x^{\rho}/\rho + \cdots$，零点 $\rho$ 的位置决定误差项；
-
-4. 由 ② 得 $\psi(x) \sim x$，再由 $\psi \sim \theta \sim \pi\log$ 的等价性得 $\pi(x) \sim x/\log x$。
-
-
-
-⭐ Riemann 假设（$\operatorname{Re}\,\rho = 1/2$）就是把 ③ 的误差压到 $O(\sqrt{x}\log x)$ 的命题，至今未解。
+> 续见 notes/thm.prime-number-theorem.2.md

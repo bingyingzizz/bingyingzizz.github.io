@@ -3,7 +3,9 @@
 layer 18 · 定义 · 同调与正合列 · 同调代数
 [在星图里打开](../#n=def.cohomology-class)　·　[节点索引](../index.md)
 
-**在做什么**：同调群 $H^{n} = Z^{n}/B^{n}$ 的**元素**。它是同调代数里真正被搬运、被比较的对象 —— 定理说得再好，最后总是落在一句「这两个上同调类相等」
+**在做什么**：同调群 $H^{n} = Z^{n}/B^{n}$ 的**元素**。它是同调代数里真正被搬运、被比较的对象 —— 定理说得再好，最后总是落在一句「这两个上同调类相等」。
+
+设 $K$ 是复形。对闭链 $z \in Z^{n}(K)$，它在商里的像
 > 陈述续见 [nodes/def.cohomology-class.2.md](./def.cohomology-class.2.md)
 
 
@@ -15,7 +17,7 @@ layer 18 · 定义 · 同调与正合列 · 同调代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.cohomology-class.4.md](./def.cohomology-class.4.md)
 
-refs: Le Stum, An introduction to condensed mathematics（⚠️ 章节未核实，只记书名）· 复形与同调；Weibel, An Introduction to Homological Algebra（⚠️ 章节未核实，只记书名）
+refs: Le Stum, An introduction to condensed mathematics, §7.1（复形与同调）；Weibel, An Introduction to Homological Algebra, Ch. 1（Chain Complexes）
 
 > 说明见 `notes/def.cohomology-class.md`
 

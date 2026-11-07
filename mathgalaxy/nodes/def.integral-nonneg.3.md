@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.mct`](../nodes/thm.mct.md) 单调收敛定理 用
+- 被 [`def.integral-over-set`](../nodes/def.integral-over-set.md) 集合上的积分 用
 - 被 [`prop.monotone-integral-derivative`](../nodes/prop.monotone-integral-derivative.md) 递增函数的导数积分不等式 用
 - 被 [`def.integral-complex`](../nodes/def.integral-complex.md) 复函数的积分 用
 - 被 [`def.integrable`](../nodes/def.integrable.md) 可积 / L¹ 用

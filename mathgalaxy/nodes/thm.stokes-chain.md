@@ -7,6 +7,9 @@ layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
 > 陈述续见 [nodes/thm.stokes-chain.2.md](./thm.stokes-chain.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.stokes-chain.3.md](./thm.stokes-chain.3.md)
 

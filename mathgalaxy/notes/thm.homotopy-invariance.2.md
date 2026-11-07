@@ -1,10 +1,10 @@
 # 同伦不变性　`thm.homotopy-invariance`　·　说明
 根 `../`
 
-$$\partial P(\sigma) = g \circ \sigma - f \circ \sigma - P(\partial \sigma),$$
+**边界计算。** 把 $\tau_{i}$ 的顶点依次记为 $u_{0}, \ldots, u_{n+1}$（即 $v_{0}, \ldots, v_{i}, w_{i}, \ldots, w_{n}$）。在 $\partial\tau_{i}$ 中，删去第 $r$ 个顶点的面带符号 $(-1)^{r}$。逐项看 $\partial P_{n}(\sigma)$：
 
-即 $\partial P + P\partial = g_{\#} - f_{\#}$。由 `def.chain-homotopy`，$f$ 与 $g$ 在同调上诱导同一同态。∎
+① **内部面。** 从 $\tau_{i}$ 删去 $w_{i}$（位置 $i+1$，符号 $(-1)^{i+1}$）与从 $\tau_{i+1}$ 删去 $v_{i+1}$（位置 $i+1$，符号 $(-1)^{i+1}$）得到同一个面 $[v_{0}, \ldots, v_{i}, w_{i+1}, \ldots, w_{n}]$。它在 $\partial P_{n}(\sigma)$ 中的两个系数分别是 $(-1)^{i}(-1)^{i+1} = -1$ 与 $(-1)^{i+1}(-1)^{i+1} = +1$，相消。$i = 0, \ldots, n-1$ 共 $n$ 对面全部消掉。
 
-⭐ **这一步正是整条链缺的那环**：`thm.sphere-homology` 的归纳法（把 $S^{n}$ 拆成两个半球）要用「两个半球各自可缩 $\implies$ 它们的恒等映射与常值映射在同调上相同」。没有这条，那个归纳只能算「算出来是 0 和 $\mathbb{Z}$」，不能说「所以球面同调就是这样」。
+② **两端。** $\tau_{0}$ 删去 $v_{0}$（符号 $+1$）得 $[w_{0}, \ldots, w_{n}]$，即 $g \circ \sigma$；$\tau_{n}$ 删去 $w_{n}$（位置 $n+1$，符号 $(-1)^{n+1}$）得 $[v_{0}, \ldots, v_{n}]$，即 $f \circ \sigma$，再乘 $P_{n}$ 的系数 $(-1)^{n}$，得 $-f \circ \sigma$。
 
-⚠️ 本节点写的是**完整构造 + 关键抵消**；那一步「内部面两两抵消」在书上是逐个下标验算的，这里给的是可复现的骨架（每个面的定向按 $(-1)^{i}$ 交替，抵消的机制写清楚了）。
+> 续见 notes/thm.homotopy-invariance.3.md

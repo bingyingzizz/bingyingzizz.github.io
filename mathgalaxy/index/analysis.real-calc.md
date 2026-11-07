@@ -13,8 +13,8 @@
 - prop.abs-properties　绝对值的运算性质　layer 11
 - thm.triangle　三角不等式　layer 11
 - thm.nth-root　n 次方根　layer 18
-- def.tan-cot-sec　正切、余切、正割、余割　layer 18
-- def.inverse-trig　反三角函数　layer 18
 - lem.archimedean　Archimedes 性质　layer 18
+- cor.archimedean-epsilon　Archimedes 的 ε 形式与取整　layer 19
+- def.real-power　有理指数与实数指数幂　layer 19
 
 > 续见 `index/analysis.real-calc.2.md`

@@ -2,13 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-## Statement · **reviewed**
-Let $X$ be a metric space with metric $d$. Then the following three conditions are **equivalent**:
-
-- (a) $X$ is **compact**: every open cover has a finite subcover;
-- (b) $X$ is **sequentially compact**: every sequence has a subsequence converging in $X$;
-- (c) $X$ is **complete and totally bounded**.
-
-That is, $X$ compact $\iff$ $X$ sequentially compact $\iff$ $X$ complete $+$ totally bounded.That is, compactness, sequential compactness, and completeness together with total boundedness are all equivalent.
+\}^{I}$ and $[0,\omega_1)$).
 
 > 续见 nodes/thm.metric-compact-equiv.en.4.md

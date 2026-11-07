@@ -8,8 +8,8 @@
 
 $$p(z_0 + w) = p(z_0) + c_k w^{k} + O(w^{k+1}), \qquad c_k \ne 0, \ k \ge 1$$
 
-（$k$ 是第一个非零项的阶。）取 $w = t\,\zeta$，其中 $\zeta^{k} = -p(z_0)/c_k$ 的一个 $k$ 次方根、$t > 0$ 很小。由**复数开 $k$ 次方**，这样的 $\zeta$ 总存在。则
+（$k$ 是第一个非零项的阶。）取 $w = t\,\zeta$，其中 $\zeta$ 是 $-p(z_0)/c_k$ 的一个 $k$ 次方根、$t > 0$ 很小。由**复数开 $k$ 次方**，这样的 $\zeta$ 总存在。于是 $c_k w^{k} = c_k t^{k}\zeta^{k} = -t^{k}p(z_0)$，代回展开式得
 
-$$|p(z_0 + t\zeta)|^{2} = |p(z_0)|^{2}\Bigl( 1 - \frac{2t^{k}}{|p(z_0)|} + O(t^{k+1}) \Bigr) < |p(z_0)|^{2}$$
+$$p(z_0 + t\zeta) = p(z_0)(1 - t^{k}) + O(t^{k+1}) .$$
 
 > 续见 proofs/imp.fundamental-algebra.3.md

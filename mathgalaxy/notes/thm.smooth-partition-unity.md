@@ -1,16 +1,12 @@
 # 光滑单位分解　`thm.smooth-partition-unity`　·　说明
 根 `../`
 
-**证明的两块砖**：① $\mathbb{R}^{n}$ 上有**鼓包函数** —— 在半径 $1$ 的球内恒为 $1$、半径 $2$ 的球外为 $0$ 的光滑函数，由 $x \mapsto e^{-1/(1-\lVert x\rVert^{2})}$ 平移伸缩拼出来；
+**证明**。两块砖：$\mathbb{R}^{n}$ 上的鼓包函数，以及流形的仿紧性（局部有限加细）。
 
-② 光滑流形是**仿紧**的（第二可数 + Hausdorff + 局部欧氏），于是开覆盖有局部有限加细，可以在每个成员上放一个鼓包再归一化。
+**第一步：造鼓包函数**。令 
 
-两块砖缺一不可。
+$$b(t) = \begin{cases} e^{-1/t}, & t > 0,\\ 0, & t \le 0,\end{cases}\qquad \beta(x) = \frac{b(1 - \lVert x\rVert^{2})}{b(1 - \lVert x\rVert^{2}) + b(\lVert x\rVert^{2} - \tfrac{1}{4})}.$$
 
-**为什么必须「局部有限」**：没有它，$\sum\rho_{\alpha}$ 在某点附近可能有无穷多项非零，和既不一定收敛也不一定光滑。局部有限保证每点附近只有有限多项，于是和是有限和 —— 光滑性、可积性、线性都自动继承。
-
-**它撑起哪些结论**：黎曼度量存在（`def.riemannian-metric`）、向量丛上纤维度量存在（`prop.bundle-metric`）、最高次形式可积分（`def.integral-form`）、可定向性能用处处非零的 $n$-形式刻画（`prop.volume-form-orientation`）。
-
-这些证明的骨架全部是「局部造 + 单位分解粘」，没有一次是凭空构造。
+ $b$ 在 $t = 0$ 处各阶导数都为 $0$（$e^{-1/t}$ 趋于 $0$ 比任何多项式快），故 $b$ 光滑。分母两项不同时为零且恒正（对 $\lVert x\rVert \in [\tfrac{1}{2}, 1]$ 恰有一项为正），故 $\beta$ 光滑；并且 $\beta \equiv 1$ 当 $\lVert x\rVert \le \tfrac{1}{2}$、$\beta \equiv 0$ 当 $\lVert x\rVert \ge 1$。把 $\beta$ 平移伸缩就得到任意球上的鼓包。
 
 > 续见 notes/thm.smooth-partition-unity.2.md

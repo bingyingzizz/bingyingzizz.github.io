@@ -1,7 +1,11 @@
 # 外微分　`prop.exterior-derivative-manifold`　·　续页（第 5 页）
 [在星图里打开](../#n=prop.exterior-derivative-manifold)　·　第 1 页 [nodes/prop.exterior-derivative-manifold.md](./prop.exterior-derivative-manifold.md)　·　上一页 [nodes/prop.exterior-derivative-manifold.4.md](./prop.exterior-derivative-manifold.4.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解：用到了定义 光滑单位分解　[proofs/dep.mf3-dm-pou.md](../proofs/dep.mf3-dm-pou.md)
-
-> 续见 [nodes/prop.exterior-derivative-manifold.6.md](./prop.exterior-derivative-manifold.6.md)
+## 它能推出什么 / 谁在用它（续）
+- 被 [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调 用
+- 被 [`thm.cartan-formula`](../nodes/thm.cartan-formula.md) Cartan 公式 用
+- 被 [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理 用
+- 被 [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程 用
+- 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
+- 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
+- 被 [`def.exact-form`](../nodes/def.exact-form.md) 恰当形式 用

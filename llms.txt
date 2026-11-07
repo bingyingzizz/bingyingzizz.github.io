@@ -1,6 +1,6 @@
 # bingyingzizz.github.io
 
-个人站点。主体是**数学星图 MathGalaxy**：1540 个数学概念（定理 / 定义 / 引理）按
+个人站点。主体是**数学星图 MathGalaxy**：1550 个数学概念（定理 / 定义 / 引理）按
 「星系 → 星团 → 恒星」三层组织，边是逻辑关系（推出 / 等价 / 定义引用 / 类比）。
 
 ## 想读内容，按这个顺序
@@ -14,7 +14,7 @@
 
 ## 程序化使用
 
-- `/mathgalaxy/graph.json`  全量图（约 5.3 MB），schema 见 `/mathgalaxy/reading.md`
+- `/mathgalaxy/graph.json`  全量图（约 5.5 MB），schema 见 `/mathgalaxy/reading.md`
 
 ## 许可
 

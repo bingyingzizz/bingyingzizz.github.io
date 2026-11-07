@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1540 节点 / 3164 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1550 节点 / 3192 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -9,16 +9,16 @@
 
 ⚠️ 第二节会误报（「顺嘴提一句」也算），所以只列出来给人看，不做断言。
 
-## 一、提到了但没有节点（15 个）
+## 一、提到了但没有节点（16 个）
 
-### 单位圆　出现 27 次
-`thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.rodrigues` · `thm.max-modulus` 等 23 个节点
+### 单位圆　出现 29 次
+`thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.rodrigues` · `thm.max-modulus` 等 25 个节点
 
 ### 角度　出现 12 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.isometry` · `def.intrinsic-quantity` · `def.riemannian-metric` · `def.inverse-trig` 等 9 个节点
 
-### 素因子　出现 8 次
-`thm.minimal-poly-divisor` · `def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.bertrand` 等 8 个节点
+### 素因子　出现 9 次
+`thm.minimal-poly-divisor` · `def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.chebyshev-estimate` 等 9 个节点
 
 ### 概率　出现 8 次
 `def.lebesgue-stieltjes` · `thm.dct` · `thm.termwise-L1` · `thm.cauchy-schwarz` · `def.tangent-distribution` · `def.jacobi-symbol` 等 7 个节点
@@ -44,8 +44,8 @@
 ### 解析数论　出现 2 次
 `thm.euclid-infinite-primes` · `thm.euler-product`
 
-### 一阶逻辑的完备性　出现 2 次
-`thm.completeness-first-order` · `def.satisfaction`
+### 命题逻辑　出现 2 次
+`thm.completeness-first-order`
 
 ### 幂函数　出现 1 次
 `def.logarithm-branch`
@@ -53,14 +53,20 @@
 ### 黎曼猜想　出现 1 次
 `def.riemann-zeta`
 
+### 一阶逻辑的完备性　出现 1 次
+`def.satisfaction`
+
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（0 处）
+## 二、陈述用到更深的定义却没有边（4 处）
 
-（没有）
+- `def.module-category`（模范畴 · L10）用到 `def.linear-map`（线性映射 · L12）　落差 2
+- `def.radon-measure`（Radon 测度 · L16）用到 `def.locally-compact`（局部紧 Hausdorff 空间 · L17）　落差 1
+- `def.category-of-groups`（群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
+- `def.category-of-abelian-groups`（阿贝尔群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
 
-## 二·补　白名单里的（38 条，已判「不是缺边」）
+## 二·补　白名单里的（39 条，已判「不是缺边」）
 
 每条都写了为什么。⛔ 为了让这一节变短而加条目 = 刷绿，审阅时逐条看理由。
 
@@ -102,9 +108,10 @@
 - `def.separable-extension` 提到 `def.minimal-poly` —— **同名不同物**：可分扩张里的「极小多项式」是**代数元**的（`def.algebraic-element`，已连），不是**算子**的 `def.minimal-poly`（$\mu_{T}$）。
 - `prop.tensor-functor-properties` 提到 `def.tensor-product-vs` —— **同名不同物**：本命题讲的是**模**的张量积（`def.tensor-module`，已连），不是向量空间的张量积。
 - `ex.ab-of-categories` 提到 `def.lie-group` —— 例子行「Ab(Manifold) = 阿贝尔 Lie 群」是**列答案**，不是依赖。
+- `def.injective-dimension` 提到 `def.projective-dimension` —— 陈述用的是平坦维数 fd（图里还没有 `def.flat-dimension`）；pd 只是对偶侧的类比，不是定义依赖 —— 陈述里提到 pd 的那句恰好是「不能写成 pd」的反例。
 
-⚠️ **过期白名单 1 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.differential-form`
+⚠️ **过期白名单 2 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.differential-form` · `def.injective-dimension>def.projective-dimension`
 
-## 三、候选词表里从没被提到的（21 个）
+## 三、候选词表里从没被提到的（19 个）
 
-换底公式 · 自然对数 · 反正弦 · 反三角函数 · zeta 函数 · ζ 函数 · 狄利克雷级数 · 模形式 · 求根公式 · 尺规作图 · 命题逻辑 · Riesz–Markov · 图论 · 组合数学 · 负负得正 · 除以零 · 芝诺 · 费马大定理 · 哥德巴赫猜想 · 连续统假设 · 哥德尔不完备定理
+换底公式 · 自然对数 · 反正弦 · 反三角函数 · zeta 函数 · ζ 函数 · 狄利克雷级数 · 模形式 · 求根公式 · 尺规作图 · 图论 · 组合数学 · 负负得正 · 除以零 · 芝诺 · 费马大定理 · 哥德巴赫猜想 · 连续统假设 · 哥德尔不完备定理

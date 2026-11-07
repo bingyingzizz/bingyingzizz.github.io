@@ -11,7 +11,7 @@
 - def.quadratic-residue　二次剩余　layer 13
 - def.legendre-symbol　Legendre 符号　layer 15
 - thm.euler-criterion　Euler 判别法　layer 16
-- thm.quadratic-reciprocity　二次互反律　layer 16
 - def.jacobi-symbol　Jacobi 符号　layer 16
 - lem.gauss-qr　Gauss 引理（二次剩余）　layer 17
 - thm.jacobi-laws　Jacobi 符号的计算法则　layer 17
+- thm.quadratic-reciprocity　二次互反律　layer 18

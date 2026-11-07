@@ -7,4 +7,6 @@
 
 两个短正合列 $0 \to K \to R^{n} \to Q \to 0$ 与 $0 \to Q_{1} \to Q \to 0$ 的张量版本摆成 $3 \times 3$ 图，用蛇引理：若 $K \otimes M \to R^{n} \otimes M$ 单，则 $Q_{1} \otimes M \to Q \otimes M$ 单 ✓。
 
+**第三步（对 $n$ 归纳）**：只需证对每个有限生成右子模 $K \subseteq R^{n}$，$K \otimes M \to R^{n} \otimes M$ 单。
+
 > 续见 proofs/imp.lambek.3.md

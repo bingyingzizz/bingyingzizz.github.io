@@ -7,4 +7,4 @@
 
 点集上的单射 / 双射正是分离 / 固有的赋值判据。
 
-⚠ 反过来不成立：adic 空间比概形多得多（$\operatorname{Spa}(\mathbb{Z}_p, \mathbb{Z}_p)$ 就不是某个概形的 adic 化）。
+⚠ 反过来不成立：adic 空间比概形多得多。但**不能**拿 $\operatorname{Spa}(\mathbb{Z}_p, \mathbb{Z}_p)$ 当反例 —— 它正是 $(\operatorname{Spec}\mathbb{Z}_p)_{\mathrm{ad}}$（本团的离散 adic 化就取 $\operatorname{Spa}(A,A)$）。要举反例得用 $A^{+} \ne A$ 的离散对：$\operatorname{Spa}(\mathbb{Q}_p, \mathbb{Z}_p)$ 按本图的定义是**合法**的离散 Huber 对（$A = \mathbb{Q}_p$ 取离散拓扑、$A^{+} = \mathbb{Z}_p$ 整闭），但它不是任何概形的 adic 化 —— 概形的（绝对）adic 化在仿射局部是 $(A, A)$，而这里 $A^{+} \ne A$。

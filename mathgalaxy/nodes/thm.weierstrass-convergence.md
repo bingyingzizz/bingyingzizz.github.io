@@ -8,7 +8,7 @@ layer 22 · 定理 · Cauchy 理论 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.morera`](../nodes/thm.morera.md) Morera 定理：Morera 判极限全纯；Cauchy 公式判导数收敛　[proofs/e9.implication.md](../proofs/e9.implication.md)
+- [`thm.morera`](../nodes/thm.morera.md) Morera 定理：Morera 判极限全纯；Cauchy 公式判导数收敛　[proofs/e10.implication.md](../proofs/e10.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.weierstrass-convergence.3.md](./thm.weierstrass-convergence.3.md)

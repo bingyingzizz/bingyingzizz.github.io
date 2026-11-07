@@ -10,7 +10,7 @@ $$I + J = A .$$
 一族理想 $\{I_{1}, \cdots, I_{k}\}$ 叫**两两互素**，若 $i \ne j$ 时 $I_{i} + I_{j} = A$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e130.definition.md](../proofs/e130.definition.md)
+- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e134.definition.md](../proofs/e134.definition.md)
 
 refs: Atiyah–Macdonald, Ch. 1
 

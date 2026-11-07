@@ -7,6 +7,8 @@
 
 ⚠ 一般 $A^+$ 不可能是任意子环：必须整闭。
 
-反例：$A = \mathbb{Z}[T]$、$A^+ = \mathbb{Z}[T^2]$ 不整闭（$T$ 在 $\mathbb{Z}[T^2]$ 上整），对应的子集并不是某个 $\operatorname{Spa}$。
+反例：$A = \mathbb{Z}[T]$、$A^+ = \mathbb{Z}[T^2]$ 不整闭（$T$ 在 $\mathbb{Z}[T^2]$ 上整），对应的子集并不是某个**整闭**子环的 $\operatorname{Spa}$（逆映射会把它还原成整闭包 $\widetilde{\mathbb{Z}[T^{2}]} \ne \mathbb{Z}[T^{2}]$）。
 
-📌 证明用赋值环的存在性（扎里斯基引理）：若 $f \notin A^+$，在 $A^+[1/f]$ 里取素理想，再取支配它的赋值环，得到 $|f| > 1$ 的点。
+⭐ 为什么它是**最小**的：整闭子环总含 $\mathbb{Z}\cdot 1$，故必含 $\widetilde{\mathbb{Z}}$（整元素对整闭子环封闭）；而整元素在**一切**赋值下满足 $|a| \le 1$ —— 若 $|a| > 1$，则 $a^{n} + c_{n-1}a^{n-1} + \cdots + c_{0} = 0$（$c_{i} \in \mathbb{Z}$，故 $|c_{i}| \le 1$）的左端被 $a^{n}$ 支配，不可能为 $0$。所以它含在一切单位球里，取它时筛掉的点最少。
+
+> 续见 notes/prop.huber-subring-recovery.2.md

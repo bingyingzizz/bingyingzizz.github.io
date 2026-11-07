@@ -14,7 +14,7 @@ layer 23 · 定理 · 同调群 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.mv-homology.3.md](./thm.mv-homology.3.md)
 
-refs: Munkres, Elements of Algebraic Topology · Mayer–Vietoris 序列（本图不给章号 / 定理号）；Hatcher, Algebraic Topology, Ch. 2 §2.2 · Mayer–Vietoris sequences
+refs: Munkres, Elements of Algebraic Topology, §2.1 · Mayer–Vietoris sequence（含小链引理与重心重分）；Hatcher, Algebraic Topology, Ch. 2 §2.1–2.2 · barycentric subdivision 与 Mayer–Vietoris
 
 > 说明见 `notes/thm.mv-homology.md`
 

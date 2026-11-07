@@ -6,7 +6,6 @@
 - def.prime-counting　素数计数函数　layer 13
 - def.multiplicative-function　积性函数　layer 14
 - thm.divisor-formula　τ 与 σ 的乘积公式　layer 14
-- thm.prime-number-theorem　素数定理　layer 14
 - def.divisor-function　除数函数 τ 与 σ　layer 15
 - thm.chebyshev-estimate　Чебышёв 估计　layer 15
 - def.mobius-function　Möbius 函数　layer 16
@@ -16,3 +15,4 @@
 - def.riemann-zeta　黎曼 ζ 函数　layer 29
 - thm.euler-product　Euler 乘积　layer 30
 - def.dirichlet-character　狄利克雷特征标　layer 30
+- thm.prime-number-theorem　素数定理　layer 31

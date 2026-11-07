@@ -7,6 +7,8 @@
 
 - 最值定理 → thm.evt
 
+- Hadamard 分解定理 | 阿达马分解定理 | 阿达马 → thm.hadamard-factorization
+
 - Cauchy 中值定理 | 柯西中值定理 → thm.cauchy-mvt
 
 - Bolzano–Weierstrass 定理 | 波尔查诺–魏尔斯特拉斯定理 | 博尔扎诺-魏尔斯特拉斯定理 | 博尔扎诺 → thm.bolzano-weierstrass
@@ -30,7 +32,5 @@
 - Taylor 公式（Peano 余项） | 皮亚诺余项 → prop.taylor-peano
 
 - 单调有界定理 → thm.monotone-convergence
-
-- 导数为零 ⟺ 常函数 → cor.constant-iff-zero-derivative
 
 > 续见 alias/aka/analysis.14.md

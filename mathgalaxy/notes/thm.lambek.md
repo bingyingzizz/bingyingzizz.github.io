@@ -9,6 +9,4 @@
 
 **第二步（化到自由模的子模）**：取满射 $R^{n} \twoheadrightarrow M_{1}$（$M_{1}$ 是 $M$ 的有限生成子模），令 $K$ 是 $M_{1}$ 的原像，得短正合列 $0 \to K \to R^{n} \to M_{1} \to 0$。
 
-把两个列各自张量后比较，「$K \otimes M \to R^{n} \otimes M$ 单」蕴含「$M_{1} \otimes M \to M \otimes M$ 单」（蛇引理）。
-
 > 续见 notes/thm.lambek.2.md

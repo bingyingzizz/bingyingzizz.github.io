@@ -1,6 +1,6 @@
 # 正弦与余弦　`def.trig-function`
 正弦、余弦（由幂级数定义）
-layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 22 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.trig-function)　·　[节点索引](../index.md)
 
 对 $z \in \mathbb{C}$，定义

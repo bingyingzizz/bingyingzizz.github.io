@@ -7,6 +7,9 @@ layer 20 · 定理 · 复形与导出三角 · 同调代数
 > 陈述续见 [nodes/thm.derived-long-exact.2.md](./thm.derived-long-exact.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.paracompact-cech-equals-sheaf`](../nodes/thm.paracompact-cech-equals-sheaf.md) 仿紧空间上的 Čech 就是上同调
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.derived-long-exact.3.md](./thm.derived-long-exact.3.md)
 

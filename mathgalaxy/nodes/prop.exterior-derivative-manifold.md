@@ -11,7 +11,7 @@ layer 22 · 命题 · 微分形式、积分与 de Rham · 微分几何
 - …另有入边，续页见 [nodes/prop.exterior-derivative-manifold.4.md](./prop.exterior-derivative-manifold.4.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.exterior-derivative-manifold.6.md](./prop.exterior-derivative-manifold.6.md)
+- …另有出边，续页见 [nodes/prop.exterior-derivative-manifold.5.md](./prop.exterior-derivative-manifold.5.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 外微分与图卡无关性
 

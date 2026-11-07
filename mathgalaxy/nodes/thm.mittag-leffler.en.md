@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
+layer 26 · theorem · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.mittag-leffler.md` and `proofs/`.

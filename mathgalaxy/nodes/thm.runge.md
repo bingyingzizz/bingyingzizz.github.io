@@ -9,6 +9,9 @@ $$\sup_{z \in K} |f(z) - p(z)| < \varepsilon.$$
 > 陈述续见 [nodes/thm.runge.2.md](./thm.runge.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.mittag-leffler`](../nodes/thm.mittag-leffler.md) Mittag-Leffler 定理
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.runge.3.md](./thm.runge.3.md)
 

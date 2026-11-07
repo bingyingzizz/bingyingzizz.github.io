@@ -3,7 +3,7 @@
 
 `thm.hom-tensor-adjunction-mod` 张量与内同态的伴随 → `prop.tensor-right-exact` 张量函子右正合
 
-由伴随 $(-) \otimes_{R} N \dashv \operatorname{Hom}_{R}(N, -)$，左伴随保**所有**余极限。
+由伴随 $(-) \otimes_{R} N \dashv \operatorname{Hom}_{\mathbb{Z}}(N, -)$（值域是 $\mathbf{Ab}$，右伴随取 $\mathbb{Z}$-线性同态），左伴随保**所有**余极限。
 
 而余核是两项图的余极限：$\operatorname{coker}(f) = \mathrm{colim}\bigl(M_{1} \xrightarrow{f} M\bigr)$。故 $(-) \otimes N$ 保余核 ✓。
 

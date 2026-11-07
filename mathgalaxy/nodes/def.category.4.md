@@ -3,14 +3,13 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.isomorphism`](../nodes/def.isomorphism.md) 同构 用
+- 被 [`def.category-of-groups`](../nodes/def.category-of-groups.md) 群范畴 用
+- 被 [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴 用
+- 被 [`def.module-category`](../nodes/def.module-category.md) 模范畴 用
 - 被 [`prop.preorder-as-category`](../nodes/prop.preorder-as-category.md) 预序集就是「Hom 至多一元」的小范畴 用
 - 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
 - 被 [`def.section-retraction`](../nodes/def.section-retraction.md) 截面与收缩 用
 - 被 [`def.functor`](../nodes/def.functor.md) 函子 用
 - 被 [`def.natural-transformation`](../nodes/def.natural-transformation.md) 自然变换 用
-- 被 [`def.commutative-diagram`](../nodes/def.commutative-diagram.md) 图与交换图 用
-- 被 [`def.limit`](../nodes/def.limit.md) 极限 用
-- 被 [`def.presheaf`](../nodes/def.presheaf.md) 预层 用
-- 被 [`def.representable`](../nodes/def.representable.md) 表示函子 用
 
 > 续见 [nodes/def.category.5.md](./def.category.5.md)

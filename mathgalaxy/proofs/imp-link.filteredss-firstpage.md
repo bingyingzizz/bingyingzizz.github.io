@@ -1,4 +1,4 @@
-# 下有界过滤复形给出谱序列 $\implies$ 第一页是分次片的同调
+# 两侧有界过滤复形给出谱序列 $\implies$ 第一页是分次片的同调
 `imp-link.filteredss-firstpage` · 推出 · strong 边 · 根 `../`
 
 `thm.filtered-complex-spectral` 过滤复形给出谱序列 → `prop.filtered-first-page` 过滤复形的第一页

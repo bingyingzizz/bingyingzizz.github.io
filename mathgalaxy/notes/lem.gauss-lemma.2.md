@@ -1,10 +1,12 @@
 # Gauss 引理　`lem.gauss-lemma`　·　说明
 根 `../`
 
-⭐ **这是整门内蕴几何的枢纽**：它把「测地线」翻译成「坐标线」，于是 $I$ 在测地极坐标下只剩**一个**未知函数 $G$。而 $G$ 的展开系数就是曲率：
+**第二步：右侧是常数**。$\partial_{t}f(t,s) = (\mathrm{d}\exp_{p})_{t(v+sw)}(v+sw)$，故 $\lVert \partial_{t}\rVert = \lVert v + sw\rVert = \sqrt{\lVert v\rVert^{2} + 2s\langle v,w\rangle + s^{2}\lVert w\rVert^{2}}$ 与 $t$ 无关；于是在 $s = 0$ 处 $\partial_{s}\lVert \partial_{t}\rVert^{2} = 2\langle v,w\rangle$，对一切 $t$ 相同。
 
-$$\sqrt{G(\rho,\theta)} = \rho-\frac{K(p)}{6}\rho^{3}-\frac{\mathrm{d}K_{p}(u_{\theta})}{12}\rho^{4}+O(\rho^{5}),$$
+**第三步：积分**。$E(0) = \langle v, \partial_{s}f(0,0)\rangle = 0$，因为 $f(0,s) = \exp_{p}(0) = p$ 不随 $s$ 变。于是 
 
-⚠️ **四次项不能省**：其中 $u_{\theta} = \cos\theta\,e_{1}+\sin\theta\,e_{2}$，$\mathrm{d}K_{p}$ 是 $K$ 在 $p$ 处的微分。$\rho^{2}$ 项**恒为** $0$（因为 $(\sqrt G)_{\rho\rho}(0) = -K(p)\cdot\sqrt G(0) = 0$），所以 $\rho^{4}$ 项是 $\rho^{3}$ 之后**第一个**修正 —— 只写 $O(\rho^{5})$ 会在 $K(p) = 0$ 的点上把 $\rho^{4}$ 阶的偏离说成没有。例：$g = e^{2x^{3}}(\mathrm{d}x^{2}+\mathrm{d}y^{2})$ 在原点 $K = 0$ 而 $\mathrm{d}K_{p}(\partial_{x}) = -6\ne 0$，沿 $\theta = 0$ 是 $\sqrt G = \rho+\frac{1}{2}\rho^{4}+O(\rho^{5})$。
+$$E(1) = E(0) + \int_{0}^{1} \langle v, w\rangle\,dt = \langle v, w\rangle .$$
+
+ 而 $\partial_{t}f(1,0) = (\mathrm{d}\exp_{p})_{v}(v)$、$\partial_{s}f(1,0) = (\mathrm{d}\exp_{p})_{v}(w)$，故 $E(1) = \langle (\mathrm{d}\exp_{p})_{v}(v), (\mathrm{d}\exp_{p})_{v}(w)\rangle$，即所求。∎
 
 > 续见 notes/lem.gauss-lemma.3.md

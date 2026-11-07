@@ -1,12 +1,8 @@
 # 伽罗瓦基本定理　`thm.galois-correspondence`　·　说明
 根 `../`
 
-⚠ **本节点只给骨架**（`status: skeleton`）。完整证明分两大段，本图只写路线：
+**证明**：核心是 Artin 定理（有限自同构群的阶 = 大域对固定域的次数）。先证三个引理，再逐条推。记 $K^{H} := \{x\in K : \sigma(x)=x\ \text{对一切}\ \sigma\in H\}$。
 
-1. **反向单射**：$E \mapsto \operatorname{Gal}(K/E)$ 显然反序；要证「$E = K^{\operatorname{Gal}(K/E)}$」—— 这一步用伽罗瓦条件 + Artin 的线性无关性引理（不同自同构线性无关），是本图的空白。
+**引理 1（Dedekind 线性无关）**：域 $K$ 的两两不同的自同构 $\sigma_{1},\ldots,\sigma_{n}$，作为 $K\to K$ 的函数，在 $K$ 上线性无关。证明：设 $\sum_{i}c_{i}\sigma_{i}=0$ 是非零关系、非零系数个数 $r$ 最少；则 $r\ge 2$ 且 $c_{1},\ldots,c_{r}\ne 0$（重排后）。取 $x\in K$ 使 $\sigma_{1}(x)\ne\sigma_{2}(x)$。对任意 $y$，把关系作用在 $xy$ 上得 $\sum c_{i}\sigma_{i}(x)\sigma_{i}(y)=0$，再减去 $\sigma_{1}(x)\sum c_{i}\sigma_{i}(y)=0$，得 $\sum_{i\ge 2}c_{i}\bigl(\sigma_{i}(x)-\sigma_{1}(x)\bigr)\sigma_{i}(y)=0.$ 这是非零关系（$i=2$ 项系数 $c_{2}(\sigma_{2}(x)-\sigma_{1}(x))\ne 0$），非零系数个数 $\le r-1$，矛盾。
 
-2. **满射**：任一子群 $H \le G$ 都要是某个中间域的固定群，即 $H = \operatorname{Gal}(K/K^{H})$，且 $[K : K^{H}] = |H|$（Artin 定理）。
-
-⭐ **第三条（正规 $\iff$ 正规子群）是这条定理最有用的部分**：它把「域扩张的正规性」这个看起来抽象的条件，翻译成「对应的子群正规」。五次方程那条线就是靠它把「域的可解性」降成「群的可解性」。
-
-⚠ **三个条件都不能省**：不有限（$\overline{\mathbb{Q}}/\mathbb{Q}$）时子群太多、中间域太多，双射变成「子群 $\to$ 中间域」的单向且不满（伽罗瓦群是 profinite 群，要做无穷版本）；不可分时 $|\operatorname{Gal}| < [K:F]$，数都对不上。
+> 续见 notes/thm.galois-correspondence.2.md

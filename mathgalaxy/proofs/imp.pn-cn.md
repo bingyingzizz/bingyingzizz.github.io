@@ -1,12 +1,12 @@
 # imp.pn-cn
 `imp.pn-cn` · 推出 · strong 边 · 根 `../`
 
-`def.perfectly-normal-space` 完美正规空间 → `def.completely-normal-space` 完全正规空间
+`def.perfectly-normal-space` 完美正规空间 + `lem.urysohn` Urysohn 引理 → `def.completely-normal-space` 完全正规空间
 
-**骨架**：完美正规是**遗传**的 —— 若 $X$ 完美正规、$H \subseteq X$ 是子空间，则 $H$ 也完美正规：$H$ 正规（这一步要用「每个闭集是 $G_{\delta}$」把闭集写成可数交开集，再逐项与 $H$ 取交构造分离开集，是本条真正的技术核心）；
+设 $X$ 完美正规（正规，且每个闭集都是 $G_{\delta}$），$H \subseteq X$ 任意。要证 $H$ 正规。
 
-且 $F$ 在 $X$ 中是 $G_{\delta}$ 时 $F \cap H$ 在 $H$ 中是 $G_{\delta}$（把每一个开集与 $H$ 取交即可）。
+**第一步：每个闭集都是零点集。** 设 $F \subseteq X$ 闭，写成 $F = \bigcap_{n \ge 1} U_{n}$，$U_{n}$ 开；把 $U_{n}$ 换成 $U_{1} \cap \cdots \cap U_{n}$ 可设 $\{U_{n}\}$ 递减，$F$ 不变。对每个 $n$，$F$ 与 $X \setminus U_{n}$ 是不交闭集，由 $X$ 正规与 **`lem.urysohn`** 存在连续 $f_{n} : X \to [0, 1]$ 使 $f_{n}|_{F} = 0$、$f_{n}|_{X \setminus U_{n}} = 1$。令
+$$f := \sum_{n \ge 1} 2^{-n} f_{n} .$$
+级数被 $\sum 2^{-n} = 1$ 一致控制，故 $f$ 连续且 $0 \le f \le 1$。由于每一项非负，$f(x) = 0 \iff f_{n}(x) = 0$ 对一切 $n$ 成立 $\iff x \in \bigcap_{n} U_{n} = F$。所以 $F = f^{-1}(0)$ 是零点集 ✓。
 
-于是每个子空间 $H$ 都正规，即 $X$ 完全正规 ✓。∎
-
-⚠️ 本条只给骨架：完整证明属一般拓扑的标准练习（「完美正规 $\implies$ 遗传正规」）。
+> 续见 proofs/imp.pn-cn.2.md

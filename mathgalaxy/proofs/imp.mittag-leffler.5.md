@@ -1,8 +1,8 @@
-# 亚纯函数的定义 $\implies$ Mittag-Leffler 定理（只给证明骨架）
+# Runge 定理与 Weierstrass 分解 $\implies$ Mittag-Leffler
 `imp.mittag-leffler` · 推出 · strong 边 · 根 `../`
 
-`def.entire-meromorphic` 整函数与亚纯函数 → `thm.mittag-leffler` Mittag-Leffler 定理
+`def.entire-meromorphic` 整函数与亚纯函数 + `thm.runge` Runge 逼近定理 + `thm.weierstrass-convergence` Weierstrass 收敛性定理 → `thm.mittag-leffler` Mittag-Leffler 定理
 
-这样的 $T_{k}$ 由 **Runge 逼近定理**给出：$K_{k}$ 紧、$P_{k}(1/(z-a_{k}))$ 在 $K_{k}$ 的某邻域上全纯，Runge 先在 $K_{k}$ 上把它逼近成极点在 $\hat{\mathbb{C}}\setminus K_{k}$ 的有理函数，再把落在 $\Omega$ 内的极点沿道路挪到 $\hat{\mathbb{C}}\setminus\Omega$（挪极点时用同一套 Runge）。⚠️ 两处不能那样写：① 取 $a_{k}$ 处的 **Taylor 多项式**没有意义 —— $a_{k}$ 本来就是极点，$P_{k}$ 在那里并不全纯；② 也**不能**用多项式在围住 $a_{k}$ 的圆周上逼近 $1/(z-a_{k})$ —— 若多项式 $P$ 在 $\lvert z-a_{k}\rvert
+**第三步：用 Runge 造修正项。** 固定 $k$。$P_k(1/(z-a_k))$ 在 $K_{n_k}$ 的邻域全纯。对 $\mathbb{C}\setminus K_{n_k}$ 的每个分支取一点：有界分支取 $\partial\Omega$ 上的点；无界分支任取一点。由 `thm.runge`（极点可预先指定在 $\mathbb{C}\setminus K$ 各分支），存在有理函数 $R_k$，极点在所取的点上，且 $|P_k-R_k|<2^{-k}$ 于 $K_{n_k}$。无界分支的极点可去掉：它的贡献形如 $c/(z-s)^j$，
 
 > 续见 proofs/imp.mittag-leffler.6.md

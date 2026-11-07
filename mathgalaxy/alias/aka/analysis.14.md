@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 导数为零 ⟺ 常函数 → cor.constant-iff-zero-derivative
+
 - 导数符号 ⟹ 单调性 → prop.derivative-monotone
 
 - 凸性的导数判据 → thm.convex-criterion

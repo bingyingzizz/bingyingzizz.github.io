@@ -7,7 +7,7 @@ layer 15 · 定理 · 数论函数与素数分布 · 数论
 
 $$c_{1}\,\frac{x}{\log x} < \pi(x) < c_{2}\,\frac{x}{\log x} .$$
 
-（$\pi(x) \asymp x/\log x$；初等证明给出的常数例如 $0.3$ 与 $6$。）
+（$\pi(x) \asymp x/\log x$；初等证明给出的常数例如 $0.28$ 与 $6$。）
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.divisor-formula`](../nodes/thm.divisor-formula.md) τ 与 σ 的乘积公式：Чебышёв 估计：$\binom{2n}{n}$ 的上下界　[proofs/imp.nt-chebyshev.md](../proofs/imp.nt-chebyshev.md)

@@ -2,9 +2,8 @@
 [在星图里打开](../#n=thm.darboux)　·　第 1 页 [nodes/thm.darboux.md](./thm.darboux.md)
 
 ## 陈述（续）
-设 $(M^{2n}, \omega)$ 是辛流形，$p \in M$。则存在 $p$ 的坐标邻域与坐标 $(q_{1}, \ldots, q_{n}, p_{1}, \ldots, p_{n})$ 使
-
 $$\omega = \sum_{i=1}^{n} dq_{i} \wedge dp_{i}$$
+
 在该邻域上成立。这组坐标叫 **Darboux 坐标**（正则坐标）。
 **与 Riemann 几何的尖锐对照**：Riemann 度量**一般做不到**这一点 —— 曲率是局部不变量，只有**曲率恒为零**（平坦）的度量才能局部化成 $\delta_{ij}$。而辛形式**永远**能。
 

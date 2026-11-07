@@ -12,8 +12,10 @@ $$\Delta^{p} := \left\{ (t_{0}, \ldots, t_{p}) \in \mathbb{R}^{p+1} : \sum_{i} t
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/e45.definition.md](../proofs/e45.definition.md)
 
+- …另有入边，续页见 [nodes/def.standard-simplex.3.md](./def.standard-simplex.3.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.standard-simplex.3.md](./def.standard-simplex.3.md)
+- …另有出边，续页见 [nodes/def.standard-simplex.4.md](./def.standard-simplex.4.md)
 
 refs: Munkres, Elements of Algebraic Topology, Ch. 1 · Simplicial Complexes；Hatcher, Algebraic Topology, Ch. 2 §2.1 · Delta-complexes and simplicial homology
 

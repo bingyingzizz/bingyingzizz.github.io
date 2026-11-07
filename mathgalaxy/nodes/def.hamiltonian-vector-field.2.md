@@ -6,7 +6,7 @@
 核心。
 设 $(M, \omega)$ 是辛流形，$H \in C^{\infty}(M)$。由 $\omega$ 非退化，存在唯
 一的向量场 $X_{H}$ 使
-$$\iota_{X_{H}}\omega = -dH ,$$
+$$\iota_{X_{H}}\omega = +dH ,$$
 称 $X_{H}$ 为 $H$ 的 **Hamilton 向量场**（$\iota$ 是内乘，见 `def.interior-produ
 ct`）。它的积分曲线满足**Hamilton 方程**：在 Darboux 坐标下
 $$\dot{q}_{i} = \frac{\partial H}{\partial p_{i}}, \qquad \dot{p}_{i} = -\frac{\part

@@ -1,7 +1,13 @@
 # 有理标准形　`thm.rational-canonical-form`　·　续页（第 3 页）
 [在星图里打开](../#n=thm.rational-canonical-form)　·　第 1 页 [nodes/thm.rational-canonical-form.md](./thm.rational-canonical-form.md)　·　上一页 [nodes/thm.rational-canonical-form.2.md](./thm.rational-canonical-form.2.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.minimal-poly`](../nodes/def.minimal-poly.md) 极小多项式：用到了定义 极小多项式　[proofs/dep.rcf-minpoly.md](../proofs/dep.rcf-minpoly.md)
-- [`def.similarity`](../nodes/def.similarity.md) 相似：用到了定义 相似　[proofs/dep.rcf-similarity.md](../proofs/dep.rcf-similarity.md)
-- [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式：用到了定义 特征多项式　[proofs/dep.rcf-poly.md](../proofs/dep.rcf-poly.md)
+## 陈述（续）
+标准形与 Jordan 形
+都是完整不变量；
+不分裂时**只有**
+有理标准形（在 $K
+$ 上）可用 —— Jo
+rdan 形要到扩域上
+才存在。
+
+> 续见 [nodes/thm.rational-canonical-form.4.md](./thm.rational-canonical-form.4.md)

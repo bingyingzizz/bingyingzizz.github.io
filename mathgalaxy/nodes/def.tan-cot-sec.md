@@ -1,6 +1,6 @@
 # 正切、余切、正割、余割　`def.tan-cot-sec`
 $\tan,\ \cot,\ \sec,\ \csc$ —— 都是 $\sin,\cos$ 的商与倒数
-layer 18 · 定义 · 实数的运算与不等式 · 数学分析
+layer 23 · 定义 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=def.tan-cot-sec)　·　[节点索引](../index.md)
 
 在 $\sin,\cos$ 已经定义的区间上，令

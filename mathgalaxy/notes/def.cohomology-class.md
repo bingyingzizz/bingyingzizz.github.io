@@ -5,8 +5,6 @@
 
 **几何含义**：de Rham 情形下 $[\omega] \in H^{k}_{dR}(M)$ 是「$\omega$ 的积分只依赖同调类」的那一半 —— Stokes 定理说 $\int_{c} \omega$ 在 $\omega \mapsto \omega + d\eta$ 与 $c \mapsto c + \partial b$ 下都不变，于是它其实是**上同调类与同调类的配对** $H^{k} \times H_{k} \to \mathbb{R}$。
 
-这条配对是 de Rham 定理的骨架。
-
-⚠️ **记号**：$[z]$ 与 $\bar z$ 都在用；有文献用 $\{z\}$。⚠️ 与「同调类」$[z] \in H_{n}$ 只差上下标，写证明时务必标清楚 $H^{n}$ 还是 $H_{n}$ —— 这是同调代数最常见的低级错误来源。
+这条配对是 de Rham 定理的核心。
 
 > 续见 notes/def.cohomology-class.2.md

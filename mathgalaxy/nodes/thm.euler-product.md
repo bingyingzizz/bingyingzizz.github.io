@@ -14,6 +14,9 @@ $$\zeta(s) \;=\; \prod_{p\ \text{素数}} \frac{1}{1 - p^{-s}},$$
 
 - …另有入边，续页见 [nodes/thm.euler-product.2.md](./thm.euler-product.2.md)
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
+
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 11
 
 > 说明见 `notes/thm.euler-product.md`

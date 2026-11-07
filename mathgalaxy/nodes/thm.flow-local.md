@@ -10,6 +10,7 @@ layer 24 · 定理 · 向量场与 Lie 结构 · 微分几何
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
 - ⇒ [`thm.flow-complete`](../nodes/thm.flow-complete.md) 流完备性
+- ⇒ [`thm.darboux`](../nodes/thm.darboux.md) Darboux 定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.flow-local.3.md](./thm.flow-local.3.md)

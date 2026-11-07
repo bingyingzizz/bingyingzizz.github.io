@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 21 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Čech Equals Sheaf Cohomology` (short) · `Čech Cohomology Equals Sheaf Cohomology on Paracompact Spaces` (full)
 
 ## Statement and proof

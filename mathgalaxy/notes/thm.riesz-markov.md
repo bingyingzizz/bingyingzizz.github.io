@@ -1,10 +1,18 @@
 # Riesz–Markov 表示　`thm.riesz-markov`　·　说明
 根 `../`
 
-**在做什么**：把「对函数做线性赋值」与「对集合量大小」这两件事焊起来 —— 于是测度论里的构造（乘积、推前、RN 导数）都能用泛函语言重述，反过来泛函分析里的对偶结论也能落到测度上。
+**术语**：本条的 $\mu$ 是 **Radon 测度** —— Borel 测度、紧集上有限、外正则、开集上内正则（见 def.radon-measure）。图内 def.regular-measure 是 $\mathbb{R}^n$ 上的特例（紧集有限 + 外正则）；本条不再把两者混用。
 
-**证明骨架**：① 由 $\Lambda$ 定义集函数 $\mu_{0}(U) := \sup\{\, \Lambda(f) : 0 \le f \le 1,\ \operatorname{supp} f \subseteq U \,\}$；② 证它是外测度、在开集上可加；③ 用 Carathéodory 延拓得到 Borel 测度；④ 用 $X$ 局部紧（Urysohn 引理给「夹逼函数」）证 $\Lambda(f) = \int f\,\mathrm{d}\mu$。
+**第一步：在开集上定义 $\mu$**。对开集 $U \subseteq X$ 令
 
-⚠ **本条标骨架**：本图把上面四步作为机制记下，**每一步的细节没有展开**（尤其「开集上可加」那一步要用 $X$ 的局部紧性与有限分割）。需要的工具（`lem.urysohn`、`thm.caratheodory`、`def.outer-measure`）本图都有节点，所以真要补全是可以逐步补的。
+$$\mu(U) := \sup\Big\{\, \Lambda(f) : f \in C_{c}(X),\ 0 \le f \le 1,\ \operatorname{supp} f \subseteq U \,\Big\},$$
+
+并约定 $\mu(\emptyset) = 0$。这里 $\operatorname{supp} f \subseteq U$ 是包含关系（$f$ 的支集紧，故 $\mu(U)$ 是「用紧支函数逼近 $U$」的上确界）。
+
+**引理 1（单调）**：$U \subseteq V$ $\Longrightarrow$ $\mu(U) \le \mu(V)$。显然（可行集变大）。∎
+
+**引理 2（有限次可加）**：对任意开集 $U, V$，
+
+$$\mu(U \cup V) \le \mu(U) + \mu(V).$$
 
 > 续见 notes/thm.riesz-markov.2.md

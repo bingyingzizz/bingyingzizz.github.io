@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.bezout-domain`](../nodes/def.bezout-domain.md) Bézout 整环：Bézout 整环 $\implies$ gcd 整环：gcd 由线性组合直接给出　[proofs/imp.ring-bezout-gcd.md](../proofs/imp.ring-bezout-gcd.md)
-- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e126.definition.md](../proofs/e126.definition.md)
+- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e130.definition.md](../proofs/e130.definition.md)

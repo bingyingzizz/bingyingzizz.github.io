@@ -13,8 +13,8 @@ $$\forall A \exists P \forall x [ x \in P \leftrightarrow  x \subseteq A ]$$
 - [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/def-link.power-subset.md](../proofs/def-link.power-subset.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.omega`](../nodes/thm.omega.md) 自然数集存在
 - ⇒ [`thm.product`](../nodes/thm.product.md) 笛卡尔积存在
+- 被 [`def.pair`](../nodes/def.pair.md) 有序对 用
 
 refs: Kunen, Set Theory, I.3
 

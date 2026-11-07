@@ -7,7 +7,7 @@ layer 14 · 定义 · 范畴里的代数结构 · 范畴论+抽象代数
 
 $$\iota : G \longrightarrow G$$
 
-使下方方块交换（$\iota$ 就是「取逆」），则称 $G$ 是 $\mathcal{C}$ 里的**群对象**：
+使下方方块交换、**且两条复合都等于** $G \xrightarrow{!_G} 1 \xrightarrow{\varepsilon} G$（$!_G$ 到终对象唯一、$\varepsilon$ 是幺元），则称 $G$ 是 $\mathcal{C}$ 里的**群对象**：
 > 陈述续见 [nodes/def.group-object.2.md](./def.group-object.2.md)
 
 

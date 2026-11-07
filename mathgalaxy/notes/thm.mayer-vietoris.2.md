@@ -1,12 +1,14 @@
 # Mayer–Vietoris 序列　`thm.mayer-vietoris`　·　说明
 根 `../`
 
-**为什么它是标准工具**：任何流形都能被可缩的开集（卡里的球）覆盖，Mayer–Vietoris 加归纳就把整张流形算出来 —— 这是「好的覆盖」那条计算路线的起点。算的时候用 Čech 侧（`def.cech-cohomology`）更容易，两者的一致性由 de Rham 定理保证。
+ $a_{U}$ 光滑：在 $U \setminus V$ 上 $\rho_{V} = 0$；同理 $a_{V}$。于是 $s(a_{U}, a_{V}) = \rho_{V}\omega + \rho_{U}\omega = \omega$。核等于像：$s(\omega_{U}, \omega_{V}) = 0$ 说明两块在 $W$ 上相等，故拼成 $M$ 上的整体形式。
 
-**为什么要求 $U, V$ 都开**：形式的限制只需要开集，不需要闭集；闭集版本要额外假设（或改用奇异上同调）。开性是「限制到重叠处」的合法保障。
+**第二步：蛇引理给长正合列**。$r, s$ 与 $\mathrm{d}$ 交换（限制与差逐点作用），故上述短正合列是链复形的短正合列。链复形短正合列的标准结论（蛇引理）给出长正合列 
 
-**它的本质是同调代数**：短正合列
+$$\cdots \to H^{k}(M) \xrightarrow{r^{*}} H^{k}(U) \oplus H^{k}(V) \xrightarrow{s^{*}} H^{k}(W) \xrightarrow{\delta} H^{k+1}(M) \to \cdots$$
 
-$$0 \to \Omega^{\bullet}(M) \to \Omega^{\bullet}(U) \oplus \Omega^{\bullet}(V) \to \Omega^{\bullet}(U \cap V) \to 0$$
+ 其中 $\delta$ 由图表追踪定义。以下把 $\delta$ 写成显式形式，并逐项验证正合性（这也就重证了本情形需要的蛇引理）。
 
-取上同调就长出长正合列。所以 Mayer–Vietoris 不是形式的特殊性质，而是**链复形的一般定理**（蛇引理 / 连接同态）。
+**第三步：$\delta$ 的显式形式**。取闭的 $\omega \in \Omega^{k}(W)$，令 
+
+> 续见 notes/thm.mayer-vietoris.3.md

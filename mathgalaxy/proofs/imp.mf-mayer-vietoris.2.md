@@ -3,14 +3,9 @@
 
 `def.de-rham-complex` de Rham 上同调 → `thm.mayer-vietoris` Mayer–Vietoris 序列
 
-把 $\rho_{U}\omega$ 在 $U\setminus\operatorname{supp}\rho_{V}$ 外延拓为 $0$、并在 $U$ 上整体定义为 $\rho_{U}\omega$（它在 $U \cap V$ 外本来就该是 $\omega$ 的 $\rho_{U}$ 倍），同理得 $\rho_{V}\omega$ 在 $V$ 上的形式。
-
-于是 $s(\rho_{U}\omega, -\rho_{V}\omega) = (\rho_{U} + \rho_{V})\omega = \omega$。
-
-**核等于像。** $s(\omega_{U},\omega_{V}) = 0$ 说明两块在重叠处相等，于是它们拼成一个整体形式 $\omega \in \Omega^{k}(M)$，即 $(\omega_{U},\omega_{V}) = r(\omega)$。
-
-**取上同调。** 每个 $\Omega^{k}$ 上都有 $\mathrm{d}$，且 $r, s$ 与 $\mathrm{d}$ 交换（限制与差都逐点作用，$\mathrm{d}$ 是逐点公式），故这是链映射构成的短正合列。
-
-链复形的短正合列取上同调得到长正合列（蛇引理 + 连接同态 $\delta$ 的构造），这就是所要的。
+**单射。** $r(\omega) = 0$ 说明 $\omega$ 在 $U$ 与 $V$ 上都为零，而 $M = U \cup V$，故 $\omega = 0$。
+**满射。** 取从属于 $\{U, V\}$ 的光滑单位分解 $\rho_{U} + \rho_{V} = 1$（`thm.smooth-partition-unity`）。对 $\omega \in \Omega^{k}(W)$ 令 $a_{U} = \rho_{V}\omega$（在 $U$ 上，$U \setminus W$ 外延拓为 $0$）、$a_{V} = -\rho_{U}\omega$（在 $V$ 上，延拓为 $0$）。则 $a_{U}, a_{V}$ 光滑（$\rho_{V}$ 在 $U \setminus V$ 上为零、$\rho_{U}$ 在 $V \setminus U$ 上为零），且 $s(a_{U}, a_{V}) = (\rho_{U} + \rho_{V})\omega = \omega$。
+**核等于像。** $s(\omega_{U},\omega_{V}) = 0$ 说明两块在 $W$ 上相等，于是拼成 $\Omega^{k}(M)$ 中的整体形式。所以这是链复形的短正合列。
+**连接同态。** 蛇引理给出长正合列，其 $\delta$ 可显式写成 
 
 > 续见 proofs/imp.mf-mayer-vietoris.3.md

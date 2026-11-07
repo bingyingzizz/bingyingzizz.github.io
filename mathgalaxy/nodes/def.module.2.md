@@ -7,6 +7,7 @@
 - 被 [`def.syzygy`](../nodes/def.syzygy.md) 合冲 用
 - 被 [`lem.schanuel`](../nodes/lem.schanuel.md) 合冲比较引理 用
 - 被 [`def.flat-module`](../nodes/def.flat-module.md) 平坦模 用
+- 被 [`def.module-category`](../nodes/def.module-category.md) 模范畴 用
 - 被 [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有 用
 - 被 [`thm.freyd-mitchell`](../nodes/thm.freyd-mitchell.md) Freyd–Mitchell 嵌入定理 用
 - 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用

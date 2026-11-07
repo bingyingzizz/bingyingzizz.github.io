@@ -3,5 +3,5 @@
 
 - prop.acyclic-equivalent-conditions　无环性的四条等价说法　layer 19
 - prop.derived-pushforward-composition　推前的复合　layer 19
-- thm.paracompact-cech-equals-sheaf　仿紧空间上的 Čech 就是上同调　layer 20
 - prop.cech-h1-equals-h1　一次 Čech 就是一次上同调　layer 20
+- thm.paracompact-cech-equals-sheaf　仿紧空间上的 Čech 就是上同调　layer 21

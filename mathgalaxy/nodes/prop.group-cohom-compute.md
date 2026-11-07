@@ -3,9 +3,7 @@
 layer 15 · 命题 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=prop.group-cohom-compute)　·　[节点索引](../index.md)
 
-设 $M$ 是 $G$-模。令
-
-$$C^{n}(G, M) := \operatorname{Hom}_{R[G]}\bigl(B_{n},\ M\bigr) \;\cong\; \bigl\{\, c : G^{n} \to M \,\bigr\}$$
+设 $M$ 是 **$R[G]$-模**（$G$-模就是 $\mathbb{Z}[G]$-模；这里写 $\operatorname{Hom}_{R[G]}$，所以 $M$ 必须是 $R[G]$-模 —— 取 $R = \mathbb{Z}$ 就回到普通的 $G$-模
 > 陈述续见 [nodes/prop.group-cohom-compute.2.md](./prop.group-cohom-compute.2.md)
 
 

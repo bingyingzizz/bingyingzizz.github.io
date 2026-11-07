@@ -1,14 +1,12 @@
 # 辛标准形定理　`thm.symplectic-normal-form`　·　说明
 根 `../`
 
-**证明骨架**：取 $e_{1} \ne 0$，由非退化性存在 $f_{1}$ 使 $\omega(e_{1}, f_{1}) = 1$；则 $\operatorname{span}(e_{1}, f_{1})$ 是一块非退化辛平面，且 $V = \operatorname{span}(e_{1},f_{1}) \oplus \operatorname{span}(e_{1},f_{1})^{\perp}$（正交补仍是辛空间）。
+**证明**：对 $\dim V$ 归纳。$\dim V = 0$ 时取空基即可。设 $\dim V > 0$，先取 $0 \ne e_{1} \in V$。
 
-对维数归纳即可。
+**第一步：造一条双曲平面。** 若对一切 $u$ 都有 $\omega(e_{1}, u) = 0$，则 $e_{1}$ 落在 $\omega$ 的根（radical）里，与「非退化」矛盾；所以存在 $u \in V$ 使 $\omega(e_{1}, u) \ne 0$。令 $f_{1} := u / \omega(e_{1}, u)$，则 $\omega(e_{1}, f_{1}) = 1$，且 $\omega(f_{1}, e_{1}) = -1$。
 
-**维数必偶**是这条归纳的副产物。
+**第二步：$V = W \oplus W^{\perp}$，其中 $W := \operatorname{span}(e_{1}, f_{1})$。** 先看 $W \cap W^{\perp}$：若 $v = a e_{1} + b f_{1}$ 且 $\omega(v, e_{1}) = \omega(v, f_{1}) = 0$，则 $\omega(v, e_{1}) = -b$、$\omega(v, f_{1}) = a$，故 $a = b = 0$。再证 $V = W + W^{\perp}$：对 $v \in V$ 令
 
-⭐ **为什么比对称型简单**：对称型要化成对角形，得处理「同一个数能不能开平方」的问题（所以 $\mathbb{R}$ 上分正负、$\mathbb{C}$ 上只剩秩）；交错型的标准形 $J_{0}$ 里只有 $0$ 和 $\pm 1$，**没有待开方的系数**。这就是「辛几何在任意域（char$\ne$2）上都长一样」的原因。
-
-⚠️ **奇数维时只有退化交错型**：比如 $\mathbb{R}^{3}$ 上取 $\omega$ 的秩必为偶数，所以要么退化、要么为零。这与「$\mathbb{R}^{3}$ 上内积很多」形成鲜明对照。
+$$p(v) := \omega(v, f_{1})\, e_{1} - \omega(v, e_{1})\, f_{1},$$
 
 > 续见 notes/thm.symplectic-normal-form.2.md

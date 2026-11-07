@@ -15,7 +15,8 @@ eratorname{Hom}_{\mathbb{Z}}(A, \mathbb{Q}/\mathbb{Z}
 m}_{\mathbb{Z}}(R, M)$、$m \mapsto (r \mapsto r m)$；
 取内射 $\mathbb{Z}$-模 $E$ 与单射 $M \hookrightarrow E$，得 $R$-
 模单射 $M \hookrightarrow \operatorname{Hom}_{\mathbb{Z}
-}(R, E)$。\n\n⚠ **$E$ 不能取成二次对偶 $M^{\vee\vee}$**（$M
- = \mathbb{Z}/2$ 时它 $\cong \mathbb{Z}/2$，**不可除**，因
+}(R, E)$。
+⚠ **$E$ 不能取成二次对偶 $M^{\vee\vee}$**（$M = \mathbb{Z}/
+2$ 时它 $\cong \mathbb{Z}/2$，**不可除**，因而不是内射）。正确的取法是*
 
 > 续见 [nodes/thm.mod-enough-injectives.3.md](./thm.mod-enough-injectives.3.md)

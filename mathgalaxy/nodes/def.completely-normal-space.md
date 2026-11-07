@@ -1,19 +1,17 @@
 # 完全正规空间　`def.completely-normal-space`
 完全正规空间（T5）：连子空间都正规
-layer 16 · 定义 · 分离公理 · 拓扑学
+layer 17 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.completely-normal-space)　·　[节点索引](../index.md)
 
 **在做什么**：正规性是「闭集 vs 闭集」。它**不遗传**给子空间 —— 所以要求「所有子空间都正规」是一条真加强，这就是 $T_{5}$。
 > 陈述续见 [nodes/def.completely-normal-space.2.md](./def.completely-normal-space.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.perfectly-normal-space`](../nodes/def.perfectly-normal-space.md) 完美正规空间：imp.pn-cn　[proofs/imp.pn-cn.md](../proofs/imp.pn-cn.md)
-
-- …另有入边，续页见 [nodes/def.completely-normal-space.3.md](./def.completely-normal-space.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.completely-normal-space.4.md](./def.completely-normal-space.4.md)
+- ⇒ [`def.normal-space`](../nodes/def.normal-space.md) 正规空间
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.completely-normal-space.3.md](./def.completely-normal-space.3.md)
 
 refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理；Engelking, General Topology（⚠️ 章节未核实，只记书名）
 

@@ -5,10 +5,10 @@ layer 6 · 定义 · 选择原理 · 序理论+集合论
 
 设 $F$ 是一个集合族，且 $\emptyset \notin F$。
 
-$f$ 是 $F$ 的**选择函数**，当且仅当
+$f$ 是 $F$ 的**选择函数**，当且仅当下面两条**都**成立：
 
-$f$ 是函数，$\operatorname{dom} f = F$；
-$\forall X \in F, f(X) \in X$。
+(i) $f$ 是函数，且 $\operatorname{dom} f = F$；
+(ii) $\forall X \in F$，$f(X) \in X$。
 
 即：$f$ 从 $F$ 的每一个成员里各挑出一个元素。
 

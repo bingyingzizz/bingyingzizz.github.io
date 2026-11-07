@@ -8,6 +8,6 @@
 - **对差封闭**：$A \setminus B$ 逐块做差，同样拆成有限不交并 ✓；
 - 含 $\emptyset$（空并）✓。于是 $\mathfrak{A}$ 是一个**环** ✓。∎
 
-(1)：取 $A \in \mathfrak{A}$，则 $A \setminus A = \emptyset$ 要能被拆成不交并，只能是空并。
+(1)：空并就是 $n = 0$ 的情形，直接属于 $\mathfrak{A}$；基本类不含 $\emptyset$ 也无妨。
 
 > 续见 notes/prop.set-class-properties.3.md

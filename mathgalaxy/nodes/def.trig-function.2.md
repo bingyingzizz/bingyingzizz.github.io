@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.trig-function)　·　第 1 页 [nodes/def.trig-function.md](./def.trig-function.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.convergence-radius`](../nodes/thm.convergence-radius.md) 收敛半径：Cauchy–Hadamard 公式 $\implies$ sin/cos 的收敛半径为 $+\infty$　[proofs/imp.trig-series-radius.md](../proofs/imp.trig-series-radius.md)
 - [`def.power-series`](../nodes/def.power-series.md) 幂级数：用到了定义 幂级数　[proofs/dep.powerseries-trig.md](../proofs/dep.powerseries-trig.md)
 
 > 续见 [nodes/def.trig-function.3.md](./def.trig-function.3.md)

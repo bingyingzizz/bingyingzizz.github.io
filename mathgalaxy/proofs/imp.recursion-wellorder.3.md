@@ -1,14 +1,8 @@
 # 良序性 $\implies$ 递归定理
 `imp.recursion-wellorder` · 推出 · strong 边 · 根 `../`
 
-`def.wellorder` 良序集 → `thm.recursion-wellorder` 超限递归
+`def.wellorder` 良序集 + `ax.repl` 替换公理模式 + `ax.sep` 分离公理模式 → `thm.recursion-wellorder` 超限递归
 
-则 $W_{< w} \subseteq \operatorname{dom}\, R$，于是 $f := R \upharpoonright W_{< w}$ 是 $W_{< w}$ 上满足递归式的函数（若 $v \prec w$，由 $v \in \operatorname{dom}\, R$ 及单值性得 $f(v) = G(f \upharpoonright W_{< v})$）。
+**$R$ 是集合。** 对固定 $w$ 考察公式 $\varphi(w, y)$：「存在 $f$ 定义在 $W_{< w}$ 上、满足递归式，且 $y = G(f)$」。先用分离公理模式把 $W$ 缩到 $W^{\prime} = \{w \in W : \exists y\,\varphi(w, y)\}$，再对 $W^{\prime}$ 用**替换公理模式**（$\varphi$ 在 $W^{\prime}$ 上单值，正是 ① 保证的）得 $Y = \{y : \exists w \in W,\ (w, y) \in R\}$ 是集合 —— 这一步**不需要**「$G$ 的值域」是集合（$G$ 可以是真类函数，它的
 
-于是 $(w, G(f)) \in R$，与 $w \notin \operatorname{dom}\, R$ 矛盾。
-
-故 $R$ 就是所求的函数 $F$，由 ① 唯一。
-
-**④ 超限归纳。** 设 $W \setminus S$ 非空，取它的最小元 $w$。则 $W_{< w} \subseteq S$，由假设 $w \in S$，矛盾。故 $S = W$。∎
-
-> ① 是唯一性、②③ 是存在性。整个证明里**只用**了良序性、幂集公理和分离公理模式 —— 没有用到选择公理。这是它能在 ZF 里安全使用的原因。
+> 续见 proofs/imp.recursion-wellorder.4.md

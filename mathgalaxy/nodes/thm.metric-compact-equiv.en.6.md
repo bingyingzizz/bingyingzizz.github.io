@@ -2,9 +2,10 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-- (a) $\implies$ (b): **no hypothesis needed.** Pass to a finite subcover and pick, by pigeonhole, a subsequence lying inside one member of the cover (Lebesgue number, or a direct induction), then take a convergent subsequence inside that member.
-- (a) $\implies$ (c), "complete": **no extra hypothesis.** A Cauchy sequence with a convergent subsequence converges, and to the same point.
-- (a) $\implies$ (c), "totally bounded": **no extra hypothesis.** Cover by all balls of radius $\varepsilon$; a finite subcover is a finite $\varepsilon$-net.
-- (b) $\implies$ (a): **uses only total boundedness, not the axiom of choice
+So "sequentially compact $\implies$ totally bounded $\implies$ compact" and "compact $\implies$ sequentially compact" close the circle, and the three notions agree.
+
+⚠ **What each of the two conditions does**: completeness keeps the limit **in the space**, total boundedness supplies **a shrinkable subsequence** — neither can be dropped ($\mathbb{R}$ is complete but not totally bounded; $(0, 1)$ is totally bounded but not complete).
+
+⚠ In a general topological space **both implications fail**:
 
 > 续见 nodes/thm.metric-compact-equiv.en.7.md

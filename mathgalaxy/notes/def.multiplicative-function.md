@@ -7,7 +7,7 @@
 
 完全积性更强：还要求 $f(p^{e}) = f(p)^{e}$。
 
-$\mu$、$\varphi$、$\tau$、$\sigma$ 都积性；只有 $\mu$ 与「$\mathrm{id}$」「$1$」是完全积性，$\varphi$、$\tau$、$\sigma$ 不是（例如 $\varphi(4) = 2 \ne \varphi(2)^{2} = 1$）。
+$\mu$、$\varphi$、$\tau$、$\sigma$ 都只是**积性**，**没有一个是完全积性**：$\mu(4) = 0 \ne \mu(2)^{2} = 1$、$\varphi(4) = 2 \ne \varphi(2)^{2} = 1$。完全积性的典型例子是 $\mathrm{id}$ 与常函数 $1$（以及它们的乘积、Dirichlet 特征标）。
 
 
 

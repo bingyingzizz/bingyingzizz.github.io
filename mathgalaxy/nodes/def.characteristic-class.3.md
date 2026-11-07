@@ -1,10 +1,9 @@
 # 示性类　`def.characteristic-class`　·　续页（第 3 页）
 [在星图里打开](../#n=def.characteristic-class)　·　第 1 页 [nodes/def.characteristic-class.md](./def.characteristic-class.md)　·　上一页 [nodes/def.characteristic-class.2.md](./def.characteristic-class.2.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛：用到了定义 向量丛　[proofs/dep-cc-vector.md](../proofs/dep-cc-vector.md)
-- [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类：用到了定义 丛的分类　[proofs/dep-cc-class.md](../proofs/dep-cc-class.md)
-- [`def.structure-group`](../nodes/def.structure-group.md) 结构群：用到了定义 结构群　[proofs/dep-cc-sg.md](../proofs/dep-cc-sg.md)
-- [`def.transition-function`](../nodes/def.transition-function.md) 转移函数：用到了定义 转移函数　[proofs/dep-cc-tf.md](../proofs/dep-cc-tf.md)
+## 陈述（续）
+复丛的 **陈类** $c_{i}(E) \in H^{2i}(B; \mathbb{Z})$（$0 \le i \le k$），同样 $c_{0}(E) = 1$、$i > k$ 时 $c_{i}(E) = 0$，并要求 $c(E \oplus F) = c(E) \smile c(F)$。
+自然性、同构不变、$w_{0} = c_{0} = 1$ 与 Whitney 公式，再加上一条定标条件（例如「Möbius 线丛的 $w_{1}$ 非零」与「复射影空间上 tautological 线丛 $\mathcal{O}(-1)$ 的 $c_{1}=-1$（等价地 $\mathcal{O}(1)$ 的 $c_{1}=+1$）」），**唯一确定** SW 类与陈类
+。存在性与唯一性属于示性类的公理刻画定理（分类空间上计算 $H^{\bullet}(\mathrm{BO}(k))$ 与 $H^{\bullet}(\mathrm{BU}(k))$），本节点只给定义与用法，不证这条定理。
 
 > 续见 [nodes/def.characteristic-class.4.md](./def.characteristic-class.4.md)

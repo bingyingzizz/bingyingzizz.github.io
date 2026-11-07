@@ -10,9 +10,7 @@ $$\rho := \limsup_{r \to \infty} \frac{\log^{+} \log^{+} M(r)}{\log r},\qquad M(
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.weierstrass-product`](../nodes/thm.weierstrass-product.md) Weierstrass 乘积定理
-
-- …另有出边，续页见 [nodes/def.entire-order.4.md](./def.entire-order.4.md)
+- ⇒ [`thm.hadamard-factorization`](../nodes/thm.hadamard-factorization.md) Hadamard 分解定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.entire-order.3.md](./def.entire-order.3.md)

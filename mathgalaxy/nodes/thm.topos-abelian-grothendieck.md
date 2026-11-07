@@ -10,7 +10,7 @@ layer 19 · 定理 · 阿贝尔层 · 同调代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.topos-abelian-grothendieck.5.md](./thm.topos-abelian-grothendieck.5.md)
 
-## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
+## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.topos-abelian-grothendieck.3.md](./thm.topos-abelian-grothendieck.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §5.3

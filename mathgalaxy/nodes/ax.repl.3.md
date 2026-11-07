@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`ax.sep`](../nodes/ax.sep.md) 分离公理模式
+- ⇒ [`thm.recursion-wellorder`](../nodes/thm.recursion-wellorder.md) 超限递归
 - ⇒ [`thm.wellorder-ordinal`](../nodes/thm.wellorder-ordinal.md) 良序集的序型

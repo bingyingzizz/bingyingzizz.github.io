@@ -10,9 +10,6 @@ layer 19 · 命题 · 凝聚态集 · 凝聚态数学
 
 - …另有入边，续页见 [nodes/prop.cond-projectives.2.md](./prop.cond-projectives.2.md)
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`prop.cond-epi`](../nodes/prop.cond-epi.md) 凝聚态集满态射的判据
-
 refs: Le Stum, Exercise 4.3
 
 > 说明见 `notes/prop.cond-projectives.md`

@@ -8,7 +8,7 @@ layer 21 · 定义 · 复变函数基础 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数：幂级数在全平面收敛 $\implies$ 逐项求导 $\implies$ 全纯　[proofs/e1.implication.md](../proofs/e1.implication.md)
+- [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数：幂级数在全平面收敛 $\implies$ 逐项求导 $\implies$ 全纯　[proofs/e2.implication.md](../proofs/e2.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.complex-elementary.3.md](./def.complex-elementary.3.md)

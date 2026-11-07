@@ -1,6 +1,7 @@
 # 测度的构造 / Constructing Measures（analysis.measure）· 节点清单（第 2/2 页）
 根 `../`　·　第 1 页 `index/analysis.measure.md`
 
+- prop.caratheodory-extension　预测度还原　layer 18
+- thm.riesz-markov　Riesz–Markov 表示　layer 18
 - thm.caratheodory-uniqueness　扩张的唯一性　layer 19
 - thm.ls-exists　F ↔ Borel 测度　layer 20
-- thm.riesz-markov　Riesz–Markov 表示　layer 22

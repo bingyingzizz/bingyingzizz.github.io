@@ -11,8 +11,4 @@
 
 $$S(C) = \{ p \in P : \forall c \in C, p \succ  c \}$$
 
-（约定 $S(\emptyset ) = P$。）注意「$C$ 有上界」与「$S(C) \ne \emptyset$」不是一回事：$S$ 要的是**严格**上界。
-
-**③ 超限递归**：只要 $S$ 非空就往下走 ——
-
 > 续见 proofs/imp.hartogs-zorn.2.md

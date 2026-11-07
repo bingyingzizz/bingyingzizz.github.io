@@ -1,16 +1,16 @@
 # Mayer–Vietoris 序列　`thm.mayer-vietoris`　·　说明
 根 `../`
 
-**$\delta$ 从哪来（给直觉，不是证明）**：取 $[\omega] \in H^{k}(U \cap V)$。
+**证明**。写 $W = U \cap V$，记 $\Omega^{k}$ 为对应开集上的 de Rham 复形。先造链复形的短正合列，再取上同调。
 
-用单位分解写 $\omega = \rho_{U}\omega + \rho_{V}\omega$（$\rho_{U} + \rho_{V} = 1$，各自支撑在 $U$、$V$ 里），把两块分别延拓成 $U$、$V$ 上的形式。
+**第一步：短正合列**。限制与差给出 
 
-它们的差在重叠处为零，于是拼成 $M$ 上的 $(k+1)$-形式，它就是 $\delta[\omega]$。
+$$0 \to \Omega^{k}(M) \xrightarrow{\ r\ } \Omega^{k}(U) \oplus \Omega^{k}(V) \xrightarrow{\ s\ } \Omega^{k}(W) \to 0,$$
 
-符号与 $\mathrm{d}$ 的次序要在具体计算里对齐，本图不替读者对齐。
+$$r(\omega) = (\omega|_{U}, \omega|_{V}),\qquad s(\omega_{U}, \omega_{V}) = \omega_{U}|_{W} - \omega_{V}|_{W}.$$
 
-**最简单的算例**：取 $S^{1} = U \cup V$ 为两个略长的开弧（$U \cap V$ 有两个连通分支），序列给出 $H^{1}(S^{1}) \cong \mathbb{R}$ —— 正是「单位圆上那个角形式」的那一个类。
+ $r$ 单：$r(\omega) = 0$ 说明 $\omega$ 在 $U$ 与 $V$ 上都为零，而 $M = U \cup V$。$s$ 满：取从属于 $\{U, V\}$ 的光滑单位分解 $\rho_{U} + \rho_{V} = 1$（`thm.smooth-partition-unity`，$\operatorname{supp}\rho_{U} \subseteq U$、$\operatorname{supp}\rho_{V} \subseteq V$）。对 $\omega \in \Omega^{k}(W)$ 令 
 
-$S^{2}$ 用两个略大于半球的球冠（$U \cap V$ 同伦于 $S^{1}$）给出 $H^{2}(S^{2}) \cong \mathbb{R}$。
+$$a_{U} := \rho_{V}\omega \ \text{在}\ U\ \text{上（在}\ U \setminus W\ \text{外延拓为}\ 0\text{）}\qquad a_{V} := -\rho_{U}\omega \ \text{在}\ V\ \text{上（延拓为}\ 0).$$
 
 > 续见 notes/thm.mayer-vietoris.2.md

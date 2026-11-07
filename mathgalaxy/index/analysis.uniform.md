@@ -10,10 +10,9 @@
 - thm.uniform-limit-continuous　一致收敛保连续　layer 17
 - thm.dini　Dini 定理　layer 17
 - def.exp-function　指数函数　layer 17
-- def.trig-function　正弦与余弦　layer 17
 - def.log-function　对数函数与 e　layer 18
-- def.pi　圆周率 π　layer 18
-- thm.euler-formula　Euler 公式　layer 18
 - thm.uniform-limit-integral　积分与极限交换　layer 19
+- prop.weierstrass-m-test　Weierstrass 判别法　layer 20
+- thm.convergence-radius　收敛半径　layer 21
 
 > 续见 `index/analysis.uniform.2.md`

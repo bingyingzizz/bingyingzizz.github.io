@@ -3,18 +3,12 @@
 
 `lem.zorn` Zorn 引理 → `thm.baer-criterion` 内射的理想判据
 
-设 $Q$ 满足「到理想上的同态都能延拓」。要证 $Q$ 内射，只需对任意单射 $A \hookrightarrow B$ 与同态 $f : A \to Q$ 造延拓。
+设 $R$ 是含幺环、$I$ 是左 $R$-模，且满足 **Baer 条件**：对每个左理想 $J \subseteq R$ 与每个 $R$-线性映射 $h : J \to I$，存在 $x \in I$ 使 $h(r) = rx$ 对一切 $r \in J$ 成立。要证 $I$ 内射。
 
-令
+**第一步：化归。** 按定义，$I$ 内射 $\iff$ 对每个单射 $A \hookrightarrow B$ 与每个 $R$-线性 $f : A \to I$，存在 $R$-线性 $f_{1} : B \to I$ 使 $f_{1}|_{A} = f$。所以只需对任意包含 $A \subseteq B$ 与任意 $f : A \to I$ 造出到 $B$ 的延拓。
 
-$$\mathcal{S} := \{\, (A', f') : A \subseteq A' \subseteq B,\ f' : A' \to Q\ \text{同态且延拓}\ f \,\},$$
+**第二步：Zorn 取极大延拓。** 令
 
-按「$A'$ 更大」排序。链的上界取并：$(\bigcup A'_{\alpha},\ f')$，其中 $f'$ 在 $A'_{\alpha}$ 上用 $f'_{\alpha}$ 定义 —— 良定义因为链上的延拓彼此相容。
-
-由 Zorn 引理取极大元 $(A_{0}, f_{0})$。
-
-若 $A_{0} \ne B$，取 $b \in B \setminus A_{0}$，令 $I := \{ r \in R : rb \in A_{0} + Rb \}$ 型理想（具体：$I = \{r : rb \in A_{0}\}$ 调整后是理想），由**假设**（对理想的延拓性质）把 $f_{0}$ 延到 $A_{0} + Rb$ —— 与极大性矛盾。
-
-故 $A_{0} = B$。
+$$\mathcal{S} := \{\, (C, g) : A \subseteq C \subseteq B,\ g : C \to I\ \text{是 } R\text{-线性映射且 } g|_{A} = f \,\},$$
 
 > 续见 proofs/imp.zorn-baer.2.md

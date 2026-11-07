@@ -9,7 +9,7 @@ $$i \circ f = i \circ g \;\Longrightarrow\; f = g$$
 
 （左可消）。等价地：方块 $Y \to Y \times_X Y$ 是笛卡尔的，即 $Y \cong Y \times_X Y$，其中 $Y \times_X Y$ 是沿 $i$ 的两个拉回。把箭头全部反向，得到**满态射**（epi，右可消）。
 
-两个方向都可消的态射叫**同构**：$f : X \to Y$ 叫**同构**（isomorphism），如果存在 $g : Y \to X$ 使
+**同构**是另一个概念：$f : X \to Y$ 叫**同构**（isomorphism），如果存在 $g : Y \to X$ 使
 
 $$g \circ f = 1_{X}, \qquad f \circ g = 1_{Y}$$
 > 陈述续见 [nodes/def.mono.2.md](./def.mono.2.md)

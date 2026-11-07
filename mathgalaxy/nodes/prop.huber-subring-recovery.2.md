@@ -2,7 +2,7 @@
 [在星图里打开](../#n=prop.huber-subring-recovery)　·　第 1 页 [nodes/prop.huber-subring-recovery.md](./prop.huber-subring-recovery.md)
 
 ## 陈述（续）
-记 $\operatorname{Spv}(A) := \operatorname{Spa}(A, \widetilde{\mathbb{Z}})$ 为 $A$ 上全部赋值等价类（取「最大的」$A^+$，即 $\mathbb{Z}$ 在 $A$ 中的整闭包，所以什么赋值都不被筛掉）。则
+记 $\operatorname{Spv}(A) := \operatorname{Spa}(A, \widetilde{\mathbb{Z}})$ 为 $A$ 上全部赋值等价类（取「**最小的**」$A^+$，即 $\mathbb{Z}$ 在 $A$ 中的整闭包 —— 它含在一切赋值的单位球里；$A^+$ 越小筛得越少，故什么赋值都不被筛掉）。则
 $$A^+ \longmapsto U = \operatorname{Spa}(A, A^+) = \bigcap_{f \in A^+} U_{1,f} \subseteq \operatorname{Spv}(A),$$
 
 给出了「整闭子环 $A^+ \subseteq A$」与「形如 $\bigcap_{f \in I} U_{1,f}$ 的子集 $U$」之间的**双射**，逆映射是

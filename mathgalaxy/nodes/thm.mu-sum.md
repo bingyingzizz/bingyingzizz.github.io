@@ -9,7 +9,7 @@ $$\sum_{d \mid n} \mu(d) = \begin{cases} 1, & n = 1, \\ 0, & n > 1 . \end{cases}
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.mobius-function`](../nodes/def.mobius-function.md) Möbius 函数：$\sum_{d\mid n}\mu(d) = [n=1]$：二项式展开　[proofs/imp.nt-mu-sum.md](../proofs/imp.nt-mu-sum.md)
-- [`def.mobius-function`](../nodes/def.mobius-function.md) Möbius 函数：用到了定义 Möbius 函数　[proofs/e145.definition.md](../proofs/e145.definition.md)
+- [`def.mobius-function`](../nodes/def.mobius-function.md) Möbius 函数：用到了定义 Möbius 函数　[proofs/e149.definition.md](../proofs/e149.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.mu-sum.2.md](./thm.mu-sum.2.md)

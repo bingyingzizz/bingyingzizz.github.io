@@ -1,6 +1,6 @@
 # Schur 三角化　`thm.schur-triangularization`
 Schur 三角化：任何复方阵都酉相似于上三角
-layer 24 · 定理 · 内积空间与正交性 · 抽象代数
+layer 29 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.schur-triangularization)　·　[节点索引](../index.md)
 
 **在做什么**：酉对角化要求太强（只有正规矩阵做得到，`thm.spectral-matrix`）。退一步只要求**上三角**，

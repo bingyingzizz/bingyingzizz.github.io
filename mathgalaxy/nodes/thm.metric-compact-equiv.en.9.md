@@ -2,11 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+- (a) $\implies$ (b): **no choice needed.** If no subsequence converged, every $y$ would have an open neighbourhood $U_{y}$ containing $x_{n}$ for only finitely many $n$ — otherwise the balls of radius $1/k$ around $y$ would give a subsequence converging to $y$, with the indices picked greedily from $\mathbb{N}$. Compactness makes finitely many $U_{y}$ cover the space, so only finitely many indices occur — contradiction.
+- (a) $\implies$ (c), "complete": **no choice needed.** A Cauchy sequence with a convergent subsequence converges, and to the same point.
+- (a) $\implies$ (c), "totally bounded": **no choice needed.**
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Sequentially_compact_space · nLab: https://ncatlab.org/nlab/show/compact+space
-
-
-Cite: `thm.metric-compact-equiv` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> 续见 nodes/thm.metric-compact-equiv.en.10.md

@@ -12,6 +12,6 @@ $(2) \implies (1)$：任取单射 $f : M_{1} \rightarrowtail M$，要证 $F\otim
 $$\operatorname{Tor}_{1}^{R}(F,\ M/M_{1}) \to F\otimes M_{1} \to F\otimes M \to F\otimes M/M_{1} \to 0 ,$$
 左端为零（条件 2），故 $F\otimes M_{1} \to F\otimes M$ 是**单射** ✓，即 $F\otimes -$ 正合 ✓。∎
 
-**三条里 (2)$\implies$(3) 是唯一要归纳的，(1)$\iff$(2) 只是定义**：
+**三条里 (2)$\implies$(3) 是唯一要归纳的；(1)$\iff$(2) 要用一次长正合列**：
 
 > 续见 notes/prop.tor-flat-vanishing.2.md

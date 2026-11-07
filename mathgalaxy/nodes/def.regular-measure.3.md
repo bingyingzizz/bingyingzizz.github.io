@@ -4,4 +4,3 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.rn-pointwise`](../nodes/thm.rn-pointwise.md) Radon–Nikodym 导数的点态公式
 - 被 [`thm.rn-pointwise`](../nodes/thm.rn-pointwise.md) Radon–Nikodym 导数的点态公式 用
-- 被 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示 用

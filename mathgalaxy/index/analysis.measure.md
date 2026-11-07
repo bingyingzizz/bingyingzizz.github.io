@@ -1,10 +1,11 @@
 # 测度的构造 / Constructing Measures（analysis.measure）· 节点清单（第 1/2 页）
 
 造出「测度」这个对象本身：预测度 → 外测度 → Carathéodory 扩张 → 完备化与唯一性 → Lebesgue–Stieltjes 测度。
-中心天体 def.measure　·　19 个节点　·　根 `../`　·　续页 `index/analysis.measure.2.md`
+中心天体 def.measure　·　20 个节点　·　根 `../`　·　续页 `index/analysis.measure.2.md`
 
 - def.measure　测度　layer 15
 - def.outer-measure　外测度　layer 15
+- def.radon-measure　Radon 测度　layer 16
 - def.premeasure　预测度　layer 16
 - def.finitely-additive　有限可加测度　layer 16
 - def.measure-space　有限 / σ-有限 / 半有限　layer 16
@@ -18,6 +19,5 @@
 - thm.caratheodory　Carathéodory 定理　layer 17
 - prop.ls-premeasure　F 给出的预测度　layer 17
 - def.ae　几乎处处　layer 17
-- prop.caratheodory-extension　预测度还原　layer 18
 
 > 续见 `index/analysis.measure.2.md`

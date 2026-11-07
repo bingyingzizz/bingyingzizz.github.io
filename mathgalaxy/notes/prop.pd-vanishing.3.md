@@ -1,12 +1,9 @@
 # 投射维数与消失　`prop.pd-vanishing`　·　说明
 根 `../`
 
-⚠️ **$n = 0$ 的情形**：$\mathrm{pd} M \le 0$ $\iff$ $M$ 投射 $\iff$ $\operatorname{Ext}^{k}(M,-) = 0$ 对所有 $k \ge 1$。别把「$\operatorname{Ext}^{1} = 0$ 就投射」当成对**任意** $n$ 都有：只有 $n = 0$（即 $\operatorname{Ext}^{1}$）这一档如此。
-
-**各方向用到的假设**（模范畴中的维数转移判据）：
-- (1) $\iff$ 存在长度 $n$ 的投射消解是定义；若 (2) 指任意已选消解的第 $n$ 合冲，则独立于消解的结论还需 Schanuel 引理或维数转移，不能全算作定义。
-- (2) $\implies$ (3)：截断投射消解并用它计算 $\operatorname{Ext}$，须用消解计算定理；(3) $\implies$ (4) 只是取 $k=n+1$，免费。
-- (4) $\implies$ (2)：维数转移把条件化为 $\operatorname{Ext}^1(\Omega^nM,N)=0$ 对所有 $N$ 成立，再由短正合列分裂判投射；模范畴有足够多投射，不要求环是 PID。
-- 对所有 $N$ 的量词不能改成某个 $N$：取 $N=0$ 时消失对任意 $M$ 成立；例如 $\mathbb Z/2$ 并非投射 $\mathbb Z$-模。
+- (1) $\iff$ (2)：**固定一条消解**时是定义展开（$\mathrm{pd} \le n$ 就是「有长度 $n$ 的投射消解」）；但「第 $n$ 合冲投射」要**跨消解**才成陈述，靠的是 **Schanuel 引理 / 合冲稳定性**（`prop.syzygy-stability`），不是定义展开。
+- (2) $\implies$ (3)：**这一步是真内容**。用投射消解 $\cdots \to P_{1} \to P_{0} \to M \to 0$ 算 $\operatorname{Ext}$：$\operatorname{Ext}^{k}(M,N)$ 是消解上同调，而长度 $n$ 的消解在 $k > n$ 处没有项，故为零。⚠️ 这里要用「**投射消解可用来算 $\operatorname{Ext}$**」这一条（维数偏移/平衡性），它本身要证。
+- (3) $\implies$ (4)：**特例**（$k = n+1$）。
+- (4) $\implies$ (2)：**这一步要用「维数偏移」反向**：若 $\operatorname{Ext}^{n+1}(M, -)$ 恒为零，取一个长度 $n$ 的部分消解，其第 $n$ 合冲 $K$ 满足 $\operatorname{Ext}^{1}(K, -) = 0$，于是 $K$ 投射（`prop.ext-projective-vanishes` 的反向）。**⚠️ 这一步用到「$\operatorname{Ext}^{1} = 0 \implies$ 投射」在模范畴里成立**
 
 > 续见 notes/prop.pd-vanishing.4.md

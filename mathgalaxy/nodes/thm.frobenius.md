@@ -10,7 +10,7 @@ layer 25 · 定理 · 向量场与 Lie 结构 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.frobenius.3.md](./thm.frobenius.3.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· Frobenius 定理与叶状结构；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· 一阶偏微分方程组的相容性
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· Frobenius 定理与叶状结构；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 19 · Distributions and Foliations
 
 > 说明见 `notes/thm.frobenius.md`
 

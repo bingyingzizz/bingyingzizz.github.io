@@ -4,6 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.genus`](../nodes/def.genus.md) 亏格：用到了定义 亏格　[proofs/dep.genus-classification.md](../proofs/dep.genus-classification.md)
 - [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数：用到了定义 Euler 示性数　[proofs/dep.eulerchar-classification.md](../proofs/dep.eulerchar-classification.md)
-- [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理：分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起　[proofs/e176.analogy.md](../proofs/e176.analogy.md)
+- [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理：分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起　[proofs/e187.analogy.md](../proofs/e187.analogy.md)
 
 > 续见 [nodes/thm.classification-surfaces.5.md](./thm.classification-surfaces.5.md)

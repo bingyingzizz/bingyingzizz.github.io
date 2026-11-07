@@ -12,6 +12,8 @@ $$R := \frac{1}{\limsup_{n \to \infty} \sqrt[n]{|a_n|}}$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.power-series-analytic`](../nodes/thm.power-series-analytic.md) 幂级数的逐项运算
 
+- …另有出边，续页见 [nodes/thm.convergence-radius.3.md](./thm.convergence-radius.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.convergence-radius.2.md](./thm.convergence-radius.2.md)
 

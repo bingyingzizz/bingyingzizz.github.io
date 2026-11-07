@@ -5,4 +5,5 @@
 - ⇒ [`thm.empty`](../nodes/thm.empty.md) 空集存在
 - ⇒ [`thm.omega`](../nodes/thm.omega.md) 自然数集存在
 - ⇒ [`thm.product`](../nodes/thm.product.md) 笛卡尔积存在
+- ⇒ [`thm.recursion-wellorder`](../nodes/thm.recursion-wellorder.md) 超限递归
 - ～弱边 [`def.finchar`](../nodes/def.finchar.md) 有限特征

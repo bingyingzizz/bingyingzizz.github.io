@@ -3,4 +3,4 @@
 
 `def.banach-space` Banach 空间 → `thm.bounded-operators-banach` B(E,F) 完备
 
-陈述里提到「Banach 空间」：「则 （式子） 是 Banach 空间」 —— 读者顺着这个词要落到它的定义上，所以接上。
+陈述里提到「Banach 空间」：「则 $(B(E, F), \|\cdot\|)$ 是 Banach 空间」 —— 读者顺着这个词要落到它的定义上，所以接上。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
+layer 22 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.trig-function.md` and `proofs/`.

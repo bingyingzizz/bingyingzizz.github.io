@@ -5,3 +5,4 @@
 - 被 [`prop.paracompact-partition-unity`](../nodes/prop.paracompact-partition-unity.md) 仿紧性与单位分解 用
 - 被 [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解 用
 - ⇒ [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解
+- 被 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示 用

@@ -1,18 +1,20 @@
 # Чебышёв 估计　`thm.chebyshev-estimate`　·　说明
 根 `../`
 
-**证明骨架**（只靠二项式系数，不用复分析）：
+**证明**：只用人均一次的二项式系数估计。记 $\theta(x) := \sum_{p \le x} \log p$（和只取素数 $p \le x$）。下面先对整数 $x$ 证明 $0.3\,x/\log x < \pi(x) < 6\,x/\log x$；推到实数时下界降为 $0.28\,x/\log x$，上界不变。
 
+**下界。** 对整数 $n \ge 1$ 令 $N := \binom{2n}{n}$。由 $\sum_{k=0}^{2n}\binom{2n}{k} = 4^{n}$、且 $\binom{2n}{n}$ 是其中最大的一项，得
 
+$$\frac{4^{n}}{2n+1} \le N \le 4^{n}.$$
 
-1. 取 $N = \binom{2n}{n}$。它在 $\dfrac{4^{n}}{2n+1} \le N \le 4^{n}$ 之间（中间项最大 + 二项式和为 $4^{n}$）。
+另一方面，把 $N$ 按素因子分解。由勒让德公式
 
-2. 把 $N$ 分解：$n < p \le 2n$ 的素数都整除 $N$（它们在分子里出现、分母里不出现），于是 $\prod_{n < p \le 2n} p \le N \le 4^{n}$ —— 取对数得 $\theta(2n) - \theta(n) \le 2n\log 2$。
+$$v_{p}(N) = \sum_{k \ge 1}\left(\left\lfloor\frac{2n}{p^{k}}\right\rfloor - 2\left\lfloor\frac{n}{p^{k}}\right\rfloor\right),$$
 
-3. 反方向用 $N$ 的 $p$-进指数：$v_{p}(N) = \sum_{k}\left(\lfloor 2n/p^{k}\rfloor - 2\lfloor n/p^{k}\rfloor\right) \le \log(2n)/\log p$，累乘得 $N \le (2n)^{\pi(2n)}$，与下界 $N \ge 4^{n}/(2n+1)$ 合并即得 $\pi(2n) \ge c\,n/\log n$。
+每一项只能是 $0$ 或 $1$，而满足 $p^{k} \le 2n$ 的 $k$ 至多 $\log(2n)/\log p$ 个，故 $v_{p}(N) \le \log(2n)/\log p$，即 $p^{v_{p}(N)} \le 2n$。于是
 
-4. 从 $2n$ 过渡到一般的 $x$：用 $\theta$ 的单调性与 $\pi$ 的分段常数性质夹住。
+$$N = \prod_{p \le 2n} p^{v_{p}(N)} \le (2n)^{\pi(2n)}.$$
 
+与 $N \ge 4^{n}/(2n+1)$ 合并、取对数：
 
-
-⚠ 这是**骨架**：每一步的常数没有仔细优化，第四步的区间处理也略去了。完整证明见华罗庚《数论导引》第九章。
+> 续见 notes/thm.chebyshev-estimate.2.md

@@ -9,6 +9,11 @@ layer 25 · 引理 · 微分形式、积分与 de Rham · 微分几何
 > 陈述续见 [nodes/lem.poincare-lemma.2.md](./lem.poincare-lemma.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理
+
+- …另有出边，续页见 [nodes/lem.poincare-lemma.4.md](./lem.poincare-lemma.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/lem.poincare-lemma.3.md](./lem.poincare-lemma.3.md)
 

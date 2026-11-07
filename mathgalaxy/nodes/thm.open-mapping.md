@@ -10,7 +10,7 @@ layer 27 · 定理 · 共形映射与正规族 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.rouche`](../nodes/thm.rouche.md) Rouché 定理 + [`thm.max-modulus`](../nodes/thm.max-modulus.md) 最大模原理：Rouché 数零点 $\implies$ 像含小圆盘 $\implies$ 开映射　[proofs/e12.implication.md](../proofs/e12.implication.md)
+- [`thm.rouche`](../nodes/thm.rouche.md) Rouché 定理 + [`thm.max-modulus`](../nodes/thm.max-modulus.md) 最大模原理：Rouché 数零点 $\implies$ 像含小圆盘 $\implies$ 开映射　[proofs/e13.implication.md](../proofs/e13.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.open-mapping.3.md](./thm.open-mapping.3.md)

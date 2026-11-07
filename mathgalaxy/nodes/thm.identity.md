@@ -10,7 +10,7 @@ $$Z := \{\, z \in \Omega : f(z) = g(z) \,\}$$
 在 $\Omega$ 内有聚点，则 $f \equiv g$。等价地：若 $f$ 在 $\Omega$ 的一个有聚点的子集上为零，则 $f \equiv 0$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`prop.zero-isolated`](../nodes/prop.zero-isolated.md) 零点的孤立性与阶：零点孤立 + 区域连通 $\implies$ 恒等　[proofs/e7.implication.md](../proofs/e7.implication.md)
+- [`prop.zero-isolated`](../nodes/prop.zero-isolated.md) 零点的孤立性与阶：零点孤立 + 区域连通 $\implies$ 恒等　[proofs/e8.implication.md](../proofs/e8.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.identity.2.md](./thm.identity.2.md)

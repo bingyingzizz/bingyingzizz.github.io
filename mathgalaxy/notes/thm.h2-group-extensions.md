@@ -9,10 +9,6 @@
 
 高次上同调对应的是更高阶的结合性障碍（$A_{\infty}$ 结构那一套），这里不需要。
 
-**与 $\operatorname{Ext}$ 的关系**：当 $G$ 在 $A$ 上**作用平凡**时，扩张就是阿贝尔语境里的「$A$ 被 $G$ 的扩张」，由 $\operatorname{Ext}^{1}_{\mathbb{Z}}(G, A)$ 分类；
-
-一般情形 $H^{2}(G, A)$ 更大 —— 它同时记录了作用不平凡的拼法。
-
-⚠️ $\operatorname{Ext}^{1}$ 用的是**交换群**语境，$H^{2}$ 用的是**群**语境，两者不可混用。
+**与 $\operatorname{Ext}$ 的关系**：当 $G$ 在 $A$ 上**作用平凡**时，$H^{2}(G, A) \cong \operatorname{Ext}^{1}_{\mathbb{Z}}(G^{\mathrm{ab}}, A) \oplus \operatorname{Hom}(H_{2}(G), A)$ —— **不是**只有 $\operatorname{Ext}^{1}$：$G = \mathbb{Z}^{2}$、$A = \mathbb{Z}$ 时 $\operatorname{Ext}^{1}(\mathbb{Z}^{2}, \mathbb{Z}) = 0$，但 Heisenberg 扩张 $1 \to \mathbb{Z} \to H \to \mathbb{Z}^{2} \to 1$ 不分裂、对应 $H^{2} \cong \mathbb{Z} \ne 0$；只有 $H_{2}(G) = 0$（如自由群）时才退化为 $\operatorname{Ext}^{1}$；
 
 > 续见 notes/thm.h2-group-extensions.2.md

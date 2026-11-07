@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 25 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Courant–Fischer Minimax` (short) · `Courant–Fischer Minimax Principle` (full)
 
 ## Statement and proof

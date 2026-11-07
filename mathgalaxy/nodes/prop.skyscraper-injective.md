@@ -10,8 +10,6 @@ layer 18 · 命题 · 层上同调 · 同调代数+范畴论
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.pushforward-enough-injectives`](../nodes/thm.pushforward-enough-injectives.md) 足够多内射层
 
-- …另有出边，续页见 [nodes/prop.skyscraper-injective.3.md](./prop.skyscraper-injective.3.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.skyscraper-injective.2.md](./prop.skyscraper-injective.2.md)
 

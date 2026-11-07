@@ -1,7 +1,7 @@
 # 素数定理：$\zeta$ 在 $\operatorname{Re}\,s = 1$ 上无零点
 `imp.nt-pnt` · 推出 · strong 边 · 根 `../`
 
-`def.prime-counting` 素数计数函数 → `thm.prime-number-theorem` 素数定理
+`def.prime-counting` 素数计数函数 + `def.riemann-zeta` 黎曼 ζ 函数 + `thm.euler-product` Euler 乘积 → `thm.prime-number-theorem` 素数定理
 
 **① $\zeta$ 的解析延拓。** 对 $\operatorname{Re}\,s > 1$，$\zeta(s) = \sum_{n\ge1} n^{-s} = \prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。
 

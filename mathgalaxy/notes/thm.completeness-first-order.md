@@ -1,14 +1,6 @@
 # 完备性定理　`thm.completeness-first-order`　·　说明
 根 `../`
 
-⭐ **两个方向的分量完全不同**：
+**约定**：$\vdash$ 取 `def.provability` 的 Hilbert 型系统（分离规则 + 推广），逻辑公理取标准模式：命题公理 (A1) $\psi\to(\chi\to\psi)$、(A2) $(\psi\to(\chi\to\theta))\to((\psi\to\chi)\to(\psi\to\theta))$、(A3) $(\neg\chi\to\neg\psi)\to(\psi\to\chi)$；量词公理 (Q1) $\forall x\,\psi\to\psi[t/x]$（$t$ 对 $x$ 可代入）、(Q2) $\forall x(\psi\to\chi)\to(\psi\to\forall x\,\chi)$（$x\notin\operatorname{FV}(\psi)$）；等词公理 (E1) $x=x$、(E2) $x=y\to(\psi\to\psi[y/x])$。`def.provability` 没有逐条列出公理表，这里按标准取法固定一套；换等价系统不改变 $\vdash$。$\Gamma$ **不一致**指存在 $\psi$ 使 $\Gamma\vdash\psi$ 且 $\Gamma\vdash\neg\psi$，它等价于 $\Gamma\vdash\neg(\theta\to\theta)$。
 
-- $\vdash \implies \vDash$（**可靠性** / soundness）：公理都是永真的、推理规则保持真值，所以逐条归纳即可 —— 这一段是**免费的**，也是「证明能保证正确」的全部依据。
-
-- $\vDash \implies \vdash$（**完备性**，Gödel 1930）：**这才是内容**。经典证明是 Henkin 构造：把一致的理论扩充成**极大一致**理论、对每个存在式加一个见证常元、再用项本身当元素造出项模型。
-
-⚠ **这里的「完备性」与「完备空间 / 完备测度」毫无关系**（那三个是 完备空间 / 完备测度 那一族）—— 同一个中文词的第五个意思，读的时候要认清。
-
-⚠ 一阶逻辑的完备性**不**违背 Gödel 不完备性定理：后者说的是「足够强的理论（如 PA/ZFC）里存在既不能证也不能证伪的**句子**」，那是关于**理论**的，不是关于逻辑的。
-
-📌 本图只给陈述与证明骨架（Henkin 构造的三个动作），没有把项模型展开成节点。
+> 续见 notes/thm.completeness-first-order.2.md

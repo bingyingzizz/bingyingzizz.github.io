@@ -1,6 +1,8 @@
 # 标准单纯形　`def.standard-simplex`　·　续页（第 3 页）
 [在星图里打开](../#n=def.standard-simplex)　·　第 1 页 [nodes/def.standard-simplex.md](./def.standard-simplex.md)　·　上一页 [nodes/def.standard-simplex.2.md](./def.standard-simplex.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.simplicial-complex`](../nodes/def.simplicial-complex.md) 单纯复形 用
-- 被 [`def.simplicial-boundary`](../nodes/def.simplicial-boundary.md) 边缘算子 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.simplex-category`](../nodes/def.simplex-category.md) 单纯形范畴：e72.analogy　[proofs/e72.analogy.md](../proofs/e72.analogy.md)
+- [`def.convex-hull`](../nodes/def.convex-hull.md) 凸包：用到了定义 凸包　[proofs/e172.definition.md](../proofs/e172.definition.md)
+
+> 续见 [nodes/def.standard-simplex.4.md](./def.standard-simplex.4.md)

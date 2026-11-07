@@ -1,10 +1,14 @@
 # 二次型　`def.quadratic-form`　·　说明
 根 `../`
 
-**“二次型 / 对称矩阵 / 对称双线性型”三者的对译要一条极化公式，而它需要 $\operatorname{char} \ne 2$**：
+⭐ 二次型是「内积」的**放宽版**：内积要求正定，二次型允许不定（甚至退化）。
 
-- $q(x) = x^{\mathsf{T}}Ax$（**$A$ 对称**）：这里已经用了「$A$ 对称」这一约定 —— 非对称的 $A$ 给出同一个 $q$（因为 $x^{\mathsf{T}}A x$ 只看对称部分），所以**二次型与对称矩阵一一对应**。
-- $q \leftrightarrow$ **对称双线性型** $B$：由**极化公式** $B(x,y) = \frac{1}{2}\bigl(q(x+y) - q(x) - q(y)\bigr)$。⚠️ **$\frac{1}{2}$ 要求 $\operatorname{char} K \ne 2$**；特征 $2$ 时二次型与双线性型**不再对应**（这是二次型理论在 char 2 要单独处理的原因）。
-- **正定 $\iff$ 特征值全正 $\iff$ 合同于 $I$**：第一条用谱定理（实对称）；第三条用**惯性定理**（`thm.sylvester-law-inertia`），只要求可逆合同、不要求正交。
+所以内积空间的一切几何结论在二次型里都要重新检查（「长度」可以是负的）。
+
+⭐ 正定二次型与内积一一对应（$\langle u, v\rangle := u^{\mathsf{T}}Av$），而**每个内积空间都可以通过 Gram–Schmidt 变成标准欧氏空间** —— 这就是「正定 $\implies$ 可由 $P^{\mathsf{T}}P$ 实现」的含义。
+
+⭐ 不定二次型出现在相对论（Minkowski 度规）、Morse 理论（Hessian 的负惯性指数 = 临界点类型）里。
+
+**“二次型 / 对称矩阵 / 对称双线性型”三者的对译要一条极化公式，而它需要 $\operatorname{char} \ne 2$**：
 
 > 续见 notes/def.quadratic-form.2.md

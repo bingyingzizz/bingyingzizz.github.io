@@ -7,7 +7,7 @@ layer 11 · 定义 · 整环与分解 · 抽象代数
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.euclidean-domain`](../nodes/def.euclidean-domain.md) Euclid 整环：Euclid 整环 $\implies$ PID：取范数最小的元素生成理想　[proofs/imp.ring-euclid-pid.md](../proofs/imp.ring-euclid-pid.md)
-- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e129.definition.md](../proofs/e129.definition.md)
+- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e133.definition.md](../proofs/e133.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环

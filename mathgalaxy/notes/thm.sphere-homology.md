@@ -1,13 +1,14 @@
 # 球面的同调　`thm.sphere-homology`　·　说明
 根 `../`
 
-**$n = 0$ 要单独看清**：$S^{0}$ 是两点，由 `prop.h0-components`，$H_{0}(S^{0}) = \mathbb{Z}^{2}$，约化后 $\tilde{H}_{0}(S^{0}) = \mathbb{Z}$ —— 与 $p = n$ 的约定吻合，所以它是归纳法的**基础情形**。
+**证明**：对 $n$ 归纳，使用约化同调（`def.reduced-homology`）与约化 Mayer–Vietoris（`thm.mv-homology`）。约定 $S^{n} \subset \mathbb{R}^{n+1}$，北极 $N := (0, \ldots, 0, 1)$、南极 $S := -N$。
 
-⚠️ **证明是骨架**，正式证明请查 `refs`。结构与关键步骤：
-① 取两个**开**集 $U := S^{n} \setminus \{\text{南极}\}$、$V := S^{n} \setminus \{\text{北极}\}$，它们都同胚于 $\mathbb{R}^{n}$，可缩，故所有约化同调为零（同伦不变性：恒等 $\simeq$ 常值，而常值映射在约化同调上是零）；
-② $U \cap V = S^{n} \setminus \{\text{两极}\}$ 沿经线**形变收缩**到赤道 $S^{n-1}$，故 $\tilde{H}_{p}(U \cap V) \cong \tilde{H}_{p}(S^{n-1})$；
-③ 代入 Mayer–Vietoris（`thm.mv-homology`）的约化版，两个可缩块的项为零，得对每个 $p$
-$$\tilde{H}_{p}(S^{n}) \cong \tilde{H}_{p-1}(S^{n-1}) \qquad (p \ge 1),$$
-④ 从 $S^{0}$ 出发归纳即得结论。
+**基础情形 $n = 0$。** $S^{0} = \{\pm 1\}$ 是两个点，由 `prop.h0-components`，$H_{0}(S^{0}) = \mathbb{Z}^{2}$，故 $\tilde{H}_{0}(S^{0}) = \mathbb{Z}$；$p > 0$ 时 $\tilde{H}_{p}(S^{0}) = 0$。
+
+**归纳步。** 设 $n \ge 1$，令 $U := S^{n} \setminus \{S\}$、$V := S^{n} \setminus \{N\}$；两者都是开集。
+
+**$U, V$ 可缩。** 对 $U$ 用同伦
+
+$$H_{s}(x) := \frac{(1-s)x + sN}{\lVert (1-s)x + sN \rVert}\qquad (x \in U,\ s \in [0,1]).$$
 
 > 续见 notes/thm.sphere-homology.2.md

@@ -1,10 +1,10 @@
-# 亚纯函数的定义 $\implies$ Mittag-Leffler 定理（只给证明骨架）
+# Runge 定理与 Weierstrass 分解 $\implies$ Mittag-Leffler
 `imp.mittag-leffler` · 推出 · strong 边 · 根 `../`
 
-`def.entire-meromorphic` 整函数与亚纯函数 → `thm.mittag-leffler` Mittag-Leffler 定理
+`def.entire-meromorphic` 整函数与亚纯函数 + `thm.runge` Runge 逼近定理 + `thm.weierstrass-convergence` Weierstrass 收敛性定理 → `thm.mittag-leffler` Mittag-Leffler 定理
 
-**第四步：收敛与主部。** 修正后的级数 $\sum_k (P_k - T_k)$ 在每个 $K_n$ 上一致收敛（从第 $n$ 项起每项都 $\le 2^{-k}$）。而减去的 $T_k$ 在 $a_k$ 处全纯、不影响主部，故极限函数在 $a_k$ 处的主部仍是 $P_k$。
+$$|P_k-T_k|<2\cdot 2^{-k}\qquad(z\in K_{n_k}).$$
 
-**第五步：唯一性。** 两个解之差处处全纯（极点与主部都被消掉），是 $\Omega$ 上的整函数。$\blacksquare$
+**第四步：级数与主部。** 令 $f=\sum_k(P_k-T_k)$。在 $K_m$ 上只有有限多个 $k$ 满足 $n_k<m$；其余项由 $K_m\subset K_{n_k}$ 得 $|P_k-T_k|<2\cdot2^{-k}$，故级数在 $K_m$ 上一致收敛（Weierstrass 判别法）。在 $a_k$ 处，$T_k$ 与所有 $P_j$（$j\ne k$）全纯，故 $f-P_k$ 全纯，主部正是 $P_k$。
 
-> ⚠ 这条边给的是「结构 $+$ 关键构造」：第三步的存在性依赖 **Runge 逼近定理**（这里只引不证），「把极点从 $\Omega$ 内挪到 $\hat{\mathbb{C}}\setminus\Omega$」那一步也没有展开。
+> 续见 proofs/imp.mittag-leffler.8.md

@@ -9,7 +9,7 @@ $$a^{\varphi(n)} \equiv 1 \pmod n .$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：Euler 定理：Lagrange 定理在单位群上的特例　[proofs/imp.nt-lagrange-euler.md](../proofs/imp.nt-lagrange-euler.md)
-- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/e118.definition.md](../proofs/e118.definition.md)
+- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/e122.definition.md](../proofs/e122.definition.md)
 
 - …另有入边，续页见 [nodes/thm.euler-theorem.2.md](./thm.euler-theorem.2.md)
 

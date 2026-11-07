@@ -42,10 +42,10 @@
   <!-- ⭐ 落地页搜索（2026-11-03 加，K1）：星图页一直没有 `#q=`，所以这里只能把人
        送到索引页重新开始。现在星图支持 `#q=<关键词>`，这里就能放一个真搜索框：
        提交后直接把词带过去、结果已经在图上列好。
-       ⛔ 不引 JS 框架：这里只有 8 行内联脚本；无脚本时退回 all.html（索引页也能搜）。 -->
+       ⛔ 不引 JS 框架：随机示例只有下面一小段内联脚本；无脚本时退回静态链接。 -->
   <form class="find enter" style="--i:2" role="search" aria-label="在星图里搜索"
         onsubmit="var v=this.q.value.trim();if(!v){return false;}location.href='mathgalaxy/#q='+encodeURIComponent(v);return false;">
-    <input type="search" name="q" placeholder="搜一个概念：一致收敛 · 紧 · 示性类 …" aria-label="搜索节点" autocomplete="off">
+    <input id="landing-search" type="search" name="q" placeholder="搜一个概念：一致收敛 · 紧 · 示性类 …" aria-label="搜索节点" autocomplete="off">
     <button type="submit">在星图里搜</button>
     <noscript><a href="mathgalaxy/all.html">索引页</a></noscript>
   </form>
@@ -55,9 +55,10 @@
     <a href="mathgalaxy/#n=thm.de-rham"><b>看前置知识</b><span>选一个目标，右侧面板列出它依赖什么、又被谁依赖</span></a>
     <a href="mathgalaxy/"><b>随便探索</b><span>直接进完整星图：滚轮缩放、拖拽平移、点节点看详情</span></a>
   </nav>
-  <p class="try enter" style="--i:2">试一个：
+  <p class="try enter" id="landing-try" style="--i:2">试一个：
     <a href="mathgalaxy/#e=imp.repl-to-sep">为什么分离公理模式可以由替换公理模式推出？</a>
-    <a href="mathgalaxy/#n=lem.zorn">Zorn 引理站在哪些前置上？</a></p>
+    <a href="mathgalaxy/#n=lem.zorn">Zorn 引理站在哪些前置上？</a>
+    <a href="mathgalaxy/#n=def.sheaf">层到底是什么？</a></p>
 
   <h2 class="enter" style="--i:2">项目</h2>
 
@@ -66,7 +67,7 @@
     <span>可交互的数学知识图谱 —— 按「大板块 / 星系 / 星团 / 节点」四级导航组织，
     后三级就是「星系 / 星团 / 恒星」三层知识尺度（大板块只是把星系再归一次类）；
     箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
-    内容覆盖 15 星系 / 105 星团 / 1540 节点 / 3164 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
+    内容覆盖 15 星系 / 105 星团 / 1550 节点 / 3192 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
     <i class="go">→</i>
   </a>
 
@@ -117,13 +118,13 @@
   <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
   <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
     <b>graph.md</b>
-    <span>整张星图的 Markdown 全量导出（约 3.7 MB）。适合一次下载、本地处理；
+    <span>整张星图的 Markdown 全量导出（约 3.9 MB）。适合一次下载、本地处理；
     ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
     <i class="go">↓</i>
   </a>
   <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
     <b>graph.json</b>
-    <span>机器可读的全量版本（约 5.3 MB），每条边带 strength（强边 / 弱边）与完整证明。
+    <span>机器可读的全量版本（约 5.5 MB），每条边带 strength（强边 / 弱边）与完整证明。
     同样只适合下载，不适合单次抓取。</span>
     <i class="go">↓</i>
   </a>
@@ -155,7 +156,7 @@
   </section>
 
   <footer class="enter" style="--i:15">
-    最近更新：2026-11-05 ·
+    最近更新：2026-11-07 ·
     由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
     <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
   </footer>
@@ -177,6 +178,64 @@
       el.style.viewTransitionName = 'doc-hero';
     });
   });
+})();
+</script>
+
+<script>
+/* 主页的两个「小惊喜」：搜索框示例与「试一个」问题每次加载随机抽。
+   ⛔ 不引框架；无脚本时上面的静态三条/固定 placeholder 仍然可用。
+   只在加载时抽一次，不在滚动或聚焦时换 —— 否则读者会以为链接跳了。 */
+(function(){
+  var tries = [
+    '为什么分离公理模式可以由替换公理模式推出？',
+    'Zorn 引理站在哪些前置上？',
+    '层到底是什么？',
+    '为什么交换图会交换？',
+    '为什么球面摊不平？',
+    '为什么不能除以零？',
+    '为什么调和级数会发散？',
+    '为什么实数比自然数多？',
+    '连续映射怎么定义？',
+    '为什么向量空间一定有基？',
+    '层和预层有什么区别？',
+    '为什么右伴随保极限？',
+    '预层怎么变成层？',
+    '测度是怎么造出来的？',
+    '为什么可以用 Zorn 引理？',
+    '莫比乌斯带为什么只有一个面？',
+    '为什么复变函数一次可导就无穷次可导？',
+    '留数是怎么算出来的？',
+    '怎么比较两个无穷的大小？',
+    '实数为什么是完备的？',
+    '超限归纳怎么做？',
+    '什么是模范畴？',
+    '群范畴和 Ab 范畴有什么关系？',
+    '为什么紧空间上连续函数有最大值？'
+  ];
+  var samples = ['一致收敛','紧','示性类','层','范畴','测度','群','环','模','拓扑','微分形式','同调'];
+  function pick(pool, n){
+    var a = pool.slice(), i, j, t;
+    for(i = a.length - 1; i > 0; i--){
+      j = Math.floor(Math.random() * (i + 1));
+      t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a.slice(0, n);
+  }
+  var line = document.getElementById('landing-try');
+  if(line){
+    line.textContent = '试一个：';
+    pick(tries, 3).forEach(function(q, i){
+      var a = document.createElement('a');
+      a.href = 'mathgalaxy/#q=' + encodeURIComponent(q);
+      a.textContent = q;
+      if(i) line.appendChild(document.createTextNode(' '));
+      line.appendChild(a);
+    });
+  }
+  var input = document.getElementById('landing-search');
+  if(input){
+    input.placeholder = '搜一个概念：' + pick(samples, 3).join(' · ') + ' …';
+  }
 })();
 </script>
 </body>

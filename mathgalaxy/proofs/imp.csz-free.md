@@ -5,12 +5,8 @@
 
 把 $S$ 嵌入某个乘积 $\prod_{I}\{0,1\}$，并给 $I$ 一个良序，写成序数 $\lambda$。对 $\lambda$ 作超限归纳。
 
-**极限序数。** $S$ 是诸 $S_\mu$（$\mu < \lambda$）的滤过极限，$C(S,\mathbb{Z}) = \varinjlim_\mu C(S_\mu,\mathbb{Z})$ 是自由群的滤过余极限，仍自由。
+**极限序数。** $S$ 是诸 $S_\mu$（$\mu < \lambda$）的滤过极限，$C(S,\mathbb{Z}) = \varinjlim_\mu C(S_\mu,\mathbb{Z})$ 是自由群的滤过余极限；更准确地说，沿 $\mu < \nu$ 的过渡映射 $S_\nu \to S_\mu$ 是满射，故 $C(S_\mu,\mathbb{Z}) \to C(S_\nu,\mathbb{Z})$ 是分裂单射，$C(S_\mu,\mathbb{Z})$ 是 $C(S_\nu,\mathbb{Z})$ 的直和项，滤过余极限仍自由。
 
 **后继序数 $\lambda = \rho + 1$。** 设 $S \subset S_\rho \times \{0,1\}$，令 $S_i = S \cap (S_\rho \times \{i\})$（$i = 0,1$），$S' = S_0 \cap S_1$。有短正合列
-
-$$0 \longrightarrow C(S_\rho, \mathbb{Z}) \longrightarrow C(S_\rho, \mathbb{Z}) \longrightarrow C(S', \mathbb{Z}) \longrightarrow 0,$$
-
-第二个箭头是「在 $S' \times \{1\}$ 与 $S' \times \{0\}$ 上取值之差」。
 
 > 续见 proofs/imp.csz-free.2.md

@@ -17,14 +17,14 @@ $$\text{加法}: V \times V \to V,\qquad \text{标量乘法}: K \times V \to V,$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用
+- 被 [`def.convex-set`](../nodes/def.convex-set.md) 凸集 用
 
 - …另有出边，续页见 [nodes/def.vector-space.4.md](./def.vector-space.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.vector-space.3.md](./def.vector-space.3.md)
 
-refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 2
+refs: Lang, Algebra；Hoffman–Kunze, Ch. 2
 
 > 说明见 `notes/def.vector-space.md`
 

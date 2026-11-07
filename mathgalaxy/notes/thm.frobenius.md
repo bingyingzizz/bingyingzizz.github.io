@@ -1,12 +1,13 @@
 # Frobenius 定理　`thm.frobenius`　·　说明
 根 `../`
 
-**证明的骨架**（详细提纲写在两条边上）：(2)$\implies$(3)$\implies$(1) 与 (2)$\implies$(4) 都是一行计算，内容全在 (1)$\implies$(2) —— 先把一个生成元拉直成 $\partial_{1}$（用局部流 + 流盒定理），再在横截超曲面上**降秩归纳**。
+**证明结构**：四条等价里 (2) 是引擎。两条完整证明边是 `imp.mf2-frobenius-flat`（(1)$\implies$(2) 的流盒加降秩归纳）与 `imp.mf2-frobenius-integral`（(2)$\implies$(3)、(3)$\implies$(1)、(2)$\implies$(4)）。下面把主线逐步写清，可以独立阅读。
 
-关键技巧是：把其余生成元换成「没有 $\partial_{1}$ 分量」的新生成元，于是它们的括号也落在其余生成元张成的空间里（这一步只在对合时才做得到）；
+**一、(1)$\implies$(2)：流盒 + 降秩归纳。** 取 $p$，在 $p$ 的邻域取光滑生成元 $X_{1},\ldots,X_{k}$，它们处处独立。
 
-最后沿 $\partial_{1}$ 把坐标平移出去，用一个线性 ODE 的初值问题把「相切」验完。
+1. 由 `thm.flow-local`，把 $X_{1}$ 沿其局部流拉直：存在坐标 $(y^{1},\ldots,y^{n})$ 使 $X_{1}=\partial_{1}$（流盒定理）。
+2. 把其余生成元写成 $X_{i}=a_{i}\,\partial_{1}+Y_{i}$（$i\ge2$），其中 $Y_{i}$ 只含 $\partial_{2},\ldots,\partial_{n}$ 分量。因为 $\mathrm{d}y^{1}$ 是闭形式，
 
-**条件是最优的**：反例就是接触分布（`def.involutive-distribution` 的 notes 里那个）—— 它光滑、秩 $2$、处处非零，就是不对合，于是任何曲面都装不下它。所以「对合」不是技术假设，是充要条件的一半。
+$$\mathrm{d}y^{1}\bigl([\partial_{1},Y_{i}]\bigr)=\partial_{1}\bigl(\mathrm{d}y^{1}(Y_{i})\bigr)-Y_{i}\bigl(\mathrm{d}y^{1}(\partial_{1})\bigr)=0,$$
 
 > 续见 notes/thm.frobenius.2.md

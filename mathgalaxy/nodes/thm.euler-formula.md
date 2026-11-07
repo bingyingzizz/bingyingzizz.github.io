@@ -1,6 +1,6 @@
 # Euler 公式　`thm.euler-formula`
 定理：$e^{i\theta} = \cos\theta + i\sin\theta$
-layer 18 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 23 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.euler-formula)　·　[节点索引](../index.md)
 
 对一切实数（或复数）$\theta$，

@@ -1,7 +1,7 @@
 # 闭链上的积分 $\implies$ de Rham 上同调与奇异上同调同构
 `imp.mf2-de-rham` · 推出 · strong 边 · 根 `../`
 
-`def.de-rham-complex` de Rham 上同调 + `def.singular-chain` 奇异链 + `def.integral-on-chain` 链上的积分 → `thm.de-rham` de Rham 定理
+`def.de-rham-complex` de Rham 上同调 + `def.singular-chain` 奇异链 + `def.integral-on-chain` 链上的积分 + `thm.stokes-chain` 链上的 Stokes 定理 + `lem.poincare-lemma` Poincaré 引理 + `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 → `thm.de-rham` de Rham 定理
 
 **第一步：配对良定义（唯一真正要做计算的地方）。** 对 $[\omega] \in H^{k}_{\mathrm{dR}}(M)$、$[c] \in H^{\mathrm{sing}}_{k}(M;\mathbb{R})$ 令
 

@@ -1,8 +1,18 @@
 # Mayer–Vietoris（同调）　`thm.mv-homology`　·　说明
 根 `../`
 
-⭐ **全部的力气都在第 ③ 步的重细分上**：它把「局部落在 $U$ 或 $V$」升级成「整体等价」。这条也是最容易被略过、却最容易出错的地方（符号与链同伦的显式构造）。
+其中 $b_{p}$ 是 $\Delta^{p}$ 的重心、$[b, c]$ 表示以 $b$ 为锥顶在链 $c$ 上作锥、$\partial\Delta^{p} = \sum_{i}(-1)^{i}\Delta^{p}_{i}$ 是标准边缘。锥公式 $\partial[b, c] = c - [b, \partial c]$ 给出
 
-⚠️ **与 `thm.mayer-vietoris` 的区别**：那个节点是 **de Rham 版**（光滑流形、实系数、微分形式复形，`def.de-rham-complex`）。这里是**奇异链版**（任意空间、$\mathbb{Z}$ 系数）。两个序列形状一样，但一个有挠部信息、一个没有 —— 名字相似不等于同一个结论，不要互相引用当证明。
+$$\partial\operatorname{sd}_{p} = \operatorname{sd}_{p-1}(\partial\Delta^{p}).$$
 
-💡 常用法：算 $\tilde{H}_{*}(S^{n})$（`thm.sphere-homology`）、把环面拆成两张柱面、把连通和拆成两块挖掉小球的空间。
+再定义 $t_{0} := 0$ 与递归
+
+$$c_{p} := \operatorname{sd}_{p} - \operatorname{id}_{p} - t_{p-1}(\partial\Delta^{p}),\qquad t_{p} := [b_{p},\ c_{p}],$$
+
+其中 $\operatorname{id}_{p}$ 是恒等 $p$-单纯形。对 $p$ 归纳验证 $\partial c_{p} = 0$（用到 $\partial\partial = 0$ 与归纳假设），故 $\partial t_{p} = c_{p}$，即
+
+$$\partial t_{p} + t_{p-1}(\partial\Delta^{p}) = \operatorname{sd}_{p} - \operatorname{id}_{p}.$$
+
+基例 $p = 0$ 是 $\operatorname{sd}_{0} = \operatorname{id}_{0}$、$t_{0} = 0$。
+
+> 续见 notes/thm.mv-homology.3.md
