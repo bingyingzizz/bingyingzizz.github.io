@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 行列式的乘性 → thm.det-multiplicative
+
+- K[x] 是唯一分解整环 → thm.poly-ufd
+
+- 张量 ⊣ 内 Hom → prop.tensor-hom-adjunction
+
 - 类方程 → thm.class-equation
 
 - 维数良定义 → thm.dimension
@@ -36,11 +42,5 @@
 - 迹 | tr | Tr A → def.trace
 
 - 正交投影 → def.orthogonal-projection
-
-- Jordan–Hölder 定理 | 若尔当-赫尔德定理 | 若尔当-赫尔德 → thm.jordan-holder
-
-- 秩 → def.rank
-
-- 正规算子 → def.normal-operator
 
 > 续见 alias/aka/algebra.6.md

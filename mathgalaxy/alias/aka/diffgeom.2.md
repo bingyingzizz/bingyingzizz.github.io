@@ -1,6 +1,8 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- 诱导体积 → def.submanifold-volume
+
 - Lie 第三定理 | 李第三定理 → thm.lie-third
 
 - 丛的分类 | 平凡丛 | 平凡向量丛 → thm.bundle-classification
@@ -9,7 +11,7 @@
 
 - 积分流形 → def.integral-manifold
 
-- Lie 导数 → def.lie-derivative
+- Lie 导数 | 李导数 → def.lie-derivative
 
 - 内乘 → def.interior-product
 
@@ -42,7 +44,5 @@
 - 默尼耶定理 → thm.meusnier
 
 - 欧拉公式（法曲率） → thm.euler-formula-surface
-
-- 罗德里格斯定理 → thm.rodrigues
 
 > 续见 alias/aka/diffgeom.3.md

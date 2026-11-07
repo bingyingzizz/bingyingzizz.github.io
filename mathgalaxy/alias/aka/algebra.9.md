@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 三角分解 → thm.lu-decomposition
+
+- 正交三角分解 → thm.qr-decomposition
+
+- 有理标准形 → thm.rational-canonical-form
+
 - 域的特征 → def.characteristic
 
 - 辛形式 → def.symplectic-form
@@ -40,9 +46,5 @@
 - 最小二乘 → thm.least-squares
 
 - 伪逆 → def.pseudoinverse
-
-- 域扩张 | 扩域 | 次数 | K over F → def.field-extension
-
-- 代数元 | 超越元 | 极小多项式 → def.algebraic-element
 
 > 续见 alias/aka/algebra.10.md

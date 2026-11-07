@@ -1,6 +1,16 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 积分与极限交换 → thm.uniform-limit-integral
+
+- 阿基米德的 ε 形式与取整 | 阿基米德 → cor.archimedean-epsilon
+
+- p-级数 → thm.p-series
+
+- Riemann 重排定理 | 黎曼重排定理 → thm.riemann-rearrangement
+
+- Euler 公式 | 欧拉公式 | 欧拉恒等式 → thm.euler-formula
+
 - Cauchy–Schwarz 不等式 | 柯西-施瓦茨不等式 | 柯西-施瓦兹不等式 | 柯西-施瓦茨 → thm.cauchy-schwarz
 
 - n 次方根 → thm.nth-root
@@ -11,7 +21,7 @@
 
 - 反函数连续 → thm.monotone-inverse
 
-- Kummer 判别法 → thm.kummer
+- Kummer 判别法 | 库默尔判别法 → thm.kummer
 
 - Dini 定理 | 迪尼定理 | 迪尼 → thm.dini
 
@@ -28,21 +38,5 @@
 - 对数函数与 e → def.log-function
 
 - 函数极限 → def.function-limit
-
-- 局部极值 → def.local-extremum
-
-- 条件收敛 → def.conditional-convergence
-
-- 一致 Cauchy 列 → def.uniform-cauchy
-
-- 指数函数 → def.exp-function
-
-- 正弦与余弦 → def.trig-function
-
-- 诱导范数与距离 → def.induced-norm
-
-- 序与四则运算 → prop.order-rules
-
-- 二项式定理 → thm.binomial
 
 > 续见 alias/aka/analysis.17.md

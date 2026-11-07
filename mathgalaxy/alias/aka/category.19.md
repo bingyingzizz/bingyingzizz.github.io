@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 3.68 | Exercise 3.69 → prop.crystalline-sheaf-equiv
+
 - Exercise 3.70 | 拟紧层 → prop.qc-sheaf-etale
 
 - Exercise 3.52 → prop.topos-morphism-from-object
@@ -30,7 +32,5 @@
 - Exercise 1.23 → prop.universal-unique-iso
 
 - Exercise 1.28 → prop.algebra-categories-limits
-
-- Exercise 1.31 | 终始对象 → prop.cat-final-initial-products
 
 > 续见 alias/aka/category.20.md

@@ -1,6 +1,8 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- 罗德里格斯定理 → thm.rodrigues
+
 - 弗雷内–塞雷公式 → thm.frenet-serret
 
 - 里奇曲率 → def.ricci-curvature
@@ -40,9 +42,5 @@
 - 转移函数 → def.transition-function
 
 - 结构群 → def.structure-group
-
-- 帧丛 → def.frame-bundle
-
-- 配丛 → def.associated-bundle
 
 > 续见 alias/aka/diffgeom.4.md

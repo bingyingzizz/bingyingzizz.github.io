@@ -5,7 +5,7 @@
 
 - 指数函数的局部逆 → prop.exp-local-inverse
 
-- Weierstrass 初等因子 → def.elementary-factor
+- Weierstrass 初等因子 | 魏尔斯特拉斯初等因子 → def.elementary-factor
 
 - 分式线性变换保对称点 → prop.mobius-symmetry
 
@@ -17,7 +17,7 @@
 
 - 分式线性变换的分类 → prop.mobius-classification
 
-- Jordan 引理 → lem.jordan
+- Jordan 引理 | 若尔当引理 → lem.jordan
 
 - Joukowski 映射 | 茹科夫斯基映射 | 茹科夫斯基 → prop.joukowski
 
@@ -31,8 +31,6 @@
 
 - 对数与幂的分支 → def.logarithm-branch
 
-- Riemann 曲面 → def.riemann-surface
-
-- 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
+- Riemann 曲面 | 黎曼曲面 → def.riemann-surface
 
 > 续见 alias/aka/complex.6.md

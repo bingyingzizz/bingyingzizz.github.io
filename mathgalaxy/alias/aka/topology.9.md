@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 完全正规空间 | T5 | T_5 | T₅ | 遗传正规 → def.completely-normal-space
+
 - 完美正规空间 | T6 | T_6 | T₆ | perfectly normal → def.perfectly-normal-space
 
 - 内部 | 开核 | interior | 边界 → def.interior

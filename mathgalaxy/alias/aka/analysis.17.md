@@ -1,6 +1,22 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 局部极值 → def.local-extremum
+
+- 条件收敛 → def.conditional-convergence
+
+- 一致 Cauchy 列 → def.uniform-cauchy
+
+- 指数函数 → def.exp-function
+
+- 正弦与余弦 → def.trig-function
+
+- 诱导范数与距离 → def.induced-norm
+
+- 序与四则运算 → prop.order-rules
+
+- 二项式定理 → thm.binomial
+
 - Bernoulli 不等式 | 伯努利不等式 | 伯努利 → thm.bernoulli
 
 - 一致连续 → def.uniform-continuity
@@ -21,26 +37,12 @@
 
 - 环与域的基本等式 → prop.field-rules
 
-- Cauchy 列 → def.cauchy-sequence
+- Cauchy 列 | 柯西列 | 柯西序列 → def.cauchy-sequence
 
 - 上极限与下极限 → def.limsup-liminf
 
 - 聚点 → def.limit-point
 
 - 凸函数 → def.convex-function
-
-- 逐点收敛 → def.pointwise-convergence
-
-- 巴拿赫空间 → def.banach-space
-
-- 雅可比矩阵 → def.jacobian
-
-- 海森矩阵 | 黑塞矩阵 → def.hessian
-
-- 多元泰勒公式 | 泰勒公式（多元） → thm.taylor-multi
-
-- 二阶导数判别法 | 海森判据 → thm.second-derivative-test
-
-- 巴拿赫逆映射定理 → thm.inverse-function-banach
 
 > 续见 alias/aka/analysis.18.md

@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 勒贝格数 → def.lebesgue-number
+
 - 紧化 → def.compactification
 
 - 一点紧化 → def.one-point-compactification
@@ -34,7 +36,5 @@
 - profinite 整数 | Z hat | ℤ̂ → def.profinite-integers
 
 - 莫比乌斯带 | Moebius band → def.mobius-band
-
-- 圆的同调 | 圆的 H1 → ex.h1-circle
 
 > 续见 alias/aka/topology.15.md

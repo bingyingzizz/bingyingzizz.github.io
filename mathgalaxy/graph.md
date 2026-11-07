@@ -1,9 +1,9 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-07T14:03:04.591Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-07T15:22:42.279Z
 > 15 星系 / 105 星团 / 1551 节点 / 3195 连线（强边 3153，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
-> ⛔ **这是全量 bulk 导出（约 3.9 MB），不要单次抓取** —— 抓取工具单次通常只返回
+> ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
 > 而且同一地址反复抓也只会拿到同样的开头。**要检索请走 `llms.txt` 里的检索协议**：
 > `index.md` → `index/<星团id>.md` → `nodes/<节点id>.md`。
@@ -5474,9 +5474,9 @@ $$\chi(S) = 2 - 2g .$$
 
 于是 $\chi$ 与 $g$ 互相决定：$g = (2 - \chi)/2$。
 
-⚠ **本节点仍标 status: skeleton**，但缺口已缩小为**一条外部定理**（Radó 三角剖分存在性，`thm.rado` 本身仍是 skeleton）加**一个缺节点的定义**（拓扑曲面的可定向性）。**本条不再使用分类定理**：旧注里「(a) 靠 `thm.classification-surfaces`」与「(b) 基本类 / 定向对偶」两条路线都被下面的初等路线取代。除这两项输入外，证明是完整的。
+⚠ **本节点仍标 status: skeleton**，但缺口已缩小为**一条外部定理**（Radó 三角剖分存在性，`thm.rado` 本身仍是 skeleton）；另一项旧缺口「拓扑曲面的可定向性」已立成节点（`def.topological-orientability`）。**本条不再使用分类定理**：旧注里「(a) 靠 `thm.classification-surfaces`」与「(b) 基本类 / 定向对偶」两条路线都被下面的初等路线取代。除这两项输入外，证明是完整的。
 
-**零、约定与记号。** $S$ 是闭曲面（`def.closed-surface`），$g=\tfrac12\operatorname{rank}H_{1}(S;\mathbb{Z})$（`def.genus`，直接当定义用）。$\chi(S)$ 由任一三角剖分算：`thm.euler-characteristic` 给 $\chi(K)=\sum_{p}(-1)^{p}\alpha_{p}=\sum_{p}(-1)^{p}\beta_{p}(K)$，`thm.simplicial-approximation` 给 $\beta_{p}(K)=\beta_{p}(S)$，故 $\sum_{p}(-1)^{p}\beta_{p}(S)$ 与剖分无关，把它记作 $\chi(S)$。本注把「$S$ 可定向」按拓扑意义理解：存在**定向图册**——图卡是同胚、转移映射在重叠处保向（这就是 `def.orientable-manifold` 去掉光滑性；本图缺这个定义节点，见第七节）。取定一个定向。
+**零、约定与记号。** $S$ 是闭曲面（`def.closed-surface`），$g=\tfrac12\operatorname{rank}H_{1}(S;\mathbb{Z})$（`def.genus`，直接当定义用）。$\chi(S)$ 由任一三角剖分算：`thm.euler-characteristic` 给 $\chi(K)=\sum_{p}(-1)^{p}\alpha_{p}=\sum_{p}(-1)^{p}\beta_{p}(K)$，`thm.simplicial-approximation` 给 $\beta_{p}(K)=\beta_{p}(S)$，故 $\sum_{p}(-1)^{p}\beta_{p}(S)$ 与剖分无关，把它记作 $\chi(S)$。本注把「$S$ 可定向」按拓扑意义理解：存在**定向图册**——图卡是同胚、转移映射在重叠处保向（这就是 `def.orientable-manifold` 去掉光滑性，即 `def.topological-orientability`；见第七节）。取定一个定向。
 
 **一、三角剖分（输入：Radó）。** `thm.rado`（skeleton）断言紧曲面可三角剖分：存在有限单纯复形 $K$ 与同胚 $h:|K|\to S$。这是本条唯一的外部定理输入。
 
@@ -5490,7 +5490,7 @@ $$\chi(S) = 2 - 2g .$$
 
 **六、收尾。** $\chi(S)=\beta_{0}-\beta_{1}+\beta_{2}=1-2g+1=2-2g$。∎（在第一节的 Radó 输入与上面「可定向」的定义下。）
 
-**七、缺口与状态。** ①本图未证的唯一外部定理：Radó（`thm.rado`，skeleton）。②缺节点：拓扑流形的可定向性（定向图册 / 定向双覆盖）。本图只有光滑版（`def.orientable-manifold`、`prop.volume-form-orientation`）与 $\mathbb{R}^{3}$ 外在版（`def.orientable-surface`）；光滑定义不能直接搬到拓扑曲面，除非先证光滑化（那又要 Radó/Whitehead）。本注因此在第二节就地给出拓扑定义。③因此本条标 `status: 'skeleton'`：证明**条件于 Radó**（`thm.rado` 仍是 skeleton）；Radó 补完后可删本节点 status（可定向性那条缺节点只影响第二节的表述，不影响结论）。④另一可选口径（不改陈述，由父会话定）：把假设改成「可三角剖分的闭可定向曲面」，则本条立刻完整——但那会把 Radó 从定理变成假设。
+**七、状态与剩下的缺口。** ①本图未证的唯一外部定理：Radó（`thm.rado`，skeleton）。②可定向性已是节点：`def.topological-orientability`（定向图册 / 定向双覆盖）。本图另有光滑版（`def.orientable-manifold`、`prop.volume-form-orientation`）与 $\mathbb{R}^{3}$ 外在版（`def.orientable-surface`）；光滑定义不能直接搬到拓扑曲面，除非先证光滑化（那又要 Radó/Whitehead），本注第二节就在拓扑意义下重述了它。③因此本条标 `status: 'skeleton'`：证明**条件于 Radó**（`thm.rado` 仍是 skeleton）；Radó 补完后可删本节点 status（可定向性见 `def.topological-orientability`，不影响结论）。④另一可选口径（不改陈述，由父会话定）：把假设改成「可三角剖分的闭可定向曲面」，则本条立刻完整——但那会把 Radó 从定理变成假设。
 
 **八、与旧注的关系。** 旧注的标准形计数（$4g$ 边形得 $\chi=2-2g$）与连通和公式仍然正确，下面是它们的保留版，作为「标准形上的独立验证」；但它们不再是证明的必经之路。旧注所说的「(b) 基本类 / 定向对偶」也不需要了：引理 D 是它的初等替代，只对曲面、只算 $H_{2}$，不引定向对偶。
 
@@ -26383,29 +26383,37 @@ $$F \;\cong\; \varinjlim_{i \in I} F_{i} ,$$
 
 其中每个 $F_{i}$ 是**有限生成自由** $R$-模，有向集上的过渡映射 $f_{ij} : F_{i} \to F_{j}$ 都是模同态。
 
-**记号与路线。** $R$-Mod 记右 $R$-模范畴；$(F_i,f_{ij})$ 是有向集 $I$ 上的正向系，$F_i$ 有限生成自由。
+**记号与约定。** 固定环 $R$；$F$ 是右 $R$-模，未加说明时「模」指左 $R$-模。$F$ 平坦指 $F\otimes_R -$ 是左 $R$-模范畴上的正合函子。对左理想 $I\subseteq R$，包含 $I\to R$ 张量 $F$ 后仍单，即 $F\otimes_R I\to F$ 单——这是下面唯一用到的平坦性输入。
 
-**$(\Longleftarrow)$ 完整。** 有限生成自由模平坦；有向滤过余极限与 $\otimes_R$ 交换（张量积保余极限），正合列取滤过余极限仍正合。于是对任意左 $R$-模 $N$，$F\otimes_R N=\varinjlim_i (F_i\otimes_R N)$，每个 $F_i\otimes_R -$ 正合，故 $F\otimes_R -$ 正合。∎
+**$(\Longleftarrow)$ 平坦性。** 有限生成自由模 $R^n$ 平坦（$R^n\otimes_R -$ 就是 $(-)^{\oplus n}$，正合）；张量积保余极限，故 $F\otimes_R\varinjlim_i M_i=\varinjlim_i(F\otimes_R M_i)$；正合列取滤过余极限仍正合。于是若 $F=\varinjlim_i F_i$、每个 $F_i$ 有限自由，则对任意左模正合列，张量后是滤过余极限个正合列，仍正合。故 $F$ 平坦。∎
 
-**$(\implies)$ 的真正缺口：引理 L（平坦性的等式判据）。** 设 $F$ 平坦、$P$ 有限呈现、$\varphi:P\to F$ 是 $R$-线性映射。则存在有限生成自由模 $R^k$ 与分解
+**引理 1（单方程）。** 设 $y_1,\ldots,y_n\in F$、$a_1,\ldots,a_n\in R$ 满足 $\sum_i y_i a_i=0$。则存在 $k\ge 0$、$z_1,\ldots,z_k\in F$ 与 $b_{\ell i}\in R$（$1\le\ell\le k$，$1\le i\le n$）使得 $y_i=\sum_{\ell=1}^k z_\ell b_{\ell i}\quad(1\le i\le n),\qquad \sum_{i=1}^n b_{\ell i}a_i=0\quad(1\le\ell\le k).$
 
-$$P \xrightarrow{\ \psi\ } R^k \xrightarrow{\ \chi\ } F,\qquad \varphi=\chi\circ\psi .$$
+**证明。** 令 $I=Ra_1+\cdots+Ra_n\subseteq R$，这是左理想。取左模满射 $\pi:R^n\to I$，$\pi(e_i)=a_i$，核 $K=\ker\pi$；于是 $0\to K\to R^n\to I\to 0$ 正合。张量 $F$ 得正合列 $F\otimes_R K\longrightarrow F\otimes_R R^n\longrightarrow F\otimes_R I\longrightarrow 0 .$ 把 $\theta=\sum_i y_i\otimes a_i\in F\otimes_R I$ 沿 $F\otimes I\to F\otimes R=F$ 的像是 $\sum_i y_i a_i=0$；由平坦性 $F\otimes I\to F$ 单，故 $\theta=0$。另一方面 $\theta$ 是 $(y_1,\ldots,y_n)\in F\otimes_R R^n=F^n$ 的像，正合性给出 $(y_i)\in\operatorname{im}(F\otimes K\to F^n)$：存在 $k$、$z_\ell\in F$ 与 $k^{(\ell)}=(b_{\ell 1},\ldots,b_{\ell n})\in K$ 使 $y_i=\sum_\ell z_\ell b_{\ell i}$。又 $k^{(\ell)}\in K$ 即 $\sum_i b_{\ell i}a_i=0$。∎
 
-等价形式：$\operatorname{Hom}(P,F)$ 中任意有限组「在 $F$ 中相容」的数据都能在某个有限自由模中实现（Bourbaki, Commutative Algebra, Ch. I 的平坦性等式判据；Lazard 1969）。**本图没有这条引理的节点**，这是本节点保留 skeleton 的唯一原因。
+**引理 2（矩阵形式）。** 若 $y_i\in F$、$a_{ij}\in R$（$1\le i\le n$，$1\le j\le m$）满足 $\sum_i y_i a_{ij}=0$（$j=1,\ldots,m$），则存在 $k$、$z_\ell\in F$、$b_{\ell i}\in R$ 使 $y_i=\sum_\ell z_\ell b_{\ell i},\qquad \sum_i b_{\ell i}a_{ij}=0\quad(j=1,\ldots,m).$
 
-**在引理 L 下完成 $(\implies)$。** 构造系统 $\mathcal{I}$：对象为 $(R^n,\chi)$，其中 $\chi:R^n\to F$ 是有限自由模到 $F$ 的映射；态射为交换三角。它是有向的：两个映射经 $R^m\oplus R^n\to F$ 合并，再用引理 L 把该映射经某个 $R^k\to F$ 分解。
+**证明（对 $m$ 归纳）。** $m=0$ 时取 $k=n$、$z_\ell=y_\ell$、$b_{\ell i}=\delta_{\ell i}$。设 $m\ge 1$。对第一式用引理 1，得 $z_\ell,b_{\ell i}$ 使 $y_i=\sum_\ell z_\ell b_{\ell i}$ 且 $\sum_i b_{\ell i}a_{i1}=0$。对 $j\ge 2$， $0=\sum_i y_i a_{ij}=\sum_\ell z_\ell\Bigl(\sum_i b_{\ell i}a_{ij}\Bigr)=\sum_\ell z_\ell d_{\ell j},\qquad d_{\ell j}:=\sum_i b_{\ell i}a_{ij}.$ 对 $z_\ell$ 与 $(d_{\ell j})_{j\ge2}$ 用归纳假设（$m-1$ 个方程），得 $w_r,e_{r\ell}$ 使 $z_\ell=\sum_r w_r e_{r\ell}$ 且 $\sum_\ell e_{r\ell}d_{\ell j}=0$（$j\ge2$）。令 $c_{ri}=\sum_\ell e_{r\ell}b_{\ell i}$。则 $y_i=\sum_r w_r c_{ri}$，并且 $\sum_i c_{ri}a_{i1}=\sum_\ell e_{r\ell}\Bigl(\sum_i b_{\ell i}a_{i1}\Bigr)=0,\qquad \sum_i c_{ri}a_{ij}=\sum_\ell e_{r\ell}d_{\ell j}=0\ (j\ge2).$ ∎
 
-- 平行映射被等同：若 $u,v:R^n\to F$ 有相同的像，则 $P:=R^n/\operatorname{im}(u-v)$ 有限呈现（有限自由模商去有限生成子模），引理 L 把 $R^n\to F$ 经 $R^k$ 分解，从而 $u,v$ 在系统中被等同。 - 满射：对任意 $x\in F$，映射 $R\to F$、$1\mapsto x$ 属于系统，故 $x$ 在余极限的像中。 - 单射：若 $(R^n,\chi)$ 与 $(R^n,\chi')$ 在余极限中给出同一元素，则 $\chi-\chi'$ 的某个有限部分为零；用 $P=R^n/\ker$ 的有限呈现性 + 引理 L 得到等同。
+**引理 L（平坦性的等式判据 / 分解引理）。** 设 $F$ 平坦、$P$ 是有限呈现右 $R$-模、$\varphi:P\to F$ 是 $R$-线性映射。则存在 $k\ge0$ 与分解 $P\xrightarrow{\ \psi\ }R^k\xrightarrow{\ \chi\ }F,\qquad \varphi=\chi\circ\psi .$
 
-于是 $F\cong\varinjlim_{(R^n,\chi)} R^n$，每个 $R^n$ 有限生成自由，指标集有向。□（**本定理在本图未证**：上面只是「在引理 L 下」的条件证明；节点保留 skeleton，等引理 L 有了节点再补。）
+**证明。** 取有限表现 $R^m\xrightarrow{A}R^n\xrightarrow{\pi}P\to 0$，其中 $A e_j=\sum_i e_i a_{ij}$。令 $y_i=\varphi(\pi(e_i))\in F$。由 $\pi(Ae_j)=0$ 得 $\sum_i y_i a_{ij}=0$（$j=1,\ldots,m$）。引理 2 给出 $z_\ell\in F$、$b_{\ell i}\in R$ 使 $y_i=\sum_\ell z_\ell b_{\ell i}$ 且 $\sum_i b_{\ell i}a_{ij}=0$。定义右线性映射 $\tilde\psi:R^n\to R^k$，$\tilde\psi(e_i)=\sum_\ell b_{\ell i}e_\ell$。则 $\tilde\psi(Ae_j)=\sum_i a_{ij}\tilde\psi(e_i)=\sum_\ell\Bigl(\sum_i b_{\ell i}a_{ij}\Bigr)e_\ell=0,$ 故 $\tilde\psi$ 过 $\operatorname{im}A$、诱导 $\psi:P\to R^k$。再令 $\chi:R^k\to F$，$\chi(e_\ell)=z_\ell$。则 $\chi\psi(\pi e_i)=\sum_\ell z_\ell b_{\ell i}=y_i=\varphi(\pi e_i)$，故 $\varphi=\chi\psi$。∎
 
-**⚠ 保留 skeleton 的理由。** 上面「平行映射被等同」与「单射」两步都要引理 L 的**逐数据版本**（不只是单个 $\varphi$），也就是平坦模的等式判据；本图没有这个节点。缺的不是技巧，而是一条标准引理。
+**$(\Longrightarrow)$ 主证明。** 考虑范畴 $\mathcal C$：对象是右线性映射 $\chi:R^n\to F$（$n\ge0$ 有限）；从 $(R^m,\chi)$ 到 $(R^n,\psi)$ 的态射是右线性 $u:R^m\to R^n$ 且 $\psi\circ u=\chi$。
 
-**⭐ 用途。** 凡是对有限生成自由模成立、且对滤过余极限保持的性质，自动对平坦模成立（挠积消失、直和、局部化等都可以一句话推过去）。
+先证 $\mathcal C$ 滤过。其一，任意两个对象 $(R^m,\chi)$、$(R^n,\psi)$ 经直和 $(R^{m+n},\chi\oplus\psi)$ 合并。其二，设 $u,v:(R^m,\chi)\to(R^n,\psi)$ 是平行态射，即 $\psi u=\psi v=\chi$。令 $w=u-v:R^m\to R^n$，$Q=R^n/\operatorname{im}w$。$Q$ 有限呈现：$R^n$ 有限自由，$\operatorname{im}w$ 由至多 $m$ 个元素生成。因 $\psi w=\psi u-\psi v=0$，$\psi$ 过 $Q$：$\psi=f\circ\pi$，$\pi:R^n\to Q$。对有限呈现的 $Q$ 与 $f:Q\to F$ 用引理 L，得 $Q\xrightarrow{\psi'}R^k\xrightarrow{\chi'}F$，$f=\chi'\psi'$。令 $h=\psi'\pi:R^n\to R^k$。则 $\chi'h=\chi'\psi'\pi=f\pi=\psi$，且 $hu=\psi'\pi u=\psi'\pi v=hv$（因 $\pi w=0$）。故 $h$ 是 $u,v$ 在 $\mathcal C$ 中的余等化。
+
+其次，从 $\varinjlim_{\mathcal C}R^n$ 到 $F$ 有自然映射 $\Phi$（由各 $\chi$ 给出，态射的交换三角保证相容）。(i) 满：任意 $x\in F$ 来自对象 $(R,\chi)$，$\chi(1)=x$。(ii) 单：设 $\xi\in\varinjlim R^n$ 满足 $\Phi(\xi)=0$。$\xi$ 来自某 $(R^m,\chi)$ 与 $x\in R^m$，于是 $\chi(x)=0$。令 $P=R^m/Rx$（右模商去由 $x$ 生成的循环子模），$\pi:R^m\to P$；因 $\chi(x)=0$，$\chi$ 过 $P$：$\chi=f\pi$。$P$ 有限呈现（$R\to R^m\to P\to0$）。用引理 L 得 $P\xrightarrow{\psi'}R^k\xrightarrow{\chi'}F$，$f=\chi'\psi'$。令 $h=\psi'\pi:R^m\to R^k$。则 $\chi'h=\chi$，故 $h$ 是 $\mathcal C$ 中的态射；且 $h(x)=\psi'(\pi x)=0$。于是 $\xi$ 在余极限中为 $0$。
+
+因此 $F\cong\varinjlim_{\mathcal C}R^n$，每个 $R^n$ 有限生成自由。∎
+
+**关于「有向集」的措辞。** 上面的指标范畴是滤过范畴。有向集上的正向系是它的特例；反过来，滤过范畴的余极限总可按「有限个对象经直和合并」取到一个共尾的有向集来计算（标准事实，见 Mac Lane, Categories for the Working Mathematician, IX.1）。因此「滤过余极限」与「有向集上的正向系之余极限」是同一概念，陈述沿用「有向集」的经典说法。
+
+**⭐ 用途。** 凡是对有限生成自由模成立、且对滤过余极限保持的性质，自动对平坦模成立：挠积消失、与直和交换、局部化等都可以一句话推过去。
 
 **📌 另一种说法。** 平坦 =「局部自由」的精确代数版本；在局部环上「平坦 + 有限生成 $\implies$ 自由」是局部判据，Lazard 定理把它推广到任意环上的任意（不必有限生成的）模。
 
-**⚠ 不要放宽条件。** 「有限生成自由模的滤过余极限」与「平坦」是**等价**的；不能把「有限生成」换成更弱的条件而不加证明。
+**⚠ 不要放宽条件。** 「有限生成自由模的滤过余极限」与「平坦」是等价；不能把「有限生成」换成更弱的条件而不加证明。引理 L 在这里是**被证明的**，不是外部假设——它与「平坦性的等式判据」是同一件事。
 
 参考：Rotman, An Introduction to Homological Algebra (2nd ed.), 特殊模（special modules）的部分 · Lazard 定理（平坦 = 有限生成自由模的滤过余极限）；Lazard, Autour de la platitude, Bull. Soc. Math. France 97 (1969)
 
@@ -32769,7 +32777,7 @@ $$f(z) = A\int^{z}_{z_{0}} g(\zeta)\,\mathrm{d}\zeta + B,\qquad g(\zeta) := \pro
 把 $\mathbb{H}$ 共形地映成该多边形内部，且 $f(x_{k})$ 是第 $k$ 个顶点（取 $A \ne 0$，否则 $f \equiv B$ 是常值、谈不上共形）。
 常数 $A, B$ 决定大小、旋转与位置。
 
-⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的三步与两条外部引理在末尾点明。
+⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的 (i)(iii) 与两条外部引理在末尾点明；(ii) 的辐角原理收尾已补完整。
 
 **记号**：外角和给出 $\sum_{k=1}^{n}(1 - \alpha_{k}) = 2$，等价于
 
@@ -32807,7 +32815,7 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 这就证明了公式的**形式**（这一半完整）。
 
-**第二部分：存在性（未完成，缺三步）**
+**第二部分：存在性（未完成；(ii) 已补完整，仍缺 (i)(iii)）**
 
 反过来给定多边形与 $x_{k}$，令 $F(z) = A\int^{z}_{z_{0}} g(\zeta)\,\mathrm{d}\zeta + B$。已知：
 
@@ -32817,15 +32825,19 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 - $g(\zeta) = O(\zeta^{-2})$，积分在 $\pm\infty$ 都收敛，$F$ 连续到 $\partial\mathbb{H}$ 的整个边界（含 $\infty$）。
 
-⚠️ 缺的三步（本图不写，因此保留 skeleton）：
+⚠️ 存在性仍缺的部分（本图不写全，因此保留 skeleton）：
 
 （i）**边界曲线的简单性**：要证 $F(\partial\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。
 
-（ii）**辐角原理收尾**：确认边界简单后，对固定内点 $w \in P$ 数 $F - w$ 在 $\mathbb{H}$ 内的零点：边界上 $F - w$ 无零点，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，故恰有一个原像，$F$ 是双射，从而共形。
+（ii）**辐角原理收尾（完整）。** 设（i）已证：$J:=F(\partial\mathbb{H})$ 是简单闭曲线，$F$ 连续延拓到 $\overline{\mathbb{H}}$ 且在 $\mathbb{H}$ 内局部共形（$F'\ne0$）。对 $w\notin J$，$F-w$ 在 $\partial\mathbb{H}$ 上无零点。把 $F-w$ 在 $\mathbb{H}$ 上的零点个数记为 $N(w)$（计重数）：用半径 $R$ 的上半圆盘挖出有界区域再令 $R\to\infty$，因 $F'=O(1/z^2)$ 且 $F(z)\to F(\infty)\in J$，大圆弧上的积分趋于 $0$，故辐角原理给出
+$$N(w)=\frac{1}{2\pi i}\int_{\partial\mathbb{H}}\frac{F'(z)}{F(z)-w}\,\mathrm{d}z=n(J,w),$$
+右端是 $J$ 绕 $w$ 的绕数。$N(w)\ge0$ 是整数，而简单闭曲线满足 $n(J,w)\in\{-1,0,1\}$；若 $J$ 取负向，则 $J$ 内部每点的绕数为 $-1$，与 $N(w)\ge0$ 矛盾。故 $J$ 正向，且
+$$N(w)=\begin{cases}1,&w\in\operatorname{Int}(J),\\0,&w\in\operatorname{Ext}(J).\end{cases}$$
+于是 $F(\mathbb{H})\subseteq\operatorname{Int}(J)=P$，且每个 $w\in P$ 恰有一个原像（$F'\ne0$ 保证零点单重）。所以 $F:\mathbb{H}\to P$ 是双射；又 $F'\ne0$，它是双全纯。（在（i）成立的前提下，此步完整。）
 
 （iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。
 
-这两步各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：
+（i）与（iii）各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：
 
 **引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚（这就是 `thm.boundary-correspondence` 的内容，该节点仍 skeleton）。多边形是 Jordan 区域，故 $F$ 的边界对应成立。
 
@@ -38571,7 +38583,7 @@ $$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
 
 等价形式：$\theta(x) \sim x$、$\psi(x) \sim x$、$p_{n} \sim n\log n$（$p_{n}$ 是第 $n$ 个素数）。
 
-⚠️ **本节点仍标 skeleton**，但缺口已缩到一个：命题 B（Newman 的 Tauber 定理）。引理 1–4 与命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中已给完整证明；补上命题 B 即得素数定理。
+⚠️ **本节点仍标 skeleton**，但缺口已缩到一个：命题 B（Newman 解析定理）。引理 1–4 与命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中已给完整证明；补上命题 B 即得素数定理。
 
 **记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$。
 
@@ -38597,17 +38609,19 @@ $$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\su
 
 其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|\le4\log(\sigma-1)+O(1)$（零点阶 $\ge1$）；$\log|\zeta(\sigma+2it_{0})|=O(|\log(\sigma-1)|)$（$1+2it_{0}\ne1$，该点至多零点或全纯点）。故左端 $\le C+2\log(\sigma-1)\to-\infty$，与 $\ge0$ 矛盾；$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
 
-**命题 B（唯一缺口）：Newman 的 Tauber 定理。** 设 $A:[1,\infty)\to\mathbb{R}$ 非负、单调不减，$F(s)=\int_{1}^{\infty}A(t)\,t^{-s-1}\,\mathrm{d}t$ 在 $\operatorname{Re}s>1$ 收敛，并解析延拓到 $\{\operatorname{Re}s\ge1\}$ 的一个邻域，除 $s=1$ 处单极点、留数 $1$ 外全纯。则 $A(x)\sim x$。
+**命题 B（Newman 解析定理，唯一缺口）。** 设 $f:[0,\infty)\to\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\int_0^\infty f(t)e^{-zt}\,\mathrm{d}t$（$\operatorname{Re}z>0$）解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的一个邻域。则 $\int_0^\infty f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
 
-**为什么只差这一步**：$\zeta$ 的 Euler 乘积取对数再求导给 $-\zeta'(s)/\zeta(s)=\sum_{n\ge1}\Lambda(n)n^{-s}=s\int_{1}^{\infty}\psi(t)\,t^{-s-1}\,\mathrm{d}t$（$\operatorname{Re}s>1$）。命题 A 说明右端的 Mellin 变换满足命题 B 的解析延拓条件（$s=1$ 单极点留数 $1$、其余全纯），于是 $\psi(x)\sim x$；再由引理 1–4（$\psi\sim x\implies\theta\sim x\implies\pi\sim x/\log x$）即得素数定理。
+**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\int_0^T f(t)e^{-zt}\,\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\le C e^{-T\operatorname{Re}z}/\operatorname{Re}z$（$\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\to\infty$；具体围道与估计见原文，本图不复述。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。
 
-**命题 B 的证明为何不在本图**：它是 Newman（1980）的复分析论证：对 $B(x)=\int_{1}^{x}\psi(t)\,\mathrm{d}t/t$ 用 Mellin 反演写成 $\frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty}F(s)\,x^{s}\,\mathrm{d}s/s$，把围道移到 $\operatorname{Re}s=1-\delta$（$s=1$ 的小圆贡献留数 $x$），用 $F$ 在 $\operatorname{Re}s\ge1$ 邻域的全纯性与 Phragmén–Lindelöf 控制竖线，得 $B(x)=x+o(x)$；再由 $\psi$ 单调，对 $x<y<x(1+\varepsilon)$ 用 $\psi(x)\log(y/x)\le\int_{x}^{y}\psi(t)\,\mathrm{d}t/t$ 夹逼得 $\psi(x)\sim x$。本图没有 Newman 定理、Phragmén–Lindelöf 与 Mellin 反演的节点，故保留 skeleton、不勾 ∎。
+**命题 B 用在本节点。** 取 $f(t)=\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$ 知 $f$ 有界。对 $\operatorname{Re}z>0$， $g(z)=\int_0^\infty\psi(e^t)e^{-(1+z)t}\,\mathrm{d}t-\frac{1}{z}=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\int_1^\infty \psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）。由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$；代入得 $g(z)=-(1+\gamma)+O(z)\qquad(z\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 无零点），$g$ 在 $\{\operatorname{Re}z\ge0\}$ 的邻域全纯。命题 B 给出 $\int_0^\infty f$ 收敛。
 
-⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与 Tauber 收尾（命题 B）。这一版把前者钉死，缺口只剩后者的一个标准定理。
+**从 $\int f$ 收敛到 $\psi(x)\sim x$（完整初等收尾）。** 记 $h(t)=\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\varepsilon>0$，由 $\int_0^\infty f$ 收敛得 $\int_T^{T+\varepsilon}f\to0$，即 $\frac1\varepsilon\int_T^{T+\varepsilon}h(t)\,\mathrm{d}t\longrightarrow1 .$ 由 $\psi$ 单调不减：当 $t\in[T,T+\varepsilon]$ 时 $e^{-\varepsilon}h(T)\le h(t)\le e^{\varepsilon}h(T+\varepsilon)$。把两边对 $t$ 平均并令 $T\to\infty$：由 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_T^{T+\varepsilon}h$ 得 $h(T)\le e^{\varepsilon}(1+o(1))$，故 $\limsup h\le e^{\varepsilon}$；由 $\frac1\varepsilon\int_T^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$ 得 $h(T+\varepsilon)\ge e^{-\varepsilon}(1+o(1))$，故 $\liminf h\ge e^{-\varepsilon}$。令 $\varepsilon\to0$ 得 $\limsup h\le1\le\liminf h$，故 $h(t)\to1$，即 $\psi(x)/x\to1$。再由引理 1–4 得 $\theta(x)\sim x$、$\pi(x)\sim x/\log x$。**在命题 B 成立的前提下，本节点的链条是完整的**；本节点仍标 skeleton 的唯一原因就是命题 B 的围道证明尚未在本图中写出。
 
-⚠️ **不能只靠 $\zeta$ 延拓**：没有命题 B 的 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，命题 B 的假设（$F$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。
+⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。这一版把前者钉死、把后者收成一条标准定理，缺口从「Newman 的 Tauber 定理」缩小为「Newman 解析定理的围道证明」。
 
-参考：Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
+⚠️ **不能只靠 $\zeta$ 延拓**：没有命题 B 的 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，命题 B 的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。
+
+参考：Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)；Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
 
 #### 黎曼 ζ 函数　`def.riemann-zeta`
 *定义*　黎曼 $\zeta$ 函数：$\zeta(s) = \sum_{n \ge 1} n^{-s}$（$\operatorname{Re}s > 1$）

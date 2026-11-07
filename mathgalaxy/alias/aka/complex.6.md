@@ -1,6 +1,8 @@
 # 别名 → 节点 · 复变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
+- 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
+
 - 分歧指数 | 分歧点 | 分支点 | ramification index | ramification point → def.ramification-index
 
 - Riemann-Hurwitz 公式 | RH 公式 | Hurwitz 公式 | Riemann-Hurwitz | riemann hurwitz formula | 黎曼-赫尔维茨公式 → thm.riemann-hurwitz

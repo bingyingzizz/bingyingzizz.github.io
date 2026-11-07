@@ -27,7 +27,7 @@
 
 - 开映射定理 → thm.open-mapping
 
-- Poincaré 圆盘与双曲几何 → prop.poincare-disk
+- Poincaré 圆盘与双曲几何 | 庞加莱圆盘 → prop.poincare-disk
 
 - 火腿三明治定理 → thm.ham-sandwich
 

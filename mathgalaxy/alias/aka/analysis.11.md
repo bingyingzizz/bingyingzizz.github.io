@@ -11,7 +11,7 @@
 
 - 共轭指数 | conjugate exponents | 对偶指数 → def.conjugate-exponents
 
-- Young 不等式 | Young → lem.young-inequality
+- Young 不等式 | Young | 杨不等式 → lem.young-inequality
 
 - 本性上界 | essential supremum | L-infinity | L∞ 范数 → def.essential-sup
 
@@ -26,7 +26,5 @@
 - Lp 交 Lr 包含于 Lq → prop.lp-inter-lr-in-lq
 
 - 小 l p 空间 | 序列空间包含 | ℓp → prop.ell-p-inclusion
-
-- 有限测度时的包含方向 → prop.lp-inclusion-finite
 
 > 续见 alias/aka/analysis.12.md

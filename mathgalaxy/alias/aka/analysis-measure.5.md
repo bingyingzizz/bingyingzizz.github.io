@@ -5,7 +5,7 @@
 
 - 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
 
-- Fatou 推论 → cor.fatou
+- Fatou 推论 | 法图推论 → cor.fatou
 
 - L1 是向量空间 → prop.L1-vector-space
 
@@ -26,7 +26,5 @@
 - 积 σ-代数 | product sigma-algebra | 乘积 σ代数 → def.product-sigma
 
 - 截口 | section | 切片 → def.section
-
-- 积 σ代数的生成基 → prop.product-sigma-base
 
 > 续见 alias/aka/analysis-measure.6.md

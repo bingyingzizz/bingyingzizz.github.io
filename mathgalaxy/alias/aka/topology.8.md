@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 函数空间弱 Hausdorff | kC(X,Y) | Exercise 4.10 | Exercise 2.38 → prop.cg-function-space
+
 - 积拓扑 | product topology | 乘积空间 | 投影 → def.product-topology
 
 - 笛卡尔闭 | cartesian closed | currying | 指数对象 | Theorem 2.3.6 | Thm 2.3.6 | Exercise 2.30 → prop.cg-cartesian-closed
@@ -20,7 +22,5 @@
 - 完全正则空间 | Tychonoff 空间 | 完全正则 | T3.5 空间（完全正则） → def.completely-regular-space
 
 - T3.5 | T_3.5 | T3.5 空间 → def.t35-space
-
-- 完全正规空间 | T5 | T_5 | T₅ | 遗传正规 → def.completely-normal-space
 
 > 续见 alias/aka/topology.9.md

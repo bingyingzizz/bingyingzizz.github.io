@@ -1,6 +1,10 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- Hodge 星号 | Hodge star operator | 霍奇星号 | 霍奇星算子 → def.hodge-star
+
+- 施蒂费尔–惠特尼类 | Stiefel-Whitney 类 → def.stiefel-whitney-class
+
 - 可定向性与 w1 → prop.orientable-iff-w1
 
 - 欧拉类 → def.euler-class

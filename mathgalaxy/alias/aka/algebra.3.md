@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Exercise 1.21 → prop.module-tensor-universal
+
 - Exercise 1.10 | Z-模 → prop.zmod-is-ab
 
 - 代数基本定理 → thm.fundamental-algebra
@@ -29,10 +31,8 @@
 
 - 根子空间分解 → thm.primary-decomposition
 
-- Jordan 型的唯一性 → cor.jordan-uniqueness
+- Jordan 型的唯一性 | 若尔当型唯一性 → cor.jordan-uniqueness
 
 - 线性映射 ⟷ 矩阵 → thm.matrix-linear-map
-
-- Cayley–Hamilton 定理 | 凯莱-哈密顿定理 | 哈密顿-凯莱定理 → thm.cayley-hamilton
 
 > 续见 alias/aka/algebra.4.md

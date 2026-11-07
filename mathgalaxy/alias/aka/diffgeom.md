@@ -21,7 +21,7 @@
 
 - Frobenius 定理 | 弗罗贝尼乌斯定理 | 弗罗贝尼乌斯 → thm.frobenius
 
-- Maurer–Cartan 方程 → thm.maurer-cartan
+- Maurer–Cartan 方程 | 莫雷尔-嘉当方程 → thm.maurer-cartan
 
 - 局部流 → thm.flow-local
 
@@ -30,7 +30,5 @@
 - 流完备性 → thm.flow-complete
 
 - Cartan 公式 | 嘉当公式 | 嘉当 → thm.cartan-formula
-
-- 诱导体积 → def.submanifold-volume
 
 > 续见 alias/aka/diffgeom.2.md

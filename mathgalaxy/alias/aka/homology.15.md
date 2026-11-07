@@ -1,6 +1,14 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 7.31 → prop.filtered-first-page
+
+- Exercise 7.34 → prop.total-complex-injective-resolution
+
+- Exercise 7.35 → prop.derived-functor-exact-factor
+
+- Exercise 7.39 → prop.flat-tensor-acyclic
+
 - Exercise 7.40 | 切赫上链公式 → prop.cech-cochain-formula
 
 - Exercise 7.43 → prop.higher-cohomology-presheaf-zero
@@ -20,13 +28,5 @@
 - Exercise 7.56 | 勒雷谱序列 → thm.leray-spectral-sequence
 
 - Exercise 7.22 | 导出函子 → prop.derived-functor-kan-extension
-
-- Exercise 7.36 → prop.cohomology-via-associated-sheaf
-
-- Exercise 7.42 → prop.cohomology-presheaf-H
-
-- Exercise 7.28 → prop.spectral-sequence-page-picture
-
-- 正合偶给出谱序列 → thm.exact-couple-spectral
 
 > 续见 alias/aka/homology.16.md

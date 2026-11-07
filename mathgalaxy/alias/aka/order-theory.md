@@ -23,7 +23,7 @@
 
 - Hausdorff 极大原理 | 极大原理 | Hausdorff maximal principle → thm.hausdorff
 
-- Tukey 引理 | Tukey → lem.tukey
+- Tukey 引理 | Tukey | 图基引理 | 图基 → lem.tukey
 
 - 有序域 | ordered field → def.ordered-field
 

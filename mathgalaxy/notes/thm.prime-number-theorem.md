@@ -1,7 +1,7 @@
 # 素数定理　`thm.prime-number-theorem`　·　说明
 根 `../`
 
-⚠️ **本节点仍标 skeleton**，但缺口已缩到一个：命题 B（Newman 的 Tauber 定理）。引理 1–4 与命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中已给完整证明；补上命题 B 即得素数定理。
+⚠️ **本节点仍标 skeleton**，但缺口已缩到一个：命题 B（Newman 解析定理）。引理 1–4 与命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中已给完整证明；补上命题 B 即得素数定理。
 
 **记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$。
 

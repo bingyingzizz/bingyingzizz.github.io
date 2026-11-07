@@ -1,6 +1,10 @@
 # 别名 → 节点 · 微分几何
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../diffgeom.md`
 
+- 帧丛 → def.frame-bundle
+
+- 配丛 → def.associated-bundle
+
 - 闭形式 → def.closed-form
 
 - 恰当形式 → def.exact-form
@@ -34,9 +38,5 @@
 - 球面的曲率 → ex.sphere-curvature
 
 - 圆的切丛 → ex.s1-tangent-bundle
-
-- Hodge 星号 | Hodge star operator → def.hodge-star
-
-- 施蒂费尔–惠特尼类 | Stiefel-Whitney 类 → def.stiefel-whitney-class
 
 > 续见 alias/aka/diffgeom.5.md

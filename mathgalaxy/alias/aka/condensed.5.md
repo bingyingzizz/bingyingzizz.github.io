@@ -13,7 +13,7 @@
 
 - 半范数阿贝尔群 | semi-normed abelian group | 半范数 → def.semi-normed-ab-group
 
-- Banach 阿贝尔群 | Banach abelian group | Banach 化 → def.banach-ab-group
+- Banach 阿贝尔群 | Banach abelian group | Banach 化 | 巴拿赫阿贝尔群 → def.banach-ab-group
 
 - K-有界正合 | K-bounded exact | K-有界零调 | Definition 8.2.1 → def.k-bounded-exact
 

@@ -19,8 +19,6 @@
 
 - 布尔环 | Boolean ring | 幂等环 → def.boolean-ring
 
-- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 → thm.boolean-stone
-
-- Exercise 1.21 → prop.module-tensor-universal
+- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 | 布尔环与斯通空间 | 斯通表示定理 → thm.boolean-stone
 
 > 续见 alias/aka/algebra.3.md

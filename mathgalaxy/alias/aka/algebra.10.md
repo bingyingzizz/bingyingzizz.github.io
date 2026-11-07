@@ -1,6 +1,10 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 域扩张 | 扩域 | 次数 | K over F → def.field-extension
+
+- 代数元 | 超越元 | 极小多项式 → def.algebraic-element
+
 - 代数扩张 | 超越扩张 → def.algebraic-extension
 
 - 分裂域 | 分解域 → def.splitting-field
@@ -24,9 +28,5 @@
 - 单位根 | 分圆多项式 | n 次单位根 | roots of unity → def.roots-of-unity
 
 - 同构 | 可逆态射 | 同构映射 | isomorphic → def.isomorphism
-
-- 二元运算 | 二元算子 | 封闭运算 → def.binary-operation
-
-- 群的阶 | 元素的阶 | 阶（群论） → def.group-order
 
 > 续见 alias/aka/algebra.11.md

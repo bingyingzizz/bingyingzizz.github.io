@@ -1,6 +1,14 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 一元多项式 → def.polynomial
+
+- 多项式环 | k[x] | K[X] | R[x] → def.polynomial-ring
+
+- 不可约多项式 → def.irreducible-poly
+
+- 不变子空间 → def.invariant-subspace
+
 - 特征值与特征向量 | 几何重数 | 特征值 → def.eigenvalue
 
 - 内积 | ⟨u,v⟩ | 内积 ⟨,⟩ → def.inner-product
@@ -36,9 +44,5 @@
 - 可解群 → def.solvable-group
 
 - 整环（另一种叫法） | 无零因子环 → def.int-domain
-
-- 不可约元 | 素元 | 相伴元 → def.irreducible-element
-
-- 最大公因子整环 | 最大公因子的整环 → def.gcd-domain
 
 > 续见 alias/aka/algebra.8.md

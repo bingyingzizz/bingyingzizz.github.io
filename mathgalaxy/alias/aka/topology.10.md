@@ -5,7 +5,7 @@
 
 - 布尔环 | Boolean ring | 幂等环 → def.boolean-ring
 
-- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 → thm.boolean-stone
+- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 | 布尔环与斯通空间 | 斯通表示定理 → thm.boolean-stone
 
 - 紧块沿闭含入 | Proposition 2.3.9 | Exercise 2.42 → prop.closed-inclusion-filtered-limit
 

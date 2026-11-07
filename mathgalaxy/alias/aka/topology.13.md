@@ -1,6 +1,8 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 提升定理 → thm.lifting
+
 - 仿紧豪斯多夫空间正规 | 豪斯多夫 → thm.paracompact-hausdorff-normal
 
 - 斯通定理 | 斯通 → thm.metric-paracompact
@@ -22,7 +24,5 @@
 - 埃塔勒空间 | 平展空间 → def.etale-space
 
 - 相对紧 → def.relatively-compact
-
-- 勒贝格数 → def.lebesgue-number
 
 > 续见 alias/aka/topology.14.md

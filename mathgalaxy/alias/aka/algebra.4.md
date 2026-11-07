@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Cayley–Hamilton 定理 | 凯莱-哈密顿定理 | 哈密顿-凯莱定理 → thm.cayley-hamilton
+
 - Cauchy–Schwarz 不等式 | 柯西-施瓦茨不等式 | 柯西-施瓦兹不等式 | 柯西-施瓦茨 → thm.cauchy-schwarz
 
 - 张量积的万有性质 → thm.tensor-universal-property
@@ -9,7 +11,7 @@
 
 - 特征多项式 | 代数重数 → def.char-poly
 
-- Gram–Schmidt 正交化 → thm.gram-schmidt
+- Gram–Schmidt 正交化 | 格拉姆-施密特正交化 | 格拉姆-施密特 → thm.gram-schmidt
 
 - 秩-零化度定理 → thm.rank-nullity
 
@@ -28,11 +30,5 @@
 - 第一同构定理（向量空间版） → thm.first-iso-vs
 
 - 线性方程组的解结构 → thm.linear-system-solutions
-
-- 行列式的乘性 → thm.det-multiplicative
-
-- K[x] 是唯一分解整环 → thm.poly-ufd
-
-- 张量 ⊣ 内 Hom → prop.tensor-hom-adjunction
 
 > 续见 alias/aka/algebra.5.md

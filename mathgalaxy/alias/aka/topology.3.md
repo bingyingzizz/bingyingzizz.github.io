@@ -3,7 +3,7 @@
 
 - 仿紧与单位分解 | 正规与单位分解 | Exercise 8.7 → prop.paracompact-partition-unity
 
-- Stone 空间的闭开加细 | Exercise 2.20 | Exercise 2.19 → prop.stone-clopen-refinement
+- Stone 空间的闭开加细 | Exercise 2.20 | Exercise 2.19 | 斯通空间的闭开加细 → prop.stone-clopen-refinement
 
 - 完全不连通 | totally disconnected | 极不连通 | extremally disconnected | Definition 2.2.7 | Def 2.2.7 → def.totally-disconnected
 
@@ -16,7 +16,5 @@
 - 滤过极限的上同调 | Proposition 7.3.12 | Prop 7.3.12 → prop.filtered-limit-cohomology
 
 - Stone 空间上同调为零 | Exercise 7.50 → prop.stone-acyclic
-
-- 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
 
 > 续见 alias/aka/topology.4.md

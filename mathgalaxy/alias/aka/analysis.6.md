@@ -15,7 +15,7 @@
 
 - 可积 | L1 | L¹ | integrable | Lebesgue 可积 | 勒贝格可积 → def.integrable
 
-- Fatou 推论 → cor.fatou
+- Fatou 推论 | 法图推论 → cor.fatou
 
 - L1 是向量空间 → prop.L1-vector-space
 

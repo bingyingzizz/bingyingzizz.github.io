@@ -1,6 +1,8 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 有限测度时的包含方向 → prop.lp-inclusion-finite
+
 - 对偶配对 | dual pairing | 对偶 → def.duality-map
 
 - 自反 | reflexive | Lp 自反 → cor.lp-reflexive
@@ -19,10 +21,8 @@
 
 - 半范数阿贝尔群 | semi-normed abelian group | 半范数 → def.semi-normed-ab-group
 
-- Banach 阿贝尔群 | Banach abelian group | Banach 化 → def.banach-ab-group
+- Banach 阿贝尔群 | Banach abelian group | Banach 化 | 巴拿赫阿贝尔群 → def.banach-ab-group
 
 - Riemann 积分 | 定积分 | Riemann 积分定义 | Riemann 积分的定义 | 黎曼积分 | 积分 | ∫ | ∫_a^b → def.riemann-integrable
-
-- Riemann-Lebesgue 引理 | Riemann–Lebesgue | Riemann-Lebesgue | 傅里叶系数趋于零 | 黎曼-勒贝格引理 → thm.riemann-lebesgue
 
 > 续见 alias/aka/analysis.13.md

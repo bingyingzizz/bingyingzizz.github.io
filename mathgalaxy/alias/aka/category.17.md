@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 7.52 | Exercise 3.51 | 拉回与内 Hom → prop.inverse-image-tensor
+
 - Exercise 7.57 → prop.abelian-slice-adjunction
 
 - Exercise 7.58 | 切片函子 → prop.slice-shriek-z
@@ -26,7 +28,5 @@
 - Exercise 1.74 | 坎延拓 → prop.kan-extension-fully-faithful
 
 - Exercise 3.8 | ind-可表示 → prop.ind-representable-iff-left-exact
-
-- Exercise 3.11 → prop.covering-sieves-filter
 
 > 续见 alias/aka/category.18.md

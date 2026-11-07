@@ -7,7 +7,7 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 这就证明了公式的**形式**（这一半完整）。
 
-**第二部分：存在性（未完成，缺三步）**
+**第二部分：存在性（未完成；(ii) 已补完整，仍缺 (i)(iii)）**
 
 反过来给定多边形与 $x_{k}$，令 $F(z) = A\int^{z}_{z_{0}} g(\zeta)\,\mathrm{d}\zeta + B$。已知：
 
@@ -17,6 +17,6 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 - $g(\zeta) = O(\zeta^{-2})$，积分在 $\pm\infty$ 都收敛，$F$ 连续到 $\partial\mathbb{H}$ 的整个边界（含 $\infty$）。
 
-⚠️ 缺的三步（本图不写，因此保留 skeleton）：
+⚠️ 存在性仍缺的部分（本图不写全，因此保留 skeleton）：
 
 > 续见 notes/thm.schwarz-christoffel.5.md

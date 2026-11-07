@@ -1,6 +1,12 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 实 Banach 在紧 Haus 上零调 | Theorem 8.2.8 → thm.real-banach-chaus-acyclic
+
+- Stonean 上 Ext 截面公式 | Ext 截面 | Lemma 8.3.1 → lem.ext-stonean-section
+
+- Breen-Deligne | Breen–Deligne 分解 | Theorem 8.3.2 | Exercise 8.13 → thm.breen-deligne
+
 - 乘 p 的同伦 | scalar homotopy | Lemma 8.3.3 → lem.breen-deligne-scalar-homotopy
 
 - Breen-Deligne 谱序列 | Proposition 8.3.4 → prop.breen-deligne-ss-stonean
@@ -16,13 +22,5 @@
 - 局部紧高次 Ext 消失 | Ext 消失 | Theorem 8.3.9 → thm.lc-ext-vanishing
 
 - ZRT 计算表 | RHom 计算表 | Exercise 8.17 → table.rhom-zrt
-
-- 有限维 Banach 的 RHom | Exercise 8.15 → ex.finite-banach-rhom
-
-- 紧 S 对 Banach 的 RHom | Exercise 8.12 → ex.chaus-banach-rhom
-
-- 一般拓扑斯的 Breen-Deligne 谱序列 | Exercise 8.14 → ex.bd-ss
-
-- 连通局部紧的 Ext | Exercise 8.18 → ex.connected-lc-ext
 
 > 续见 alias/aka/homology.13.md

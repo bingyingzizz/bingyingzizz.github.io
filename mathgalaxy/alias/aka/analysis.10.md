@@ -7,7 +7,7 @@
 
 - 可缩族的微分定理 → thm.differentiation-general
 
-- RN 导数的点态公式 → thm.rn-pointwise
+- RN 导数的点态公式 | 拉东-尼科迪姆导数的点态公式 → thm.rn-pointwise
 
 - 绝对连续函数 | absolutely continuous function | AC 函数 → def.ac-function
 

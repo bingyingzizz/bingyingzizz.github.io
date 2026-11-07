@@ -7,7 +7,7 @@
 
 - 双复形 | bicomplex | 复形的复形 | Definition 7.2.17 | Def 7.2.17 → def.bicomplex
 
-- Grothendieck 谱序列 | Corollary 7.2.13 | Cor 7.2.13 | Corollary 7.2.21 | Proposition 7.2.20 → cor.grothendieck-spectral
+- Grothendieck 谱序列 | Corollary 7.2.13 | Cor 7.2.13 | Corollary 7.2.21 | Proposition 7.2.20 | 格罗滕迪克谱序列 → cor.grothendieck-spectral
 
 - 层上同调 | sheaf cohomology | H^n(X,M) | Definition 7.3.1 | Def 7.3.1 | H^i(X,F) | 层上同调 H^i → def.sheaf-cohomology
 
@@ -15,8 +15,6 @@
 
 - Čech 上同调是余极限 | Exercise 7.46 | Proposition 7.3.4 → prop.cech-as-colim
 
-- Cartan-Leray | Cartan–Leray 谱序列 | Theorem 7.3.6 | Thm 7.3.6 | Corollary 7.3.7 → thm.cartan-leray
-
-- 无环层 | acyclic sheaf | Definition 7.3.9 | Def 7.3.9 → def.acyclic-sheaf
+- Cartan-Leray | Cartan–Leray 谱序列 | Theorem 7.3.6 | Thm 7.3.6 | Corollary 7.3.7 | 卡当-莱雷谱序列 → thm.cartan-leray
 
 > 续见 alias/aka/homology.6.md

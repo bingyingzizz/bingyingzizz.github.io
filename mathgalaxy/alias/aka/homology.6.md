@@ -1,6 +1,8 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 无环层 | acyclic sheaf | Definition 7.3.9 | Def 7.3.9 → def.acyclic-sheaf
+
 - 无环等价于 Cech 为零 | Proposition 7.3.10 | Prop 7.3.10 → prop.acyclic-iff-cech
 
 - 紧 Hausdorff 上 Cech 就是上同调 | Proposition 7.3.11 | Prop 7.3.11 → prop.chaus-cech-eq-h
@@ -13,8 +15,6 @@
 
 - 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
 
-- Grothendieck 范畴 | Grothendieck category | AB5 | Definition 5.2.6 → def.grothendieck-category
-
-- 预加法范畴 | 加法范畴 | 预阿贝尔范畴 | 阿贝尔范畴 | Ab-范畴 | additive and abelian categories | Definition 5.1.1 | Definition 5.1.4 | Definition 5.2.1 | Definition 5.2.2 | Exercise 5.8 → def.abelian-category
+- Grothendieck 范畴 | Grothendieck category | AB5 | Definition 5.2.6 | 格罗滕迪克范畴 → def.grothendieck-category
 
 > 续见 alias/aka/homology.7.md

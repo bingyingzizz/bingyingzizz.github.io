@@ -1,6 +1,12 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 导数与极限交换 → thm.uniform-limit-derivative
+
+- Taylor 公式（Peano 余项） | 皮亚诺余项 → prop.taylor-peano
+
+- 单调有界定理 → thm.monotone-convergence
+
 - 导数为零 ⟺ 常函数 → cor.constant-iff-zero-derivative
 
 - 导数符号 ⟹ 单调性 → prop.derivative-monotone
@@ -15,11 +21,11 @@
 
 - 介值定理 → thm.ivt
 
-- Abel–Dirichlet 判别法 → thm.abel-dirichlet-series
+- Abel–Dirichlet 判别法 | 阿贝尔-狄利克雷判别法 → thm.abel-dirichlet-series
 
 - 绝对收敛 ⟹ 收敛 → thm.absolute-implies-convergent
 
-- Cauchy 乘积 → thm.series-product
+- Cauchy 乘积 | 柯西乘积 → thm.series-product
 
 - ℝ 是完备度量空间 → thm.real-complete-metric
 
@@ -28,11 +34,5 @@
 - Abel 第二定理 | 阿贝尔第二定理 → thm.abel-endpoint
 
 - 求导法则 → thm.derivative-rules
-
-- Arzelà–Ascoli 定理 | 阿尔泽拉-阿斯科利定理 | 阿尔泽拉-阿斯科利 → thm.arzela-ascoli
-
-- 闭区间套定理 → lem.nested-intervals
-
-- 完备性的六条等价 → thm.completeness-equivalent
 
 > 续见 alias/aka/analysis.15.md

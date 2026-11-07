@@ -1,6 +1,10 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 不可约元 | 素元 | 相伴元 → def.irreducible-element
+
+- 最大公因子整环 | 最大公因子的整环 → def.gcd-domain
+
 - Bézout 整环 | 裴蜀整环 | 贝祖整环 | 贝祖域 → def.bezout-domain
 
 - 欧几里得整环 | 欧氏整环 → def.euclidean-domain
@@ -32,11 +36,5 @@
 - 拉格朗日子空间 → def.lagrangian-subspace
 
 - 拉格朗日恒等式 → thm.lagrange-identity
-
-- 三角分解 → thm.lu-decomposition
-
-- 正交三角分解 → thm.qr-decomposition
-
-- 有理标准形 → thm.rational-canonical-form
 
 > 续见 alias/aka/algebra.9.md

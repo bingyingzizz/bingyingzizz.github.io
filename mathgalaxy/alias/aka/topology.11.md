@@ -13,9 +13,9 @@
 
 - 同伦不变性 → thm.homotopy-invariance
 
-- Euler 示性数 | χ | χ(M) → thm.euler-characteristic
+- Euler 示性数 | χ | χ(M) | 欧拉示性数 → thm.euler-characteristic
 
-- Mayer–Vietoris（同调） → thm.mv-homology
+- Mayer–Vietoris（同调） | 迈耶-维托里斯同调 → thm.mv-homology
 
 - H₀ 与分支 → prop.h0-components
 
@@ -30,7 +30,5 @@
 - 有界闭 ⟺ 紧（ℝⁿ） | 海涅–博雷尔定理 | 海涅–博雷尔 → cor.heine-borel
 
 - 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
-
-- 链同伦 → def.chain-homotopy
 
 > 续见 alias/aka/topology.12.md

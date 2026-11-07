@@ -3,7 +3,7 @@
 
 - 反射子范畴里的极限 | Exercise 1.64 | Exercise 1.70 → prop.reflective-limits
 
-- Kan 延拓 | Kan extension | 左 Kan 延拓 | 右 Kan 延拓 | Definition 1.5.9 | Def 1.5.9 → def.kan-extension
+- Kan 延拓 | Kan extension | 左 Kan 延拓 | 右 Kan 延拓 | Definition 1.5.9 | Def 1.5.9 | 坎延拓 → def.kan-extension
 
 - 余极限是 Kan 延拓 | 伴随是 Kan 延拓 | Kan extensions: colimits and right adjoints → ex.kan-extension
 
@@ -13,8 +13,6 @@
 
 - 预拓扑 | pretopology | 覆盖族 | Grothendieck pretopology | Definition 3.2.4 | Def 3.2.4 | Exercise 3.13 | Exercise 3.16 → def.pretopology
 
-- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 | Definition 3.2.2 | Def 3.2.2 → def.grothendieck-topology
-
-- 层 | sheaf | 分离预层 | separated presheaf | 粘合 | 下降 | Definition 3.2.5 | Def 3.2.5 → def.sheaf
+- Grothendieck 拓扑 | Grothendieck topology | site | 景 | site 理论 | Definition 3.2.2 | Def 3.2.2 | 格罗滕迪克拓扑 → def.grothendieck-topology
 
 > 续见 alias/aka/category.11.md

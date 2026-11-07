@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 局部化的 Hom | 分式演算 余极限 | Hom 是余极限 → prop.localization-hom-colim
+
 - 覆盖筛的四条等价 | 覆盖筛等价条件 | Proposition 3.2.12 | Prop 3.2.12 | 层化 覆盖筛 → prop.sieve-covering-equivalent
 
 - Cond/X 到开集拓扑斯 | 切片拓扑斯态射 | Proposition 8.1.3 → prop.cond-slice-topos-morphism
@@ -20,7 +22,5 @@
 - Theorem 3.4.2 | Thm 3.4.2 | Corollary 3.4.3 | Cor 3.4.3 → thm.induced-topos-morphism
 
 - Exercise 7.51 → prop.topos-morphism-abelian-adjunction
-
-- Exercise 7.52 | Exercise 3.51 | 拉回与内 Hom → prop.inverse-image-tensor
 
 > 续见 alias/aka/category.17.md

@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Jordan–Hölder 定理 | 若尔当-赫尔德定理 | 若尔当-赫尔德 → thm.jordan-holder
+
+- 秩 → def.rank
+
+- 正规算子 → def.normal-operator
+
 - 核与像 → def.kernel-image-vs
 
 - 相似 → def.similarity
@@ -40,13 +46,5 @@
 - 可逆矩阵 → def.invertible-matrix
 
 - 交错型 → def.alternating-form
-
-- 一元多项式 → def.polynomial
-
-- 多项式环 | k[x] | K[X] | R[x] → def.polynomial-ring
-
-- 不可约多项式 → def.irreducible-poly
-
-- 不变子空间 → def.invariant-subspace
 
 > 续见 alias/aka/algebra.7.md

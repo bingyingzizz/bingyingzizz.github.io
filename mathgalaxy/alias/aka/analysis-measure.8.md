@@ -1,6 +1,8 @@
 # 别名 → 节点 · 实变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis-measure.md`
 
+- 覆盖引理 | covering lemma | Vitali 覆盖 → lem.covering
+
 - 可缩族 | shrinking | 缩族 → def.shrinks-nicely
 
 - 正则测度 | regular measure | 正则 Borel 测度 → def.regular-measure
@@ -25,8 +27,6 @@
 
 - 可缩族的微分定理 → thm.differentiation-general
 
-- RN 导数的点态公式 → thm.rn-pointwise
-
-- 绝对连续函数 | absolutely continuous function | AC 函数 → def.ac-function
+- RN 导数的点态公式 | 拉东-尼科迪姆导数的点态公式 → thm.rn-pointwise
 
 > 续见 alias/aka/analysis-measure.9.md

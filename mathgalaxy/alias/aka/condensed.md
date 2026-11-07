@@ -11,7 +11,7 @@
 
 - Ext 的截面公式 | Exercise 8.8 → cor.ext-cond-set-section
 
-- Stonean 上 Z[S] 的 RHom | Exercise 8.9 → prop.rhom-zs-sections
+- Stonean 上 Z[S] 的 RHom | Exercise 8.9 | 斯通空间上自由模的导出同态 → prop.rhom-zs-sections
 
 - 离散空间上 Z[E] 的 RHom | Exercise 8.10 → prop.rhom-ze-powers
 
