@@ -1761,6 +1761,19 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       mobileAlpha: 0.20,
       mobileAlphaVar: 0.20,
       mobileDotSize: 2.0,         // 世界单位；屏幕边长 = 2.0×k（fit 0.12px / k=1 2.0px）
+      /* 亮星：约 8% 的粒子在世界坐标里大 1.3–1.6×，核心提亮；屏幕直径
+         ≥ mobileStarMinPx 时才加四角星芒（形状切换，不是尺寸钳制 ——
+         星芒长度 = mobileStarSpike × 屏幕直径，同样跟着 k 缩放）。
+         fit 档连亮星都是 <0.2px，只是雾里更亮的颗粒，不会出现星芒。 */
+      mobileStarRatio: 0.06,
+      mobileStarMinPx: 1.6,
+      mobileStarScaleMin: 1.3,
+      mobileStarScaleVar: 0.3,
+      mobileStarAlpha: 0.62,
+      mobileStarSpike: 1.6,       // 星芒半长 ÷ 该星屏幕直径（d=2.8px ⇒ 半长 4.5px）
+      mobileStarInner: 0.10,      // 四角星内凹顶点半径 ÷ 屏幕直径（越小芒越细）
+      mobileStarCore: 0.36,       // 近白圆核半径 ÷ 屏幕直径（比尘埃点略小，芒才露得出来）
+      mobileStarCoreAlpha: 0.92,  // 近白核心的不透明度（亮色主题再 ×1.15）
       centerAlpha: 0.025,         // 板块中心大团雾
       nodeAlpha: 0.025,           // 每个节点周围的小团雾
       spread: 0.52,               // 云朵分布半径 / 板块半径
@@ -5047,7 +5060,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
        屏幕上的边长 = mobileDotSize × cam.k —— 放大时点自然变大、缩小时变小，
        不做屏幕最小钳制。适配档 k≈0.06 时是亚像素（互相叠成雾），k=1 时才看得到颗粒。 */
     var dotSize = bc.mobileDotSize == null ? 2.0 : bc.mobileDotSize;
-    var count = 0;
+    /* 亮星：约 6–10% 的粒子在**世界坐标里**略大（1.3–1.6×），颜色仍取所属领域色，
+       核心提亮到近白；屏幕直径够大（≥ mobileStarMinPx）时才在它外面加四角星芒。
+       星芒的长短也由世界半径决定（这里算进 p.s），所以缩小时会一起缩回去，
+       不存在「屏幕上最小几像素」的钳制。 */
+    var starRatio = bc.mobileStarRatio == null ? 0.08 : bc.mobileStarRatio;
+    var starMinPx = bc.mobileStarMinPx == null ? 1.6 : bc.mobileStarMinPx;
+    var starScaleMin = bc.mobileStarScaleMin == null ? 1.3 : bc.mobileStarScaleMin;
+    var starScaleVar = bc.mobileStarScaleVar == null ? 0.3 : bc.mobileStarScaleVar;
+    var starAlpha = bc.mobileStarAlpha == null ? 0.62 : bc.mobileStarAlpha;
+    var count = 0, starCount = 0;
     /* 领域底光：只有一粒一粒的点时，整片云像浮在白底上的一层彩色噪点；
        在每个领域统计圆的位置铺一层很淡的色晕（不是原来的纹理，纯屏幕空间渐变），
        点云背后才有「深处还有一层云」的层次。alpha 只给 0.05 上下。 */
@@ -5074,6 +5096,17 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       }
       return g;
     }
+    /* 亮星单独分桶：它们的 alpha 更高、核心色更白，混进尘埃组会把整片雾提亮。
+       同一领域色的星共用一个组，每帧只多切几次样式；星芒按点各自的 p.s 画。 */
+    var starGroups = [], smap = {};
+    function starBucket(col, coreCol) {
+      var g = smap[col];
+      if (!g) {
+        g = smap[col] = { col: col, coreCol: coreCol, a: starAlpha, pts: [] };
+        starGroups.push(g);
+      }
+      return g;
+    }
     /* 固定密度：每节点 per 颗，**不随 cam.k 变化**。
        点径固定 1px 级时，若密度再随缩放分档，小尺度就会「什么都看不见」；
        所以所有尺度共用同一套常数密度。k 大时只画视口内节点的点
@@ -5086,6 +5119,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var rgb = U.hexToRgb((reg && reg.color) || '#7A8699');
       var col = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
       var seed = U.rngFrom(n.id + ':mobile-particle', MG.config.seed);
+      /* 亮星挑选用独立种子：刷新/重建结果不变，且不会打乱尘埃点的位置序列。 */
+      var starSeed = U.rngFrom(n.id + ':mobile-star', MG.config.seed);
+      var coreCol = 'rgb(' +
+        Math.round(rgb.r + (255 - rgb.r) * 0.72) + ',' +
+        Math.round(rgb.g + (255 - rgb.g) * 0.72) + ',' +
+        Math.round(rgb.b + (255 - rgb.b) * 0.72) + ')';
       var deg = n.degree || 0;
       /* 度大的枢纽点多撒几颗、亮一点 —— 适配档下整片云因此有「骨架」，
          而不是均匀的一层噪点。 */
@@ -5100,18 +5139,24 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         var rad = seed() < 0.7
           ? Math.sqrt(seed()) * core
           : core + Math.sqrt(seed()) * (halo - core);
-        var p = {
-          x: n.x + Math.cos(ang) * rad,
-          y: n.y + Math.sin(ang) * rad,
-          s: dotSize,
-          ni: ni
-        };
-        bucket(col, aBase + seed() * aVar).pts.push(p);
+        var px = n.x + Math.cos(ang) * rad;
+        var py = n.y + Math.sin(ang) * rad;
+        var aP = aBase + seed() * aVar;
+        var isStar = starSeed() < starRatio;
+        var sScale = starScaleMin + starSeed() * starScaleVar;
+        if (isStar) {
+          starBucket(col, coreCol).pts.push({ x: px, y: py, s: dotSize * sScale, ni: ni });
+          starCount++;
+        } else {
+          bucket(col, aP).pts.push({ x: px, y: py, s: dotSize, ni: ni });
+        }
         count++;
       }
     });
     return {
-      mobile: true, groups: groups, count: count, regions: regs,
+      mobile: true, groups: groups, starGroups: starGroups,
+      count: count, starCount: starCount,
+      starMinPx: starMinPx, regions: regs,
       nxs: nxs, nys: nys
     };
   }
@@ -5567,6 +5612,78 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         } else ctx.rect(x, y, d, d);
       }
       ctx.fill();
+    }
+    /* ---- 亮星 -------------------------------------------------------------
+       ① 尺寸全部来自 p.s（世界单位）× cam.k：fit 档连亮星也缩回亚像素，
+          只是比尘埃更亮一点点，不会冒出固定大小的星芒；
+       ② 「画不画星芒」按当前**屏幕直径**切换（d ≥ starMinPx），这是形状切换，
+          不是尺寸钳制 —— 尺寸本身仍然只由世界常数决定；
+       ③ 星芒长度 = mobileStarSpike × d（世界尺寸的倍数），内凹 = mobileStarInner × d，
+          所以 k 越大星越大、芒越长，与点云整体同步。 */
+    var starGroups = tex.starGroups || [];
+    var starMin = tex.starMinPx == null ? 1.6 : tex.starMinPx;
+    var bc2 = MG.config.background;
+    var spikeK = bc2.mobileStarSpike == null ? 1.6 : bc2.mobileStarSpike;
+    var innerK = bc2.mobileStarInner == null ? 0.10 : bc2.mobileStarInner;
+    var coreK = bc2.mobileStarCore == null ? 0.36 : bc2.mobileStarCore;
+    var coreAlpha = bc2.mobileStarCoreAlpha == null ? 0.92 : bc2.mobileStarCoreAlpha;
+    for (var sgi = 0; sgi < starGroups.length; sgi++) {
+      var sg = starGroups[sgi];
+      var spts = sg.pts;
+      ctx.fillStyle = sg.col;
+      ctx.globalAlpha = Math.min(0.95, sg.a * ga);
+      ctx.beginPath();
+      var hasSpike = false;
+      for (var si = 0; si < spts.length; si++) {
+        var sp = spts[si];
+        if (nxs.length) {
+          var snx = nxs[sp.ni], sny = nys[sp.ni];
+          if (snx < wx0 || snx > wx1 || sny < wy0 || sny > wy1) continue;
+        }
+        var sx = sp.x * k + tx, sy = sp.y * k + ty, sd = sp.s * k;
+        if (sx < -sd * 2 || sy < -sd * 2 || sx > vw + sd * 2 || sy > vh + sd * 2) continue;
+        if (sd < starMin) {
+          /* 还太小：先当普通点画（亚像素时和尘埃没区别，只是更亮） */
+          if (sd >= 1.2) {
+            ctx.moveTo(sx + sd, sy + sd / 2);
+            ctx.arc(sx + sd / 2, sy + sd / 2, sd / 2, 0, Math.PI * 2);
+          } else ctx.rect(sx, sy, sd, sd);
+          continue;
+        }
+        hasSpike = true;
+        var L = sd * spikeK, r = sd * innerK;
+        ctx.moveTo(sx, sy - L);
+        ctx.lineTo(sx + r, sy - r);
+        ctx.lineTo(sx + L, sy);
+        ctx.lineTo(sx + r, sy + r);
+        ctx.lineTo(sx, sy + L);
+        ctx.lineTo(sx - r, sy + r);
+        ctx.lineTo(sx - L, sy);
+        ctx.lineTo(sx - r, sy - r);
+        ctx.closePath();
+      }
+      ctx.fill();
+      /* 核心：提亮到近白，压在星芒中心上。只有真的画了星芒才需要这一遍。 */
+      if (hasSpike && coreAlpha > 0) {
+        ctx.fillStyle = sg.coreCol;
+        ctx.globalAlpha = Math.min(0.98, coreAlpha * ga);
+        ctx.beginPath();
+        for (var ci = 0; ci < spts.length; ci++) {
+          var cp = spts[ci];
+          if (nxs.length) {
+            var cnx = nxs[cp.ni], cny = nys[cp.ni];
+            if (cnx < wx0 || cnx > wx1 || cny < wy0 || cny > wy1) continue;
+          }
+          var cd = cp.s * k;
+          if (cd < starMin) continue;
+          var cx2 = cp.x * k + tx, cy2 = cp.y * k + ty;
+          if (cx2 < -cd || cy2 < -cd || cx2 > vw + cd || cy2 > vh + cd) continue;
+          var cr = cd * coreK;
+          ctx.moveTo(cx2 + cr, cy2);
+          ctx.arc(cx2, cy2, cr, 0, Math.PI * 2);
+        }
+        ctx.fill();
+      }
     }
     ctx.globalAlpha = 1;
   }
