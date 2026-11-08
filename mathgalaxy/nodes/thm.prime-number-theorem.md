@@ -11,7 +11,7 @@ $
 - …另有入边，续页见 [nodes/thm.prime-number-theorem.3.md](./thm.prime-number-theorem.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.prime-number-theorem.4.md](./thm.prime-number-theorem.4.md)
+- …另有出边，续页见 [nodes/thm.prime-number-theorem.5.md](./thm.prime-number-theorem.5.md)
 
 refs: Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)；Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
 

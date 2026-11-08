@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-07T15:22:42.279Z
-> 15 星系 / 105 星团 / 1551 节点 / 3195 连线（强边 3153，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-08T06:22:28.519Z
+> 15 星系 / 105 星团 / 1554 节点 / 3202 连线（强边 3160，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -5399,7 +5399,7 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 
 **第 (1) 步（引用，未证）。** Radó 定理：紧曲面存在有限三角剖分。`thm.rado` 仍是 skeleton，本图没有它的证明；这里只把它当输入，并明确它没有把「任意两个剖分组合等价」一起给出——后者正是第 (2) 步要做的事。
 
-**第 (2) 步：陈述与未完成核查（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\ge 0$）或 $c_{1}c_{1}\cdots c_{k}c_{k}$（不可定向，$k\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心，本图没有证明它。**
+**第 (2) 步：陈述与未完成核查（引理 K，本图空白）。** 设 $K$ 是有限单纯复形、$|K|$ 是闭连通曲面。则存在有限序列的操作把 $K$ 化成：单个多边形，其边两两配对，配对词为 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（可定向，$g\ge 0$）或 $c_{1}c_{1}\cdots c_{k}c_{k}$（不可定向，$k\ge 1$）。操作清单是：(i) 沿边剪开再粘（cut-and-paste）；(ii) $2$–$2$ 翻边；(iii) 删除只贴一条边的 $2$-单形；(iv) 顶点归约（把多个顶点并成一个）。**这条引理就是「分类」的核心；本批把它单列为 `lem.combinatorial-classification-surfaces`（仍 skeleton，缺口=顶点归约、2–2 翻边的退化情形、终止性测度）。**
 
 **对第 (2) 步的三项核查（都不完整，这正是缺口）。** - **$2$–$2$ 翻边**：本图只写「一条边两侧的两个三角形换成另两个三角形，顶点集不变」。这只在两张三角形沿一条边粘成一个四边形、且四个顶点互不相同时成立；若两张三角形还共用另一个顶点（四边形退化）、或第四顶点与第一顶点重合（结果是两个三角形而非四边形），必须先单独讨论。本图没有这些前提与退化情形。 - **切-粘**：本图只说「沿闭曲线剪开再粘回」。要在三角剖分内部做，闭曲线须先变成单纯闭曲线（加细 $+$ 一般位置，正规同位），剪开后要说明得到的是新的三角剖分、粘回保持同胚型；这两步本图都没写。 - **终止性**：本图原句「配对边数严格下降」**不成立**：$2$–$2$ 翻边不改边数，切-粘可能增加边数。真正需要的是一个良序测度（例如按多边形边数归纳，Munkres 的证明分有限种情形；或用「边数 $+$ 顶点数」的字典序），并逐操作验证它下降。本图没给测度，也没验证。 - **顶点归约没写构造**：把剖分化成「一个多边形」之前要先把所有顶点并成一个（操作清单里的 (iv)）；这一步本图只列了名字、没写构造，而它正是退化情形最多的一步。
 
@@ -5464,6 +5464,55 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 **缺口清单。** (i) 复结构存在性（单值化定理 / Riemann–Roch）；(ii) 亚纯函数存在性；(iii) 分支覆盖拉回的加细；(iv) 自由对合的等变三角剖分引理；(v) 光滑结构存在性 $+$ Morse $+$ 柄分解（路线 B）；(vi) 带边界情形：沿边界加倍得闭曲面，且剖分可取得让边界落在 $1$-骨架里（加倍对合的等变性）。本图没有这些节点；本条因此保持 skeleton。若下一轮补，建议先立两个节点：「等变三角剖分（重心重分两次）」——它可顺带救活不可定向情形；「单值化定理」——它是路线 A 的总闸。
 
 参考：Radó, Über den Begriff der Riemannschen Fläche (1925)；Moise, Affine structures in 3-manifolds (1952)；Freedman, The topology of four-dimensional manifolds (1982)；Munkres, Topology, Ch. 12
+
+#### 曲面的组合分类引理　`lem.combinatorial-classification-surfaces`
+*引理*　组合分类引理：三角剖分闭曲面可化为标准多边形
+
+设 $K$ 是有限的连通三角剖分闭曲面。则存在有限步「组合操作」，把 $K$ 化成下列标准形之一：
+
+
+
+• 可定向：$4g$ 边形，边界词 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$（$g\ge0$）；
+
+
+
+• 不可定向：$2k$ 边形，边界词 $c_{1}c_{1}\cdots c_{k}c_{k}$（$k\ge1$）。
+
+
+
+操作包括：沿一条边剪开再粘（切-粘）、$2$–$2$ 翻边、删除单边三角形、顶点归约。标准形由（可定向性，$\chi$）唯一确定。
+
+⚠️ **本节点仍标 skeleton**：第 1、5 步在本注中写全；第 2–4 步（顶点归约、$2$–$2$ 翻边的退化情形、终止性测度）只给出可核的路线与反例，尚未逐字证明。它是 `thm.classification-surfaces` 第二步的精确缺口。
+
+
+
+**第 1 步（完整：剪成单个多边形）**：取 $K$ 的对偶图 $K^{*}$（顶点=面，边=共边）。取 $K^{*}$ 的一棵生成树 $T$；对每条不在 $T$ 中的对偶边，把对应的棱剪开。结果是单个多边形：$T$ 的边不被剪，剩下 $E-V+1$ 条棱被剪成两两配对的 $2\times(E-V+1)$ 条边界边。多边形边界词记录这些配对。
+
+
+
+**第 2 步（顶点归约，缺口）**：若边界词中有 $\ge2$ 个顶点类，要找一条连接两个不同顶点类的边 $e$，沿 $e$ 剪开并把两侧端点交错粘合，使顶点数减少 $1$。需要先证这样的边存在（Munkres 的引理：若每条边两端都在同一顶点类，则……），再验证粘后仍是三角剖分、亏格/可定向性不变。本图未写。
+
+
+
+**第 3 步（$2$–$2$ 翻边与切-粘，缺口）**：把配对逐个化成标准形式。$2$–$2$ 翻边：两个三角形沿一条边粘成四边形 $abcd$ 时，沿对角线 $ac$ 重新粘成 $abdc$；它能把「分离的配对」$(a\cdots a)(b\cdots b)$ 变成相邻的 $(a\cdots b\cdots a\cdots b)$。成立前提是四个顶点互异；若第四顶点与第一顶点重合（退化情形），需单独处理或改用切-粘。切-粘要求先把闭曲线变成单纯闭曲线（加细 + 一般位置），并验证剪/粘后仍同胚。本图都未写。
+
+
+
+**第 4 步（终止性，缺口）**：不能以「配对边数」为测度：$2$–$2$ 翻边不改边数，切-粘还可能增加边数。需要一个在操作下严格下降的良序测度（例如 (顶点数, 某类坏配对数, 总边数) 的字典序），并逐操作验证；本图未给出。
+
+
+
+**第 5 步（完整：唯一性）**：可定向性与 $\chi$ 都是同胚不变量。标准形的 $\chi$ 为 $2-2g$（可定向）或 $2-k$（不可定向）；因此 $(\text{可定向性},\chi)$ 决定 $g$ 或 $k$。两个不同 $g$（或不同 $k$）的标准形 $\chi$ 不同，故不同胚；同一 $(\text{可定向性},\chi)$ 的标准形当然同胚。这一步与 `thm.classification-surfaces` 第 (3) 步一致。
+
+
+
+**缺口汇总**：第 2 步（顶点归约的存在性与效果）、第 3 步（$2$–$2$ 翻边的退化情形、切-粘的单纯化前提）、第 4 步（终止性测度）。这三块合起来正是 Munkres《Topology》第 12 章的组合证明主体；本图把它单列成一个节点，供 `thm.classification-surfaces` 引用。
+
+
+
+📌 **与 `thm.rado` 的分工**：Radó 负责「任意紧曲面可三角剖分」，本引理负责「已有三角剖分可化为标准形」；两者合起来才是「每个闭曲面同胚于标准形」。
+
+参考：Munkres, Topology (2nd ed.), Prentice Hall 2000, Ch. 12；Massey, A Basic Course in Algebraic Topology, Springer 1991, Ch. 1；Stillwell, Classical Topology and Combinatorial Group Theory, Springer 1993, Ch. 6
 
 #### Euler 示性数与亏格　`prop.eulerchar-genus`
 *命题*　闭可定向曲面：$\chi = 2 - 2g$
@@ -26401,7 +26450,7 @@ $$F \;\cong\; \varinjlim_{i \in I} F_{i} ,$$
 
 **$(\Longrightarrow)$ 主证明。** 考虑范畴 $\mathcal C$：对象是右线性映射 $\chi:R^n\to F$（$n\ge0$ 有限）；从 $(R^m,\chi)$ 到 $(R^n,\psi)$ 的态射是右线性 $u:R^m\to R^n$ 且 $\psi\circ u=\chi$。
 
-先证 $\mathcal C$ 滤过。其一，任意两个对象 $(R^m,\chi)$、$(R^n,\psi)$ 经直和 $(R^{m+n},\chi\oplus\psi)$ 合并。其二，设 $u,v:(R^m,\chi)\to(R^n,\psi)$ 是平行态射，即 $\psi u=\psi v=\chi$。令 $w=u-v:R^m\to R^n$，$Q=R^n/\operatorname{im}w$。$Q$ 有限呈现：$R^n$ 有限自由，$\operatorname{im}w$ 由至多 $m$ 个元素生成。因 $\psi w=\psi u-\psi v=0$，$\psi$ 过 $Q$：$\psi=f\circ\pi$，$\pi:R^n\to Q$。对有限呈现的 $Q$ 与 $f:Q\to F$ 用引理 L，得 $Q\xrightarrow{\psi'}R^k\xrightarrow{\chi'}F$，$f=\chi'\psi'$。令 $h=\psi'\pi:R^n\to R^k$。则 $\chi'h=\chi'\psi'\pi=f\pi=\psi$，且 $hu=\psi'\pi u=\psi'\pi v=hv$（因 $\pi w=0$）。故 $h$ 是 $u,v$ 在 $\mathcal C$ 中的余等化。
+先证 $\mathcal C$ 滤过。其一，任意两个对象 $(R^m,\chi)$、$(R^n,\psi)$ 经直和 $(R^{m+n},\chi\oplus\psi)$ 合并。其二，设 $u,v:(R^m,\chi)\to(R^n,\psi)$ 是平行态射，即 $\psi u=\psi v=\chi$。令 $w=u-v:R^m\to R^n$，$Q=R^n/\operatorname{im}w$。$Q$ 有限呈现：$R^n$ 有限自由，$\operatorname{im}w$ 由至多 $m$ 个元素生成。因 $\psi w=\psi u-\psi v=0$，$\psi$ 过 $Q$：$\psi=f\circ\pi$，$\pi:R^n\to Q$。对有限呈现的 $Q$ 与 $f:Q\to F$ 用引理 L，得 $Q\xrightarrow{\psi'}R^k\xrightarrow{\chi'}F$，$f=\chi'\psi'$。令 $h=\psi'\pi:R^n\to R^k$。则 $\chi'h=\chi'\psi'\pi=f\pi=\psi$，且 $hu=\psi'\pi u=\psi'\pi v=hv$（因 $\pi w=0$）。故 $h$ 把 $u,v$ **弱余等化**（$hu=hv$；这里只要求「存在把平行对余等化的箭」，不要求 $h$ 本身是 $\mathcal C$ 中的余等化子）—— 这正是 $\mathcal C$ 滤过所需的「平行对可被余等化」。
 
 其次，从 $\varinjlim_{\mathcal C}R^n$ 到 $F$ 有自然映射 $\Phi$（由各 $\chi$ 给出，态射的交换三角保证相容）。(i) 满：任意 $x\in F$ 来自对象 $(R,\chi)$，$\chi(1)=x$。(ii) 单：设 $\xi\in\varinjlim R^n$ 满足 $\Phi(\xi)=0$。$\xi$ 来自某 $(R^m,\chi)$ 与 $x\in R^m$，于是 $\chi(x)=0$。令 $P=R^m/Rx$（右模商去由 $x$ 生成的循环子模），$\pi:R^m\to P$；因 $\chi(x)=0$，$\chi$ 过 $P$：$\chi=f\pi$。$P$ 有限呈现（$R\to R^m\to P\to0$）。用引理 L 得 $P\xrightarrow{\psi'}R^k\xrightarrow{\chi'}F$，$f=\chi'\psi'$。令 $h=\psi'\pi:R^m\to R^k$。则 $\chi'h=\chi$，故 $h$ 是 $\mathcal C$ 中的态射；且 $h(x)=\psi'(\pi x)=0$。于是 $\xi$ 在余极限中为 $0$。
 
@@ -32777,7 +32826,7 @@ $$f(z) = A\int^{z}_{z_{0}} g(\zeta)\,\mathrm{d}\zeta + B,\qquad g(\zeta) := \pro
 把 $\mathbb{H}$ 共形地映成该多边形内部，且 $f(x_{k})$ 是第 $k$ 个顶点（取 $A \ne 0$，否则 $f \equiv B$ 是常值、谈不上共形）。
 常数 $A, B$ 决定大小、旋转与位置。
 
-⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的 (i)(iii) 与两条外部引理在末尾点明；(ii) 的辐角原理收尾已补完整。
+⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的 (i) 与 (iii) 两条外部引理在末尾点明；(ii) 的辐角原理收尾已补完整。
 
 **记号**：外角和给出 $\sum_{k=1}^{n}(1 - \alpha_{k}) = 2$，等价于
 
@@ -32829,19 +32878,17 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 （i）**边界曲线的简单性**：要证 $F(\partial\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。
 
-（ii）**辐角原理收尾（完整）。** 设（i）已证：$J:=F(\partial\mathbb{H})$ 是简单闭曲线，$F$ 连续延拓到 $\overline{\mathbb{H}}$ 且在 $\mathbb{H}$ 内局部共形（$F'\ne0$）。对 $w\notin J$，$F-w$ 在 $\partial\mathbb{H}$ 上无零点。把 $F-w$ 在 $\mathbb{H}$ 上的零点个数记为 $N(w)$（计重数）：用半径 $R$ 的上半圆盘挖出有界区域再令 $R\to\infty$，因 $F'=O(1/z^2)$ 且 $F(z)\to F(\infty)\in J$，大圆弧上的积分趋于 $0$，故辐角原理给出
-$$N(w)=\frac{1}{2\pi i}\int_{\partial\mathbb{H}}\frac{F'(z)}{F(z)-w}\,\mathrm{d}z=n(J,w),$$
-右端是 $J$ 绕 $w$ 的绕数。$N(w)\ge0$ 是整数，而简单闭曲线满足 $n(J,w)\in\{-1,0,1\}$；若 $J$ 取负向，则 $J$ 内部每点的绕数为 $-1$，与 $N(w)\ge0$ 矛盾。故 $J$ 正向，且
-$$N(w)=\begin{cases}1,&w\in\operatorname{Int}(J),\\0,&w\in\operatorname{Ext}(J).\end{cases}$$
-于是 $F(\mathbb{H})\subseteq\operatorname{Int}(J)=P$，且每个 $w\in P$ 恰有一个原像（$F'\ne0$ 保证零点单重）。所以 $F:\mathbb{H}\to P$ 是双射；又 $F'\ne0$，它是双全纯。（在（i）成立的前提下，此步完整。）
+（ii）**辐角原理收尾（完整）。** 设（i）已证：$J:=F(\partial\mathbb{H})$ 是简单闭曲线，$F$ 连续延拓到 $\overline{\mathbb{H}}$ 且在 $\mathbb{H}$ 内局部共形（$F'\ne0$）。对 $w\notin J$，$F-w$ 在 $\partial\mathbb{H}$ 上无零点。把 $F-w$ 在 $\mathbb{H}$ 上的零点个数记为 $N(w)$（计重数）：用半径 $R$ 的上半圆盘挖出有界区域再令 $R\to\infty$，因 $F'=O(1/z^2)$ 且 $F(z)\to F(\infty)\in J$，大圆弧上的积分趋于 $0$，故辐角原理给出 $N(w)=\frac{1}{2\pi i}\int_{\partial\mathbb{H}}\frac{F'(z)}{F(z)-w}\,\mathrm{d}z=n(J,w),$ 右端是 $J$ 绕 $w$ 的绕数。$N(w)\ge0$ 是整数，而简单闭曲线满足 $n(J,w)\in\{-1,0,1\}$；若 $J$ 取负向，则 $J$ 内部每点的绕数为 $-1$，与 $N(w)\ge0$ 矛盾。故 $J$ 正向，且 $N(w)=\begin{cases}1,&w\in\operatorname{Int}(J),\\0,&w\in\operatorname{Ext}(J).\end{cases}$ 于是 $F(\mathbb{H})\subseteq\operatorname{Int}(J)=P$，且每个 $w\in P$ 恰有一个原像（$F'\ne0$ 保证零点单重）。所以 $F:\mathbb{H}\to P$ 是双射；又 $F'\ne0$，它是双全纯。（在（i）成立的前提下，此步完整。）
 
 （iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。
 
-（i）与（iii）各需要一条外部引理，本图都没有节点、也没有写全，故不勾 ∎：
+（i）与（iii）各需要一条外部引理；（ii）已在本注独立补完，不再需要外部引理。三条的清单如下（(i)(iii) 仍未写全，故不勾 ∎）：
 
-**引理 A（Carathéodory–Osgood，Jordan 区域情形）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚（这就是 `thm.boundary-correspondence` 的内容，该节点仍 skeleton）。多边形是 Jordan 区域，故 $F$ 的边界对应成立。
+**引理 A（Carathéodory–Osgood，对应 (i)）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。本批已把它单列为 `lem.caratheodory-osgood`（仍 skeleton：定理拆成 Carathéodory 连续延拓与 Osgood 边界单射两条外部定理，本图未证）。多边形是 Jordan 区域，故 $F$ 的边界对应成立；`thm.boundary-correspondence` 是同一事实的另一种陈述。
 
-**引理 B（简单性与绕数）**：设 $F$ 在 $\mathbb{H}$ 内局部共形、连续到 $\partial\mathbb{H}$；若 $F(\partial\mathbb{H})$ 是简单闭曲线、$F(\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。标准做法是把多边形沿边反射拼接，用 Schwarz 反射（`thm.schwarz-reflection`）延拓 $F$ 并数覆盖重数；这一步同时给出（i）与（ii）。
+**引理 B（简单性与绕数，对应 (ii)）**：设 $F$ 在 $\mathbb{H}$ 内局部共形、连续到 $\partial\mathbb{H}$；若 $F(\partial\mathbb{H})$ 是简单闭曲线、$F(\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。它的内容已在本注第 (ii) 小节用辐角原理独立证明，这里只作独立验证列出，不再承担 (ii) 的证明任务；它也不负责 (i)——边界简单性必须先由引理 A 与参数匹配给出。
+
+**引理 C（参数-边长匹配，对应 (iii)）**：内角（即 $x_{k}$）已定后，积分映出的多边形边长随之确定，一般不等于题设多边形的边长。要得到题设的那个多边形，须再解 $n-3$ 个实方程（$x_{k}$ 在 Möbius 自由度下的参数），标准做法是连续性方法或度理论（证明边长映射取遍所有正边长组合）。本图没有这条引理的节点，也没有写证明。
 
 **为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\arg f'$ 跳变 $\pi(\alpha_{k} - 1)$，恰好把切向转过去 $\pi - \alpha_{k}\pi$ —— 正是外角。
 
@@ -32899,6 +32946,51 @@ $$f : \Omega \longrightarrow \mathbb{D}$$
 **📌 记号与入边。** 入边（原无显式 id，靠 `src/core/graph.js` 自动分配 `e102.implication`）只记录了「径向极限、连续、同胚」的路线；其中第一步「径向极限存在」正是 Carathéodory 定理，不是初等估计——不要把它当作已证。
 
 参考：王晓光《复变函数》· 边界对应（介绍）；Ahlfors, Complex Analysis (3rd ed.), Ch. 6 · Conformal Mapping（boundary correspondence）；Pommerenke, Boundary Behaviour of Conformal Maps, Ch. 2
+
+#### Carathéodory–Osgood 边界对应　`lem.caratheodory-osgood`
+*引理*　Carathéodory–Osgood 定理：Jordan 区域的共形映射连续延拓为闭包同胚
+
+设 $\Omega\subset\mathbb{C}$ 是单连通区域（真子集），且 $\partial\Omega$ 是一条 Jordan 曲线。则 Riemann 映射 $f:\Omega\to\mathbb{D}$（在相差 $\mathbb{D}$ 的 Möbius 变换的意义下唯一）连续延拓为闭包的同胚
+
+
+
+$$\bar f:\overline{\Omega}\longrightarrow\overline{\mathbb{D}},$$
+
+
+
+特别地 $f|_{\partial\Omega}:\partial\Omega\to\partial\mathbb{D}=\mathbb{S}^{1}$ 是同胚。这就是 Carathéodory–Osgood 定理，也是 Schwarz–Christoffel 存在性中 (i) 的外部输入。
+
+⚠️ **本节点仍标 skeleton**：定理本身是两条经典外部定理（Carathéodory 的连续延拓定理与 Osgood 的边界单射定理）的合成；下面只给出可核的证明梗概、两条外部定理的精确陈述、以及「延拓 + 单射推出同胚」这一步的完整证明。外部定理的证明不在本图。
+
+
+
+**第一步（外部定理 A：连续延拓，Carathéodory 1913）**：若 $\Omega$ 单连通且 $\partial\Omega$ 局部连通，则 Riemann 映射 $f:\Omega\to\mathbb{D}$ 连续延拓到 $\overline{\Omega}$。Jordan 曲线局部连通（对每点 $\zeta\in\partial\Omega$ 与每个 $\varepsilon>0$，存在 $\delta>0$ 使 $B(\zeta,\delta)\cap\partial\Omega$ 连通），故 A 适用于本定理。
+
+
+
+**第二步（外部定理 B：边界单射，Osgood）**：在 A 的条件下，延拓 $\bar f$ 在 $\partial\Omega$ 上还是单射。等价的说法是 $f^{-1}$ 也连续延拓到 $\mathbb{D}$；标准证明用 crosscut（$\Omega$ 内连接边界两点的弧）或 prime end（Carathéodory 的素端）理论，把「$\bar f$ 在边界上不单射」翻译成「某个素端对应两个边界点」。这一步不在本图展开。
+
+
+
+**第三步（初等收尾，完整）**：假设 A、B 已成立。$\overline{\Omega}$ 是紧的（$\partial\Omega$ 为 Jordan 曲线，故有界；闭包闭且有界），$\overline{\mathbb{D}}$ 是 Hausdorff 的；连续双射从紧空间到 Hausdorff 空间必为同胚。故 $\bar f$ 是同胚，$f|_{\partial\Omega}$ 亦然。∎（在 A、B 的前提下）
+
+
+
+**为什么需要 Jordan 条件**：只要求「单连通 + 边界局部连通」不够。取 $\Omega=\mathbb{C}\setminus(-\infty,0]$（沿负实轴剪开的平面），它单连通，边界是一条射线而非 Jordan 曲线；Riemann 映射到 $\mathbb{D}$ 在剪缝的两侧趋向不同的边界点，边界对应不是单射。「边界是一条简单闭曲线」正是排除这种两侧粘在一起的情形。
+
+
+
+**与 Schwarz–Christoffel 的关系**：多边形区域（有界多边形内部）的边界是一条 Jordan 曲线，所以 A、B 适用；它们给出 S–C 存在性的 (i)（映射连续到边界、边界点一一对应）。但 S–C 还缺 (iii) 参数与边长的匹配，故 `thm.schwarz-christoffel` 仍标 skeleton。
+
+
+
+**本图缺什么**：Jordan 曲线定理、crosscut、prime end 都没有独立节点；本节点只把 A、B 陈述清楚并证明第三步，所以保留 skeleton。若以后要补完整，建议先立 Jordan 曲线定理节点，再立 prime end 节点。
+
+
+
+📌 **用法**：凡是要把「内部共形」推到「闭包同胚」的命题（S–C 存在性、Riemann 映射的边界行为、边界延拓的 Poisson 公式）都应引用本节点，而不是直接引用 `thm.riemann-mapping`——后者只保证内部双全纯。
+
+参考：Carathéodory, Über die Begrenzung einfach zusammenhängender Gebiete, Math. Ann. 73 (1913), 323–370；Pommerenke, Boundary Behaviour of Conformal Maps, Springer 1992, Ch. 2；Collingwood–Lohwater, The Theory of Cluster Sets, Cambridge 1966, Ch. 2；Ahlfors, Conformal Invariants, McGraw–Hill 1973, Ch. 6
 
 ### 星团：调和函数
 > 全纯函数的实部与虚部那一半：调和函数 → 共轭调和函数 → 均值性质 → Poisson 积分公式 → 最大值原理。
@@ -38583,7 +38675,7 @@ $$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
 
 等价形式：$\theta(x) \sim x$、$\psi(x) \sim x$、$p_{n} \sim n\log n$（$p_{n}$ 是第 $n$ 个素数）。
 
-⚠️ **本节点仍标 skeleton**，但缺口已缩到一个：命题 B（Newman 解析定理）。引理 1–4 与命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中已给完整证明；补上命题 B 即得素数定理。
+**本节点已完整。** 引理 1–4、命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。
 
 **记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$。
 
@@ -38607,21 +38699,138 @@ $$\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\{x\}\,x^{-s-1}\,\mathrm{d}x\qquad(\o
 
 $$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\sum_{p,k}\frac{1}{k}p^{-k\sigma}\bigl(3+4\cos\theta+\cos2\theta\bigr)\ge0,$$
 
-其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|\le4\log(\sigma-1)+O(1)$（零点阶 $\ge1$）；$\log|\zeta(\sigma+2it_{0})|=O(|\log(\sigma-1)|)$（$1+2it_{0}\ne1$，该点至多零点或全纯点）。故左端 $\le C+2\log(\sigma-1)\to-\infty$，与 $\ge0$ 矛盾；$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
+其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|=4m_{1}\log(\sigma-1)+O(1)$（$m_{1}\ge1$ 为该零点阶）；$\log|\zeta(\sigma+2it_{0})|=m_{2}\log(\sigma-1)+O(1)$（$m_{2}\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\log(\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\ge1$ 且 $\log(\sigma-1)\to-\infty$，左端 $\to-\infty$，与 $\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\ne0$，故 $\log|\zeta(\sigma+it_{0})|=m\log(\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
 
 **命题 B（Newman 解析定理，唯一缺口）。** 设 $f:[0,\infty)\to\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\int_0^\infty f(t)e^{-zt}\,\mathrm{d}t$（$\operatorname{Re}z>0$）解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的一个邻域。则 $\int_0^\infty f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
 
 **命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\int_0^T f(t)e^{-zt}\,\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\le C e^{-T\operatorname{Re}z}/\operatorname{Re}z$（$\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\to\infty$；具体围道与估计见原文，本图不复述。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。
 
-**命题 B 用在本节点。** 取 $f(t)=\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$ 知 $f$ 有界。对 $\operatorname{Re}z>0$， $g(z)=\int_0^\infty\psi(e^t)e^{-(1+z)t}\,\mathrm{d}t-\frac{1}{z}=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\int_1^\infty \psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）。由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$；代入得 $g(z)=-(1+\gamma)+O(z)\qquad(z\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 无零点），$g$ 在 $\{\operatorname{Re}z\ge0\}$ 的邻域全纯。命题 B 给出 $\int_0^\infty f$ 收敛。
+**命题 B 用在本节点。** 取 $f(t)=\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$ 知 $f$ 有界。对 $\operatorname{Re}z>0$， $g(z)=\int_0^\infty\psi(e^t)e^{-(1+z)t}\,\mathrm{d}t-\frac{1}{z}=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\int_1^\infty \psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）。由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$；代入得 $g(z)=-(1+\gamma)+O(z)\qquad(z\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 无零点），$g$ 在 $\{\operatorname{Re}z\ge0\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\int_0^\infty f$ 收敛。
 
-**从 $\int f$ 收敛到 $\psi(x)\sim x$（完整初等收尾）。** 记 $h(t)=\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\varepsilon>0$，由 $\int_0^\infty f$ 收敛得 $\int_T^{T+\varepsilon}f\to0$，即 $\frac1\varepsilon\int_T^{T+\varepsilon}h(t)\,\mathrm{d}t\longrightarrow1 .$ 由 $\psi$ 单调不减：当 $t\in[T,T+\varepsilon]$ 时 $e^{-\varepsilon}h(T)\le h(t)\le e^{\varepsilon}h(T+\varepsilon)$。把两边对 $t$ 平均并令 $T\to\infty$：由 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_T^{T+\varepsilon}h$ 得 $h(T)\le e^{\varepsilon}(1+o(1))$，故 $\limsup h\le e^{\varepsilon}$；由 $\frac1\varepsilon\int_T^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$ 得 $h(T+\varepsilon)\ge e^{-\varepsilon}(1+o(1))$，故 $\liminf h\ge e^{-\varepsilon}$。令 $\varepsilon\to0$ 得 $\limsup h\le1\le\liminf h$，故 $h(t)\to1$，即 $\psi(x)/x\to1$。再由引理 1–4 得 $\theta(x)\sim x$、$\pi(x)\sim x/\log x$。**在命题 B 成立的前提下，本节点的链条是完整的**；本节点仍标 skeleton 的唯一原因就是命题 B 的围道证明尚未在本图中写出。
+**从 $\int f$ 收敛到 $\psi(x)\sim x$（完整初等收尾）。** 记 $h(t)=\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\varepsilon>0$，由 $\int_0^\infty f$ 收敛得 $\int_T^{T+\varepsilon}f\to0$，即 $\frac1\varepsilon\int_T^{T+\varepsilon}h(t)\,\mathrm{d}t\longrightarrow1 .$ 由 $\psi$ 单调不减：当 $t\in[T,T+\varepsilon]$ 时 $e^{-\varepsilon}h(T)\le h(t)\le e^{\varepsilon}h(T+\varepsilon)$。把两边对 $t$ 平均并令 $T\to\infty$：由 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_T^{T+\varepsilon}h$ 得 $h(T)\le e^{\varepsilon}(1+o(1))$，故 $\limsup h\le e^{\varepsilon}$；由 $\frac1\varepsilon\int_T^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$ 得 $h(T+\varepsilon)\ge e^{-\varepsilon}(1+o(1))$，故 $\liminf h\ge e^{-\varepsilon}$。令 $\varepsilon\to0$ 得 $\limsup h\le1\le\liminf h$，故 $h(t)\to1$，即 $\psi(x)/x\to1$。再由引理 1–4 得 $\theta(x)\sim x$、$\pi(x)\sim x/\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。
 
-⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。这一版把前者钉死、把后者收成一条标准定理，缺口从「Newman 的 Tauber 定理」缩小为「Newman 解析定理的围道证明」。
+⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。
 
-⚠️ **不能只靠 $\zeta$ 延拓**：没有命题 B 的 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，命题 B 的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。
+⚠️ **不能只靠 $\zeta$ 延拓**：没有 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。
 
 参考：Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)；Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
+
+#### Newman 解析定理　`lem.newman-tauberian`
+*引理*　Newman 解析定理：Laplace 变换的解析延拓推出原函数积分收敛
+
+设 $f:[0,\infty)\to\mathbb{C}$ 有界、局部可积，且其 Laplace 变换
+
+
+
+$$g(z)=\int_{0}^{\infty}f(t)\,e^{-zt}\,\mathrm{d}t\qquad(\operatorname{Re}z>0)$$
+
+
+
+解析延拓到包含闭半平面 $\{\operatorname{Re}z\ge0\}$ 的某个开集上。则反常积分 $\int_{0}^{\infty}f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
+
+
+
+这是 Newman 为素数定理给出的 Tauber 引理；它把「$\psi(x)\sim x$」的分析核心压成一条围道估计，见 `thm.prime-number-theorem`。
+
+**证明.** 记 $B=\sup_{t\ge0}|f(t)|$。对 $T>0$ 令 $g_{T}(z)=\int_{0}^{T}f(t)e^{-zt}\,\mathrm{d}t$；$g_{T}$ 是整函数，且对 $\operatorname{Re}z>0$ 有
+
+
+
+$$|g(z)-g_{T}(z)|=\left|\int_{T}^{\infty}f(t)e^{-zt}\,\mathrm{d}t\right|\le B\,\frac{e^{-T\operatorname{Re}z}}{\operatorname{Re}z}.\tag{1}$$
+
+
+
+**第一步（围道与核）.** 固定 $R>0$。由假设，$g$ 在闭半平面 $\{\operatorname{Re}z\ge0\}$ 的一个开邻域上全纯；紧集 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的每个点都有正距离到该邻域的补集，故存在 $\delta=\delta(R)>0$，使 $g$ 在
+
+
+
+$$D=\{z:\ |z|\le R,\ \operatorname{Re}z\ge-\delta\}$$
+
+
+
+上全纯（取 $\delta$ 小于紧集到补集的距离）。记 $C=\partial D$（正向）。函数
+
+
+
+$$F(z)=e^{zT}\left(1+\frac{z^{2}}{R^{2}}\right)$$
+
+
+
+是整函数，且 $F(0)=1$。$(g-g_{T})F/z$ 在 $D$ 内除 $z=0$ 外全纯，$z=0$ 是单极点、留数为 $(g-g_{T})(0)F(0)=g(0)-g_{T}(0)$。由 Cauchy 积分公式，
+
+
+
+$$g(0)-g_{T}(0)=\frac{1}{2\pi i}\oint_{C}\bigl(g(z)-g_{T}(z)\bigr)F(z)\,\frac{\mathrm{d}z}{z}.\tag{2}$$
+
+
+
+**第二步（拆成三段）.** 令 $C_{+}=C\cap\{\operatorname{Re}z>0\}$、$C_{-}=C\cap\{\operatorname{Re}z\le0\}$。在 $C_{+}$ 上 $g-g_{T}=\int_{T}^{\infty}fe^{-zt}\,\mathrm{d}t$；在 $C_{-}$ 上 $g-g_{T}=g-\int_{0}^{T}fe^{-zt}\,\mathrm{d}t$。于是 (2) 的右端等于
+
+
+
+$$I_{1}+I_{2}+I_{3},\quad I_{1}=\frac{1}{2\pi i}\int_{C_{+}}\!\!\int_{T}^{\infty}fe^{-tz}F\,\mathrm{d}t\,\frac{\mathrm{d}z}{z},\quad I_{2}=-\frac{1}{2\pi i}\int_{C_{-}}\!\!\int_{0}^{T}fe^{-tz}F\,\mathrm{d}t\,\frac{\mathrm{d}z}{z},\quad I_{3}=\frac{1}{2\pi i}\int_{C_{-}}gF\,\frac{\mathrm{d}z}{z}.$$
+
+
+
+**第三步（$|F|$ 的初等估计）.** 对 $|z|=R$，由 $R^{2}+z^{2}=2z\operatorname{Re}z$ 得
+
+
+
+$$\left|1+\frac{z^{2}}{R^{2}}\right|=\frac{2|\operatorname{Re}z|}{R},\qquad |F(z)|=e^{T\operatorname{Re}z}\,\frac{2|\operatorname{Re}z|}{R}.\tag{3}$$
+
+
+
+**第四步（$|I_{1}|\le B/R$）.** 在 $C_{+}$ 上 $x=\operatorname{Re}z>0$。由 (1) 与 (3)，
+
+
+
+$$\left|\int_{T}^{\infty}fe^{-tz}\,\mathrm{d}t\right|\,|F(z)|\le B\,\frac{e^{-Tx}}{x}\cdot e^{Tx}\,\frac{2x}{R}=\frac{2B}{R}.$$
+
+
+
+再乘 $|\mathrm{d}z|/|z|=|\mathrm{d}z|/R$，沿 $C_{+}$（长度 $\pi R$）积分，得 $|I_{1}|\le\frac{1}{2\pi}\cdot\frac{2B}{R}\cdot\frac{\pi R}{R}=\frac{B}{R}$。
+
+
+
+**第五步（$|I_{2}|\le B/R$）.** 内层 $h(z)=\int_{0}^{T}fe^{-tz}\,\mathrm{d}t$ 是整函数，故 $hF/z$ 在左半圆盘 $\{|z|\le R,\ \operatorname{Re}z\le0\}$ 内全纯（$z=0$ 在该半圆盘之外：它在边界的虚轴端点上，但柯西变形所围的区域不包含它）。由 Cauchy 定理把 $C_{-}$ 变形为左半圆 $L=\{|z|=R,\ \operatorname{Re}z\le0\}$。在 $L$ 上 $x=\operatorname{Re}z<0$，
+
+
+
+$$|h(z)|\le B\int_{0}^{T}e^{-tx}\,\mathrm{d}t=B\,\frac{e^{-Tx}-1}{-x}\le\frac{Be^{-Tx}}{-x},$$
+
+
+
+于是 $|h(z)F(z)|\le\frac{Be^{-Tx}}{-x}\cdot e^{Tx}\cdot\frac{2(-x)}{R}=\frac{2B}{R}$，同第四步得 $|I_{2}|\le B/R$。
+
+
+
+**第六步（$I_{3}\to0$）.** 在 $C_{-}$ 上 $x\le0$。在弦 $\operatorname{Re}z=-\delta$ 上，$|F(z)|\le e^{-\delta T}(1+|z|^{2}/R^{2})\le2e^{-\delta T}$；在两段小圆弧（$|z|=R$、$-\delta\le x\le0$）上，$|F(z)|=e^{xT}\cdot2|x|/R$。给定 $\varepsilon>0$：在 $|x|\le\varepsilon R/2$ 处 $|F|\le\varepsilon$；在其余部分 $x\le-\varepsilon R/2$，故 $|F|\le2e^{-\varepsilon RT/2}$。因此 $F\to0$ 在紧集 $C_{-}$ 上一致。又 $g$ 在 $D$ 的紧邻域上有界，且 $|z|\ge\delta$ 于 $C_{-}$，故 $I_{3}\to0$（$T\to\infty$）。
+
+
+
+**第七步（收尾）.** 由 (2) 与三段的估计，对每个固定的 $R$，
+
+
+
+$$|g(0)-g_{T}(0)|\le\frac{2B}{R}+o(1)\qquad(T\to\infty).$$
+
+
+
+先令 $T\to\infty$ 再令 $R\to\infty$，得 $g_{T}(0)\to g(0)$；而 $g_{T}(0)=\int_{0}^{T}f(t)\,\mathrm{d}t$，故 $\int_{0}^{\infty}f=g(0)$。∎
+
+
+
+**注（核里为什么有 $1+z^{2}/R^{2}$）**：$F(0)=1$ 使留数仍是 $g(0)-g_{T}(0)$；而在 $|z|=R$ 上 $1+z^{2}/R^{2}=2z\operatorname{Re}z/R^{2}$，恰好把 $1/\operatorname{Re}z$ 这个坏因子抵消。没有它，第四步会多出 $1/\operatorname{Re}z$，无法对 $R$ 取一致估计。
+
+
+
+**注（假设的强弱）**：证明只要求 $g$ 在**每个**闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯。对素数定理的 $g$，这一条由 $\zeta$ 在 $\operatorname{Re}s=1$ 无零点、再在每个固定紧集上取最大模下界得到，不需要 $\zeta$ 在固定宽度的竖条里无零点。
+
+
+
+**注（Tauber 现象）**：若只有「$g$ 在 $\operatorname{Re}z>0$ 全纯」，结论一般不成立；真正用上的是 $f$ 的**有界性**（估计 (1)）。例如 $f(t)=\sin t$ 有界，$g(z)=1/(z^{2}+1)$ 在虚轴上有极点，假设不满足，而 $\int_{0}^{T}\sin t\,\mathrm{d}t$ 不收敛。
+
+参考：Newman, A simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980), 693–696；Zagier, Newman's short proof of the prime number theorem, Amer. Math. Monthly 104 (1997), 705–708；Korevaar, Tauberian Theory: A Century of Developments, Springer 2004, Ch. II
 
 #### 黎曼 ζ 函数　`def.riemann-zeta`
 *定义*　黎曼 $\zeta$ 函数：$\zeta(s) = \sum_{n \ge 1} n^{-s}$（$\operatorname{Re}s > 1$）
@@ -50484,6 +50693,18 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 
 > 它给 S–C 公式的「$x_{k}$ 对应顶点」提供了合法性。
 
+#### 定义引用：「Riemann 映射定理」→ Carathéodory–Osgood 边界对应　`dep.riemann-caratheodory`
+
+Carathéodory–Osgood 定理研究的正是 Riemann 映射 $f:\Omega\to\mathbb{D}$ 的边界行为；`thm.riemann-mapping` 只保证内部双全纯，本引理补边界。
+
+#### 定义引用：「Carathéodory–Osgood 边界对应」→ Schwarz–Christoffel 公式　`dep.sc-caratheodory`
+
+S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由本引理提供；引用它而不是直接引用 `thm.riemann-mapping`。
+
+#### 定义引用：「Carathéodory–Osgood 边界对应」→ 边界对应定理　`dep.bc-caratheodory`
+
+`thm.boundary-correspondence` 的陈述就是本引理在 Jordan 区域上的形式；本引理把它拆成「连续延拓 + 边界单射」两条外部定理并给出同胚收尾。
+
 #### 复数 ℂ ⟹ 扩充复平面与球极投影　`e103.implication`
 *在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义*
 
@@ -51103,6 +51324,25 @@ $$\psi(x) = x - \sum_{\rho}\frac{x^{\rho}}{\rho} - \log 2\pi - \tfrac{1}{2}\log(
 
 
 ⛔ 本节点注已补出完整的 $\psi$/$\theta$/$\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\zeta$ 延拓 $+$ $\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。
+
+#### Newman 解析定理 ⟹ 素数定理　`imp.nt-newman`
+*Newman 解析定理闭合素数定理的最后一步*
+
+取 $f(t)=\psi(e^{t})e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$（`thm.chebyshev-estimate`），$f$ 有界、局部可积。对 $\operatorname{Re}z>0$，换元 $u=e^{t}$ 并用 $-\zeta'/\zeta(s)=s\int_{1}^{\infty}\psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）得
+
+
+
+$$g(z)=\int_{0}^{\infty}f(t)e^{-zt}\,\mathrm{d}t=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}.$$
+
+
+
+由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$，故 $g(z)=-(1+\gamma)+O(z)$，$z=0$ 是可去奇点。命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 上无零点，见 `thm.prime-number-theorem` 的注）保证 $g$ 在每个闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯：$\zeta$ 在 $\operatorname{Re}s>1$ 无零点，在 $\operatorname{Re}s=1$ 上已证无零点，紧性给出正距离。于是 `lem.newman-tauberian` 适用，$\int_{0}^{\infty}f$ 收敛且等于 $g(0)$。
+
+
+
+再由 $\int_{T}^{T+\varepsilon}f\to0$ 与 $\psi$ 单调：令 $h(t)=\psi(e^{t})e^{-t}$，则 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_{T}^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$，令 $T\to\infty$ 得 $\limsup h\le e^{\varepsilon}$、$\liminf h\ge e^{-\varepsilon}$，再令 $\varepsilon\to0$ 得 $h\to1$，即 $\psi(x)\sim x$。最后用引理 1–4（$\psi\sim x\iff\theta\sim x\iff\pi\sim x/\log x$）得 $\pi(x)\sim x/\log x$。∎
+
+> 这条边是素数定理链条上最后一块：命题 A（$\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。
 
 #### 定义引用：「同余」→ 二次剩余　`e152.definition`
 
@@ -53973,6 +54213,18 @@ Hausdorff 是定义的一部分（排除「带两个原点的直线」那类局�
 #### 定义引用：「Euler 示性数」→ 闭曲面分类定理　`dep.eulerchar-classification`
 
 不同胚性用 $\chi$ 作不变量（$\chi$ 在同胚下不变）。⚠ 这条用的是**定理**当原理：`thm.euler-characteristic` 说「数单纯形 = 数 Betti 数」，正好给出 $\chi$ 的组合与同调两种算法。
+
+#### 定义引用：「三角剖分」→ 曲面的组合分类引理　`dep.comb-triangulation`
+
+组合分类的操作对象是有限的连通三角剖分闭曲面，直接用三角剖分的定义。
+
+#### 定义引用：「闭曲面」→ 曲面的组合分类引理　`dep.comb-closed`
+
+「闭曲面」给紧、连通、无边界；本引理只处理这类曲面。
+
+#### 定义引用：「曲面的组合分类引理」→ 闭曲面分类定理　`dep.comb-classification`
+
+分类定理第二步（组合归类）的精确陈述与证明缺口现在由本节点承载；分类定理的证明引用它，而不是把整段组合论证塞进注里。
 
 #### 定义引用：「闭曲面分类定理」→ Euler 示性数与亏格　`dep.classification-eulerchargenus`
 

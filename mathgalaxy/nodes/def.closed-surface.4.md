@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面
+- 被 [`lem.combinatorial-classification-surfaces`](../nodes/lem.combinatorial-classification-surfaces.md) 曲面的组合分类引理 用
 - 被 [`ex.sphere`](../nodes/ex.sphere.md) 球面 S² 用
 - 被 [`ex.torus`](../nodes/ex.torus.md) 环面 T² 用
 - 被 [`ex.projective-plane`](../nodes/ex.projective-plane.md) 射影平面 RP² 用

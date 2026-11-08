@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.riemann-mapping`](../nodes/thm.riemann-mapping.md) Riemann 映射定理 + [`def.symmetric-point`](../nodes/def.symmetric-point.md) 关于圆的对称点：内部双全纯 + Jordan 边界 $\implies$ 延拓成闭包上的同胚　[proofs/e102.implication.md](../proofs/e102.implication.md)
+- [`lem.caratheodory-osgood`](../nodes/lem.caratheodory-osgood.md) Carathéodory–Osgood 边界对应：用到了定义 Carathéodory–Osgood 边界对应　[proofs/dep.bc-caratheodory.md](../proofs/dep.bc-caratheodory.md)

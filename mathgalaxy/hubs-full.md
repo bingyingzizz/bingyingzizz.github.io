@@ -31,7 +31,7 @@
 - **18 / 18** `def.cochain-complex` 上链复形 · layer 11 · 复形与导出三角
 - **18 / 18** `def.sheaf-cohomology` 层上同调 · layer 17 · 层上同调
 
-（共 961 个节点有非零计数；这里列前 20 条。）
+（共 964 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -48,6 +48,7 @@
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
 - **6 / 6** `def.form-on-manifold` 微分形式 · layer 21 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
+- **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 24 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
 - **6 / 6** `def.submanifold-volume` 诱导体积 · layer 31 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
@@ -56,9 +57,8 @@
 - **6 / 5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 17 · 仿紧与单位分解
 - **6 / 4** `thm.lp-banach` L^p 是 Banach 空间 · layer 23 · L^p 空间
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 25 · 向量场与 Lie 结构
-- **6 / 1** `thm.completeness-equivalent` 完备性的六条等价 · layer 23 · 实数完备性的等价刻画
 
-（共 1544 个节点有非零计数；这里列前 20 条。）
+（共 1546 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -85,5 +85,5 @@
 - **9 团 / 13 节点** `def.continuous-map` 连续映射 · layer 5 · 拓扑空间的基本语汇
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 961 个节点有非零计数；这里列前 20 条。）
+（共 964 个节点有非零计数；这里列前 20 条。）
 

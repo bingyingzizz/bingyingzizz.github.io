@@ -13,6 +13,6 @@
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
 - **6 / 6** `def.form-on-manifold` 微分形式 · layer 21 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
-- **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
+- **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 24 · 曲面的地形
 
 > 续见 hubs/big.2.md
