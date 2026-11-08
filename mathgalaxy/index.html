@@ -1707,6 +1707,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
        ⚠️ 填充是**径向渐变**：中心浓、往外淡、到包络外沿为 0 —— 边界是化开的，
        不是一圈线（`strokeAlpha` 平铺描边会让缩小时每个团变成一个圆圈，已关掉）。 */
     envelope: {
+      /* 2026-11-08：用户要求背景直接不可见。星团包络的径向填充/描边也一并关闭；
+         需要恢复「这块地是谁的」时把它设为 true。 */
+      enabled: false,
       pad: 44,                    // 边界离最远那个点再外扩多少（世界单位）
       samples: 24,                // 绕一圈取多少个方向
       smooth: 3,                  // 半径序列平滑几遍（消掉尖角）
@@ -1718,6 +1721,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
     /* 电子云背景 */
     background: {
+      /* 2026-11-08：用户要求背景直接不可见。雾场代码保留，默认关闭。 */
+      enabled: false,
       /* ENG-010：全端统一的雾场纹理（手机/桌面同一套，无分端分支）。
          纹理覆盖可见节点 bbox + fogPadRatio 比例的外扩，四周径向羽化到 alpha=0，
          所以任何视口、任何缩放下都看不到「云的边」。 */
@@ -5008,6 +5013,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
   function buildTexture(graph, isVisible) {
     var bc = MG.config.background;
+    /* 2026-11-08：用户要求背景直接不可见。保留雾场代码，但默认关闭；
+       打开时把 config.background.enabled 设为 true 即可恢复。 */
+    if (bc.enabled === false) return null;
     var ok = isVisible || function () { return true; };
 
     /* 可见节点 bbox（隐藏节点不参与，和以前的可见性语义一致）。 */
@@ -6453,9 +6461,10 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     }
 
     function drawEnvelopes() {
+      var cfgE = C.envelope;
+      if (cfgE.enabled === false) return;
       var a = lodA.envelope;
       if (a <= 0.02) return;
-      var cfgE = C.envelope;
       ctx.save();
       ctx.lineJoin = 'round';
       (view.graph.clusters || []).forEach(function (c) {
