@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-08T06:22:28.519Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-08T06:44:52.563Z
 > 15 星系 / 105 星团 / 1554 节点 / 3202 连线（强边 3160，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -32882,13 +32882,13 @@ $$f(z) = A\int_{z_{0}}^{z} g(\zeta)\,\mathrm{d}\zeta + B.$$
 
 （iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。
 
-（i）与（iii）各需要一条外部引理；（ii）已在本注独立补完，不再需要外部引理。三条的清单如下（(i)(iii) 仍未写全，故不勾 ∎）：
+（i）仍缺（需沿边反射/Schwarz 反射拼接），（iii）仍缺（需连续性方法/度理论）；（ii）已在本注独立补完。存在性所需的输入分三类，它们与 (i)(ii)(iii) 并非一一对应：**A** 是边界对应的外部输入（供 `thm.boundary-correspondence` 型命题使用），**不能推出（i）**；**B** 是（ii）的内部收尾（本注已证，不依赖外部引理）；**C** 是（iii）的外部输入。下面分别列出。
 
-**引理 A（Carathéodory–Osgood，对应 (i)）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。本批已把它单列为 `lem.caratheodory-osgood`（仍 skeleton：定理拆成 Carathéodory 连续延拓与 Osgood 边界单射两条外部定理，本图未证）。多边形是 Jordan 区域，故 $F$ 的边界对应成立；`thm.boundary-correspondence` 是同一事实的另一种陈述。
+**A（外部输入，服务边界对应，不推出（i））**：Carathéodory–Osgood——Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。本批单列为 `lem.caratheodory-osgood`（仍 skeleton：定理拆成 Carathéodory 连续延拓与 Osgood 边界单射两条外部定理，本图未证）。多边形是 Jordan 区域，故它给出 $F$ 的闭包连续延拓与边界上的单射；但它**不**说明 $F(\partial\mathbb{H})$ 无自交——那正是（i），需要沿边反射/Schwarz 反射拼接另行证明。
 
-**引理 B（简单性与绕数，对应 (ii)）**：设 $F$ 在 $\mathbb{H}$ 内局部共形、连续到 $\partial\mathbb{H}$；若 $F(\partial\mathbb{H})$ 是简单闭曲线、$F(\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。它的内容已在本注第 (ii) 小节用辐角原理独立证明，这里只作独立验证列出，不再承担 (ii) 的证明任务；它也不负责 (i)——边界简单性必须先由引理 A 与参数匹配给出。
+**B（（ii）的内部完成，不是外部引理）**：设 $F$ 在 $\mathbb{H}$ 内局部共形、连续到 $\partial\mathbb{H}$；若 $F(\partial\mathbb{H})$ 是简单闭曲线、$F(\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\partial\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。它的内容就是本注第（ii）小节的辐角原理证明（在上半平面挖去大圆弧、用 $F'=O(1/z^2)$ 控制无穷远），已在上面完整写出；它只完成（ii），不负责（i）（iii），也不作为独立的外部引理。
 
-**引理 C（参数-边长匹配，对应 (iii)）**：内角（即 $x_{k}$）已定后，积分映出的多边形边长随之确定，一般不等于题设多边形的边长。要得到题设的那个多边形，须再解 $n-3$ 个实方程（$x_{k}$ 在 Möbius 自由度下的参数），标准做法是连续性方法或度理论（证明边长映射取遍所有正边长组合）。本图没有这条引理的节点，也没有写证明。
+**C（外部输入，服务（iii））**：参数-边长匹配。内角（即 $x_k$）已定后，积分映出的多边形边长随之确定，一般不等于题设多边形的边长（同一组内角可对应无穷多个形状）；要得到题设的那个多边形，须再解 $n-3$ 个实方程（$x_k$ 的 Möbius 自由度），标准做法是连续性方法或度理论（证明边长映射取遍所有正边长组合）。本图没有这条引理的节点，也没有写证明。
 
 **为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\arg f'$ 跳变 $\pi(\alpha_{k} - 1)$，恰好把切向转过去 $\pi - \alpha_{k}\pi$ —— 正是外角。
 
@@ -38701,9 +38701,9 @@ $$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\su
 
 其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|=4m_{1}\log(\sigma-1)+O(1)$（$m_{1}\ge1$ 为该零点阶）；$\log|\zeta(\sigma+2it_{0})|=m_{2}\log(\sigma-1)+O(1)$（$m_{2}\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\log(\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\ge1$ 且 $\log(\sigma-1)\to-\infty$，左端 $\to-\infty$，与 $\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\ne0$，故 $\log|\zeta(\sigma+it_{0})|=m\log(\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
 
-**命题 B（Newman 解析定理，唯一缺口）。** 设 $f:[0,\infty)\to\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\int_0^\infty f(t)e^{-zt}\,\mathrm{d}t$（$\operatorname{Re}z>0$）解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的一个邻域。则 $\int_0^\infty f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
+**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\infty)\to\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\int_0^\infty f(t)e^{-zt}\,\mathrm{d}t$（$\operatorname{Re}z>0$）解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的一个邻域。则 $\int_0^\infty f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
 
-**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\int_0^T f(t)e^{-zt}\,\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\le C e^{-T\operatorname{Re}z}/\operatorname{Re}z$（$\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\to\infty$；具体围道与估计见原文，本图不复述。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。
+**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\int_0^T f(t)e^{-zt}\,\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\le C e^{-T\operatorname{Re}z}/\operatorname{Re}z$（$\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\to\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。
 
 **命题 B 用在本节点。** 取 $f(t)=\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$ 知 $f$ 有界。对 $\operatorname{Re}z>0$， $g(z)=\int_0^\infty\psi(e^t)e^{-(1+z)t}\,\mathrm{d}t-\frac{1}{z}=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\int_1^\infty \psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）。由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$；代入得 $g(z)=-(1+\gamma)+O(z)\qquad(z\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 无零点），$g$ 在 $\{\operatorname{Re}z\ge0\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\int_0^\infty f$ 收敛。
 
@@ -51325,7 +51325,7 @@ $$\psi(x) = x - \sum_{\rho}\frac{x^{\rho}}{\rho} - \log 2\pi - \tfrac{1}{2}\log(
 
 ⛔ 本节点注已补出完整的 $\psi$/$\theta$/$\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\zeta$ 延拓 $+$ $\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。
 
-#### Newman 解析定理 ⟹ 素数定理　`imp.nt-newman`
+#### Newman 解析定理 + Чебышёв 估计 ⟹ 素数定理　`imp.nt-newman`
 *Newman 解析定理闭合素数定理的最后一步*
 
 取 $f(t)=\psi(e^{t})e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$（`thm.chebyshev-estimate`），$f$ 有界、局部可积。对 $\operatorname{Re}z>0$，换元 $u=e^{t}$ 并用 $-\zeta'/\zeta(s)=s\int_{1}^{\infty}\psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）得

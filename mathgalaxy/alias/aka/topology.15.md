@@ -9,4 +9,6 @@
 
 - 拓扑可定向性 | 曲面的可定向性 → def.topological-orientability
 
+- 组合分类引理 → lem.combinatorial-classification-surfaces
+
 见 `../../alias.md`。

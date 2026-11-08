@@ -17,4 +17,6 @@
 
 - 狄利克雷特征标 → def.dirichlet-character
 
+- Newman 解析定理 → lem.newman-tauberian
+
 见 `../../alias.md`。

@@ -1718,72 +1718,22 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
     /* 电子云背景 */
     background: {
-      /* ⛔ colorFieldK 已删除（2026-10-19）：色场改回加法叠加，不再做 1−exp(−K·Σw) 的饱和。 */
-      /* 世界尺寸 × texScale = 纹理像素；再用 maxSide / maxPixels 夹一层预算。
-       历史：曾经固定 1024×768（约 6.9 世界单位/像素，放大看是一整块糊雾），
-       更早写过 0.42 → 4478×3854 ≈ 17.3 M 像素（≈69MB），超 GPU 纹理上限后
-       Chrome 会走软件路径 —— 表现正是「静止不卡、一拖动就卡」。
-       现在 0.30 会被 maxSide 夹到约 2016×2048（≈4.1 M 像素，16MB），
-       长边压在 2048 以内；粒子化之后细节都落在纹理像素这一级。 */
-    texScale: 0.30,             // 世界坐标 → 纹理像素
-      /* 纹理分辨率上限（长边 / 总像素）。挂在 2048 是保守值：常见 GPU 的
-         MAX_TEXTURE_SIZE 是 4096，而这张纹理每帧要整张重铺一次。 */
-      texMaxSide: 2048,
-      texMaxPixels: 4200000,
-      /* 建完纹理后过一遍的小半径模糊（纹理像素）—— **抹掉低对比渐变自带的 dither**。
-         ⚠️ 不抹会怎样：逐像素抖动被放大成屏幕上一张周期约 2 texel 的「格子/点点」。
-         半径 1.6 在 2048 分辨率下 ≈ 5.5 个世界单位，云雾本来就是糊的，
-         形状与浓淡肉眼无差别；成本 0.2ms 且只在开页 / 改显隐时发生。 */
-      texBlur: 1.6,
-      /* 粒子云：密度场里 alpha 低于 particleEdge 的区域改成离散颗粒（中心保持连续）。
-         particleCell 是粒子格的世界尺寸（≈ 适配档下 2~3 屏幕像素，放大后是一颗颗圆点）；
-         gamma 控制「越往外越稀」的曲线（0.75 ⇒ 概率 p=(α/A)^0.75）。
-         ⚠️ 20 世界单位是按「适配档 k≈0.128 ⇒ 2.5px」定的：14 时只有 1.8px，
-         再经过纹理过滤基本看不见（实测 4× 放大才勉强分辨）。 */
-      particleEdge: 0.14,
-      particleCell: 20,
-      particleGamma: 0.75,
-      blobsPerRegion: 12,         // 每个板块的云朵数
-      blobAlpha: 0.075,
-      splatRadius: 150,           // 单节点撒点的世界半径（smooth-tail 到 0，见 background.js）
-      /* 手机竖屏（≤700px）走屏幕空间点云（background.js buildParticles）：
-         每节点 mobileParticles 颗（枢纽 +1~4，**不随 cam.k 变化**）、核心半径 mobileCore
-         世界单位、晕到 mobileHalo；点径 mobileDotSize 是**世界坐标常数**，屏幕上
-         = mobileDotSize × cam.k（放大自然变大、缩小变亚像素，**不做屏幕最小钳制**）；
-         透明度 mobileAlpha + [0, mobileAlphaVar]，亮色主题再 ×1.15。
-         ⚠️ 密度是常数：fit 全图与放大后是同一套密度，所以总点数 ≈ 1551×N。
-         3 颗/节点时适配档「几乎啥也没有」；15~18 颗还是稀；40 颗时 fit 才有「整片云」。
-         N=128（总点 ~20 万）是 fit draw ≤12ms 的实测上限（160 为 12.79ms，超预算）；
-         视口外的节点由 drawParticles 按节点中心裁掉。 */
-      mobileParticles: 128,
-      mobileCore: 48,
-      mobileHalo: 130,
-      mobileAlpha: 0.20,
-      mobileAlphaVar: 0.20,
-      mobileDotSize: 2.0,         // 世界单位；屏幕边长 = 2.0×k（fit 0.12px / k=1 2.0px）
-      /* 亮星：约 6% 的粒子在世界坐标里大 1.3–1.6×，核心提亮；
-         它们没有星芒，只是更亮更大的柔光点（光晕见 mobileGlow*）。 */
-      mobileStarRatio: 0.06,
-      mobileStarScaleMin: 1.3,
-      mobileStarScaleVar: 0.3,
-      mobileStarAlpha: 0.62,
-      /* 辉光：每颗粒子的光晕半径 = 世界半径 × mobileGlowScale（2.5–4× 核心），
-         屏幕尺寸同样由 cam.k 决定，不做屏幕最小钳制。按光晕的**屏幕直径**
-         淡入（mobileGlowMinPx → +mobileGlowRampPx 达到全强）：fit 时光晕
-         不到 1px，淡入为 0，仍是雾/沙；放大后才逐点铺开。
-         mobileGlowAlpha 是单层基准透明度，三层叠加后中心约 0.12×ga。 */
-      mobileGlowScale: 3.0,
-      mobileGlowAlpha: 0.14,
-      mobileGlowMinPx: 2.0,
-      mobileGlowRampPx: 1.6,
-      centerAlpha: 0.025,         // 板块中心大团雾
-      nodeAlpha: 0.025,           // 每个节点周围的小团雾
-      spread: 0.52,               // 云朵分布半径 / 板块半径
+      /* ENG-010：全端统一的雾场纹理（手机/桌面同一套，无分端分支）。
+         纹理覆盖可见节点 bbox + fogPadRatio 比例的外扩，四周径向羽化到 alpha=0，
+         所以任何视口、任何缩放下都看不到「云的边」。 */
+      fogPadRatio: 0.35,          // 内容 bbox 外扩比例（按长边算）
+      fogMaxSide: 2048,           // 纹理长边像素上限（≈1600×900 适配档 0.47 px/texel）
+      fogMaxPixels: 4200000,      // 总像素上限（≈16MB RGBA，常见 GPU 的 1/4 纹理内存）
+      fogBlur: 1.2,               // 纹理像素模糊半径：抹掉径向渐变的 dither
+      fogAlpha: 0.085,            // 区域云核心 alpha（向外五档平滑衰减到 0）
+      centerAlpha: 0.025,         // 保留字段（旧版云朵参数，当前绘制路径不再读取）
+      nodeAlpha: 0.025,
+      spread: 0.52,
       blobRadiusMin: 0.30,
       blobRadiusMax: 0.50,
-      cloudMargin: 36,           // 板块云半径 = 专属节点最大离心距 + 该余量
+      cloudMargin: 36,
       cloudRadiusMin: 160,
-      dilate: 1.45                // 纹理画布在内容范围外多留的边距
+      dilate: 1.45
     },
 
     /* ------------------------------------------------------------------
@@ -5031,772 +4981,139 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 </script>
 <script>
 /* ==========================================================================
-   数学星图 · 电子云背景
+   数学星图 · 电子云背景（ENG-010：全端统一的雾场）
    --------------------------------------------------------------------------
-   每个数学板块（region）在背景里渲染一团半透明彩色云雾：
-     · 一朵中心大雾 + 若干随机分布的软斑 + 每个节点周围的小斑
-     · 越靠近板块边界越淡（斑块本身是径向渐变，中心浓、边缘透明）
-     · 整块云先画在世界坐标的一张离屏纹理上，再随相机一起缩放绘制
-       → 拖动/缩放时只做一次 drawImage，性能稳定
-   页面大背景仍然是纯白。
+   一套实现，手机/桌面共用同一个世界坐标雾场纹理：
+     · 覆盖可见节点 bbox + 35% padding；
+     · 每个板块（region）在纹理上画一团径向渐变的柔和色雾；
+     · 纹理四周用 destination-in 径向羽化到 alpha=0，所以永远没有「云的边」；
+     · 每帧只按世界坐标 drawImage 一次（视口相交块），不做任何逐点绘制。
+   页面大背景仍然是纯白（深色主题由 CSS 变量决定）。
    ========================================================================== */
 (function (global) {
   'use strict';
   var MG = (global.MG = global.MG || {});
   var U = MG.util;
 
-  /**
-   * 建一张覆盖全部内容的云雾纹理。
-   * isVisible 可选：藏起来的点不再往云里加斑；整团都藏光 → 连云一起收掉。
-   * （所以「只看测度论」时，背景也跟着瘦成那一块，不会有空云飘着）
-   */
-  /** 手机竖屏：小点云。纹理缩小后粒子会被压成一片糊，直接按屏幕坐标画点。 */
-  function buildParticles(graph, ok) {
-    var bc = MG.config.background;
-    var per = Math.max(4, bc.mobileParticles == null ? 15 : bc.mobileParticles);
-    var core = bc.mobileCore == null ? 48 : bc.mobileCore;     // 世界单位
-    var halo = Math.max(core, bc.mobileHalo == null ? 130 : bc.mobileHalo);
-    var a0 = bc.mobileAlpha == null ? 0.20 : bc.mobileAlpha;
-    var aVar = bc.mobileAlphaVar == null ? 0.20 : bc.mobileAlphaVar;
-    /* 点径是**世界坐标里的常数**（用户拍板：绝对大小不变，像沙粒）：
-       屏幕上的边长 = mobileDotSize × cam.k —— 放大时点自然变大、缩小时变小，
-       不做屏幕最小钳制。适配档 k≈0.06 时是亚像素（互相叠成雾），k=1 时才看得到颗粒。 */
-    var dotSize = bc.mobileDotSize == null ? 2.0 : bc.mobileDotSize;
-    /* 亮星：约 6–10% 的粒子在**世界坐标里**略大（1.3–1.6×），颜色仍取所属领域色，
-       核心提亮到近白；它们不是星芒，只是「更亮更大的柔光点」——
-       光晕在 drawParticles 的 glowPass 里统一按世界半径铺开。 */
-    var starRatio = bc.mobileStarRatio == null ? 0.08 : bc.mobileStarRatio;
-    var starScaleMin = bc.mobileStarScaleMin == null ? 1.3 : bc.mobileStarScaleMin;
-    var starScaleVar = bc.mobileStarScaleVar == null ? 0.3 : bc.mobileStarScaleVar;
-    var starAlpha = bc.mobileStarAlpha == null ? 0.62 : bc.mobileStarAlpha;
-    var count = 0, starCount = 0;
-    /* 领域底光：只有一粒一粒的点时，整片云像浮在白底上的一层彩色噪点；
-       在每个领域统计圆的位置铺一层很淡的色晕（不是原来的纹理，纯屏幕空间渐变），
-       点云背后才有「深处还有一层云」的层次。alpha 只给 0.05 上下。 */
-    var regs = [];
-    (graph.regions || []).forEach(function (r) {
-      if (!r.stat) return;
-      var rr = U.hexToRgb(r.color || '#7A8699');
-      regs.push({
-        x: r.stat.cx, y: r.stat.cy,
-        r: Math.max(4, r.stat.radius),
-        css: rr.r + ',' + rr.g + ',' + rr.b
-      });
-    });
-    /* 粒子按「颜色 × 透明度档」分桶：每帧只切几十次 fillStyle/globalAlpha，
-       一万多个点只做 fillRect。逐点改样式的话，手机上一帧要切上万次状态。 */
-    var groups = [], gmap = {};
-    function bucket(col, alpha) {
-      var ai = Math.max(0, Math.min(9, Math.round((alpha - a0) / 0.04)));
-      var key = col + '|' + ai;
-      var g = gmap[key];
-      if (!g) {
-        g = gmap[key] = { col: col, a: a0 + ai * 0.04, pts: [] };
-        groups.push(g);
-      }
-      return g;
-    }
-    /* 亮星单独分桶：它们的 alpha 更高、核心色更白，混进尘埃组会把整片雾提亮。
-       同一领域色的星共用一个组，每帧只多切几次样式；星芒按点各自的 p.s 画。 */
-    var starGroups = [], smap = {};
-    function starBucket(col, coreCol) {
-      var g = smap[col];
-      if (!g) {
-        g = smap[col] = { col: col, coreCol: coreCol, a: starAlpha, pts: [] };
-        starGroups.push(g);
-      }
-      return g;
-    }
-    /* 固定密度：每节点 per 颗，**不随 cam.k 变化**。
-       点径固定 1px 级时，若密度再随缩放分档，小尺度就会「什么都看不见」；
-       所以所有尺度共用同一套常数密度。k 大时只画视口内节点的点
-       （下面 drawParticles 按节点中心裁），放大后不会把全图的点全扫一遍。 */
-    var nxs = [], nys = [];
-    var bx0 = Infinity, by0 = Infinity, bx1 = -Infinity, by1 = -Infinity;
-    (graph.nodes || []).forEach(function (n) {
-      if (!ok(n.id)) return;
-      if (n.x < bx0) bx0 = n.x; if (n.x > bx1) bx1 = n.x;
-      if (n.y < by0) by0 = n.y; if (n.y > by1) by1 = n.y;
-      var rid = (n.regions && n.regions[0]) || '';
-      var reg = graph.regionById && graph.regionById[rid];
-      var rgb = U.hexToRgb((reg && reg.color) || '#7A8699');
-      var col = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
-      var seed = U.rngFrom(n.id + ':mobile-particle', MG.config.seed);
-      /* 亮星挑选用独立种子：刷新/重建结果不变，且不会打乱尘埃点的位置序列。 */
-      var starSeed = U.rngFrom(n.id + ':mobile-star', MG.config.seed);
-      var coreCol = 'rgb(' +
-        Math.round(rgb.r + (255 - rgb.r) * 0.72) + ',' +
-        Math.round(rgb.g + (255 - rgb.g) * 0.72) + ',' +
-        Math.round(rgb.b + (255 - rgb.b) * 0.72) + ')';
-      var deg = n.degree || 0;
-      /* 度大的枢纽点多撒几颗、亮一点 —— 适配档下整片云因此有「骨架」，
-         而不是均匀的一层噪点。 */
-      var cnt = per + (deg >= 10 ? 4 : deg >= 5 ? 2 : deg >= 2 ? 1 : 0);
-      var aBase = a0 + Math.min(0.06, deg * 0.006);
-      var ni = nxs.length;
-      nxs.push(n.x); nys.push(n.y);
-      for (var j = 0; j < cnt; j++) {
-        var ang = seed() * Math.PI * 2;
-        /* 七成落在核心（适配档 k≈0.06 ⇒ 约 3 CSS px 的一小团），三成拉到外圈做晕；
-           半径用 sqrt 抖动 ⇒ 面密度均匀，不会在核心边缘堆出一圈。 */
-        var rad = seed() < 0.7
-          ? Math.sqrt(seed()) * core
-          : core + Math.sqrt(seed()) * (halo - core);
-        var px = n.x + Math.cos(ang) * rad;
-        var py = n.y + Math.sin(ang) * rad;
-        var aP = aBase + seed() * aVar;
-        var isStar = starSeed() < starRatio;
-        var sScale = starScaleMin + starSeed() * starScaleVar;
-        if (isStar) {
-          starBucket(col, coreCol).pts.push({ x: px, y: py, s: dotSize * sScale, ni: ni });
-          starCount++;
-        } else {
-          bucket(col, aP).pts.push({ x: px, y: py, s: dotSize, ni: ni });
-        }
-        count++;
-      }
-    });
-    /* ---- 雾场纹理（ENG-009）----------------------------------------------
-       原来每帧按 region 逐个 createRadialGradient 铺雾：每个圆半径有限，
-       并集的外缘在透明背景下就是一条「云的边」。现在一次性烘一张低分辨率
-       雾场纹理：覆盖内容 bbox + 35% padding，四周用径向羽化到 alpha=0，
-       每帧只 drawImage 一次。 */
-    var fog = null;
-    if (regs.length && isFinite(bx0)) {
-      var padW = 0.35 * Math.max(bx1 - bx0, by1 - by0);
-      var fx = bx0 - padW, fy = by0 - padW;
-      var fw = (bx1 - bx0) + 2 * padW, fh = (by1 - by0) + 2 * padW;
-      var fs = Math.min(768 / Math.max(fw, fh), 2);
-      var cwT = Math.max(2, Math.round(fw * fs)), chT = Math.max(2, Math.round(fh * fs));
-      var fcv = document.createElement('canvas');
-      fcv.width = cwT; fcv.height = chT;
-      var fctx = fcv.getContext('2d');
-      fctx.setTransform(fs, 0, 0, fs, -fx * fs, -fy * fs);
-      for (var fi = 0; fi < regs.length; fi++) {
-        var fg = regs[fi], FR = Math.max(4, fg.r);
-        var grd = fctx.createRadialGradient(fg.x, fg.y, 0, fg.x, fg.y, FR);
-        grd.addColorStop(0, 'rgba(' + fg.css + ',0.36)');
-        grd.addColorStop(0.55, 'rgba(' + fg.css + ',0.22)');
-        grd.addColorStop(0.85, 'rgba(' + fg.css + ',0.07)');
-        grd.addColorStop(1, 'rgba(' + fg.css + ',0)');
-        fctx.fillStyle = grd;
-        fctx.beginPath(); fctx.arc(fg.x, fg.y, FR, 0, Math.PI * 2); fctx.fill();
-      }
-      /* 外缘羽化：destination-in 只保留中间一大块椭圆（最后 20% 渐隐），
-         纹理四周 alpha 必为 0 —— 透明背景下不再出现「一块云的边」。 */
-      fctx.setTransform(1, 0, 0, 1, 0, 0);
-      fctx.globalCompositeOperation = 'destination-in';
-      var cT = cwT / 2, cY = chT / 2;
-      var RT = 0.5 * Math.sqrt(cwT * cwT + chT * chT);
-      var fade = fctx.createRadialGradient(cT, cY, 0, cT, cY, RT);
-      fade.addColorStop(0, 'rgba(0,0,0,1)');
-      fade.addColorStop(0.80, 'rgba(0,0,0,1)');
-      fade.addColorStop(1, 'rgba(0,0,0,0)');
-      fctx.fillStyle = fade;
-      fctx.fillRect(0, 0, cwT, chT);
-      fctx.globalCompositeOperation = 'source-over';
-      fog = { canvas: fcv, x: fx, y: fy, w: fw, h: fh, alpha: 0.36, cw: cwT, ch: chT };
-    }
-    return {
-      mobile: true, groups: groups, starGroups: starGroups, fog: fog,
-      count: count, starCount: starCount,
-      regions: regs,
-      nxs: nxs, nys: nys
-    };
+  /* 纹理分辨率：长边与总像素都设上限（这张纹理每帧要整张重铺一次）。
+     2048 长边在 1600×900 的适配档约等于 0.47 屏幕像素/texel（缩小时更细），
+     390×844 手机上更小，不会糊成方块。 */
+  function texSizeFor(w, h, bc) {
+    var maxSide = bc.fogMaxSide || 2048;
+    var maxPx = bc.fogMaxPixels || 4200000;
+    var s = Math.min(maxSide / Math.max(w, h), Math.sqrt(maxPx / (w * h)));
+    s = Math.max(0.02, s);
+    return { tw: Math.max(64, Math.round(w * s)), th: Math.max(64, Math.round(h * s)) };
   }
 
   function buildTexture(graph, isVisible) {
     var bc = MG.config.background;
     var ok = isVisible || function () { return true; };
-    var bb = graph.bbox();
 
-    var mobile = !!(window.matchMedia && window.matchMedia('(max-width: 700px)').matches);
-    if (mobile) return buildParticles(graph, ok);
-
-    var pad = 300;
-    var minX = bb.minX - pad, minY = bb.minY - pad;
-    var maxX = bb.maxX + pad, maxY = bb.maxY + pad;
-    var w = (maxX - minX) * bc.dilate;
-    var h = (maxY - minY) * bc.dilate;
-    minX -= (w - (maxX - minX)) / 2;
-    minY -= (h - (maxY - minY)) / 2;
-
-    /* 纹理分辨率：按世界尺寸自适应。
-       ⚠️ 曾固定成 1024×768（还按 4:3 硬拉成一块方形的世界区域 ⇒ 撒点被拉成椭圆），
-       实际只有 6.9 世界单位/像素；同样的世界尺寸下，配置里的 texScale 是 0.19。
-       现在按 texScale 取，再用 maxSide / maxPixels 兜底 —— 既拿到像素预算内的细节，
-       又不会超 GPU 纹理上限（部分环境只有 4096）或吃出几十 MB 内存。 */
-    var maxSide = bc.texMaxSide || 2048;
-    var maxPx = bc.texMaxPixels || 4200000;
-    var sr = Math.min(bc.texScale || 0.19,
-      maxSide / Math.max(w, h),
-      Math.sqrt(maxPx / (w * h)));
-    sr = Math.max(0.02, sr);
-    var TW = Math.max(128, Math.round(w * sr));
-    var TH = Math.max(128, Math.round(h * sr));
-    var sx = TW / w, sy = TH / h;
-
-    var cv = document.createElement('canvas');
-    cv.width = TW; cv.height = TH;
-    var ctx = cv.getContext('2d', { willReadFrequently: true });
-    ctx.globalCompositeOperation = 'lighter';
-    /* 世界坐标 → 纹理像素。下面一律用世界单位画（渐变的半径也交给 CTM 缩放），
-       不再手算 scx/scy —— 分辨率改了也不会漏改一处。 */
-    ctx.setTransform(sx, 0, 0, sy, -minX * sx, -minY * sy);
-
-    /* ⭐ 领域大云：整块领域的色底（每节点小雾只够做颗粒）。 */
-    (graph.regions || []).forEach(function (reg) {
-      if (!reg.stat) return;
-      var rgb0 = U.hexToRgb(reg.color || '#7A8699');
-      var pr0 = Math.max(4, reg.stat.radius * 1.02);
-      var g0 = ctx.createRadialGradient(reg.stat.cx, reg.stat.cy, 0, reg.stat.cx, reg.stat.cy, pr0);
-      var s0 = rgb0.r + ',' + rgb0.g + ',' + rgb0.b + ',';
-      g0.addColorStop(0, 'rgba(' + s0 + '0.085)');
-      g0.addColorStop(0.45, 'rgba(' + s0 + '0.055)');
-      g0.addColorStop(0.72, 'rgba(' + s0 + '0.022)');
-      g0.addColorStop(0.88, 'rgba(' + s0 + '0.008)');
-      g0.addColorStop(1, 'rgba(' + s0 + '0)');
-      ctx.fillStyle = g0;
-      ctx.beginPath(); ctx.arc(reg.stat.cx, reg.stat.cy, pr0, 0, Math.PI * 2); ctx.fill();
-    });
-    /* ⭐ 节点泼溅：加法叠加成密度场（颜色 = 各领域色按落点叠加，浓淡由 Σalpha 给出）。 */
-    var drawn = 0;
+    /* 可见节点 bbox（隐藏节点不参与，和以前的可见性语义一致）。 */
+    var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     (graph.nodes || []).forEach(function (n) {
       if (!ok(n.id)) return;
-      var rid = (n.regions && n.regions[0]) || '';
-      var reg = graph.regionById && graph.regionById[rid];
-      var hex = (reg && reg.color) || '#7A8699';
-      var rgb = U.hexToRgb(hex);
-      var pr = Math.max(2, (bc.splatRadius == null ? 150 : bc.splatRadius));   // 世界单位
-      var gC = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, pr);
-      /* ⚠️ 曲线必须有「尾巴」：以前是 0.05 → 0 的直线渐变，单个撒点的边缘是一条
-         斜率突变（−a/R → 0）的圆弧 —— 1540 个叠起来，每个都留下一个看得见的圆边，
-         整片云像一堆肥皂泡（用户原话「看着星云有点难看」）。
-         这里在 0.78 之后把透明度压到 0.014 → 0.005 → 0，斜率平滑接到 0。 */
-      gC.addColorStop(0, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.050)');
-      gC.addColorStop(0.35, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.042)');
-      gC.addColorStop(0.60, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.028)');
-      gC.addColorStop(0.78, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.014)');
-      gC.addColorStop(0.90, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.005)');
-      gC.addColorStop(1, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0)');
-      ctx.fillStyle = gC;
-      ctx.beginPath(); ctx.arc(n.x, n.y, pr, 0, Math.PI * 2); ctx.fill();
-      drawn++;
+      if (n.x < minX) minX = n.x;
+      if (n.x > maxX) maxX = n.x;
+      if (n.y < minY) minY = n.y;
+      if (n.y > maxY) maxY = n.y;
+    });
+    if (!isFinite(minX)) { minX = -100; minY = -100; maxX = 100; maxY = 100; }
+
+    /* +35% padding：雾在内容外侧还有一大圈，视口贴在内容边上时也不会露出纹理边。 */
+    var pad = Math.max(1, (bc.fogPadRatio == null ? 0.35 : bc.fogPadRatio)
+      * Math.max(maxX - minX, maxY - minY));
+    var x0 = minX - pad, y0 = minY - pad;
+    var w = (maxX - minX) + 2 * pad, h = (maxY - minY) + 2 * pad;
+
+    var ts = texSizeFor(w, h, bc);
+    var TW = ts.tw, TH = ts.th;
+    var cv = document.createElement('canvas');
+    cv.width = TW; cv.height = TH;
+    var ctx = cv.getContext('2d');
+    /* 世界坐标 → 纹理像素，下面一律用世界单位画。 */
+    ctx.setTransform(TW / w, 0, 0, TH / h, -x0 * TW / w, -y0 * TH / h);
+
+    var alpha0 = bc.fogAlpha == null ? 0.085 : bc.fogAlpha;
+    var regions = 0;
+    (graph.regions || []).forEach(function (reg) {
+      if (!reg.stat) return;
+      var rgb = U.hexToRgb(reg.color || '#7A8699');
+      var c = rgb.r + ',' + rgb.g + ',' + rgb.b + ',';
+      var pr = Math.max(4, reg.stat.radius * 1.05);
+      var g = ctx.createRadialGradient(reg.stat.cx, reg.stat.cy, 0, reg.stat.cx, reg.stat.cy, pr);
+      /* 五档平滑尾：0.45 之后一路压到 0，避免外缘出现「浓度突然掉到 0」的硬边。 */
+      g.addColorStop(0, 'rgba(' + c + alpha0 + ')');
+      g.addColorStop(0.45, 'rgba(' + c + (alpha0 * 0.62) + ')');
+      g.addColorStop(0.72, 'rgba(' + c + (alpha0 * 0.24) + ')');
+      g.addColorStop(0.88, 'rgba(' + c + (alpha0 * 0.08) + ')');
+      g.addColorStop(1, 'rgba(' + c + '0)');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(reg.stat.cx, reg.stat.cy, pr, 0, Math.PI * 2); ctx.fill();
+      regions++;
     });
 
-    /* ⭐ 粒子化：把密度场的**低密度尾巴**改成离散颗粒。
-       原来整片云都是连续 alpha ⇒ 最外侧一圈是一条浓度平滑掉到 0 的「边」，
-       放大看是一整块糊雾的硬轮廓。现在按 alpha 决定保留概率：
-       中心（α ≥ particleEdge）保持连续；越往外点越稀，到 α→0 时几乎只剩零星颗粒。
-       期望墨量保持不变（out = A^γ · α^(1−γ)，p = (α/A)^γ），所以整体浓淡不变，
-       只是边缘从「一条边」变成「一层散开的粒子」。
-
-       ⚠️ 顺序必须是「先模糊、后点粒子」：早先把 stipple 放在 smoothTexture 之前，
-       每个粒子只有 2~4 texel，再被 blur(1.6) 抹平 ⇒ 屏幕上根本看不出颗粒，
-       等于白做。现在雾先糊好、dither 抹掉，再在干净的雾上戳粒子。 */
-    var tex = smoothTexture(cv, bc.texBlur == null ? 1.6 : bc.texBlur);
-    var tctx = tex.getContext('2d');
-    var img = tctx.getImageData(0, 0, tex.width, tex.height);
-    stipple(img.data, tex.width, tex.height, bc, sx);
-    tctx.putImageData(img, 0, 0);
-
-    return {
-      canvas: tex,
-      x: minX, y: minY, w: w, h: h,
-      scale: 1,
-      regions: drawn,
-      clusters: 0
-    };
-  }
-
-  /**
-   * 把密度场外侧的低 alpha 区打散成粒子。
-   * 在 texel 网格上取格子（世界尺寸 ≈ particleCell）：格内 alpha 决定「这里留不留粒子、
-   * 留多亮」，粒子的**位置用哈希抖动**，不落在格心 —— 否则整片云是一张规则的网点纸
-   * （实测：不抖动时 k=0.5 看上去像印刷半调）。粒子是带余弦衰减的圆点，不是方块。
-   * 哈希按格子坐标算：同一张图每次建纹理都长一样，不会抖。
-   */
-  function stipple(d, W, H, bc, sx) {
-    var edge = bc.particleEdge == null ? 0.10 : bc.particleEdge;
-    if (!(edge > 0)) return;
-    var gamma = bc.particleGamma == null ? 0.75 : bc.particleGamma;
-    var cell = Math.max(2, Math.round((bc.particleCell || 6) * sx));
-    var A = Math.max(1, Math.min(255, Math.round(edge * 255)));
-    var Ag = Math.pow(A / 255, gamma);
-    var invA = 1 / A;
-    var rad = cell * 0.46;
-    var rad2 = rad * rad;
-    var half = cell * 0.5;
-    var cols = Math.ceil(W / cell), rows = Math.ceil(H / cell);
-    var dots = new Uint8Array(cols * rows);   // 每格决定：0 = 不留粒子，否则 = 粒子中心 alpha
-
-    /* 第 1 遍：在**原始** alpha 上做决定（抖动点取原图，不能先抹再取）。 */
-    for (var gy = 0, gyi = 0; gy + cell <= H; gy += cell, gyi++) {
-      for (var gx = 0, gxi = 0; gx + cell <= W; gx += cell, gxi++) {
-        var jx = gx + half + (hash01(gx + 11, gy + 3) - 0.5) * cell * 0.9;
-        var jy = gy + half + (hash01(gx + 47, gy + 29) - 0.5) * cell * 0.9;
-        var px = Math.min(W - 1, Math.max(0, Math.round(jx)));
-        var py = Math.min(H - 1, Math.max(0, Math.round(jy)));
-        var a = d[((py * W + px) << 2) + 3];
-        if (!a || a >= A) continue;             // 内部：保持连续的雾
-        var af = a / 255;
-        var p = Math.pow(af * 255 * invA, gamma);   // 保留概率
-        if (hash01(gx + 101, gy + 197) >= p) continue;
-        dots[gyi * cols + gxi] = Math.max(1, Math.round(255 * Ag * Math.pow(af, 1 - gamma)));
-      }
-    }
-
-    /* 第 2 遍：把连续雾里 alpha 低于阈值的那部分**抹掉** —— 否则边缘仍是那层糊雾，
-       粒子只是加在上面（第一版就是这个病：4× 放大看，粒子背后还有一条连续的边）。
-       逐像素按真实 alpha 抹，边界沿着浓度等值线走，不是格子的台阶。 */
-    for (var i = 3; i < d.length; i += 4) if (d[i] < A) d[i] = 0;
-
-    /* 第 3 遍：把留下的粒子盖成带余弦衰减的圆点（可能压到相邻格子，只取更亮的值）。 */
-    for (var ry = 0, ryi = 0; ry + cell <= H; ry += cell, ryi++) {
-      for (var rx = 0, rxi = 0; rx + cell <= W; rx += cell, rxi++) {
-        var na = dots[ryi * cols + rxi];
-        if (!na) continue;
-        var dx0 = rx + half + (hash01(rx + 11, ry + 3) - 0.5) * cell * 0.9;
-        var dy0 = ry + half + (hash01(rx + 47, ry + 29) - 0.5) * cell * 0.9;
-        var x0 = Math.max(0, Math.floor(dx0 - rad)), x1 = Math.min(W - 1, Math.ceil(dx0 + rad));
-        var y0 = Math.max(0, Math.floor(dy0 - rad)), y1 = Math.min(H - 1, Math.ceil(dy0 + rad));
-        for (var yy = y0; yy <= y1; yy++) {
-          var dy = yy + 0.5 - dy0;
-          var base = (yy * W) << 2;
-          for (var xx = x0; xx <= x1; xx++) {
-            var dx = xx + 0.5 - dx0;
-            var d2 = dx * dx + dy * dy;
-            if (d2 > rad2) continue;
-            var f = 0.5 + 0.5 * Math.cos(Math.PI * Math.sqrt(d2) / rad);  // 中心 1、边缘 0
-            var ai = base + (xx << 2) + 3;
-            var v = Math.round(na * f);
-            if (v > d[ai]) d[ai] = v;
-          }
-        }
-      }
-    }
-  }
-
-  /* 稳定哈希 → [0,1)。Math.imul 避免 32 位溢出的浮点误差。 */
-  function hash01(x, y) {
-    var h = Math.imul(x, 374761393) + Math.imul(y, 668265263);
-    h = Math.imul(h ^ (h >>> 13), 1274126177);
-    h = h ^ (h >>> 16);
-    return (h >>> 0) / 4294967296;
-  }
-
-  /**
-   * 把建好的纹理过一遍小半径模糊 —— **抹掉 Skia 给低对比渐变加的 dither**。
-   *
-   * ⚠️ 为什么必须抹（用户实测：「电脑和平板看云雾放很大就有点点，手机正常」）：
-   * 径向渐变是**逐像素抖动**上色的（防止大面积渐变色带）。这张纹理只按
-   * `texScale = 0.19` × 世界尺寸建，用的时候要放大约 `k / 0.19` = 5~40 倍
-   * ⇒ 抖动被放大成屏幕上一张**周期约 2 texel 的格子**（k=4、dpr=1 时约 42px）。
-   * 手机上看不出来只是因为屏幕小、像素密度高，同一张纹理在同样的放大倍率下
-   * 落到眼睛里的空间频率更高（外加手机那边的截屏压缩把这点差异抹平了）。
-   *
-   * 实测（k=4、dpr=1，4-邻域拉普拉斯绝对值均值，越小越干净）：
-   *   纹理自身 13.27 → 0.99 ｜ 实际显示的云雾层 1.06 → 0.05（差 20 倍，截图对比肉眼可见）。
-   * 半径 1.6 纹理像素 ≈ 8 个世界单位 —— 云雾本来就是一团糊的雾，形状与浓淡肉眼无差别。
-   * 成本：建一次 8.9ms 上再加 0.2ms（只在开页 / 改显隐时发生，不在每帧路径上）。
-   * 兜底：没有 `ctx.filter` 的环境（Safari < 16.4）退化成「减半再放大」，同样够抹平抖动。
-   */
-  function smoothTexture(src, r) {
-    if (!(r > 0)) return src;
-    var out = document.createElement('canvas');
-    out.width = src.width; out.height = src.height;
-    /* ⚠️ 不要把这张画布设成 willReadFrequently：它是每帧都要重铺的纹理，
-       要留在 GPU 上。粒子化那一次 getImageData 是一次性开销，值得换。 */
-    var ctx = out.getContext('2d');
-    ctx.imageSmoothingEnabled = true;
-    if ('filter' in ctx) {
-      ctx.filter = 'blur(' + r + 'px)';
-      ctx.drawImage(src, 0, 0);
-      return out;
-    }
-    var half = document.createElement('canvas');
-    half.width = Math.max(1, src.width >> 1);
-    half.height = Math.max(1, src.height >> 1);
-    var hx = half.getContext('2d');
-    hx.imageSmoothingEnabled = true; hx.imageSmoothingQuality = 'high';
-    hx.drawImage(src, 0, 0, half.width, half.height);
-    ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(half, 0, 0, out.width, out.height);
-    return out;
-  }
-
-  /**
-   * 星团的云：比星系云更小、更浓，用星团自己的颜色（没写就继承星系）
-   * list 是这一团里「还看得见」的节点 —— 藏了一半，云也跟着缩一半。
-   */
-  function paintCluster(ctx, c, list, graph, bc) {
-    var cc = MG.config.cluster;
-    var galaxy = graph.galaxyOf ? graph.galaxyOf(c) : null;
-    var rgb = U.hexToRgb(c.color || (galaxy ? galaxy.color : '#7A8699'));
-    var R = fitRadius(list, cc.cloudMinRadius, cc.cloudPadding);
-    var cx = centroid(list).x, cy = centroid(list).y;
-    var rand = U.rngFrom(c.id, MG.config.seed);
-
-    nebula(ctx, rgb, cx, cy, R * 0.98, cc.cloudAlpha * 1.15, rand);
-
-    /* 每个节点周围也来一小块（长尾）—— 云的形状跟着内容走，不是凭空一个圆盘。
-       ⚠️ 以前这里是 `blob(..., R*0.24, cloudAlpha*0.8)`：半径小、浓度实，
-       一块一块在缩小时就是一圈看得见的小圆点。换成长尾、半径放一档、浓度补一点。 */
-    list.forEach(function (n) {
-      softBlob(ctx, rgb, n.x, n.y, R * 0.30, cc.cloudAlpha * 0.95);
-    });
-  }
-
-  function centroid(list) {
-    if (!list.length) return { x: 0, y: 0 };
-    var x = 0, y = 0;
-    list.forEach(function (n) { x += n.x; y += n.y; });
-    return { x: x / list.length, y: y / list.length };
-  }
-
-  /** 一群点需要多大的云：最远的一颗 + 余量（有下限，免得缩成一点） */
-  function fitRadius(list, minR, padding) {
-    if (!list.length) return minR;
-    var c = centroid(list), maxd = 0;
-    list.forEach(function (n) { maxd = Math.max(maxd, U.dist(n.x, n.y, c.x, c.y)); });
-    return Math.max(minR, maxd + padding);
-  }
-
-  function paintRegion(ctx, region, list, bc) {
-    var rgb = U.hexToRgb(region.color);
-    var cx = region.center.x, cy = region.center.y;   // 星系的云以星系中心为心（和星系名一致）
-
-    /* ⚠️ 半径只能按「主要属于这个星系」的点算。
-       跨星系的点（regions 里写了两个）会被布局摆到**另一个**星系那边去，
-       拿它们定半径，一朵云就会撑满整屏 —— 拓扑学只有 12 个成员，其中 4 个
-       是 analysis 那侧的（Borel、积 σ-代数…），曾把整屏糊成粉色。
-       规则与 layout.js 里算 stat.radius 时一致：跨星系的点不参与。 */
-    var core = list.filter(function (n) { return !n.isBorder; });
-    var basis = core.length >= 2 ? core : list;
-    /* ⭐ 阶段 4：半径改用 **92 分位**而不是最大值。
-       ⚠️ 这里和 layout.js 的 stat.radius 是**两处独立计算** —— 上一刀改的是
-       layout 那处，截图逐字节没变，就是因为云其实用的是这里的 maxd。
-       几个离心很远的点（尤其跨板块的）会把 max 拉长一大截，而那里并没有点，
-       云就糊成一大片。分位数保住「包住内容」，又不为个别远点空摊。 */
-    var ds = basis.map(function (n) { return U.dist(n.x, n.y, cx, cy); }).sort(function (a, b) { return a - b; });
-    var maxd = ds.length ? ds[Math.min(ds.length - 1, Math.floor(ds.length * 0.92))] : 0;
-    var R = Math.max(bc.cloudRadiusMin, maxd + bc.cloudMargin);
-    var rand = U.rngFrom(region.id, MG.config.seed);
-
-    /* 1) 板块中心的大团雾 —— 界定「这块地方属于谁」 */
-    blob(ctx, rgb, cx, cy, R, bc.centerAlpha * 1.15);
-
-    /* 2) 随机软斑 —— 让云看起来不规整 */
-    for (var i = 0; i < bc.blobsPerRegion; i++) {
-      var ang = rand() * Math.PI * 2;
-      var rad = Math.sqrt(rand()) * R * bc.spread;
-      var x = cx + Math.cos(ang) * rad;
-      var y = cy + Math.sin(ang) * rad;
-      var br = R * U.lerp(bc.blobRadiusMin, bc.blobRadiusMax, rand());
-      var a = bc.blobAlpha * U.lerp(0.55, 1.25, rand());
-      blob(ctx, rgb, x, y, br, a);
-    }
-
-    /* 3) 每个（看得见的）节点周围的小斑 —— 让云的形状跟着内容走 */
-    basis.forEach(function (n) {
-      blob(ctx, rgb, n.x, n.y, R * 0.30, bc.nodeAlpha);
-    });
-  }
-
-  function blob(ctx, rgb, x, y, r, alpha) {
-    if (r <= 0 || alpha <= 0) return;
-    var g = ctx.createRadialGradient(x, y, 0, x, y, r);
-    g.addColorStop(0.00, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',' + (alpha).toFixed(4) + ')');
-    g.addColorStop(0.42, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',' + (alpha * 0.62).toFixed(4) + ')');
-    g.addColorStop(0.74, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',' + (alpha * 0.22).toFixed(4) + ')');
-    g.addColorStop(1.00, 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0)');
-    ctx.fillStyle = g;
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fill();
-  }
-
-  /**
-   * 长尾软斑：画法与 `blob` 完全一样（一个圆 + 一条径向渐变），只是曲线更「散」
-   * —— 中心更淡、尾巴更长。
-   *
-   * ⚠️ 为什么星团那一层要用它：`blob` 的浓度在 0.74r 处还有 0.22（≈中心的两成），
-   * 到 r 才掉到 0 —— 一块一块看得见「边」。星团云是几十块叠出来的，用 blob 叠出来的
-   * 结果就是一圈看得清的小圆点（用户原话：「就是一个圆圈看着很怪」）。
-   * 这条曲线从 0.38r 起就一路往下滑（0.40 → 0.22 → 0.095 → 0.032 → 0），
-   * 叠出来的整体才是「越往外越淡、最后化没」，没有边界可言。
-   * 代价是同样半径下总墨量约为 blob 的 0.79 —— 调用处把半径放大了一档补回来。
-   */
-  function softBlob(ctx, rgb, x, y, r, alpha) {
-    if (r <= 0 || alpha <= 0) return;
-    var g = ctx.createRadialGradient(x, y, 0, x, y, r);
-    var s = rgb.r + ',' + rgb.g + ',' + rgb.b + ',';
-    g.addColorStop(0.00, 'rgba(' + s + alpha.toFixed(4) + ')');
-    g.addColorStop(0.18, 'rgba(' + s + (alpha * 0.66).toFixed(4) + ')');
-    g.addColorStop(0.38, 'rgba(' + s + (alpha * 0.40).toFixed(4) + ')');
-    g.addColorStop(0.58, 'rgba(' + s + (alpha * 0.22).toFixed(4) + ')');
-    g.addColorStop(0.78, 'rgba(' + s + (alpha * 0.095).toFixed(4) + ')');
-    g.addColorStop(0.92, 'rgba(' + s + (alpha * 0.032).toFixed(4) + ')');
-    g.addColorStop(1.00, 'rgba(' + s + '0)');
-    ctx.fillStyle = g;
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fill();
-  }
-
-  /**
-   * 星团的**星云**：一团长尾柔雾做底 + 一圈角度铺满的软絮 + 几块大而淡的内部絮。
-   *
-   * ⚠️ 三条刻意的做法，都是为了让团云**没有边界**：
-   *   ① 一律用 `softBlob`（长尾曲线）—— 用 `blob` 会叠出一圈看得清的小圆点；
-   *   ② 絮的半径由内向外散开（`t` 取 1−√u：中心密、外面疏），
-   *      每絮的浓度按 `fade = (1−t)^1.45` **越往外越淡**，最外一层正好为 0；
-   *   ③ 外面的絮同时也更小 —— 边缘才是碎的，不是一圈珠子。
-   * 于是星云是从中心一层层淡出去的，找不出一条边。
-   * 角度仍按槽位铺满一圈（纯随机取角会留空洞，缩小时看着像「一圈点」）；
-   * 起伏与相位的种子由星团 id 定 —— 每个团长不一样，同一个团每次打开长一样（不会抖）。
-   */
-  function nebula(ctx, rgb, x, y, r, alpha, rand) {
-    if (r <= 0 || alpha <= 0) return;
-    var TWO = Math.PI * 2;
-
-    /* 1) 核：一大团长尾柔雾 —— 缩得很小时这一团还是一块有颜色的地方，
-          也是「星团比星系云更密」这件事的主要来源（团云没有自己的颜色，只有浓度） */
-    softBlob(ctx, rgb, x, y, r * 1.02, alpha * 0.26);
-
-    /* 2) 软絮：角度铺满一圈，半径由内向外散开，越往外越淡、越小 */
-    var n = 26;
-    var p1 = rand() * TWO, p2 = rand() * TWO, p3 = rand() * TWO;
-    for (var i = 0; i < n; i++) {
-      var th = i / n * TWO + (rand() - 0.5) * 0.5;
-      var wob = 1
-        + 0.15 * Math.sin(3 * th + p1)
-        + 0.10 * Math.sin(5 * th + p2)
-        + 0.06 * Math.sin(8 * th + p3);
-      var t = 1 - Math.sqrt(rand());                 // 0 = 中心，1 = 最外
-      var rr = r * wob * (0.12 + 1.18 * t);
-      var fade = Math.pow(1 - t, 1.45);              // ⭐ 越往外越淡，到 t=1 正好为 0
-      softBlob(ctx, rgb, x + Math.cos(th) * rr, y + Math.sin(th) * rr,
-        r * U.lerp(0.34, 0.16, t),                   // 外面的絮也更小
-        alpha * fade * U.lerp(0.75, 1.15, rand()));
-    }
-
-    /* 3) 内部大而淡的絮：星云的「不均匀」主要来自这里（只有小絮会显得平） */
-    for (var j = 0; j < 4; j++) {
-      var a2 = rand() * TWO, d2 = Math.sqrt(rand()) * r * 0.55;
-      softBlob(ctx, rgb, x + Math.cos(a2) * d2, y + Math.sin(a2) * d2,
-        r * U.lerp(0.24, 0.42, rand()),
-        alpha * U.lerp(0.20, 0.36, rand()) * (1 - 0.7 * d2 / (r * 0.55)));
-    }
-  }
-
-  /** 手机：按屏幕坐标画小点，不再缩放一张低分辨率纹理。 */
-  function drawParticles(ctx, cam, tex, dpr) {
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var k = cam.k, tx = cam.tx, ty = cam.ty;
-    var vw = cam.viewW || (ctx.canvas.width / dpr);
-    var vh = cam.viewH || (ctx.canvas.height / dpr);
-    var dark = false;
-    try { dark = document.documentElement.getAttribute('data-theme') === 'dark'; } catch (e) {}
-    /* 白底上一颗 α≈0.3 的淡色点几乎看不见，暗底上反而发亮 ⇒ 亮色主题抬一点。
-       主题是运行时切换的（不重建云），所以倍率必须在每帧这里算，不能烘进粒子。 */
-    var ga = dark ? 1.0 : 1.15;
-    /* 先铺领域底光（远处的一层雾），再压点云。
-       这层雾是**常数**：不随 cam.k 变，也不随点密度变档 —— 放大的时候
-       点与点之间总有空隙，由这层很淡的色雾把「云的体」托住。 */
-    var glow = dark ? 0.12 : 0.10;
-    /* 雾场纹理（ENG-009）：建云时烘好，这里只按世界坐标 drawImage 一次。
-       不再逐帧按 region 建 createRadialGradient —— 有限圆的并集外缘
-       就是透明背景上那条「云的边」。 */
-    var fogT = tex.fog;
-    if (fogT) {
-      /* 只把纹理与视口相交的那一小块贴到屏幕上：高倍时目标矩形被限制在
-         视口内，不会让光栅化器去处理一张放大到上万像素的图。 */
-      var wf0 = Math.max(fogT.x, -tx / k), hf0 = Math.max(fogT.y, -ty / k);
-      var wf1 = Math.min(fogT.x + fogT.w, (vw - tx) / k), hf1 = Math.min(fogT.y + fogT.h, (vh - ty) / k);
-      if (wf1 > wf0 && hf1 > hf0) {
-        ctx.save();
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        ctx.globalAlpha = Math.min(1, glow / (fogT.alpha || 0.36));
-        if ('imageSmoothingQuality' in ctx) ctx.imageSmoothingQuality = 'low';
-        ctx.drawImage(fogT.canvas,
-          (wf0 - fogT.x) / fogT.w * fogT.cw, (hf0 - fogT.y) / fogT.h * fogT.ch,
-          (wf1 - wf0) / fogT.w * fogT.cw, (hf1 - hf0) / fogT.h * fogT.ch,
-          wf0 * k + tx, hf0 * k + ty, (wf1 - wf0) * k, (hf1 - hf0) * k);
-        ctx.restore();
-      }
-    }
-    var groups = tex.groups || [];
-    /* 视口裁剪：只画「节点中心在视口附近」的点。放大时视口只覆盖几十个节点，
-       常数密度（约 1551×N 颗）也不会在 k=1 时全量扫一遍。
-       halo 取粒子最大外半径（世界单位），保证节点边缘的点不会被误裁。 */
-    var nxs = tex.nxs || [], nys = tex.nys || [];
-    var halo = MG.config.background.mobileHalo == null ? 130 : MG.config.background.mobileHalo;
-    var wx0 = (-tx) / k - halo, wx1 = (vw - tx) / k + halo;
-    var wy0 = (-ty) / k - halo, wy1 = (vh - ty) / k + halo;
-    /* ---- 辉光（glow）------------------------------------------------------
-       用户要「点光源那种发光」：中心亮核 + 四周柔和衰减的光晕，不要十字星芒。
-       尺寸依然全部来自世界坐标：光晕半径 = p.s × 0.5 × glowScale × k，
-       不做屏幕最小值/补偿。这里只按**屏幕光晕直径**做淡入（形状可见度切换）：
-       fit 档光晕直径只有零点几像素，淡入为 0，仍是雾/沙；放大了才逐点铺开。
-       性能：三层同心圆全部按颜色分桶、合并成 path 批量 fill —— 逐点
-       drawImage 在 390×844 软件画布上实测 5000 颗 6px sprite 要 20–30ms，
-       逐点 createRadialGradient 更慢，都不能用。 */
-    var bc2 = MG.config.background;
-    var glowScale = bc2.mobileGlowScale == null ? 3.0 : bc2.mobileGlowScale;
-    var glowAlpha = bc2.mobileGlowAlpha == null ? 0.10 : bc2.mobileGlowAlpha;
-    var glowMin = bc2.mobileGlowMinPx == null ? 2.0 : bc2.mobileGlowMinPx;
-    var glowRampPx = bc2.mobileGlowRampPx == null ? 1.6 : bc2.mobileGlowRampPx;
-    var SINGLE_GLOW = { f: 0.82, a: 0.80 };
-    var GLOW_LAYERS = [
-      { f: 1.00, a: 0.34 },   /* 最外圈，最淡 */
-      { f: 0.70, a: 0.42 },
-      { f: 0.46, a: 0.52 }    /* 贴近核心 */
-    ];
-    function glowRamp(sWorld) {
-      var dia = sWorld * k * glowScale;
-      if (dia <= glowMin) return 0;
-      var t = (dia - glowMin) / glowRampPx;
-      return t > 1 ? 1 : t;
-    }
-    function glowPass(list, boost, nLayers, stride) {
-      if (nLayers <= 0 || glowAlpha <= 0) return;
-      for (var li = 0; li < nLayers; li++) {
-        /* 只画一层时，把这一层加厚加亮，补偿缺掉的中间层；三层的场合仍用原表。 */
-        var L = (nLayers === 1) ? SINGLE_GLOW : GLOW_LAYERS[li];
-        for (var gj = 0; gj < list.length; gj++) {
-          var gg = list[gj], gpts = gg.pts;
-          var t = glowRamp(gpts.length ? gpts[0].s : 2) * boost;
-          if (t <= 0.02) continue;
-          ctx.fillStyle = gg.col;
-          ctx.globalAlpha = Math.min(0.9, glowAlpha * L.a * t * ga);
-          ctx.beginPath();
-          for (var pi = 0; pi < gpts.length; pi += (stride || 1)) {
-            var pp = gpts[pi];
-            if (nxs.length) {
-              var gx = nxs[pp.ni], gy = nys[pp.ni];
-              if (gx < wx0 || gx > wx1 || gy < wy0 || gy > wy1) continue;
-            }
-            var px = pp.x * k + tx, py = pp.y * k + ty;
-            var rr2 = pp.s * k * 0.5 * glowScale * L.f;
-            if (px + rr2 < 0 || py + rr2 < 0 || px - rr2 > vw || py - rr2 > vh) continue;
-            ctx.moveTo(px + rr2, py);
-            ctx.arc(px, py, rr2, 0, Math.PI * 2);
-          }
-          ctx.fill();
-        }
-      }
-    }
-    /* 辉光层数按**当前可见点数**决定：每颗点的辉光都是一条 path 元素，
-       软件光栅下实测约 0.6µs/个（k=1 时 4768 颗 × 3 层 ≈ 9ms）。
-       点少时给足三层（大光球），点多时只给一层，再多（缩小到雾）就不画 ——
-       此时光晕直径本来也只有几个像素，画了也看不出来。 */
-    var starGroups = tex.starGroups || [];
-    var visCount = 0;
-    function countVisible(list) {
-      var n = 0;
-      for (var ci = 0; ci < list.length; ci++) {
-        var cp = list[ci].pts;
-        for (var cj = 0; cj < cp.length; cj++) {
-          var cq = cp[cj];
-          var cx0 = nxs[cq.ni], cy0 = nys[cq.ni];
-          if (cx0 < wx0 || cx0 > wx1 || cy0 < wy0 || cy0 > wy1) continue;
-          var x0 = cq.x * k + tx, y0 = cq.y * k + ty, d0 = cq.s * k;
-          if (x0 < -d0 * 4 || y0 < -d0 * 4 || x0 > vw + d0 * 4 || y0 > vh + d0 * 4) continue;
-          n++;
-        }
-      }
-      return n;
-    }
-    var glowLayers = 0;
-    if (glowAlpha > 0 && k >= 0.8) {
-      visCount = countVisible(groups) + countVisible(starGroups);
-      if (visCount <= 500) glowLayers = 3;
-      else if (visCount <= 2500) glowLayers = 2;
-      else glowLayers = 1;
-    }
-    /* 性能闸门：k=1 视口里有四千多颗尘埃点，逐点光晕会把 3ms 预算撑爆。
-       点多的档只让亮星发光（它们才是「点光源」的视觉主角），尘埃点保持
-       清晰的沙粒；视口内点少（k≳1.8）时才逐点铺光晕。 */
-    var dustLayers = visCount > 2500 ? 0 : glowLayers;
-    glowPass(groups, 1, dustLayers, 1);
-    var starGroups = tex.starGroups || [];
-    glowPass(starGroups, 1.5, glowLayers);
-    for (var gi = 0; gi < groups.length; gi++) {
-      var g = groups[gi], pts = g.pts;
-      ctx.fillStyle = g.col;
-      ctx.globalAlpha = Math.min(0.92, g.a * ga);
-      /* ⚠️ 每帧几万颗点：逐个 fillRect 在手机 Canvas2D 上实测 7.7ms（390×844 dpr2）；
-         同组的点颜色/透明度相同，合并成一条 path 一次 fill，只按组切样式（现网 ~105 次）：
-         两万多颗点时实测 1.44ms，且点仍各自独立、不会糊成实心块。 */
-      ctx.beginPath();
-      for (var i = 0; i < pts.length; i++) {
-        var p = pts[i];
-        if (nxs.length) {
-          var nx = nxs[p.ni], ny = nys[p.ni];
-          if (nx < wx0 || nx > wx1 || ny < wy0 || ny > wy1) continue;
-        }
-        var x = p.x * k + tx, y = p.y * k + ty;
-        /* 点径 = 世界常数 × cam.k：不 clamp、不加屏幕最小值。
-           适配档是亚像素（叠成雾），放大时一格一格自然变大。
-           ⚠️ 放大到 k≥2 时 d≈5px，方形颗粒会露馅 ⇒ 大点改画圆（沙粒），
-           小点仍用 rect（亚像素/1px 时圆与方在屏幕上没有区别，rect 快得多）。 */
-        var d = p.s * k;
-        if (x < -d || y < -d || x > vw + d || y > vh + d) continue;
-        if (d >= 1.2) {
-          /* ⚠️ 必须 moveTo 起一个新 subpath：直接 arc 会从上一颗点连一条线过来，
-             几千颗点连成一条「蛇」后 fill 会把整片区域都填实（实测 alpha 均值 200）。 */
-          ctx.moveTo(x + d, y + d / 2);
-          ctx.arc(x + d / 2, y + d / 2, d / 2, 0, Math.PI * 2);
-        } else ctx.rect(x, y, d, d);
-      }
-      ctx.fill();
-    }
-    /* ---- 亮星核心 ---------------------------------------------------------
-       亮星不再是四角星芒：它们只是**更大更亮的柔光点**——上一段 glowPass
-       已经按 1.5× 加强了它们的光晕，这里只把核心提亮到近白，做出「点光源」的芯。
-       核心尺寸同样来自世界坐标（p.s × cam.k），亚像素时仍只是雾的一部分。 */
-    for (var sgi = 0; sgi < starGroups.length; sgi++) {
-      var sg = starGroups[sgi];
-      var spts = sg.pts;
-      ctx.fillStyle = sg.coreCol || sg.col;
-      ctx.globalAlpha = Math.min(0.98, 0.9 * ga);
-      ctx.beginPath();
-      for (var si = 0; si < spts.length; si++) {
-        var sp = spts[si];
-        if (nxs.length) {
-          var snx = nxs[sp.ni], sny = nys[sp.ni];
-          if (snx < wx0 || snx > wx1 || sny < wy0 || sny > wy1) continue;
-        }
-        var sx = sp.x * k + tx, sy = sp.y * k + ty, sr = sp.s * k * 0.5;
-        if (sx + sr < 0 || sy + sr < 0 || sx - sr > vw || sy - sr > vh) continue;
-        if (sr >= 0.6) { ctx.moveTo(sx + sr, sy); ctx.arc(sx, sy, sr, 0, Math.PI * 2); }
-        else ctx.rect(sx - sr, sy - sr, sr * 2, sr * 2);
-      }
-      ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-  }
-
-  /** 按相机把云雾纹理画到屏幕（白底由页面提供） */
-  function draw(ctx, cam, tex, dpr) {
-    dpr = dpr || 1;
+    /* 纹理四边羽化：中心 78% 保持，最后 22% 渐隐到完全透明。
+       这样即便视口正好停在纹理边界，也看不到一条直线。 */
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    if (!tex) return;
-    if (tex.mobile) { drawParticles(ctx, cam, tex, dpr); return; }
+    ctx.globalCompositeOperation = 'destination-in';
+    var cxT = TW / 2, cyT = TH / 2;
+    var RT = 0.5 * Math.sqrt(TW * TW + TH * TH);
+    var fade = ctx.createRadialGradient(cxT, cyT, 0, cxT, cyT, RT);
+    fade.addColorStop(0, 'rgba(0,0,0,1)');
+    fade.addColorStop(0.78, 'rgba(0,0,0,1)');
+    fade.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = fade;
+    ctx.fillRect(0, 0, TW, TH);
+    ctx.globalCompositeOperation = 'source-over';
+
+    /* 抹掉低对比渐变自带的 dither（否则放大后是周期约 2 texel 的格子）。 */
+    var out = smoothTexture(cv, bc.fogBlur == null ? 1.2 : bc.fogBlur);
+    return { canvas: out, x: x0, y: y0, w: w, h: h, scale: 1, regions: regions, clusters: 0 };
+  }
+
+  /* 每帧：只把纹理与视口相交的那块按世界坐标画到屏幕上。 */
+  function draw(ctx, cam, tex, dpr) {
+    if (!tex || !tex.canvas) return;
+    var k = cam.k, tx = cam.tx, ty = cam.ty;
+    var vw = cam.viewW, vh = cam.viewH;
+    if (!(vw > 0) || !(vh > 0)) {
+      vw = ctx.canvas.width / dpr;
+      vh = ctx.canvas.height / dpr;
+    }
+    /* 视口覆盖的世界矩形 ⊕ 纹理范围。 */
+    var wx0 = Math.max(tex.x, -tx / k);
+    var wx1 = Math.min(tex.x + tex.w, (vw - tx) / k);
+    var wy0 = Math.max(tex.y, -ty / k);
+    var wy1 = Math.min(tex.y + tex.h, (vh - ty) / k);
+    if (!(wx1 > wx0) || !(wy1 > wy0)) return;
+
+    var cw = tex.canvas.width, ch = tex.canvas.height;
+    var sx = (wx0 - tex.x) / tex.w * cw;
+    var sy = (wy0 - tex.y) / tex.h * ch;
+    var sw = (wx1 - wx0) / tex.w * cw;
+    var sh = (wy1 - wy0) / tex.h * ch;
+
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var sx = tex.x * cam.k + cam.tx;
-    var sy = tex.y * cam.k + cam.ty;
-    var sw = tex.w * cam.k;
-    var sh = tex.h * cam.k;
     ctx.imageSmoothingEnabled = true;
-    /* ⚠️ 这一档**不能**用 'high'：云雾纹理是 0.42 倍世界尺寸，每帧要放大约 2.4 倍铺满全屏，
-       high 档重采样实测吃掉半帧（dpr=2、1600×900 下整帧 72.9ms → 39.6ms；dpr=1 也有可观占比）。
-       它本来就是一团模糊的雾，双线性放大看不出差别 —— 引擎里其它 drawImage（节点光晕）
-       也一直是默认的 low。 */
+    /* 不能开 'high'：雾本来就是糊的，高采样质量在 dpr2 全屏放大时会吃掉半帧。 */
     ctx.imageSmoothingQuality = 'low';
-    ctx.drawImage(tex.canvas, sx, sy, sw, sh);
+    ctx.drawImage(tex.canvas,
+      sx, sy, sw, sh,
+      wx0 * k + tx, wy0 * k + ty, (wx1 - wx0) * k, (wy1 - wy0) * k);
+  }
+
+  /* 小半径模糊：抹掉径向渐变的 dither（成本只在建纹理时付一次）。 */
+  function smoothTexture(src, r) {
+    var out = document.createElement('canvas');
+    out.width = src.width;
+    out.height = src.height;
+    var c = out.getContext('2d');
+    c.filter = 'blur(' + (r == null ? 1.2 : r) + 'px)';
+    c.drawImage(src, 0, 0);
+    c.filter = 'none';
+    return out;
   }
 
   MG.background = {
@@ -14326,6 +13643,9 @@ MG.aliases = {
     { id: 'def.category-of-abelian-groups', en: 'category of abelian groups', aka: ['阿贝尔群范畴', 'Ab'] },
     { id: 'def.module-category', en: 'category of modules', aka: ['模范畴', 'A-Mod'] },
     { id: 'def.topological-orientability', en: 'topological orientability', aka: ['拓扑可定向性', '曲面的可定向性'] },
+    { id: 'lem.caratheodory-osgood', en: 'Carathéodory–Osgood lemma', aka: ['Carathéodory–Osgood 边界对应'] },
+    { id: 'lem.newman-tauberian', en: 'Newman\'s Tauberian lemma', aka: ['Newman 解析定理'] },
+    { id: 'lem.combinatorial-classification-surfaces', en: 'combinatorial classification lemma', aka: ['组合分类引理'] },
   ],
 
   /* -------------------------------------------------- 内文**不链**的别名 */
@@ -14695,7 +14015,7 @@ window.MG = window.MG || {};
 MG.i18n = {
   version: 2,
   generatedBy: 'tools/i18n-backfill.mjs',
-  updated: '2026-11-07',
+  updated: '2026-11-08',
   nodes: {
     'ax.choice': { title_en: 'axiom of choice', label_en: 'axiom of choice', from: 'explicit' },
     'ax.ext': { title_en: 'extensionality', label_en: 'extensionality', from: 'aka' },
@@ -15390,10 +14710,12 @@ MG.i18n = {
     'lem.archimedean': { title_en: 'Archimedean', label_en: 'Archimedean', from: 'aka' },
     'lem.average-continuous': { title_en: 'the averaging operator is jointly continuous', label_en: null, from: 'explicit' },
     'lem.breen-deligne-scalar-homotopy': { title_en: 'scalar homotopy', label_en: 'scalar homotopy', from: 'aka' },
+    'lem.caratheodory-osgood': { title_en: 'Carathéodory–Osgood lemma', label_en: 'Carathéodory–Osgood lemma', from: 'explicit' },
     'lem.cartan-eilenberg': { title_en: 'Cartan-Eilenberg', label_en: 'Cartan-Eilenberg', from: 'aka' },
     'lem.cauchy-green': { title_en: 'Cauchy–Green Identity', label_en: 'Cauchy–Green Identity', from: 'manual' },
     'lem.cech-finite-disjoint-acyclic': { title_en: 'Čech Acyclicity for Finite Disjoint Covers', label_en: 'Finite Disjoint Covers', from: 'manual' },
     'lem.closed-subalgebra-lattice': { title_en: 'a closed unital subalgebra is a lattice', label_en: null, from: 'explicit' },
+    'lem.combinatorial-classification-surfaces': { title_en: 'combinatorial classification lemma', label_en: null, from: 'explicit' },
     'lem.countable-closed-cover': { title_en: 'a countable closed cover has dense interior union', label_en: null, from: 'explicit' },
     'lem.covering': { title_en: 'covering lemma', label_en: 'covering lemma', from: 'aka' },
     'lem.covering-free-acyclic': { title_en: 'The Free Complex of a Cover Is Acyclic', label_en: 'Free Complex of a Cover', from: 'manual' },
@@ -15408,6 +14730,7 @@ MG.i18n = {
     'lem.minimal-closed-surjection': { title_en: 'minimal closed subset for a surjection', label_en: null, from: 'explicit' },
     'lem.nbv-variation': { title_en: 'properties of the total variation function', label_en: null, from: 'explicit' },
     'lem.nested-intervals': { title_en: 'nested interval theorem', label_en: 'nested interval theorem', from: 'explicit' },
+    'lem.newman-tauberian': { title_en: 'Newman\'s Tauberian lemma', label_en: 'Newman\'s Tauberian lemma', from: 'explicit' },
     'lem.normal-coord-euclidean': { title_en: 'Normal Coordinates Are Euclidean to First Order', label_en: 'Normal Coordinates', from: 'manual' },
     'lem.path-product': { title_en: 'concatenation of paths', label_en: 'concatenation of paths', from: 'explicit' },
     'lem.poincare-lemma': { title_en: 'Poincaré Lemma', label_en: 'Poincaré Lemma', from: 'manual' },
@@ -76552,7 +75875,7 @@ window.MG = window.MG || {};
         '把 $\\mathbb{H}$ 共形地映成该多边形内部，且 $f(x_{k})$ 是第 $k$ 个顶点（取 $A \\ne 0$，否则 $f \\equiv B$ 是常值、谈不上共形）。',
         '常数 $A, B$ 决定大小、旋转与位置。',
       ].join('\n'),
-      notes: '⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f\'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的 (i) 与 (iii) 两条外部引理在末尾点明；(ii) 的辐角原理收尾已补完整。\n\n**记号**：外角和给出 $\\sum_{k=1}^{n}(1 - \\alpha_{k}) = 2$，等价于\n\n$$\\sum_{k=1}^{n} (\\alpha_{k} - 1) = -2.$$\n\n这个 $-2$ 正是 $g(\\zeta) = O(\\zeta^{-2})$ 的来源，也是积分在无穷远收敛的原因。\n\n**第一部分：形式唯一性（完整证明）**\n\n命题：设 $f : \\mathbb{H} \\to P$ 是把上半平面共形映成多边形内部的映射，$f$ 连续到边界、把 $x_{k}$ 送到第 $k$ 个顶点，则存在 $A \\ne 0$、$B$，使 $f\'(z) = A\\,g(z)$。\n\n证明分五小步。\n\n（1）**规范化**：把 $\\infty \\in \\partial\\mathbb{H}$ 选在不是任何顶点原像的位置（圆 $\\partial\\mathbb{H}$ 上除去有限个顶点原像后仍有点，用 $\\operatorname{Aut}(\\mathbb{H})$ 把它送到 $\\infty$）。于是 $\\infty$ 对应的是多边形某条边的内部，而不是顶点。\n\n（2）**角点的局部形状**：在 $x_{k}$ 附近，$f$ 有展开\n\n$$f(z) - f(x_{k}) = (z - x_{k})^{\\alpha_{k}}\\,h_{k}(z),\\qquad h_{k}\\ \\text{在}\\ x_{k}\\ \\text{附近全纯且}\\ h_{k}(x_{k}) \\ne 0.$$\n\n理由：把角的两边所在直线作反射，角的两侧被「展开」；等价地，令 $w = (f - f(x_{k}))^{1/\\alpha_{k}}$，它把角展成半平面，再用 Schwarz 反射（`thm.schwarz-reflection`）把 $f$ 延拓过 $x_{k}$，局部即得上式。\n\n（3）**跨边延拓**：每条边 $f((x_{k}, x_{k+1}))$ 是直线段。沿这线段把多边形反射，同时把 $\\mathbb{H}$ 沿 $(x_{k}, x_{k+1})$ 反射；由 Schwarz 反射，$f$ 解析延拓过整个开区间 $(x_{k}, x_{k+1})$。定义\n\n$$\\varphi(z) := \\frac{f\'(z)}{g(z)} = \\frac{f\'(z)}{\\prod_{k=1}^{n}(z - x_{k})^{\\alpha_{k}-1}}.$$\n\n由（2），$\\varphi$ 在 $x_{k}$ 处有可去奇点且 $\\varphi(x_{k}) = h_{k}(x_{k}) \\ne 0$；由跨边反射，$\\varphi(\\bar z) = \\overline{\\varphi(z)}$，故 $\\varphi$ 延拓成 $\\mathbb{C}$ 上的整函数。\n\n（4）**$\\varphi$ 无零点**：$\\mathbb{H}$ 内 $f\' \\ne 0$（共形）；每个开区间 $(x_{k}, x_{k+1})$ 上 $f$ 的参数化导数非零（边是直线段，$f$ 是双射）；由反射式，下半平面也无零点；角点处由（2）。故 $\\varphi$ 是处处非零的整函数。\n\n（5）**$\\varphi$ 在无穷远有有限非零极限**：由（1），$\\infty$ 映到某条边内部，跨这条边反射给出 $f$ 在 $\\infty$ 的邻域内全纯；在坐标 $w = 1/z$ 下 $f$ 在 $w = 0$ 全纯，故 $f\'(z) = O(z^{-2})$。另一方面 $g(z) = \\prod(z - x_{k})^{\\alpha_{k}-1} = z^{-2}\\,(1 + O(1/z))$（用了指数和 $-2$）。于是 $\\varphi(z) \\to A \\ne 0$（$A$ 是某个非零常数），$\\varphi$ 在 $\\infty$ 有可去奇点。\n\n于是 $\\varphi$ 与 $1/\\varphi$ 都是整函数且在 $\\infty$ 有界，由 Liouville 定理 $\\varphi \\equiv A$。积分得\n\n$$f(z) = A\\int_{z_{0}}^{z} g(\\zeta)\\,\\mathrm{d}\\zeta + B.$$\n\n这就证明了公式的**形式**（这一半完整）。\n\n**第二部分：存在性（未完成；(ii) 已补完整，仍缺 (i)(iii)）**\n\n反过来给定多边形与 $x_{k}$，令 $F(z) = A\\int^{z}_{z_{0}} g(\\zeta)\\,\\mathrm{d}\\zeta + B$。已知：\n\n- $F\' = A g$ 在 $\\mathbb{H}$ 上无零点，故 $F$ 是局部共形的；\n\n- 在每个区间 $(x_{k}, x_{k+1})$ 上 $\\arg g$ 是常值（因为 $(x - x_{k})$ 的辐角只取 $0$ 或 $\\pi$，符号由 $x > x_{k}$ 决定），故 $F$ 把每个区间映成一条直线段；走过 $x_{k}$ 时 $\\arg F\'$ 跳变 $\\pi(\\alpha_{k}-1)$，即内角为 $\\alpha_{k}\\pi$；\n\n- $g(\\zeta) = O(\\zeta^{-2})$，积分在 $\\pm\\infty$ 都收敛，$F$ 连续到 $\\partial\\mathbb{H}$ 的整个边界（含 $\\infty$）。\n\n⚠️ 存在性仍缺的部分（本图不写全，因此保留 skeleton）：\n\n（i）**边界曲线的简单性**：要证 $F(\\partial\\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。\n\n（ii）**辐角原理收尾（完整）。** 设（i）已证：$J:=F(\\partial\\mathbb{H})$ 是简单闭曲线，$F$ 连续延拓到 $\\overline{\\mathbb{H}}$ 且在 $\\mathbb{H}$ 内局部共形（$F\'\\ne0$）。对 $w\\notin J$，$F-w$ 在 $\\partial\\mathbb{H}$ 上无零点。把 $F-w$ 在 $\\mathbb{H}$ 上的零点个数记为 $N(w)$（计重数）：用半径 $R$ 的上半圆盘挖出有界区域再令 $R\\to\\infty$，因 $F\'=O(1/z^2)$ 且 $F(z)\\to F(\\infty)\\in J$，大圆弧上的积分趋于 $0$，故辐角原理给出 $N(w)=\\frac{1}{2\\pi i}\\int_{\\partial\\mathbb{H}}\\frac{F\'(z)}{F(z)-w}\\,\\mathrm{d}z=n(J,w),$ 右端是 $J$ 绕 $w$ 的绕数。$N(w)\\ge0$ 是整数，而简单闭曲线满足 $n(J,w)\\in\\{-1,0,1\\}$；若 $J$ 取负向，则 $J$ 内部每点的绕数为 $-1$，与 $N(w)\\ge0$ 矛盾。故 $J$ 正向，且 $N(w)=\\begin{cases}1,&w\\in\\operatorname{Int}(J),\\\\0,&w\\in\\operatorname{Ext}(J).\\end{cases}$ 于是 $F(\\mathbb{H})\\subseteq\\operatorname{Int}(J)=P$，且每个 $w\\in P$ 恰有一个原像（$F\'\\ne0$ 保证零点单重）。所以 $F:\\mathbb{H}\\to P$ 是双射；又 $F\'\\ne0$，它是双全纯。（在（i）成立的前提下，此步完整。）\n\n（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。\n\n（i）与（iii）各需要一条外部引理；（ii）已在本注独立补完，不再需要外部引理。三条的清单如下（(i)(iii) 仍未写全，故不勾 ∎）：\n\n**引理 A（Carathéodory–Osgood，对应 (i)）**：Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。本批已把它单列为 `lem.caratheodory-osgood`（仍 skeleton：定理拆成 Carathéodory 连续延拓与 Osgood 边界单射两条外部定理，本图未证）。多边形是 Jordan 区域，故 $F$ 的边界对应成立；`thm.boundary-correspondence` 是同一事实的另一种陈述。\n\n**引理 B（简单性与绕数，对应 (ii)）**：设 $F$ 在 $\\mathbb{H}$ 内局部共形、连续到 $\\partial\\mathbb{H}$；若 $F(\\partial\\mathbb{H})$ 是简单闭曲线、$F(\\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。它的内容已在本注第 (ii) 小节用辐角原理独立证明，这里只作独立验证列出，不再承担 (ii) 的证明任务；它也不负责 (i)——边界简单性必须先由引理 A 与参数匹配给出。\n\n**引理 C（参数-边长匹配，对应 (iii)）**：内角（即 $x_{k}$）已定后，积分映出的多边形边长随之确定，一般不等于题设多边形的边长。要得到题设的那个多边形，须再解 $n-3$ 个实方程（$x_{k}$ 在 Möbius 自由度下的参数），标准做法是连续性方法或度理论（证明边长映射取遍所有正边长组合）。本图没有这条引理的节点，也没有写证明。\n\n**为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\\arg f\'$ 跳变 $\\pi(\\alpha_{k} - 1)$，恰好把切向转过去 $\\pi - \\alpha_{k}\\pi$ —— 正是外角。\n\n⭐ **它是「造映射」的工业级工具**：机翼、渠道、电容器这些工程问题都归结为「先把区域近似成多边形，再用 S–C 公式搬到半平面」——搬到半平面之后 Laplace 方程的解就有现成的形式（Poisson 积分，`thm.poisson-formula`）。\n\n⚠️ **三个参数定不下来**：$x_{k}$ 里可以任选三个（分式线性变换的自由度），$A, B$ 由多边形的位置与大小定 —— 实际计算就是解这几个方程。',
+      notes: '⚠️ **本节点仍标 skeleton**：下面完整证明了「**形式**」这一半（若共形映射存在，它必是这个形状，且 $f\'=Ag$）；「**存在性**」那一半（这个积分确实单叶地映满多边形）本图不写，缺的 (i) 与 (iii) 两条外部引理在末尾点明；(ii) 的辐角原理收尾已补完整。\n\n**记号**：外角和给出 $\\sum_{k=1}^{n}(1 - \\alpha_{k}) = 2$，等价于\n\n$$\\sum_{k=1}^{n} (\\alpha_{k} - 1) = -2.$$\n\n这个 $-2$ 正是 $g(\\zeta) = O(\\zeta^{-2})$ 的来源，也是积分在无穷远收敛的原因。\n\n**第一部分：形式唯一性（完整证明）**\n\n命题：设 $f : \\mathbb{H} \\to P$ 是把上半平面共形映成多边形内部的映射，$f$ 连续到边界、把 $x_{k}$ 送到第 $k$ 个顶点，则存在 $A \\ne 0$、$B$，使 $f\'(z) = A\\,g(z)$。\n\n证明分五小步。\n\n（1）**规范化**：把 $\\infty \\in \\partial\\mathbb{H}$ 选在不是任何顶点原像的位置（圆 $\\partial\\mathbb{H}$ 上除去有限个顶点原像后仍有点，用 $\\operatorname{Aut}(\\mathbb{H})$ 把它送到 $\\infty$）。于是 $\\infty$ 对应的是多边形某条边的内部，而不是顶点。\n\n（2）**角点的局部形状**：在 $x_{k}$ 附近，$f$ 有展开\n\n$$f(z) - f(x_{k}) = (z - x_{k})^{\\alpha_{k}}\\,h_{k}(z),\\qquad h_{k}\\ \\text{在}\\ x_{k}\\ \\text{附近全纯且}\\ h_{k}(x_{k}) \\ne 0.$$\n\n理由：把角的两边所在直线作反射，角的两侧被「展开」；等价地，令 $w = (f - f(x_{k}))^{1/\\alpha_{k}}$，它把角展成半平面，再用 Schwarz 反射（`thm.schwarz-reflection`）把 $f$ 延拓过 $x_{k}$，局部即得上式。\n\n（3）**跨边延拓**：每条边 $f((x_{k}, x_{k+1}))$ 是直线段。沿这线段把多边形反射，同时把 $\\mathbb{H}$ 沿 $(x_{k}, x_{k+1})$ 反射；由 Schwarz 反射，$f$ 解析延拓过整个开区间 $(x_{k}, x_{k+1})$。定义\n\n$$\\varphi(z) := \\frac{f\'(z)}{g(z)} = \\frac{f\'(z)}{\\prod_{k=1}^{n}(z - x_{k})^{\\alpha_{k}-1}}.$$\n\n由（2），$\\varphi$ 在 $x_{k}$ 处有可去奇点且 $\\varphi(x_{k}) = h_{k}(x_{k}) \\ne 0$；由跨边反射，$\\varphi(\\bar z) = \\overline{\\varphi(z)}$，故 $\\varphi$ 延拓成 $\\mathbb{C}$ 上的整函数。\n\n（4）**$\\varphi$ 无零点**：$\\mathbb{H}$ 内 $f\' \\ne 0$（共形）；每个开区间 $(x_{k}, x_{k+1})$ 上 $f$ 的参数化导数非零（边是直线段，$f$ 是双射）；由反射式，下半平面也无零点；角点处由（2）。故 $\\varphi$ 是处处非零的整函数。\n\n（5）**$\\varphi$ 在无穷远有有限非零极限**：由（1），$\\infty$ 映到某条边内部，跨这条边反射给出 $f$ 在 $\\infty$ 的邻域内全纯；在坐标 $w = 1/z$ 下 $f$ 在 $w = 0$ 全纯，故 $f\'(z) = O(z^{-2})$。另一方面 $g(z) = \\prod(z - x_{k})^{\\alpha_{k}-1} = z^{-2}\\,(1 + O(1/z))$（用了指数和 $-2$）。于是 $\\varphi(z) \\to A \\ne 0$（$A$ 是某个非零常数），$\\varphi$ 在 $\\infty$ 有可去奇点。\n\n于是 $\\varphi$ 与 $1/\\varphi$ 都是整函数且在 $\\infty$ 有界，由 Liouville 定理 $\\varphi \\equiv A$。积分得\n\n$$f(z) = A\\int_{z_{0}}^{z} g(\\zeta)\\,\\mathrm{d}\\zeta + B.$$\n\n这就证明了公式的**形式**（这一半完整）。\n\n**第二部分：存在性（未完成；(ii) 已补完整，仍缺 (i)(iii)）**\n\n反过来给定多边形与 $x_{k}$，令 $F(z) = A\\int^{z}_{z_{0}} g(\\zeta)\\,\\mathrm{d}\\zeta + B$。已知：\n\n- $F\' = A g$ 在 $\\mathbb{H}$ 上无零点，故 $F$ 是局部共形的；\n\n- 在每个区间 $(x_{k}, x_{k+1})$ 上 $\\arg g$ 是常值（因为 $(x - x_{k})$ 的辐角只取 $0$ 或 $\\pi$，符号由 $x > x_{k}$ 决定），故 $F$ 把每个区间映成一条直线段；走过 $x_{k}$ 时 $\\arg F\'$ 跳变 $\\pi(\\alpha_{k}-1)$，即内角为 $\\alpha_{k}\\pi$；\n\n- $g(\\zeta) = O(\\zeta^{-2})$，积分在 $\\pm\\infty$ 都收敛，$F$ 连续到 $\\partial\\mathbb{H}$ 的整个边界（含 $\\infty$）。\n\n⚠️ 存在性仍缺的部分（本图不写全，因此保留 skeleton）：\n\n（i）**边界曲线的简单性**：要证 $F(\\partial\\mathbb{H})$ 是简单闭折线（无自交）。仅凭「分段直线 + 内角正确」不够——同一组内角可以有自交的折线；标准证法要把多边形沿边反射、用 Schwarz 反射把 $F$ 解析延拓到拼接区域，再证延拓是单值的、逐块覆盖平面。\n\n（ii）**辐角原理收尾（完整）。** 设（i）已证：$J:=F(\\partial\\mathbb{H})$ 是简单闭曲线，$F$ 连续延拓到 $\\overline{\\mathbb{H}}$ 且在 $\\mathbb{H}$ 内局部共形（$F\'\\ne0$）。对 $w\\notin J$，$F-w$ 在 $\\partial\\mathbb{H}$ 上无零点。把 $F-w$ 在 $\\mathbb{H}$ 上的零点个数记为 $N(w)$（计重数）：用半径 $R$ 的上半圆盘挖出有界区域再令 $R\\to\\infty$，因 $F\'=O(1/z^2)$ 且 $F(z)\\to F(\\infty)\\in J$，大圆弧上的积分趋于 $0$，故辐角原理给出 $N(w)=\\frac{1}{2\\pi i}\\int_{\\partial\\mathbb{H}}\\frac{F\'(z)}{F(z)-w}\\,\\mathrm{d}z=n(J,w),$ 右端是 $J$ 绕 $w$ 的绕数。$N(w)\\ge0$ 是整数，而简单闭曲线满足 $n(J,w)\\in\\{-1,0,1\\}$；若 $J$ 取负向，则 $J$ 内部每点的绕数为 $-1$，与 $N(w)\\ge0$ 矛盾。故 $J$ 正向，且 $N(w)=\\begin{cases}1,&w\\in\\operatorname{Int}(J),\\\\0,&w\\in\\operatorname{Ext}(J).\\end{cases}$ 于是 $F(\\mathbb{H})\\subseteq\\operatorname{Int}(J)=P$，且每个 $w\\in P$ 恰有一个原像（$F\'\\ne0$ 保证零点单重）。所以 $F:\\mathbb{H}\\to P$ 是双射；又 $F\'\\ne0$，它是双全纯。（在（i）成立的前提下，此步完整。）\n\n（iii）**参数/边长匹配**：即便（i）（ii）证得 $F$ 单叶，$F$ 映出的多边形仍由积分决定 —— 其边长是 $x_{k}$ 的函数，一般**不等于**给定多边形的边长（同一组内角可以对应无穷多个形状）。要得到题设的**那一个**多边形，还须解 $n-3$ 个实方程（$x_{k}$ 的 Möbius 自由度）：证明边长映射取遍所有可能的形状。标准做法是连续性方法/度理论（或先由 Riemann 映射定理取到某个多边形，再用形式唯一性反推 $x_{k}$）。本图没有这条连续性论证的节点；`thm.riemann-mapping` 已完整，但 `thm.boundary-correspondence` 本身仍是 skeleton。\n\n（i）仍缺（需沿边反射/Schwarz 反射拼接），（iii）仍缺（需连续性方法/度理论）；（ii）已在本注独立补完。存在性所需的输入分三类，它们与 (i)(ii)(iii) 并非一一对应：**A** 是边界对应的外部输入（供 `thm.boundary-correspondence` 型命题使用），**不能推出（i）**；**B** 是（ii）的内部收尾（本注已证，不依赖外部引理）；**C** 是（iii）的外部输入。下面分别列出。\n\n**A（外部输入，服务边界对应，不推出（i））**：Carathéodory–Osgood——Jordan 区域到单位圆盘的共形映射连续延拓为闭包同胚。本批单列为 `lem.caratheodory-osgood`（仍 skeleton：定理拆成 Carathéodory 连续延拓与 Osgood 边界单射两条外部定理，本图未证）。多边形是 Jordan 区域，故它给出 $F$ 的闭包连续延拓与边界上的单射；但它**不**说明 $F(\\partial\\mathbb{H})$ 无自交——那正是（i），需要沿边反射/Schwarz 反射拼接另行证明。\n\n**B（（ii）的内部完成，不是外部引理）**：设 $F$ 在 $\\mathbb{H}$ 内局部共形、连续到 $\\partial\\mathbb{H}$；若 $F(\\partial\\mathbb{H})$ 是简单闭曲线、$F(\\mathbb{H})$ 落在其内部，且对该内部的每个 $w$，$F(\\partial\\mathbb{H})$ 绕 $w$ 的绕数为 $1$，则 $F$ 单叶。它的内容就是本注第（ii）小节的辐角原理证明（在上半平面挖去大圆弧、用 $F\'=O(1/z^2)$ 控制无穷远），已在上面完整写出；它只完成（ii），不负责（i）（iii），也不作为独立的外部引理。\n\n**C（外部输入，服务（iii））**：参数-边长匹配。内角（即 $x_k$）已定后，积分映出的多边形边长随之确定，一般不等于题设多边形的边长（同一组内角可对应无穷多个形状）；要得到题设的那个多边形，须再解 $n-3$ 个实方程（$x_k$ 的 Möbius 自由度），标准做法是连续性方法或度理论（证明边长映射取遍所有正边长组合）。本图没有这条引理的节点，也没有写证明。\n\n**为什么是这些指数**：沿实轴走过 $x_{k}$ 时，$\\arg f\'$ 跳变 $\\pi(\\alpha_{k} - 1)$，恰好把切向转过去 $\\pi - \\alpha_{k}\\pi$ —— 正是外角。\n\n⭐ **它是「造映射」的工业级工具**：机翼、渠道、电容器这些工程问题都归结为「先把区域近似成多边形，再用 S–C 公式搬到半平面」——搬到半平面之后 Laplace 方程的解就有现成的形式（Poisson 积分，`thm.poisson-formula`）。\n\n⚠️ **三个参数定不下来**：$x_{k}$ 里可以任选三个（分式线性变换的自由度），$A, B$ 由多边形的位置与大小定 —— 实际计算就是解这几个方程。',
       refs: [
         'Ahlfors, Complex Analysis (3rd ed.), Ch. 6 §2 · Schwarz–Christoffel formula',
         'Driscoll–Trefethen, Schwarz–Christoffel Mapping, Cambridge, Ch. 1–2',
@@ -78432,7 +77755,7 @@ window.MG = window.MG || {};
         '',
         '等价形式：$\\theta(x) \\sim x$、$\\psi(x) \\sim x$、$p_{n} \\sim n\\log n$（$p_{n}$ 是第 $n$ 个素数）。',
       ].join('\n'),
-      notes: '**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，唯一缺口）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计见原文，本图不复述。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta\'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ\'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta\'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。',
+      notes: '**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta\'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ\'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta\'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。',
       refs: [
         'Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)',
         'Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)',
@@ -78699,7 +78022,7 @@ window.MG = window.MG || {};
     {
       id: 'imp.nt-newman',
       kind: 'implication',
-      sources: ['lem.newman-tauberian'],
+      sources: ['lem.newman-tauberian', 'thm.chebyshev-estimate'],
       target: 'thm.prime-number-theorem',
       title: 'Newman 解析定理闭合素数定理的最后一步',
       proof: [
