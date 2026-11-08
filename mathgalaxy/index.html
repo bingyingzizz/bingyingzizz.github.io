@@ -1718,22 +1718,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
     /* 电子云背景 */
     background: {
-      /* ENG-010：全端统一的雾场纹理（手机/桌面同一套，无分端分支）。
-         纹理覆盖可见节点 bbox + fogPadRatio 比例的外扩，四周径向羽化到 alpha=0，
-         所以任何视口、任何缩放下都看不到「云的边」。 */
+      /* ENG-009 的雾场（2026-11-08 恢复；背景粒子已全删）。
+         纹理覆盖可见节点 bbox + fogPadRatio 的外扩，四周径向羽化到 alpha=0，
+         所以任何视口、任何缩放下都看不到「云的边」。
+         纹理里按 fogAlpha 烘焙，绘制时再按主题乘 fogGlowLight / fogGlowDark。 */
       fogPadRatio: 0.35,          // 内容 bbox 外扩比例（按长边算）
-      fogMaxSide: 2048,           // 纹理长边像素上限（≈1600×900 适配档 0.47 px/texel）
-      fogMaxPixels: 4200000,      // 总像素上限（≈16MB RGBA，常见 GPU 的 1/4 纹理内存）
-      fogBlur: 1.2,               // 纹理像素模糊半径：抹掉径向渐变的 dither
-      fogAlpha: 0.085,            // 区域云核心 alpha（向外五档平滑衰减到 0）
-      centerAlpha: 0.025,         // 保留字段（旧版云朵参数，当前绘制路径不再读取）
-      nodeAlpha: 0.025,
-      spread: 0.52,
-      blobRadiusMin: 0.30,
-      blobRadiusMax: 0.50,
-      cloudMargin: 36,
-      cloudRadiusMin: 160,
-      dilate: 1.45
+      fogMaxSide: 768,            // 纹理长边像素上限（ENG-009 的 747×768 口径）
+      fogAlpha: 0.36,             // 纹理里区域云核心 alpha（四档衰减到 0）
+      fogGlowLight: 0.10,         // 亮色主题的最终雾浓度
+      fogGlowDark: 0.12           // 深色主题的最终雾浓度
     },
 
     /* ------------------------------------------------------------------
@@ -4981,13 +4974,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 </script>
 <script>
 /* ==========================================================================
-   数学星图 · 电子云背景（ENG-010：全端统一的雾场）
+   数学星图 · 电子云背景（ENG-009 雾场 + 背景粒子全删）
    --------------------------------------------------------------------------
-   一套实现，手机/桌面共用同一个世界坐标雾场纹理：
-     · 覆盖可见节点 bbox + 35% padding；
-     · 每个板块（region）在纹理上画一团径向渐变的柔和色雾；
-     · 纹理四周用 destination-in 径向羽化到 alpha=0，所以永远没有「云的边」；
-     · 每帧只按世界坐标 drawImage 一次（视口相交块），不做任何逐点绘制。
+   用户口径（2026-11-08）：
+     · 背景只保留「颜色雾」，ENG-009 的雾场纹理是最终版本；
+     · 背景的粒子 / 星点 / 辉光 / stipple 全部删掉，任何视口都不画点；
+     · 手机/桌面同一套代码、同一张世界坐标雾纹理。
+   实现：覆盖可见节点 bbox + 35% padding 的离屏纹理，每个板块画一团径向渐变，
+   四周 destination-in 羽化到 alpha=0；每帧只按世界坐标 drawImage 一次。
    页面大背景仍然是纯白（深色主题由 CSS 变量决定）。
    ========================================================================== */
 (function (global) {
@@ -4995,22 +4989,11 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
   var MG = (global.MG = global.MG || {});
   var U = MG.util;
 
-  /* 纹理分辨率：长边与总像素都设上限（这张纹理每帧要整张重铺一次）。
-     2048 长边在 1600×900 的适配档约等于 0.47 屏幕像素/texel（缩小时更细），
-     390×844 手机上更小，不会糊成方块。 */
-  function texSizeFor(w, h, bc) {
-    var maxSide = bc.fogMaxSide || 2048;
-    var maxPx = bc.fogMaxPixels || 4200000;
-    var s = Math.min(maxSide / Math.max(w, h), Math.sqrt(maxPx / (w * h)));
-    s = Math.max(0.02, s);
-    return { tw: Math.max(64, Math.round(w * s)), th: Math.max(64, Math.round(h * s)) };
-  }
-
   function buildTexture(graph, isVisible) {
     var bc = MG.config.background;
     var ok = isVisible || function () { return true; };
 
-    /* 可见节点 bbox（隐藏节点不参与，和以前的可见性语义一致）。 */
+    /* 可见节点 bbox（隐藏节点不参与）。 */
     var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     (graph.nodes || []).forEach(function (n) {
       if (!ok(n.id)) return;
@@ -5021,99 +5004,93 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     });
     if (!isFinite(minX)) { minX = -100; minY = -100; maxX = 100; maxY = 100; }
 
-    /* +35% padding：雾在内容外侧还有一大圈，视口贴在内容边上时也不会露出纹理边。 */
-    var pad = Math.max(1, (bc.fogPadRatio == null ? 0.35 : bc.fogPadRatio)
-      * Math.max(maxX - minX, maxY - minY));
-    var x0 = minX - pad, y0 = minY - pad;
-    var w = (maxX - minX) + 2 * pad, h = (maxY - minY) + 2 * pad;
+    /* ENG-009 的取景：内容 bbox + 35% padding（按长边算）。 */
+    var padRatio = bc.fogPadRatio == null ? 0.35 : bc.fogPadRatio;
+    var padW = padRatio * Math.max(maxX - minX, maxY - minY);
+    var fx = minX - padW, fy = minY - padW;
+    var fw = (maxX - minX) + 2 * padW, fh = (maxY - minY) + 2 * padW;
 
-    var ts = texSizeFor(w, h, bc);
-    var TW = ts.tw, TH = ts.th;
-    var cv = document.createElement('canvas');
-    cv.width = TW; cv.height = TH;
-    var ctx = cv.getContext('2d');
-    /* 世界坐标 → 纹理像素，下面一律用世界单位画。 */
-    ctx.setTransform(TW / w, 0, 0, TH / h, -x0 * TW / w, -y0 * TH / h);
+    /* ENG-009 的分辨率公式：长边 768（≈1540 节点时 747×768），适配档约 1 texel/屏幕像素。 */
+    var maxSide = bc.fogMaxSide == null ? 768 : bc.fogMaxSide;
+    var fs = Math.min(maxSide / Math.max(fw, fh), 2);
+    var cwT = Math.max(2, Math.round(fw * fs));
+    var chT = Math.max(2, Math.round(fh * fs));
 
-    var alpha0 = bc.fogAlpha == null ? 0.085 : bc.fogAlpha;
+    var fcv = document.createElement('canvas');
+    fcv.width = cwT; fcv.height = chT;
+    var fctx = fcv.getContext('2d');
+    fctx.setTransform(fs, 0, 0, fs, -fx * fs, -fy * fs);
+
+    /* ENG-009 的四档渐变：0.36 → 0.22 → 0.07 → 0（画的时候再按主题乘 0.10/0.12 / 0.36）。 */
+    var a0 = bc.fogAlpha == null ? 0.36 : bc.fogAlpha;
     var regions = 0;
     (graph.regions || []).forEach(function (reg) {
       if (!reg.stat) return;
       var rgb = U.hexToRgb(reg.color || '#7A8699');
-      var c = rgb.r + ',' + rgb.g + ',' + rgb.b + ',';
-      var pr = Math.max(4, reg.stat.radius * 1.05);
-      var g = ctx.createRadialGradient(reg.stat.cx, reg.stat.cy, 0, reg.stat.cx, reg.stat.cy, pr);
-      /* 五档平滑尾：0.45 之后一路压到 0，避免外缘出现「浓度突然掉到 0」的硬边。 */
-      g.addColorStop(0, 'rgba(' + c + alpha0 + ')');
-      g.addColorStop(0.45, 'rgba(' + c + (alpha0 * 0.62) + ')');
-      g.addColorStop(0.72, 'rgba(' + c + (alpha0 * 0.24) + ')');
-      g.addColorStop(0.88, 'rgba(' + c + (alpha0 * 0.08) + ')');
-      g.addColorStop(1, 'rgba(' + c + '0)');
-      ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(reg.stat.cx, reg.stat.cy, pr, 0, Math.PI * 2); ctx.fill();
+      var css = rgb.r + ',' + rgb.g + ',' + rgb.b;
+      var FR = Math.max(4, reg.stat.radius);
+      var grd = fctx.createRadialGradient(reg.stat.cx, reg.stat.cy, 0, reg.stat.cx, reg.stat.cy, FR);
+      grd.addColorStop(0, 'rgba(' + css + ',' + a0 + ')');
+      grd.addColorStop(0.55, 'rgba(' + css + ',' + (a0 * 0.61) + ')');
+      grd.addColorStop(0.85, 'rgba(' + css + ',' + (a0 * 0.19) + ')');
+      grd.addColorStop(1, 'rgba(' + css + ',0)');
+      fctx.fillStyle = grd;
+      fctx.beginPath(); fctx.arc(reg.stat.cx, reg.stat.cy, FR, 0, Math.PI * 2); fctx.fill();
       regions++;
     });
 
-    /* 纹理四边羽化：中心 78% 保持，最后 22% 渐隐到完全透明。
-       这样即便视口正好停在纹理边界，也看不到一条直线。 */
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.globalCompositeOperation = 'destination-in';
-    var cxT = TW / 2, cyT = TH / 2;
-    var RT = 0.5 * Math.sqrt(TW * TW + TH * TH);
-    var fade = ctx.createRadialGradient(cxT, cyT, 0, cxT, cyT, RT);
+    /* 外缘羽化：中心 80% 实、到 100% 渐隐到 0 —— 纹理四周 alpha 必为 0。 */
+    fctx.setTransform(1, 0, 0, 1, 0, 0);
+    fctx.globalCompositeOperation = 'destination-in';
+    var cT = cwT / 2, cY = chT / 2;
+    var RT = 0.5 * Math.sqrt(cwT * cwT + chT * chT);
+    var fade = fctx.createRadialGradient(cT, cY, 0, cT, cY, RT);
     fade.addColorStop(0, 'rgba(0,0,0,1)');
-    fade.addColorStop(0.78, 'rgba(0,0,0,1)');
+    fade.addColorStop(0.80, 'rgba(0,0,0,1)');
     fade.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = fade;
-    ctx.fillRect(0, 0, TW, TH);
-    ctx.globalCompositeOperation = 'source-over';
+    fctx.fillStyle = fade;
+    fctx.fillRect(0, 0, cwT, chT);
+    fctx.globalCompositeOperation = 'source-over';
 
-    /* 抹掉低对比渐变自带的 dither（否则放大后是周期约 2 texel 的格子）。 */
-    var out = smoothTexture(cv, bc.fogBlur == null ? 1.2 : bc.fogBlur);
-    return { canvas: out, x: x0, y: y0, w: w, h: h, scale: 1, regions: regions, clusters: 0 };
+    return {
+      canvas: fcv, x: fx, y: fy, w: fw, h: fh,
+      alpha: a0, cw: cwT, ch: chT, regions: regions
+    };
   }
 
-  /* 每帧：只把纹理与视口相交的那块按世界坐标画到屏幕上。 */
   function draw(ctx, cam, tex, dpr) {
     if (!tex || !tex.canvas) return;
     var k = cam.k, tx = cam.tx, ty = cam.ty;
-    var vw = cam.viewW, vh = cam.viewH;
+    var vw = cam.viewW;
+    var vh = cam.viewH;
     if (!(vw > 0) || !(vh > 0)) {
       vw = ctx.canvas.width / dpr;
       vh = ctx.canvas.height / dpr;
     }
-    /* 视口覆盖的世界矩形 ⊕ 纹理范围。 */
-    var wx0 = Math.max(tex.x, -tx / k);
-    var wx1 = Math.min(tex.x + tex.w, (vw - tx) / k);
-    var wy0 = Math.max(tex.y, -ty / k);
-    var wy1 = Math.min(tex.y + tex.h, (vh - ty) / k);
-    if (!(wx1 > wx0) || !(wy1 > wy0)) return;
 
-    var cw = tex.canvas.width, ch = tex.canvas.height;
-    var sx = (wx0 - tex.x) / tex.w * cw;
-    var sy = (wy0 - tex.y) / tex.h * ch;
-    var sw = (wx1 - wx0) / tex.w * cw;
-    var sh = (wy1 - wy0) / tex.h * ch;
+    /* ENG-009：主题在运行时切换（不重建纹理），所以每帧按 data-theme 取倍率。 */
+    var dark = false;
+    try { dark = document.documentElement.getAttribute('data-theme') === 'dark'; } catch (e) {}
+    var bc = MG.config.background;
+    var glow = dark ? (bc.fogGlowDark == null ? 0.12 : bc.fogGlowDark)
+                    : (bc.fogGlowLight == null ? 0.10 : bc.fogGlowLight);
 
+    /* 只贴纹理与视口相交的那块（高倍时不会去光栅化上万像素的整图）。 */
+    var wf0 = Math.max(tex.x, -tx / k);
+    var wf1 = Math.min(tex.x + tex.w, (vw - tx) / k);
+    var hf0 = Math.max(tex.y, -ty / k);
+    var hf1 = Math.min(tex.y + tex.h, (vh - ty) / k);
+    if (!(wf1 > wf0 && hf1 > hf0)) return;
+
+    ctx.save();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.imageSmoothingEnabled = true;
-    /* 不能开 'high'：雾本来就是糊的，高采样质量在 dpr2 全屏放大时会吃掉半帧。 */
-    ctx.imageSmoothingQuality = 'low';
+    ctx.globalAlpha = Math.min(1, glow / (tex.alpha || 0.36));
+    if ('imageSmoothingQuality' in ctx) ctx.imageSmoothingQuality = 'low';
     ctx.drawImage(tex.canvas,
-      sx, sy, sw, sh,
-      wx0 * k + tx, wy0 * k + ty, (wx1 - wx0) * k, (wy1 - wy0) * k);
-  }
-
-  /* 小半径模糊：抹掉径向渐变的 dither（成本只在建纹理时付一次）。 */
-  function smoothTexture(src, r) {
-    var out = document.createElement('canvas');
-    out.width = src.width;
-    out.height = src.height;
-    var c = out.getContext('2d');
-    c.filter = 'blur(' + (r == null ? 1.2 : r) + 'px)';
-    c.drawImage(src, 0, 0);
-    c.filter = 'none';
-    return out;
+      (wf0 - tex.x) / tex.w * tex.cw, (hf0 - tex.y) / tex.h * tex.ch,
+      (wf1 - wf0) / tex.w * tex.cw, (hf1 - hf0) / tex.h * tex.ch,
+      wf0 * k + tx, hf0 * k + ty, (wf1 - wf0) * k, (hf1 - hf0) * k);
+    ctx.restore();
   }
 
   MG.background = {
