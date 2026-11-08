@@ -1726,7 +1726,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       fogMaxSide: 768,            // 纹理长边像素上限（ENG-009 的 747×768 口径）
       fogAlpha: 0.36,             // 纹理里区域云核心 alpha（四档衰减到 0）
       fogGlowLight: 0.10,         // 亮色主题的最终雾浓度
-      fogGlowDark: 0.12           // 深色主题的最终雾浓度
+      fogGlowDark: 0.12,          // 深色主题的最终雾浓度
+      /* ⚠️ 下面两个是 layout.js 算「板块云半径」用的（不是渲染参数）：
+         radius = max(cloudRadiusMin, 专属节点最大离心距 + cloudMargin)。
+         删掉会变成 Math.max(undefined, …) = NaN ⇒ 冷启动
+         createRadialGradient 收到非有限数直接抛 TypeError。 */
+      cloudMargin: 36,            // 板块云半径余量（世界单位）
+      cloudRadiusMin: 160         // 板块云最小半径（世界单位）
     },
 
     /* ------------------------------------------------------------------
@@ -5024,18 +5030,30 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     /* ENG-009 的四档渐变：0.36 → 0.22 → 0.07 → 0（画的时候再按主题乘 0.10/0.12 / 0.36）。 */
     var a0 = bc.fogAlpha == null ? 0.36 : bc.fogAlpha;
     var regions = 0;
+    var warnedBadStat = false;
     (graph.regions || []).forEach(function (reg) {
       if (!reg.stat) return;
+      /* ⚠️ 冷启动/旧缓存时 layout 可能还没把 stat 算成有限数（cx/cy/radius 为
+         undefined/NaN）。createRadialGradient 收到非有限数会抛
+         "The provided double value is non-finite" 并把整页启动打断 —— 跳过即可。 */
+      var rcx = reg.stat.cx, rcy = reg.stat.cy, rr = reg.stat.radius;
+      if (!isFinite(rcx) || !isFinite(rcy) || !isFinite(rr)) {
+        if (!warnedBadStat) {
+          warnedBadStat = true;
+          console.warn('[background] 跳过 stat 非有限的板块：' + reg.id, rcx, rcy, rr);
+        }
+        return;
+      }
       var rgb = U.hexToRgb(reg.color || '#7A8699');
       var css = rgb.r + ',' + rgb.g + ',' + rgb.b;
-      var FR = Math.max(4, reg.stat.radius);
-      var grd = fctx.createRadialGradient(reg.stat.cx, reg.stat.cy, 0, reg.stat.cx, reg.stat.cy, FR);
+      var FR = Math.max(4, rr);
+      var grd = fctx.createRadialGradient(rcx, rcy, 0, rcx, rcy, FR);
       grd.addColorStop(0, 'rgba(' + css + ',' + a0 + ')');
       grd.addColorStop(0.55, 'rgba(' + css + ',' + (a0 * 0.61) + ')');
       grd.addColorStop(0.85, 'rgba(' + css + ',' + (a0 * 0.19) + ')');
       grd.addColorStop(1, 'rgba(' + css + ',0)');
       fctx.fillStyle = grd;
-      fctx.beginPath(); fctx.arc(reg.stat.cx, reg.stat.cy, FR, 0, Math.PI * 2); fctx.fill();
+      fctx.beginPath(); fctx.arc(rcx, rcy, FR, 0, Math.PI * 2); fctx.fill();
       regions++;
     });
 
@@ -5059,7 +5077,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
   }
 
   function draw(ctx, cam, tex, dpr) {
+    /* ⚠️ 必须整层清掉再画（ENG-009 的口径）：app 只在相机变了的帧调用 draw，
+       不清就会把上一帧的雾**叠**上去，拖动/缩放几帧后颜色越叠越浓。 */
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     if (!tex || !tex.canvas) return;
+    dpr = dpr || 1;
     var k = cam.k, tx = cam.tx, ty = cam.ty;
     var vw = cam.viewW;
     var vh = cam.viewH;
