@@ -1924,7 +1924,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
          ② 交接也只能改裁剪 —— 一帧里 clearRect 两张显示中的大画布会把 p95 顶到 29.6ms。
          取值（设备像素）：112 → 单帧≈1 个时隙（p95 最好）；160~200 → 帧少但每帧约 2 个时隙。
          旋钮：&band=<px> 或 MG.app.setBand(<px>)。 */
-      bandPx: 128,
+      /* ⚠️ 2026-11-09 改 128 → 64：内容从 1391 线涨到 3202 线之后，同样带高里的光栅成本
+         翻了一倍多 ⇒ 128px 的带单帧要 16.7ms（4 个时隙），p95 顶不住。
+         实测（假拖动 3s、k=1.2、3312×2024 区域图、同一台机器）：
+           带高 128 → p95 16.7ms，>20ms 的帧 25~35 根
+           带高  96 → p95 16.7ms，7 根
+           带高  64 → p95 12.5ms，**3~6 根**（p50 仍是 4.2，落洞 0）
+         代价：带数翻倍 ⇒ 每轮多建几次几何（单带 JS 0.77ms / 整张 2.73ms），
+         但「每帧脏一条带」的面积减半 ⇒ 单帧光栅跟着减半，这才是判决项。
+         ⛔ 别为了「少几帧」调大：调大是拿单帧成本换帧数，用户感觉到的正是单帧。 */
+      bandPx: 64,
       /* 缩放手势里**多久出一次新图**（毫秒；0 = 只看停手）。
          为什么要有：k 一变，位图就是上一档的图被 transform 拉伸 ⇒ 线宽 / 圆点 / 箭头
          全跟着被缩放（屏幕上本该恒定的东西变了），而原先要一直挂到停手 settle 才纠正。
@@ -5508,6 +5517,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var ids = GU.edgeNodes(e);
       if (!ids.length) return false;
       var x1v = cullBox ? cullBox.x1 : W, y1v = cullBox ? cullBox.y1 : H;
+      var y0v = cullBox ? cullBox.y0 : 0;
       var left = true, right = true, up = true, down = true;
       for (var i = 0; i < ids.length; i++) {
         var n = view.graph.byId[ids[i]];
@@ -5515,7 +5525,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         var x = nodeSX(n), y = nodeSY(n);
         if (x > -PAD_EDGE) left = false;
         if (x < x1v + PAD_EDGE) right = false;
-        if (y > -PAD_EDGE) up = false;
+        if (y > y0v - PAD_EDGE) up = false;
         if (y < y1v + PAD_EDGE) down = false;
         if (!left && !right && !up && !down) return true;   // 有一个端点就在视口里
       }
