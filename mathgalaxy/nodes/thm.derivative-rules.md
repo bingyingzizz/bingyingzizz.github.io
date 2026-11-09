@@ -1,6 +1,6 @@
 # 求导法则　`thm.derivative-rules`
 定理：求导的四则运算与链式法则
-layer 18 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 19 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.derivative-rules)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 可导、$g$ 在 $f(x_0)$ 可导（下面前四条只需 $f, g$ 各自在 $x_0$ 可导），$c \in \mathbb{R}$。则

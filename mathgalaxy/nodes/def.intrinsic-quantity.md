@@ -1,6 +1,6 @@
 # 内蕴量　`def.intrinsic-quantity`
 内蕴量与外在量
-layer 32 · 定义 · 内蕴几何 · 微分几何
+layer 33 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.intrinsic-quantity)　·　[节点索引](../index.md)
 
 设 $S \subseteq \mathbb{R}^{3}$ 是正则曲面，$I$ 是它的第一基本形式。由 $S$ 上的点、切向量与曲线所决定的一个量叫**内蕴的**，如果它只依赖 $I$（等价

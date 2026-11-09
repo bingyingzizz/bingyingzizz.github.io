@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Metric Spaces (`topology.metric`) · Topology / Mathematical Analysis
+layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.metric-continuity.md` and `proofs/`.

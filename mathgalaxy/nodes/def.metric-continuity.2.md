@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：度量连续 $\iff$ $\varepsilon$-$\delta$ 判据　[proofs/eq.real-continuity-epsilon-delta.md](../proofs/eq.real-continuity-epsilon-delta.md)
 - [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-link.mc-metric.md](../proofs/def-link.mc-metric.md)
+- [`def.real-metric-space`](../nodes/def.real-metric-space.md) 实数的度量：用到了定义 实数的度量　[proofs/def-link.realmetric-metriccont.md](../proofs/def-link.realmetric-metriccont.md)
 
 > 续见 [nodes/def.metric-continuity.3.md](./def.metric-continuity.3.md)

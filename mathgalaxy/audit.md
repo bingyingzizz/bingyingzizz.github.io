@@ -2,10 +2,9 @@
 
 由 `tools/build.mjs` 生成。**不是硬门**：这三类都会误报，先看，别急着改数据。
 
-## 一、正文引用了不存在的 id（2 个）
+## 一、正文引用了不存在的 id（1 个）
 
 - `prop.poisson-formula` ← lem.caratheodory-osgood.notes
-- `thm.real-complete` ← def.real-metric-space.notes
 
 ## 二、近同名却没有任何边（8 对）
 
@@ -16,9 +15,9 @@
 - Euler 判别法（`thm.euler-criterion` L16）⇸ Euler 类（`def.euler-class` L38）
 - Pontryagin 类（`def.pontryagin-class` L37）⇸ Pontryagin 对偶（`def.pontryagin-dual` L19）
 - Euler 类（`def.euler-class` L38）⇸ Euler 公式（`thm.euler-formula` L23）
-- Euler 公式（`thm.euler-formula-surface` L30）⇸ Euler 类（`def.euler-class` L38）
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L38）
 - 阿贝尔群范畴（`def.category-of-abelian-groups` L8）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
+- Euler 公式（`thm.euler-formula-surface` L31）⇸ Euler 类（`def.euler-class` L38）
 
 ## 三、黑边子图上的环（2 个）
 

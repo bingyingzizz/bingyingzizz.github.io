@@ -31,7 +31,7 @@
 - **20 / 20** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **19 / 20** `def.integrable` 可积 / L¹ · layer 21 · 积分
 
-（共 978 个节点有非零计数；这里列前 20 条。）
+（共 979 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -40,23 +40,23 @@
 - **10 / 8** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 28 · 曲面的地形
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · layer 19 · 测度的构造
 - **8 / 8** `thm.bundle-classification` 丛的分类 · layer 34 · 丛的示性类
-- **8 / 6** `thm.de-rham` de Rham 定理 · layer 31 · 微分形式、积分与 de Rham
+- **8 / 6** `thm.de-rham` de Rham 定理 · layer 32 · 微分形式、积分与 de Rham
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 23 · 同调群
 - **7 / 5** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
-- **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 34 · 内蕴几何
+- **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 35 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
-- **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 25 · 向量场与 Lie 结构
-- **6 / 7** `thm.stokes` Stokes 定理 · layer 30 · 内蕴几何
+- **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 26 · 向量场与 Lie 结构
+- **6 / 7** `thm.stokes` Stokes 定理 · layer 31 · 内蕴几何
+- **6 / 6** `def.continuous` 连续（ε-δ 判据） · layer 16 · 实数与极限
 - **6 / 6** `thm.baire` Baire 纲定理 · layer 18 · Baire 纲与三大定理
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
-- **6 / 6** `def.form-on-manifold` 微分形式 · layer 21 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
+- **6 / 6** `def.form-on-manifold` 微分形式 · layer 22 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 27 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
-- **6 / 6** `def.submanifold-volume` 诱导体积 · layer 31 · 微分形式、积分与 de Rham
-- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
-- **6 / 6** `def.euler-class` Euler 类 · layer 38 · 流形与向量丛
+- **6 / 6** `def.submanifold-volume` 诱导体积 · layer 32 · 微分形式、积分与 de Rham
+- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 34 · 内蕴几何
 
 （共 1567 个节点有非零计数；这里列前 20 条。）
 
@@ -77,13 +77,13 @@
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **10 团 / 16 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
 - **10 团 / 15 节点** `def.vs` 线性无关与基 · layer 11 · 向量空间与基
+- **10 团 / 14 节点** `def.continuous-map` 连续映射 · layer 16 · 拓扑空间的基本语汇
 - **9 团 / 31 节点** `def.measure` 测度 · layer 15 · 测度的构造
 - **9 团 / 22 节点** `def.functor` 函子 · layer 8 · 函子与自然变换
 - **9 团 / 21 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **9 团 / 17 节点** `def.ring` 环 · layer 8 · 代数结构
 - **9 团 / 17 节点** `def.inner-product` 内积 · layer 14 · 内积空间与正交性
-- **9 团 / 13 节点** `def.continuous-map` 连续映射 · layer 16 · 拓扑空间的基本语汇
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 978 个节点有非零计数；这里列前 20 条。）
+（共 979 个节点有非零计数；这里列前 20 条。）
 

@@ -1,6 +1,6 @@
 # 偏导数　`def.partial-derivative`
 偏导数
-layer 17 · 定义 · 多元微分 · 数学分析
+layer 18 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.partial-derivative)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 是开集，$f : U \to \mathbb{R}^{m}$，$a \in U$。$f$ 在 $a$ 处关于第 $j$ 个变元的**偏导数**是（若该极限存在）

@@ -1,6 +1,6 @@
 # 连续（ε-δ 判据）　`def.continuous`
 连续：$\varepsilon$-$\delta$ 判据
-layer 15 · 定理 · 实数与极限 · 数学分析+拓扑学
+layer 16 · 定理 · 实数与极限 · 数学分析+拓扑学
 [在星图里打开](../#n=def.continuous)　·　[节点索引](../index.md)
 
 **定理（$\varepsilon$-$\delta$ 判据）**：下面这个条件不是定义，而是度量连续性的判据；定义见 `def.metric-continuity`，$\mathbb{R}$ 上的度量见 `def.real-metric-space`。

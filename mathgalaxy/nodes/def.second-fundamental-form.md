@@ -1,6 +1,6 @@
 # 第二基本形式　`def.second-fundamental-form`
 第二基本形式
-layer 31 · 定义 · 曲面论 · 微分几何
+layer 32 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.second-fundamental-form)　·　[节点索引](../index.md)
 
 曲面的**第二基本形式**是

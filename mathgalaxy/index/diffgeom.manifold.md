@@ -12,9 +12,9 @@
 - def.smooth-map　光滑映射　layer 20
 - thm.smooth-partition-unity　光滑单位分解　layer 20
 - def.local-trivialization　局部平凡化　layer 20
-- def.tangent-bundle　切丛　layer 21
 - def.vector-bundle　向量丛　layer 21
 - def.boundary-manifold　带边流形　layer 21
+- def.tangent-bundle　切丛　layer 22
 - def.bundle-section　丛的截面　layer 22
 - prop.bundle-metric　纤维度量　layer 22
 

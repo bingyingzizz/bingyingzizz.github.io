@@ -1,6 +1,6 @@
 # 连续 ⟹ Borel 可测　`cor.continuous-measurable`
 推论：连续函数是 Borel 可测的
-layer 16 · 推论 · 可测函数与收敛 · 实变函数+数学分析+拓扑学
+layer 17 · 推论 · 可测函数与收敛 · 实变函数+数学分析+拓扑学
 [在星图里打开](../#n=cor.continuous-measurable)　·　[节点索引](../index.md)
 
 设 $X, Y$ 是拓扑空间，各配 **Borel $\sigma$-代数** $\mathfrak{B}_X, \mathfrak{B}_Y$。则**连续**映射自动是 Borel 可测的：

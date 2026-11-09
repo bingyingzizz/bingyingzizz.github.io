@@ -1,6 +1,6 @@
 # 可导 ⟹ 连续　`prop.differentiable-implies-continuous`
 命题：可导蕴含连续（Differentiable $\implies$ Continuous）
-layer 17 · 命题 · 微分中值定理与 Taylor · 数学分析
+layer 18 · 命题 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=prop.differentiable-implies-continuous)　·　[节点索引](../index.md)
 
 若 $f$ 在 $x_0$ 可导，则 $f$ 在 $x_0$ 连续。

@@ -4,5 +4,5 @@
 - ex.torus　环面 T²　layer 29
 - ex.projective-plane　射影平面 RP²　layer 29
 - thm.riemann-hurwitz　Riemann–Hurwitz 公式　layer 29
-- def.mobius-band　莫比乌斯带　layer 30
-- ex.klein-bottle　克莱因瓶　layer 31
+- def.mobius-band　莫比乌斯带　layer 31
+- ex.klein-bottle　克莱因瓶　layer 32

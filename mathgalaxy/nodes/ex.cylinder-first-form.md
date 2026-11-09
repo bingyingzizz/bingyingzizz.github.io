@@ -1,6 +1,6 @@
 # 圆柱的第一基本形式　`ex.cylinder-first-form`
 圆柱面：$\mathrm{I} = R^{2}\,\mathrm{d}u^{2} + \mathrm{d}v^{2}$，$-\!-$ 平坦但不与平面等距
-layer 33 · 例 · 曲面论 · 微分几何+geometry
+layer 34 · 例 · 曲面论 · 微分几何+geometry
 [在星图里打开](../#n=ex.cylinder-first-form)　·　[节点索引](../index.md)
 
 半径 $R$ 的圆柱面用 $r(u, v) = (R\cos u,\ R\sin u,\ v)$ 参数化（$0 \le u < 2\pi$、$v \in \mathbb{R}$）。则

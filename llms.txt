@@ -14,7 +14,7 @@
 
 ## 程序化使用
 
-- `/mathgalaxy/graph.json`  全量图（约 5.6 MB），schema 见 `/mathgalaxy/reading.md`
+- `/mathgalaxy/graph.json`  全量图（约 5.7 MB），schema 见 `/mathgalaxy/reading.md`
 
 ## 许可
 

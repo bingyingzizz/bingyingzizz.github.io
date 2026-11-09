@@ -4,11 +4,11 @@
 中心天体 thm.taylor　·　16 个节点　·　根 `../`　·　续页 `index/analysis.mvt.2.md`
 
 - def.convex-function　凸函数　layer 15
-- prop.differentiable-implies-continuous　可导 ⟹ 连续　layer 17
-- def.local-extremum　局部极值　layer 17
-- def.higher-derivative　高阶导数与 C^k　layer 17
-- thm.derivative-rules　求导法则　layer 18
-- thm.fermat　Fermat 引理　layer 18
+- prop.differentiable-implies-continuous　可导 ⟹ 连续　layer 18
+- def.local-extremum　局部极值　layer 18
+- def.higher-derivative　高阶导数与 C^k　layer 18
+- thm.derivative-rules　求导法则　layer 19
+- thm.fermat　Fermat 引理　layer 19
 - thm.rolle　Rolle 中值定理　layer 24
 - thm.mvt　Lagrange 中值定理　layer 25
 - thm.cauchy-mvt　Cauchy 中值定理　layer 25

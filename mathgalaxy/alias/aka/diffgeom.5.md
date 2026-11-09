@@ -11,4 +11,6 @@
 
 - 庞特里亚金类 → def.pontryagin-class
 
+- 李群可定向 | 李群都是可定向流形 → prop.lie-group-orientable
+
 见 `../../alias.md`。

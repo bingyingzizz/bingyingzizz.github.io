@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 32 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 33 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.meusnier.md` and `proofs/`.

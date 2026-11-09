@@ -1,6 +1,6 @@
 # 导数　`def.derivative`
 导数 $F'$
-layer 16 · 定义 · 实数与极限 · 数学分析
+layer 17 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.derivative)　·　[节点索引](../index.md)
 
 $F : (a, b) \to \mathbb{C}$ 在 $x_0 \in (a, b)$ **可导**，当且仅当极限

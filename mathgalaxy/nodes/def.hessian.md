@@ -1,6 +1,6 @@
 # Hessian 矩阵　`def.hessian`
 Hessian 矩阵
-layer 18 · 定义 · 多元微分 · 数学分析
+layer 19 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.hessian)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}$ 在 $a$ 的二阶偏导都存在。**Hessian 矩阵**是

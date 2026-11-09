@@ -1,6 +1,6 @@
 # Jacobi 矩阵　`def.jacobian`
 Jacobi 矩阵
-layer 20 · 定义 · 多元微分 · 数学分析
+layer 21 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.jacobian)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f = (f_1, \ldots, f_m) : U \to \mathbb{R}^{m}$ 在 $a$ 处各偏导都存在。$f$ 在 $a$ 的 **Jacobi 矩阵**是

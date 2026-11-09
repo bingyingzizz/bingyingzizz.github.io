@@ -1,9 +1,9 @@
 # 多元微分 / Multivariable Differentiation（analysis.multivariable）· 节点清单（第 2/3 页）
 根 `../`　·　第 1 页 `index/analysis.multivariable.md`
 
-- def.total-differential　可微与全微分　layer 19
-- def.jacobian　Jacobi 矩阵　layer 20
-- thm.chain-rule-multi　多元链式法则　layer 21
+- def.total-differential　可微与全微分　layer 20
+- def.jacobian　Jacobi 矩阵　layer 21
+- thm.chain-rule-multi　多元链式法则　layer 22
 - thm.mixed-partials　混合偏导相等　layer 26
 - thm.mean-value-multi　多元中值定理　layer 26
 - thm.taylor-multi　多元 Taylor 公式　layer 27

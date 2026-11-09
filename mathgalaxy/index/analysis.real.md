@@ -9,12 +9,12 @@
 - def.sequence-limit　数列极限　layer 14
 - prop.limit-basic　极限的基本性质　layer 15
 - def.series　级数收敛　layer 15
-- def.continuous　连续（ε-δ 判据）　layer 15
 - def.real-metric-space　实数的度量　layer 15
 - def.function-limit　函数极限　layer 15
 - def.cauchy-sequence　Cauchy 列　layer 15
-- def.derivative　导数　layer 16
+- def.continuous　连续（ε-δ 判据）　layer 16
 - def.function-limit-onesided　单侧极限　layer 16
 - thm.squeeze　夹逼定理　layer 16
 - prop.limit-arithmetic　极限的四则运算与保序性　layer 16
-- def.dini-derivative　Dini 导数　layer 17
+- def.derivative　导数　layer 17
+- def.dini-derivative　Dini 导数　layer 18

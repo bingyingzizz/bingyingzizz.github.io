@@ -1,6 +1,6 @@
 # 高阶导数与 C^k　`def.higher-derivative`
 高阶导数与 $C^{k}$ 类
-layer 17 · 定义 · 微分中值定理与 Taylor · 数学分析
+layer 18 · 定义 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=def.higher-derivative)　·　[节点索引](../index.md)
 
 若 $f'$ 在 $x_0$ 处可导，记

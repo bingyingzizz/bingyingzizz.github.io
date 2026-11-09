@@ -1,6 +1,6 @@
 # Dini 导数　`def.dini-derivative`
 定义：Dini 导数（四个单侧上、下导数）
-layer 17 · 定义 · 实数与极限 · 数学分析
+layer 18 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.dini-derivative)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 的某个邻域内有定义。四个 Dini 导数用差商的 $\limsup$ 与 $\liminf$ 定义：

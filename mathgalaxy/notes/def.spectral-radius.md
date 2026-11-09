@@ -9,6 +9,6 @@
 
 ⭐ **它的用处比范数更准**：$A^{k}$ 的增长其实由 $\rho$ 控制（Jordan 块的多项式因子只贡献 $k^{m-1}$ 的因子，被 $\rho^{k}$ 的指数压住）。所以「迭代收敛」的判据一律写 $\rho < 1$，而不是 $\lVert A\rVert < 1$。
 
-⚠️ 非方阵没有谱半径（特征值只对方阵有定义）；伪谱（pseudospectrum）是另一回事，本图未收录。
+⚠️ 非方阵没有谱半径（特征值只对方阵有定义）；伪谱（pseudospectrum）是另一回事。
 
 > 续见 notes/def.spectral-radius.2.md

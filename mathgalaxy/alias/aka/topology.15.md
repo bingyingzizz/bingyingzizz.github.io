@@ -15,4 +15,8 @@
 
 - 实数度量空间 | R 的度量 | 实数直线 → def.real-metric-space
 
+- 基本群是群 | π1 是群 → prop.pi1-group
+
+- 单连通与基点无关 | 单连通不依赖基点 → prop.simply-connected-basepoint
+
 见 `../../alias.md`。

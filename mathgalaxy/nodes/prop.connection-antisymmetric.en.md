@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · proposition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 26 · proposition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Connection Antisymmetry` (short) · `Antisymmetry of the Connection Form` (full)
 
 ## Statement and proof

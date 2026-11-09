@@ -1,6 +1,6 @@
 # 有界变差函数的 Jordan 分解　`thm.bv-jordan`
 定理：$F \in BV \iff F = G - H$（G、H 有界递增）
-layer 19 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 20 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=thm.bv-jordan)　·　[节点索引](../index.md)
 
 **(a)** 若 $F$ 的实部与虚部都是 $BV$，则 $F \in BV$；反之亦然：

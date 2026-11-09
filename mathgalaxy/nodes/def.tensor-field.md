@@ -1,6 +1,6 @@
 # 张量场　`def.tensor-field`
 张量场与张量丛
-layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.tensor-field)　·　[节点索引](../index.md)
 
 *

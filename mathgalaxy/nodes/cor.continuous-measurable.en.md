@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · corollary · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis / Topology
+layer 17 · corollary · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.continuous-measurable.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 34 · example · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry / geometry
+layer 35 · example · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry / geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.sphere-curvature.md` and `proofs/`.

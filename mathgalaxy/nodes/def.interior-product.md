@@ -1,6 +1,6 @@
 # 内乘　`def.interior-product`
 内乘（内积）
-layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.interior-product)　·　[节点索引](../index.md)
 
 **白话**：把一个向量场塞进形式的第一个槽，次数降一 —— 这就是内乘。它是 Cartan 公式里与外微分配对的那一半。

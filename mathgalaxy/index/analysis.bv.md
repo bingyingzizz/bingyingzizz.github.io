@@ -4,16 +4,16 @@
 中心天体 def.bounded-variation　·　16 个节点　·　根 `../`　·　续页 `index/analysis.bv.2.md`
 
 - def.ac-function　绝对连续函数　layer 15
-- def.bounded-variation　有界变差函数　layer 17
 - thm.monotone-differentiable　单调函数几乎处处可导　layer 18
-- prop.bv-examples　有界变差函数的例子与基本性质　layer 18
-- lem.variation-monotone　T_F ± F 递增　layer 18
-- def.nbv　规范有界变差函数　layer 18
-- lem.ac-subset-bv　绝对连续蕴含有界变差　layer 18
-- thm.bv-jordan　有界变差函数的 Jordan 分解　layer 19
-- lem.nbv-variation　全变差的规范有界变差性质　layer 19
+- def.bounded-variation　有界变差函数　layer 18
+- prop.bv-examples　有界变差函数的例子与基本性质　layer 19
+- lem.variation-monotone　T_F ± F 递增　layer 19
+- def.nbv　规范有界变差函数　layer 19
 - prop.monotone-integral-derivative　递增函数的导数积分不等式　layer 19
-- prop.bv-regularity　有界变差函数的正则性　layer 20
-- thm.borel-measure-nbv　测度与规范有界变差函数的一一对应　layer 20
+- lem.ac-subset-bv　绝对连续蕴含有界变差　layer 19
+- thm.bv-jordan　有界变差函数的 Jordan 分解　layer 20
+- lem.nbv-variation　全变差的规范有界变差性质　layer 20
+- prop.bv-regularity　有界变差函数的正则性　layer 21
+- thm.borel-measure-nbv　测度与规范有界变差函数的一一对应　layer 21
 
 > 续见 `index/analysis.bv.2.md`

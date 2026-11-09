@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-09T12:17:46.684Z",
+  "generated": "2026-11-09T12:48:19.479Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
    "nodes": 1574,
-   "edges": 3274,
-   "strong": 3232,
+   "edges": 3277,
+   "strong": 3235,
    "weak": 42,
    "derived": 33,
-   "en_pages": 1571
+   "en_pages": 1574
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -4640,7 +4640,7 @@
     "analysis"
    ],
    "cluster": "topology.metric",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "定义",
     "连续",
@@ -6168,7 +6168,7 @@
     "topology"
    ],
    "cluster": "analysis.measurable",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "推论",
     "连续",
@@ -9571,7 +9571,7 @@
     "内积"
    ],
    "statement": "设 $V$ 是 $K$-向量空间（$K = \\mathbb{R}$ 或 $\\mathbb{C}$）。映射\n\n$$\\langle \\cdot, \\cdot \\rangle : V \\times V \\longrightarrow K$$\n\n叫 $V$ 上的**内积**，当且仅当对一切 $u, v, w \\in V$、$c \\in K$：\n\n- **对第一变元线性**：$\\langle u + c\\,w, v \\rangle = \\langle u, v \\rangle + c\\langle w, v \\rangle$；\n- **共轭对称**：$\\langle v, u \\rangle = \\overline{\\langle u, v \\rangle}$（$K = \\mathbb{R}$ 时就是对称）；\n- **正定**：$\\langle v, v \\rangle \\ge 0$，且 $\\langle v, v \\rangle = 0 \\iff v = 0$。\n\n配上内积的 $V$ 叫**内积空间**。实数情形下内积就是正定对称双线性型。\n\n标准例子：$K^{n}$ 上的内积 $\\langle x, y \\rangle := \\sum_i x_i\\, \\overline{y_i}$。",
-   "notes": "⭐ 复数情形下**不能要求双线性**：若 $\\langle u, v \\rangle$ 对两个变元都线性，则 $\\langle i v, i v \\rangle = i^{2}\\langle v, v \\rangle = -\\langle v, v \\rangle$ 恒为负，与正定矛盾。\n\n所以复数情形只能是**一个变元线性、另一个共轭线性**（叫**半双线性**或 sesquilinear）。\n\n⭐ 哪一边写成共轭是**约定**：取「第一变元线性、第二变元共轭线性」（与图上别处一致）。\n\n换个约定所有公式共轭一下，不改变内容。\n\n⚠ 正定性是内积与「一般双线性型」的分水岭：正定才有「长度」可言，才有 Cauchy–Schwarz、才有正交投影。\n\n丢掉正定（只留对称双线性）得到的是**二次型**那一套（见 `def.quadratic-form`），丢掉对称得到的是**辛形式**。\n\n\n\n**各方向用到的假设**（公理定义免费，衍生性质须保留正定性）：\n- 内积 $\\iff$ 所列三条公理是定义展开；实数情形与正定对称双线性型等价，因为对称性把第一变元线性传给第二变元。\n- 复数情形第一变元线性加共轭对称 $\\implies$ 第二变元共轭线性，只需代数计算；标准例子 $\\sum_i x_i\\overline{y_i}$ 与所列约定一致。\n- 正定内积 $\\implies$ 范数及 Cauchy–Schwarz 用非负二次表达式，不要求有限维或完备；反向从任意范数恢复内积则需要平行四边形恒等式。\n- 正定性不能删：$\\mathbb R^2$ 上 $x_1y_1-x_2y_2$ 对称双线性，却有非零向量自配对为零，不能定义范数。\n",
+   "notes": "⭐ 复数情形下**不能要求双线性**：若 $\\langle u, v \\rangle$ 对两个变元都线性，则 $\\langle i v, i v \\rangle = i^{2}\\langle v, v \\rangle = -\\langle v, v \\rangle$ 恒为负，与正定矛盾。\n\n所以复数情形只能是**一个变元线性、另一个共轭线性**（叫**半双线性**或 sesquilinear）。\n\n⭐ 哪一边写成共轭是**约定**：取「第一变元线性、第二变元共轭线性」。\n\n换个约定所有公式共轭一下，不改变内容。\n\n⚠ 正定性是内积与「一般双线性型」的分水岭：正定才有「长度」可言，才有 Cauchy–Schwarz、才有正交投影。\n\n丢掉正定（只留对称双线性）得到的是**二次型**那一套（见 `def.quadratic-form`），丢掉对称得到的是**辛形式**。\n\n\n\n**各方向用到的假设**（公理定义免费，衍生性质须保留正定性）：\n- 内积 $\\iff$ 所列三条公理是定义展开；实数情形与正定对称双线性型等价，因为对称性把第一变元线性传给第二变元。\n- 复数情形第一变元线性加共轭对称 $\\implies$ 第二变元共轭线性，只需代数计算；标准例子 $\\sum_i x_i\\overline{y_i}$ 与所列约定一致。\n- 正定内积 $\\implies$ 范数及 Cauchy–Schwarz 用非负二次表达式，不要求有限维或完备；反向从任意范数恢复内积则需要平行四边形恒等式。\n- 正定性不能删：$\\mathbb R^2$ 上 $x_1y_1-x_2y_2$ 对称双线性，却有非零向量自配对为零，不能定义范数。\n",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, Ch. 8",
     "Roman, Advanced Linear Algebra, Ch. 11"
@@ -10621,7 +10621,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "微积分",
@@ -10662,7 +10662,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "微积分",
@@ -10703,7 +10703,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定义",
     "微积分",
@@ -10786,7 +10786,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定义",
     "微积分",
@@ -10827,7 +10827,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "微积分",
@@ -10868,7 +10868,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定理",
     "微积分",
@@ -11538,7 +11538,7 @@
     "测度"
    ],
    "statement": "设 $U \\subseteq \\mathbb{R}^{n}$ 开，$f : U \\to \\mathbb{R}^{m}$ 是 $C^{k}$ 且 $k > n - m$（$C^{\\infty}$ 时自然满足）。则 $f$ 的**临界值**全体\n\n$$f\\bigl( \\{ x \\in U : \\operatorname{rank} Df(x) < m \\} \\bigr) \\subseteq \\mathbb{R}^{m}$$\n\n是 $\\mathbb{R}^{m}$ 中的**零测集**（`def.null-set`，Lebesgue 测度为零）。",
-   "notes": "⭐ Sard 说「**临界值极其稀少**」：几乎每个值都是正则值，于是几乎每个水平集是子流形（`thm.regular-value`）。\n\n这一条把「正则性」从「碰巧成立的假设」变成「几乎必然成立的事实」——这是微分拓扑里所有「一般位置」论证的根基。\n\n⚠ 光滑性（或足够高阶）是必要的：$n - m \\ge 1$ 且只假设 $C^{1}$ 时有反例（如 $n = 2$、$m = 1$：Whitney 构造的 $C^{1}$ 函数把临界值映满一个区间）；$n = m = 1$ 时门槛 $k > 0$，$C^{1}$ 就够，一维的临界值集确实零测。\n\nSard 给出的门槛是 $C^{k}$、$k > n - m$。\n\n⭐ 常被引用的推论：任意 $n$ 维流形可以嵌入 $\\mathbb{R}^{2n}$（用 Sard 制造一个「一般位置」的映射），以及 Borsuk–Ulam 型结论、Morse 理论里「几乎所有函数所有临界点都非退化」。\n\n⚠ **本节点只给证明提纲，不声称给出完整证明** —— 完整证明相当重（对 $m$ 归纳、Whitney 分解、外层用 Fubini 定理把零测性降维）。\n\n提纲与出处：\n1. $m = 1$：对 $n$ 归纳，把 $U$ 切成可数多个小方块，在每个方块上把 $f$ 展成一阶 Taylor，用「临界点处 $Df(x) = 0$」把小方块的像控制住；\n\n\n2. 一般 $m$：改用「临界点按 $\\operatorname{rank}$ 分层」（Whitney 分解），每层用 Fubini 降到低维情形，再对 $\\operatorname{rank}$ 归纳。\n\n\n细节见 Milnor《Topology from the Differentiable Viewpoint》§3 与 Sternberg《Lectures on Differential Geometry》§II.3。\n\n∎",
+   "notes": "⭐ Sard 说「**临界值极其稀少**」：几乎每个值都是正则值，于是几乎每个水平集是子流形（`thm.regular-value`）。\n\n这一条把「正则性」从「碰巧成立的假设」变成「几乎必然成立的事实」——这是微分拓扑里所有「一般位置」论证的根基。\n\n⚠ 光滑性（或足够高阶）是必要的：$n - m \\ge 1$ 且只假设 $C^{1}$ 时有反例（如 $n = 2$、$m = 1$：Whitney 构造的 $C^{1}$ 函数把临界值映满一个区间）；$n = m = 1$ 时门槛 $k > 0$，$C^{1}$ 就够，一维的临界值集确实零测。\n\nSard 给出的门槛是 $C^{k}$、$k > n - m$。\n\n⭐ 常被引用的推论：任意 $n$ 维流形可以嵌入 $\\mathbb{R}^{2n}$（用 Sard 制造一个「一般位置」的映射），以及 Borsuk–Ulam 型结论、Morse 理论里「几乎所有函数所有临界点都非退化」。\n\n⚠ **以下是证明提纲，不是完整证明** —— 完整证明相当重（对 $m$ 归纳、Whitney 分解、外层用 Fubini 定理把零测性降维）。\n\n提纲与出处：\n1. $m = 1$：对 $n$ 归纳，把 $U$ 切成可数多个小方块，在每个方块上把 $f$ 展成一阶 Taylor，用「临界点处 $Df(x) = 0$」把小方块的像控制住；\n\n\n2. 一般 $m$：改用「临界点按 $\\operatorname{rank}$ 分层」（Whitney 分解），每层用 Fubini 降到低维情形，再对 $\\operatorname{rank}$ 归纳。\n\n\n细节见 Milnor《Topology from the Differentiable Viewpoint》§3 与 Sternberg《Lectures on Differential Geometry》§II.3。\n\n∎",
    "refs": [
     "Milnor, Topology from the Differentiable Viewpoint, §3",
     "Sternberg, Lectures on Differential Geometry, §II.3",
@@ -13093,7 +13093,7 @@
     "analysis"
    ],
    "cluster": "analysis.mvt",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "命题",
     "导数",
@@ -13133,7 +13133,7 @@
     "analysis"
    ],
    "cluster": "analysis.mvt",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "导数",
@@ -14015,7 +14015,7 @@
     "解析环"
    ],
    "statement": "预解析环 $\\mathcal{A}$ 叫**解析环**，当且仅当：对任意复形\n\n$$C : \\cdots \\to C_i \\to \\cdots \\to C_1 \\to C_0 \\to 0$$\n\n（其中每个 $C_i$ 是若干 $\\mathcal{A}[T]$ 的直和，$T$ extremally disconnected），以及对任意 extremally disconnected 集 $S$，自然映射\n\n$$\\operatorname{RHom}_{\\mathcal{A}}\\bigl(\\mathcal{A}[S],\\ C\\bigr) \\longrightarrow \\operatorname{RHom}_{A}\\bigl(A[S],\\ C\\bigr)$$\n\n是同构。这里「自然映射」是**一个具体的映射**，不是修辞：它从 $\\mathcal{A}$ 那一边走到 $A$ 那一边，由「沿 $\\iota_S$ 复合」诱导。三步写清：\n\n1. **先有典范映射** $\\iota_S : A[S] \\to \\mathcal{A}[S]$ —— 把形式的有限和 $\\sum a_s s$ 送进自由完备模（预解析环的数据里自带这族映射，见 `def.pre-analytic-ring`）。\n2. **沿它拉回**：$\\operatorname{RHom}_A(-, C)$ 是反变函子，$\\iota_S$ 给出 $\\operatorname{RHom}_A(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$，规则是 $g \\mapsto g \\circ \\iota_S$。\n3. **左边换个写法**：$\\mathcal{A}[S]$ 是自由 $\\mathcal{A}$-模，所以 $\\mathcal{A}$-线性映射与「逐生成元给一个 $A$-线性映射」是一回事，于是 $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) = \\operatorname{RHom}_A(\\mathcal{A}[S], C)$ —— 同一个集合，只是记法不同。\n\n把 2、3 接起来，就是公式里那个箭头 $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$。",
-   "notes": "⭐ 读法：**「$\\mathcal{A}[S]$ 与普通自由模 $A[S]$ 在 $\\operatorname{RHom}$ 里无法区分」**。\n\n这正是固态群定义 (ii) 的相对版本；\n\n取 $A = \\mathbb{Z}$、$\\mathcal{A}[S] = Z[S]^{\\blacksquare}$ 就回到固态。\n\n⚠ 为什么要求**所有**这样的复形而不只是单个模？因为要得到导出范畴层面的结论（`thm.analytic-modules` (ii)），单点的同构不够，需要它对复形也成立。\n\n⭐ 判定「是不是解析环」通常靠 `prop.analytic-examples` 与 `thm.za-analytic` 这类具体定理，而不是逐条验证定义。\n\n**各方向用到的假设**（解析性是对整类复形的导出检验）：\n- 解析 $\\iff$ 所列所有复形与极端不连通 $S$ 的比较映射为拟同构：这是定义展开，前提已经给定预解析环。\n- 典范映射 $A[S]\\to\\mathcal A[S]$ $\\implies$ 反变的导出 Hom 比较映射：用预复合的函子性，不需要先假定解析性。\n- 只检验零次普通 Hom $\\implies$ 导出比较同构不免费；普通 Hom 看不到高次 Ext，不能替代对复形的条件。\n- 原文把 $\\operatorname{RHom}_{\\mathcal A}$ 与 $\\operatorname{RHom}_A$ 直接识别的解释有循环风险：一般预解析环尚未建立完备模导出范畴，此处不确定，待核；检验条件宜先在底层凝聚态 $A$-模导出范畴表述。\n",
+   "notes": "⭐ 读法：**「$\\mathcal{A}[S]$ 与普通自由模 $A[S]$ 在 $\\operatorname{RHom}$ 里无法区分」**。\n\n这正是固态群定义 (ii) 的相对版本；\n\n取 $A = \\mathbb{Z}$、$\\mathcal{A}[S] = Z[S]^{\\blacksquare}$ 就回到固态。\n\n⚠ 为什么要求**所有**这样的复形而不只是单个模？因为要得到导出范畴层面的结论（`thm.analytic-modules` (ii)），单点的同构不够，需要它对复形也成立。\n\n⭐ 判定「是不是解析环」通常靠 `prop.analytic-examples` 与 `thm.za-analytic` 这类具体定理，而不是逐条验证定义。\n\n**各方向用到的假设**（解析性是对整类复形的导出检验）：\n- 解析 $\\iff$ 所列所有复形与极端不连通 $S$ 的比较映射为拟同构：这是定义展开，前提已经给定预解析环。\n- 典范映射 $A[S]\\to\\mathcal A[S]$ $\\implies$ 反变的导出 Hom 比较映射：用预复合的函子性，不需要先假定解析性。\n- 只检验零次普通 Hom $\\implies$ 导出比较同构不免费；普通 Hom 看不到高次 Ext，不能替代对复形的条件。\n- 原文把 $\\operatorname{RHom}_{\\mathcal A}$ 与 $\\operatorname{RHom}_A$ 直接识别的解释有循环风险：一般预解析环尚未建立完备模导出范畴，本图未核对该步，记为缺口；检验条件宜先在底层凝聚态 $A$-模导出范畴表述。\n",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Definition 7.4"
    ]
@@ -19067,7 +19067,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分几何",
@@ -19110,7 +19110,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分几何",
@@ -19152,7 +19152,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "命题",
     "微分几何",
@@ -19194,7 +19194,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分几何",
@@ -19237,7 +19237,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "引理",
     "微分几何",
@@ -19282,7 +19282,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 27,
+   "layer": 28,
    "tags": [
     "引理",
     "微分几何",
@@ -19324,7 +19324,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "定义",
     "微分几何",
@@ -19367,7 +19367,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 27,
+   "layer": 28,
    "tags": [
     "定义",
     "微分几何",
@@ -19409,7 +19409,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -19454,7 +19454,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -19496,7 +19496,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 33,
+   "layer": 34,
    "tags": [
     "定理",
     "微分几何",
@@ -19539,7 +19539,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 34,
+   "layer": 35,
    "tags": [
     "定理",
     "微分几何",
@@ -19582,7 +19582,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -19624,7 +19624,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -19666,7 +19666,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "定义",
     "微分几何",
@@ -19709,7 +19709,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 36,
+   "layer": 37,
    "tags": [
     "定义",
     "微分几何",
@@ -19754,7 +19754,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定理",
     "微分几何",
@@ -19797,7 +19797,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定理",
     "微分几何",
@@ -19839,7 +19839,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "命题",
     "微分几何",
@@ -19882,7 +19882,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 35,
+   "layer": 36,
    "tags": [
     "定理",
     "微分几何",
@@ -19926,7 +19926,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定义",
     "微分几何",
@@ -19968,7 +19968,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -20010,7 +20010,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -20053,7 +20053,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "命题",
     "微分几何",
@@ -20096,7 +20096,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "定义",
     "微分几何",
@@ -20138,7 +20138,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "命题",
     "微分几何",
@@ -20181,7 +20181,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -20223,7 +20223,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定理",
     "微分几何",
@@ -20266,7 +20266,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "命题",
     "微分几何",
@@ -20309,7 +20309,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -20355,7 +20355,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "引理",
     "微分几何",
@@ -20398,7 +20398,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "引理",
     "微分几何",
@@ -20443,7 +20443,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "定义",
     "微分几何",
@@ -20486,7 +20486,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定义",
     "微分几何",
@@ -20529,7 +20529,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 34,
+   "layer": 35,
    "tags": [
     "定理",
     "微分几何",
@@ -20585,7 +20585,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 34,
    "tags": [
     "定理",
     "微分几何",
@@ -20594,7 +20594,7 @@
     "欧拉示性数"
    ],
    "statement": "设 $M \\subseteq \\mathbb{R}^{3}$ 是紧致、可定向的曲面（允许带分段光滑边界）。则\n\n$$\\int_{M}K\\,\\mathrm{d}A+\\int_{\\partial M}k_{g}\\,\\mathrm{d}s+\\sum_{i}(\\pi-\\alpha_{i}) = 2\\pi\\chi(M),$$\n\n其中 $\\chi(M)$ 是欧拉示性数，$\\mathrm{d}A$ 是面积元，$\\partial M$ 取使 $M$ 落在左侧的定向，$\\alpha_{1}, \\ldots, \\alpha_{m}$ 是分段光滑边界在**角点**处的内角（边界光滑时角点集为空，那一项和就是 $0$）。特别地，**闭**曲面（$\\partial M = \\emptyset$）上\n\n$$\\int_{M}K\\,\\mathrm{d}A = 2\\pi\\chi(M).$$\n\n于是 $K$ 的全积分是一个**拓扑**量：球面 $4\\pi$、环面 $0$、亏格 $g$ 的闭曲面 $4\\pi(1-g)$。",
-   "notes": "**局部版是核心**（Gauss–Bonnet）：对由一条分段光滑简单闭曲线围成的区域 $D$，\n\n$$\\int_{D}K\\,\\mathrm{d}A+\\int_{\\partial D}k_{g}\\,\\mathrm{d}s+\\sum_{i}(\\pi-\\alpha_{i}) = 2\\pi .$$\n\n（$\\alpha_{i}$ 是 $\\partial D$ 在角点处的内角。）整体版就是把它沿三角剖分求和，角落项在求和时自动整理成 $2\\pi\\chi$。详细的提纲在边上。\n\n**测地三角形的特例**：若 $\\partial T$ 的三条边都是测地线（$k_{g}\\equiv0$），则 $\\alpha_{1}+\\alpha_{2}+\\alpha_{3}-\\pi = \\int_{T}K\\,\\mathrm{d}A$ —— 内角和超出 $\\pi$ 的部分，正好是高斯曲率的总量。\n\n球面上的八分之一球面三角形：三个内角都是直角，$\\int_{T}K\\,\\mathrm{d}A = \\frac{\\pi}{2}$，与面积 $\\frac{4\\pi}{8}$ 相符。\n\n平面上所有三角形内角和都是 $\\pi$，正因为 $K\\equiv0$。\n\n⭐ **这条定理的位置**：它把「度量」与「拓扑」缝在一起 —— $K$ 是纯内蕴的度量量，$\\chi$ 是纯组合量，而它们的积分被钉死。曲面分类的度量侧（$K$ 的总量）与拓扑侧（亏格）从此等价。\n\n⚠️ 需要**可定向**：否则面积元与 $\\omega^{1}_{2}$ 的符号说不清，公式要么模 $2$、要么换成绝对值形式。本图不展开不可定向的情形。\n\n⚠️ 不需要**紧致**也可以有版本，但那时边界与端（尖点、漏斗）要各自记账，形式会变；本节点只写紧致情形，因为它是「$K$ 的积分 = 拓扑量」最干净的说法。",
+   "notes": "**局部版是核心**（Gauss–Bonnet）：对由一条分段光滑简单闭曲线围成的区域 $D$，\n\n$$\\int_{D}K\\,\\mathrm{d}A+\\int_{\\partial D}k_{g}\\,\\mathrm{d}s+\\sum_{i}(\\pi-\\alpha_{i}) = 2\\pi .$$\n\n（$\\alpha_{i}$ 是 $\\partial D$ 在角点处的内角。）整体版就是把它沿三角剖分求和，角落项在求和时自动整理成 $2\\pi\\chi$。详细的提纲在边上。\n\n**测地三角形的特例**：若 $\\partial T$ 的三条边都是测地线（$k_{g}\\equiv0$），则 $\\alpha_{1}+\\alpha_{2}+\\alpha_{3}-\\pi = \\int_{T}K\\,\\mathrm{d}A$ —— 内角和超出 $\\pi$ 的部分，正好是高斯曲率的总量。\n\n球面上的八分之一球面三角形：三个内角都是直角，$\\int_{T}K\\,\\mathrm{d}A = \\frac{\\pi}{2}$，与面积 $\\frac{4\\pi}{8}$ 相符。\n\n平面上所有三角形内角和都是 $\\pi$，正因为 $K\\equiv0$。\n\n⭐ **这条定理的位置**：它把「度量」与「拓扑」缝在一起 —— $K$ 是纯内蕴的度量量，$\\chi$ 是纯组合量，而它们的积分被钉死。曲面分类的度量侧（$K$ 的总量）与拓扑侧（亏格）从此等价。\n\n⚠️ 需要**可定向**：否则面积元与 $\\omega^{1}_{2}$ 的符号说不清，公式要么模 $2$、要么换成绝对值形式。本图不展开不可定向的情形。\n\n⚠️ 不需要**紧致**也可以有版本，但那时边界与端（尖点、漏斗）要各自记账，形式会变；这里只处理紧致情形，因为它是「$K$ 的积分 = 拓扑量」最干净的说法。",
    "refs": [
     "do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯–博内定理",
     "do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯–博内定理与指标定理"
@@ -20628,7 +20628,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "微分几何",
@@ -20671,7 +20671,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "微分几何",
@@ -20714,7 +20714,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分几何",
@@ -20758,7 +20758,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分几何",
@@ -20801,7 +20801,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "定理",
     "微分几何",
@@ -20973,7 +20973,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -21016,7 +21016,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "定义",
     "微分几何",
@@ -21199,7 +21199,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定义",
     "微分几何",
@@ -21242,7 +21242,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定义",
     "微分几何",
@@ -21285,7 +21285,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 27,
+   "layer": 28,
    "tags": [
     "命题",
     "微分几何",
@@ -21328,7 +21328,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 28,
+   "layer": 29,
    "tags": [
     "定理",
     "微分几何",
@@ -21371,7 +21371,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "定义",
     "微分几何",
@@ -21414,7 +21414,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 27,
+   "layer": 28,
    "tags": [
     "定义",
     "微分几何",
@@ -21505,7 +21505,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定理",
     "微分几何",
@@ -23465,7 +23465,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定义",
     "微分流形",
@@ -23508,7 +23508,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定义",
     "微分流形",
@@ -23550,7 +23550,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "定义",
     "微分流形",
@@ -23595,7 +23595,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -23646,7 +23646,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -23900,7 +23900,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 29,
+   "layer": 30,
    "tags": [
     "定义",
     "微分流形",
@@ -23985,7 +23985,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -24028,7 +24028,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定理",
     "微分流形",
@@ -24070,7 +24070,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "引理",
     "微分流形",
@@ -24112,7 +24112,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定理",
     "微分流形",
@@ -24205,7 +24205,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分流形",
@@ -24505,7 +24505,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "命题",
     "微分几何",
@@ -24722,7 +24722,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -24766,7 +24766,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "命题",
     "微分几何",
@@ -24810,7 +24810,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -24853,7 +24853,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -24897,7 +24897,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定理",
     "微分几何",
@@ -25780,7 +25780,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -25824,7 +25824,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分流形",
@@ -25868,7 +25868,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分流形",
@@ -25911,7 +25911,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分流形",
@@ -26142,7 +26142,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定理",
     "微分流形",
@@ -26186,7 +26186,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分流形",
@@ -26230,7 +26230,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -26274,7 +26274,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分流形",
@@ -26319,7 +26319,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定理",
     "微分流形",
@@ -26363,7 +26363,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分流形",
@@ -26410,7 +26410,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分流形",
@@ -26454,7 +26454,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分流形",
@@ -26505,7 +26505,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定义",
     "微分流形",
@@ -26526,6 +26526,24 @@
    "type": "proposition",
    "label": "Lie 群可定向",
    "title": "每个 Lie 群都可定向",
+   "label_en": "Lie groups are orientable",
+   "title_en": "Lie groups are orientable",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/prop.lie-group-orientable.en.md",
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -28931,6 +28949,24 @@
    "type": "proposition",
    "label": "π₁ 是群",
    "title": "$\\pi_{1}(X, x_{0})$ 确实是群",
+   "label_en": "π₁ is a group",
+   "title_en": "π₁ is a group",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/prop.pi1-group.en.md",
    "region": "topology",
    "regions": [
     "topology"
@@ -28955,6 +28991,23 @@
    "type": "proposition",
    "label": "单连通与基点无关",
    "title": "单连通的条件 2 与基点选取无关",
+   "title_en": "simple connectivity is basepoint-independent",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/prop.simply-connected-basepoint.en.md",
    "region": "topology",
    "regions": [
     "topology"
@@ -32193,7 +32246,7 @@
     "定理"
    ],
    "statement": "设 $p$ 是素数。则单位群 $\\mathbb{F}_{p}^{\\times} = (\\mathbb{Z}/p\\mathbb{Z})^{\\times}$ 是 $p-1$ 阶循环群；它的生成元叫模 $p$ 的**原根**，共有 $\\varphi(p-1)$ 个。",
-   "notes": "**证明**：关键是计数。\n\n对每个 $d \\mid p-1$，设 $\\psi(d)$ 为 $\\mathbb{F}_{p}^{\\times}$ 中**阶恰为** $d$ 的元素个数。\n\n由「阶整除 $\\varphi(p) = p-1$」（`thm.order-divides-phi`）与「$x^{d} = 1$ 至多有 $d$ 个解」得\n\n\n\n$$\\sum_{d \\mid p-1}\\psi(d) = p - 1 = \\sum_{d \\mid p-1}\\varphi(d) .$$\n\n\n\n再证 $\\psi(d) \\le \\varphi(d)$：若存在阶为 $d$ 的元素 $g$，则阶为 $d$ 的元素恰是 $g^{t}$（$\\gcd(t,d) = 1$），共 $\\varphi(d)$ 个；\n\n若不存在，则 $\\psi(d) = 0$。\n\n两种情形都有 $\\psi(d) \\le \\varphi(d)$，而总和相等，故每项都相等 —— 特别地 $\\psi(p-1) = \\varphi(p-1) > 0$。\n\n\n\n所以原根存在，且个数是 $\\varphi(p-1)$。这条证明只用到「多项式根的个数」与「$\\sum_{d\\mid n}\\varphi(d) = n$」两件事。\n\n\n\n⚠ 一般的 $n$ 只有 $1, 2, 4, p^{k}, 2p^{k}$ 有原根 —— 那需要单独处理 $p^{k}$（Hensel 式提升），本图未收录。",
+   "notes": "**证明**：关键是计数。\n\n对每个 $d \\mid p-1$，设 $\\psi(d)$ 为 $\\mathbb{F}_{p}^{\\times}$ 中**阶恰为** $d$ 的元素个数。\n\n由「阶整除 $\\varphi(p) = p-1$」（`thm.order-divides-phi`）与「$x^{d} = 1$ 至多有 $d$ 个解」得\n\n\n\n$$\\sum_{d \\mid p-1}\\psi(d) = p - 1 = \\sum_{d \\mid p-1}\\varphi(d) .$$\n\n\n\n再证 $\\psi(d) \\le \\varphi(d)$：若存在阶为 $d$ 的元素 $g$，则阶为 $d$ 的元素恰是 $g^{t}$（$\\gcd(t,d) = 1$），共 $\\varphi(d)$ 个；\n\n若不存在，则 $\\psi(d) = 0$。\n\n两种情形都有 $\\psi(d) \\le \\varphi(d)$，而总和相等，故每项都相等 —— 特别地 $\\psi(p-1) = \\varphi(p-1) > 0$。\n\n\n\n所以原根存在，且个数是 $\\varphi(p-1)$。这条证明只用到「多项式根的个数」与「$\\sum_{d\\mid n}\\varphi(d) = n$」两件事。\n\n\n\n⚠ 一般的 $n$ 只有 $1, 2, 4, p^{k}, 2p^{k}$ 有原根 —— 那需要单独处理 $p^{k}$（Hensel 式提升）。",
    "refs": [
     "华罗庚《数论导引》第五章"
    ]
@@ -32307,7 +32360,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "全变差",
@@ -32348,7 +32401,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "命题",
     "BV",
@@ -32388,7 +32441,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "引理",
     "全变差",
@@ -32428,7 +32481,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "BV",
@@ -32468,7 +32521,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "命题",
     "BV",
@@ -32508,7 +32561,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定义",
     "NBV"
@@ -32547,7 +32600,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "引理",
     "全变差",
@@ -32628,7 +32681,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 20,
+   "layer": 21,
    "tags": [
     "定理",
     "Riesz 表示",
@@ -32855,7 +32908,7 @@
     "analysis"
    ],
    "cluster": "analysis.bv",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "引理",
     "AC",
@@ -32944,7 +32997,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 21,
+   "layer": 22,
    "tags": [
     "定义",
     "微分几何",
@@ -32993,7 +33046,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "命题",
     "微分几何",
@@ -33042,7 +33095,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "命题",
     "微分几何",
@@ -33092,7 +33145,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "定义",
     "微分几何",
@@ -33249,7 +33302,7 @@
     "Lie 群作用"
    ],
    "statement": "**在说什么**：纤维丛里最「自指」的那一类 —— 纤维不是随便一个流形，就是结构群 $G$ 自己，而且 $G$ 在丛上自由地右作用。向量丛都能从主丛造出来（取配丛）。\n\n设 $G$ 是 Lie 群，$P, B$ 是光滑流形，$\\pi : P\\to B$ 光滑。$P$ 上的**主 $G$-丛**是纤维丛 $\\pi$ 连同 $G$ 在 $P$ 上的**右作用**\n$$P\\times G\\longrightarrow P,\\qquad (u,g)\\longmapsto u\\cdot g ,$$\n使\n\n1. **保纤维**：$\\pi(u\\cdot g) = \\pi(u)$；\n2. **自由且在纤维上可迁**：$u\\cdot g = u \\iff g = e$，且同一根纤维 $P_{b}$ 中任意两点都差一个右乘（于是 $P_{b}$ 与 $G$ 同胚）；\n3. **局部平凡且 $G$-等变**：每点有邻域 $U$ 与微分同胚 $\\Phi : \\pi^{-1}(U)\\to U\\times G$，写成 $\\Phi(u) = \\bigl(\\pi(u),\\varphi(u)\\bigr)$，并满足\n$$\\Phi(u\\cdot g) = \\bigl(\\pi(u),\\ \\varphi(u)\\,g\\bigr).$$\n\n此时纤维是 $G$（右乘 $g\\mapsto hg$ 把它送到自己），结构群也是 $G$。**帧丛**（每点取纤维的一组基）给出最常用的例子：秩 $k$ 向量丛 $E\\to B$ 的帧丛是主 $\\operatorname{GL}(k,\\mathbb{R})$-丛 —— 这就是「向量丛与主丛」之间那座桥。",
-   "notes": "**为什么主丛值得单独记**：向量丛的结构群是 $\\operatorname{GL}(k)$，但它只藏在转移函数里、看不见；主丛把结构群**变成空间的一部分**（纤维就是群），于是「联络」「曲率」「示性类」都能在主丛上整体地谈，再沿表示拉到配丛上。Tu 讲联络与曲率的路线正是这一条。\n\n⚠️ 右作用还是左作用：约定取**右**作用，好处是转移函数可以顺着写在坐标后面（$\\Phi(u\\cdot g) = (\\pi(u),\\varphi(u)g)$），不必写成 $\\varphi(g^{-1}u)$ 这类反向的式子。换约定时整条公式都要改，混着用就是符号错误的来源。\n\n⭐ 特例串起来记：主 $G$-丛（纤维 $G$）$\\rightsquigarrow$ 取 $G$ 在某个流形 $F$ 上的作用、把纤维换掉，得**配丛**（纤维 $F$；本图尚未收录）$\\rightsquigarrow$ 取 $F = \\mathbb{R}^{k}$、$G = \\operatorname{GL}(k,\\mathbb{R})$，得向量丛$\\rightsquigarrow$ 取 $F$ 离散，得覆叠空间。\n\n反过来：任何向量丛都有帧丛，都在主丛这一层。\n\n⚠️ 「自由」这一条不能省：若允许 $u\\cdot g = u$ 而 $g\\ne e$，纤维上就有稳定化子，丛在纤维方向上会「粘住」，此时它不再是主丛、而是某个更小的群的主丛（或一般的纤维丛）。\n\n\n\n**各方向用到的假设**（等变局部平凡性比自由作用更强）：\n- 主丛 $\\implies$ 所列三条件：定义展开免费；局部图须为光滑且等变的微分同胚。\n- 等变局部图 $\\implies$ 每根纤维是自由可迁的 $G$-空间：在 $U\\times G$ 上直接计算，再用图转回，无需选择全局基点。\n- 局部光滑截面 $s$ $\\implies$ 局部主丛图：对已知主丛用 $(b,g)\\mapsto s(b)g$；反向由图取 $(b,e)$，不需全局截面。\n- 自由作用 $\\implies$ 商为光滑主丛不是免费：通常还要作用 proper；无理斜率的 $\\mathbb R$ 在二维环面上的平移作用自由但轨道稠密，商非 Hausdorff。\n",
+   "notes": "**为什么主丛值得单独记**：向量丛的结构群是 $\\operatorname{GL}(k)$，但它只藏在转移函数里、看不见；主丛把结构群**变成空间的一部分**（纤维就是群），于是「联络」「曲率」「示性类」都能在主丛上整体地谈，再沿表示拉到配丛上。Tu 讲联络与曲率的路线正是这一条。\n\n⚠️ 右作用还是左作用：约定取**右**作用，好处是转移函数可以顺着写在坐标后面（$\\Phi(u\\cdot g) = (\\pi(u),\\varphi(u)g)$），不必写成 $\\varphi(g^{-1}u)$ 这类反向的式子。换约定时整条公式都要改，混着用就是符号错误的来源。\n\n⭐ 特例串起来记：主 $G$-丛（纤维 $G$）$\\rightsquigarrow$ 取 $G$ 在某个流形 $F$ 上的作用、把纤维换掉，得**配丛**（纤维 $F$）$\\rightsquigarrow$ 取 $F = \\mathbb{R}^{k}$、$G = \\operatorname{GL}(k,\\mathbb{R})$，得向量丛$\\rightsquigarrow$ 取 $F$ 离散，得覆叠空间。\n\n反过来：任何向量丛都有帧丛，都在主丛这一层。\n\n⚠️ 「自由」这一条不能省：若允许 $u\\cdot g = u$ 而 $g\\ne e$，纤维上就有稳定化子，丛在纤维方向上会「粘住」，此时它不再是主丛、而是某个更小的群的主丛（或一般的纤维丛）。\n\n\n\n**各方向用到的假设**（等变局部平凡性比自由作用更强）：\n- 主丛 $\\implies$ 所列三条件：定义展开免费；局部图须为光滑且等变的微分同胚。\n- 等变局部图 $\\implies$ 每根纤维是自由可迁的 $G$-空间：在 $U\\times G$ 上直接计算，再用图转回，无需选择全局基点。\n- 局部光滑截面 $s$ $\\implies$ 局部主丛图：对已知主丛用 $(b,g)\\mapsto s(b)g$；反向由图取 $(b,e)$，不需全局截面。\n- 自由作用 $\\implies$ 商为光滑主丛不是免费：通常还要作用 proper；无理斜率的 $\\mathbb R$ 在二维环面上的平移作用自由但轨道稠密，商非 Hausdorff。\n",
    "refs": [
     "Tu, Differential Geometry: Connections, Curvature, and Characteristic Classes (GTM 275)"
    ]
@@ -33676,7 +33729,7 @@
     "范数"
    ],
    "statement": "**在做什么**：用一个数概括「谱有多大」。它决定 $A^{k}$ 会不会爆炸，也决定迭代法收不收敛。\n\n设 $A \\in M_{n}(\\mathbb{C})$。**谱半径**是\n\n$\\rho(A) := \\max\\bigl\\{\\, \\lvert\\lambda\\rvert : \\lambda$ 是 $A$ 的特征值 $\\, \\bigr\\}$\n\n**基本性质**：\n\n1. $\\rho(A) \\le \\lVert A\\rVert$ 对**任意**从属矩阵范数成立；\n2. 相似不变：$\\rho(P^{-1}AP) = \\rho(A)$（特征值不变）；\n3. $\\rho(A) = \\lim_{k\\to\\infty}\\lVert A^{k}\\rVert^{1/k}$（这一条在有限维可由 Jordan 形直接验证）；\n4. $\\rho(A) < 1 \\iff A^{k} \\to 0$。",
-   "notes": "⚠️ **公式 (3) 在本图只做到有限维**。一般 Banach 代数上的 Gelfand 公式 $\\rho(a) = \\lim\\lVert a^{n}\\rVert^{1/n}$（以及「谱非空」「谱半径等于谱的上确界」）需要复分析（Liouville）与算子理论，**留给泛函那一批**，这里不展开成独立节点。\n\n**为什么第 (1) 条成立但常常严格**：取特征对 $Ax = \\lambda x$，则 $\\lvert\\lambda\\rvert\\lVert x\\rVert = \\lVert Ax\\rVert \\le \\lVert A\\rVert\\lVert x\\rVert$。\n\n等号不总成立 —— $\\begin{pmatrix} 0 & 1 \\\\ 0 & 0\\end{pmatrix}$ 的 $\\rho = 0$ 而任何范数都 $> 0$，它是**幂零**的。\n\n⭐ **它的用处比范数更准**：$A^{k}$ 的增长其实由 $\\rho$ 控制（Jordan 块的多项式因子只贡献 $k^{m-1}$ 的因子，被 $\\rho^{k}$ 的指数压住）。所以「迭代收敛」的判据一律写 $\\rho < 1$，而不是 $\\lVert A\\rVert < 1$。\n\n⚠️ 非方阵没有谱半径（特征值只对方阵有定义）；伪谱（pseudospectrum）是另一回事，本图未收录。\n\n\n\n**四条里哪条依赖什么**（谱半径这一组最容易被误当成“都能从定义直推”，其实第 3 条最贵）：\n\n- (1) $\\rho(A) \\le \\lVert A\\rVert$：**对任意从属范数**（算子范数）成立，一行：(1) 的算子范数就是「最大放大倍数」，而特征向量满足 $Av = \\lambda v$ $\\implies$ $\\lvert\\lambda\\rvert\\lVert v\\rVert \\le \\lVert A\\rVert\\lVert v\\rVert$。⚠️ 对**非从属**的任意矩阵范数（例如 $\\lVert A\\rVert = \\max_{ij}\\lvert a_{ij}\\rvert$ 的变体）不一定成立。\n- (2) 相似不变：**只用「相似保持特征多项式」**（`def.char-poly`），不需要任何范数。\n- (3) $\\rho(A) = \\lim_{k}\\lVert A^{k}\\rVert^{1/k}$：**这是全组唯一有真内容的**。$(\\le)$ 用 (1) 与谱半径的幂性质；$(\\ge)$ 要用 **Jordan 标准形**（`thm.jordan-canonical-form`）+ 一个 $\\varepsilon$ 技巧（把 $\\rho + \\varepsilon$ 当成“放大后的谱半径”，证明 $\\lVert(A/(\\rho+\\varepsilon))^{k}\\rVert$ 有界）。**必须有限维**：无穷维时这条公式一般**不**成立（要看算子谱的边界与范数之间的关系）。\n- (4) $\\rho(A) < 1 \\iff A^{k} \\to 0$：**只依赖 (3) 或 Jordan 形**。($\\Longleftarrow$) 若 $\\rho \\ge 1$，取模最大的特征值 $\\lambda$，则 $\\lVert A^{k}v\\rVert = \\lvert\\lambda\\rvert^{k}\\lVert v\\rVert$ 不趋于 $0$。($\\implies$) 由 (3) 得 $\\lVert A^{k}\\rVert^{1/k} \\to \\rho < 1$，故 $\\lVert A^{k}\\rVert \\to 0$。\n\n⚠️ **三处必须记住的假设**：\n- **(1) 与 (3) 都要求有限维**；(3) 还要求**取遍所有从属范数时不依赖范数** —— 极限值恰好与范数无关，这正是它有用的原因（Gelfand 公式）。\n- **$\\rho(A) < 1$ 与 $\\lVert A\\rVert < 1$ 不是一回事**：前者是谱条件（相似不变量），后者是范数条件（依范数而变）。存在 $\\rho(A) < 1$ 而 $\\lVert A\\rVert > 1$ 的矩阵（例如 $\\begin{pmatrix}0 & 10\\\\ 0.1 & 0\\end{pmatrix}$：$\\rho = 1$…… 换成 $\\begin{pmatrix}0 & 9\\\\ 0.1 & 0\\end{pmatrix}$ 则 $\\rho = \\sqrt{0.9} < 1$ 而 $\\lVert A\\rVert_{\\infty} = 9$）。\n- **(2) 不能加强成「合同不变」或「正交相似不变」之外的更多**：谱半径对**任意相似**不变，但对合同（$P^{T}AP$）**不**不变。",
+   "notes": "⚠️ **公式 (3) 在本图只做到有限维**。一般 Banach 代数上的 Gelfand 公式 $\\rho(a) = \\lim\\lVert a^{n}\\rVert^{1/n}$（以及「谱非空」「谱半径等于谱的上确界」）需要复分析（Liouville）与算子理论，**留给泛函那一批**，这里不展开成独立节点。\n\n**为什么第 (1) 条成立但常常严格**：取特征对 $Ax = \\lambda x$，则 $\\lvert\\lambda\\rvert\\lVert x\\rVert = \\lVert Ax\\rVert \\le \\lVert A\\rVert\\lVert x\\rVert$。\n\n等号不总成立 —— $\\begin{pmatrix} 0 & 1 \\\\ 0 & 0\\end{pmatrix}$ 的 $\\rho = 0$ 而任何范数都 $> 0$，它是**幂零**的。\n\n⭐ **它的用处比范数更准**：$A^{k}$ 的增长其实由 $\\rho$ 控制（Jordan 块的多项式因子只贡献 $k^{m-1}$ 的因子，被 $\\rho^{k}$ 的指数压住）。所以「迭代收敛」的判据一律写 $\\rho < 1$，而不是 $\\lVert A\\rVert < 1$。\n\n⚠️ 非方阵没有谱半径（特征值只对方阵有定义）；伪谱（pseudospectrum）是另一回事。\n\n\n\n**四条里哪条依赖什么**（谱半径这一组最容易被误当成“都能从定义直推”，其实第 3 条最贵）：\n\n- (1) $\\rho(A) \\le \\lVert A\\rVert$：**对任意从属范数**（算子范数）成立，一行：(1) 的算子范数就是「最大放大倍数」，而特征向量满足 $Av = \\lambda v$ $\\implies$ $\\lvert\\lambda\\rvert\\lVert v\\rVert \\le \\lVert A\\rVert\\lVert v\\rVert$。⚠️ 对**非从属**的任意矩阵范数（例如 $\\lVert A\\rVert = \\max_{ij}\\lvert a_{ij}\\rvert$ 的变体）不一定成立。\n- (2) 相似不变：**只用「相似保持特征多项式」**（`def.char-poly`），不需要任何范数。\n- (3) $\\rho(A) = \\lim_{k}\\lVert A^{k}\\rVert^{1/k}$：**这是全组唯一有真内容的**。$(\\le)$ 用 (1) 与谱半径的幂性质；$(\\ge)$ 要用 **Jordan 标准形**（`thm.jordan-canonical-form`）+ 一个 $\\varepsilon$ 技巧（把 $\\rho + \\varepsilon$ 当成“放大后的谱半径”，证明 $\\lVert(A/(\\rho+\\varepsilon))^{k}\\rVert$ 有界）。**必须有限维**：无穷维时这条公式一般**不**成立（要看算子谱的边界与范数之间的关系）。\n- (4) $\\rho(A) < 1 \\iff A^{k} \\to 0$：**只依赖 (3) 或 Jordan 形**。($\\Longleftarrow$) 若 $\\rho \\ge 1$，取模最大的特征值 $\\lambda$，则 $\\lVert A^{k}v\\rVert = \\lvert\\lambda\\rvert^{k}\\lVert v\\rVert$ 不趋于 $0$。($\\implies$) 由 (3) 得 $\\lVert A^{k}\\rVert^{1/k} \\to \\rho < 1$，故 $\\lVert A^{k}\\rVert \\to 0$。\n\n⚠️ **三处必须记住的假设**：\n- **(1) 与 (3) 都要求有限维**；(3) 还要求**取遍所有从属范数时不依赖范数** —— 极限值恰好与范数无关，这正是它有用的原因（Gelfand 公式）。\n- **$\\rho(A) < 1$ 与 $\\lVert A\\rVert < 1$ 不是一回事**：前者是谱条件（相似不变量），后者是范数条件（依范数而变）。存在 $\\rho(A) < 1$ 而 $\\lVert A\\rVert > 1$ 的矩阵（例如 $\\begin{pmatrix}0 & 10\\\\ 0.1 & 0\\end{pmatrix}$：$\\rho = 1$…… 换成 $\\begin{pmatrix}0 & 9\\\\ 0.1 & 0\\end{pmatrix}$ 则 $\\rho = \\sqrt{0.9} < 1$ 而 $\\lVert A\\rVert_{\\infty} = 9$）。\n- **(2) 不能加强成「合同不变」或「正交相似不变」之外的更多**：谱半径对**任意相似**不变，但对合同（$P^{T}AP$）**不**不变。",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 谱",
     "北大《高等代数》· 特征值与谱"
@@ -34867,7 +34920,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "定义",
     "微分几何",
@@ -34910,7 +34963,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "定理",
     "微分几何",
@@ -34954,7 +35007,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -34997,7 +35050,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -35040,7 +35093,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分几何",
@@ -35083,7 +35136,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.symplectic",
-   "layer": 32,
+   "layer": 33,
    "tags": [
     "定义",
     "微分几何",
@@ -36373,7 +36426,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分几何",
@@ -36416,7 +36469,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.form",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定义",
     "微分几何",
@@ -36553,7 +36606,7 @@
     "范数"
    ],
    "statement": "设 $E$ 是 $\\mathbb{K}$（$\\mathbb{K} = \\mathbb{R}$ 或 $\\mathbb{C}$）上的向量空间。函数 $\\|\\cdot\\| : E \\to [0, +\\infty)$ 叫**范数**，若\n\n1. $\\|x\\| = 0 \\iff x = 0$；\n2. $\\|\\lambda x\\| = |\\lambda|\\,\\|x\\|$；\n3. $\\|x + y\\| \\le \\|x\\| + \\|y\\|$。\n\n带范数的空间叫**赋范空间**。只满足 2、3（允许非零元素有零范数）叫**半范数**。",
-   "notes": "范数比距离多的是**线性**：它只记住「离原点多远」，距离由平移得到（见「范数诱导的距离」）。所以赋范空间是「有原点、有尺度、平移不变」的度量空间。\n\n⚠️ 半范数不等于范数：商掉零范数子空间才成为范数（$L^p$ 的构造里「$\\|f\\|_p = 0$ 只说明 $f = 0$ a.e.」就是这件事，见「$L^p$ 范数」）。\n\n\n\n**各方向用到的假设**（范数公理中的等价与由公理推出的事实要分开）：\n- 范数 $\\iff$ 满足三条公理：两方向都是定义展开，不要求完备性或有限维。\n- $x=0\\implies\\|x\\|=0$：由绝对齐次性取标量零即得；反向是正定性公理，不能从齐次性和三角不等式推出。\n- 半范数 $\\implies$ 范数仅在零空间为零时成立；非零空间上的零函数是反例。商掉零空间所得范数的良定义用三角不等式，不用选择公理。\n\n📌 本图的「**赋范空间**」是 `def.normed-space`；本节点只定义范数本身。\n",
+   "notes": "范数比距离多的是**线性**：它只记住「离原点多远」，距离由平移得到（见「范数诱导的距离」）。所以赋范空间是「有原点、有尺度、平移不变」的度量空间。\n\n⚠️ 半范数不等于范数：商掉零范数子空间才成为范数（$L^p$ 的构造里「$\\|f\\|_p = 0$ 只说明 $f = 0$ a.e.」就是这件事，见「$L^p$ 范数」）。\n\n\n\n**各方向用到的假设**（范数公理中的等价与由公理推出的事实要分开）：\n- 范数 $\\iff$ 满足三条公理：两方向都是定义展开，不要求完备性或有限维。\n- $x=0\\implies\\|x\\|=0$：由绝对齐次性取标量零即得；反向是正定性公理，不能从齐次性和三角不等式推出。\n- 半范数 $\\implies$ 范数仅在零空间为零时成立；非零空间上的零函数是反例。商掉零空间所得范数的良定义用三角不等式，不用选择公理。\n\n📌 **赋范空间**的定义见 `def.normed-space`。\n",
    "refs": [
     "Rudin, Functional Analysis · 赋范空间与有限维",
     "Rudin, Functional Analysis, Ch. 1"
@@ -39938,7 +39991,7 @@
     "向量丛",
     "上同调"
    ],
-   "statement": "**要解决什么问题**：丛的同构类由 $\\check{H}^{1}(B; \\mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合非阿贝尔、没法直接算。示性类把「丛」翻译成「上同调类」—— 上同调是群，能算，于是「两个丛不同构」有了可验证的判据。\n\n设 $E \\to B$ 是光滑流形上的秩 $k$ 实向量丛。$E$ 的**示性类**（characteristic class）是一族对应\n\n$$c_{i}(E) \\in H^{i}(B; \\Lambda),$$\n\n（$\\Lambda$ 取 $\\mathbb{Z}$、$\\mathbb{Z}/2$ 或 $\\mathbb{R}$，看具体类）满足两条公理：\n\n1. **自然性**：对任意光滑映射 $f : B_{1} \\to B_{2}$ 有 $c_{i}(f^{*}E) = f^{*}c_{i}(E)$；\n2. **同构不变**：$E \\cong E_{1}$ $\\implies$ $c_{i}(E) = c_{i}(E_{1})$。\n\n因此示性类是**从「$B$ 上的向量丛」到「$B$ 的上同调」的自然变换**。\n\n**两条最基本的示性类**（都要再加规范化才唯一）：\n\n- 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2)$（$0 \\le i \\le k$），规范化为 $w_{0}(E) = 1$、$i > k$ 时 $w_{i}(E) = 0$，并要求 Whitney 和公式 $w(E \\oplus F) = w(E) \\smile w(F)$（其中 $w = \\sum_{i} w_{i}$）；\n- 秩 $k$ 复丛的 **陈类** $c_{i}(E) \\in H^{2i}(B; \\mathbb{Z})$（$0 \\le i \\le k$），同样 $c_{0}(E) = 1$、$i > k$ 时 $c_{i}(E) = 0$，并要求 $c(E \\oplus F) = c(E) \\smile c(F)$。\n\n自然性、同构不变、$w_{0} = c_{0} = 1$ 与 Whitney 公式，再加上一条定标条件（例如「Möbius 线丛的 $w_{1}$ 非零」与「复射影空间上 tautological 线丛 $\\mathcal{O}(-1)$ 的 $c_{1}=-1$（等价地 $\\mathcal{O}(1)$ 的 $c_{1}=+1$）」），**唯一确定** SW 类与陈类。存在性与唯一性属于示性类的公理刻画定理（分类空间上计算 $H^{\\bullet}(\\mathrm{BO}(k))$ 与 $H^{\\bullet}(\\mathrm{BU}(k))$），本节点只给定义与用法，不证这条定理。",
+   "statement": "**要解决什么问题**：丛的同构类由 $\\check{H}^{1}(B; \\mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合非阿贝尔、没法直接算。示性类把「丛」翻译成「上同调类」—— 上同调是群，能算，于是「两个丛不同构」有了可验证的判据。\n\n设 $E \\to B$ 是光滑流形上的秩 $k$ 实向量丛。$E$ 的**示性类**（characteristic class）是一族对应\n\n$$c_{i}(E) \\in H^{i}(B; \\Lambda),$$\n\n（$\\Lambda$ 取 $\\mathbb{Z}$、$\\mathbb{Z}/2$ 或 $\\mathbb{R}$，看具体类）满足两条公理：\n\n1. **自然性**：对任意光滑映射 $f : B_{1} \\to B_{2}$ 有 $c_{i}(f^{*}E) = f^{*}c_{i}(E)$；\n2. **同构不变**：$E \\cong E_{1}$ $\\implies$ $c_{i}(E) = c_{i}(E_{1})$。\n\n因此示性类是**从「$B$ 上的向量丛」到「$B$ 的上同调」的自然变换**。\n\n**两条最基本的示性类**（都要再加规范化才唯一）：\n\n- 秩 $k$ 实丛的 **Stiefel–Whitney 类** $w_{i}(E) \\in H^{i}(B; \\mathbb{Z}/2)$（$0 \\le i \\le k$），规范化为 $w_{0}(E) = 1$、$i > k$ 时 $w_{i}(E) = 0$，并要求 Whitney 和公式 $w(E \\oplus F) = w(E) \\smile w(F)$（其中 $w = \\sum_{i} w_{i}$）；\n- 秩 $k$ 复丛的 **陈类** $c_{i}(E) \\in H^{2i}(B; \\mathbb{Z})$（$0 \\le i \\le k$），同样 $c_{0}(E) = 1$、$i > k$ 时 $c_{i}(E) = 0$，并要求 $c(E \\oplus F) = c(E) \\smile c(F)$。\n\n自然性、同构不变、$w_{0} = c_{0} = 1$ 与 Whitney 公式，再加上一条定标条件（例如「Möbius 线丛的 $w_{1}$ 非零」与「复射影空间上 tautological 线丛 $\\mathcal{O}(-1)$ 的 $c_{1}=-1$（等价地 $\\mathcal{O}(1)$ 的 $c_{1}=+1$）」），**唯一确定** SW 类与陈类。存在性与唯一性属于示性类的公理刻画定理（分类空间上计算 $H^{\\bullet}(\\mathrm{BO}(k))$ 与 $H^{\\bullet}(\\mathrm{BU}(k))$），这条存在性与唯一性本图未证（缺口），这里只用到结论。",
    "notes": "**定义的展开**：把每个空间 $B$ 上的向量丛看成一个范畴（态射是拉回），示性类就是这个范畴到分次环 $H^{\\bullet}(B;\\Lambda)$ 的自然变换。两条公理合起来只说「拉回与上同调拉回相容」，并**不**指定任何具体数值：零变换也满足它们。所以「示性类」是一族满足公理的对应，具体到 SW 类或陈类，必须再补规范化与 Whitney 公式（上面陈述里已写）。\n\n**为什么需要 Whitney 公式**：它把丛的直和分解变成类的乘法，从而「线丛的类」决定一切（分裂原理）。例如复线丛 $L$ 有 $c(L) = 1 + c_{1}(L)$，一般复丛用形式分裂 $E \\cong \\bigoplus L_{i}$ 定义 $c(E) = \\prod (1 + c_{1}(L_{i}))$，再证明与分裂无关。实丛用同样的办法，只是系数换成 $\\mathbb{Z}/2$。\n\n**和结构群约化的关系（障碍，不是判据）**：对实丛，$w_{1}(E) = 0$ 当且仅当 $E$ 可定向，即结构群可从 $\\mathrm{GL}(k)$ 约化到 $\\mathrm{SO}(k)$（`prop.orientable-iff-w1`）；这是等价，不是单向障碍。若 $E$ 已定向，则它带有 $\\mathrm{Spin}(k)$ 结构当且仅当 $w_{2}(E) = 0$（双覆盖的提升障碍）。对光滑流形 $M$，旋结构存在当且仅当 $w_{1}(TM) = 0$ 且 $w_{2}(TM) = 0$。⚠ 不要把「某个类消失」一般地当成结构群可约化的充要条件：$w_{2} = 0$ 对**未定向**丛不够，必须先有 $w_{1} = 0$。\n\n**至少一个例子**：Möbius 带 $M$ 的切丛（或它的 tautological 线丛）不可定向（`def.mobius-band`），故 $w_{1}(TM) \\ne 0$；这给出「$w_{1}$ 非零所以不能定向」的具体读数。复线丛方面，$\\mathbb{CP}^{1}$ 上的 tautological 线丛 $\\mathcal{O}(-1)$ 满足 $\\int_{\\mathbb{CP}^{1}} c_{1}(\\mathcal{O}(-1)) = -1$（`prop.chern-class-line-bundle`），于是它的任何正整数次幂都给出不同的陈类 —— 这就是「用示性类区分丛」的样板。\n\n**怎么算**：实用算法是 **陈–Weil 理论** —— 在丛上取一个联络（`def.connection-form`），算曲率形式，示性类就是曲率形式的多项式（不变量），并且与联络的选取无关（差一个恰当形式）。本图的 `def.chern-class` 就是陈–Weil 版定义。分裂原理、公理刻画、$K$ 理论细化都没有展开。\n\n⚠ **示性类不是完全不变量**：不同的丛可以有相同的示性类（所有平凡丛的示性类都平凡；更微妙的例子需要 $K$ 理论才能分开）。所以它只能**证不同构**：$c_{i}(E) \\ne c_{i}(E_{1})$ 推出 $E \\not\\cong E_{1}$；反过来不成立。\n\n⚠ **名称**：示性类、特征类、characteristic class 是同一个东西；别与「域的特征」$\\mathrm{char}\\,K$（`def.characteristic`）混淆。\n\n⚠ **Euler 类不是 SW 类**：Euler 类 $e(E) \\in H^{k}(B;\\mathbb{Z})$ 取整数值，$w_{k}(E)$ 是 $e(E)$ 模 $2$ 的约化；$TS^{2}$ 的 $w_{1} = w_{2} = 0$ 但 $e(TS^{2}) = \\chi(S^{2}) = 2 \\ne 0$，这正是「整系数类能看见、$\\mathbb{Z}/2$ 类看不见」的例子。",
    "refs": [
     "Milnor–Stasheff, Characteristic Classes · 示性类",
@@ -40218,14 +40271,14 @@
     "topology"
    ],
    "cluster": "analysis.real",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "连续",
     "ε-δ",
     "度量空间"
    ],
    "statement": "**定理（$\\varepsilon$-$\\delta$ 判据）**：下面这个条件不是定义，而是度量连续性的判据；定义见 `def.metric-continuity`，$\\mathbb{R}$ 上的度量见 `def.real-metric-space`。\n$f : \\mathbb{R} \\to \\mathbb{R}$ 在 $x_0$ **连续**，当且仅当\n\n$$\\forall \\varepsilon > 0, \\exists \\delta > 0 : |x - x_0| < \\delta \\implies |f(x) - f(x_0)| < \\varepsilon$$\n\n等价说法：$\\lim_{x \\to x_0} f(x) = f(x_0)$（极限存在且等于函数值）。\n\n$f$ **连续**（在 $\\mathbb{R}$ 上连续）当且仅当它在每一点连续。\n\n**一致连续**是更强的要求：$\\delta$ 只依赖 $\\varepsilon$，不依赖 $x_0$。",
-   "notes": "⭐ 把 $|x - x_0| < \\delta$、$|f(x) - f(x_0)| < \\varepsilon$ 换成距离 $d$，这个定义原封不动地搬到距离空间 —— 这也正是距离空间的定义为什么长成那样。\n\n⚠ **连续 $\\ne$ 一致连续**：$f(x) = x^2$ 在 $\\mathbb{R}$ 上连续但不一致连续（$x$ 越大需要的 $\\delta$ 越小）。\n\n紧区间上两者才重合。\n\n📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\\mathbb{R}$ 的度量在 `def.real-metric-space`。",
+   "notes": "⭐ 把 $|x - x_0| < \\delta$、$|f(x) - f(x_0)| < \\varepsilon$ 换成距离 $d$，这个定义原封不动地搬到距离空间 —— 这也正是距离空间的定义为什么长成那样。\n\n⚠ **连续 $\\ne$ 一致连续**：$f(x) = x^2$ 在 $\\mathbb{R}$ 上连续但不一致连续（$x$ 越大需要的 $\\delta$ 越小）。\n\n紧区间上两者才重合。\n\n📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\\mathbb{R}$ 的度量在 `def.real-metric-space`。一般拓扑意义下的连续映射见 `def.continuous-map`，本条是它在度量情形下的特例。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 4"
    ]
@@ -40258,7 +40311,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "导数"
@@ -40346,7 +40399,7 @@
     "实数"
    ],
    "statement": "在 $\\mathbb{R}$ 上定义 $d(x, y) = |x - y|$。则 $(\\mathbb{R}, d)$ 是完备的可分度量空间，其度量拓扑就是 $\\mathbb{R}$ 的标准拓扑（开区间为基）。",
-   "notes": "完备性：Cauchy 列的极限存在（实数完备性，`thm.real-complete`）。可分性：$\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密。\n\n度量拓扑 = 标准拓扑：$B(x_0, \\varepsilon) = (x_0 - \\varepsilon, x_0 + \\varepsilon)$，故开区间是基；反过来每个开集都是开区间的并。\n\n⭐ 这条把「$\\mathbb{R}$ 上连续」的 $\\varepsilon$-$\\delta$ 语言与度量空间/拓扑空间的连续性语言接上：见 `def.metric-continuity` 与 `def.continuous`。",
+   "notes": "完备性：Cauchy 列的极限存在（实数完备性，`thm.real-complete-metric`）。可分性：$\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密。\n\n度量拓扑 = 标准拓扑：$B(x_0, \\varepsilon) = (x_0 - \\varepsilon, x_0 + \\varepsilon)$，故开区间是基；反过来每个开集都是开区间的并。\n\n⭐ 这条把「$\\mathbb{R}$ 上连续」的 $\\varepsilon$-$\\delta$ 语言与度量空间/拓扑空间的连续性语言接上：见 `def.metric-continuity` 与 `def.continuous`。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 2–3"
    ]
@@ -40379,7 +40432,7 @@
     "analysis"
    ],
    "cluster": "analysis.real",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "导数",
@@ -40464,7 +40517,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.characteristic",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "定理",
     "微分几何",
@@ -40643,7 +40696,7 @@
     "线性代数"
    ],
    "statement": "设 $K$ 是**域**。$K$ 上的**向量空间**（也叫**线性空间**）是一个集合 $V$，配两种运算\n\n$$\\text{加法}: V \\times V \\to V,\\qquad \\text{标量乘法}: K \\times V \\to V,$$\n\n使得 $(V, +)$ 是**阿贝尔群**，并且对一切 $a, b \\in K$、$u, v \\in V$：\n\n- $a(u + v) = au + av$（标量对向量和的分配律）；\n- $(a + b)v = av + bv$（向量对标量和的分配律）；\n- $(ab)v = a(bv)$（标量乘法的结合）；\n- $1 \\cdot v = v$（单位律）。\n\n$V$ 的零元记 $0$，$v$ 的加法逆元记 $-v$；$V$ 的元素叫**向量**，$K$ 的元素叫**标量**。",
-   "notes": "⭐ **它是由两块现成的东西拼出来的，不是新公理**：$(V, +)$ 是**阿贝尔群**（`def.group`），$K$ 是**域**（`def.field`），两者靠「标量乘法」这条**作用**连起来。所以「向量空间」= 群 + 域 + 一个作用 + 四条混合律。\n\n⭐ **它就是 $R = K$ 时的模**：把域放宽成环，上面四条混合律原样有意义（见「模的张量积」那一族）。向量空间比一般模好使，只因为 $K$ 里**每个非零元都可逆** —— 于是「线性无关」能被补成「基」，而模一般没有基。\n\n⚠ **基与维数不在这里**：本节点只说「什么叫向量空间」。线性无关 / 张成 / 基见 `def.vs`，维数良定义见 `thm.dimension`，存在性（每个向量空间都有基）见 `thm.vsbasis`。\n\n⚠ 常说的「八条公理」是把加法那四条也写出来；这里把加法那半收进「阿贝尔群」，所以只剩四条要写。\n\n⭐ 常见的三个例子：$K^{n}$（分量运算逐条验证）；$K[X]$ 与 $M_{n}(K)$（加法就是逐项加）；函数空间 $\\{f : S \\to K\\}$（点态运算）—— 三个都是「同一套验证」的重复。",
+   "notes": "⭐ **它是由两块现成的东西拼出来的，不是新公理**：$(V, +)$ 是**阿贝尔群**（`def.group`），$K$ 是**域**（`def.field`），两者靠「标量乘法」这条**作用**连起来。所以「向量空间」= 群 + 域 + 一个作用 + 四条混合律。\n\n⭐ **它就是 $R = K$ 时的模**：把域放宽成环，上面四条混合律原样有意义（见「模的张量积」那一族）。向量空间比一般模好使，只因为 $K$ 里**每个非零元都可逆** —— 于是「线性无关」能被补成「基」，而模一般没有基。\n\n⚠ **基与维数不在这里**：这里给的是向量空间的定义。线性无关 / 张成 / 基见 `def.vs`，维数良定义见 `thm.dimension`，存在性（每个向量空间都有基）见 `thm.vsbasis`。\n\n⚠ 常说的「八条公理」是把加法那四条也写出来；这里把加法那半收进「阿贝尔群」，所以只剩四条要写。\n\n⭐ 常见的三个例子：$K^{n}$（分量运算逐条验证）；$K[X]$ 与 $M_{n}(K)$（加法就是逐项加）；函数空间 $\\{f : S \\to K\\}$（点态运算）—— 三个都是「同一套验证」的重复。",
    "refs": [
     "Lang, Algebra",
     "Hoffman–Kunze, Ch. 2"
@@ -41229,7 +41282,7 @@
     "可定向性"
    ],
    "statement": "设 $M$ 是 $n$ 维拓扑流形（$n\\ge 1$）。称 $M$ 是**可定向的**，若存在一组图卡 $(U_{\\alpha},\\varphi_{\\alpha})$ 覆盖 $M$，使得任意两个图卡之间的转移映射\n\n$$\\varphi_{\\beta}\\circ\\varphi_{\\alpha}^{-1}:\\ \\varphi_{\\alpha}(U_{\\alpha}\\cap U_{\\beta})\\longrightarrow \\varphi_{\\beta}(U_{\\alpha}\\cap U_{\\beta})$$\n\n都**保向**（$\\mathbb{R}^{n}$ 取标准定向；保向的精确定义见注）。这样的图册叫**定向图册**。不存在定向图册时称 $M$ **不可定向**。",
-   "notes": "**一、保向是什么意思。** $\\mathbb{R}^{n}$ 的标准定向由局部同调的标准生成元给出：对 $x\\in\\mathbb{R}^{n}$，$H_{n}(\\mathbb{R}^{n},\\mathbb{R}^{n}\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$，取定一个生成元作为「正定向」。设 $h:V\\to W$ 是 $\\mathbb{R}^{n}$ 两个开集之间的同胚，$x\\in V$。$h$ 在 $x$ 处**保向**，指诱导同构 $H_{n}(V,V\\setminus\\{x\\})\\to H_{n}(W,W\\setminus\\{h(x)\\})$ 把标准生成元送到标准生成元；否则称**反向**。若 $V$ 连通，则「在一点保向」蕴含「处处保向」（局部同调沿连通性连续变化，只能取两个值）。$n=1$ 时这就是通常的单调递增；$n=2$ 时就是通常的保向同胚。\n\n**二、定向双覆盖。** 令 $\\widehat{M}$ 为所有二元组 $(x,\\mathfrak{o}_{x})$，其中 $x\\in M$、$\\mathfrak{o}_{x}$ 是 $T_{x}M$ 的「局部定向」——即 $x$ 的某个图卡给出的 $\\mathbb{R}^{n}$ 标准定向在该图卡下的拉回，两个图卡给同一 $\\mathfrak{o}_{x}$ 当且仅当转移映射在 $x$ 处保向。用图卡把 $\\widehat{M}$ 局部写成 $U\\times\\{\\pm1\\}$，即得拓扑；投影 $p:\\widehat{M}\\to M$ 是二重覆叠，叫**定向双覆盖**。$M$ 可定向 $\\iff$ $p$ 平凡 $\\iff$ $p$ 有连续截面 $\\iff$ $\\widehat{M}$ 恰有两个连通分支（$M$ 连通时）。不可定向时 $\\widehat{M}$ 连通，且 $\\mathbb{Z}/2$ 自由地作用在它上面（无不动点）。\n\n**三、同调刻画。** 设 $M$ 是闭连通 $n$-流形。对任意 $x$，$H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$；自然映射 $H_{n}(M;\\mathbb{Z})\\to H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})$ 的像只能是 $0$ 或 $\\mathbb{Z}$（Hatcher §3.3）。$M$ 可定向 $\\iff$ 这个像是 $\\mathbb{Z}$（等价地：存在**基本类** $[M]\\in H_{n}(M;\\mathbb{Z})$，它在每个 $x$ 处都给出局部定向）。不可定向时 $H_{n}(M;\\mathbb{Z})=0$。证明思路：用定向双覆盖的转移函数粘一个「局部同调系数」的常层，可定向性正是这个局部系统平凡；基本类的存在性与截面的存在性对偶。\n\n**四、曲面情形（本图主要用途）。** 对闭曲面 $S$：$S$ 可定向 $\\iff$ $S$ 不含 Möbius 带作为子空间 $\\iff$ $S$ 有三角剖分使所有 $2$-单形可**一致定向**（每条内边两侧诱导的边定向相反，`prop.eulerchar-genus` 的引理 D 用的正是这个形式）$\\iff$ $H_{2}(S;\\mathbb{Z})\\cong\\mathbb{Z}$。其中「一致定向的三角剖分」与定向图册的等价，就是引理 D 之前那一步：把每个单形放进图卡再用转移保向拼接。\n\n**五、例子。** $S^{2}$、$T^{2}$ 及一切可定向闭曲面可定向；$\\mathbb{RP}^{2}$、克莱因瓶、Möbius 带不可定向。定向双覆盖的读数：$\\mathbb{RP}^{2}$ 的定向双覆盖是 $S^{2}$（对径作用），克莱因瓶的定向双覆盖是 $T^{2}$，Möbius 带的定向双覆盖是平环。这些例子说明「不可定向」不是「没有局部定向」，而是「局部定向无法整体一致地选出来」。\n\n**六、与光滑定义的关系。** `def.orientable-manifold` 是光滑版本：转移映射的 Jacobi 行列式为正。光滑流形若按光滑意义可定向，则按本条可定向（光滑图册就是定向图册）；反之，光滑流形按本条可定向时，可用单位分解把局部 $n$-形式粘成处处非零的 $n$-形式（`prop.volume-form-orientation`），故两种定义在光滑流形上一致。`def.orientable-surface` 是 $\\mathbb{R}^{3}$ 中的外在版本（存在连续单位法向量场），它只覆盖可嵌入 $\\mathbb{R}^{3}$ 的曲面（例如 $\\mathbb{RP}^{2}$ 不可嵌入，故不能被它描述）。本条不要求光滑，适用于任意拓扑曲面。\n\n**七、用途。** ①`prop.eulerchar-genus` 的引理 D：用定向图册给三角剖分的 $2$-单形一致定向，从而 $H_{2}\\cong\\mathbb{Z}$；②`thm.rado` 的不可定向情形：走定向双覆盖 $\\widehat{S}\\to S$（自由 $\\mathbb{Z}/2$-作用、无分支点），对 $\\widehat{S}$ 用可定向的三角剖分，再取等变加细让商也是剖分（等变三角剖分引理，本图无节点）；③`thm.classification-surfaces`：可定向性是同胚不变量，与 $\\chi$ 一起区分标准形。\n\n⚠ **两个常见混淆。** ①「不可定向」不等于「不可三角剖分」：Radó 说每个紧曲面都可三角剖分，$\\mathbb{RP}^{2}$ 就有（正二十面体对径粘合）。②「定向双覆盖」不是分支覆盖：它是自由二重覆叠，没有分支点；$z\\mapsto z^{2}$ 那种带分支点的局部模型属于亚纯函数的分支覆盖（`thm.rado` 的复分析路线），不要与定向双覆盖混为一谈。",
+   "notes": "**一、保向是什么意思。** $\\mathbb{R}^{n}$ 的标准定向由局部同调的标准生成元给出：对 $x\\in\\mathbb{R}^{n}$，$H_{n}(\\mathbb{R}^{n},\\mathbb{R}^{n}\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$，取定一个生成元作为「正定向」。设 $h:V\\to W$ 是 $\\mathbb{R}^{n}$ 两个开集之间的同胚，$x\\in V$。$h$ 在 $x$ 处**保向**，指诱导同构 $H_{n}(V,V\\setminus\\{x\\})\\to H_{n}(W,W\\setminus\\{h(x)\\})$ 把标准生成元送到标准生成元；否则称**反向**。若 $V$ 连通，则「在一点保向」蕴含「处处保向」（局部同调沿连通性连续变化，只能取两个值）。$n=1$ 时这就是通常的单调递增；$n=2$ 时就是通常的保向同胚。\n\n**二、定向双覆盖。** 令 $\\widehat{M}$ 为所有二元组 $(x,\\mathfrak{o}_{x})$，其中 $x\\in M$、$\\mathfrak{o}_{x}$ 是 $T_{x}M$ 的「局部定向」——即 $x$ 的某个图卡给出的 $\\mathbb{R}^{n}$ 标准定向在该图卡下的拉回，两个图卡给同一 $\\mathfrak{o}_{x}$ 当且仅当转移映射在 $x$ 处保向。用图卡把 $\\widehat{M}$ 局部写成 $U\\times\\{\\pm1\\}$，即得拓扑；投影 $p:\\widehat{M}\\to M$ 是二重覆叠，叫**定向双覆盖**。$M$ 可定向 $\\iff$ $p$ 平凡 $\\iff$ $p$ 有连续截面 $\\iff$ $\\widehat{M}$ 恰有两个连通分支（$M$ 连通时）。不可定向时 $\\widehat{M}$ 连通，且 $\\mathbb{Z}/2$ 自由地作用在它上面（无不动点）。\n\n**三、同调刻画。** 设 $M$ 是闭连通 $n$-流形。对任意 $x$，$H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})\\cong\\mathbb{Z}$；自然映射 $H_{n}(M;\\mathbb{Z})\\to H_{n}(M,M\\setminus\\{x\\};\\mathbb{Z})$ 的像只能是 $0$ 或 $\\mathbb{Z}$（Hatcher §3.3）。$M$ 可定向 $\\iff$ 这个像是 $\\mathbb{Z}$（等价地：存在**基本类** $[M]\\in H_{n}(M;\\mathbb{Z})$，它在每个 $x$ 处都给出局部定向）。不可定向时 $H_{n}(M;\\mathbb{Z})=0$。证明思路：用定向双覆盖的转移函数粘一个「局部同调系数」的常层，可定向性正是这个局部系统平凡；基本类的存在性与截面的存在性对偶。\n\n**四、曲面情形（本图主要用途）。** 对闭曲面 $S$：$S$ 可定向 $\\iff$ $S$ 不含 Möbius 带作为子空间 $\\iff$ $S$ 有三角剖分使所有 $2$-单形可**一致定向**（每条内边两侧诱导的边定向相反，`prop.eulerchar-genus` 的引理 D 用的正是这个形式）$\\iff$ $H_{2}(S;\\mathbb{Z})\\cong\\mathbb{Z}$。其中「一致定向的三角剖分」与定向图册的等价，就是引理 D 之前那一步：把每个单形放进图卡再用转移保向拼接。\n\n**五、例子。** $S^{2}$、$T^{2}$ 及一切可定向闭曲面可定向；$\\mathbb{RP}^{2}$、克莱因瓶、Möbius 带不可定向。定向双覆盖的读数：$\\mathbb{RP}^{2}$ 的定向双覆盖是 $S^{2}$（对径作用），克莱因瓶的定向双覆盖是 $T^{2}$，Möbius 带的定向双覆盖是平环。这些例子说明「不可定向」不是「没有局部定向」，而是「局部定向无法整体一致地选出来」。\n\n**六、与光滑定义的关系。** 光滑流形上的可定向性是光滑版本：转移映射的 Jacobi 行列式为正。光滑流形若按光滑意义可定向，则按本条可定向（光滑图册就是定向图册）；反之，光滑流形按本条可定向时，可用单位分解把局部 $n$-形式粘成处处非零的 $n$-形式（见本团「体积形式与可定向性」），故两种定义在光滑流形上一致。曲面可定向性的外在刻画是 $\\mathbb{R}^{3}$ 中的外在版本（存在连续单位法向量场），它只覆盖可嵌入 $\\mathbb{R}^{3}$ 的曲面（例如 $\\mathbb{RP}^{2}$ 不可嵌入，故不能被它描述）。本条不要求光滑，适用于任意拓扑曲面。\n\n**七、用途。** ①`prop.eulerchar-genus` 的引理 D：用定向图册给三角剖分的 $2$-单形一致定向，从而 $H_{2}\\cong\\mathbb{Z}$；②Radó 定理的不可定向情形：走定向双覆盖 $\\widehat{S}\\to S$（自由 $\\mathbb{Z}/2$-作用、无分支点），对 $\\widehat{S}$ 用可定向的三角剖分，再取等变加细让商也是剖分（等变三角剖分引理，本图无节点）；③曲面分类定理：可定向性是同胚不变量，与 $\\chi$ 一起区分标准形。\n\n⚠ **两个常见混淆。** ①「不可定向」不等于「不可三角剖分」：Radó 说每个紧曲面都可三角剖分，$\\mathbb{RP}^{2}$ 就有（正二十面体对径粘合）。②「定向双覆盖」不是分支覆盖：它是自由二重覆叠，没有分支点；$z\\mapsto z^{2}$ 那种带分支点的局部模型属于亚纯函数的分支覆盖（`thm.rado` 的复分析路线），不要与定向双覆盖混为一谈。",
    "refs": [
     "Hatcher, Algebraic Topology, §3.3",
     "Munkres, Topology, Ch. 12",
@@ -41386,7 +41439,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 31,
+   "layer": 32,
    "tags": [
     "例",
     "拓扑",
@@ -42565,7 +42618,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "拓扑",
@@ -42607,7 +42660,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 34,
+   "layer": 35,
    "tags": [
     "例",
     "微分几何",
@@ -42649,7 +42702,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "例",
     "微分几何",
@@ -42691,7 +42744,7 @@
     "analysis"
    ],
    "cluster": "topology.homology",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "例",
     "拓扑",
@@ -42899,7 +42952,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.form",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -43067,7 +43120,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 30,
+   "layer": 31,
    "tags": [
     "例",
     "微分几何",
@@ -43110,7 +43163,7 @@
     "algebra"
    ],
    "cluster": "diffgeom.vector",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "例",
     "Lie 代数",
@@ -43231,7 +43284,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 33,
+   "layer": 34,
    "tags": [
     "例",
     "微分几何",
@@ -43354,7 +43407,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 33,
+   "layer": 34,
    "tags": [
     "定义",
     "微分几何",
@@ -43397,7 +43450,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 35,
+   "layer": 36,
    "tags": [
     "定义",
     "微分几何",
@@ -43439,7 +43492,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 37,
+   "layer": 38,
    "tags": [
     "定理",
     "微分几何",
@@ -43482,7 +43535,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 36,
+   "layer": 37,
    "tags": [
     "定理",
     "微分几何",
@@ -52762,7 +52815,7 @@
     "Ore 条件"
    ],
    "statement": "设 $\\mathcal{C}$ 是小范畴、$W$ 是其中一族态射。称 $W$ **容许右分式演算**，如果：\n\n1. $W$ 对复合封闭，且包含所有恒等态射；\n2. **（Ore 条件）** 对任何 $w : X' \\to X$ 与任何 $f : Y \\to X$，存在 $g$ 与 $v \\in W$ 使方块交换：\n\n$$\\begin{array}{ccc} Z & \\xrightarrow{\\;g\\;} & Y \\\\[2pt] {\\scriptstyle v}\\big\\downarrow & & \\big\\downarrow{\\scriptstyle f} \\\\[2pt] X' & \\xrightarrow[\\;w\\;]{} & X \\end{array} \\qquad v \\in W;$$\n\n3. **（消去条件）** 若 $w \\in W$ 且 $f \\circ w = g \\circ w$，则存在 $v \\in W$ 使 $v \\circ f = v \\circ g$。\n\n则 $\\mathrm{ho}(\\mathcal{C})$ 可以这样具体算出来：对象不变，$\\operatorname{Hom}_{\\mathrm{ho}}(X, Y)$ 是形如 $X \\xleftarrow{\\;w\\;} X' \\xrightarrow{\\;f\\;} Y$（$w \\in W$）的**分式**在等价关系下的商集。",
-   "notes": "**证明（Gabriel–Zisman 的构造，逐条用掉三个条件）。** 设 $W$ 容许右分式演算。\n- **分式与等价**：一个分式是  $X \\xleftarrow{\\ w\\ } X' \\xrightarrow{\\ f\\ } Y$（$w \\in W$）；两个分式等价，如果存在 $X''\\xrightarrow{v}X'$、$X''\\xrightarrow{v'}X'$ 使 $w v = w' v'$（$\\in W$）且 $f v = f' v'$ ✓。\n- **等价关系**：自反、对称显然；传递性用 **Ore 条件 2** 把两次比较拉到同一个 $X''$ 上，再用 **消去条件 3** 处理剩下的差异 ✓。\n- **复合**：两个分式的复合要「通分」——把 $f_{1}$ 与 $w_{2}$ 按 **条件 2** 摆成一个方块，得到一个公共的 $Z$，于是复合仍是单分式；换代表元不改变复合类（同样靠 2、3）✓。\n- **范畴**：恒等取 $1_{X}$（$X \\xleftarrow{1}X\\xrightarrow{1}X$，条件 1 给出 $1 \\in W$）；结合律由构造直接验（三条条件保证「通分」的结果与顺序无关）✓。\n- **泛性质**：记得到的范畴为 $\\operatorname{Frac}_{W}(\\mathcal{C})$，函子 $\\mathcal{C}\\to\\operatorname{Frac}_{W}(\\mathcal{C})$ 把每个 $w\\in W$ 变成同构（$w$ 的逆就是分式 $X \\xleftarrow{w}X'\\xrightarrow{1}X'$）✓；\n\n任何把 $W$ 变成同构的函子 $H$ 都用 $H(f)H(w)^{-1}$ 唯一分解 ✓。\n于是 $\\operatorname{Frac}_{W}(\\mathcal{C}) \\simeq \\mathcal{C}[W^{-1}] = \\mathrm{ho}(\\mathcal{C})$，且 $\\operatorname{Hom}$ 就是分式的商集 ✓。∎\n⚠️ 少了 Ore 或消去条件，局部化仍然存在，但它的 Hom **一般不是**分式的商集 —— 这正是「分式演算」存在的意义。\n\n⭐ **直觉**：Ore 条件说的是「分式能做通分」—— 一个 $W$ 里的态射跟在前面，总能换成一个 $W$ 里的态射跟在后面，于是分式可以统一写成「先逆一个、再走一个」的**单分式** $f \\circ w^{-1}$，复合起来才封得住。消去条件保证「等价」这件事本身是好的。\n\n**与环论对照**：这正是交换环里**局部化** $S^{-1}A$（$S$ 是乘性子集）的那个条件；那里的「分式」$a/s$ 就是这里的分式，Ore 条件在交换的情形自动成立。\n\n⚠️ 局部化**总是存在**（上一条），但**不总是**能这样具体算 —— 分式演算是一条足够好用的**充分**条件。\n\n\n\n**各方向用到的假设**（这是分式模型的充分条件，不是局部化存在的等价定义）：\n- 三条件成立 $\\iff$ 按约定称为容许分式演算：这是定义；由此推出单屋顶模型则要证明共同细化的传递性、复合良定义及泛性质，并非免费。\n- Ore 条件用于复合时通分，恒等与复合封闭保证单位及新分母仍合法；消去条件用于等价及代表元独立性，不能把泛性质本身当作三条件的证明。\n- 现有图中左腿标为 $v$、上腿标为 $g$，对屋顶 $X\\xleftarrow{w}X'\\to Y$ 的常用约定，所需的是上腿 $g$ 属于 $W$；相应消去式应是 $wf=wg$ 推出 $fv=gv$。原文把两套对偶约定混用，此处不确定，待核，不能按现有标注直接套定理。\n- 没有 Ore 条件仍可作小范畴的形式局部化，但单屋顶不一定封闭：在只有 $X\\to Z\\leftarrow Y$ 的自由范畴中仅反转 $Y\\to Z$，会产生 $X\\to Y$，原范畴却没有以 $X$ 为左端的相应屋顶。\n",
+   "notes": "**证明（Gabriel–Zisman 的构造，逐条用掉三个条件）。** 设 $W$ 容许右分式演算。\n- **分式与等价**：一个分式是  $X \\xleftarrow{\\ w\\ } X' \\xrightarrow{\\ f\\ } Y$（$w \\in W$）；两个分式等价，如果存在 $X''\\xrightarrow{v}X'$、$X''\\xrightarrow{v'}X'$ 使 $w v = w' v'$（$\\in W$）且 $f v = f' v'$ ✓。\n- **等价关系**：自反、对称显然；传递性用 **Ore 条件 2** 把两次比较拉到同一个 $X''$ 上，再用 **消去条件 3** 处理剩下的差异 ✓。\n- **复合**：两个分式的复合要「通分」——把 $f_{1}$ 与 $w_{2}$ 按 **条件 2** 摆成一个方块，得到一个公共的 $Z$，于是复合仍是单分式；换代表元不改变复合类（同样靠 2、3）✓。\n- **范畴**：恒等取 $1_{X}$（$X \\xleftarrow{1}X\\xrightarrow{1}X$，条件 1 给出 $1 \\in W$）；结合律由构造直接验（三条条件保证「通分」的结果与顺序无关）✓。\n- **泛性质**：记得到的范畴为 $\\operatorname{Frac}_{W}(\\mathcal{C})$，函子 $\\mathcal{C}\\to\\operatorname{Frac}_{W}(\\mathcal{C})$ 把每个 $w\\in W$ 变成同构（$w$ 的逆就是分式 $X \\xleftarrow{w}X'\\xrightarrow{1}X'$）✓；\n\n任何把 $W$ 变成同构的函子 $H$ 都用 $H(f)H(w)^{-1}$ 唯一分解 ✓。\n于是 $\\operatorname{Frac}_{W}(\\mathcal{C}) \\simeq \\mathcal{C}[W^{-1}] = \\mathrm{ho}(\\mathcal{C})$，且 $\\operatorname{Hom}$ 就是分式的商集 ✓。∎\n⚠️ 少了 Ore 或消去条件，局部化仍然存在，但它的 Hom **一般不是**分式的商集 —— 这正是「分式演算」存在的意义。\n\n⭐ **直觉**：Ore 条件说的是「分式能做通分」—— 一个 $W$ 里的态射跟在前面，总能换成一个 $W$ 里的态射跟在后面，于是分式可以统一写成「先逆一个、再走一个」的**单分式** $f \\circ w^{-1}$，复合起来才封得住。消去条件保证「等价」这件事本身是好的。\n\n**与环论对照**：这正是交换环里**局部化** $S^{-1}A$（$S$ 是乘性子集）的那个条件；那里的「分式」$a/s$ 就是这里的分式，Ore 条件在交换的情形自动成立。\n\n⚠️ 局部化**总是存在**（上一条），但**不总是**能这样具体算 —— 分式演算是一条足够好用的**充分**条件。\n\n\n\n**各方向用到的假设**（这是分式模型的充分条件，不是局部化存在的等价定义）：\n- 三条件成立 $\\iff$ 按约定称为容许分式演算：这是定义；由此推出单屋顶模型则要证明共同细化的传递性、复合良定义及泛性质，并非免费。\n- Ore 条件用于复合时通分，恒等与复合封闭保证单位及新分母仍合法；消去条件用于等价及代表元独立性，不能把泛性质本身当作三条件的证明。\n- 现有图中左腿标为 $v$、上腿标为 $g$，对屋顶 $X\\xleftarrow{w}X'\\to Y$ 的常用约定，所需的是上腿 $g$ 属于 $W$；相应消去式应是 $wf=wg$ 推出 $fv=gv$。原文把两套对偶约定混用，本图未核对该步，记为缺口，不能按现有标注直接套定理。\n- 没有 Ore 条件仍可作小范畴的形式局部化，但单屋顶不一定封闭：在只有 $X\\to Z\\leftarrow Y$ 的自由范畴中仅反转 $Y\\to Z$，会产生 $X\\to Y$，原范畴却没有以 $X$ 为左端的相应屋顶。\n",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §1.1"
    ]
@@ -56414,7 +56467,7 @@
     "常值系数"
    ],
    "statement": "设 $M$ 是**常值**阿贝尔群。\n\n1. 若 $f \\simeq g : X \\to Y$ 是**同伦**的连续映射，则 $f$ 与 $g$ 诱导的上同调映射相同；\n2. 若 $f : X \\to Y$ 是**同伦等价**，则 $H^{n}(Y, M) \\cong H^{n}(X, M)$。",
-   "notes": "**证明第 1 条。** 常值系数下可以用 **Čech 模型**（在紧 Hausdorff 上它就算出真上同调，在一般情形也足够比较）。\n- 同伦 $H : X \\times [0,1] \\to Y$ 把 $Y$ 的覆盖拉到 $X \\times [0,1]$ 上。\n\n用 $[0,1]$ 的**有限区间分解** $[0,1] = \\bigcup_{k} I_{k}$（相邻交叠也是区间）把它拆成有限段，于是对每个覆盖都能在 Čech 复形之间造出一个**链同伦** $f^{*} \\simeq g^{*}$ —— 这一步的核心是「$[0,1]$ 的常值系数 Čech 上同调在正次数为零」（区间分解给出的增广 Čech 复形是可缩的）。\n- 链同伦在同调上诱导**同一个**映射，故 $H^{n}(f) = H^{n}(g)$。\n**第 2 条。** 设 $g$ 是 $f$ 的同伦逆，即 $f g \\simeq \\mathrm{id}_{Y}$、$g f \\simeq \\mathrm{id}_{X}$。\n\n由第 1 条，$H^{n}(fg) = H^{n}(\\mathrm{id}_{Y}) = \\mathrm{id}$，而 $H^{n}(fg) = H^{n}(f) \\circ H^{n}(g)$（上同调是函子），同理另一边。\n\n于是 $H^{n}(f)$ 与 $H^{n}(g)$ 互逆，$H^{n}(Y, M) \\cong H^{n}(X, M)$。\n\n∎\n\n**各方向用到的假设**（同伦不变性是实质定理，同伦逆推出同构是形式推论）：\n- 同伦映射 $\\implies$ 诱导相同映射并非定义展开；对奇异上同调用棱柱链同伦。用于层上同调时，还须有适用的同伦不变性定理或层与奇异上同调比较定理。\n- 安全的充分背景是仿紧 Hausdorff 且局部可缩空间、常值阿贝尔系数：比较定理把问题转到奇异上同调。原文对任意空间的无条件版本此处不确定，待核，不能仅凭一般 Čech 模型断言。\n- 已知同伦不变性后，同伦等价 $\\implies$ 上同调同构只用逆变函子性和同伦逆，属于免费的形式步骤；不应将复合的逆变次序写反。\n- 常值系数不可任意替换成固定的非恒定层：实直线上把点处的非零群作摩天楼层，恒等映射与避开该点的常映射同伦，但其逆像层分别非零与零，不能照搬常值系数下的比较。\n\n\n⭐ **这就是「层上同调是拓扑不变量」那句话的出处** —— 常值系数下，$H^{n}(-, M)$ 是同伦不变的，所以它可以拿来算空间的同伦类不变量（奇异上同调、de Rham 上同调都落在这一条上）。",
+   "notes": "**证明第 1 条。** 常值系数下可以用 **Čech 模型**（在紧 Hausdorff 上它就算出真上同调，在一般情形也足够比较）。\n- 同伦 $H : X \\times [0,1] \\to Y$ 把 $Y$ 的覆盖拉到 $X \\times [0,1]$ 上。\n\n用 $[0,1]$ 的**有限区间分解** $[0,1] = \\bigcup_{k} I_{k}$（相邻交叠也是区间）把它拆成有限段，于是对每个覆盖都能在 Čech 复形之间造出一个**链同伦** $f^{*} \\simeq g^{*}$ —— 这一步的核心是「$[0,1]$ 的常值系数 Čech 上同调在正次数为零」（区间分解给出的增广 Čech 复形是可缩的）。\n- 链同伦在同调上诱导**同一个**映射，故 $H^{n}(f) = H^{n}(g)$。\n**第 2 条。** 设 $g$ 是 $f$ 的同伦逆，即 $f g \\simeq \\mathrm{id}_{Y}$、$g f \\simeq \\mathrm{id}_{X}$。\n\n由第 1 条，$H^{n}(fg) = H^{n}(\\mathrm{id}_{Y}) = \\mathrm{id}$，而 $H^{n}(fg) = H^{n}(f) \\circ H^{n}(g)$（上同调是函子），同理另一边。\n\n于是 $H^{n}(f)$ 与 $H^{n}(g)$ 互逆，$H^{n}(Y, M) \\cong H^{n}(X, M)$。\n\n∎\n\n**各方向用到的假设**（同伦不变性是实质定理，同伦逆推出同构是形式推论）：\n- 同伦映射 $\\implies$ 诱导相同映射并非定义展开；对奇异上同调用棱柱链同伦。用于层上同调时，还须有适用的同伦不变性定理或层与奇异上同调比较定理。\n- 安全的充分背景是仿紧 Hausdorff 且局部可缩空间、常值阿贝尔系数：比较定理把问题转到奇异上同调。原文对任意空间的无条件版本本图未核对该步，记为缺口，不能仅凭一般 Čech 模型断言。\n- 已知同伦不变性后，同伦等价 $\\implies$ 上同调同构只用逆变函子性和同伦逆，属于免费的形式步骤；不应将复合的逆变次序写反。\n- 常值系数不可任意替换成固定的非恒定层：实直线上把点处的非零群作摩天楼层，恒等映射与避开该点的常映射同伦，但其逆像层分别非零与零，不能照搬常值系数下的比较。\n\n\n⭐ **这就是「层上同调是拓扑不变量」那句话的出处** —— 常值系数下，$H^{n}(-, M)$ 是同伦不变的，所以它可以拿来算空间的同伦类不变量（奇异上同调、de Rham 上同调都落在这一条上）。",
    "refs": [
     "Le Stum, Proposition 7.4.2",
     "Le Stum, Corollary 7.4.3"
@@ -57667,7 +57720,7 @@
     "计算表",
     "Ex 8.17"
    ],
-   "statement": "下表列出 $\\operatorname{RHom}_{\\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：\n\n$$\\begin{array}{c|ccc} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\hline \\mathbb{Z} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\mathbb{R} & 0 & \\mathbb{R} & \\mathbb{R} \\\\ T & \\mathbb{Z}[-1] & 0 & \\mathbb{Z} \\end{array}$$\n**逐格推算：这台机器只用两个事实**\n\n1. **$\\mathbb{Z}$ 是自由（投射）的**：$\\mathbb{Z}$ 的消解可以取成一维的 $[\\mathbb{Z}]$，于是 $\\operatorname{RHom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = N$，**没有高阶项**。\n\n这一条直接给出表的第一行。\n\n\n2. **$\\mathbb{R}$ 可除，因此是 $\\mathbb{Z}$-内射的**：$\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, \\mathbb{R}) = 0$ 对一切 $M$ 与 $n \\ge 1$。\n\n于是「靶是 $\\mathbb{R}$」的那些格只剩 $0$ 次：$\\operatorname{RHom}(M, \\mathbb{R}) = \\operatorname{Hom}_{\\mathbb{Z}}(M, \\mathbb{R})$。\n\n\n\n**把 $T$ 那一列换成 $\\mathbb{Z}$ 再升一次**：取短正合列 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$（$T = \\mathbb{R}/\\mathbb{Z}$）。\n\n对固定的 $M$ 取 $\\operatorname{RHom}(M, -)$，得**长正合列**\n\n$$\\cdots \\to \\operatorname{Ext}^{n}(M, \\mathbb{R}) \\to \\operatorname{Ext}^{n}(M, T) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{R}) \\to \\cdots$$\n\n既然两端的 $\\mathbb{R}$ 项在 $n \\ge 1$ 全为零，中间就被夹死：\n\n$$\\operatorname{Ext}^{n}(M, T) \\;\\cong\\; \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\qquad (n \\ge 1),$$\n\n以及 $0 \\to \\operatorname{Hom}(M,\\mathbb{Z}) \\to \\operatorname{Hom}(M,\\mathbb{R}) \\to \\operatorname{Hom}(M,T) \\to \\operatorname{Ext}^{1}(M,\\mathbb{Z}) \\to 0$。\n\n**这就是表里 $T$ 列与 $\\mathbb{Z}$ 列恰好差一次上标的来源**（例如第三行第一列是 $\\mathbb{Z}[-1]$：$M = T$ 时 $\\operatorname{Ext}^{0}(T,\\mathbb{Z}) = 0$、$\\operatorname{Ext}^{1}(T,\\mathbb{Z}) \\cong \\operatorname{Ext}^{0}(T,T) = \\mathbb{Z}$）。\n\n\n\n**为什么「实向量空间 $\\to$ 离散」全零**：$\\mathbb{R}^{n}$ 可除，可除群到任何群都满足「$n$ 倍可解」的条件，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$（$1/n$ 的像必须能被 $n$ 整除地解出来，只有 $0$）；\n\n配合可除性 $\\operatorname{Ext}^{1}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$，整条 $\\operatorname{RHom}$ 为零。\n\n\n\n⚠️ 表中「$\\mathbb{R}$ 行、$T$ 列 = $\\mathbb{R}$」这一格不能只靠上面两条推出（它涉及连续同态 $\\mathbb{R} \\to T = \\mathbb{R}/\\mathbb{Z}$ 的分类，与万有覆盖 $\\mathbb{R} \\to T$ 有关）；\n\n本图按笔记的结论记录，**推导留待核对**。",
+   "statement": "下表列出 $\\operatorname{RHom}_{\\mathbb{Z}}(M, N)$（行是 $M$、列是 $N$）：\n\n$$\\begin{array}{c|ccc} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\hline \\mathbb{Z} & \\mathbb{Z} & \\mathbb{R} & T \\\\ \\mathbb{R} & 0 & \\mathbb{R} & \\mathbb{R} \\\\ T & \\mathbb{Z}[-1] & 0 & \\mathbb{Z} \\end{array}$$\n**逐格推算：这台机器只用两个事实**\n\n1. **$\\mathbb{Z}$ 是自由（投射）的**：$\\mathbb{Z}$ 的消解可以取成一维的 $[\\mathbb{Z}]$，于是 $\\operatorname{RHom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}, N) = N$，**没有高阶项**。\n\n这一条直接给出表的第一行。\n\n\n2. **$\\mathbb{R}$ 可除，因此是 $\\mathbb{Z}$-内射的**：$\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, \\mathbb{R}) = 0$ 对一切 $M$ 与 $n \\ge 1$。\n\n于是「靶是 $\\mathbb{R}$」的那些格只剩 $0$ 次：$\\operatorname{RHom}(M, \\mathbb{R}) = \\operatorname{Hom}_{\\mathbb{Z}}(M, \\mathbb{R})$。\n\n\n\n**把 $T$ 那一列换成 $\\mathbb{Z}$ 再升一次**：取短正合列 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$（$T = \\mathbb{R}/\\mathbb{Z}$）。\n\n对固定的 $M$ 取 $\\operatorname{RHom}(M, -)$，得**长正合列**\n\n$$\\cdots \\to \\operatorname{Ext}^{n}(M, \\mathbb{R}) \\to \\operatorname{Ext}^{n}(M, T) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\to \\operatorname{Ext}^{n+1}(M, \\mathbb{R}) \\to \\cdots$$\n\n既然两端的 $\\mathbb{R}$ 项在 $n \\ge 1$ 全为零，中间就被夹死：\n\n$$\\operatorname{Ext}^{n}(M, T) \\;\\cong\\; \\operatorname{Ext}^{n+1}(M, \\mathbb{Z}) \\qquad (n \\ge 1),$$\n\n以及 $0 \\to \\operatorname{Hom}(M,\\mathbb{Z}) \\to \\operatorname{Hom}(M,\\mathbb{R}) \\to \\operatorname{Hom}(M,T) \\to \\operatorname{Ext}^{1}(M,\\mathbb{Z}) \\to 0$。\n\n**这就是表里 $T$ 列与 $\\mathbb{Z}$ 列恰好差一次上标的来源**（例如第三行第一列是 $\\mathbb{Z}[-1]$：$M = T$ 时 $\\operatorname{Ext}^{0}(T,\\mathbb{Z}) = 0$、$\\operatorname{Ext}^{1}(T,\\mathbb{Z}) \\cong \\operatorname{Ext}^{0}(T,T) = \\mathbb{Z}$）。\n\n\n\n**为什么「实向量空间 $\\to$ 离散」全零**：$\\mathbb{R}^{n}$ 可除，可除群到任何群都满足「$n$ 倍可解」的条件，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$（$1/n$ 的像必须能被 $n$ 整除地解出来，只有 $0$）；\n\n配合可除性 $\\operatorname{Ext}^{1}(\\mathbb{R}^{n}, \\mathbb{Z}) = 0$，整条 $\\operatorname{RHom}$ 为零。\n\n\n\n⚠️ 表中「$\\mathbb{R}$ 行、$T$ 列 = $\\mathbb{R}$」这一格不能只靠上面两条推出（它涉及连续同态 $\\mathbb{R} \\to T = \\mathbb{R}/\\mathbb{Z}$ 的分类，与万有覆盖 $\\mathbb{R} \\to T$ 有关）；\n\n这一格本图未给推导（缺口）。",
    "notes": "**怎么读这张表**（$T = \\mathbb{R}/\\mathbb{Z}$）：\n\n\n\n- 第一行（源是 $\\mathbb{Z}$）：$\\operatorname{RHom}(\\mathbb{Z}, N) = N$ —— 自由对象上没有高阶，只剩 0 次；\n- 第二行第一列 $0$：**实向量空间 $\\to$ 离散**全零（可除性塌掉）；\n- 第二行其余：有限维实 Banach 之间的 RHom 只有 0 次，值为 $\\operatorname{Hom}_{\\mathbb{R}}(M, N)$ —— 这里是 $\\operatorname{Hom}_{\\mathbb{R}}(\\mathbb{R}, \\mathbb{R}) = \\mathbb{R}$ 与 $\\operatorname{Hom}_{\\mathbb{R}}(\\mathbb{R}, T)$；\n\n\n- 第三行第二列 $0$：**紧 Hausdorff $\\to$ 实 Banach** 全零；\n- 第三行第一列 $\\mathbb{Z}[-1]$：由 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$，中间项是 $0$，只剩下一步降一次的 $\\mathbb{Z}$；\n- 右下角 $\\mathbb{Z}$：同样由 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$ 与 $\\operatorname{RHom}(T, \\mathbb{R}) = 0$ 得到。\n\n\n\n这张表是全章计算的**浓缩总结**：三条归零定理（$\\mathbb{R} \\to$ 离散、紧 $\\to \\mathbb{R}$、以及自由源）加上 $0 \\to \\mathbb{Z} \\to \\mathbb{R} \\to T \\to 0$ 这一条正合列，就能把三类基本对象之间的所有 RHom 全部算出来。",
    "refs": [
     "Le Stum, Exercise 8.17"
@@ -58511,7 +58564,7 @@
     "弱 Hausdorff"
    ],
    "statement": "设 $X = \\varinjlim_{i \\in I} X_{i}$ 是**紧 Hausdorff 空间**沿**闭含入**的滤过余极限。则\n\n1. $X$ 紧生成且弱 Hausdorff；\n2. 每个 $X_{i}$ 在 $X$ 中**闭**；\n3. $X$ 的拓扑就是这些紧块的**余极限拓扑**：$U \\subseteq X$ 开 $\\iff$ 每个 $U \\cap X_{i}$ 在 $X_{i}$ 中开。\n\n反过来，每个紧生成的弱 Hausdorff 空间都是它自己的紧 Hausdorff 子空间沿闭含入的滤过余极限。",
-   "notes": "**第 3 条是这条命题的实质**。拓扑空间取余极限时，拓扑可能比「逐块看」的拓扑更粗或更细；这条说在这种情况下两侧**恰好一致** —— 一个集合是开的，当且仅当它在每一块上的迹是开的。于是「$X$ 上的连续函数」= 「一族在每块上连续的、互相相容的函数」，可以逐块处理。\n\n**为什么块要取紧 Hausdorff。** 紧性是「有限子覆盖」这种有限性条件的几何化身；在凝聚态数学里，紧 Hausdorff 空间正是「探测者」。把一个大对象写成紧块的滤过余极限，就等于把它写成「越来越大的有限信息」的极限 —— 一切计算都可以停机在某个块上。\n\n⭐ **用在哪**：证明「拟分离的凝聚态集的底空间弱 Hausdorff」时，先把拟分离的 $X$ 写成紧 Hausdorff 块沿含入的滤过余极限，再对这一串块取底空间 —— 由这条，余极限仍紧生成弱 Hausdorff。\n\n📌 与「$\\mathrm{CGWH}$ 的封闭性」那条分工：那条说的是「一般的 CGWH 空间沿闭含入拼起来还是 CGWH」，这条把块**换成紧 Hausdorff**，并额外给出拓扑的显式刻画与反向分解。\n\n\n\n**各方向用到的假设**（拓扑刻画是余极限定义，分离结论另需论证）：\n- 拓扑空间中的余极限 $\\implies$ 开集逐块检测：这是终拓扑的定义，不需要先证明紧生成或弱 Hausdorff；原注把第 3 条称为额外实质须作此区分。\n- 闭含入的滤过系统 $\\implies$ 各块在余极限中闭：共同后继块内两块的交闭，再用终拓扑检测；滤过性及闭含入用于这一步。\n- 紧 Hausdorff 块的终拓扑 $\\implies$ 紧生成：块的结构映射就是紧 Hausdorff 探测映射；弱 Hausdorff 结论不能仅由这句定义推出，任意滤过索引下的完整证明此处不确定，待核。\n- 紧生成弱 Hausdorff 空间 $\\implies$ 紧 Hausdorff 子空间的滤过分解：弱 Hausdorff 保证紧 Hausdorff 探测映射的像闭且 Hausdorff，有限并给共同上界，紧生成保证终拓扑还原原拓扑。\n- 不能删去紧生成：不可数集合的余可数拓扑是弱 Hausdorff，紧 Hausdorff 子空间均有限，其终拓扑为离散拓扑，不能还原原拓扑。\n",
+   "notes": "**第 3 条是这条命题的实质**。拓扑空间取余极限时，拓扑可能比「逐块看」的拓扑更粗或更细；这条说在这种情况下两侧**恰好一致** —— 一个集合是开的，当且仅当它在每一块上的迹是开的。于是「$X$ 上的连续函数」= 「一族在每块上连续的、互相相容的函数」，可以逐块处理。\n\n**为什么块要取紧 Hausdorff。** 紧性是「有限子覆盖」这种有限性条件的几何化身；在凝聚态数学里，紧 Hausdorff 空间正是「探测者」。把一个大对象写成紧块的滤过余极限，就等于把它写成「越来越大的有限信息」的极限 —— 一切计算都可以停机在某个块上。\n\n⭐ **用在哪**：证明「拟分离的凝聚态集的底空间弱 Hausdorff」时，先把拟分离的 $X$ 写成紧 Hausdorff 块沿含入的滤过余极限，再对这一串块取底空间 —— 由这条，余极限仍紧生成弱 Hausdorff。\n\n📌 与「$\\mathrm{CGWH}$ 的封闭性」那条分工：那条说的是「一般的 CGWH 空间沿闭含入拼起来还是 CGWH」，这条把块**换成紧 Hausdorff**，并额外给出拓扑的显式刻画与反向分解。\n\n\n\n**各方向用到的假设**（拓扑刻画是余极限定义，分离结论另需论证）：\n- 拓扑空间中的余极限 $\\implies$ 开集逐块检测：这是终拓扑的定义，不需要先证明紧生成或弱 Hausdorff；原注把第 3 条称为额外实质须作此区分。\n- 闭含入的滤过系统 $\\implies$ 各块在余极限中闭：共同后继块内两块的交闭，再用终拓扑检测；滤过性及闭含入用于这一步。\n- 紧 Hausdorff 块的终拓扑 $\\implies$ 紧生成：块的结构映射就是紧 Hausdorff 探测映射；弱 Hausdorff 结论不能仅由这句定义推出，任意滤过索引下的完整证明本图未核对该步，记为缺口。\n- 紧生成弱 Hausdorff 空间 $\\implies$ 紧 Hausdorff 子空间的滤过分解：弱 Hausdorff 保证紧 Hausdorff 探测映射的像闭且 Hausdorff，有限并给共同上界，紧生成保证终拓扑还原原拓扑。\n- 不能删去紧生成：不可数集合的余可数拓扑是弱 Hausdorff，紧 Hausdorff 子空间均有限，其终拓扑为离散拓扑，不能还原原拓扑。\n",
    "refs": [
     "Le Stum, Proposition 2.3.9"
    ]
@@ -60083,7 +60136,7 @@
     "分离预层"
    ],
    "statement": "设 $X$ 是拓扑空间，把 $x \\in X$ 看成连续映射 $x : 1 \\to X$（$1$ 是单点空间），它给出拓扑斯态射 $\\hat x : \\mathbf{Set} \\to \\operatorname{Sh}(X)$。则\n\n1. **拉回就是茎**：$\\hat x^{*}(T) = T_{x} := \\varinjlim_{U \\ni x} T(U)$（余极限沿 $x$ 的全体邻域取）；\n2. **推前是「在 $x$ 处取值」**：$\\hat x_{*}(E)$ 是层\n$$U \\longmapsto \\begin{cases} E, & x \\in U \\\\ \\emptyset, & x \\notin U \\end{cases}$$\n而 $\\hat x^{*}$ 的左伴随 $\\hat x_{!}$ 是同一形状的「**摩天楼层**」；\n3. **分离性的茎刻画**：预层 $T$ 是**分离的**（层条件里「单射」那一半：在某个覆盖的每支上限制相等 $\\implies$ 自身相等）$\\iff$ 对每个开集 $U$，映射\n$$T(U) \\longrightarrow \\prod_{x \\in U} T_{x}$$\n是**单射**。",
-   "notes": "**证明。**\n**1.** 拓扑斯态射 $\\hat x = (\\hat x^{*}, \\hat x_{*})$ 的拉回是「在 $x$ 处的纤维」，而层在一点的纤维就是**茎** $T_{x} = \\varinjlim_{x \\in U} T(U)$ ✓（余极限沿 $x$ 的邻域取 —— 邻域按包含构成滤过范畴）。\n**2.** 验证伴随关系 $\\operatorname{Hom}(T, \\hat x_{*}E) \\cong \\operatorname{Hom}(\\hat x^{*}T, E)$：左边是一个自然变换，在 $U \\ni x$ 处给出 $T(U) \\to E$，相容性说明它们「在限制下对应同一个元素」✓；这样的相容族恰好是\n$$\\varprojlim_{U \\ni x} \\operatorname{Hom}\\bigl(T(U),\\ E\\bigr) \\;=\\; \\operatorname{Hom}\\Bigl(\\varinjlim_{U \\ni x} T(U),\\ E\\Bigr) \\;=\\; \\operatorname{Hom}(T_{x}, E) ✓$$\n（第一个等号是「反变的 Hom 把余极限送成极限」）。$x \\notin U$ 时该层取值 $\\emptyset$，覆盖上的相容族只能落在空集里 —— 不存在，故仍是层 ✓。左伴随 $\\hat x_{!}$ 同理（把 $E$ 摆在 $x$ 的邻域上，别处放空集）✓。\n**3.** $(\\Longrightarrow)$ 设 $s, t \\in T(U)$ 在每个茎里相等。\n\n对每个 $x \\in U$：$s$ 与 $t$ 在 $T_{x}$ 里相等，意味着存在开邻域 $U_{x} \\subseteq U$（$x \\in U_{x}$）使 $s|_{U_{x}} = t|_{U_{x}}$ ✓。\n\n$\\{U_{x}\\}_{x \\in U}$ 是 $U$ 的开覆盖，由**分离性**得 $s = t$ ✓。\n$(\\Longleftarrow)$ 反过来设 $s, t \\in T(U)$ 在某个开覆盖 $(U_{i})$ 的每支上相等。\n\n任取 $x \\in U$，取一支 $U_{i} \\ni x$，则 $s$ 与 $t$ 在 $x$ 的邻域 $U_{i}$ 上相等，故它们在茎 $T_{x}$ 里相等 ✓；\n\n这对一切 $x \\in U$ 成立，由单射性得 $s = t$ ✓。\n\n∎\n\n⭐ 一句话：**「分离」=「在每个点的茎里都相等就能推出整体相等」**。层比分离预层多的那一步（相容族的**粘合**）在茎里是看不出来的 —— 这正是「分离」与「层」的差别。\n\n\n\n**三条里拉回=茎是“余极限”的直接结果，分离性刻画才是判据**：\n\n- ① **拉回就是茎**：$\\hat x^{*}(T) = \\varinjlim_{U \\ni x} T(U)$。**这一步只用“拉回 = 沿连续映射取余极限”的定义**（层沿连续映射拉回的标准构造）。\n- ② **推前与摩天楼层**：$\\hat x_{*}(E)(U) = E$（$x \\in U$）或空 —— 这是**摩天楼层**（skyscraper）的通常形状；$\\hat x_{!}$ 是它的左伴随。⚠️ 三者构成 $\\hat x_{!} \\dashv \\hat x^{*} \\dashv \\hat x_{*}$ 的伴随链，**这条链的存在不需要任何假设**，但“$\\hat x^{*}$ = 茎”只在层范畴里成立。\n- ③ **分离性**：预层分离 $\\iff$ $T(U) \\to \\prod_{x \\in U}T_{x}$ **单射**。$(\\implies)$ 用“两个截面在每点芽相同 $\\implies$ 相等”（对覆盖取交）；$(\\Leftarrow)$ 逐点验证。⚠️ **分离只是层条件的一半**（另一半是“粘合”，即满射性）。\n\n⚠️ **粘合失败的反例要记住**：$X = \\{0,1\\}$ 上的预层把 $X$ 送到 $\\mathbb{Z}$、把单点送到 $0$ —— 它**分离但不粘合**。所以“茎能决定截面”不等于“能粘合”。\n\n\n\n\n**各方向用到的假设**（茎检测分离性不要求空间的分离公理）：\n- 分离预层 $\\implies$ 截面到各茎乘积单射：芽相等由邻域滤过余极限给局部相等，再用分离性；取所有见证邻域可避免逐点选择。\n- 所有开集上的茎映射单射 $\\implies$ 分离：覆盖上相等直接推出各点芽相等，无需 Hausdorff 性或紧性；须包含空开集的检验。\n- 茎判据不推出粘合：离散两点空间上的常值预层取非单元素集，空集处取单点，是分离的，但不能粘合两个不同局部常值。\n- 原文推前公式需核正：点嵌入的集合值层推前在不含该点的开集上应取单点终对象，不是空集；茎函子的左伴随一般也不自动存在，原伴随链此处不确定，待核。\n",
+   "notes": "**证明。**\n**1.** 拓扑斯态射 $\\hat x = (\\hat x^{*}, \\hat x_{*})$ 的拉回是「在 $x$ 处的纤维」，而层在一点的纤维就是**茎** $T_{x} = \\varinjlim_{x \\in U} T(U)$ ✓（余极限沿 $x$ 的邻域取 —— 邻域按包含构成滤过范畴）。\n**2.** 验证伴随关系 $\\operatorname{Hom}(T, \\hat x_{*}E) \\cong \\operatorname{Hom}(\\hat x^{*}T, E)$：左边是一个自然变换，在 $U \\ni x$ 处给出 $T(U) \\to E$，相容性说明它们「在限制下对应同一个元素」✓；这样的相容族恰好是\n$$\\varprojlim_{U \\ni x} \\operatorname{Hom}\\bigl(T(U),\\ E\\bigr) \\;=\\; \\operatorname{Hom}\\Bigl(\\varinjlim_{U \\ni x} T(U),\\ E\\Bigr) \\;=\\; \\operatorname{Hom}(T_{x}, E) ✓$$\n（第一个等号是「反变的 Hom 把余极限送成极限」）。$x \\notin U$ 时该层取值 $\\emptyset$，覆盖上的相容族只能落在空集里 —— 不存在，故仍是层 ✓。左伴随 $\\hat x_{!}$ 同理（把 $E$ 摆在 $x$ 的邻域上，别处放空集）✓。\n**3.** $(\\Longrightarrow)$ 设 $s, t \\in T(U)$ 在每个茎里相等。\n\n对每个 $x \\in U$：$s$ 与 $t$ 在 $T_{x}$ 里相等，意味着存在开邻域 $U_{x} \\subseteq U$（$x \\in U_{x}$）使 $s|_{U_{x}} = t|_{U_{x}}$ ✓。\n\n$\\{U_{x}\\}_{x \\in U}$ 是 $U$ 的开覆盖，由**分离性**得 $s = t$ ✓。\n$(\\Longleftarrow)$ 反过来设 $s, t \\in T(U)$ 在某个开覆盖 $(U_{i})$ 的每支上相等。\n\n任取 $x \\in U$，取一支 $U_{i} \\ni x$，则 $s$ 与 $t$ 在 $x$ 的邻域 $U_{i}$ 上相等，故它们在茎 $T_{x}$ 里相等 ✓；\n\n这对一切 $x \\in U$ 成立，由单射性得 $s = t$ ✓。\n\n∎\n\n⭐ 一句话：**「分离」=「在每个点的茎里都相等就能推出整体相等」**。层比分离预层多的那一步（相容族的**粘合**）在茎里是看不出来的 —— 这正是「分离」与「层」的差别。\n\n\n\n**三条里拉回=茎是“余极限”的直接结果，分离性刻画才是判据**：\n\n- ① **拉回就是茎**：$\\hat x^{*}(T) = \\varinjlim_{U \\ni x} T(U)$。**这一步只用“拉回 = 沿连续映射取余极限”的定义**（层沿连续映射拉回的标准构造）。\n- ② **推前与摩天楼层**：$\\hat x_{*}(E)(U) = E$（$x \\in U$）或空 —— 这是**摩天楼层**（skyscraper）的通常形状；$\\hat x_{!}$ 是它的左伴随。⚠️ 三者构成 $\\hat x_{!} \\dashv \\hat x^{*} \\dashv \\hat x_{*}$ 的伴随链，**这条链的存在不需要任何假设**，但“$\\hat x^{*}$ = 茎”只在层范畴里成立。\n- ③ **分离性**：预层分离 $\\iff$ $T(U) \\to \\prod_{x \\in U}T_{x}$ **单射**。$(\\implies)$ 用“两个截面在每点芽相同 $\\implies$ 相等”（对覆盖取交）；$(\\Leftarrow)$ 逐点验证。⚠️ **分离只是层条件的一半**（另一半是“粘合”，即满射性）。\n\n⚠️ **粘合失败的反例要记住**：$X = \\{0,1\\}$ 上的预层把 $X$ 送到 $\\mathbb{Z}$、把单点送到 $0$ —— 它**分离但不粘合**。所以“茎能决定截面”不等于“能粘合”。\n\n\n\n\n**各方向用到的假设**（茎检测分离性不要求空间的分离公理）：\n- 分离预层 $\\implies$ 截面到各茎乘积单射：芽相等由邻域滤过余极限给局部相等，再用分离性；取所有见证邻域可避免逐点选择。\n- 所有开集上的茎映射单射 $\\implies$ 分离：覆盖上相等直接推出各点芽相等，无需 Hausdorff 性或紧性；须包含空开集的检验。\n- 茎判据不推出粘合：离散两点空间上的常值预层取非单元素集，空集处取单点，是分离的，但不能粘合两个不同局部常值。\n- 原文推前公式需核正：点嵌入的集合值层推前在不含该点的开集上应取单点终对象，不是空集；茎函子的左伴随一般也不自动存在，原伴随链本图未核对该步，记为缺口。\n",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §3.4"
    ]
@@ -61825,7 +61878,7 @@
     "层上同调"
    ],
    "statement": "设 $M$ 是景 $\\mathcal{C}$ 上的阿贝尔层。以下四条等价：\n\n1. $M$ **无环**：$H^{n}(M) = 0$（$n \\ne 0$）；\n2. 对每个 $X \\in \\mathcal{C}$：$H^{n}(X, M) = 0$（$n \\ne 0$）；\n3. 对每个覆盖族 $\\mathfrak{X}$：$\\check{H}^{n}(\\mathfrak{X}, M) = 0$（$n \\ne 0$）；\n4. 对每个 $X \\in \\mathcal{C}$：$\\check{H}^{n}(X, M) = 0$（$n \\ne 0$）。",
-   "notes": "**证明。**\n**(1) $\\iff$ (2)**：层上同调就是「高次上同调预层」的整体截面，$H^{n}(X, M) = \\Gamma\\bigl(X, H^{n}(M)\\bigr)$ ✓，两边同时为零 ✓。\n**(1) $\\implies$ (3)**：对固定覆盖用 Cartan–Leray 谱序列 $E^{p,q}_{2} = \\check{H}^{p}(\\mathfrak{X}, H^{q}(M)) \\implies H^{p+q}(X,M)$ ✓；\n\n(1) 让 $q \\ne 0$ 的行全为零、$H^{p+q}$ 也全为零（$p+q \\ne 0$），谱序列退化给出 $\\check{H}^{n}(\\mathfrak{X}, M) = 0$ ✓。\n**(3) $\\implies$ (4)**：$\\check{H}^{n}(X, -)$ 是沿覆盖取的滤过余极限 ✓，每个覆盖上都为零故为零 ✓。\n**(4) $\\implies$ (1)**：把同一句话反过来 —— 用 Čech 到上同调的谱序列逐次消去，$E^{p,q}_{2}$ 的右端全为零，故全为零 ✓。∎\n\n**四条里 (1)$\\iff$(2) 只是换记号，(2)$\\iff$(3) 要用比较定理，(3)$\\iff$(4) 要用极限**：\n\n- (1) $\\iff$ (2)：**同义反复**。层的上同调就是逐点取值的上同调；$H^{n}(\\mathcal{C}, M)$ 按定义等于 $H^{n}(X \\mapsto\\Gamma(X,M))$ 的导出。\n- (2) $\\iff$ (4)：**这一步是 Čech 与导出函子的比较**：对**任意** $X$ 与**任意**覆盖，Čech 上同调与层上同调通过一个谱序列相连；无环时谱序列退化，两者一致。⚠️ 一般情形下**不**一致（要 $\\mathcal{C}$ 是仿紧/开覆盖足够好，见 `thm.paracompact-cech-equals-sheaf`）。\n- (2) $\\iff$ (3)：**要用「覆盖族的余极限」**：$H^{n}(X, M) = \\varinjlim_{\\mathfrak{X}} \\check{H}^{n}(\\mathfrak{X}, M)$（沿覆盖加细取极限）。既然每个 Čech 群为零，极限为零；反向由「每个覆盖都可细到单点覆盖」得。⚠️ 这一步要求该余极限**确实**是层上同调（即上述比较成立）。\n\n⚠️ **本命题的准确用法**：它是「判定某个具体层是否无环」的工具，但它**不能**用来判定「景是否足够好」—— 反过来，正是「Čech = 导出」这一条需要景的额外假设。别把两个方向混起来。\n\n\n**各方向用到的假设**（原节点记号与 Čech 比较的适用范围需核实）：\n- (1) $\\iff$ (2)：只有将 $H^n(M)$ 明确定义为预层 $X\\mapsto H^n(X,M)$ 时才是定义展开；若指层化后的上同调层或终对象上的上同调，就不能这样读。此处不确定，待核。\n- (2) $\\implies$ (3)：需对覆盖及其有限纤维积使用 Čech 到导出上同调谱序列，并用各交叠对象上的高次上同调为零使其退化；覆盖及交叠的具体假设此处不确定，待核。\n- (3) $\\implies$ (4)：若对象上的 Čech 上同调定义为沿覆盖加细的余极限，则每项为零推出余极限为零；只用定义和余极限性质。\n- (4) $\\implies$ (3) 不能仅由余极限为零推出，类可能仅在加细后消失；(4) $\\implies$ (2) 也不能直接宣布谱序列退化，所需比较或消去定理此处不确定，待核。\n- 原注“每个覆盖都可细到单点覆盖”不是一般事实；单对象恒等覆盖通常是被其他覆盖加细的方向。保留原文待人工核验，本段不将四条的无条件等价当作已证结论。\n",
+   "notes": "**证明。**\n**(1) $\\iff$ (2)**：层上同调就是「高次上同调预层」的整体截面，$H^{n}(X, M) = \\Gamma\\bigl(X, H^{n}(M)\\bigr)$ ✓，两边同时为零 ✓。\n**(1) $\\implies$ (3)**：对固定覆盖用 Cartan–Leray 谱序列 $E^{p,q}_{2} = \\check{H}^{p}(\\mathfrak{X}, H^{q}(M)) \\implies H^{p+q}(X,M)$ ✓；\n\n(1) 让 $q \\ne 0$ 的行全为零、$H^{p+q}$ 也全为零（$p+q \\ne 0$），谱序列退化给出 $\\check{H}^{n}(\\mathfrak{X}, M) = 0$ ✓。\n**(3) $\\implies$ (4)**：$\\check{H}^{n}(X, -)$ 是沿覆盖取的滤过余极限 ✓，每个覆盖上都为零故为零 ✓。\n**(4) $\\implies$ (1)**：把同一句话反过来 —— 用 Čech 到上同调的谱序列逐次消去，$E^{p,q}_{2}$ 的右端全为零，故全为零 ✓。∎\n\n**四条里 (1)$\\iff$(2) 只是换记号，(2)$\\iff$(3) 要用比较定理，(3)$\\iff$(4) 要用极限**：\n\n- (1) $\\iff$ (2)：**同义反复**。层的上同调就是逐点取值的上同调；$H^{n}(\\mathcal{C}, M)$ 按定义等于 $H^{n}(X \\mapsto\\Gamma(X,M))$ 的导出。\n- (2) $\\iff$ (4)：**这一步是 Čech 与导出函子的比较**：对**任意** $X$ 与**任意**覆盖，Čech 上同调与层上同调通过一个谱序列相连；无环时谱序列退化，两者一致。⚠️ 一般情形下**不**一致（要 $\\mathcal{C}$ 是仿紧/开覆盖足够好，见 `thm.paracompact-cech-equals-sheaf`）。\n- (2) $\\iff$ (3)：**要用「覆盖族的余极限」**：$H^{n}(X, M) = \\varinjlim_{\\mathfrak{X}} \\check{H}^{n}(\\mathfrak{X}, M)$（沿覆盖加细取极限）。既然每个 Čech 群为零，极限为零；反向由「每个覆盖都可细到单点覆盖」得。⚠️ 这一步要求该余极限**确实**是层上同调（即上述比较成立）。\n\n⚠️ **本命题的准确用法**：它是「判定某个具体层是否无环」的工具，但它**不能**用来判定「景是否足够好」—— 反过来，正是「Čech = 导出」这一条需要景的额外假设。别把两个方向混起来。\n\n\n**各方向用到的假设**（原节点记号与 Čech 比较的适用范围需核实）：\n- (1) $\\iff$ (2)：只有将 $H^n(M)$ 明确定义为预层 $X\\mapsto H^n(X,M)$ 时才是定义展开；若指层化后的上同调层或终对象上的上同调，就不能这样读。本图未核对该步，记为缺口。\n- (2) $\\implies$ (3)：需对覆盖及其有限纤维积使用 Čech 到导出上同调谱序列，并用各交叠对象上的高次上同调为零使其退化；覆盖及交叠的具体假设本图未核对该步，记为缺口。\n- (3) $\\implies$ (4)：若对象上的 Čech 上同调定义为沿覆盖加细的余极限，则每项为零推出余极限为零；只用定义和余极限性质。\n- (4) $\\implies$ (3) 不能仅由余极限为零推出，类可能仅在加细后消失；(4) $\\implies$ (2) 也不能直接宣布谱序列退化，所需比较或消去定理本图未核对该步，记为缺口。\n- 原注“每个覆盖都可细到单点覆盖”不是一般事实；单对象恒等覆盖通常是被其他覆盖加细的方向。保留原文待人工核验，本段不将四条的无条件等价当作已证结论。\n",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 7.49"
    ]
@@ -63961,7 +64014,7 @@
     "离散商"
    ],
    "statement": "对凝聚态集 $X$，三条等价：\n\n1. $X$ 是**离散的**：存在离散拓扑空间 $E$ 使 $X \\cong \\underline{E}$；\n2. $X$ 是**常的**：存在集合 $E$ 使 $X \\cong \\widetilde{E}$（常层）；\n3. 对任何紧 Hausdorff 空间 $S$，\n$$X(S) \\;\\cong\\; \\varprojlim_{S \\twoheadrightarrow S'} X(S'),$$\n其中 $S'$ 跑遍 $S$ 的**离散商**。",
-   "notes": "**证明。** (1)$\\iff$(2)：离散空间 $E$ 给出的凝聚态集取值是 $\\underline{E}(S) = C(S, E)$，也就是「$S$ 上的局部常值 $E$-值映射」✓；而常层 $\\widetilde{E}$ 的取值按定义正是局部常值映射 ✓ —— 两个函子一致 ✓（见「拓扑空间上的常层就是离散空间的层」）。\n\n(2)$\\iff$(3)：局部常值映射只依赖 $S$ 的连通块结构，而这正是「沿 $S$ 的离散商取投影极限」读出来的信息 ✓；反过来若 $X(S) = \\varprojlim_{S \\twoheadrightarrow S'}X(S')$，则 $X$ 只看得见离散商，等价于常 ✓。∎\n\n\n\n**各方向用到的假设**（离散表示与常层一致，但商公式须核对）：\n- (1) $\\implies$ (2) 与 (2) $\\implies$ (1)：常预层层化后得到局部常值映射，而非原常预层；紧 Hausdorff 探测空间上的有限开闭分割给出此识别。\n- 离散性 $\\implies$ 经过有限离散商因子化：连续映射 $S\\to E$ 的像因紧性而有限，纤维开闭；去掉紧性，离散无限空间的恒等映射就不经过有限商。\n- 原文 (3) 的 $\\varprojlim$ 此处不确定，待核：逆变函子沿离散商的细化给出向更细商的拉回，通常应以过滤余极限表达局部常值映射，不能据现有投影极限公式宣称等价。\n- 若改成自然的过滤余极限公式，则反向利用有限离散集上层的取值为 $X(*)$ 的有限乘积，恢复常层；这一步需要层条件及公式对 $S$ 的自然性。\n",
+   "notes": "**证明。** (1)$\\iff$(2)：离散空间 $E$ 给出的凝聚态集取值是 $\\underline{E}(S) = C(S, E)$，也就是「$S$ 上的局部常值 $E$-值映射」✓；而常层 $\\widetilde{E}$ 的取值按定义正是局部常值映射 ✓ —— 两个函子一致 ✓（见「拓扑空间上的常层就是离散空间的层」）。\n\n(2)$\\iff$(3)：局部常值映射只依赖 $S$ 的连通块结构，而这正是「沿 $S$ 的离散商取投影极限」读出来的信息 ✓；反过来若 $X(S) = \\varprojlim_{S \\twoheadrightarrow S'}X(S')$，则 $X$ 只看得见离散商，等价于常 ✓。∎\n\n\n\n**各方向用到的假设**（离散表示与常层一致，但商公式须核对）：\n- (1) $\\implies$ (2) 与 (2) $\\implies$ (1)：常预层层化后得到局部常值映射，而非原常预层；紧 Hausdorff 探测空间上的有限开闭分割给出此识别。\n- 离散性 $\\implies$ 经过有限离散商因子化：连续映射 $S\\to E$ 的像因紧性而有限，纤维开闭；去掉紧性，离散无限空间的恒等映射就不经过有限商。\n- 原文 (3) 的 $\\varprojlim$ 本图未核对该步，记为缺口：逆变函子沿离散商的细化给出向更细商的拉回，通常应以过滤余极限表达局部常值映射，不能据现有投影极限公式宣称等价。\n- 若改成自然的过滤余极限公式，则反向利用有限离散集上层的取值为 $X(*)$ 的有限乘积，恢复常层；这一步需要层条件及公式对 $S$ 的自然性。\n",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 4.5"
    ]
@@ -65863,7 +65916,7 @@
     "topology"
    ],
    "cluster": "analysis.continuity",
-   "layer": 16,
+   "layer": 17,
    "tags": [
     "定义",
     "连续"
@@ -66184,7 +66237,7 @@
     "analysis"
    ],
    "cluster": "analysis.mvt",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "导数"
@@ -66223,7 +66276,7 @@
     "analysis"
    ],
    "cluster": "analysis.mvt",
-   "layer": 18,
+   "layer": 19,
    "tags": [
     "定理",
     "导数"
@@ -66497,7 +66550,7 @@
     "analysis"
    ],
    "cluster": "analysis.mvt",
-   "layer": 17,
+   "layer": 18,
    "tags": [
     "定义",
     "导数"
@@ -68958,6 +69011,14 @@
    "title": "度量连续 $\\implies$ 拓扑连续（开集原像开）",
    "proof": "设 $f : (X,d) \\to (Y,\\rho)$ 在每点 $\\varepsilon$-$\\delta$ 连续，$V \\subseteq Y$ 开，$x_0 \\in f^{-1}(V)$。\n取 $\\varepsilon > 0$ 使 $B_Y(f(x_0), \\varepsilon) \\subseteq V$；$\\varepsilon$-$\\delta$ 给 $\\delta > 0$ 使 $f(B_X(x_0, \\delta)) \\subseteq B_Y(f(x_0), \\varepsilon)$。\n于是 $B_X(x_0, \\delta) \\subseteq f^{-1}(V)$，即 $f^{-1}(V)$ 在 $X$ 中开；按 `def.continuous-map` 的定义 $f$ 连续。$\\blacksquare$",
    "note": "反向（拓扑连续 $\\implies$ $\\varepsilon$-$\\delta$）同样直接：$B_Y(f(x_0), \\varepsilon)$ 开，原像开给 $\\delta$。"
+  },
+  {
+   "id": "def-link.realmetric-metriccont",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.real-metric-space",
+   "usedBy": "def.metric-continuity",
+   "note": "度量连续性用在 $\\mathbb{R}$ 上、取 $d(x,y) = |x-y|$ 就是经典的 $\\varepsilon$-$\\delta$ 定义。"
   },
   {
    "id": "imp.ring-monotone-sigma",
@@ -79503,12 +79564,13 @@
    "strength": "strong",
    "sources": [
     "lem.newman-tauberian",
-    "thm.chebyshev-estimate"
+    "thm.chebyshev-estimate",
+    "thm.euler-product"
    ],
    "target": "thm.prime-number-theorem",
    "title": "Newman 解析定理闭合素数定理的最后一步",
    "proof": "取 $f(t)=\\psi(e^{t})e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$（`thm.chebyshev-estimate`），$f$ 有界、局部可积。对 $\\operatorname{Re}z>0$，换元 $u=e^{t}$ 并用 $-\\zeta'/\\zeta(s)=s\\int_{1}^{\\infty}\\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）得\n\n\n\n$$g(z)=\\int_{0}^{\\infty}f(t)e^{-zt}\\,\\mathrm{d}t=\\frac{-\\zeta'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}.$$\n\n\n\n由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$，故 $g(z)=-(1+\\gamma)+O(z)$，$z=0$ 是可去奇点。命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点，见 `thm.prime-number-theorem` 的注）保证 $g$ 在每个闭半圆盘 $\\{|z|\\le R,\\ \\operatorname{Re}z\\ge0\\}$ 的某个邻域上全纯：$\\zeta$ 在 $\\operatorname{Re}s>1$ 无零点，在 $\\operatorname{Re}s=1$ 上已证无零点，紧性给出正距离。于是 `lem.newman-tauberian` 适用，$\\int_{0}^{\\infty}f$ 收敛且等于 $g(0)$。\n\n\n\n再由 $\\int_{T}^{T+\\varepsilon}f\\to0$ 与 $\\psi$ 单调：令 $h(t)=\\psi(e^{t})e^{-t}$，则 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_{T}^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$，令 $T\\to\\infty$ 得 $\\limsup h\\le e^{\\varepsilon}$、$\\liminf h\\ge e^{-\\varepsilon}$，再令 $\\varepsilon\\to0$ 得 $h\\to1$，即 $\\psi(x)\\sim x$。最后用引理 1–4（$\\psi\\sim x\\iff\\theta\\sim x\\iff\\pi\\sim x/\\log x$）得 $\\pi(x)\\sim x/\\log x$。∎",
-   "note": "这条边是素数定理链条上最后一块：命题 A（$\\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。"
+   "note": "这条边是素数定理链条上最后一块：命题 A（$\\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。其余前提（$\\zeta$ 的解析性质、$\\pi$ 与 $\\psi$ 的换算）见 `thm.prime-number-theorem` 与 `def.prime-counting` 的注，不另列 sources。"
   },
   {
    "id": "imp.newman-cauchy-residue",
@@ -83719,6 +83781,14 @@
    "note": "本定理是度量连续在 $\\mathbb{R}$ 上的具体写法。"
   },
   {
+   "id": "def-link.realmetric-continuous",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.real-metric-space",
+   "usedBy": "def.continuous",
+   "note": "$\\mathbb{R}$ 上的 $\\varepsilon$-$\\delta$ 语言就是度量连续在 $(\\mathbb{R}, |x-y|)$ 上的写法。"
+  },
+  {
    "id": "def-link.realmetric-metric",
    "kind": "definition",
    "strength": "strong",
@@ -83768,6 +83838,14 @@
    "definition": "def.limsup-liminf",
    "usedBy": "def.dini-derivative",
    "note": "四个 Dini 导数用差商的 $\\limsup$ 与 $\\liminf$ 定义。"
+  },
+  {
+   "id": "def-link.continuous-specialcase",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.continuous-map",
+   "usedBy": "def.continuous",
+   "note": "$\\mathbb{R}\\to\\mathbb{R}$ 的 $\\varepsilon$-$\\delta$ 判据是「连续映射」定义在度量空间上的特例。反方向不成立：连续映射的定义单独推不出 $\\varepsilon$-$\\delta$ 判据，还要用到 $\\mathbb{R}$ 的度量结构。"
   },
   {
    "id": "dep.gaussbonnet-eulerchar",
@@ -85018,7 +85096,7 @@
    "a": "def.closed-surface",
    "b": "def.regular-surface",
    "title": "两个「曲面」：拓扑的 vs $\\mathbb{R}^{3}$ 里被参数化覆盖的",
-   "note": "**同名不同物**，这正是审计 B2 点出的那件事：\n\n- `def.regular-surface` 说的是「$U \\subseteq \\mathbb{R}^{2}$ 经 $r$ 打到 $\\mathbb{R}^{3}$ 的像」，自带**嵌入、度量、曲率**；\n\n- 本节点只说「紧、连通、无边界、局部同胚于 $\\mathbb{R}^{2}$」，**没有任何外部空间**。\n\n所以「球面」在两边指的不是一回事：一边是 $\\mathbb{R}^{3}$ 里的单位球面（有面积、有 Gauss 曲率），一边是抽象的 $S^{2}$（只有拓扑）。\n\n⛔ 不能连 definition/implication：一边嵌在 $\\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。"
+   "note": "**同名不同物**，这正是审计 B2 点出的那件事：\n\n- `def.regular-surface` 说的是「$U \\subseteq \\mathbb{R}^{2}$ 经 $r$ 打到 $\\mathbb{R}^{3}$ 的像」，自带**嵌入、度量、曲率**；\n\n- 定义里只有「紧、连通、无边界、局部同胚于 $\\mathbb{R}^{2}$」，**没有任何外部空间**。\n\n所以「球面」在两边指的不是一回事：一边是 $\\mathbb{R}^{3}$ 里的单位球面（有面积、有 Gauss 曲率），一边是抽象的 $S^{2}$（只有拓扑）。\n\n⛔ 不能连 definition/implication：一边嵌在 $\\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。"
   },
   {
    "id": "e189.analogy",
@@ -98044,6 +98122,13 @@
    "explicit": false
   },
   {
+   "a": "analysis.real",
+   "b": "topology.metric",
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "analysis.product",
    "b": "analysis.setclass",
    "count": 6,
@@ -99312,8 +99397,8 @@
   },
   {
    "a": "analysis.real",
-   "b": "topology.metric",
-   "count": 4,
+   "b": "topology.general",
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -99641,13 +99726,6 @@
   },
   {
    "a": "set.rel",
-   "b": "topology.general",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "analysis.real",
    "b": "topology.general",
    "count": 2,
    "label": "",

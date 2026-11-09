@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
+layer 26 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.frobenius.md` and `proofs/`.

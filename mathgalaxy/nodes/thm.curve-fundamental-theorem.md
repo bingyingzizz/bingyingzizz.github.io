@@ -1,6 +1,6 @@
 # 曲线基本定理　`thm.curve-fundamental-theorem`
 曲线基本定理：曲率与挠率决定曲线
-layer 26 · 定理 · 活动标架与结构方程 · 微分几何
+layer 27 · 定理 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=thm.curve-fundamental-theorem)　·　[节点索引](../index.md)
 
 设 $I\subseteq\mathbb{R}$ 是区间，$\kappa : I\to(0,\infty)$ 与 $\tau : I\to\mathbb{R}$ 连续。

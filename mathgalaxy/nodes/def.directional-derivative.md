@@ -1,6 +1,6 @@
 # 方向导数　`def.directional-derivative`
 方向导数
-layer 18 · 定义 · 多元微分 · 数学分析
+layer 19 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.directional-derivative)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$，$a \in U$，$v \in \mathbb{R}^{n}$。$f$ 在 $a$ 沿方向 $v$ 的**方向导数**是（若该极限存在）

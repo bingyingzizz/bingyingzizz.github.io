@@ -1,6 +1,6 @@
 # 有界变差函数　`def.bounded-variation`
 全变差与有界变差函数
-layer 17 · 定义 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 18 · 定义 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=def.bounded-variation)　·　[节点索引](../index.md)
 
 设 $F : \mathbb{R} \to \mathbb{C}$。定义它的**全变差函数**

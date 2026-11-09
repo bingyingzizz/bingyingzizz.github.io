@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 19 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Hessian` (short) · `Hessian Matrix` (full)
 
 ## Statement and proof

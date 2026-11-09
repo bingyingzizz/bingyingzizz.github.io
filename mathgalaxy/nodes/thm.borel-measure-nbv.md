@@ -1,6 +1,6 @@
 # 测度与规范有界变差函数的一一对应　`thm.borel-measure-nbv`
 定理：$\mathbb{R}$ 上的复 Borel 测度与规范有界变差函数一一对应
-layer 20 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 21 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=thm.borel-measure-nbv)　·　[节点索引](../index.md)
 
 **(1)** 若 $\mu$ 是 $\mathbb{R}$ 上的复 Borel 测度，$F(x) := \mu((-\infty, x])$，则 $F \in NBV$。

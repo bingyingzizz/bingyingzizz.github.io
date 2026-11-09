@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 18 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.dini-derivative.md` and `proofs/`.

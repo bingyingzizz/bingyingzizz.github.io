@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.euler-prime.md](../proofs/dep.euler-prime.md)
+
+> 续见 [nodes/thm.euler-product.3.md](./thm.euler-product.3.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 20 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Total Differential` (short) · `Differentiability and the Total Differential` (full)
 
 ## Statement and proof

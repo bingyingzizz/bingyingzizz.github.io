@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis / Topology
+layer 16 · theorem · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.continuous.md` and `proofs/`.

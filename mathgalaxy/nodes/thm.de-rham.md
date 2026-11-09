@@ -1,6 +1,6 @@
 # de Rham 定理　`thm.de-rham`
 de Rham 定理
-layer 31 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 32 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.de-rham)　·　[节点索引](../index.md)
 
 *

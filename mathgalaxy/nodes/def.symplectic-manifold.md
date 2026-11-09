@@ -1,6 +1,6 @@
 # 辛流形　`def.symplectic-manifold`
 辛流形：闭的非退化 2-形式
-layer 23 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
+layer 24 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 [在星图里打开](../#n=def.symplectic-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：把辛向量空间「铺到流形上」。每一处切空间都带一个辛形式，而且要求这些形式**整体闭**（$d\omega = 0$）—— 那一条微分条件就是整个辛几何的刚性来源。

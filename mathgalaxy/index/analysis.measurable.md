@@ -8,8 +8,8 @@
 - def.lebesgue-measurable　Lebesgue 可测　layer 7
 - prop.measurable-product-and-realimag　积空间与实虚部　layer 7
 - def.simple-function　简单函数　layer 7
-- cor.continuous-measurable　连续 ⟹ Borel 可测　layer 16
 - def.cauchy-in-measure　依测度 Cauchy　layer 16
+- cor.continuous-measurable　连续 ⟹ Borel 可测　layer 17
 - thm.simple-approximation　简单函数逼近　layer 17
 - prop.measurable-closure　可测函数的封闭性　layer 18
 - prop.complete-measurable　完备性 ⟺ 不破坏可测性　layer 18

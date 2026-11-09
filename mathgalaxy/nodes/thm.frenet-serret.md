@@ -1,6 +1,6 @@
 # Frenet–Serret 公式　`thm.frenet-serret`
 Frenet–Serret 公式
-layer 25 · 定理 · 活动标架与结构方程 · 微分几何
+layer 26 · 定理 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=thm.frenet-serret)　·　[节点索引](../index.md)
 
 设 $\gamma$ 是弧长参数化的 $C^{3}$ 正则曲线，$\kappa>0$。则

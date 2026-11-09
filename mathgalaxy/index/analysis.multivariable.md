@@ -8,9 +8,9 @@
 - def.contraction　压缩映射　layer 15
 - def.submersion-immersion　浸入 / 淹没 / 嵌入　layer 15
 - def.banach-space　Banach 空间　layer 17
-- def.partial-derivative　偏导数　layer 17
 - thm.banach-fixed-point　压缩映射原理　layer 17
-- def.directional-derivative　方向导数　layer 18
-- def.hessian　Hessian 矩阵　layer 18
+- def.partial-derivative　偏导数　layer 18
+- def.directional-derivative　方向导数　layer 19
+- def.hessian　Hessian 矩阵　layer 19
 
 > 续见 `index/analysis.multivariable.2.md`

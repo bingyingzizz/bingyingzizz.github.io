@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
+layer 17 · definition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.uniform-continuity.md` and `proofs/`.

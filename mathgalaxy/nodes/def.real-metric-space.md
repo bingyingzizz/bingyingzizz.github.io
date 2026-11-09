@@ -10,6 +10,11 @@ layer 15 · 定义 · 实数与极限 · 数学分析+拓扑学
 
 - …另有入边，续页见 [nodes/def.real-metric-space.2.md](./def.real-metric-space.2.md)
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续 用
+
+- …另有出边，续页见 [nodes/def.real-metric-space.3.md](./def.real-metric-space.3.md)
+
 refs: Rudin, Principles of Mathematical Analysis, Ch. 2–3
 
 > 说明见 `notes/def.real-metric-space.md`

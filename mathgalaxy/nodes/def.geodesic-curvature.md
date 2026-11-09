@@ -1,6 +1,6 @@
 # 测地曲率　`def.geodesic-curvature`
 测地曲率
-layer 30 · 定义 · 内蕴几何 · 微分几何
+layer 31 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.geodesic-curvature)　·　[节点索引](../index.md)
 
 设 $\gamma$ 是 $S$ 上按弧长参数化的曲线，$n$ 是 $S$ 的单位法向。**测地曲率向量**与**测地曲率**分别是

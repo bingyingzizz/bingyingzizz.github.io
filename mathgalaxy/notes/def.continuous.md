@@ -7,4 +7,4 @@
 
 紧区间上两者才重合。
 
-📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\mathbb{R}$ 的度量在 `def.real-metric-space`。
+📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\mathbb{R}$ 的度量在 `def.real-metric-space`。一般拓扑意义下的连续映射见 `def.continuous-map`，本条是它在度量情形下的特例。

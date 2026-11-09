@@ -1,6 +1,6 @@
 # 度量空间的连续　`def.metric-continuity`
 度量空间之间的连续性（$\varepsilon$-$\delta$）
-layer 15 · 定义 · 度量空间 · 拓扑学+数学分析
+layer 16 · 定义 · 度量空间 · 拓扑学+数学分析
 [在星图里打开](../#n=def.metric-continuity)　·　[节点索引](../index.md)
 
 设 $(X, d)$、$(Y, \rho)$ 是度量空间，$f : X \to Y$，$x_0 \in X$。
