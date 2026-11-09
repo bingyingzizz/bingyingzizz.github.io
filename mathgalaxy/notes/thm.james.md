@@ -1,14 +1,8 @@
 # James 定理　`thm.james`　·　说明
 根 `../`
 
-⚠ **本节点仍标 skeleton**：证明需要弱紧性（Banach–Alaoglu）与分离定理，本图无节点。
+⚠ **本节点仍标 skeleton**：($\Longleftarrow$) 方向就是 James 定理本身（本图无节点、且是深定理）；($\Longrightarrow$) 方向可在 Banach–Alaoglu 的前提下写完整，见下。
 
+**($\Longrightarrow$) 方向（模 Banach–Alaoglu）**：设 $X$ 自反，$J_X : X \to X^{**}$ 是满射等距，故 $J_X(B_X) = B_{X^{**}}$。Banach–Alaoglu 定理说 $B_{X^{**}}$ 在弱*拓扑下紧；而 $X$ 的弱拓扑 $\sigma(X, X^*)$ 正是 $J_X$ 拉回的弱*拓扑，所以 $B_X$ 弱紧。任取 $\varphi \in X^*$，$\varphi$ 在弱拓扑下连续，$|\varphi|$ 在弱紧集 $B_X$ 上达到最大值；最大值等于 $\|\varphi\|$（由 $\|\varphi\| = \sup_{x \in B_X}|\varphi(x)|$），故存在 $x \in B_X$ 使 $\varphi(x) = \|\varphi\|$。$\blacksquare$
 
-
-证明路线：($\implies$ 方向) 自反 $\implies$ $B_X$ 弱紧（Eberlein–Šmulian），$\varphi$ 弱连续，故在弱紧集上达到最大值。($\Longleftarrow$ 方向) 逆否：若 $X$ 不自反，James 构造一个 $\varphi \in X^*$ 在 $B_X$ 上不可达（经典 James 定理的「分离 + 对角线」论证，1951/1957）。
-
-
-
-缺口：Banach–Alaoglu 定理、弱拓扑的紧性、以及 James 的反向构造；本图均无节点。
-
-📌 本图只有正向的具体例子：Hilbert 空间与 $L^p$（$1<p<\infty$）自反，故每个泛函达到范数（由 Riesz 表示可直接看出）。
+> 续见 notes/thm.james.2.md

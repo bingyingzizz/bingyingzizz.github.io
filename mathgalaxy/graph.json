@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-09T14:19:46.581Z",
+  "generated": "2026-11-09T15:00:15.092Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
@@ -38320,7 +38320,7 @@
     "一致凸"
    ],
    "statement": "一致凸 Banach 空间（`def.uniformly-convex`）是自反的（`def.reflexive-space`）。",
-   "notes": "⚠ **本节点仍标 skeleton**：证明需要本图没有的弱拓扑工具，这里只钉死缺口。\n\n\n\n证明路线（Milman 1938 / Pettis 1939）：设 $X$ 一致凸，任取 $\\xi \\in X^{**}$、$\\|\\xi\\| = 1$。由 Goldstine 定理，$\\xi$ 是单位球的弱*-闭包点，取网 $x_\\alpha \\in B_X$ 弱*收敛到 $\\xi$。用一致凸性可证 $x_\\alpha$ 是范数 Cauchy：若 $\\|x_\\alpha - x_\\beta\\| \\ge \\varepsilon$，则中点 $\\|(x_\\alpha + x_\\beta)/2\\| \\le 1 - \\delta(\\varepsilon)$，但其弱*极限是 $\\xi$、范数 $\\ge \\|\\langle \\xi, \\varphi\\rangle\\| - o(1)$，令 $\\alpha, \\beta$ 沿网取极限得 $1 \\le 1 - \\delta$ 矛盾。故 $x_\\alpha \\to x \\in X$（范数），从而 $\\xi = J_X x$。\n\n\n\n缺口：Goldstine 定理（$B_X$ 在 $B_{X^{**}}$ 中弱*稠密）本图无节点；弱*拓扑与网收敛本图无节点。这两条不是本图现有节点能推出的。\n\n📌 本图已有 `cor.lp-reflexive` 直接对 $L^p$ 验证自反；Milman–Pettis 是把「一致凸」这个几何条件转成「自反」的通用桥梁。",
+   "notes": "⚠ **本节点仍标 skeleton**：唯一未证的外部定理是 Goldstine 定理（见最后一段）；下面给出「Goldstine 推出自反」的完整归约，因此缺口只剩 Goldstine 与弱*拓扑的基本语言，不再有其它黑箱。\n\n**框架（弱*拓扑）**：在 $X^{**}$ 上取由半范数族 $\\xi \\mapsto |\\langle \\varphi, \\xi \\rangle|$（$\\varphi \\in X^*$）诱导的局部凸拓扑，称为弱*拓扑；网 $\\xi_\\alpha \\to \\xi$ 当且仅当对每个 $\\varphi \\in X^*$ 有 $\\langle \\varphi, \\xi_\\alpha \\rangle \\to \\langle \\varphi, \\xi \\rangle$。自然嵌入 $J_X : X \\to X^{**}$ 满足 $\\langle \\varphi, J_X x \\rangle = \\varphi(x)$。\n\n**Goldstine 定理（外部输入，本图无节点）**：$J_X(B_X)$ 在 $B_{X^{**}}$ 中弱*稠密。标准证明走 Hahn–Banach 分离（或用 Banach–Alaoglu 加 Krein–Milman）；本图既无 Hahn–Banach 节点，也无弱*拓扑/网收敛节点，故不在此展开。\n\n**归约（假设 Goldstine）**：设 $X$ 一致凸，$\\xi \\in X^{**}$、$\\|\\xi\\| = 1$。任取 $\\varepsilon \\in (0, 2]$，取一致凸定义中的 $\\delta = \\delta(\\varepsilon) > 0$。由 Goldstine，存在网 $(x_\\alpha) \\subset B_X$ 弱*收敛到 $\\xi$。由 $\\|\\xi\\| = 1$ 可取 $\\varphi \\in X^*$、$\\|\\varphi\\| = 1$ 使 $\\operatorname{Re}\\varphi(\\xi) > 1 - \\delta/2$（泛函范数的上确界定义）；于是 $\\operatorname{Re}\\varphi(x_\\alpha) \\to \\operatorname{Re}\\varphi(\\xi) > 1 - \\delta/2$，且 $\\operatorname{Re}\\varphi(x_\\alpha) \\le \\|x_\\alpha\\| \\le 1$，故 $\\|x_\\alpha\\| \\to 1$。\n\n记 $y_\\alpha = x_\\alpha / \\|x_\\alpha\\|$（当 $\\|x_\\alpha\\| > 0$；最终成立），则 $y_\\alpha \\in S_X$、$\\|y_\\alpha - x_\\alpha\\| \\to 0$，且 $\\operatorname{Re}\\varphi(y_\\alpha) \\to \\operatorname{Re}\\varphi(\\xi) > 1 - \\delta/2$。对充分大的 $\\alpha, \\beta$：若 $\\|y_\\alpha - y_\\beta\\| \\ge \\varepsilon$，由一致凸性 $\\|(y_\\alpha + y_\\beta)/2\\| \\le 1 - \\delta$，但 $\\operatorname{Re}\\varphi((y_\\alpha + y_\\beta)/2) > 1 - \\delta/2 > 1 - \\delta$，与 $\\|\\cdot\\|$ 是范数矛盾；故最终 $\\|y_\\alpha - y_\\beta\\| < \\varepsilon$。于是 $(y_\\alpha)$ 是范数 Cauchy，$(x_\\alpha)$ 也是（因两者差趋于 0）。\n\n由 $X$ 完备，$x_\\alpha \\to x \\in X$。范数收敛蕴含弱*收敛（$J_X x_\\alpha \\to J_X x$），而 $J_X x_\\alpha = x_\\alpha \\to \\xi$ 弱*；弱*极限唯一，故 $\\xi = J_X x$。对 $\\xi = 0$ 显然；对一般 $\\xi \\ne 0$ 用 $\\xi/\\|\\xi\\|$ 缩放。于是 $J_X$ 满射，$X$ 自反。$\\blacksquare$（在 Goldstine 的前提下）\n\n**缺口清单**：① Goldstine 定理（唯一实质外部定理；本图无节点）；② 弱*拓扑与网收敛的定义（本图无独立节点，但已在上面用半范数族给出，可视为语言约定）。一旦 ① 有节点或被证明，本节点可删 skeleton。\n\n📌 本图已有 `cor.lp-reflexive` 直接对 $L^p$ 验证自反；Milman–Pettis 是把「一致凸」这个几何条件转成「自反」的通用桥梁。",
    "refs": [
     "Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 一致凸与自反",
     "Conway, A Course in Functional Analysis · Banach 空间"
@@ -38362,7 +38362,7 @@
     "自反"
    ],
    "statement": "Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\\varphi \\in X^*$ 都在单位球 $B_X$ 上达到其范数：存在 $x \\in B_X$ 使 $\\varphi(x) = \\|\\varphi\\|$。",
-   "notes": "⚠ **本节点仍标 skeleton**：证明需要弱紧性（Banach–Alaoglu）与分离定理，本图无节点。\n\n\n\n证明路线：($\\implies$ 方向) 自反 $\\implies$ $B_X$ 弱紧（Eberlein–Šmulian），$\\varphi$ 弱连续，故在弱紧集上达到最大值。($\\Longleftarrow$ 方向) 逆否：若 $X$ 不自反，James 构造一个 $\\varphi \\in X^*$ 在 $B_X$ 上不可达（经典 James 定理的「分离 + 对角线」论证，1951/1957）。\n\n\n\n缺口：Banach–Alaoglu 定理、弱拓扑的紧性、以及 James 的反向构造；本图均无节点。\n\n📌 本图只有正向的具体例子：Hilbert 空间与 $L^p$（$1<p<\\infty$）自反，故每个泛函达到范数（由 Riesz 表示可直接看出）。",
+   "notes": "⚠ **本节点仍标 skeleton**：($\\Longleftarrow$) 方向就是 James 定理本身（本图无节点、且是深定理）；($\\Longrightarrow$) 方向可在 Banach–Alaoglu 的前提下写完整，见下。\n\n**($\\Longrightarrow$) 方向（模 Banach–Alaoglu）**：设 $X$ 自反，$J_X : X \\to X^{**}$ 是满射等距，故 $J_X(B_X) = B_{X^{**}}$。Banach–Alaoglu 定理说 $B_{X^{**}}$ 在弱*拓扑下紧；而 $X$ 的弱拓扑 $\\sigma(X, X^*)$ 正是 $J_X$ 拉回的弱*拓扑，所以 $B_X$ 弱紧。任取 $\\varphi \\in X^*$，$\\varphi$ 在弱拓扑下连续，$|\\varphi|$ 在弱紧集 $B_X$ 上达到最大值；最大值等于 $\\|\\varphi\\|$（由 $\\|\\varphi\\| = \\sup_{x \\in B_X}|\\varphi(x)|$），故存在 $x \\in B_X$ 使 $\\varphi(x) = \\|\\varphi\\|$。$\\blacksquare$\n\n**($\\Longleftarrow$) 方向 = James 定理（外部，深）**：若 $X$ 不自反，则存在 $\\varphi \\in X^*$ 在 $B_X$ 上达不到范数。证明不是「取弱*极限」能得到的：需要 James 的构造——从 $\\xi \\in X^{**} \\setminus J_X(X)$ 出发，递归地造单位球中的点与泛函，用分离/对角线论证逼出一个在 $B_X$ 上不可达的泛函（James 1951 对可分情形、1957 对一般 Banach 空间）。本图无弱拓扑、无 Banach–Alaoglu、无该构造，故不展开。\n\n**缺口清单**：① Banach–Alaoglu 定理（本图无节点）；② 弱拓扑/弱*拓扑的定义与紧性（本图无节点）；③ James 定理的 ($\\Longleftarrow$) 方向（外部深定理，需专文）。因此本节点保留 skeleton。\n\n📌 本图只有正向的具体例子：Hilbert 空间与 $L^p$（$1<p<\\infty$）自反，故每个泛函达到范数（由 Riesz 表示可直接看出）。",
    "refs": [
     "Conway, A Course in Functional Analysis · Banach 空间",
     "Diestel, Sequences and Series in Banach Spaces, Ch. 3"
