@@ -8,18 +8,18 @@ layer 9 · 定义 · 代数结构 · 抽象代数
 设 $K$ 是域。考虑唯一环同态
 
 $$\varphi : \mathbb{Z} \to K, \qquad \varphi(n) = \underbrace{1 + 1 + \cdots + 1}_{n} .$$
+
+它的核是 $\mathbb{Z}$ 的理想，故为 $(0)$ 或 $(p)$（$p$ 素数）。称
 > 陈述续见 [nodes/def.characteristic.2.md](./def.characteristic.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.field`](../nodes/def.field.md) 域：用到了定义 域　[proofs/dep.char-field.md](../proofs/dep.char-field.md)
+## 它能推出什么 / 谁在用它
+- 被 [`def.separable-extension`](../nodes/def.separable-extension.md) 可分扩张 用
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.characteristic.3.md](./def.characteristic.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.characteristic.4.md](./def.characteristic.4.md)
-
-refs: Dummit–Foote, Abstract Algebra（⚠️ 章节未核实，只记书名）· 域的特征；北大《高等代数》· 域的特征与素域
+refs: Dummit–Foote, Abstract Algebra；北大《高等代数》· 域的特征与素域
 
 > 说明见 `notes/def.characteristic.md`
 

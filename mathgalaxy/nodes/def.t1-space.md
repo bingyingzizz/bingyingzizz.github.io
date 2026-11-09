@@ -11,13 +11,12 @@ layer 6 · 定义 · 分离公理 · 拓扑学
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：imp.t2-t1　[proofs/imp.t2-t1.md](../proofs/imp.t2-t1.md)
-
-- …另有入边，续页见 [nodes/def.t1-space.3.md](./def.t1-space.3.md)
+- [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包：用到了定义 闭集与闭包　[proofs/dep.t1-closed.md](../proofs/dep.t1-closed.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.t1-space.4.md](./def.t1-space.4.md)
+- …另有出边，续页见 [nodes/def.t1-space.3.md](./def.t1-space.3.md)
 
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+refs: Munkres, Topology；Engelking, General Topology
 
 > 说明见 `notes/def.t1-space.md`
 

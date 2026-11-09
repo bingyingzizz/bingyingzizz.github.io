@@ -12,7 +12,7 @@ layer 26 · 定义 · 矩阵分解与最小二乘 · 抽象代数
 
 - …另有入边，续页见 [nodes/def.pseudoinverse.3.md](./def.pseudoinverse.3.md)
 
-refs: Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· 广义逆；Ben-Israel–Greville, Generalized Inverses（⚠️ 章名未核实，只记书名）
+refs: Horn–Johnson, Matrix Analysis；Ben-Israel–Greville, Generalized Inverses: Theory and Applications
 
 > 说明见 `notes/def.pseudoinverse.md`
 

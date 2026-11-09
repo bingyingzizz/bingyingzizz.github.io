@@ -4,6 +4,8 @@ layer 14 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.symplectic-form)　·　[节点索引](../index.md)
 
 **在做什么**：把「面积」抽象成代数。交错型配上非退化条件，就是辛形式 —— 它换掉了内积（对称型）的位置，撑起另一门几何。
+
+设 $V$ 是域 $K$ 上的有限维向量空间。双线性型 $\omega : V \times V \to K$ 叫**辛形式**（symplectic form），若
 > 陈述续见 [nodes/def.symplectic-form.2.md](./def.symplectic-form.2.md)
 
 
@@ -15,7 +17,7 @@ layer 14 · 定义 · 多重线性与张量 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.symplectic-form.4.md](./def.symplectic-form.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛结构；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
 
 > 说明见 `notes/def.symplectic-form.md`
 

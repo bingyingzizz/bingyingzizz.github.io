@@ -13,9 +13,11 @@ layer 30 · 定义 · 丛的示性类 · 微分几何
 - …另有入边，续页见 [nodes/def.principal-bundle.4.md](./def.principal-bundle.4.md)
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.frame-bundle`](../nodes/def.frame-bundle.md) 帧丛 用
+
 - …另有出边，续页见 [nodes/def.principal-bundle.5.md](./def.principal-bundle.5.md)
 
-refs: Tu, Differential Geometry (GTM 275)（⚠️ 手头无该书，章名未核实，只记书名）· 主丛与配丛
+refs: Tu, Differential Geometry: Connections, Curvature, and Characteristic Classes (GTM 275)
 
 > 说明见 `notes/def.principal-bundle.md`
 

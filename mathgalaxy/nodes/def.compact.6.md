@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.compact)　·　第 1 页 [nodes/def.compact.md](./def.compact.md)　·　上一页 [nodes/def.compact.5.md](./def.compact.5.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.regular-measure`](../nodes/def.regular-measure.md) 正则 Borel 测度 用
+- 被 [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 用
 - 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
 - 被 [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间 用
 - 被 [`thm.tykhonov`](../nodes/thm.tykhonov.md) Tychonoff 定理 用

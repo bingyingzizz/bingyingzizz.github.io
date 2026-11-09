@@ -1,6 +1,6 @@
 # 局部紧阿贝尔群结构定理　`thm.lc-structure`
 局部紧 Hausdorff 阿贝尔群的结构：$V \oplus K$
-layer 18 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 19 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=thm.lc-structure)　·　[节点索引](../index.md)
 
 设 $M$ 是**局部紧 Hausdorff 阿贝尔群**。则 $M$ 含有一个**开**子群，它同构于

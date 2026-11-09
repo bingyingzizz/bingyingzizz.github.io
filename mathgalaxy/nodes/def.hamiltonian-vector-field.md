@@ -3,7 +3,7 @@ Hamilton 向量场：由函数生出流
 layer 30 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 [在星图里打开](../#n=def.hamiltonian-vector-field)　·　[节点索引](../index.md)
 
-**在做什么**：辛流形上「函数 $\implies$ 向量场」的那台转换机。它把
+**在做什么**：辛流形上「函数 $\implies$ 向量场」的那台转换机。它把能量函数（Hamiltonian）变成运动方程 —— 这是整个分析力学的形式化核心。
 > 陈述续见 [nodes/def.hamiltonian-vector-field.2.md](./def.hamiltonian-vector-field.2.md)
 
 
@@ -15,7 +15,7 @@ layer 30 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.hamiltonian-vector-field.4.md](./def.hamiltonian-vector-field.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· Hamilton 方程；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
 
 > 说明见 `notes/def.hamiltonian-vector-field.md`
 

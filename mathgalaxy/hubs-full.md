@@ -10,10 +10,10 @@
 
 被最多结论当作前置（出边多）—— 值得优先学熟。
 
+- **31 / 34** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
 - **31 / 32** `def.measure` 测度 · layer 15 · 测度的构造
 - **30 / 33** `def.limit` 极限 · layer 11 · 图与极限
 - **29 / 32** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
-- **29 / 32** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
 - **29 / 29** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **29 / 29** `def.group` 群 · layer 7 · 代数结构
 - **25 / 28** `def.sheaf` 层 · layer 15 · 层与拓扑
@@ -31,7 +31,7 @@
 - **18 / 18** `def.cochain-complex` 上链复形 · layer 11 · 复形与导出三角
 - **18 / 18** `def.sheaf-cohomology` 层上同调 · layer 17 · 层上同调
 
-（共 964 个节点有非零计数；这里列前 20 条。）
+（共 965 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -54,11 +54,11 @@
 - **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
 - **6 / 6** `def.euler-class` Euler 类 · layer 38 · 流形与向量丛
 - **6 / 5** `lem.zorn` Zorn 引理 · layer 8 · 选择原理
-- **6 / 5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 17 · 仿紧与单位分解
+- **6 / 5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 19 · 仿紧与单位分解
 - **6 / 4** `thm.lp-banach` L^p 是 Banach 空间 · layer 23 · L^p 空间
 - **6 / 4** `thm.frobenius` Frobenius 定理 · layer 25 · 向量场与 Lie 结构
 
-（共 1546 个节点有非零计数；这里列前 20 条。）
+（共 1547 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -66,8 +66,8 @@
 
 - **16 团 / 29 节点** `def.group` 群 · layer 7 · 代数结构
 - **16 团 / 24 节点** `def.function` 映射 · layer 5 · 关系与函数
+- **15 团 / 31 节点** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
 - **14 团 / 29 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
-- **14 团 / 29 节点** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
 - **13 团 / 20 节点** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
@@ -85,5 +85,5 @@
 - **9 团 / 13 节点** `def.continuous-map` 连续映射 · layer 5 · 拓扑空间的基本语汇
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 964 个节点有非零计数；这里列前 20 条。）
+（共 965 个节点有非零计数；这里列前 20 条。）
 

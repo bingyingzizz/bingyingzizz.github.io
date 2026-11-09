@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/dep-cp-compact.md](../proofs/dep-cp-compact.md)
 - [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包：用到了定义 闭集与闭包　[proofs/dep-cp-dense.md](../proofs/dep-cp-dense.md)
+
+> 续见 [nodes/def.compactification.4.md](./def.compactification.4.md)

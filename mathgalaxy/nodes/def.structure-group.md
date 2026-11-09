@@ -9,13 +9,14 @@ layer 33 · 定义 · 丛的示性类 · 微分几何
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.transition-function`](../nodes/def.transition-function.md) 转移函数：用到了定义 转移函数　[proofs/dep-sg-tf.md](../proofs/dep-sg-tf.md)
+- [`def.fiber-bundle`](../nodes/def.fiber-bundle.md) 纤维丛：用到了定义 纤维丛　[proofs/dep-sg-fiber.md](../proofs/dep-sg-fiber.md)
 
 - …另有入边，续页见 [nodes/def.structure-group.4.md](./def.structure-group.4.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.structure-group.5.md](./def.structure-group.5.md)
 
-refs: Milnor–Stasheff, Characteristic Classes · 结构群；Tu, Differential Geometry（⚠️ 章名未核实，只记书名）
+refs: Milnor–Stasheff, Characteristic Classes · 结构群；Tu, Differential Geometry
 
 > 说明见 `notes/def.structure-group.md`
 

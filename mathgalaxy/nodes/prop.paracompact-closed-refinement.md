@@ -1,6 +1,6 @@
 # 闭加细　`prop.paracompact-closed-refinement`
 仿紧空间的开覆盖有局部有限闭加细
-layer 10 · 命题 · 仿紧与单位分解 · 拓扑学
+layer 19 · 命题 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=prop.paracompact-closed-refinement)　·　[节点索引](../index.md)
 
 设 $X$ 是**仿紧 Hausdorff** 空间，$\mathcal{U}$ 是 $X$ 的开覆盖。

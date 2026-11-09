@@ -1,6 +1,6 @@
 # Baire 纲定理　`thm.baire`
 Baire 纲定理
-layer 18 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 19 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.baire)　·　[节点索引](../index.md)
 
 设 $X$ 是完备度量空间（或局部紧 Hausdorff 空间）。则可数个稠密开集之交仍**稠密**。等价地：

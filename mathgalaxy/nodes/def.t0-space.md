@@ -8,13 +8,15 @@ layer 6 · 定义 · 分离公理 · 拓扑学
 拓扑空间 $X$ 叫 **$T_{0}$ 空间**（或 **Kolmogorov 空间**），若对任意 $x \ne y \in X$，存在开集 $U$ 使
 
 $$x \in U,\ y \notin U \qquad \text{或} \qquad y \in U,\ x \notin U .$$
-> 陈述续见 [nodes/def.t0-space.2.md](./def.t0-space.2.md)
 
+**等价说法**：任意两个不同点的**邻域族不同**，即 $x, y$ 不可能有完全相同的开邻域集。
+
+所以 $T_{0}$ 的含义是：**拓扑能分辨点**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.t0-space.3.md](./def.t0-space.3.md)
+- …另有入边，续页见 [nodes/def.t0-space.2.md](./def.t0-space.2.md)
 
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+refs: Munkres, Topology；Engelking, General Topology
 
 > 说明见 `notes/def.t0-space.md`
 

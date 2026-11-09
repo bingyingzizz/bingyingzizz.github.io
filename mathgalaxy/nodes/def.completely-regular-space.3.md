@@ -6,3 +6,5 @@
 - [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间：imp.lch-cr　[proofs/imp.lch-cr.md](../proofs/imp.lch-cr.md)
 - [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间：用到了定义 T3.5 空间　[proofs/dep.cr-t35.md](../proofs/dep.cr-t35.md)
 - [`def.t1-space`](../nodes/def.t1-space.md) T1 空间：用到了定义 T1 空间　[proofs/dep.cr-t1.md](../proofs/dep.cr-t1.md)
+
+> 续见 [nodes/def.completely-regular-space.4.md](./def.completely-regular-space.4.md)

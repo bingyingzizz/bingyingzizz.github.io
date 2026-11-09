@@ -2,9 +2,6 @@
 [在星图里打开](../#n=def.perfectly-normal-space)　·　第 1 页 [nodes/def.perfectly-normal-space.md](./def.perfectly-normal-space.md)
 
 ## 陈述（续）
-先记两个记号：集合 $A$ 叫 **$G_{\delta}$ 集**，若它是**可数**多个开集之交；叫 **$F_{\sigma}$ 集**，若它是可数多个闭集之并。
-
-拓扑空间 $X$ 叫**完美正规**（perfectly normal），若
 1. $X$ 正规（`def.normal-space`）；
 2. 每个闭集都是 $G_{\delta}$ 集。
 

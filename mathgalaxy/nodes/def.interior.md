@@ -8,18 +8,22 @@ layer 6 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 设 $(X, \mathcal{T})$ 是拓扑空间，$A \subseteq X$。$A$ 的**内部**（interior，也叫开核）是
 
 $$\mathring{A} := \bigcup\{\, U : U \subseteq A,\ U\ \text{开} \,\} ,$$
+
+即「一切含于 $A$ 的开集之并」，也就是**包含在 $A$ 里的最大开集**。
+
+**与闭包的对偶**（把闭包的公理照抄一遍、开闭互换即可得到）：
 > 陈述续见 [nodes/def.interior.2.md](./def.interior.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包：用到了定义 闭集与闭包　[proofs/dep.int-closed.md](../proofs/dep.int-closed.md)
-
-- …另有入边，续页见 [nodes/def.interior.3.md](./def.interior.3.md)
-
 ## 它能推出什么 / 谁在用它
+- 被 [`def.t3-space`](../nodes/def.t3-space.md) T3 空间 用
+
 - …另有出边，续页见 [nodes/def.interior.4.md](./def.interior.4.md)
 
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 闭集与极限点；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.interior.3.md](./def.interior.3.md)
+
+refs: Munkres, Topology；Engelking, General Topology
 
 > 说明见 `notes/def.interior.md`
 

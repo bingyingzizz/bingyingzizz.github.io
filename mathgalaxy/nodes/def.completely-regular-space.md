@@ -4,16 +4,21 @@ layer 7 · 定义 · 分离公理 · 拓扑学
 [在星图里打开](../#n=def.completely-regular-space)　·　[节点索引](../index.md)
 
 **在做什么**：$T_{3.5}$ 再加上 $T_{1}$。这一格是「连续函数足够多」的标准口径，也是紧化与度量化理论默认的假设。
+
+拓扑空间 $X$ 叫**完全正则空间**（completely regular space），若
+
+1. $X$ 是 **$T_{3.5}$** 的：单点与不含它的闭集可由连续函数分开（`def.t35-space`）；
+2. $X$ 是 **$T_{1}$** 的。
 > 陈述续见 [nodes/def.completely-regular-space.2.md](./def.completely-regular-space.2.md)
 
-
-## 它能推出什么 / 谁在用它
-- ⇒ [`def.regular-space`](../nodes/def.regular-space.md) 正则空间
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.completely-regular-space.3.md](./def.completely-regular-space.3.md)
 
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 完全正则空间；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.completely-regular-space.4.md](./def.completely-regular-space.4.md)
+
+refs: Munkres, Topology；Engelking, General Topology
 
 > 说明见 `notes/def.completely-regular-space.md`
 

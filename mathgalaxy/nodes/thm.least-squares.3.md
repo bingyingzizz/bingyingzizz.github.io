@@ -6,3 +6,5 @@
 - [`def.orthogonal-projection`](../nodes/def.orthogonal-projection.md) 正交投影：用到了定义 正交投影　[proofs/dep.ls-proj.md](../proofs/dep.ls-proj.md)
 - [`def.gram-matrix`](../nodes/def.gram-matrix.md) Gram 矩阵：用到了定义 Gram 矩阵　[proofs/dep.ls-gram.md](../proofs/dep.ls-gram.md)
 - [`def.positive-definite-matrix`](../nodes/def.positive-definite-matrix.md) 正定矩阵：用到了定义 正定矩阵　[proofs/dep.ls-posdef.md](../proofs/dep.ls-posdef.md)
+
+> 续见 [nodes/thm.least-squares.4.md](./thm.least-squares.4.md)

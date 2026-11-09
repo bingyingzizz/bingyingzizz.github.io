@@ -10,12 +10,12 @@
 - def.invariant-polynomial　不变多项式　layer 13
 - def.orientable-manifold　可定向流形　layer 16
 - def.smooth-map　光滑映射　layer 18
-- thm.smooth-partition-unity　光滑单位分解　layer 18
 - prop.volume-form-orientation　定向与体积形式　layer 18
 - def.vector-bundle　向量丛　layer 19
 - def.boundary-manifold　带边流形　layer 19
 - def.bundle-section　丛的截面　layer 20
-- prop.bundle-metric　纤维度量　layer 20
+- thm.smooth-partition-unity　光滑单位分解　layer 20
 - def.fiber-bundle　纤维丛　layer 20
+- def.tangent-bundle　切丛　layer 21
 
 > 续见 `index/diffgeom.manifold.2.md`

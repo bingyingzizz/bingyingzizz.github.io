@@ -6,18 +6,20 @@ layer 17 · 定义 · 收敛与紧性 · 拓扑学
 **在做什么**：一般拓扑里**序列不够用** —— 紧性、连续性都不能用序列刻画（除非空间是第一可数）。把 $\mathbb{N}$ 换成任意**有向集**，就得到「网」，于是序列的所有定理都能搬过来。
 
 **有向集**：预序集 $(\Lambda, \le)$，且任意 $\lambda, \mu \in \Lambda$ 有上界（存在 $\nu$ 使 $\lambda, \mu \le \nu$）。
+
+**网**：映射 $x : \Lambda \to X$，记 $(x_{\lambda})_{\lambda \in \Lambda}$。
+
+**收敛**：称网 $x_{\lambda}$ **收敛到** $x$（记 $x_{\lambda} \to x$），若对 $x$ 的每个邻域 $U$，存在 $\lambda_{0}$ 使
 > 陈述续见 [nodes/def.net.2.md](./def.net.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.filter`](../nodes/def.filter.md) 滤子：网收敛与滤子收敛等价　[proofs/eq.net-filter.md](../proofs/eq.net-filter.md)
+## 它能推出什么 / 谁在用它
+- ⟺ [`def.filter`](../nodes/def.filter.md) 滤子
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.net.3.md](./def.net.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.net.4.md](./def.net.4.md)
-
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 网的收敛；Kelley, General Topology（⚠️ 章节未核实，只记书名）
+refs: Munkres, Topology；Kelley, General Topology
 
 > 说明见 `notes/def.net.md`
 

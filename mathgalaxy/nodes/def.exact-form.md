@@ -4,6 +4,10 @@ layer 24 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.exact-form)　·　[节点索引](../index.md)
 
 **在做什么**：de Rham 复形里的**边缘**。它是「能写成别人的微分」的形式，也就是同调上平凡的那一类。
+
+设 $M$ 是光滑流形，$\omega \in \Omega^{k}(M)$（$k \ge 1$）。称 $\omega$ 是**恰当形式**（exact form），若存在 $(k-1)$ 次形式 $\eta$ 使
+
+$$\omega = d\eta .$$
 > 陈述续见 [nodes/def.exact-form.2.md](./def.exact-form.2.md)
 
 
@@ -15,7 +19,7 @@ layer 24 · 定义 · 微分形式、积分与 de Rham · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.exact-form.4.md](./def.exact-form.4.md)
 
-refs: Tu, An Introduction to Manifolds（⚠️ 章节未核实，只记书名）· 闭形式与恰当形式；Bott–Tu, Differential Forms in Algebraic Topology（⚠️ 章节未核实，只记书名）
+refs: Tu, An Introduction to Manifolds；Bott–Tu, Differential Forms in Algebraic Topology
 
 > 说明见 `notes/def.exact-form.md`
 

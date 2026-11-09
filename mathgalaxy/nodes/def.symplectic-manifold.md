@@ -3,7 +3,7 @@
 layer 23 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 [在星图里打开](../#n=def.symplectic-manifold)　·　[节点索引](../index.md)
 
-**在做什么**：把辛向量空间「铺到流形上」。每一处切空间都带一个辛形式，而且要求这些形式**整体闭**（$d\omega = 0$）—— 
+**在做什么**：把辛向量空间「铺到流形上」。每一处切空间都带一个辛形式，而且要求这些形式**整体闭**（$d\omega = 0$）—— 那一条微分条件就是整个辛几何的刚性来源。
 > 陈述续见 [nodes/def.symplectic-manifold.2.md](./def.symplectic-manifold.2.md)
 
 
@@ -15,7 +15,7 @@ layer 23 · 定义 · 辛流形与 Hamilton 力学 · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.symplectic-manifold.4.md](./def.symplectic-manifold.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛流形；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
 
 > 说明见 `notes/def.symplectic-manifold.md`
 

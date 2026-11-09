@@ -8,18 +8,22 @@ layer 7 · 定义 · 分离公理 · 拓扑学
 拓扑空间 $X$ 叫 **$T_{3}$ 空间**，若对任意闭集 $F$ 与任意 $x \notin F$，存在不交开集 $U, V$ 使
 
 $$x \in U, \qquad F \subseteq V .$$
+
+**等价说法**（更好用）：对任意 $x$ 与它的开邻域 $W \ni x$，存在开集 $U$ 使
+
+$$x \in U \subseteq \overline{U} \subseteq W ,$$
+
+即**每个开邻域里还夹着一个开集的闭包**。
 > 陈述续见 [nodes/def.t3-space.2.md](./def.t3-space.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间：imp.t35-t3　[proofs/imp.t35-t3.md](../proofs/imp.t35-t3.md)
+## 它能推出什么 / 谁在用它
+- 被 [`def.regular-space`](../nodes/def.regular-space.md) 正则空间 用
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.t3-space.3.md](./def.t3-space.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.t3-space.4.md](./def.t3-space.4.md)
-
-refs: Munkres, Topology（⚠️ 章节未核实，只记书名）· 分离公理；Engelking, General Topology（⚠️ 章节未核实，只记书名）
+refs: Munkres, Topology；Engelking, General Topology
 
 > 说明见 `notes/def.t3-space.md`
 

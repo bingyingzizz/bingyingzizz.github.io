@@ -1,6 +1,6 @@
 # Baire 的开子集是 Baire　`thm.baire-open-subset`
 Baire 空间的开子集仍是 Baire 空间
-layer 19 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 20 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.baire-open-subset)　·　[节点索引](../index.md)
 
 $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）是 Baire 空间。

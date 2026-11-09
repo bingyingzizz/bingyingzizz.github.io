@@ -8,8 +8,8 @@
 - 被 [`def.tangent-bundle`](../nodes/def.tangent-bundle.md) 切丛 用
 - 被 [`def.covering-space`](../nodes/def.covering-space.md) 覆叠空间 用
 - ⇒ [`def.t1-space`](../nodes/def.t1-space.md) T1 空间
+- ⇒ [`def.normal-space`](../nodes/def.normal-space.md) 正规空间
+- ⇒ [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间
 - ⇒ [`thm.locally-compact-baire`](../nodes/thm.locally-compact-baire.md) 局部紧 Hausdorff 是 Baire
-- 被 [`def.ck-space`](../nodes/def.ck-space.md) C(K,E) 用
-- 被 [`thm.locally-compact-baire`](../nodes/thm.locally-compact-baire.md) 局部紧 Hausdorff 是 Baire 用
 
 > 续见 [nodes/def.hausdorff.3.md](./def.hausdorff.3.md)

@@ -12,7 +12,7 @@ layer 18 · 定理 · 多重线性与张量 · 抽象代数
 
 - …另有入边，续页见 [nodes/thm.witt-cancellation.3.md](./thm.witt-cancellation.3.md)
 
-refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors（⚠️ 章名未核实，只记书名）
+refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors
 
 > 说明见 `notes/thm.witt-cancellation.md`
 

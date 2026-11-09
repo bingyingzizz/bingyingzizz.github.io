@@ -4,18 +4,20 @@ layer 20 · 定理 · 矩阵分解与最小二乘 · 抽象代数
 [在星图里打开](../#n=thm.qr-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：Gram–Schmidt 正交化其实也是在乘一串矩阵 —— 把结果记成 $R$、正交化后的基记成 $Q$，就得到 $A = QR$。
+
+设 $A \in M_{m\times n}(\mathbb{R})$ 的列线性无关（$m \ge n$）。则存在**唯一**的分解
+
+$$A = QR ,$$
 > 陈述续见 [nodes/thm.qr-decomposition.2.md](./thm.qr-decomposition.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`thm.gram-schmidt`](../nodes/thm.gram-schmidt.md) Gram–Schmidt 正交化：用到了定义 Gram–Schmidt 正交化　[proofs/dep.qr-gs.md](../proofs/dep.qr-gs.md)
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.qr-decomposition.3.md](./thm.qr-decomposition.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.qr-decomposition.4.md](./thm.qr-decomposition.4.md)
-
-refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis（⚠️ 章名未核实，只记书名）· QR 分解
+refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis
 
 > 说明见 `notes/thm.qr-decomposition.md`
 

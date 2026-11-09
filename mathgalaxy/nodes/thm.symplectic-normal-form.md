@@ -3,7 +3,9 @@
 layer 18 · 定理 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=thm.symplectic-normal-form)　·　[节点索引](../index.md)
 
-**在做什么**：辛空间的「分类定理」—— 比对称型的情形简单得多：**所有** $2n$ 维辛空
+**在做什么**：辛空间的「分类定理」—— 比对称型的情形简单得多：**所有** $2n$ 维辛空间都同构，没有不变量可谈。
+
+设 $(V, \omega)$ 是有限维辛空间。则
 > 陈述续见 [nodes/thm.symplectic-normal-form.2.md](./thm.symplectic-normal-form.2.md)
 
 
@@ -15,7 +17,7 @@ layer 18 · 定理 · 多重线性与张量 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.symplectic-normal-form.4.md](./thm.symplectic-normal-form.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics（⚠️ 章名未核实，只记书名）· 辛空间；McDuff–Salamon, Introduction to Symplectic Topology（⚠️ 章名未核实，只记书名）
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
 
 > 说明见 `notes/thm.symplectic-normal-form.md`
 

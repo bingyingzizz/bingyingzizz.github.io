@@ -2,10 +2,10 @@
 
 > page 1 `hubs.en.md`
 
+- **31 / 34** `def.compact` compact · 拓扑空间的基本语汇
 - **31 / 32** `def.measure` measure · 测度的构造
 - **30 / 33** `def.limit` limit and colimit · 图与极限
 - **29 / 32** `def.adjoint` Adjunction · 伴随与反射
-- **29 / 32** `def.compact` compact · 拓扑空间的基本语汇
 
 - **29 / 29** `def.topology` topology · 拓扑空间的基本语汇
 - **29 / 29** `def.group` group · 代数结构

@@ -2,9 +2,9 @@
 
 由 `tools/build.mjs` 生成。**不是硬门**：这三类都会误报，先看，别急着改数据。
 
-## 一、正文引用了不存在的 id（0 个）
+## 一、正文引用了不存在的 id（1 个）
 
-（没有）
+- `prop.poisson-formula` ← lem.caratheodory-osgood.notes
 
 ## 二、近同名却没有任何边（8 对）
 
@@ -47,7 +47,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**250** 处
+- 陈述里出现假设关键词、但没标注：**251** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -89,5 +89,5 @@
   - def.pre-analytic-ring  ‹Hausdorff›
   - def.analytic-ring  ‹完备›
   - thm.analytic-modules  ‹完备›
-  - …还有 210 处
+  - …还有 211 处
 
