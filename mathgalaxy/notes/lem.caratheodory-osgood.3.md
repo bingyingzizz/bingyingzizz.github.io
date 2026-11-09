@@ -1,10 +1,6 @@
 # Carathéodory–Osgood 边界对应　`lem.caratheodory-osgood`　·　说明
 根 `../`
 
-**为什么需要 Jordan 条件**：只要求「单连通 + 边界局部连通」不够。取 $\Omega=\mathbb{C}\setminus(-\infty,0]$（沿负实轴剪开的平面），它单连通，边界是一条射线而非 Jordan 曲线；Riemann 映射到 $\mathbb{D}$ 在剪缝的两侧趋向不同的边界点，边界对应不是单射。「边界是一条简单闭曲线」正是排除这种两侧粘在一起的情形。
-
-**与 Schwarz–Christoffel 的关系**：多边形区域（有界多边形内部）的边界是一条 Jordan 曲线，所以 A、B 适用；它们给出 S–C 存在性的 (i)（映射连续到边界、边界点一一对应）。但 S–C 还缺 (iii) 参数与边长的匹配，故 `thm.schwarz-christoffel` 仍标 skeleton。
-
-**本图缺什么**：Jordan 曲线定理、crosscut、prime end 都没有独立节点；本节点只把 A、B 陈述清楚并证明第三步，所以保留 skeleton。若以后要补完整，建议先立 Jordan 曲线定理节点，再立 prime end 节点。
+**可独立验证的中间引理（延拓推出边界值模长 1）**：设 f 在区域内部双全纯、连续延拓到闭包。则对每个边界点 ζ，f(ζ) 的模等于 1。证明：反设模小于 1，令 w=f(ζ) 落在单位圆盘内。取区域内的点列趋于 ζ，由连续性像趋于 w；逆映射在 w 处全纯因而连续，点列 g(f(z_n)) 趋于 g(w)，这是区域内的点；但点列同时趋于边界点 ζ，与极限唯一性矛盾。故模等于 1。∎
 
 > 续见 notes/lem.caratheodory-osgood.4.md

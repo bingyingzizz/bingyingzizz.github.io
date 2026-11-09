@@ -1,8 +1,6 @@
 # 边界对应定理　`thm.boundary-correspondence`　·　说明
 根 `../`
 
-**为什么本图补不了。** (a) 的标准证明要用 crosscut / prime end（Carathéodory 拓扑），或境界的局部连通性加调和测度；(b) 要用 Jordan 曲线定理与 crosscut 论证。本图**没有** Carathéodory、crosscut、prime end、Jordan 曲线定理的节点；`thm.schwarz-reflection` 只处理解析弧（圆、直线）的反射，不能覆盖一般 Jordan 曲线。**多边形区域**是例外：此时 (a)(b) 可用 Schwarz 反射逐边拼接证明；但 SC 的注也只给策略、本图未证（`thm.schwarz-christoffel` 仍 skeleton），所以这里不把它当作已证步骤。况且那只覆盖折线边界，不是本条的一般情形。因此本条保持 `status: 'skeleton'`，缺口就是这一条定理。
-
-**⭐ 用途。** 它给 Schwarz–Christoffel（`thm.schwarz-christoffel`，仍 skeleton）的「实轴上的 $x_{k}$ 对应多边形顶点」提供合法性。
+**缺口（已精确到一条定理）：Carathéodory–Osgood 定理。** 设 $\Omega$ 是 Jordan 区域（$\partial\Omega$ 是 Jordan 曲线），$f:\Omega\to\mathbb{D}$ 是 Riemann 映射。则：(a) $f$ 连续延拓到 $\overline{\Omega}$（Carathéodory 1913）；(b) 延拓在 $\partial\Omega$ 上单射（Osgood 1900 / Carathéodory）。两条都不可省：只有 (a) 时边界可能把两个点粘在一起；只有「单连通」而没有 Jordan 条件时 (a) 也可能不成立：有界梳状区域（在单位圆盘内挖去无穷多条从边界伸入、在边界上累积的细缝）单连通但边界不局部连通，其 Riemann 映射不连续延拓；无界时即使边界局部连通也会失败（沿负实轴剪开的平面：平方根在剪缝两侧趋向不同的纯虚值，不连续延拓）。
 
 > 续见 notes/thm.boundary-correspondence.4.md

@@ -11,8 +11,8 @@
 
 ## 一、提到了但没有节点（16 个）
 
-### 单位圆　出现 29 次
-`thm.integral-trig` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` · `thm.rodrigues` · `thm.max-modulus` 等 25 个节点
+### 单位圆　出现 32 次
+`thm.integral-trig` · `thm.boundary-correspondence` · `lem.caratheodory-osgood` · `thm.euler-formula` · `def.normal-curvature` · `def.principal-curvature` 等 26 个节点
 
 ### 角度　出现 12 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.isometry` · `def.intrinsic-quantity` · `def.riemannian-metric` · `def.inverse-trig` 等 9 个节点
