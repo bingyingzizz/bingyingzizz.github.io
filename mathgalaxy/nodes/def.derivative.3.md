@@ -7,9 +7,9 @@
 - ⇒ [`thm.derivative-rules`](../nodes/thm.derivative-rules.md) 求导法则
 - 被 [`def.regular-curve`](../nodes/def.regular-curve.md) 正则曲线 用
 - 被 [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数 用
+- 被 [`def.dini-derivative`](../nodes/def.dini-derivative.md) Dini 导数 用
 - 被 [`def.bounded-variation`](../nodes/def.bounded-variation.md) 有界变差函数 用
 - 被 [`thm.monotone-differentiable`](../nodes/thm.monotone-differentiable.md) 单调函数几乎处处可导 用
 - 被 [`def.antiderivative`](../nodes/def.antiderivative.md) 原函数 用
-- 被 [`def.local-extremum`](../nodes/def.local-extremum.md) 局部极值 用
 
 > 续见 [nodes/def.derivative.4.md](./def.derivative.4.md)

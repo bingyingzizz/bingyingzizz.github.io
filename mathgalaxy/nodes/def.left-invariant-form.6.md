@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程 用
 - ⇒ [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程
+- ⇒ [`prop.lie-group-orientable`](../nodes/prop.lie-group-orientable.md) Lie 群可定向

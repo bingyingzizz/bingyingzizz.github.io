@@ -5,6 +5,7 @@
 - 被 [`def.interval`](../nodes/def.interval.md) 区间 用
 - 被 [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限 用
 - 被 [`def.complex`](../nodes/def.complex.md) 复数 ℂ 用
+- 被 [`def.real-metric-space`](../nodes/def.real-metric-space.md) 实数的度量 用
 - 被 [`def.metric-space`](../nodes/def.metric-space.md) 距离空间 用
 - 被 [`def.essential-sup`](../nodes/def.essential-sup.md) 本性上界与 L^∞ 用
 - ⇒ [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域

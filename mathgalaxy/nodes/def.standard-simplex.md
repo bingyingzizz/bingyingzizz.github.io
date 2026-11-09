@@ -10,7 +10,7 @@ $$\Delta^{p} := \left\{ (t_{0}, \ldots, t_{p}) \in \mathbb{R}^{p+1} : \sum_{i} t
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/e45.definition.md](../proofs/e45.definition.md)
+- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/e46.definition.md](../proofs/e46.definition.md)
 
 - …另有入边，续页见 [nodes/def.standard-simplex.3.md](./def.standard-simplex.3.md)
 

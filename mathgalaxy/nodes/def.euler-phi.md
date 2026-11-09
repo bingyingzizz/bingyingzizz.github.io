@@ -12,7 +12,7 @@ $$\varphi(n) = \#\{\, 1 \le a \le n : \gcd(a, n) = 1 \,\} .$$
 $$\varphi(n) = n \prod_{i=1}^{r} \left( 1 - \frac{1}{p_{i}} \right).$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环：用到了定义 剩余类环　[proofs/e121.definition.md](../proofs/e121.definition.md)
+- [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环：用到了定义 剩余类环　[proofs/e124.definition.md](../proofs/e124.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根 用

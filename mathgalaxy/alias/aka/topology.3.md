@@ -7,7 +7,7 @@
 
 - 完全不连通 | totally disconnected | 极不连通 | extremally disconnected | Definition 2.2.7 | Def 2.2.7 → def.totally-disconnected
 
-- 局部紧 | locally compact | 局部紧 Hausdorff | 紧邻域 | Definition 2.3.1 | Def 2.3.1 → def.locally-compact
+- 局部紧 | locally compact | 紧邻域 | Definition 2.3.1 | Def 2.3.1 → def.locally-compact-space
 
 - Tychonoff | Tykhonov | 吉洪诺夫 | Theorem 2.1.4 | Thm 2.1.4 | 紧空间的积 | Exercise 2.10 → thm.tykhonov
 
@@ -16,5 +16,7 @@
 - 滤过极限的上同调 | Proposition 7.3.12 | Prop 7.3.12 → prop.filtered-limit-cohomology
 
 - Stone 空间上同调为零 | Exercise 7.50 → prop.stone-acyclic
+
+- 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
 
 > 续见 alias/aka/topology.4.md

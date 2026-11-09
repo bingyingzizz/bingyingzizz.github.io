@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-09T08:44:47.397Z
-> 15 星系 / 105 星团 / 1560 节点 / 3232 连线（强边 3190，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-09T12:17:46.684Z
+> 15 星系 / 105 星团 / 1574 节点 / 3274 连线（强边 3232，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -2353,7 +2353,7 @@ $$e : X \hookrightarrow Y ,$$
 **定理**：
 
 - $X^{*}$ **紧**（对任意 $X$）；
-- $X^{*}$ **Hausdorff** $\iff$ $X$ 是局部紧的 Hausdorff 空间（`def.locally-compact`）。
+- $X^{*}$ **Hausdorff** $\iff$ $X$ 是局部紧的 Hausdorff 空间。
 
 ⭐ **拓扑的直觉**：$U \cup \{\infty\}$ 开 $\iff$ 补集紧。所以「$X$ 的补集紧」就是「$\infty$ 的一个邻域」—— 无穷远点周围的空间正是「$X$ 跑出去以后剩下的部分」。于是 $\mathbb{R}^{n}$ 的 $\infty$ 邻域是「球外面」，$S^{n}$ 的北极。
 
@@ -2463,8 +2463,8 @@ $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 
 参考：Munkres, Topology；Engelking, General Topology
 
-#### 局部紧空间（裸）　`def.locally-compact-space`
-*定义*　局部紧空间（不要求 Hausdorff）
+#### 局部紧空间　`def.locally-compact-space`
+*定义*　局部紧空间
 
 拓扑空间 $X$ 叫**局部紧的**，如果**每个点都有紧邻域**：对每个 $x \in X$，存在紧集 $K$ 使
 
@@ -2472,38 +2472,13 @@ $$x \in \mathring{K}$$
 
 这里**不要求** $X$ 是 Hausdorff 的。
 
-**为什么单列一条**：有的书把「局部紧」定义成上面这条裸性质，有的书（以及凝聚态数学的用法）默认再加上 Hausdorff。本图把两者拆开：这条是**裸局部紧**，`def.locally-compact` 是**局部紧 Hausdorff**。
-
 **与 Hausdorff 版的差别**：Hausdorff 时「每点有紧邻域」等价于「每点有**紧邻域基**」（任意邻域里都能找到紧邻域）；没有 Hausdorff 时这条路会断（紧集不必闭，邻域与紧集的关系变差）。
 
-**例子**：任何紧空间（取 $K = X$）、$\mathbb{R}^{n}$、离散空间都是裸局部紧；$\mathbb{Q}$ 不是。紧空间一定裸局部紧，但不一定 Hausdorff。
+**例子**：任何紧空间（取 $K = X$）、$\mathbb{R}^{n}$、离散空间都局部紧；$\mathbb{Q}$ 不是。紧空间一定局部紧，但不一定 Hausdorff。
 
-⭐ 本图约定：只说「局部紧」而不加限定时，指 `def.locally-compact`（局部紧 Hausdorff）；要用裸性质时写全「裸局部紧」并引本节点。
+**用法**：需要 Hausdorff 时与 `def.hausdorff` 一起用；没有 Hausdorff 时本定义仍然有效，但每点有紧邻域基这一更强性质不一定成立。
 
 参考：Munkres, Topology；Engelking, General Topology
-
-#### 局部紧 Hausdorff 空间　`def.locally-compact`
-*定义*　局部紧 Hausdorff 空间
-
-拓扑空间 $X$ 叫**局部紧**的，如果**每个点都有紧邻域**：对每个 $x \in X$，存在紧集 $K$ 使
-
-$$x \in \mathring{K}$$
-
-再要求它是 Hausdorff 的，就叫**局部紧 Hausdorff** 空间。
-
-⚠️ 本图约定：提到「局部紧」**而不另加限定**时，指的都是后者（局部紧 Hausdorff）—— 凝聚态数学的标准用法：那里用得到的性质（局部紧 $\implies$ 紧生成、商映射 $\times$ 局部紧）都同时需要 Hausdorff。裸局部紧单列为 `def.locally-compact-space`，本节点不要求读者把它和裸版本混同。
-
-**等价说法**（Hausdorff 时）：每点有**紧邻域基**（即任意给定邻域 $U \ni x$ 里都能找到一个紧邻域 $K$ 使 $x \in \mathring{K} \subseteq K \subseteq U$）。这条更强的形式正是「商映射 $\times$ 局部紧」那条定理要用的。
-
-**例子**：$\mathbb{R}^{n}$、任何离散空间、任何紧 Hausdorff 空间。**反例**：$\mathbb{Q}$（不是局部紧）、无穷维 Banach 空间（闭单位球不紧）。
-
-⭐ **它在凝聚态数学里的位置**：$\mathbf{CHaus}$ 是场地，而**局部紧 Hausdorff**是「能用紧 Hausdorff 逼近」的最小一族 —— 局部紧 Hausdorff 空间都是**紧生成**的（例 1），所以都能忠实地变成凝聚态集。
-
-Pontryagin 对偶也只在局部紧 Hausdorff 阿贝尔群那一条线上成立。
-
-⚠️ 「局部紧」这个条件**不能省**：商映射乘 id 那条定理、Tychonoff 以外的积性质、以及「紧提升条件」都要它。
-
-参考：Munkres, Topology
 
 #### Tychonoff 定理　`thm.tykhonov`
 *定理*　Tychonoff 定理：紧空间的任意积紧
@@ -2753,6 +2728,37 @@ $A$ **紧** $\iff$ $A$ 闭**且** $A$ **全有界**。
 ⚠️ 「$X$ 完备 $\implies$ $A$ 完备」那一步正是标题里那个前提的用处（见上一条说明）。
 
 参考：Munkres, Topology, §28；Rudin, Principles of Mathematical Analysis, Ch. 2
+
+#### 度量空间的连续　`def.metric-continuity`
+*定义*　度量空间之间的连续性（$\varepsilon$-$\delta$）
+
+设 $(X, d)$、$(Y, \rho)$ 是度量空间，$f : X \to Y$，$x_0 \in X$。
+
+称 $f$ 在 $x_0$ **连续**，若
+
+$$\forall \varepsilon > 0\ \exists \delta > 0:\quad d(x, x_0) < \delta \implies \rho(f(x), f(x_0)) < \varepsilon .$$
+
+称 $f$ 连续，若它在每点连续。等价地：每个开集 $V \subseteq Y$ 的原像 $f^{-1}(V)$ 是 $X$ 的开集。
+
+**等价性的证明**（全局版本）：
+
+
+
+（$\varepsilon$-$\delta$ $\implies$ 开集原像开）设 $V \subseteq Y$ 开、$x_0 \in f^{-1}(V)$。取 $\varepsilon > 0$ 使 $B_Y(f(x_0), \varepsilon) \subseteq V$；$\varepsilon$-$\delta$ 给 $\delta > 0$，使 $B_X(x_0, \delta)$ 的像落在 $B_Y(f(x_0), \varepsilon)$ 中，故 $B_X(x_0, \delta) \subseteq f^{-1}(V)$，即 $f^{-1}(V)$ 开。
+
+
+
+（开集原像开 $\implies$ $\varepsilon$-$\delta$）给定 $x_0$ 与 $\varepsilon > 0$，$B_Y(f(x_0), \varepsilon)$ 开，故 $f^{-1}(B_Y(f(x_0), \varepsilon))$ 开且含 $x_0$；取 $\delta > 0$ 使 $B_X(x_0, \delta)$ 落在其中，即得 $\varepsilon$-$\delta$ 式。$\blacksquare$
+
+
+
+📌 这就是 `def.continuous-map`（拓扑空间版本）在度量空间上的具体写法：度量空间的开集由开球生成，故「原像开」与 $\varepsilon$-$\delta$ 等价。
+
+
+
+⭐ $\mathbb{R}$ 的情形见 `def.continuous`（$\varepsilon$-$\delta$ 判据）与 `def.real-metric-space`（$d(x,y) = |x-y|$）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 4；Munkres, Topology, Ch. 2
 
 #### 勒贝格数　`def.lebesgue-number`
 *定义*　勒贝格数：紧度量空间上开覆盖的一致尺度
@@ -4088,7 +4094,7 @@ $$\mathcal{A} := \{\, X \setminus F \,\} \cup \{\, G_{y} : y \in F \,\}$$
 
 参考：Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch. 5
 
-#### 迈克尔仿紧判别法　`thm.michael-paracompact`
+#### Michael 仿紧判别法　`thm.michael-paracompact`
 *定理*　正则空间仿紧当且仅当每个开覆盖有局部有限加细
 
 设 $X$ 是**正则**空间。则 $X$ **仿紧**，当且仅当它的每个开覆盖都有**局部有限的加细**（加细的成员不必是开集）：
@@ -4408,7 +4414,7 @@ $$\Omega(X, x_{0}) := \{\, \alpha : \alpha(0) = \alpha(1) = x_{0} \,\},$$
 $$\pi_{1}(X, x_{0}) := \Omega(X, x_{0}) \big/ \simeq_{p},$$
 
 乘法取 $[\alpha][\beta] := [\alpha * \beta]$，单位元 $e = [e_{x_{0}}]$，逆元 $[\alpha]^{-1} = [\bar{\alpha}]$。
-`lem.path-product` 保证这三样东西良定义且满足群公理，所以 $\pi_{1}(X, x_{0})$ 确实是一个群。
+`prop.pi1-group` 把这三样东西的良定义与群公理逐条对上（依据是 `lem.path-product`），所以 $\pi_{1}(X, x_{0})$ 确实是一个群。
 这里的构造只是「取商集 $+$ 拼接」，**没有**引用任何「满足某组性质的群」式的公理刻画。
 
 **元素是什么**：一个元素是一整类闭道路，不是一个闭道路。写 $[\alpha] = [\beta]$ 的意思就是 $\alpha \simeq_{p} \beta$。所以「$\pi_{1}(X, x_{0}) = 1$」是说**每条闭道路都能在端点不动的前提下缩成一点**。
@@ -4483,7 +4489,7 @@ $$\Pi_{\gamma'} = \operatorname{ad}_{g} \circ \Pi_{\gamma},\qquad \operatorname{
 1. $X$ 道路连通，且
 2. $\pi_{1}(X, x_{0}) = 1$ 对某个（等价地：对每个）$x_{0} \in X$ 成立。
 
-由 `prop.pi1-basepoint`，条件 2 挑哪个基点都一样（道路连通保证换基点给出同构，而「平凡」是同构不变的）。
+由 `prop.simply-connected-basepoint`，条件 2 里「对某个」与「对每个」等价（道路连通保证换基点给出同构，而「平凡」在同构下不变）。
 
 等价的说法：$X$ 道路连通，且任意两条有共同端点的道路都道路同伦；等价地，每条闭道路都能在固定端点的前提下连续缩成常值道路。
 
@@ -4709,6 +4715,50 @@ van Kampen 要求交叠道路连通，所以只有 $n \ge 2$ 能用，且一旦�
 💡 对比：$\pi_{1}(S^{1}) = \mathbb{Z}$ 说明按闭道路分类时 $S^{1}$ 有无穷多类；$\pi_{1}(S^{2}) = 1$ 说明 $S^{2}$ 上任何闭曲线都能缩成点（这是「没有一维把手」的精确含义）。
 
 参考：Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group of S^n；Hatcher, Algebraic Topology, Ch. 1 §1.2 · fundamental groups of spheres（推论）
+
+#### π₁ 是群　`prop.pi1-group`
+*命题*　$\pi_{1}(X, x_{0})$ 确实是群
+
+设 $X$ 是拓扑空间、$x_{0} \in X$。在闭道路的同伦类之集 $\pi_{1}(X, x_{0})$（`def.fundamental-group`）上定义
+
+$[\alpha] \cdot [\beta] := [\alpha \ast \beta], \qquad e := [e_{x_{0}}], \qquad [\alpha]^{-1} := [\overline{\alpha}].$
+
+则这三个运算**良定义**，且 $\pi_{1}(X, x_{0})$ 按它们构成一个群（`def.group`）：
+
+- **良定义**：$\alpha \simeq_{p} \alpha^{\prime}$、$\beta \simeq_{p} \beta^{\prime}$ $\implies$ $\alpha \ast \beta \simeq_{p} \alpha^{\prime} \ast \beta^{\prime}$；
+- **结合律**：$(\alpha \ast \beta) \ast \gamma \simeq_{p} \alpha \ast (\beta \ast \gamma)$；
+- **单位元**：$e_{x_{0}} \ast \alpha \simeq_{p} \alpha \simeq_{p} \alpha \ast e_{x_{0}}$；
+- **逆元**：$\alpha \ast \overline{\alpha} \simeq_{p} e_{x_{0}} \simeq_{p} \overline{\alpha} \ast \alpha$。
+
+四条正是 `lem.path-product` 的内容：$\pi_{1}$ 的群结构不是额外假设，而是「道路拼接 + 取同伦类」自带的代数结构。
+
+**为什么单独立一条**：`def.fundamental-group` 只定义了集合 $\pi_{1}(X,x_{0}) = \{$ 闭道路 $\}/\simeq_{p}$，它本身不含群结构；`lem.path-product` 说的是拼接的四条算律，也没说「所以它是群」。写成命题后，「哪条引理支撑哪条群公理」在图上是看得见的。
+
+顺带一个常见混淆：$\pi_{1}$ 的乘法**不是**逐点乘法（道路不能逐点相加），而是「先走 $\alpha$ 再走 $\beta$」，参数要重标度成两段。
+
+**基点固定**：以上只对固定基点成立。换基点 $x_{0} \to x_{1}$ 要先给一条道路，形式与同构性见 `prop.pi1-basepoint`；没有道路连通假设时，不同道路分支的基本群可以完全不同（例如两点离散空间）。
+
+**非交换**：$[\alpha]\cdot[\beta] \ne [\beta]\cdot[\alpha]$ 是常态（$\pi_{1}(S^{1} \vee S^{1})$ 就是自由群 $F_{2}$），所以这是**非阿贝尔**群；取交换化才得到 $H_{1}$。
+
+参考：Hatcher, Algebraic Topology, Ch. 1 §1.1 · the fundamental group is a group；Munkres, Topology (2nd ed.), Ch. 9 · homotopy of paths and the group structure
+
+#### 单连通与基点无关　`prop.simply-connected-basepoint`
+*命题*　单连通的条件 2 与基点选取无关
+
+设 $X$ 道路连通。则以下两条等价：
+
+(i) 存在 $x_{0} \in X$ 使 $\pi_{1}(X, x_{0}) = 1$；
+(ii) 对每个 $x \in X$ 都有 $\pi_{1}(X, x) = 1$。
+
+因此 `def.simply-connected` 的条件 2 里「对某个（等价地：对每个）基点」中的「等价地」是一条**需要证明**的命题，不是定义的直接结果。
+
+**证明**：(ii) $\implies$ (i) 取任一点即可。(i) $\implies$ (ii)：道路连通给出从 $x_{0}$ 到 $x$ 的道路 $\lambda$，`prop.pi1-basepoint` 给出同构 $\pi_{1}(X, x_{0}) \to \pi_{1}(X, x)$，$[\alpha] \mapsto [\overline{\lambda} \ast \alpha \ast \lambda]$；同构把平凡群送到平凡群，故 $\pi_{1}(X, x) = 1$。∎
+
+**道路连通不能省**：$X = \{0, 1\}$（两点离散）里两个基点的 $\pi_{1}$ 都平凡，但 $X$ 不道路连通 —— 「某个基点平凡」推不到别的分支，因为压根没有道路可换基点。不道路连通的空间上，「单连通」这个词本身也只能按分支分别讲。
+
+**为什么写成命题而不是注**：定义里写「等价地」等于把一条定理塞进定义，读者无从判断它依赖什么。拆开后依赖是清楚的：`prop.pi1-basepoint`（换基点同构）加上「群同构保平凡性」。
+
+参考：Hatcher, Algebraic Topology, Ch. 1 §1.1 · simply connected spaces；Munkres, Topology (2nd ed.), Ch. 9 · basepoints and change of basepoint
 
 ### 星团：同调群
 > 把「这个空间有几个 n 维的洞」变成一个可计算的阿贝尔群：标准单纯形 → 单纯复形 → 链群与边缘算子（∂² = 0）→ 单纯同调 → 奇异同调 → 约化同调与 H₀ → 对的长正合列 → Mayer–Vietoris → 球面的同调 → Euler 示性数；最后用单纯逼近把「奇异」与「单纯」缝成同一个东西。
@@ -7103,7 +7153,7 @@ $$\langle \cdot, \cdot \rangle : V \times V \longrightarrow K$$
 
 所以复数情形只能是**一个变元线性、另一个共轭线性**（叫**半双线性**或 sesquilinear）。
 
-⭐ 哪一边写成共轭是**约定**：本图取「第一变元线性、第二变元共轭线性」的**本图约定**（与图上别处一致）。
+⭐ 哪一边写成共轭是**约定**：取「第一变元线性、第二变元共轭线性」（与图上别处一致）。
 
 换个约定所有公式共轭一下，不改变内容。
 
@@ -10764,9 +10814,10 @@ $$\sum_{n=1}^{\infty} a_n = \sup_N s_N \in [0, +\infty]$$
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 3
 
-#### 连续　`def.continuous`
-*定义*　连续
+#### 连续（ε-δ 判据）　`def.continuous`
+*定理*　连续：$\varepsilon$-$\delta$ 判据
 
+**定理（$\varepsilon$-$\delta$ 判据）**：下面这个条件不是定义，而是度量连续性的判据；定义见 `def.metric-continuity`，$\mathbb{R}$ 上的度量见 `def.real-metric-space`。
 $f : \mathbb{R} \to \mathbb{R}$ 在 $x_0$ **连续**，当且仅当
 
 $$\forall \varepsilon > 0, \exists \delta > 0 : |x - x_0| < \delta \implies |f(x) - f(x_0)| < \varepsilon$$
@@ -10782,6 +10833,8 @@ $f$ **连续**（在 $\mathbb{R}$ 上连续）当且仅当它在每一点连续�
 ⚠ **连续 $\ne$ 一致连续**：$f(x) = x^2$ 在 $\mathbb{R}$ 上连续但不一致连续（$x$ 越大需要的 $\delta$ 越小）。
 
 紧区间上两者才重合。
+
+📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\mathbb{R}$ 的度量在 `def.real-metric-space`。
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 4
 
@@ -10812,6 +10865,36 @@ $$F'(x_0) := \lim_{h \to 0} \frac{F(x_0 + h) - F(x_0)}{h}$$
 等式成立要加绝对连续。
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 5
+
+#### 实数的度量　`def.real-metric-space`
+*定义*　实数作为度量空间
+
+在 $\mathbb{R}$ 上定义 $d(x, y) = |x - y|$。则 $(\mathbb{R}, d)$ 是完备的可分度量空间，其度量拓扑就是 $\mathbb{R}$ 的标准拓扑（开区间为基）。
+
+完备性：Cauchy 列的极限存在（实数完备性，`thm.real-complete`）。可分性：$\mathbb{Q}$ 在 $\mathbb{R}$ 中稠密。
+
+度量拓扑 = 标准拓扑：$B(x_0, \varepsilon) = (x_0 - \varepsilon, x_0 + \varepsilon)$，故开区间是基；反过来每个开集都是开区间的并。
+
+⭐ 这条把「$\mathbb{R}$ 上连续」的 $\varepsilon$-$\delta$ 语言与度量空间/拓扑空间的连续性语言接上：见 `def.metric-continuity` 与 `def.continuous`。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 2–3
+
+#### Dini 导数　`def.dini-derivative`
+*定义*　定义：Dini 导数（四个单侧上、下导数）
+
+设 $f$ 在 $x_0$ 的某个邻域内有定义。四个 Dini 导数用差商的 $\limsup$ 与 $\liminf$ 定义：
+$D^{+}f(x_0) = \limsup_{h \to 0^{+}} \frac{f(x_0 + h) - f(x_0)}{h}$，$D_{+}f(x_0) = \liminf_{h \to 0^{+}} \frac{f(x_0 + h) - f(x_0)}{h}$，
+$D^{-}f(x_0) = \limsup_{h \to 0^{-}} \frac{f(x_0 + h) - f(x_0)}{h}$，$D_{-}f(x_0) = \liminf_{h \to 0^{-}} \frac{f(x_0 + h) - f(x_0)}{h}$。
+
+**与普通导数的关系**：$f'(x_0)$ 存在且有限，当且仅当四个 Dini 导数都等于同一个有限数；此时 $f'(x_0) = D^{+}f(x_0) = D_{+}f(x_0) = D^{-}f(x_0) = D_{-}f(x_0)$。若某个 Dini 导数为 $+\infty$ 或 $-\infty$，普通导数不存在。
+
+**为什么需要它**：普通导数要求差商的双侧极限存在；单调函数可能处处不可导，但差商的单侧上、下极限总是存在（允许 $\pm\infty$）。Dini 导数把「可导性」拆成四个总是有定义的对象，因此在证明「单调函数几乎处处可导」时可以不预设导数存在。
+
+**例子**：$f(x) = |x|$ 在 $0$ 处 $D^{+}f = D_{+}f = 1$，$D^{-}f = D_{-}f = -1$；$f(x) = x\sin(1/x)$（$f(0) = 0$）在 $0$ 处四个 Dini 导数分别为 $1, -1, -1, 1$，普通导数不存在。
+
+**用法**：单调函数 $f$ 的四个 Dini 导数都非负，且 $D^{+}f \ge D_{-}f$；结合 Vitali 覆盖可以证明单调函数的不可导点集是零测集（Lebesgue 定理，本图未单独立节点）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 7；Folland, Real Analysis, Ch. 3
 
 #### 函数极限　`def.function-limit`
 *定义*　函数极限 $\lim_{x \to x_0} f(x) = L$
@@ -14262,6 +14345,149 @@ $$\|\Phi^{-1} e\| \le \max\{ \|P_X\|, \|P_Y\| \} \, \|e\| ,$$
 
 参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis · 开映射定理与补子空间
 
+#### 完美配对　`def.perfect-pairing`
+*定义*　完美配对（perfect pairing）
+
+设 $X, Y$ 是 $\mathbb{K}$ 上的赋范空间，$\langle\cdot,\cdot\rangle : X \times Y \to \mathbb{K}$ 是双线性映射（$\mathbb{K} = \mathbb{C}$ 时对第二变元共轭线性）。称它是**完美配对**，若
+
+1. **非退化**：$\langle x, y\rangle = 0$ 对一切 $y$ 成立 $\implies x = 0$；$\langle x, y\rangle = 0$ 对一切 $x$ 成立 $\implies y = 0$；
+2. **有界**：$|\langle x, y\rangle| \le \|x\|\,\|y\|$；
+3. **两侧都定范**：$\|x\| = \sup_{\|y\| \le 1} |\langle x, y\rangle|$，$\|y\| = \sup_{\|x\| \le 1} |\langle x, y\rangle|$。
+
+三条合起来等价于：$x \mapsto \langle x, \cdot\rangle$ 与 $y \mapsto \langle \cdot, y\rangle$ 都是**等距嵌入** $X \hookrightarrow Y^*$、$Y \hookrightarrow X^*$。
+
+**例子**：Hilbert 空间 $H$ 与自身、配对 $\langle x, y\rangle$；$L^p$ 与 $L^q$（$1/p + 1/q = 1$）、配对 $\int f g$（Hölder 给有界，定范由 $g = |f|^{p-1}\operatorname{sgn} f$ 的共轭指数构造给出）。
+
+⚠ **完美配对不保证满射**：$X = \ell^1$、$Y = c_0$、$\langle x, y\rangle = \sum x_n y_n$ 满足三条（$c_0^* \cong \ell^1$ 给 $Y \to X^*$ 满，但 $X \to Y^* = \ell^\infty$ 只是等距嵌入，不满）。所以「完美」是「无废坐标 + 范数可由配对读出」，不是「互为对偶」。
+
+⭐ 把 Riesz 表示定理的两种版本放在同一框架下：Hilbert 版与 $L^p$ 版都在说「这对配对里映射是满的」——见 `thm.riesz-perfect-pairing`。
+
+📌 有限维时三条自动给出 $X \cong Y^*$（维数相同 + 单射即满射）。
+
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 对偶与自反
+
+#### Riesz 表示的配对版　`thm.riesz-perfect-pairing`
+*定理*　Riesz 表示定理：完美配对框架
+
+设 $(X, Y, \langle\cdot,\cdot\rangle)$ 是完美配对（`def.perfect-pairing`）。则
+
+(a) $x \mapsto \langle x, \cdot\rangle$ 是等距同构 $X \to Y^*$ 的像，$y \mapsto \langle \cdot, y\rangle$ 是 $Y \to X^*$ 的等距嵌入；
+
+(b) 若其中一个映射满射，则另一个也满射，且 $X \cong Y^*$、$Y \cong X^*$（等距同构）；
+
+(c) Hilbert 空间 $H$ 与 $L^p$（$1 < p < \infty$，$1/p + 1/q = 1$）的配对满足满射性，因此 $H^* \cong H$、$(L^p)^* \cong L^q$ 都是完美配对的直接推论。
+
+**证明 (a)**：由定范条件，$\|x\| = \sup_{\|y\| \le 1}|\langle x, y\rangle| = \|T x\|$，其中 $T x := \langle x, \cdot\rangle$；由非退化 $T$ 单射，故 $T$ 是等距嵌入。对 $y$ 同理。$\blacksquare$
+
+
+
+**证明 (b)**：若 $T : X \to Y^*$ 满射，则由等距性 $X \cong Y^*$。对偶化得 $X^* \cong Y^{**}$；把 (a) 用于 $Y$ 一侧得 $Y \hookrightarrow X^*$ 等距嵌入。要证满：任取 $\varphi \in X^*$，它在 $X \cong Y^*$ 下对应 $y_0 \in Y$（$\varphi(x) = \langle x, y_0\rangle$），这正是 $y \mapsto \langle\cdot, y\rangle$ 的像，故满。$\blacksquare$
+
+
+
+**证明 (c)**：Hilbert 情形就是 `thm.riesz-hilbert`（每个连续线性泛函由内积给出）；$L^p$ 情形就是 `thm.riesz-representation-lp`（$(L^p)^* \cong L^q$）。两条定理的证明里，满射性分别来自投影定理与 Radon–Nikodym（或测度论版本），配对本身只提供有界与定范。
+
+
+
+⭐ 统一的意义：两个 Riesz 定理不再像两个孤立技巧，而是同一个「完美配对 + 该配对满射」框架的两个实例；`172-audit-c1.js` 里的类比边 `analogy` 现在有了正式的共同祖先。
+
+⚠ 本图尚未立「Banach–Alaoglu / 弱拓扑 / Eberlein–Šmulian」节点；因此 (b) 的「谁满谁」只在具体例子里借 Riesz 定理验证，不试图从配对的三条公理推出满射（那是假的，见 `def.perfect-pairing` 的 $\ell^1/c_0$ 反例）。
+
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 对偶与自反；Rudin, Real and Complex Analysis, Ch. 6
+
+#### 一致凸　`def.uniformly-convex`
+*定义*　一致凸空间
+
+称赋范空间 $(X, \|\cdot\|)$ **一致凸**（uniformly convex），若对每个 $\varepsilon \in (0, 2]$ 存在 $\delta > 0$，使得
+
+$\|x\| = \|y\| = 1,\quad \|x - y\| \ge \varepsilon \implies \left\|\frac{x + y}{2}\right\| \le 1 - \delta .$
+
+即「单位球面上相距不近的两点，中点严格深入球内，且深入量只依赖距离」。
+
+**例子**：Hilbert 空间（平行四边形律给 $\|(x+y)/2\|^2 = 1 - \|x-y\|^2/4$，取 $\delta = 1 - \sqrt{1 - \varepsilon^2/4}$）；$L^p$（$1 < p < \infty$，Clarkson 不等式）；$\ell^p$（$1 < p < \infty$）。
+
+**反例**：$\ell^1$、$\ell^\infty$、$c_0$、$C[0,1]$ 都不一致凸（$\ell^1$ 里 $e_1, e_2$ 的中点仍范数 $1$；$\ell^\infty$ 里 $(1,0,\ldots)$ 与 $(1,1,0,\ldots)$ 之类的分段常值序列可构造）。
+
+⭐ 一致凸 $\implies$ 严格凸（`def.strictly-convex`）：若 $\|x\| = \|y\| = 1$、$x \ne y$，取 $\varepsilon = \|x - y\| > 0$ 即得中点范数 $< 1$。
+
+📌 一致凸是「范数一致地弯」：它把「严格凸」逐点、逐对的结论升级成对全部单位向量一致的估计，这正是 Milman–Pettis（`thm.milman-pettis`）与 Clarkson 不等式需要的定量形式。
+
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 一致凸与自反；Conway, A Course in Functional Analysis · Banach 空间
+
+#### 严格凸　`def.strictly-convex`
+*定义*　严格凸空间
+
+称赋范空间 $(X, \|\cdot\|)$ **严格凸**（strictly convex），若单位球面不含线段：
+
+$\|x\| = \|y\| = 1,\quad x \ne y \implies \left\|\frac{x + y}{2}\right\| < 1 .$
+
+等价地：$\|x + y\| = \|x\| + \|y\|$ 且 $x, y \ne 0$ 时必有 $y = \lambda x$（$\lambda > 0$）。
+
+**例子**：Hilbert 空间、$\ell^p$ 与 $L^p$（$1 < p < \infty$）。
+
+**反例**：$\ell^1$、$\ell^\infty$、$c_0$、$C[0,1]$；$\mathbb{R}^2$ 上的 $\|(x,y)\| = \max(|x|, |y|)$。
+
+⭐ 严格凸 $\iff$ 单位球面上每点的「面」是单点 $\iff$ 每个范数可达的泛函在单位球上有唯一最大值点。
+
+⚠ 严格凸 $\not\implies$ 一致凸（`def.uniformly-convex`）：存在严格凸但不一致凸的 Banach 空间（如某些加权序列空间）；一致凸是更强的定量条件。
+
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 一致凸与自反；Conway, A Course in Functional Analysis · Banach 空间
+
+#### 自反空间　`def.reflexive-space`
+*定义*　自反 Banach 空间
+
+设 $X$ 是 Banach 空间，$J_X : X \to X^{**}$ 是自然嵌入 $J_X(x)(\varphi) = \varphi(x)$。称 $X$ **自反**（reflexive），若 $J_X$ 是满射（从而是等距同构）。
+
+自然嵌入总是等距的（Hahn–Banach）：$\|J_X x\| = \sup_{\|\varphi\| \le 1}|\varphi(x)| = \|x\|$。所以自反 $\iff$ $X^{**}$ 中每个元素都来自 $X$。
+
+**例子**：Hilbert 空间；$L^p$、$\ell^p$（$1 < p < \infty$，见 `cor.lp-reflexive`）；有限维空间。
+
+**反例**：$c_0$（$c_0^{**} = \ell^\infty \ne c_0$）、$\ell^1$（$\ell^{1**} = (\ell^\infty)^* \supsetneq \ell^1$）、$C[0,1]$。
+
+⭐ 自反的核心用途：有界序列有弱收敛子列（Eberlein–Šmulian；本图尚未立弱拓扑节点），这是变分存在性与 Milman–Pettis 的入口。
+
+📌 与配对语言的关系：$X$ 自反 $\iff$ 完美配对 $(X, X^*)$ 的两个嵌入都满（`def.perfect-pairing`、`thm.riesz-perfect-pairing`）。
+
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 对偶与自反；Conway, A Course in Functional Analysis · Banach 空间
+
+#### Milman–Pettis 定理　`thm.milman-pettis`
+*定理*　一致凸 Banach 空间自反（Milman–Pettis）
+
+一致凸 Banach 空间（`def.uniformly-convex`）是自反的（`def.reflexive-space`）。
+
+⚠ **本节点仍标 skeleton**：证明需要本图没有的弱拓扑工具，这里只钉死缺口。
+
+
+
+证明路线（Milman 1938 / Pettis 1939）：设 $X$ 一致凸，任取 $\xi \in X^{**}$、$\|\xi\| = 1$。由 Goldstine 定理，$\xi$ 是单位球的弱*-闭包点，取网 $x_\alpha \in B_X$ 弱*收敛到 $\xi$。用一致凸性可证 $x_\alpha$ 是范数 Cauchy：若 $\|x_\alpha - x_\beta\| \ge \varepsilon$，则中点 $\|(x_\alpha + x_\beta)/2\| \le 1 - \delta(\varepsilon)$，但其弱*极限是 $\xi$、范数 $\ge \|\langle \xi, \varphi\rangle\| - o(1)$，令 $\alpha, \beta$ 沿网取极限得 $1 \le 1 - \delta$ 矛盾。故 $x_\alpha \to x \in X$（范数），从而 $\xi = J_X x$。
+
+
+
+缺口：Goldstine 定理（$B_X$ 在 $B_{X^{**}}$ 中弱*稠密）本图无节点；弱*拓扑与网收敛本图无节点。这两条不是本图现有节点能推出的。
+
+📌 本图已有 `cor.lp-reflexive` 直接对 $L^p$ 验证自反；Milman–Pettis 是把「一致凸」这个几何条件转成「自反」的通用桥梁。
+
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 一致凸与自反；Conway, A Course in Functional Analysis · Banach 空间
+
+#### James 定理　`thm.james`
+*定理*　James 定理：自反 $\iff$ 每个泛函达到范数
+
+Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\varphi \in X^*$ 都在单位球 $B_X$ 上达到其范数：存在 $x \in B_X$ 使 $\varphi(x) = \|\varphi\|$。
+
+⚠ **本节点仍标 skeleton**：证明需要弱紧性（Banach–Alaoglu）与分离定理，本图无节点。
+
+
+
+证明路线：($\implies$ 方向) 自反 $\implies$ $B_X$ 弱紧（Eberlein–Šmulian），$\varphi$ 弱连续，故在弱紧集上达到最大值。($\Longleftarrow$ 方向) 逆否：若 $X$ 不自反，James 构造一个 $\varphi \in X^*$ 在 $B_X$ 上不可达（经典 James 定理的「分离 + 对角线」论证，1951/1957）。
+
+
+
+缺口：Banach–Alaoglu 定理、弱拓扑的紧性、以及 James 的反向构造；本图均无节点。
+
+📌 本图只有正向的具体例子：Hilbert 空间与 $L^p$（$1<p<\infty$）自反，故每个泛函达到范数（由 Riesz 表示可直接看出）。
+
+参考：Conway, A Course in Functional Analysis · Banach 空间；Diestel, Sequences and Series in Banach Spaces, Ch. 3
+
 #### Fréchet 导数　`thm.frechet-derivative`
 *定义*　Fréchet 导数：赋范空间之间的导数就是有界线性算子
 
@@ -14309,7 +14535,7 @@ $$\text{Fréchet 可微} \implies \text{Gâteaux 可微，且两者相等} ,$$
 #### Hilbert 空间　`def.hilbert-space`
 *定义*　Hilbert 空间（完备的内积空间）
 
-设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（本图约定：**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。
+设 $(H, \langle\cdot, \cdot\rangle)$ 是 $\mathbb{K}$ 上的内积空间（**对第一变元线性，对第二变元共轭线性**），配范数 $\|x\| := \sqrt{\langle x, x\rangle}$。
 
 若 $(H, \|\cdot\|)$ 完备，则叫 **Hilbert 空间**。
 
@@ -14577,25 +14803,21 @@ $\|u^*\| = \|u\|$ 用两次 sup 交换。
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 酉算子　`def.unitary-operator`
-*定义*　酉算子与部分等距
+*定义*　酉算子
 
 设 $u \in B(H)$。称 $u$ 是**酉算子**（unitary），若
 
 $$u\,u^* = u^*\,u = I .$$
 
-称 $u$ 是**部分等距**（partial isometry），若 $u\,u^*$ 与 $u^*u$ 都是正交投影。
+等价地：$u$ 是保内积的满射，或 $u^* = u^{-1}$。
 
-酉 $\iff$ 保内积的可逆算子（$\langle ux, uy\rangle = \langle x, y\rangle$ 且满射）。
+酉算子就是「可逆的等距」：$\langle ux, uy\rangle = \langle x, y\rangle$ 且 $u$ 满射。
 
-⚠️ **无穷维里「等距」$\ne$「酉」**：单侧移位 $S(x_1, x_2, \ldots) = (0, x_1, x_2, \ldots)$ 满足 $\|Sx\| = \|x\|$（等距），但不满；
-
-$S^*S = I$ 而 $S\,S^* = I - P_{\ker S^*}$ 是投影。
-
-这就是「部分等距」这个概念的用处：它把「在某个闭子空间上是等距」包起来。
+⚠️ **无穷维里「等距」$\ne$「酉」**：单侧移位 $S(x_1, x_2, \ldots) = (0, x_1, x_2, \ldots)$ 满足 $\|Sx\| = \|x\|$（等距），但不满；$S$ 是部分等距而不是酉算子。部分等距的完整定义与等价条件见 `def.partial-isometry`。
 
 ⭐ 极分解 $u = V|u|$（$V$ 部分等距，$|u| = \sqrt{u^*u}$）就是部分等距的标准出场方式。有限维版本见 `def.unitary-matrix`。
 
-参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Rudin, Functional Analysis, Ch. 12
 
 #### 正交基　`def.orthonormal-set`
 *定义*　标准正交集、完备性与正交基
@@ -14774,6 +14996,49 @@ $$\delta \|A^{-1} y\|^{2} \le |L(A^{-1} y, A^{-1} y)| = |\langle A^{-1} y, y \ra
 
 参考：泛函分析讲义（用户手写笔记，2026-11-09）；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 5（Lax–Milgram）
 
+#### 部分等距　`def.partial-isometry`
+*定义*　部分等距与等价刻画
+
+设 $u \in B(H)$。称 $u$ 是**部分等距**（partial isometry），若 $u^*u$ 是正交投影（记 $P = u^*u$）。
+
+此时 $u$ 在 $(\ker u)^\perp$ 上是等距，且 $u\,u^*$ 也是正交投影。
+
+**四个等价条件**（定义取 (3)）：
+
+
+
+(1) $u$ 在 $(\ker u)^\perp$ 上是等距：对 $x \in (\ker u)^\perp$ 有 $\|u x\| = \|x\|$；
+
+
+
+(2) $u = u\,u^*u$；
+
+
+
+(3) $u^*u$ 是正交投影；
+
+
+
+(4) $u\,u^*$ 是正交投影。
+
+
+
+证明的骨架：若 (3) 成立，令 $P = u^*u$。则 $\|u x\|^2 = \langle u^*u x, x\rangle = \|P x\|^2$。正交投影 $P$ 的像是 $(\ker P)^\perp$，而 $\ker P = \ker u$，故在 $(\ker u)^\perp$ 上 $Px = x$，得 (1)。由 (1)，$u$ 与 $uP$ 在 $\ker u$ 上同为 $0$、在 $(\ker u)^\perp$ 上同为 $u$，得 (2)。(2) 两边取伴随得 $u\,u^* = (u\,u^*)^2$，且 $u\,u^*$ 自伴，故 (4)。对 $u^*$ 重复 (3)$\implies$(4) 得 (4)$\implies$(3)，四者等价。
+
+
+
+**初始与最终投影**：$P = u^*u$ 的像是 $(\ker u)^\perp$（初始空间），$Q = u\,u^*$ 的像是 $\operatorname{im} u$（最终空间），且 $u$ 把 $P H$ 等距同构到 $Q H$。
+
+
+
+⚠️ 单侧移位 $S(x_1, x_2, \ldots) = (0, x_1, x_2, \ldots)$ 是部分等距但不是酉算子：$S^*S = I$，而 $S\,S^* = I - \operatorname{proj}_{\ker(S^*)}$ 是投影（不是 $I$）。
+
+
+
+⭐ 极分解与极坐标分解里出现的都是部分等距；酉算子正是初始投影与最终投影都为 $I$ 的特殊情形。
+
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Rudin, Functional Analysis, Ch. 12
+
 ### 星团：C(K) 与 Stone–Weierstrass
 > 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
 
@@ -14804,19 +15069,20 @@ $E$ 赋范时它就是一致范数 $\|f\| = \sup_x \|f(x)\|$。
 参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 #### 等度连续　`def.equicontinuous`
-*定义*　等度连续与一致等度连续
+*定义*　等度连续（逐点）
 
 设 $K$ 拓扑空间、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。
 
 - $\mathcal{H}$ 在 $x_0 \in K$ **等度连续**：$\forall \varepsilon > 0$ 存在 $x_0$ 的邻域 $U$ 使 $d(f(x), f(x_0)) < \varepsilon$ 对**一切** $f \in \mathcal{H}$、$x \in U$ 同时成立。
 - $\mathcal{H}$ 在 $K$ 上等度连续：在每点 $x \in K$ 等度连续。
-- $K$ 度量空间时，$\mathcal{H}$ **一致等度连续**：$\forall \varepsilon > 0$ $\exists \eta > 0$ 使 $\delta(x, y) < \eta \implies d(f(x), f(y)) < \varepsilon$ 对一切 $f \in \mathcal{H}$ 同时成立。
 
 ⚠️ 要害在「**对一切 $f$ 同时**」。去掉这一条就只是「每个 $f$ 各自连续」—— 那是 $\mathcal{H} \subseteq C(K,E)$ 的定义，什么也没说。
 
 $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 ⭐ 这是紧性（Arzelà–Ascoli）里**唯一非平凡**的假设：逐点全有界只是「不发散」，等度连续才是「不会越抖越厉害」。
+
+📌 $K$ 是度量空间时还有更强的一致版本，见 `def.uniformly-equicontinuous`；$K$ 紧时二者等价（`thm.equicontinuous-uniform`）。
 
 参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
@@ -14978,6 +15244,25 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 ⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。
 
 参考：Rudin, Functional Analysis · Stone–Weierstrass 定理；Bernstein 1912
+
+#### 一致等度连续　`def.uniformly-equicontinuous`
+*定义*　一致等度连续
+
+设 $(K, \delta)$ 度量空间、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。称 $\mathcal{H}$ **一致等度连续**，若
+
+$$\forall \varepsilon > 0\ \exists \eta > 0:\quad \delta(x, y) < \eta \implies d(f(x), f(y)) < \varepsilon \quad (\forall f \in \mathcal{H},\ \forall x, y \in K).$$
+
+即 $\eta$ 不依赖 $x, y, f$。
+
+一致等度连续 $\implies$ 逐点等度连续（取 $y = x_0$ 即得逐点定义），见 `imp.fa-uniform-eq-pointwise`。
+
+反向在 $K$ 紧时成立：`thm.equicontinuous-uniform`（证明用有限覆盖 / Lebesgue 数）。
+
+⚠️ 非紧时反向不成立：$K = \mathbb{R}$、$f_n(x) = x/n$ 的族逐点等度连续（每点附近振幅一致小），但在 $\mathbb{R}$ 上不一致等度连续（$|f_n(n) - f_n(n+1)| = 1/n$，$\eta$ 需随 $n$ 变）。
+
+⭐ Arzelà–Ascoli 的「等度连续」在紧度量空间上就是这一条；`thm.equicontinuous-uniform` 是把逐点版本升级成它的桥。
+
+参考：Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations · 等度连续与 Arzelà–Ascoli
 
 ### 星团：Baire 纲与三大定理
 > 造出一把「拓扑大小」的尺子（无处稠密 → 第一/第二纲 → 剩余集），然后一次抽出三大定理：一致有界（Banach–Steinhaus）、开映射（含逆算子）、闭图像。
@@ -38615,7 +38900,7 @@ $$L_{(hg)^{-1}} = L_{g^{-1}}\circ L_{h^{-1}},\qquad L_{h^{-1}}\circ L_{h} = \ope
 
 $k = 1$ 时两组互为对偶基 —— 这正是活动标架法（`def.moving-frame`）在群上的版本：标架自身不动，动的只是点。
 
-**可定向性**：$k = n$ 时 $\bigwedge^{n}\mathfrak{g}^{\ast}$ 一维，取非零元左平移出去得到一个处处非零的 $n$-形式，由 `prop.volume-form-orientation` 得**每个 Lie 群都可定向**（$S^{1}$、$\operatorname{SO}(3)$、$\operatorname{GL}(n,\mathbb{R})$ 都如此，而一般流形未必）。
+**可定向性**：$k = n$ 时 $\bigwedge^{n}\mathfrak{g}^{\ast}$ 一维，取非零元左平移出去得到一个处处非零的 $n$-形式，由 `prop.lie-group-orientable`（左不变顶次形式处处非零）得**每个 Lie 群都可定向**（$S^{1}$、$\operatorname{SO}(3)$、$\operatorname{GL}(n,\mathbb{R})$ 都如此，而一般流形未必）。
 
 **Haar 测度的那一半**：$\omega^{1}\wedge\cdots\wedge\omega^{n}$ 是左不变的体积形式，它的绝对值给出左不变测度（Haar 测度）。紧群上左不变与右不变只差一个常数（模函数），非紧时未必 —— 本图只用形式这一面。
 
@@ -38704,6 +38989,25 @@ $$\operatorname{Lie}(G) \cong \mathfrak{g},$$
 131 的 `def.lie-algebra` notes 里那句「Lie 代数不能复原群」说的就是这件事。
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 第三定理与 Lie 对应；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 单连通 Lie 群与 Lie 代数
+
+#### Lie 群可定向　`prop.lie-group-orientable`
+*命题*　每个 Lie 群都可定向
+
+设 $G$ 是 $n$ 维 Lie 群（$n \ge 1$）。则 $G$ **可定向**，而且定向可选成左不变的：取 $\mathfrak{g}^{\ast}$ 中任一非零的 $n$-形式 $\alpha$，左平移到 $G$ 上得 $\omega$（`def.left-invariant-form`），则 $\omega$ 处处非零，故给出一个定向。
+
+也就是说，在 Lie 群上「可定向」是**免费**的：不管它紧不紧、单不单连通，都自带一个定向。
+
+**为什么处处非零**：$n$-形式空间在每点是 $1$ 维的，而左平移 $L_{g}$ 是微分同胚，$L_{g}^{\ast}$ 在顶次形式上就是乘一个非零标量。起点 $\alpha \ne 0$ $\implies$ $\omega_{g} = L_{g^{-1}}^{\ast}\alpha \ne 0$。再走 `prop.volume-form-orientation`（处处非零顶次形式 $\iff$ 可定向）即得结论。
+
+这里用的是**左**不变形式；换成右不变形式给出另一个定向，两者相差模函数的符号。
+
+**定向与 Haar 测度是两件事**：$|\omega|$ 给出左不变密度（Haar 测度），它不依赖定向；定向只决定「积分带不带符号」。紧群上模函数 $\Delta \equiv 1$（左右 Haar 测度差常数），非紧时可以差一个正函数。
+
+**反过来不成立**：可定向推不出有 Lie 群结构。$\mathbb{RP}^{2}$ 是不可定向的齐性空间（$\operatorname{SO}(3)$ 的商），说明「群作用的商」既不必可定向、也未必有群结构；可定向的 $S^{2}$ 也不是 Lie 群（球面里只有 $S^{1}, S^{3}$ 能承载 Lie 群结构）。
+
+⚠️ 本图不展开模函数、左右不变测度的细节，也不证「哪些球面是 Lie 群」。
+
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups」· 左不变形式与体积形式；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 15 · orientations and volume forms
 
 ## 星系：数论（Number Theory）
 > 整数环的算术：整除与带余除法、辗转相除与 Bézout、素数与唯一分解、同余与剩余类环、中国剩余定理、Euler 函数与 Fermat 小定理。
@@ -40406,6 +40710,19 @@ $$d(y_k, y_l) < 2/K$$
 #### 定义引用：「完备」→ 子集的紧性刻画　`def-link.complete-subset-equiv`
 
 ⚠ 这条命题的**前提**就是「$X$ 完备」，所以它引用完备的定义。
+
+#### 定义引用：「距离空间」→ 度量空间的连续　`def-link.mc-metric`
+
+连续性用两个度量空间的 $d$ 与 $\rho$ 写。
+
+#### 度量空间的连续 ⟹ 连续映射　`imp.metric-continuity-open-preimage`
+*度量连续 $\implies$ 拓扑连续（开集原像开）*
+
+设 $f : (X,d) \to (Y,\rho)$ 在每点 $\varepsilon$-$\delta$ 连续，$V \subseteq Y$ 开，$x_0 \in f^{-1}(V)$。
+取 $\varepsilon > 0$ 使 $B_Y(f(x_0), \varepsilon) \subseteq V$；$\varepsilon$-$\delta$ 给 $\delta > 0$ 使 $f(B_X(x_0, \delta)) \subseteq B_Y(f(x_0), \varepsilon)$。
+于是 $B_X(x_0, \delta) \subseteq f^{-1}(V)$，即 $f^{-1}(V)$ 在 $X$ 中开；按 `def.continuous-map` 的定义 $f$ 连续。$\blacksquare$
+
+> 反向（拓扑连续 $\implies$ $\varepsilon$-$\delta$）同样直接：$B_Y(f(x_0), \varepsilon)$ 开，原像开给 $\delta$。
 
 #### 环与代数 + 单调类 ⟹ 环 → σ-环 的判据　`imp.ring-monotone-sigma`
 *环 + 单调类 $\implies$ σ-环*
@@ -43179,7 +43496,7 @@ $$x' - x \le |x' - x_n| + |x_n - x| < 2\varepsilon = x' - x,$$
 
 **(iv)** 若 $n_k \ge k$（子列指标的单调性），则 $n_k \ge N$ 当 $k \ge N$，于是 $|x_{n_k} - x| < \varepsilon$。$\blacksquare$
 
-#### 连续 + 极限的四则运算与保序性 ⟹ 连续函数的运算　`imp.continuous-arithmetic`
+#### 连续（ε-δ 判据） + 极限的四则运算与保序性 ⟹ 连续函数的运算　`imp.continuous-arithmetic`
 *连续的定义 + 极限四则运算 $\implies$ 连续函数的运算*
 
 前五条：连续等价于 $\lim_{x \to x_0} f(x) = f(x_0)$，把 `prop.limit-arithmetic` 的结论逐条翻译过来即可（和、差、数乘、积、绝对值）。
@@ -43353,7 +43670,7 @@ $$F(f)\,F(f^{-1}) = F(f f^{-1}) = F(1_Y) = 1_{F(Y)}.$$
 
 函数极限的 $\varepsilon$-$\delta$ 定义里，两个不等式都是绝对值的。
 
-#### 定义引用：「绝对值 |x|」→ 连续　`def-link.abs-continuous`
+#### 定义引用：「绝对值 |x|」→ 连续（ε-δ 判据）　`def-link.abs-continuous`
 
 连续的定义把「接近」写成 $|x - x_0| < \delta$ 与 $|f(x) - f(x_0)| < \varepsilon$。
 
@@ -45426,7 +45743,7 @@ $\sigma$-局部有限就是拿「局部有限族」当积木，可数多个拼�
 
 闭加细是从仿紧给的局部有限开加细收缩出来的，所以本命题坐在仿紧的定义上。
 
-#### 定义引用：「覆盖的加细」→ 迈克尔仿紧判别法　`dep.pcp-closedref-michael`
+#### 定义引用：「覆盖的加细」→ Michael 仿紧判别法　`dep.pcp-closedref-michael`
 
 Michael 判别法里「加细」故意**不**要求成员是开集 —— 这正是它与仿紧定义的区别所在。
 
@@ -49320,6 +49637,21 @@ $$D(f_{0}\,\mathrm{d}g_{1}\wedge\cdots\wedge\mathrm{d}g_{k}) = D(f_{0})\,\mathrm
 
 ⭐ 这条定理的形状值得记住：**两个「同类型的算子」在生成元上一致就整体一致**。第 (2)(3) 步是「同类型」的验证，第 (4) 步是「生成元上一致」。$\Omega^{\bullet}(M)$ 由函数与它们的外微分生成，是整个证明唯一的「几何输入」。
 
+#### 定义引用：「可定向流形」→ Lie 群可定向　`e2.definition`
+
+结论用的就是「可定向流形」这个概念：处处非零的顶次形式给出定向，判据见 `prop.volume-form-orientation`。
+
+#### Lie 群 + 左不变形式 + 定向与体积形式 ⟹ Lie 群可定向　`imp.lieg-orientable`
+*左不变顶次形式处处非零 $\implies$ Lie 群可定向*
+
+设 $\dim G = n$，取 $\mathfrak{g}^{\ast} = T_{e}^{\ast}G$ 中任一非零元素 $\alpha$，并令 $\omega$ 为它的左平移：$\omega_{g} := L_{g^{-1}}^{\ast}\alpha$（`def.left-invariant-form` 的构造；左不变性即 $L_{h}^{\ast}\omega = \omega$）。
+
+**处处非零**：$L_{g^{-1}}$ 是微分同胚，$L_{g^{-1}}^{\ast}$ 是 $n$ 维空间 $\Lambda^{n}T_{g}^{\ast}G$ 上的线性同构，故把非零元送到非零元：$\omega_{g} \ne 0$ 对一切 $g \in G$。
+
+**给出定向**：处处非零的 $n$-形式正是一个定向（`prop.volume-form-orientation`）。于是 $G$ 可定向，且该定向在左平移下不变。∎
+
+> 三段分别是「取非零顶次形式 $\to$ 证处处非零 $\to$ 用可定向判据」，全程不用紧性、连通性或任何度量结构 —— 这就是「Lie 群可定向是免费的」的确切含义。131 的 `def.volume-form` 是黎曼体积（要度量），与这里的左不变形式是两条不同的路子。
+
 #### Taylor 公式 ⟹ Lagrange 中值定理　`imp.derived-mvt-from-taylor`
 *Taylor 公式取 $n=0$ 就是 Lagrange 中值定理*
 
@@ -49739,7 +50071,7 @@ $\blacksquare$
 
 > 两个源缺一不可：Arzelà–Ascoli 给紧性，Cauchy 不等式把「全纯」换成「等度连续」—— 一般连续函数族没有这一条。
 
-#### 全纯函数 ⟹ 复数初等函数　`e2.implication`
+#### 全纯函数 ⟹ 复数初等函数　`e3.implication`
 *幂级数在全平面收敛 $\implies$ 逐项求导 $\implies$ 全纯*
 
 三个定义式都是收敛半径 $\infty$ 的幂级数（$e^{z}$ 的系数 $1/n!$ 使 $\limsup |1/n!|^{1/n} = 0$；$\cos, \sin$ 由 $e^{iz}$ 组合而来）。
@@ -49748,7 +50080,7 @@ $\blacksquare$
 
 > 这一步把「初等函数」正式接进复分析：它们不是新公理，而是幂级数。
 
-#### 复数初等函数 ⟹ 指数函数的局部逆　`e3.implication`
+#### 复数初等函数 ⟹ 指数函数的局部逆　`e4.implication`
 *$\exp' = \exp \ne 0$ $\implies$ 局部双全纯*
 
 由逐项求导 $(e^{z})' = \sum_{n \ge 1} n z^{n-1}/n! = \sum_{m \ge 0} z^{m}/m! = e^{z}$。
@@ -49757,7 +50089,7 @@ $\blacksquare$
 
 > 局部逆永远存在 —— 缺的只是「能不能整体拼起来」，那由 `prop.single-valued-branch` 回答。
 
-#### 多值函数与分支 + 指数函数的局部逆 ⟹ 单值支的存在判据　`e4.implication`
+#### 多值函数与分支 + 指数函数的局部逆 ⟹ 单值支的存在判据　`e5.implication`
 *把局部逆沿曲线拼接：单值支的判据*
 
 **定义对齐**：`def.branch` 把「多值函数」定义成「每点一个值集」，本节点的单值支就是它的连续选取。
@@ -49770,7 +50102,7 @@ $\blacksquare$
 
 > 局部逆（上一节点）负责「处处能拼一小段」，这一节点负责「整圈拼回来不跳」—— 缺的正是绕数条件。
 
-#### 绕数 + 复围道积分 ⟹ 绕数的积分表示　`e5.implication`
+#### 绕数 + 复围道积分 ⟹ 绕数的积分表示　`e6.implication`
 *绕数 = $\frac{1}{2\pi i}\oint \mathrm{d}z/(z-a)$*
 
 平移使 $a = 0$。令 $\varphi(t) := \int_{0}^{t} \gamma'(s)/\gamma(s)\,\mathrm{d}s$。则
@@ -49783,7 +50115,7 @@ $\varphi(1) = \oint_{\gamma}\mathrm{d}z/z$，而 $\varphi(1)/(2\pi i)$ 关于 $a
 
 > 几何量换成积分，是后面辐角原理能算零点个数的技术前提。
 
-#### 绕数的积分表示 + 复围道积分 ⟹ 绕数的同伦不变性　`e6.implication`
+#### 绕数的积分表示 + 复围道积分 ⟹ 绕数的同伦不变性　`e7.implication`
 *同伦 $\implies$ 绕数不变（连续性 + 整数值）*
 
 ⛔ **本条为骨架（待重写）**：陈述只要求**连续**同伦 $H$，但围道积分只对**分段 $C^{1}$** 的曲线有定义，而下面那句「$\gamma_{s}$ 及其导数关于 $s$ 连续（$H$ 光滑）」把 $H$ 悄悄提升成了光滑。补法（本图未展开）：连续同伦可用分段线性的多边形同伦逼近，于是只需在多边形上积分。
@@ -49796,7 +50128,7 @@ $N$ 取整数值而 $[0,1]$ 连通，连续整值函数必为常数，于是 $N(
 
 > 复分析与拓扑之间的第一根铰链：围道积分只看同伦类。
 
-#### 全纯函数的 Taylor 展开 ⟹ 零点的孤立性与阶　`e7.implication`
+#### 全纯函数的 Taylor 展开 ⟹ 零点的孤立性与阶　`e8.implication`
 *Taylor 展开的首次非零项 $\implies$ 零点的阶*
 
 把 $f$ 在 $z_{0}$ 处展开：$f(z) = \sum_{n \ge 1} a_{n}(z - z_{0})^{n}$（$f(z_{0}) = 0$ 故常数项为零）。
@@ -49809,7 +50141,7 @@ $$f(z) = (z - z_{0})^{m}\underbrace{\left(a_{m} + a_{m+1}(z - z_{0}) + \cdots\ri
 
 > 这一条是「唯一性定理」与「辐角原理按阶数零点」的共同前提。
 
-#### 零点的孤立性与阶 ⟹ 唯一性定理　`e8.implication`
+#### 零点的孤立性与阶 ⟹ 唯一性定理　`e9.implication`
 *零点孤立 + 区域连通 $\implies$ 恒等*
 
 令 $h := f - g$，$Z$ 为 $h$ 的零点集，$z^{*} \in \Omega$ 是 $Z$ 的聚点。由连续性 $h(z^{*}) = 0$。
@@ -49820,7 +50152,7 @@ $$f(z) = (z - z_{0})^{m}\underbrace{\left(a_{m} + a_{m+1}(z - z_{0}) + \cdots\ri
 
 > 解析延拓的合法性来源：有聚点就够了。
 
-#### Laurent 展开定理 + 孤立奇点及其分类 + Riemann 可去奇点定理 ⟹ Casorati–Weierstrass 定理　`e9.implication`
+#### Laurent 展开定理 + 孤立奇点及其分类 + Riemann 可去奇点定理 ⟹ Casorati–Weierstrass 定理　`e10.implication`
 *反证：像集漏一个圆盘 $\implies$ 奇点可去 $\implies$ 矛盾*
 
 设存在 $w_{0}$, $\rho > 0$ 使 $f(U) \cap B(w_{0}, \rho) = \emptyset$，其中 $U$ 是 $z_{0}$ 的去心邻域。
@@ -49831,7 +50163,7 @@ $$f(z) = (z - z_{0})^{m}\underbrace{\left(a_{m} + a_{m+1}(z - z_{0}) + \cdots\ri
 
 > 证明的力量全在「有界 $\implies$ 可去」这一句。
 
-#### Morera 定理 ⟹ Weierstrass 收敛性定理　`e10.implication`
+#### Morera 定理 ⟹ Weierstrass 收敛性定理　`e11.implication`
 *Morera 判极限全纯；Cauchy 公式判导数收敛*
 
 **全纯性**：设 $T \subset \Omega$ 是闭三角形。每个 $f_{k}$ 全纯，故 $\oint_{\partial T} f_{k}\,\mathrm{d}z = 0$（`thm.cauchy-goursat`）。$\partial T$ 紧、$f_{k} \to f$ 在其上一致，故
@@ -49844,7 +50176,7 @@ $$\oint_{\partial T} f\,\mathrm{d}z = \lim_{k \to \infty}\oint_{\partial T} f_{k
 
 > 「全纯在一致收敛下封闭」—— 正规族理论的地基。
 
-#### Bolzano–Weierstrass 定理 + 一致收敛 ⟹ Arzelà–Ascoli 定理　`e11.implication`
+#### Bolzano–Weierstrass 定理 + 一致收敛 ⟹ Arzelà–Ascoli 定理　`e12.implication`
 *对角线段 + 有限 ε-网 $\implies$ 一致收敛子列*
 
 取可数稠密集 $\{x_{1}, x_{2}, \ldots\} \subset X$（紧距离空间可分）。一致有界 $\implies$ $\{f_{n}(x_{1})\}$ 有界，由 Bolzano–Weierstrass 取收敛子列；在这个子列里再取使 $\{f_{n}(x_{2})\}$ 收敛的子列；如此下去，取对角线 $g_{k}$，则 $g_{k}(x_{j})$ 对每个 $j$ 收敛。
@@ -49857,7 +50189,7 @@ $$|g_{k}(x) - g_{l}(x)| \le |g_{k}(x) - g_{k}(x_{j})| + |g_{k}(x_{j}) - g_{l}(x_
 
 > 等度连续性把「逐点收敛」升级成「一致收敛」—— 这正是全纯族免费得到的东西。
 
-#### Arzelà–Ascoli 定理 + Weierstrass 收敛性定理 + Cauchy 不等式 ⟹ Montel 定理　`e12.implication`
+#### Arzelà–Ascoli 定理 + Weierstrass 收敛性定理 + Cauchy 不等式 ⟹ Montel 定理　`e13.implication`
 *Cauchy 不等式给出导数界 $\implies$ 等度连续 $\implies$ 对角取子列*
 
 取紧集穷竭 $K_{1} \subset K_{2} \subset \cdots$。设在 $K_{j}$ 的 $r_{j}$-邻域上 $|f| \le M_{j}$（由局部一致有界性，紧集上有限覆盖可得）。`thm.cauchy-inequality` 给出
@@ -49868,7 +50200,7 @@ $$|f'(z)| \le \frac{M_{j}}{r_{j}},\qquad z \in K_{j},\ f \in \mathcal{F},$$
 
 > Montel = Arzelà–Ascoli + Cauchy 不等式：复分析里「有界」自动变成「等度连续」。
 
-#### Rouché 定理 + 最大模原理 + 零点的孤立性与阶 ⟹ 开映射定理　`e13.implication`
+#### Rouché 定理 + 最大模原理 + 零点的孤立性与阶 ⟹ 开映射定理　`e14.implication`
 *Rouché 数零点 $\implies$ 像含小圆盘 $\implies$ 开映射*
 
 取 $z_{0} \in \Omega$、$w_{0} = f(z_{0})$，平移使 $w_{0} = 0$。由 `prop.zero-isolated`，$z_{0}$ 是孤立零点，取 $\rho > 0$ 使 $f$ 在 $0 < |z - z_{0}| \le \rho$ 上无零点，令 $\delta := \min_{|z - z_{0}| = \rho}|f(z)| > 0$。
@@ -49881,7 +50213,7 @@ $$|f'(z)| \le \frac{M_{j}}{r_{j}},\qquad z \in K_{j},\ f \in \mathcal{F},$$
 
 > 开映射 = 非常数全纯函数不能把开集压扁。
 
-#### Montel 定理 + Hurwitz 定理 + Schwarz 引理 + 单值支的存在判据 + Cauchy 不等式 + 分式线性变换 + Weierstrass 收敛性定理 ⟹ Riemann 映射定理　`e14.implication`
+#### Montel 定理 + Hurwitz 定理 + Schwarz 引理 + 单值支的存在判据 + Cauchy 不等式 + 分式线性变换 + Weierstrass 收敛性定理 ⟹ Riemann 映射定理　`e15.implication`
 *正规族 + 极值元 + 平方根技巧：映满圆盘*
 
 **族不空**：因 $\Omega \ne \mathbb{C}$，取 $a \notin \Omega$；$\Omega$ 单连通 $\implies$ $\sqrt{z - a}$ 有全纯单值支（`prop.single-valued-branch`）。
@@ -49902,7 +50234,7 @@ $$|f'(z)| \le \frac{M_{j}}{r_{j}},\qquad z \in K_{j},\ f \in \mathcal{F},$$
 
 > 本图里最深的一条；证明的三根支柱（Montel / Hurwitz / Schwarz）都各自是独立节点。
 
-#### Riemann 映射定理 + Schwarz–Pick 定理 ⟹ Poincaré 圆盘与双曲几何　`e15.implication`
+#### Riemann 映射定理 + Schwarz–Pick 定理 ⟹ Poincaré 圆盘与双曲几何　`e16.implication`
 *圆盘上的度量、等距群 = 自同构，Schwarz–Pick 是等距性*
 
 **拉回计算**：设 $\varphi : \mathbb{D} \to \mathbb{D}$ 全纯，Poincaré 度量沿 $\varphi$ 拉回的系数为 $\frac{4|\varphi'(z)|^{2}}{(1 - |\varphi(z)|^{2})^{2}}$，与原度量之比恰是 $\left(\frac{|\varphi'(z)|}{1 - |\varphi(z)|^{2}}\Big/\frac{1}{1 - |z|^{2}}\right)^{2}$。
@@ -49915,7 +50247,7 @@ $$|f'(z)| \le \frac{M_{j}}{r_{j}},\qquad z \in K_{j},\ f \in \mathcal{F},$$
 
 > 三种常曲率几何的入口：圆盘 = 双曲，球面 = 椭圆，平面 = 欧氏。
 
-#### 绕数的同伦不变性 + Rouché 定理 ⟹ Brouwer 不动点定理（圆盘）　`e16.implication`
+#### 绕数的同伦不变性 + Rouché 定理 ⟹ Brouwer 不动点定理（圆盘）　`e17.implication`
 *全纯情形：Rouché 直接给不动点；连续情形另需 $\pi_{1}(S^{1}) \ne 0$*
 
 **全纯情形**（本图能严格给出的部分）：设 $f : \overline{\mathbb{D}} \to \overline{\mathbb{D}}$ 全纯。在 $|z| = 1$ 上 $|f(z)| \le 1 = |z|$，且 $f(z) - z = 0$ 与 $z = 0$ 不能同时成立，故 $f - z$ 在边界上无零点。
@@ -49928,7 +50260,7 @@ $$|f'(z)| \le \frac{M_{j}}{r_{j}},\qquad z \in K_{j},\ f \in \mathcal{F},$$
 
 > 节点正文里已如实标注：连续版需要基本群，纯复分析只给出全纯版。
 
-#### Brouwer 不动点定理（圆盘） ⟹ Borsuk–Ulam 定理（二维）　`e17.implication`
+#### Brouwer 不动点定理（圆盘） ⟹ Borsuk–Ulam 定理（二维）　`e18.implication`
 *反证：奇映射的度既是奇数又必须是 0*
 
 设连续 $f : S^{2} \to \mathbb{R}^{2}$ 满足 $f(x) \ne f(-x)$ 处处成立。令
@@ -49945,7 +50277,7 @@ $$g(x) := \frac{f(x) - f(-x)}{|f(x) - f(-x)|} \in S^{1},$$
 
 > Borsuk–Ulam 与 Brouwer 是同一枚硬币的两面；这里走「度」这条线。
 
-#### Borsuk–Ulam 定理（二维） ⟹ 火腿三明治定理　`e18.implication`
+#### Borsuk–Ulam 定理（二维） ⟹ 火腿三明治定理　`e19.implication`
 *法向—偏移参数化 + Borsuk–Ulam $\implies$ 同一个平面平分三块*
 
 平面写作 $P(u, t) = \{\, x : \langle x, u\rangle = t \,\}$，$u \in S^{2}$，$t \in \mathbb{R}$。
@@ -49956,7 +50288,7 @@ $$g(x) := \frac{f(x) - f(-x)}{|f(x) - f(-x)|} \in S^{1},$$
 
 > 整条链的终点：从「数零点」一路推到「切三明治」。
 
-#### 绕数的积分表示 ⟹ 辐角原理　`e19.implication`
+#### 绕数的积分表示 ⟹ 辐角原理　`e20.implication`
 *绕数的积分表示 $\implies$ 辐角原理*
 
 设 $f$ 在 $\gamma$ 内部及 $\gamma$ 上全纯、边界上无零点。则 $f'/f$ 全纯，且
@@ -49967,7 +50299,7 @@ $$\frac{1}{2\pi i}\oint_{\gamma}\frac{f'(z)}{f(z)}\,\mathrm{d}z = \sum_{j} m_{j}
 
 > 这是「绕数」进入「数零点」的桥：把 $f$ 的零点个数算成 $f\circ\gamma$ 绕 $0$ 的圈数。
 
-#### 开映射定理 ⟹ Schwarz 引理　`e20.implication`
+#### 开映射定理 ⟹ Schwarz 引理　`e21.implication`
 *（推论）开映射定理 $\implies$ Schwarz 引理的等号情形*
 
 **要证的**：若 $f : \mathbb{D} \to \mathbb{D}$ 全纯、$f(0) = 0$ 且 $|f^{\prime}(0)| = 1$，则 $f(z) = cz$，其中 $|c| = 1$。
@@ -49994,7 +50326,7 @@ $$g(z) := \frac{f(z)}{z}, \qquad |g(z)| \le 1;$$
 
 > 粉红边：真推出，但反过来更自然 —— 只作补充线索。
 
-#### 全纯函数的 Taylor 展开 + 唯一性定理 ⟹ 解析延拓　`e21.implication`
+#### 全纯函数的 Taylor 展开 + 唯一性定理 ⟹ 解析延拓　`e22.implication`
 *幂级数当载体、唯一性定理当粘合剂*
 
 延拓的每一步都是「在一个新圆盘上取一个幂级数，它在与旧圆盘的重叠处与旧的相等」。
@@ -50005,7 +50337,7 @@ $$g(z) := \frac{f(z)}{z}, \qquad |g(z)| \le 1;$$
 
 > 延拓这件事之所以定义得干净，全靠这两条：级数给出「可计算的形式」，唯一性给出「一致」。
 
-#### 解析延拓 + 绕数的同伦不变性 ⟹ 单值性定理　`e22.implication`
+#### 解析延拓 + 绕数的同伦不变性 ⟹ 单值性定理　`e23.implication`
 *同伦族上的延拓连续 $\implies$ 单值*
 
 设 $\gamma_{0}, \gamma_{1}$ 在 $\Omega$ 内同伦，同伦 $H(s, t)$。对每个 $s$，沿 $\gamma_{s} = H(s, \cdot)$延拓，得到终点处的元素 $\varphi(s)$。
@@ -50018,7 +50350,7 @@ $[0,1]$ 连通，既开又闭的非空子集是全体，于是 $\varphi(1) = \va
 
 > 单值是「同伦不变」的直接翻译 —— 与 `thm.winding-homotopy` 是同一个技术：连续 + 离散 $\implies$ 常值。
 
-#### Morera 定理 + 解析延拓 ⟹ Schwarz 反射原理　`e23.implication`
+#### Morera 定理 + 解析延拓 ⟹ Schwarz 反射原理　`e24.implication`
 *反射定义 + Morera 判全纯*
 
 定义 $F$ 在上半平面等于 $f$、在下半平面等于 $\overline{f(\bar z)}$。
@@ -50040,7 +50372,7 @@ $[0,1]$ 连通，既开又闭的非空子集是全体，于是 $\varphi(1) = \va
 
 > Runge 与 Mittag-Leffler、Weierstrass 乘积是三兄弟：逼近 / 造主部 / 造零点 —— 这只是类比、不是定理依赖，故 Mittag-Leffler 不在 sources 里。
 
-#### 整函数与亚纯函数 + Cauchy 不等式 ⟹ 整函数的阶与型　`e24.implication`
+#### 整函数与亚纯函数 + Cauchy 不等式 ⟹ 整函数的阶与型　`e25.implication`
 *用最大模的增长速率为整函数排座次*
 
 整函数即 `def.entire-meromorphic` 里的情形。取 $M(r) = \max_{|z| = r}|f(z)|$，它对 $r$ 单调不减（最大模原理），故 $\log^{+}\log^{+} M(r)$ 有意义。
@@ -50049,7 +50381,7 @@ $[0,1]$ 连通，既开又闭的非空子集是全体，于是 $\varphi(1) = \va
 
 > 阶不是装饰：后面的 Weierstrass 乘积、Hadamard 分解、Picard 都要拿它当标尺。
 
-#### 零点的孤立性与阶 + 调和函数的均值性质 ⟹ Jensen 公式　`e25.implication`
+#### 零点的孤立性与阶 + 调和函数的均值性质 ⟹ Jensen 公式　`e26.implication`
 *Blaschke 因子除掉零点，再用调和函数的均值性质*
 
 先设 $f$ 在 $|z| \le R$ 上无零点。则 $\log|f|$ 在该圆盘内调和（它是全纯函数 $\log f$ 的实部），由 `thm.harmonic-mean-value`，$\log|f(0)|$ 等于边界上的平均值 —— 这正是 $n = 0$ 时的公式。
@@ -50060,7 +50392,7 @@ $[0,1]$ 连通，既开又闭的非空子集是全体，于是 $\varphi(1) = \va
 
 > Jensen 把「R 内零点有几个」压在「2R 上最大模多大」之下。
 
-#### 复数初等函数 ⟹ Weierstrass 初等因子　`e26.implication`
+#### 复数初等函数 ⟹ Weierstrass 初等因子　`e27.implication`
 *用 $e^{z}$ 的截断指数造出「近似 1 但带一个零点」的因子*
 
 定义里的 $E_{p}(z) = (1 - z)\exp(z + z^{2}/2 + \cdots + z^{p}/p)$：$\exp$ 那部分由`def.complex-elementary` 给出，永不为零，所以 $E_{p}$ 的零点只有 $z = 1$。
@@ -50073,7 +50405,7 @@ $$1 - E_{p}(z) = (1 - z)\left[1 - e^{\,z + \cdots + z^{p}/p}\right].$$
 
 > 这条估计就是「取 p 让级数收敛」的全部依据。
 
-#### Weierstrass 初等因子 + Weierstrass 收敛性定理 ⟹ Weierstrass 乘积定理　`e27.implication`
+#### Weierstrass 初等因子 + Weierstrass 收敛性定理 ⟹ Weierstrass 乘积定理　`e28.implication`
 *逐点选 $p_{n}$ 保证内闭一致收敛，乘积即成整函数*
 
 给定零点列 $a_{n} \to \infty$。对每个 $n$ 取 $p_{n}$ 使 $\sum_{n} |a_{n}|^{-(p_{n}+1)} < \infty$（例如 $p_{n} = n$ 即可，因为 $|a_{n}| \to \infty$）。
@@ -50088,7 +50420,7 @@ $$\left|1 - E_{p_{n}}\!\left(\frac{z}{a_{n}}\right)\right| \le \left|\frac{z}{a_
 
 > Weierstrass 乘积 = 「零点可任意指定」；剩下的自由度正是 $e^{g}$。
 
-#### Weierstrass 乘积定理 + Jensen 公式 + 单值支的存在判据 + Cauchy 不等式 + Schwarz 引理 ⟹ Hadamard 分解定理　`e28.implication`
+#### Weierstrass 乘积定理 + Jensen 公式 + 单值支的存在判据 + Cauchy 不等式 + Schwarz 引理 ⟹ Hadamard 分解定理　`e29.implication`
 *阶给出统一的 $p$，Jensen 给出零点密度*
 
 设 $f$ 的阶为 $\rho$。取 $p = \lfloor \rho \rfloor$。
@@ -50103,7 +50435,7 @@ $$\left|1 - E_{p_{n}}\!\left(\frac{z}{a_{n}}\right)\right| \le \left|\frac{z}{a_
 
 > Hadamard = Weierstrass 乘积 + 增长阶：因子统一、指数退化成多项式。
 
-#### Hadamard 分解定理 + Liouville 定理 ⟹ Picard 小定理　`e29.implication`
+#### Hadamard 分解定理 + Liouville 定理 ⟹ Picard 小定理　`e30.implication`
 *有限阶情形：漏两个值 $\implies$ 无零点的整函数 $\implies$ 常数*
 
 （**只证有限阶情形**；一般情形见节点正文的外部输入说明。）
@@ -50116,7 +50448,7 @@ $$\left|1 - E_{p_{n}}\!\left(\frac{z}{a_{n}}\right)\right| \le \left|\frac{z}{a_
 
 > 这条证明只覆盖有限阶；一般情形需要 Bloch / 模函数，已如实标注。
 
-#### Picard 小定理 + Casorati–Weierstrass 定理 ⟹ Picard 大定理　`e30.implication`
+#### Picard 小定理 + Casorati–Weierstrass 定理 ⟹ Picard 大定理　`e31.implication`
 *把本性奇点搬到无穷远，归结到小定理*
 
 设 $z_{0}$ 是 $f$ 的本性奇点。取 $g(w) := f(z_{0} + 1/w)$，则 $g$ 在 $w = 0$ 以外全纯，且 $w = 0$ 是 $g$ 的**本性奇点**（否则 $f$ 在 $z_{0}$ 处可去或有极点）。
@@ -50125,83 +50457,83 @@ $$\left|1 - E_{p_{n}}\!\left(\frac{z}{a_{n}}\right)\right| \le \left|\frac{z}{a_
 
 > 大定理 = 小定理 + 一次变换；深层输入同样标注为外部。
 
-#### 定义引用：「解析延拓」→ Schwarz 反射原理　`e31.definition`
+#### 定义引用：「解析延拓」→ Schwarz 反射原理　`e32.definition`
 
 反射原理给出的正是「跨过边界的一段解析延拓」：用上半的 $f$ 定义出下半的 $F$，再验证全纯。
 
-#### 定义引用：「Weierstrass 初等因子」→ Weierstrass 乘积定理　`e32.definition`
+#### 定义引用：「Weierstrass 初等因子」→ Weierstrass 乘积定理　`e33.definition`
 
 乘积定理的每一项都是初等因子 $E_{p_{n}}(z/a_{n})$ —— 定义在这里，用法在定理里。
 
-#### 定义引用：「映射」→ 道路同伦　`e33.definition`
+#### 定义引用：「映射」→ 道路同伦　`e34.definition`
 
 道路就是映射 $\gamma : [0,1] \to X$ —— 没有「映射」这个定义就写不出道路。
 
-#### 定义引用：「连续映射」→ 道路同伦　`e34.definition`
+#### 定义引用：「连续映射」→ 道路同伦　`e35.definition`
 
 道路要求 $\gamma$ 连续；点集拓扑里的连续性在这里第一次被真正用上。
 
-#### 定义引用：「同伦」→ 道路同伦　`e35.definition`
+#### 定义引用：「同伦」→ 道路同伦　`e36.definition`
 
 道路同伦是「固定两个端点的映射同伦」：$H(\cdot, 0) = \gamma_{0}$、$H(\cdot, 1) = \gamma_{1}$，且两个端点不动。
 
-#### 定义引用：「同伦」→ 基本群　`e36.definition`
+#### 定义引用：「同伦」→ 基本群　`e37.definition`
 
 $\pi_{1}(X, x_{0})$ 的元素是道路的**同伦类** —— 「同伦」这个等价关系是它的定义的一部分。
 
-#### 定义引用：「商集与等价类」→ 基本群　`e37.definition`
+#### 定义引用：「商集与等价类」→ 基本群　`e38.definition`
 
 把同伦类收成一个元素，就是取商集：$\pi_{1}$ 的元素集 $=$ 道路的集合 $/$ 同伦。
 
-#### 定义引用：「群」→ 基本群　`e38.definition`
+#### 定义引用：「群」→ 基本群　`e39.definition`
 
 $\pi_{1}$ 是**群**：道路类乘法来自拼接，单位元是常值道路，逆是反向道路 —— 群公理要逐条验。
 
-#### 定义引用：「群同态、核与像」→ 诱导同态　`e39.definition`
+#### 定义引用：「群同态、核与像」→ 诱导同态　`e40.definition`
 
 连续映射诱导的 $f_{*}$ 是**群同态**：$f_{*}([\alpha][\beta]) = f_{*}([\alpha])f_{*}([\beta])$。
 
-#### 定义引用：「连续映射」→ 覆叠空间　`e40.definition`
+#### 定义引用：「连续映射」→ 覆叠空间　`e41.definition`
 
 覆叠映射 $p : E \to B$ 首先是连续满射，再加「每点有 evenly covered 邻域」。
 
-#### 定义引用：「Hausdorff 空间」→ 覆叠空间　`e41.definition`
+#### 定义引用：「Hausdorff 空间」→ 覆叠空间　`e42.definition`
 
 常见的覆叠定理（提升唯一性、纤维离散）要在 Hausdorff（或至少 $T_{1}$）假设下才干净。
 
-#### 定义引用：「连续映射」→ 圆盘不收缩　`e42.definition`
+#### 定义引用：「连续映射」→ 圆盘不收缩　`e43.definition`
 
 收缩 $r : \overline{\mathbb{D}} \to S^{1}$ 要求连续且 $r|_{S^{1}} = \mathrm{id}$。
 
-#### 定义引用：「子集」→ 单纯复形　`e43.definition`
+#### 定义引用：「子集」→ 单纯复形　`e44.definition`
 
 单纯复形是「顶点集的子集族」，且对取子集封闭：$\sigma \in K$、$\tau \subseteq \sigma$ $\implies$ $\tau \in K$。
 
-#### 定义引用：「幂集 𝒫(X)」→ 单纯复形　`e44.definition`
+#### 定义引用：「幂集 𝒫(X)」→ 单纯复形　`e45.definition`
 
 $K \subseteq \mathcal{P}(V)$ —— 复形活在幂集里，这是它「组合对象」那一面的来源。
 
-#### 定义引用：「距离空间」→ 标准单纯形　`e45.definition`
+#### 定义引用：「距离空间」→ 标准单纯形　`e46.definition`
 
 标准单形 $\Delta^{n} \subset \mathbb{R}^{n+1}$ 的拓扑来自欧氏距离，所以它的「连续」是距离空间意义下的。
 
-#### 定义引用：「群」→ 链群　`e46.definition`
+#### 定义引用：「群」→ 链群　`e47.definition`
 
 链群 $C_{n}(K)$ 是**自由阿贝尔群**：以 $n$-单形为基，系数取整。它的群结构就是这里定义的群结构。
 
-#### 定义引用：「商群」→ 单纯同调群　`e47.definition`
+#### 定义引用：「商群」→ 单纯同调群　`e48.definition`
 
 $H_{n} = \ker \partial_{n} / \operatorname{im} \partial_{n+1}$ —— 同调群是**商群**，$\partial^{2} = 0$ 保证分子包含分母。
 
-#### 定义引用：「连续映射」→ 奇异同调群　`e48.definition`
+#### 定义引用：「连续映射」→ 奇异同调群　`e49.definition`
 
 奇异 $n$-单形是**连续映射** $\sigma : \Delta^{n} \to X$（对照：单纯单形是组合对象，不带拓扑）。
 
-#### 定义引用：「同伦」→ 奇异同调群　`e49.definition`
+#### 定义引用：「同伦」→ 奇异同调群　`e50.definition`
 
 奇异同调的**同伦不变性**要用映射同伦（棱柱算子 $P$ 就是它的代数化），所以这条依赖绕不开。
 
-#### 定义引用：「链群」→ 奇异同调群　`e50.definition`
+#### 定义引用：「链群」→ 奇异同调群　`e51.definition`
 
 奇异链群与单纯链群是同一个构造（自由阿贝尔群 + 边缘算子），只是一个用连续单形、一个用组合单形。
 
@@ -50423,15 +50755,15 @@ $|\chi_{B(x_k,r_k)}(y) - \chi_{B(x_0,r_0)}(y)|\,|f(y)| \le \chi_{B(x_0, r_0+1)}(
 
 > 这一步之外全是球与特征函数的初等估计：拆项、a.e. 收敛、找控制函数。**DCT 是唯一的外部定理**，也是把「$L^1_{loc}$ 里没有逐点信息」这个困难一次性消掉的地方。
 
-#### 定义引用：「连续映射」→ 映射同伦　`e51.definition`
+#### 定义引用：「连续映射」→ 映射同伦　`e52.definition`
 
 同伦 $F : X \times [0, 1] \to Y$ 本身要求**联合连续**（在乘积拓扑下），不是「对每个 $t$ 各自连续」。
 
-#### 定义引用：「映射同伦」→ 道路同伦　`e52.definition`
+#### 定义引用：「映射同伦」→ 道路同伦　`e53.definition`
 
 道路同伦就是取 $A = \{0, 1\}$ 的**相对同伦**：$F(0, s)$ 与 $F(1, s)$ 都被钉死。
 
-#### 道路同伦 ⟹ 道路拼接　`e53.implication`
+#### 道路同伦 ⟹ 道路拼接　`e54.implication`
 *重参数化给出良定义、结合律、单位元与逆元*
 
 **良定义**：设 $F : \alpha \simeq_{p} \alpha'$、$G : \beta \simeq_{p} \beta'$，且 $\alpha(1) = \beta(0)$。令 $H(t, s) := F(2t, s)$ 当 $t \le 1/2$、$H(t, s) := G(2t - 1, s)$ 当 $t \ge 1/2$。
@@ -50454,11 +50786,11 @@ $$F(t, s) := \alpha\big((1 - s)\,\tau(t)\big).$$
 
 > 全部四条都靠「重参数化 $+$ 粘贴引理」；道路层面没有一条是等式。
 
-#### 定义引用：「道路同伦」→ 基本群　`e54.definition`
+#### 定义引用：「道路同伦」→ 基本群　`e55.definition`
 
 $\pi_{1}$ 的元素是**道路同伦类** $[\alpha]$ 而不是道路；商集这一步就是在这里做的。
 
-#### 道路拼接 ⟹ 诱导同态　`e55.implication`
+#### 道路拼接 ⟹ 诱导同态　`e56.implication`
 *复合保持拼接，于是 $f_{*}$ 是同态*
 
 **良定义**：若 $F : \alpha \simeq_{p} \beta$，则 $f \circ F$ 连续、$f \circ F(\cdot, 0) = f \circ \alpha$、$f \circ F(\cdot, 1) = f \circ \beta$，端点 $f \circ F(0, s) = f(x_{0}) = y_{0}$ 不动。
@@ -50479,7 +50811,7 @@ $$f \circ (\alpha * \beta) = (f \circ \alpha) * (f \circ \beta)$$
 
 > 关键只有一句：$f$ 与「拼接」交换。这也说明为什么 $f_{*}$ 是**同态**而不是随便一个映射。
 
-#### 诱导同态 ⟹ 基点变换　`e56.implication`
+#### 诱导同态 ⟹ 基点变换　`e57.implication`
 *把「换基点」看成沿道路的共轭，再用函子性核对*
 
 **先验证 $\Pi_{\gamma}$ 是同态**（这是唯一需要动手的地方）。设 $\alpha, \alpha'$ 是以 $x_{0}$ 为基点的闭道路。由 `lem.path-product` 的结合律、单位律，以及 $\gamma * \bar{\gamma} \simeq_{p} e_{x_{1}}$：
@@ -50499,19 +50831,19 @@ $$\Pi_{\gamma'}([\alpha]) = [\bar{\gamma}' * \alpha * \gamma'] = g\,[\bar{\gamma
 
 > 「只差一个内自同构」就是**不典范**的精确含义；只有当 $\pi_{1}$ 阿贝尔时它才真的与道路无关。
 
-#### 定义引用：「基本群」→ 单连通　`e57.definition`
+#### 定义引用：「基本群」→ 单连通　`e58.definition`
 
 单连通 $=$ 道路连通 $+$ $\pi_{1}$ 平凡；「平凡」由 `prop.pi1-basepoint` 与道路连通性变成与基点无关的陈述。
 
-#### 定义引用：「覆叠空间」→ 提升定理　`e58.definition`
+#### 定义引用：「覆叠空间」→ 提升定理　`e59.definition`
 
 提升的唯一性直接来自「每片 $V_{j}$ 上 $p$ 是同胚」：知道了落在哪一片，整段提升就被钉死。
 
-#### 定义引用：「覆叠空间」→ 覆叠的指数　`e59.definition`
+#### 定义引用：「覆叠空间」→ 覆叠的指数　`e60.definition`
 
 双射 $p^{-1}(b_{0}) \leftrightarrow \pi_{1}(B)/p_{*}\pi_{1}(E)$ 用的正是均匀覆叠的片：$\tilde{\alpha}(1)$ 落在哪个 $V_{j}$ 里，就决定 $[\alpha]$ 落在哪个陪集。
 
-#### 提升定理 ⟹ 覆叠的指数　`e60.implication`
+#### 提升定理 ⟹ 覆叠的指数　`e61.implication`
 *提升给出单射 $\pi_{1}(E) \hookrightarrow \pi_{1}(B)$，纤维就是陪集*
 
 **单射**：设 $[\tilde{\alpha}] \in \pi_{1}(E, e_{0})$ 且 $p_{*}[\tilde{\alpha}] = 1$。即存在道路同伦 $F : p \circ \tilde{\alpha} \simeq_{p} e_{b_{0}}$。
@@ -50532,7 +50864,7 @@ $$\Pi_{\gamma'}([\alpha]) = [\bar{\gamma}' * \alpha * \gamma'] = g\,[\bar{\gamma
 
 > ⚠️ 得到的只是**集合**双射。想吃掉「同构」两个字必须另外证明度数同态。
 
-#### 覆叠的指数 ⟹ 圆周的基本群　`e61.implication`
+#### 覆叠的指数 ⟹ 圆周的基本群　`e62.implication`
 *层数给等势，提升数（度数）给同态*
 
 **覆叠**：$p(t) = e^{2\pi i t}$，$p : \mathbb{R} \to S^{1}$。每个 $s \in S^{1}$ 的开半圆邻域被 $\mathbb{R}$ 上间隔为 $1$ 的开区间们同胚地盖住，故 $p$ 是覆叠。
@@ -50555,7 +50887,7 @@ $$\deg([\alpha][\beta]) = \tilde{h}(1) = \deg\beta + \deg\alpha.$$
 
 > 注意这条边的作用：`prop.covering-index` 只够等势，同态性必须靠**提升的唯一性**重新算一遍。
 
-#### 圆周的基本群 ⟹ 圆盘不收缩　`e62.implication`
+#### 圆周的基本群 ⟹ 圆盘不收缩　`e63.implication`
 *若有收缩，$\operatorname{id}_{\mathbb{Z}}$ 会穿过平凡群*
 
 设存在连续 $r : D^{2} \to S^{1}$ 且 $r|_{S^{1}} = \operatorname{id}$，记 $i : S^{1} \hookrightarrow D^{2}$ 为包含映射。则由 $r \circ i = \operatorname{id}_{S^{1}}$ 与**函子性**（`prop.induced-homomorphism` (3)）：
@@ -50566,11 +50898,11 @@ $$r_{*} \circ i_{*} = (r \circ i)_{*} = (\operatorname{id}_{S^{1}})_{*} = \opera
 
 > 一行群论的「不能」，背后是 $\pi_{1}(S^{1}) \ne 1$ 这个唯一的输入。
 
-#### 定义引用：「截面与收缩」→ 圆盘不收缩　`e63.definition`
+#### 定义引用：「截面与收缩」→ 圆盘不收缩　`e64.definition`
 
 收缩 $r : D^{2} \to S^{1}$ 满足 $r \circ i = \operatorname{id}_{S^{1}}$，正是范畴意义下 $i$ 的**收缩**（$i$ 是 $S^{1} \hookrightarrow D^{2}$）。所以「$S^{1}$ 不是收缩核」$=$「$i$ 没有左逆」。
 
-#### 圆盘不收缩 ⟹ Brouwer 不动点定理（圆盘）　`e64.implication`
+#### 圆盘不收缩 ⟹ Brouwer 不动点定理（圆盘）　`e65.implication`
 *没有收缩 $\implies$ 每个连续 $f : D^{2} \to D^{2}$ 都有不动点（二维连续版）*
 
 设连续 $f : D^{2} \to D^{2}$ 处处 $f(z) \ne z$。对每个 $z \in D^{2}$，从 $f(z)$ 出发、**穿过** $z$ 的射线与 $S^{1}$ 有唯一交点，记为 $r(z)$。显式地
@@ -50589,11 +50921,11 @@ $$t(z) = \frac{-a + \sqrt{a^{2} + b\,(1 - |z|^{2})}}{b} \ge 0.$$
 
 > 这条边补上了本图原先的缺口：`thm.brouwer-fixed-point` 的既有证明只用 Rouché 给出**全纯**情形，连续情形在那里被标成「外部输入」。现在连续情形（二维）在图上有了自己的证明。
 
-#### 定义引用：「基本群」→ van Kampen 定理　`e65.definition`
+#### 定义引用：「基本群」→ van Kampen 定理　`e66.definition`
 
 van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右端是 $\pi_{1}$ 的自由积取商。
 
-#### van Kampen 定理 ⟹ 高维球面的基本群　`e66.implication`
+#### van Kampen 定理 ⟹ 高维球面的基本群　`e67.implication`
 *两块可缩 $+$ 交叠道路连通 $\implies$ 基本群平凡*
 
 设 $n \ge 2$。取 $S^{n} = U \cup V$，其中 $U$ 是去掉南极点的开半球、$V$ 是去掉北极点的开半球：两者都同胚于 $\mathbb{R}^{n}$（球极投影），故可缩，$\pi_{1}(U) = \pi_{1}(V) = 1$。
@@ -50606,7 +50938,7 @@ van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右�
 
 > ⭐ 注意：结论与 $G = \pi_{1}(S^{n-1})$ **无关**。两块都是平凡群时，胶水怎么粘都是平凡群。
 
-#### 定义引用：「单连通」→ 高维球面的基本群　`e67.definition`
+#### 定义引用：「单连通」→ 高维球面的基本群　`e68.definition`
 
 结论的措辞正是「$S^{n}$ 单连通」（$n \ge 2$）。
 
@@ -50614,55 +50946,86 @@ van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右�
 
 证明第一步对开覆盖 $\{U, V\}$ 取勒贝格数，用它把道路细分到每段整块落在一个开集里。
 
-#### 定义引用：「单纯复形」→ 重心重分　`e69.definition`
+#### 定义引用：「基本群」→ π₁ 是群　`e70.definition`
+
+命题研究的就是这个定义给出的商集，以及它上面的乘法与逆。
+
+#### 道路拼接 + 群 ⟹ π₁ 是群　`imp.pi1-group`
+*道路拼接的四条算律 $\implies$ $\pi_{1}$ 是群*
+
+把 `lem.path-product` 的四条 (1)–(4) 逐条对上 `def.group` 的公理：
+
+**良定义**：第 (1) 条说 $\alpha \simeq_{p} \alpha^{\prime}$、$\beta \simeq_{p} \beta^{\prime}$ $\implies$ $\alpha \ast \beta \simeq_{p} \alpha^{\prime} \ast \beta^{\prime}$，故 $[\alpha]\cdot[\beta]$ 不依赖代表元；
+**结合律**：第 (2) 条 $(\alpha \ast \beta) \ast \gamma \simeq_{p} \alpha \ast (\beta \ast \gamma)$，取类即得；
+**单位元**：第 (3) 条 $e_{x_{0}} \ast \alpha \simeq_{p} \alpha \simeq_{p} \alpha \ast e_{x_{0}}$，故 $[e_{x_{0}}]$ 是双边单位；
+**逆元**：第 (4) 条 $\alpha \ast \overline{\alpha} \simeq_{p} e_{x_{0}} \simeq_{p} \overline{\alpha} \ast \alpha$，故 $[\overline{\alpha}]$ 是双边逆。
+
+四条合起来正是 `def.group` 要求的「集合 + 满足公理的运算」。∎
+
+> 这条边只做「对表」：不重证道路拼接的四条（在 `lem.path-product`），也不重述群公理（在 `def.group`）。它存在的意义是让「$\pi_{1}$ 是群」在图上有承重墙，而不是靠定义里一句话带过。
+
+#### 定义引用：「单连通」→ 单连通与基点无关　`e71.definition`
+
+命题讨论的就是这个定义条件 2 里的「等价地」。
+
+#### 基点变换 + 群 ⟹ 单连通与基点无关　`imp.simply-connected-basepoint`
+*换基点的同构 $\implies$ 单连通与基点选取无关*
+
+设 $X$ 道路连通。(ii) $\implies$ (i)：取任一点即可。
+
+(i) $\implies$ (ii)：给定 $x_{0}$ 与任意 $x$，道路连通给出从 $x_{0}$ 到 $x$ 的道路 $\lambda$。由 `prop.pi1-basepoint`，$[\alpha] \mapsto [\overline{\lambda} \ast \alpha \ast \lambda]$ 给出同构 $\pi_{1}(X, x_{0}) \to \pi_{1}(X, x)$。同构是双射且保单位元，把 $1$ 送到 $1$，故 $\pi_{1}(X, x) = 1$。∎
+
+> 这里用了两次「平凡性在同构下不变」：同构是双射，平凡群只有一个元素，像也只能有一个。没有道路连通就没有 $\lambda$，同构无从谈起 —— 这就是条件里「道路连通」不可省的确切原因。
+
+#### 定义引用：「单纯复形」→ 重心重分　`e72.definition`
 
 重心重分是单纯复形上的操作；新顶点是原复形中非空单纯形的重心。
 
-#### 定义引用：「重心重分」→ 单纯逼近　`e70.definition`
+#### 定义引用：「重心重分」→ 单纯逼近　`e73.definition`
 
 单纯逼近定理的第二步是反复重心重分，使网格直径小于 Lebesgue 数。
 
-#### 定义引用：「重心重分」→ Mayer–Vietoris（同调）　`e71.definition`
+#### 定义引用：「重心重分」→ Mayer–Vietoris（同调）　`e74.definition`
 
 Mayer–Vietoris 的小链论证用重心重分把链细化到覆盖里。
 
-#### 定义引用：「标准单纯形」→ 单纯复形　`e73.definition`
+#### 定义引用：「标准单纯形」→ 单纯复形　`e76.definition`
 
 复形里的一个 $p$-单纯形就是「$\Delta^{p}$ 在仿射无关点集上的线性像」的顶点集；闭包性质 $\emptyset \ne \tau \subseteq \sigma$ 对应「取某个面 $d_{i}$」。
 
-#### 定义引用：「标准单纯形」→ 边缘算子　`e74.definition`
+#### 定义引用：「标准单纯形」→ 边缘算子　`e77.definition`
 
 边缘算子里的 $[v_{0}, \ldots, \widehat{v_{i}}, \ldots, v_{p}]$ 就是「跳过第 $i$ 个顶点」，即把面映射 $d_{i}$ 用在有序顶点上。
 
-#### 定义引用：「单纯复形」→ 单纯映射　`e75.definition`
+#### 定义引用：「单纯复形」→ 单纯映射　`e78.definition`
 
 单纯映射是**顶点层面**的映射；只要它把每个单纯形送进某个单纯形，$|f|$ 就由线性延拓唯一确定。
 
-#### 定义引用：「单纯复形」→ 链群　`e76.definition`
+#### 定义引用：「单纯复形」→ 链群　`e79.definition`
 
 链群的基就是 $K$ 的全体 $p$-单纯形——所以「复形是什么」决定了「链群是什么」。
 
-#### 定义引用：「链群」→ 边缘算子　`e77.definition`
+#### 定义引用：「链群」→ 边缘算子　`e80.definition`
 
 $\partial_{p} : C_{p}(K) \to C_{p-1}(K)$ 只在**基**上规定，再线性延拓。这正是自由阿贝尔群的用处：基上的规定自动给出唯一的群同态，不需要任何相容性验证。
 
-#### 定义引用：「边缘算子」→ 单纯同调群　`e78.definition`
+#### 定义引用：「边缘算子」→ 单纯同调群　`e81.definition`
 
 $Z_{p} := \ker\partial_{p}$、$B_{p} := \operatorname{im}\partial_{p+1}$；$\partial^{2} = 0$ 保证 $B_{p} \subseteq Z_{p}$，商群才做得出来。没有 $\partial^{2} = 0$，同调无定义。
 
-#### 定义引用：「单纯同调群」→ 单纯映射　`e79.definition`
+#### 定义引用：「单纯同调群」→ 单纯映射　`e82.definition`
 
 $\varphi_{*}$ 的定义要用同调群；而它良定义靠 $\varphi_{\#}\partial = \partial\varphi_{\#}$：闭链送闭链、边缘送边缘，故过商这一步不被破坏。
 
-#### 定义引用：「单纯同调群」→ 奇异同调群　`e80.definition`
+#### 定义引用：「单纯同调群」→ 奇异同调群　`e83.definition`
 
 整套定义逐字照搬，只换两处：基从「$p$-单纯形」换成「连续映射 $\Delta^{p} \to X$」，边缘从「删顶点」换成「复合 $d_{i}$」。
 
-#### 定义引用：「奇异同调群」→ 约化同调　`e81.definition`
+#### 定义引用：「奇异同调群」→ 约化同调　`e84.definition`
 
 约化同调只是在 $S_{0}$ 后面多接一个增广 $\varepsilon : S_{0} \to \mathbb{Z}$；$p \ge 1$ 的部分与奇异同调完全一致。
 
-#### 奇异同调群 ⟹ H₀ 与分支　`e82.implication`
+#### 奇异同调群 ⟹ H₀ 与分支　`e85.implication`
 *$0$-链的边界恰好是「同一分支里两点之差」*
 
 **$S_{0}(X)$ 长什么样**：$\Delta^{0}$ 是单点，所以奇异 $0$-单纯形就是「在 $X$ 里挑一个点」。故 $S_{0}(X)$ 是以 $X$ 的点为基的自由阿贝尔群（只允许有限和），与 $\bigoplus_{x \in X} \mathbb{Z}$ 同构。
@@ -50689,7 +51052,7 @@ $\varphi_{*}$ 的定义要用同调群；而它良定义靠 $\varphi_{\#}\partia
 
 > 整条论证只用到「$\partial$ 作用在一条道路上给出两端之差」这一个事实。
 
-#### 奇异同调群 ⟹ 对的长正合列　`e83.implication`
+#### 奇异同调群 ⟹ 对的长正合列　`e86.implication`
 *短正合列 $0 \to S_{*}(A) \to S_{*}(X) \to S_{*}(X,A) \to 0$ 加追图给出连接同态*
 
 **子复形**：对 $A \subseteq X$，包含 $i : A \hookrightarrow X$ 给出 $S_{p}(A) \to S_{p}(X)$，$\sigma \mapsto i \circ \sigma$。它是单射（作为自由群上的映射，基映射是单射），像是「完全落在 $A$ 里的奇异单纯形」生成的子群，而 $\partial(i \circ \sigma) = i \circ (\partial\sigma)$ 仍落在 $A$ 里 —— 所以 $S_{*}(A)$ 是**子复形**。
@@ -50712,11 +51075,11 @@ $$\partial_{*}[c] := [\partial c] \in H_{p-1}(A).$$
 
 > 关键在于「相对闭链」的定义恰好保证 $\partial c$ 掉进 $S_{p-1}(A)$ —— 连接同态就是这样被逼出来的。
 
-#### 定义引用：「一般正合列」→ 对的长正合列　`e84.definition`
+#### 定义引用：「一般正合列」→ 对的长正合列　`e87.definition`
 
 「长正合列」就是 `def.exact-sequence` 意义上的正合：每处 $\operatorname{im} = \ker$。⚠️ 这里的链由**同调群**连成，不是链复形本身——正合性说的是这三个映射的像与核相等。
 
-#### 对的长正合列 ⟹ Mayer–Vietoris（同调）　`e85.implication`
+#### 对的长正合列 ⟹ Mayer–Vietoris（同调）　`e88.implication`
 *对 $(X, U)$ 的长正合列 $+$ 重心重分 $\implies$ Mayer–Vietoris*
 
 **第一步（代数）**：设 $X = U \cup V$。记 $S_{*}(U) + S_{*}(V) \subseteq S_{*}(X)$ 为「落在 $U$ 里的」与「落在 $V$ 里的」奇异单纯形共同生成的子复形。有
@@ -50740,7 +51103,7 @@ $$\to S_{*}(U) + S_{*}(V) \to 0,$$
 
 > ⭐ 第二步是全部难点：没有重细分，「局部在 $U$ 或 $V$」与「整体同调等价」之间没有桥。
 
-#### Mayer–Vietoris（同调） + H₀ 与分支 ⟹ 球面的同调　`e86.implication`
+#### Mayer–Vietoris（同调） + H₀ 与分支 ⟹ 球面的同调　`e89.implication`
 *两个可缩开半球 + 交叠形变收缩到赤道 $\implies$ 只剩两个非零*
 
 **开覆盖**：令 $U := S^{n} \setminus \{\text{北极 } N\}$、$V := S^{n} \setminus \{\text{南极 } S\}$。两者都是开集且覆盖 $S^{n}$，各自经球极投影同胚于 $\mathbb{R}^{n}$，因而可缩。
@@ -50766,7 +51129,7 @@ $$\to \tilde{H}_{p-1}(U \cap V) \to 0,$$
 
 > 这条链子用到了「同伦不变性」（写在 `def.singular-homology` 的陈述里）与 MV 的骨架证明，如实标注。
 
-#### 链群 + 单纯同调群 ⟹ Euler 示性数　`e87.implication`
+#### 链群 + 单纯同调群 ⟹ Euler 示性数　`e90.implication`
 *两次秩-零化度，边缘群的维数在交错和里相消*
 
 设 $K$ 有限，$\alpha_{p} = \dim_{\mathbb{Q}} C_{p}$（即 $p$-单纯形个数），$z_{p} = \operatorname{rank} Z_{p}$、$b_{p} = \operatorname{rank} B_{p} = \operatorname{rank}\partial_{p+1}$、$h_{p} = \operatorname{rank} H_{p}$。
@@ -50789,7 +51152,7 @@ $$\sum_{p} (-1)^{p}\alpha_{p} = \sum_{p} (-1)^{p} h_{p} + S_{1} - S_{2},$$
 
 > 「相消」是这条定理的全部内容：边缘群 $b_{p}$ 在相邻两项里符号相反，数得再多也看不见。
 
-#### 单纯同调群 + 奇异同调群 + 同伦不变性 ⟹ 单纯逼近　`e88.implication`
+#### 单纯同调群 + 奇异同调群 + 同伦不变性 ⟹ 单纯逼近　`e91.implication`
 *重分 + Lebesgue 数 + 星的交性质 $\implies$ 连续映射可组合化*
 
 目标是证明 $H_{p}(K) \to H_{p}(|K|)$（把 $p$-单纯形看成奇异 $p$-单纯形）是同构。四步：
@@ -50822,7 +51185,7 @@ $\operatorname{st}$ 的关键性质（这一步唯一的组合输入）：$\bigc
 
 > ⚠️ 本图未写完整链映射 $S_{*}(|K|)\to C_{*}(|K|)$ 与两侧链同伦，① 只给梗概；③ 的顶点选择细节见节点注（符号另见 `def.chain-homotopy`）。两处都是本节最容易出错的地方。
 
-#### 单纯逼近 ⟹ Euler 示性数　`e89.implication`
+#### 单纯逼近 ⟹ Euler 示性数　`e92.implication`
 *奇异同调 $=$ 单纯同调 $\implies$ $\chi$ 与三角剖分无关*
 
 设 $X = |K| = |K'|$ 是同一个空间的两个**有限**三角剖分。由 `thm.simplicial-approximation`，
@@ -50842,7 +51205,7 @@ $$\sum_{p} (-1)^{p}\alpha_{p}(K') = \sum_{p} (-1)^{p}\beta_{p}.$$
 
 证明用「单纯映射诱导链映射」与「链同伦的棱柱构造」把 $|g| \simeq \operatorname{id}$ 翻成链同伦。
 
-#### 分式线性变换 ⟹ 交比　`e91.implication`
+#### 分式线性变换 ⟹ 交比　`e94.implication`
 *分式线性变换给出交比这个不变量*
 
 由 `def.mobius`，分式线性变换是 $z \mapsto (az+b)/(cz+d)$。对四个点直接算差：
@@ -50853,7 +51216,7 @@ $$Tz_{i} - Tz_{j} = \frac{(ad - bc)(z_{i} - z_{j})}{(cz_{i} + d)(cz_{j} + d)}.$$
 
 > 交比之所以值得定义，就是因为它是 $\operatorname{PGL}(2,\mathbb{C})$ 下唯一的不变量。
 
-#### 交比 + 三点决定分式线性变换 ⟹ 交比为实 ⟺ 四点共圆　`e92.implication`
+#### 交比 + 三点决定分式线性变换 ⟹ 交比为实 ⟺ 四点共圆　`e95.implication`
 *把三点送到 $0,1,\infty$，第四点的像就是交比*
 
 由 `prop.mobius-three-points`，取唯一的分式线性变换 $T$ 使 $Tz_{1} = 0$、$Tz_{2} = 1$、$Tz_{3} = \infty$。
@@ -50864,7 +51227,7 @@ $$Tz_{i} - Tz_{j} = \frac{(ad - bc)(z_{i} - z_{j})}{(cz_{i} + d)(cz_{j} + d)}.$$
 
 > 把「共圆」翻译成「一个复数是不是实数」——这是复数几何的基本动作。
 
-#### 交比 ⟹ 三点决定分式线性变换　`e93.implication`
+#### 交比 ⟹ 三点决定分式线性变换　`e96.implication`
 *让交比相等，就解出了唯一的三点映射*
 
 设 $T$ 满足要求。由交比不变性，对任意 $z$
@@ -50877,7 +51240,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 「三点定变换」既给出存在性，也给了算法。
 
-#### 交比为实 ⟺ 四点共圆 + 分式线性变换 ⟹ 保圆性　`e94.implication`
+#### 交比为实 ⟺ 四点共圆 + 分式线性变换 ⟹ 保圆性　`e97.implication`
 *保圆性 = 共圆判据 + 交比不变*
 
 设 $C$ 是圆或直线，$T$ 是分式线性变换。取 $C$ 上四个互异点 $z_{1}, \ldots, z_{4}$，由 `prop.cross-ratio-real` 它们的交比是实数。
@@ -50886,7 +51249,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 「保圆」这条在扩充平面里只有一句话：直线也算圆。
 
-#### 分式线性变换 + 保角性 ⟹ 关于圆的对称点　`e95.implication`
+#### 分式线性变换 + 保角性 ⟹ 关于圆的对称点　`e98.implication`
 *对称点是反演：$z^{*} = a + R^{2}/\overline{(z - a)}$*
 
 由 `def.mobius`，$z \mapsto a + R^{2}/\overline{(z - a)}$ 是「平移 + 反演 + 伸缩」的复合，其中 $z \mapsto 1/\bar z$ 是共轭再取倒数，属于反全纯的分式映射。
@@ -50897,7 +51260,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 对称 $\ne$ 到圆心等距；对称是反演，距离的**乘积**固定。
 
-#### 关于圆的对称点 + 保角性 ⟹ 分式线性变换保对称点　`e96.implication`
+#### 关于圆的对称点 + 保角性 ⟹ 分式线性变换保对称点　`e99.implication`
 *共形（保角）保持「正交圆」的刻画*
 
 由 `def.symmetric-point` 的等价刻画：$z, z^{*}$ 关于 $C$ 对称 $\iff$ 每个过它们的圆正交于 $C$。
@@ -50906,7 +51269,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 造映射时最好用的一条：定几对对称点，变换就被逼出来了。
 
-#### 分式线性变换 ⟹ 分式线性变换成群　`e97.implication`
+#### 分式线性变换 ⟹ 分式线性变换成群　`e100.implication`
 *矩阵乘法 = 复合，纯量倍数 = 同一个变换*
 
 分式线性变换与矩阵 $\begin{pmatrix} a & b\\ c & d\end{pmatrix}$ 一一对应到纯量倍数：若 $(a,b,c,d) = \lambda(a',b',c',d')$，两边的分式恒等。
@@ -50917,7 +51280,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 群结构解释了「三点定变换」：等号左边的群在扩充平面上是 3-可迁的。
 
-#### 分式线性变换 + 保圆性 ⟹ 标准共形映射　`e98.implication`
+#### 分式线性变换 + 保圆性 ⟹ 标准共形映射　`e101.implication`
 *用保圆性与幂/指数把区域搬到标准位置*
 
 逐条来自 `def.mobius`（分式线性）与 `def.complex-elementary`（幂、指数、对数）：
@@ -50929,7 +51292,7 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 > 这一张表是「共形映射」这一章的实用核心。
 
-#### 分式线性变换 + 分式线性变换成群 ⟹ 分式线性变换的分类　`e99.implication`
+#### 分式线性变换 + 分式线性变换成群 ⟹ 分式线性变换的分类　`e102.implication`
 *共轭到不动点上，读特征值的比*
 
 **第一步：共轭。** 分式线性变换 $T$ 的不动点是二次方程 $cz^{2} + (d - a)z - b = 0$ 的根，所以有 0、1 或 2 个（重根时算一个）。
@@ -50944,7 +51307,7 @@ $$\frac{\tau^{2}}{\Delta} = \frac{(\lambda_{1} + \lambda_{2})^{2}}{\lambda_{1}\l
 
 > 代数分类（迹的平方除以行列式）与几何分类（在双曲平面里怎么动）在这里对上。
 
-#### 标准共形映射 + Schwarz 反射原理 ⟹ Schwarz–Christoffel 公式　`e100.implication`
+#### 标准共形映射 + Schwarz 反射原理 ⟹ Schwarz–Christoffel 公式　`e103.implication`
 *$f'$ 的形状由「沿边反射」定出来*
 
 **指数从哪来**：设 $f$ 把 $\mathbb{H}$ 映成多边形。沿第 $k$ 段边做 Schwarz 反射（`thm.schwarz-reflection`），可把 $f$ 越过实轴解析延拓；在 $x_{k}$ 处两侧的延拓相差一个旋转，转角恰是外角 $\pi - \alpha_{k}\pi$。
@@ -50955,7 +51318,7 @@ $$\frac{\tau^{2}}{\Delta} = \frac{(\lambda_{1} + \lambda_{2})^{2}}{\lambda_{1}\l
 
 > S–C 公式 = 反射原理 + 对 $f'$ 的局部形状分析。
 
-#### 分式线性变换 ⟹ Joukowski 映射　`e101.implication`
+#### 分式线性变换 ⟹ Joukowski 映射　`e104.implication`
 *$z + 1/z$ 把同心圆映成共焦椭圆*
 
 由 `def.mobius` 的眼光看，$w = \tfrac12(z + 1/z)$ 是 $z$ 与 $1/z$ 的对称组合：它在 $z \mapsto 1/z$（一个反演，见 `def.symmetric-point`）下不变。
@@ -50968,7 +51331,7 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 
 > 机翼剖面 = 一个过 $z=1$ 的圆在 Joukowski 映射下的像。
 
-#### Riemann 映射定理 + 关于圆的对称点 ⟹ 边界对应定理　`e102.implication`
+#### Riemann 映射定理 + 关于圆的对称点 ⟹ 边界对应定理　`e105.implication`
 *内部双全纯 + Jordan 边界 $\implies$ 延拓成闭包上的同胚*
 
 （**骨架**，完整证明是 Carathéodory–Osgood 定理。）
@@ -50993,7 +51356,7 @@ S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续�
 
 `thm.boundary-correspondence` 的陈述就是本引理在 Jordan 区域上的形式；本引理把它拆成「连续延拓 + 边界单射」两条外部定理并给出同胚收尾。
 
-#### 复数 ℂ ⟹ 扩充复平面与球极投影　`e103.implication`
+#### 复数 ℂ ⟹ 扩充复平面与球极投影　`e106.implication`
 *在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义*
 
 **构造**：取集合 $\mathbb{C} \cup \{\infty\}$（要求 $\infty \notin \mathbb{C}$，即先取一个不属于 $\mathbb{C}$ 的对象，再由并集造出新集合 —— 不用「理想点」这种说法）。
@@ -51004,7 +51367,7 @@ S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续�
 
 > 补上这一个点之后，「直线」与「圆」、「整函数」与「在 $\infty$ 处亚纯」都各自合成一类。
 
-#### 扩充复平面与球极投影 ⟹ 球极投影保圆且共形　`e104.implication`
+#### 扩充复平面与球极投影 ⟹ 球极投影保圆且共形　`e107.implication`
 *把「平面与球面相交」翻译成 $u, v, |z|^{2}$ 的方程*
 
 球面上的圆是某个平面与 $S^{2}$ 的交：$ax + by + cw = d$（$a, b, c, d \in \mathbb{R}$，且与球面确实相交）。
@@ -51019,7 +51382,7 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 > 「球面上的圆 $\to$ 平面上的圆或直线」就是保圆性的来源。
 
-#### 扩充复平面与球极投影 ⟹ 扩充复平面是紧的　`e105.implication`
+#### 扩充复平面与球极投影 ⟹ 扩充复平面是紧的　`e108.implication`
 *球极投影是同胚，$S^{2}$ 紧 $\implies$ $\widehat{\mathbb{C}}$ 紧*
 
 **同胚**：球极投影 $\sigma : \widehat{\mathbb{C}} \to S^{2}$ 由有理公式给出，在 $\mathbb{C}$ 上连续；在 $\infty$ 处，$|z| \to \infty$ 时 $\sigma(z) \to (0,0,1) = N$，故整体连续。
@@ -51034,11 +51397,11 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 > 这条让「$\infty$ 处的奇点」有了拓扑意义。
 
-#### 定义引用：「扩充复平面与球极投影」→ 分式线性变换　`e106.definition`
+#### 定义引用：「扩充复平面与球极投影」→ 分式线性变换　`e109.definition`
 
 分式线性变换的完整定义域是 $\widehat{\mathbb{C}}$：在 $z = -d/c$ 处取 $\infty$，在 $\infty$ 处取 $a/c$。
 
-#### 链群 ⟹ 链同伦　`e107.implication`
+#### 链群 ⟹ 链同伦　`e110.implication`
 *链同伦是链映射之间「升一次」的同态*
 
 由 `def.chain-group`，链群是分次阿贝尔群 $C_{n}$ 连同边缘算子 $\partial_{n} : C_{n} \to C_{n-1}$，满足 $\partial^{2} = 0$。
@@ -51049,7 +51412,7 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 > 链同伦是「同伦」在纯代数侧的对应物：没有空间可形变，就形变映射本身。
 
-#### 奇异同调群 ⟹ 同伦不变性　`e108.implication`
+#### 奇异同调群 ⟹ 同伦不变性　`e111.implication`
 *奇异链上造棱柱算子 $P_{n}$*
 
 设 $F : X \times [0,1] \to Y$ 给出 $f \simeq g$。对每个奇异 $n$-单形 $\sigma : \Delta^{n} \to X$，构造 $\Delta^{n} \times [0,1]$ 的三角剖分：底顶点 $v_{0}, \ldots, v_{n}$、顶顶点 $w_{0}, \ldots, w_{n}$，第 $i$ 块是 $[v_{0}, \ldots, v_{i}, w_{i}, \ldots, w_{n}]$。
@@ -51066,7 +51429,7 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 > 棱柱算子把「连续形变」翻译成「链同伦」——这就是同伦不变性的全部内容。
 
-#### 同伦 ⟹ 同伦不变性　`e109.implication`
+#### 同伦 ⟹ 同伦不变性　`e112.implication`
 *同伦的定义就是这里要用的那条形变*
 
 由 `def.homotopy`，$f \simeq g$ 指存在连续 $F : X \times [0,1] \to Y$ 使 $F(\cdot, 0) = f$、$F(\cdot, 1) = g$。
@@ -51075,7 +51438,7 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 > 同伦给形变，链同伦给代数：$F$ 就是那根桥。
 
-#### 同伦不变性 ⟹ 球面的同调　`e110.implication`
+#### 同伦不变性 ⟹ 球面的同调　`e113.implication`
 *球面同调的归纳要用「可缩 $\implies$ 同调平凡」*
 
 `thm.sphere-homology` 的证明把 $S^{n}$ 拆成两个**开**半球 $U = S^{n} \setminus \{\text{南极 } S\}$、$V = S^{n} \setminus \{\text{北极 } N\}$ —— 与节点 `thm.sphere-homology` 的记号一致（两者对称，哪个叫 $U$ 都行）；它们各自经球极投影同胚于 $\mathbb{R}^{n}$，可缩，再用**约化** Mayer–Vietoris 与对 $\tilde{H}_{p}(S^{n-1})$ 的归纳。
@@ -51090,55 +51453,55 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 主证明的收尾「$f$、$g$ 同伦 $\Longrightarrow$ 存在链同伦」直接引用链同伦的定义（棱柱构造）。
 
-#### 定义引用：「整数 ℤ」→ 整除　`e111.definition`
+#### 定义引用：「整数 ℤ」→ 整除　`e114.definition`
 
 整数 $\mathbb{Z}$ 是整除关系的载体：$a \mid b$ 的定义直接落在 $\mathbb{Z}$ 的元素上。
 
-#### 定义引用：「理想」→ 整除　`e112.definition`
+#### 定义引用：「理想」→ 整除　`e115.definition`
 
 整除就是主理想的包含：$a \mid b \iff (b) \subseteq (a)$。这条把初等数论与环论对齐。
 
-#### 定义引用：「整除」→ 整数的带余除法　`e113.definition`
+#### 定义引用：「整除」→ 整数的带余除法　`e116.definition`
 
 带余除法的陈述里直接用了「整除」：$b \ne 0$，$r < |b|$，而 $a - qb = r$ 就是「$b$ 除 $a$ 的余数」。
 
-#### 定义引用：「整除」→ 最大公因数　`e114.definition`
+#### 定义引用：「整除」→ 最大公因数　`e117.definition`
 
 最大公因数的定义是「同时整除 $a$ 与 $b$ 的最大正整数」—— 没有整除就没有公因数。
 
-#### 定义引用：「整除」→ 素数　`e115.definition`
+#### 定义引用：「整除」→ 素数　`e118.definition`
 
 素数的定义是「正因数只有 $1$ 与 $p$」，这本身就是用整除写的。
 
-#### 定义引用：「整除」→ 同余　`e116.definition`
+#### 定义引用：「整除」→ 同余　`e119.definition`
 
 同余的定义只用一件事：$n \mid (a-b)$。
 
-#### 定义引用：「同余」→ 剩余类环　`e117.definition`
+#### 定义引用：「同余」→ 剩余类环　`e120.definition`
 
 剩余类环的元素就是同余类，运算是「代表元运算 + 证明良定义」。
 
-#### 定义引用：「商集与等价类」→ 剩余类环　`e118.definition`
+#### 定义引用：「商集与等价类」→ 剩余类环　`e121.definition`
 
 把同余类收成元素，就是取商集：$\mathbb{Z}/n\mathbb{Z} = \mathbb{Z}/{\sim}$。
 
-#### 定义引用：「环」→ 剩余类环　`e119.definition`
+#### 定义引用：「环」→ 剩余类环　`e122.definition`
 
 $\mathbb{Z}/n\mathbb{Z}$ 是环：加法、乘法、单位元全由 $\mathbb{Z}$ 的运算导出，环公理逐条继承。
 
-#### 定义引用：「剩余类环」→ 中国剩余定理　`e120.definition`
+#### 定义引用：「剩余类环」→ 中国剩余定理　`e123.definition`
 
 中国剩余定理说的是「剩余类环的直积分解」—— 陈述里两个对象都是 $\mathbb{Z}/n\mathbb{Z}$。
 
-#### 定义引用：「剩余类环」→ Euler 函数　`e121.definition`
+#### 定义引用：「剩余类环」→ Euler 函数　`e124.definition`
 
 $\varphi(n)$ 就是单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 的阶。
 
-#### 定义引用：「群」→ Euler 定理　`e122.definition`
+#### 定义引用：「群」→ Euler 定理　`e125.definition`
 
 单位群是群：Euler 定理的证明只用到「有限群的元素阶整除群阶」。
 
-#### 定义引用：「Lagrange 定理」→ Euler 定理　`e123.definition`
+#### 定义引用：「Lagrange 定理」→ Euler 定理　`e126.definition`
 
 定理就是 Lagrange 定理在 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 上的特例，指数取 $\varphi(n) = |G|$。
 
@@ -51270,59 +51633,59 @@ $\gcd(a,b) > 1$ 的情形改用 $n$ 的一个真因子与 $n/\text{它}$ 同样�
 
 故不可能 $\equiv -1$。
 
-#### 定义引用：「环」→ 整环　`e126.definition`
+#### 定义引用：「环」→ 整环　`e129.definition`
 
 整环是「交换、含幺、无零因子」的环 —— 三个条件全是对 `def.ring` 的追加。
 
-#### 定义引用：「环」→ 相伴、不可约与素　`e127.definition`
+#### 定义引用：「环」→ 相伴、不可约与素　`e130.definition`
 
 不可约与素都要「可逆元」和「整除」，两者都只在环里才有意义。
 
-#### 定义引用：「相伴、不可约与素」→ 唯一分解整环　`e128.definition`
+#### 定义引用：「相伴、不可约与素」→ 唯一分解整环　`e131.definition`
 
 UFD 的定义直接用「不可约元」与「相伴」：分解的唯一性就是在相伴意义下的唯一性。
 
-#### 定义引用：「整环」→ 唯一分解整环　`e129.definition`
+#### 定义引用：「整环」→ 唯一分解整环　`e132.definition`
 
 UFD 是整环：没有无零因子这个前提，「分解」与「约分」都不成立，唯一性无从谈起。
 
-#### 定义引用：「整环」→ gcd 整环　`e130.definition`
+#### 定义引用：「整环」→ gcd 整环　`e133.definition`
 
 gcd 整环是整环：「最大公因子」用整除做下界，而无零因子才使整除正常（$0$ 不做因子）。
 
-#### 定义引用：「整环」→ Euclid 整环　`e131.definition`
+#### 定义引用：「整环」→ Euclid 整环　`e134.definition`
 
 Euclid 整环是整环，外加一个满足带余除法的欧几里得函数。
 
-#### 定义引用：「整环」→ Bézout 整环　`e132.definition`
+#### 定义引用：「整环」→ Bézout 整环　`e135.definition`
 
 Bézout 整环是整环：条件落在「有限生成理想是主理想」上。
 
-#### 定义引用：「理想」→ 主理想整环　`e133.definition`
+#### 定义引用：「理想」→ 主理想整环　`e136.definition`
 
 PID 的定义就是「每个理想都是主理想」—— 没有理想这个概念写不出来。
 
-#### 定义引用：「理想」→ 互素理想　`e134.definition`
+#### 定义引用：「理想」→ 互素理想　`e137.definition`
 
 互素是理想的加法条件：$I + J = A$。
 
-#### 定义引用：「理想」→ 中国剩余定理（环论形式）　`e135.definition`
+#### 定义引用：「理想」→ 中国剩余定理（环论形式）　`e138.definition`
 
 定理的两个对象 $I, J$ 都是理想，商 $A/I$ 是商环。
 
-#### 定义引用：「第一同构定理（Noether）」→ 中国剩余定理（环论形式）　`e136.definition`
+#### 定义引用：「第一同构定理（Noether）」→ 中国剩余定理（环论形式）　`e139.definition`
 
 同构的存在性直接由第一同构定理给出：核是 $I \cap J$。
 
-#### 定义引用：「唯一分解整环」→ 算术基本定理　`e137.definition`
+#### 定义引用：「唯一分解整环」→ 算术基本定理　`e140.definition`
 
 算术基本定理就是「$\mathbb{Z}$ 是 UFD」这句话在整数上的展开。
 
-#### 定义引用：「唯一分解整环」→ K[x] 是唯一分解整环　`e138.definition`
+#### 定义引用：「唯一分解整环」→ K[x] 是唯一分解整环　`e141.definition`
 
 $K[x]$ 是 UFD —— 定理本身是在验证这个定义。
 
-#### 定义引用：「Euclid 整环」→ 带余除法　`e139.definition`
+#### 定义引用：「Euclid 整环」→ 带余除法　`e142.definition`
 
 $K[x]$ 的带余除法正是「$N = \deg$ 的欧几里得函数」，这条定理是 Euclid 整环的一个实例。
 
@@ -51408,39 +51771,39 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
 
-#### 定义引用：「中国剩余定理」→ Möbius 函数　`e142.definition`
+#### 定义引用：「中国剩余定理」→ Möbius 函数　`e145.definition`
 
 Möbius 函数的积性用中国剩余定理：互素的 $m,n$ 的素因子集不相交，$\mu(mn) = \mu(m)\mu(n)$。
 
-#### 定义引用：「算术基本定理」→ 积性函数　`e143.definition`
+#### 定义引用：「算术基本定理」→ 积性函数　`e146.definition`
 
 积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。
 
-#### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e144.definition`
+#### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e147.definition`
 
 公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。
 
-#### 定义引用：「素数」→ 素数计数函数　`e145.definition`
+#### 定义引用：「素数」→ 素数计数函数　`e148.definition`
 
 $\pi(x)$ 数的是素数，$\theta$、$\psi$ 按对数给素数加权。
 
-#### 定义引用：「积性函数」→ 除数函数 τ 与 σ　`e146.definition`
+#### 定义引用：「积性函数」→ 除数函数 τ 与 σ　`e149.definition`
 
 $\tau$ 与 $\sigma$ 是积性函数的头两个例子。
 
-#### 定义引用：「素数计数函数」→ Чебышёв 估计　`e147.definition`
+#### 定义引用：「素数计数函数」→ Чебышёв 估计　`e150.definition`
 
 估计的对象就是 $\pi(x)$；证明里还要用 $\theta$ 做过渡。
 
-#### 定义引用：「素数计数函数」→ 素数定理　`e148.definition`
+#### 定义引用：「素数计数函数」→ 素数定理　`e151.definition`
 
 定理是 $\pi(x)$ 的渐近式。
 
-#### 定义引用：「Möbius 函数」→ Möbius 和的恒等式　`e149.definition`
+#### 定义引用：「Möbius 函数」→ Möbius 和的恒等式　`e152.definition`
 
 这条恒等式是 $\mu$ 的定义直接算出来的（按「由互异素因子组成的因数」求和）。
 
-#### 定义引用：「Möbius 和的恒等式」→ Möbius 反演　`e150.definition`
+#### 定义引用：「Möbius 和的恒等式」→ Möbius 反演　`e153.definition`
 
 反演的全部内容就是 $\mu * 1 = \delta$ —— 即 $\sum_{d \mid m}\mu(d) = [m=1]$。
 
@@ -51671,51 +52034,51 @@ $f$ 有界、局部可积是假设；Laplace 变换与尾项估计都以此为�
 
 整个证明就是对 $C=\partial D$ 的围道积分做估计。
 
-#### 定义引用：「同余」→ 二次剩余　`e152.definition`
+#### 定义引用：「同余」→ 二次剩余　`e155.definition`
 
 二次剩余的陈述就是同余方程 $x^{2} \equiv a$ 有没有解。
 
-#### 定义引用：「二次剩余」→ Legendre 符号　`e153.definition`
+#### 定义引用：「二次剩余」→ Legendre 符号　`e156.definition`
 
 Legendre 符号把「是不是剩余」编码成 $\pm 1$。
 
-#### 定义引用：「Legendre 符号」→ Euler 判别法　`e154.definition`
+#### 定义引用：「Legendre 符号」→ Euler 判别法　`e157.definition`
 
 判别法的结论就是 Legendre 符号的显式公式。
 
-#### 定义引用：「Legendre 符号」→ Gauss 引理（二次剩余）　`e155.definition`
+#### 定义引用：「Legendre 符号」→ Gauss 引理（二次剩余）　`e158.definition`
 
 引理给的是 Legendre 符号的另一个算法（数 $\mu$ 的奇偶）。
 
-#### 定义引用：「Legendre 符号」→ 二次互反律　`e156.definition`
+#### 定义引用：「Legendre 符号」→ 二次互反律　`e159.definition`
 
 互反律说的是两个 Legendre 符号之间的关系。
 
-#### 定义引用：「Jacobi 符号」→ Jacobi 符号的计算法则　`e157.definition`
+#### 定义引用：「Jacobi 符号」→ Jacobi 符号的计算法则　`e160.definition`
 
 计算法则全部是 Jacobi 符号的乘法/移项性质。
 
-#### 定义引用：「Legendre 符号」→ Jacobi 符号　`e158.definition`
+#### 定义引用：「Legendre 符号」→ Jacobi 符号　`e161.definition`
 
 Jacobi 符号是把 Legendre 符号按素因子幂乘起来。
 
-#### 定义引用：「模 n 的阶」→ 原根　`e159.definition`
+#### 定义引用：「模 n 的阶」→ 原根　`e162.definition`
 
 原根的定义就是「阶等于 $\varphi(n)$」。
 
-#### 定义引用：「群」→ 模 n 的阶　`e160.definition`
+#### 定义引用：「群」→ 模 n 的阶　`e163.definition`
 
 阶就是元素在单位群里的阶 —— 群论概念在模算术里的坐标。
 
-#### 定义引用：「原根」→ 离散对数　`e161.definition`
+#### 定义引用：「原根」→ 离散对数　`e164.definition`
 
 离散对数以原根为底，唯一性来自「生成元」。
 
-#### 定义引用：「模素数有原根」→ 离散对数　`e162.definition`
+#### 定义引用：「模素数有原根」→ 离散对数　`e165.definition`
 
 原根存在，离散对数才有定义。
 
-#### 定义引用：「积性函数」→ Legendre 符号　`e163.definition`
+#### 定义引用：「积性函数」→ Legendre 符号　`e166.definition`
 
 Legendre 符号对第一个变量完全积性（$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$）。
 
@@ -51824,7 +52187,7 @@ $|H| = k$：这 $k$ 个元素互不相同（若 $[a]^{i} = [a]^{j}$，$0 \le i <
 
 **③ 相加**。矩形 $\{1 \le i \le \frac{p-1}{2}\} \times \{1 \le j \le \frac{q-1}{2}\}$ 共有 $\frac{p-1}{2} \cdot \frac{q-1}{2}$ 个整点，且没有点落在直线上（$iq = jp$、$p \ne q$ 为素数、$i < p$，矛盾），故两和相加恰是这个数。代回 ①：$\left(\frac{q}{p}\right)\left(\frac{p}{q}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$。∎
 
-#### 定义引用：「选择函数」→ Zorn 引理　`e165.definition`
+#### 定义引用：「选择函数」→ Zorn 引理　`e168.definition`
 
 Zorn 引理与选择公理等价（`imp.zorn-choice`）：证明里要从族里挑元素，用的就是选择函数。
 
@@ -53010,7 +53373,7 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 ⭐ 顺带：**子空间仍是距离空间**（限制度量），所以距离空间其实直接是 $T_{5}$、$T_{6}$ —— 这正是分析里从不操心分离公理的原因。
 
-#### 局部紧 Hausdorff 空间 ⟹ 完全正则空间　`imp.lch-cr`
+#### 局部紧空间 + Hausdorff 空间 ⟹ 完全正则空间　`imp.lch-cr`
 
 局部紧 Hausdorff 空间已含 $T_{1}$，只需证 $T_{3.5}$。
 
@@ -53050,7 +53413,7 @@ $$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
 
 ⭐ 这是**直接证明**，没有走 `thm.paracompact-hausdorff-normal`：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。
 
-#### 紧 ⟹ 局部紧空间（裸）　`imp.compact-locally-compact`
+#### 紧 ⟹ 局部紧空间　`imp.compact-locally-compact`
 
 设 $X$ 紧。
 
@@ -53060,15 +53423,15 @@ $$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
 
 ∎
 
-⭐ 这条几乎是定义级别的，但它**不是**废话：局部紧的定义允许「每个点有个小的紧邻域」，紧性给的是「整体紧」，而整体紧在**子空间**上不遗传给邻域 —— 所以「紧 $\implies$ 局部紧」要用 $K = X$ 这一招，而「局部紧」的逆不成立（$\mathbb{R}$ 局部紧但不紧）。这条证明的是**裸局部紧**；要得到 `def.locally-compact`（局部紧 Hausdorff），还需把 Hausdorff 作为额外假设（见下一条）。
+⭐ 这条几乎是定义级别的，但它**不是**废话：局部紧的定义允许「每个点有个小的紧邻域」，紧性给的是「整体紧」，而整体紧在**子空间**上不遗传给邻域 —— 所以「紧 $\implies$ 局部紧」要用 $K = X$ 这一招，而「局部紧」的逆不成立（$\mathbb{R}$ 局部紧但不紧）。这条证明的是**局部紧**；要得到「局部紧 Hausdorff」，还需把 Hausdorff 作为额外假设（见下一条）。
 
-#### 紧 + Hausdorff 空间 ⟹ 局部紧 Hausdorff 空间　`imp.compact-hausdorff-locallycompact`
+#### 紧 + Hausdorff 空间 ⟹ 局部紧空间　`imp.compact-hausdorff-locallycompact`
 
 设 $X$ 紧且 Hausdorff。紧性给：对任意 $x \in X$，取 $K = X$ 就是 $x$ 的紧邻域（$X$ 开于自身，故 $x \in \mathring{X}$）。Hausdorff 是额外假设。
 
-两条合起来正是 `def.locally-compact` 的要求：**裸局部紧 + Hausdorff**。∎
+结论：$X$ **局部紧**（上一条）且 **Hausdorff**（本条假设）。∎
 
-⭐ 与上一条的分工：上一条只给裸局部紧（不需要 Hausdorff）；本条的额外输入只有 Hausdorff 这一条假设。
+⭐ 与上一条的分工：上一条只给局部紧（不需要 Hausdorff）；本条的额外输入只有 Hausdorff 这一条假设。
 
 #### 紧 ⟹ 仿紧空间　`imp.compact-paracompact`
 
@@ -53416,19 +53779,101 @@ Minkowski 就是 L^p 范数的三角不等式。
 
 定义走 $\mathbb{Z} \to K$ 这个环同态，要先有环与理想。
 
-#### 定义引用：「向量空间」→ 凸集　`e166.definition`
+#### 定义引用：「对偶空间」→ 完美配对　`def-link.pp-dual`
+
+配对的两侧嵌入到对方对偶空间；完美配对的第三条要求这两个嵌入保范。
+
+#### 定义引用：「范数」→ 完美配对　`def-link.pp-norm`
+
+完美配对的两侧都是赋范空间，第三条用范数写出。
+
+#### 定义引用：「完美配对」→ Riesz 表示的配对版　`def-link.rpp-pp`
+
+统一 Riesz 定理的出发点：完美配对的三个公理。
+
+#### 定义引用：「对偶空间」→ Riesz 表示的配对版　`def-link.rpp-dual`
+
+结论是 $X \cong Y^*$、$Y \cong X^*$，所以两边都是对偶空间。
+
+#### 完美配对 ⟹ Riesz 表示的配对版　`imp.fa-perfectpairing-riesz`
+*完美配对 $\implies$ 两个 Riesz 嵌入与互满准则*
+
+设 $(X, Y, \langle\cdot,\cdot\rangle)$ 是完美配对。
+
+**(a)** 令 $T x = \langle x, \cdot\rangle \in Y^*$。由定义第三条，$\|x\| = \sup_{\|y\| \le 1}|\langle x, y\rangle| = \|T x\|$；由第一条，$T x = 0 \implies x = 0$。故 $T$ 是等距嵌入。对 $S y = \langle\cdot, y\rangle \in X^*$ 同理。
+
+**(b)** 若 $T$ 满，则 $T$ 是等距同构 $X \to Y^*$。对偶化得 $T^* : Y^{**} \to X^*$ 等距同构；而 $S : Y \to X^*$ 是等距嵌入，且 $T^*$ 把 $J_Y(Y)$ 送到 $S(Y)$（验证：$T^* J_Y y (x) = J_Y y(T x) = \langle x, y\rangle = S y(x)$）。$J_Y$ 总是等距，故 $S(Y) = T^* J_Y(Y)$ 在 $T^*$ 下同构于 $Y$，而 $T^*$ 满（同构），所以 $S$ 也满。$\blacksquare$
+
+于是 (b) 成立；把 (c) 的两个具体配对代入即得 $H^* \cong H$ 与 $(L^p)^* \cong L^q$。
+
+> 注意 (b) 只用「一个满」推出「另一个满」，不声称三条公理本身蕴含满射——反例见 `def.perfect-pairing` 的 $\ell^1/c_0$。
+
+#### 定义引用：「范数」→ 一致凸　`def-link.uc-norm`
+
+一致凸的定义全用范数写出。
+
+#### 定义引用：「Banach 空间」→ 一致凸　`def-link.uc-banach`
+
+一致凸通常对 Banach 空间讨论；定义本身对任意赋范空间有意义。
+
+#### 定义引用：「范数」→ 严格凸　`def-link.sc-norm`
+
+严格凸用单位球面不含线段来定义。
+
+#### 一致凸 ⟹ 严格凸　`imp.fa-uniformconvex-strict`
+*一致凸 $\implies$ 严格凸*
+
+设 $X$ 一致凸，取 $\|x\| = \|y\| = 1$、$x \ne y$，令 $\varepsilon = \|x - y\| > 0$。
+由一致凸，存在 $\delta = \delta(\varepsilon) > 0$ 使 $\|(x + y)/2\| \le 1 - \delta < 1$。
+按 `def.strictly-convex` 的定义，这正是严格凸。$\blacksquare$
+
+> 反向不成立：存在严格凸但不一致凸的 Banach 空间。
+
+#### 定义引用：「对偶空间」→ 自反空间　`def-link.ref-dual`
+
+自反性用二次对偶 $X^{**}$ 与自然嵌入 $J_X$ 定义。
+
+#### 定义引用：「Banach 空间」→ 自反空间　`def-link.ref-banach`
+
+自反性是对 Banach 空间说的（完备性用于 $X^{**}$ 的范数结构）。
+
+#### 定义引用：「自反空间」→ L^p 自反　`def-link.lpref-ref`
+
+$L^p$（$1 < p < \infty$）自反正是这个一般定义的具体实例。
+
+#### 定义引用：「一致凸」→ Milman–Pettis 定理　`def-link.mp-uc`
+
+Milman–Pettis 的假设：一致凸。
+
+#### 定义引用：「自反空间」→ Milman–Pettis 定理　`def-link.mp-ref`
+
+Milman–Pettis 的结论：自反。
+
+#### 定义引用：「自反空间」→ James 定理　`def-link.james-ref`
+
+James 定理用自反性刻画「每个泛函达到范数」。
+
+#### 定义引用：「完美配对」→ Riesz 表示（Hilbert）　`def-link.rieszhil-pp`
+
+Hilbert 的 Riesz 表示所用的内积配对 $(H, H)$ 是完美配对，且映射满。
+
+#### 定义引用：「完美配对」→ Riesz 表示定理　`def-link.rieszlp-pp`
+
+$L^p$ 的 Riesz 表示所用的配对 $(L^p, L^q)$ 是完美配对，且映射满。
+
+#### 定义引用：「向量空间」→ 凸集　`e169.definition`
 
 凸集是向量空间的子集；凸性只用仿射结构，不用范数。
 
-#### 定义引用：「凸集」→ 凸闭集的最近点　`e167.definition`
+#### 定义引用：「凸集」→ 凸闭集的最近点　`e170.definition`
 
 投影定理的核心假设：凸、闭、非空。
 
-#### 定义引用：「星形集」→ Poincaré 引理　`e168.definition`
+#### 定义引用：「星形集」→ Poincaré 引理　`e171.definition`
 
 Poincaré 引理里的星形区域就是这里的星形开集；星点可作收缩中心。
 
-#### 凸集 ⟹ 星形集　`e169.implication`
+#### 凸集 ⟹ 星形集　`e172.implication`
 *非空凸集 $\implies$ 星形集*
 
 设 $C \ne \emptyset$ 凸，取 $x_{0} \in C$。对任意 $x \in C$、$t \in [0,1]$，由凸性 $(1-t)x_{0} + tx \in C$。
@@ -53436,15 +53881,15 @@ Poincaré 引理里的星形区域就是这里的星形开集；星点可作收�
 
 > 「非空」不能省：空集是凸的但不是星形集（没有星点）。逆命题也不成立：十字形星形但不凸。
 
-#### 定义引用：「凸集」→ 凸组合　`e170.definition`
+#### 定义引用：「凸集」→ 凸组合　`e173.definition`
 
 凸组合是凸集对有限线性组合封闭的载体；两点情形就是凸集定义里的线段。
 
-#### 定义引用：「凸组合」→ 凸包　`e171.definition`
+#### 定义引用：「凸组合」→ 凸包　`e174.definition`
 
 凸包的有限凸组合刻画直接用到凸组合。
 
-#### 定义引用：「凸包」→ 标准单纯形　`e172.definition`
+#### 定义引用：「凸包」→ 标准单纯形　`e175.definition`
 
 标准单纯形正是其顶点集的凸包；这里把几何单纯形与凸包概念接上。
 
@@ -53493,6 +53938,22 @@ $\Phi : X \times Y \to E$，$\Phi(x, y) = x + y$，是有界线性双射。由�
 
 > 这条正是「闭子空间 + 代数互补 $\implies$ 有界投影」的全部内容；$E$ 的完备性只在这里用到。
 
+#### 定义引用：「有界线性算子」→ 部分等距　`def-link.fa-partial-bounded`
+
+部分等距首先是有界算子。
+
+#### 定义引用：「正交投影」→ 部分等距　`def-link.fa-partial-proj`
+
+定义要求 $u^*u$ 是正交投影；等价刻画里 $u\,u^*$ 也是正交投影。
+
+#### 酉算子 ⟹ 部分等距　`imp.fa-unitary-partial`
+*酉算子 $\implies$ 部分等距*
+
+设 $u$ 是酉算子，即 $u^*u = u\,u^* = I$。
+$I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等距。$\blacksquare$
+
+> 反向不成立：单侧移位是部分等距但不是酉算子（$S\,S^*$ 不是 $I$）。
+
 #### 定义引用：「同调」→ 上同调类　`dep.cc-hom`
 
 上同调类是 $H^{n}$ 的元素，先有 $H^{n}$。
@@ -53529,9 +53990,13 @@ $\Phi : X \times Y \to E$，$\Phi(x, y) = x + y$，是有界线性双射。由�
 
 一点紧化是紧化的特例（只补一个点）。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 一点紧化　`dep-opc-lc`
+#### 定义引用：「局部紧空间」→ 一点紧化　`dep-opc-lc`
 
 「$X^{*}$ Hausdorff $\iff$ $X$ 局部紧 Hausdorff」这一条要用局部紧。
+
+#### 定义引用：「Hausdorff 空间」→ 一点紧化　`dep-opc-hausdorff`
+
+同一条还要求 $X$ 是 Hausdorff 的。
 
 #### 定义引用：「紧」→ 一点紧化　`dep-opc-compact`
 
@@ -54200,6 +54665,23 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 
 结论「$u \in B(E, F)$」正是有界线性算子空间里的成员资格。
 
+#### 定义引用：「距离空间」→ 一致等度连续　`def-link.fa-ueq-metric`
+
+一致版本用度量 $\delta$ 写「$\delta(x,y) < \eta$」；拓扑空间上只能逐点定义。
+
+#### 定义引用：「一致等度连续」→ 等度连续与一致等度连续　`def-link.fa-ueq-thm`
+
+定理的结论正是这条一致版本。
+
+#### 一致等度连续 ⟹ 等度连续　`imp.fa-uniform-eq-pointwise`
+*一致等度连续 $\implies$ 逐点等度连续*
+
+设 $\mathcal{H}$ 一致等度连续，取定 $x_0 \in K$ 与 $\varepsilon > 0$。
+由定义存在 $\eta > 0$，使得 $\delta(x, x_0) < \eta$ 时对一切 $f$ 有 $d(f(x), f(x_0)) < \varepsilon$。
+取邻域 $U = B(x_0, \eta)$，即满足逐点等度连续的定义。$\blacksquare$
+
+> 反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。
+
 #### 定义引用：「向量丛」→ 帧丛　`dep.fr-vector`
 
 帧丛是「向量丛 + 每根纤维选一组基」，先有向量丛。
@@ -54388,7 +54870,7 @@ Banach 版逆映射定理的假设「$f'(a)$ 可逆」用的就是这个导数�
 
 级数收敛 = 部分和这个**数列**收敛。
 
-#### 定义引用：「数列极限」→ 连续　`dep.real-continuous`
+#### 定义引用：「数列极限」→ 连续（ε-δ 判据）　`dep.real-continuous`
 
 连续的定义就是「$x \to x_0$ 时 $f(x) \to f(x_0)$」——极限的语言。
 
@@ -54396,7 +54878,7 @@ Banach 版逆映射定理的假设「$f'(a)$ 可逆」用的就是这个导数�
 
 导数是一个**极限**：差商的极限。
 
-#### 定义引用：「连续」→ 导数　`dep.continuous-derivative`
+#### 定义引用：「连续（ε-δ 判据）」→ 导数　`dep.continuous-derivative`
 
 可导 $\implies$ 连续：这一点由导数的定义直接推出来。
 
@@ -54407,6 +54889,40 @@ $\mathbb{C} = \mathbb{R}^2$，实部虚部都是实数。
 #### 定义引用：「界与确界」→ 级数收敛　`dep.sup-series`
 
 非负项级数取的就是部分和的**上确界**。
+
+#### 定义引用：「度量空间的连续」→ 连续（ε-δ 判据）　`def-link.mc-continuous`
+
+本定理是度量连续在 $\mathbb{R}$ 上的具体写法。
+
+#### 定义引用：「距离空间」→ 实数的度量　`def-link.realmetric-metric`
+
+$d(x,y) = |x-y|$ 满足度量三公理。
+
+#### 定义引用：「实数系 ℝ」→ 实数的度量　`def-link.realmetric-real`
+
+距离用实数的绝对值与序。
+
+#### 度量空间的连续 ⟺ 连续（ε-δ 判据）　`eq.real-continuity-epsilon-delta`
+*度量连续 $\iff$ $\varepsilon$-$\delta$ 判据*
+
+**度量连续 ⇒ ε-δ**
+
+在 $(\mathbb{R}, d)$、$d(x, y) = |x - y|$ 中，$d(x, x_0) < \delta$ 就是 $|x - x_0| < \delta$，$d(f(x), f(x_0)) < \varepsilon$ 就是 $|f(x) - f(x_0)| < \varepsilon$。
+把 `def.metric-continuity` 的定义逐字代入即得 $\varepsilon$-$\delta$ 式。$\blacksquare$
+
+**ε-δ ⇒ 度量连续**
+
+反之，若 $\varepsilon$-$\delta$ 式成立，则取度量定义中的 $\delta$ 为同一个 $\delta$，即满足 `def.metric-continuity` 的每点连续定义。$\blacksquare$
+
+> 两个方向都只是把 $|\cdot|$ 改写成度量 $d$，没有实质数学内容；但它把「$\mathbb{R}$ 上的 $\varepsilon$-$\delta$」与「一般度量空间的连续性」正式接上。
+
+#### 定义引用：「导数」→ Dini 导数　`def-link.dini-derivative-d`
+
+Dini 导数就是普通差商的四个单侧上、下极限；普通导数是四者相等的情形。
+
+#### 定义引用：「上极限与下极限」→ Dini 导数　`def-link.dini-limsup`
+
+四个 Dini 导数用差商的 $\limsup$ 与 $\liminf$ 定义。
 
 #### 定义引用：「Euler 示性数」→ Gauss–Bonnet 定理　`dep.gaussbonnet-eulerchar`
 
@@ -54971,7 +55487,7 @@ $\mu(E) = 0$ 里的 $\mu$ 是测度；a.e. 是测度空间上的说法。
 
 $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
-#### 定义引用：「连续」→ 连续 ⟹ Borel 可测　`dep.continuous-continuous-measurable`
+#### 定义引用：「连续（ε-δ 判据）」→ 连续 ⟹ Borel 可测　`dep.continuous-continuous-measurable`
 
 「连续 $\implies$ Borel 可测」要把连续的 $\varepsilon$-$\delta$ 定义翻译成开集的原像。
 
@@ -55507,9 +56023,13 @@ $$R^{T}R\,x = R^{T}Q^{T}b \;\iff\; Rx = Q^{T}b,$$
 
 陈述里提到「Hilbert 空间」：「设 $H$ 是 Hilbert 空间，$C \subseteq H$ 非空、**凸**、…」 —— 读者顺着这个词要落到它的定义上，所以接上。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ Baire 纲定理　`dep.gap-baire-locally-compact`
+#### 定义引用：「局部紧空间」→ Baire 纲定理　`dep.gap-baire-locally-compact`
 
-陈述里提到「局部紧 Hausdorff 空间」：「设 $X$ 是完备度量空间（或局部紧 Hausdorff 空间）」 —— 读者顺着这个词要落到它的定义上，所以接上。
+陈述里提到「局部紧 Hausdorff 空间」：「设 $X$ 是完备度量空间（或局部紧 Hausdorff 空间）」 —— 读者顺着这个词要落到局部紧的定义上，所以接上。
+
+#### 定义引用：「Hausdorff 空间」→ Baire 纲定理　`dep.gap-baire-hausdorff`
+
+同一句话里的「Hausdorff」也要求读者能落到定义上。
 
 #### 定义引用：「分裂域」→ 伽罗瓦群　`dep.gap-galois-group-splitting-field`
 
@@ -55811,9 +56331,13 @@ Hilbert 空间是 Banach 空间的特例，所以也走这条桥（注里有说�
 
 结论说「存在一个 Radon **测度** $\mu$」，用到测度的定义。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ Riesz–Markov 表示　`dep.rm-lc`
+#### 定义引用：「局部紧空间」→ Riesz–Markov 表示　`dep.rm-lc`
 
 假设是局部紧 Hausdorff —— 局部紧是 Urysohn 夹逼函数存在的前提。
+
+#### 定义引用：「Hausdorff 空间」→ Riesz–Markov 表示　`dep.rm-hausdorff`
+
+假设里的 Hausdorff 一半：它保证紧集闭、单点紧化正规，因而 Urysohn 可用。
 
 #### 定义引用：「外测度」→ Riesz–Markov 表示　`dep.rm-outer`
 
@@ -55902,9 +56426,13 @@ $\operatorname{Re}s > 1$ 时 $\sum n^{-s}$ **绝对收敛** —— 这是「可�
 
 注里「主特征标的 $L$ 函数就是 $\zeta$ 去掉整除 $n$ 的素数因子」直接用到 $\zeta$ 的 Euler 乘积。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 紧生成空间的例子　`dep.cgex-lc`
+#### 定义引用：「局部紧空间」→ 紧生成空间的例子　`dep.cgex-lc`
 
-例 1 的假设就是「**局部紧 Hausdorff** 空间是紧生成的」—— 用到局部紧的定义（每点有紧邻域）。
+例 1 的假设是「**局部紧 Hausdorff** 空间是紧生成的」—— 用到局部紧的定义（每点有紧邻域）。
+
+#### 定义引用：「Hausdorff 空间」→ 紧生成空间的例子　`dep.cgex-hausdorff`
+
+例 1 同时要求 **Hausdorff**：局部紧本身不足以让一点紧化 Hausdorff。
 
 #### 定义引用：「k-开、k-闭与 k-拓扑」→ 紧生成空间的例子　`dep.cgex-ktx`
 
@@ -56339,7 +56867,7 @@ $d$ 诱导出的那族开集（开球之并）就是这条定义里的拓扑：�
 
 Borel $\sigma$-代数就是「设 $X$ 是**拓扑空间**，取全体开集生成的 $\sigma$-代数」。
 
-#### 定义引用：「拓扑空间与开集」→ 连续　`dep.topology-engine-continuous`
+#### 定义引用：「拓扑空间与开集」→ 连续（ε-δ 判据）　`dep.topology-engine-continuous`
 
 $\varepsilon$-$\delta$ 那套是**拓扑版连续**在实数（或距离空间）上的展开形式：开球就是 $\varepsilon$ 邻域。
 
@@ -60815,7 +61343,7 @@ $kX$ 是沿紧 Hausdorff 空间取余极限。
 
 测试块 $S$ 取的是**紧**空间。
 
-#### 定义引用：「连续」→ 紧开拓扑　`def-dep.compactopen-continuous`
+#### 定义引用：「连续（ε-δ 判据）」→ 紧开拓扑　`def-dep.compactopen-continuous`
 
 定义里要求 $g$ 与 $f$ 都**连续**。
 
@@ -60899,7 +61427,7 @@ $kX$ 是沿紧 Hausdorff 空间取余极限。
 
 正规性说的是**不交闭集**能被开集分开。
 
-#### 定义引用：「连续」→ Урысон 引理　`def-dep.urysohn-continuous`
+#### 定义引用：「连续（ε-δ 判据）」→ Урысон 引理　`def-dep.urysohn-continuous`
 
 引理的结论是一个**连续函数** $f : X \to [0,1]$。
 
@@ -61234,14 +61762,6 @@ $\operatorname{Hom}$ 集上要有**阿贝尔群**结构才谈得上保加法。
 #### 定义引用：「连通与连通分量」→ 完全不连通与极不连通　`def-dep.totdisc-connected`
 
 「完全不连通」= 每个**连通分量**都是单点。
-
-#### 定义引用：「Hausdorff 空间」→ 局部紧 Hausdorff 空间　`def-dep.loccpt-hausdorff`
-
-局部紧**Hausdorff** 的头一个要求就是 Hausdorff。
-
-#### 定义引用：「紧」→ 局部紧 Hausdorff 空间　`def-dep.loccpt-compact`
-
-要求每点有**紧**邻域。
 
 #### 定义引用：「紧」→ Tychonoff 定理　`def-dep.tykhonov-compact`
 
@@ -61663,9 +62183,13 @@ $H^{n} := R^{n}\Gamma$。
 
 说的是上同调群。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 局部紧上凝聚态＝层上同调　`def-dep.dyckhoff-lc`
+#### 定义引用：「局部紧空间」→ 局部紧上凝聚态＝层上同调　`def-dep.dyckhoff-lc`
 
-前提是 $X$ **局部紧** Hausdorff。
+前提是 $X$ **局部紧**。
+
+#### 定义引用：「Hausdorff 空间」→ 局部紧上凝聚态＝层上同调　`def-dep.dyckhoff-hausdorff`
+
+前提还要求 $X$ 是 **Hausdorff**。
 
 #### 定义引用：「层上同调」→ 局部紧上凝聚态＝层上同调　`def-dep.dyckhoff-sheafcoh`
 
@@ -61815,9 +62339,13 @@ $K$-有界正合定义在**半范数**阿贝尔群的复形上。
 
 右边用 **$\operatorname{RHom}$** 来写。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 局部紧阿贝尔群高次 Ext 消失　`def-dep.lcext-lc`
+#### 定义引用：「局部紧空间」→ 局部紧阿贝尔群高次 Ext 消失　`def-dep.lcext-lc`
 
-前提是 $M, N$ **局部紧** Hausdorff。
+前提是 $M, N$ **局部紧**。
+
+#### 定义引用：「Hausdorff 空间」→ 局部紧阿贝尔群高次 Ext 消失　`def-dep.lcext-hausdorff`
+
+前提还要求 $M, N$ 是 **Hausdorff**。
 
 #### 定义引用：「扩展群 Ext」→ 局部紧阿贝尔群高次 Ext 消失　`def-dep.lcext-ext`
 
@@ -61851,9 +62379,13 @@ $K$-有界正合定义在**半范数**阿贝尔群的复形上。
 
 源 $M$ 要求**连通**。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 连通局部紧到离散只剩 Ext一次　`def-dep.clce-lc`
+#### 定义引用：「局部紧空间」→ 连通局部紧到离散只剩 Ext一次　`def-dep.clce-lc`
 
-源 $M$ **局部紧** Hausdorff。
+源 $M$ **局部紧**。
+
+#### 定义引用：「Hausdorff 空间」→ 连通局部紧到离散只剩 Ext一次　`def-dep.clce-hausdorff`
+
+源 $M$ 还要求是 **Hausdorff**。
 
 #### 定义引用：「扩展群 Ext」→ 连通局部紧到离散只剩 Ext一次　`def-dep.clce-ext`
 
@@ -61863,9 +62395,13 @@ $K$-有界正合定义在**半范数**阿贝尔群的复形上。
 
 算的是 **$\operatorname{RHom}$**（对象不必局部紧）。
 
-#### 定义引用：「局部紧 Hausdorff 空间」→ 局部紧阿贝尔群结构定理　`def-dep.lcstr-lc`
+#### 定义引用：「局部紧空间」→ 局部紧阿贝尔群结构定理　`def-dep.lcstr-lc`
 
-说的是**局部紧** Hausdorff 阿贝尔群。
+说的是**局部紧**阿贝尔群。
+
+#### 定义引用：「Hausdorff 空间」→ 局部紧阿贝尔群结构定理　`def-dep.lcstr-hausdorff`
+
+还要求它是 **Hausdorff** 的。
 
 #### 定义引用：「紧 Hausdorff 空间范畴」→ 局部紧阿贝尔群结构定理　`def-dep.lcstr-chaus`
 
@@ -61978,10 +62514,6 @@ $K$-有界正合定义在**半范数**阿贝尔群的复形上。
 #### 定义引用：「弱 Hausdorff 空间」→ 紧块沿闭含入拼出的空间　`def-dep.clif-wh`
 
 结论断言余极限仍**弱 Hausdorff**。
-
-#### 定义引用：「局部紧空间（裸）」→ 局部紧 Hausdorff 空间　`def-dep.lcspace-lc`
-
-局部紧 Hausdorff = 裸局部紧 + Hausdorff；本节点是它的裸版本。
 
 #### 定义引用：「数列极限」→ 函数极限　`dep.seqlimit-fnlimit`
 
@@ -62203,7 +62735,7 @@ $K$ 闭，故 $x \in K$。
 
 > 两条前提缺一不可：$\mathbb{R}^{n}$ 的**完备性**（Bolzano–Weierstrass）给出「有界 $\implies$ 有子列收敛」，度量空间的**一般事实**给出「紧 $\iff$ 列紧」与「紧 $\implies$ 闭」。
 
-#### 定义引用：「连续」→ 一致连续　`dep.continuous-uniform`
+#### 定义引用：「连续（ε-δ 判据）」→ 一致连续　`dep.continuous-uniform`
 
 把连续的定义里 $\delta$ 的位置挪到 $\forall x$ 前面，就得到一致连续 —— 两个定义用同一套 $\varepsilon$-$\delta$ 语言。
 
@@ -62211,7 +62743,7 @@ $K$ 闭，故 $x \in K$。
 
 命题的证明只用到紧性的一个用途：从任一开覆盖里取有限子覆盖（或等价地，列紧）。
 
-#### 定义引用：「连续」→ 间断点分类　`dep.continuous-discontinuity`
+#### 定义引用：「连续（ε-δ 判据）」→ 间断点分类　`dep.continuous-discontinuity`
 
 间断点就是「不连续的点」，分类的判据是单侧极限，而单侧极限的定义来自函数极限。
 
@@ -62233,7 +62765,7 @@ $$M := \sup f(X) \in \mathbb{R}$$
 
 > 第 3 步的两个极限必须都存在才能用「极限唯一」：左式的存在性来自连续性，右式来自 $\sup$ 的定义。紧性只在第 2 步用了一次。
 
-#### ℝ 是完备有序域 + 连续 ⟹ 介值定理　`imp.ivt`
+#### ℝ 是完备有序域 + 连续（ε-δ 判据） ⟹ 介值定理　`imp.ivt`
 *确界原理 + 连续的定义 $\implies$ 介值定理*
 
 不妨设 $f(a) < c < f(b)$。令
@@ -62685,7 +63217,7 @@ $$-\int |f| \le \int f \le \int |f| \quad\Longrightarrow\quad \Bigl| \int_a^b f 
 
 > $\omega(|f|) \le \omega(f)$ 是逐段证明的：$\sup |f| - \inf |f| \le \sup f - \inf f$（反向三角不等式）。
 
-#### 积分的线性与区间可加 + 积分的保序与估计 + 连续 ⟹ 变上限积分的导数　`imp.ftc-part1`
+#### 积分的线性与区间可加 + 积分的保序与估计 + 连续（ε-δ 判据） ⟹ 变上限积分的导数　`imp.ftc-part1`
 *区间可加 + 基本估计 $\implies$ 变上限积分的导数*
 
 设 $|f| \le M$。
@@ -63032,7 +63564,7 @@ $\log$ 定义为 $\exp$（限制在 $\mathbb{R}$ 上）的反函数，所以它�
 
 $\pi$ 用 $\cos$ 的最小正零点定义 —— 没有 $\cos$ 的幂级数，这个定义写不出来。
 
-#### 一致收敛 + 连续 ⟹ 一致收敛保连续　`imp.uniform-limit-continuous`
+#### 一致收敛 + 连续（ε-δ 判据） ⟹ 一致收敛保连续　`imp.uniform-limit-continuous`
 *一致收敛 + 连续 $\implies$ 极限连续*
 
 设 $x_0 \in X$，给定 $\varepsilon > 0$。
@@ -63102,7 +63634,7 @@ $$|S_{N'}(x) - S_N(x)| \le \sum_{n = N+1}^{N'} |f_n(x)| \le \sum_{n = N+1}^{N'} 
 
 > 证明的要害是「右端与 $x$ 无关」这一步：把 $x$ 从估计里彻底消掉，就得到了一致性。
 
-#### 一致收敛 + 连续 + 紧 ⟹ Dini 定理　`imp.dini`
+#### 一致收敛 + 连续（ε-δ 判据） + 紧 ⟹ Dini 定理　`imp.dini`
 *紧性 + 单调 + 连续性 $\implies$ Dini 定理*
 
 若 $X=\emptyset$ 结论平凡；以下设 $X$ 非空（$X\ne\emptyset$）。
@@ -63206,7 +63738,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 > ⚠️ 这些**不是**逻辑蕴含，只在「卡住了、想找远房关系」时用。
 
-#### 映射同伦 ～ 同伦　`e68.analogy`
+#### 映射同伦 ～ 同伦　`e69.analogy`
 *映射同伦与链同伦：同一句话的两个化身*
 
 两件事没有谁推出谁（一个是空间之间的形变，一个是链复形之间的同调代数关系），但**招数是同一个**：
@@ -63220,11 +63752,11 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 💡 卡在「怎么说明这两个对象在这个不变量眼里一样」时，回来想想：**有没有一个 $s$ 可用？**
 
-#### 标准单纯形 ～ 单纯形范畴　`e72.analogy`
+#### 标准单纯形 ～ 单纯形范畴　`e75.analogy`
 
 标准单纯形 $\Delta^{p}$ 与单纯形范畴的对象 $[p]$ 是同一组面/退化数据的两个模型：前者是几何实现，后者是组合索引。单纯复形用前者，单纯对象用后者。
 
-#### 基本群 ～ 奇异同调群　`e90.analogy`
+#### 基本群 ～ 奇异同调群　`e93.analogy`
 *$\pi_{1}$ 与 $H_{1}$：一维的两种探针，一个记得非交换，一个不记得*
 
 本图**没有** Hurewicz 定理这个节点，所以这条只能作为**联想线索**记在这里，不当依赖边用。（硬事实：$X$ 道路连通时 $H_{1}(X) \cong \pi_{1}(X)^{\mathrm{ab}}$，即「忘掉非交换性之后两者一致」。）
@@ -63239,7 +63771,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 💡 卡在「这个圈到底能不能缩」时：先算便宜的 $H_{1}$（能算）；若 $H_{1} = 0$ 而你想推翻，就得回到 $\pi_{1}$（可能是完美群，$H_{1}$ 看不见）。反过来若 $H_{1} \ne 0$，$\pi_{1}$ 必定非平凡，这条捷径几乎每次都值得先试。
 
-#### 整数的带余除法 ～ 带余除法　`e124.analogy`
+#### 整数的带余除法 ～ 带余除法　`e127.analogy`
 *整数与多项式：同一个带余除法*
 
 两边的证明结构一模一样：$\mathbb{Z}$ 上按绝对值下降，$K[x]$ 上按次数下降；结论都是「商 + 余，余比除数小」。
@@ -63252,7 +63784,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 后续也同步：$\mathbb{Z}$ 有辗转相除就有 gcd，进而就是 UFD；$K[x]$ 有完全相同的链条（`thm.poly-ufd`）。
 
-#### 算术基本定理 ～ K[x] 是唯一分解整环　`e125.analogy`
+#### 算术基本定理 ～ K[x] 是唯一分解整环　`e128.analogy`
 *唯一分解：$\mathbb{Z}$ 与 $K[x]$ 的共同形状*
 
 两边的定理一字不差，只把「素数」换成「不可约多项式」、把「绝对值」换成「次数」。
@@ -63261,7 +63793,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 但 UFD 不是自动的：$\mathbb{Z}[\sqrt{-5}]$ 与 $K[x, y]$ 都不是 UFD。反例的形状也一样 —— 同一个元素有两条真分解。
 
-#### 中国剩余定理 ～ 中国剩余定理（环论形式）　`e140.analogy`
+#### 中国剩余定理 ～ 中国剩余定理（环论形式）　`e143.analogy`
 *中国剩余定理：数论版是环论版在 $\mathbb{Z}$ 上的样子*
 
 两边的陈述结构相同：模数互素 $\implies$ 商环分解成直积。
@@ -63274,7 +63806,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 差异只在证明工具：数论版用 Bézout 造 $e_{i}$，环论版用「$1 = u + v$」造幂等元 $e$ —— 其实是同一件事。
 
-#### Bézout 恒等式 ～ Bézout 整环　`e141.analogy`
+#### Bézout 恒等式 ～ Bézout 整环　`e144.analogy`
 *Bézout 恒等式：从 $\mathbb{Z}$ 上的定理升级为一个环类*
 
 数论版的 Bézout 说「$\gcd(a,b)$ 是 $a,b$ 的整系数组合」，这需要 $\mathbb{Z}$ 的特殊性（Euclid 算法）。
@@ -63287,7 +63819,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 所以「Bézout」在图里出现两次是对的：一次是 $\mathbb{Z}$ 上的定理，一次是整环上的类名 —— 后者包含了前者，也包含了 $K[x]$。
 
-#### 除数函数 τ 与 σ ～ 积性函数　`e151.analogy`
+#### 除数函数 τ 与 σ ～ 积性函数　`e154.analogy`
 *积性函数：$\tau$、$\sigma$ 与 $\mu$、$\varphi$ 是同一个框架的四个实例*
 
 四个函数都满足 $f(mn) = f(m)f(n)$（互素时），都由「素数幂上的值」决定，公式都是乘积形状。
@@ -63300,7 +63832,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 所以「积性函数」这条定义是四个具体公式的共同外壳 —— 与「张量场是向量场、微分形式、度量的共同外壳」是同一种组织方式。
 
-#### Jacobi 符号 ～ Legendre 符号　`e164.analogy`
+#### Jacobi 符号 ～ Legendre 符号　`e167.analogy`
 *Jacobi 符号：把 Legendre 符号从素数推到奇数*
 
 两者定义形状相同（乘性 + 取值 $\pm 1$ or $0$），但含义分家：Legendre 说「有没有解」，Jacobi 只是「乘积」。
@@ -63313,7 +63845,7 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 这条「便宜但只给必要条件」的性质，正是概率素性检验的可用之处：Jacobi 说 $-1$ 就一定合数。
 
-#### 第一同构定理（Noether） ～ 第一同构定理（向量空间版）　`e173.analogy`
+#### 第一同构定理（Noether） ～ 第一同构定理（向量空间版）　`e176.analogy`
 *第一同构定理：群版与向量空间版是同一句话*
 
 两个节点一个说「群同态 $G/\ker\varphi \cong \operatorname{im}\varphi$」，一个说「线性映射 $V/\ker T \cong \operatorname{im} T$」。
@@ -63322,28 +63854,28 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 
 ⭐ 所以这条只能当**类比**：想要真正的一次性说法，得有「阿贝尔范畴里的第一同构定理」那个节点。
 
-#### Mayer–Vietoris 序列 ～ Mayer–Vietoris（同调）　`e174.analogy`
+#### Mayer–Vietoris 序列 ～ Mayer–Vietoris（同调）　`e177.analogy`
 *Mayer–Vietoris：de Rham 版与奇异同调版*
 
 同一条长正合列，一个在 de Rham 上同调（`thm.mayer-vietoris`，微分几何侧），一个在奇异同调（`thm.mv-homology`，代数拓扑侧）。
 
 ⚠ 两边此前**都是叶子**：几何侧不知道拓扑侧已经有同一条列，反之亦然。本图尚未收「奇异上同调 = de Rham」那座桥（de Rham 定理只在光滑流形上），所以这里只记类比。
 
-#### Riesz 表示定理 ～ Riesz 表示（Hilbert）　`e175.analogy`
+#### Riesz 表示定理 ～ Riesz 表示（Hilbert）　`e178.analogy`
 *Riesz 表示定理：$L^{p}$ 版与 Hilbert 版*
 
 $L^{p}$ 版：$(L^{p})^{*} \cong L^{q}$（$1/p + 1/q = 1$），靠 Hölder 不等式；Hilbert 版：$H^{*} \cong H$，靠投影定理。
 
 两条都是「把泛函换成向量」，$p = 2$ 时它们重合（Hilbert 空间就是 $L^{2}$ 的抽象版）。一般 $p$ 下没有谁推出谁，所以是**类比**而不是依赖。
 
-#### Taylor 公式 ～ Taylor 公式（Peano 余项）　`e176.analogy`
+#### Taylor 公式 ～ Taylor 公式（Peano 余项）　`e179.analogy`
 *Taylor 公式：Lagrange 余项与 Peano 余项*
 
 同一个展开式，两种余项、两套假设：`thm.taylor` 要 $n+1$ 阶可导、给出**定量**余项（存在 $\xi$）；`prop.taylor-peano` 只要 $n$ 阶导数在 $x_{0}$ 连续，给出**定性**的 $o((x-x_{0})^{n})$。
 
 两者互不包含：Peano 版假设更弱但结论只在小 $o$ 意义下；Lagrange 版能用它估误差。所以是**同一台机器的两种用法**，不是依赖。
 
-#### 紧致性定理 ～ 紧　`e177.analogy`
+#### 紧致性定理 ～ 紧　`e180.analogy`
 *两种「紧」：有限可满足 vs 有限子覆盖*
 
 名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。
@@ -63352,7 +63884,7 @@ $L^{p}$ 版：$(L^{p})^{*} \cong L^{q}$（$1/p + 1/q = 1$），靠 Hölder 不�
 
 ⛔ 不能做成 definition：已有的 `def.compact → … → def.formula` 路径意味着反向接线会成环。
 
-#### 紧致性定理 ～ Tychonoff 定理　`e178.analogy`
+#### 紧致性定理 ～ Tychonoff 定理　`e181.analogy`
 *有限性原理的两个化身：紧致性定理与 Tychonoff*
 
 两条都在说「**局部/有限**的都行 $\implies$ 整体也行」：
@@ -63361,21 +63893,21 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 在 Boolean 代数 / Stone 对偶下它们确实相通（命题逻辑的紧致性可由 Cantor 空间紧得出），但那需要把 Stone 表示对偶做到逻辑层 —— 本图还没做，所以只记类比。
 
-#### 可证明性 ～ Boolean 环与 Stone 空间等价　`e179.analogy`
+#### 可证明性 ～ Boolean 环与 Stone 空间等价　`e182.analogy`
 *证明论 $\leftrightarrow$ Boolean 代数：命题逻辑的 Stone 表示*
 
 命题逻辑的**代数化**就是布尔代数：公式模「可证等价」得到布尔代数，而 `thm.boolean-stone`（$\mathbf{BoolRing}^{\mathrm{op}} \simeq \mathbf{Stone}$）说明这个代数完全由它的 Stone 空间（超滤子空间）决定 —— 命题逻辑的完备性在那边就是「$\operatorname{Spec}$ 非空」。
 
 ⚠ 本图没有「命题逻辑」这个节点（一阶逻辑才是主角），所以这条只作**联想线索**：从「可证明性」跳到「Boolean 环 / Stone 空间」那条线的入口。
 
-#### 亏格 ～ Euler 示性数　`e180.analogy`
+#### 亏格 ～ Euler 示性数　`e183.analogy`
 *亏格与 Euler 示性数：同一个数换了身衣服*
 
 闭可定向曲面上 $\chi(M) = 2 - 2g(M)$ —— 两个数互相决定，所以「数 Betti 数」与「数洞」是同一件事。
 
 ⚠ 本图把这条**留成类比**而不是 implication：它需要一个正经的定理节点（下一刀补），现在写死成推出关系就等于把「还没写的证明」当成已证。
 
-#### 闭曲面 ～ R³ 中的可定向曲面　`e181.analogy`
+#### 闭曲面 ～ R³ 中的可定向曲面　`e184.analogy`
 *两种「可定向曲面」：内在的拓扑 vs 嵌在 $\mathbb{R}^{3}$ 里的*
 
 `def.orientable-surface` 说的是：$\mathbb{R}^{3}$ 里被参数化覆盖的点集，能不能**连续地选一侧法向**（外加一个外法向，才有了面积元与 Gauss 映射）。那是**外在**的说法，用到了嵌入与度量。
@@ -63386,14 +63918,14 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 📌 桥梁是嵌入定理（每个闭可定向曲面都能嵌入 $\mathbb{R}^{3}$）与 Gauss–Bonnet（$\int K = 2\pi\chi$），本图都没有写成节点。
 
-#### 伽罗瓦群 ～ 向量空间　`e182.analogy`
+#### 伽罗瓦群 ～ 向量空间　`e185.analogy`
 *「固定基域的自同构」与「保持结构的映射」是同一个套路*
 
 两处都在做**同一件事**：先定一个「结构」（这里是域扩张 $K/F$，那里是向量空间），再取「保持它不变的变换」（$F$-自同构 / 线性映射），然后数这些变换。
 
 差别在于：向量空间那边数出来的是**环**（$\operatorname{End}$），伽罗瓦这边数出来的是**群**，而域的自同构太少（只有群，没有加法结构可加），这恰恰是伽罗瓦理论能反过来说「域由群决定」的原因。
 
-#### 极小多项式 ～ 代数元与极小多项式　`e183.analogy`
+#### 极小多项式 ～ 代数元与极小多项式　`e186.analogy`
 *两个「极小多项式」：零化一个算子 vs 零化一个元素*
 
 写法**一模一样**：取 $\{\, p : p(\text{对象}) = 0 \,\}$，验证它是 $K[x]$ 的**非零理想**，再由 $K[x]$ 是主理想整环取**首一生成元**。
@@ -63404,7 +63936,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⚠ 别混：$\mu_{T}$ 的**次数**刻画算子的可对角化性；$m_{\alpha}$ 的**次数**是 $[F(\alpha):F]$。同一个名字、同一套论证、完全不同的用途 —— 这类同名不同物只能用类比边，不能连依赖。
 
-#### 伽罗瓦群 ～ 基本群　`e184.analogy`
+#### 伽罗瓦群 ～ 基本群　`e187.analogy`
 *Galois 群与基本群：覆盖空间版的伽罗瓦理论*
 
 同一个形状在两个世界里出现：
@@ -63419,7 +63951,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 definition/implication：一边是域，一边是拓扑空间，没有谁是谁的前提。
 
-#### 闭曲面 ～ 曲面与参数化　`e185.analogy`
+#### 闭曲面 ～ 曲面与参数化　`e188.analogy`
 *两个「曲面」：拓扑的 vs $\mathbb{R}^{3}$ 里被参数化覆盖的*
 
 **同名不同物**，这正是审计 B2 点出的那件事：
@@ -63432,7 +63964,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 definition/implication：一边嵌在 $\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。
 
-#### 闭曲面 ～ Riemann 曲面　`e186.analogy`
+#### 闭曲面 ～ Riemann 曲面　`e189.analogy`
 *两个「曲面」：拓扑的 2 维流形 vs 一维复流形*
 
 **同名不同物**，而且维数说法都不一样：
@@ -63445,7 +63977,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 implication：本图的 Riemann 曲面是从「一维复流形」定义的，而闭曲面是从拓扑定义的，两边的前提不同（真要连得先有「忘记复结构」这个函子）。
 
-#### 闭曲面分类定理 ～ Gauss–Bonnet 定理　`e187.analogy`
+#### 闭曲面分类定理 ～ Gauss–Bonnet 定理　`e190.analogy`
 *分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起*
 
 一边是**纯拓扑**的分类（闭曲面由 $g$ 或 $k$ 决定，等价地由 $\chi$ 与可定向性决定），一边是**几何**的等式（$\int_{M} K\,\mathrm{d}A = 2\pi\chi(M)$）。
@@ -63462,7 +63994,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⚠ 本图**没有**那条「组合」命题（$\int K = 4\pi(1-g)$）的节点，所以这里只连类比；⛔ 也不连 implication：分类定理不推出 Gauss–Bonnet（后者要度量）。
 
-#### Euler 示性数与不可定向亏格 ～ 亏格　`e188.analogy`
+#### Euler 示性数与不可定向亏格 ～ 亏格　`e191.analogy`
 *两个「亏格」：可定向的 $g$ 与不可定向的 $k$*
 
 同一个中文词、两套数法（这正是这条命题存在的理由）：
@@ -63475,7 +64007,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⛔ 不能连 definition：`def.genus` 的定义里那个「除以 2」依赖 $H_{1}$ 的自由秩为**偶数**，不可定向时秩可能是奇数（$\mathbb{RP}^{2}$ 的自由秩是 0），公式直接不成立。
 
-#### 子空间 ～ 子空间拓扑　`e189.analogy`
+#### 子空间 ～ 子空间拓扑　`e192.analogy`
 *两个「子空间」：线性代数的 vs 拓扑的子空间拓扑*
 
 **同名不同物**，中文里都叫「子空间」：
@@ -63488,7 +64020,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⛔ 不能连 definition/implication：没有谁是谁的前提，而且方向想清楚也很难 —— 所以只能用类比边把这层「词撞车」记下来，让读者别点错。
 
-#### 完备 ～ 零集与完备　`e190.analogy`
+#### 完备 ～ 零集与完备　`e193.analogy`
 *两个「完备」：度量完备 vs 测度完备*
 
 **同名不同物**（第三个是序完备，见 `thm.real-ordered-field` 那条边）：
@@ -63697,7 +64229,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 
 - **集合的构造 ↔ ZFC 公理系统**　10 条节点级连线
 - **选择原理 ↔ 基数与等势**　3 条节点级连线
-- **拓扑空间的基本语汇 ↔ 度量空间**　14 条节点级连线
+- **拓扑空间的基本语汇 ↔ 度量空间**　15 条节点级连线
 - **乘积测度与 Fubini ↔ 集合族与 σ-代数**　6 条节点级连线
 - **测度的构造 ↔ 集合族与 σ-代数**　5 条节点级连线
 - **可测函数与收敛 ↔ 测度的构造**　10 条节点级连线
@@ -63762,7 +64294,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **仿紧与单位分解 ↔ 分离公理**　6 条节点级连线
 - **拓扑空间的基本语汇 ↔ 仿紧与单位分解**　4 条节点级连线
 - **度量空间 ↔ 可度量化**　3 条节点级连线
-- **收敛与紧性 ↔ 拓扑空间的基本语汇**　16 条节点级连线
+- **收敛与紧性 ↔ 拓扑空间的基本语汇**　15 条节点级连线
 - **收敛与紧性 ↔ 可度量化**　3 条节点级连线
 - **可度量化 ↔ 分离公理**　3 条节点级连线
 - **可度量化 ↔ 仿紧与单位分解**　3 条节点级连线
@@ -63816,6 +64348,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **微分形式、积分与 de Rham ↔ 向量场与 Lie 结构**　7 条节点级连线
 - **向量场与 Lie 结构 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **活动标架与结构方程 ↔ 向量场与 Lie 结构**　2 条节点级连线
+- **Lie 群 ↔ 流形与向量丛**　2 条节点级连线
 - **平坦模 ↔ 消解与维数**　2 条节点级连线
 - **共形映射与正规族 ↔ 留数与辐角原理**　2 条节点级连线
 - **复变函数基础 ↔ 解析延拓与整函数**　4 条节点级连线
@@ -63823,7 +64356,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **关系与函数 ↔ 基本群**　2 条节点级连线
 - **基本群 ↔ 拓扑空间的基本语汇**　4 条节点级连线
 - **复形与导出三角 ↔ 基本群**　3 条节点级连线
-- **代数结构 ↔ 基本群**　2 条节点级连线
+- **代数结构 ↔ 基本群**　4 条节点级连线
 - **集合的构造 ↔ 同调群**　2 条节点级连线
 - **代数结构 ↔ 同调群**　2 条节点级连线
 - **复形与导出三角 ↔ 同调群**　6 条节点级连线
@@ -63860,24 +64393,25 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **收敛与紧性 ↔ 分离公理**　4 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
-- **Hilbert 空间 ↔ 赋范空间与有界算子**　2 条节点级连线
+- **线性映射与秩 ↔ 赋范空间与有界算子**　5 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　11 条节点级连线
+- **L^p 空间 ↔ 赋范空间与有界算子**　4 条节点级连线
+- **Hilbert 空间 ↔ 赋范空间与有界算子**　4 条节点级连线
 - **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
-- **多元微分 ↔ 赋范空间与有界算子**　9 条节点级连线
 - **Baire 纲与三大定理 ↔ 赋范空间与有界算子**　3 条节点级连线
+- **内积空间与正交性 ↔ Hilbert 空间**　10 条节点级连线
 - **多元微分 ↔ Baire 纲与三大定理**　6 条节点级连线
-- **Baire 纲与三大定理 ↔ 分离公理**　2 条节点级连线
+- **Baire 纲与三大定理 ↔ 分离公理**　3 条节点级连线
 - **赋范空间与有界算子 ↔ 度量空间**　3 条节点级连线
-- **C(K) 与 Stone–Weierstrass ↔ 度量空间**　3 条节点级连线
+- **C(K) 与 Stone–Weierstrass ↔ 度量空间**　4 条节点级连线
 - **C(K) 与 Stone–Weierstrass ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **共形映射与正规族 ↔ C(K) 与 Stone–Weierstrass**　2 条节点级连线
-- **线性映射与秩 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **赋范空间与有界算子 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **内积空间与正交性 ↔ Hilbert 空间**　9 条节点级连线
-- **L^p 空间 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **Baire 纲与三大定理 ↔ 拓扑空间的基本语汇**　4 条节点级连线
 - **Baire 纲与三大定理 ↔ 度量空间**　2 条节点级连线
-- **实数与极限 ↔ 数系的构造**　3 条节点级连线
+- **实数与极限 ↔ 数系的构造**　4 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线
+- **实数与极限 ↔ 度量空间**　4 条节点级连线
 - **丛的示性类 ↔ 活动标架与结构方程**　2 条节点级连线
 - **丛的示性类 ↔ 微分形式、积分与 de Rham**　2 条节点级连线
 - **代数结构 ↔ 向量空间与基**　4 条节点级连线
@@ -63916,8 +64450,10 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **代数结构 ↔ 关系与函数**　4 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线
 - **测度的构造 ↔ 收敛与紧性**　2 条节点级连线
+- **测度的构造 ↔ 分离公理**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **伴随与反射 ↔ 单满、子对象与像**　2 条节点级连线
+- **紧生成空间与弱 Hausdorff ↔ 分离公理**　4 条节点级连线
 - **基数与等势 ↔ 集合的构造**　2 条节点级连线
 - **集合族与 σ-代数 ↔ 集合的构造**　4 条节点级连线
 - **测度的构造 ↔ 集合的构造**　2 条节点级连线
@@ -63985,7 +64521,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **图与极限 ↔ 同调与正合列**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 阿贝尔层**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 拓扑空间的基本语汇**　12 条节点级连线
-- **紧生成空间与弱 Hausdorff ↔ 分离公理**　3 条节点级连线
 - **向量空间与基 ↔ 序结构**　2 条节点级连线
 - **测度的构造 ↔ 实数与极限**　2 条节点级连线
 - **微分定理 ↔ 集合族与 σ-代数**　2 条节点级连线
@@ -64011,6 +64546,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **图与极限 ↔ 凝聚态集**　3 条节点级连线
 - **导出 Hom 的具体计算 ↔ Stone 与 Stonean**　3 条节点级连线
 - **导出 Hom 的具体计算 ↔ 收敛与紧性**　3 条节点级连线
+- **导出 Hom 的具体计算 ↔ 分离公理**　3 条节点级连线
 - **Breen–Deligne 谱序列 ↔ Stone 与 Stonean**　2 条节点级连线
 - **凝聚态导出函子 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **导出 Hom 的具体计算 ↔ 复形与导出三角**　9 条节点级连线

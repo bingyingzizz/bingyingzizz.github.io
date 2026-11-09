@@ -1,6 +1,6 @@
 # 拓扑流形　`def.topological-manifold`
 拓扑流形（$n$ 维，不假设光滑结构）
-layer 8 · 定义 · 流形与向量丛 · 微分几何+拓扑学
+layer 18 · 定义 · 流形与向量丛 · 微分几何+拓扑学
 [在星图里打开](../#n=def.topological-manifold)　·　[节点索引](../index.md)
 
 设 $n \ge 0$。一个**拓扑空间** $M$ 叫 **$n$ 维拓扑流形**，如果

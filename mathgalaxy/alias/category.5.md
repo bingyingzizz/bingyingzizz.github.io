@@ -19,6 +19,6 @@
 
 - 凝聚态上同调和层上同调什么关系 → thm.dyckhoff def.sheaf-cohomology prop.chaus-cech-eq-h
 
-- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact
+- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact-space
 
 > 续见 alias/category.6.md

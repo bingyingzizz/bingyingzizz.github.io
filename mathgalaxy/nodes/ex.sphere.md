@@ -1,6 +1,6 @@
 # 球面 S²　`ex.sphere`
 球面 $S^{2}$：闭曲面，亏格 0，$\chi = 2$
-layer 21 · 例 · 曲面的地形 · 拓扑学
+layer 22 · 例 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=ex.sphere)　·　[节点索引](../index.md)
 
 $$S^{2} := \{\, x \in \mathbb{R}^{3} : \lVert x \rVert = 1 \,\}$$

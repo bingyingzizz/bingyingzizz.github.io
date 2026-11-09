@@ -11,6 +11,9 @@ $$\limsup_{n \to \infty} x_n := \lim_{n \to \infty} \Bigl( \sup_{k \ge n} x_k \B
 > 陈述续见 [nodes/def.limsup-liminf.2.md](./def.limsup-liminf.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.dini-derivative`](../nodes/def.dini-derivative.md) Dini 导数 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.limsup-liminf.3.md](./def.limsup-liminf.3.md)
 

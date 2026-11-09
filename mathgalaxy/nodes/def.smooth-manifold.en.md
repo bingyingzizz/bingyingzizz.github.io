@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 19 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 > continued in nodes/def.smooth-manifold.en.2.md

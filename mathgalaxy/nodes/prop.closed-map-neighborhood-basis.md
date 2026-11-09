@@ -1,6 +1,6 @@
 # 闭映射的邻域基　`prop.closed-map-neighborhood-basis`
 命题：闭映射下 $\pi^{-1}(A)$ 的邻域基
-layer 6 · 命题 · 拓扑空间的基本语汇 · 拓扑学
+layer 17 · 命题 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=prop.closed-map-neighborhood-basis)　·　[节点索引](../index.md)
 
 设 $\pi : Y \to X$ 是**闭**连续映射，$A \subseteq X$。则「$A$ 的邻域的原像」

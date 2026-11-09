@@ -1,7 +1,7 @@
 # 问法 → 节点 · 同调代数
 根 `../`　·　索引 `../alias.md`　·　别名在 `aka/homology.md`
 
-- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact
+- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact-space
 
 - 什么是正合列 → def.exact-sequence def.split-exact thm.long-exact
 

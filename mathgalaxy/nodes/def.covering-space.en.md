@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 6 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 17 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.covering-space.md` and `proofs/`.

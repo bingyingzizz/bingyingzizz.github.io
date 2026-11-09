@@ -8,7 +8,7 @@ layer 12 · 定义 · 整除与同余 · 数论
 同余是 $\mathbb{Z}$ 上的等价关系，且与加法、乘法相容：由 $a \equiv b$、$c \equiv d$ 可得 $a + c \equiv b + d$ 与 $ac \equiv bd$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e116.definition.md](../proofs/e116.definition.md)
+- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e119.definition.md](../proofs/e119.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环 用

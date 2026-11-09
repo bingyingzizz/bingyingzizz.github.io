@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 6 · proposition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 17 · proposition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.closed-map-neighborhood-basis.md` and `proofs/`.

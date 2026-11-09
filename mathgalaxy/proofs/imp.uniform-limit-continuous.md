@@ -1,7 +1,7 @@
 # 一致收敛 + 连续 $\implies$ 极限连续
 `imp.uniform-limit-continuous` · 推出 · strong 边 · 根 `../`
 
-`def.uniform-convergence` 一致收敛 + `def.continuous` 连续 → `thm.uniform-limit-continuous` 一致收敛保连续
+`def.uniform-convergence` 一致收敛 + `def.continuous` 连续（ε-δ 判据） → `thm.uniform-limit-continuous` 一致收敛保连续
 
 设 $x_0 \in X$，给定 $\varepsilon > 0$。
 

@@ -11,7 +11,7 @@ $n = 0$ 时 $\mathbb{R}^{0}$ 是单点，图卡给的是「这个点在不在 $U
 两张卡 $(U,\varphi)$、$(V,\psi)$ 的**转移映射**是
 
 $$\psi \circ \varphi^{-1} : \varphi(U \cap V) \longrightarrow \psi(U \cap V),$$
-它把「$\varphi$ 牌的坐标」换成「$\psi$ 牌的坐标」。两张卡**$C^{\infty}$-相容**指转移映射在每处都是 $C^{\infty}$（它定义在 $\mathbb{R}^{n}$ 的开集上，用偏导数检验）；若 $U \cap V = \emptyset$ 则规
-定相容。
+它把「$\varphi$ 牌的坐标」换成「$\psi$ 牌的坐标」。两张卡**$C^{\infty}$-相容**指转移映射在每处都是 $C^{\infty}$（它定义在 $\mathbb{R}^{n}$ 的开集上，用偏导数检验）；若 $U \cap V = \emptyset$ 则
+规定相容。
 
 > 续见 [nodes/def.manifold-chart.3.md](./def.manifold-chart.3.md)

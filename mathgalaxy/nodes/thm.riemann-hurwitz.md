@@ -1,6 +1,6 @@
 # Riemann–Hurwitz 公式　`thm.riemann-hurwitz`
 Riemann–Hurwitz：分支覆盖下亏格怎么变
-layer 27 · 定理 · 曲面的地形 · 拓扑学+复变函数
+layer 29 · 定理 · 曲面的地形 · 拓扑学+复变函数
 [在星图里打开](../#n=thm.riemann-hurwitz)　·　[节点索引](../index.md)
 
 设 $p : Y \to X$ 是紧 Riemann 面之间的 $d$ 次**分支覆盖**（`def.branched-cover`），$g_{X}, g_{Y}$ 是两边的亏格（`def.genus`），$\{e_

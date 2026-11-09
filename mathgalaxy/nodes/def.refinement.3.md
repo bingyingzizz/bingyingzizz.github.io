@@ -3,4 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间 用
-- 被 [`thm.michael-paracompact`](../nodes/thm.michael-paracompact.md) 迈克尔仿紧判别法 用
+- 被 [`thm.michael-paracompact`](../nodes/thm.michael-paracompact.md) Michael 仿紧判别法 用

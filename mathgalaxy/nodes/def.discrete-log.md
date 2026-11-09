@@ -10,8 +10,8 @@ $$a \equiv g^{k} \pmod n, \qquad 0 \le k < \varphi(n) ,$$
 这个唯一的 $k$ 叫 $a$ 的**离散对数**，记 $k = \log_{g} a$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.primitive-root`](../nodes/def.primitive-root.md) 原根：用到了定义 原根　[proofs/e161.definition.md](../proofs/e161.definition.md)
-- [`thm.primitive-root-exists`](../nodes/thm.primitive-root-exists.md) 模素数有原根：用到了定义 模素数有原根　[proofs/e162.definition.md](../proofs/e162.definition.md)
+- [`def.primitive-root`](../nodes/def.primitive-root.md) 原根：用到了定义 原根　[proofs/e164.definition.md](../proofs/e164.definition.md)
+- [`thm.primitive-root-exists`](../nodes/thm.primitive-root-exists.md) 模素数有原根：用到了定义 模素数有原根　[proofs/e165.definition.md](../proofs/e165.definition.md)
 
 refs: 华罗庚《数论导引》第五章；Apostol, Ch. 10
 

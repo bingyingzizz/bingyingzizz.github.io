@@ -1,6 +1,6 @@
 # H₀ 与分支　`prop.h0-components`
 $H_{0}(X)$ 是道路连通分支上的自由阿贝尔群
-layer 22 · 命题 · 同调群 · 拓扑学
+layer 24 · 命题 · 同调群 · 拓扑学
 [在星图里打开](../#n=prop.h0-components)　·　[节点索引](../index.md)
 
 设 $X \ne \emptyset$，$\pi_{0}(X)$ 是它的**道路连通分支**之集。则

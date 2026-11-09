@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态
+- ⇒ [`prop.pi1-group`](../nodes/prop.pi1-group.md) π₁ 是群

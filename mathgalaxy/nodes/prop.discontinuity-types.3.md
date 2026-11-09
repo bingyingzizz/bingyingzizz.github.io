@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.function-limit-onesided`](../nodes/def.function-limit-onesided.md) 单侧极限：用到了定义 单侧极限　[proofs/dep.gap-discontinuity-types-function-limit-onesided.md](../proofs/dep.gap-discontinuity-types-function-limit-onesided.md)
-- [`def.continuous`](../nodes/def.continuous.md) 连续：用到了定义 连续　[proofs/dep.continuous-discontinuity.md](../proofs/dep.continuous-discontinuity.md)
+- [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：用到了定义 连续（ε-δ 判据）　[proofs/dep.continuous-discontinuity.md](../proofs/dep.continuous-discontinuity.md)

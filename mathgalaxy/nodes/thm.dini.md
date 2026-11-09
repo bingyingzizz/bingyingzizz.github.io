@@ -8,7 +8,7 @@ layer 17 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 $$f_n \rightrightarrows f$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.uniform-convergence`](../nodes/def.uniform-convergence.md) 一致收敛 + [`def.continuous`](../nodes/def.continuous.md) 连续 + [`def.compact`](../nodes/def.compact.md) 紧：紧性 + 单调 + 连续性 $\implies$ Dini 定理　[proofs/imp.dini.md](../proofs/imp.dini.md)
+- [`def.uniform-convergence`](../nodes/def.uniform-convergence.md) 一致收敛 + [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据） + [`def.compact`](../nodes/def.compact.md) 紧：紧性 + 单调 + 连续性 $\implies$ Dini 定理　[proofs/imp.dini.md](../proofs/imp.dini.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 7
 

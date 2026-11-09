@@ -5,7 +5,7 @@
 
 - 凝聚态上同调和层上同调什么关系 → thm.dyckhoff def.sheaf-cohomology prop.chaus-cech-eq-h
 
-- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact
+- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact-space
 
 - Tietze 延拓在凝聚态数学里怎么用 → thm.tietze-banach def.normal-space thm.real-banach-chaus-acyclic
 
@@ -13,7 +13,7 @@
 
 - 局部紧阿贝尔群的高次 Ext 会消失吗 → thm.lc-ext-vanishing thm.lc-structure ex.connected-lc-ext
 
-- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact
+- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact-space
 
 - 挠群的对偶是什么 → prop.pontryagin-torsion-stone def.stone-space def.pontryagin-dual
 

@@ -8,7 +8,7 @@ layer 20 · 例 · 紧生成空间与弱 Hausdorff · 拓扑学
 **例 3**　若 $I$ **不可数**，则 $\mathbb{R}^{I}$ 与 $\mathbb{Z}^{I}$（积拓扑）都**不是**紧生成的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间：用到了定义 局部紧 Hausdorff 空间　[proofs/dep.cgex-lc.md](../proofs/dep.cgex-lc.md)
+- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间：用到了定义 局部紧空间　[proofs/dep.cgex-lc.md](../proofs/dep.cgex-lc.md)
 
 - …另有入边，续页见 [nodes/ex.cg-examples.2.md](./ex.cg-examples.2.md)
 

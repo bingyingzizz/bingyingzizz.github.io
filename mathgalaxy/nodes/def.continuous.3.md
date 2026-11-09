@@ -1,15 +1,10 @@
-# 连续　`def.continuous`　·　续页（第 3 页）
+# 连续（ε-δ 判据）　`def.continuous`　·　续页（第 3 页）
 [在星图里打开](../#n=def.continuous)　·　第 1 页 [nodes/def.continuous.md](./def.continuous.md)　·　上一页 [nodes/def.continuous.2.md](./def.continuous.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- ⇒ [`prop.continuous-arithmetic`](../nodes/prop.continuous-arithmetic.md) 连续函数的运算
-- 被 [`def.derivative`](../nodes/def.derivative.md) 导数 用
-- 被 [`cor.continuous-measurable`](../nodes/cor.continuous-measurable.md) 连续 ⟹ Borel 可测 用
-- 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
-- 被 [`lem.urysohn`](../nodes/lem.urysohn.md) Урысон 引理 用
-- 被 [`def.uniform-continuity`](../nodes/def.uniform-continuity.md) 一致连续 用
-- 被 [`prop.discontinuity-types`](../nodes/prop.discontinuity-types.md) 间断点分类 用
-- ⇒ [`thm.ivt`](../nodes/thm.ivt.md) 介值定理
-- ⇒ [`thm.ftc-riemann-part1`](../nodes/thm.ftc-riemann-part1.md) 变上限积分的导数
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续：度量连续 $\iff$ $\varepsilon$-$\delta$ 判据　[proofs/eq.real-continuity-epsilon-delta.md](../proofs/eq.real-continuity-epsilon-delta.md)
+- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-continuous.md](../proofs/def-link.abs-continuous.md)
+- [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限：用到了定义 数列极限　[proofs/dep.real-continuous.md](../proofs/dep.real-continuous.md)
+- [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续：用到了定义 度量空间的连续　[proofs/def-link.mc-continuous.md](../proofs/def-link.mc-continuous.md)
 
 > 续见 [nodes/def.continuous.4.md](./def.continuous.4.md)

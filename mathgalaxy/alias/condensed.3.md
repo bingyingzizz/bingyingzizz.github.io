@@ -3,7 +3,7 @@
 
 - 凝聚态上同调和层上同调什么关系 → thm.dyckhoff def.sheaf-cohomology prop.chaus-cech-eq-h
 
-- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact
+- Dyckhoff 定理说的是什么 → thm.dyckhoff def.sheaf-cohomology def.locally-compact-space
 
 - 什么是 Banach 阿贝尔群 → def.banach-ab-group def.semi-normed-ab-group prop.banach-stone-acyclic
 

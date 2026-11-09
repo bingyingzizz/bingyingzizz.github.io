@@ -1,8 +1,9 @@
-# 连续　`def.continuous`
-连续
-layer 15 · 定义 · 实数与极限 · 数学分析+拓扑学
+# 连续（ε-δ 判据）　`def.continuous`
+连续：$\varepsilon$-$\delta$ 判据
+layer 15 · 定理 · 实数与极限 · 数学分析+拓扑学
 [在星图里打开](../#n=def.continuous)　·　[节点索引](../index.md)
 
+**定理（$\varepsilon$-$\delta$ 判据）**：下面这个条件不是定义，而是度量连续性的判据；定义见 `def.metric-continuity`，$\mathbb{R}$ 上的度量见 `def.real-metric-space`。
 $f : \mathbb{R} \to \mathbb{R}$ 在 $x_0$ **连续**，当且仅当
 
 $$\forall \varepsilon > 0, \exists \delta > 0 : |x - x_0| < \delta \implies |f(x) - f(x_0)| < \varepsilon$$
@@ -10,16 +11,14 @@ $$\forall \varepsilon > 0, \exists \delta > 0 : |x - x_0| < \delta \implies |f(x
 等价说法：$\lim_{x \to x_0} f(x) = f(x_0)$（极限存在且等于函数值）。
 
 $f$ **连续**（在 $\mathbb{R}$ 上连续）当且仅当它在每一点连续。
+> 陈述续见 [nodes/def.continuous.2.md](./def.continuous.2.md)
 
-**一致连续**是更强的要求：$\delta$ 只依赖 $\varepsilon$，不依赖 $x_0$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-continuous.md](../proofs/def-link.abs-continuous.md)
-
-- …另有入边，续页见 [nodes/def.continuous.2.md](./def.continuous.2.md)
+- …另有入边，续页见 [nodes/def.continuous.3.md](./def.continuous.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.continuous.3.md](./def.continuous.3.md)
+- …另有出边，续页见 [nodes/def.continuous.5.md](./def.continuous.5.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4
 

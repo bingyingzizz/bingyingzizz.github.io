@@ -5,7 +5,9 @@
 - 被 [`prop.volume-form-orientation`](../nodes/prop.volume-form-orientation.md) 定向与体积形式 用
 - ⇒ [`prop.volume-form-orientation`](../nodes/prop.volume-form-orientation.md) 定向与体积形式
 - 被 [`def.submanifold-volume`](../nodes/def.submanifold-volume.md) 诱导体积 用
+- 被 [`prop.lie-group-orientable`](../nodes/prop.lie-group-orientable.md) Lie 群可定向 用
 - 被 [`thm.stokes`](../nodes/thm.stokes.md) Stokes 定理 用
 - 被 [`prop.boundary-sign-convention`](../nodes/prop.boundary-sign-convention.md) 边界的符号约定 用
 - 被 [`prop.orientable-iff-w1`](../nodes/prop.orientable-iff-w1.md) 定向与 w1 消失 用
-- 被 [`def.pontryagin-class`](../nodes/def.pontryagin-class.md) Pontryagin 类 用
+
+> 续见 [nodes/def.orientable-manifold.5.md](./def.orientable-manifold.5.md)

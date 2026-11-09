@@ -12,7 +12,7 @@ $$[n] := n + 1 := \{\, 0, 1, \ldots, n \,\} \qquad (n \in \mathbb{N}),$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形：e72.analogy　[proofs/e72.analogy.md](../proofs/e72.analogy.md)
+- [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形：e75.analogy　[proofs/e75.analogy.md](../proofs/e75.analogy.md)
 
 - …另有入边，续页见 [nodes/def.simplex-category.3.md](./def.simplex-category.3.md)
 

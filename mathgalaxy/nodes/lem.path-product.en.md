@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 19 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.path-product.md` and `proofs/`.

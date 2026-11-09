@@ -12,7 +12,7 @@ $\mu : \mathbb{N} \to \mathbb{Z}$ 按 $n$ 的素因子结构定义：
 - $n$ **含平方因子**（存在素数 $p$ 使 $p^{2} \mid n$）时 $\mu(n) = 0$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.crt`](../nodes/thm.crt.md) 中国剩余定理：用到了定义 中国剩余定理　[proofs/e142.definition.md](../proofs/e142.definition.md)
+- [`thm.crt`](../nodes/thm.crt.md) 中国剩余定理：用到了定义 中国剩余定理　[proofs/e145.definition.md](../proofs/e145.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.mobius-function.2.md](./def.mobius-function.2.md)

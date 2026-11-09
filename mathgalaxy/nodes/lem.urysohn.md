@@ -8,7 +8,7 @@ layer 18 · 引理 · 分离公理 · 拓扑学
 $$f : X \longrightarrow [0, 1], \qquad f|_{A} \equiv 0, \qquad f|_{B} \equiv 1.$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.continuous`](../nodes/def.continuous.md) 连续：用到了定义 连续　[proofs/def-dep.urysohn-continuous.md](../proofs/def-dep.urysohn-continuous.md)
+- [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：用到了定义 连续（ε-δ 判据）　[proofs/def-dep.urysohn-continuous.md](../proofs/def-dep.urysohn-continuous.md)
 - [`def.normal-space`](../nodes/def.normal-space.md) 正规空间：用到了定义 正规空间　[proofs/def-dep.urysohn-normal.md](../proofs/def-dep.urysohn-normal.md)
 
 ## 它能推出什么 / 谁在用它

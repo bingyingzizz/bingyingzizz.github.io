@@ -1,6 +1,6 @@
 # 链上的 Stokes 定理　`thm.stokes-chain`
 链上的 Stokes 定理
-layer 23 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 25 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.stokes-chain)　·　[节点索引](../index.md)
 
 **在做什么**：一个 $(k-1)$-形式在**边界链**上的积分，等于它的外微分在**链**上的积分。它是微积分基本定理、Green 公式、Gauss 公式、Kelvin–Stokes 的共同祖先。

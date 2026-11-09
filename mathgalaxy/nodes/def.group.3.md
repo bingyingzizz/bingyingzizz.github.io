@@ -11,7 +11,6 @@
 - 被 [`def.lie-group`](../nodes/def.lie-group.md) Lie 群 用
 - 被 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群 用
 - 被 [`def.chain-group`](../nodes/def.chain-group.md) 链群 用
-- 被 [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理 用
-- 被 [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶 用
+- ⇒ [`prop.pi1-group`](../nodes/prop.pi1-group.md) π₁ 是群
 
 > 续见 [nodes/def.group.4.md](./def.group.4.md)

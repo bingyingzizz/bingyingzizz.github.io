@@ -1,4 +1,4 @@
-# 迈克尔仿紧判别法　`thm.michael-paracompact`　·　说明
+# Michael 仿紧判别法　`thm.michael-paracompact`　·　说明
 根 `../`
 
 **$(\Longleftarrow)$ 才是内容，$(\implies)$ 是废话**：仿紧的加细按定义就是局部有限的，而开加细当然是加细。所以这条定理的全部难点在一句话 —— **把「不必开」的局部有限加细撑成开加细，同时不毁掉局部有限性**。

@@ -1,6 +1,6 @@
 # 同伦不变性　`thm.homotopy-invariance`
 同伦不变性：$f \simeq g$ 蕴含 $f_{*} = g_{*}$（棱柱算子）
-layer 22 · 定理 · 同调群 · 拓扑学
+layer 24 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.homotopy-invariance)　·　[节点索引](../index.md)
 
 设
@@ -8,7 +8,7 @@ layer 22 · 定理 · 同调群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群：奇异链上造棱柱算子 $P_{n}$　[proofs/e108.implication.md](../proofs/e108.implication.md)
+- [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群：奇异链上造棱柱算子 $P_{n}$　[proofs/e111.implication.md](../proofs/e111.implication.md)
 
 - …另有入边，续页见 [nodes/thm.homotopy-invariance.3.md](./thm.homotopy-invariance.3.md)
 

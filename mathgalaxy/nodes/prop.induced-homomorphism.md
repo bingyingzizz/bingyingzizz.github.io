@@ -1,6 +1,6 @@
 # 诱导同态　`prop.induced-homomorphism`
 连续映射诱导 $\pi_{1}$ 的同态；$\pi_{1}$ 是同伦不变函子
-layer 15 · 命题 · 基本群 · 拓扑学
+layer 20 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.induced-homomorphism)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 连续，$f(x_{0}) = y_{0}$。定义
@@ -8,7 +8,7 @@ layer 15 · 命题 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`lem.path-product`](../nodes/lem.path-product.md) 道路拼接：复合保持拼接，于是 $f_{*}$ 是同态　[proofs/e55.implication.md](../proofs/e55.implication.md)
+- [`lem.path-product`](../nodes/lem.path-product.md) 道路拼接：复合保持拼接，于是 $f_{*}$ 是同态　[proofs/e56.implication.md](../proofs/e56.implication.md)
 
 - …另有入边，续页见 [nodes/prop.induced-homomorphism.3.md](./prop.induced-homomorphism.3.md)
 

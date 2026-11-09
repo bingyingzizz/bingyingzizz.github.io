@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology / Complex Analysis
+layer 29 · theorem · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology / Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.riemann-hurwitz.md` and `proofs/`.

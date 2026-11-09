@@ -1,6 +1,6 @@
 # Riesz–Markov 表示　`thm.riesz-markov`
 Riesz–Markov：$C_{c}(X)^{*} \cong$ Radon 测度
-layer 20 · 定理 · 测度的构造 · 实变函数+数学分析
+layer 19 · 定理 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=thm.riesz-markov)　·　[节点索引](../index.md)
 
 设 $X$ 是局部紧 Hausdorff 空间，$C_{c}(X)$ 配 sup 范数（连

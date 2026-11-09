@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.homotopy-invariance)　·　第 1 页 [nodes/thm.homotopy-invariance.md](./thm.homotopy-invariance.md)　·　上一页 [nodes/thm.homotopy-invariance.2.md](./thm.homotopy-invariance.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.homotopy`](../nodes/def.homotopy.md) 同伦：同伦的定义就是这里要用的那条形变　[proofs/e109.implication.md](../proofs/e109.implication.md)
+- [`def.homotopy`](../nodes/def.homotopy.md) 同伦：同伦的定义就是这里要用的那条形变　[proofs/e112.implication.md](../proofs/e112.implication.md)
 - [`def.chain-homotopy`](../nodes/def.chain-homotopy.md) 链同伦：用到了定义 链同伦　[proofs/def-link.chainhom-homotopy.md](../proofs/def-link.chainhom-homotopy.md)
 
 > 续见 [nodes/thm.homotopy-invariance.4.md](./thm.homotopy-invariance.4.md)

@@ -11,9 +11,9 @@
 - def.chain-homotopy　链同伦　layer 18
 - def.simplicial-homology　单纯同调群　layer 19
 - def.simplicial-map　单纯映射　layer 20
-- def.singular-homology　奇异同调群　layer 21
-- def.reduced-homology　约化同调　layer 22
-- prop.h0-components　H₀ 与分支　layer 22
-- thm.long-exact-pair　对的长正合列　layer 22
+- def.singular-homology　奇异同调群　layer 23
+- def.reduced-homology　约化同调　layer 24
+- prop.h0-components　H₀ 与分支　layer 24
+- thm.long-exact-pair　对的长正合列　layer 24
 
 > 续见 `index/topology.homology.2.md`

@@ -1,7 +1,7 @@
 # 紧性 + 单调 + 连续性 $\implies$ Dini 定理
 `imp.dini` · 推出 · strong 边 · 根 `../`
 
-`def.uniform-convergence` 一致收敛 + `def.continuous` 连续 + `def.compact` 紧 → `thm.dini` Dini 定理
+`def.uniform-convergence` 一致收敛 + `def.continuous` 连续（ε-δ 判据） + `def.compact` 紧 → `thm.dini` Dini 定理
 
 合并：$y \in U_x$ 时 $f(y) - f_{n_x}(y) < 3\varepsilon$。
 3. $\{U_x\}_{x \in X}$ 是紧空间 $X$ 的开覆盖，取出有限子覆盖 $U_{x_1}, \ldots, U_{x_k}$，令 $N := \max\{n_{x_1}, \ldots, n_{x_k}\}$。

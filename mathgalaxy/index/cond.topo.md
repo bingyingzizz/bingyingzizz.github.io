@@ -4,9 +4,9 @@
 中心天体 thm.pontryagin-van-kampen　·　13 个节点　·　根 `../`　·　续页 `index/cond.topo.2.md`
 
 - def.topo-ab-group　拓扑阿贝尔群　layer 18
+- thm.lc-structure　局部紧阿贝尔群结构定理　layer 18
 - prop.lc-ab-preabelian　局部紧阿贝尔群不是阿贝尔范畴　layer 19
 - def.pontryagin-dual　Pontryagin 对偶　layer 19
-- thm.lc-structure　局部紧阿贝尔群结构定理　layer 19
 - prop.abhaus-strict-exact　Hausdorff 拓扑阿贝尔群的核与余核　layer 19
 - prop.abtop-to-abcond　拓扑阿贝尔群嵌入凝聚态　layer 20
 - prop.continuous-hom-condensed　连续同态与内部 Hom　layer 20

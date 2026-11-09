@@ -8,7 +8,7 @@ layer 18 · 定理 · 连续与紧性 · 数学分析
 $$f(\xi) = c$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域 + [`def.continuous`](../nodes/def.continuous.md) 连续：确界原理 + 连续的定义 $\implies$ 介值定理　[proofs/imp.ivt.md](../proofs/imp.ivt.md)
+- [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域 + [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：确界原理 + 连续的定义 $\implies$ 介值定理　[proofs/imp.ivt.md](../proofs/imp.ivt.md)
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`cor.zero-point`](../nodes/cor.zero-point.md) 零点定理

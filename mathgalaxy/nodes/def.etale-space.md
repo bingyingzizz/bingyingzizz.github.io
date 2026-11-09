@@ -1,6 +1,6 @@
 # étale 空间　`def.etale-space`
 étale 空间（espace étalé）
-layer 6 · 定义 · 层上同调 · 同调代数+拓扑学
+layer 17 · 定义 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=def.etale-space)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间。

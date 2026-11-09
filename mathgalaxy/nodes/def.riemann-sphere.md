@@ -8,7 +8,7 @@ layer 20 · 定义 · 复变函数基础 · 复变函数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义　[proofs/e103.implication.md](../proofs/e103.implication.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义　[proofs/e106.implication.md](../proofs/e106.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.riemann-sphere.3.md](./def.riemann-sphere.3.md)

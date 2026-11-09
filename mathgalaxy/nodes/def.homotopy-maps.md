@@ -1,6 +1,6 @@
 # 映射同伦　`def.homotopy-maps`
 同伦：映射之间的一整段连续形变
-layer 6 · 定义 · 基本群 · 拓扑学
+layer 17 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.homotopy-maps)　·　[节点索引](../index.md)
 
 设 $X, Y$ 是拓扑空间，$f, g : X \to Y$ 连续。称 $f$ **同伦于** $g$，如果存在连续映射
@@ -13,7 +13,7 @@ $$F : X \times [0, 1] \longrightarrow Y$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e51.definition.md](../proofs/e51.definition.md)
+- [`def.continuous-map`](../nodes/def.continuous-map.md) 连续映射：用到了定义 连续映射　[proofs/e52.definition.md](../proofs/e52.definition.md)
 
 - …另有入边，续页见 [nodes/def.homotopy-maps.3.md](./def.homotopy-maps.3.md)
 

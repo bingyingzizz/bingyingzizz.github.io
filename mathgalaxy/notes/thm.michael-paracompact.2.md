@@ -1,4 +1,4 @@
-# 迈克尔仿紧判别法　`thm.michael-paracompact`　·　说明
+# Michael 仿紧判别法　`thm.michael-paracompact`　·　说明
 根 `../`
 
 - 此时 $\{ V_{s} \}$ 已经是**开加细并覆盖 $X$**，但一般**不再局部有限**（$V_{s} \supseteq E_{s}$，一个邻域可能碰到很多 $V_{s}$ 而只碰到很少 $E_{s}$）；

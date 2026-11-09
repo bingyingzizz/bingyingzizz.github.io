@@ -3,5 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.residue`](../nodes/thm.residue.md) 留数定理 + [`def.winding-number`](../nodes/def.winding-number.md) 绕数：留数定理 + 绕数 $\implies$ 辐角原理　[proofs/imp.argument-principle.md](../proofs/imp.argument-principle.md)
-- [`prop.winding-integral`](../nodes/prop.winding-integral.md) 绕数的积分表示：绕数的积分表示 $\implies$ 辐角原理　[proofs/e19.implication.md](../proofs/e19.implication.md)
+- [`prop.winding-integral`](../nodes/prop.winding-integral.md) 绕数的积分表示：绕数的积分表示 $\implies$ 辐角原理　[proofs/e20.implication.md](../proofs/e20.implication.md)
 - [`def.winding-number`](../nodes/def.winding-number.md) 绕数：用到了定义 绕数　[proofs/def-link.argument-winding.md](../proofs/def-link.argument-winding.md)

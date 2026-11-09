@@ -2,4 +2,4 @@
 [在星图里打开](../#n=thm.euler-theorem)　·　第 1 页 [nodes/thm.euler-theorem.md](./thm.euler-theorem.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：用到了定义 Lagrange 定理　[proofs/e123.definition.md](../proofs/e123.definition.md)
+- [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：用到了定义 Lagrange 定理　[proofs/e126.definition.md](../proofs/e126.definition.md)

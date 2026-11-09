@@ -1,7 +1,7 @@
 # 紧性 + 单调 + 连续性 $\implies$ Dini 定理
 `imp.dini` · 推出 · strong 边 · 根 `../`
 
-`def.uniform-convergence` 一致收敛 + `def.continuous` 连续 + `def.compact` 紧 → `thm.dini` Dini 定理
+`def.uniform-convergence` 一致收敛 + `def.continuous` 连续（ε-δ 判据） + `def.compact` 紧 → `thm.dini` Dini 定理
 
 若 $X=\emptyset$ 结论平凡；以下设 $X$ 非空（$X\ne\emptyset$）。
 

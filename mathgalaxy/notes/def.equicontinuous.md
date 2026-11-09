@@ -6,3 +6,5 @@
 $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 ⭐ 这是紧性（Arzelà–Ascoli）里**唯一非平凡**的假设：逐点全有界只是「不发散」，等度连续才是「不会越抖越厉害」。
+
+📌 $K$ 是度量空间时还有更强的一致版本，见 `def.uniformly-equicontinuous`；$K$ 紧时二者等价（`thm.equicontinuous-uniform`）。

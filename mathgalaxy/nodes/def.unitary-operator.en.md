@@ -1,4 +1,4 @@
-# unitary operator and partial isometry　`def.unitary-operator`
+# unitary operator　`def.unitary-operator`
 English entry · root `../`
 [in graph](../#n=def.unitary-operator)　·　[Chinese page (authoritative)](./def.unitary-operator.md)
 

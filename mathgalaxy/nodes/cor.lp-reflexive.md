@@ -11,6 +11,7 @@ $$L^p \cong (L^p)^{**}$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数：用到了定义 L^p 范数　[proofs/def-link.lp-reflexive.md](../proofs/def-link.lp-reflexive.md)
+- [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间：用到了定义 自反空间　[proofs/def-link.lpref-ref.md](../proofs/def-link.lpref-ref.md)
 
 refs: Folland, Real Analysis, §6.2
 

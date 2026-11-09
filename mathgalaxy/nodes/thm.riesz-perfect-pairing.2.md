@@ -1,0 +1,15 @@
+# Riesz 表示的配对版　`thm.riesz-perfect-pairing`　·　续页（第 2 页）
+[在星图里打开](../#n=thm.riesz-perfect-pairing)　·　第 1 页 [nodes/thm.riesz-perfect-pairing.md](./thm.riesz-perfect-pairing.md)
+
+## 陈述（续）
+t-pairing`）。则
+(a) $x \mapsto \langle x, \cdot\rangle$ 是等距同构 $X \to Y^
+*$ 的像，$y \mapsto \langle \cdot, y\rangle$ 是 $Y \to X^
+*$ 的等距嵌入；
+(b) 若其中一个映射满射，则另一个也满射，且 $X \cong Y^*$、$Y \cong X^*$（等距同构
+）；
+(c) Hilbert 空间 $H$ 与 $L^p$（$1 < p < \infty$，$1/p + 1/q = 
+1$）的配对满足满射性，因此 $H^* \cong H$、$(L^p)^* \cong L^q$ 都是完美配对的
+直接推论。
+
+> 续见 [nodes/thm.riesz-perfect-pairing.3.md](./thm.riesz-perfect-pairing.3.md)

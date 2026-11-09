@@ -1,6 +1,6 @@
 # Euler 示性数与亏格　`prop.eulerchar-genus`
 闭可定向曲面：$\chi = 2 - 2g$
-layer 26 · 命题 · 曲面的地形 · 拓扑学
+layer 28 · 命题 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=prop.eulerchar-genus)　·　[节点索引](../index.md)
 
 设 $S$ 是**闭可定向曲面**，亏格 $g = \tfrac{1}{2}\operatorname{rank} H_{1}(S;\mathbb{Z})$（`def.genus`）。则

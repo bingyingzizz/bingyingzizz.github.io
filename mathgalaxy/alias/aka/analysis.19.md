@@ -19,4 +19,10 @@
 
 - 集合上的积分 → def.integral-over-set
 
+- 度量连续 | 度量空间之间的连续 | ε-δ 连续 → def.metric-continuity
+
+- 实数度量空间 | R 的度量 | 实数直线 → def.real-metric-space
+
+- Dini 导数 | 导数 | 四个 Dini 导数 → def.dini-derivative
+
 见 `../../alias.md`。

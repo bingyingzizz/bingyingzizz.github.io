@@ -10,7 +10,7 @@ layer 11 · 定义 · 整除与同余 · 数论
 若 $a, b \ne 0$，则 $a \mid b$ 且 $b \mid a$ $\iff$ $a = \pm b$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.int`](../nodes/def.int.md) 整数 ℤ：用到了定义 整数 ℤ　[proofs/e111.definition.md](../proofs/e111.definition.md)
+- [`def.int`](../nodes/def.int.md) 整数 ℤ：用到了定义 整数 ℤ　[proofs/e114.definition.md](../proofs/e114.definition.md)
 
 - …另有入边，续页见 [nodes/def.divides.2.md](./def.divides.2.md)
 

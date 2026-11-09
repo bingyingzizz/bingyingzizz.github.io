@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 5 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology / Mathematical Analysis
+layer 16 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.continuous-map.md` and `proofs/`.

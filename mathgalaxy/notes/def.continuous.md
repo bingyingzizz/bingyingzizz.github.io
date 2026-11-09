@@ -1,4 +1,4 @@
-# 连续　`def.continuous`　·　说明
+# 连续（ε-δ 判据）　`def.continuous`　·　说明
 根 `../`
 
 ⭐ 把 $|x - x_0| < \delta$、$|f(x) - f(x_0)| < \varepsilon$ 换成距离 $d$，这个定义原封不动地搬到距离空间 —— 这也正是距离空间的定义为什么长成那样。
@@ -6,3 +6,5 @@
 ⚠ **连续 $\ne$ 一致连续**：$f(x) = x^2$ 在 $\mathbb{R}$ 上连续但不一致连续（$x$ 越大需要的 $\delta$ 越小）。
 
 紧区间上两者才重合。
+
+📌 本节点是判据不是定义；定义在 `def.metric-continuity`，$\mathbb{R}$ 的度量在 `def.real-metric-space`。

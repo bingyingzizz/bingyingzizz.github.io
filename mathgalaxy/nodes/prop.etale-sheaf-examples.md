@@ -1,6 +1,6 @@
 # étale 层的例子　`prop.etale-sheaf-examples`
 开浸入、有限 étale 覆叠、常值层
-layer 17 · 命题 · 层上同调 · 同调代数+抽象代数
+layer 18 · 命题 · 层上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=prop.etale-sheaf-examples)　·　[节点索引](../index.md)
 
 设 $X$ 是概形。

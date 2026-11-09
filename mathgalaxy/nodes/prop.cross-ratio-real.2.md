@@ -2,4 +2,4 @@
 [在星图里打开](../#n=prop.cross-ratio-real)　·　第 1 页 [nodes/prop.cross-ratio-real.md](./prop.cross-ratio-real.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比 + [`prop.mobius-three-points`](../nodes/prop.mobius-three-points.md) 三点决定分式线性变换：把三点送到 $0,1,\infty$，第四点的像就是交比　[proofs/e92.implication.md](../proofs/e92.implication.md)
+- [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比 + [`prop.mobius-three-points`](../nodes/prop.mobius-three-points.md) 三点决定分式线性变换：把三点送到 $0,1,\infty$，第四点的像就是交比　[proofs/e95.implication.md](../proofs/e95.implication.md)

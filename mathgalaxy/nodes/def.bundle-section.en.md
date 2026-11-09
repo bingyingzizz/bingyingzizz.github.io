@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 22 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Section` (short) · `Section of a Vector Bundle` (full)
 
 ## Statement and proof

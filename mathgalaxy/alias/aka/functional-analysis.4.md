@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 共振集 | 共鸣集 | 发散点稠密 → cor.ubp-resonance
+
 - 开映射定理（线性） | 巴拿赫开映射定理 | 开映射（线性算子） | open mapping for operators → thm.open-mapping-banach
 
 - 逆算子定理 | 有界逆定理 | 连续性定理 → thm.bounded-inverse
@@ -20,7 +22,5 @@
 - 分离点 | 子代数 | 格子代数 → def.subalgebra-separating
 
 - 闭子代数是格 | 格子代数引理 → lem.closed-subalgebra-lattice
-
-- Stone-Weierstrass | 斯通-魏尔斯特拉斯 | Weierstrass 逼近定理 | 斯通–魏尔斯特拉斯定理 | 史东-魏尔斯特拉斯定理 | 史东 | 斯通-魏尔斯特拉斯定理 → thm.stone-weierstrass
 
 > 续见 alias/aka/functional-analysis.5.md

@@ -9,6 +9,9 @@ layer 18 · 命题 · 流形与向量丛 · 微分几何
 > 陈述续见 [nodes/prop.volume-form-orientation.2.md](./prop.volume-form-orientation.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.lie-group-orientable`](../nodes/prop.lie-group-orientable.md) Lie 群可定向
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.volume-form-orientation.3.md](./prop.volume-form-orientation.3.md)
 

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
+layer 19 · theorem · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.riesz-markov.md` and `proofs/`.

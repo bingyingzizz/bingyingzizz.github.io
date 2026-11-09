@@ -12,7 +12,7 @@ $$A/(I \cap J) \;\cong\; A/I \times A/J, \qquad a \longmapsto (a \bmod I,\ a \bm
 $$A\Big/\bigcap_{i} I_{i} \;\cong\; \prod_{i=1}^{k} A/I_{i} .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e135.definition.md](../proofs/e135.definition.md)
+- [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e138.definition.md](../proofs/e138.definition.md)
 
 - …另有入边，续页见 [nodes/thm.crt-rings.2.md](./thm.crt-rings.2.md)
 

@@ -1,4 +1,4 @@
-# 迈克尔仿紧判别法　`thm.michael-paracompact`
+# Michael 仿紧判别法　`thm.michael-paracompact`
 正则空间仿紧当且仅当每个开覆盖有局部有限加细
 layer 6 · 定理 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=thm.michael-paracompact)　·　[节点索引](../index.md)

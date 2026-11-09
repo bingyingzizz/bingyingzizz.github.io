@@ -8,7 +8,7 @@ layer 12 · 定义 · 整除与同余 · 数论
 等价刻画（不预设存在性）：$\gcd(a, b)$ 是集合 $\{\, ua + vb : u, v \in \mathbb{Z} \,\}$ 中最小的正整数。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e114.definition.md](../proofs/e114.definition.md)
+- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e117.definition.md](../proofs/e117.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.dirichlet-character`](../nodes/def.dirichlet-character.md) 狄利克雷特征标 用

@@ -7,20 +7,20 @@
 每榜前 3 条；完整清单在 `hubs/<榜>.md`（各 20 条）。
 
 ## 基础工具榜
-- **31 / 34** `def.compact` 紧 · 拓扑空间的基本语汇
 - **31 / 32** `def.measure` 测度 · 测度的构造
+- **31 / 31** `def.group` 群 · 代数结构
 - **30 / 33** `def.limit` 极限 · 图与极限
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
 - **10 / 8** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
+- **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - **8 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
-- **8 / 6** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
-- **16 团 / 29 节点** `def.group` 群 · 代数结构
+- **16 团 / 31 节点** `def.group` 群 · 代数结构
 - **16 团 / 24 节点** `def.function` 映射 · 关系与函数
-- **15 团 / 31 节点** `def.compact` 紧 · 拓扑空间的基本语汇
+- **15 团 / 30 节点** `def.compact` 紧 · 拓扑空间的基本语汇
 - 全部：`hubs/cross.md`
 

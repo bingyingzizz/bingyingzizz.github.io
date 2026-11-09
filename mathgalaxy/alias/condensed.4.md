@@ -15,7 +15,7 @@
 
 - Pontryagin 对偶怎么用 RHom 写 → prop.dual-rhom-characterization def.pontryagin-dual table.rhom-zrt
 
-- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact
+- 局部的紧阿贝尔群结构定理是什么 → thm.lc-structure thm.lc-ext-vanishing def.locally-compact-space
 
 - 挠群的对偶是什么 → prop.pontryagin-torsion-stone def.stone-space def.pontryagin-dual
 

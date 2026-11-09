@@ -10,3 +10,5 @@ $$\Pi_{\gamma}([\alpha]) := [\bar{\gamma} * \alpha * \gamma].$$
 $$\Pi_{\gamma'} = \operatorname{ad}_{g} \circ \Pi_{\gamma},\qquad \operatorname{ad}_{g}(u) := g\,u\,g^{-1}.$$
 
 即：不同的道路给出的同构**只差一个内自同构**。
+
+> 续见 [nodes/prop.pi1-basepoint.3.md](./prop.pi1-basepoint.3.md)

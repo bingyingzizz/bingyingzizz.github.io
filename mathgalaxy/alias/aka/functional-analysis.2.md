@@ -21,12 +21,12 @@
 
 - 伴随算子 | 共轫算子 | adjoint → thm.adjoint-hilbert
 
-- 酉算子 | 部分等距 | unitary → def.unitary-operator
+- 酉算子 | unitary → def.unitary-operator
+
+- 部分等距 | partial isometry → def.partial-isometry
 
 - 正交基 | 标准正交集 | 完备正交集 → def.orthonormal-set
 
 - Bessel 不等式 | Parseval 等式 | 贝塞尔不等式 | 帕塞瓦尔等式 → thm.bessel-parseval
-
-- 正交基存在 | Zorn 正交基 → thm.orthonormal-basis-exists
 
 > 续见 alias/aka/functional-analysis.3.md

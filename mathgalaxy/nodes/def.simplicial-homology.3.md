@@ -2,8 +2,8 @@
 [在星图里打开](../#n=def.simplicial-homology)　·　第 1 页 [nodes/def.simplicial-homology.md](./def.simplicial-homology.md)　·　上一页 [nodes/def.simplicial-homology.2.md](./def.simplicial-homology.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.quotient-group`](../nodes/def.quotient-group.md) 商群：用到了定义 商群　[proofs/e47.definition.md](../proofs/e47.definition.md)
-- [`def.simplicial-boundary`](../nodes/def.simplicial-boundary.md) 边缘算子：用到了定义 边缘算子　[proofs/e78.definition.md](../proofs/e78.definition.md)
+- [`def.quotient-group`](../nodes/def.quotient-group.md) 商群：用到了定义 商群　[proofs/e48.definition.md](../proofs/e48.definition.md)
+- [`def.simplicial-boundary`](../nodes/def.simplicial-boundary.md) 边缘算子：用到了定义 边缘算子　[proofs/e81.definition.md](../proofs/e81.definition.md)
 - [`def.cycle`](../nodes/def.cycle.md) 闭链：用到了定义 闭链　[proofs/dep.cyc-simplicial.md](../proofs/dep.cyc-simplicial.md)
 - [`def.boundary`](../nodes/def.boundary.md) 边缘：用到了定义 边缘　[proofs/dep.bnd-simplicial.md](../proofs/dep.bnd-simplicial.md)
 

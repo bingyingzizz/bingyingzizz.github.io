@@ -1,5 +1,5 @@
-# 局部紧空间（裸）　`def.locally-compact-space`
-局部紧空间（不要求 Hausdorff）
+# 局部紧空间　`def.locally-compact-space`
+局部紧空间
 layer 17 · 定义 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=def.locally-compact-space)　·　[节点索引](../index.md)
 
@@ -12,8 +12,10 @@ $$x \in \mathring{K}$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.compact`](../nodes/def.compact.md) 紧：imp.compact-locally-compact　[proofs/imp.compact-locally-compact.md](../proofs/imp.compact-locally-compact.md)
 
+- …另有入边，续页见 [nodes/def.locally-compact-space.2.md](./def.locally-compact-space.2.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.locally-compact-space.2.md](./def.locally-compact-space.2.md)
+- …另有出边，续页见 [nodes/def.locally-compact-space.3.md](./def.locally-compact-space.3.md)
 
 refs: Munkres, Topology；Engelking, General Topology
 

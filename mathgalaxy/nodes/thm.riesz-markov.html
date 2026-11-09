@@ -31,7 +31,7 @@
   <header class="np-head">
     <h1>Riesz–Markov 表示<span class="en" lang="en">Riesz–Markov representation theorem</span></h1>
     <p class="full">Riesz–Markov：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>c</mi></msub><mo stretchy="false">(</mo><mi>X</mi><msup><mo stretchy="false">)</mo><mo lspace="0em" rspace="0em">∗</mo></msup><mo>≅</mo></mrow><annotation encoding="application/x-tex">C_{c}(X)^{*} \cong</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span></span></span></span> Radon 测度</p>
-    <ul class="facts"><li>定理</li><li>依赖深度 layer 20</li><li>实变函数</li><li>数学分析</li><li>测度的构造</li></ul>
+    <ul class="facts"><li>定理</li><li>依赖深度 layer 19</li><li>实变函数</li><li>数学分析</li><li>测度的构造</li></ul>
     <p class="idline"><code>thm.riesz-markov</code> · 定理 · 测度 · 泛函分析 · 桥</p>
     <p class="aka"><span class="aka-k">又称</span>Riesz-Markov 表示定理<span class="aka-s">·</span>Riesz–Markov 表示<span class="aka-s">·</span>里斯-马尔可夫表示定理<span class="aka-s">·</span>里斯-马尔可夫</p>
     
@@ -55,7 +55,7 @@
   <div class="proof"><p><strong>这条边只登记依赖，不证结论。</strong> 三者合起来才够，任何一条单独都推不出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Λ</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mi>f</mi><mtext> </mtext><mi>d</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">\Lambda(f) = \int f \,d\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Λ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1111em;vertical-align:-0.3061em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0006em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">μ</span></span></span></span>：</p><ol><li value="1"><a class="pn-xlink" data-xlink="def.one-point-compactification" href="#" title="def.one-point-compactification">一点紧化</a>（单点紧化）：<code>X</code> 局部紧 Hausdorff <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> <code>X^{+}</code> 紧 Hausdorff <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 正规，于是可以在 <code>X^{+}</code> 里对闭集用 Urysohn 造夹逼函数 <code>\varphi</code>；</li><li value="2"><a class="pn-xlink" data-xlink="lem.urysohn" href="#" title="lem.urysohn">Урысон 引理</a>（Urysohn 引理）：引理 2 的次可加性、紧集上有限性、上下界与唯一性，每一步都靠它造 <code>\varphi \in C_{c}(X)</code>（<code>\varphi = 1</code> 于 <code>K</code>、支集落在指定的相对紧开集里）；</li><li value="3"><a class="pn-xlink" data-xlink="thm.caratheodory" href="#" title="thm.caratheodory">Carathéodory 定理</a>（Carathéodory 延拓）：第 ③ 步把造好的外测度 <code>\mu^{*}</code> 限制到 Borel 集上得到 Radon 测度。</li></ol></div>
   <div class="edge-note"><p>⚠ 依赖登记边：这三条只是证明链的三块输入，单独都不构成蕴含；表示引理本身的上下界与唯一性在节点注第 ④ 步。</p></div>
 </li></ul>
-<h3 class="kind-h">定义引用 <span class="n">5</span></h3>
+<h3 class="kind-h">定义引用 <span class="n">6</span></h3>
 <ul class="edges"><li class="edge">
   <div class="edge-line"><a href="def.measure.html">测度</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
   
@@ -63,10 +63,16 @@
   <div class="edge-note"><p>结论说「存在一个 Radon <strong>测度</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>」，用到测度的定义。</p></div>
 </li>
 <li class="edge">
-  <div class="edge-line"><a href="def.locally-compact.html">局部紧 Hausdorff 空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  <div class="edge-line"><a href="def.locally-compact-space.html">局部紧空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
   
   
   <div class="edge-note"><p>假设是局部紧 Hausdorff —— 局部紧是 Urysohn 夹逼函数存在的前提。</p></div>
+</li>
+<li class="edge">
+  <div class="edge-line"><a href="def.hausdorff.html">Hausdorff 空间</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>假设里的 Hausdorff 一半：它保证紧集闭、单点紧化正规，因而 Urysohn 可用。</p></div>
 </li>
 <li class="edge">
   <div class="edge-line"><a href="def.outer-measure.html">外测度</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
@@ -104,7 +110,7 @@
     <h2>继续</h2>
     <p>
       <a href="../#n=thm.riesz-markov">在星图里打开「Riesz–Markov 表示」</a>　·　
-      <a href="../all.html">全部 1560 个概念</a>　·　
+      <a href="../all.html">全部 1574 个概念</a>　·　
       <a href="thm.riesz-markov.md">Markdown 原文</a>　·　
       <a href="thm.riesz-markov.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
     </p>

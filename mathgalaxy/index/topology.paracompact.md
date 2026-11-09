@@ -6,10 +6,10 @@
 - def.discrete-family　离散族　layer 5
 - def.refinement　覆盖的加细　layer 5
 - def.locally-finite-family　局部有限族　layer 6
-- thm.michael-paracompact　迈克尔仿紧判别法　layer 6
+- thm.michael-paracompact　Michael 仿紧判别法　layer 6
 - def.sigma-locally-finite　可数并的局部有限族　layer 7
 - def.paracompact　仿紧空间　layer 7
-- def.partition-of-unity　单位分解　layer 7
+- def.partition-of-unity　单位分解　layer 17
 - lem.shrink　收缩引理　layer 18
 - thm.paracompact-hausdorff-normal　仿紧 Hausdorff 空间正规　layer 18
 - prop.paracompact-closed-refinement　闭加细　layer 19

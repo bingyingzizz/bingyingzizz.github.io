@@ -1,8 +1,6 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
-- 层上同调是同伦不变量 | Proposition 7.4.2 | Corollary 7.4.3 | Cor 7.4.3 → cor.homotopy-invariant-cohomology
-
 - CHaus | 紧 Hausdorff 空间 | compact Hausdorff | 紧豪斯多夫空间 → def.chaus
 
 - Stone-Cech 紧化 | Stone–Čech compactification | βX | Definition 2.1.6 | Def 2.1.6 | Proposition 2.1.7 | Prop 2.1.7 → prop.chaus-reflective
@@ -18,5 +16,7 @@
 - 自由对象是投射的 → prop.free-projective
 
 - 自由表示 | free presentation | 自由表现 | Definition 2.2.3 | Def 2.2.3 → def.free-presentation
+
+- 紧 Haus 都有自由表示 | Corollary 2.2.4 | Cor 2.2.4 → cor.chaus-free-presentation
 
 > 续见 alias/aka/topology.5.md

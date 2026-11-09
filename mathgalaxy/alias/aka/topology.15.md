@@ -11,4 +11,8 @@
 
 - 组合分类引理 → lem.combinatorial-classification-surfaces
 
+- 度量连续 | 度量空间之间的连续 | ε-δ 连续 → def.metric-continuity
+
+- 实数度量空间 | R 的度量 | 实数直线 → def.real-metric-space
+
 见 `../../alias.md`。

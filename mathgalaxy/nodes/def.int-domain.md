@@ -8,7 +8,7 @@ layer 9 · 定义 · 整环与分解 · 抽象代数
 等价说法（消去律）：对 $a \ne 0$，$ab = ac$ $\implies$ $b = c$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/e126.definition.md](../proofs/e126.definition.md)
+- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/e129.definition.md](../proofs/e129.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环 用

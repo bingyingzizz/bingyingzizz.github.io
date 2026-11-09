@@ -3,6 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.branch`](../nodes/def.branch.md) 多值函数与分支：用到了定义 多值函数与分支　[proofs/def-link.riemann-branch.md](../proofs/def-link.riemann-branch.md)
-- [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面：两个「曲面」：拓扑的 2 维流形 vs 一维复流形　[proofs/e186.analogy.md](../proofs/e186.analogy.md)
+- [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面：两个「曲面」：拓扑的 2 维流形 vs 一维复流形　[proofs/e189.analogy.md](../proofs/e189.analogy.md)
 
 > 续见 [nodes/def.riemann-surface.4.md](./def.riemann-surface.4.md)

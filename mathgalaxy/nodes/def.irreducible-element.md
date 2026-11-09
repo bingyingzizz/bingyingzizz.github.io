@@ -10,7 +10,7 @@ layer 9 · 定义 · 整环与分解 · 抽象代数
 - 非零非单位的 $p$ 叫**素**，若 $p \mid ab$ $\implies$ $p \mid a$ 或 $p \mid b$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/e127.definition.md](../proofs/e127.definition.md)
+- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/e130.definition.md](../proofs/e130.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.irreducible-element.2.md](./def.irreducible-element.2.md)

@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1560 节点 / 3232 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1574 节点 / 3274 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,10 +59,18 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（4 处）
+## 二、陈述用到更深的定义却没有边（12 处）
 
-- `def.radon-measure`（Radon 测度 · L16）用到 `def.locally-compact`（局部紧 Hausdorff 空间 · L18）　落差 2
+- `def.weak-hausdorff`（弱 Hausdorff 空间 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
+- `prop.connected-image-closure`（连通的像与闭包 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
+- `def.orientable-manifold`（可定向流形 · L16）用到 `def.smooth-manifold`（光滑流形 · L19）　落差 3
+- `thm.riesz-perfect-pairing`（Riesz 表示的配对版 · L15）用到 `def.hilbert-space`（Hilbert 空间 · L18）　落差 3
+- `prop.cgwh-fiber-product`（紧块的纤维积还是紧的 · L13）用到 `def.continuous-map`（连续映射 · L16）　落差 3
 - `def.module-category`（模范畴 · L10）用到 `def.linear-map`（线性映射 · L12）　落差 2
+- `prop.pullback-forms`（拉回（开集间） · L19）用到 `def.smooth-map`（光滑映射 · L20）　落差 1
+- `prop.volume-form-orientation`（定向与体积形式 · L18）用到 `def.smooth-manifold`（光滑流形 · L19）　落差 1
+- `def.cotangent-bundle`（余切丛 · L22）用到 `def.bundle-section`（丛的截面 · L22）
+- `def.real-metric-space`（实数的度量 · L15）用到 `def.canonical-topology`（标准拓扑 · L15）
 - `def.category-of-groups`（群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
 - `def.category-of-abelian-groups`（阿贝尔群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
 
@@ -110,7 +118,7 @@
 - `ex.ab-of-categories` 提到 `def.lie-group` —— 例子行「Ab(Manifold) = 阿贝尔 Lie 群」是**列答案**，不是依赖。
 - `def.injective-dimension` 提到 `def.projective-dimension` —— 陈述用的是平坦维数 fd（图里还没有 `def.flat-dimension`）；pd 只是对偶侧的类比，不是定义依赖 —— 陈述里提到 pd 的那句恰好是「不能写成 pd」的反例。
 
-⚠️ **过期白名单 2 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.differential-form` · `def.injective-dimension>def.projective-dimension`
+⚠️ **过期白名单 6 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.form-on-manifold` · `def.bundle-section>def.differential-form` · `def.t35-space>def.regular-space` · `def.smooth-manifold>def.partial-derivative` · `def.manifold-chart>def.partial-derivative` · `def.injective-dimension>def.projective-dimension`
 
 ## 三、候选词表里从没被提到的（19 个）
 

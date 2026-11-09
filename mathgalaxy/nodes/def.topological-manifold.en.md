@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry / Topology
+layer 18 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.topological-manifold.md` and `proofs/`.

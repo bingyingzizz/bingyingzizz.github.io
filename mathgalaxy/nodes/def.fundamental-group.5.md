@@ -4,5 +4,6 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.simply-connected`](../nodes/def.simply-connected.md) 单连通 用
 - 被 [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理 用
+- 被 [`prop.pi1-group`](../nodes/prop.pi1-group.md) π₁ 是群 用
 - ～弱边 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群
 - ～弱边 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群

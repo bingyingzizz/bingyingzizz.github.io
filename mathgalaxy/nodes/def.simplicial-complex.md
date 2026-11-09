@@ -10,7 +10,7 @@ $$\sigma \in K,\ \ \emptyset \ne \tau \subseteq \sigma \ \implies \ \tau \in K.$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/e43.definition.md](../proofs/e43.definition.md)
+- [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/e44.definition.md](../proofs/e44.definition.md)
 
 - …另有入边，续页见 [nodes/def.simplicial-complex.3.md](./def.simplicial-complex.3.md)
 

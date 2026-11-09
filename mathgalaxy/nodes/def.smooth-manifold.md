@@ -1,9 +1,9 @@
 # 光滑流形　`def.smooth-manifold`
 光滑流形与图册
-layer 9 · 定义 · 内蕴几何 · 微分几何
+layer 19 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.smooth-manifold)　·　[节点索引](../index.md)
 
-**在做什么**：把 $\mathbb{R}^{n}$ 上的微积分搬到「局部看起来像 $\mathbb{R}^{n}$」的
+**在做什么**：把 $\mathbb{R}^{n}$ 上的微积分搬到「局部看起来像 $\mathbb{R}^{n}$」
 > 陈述续见 [nodes/def.smooth-manifold.2.md](./def.smooth-manifold.2.md)
 
 

@@ -8,12 +8,12 @@ layer 21 · 定理 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 $$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0.$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间：用到了定义 局部紧 Hausdorff 空间　[proofs/def-dep.lcext-lc.md](../proofs/def-dep.lcext-lc.md)
+- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间：用到了定义 局部紧空间　[proofs/def-dep.lcext-lc.md](../proofs/def-dep.lcext-lc.md)
 
 - …另有入边，续页见 [nodes/thm.lc-ext-vanishing.2.md](./thm.lc-ext-vanishing.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.lc-ext-vanishing.3.md](./thm.lc-ext-vanishing.3.md)
+- ⇒ [`ex.connected-lc-ext`](../nodes/ex.connected-lc-ext.md) 连通局部紧到离散只剩 Ext一次
 
 refs: Le Stum, Theorem 8.3.9
 

@@ -10,7 +10,7 @@ $$\tau(n) := \#\{\, d \ge 1 : d \mid n \,\}, \qquad \sigma(n) := \sum_{d \mid n}
 $\tau(n)$ 是 $n$ 的正因数个数，$\sigma(n)$ 是它们之和。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数：用到了定义 积性函数　[proofs/e146.definition.md](../proofs/e146.definition.md)
+- [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数：用到了定义 积性函数　[proofs/e149.definition.md](../proofs/e149.definition.md)
 
 - …另有入边，续页见 [nodes/def.divisor-function.2.md](./def.divisor-function.2.md)
 

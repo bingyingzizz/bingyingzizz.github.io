@@ -10,7 +10,7 @@ $$a^{k} \equiv 1 \pmod n$$
 成立的最小正整数 $k$ 叫 $a$ 模 $n$ 的**阶**，记 $\operatorname{ord}_{n}(a)$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/e160.definition.md](../proofs/e160.definition.md)
+- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/e163.definition.md](../proofs/e163.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.primitive-root`](../nodes/def.primitive-root.md) 原根 用

@@ -1,6 +1,6 @@
 # 同胚　`def.homeomorphism`
 同胚
-layer 7 · 定义 · 拓扑空间的基本语汇 · 拓扑学
+layer 17 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.homeomorphism)　·　[节点索引](../index.md)
 
 设 $X$、$Y$ 是拓扑空间。$f : X \to Y$ 是**同胚**，当且仅当

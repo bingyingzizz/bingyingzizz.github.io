@@ -4,6 +4,7 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲：用到了定义 第一纲 / 第二纲　[proofs/dep-link.meager-baire.md](../proofs/dep-link.meager-baire.md)
 - [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密：用到了定义 无处稠密　[proofs/dep-link.nowhere-baire.md](../proofs/dep-link.nowhere-baire.md)
-- [`def.locally-compact`](../nodes/def.locally-compact.md) 局部紧 Hausdorff 空间：用到了定义 局部紧 Hausdorff 空间　[proofs/dep.gap-baire-locally-compact.md](../proofs/dep.gap-baire-locally-compact.md)
+- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间：用到了定义 局部紧空间　[proofs/dep.gap-baire-locally-compact.md](../proofs/dep.gap-baire-locally-compact.md)
+- [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/dep.gap-baire-hausdorff.md](../proofs/dep.gap-baire-hausdorff.md)
 
 > 续见 [nodes/thm.baire.3.md](./thm.baire.3.md)

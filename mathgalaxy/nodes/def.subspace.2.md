@@ -4,6 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.vs`](../nodes/def.vs.md) 线性无关与基：用到了定义 线性无关与基　[proofs/dep.vs-subspace.md](../proofs/dep.vs-subspace.md)
 - [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：用到了定义 向量空间　[proofs/dep.vectorspace-subspace.md](../proofs/dep.vectorspace-subspace.md)
-- [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑：两个「子空间」：线性代数的 vs 拓扑的子空间拓扑　[proofs/e189.analogy.md](../proofs/e189.analogy.md)
+- [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑：两个「子空间」：线性代数的 vs 拓扑的子空间拓扑　[proofs/e192.analogy.md](../proofs/e192.analogy.md)
 
 > 续见 [nodes/def.subspace.3.md](./def.subspace.3.md)
