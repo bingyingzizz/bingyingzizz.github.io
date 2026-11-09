@@ -11,7 +11,9 @@ layer 29 · 定理 · Baire 纲与三大定理 · 泛函分析
 - …另有入边，续页见 [nodes/thm.bounded-inverse.2.md](./thm.bounded-inverse.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.closed-graph`](../nodes/thm.closed-graph.md) 闭图像定理
+- ⇒ [`thm.complemented-subspace-criterion`](../nodes/thm.complemented-subspace-criterion.md) 可补子空间的判别
+
+- …另有出边，续页见 [nodes/thm.bounded-inverse.3.md](./thm.bounded-inverse.3.md)
 
 refs: Rudin, Functional Analysis, 2.12
 

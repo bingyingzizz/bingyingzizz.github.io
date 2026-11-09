@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-09T04:44:27.492Z
-> 15 星系 / 105 星团 / 1555 节点 / 3214 连线（强边 3172，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-09T05:34:23.185Z
+> 15 星系 / 105 星团 / 1560 节点 / 3227 连线（强边 3185，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -14192,6 +14192,76 @@ $$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 :=
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
+#### 可补子空间　`def.complemented-subspace`
+*定义*　定义：代数互补、拓扑互补与可补子空间
+
+设 $E$ 是赋范空间，$X, Y \subseteq E$ 是线性子空间。
+
+1. 称 $X, Y$ **代数互补**（记 $\mathrm{AC}$），若 $X + Y = E$ 且 $X \cap Y = \{0\}$。此时每个 $e \in E$ 唯一写成 $e = x + y$，定义**投影** $P_X e := x$、$P_Y e := y$。
+2. 称 $X, Y$ **拓扑互补**（记 $\mathrm{TC}$），若 $P_X$（等价地 $P_Y = I - P_X$）是**有界**线性算子。
+3. 称子空间 $X \subseteq E$ **可补**，若存在子空间 $Y \subseteq E$ 使 $X, Y$ 拓扑互补。
+
+**代数互补的直接推论。** 由定义 $P_X + P_Y = I$、$P_X^{2} = P_X$、$P_Y^{2} = P_Y$、$P_X P_Y = P_Y P_X = 0$，且 $P_X(E) = X$、$P_Y(E) = Y$、$\ker P_X = Y$、$\ker P_Y = X$。所以「$X$ 可补」等价于「存在有界投影 $P \in B(E)$ 使 $P(E) = X$」：取 $Y = \ker P$；反之给定 $Y$ 取 $P = P_X$。
+
+**TC 的定义不依赖选 $P_X$ 还是 $P_Y$。** $P_Y = I - P_X$，故 $P_X$ 有界 $\iff$ $P_Y$ 有界。
+
+⚠️ **AC 不自动 TC**：一般赋范空间里 $X, Y$ 代数互补时投影可能无界。$E$ 完备时，若 $X, Y$ 都闭，则由开映射/有界逆定理它们自动拓扑互补（见 `thm.complemented-subspace-criterion`）；但不完备时「闭 + AC」也不够。
+
+⚠️ **可补要求 $Y$ 闭**：由 $Y = \ker P_X$ 与 $P_X$ 连续知 $Y$ 闭；同理 $X$ 闭。所以可补子空间必闭。反过来闭子空间不一定可补：$c_0(\mathbb{N})$ 在 $\ell^{\infty}(\mathbb{N})$ 中闭但不可补（Phillips 1940；证明要用 Banach 极限/超滤子，本图不展开）。
+
+⭐ **两个标准例子。** (1) Hilbert 空间 $H$ 的每个闭子空间 $X$ 都可补：正交分解 $H = X \oplus X^{\perp}$，正交投影 $P_X$ 有界（`thm.projection-subspace`）。(2) 有限维子空间总可补：任取代数补空间，投影的像在有限维空间上、核闭，投影自动有界（也可由「有限维空间上的线性映射自动有界」证明）。
+
+📌 **为什么重要**：$X$ 可补 $\iff$ 商映射 $E \to E/X$ 有有界右逆 $\iff$ $E$ 拓扑同构于 $X \times Y$。所以「可补」是把「直和分解」从代数层面提升到拓扑层面的正确说法；在算子理论、Banach 空间分类与 PDE 的分解问题里都出现。
+
+参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis · 补子空间与投影；Lindenstrauss–Tzafriri, Classical Banach Spaces I · c0 与 ℓ∞
+
+#### 可补子空间的判别　`thm.complemented-subspace-criterion`
+*定理*　定理：代数互补何时拓扑互补（Banach 版）
+
+设 $E$ 是赋范空间，$X, Y \subseteq E$ 代数互补，$\Phi : X \times Y \to E$，$\Phi(x, y) := x + y$。则
+
+$$X, Y \text{ 拓扑互补} \iff \Phi \text{ 是同胚（有界双射且逆有界）}.$$
+
+若 $E$ 还是 Banach 空间，则进一步有
+
+$$X, Y \text{ 拓扑互补} \iff X, Y \text{ 都闭}.$$
+
+**第一部分（不用完备性）。** 由代数互补，$\Phi$ 是线性双射。它有界：$\|\Phi(x, y)\| = \|x + y\| \le \|x\| + \|y\| \le 2\max\{\|x\|, \|y\|\}$（乘积空间用 $\max$ 范数或和范数都等价）。
+
+
+
+若 $X, Y$ 拓扑互补，则 $\Phi^{-1} e = (P_X e, P_Y e)$，故
+
+
+
+$$\|\Phi^{-1} e\| \le \max\{ \|P_X\|, \|P_Y\| \} \, \|e\| ,$$
+
+
+
+即 $\Phi^{-1}$ 有界。
+
+
+
+反之若 $\Phi$ 是同胚，则 $P_X = \pi_X \circ \Phi^{-1}$（$\pi_X : X \times Y \to X$ 是投影，范数 $\le 1$）作为有界映射的复合有界，故 $X, Y$ 拓扑互补。
+
+
+
+**第二部分（$E$ 完备）。** 若 $X, Y$ 拓扑互补，则 $X = \ker P_Y$、$Y = \ker P_X$ 都是闭子空间。
+
+
+
+反之设 $X, Y$ 都闭。$E$ 是 Banach 空间，闭子空间 $X, Y$ 本身是 Banach 空间，故乘积 $X \times Y$ 是 Banach 空间。$\Phi$ 是有界双射，由逆算子定理（`thm.bounded-inverse`，等价于开映射定理），$\Phi^{-1}$ 有界。于是 $P_X = \pi_X \circ \Phi^{-1}$ 有界，即 $X, Y$ 拓扑互补。
+
+
+
+**为什么完备性不能省。** 第二部分只用「$X \times Y$ 完备 + 有界逆定理」；去掉 $E$ 的完备性，即使 $X, Y$ 闭也不能保证投影有界（反例需要构造不完备的赋范空间，本图不展开）。
+
+⭐ **可补性的等价刻画**：$X$ 可补 $\iff$ 存在有界投影 $P \in B(E)$ 使 $P(E) = X$；在 Banach 空间中，这又等价于「存在闭子空间 $Y$ 使 $X \oplus Y = E$ 是拓扑直和」。
+
+📌 **两个例子。** Hilbert 空间闭子空间总可补（正交投影）；$c_0(\mathbb{N})$ 在 $\ell^{\infty}(\mathbb{N})$ 中闭但不可补（Phillips 1940，外部定理）。
+
+参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis · 开映射定理与补子空间
+
 #### Fréchet 导数　`thm.frechet-derivative`
 *定义*　Fréchet 导数：赋范空间之间的导数就是有界线性算子
 
@@ -14611,6 +14681,99 @@ Zorn 给极大元 $M$。
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
+#### Lax–Milgram 定理　`thm.lax-milgram`
+*定理*　定理（Lax–Milgram）：强制半双线性型的 Riesz 表示
+
+设 $H$ 是 Hilbert 空间，$L : H \times H \to \mathbb{K}$ 满足：
+
+1. **半双线性**：$L$ 对第一变量线性，对第二变量共轭线性（与本图内积约定一致）；
+2. **有界**：存在 $M > 0$ 使 $|L(x, y)| \le M \|x\| \, \|y\|$ 对一切 $x, y \in H$ 成立；
+3. **强制（coercive）**：存在 $\delta > 0$ 使 $|L(x, x)| \ge \delta \|x\|^{2}$ 对一切 $x \in H$ 成立。
+
+则存在唯一的 $A \in B(H)$ 使
+
+$$L(x, y) = \langle x, A y \rangle \qquad (x, y \in H),$$
+
+且 $\|A\| \le M$。在 (3) 下 $A$ 还可逆、$A^{-1} \in B(H)$，并且
+
+$$\|A^{-1}\| \le \frac{1}{\delta} .$$
+
+**约定说明。** 本图内积对第一变量线性、对第二变量共轭线性（见 `def.inner-product`、`def.hilbert-space`），所以这里把 $L$ 取成「第一变量线性、第二变量共轭线性」。如果教材把共轭放在第一变量（很多泛函分析书如此），把 $L$ 换成 $(x,y) \mapsto \overline{L(x,y)}$ 即可，$A$ 不变，结论逐字相同。
+
+
+
+**第一步：用 Riesz 表示定义 $A$。** 固定 $y \in H$，泛函 $\varphi_y(x) := L(x, y)$ 是连续线性泛函（线性由半双线性，连续性由 (2)：$|\varphi_y(x)| \le M\|y\| \, \|x\|$）。由 Riesz 表示定理（`thm.riesz-hilbert`），存在唯一 $A y \in H$ 使
+
+
+
+$$L(x, y) = \langle x, A y \rangle \qquad (x \in H), \qquad \|A y\| = \|\varphi_y\| \le M \|y\| .$$
+
+
+
+**第二步：$A$ 线性且 $\|A\| \le M$。** 对 $y, z \in H$、$\alpha, \beta \in \mathbb{K}$，由 $L$ 对第二变量共轭线性（它给出的共轭与内积第二变元的共轭相消），
+
+
+
+$$\langle x, A(\alpha y + \beta z) \rangle = L(x, \alpha y + \beta z) = \bar{\alpha} L(x, y) + \bar{\beta} L(x, z) = \langle x, \alpha A y + \beta A z \rangle$$
+
+
+
+对一切 $x$ 成立，故 $A(\alpha y + \beta z) = \alpha A y + \beta A z$。又 $\|A y\| \le M \|y\|$，故 $A \in B(H)$ 且 $\|A\| \le M$。唯一性由 Riesz 表示的唯一性（每个 $y$ 的 $A y$ 唯一确定）得到。
+
+
+
+**第三步：强制性给出下界。** 由 (3) 与 $L(x, x) = \langle x, A x \rangle$，
+
+
+
+$$\delta \|x\|^{2} \le |L(x, x)| = |\langle x, A x \rangle| \le \|x\| \, \|A x\| ,$$
+
+
+
+所以 $\|A x\| \ge \delta \|x\|$。特别地 $A$ 单射。
+
+
+
+**第四步：$A(H)$ 闭。** 设 $A x_n \to z$。则
+
+
+
+$$\|x_n - x_m\| \le \frac{1}{\delta} \|A(x_n - x_m)\| \to 0 ,$$
+
+
+
+故 $(x_n)$ 是 Cauchy 列；$H$ 完备，设 $x_n \to x$。由 $A$ 连续，$A x = z$，故 $z \in A(H)$。
+
+
+
+**第五步：$A$ 满射。** 若 $A(H) \ne H$，则 $A(H)$ 是闭真子空间，由正交分解（`thm.projection-subspace`）存在 $0 \ne y \perp A(H)$。于是 $\langle y, A y \rangle = 0$（因为 $A y \in A(H)$），即 $L(y, y) = 0$，与 $\delta \|y\|^{2} > 0$ 矛盾。故 $A$ 满射。
+
+
+
+**第六步：$A^{-1}$ 有界。** $A$ 是 Banach 空间之间的有界双射。考察 $A^{-1}$ 的图像：若 $y_n \to y$ 且 $A^{-1} y_n \to x$，则 $A(A^{-1} y_n) = y_n \to y$，由 $A$ 连续得 $A x = y$，即 $x = A^{-1} y$。故 $G(A^{-1})$ 闭；由闭图像定理（`thm.closed-graph`），$A^{-1} \in B(H)$。
+
+
+
+**第七步：逆的范数界。** 对任意 $y \in H$，以 $x = A^{-1} y$ 代入第三步的下界：
+
+
+
+$$\delta \|A^{-1} y\|^{2} \le |L(A^{-1} y, A^{-1} y)| = |\langle A^{-1} y, y \rangle| \le \|A^{-1} y\| \, \|y\| ,$$
+
+
+
+故 $\|A^{-1} y\| \le \delta^{-1} \|y\|$，即 $\|A^{-1}\| \le 1/\delta$。$\blacksquare$
+
+⭐ **它解决什么。** 解变分问题「求 $u$ 使 $L(u, v) = F(v)$ 对一切 $v$」时，$L$ 满足 (2)(3) 就等价于 $A u = F$ 的可逆性：$u = A^{-1} F$ 存在唯一且连续依赖 $F$（$\|u\| \le \delta^{-1}\|F\|$）。这正是椭圆 PDE 的 Lax–Milgram 引理（弱解存在唯一性）的抽象版本。
+
+⚠️ 强制性 (3) 不能去掉：$L \equiv 0$ 满足 (1)(2)（$M$ 任意），但 $A = 0$ 不可逆。
+
+⚠️ 有界性 (2) 也不能去掉：它同时保证 $A$ 有界与第一步 Riesz 表示的适用；只「逐点」有限不够。
+
+📌 与 Riesz 表示的关系：$L(x, y) = \langle x, y \rangle$ 时 $A = I$；Lax–Milgram 是「用有界强制半双线性型替换内积」后的同一套 Riesz 机器。
+
+参考：泛函分析讲义（用户手写笔记，2026-11-09）；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 5（Lax–Milgram）
+
 ### 星团：C(K) 与 Stone–Weierstrass
 > 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
 
@@ -15018,6 +15181,8 @@ $$\sup_{i \in I} \|u_i(x)\| < \infty \qquad (\text{逐点有界}) ,$$
 
 ⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\|u_n\| = n \to \infty$。
 
+📌 **两条常用推论**：见 `cor.ubp-pointwise-limit`（逐点极限的范数界）与 `thm.bilinear-jointly-continuous`（分别连续双线性推出联合连续）；两条都只用本条加定义。
+
 参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）；Banach–Steinhaus 1927
 
 #### 共振集是稠密 G_δ　`cor.ubp-resonance`
@@ -15116,7 +15281,101 @@ $$u = \pi_2 \circ \pi_1^{-1}$$
 
 **线性。** 非线性映射可以有闭图像而不连续：取 $u : \mathbb{R} \to \mathbb{R}$，$u(x) = 1/x$（$x \ne 0$）、$u(0) = 0$。它的图像在 $\mathbb{R}^2$ 中闭（是一条双曲线加原点），但 $u$ 在 $0$ 处不连续。
 
+📌 **TFAE 的说法**：有界等价于图像闭（两端 Banach 时）。本图另收了两个典型用法：`thm.lax-milgram`（强制型给出有界双逆）与可补子空间的判别（闭的代数互补给出有界投影）。
+
 参考：Rudin, Functional Analysis, 2.15
+
+#### 逐点极限的范数界　`cor.ubp-pointwise-limit`
+*推论*　推论：逐点收敛的有界算子列，极限有界且 $\|u\| \le \liminf \|u_n\|$
+
+设 $E$ 是 Banach 空间，$F$ 赋范，$u_n \in B(E, F)$，且对每个 $x \in E$ 有 $u_n x \to u x$（逐点收敛）。则 $u \in B(E, F)$，并且
+
+$$\|u\| \le \liminf_{n \to \infty} \|u_n\| .$$
+
+**证明。** 先注意 $u$ 线性：对 $x, y \in E$、$\alpha, \beta \in \mathbb{K}$，由 $u_n$ 线性与极限的线性，
+
+
+
+$$u(\alpha x + \beta y) = \lim_n u_n(\alpha x + \beta y) = \alpha \lim_n u_n x + \beta \lim_n u_n y = \alpha u x + \beta u y .$$
+
+
+
+**逐点有界。** 对每个 $x$，收敛数列 $(u_n x)$ 有界，故 $M(x) := \sup_n \|u_n x\| < \infty$。
+
+
+
+**一致有界。** 对族 $\{u_n\} \subseteq B(E, F)$ 用共鸣定理（$E$ 完备、$F$ 赋范）：$C := \sup_n \|u_n\| < \infty$。
+
+
+
+**范数界。** 对任意 $x$，
+
+
+
+$$\|u x\| = \lim_n \|u_n x\| = \liminf_n \|u_n x\| \le \liminf_n \bigl( \|u_n\| \, \|x\| \bigr) = \bigl( \liminf_n \|u_n\| \bigr) \|x\| ,$$
+
+
+
+所以 $u$ 有界且 $\|u\| \le \liminf_n \|u_n\|$。$\blacksquare$
+
+⭐ 这条把「逐点收敛」升级成「极限算子的范数估计」：不需要预先知道 $\sup_n \|u_n\|$ 有限，共鸣定理自动给出。它在数值分析里判断「算子序列的极限仍是算子」时最常用。
+
+⚠️ 只能得到 $\liminf$ 的界，不能换成 $\limsup$：$\|u\|$ 可能严格小于 $\liminf \|u_n\|$（例如取一列在某个方向上「几乎损失」范数的算子，逐点极限丢掉那一方向）。
+
+参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
+
+#### 分别连续双线性映射联合连续　`thm.bilinear-jointly-continuous`
+*定理*　定理：分别连续的双线性映射联合连续（Banach 空间）
+
+设 $E, F, G$ 是赋范空间，$B : E \times F \to G$ 双线性（对每个变量分别线性）。若 $E, F$ 都是 Banach 空间，且
+
+$$\text{对每个 } x \in E,\ B(x, \cdot) \text{ 连续}; \qquad \text{对每个 } y \in F,\ B(\cdot, y) \text{ 连续},$$
+
+则 $B$ 在 $E \times F$ 上**联合连续**；更强地，存在 $C > 0$ 使
+
+$$\|B(x, y)\| \le C \, \|x\| \, \|y\| \qquad (x \in E,\ y \in F).$$
+
+**证明。** 对每个 $y \in F$，$x \mapsto B(x, y)$ 是连续线性映射，故有界；对每个 $x \in E$，$B(x, \cdot) \in B(F, G)$。
+
+
+
+考虑族 $\{ B(x, \cdot) : x \in E,\ \|x\| \le 1 \} \subseteq B(F, G)$。对每个固定的 $y \in F$，
+
+
+
+$$\sup_{\|x\| \le 1} \|B(x, y)\| = \| B(\cdot, y) \| < \infty .$$
+
+
+
+即这族算子逐点有界；$F$ 是 Banach 空间，$G$ 赋范，由共鸣定理得
+
+
+
+$$C := \sup_{\|x\| \le 1} \| B(x, \cdot) \| < \infty .$$
+
+
+
+于是对 $x \ne 0$，$\|B(x, y)\| = \|x\| \, \| B(x/\|x\|, y) \| \le C \|x\| \, \|y\|$；$x = 0$ 时两边为零。
+
+
+
+**联合连续。** 设 $(x_n, y_n) \to (x, y)$，则
+
+
+
+$$\|B(x_n, y_n) - B(x, y)\| \le \|B(x_n - x, y_n)\| + \|B(x, y_n - y)\| \le C \|x_n - x\| \, \|y_n\| + \|B(x, y_n - y)\| .$$
+
+
+
+第一项趋于 $0$（$\|x_n - x\| \to 0$，$(y_n)$ 有界）；第二项趋于 $0$ 由 $B(x, \cdot)$ 连续。故 $B$ 联合连续。$\blacksquare$
+
+⭐ 这条是「分别连续 $\implies$ 联合连续」在双线性情形下的标准答案：**双线性 + 两个 Banach** 就够了。一般拓扑里分别连续远不能推出联合连续。
+
+⚠️ 双线性不能去掉：$f(x, y) = \dfrac{xy}{x^{2} + y^{2}}$（$f(0,0)=0$）在 $\mathbb{R}^{2}$ 上分别连续，却在原点不连续。
+
+⚠️ 两个完备性都用在共鸣定理上（定义域 $F$ 要 Banach）；只假设「赋范」时结论可能失效。乘积空间用 $\max$ 范数或和范数都行，两者等价。
+
+参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
 ## 星系：实变函数（Functions of a Real Variable）
 > 换一套更听话的积分：σ-代数 → 测度 → 可测函数 → Lebesgue 积分（单调收敛 / Fatou / 控制收敛）→ 乘积测度与 Fubini → 符号测度与 Radon–Nikodym → 微分定理 → $L^p$ 空间。
@@ -53154,6 +53413,51 @@ Poincaré 引理里的星形区域就是这里的星形开集；星点可作收�
 
 标准单纯形正是其顶点集的凸包；这里把几何单纯形与凸包概念接上。
 
+#### Riesz 表示（Hilbert） ⟹ Lax–Milgram 定理　`imp.fa-riesz-laxmilgram`
+*Riesz 表示 $\implies$ Lax–Milgram（第一步）*
+
+固定 $y$，$\varphi_y(x) = L(x, y)$ 是连续线性泛函。由 Riesz 表示定理，存在唯一 $A y$ 使 $L(x, y) = \langle x, A y\rangle$，且 $\|A y\| = \|\varphi_y\| \le M \|y\|$。
+这就给出算子 $A$ 并证明 $\|A\| \le M$；$A$ 的线性来自 $L$ 对第二变量的线性。
+
+> Lax–Milgram 的「存在唯一 $A$」完全由 Riesz 表示承担；强制性只用于后面的可逆性。
+
+#### 闭图像定理 ⟹ Lax–Milgram 定理　`imp.fa-closedgraph-laxmilgram`
+*闭图像定理 $\implies$ Lax–Milgram 的逆有界*
+
+强制性给出 $\|A x\| \ge \delta \|x\|$；由此 $A$ 单射、像闭，再用正交分解证满射，故 $A$ 是 Banach 空间之间的有界双射。
+考察 $A^{-1}$ 的图像：若 $y_n \to y$ 且 $A^{-1} y_n \to x$，则 $A(A^{-1} y_n) = y_n \to y$，由 $A$ 连续得 $A x = y$，即 $x = A^{-1} y$。图像闭，由闭图像定理 $A^{-1}$ 有界。
+
+> 这里用的是闭图像定理（而不是开映射定理）；两者等价，但闭图像形式在「逆映射」上更直接。
+
+#### 定义引用：「Hilbert 空间」→ Lax–Milgram 定理　`def-link.fa-hilbert-lax`
+
+内积与正交分解（Riesz 表示、正交补）都要求 Hilbert 空间。
+
+#### 定义引用：「有界线性算子」→ Lax–Milgram 定理　`def-link.fa-op-lax`
+
+结论是 $A \in B(H)$，且估计 $\|A\| \le M$、$\|A^{-1}\| \le 1/\delta$。
+
+#### 定义引用：「向量空间」→ 可补子空间　`def-link.fa-vector-complemented`
+
+代数互补只用向量空间的加法与子空间结构，不需要范数。
+
+#### 定义引用：「Banach 空间」→ 可补子空间　`def-link.fa-banach-complemented`
+
+可补性的判别定理（闭 $\iff$ 拓扑互补）要求 $E$ 完备；定义本身只需要赋范空间。
+
+#### 定义引用：「可补子空间」→ 可补子空间的判别　`def-link.fa-complemented-criterion`
+
+定理用的正是这里的代数互补、投影与拓扑互补三个概念。
+
+#### 逆算子定理 ⟹ 可补子空间的判别　`imp.fa-openmap-complemented`
+*有界逆定理 $\implies$ 闭的代数互补必拓扑互补*
+
+设 $E$ Banach，$X, Y$ 闭且代数互补。则 $X, Y$ 是 Banach 空间，$X \times Y$ 是 Banach 空间。
+$\Phi : X \times Y \to E$，$\Phi(x, y) = x + y$，是有界线性双射。由逆算子定理，$\Phi^{-1}$ 有界。
+于是 $P_X = \pi_X \circ \Phi^{-1}$ 有界（$\pi_X$ 是乘积到第一因子的投影，范数 $\le 1$），即 $X, Y$ 拓扑互补。$\blacksquare$
+
+> 这条正是「闭子空间 + 代数互补 $\implies$ 有界投影」的全部内容；$E$ 的完备性只在这里用到。
+
 #### 定义引用：「同调」→ 上同调类　`dep.cc-hom`
 
 上同调类是 $H^{n}$ 的元素，先有 $H^{n}$。
@@ -53832,6 +54136,34 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 #### 定义引用：「Hausdorff 空间」→ 局部紧 Hausdorff 是 Baire　`def-link.fa-hausdorff-baire`
 
 局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。
+
+#### 共鸣定理 ⟹ 逐点极限的范数界　`imp.fa-ubp-pointwise`
+*共鸣定理 $\implies$ 逐点极限的范数界*
+
+设 $u_n \in B(E, F)$ 逐点收敛到 $u$。对每个 $x$，收敛数列 $(u_n x)$ 有界，故 $\sup_n \|u_n x\| < \infty$。
+由共鸣定理，$C := \sup_n \|u_n\| < \infty$。于是 $\|u x\| = \lim_n \|u_n x\| \le C \|x\|$，且更精确地 $\|u\| \le \liminf_n \|u_n\|$：因为对每个 $\varepsilon > 0$，当 $n$ 充分大时 $\|u_n\| \ge \liminf_k \|u_k\| - \varepsilon$，取极限即得。$\blacksquare$
+
+> 这条把 UBP 的「一致有界」直接翻译成「逐点极限算子的范数不超过原算子列范数的下极限」。
+
+#### 共鸣定理 ⟹ 分别连续双线性映射联合连续　`imp.fa-ubp-bilinear`
+*共鸣定理 $\implies$ 分别连续双线性映射联合连续*
+
+对 $x \in E$ 令 $T_x := B(x, \cdot) \in B(F, G)$。对每个 $y \in F$，$\sup_{\|x\| \le 1} \|T_x y\| = \|B(\cdot, y)\| < \infty$（$B(\cdot, y)$ 连续线性）。
+由共鸣定理（定义域 $F$ 是 Banach 空间），$C := \sup_{\|x\| \le 1} \|T_x\| < \infty$。于是 $\|B(x, y)\| \le C \|x\| \, \|y\|$，联合连续性由 $B(x_n, y_n) - B(x, y) = B(x_n - x, y_n) + B(x, y_n - y)$ 与 $B(x, \cdot)$ 的连续性得到。$\blacksquare$
+
+> 两个 Banach 假设各用在：$F$ 完备用于 UBP，$E$ 完备用于 $x_n$ 的收敛（其实这条证明主要用 $F$ 完备；$E$ 完备保证 $x_n - x$ 的范数有界只需收敛性）。
+
+#### 定义引用：「Banach 空间」→ 分别连续双线性映射联合连续　`def-link.fa-banach-bilinear`
+
+定理的假设就是两个空间完备（共鸣定理要求定义域 Banach）。
+
+#### 定义引用：「有界线性算子」→ 分别连续双线性映射联合连续　`def-link.fa-op-bilinear`
+
+证明对每个 $x$ 把 $B(x, \cdot)$ 看成有界算子 $F \to G$。
+
+#### 定义引用：「有界线性算子」→ 逐点极限的范数界　`def-link.fa-op-pointwise`
+
+结论「$u \in B(E, F)$」正是有界线性算子空间里的成员资格。
 
 #### 定义引用：「向量丛」→ 帧丛　`dep.fr-vector`
 
@@ -63491,13 +63823,16 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **收敛与紧性 ↔ 分离公理**　4 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
-- **多元微分 ↔ Baire 纲与三大定理**　5 条节点级连线
+- **Hilbert 空间 ↔ 赋范空间与有界算子**　2 条节点级连线
+- **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　9 条节点级连线
+- **Baire 纲与三大定理 ↔ 赋范空间与有界算子**　3 条节点级连线
+- **多元微分 ↔ Baire 纲与三大定理**　6 条节点级连线
 - **Baire 纲与三大定理 ↔ 分离公理**　2 条节点级连线
 - **赋范空间与有界算子 ↔ 度量空间**　3 条节点级连线
 - **C(K) 与 Stone–Weierstrass ↔ 度量空间**　3 条节点级连线
 - **C(K) 与 Stone–Weierstrass ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **共形映射与正规族 ↔ C(K) 与 Stone–Weierstrass**　2 条节点级连线
-- **多元微分 ↔ 赋范空间与有界算子**　8 条节点级连线
 - **线性映射与秩 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **赋范空间与有界算子 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **内积空间与正交性 ↔ Hilbert 空间**　9 条节点级连线

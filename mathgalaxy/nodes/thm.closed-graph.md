@@ -13,6 +13,9 @@ $$G(u) := \{(x, u(x)) : x \in E\}$$
 
 - …另有入边，续页见 [nodes/thm.closed-graph.2.md](./thm.closed-graph.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.closed-graph.3.md](./thm.closed-graph.3.md)
+
 refs: Rudin, Functional Analysis, 2.15
 
 > 说明见 `notes/thm.closed-graph.md`

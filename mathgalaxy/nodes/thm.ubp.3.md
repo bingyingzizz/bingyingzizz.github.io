@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.ubp-resonance`](../nodes/cor.ubp-resonance.md) 共振集是稠密 G_δ
+- ⇒ [`cor.ubp-pointwise-limit`](../nodes/cor.ubp-pointwise-limit.md) 逐点极限的范数界
+- ⇒ [`thm.bilinear-jointly-continuous`](../nodes/thm.bilinear-jointly-continuous.md) 分别连续双线性映射联合连续

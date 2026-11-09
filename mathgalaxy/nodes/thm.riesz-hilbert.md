@@ -10,6 +10,7 @@ $$\varphi(x) = \langle x, y\rangle \qquad \forall x \in H , \qquad \text{且} \ 
 于是 $y \mapsto \langle \cdot, y\rangle$ 是 $H \to H^*$ 的等距同构（复情形为共轭线性）。
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`thm.lax-milgram`](../nodes/thm.lax-milgram.md) Lax–Milgram 定理
 - ⇒ [`thm.adjoint-hilbert`](../nodes/thm.adjoint-hilbert.md) 伴随算子
 
 - …另有出边，续页见 [nodes/thm.riesz-hilbert.3.md](./thm.riesz-hilbert.3.md)

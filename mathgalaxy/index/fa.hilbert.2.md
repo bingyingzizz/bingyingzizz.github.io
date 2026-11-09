@@ -2,3 +2,4 @@
 根 `../`　·　第 1 页 `index/fa.hilbert.md`
 
 - thm.adjoint-hilbert　伴随算子　layer 24
+- thm.lax-milgram　Lax–Milgram 定理　layer 31

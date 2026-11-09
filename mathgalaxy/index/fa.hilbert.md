@@ -1,7 +1,7 @@
 # Hilbert 空间 / Hilbert Spaces（fa.hilbert）· 节点清单（第 1/2 页）
 
 范数来自内积的那一类：平行四边形法则把它挑出来 → 凸闭集上有投影 → $H^*\cong\overline H$（Riesz）→ 伴随算子 → 正交基与 $\ell^2$。
-中心天体 def.hilbert-space　·　16 个节点　·　根 `../`　·　续页 `index/fa.hilbert.2.md`
+中心天体 def.hilbert-space　·　17 个节点　·　根 `../`　·　续页 `index/fa.hilbert.2.md`
 
 - def.convex-set　凸集　layer 10
 - def.star-shaped　星形集　layer 11

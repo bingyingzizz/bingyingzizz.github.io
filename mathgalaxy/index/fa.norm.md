@@ -1,7 +1,7 @@
 # 赋范空间与有界算子 / Normed Spaces and Bounded Operators（fa.norm）· 节点清单（第 1/2 页）
 
 选出「度量」里能算长度的那一层（范数 → 等价范数 → 单位球紧 ⟺ 有限维），再把线性算子装上算子范数：有界 ⟺ 连续 → B(E,F) 是 Banach → 对偶 $E^*$。
-中心天体 def.norm　·　18 个节点　·　根 `../`　·　续页 `index/fa.norm.2.md`
+中心天体 def.norm　·　20 个节点　·　根 `../`　·　续页 `index/fa.norm.2.md`
 
 - def.norm　范数　layer 13
 - def.norm-equivalence　等价范数　layer 14

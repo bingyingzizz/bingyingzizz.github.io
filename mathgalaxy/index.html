@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3214 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3227 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3214 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3227 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -13766,6 +13766,11 @@ MG.aliases = {
     { id: 'lem.caratheodory-osgood', en: 'Carathéodory–Osgood lemma', aka: ['Carathéodory–Osgood 边界对应'] },
     { id: 'lem.newman-tauberian', en: 'Newman\'s Tauberian lemma', aka: ['Newman 解析定理'] },
     { id: 'lem.combinatorial-classification-surfaces', en: 'combinatorial classification lemma', aka: ['组合分类引理'] },
+    { id: 'cor.ubp-pointwise-limit', en: 'pointwise limit of uniformly bounded operators', aka: ['一致有界原理的逐点极限推论', '逐点极限算子'] },
+    { id: 'thm.bilinear-jointly-continuous', en: 'separate continuity implies joint continuity for bilinear maps', aka: ['双线性映射的联合连续性', '分别连续双线性映射'] },
+    { id: 'thm.lax-milgram', en: 'Lax–Milgram theorem', aka: ['Lax-Milgram 定理', '拉克斯-米尔格拉姆定理'] },
+    { id: 'def.complemented-subspace', en: 'complemented subspace', aka: ['可补子空间', '拓扑可补子空间'] },
+    { id: 'thm.complemented-subspace-criterion', en: 'criterion for complemented subspaces', aka: ['可补子空间判别定理'] },
   ],
 
   /* -------------------------------------------------- 内文**不链**的别名 */
@@ -14135,7 +14140,7 @@ window.MG = window.MG || {};
 MG.i18n = {
   version: 2,
   generatedBy: 'tools/i18n-backfill.mjs',
-  updated: '2026-11-08',
+  updated: '2026-11-09',
   nodes: {
     'ax.choice': { title_en: 'axiom of choice', label_en: 'axiom of choice', from: 'explicit' },
     'ax.ext': { title_en: 'extensionality', label_en: 'extensionality', from: 'aka' },
@@ -14176,6 +14181,7 @@ MG.i18n = {
     'cor.solid-compact-generators': { title_en: 'compact projective objects in solid modules', label_en: null, from: 'explicit' },
     'cor.spectral-normal': { title_en: 'spectral theorem for complex normal operators', label_en: null, from: 'explicit' },
     'cor.stonean-retract': { title_en: 'retract', label_en: 'retract', from: 'aka' },
+    'cor.ubp-pointwise-limit': { title_en: 'pointwise limit of uniformly bounded operators', label_en: null, from: 'explicit' },
     'cor.ubp-resonance': { title_en: 'the resonance set is a dense G-delta', label_en: null, from: 'explicit' },
     'cor.wilson': { title_en: 'Wilson theorem', label_en: 'Wilson theorem', from: 'explicit' },
     'cor.zero-point': { title_en: 'Bolzano\'s theorem', label_en: 'Bolzano\'s theorem', from: 'explicit' },
@@ -14271,6 +14277,7 @@ MG.i18n = {
     'def.compact-open-topology': { title_en: 'compact-open topology', label_en: 'compact-open topology', from: 'aka' },
     'def.compactification': { title_en: 'Compactification', label_en: 'Compactification', from: 'explicit' },
     'def.compactly-generated': { title_en: 'compactly generated', label_en: 'compactly generated', from: 'aka' },
+    'def.complemented-subspace': { title_en: 'complemented subspace', label_en: 'complemented subspace', from: 'explicit' },
     'def.complete': { title_en: 'complete', label_en: 'complete', from: 'aka' },
     'def.completely-normal-space': { title_en: 'Completely Normal Space', label_en: 'Completely Normal Space', from: 'explicit' },
     'def.completely-regular-space': { title_en: 'Completely Regular Space', label_en: 'Completely Regular Space', from: 'explicit' },
@@ -15312,6 +15319,7 @@ MG.i18n = {
     'thm.bessel-parseval': { title_en: 'Bessel inequality and Parseval identity', label_en: null, from: 'explicit' },
     'thm.bezout': { title_en: 'Bézout identity', label_en: 'Bézout identity', from: 'explicit' },
     'thm.bianchi-identity': { title_en: 'Bianchi Identities', label_en: 'Bianchi Identities', from: 'manual' },
+    'thm.bilinear-jointly-continuous': { title_en: 'separate continuity implies joint continuity for bilinear maps', label_en: null, from: 'explicit' },
     'thm.bing-metrization': { title_en: 'Bing Metrization Theorem', label_en: 'Bing Metrization Theorem', from: 'manual' },
     'thm.binomial': { title_en: 'binomial theorem', label_en: 'binomial theorem', from: 'explicit' },
     'thm.binunion': { title_en: 'binary unions exist', label_en: 'binary unions exist', from: 'explicit' },
@@ -15364,6 +15372,7 @@ MG.i18n = {
     'thm.compactness': { title_en: 'compactness theorem', label_en: 'compactness theorem', from: 'explicit' },
     'thm.comparison-test': { title_en: 'comparison test', label_en: 'comparison test', from: 'explicit' },
     'thm.comparison-theorem': { title_en: 'Comparison Theorem', label_en: 'Comparison Theorem', from: 'manual' },
+    'thm.complemented-subspace-criterion': { title_en: 'criterion for complemented subspaces', label_en: null, from: 'explicit' },
     'thm.completeness-equivalent': { title_en: 'six equivalent forms of completeness', label_en: null, from: 'explicit' },
     'thm.completeness-first-order': { title_en: 'Gödel completeness theorem', label_en: 'Gödel completeness theorem', from: 'explicit' },
     'thm.completion': { title_en: 'completion', label_en: 'completion', from: 'aka' },
@@ -15484,6 +15493,7 @@ MG.i18n = {
     'thm.lagrange-multiplier': { title_en: 'Lagrange Multipliers', label_en: 'Lagrange Multipliers', from: 'manual' },
     'thm.lambek': { title_en: 'Lambek\'s Criterion', label_en: 'Lambek\'s Criterion', from: 'manual' },
     'thm.laurent': { title_en: 'Laurent Expansion Theorem', label_en: 'Laurent Expansion', from: 'manual' },
+    'thm.lax-milgram': { title_en: 'Lax–Milgram theorem', label_en: 'Lax–Milgram theorem', from: 'explicit' },
     'thm.lazard': { title_en: 'Lazard\'s Theorem', label_en: 'Lazard\'s Theorem', from: 'manual' },
     'thm.lc-ext-vanishing': { title_en: 'Ext Vanishes in High Degrees for Locally Compact Abelian Groups', label_en: 'Ext Vanishes for LCA Groups', from: 'manual' },
     'thm.lc-structure': { title_en: 'structure theorem for locally compact abelian groups', label_en: null, from: 'explicit' },
@@ -84750,6 +84760,135 @@ window.MG = window.MG || {};
         '⚠️ 「可分」不能去掉：$\\ell^2(I)$（不可数 $I$）与 $\\ell^2(J)$ 同构 $\\iff \\#I = \\#J$（用正交基的基数比）。'
       ].join('\n\n'),
       refs: ['Conway, A Course in Functional Analysis · Hilbert 空间与正交基'],
+    },
+    {
+      id: 'thm.lax-milgram',
+      cluster: 'fa.hilbert',
+      type: 'theorem',
+      hypotheses: ['完备'],
+      label: 'Lax–Milgram 定理',
+      title: '定理（Lax–Milgram）：强制半双线性型的 Riesz 表示',
+      regions: ['functional-analysis'],
+      tags: ['泛函分析', 'Hilbert 空间', 'Lax–Milgram', '变分方法'],
+      statement: [
+        '设 $H$ 是 Hilbert 空间，$L : H \\times H \\to \\mathbb{K}$ 满足：',
+        '',
+        '1. **半双线性**：$L$ 对第一变量线性，对第二变量共轭线性（与本图内积约定一致）；',
+        '2. **有界**：存在 $M > 0$ 使 $|L(x, y)| \\le M \\|x\\| \\, \\|y\\|$ 对一切 $x, y \\in H$ 成立；',
+        '3. **强制（coercive）**：存在 $\\delta > 0$ 使 $|L(x, x)| \\ge \\delta \\|x\\|^{2}$ 对一切 $x \\in H$ 成立。',
+        '',
+        '则存在唯一的 $A \\in B(H)$ 使',
+        '',
+        '$$L(x, y) = \\langle x, A y \\rangle \\qquad (x, y \\in H),$$',
+        '',
+        '且 $\\|A\\| \\le M$。在 (3) 下 $A$ 还可逆、$A^{-1} \\in B(H)$，并且',
+        '',
+        '$$\\|A^{-1}\\| \\le \\frac{1}{\\delta} .$$'
+      ].join('\n'),
+      notes: [
+        '**约定说明。** 本图内积对第一变量线性、对第二变量共轭线性（见 `def.inner-product`、`def.hilbert-space`），所以这里把 $L$ 取成「第一变量线性、第二变量共轭线性」。如果教材把共轭放在第一变量（很多泛函分析书如此），把 $L$ 换成 $(x,y) \\mapsto \\overline{L(x,y)}$ 即可，$A$ 不变，结论逐字相同。',
+        '',
+        '**第一步：用 Riesz 表示定义 $A$。** 固定 $y \\in H$，泛函 $\\varphi_y(x) := L(x, y)$ 是连续线性泛函（线性由半双线性，连续性由 (2)：$|\\varphi_y(x)| \\le M\\|y\\| \\, \\|x\\|$）。由 Riesz 表示定理（`thm.riesz-hilbert`），存在唯一 $A y \\in H$ 使',
+        '',
+        '$$L(x, y) = \\langle x, A y \\rangle \\qquad (x \\in H), \\qquad \\|A y\\| = \\|\\varphi_y\\| \\le M \\|y\\| .$$',
+        '',
+        '**第二步：$A$ 线性且 $\\|A\\| \\le M$。** 对 $y, z \\in H$、$\\alpha, \\beta \\in \\mathbb{K}$，由 $L$ 对第二变量共轭线性（它给出的共轭与内积第二变元的共轭相消），',
+        '',
+        '$$\\langle x, A(\\alpha y + \\beta z) \\rangle = L(x, \\alpha y + \\beta z) = \\bar{\\alpha} L(x, y) + \\bar{\\beta} L(x, z) = \\langle x, \\alpha A y + \\beta A z \\rangle$$',
+        '',
+        '对一切 $x$ 成立，故 $A(\\alpha y + \\beta z) = \\alpha A y + \\beta A z$。又 $\\|A y\\| \\le M \\|y\\|$，故 $A \\in B(H)$ 且 $\\|A\\| \\le M$。唯一性由 Riesz 表示的唯一性（每个 $y$ 的 $A y$ 唯一确定）得到。',
+        '',
+        '**第三步：强制性给出下界。** 由 (3) 与 $L(x, x) = \\langle x, A x \\rangle$，',
+        '',
+        '$$\\delta \\|x\\|^{2} \\le |L(x, x)| = |\\langle x, A x \\rangle| \\le \\|x\\| \\, \\|A x\\| ,$$',
+        '',
+        '所以 $\\|A x\\| \\ge \\delta \\|x\\|$。特别地 $A$ 单射。',
+        '',
+        '**第四步：$A(H)$ 闭。** 设 $A x_n \\to z$。则',
+        '',
+        '$$\\|x_n - x_m\\| \\le \\frac{1}{\\delta} \\|A(x_n - x_m)\\| \\to 0 ,$$',
+        '',
+        '故 $(x_n)$ 是 Cauchy 列；$H$ 完备，设 $x_n \\to x$。由 $A$ 连续，$A x = z$，故 $z \\in A(H)$。',
+        '',
+        '**第五步：$A$ 满射。** 若 $A(H) \\ne H$，则 $A(H)$ 是闭真子空间，由正交分解（`thm.projection-subspace`）存在 $0 \\ne y \\perp A(H)$。于是 $\\langle y, A y \\rangle = 0$（因为 $A y \\in A(H)$），即 $L(y, y) = 0$，与 $\\delta \\|y\\|^{2} > 0$ 矛盾。故 $A$ 满射。',
+        '',
+        '**第六步：$A^{-1}$ 有界。** $A$ 是 Banach 空间之间的有界双射。考察 $A^{-1}$ 的图像：若 $y_n \\to y$ 且 $A^{-1} y_n \\to x$，则 $A(A^{-1} y_n) = y_n \\to y$，由 $A$ 连续得 $A x = y$，即 $x = A^{-1} y$。故 $G(A^{-1})$ 闭；由闭图像定理（`thm.closed-graph`），$A^{-1} \\in B(H)$。',
+        '',
+        '**第七步：逆的范数界。** 对任意 $y \\in H$，以 $x = A^{-1} y$ 代入第三步的下界：',
+        '',
+        '$$\\delta \\|A^{-1} y\\|^{2} \\le |L(A^{-1} y, A^{-1} y)| = |\\langle A^{-1} y, y \\rangle| \\le \\|A^{-1} y\\| \\, \\|y\\| ,$$',
+        '',
+        '故 $\\|A^{-1} y\\| \\le \\delta^{-1} \\|y\\|$，即 $\\|A^{-1}\\| \\le 1/\\delta$。$\\blacksquare$',
+        '⭐ **它解决什么。** 解变分问题「求 $u$ 使 $L(u, v) = F(v)$ 对一切 $v$」时，$L$ 满足 (2)(3) 就等价于 $A u = F$ 的可逆性：$u = A^{-1} F$ 存在唯一且连续依赖 $F$（$\\|u\\| \\le \\delta^{-1}\\|F\\|$）。这正是椭圆 PDE 的 Lax–Milgram 引理（弱解存在唯一性）的抽象版本。',
+        '⚠️ 强制性 (3) 不能去掉：$L \\equiv 0$ 满足 (1)(2)（$M$ 任意），但 $A = 0$ 不可逆。',
+        '⚠️ 有界性 (2) 也不能去掉：它同时保证 $A$ 有界与第一步 Riesz 表示的适用；只「逐点」有限不够。',
+        '📌 与 Riesz 表示的关系：$L(x, y) = \\langle x, y \\rangle$ 时 $A = I$；Lax–Milgram 是「用有界强制半双线性型替换内积」后的同一套 Riesz 机器。'
+      ].join('\n\n'),
+      refs: ['泛函分析讲义（用户手写笔记，2026-11-09）', 'Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 5（Lax–Milgram）'],
+    },
+    {
+      id: 'def.complemented-subspace',
+      cluster: 'fa.norm',
+      type: 'definition',
+      label: '可补子空间',
+      title: '定义：代数互补、拓扑互补与可补子空间',
+      regions: ['functional-analysis'],
+      tags: ['泛函分析', 'Banach 空间', '子空间', '投影'],
+      statement: [
+        '设 $E$ 是赋范空间，$X, Y \\subseteq E$ 是线性子空间。',
+        '',
+        '1. 称 $X, Y$ **代数互补**（记 $\\mathrm{AC}$），若 $X + Y = E$ 且 $X \\cap Y = \\{0\\}$。此时每个 $e \\in E$ 唯一写成 $e = x + y$，定义**投影** $P_X e := x$、$P_Y e := y$。',
+        '2. 称 $X, Y$ **拓扑互补**（记 $\\mathrm{TC}$），若 $P_X$（等价地 $P_Y = I - P_X$）是**有界**线性算子。',
+        '3. 称子空间 $X \\subseteq E$ **可补**，若存在子空间 $Y \\subseteq E$ 使 $X, Y$ 拓扑互补。'
+      ].join('\n'),
+      notes: [
+        '**代数互补的直接推论。** 由定义 $P_X + P_Y = I$、$P_X^{2} = P_X$、$P_Y^{2} = P_Y$、$P_X P_Y = P_Y P_X = 0$，且 $P_X(E) = X$、$P_Y(E) = Y$、$\\ker P_X = Y$、$\\ker P_Y = X$。所以「$X$ 可补」等价于「存在有界投影 $P \\in B(E)$ 使 $P(E) = X$」：取 $Y = \\ker P$；反之给定 $Y$ 取 $P = P_X$。',
+        '**TC 的定义不依赖选 $P_X$ 还是 $P_Y$。** $P_Y = I - P_X$，故 $P_X$ 有界 $\\iff$ $P_Y$ 有界。',
+        '⚠️ **AC 不自动 TC**：一般赋范空间里 $X, Y$ 代数互补时投影可能无界。$E$ 完备时，若 $X, Y$ 都闭，则由开映射/有界逆定理它们自动拓扑互补（见 `thm.complemented-subspace-criterion`）；但不完备时「闭 + AC」也不够。',
+        '⚠️ **可补要求 $Y$ 闭**：由 $Y = \\ker P_X$ 与 $P_X$ 连续知 $Y$ 闭；同理 $X$ 闭。所以可补子空间必闭。反过来闭子空间不一定可补：$c_0(\\mathbb{N})$ 在 $\\ell^{\\infty}(\\mathbb{N})$ 中闭但不可补（Phillips 1940；证明要用 Banach 极限/超滤子，本图不展开）。',
+        '⭐ **两个标准例子。** (1) Hilbert 空间 $H$ 的每个闭子空间 $X$ 都可补：正交分解 $H = X \\oplus X^{\\perp}$，正交投影 $P_X$ 有界（`thm.projection-subspace`）。(2) 有限维子空间总可补：任取代数补空间，投影的像在有限维空间上、核闭，投影自动有界（也可由「有限维空间上的线性映射自动有界」证明）。',
+        '📌 **为什么重要**：$X$ 可补 $\\iff$ 商映射 $E \\to E/X$ 有有界右逆 $\\iff$ $E$ 拓扑同构于 $X \\times Y$。所以「可补」是把「直和分解」从代数层面提升到拓扑层面的正确说法；在算子理论、Banach 空间分类与 PDE 的分解问题里都出现。'
+      ].join('\n\n'),
+      refs: ['泛函分析讲义（用户手写笔记，2026-11-09）', 'Rudin, Functional Analysis · 补子空间与投影', 'Lindenstrauss–Tzafriri, Classical Banach Spaces I · c0 与 ℓ∞'],
+    },
+    {
+      id: 'thm.complemented-subspace-criterion',
+      cluster: 'fa.norm',
+      type: 'theorem',
+      hypotheses: ['完备'],
+      label: '可补子空间的判别',
+      title: '定理：代数互补何时拓扑互补（Banach 版）',
+      regions: ['functional-analysis'],
+      tags: ['泛函分析', 'Banach 空间', '子空间', '开映射'],
+      statement: [
+        '设 $E$ 是赋范空间，$X, Y \\subseteq E$ 代数互补，$\\Phi : X \\times Y \\to E$，$\\Phi(x, y) := x + y$。则',
+        '',
+        '$$X, Y \\text{ 拓扑互补} \\iff \\Phi \\text{ 是同胚（有界双射且逆有界）}.$$',
+        '',
+        '若 $E$ 还是 Banach 空间，则进一步有',
+        '',
+        '$$X, Y \\text{ 拓扑互补} \\iff X, Y \\text{ 都闭}.$$'
+      ].join('\n'),
+      notes: [
+        '**第一部分（不用完备性）。** 由代数互补，$\\Phi$ 是线性双射。它有界：$\\|\\Phi(x, y)\\| = \\|x + y\\| \\le \\|x\\| + \\|y\\| \\le 2\\max\\{\\|x\\|, \\|y\\|\\}$（乘积空间用 $\\max$ 范数或和范数都等价）。',
+        '',
+        '若 $X, Y$ 拓扑互补，则 $\\Phi^{-1} e = (P_X e, P_Y e)$，故',
+        '',
+        '$$\\|\\Phi^{-1} e\\| \\le \\max\\{ \\|P_X\\|, \\|P_Y\\| \\} \\, \\|e\\| ,$$',
+        '',
+        '即 $\\Phi^{-1}$ 有界。',
+        '',
+        '反之若 $\\Phi$ 是同胚，则 $P_X = \\pi_X \\circ \\Phi^{-1}$（$\\pi_X : X \\times Y \\to X$ 是投影，范数 $\\le 1$）作为有界映射的复合有界，故 $X, Y$ 拓扑互补。',
+        '',
+        '**第二部分（$E$ 完备）。** 若 $X, Y$ 拓扑互补，则 $X = \\ker P_Y$、$Y = \\ker P_X$ 都是闭子空间。',
+        '',
+        '反之设 $X, Y$ 都闭。$E$ 是 Banach 空间，闭子空间 $X, Y$ 本身是 Banach 空间，故乘积 $X \\times Y$ 是 Banach 空间。$\\Phi$ 是有界双射，由逆算子定理（`thm.bounded-inverse`，等价于开映射定理），$\\Phi^{-1}$ 有界。于是 $P_X = \\pi_X \\circ \\Phi^{-1}$ 有界，即 $X, Y$ 拓扑互补。',
+        '',
+        '**为什么完备性不能省。** 第二部分只用「$X \\times Y$ 完备 + 有界逆定理」；去掉 $E$ 的完备性，即使 $X, Y$ 闭也不能保证投影有界（反例需要构造不完备的赋范空间，本图不展开）。',
+        '⭐ **可补性的等价刻画**：$X$ 可补 $\\iff$ 存在有界投影 $P \\in B(E)$ 使 $P(E) = X$；在 Banach 空间中，这又等价于「存在闭子空间 $Y$ 使 $X \\oplus Y = E$ 是拓扑直和」。',
+        '📌 **两个例子。** Hilbert 空间闭子空间总可补（正交投影）；$c_0(\\mathbb{N})$ 在 $\\ell^{\\infty}(\\mathbb{N})$ 中闭但不可补（Phillips 1940，外部定理）。'
+      ].join('\n\n'),
+      refs: ['泛函分析讲义（用户手写笔记，2026-11-09）', 'Rudin, Functional Analysis · 开映射定理与补子空间'],
     }
   ],
 
@@ -84773,7 +84912,59 @@ window.MG = window.MG || {};
     { kind: 'definition', definition: 'def.convex-combination', usedBy: 'def.convex-hull',
       note: '凸包的有限凸组合刻画直接用到凸组合。' },
     { kind: 'definition', definition: 'def.convex-hull', usedBy: 'def.standard-simplex',
-      note: '标准单纯形正是其顶点集的凸包；这里把几何单纯形与凸包概念接上。' }
+      note: '标准单纯形正是其顶点集的凸包；这里把几何单纯形与凸包概念接上。' },
+    {
+      id: 'imp.fa-riesz-laxmilgram',
+      kind: 'implication',
+      sources: ['thm.riesz-hilbert'],
+      target: 'thm.lax-milgram',
+      title: 'Riesz 表示 $\\implies$ Lax–Milgram（第一步）',
+      proof: [
+        '固定 $y$，$\\varphi_y(x) = L(x, y)$ 是连续线性泛函。由 Riesz 表示定理，存在唯一 $A y$ 使 $L(x, y) = \\langle x, A y\\rangle$，且 $\\|A y\\| = \\|\\varphi_y\\| \\le M \\|y\\|$。',
+        '这就给出算子 $A$ 并证明 $\\|A\\| \\le M$；$A$ 的线性来自 $L$ 对第二变量的线性。'
+      ].join('\n'),
+      note: 'Lax–Milgram 的「存在唯一 $A$」完全由 Riesz 表示承担；强制性只用于后面的可逆性。'
+    },
+    {
+      id: 'imp.fa-closedgraph-laxmilgram',
+      kind: 'implication',
+      sources: ['thm.closed-graph'],
+      target: 'thm.lax-milgram',
+      title: '闭图像定理 $\\implies$ Lax–Milgram 的逆有界',
+      proof: [
+        '强制性给出 $\\|A x\\| \\ge \\delta \\|x\\|$；由此 $A$ 单射、像闭，再用正交分解证满射，故 $A$ 是 Banach 空间之间的有界双射。',
+        '考察 $A^{-1}$ 的图像：若 $y_n \\to y$ 且 $A^{-1} y_n \\to x$，则 $A(A^{-1} y_n) = y_n \\to y$，由 $A$ 连续得 $A x = y$，即 $x = A^{-1} y$。图像闭，由闭图像定理 $A^{-1}$ 有界。'
+      ].join('\n'),
+      note: '这里用的是闭图像定理（而不是开映射定理）；两者等价，但闭图像形式在「逆映射」上更直接。'
+    },
+    { id: 'def-link.fa-hilbert-lax', kind: 'definition', definition: 'def.hilbert-space',
+      usedBy: 'thm.lax-milgram',
+      note: '内积与正交分解（Riesz 表示、正交补）都要求 Hilbert 空间。' },
+    { id: 'def-link.fa-op-lax', kind: 'definition', definition: 'def.bounded-operator',
+      usedBy: 'thm.lax-milgram',
+      note: '结论是 $A \\in B(H)$，且估计 $\\|A\\| \\le M$、$\\|A^{-1}\\| \\le 1/\\delta$。' },
+    { id: 'def-link.fa-vector-complemented', kind: 'definition', definition: 'def.vector-space',
+      usedBy: 'def.complemented-subspace',
+      note: '代数互补只用向量空间的加法与子空间结构，不需要范数。' },
+    { id: 'def-link.fa-banach-complemented', kind: 'definition', definition: 'def.banach-space',
+      usedBy: 'def.complemented-subspace',
+      note: '可补性的判别定理（闭 $\\iff$ 拓扑互补）要求 $E$ 完备；定义本身只需要赋范空间。' },
+    { id: 'def-link.fa-complemented-criterion', kind: 'definition', definition: 'def.complemented-subspace',
+      usedBy: 'thm.complemented-subspace-criterion',
+      note: '定理用的正是这里的代数互补、投影与拓扑互补三个概念。' },
+    {
+      id: 'imp.fa-openmap-complemented',
+      kind: 'implication',
+      sources: ['thm.bounded-inverse'],
+      target: 'thm.complemented-subspace-criterion',
+      title: '有界逆定理 $\\implies$ 闭的代数互补必拓扑互补',
+      proof: [
+        '设 $E$ Banach，$X, Y$ 闭且代数互补。则 $X, Y$ 是 Banach 空间，$X \\times Y$ 是 Banach 空间。',
+        '$\\Phi : X \\times Y \\to E$，$\\Phi(x, y) = x + y$，是有界线性双射。由逆算子定理，$\\Phi^{-1}$ 有界。',
+        '于是 $P_X = \\pi_X \\circ \\Phi^{-1}$ 有界（$\\pi_X$ 是乘积到第一因子的投影，范数 $\\le 1$），即 $X, Y$ 拓扑互补。$\\blacksquare$'
+      ].join('\n'),
+      note: '这条正是「闭子空间 + 代数互补 $\\implies$ 有界投影」的全部内容；$E$ 的完备性只在这里用到。'
+    }
   ]
 });
 
@@ -85019,7 +85210,8 @@ window.MG = window.MG || {};
       notes: [
         '证法：令 $F_k = \\{x : \\sup_i \\|u_i x\\| \\le k\\} = \\bigcap_i \\{x : \\|u_i x\\| \\le k\\}$，每个 $\\{x : \\|u_i x\\| \\le k\\}$ 闭（$u_i$ 连续），故 $F_k$ 闭；\n\n逐点有界 $\\implies E = \\bigcup_k F_k$。\n\n由 Baire（闭覆盖有内点），某个 $F_k$ 含球 $B(x_0, r)$。\n\n于是对 $\\|x\\| \\le r$：$\\sup_i \\|u_i x\\| \\le \\sup_i \\|u_i(x + x_0)\\| + \\sup_i \\|u_i x_0\\| \\le 2k$，取 $x = r y/\\|y\\|$ 得 $\\|u_i y\\| \\le 2k\\|y\\|/r$，故 $\\sup_i\\|u_i\\| \\le 2k/r$。',
         '⭐ **名字**：讲义与很多中文书叫它「共鸣定理」（resonance theorem），也叫「一致有界原理」；本图两个都收进别名。三大定理里它**只要求 $E$ 完备**（$F$ 只要赋范），是最「便宜」的一条。',
-        '⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。'
+        '⚠️ $E$ 完备不能去掉：$E = c_{00}$（有限支撑序列）时取 $u_n(x) = n x_n$，逐点有界而 $\\|u_n\\| = n \\to \\infty$。',
+        '📌 **两条常用推论**：见 `cor.ubp-pointwise-limit`（逐点极限的范数界）与 `thm.bilinear-jointly-continuous`（分别连续双线性推出联合连续）；两条都只用本条加定义。',
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）', 'Banach–Steinhaus 1927'],
     },
@@ -85119,7 +85311,8 @@ window.MG = window.MG || {};
         '**实用价值在于「闭」比「有界」好验。** 要直接证明 $u$ 有界，得估计 $\\|u x\\|$；而验证图像闭只需要：任取收敛的 $x_n \\to x$ 与 $u(x_n) \\to y$，证明 $y = u(x)$ —— 中间不需要任何范数估计。分布理论里证明微分算子、Fourier 变换这类映射连续，走的就是这条路。',
         '**为什么必须线性、必须两端完备。**「连续 $\\implies$ 图像闭」是初等的（连续映射的图像在乘积空间里当然闭，对任何映射都对），所以容易误以为两者差不多；差别全在逆命题上。',
         '**完备性。** 取 $E = (C[0,1], \\|\\cdot\\|_1)$（不完备）、$F = (C[0,1], \\|\\cdot\\|_\\infty)$（完备），$u = \\mathrm{id}$。若 $f_n \\to f$ 于 $\\|\\cdot\\|_1$、$f_n \\to g$ 于 $\\|\\cdot\\|_\\infty$，则 $\\|\\cdot\\|_1$ 收敛蕴含 $L^1$ 收敛，而 $\\|\\cdot\\|_\\infty$ 收敛蕴含处处（从而 $L^1$）收敛，故 $f = g$：图像闭。但 $\\|u\\| = \\sup\\|f\\|_\\infty / \\|f\\|_1 = \\infty$，$u$ 不有界。可见**定义域或靶子至少一端不完备，结论就失效**。',
-        '**线性。** 非线性映射可以有闭图像而不连续：取 $u : \\mathbb{R} \\to \\mathbb{R}$，$u(x) = 1/x$（$x \\ne 0$）、$u(0) = 0$。它的图像在 $\\mathbb{R}^2$ 中闭（是一条双曲线加原点），但 $u$ 在 $0$ 处不连续。'
+        '**线性。** 非线性映射可以有闭图像而不连续：取 $u : \\mathbb{R} \\to \\mathbb{R}$，$u(x) = 1/x$（$x \\ne 0$）、$u(0) = 0$。它的图像在 $\\mathbb{R}^2$ 中闭（是一条双曲线加原点），但 $u$ 在 $0$ 处不连续。',
+        '📌 **TFAE 的说法**：有界等价于图像闭（两端 Banach 时）。本图另收了两个典型用法：`thm.lax-milgram`（强制型给出有界双逆）与可补子空间的判别（闭的代数互补给出有界投影）。',
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis, 2.15']
     },
@@ -85342,6 +85535,80 @@ window.MG = window.MG || {};
         '⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。'
       ].join('\n\n'),
       refs: ['Rudin, Functional Analysis · Stone–Weierstrass 定理', 'Bernstein 1912'],
+    },
+    {
+      id: 'cor.ubp-pointwise-limit',
+      cluster: 'fa.baire',
+      type: 'corollary',
+      label: '逐点极限的范数界',
+      title: '推论：逐点收敛的有界算子列，极限有界且 $\\|u\\| \\le \\liminf \\|u_n\\|$',
+      regions: ['functional-analysis'],
+      tags: ['泛函分析', '三大定理', 'Baire 纲'],
+      statement: [
+        '设 $E$ 是 Banach 空间，$F$ 赋范，$u_n \\in B(E, F)$，且对每个 $x \\in E$ 有 $u_n x \\to u x$（逐点收敛）。则 $u \\in B(E, F)$，并且',
+        '',
+        '$$\\|u\\| \\le \\liminf_{n \\to \\infty} \\|u_n\\| .$$'
+      ].join('\n'),
+      notes: [
+        '**证明。** 先注意 $u$ 线性：对 $x, y \\in E$、$\\alpha, \\beta \\in \\mathbb{K}$，由 $u_n$ 线性与极限的线性，',
+        '',
+        '$$u(\\alpha x + \\beta y) = \\lim_n u_n(\\alpha x + \\beta y) = \\alpha \\lim_n u_n x + \\beta \\lim_n u_n y = \\alpha u x + \\beta u y .$$',
+        '',
+        '**逐点有界。** 对每个 $x$，收敛数列 $(u_n x)$ 有界，故 $M(x) := \\sup_n \\|u_n x\\| < \\infty$。',
+        '',
+        '**一致有界。** 对族 $\\{u_n\\} \\subseteq B(E, F)$ 用共鸣定理（$E$ 完备、$F$ 赋范）：$C := \\sup_n \\|u_n\\| < \\infty$。',
+        '',
+        '**范数界。** 对任意 $x$，',
+        '',
+        '$$\\|u x\\| = \\lim_n \\|u_n x\\| = \\liminf_n \\|u_n x\\| \\le \\liminf_n \\bigl( \\|u_n\\| \\, \\|x\\| \\bigr) = \\bigl( \\liminf_n \\|u_n\\| \\bigr) \\|x\\| ,$$',
+        '',
+        '所以 $u$ 有界且 $\\|u\\| \\le \\liminf_n \\|u_n\\|$。$\\blacksquare$',
+        '⭐ 这条把「逐点收敛」升级成「极限算子的范数估计」：不需要预先知道 $\\sup_n \\|u_n\\|$ 有限，共鸣定理自动给出。它在数值分析里判断「算子序列的极限仍是算子」时最常用。',
+        '⚠️ 只能得到 $\\liminf$ 的界，不能换成 $\\limsup$：$\\|u\\|$ 可能严格小于 $\\liminf \\|u_n\\|$（例如取一列在某个方向上「几乎损失」范数的算子，逐点极限丢掉那一方向）。'
+      ].join('\n\n'),
+      refs: ['泛函分析讲义（用户手写笔记，2026-11-09）', 'Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）'],
+    },
+    {
+      id: 'thm.bilinear-jointly-continuous',
+      cluster: 'fa.baire',
+      type: 'theorem',
+      label: '分别连续双线性映射联合连续',
+      title: '定理：分别连续的双线性映射联合连续（Banach 空间）',
+      regions: ['functional-analysis'],
+      tags: ['泛函分析', '三大定理', '双线性映射'],
+      hypotheses: ['完备'],
+      statement: [
+        '设 $E, F, G$ 是赋范空间，$B : E \\times F \\to G$ 双线性（对每个变量分别线性）。若 $E, F$ 都是 Banach 空间，且',
+        '',
+        '$$\\text{对每个 } x \\in E,\\ B(x, \\cdot) \\text{ 连续}; \\qquad \\text{对每个 } y \\in F,\\ B(\\cdot, y) \\text{ 连续},$$',
+        '',
+        '则 $B$ 在 $E \\times F$ 上**联合连续**；更强地，存在 $C > 0$ 使',
+        '',
+        '$$\\|B(x, y)\\| \\le C \\, \\|x\\| \\, \\|y\\| \\qquad (x \\in E,\\ y \\in F).$$'
+      ].join('\n'),
+      notes: [
+        '**证明。** 对每个 $y \\in F$，$x \\mapsto B(x, y)$ 是连续线性映射，故有界；对每个 $x \\in E$，$B(x, \\cdot) \\in B(F, G)$。',
+        '',
+        '考虑族 $\\{ B(x, \\cdot) : x \\in E,\\ \\|x\\| \\le 1 \\} \\subseteq B(F, G)$。对每个固定的 $y \\in F$，',
+        '',
+        '$$\\sup_{\\|x\\| \\le 1} \\|B(x, y)\\| = \\| B(\\cdot, y) \\| < \\infty .$$',
+        '',
+        '即这族算子逐点有界；$F$ 是 Banach 空间，$G$ 赋范，由共鸣定理得',
+        '',
+        '$$C := \\sup_{\\|x\\| \\le 1} \\| B(x, \\cdot) \\| < \\infty .$$',
+        '',
+        '于是对 $x \\ne 0$，$\\|B(x, y)\\| = \\|x\\| \\, \\| B(x/\\|x\\|, y) \\| \\le C \\|x\\| \\, \\|y\\|$；$x = 0$ 时两边为零。',
+        '',
+        '**联合连续。** 设 $(x_n, y_n) \\to (x, y)$，则',
+        '',
+        '$$\\|B(x_n, y_n) - B(x, y)\\| \\le \\|B(x_n - x, y_n)\\| + \\|B(x, y_n - y)\\| \\le C \\|x_n - x\\| \\, \\|y_n\\| + \\|B(x, y_n - y)\\| .$$',
+        '',
+        '第一项趋于 $0$（$\\|x_n - x\\| \\to 0$，$(y_n)$ 有界）；第二项趋于 $0$ 由 $B(x, \\cdot)$ 连续。故 $B$ 联合连续。$\\blacksquare$',
+        '⭐ 这条是「分别连续 $\\implies$ 联合连续」在双线性情形下的标准答案：**双线性 + 两个 Banach** 就够了。一般拓扑里分别连续远不能推出联合连续。',
+        '⚠️ 双线性不能去掉：$f(x, y) = \\dfrac{xy}{x^{2} + y^{2}}$（$f(0,0)=0$）在 $\\mathbb{R}^{2}$ 上分别连续，却在原点不连续。',
+        '⚠️ 两个完备性都用在共鸣定理上（定义域 $F$ 要 Banach）；只假设「赋范」时结论可能失效。乘积空间用 $\\max$ 范数或和范数都行，两者等价。'
+      ].join('\n\n'),
+      refs: ['泛函分析讲义（用户手写笔记，2026-11-09）', 'Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）'],
     }
   ],
 
@@ -85822,7 +86089,40 @@ window.MG = window.MG || {};
     { id: 'def-link.fa-totbdd-ck', kind: 'definition', definition: 'def.totally-bounded', usedBy: 'thm.ck-complete',
       note: '（配套）相对紧 = 全有界 + 完备，两条拼起来才能从 $C(K,E)$ 的完备性拿到紧性。' },
     { id: 'def-link.fa-hausdorff-baire', kind: 'definition', definition: 'def.hausdorff', usedBy: 'thm.locally-compact-baire',
-      note: '局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。' }
+      note: '局部紧 + Hausdorff 才有紧邻域基，球套法才能换成紧邻域链。' },
+    {
+      id: 'imp.fa-ubp-pointwise',
+      kind: 'implication',
+      sources: ['thm.ubp'],
+      target: 'cor.ubp-pointwise-limit',
+      title: '共鸣定理 $\\implies$ 逐点极限的范数界',
+      proof: [
+        '设 $u_n \\in B(E, F)$ 逐点收敛到 $u$。对每个 $x$，收敛数列 $(u_n x)$ 有界，故 $\\sup_n \\|u_n x\\| < \\infty$。',
+        '由共鸣定理，$C := \\sup_n \\|u_n\\| < \\infty$。于是 $\\|u x\\| = \\lim_n \\|u_n x\\| \\le C \\|x\\|$，且更精确地 $\\|u\\| \\le \\liminf_n \\|u_n\\|$：因为对每个 $\\varepsilon > 0$，当 $n$ 充分大时 $\\|u_n\\| \\ge \\liminf_k \\|u_k\\| - \\varepsilon$，取极限即得。$\\blacksquare$'
+      ].join('\n'),
+      note: '这条把 UBP 的「一致有界」直接翻译成「逐点极限算子的范数不超过原算子列范数的下极限」。'
+    },
+    {
+      id: 'imp.fa-ubp-bilinear',
+      kind: 'implication',
+      sources: ['thm.ubp'],
+      target: 'thm.bilinear-jointly-continuous',
+      title: '共鸣定理 $\\implies$ 分别连续双线性映射联合连续',
+      proof: [
+        '对 $x \\in E$ 令 $T_x := B(x, \\cdot) \\in B(F, G)$。对每个 $y \\in F$，$\\sup_{\\|x\\| \\le 1} \\|T_x y\\| = \\|B(\\cdot, y)\\| < \\infty$（$B(\\cdot, y)$ 连续线性）。',
+        '由共鸣定理（定义域 $F$ 是 Banach 空间），$C := \\sup_{\\|x\\| \\le 1} \\|T_x\\| < \\infty$。于是 $\\|B(x, y)\\| \\le C \\|x\\| \\, \\|y\\|$，联合连续性由 $B(x_n, y_n) - B(x, y) = B(x_n - x, y_n) + B(x, y_n - y)$ 与 $B(x, \\cdot)$ 的连续性得到。$\\blacksquare$'
+      ].join('\n'),
+      note: '两个 Banach 假设各用在：$F$ 完备用于 UBP，$E$ 完备用于 $x_n$ 的收敛（其实这条证明主要用 $F$ 完备；$E$ 完备保证 $x_n - x$ 的范数有界只需收敛性）。'
+    },
+    { id: 'def-link.fa-banach-bilinear', kind: 'definition', definition: 'def.banach-space',
+      usedBy: 'thm.bilinear-jointly-continuous',
+      note: '定理的假设就是两个空间完备（共鸣定理要求定义域 Banach）。' },
+    { id: 'def-link.fa-op-bilinear', kind: 'definition', definition: 'def.bounded-operator',
+      usedBy: 'thm.bilinear-jointly-continuous',
+      note: '证明对每个 $x$ 把 $B(x, \\cdot)$ 看成有界算子 $F \\to G$。' },
+    { id: 'def-link.fa-op-pointwise', kind: 'definition', definition: 'def.bounded-operator',
+      usedBy: 'cor.ubp-pointwise-limit',
+      note: '结论「$u \\in B(E, F)$」正是有界线性算子空间里的成员资格。' }
   ]
 });
 

@@ -15,4 +15,14 @@
 
 - 凸包 → def.convex-hull
 
+- 一致有界原理的逐点极限推论 | 逐点极限算子 → cor.ubp-pointwise-limit
+
+- 双线性映射的联合连续性 | 分别连续双线性映射 → thm.bilinear-jointly-continuous
+
+- Lax-Milgram 定理 | 拉克斯-米尔格拉姆定理 → thm.lax-milgram
+
+- 可补子空间 | 拓扑可补子空间 → def.complemented-subspace
+
+- 可补子空间判别定理 → thm.complemented-subspace-criterion
+
 见 `../../alias.md`。
