@@ -5,3 +5,4 @@
 - ⇒ [`thm.laurent`](../nodes/thm.laurent.md) Laurent 展开定理
 - ⇒ [`thm.residue`](../nodes/thm.residue.md) 留数定理
 - ⇒ [`thm.runge`](../nodes/thm.runge.md) Runge 逼近定理
+- ⇒ [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理

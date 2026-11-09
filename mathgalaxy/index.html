@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3227 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3232 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3227 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1560 nodes, 3232 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -78190,6 +78190,36 @@ window.MG = window.MG || {};
       ].join('\n\n'),
       note: '这条边是素数定理链条上最后一块：命题 A（$\\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。',
     },
+    {
+      id: 'imp.newman-cauchy-residue',
+      kind: 'implication',
+      sources: ['thm.cauchy-integral-formula', 'thm.residue', 'thm.cauchy-goursat'],
+      target: 'lem.newman-tauberian',
+      title: 'Cauchy 积分公式、留数公式与 Cauchy–Goursat $\\implies$ Newman 围道恒等式',
+      proof: [
+        '**Cauchy 积分公式。** 设 $D=\\{|z|\\le R,\\ \\operatorname{Re}z\\ge-\\delta\\}$ 是 $g$ 的全纯邻域，$C=\\partial D$ 取正向。在 $D$ 上考虑 $(g-g_T)F/z$，其中 $F(z)=e^{zT}(1+z^{2}/R^{2})$ 整、$F(0)=1$。它唯一的极点是 $z=0$（单极点），由 Cauchy 积分公式',
+        '',
+        '$$g(0)-g_T(0)=\\frac{1}{2\\pi i}\\oint_C (g-g_T)(z)\\,F(z)\\,\\frac{dz}{z}.$$',
+        '',
+        '**留数公式。** 上式右端正是 $z=0$ 处留数的 $2\\pi i$ 倍：$\\operatorname{Res}_{z=0}\\bigl((g-g_T)F/z\\bigr)=(g(0)-g_T(0))F(0)=g(0)-g_T(0)$。',
+        '',
+        '**Cauchy–Goursat 变形。** $g_T$ 是整函数，故 $g_TF/z$ 在 $z=0$ 有可去奇点、在整个 $D$ 上全纯；由 Cauchy–Goursat 定理，它沿 $C$ 的积分为 $0$。于是可以把 $C_-$ 一段上的 $g$ 换到左半圆上：$gF/z$ 在左半圆盘（不含 $0$）上全纯，沿 $C_-$ 与左半圆的积分相等。这两步合起来正是把围道 $C_-$ 变形成左半圆、并让 $g_T$ 项消失的依据。'
+      ].join('\n\n'),
+      note: '本引理的证明用到这三条；此前只挂了到 PNT 的出边，故层号错为 0。',
+    },
+    { id: 'def-link.newman-analytic', kind: 'definition', definition: 'def.analytic-continuation',
+      usedBy: 'lem.newman-tauberian',
+      note: '假设「$g$ 解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域」用的就是解析延拓。' },
+    { id: 'def-link.newman-holomorphic', kind: 'definition', definition: 'def.holomorphic',
+      usedBy: 'lem.newman-tauberian',
+      note: '证明里 $g$ 在 $D$ 上全纯、$g_T$ 整，都是全纯性的使用。' },
+    { id: 'def-link.newman-locallyintegrable', kind: 'definition', definition: 'def.locally-integrable',
+      usedBy: 'lem.newman-tauberian',
+      note: '$f$ 有界、局部可积是假设；Laplace 变换与尾项估计都以此为出发点。' },
+    { id: 'def-link.newman-contour', kind: 'definition', definition: 'def.contour-integral',
+      usedBy: 'lem.newman-tauberian',
+      note: '整个证明就是对 $C=\\partial D$ 的围道积分做估计。' },
+
   ],
 });
 

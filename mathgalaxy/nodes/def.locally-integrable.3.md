@@ -5,5 +5,6 @@
 - 被 [`def.average-operator`](../nodes/def.average-operator.md) 平均算子 Aᵣ 用
 - 被 [`def.maximal-function`](../nodes/def.maximal-function.md) 极大函数 用
 - 被 [`thm.rn-pointwise`](../nodes/thm.rn-pointwise.md) Radon–Nikodym 导数的点态公式 用
+- 被 [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理 用
 - 被 [`lem.average-continuous`](../nodes/lem.average-continuous.md) 平均算子联合连续 用
 - 被 [`def.lebesgue-set`](../nodes/def.lebesgue-set.md) Lebesgue 集 用

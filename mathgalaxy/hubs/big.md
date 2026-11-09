@@ -7,12 +7,12 @@
 - **8 / 6** `thm.riesz-markov` Riesz–Markov 表示 · layer 20 · 测度的构造
 - **8 / 6** `thm.de-rham` de Rham 定理 · layer 31 · 微分形式、积分与 de Rham
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 21 · 同调群
+- **7 / 5** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 34 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
 - **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 25 · 向量场与 Lie 结构
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 30 · 内蕴几何
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
-- **6 / 6** `def.form-on-manifold` 微分形式 · layer 21 · 微分形式、积分与 de Rham
 
 > 续见 hubs/big.2.md

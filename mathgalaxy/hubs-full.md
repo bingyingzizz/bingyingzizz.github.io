@@ -42,6 +42,7 @@
 - **8 / 6** `thm.riesz-markov` Riesz–Markov 表示 · layer 20 · 测度的构造
 - **8 / 6** `thm.de-rham` de Rham 定理 · layer 31 · 微分形式、积分与 de Rham
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 21 · 同调群
+- **7 / 5** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 34 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
@@ -56,9 +57,8 @@
 - **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
 - **6 / 6** `def.euler-class` Euler 类 · layer 38 · 流形与向量丛
 - **6 / 5** `lem.zorn` Zorn 引理 · layer 8 · 选择原理
-- **6 / 5** `prop.paracompact-partition-unity` 仿紧性与单位分解 · layer 19 · 仿紧与单位分解
 
-（共 1552 个节点有非零计数；这里列前 20 条。）
+（共 1553 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 

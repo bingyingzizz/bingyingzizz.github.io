@@ -8,3 +8,4 @@
 - ⇒ [`thm.harmonic-mean-value`](../nodes/thm.harmonic-mean-value.md) 调和函数的均值性质
 - ⇒ [`thm.poisson-formula`](../nodes/thm.poisson-formula.md) Poisson 积分公式
 - ⇒ [`thm.runge`](../nodes/thm.runge.md) Runge 逼近定理
+- ⇒ [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理
