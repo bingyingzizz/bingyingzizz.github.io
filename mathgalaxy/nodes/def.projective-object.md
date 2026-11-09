@@ -17,7 +17,7 @@ $$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadri
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.projective-object.4.md](./def.projective-object.4.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
+refs: Le Stum, An introduction to condensed mathematics, §1.4.3
 
 > 说明见 `notes/def.projective-object.md`
 

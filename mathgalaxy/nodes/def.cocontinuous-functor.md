@@ -8,7 +8,7 @@ layer 16 · 定义 · 拓扑斯 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-dep.cocontfunctor-sheaf.md](../proofs/def-dep.cocontfunctor-sheaf.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.3
+refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/def.cocontinuous-functor.md`
 

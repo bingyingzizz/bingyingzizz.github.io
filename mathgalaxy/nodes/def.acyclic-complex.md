@@ -16,7 +16,7 @@ $$H^{n}(K) = 0 \qquad \text{对一切}\ n .$$
 
 - …另有入边，续页见 [nodes/def.acyclic-complex.3.md](./def.acyclic-complex.3.md)
 
-refs: Weibel, An Introduction to Homological Algebra；Le Stum, An introduction to condensed mathematics
+refs: Weibel, An Introduction to Homological Algebra；Le Stum, An introduction to condensed mathematics, §7.1.4
 
 > 说明见 `notes/def.acyclic-complex.md`
 

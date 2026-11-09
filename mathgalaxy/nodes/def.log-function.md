@@ -14,6 +14,8 @@ $$\log(xy) = \log x + \log y, \qquad \frac{d}{dx}\log x = \frac{1}{x}$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.elementary-derivatives`](../nodes/thm.elementary-derivatives.md) 初等函数的导数
 
+- …另有出边，续页见 [nodes/def.log-function.3.md](./def.log-function.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.log-function.2.md](./def.log-function.2.md)
 

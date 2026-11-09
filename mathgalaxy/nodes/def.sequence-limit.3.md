@@ -6,7 +6,10 @@
 - 被 [`def.series`](../nodes/def.series.md) 级数收敛 用
 - 被 [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据） 用
 - 被 [`def.derivative`](../nodes/def.derivative.md) 导数 用
+- 被 [`thm.stolz-cesaro`](../nodes/thm.stolz-cesaro.md) Stolz–Cesàro 定理 用
+- ⇒ [`thm.stolz-cesaro`](../nodes/thm.stolz-cesaro.md) Stolz–Cesàro 定理
+- ⇒ [`thm.cesaro-mean-limit`](../nodes/thm.cesaro-mean-limit.md) Cesàro 平均收敛
 - 被 [`def.function-limit`](../nodes/def.function-limit.md) 函数极限 用
 - 被 [`def.cauchy-sequence`](../nodes/def.cauchy-sequence.md) Cauchy 列 用
-- ⇒ [`thm.squeeze`](../nodes/thm.squeeze.md) 夹逼定理
-- 被 [`def.pointwise-convergence`](../nodes/def.pointwise-convergence.md) 逐点收敛 用
+
+> 续见 [nodes/def.sequence-limit.4.md](./def.sequence-limit.4.md)

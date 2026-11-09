@@ -12,7 +12,7 @@ $$\operatorname{Hom}_{\mathrm{ho}(\mathcal{C})}(X, Y) \;=\; \varinjlim_{X' \to X
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.localization-hom-colim.3.md](./prop.localization-hom-colim.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1
+refs: Le Stum, An introduction to condensed mathematics, §1.4.5
 
 > 说明见 `notes/prop.localization-hom-colim.md`
 

@@ -16,7 +16,7 @@ layer 14 · 命题 · 预层与米田 · 范畴论
 ## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
 > English abstract 续见 [nodes/prop.yoneda-embedding.3.md](./prop.yoneda-embedding.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §3.1.2（Proposition 3.1.3, p. 59）
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Yoneda_embedding · nLab https://ncatlab.org/nlab/show/Yoneda+embedding
 

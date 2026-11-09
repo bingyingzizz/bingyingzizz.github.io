@@ -2,5 +2,6 @@
 [在星图里打开](../#n=def.exp-function)　·　第 1 页 [nodes/def.exp-function.md](./def.exp-function.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.bernoulli-number`](../nodes/def.bernoulli-number.md) 伯努利数 用
 - 被 [`def.log-function`](../nodes/def.log-function.md) 对数函数与 e 用
 - ⇒ [`thm.euler-formula`](../nodes/thm.euler-formula.md) Euler 公式

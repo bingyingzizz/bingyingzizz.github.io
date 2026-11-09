@@ -21,7 +21,7 @@ $$\operatorname{Hom}(h^{X}, F) \;\cong\; F(X), \qquad \alpha \mapsto \alpha_{X}(
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/lem.yoneda.2.md](./lem.yoneda.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §1.2.3（Lemma 1.2.6, p. 18–19）
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Yoneda_lemma · nLab https://ncatlab.org/nlab/show/Yoneda+lemma
 

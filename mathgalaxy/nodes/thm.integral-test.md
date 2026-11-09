@@ -11,6 +11,9 @@ $$\sum_{n=1}^{\infty} f(n) < +\infty \iff \int_1^{+\infty} f(x)\,dx < +\infty$$
 
 $$\int_1^{N+1} f \le \sum_{n=1}^{N} f(n) \le f(1) + \int_1^{N} f$$
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.bertrand-test`](../nodes/thm.bertrand-test.md) 贝特朗判别法（Bertrand）
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.integral-test.2.md](./thm.integral-test.2.md)
 

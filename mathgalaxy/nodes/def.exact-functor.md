@@ -13,7 +13,7 @@ layer 13 · 定义 · 函子与自然变换 · 范畴论
 
 - …另有出边，续页见 [nodes/def.exact-functor.2.md](./def.exact-functor.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.2
+refs: Le Stum, An introduction to condensed mathematics, §1.4.2
 
 > 说明见 `notes/def.exact-functor.md`
 

@@ -10,7 +10,7 @@ layer 14 · 命题 · 函子与自然变换 · 范畴论
 
 - …另有入边，续页见 [nodes/prop.preserves-products-kernels.2.md](./prop.preserves-products-kernels.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.2
+refs: Le Stum, An introduction to condensed mathematics, §1.4.2
 
 > 说明见 `notes/prop.preserves-products-kernels.md`
 

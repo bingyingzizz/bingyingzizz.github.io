@@ -5,3 +5,4 @@
 - 被 [`def.local-extremum`](../nodes/def.local-extremum.md) 局部极值 用
 - 被 [`def.higher-derivative`](../nodes/def.higher-derivative.md) 高阶导数与 C^k 用
 - ⇒ [`thm.fermat`](../nodes/thm.fermat.md) Fermat 引理
+- 被 [`thm.euler-maclaurin`](../nodes/thm.euler-maclaurin.md) 欧拉–麦克劳林公式 用

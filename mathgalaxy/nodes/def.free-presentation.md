@@ -20,7 +20,7 @@ layer 19 · 定义 · 紧 Hausdorff 空间 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.free-presentation.2.md](./def.free-presentation.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §2.1–2.2
+refs: Le Stum, An introduction to condensed mathematics, §2.2.1
 
 > 说明见 `notes/def.free-presentation.md`
 

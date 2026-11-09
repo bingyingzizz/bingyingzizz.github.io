@@ -25,4 +25,6 @@
 
 - Dini 导数 | 导数 | 四个 Dini 导数 → def.dini-derivative
 
-见 `../../alias.md`。
+- Stolz-Cesaro theorem | Stolz–Cesàro | 施托尔茨-切萨罗定理 | Stolz 定理 → thm.stolz-cesaro
+
+> 续见 alias/aka/analysis.20.md

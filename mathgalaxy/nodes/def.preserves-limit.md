@@ -17,7 +17,7 @@ $$F(\lim D) \longrightarrow \lim (F \circ D).$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.preserves-limit.3.md](./def.preserves-limit.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.2
+refs: Le Stum, An introduction to condensed mathematics, §1.4.2
 
 > 说明见 `notes/def.preserves-limit.md`
 

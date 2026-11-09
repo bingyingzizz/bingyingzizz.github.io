@@ -12,7 +12,7 @@ layer 14 · 定理 · 预层与米田 · 范畴论
 
 - …另有入边，续页见 [nodes/thm.represented-criterion.2.md](./thm.represented-criterion.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §1.2.3（Proposition 1.2.7, p. 19）
 
 > 说明见 `notes/thm.represented-criterion.md`
 

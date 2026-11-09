@@ -12,6 +12,9 @@ $$\int_a^b F G' = F(b)G(b) - F(a)G(a) - \int_a^b F' G$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.ftc-riemann-part2`](../nodes/thm.ftc-riemann-part2.md) Newton–Leibniz 公式：乘积求导 + Newton–Leibniz $\implies$ 分部积分　[proofs/imp.by-parts.md](../proofs/imp.by-parts.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.integration-by-parts.2.md](./prop.integration-by-parts.2.md)
+
 refs: Rudin, Principles of Mathematical Analysis, Ch. 6
 
 > 说明见 `notes/prop.integration-by-parts.md`

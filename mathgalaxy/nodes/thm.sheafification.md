@@ -21,7 +21,7 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.sheafification.3.md](./thm.sheafification.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
+refs: Le Stum, An introduction to condensed mathematics, §3.2.3
 
 > 说明见 `notes/thm.sheafification.md`
 

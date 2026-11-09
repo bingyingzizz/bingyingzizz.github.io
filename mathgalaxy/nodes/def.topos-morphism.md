@@ -17,7 +17,7 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.topos-morphism.3.md](./def.topos-morphism.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.3
+refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/def.topos-morphism.md`
 

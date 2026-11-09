@@ -12,7 +12,7 @@ $$\begin{array}{ccc} \mathcal{C}/T & \hookrightarrow & \widehat{\mathcal{C}}/T \
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.slice-cartesian.3.md](./prop.slice-cartesian.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §3.1.4（Exercise 3.6, p. 60–61）
 
 > 说明见 `notes/prop.slice-cartesian.md`
 

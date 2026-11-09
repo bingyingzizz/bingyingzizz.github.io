@@ -12,7 +12,7 @@ $$h^{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.finitely-presented.2.md](./def.finitely-presented.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §1.4.3（Definition 1.4.9, p. 29）
 
 > 说明见 `notes/def.finitely-presented.md`
 

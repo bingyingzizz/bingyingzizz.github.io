@@ -9,15 +9,13 @@ layer 18 · 定义 · 同调与正合列 · 同调代数
 > 陈述续见 [nodes/def.cohomology-class.2.md](./def.cohomology-class.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.cohomology`](../nodes/def.cohomology.md) 同调：用到了定义 同调　[proofs/dep.cc-hom.md](../proofs/dep.cc-hom.md)
+## 它能推出什么 / 谁在用它
+- 被 [`def.stiefel-whitney-class`](../nodes/def.stiefel-whitney-class.md) Stiefel–Whitney 类 用
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.cohomology-class.3.md](./def.cohomology-class.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.cohomology-class.4.md](./def.cohomology-class.4.md)
-
-refs: Le Stum, An introduction to condensed mathematics, §7.1（复形与同调）；Weibel, An Introduction to Homological Algebra, Ch. 1（Chain Complexes）
+refs: Le Stum, An introduction to condensed mathematics, §7.1.4（Definition 7.1.11, p. 124）；Weibel, An Introduction to Homological Algebra, Ch. 1（Chain Complexes）
 
 > 说明见 `notes/def.cohomology-class.md`
 

@@ -16,7 +16,7 @@ $\mathcal{C}$ 关于 $W$ 的**局部化** $\mathrm{ho}(\mathcal{C})$ 是这样�
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.localization.3.md](./def.localization.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1
+refs: Le Stum, An introduction to condensed mathematics, §1.4.5
 
 > 说明见 `notes/def.localization.md`
 

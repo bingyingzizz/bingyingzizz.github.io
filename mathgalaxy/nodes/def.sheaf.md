@@ -18,7 +18,7 @@ $$\operatorname{Hom}(h_{X}, F) \longrightarrow \operatorname{Hom}(R, F)$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.sheaf.3.md](./def.sheaf.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
+refs: Le Stum, An introduction to condensed mathematics, §3.2.2
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Sheaf_(mathematics) · nLab https://ncatlab.org/nlab/show/sheaf · Mathlib https://leanprover-community.github.io/mathlib4_docs/Mathlib/CategoryTheory/Sites/Sheaf.html
 

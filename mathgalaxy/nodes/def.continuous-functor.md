@@ -19,7 +19,7 @@ $$g^{*} : \widetilde{\mathcal{C}^{\prime}} \longrightarrow \widetilde{\mathcal{C
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.continuous-functor.2.md](./def.continuous-functor.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.3
+refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/def.continuous-functor.md`
 

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.abel-dirichlet-series`](../nodes/thm.abel-dirichlet-series.md) Abel–Dirichlet 判别法
 - ⇒ [`thm.absolute-implies-convergent`](../nodes/thm.absolute-implies-convergent.md) 绝对收敛 ⟹ 收敛
+- ⇒ [`lem.abel-summation`](../nodes/lem.abel-summation.md) 阿贝尔求和（分部求和）

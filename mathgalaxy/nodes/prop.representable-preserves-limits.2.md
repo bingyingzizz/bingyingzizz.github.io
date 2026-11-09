@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.representable-preserves-limits)　·　第 1 页 [nodes/prop.representable-preserves-limits.md](./prop.representable-preserves-limits.md)
 
 ## 陈述（续）
+存在），
 $$\operatorname{Hom}_{\mathcal{C}}\bigl(X,\ \lim D\bigr) \;\cong\; \lim \operatorname{Hom}_{\mathcal{C}}\bigl(X,\ D(-)\bigr).$$
 
 > 续见 [nodes/prop.representable-preserves-limits.3.md](./prop.representable-preserves-limits.3.md)

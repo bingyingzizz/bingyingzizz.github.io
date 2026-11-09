@@ -11,6 +11,6 @@
 - **6 / 6** `def.submanifold-volume` 诱导体积 · layer 32 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 34 · 内蕴几何
 
-（共 1567 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1578 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

@@ -6,7 +6,7 @@
 
 - `prop.poisson-formula` ← lem.caratheodory-osgood.notes
 
-## 二、近同名却没有任何边（8 对）
+## 二、近同名却没有任何边（9 对）
 
 判据：label 去掉括注/空格后相同或前缀相近（与 `_tools/_nov15.mjs` 同口径），且两颗星之间一条边都没有。
 
@@ -18,6 +18,7 @@
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L38）
 - 阿贝尔群范畴（`def.category-of-abelian-groups` L8）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 - Euler 公式（`thm.euler-formula-surface` L31）⇸ Euler 类（`def.euler-class` L38）
+- 阿贝尔层（`def.abelian-sheaf` L16）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L23）
 
 ## 三、黑边子图上的环（2 个）
 

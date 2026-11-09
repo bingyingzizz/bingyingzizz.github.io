@@ -10,7 +10,7 @@ layer 14 · 引理 · 预层与米田 · 范畴论
 
 - …另有入边，续页见 [nodes/lem.presheaf-mono-pointwise.2.md](./lem.presheaf-mono-pointwise.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §3.1.2（Examples, p. 59）
 
 > 说明见 `notes/lem.presheaf-mono-pointwise.md`
 

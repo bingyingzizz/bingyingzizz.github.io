@@ -14,7 +14,7 @@ $$\widehat{\mathcal{C}} := \operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.presheaf-cat.2.md](./def.presheaf-cat.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §3.1.1（p. 58）
 
 > 说明见 `notes/def.presheaf-cat.md`
 

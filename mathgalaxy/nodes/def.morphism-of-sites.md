@@ -10,7 +10,7 @@ layer 17 · 定义 · 拓扑斯 · 范畴论
 
 - …另有入边，续页见 [nodes/def.morphism-of-sites.2.md](./def.morphism-of-sites.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §3.3
+refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/def.morphism-of-sites.md`
 

@@ -15,6 +15,9 @@ $$K_n := c_n \cdot \frac{a_n}{a_{n+1}} - c_{n+1}$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.comparison-test`](../nodes/thm.comparison-test.md) 比较判别法：比较判别法 $\implies$ Kummer 判别法　[proofs/imp.kummer.md](../proofs/imp.kummer.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.kummer.2.md](./thm.kummer.2.md)
+
 refs: Knopp, Theory and Application of Infinite Series；Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/thm.kummer.md`

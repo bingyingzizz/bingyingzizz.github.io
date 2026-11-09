@@ -13,7 +13,7 @@ $$T \;\cong\; \varinjlim_{(X, s) \in \mathcal{C}_{T}} h_{X}$$
 
 - …另有入边，续页见 [nodes/thm.density.2.md](./thm.density.2.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §3.1.4（Exercise 3.7, p. 61）
 
 > 说明见 `notes/thm.density.md`
 

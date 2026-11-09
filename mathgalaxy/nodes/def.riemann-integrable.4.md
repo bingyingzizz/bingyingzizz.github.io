@@ -6,3 +6,4 @@
 - 被 [`def.improper-integral`](../nodes/def.improper-integral.md) 反常积分 用
 - ⇒ [`thm.darboux-criterion`](../nodes/thm.darboux-criterion.md) Darboux 判据
 - ⇒ [`prop.integral-order`](../nodes/prop.integral-order.md) 积分的保序与估计
+- ⇒ [`thm.euler-maclaurin`](../nodes/thm.euler-maclaurin.md) 欧拉–麦克劳林公式

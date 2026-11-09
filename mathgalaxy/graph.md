@@ -1,9 +1,9 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-09T12:48:19.479Z
-> 15 星系 / 105 星团 / 1574 节点 / 3277 连线（强边 3235，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-09T14:19:46.581Z
+> 15 星系 / 105 星团 / 1585 节点 / 3293 连线（强边 3251，弱边 42；其中**不分层**的「推论」33 条（layer:false））
 
-> ⛔ **这是全量 bulk 导出（约 4.0 MB），不要单次抓取** —— 抓取工具单次通常只返回
+> ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
 > 而且同一地址反复抓也只会拿到同样的开头。**要检索请走 `llms.txt` 里的检索协议**：
 > `index.md` → `index/<星团id>.md` → `nodes/<节点id>.md`。
@@ -2930,7 +2930,7 @@ $$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadri
 
 在 $\mathbf{Set}$ 里**每个对象都投射**，这就是选择公理：给定满射 $A \twoheadrightarrow B$ 与 $B$ 中的点，总能挑一个原像。
 
-参考：Le Stum, An introduction to condensed mathematics, §2.1–2.2
+参考：Le Stum, An introduction to condensed mathematics, §1.4.3
 
 #### 自由紧 Haus 是投射对象　`prop.free-projective`
 *命题*　自由紧 Hausdorff 空间是 $\mathbf{CHaus}$ 的投射对象
@@ -2966,7 +2966,7 @@ $$\begin{array}{ccc} & P & \\ \swarrow & \downarrow & \searrow \\ A & \twoheadri
 
 $\mathbf{CHaus}$ 里有余等化子，所以 $\operatorname{coker}(R \rightrightarrows F)$ 存在；它就是商空间 $F/R$。
 
-参考：Le Stum, An introduction to condensed mathematics, §2.1–2.2
+参考：Le Stum, An introduction to condensed mathematics, §2.2.1
 
 #### 紧 Haus 都有自由表示　`cor.chaus-free-presentation`
 *推论*　每个紧 Hausdorff 空间都有自由表示
@@ -2975,7 +2975,7 @@ $\mathbf{CHaus}$ 里有余等化子，所以 $\operatorname{coker}(R \rightright
 
 取 $F = \beta S^{\mathrm{disc}}$（前一条命题：$F \twoheadrightarrow S$ 满，且 $F$ 自由）。把同样的做法对 $S \times_{S} S$ 再做一次，得到 $F' \twoheadrightarrow R$ 满。三条逐一满足：自由、满、以及对 $R$ 的那条满射。∎
 
-参考：Le Stum, An introduction to condensed mathematics, §2.1–2.2
+参考：Le Stum, An introduction to condensed mathematics, §2.2.1
 
 #### 不交并是紧 Hausdorff 的余积　`prop.coproduct-chaus`
 *命题*　命题：$S \sqcup T$ 是 $\mathbf{CHaus}$ 里的余积
@@ -10896,6 +10896,43 @@ $D^{-}f(x_0) = \limsup_{h \to 0^{-}} \frac{f(x_0 + h) - f(x_0)}{h}$，$D_{-}f(x_
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 7；Folland, Real Analysis, Ch. 3
 
+#### Stolz–Cesàro 定理　`thm.stolz-cesaro`
+*定理*　Stolz–Cesàro：数列极限的离散 L'Hôpital 法则
+
+设 $\{x_n\}$、$\{y_n\}$ 是实数列，$y_n$ 严格单调。
+
+- **$0/0$ 型**：若 $x_n \to 0$、$y_n \to 0$，且
+$$\lim_{n \to \infty} \frac{x_{n+1} - x_n}{y_{n+1} - y_n} = L,$$
+则 $\dfrac{x_n}{y_n} \to L$。
+- **$*/\infty$ 型**：若 $y_n$ 严格递增且 $y_n \to +\infty$，同样条件成立时 $\dfrac{x_n}{y_n} \to L$。
+
+这里 $L$ 可以是有限实数，也可以是 $\pm\infty$（按扩展实数理解）。
+
+⭐ **它是离散版的 L'Hôpital 法则**：把「导数之比」换成「差分之比」。$0/0$ 型要求分子也趋于 $0$；$*/\infty$ 型不要求 $x_n$ 收敛。
+
+**例**：$x_n = 1 + \frac12 + \cdots + \frac1n$、$y_n = \log n$。则 $\Delta x_n = \frac{1}{n+1}$、$\Delta y_n = \log\frac{n+1}{n} \sim \frac1n$，差分之比 $\to 1$，故 $H_n/\log n \to 1$。
+
+⚠ **单调性不能去掉**：取 $x_n = (-1)^n$、$y_n = (-1)^n$，差分之比恒为 $1$，但 $x_n/y_n = 1$ 平凡；再看 $x_n = (-1)^n\sqrt n$、$y_n = \sqrt n$，$x_n/y_n$ 不收敛。
+
+⚠ 与 Cesàro 平均的关系：取 $x_n$ 为部分和、$y_n = n$，Stolz 就退化成「算术平均」那一条（见 `thm.cesaro-mean-limit`）。
+
+参考：Knopp, Theory and Application of Infinite Series；Pólya–Szegő, Problems and Theorems in Analysis I
+
+#### Cesàro 平均收敛　`thm.cesaro-mean-limit`
+*定理*　Cesàro 平均：收敛数列的算术平均同极限
+
+若实数列 $a_n \to L$，则其前 $n$ 项算术平均 $\sigma_n := \dfrac{a_1 + \cdots + a_n}{n}$ 也满足 $\sigma_n \to L$。逆命题不成立。
+
+⭐ 这条是 **Cesàro 求和法**的起点：把「部分和的平均」当作广义极限。Fejér 定理（Fourier 级数的 Cesàro 求和）用的就是它。
+
+**逆不成立**：$a_n = (-1)^n$ 的算术平均 $\to 0$，但 $a_n$ 本身不收敛。所以 Cesàro 可和比收敛更弱。
+
+**与 Stolz 的关系**：在 Stolz 定理里取 $x_n = a_1 + \cdots + a_n$、$y_n = n$，差分之比就是 $a_{n+1}$，于是 Cesàro 平均是 Stolz 的直接特例。
+
+⚠ 条件是「收敛」，不是「有界」：有界而不收敛的列（如 $(-1)^n$）平均可能收敛、也可能不收敛，不能一概而论。
+
+参考：Knopp, Theory and Application of Infinite Series；Zygmund, Trigonometric Series
+
 #### 函数极限　`def.function-limit`
 *定义*　函数极限 $\lim_{x \to x_0} f(x) = L$
 
@@ -12911,6 +12948,146 @@ $$\sum_{n=0}^{\infty} c_n = \Bigl( \sum_{n=0}^{\infty} a_n \Bigr)\Bigl( \sum_{n=
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 3
 
+#### 比值判别法（d'Alembert）　`thm.ratio-test`
+*定理*　比值判别法：$\lim a_{n+1}/a_n$ 与收敛性
+
+设 $a_n>0$，$q=\lim_{n\to\infty}\frac{a_{n+1}}{a_n}$（极限可以为 $+\infty$）。则
+1. $q<1$ 时 $\sum a_n$ 收敛；
+2. $q>1$ 时 $\sum a_n$ 发散；
+3. $q=1$ 时判别法失效（收敛、发散都可能）。
+
+**证明**：$q<1$ 时取 $r$ 使 $q<r<1$，则存在 $N$，当 $n\ge N$ 时 $a_{n+1}\le r a_n$，故 $a_n\le C r^n$；与几何级数比较即得收敛。$q>1$ 时取 $r>1$，最终 $a_{n+1}\ge r a_n$，故 $a_n$ 递增且不趋于 $0$，级数发散。
+
+**$q=1$ 的两个例子**：$\sum 1/n$ 发散而 $\sum 1/n^2$ 收敛，两者都有 $q=1$。
+
+**极限不存在时**：可用上极限形式 $\limsup a_{n+1}/a_n<1$ 判收敛、$\liminf a_{n+1}/a_n>1$ 判发散。
+
+📌 与根值判别法比较：由 $\limsup a_n^{1/n}\le\limsup a_{n+1}/a_n$（Cauchy 定理），凡比值判别法能判的情形根值判别法也能判；反之不然（如 $a_n=2^{-n}$ 在奇数项加扰动）。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3；Knopp, Theory and Application of Infinite Series
+
+#### 拉阿伯判别法（Raabe）　`thm.raabe-test`
+*定理*　Raabe 判别法：$n(a_n/a_{n+1}-1)$ 的极限
+
+设 $a_n>0$，$R=\lim_{n\to\infty} n\Bigl(\frac{a_n}{a_{n+1}}-1\Bigr)$。则
+1. $R>1$ 时 $\sum a_n$ 收敛；
+2. $R<1$ 时 $\sum a_n$ 发散；
+3. $R=1$ 时判别法失效。
+
+**与 Kummer 判别法的关系**：在 Kummer 判别法中取 $c_n=n$，则
+
+$$K_n=c_n\frac{a_n}{a_{n+1}}-c_{n+1}=n\frac{a_n}{a_{n+1}}-(n+1)=n\Bigl(\frac{a_n}{a_{n+1}}-1\Bigr)-1\to R-1 .$$
+
+$R>1$ 时 $K_n\ge\delta>0$，且 $\sum 1/c_n=\sum 1/n$ 发散，故收敛；$R<1$ 时 $K_n\le-\delta$，故发散（见 `thm.kummer`）。
+
+**$R=1$ 的两个例子**：$\sum 1/n$ 有 $R=1$ 且发散；$\sum 1/n^2$ 有 $n\bigl(((n+1)/n)^2-1\bigr)=2+1/n\to2$，即 $R=2$，收敛。
+
+📌 比值判别法失效（$q=1$）时可用 Raabe；Raabe 仍失效时用 Bertrand 或 Gauss（`thm.bertrand-test`、`thm.gauss-test`）。
+
+参考：Knopp, Theory and Application of Infinite Series；Rudin, Principles of Mathematical Analysis, Ch. 3
+
+#### 高斯判别法（Gauss）　`thm.gauss-test`
+*定理*　Gauss 判别法：比值展开到 $1/n$ 项
+
+设 $a_n>0$，且存在 $\mu\in\mathbb{R}$ 与 $\delta>0$，使
+$$\frac{a_n}{a_{n+1}}=1+\frac{\mu}{n}+O\Bigl(\frac{1}{n^{1+\delta}}\Bigr)\qquad(n\to\infty).$$
+则 $\mu>1$ 时 $\sum a_n$ 收敛；$\mu\le1$ 时 $\sum a_n$ 发散。
+
+**证明**：$\mu\ne1$ 时 Raabe 量 $n(a_n/a_{n+1}-1)=\mu+O(n^{-\delta})\to\mu$，故 $\mu>1$ 收敛、$\mu<1$ 发散（`thm.raabe-test`）。
+
+$\mu=1$ 时令 $b_n=n a_n>0$。由展开，
+
+$$\frac{b_n}{b_{n+1}}=\frac{n}{n+1}\Bigl(1+\frac1n+O(n^{-1-\delta})\Bigr)=1+O(n^{-1-\delta}).$$
+
+于是 $\prod (b_n/b_{n+1})$ 收敛（因为 $\sum n^{-1-\delta}<\infty$），即 $b_n\to b>0$；故 $a_n\sim b/n$，由 $p$-级数（$p=1$）发散。
+
+**例**：$\sum 1/n$（$\mu=1$，发散）；$\sum 1/n^{1+\varepsilon}$（$\mu=1+\varepsilon>1$，收敛）。
+
+⚠ 展开中的 $O(n^{-1-\delta})$ 不能放宽成 $O(1/n\log n)$：后者正是 Bertrand 判别法处理的情形（`thm.bertrand-test`）。
+
+参考：Knopp, Theory and Application of Infinite Series；Bromwich, An Introduction to the Theory of Infinite Series
+
+#### 贝特朗判别法（Bertrand）　`thm.bertrand-test`
+*定理*　Bertrand 判别法：比值展开到 $1/(n\log n)$ 项
+
+设 $a_n>0$，且存在 $\beta\in\mathbb{R}$，使
+$$\frac{a_n}{a_{n+1}}=1+\frac1n+\frac{\beta}{n\log n}+o\Bigl(\frac{1}{n\log n}\Bigr)\qquad(n\to\infty).$$
+则 $\beta>1$ 时 $\sum a_n$ 收敛；$\beta<1$ 时 $\sum a_n$ 发散；$\beta=1$ 时判别法失效。
+
+**与 Kummer 判别法的关系**：取 $c_n=n\log n$（$n\ge2$），则
+
+$$K_n=c_n\frac{a_n}{a_{n+1}}-c_{n+1}=n\log n\Bigl(1+\frac1n+\frac{\beta}{n\log n}+o(\cdot)\Bigr)-(n+1)\log(n+1).$$
+
+用 $(n+1)\log(n+1)=n\log n+\log n+1+O(1/n)$ 展开，得 $K_n=\beta-1+o(1)$。又 $\sum 1/c_n=\sum 1/(n\log n)$ 发散（`thm.integral-test`，$\int dx/(x\log x)=\log\log x$），故 $\beta>1$ 收敛、$\beta<1$ 发散。
+
+**$\beta=1$ 的两个例子**：$\sum 1/(n\log n)$ 发散（$\beta=1$）；$\sum 1/(n\log n(\log\log n)^2)$ 收敛（同样 $\beta=1$，但积分 $\int dx/(x\log x(\log\log x)^2)$ 收敛）。
+
+⚠ 这里的「发散/收敛」来自 Kummer 判别法的两个方向，不是单靠 Raabe：Raabe 在 $\beta$ 任意时都只看到 $R=1$。
+
+参考：Knopp, Theory and Application of Infinite Series；Bromwich, An Introduction to the Theory of Infinite Series
+
+#### 伯努利数　`def.bernoulli-number`
+*定义*　Bernoulli 数：递推与生成函数
+
+**Bernoulli 数** $B_n$ 由 $B_0=1$ 与递推
+$$\sum_{k=0}^{n}\binom{n+1}{k}B_k=0\qquad(n\ge1)$$
+确定。等价地，作为形式幂级数（`def.formal-power-series`）
+$$\frac{t}{e^t-1}=\sum_{n\ge0}B_n\frac{t^n}{n!}.$$
+前几项：$B_0=1$，$B_1=-\tfrac12$，$B_2=\tfrac16$，$B_3=0$，$B_4=-\tfrac1{30}$，$B_6=\tfrac1{42}$；且 $B_{2k+1}=0$ 对 $k\ge1$。
+
+**递推的来历**：$\frac{t}{e^t-1}\cdot\frac{e^t-1}{t}=1$，而 $\frac{e^t-1}{t}=\sum_{n\ge0}\frac{t^n}{(n+1)!}$；比较 $t^n$ 系数即得递推。
+
+**Bernoulli 多项式**：$B_n(x)=\sum_{k=0}^{n}\binom{n}{k}B_k x^{n-k}$，满足 $B_n'(x)=nB_{n-1}(x)$ 与 $B_n(x+1)-B_n(x)=nx^{n-1}$；Euler–Maclaurin 公式里的周期函数是 $B_n(\{x\})$。
+
+**约定警告**：不同教材对 $B_1$ 取 $+\frac12$ 或 $-\frac12$；本图取 $B_1=-\frac12$，与生成函数 $t/(e^t-1)$ 一致。
+
+📌 用途：Euler–Maclaurin 求和（`thm.euler-maclaurin`）、$\zeta(2n)$ 的闭式、Stirling 公式的渐近展开、数值积分中的梯形修正。
+
+参考：Aigner–Ziegler, Proofs from THE BOOK；Graham–Knuth–Patashnik, Concrete Mathematics, Ch. 6
+
+#### 欧拉–麦克劳林公式　`thm.euler-maclaurin`
+*定理*　Euler–Maclaurin 求和公式
+
+设 $f\in C^{2m}[a,b]$，$a<b$ 为整数。记 $B_n(\{x\})$ 为周期 Bernoulli 多项式（$B_1(\{x\})=\{x\}-\tfrac12$）。则
+$$\sum_{k=a}^{b}f(k)=\int_a^b f(x)\,dx+\frac{f(a)+f(b)}{2}+\sum_{r=1}^{m}\frac{B_{2r}}{(2r)!}\bigl(f^{(2r-1)}(b)-f^{(2r-1)}(a)\bigr)+R_m,$$
+其中余项
+$$R_m=-\int_a^b\frac{B_{2m}(\{x\})}{(2m)!}\,f^{(2m)}(x)\,dx .$$
+
+**证明路线（分部积分 + 望远镜）**：在 $[k,k+1]$ 上对 $f$ 与 $B_1(\{x\})=\{x\}-\frac12$ 分部积分，得
+
+$$f(k)=\int_k^{k+1}f(x)\,dx-\int_k^{k+1}B_1(\{x\})f'(x)\,dx+\frac{f(k)-f(k+1)}{2}.$$
+
+对 $k=a,\ldots,b-1$ 求和，端点项合并为 $\frac{f(a)+f(b)}{2}$。再用 $B_n'(x)=nB_{n-1}(x)$ 反复分部积分（每次把 $B_{2r-1}$ 换成 $\frac{1}{2r}B_{2r}$），周期函数在整数点连续、边界项望远镜，即得 $2r$ 阶项；归纳到 $2m$ 阶余项。
+
+**$m=1$ 检验**：取 $f(x)=x^2$、$[a,b]=[0,2]$：左端 $0+1+4=5$；右端 $\frac83+\frac{0+4}{2}+\frac{1}{12}(4-0)=5$，余项 $R_1=-\int_0^2\frac{B_2(\{x\})}{2}\cdot2\,dx=0$（$B_2$ 在 $[0,1]$ 上积分为零）。
+
+**用途**：调和数 $H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+O(n^{-4})$、Stirling 公式、$\zeta(2n)$ 的闭式、梯形公式的误差展开。
+
+⚠ 余项只保证 $C^{2m}$ 时的积分形式；若 $f^{(2m)}$ 不变号，可给出余项的符号与大小估计。
+
+参考：Apostol, Mathematical Analysis, Ch. 12；Graham–Knuth–Patashnik, Concrete Mathematics, Ch. 9
+
+#### 阿贝尔求和（分部求和）　`lem.abel-summation`
+*引理*　Abel 分部求和：有限和恒等式与 Dirichlet 判别法
+
+设 $(a_n),(b_n)$ 为数列，$A_n=\sum_{k=1}^{n}a_k$（$A_0=0$）。则对 $n\ge1$，
+$$\sum_{k=1}^{n}a_kb_k=A_nb_n-\sum_{k=1}^{n-1}A_k(b_{k+1}-b_k).$$
+**推论（Dirichlet 判别法）**：若 $A_n$ 有界、$b_n$ 单调递减且 $b_n\to0$，则 $\sum a_nb_n$ 收敛。
+
+**证明**：由 $a_k=A_k-A_{k-1}$，
+
+$$\sum_{k=1}^{n}a_kb_k=\sum_{k=1}^{n}(A_k-A_{k-1})b_k=\sum_{k=1}^{n}A_kb_k-\sum_{k=1}^{n-1}A_kb_{k+1}=A_nb_n-\sum_{k=1}^{n-1}A_k(b_{k+1}-b_k).$$
+
+**推论的证明**：设 $|A_n|\le M$、$b_n\downarrow0$。对 $n>m$，
+
+$$\Bigl|\sum_{k=m+1}^{n}a_kb_k\Bigr|=\Bigl|A_nb_n-A_mb_m+\sum_{k=m+1}^{n-1}A_k(b_k-b_{k+1})\Bigr|\le M\Bigl(b_n+b_m+\sum_{k=m+1}^{n-1}(b_k-b_{k+1})\Bigr)\le3Mb_{m+1}\to0,$$
+
+由 Cauchy 准则得收敛（`thm.cauchy-criterion-series`）。
+
+📌 这条是 `thm.abel-dirichlet-series` 里 Dirichlet 判别法的离散原型：后者把 $A_n$ 换成部分和、$b_n$ 换成 $b(x)$，连续情形用第二中值定理。
+
+参考：Rudin, Principles of Mathematical Analysis, Ch. 3；Knopp, Theory and Application of Infinite Series
+
 ### 星团：函数列、幂级数与初等函数
 > 造出「取极限与积分 / 求导能不能交换」的判据：逐点收敛 → **一致收敛**（三种交换定理）→ Weierstrass 判别法 → Dini 定理。**幂级数**是一致收敛的旗舰应用 —— 而 $\exp$、$\log$、$\sin$、$\cos$、$\pi$ 全都由幂级数定义，初等函数在这里第一次有了合法出身。
 
@@ -13257,6 +13434,49 @@ $$\exp(i\theta) = e^{i\theta} = \cos\theta + i\sin\theta$$
 ⚠ **同名不同物**：微分几何里还有一条「Euler 公式」（法曲率 $k_{1}\cos^{2}\theta+k_{2}\sin^{2}\theta$，见 `thm.euler-formula-surface`），与这条没有关系。
 
 参考：Rudin, Principles of Mathematical Analysis, Ch. 8
+
+#### 形式幂级数　`def.formal-power-series`
+*定义*　形式幂级数：只做形式运算，不谈收敛
+
+设 $R$ 是交换环。一个 $R$ 上的**形式幂级数**是一列系数 $(a_n)_{n \ge 0}$（$a_n \in R$），形式地写成
+$$\sum_{n \ge 0} a_n x^n .$$
+它在 $R[[x]]$ 中：加法逐项相加，乘法用 Cauchy 乘积
+$$\Bigl(\sum a_n x^n\Bigr)\Bigl(\sum b_n x^n\Bigr) := \sum_{n \ge 0}\Bigl(\sum_{k=0}^{n} a_k b_{n-k}\Bigr)x^n .$$
+$x$ 只是一个**形式变量**；$x$ 不代入任何数值，也不问级数是否收敛。
+
+⭐ **与解析幂级数的区别**：`def.power-series` 关心收敛半径、逐项求导与解析函数；形式幂级数只保留系数与代数运算，因此可以对任意交换环（包括有限域）定义。把收敛性丢掉之后，组合计数里的生成函数反而更干净。
+
+**可逆性**：$\sum a_n x^n$ 在 $R[[x]]$ 中可逆 $\iff$ $a_0$ 是 $R$ 中的单位。逆由 $b_0 = a_0^{-1}$、$b_n = -a_0^{-1}\sum_{k=1}^{n} a_k b_{n-k}$ 递归给出。
+
+**复合**：只有当内层 $g$ 的常数项为 $0$（即 $g \in xR[[x]]$）时，$f(g(x))$ 才有定义（否则要处理无穷多次代入）。
+
+**形式导数**：$D\bigl(\sum a_n x^n\bigr) := \sum_{n \ge 1} n a_n x^{n-1}$，满足乘积法则，且不依赖任何极限。
+
+📌 用途：生成函数、树的计数、Lagrange 反演（`thm.lagrange-inversion`），以及把「解析恒等式」降级成「系数恒等式」来证明。
+
+参考：Stanley, Enumerative Combinatorics, Vol. 1；Wilf, generatingfunctionology
+
+#### Lagrange 反演公式　`thm.lagrange-inversion`
+*定理*　Lagrange 反演：由 $w = x\varphi(w)$ 反解系数
+
+设 $\varphi(t) = \sum_{n \ge 0} \varphi_n t^n$ 是形式幂级数，$\varphi_0 \ne 0$。则方程
+$$w = x\,\varphi(w)$$
+有唯一形式解 $w(x) = \sum_{n \ge 1} w_n x^n$，且对每个 $n \ge 1$，
+$$[x^n]\,w(x) = \frac{1}{n}\,[t^{n-1}]\,\varphi(t)^n .$$
+更一般地，对任意形式幂级数 $H$，
+$$[x^n]\,H(w(x)) = \frac{1}{n}\,[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
+
+⭐ **记号**：$[x^n]F$ 表示 $F$ 的 $x^n$ 项系数。公式把「解方程 $w = x\varphi(w)$」的系数化成「$\varphi^n$ 的一个系数」，因此不必真的逐项解方程。
+
+**典型用法（Cayley 树公式）**：取 $\varphi(t) = e^{t}$，则 $w = x e^{w}$ 的解是 $w = \sum_{n \ge 1} n^{n-1}\frac{x^n}{n!}$；系数 $n^{n-1}$ 正是 $n$ 个顶点的标号树棵数。
+
+**唯一性**：设 $w = \sum_{n\ge1} w_n x^n$，比较 $w = x\varphi(w)$ 两边的 $x^n$ 系数，右端只含 $w_1,\ldots,w_{n-1}$（因为 $\varphi(w)$ 的常数项是 $\varphi_0$，$w$ 的最低次是 $1$），于是 $w_n$ 由 $w_1 = \varphi_0$ 与前面的系数唯一递归确定。
+
+⚠ 这是**形式**反演：不要求 $\varphi$ 的幂级数收敛，也不要求 $w(x)$ 在某个邻域内是解析函数。解析情形（反函数定理）是它的特例，但两者的证明路线不同。
+
+⚠ $\varphi_0 = 0$ 时方程只有零解，公式不适用；条件 $\varphi_0 \ne 0$ 不能省。
+
+参考：Stanley, Enumerative Combinatorics, Vol. 1；Wilf, generatingfunctionology
 
 ### 星团：多元微分
 > 造出「把微分学线性代数化」的整套装置：偏导 / 方向导数 → **可微 = 存在一个线性映射** → 梯度、Jacobi、Hessian → 链式法则（矩阵乘法）→ 混合偏导可交换 → 中值定理与 Taylor → 极值判别（Hessian 正定 $\iff$ 极小）。后半段是「局部 → 标准形」：压缩映射原理当引擎，撑起逆映射定理、隐函数定理、**秩定理**，再加上浸入 / 淹没、正则值原像、Lagrange 乘子、Morse 引理与 Sard 定理。
@@ -19420,7 +19640,7 @@ $\mathcal{C}$ 关于 $W$ 的**局部化** $\mathrm{ho}(\mathcal{C})$ 是这样�
 
 下面那条命题说的就是「什么时候它的每个 Hom 都老老实实是 $U$ 里的集合」（即局部小）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1
+参考：Le Stum, An introduction to condensed mathematics, §1.4.5
 
 #### 分式演算下的局部化　`prop.calculus-of-fractions`
 *命题*　右分式演算 $\implies$ 局部化好算
@@ -19461,7 +19681,7 @@ $$\begin{array}{ccc} Z & \xrightarrow{\;g\;} & Y \\[2pt] {\scriptstyle v}\big\do
 - 现有图中左腿标为 $v$、上腿标为 $g$，对屋顶 $X\xleftarrow{w}X'\to Y$ 的常用约定，所需的是上腿 $g$ 属于 $W$；相应消去式应是 $wf=wg$ 推出 $fv=gv$。原文把两套对偶约定混用，本图未核对该步，记为缺口，不能按现有标注直接套定理。
 - 没有 Ore 条件仍可作小范畴的形式局部化，但单屋顶不一定封闭：在只有 $X\to Z\leftarrow Y$ 的自由范畴中仅反转 $Y\to Z$，会产生 $X\to Y$，原范畴却没有以 $X$ 为左端的相应屋顶。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1
+参考：Le Stum, An introduction to condensed mathematics, §1.4.5
 
 #### 局部化的 Hom 是滤过余极限　`prop.localization-hom-colim`
 *命题*　$\operatorname{Hom}_{\mathrm{ho}}(X,Y) = \varinjlim_{X' \to X \in W} \operatorname{Hom}(X', Y)$
@@ -19490,7 +19710,7 @@ $$\varinjlim_{(X'\to X)\in J}\operatorname{Hom}_{\mathcal{C}}(X', Y)$$
 
 ⚠️ 没有分式演算时余极限**一般不对** —— 那时 $\mathrm{ho}(\mathcal{C})$ 的 Hom 可能连集合都不是。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1
+参考：Le Stum, An introduction to condensed mathematics, §1.4.5
 
 #### 子范畴　`def.subcategory`
 *定义*　子范畴与满子范畴
@@ -19772,7 +19992,7 @@ $$F(\lim D) \longrightarrow \lim (F \circ D).$$
 
 ⚠️ 与「$F$ 连续」区分：这里说的连续函子（continuous functor）是**保极限**，与拓扑里的连续无关。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.2
+参考：Le Stum, An introduction to condensed mathematics, §1.4.2
 
 #### 正合函子　`def.exact-functor`
 *定义*　左正合 / 右正合 / 正合函子
@@ -19787,7 +20007,7 @@ $$F(\lim D) \longrightarrow \lim (F \circ D).$$
 
 ⚠️ 名字有歧义：有的书把「正合」只指保**有限**极限，有的指保**所有**极限。本图统一按上面这条（保有限极限/余极限）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.2
+参考：Le Stum, An introduction to condensed mathematics, §1.4.2
 
 #### 保积与核 ⟹ 保所有有限极限　`prop.preserves-products-kernels`
 *命题*　保积 + 保核 $\implies$ 保所有有限极限
@@ -19804,7 +20024,7 @@ $$\lim D \;\cong\; \operatorname{eq}(p, q),$$
 - **合起来**：把上面的构造用于 $FD$ 得到的等化子正是 $\operatorname{eq}(Fp,Fq) \cong F(\operatorname{eq}(p,q))$，而它又是 $\lim FD$ ✓。故 $F$ 保一切有限极限，即**左正合** ✓。∎
 ⚠️ 只保「积」不够：还要保核（等化子），否则上面第二条会断。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.2
+参考：Le Stum, An introduction to condensed mathematics, §1.4.2
 
 #### 保纤维积 ⟹ 保单态射　`prop.preserves-fibered-products-mono`
 *命题*　保拉回 $\implies$ 保单态射
@@ -20215,7 +20435,7 @@ $$\varinjlim_{j \in J} D\bigl(F(j)\bigr) \;\cong\; \varinjlim_{i \in I} D(i).$$
 - 偏序看成范畴时，上界与非空 $\implies$ 滤过：平行箭头至多一条，第三条自动；一般范畴不能删第三条，非平凡群看成单对象范畴即反例。
 - 非空条件不能删：空范畴真空满足后两条，却没有空图的余锥。换成共尾有向集的进一步定理还要小性约定及相应集合论构造，不属于这组定义等价。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.3
+参考：Le Stum, An introduction to condensed mathematics, §1.4.1
 
 #### 滤过范畴可换成有向集　`prop.filtered-directed`
 *命题*　滤过 $\implies$ 存在共尾的有向集
@@ -20758,7 +20978,7 @@ $$T : \mathcal{C}^{\mathrm{op}} \longrightarrow \mathbf{Set}$$
 连续函数预层 $C^{0}$、光滑函数预层 $C^{\infty}$、常预层 $\underline{E}$（$\underline{E}(u) = E$，限制取恒等）、常函数预层都是。
 - 固定 $X \in \mathcal{C}$：$h_{X} : Y \mapsto \operatorname{Hom}_{\mathcal{C}}(Y, X)$ 是预层，叫**可表示预层**。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.1（p. 57）
 
 #### 预层范畴　`def.presheaf-cat`
 *定义*　预层范畴
@@ -20773,7 +20993,7 @@ $$\widehat{\mathcal{C}} := \operatorname{Hom}(\mathcal{C}^{\mathrm{op}}, \mathbf
 
 $G$ 是幺半群时 $\widehat{G} \simeq G\text{-}\mathbf{Set}$（带 $G$ 作用的集合，且映射与 $G$ 中每个元素的平移相容）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.1（p. 58）
 
 #### 表示函子　`def.representable`
 *定义*　表示函子与万有元素
@@ -20810,7 +21030,7 @@ $(k[t],\ t)$ 表示 $F$：对 $A \in k\text{-}\mathbf{Alg}$ 与 $a \in F(A)$，�
 
   （$\mathcal{C}(Z, X)$ 记 $Z \to X$ 的连续映射全体）被 $F(Y)$ 里那个自然元素 $i : Y \rightarrowtail X$ 表示。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.2.3（p. 18）
 
 #### 米田引理　`lem.yoneda`
 *引理*　米田引理
@@ -20846,7 +21066,7 @@ $$\alpha_{Y}\circ h^{X}(f) = F(f)\circ \alpha_{X} \;\implies\; \alpha_{Y}(f) = F
 
 两式只是把 $\mathcal{C}$ 换成 $\mathcal{C}^{\mathrm{op}}$，所以后面的推导两套都用。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.2.3（Lemma 1.2.6, p. 18–19）
 
 #### 表示的两个定义等价　`thm.represented-criterion`
 *定理*　表示 $\iff$ 与 $h^{X}$ 同构
@@ -20857,7 +21077,7 @@ $$\alpha_{Y}\circ h^{X}(f) = F(f)\circ \alpha_{X} \;\implies\; \alpha_{Y}(f) = F
 
 这条把「表示」的两种说法接上了：万有元素是**元素层**的说法，$h^{X} \cong F$ 是**函子层**的说法。实际验证时常走前者（挑出那个 $s$ 就完事），实际使用时常走后者（同构可以直接搬运算）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.2.3（Proposition 1.2.7, p. 19）
 
 #### 米田嵌入　`prop.yoneda-embedding`
 *命题*　米田嵌入
@@ -20872,7 +21092,7 @@ $$\delta : \mathcal{C} \longrightarrow \widehat{\mathcal{C}}, \qquad X \mapsto h
 
 把 $\mathcal{C}$ 嵌进 $\widehat{\mathcal{C}}$ 之后，$\mathcal{C}$ 里的问题就搬到了一个**有所有极限与余极限**的范畴里去解 —— 这是「补全一个范畴」的标准做法。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.2（Proposition 3.1.3, p. 59）
 
 #### 切片范畴　`def.slice-category`
 *定义*　预层的切片范畴
@@ -20894,7 +21114,7 @@ $$\mathcal{C}/T \;\cong\; \bigl(\mathcal{C} \hookrightarrow \widehat{\mathcal{C}
 
 它的用处是给预层配一个**指标范畴**：谈「这个预层由哪些点拼起来」时，指标就跑在 $\mathcal{C}/T$ 上（稠密性定理就是这么用的）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.4（Definition 3.1.5, p. 60）
 
 #### 切片范畴是拉回　`prop.slice-cartesian`
 *命题*　切片范畴的方块是笛卡尔的
@@ -20917,7 +21137,7 @@ $$\begin{array}{ccc} \mathcal{C}/T & \hookrightarrow & \widehat{\mathcal{C}}/T \
 
 特例最能说明问题：$T = h_{X}$（可表示）时，方块给出 $\mathcal{C}/X \simeq \widehat{\mathcal{C}}/h_{X}$ —— 在 $\mathcal{C}$ 里沿 $X$ 切片，与在预层范畴里沿 $h_{X}$ 切片，是同一件事。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.4（Exercise 3.6, p. 60–61）
 
 #### 稠密性定理　`thm.density`
 *定理*　稠密性定理
@@ -20930,7 +21150,7 @@ $$T \;\cong\; \varinjlim_{(X, s) \in \mathcal{C}_{T}} h_{X}$$
 
 所以 $\widehat{\mathcal{C}}$ 是「由可表示预层自由生成的」—— 可表示预层是它的一块块砖。后面说到「预层范畴是所有可表示预层的余极限闭包」时，说的就是这一条。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.4（Exercise 3.7, p. 61）
 
 #### 预层态射的单满按点检验　`lem.presheaf-mono-pointwise`
 *引理*　预层是逐点算的
@@ -20941,7 +21161,7 @@ $$T \;\cong\; \varinjlim_{(X, s) \in \mathcal{C}_{T}} h_{X}$$
 
 （$\Longleftarrow$）方向是显然的：逐点单射的族当然左可消。（$\Longrightarrow$）方向要用米田引理，见边上那条推导。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §3.1.2（Examples, p. 59）
 
 #### 可表函子保所有极限　`prop.representable-preserves-limits`
 *命题*　可表函子保所有极限
@@ -20977,7 +21197,7 @@ $$\operatorname{Hom}_{\mathcal{C}}\bigl(X,\ \lim D\bigr) \;\cong\; \operatorname
 
 说一个函子 **left exact**（左正合），指它保所有**有限**极限 —— 所以右正合就是保所有有限余极限，「正合」是两者都对。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.4.2（Proposition 1.4.5, p. 26–27）
 
 #### 有限表现对象　`def.finitely-presented`
 *定义*　有限表现（紧）对象
@@ -20998,7 +21218,7 @@ $\mathbb{R}$ 在 $\mathbf{Top}$ 里**不是**紧的（$\mathbb{R}$ 是有限区�
 
 ⚠️ 「有限表现」与「有限生成」不同：有限生成只要求有一个满射 $A^{n} \twoheadrightarrow M$；有限表现还要求核也是有限生成的（即 $A^{m} \to A^{n} \to M \to 0$ 正合）。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.1–1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.4.3（Definition 1.4.9, p. 29）
 
 #### 预层范畴的极限与余极限　`thm.presheaf-limits-colimits`
 *定理*　定理：$\widehat{\mathcal{C}}$ 里极限余极限都存在，而且逐点算
@@ -21390,7 +21610,7 @@ $$\varinjlim_{i} (X_{i} \times Y_{i}) \;\cong\; \bigl(\varinjlim_{i} X_{i}\bigr)
 
 这条为什么重要：后面谈层的时候，层化是拿滤过余极限配出来的，而**只有滤过余极限不破坏有限极限**，这套构造才能与有限极限（也就是把拓扑信息编码进去的那个部分）相安无事。
 
-参考：Le Stum, An introduction to condensed mathematics, §1.5
+参考：Le Stum, An introduction to condensed mathematics, §1.4.1
 
 #### 左伴随唯一　`prop.left-adjoint-unique`
 *命题*　同一个右伴随的左伴随在同构意义下唯一
@@ -21688,7 +21908,7 @@ $$\operatorname{Hom}(h_{X}, F) \longrightarrow \operatorname{Hom}(R, F)$$
 
 在拓扑空间的老写法里（$\mathcal{C} = \operatorname{Open}(X)^{\mathrm{op}}$），这两条就是：$s|_{U_{i}} = t|_{U_{i}}$ 处处成立则 $s = t$；以及局部截面 $s_{i}$ 在交叠处一致时能拼出整体截面。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.1–3.2
+参考：Le Stum, An introduction to condensed mathematics, §3.2.2
 
 #### 层的下降条件　`thm.sheaf-descent`
 *定理*　用覆盖族检验层
@@ -21784,7 +22004,7 @@ $$\operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T^{\sharp},\ F\bigr) \;\cong\;
 - 常数预层（每个开集上取同一个集合 $E$）的层化叫**常数层**。
 - 拓扑空间 $X$ 上取 $\mathcal{C} = \operatorname{Open}(X)$，得到的就是通常的层范畴，$\sharp$ 就是通常的层化函子。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.1–3.2
+参考：Le Stum, An introduction to condensed mathematics, §3.2.3
 
 #### 正则满态射　`def.regular-epi`
 *定义*　正则满态射
@@ -22798,7 +23018,7 @@ $$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \
 
 于是**拓扑斯之间的「映射」就照这个样子定义**：不是函子，而是一对互为伴随的函子，而且方向与几何直觉相反（左边那个是拉回）。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.3
+参考：Le Stum, An introduction to condensed mathematics, §3.4
 
 #### 连续函子（景之间）　`def.continuous-functor`
 *定义*　连续函子
@@ -22819,7 +23039,7 @@ $$g^{*} : \widetilde{\mathcal{C}^{\prime}} \longrightarrow \widetilde{\mathcal{C
 
 📌 下一步：再加一条「$f^{-1}$ 是左正合的」，就得到 **景的态射**。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.3
+参考：Le Stum, An introduction to condensed mathematics, §3.4
 
 #### 景的态射　`def.morphism-of-sites`
 *定义*　景的态射
@@ -22832,7 +23052,7 @@ $$g^{*} : \widetilde{\mathcal{C}^{\prime}} \longrightarrow \widetilde{\mathcal{C
 
 **几何直觉**：空间之间的连续映射给出景的态射；景的态射是这条的「代数替身」—— 之后拓扑斯的态射也是照这个模式定义的，只是把「景」换成「层范畴」。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.3
+参考：Le Stum, An introduction to condensed mathematics, §3.4
 
 #### 余连续函子　`def.cocontinuous-functor`
 *定义*　余连续函子
@@ -22843,7 +23063,7 @@ $$g^{*} : \widetilde{\mathcal{C}^{\prime}} \longrightarrow \widetilde{\mathcal{C
 ⭐ 为什么需要：景的态射要一对函子（$f^{-1} \dashv f_{*}$），其中**顺像** $f_{*}$ 存在靠的就是这种「推出去仍落在层里」。
 ⚠ 与**连续函子**（`def.continuous-functor`：$f^{-1}$ 把层拉回还是层）方向不同、条件也不同 —— 一个管拉回、一个管推出，景的态射要两边都有，⛔ 别把两条当对偶成同一条。
 
-参考：Le Stum, An introduction to condensed mathematics, §3.3
+参考：Le Stum, An introduction to condensed mathematics, §3.4
 
 #### 诱导拓扑　`def.induced-topology`
 *定义*　诱导拓扑
@@ -23999,7 +24219,7 @@ $$H^{n}(K) = 0 \qquad \text{对一切}\ n .$$
 
 ⭐ **拓扑版**：空间 $X$ 的**奇异链复形**零调 $\iff$ $X$ 可缩到一点？不是 —— 那是「约化同调全为 $0$」，即 $X$ 零调（acyclic space）。所以同一个词在空间上也有对应物：零调空间（同调同于一点，但不必同伦于一点）。
 
-参考：Weibel, An Introduction to Homological Algebra；Le Stum, An introduction to condensed mathematics
+参考：Weibel, An Introduction to Homological Algebra；Le Stum, An introduction to condensed mathematics, §7.1.4
 
 #### 上链复形　`def.cochain-complex`
 *定义*　复形
@@ -24844,7 +25064,7 @@ $$[z] = 0 \iff z \ \text{是上边缘} .$$
 
 ⚠️ 本图不单独收录「同调类」：它是同一个定义在链复形一侧的写法（下标换成上标），与 `def.cycle` / `def.boundary` 同一个口径 —— 不为一个上标差异开第二个节点。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1（复形与同调）；Weibel, An Introduction to Homological Algebra, Ch. 1（Chain Complexes）
+参考：Le Stum, An introduction to condensed mathematics, §7.1.4（Definition 7.1.11, p. 124）；Weibel, An Introduction to Homological Algebra, Ch. 1（Chain Complexes）
 
 #### 同调　`def.cohomology`
 *定义*　同调
@@ -54936,6 +55156,29 @@ Dini 导数就是普通差商的四个单侧上、下极限；普通导数是四
 
 $\mathbb{R}\to\mathbb{R}$ 的 $\varepsilon$-$\delta$ 判据是「连续映射」定义在度量空间上的特例。反方向不成立：连续映射的定义单独推不出 $\varepsilon$-$\delta$ 判据，还要用到 $\mathbb{R}$ 的度量结构。
 
+#### 定义引用：「数列极限」→ Stolz–Cesàro 定理　`def-link.stolz-seq`
+
+Stolz–Cesàro 比较的是两个数列的差商与它们自身之比的极限；差商用的是普通的数列极限。
+
+#### 数列极限 ⟹ Stolz–Cesàro 定理　`imp.stolz-cesaro`
+*Stolz–Cesàro 定理的证明（$0/0$ 与 $\infty/\infty$）*
+
+**$0/0$ 型**：设 $y_n>0$、$y_n\downarrow0$、$x_n\to0$，且 $\Delta x_n/\Delta y_n\to L$（$\Delta u_n=u_{n+1}-u_n$，$\Delta y_n<0$）。对 $N>n$ 有
+$$\frac{x_n}{y_n}=\frac{\sum_{k=n}^{N-1}\Delta x_k+x_N}{\sum_{k=n}^{N-1}\Delta y_k+y_N}.$$
+令 $N\to\infty$，$x_N,y_N\to0$，得 $x_n/y_n=\sum_{k\ge n}\Delta x_k\big/\sum_{k\ge n}\Delta y_k$，右端是以 $-\Delta y_k$ 为权的加权平均。当 $n\to\infty$ 时权重总质量 $\sum_{k\ge n}-\Delta y_k=y_n\to0$，且每一项 $\Delta x_k/\Delta y_k\to L$，故加权平均 $\to L$，即 $x_n/y_n\to L$。
+**$\infty/\infty$ 型**：设 $y_n\uparrow+\infty$，$\Delta x_n/\Delta y_n\to L$（$\Delta y_n>0$）。取 $\varepsilon>0$，存在 $N$，当 $k\ge N$ 时 $(L-\varepsilon)\Delta y_k\le\Delta x_k\le(L+\varepsilon)\Delta y_k$。对 $m>n\ge N$ 求和得
+$$(L-\varepsilon)(y_m-y_n)\le x_m-x_n\le(L+\varepsilon)(y_m-y_n),$$
+除以 $y_m$ 并令 $m\to\infty$，得 $L-\varepsilon\le\liminf x_m/y_m\le\limsup x_m/y_m\le L+\varepsilon$；令 $\varepsilon\to0$ 即得。$\blacksquare$
+
+#### 数列极限 ⟹ Cesàro 平均收敛　`imp.cesaro-mean`
+*Cesàro 平均的极限：由 $a_n\to L$ 推出平均 $\to L$*
+
+设 $a_n\to L$，$b_n=\frac1n\sum_{k=1}^{n}a_k$。给定 $\varepsilon>0$，取 $N$ 使 $k>N$ 时 $|a_k-L|<\varepsilon$。于是对 $n>N$，
+$$|b_n-L|\le\frac1n\sum_{k=1}^{N}|a_k-L|+\frac{n-N}{n}\varepsilon .$$
+第一项当 $n\to\infty$ 时趋于 $0$（分子固定），故 $\limsup|b_n-L|\le\varepsilon$。令 $\varepsilon\to0$，得 $b_n\to L$。$\blacksquare$
+**逆命题不真**：$a_n=(-1)^n$ 的平均趋于 $0$，但 $a_n$ 本身不收敛。
+📌 与 Stolz–Cesàro 的关系：取 $y_n=n$、$x_n=\sum_{k=1}^{n}a_k$，Stolz 的差商 $\Delta x_n/\Delta y_n=a_{n+1}$，得到的正是本条；Stolz 是它的推广。
+
 #### 定义引用：「Euler 示性数」→ Gauss–Bonnet 定理　`dep.gaussbonnet-eulerchar`
 
 Gauss–Bonnet 的结论里直接出现 $\chi(M)$，而 $\chi$ 此前在几何侧是「外部输入」。两边接上之后：把曲面三角剖分，$\int_M K\,\mathrm{d}A = 2\pi\chi(M) = 2\pi(V-E+F)$ —— 这就是「曲率积分 = 拓扑不变量」的完整走法。
@@ -63544,6 +63787,86 @@ $$\sum_n a_{\sigma(n)} = \sum_n a_{\sigma(n)}^{+} - \sum_n a_{\sigma(n)}^{-} = \
 
 > 第 2 步把「一维绝对收敛」升级成「二重绝对收敛」，这一步是全部技术的来源：二重和可以按任何顺序累加 —— 包括按对角线。
 
+#### Kummer 判别法 ⟹ 比值判别法（d'Alembert）　`imp.kummer-ratio`
+*比值判别法：Kummer 取 $c_n=1$*
+
+在 Kummer 判别法（`thm.kummer`）中取 $c_n=1$。则 $K_n=\frac{a_n}{a_{n+1}}-1\to q-1$。
+$q>1$：$\liminf K_n=q-1>0$，由 Kummer 的收敛支得 $\sum a_n$ 收敛。
+$q<1$：$K_n\to q-1<0$，故最终 $K_n\le0$；又 $\sum 1/c_n=\sum1$ 发散，由 Kummer 的发散支得发散。
+$q=1$：$K_n\to0$，Kummer 两支都不适用（$\sum1/n$ 与 $\sum1/n^2$ 都是 $q=1$ 而敛散不同）。$\blacksquare$
+
+#### 定义引用：「级数收敛」→ 比值判别法（d'Alembert）　`def-link.ratio-series`
+
+比值判别法判的是正项级数的收敛性。
+
+#### Kummer 判别法 ⟹ 拉阿伯判别法（Raabe）　`imp.kummer-raabe`
+*Raabe 判别法：Kummer 取 $c_n=n$*
+
+在 Kummer 判别法中取 $c_n=n$。则
+$$K_n=n\frac{a_n}{a_{n+1}}-(n+1)=n\Bigl(\frac{a_n}{a_{n+1}}-1\Bigr)-1\to R-1 .$$
+$R>1$：$\liminf K_n=R-1>0$，由收敛支得收敛；且 $\sum1/c_n=\sum1/n$ 发散，符合 Kummer 的假设（收敛支只需要 $c_n>0$，此处仍可用）。
+$R<1$：$K_n\to R-1<0$，最终 $K_n\le0$；$\sum1/n$ 发散，由发散支得发散。
+$R=1$：$\sum1/n$ 与 $\sum1/n^2$ 都给出 $R=1$（前者收敛性相反），故无结论。$\blacksquare$
+
+#### 拉阿伯判别法（Raabe） + p-级数 ⟹ 高斯判别法（Gauss）　`imp.kummer-gauss`
+*Gauss 判别法：由 Raabe 处理 $\mu\ne1$，$\mu=1$ 单独比较*
+
+设 $\frac{a_n}{a_{n+1}}=1+\frac{\mu}{n}+O(n^{-1-\delta})$，$\delta>0$。
+$\mu\ne1$：Raabe 量 $n\bigl(\frac{a_n}{a_{n+1}}-1\bigr)=\mu+O(n^{-\delta})\to\mu$，故 $\mu>1$ 收敛、$\mu<1$ 发散（`thm.raabe-test`）。
+$\mu=1$：令 $b_n=na_n>0$。由展开
+$$\frac{b_n}{b_{n+1}}=\frac{n}{n+1}\Bigl(1+\frac1n+O(n^{-1-\delta})\Bigr)=1+O(n^{-1-\delta}).$$
+因为 $\sum n^{-1-\delta}<\infty$，无穷乘积 $\prod b_n/b_{n+1}$ 收敛到正数，故 $b_n\to b>0$，即 $a_n\sim b/n$。由 $p$-级数 $p=1$ 发散（`thm.p-series`）得 $\sum a_n$ 发散。$\blacksquare$
+
+#### Kummer 判别法 + 积分判别法 + 对数函数与 e ⟹ 贝特朗判别法（Bertrand）　`imp.kummer-bertrand`
+*Bertrand 判别法：Kummer 取 $c_n=n\log n$*
+
+设 $\frac{a_n}{a_{n+1}}=1+\frac1n+\frac{\beta}{n\log n}+o\bigl(\frac1{n\log n}\bigr)$，取 $c_n=n\log n$（$n\ge2$）。则
+$$K_n=n\log n\cdot\frac{a_n}{a_{n+1}}-(n+1)\log(n+1).$$
+把 $(n+1)\log(n+1)=n\log n+\log n+1+O(1/n)$ 与 $n\log n\cdot\frac{a_n}{a_{n+1}}=n\log n+\log n+\beta+o(1)$ 相减，得 $K_n=\beta-1+o(1)$。
+$\beta>1$：$\liminf K_n>0$，由 Kummer 收敛支得收敛（收敛支不需要 $\sum1/c_n$ 的条件）。
+$\beta<1$：最终 $K_n\le0$；又 $\sum1/(n\log n)$ 发散（`thm.integral-test`，$\int_2^{N}\frac{dx}{x\log x}=\log\log N$），由发散支得发散。
+$\beta=1$：$K_n\to0$，两个例子 $\sum1/(n\log n)$ 与 $\sum1/(n\log n(\log\log n)^2)$ 都满足 $\beta=1$ 而敛散不同，故无结论。$\blacksquare$
+
+#### 定义引用：「幂级数」→ 伯努利数　`def-link.bern-power`
+
+Bernoulli 数的生成函数 $t/(e^t-1)$ 是形式幂级数；解析上它在 $|t|<2\pi$ 内收敛。
+
+#### 定义引用：「指数函数」→ 伯努利数　`def-link.bern-exp`
+
+生成函数的分母 $e^t-1$ 用指数函数。
+
+#### 定义引用：「伯努利数」→ 欧拉–麦克劳林公式　`def-link.bern-euler`
+
+Euler–Maclaurin 的修正项系数是 Bernoulli 数 $B_{2r}/(2r)!$。
+
+#### 伯努利数 + 分部积分 + Riemann 可积 ⟹ 欧拉–麦克劳林公式　`imp.euler-maclaurin`
+*Euler–Maclaurin 公式：逐区间分部积分再望远镜*
+
+记 $P_n(x)=B_n(\{x\})$（周期 Bernoulli 多项式），则 $P_1(x)=\{x\}-\frac12$，且对 $n\ge2$，$P_n'=nP_{n-1}$（整数点外），$P_n$ 在整数点连续。
+**第一步**：在 $[k,k+1]$ 上分部积分（`prop.integration-by-parts`，$f\in C^{2m}$ 故可积），
+$$\int_k^{k+1}P_1(x)f'(x)\,dx=\Bigl[P_1f\Bigr]_k^{k+1}-\int_k^{k+1}P_1'f=\frac{f(k+1)+f(k)}{2}-\int_k^{k+1}f .$$
+（$P_1$ 在整数点的跳跃贡献恰为端点值。）移项得
+$$f(k)=\int_k^{k+1}f(x)\,dx+\frac{f(k)-f(k+1)}{2}+\int_k^{k+1}P_1(x)f'(x)\,dx .$$
+**第二步**：对 $k=a,\ldots,b-1$ 求和，左端加 $f(b)$ 后得
+$$\sum_{k=a}^{b}f(k)=\int_a^bf(x)\,dx+\frac{f(a)+f(b)}{2}+\int_a^bP_1(x)f'(x)\,dx .$$
+**第三步（归纳）**：设已有 $\int_a^bP_{2r-1}f^{(2r-1)}=\frac{B_{2r}}{(2r)!}\bigl(f^{(2r-1)}(b)-f^{(2r-1)}(a)\bigr)-\int_a^b\frac{P_{2r}}{(2r)!}f^{(2r)}$。用 $P_{2r}'=2rP_{2r-1}$ 与 $P_{2r}$ 在整数点连续，逐区间分部积分并求和，边界项只剩 $a,b$ 两端，得 $2r$ 阶项与下一阶余项。归纳到 $2m$ 即得公式与余项。
+**$m=1$ 检验**：$f=x^2$、$[0,2]$：左端 $0+1+4=5$；右端 $\frac83+2+\frac1{12}(4-0)=5$，$R_1=-\int_0^2\frac{P_2}{2}\cdot2\,dx=0$（$P_2$ 在一个周期上积分为零）。$\blacksquare$
+
+#### 定义引用：「导数」→ 欧拉–麦克劳林公式　`def-link.em-derivative`
+
+公式中的 $f^{(2r-1)}$ 是普通高阶导数。
+
+#### 级数收敛 + 级数的 Cauchy 准则 ⟹ 阿贝尔求和（分部求和）　`imp.abel-summation`
+*Abel 分部求和与 Dirichlet 判别法*
+
+**恒等式**：由 $a_k=A_k-A_{k-1}$（$A_0=0$），
+$$\sum_{k=1}^{n}a_kb_k=\sum_{k=1}^{n}(A_k-A_{k-1})b_k=\sum_{k=1}^{n}A_kb_k-\sum_{k=1}^{n-1}A_kb_{k+1}=A_nb_n-\sum_{k=1}^{n-1}A_k(b_{k+1}-b_k).$$
+**Dirichlet 判别法**：设 $|A_n|\le M$、$b_n\downarrow0$。对 $n>m$，
+$$\sum_{k=m+1}^{n}a_kb_k=A_nb_n-A_mb_m+\sum_{k=m+1}^{n-1}A_k(b_k-b_{k+1}),$$
+故
+$$\Bigl|\sum_{k=m+1}^{n}a_kb_k\Bigr|\le M\Bigl(b_n+b_m+\sum_{k=m+1}^{n-1}(b_k-b_{k+1})\Bigr)\le3Mb_{m+1}\to0\qquad(m\to\infty).$$
+由 Cauchy 准则（`thm.cauchy-criterion-series`）得 $\sum a_nb_n$ 收敛。$\blacksquare$
+
 #### 定义引用：「数列极限」→ 逐点收敛　`dep.seqlimit-pointwise`
 
 逐点收敛就是「对每个固定的 $x$，数列 $f_n(x)$ 按原来的定义收敛」—— 把数列极限逐点地用一遍。
@@ -63745,6 +64068,27 @@ $$= \sum_{k=0}^{\infty} \frac{(-1)^{k}\theta^{2k}}{(2k)!} + i \sum_{k=0}^{\infty
 （拆分与重排的合法性来自绝对收敛。）取 $\theta = \pi$：由 $\cos\pi = -1$、$\sin\pi = 0$ 得 $e^{i\pi} = -1$。∎
 
 > 整条证明只有「拆奇数项与偶数项」这一个动作 —— 但这一步把指数函数与三角函数之间的关系揭示成**一个恒等式**，而不是两个巧合。
+
+#### 定义引用：「幂级数」→ 形式幂级数　`def-link.fps-power`
+
+解析幂级数是形式幂级数加上「在某个邻域内收敛」的条件；形式幂级数把收敛性去掉，只保留系数。
+
+#### 形式幂级数 ⟹ Lagrange 反演公式　`imp.lagrange-inversion`
+*Lagrange 反演公式的证明（形式留数）*
+
+设 $w=x\varphi(w)$，$\varphi_0\ne0$。先证唯一性：把 $w=\sum_{n\ge1}w_nx^n$ 代入，比较 $x^n$ 系数，右端 $x\varphi(w)$ 只含 $w$ 的一次及以上的项，因此 $w_n$ 由 $w_1=\varphi_0$ 与 $w_1,\ldots,w_{n-1}$ 唯一决定。
+对系数用形式留数（即 $[x^n]F(x)=\operatorname{Res}F(x)\,dx/x^{n+1}$）：
+$$[x^n]H(w(x))=\operatorname{Res}\frac{H(w(x))}{x^{n+1}}\,dx.$$
+作变量替换 $t=w(x)$。由 $x=t/\varphi(t)$ 得 $dx=\frac{\varphi(t)-t\varphi'(t)}{\varphi(t)^2}\,dt$，$x^{-n-1}=t^{-n-1}\varphi(t)^{n+1}$，于是
+$$[x^n]H(w)=\operatorname{Res}\frac{H(t)\,\varphi(t)^{n-1}\bigl(\varphi(t)-t\varphi'(t)\bigr)}{t^{n+1}}\,dt,$$
+即 $[x^n]H(w)=[t^n]\bigl(H\varphi^{n-1}(\varphi-t\varphi')\bigr)$。
+下面把它化成 $\frac1n[t^{n-1}]H'\varphi^n$。令 $F=H\varphi^n$，则 $F'=H'\varphi^n+nH\varphi^{n-1}\varphi'$，故
+由 $H\varphi^{n-1}\varphi'=\frac1n\bigl(F'-H'\varphi^n\bigr)$ 得
+$$H\varphi^{n-1}(\varphi-t\varphi')=H\varphi^n-\frac tn\bigl(F'-H'\varphi^n\bigr)=F-\frac tnF'+\frac tnH'\varphi^n .$$
+取 $t^n$ 系数：$[t^n]F-\frac1n[t^n]tF'+\frac1n[t^{n-1}]H'\varphi^n$。因 $[t^n]tF'=n[t^n]F$，前两项相消，得
+$$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
+取 $H(t)=t$ 即得 $[x^n]w=\frac1n[t^{n-1}]\varphi^n$。$\blacksquare$
+⚠ 以上是形式幂级数层面的推导，不涉及收敛半径；解析情形（反函数定理）是同一公式在收敛域内的解释。
 
 ### 弱边（类比 / 思想相通）
 
@@ -64274,7 +64618,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **微分中值定理与 Taylor ↔ 实数与极限**　6 条节点级连线
 - **实数的运算与不等式 ↔ 函数列、幂级数与初等函数**　7 条节点级连线
 - **微分中值定理与 Taylor ↔ 函数列、幂级数与初等函数**　2 条节点级连线
-- **实数与极限 ↔ 数项级数的敛散性**　4 条节点级连线
+- **实数与极限 ↔ 数项级数的敛散性**　7 条节点级连线
 - **实数的运算与不等式 ↔ 数项级数的敛散性**　6 条节点级连线
 - **实数的运算与不等式 ↔ Riemann 积分**　2 条节点级连线
 - **L^p 空间 ↔ 实数的运算与不等式**　3 条节点级连线
@@ -64569,5 +64913,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **实数完备性的等价刻画 ↔ 连续与紧性**　5 条节点级连线
 - **连续与紧性 ↔ Riemann 积分**　2 条节点级连线
 - **实数完备性的等价刻画 ↔ 数项级数的敛散性**　2 条节点级连线
+- **Riemann 积分 ↔ 数项级数的敛散性**　2 条节点级连线
+- **数项级数的敛散性 ↔ 函数列、幂级数与初等函数**　6 条节点级连线
 - **实数与极限 ↔ 函数列、幂级数与初等函数**　4 条节点级连线
-- **数项级数的敛散性 ↔ 函数列、幂级数与初等函数**　3 条节点级连线

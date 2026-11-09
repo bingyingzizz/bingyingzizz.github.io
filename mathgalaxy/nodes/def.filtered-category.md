@@ -17,7 +17,7 @@ layer 11 · 定义 · 图与极限 · 范畴论
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.filtered-category.3.md](./def.filtered-category.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.3
+refs: Le Stum, An introduction to condensed mathematics, §1.4.1
 
 > 说明见 `notes/def.filtered-category.md`
 

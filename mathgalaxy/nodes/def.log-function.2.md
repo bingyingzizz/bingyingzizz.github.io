@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.exp-function`](../nodes/def.exp-function.md) 指数函数：用到了定义 指数函数　[proofs/dep.exp-log.md](../proofs/dep.exp-log.md)
+
+> 续见 [nodes/def.log-function.3.md](./def.log-function.3.md)

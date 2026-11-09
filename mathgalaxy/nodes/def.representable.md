@@ -18,7 +18,7 @@ layer 12 · 定义 · 预层与米田 · 范畴论
 ## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
 > English abstract 续见 [nodes/def.representable.3.md](./def.representable.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.1–1.5
+refs: Le Stum, An introduction to condensed mathematics, §1.2.3（p. 18）
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Representable_functor · nLab https://ncatlab.org/nlab/show/representable+functor
 

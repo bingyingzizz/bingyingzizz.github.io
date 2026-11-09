@@ -19,7 +19,7 @@ $$\varinjlim : \mathbf{Set}^{I} \longrightarrow \mathbf{Set}$$
 
 - …另有出边，续页见 [nodes/prop.filtered-exact.3.md](./prop.filtered-exact.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.5
+refs: Le Stum, An introduction to condensed mathematics, §1.4.1
 
 > 说明见 `notes/prop.filtered-exact.md`
 
