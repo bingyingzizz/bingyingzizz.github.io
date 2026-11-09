@@ -1,6 +1,6 @@
 # 射影平面 RP²　`ex.projective-plane`
 射影平面 $\mathbb{RP}^{2}$：闭不可定向曲面，$k = 1$，$\chi = 1$
-layer 26 · 例 · 曲面的地形 · 拓扑学
+layer 27 · 例 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=ex.projective-plane)　·　[节点索引](../index.md)
 
 $$\mathbb{RP}^{2} := S^{2} \big/ (x \sim -x) ,$$

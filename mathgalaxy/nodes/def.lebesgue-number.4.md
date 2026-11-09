@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/dep-ln-metric.md](../proofs/dep-ln-metric.md)
 - [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep-ln-cover.md](../proofs/dep-ln-cover.md)
+
+> 续见 [nodes/def.lebesgue-number.5.md](./def.lebesgue-number.5.md)

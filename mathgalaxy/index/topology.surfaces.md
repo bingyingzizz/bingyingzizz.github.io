@@ -12,9 +12,9 @@
 - def.genus　亏格　layer 20
 - ex.sphere　球面 S²　layer 21
 - def.branched-cover　分支覆盖　layer 23
-- thm.classification-surfaces　闭曲面分类定理　layer 24
 - def.ramification-index　分歧指数　layer 24
-- prop.eulerchar-genus　Euler 示性数与亏格　layer 25
-- prop.eulerchar-nonorientable　Euler 示性数与不可定向亏格　layer 25
+- thm.classification-surfaces　闭曲面分类定理　layer 25
+- prop.eulerchar-genus　Euler 示性数与亏格　layer 26
+- prop.eulerchar-nonorientable　Euler 示性数与不可定向亏格　layer 26
 
 > 续见 `index/topology.surfaces.2.md`

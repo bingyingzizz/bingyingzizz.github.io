@@ -12,9 +12,9 @@
 - prop.induced-homomorphism　诱导同态　layer 15
 - def.simply-connected　单连通　layer 15
 - prop.covering-index　覆叠的指数　layer 15
-- thm.van-kampen　van Kampen 定理　layer 15
 - prop.pi1-basepoint　基点变换　layer 16
 - thm.pi1-circle　圆周的基本群　layer 16
-- cor.pi1-sphere　高维球面的基本群　layer 16
+- thm.no-retraction-disk　圆盘不收缩　layer 17
+- thm.van-kampen　van Kampen 定理　layer 18
 
 > 续见 `index/topology.fg.2.md`

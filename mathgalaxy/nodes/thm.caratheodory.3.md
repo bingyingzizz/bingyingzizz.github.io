@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.caratheodory-extension`](../nodes/prop.caratheodory-extension.md) 预测度还原
 - ⇒ [`def.product-measure`](../nodes/def.product-measure.md) 乘积测度
+- ⇒ [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示

@@ -9,6 +9,11 @@ $f$ 与 $g$ 之间的一个**链同伦**是一族同态 $P_{n} : C_{n} \to D_{n+
 > 陈述续见 [nodes/def.chain-homotopy.2.md](./def.chain-homotopy.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近 用
+
+- …另有出边，续页见 [nodes/def.chain-homotopy.4.md](./def.chain-homotopy.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.chain-homotopy.3.md](./def.chain-homotopy.3.md)
 

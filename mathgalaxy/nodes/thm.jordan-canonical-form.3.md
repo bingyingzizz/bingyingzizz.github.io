@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.primary-decomposition`](../nodes/thm.primary-decomposition.md) 根子空间分解 + [`thm.factor-theorem`](../nodes/thm.factor-theorem.md) 因式定理与根：根子空间分解 + 幂零块 $\implies$ Jordan 标准形　[proofs/imp.jordan-canonical-form.md](../proofs/imp.jordan-canonical-form.md)
+- [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间：用到了定义 商空间　[proofs/def-link.quotient-jordan.md](../proofs/def-link.quotient-jordan.md)

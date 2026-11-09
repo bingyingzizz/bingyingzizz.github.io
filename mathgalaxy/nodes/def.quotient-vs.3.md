@@ -4,4 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.first-iso-vs`](../nodes/thm.first-iso-vs.md) 第一同构定理（向量空间版）
 - ⇒ [`thm.quotient-universal-vs`](../nodes/thm.quotient-universal-vs.md) 商空间的万有性质
+- 被 [`thm.jordan-canonical-form`](../nodes/thm.jordan-canonical-form.md) Jordan 标准形 用
 - ⇒ [`thm.tensor-universal-property`](../nodes/thm.tensor-universal-property.md) 张量积的万有性质

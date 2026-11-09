@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.taylor-complex`](../nodes/thm.taylor-complex.md) 全纯函数的 Taylor 展开：Taylor 展开的首次非零项 $\implies$ 零点的阶　[proofs/e7.implication.md](../proofs/e7.implication.md)
+
+> 续见 [nodes/prop.zero-isolated.4.md](./prop.zero-isolated.4.md)

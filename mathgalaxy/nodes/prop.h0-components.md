@@ -14,6 +14,8 @@ $$H_{0}(X) \;\cong\; \bigoplus_{C \in \pi_{0}(X)} \mathbb{Z}.$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.sphere-homology`](../nodes/thm.sphere-homology.md) 球面的同调
 
+- …另有出边，续页见 [nodes/prop.h0-components.4.md](./prop.h0-components.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.h0-components.3.md](./prop.h0-components.3.md)
 

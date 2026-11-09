@@ -12,6 +12,9 @@ layer 17 · 定义 · 度量空间 · 拓扑学
 
 - …另有入边，续页见 [nodes/def.lebesgue-number.4.md](./def.lebesgue-number.4.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.lebesgue-number.5.md](./def.lebesgue-number.5.md)
+
 refs: Munkres, Topology, 27（Lebesgue number lemma）；Rudin, Principles of Mathematical Analysis
 
 > 说明见 `notes/def.lebesgue-number.md`

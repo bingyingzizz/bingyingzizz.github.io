@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理 用
+- ⇒ [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格

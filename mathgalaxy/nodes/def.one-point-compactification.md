@@ -9,6 +9,9 @@ layer 19 · 定义 · 收敛与紧性 · 拓扑学
 > 陈述续见 [nodes/def.one-point-compactification.2.md](./def.one-point-compactification.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.one-point-compactification.3.md](./def.one-point-compactification.3.md)
 

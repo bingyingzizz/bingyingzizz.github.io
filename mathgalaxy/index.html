@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3205 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3214 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3205 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1555 nodes, 3214 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -50879,7 +50879,10 @@ window.MG = window.MG || {};
         '2. **唯一性**：由第 1 步，Jordan 块的尺寸分布 $\\mu(\\lambda)$ 完全由这些核的维数决定，因此不依赖基的选取；反过来，若两个算子有相同的 $\\mu(\\lambda)$（对一切 $\\lambda$），则它们可以配成同一个 Jordan 型的两个写本，从而是同一个算子在两组基下的矩阵，即相似。∎'
       ].join('\n'),
       note: '证明的思路是「**先造一个不变量，再证明它把类分完**」—— 这也是所有分类定理的标准套路（与「基的势是唯一的」那条如出一辙）。'
-    }
+    },
+
+    { id: 'def-link.quotient-jordan', kind: 'definition', definition: 'def.quotient-vs', usedBy: 'thm.jordan-canonical-form',
+      note: '归纳步在商空间 $V/\\ker(T-\\lambda I)$ 上做 —— 商空间的定义与泛性质直接进入证明。' },
   ]
 });
 
@@ -61396,8 +61399,10 @@ window.MG = window.MG || {};
         '每个单项族 $\\{\\, B_{n} \\,\\}$ 是**离散**族（任何点的任何邻域至多碰到它的唯一成员 —— 因为只有一个成员），当然也局部有限。故 $\\mathcal{B}$ 是 $\\sigma$-局部有限的基，由 Nagata–Smirnov 定理 $X$ 可度量化 ✓。∎',
         '⭐ 这说明本包的两条度量化定理**不是并列的**：Urysohn 定理是 Nagata–Smirnov 定理的特例。反过来说，Urysohn 定理的更初等证明（嵌入 Hilbert 立方体）仍有独立价值 —— 它顺便给出了「正则 $+$ 第二可数 $\\implies$ 可分」这条度量结构。'
       ].join('\n')
-    }
+    },
 
+    { id: 'def-link.pcn-normal', kind: 'definition', definition: 'def.normal-space', usedBy: 'thm.paracompact-hausdorff-normal',
+      note: '定理的结论就是「正规」：证明的收尾正是验证两个不相交闭集可被开集分离 —— 用的就是正规性的定义。' },
   ]
 });
 
@@ -71547,7 +71552,7 @@ window.MG = window.MG || {};
     {
       id: 'imp.mf2-bundle-classification',
       kind: 'implication',
-      sources: ['def.vector-bundle', 'def.cech-cohomology'],
+      sources: ['def.vector-bundle', 'def.cech-cohomology', 'prop.bundle-metric'],
       target: 'thm.bundle-classification',
       title: '局部平凡化给出上闭链 $\\implies$ 丛的同构类 $=$ $1$-上闭链模等价',
       proof: [
@@ -73073,7 +73078,7 @@ window.MG = window.MG || {};
       note: 'Montel = Arzelà–Ascoli + Cauchy 不等式：复分析里「有界」自动变成「等度连续」。' },
 
     /* ---- §E 单叶与映射 ---- */
-    { kind: 'implication', sources: ['thm.rouche', 'thm.max-modulus'], target: 'thm.open-mapping',
+    { kind: 'implication', sources: ['thm.rouche', 'thm.max-modulus', 'prop.zero-isolated'], target: 'thm.open-mapping',
       title: 'Rouché 数零点 $\\implies$ 像含小圆盘 $\\implies$ 开映射',
       proof: [
         '取 $z_{0} \\in \\Omega$、$w_{0} = f(z_{0})$，平移使 $w_{0} = 0$。由 `prop.zero-isolated`，' +
@@ -74732,8 +74737,12 @@ window.MG = window.MG || {};
         '',
         '💡 卡在「怎么说明这两个对象在这个不变量眼里一样」时，回来想想：**有没有一个 $s$ 可用？**',
       ].join('\n') },
+
+    { id: 'def-link.lebnum-vankampen', kind: 'definition', definition: 'def.lebesgue-number', usedBy: 'thm.van-kampen',
+      note: '证明第一步对开覆盖 $\\{U, V\\}$ 取勒贝格数，用它把道路细分到每段整块落在一个开集里。' },
   ],
 });
+
 </script>
   <script>
 /* ============================================================================
@@ -75596,7 +75605,7 @@ window.MG = window.MG || {};
       ].join('\n'),
       note: '「相消」是这条定理的全部内容：边缘群 $b_{p}$ 在相邻两项里符号相反，数得再多也看不见。' },
 
-    { kind: 'implication', sources: ['def.simplicial-homology', 'def.singular-homology'], target: 'thm.simplicial-approximation',
+    { kind: 'implication', sources: ['def.simplicial-homology', 'def.singular-homology', 'thm.homotopy-invariance'], target: 'thm.simplicial-approximation',
       title: '重分 + Lebesgue 数 + 星的交性质 $\\implies$ 连续映射可组合化',
       proof: [
         '目标是证明 $H_{p}(K) \\to H_{p}(|K|)$（把 $p$-单纯形看成奇异 $p$-单纯形）是同构。四步：',
@@ -75667,6 +75676,9 @@ window.MG = window.MG || {};
           '就得回到 $\\pi_{1}$（可能是完美群，$H_{1}$ 看不见）。反过来若 $H_{1} \\ne 0$，$\\pi_{1}$ 必定非平凡，' +
           '这条捷径几乎每次都值得先试。',
       ].join('\n') },
+
+    { id: 'def-link.chainhom-simplicial', kind: 'definition', definition: 'def.chain-homotopy', usedBy: 'thm.simplicial-approximation',
+      note: '证明用「单纯映射诱导链映射」与「链同伦的棱柱构造」把 $|g| \\simeq \\operatorname{id}$ 翻成链同伦。' },
   ],
 });
 
@@ -76668,6 +76680,9 @@ window.MG = window.MG || {};
         '没有这一条，归纳只能算出「某个群是 0」，却说不出「为什么半球没有同调」。∎',
       ].join('\n'),
       note: '这条补上了子 agent 交付时自己标注的「最薄弱一环」。' },
+
+    { id: 'def-link.chainhom-homotopy', kind: 'definition', definition: 'def.chain-homotopy', usedBy: 'thm.homotopy-invariance',
+      note: '主证明的收尾「$f$、$g$ 同伦 $\\Longrightarrow$ 存在链同伦」直接引用链同伦的定义（棱柱构造）。' },
   ],
 });
 
@@ -87195,6 +87210,28 @@ window.MG = window.MG || {};
     { id: 'def-link.toporient-eg', kind: 'definition', definition: 'def.topological-orientability', usedBy: 'prop.eulerchar-genus', note: '引理 D 用定向图册给 2-单形一致定向' },
     { id: 'def-link.toporient-nonor', kind: 'definition', definition: 'def.topological-orientability', usedBy: 'prop.eulerchar-nonorientable', note: '不可定向=不存在定向图册；标准形 $k$ 个 $\\mathbb{RP}^{2}$ 的连通和' },
     { id: 'def-link.topmanifold-toporient', kind: 'definition', definition: 'def.topological-manifold', usedBy: 'def.topological-orientability', note: '拓扑流形上才谈定向图册/定向双覆盖' },
+
+    { id: 'def-link.lebnum-eulerchar', kind: 'definition', definition: 'def.lebesgue-number', usedBy: 'prop.eulerchar-genus',
+      note: '证明对覆盖取勒贝格数来控制单纯形直径（小于勒贝格数就整块落在一个开集里）—— 定义直接进入第 2 步。' },
+    { id: 'def-link.barysub-eulerchar', kind: 'definition', definition: 'def.barycentric-subdivision', usedBy: 'prop.eulerchar-genus',
+      note: '证明反复作重心重分把网格按 $n/(n+1)$ 缩小，同调不变性由这条定义的性质给出。' },
+    {
+      id: 'imp.eulerchar-inputs',
+      kind: 'implication',
+      sources: ['thm.rado', 'thm.simplicial-approximation', 'prop.h0-components'],
+      target: 'prop.eulerchar-genus',
+      title: 'Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\\implies \\chi = 2-2g$（依赖登记）',
+      proof: [
+        '**这条边只登记依赖，不证结论。** 三者合起来才是证明的输入，没有哪一个单独能推出 $\\chi = 2 - 2g$：',
+        '',
+        '1. `thm.rado`（Radó 三角剖分存在性）：先把闭可定向曲面变成有限单纯复形 $K$，之后 $\\chi(K)$ 才有定义；',
+        '2. `thm.simplicial-approximation`：把连续映射换成单纯映射，于是 $H_{2}(S) \\cong H_{2}(K^{\\prime}) \\cong \\mathbb{Z}$；',
+        '3. `prop.h0-components`：$H_{0}(S) \\cong \\mathbb{Z}$ 来自 $S$ 连通，即 $b_{0} = 1$。',
+        '',
+        '代入 $\\chi = b_{0} - b_{1} + b_{2}$ 得 $\\chi = 1 - 2g + 1 = 2 - 2g$。',
+      ].join('\n'),
+      note: '⚠ 这是**依赖登记**边，不是蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。',
+    },
   ],
 });
 
@@ -89812,6 +89849,22 @@ window.MG.packs.push({
     /* ⑦ Riesz 表示引理依赖（有限覆盖上的）紧支单位分解 */
     { id: 'dep.rm-pou', kind: 'definition', definition: 'def.partition-of-unity', usedBy: 'thm.riesz-markov',
       note: '表示引理用一族紧支函数 $g_{i} \\prec A_{i}$（本质上是单位分解式的局部化）把 $f$ 上下夹住；表示引理的上下界已在节点注第 ④ 步写全，这条边只记对单位分解概念的依赖。' },
+
+    {
+      id: 'imp.riesz-markov-inputs',
+      kind: 'implication',
+      sources: ['thm.caratheodory', 'lem.urysohn', 'def.one-point-compactification'],
+      target: 'thm.riesz-markov',
+      title: 'Carathéodory 延拓 + Urysohn 夹逼 + 单点紧化 $\\Longrightarrow$ Riesz 表示（依赖登记）',
+      proof: [
+        '**这条边只登记依赖，不证结论。** 三者合起来才够，任何一条单独都推不出 $\\Lambda(f) = \\int f \\,d\\mu$：',
+        '',
+        '1. `def.one-point-compactification`（单点紧化）：`X` 局部紧 Hausdorff $\\implies$ `X^{+}` 紧 Hausdorff $\\implies$ 正规，于是可以在 `X^{+}` 里对闭集用 Urysohn 造夹逼函数 `\\varphi`；',
+        '2. `lem.urysohn`（Urysohn 引理）：引理 2 的次可加性、紧集上有限性、上下界与唯一性，每一步都靠它造 `\\varphi \\in C_{c}(X)`（`\\varphi = 1` 于 `K`、支集落在指定的相对紧开集里）；',
+        '3. `thm.caratheodory`（Carathéodory 延拓）：第 ③ 步把造好的外测度 `\\mu^{*}` 限制到 Borel 集上得到 Radon 测度。',
+      ].join('\n'),
+      note: '⚠ 依赖登记边：这三条只是证明链的三块输入，单独都不构成蕴含；表示引理本身的上下界与唯一性在节点注第 ④ 步。',
+    },
   ],
 });
 

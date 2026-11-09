@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近 用
 - 被 [`thm.mv-homology`](../nodes/thm.mv-homology.md) Mayer–Vietoris（同调） 用
+- 被 [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格 用

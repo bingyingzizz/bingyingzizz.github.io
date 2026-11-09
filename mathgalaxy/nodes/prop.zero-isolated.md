@@ -11,7 +11,9 @@ $$f(z) = (z - z_{0})^{m}\, g(z), \qquad g(z_{0}) \ne 0.$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.identity`](../nodes/thm.identity.md) 唯一性定理
-- ⇒ [`prop.jensen`](../nodes/prop.jensen.md) Jensen 公式
+- ⇒ [`thm.open-mapping`](../nodes/thm.open-mapping.md) 开映射定理
+
+- …另有出边，续页见 [nodes/prop.zero-isolated.4.md](./prop.zero-isolated.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.zero-isolated.3.md](./prop.zero-isolated.3.md)

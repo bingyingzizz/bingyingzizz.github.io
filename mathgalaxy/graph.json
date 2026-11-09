@@ -6,13 +6,13 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-09T04:19:30.451Z",
+  "generated": "2026-11-09T04:44:27.492Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
    "nodes": 1555,
-   "edges": 3205,
-   "strong": 3163,
+   "edges": 3214,
+   "strong": 3172,
    "weak": 42,
    "derived": 33,
    "en_pages": 1554
@@ -18482,7 +18482,7 @@
     "topology"
    ],
    "cluster": "topology.paracompact",
-   "layer": 8,
+   "layer": 18,
    "tags": [
     "定理",
     "拓扑",
@@ -28783,7 +28783,7 @@
     "topology"
    ],
    "cluster": "topology.fg",
-   "layer": 15,
+   "layer": 18,
    "tags": [
     "代数拓扑",
     "van Kampen",
@@ -28825,7 +28825,7 @@
     "topology"
    ],
    "cluster": "topology.fg",
-   "layer": 16,
+   "layer": 19,
    "tags": [
     "代数拓扑",
     "基本群",
@@ -29282,7 +29282,7 @@
     "topology"
    ],
    "cluster": "topology.homology",
-   "layer": 23,
+   "layer": 24,
    "tags": [
     "代数拓扑",
     "Euler 示性数",
@@ -29448,7 +29448,7 @@
     "topology"
    ],
    "cluster": "topology.homology",
-   "layer": 22,
+   "layer": 23,
    "tags": [
     "代数拓扑",
     "单纯逼近",
@@ -40157,7 +40157,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 24,
+   "layer": 25,
    "tags": [
     "定理",
     "拓扑",
@@ -40329,7 +40329,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "命题",
     "拓扑",
@@ -40370,7 +40370,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 25,
+   "layer": 26,
    "tags": [
     "命题",
     "拓扑",
@@ -40495,7 +40495,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "例",
     "拓扑",
@@ -40536,7 +40536,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "例",
     "拓扑",
@@ -42006,7 +42006,7 @@
     "analysis"
    ],
    "cluster": "analysis.measure",
-   "layer": 19,
+   "layer": 20,
    "tags": [
     "定理",
     "测度",
@@ -43238,7 +43238,7 @@
     "complex"
    ],
    "cluster": "topology.surfaces",
-   "layer": 26,
+   "layer": 27,
    "tags": [
     "定理",
     "Riemann 面",
@@ -69487,6 +69487,14 @@
    "note": "证明的思路是「**先造一个不变量，再证明它把类分完**」—— 这也是所有分类定理的标准套路（与「基的势是唯一的」那条如出一辙）。"
   },
   {
+   "id": "def-link.quotient-jordan",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.quotient-vs",
+   "usedBy": "thm.jordan-canonical-form",
+   "note": "归纳步在商空间 $V/\\ker(T-\\lambda I)$ 上做 —— 商空间的定义与泛性质直接进入证明。"
+  },
+  {
    "id": "dep.vs-innerproduct",
    "kind": "definition",
    "strength": "strong",
@@ -72952,6 +72960,14 @@
    "note": ""
   },
   {
+   "id": "def-link.pcn-normal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.normal-space",
+   "usedBy": "thm.paracompact-hausdorff-normal",
+   "note": "定理的结论就是「正规」：证明的收尾正是验证两个不相交闭集可被开集分离 —— 用的就是正规性的定义。"
+  },
+  {
    "id": "def-link.divisible-group",
    "kind": "definition",
    "strength": "strong",
@@ -76315,7 +76331,8 @@
    "strength": "strong",
    "sources": [
     "def.vector-bundle",
-    "def.cech-cohomology"
+    "def.cech-cohomology",
+    "prop.bundle-metric"
    ],
    "target": "thm.bundle-classification",
    "title": "局部平凡化给出上闭链 $\\implies$ 丛的同构类 $=$ $1$-上闭链模等价",
@@ -76788,7 +76805,8 @@
    "strength": "strong",
    "sources": [
     "thm.rouche",
-    "thm.max-modulus"
+    "thm.max-modulus",
+    "prop.zero-isolated"
    ],
    "target": "thm.open-mapping",
    "title": "Rouché 数零点 $\\implies$ 像含小圆盘 $\\implies$ 开映射",
@@ -77545,6 +77563,14 @@
    "note": "两件事没有谁推出谁（一个是空间之间的形变，一个是链复形之间的同调代数关系），但**招数是同一个**：\n**「差一点相等」要写成一个具体的「形变算子」，而不是写成一个抽象的关系。**\n\n**映射同伦**：$F : X \\times [0, 1] \\to Y$，$F(\\cdot, 0) = f$、$F(\\cdot, 1) = g$。把 $[0, 1]$ 当成参数方向，$F$ 就是「一片连续的膜」。\n\n**链同伦**：$s^{n} : K^{n} \\to L^{n-1}$，满足 $f - g = s\\,d + d\\,s$。这就是上面那片膜在链层面的**迹**：把 $K \\times [0, 1]$ 三角剖分，那片膜推过去的链与两个底面的差，正好是一个「棱柱」的边界，而棱柱算子就是 $s$。\n\n**共同的招**：想证明「两个东西在某个不变量下相同」，不要直接比，去找一个**降一次的算子 $s$**，把差写成 $\\partial s + s \\partial$ —— 于是任何「吃掉边界」的函子都自动看不见这个差。（同伦不变性在两边都是这么证的。）\n\n💡 卡在「怎么说明这两个对象在这个不变量眼里一样」时，回来想想：**有没有一个 $s$ 可用？**"
   },
   {
+   "id": "def-link.lebnum-vankampen",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.lebesgue-number",
+   "usedBy": "thm.van-kampen",
+   "note": "证明第一步对开覆盖 $\\{U, V\\}$ 取勒贝格数，用它把道路细分到每段整块落在一个开集里。"
+  },
+  {
    "id": "e69.definition",
    "kind": "definition",
    "strength": "strong",
@@ -77725,7 +77751,8 @@
    "strength": "strong",
    "sources": [
     "def.simplicial-homology",
-    "def.singular-homology"
+    "def.singular-homology",
+    "thm.homotopy-invariance"
    ],
    "target": "thm.simplicial-approximation",
    "title": "重分 + Lebesgue 数 + 星的交性质 $\\implies$ 连续映射可组合化",
@@ -77752,6 +77779,14 @@
    "b": "def.singular-homology",
    "title": "$\\pi_{1}$ 与 $H_{1}$：一维的两种探针，一个记得非交换，一个不记得",
    "note": "本图**没有** Hurewicz 定理这个节点，所以这条只能作为**联想线索**记在这里，不当依赖边用。（硬事实：$X$ 道路连通时 $H_{1}(X) \\cong \\pi_{1}(X)^{\\mathrm{ab}}$，即「忘掉非交换性之后两者一致」。）\n\n**相通之处（一句话）**：两者都在数「一维的洞」——一条闭道路若不能缩，它就代表一个非平凡元素；把它当成一条闭 $1$-链看，它非零当且仅当它不是某块 $2$ 链的边界。**同一个圈，两种读法。**\n\n**差别（这才是关键）**：\n- $\\pi_{1}$ 非阿贝尔，记得「先绕 A 再绕 B」与「先绕 B 再绕 A」的区别；$H_{1}$ 是阿贝尔群，一律抹平。所以 $H_{1}$ 便宜得多（有长正合列、有 MV、能用矩阵算），$\\pi_{1}$ 强得多。\n- $H_{1}$ 看得见挠部：$\\mathbb{RP}^{2}$ 的 $\\pi_{1} = \\mathbb{Z}/2$ 而 $H_{1} = \\mathbb{Z}/2$；但环面 $T^{2}$ 的 $\\pi_{1} = \\mathbb{Z}^{2} = H_{1}$，两者在这里完全一样。\n\n**招数上的相通**：两边证「不是零」的手法一模一样 —— 造一个**同态**（$\\pi_{1} \\to \\mathbb{Z}$ 的度数、$H_{1} \\to \\mathbb{Z}$ 的取系数），让候选对象在它下面不为零。`thm.pi1-circle` 用度数，`thm.sphere-homology` 用 MV 把一个类逼出来，本质是同一件事。\n\n💡 卡在「这个圈到底能不能缩」时：先算便宜的 $H_{1}$（能算）；若 $H_{1} = 0$ 而你想推翻，就得回到 $\\pi_{1}$（可能是完美群，$H_{1}$ 看不见）。反过来若 $H_{1} \\ne 0$，$\\pi_{1}$ 必定非平凡，这条捷径几乎每次都值得先试。"
+  },
+  {
+   "id": "def-link.chainhom-simplicial",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chain-homotopy",
+   "usedBy": "thm.simplicial-approximation",
+   "note": "证明用「单纯映射诱导链映射」与「链同伦的棱柱构造」把 $|g| \\simeq \\operatorname{id}$ 翻成链同伦。"
   },
   {
    "id": "e91.implication",
@@ -78020,6 +78055,14 @@
    "title": "球面同调的归纳要用「可缩 $\\implies$ 同调平凡」",
    "proof": "`thm.sphere-homology` 的证明把 $S^{n}$ 拆成两个**开**半球 $U = S^{n} \\setminus \\{\\text{南极 } S\\}$、$V = S^{n} \\setminus \\{\\text{北极 } N\\}$ —— 与节点 `thm.sphere-homology` 的记号一致（两者对称，哪个叫 $U$ 都行）；它们各自经球极投影同胚于 $\\mathbb{R}^{n}$，可缩，再用**约化** Mayer–Vietoris 与对 $\\tilde{H}_{p}(S^{n-1})$ 的归纳。\n\n**缺的那一步**：两个开半球各自可缩，因此它们的恒等映射与「常值映射」同伦；由 `thm.homotopy-invariance`，恒等诱导的同态等于常值映射诱导的同态，而后者经过 $\\tilde H_{k}(\\text{pt}) = 0$ 分解，故 $\\tilde H_{k}(D^{n}) = 0$。\n\n没有这一条，归纳只能算出「某个群是 0」，却说不出「为什么半球没有同调」。∎",
    "note": "这条补上了子 agent 交付时自己标注的「最薄弱一环」。"
+  },
+  {
+   "id": "def-link.chainhom-homotopy",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.chain-homotopy",
+   "usedBy": "thm.homotopy-invariance",
+   "note": "主证明的收尾「$f$、$g$ 同伦 $\\Longrightarrow$ 存在链同伦」直接引用链同伦的定义（棱柱构造）。"
   },
   {
    "id": "e111.definition",
@@ -83100,6 +83143,36 @@
    "note": "拓扑流形上才谈定向图册/定向双覆盖"
   },
   {
+   "id": "def-link.lebnum-eulerchar",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.lebesgue-number",
+   "usedBy": "prop.eulerchar-genus",
+   "note": "证明对覆盖取勒贝格数来控制单纯形直径（小于勒贝格数就整块落在一个开集里）—— 定义直接进入第 2 步。"
+  },
+  {
+   "id": "def-link.barysub-eulerchar",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.barycentric-subdivision",
+   "usedBy": "prop.eulerchar-genus",
+   "note": "证明反复作重心重分把网格按 $n/(n+1)$ 缩小，同调不变性由这条定义的性质给出。"
+  },
+  {
+   "id": "imp.eulerchar-inputs",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.rado",
+    "thm.simplicial-approximation",
+    "prop.h0-components"
+   ],
+   "target": "prop.eulerchar-genus",
+   "title": "Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\\implies \\chi = 2-2g$（依赖登记）",
+   "proof": "**这条边只登记依赖，不证结论。** 三者合起来才是证明的输入，没有哪一个单独能推出 $\\chi = 2 - 2g$：\n\n1. `thm.rado`（Radó 三角剖分存在性）：先把闭可定向曲面变成有限单纯复形 $K$，之后 $\\chi(K)$ 才有定义；\n2. `thm.simplicial-approximation`：把连续映射换成单纯映射，于是 $H_{2}(S) \\cong H_{2}(K^{\\prime}) \\cong \\mathbb{Z}$；\n3. `prop.h0-components`：$H_{0}(S) \\cong \\mathbb{Z}$ 来自 $S$ 连通，即 $b_{0} = 1$。\n\n代入 $\\chi = b_{0} - b_{1} + b_{2}$ 得 $\\chi = 1 - 2g + 1 = 2 - 2g$。",
+   "note": "⚠ 这是**依赖登记**边，不是蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。"
+  },
+  {
    "id": "dep.field-fieldext",
    "kind": "definition",
    "strength": "strong",
@@ -85293,6 +85366,20 @@
    "definition": "def.partition-of-unity",
    "usedBy": "thm.riesz-markov",
    "note": "表示引理用一族紧支函数 $g_{i} \\prec A_{i}$（本质上是单位分解式的局部化）把 $f$ 上下夹住；表示引理的上下界已在节点注第 ④ 步写全，这条边只记对单位分解概念的依赖。"
+  },
+  {
+   "id": "imp.riesz-markov-inputs",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.caratheodory",
+    "lem.urysohn",
+    "def.one-point-compactification"
+   ],
+   "target": "thm.riesz-markov",
+   "title": "Carathéodory 延拓 + Urysohn 夹逼 + 单点紧化 $\\Longrightarrow$ Riesz 表示（依赖登记）",
+   "proof": "**这条边只登记依赖，不证结论。** 三者合起来才够，任何一条单独都推不出 $\\Lambda(f) = \\int f \\,d\\mu$：\n\n1. `def.one-point-compactification`（单点紧化）：`X` 局部紧 Hausdorff $\\implies$ `X^{+}` 紧 Hausdorff $\\implies$ 正规，于是可以在 `X^{+}` 里对闭集用 Urysohn 造夹逼函数 `\\varphi`；\n2. `lem.urysohn`（Urysohn 引理）：引理 2 的次可加性、紧集上有限性、上下界与唯一性，每一步都靠它造 `\\varphi \\in C_{c}(X)`（`\\varphi = 1` 于 `K`、支集落在指定的相对紧开集里）；\n3. `thm.caratheodory`（Carathéodory 延拓）：第 ③ 步把造好的外测度 `\\mu^{*}` 限制到 Borel 集上得到 Radon 测度。",
+   "note": "⚠ 依赖登记边：这三条只是证明链的三块输入，单独都不构成蕴含；表示引理本身的上下界与唯一性在节点注第 ④ 步。"
   },
   {
    "id": "dep.zeta-series",
@@ -96696,7 +96783,7 @@
   {
    "a": "algebra.linmap",
    "b": "algebra.spectral",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -97046,7 +97133,7 @@
   {
    "a": "topology.paracompact",
    "b": "topology.separation",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -97207,14 +97294,14 @@
   {
    "a": "analysis.cauchy",
    "b": "analysis.mapping",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
   {
    "a": "analysis.cauchy",
    "b": "analysis.residue",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -97718,7 +97805,7 @@
   {
    "a": "topology.convergence",
    "b": "topology.separation",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -97879,7 +97966,7 @@
   {
    "a": "topology.homology",
    "b": "topology.surfaces",
-   "count": 7,
+   "count": 9,
    "label": "",
    "explicit": false
   },
@@ -98097,6 +98184,13 @@
    "a": "analysis.completeness",
    "b": "topology.metric",
    "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.measure",
+   "b": "topology.convergence",
+   "count": 2,
    "label": "",
    "explicit": false
   },

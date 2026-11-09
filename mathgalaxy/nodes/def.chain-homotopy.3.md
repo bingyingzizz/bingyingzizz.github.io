@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.chain-group`](../nodes/def.chain-group.md) 链群：链同伦是链映射之间「升一次」的同态　[proofs/e107.implication.md](../proofs/e107.implication.md)
+
+> 续见 [nodes/def.chain-homotopy.4.md](./def.chain-homotopy.4.md)

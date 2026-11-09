@@ -2,9 +2,8 @@
 [在星图里打开](../#n=prop.eulerchar-genus)　·　第 1 页 [nodes/prop.eulerchar-genus.md](./prop.eulerchar-genus.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.rado`](../nodes/thm.rado.md) Radó 定理 + [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近 + [`prop.h0-components`](../nodes/prop.h0-components.md) H₀ 与分支：Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\implies \chi = 2-2g$（依赖登记）　[proofs/imp.eulerchar-inputs.md](../proofs/imp.eulerchar-inputs.md)
+- [`def.triangulation`](../nodes/def.triangulation.md) 三角剖分：用到了定义 三角剖分　[proofs/dep.triangulation-eulerchar.md](../proofs/dep.triangulation-eulerchar.md)
 - [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理：用到了定义 闭曲面分类定理　[proofs/dep.classification-eulerchargenus.md](../proofs/dep.classification-eulerchargenus.md)
-- [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数：用到了定义 Euler 示性数　[proofs/dep.eulerchar-eulerchargenus.md](../proofs/dep.eulerchar-eulerchargenus.md)
-- [`def.genus`](../nodes/def.genus.md) 亏格：用到了定义 亏格　[proofs/dep.genus-eulerchargenus.md](../proofs/dep.genus-eulerchargenus.md)
-- [`def.topological-orientability`](../nodes/def.topological-orientability.md) 拓扑可定向性：用到了定义 拓扑可定向性　[proofs/def-link.toporient-eg.md](../proofs/def-link.toporient-eg.md)
 
 > 续见 [nodes/prop.eulerchar-genus.3.md](./prop.eulerchar-genus.3.md)

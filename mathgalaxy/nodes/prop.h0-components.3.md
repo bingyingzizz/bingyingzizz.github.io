@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群：$0$-链的边界恰好是「同一分支里两点之差」　[proofs/e82.implication.md](../proofs/e82.implication.md)
+
+> 续见 [nodes/prop.h0-components.4.md](./prop.h0-components.4.md)

@@ -9,11 +9,12 @@ layer 27 · 定理 · 共形映射与正规族 · 复变函数
 > 陈述续见 [nodes/thm.open-mapping.2.md](./thm.open-mapping.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`thm.rouche`](../nodes/thm.rouche.md) Rouché 定理 + [`thm.max-modulus`](../nodes/thm.max-modulus.md) 最大模原理：Rouché 数零点 $\implies$ 像含小圆盘 $\implies$ 开映射　[proofs/e13.implication.md](../proofs/e13.implication.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.open-mapping.3.md](./thm.open-mapping.3.md)
+- ⇒ [`lem.schwarz`](../nodes/lem.schwarz.md) Schwarz 引理
+- 被 [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版） 用
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.open-mapping.3.md](./thm.open-mapping.3.md)
 
 refs: 王晓光《复变函数》· 开映射定理与单叶解析函数；Ahlfors, Complex Analysis (3rd ed.), Ch. 5 §3.1 · The Open Mapping Theorem
 

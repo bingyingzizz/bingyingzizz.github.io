@@ -13,9 +13,9 @@
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
-- **8 / 6** `thm.de-rham` de Rham 定理 · 微分形式、积分与 de Rham
-- **7 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
-- **7 / 7** `def.singular-homology` 奇异同调群 · 同调群
+- **10 / 8** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
+- **8 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
+- **8 / 6** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜

@@ -1,6 +1,6 @@
 # 单纯逼近　`thm.simplicial-approximation`
 单纯逼近定理：奇异同调 $=$ 单纯同调
-layer 22 · 定理 · 同调群 · 拓扑学
+layer 23 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.simplicial-approximation)　·　[节点索引](../index.md)
 
 设
@@ -9,6 +9,7 @@ layer 22 · 定理 · 同调群 · 拓扑学
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数
+- ⇒ [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.simplicial-approximation.4.md](./thm.simplicial-approximation.4.md)
