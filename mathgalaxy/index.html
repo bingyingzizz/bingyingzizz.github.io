@@ -3790,7 +3790,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
   'use strict';
   var MG = (global.MG = global.MG || {});
 
-  var KEY = 'mathgalaxy.layout.v1';       /* ⛔ 改名 = 缓存失效（无损失，只是重算一次） */
+  /* v2（2026-11-09 ENG-013）：签名纳入 config.background（板块云半径用它）⇒ 旧缓存的
+     sig 一定对不上；同时直接换 key，让 v1 记录一次性失效，用户不用手动清 localStorage。 */
+  var KEY = 'mathgalaxy.layout.v2';       /* ⛔ 改名 = 缓存失效（无损失，只是重算一次） */
   var CAM_KEY = 'mathgalaxy.camera.v1';   /* 相机（k, tx, ty）单独存，与布局无关 */
   var CAM_MARGIN = 1e-6;
 
@@ -3827,11 +3829,19 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var base = g._baseCenter || g.center || { x: 0, y: 0 };
       regs.push(g.id + '@' + (base.x | 0) + ',' + (base.y | 0));
     }
-    /* ⑤ 布局与团云的全部常量（改了任何一个，坐标就该重算） */
+    /* ⑤ 布局与团云的全部常量（改了任何一个，坐标/云半径就该重算）
+       ⭐ 规则：**凡是 layout.js 在布局阶段读到的 config 都必须进这里**，
+          不能只列 layout/cluster（那是 2026-11-09 ENG-013 的坑）。
+          layout.js:915 用 `background.cloudRadiusMin / cloudMargin` 算板块云半径；
+          它们不进签名 ⇒ 改雾参数后旧缓存里的**旧半径**继续被复用，
+          线上按旧半径烘雾、表现为「清 localStorage 才正常」。
+          这里把整个 background 也放进去：宁可雾参数变了多算一次布局，
+          也不能再让旧半径借尸还魂。 */
     var cfgTxt = '';
     try {
       cfgTxt = JSON.stringify(MG.config && MG.config.layout) + '|' +
-        JSON.stringify(MG.config && MG.config.cluster);
+        JSON.stringify(MG.config && MG.config.cluster) + '|' +
+        JSON.stringify(MG.config && MG.config.background);
     } catch (e) { cfgTxt = 'cfg?'; }
 
     var payload = parts.join(';') + '|' + ids.join('\u0001') + '|' +
@@ -3929,7 +3939,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var s = cl.stat;
       return s ? [Math.round(s.cx), Math.round(s.cy), s.count, Math.round(s.radius)] : null;
     });
-    return writeJSON(KEY, { sig: signature(graph), p: p, r: r, c: c });
+    var ok = writeJSON(KEY, { sig: signature(graph), p: p, r: r, c: c });
+    /* ENG-013：换 key 后 v1 的老记录永远不会再被读到，留着只占配额（~20 KB）⇒ 顺手清掉 */
+    if (ok) {
+      var ls = store();
+      if (ls) { try { ls.removeItem('mathgalaxy.layout.v1'); } catch (e) { /* 忽略 */ } }
+    }
+    return ok;
   }
 
   function clear() {
@@ -5464,9 +5480,20 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     function nodeSX(n) { var c = camNow(); return n.x * c.k + c.tx; }
     function nodeSY(n) { var c = camNow(); return n.y * c.k + c.ty; }
 
+    /* ⭐⭐ 裁剪框（2026-10-21）：横带烘焙时把它换成「这一条带」，
+       于是每条带只算/只画**真的落在自己带里的**线 —— 否则每条带都把整个烘焙矩形里的
+       线走一遍（只是被 clip 掉），六条带 ≈ 六个整帧的光栅。
+       实测（1554 点 / 3202 线、k=1.2、3312×2024 的区域图）：
+         改前：每条带 ≈ 一个整帧的光栅 ⇒ 「其余」p50 19.7~22ms、>20ms 的帧 180/255
+         改后：见下方 commit 的验收数字
+       ⛔ null = 用视口自己（0..W / 0..H），实时画与不切带的烘烘都走这条。
+       ⚠️ 不能把余量去掉：贝塞尔外凸 90 + 箭头 17 + 线宽都靠 PAD_EDGE。 */
+    var cullBox = null;
     function inView(x, y, pad) {
       if (cullOff) return true;
-      return x > -pad && x < W + pad && y > -pad && y < H + pad;
+      var x1 = cullBox ? cullBox.x1 : W, y1 = cullBox ? cullBox.y1 : H;
+      var x0 = cullBox ? cullBox.x0 : 0, y0 = cullBox ? cullBox.y0 : 0;
+      return x > x0 - pad && x < x1 + pad && y > y0 - pad && y < y1 + pad;
     }
 
     /** 屏幕外的点不画 */
@@ -5480,15 +5507,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       if (cullOff) return true;
       var ids = GU.edgeNodes(e);
       if (!ids.length) return false;
+      var x1v = cullBox ? cullBox.x1 : W, y1v = cullBox ? cullBox.y1 : H;
       var left = true, right = true, up = true, down = true;
       for (var i = 0; i < ids.length; i++) {
         var n = view.graph.byId[ids[i]];
         if (!n) continue;
         var x = nodeSX(n), y = nodeSY(n);
         if (x > -PAD_EDGE) left = false;
-        if (x < W + PAD_EDGE) right = false;
+        if (x < x1v + PAD_EDGE) right = false;
         if (y > -PAD_EDGE) up = false;
-        if (y < H + PAD_EDGE) down = false;
+        if (y < y1v + PAD_EDGE) down = false;
         if (!left && !right && !up && !down) return true;   // 有一个端点就在视口里
       }
       return !(left || right || up || down);
@@ -5497,10 +5525,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     /* ------------------------------------------------------ 连线几何 */
     var geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };
     var geomList = [];
+    var EMPTY_GEOM = [];            // 拖动期（位图承担静态层）复用，不分配
+    var bundleCache = null, bundleCacheSrc = null, bundleCacheGap = -1;   // bundleOffsets 缓存
 
     /** 线段与（带余量的）视口矩形相交？Liang–Barsky 参数裁剪，O(1)。 */
     function segHitsView(x1, y1, x2, y2) {
-      var l = -PAD_EDGE, r = W + PAD_EDGE, t = -PAD_EDGE, b = H + PAD_EDGE;
+      var l = -PAD_EDGE, r = (cullBox ? cullBox.x1 : W) + PAD_EDGE;
+      var t = (cullBox ? cullBox.y0 : 0) - PAD_EDGE, b = (cullBox ? cullBox.y1 : H) + PAD_EDGE;
       var dx = x2 - x1, dy = y2 - y1;
       var p = [-dx, dx, -dy, dy];
       var q = [x1 - l, r - x1, y1 - t, b - y1];
@@ -5550,6 +5581,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
     /** 每对平行边的偏移量（屏幕像素）；没配对的边不在表里 */
     function bundleOffsets(list) {
+      /* ⭐ 缓存（2026-10-21）：这个只与「可见边集合」和 bundleGap 有关，**与相机无关**，
+         但以前每次 buildGeometry 都重算 —— 3202 条边要建 3202 个字符串 key、再 Object.keys
+         + 逐组 sort。拖动时相机每帧变 ⇒ 每帧重算一次。
+         `view.visible` 只在过滤变更时整体替换（相机移动不碰它）⇒ 用引用同一性当 key 就够。 */
+      var gapNow = (C.edge && C.edge.bundleGap) || 0;
+      if (bundleCacheSrc === list && bundleCacheGap === gapNow) return bundleCache;
+      bundleCacheSrc = list; bundleCacheGap = gapNow;
+
       var groups = Object.create(null);
       list.forEach(function (e) {
         var pr = straightPair(e);
@@ -5558,15 +5597,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         (groups[k] = groups[k] || []).push(e);
       });
       var off = Object.create(null);
-      var gap = (C.edge && C.edge.bundleGap) || 0;
-      if (!gap) return off;
+      var gap = gapNow;
+      if (!gap) return (bundleCache = off);
       Object.keys(groups).forEach(function (k) {
         var arr = groups[k];
         if (arr.length < 2) return;
         arr.sort(function (x, y) { return x.id < y.id ? -1 : x.id > y.id ? 1 : 0; });
         arr.forEach(function (e, i) { off[e.id] = (i - (arr.length - 1) / 2) * gap; });
       });
-      return off;
+      return (bundleCache = off);
     }
 
     /** 弓形控制点。⚠️ 用「id 小的点 → id 大的点」当基准方向，
@@ -5615,12 +5654,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     var bakeGeom = null, bakeGeomCam = null;
     function ensureGeomBake() {
       var c = staticCam;
+      var bk = cullBox ? (cullBox.y0 + ":" + cullBox.y1) : "-";
       if (bakeGeom && bakeGeomCam && bakeGeomCam.k === c.k && bakeGeomCam.tx === c.tx
-        && bakeGeomCam.ty === c.ty && bakeGeomCam.w === W && bakeGeomCam.h === H) {
+        && bakeGeomCam.ty === c.ty && bakeGeomCam.w === W && bakeGeomCam.h === H
+        && bakeGeomCam.band === bk) {
         return bakeGeom;
       }
       bakeGeom = buildGeometry();
-      bakeGeomCam = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H };
+      bakeGeomCam = { k: c.k, tx: c.tx, ty: c.ty, w: W, h: H, band: bk };
       return bakeGeom;
     }
     function geomForBake() { return staticCam ? ensureGeomBake() : ensureGeom(); }
@@ -5980,11 +6021,23 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       drawHoverOverlay();
     }
 
+    /* ⭐ 拖动期不建连线几何（2026-10-21）：位图模式下静态层不由实时层画，
+       而 `paintStatic` 根本不会被调用 ⇒ 几何建出来只为了 hitTest，而 hitTest 自己会
+       `ensureGeom()`。实测：1554 点 / 3202 线时全量重建一次 **3~4ms**，而拖动时
+       相机每帧变 ⇒ 每帧重建 ⇒ 单这一项就吃掉 240Hz 的整个预算（4.2ms）。
+       ⛔ 但 **hover 甲支**要用 geomCache（入射边加宽），那种情况必须照建。 */
     function draw() {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, W, H);
 
-      var geoms = ensureGeom();     // ⚠️ 照常建几何：命中测试（hitTest）依赖它
+      var needGeom = !staticHidden || (hoverFull && view.hover && view.hover.type === 'node');
+      var geoms;
+      if (needGeom) {
+        geoms = ensureGeom();     // 实时画 or hover 叠加：几何必须有
+      } else {
+        geomCache = null;         // 不留陈旧几何给 drawHoverOverlay / hitTest 误用
+        geoms = EMPTY_GEOM;
+      }
       computeLod();
       nameBoxes.length = 0;
       reservedLabels.length = 0;
@@ -6012,7 +6065,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
          ⛔ y0 与 y0+h 必须是整数：小数的裁剪边会被抗锯齿，带与带之间就会出现接缝。
          ⚠️ 清空写在裁剪**里面**：调用方不必管清底，也不会误清掉别的带。 */
     function drawStatic(target, scale, rect, band, lodK) {
-      var save = { ctx: ctx, W: W, H: H, dpr: dpr, cam: staticCam, cull: cullOff,
+      var save = { ctx: ctx, W: W, H: H, dpr: dpr, cam: staticCam, cull: cullOff, cullBox: cullBox,
         hover: view.hover, labels: C.showLabels, glow: C.node.glow,
         glowSel: C.node.glowSelected, glowLiveV: glowLive };
       ctx = target;
@@ -6039,6 +6092,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
          安全性：裁剪判据全部走 `camNow()`（此处 = staticCam）与 W/H（此处 = 画布尺寸），
          和实时画同一套；PAD_NODE/PAD_EDGE 余量也在 ⇒ 与「不裁」逐像素一致。 */
       cullOff = false;
+      /* ⭐ 带裁剪：只算/只画真的落在这一条带里的线（余量仍由 PAD_EDGE 负责） */
+      cullBox = (band && band.h > 0) ? { x0: 0, x1: W, y0: band.y0, y1: band.y0 + band.h } : null;
       view.hover = null;                    // hover 不进烘焙
       C.showLabels = false;                 // 标签不进烘焙
       C.node.glow = false;                  // 光晕实时画（实测 ≈0.05ms）
@@ -6073,7 +6128,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       } finally {
         if (clipped) ctx.restore();       // ⛔ 必须在切回实时 ctx 之前 restore
         ctx = save.ctx; W = save.W; H = save.H; dpr = save.dpr;
-        staticCam = save.cam; cullOff = save.cull;
+        staticCam = save.cam; cullOff = save.cull; cullBox = save.cullBox;
         view.hover = save.hover; C.showLabels = save.labels; C.node.glow = save.glow;
         C.node.glowSelected = save.glowSel; glowLive = save.glowLiveV;
         geomCache = null; geomCam = { k: -1, tx: 0, ty: 0, w: 0, h: 0 };   // 实时层下一帧重建
@@ -7714,7 +7769,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       return hitEdge ? { type: 'edge', id: hitEdge } : null;
     }
 
-    function invalidate() { geomCache = null; sectorPairCache = null; sigEpoch++; }
+    function invalidate() { geomCache = null; sectorPairCache = null; sigEpoch++; bundleCache = null; bundleCacheSrc = null; }
 
     return {
       resize: resize,
@@ -8367,20 +8422,26 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       speedMax = 0;
       for (var i = 0; i < speedWin.length; i++) if (speedWin[i] > speedMax) speedMax = speedWin[i];
     }
-    function syncCam(cam, dpr) {
+    /** 记相机读数（app 的 tick 与带轮链**共用**，两边都可能先看到新机位）。
+        ⭐⭐ countSpeed 只能由**一帧里第一个调用者**传 true（= app 的 tick）。
+        ⛔ 不能两边都采样：拖动时 tick 和 chainStep 都会调进来，后者看到相机已经同步了
+        ⇒ pushPan(0) ⇒ 滑窗里变成 10,0,10,0… **平均值正好一半**（实测 speed 报 5 而真值 10）
+        ⇒ needPx 只有一半 ⇒ 轮开得太晚 ⇒ 中途露洞 ⇒ 每一轮就有一次 212ms 的同步全烘。
+        这是 2026-10-14 那版就埋下的卧底 bug，2026-10-21 内容翻倍后才爆出来（余量不够容错）。 */
+    function syncCam(cam, dpr, countSpeed) {
       dpr = Math.max(1, dpr || 1);
       camRef = cam;
       var k = cam.k;
       var moved = (k !== last.k || cam.tx !== last.tx || cam.ty !== last.ty
         || dpr !== last.dpr || cam.viewW !== last.vw || cam.viewH !== last.vh);
       if (moved) {
-        pushPan((Math.abs(cam.tx - last.tx) + Math.abs(cam.ty - last.ty)) * dpr);
+        if (countSpeed) pushPan((Math.abs(cam.tx - last.tx) + Math.abs(cam.ty - last.ty)) * dpr);
         last.k = k; last.tx = cam.tx; last.ty = cam.ty; last.dpr = dpr;
         last.vw = cam.viewW; last.vh = cam.viewH; lastMove = now();
         if (settleTimer) global.clearTimeout(settleTimer);
         settleTimer = global.setTimeout(onSettle, settleMs + 20);
-      } else if (speedMax > 0.05) {
-        pushPan(0);
+      } else if (countSpeed && speedMax > 0.05) {
+        pushPan(0);          // 没动的那一帧也要计一个 0，否则分母少算
       }
       return moved;
     }
@@ -8396,7 +8457,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var t0 = now();
       if (round.lastT) { round.gapSum += t0 - round.lastT; round.gapN++; }
       round.lastT = t0;
-      var moved = syncCam(camRef, last.dpr);
+      var moved = syncCam(camRef, last.dpr, false);   // 速度只由 app 的 tick 采样（见 syncCam）
       if (moved) applyTransform();          // 机位变了：先落位，交接才按最新位置算
       if (!round) return;
       var late = !rectCoversView(round.rect) || !rectCoversView(snap.rect);
@@ -8427,7 +8488,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       if (!els[0]) attach();
       dpr = Math.max(1, dpr || 1);
       var k = cam.k;
-      var moved = syncCam(cam, dpr);
+      var moved = syncCam(cam, dpr, true);           // 一帧只在这里采样一次
       if (!enabled) { hide(); return false; }
       var pick = rectFor(k, cam.tx, cam.ty, dpr, cam.viewW, cam.viewH);
       if (!pick) { hide(); return false; }          // 该档不烘（区域模式未开）⇒ 交实时画，别排队
