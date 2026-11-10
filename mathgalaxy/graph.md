@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-10T14:56:42.420Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-10T15:21:56.476Z
 > 15 星系 / 105 星团 / 1608 节点 / 3329 连线（强边 3274，弱边 55；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -34038,7 +34038,7 @@ $$\bar f:\overline{\Omega}\longrightarrow\overline{\mathbb{D}},$$
 
 **与下游的关系**：本定理直接给出 `thm.boundary-correspondence` 的全部内容（那条只是本定理的 Jordan 区域版）；对 `thm.schwarz-christoffel`，它提供存在性 (i)（内部共形 + 边界同胚），但不提供 (iii) 参数-边长匹配。`thm.classification-surfaces` 与 `thm.rado` 不依赖本节点。
 
-**本图缺什么**：Jordan 曲线定理、crosscut、prime end（素端）、局部连通连续统的边界理论，均无独立节点。`thm.riemann-mapping` 只管内部；`thm.schwarz-reflection` 只对已知解析弧（圆、直线）反射，这里不知道 $f$ 把边界弧映到哪里；`prop.poisson-formula` 需要先有边界值。因此本节点保留 skeleton；要闭合，需先立 Jordan 曲线定理节点，再立 Carathéodory 延拓 / prime end 节点（或直接引外部定理并注明不可由本图推出）。
+**本图缺什么**：Jordan 曲线定理、crosscut、prime end（素端）、局部连通连续统的边界理论，均无独立节点。`thm.riemann-mapping` 只管内部；`thm.schwarz-reflection` 只对已知解析弧（圆、直线）反射，这里不知道 $f$ 把边界弧映到哪里；`thm.poisson-formula` 需要先有边界值。因此本节点保留 skeleton；要闭合，需先立 Jordan 曲线定理节点，再立 Carathéodory 延拓 / prime end 节点（或直接引外部定理并注明不可由本图推出）。
 
 **📌 用法**：凡是要把「内部共形」推到「闭包同胚」的命题都应引用本节点，而不是直接引用 `thm.riemann-mapping`——后者只保证内部双全纯。引用时必须同时声明依赖外部定理 A、B，不能当作本图已证。
 

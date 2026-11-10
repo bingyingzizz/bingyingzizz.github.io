@@ -2,9 +2,9 @@
 
 由 `tools/build.mjs` 生成。**不是硬门**：这三类都会误报，先看，别急着改数据。
 
-## 一、正文引用了不存在的 id（1 个）
+## 一、正文引用了不存在的 id（0 个）
 
-- `prop.poisson-formula` ← lem.caratheodory-osgood.notes
+（没有）
 
 ## 二、近同名却没有任何边（10 对）
 
