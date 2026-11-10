@@ -2,4 +2,5 @@
 [在星图里打开](../#n=def.quotient-topology)　·　第 1 页 [nodes/def.quotient-topology.md](./def.quotient-topology.md)　·　上一页 [nodes/def.quotient-topology.3.md](./def.quotient-topology.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`thm.cgwh-reflective`](../nodes/thm.cgwh-reflective.md) 弱 Hausdorff 紧生成空间是紧生成空间的反射子范畴 用
 - 被 [`prop.cg-equivalent-conditions`](../nodes/prop.cg-equivalent-conditions.md) 紧生成空间的等价刻画 用

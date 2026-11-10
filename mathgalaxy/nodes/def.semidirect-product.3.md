@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.h1-semidirect`](../nodes/thm.h1-semidirect.md) 一维上同调与分裂扩张
 - 被 [`thm.h1-semidirect`](../nodes/thm.h1-semidirect.md) 一维上同调与分裂扩张 用
+- 被 [`def.dihedral-group`](../nodes/def.dihedral-group.md) 二面体群 用

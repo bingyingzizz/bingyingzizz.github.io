@@ -1,8 +1,6 @@
-# Newman 解析定理闭合素数定理的最后一步
+# 素数定理的组装：ζ 延拓 + Re s=1 无零点 + Newman + 等价链
 `imp.nt-newman` · 推出 · strong 边 · 根 `../`
 
-`lem.newman-tauberian` Newman 解析定理 + `thm.chebyshev-estimate` Чебышёв 估计 + `thm.euler-product` Euler 乘积 → `thm.prime-number-theorem` 素数定理
+`lem.newman-tauberian` Newman 解析定理 + `thm.chebyshev-estimate` Чебышёв 估计 + `thm.euler-product` Euler 乘积 + `prop.zeta-continuation` ζ 的亚纯延拓（到 Re s>0） + `thm.zeta-no-zeros-line1` ζ 在 Re s=1 上无零点 + `lem.psi-theta-asymptotic` ψ 与 θ 的差是 o(x) + `lem.theta-pi-equivalence` θ~x 与 π~x/log x 等价 → `thm.prime-number-theorem` 素数定理
 
-im x/\log x$。∎
-
-> 这条边是素数定理链条上最后一块：命题 A（$\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。其余前提（$\zeta$ 的解析性质、$\pi$ 与 $\psi$ 的换算）见 `thm.prime-number-theorem` 与 `def.prime-counting` 的注，不另列 sources。
+由 `lem.psi-theta-asymptotic`，$\psi\sim x\iff\theta\sim x$；由 `lem.theta-pi-equivalence`，$\theta\sim x\iff\pi(x)\sim x/\log x$。故 $\pi(x)\sim x/\log x$。∎

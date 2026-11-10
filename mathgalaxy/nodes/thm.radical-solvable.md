@@ -7,13 +7,11 @@ layer 21 · 定理 · Galois 理论 · 抽象代数
 
 $f$ 的根可以用**根式**（四则运算与开 $n$ 次方）从 $F$ 的元素表示出来 $\iff$ $\operatorname{Gal}(K/F)$ 是**可解群**。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群：用到了定义 伽罗瓦群　[proofs/dep.galoisgroup-radical.md](../proofs/dep.galoisgroup-radical.md)
-
-- …另有入边，续页见 [nodes/thm.radical-solvable.2.md](./thm.radical-solvable.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.radical-solvable.4.md](./thm.radical-solvable.4.md)
+- ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.radical-solvable.2.md](./thm.radical-solvable.2.md)
 
 refs: Lang, Algebra, Ch. VI §6；Hungerford, Algebra, Ch. V §5；Artin, Galois Theory
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>松弛层（flabby sheaf） · 数学星图 MathGalaxy</title>
+<meta name="description" content="设 X 是拓扑空间， F 是 X 上的阿贝尔群层。称 F 为松弛层（或软弛层、flabby sheaf），如果对任意开集 U⊆ X ，限制映射 Γ(X,F)→Γ(U,F) 是满射：即每个开集上的截面都能延拓为全空间上的截面。 · English: flabby sheaf">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/def.flabby-sheaf.html">
+<link rel="alternate" type="text/markdown" href="def.flabby-sheaf.md" title="Markdown 原文（给 AI 的按需检索版）">
+<link rel="alternate" type="text/markdown" hreflang="en" href="def.flabby-sheaf.en.md" title="English entry (Markdown)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="松弛层（flabby sheaf） · 数学星图 MathGalaxy">
+<meta property="og:description" content="设 X 是拓扑空间， F 是 X 上的阿贝尔群层。称 F 为松弛层（或软弛层、flabby sheaf），如果对任意开集 U⊆ X ，限制映射 Γ(X,F)→Γ(U,F) 是满射：即每个开集上的截面都能延拓为全空间上的截面。 · English: flabby sheaf">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/def.flabby-sheaf.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#C89A2B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flabby-sheaf.html#concept","name":"松弛层","alternateName":"flabby sheaf","description":"设 X 是拓扑空间， F 是 X 上的阿贝尔群层。称 F 为松弛层（或软弛层、flabby sheaf），如果对任意开集 U⊆ X ，限制映射 Γ(X,F)→Γ(U,F) 是满射：即每个开集上的截面都能延拓为全空间上的截面。","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flabby-sheaf.html","inLanguage":["zh-CN","en"],"license":"https://creativecommons.org/licenses/by/4.0/","termsOfUse":"https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"数学星图 MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"termCode":"def.flabby-sheaf","keywords":"定义, 层论, 松弛层, flabby, 上同调"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"数学星图","item":"https://bingyingzizz.github.io/mathgalaxy/all.html"},{"@type":"ListItem","position":2,"name":"同调代数","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#homology"},{"@type":"ListItem","position":3,"name":"层上同调","item":"https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheafcoh"},{"@type":"ListItem","position":4,"name":"松弛层","item":"https://bingyingzizz.github.io/mathgalaxy/nodes/def.flabby-sheaf.html"}]}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#C89A2B">
+
+<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.sheafcoh">层上同调</a><span class="sep">›</span><span aria-current="page">松弛层</span></nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>松弛层</h1>
+    <p class="full">松弛层（flabby sheaf）</p>
+    <ul class="facts"><li>定义</li><li>依赖深度 layer 16</li><li>同调代数</li><li>拓扑学</li><li>层上同调</li></ul>
+    <p class="idline"><code>def.flabby-sheaf</code> · 定义 · 层论 · 松弛层 · flabby · 上同调</p>
+    <p class="aka"><span class="aka-k">又称</span>松弛层<span class="aka-s">·</span>flasque sheaf<span class="aka-s">·</span>软弛层</p>
+    
+    
+  </header>
+
+  <section class="sec statement">
+    <h2>陈述</h2>
+    <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 是拓扑空间，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">F</mi></mrow><annotation encoding="application/x-tex">\mathcal{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.09931em;">F</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 上的阿贝尔群层。称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">F</mi></mrow><annotation encoding="application/x-tex">\mathcal{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.09931em;">F</span></span></span></span> 为<strong>松弛层</strong>（或<strong>软弛层</strong>、flabby sheaf），如果对任意开集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">U\subseteq X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>，限制映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi mathvariant="script">F</mi><mo stretchy="false">)</mo><mo>→</mo><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>U</mi><mo separator="true">,</mo><mi mathvariant="script">F</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Gamma(X,\mathcal{F})\to\Gamma(U,\mathcal{F})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="mclose">)</span></span></span></span> 是满射：即每个开集上的截面都能延拓为全空间上的截面。</p>
+  </section>
+
+  <section class="sec notes"><h2>说明</h2><p><strong>与软层的区别</strong>：松弛层要求对<strong>开集</strong>可延拓；软层要求对<strong>闭集</strong>可延拓。两者一般互不包含，但在仿紧 Hausdorff 空间上松弛层是软层（这是定理，本节点不证）。</p><p><strong>为什么重要</strong>：松弛层无高阶上同调（Godement），所以松弛消解可以计算层上同调；Godement 消解的每一项正是松弛层（见 <a class="pn-xlink" data-xlink="def.godement-resolution" href="#" title="def.godement-resolution">Godement 消解</a>）。</p><p><strong>例子</strong>：Godement 消解中的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="script">C</mi><mi>q</mi></msup><mo stretchy="false">(</mo><mi mathvariant="script">F</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{C}^{q}(\mathcal{F})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.05834em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="mclose">)</span></span></span></span>；不连续截面层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>↦</mo><msub><mo>∏</mo><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow></msub><msub><mi mathvariant="script">F</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">U\mapsto\prod_{x\in U}\mathcal{F}_{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6943em;vertical-align:-0.011em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↦</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0993em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。常值层一般不是松弛层。</p><p>⚠ 松弛层与内射层不同：内射层一定松弛，反之不然。</p></section>
+
+  
+
+  <section class="rel-sec"><h2>它指向谁（出边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.godement-resolution.html">Godement 消解</a> <span class="arrow">用到</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>Godement 消解的每一项是松弛层。</p></div>
+</li></ul></section>
+  <section class="rel-sec"><h2>谁指向它（入边）</h2><h3 class="kind-h">定义引用 <span class="n">1</span></h3>
+<ul class="edges"><li class="edge">
+  <div class="edge-line"><a href="def.sheaf.html">层</a> <span class="arrow">→</span> 本页<span class="kind">定义引用</span></div>
+  
+  
+  <div class="edge-note"><p>松弛层是一种层。</p></div>
+</li></ul></section>
+
+  <section class="sec"><h2>参考</h2><ul class="refs"><li>Godement, Topologie algébrique et théorie des faisceaux, Ch. II · faisceaux flasques</li><li>Bredon, Sheaf Theory, Ch. II · flabby sheaves</li></ul></section>
+
+  
+
+  <section class="rel-sec sib-sec"><h2>同一星团的其他概念 <span class="n">42 个</span></h2><ul class="sibs"><li><a href="def.etale-sheaf.html">étale 层</a><span class="lay">layer 16</span></li><li><a href="def.skyscraper-sheaf.html">天际线层</a><span class="lay">layer 16</span></li><li><a href="def.cech-cohomology.html">Čech 上同调</a><span class="lay">layer 17</span></li><li><a href="def.etale-space.html">étale 空间</a><span class="lay">layer 17</span></li><li><a href="def.sheaf-cohomology.html">层上同调</a><span class="lay">layer 17</span></li><li><a href="lem.cartan-eilenberg.html">Cartan–Eilenberg 分解</a><span class="lay">layer 17</span></li><li><a href="prop.skyscraper-stalks.html">天际线层的茎</a><span class="lay">layer 17</span></li><li><a href="cor.homotopy-invariant-cohomology.html">层上同调是同伦不变量</a><span class="lay">layer 18</span></li><li><a href="def.acyclic-sheaf.html">无环层</a><span class="lay">layer 18</span></li><li><a href="def.fine-sheaf.html">细层</a><span class="lay">layer 18</span></li><li><a href="method.simplicial-cohomology.html">单纯方法算层上同调</a><span class="lay">layer 18</span></li><li><a href="prop.cech-as-colim.html">Čech 上同调是沿覆盖筛的余极限</a><span class="lay">layer 18</span></li><li><a href="prop.cech-interval-vanishing.html">区间上没有高阶 Čech 上同调</a><span class="lay">layer 18</span></li><li><a href="prop.cech-section-vanishing.html">带截面的覆盖上 Čech 零调</a><span class="lay">layer 18</span></li><li><a href="prop.chaus-cech-eq-h.html">紧 Hausdorff 上 Čech 就是上同调</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-functoriality.html">上同调的函子性</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-of-coproduct.html">上同调与不交并</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-presheaf-H.html">层化不改变导出的整体截面</a><span class="lay">layer 18</span></li><li><a href="prop.cohomology-via-associated-sheaf.html">用关联层算上同调</a><span class="lay">layer 18</span></li><li><a href="prop.etale-sheaf-examples.html">étale 层的例子</a><span class="lay">layer 18</span></li><li><a href="prop.filtered-limit-cohomology.html">滤过极限的上同调</a><span class="lay">layer 18</span></li><li><a href="prop.higher-cohomology-presheaf-zero.html">高次上同调预层的关联层为零</a><span class="lay">layer 18</span></li><li><a href="prop.presheaf-representable-acyclic.html">预层在可表示对象上没有高次上同调</a><span class="lay">layer 18</span></li><li><a href="prop.skyscraper-injective.html">天际线层是内射层</a><span class="lay">layer 18</span></li><li><a href="thm.cartan-leray.html">Cartan–Leray 谱序列</a><span class="lay">layer 18</span></li><li><a href="thm.leray-spectral-sequence.html">Leray 谱序列</a><span class="lay">layer 18</span></li><li><a href="cor.cech-cohomology-spectral.html">Čech 到上同调的谱序列</a><span class="lay">layer 19</span></li><li><a href="def.soft-sheaf.html">软层</a><span class="lay">layer 19</span></li><li><a href="lem.covering-free-acyclic.html">覆盖给出的自由复形零调</a><span class="lay">layer 19</span></li><li><a href="prop.acyclic-equivalent-conditions.html">无环性的四条等价说法</a><span class="lay">layer 19</span></li><li><a href="prop.acyclic-iff-cech.html">无环 ⟺ Čech 上同调为零</a><span class="lay">layer 19</span></li><li><a href="prop.cech-cochain-formula.html">Čech 上链的具体公式</a><span class="lay">layer 19</span></li><li><a href="prop.cech-higher-cohomology-presheaf.html">高次上同调预层没有 Čech 上同调</a><span class="lay">layer 19</span></li><li><a href="prop.cohomology-as-ext.html">上同调就是 Ext</a><span class="lay">layer 19</span></li><li><a href="prop.derived-pushforward-composition.html">推前的复合</a><span class="lay">layer 19</span></li><li><a href="prop.stone-acyclic.html">Stone 空间上的上同调为零</a><span class="lay">layer 19</span></li><li><a href="prop.topos-morphism-derived.html">拓扑斯态射的导出函子</a><span class="lay">layer 19</span></li><li><a href="thm.pushforward-enough-injectives.html">足够多内射层</a><span class="lay">layer 19</span></li><li><a href="def.godement-resolution.html">Godement 消解</a><span class="lay">layer 20</span></li><li><a href="prop.cech-h1-equals-h1.html">一次 Čech 就是一次上同调</a><span class="lay">layer 20</span></li><li><a href="thm.paracompact-cech-equals-sheaf.html">仿紧空间上的 Čech 就是上同调</a><span class="lay">layer 21</span></li></ul></section>
+
+  <section class="sec jump">
+    <h2>继续</h2>
+    <p>
+      <a href="../#n=def.flabby-sheaf">在星图里打开「松弛层」</a>　·　
+      <a href="../all.html">全部 1608 个概念</a>　·　
+      <a href="def.flabby-sheaf.md">Markdown 原文</a>　·　
+      <a href="def.flabby-sheaf.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>数学星图 MathGalaxy · 内容 v0.9.3 · 内容以
+     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 授权，代码 MIT</p>
+  <p>引用请写节点 id <code>def.flabby-sheaf</code> 与内容版本 ·
+    条款见 <a href="../LICENSE.txt">LICENSE</a> ·
+    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成</p>
+</footer>
+
+</body>
+</html>

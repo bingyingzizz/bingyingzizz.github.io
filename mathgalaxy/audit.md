@@ -35,6 +35,8 @@
 
 值只许 `complete`（缺省）/ `skeleton` / `external-input`。正文自己说「骨架 / 未展开 / 外部输入」却没标注的，列在下面。
 
+- 该标未标：`def.cw-complex`
+- 该标未标：`thm.prime-number-theorem`
 - 该标未标：`def.partial-isometry`
 - 该标未标：`def.connected-sum`
 - 该标未标：`def.triangulation`
@@ -50,7 +52,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**254** 处
+- 陈述里出现假设关键词、但没标注：**260** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -92,5 +94,5 @@
   - def.pre-analytic-ring  ‹Hausdorff›
   - def.analytic-ring  ‹完备›
   - thm.analytic-modules  ‹完备›
-  - …还有 214 处
+  - …还有 220 处
 

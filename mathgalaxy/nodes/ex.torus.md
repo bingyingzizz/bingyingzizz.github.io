@@ -14,7 +14,9 @@ $$T^{2} := S^{1} \times S^{1} ,$$
 - …另有入边，续页见 [nodes/ex.torus.2.md](./ex.torus.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ～弱边 [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格
+- 被 [`def.handle`](../nodes/def.handle.md) 环柄 用
+
+- …另有出边，续页见 [nodes/ex.torus.3.md](./ex.torus.3.md)
 
 refs: Munkres, Topology, Ch. 12；Hatcher, Algebraic Topology, Ch. 1
 

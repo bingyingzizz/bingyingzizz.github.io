@@ -8,8 +8,8 @@ layer 26 · 定理 · 同调群 · 拓扑学
 
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.cw-complex`](../nodes/def.cw-complex.md) CW 复形 用
 - 被 [`thm.gauss-bonnet`](../nodes/thm.gauss-bonnet.md) Gauss–Bonnet 定理 用
-- ～弱边 [`def.genus`](../nodes/def.genus.md) 亏格
 
 - …另有出边，续页见 [nodes/thm.euler-characteristic.4.md](./thm.euler-characteristic.4.md)
 

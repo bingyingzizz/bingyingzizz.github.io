@@ -15,7 +15,7 @@ $$\#A < \#\mathcal{P}(A)$$
 - …另有入边，续页见 [nodes/thm.cantor.2.md](./thm.cantor.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.real-uncountable`](../nodes/thm.real-uncountable.md) ℝ 不可数 用
+- ⇒ [`thm.real-uncountable`](../nodes/thm.real-uncountable.md) ℝ 不可数
 
 refs: Kunen, Set Theory, I.6
 

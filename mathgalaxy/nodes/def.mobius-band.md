@@ -15,7 +15,9 @@ $$(0, t) \sim (1, 1 - t), \qquad 0 \le t \le 1.$$
 - …另有入边，续页见 [nodes/def.mobius-band.2.md](./def.mobius-band.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`ex.klein-bottle`](../nodes/ex.klein-bottle.md) 克莱因瓶 用
+- 被 [`def.crosscap`](../nodes/def.crosscap.md) 交叉帽 用
+
+- …另有出边，续页见 [nodes/def.mobius-band.3.md](./def.mobius-band.3.md)
 
 refs: Munkres, Topology, Ch. 12（商空间与曲面）
 

@@ -17,4 +17,6 @@
 
 - James 定理 | James 紧性定理 → thm.james
 
+- 弱拓扑 | σ(E,E*) 拓扑 → def.weak-topology
+
 见 `../../alias.md`。

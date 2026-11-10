@@ -3,4 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.schur-triangularization`](../nodes/thm.schur-triangularization.md) Schur 三角化
-- 被 [`thm.qr-decomposition`](../nodes/thm.qr-decomposition.md) QR 分解 用
+- ⇒ [`thm.qr-decomposition`](../nodes/thm.qr-decomposition.md) QR 分解

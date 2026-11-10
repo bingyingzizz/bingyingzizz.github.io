@@ -6,6 +6,7 @@
 - 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
 - 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用
+- 被 [`def.weak-topology`](../nodes/def.weak-topology.md) 弱拓扑 用
 - 被 [`def.perfect-pairing`](../nodes/def.perfect-pairing.md) 完美配对 用
 - 被 [`thm.riesz-perfect-pairing`](../nodes/thm.riesz-perfect-pairing.md) Riesz 表示的配对版 用
 - 被 [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间 用

@@ -13,6 +13,8 @@ $$\mathbb{RP}^{2} := S^{2} \big/ (x \sim -x) ,$$
 - …另有入边，续页见 [nodes/ex.projective-plane.2.md](./ex.projective-plane.2.md)
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.crosscap`](../nodes/def.crosscap.md) 交叉帽 用
+
 - …另有出边，续页见 [nodes/ex.projective-plane.3.md](./ex.projective-plane.3.md)
 
 refs: Munkres, Topology, Ch. 12；Hatcher, Algebraic Topology, Ch. 2.2

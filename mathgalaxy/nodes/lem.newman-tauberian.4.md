@@ -2,6 +2,7 @@
 [在星图里打开](../#n=lem.newman-tauberian)　·　第 1 页 [nodes/lem.newman-tauberian.md](./lem.newman-tauberian.md)　·　上一页 [nodes/lem.newman-tauberian.3.md](./lem.newman-tauberian.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数：用到了定义 全纯函数　[proofs/def-link.newman-holomorphic.md](../proofs/def-link.newman-holomorphic.md)
-- [`def.locally-integrable`](../nodes/def.locally-integrable.md) 局部可积：用到了定义 局部可积　[proofs/def-link.newman-locallyintegrable.md](../proofs/def-link.newman-locallyintegrable.md)
-- [`def.contour-integral`](../nodes/def.contour-integral.md) 复围道积分：用到了定义 复围道积分　[proofs/def-link.newman-contour.md](../proofs/def-link.newman-contour.md)
+- [`thm.cauchy-integral-formula`](../nodes/thm.cauchy-integral-formula.md) Cauchy 积分公式 + [`thm.residue`](../nodes/thm.residue.md) 留数定理 + [`thm.cauchy-goursat`](../nodes/thm.cauchy-goursat.md) Cauchy–Goursat 积分定理：Cauchy 积分公式、留数公式与 Cauchy–Goursat $\implies$ Newman 围道恒等式　[proofs/imp.newman-cauchy-residue.md](../proofs/imp.newman-cauchy-residue.md)
+- [`def.analytic-continuation`](../nodes/def.analytic-continuation.md) 解析延拓：用到了定义 解析延拓　[proofs/def-link.newman-analytic.md](../proofs/def-link.newman-analytic.md)
+
+> 续见 [nodes/lem.newman-tauberian.5.md](./lem.newman-tauberian.5.md)

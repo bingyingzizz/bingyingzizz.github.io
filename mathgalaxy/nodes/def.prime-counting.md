@@ -13,6 +13,8 @@ $\pi$ 数素数个数，$\theta$ 按对数加权，$\psi$（**Чебышёв 函
 - [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/e147.definition.md](../proofs/e147.definition.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`lem.psi-theta-sum`](../nodes/lem.psi-theta-sum.md) ψ 与 θ 的分组恒等式
+
 - …另有出边，续页见 [nodes/def.prime-counting.2.md](./def.prime-counting.2.md)
 
 refs: 华罗庚《数论导引》第七、九章；Apostol, Ch. 4

@@ -7,3 +7,4 @@
 - ⇒ [`thm.integral-trig`](../nodes/thm.integral-trig.md) 三角有理函数的积分
 - ⇒ [`thm.cauchy-integral-formula`](../nodes/thm.cauchy-integral-formula.md) Cauchy 积分公式
 - ⇒ [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理
+- ⇒ [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理

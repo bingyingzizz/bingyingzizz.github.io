@@ -12,7 +12,7 @@ layer 19 · 定义 · 曲面的地形 · 拓扑学
 等价地：$S$ 是紧连通、无边界、局部同胚于 $\mathbb{R}^{2}$ 的 Hausdorff 第二可数空间。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.classification-surfaces`](../nodes/thm.classification-surfaces.md) 闭曲面分类定理 用
+- 被 [`def.polygon-representation`](../nodes/def.polygon-representation.md) 多边形表示 用
 
 - …另有出边，续页见 [nodes/def.closed-surface.4.md](./def.closed-surface.4.md)
 

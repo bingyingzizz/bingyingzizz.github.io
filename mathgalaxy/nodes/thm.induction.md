@@ -16,7 +16,7 @@ $$\emptyset \in S, \qquad x \in S \implies x \cup \{x\} \in S$$
 $$g(\emptyset) = a_0, \qquad g(x \cup \{x\}) = F(g(x)) \quad \forall x \in \omega$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.omega`](../nodes/thm.omega.md) 自然数集存在：用到了定义 自然数集存在　[proofs/dep.omega-induction.md](../proofs/dep.omega-induction.md)
+- [`thm.omega`](../nodes/thm.omega.md) 自然数集存在：dep.omega-induction　[proofs/dep.omega-induction.md](../proofs/dep.omega-induction.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.induction.2.md](./thm.induction.2.md)

@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.adjoint)　·　第 1 页 [nodes/def.adjoint.md](./def.adjoint.md)　·　上一页 [nodes/def.adjoint.6.md](./def.adjoint.6.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.chaus-pretopos`](../nodes/def.chaus-pretopos.md) 紧 Hausdorff 空间构成预拓扑斯 用
 - 被 [`def.tensor-abelian-sheaf`](../nodes/def.tensor-abelian-sheaf.md) 阿贝尔层的张量积 用
 - 被 [`cor.cg-exponential-adjoint`](../nodes/cor.cg-exponential-adjoint.md) 紧生成空间的指数伴随 用
 - 被 [`def.morphism-of-sites`](../nodes/def.morphism-of-sites.md) 景的态射 用

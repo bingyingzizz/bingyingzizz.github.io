@@ -3,5 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.implicit-function`](../nodes/thm.implicit-function.md) 隐函数定理 + [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：隐函数定理 $\implies$ 正则水平集是流形　[proofs/imp.tu-level-set.md](../proofs/imp.tu-level-set.md)
-- [`thm.implicit-function`](../nodes/thm.implicit-function.md) 隐函数定理：用到了定义 隐函数定理　[proofs/dep.tu-ift-level.md](../proofs/dep.tu-ift-level.md)
 - [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：用到了定义 光滑流形　[proofs/dep.tu-manifold-level.md](../proofs/dep.tu-manifold-level.md)

@@ -15,7 +15,7 @@ $$g(M) := \tfrac{1}{2} \operatorname{rank}_{\mathbb{Z}} H_{1}(M; \mathbb{Z}).$$
 - …另有入边，续页见 [nodes/def.genus.2.md](./def.genus.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ～弱边 [`thm.euler-characteristic`](../nodes/thm.euler-characteristic.md) Euler 示性数
+- 被 [`def.handle`](../nodes/def.handle.md) 环柄 用
 
 - …另有出边，续页见 [nodes/def.genus.3.md](./def.genus.3.md)
 

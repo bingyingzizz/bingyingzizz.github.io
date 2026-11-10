@@ -9,11 +9,13 @@ layer 17 · 定义 · 仿紧与单位分解 · 拓扑学
 > 陈述续见 [nodes/def.partition-of-unity.2.md](./def.partition-of-unity.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.fine-sheaf`](../nodes/def.fine-sheaf.md) 细层 用
+
+- …另有出边，续页见 [nodes/def.partition-of-unity.4.md](./def.partition-of-unity.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.partition-of-unity.3.md](./def.partition-of-unity.3.md)
-
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.partition-of-unity.4.md](./def.partition-of-unity.4.md)
 
 refs: Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch. 5
 

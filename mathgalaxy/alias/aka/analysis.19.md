@@ -25,6 +25,8 @@
 
 - Dini 导数 | 导数 | 四个 Dini 导数 → def.dini-derivative
 
-- Stolz-Cesaro theorem | Stolz–Cesàro | 施托尔茨-切萨罗定理 | Stolz 定理 → thm.stolz-cesaro
+- 弱拓扑 | σ(E,E*) 拓扑 → def.weak-topology
+
+- 素端 | Carathéodory 紧化 → def.prime-end
 
 > 续见 alias/aka/analysis.20.md

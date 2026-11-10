@@ -8,10 +8,8 @@ layer 22 · 命题 · 消解与维数 · 同调代数
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.ext1-extensions`](../nodes/thm.ext1-extensions.md) 一阶扩展的分类 用
 - ⇒ [`prop.pd-vanishing`](../nodes/prop.pd-vanishing.md) 投射维数与消失
-
-- …另有出边，续页见 [nodes/prop.dimension-shift.4.md](./prop.dimension-shift.4.md)
+- ⇒ [`thm.ext1-extensions`](../nodes/thm.ext1-extensions.md) 一阶扩展的分类
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.dimension-shift.3.md](./prop.dimension-shift.3.md)

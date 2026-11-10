@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`cor.pi1-sphere`](../nodes/cor.pi1-sphere.md) 高维球面的基本群 用
 - 被 [`prop.simply-connected-basepoint`](../nodes/prop.simply-connected-basepoint.md) 单连通与基点无关 用
+- 被 [`def.prime-end`](../nodes/def.prime-end.md) 素端 用

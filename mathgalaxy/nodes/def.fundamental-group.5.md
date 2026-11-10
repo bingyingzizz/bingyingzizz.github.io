@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.fundamental-group)　·　第 1 页 [nodes/def.fundamental-group.md](./def.fundamental-group.md)　·　上一页 [nodes/def.fundamental-group.4.md](./def.fundamental-group.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.lens-space`](../nodes/def.lens-space.md) 透镜空间 用
 - 被 [`def.simply-connected`](../nodes/def.simply-connected.md) 单连通 用
 - 被 [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理 用
 - 被 [`prop.pi1-group`](../nodes/prop.pi1-group.md) π₁ 是群 用

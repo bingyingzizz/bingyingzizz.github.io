@@ -10,14 +10,14 @@
 
 被最多结论当作前置（出边多）—— 值得优先学熟。
 
+- **33 / 33** `def.group` 群 · layer 7 · 代数结构
 - **31 / 32** `def.measure` 测度 · layer 15 · 测度的构造
-- **31 / 31** `def.group` 群 · layer 7 · 代数结构
+- **30 / 33** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
 - **30 / 33** `def.limit` 极限 · layer 11 · 图与极限
 - **30 / 33** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
-- **29 / 32** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
+- **29 / 32** `def.sheaf` 层 · layer 15 · 层与拓扑
 - **29 / 29** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **25 / 28** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
-- **25 / 28** `def.sheaf` 层 · layer 15 · 层与拓扑
 - **24 / 24** `def.function` 映射 · layer 5 · 关系与函数
 - **23 / 23** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 19 · 凝聚态阿贝尔群
 - **22 / 22** `def.functor` 函子 · layer 8 · 函子与自然变换
@@ -29,9 +29,9 @@
 - **20 / 21** `def.topos` 拓扑斯 · layer 17 · 拓扑斯
 - **20 / 21** `def.condensed-set` 凝聚态集 · layer 18 · 凝聚态集
 - **20 / 20** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
-- **19 / 20** `def.integrable` 可积 / L¹ · layer 21 · 积分
+- **19 / 21** `def.banach-space` Banach 空间 · layer 17 · 多元微分
 
-（共 980 个节点有非零计数；这里列前 20 条。）
+（共 993 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -40,9 +40,10 @@
 - **10 / 8** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 28 · 曲面的地形
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · layer 19 · 测度的构造
 - **8 / 8** `thm.bundle-classification` 丛的分类 · layer 34 · 丛的示性类
-- **8 / 6** `thm.de-rham` de Rham 定理 · layer 32 · 微分形式、积分与 de Rham
+- **8 / 5** `thm.de-rham` de Rham 定理 · layer 32 · 微分形式、积分与 de Rham
+- **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 32 · 数论函数与素数分布
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 23 · 同调群
-- **7 / 5** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
+- **7 / 6** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 33 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
@@ -56,15 +57,14 @@
 - **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 27 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
 - **6 / 6** `def.submanifold-volume` 诱导体积 · layer 32 · 微分形式、积分与 de Rham
-- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
 
-（共 1578 个节点有非零计数；这里列前 20 条。）
+（共 1600 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
 下游节点横跨的星团最多 —— 位置枢纽，但**不**代表该先学。
 
-- **16 团 / 31 节点** `def.group` 群 · layer 7 · 代数结构
+- **16 团 / 33 节点** `def.group` 群 · layer 7 · 代数结构
 - **16 团 / 24 节点** `def.function` 映射 · layer 5 · 关系与函数
 - **15 团 / 30 节点** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
 - **14 团 / 29 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
@@ -73,7 +73,7 @@
 - **13 团 / 20 节点** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
-- **10 团 / 29 节点** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
+- **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **10 团 / 17 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
 - **10 团 / 15 节点** `def.vs` 线性无关与基 · layer 10 · 向量空间与基
@@ -85,5 +85,5 @@
 - **9 团 / 17 节点** `def.inner-product` 内积 · layer 13 · 内积空间与正交性
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 980 个节点有非零计数；这里列前 20 条。）
+（共 993 个节点有非零计数；这里列前 20 条。）
 

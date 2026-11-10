@@ -1,18 +1,8 @@
 # Newman 解析定理　`lem.newman-tauberian`　·　说明
 根 `../`
 
-**证明.** 记 $B=\sup_{t\ge0}|f(t)|$。对 $T>0$ 令 $g_{T}(z)=\int_{0}^{T}f(t)e^{-zt}\,\mathrm{d}t$；$g_{T}$ 是整函数，且对 $\operatorname{Re}z>0$ 有
+**证明在本节点的入边**（Cauchy 积分公式 + 留数 + Cauchy–Goursat 的围道估计），本注只留两条用法说明。
 
-$$|g(z)-g_{T}(z)|=\left|\int_{T}^{\infty}f(t)e^{-zt}\,\mathrm{d}t\right|\le B\,\frac{e^{-T\operatorname{Re}z}}{\operatorname{Re}z}.\tag{1}$$
+**注 1（核里为什么有 $1+z^{2}/R^{2}$）**：$F(0)=1$ 使 $z=0$ 处的留数仍是 $g(0)-g_{T}(0)$；而在 $|z|=R$ 上 $1+z^{2}/R^{2}=2z\operatorname{Re}z/R^{2}$，恰好抵消 $1/\operatorname{Re}z$ 这个坏因子，使右半平面与左半圆上的估计都能对 $R$ 一致。
 
-**第一步（围道与核）.** 固定 $R>0$。由假设，$g$ 在闭半平面 $\{\operatorname{Re}z\ge0\}$ 的一个开邻域上全纯；紧集 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的每个点都有正距离到该邻域的补集，故存在 $\delta=\delta(R)>0$，使 $g$ 在
-
-$$D=\{z:\ |z|\le R,\ \operatorname{Re}z\ge-\delta\}$$
-
-上全纯（取 $\delta$ 小于紧集到补集的距离）。记 $C=\partial D$（正向）。函数
-
-$$F(z)=e^{zT}\left(1+\frac{z^{2}}{R^{2}}\right)$$
-
-是整函数，且 $F(0)=1$。$(g-g_{T})F/z$ 在 $D$ 内除 $z=0$ 外全纯，$z=0$ 是单极点、留数为 $(g-g_{T})(0)F(0)=g(0)-g_{T}(0)$。由 Cauchy 积分公式，
-
-> 续见 notes/lem.newman-tauberian.2.md
+**注 2（假设的强弱与 Tauber 现象）**：证明只要求 $g$ 在**每个**闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯；对素数定理的 $g$，这由 $\zeta$ 在 $\operatorname{Re}s=1$ 无零点加紧性得到。若只有「$g$ 在 $\operatorname{Re}z>0$ 全纯」，结论一般不成立：$f(t)=\sin t$ 有界，$g(z)=1/(z^{2}+1)$ 在虚轴有极点，而 $\int_{0}^{T}\sin t\,\mathrm{d}t$ 不收敛。

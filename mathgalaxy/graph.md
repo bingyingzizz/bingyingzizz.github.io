@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-10T14:01:07.338Z
-> 15 星系 / 105 星团 / 1586 节点 / 3287 连线（强边 3232，弱边 55；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-10T14:56:42.420Z
+> 15 星系 / 105 星团 / 1608 节点 / 3329 连线（强边 3274，弱边 55；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -4760,6 +4760,23 @@ $[\alpha] \cdot [\beta] := [\alpha \ast \beta], \qquad e := [e_{x_{0}}], \qquad 
 
 参考：Hatcher, Algebraic Topology, Ch. 1 §1.1 · simply connected spaces；Munkres, Topology (2nd ed.), Ch. 9 · basepoints and change of basepoint
 
+#### 透镜空间　`def.lens-space`
+*定义*　透镜空间 $L(p,q)$（$S^{3}$ 的自由商）
+
+设 $p\ge 2$，$q$ 是与 $p$ 互素的整数。**透镜空间** $L(p,q)$ 是三维球面 $S^{3}=\{(z_{1},z_{2})\in\mathbb{C}^{2}:|z_{1}|^{2}+|z_{2}|^{2}=1\}$ 在自由作用 $(z_{1},z_{2})\mapsto(\zeta z_{1},\zeta^{q}z_{2})$（$\zeta=e^{2\pi i/p}$）下的轨道空间，即 $L(p,q)=S^{3}/(\mathbb{Z}/p)$。
+
+**基本群**：$p>1$ 时 $\pi_{1}(L(p,q))\cong\mathbb{Z}/p$；投影 $S^{3}\to L(p,q)$ 是 $p$ 重覆叠（见 `def.covering-space`），$S^{3}$ 单连通故覆叠空间的基本群正是 $\mathbb{Z}/p$。
+
+**例子**：$L(2,1)\cong\mathbb{R}P^{3}$（对径粘合）；$L(p,1)$ 是可定向的三维透镜空间。
+
+**同胚分类**：$L(p,q)\cong L(p,q^{\prime})$ 当且仅当 $q^{\prime}\equiv\pm q^{\pm1}\pmod p$；$q$ 影响同胚型但不影响同伦型（透镜空间是「同伦等价而非同胚」的经典例子）。
+
+**同调**：$H_{1}\cong\mathbb{Z}/p$，$H_{2}=0$，$H_{3}\cong\mathbb{Z}$（$L(p,q)$ 是闭可定向三维流形）。
+
+⚠ 定义要求 $\gcd(p,q)=1$，否则作用不自由、商空间不是流形。
+
+参考：Hatcher, Algebraic Topology, Ch. 1 §1.3 · lens spaces；Munkres, Topology (2nd ed.), Ch. 9 · covering spaces
+
 ### 星团：同调群
 > 把「这个空间有几个 n 维的洞」变成一个可计算的阿贝尔群：标准单纯形 → 单纯复形 → 链群与边缘算子（∂² = 0）→ 单纯同调 → 奇异同调 → 约化同调与 H₀ → 对的长正合列 → Mayer–Vietoris → 球面的同调 → Euler 示性数；最后用单纯逼近把「奇异」与「单纯」缝成同一个东西。
 
@@ -5280,6 +5297,21 @@ $$f(x) \;\in\; \bigcap_{i=0}^{p} \operatorname{st}_{L}\big(g(v_{i})\big).$$
 
 参考：Munkres, Elements of Algebraic Topology, Ch. 1 §13 · Simplicial Approximation Theorem；Hatcher, Algebraic Topology, Ch. 2 §2.1 · simplicial approximation；Spanier, Algebraic Topology, Ch. 3 §4 · Simplicial Approximation
 
+#### CW 复形　`def.cw-complex`
+*定义*　CW 复形（胞腔分解）
+
+**CW 复形**是拓扑空间 $X$ 连同骨架滤过 $X^{(0)}\subseteq X^{(1)}\subseteq\cdots$，$X=\bigcup_{n}X^{(n)}$，其中 $X^{(n)}$ 由 $X^{(n-1)}$ 粘接一族 $n$-胞腔得到：每个 $n$-胞腔是开圆盘 $e_{\alpha}^{n}$，粘贴映射 $\varphi_{\alpha}:S^{n-1}\to X^{(n-1)}$，$X^{(n)}=X^{(n-1)}\sqcup_{\alpha}e_{\alpha}^{n}$。要求两条：(i) $X$ 取弱拓扑（$A\subseteq X$ 闭当且仅当每个 $A\cap\overline{e_{\alpha}^{n}}$ 闭）；(ii) 闭包有限（每个 $\overline{e_{\alpha}^{n}}$ 只与有限个胞腔相交）。有限 CW 复形的 Euler 示性数为 $\chi(X)=\sum_{n}(-1)^{n}c_{n}$，其中 $c_{n}$ 是 $n$-胞腔的个数。
+
+**与单纯复形的关系**：单纯复形是 CW 复形的特例（粘贴映射取线性同胚）；CW 更宽松，粘贴映射只需连续。
+
+**Euler 示性数**：对有限 CW 复形，$\chi(X)$ 与同调读数 $\sum_{n}(-1)^{n}\operatorname{rank}H_{n}(X)$ 一致；这也是 `thm.euler-characteristic` 的 CW 版本（该节点按单纯剖分陈述）。
+
+**例子**：$S^{n}$ 是一个 $0$-胞腔加一个 $n$-胞腔；$\mathbb{R}P^{n}$ 在每一维各有一个胞腔；环面是 $1$ 个 $0$-胞腔、$2$ 个 $1$-胞腔、$1$ 个 $2$-胞腔。
+
+⚠ 弱拓扑与闭包有限两条都不能省：只取商拓扑可能使粘贴点附近的开集结构不对；闭包有限排除无限累积，保证有限胞腔数时 Euler 示性数有定义。
+
+参考：Hatcher, Algebraic Topology, Ch. 0 · CW complexes；Munkres, Elements of Algebraic Topology, Ch. 1 · CW complexes
+
 #### 链同伦　`def.chain-homotopy`
 *定义*　链同伦：两个链映射之间的「代数同伦」
 
@@ -5421,6 +5453,64 @@ $$H_{1}(M; \mathbb{Z}) \cong \mathbb{Z}^{2g},$$
 📌 与 Euler 示性数的关系 $\chi(M) = 2 - 2g(M)$ 也是**定理**（下一刀），这里只记一句。
 
 参考：Hatcher, Algebraic Topology, Ch. 2.2（曲面与亏格）；Massey, A Basic Course in Algebraic Topology
+
+#### 多边形表示　`def.polygon-representation`
+*定义*　曲面的多边形表示（边配对粘合）
+
+设 $n\ge 2$，$P$ 是平面上的正 $2n$ 边形，其边界边按一个无不动点的对合 $\tau$ 两两配对。把每对边按 $x\sim\tau(x)$ 粘合，商空间 $S=P/{\sim}$ 称为一个**多边形表示**。若每对边粘合时定向相反，则 $S$ 可定向；若存在同向粘合的边对，则 $S$ 不可定向。
+
+**标准形**：可定向闭曲面有 $4g$ 边形表示 $a_{1}b_{1}a_{1}^{-1}b_{1}^{-1}\cdots a_{g}b_{g}a_{g}^{-1}b_{g}^{-1}$；不可定向闭曲面有 $2k$ 边形表示 $c_{1}c_{1}\cdots c_{k}c_{k}$。
+
+**例子**：环面是 $4$ 边形 $aba^{-1}b^{-1}$；射影平面是 $2$ 边形 $aa$；克莱因瓶是 $4$ 边形 $abab^{-1}$。
+
+**为什么用它**：多边形表示把曲面压成有限组合数据（边配对），分类定理的输入正是这个数据；「粘边」是构造曲面的逆操作。
+
+⚠ 粘合结果未必是流形：若某个顶点链环不是圆（例如 $2$ 边形 $aa$ 的两个端点粘成一点时需单独检查），商空间可能是伪流形。多边形表示的定义只给商空间，是不是曲面要另验。
+
+参考：Munkres, Topology (2nd ed.), Ch. 12 · classification of surfaces；Hatcher, Algebraic Topology, Ch. 2 §2.2 · polygonal presentation
+
+#### 环柄　`def.handle`
+*定义*　环柄（连通和 $T^{2}$）
+
+设 $S$ 是闭曲面。在 $S$ 上挖去两个开圆盘，得到边界为两个圆周的曲面；再把圆柱 $S^{1}\times[0,1]$ 的两端分别粘到这两个边界圆周上，所得闭曲面称为在 $S$ 上**加一个环柄**。等价地，加环柄就是与环面作连通和：$S\mapsto S\#T^{2}$。
+
+**对可定向曲面**：加一个环柄使亏格 $g$ 加 $1$、Euler 示性数减 $2$。闭可定向曲面恰由球面加 $g$ 个环柄得到（分类定理）。
+
+**对不可定向曲面**：加环柄保持不可定向，但会增加「可定向部分」的亏格；不可定向曲面的标准形用交叉帽而不是环柄。
+
+⚠ 环柄与交叉帽不同：挖两个洞粘圆柱 vs 挖一个洞粘 Möbius 带；前者保持可定向性，后者破坏它。
+
+参考：Munkres, Topology (2nd ed.), Ch. 12 · connected sum and handle；Hatcher, Algebraic Topology, Ch. 2 §2.2 · genus
+
+#### 交叉帽　`def.crosscap`
+*定义*　交叉帽（连通和 $\mathbb{R}P^{2}$）
+
+设 $S$ 是闭曲面。在 $S$ 上挖去一个开圆盘，把边界圆周上的对径点粘合（$x\sim -x$），所得闭曲面称为在 $S$ 上**加一个交叉帽**。等价地，加交叉帽就是与射影平面作连通和：$S\mapsto S\#\mathbb{R}P^{2}$；也等于把 Möbius 带沿边界粘到挖去的圆盘上。
+
+**效果**：加一个交叉帽使 Euler 示性数减 $1$，并使曲面不可定向。球面加 $k\ge1$ 个交叉帽得到全部闭不可定向曲面（分类定理）。
+
+**例子**：$k=1$ 是射影平面；$k=2$ 是克莱因瓶。
+
+⚠ 交叉帽不是「把圆盘直接粘回去」：对径粘合改变边界附近的局部结构，使曲面不可定向；直接粘回则只是原曲面。
+
+参考：Munkres, Topology (2nd ed.), Ch. 12 · crosscap；Hatcher, Algebraic Topology, Ch. 2 §2.2 · nonorientable surfaces
+
+#### 不可定向亏格　`def.nonorientable-genus`
+*定义*　不可定向亏格 $k$（$\chi=2-k$）
+
+设 $M$ 是闭不可定向曲面。它的**不可定向亏格** $k(M)$ 是使 $M$ 同胚于 $k$ 个射影平面的连通和的最小整数 $k\ge 1$。等价地，$k(M)$ 是标准形中交叉帽的个数，且 Euler 示性数满足 $\chi(M)=2-k(M)$。
+
+**为什么不直接用 $\chi=2-k$ 当定义**：那会先假定分类定理（每个闭不可定向曲面都同胚于标准形）；用「射影平面连通和的最小个数」定义不依赖分类，和 `def.genus` 用同调定义是同一个思路。
+
+**低值**：$k=1$ 射影平面；$k=2$ 克莱因瓶；$k=3$ 是「三交叉帽」曲面。
+
+**与可定向亏格的区别**：可定向 $\chi=2-2g$；不可定向 $\chi=2-k$。同一个 $\chi$ 在两类曲面里给出不同的「洞数」，不能混用。
+
+**同调读数**：$H_{1}(M;\mathbb{Z})\cong\mathbb{Z}^{k-1}\oplus\mathbb{Z}/2$（$k\ge1$），挠部正是不可定向性的痕迹。
+
+⚠ $k$ 与 $g$ 之间没有简单换算；把不可定向曲面「可定向双覆盖」后才得到可定向亏格 $g=k-1$。
+
+参考：Munkres, Topology (2nd ed.), Ch. 12 · nonorientable genus；Hatcher, Algebraic Topology, Ch. 2 §2.2 · Euler characteristic of surfaces
 
 #### 闭曲面　`def.closed-surface`
 *定义*　闭曲面（紧、连通、无边界的 2 维拓扑流形）
@@ -6296,6 +6386,51 @@ $$A \big/ \ker f \;\cong\; \operatorname{im} f.$$
 **它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。
 
 参考：Lang, Algebra, Ch. I §4；Dummit & Foote, Abstract Algebra, §10.2
+
+#### 自由群　`def.free-group`
+*定义*　自由群 $F(S)$（约化字）
+
+设 $S$ 是集合。$S$ 上的**自由群** $F(S)$ 由所有**约化字** $s_{1}^{\varepsilon_{1}}\cdots s_{n}^{\varepsilon_{n}}$ 组成，其中 $s_{i}\in S$、$\varepsilon_{i}=\pm1$，且相邻的 $s_{i}=s_{i+1}$、$\varepsilon_{i}=-\varepsilon_{i+1}$ 已被相消；空字记 $1$。乘法为字的拼接后再约化。包含映射 $\iota:S\to F(S)$ 把 $s$ 送到单字母字。
+
+**正规形**：约化字是每个元素的唯一表示，故两个字相等当且仅当约化后逐字母相同；这使 $F(S)$ 的运算良定义且无其他关系。
+
+**基本例子**：$F(\emptyset)=1$；$F(\{s\})\cong\mathbb{Z}$（字 $s^{n}$）；$F(\{a,b\})$ 是非阿贝尔群，$\pi_{1}(S^{1}\vee S^{1})\cong F(\{a,b\})$。
+
+⚠ **与自由阿贝尔群不同物**：`thm.csz-free` 说的是自由阿贝尔群（交换），本节点是非阿贝尔自由群；$F(S)$ 的交换化才是自由阿贝尔群。
+
+**为什么叫自由**：除群公理外不施加任何关系；泛性质见 `def.free-group-universal`。
+
+参考：Lang, Algebra, Ch. I §12 · free groups；Dummit and Foote, Abstract Algebra, §6.3 · free groups
+
+#### 自由群的泛性质　`def.free-group-universal`
+*定义*　自由群的泛性质（左伴随）
+
+设 $S$ 是集合，$F(S)$ 是自由群，$\iota:S\to F(S)$ 是包含。对任意群 $G$ 与任意映射 $f:S\to G$，存在唯一的群同态 $\tilde f:F(S)\to G$ 使 $\tilde f\circ\iota=f$。等价地，$\operatorname{Hom}_{\mathbf{Grp}}(F(S),G)\cong\operatorname{Hom}_{\mathbf{Set}}(S,U(G))$，其中 $U$ 是遗忘函子。
+
+**含义**：给自由群一个同态，等价于给生成元集合一个到目标群的任意映射；生成元之间没有需要满足的关系。
+
+**唯一性**：由 $\tilde f(s)=\iota(s)$ 与同态性，$\tilde f(s^{\varepsilon})=f(s)^{\varepsilon}$，于是 $\tilde f$ 在生成元上被唯一确定；存在性由字的乘法直接验证。
+
+**伴随**：泛性质正是「$F$ 是遗忘函子 $U:\mathbf{Grp}\to\mathbf{Set}$ 的左伴随」的定义（见 `def.adjoint`）：单位 $\iota$ 给出 $\operatorname{Hom}(F(S),G)\cong\operatorname{Hom}(S,U(G))$。
+
+⚠ 若只要求「存在」而不要求「唯一」，则任何包含 $S$ 的群都满足，泛性质就不再刻画自由群。
+
+参考：Lang, Algebra, Ch. I §12 · universal property of free groups；Mac Lane, Categories for the Working Mathematician, Ch. IV §1 · free groups as adjoint
+
+#### 二面体群　`def.dihedral-group`
+*定义*　二面体群 $D_{n}$（正 $n$ 边形的对称群）
+
+设 $n\ge 3$。**二面体群** $D_{n}$ 是正 $n$ 边形的对称群，阶为 $2n$，由旋转 $r$（转角 $2\pi/n$）与一个反射 $s$ 生成，满足关系 $r^{n}=1$、$s^{2}=1$、$srs=r^{-1}$。等价地，$D_{n}=\langle r,s\mid r^{n}=s^{2}=1,\ srs=r^{-1}\rangle$。
+
+**几何**：$D_{n}$ 的元素是 $n$ 个旋转 $1,r,\ldots,r^{n-1}$ 与 $n$ 个反射 $s,rs,\ldots,r^{n-1}s$；反射都是 $2$ 阶。
+
+**结构**：$D_{n}\cong\mathbb{Z}/n\rtimes\mathbb{Z}/2$，其中 $\mathbb{Z}/2$ 通过 $r\mapsto r^{-1}$ 作用在 $\mathbb{Z}/n$ 上（见 `def.semidirect-product`）。旋转子群 $\langle r\rangle$ 正规，商为 $\mathbb{Z}/2$。
+
+**低阶**：$D_{3}\cong S_{3}$（正三角形对称群，阶 $6$）；$D_{4}$ 是正方形对称群（阶 $8$）；$D_{n}$ 可解，因为 $\mathbb{Z}/n$ 与 $\mathbb{Z}/2$ 都交换。
+
+⚠ **记号歧义**：有的书用 $D_{2n}$ 表示阶 $2n$ 的二面体群；本图统一用 $D_{n}$ 表示阶 $2n$。
+
+参考：Lang, Algebra, Ch. I §6 · dihedral groups；Dummit and Foote, Abstract Algebra, §1.2 · dihedral groups
 
 #### 环　`def.ring`
 *定义*　环与交换环
@@ -14162,6 +14297,23 @@ Sard 给出的门槛是 $C^{k}$、$k > n - m$。
 
 参考：Milnor, Topology from the Differentiable Viewpoint, §3；Sternberg, Lectures on Differential Geometry, §II.3；Guillemin–Pollack, Differential Topology, §2
 
+### （未归入星团）
+
+#### 素端　`def.prime-end`
+*定义*　素端（prime end）与 Carathéodory 紧化
+
+设 $\Omega\subset\mathbb{C}$ 是单连通真区域。$\Omega$ 中的**横截弧**是端点落在 $\partial\Omega$ 上、内部含于 $\Omega$ 的简单弧。横截弧把 $\Omega$ 分成两个区域；按包含关系取这些区域的极限，得到 $\Omega$ 的**素端**（prime end）的等价类。素端集合记 $\partial_{p}\Omega$，配以自然的极限拓扑（Carathéodory 紧化），使 $\overline{\Omega}^{p}=\Omega\cup\partial_{p}\Omega$ 紧。
+
+**Jordan 区域的情形**：若 $\partial\Omega$ 是 Jordan 曲线，则素端与边界点一一对应，Carathéodory 紧化就是通常的闭包；这正是 `thm.boundary-correspondence` 所讨论的边界对应。
+
+**一般区域**：素端可能对应多个边界点（例如梳状区域的尖端），也可能一个边界点对应多个素端；素端是「从内部看边界」的精细对象。
+
+**Carathéodory 定理**：Riemann 映射 $f:\Omega\to\mathbb{D}$ 连续延拓为 $\overline{\Omega}^{p}\to\overline{\mathbb{D}}$ 的同胚（见 `thm.riemann-mapping`、`thm.boundary-correspondence`）。
+
+⚠ 本图无 Jordan 曲线定理与横截弧节点；此节点只给定义与用途，不含定理证明。
+
+参考：Carathéodory, Conformal Representation, Ch. II · prime ends；Pommerenke, Boundary Behaviour of Conformal Maps, Ch. 2 · prime ends
+
 ## 星系：泛函分析（Functional Analysis）
 > 把「函数」本身当点：赋范空间与 Banach 空间、有界线性算子与对偶、$H^*\cong H$ 的 Hilbert 空间，再用 Baire 纲一次抽出三大定理（一致有界 / 开映射 / 闭图像）。
 
@@ -14709,6 +14861,21 @@ Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\varphi \
 📌 本图只有正向的具体例子：Hilbert 空间与 $L^p$（$1<p<\infty$）自反，故每个泛函达到范数（由 Riesz 表示可直接看出）。
 
 参考：Conway, A Course in Functional Analysis · Banach 空间；Diestel, Sequences and Series in Banach Spaces, Ch. 3
+
+#### 弱拓扑　`def.weak-topology`
+*定义*　弱拓扑 $\sigma(E,E^{*})$
+
+设 $E$ 是赋范空间，$E^{*}$ 是其连续对偶。$E$ 上的**弱拓扑** $\sigma(E,E^{*})$ 是使所有 $\varphi\in E^{*}$ 都连续的最弱拓扑；等价地，它由半范数族 $p_{\varphi}(x)=|\varphi(x)|$（$\varphi\in E^{*}$）生成。
+
+**基本事实**：范数收敛推出弱收敛，反之不然。例如 $\ell^{2}$ 中的标准基 $e_{n}\rightharpoonup0$（弱收敛），但 $\|e_{n}\|=1$ 不趋于 $0$。
+
+**为什么用它**：弱拓扑把对偶的元素都变成连续函数，于是可以用泛函分离点、取弱紧性；自反空间的有界闭球弱紧（Eberlein–Šmulian，本图尚无节点）。
+
+**与弱*拓扑的区别**：弱*拓扑在 $E^{*}$ 上由 $E$ 的元素 $x\mapsto\varphi(x)$ 生成，$E^{*}$ 的弱*紧性即 Banach–Alaoglu 定理（本图尚无节点）。
+
+⚠ 弱拓扑不是范数拓扑：弱开集比范数开集少得多；无限维赋范空间的弱拓扑不第一可数。
+
+参考：Rudin, Functional Analysis, Ch. 3 · weak topology；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 3 · weak topology
 
 #### Fréchet 导数　`thm.frechet-derivative`
 *定义*　Fréchet 导数：赋范空间之间的导数就是有界线性算子
@@ -25828,6 +25995,62 @@ $t \mapsto t^{n}$ 是「$n$ 次 Kummer 覆叠」，把开 $n$ 次方这件事变
 
 参考：Milne, Étale Cohomology —— étale 拓扑与有限 étale 覆叠；Stacks Project —— Étale Cohomology 一章（étale 层的例子）
 
+#### 松弛层　`def.flabby-sheaf`
+*定义*　松弛层（flabby sheaf）
+
+设 $X$ 是拓扑空间，$\mathcal{F}$ 是 $X$ 上的阿贝尔群层。称 $\mathcal{F}$ 为**松弛层**（或**软弛层**、flabby sheaf），如果对任意开集 $U\subseteq X$，限制映射 $\Gamma(X,\mathcal{F})\to\Gamma(U,\mathcal{F})$ 是满射：即每个开集上的截面都能延拓为全空间上的截面。
+
+**与软层的区别**：松弛层要求对**开集**可延拓；软层要求对**闭集**可延拓。两者一般互不包含，但在仿紧 Hausdorff 空间上松弛层是软层（这是定理，本节点不证）。
+
+**为什么重要**：松弛层无高阶上同调（Godement），所以松弛消解可以计算层上同调；Godement 消解的每一项正是松弛层（见 `def.godement-resolution`）。
+
+**例子**：Godement 消解中的 $\mathcal{C}^{q}(\mathcal{F})$；不连续截面层 $U\mapsto\prod_{x\in U}\mathcal{F}_{x}$。常值层一般不是松弛层。
+
+⚠ 松弛层与内射层不同：内射层一定松弛，反之不然。
+
+参考：Godement, Topologie algébrique et théorie des faisceaux, Ch. II · faisceaux flasques；Bredon, Sheaf Theory, Ch. II · flabby sheaves
+
+#### 细层　`def.fine-sheaf`
+*定义*　细层（fine sheaf）
+
+设 $X$ 是仿紧 Hausdorff 空间，$\mathcal{F}$ 是 $X$ 上的阿贝尔群层。称 $\mathcal{F}$ 为**细层**，如果 $\mathcal{F}$ 具有局部有限单位分解作用：对 $X$ 的任意局部有限开覆盖 $\{U_{i}\}$，存在层自同态 $\eta_{i}:\mathcal{F}\to\mathcal{F}$，满足 $\operatorname{supp}\eta_{i}\subseteq U_{i}$ 且局部有限和 $\sum_{i}\eta_{i}=\operatorname{id}_{\mathcal{F}}$。
+
+**典型例子**：光滑流形上的 $C^{\infty}$-模层（微分形式层）是细层；单位分解直接给出 $\eta_{i}$（乘以 $\rho_{i}$）。
+
+**性质**：细层一定是软层（把单位分解用于闭集上的截面延拓）；软层在仿紧 Hausdorff 上无高阶上同调。因此细层消解可计算层上同调。
+
+**与松弛层的关系**：细层与松弛层一般互不包含；Godement 消解用的是松弛层，而 de Rham 复形用的是细层，两者都通向无环性。
+
+⚠ 定义中的单位分解需要仿紧性；没有仿紧性时「细」的通常定义改用 $C(X)$-模结构。
+
+参考：Godement, Topologie algébrique et théorie des faisceaux, Ch. II · faisceaux fins；Bredon, Sheaf Theory, Ch. II · fine sheaves and partitions of unity
+
+#### 软层　`def.soft-sheaf`
+*定义*　软层（闭集截面可延拓）
+
+设 $X$ 是拓扑空间，$\mathcal{F}$ 是 $X$ 上的阿贝尔群层。称 $\mathcal{F}$ 为**软层**，如果对任意闭集 $A\subseteq X$，限制映射 $\Gamma(X,\mathcal{F})\to\Gamma(A,\mathcal{F})$ 是满射：即闭集上的每个截面都能延拓为全空间上的截面。
+
+**与细层的关系**：细层（有单位分解作用的层）一定是软层；仿紧 Hausdorff 上，$C^{\infty}$-模层（如微分形式层）是细层，因而软。常值层一般不是软层。
+
+**为什么重要**：仿紧 Hausdorff 上软层无高阶上同调（Godement 定理），因此软消解可用于计算层上同调。本图已有 `def.acyclic-sheaf`，但「软层无环」的证明尚未立节点。
+
+⚠ 软层与内射层不同：内射层一定软，反之不然；软性是「截面延拓」性质，内射性是范畴性质。
+
+参考：Godement, Topologie algébrique et théorie des faisceaux, Ch. II · soft sheaves；Bredon, Sheaf Theory, Ch. II · soft and fine sheaves
+
+#### Godement 消解　`def.godement-resolution`
+*定义*　Godement 消解（松弛层消解）
+
+设 $\mathcal{F}$ 是 $X$ 上的阿贝尔群层。**Godement 消解**是复形 $0\to\mathcal{F}\to\mathcal{C}^{0}(\mathcal{F})\to\mathcal{C}^{1}(\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\mathcal{C}^{q}(\mathcal{F})$ 是松弛层（flabby），因而无环。
+
+**构造要点**：$\mathcal{C}^{0}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$ 把截面逐点记录为茎的元素；限制映射是投影，故任意开集上的截面都能延拓（松弛）。$\mathcal{C}^{q}$ 取 $q$ 次「茎积」的交替版本，微分是 Čech 型交替和。
+
+**用途**：松弛层无环（Godement 定理），故 Godement 消解计算层上同调：$H^{q}(X,\mathcal{F})\cong H^{q}(\Gamma(X,\mathcal{C}^{\bullet}(\mathcal{F})))$。这是「任意层都有规范无环消解」的标准构造，不需要内射层。
+
+⚠ 本图有 `def.acyclic-sheaf`、`def.right-derived-functor`，但尚未证明「松弛层无环」；此节点只定义构造，不含该定理的证明。
+
+参考：Godement, Topologie algébrique et théorie des faisceaux, Ch. II · résolution flasque；Weibel, An Introduction to Homological Algebra, Ch. 2 · Godement resolution
+
 #### 层上同调　`def.sheaf-cohomology`
 *定义*　层上同调 $H^{n}(X, M^{\bullet})$
 
@@ -28102,6 +28325,21 @@ $\operatorname{Ext}^{1}$ 这条是 $n = 1$ 的最简单情形。
 ⚠️ 「等价」的严格含义：同构必须**恒等在两端**。允许两端也取（非恒等的）同构时，得到的分类会粗一档 —— 那种版本对应的是 $\operatorname{Hom}$ 里可逆元的轨道，不再是一一对应。
 
 参考：Rotman, An Introduction to Homological Algebra (2nd ed.), Ext 与 Tor 的部分 · 扩张的等价类与一阶 Ext 一一对应（Baer sum）；Mac Lane, Homology (1963), 扩张（extensions）的部分 · Ext 与扩张的对应
+
+#### 平坦维数　`def.flat-dimension`
+*定义*　平坦维数 $\operatorname{fd}_{R}M$
+
+设 $M$ 是 $R$-模。$M$ 的**平坦维数** $\operatorname{fd}_{R}M$ 是使 $M$ 有一条长度 $n$ 的平坦消解（正合列 $0\to F_{n}\to\cdots\to F_{0}\to M\to 0$，各项 $F_{i}$ 平坦）的最小整数 $n$；若不存在，记 $\operatorname{fd}_{R}M=\infty$。
+
+**基本关系**：$\operatorname{fd}M=0$ 当且仅当 $M$ 平坦（见 `def.flat-module`）。因为投射模平坦，总有 $\operatorname{fd}M\le\operatorname{pd}M$（`def.projective-dimension`）。
+
+**与内射维数的对偶**：$\operatorname{fd}_{R}M=\operatorname{id}_{R^{\mathrm{op}}}\operatorname{Hom}_{\mathbb{Z}}(M,\mathbb{Q}/\mathbb{Z})$，即特征对偶把平坦维数换成同侧内射维数。
+
+**整体维数**：环的弱整体维数是所有模的平坦维数的上确界；Noether 环上弱整体维数等于整体维数。
+
+⚠ 本图此前只在 `def.injective-dimension` 注里提到「未单列平坦维数」，本节点补上定义；平坦维数不是投射维数的同义词。
+
+参考：Weibel, An Introduction to Homological Algebra, Ch. 4 · flat dimension；Rotman, An Introduction to Homological Algebra, Ch. 8 · homological dimensions
 
 ### 星团：群上同调
 > 从群作用造出不变量：群环与 $G$-模 → 不变量函子 $(-)^G$ 及其导出函子 $H^n(G,-)$ → 标准（bar）消解 → $H^1$ 与半直积、$H^2$ 与群扩张、$2$-上圈 → 低次正合序列。
@@ -39508,43 +39746,15 @@ $$\lim_{x \to \infty} \frac{\pi(x)}{x / \log x} = 1 .$$
 
 等价形式：$\theta(x) \sim x$、$\psi(x) \sim x$、$p_{n} \sim n\log n$（$p_{n}$ 是第 $n$ 个素数）。
 
-**本节点已完整。** 引理 1–4、命题 A（$\zeta$ 的解析延拓 + $\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。
+**本节点只给陈述、记号与依赖链；完整证明在组装边与各自节点的入边，不写回本注。**
 
-**记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$。
+**记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$（见 `def.prime-counting`）。
 
-**引理 1（$\psi$ 与 $\theta$ 的关系）**：$\psi(x)=\sum_{k\ge1}\theta\bigl(x^{1/k}\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\le x\iff p\le x^{1/k}$，每组贡献 $\log p$，求和即得。
+**依赖链**： 1. `lem.psi-theta-sum`：$\psi(x)=\sum_{k\ge1}\theta(x^{1/k})$；`lem.psi-theta-asymptotic`：$\psi-\theta=o(x)$，故 $\psi\sim x\iff\theta\sim x$。 2. `lem.abel-theta-pi`：Abel 变换两式；`lem.theta-pi-equivalence`：$\theta\sim x\iff\pi\sim x/\log x$。 3. `prop.zeta-continuation`：$\zeta$ 亚纯延拓到 $\operatorname{Re}s>0$、唯一单极点 $s=1$ 留数 $1$；`thm.zeta-no-zeros-line1`：$\zeta(1+it)\ne0$。 4. `lem.newman-tauberian`：Newman 解析定理；由它得 $\int_0^\infty(\psi(e^t)e^{-t}-1)\,\mathrm{d}t$ 收敛，再由 $\psi$ 的单调性夹逼得 $\psi(x)\sim x$。
 
-**引理 2（$\psi\sim x\iff\theta\sim x$）**：由引理 1，$0\le\psi(x)-\theta(x)=\sum_{k=2}^{\lfloor\log_{2}x\rfloor}\theta\bigl(x^{1/k}\bigr)\le(\log_{2}x)\,\theta\bigl(\sqrt{x}\bigr)\le(\log_{2}x)\,\sqrt{x}\,\log x=o(x)$（用 $\theta(y)\le y\log y$），故 $\psi(x)=\theta(x)+o(x)$。
+**组装**：上述 3+4 给 $g(z)=-\zeta'(1+z)/\zeta(1+z)/(1+z)-1/z$ 在闭半平面邻域全纯（$g(0)=-(1+\gamma)$ 可去），Newman 引理与单调性收尾，最后经第 2 步换成 $\pi(x)\sim x/\log x$。详见组装边。
 
-**引理 3（Abel 变换）**：$\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$，$\pi(x)=\frac{\theta(x)}{\log x}+\int_{2}^{x}\frac{\theta(t)}{t\log^{2}t}\,\mathrm{d}t$。证明：对 Stieltjes 积分 $\sum_{p\le x}f(p)=\pi(x)f(x)-\int_{2}^{x}\pi(t)\,\mathrm{d}f(t)$ 分别取 $f=\log t$ 与 $f=1/\log t$ 即得。
-
-**引理 4（$\theta\sim x\iff\pi\sim x/\log x$）**：若 $\theta\sim x$，由引理 3 第二式 $\pi(x)=\frac{x(1+o(1))}{\log x}+\int_{2}^{x}\frac{t(1+o(1))}{t\log^{2}t}\,\mathrm{d}t=\frac{x}{\log x}(1+o(1))$（用 $\int_{2}^{x}\mathrm{d}t/\log^{2}t=o(x/\log x)$）。反向由第一式：$\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{\pi(t)}{t}\mathrm{d}t$，代入 $\pi(t)=t(1+o(1))/\log t$ 得 $\theta(x)=x(1+o(1))$。于是 $\pi(x)\sim x/\log x\iff\psi(x)\sim x$。
-
-**命题 A（已证）：** $\zeta(s)=\sum_{n\ge1}n^{-s}$（$\operatorname{Re}s>1$）亚纯延拓到 $\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\in\mathbb{R}$ 有 $\zeta(1+it)\ne0$。
-
-**命题 A 的第一部分（解析延拓）**：对 $\operatorname{Re}s>1$，分部求和给 $\sum_{n\le N}n^{-s}=N^{1-s}+s\int_{1}^{N}\lfloor x\rfloor x^{-s-1}\,\mathrm{d}x$。令 $N\to\infty$（$N^{1-s}\to0$），并写 $\lfloor x\rfloor=x-\{x\}$：
-
-$$\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\{x\}\,x^{-s-1}\,\mathrm{d}x\qquad(\operatorname{Re}s>1).$$
-
-右端积分对 $\operatorname{Re}s>0$ 绝对收敛（$|\{x\}x^{-s-1}|\le x^{-\operatorname{Re}s-1}$），故它给出 $\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。
-
-**命题 A 的第二部分（$\operatorname{Re}s=1$ 无零点）**：对 $\sigma>1$，Euler 乘积给 $\log\zeta(\sigma+it)=\sum_{p}\sum_{k\ge1}\frac{1}{k}p^{-k\sigma}e^{-ikt\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：
-
-$$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\sum_{p,k}\frac{1}{k}p^{-k\sigma}\bigl(3+4\cos\theta+\cos2\theta\bigr)\ge0,$$
-
-其中 $\theta=k t_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|=4m_{1}\log(\sigma-1)+O(1)$（$m_{1}\ge1$ 为该零点阶）；$\log|\zeta(\sigma+2it_{0})|=m_{2}\log(\sigma-1)+O(1)$（$m_{2}\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\log(\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\ge1$ 且 $\log(\sigma-1)\to-\infty$，左端 $\to-\infty$，与 $\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\ne0$，故 $\log|\zeta(\sigma+it_{0})|=m\log(\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\zeta$ 在 $\operatorname{Re}s=1$ 上无零点。∎
-
-**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\infty)\to\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\int_0^\infty f(t)e^{-zt}\,\mathrm{d}t$（$\operatorname{Re}z>0$）解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的一个邻域。则 $\int_0^\infty f(t)\,\mathrm{d}t$ 收敛，且等于 $g(0)$。
-
-**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\int_0^T f(t)e^{-zt}\,\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\le C e^{-T\operatorname{Re}z}/\operatorname{Re}z$（$\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\to\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。
-
-**命题 B 用在本节点。** 取 $f(t)=\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$ 知 $f$ 有界。对 $\operatorname{Re}z>0$， $g(z)=\int_0^\infty\psi(e^t)e^{-(1+z)t}\,\mathrm{d}t-\frac{1}{z}=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\int_1^\infty \psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）。由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$；代入得 $g(z)=-(1+\gamma)+O(z)\qquad(z\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 无零点），$g$ 在 $\{\operatorname{Re}z\ge0\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\int_0^\infty f$ 收敛。
-
-**从 $\int f$ 收敛到 $\psi(x)\sim x$（完整初等收尾）。** 记 $h(t)=\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\varepsilon>0$，由 $\int_0^\infty f$ 收敛得 $\int_T^{T+\varepsilon}f\to0$，即 $\frac1\varepsilon\int_T^{T+\varepsilon}h(t)\,\mathrm{d}t\longrightarrow1 .$ 由 $\psi$ 单调不减：当 $t\in[T,T+\varepsilon]$ 时 $e^{-\varepsilon}h(T)\le h(t)\le e^{\varepsilon}h(T+\varepsilon)$。把两边对 $t$ 平均并令 $T\to\infty$：由 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_T^{T+\varepsilon}h$ 得 $h(T)\le e^{\varepsilon}(1+o(1))$，故 $\limsup h\le e^{\varepsilon}$；由 $\frac1\varepsilon\int_T^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$ 得 $h(T+\varepsilon)\ge e^{-\varepsilon}(1+o(1))$，故 $\liminf h\ge e^{-\varepsilon}$。令 $\varepsilon\to0$ 得 $\limsup h\le1\le\liminf h$，故 $h(t)\to1$，即 $\psi(x)/x\to1$。再由引理 1–4 得 $\theta(x)\sim x$、$\pi(x)\sim x/\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。
-
-⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。
-
-⚠️ **不能只靠 $\zeta$ 延拓**：没有 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。∎
+⚠ 不需要 Mellin 反演，也不需要 Phragmén–Lindelöf；这是 Newman 1980 的路线。
 
 参考：Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)；Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
 
@@ -39565,105 +39775,67 @@ $$g(z)=\int_{0}^{\infty}f(t)\,e^{-zt}\,\mathrm{d}t\qquad(\operatorname{Re}z>0)$$
 
 这是 Newman 为素数定理给出的 Tauber 引理；它把「$\psi(x)\sim x$」的分析核心压成一条围道估计，见 `thm.prime-number-theorem`。
 
-**证明.** 记 $B=\sup_{t\ge0}|f(t)|$。对 $T>0$ 令 $g_{T}(z)=\int_{0}^{T}f(t)e^{-zt}\,\mathrm{d}t$；$g_{T}$ 是整函数，且对 $\operatorname{Re}z>0$ 有
+**证明在本节点的入边**（Cauchy 积分公式 + 留数 + Cauchy–Goursat 的围道估计），本注只留两条用法说明。
 
+**注 1（核里为什么有 $1+z^{2}/R^{2}$）**：$F(0)=1$ 使 $z=0$ 处的留数仍是 $g(0)-g_{T}(0)$；而在 $|z|=R$ 上 $1+z^{2}/R^{2}=2z\operatorname{Re}z/R^{2}$，恰好抵消 $1/\operatorname{Re}z$ 这个坏因子，使右半平面与左半圆上的估计都能对 $R$ 一致。
 
-
-$$|g(z)-g_{T}(z)|=\left|\int_{T}^{\infty}f(t)e^{-zt}\,\mathrm{d}t\right|\le B\,\frac{e^{-T\operatorname{Re}z}}{\operatorname{Re}z}.\tag{1}$$
-
-
-
-**第一步（围道与核）.** 固定 $R>0$。由假设，$g$ 在闭半平面 $\{\operatorname{Re}z\ge0\}$ 的一个开邻域上全纯；紧集 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的每个点都有正距离到该邻域的补集，故存在 $\delta=\delta(R)>0$，使 $g$ 在
-
-
-
-$$D=\{z:\ |z|\le R,\ \operatorname{Re}z\ge-\delta\}$$
-
-
-
-上全纯（取 $\delta$ 小于紧集到补集的距离）。记 $C=\partial D$（正向）。函数
-
-
-
-$$F(z)=e^{zT}\left(1+\frac{z^{2}}{R^{2}}\right)$$
-
-
-
-是整函数，且 $F(0)=1$。$(g-g_{T})F/z$ 在 $D$ 内除 $z=0$ 外全纯，$z=0$ 是单极点、留数为 $(g-g_{T})(0)F(0)=g(0)-g_{T}(0)$。由 Cauchy 积分公式，
-
-
-
-$$g(0)-g_{T}(0)=\frac{1}{2\pi i}\oint_{C}\bigl(g(z)-g_{T}(z)\bigr)F(z)\,\frac{\mathrm{d}z}{z}.\tag{2}$$
-
-
-
-**第二步（拆成三段）.** 令 $C_{+}=C\cap\{\operatorname{Re}z>0\}$、$C_{-}=C\cap\{\operatorname{Re}z\le0\}$。在 $C_{+}$ 上 $g-g_{T}=\int_{T}^{\infty}fe^{-zt}\,\mathrm{d}t$；在 $C_{-}$ 上 $g-g_{T}=g-\int_{0}^{T}fe^{-zt}\,\mathrm{d}t$。于是 (2) 的右端等于
-
-
-
-$$I_{1}+I_{2}+I_{3},\quad I_{1}=\frac{1}{2\pi i}\int_{C_{+}}\!\!\int_{T}^{\infty}fe^{-tz}F\,\mathrm{d}t\,\frac{\mathrm{d}z}{z},\quad I_{2}=-\frac{1}{2\pi i}\int_{C_{-}}\!\!\int_{0}^{T}fe^{-tz}F\,\mathrm{d}t\,\frac{\mathrm{d}z}{z},\quad I_{3}=\frac{1}{2\pi i}\int_{C_{-}}gF\,\frac{\mathrm{d}z}{z}.$$
-
-
-
-**第三步（$|F|$ 的初等估计）.** 对 $|z|=R$，由 $R^{2}+z^{2}=2z\operatorname{Re}z$ 得
-
-
-
-$$\left|1+\frac{z^{2}}{R^{2}}\right|=\frac{2|\operatorname{Re}z|}{R},\qquad |F(z)|=e^{T\operatorname{Re}z}\,\frac{2|\operatorname{Re}z|}{R}.\tag{3}$$
-
-
-
-**第四步（$|I_{1}|\le B/R$）.** 在 $C_{+}$ 上 $x=\operatorname{Re}z>0$。由 (1) 与 (3)，
-
-
-
-$$\left|\int_{T}^{\infty}fe^{-tz}\,\mathrm{d}t\right|\,|F(z)|\le B\,\frac{e^{-Tx}}{x}\cdot e^{Tx}\,\frac{2x}{R}=\frac{2B}{R}.$$
-
-
-
-再乘 $|\mathrm{d}z|/|z|=|\mathrm{d}z|/R$，沿 $C_{+}$（长度 $\pi R$）积分，得 $|I_{1}|\le\frac{1}{2\pi}\cdot\frac{2B}{R}\cdot\frac{\pi R}{R}=\frac{B}{R}$。
-
-
-
-**第五步（$|I_{2}|\le B/R$）.** 内层 $h(z)=\int_{0}^{T}fe^{-tz}\,\mathrm{d}t$ 是整函数，故 $hF/z$ 在左半圆盘 $\{|z|\le R,\ \operatorname{Re}z\le0\}$ 内全纯（$z=0$ 在该半圆盘之外：它在边界的虚轴端点上，但柯西变形所围的区域不包含它）。由 Cauchy 定理把 $C_{-}$ 变形为左半圆 $L=\{|z|=R,\ \operatorname{Re}z\le0\}$。在 $L$ 上 $x=\operatorname{Re}z<0$，
-
-
-
-$$|h(z)|\le B\int_{0}^{T}e^{-tx}\,\mathrm{d}t=B\,\frac{e^{-Tx}-1}{-x}\le\frac{Be^{-Tx}}{-x},$$
-
-
-
-于是 $|h(z)F(z)|\le\frac{Be^{-Tx}}{-x}\cdot e^{Tx}\cdot\frac{2(-x)}{R}=\frac{2B}{R}$，同第四步得 $|I_{2}|\le B/R$。
-
-
-
-**第六步（$I_{3}\to0$）.** 在 $C_{-}$ 上 $x\le0$。在弦 $\operatorname{Re}z=-\delta$ 上，$|F(z)|\le e^{-\delta T}(1+|z|^{2}/R^{2})\le2e^{-\delta T}$；在两段小圆弧（$|z|=R$、$-\delta\le x\le0$）上，$|F(z)|=e^{xT}\cdot2|x|/R$。给定 $\varepsilon>0$：在 $|x|\le\varepsilon R/2$ 处 $|F|\le\varepsilon$；在其余部分 $x\le-\varepsilon R/2$，故 $|F|\le2e^{-\varepsilon RT/2}$。因此 $F\to0$ 在紧集 $C_{-}$ 上一致。又 $g$ 在 $D$ 的紧邻域上有界，且 $|z|\ge\delta$ 于 $C_{-}$，故 $I_{3}\to0$（$T\to\infty$）。
-
-
-
-**第七步（收尾）.** 由 (2) 与三段的估计，对每个固定的 $R$，
-
-
-
-$$|g(0)-g_{T}(0)|\le\frac{2B}{R}+o(1)\qquad(T\to\infty).$$
-
-
-
-先令 $T\to\infty$ 再令 $R\to\infty$，得 $g_{T}(0)\to g(0)$；而 $g_{T}(0)=\int_{0}^{T}f(t)\,\mathrm{d}t$，故 $\int_{0}^{\infty}f=g(0)$。∎
-
-
-
-**注（核里为什么有 $1+z^{2}/R^{2}$）**：$F(0)=1$ 使留数仍是 $g(0)-g_{T}(0)$；而在 $|z|=R$ 上 $1+z^{2}/R^{2}=2z\operatorname{Re}z/R^{2}$，恰好把 $1/\operatorname{Re}z$ 这个坏因子抵消。没有它，第四步会多出 $1/\operatorname{Re}z$，无法对 $R$ 取一致估计。
-
-
-
-**注（假设的强弱）**：证明只要求 $g$ 在**每个**闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯。对素数定理的 $g$，这一条由 $\zeta$ 在 $\operatorname{Re}s=1$ 无零点、再在每个固定紧集上取最大模下界得到，不需要 $\zeta$ 在固定宽度的竖条里无零点。
-
-
-
-**注（Tauber 现象）**：若只有「$g$ 在 $\operatorname{Re}z>0$ 全纯」，结论一般不成立；真正用上的是 $f$ 的**有界性**（估计 (1)）。例如 $f(t)=\sin t$ 有界，$g(z)=1/(z^{2}+1)$ 在虚轴上有极点，假设不满足，而 $\int_{0}^{T}\sin t\,\mathrm{d}t$ 不收敛。
+**注 2（假设的强弱与 Tauber 现象）**：证明只要求 $g$ 在**每个**闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯；对素数定理的 $g$，这由 $\zeta$ 在 $\operatorname{Re}s=1$ 无零点加紧性得到。若只有「$g$ 在 $\operatorname{Re}z>0$ 全纯」，结论一般不成立：$f(t)=\sin t$ 有界，$g(z)=1/(z^{2}+1)$ 在虚轴有极点，而 $\int_{0}^{T}\sin t\,\mathrm{d}t$ 不收敛。
 
 参考：Newman, A simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980), 693–696；Zagier, Newman's short proof of the prime number theorem, Amer. Math. Monthly 104 (1997), 705–708；Korevaar, Tauberian Theory: A Century of Developments, Springer 2004, Ch. II
+
+#### ψ 与 θ 的分组恒等式　`lem.psi-theta-sum`
+*引理*　$\psi(x)=\sum_{k\ge1}\theta(x^{1/k})$
+
+对 $x\ge1$，$\psi(x)=\sum_{k\ge1}\theta\bigl(x^{1/k}\bigr)$。和式有限：$p^{k}\le x$ 迫使 $k\le\log_{2}x$。
+
+这是 $\psi$ 与 $\theta$ 的第一个桥：按 $n=p^{k}$ 的 $k$ 分组即可。证明见入边（按素数幂的指数分组）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 4
+
+#### ψ 与 θ 的差是 o(x)　`lem.psi-theta-asymptotic`
+*引理*　$\psi(x)-\theta(x)=o(x)$
+
+$\psi(x)-\theta(x)=O(\sqrt{x}\log x)=o(x)$。因此 $\psi(x)\sim x\iff\theta(x)\sim x$。
+
+只用到 $\theta(y)\le y\log y$ 与 $k\le\log_{2}x$；证明见入边（尾部 $O(\sqrt{x}\log x)$ 估计）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 4
+
+#### θ 与 π 的 Abel 变换　`lem.abel-theta-pi`
+*引理*　Abel 变换：$\theta$ 与 $\pi$ 的互相表示
+
+$\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$，$\pi(x)=\frac{\theta(x)}{\log x}+\int_{2}^{x}\frac{\theta(t)}{t\log^{2}t}\,\mathrm{d}t$（$x\ge2$）。
+
+由 Stieltjes 分部求和（取 $f=\log t$ 与 $f=1/\log t$）得到；证明见入边（Stieltjes 分部求和）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 4
+
+#### θ~x 与 π~x/log x 等价　`lem.theta-pi-equivalence`
+*引理*　$\theta(x)\sim x\iff\pi(x)\sim x/\log x$
+
+$\theta(x)\sim x$ 当且仅当 $\pi(x)\sim x/\log x$（$x\to\infty$）。
+
+用 Abel 变换与 $\int_{2}^{x}\mathrm{d}t/\log^{2}t=o(x/\log x)$；证明见入边（Abel 变换与积分估计）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 4
+
+#### ζ 的亚纯延拓（到 Re s>0）　`prop.zeta-continuation`
+*命题*　$\zeta$ 延拓到 $\operatorname{Re}s>0$：单极点 $s=1$、留数 $1$
+
+$\zeta$ 延拓为 $\operatorname{Re}s>0$ 上的亚纯函数，唯一极点是 $s=1$ 的单极点、留数 $1$；在 $\operatorname{Re}s>0$ 上有 $\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\{x\}\,x^{-s-1}\,\mathrm{d}x$。
+
+只延拓到 $\operatorname{Re}s>0$（素数定理够用）；全平面延拓与函数方程不在本节点。证明见入边（分部求和）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 12；Titchmarsh, The Theory of the Riemann Zeta-Function, Ch. 1–2
+
+#### ζ 在 Re s=1 上无零点　`thm.zeta-no-zeros-line1`
+*定理*　$\zeta(1+it)\ne0$（$t\in\mathbb{R}$）
+
+对一切 $t\in\mathbb{R}$，$\zeta(1+it)\ne0$。
+
+用 Euler 乘积取对数与 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$；$t=0$ 处是极点，不是零点。证明见入边（加权对数估计）。
+
+参考：Apostol, Introduction to Analytic Number Theory, Ch. 12；Ingham, The Distribution of Prime Numbers, Ch. II
 
 #### 黎曼 ζ 函数　`def.riemann-zeta`
 *定义*　黎曼 $\zeta$ 函数：$\zeta(s) = \sum_{n \ge 1} n^{-s}$（$\operatorname{Re}s > 1$）
@@ -41634,10 +41806,6 @@ DCT 的证明是正负部各用一次 Fatou —— 又回到 $L^{+}$。
 #### 定义引用：「线性无关与基」→ 坐标　`dep.vs-coordinate`
 
 坐标的合法性来自「基」的定义（线性无关 + 生成 = 表示唯一），而那个定义就写在 `def.vs` 里。
-
-#### 定义引用：「Steinitz 交换引理」→ 维数良定义　`dep.steinitz-dimension`
-
-维数的定义要用「基的势」这个词 —— 而「势是唯一的」正是 Steinitz 引理给出的。
 
 #### 子空间 ⟹ 子空间判据　`imp.subspace-criterion`
 *子空间的定义 $\implies$ 两条判据与生成*
@@ -45245,6 +45413,14 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 
 > 与 `thm.mod-enough-injectives` 对照：投射这一侧是**显式**的（自由模写得出），内射那一侧是**存在性**的。
 
+#### 定义引用：「平坦模」→ 平坦维数　`dep.fd-flat`
+
+平坦维数用平坦模的消解定义。
+
+#### 定义引用：「投射维数」→ 平坦维数　`dep.fd-pd`
+
+投射维数是平坦维数的上界。
+
 #### 定义引用：「消解」→ 比较定理　`def-link.comparison-res`
 
 比较的正是两条**投射消解**之间的链映射 —— 消解这条定义的两个实例。
@@ -45321,10 +45497,6 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 
 被分类的就是一阶扩展群 $\operatorname{Ext}^{1}$。
 
-#### 定义引用：「维数转移」→ 一阶扩展的分类　`def-link.ext1-dimshift`
-
-把 $\operatorname{Ext}^{1}$ 写成 $\operatorname{coker}$ 的那一步，正是维数转移。
-
 #### 定义引用：「模」→ 平坦模　`def-link.flat-module`
 
 平坦性说的是 $R$-模范畴里张量函子的正合性。
@@ -45372,10 +45544,6 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 #### 定义引用：「同调」→ 万有系数定理　`def-link.uct-homology`
 
 两端的 $H_{n}$ 都是复形的同调。
-
-#### 定义引用：「蛇引理」→ 万有系数定理　`def-link.uct-snake`
-
-证明最后一步是把两条张量后的正合列摆在一起追图 —— 用的就是蛇引理那套。
 
 #### 定义引用：「加法 / 阿贝尔范畴」→ 嵌入定理的细化　`def-link.mitchell-abelian`
 
@@ -45502,6 +45670,50 @@ $$\operatorname{Ext}^{1}_{R}(M, N) \cong \operatorname{coker}\bigl(\operatorname
 
 而 $E$ 正合（Freyd–Mitchell 定理的另一半）把 $\mathcal{C}$ 里的单态射送到单态射，故左边也如此 ✓。
 **正合部分**就是 Freyd–Mitchell 定理本身的陈述（$E$ 正合），这条只把「反射」补上 ✓。∎
+
+#### 定义引用：「层」→ 松弛层　`dep.flabby-sheaf`
+
+松弛层是一种层。
+
+#### 定义引用：「层」→ 细层　`dep.fine-sheaf`
+
+细层是一种层。
+
+#### 定义引用：「单位分解」→ 细层　`dep.fine-partition`
+
+细层的单位分解作用由单位分解给出。
+
+#### 定义引用：「松弛层」→ Godement 消解　`dep.godement-flabby`
+
+Godement 消解的每一项是松弛层。
+
+#### 定义引用：「软层」→ Godement 消解　`dep.godement-soft`
+
+松弛层在仿紧空间上软，故 Godement 消解也经由软层无环。
+
+#### 定义引用：「层」→ 软层　`dep.soft-sheaf`
+
+软层是层。
+
+#### 定义引用：「无环层」→ 软层　`dep.soft-acyclic`
+
+软层的无环性是它与导出函子的接口。
+
+#### 定义引用：「仿紧空间」→ 软层　`dep.soft-paracompact`
+
+仿紧性是细层、软层无环的标准假设。
+
+#### 定义引用：「层」→ Godement 消解　`dep.godement-sheaf`
+
+Godement 消解是层的消解。
+
+#### 定义引用：「无环层」→ Godement 消解　`dep.godement-acyclic`
+
+松弛层无环，故消解可算上同调。
+
+#### 定义引用：「右导出函子」→ Godement 消解　`dep.godement-derived`
+
+Godement 消解用于计算右导出函子。
 
 #### 标准消解 + 群上同调 ⟹ 用标准消解计算群上同调　`imp.bar-compute`
 *标准消解 $\implies$ 显式上链复形算出群上同调*
@@ -47009,10 +47221,6 @@ Hausdorff 是两条技术假设之一：保证极限唯一（否则「$\gamma'(0
 
 坐标基 $\partial_{i}(p)$ 就是「只让第 $i$ 个坐标动」的方向 —— 在卡里它就是偏导数。
 
-#### 定义引用：「隐函数定理」→ 正则水平集定理　`dep.tu-ift-level`
-
-水平集局部是图，靠的就是隐函数定理逐点应用；满秩条件正是 $D_yF$ 可逆的假设。
-
 #### 定义引用：「光滑流形」→ 正则水平集定理　`dep.tu-manifold-level`
 
 定理的结论是「$M$ 是光滑流形」，所以要把造出来的图卡与相容性写清楚。
@@ -48215,10 +48423,6 @@ $(1,0)$ 型张量场就是向量场；分量变换律 $X^{i} = \sum_{j}\frac{\pa
 
 三条要求（支撑在成员里、支撑族局部有限、和恒为 $1$）逐字相同，区别只有把「连续」升成「光滑」—— 两者是同一件事的两个精度。
 
-#### 定义引用：「仿紧性与单位分解」→ 光滑单位分解　`dep.mf-paracompact-smooth-pu`
-
-流形仿紧，所以局部有限的加细存在（这是连续版给的一半）；光滑版只是把每个成员上的权重换成鼓包函数再归一化。
-
 #### 定义引用：「第二可数空间」→ 光滑单位分解　`dep.mf-secondcountable-smooth-pu`
 
 仿紧是从「第二可数 $+$ Hausdorff $+$ 局部欧氏」推出来的；没有第二可数就取不到局部有限加细，鼓包函数也就拼不成整体。长直线是反例。
@@ -48742,10 +48946,6 @@ $\partial$ 的最后一步是「线性延拓到链」；没有链这个概念，
 
 散度定义在 $\mathcal{L}_{X}\mathrm{d}V = (\operatorname{div}X)\mathrm{d}V$ 上，主语是体积形式；没有 $\mathrm{d}V$，「体积的变化率」无从谈起。
 
-#### 定义引用：「Stokes 定理」→ 散度定理　`dep.spivak-stokes-divthm`
-
-散度定理的整条证明就是「对 $\omega = \iota_{X}\mathrm{d}V$ 用流形版 Stokes」。边界定向的约定、$\omega$ 到边界上的限制，全由那条定理提供。
-
 #### 定义引用：「行列式」→ 流形上的换元公式　`dep.spivak-det-changevars`
 
 换元因子是 Jacobi 矩阵的行列式 $\det(\partial g/\partial x)$。定向版的公式之所以没有绝对值，正是因为 $\det$ 本身带符号 —— 绝对值是「丢了定向」之后补回来的。
@@ -48910,7 +49110,7 @@ $$\sqrt{\det g^{y}}\,\mathrm{d}y^{1}\cdots\mathrm{d}y^{n} = \sqrt{\det g^{x}}\,\
 
 ∎
 
-#### 散度 + 边界的符号约定 ⟹ 散度定理　`imp.spivak-divergence-theorem`
+#### 散度 + 边界的符号约定 + Stokes 定理 ⟹ 散度定理　`imp.spivak-divergence-theorem`
 *对 $\iota_{X}\mathrm{d}V$ 用 Stokes $\implies$ 散度定理*
 
 **（1）造一个 $(n-1)$-形式。** 令 $\omega := \iota_{X}\mathrm{d}V$。
@@ -49515,12 +49715,6 @@ $\operatorname{Lie}(G) \cong \mathfrak{g}$ 这句话里的 $\operatorname{Lie}(G
 
 同构由 $[\omega] \mapsto \bigl([c] \mapsto \int_{c}\omega\bigr)$ 给出，所以「形式在链上的积分」是这条定理的**构造**而不是例子：没有它就没有映射。
 
-#### 定义引用：「Stokes 定理」→ de Rham 定理　`dep.mf2-stokes-derhamthm`
-
-配对能「下到同调与上同调」全靠 Stokes 的两个方向：$\int_{\partial b}\omega = \int_{b}\mathrm{d}\omega$ 与 $\int_{\partial c}\eta = \int_{c}\mathrm{d}\eta$ —— 一句话：边界算子是 $\mathrm{d}$ 的伴随。
-
-本条的证明里逐字算的是链版（`thm.stokes-chain`），概念形式就是这一条。
-
 #### 定义引用：「张量场」→ 缩并　`dep.mf2-tensor-contraction`
 
 缩并吃 $(r,s)$ 型、吐 $(r-1,s-1)$ 型 —— 上下标的记账全在张量场的定义里；换卡时两个 Jacobi 矩阵互逆正是它能良定义的原因。
@@ -49756,7 +49950,7 @@ $$g^{\prime}_{\alpha\beta} = h_{\alpha}\,g_{\alpha\beta}\,h_{\beta}^{-1}$$
 
 ⚠️ 余极限的逐字证明（以及「$\check{H}^{1}$ 与层上同调 $H^{1}$ 在非阿贝尔系数下的关系」）本图不给，只给到「构造 + 相容」这一层；与深定理的折衷口径一致。
 
-#### de Rham 上同调 + 奇异链 + 链上的积分 + 链上的 Stokes 定理 + Poincaré 引理 + 仿紧空间上的 Čech 就是上同调 ⟹ de Rham 定理　`imp.mf2-de-rham`
+#### de Rham 上同调 + 奇异链 + 链上的积分 + Stokes 定理 + 链上的 Stokes 定理 + Poincaré 引理 + 仿紧空间上的 Čech 就是上同调 ⟹ de Rham 定理　`imp.mf2-de-rham`
 *闭链上的积分 $\implies$ de Rham 上同调与奇异上同调同构*
 
 **第一步：配对良定义（唯一真正要做计算的地方）。** 对 $[\omega] \in H^{k}_{\mathrm{dR}}(M)$、$[c] \in H^{\mathrm{sing}}_{k}(M;\mathbb{R})$ 令
@@ -51018,6 +51212,22 @@ $|\chi_{B(x_k,r_k)}(y) - \chi_{B(x_0,r_0)}(y)|\,|f(y)| \le \chi_{B(x_0, r_0+1)}(
 
 > 这一步之外全是球与特征函数的初等估计：拆项、a.e. 收敛、找控制函数。**DCT 是唯一的外部定理**，也是把「$L^1_{loc}$ 里没有逐点信息」这个困难一次性消掉的地方。
 
+#### 定义引用：「群作用」→ 透镜空间　`dep.lens-groupaction`
+
+透镜空间是 Z/p 在 S^3 上自由作用的轨道空间。
+
+#### 定义引用：「覆叠空间」→ 透镜空间　`dep.lens-covering`
+
+投影 S^3 -> L(p,q) 是 p 重覆叠。
+
+#### 定义引用：「基本群」→ 透镜空间　`dep.lens-fundamental`
+
+L(p,q) 的基本群是 Z/p。
+
+#### 定义引用：「单连通」→ 透镜空间　`dep.lens-simply`
+
+S^3 单连通是计算基本群的输入。
+
 #### 定义引用：「连续映射」→ 映射同伦　`e52.definition`
 
 同伦 $F : X \times [0, 1] \to Y$ 本身要求**联合连续**（在乘积拓扑下），不是「对每个 $t$ 各自连续」。
@@ -51239,6 +51449,18 @@ van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右�
 (i) $\implies$ (ii)：给定 $x_{0}$ 与任意 $x$，道路连通给出从 $x_{0}$ 到 $x$ 的道路 $\lambda$。由 `prop.pi1-basepoint`，$[\alpha] \mapsto [\overline{\lambda} \ast \alpha \ast \lambda]$ 给出同构 $\pi_{1}(X, x_{0}) \to \pi_{1}(X, x)$。同构是双射且保单位元，把 $1$ 送到 $1$，故 $\pi_{1}(X, x) = 1$。∎
 
 > 这里用了两次「平凡性在同构下不变」：同构是双射，平凡群只有一个元素，像也只能有一个。没有道路连通就没有 $\lambda$，同构无从谈起 —— 这就是条件里「道路连通」不可省的确切原因。
+
+#### 定义引用：「单纯复形」→ CW 复形　`dep.cw-simplicial`
+
+单纯复形是 CW 复形的特例。
+
+#### 定义引用：「商拓扑」→ CW 复形　`dep.cw-quotient`
+
+逐维粘接胞腔是商构造。
+
+#### 定义引用：「Euler 示性数」→ CW 复形　`dep.cw-euler`
+
+有限 CW 复形的 Euler 示性数按胞腔数计算，并与该节点的同调公式一致。
 
 #### 定义引用：「单纯复形」→ 重心重分　`e72.definition`
 
@@ -51468,6 +51690,18 @@ $$\sum_{p} (-1)^{p}\alpha_{p}(K') = \sum_{p} (-1)^{p}\beta_{p}.$$
 
 证明用「单纯映射诱导链映射」与「链同伦的棱柱构造」把 $|g| \simeq \operatorname{id}$ 翻成链同伦。
 
+#### 定义引用：「单连通」→ 素端　`dep.prime-simply`
+
+素端定义在单连通区域上。
+
+#### 定义引用：「Riemann 映射定理」→ 素端　`dep.prime-riemann`
+
+Riemann 映射延拓到素端紧化。
+
+#### 定义引用：「边界对应定理」→ 素端　`dep.prime-boundary`
+
+Jordan 区域的素端对应就是边界对应。
+
 #### 分式线性变换 ⟹ 交比　`e94.implication`
 *分式线性变换给出交比这个不变量*
 
@@ -51607,9 +51841,11 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 
 > 它给 S–C 公式的「$x_{k}$ 对应顶点」提供了合法性。
 
-#### 定义引用：「Riemann 映射定理」→ Carathéodory–Osgood 边界对应　`dep.riemann-caratheodory`
+#### Riemann 映射定理 ⟹ Carathéodory–Osgood 边界对应　`dep.riemann-caratheodory`
 
-Carathéodory–Osgood 定理研究的正是 Riemann 映射 $f:\Omega\to\mathbb{D}$ 的边界行为；`thm.riemann-mapping` 只保证内部双全纯，本引理补边界。
+由 `thm.riemann-mapping` 得双全纯 $f:\Omega\to\mathbb D$；Carathéodory–Osgood 进一步证 $f$ 连续延拓到 $\partial\Omega$ 且在其上单射，从而给出边界一一对应。内部双全纯由该定理提供，边界部分是本引理新证的，故本边是推出。∎
+
+> Carathéodory–Osgood 定理研究的正是 Riemann 映射 $f:\Omega\to\mathbb{D}$ 的边界行为；`thm.riemann-mapping` 只保证内部双全纯，本引理补边界。
 
 #### 定义引用：「Carathéodory–Osgood 边界对应」→ Schwarz–Christoffel 公式　`dep.sc-caratheodory`
 
@@ -52034,6 +52270,174 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
 
+#### 素数计数函数 ⟹ ψ 与 θ 的分组恒等式　`imp.pnt-lemma1`
+*按素数幂的指数分组*
+
+由定义 $\psi(x)=\sum_{p^{k}\le x}\log p$。把求和按 $k$ 分组：
+
+
+
+$$\psi(x)=\sum_{k\ge1}\sum_{p\le x^{1/k}}\log p=\sum_{k\ge1}\theta\bigl(x^{1/k}\bigr).$$
+
+
+
+当 $p\ge2$ 时 $p^{k}\le x$ 给出 $k\le\log_{2}x$，故和式有限。∎
+
+#### ψ 与 θ 的分组恒等式 + Чебышёв 估计 ⟹ ψ 与 θ 的差是 o(x)　`imp.pnt-lemma2`
+*只剩 $k\ge2$ 的尾巴：$O(\sqrt{x}\log x)$*
+
+由 `lem.psi-theta-sum`，$\psi(x)-\theta(x)=\sum_{k\ge2}\theta(x^{1/k})$。每项非负，且 $x^{1/k}\le\sqrt{x}$、项数 $\le\log_{2}x$，故
+
+
+
+$$0\le\psi(x)-\theta(x)\le(\log_{2}x)\,\theta(\sqrt{x})\le(\log_{2}x)\,\sqrt{x}\,\log x=o(x),$$
+
+
+
+最后一步用 $\theta(y)=\sum_{p\le y}\log p\le\pi(y)\log y\le y\log y$。于是 $\psi=\theta+o(x)$，两者相差 $o(x)$，渐近等价性相同。∎
+
+#### 素数计数函数 ⟹ θ 与 π 的 Abel 变换　`imp.pnt-lemma3`
+*Stieltjes 分部求和*
+
+对任意 $C^{1}$ 函数 $f$，Stieltjes 分部求和给
+
+
+
+$$\sum_{p\le x}f(p)=\pi(x)f(x)-\int_{2}^{x}\pi(t)\,\mathrm{d}f(t).$$
+
+
+
+取 $f(t)=\log t$：$\mathrm{d}f=\mathrm{d}t/t$，左边是 $\theta(x)$，得第一式。取 $f(t)=1/\log t$：$\mathrm{d}f=-\mathrm{d}t/(t\log^{2}t)$，左边是 $\pi(x)$，得 $\pi(x)=\frac{\theta(x)}{\log x}+\int_{2}^{x}\frac{\theta(t)}{t\log^{2}t}\,\mathrm{d}t$。∎
+
+#### θ 与 π 的 Abel 变换 ⟹ θ~x 与 π~x/log x 等价　`imp.pnt-lemma4`
+*把 $x$ 换成 $x/\log x$：两个方向*
+
+设 $\theta(x)\sim x$。由 `lem.abel-theta-pi` 第二式，
+
+
+
+$$\pi(x)=\frac{x(1+o(1))}{\log x}+\int_{2}^{x}\frac{t(1+o(1))}{t\log^{2}t}\,\mathrm{d}t=\frac{x}{\log x}(1+o(1)),$$
+
+
+
+其中 $\int_{2}^{x}\mathrm{d}t/\log^{2}t=o(x/\log x)$（对 $t/\log^{2}t$ 分部积分，主项是 $\operatorname{li}(x)=o(x)$ 的低阶修正；等价地，$\int_{2}^{x}\mathrm{d}t/\log^{2}t\le x/\log^{2}x+\int_{2}^{x}\mathrm{d}t/\log^{3}t$，归纳即得）。
+
+
+
+反向设 $\pi(x)\sim x/\log x$。由第一式，
+
+
+
+$$\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{t(1+o(1))/\log t}{t}\,\mathrm{d}t=x(1+o(1))-\int_{2}^{x}\frac{1+o(1)}{\log t}\,\mathrm{d}t=x(1+o(1)),$$
+
+
+
+因为 $\int_{2}^{x}\mathrm{d}t/\log t=o(x)$。两个方向合起来即得等价。∎
+
+#### 黎曼 ζ 函数 ⟹ ζ 的亚纯延拓（到 Re s>0）　`imp.pnt-zeta-cont`
+*分部求和给出 $\zeta(s)=s/(s-1)-s\int\{x\}x^{-s-1}dx$*
+
+对 $\operatorname{Re}s>1$ 与整数 $N$，分部求和（对 $\lfloor x\rfloor$ 作 Stieltjes 积分）给
+
+
+
+$$\sum_{n\le N}n^{-s}=N^{1-s}+s\int_{1}^{N}\lfloor x\rfloor\,x^{-s-1}\,\mathrm{d}x.$$
+
+
+
+令 $N\to\infty$；因 $\operatorname{Re}s>1$，$N^{1-s}\to0$。再写 $\lfloor x\rfloor=x-\{x\}$：
+
+
+
+$$\zeta(s)=s\int_{1}^{\infty}x\cdot x^{-s-1}\,\mathrm{d}x-s\int_{1}^{\infty}\{x\}x^{-s-1}\,\mathrm{d}x=\frac{s}{s-1}-s\int_{1}^{\infty}\{x\}x^{-s-1}\,\mathrm{d}x.$$
+
+
+
+右端积分在 $\operatorname{Re}s>0$ 上绝对收敛（被 $x^{-\operatorname{Re}s-1}$ 控制），故给出 $\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点是 $s=1$，来自 $s/(s-1)$，留数 $1$。∎
+
+#### Euler 乘积 + ζ 的亚纯延拓（到 Re s>0） + 黎曼 ζ 函数 ⟹ ζ 在 Re s=1 上无零点　`imp.pnt-zeta-nozeros`
+*$3+4\cos\theta+\cos2\theta\ge0$ 加权*
+
+对 $\sigma>1$，Euler 乘积取对数：$\log\zeta(\sigma+it)=\sum_{p}\sum_{k\ge1}\frac{1}{k}p^{-k\sigma}e^{-ikt\log p}$。取 $t=0,t_{0},2t_{0}$ 的实部并按 $3,4,1$ 加权，得
+
+
+
+$$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\sum_{p,k}\frac{1}{k}p^{-k\sigma}\bigl(3+4\cos\theta+\cos2\theta\bigr)\ge0,$$
+
+
+
+其中 $\theta=kt_{0}\log p$，末步用 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$。
+
+
+
+反设 $\zeta(1+it_{0})=0$（$t_{0}\ne0$）。当 $\sigma\to1^{+}$：$3\log\zeta(\sigma)=-3\log(\sigma-1)+O(1)$（单极点留数 $1$）；$4\log|\zeta(\sigma+it_{0})|=4m_{1}\log(\sigma-1)+O(1)$（$m_{1}\ge1$ 为零点阶）；$\log|\zeta(\sigma+2it_{0})|=m_{2}\log(\sigma-1)+O(1)$（$m_{2}\ge0$，非零点取 $0$）。代入得左端 $(4m_{1}+m_{2}-3)\log(\sigma-1)+O(1)$；因 $4m_{1}+m_{2}-3\ge1$ 且 $\log(\sigma-1)\to-\infty$，左端 $\to-\infty$，与 $\ge0$ 矛盾。$t_{0}=0$ 处是极点不是零点。∎
+
+#### Cauchy 积分公式 + 留数定理 + 复围道积分 + 解析延拓 + 全纯函数 ⟹ Newman 解析定理　`imp.newman-contour`
+*围道估计：Cauchy 公式 + 留数 + 核 $F=e^{zT}(1+z^{2}/R^{2})$*
+
+记 $B=\sup_{t\ge0}|f(t)|$。对 $T>0$ 令 $g_{T}(z)=\int_{0}^{T}f(t)e^{-zt}\,\mathrm{d}t$；它是整函数，对 $\operatorname{Re}z>0$ 有
+
+
+
+$$|g(z)-g_{T}(z)|\le B\,\frac{e^{-T\operatorname{Re}z}}{\operatorname{Re}z}.\tag{1}$$
+
+
+
+固定 $R>0$。由解析延拓假设，$g$ 在闭半平面 $\{\operatorname{Re}z\ge0\}$ 的某开邻域上全纯；紧集 $\{|z|\le R,\operatorname{Re}z\ge0\}$ 到补集有正距离，故存在 $\delta=\delta(R)>0$，使 $g$ 在 $D=\{|z|\le R,\operatorname{Re}z\ge-\delta\}$ 上全纯。令 $C=\partial D$（正向），$F(z)=e^{zT}(1+z^{2}/R^{2})$（整，$F(0)=1$）。$(g-g_{T})F/z$ 在 $D$ 内除 $z=0$ 外全纯，$z=0$ 是单极点、留数 $(g-g_{T})(0)=g(0)-g_{T}(0)$。由 Cauchy 积分公式与留数公式，
+
+
+
+$$g(0)-g_{T}(0)=\frac{1}{2\pi i}\oint_{C}\bigl(g-g_{T}\bigr)(z)\,F(z)\,\frac{\mathrm{d}z}{z}.\tag{2}$$
+
+
+
+令 $C_{+}=C\cap\{\operatorname{Re}z>0\}$、$C_{-}=C\cap\{\operatorname{Re}z\le0\}$，把 (2) 拆成三段 $I_{1}+I_{2}+I_{3}$：$I_{1}$ 在 $C_{+}$ 上用 $g-g_{T}=\int_{T}^{\infty}fe^{-zt}\,\mathrm{d}t$，$I_{2}$ 在 $C_{-}$ 上用 $g-g_{T}=g-\int_{0}^{T}fe^{-zt}\,\mathrm{d}t$，$I_{3}$ 是 $g$ 在 $C_{-}$ 上的部分。
+
+
+
+在 $|z|=R$ 上，$R^{2}+z^{2}=2z\operatorname{Re}z$，故
+
+
+
+$$\left|1+\frac{z^{2}}{R^{2}}\right|=\frac{2|\operatorname{Re}z|}{R},\qquad |F(z)|=e^{T\operatorname{Re}z}\,\frac{2|\operatorname{Re}z|}{R}.\tag{3}$$
+
+
+
+**$|I_{1}|\le B/R$**：在 $C_{+}$ 上 $x=\operatorname{Re}z>0$，由 (1)(3)，$\bigl|\int_{T}^{\infty}fe^{-tz}\mathrm{d}t\bigr||F|\le B e^{-Tx}/x\cdot e^{Tx}\cdot2x/R=2B/R$；再乘 $|\mathrm{d}z|/|z|=|\mathrm{d}z|/R$、沿长度 $\pi R$ 积分，得 $|I_{1}|\le B/R$。
+
+
+
+**$|I_{2}|\le B/R$**：$h(z)=\int_{0}^{T}fe^{-tz}\mathrm{d}t$ 整，$hF/z$ 在左半圆盘上全纯（$0$ 不在其中）；由 Cauchy 定理把 $C_{-}$ 变形为左半圆 $L=\{|z|=R,\operatorname{Re}z\le0\}$。在 $L$ 上 $x<0$，$|h|\le B(e^{-Tx}-1)/(-x)\le Be^{-Tx}/(-x)$，于是 $|hF|\le Be^{-Tx}/(-x)\cdot e^{Tx}\cdot2(-x)/R=2B/R$，同得 $|I_{2}|\le B/R$。
+
+
+
+**$I_{3}\to0$**：在 $C_{-}$ 上 $x\le0$；弦 $x=-\delta$ 上 $|F|\le2e^{-\delta T}$；圆弧上 $|F|=e^{xT}2|x|/R$。给定 $\varepsilon>0$：$|x|\le\varepsilon R/2$ 处 $|F|\le\varepsilon$，其余 $x\le-\varepsilon R/2$ 处 $|F|\le2e^{-\varepsilon RT/2}$，故 $F$ 在紧集 $C_{-}$ 上一致趋于 $0$；$g$ 有界、$|z|\ge\delta$，故 $I_{3}\to0$（$T\to\infty$）。
+
+
+
+于是对每个固定 $R$，$|g(0)-g_{T}(0)|\le2B/R+o(1)$（$T\to\infty$）。先令 $T\to\infty$ 再令 $R\to\infty$，得 $g_{T}(0)=\int_{0}^{T}f\to g(0)$，即 $\int_{0}^{\infty}f=g(0)$。∎
+
+#### Newman 解析定理 + Чебышёв 估计 + Euler 乘积 + ζ 的亚纯延拓（到 Re s>0） + ζ 在 Re s=1 上无零点 + ψ 与 θ 的差是 o(x) + θ~x 与 π~x/log x 等价 ⟹ 素数定理　`imp.nt-newman`
+*素数定理的组装：ζ 延拓 + Re s=1 无零点 + Newman + 等价链*
+
+取 $f(t)=\psi(e^{t})e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$，$f$ 有界、局部可积。对 $\operatorname{Re}z>0$，换元 $u=e^{t}$ 并用 $-\zeta'/\zeta(s)=s\int_{1}^{\infty}\psi(u)u^{-s-1}\mathrm{d}u$（$s=1+z$）得
+
+
+
+$$g(z)=\int_{0}^{\infty}f(t)e^{-zt}\,\mathrm{d}t=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}.$$
+
+
+
+由 `prop.zeta-continuation`，$\zeta$ 在 $s=1$ 有单极点、留数 $1$，故 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$，从而 $g(z)=-(1+\gamma)+O(z)$：$z=0$ 是可去奇点。由 `thm.zeta-no-zeros-line1`，$\zeta$ 在 $\operatorname{Re}s=1$ 上无零点；与 $\zeta$ 在 $\operatorname{Re}s>1$ 无零点合起来，紧性给出每个闭半圆盘 $\{|z|\le R,\operatorname{Re}z\ge0\}$ 的邻域上 $g$ 全纯。于是 `lem.newman-tauberian` 适用，$\int_{0}^{\infty}f$ 收敛且等于 $g(0)$。
+
+
+
+记 $h(t)=\psi(e^{t})e^{-t}$，则 $f=h-1$。由 $\int_{0}^{\infty}f$ 收敛，$\int_{T}^{T+\varepsilon}f\to0$，即 $\frac1\varepsilon\int_{T}^{T+\varepsilon}h\to1$。由 $\psi$ 单调不减，$e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_{T}^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$；令 $T\to\infty$ 得 $\limsup h\le e^{\varepsilon}$、$\liminf h\ge e^{-\varepsilon}$，再令 $\varepsilon\to0$ 得 $h\to1$，即 $\psi(x)\sim x$。
+
+
+
+由 `lem.psi-theta-asymptotic`，$\psi\sim x\iff\theta\sim x$；由 `lem.theta-pi-equivalence`，$\theta\sim x\iff\pi(x)\sim x/\log x$。故 $\pi(x)\sim x/\log x$。∎
+
 #### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e146.definition`
 
 公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。
@@ -52201,58 +52605,6 @@ $$\frac{4^{n}}{2n+1} \le (2n)^{\sqrt{2n}}\,4^{2n/3} \iff 4^{n/3} \le (2n)^{\sqrt
 
 
 ⚠ 这是骨架：三段计数里最容易错的是「$2n/3 < p \le n$ 不贡献」（上面已改正）；更细的分段与小 $n$ 的逐个验证没有逐条写。完整证明见华罗庚《数论导引》第九章。
-
-#### 素数计数函数 + 黎曼 ζ 函数 + Euler 乘积 + Newman 解析定理 + Чебышёв 估计 ⟹ 素数定理　`imp.nt-pnt`
-*素数定理：历史路线（$\zeta$ 延拓 + $\operatorname{Re}s = 1$ 无零点 + 零点分段）；Newman 版见 `imp.nt-newman`*
-
-**① $\zeta$ 的解析延拓。** 对 $\operatorname{Re}\,s > 1$，$\zeta(s) = \sum_{n\ge1} n^{-s} = \prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。
-
-它在 $s = 1$ 有单极点、留数 $1$，并可延拓为 $\mathbb{C}$ 上的亚纯函数。
-
-
-
-**② 关键一步：$\operatorname{Re}\,s = 1$ 上无零点。** 用 $3 + 4\cos\theta + \cos 2\theta \ge 0$ 配上 Euler 乘积的对数导数，得 $\zeta(1 + it) \ne 0$。这一步是全部难点，也是「素数不会太集中在一条线上」的本质。
-
-
-
-**③ 显式公式。** 对 $c > 1$，
-
-
-
-$$\psi(x) = x - \sum_{\rho}\frac{x^{\rho}}{\rho} - \log 2\pi - \tfrac{1}{2}\log(1 - x^{-2}),$$
-
-
-
-其中 $\rho$ 遍历 $\zeta$ 的非平凡零点（求和按对称方式截断）。
-
-
-
-**④ 收尾。** 由 ②，每个非平凡零点满足 $\operatorname{Re}\rho < 1$（准确说是 $0 < \operatorname{Re}\rho < 1$）。⚠️ 注意 $\lvert\rho\rvert$ 本身**没有上界** —— 高度 $\le T$ 的零点个数是 $\frac{T}{2\pi}\log\frac{T}{2\pi e}+O(\log T)$，随 $T$ 增长；所以不能用 $\lvert\rho\rvert\le 1$。每项 $x^{\rho} = x^{\operatorname{Re}\rho}$（乘一个模长因子）确实严格低于 $x$，但「每项都 $o(x)$」推不出「求和也是 $o(x)$」：必须按高度把零点分段、用上面那个计数把段内项数与 $\lvert\rho\rvert$ 一起压住（这一步才是本条的真正难点，本图不展开）。得 $\sum_{\rho}x^{\rho}/\rho = o(x)$，于是 $\psi(x) \sim x$；
-
-再由 $\psi \sim \theta$（Abel 部分求和）与 $\theta(x) = \sum_{p\le x}\log p \sim \pi(x)\log x$（因为 $\sum_{p\le x}\log p = \pi(x)\log x - \int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$ 再分部求和）得 $\pi(x) \sim x/\log x$。
-
-
-
-**说明**：本边保留为历史路线概述（显式公式 + 零点分段）；完整的两条组装见 `imp.nt-newman`（Newman 收尾）与 `thm.prime-number-theorem` 节点注（引理 1–4 与命题 A 的完整证明）。不要在需要完整证明的地方单独引用本边。
-
-#### Newman 解析定理 + Чебышёв 估计 + Euler 乘积 ⟹ 素数定理　`imp.nt-newman`
-*Newman 解析定理闭合素数定理的最后一步*
-
-取 $f(t)=\psi(e^{t})e^{-t}-1$。由 Chebyshev 估计 $0\le\psi(x)\le Cx$（`thm.chebyshev-estimate`），$f$ 有界、局部可积。对 $\operatorname{Re}z>0$，换元 $u=e^{t}$ 并用 $-\zeta'/\zeta(s)=s\int_{1}^{\infty}\psi(u)u^{-s-1}\,\mathrm{d}u$（$s=1+z$）得
-
-
-
-$$g(z)=\int_{0}^{\infty}f(t)e^{-zt}\,\mathrm{d}t=\frac{-\zeta'(1+z)/\zeta(1+z)}{1+z}-\frac{1}{z}.$$
-
-
-
-由 $\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\zeta'(1+z)/\zeta(1+z)=1/z-\gamma+O(z)$，故 $g(z)=-(1+\gamma)+O(z)$，$z=0$ 是可去奇点。命题 A（$\zeta$ 在 $\operatorname{Re}s=1$ 上无零点，见 `thm.prime-number-theorem` 的注）保证 $g$ 在每个闭半圆盘 $\{|z|\le R,\ \operatorname{Re}z\ge0\}$ 的某个邻域上全纯：$\zeta$ 在 $\operatorname{Re}s>1$ 无零点，在 $\operatorname{Re}s=1$ 上已证无零点，紧性给出正距离。于是 `lem.newman-tauberian` 适用，$\int_{0}^{\infty}f$ 收敛且等于 $g(0)$。
-
-
-
-再由 $\int_{T}^{T+\varepsilon}f\to0$ 与 $\psi$ 单调：令 $h(t)=\psi(e^{t})e^{-t}$，则 $e^{-\varepsilon}h(T)\le\frac1\varepsilon\int_{T}^{T+\varepsilon}h\le e^{\varepsilon}h(T+\varepsilon)$，令 $T\to\infty$ 得 $\limsup h\le e^{\varepsilon}$、$\liminf h\ge e^{-\varepsilon}$，再令 $\varepsilon\to0$ 得 $h\to1$，即 $\psi(x)\sim x$。最后用引理 1–4（$\psi\sim x\iff\theta\sim x\iff\pi\sim x/\log x$）得 $\pi(x)\sim x/\log x$。∎
-
-> 这条边是素数定理链条上最后一块：命题 A（$\zeta$ 无零点）在 PNT 注里已完整，命题 B 就是 `lem.newman-tauberian` 节点。两边一接，PNT 不再有缺口。其余前提（$\zeta$ 的解析性质、$\pi$ 与 $\psi$ 的换算）见 `thm.prime-number-theorem` 与 `def.prime-counting` 的注，不另列 sources。
 
 #### Cauchy 积分公式 + 留数定理 + Cauchy–Goursat 积分定理 ⟹ Newman 解析定理　`imp.newman-cauchy-residue`
 *Cauchy 积分公式、留数公式与 Cauchy–Goursat $\implies$ Newman 围道恒等式*
@@ -53282,9 +53634,11 @@ LU 分解就是高斯消元（初等行变换）的矩阵形式。
 
 正定时 LU 变成 Cholesky $A = LL^{T}$，在注里点出。
 
-#### 定义引用：「Gram–Schmidt 正交化」→ QR 分解　`dep.qr-gs`
+#### Gram–Schmidt 正交化 ⟹ QR 分解　`dep.qr-gs`
 
-QR 分解就是 Gram–Schmidt 的矩阵写法 —— 这一步是理解 QR 的全部。
+对 $A$ 的列向量作 Gram–Schmidt：$q_{j}$ 由 $a_{j}$ 减去它在前 $j-1$ 个 $q$ 上的投影再归一化，故 $a_{j}=\sum_{i\le j}r_{ij}q_{i}$，矩阵形式即 $A=QR$，$R$ 上三角源于递推只涉及 $i\le j$。∎
+
+> QR 分解就是 Gram–Schmidt 的矩阵写法 —— 这一步是理解 QR 的全部。
 
 #### 定义引用：「酉矩阵与正交矩阵」→ QR 分解　`dep.qr-unitary`
 
@@ -53402,9 +53756,11 @@ Lagrange 子空间的本质是「极大全迷向子空间」。
 
 定理的主语就是辛流形：局部能化成标准形。
 
-#### 定义引用：「辛标准形定理」→ Darboux 定理　`dep.darb-snf`
+#### 辛标准形定理 ⟹ Darboux 定理　`dep.darb-snf`
 
-证明的第一步是逐点用线性标准形定理找辛基。
+Moser 论证的第一步是在每点取辛基把 $\omega_{p}$ 化为 $\omega_{0}$ —— 这正是 `thm.symplectic-normal-form`（线性标准形）的内容；有了处处等于 $\omega_{0}$ 的参照形式，才能写 $\omega_{t}$ 并用同伦公式（`imp.darboux`）走到 $\omega_{0}$。∎
+
+> 证明的第一步是逐点用线性标准形定理找辛基。
 
 #### 定义引用：「光滑流形」→ Darboux 定理　`dep.darb-mf`
 
@@ -54048,6 +54404,14 @@ Minkowski 就是 L^p 范数的三角不等式。
 #### 定义引用：「环」→ 域的特征　`dep.char-primering`
 
 定义走 $\mathbb{Z} \to K$ 这个环同态，要先有环与理想。
+
+#### 定义引用：「Banach 空间」→ 弱拓扑　`dep.weak-banach`
+
+弱拓扑定义在赋范空间（特别 Banach 空间）上。
+
+#### 定义引用：「对偶空间」→ 弱拓扑　`dep.weak-dual`
+
+弱拓扑由连续对偶的元素生成。
 
 #### 定义引用：「对偶空间」→ 完美配对　`def-link.pp-dual`
 
@@ -55347,6 +55711,50 @@ $\mathfrak{gl}(k)$ 的元素是线性映射，多项式取在它的矩阵元上�
 
 ⚠ 用到了「证明有限」这一条（`def.provability` 的定义里就写着）—— 这是整个论证的关键。
 
+#### 定义引用：「商拓扑」→ 多边形表示　`dep.poly-quotient`
+
+多边形表示是把边界按配对粘合得到的商空间。
+
+#### 定义引用：「闭曲面」→ 多边形表示　`dep.poly-closed`
+
+多边形表示构造的对象是闭曲面（粘合后需验证流形性）。
+
+#### 定义引用：「连通和」→ 环柄　`dep.handle-connsum`
+
+加环柄等价于与环面作连通和。
+
+#### 定义引用：「环面 T²」→ 环柄　`dep.handle-torus`
+
+环柄的基本例子是环面。
+
+#### 定义引用：「亏格」→ 环柄　`dep.handle-genus`
+
+加环柄使可定向亏格加 1。
+
+#### 定义引用：「射影平面 RP²」→ 交叉帽　`dep.crosscap-projective`
+
+交叉帽的基本例子是射影平面。
+
+#### 定义引用：「莫比乌斯带」→ 交叉帽　`dep.crosscap-mobius`
+
+交叉帽等于沿边界粘 Möbius 带。
+
+#### 定义引用：「连通和」→ 交叉帽　`dep.crosscap-connsum`
+
+交叉帽等价于与射影平面作连通和。
+
+#### 定义引用：「交叉帽」→ 不可定向亏格　`dep.nongenus-crosscap`
+
+不可定向亏格按交叉帽个数定义。
+
+#### 定义引用：「Euler 示性数」→ 不可定向亏格　`dep.nongenus-euler`
+
+读数 chi = 2 - k 依赖 Euler 示性数。
+
+#### 定义引用：「连通和」→ 不可定向亏格　`dep.nongenus-connsum`
+
+定义用射影平面的连通和。
+
 #### 定义引用：「商集与等价类」→ 连通和　`dep.quotientset-connectedsum`
 
 粘合这一步**就是商空间**：不交并之后按 $x \sim h(x)$ 取商拓扑。
@@ -55391,9 +55799,11 @@ Radó 定理的结论就是「这种 $(K,h)$ 存在」。
 
 「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。
 
-#### 定义引用：「Radó 定理」→ 闭曲面分类定理　`dep.rado-classification`
+#### Radó 定理 ⟹ 闭曲面分类定理　`dep.rado-classification`
 
-分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。
+Radó 定理给出曲面 $S$ 的三角剖分 $K$；分类定理的证明正是在 $K$ 的有限多边形的组合层面做「删三角形、翻边、收拢」三步化简，故以 Radó 为第一步前提。∎
+
+> 分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。
 
 #### 定义引用：「三角剖分」→ 单纯逼近　`dep.triangulation-simphomology`
 
@@ -55612,9 +56022,11 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 
 「中间域正规 $\iff$ 对应子群正规」—— 这里用的是**群论**那个正规子群。
 
-#### 定义引用：「Lagrange 定理」→ 伽罗瓦基本定理　`dep.lagrange-correspondence`
+#### Lagrange 定理 ⟹ 伽罗瓦基本定理　`dep.lagrange-correspondence`
 
-$[E:F] = [G : \operatorname{Gal}(K/E)]$ 的右端是**指数**，靠 Lagrange 定理与群阶对上。
+对应把中间域 $E$ 送到 $H=\operatorname{Gal}(K/E)$。由 $[K:F]=[K:E][E:F]$ 与 Lagrange 定理 $[G:H]=|G|/|H|$，两边同除得 $[G:H]=[E:F]$ —— 这正是基本定理里的指数匹配。∎
+
+> $[E:F] = [G : \operatorname{Gal}(K/E)]$ 的右端是**指数**，靠 Lagrange 定理与群阶对上。
 
 #### 定义引用：「伽罗瓦群」→ 根式可解 与 伽罗瓦群可解　`dep.galoisgroup-radical`
 
@@ -55632,9 +56044,11 @@ $[E:F] = [G : \operatorname{Gal}(K/E)]$ 的右端是**指数**，靠 Lagrange �
 
 两个方向都要「可解性对商群/子群封闭」：塔的每一步商群可解 $\iff$ 整个群可解。
 
-#### 定义引用：「根式可解 与 伽罗瓦群可解」→ 五次方程没有根式解　`dep.radical-quintic`
+#### 根式可解 与 伽罗瓦群可解 ⟹ 五次方程没有根式解　`dep.radical-quintic`
 
-「$\operatorname{Gal}(f)$ 不可解 $\implies$ 无根式解」这一步就是那条定理的逆否。
+`thm.radical-solvable` 给出「根式可解 $\iff$ 群可解」，取逆否得「群不可解 $\implies$ 无根式解」；$S_{5}$ 含不可解的正规子群 $A_{5}$，故以 $S_{5}$ 为伽罗瓦群的五次多项式无根式解。∎
+
+> 「$\operatorname{Gal}(f)$ 不可解 $\implies$ 无根式解」这一步就是那条定理的逆否。
 
 #### 定义引用：「对称群的可解性」→ 五次方程没有根式解　`dep.snsolvable-quintic`
 
@@ -55668,9 +56082,11 @@ $\mu_{n}$ 在乘法下是 $n$ 阶**循环群**；分圆多项式的伽罗瓦群�
 
 根式可解 $\implies$ 可解那条路线必须**先添加 $n$ 次单位根**（否则开方写不出来）。
 
-#### 定义引用：「伽罗瓦基本定理」→ 根式可解 与 伽罗瓦群可解　`dep.correspondence-radical`
+#### 伽罗瓦基本定理 + 可解性对子群与商群封闭 ⟹ 根式可解 与 伽罗瓦群可解　`dep.correspondence-radical`
 
-「根式塔 $\leftrightarrow$ 群塔」的翻译**全靠基本定理**：每添加一次开方对应一个循环扩张，域塔对应子群链、正规性对应正规子群，于是域的可解性变成群的可解性。
+设 $G=\operatorname{Gal}(K/F)$。① 根式塔 $F=F_{0}\subset\cdots\subset F_{m}=E$（$\alpha_{i}^{n_{i}}\in F_{i-1}$）经伽罗瓦对应 $E\mapsto\operatorname{Gal}(K/E)$ 给出群链 $G=G_{0}\supset\cdots\supset G_{m}=1$，且 $G_{i-1}/G_{i}\cong\operatorname{Gal}(F_{i}/F_{i-1})$ 循环；② 于是 $G$ 有交换商组成的正规列，由可解群对商封闭（`thm.solvable-quotients`）得 $G$ 可解。∎
+
+> 「根式塔 $\leftrightarrow$ 群塔」的翻译**全靠基本定理**：每添加一次开方对应一个循环扩张，域塔对应子群链、正规性对应正规子群，于是域的可解性变成群的可解性。
 
 #### 定义引用：「可解群」→ 五次方程没有根式解　`dep.solvable-quintic`
 
@@ -57060,9 +57476,11 @@ Pontryagin 类是实丛的示性类，继承自然性与同构不变。
 
 公式两边都是亏格；亏格在这里用同调定义（$g = \tfrac12 \operatorname{rank} H_{1}$），所以不会绕回分类定理。
 
-#### 定义引用：「Euler 示性数与亏格」→ Riemann–Hurwitz 公式　`dep.eulerchar-riemannhurwitz`
+#### Euler 示性数与亏格 ⟹ Riemann–Hurwitz 公式　`dep.eulerchar-riemannhurwitz`
 
-换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。
+Riemann–Hurwitz 的原形是 $2g(S)-2=n(2g(T)-2)+\sum_{p}(e_{p}-1)$；代入 $\chi=2-2g$（`prop.eulerchar-genus`）即得 $\chi(S)=n\chi(T)-\sum_{p}(e_{p}-1)$。∎
+
+> 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。
 
 #### 定义引用：「幂集 𝒫(X)」→ 拓扑空间与开集　`dep.powerset-topology`
 
@@ -57148,9 +57566,11 @@ $Y \subseteq X$ —— 先有子集，才谈得上它上面的子空间拓扑。
 
 商集是拿**等价关系**做出来的 —— 先有关系，才谈得上等价类。
 
-#### 定义引用：「自然数集存在」→ 归纳原理与递推定义　`dep.omega-induction`
+#### 自然数集存在 ⟹ 归纳原理与递推定义　`dep.omega-induction`
 
-归纳原理与递推定义都来自「$\omega$ 是**最小归纳集**」这一条。
+$\omega$ 是最小归纳集：若 $S\subset\omega$ 且 $0\in S$、$n\in S\implies n^{+}\in S$，则 $S$ 是归纳集，由最小性 $\omega\subset S$，故 $S=\omega$ —— 这就是归纳原理；递推定义的唯一性同样由最小性给出。∎
+
+> 归纳原理与递推定义都来自「$\omega$ 是**最小归纳集**」这一条。
 
 #### 定义引用：「归纳原理与递推定义」→ 自然数的加法与乘法　`dep.induction-natarith`
 
@@ -57244,9 +57664,11 @@ $L^1$ 的元素不是函数本身，而是**函数在 a.e. 相等下的等价类
 
 结论写成基数就是 $\#\mathbb{R} = 2^{\aleph_0} > \aleph_0$。
 
-#### 定义引用：「Cantor 定理」→ ℝ 不可数　`dep.cantor-uncountable`
+#### Cantor 定理 ⟹ ℝ 不可数　`dep.cantor-uncountable`
 
-后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$\#A < \#\mathcal{P}(A)$）。
+$2^{\aleph_{0}}=\#\mathcal{P}(\mathbb{N})=\#\mathbb{R}$（二进制展开）。由 Cantor 定理 $\#A<\#\mathcal{P}(A)$，取 $A=\mathbb{N}$ 得 $\aleph_{0}<2^{\aleph_{0}}=\#\mathbb{R}$，故 $\mathbb{R}$ 不可数。∎
+
+> 后半句 $2^{\aleph_0} > \aleph_0$ 用的就是 Cantor 定理（$\#A < \#\mathcal{P}(A)$）。
 
 #### 绝对值 |x| ⟹ 三角不等式　`imp.triangle`
 *绝对值的定义 $\implies$ 三角不等式*
@@ -58533,6 +58955,34 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 **连接同态 $\delta$ 是从哪来的。** 它就是三角里的第三条腿 $M \to K[1]$ 取同调之后的样子：一个 $H^{n}(M) \to H^{n+1}(K)$ 的映射，把「$M$ 里的元素」送上「$K$ 的下一个同调」。它之所以存在，唯一的原因就是**映射锥给了第三条腿** —— 短正合列本身只给出前两条腿。∎
 
 > 经典证明用蛇引理，这里用映射锥 + 旋转。两条路都通，但后者的好处是：**连接同态是什么**这件事，一眼就能看出来。
+
+#### 定义引用：「群」→ 自由群　`dep.fg-group`
+
+自由群的乘法与公理按群的定义验证。
+
+#### 定义引用：「自由群」→ 自由群的泛性质　`dep.fgu-fg`
+
+泛性质讨论的对象是自由群。
+
+#### 定义引用：「伴随函子」→ 自由群的泛性质　`dep.fgu-adjoint`
+
+自由函子与遗忘函子构成伴随对。
+
+#### 定义引用：「群」→ 二面体群　`dep.dihedral-group`
+
+二面体群是群。
+
+#### 定义引用：「半直积」→ 二面体群　`dep.dihedral-semidirect`
+
+D_n 是 Z/n 与 Z/2 的半直积。
+
+#### 定义引用：「群作用」→ 二面体群　`dep.dihedral-action`
+
+D_n 作用在正 n 边形的顶点集上。
+
+#### 定义引用：「类方程」→ 二面体群　`dep.dihedral-classeq`
+
+D_n 的共轭类可用类方程分析。
 
 #### 定义引用：「范畴」→ 模范畴　`def-link.category-module-category`
 
@@ -64662,7 +65112,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
 - **多元微分 ↔ 微分中值定理与 Taylor**　2 条节点级连线
-- **群作用与置换 ↔ 代数结构**　7 条节点级连线
+- **群作用与置换 ↔ 代数结构**　9 条节点级连线
 - **合成列与可解群 ↔ 代数结构**　6 条节点级连线
 - **代数结构 ↔ 实数的运算与不等式**　6 条节点级连线
 - **实数的运算与不等式 ↔ 数系的构造**　9 条节点级连线
@@ -64692,6 +65142,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **加法与阿贝尔范畴 ↔ 内射模与可除群**　3 条节点级连线
 - **代数结构 ↔ 内射模与可除群**　3 条节点级连线
 - **平坦模 ↔ 模的张量积与标量限制**　2 条节点级连线
+- **平坦模 ↔ 消解与维数**　3 条节点级连线
 - **同调与正合列 ↔ 消解与维数**　6 条节点级连线
 - **消解与维数 ↔ 紧 Hausdorff 空间**　4 条节点级连线
 - **复形与导出三角 ↔ 消解与维数**　7 条节点级连线
@@ -64699,9 +65150,9 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **代数结构 ↔ 消解与维数**　2 条节点级连线
 - **代数结构 ↔ 平坦模**　2 条节点级连线
 - **同调与正合列 ↔ 复形与导出三角**　22 条节点级连线
-- **加法与阿贝尔范畴 ↔ 复形与导出三角**　12 条节点级连线
-- **层上同调 ↔ 仿紧与单位分解**　2 条节点级连线
-- **复形与导出三角 ↔ 层上同调**　4 条节点级连线
+- **层与拓扑 ↔ 层上同调**　13 条节点级连线
+- **层上同调 ↔ 仿紧与单位分解**　4 条节点级连线
+- **复形与导出三角 ↔ 层上同调**　5 条节点级连线
 - **仿紧与单位分解 ↔ 分离公理**　6 条节点级连线
 - **拓扑空间的基本语汇 ↔ 仿紧与单位分解**　4 条节点级连线
 - **度量空间 ↔ 可度量化**　3 条节点级连线
@@ -64709,8 +65160,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **收敛与紧性 ↔ 可度量化**　3 条节点级连线
 - **可度量化 ↔ 分离公理**　3 条节点级连线
 - **可度量化 ↔ 仿紧与单位分解**　3 条节点级连线
-- **代数结构 ↔ 群上同调**　5 条节点级连线
-- **层与拓扑 ↔ 层上同调**　9 条节点级连线
+- **代数结构 ↔ 群上同调**　6 条节点级连线
 - **层上同调 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **活动标架与结构方程 ↔ 内蕴几何**　8 条节点级连线
 - **特征值与 Jordan 型 ↔ 曲面论**　2 条节点级连线
@@ -64718,18 +65168,18 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **活动标架与结构方程 ↔ 曲面论**　12 条节点级连线
 - **内蕴几何 ↔ 曲面论**　28 条节点级连线
 - **内蕴几何 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **多元微分 ↔ 内蕴几何**　4 条节点级连线
+- **多元微分 ↔ 内蕴几何**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线
 - **内蕴几何 ↔ 流形与向量丛**　12 条节点级连线
 - **积分 ↔ 符号测度与分解**　5 条节点级连线
 - **测度的构造 ↔ 符号测度与分解**　8 条节点级连线
 - **复变函数基础 ↔ 数系的构造**　6 条节点级连线
-- **Cauchy 理论 ↔ 复变函数基础**　11 条节点级连线
+- **Cauchy 理论 ↔ 复变函数基础**　12 条节点级连线
 - **Cauchy 理论 ↔ 共形映射与正规族**　6 条节点级连线
-- **Cauchy 理论 ↔ 留数与辐角原理**　8 条节点级连线
+- **Cauchy 理论 ↔ 留数与辐角原理**　9 条节点级连线
 - **复变函数基础 ↔ Riemann 积分**　2 条节点级连线
 - **Cauchy 理论 ↔ 函数列、幂级数与初等函数**　2 条节点级连线
-- **复变函数基础 ↔ 留数与辐角原理**　9 条节点级连线
+- **复变函数基础 ↔ 留数与辐角原理**　10 条节点级连线
 - **流形与向量丛 ↔ 拓扑空间的基本语汇**　7 条节点级连线
 - **流形与向量丛 ↔ 分离公理**　2 条节点级连线
 - **多元微分 ↔ 向量场与 Lie 结构**　3 条节点级连线
@@ -64737,7 +65187,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **流形与向量丛 ↔ 向量场与 Lie 结构**　10 条节点级连线
 - **多重线性与张量 ↔ 向量场与 Lie 结构**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 向量场与 Lie 结构**　3 条节点级连线
-- **流形与向量丛 ↔ 仿紧与单位分解**　3 条节点级连线
+- **流形与向量丛 ↔ 仿紧与单位分解**　2 条节点级连线
 - **流形与向量丛 ↔ 收敛与紧性**　2 条节点级连线
 - **微分形式、积分与 de Rham ↔ 活动标架与结构方程**　10 条节点级连线
 - **微分形式、积分与 de Rham ↔ 内蕴几何**　15 条节点级连线
@@ -64752,7 +65202,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **复变函数基础 ↔ 共形映射与正规族**　13 条节点级连线
 - **Cauchy 理论 ↔ 调和函数**　3 条节点级连线
 - **复变函数基础 ↔ 调和函数**　2 条节点级连线
-- **Cauchy 理论 ↔ 解析延拓与整函数**　10 条节点级连线
+- **Cauchy 理论 ↔ 解析延拓与整函数**　11 条节点级连线
+- **解析延拓与整函数 ↔ 留数与辐角原理**　2 条节点级连线
 - **活动标架与结构方程 ↔ Lie 群**　4 条节点级连线
 - **丛的示性类 ↔ 流形与向量丛**　24 条节点级连线
 - **丛的示性类 ↔ 层上同调**　2 条节点级连线
@@ -64760,9 +65211,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **向量场与 Lie 结构 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **活动标架与结构方程 ↔ 向量场与 Lie 结构**　2 条节点级连线
 - **Lie 群 ↔ 流形与向量丛**　2 条节点级连线
-- **平坦模 ↔ 消解与维数**　2 条节点级连线
 - **共形映射与正规族 ↔ 留数与辐角原理**　2 条节点级连线
-- **复变函数基础 ↔ 解析延拓与整函数**　4 条节点级连线
+- **复变函数基础 ↔ 解析延拓与整函数**　5 条节点级连线
 - **解析延拓与整函数 ↔ 共形映射与正规族**　2 条节点级连线
 - **关系与函数 ↔ 基本群**　2 条节点级连线
 - **基本群 ↔ 拓扑空间的基本语汇**　4 条节点级连线
@@ -64770,6 +65220,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **代数结构 ↔ 基本群**　4 条节点级连线
 - **集合的构造 ↔ 同调群**　2 条节点级连线
 - **代数结构 ↔ 同调群**　2 条节点级连线
+- **拓扑空间的基本语汇 ↔ 同调群**　2 条节点级连线
 - **复形与导出三角 ↔ 同调群**　6 条节点级连线
 - **微分定理 ↔ 积分**　4 条节点级连线
 - **微分定理 ↔ 符号测度与分解**　4 条节点级连线
@@ -64779,9 +65230,11 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **整环与分解 ↔ 代数结构**　6 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
+- **Cauchy 理论 ↔ 数论函数与素数分布**　2 条节点级连线
+- **留数与辐角原理 ↔ 数论函数与素数分布**　2 条节点级连线
+- **复变函数基础 ↔ 数论函数与素数分布**　4 条节点级连线
+- **解析延拓与整函数 ↔ 数论函数与素数分布**　3 条节点级连线
 - **整除与同余 ↔ 数论函数与素数分布**　8 条节点级连线
-- **解析延拓与整函数 ↔ 数论函数与素数分布**　2 条节点级连线
-- **复变函数基础 ↔ 数论函数与素数分布**　3 条节点级连线
 - **选择原理 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **选择原理 ↔ 收敛与紧性**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 符号测度与分解**　5 条节点级连线
@@ -64802,10 +65255,11 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　3 条节点级连线
 - **拓扑空间的基本语汇 ↔ 分离公理**　14 条节点级连线
 - **收敛与紧性 ↔ 分离公理**　4 条节点级连线
+- **加法与阿贝尔范畴 ↔ 复形与导出三角**　11 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
-- **线性映射与秩 ↔ 赋范空间与有界算子**　5 条节点级连线
-- **多元微分 ↔ 赋范空间与有界算子**　11 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　12 条节点级连线
+- **线性映射与秩 ↔ 赋范空间与有界算子**　6 条节点级连线
 - **L^p 空间 ↔ 赋范空间与有界算子**　4 条节点级连线
 - **Hilbert 空间 ↔ 赋范空间与有界算子**　4 条节点级连线
 - **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
@@ -64827,16 +65281,16 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **丛的示性类 ↔ 微分形式、积分与 de Rham**　2 条节点级连线
 - **代数结构 ↔ 向量空间与基**　4 条节点级连线
 - **微分形式、积分与 de Rham ↔ 同调群**　3 条节点级连线
+- **拓扑空间的基本语汇 ↔ 曲面的地形**　5 条节点级连线
+- **同调群 ↔ 曲面的地形**　10 条节点级连线
 - **内蕴几何 ↔ 曲面的地形**　2 条节点级连线
-- **同调群 ↔ 曲面的地形**　9 条节点级连线
-- **拓扑空间的基本语汇 ↔ 曲面的地形**　4 条节点级连线
 - **流形与向量丛 ↔ 曲面的地形**　4 条节点级连线
 - **曲面论 ↔ 曲面的地形**　3 条节点级连线
 - **Galois 理论 ↔ 代数结构**　5 条节点级连线
 - **Galois 理论 ↔ 向量空间与基**　2 条节点级连线
 - **Galois 理论 ↔ 多项式与因式分解**　3 条节点级连线
 - **Galois 理论 ↔ 群作用与置换**　2 条节点级连线
-- **Galois 理论 ↔ 合成列与可解群**　5 条节点级连线
+- **Galois 理论 ↔ 合成列与可解群**　6 条节点级连线
 - **Galois 理论 ↔ 数系的构造**　2 条节点级连线
 - **集合的构造 ↔ 关系与函数**　3 条节点级连线
 - **基数与等势 ↔ 关系与函数**　4 条节点级连线
@@ -64890,6 +65344,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **拓扑斯 ↔ 凝聚态集**　11 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
+- **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　14 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **阿贝尔层 ↔ 层上同调**　4 条节点级连线

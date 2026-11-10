@@ -19,4 +19,16 @@
 
 - Newman 解析定理 → lem.newman-tauberian
 
+- ψ–θ 关系 | Chebyshev psi theta | psi theta sum → lem.psi-theta-sum
+
+- ψ 与 θ 差 o(x) | psi minus theta | psi theta difference → lem.psi-theta-asymptotic
+
+- θ 与 π 的 Abel 变换 | Abel transform theta pi → lem.abel-theta-pi
+
+- θ 与 π 渐近等价 | theta pi equivalence → lem.theta-pi-equivalence
+
+- ζ 亚纯延拓 | zeta meromorphic continuation → prop.zeta-continuation
+
+- ζ 在 Re s=1 无零点 | zeta no zeros on Re 1 → thm.zeta-no-zeros-line1
+
 见 `../../alias.md`。

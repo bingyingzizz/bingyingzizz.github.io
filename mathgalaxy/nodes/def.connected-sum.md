@@ -12,7 +12,7 @@ $$M^{\circ} := M \setminus \operatorname{int} B_{M}, \qquad N^{\circ} := N \setm
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.genus`](../nodes/def.genus.md) 亏格 用
+- 被 [`def.handle`](../nodes/def.handle.md) 环柄 用
 
 - …另有出边，续页见 [nodes/def.connected-sum.4.md](./def.connected-sum.4.md)
 

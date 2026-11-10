@@ -11,11 +11,13 @@ $$A = QR ,$$
 > 陈述续见 [nodes/thm.qr-decomposition.2.md](./thm.qr-decomposition.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`thm.gram-schmidt`](../nodes/thm.gram-schmidt.md) Gram–Schmidt 正交化：dep.qr-gs　[proofs/dep.qr-gs.md](../proofs/dep.qr-gs.md)
+
 - …另有入边，续页见 [nodes/thm.qr-decomposition.3.md](./thm.qr-decomposition.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.qr-decomposition.4.md](./thm.qr-decomposition.4.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis
 

@@ -11,7 +11,7 @@ $$\chi(S) = 2 - 2g .$$
 
 ## 它能推出什么 / 谁在用它
 - ～弱边 [`ex.torus`](../nodes/ex.torus.md) 环面 T²
-- 被 [`thm.riemann-hurwitz`](../nodes/thm.riemann-hurwitz.md) Riemann–Hurwitz 公式 用
+- ⇒ [`thm.riemann-hurwitz`](../nodes/thm.riemann-hurwitz.md) Riemann–Hurwitz 公式
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.eulerchar-genus.2.md](./prop.eulerchar-genus.2.md)

@@ -9,3 +9,5 @@
 - ⇒ [`thm.poisson-formula`](../nodes/thm.poisson-formula.md) Poisson 积分公式
 - ⇒ [`thm.runge`](../nodes/thm.runge.md) Runge 逼近定理
 - ⇒ [`lem.newman-tauberian`](../nodes/lem.newman-tauberian.md) Newman 解析定理
+
+> 续见 [nodes/thm.cauchy-integral-formula.5.md](./thm.cauchy-integral-formula.5.md)

@@ -7,6 +7,7 @@
 - def.complemented-subspace　可补子空间　layer 18
 - def.uniformly-convex　一致凸　layer 18
 - def.reflexive-space　自反空间　layer 18
+- def.weak-topology　弱拓扑　layer 18
 - thm.neumann-series　Neumann 级数　layer 19
 - def.strictly-convex　严格凸　layer 19
 - thm.milman-pettis　Milman–Pettis 定理　layer 19

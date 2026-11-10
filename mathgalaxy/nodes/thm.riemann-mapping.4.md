@@ -2,4 +2,5 @@
 [在星图里打开](../#n=thm.riemann-mapping)　·　第 1 页 [nodes/thm.riemann-mapping.md](./thm.riemann-mapping.md)　·　上一页 [nodes/thm.riemann-mapping.3.md](./thm.riemann-mapping.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`lem.caratheodory-osgood`](../nodes/lem.caratheodory-osgood.md) Carathéodory–Osgood 边界对应 用
+- ⇒ [`thm.boundary-correspondence`](../nodes/thm.boundary-correspondence.md) 边界对应定理
+- ⇒ [`lem.caratheodory-osgood`](../nodes/lem.caratheodory-osgood.md) Carathéodory–Osgood 边界对应

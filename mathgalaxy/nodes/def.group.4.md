@@ -11,6 +11,6 @@
 - 被 [`ex.trivial-group`](../nodes/ex.trivial-group.md) 平凡群 用
 - 被 [`def.category-of-groups`](../nodes/def.category-of-groups.md) 群范畴 用
 - 被 [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴 用
-- 被 [`def.subgroup`](../nodes/def.subgroup.md) 子群 用
+- 被 [`def.free-group`](../nodes/def.free-group.md) 自由群 用
 
 > 续见 [nodes/def.group.5.md](./def.group.5.md)

@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.orientable-surface`](../nodes/def.orientable-surface.md) R³ 中的可定向曲面：用到了定义 R³ 中的可定向曲面　[proofs/dep.mobius-orient.md](../proofs/dep.mobius-orient.md)
+
+> 续见 [nodes/def.mobius-band.3.md](./def.mobius-band.3.md)

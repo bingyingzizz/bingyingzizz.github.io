@@ -2,9 +2,8 @@
 [在星图里打开](../#n=thm.radical-solvable)　·　第 1 页 [nodes/thm.radical-solvable.md](./thm.radical-solvable.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理 + [`thm.solvable-quotients`](../nodes/thm.solvable-quotients.md) 可解性对子群与商群封闭：dep.correspondence-radical　[proofs/dep.correspondence-radical.md](../proofs/dep.correspondence-radical.md)
+- [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群：用到了定义 伽罗瓦群　[proofs/dep.galoisgroup-radical.md](../proofs/dep.galoisgroup-radical.md)
 - [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群：用到了定义 可解群　[proofs/dep.solvable-radical.md](../proofs/dep.solvable-radical.md)
-- [`def.splitting-field`](../nodes/def.splitting-field.md) 分裂域：用到了定义 分裂域　[proofs/dep.splitting-radical.md](../proofs/dep.splitting-radical.md)
-- [`thm.solvable-quotients`](../nodes/thm.solvable-quotients.md) 可解性对子群与商群封闭：用到了定义 可解性对子群与商群封闭　[proofs/dep.solvablequotients-radical.md](../proofs/dep.solvablequotients-radical.md)
-- [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根：用到了定义 单位根　[proofs/dep.rootsofunity-radical.md](../proofs/dep.rootsofunity-radical.md)
 
 > 续见 [nodes/thm.radical-solvable.3.md](./thm.radical-solvable.3.md)

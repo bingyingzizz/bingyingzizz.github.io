@@ -14,6 +14,8 @@ layer 20 · 定义 · 基本群 · 拓扑学
 - [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群：用到了定义 基本群　[proofs/e58.definition.md](../proofs/e58.definition.md)
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.lens-space`](../nodes/def.lens-space.md) 透镜空间 用
+
 - …另有出边，续页见 [nodes/def.simply-connected.3.md](./def.simply-connected.3.md)
 
 refs: Munkres, Topology (2nd ed.), Ch. 9 · The Fundamental Group（simply connected）；Hatcher, Algebraic Topology, Ch. 1 §1.1 · simply-connected spaces

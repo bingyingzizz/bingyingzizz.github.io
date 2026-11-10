@@ -6,5 +6,3 @@
 - [`def.singular-chain`](../nodes/def.singular-chain.md) 奇异链：用到了定义 奇异链　[proofs/dep.mf2-singchain-derhamthm.md](../proofs/dep.mf2-singchain-derhamthm.md)
 - [`def.cohomology`](../nodes/def.cohomology.md) 同调：用到了定义 同调　[proofs/dep.mf2-cohomology-derhamthm.md](../proofs/dep.mf2-cohomology-derhamthm.md)
 - [`def.integral-on-chain`](../nodes/def.integral-on-chain.md) 链上的积分：用到了定义 链上的积分　[proofs/dep.mf2-integralonchain-derhamthm.md](../proofs/dep.mf2-integralonchain-derhamthm.md)
-
-> 续见 [nodes/thm.de-rham.7.md](./thm.de-rham.7.md)

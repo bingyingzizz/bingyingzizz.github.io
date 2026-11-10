@@ -1,12 +1,8 @@
 # 闭链上的积分 $\implies$ de Rham 上同调与奇异上同调同构
 `imp.mf2-de-rham` · 推出 · strong 边 · 根 `../`
 
-`def.de-rham-complex` de Rham 上同调 + `def.singular-chain` 奇异链 + `def.integral-on-chain` 链上的积分 + `thm.stokes-chain` 链上的 Stokes 定理 + `lem.poincare-lemma` Poincaré 引理 + `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 → `thm.de-rham` de Rham 定理
+`def.de-rham-complex` de Rham 上同调 + `def.singular-chain` 奇异链 + `def.integral-on-chain` 链上的积分 + `thm.stokes` Stokes 定理 + `thm.stokes-chain` 链上的 Stokes 定理 + `lem.poincare-lemma` Poincaré 引理 + `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 → `thm.de-rham` de Rham 定理
 
-具体地：常层 $\underline{\mathbb{R}}$ 的层上同调由这组性质唯一确定；奇异上同调满足同一组性质（奇异链给出 $\underline{\mathbb{R}}$ 的一个消解：$\mathrm{Hom}(C^{\mathrm{sing}}_{\bullet}(-),\mathbb{R})$ 在可缩空间上正合）。
-
-于是两者自然同构 —— 这是代数拓扑的标准定理，本图不证。
-
-**收尾**：把第三步、第四步拼起来，得到同构 $H^{k}_{\mathrm{dR}}(M) \cong H^{k}_{\mathrm{sing}}(M;\mathbb{R})$。
+**第四步：层上同调 $=$ 奇异上同调。** 这两套上同调都是「同伦不变 $+$ 单点的值 $+$ 对（空间，子空间）有长正合列」的**上同调理论**；Eilenberg–Steenrod 型的唯一性定理说：两个这样的理论只要在单点上的值相同、且在映射上自然，就在**有好覆盖的空间**（CW 复形、拓扑流形都算）上自然同构。⚠️ 这些前提不写全，「唯一确定」是不成立的；本条只当引理用不证。
 
 > 续见 proofs/imp.mf2-de-rham.10.md

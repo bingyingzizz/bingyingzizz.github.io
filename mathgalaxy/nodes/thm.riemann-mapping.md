@@ -9,7 +9,7 @@ layer 30 · 定理 · 共形映射与正规族 · 复变函数
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`prop.poincare-disk`](../nodes/prop.poincare-disk.md) Poincaré 圆盘与双曲几何
-- ⇒ [`thm.boundary-correspondence`](../nodes/thm.boundary-correspondence.md) 边界对应定理
+- 被 [`def.prime-end`](../nodes/def.prime-end.md) 素端 用
 
 - …另有出边，续页见 [nodes/thm.riemann-mapping.4.md](./thm.riemann-mapping.4.md)
 

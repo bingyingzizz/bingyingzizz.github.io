@@ -6,4 +6,4 @@
 - 被 [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理 用
 - ⇒ [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理
 - ⇒ [`thm.order-divides-phi`](../nodes/thm.order-divides-phi.md) 阶整除 Euler 函数
-- 被 [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理 用
+- ⇒ [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理

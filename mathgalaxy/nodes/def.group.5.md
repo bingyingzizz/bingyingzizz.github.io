@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.group)　·　第 1 页 [nodes/def.group.md](./def.group.md)　·　上一页 [nodes/def.group.4.md](./def.group.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.dihedral-group`](../nodes/def.dihedral-group.md) 二面体群 用
+- 被 [`def.subgroup`](../nodes/def.subgroup.md) 子群 用
 - 被 [`def.normal-subgroup`](../nodes/def.normal-subgroup.md) 正规子群 用
 - 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用
 - 被 [`def.field`](../nodes/def.field.md) 域 用

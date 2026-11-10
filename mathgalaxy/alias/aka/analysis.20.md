@@ -1,6 +1,12 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- ζ 亚纯延拓 | zeta meromorphic continuation → prop.zeta-continuation
+
+- ζ 在 Re s=1 无零点 | zeta no zeros on Re 1 → thm.zeta-no-zeros-line1
+
+- Stolz-Cesaro theorem | Stolz–Cesàro | 施托尔茨-切萨罗定理 | Stolz 定理 → thm.stolz-cesaro
+
 - Cesàro mean | Cesaro summation | 切萨罗平均 | Cesàro 求和 → thm.cesaro-mean-limit
 
 - d'Alembert ratio test | 比值判别法 | 达朗贝尔判别法 → thm.ratio-test
@@ -17,8 +23,4 @@
 
 - summation by parts | Abel transformation | 阿贝尔求和 | 分部求和 → lem.abel-summation
 
-- formal power series ring | 形式幂级数 | 形式幂级数环 → def.formal-power-series
-
-- Lagrange inversion theorem | Lagrange–Bürmann formula | 拉格朗日反演 | 拉格朗日反演定理 → thm.lagrange-inversion
-
-见 `../../alias.md`。
+> 续见 alias/aka/analysis.21.md

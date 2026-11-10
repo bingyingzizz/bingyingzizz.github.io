@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.simplicial-complex)　·　第 1 页 [nodes/def.simplicial-complex.md](./def.simplicial-complex.md)　·　上一页 [nodes/def.simplicial-complex.3.md](./def.simplicial-complex.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.cw-complex`](../nodes/def.cw-complex.md) CW 复形 用
 - 被 [`def.barycentric-subdivision`](../nodes/def.barycentric-subdivision.md) 重心重分 用
 - 被 [`def.simplicial-map`](../nodes/def.simplicial-map.md) 单纯映射 用
 - 被 [`def.chain-group`](../nodes/def.chain-group.md) 链群 用

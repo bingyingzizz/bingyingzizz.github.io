@@ -9,11 +9,13 @@ $$\begin{array}{ccccccc} A & \xrightarrow{\;f\;} & B & \xrightarrow{\;g\;} & C &
 > 陈述续见 [nodes/thm.snake-lemma.2.md](./thm.snake-lemma.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`lem.horseshoe`](../nodes/lem.horseshoe.md) 马蹄引理
+
+- …另有出边，续页见 [nodes/thm.snake-lemma.4.md](./thm.snake-lemma.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.snake-lemma.3.md](./thm.snake-lemma.3.md)
-
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.snake-lemma.4.md](./thm.snake-lemma.4.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §5.1–5.2
 

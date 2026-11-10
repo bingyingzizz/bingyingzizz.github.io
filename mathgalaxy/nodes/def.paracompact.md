@@ -9,11 +9,13 @@ $$\mathcal{V}\ \text{refines}\ \mathcal{U}\quad\text{and}\quad \mathcal{V}\ \tex
 
 ⚠️ **约定**：本图**不**把 Hausdorff 并进「仿紧」的定义（有些书并进去）。需要分离性时一律显式写「仿紧 Hausdorff」。
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.soft-sheaf`](../nodes/def.soft-sheaf.md) 软层 用
+
+- …另有出边，续页见 [nodes/def.paracompact.3.md](./def.paracompact.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.paracompact.2.md](./def.paracompact.2.md)
-
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.paracompact.3.md](./def.paracompact.3.md)
 
 refs: Munkres, Topology (2nd ed.), Section 41；Engelking, General Topology, Ch. 5
 

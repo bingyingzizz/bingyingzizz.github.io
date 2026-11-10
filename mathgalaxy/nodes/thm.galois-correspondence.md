@@ -8,7 +8,7 @@ layer 15 · 定理 · Galois 理论 · 抽象代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.galois-extension`](../nodes/def.galois-extension.md) 伽罗瓦扩张：用到了定义 伽罗瓦扩张　[proofs/dep.galoisext-correspondence.md](../proofs/dep.galoisext-correspondence.md)
+- [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：dep.lagrange-correspondence　[proofs/dep.lagrange-correspondence.md](../proofs/dep.lagrange-correspondence.md)
 
 - …另有入边，续页见 [nodes/thm.galois-correspondence.3.md](./thm.galois-correspondence.3.md)
 
