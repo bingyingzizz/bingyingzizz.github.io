@@ -1,6 +1,6 @@
 # profinite 整数 ℤ̂　`def.profinite-integers`
 profinite 整数 $\hat{\mathbb{Z}} = \varprojlim_{n} \mathbb{Z}/n$：数论与拓扑的交界
-layer 16 · 定义 · Stone 与 Stonean · 拓扑学+数论
+layer 13 · 定义 · Stone 与 Stonean · 拓扑学+数论
 [在星图里打开](../#n=def.profinite-integers)　·　[节点索引](../index.md)
 
 把 $\mathbb{Z}/n\mathbb{Z}$ 都看成离散紧空间，按 $n \mid m$ 时的商映射 $\mathbb{Z}/m \to \mathbb{Z}/n$ 取**逆极限**：

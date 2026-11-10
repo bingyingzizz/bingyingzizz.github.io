@@ -3,4 +3,3 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.curvature-lines`](../nodes/prop.curvature-lines.md) 曲率线网
-- 被 [`def.second-fundamental-form`](../nodes/def.second-fundamental-form.md) 第二基本形式 用

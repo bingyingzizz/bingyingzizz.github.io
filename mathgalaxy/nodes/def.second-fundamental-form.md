@@ -1,6 +1,6 @@
 # 第二基本形式　`def.second-fundamental-form`
 第二基本形式
-layer 32 · 定义 · 曲面论 · 微分几何
+layer 30 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.second-fundamental-form)　·　[节点索引](../index.md)
 
 曲面的**第二基本形式**是
@@ -12,7 +12,7 @@ $$II(v,w) := \langle \mathrm{d}r(v), -\mathrm{d}n(w)\rangle = \langle W(\mathrm{
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.gauss-equation`](../nodes/thm.gauss-equation.md) Gauss 方程 用
 
-- …另有出边，续页见 [nodes/def.second-fundamental-form.5.md](./def.second-fundamental-form.5.md)
+- …另有出边，续页见 [nodes/def.second-fundamental-form.4.md](./def.second-fundamental-form.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.second-fundamental-form.3.md](./def.second-fundamental-form.3.md)

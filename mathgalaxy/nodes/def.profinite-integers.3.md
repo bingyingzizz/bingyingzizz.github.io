@@ -3,4 +3,3 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.profinite`](../nodes/def.profinite.md) 投射有限空间：用到了定义 投射有限空间　[proofs/dep.zhat-profinite.md](../proofs/dep.zhat-profinite.md)
-- [`thm.crt`](../nodes/thm.crt.md) 中国剩余定理：用到了定义 中国剩余定理　[proofs/dep.zhat-crt.md](../proofs/dep.zhat-crt.md)

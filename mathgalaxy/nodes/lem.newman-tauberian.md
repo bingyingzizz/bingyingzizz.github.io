@@ -9,6 +9,7 @@ layer 29 · 引理 · 数论函数与素数分布 · 数论
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
+- ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/lem.newman-tauberian.3.md](./lem.newman-tauberian.3.md)

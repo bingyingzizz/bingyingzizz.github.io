@@ -1,6 +1,6 @@
 # 极小多项式整除特征多项式　`thm.minimal-poly-divisor`
 定理：$\mu_T \mid \chi_T$，且两者同根
-layer 18 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 17 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.minimal-poly-divisor)　·　[节点索引](../index.md)
 
 设 $\dim V = n < \infty$，$T : V \to V$。则

@@ -1,6 +1,6 @@
 # 极分解　`thm.polar-decomposition`
 极分解：$A = UP$，把矩阵拆成「旋转 $\times$ 拉伸」
-layer 26 · 定理 · 内积空间与正交性 · 抽象代数
+layer 25 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.polar-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：复数可以写成 $z = e^{i\theta}\lvert z\rvert$（方向 $\times$ 长度）。矩阵也有同款分解：**酉（方向）$\times$ 半正定（长度）**。
@@ -8,7 +8,12 @@ layer 26 · 定理 · 内积空间与正交性 · 抽象代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`thm.svd`](../nodes/thm.svd.md) 奇异值分解：奇异值分解 $\iff$ 极分解　[proofs/dep.ln-polar-svd.md](../proofs/dep.ln-polar-svd.md)
+
 - …另有入边，续页见 [nodes/thm.polar-decomposition.3.md](./thm.polar-decomposition.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.polar-decomposition.4.md](./thm.polar-decomposition.4.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 极分解；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 极分解
 

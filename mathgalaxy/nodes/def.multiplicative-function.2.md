@@ -3,7 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：积性函数的积性来自「素数幂两两互素」　[proofs/imp.nt-multiplicative-from-fta.md](../proofs/imp.nt-multiplicative-from-fta.md)
-- [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：用到了定义 算术基本定理　[proofs/e146.definition.md](../proofs/e146.definition.md)
-- [`def.divisor-function`](../nodes/def.divisor-function.md) 除数函数 τ 与 σ：积性函数：$\tau$、$\sigma$ 与 $\mu$、$\varphi$ 是同一个框架的四个实例　[proofs/e154.analogy.md](../proofs/e154.analogy.md)
+- [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：e145.analogy　[proofs/e145.analogy.md](../proofs/e145.analogy.md)
+- [`def.divisor-function`](../nodes/def.divisor-function.md) 除数函数 τ 与 σ：积性函数：$\tau$、$\sigma$ 与 $\mu$、$\varphi$ 是同一个框架的四个实例　[proofs/e153.analogy.md](../proofs/e153.analogy.md)
 
 > 续见 [nodes/def.multiplicative-function.3.md](./def.multiplicative-function.3.md)

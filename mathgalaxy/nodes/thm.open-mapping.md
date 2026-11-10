@@ -11,7 +11,7 @@ layer 27 · 定理 · 共形映射与正规族 · 复变函数
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`lem.schwarz`](../nodes/lem.schwarz.md) Schwarz 引理
-- 被 [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版） 用
+- ～弱边 [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版）
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.open-mapping.3.md](./thm.open-mapping.3.md)

@@ -2,6 +2,6 @@
 [在星图里打开](../#n=lem.gauss-qr)　·　第 1 页 [nodes/lem.gauss-qr.md](./lem.gauss-qr.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e158.definition.md](../proofs/e158.definition.md)
+- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e157.definition.md](../proofs/e157.definition.md)
 
 > 续见 [nodes/lem.gauss-qr.3.md](./lem.gauss-qr.3.md)

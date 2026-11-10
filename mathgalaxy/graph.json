@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-09T15:00:15.092Z",
+  "generated": "2026-11-10T14:01:07.338Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1585,
-   "edges": 3293,
-   "strong": 3251,
-   "weak": 42,
+   "nodes": 1586,
+   "edges": 3287,
+   "strong": 3232,
+   "weak": 55,
    "derived": 33,
-   "en_pages": 1585
+   "en_pages": 1586
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -109,7 +109,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 211
+   "nodeCount": 212
   },
   {
    "id": "homology",
@@ -1443,11 +1443,12 @@
    "en": "Monos, Epis, Subobjects and Images",
    "parent": "category",
    "desc": "造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。",
-   "nodeCount": 7,
+   "nodeCount": 8,
    "nodes": [
     "def.power-object",
     "def.mono",
     "def.subobject",
+    "def.intersection-subobject",
     "def.image",
     "def.elements-category",
     "def.strict-morphism",
@@ -4197,7 +4198,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 11,
+   "layer": 10,
    "tags": [
     "定义",
     "线性代数"
@@ -4236,7 +4237,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定理",
     "应用",
@@ -7408,7 +7409,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "线性代数"
@@ -7448,7 +7449,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "命题",
     "线性代数"
@@ -7487,7 +7488,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "线性代数"
@@ -7527,7 +7528,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定理",
     "线性代数"
@@ -7567,7 +7568,7 @@
     "algebra"
    ],
    "cluster": "algebra.vectorspace",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定理",
     "线性代数",
@@ -7608,7 +7609,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "线性代数"
@@ -7648,7 +7649,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -7687,7 +7688,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -7727,7 +7728,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -7766,7 +7767,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数"
@@ -7804,7 +7805,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数"
@@ -7843,7 +7844,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -7882,7 +7883,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -7921,7 +7922,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定理",
     "线性代数",
@@ -7962,7 +7963,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -8002,7 +8003,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -8041,7 +8042,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -8081,7 +8082,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -8121,7 +8122,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "线性代数"
@@ -8160,7 +8161,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -8199,7 +8200,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数",
@@ -8240,7 +8241,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定理",
     "线性代数"
@@ -8280,7 +8281,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数"
@@ -8318,7 +8319,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -8357,7 +8358,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定理",
     "线性代数",
@@ -8396,7 +8397,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定理",
     "线性代数"
@@ -8436,7 +8437,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数"
@@ -8475,7 +8476,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "线性代数"
@@ -8515,7 +8516,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数"
@@ -8554,7 +8555,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定理",
     "线性代数",
@@ -8595,7 +8596,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -8635,7 +8636,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定理",
     "线性代数",
@@ -8675,7 +8676,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "命题",
     "线性代数",
@@ -8715,7 +8716,7 @@
     "algebra"
    ],
    "cluster": "algebra.matrix",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定理",
     "线性代数",
@@ -9086,7 +9087,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -9127,7 +9128,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -9167,7 +9168,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -9209,7 +9210,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -9249,7 +9250,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -9289,7 +9290,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定理",
     "线性代数",
@@ -9330,7 +9331,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定理",
     "线性代数",
@@ -9370,7 +9371,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -9411,7 +9412,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定理",
     "线性代数",
@@ -9451,7 +9452,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定理",
     "线性代数",
@@ -9492,7 +9493,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定理",
     "线性代数",
@@ -9534,7 +9535,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "推论",
     "线性代数",
@@ -9575,7 +9576,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -9699,7 +9700,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -9739,7 +9740,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -9779,7 +9780,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定理",
     "线性代数",
@@ -9819,7 +9820,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -9858,7 +9859,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "定理",
     "线性代数",
@@ -9899,7 +9900,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -9938,7 +9939,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -9978,7 +9979,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -10060,7 +10061,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 25,
+   "layer": 24,
    "tags": [
     "推论",
     "线性代数",
@@ -10101,7 +10102,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -10225,7 +10226,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "线性代数",
@@ -10266,7 +10267,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -10306,7 +10307,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定理",
     "线性代数",
@@ -10346,7 +10347,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "命题",
     "线性代数",
@@ -10388,7 +10389,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -10429,7 +10430,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -10469,7 +10470,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -10508,7 +10509,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定理",
     "线性代数",
@@ -10550,7 +10551,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "定义",
     "泛函",
@@ -10756,7 +10757,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "微积分",
@@ -11378,7 +11379,7 @@
     "analysis"
    ],
    "cluster": "analysis.multivariable",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "微积分",
@@ -15243,7 +15244,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "同调代数",
@@ -15285,7 +15286,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "命题",
     "同调代数",
@@ -15328,7 +15329,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定理",
     "同调代数",
@@ -15371,7 +15372,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "同调代数",
@@ -15414,7 +15415,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "同调代数",
@@ -15457,7 +15458,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "命题",
     "同调代数",
@@ -15500,7 +15501,7 @@
     "homology"
    ],
    "cluster": "hom.module",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "命题",
     "同调代数",
@@ -15629,7 +15630,7 @@
     "homology"
    ],
    "cluster": "hom.flat",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "命题",
     "同调代数",
@@ -15672,7 +15673,7 @@
     "homology"
    ],
    "cluster": "hom.flat",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "命题",
     "同调代数",
@@ -17358,7 +17359,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17400,7 +17401,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17486,7 +17487,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17529,7 +17530,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17656,7 +17657,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17699,7 +17700,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17742,7 +17743,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17785,7 +17786,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "同调代数",
     "群上同调",
@@ -19465,7 +19466,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 32,
+   "layer": 30,
    "tags": [
     "定义",
     "微分几何",
@@ -19507,7 +19508,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 34,
+   "layer": 32,
    "tags": [
     "定理",
     "微分几何",
@@ -19550,7 +19551,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 35,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -19635,7 +19636,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 33,
+   "layer": 31,
    "tags": [
     "定理",
     "微分几何",
@@ -19720,7 +19721,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 37,
+   "layer": 35,
    "tags": [
     "定义",
     "微分几何",
@@ -19893,7 +19894,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 36,
+   "layer": 34,
    "tags": [
     "定理",
     "微分几何",
@@ -19937,7 +19938,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -20277,7 +20278,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 32,
    "tags": [
     "命题",
     "微分几何",
@@ -20497,7 +20498,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 33,
+   "layer": 31,
    "tags": [
     "定义",
     "微分几何",
@@ -20540,7 +20541,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 35,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -20596,7 +20597,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 34,
+   "layer": 33,
    "tags": [
     "定理",
     "微分几何",
@@ -20855,7 +20856,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "微分几何",
@@ -20898,7 +20899,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "微分几何",
@@ -20941,7 +20942,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.frame",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "命题",
     "微分几何",
@@ -21469,7 +21470,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "微分几何",
@@ -23869,7 +23870,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "微分流形",
@@ -23954,7 +23955,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "命题",
     "微分流形",
@@ -30851,7 +30852,7 @@
     "定理"
    ],
    "statement": "设 $n_{1}, \\cdots, n_{k}$ 两两互素，$N = n_{1} \\cdots n_{k}$。则\n\n$$\\mathbb{Z}/N\\mathbb{Z} \\;\\cong\\; \\mathbb{Z}/n_{1}\\mathbb{Z} \\times \\cdots \\times \\mathbb{Z}/n_{k}\\mathbb{Z}, \\qquad [a] \\longmapsto ([a], \\cdots, [a])$$\n\n是环同构。等价说法：同余方程组 $x \\equiv a_{i} \\pmod{n_{i}}$（$i = 1, \\cdots, k$）对任意右端都有解，且解模 $N$ 唯一。",
-   "notes": "存在性（构造式）：由 Bézout，取 $e_{i}$ 满足 $e_{i} \\equiv 1 \\pmod{n_{i}}$、$e_{i} \\equiv 0 \\pmod{n_{j}}$（$j \\ne i$），即 $e_{i} = (N/n_{i})\\,u_{i}$，其中 $u_{i}(N/n_{i}) \\equiv 1 \\pmod{n_{i}}$（要求 $n_{i} \\ne 0$，否则 $N/n_{i}$ 无定义）；\n\n于是 $x = \\sum_{i} a_{i} e_{i}$ 就是解。\n\n\n\n唯一性：两个解之差被每个 $n_{i}$ 整除，而 $n_{i}$ 两两互素，故被 $N$ 整除。\n\n\n\n互素条件不能去掉：$x \\equiv 0 \\pmod 2$ 与 $x \\equiv 1 \\pmod 4$ 无解。\n\n\n\n实际用处是把模 $N$ 的问题拆成模素数幂的问题 —— 乘性函数的公式就是靠它。",
+   "notes": "存在性（构造式）：由 Bézout，取 $e_{i}$ 满足 $e_{i} \\equiv 1 \\pmod{n_{i}}$、$e_{i} \\equiv 0 \\pmod{n_{j}}$（$j \\ne i$），即 $e_{i} = (N/n_{i})\\,u_{i}$，其中 $u_{i}(N/n_{i}) \\equiv 1 \\pmod{n_{i}}$（要求 $n_{i} \\ne 0$，否则 $N/n_{i}$ 无定义）；\n\n于是 $x = \\sum_{i} a_{i} e_{i}$ 就是解。\n\n\n\n唯一性：两个解之差被每个 $n_{i}$ 整除，而 $n_{i}$ 两两互素，故被 $N$ 整除。\n\n\n\n互素条件不能去掉：$x \\equiv 0 \\pmod 2$ 与 $x \\equiv 1 \\pmod 4$ 无解。\n\n\n\n实际用处是把模 $N$ 的问题拆成模素数幂的问题（积性函数的公式靠的是唯一分解，不需要本条）。",
    "refs": [
     "华罗庚《数论导引》§2"
    ]
@@ -31527,7 +31528,7 @@
     "number"
    ],
    "cluster": "number.functions",
-   "layer": 16,
+   "layer": 0,
    "tags": [
     "数论",
     "数论函数"
@@ -31566,7 +31567,7 @@
     "number"
    ],
    "cluster": "number.functions",
-   "layer": 17,
+   "layer": 1,
    "tags": [
     "数论",
     "数论函数",
@@ -31606,7 +31607,7 @@
     "number"
    ],
    "cluster": "number.functions",
-   "layer": 18,
+   "layer": 2,
    "tags": [],
    "statement": "设 $f, g : \\mathbb{N}^{+} \\to \\mathbb{C}$。则\n\n$$g(n) = \\sum_{d \\mid n} f(d)\\quad \\forall n \\qquad \\iff \\qquad f(n) = \\sum_{d \\mid n} \\mu(d)\\, g\\!\\left(\\frac{n}{d}\\right) \\quad \\forall n .$$",
    "notes": "**$\\Leftarrow$ 的方向**（唯一要看的方向）：把 $f(d)$ 的表达式代进去，\n\n\n\n$$\\sum_{d\\mid n} f(d) = \\sum_{d\\mid n}\\ \\sum_{e\\mid (n/d)} \\mu(e)\\, g\\!\\left(\\frac{n}{de}\\right) = \\sum_{m \\mid n} g(m) \\sum_{e \\mid (n/m)} \\mu(e) .$$\n\n\n\n内层和由 `thm.mu-sum` 只在 $n/m = 1$ 时为 $1$，其余为 $0$ —— 于是整个式子塌成 $g(n)$。\n\n\n\n**另一方向**同理（或直接用 $\\Leftarrow$ 于反向的偏序）。所以「反演」不是新定理，是 $\\mu * 1 = \\delta$ 这一句话的两面。\n\n\n\n**用法**：数论里的「求和  与  还原」几乎都靠它。\n\n例如 $\\sum_{d\\mid n}\\varphi(d) = n$ 反演出 $\\varphi(n) = \\sum_{d\\mid n}\\mu(d)\\,(n/d)$；\n\n素数计数也是先有 $\\log n! = \\sum_{m \\le n}\\psi(n/m)$ 再反演。",
@@ -31772,7 +31773,7 @@
     "定理"
    ],
    "statement": "$$\\lim_{x \\to \\infty} \\frac{\\pi(x)}{x / \\log x} = 1 .$$\n\n等价形式：$\\theta(x) \\sim x$、$\\psi(x) \\sim x$、$p_{n} \\sim n\\log n$（$p_{n}$ 是第 $n$ 个素数）。",
-   "notes": "**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。",
+   "notes": "**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。∎",
    "refs": [
     "Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)",
     "Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)",
@@ -33346,7 +33347,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -33388,7 +33389,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -33431,7 +33432,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定义",
     "线性代数",
@@ -33474,7 +33475,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定义",
     "线性代数",
@@ -33517,7 +33518,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "定义",
     "线性代数",
@@ -33559,7 +33560,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "定义",
     "线性代数",
@@ -33645,7 +33646,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 21,
+   "layer": 24,
    "tags": [
     "定理",
     "线性代数",
@@ -33688,7 +33689,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 26,
+   "layer": 25,
    "tags": [
     "定理",
     "线性代数",
@@ -33731,7 +33732,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -33774,7 +33775,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "定义",
     "线性代数",
@@ -33860,7 +33861,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -33902,7 +33903,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 21,
+   "layer": 20,
    "tags": [
     "定义",
     "线性代数",
@@ -33945,7 +33946,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 22,
+   "layer": 21,
    "tags": [
     "定义",
     "线性代数",
@@ -33987,7 +33988,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "定义",
     "线性代数",
@@ -34030,7 +34031,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -34073,7 +34074,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -34116,7 +34117,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 21,
+   "layer": 20,
    "tags": [
     "定义",
     "线性代数",
@@ -34159,7 +34160,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 23,
+   "layer": 22,
    "tags": [
     "定理",
     "线性代数",
@@ -34202,7 +34203,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定理",
     "线性代数",
@@ -34245,7 +34246,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -34287,7 +34288,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 19,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -34330,7 +34331,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 18,
+   "layer": 15,
    "tags": [
     "定义",
     "线性代数",
@@ -34373,7 +34374,7 @@
     "algebra"
    ],
    "cluster": "algebra.linmap",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定义",
     "线性代数",
@@ -34416,7 +34417,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 23,
+   "layer": 22,
    "tags": [
     "定义",
     "线性代数",
@@ -34504,7 +34505,7 @@
     "algebra"
    ],
    "cluster": "algebra.numeric",
-   "layer": 26,
+   "layer": 20,
    "tags": [
     "定理",
     "线性代数",
@@ -34546,7 +34547,7 @@
     "algebra"
    ],
    "cluster": "algebra.numeric",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "定理",
     "线性代数",
@@ -34588,7 +34589,7 @@
     "algebra"
    ],
    "cluster": "algebra.numeric",
-   "layer": 22,
+   "layer": 21,
    "tags": [
     "定理",
     "线性代数",
@@ -34674,7 +34675,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "定义",
     "线性代数",
@@ -34717,7 +34718,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "定义",
     "线性代数",
@@ -34760,7 +34761,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定理",
     "线性代数",
@@ -34803,7 +34804,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -34845,7 +34846,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "定义",
     "线性代数",
@@ -34888,7 +34889,7 @@
     "algebra"
    ],
    "cluster": "algebra.multilinear",
-   "layer": 22,
+   "layer": 21,
    "tags": [
     "定理",
     "线性代数",
@@ -36523,7 +36524,7 @@
     "algebra"
    ],
    "cluster": "algebra.spectral",
-   "layer": 19,
+   "layer": 18,
    "tags": [
     "定理",
     "线性代数",
@@ -36610,7 +36611,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "泛函分析",
     "赋范空间",
@@ -36691,7 +36692,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "赋范空间",
@@ -36773,7 +36774,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "赋范空间",
@@ -36855,7 +36856,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "有界算子",
@@ -36894,7 +36895,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "泛函分析",
     "有界算子",
@@ -36933,7 +36934,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "泛函分析",
     "有界算子",
@@ -37210,7 +37211,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "基",
@@ -37251,7 +37252,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37570,7 +37571,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 21,
+   "layer": 20,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37610,7 +37611,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 22,
+   "layer": 21,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37650,7 +37651,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 23,
+   "layer": 22,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37689,7 +37690,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 24,
+   "layer": 23,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37729,7 +37730,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37769,7 +37770,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 16,
+   "layer": 15,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37808,7 +37809,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 17,
+   "layer": 16,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37847,7 +37848,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 23,
+   "layer": 22,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -37933,7 +37934,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 31,
+   "layer": 23,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -38020,7 +38021,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 30,
+   "layer": 20,
    "tags": [
     "泛函分析",
     "Banach 空间",
@@ -38062,7 +38063,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.hilbert",
-   "layer": 21,
+   "layer": 20,
    "tags": [
     "泛函分析",
     "Hilbert 空间",
@@ -38104,7 +38105,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "对偶",
@@ -38144,7 +38145,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "泛函分析",
     "对偶",
@@ -39089,7 +39090,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.baire",
-   "layer": 28,
+   "layer": 18,
    "tags": [
     "泛函分析",
     "三大定理",
@@ -39130,7 +39131,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.baire",
-   "layer": 29,
+   "layer": 19,
    "tags": [
     "泛函分析",
     "三大定理",
@@ -39174,7 +39175,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.baire",
-   "layer": 30,
+   "layer": 20,
    "tags": [
     "泛函分析",
     "三大定理",
@@ -39411,7 +39412,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.ck",
-   "layer": 12,
+   "layer": 11,
    "tags": [
     "泛函分析",
     "连续函数空间",
@@ -39450,7 +39451,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.ck",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "泛函分析",
     "连续函数空间",
@@ -39490,7 +39491,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.ck",
-   "layer": 14,
+   "layer": 13,
    "tags": [
     "泛函分析",
     "连续函数空间",
@@ -39531,7 +39532,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.ck",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "泛函分析",
     "连续函数空间",
@@ -39993,7 +39994,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.characteristic",
-   "layer": 35,
+   "layer": 34,
    "tags": [
     "定义",
     "微分几何",
@@ -40571,7 +40572,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "定义",
     "微分几何",
@@ -40658,7 +40659,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.characteristic",
-   "layer": 36,
+   "layer": 35,
    "tags": [
     "定义",
     "微分几何",
@@ -40701,7 +40702,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.characteristic",
-   "layer": 37,
+   "layer": 36,
    "tags": [
     "命题",
     "微分几何",
@@ -40744,7 +40745,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.characteristic",
-   "layer": 38,
+   "layer": 37,
    "tags": [
     "定理",
     "微分几何",
@@ -41454,7 +41455,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 29,
+   "layer": 22,
    "tags": [
     "例",
     "拓扑",
@@ -41495,7 +41496,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 29,
+   "layer": 20,
    "tags": [
     "例",
     "拓扑",
@@ -42028,14 +42029,14 @@
     "algebra"
    ],
    "cluster": "algebra.galois",
-   "layer": 29,
+   "layer": 20,
    "tags": [
     "定义",
     "代数",
     "域论"
    ],
    "statement": "域 $K$ 叫**代数闭**的，如果 $K[x]$ 中每个**非常数**多项式都在 $K[x]$ 中分解成一次因子的乘积（等价地：每个非常数 $f \\in K[x]$ 在 $K$ 中有根）。\n\n若 $\\overline{F}/F$ 是代数扩张且 $\\overline{F}$ 代数闭，则称 $\\overline{F}$ 是 $F$ 的**代数闭包**。",
-   "notes": "⭐ **$\\mathbb{C}$ 是代数闭的**，这就是代数基本定理（`thm.fundamental-algebra`）：$\\mathbb{C} = \\mathbb{R}(i)$ 是 $\\mathbb{R}$ 的代数闭包。而 $\\overline{\\mathbb{Q}}$（$\\mathbb{Q}$ 在 $\\mathbb{C}$ 中的代数闭包）是**代数扩张但次数无限**的典型例子 —— 这也正是「代数 $\\ne$ 有限」的出处。\n\n⭐ **代数闭包的存在性要靠选择**：把 $F$ 上所有首一不可约多项式排成良序，逐个模掉、归纳地造出一串扩张，再用 **Zorn 引理**取并（并仍是域，且代数）。所以「每个域都有代数闭包」这条定理在图上的位置很特别：它是**域论里少见的需要 AC 的存在性定理**。\n\n⚠ **代数闭包在同构意义下唯一**（都是 $F$ 的代数扩张且代数闭），但**不唯一到唯一同构** —— 例如 $\\mathbb{Q}(\\sqrt{2})$ 的两个嵌入可以走到 $\\overline{\\mathbb{Q}}$ 里两个不同的位置。\n\n📌 与 Galois 的关系：$\\overline{F}/F$ 一般**不是**有限扩张，所以它不是伽罗瓦扩张（基本定理要求有限）。它的「伽罗瓦群」是 profinite 群 $\\operatorname{Gal}(\\overline{F}/F)$，要做无穷版本的理论。",
+   "notes": "⭐ **$\\mathbb{C}$ 是代数闭的**，这就是代数基本定理：$\\mathbb{C} = \\mathbb{R}(i)$ 是 $\\mathbb{R}$ 的代数闭包。而 $\\overline{\\mathbb{Q}}$（$\\mathbb{Q}$ 在 $\\mathbb{C}$ 中的代数闭包）是**代数扩张但次数无限**的典型例子 —— 这也正是「代数 $\\ne$ 有限」的出处。\n\n⭐ **代数闭包的存在性要靠选择**：把 $F$ 上所有首一不可约多项式排成良序，逐个模掉、归纳地造出一串扩张，再用 **Zorn 引理**取并（并仍是域，且代数）。所以「每个域都有代数闭包」这条定理在图上的位置很特别：它是**域论里少见的需要 AC 的存在性定理**。\n\n⚠ **代数闭包在同构意义下唯一**（都是 $F$ 的代数扩张且代数闭），但**不唯一到唯一同构** —— 例如 $\\mathbb{Q}(\\sqrt{2})$ 的两个嵌入可以走到 $\\overline{\\mathbb{Q}}$ 里两个不同的位置。\n\n📌 与 Galois 的关系：$\\overline{F}/F$ 一般**不是**有限扩张，所以它不是伽罗瓦扩张（基本定理要求有限）。它的「伽罗瓦群」是 profinite 群 $\\operatorname{Gal}(\\overline{F}/F)$，要做无穷版本的理论。",
    "refs": [
     "Lang, Algebra, Ch. V §2",
     "Hungerford, Algebra, Ch. V §3"
@@ -42431,14 +42432,14 @@
     "analysis"
    ],
    "cluster": "analysis.riemann",
-   "layer": 22,
+   "layer": 18,
    "tags": [
     "定义",
     "分析",
     "积分"
    ],
    "statement": "设 $I \\subseteq \\mathbb{R}$ 是区间，$f : I \\to \\mathbb{R}$。函数 $F : I \\to \\mathbb{R}$ 叫 $f$ 在 $I$ 上的**原函数**（也叫**不定积分**），如果 $F$ 在 $I$ 上可导且\n\n$$F'(x) = f(x) \\qquad (\\forall x \\in I).$$\n\n若 $F$ 是一个原函数，则 $f$ 的**全部**原函数恰好是 $\\{ F + C : C \\in \\mathbb{R} \\}$。",
-   "notes": "⭐ **为什么「全部」只差常数**：若 $F' = G' = f$，则 $(F - G)' = 0$，由中值定理（`thm.mvt`）$F - G$ 是常数。这一步是「不定积分」这个记号 $\\int f\\,\\mathrm{d}x = F + C$ 的全部依据。\n\n⭐ **存在性不是白给的**：$f$ **连续**时一定有原函数 —— 取 $F(x) = \\int_{a}^{x} f$，就是变上限积分的导数（`thm.ftc-riemann-part1`）。而不连续的函数可能没有原函数（有第一类间断点的导数不存在原函数：导函数不能有跳跃间断）。\n\n⚠ **「原函数」与「定积分」是两件事**：原函数是一个**函数**（差一个常数），定积分是一个**数**；把它们粘起来的是微积分基本定理。\n\n⚠ 与 `def.riemann-integrable` 的分工：可积 $\\ne$ 有原函数。$|x|$ 在 $[-1,1]$ 上可积且它有原函数，但 $\\operatorname{sgn}(x)$ 可积却**没有**原函数（跳跃间断）。",
+   "notes": "⭐ **为什么「全部」只差常数**：若 $F' = G' = f$，则 $(F - G)' = 0$，由中值定理（`thm.mvt`）$F - G$ 是常数。这一步是「不定积分」这个记号 $\\int f\\,\\mathrm{d}x = F + C$ 的全部依据。\n\n⭐ **存在性不是白给的**：$f$ **连续**时一定有原函数 —— 取 $F(x) = \\int_{a}^{x} f$，就是变上限积分的导数（微积分基本定理第一部分）。而不连续的函数可能没有原函数（有第一类间断点的导数不存在原函数：导函数不能有跳跃间断）。\n\n⚠ **「原函数」与「定积分」是两件事**：原函数是一个**函数**（差一个常数），定积分是一个**数**；把它们粘起来的是微积分基本定理。\n\n⚠ 与 `def.riemann-integrable` 的分工：可积 $\\ne$ 有原函数。$|x|$ 在 $[-1,1]$ 上可积且它有原函数，但 $\\operatorname{sgn}(x)$ 可积却**没有**原函数（跳跃间断）。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 6",
     "Folland, Real Analysis, Ch. 1"
@@ -42512,14 +42513,14 @@
     "algebra"
    ],
    "cluster": "algebra.structures",
-   "layer": 10,
+   "layer": 8,
    "tags": [
     "定义",
     "代数",
     "群论"
    ],
    "statement": "设 $G$ 是群。\n\n- $G$ 的**阶**指它的**基数**，记 $|G|$（$G$ 有限时就是元素个数）；\n- $x \\in G$ 的**阶**指使 $x^{n} = e$ 成立的**最小正整数** $n$，记 $\\operatorname{ord}(x)$；若不存在这样的 $n$，说 $x$ 的阶为**无穷**。",
-   "notes": "⭐ **两个「阶」靠 Lagrange 定理连起来**（`thm.lagrange`）：$G$ **有限**时 $\\operatorname{ord}(x)$ 整除 $|G|$（$G = \\mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\\operatorname{ord}(x)$ 就是循环子群 $\\langle x \\rangle$ 的阶。这条是初等群论里最常用的桥。\n\n⚠ **$|G|$ 这个记号在本图有两个含义**（同一个符号、不同语境，见 `notation` 的 R13）：群的阶用 $|G|$，而**集合的势**用 $\\#A$。两者数学上是同一件事（群的阶就是其底层集合的势），但写法按语境分工 —— 读的时候看落点是不是群。\n\n⚠ **与「元素的次数」不是一回事**：环里 $x$ 的「幂零次数」、域元素的「次数」$[F(x):F]$ 都是别的量。\n\n📌 读数：$|S_{n}| = n!$；$\\operatorname{ord}((1\\,2\\,3)) = 3$；$\\mathbb{Z}/n$ 里 $\\operatorname{ord}(\\bar{k}) = n/\\gcd(n,k)$。",
+   "notes": "⭐ **两个「阶」靠 Lagrange 定理连起来**：$G$ **有限**时 $\\operatorname{ord}(x)$ 整除 $|G|$（$G = \\mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\\operatorname{ord}(x)$ 就是循环子群 $\\langle x \\rangle$ 的阶。这条是初等群论里最常用的桥。\n\n⚠ **$|G|$ 这个记号在本图有两个含义**（同一个符号、不同语境，见 `notation` 的 R13）：群的阶用 $|G|$，而**集合的势**用 $\\#A$。两者数学上是同一件事（群的阶就是其底层集合的势），但写法按语境分工 —— 读的时候看落点是不是群。\n\n⚠ **与「元素的次数」不是一回事**：环里 $x$ 的「幂零次数」、域元素的「次数」$[F(x):F]$ 都是别的量。\n\n📌 读数：$|S_{n}| = n!$；$\\operatorname{ord}((1\\,2\\,3)) = 3$；$\\mathbb{Z}/n$ 里 $\\operatorname{ord}(\\bar{k}) = n/\\gcd(n,k)$。",
    "refs": [
     "Lang, Algebra, Ch. I §4",
     "Hungerford, Algebra, Ch. I §4"
@@ -42757,7 +42758,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 35,
+   "layer": 32,
    "tags": [
     "例",
     "微分几何",
@@ -43340,7 +43341,7 @@
     "algebra"
    ],
    "cluster": "algebra.inner",
-   "layer": 23,
+   "layer": 18,
    "tags": [
     "例",
     "线性代数",
@@ -43381,7 +43382,7 @@
     "geometry"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 34,
+   "layer": 32,
    "tags": [
     "例",
     "微分几何",
@@ -43463,7 +43464,7 @@
     "number"
    ],
    "cluster": "topo.stone",
-   "layer": 16,
+   "layer": 13,
    "tags": [
     "定义",
     "拓扑",
@@ -43504,7 +43505,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 34,
+   "layer": 32,
    "tags": [
     "定义",
     "微分几何",
@@ -43547,7 +43548,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 36,
+   "layer": 34,
    "tags": [
     "定义",
     "微分几何",
@@ -43589,7 +43590,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.surface",
-   "layer": 38,
+   "layer": 36,
    "tags": [
     "定理",
     "微分几何",
@@ -43632,7 +43633,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.intrinsic",
-   "layer": 37,
+   "layer": 35,
    "tags": [
     "定理",
     "微分几何",
@@ -43939,7 +43940,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 36,
+   "layer": 35,
    "tags": [
     "定义",
     "微分几何",
@@ -43982,7 +43983,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 37,
+   "layer": 36,
    "tags": [
     "命题",
     "微分几何",
@@ -44025,7 +44026,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 38,
+   "layer": 37,
    "tags": [
     "定义",
     "微分几何",
@@ -44068,7 +44069,7 @@
     "diffgeom"
    ],
    "cluster": "diffgeom.manifold",
-   "layer": 37,
+   "layer": 36,
    "tags": [
     "定义",
     "微分几何",
@@ -46685,6 +46686,48 @@
    "notes": "把「子集」换成「单态射」，好处是不再依赖元素 —— 于是这套语言可以照搬到没有元素的范畴里去。「交」变成拉回、「原像」也变成拉回，两种操作合成了一个：$Y \\cap Z$ 解的是「既在 $Y$ 里又在 $Z$ 里」的部分，$f^{-1}(Y)$ 解的是「$y = f(x)$ 有解」的部分。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §1.1"
+   ]
+  },
+  {
+   "id": "def.intersection-subobject",
+   "type": "definition",
+   "label": "子对象的交",
+   "title": "子对象的交与纤维积",
+   "label_en": "intersection of subobjects",
+   "title_en": "intersection of subobjects",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.intersection-subobject.en.md",
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.structure",
+   "layer": 15,
+   "tags": [
+    "范畴论",
+    "子对象",
+    "纤维积",
+    "交"
+   ],
+   "statement": "设 $Y \\rightarrowtail X$、$Z \\rightarrowtail X$ 是 $X$ 的两个**子对象**（单态射的同构类，见 `def.subobject`）。它们的**交**是纤维积\n\n$$Y \\cap Z := Y \\times_{X} Z \\;\\longrightarrow\\; X ,$$\n\n连同到 $X$ 的投影（若纤维积存在）。它在「同时包含于 $Y$ 与 $Z$ 的子对象」中泛：任何同时分解过两条单态射的 $T \\to X$ 都唯一地分解过 $Y \\cap Z \\to X$。\n\n对任意 $f : X' \\to X$，**原像** $f^{-1}(Y) := Y \\times_{X} X'$ 是 $X'$ 的子对象。在 $\\mathbf{Set}$ 中，交就是集合交 $Y \\cap Z$。",
+   "notes": "**为什么用纤维积**：交要表达「同时落在 $Y$ 与 $Z$ 里」。用元素说，就是 $t \\in Y \\cap Z$；不用元素说，就是 $T \\to X$ 同时分解过 $Y \\rightarrowtail X$ 与 $Z \\rightarrowtail X$。纤维积的泛性正是这个「同时分解」的万有解；于是任何满足该性质的对象都唯一地分解过 $Y \\times_{X} Z$，即它是最大下界。\n\n\n\n**存在性**：交就是纤维积，所以「交存在」当且仅当沿 $X$ 的纤维积存在；没有纤维积的范畴里不能谈交。单态射沿任意态射的拉回仍是单态射（见 `def.mono`），所以 $Y \\times_{X} Z \\to X$ 确实是子对象。\n\n\n\n**与集合交的关系**：在 $\\mathbf{Set}$ 中 $Y \\times_{X} Z = \\{(y,z) : y = z\\}$，映射 $t \\mapsto (t,t)$ 给出 $Y \\cap Z \\to Y \\times_{X} Z$ 的同构；所以交就是集合交。在 $\\mathbf{Grp}$、$\\mathbf{Top}$ 等具体范畴中，子对象由单射决定，交的底层集合同样是集合交。\n\n\n\n**与并的关系**：并是余积的像 $Y \\cup Z := \\operatorname{im}(Y \\coprod Z \\to X)$，不是纤维余积。预拓扑斯里子对象构成有界格：交 = 纤维积（最大下界），并 = 像（最小上界），见 `prop.subobject-lattice`。\n\n\n\n**原像**：对 $f : X' \\to X$，$f^{-1}(Y) = Y \\times_{X} X'$ 是 $X'$ 的子对象；它满足「$f(x) \\in Y$」的泛性质，并随 $f$ 与拉回函子相容。原像与交是同一个构造（都取纤维积），只是沿的态射不同。\n\n\n\n**警告**：一般范畴里 $Y \\cap Z$ 不一定存在；即使存在，也不要把它与积 $Y \\times Z$ 或余积 $Y \\coprod Z$ 混为一谈。交是「沿 $X$ 的纤维积」，而不是「两个对象的积」。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §1.3（Def 1.3.10, p.23–24）",
+    "Mac Lane, Categories for the Working Mathematician, Ch. III §4"
    ]
   },
   {
@@ -52427,7 +52470,7 @@
     "topology"
    ],
    "cluster": "topo.cg",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "拓扑",
     "CGWH",
@@ -52551,7 +52594,7 @@
     "topology"
    ],
    "cluster": "topo.cg",
-   "layer": 20,
+   "layer": 19,
    "tags": [
     "拓扑",
     "紧生成",
@@ -54153,7 +54196,7 @@
     "homology"
    ],
    "cluster": "hom.ab",
-   "layer": 18,
+   "layer": 17,
    "tags": [
     "同调代数",
     "五引理",
@@ -62870,7 +62913,7 @@
     "topology"
    ],
    "cluster": "topo.stone",
-   "layer": 13,
+   "layer": 12,
    "tags": [
     "命题",
     "全不连通",
@@ -63323,7 +63366,7 @@
     "algebra"
    ],
    "cluster": "algebra.structures",
-   "layer": 15,
+   "layer": 14,
    "tags": [
     "命题",
     "张量积",
@@ -72277,19 +72320,27 @@
   },
   {
    "id": "def-link.nthroot-root-test",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.nth-root",
-   "usedBy": "thm.root-test",
-   "note": "根值判别法里的 $\\sqrt[n]{a_n}$ 是 n 次方根；$n$ 逐项变化，所以需要一般 $n$ 的存在性。"
+   "sources": [
+    "thm.nth-root"
+   ],
+   "target": "thm.root-test",
+   "title": "n 次方根的存在唯一性 $\\implies$ 根值判别法的表达式有定义",
+   "proof": "根值判别法要对**每个** $n$ 与每个 $a_n \\ge 0$ 写出 $\\sqrt[n]{a_n}$：一般 $n$ 的非负 $n$ 次方根**存在且唯一**正是 `thm.nth-root` 的内容。唯一性保证 $\\sqrt[n]{a_n}$ 是良定义的单个实数，$\\limsup_{n}\\sqrt[n]{a_n}$ 才有意义。判别法的证明本身只是把它与几何级数比较（见边 `thm.comparison-test \\implies thm.root-test`），不另用方根的性质 —— 所以这条依赖是「表达式良定义」的前置定理，不是追图里的一步。",
+   "note": "AUD-061 A 类。原记 definition；改 imp 的理由：来源是定理、且整条判别法的陈述以它为前提（不是定义性记号）。"
   },
   {
    "id": "def-link.nthroot-convergence-radius",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.nth-root",
-   "usedBy": "thm.convergence-radius",
-   "note": "收敛半径的证明要把 $\\sqrt[n]{|a_n (x - x_0)^{n}|}$ 拆成 $|x - x_0| \\cdot \\sqrt[n]{|a_n|}$，靠 $\\sqrt[n]{uv} = \\sqrt[n]{u}\\sqrt[n]{v}$。"
+   "sources": [
+    "thm.nth-root"
+   ],
+   "target": "thm.convergence-radius",
+   "title": "n 次方根的乘性 $\\implies$ Cauchy–Hadamard 的拆分一步",
+   "proof": "Cauchy–Hadamard 的证明（边 `thm.root-test \\implies thm.convergence-radius`）第一步是 $\\sqrt[n]{\\lvert a_n (x - x_0)^{n}\\rvert} = \\lvert x - x_0\\rvert \\cdot \\sqrt[n]{\\lvert a_n\\rvert}$。这一步用的是 $\\sqrt[n]{uv} = \\sqrt[n]{u}\\,\\sqrt[n]{v}$（$u,v \\ge 0$）：先由 `thm.nth-root` 取非负 $n$ 次方根，再用**唯一性**确认两边相等 —— $\\bigl(\\sqrt[n]{u}\\sqrt[n]{v}\\bigr)^{n} = uv$ 且左边非负，故它就是 $uv$ 的那个唯一非负 $n$ 次方根。没有存在唯一性，这个等式无从陈述，$\\limsup$ 的乘法性质也用不上。",
+   "note": "AUD-061 A 类。原记 definition；改 imp：拆分那一步确实以方根定理（存在 + 唯一 + 乘性）为引擎。"
   },
   {
    "id": "def-link.nthroot-p-series",
@@ -74139,11 +74190,15 @@
   },
   {
    "id": "dep.pcp-urysohn-lemma-metrization",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "lem.urysohn",
-   "usedBy": "thm.urysohn-metrization",
-   "note": "构造可数多个分离函数那一步用的就是 Urysohn 引理（前提「正规」由第二可数 $+$ 正则推出）。"
+   "sources": [
+    "lem.urysohn"
+   ],
+   "target": "thm.urysohn-metrization",
+   "title": "Urysohn 引理造可数族分离函数 $\\implies$ Urysohn 度量化定理",
+   "proof": "节点注里那条嵌入证明的第 3 步：取可数基 $\\{B_n\\}$，对每一对满足 $\\overline{B_m}\\subseteq B_n$ 的 $(m,n)$，用 **Urysohn 引理**取连续函数 $f_{m,n}: X \\to [0,1]$，使 $f_{m,n}|_{\\overline{B_m}} \\equiv 0$、$f_{m,n}|_{X\\setminus B_n} \\equiv 1$。这样的函数只有可数多个，编号成 $f_k$ 后令 $F(x) := (f_k(x)/k)_{k\\ge 1}: X \\to [0,1]^{\\mathbb N}$，再验证 $F$ 是同胚嵌入。引理的前提「$X$ 正规」由第 2 步「正则 $+$ Lindelöf（第二可数）$\\implies$ 正规」给出。",
+   "note": "AUD-061 A 类。原记 definition；改 imp：分离函数族是整条证明的引擎。⚠ 本图 `thm.urysohn-metrization` 另有一条经 Nagata–Smirnov 的证明边（源是 `thm.nagata-smirnov`），本条对应注里那条嵌入证明，两条是**不同证明**，不是重复。"
   },
   {
    "id": "dep.pcp-normal-urysohn-metrization",
@@ -75774,11 +75829,15 @@
   },
   {
    "id": "def-link.variations-ac",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.jordan-decomposition",
-   "usedBy": "prop.ac-and-variations",
-   "note": "命题是用 $\\nu ^{+}$、$\\nu ^{-}$ 把绝对连续性拆成两半说的。"
+   "sources": [
+    "thm.jordan-decomposition"
+   ],
+   "target": "prop.ac-and-variations",
+   "title": "Jordan 分解 $\\implies$ 绝对连续性对变差与正负部逐块判定",
+   "proof": "命题的第一组等价要把 $\\nu$ 拆成 $\\nu = \\nu^{+} - \\nu^{-}$、把 $\\lvert\\nu\\rvert = \\nu^{+} + \\nu^{-}$ —— 这两条等式正是 **Jordan 分解定理**给出的（连同 $\\nu^{\\pm}$ 的构造）。有了它们，对任意可测 $E$：$\\lvert\\nu\\rvert(E) = \\nu^{+}(E) + \\nu^{-}(E)$、$\\nu(E) = \\nu^{+}(E) - \\nu^{-}(E)$，于是「$\\mu(E)=0 \\implies \\lvert\\nu\\rvert(E)=0$」与「$\\mu(E)=0 \\implies \\nu^{\\pm}(E)=0$」互相推出（$\\nu^{\\pm}\\le \\lvert\\nu\\rvert$ 且 $\\nu^{\\pm}$ 非负），即 $\\nu\\ll\\mu \\iff \\lvert\\nu\\rvert\\ll\\mu \\iff \\nu^{\\pm}\\ll\\mu$。",
+   "note": "AUD-061 A 类。原记 definition；改 imp：命题的陈述与证明都建立在 Jordan 分解给出的 $\\nu^{\\pm}$、$\\lvert\\nu\\rvert$ 之上。"
   },
   {
    "id": "def-link.ac-lemma",
@@ -76410,14 +76469,6 @@
    "definition": "def.form-on-manifold",
    "usedBy": "def.de-rham-complex",
    "note": "链的每一项都是 $k$-形式的空间 $\\Omega^{k}(M)$；闭与恰当这两个词也是形式论里的词（`def.exterior-derivative`）。\n\n⭐ 2026-11-01 改指到**流形上**的 $\\Omega^{k}(M)$（原来指欧氏开集上那个坐标模型，于是「$\\Omega^{k}(M)$ 是什么」在图上无处可查）。\n\n层号是**算出来的**：de Rham 复形依赖 18 层的形式定义，它就自己在 20 层，不该反过来拿层号去将就。"
-  },
-  {
-   "id": "dep.mf-pullback-derham",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "prop.pullback-form-manifold",
-   "usedBy": "def.de-rham-complex",
-   "note": "「$H^{k}$ 是函子」全靠拉回与 $\\mathrm{d}$ 交换（$F^{\\ast}\\mathrm{d} = \\mathrm{d}F^{\\ast}$）；否则拉回只能作用在形式上、下不到商空间。\n\n⭐ 2026-11-01 改指到**流形间**的拉回（原来指开集间那个）。\n\n这一改把 de Rham 复形从 20 层推到 22 层 —— 那是应该的：它的每一项都是流形上的形式，凭什么排在拉回之前。\n\n层号是算出来的，不是拿来保的。"
   },
   {
    "id": "dep.mf-connected-h0",
@@ -79868,23 +79919,16 @@
    "note": "数论版的 Bézout 说「$\\gcd(a,b)$ 是 $a,b$ 的整系数组合」，这需要 $\\mathbb{Z}$ 的特殊性（Euclid 算法）。\n\n\n\n把它当作**公理式的性质**来定义一个环类，就是 Bézout 整环：每个有限生成理想都是主理想。$\\mathbb{Z}$、$K[x]$ 满足；$\\mathbb{Z}[x]$ 不满足（$\\gcd(2,x)=1$ 却不是线性组合）。\n\n\n\n所以「Bézout」在图里出现两次是对的：一次是 $\\mathbb{Z}$ 上的定理，一次是整环上的类名 —— 后者包含了前者，也包含了 $K[x]$。"
   },
   {
-   "id": "e145.definition",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.crt",
-   "usedBy": "def.mobius-function",
-   "note": "Möbius 函数的积性用中国剩余定理：互素的 $m,n$ 的素因子集不相交，$\\mu(mn) = \\mu(m)\\mu(n)$。"
-  },
-  {
-   "id": "e146.definition",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.fundamental-arithmetic",
-   "usedBy": "def.multiplicative-function",
+   "id": "e145.analogy",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.fundamental-arithmetic",
+   "b": "def.multiplicative-function",
+   "title": "",
    "note": "积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。"
   },
   {
-   "id": "e147.definition",
+   "id": "e146.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "thm.fundamental-arithmetic",
@@ -79892,7 +79936,7 @@
    "note": "公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。"
   },
   {
-   "id": "e148.definition",
+   "id": "e147.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.prime",
@@ -79900,7 +79944,7 @@
    "note": "$\\pi(x)$ 数的是素数，$\\theta$、$\\psi$ 按对数给素数加权。"
   },
   {
-   "id": "e149.definition",
+   "id": "e148.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.multiplicative-function",
@@ -79908,7 +79952,7 @@
    "note": "$\\tau$ 与 $\\sigma$ 是积性函数的头两个例子。"
   },
   {
-   "id": "e150.definition",
+   "id": "e149.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.prime-counting",
@@ -79916,7 +79960,7 @@
    "note": "估计的对象就是 $\\pi(x)$；证明里还要用 $\\theta$ 做过渡。"
   },
   {
-   "id": "e151.definition",
+   "id": "e150.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.prime-counting",
@@ -79924,7 +79968,7 @@
    "note": "定理是 $\\pi(x)$ 的渐近式。"
   },
   {
-   "id": "e152.definition",
+   "id": "e151.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.mobius-function",
@@ -79932,7 +79976,7 @@
    "note": "这条恒等式是 $\\mu$ 的定义直接算出来的（按「由互异素因子组成的因数」求和）。"
   },
   {
-   "id": "e153.definition",
+   "id": "e152.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "thm.mu-sum",
@@ -80018,15 +80062,17 @@
    "sources": [
     "def.prime-counting",
     "def.riemann-zeta",
-    "thm.euler-product"
+    "thm.euler-product",
+    "lem.newman-tauberian",
+    "thm.chebyshev-estimate"
    ],
    "target": "thm.prime-number-theorem",
-   "title": "素数定理：$\\zeta$ 在 $\\operatorname{Re}\\,s = 1$ 上无零点",
-   "proof": "**① $\\zeta$ 的解析延拓。** 对 $\\operatorname{Re}\\,s > 1$，$\\zeta(s) = \\sum_{n\\ge1} n^{-s} = \\prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。\n\n它在 $s = 1$ 有单极点、留数 $1$，并可延拓为 $\\mathbb{C}$ 上的亚纯函数。\n\n\n\n**② 关键一步：$\\operatorname{Re}\\,s = 1$ 上无零点。** 用 $3 + 4\\cos\\theta + \\cos 2\\theta \\ge 0$ 配上 Euler 乘积的对数导数，得 $\\zeta(1 + it) \\ne 0$。这一步是全部难点，也是「素数不会太集中在一条线上」的本质。\n\n\n\n**③ 显式公式。** 对 $c > 1$，\n\n\n\n$$\\psi(x) = x - \\sum_{\\rho}\\frac{x^{\\rho}}{\\rho} - \\log 2\\pi - \\tfrac{1}{2}\\log(1 - x^{-2}),$$\n\n\n\n其中 $\\rho$ 遍历 $\\zeta$ 的非平凡零点（求和按对称方式截断）。\n\n\n\n**④ 收尾。** 由 ②，每个非平凡零点满足 $\\operatorname{Re}\\rho < 1$（准确说是 $0 < \\operatorname{Re}\\rho < 1$）。⚠️ 注意 $\\lvert\\rho\\rvert$ 本身**没有上界** —— 高度 $\\le T$ 的零点个数是 $\\frac{T}{2\\pi}\\log\\frac{T}{2\\pi e}+O(\\log T)$，随 $T$ 增长；所以不能用 $\\lvert\\rho\\rvert\\le 1$。每项 $x^{\\rho} = x^{\\operatorname{Re}\\rho}$（乘一个模长因子）确实严格低于 $x$，但「每项都 $o(x)$」推不出「求和也是 $o(x)$」：必须按高度把零点分段、用上面那个计数把段内项数与 $\\lvert\\rho\\rvert$ 一起压住（这一步才是本条的真正难点，本图不展开）。得 $\\sum_{\\rho}x^{\\rho}/\\rho = o(x)$，于是 $\\psi(x) \\sim x$；\n\n再由 $\\psi \\sim \\theta$（Abel 部分求和）与 $\\theta(x) = \\sum_{p\\le x}\\log p \\sim \\pi(x)\\log x$（因为 $\\sum_{p\\le x}\\log p = \\pi(x)\\log x - \\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$ 再分部求和）得 $\\pi(x) \\sim x/\\log x$。\n\n\n\n⛔ 本节点注已补出完整的 $\\psi$/$\\theta$/$\\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\\zeta$ 延拓 $+$ $\\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。",
+   "title": "素数定理：历史路线（$\\zeta$ 延拓 + $\\operatorname{Re}s = 1$ 无零点 + 零点分段）；Newman 版见 `imp.nt-newman`",
+   "proof": "**① $\\zeta$ 的解析延拓。** 对 $\\operatorname{Re}\\,s > 1$，$\\zeta(s) = \\sum_{n\\ge1} n^{-s} = \\prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。\n\n它在 $s = 1$ 有单极点、留数 $1$，并可延拓为 $\\mathbb{C}$ 上的亚纯函数。\n\n\n\n**② 关键一步：$\\operatorname{Re}\\,s = 1$ 上无零点。** 用 $3 + 4\\cos\\theta + \\cos 2\\theta \\ge 0$ 配上 Euler 乘积的对数导数，得 $\\zeta(1 + it) \\ne 0$。这一步是全部难点，也是「素数不会太集中在一条线上」的本质。\n\n\n\n**③ 显式公式。** 对 $c > 1$，\n\n\n\n$$\\psi(x) = x - \\sum_{\\rho}\\frac{x^{\\rho}}{\\rho} - \\log 2\\pi - \\tfrac{1}{2}\\log(1 - x^{-2}),$$\n\n\n\n其中 $\\rho$ 遍历 $\\zeta$ 的非平凡零点（求和按对称方式截断）。\n\n\n\n**④ 收尾。** 由 ②，每个非平凡零点满足 $\\operatorname{Re}\\rho < 1$（准确说是 $0 < \\operatorname{Re}\\rho < 1$）。⚠️ 注意 $\\lvert\\rho\\rvert$ 本身**没有上界** —— 高度 $\\le T$ 的零点个数是 $\\frac{T}{2\\pi}\\log\\frac{T}{2\\pi e}+O(\\log T)$，随 $T$ 增长；所以不能用 $\\lvert\\rho\\rvert\\le 1$。每项 $x^{\\rho} = x^{\\operatorname{Re}\\rho}$（乘一个模长因子）确实严格低于 $x$，但「每项都 $o(x)$」推不出「求和也是 $o(x)$」：必须按高度把零点分段、用上面那个计数把段内项数与 $\\lvert\\rho\\rvert$ 一起压住（这一步才是本条的真正难点，本图不展开）。得 $\\sum_{\\rho}x^{\\rho}/\\rho = o(x)$，于是 $\\psi(x) \\sim x$；\n\n再由 $\\psi \\sim \\theta$（Abel 部分求和）与 $\\theta(x) = \\sum_{p\\le x}\\log p \\sim \\pi(x)\\log x$（因为 $\\sum_{p\\le x}\\log p = \\pi(x)\\log x - \\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$ 再分部求和）得 $\\pi(x) \\sim x/\\log x$。\n\n\n\n**说明**：本边保留为历史路线概述（显式公式 + 零点分段）；完整的两条组装见 `imp.nt-newman`（Newman 收尾）与 `thm.prime-number-theorem` 节点注（引理 1–4 与命题 A 的完整证明）。不要在需要完整证明的地方单独引用本边。",
    "note": ""
   },
   {
-   "id": "e154.analogy",
+   "id": "e153.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.divisor-function",
@@ -80095,7 +80141,7 @@
    "note": "整个证明就是对 $C=\\partial D$ 的围道积分做估计。"
   },
   {
-   "id": "e155.definition",
+   "id": "e154.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.congruence",
@@ -80103,7 +80149,7 @@
    "note": "二次剩余的陈述就是同余方程 $x^{2} \\equiv a$ 有没有解。"
   },
   {
-   "id": "e156.definition",
+   "id": "e155.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.quadratic-residue",
@@ -80111,7 +80157,7 @@
    "note": "Legendre 符号把「是不是剩余」编码成 $\\pm 1$。"
   },
   {
-   "id": "e157.definition",
+   "id": "e156.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.legendre-symbol",
@@ -80119,7 +80165,7 @@
    "note": "判别法的结论就是 Legendre 符号的显式公式。"
   },
   {
-   "id": "e158.definition",
+   "id": "e157.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.legendre-symbol",
@@ -80127,7 +80173,7 @@
    "note": "引理给的是 Legendre 符号的另一个算法（数 $\\mu$ 的奇偶）。"
   },
   {
-   "id": "e159.definition",
+   "id": "e158.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.legendre-symbol",
@@ -80135,7 +80181,7 @@
    "note": "互反律说的是两个 Legendre 符号之间的关系。"
   },
   {
-   "id": "e160.definition",
+   "id": "e159.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.jacobi-symbol",
@@ -80143,7 +80189,7 @@
    "note": "计算法则全部是 Jacobi 符号的乘法/移项性质。"
   },
   {
-   "id": "e161.definition",
+   "id": "e160.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.legendre-symbol",
@@ -80151,7 +80197,7 @@
    "note": "Jacobi 符号是把 Legendre 符号按素因子幂乘起来。"
   },
   {
-   "id": "e162.definition",
+   "id": "e161.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.order-mod-n",
@@ -80159,7 +80205,7 @@
    "note": "原根的定义就是「阶等于 $\\varphi(n)$」。"
   },
   {
-   "id": "e163.definition",
+   "id": "e162.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.group",
@@ -80167,7 +80213,7 @@
    "note": "阶就是元素在单位群里的阶 —— 群论概念在模算术里的坐标。"
   },
   {
-   "id": "e164.definition",
+   "id": "e163.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.primitive-root",
@@ -80175,7 +80221,7 @@
    "note": "离散对数以原根为底，唯一性来自「生成元」。"
   },
   {
-   "id": "e165.definition",
+   "id": "e164.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "thm.primitive-root-exists",
@@ -80183,7 +80229,7 @@
    "note": "原根存在，离散对数才有定义。"
   },
   {
-   "id": "e166.definition",
+   "id": "e165.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.multiplicative-function",
@@ -80239,7 +80285,7 @@
    "note": ""
   },
   {
-   "id": "e167.analogy",
+   "id": "e166.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.jacobi-symbol",
@@ -80260,7 +80306,7 @@
    "note": ""
   },
   {
-   "id": "e168.definition",
+   "id": "e167.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.choicefn",
@@ -81066,10 +81112,11 @@
   },
   {
    "id": "dep.ln-spectral-diag",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.diagonalizable",
-   "usedBy": "thm.spectral-matrix",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.diagonalizable",
+   "b": "thm.spectral-matrix",
+   "title": "",
    "note": "谱定理是「可对角化」在正交条件下的加强版；先有一般的可对角化判据。"
   },
   {
@@ -81082,11 +81129,22 @@
   },
   {
    "id": "dep.ln-polar-svd",
-   "kind": "definition",
+   "kind": "equivalence",
    "strength": "strong",
-   "definition": "thm.svd",
-   "usedBy": "thm.polar-decomposition",
-   "note": "把 $P$ 对角化即得 SVD，所以 SVD 可以看成极分解的推论；反过来也常用。"
+   "a": "thm.svd",
+   "b": "thm.polar-decomposition",
+   "title": "奇异值分解 $\\iff$ 极分解",
+   "note": "两条定理在**方阵**情形互相推出（这正是等价的范围）；SVD 的陈述更宽、允许长方形，此时极分解要用等距代替酉。原记 analogy，FIX-065 按 AUD-062 改 equivalence 并补双向证明。",
+   "proofs": [
+    {
+     "label": "SVD $\\implies$ 极分解",
+     "text": "设 $A = U\\Sigma V^{*}$。令 $P := V\\Sigma V^{*}$、$W := UV^{*}$：$\\Sigma$ 对角非负故 $P$ 半正定 Hermite，$U,V$ 酉故 $W$ 酉，且 $WP = UV^{*}V\\Sigma V^{*} = U\\Sigma V^{*} = A$。又 $P^{2} = V\\Sigma^{2}V^{*} = A^{*}A$，而半正定平方根唯一，故 $P = \\sqrt{A^{*}A}$ —— 正是极分解里那个 $P$。"
+    },
+    {
+     "label": "极分解 $\\implies$ SVD（方阵）",
+     "text": "设 $A = WP$，$W$ 酉、$P$ 半正定 Hermite。由谱定理 $P = V\\Sigma V^{*}$，$\\Sigma = \\operatorname{diag}(\\sigma_1,\\ldots,\\sigma_n)$、$\\sigma_i \\ge 0$。于是 $A = (WV)\\Sigma V^{*}$，取 $U := WV$ 即得 SVD（重排使 $\\sigma_1\\ge\\cdots$）。"
+    }
+   ]
   },
   {
    "id": "dep.ln-radius-eigen",
@@ -81130,19 +81188,41 @@
   },
   {
    "id": "dep.ln-spectral-old",
-   "kind": "definition",
+   "kind": "equivalence",
    "strength": "strong",
-   "definition": "thm.spectral-matrix",
-   "usedBy": "thm.spectral-theorem",
-   "note": "矩阵版把算子的谱定理落到标准正交基下的矩阵语言；两条互为翻译。"
+   "a": "thm.spectral-matrix",
+   "b": "thm.spectral-theorem",
+   "title": "算子版谱定理 $\\iff$ 矩阵版谱定理（实对称）",
+   "note": "两条是同一件事的算子语言与矩阵语言；关键一步「在标准正交基下取矩阵」在两个方向上都可逆。原记 analogy，FIX-065 改 equivalence 并补双向推导。",
+   "proofs": [
+    {
+     "label": "算子版 $\\implies$ 矩阵版",
+     "text": "设 $A$ 实对称，它定义 $\\mathbb{R}^{n}$（标准正交基）上的自伴算子 $T$。谱定理给 $T$ 的一组标准正交特征基 $u_1,\\ldots,u_n$，以它们为列得正交矩阵 $Q$；由 $T u_i = \\lambda_i u_i$ 得 $AQ = Q\\Lambda$，即 $Q^{\\mathsf{T}}AQ = \\Lambda$ 为实对角阵。"
+    },
+    {
+     "label": "矩阵版 $\\implies$ 算子版",
+     "text": "设 $V$ 有限维实内积空间、$T$ 自伴。取标准正交基把 $T$ 写成实对称矩阵 $A$；矩阵版给正交 $Q$ 使 $Q^{\\mathsf{T}}AQ = \\Lambda$。$Q$ 的列是 $V$ 的一组标准正交基，且 $AQ = Q\\Lambda$ 说明第 $i$ 列是特征值 $\\lambda_i$ 的特征向量 —— 这就是谱定理要的特征基，特征值全实由 $\\Lambda$ 直接读出。"
+    }
+   ]
   },
   {
    "id": "dep.ln-normal-oldspectral",
-   "kind": "definition",
+   "kind": "equivalence",
    "strength": "strong",
-   "definition": "thm.spectral-matrix",
-   "usedBy": "cor.spectral-normal",
-   "note": "「复正规可酉对角化」的矩阵表述就是这一条。"
+   "a": "thm.spectral-matrix",
+   "b": "cor.spectral-normal",
+   "title": "正规矩阵可酉对角化 $\\iff$ 正规算子可酉对角化",
+   "note": "原记 analogy，FIX-065 改 equivalence：两个方向都归结为「标准正交基下的矩阵 + $AU = U\\Lambda$」这一条事实。",
+   "proofs": [
+    {
+     "label": "算子版 $\\implies$ 矩阵版",
+     "text": "设 $A$ 正规。取 $\\mathbb{C}^{n}$ 的标准正交基，$A$ 定义的算子 $T$ 满足 $T^{*}T = TT^{*}$。复谱定理给标准正交特征基，以之为列得酉矩阵 $U$；由 $AU = U\\Lambda$ 得 $U^{*}AU = \\Lambda$ 对角。"
+    },
+    {
+     "label": "矩阵版 $\\implies$ 算子版",
+     "text": "设 $T$ 是有限维复内积空间上的正规算子。取标准正交基把 $T$ 写成 $A$，正规性逐项传递：$A^{*}A = AA^{*}$。矩阵版给酉 $U$ 使 $U^{*}AU = \\Lambda$；$U$ 的列是标准正交基，$AU = U\\Lambda$ 说明第 $i$ 列是特征值 $\\lambda_i$ 的特征向量。"
+    }
+   ]
   },
   {
    "id": "dep.ln-trace-spectral",
@@ -81399,10 +81479,11 @@
   },
   {
    "id": "dep.nilp-cayley",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.cayley-hamilton",
-   "usedBy": "def.nilpotent",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.cayley-hamilton",
+   "b": "def.nilpotent",
+   "title": "",
    "note": "$T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻得到。"
   },
   {
@@ -81495,10 +81576,11 @@
   },
   {
    "id": "dep.lu-sylvester",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.sylvester-criterion",
-   "usedBy": "thm.lu-decomposition",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.sylvester-criterion",
+   "b": "thm.lu-decomposition",
+   "title": "",
    "note": "「顺序主子式全非零」这个前提，与正定判据用的是同一批主子式。"
   },
   {
@@ -82662,7 +82744,7 @@
    "note": "$L^p$ 的 Riesz 表示所用的配对 $(L^p, L^q)$ 是完美配对，且映射满。"
   },
   {
-   "id": "e169.definition",
+   "id": "e168.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.vector-space",
@@ -82670,7 +82752,7 @@
    "note": "凸集是向量空间的子集；凸性只用仿射结构，不用范数。"
   },
   {
-   "id": "e170.definition",
+   "id": "e169.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-set",
@@ -82678,7 +82760,7 @@
    "note": "投影定理的核心假设：凸、闭、非空。"
   },
   {
-   "id": "e171.definition",
+   "id": "e170.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.star-shaped",
@@ -82686,7 +82768,7 @@
    "note": "Poincaré 引理里的星形区域就是这里的星形开集；星点可作收缩中心。"
   },
   {
-   "id": "e172.implication",
+   "id": "e171.implication",
    "kind": "implication",
    "strength": "strong",
    "sources": [
@@ -82698,7 +82780,7 @@
    "note": "「非空」不能省：空集是凸的但不是星形集（没有星点）。逆命题也不成立：十字形星形但不凸。"
   },
   {
-   "id": "e173.definition",
+   "id": "e172.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-set",
@@ -82706,7 +82788,7 @@
    "note": "凸组合是凸集对有限线性组合封闭的载体；两点情形就是凸集定义里的线段。"
   },
   {
-   "id": "e174.definition",
+   "id": "e173.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-combination",
@@ -82714,7 +82796,7 @@
    "note": "凸包的有限凸组合刻画直接用到凸组合。"
   },
   {
-   "id": "e175.definition",
+   "id": "e174.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-hull",
@@ -83550,10 +83632,11 @@
   },
   {
    "id": "def-link.fa-invfn-banach",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.inverse-function-banach",
-   "usedBy": "thm.bounded-inverse",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.inverse-function-banach",
+   "b": "thm.bounded-inverse",
+   "title": "",
    "note": "⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。"
   },
   {
@@ -83566,10 +83649,11 @@
   },
   {
    "id": "def-link.fa-openmapping-holo",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.open-mapping",
-   "usedBy": "thm.open-mapping-banach",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.open-mapping",
+   "b": "thm.open-mapping-banach",
+   "title": "",
    "note": "⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。"
   },
   {
@@ -84090,10 +84174,11 @@
   },
   {
    "id": "dep-cc-class",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.bundle-classification",
-   "usedBy": "def.characteristic-class",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.bundle-classification",
+   "b": "def.characteristic-class",
+   "title": "",
    "note": "它的存在理由就是「分类定理给出一个算不出的集合」—— 示性类把它接到可算的上同调。"
   },
   {
@@ -84540,7 +84625,7 @@
    "note": "线性同构 = 双射的线性映射；两端的结构就是向量空间结构。"
   },
   {
-   "id": "e176.analogy",
+   "id": "e175.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.first-iso",
@@ -84549,7 +84634,7 @@
    "note": "两个节点一个说「群同态 $G/\\ker\\varphi \\cong \\operatorname{im}\\varphi$」，一个说「线性映射 $V/\\ker T \\cong \\operatorname{im} T$」。\n\n**谁也没推出谁**（群不是向量空间、向量空间加法群也不决定标量乘法），但证明**逐字一样**：良定义 $\\to$ 同态（线性）$\\to$ 双射。群版那条的注已经把这件事写明了：「它其实是『集合 + 运算 + 公理』这套格式的通用定理，不是群的专利」。\n\n⭐ 所以这条只能当**类比**：想要真正的一次性说法，得有「阿贝尔范畴里的第一同构定理」那个节点。"
   },
   {
-   "id": "e177.analogy",
+   "id": "e176.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.mayer-vietoris",
@@ -84558,7 +84643,7 @@
    "note": "同一条长正合列，一个在 de Rham 上同调（`thm.mayer-vietoris`，微分几何侧），一个在奇异同调（`thm.mv-homology`，代数拓扑侧）。\n\n⚠ 两边此前**都是叶子**：几何侧不知道拓扑侧已经有同一条列，反之亦然。本图尚未收「奇异上同调 = de Rham」那座桥（de Rham 定理只在光滑流形上），所以这里只记类比。"
   },
   {
-   "id": "e178.analogy",
+   "id": "e177.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.riesz-representation-lp",
@@ -84579,7 +84664,7 @@
    "note": ""
   },
   {
-   "id": "e179.analogy",
+   "id": "e178.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.taylor",
@@ -84640,7 +84725,7 @@
    "note": ""
   },
   {
-   "id": "e180.analogy",
+   "id": "e179.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.compactness",
@@ -84649,7 +84734,7 @@
    "note": "名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。\n\n⚠ 但两者不是毫无关系：用 Stone 空间（`def.stone-space`），命题逻辑的紧致性可以从「$\\{0,1\\}^{\\text{公式集}}$ 紧」推出来 —— 本图没有把这条路径做成节点，所以这里只记类比。\n\n⛔ 不能做成 definition：已有的 `def.compact → … → def.formula` 路径意味着反向接线会成环。"
   },
   {
-   "id": "e181.analogy",
+   "id": "e180.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.compactness",
@@ -84658,7 +84743,7 @@
    "note": "两条都在说「**局部/有限**的都行 $\\implies$ 整体也行」：\n\nTychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性定理是每个有限子集有模型拼出整体有模型。\n\n在 Boolean 代数 / Stone 对偶下它们确实相通（命题逻辑的紧致性可由 Cantor 空间紧得出），但那需要把 Stone 表示对偶做到逻辑层 —— 本图还没做，所以只记类比。"
   },
   {
-   "id": "e182.analogy",
+   "id": "e181.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.provability",
@@ -84699,7 +84784,7 @@
    "note": "「$g$ 就是几个环面的连通和」这个直觉要靠连通和才说得出来；但那件事本身是**定理**（分类定理，下一刀），定义里不用它。"
   },
   {
-   "id": "e183.analogy",
+   "id": "e182.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.genus",
@@ -84860,7 +84945,7 @@
    "note": "不同胚性用 $\\chi$ 作不变量（$\\chi$ 在同胚下不变）。⚠ 这条用的是**定理**当原理：`thm.euler-characteristic` 说「数单纯形 = 数 Betti 数」，正好给出 $\\chi$ 的组合与同调两种算法。"
   },
   {
-   "id": "e184.analogy",
+   "id": "e183.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -84990,26 +85075,29 @@
   },
   {
    "id": "dep.eulerchargenus-torus",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "prop.eulerchar-genus",
-   "usedBy": "ex.torus",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "prop.eulerchar-genus",
+   "b": "ex.torus",
+   "title": "",
    "note": "例子里「$\\chi = 0$」这个值由这条命题（$2 - 2g$）算出，不是另算的。"
   },
   {
    "id": "dep.eulercharnonor-rp2",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "prop.eulerchar-nonorientable",
-   "usedBy": "ex.projective-plane",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "prop.eulerchar-nonorientable",
+   "b": "ex.projective-plane",
+   "title": "",
    "note": "「$k = 1$、$\\chi = 1$」由不可定向那条判据（$2 - k$）读出。"
   },
   {
    "id": "dep.eulercharnonor-klein",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "prop.eulerchar-nonorientable",
-   "usedBy": "ex.klein-bottle",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "prop.eulerchar-nonorientable",
+   "b": "ex.klein-bottle",
+   "title": "",
    "note": "「$k = 2$、$\\chi = 0$」同上。"
   },
   {
@@ -85283,7 +85371,7 @@
    "note": "$S_{5}$ 不可解（$A_{5}$ 单且非交换）—— 图里那句孤立的话，现在终于有下游了。"
   },
   {
-   "id": "e185.analogy",
+   "id": "e184.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.galois-group",
@@ -85300,28 +85388,12 @@
    "note": "代数闭包是「代数扩张 + 代数闭」两条一起说的，先要有扩张。"
   },
   {
-   "id": "dep.zorn-algclosed",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "lem.zorn",
-   "usedBy": "def.algebraically-closed",
-   "note": "**存在性**要 Zorn 引理：把「已经造好的代数扩张」按包含排成偏序集，取全序链的并，再用 Zorn 取极大元（极大元必代数闭，否则还能再扩）。⚠ 这是域论里少见的「需要 AC 的存在性定理」。"
-  },
-  {
    "id": "dep.complex-algclosed",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.complex",
    "usedBy": "def.algebraically-closed",
    "note": "$\\mathbb{C}$ 是代数闭域的**第一个例子**（代数基本定理），$\\overline{\\mathbb{Q}}$ 在里面取。"
-  },
-  {
-   "id": "dep.fundamentalgebra-algclosed",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.fundamental-algebra",
-   "usedBy": "def.algebraically-closed",
-   "note": "$\\mathbb{C}$ 代数闭**就是**代数基本定理的内容：既然每个复系数多项式都有根，就能逐个除掉一次因子。"
   },
   {
    "id": "dep.complex-rootsofunity",
@@ -85388,7 +85460,7 @@
    "note": "可分性是**代数扩张**的性质（超越扩张上「极小多项式」都无从谈起）。"
   },
   {
-   "id": "e186.analogy",
+   "id": "e185.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.minimal-poly",
@@ -85397,7 +85469,7 @@
    "note": "写法**一模一样**：取 $\\{\\, p : p(\\text{对象}) = 0 \\,\\}$，验证它是 $K[x]$ 的**非零理想**，再由 $K[x]$ 是主理想整环取**首一生成元**。\n\n- 算子的（`def.minimal-poly`）：对象是线性算子 $T$，非零理由来自 Cayley–Hamilton（$\\chi_{T}$ 零化 $T$）；\n\n- 元素的（`def.algebraic-element`）：对象是扩域里的 $\\alpha$，非零理由来自「代数」这个前提本身。\n\n⚠ 别混：$\\mu_{T}$ 的**次数**刻画算子的可对角化性；$m_{\\alpha}$ 的**次数**是 $[F(\\alpha):F]$。同一个名字、同一套论证、完全不同的用途 —— 这类同名不同物只能用类比边，不能连依赖。"
   },
   {
-   "id": "e187.analogy",
+   "id": "e186.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.galois-group",
@@ -85598,7 +85670,7 @@
    "note": "球面是连通和的**单位元**（$S^{2}\\# M \\cong M$）—— 这句话要用连通和才说得出来，所以这个例子的说明依赖连通和。"
   },
   {
-   "id": "e188.analogy",
+   "id": "e187.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -85607,7 +85679,7 @@
    "note": "**同名不同物**，这正是审计 B2 点出的那件事：\n\n- `def.regular-surface` 说的是「$U \\subseteq \\mathbb{R}^{2}$ 经 $r$ 打到 $\\mathbb{R}^{3}$ 的像」，自带**嵌入、度量、曲率**；\n\n- 定义里只有「紧、连通、无边界、局部同胚于 $\\mathbb{R}^{2}$」，**没有任何外部空间**。\n\n所以「球面」在两边指的不是一回事：一边是 $\\mathbb{R}^{3}$ 里的单位球面（有面积、有 Gauss 曲率），一边是抽象的 $S^{2}$（只有拓扑）。\n\n⛔ 不能连 definition/implication：一边嵌在 $\\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。"
   },
   {
-   "id": "e189.analogy",
+   "id": "e188.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -85616,7 +85688,7 @@
    "note": "**同名不同物**，而且维数说法都不一样：\n\n- 拓扑曲面是**实 2 维**（局部同胚于 $\\mathbb{R}^{2}$）；\n\n- Riemann 曲面是**复 1 维**（局部双全纯于 $\\mathbb{C}$ 的开集），它额外带一个**复结构**。\n\n⭐ 每个 Riemann 曲面都是拓扑曲面（忘记复结构即可），但反过来不成立 —— 球面恰好只有**一个**复结构（Riemann 映射定理的推论），环面却有一整族（模空间）。这条差别正是「复结构是额外数据」的体现。\n\n⛔ 不能连 implication：本图的 Riemann 曲面是从「一维复流形」定义的，而闭曲面是从拓扑定义的，两边的前提不同（真要连得先有「忘记复结构」这个函子）。"
   },
   {
-   "id": "e190.analogy",
+   "id": "e189.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.classification-surfaces",
@@ -85625,7 +85697,7 @@
    "note": "一边是**纯拓扑**的分类（闭曲面由 $g$ 或 $k$ 决定，等价地由 $\\chi$ 与可定向性决定），一边是**几何**的等式（$\\int_{M} K\\,\\mathrm{d}A = 2\\pi\\chi(M)$）。\n\n把两者拼起来就得到微分几何里最有名的一句：**曲率的总量只由亏格决定** ——\n\n\n\n$$\\int_{M} K\\,\\mathrm{d}A = 4\\pi(1-g).$$\n\n\n\n球面（$g=0$）必须是 $4\\pi$，环面（$g=1$）必须是 $0$ —— 无论怎么把环面捏变形，只要不同胚就改不了。\n\n⚠ 本图**没有**那条「组合」命题（$\\int K = 4\\pi(1-g)$）的节点，所以这里只连类比；⛔ 也不连 implication：分类定理不推出 Gauss–Bonnet（后者要度量）。"
   },
   {
-   "id": "e191.analogy",
+   "id": "e190.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "prop.eulerchar-nonorientable",
@@ -85890,7 +85962,7 @@
    "note": "「每个向量空间都有基」的主语就是向量空间（而且证明要用 Zorn，见那条边）。"
   },
   {
-   "id": "e192.analogy",
+   "id": "e191.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.subspace",
@@ -86931,14 +87003,6 @@
    "note": "原函数是「在某个**区间**上」说的 —— 在两点集上取原函数没有意义（中值定理要区间）。"
   },
   {
-   "id": "dep.ftc-antiderivative",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.ftc-riemann-part1",
-   "usedBy": "def.antiderivative",
-   "note": "存在性的唯一来源：$f$ 连续时 $F(x) = \\int_{a}^{x} f$ 就是它的原函数 —— 这正是那条定理的内容。"
-  },
-  {
    "id": "dep.function-binaryop",
    "kind": "definition",
    "strength": "strong",
@@ -86953,14 +87017,6 @@
    "definition": "def.group",
    "usedBy": "def.group-order",
    "note": "群的阶与元素的阶都是**群**上的量。"
-  },
-  {
-   "id": "dep.lagrange-grouporder",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.lagrange",
-   "usedBy": "def.group-order",
-   "note": "$\\operatorname{ord}(x) \\mid |G|$ 这条要用 Lagrange 定理（$\\operatorname{ord}(x) = |\\langle x\\rangle|$）。"
   },
   {
    "id": "dep.grouporder-vs",
@@ -87003,7 +87059,7 @@
    "note": "$\\mathbb{R}$ 是**完备有序域**：这里的完备是**序完备**（有上确界），它与「度量完备」（Cauchy 列收敛）在 $\\mathbb{R}$ 上等价 —— 但那要一条定理，不是定义。⚠ 两个「完备」不是同一个概念，只是在这条线上恰好重合。"
   },
   {
-   "id": "e193.analogy",
+   "id": "e192.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.complete",
@@ -87077,10 +87133,11 @@
   },
   {
    "id": "dep.spherecurv-gb",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.gauss-bonnet",
-   "usedBy": "ex.sphere-curvature",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.gauss-bonnet",
+   "b": "ex.sphere-curvature",
+   "title": "",
    "note": "注里用 $\\int_{S^{2}_{R}} K\\,\\mathrm{d}A = 4\\pi = 2\\pi\\chi$ **对账**，用的就是 Gauss–Bonnet 定理。"
   },
   {
@@ -87470,10 +87527,11 @@
   },
   {
    "id": "dep.plane-ls",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.least-squares",
-   "usedBy": "ex.plane-projection",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.least-squares",
+   "b": "ex.plane-projection",
+   "title": "",
    "note": "注里把它当最小二乘的几何内核（残差与子空间正交）。"
   },
   {
@@ -87539,14 +87597,6 @@
    "definition": "def.profinite",
    "usedBy": "def.profinite-integers",
    "note": "**跨区域桥（topology $\\leftrightarrow$ number）**：$\\hat{\\mathbb{Z}}$ 是逆极限经 Tychonoff 得到的紧全不连通空间，即 profinite 空间的一个实例 —— 用到 profinite（Stone）空间的定义。"
-  },
-  {
-   "id": "dep.zhat-crt",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.crt",
-   "usedBy": "def.profinite-integers",
-   "note": "注里的 $\\hat{\\mathbb{Z}} \\cong \\prod_{p}\\mathbb{Z}_{p}$ 就是中国剩余定理沿所有 $n$ 取极限。"
   },
   {
    "id": "dep.smooth-topo",
@@ -87936,30 +87986,6 @@
    "definition": "thm.gauss-equation",
    "usedBy": "thm.codazzi-mainardi",
    "note": "Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。"
-  },
-  {
-   "id": "def-link.sf-rodrigues",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.rodrigues",
-   "usedBy": "def.second-fundamental-form",
-   "note": "Rodrigues 定理是第二基本形式在**主方向**上的一条具体结论。"
-  },
-  {
-   "id": "def-link.sf-eulerformula",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.euler-formula-surface",
-   "usedBy": "def.second-fundamental-form",
-   "note": "Euler 公式（$\\kappa_{n} = \\kappa_{1}\\cos^{2}\\theta + \\kappa_{2}\\sin^{2}\\theta$）同样写在第二基本形式上。"
-  },
-  {
-   "id": "def-link.ec-echar",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.euler-characteristic",
-   "usedBy": "def.euler-class",
-   "note": "Euler 类与 Euler 示性数由 $\\int e = \\chi$ 相连 —— 一个是上同调类、一个是整数。"
   },
   {
    "id": "def-link.ec-k",
@@ -88792,6 +88818,30 @@
    "note": "这条把「范畴等价」这件看起来要靠造函子的事，换成了两个**可以逐点检查**的条件：Hom 集上双射 + 对象层差一个同构。实际用的时候几乎都走这一条。"
   },
   {
+   "id": "dep.inter-mono",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.mono",
+   "usedBy": "def.intersection-subobject",
+   "note": "子对象是单态射的同构类；拉回保持单态射这一步用到单态射的定义。"
+  },
+  {
+   "id": "dep.inter-subobject",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.subobject",
+   "usedBy": "def.intersection-subobject",
+   "note": "子对象的交以子对象（单态射的同构类）为前提。"
+  },
+  {
+   "id": "dep.inter-fiber",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "def.intersection-subobject",
+   "note": "交就是沿底对象取的纤维积，所以需要先有纤维积。"
+  },
+  {
    "id": "def-link.simplex-category-simplicial",
    "kind": "definition",
    "strength": "strong",
@@ -89024,6 +89074,14 @@
    "title": "覆盖族生成覆盖筛 $\\iff$ 余积满",
    "proof": "记覆盖族为 $(f_{i} : X_{i} \\to X)_{i \\in I}$，它生成的筛为 $R \\subseteq h_{X}$，并记 $q : \\coprod_{i} X_{i} \\to X$ 为余积给出的那个态射。\n\n**$R = h_{X}$ 这件事的意义。** $R(Y) \\subseteq \\operatorname{Hom}(Y, X)$ 是「能穿过某个 $X_{i}$」的那些映射。$R = h_{X}$ 就是说**每个** $Y \\to X$ 都能穿过某个 $X_{i}$。\n\n**（$\\Longleftarrow$）** 设 $q$ 是满态射，即对任意 $T$ 与任意 $u, v : X \\to T$，$u \\circ q = v \\circ q \\implies u = v$。\n\n设 $g : Y \\to X$。\n\n由余积的泛性质，$g$ 对应一族 $g \\circ f_{i} : X_{i} \\to Y \\to X$…… 更直接地：把 $g$ 沿余积的泛性质写成 $g \\circ q : \\coprod_{i} X_{i} \\to X$，它按构造分解为 $(g \\circ f_{i})_{i}$。\n\n由 $q$ 满（右可消）得 $g$ 必须已经是 $q$ 的「商」—— 即存在某个 $i$ 与 $h : Y \\to X_{i}$ 使 $g = f_{i} \\circ h$。\n\n所以 $R(Y) = \\operatorname{Hom}(Y, X)$ 对所有 $Y$ 成立，$R = h_{X}$。\n\n**（$\\Longrightarrow$）** 设 $R = h_{X}$。\n\n要证 $q$ 右可消。\n\n设 $u, v : X \\to T$ 且 $u \\circ q = v \\circ q$。\n\n对每个 $i$ 有 $u \\circ f_{i} = v \\circ f_{i}$。\n\n对任意 $Y$ 与任意 $g : Y \\to X$，由 $R = h_{X}$ 存在 $i$ 与 $h : Y \\to X_{i}$ 使 $g = f_{i} \\circ h$，于是\n\n$$u \\circ g = u \\circ f_{i} \\circ h = v \\circ f_{i} \\circ h = v \\circ g$$\n\n取 $Y = X$、$g = 1_{X}$ 即得 $u = v$。所以 $q$ 是满态射。∎",
    "note": "这条把「覆盖」这件听起来很几何的事，变成了一句纯箭头的话。以后凡是要在景上验覆盖，都可以改写成一个余积是否满射的问题。"
+  },
+  {
+   "id": "dep.inter-lattice",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.intersection-subobject",
+   "usedBy": "prop.subobject-lattice",
+   "note": "子对象格的交就是子对象的交（纤维积）。"
   },
   {
    "id": "imp.pretopos-factorization",
@@ -95668,11 +95726,22 @@
   },
   {
    "id": "def-dep.cgexp-cc",
-   "kind": "definition",
+   "kind": "equivalence",
    "strength": "strong",
-   "definition": "prop.cg-cartesian-closed",
-   "usedBy": "cor.cg-exponential-adjoint",
-   "note": "伴随那条是笛卡尔闭的重新表述。"
+   "a": "prop.cg-cartesian-closed",
+   "b": "cor.cg-exponential-adjoint",
+   "title": "",
+   "note": "笛卡尔闭与「乘 $Y$ 有右伴随」是同一件事的两种说法。",
+   "proofs": [
+    {
+     "label": "笛卡尔闭 $\\implies$ 伴随",
+     "text": "笛卡尔闭给出自然双射 $\\operatorname{Hom}(k(X\\times Y), Z) \\cong \\operatorname{Hom}(X, kC(kY, Z))$（右边就是把 currying 的双射用指数对象 $Z^{Y} = kC(kY,Z)$ 写出来；$Z$ 紧生成时 $kC(kY,Z)$ 与 $C(Y,Z)$ 一致）。这组自然双射按定义就是 $k(X\\times -) \\dashv kC(kY, -)$。"
+    },
+    {
+     "label": "伴随 $\\implies$ 笛卡尔闭",
+     "text": "设 $k(X\\times Y) \\dashv kC(kY,-)$，其伴随同构把 $f : k(X\\times Y)\\to Z$ 送到 $\\widehat{f} : X \\to kC(kY,Z)$，$\\widehat{f}(x)(y) = f(x,y)$。与 $k$-化同构 $\\operatorname{Hom}_{k\\mathbf{Top}}(X, kC(kY,Z)) \\cong \\operatorname{Hom}_{\\mathbf{Top}}(X\\times Y, Z)$ 拼起来即得 currying 的自然双射 $C(k(X\\times Y), Z)\\cong C(X, C(Y,Z))$，即 $k\\mathbf{Top}$ 笛卡尔闭。"
+    }
+   ]
   },
   {
    "id": "def-dep.cgexp-adjoint",
@@ -95972,10 +96041,11 @@
   },
   {
    "id": "def-dep.five-snake",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.snake-lemma",
-   "usedBy": "thm.five-lemma",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.snake-lemma",
+   "b": "thm.five-lemma",
+   "title": "",
    "note": "两者都在**阿贝尔范畴**里说、都只能走泛元与泛性质；五引理是比较同构的版本。"
   },
   {
@@ -98924,7 +98994,7 @@
   {
    "a": "algebra.group-action",
    "b": "algebra.structures",
-   "count": 8,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -99743,7 +99813,7 @@
   {
    "a": "number.basic",
    "b": "number.functions",
-   "count": 9,
+   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -100128,7 +100198,7 @@
   {
    "a": "algebra.galois",
    "b": "algebra.polynomial",
-   "count": 4,
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -100434,6 +100504,13 @@
    "explicit": false
   },
   {
+   "a": "cat.limit",
+   "b": "cat.structure",
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.adjoint",
    "b": "cat.limit",
    "count": 13,
@@ -100479,6 +100556,13 @@
    "a": "cat.sheaf",
    "b": "cat.structure",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.structure",
+   "b": "cat.topos",
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -100756,13 +100840,6 @@
    "explicit": false
   },
   {
-   "a": "cat.structure",
-   "b": "cat.topos",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cat.limit",
    "b": "cat.topos",
    "count": 5,
@@ -100857,13 +100934,6 @@
    "a": "cat.limit",
    "b": "set.construct",
    "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.limit",
-   "b": "cat.structure",
-   "count": 4,
    "label": "",
    "explicit": false
   },

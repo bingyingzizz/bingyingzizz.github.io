@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 22 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.riesz-hilbert.md` and `proofs/`.

@@ -4,6 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.weingarten-map`](../nodes/def.weingarten-map.md) Weingarten 变换 + [`lem.adapted-frame`](../nodes/lem.adapted-frame.md) 适配标架：Weingarten 变换 $+$ $\omega^{3}=0$ $\implies$ $II = -\sum_{i}\omega^{i}\omega^{i}_{\ 3}$　[proofs/imp.dg-II.md](../proofs/imp.dg-II.md)
 - [`def.weingarten-map`](../nodes/def.weingarten-map.md) Weingarten 变换：用到了定义 Weingarten 变换　[proofs/dep.dg-W-II.md](../proofs/dep.dg-W-II.md)
-- [`thm.rodrigues`](../nodes/thm.rodrigues.md) Rodrigues 定理：用到了定义 Rodrigues 定理　[proofs/def-link.sf-rodrigues.md](../proofs/def-link.sf-rodrigues.md)
 
 > 续见 [nodes/def.second-fundamental-form.4.md](./def.second-fundamental-form.4.md)

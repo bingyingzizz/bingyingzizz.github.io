@@ -1,5 +1,5 @@
 # dep-cc-class
-`dep-cc-class` · 定义引用 · strong 边 · 根 `../`
+`dep-cc-class` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.bundle-classification` 丛的分类 → `def.characteristic-class` 示性类
 

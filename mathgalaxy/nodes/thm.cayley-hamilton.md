@@ -1,6 +1,6 @@
 # Cayley–Hamilton 定理　`thm.cayley-hamilton`
 定理（Cayley–Hamilton）：$\chi_T(T) = 0$
-layer 17 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 16 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.cayley-hamilton)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 是有限维 $K$-向量空间上的线性映射，$\chi_T$ 是它的特征多项式。把 $\chi_T$ 里出现的 $x$ 换成 $T$（常数项乘 $I$），得到算子 $\chi_T(T)$。则

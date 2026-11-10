@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 36 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 35 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.stiefel-whitney-class.md` and `proofs/`.

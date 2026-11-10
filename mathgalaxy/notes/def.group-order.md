@@ -1,7 +1,7 @@
 # 群的阶与元素的阶　`def.group-order`　·　说明
 根 `../`
 
-⭐ **两个「阶」靠 Lagrange 定理连起来**（`thm.lagrange`）：$G$ **有限**时 $\operatorname{ord}(x)$ 整除 $|G|$（$G = \mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\operatorname{ord}(x)$ 就是循环子群 $\langle x \rangle$ 的阶。这条是初等群论里最常用的桥。
+⭐ **两个「阶」靠 Lagrange 定理连起来**：$G$ **有限**时 $\operatorname{ord}(x)$ 整除 $|G|$（$G = \mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\operatorname{ord}(x)$ 就是循环子群 $\langle x \rangle$ 的阶。这条是初等群论里最常用的桥。
 
 ⚠ **$|G|$ 这个记号在本图有两个含义**（同一个符号、不同语境，见 `notation` 的 R13）：群的阶用 $|G|$，而**集合的势**用 $\#A$。两者数学上是同一件事（群的阶就是其底层集合的势），但写法按语境分工 —— 读的时候看落点是不是群。
 

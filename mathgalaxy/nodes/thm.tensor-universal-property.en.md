@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 15 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.tensor-universal-property.md` and `proofs/`.

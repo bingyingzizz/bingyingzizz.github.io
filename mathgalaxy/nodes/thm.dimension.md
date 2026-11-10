@@ -1,6 +1,6 @@
 # 维数良定义　`thm.dimension`
 定理：任意两组基等势，维数良定义
-layer 13 · 定理 · 向量空间与基 · 抽象代数
+layer 12 · 定理 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=thm.dimension)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间，$\mathcal{B}$ 与 $\mathcal{B}'$ 是 $V$ 的两组基。则 $\mathcal{B}$ 与 $\mathcal{B}'$ **等势**（有双射）。

@@ -1,5 +1,5 @@
 # dep.lu-sylvester
-`dep.lu-sylvester` · 定义引用 · strong 边 · 根 `../`
+`dep.lu-sylvester` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.sylvester-criterion` Sylvester 判据 → `thm.lu-decomposition` LU 分解
 

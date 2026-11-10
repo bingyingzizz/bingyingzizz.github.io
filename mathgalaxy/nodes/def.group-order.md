@@ -1,6 +1,6 @@
 # 群的阶与元素的阶　`def.group-order`
 群的阶 $|G|$ 与元素的阶 $\operatorname{ord}(x)$
-layer 10 · 定义 · 代数结构 · 抽象代数
+layer 8 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.group-order)　·　[节点索引](../index.md)
 
 设 $G$ 是群。
@@ -10,8 +10,6 @@ layer 10 · 定义 · 代数结构 · 抽象代数
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/dep.group-grouporder.md](../proofs/dep.group-grouporder.md)
-
-- …另有入边，续页见 [nodes/def.group-order.2.md](./def.group-order.2.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用

@@ -4,4 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理 用
 - ⇒ [`lem.horseshoe`](../nodes/lem.horseshoe.md) 马蹄引理
-- 被 [`thm.five-lemma`](../nodes/thm.five-lemma.md) 五引理 用
+- ～弱边 [`thm.five-lemma`](../nodes/thm.five-lemma.md) 五引理

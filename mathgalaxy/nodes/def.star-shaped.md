@@ -10,7 +10,7 @@ $$(1-t)x_{0} + t x \in S.$$
 这样的 $x_{0}$ 叫 $S$ 的一个**星点**（star center）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.convex-set`](../nodes/def.convex-set.md) 凸集：非空凸集 $\implies$ 星形集　[proofs/e172.implication.md](../proofs/e172.implication.md)
+- [`def.convex-set`](../nodes/def.convex-set.md) 凸集：非空凸集 $\implies$ 星形集　[proofs/e171.implication.md](../proofs/e171.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`lem.poincare-lemma`](../nodes/lem.poincare-lemma.md) Poincaré 引理 用

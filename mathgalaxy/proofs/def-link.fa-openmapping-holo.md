@@ -1,5 +1,5 @@
 # def-link.fa-openmapping-holo
-`def-link.fa-openmapping-holo` · 定义引用 · strong 边 · 根 `../`
+`def-link.fa-openmapping-holo` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.open-mapping` 开映射定理 → `thm.open-mapping-banach` 开映射定理（Banach 版）
 

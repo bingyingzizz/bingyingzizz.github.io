@@ -1,6 +1,6 @@
 # 正交基存在　`thm.orthonormal-basis-exists`
 每个 Hilbert 空间都有正交基（Zorn）
-layer 23 · 定理 · Hilbert 空间 · 泛函分析
+layer 22 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.orthonormal-basis-exists)　·　[节点索引](../index.md)
 
 每个 Hilbert 空间都含一组正交基。

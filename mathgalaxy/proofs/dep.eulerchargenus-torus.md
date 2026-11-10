@@ -1,5 +1,5 @@
 # dep.eulerchargenus-torus
-`dep.eulerchargenus-torus` · 定义引用 · strong 边 · 根 `../`
+`dep.eulerchargenus-torus` · 类比（弱边） · weak 边 · 根 `../`
 
 `prop.eulerchar-genus` Euler 示性数与亏格 → `ex.torus` 环面 T²
 

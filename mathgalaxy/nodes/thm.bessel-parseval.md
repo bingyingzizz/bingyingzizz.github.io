@@ -1,6 +1,6 @@
 # Bessel 与 Parseval　`thm.bessel-parseval`
 Bessel 不等式与 Parseval 等式
-layer 17 · 定理 · Hilbert 空间 · 泛函分析
+layer 16 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.bessel-parseval)　·　[节点索引](../index.md)
 
 设 $\{e_i\}_{i \in I}$ 标准正交。则对每个 $x \in H$，

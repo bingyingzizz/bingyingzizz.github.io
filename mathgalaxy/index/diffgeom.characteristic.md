@@ -9,7 +9,7 @@
 - def.associated-bundle　配丛　layer 32
 - def.structure-group　结构群　layer 33
 - thm.bundle-classification　丛的分类　layer 34
-- def.characteristic-class　示性类　layer 35
-- def.chern-class　陈类　layer 36
-- prop.chern-class-line-bundle　线丛的陈类计算　layer 37
-- thm.splitting-principle　分裂原理　layer 38
+- def.characteristic-class　示性类　layer 34
+- def.chern-class　陈类　layer 35
+- prop.chern-class-line-bundle　线丛的陈类计算　layer 36
+- thm.splitting-principle　分裂原理　layer 37

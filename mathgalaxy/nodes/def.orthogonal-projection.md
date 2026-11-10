@@ -1,6 +1,6 @@
 # 正交投影　`def.orthogonal-projection`
 正交投影
-layer 18 · 定义 · 内积空间与正交性 · 抽象代数
+layer 17 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.orthogonal-projection)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是有限维子空间，$V = U \oplus U^{\perp}$。对 $v \in V$ 唯一地写 $v = u + w$（$u \in U$、$w \in U^{\perp}$），定义

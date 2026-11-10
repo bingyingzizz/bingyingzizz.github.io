@@ -1,6 +1,6 @@
 # 原函数　`def.antiderivative`
 原函数：$F' = f$ 的那个 $F$
-layer 22 · 定义 · Riemann 积分 · 数学分析
+layer 18 · 定义 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=def.antiderivative)　·　[节点索引](../index.md)
 
 设 $I \subseteq \mathbb{R}$ 是区间，$f : I \to \mathbb{R}$。函数 $F : I \to \mathbb{R}$ 叫 $f$ 在 $I$ 上的**原函数**（也叫**不定积分**），如果 $F$ 在 $I$ 上可导且

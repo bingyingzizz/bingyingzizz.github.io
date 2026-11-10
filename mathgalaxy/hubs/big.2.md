@@ -9,7 +9,7 @@
 - **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 27 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
 - **6 / 6** `def.submanifold-volume` 诱导体积 · layer 32 · 微分形式、积分与 de Rham
-- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 34 · 内蕴几何
+- **6 / 6** `thm.gauss-bonnet` Gauss–Bonnet 定理 · layer 33 · 内蕴几何
 
 （共 1578 个节点在这一榜上有非零计数；这里列前 20 条。）
 

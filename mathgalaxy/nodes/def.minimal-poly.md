@@ -1,6 +1,6 @@
 # 极小多项式　`def.minimal-poly`
 极小多项式（算子的）$\mu_T$
-layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 16 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.minimal-poly)　·　[节点索引](../index.md)
 
 设 $\dim V < \infty$，$T : V \to V$。集合

@@ -6,6 +6,7 @@
 - def.binary-operation　二元运算　layer 6
 - def.group　群　layer 7
 - prop.group-basic　群的基本性质　layer 8
+- def.group-order　群的阶与元素的阶　layer 8
 - def.field　域　layer 8
 - def.subgroup　子群　layer 8
 - def.normal-subgroup　正规子群　layer 8
@@ -17,7 +18,6 @@
 - def.group-hom　群同态、核与像　layer 9
 - def.module　模　layer 9
 - prop.zmod-is-ab　Z-模就是阿贝尔群　layer 9
-- def.group-order　群的阶与元素的阶　layer 10
 - thm.first-iso　第一同构定理（Noether）　layer 10
 - def.ideal　理想　layer 10
 - def.module-category　模范畴　layer 10

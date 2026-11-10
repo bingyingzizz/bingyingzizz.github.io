@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.rouche`](../nodes/thm.rouche.md) Rouché 定理 + [`thm.max-modulus`](../nodes/thm.max-modulus.md) 最大模原理 + [`prop.zero-isolated`](../nodes/prop.zero-isolated.md) 零点的孤立性与阶：Rouché 数零点 $\implies$ 像含小圆盘 $\implies$ 开映射　[proofs/e14.implication.md](../proofs/e14.implication.md)
+- [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版）：def-link.fa-openmapping-holo　[proofs/def-link.fa-openmapping-holo.md](../proofs/def-link.fa-openmapping-holo.md)

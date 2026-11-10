@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 14 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 names: `Tensor Functoriality` (short) · `Functoriality of the Tensor Product` (full)
 
 ## Statement and proof

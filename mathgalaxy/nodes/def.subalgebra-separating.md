@@ -1,6 +1,6 @@
 # 子代数与分离点　`def.subalgebra-separating`
 子代数、分离点、格
-layer 12 · 定义 · C(K) 与 Stone–Weierstrass · 泛函分析
+layer 11 · 定义 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=def.subalgebra-separating)　·　[节点索引](../index.md)
 
 设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{K})$。

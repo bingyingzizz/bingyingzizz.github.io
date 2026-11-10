@@ -1,6 +1,6 @@
 # 代数闭域　`def.algebraically-closed`
 代数闭域：每个非常数多项式都分解成一次因子
-layer 29 · 定义 · Galois 理论 · 抽象代数
+layer 20 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.algebraically-closed)　·　[节点索引](../index.md)
 
 域 $K$ 叫**代数闭**的，如果 $K[x]$ 中每个**非常数**多项式都在 $K[x]$ 中分解成一次因子的乘积（等价地：每个非常数 $f \in K[x]$ 在 $K$ 中有根）。

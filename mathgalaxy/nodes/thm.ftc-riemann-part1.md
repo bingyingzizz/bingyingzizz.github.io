@@ -15,9 +15,6 @@ $$F(x) := \int_a^x f, \qquad x \in [a, b]$$
 
 $$F'(x_0) = f(x_0)$$
 
-## 它能推出什么 / 谁在用它
-- 被 [`def.antiderivative`](../nodes/def.antiderivative.md) 原函数 用
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.ftc-riemann-part1.2.md](./thm.ftc-riemann-part1.2.md)
 

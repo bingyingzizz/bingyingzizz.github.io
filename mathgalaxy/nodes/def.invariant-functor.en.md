@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 12 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `Invariants` (short) · `Invariant Functor` (full)
 
 ## Statement and proof

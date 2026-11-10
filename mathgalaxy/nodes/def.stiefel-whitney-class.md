@@ -1,6 +1,6 @@
 # Stiefel–Whitney 类　`def.stiefel-whitney-class`
 Stiefel–Whitney 类：实向量丛的 $\mathbb{Z}/2$ 示性类
-layer 36 · 定义 · 流形与向量丛 · 微分几何
+layer 35 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.stiefel-whitney-class)　·　[节点索引](../index.md)
 
 **在做什么**：实向量丛的「$\mathbb{Z}/2$ 版陈类」。系数取 $\mathbb{Z}/2$ 是**被迫**的 —— 实丛的复化才带复结构，而 $w_{i}$ 要避开复数与符号（见注里的挠问题）。

@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-09T15:00:15.092Z
-> 15 星系 / 105 星团 / 1585 节点 / 3293 连线（强边 3251，弱边 42；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-10T14:01:07.338Z
+> 15 星系 / 105 星团 / 1586 节点 / 3287 连线（强边 3232，弱边 55；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -6033,7 +6033,7 @@ $$\ast : S \times S \longrightarrow S, \qquad (a, b) \longmapsto a \ast b .$$
 - $G$ 的**阶**指它的**基数**，记 $|G|$（$G$ 有限时就是元素个数）；
 - $x \in G$ 的**阶**指使 $x^{n} = e$ 成立的**最小正整数** $n$，记 $\operatorname{ord}(x)$；若不存在这样的 $n$，说 $x$ 的阶为**无穷**。
 
-⭐ **两个「阶」靠 Lagrange 定理连起来**（`thm.lagrange`）：$G$ **有限**时 $\operatorname{ord}(x)$ 整除 $|G|$（$G = \mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\operatorname{ord}(x)$ 就是循环子群 $\langle x \rangle$ 的阶。这条是初等群论里最常用的桥。
+⭐ **两个「阶」靠 Lagrange 定理连起来**：$G$ **有限**时 $\operatorname{ord}(x)$ 整除 $|G|$（$G = \mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），而且 $\operatorname{ord}(x)$ 就是循环子群 $\langle x \rangle$ 的阶。这条是初等群论里最常用的桥。
 
 ⚠ **$|G|$ 这个记号在本图有两个含义**（同一个符号、不同语境，见 `notation` 的 R13）：群的阶用 $|G|$，而**集合的势**用 $\#A$。两者数学上是同一件事（群的阶就是其底层集合的势），但写法按语境分工 —— 读的时候看落点是不是群。
 
@@ -10448,7 +10448,7 @@ $f$ 的根可以用**根式**（四则运算与开 $n$ 次方）从 $F$ 的元�
 
 若 $\overline{F}/F$ 是代数扩张且 $\overline{F}$ 代数闭，则称 $\overline{F}$ 是 $F$ 的**代数闭包**。
 
-⭐ **$\mathbb{C}$ 是代数闭的**，这就是代数基本定理（`thm.fundamental-algebra`）：$\mathbb{C} = \mathbb{R}(i)$ 是 $\mathbb{R}$ 的代数闭包。而 $\overline{\mathbb{Q}}$（$\mathbb{Q}$ 在 $\mathbb{C}$ 中的代数闭包）是**代数扩张但次数无限**的典型例子 —— 这也正是「代数 $\ne$ 有限」的出处。
+⭐ **$\mathbb{C}$ 是代数闭的**，这就是代数基本定理：$\mathbb{C} = \mathbb{R}(i)$ 是 $\mathbb{R}$ 的代数闭包。而 $\overline{\mathbb{Q}}$（$\mathbb{Q}$ 在 $\mathbb{C}$ 中的代数闭包）是**代数扩张但次数无限**的典型例子 —— 这也正是「代数 $\ne$ 有限」的出处。
 
 ⭐ **代数闭包的存在性要靠选择**：把 $F$ 上所有首一不可约多项式排成良序，逐个模掉、归纳地造出一串扩张，再用 **Zorn 引理**取并（并仍是域，且代数）。所以「每个域都有代数闭包」这条定理在图上的位置很特别：它是**域论里少见的需要 AC 的存在性定理**。
 
@@ -12235,7 +12235,7 @@ $$F'(x) = f(x) \qquad (\forall x \in I).$$
 
 ⭐ **为什么「全部」只差常数**：若 $F' = G' = f$，则 $(F - G)' = 0$，由中值定理（`thm.mvt`）$F - G$ 是常数。这一步是「不定积分」这个记号 $\int f\,\mathrm{d}x = F + C$ 的全部依据。
 
-⭐ **存在性不是白给的**：$f$ **连续**时一定有原函数 —— 取 $F(x) = \int_{a}^{x} f$，就是变上限积分的导数（`thm.ftc-riemann-part1`）。而不连续的函数可能没有原函数（有第一类间断点的导数不存在原函数：导函数不能有跳跃间断）。
+⭐ **存在性不是白给的**：$f$ **连续**时一定有原函数 —— 取 $F(x) = \int_{a}^{x} f$，就是变上限积分的导数（微积分基本定理第一部分）。而不连续的函数可能没有原函数（有第一类间断点的导数不存在原函数：导函数不能有跳跃间断）。
 
 ⚠ **「原函数」与「定积分」是两件事**：原函数是一个**函数**（差一个常数），定积分是一个**数**；把它们粘起来的是微积分基本定理。
 
@@ -20729,6 +20729,41 @@ $$Y \cap Z := Y \times_{X} Z, \qquad f^{-1}(Y) := Y \times_{X} X'$$
 把「子集」换成「单态射」，好处是不再依赖元素 —— 于是这套语言可以照搬到没有元素的范畴里去。「交」变成拉回、「原像」也变成拉回，两种操作合成了一个：$Y \cap Z$ 解的是「既在 $Y$ 里又在 $Z$ 里」的部分，$f^{-1}(Y)$ 解的是「$y = f(x)$ 有解」的部分。
 
 参考：Le Stum, An introduction to condensed mathematics, §1.1
+
+#### 子对象的交　`def.intersection-subobject`
+*定义*　子对象的交与纤维积
+
+设 $Y \rightarrowtail X$、$Z \rightarrowtail X$ 是 $X$ 的两个**子对象**（单态射的同构类，见 `def.subobject`）。它们的**交**是纤维积
+
+$$Y \cap Z := Y \times_{X} Z \;\longrightarrow\; X ,$$
+
+连同到 $X$ 的投影（若纤维积存在）。它在「同时包含于 $Y$ 与 $Z$ 的子对象」中泛：任何同时分解过两条单态射的 $T \to X$ 都唯一地分解过 $Y \cap Z \to X$。
+
+对任意 $f : X' \to X$，**原像** $f^{-1}(Y) := Y \times_{X} X'$ 是 $X'$ 的子对象。在 $\mathbf{Set}$ 中，交就是集合交 $Y \cap Z$。
+
+**为什么用纤维积**：交要表达「同时落在 $Y$ 与 $Z$ 里」。用元素说，就是 $t \in Y \cap Z$；不用元素说，就是 $T \to X$ 同时分解过 $Y \rightarrowtail X$ 与 $Z \rightarrowtail X$。纤维积的泛性正是这个「同时分解」的万有解；于是任何满足该性质的对象都唯一地分解过 $Y \times_{X} Z$，即它是最大下界。
+
+
+
+**存在性**：交就是纤维积，所以「交存在」当且仅当沿 $X$ 的纤维积存在；没有纤维积的范畴里不能谈交。单态射沿任意态射的拉回仍是单态射（见 `def.mono`），所以 $Y \times_{X} Z \to X$ 确实是子对象。
+
+
+
+**与集合交的关系**：在 $\mathbf{Set}$ 中 $Y \times_{X} Z = \{(y,z) : y = z\}$，映射 $t \mapsto (t,t)$ 给出 $Y \cap Z \to Y \times_{X} Z$ 的同构；所以交就是集合交。在 $\mathbf{Grp}$、$\mathbf{Top}$ 等具体范畴中，子对象由单射决定，交的底层集合同样是集合交。
+
+
+
+**与并的关系**：并是余积的像 $Y \cup Z := \operatorname{im}(Y \coprod Z \to X)$，不是纤维余积。预拓扑斯里子对象构成有界格：交 = 纤维积（最大下界），并 = 像（最小上界），见 `prop.subobject-lattice`。
+
+
+
+**原像**：对 $f : X' \to X$，$f^{-1}(Y) = Y \times_{X} X'$ 是 $X'$ 的子对象；它满足「$f(x) \in Y$」的泛性质，并随 $f$ 与拉回函子相容。原像与交是同一个构造（都取纤维积），只是沿的态射不同。
+
+
+
+**警告**：一般范畴里 $Y \cap Z$ 不一定存在；即使存在，也不要把它与积 $Y \times Z$ 或余积 $Y \coprod Z$ 混为一谈。交是「沿 $X$ 的纤维积」，而不是「两个对象的积」。
+
+参考：Le Stum, An introduction to condensed mathematics, §1.3（Def 1.3.10, p.23–24）；Mac Lane, Categories for the Working Mathematician, Ch. III §4
 
 #### 像 / 余像　`def.image`
 *定义*　像与余像
@@ -39509,7 +39544,7 @@ $$3\log\zeta(\sigma)+4\log|\zeta(\sigma+it_{0})|+\log|\zeta(\sigma+2it_{0})|=\su
 
 ⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\zeta$ 在 $\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。
 
-⚠️ **不能只靠 $\zeta$ 延拓**：没有 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。
+⚠️ **不能只靠 $\zeta$ 延拓**：没有 Tauber 步骤，$\psi(x)\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\zeta$ 的无零点区域提供的。两者缺一不可。∎
 
 参考：Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)；Apostol, Introduction to Analytic Number Theory, Ch. 4（Abel 变换与等价形式）、Ch. 12（Perron 公式与素数定理）；华罗庚《数论导引》第九、十章；Ingham, The Distribution of Prime Numbers, Ch. II–IV（Tauber 定理与 Riemann zeta 的零点）；Newman, Analytic Number Theory, Ch. 3（Tauber 型定理）
 
@@ -40285,7 +40320,7 @@ $$\mathbb{Z}/N\mathbb{Z} \;\cong\; \mathbb{Z}/n_{1}\mathbb{Z} \times \cdots \tim
 
 
 
-实际用处是把模 $N$ 的问题拆成模素数幂的问题 —— 乘性函数的公式就是靠它。
+实际用处是把模 $N$ 的问题拆成模素数幂的问题（积性函数的公式靠的是唯一分解，不需要本条）。
 
 参考：华罗庚《数论导引》§2
 
@@ -43984,13 +44019,19 @@ Young 不等式里的 $a^{\lambda} b^{1-\lambda}$ 中 $\lambda \in (0,1)$ 是**�
 
 内积诱导的范数 $\|v\| = \sqrt{\langle v, v\rangle}$ 同样要实数平方根。
 
-#### 定义引用：「n 次方根」→ 根值判别法　`def-link.nthroot-root-test`
+#### n 次方根 ⟹ 根值判别法　`def-link.nthroot-root-test`
+*n 次方根的存在唯一性 $\implies$ 根值判别法的表达式有定义*
 
-根值判别法里的 $\sqrt[n]{a_n}$ 是 n 次方根；$n$ 逐项变化，所以需要一般 $n$ 的存在性。
+根值判别法要对**每个** $n$ 与每个 $a_n \ge 0$ 写出 $\sqrt[n]{a_n}$：一般 $n$ 的非负 $n$ 次方根**存在且唯一**正是 `thm.nth-root` 的内容。唯一性保证 $\sqrt[n]{a_n}$ 是良定义的单个实数，$\limsup_{n}\sqrt[n]{a_n}$ 才有意义。判别法的证明本身只是把它与几何级数比较（见边 `thm.comparison-test \implies thm.root-test`），不另用方根的性质 —— 所以这条依赖是「表达式良定义」的前置定理，不是追图里的一步。
 
-#### 定义引用：「n 次方根」→ 收敛半径　`def-link.nthroot-convergence-radius`
+> AUD-061 A 类。原记 definition；改 imp 的理由：来源是定理、且整条判别法的陈述以它为前提（不是定义性记号）。
 
-收敛半径的证明要把 $\sqrt[n]{|a_n (x - x_0)^{n}|}$ 拆成 $|x - x_0| \cdot \sqrt[n]{|a_n|}$，靠 $\sqrt[n]{uv} = \sqrt[n]{u}\sqrt[n]{v}$。
+#### n 次方根 ⟹ 收敛半径　`def-link.nthroot-convergence-radius`
+*n 次方根的乘性 $\implies$ Cauchy–Hadamard 的拆分一步*
+
+Cauchy–Hadamard 的证明（边 `thm.root-test \implies thm.convergence-radius`）第一步是 $\sqrt[n]{\lvert a_n (x - x_0)^{n}\rvert} = \lvert x - x_0\rvert \cdot \sqrt[n]{\lvert a_n\rvert}$。这一步用的是 $\sqrt[n]{uv} = \sqrt[n]{u}\,\sqrt[n]{v}$（$u,v \ge 0$）：先由 `thm.nth-root` 取非负 $n$ 次方根，再用**唯一性**确认两边相等 —— $\bigl(\sqrt[n]{u}\sqrt[n]{v}\bigr)^{n} = uv$ 且左边非负，故它就是 $uv$ 的那个唯一非负 $n$ 次方根。没有存在唯一性，这个等式无从陈述，$\limsup$ 的乘法性质也用不上。
+
+> AUD-061 A 类。原记 definition；改 imp：拆分那一步确实以方根定理（存在 + 唯一 + 乘性）为引擎。
 
 #### 定义引用：「n 次方根」→ p-级数　`def-link.nthroot-p-series`
 
@@ -46005,9 +46046,12 @@ Michael 判别法里「加细」故意**不**要求成员是开集 —— 这正
 
 定理的结论：可度量化。
 
-#### 定义引用：「Урысон 引理」→ Урысон 度量化定理　`dep.pcp-urysohn-lemma-metrization`
+#### Урысон 引理 ⟹ Урысон 度量化定理　`dep.pcp-urysohn-lemma-metrization`
+*Urysohn 引理造可数族分离函数 $\implies$ Urysohn 度量化定理*
 
-构造可数多个分离函数那一步用的就是 Urysohn 引理（前提「正规」由第二可数 $+$ 正则推出）。
+节点注里那条嵌入证明的第 3 步：取可数基 $\{B_n\}$，对每一对满足 $\overline{B_m}\subseteq B_n$ 的 $(m,n)$，用 **Urysohn 引理**取连续函数 $f_{m,n}: X \to [0,1]$，使 $f_{m,n}|_{\overline{B_m}} \equiv 0$、$f_{m,n}|_{X\setminus B_n} \equiv 1$。这样的函数只有可数多个，编号成 $f_k$ 后令 $F(x) := (f_k(x)/k)_{k\ge 1}: X \to [0,1]^{\mathbb N}$，再验证 $F$ 是同胚嵌入。引理的前提「$X$ 正规」由第 2 步「正则 $+$ Lindelöf（第二可数）$\implies$ 正规」给出。
+
+> AUD-061 A 类。原记 definition；改 imp：分离函数族是整条证明的引擎。⚠ 本图 `thm.urysohn-metrization` 另有一条经 Nagata–Smirnov 的证明边（源是 `thm.nagata-smirnov`），本条对应注里那条嵌入证明，两条是**不同证明**，不是重复。
 
 #### 定义引用：「正规空间」→ Урысон 度量化定理　`dep.pcp-normal-urysohn-metrization`
 
@@ -47594,9 +47638,12 @@ Jordan 分解里那个 $\nu ^{+} \perp \nu ^{-}$ 用的就是相互奇异。
 
 绝对连续里被参照的 $\mu$ 是一个真测度。
 
-#### 定义引用：「Jordan 分解定理」→ 绝对连续与变差　`def-link.variations-ac`
+#### Jordan 分解定理 ⟹ 绝对连续与变差　`def-link.variations-ac`
+*Jordan 分解 $\implies$ 绝对连续性对变差与正负部逐块判定*
 
-命题是用 $\nu ^{+}$、$\nu ^{-}$ 把绝对连续性拆成两半说的。
+命题的第一组等价要把 $\nu$ 拆成 $\nu = \nu^{+} - \nu^{-}$、把 $\lvert\nu\rvert = \nu^{+} + \nu^{-}$ —— 这两条等式正是 **Jordan 分解定理**给出的（连同 $\nu^{\pm}$ 的构造）。有了它们，对任意可测 $E$：$\lvert\nu\rvert(E) = \nu^{+}(E) + \nu^{-}(E)$、$\nu(E) = \nu^{+}(E) - \nu^{-}(E)$，于是「$\mu(E)=0 \implies \lvert\nu\rvert(E)=0$」与「$\mu(E)=0 \implies \nu^{\pm}(E)=0$」互相推出（$\nu^{\pm}\le \lvert\nu\rvert$ 且 $\nu^{\pm}$ 非负），即 $\nu\ll\mu \iff \lvert\nu\rvert\ll\mu \iff \nu^{\pm}\ll\mu$。
+
+> AUD-061 A 类。原记 definition；改 imp：命题的陈述与证明都建立在 Jordan 分解给出的 $\nu^{\pm}$、$\lvert\nu\rvert$ 之上。
 
 #### 定义引用：「绝对连续」→ 要么奇异、要么有下界　`def-link.ac-lemma`
 
@@ -48213,16 +48260,6 @@ de Rham 复形的每一项都是 $\Omega^{k}(M)$，用到的 d 自然是流形�
 ⭐ 2026-11-01 改指到**流形上**的 $\Omega^{k}(M)$（原来指欧氏开集上那个坐标模型，于是「$\Omega^{k}(M)$ 是什么」在图上无处可查）。
 
 层号是**算出来的**：de Rham 复形依赖 18 层的形式定义，它就自己在 20 层，不该反过来拿层号去将就。
-
-#### 定义引用：「拉回」→ de Rham 上同调　`dep.mf-pullback-derham`
-
-「$H^{k}$ 是函子」全靠拉回与 $\mathrm{d}$ 交换（$F^{\ast}\mathrm{d} = \mathrm{d}F^{\ast}$）；否则拉回只能作用在形式上、下不到商空间。
-
-⭐ 2026-11-01 改指到**流形间**的拉回（原来指开集间那个）。
-
-这一改把 de Rham 复形从 20 层推到 22 层 —— 那是应该的：它的每一项都是流形上的形式，凭什么排在拉回之前。
-
-层号是算出来的，不是拿来保的。
 
 #### 定义引用：「连通与连通分量」→ 零次上同调　`dep.mf-connected-h0`
 
@@ -51997,39 +52034,31 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
 
-#### 定义引用：「中国剩余定理」→ Möbius 函数　`e145.definition`
-
-Möbius 函数的积性用中国剩余定理：互素的 $m,n$ 的素因子集不相交，$\mu(mn) = \mu(m)\mu(n)$。
-
-#### 定义引用：「算术基本定理」→ 积性函数　`e146.definition`
-
-积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。
-
-#### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e147.definition`
+#### 定义引用：「算术基本定理」→ τ 与 σ 的乘积公式　`e146.definition`
 
 公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。
 
-#### 定义引用：「素数」→ 素数计数函数　`e148.definition`
+#### 定义引用：「素数」→ 素数计数函数　`e147.definition`
 
 $\pi(x)$ 数的是素数，$\theta$、$\psi$ 按对数给素数加权。
 
-#### 定义引用：「积性函数」→ 除数函数 τ 与 σ　`e149.definition`
+#### 定义引用：「积性函数」→ 除数函数 τ 与 σ　`e148.definition`
 
 $\tau$ 与 $\sigma$ 是积性函数的头两个例子。
 
-#### 定义引用：「素数计数函数」→ Чебышёв 估计　`e150.definition`
+#### 定义引用：「素数计数函数」→ Чебышёв 估计　`e149.definition`
 
 估计的对象就是 $\pi(x)$；证明里还要用 $\theta$ 做过渡。
 
-#### 定义引用：「素数计数函数」→ 素数定理　`e151.definition`
+#### 定义引用：「素数计数函数」→ 素数定理　`e150.definition`
 
 定理是 $\pi(x)$ 的渐近式。
 
-#### 定义引用：「Möbius 函数」→ Möbius 和的恒等式　`e152.definition`
+#### 定义引用：「Möbius 函数」→ Möbius 和的恒等式　`e151.definition`
 
 这条恒等式是 $\mu$ 的定义直接算出来的（按「由互异素因子组成的因数」求和）。
 
-#### 定义引用：「Möbius 和的恒等式」→ Möbius 反演　`e153.definition`
+#### 定义引用：「Möbius 和的恒等式」→ Möbius 反演　`e152.definition`
 
 反演的全部内容就是 $\mu * 1 = \delta$ —— 即 $\sum_{d \mid m}\mu(d) = [m=1]$。
 
@@ -52173,8 +52202,8 @@ $$\frac{4^{n}}{2n+1} \le (2n)^{\sqrt{2n}}\,4^{2n/3} \iff 4^{n/3} \le (2n)^{\sqrt
 
 ⚠ 这是骨架：三段计数里最容易错的是「$2n/3 < p \le n$ 不贡献」（上面已改正）；更细的分段与小 $n$ 的逐个验证没有逐条写。完整证明见华罗庚《数论导引》第九章。
 
-#### 素数计数函数 + 黎曼 ζ 函数 + Euler 乘积 ⟹ 素数定理　`imp.nt-pnt`
-*素数定理：$\zeta$ 在 $\operatorname{Re}\,s = 1$ 上无零点*
+#### 素数计数函数 + 黎曼 ζ 函数 + Euler 乘积 + Newman 解析定理 + Чебышёв 估计 ⟹ 素数定理　`imp.nt-pnt`
+*素数定理：历史路线（$\zeta$ 延拓 + $\operatorname{Re}s = 1$ 无零点 + 零点分段）；Newman 版见 `imp.nt-newman`*
 
 **① $\zeta$ 的解析延拓。** 对 $\operatorname{Re}\,s > 1$，$\zeta(s) = \sum_{n\ge1} n^{-s} = \prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。
 
@@ -52204,7 +52233,7 @@ $$\psi(x) = x - \sum_{\rho}\frac{x^{\rho}}{\rho} - \log 2\pi - \tfrac{1}{2}\log(
 
 
 
-⛔ 本节点注已补出完整的 $\psi$/$\theta$/$\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\zeta$ 延拓 $+$ $\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。
+**说明**：本边保留为历史路线概述（显式公式 + 零点分段）；完整的两条组装见 `imp.nt-newman`（Newman 收尾）与 `thm.prime-number-theorem` 节点注（引理 1–4 与命题 A 的完整证明）。不要在需要完整证明的地方单独引用本边。
 
 #### Newman 解析定理 + Чебышёв 估计 + Euler 乘积 ⟹ 素数定理　`imp.nt-newman`
 *Newman 解析定理闭合素数定理的最后一步*
@@ -52260,51 +52289,51 @@ $f$ 有界、局部可积是假设；Laplace 变换与尾项估计都以此为�
 
 整个证明就是对 $C=\partial D$ 的围道积分做估计。
 
-#### 定义引用：「同余」→ 二次剩余　`e155.definition`
+#### 定义引用：「同余」→ 二次剩余　`e154.definition`
 
 二次剩余的陈述就是同余方程 $x^{2} \equiv a$ 有没有解。
 
-#### 定义引用：「二次剩余」→ Legendre 符号　`e156.definition`
+#### 定义引用：「二次剩余」→ Legendre 符号　`e155.definition`
 
 Legendre 符号把「是不是剩余」编码成 $\pm 1$。
 
-#### 定义引用：「Legendre 符号」→ Euler 判别法　`e157.definition`
+#### 定义引用：「Legendre 符号」→ Euler 判别法　`e156.definition`
 
 判别法的结论就是 Legendre 符号的显式公式。
 
-#### 定义引用：「Legendre 符号」→ Gauss 引理（二次剩余）　`e158.definition`
+#### 定义引用：「Legendre 符号」→ Gauss 引理（二次剩余）　`e157.definition`
 
 引理给的是 Legendre 符号的另一个算法（数 $\mu$ 的奇偶）。
 
-#### 定义引用：「Legendre 符号」→ 二次互反律　`e159.definition`
+#### 定义引用：「Legendre 符号」→ 二次互反律　`e158.definition`
 
 互反律说的是两个 Legendre 符号之间的关系。
 
-#### 定义引用：「Jacobi 符号」→ Jacobi 符号的计算法则　`e160.definition`
+#### 定义引用：「Jacobi 符号」→ Jacobi 符号的计算法则　`e159.definition`
 
 计算法则全部是 Jacobi 符号的乘法/移项性质。
 
-#### 定义引用：「Legendre 符号」→ Jacobi 符号　`e161.definition`
+#### 定义引用：「Legendre 符号」→ Jacobi 符号　`e160.definition`
 
 Jacobi 符号是把 Legendre 符号按素因子幂乘起来。
 
-#### 定义引用：「模 n 的阶」→ 原根　`e162.definition`
+#### 定义引用：「模 n 的阶」→ 原根　`e161.definition`
 
 原根的定义就是「阶等于 $\varphi(n)$」。
 
-#### 定义引用：「群」→ 模 n 的阶　`e163.definition`
+#### 定义引用：「群」→ 模 n 的阶　`e162.definition`
 
 阶就是元素在单位群里的阶 —— 群论概念在模算术里的坐标。
 
-#### 定义引用：「原根」→ 离散对数　`e164.definition`
+#### 定义引用：「原根」→ 离散对数　`e163.definition`
 
 离散对数以原根为底，唯一性来自「生成元」。
 
-#### 定义引用：「模素数有原根」→ 离散对数　`e165.definition`
+#### 定义引用：「模素数有原根」→ 离散对数　`e164.definition`
 
 原根存在，离散对数才有定义。
 
-#### 定义引用：「积性函数」→ Legendre 符号　`e166.definition`
+#### 定义引用：「积性函数」→ Legendre 符号　`e165.definition`
 
 Legendre 符号对第一个变量完全积性（$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$）。
 
@@ -52413,7 +52442,7 @@ $|H| = k$：这 $k$ 个元素互不相同（若 $[a]^{i} = [a]^{j}$，$0 \le i <
 
 **③ 相加**。矩形 $\{1 \le i \le \frac{p-1}{2}\} \times \{1 \le j \le \frac{q-1}{2}\}$ 共有 $\frac{p-1}{2} \cdot \frac{q-1}{2}$ 个整点，且没有点落在直线上（$iq = jp$、$p \ne q$ 为素数、$i < p$，矛盾），故两和相加恰是这个数。代回 ①：$\left(\frac{q}{p}\right)\left(\frac{p}{q}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$。∎
 
-#### 定义引用：「选择函数」→ Zorn 引理　`e168.definition`
+#### 定义引用：「选择函数」→ Zorn 引理　`e167.definition`
 
 Zorn 引理与选择公理等价（`imp.zorn-choice`）：证明里要从族里挑元素，用的就是选择函数。
 
@@ -53007,17 +53036,22 @@ Schur 形的变换必须取酉矩阵（这正是它数值稳定、而 Jordan 形
 
 对角化的变换限制为酉矩阵，才叫谱分解。
 
-#### 定义引用：「可对角化判据」→ 谱定理（矩阵版）　`dep.ln-spectral-diag`
-
-谱定理是「可对角化」在正交条件下的加强版；先有一般的可对角化判据。
-
 #### 定义引用：「正定矩阵」→ 极分解　`dep.ln-polar-posdef`
 
 $P = \sqrt{A^{*}A}$ 是半正定的，正定那一条给出「半正定矩阵有唯一平方根」。
 
-#### 定义引用：「奇异值分解」→ 极分解　`dep.ln-polar-svd`
+#### 奇异值分解 ⟺ 极分解　`dep.ln-polar-svd`
+*奇异值分解 $\iff$ 极分解*
 
-把 $P$ 对角化即得 SVD，所以 SVD 可以看成极分解的推论；反过来也常用。
+**SVD $\implies$ 极分解**
+
+设 $A = U\Sigma V^{*}$。令 $P := V\Sigma V^{*}$、$W := UV^{*}$：$\Sigma$ 对角非负故 $P$ 半正定 Hermite，$U,V$ 酉故 $W$ 酉，且 $WP = UV^{*}V\Sigma V^{*} = U\Sigma V^{*} = A$。又 $P^{2} = V\Sigma^{2}V^{*} = A^{*}A$，而半正定平方根唯一，故 $P = \sqrt{A^{*}A}$ —— 正是极分解里那个 $P$。
+
+**极分解 $\implies$ SVD（方阵）**
+
+设 $A = WP$，$W$ 酉、$P$ 半正定 Hermite。由谱定理 $P = V\Sigma V^{*}$，$\Sigma = \operatorname{diag}(\sigma_1,\ldots,\sigma_n)$、$\sigma_i \ge 0$。于是 $A = (WV)\Sigma V^{*}$，取 $U := WV$ 即得 SVD（重排使 $\sigma_1\ge\cdots$）。
+
+> 两条定理在**方阵**情形互相推出（这正是等价的范围）；SVD 的陈述更宽、允许长方形，此时极分解要用等距代替酉。原记 analogy，FIX-065 按 AUD-062 改 equivalence 并补双向证明。
 
 #### 定义引用：「特征值与特征向量」→ 谱半径　`dep.ln-radius-eigen`
 
@@ -53039,13 +53073,31 @@ Rayleigh 商只对 Hermite（实对称）矩阵有实值、有极值意义。
 
 定理要求 $A$ 是 Hermite（实对称）—— 否则特征值不是实的，不等式无从谈起。
 
-#### 定义引用：「谱定理（矩阵版）」→ 谱定理（实对称）　`dep.ln-spectral-old`
+#### 谱定理（矩阵版） ⟺ 谱定理（实对称）　`dep.ln-spectral-old`
+*算子版谱定理 $\iff$ 矩阵版谱定理（实对称）*
 
-矩阵版把算子的谱定理落到标准正交基下的矩阵语言；两条互为翻译。
+**算子版 $\implies$ 矩阵版**
 
-#### 定义引用：「谱定理（矩阵版）」→ 谱定理（复正规）　`dep.ln-normal-oldspectral`
+设 $A$ 实对称，它定义 $\mathbb{R}^{n}$（标准正交基）上的自伴算子 $T$。谱定理给 $T$ 的一组标准正交特征基 $u_1,\ldots,u_n$，以它们为列得正交矩阵 $Q$；由 $T u_i = \lambda_i u_i$ 得 $AQ = Q\Lambda$，即 $Q^{\mathsf{T}}AQ = \Lambda$ 为实对角阵。
 
-「复正规可酉对角化」的矩阵表述就是这一条。
+**矩阵版 $\implies$ 算子版**
+
+设 $V$ 有限维实内积空间、$T$ 自伴。取标准正交基把 $T$ 写成实对称矩阵 $A$；矩阵版给正交 $Q$ 使 $Q^{\mathsf{T}}AQ = \Lambda$。$Q$ 的列是 $V$ 的一组标准正交基，且 $AQ = Q\Lambda$ 说明第 $i$ 列是特征值 $\lambda_i$ 的特征向量 —— 这就是谱定理要的特征基，特征值全实由 $\Lambda$ 直接读出。
+
+> 两条是同一件事的算子语言与矩阵语言；关键一步「在标准正交基下取矩阵」在两个方向上都可逆。原记 analogy，FIX-065 改 equivalence 并补双向推导。
+
+#### 谱定理（矩阵版） ⟺ 谱定理（复正规）　`dep.ln-normal-oldspectral`
+*正规矩阵可酉对角化 $\iff$ 正规算子可酉对角化*
+
+**算子版 $\implies$ 矩阵版**
+
+设 $A$ 正规。取 $\mathbb{C}^{n}$ 的标准正交基，$A$ 定义的算子 $T$ 满足 $T^{*}T = TT^{*}$。复谱定理给标准正交特征基，以之为列得酉矩阵 $U$；由 $AU = U\Lambda$ 得 $U^{*}AU = \Lambda$ 对角。
+
+**矩阵版 $\implies$ 算子版**
+
+设 $T$ 是有限维复内积空间上的正规算子。取标准正交基把 $T$ 写成 $A$，正规性逐项传递：$A^{*}A = AA^{*}$。矩阵版给酉 $U$ 使 $U^{*}AU = \Lambda$；$U$ 的列是标准正交基，$AU = U\Lambda$ 说明第 $i$ 列是特征值 $\lambda_i$ 的特征向量。
+
+> 原记 analogy，FIX-065 改 equivalence：两个方向都归结为「标准正交基下的矩阵 + $AU = U\Lambda$」这一条事实。
 
 #### 定义引用：「谱半径」→ 迹　`dep.ln-trace-spectral`
 
@@ -53182,10 +53234,6 @@ $T - \lambda I$ 在 $G_{\lambda}$ 上是幂零的 —— 这就是「广义」�
 
 判据「特征值全为 $0$」直接用特征值来陈述。
 
-#### 定义引用：「Cayley–Hamilton 定理」→ 幂零　`dep.nilp-cayley`
-
-$T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻得到。
-
 #### 定义引用：「线性映射」→ 幂等　`dep.idem-linmap`
 
 幂等是线性算子的条件 $T^{2} = T$。
@@ -53229,10 +53277,6 @@ $\rho(A) \le \lVert A\rVert$ —— 节里把两条「大小」的度量接上�
 #### 定义引用：「初等变换与初等矩阵」→ LU 分解　`dep.lu-elem`
 
 LU 分解就是高斯消元（初等行变换）的矩阵形式。
-
-#### 定义引用：「Sylvester 判据」→ LU 分解　`dep.lu-sylvester`
-
-「顺序主子式全非零」这个前提，与正定判据用的是同一批主子式。
 
 #### 定义引用：「正定矩阵」→ LU 分解　`dep.lu-posdef`
 
@@ -54087,19 +54131,19 @@ Hilbert 的 Riesz 表示所用的内积配对 $(H, H)$ 是完美配对，且映�
 
 $L^p$ 的 Riesz 表示所用的配对 $(L^p, L^q)$ 是完美配对，且映射满。
 
-#### 定义引用：「向量空间」→ 凸集　`e169.definition`
+#### 定义引用：「向量空间」→ 凸集　`e168.definition`
 
 凸集是向量空间的子集；凸性只用仿射结构，不用范数。
 
-#### 定义引用：「凸集」→ 凸闭集的最近点　`e170.definition`
+#### 定义引用：「凸集」→ 凸闭集的最近点　`e169.definition`
 
 投影定理的核心假设：凸、闭、非空。
 
-#### 定义引用：「星形集」→ Poincaré 引理　`e171.definition`
+#### 定义引用：「星形集」→ Poincaré 引理　`e170.definition`
 
 Poincaré 引理里的星形区域就是这里的星形开集；星点可作收缩中心。
 
-#### 凸集 ⟹ 星形集　`e172.implication`
+#### 凸集 ⟹ 星形集　`e171.implication`
 *非空凸集 $\implies$ 星形集*
 
 设 $C \ne \emptyset$ 凸，取 $x_{0} \in C$。对任意 $x \in C$、$t \in [0,1]$，由凸性 $(1-t)x_{0} + tx \in C$。
@@ -54107,15 +54151,15 @@ Poincaré 引理里的星形区域就是这里的星形开集；星点可作收�
 
 > 「非空」不能省：空集是凸的但不是星形集（没有星点）。逆命题也不成立：十字形星形但不凸。
 
-#### 定义引用：「凸集」→ 凸组合　`e173.definition`
+#### 定义引用：「凸集」→ 凸组合　`e172.definition`
 
 凸组合是凸集对有限线性组合封闭的载体；两点情形就是凸集定义里的线段。
 
-#### 定义引用：「凸组合」→ 凸包　`e174.definition`
+#### 定义引用：「凸组合」→ 凸包　`e173.definition`
 
 凸包的有限凸组合刻画直接用到凸组合。
 
-#### 定义引用：「凸包」→ 标准单纯形　`e175.definition`
+#### 定义引用：「凸包」→ 标准单纯形　`e174.definition`
 
 标准单纯形正是其顶点集的凸包；这里把几何单纯形与凸包概念接上。
 
@@ -54759,17 +54803,9 @@ $\Delta$ 距离收敛就是一致收敛 —— 同一概念的度量写法。
 
 本图先有的经典版（$\mathbb{R}$ 值、紧距离空、一致有界）是这条的特例：取 $E = \mathbb{R}$ 即得。
 
-#### 定义引用：「逆映射定理（Banach 版）」→ 逆算子定理　`def-link.fa-invfn-banach`
-
-⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。
-
 #### 定义引用：「映射」→ 闭图像定理　`def-link.fa-function-closedgraph`
 
 「映射就是它的图像」是「映射」那条定义的直接后果（映射 = 一种特殊的关系 = 有序对的集合），所以闭图像定理里的 $G(u)$ 不是新对象。
-
-#### 定义引用：「开映射定理」→ 开映射定理（Banach 版）　`def-link.fa-openmapping-holo`
-
-⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。
 
 #### 定义引用：「线性无关与基」→ 范数　`def-link.fa-vs-norm2`
 
@@ -55035,10 +55071,6 @@ Riemann 积分由 Riemann 和定义 —— 证明里算阶梯函数的积分要�
 #### 定义引用：「向量丛」→ 示性类　`dep-cc-vector`
 
 示性类是**向量丛**的不变量。
-
-#### 定义引用：「丛的分类」→ 示性类　`dep-cc-class`
-
-它的存在理由就是「分类定理给出一个算不出的集合」—— 示性类把它接到可算的上同调。
 
 #### 定义引用：「结构群」→ 示性类　`dep-cc-sg`
 
@@ -55467,18 +55499,6 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 
 环面的 $g = 1$：$H_{1} \cong \mathbb{Z}^{2}$，秩 2，除以 2 得 1。
 
-#### 定义引用：「Euler 示性数与亏格」→ 环面 T²　`dep.eulerchargenus-torus`
-
-例子里「$\chi = 0$」这个值由这条命题（$2 - 2g$）算出，不是另算的。
-
-#### 定义引用：「Euler 示性数与不可定向亏格」→ 射影平面 RP²　`dep.eulercharnonor-rp2`
-
-「$k = 1$、$\chi = 1$」由不可定向那条判据（$2 - k$）读出。
-
-#### 定义引用：「Euler 示性数与不可定向亏格」→ 克莱因瓶　`dep.eulercharnonor-klein`
-
-「$k = 2$、$\chi = 0$」同上。
-
 #### 定义引用：「拓扑可定向性」→ Euler 示性数与亏格　`def-link.toporient-eg`
 
 引理 D 用定向图册给 2-单形一致定向
@@ -55624,17 +55644,9 @@ $S_{5}$ 不可解（$A_{5}$ 单且非交换）—— 图里那句孤立的话，
 
 代数闭包是「代数扩张 + 代数闭」两条一起说的，先要有扩张。
 
-#### 定义引用：「Zorn 引理」→ 代数闭域　`dep.zorn-algclosed`
-
-**存在性**要 Zorn 引理：把「已经造好的代数扩张」按包含排成偏序集，取全序链的并，再用 Zorn 取极大元（极大元必代数闭，否则还能再扩）。⚠ 这是域论里少见的「需要 AC 的存在性定理」。
-
 #### 定义引用：「复数 ℂ」→ 代数闭域　`dep.complex-algclosed`
 
 $\mathbb{C}$ 是代数闭域的**第一个例子**（代数基本定理），$\overline{\mathbb{Q}}$ 在里面取。
-
-#### 定义引用：「代数基本定理」→ 代数闭域　`dep.fundamentalgebra-algclosed`
-
-$\mathbb{C}$ 代数闭**就是**代数基本定理的内容：既然每个复系数多项式都有根，就能逐个除掉一次因子。
 
 #### 定义引用：「复数 ℂ」→ 单位根　`dep.complex-rootsofunity`
 
@@ -56472,10 +56484,6 @@ Poincaré 圆盘的测地线是正交于边界的圆弧/直线 —— 命题陈�
 
 原函数是「在某个**区间**上」说的 —— 在两点集上取原函数没有意义（中值定理要区间）。
 
-#### 定义引用：「变上限积分的导数」→ 原函数　`dep.ftc-antiderivative`
-
-存在性的唯一来源：$f$ 连续时 $F(x) = \int_{a}^{x} f$ 就是它的原函数 —— 这正是那条定理的内容。
-
 #### 定义引用：「映射」→ 二元运算　`dep.function-binaryop`
 
 运算就是一个**映射**（$S \times S \to S$）；「封闭性」由像集落在 $S$ 内自动给出。
@@ -56483,10 +56491,6 @@ Poincaré 圆盘的测地线是正交于边界的圆弧/直线 —— 命题陈�
 #### 定义引用：「群」→ 群的阶与元素的阶　`dep.group-grouporder`
 
 群的阶与元素的阶都是**群**上的量。
-
-#### 定义引用：「Lagrange 定理」→ 群的阶与元素的阶　`dep.lagrange-grouporder`
-
-$\operatorname{ord}(x) \mid |G|$ 这条要用 Lagrange 定理（$\operatorname{ord}(x) = |\langle x\rangle|$）。
 
 #### 定义引用：「群的阶与元素的阶」→ 线性无关与基　`dep.grouporder-vs`
 
@@ -56539,10 +56543,6 @@ $\mathbb{F}_{p}$ 的定义就是「$\mathbb{Z}/p\mathbb{Z}$ 是域」这一条�
 #### 定义引用：「Gauss 曲率」→ 球面的曲率　`dep.spherecurv-K`
 
 例子的结论就是「$K = 1/R^{2}$」—— 用到 Gauss 曲率的定义（两主曲率之积）。
-
-#### 定义引用：「Gauss–Bonnet 定理」→ 球面的曲率　`dep.spherecurv-gb`
-
-注里用 $\int_{S^{2}_{R}} K\,\mathrm{d}A = 4\pi = 2\pi\chi$ **对账**，用的就是 Gauss–Bonnet 定理。
 
 #### 定义引用：「第二基本形式」→ 球面的曲率　`dep.spherecurv-sff`
 
@@ -56727,10 +56727,6 @@ $\operatorname{Re}s > 1$ 时 $\sum n^{-s}$ **绝对收敛** —— 这是「可�
 
 例子给的是正交投影的矩阵，用定义（幂等 + 自伴）逐条验。
 
-#### 定义引用：「最小二乘」→ 到坐标平面的投影　`dep.plane-ls`
-
-注里把它当最小二乘的几何内核（残差与子空间正交）。
-
 #### 定义引用：「第一基本形式」→ 圆柱的第一基本形式　`dep.cyl-first`
 
 例子的结果 $E, F, G$ 就是第一基本形式的系数。
@@ -56762,10 +56758,6 @@ $\operatorname{Re}s > 1$ 时 $\sum n^{-s}$ **绝对收敛** —— 这是「可�
 #### 定义引用：「投射有限空间」→ profinite 整数 ℤ̂　`dep.zhat-profinite`
 
 **跨区域桥（topology $\leftrightarrow$ number）**：$\hat{\mathbb{Z}}$ 是逆极限经 Tychonoff 得到的紧全不连通空间，即 profinite 空间的一个实例 —— 用到 profinite（Stone）空间的定义。
-
-#### 定义引用：「中国剩余定理」→ profinite 整数 ℤ̂　`dep.zhat-crt`
-
-注里的 $\hat{\mathbb{Z}} \cong \prod_{p}\mathbb{Z}_{p}$ 就是中国剩余定理沿所有 $n$ 取极限。
 
 #### 定义引用：「拓扑流形」→ 光滑流形　`dep.smooth-topo`
 
@@ -57007,18 +56999,6 @@ $K \equiv 0 \implies$ 局部等距于平面，这一步就是常曲率分类的 
 #### 定义引用：「Gauss 方程」→ Codazzi–Mainardi 方程　`def-link.cod-gauss`
 
 Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。
-
-#### 定义引用：「Rodrigues 定理」→ 第二基本形式　`def-link.sf-rodrigues`
-
-Rodrigues 定理是第二基本形式在**主方向**上的一条具体结论。
-
-#### 定义引用：「Euler 公式」→ 第二基本形式　`def-link.sf-eulerformula`
-
-Euler 公式（$\kappa_{n} = \kappa_{1}\cos^{2}\theta + \kappa_{2}\sin^{2}\theta$）同样写在第二基本形式上。
-
-#### 定义引用：「Euler 示性数」→ Euler 类　`def-link.ec-echar`
-
-Euler 类与 Euler 示性数由 $\int e = \chi$ 相连 —— 一个是上同调类、一个是整数。
 
 #### 定义引用：「Gauss 曲率」→ Euler 类　`def-link.ec-k`
 
@@ -57765,6 +57745,18 @@ $$f = \beta_B \circ G(h) \circ \beta_A^{-1} : A \to B$$
 
 > 这条把「范畴等价」这件看起来要靠造函子的事，换成了两个**可以逐点检查**的条件：Hom 集上双射 + 对象层差一个同构。实际用的时候几乎都走这一条。
 
+#### 定义引用：「单态射 / 满态射 / 同构」→ 子对象的交　`dep.inter-mono`
+
+子对象是单态射的同构类；拉回保持单态射这一步用到单态射的定义。
+
+#### 定义引用：「子对象」→ 子对象的交　`dep.inter-subobject`
+
+子对象的交以子对象（单态射的同构类）为前提。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 子对象的交　`dep.inter-fiber`
+
+交就是沿底对象取的纤维积，所以需要先有纤维积。
+
 #### 定义引用：「单纯形范畴」→ 单纯对象　`def-link.simplex-category-simplicial`
 
 单纯对象是 $\Delta^{\mathrm{op}}$ 上的图，索引范畴正是 `def.simplex-category`；本节点陈述为了自足把 $\Delta$ 的骨架重述了一遍，正式定义以那个节点为准。
@@ -58265,6 +58257,10 @@ $$u \circ g = u \circ f_{i} \circ h = v \circ f_{i} \circ h = v \circ g$$
 取 $Y = X$、$g = 1_{X}$ 即得 $u = v$。所以 $q$ 是满态射。∎
 
 > 这条把「覆盖」这件听起来很几何的事，变成了一句纯箭头的话。以后凡是要在景上验覆盖，都可以改写成一个余积是否满射的问题。
+
+#### 定义引用：「子对象的交」→ 子对象构成有界格　`dep.inter-lattice`
+
+子对象格的交就是子对象的交（纤维积）。
 
 #### 预拓扑斯 + 有效等价关系 + 正则满态射 ⟹ 满-单分解　`imp.pretopos-factorization`
 *预拓扑斯 $\implies$ 满-单分解*
@@ -61792,9 +61788,17 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 定理说的是**紧生成空间**范畴。
 
-#### 定义引用：「紧生成空间是笛卡尔闭的」→ 紧生成空间的指数伴随　`def-dep.cgexp-cc`
+#### 紧生成空间是笛卡尔闭的 ⟺ 紧生成空间的指数伴随　`def-dep.cgexp-cc`
 
-伴随那条是笛卡尔闭的重新表述。
+**笛卡尔闭 $\implies$ 伴随**
+
+笛卡尔闭给出自然双射 $\operatorname{Hom}(k(X\times Y), Z) \cong \operatorname{Hom}(X, kC(kY, Z))$（右边就是把 currying 的双射用指数对象 $Z^{Y} = kC(kY,Z)$ 写出来；$Z$ 紧生成时 $kC(kY,Z)$ 与 $C(Y,Z)$ 一致）。这组自然双射按定义就是 $k(X\times -) \dashv kC(kY, -)$。
+
+**伴随 $\implies$ 笛卡尔闭**
+
+设 $k(X\times Y) \dashv kC(kY,-)$，其伴随同构把 $f : k(X\times Y)\to Z$ 送到 $\widehat{f} : X \to kC(kY,Z)$，$\widehat{f}(x)(y) = f(x,y)$。与 $k$-化同构 $\operatorname{Hom}_{k\mathbf{Top}}(X, kC(kY,Z)) \cong \operatorname{Hom}_{\mathbf{Top}}(X\times Y, Z)$ 拼起来即得 currying 的自然双射 $C(k(X\times Y), Z)\cong C(X, C(Y,Z))$，即 $k\mathbf{Top}$ 笛卡尔闭。
+
+> 笛卡尔闭与「乘 $Y$ 有右伴随」是同一件事的两种说法。
 
 #### 定义引用：「伴随函子」→ 紧生成空间的指数伴随　`def-dep.cgexp-adjoint`
 
@@ -61943,10 +61947,6 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 #### 定义引用：「加法 / 阿贝尔范畴」→ 五引理　`def-dep.five-abelian`
 
 五引理在**阿贝尔范畴**里说。
-
-#### 定义引用：「蛇引理」→ 五引理　`def-dep.five-snake`
-
-两者都在**阿贝尔范畴**里说、都只能走泛元与泛性质；五引理是比较同构的版本。
 
 #### 定义引用：「像 / 余像」→ 五引理　`def-dep.five-image`
 
@@ -64177,7 +64177,11 @@ $$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
 
 所以「Bézout」在图里出现两次是对的：一次是 $\mathbb{Z}$ 上的定理，一次是整环上的类名 —— 后者包含了前者，也包含了 $K[x]$。
 
-#### 除数函数 τ 与 σ ～ 积性函数　`e154.analogy`
+#### 算术基本定理 ～ 积性函数　`e145.analogy`
+
+积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。
+
+#### 除数函数 τ 与 σ ～ 积性函数　`e153.analogy`
 *积性函数：$\tau$、$\sigma$ 与 $\mu$、$\varphi$ 是同一个框架的四个实例*
 
 四个函数都满足 $f(mn) = f(m)f(n)$（互素时），都由「素数幂上的值」决定，公式都是乘积形状。
@@ -64190,7 +64194,7 @@ $$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
 
 所以「积性函数」这条定义是四个具体公式的共同外壳 —— 与「张量场是向量场、微分形式、度量的共同外壳」是同一种组织方式。
 
-#### Jacobi 符号 ～ Legendre 符号　`e167.analogy`
+#### Jacobi 符号 ～ Legendre 符号　`e166.analogy`
 *Jacobi 符号：把 Legendre 符号从素数推到奇数*
 
 两者定义形状相同（乘性 + 取值 $\pm 1$ or $0$），但含义分家：Legendre 说「有没有解」，Jacobi 只是「乘积」。
@@ -64203,7 +64207,31 @@ $$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
 
 这条「便宜但只给必要条件」的性质，正是概率素性检验的可用之处：Jacobi 说 $-1$ 就一定合数。
 
-#### 第一同构定理（Noether） ～ 第一同构定理（向量空间版）　`e176.analogy`
+#### 可对角化判据 ～ 谱定理（矩阵版）　`dep.ln-spectral-diag`
+
+谱定理是「可对角化」在正交条件下的加强版；先有一般的可对角化判据。
+
+#### Cayley–Hamilton 定理 ～ 幂零　`dep.nilp-cayley`
+
+$T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻得到。
+
+#### Sylvester 判据 ～ LU 分解　`dep.lu-sylvester`
+
+「顺序主子式全非零」这个前提，与正定判据用的是同一批主子式。
+
+#### 逆映射定理（Banach 版） ～ 逆算子定理　`def-link.fa-invfn-banach`
+
+⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。
+
+#### 开映射定理 ～ 开映射定理（Banach 版）　`def-link.fa-openmapping-holo`
+
+⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。
+
+#### 丛的分类 ～ 示性类　`dep-cc-class`
+
+它的存在理由就是「分类定理给出一个算不出的集合」—— 示性类把它接到可算的上同调。
+
+#### 第一同构定理（Noether） ～ 第一同构定理（向量空间版）　`e175.analogy`
 *第一同构定理：群版与向量空间版是同一句话*
 
 两个节点一个说「群同态 $G/\ker\varphi \cong \operatorname{im}\varphi$」，一个说「线性映射 $V/\ker T \cong \operatorname{im} T$」。
@@ -64212,28 +64240,28 @@ $$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
 
 ⭐ 所以这条只能当**类比**：想要真正的一次性说法，得有「阿贝尔范畴里的第一同构定理」那个节点。
 
-#### Mayer–Vietoris 序列 ～ Mayer–Vietoris（同调）　`e177.analogy`
+#### Mayer–Vietoris 序列 ～ Mayer–Vietoris（同调）　`e176.analogy`
 *Mayer–Vietoris：de Rham 版与奇异同调版*
 
 同一条长正合列，一个在 de Rham 上同调（`thm.mayer-vietoris`，微分几何侧），一个在奇异同调（`thm.mv-homology`，代数拓扑侧）。
 
 ⚠ 两边此前**都是叶子**：几何侧不知道拓扑侧已经有同一条列，反之亦然。本图尚未收「奇异上同调 = de Rham」那座桥（de Rham 定理只在光滑流形上），所以这里只记类比。
 
-#### Riesz 表示定理 ～ Riesz 表示（Hilbert）　`e178.analogy`
+#### Riesz 表示定理 ～ Riesz 表示（Hilbert）　`e177.analogy`
 *Riesz 表示定理：$L^{p}$ 版与 Hilbert 版*
 
 $L^{p}$ 版：$(L^{p})^{*} \cong L^{q}$（$1/p + 1/q = 1$），靠 Hölder 不等式；Hilbert 版：$H^{*} \cong H$，靠投影定理。
 
 两条都是「把泛函换成向量」，$p = 2$ 时它们重合（Hilbert 空间就是 $L^{2}$ 的抽象版）。一般 $p$ 下没有谁推出谁，所以是**类比**而不是依赖。
 
-#### Taylor 公式 ～ Taylor 公式（Peano 余项）　`e179.analogy`
+#### Taylor 公式 ～ Taylor 公式（Peano 余项）　`e178.analogy`
 *Taylor 公式：Lagrange 余项与 Peano 余项*
 
 同一个展开式，两种余项、两套假设：`thm.taylor` 要 $n+1$ 阶可导、给出**定量**余项（存在 $\xi$）；`prop.taylor-peano` 只要 $n$ 阶导数在 $x_{0}$ 连续，给出**定性**的 $o((x-x_{0})^{n})$。
 
 两者互不包含：Peano 版假设更弱但结论只在小 $o$ 意义下；Lagrange 版能用它估误差。所以是**同一台机器的两种用法**，不是依赖。
 
-#### 紧致性定理 ～ 紧　`e180.analogy`
+#### 紧致性定理 ～ 紧　`e179.analogy`
 *两种「紧」：有限可满足 vs 有限子覆盖*
 
 名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。
@@ -64242,7 +64270,7 @@ $L^{p}$ 版：$(L^{p})^{*} \cong L^{q}$（$1/p + 1/q = 1$），靠 Hölder 不�
 
 ⛔ 不能做成 definition：已有的 `def.compact → … → def.formula` 路径意味着反向接线会成环。
 
-#### 紧致性定理 ～ Tychonoff 定理　`e181.analogy`
+#### 紧致性定理 ～ Tychonoff 定理　`e180.analogy`
 *有限性原理的两个化身：紧致性定理与 Tychonoff*
 
 两条都在说「**局部/有限**的都行 $\implies$ 整体也行」：
@@ -64251,21 +64279,21 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 在 Boolean 代数 / Stone 对偶下它们确实相通（命题逻辑的紧致性可由 Cantor 空间紧得出），但那需要把 Stone 表示对偶做到逻辑层 —— 本图还没做，所以只记类比。
 
-#### 可证明性 ～ Boolean 环与 Stone 空间等价　`e182.analogy`
+#### 可证明性 ～ Boolean 环与 Stone 空间等价　`e181.analogy`
 *证明论 $\leftrightarrow$ Boolean 代数：命题逻辑的 Stone 表示*
 
 命题逻辑的**代数化**就是布尔代数：公式模「可证等价」得到布尔代数，而 `thm.boolean-stone`（$\mathbf{BoolRing}^{\mathrm{op}} \simeq \mathbf{Stone}$）说明这个代数完全由它的 Stone 空间（超滤子空间）决定 —— 命题逻辑的完备性在那边就是「$\operatorname{Spec}$ 非空」。
 
 ⚠ 本图没有「命题逻辑」这个节点（一阶逻辑才是主角），所以这条只作**联想线索**：从「可证明性」跳到「Boolean 环 / Stone 空间」那条线的入口。
 
-#### 亏格 ～ Euler 示性数　`e183.analogy`
+#### 亏格 ～ Euler 示性数　`e182.analogy`
 *亏格与 Euler 示性数：同一个数换了身衣服*
 
 闭可定向曲面上 $\chi(M) = 2 - 2g(M)$ —— 两个数互相决定，所以「数 Betti 数」与「数洞」是同一件事。
 
 ⚠ 本图把这条**留成类比**而不是 implication：它需要一个正经的定理节点（下一刀补），现在写死成推出关系就等于把「还没写的证明」当成已证。
 
-#### 闭曲面 ～ R³ 中的可定向曲面　`e184.analogy`
+#### 闭曲面 ～ R³ 中的可定向曲面　`e183.analogy`
 *两种「可定向曲面」：内在的拓扑 vs 嵌在 $\mathbb{R}^{3}$ 里的*
 
 `def.orientable-surface` 说的是：$\mathbb{R}^{3}$ 里被参数化覆盖的点集，能不能**连续地选一侧法向**（外加一个外法向，才有了面积元与 Gauss 映射）。那是**外在**的说法，用到了嵌入与度量。
@@ -64276,14 +64304,26 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 📌 桥梁是嵌入定理（每个闭可定向曲面都能嵌入 $\mathbb{R}^{3}$）与 Gauss–Bonnet（$\int K = 2\pi\chi$），本图都没有写成节点。
 
-#### 伽罗瓦群 ～ 向量空间　`e185.analogy`
+#### Euler 示性数与亏格 ～ 环面 T²　`dep.eulerchargenus-torus`
+
+例子里「$\chi = 0$」这个值由这条命题（$2 - 2g$）算出，不是另算的。
+
+#### Euler 示性数与不可定向亏格 ～ 射影平面 RP²　`dep.eulercharnonor-rp2`
+
+「$k = 1$、$\chi = 1$」由不可定向那条判据（$2 - k$）读出。
+
+#### Euler 示性数与不可定向亏格 ～ 克莱因瓶　`dep.eulercharnonor-klein`
+
+「$k = 2$、$\chi = 0$」同上。
+
+#### 伽罗瓦群 ～ 向量空间　`e184.analogy`
 *「固定基域的自同构」与「保持结构的映射」是同一个套路*
 
 两处都在做**同一件事**：先定一个「结构」（这里是域扩张 $K/F$，那里是向量空间），再取「保持它不变的变换」（$F$-自同构 / 线性映射），然后数这些变换。
 
 差别在于：向量空间那边数出来的是**环**（$\operatorname{End}$），伽罗瓦这边数出来的是**群**，而域的自同构太少（只有群，没有加法结构可加），这恰恰是伽罗瓦理论能反过来说「域由群决定」的原因。
 
-#### 极小多项式 ～ 代数元与极小多项式　`e186.analogy`
+#### 极小多项式 ～ 代数元与极小多项式　`e185.analogy`
 *两个「极小多项式」：零化一个算子 vs 零化一个元素*
 
 写法**一模一样**：取 $\{\, p : p(\text{对象}) = 0 \,\}$，验证它是 $K[x]$ 的**非零理想**，再由 $K[x]$ 是主理想整环取**首一生成元**。
@@ -64294,7 +64334,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⚠ 别混：$\mu_{T}$ 的**次数**刻画算子的可对角化性；$m_{\alpha}$ 的**次数**是 $[F(\alpha):F]$。同一个名字、同一套论证、完全不同的用途 —— 这类同名不同物只能用类比边，不能连依赖。
 
-#### 伽罗瓦群 ～ 基本群　`e187.analogy`
+#### 伽罗瓦群 ～ 基本群　`e186.analogy`
 *Galois 群与基本群：覆盖空间版的伽罗瓦理论*
 
 同一个形状在两个世界里出现：
@@ -64309,7 +64349,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 definition/implication：一边是域，一边是拓扑空间，没有谁是谁的前提。
 
-#### 闭曲面 ～ 曲面与参数化　`e188.analogy`
+#### 闭曲面 ～ 曲面与参数化　`e187.analogy`
 *两个「曲面」：拓扑的 vs $\mathbb{R}^{3}$ 里被参数化覆盖的*
 
 **同名不同物**，这正是审计 B2 点出的那件事：
@@ -64322,7 +64362,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 definition/implication：一边嵌在 $\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。
 
-#### 闭曲面 ～ Riemann 曲面　`e189.analogy`
+#### 闭曲面 ～ Riemann 曲面　`e188.analogy`
 *两个「曲面」：拓扑的 2 维流形 vs 一维复流形*
 
 **同名不同物**，而且维数说法都不一样：
@@ -64335,7 +64375,7 @@ Tychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性�
 
 ⛔ 不能连 implication：本图的 Riemann 曲面是从「一维复流形」定义的，而闭曲面是从拓扑定义的，两边的前提不同（真要连得先有「忘记复结构」这个函子）。
 
-#### 闭曲面分类定理 ～ Gauss–Bonnet 定理　`e190.analogy`
+#### 闭曲面分类定理 ～ Gauss–Bonnet 定理　`e189.analogy`
 *分类定理与 Gauss–Bonnet：被同一个 $\chi$ 焊在一起*
 
 一边是**纯拓扑**的分类（闭曲面由 $g$ 或 $k$ 决定，等价地由 $\chi$ 与可定向性决定），一边是**几何**的等式（$\int_{M} K\,\mathrm{d}A = 2\pi\chi(M)$）。
@@ -64352,7 +64392,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⚠ 本图**没有**那条「组合」命题（$\int K = 4\pi(1-g)$）的节点，所以这里只连类比；⛔ 也不连 implication：分类定理不推出 Gauss–Bonnet（后者要度量）。
 
-#### Euler 示性数与不可定向亏格 ～ 亏格　`e191.analogy`
+#### Euler 示性数与不可定向亏格 ～ 亏格　`e190.analogy`
 *两个「亏格」：可定向的 $g$ 与不可定向的 $k$*
 
 同一个中文词、两套数法（这正是这条命题存在的理由）：
@@ -64365,7 +64405,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⛔ 不能连 definition：`def.genus` 的定义里那个「除以 2」依赖 $H_{1}$ 的自由秩为**偶数**，不可定向时秩可能是奇数（$\mathbb{RP}^{2}$ 的自由秩是 0），公式直接不成立。
 
-#### 子空间 ～ 子空间拓扑　`e192.analogy`
+#### 子空间 ～ 子空间拓扑　`e191.analogy`
 *两个「子空间」：线性代数的 vs 拓扑的子空间拓扑*
 
 **同名不同物**，中文里都叫「子空间」：
@@ -64378,7 +64418,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⛔ 不能连 definition/implication：没有谁是谁的前提，而且方向想清楚也很难 —— 所以只能用类比边把这层「词撞车」记下来，让读者别点错。
 
-#### 完备 ～ 零集与完备　`e193.analogy`
+#### 完备 ～ 零集与完备　`e192.analogy`
 *两个「完备」：度量完备 vs 测度完备*
 
 **同名不同物**（第三个是序完备，见 `thm.real-ordered-field` 那条边）：
@@ -64392,6 +64432,10 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 ⚠ 三者在 $\mathbb{R}$ 上刚好都成立，所以初学时容易以为是一件事；换一个空间就分开了（$\mathbb{Q}$ 序不完备；某个测度空间可以测度完备而作为度量空间不完备，反之亦然）。
 
 ⛔ 不能连 definition：一个是「列都收敛」，一个是「零集都进 $\sigma$-代数」，没有蕴含关系。
+
+#### Gauss–Bonnet 定理 ～ 球面的曲率　`dep.spherecurv-gb`
+
+注里用 $\int_{S^{2}_{R}} K\,\mathrm{d}A = 4\pi = 2\pi\chi$ **对账**，用的就是 Gauss–Bonnet 定理。
 
 #### 整值测度 ～ Riesz–Markov 表示　`ana.rm-cond-measure`
 *整值测度 $\leftrightarrow$ Riesz–Markov：同一台机器，换系数环与测试空间*
@@ -64419,6 +64463,10 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 - $\zeta$ 的解析性质（在 $s = 1$ 处的极点、在 $\operatorname{Re}s = 1$ 上不为零）**给出**这条渐近（**函数怎么长**）。
 
 ⚠ 这只是类比/指向，**不是依赖**：本图没有把「$\zeta$ 在 $\operatorname{Re}s = 1$ 上非零」这条定理单独立节点，所以从 $\zeta$ 推不出素数定理；反方向也不是。要真接上，得先补 Perron 公式与 Wiener–Ikehara 那一套。
+
+#### 最小二乘 ～ 到坐标平面的投影　`dep.plane-ls`
+
+注里把它当最小二乘的几何内核（残差与子空间正交）。
 
 #### 拓扑流形 ～ 曲面与参数化　`ana.topo-regsurf`
 *「曲面」的两个意思：内蕴的流形 $\leftrightarrow$ $\mathbb{R}^{3}$ 里的参数曲面*
@@ -64581,6 +64629,10 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 
 💡 这也解释了为什么「实数完备」与「选择公理」在证明里长得像：它们是同一类存在性工具。
 
+#### 蛇引理 ～ 五引理　`def-dep.five-snake`
+
+两者都在**阿贝尔范畴**里说、都只能走泛元与泛性质；五引理是比较同构的版本。
+
 ---
 
 ## 星团级连接（整块对整块）
@@ -64610,7 +64662,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
 - **多元微分 ↔ 微分中值定理与 Taylor**　2 条节点级连线
-- **群作用与置换 ↔ 代数结构**　8 条节点级连线
+- **群作用与置换 ↔ 代数结构**　7 条节点级连线
 - **合成列与可解群 ↔ 代数结构**　6 条节点级连线
 - **代数结构 ↔ 实数的运算与不等式**　6 条节点级连线
 - **实数的运算与不等式 ↔ 数系的构造**　9 条节点级连线
@@ -64727,7 +64779,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **整环与分解 ↔ 代数结构**　6 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
-- **整除与同余 ↔ 数论函数与素数分布**　9 条节点级连线
+- **整除与同余 ↔ 数论函数与素数分布**　8 条节点级连线
 - **解析延拓与整函数 ↔ 数论函数与素数分布**　2 条节点级连线
 - **复变函数基础 ↔ 数论函数与素数分布**　3 条节点级连线
 - **选择原理 ↔ 紧 Hausdorff 空间**　2 条节点级连线
@@ -64782,7 +64834,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **曲面论 ↔ 曲面的地形**　3 条节点级连线
 - **Galois 理论 ↔ 代数结构**　5 条节点级连线
 - **Galois 理论 ↔ 向量空间与基**　2 条节点级连线
-- **Galois 理论 ↔ 多项式与因式分解**　4 条节点级连线
+- **Galois 理论 ↔ 多项式与因式分解**　3 条节点级连线
 - **Galois 理论 ↔ 群作用与置换**　2 条节点级连线
 - **Galois 理论 ↔ 合成列与可解群**　5 条节点级连线
 - **Galois 理论 ↔ 数系的构造**　2 条节点级连线
@@ -64826,6 +64878,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **序结构 ↔ ZFC 公理系统**　2 条节点级连线
 - **序数与超限 ↔ ZFC 公理系统**　3 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
+- **图与极限 ↔ 单满、子对象与像**　5 条节点级连线
 - **伴随与反射 ↔ 图与极限**　13 条节点级连线
 - **伴随与反射 ↔ 函子与自然变换**　8 条节点级连线
 - **紧 Hausdorff 空间 ↔ 拓扑空间的基本语汇**　6 条节点级连线
@@ -64833,6 +64886,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **紧 Hausdorff 空间 ↔ Stone 与 Stonean**　5 条节点级连线
 - **伴随与反射 ↔ 层与拓扑**　2 条节点级连线
 - **层与拓扑 ↔ 单满、子对象与像**　2 条节点级连线
+- **单满、子对象与像 ↔ 拓扑斯**　3 条节点级连线
 - **拓扑斯 ↔ 凝聚态集**　11 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
@@ -64872,7 +64926,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **L^p 空间 ↔ 测度的构造**　4 条节点级连线
 - **紧 Hausdorff 空间 ↔ 分离公理**　2 条节点级连线
 - **图与极限 ↔ 层与拓扑**　8 条节点级连线
-- **单满、子对象与像 ↔ 拓扑斯**　2 条节点级连线
 - **图与极限 ↔ 拓扑斯**　5 条节点级连线
 - **伴随与反射 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 紧 Hausdorff 空间**　3 条节点级连线
@@ -64887,7 +64940,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **范畴与图 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 集合的构造**　2 条节点级连线
-- **图与极限 ↔ 单满、子对象与像**　4 条节点级连线
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 紧 Hausdorff 空间**　2 条节点级连线

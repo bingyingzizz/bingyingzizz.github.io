@@ -4,4 +4,3 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.schur-triangularization`](../nodes/thm.schur-triangularization.md) Schur 三角化
 - ⇒ [`thm.schur-triangularization`](../nodes/thm.schur-triangularization.md) Schur 三角化
-- 被 [`def.algebraically-closed`](../nodes/def.algebraically-closed.md) 代数闭域 用

@@ -1,6 +1,6 @@
 # 第一同构定理（向量空间版）　`thm.first-iso-vs`
 定理：$V / \ker T \cong \operatorname{im} T$
-layer 14 · 定理 · 线性映射与秩 · 抽象代数
+layer 13 · 定理 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=thm.first-iso-vs)　·　[节点索引](../index.md)
 
 设 $T : V \to W$ 是线性映射。则

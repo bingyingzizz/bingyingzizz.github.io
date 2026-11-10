@@ -5,7 +5,7 @@
 - def.cotangent-bundle　余切丛　layer 23
 - def.transition-function　转移函数　layer 23
 - ex.s1-tangent-bundle　圆的切丛是平凡丛　layer 23
-- def.stiefel-whitney-class　Stiefel–Whitney 类　layer 36
-- prop.orientable-iff-w1　定向与 w1 消失　layer 37
-- def.pontryagin-class　Pontryagin 类　layer 37
-- def.euler-class　Euler 类　layer 38
+- def.stiefel-whitney-class　Stiefel–Whitney 类　layer 35
+- prop.orientable-iff-w1　定向与 w1 消失　layer 36
+- def.pontryagin-class　Pontryagin 类　layer 36
+- def.euler-class　Euler 类　layer 37

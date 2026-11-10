@@ -1,6 +1,6 @@
 # 核与像　`def.kernel-image-vs`
 核与像
-layer 13 · 定义 · 线性映射与秩 · 抽象代数
+layer 12 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.kernel-image-vs)　·　[节点索引](../index.md)
 
 设 $T : V \to W$ 线性。定义

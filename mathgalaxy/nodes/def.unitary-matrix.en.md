@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 18 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Unitary / Orthogonal Matrix` (short) · `Unitary and Orthogonal Matrices` (full)
 
 ## Statement and proof

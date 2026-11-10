@@ -1,7 +1,12 @@
 # de Rham 上同调　`def.de-rham-complex`　·　续页（第 5 页）
 [在星图里打开](../#n=def.de-rham-complex)　·　第 1 页 [nodes/def.de-rham-complex.md](./def.de-rham-complex.md)　·　上一页 [nodes/def.de-rham-complex.4.md](./def.de-rham-complex.4.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.boundary`](../nodes/def.boundary.md) 边缘：用到了定义 边缘　[proofs/dep.bnd-derham.md](../proofs/dep.bnd-derham.md)
-
-> 续见 [nodes/def.de-rham-complex.6.md](./def.de-rham-complex.6.md)
+## 它能推出什么 / 谁在用它（续）
+- ⇒ [`lem.poincare-lemma`](../nodes/lem.poincare-lemma.md) Poincaré 引理
+- ⇒ [`thm.mayer-vietoris`](../nodes/thm.mayer-vietoris.md) Mayer–Vietoris 序列
+- 被 [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理 用
+- ⇒ [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理
+- 被 [`def.closed-form`](../nodes/def.closed-form.md) 闭形式 用
+- 被 [`def.exact-form`](../nodes/def.exact-form.md) 恰当形式 用
+- 被 [`thm.chern-weil`](../nodes/thm.chern-weil.md) 陈–Weil 同态 用
+- 被 [`ex.h1-circle`](../nodes/ex.h1-circle.md) 圆的 H¹ 用

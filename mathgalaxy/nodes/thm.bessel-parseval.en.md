@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 16 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.bessel-parseval.md` and `proofs/`.

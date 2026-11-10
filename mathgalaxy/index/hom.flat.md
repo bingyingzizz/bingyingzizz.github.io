@@ -5,12 +5,12 @@
 
 - def.flat-module　平坦模　layer 14
 - thm.watts　张量函子的刻画　layer 14
+- prop.free-flat　自由模平坦　layer 15
 - thm.lazard　平坦模的结构定理　layer 15
-- prop.free-flat　自由模平坦　layer 16
+- prop.flat-summand　平坦的直和项　layer 16
 - def.tor　挠积　layer 16
 - prop.tor-flat-vanishing　平坦与挠积消失　layer 16
 - prop.tensor-right-exact　张量函子右正合　layer 17
-- prop.flat-summand　平坦的直和项　layer 17
 - prop.tor-symmetry　挠积的对称性　layer 17
 - thm.tor-torsion　挠积给出挠元　layer 17
 - prop.flat-equivalences　平坦的等价说法　layer 18

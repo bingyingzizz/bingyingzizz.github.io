@@ -1,6 +1,6 @@
 # 内积　`def.inner-product`
 内积与内积空间
-layer 14 · 定义 · 内积空间与正交性 · 抽象代数
+layer 13 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.inner-product)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间（$K = \mathbb{R}$ 或 $\mathbb{C}$）。映射

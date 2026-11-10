@@ -5,3 +5,4 @@
 - [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep.mf3-triv-bclass.md](../proofs/dep.mf3-triv-bclass.md)
 - [`def.transition-function`](../nodes/def.transition-function.md) 转移函数：用到了定义 转移函数　[proofs/dep-tf-class.md](../proofs/dep-tf-class.md)
 - [`def.structure-group`](../nodes/def.structure-group.md) 结构群：用到了定义 结构群　[proofs/dep-sg-class.md](../proofs/dep-sg-class.md)
+- [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类：dep-cc-class　[proofs/dep-cc-class.md](../proofs/dep-cc-class.md)

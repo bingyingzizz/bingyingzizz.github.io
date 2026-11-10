@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 37 · proposition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
+layer 36 · proposition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.chern-class-line-bundle.md` and `proofs/`.

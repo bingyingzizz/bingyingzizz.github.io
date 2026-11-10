@@ -10,7 +10,7 @@ $$f(mn) = f(m)\,f(n) .$$
 若上式对**一切** $m, n$ 都成立（不要求互素），称 $f$ 是**完全积性**的。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.divisor-function`](../nodes/def.divisor-function.md) 除数函数 τ 与 σ 用
+- ～弱边 [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理
 
 - …另有出边，续页见 [nodes/def.multiplicative-function.3.md](./def.multiplicative-function.3.md)
 

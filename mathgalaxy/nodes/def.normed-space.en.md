@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 11 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.normed-space.md` and `proofs/`.

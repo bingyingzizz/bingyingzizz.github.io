@@ -1,6 +1,6 @@
 # 线性方程组的解结构　`thm.linear-system-solutions`
 定理：线性方程组的解结构
-layer 16 · 定理 · 矩阵与行列式 · 抽象代数
+layer 15 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.linear-system-solutions)　·　[节点索引](../index.md)
 
 设 $A \in M_{m \times n}(K)$、$b \in K^{m}$，考虑方程组 $Ax = b$。

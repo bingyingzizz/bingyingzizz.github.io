@@ -1,5 +1,5 @@
 # dep.nilp-cayley
-`dep.nilp-cayley` · 定义引用 · strong 边 · 根 `../`
+`dep.nilp-cayley` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.cayley-hamilton` Cayley–Hamilton 定理 → `def.nilpotent` 幂零
 

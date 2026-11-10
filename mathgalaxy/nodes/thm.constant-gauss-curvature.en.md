@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 37 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 35 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.constant-gauss-curvature.md` and `proofs/`.

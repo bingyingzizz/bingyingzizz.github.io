@@ -1,6 +1,6 @@
 # 正交补　`def.orthogonal-complement`
 正交补 $U^{\perp}$ 与直和分解
-layer 16 · 定义 · 内积空间与正交性 · 抽象代数
+layer 15 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.orthogonal-complement)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是子空间。$U$ 的**正交补**定义为

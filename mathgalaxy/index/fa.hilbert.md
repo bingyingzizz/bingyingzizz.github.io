@@ -7,16 +7,16 @@
 - def.star-shaped　星形集　layer 11
 - def.convex-combination　凸组合　layer 11
 - def.convex-hull　凸包　layer 12
-- def.orthonormal-set　正交基　layer 16
-- thm.bessel-parseval　Bessel 与 Parseval　layer 17
+- def.orthonormal-set　正交基　layer 15
+- thm.bessel-parseval　Bessel 与 Parseval　layer 16
 - def.hilbert-space　Hilbert 空间　layer 18
+- def.unitary-operator　酉算子　layer 19
 - thm.separable-hilbert-is-l2　可分 Hilbert 空间等距于 ℓ²　layer 19
 - thm.polarization　极化恒等式　layer 20
-- def.unitary-operator　酉算子　layer 20
+- thm.projection-convex　凸闭集的最近点　layer 20
+- def.partial-isometry　部分等距　layer 20
 - thm.parallelogram-inner-product　平行四边形法则　layer 21
-- thm.projection-convex　凸闭集的最近点　layer 21
-- def.partial-isometry　部分等距　layer 21
-- thm.projection-subspace　闭子空间的正交投影　layer 22
-- thm.riesz-hilbert　Riesz 表示（Hilbert）　layer 23
+- thm.projection-subspace　闭子空间的正交投影　layer 21
+- thm.riesz-hilbert　Riesz 表示（Hilbert）　layer 22
 
 > 续见 `index/fa.hilbert.2.md`

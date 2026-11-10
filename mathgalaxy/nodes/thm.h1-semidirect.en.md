@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 15 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `H1 and Split Extensions` (short) · `First Cohomology and Split Extensions` (full)
 
 ## Statement and proof

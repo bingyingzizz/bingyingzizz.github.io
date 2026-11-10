@@ -1,6 +1,6 @@
 # LU 分解　`thm.lu-decomposition`
 LU 分解：把消元写成两个三角矩阵
-layer 26 · 定理 · 矩阵分解与最小二乘 · 抽象代数
+layer 20 · 定理 · 矩阵分解与最小二乘 · 抽象代数
 [在星图里打开](../#n=thm.lu-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：高斯消元其实是在乘一串初等矩阵。把那些初等矩阵乘起来记成 $L$，消元的结果记成 $U$，就得到 $A = LU$。
@@ -10,6 +10,9 @@ layer 26 · 定理 · 矩阵分解与最小二乘 · 抽象代数
 $$A = LU ,$$
 > 陈述续见 [nodes/thm.lu-decomposition.2.md](./thm.lu-decomposition.2.md)
 
+
+## 它能推出什么 / 谁在用它
+- ～弱边 [`thm.sylvester-criterion`](../nodes/thm.sylvester-criterion.md) Sylvester 判据
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.lu-decomposition.3.md](./thm.lu-decomposition.3.md)

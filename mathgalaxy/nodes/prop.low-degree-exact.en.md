@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 13 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.low-degree-exact.md` and `proofs/`.

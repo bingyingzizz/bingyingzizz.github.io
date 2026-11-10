@@ -1,6 +1,6 @@
 # Lax–Milgram 定理　`thm.lax-milgram`
 定理（Lax–Milgram）：强制半双线性型的 Riesz 表示
-layer 31 · 定理 · Hilbert 空间 · 泛函分析
+layer 23 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.lax-milgram)　·　[节点索引](../index.md)
 
 设 $H$ 是 Hilbert 空间，$L : H \times H \to \mathbb{K}$ 满足：

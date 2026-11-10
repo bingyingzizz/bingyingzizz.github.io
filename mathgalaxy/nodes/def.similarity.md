@@ -1,6 +1,6 @@
 # 相似　`def.similarity`
 相似
-layer 18 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.similarity)　·　[节点索引](../index.md)
 
 两个方阵 $A, B \in M_n(K)$ 叫**相似**，记 $A \sim B$，当且仅当存在可逆矩阵 $P$ 使

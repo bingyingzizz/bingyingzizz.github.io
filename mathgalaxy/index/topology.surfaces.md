@@ -9,12 +9,13 @@
 - def.connected-sum　连通和　layer 20
 - thm.rado　Radó 定理　layer 20
 - lem.combinatorial-classification-surfaces　曲面的组合分类引理　layer 20
+- ex.projective-plane　射影平面 RP²　layer 20
 - def.genus　亏格　layer 21
 - ex.sphere　球面 S²　layer 22
+- ex.torus　环面 T²　layer 22
 - def.branched-cover　分支覆盖　layer 23
 - def.ramification-index　分歧指数　layer 24
 - thm.classification-surfaces　闭曲面分类定理　layer 27
 - prop.eulerchar-genus　Euler 示性数与亏格　layer 28
-- prop.eulerchar-nonorientable　Euler 示性数与不可定向亏格　layer 28
 
 > 续见 `index/topology.surfaces.2.md`

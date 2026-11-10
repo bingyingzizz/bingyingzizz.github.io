@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1585 nodes, 3293 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1586 nodes, 3287 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1585 nodes, 3293 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1586 nodes, 3287 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -13782,6 +13782,7 @@ MG.aliases = {
     { id: 'def.reflexive-space', en: 'reflexive Banach space', aka: ['自反空间', '自反 Banach 空间'] },
     { id: 'thm.milman-pettis', en: 'Milman–Pettis theorem', aka: ['Milman-Pettis', 'Milman–Pettis 定理'] },
     { id: 'thm.james', en: "James's theorem", aka: ['James 定理', 'James 紧性定理'] },
+    { id: 'def.intersection-subobject', en: 'intersection of subobjects', aka: ['子对象的交', 'subobject intersection', 'fibred product of subobjects'] },
     { id: 'def.dini-derivative', en: 'Dini derivative', aka: ['Dini 导数', '导数', '四个 Dini 导数'] },
     { id: 'prop.lie-group-orientable', en: 'Lie groups are orientable', aka: ['李群可定向', '李群都是可定向流形'] },
     { id: 'prop.pi1-group', en: 'π₁ is a group', aka: ['基本群是群', 'π1 是群'] },
@@ -14504,6 +14505,7 @@ MG.i18n = {
     'def.interior': { title_en: 'Interior', label_en: 'Interior', from: 'explicit' },
     'def.interior-product': { title_en: 'interior product', label_en: 'interior product', from: 'explicit' },
     'def.internal-hom': { title_en: 'internal hom', label_en: 'internal hom', from: 'aka' },
+    'def.intersection-subobject': { title_en: 'intersection of subobjects', label_en: 'intersection of subobjects', from: 'explicit' },
     'def.interval': { title_en: 'interval', label_en: 'interval', from: 'aka' },
     'def.intrinsic-quantity': { title_en: 'Intrinsic Quantity', label_en: 'Intrinsic Quantity', from: 'manual' },
     'def.invariant-functor': { title_en: 'Invariant Functor', label_en: 'Invariants', from: 'manual' },
@@ -24641,10 +24643,12 @@ window.MG = window.MG || {};
     },
     {
       id: 'def-link.variations-ac',
-      kind: 'definition',
-      definition: 'thm.jordan-decomposition',
-      usedBy: 'prop.ac-and-variations',
-      note: '命题是用 $\\nu ^{+}$、$\\nu ^{-}$ 把绝对连续性拆成两半说的。'
+      kind: 'implication',
+      sources: ['thm.jordan-decomposition'],
+      target: 'prop.ac-and-variations',
+      title: 'Jordan 分解 $\\implies$ 绝对连续性对变差与正负部逐块判定',
+      proof: '命题的第一组等价要把 $\\nu$ 拆成 $\\nu = \\nu^{+} - \\nu^{-}$、把 $\\lvert\\nu\\rvert = \\nu^{+} + \\nu^{-}$ —— 这两条等式正是 **Jordan 分解定理**给出的（连同 $\\nu^{\\pm}$ 的构造）。有了它们，对任意可测 $E$：$\\lvert\\nu\\rvert(E) = \\nu^{+}(E) + \\nu^{-}(E)$、$\\nu(E) = \\nu^{+}(E) - \\nu^{-}(E)$，于是「$\\mu(E)=0 \\implies \\lvert\\nu\\rvert(E)=0$」与「$\\mu(E)=0 \\implies \\nu^{\\pm}(E)=0$」互相推出（$\\nu^{\\pm}\\le \\lvert\\nu\\rvert$ 且 $\\nu^{\\pm}$ 非负），即 $\\nu\\ll\\mu \\iff \\lvert\\nu\\rvert\\ll\\mu \\iff \\nu^{\\pm}\\ll\\mu$。',
+      note: 'AUD-061 A 类。原记 definition；改 imp：命题的陈述与证明都建立在 Jordan 分解给出的 $\\nu^{\\pm}$、$\\lvert\\nu\\rvert$ 之上。'
     },
     {
       id: 'def-link.ac-lemma',
@@ -30582,6 +30586,38 @@ window.MG = window.MG || {};
       refs: ['Le Stum, An introduction to condensed mathematics, §1.1']
     },
 
+    {
+      id: 'def.intersection-subobject',
+      cluster: 'cat.structure',
+      type: 'definition',
+      label: '子对象的交',
+      title: '子对象的交与纤维积',
+      regions: ['category'],
+      tags: ['范畴论', '子对象', '纤维积', '交'],
+      statement: [
+        '设 $Y \\rightarrowtail X$、$Z \\rightarrowtail X$ 是 $X$ 的两个**子对象**（单态射的同构类，见 `def.subobject`）。它们的**交**是纤维积',
+        '',
+        '$$Y \\cap Z := Y \\times_{X} Z \\;\\longrightarrow\\; X ,$$',
+        '',
+        '连同到 $X$ 的投影（若纤维积存在）。它在「同时包含于 $Y$ 与 $Z$ 的子对象」中泛：任何同时分解过两条单态射的 $T \\to X$ 都唯一地分解过 $Y \\cap Z \\to X$。',
+        '',
+        '对任意 $f : X\' \\to X$，**原像** $f^{-1}(Y) := Y \\times_{X} X\'$ 是 $X\'$ 的子对象。在 $\\mathbf{Set}$ 中，交就是集合交 $Y \\cap Z$。'
+      ].join('\n'),
+      notes: [
+        '**为什么用纤维积**：交要表达「同时落在 $Y$ 与 $Z$ 里」。用元素说，就是 $t \\in Y \\cap Z$；不用元素说，就是 $T \\to X$ 同时分解过 $Y \\rightarrowtail X$ 与 $Z \\rightarrowtail X$。纤维积的泛性正是这个「同时分解」的万有解；于是任何满足该性质的对象都唯一地分解过 $Y \\times_{X} Z$，即它是最大下界。',
+        '',
+        '**存在性**：交就是纤维积，所以「交存在」当且仅当沿 $X$ 的纤维积存在；没有纤维积的范畴里不能谈交。单态射沿任意态射的拉回仍是单态射（见 `def.mono`），所以 $Y \\times_{X} Z \\to X$ 确实是子对象。',
+        '',
+        '**与集合交的关系**：在 $\\mathbf{Set}$ 中 $Y \\times_{X} Z = \\{(y,z) : y = z\\}$，映射 $t \\mapsto (t,t)$ 给出 $Y \\cap Z \\to Y \\times_{X} Z$ 的同构；所以交就是集合交。在 $\\mathbf{Grp}$、$\\mathbf{Top}$ 等具体范畴中，子对象由单射决定，交的底层集合同样是集合交。',
+        '',
+        '**与并的关系**：并是余积的像 $Y \\cup Z := \\operatorname{im}(Y \\coprod Z \\to X)$，不是纤维余积。预拓扑斯里子对象构成有界格：交 = 纤维积（最大下界），并 = 像（最小上界），见 `prop.subobject-lattice`。',
+        '',
+        '**原像**：对 $f : X\' \\to X$，$f^{-1}(Y) = Y \\times_{X} X\'$ 是 $X\'$ 的子对象；它满足「$f(x) \\in Y$」的泛性质，并随 $f$ 与拉回函子相容。原像与交是同一个构造（都取纤维积），只是沿的态射不同。',
+        '',
+        '**警告**：一般范畴里 $Y \\cap Z$ 不一定存在；即使存在，也不要把它与积 $Y \\times Z$ 或余积 $Y \\coprod Z$ 混为一谈。交是「沿 $X$ 的纤维积」，而不是「两个对象的积」。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.3（Def 1.3.10, p.23–24）', 'Mac Lane, Categories for the Working Mathematician, Ch. III §4']
+    },
     /* -------------------------------------------------- 极限的函子性 */
     {
       id: 'thm.lim-functor',
@@ -30662,6 +30698,27 @@ window.MG = window.MG || {};
   ],
 
   edges: [
+    {
+      id: 'dep.inter-mono',
+      kind: 'definition',
+      definition: 'def.mono',
+      usedBy: 'def.intersection-subobject',
+      note: '子对象是单态射的同构类；拉回保持单态射这一步用到单态射的定义。'
+    },
+    {
+      id: 'dep.inter-subobject',
+      kind: 'definition',
+      definition: 'def.subobject',
+      usedBy: 'def.intersection-subobject',
+      note: '子对象的交以子对象（单态射的同构类）为前提。'
+    },
+    {
+      id: 'dep.inter-fiber',
+      kind: 'definition',
+      definition: 'def.fibered-product',
+      usedBy: 'def.intersection-subobject',
+      note: '交就是沿底对象取的纤维积，所以需要先有纤维积。'
+    },
     {
       id: 'def-link.simplex-category-simplicial',
       kind: 'definition',
@@ -33146,6 +33203,13 @@ window.MG = window.MG || {};
   ],
 
   edges: [
+    {
+      id: 'dep.inter-lattice',
+      kind: 'definition',
+      definition: 'def.intersection-subobject',
+      usedBy: 'prop.subobject-lattice',
+      note: '子对象格的交就是子对象的交（纤维积）。'
+    },
 
     /* ------------------------------------------------ 满-单分解 */
     {
@@ -55477,17 +55541,21 @@ window.MG = window.MG || {};
     },
     {
       id: 'def-link.nthroot-root-test',
-      kind: 'definition',
-      definition: 'thm.nth-root',
-      usedBy: 'thm.root-test',
-      note: '根值判别法里的 $\\sqrt[n]{a_n}$ 是 n 次方根；$n$ 逐项变化，所以需要一般 $n$ 的存在性。'
+      kind: 'implication',
+      sources: ['thm.nth-root'],
+      target: 'thm.root-test',
+      title: 'n 次方根的存在唯一性 $\\implies$ 根值判别法的表达式有定义',
+      proof: '根值判别法要对**每个** $n$ 与每个 $a_n \\ge 0$ 写出 $\\sqrt[n]{a_n}$：一般 $n$ 的非负 $n$ 次方根**存在且唯一**正是 `thm.nth-root` 的内容。唯一性保证 $\\sqrt[n]{a_n}$ 是良定义的单个实数，$\\limsup_{n}\\sqrt[n]{a_n}$ 才有意义。判别法的证明本身只是把它与几何级数比较（见边 `thm.comparison-test \\implies thm.root-test`），不另用方根的性质 —— 所以这条依赖是「表达式良定义」的前置定理，不是追图里的一步。',
+      note: 'AUD-061 A 类。原记 definition；改 imp 的理由：来源是定理、且整条判别法的陈述以它为前提（不是定义性记号）。'
     },
     {
       id: 'def-link.nthroot-convergence-radius',
-      kind: 'definition',
-      definition: 'thm.nth-root',
-      usedBy: 'thm.convergence-radius',
-      note: '收敛半径的证明要把 $\\sqrt[n]{|a_n (x - x_0)^{n}|}$ 拆成 $|x - x_0| \\cdot \\sqrt[n]{|a_n|}$，靠 $\\sqrt[n]{uv} = \\sqrt[n]{u}\\sqrt[n]{v}$。'
+      kind: 'implication',
+      sources: ['thm.nth-root'],
+      target: 'thm.convergence-radius',
+      title: 'n 次方根的乘性 $\\implies$ Cauchy–Hadamard 的拆分一步',
+      proof: 'Cauchy–Hadamard 的证明（边 `thm.root-test \\implies thm.convergence-radius`）第一步是 $\\sqrt[n]{\\lvert a_n (x - x_0)^{n}\\rvert} = \\lvert x - x_0\\rvert \\cdot \\sqrt[n]{\\lvert a_n\\rvert}$。这一步用的是 $\\sqrt[n]{uv} = \\sqrt[n]{u}\\,\\sqrt[n]{v}$（$u,v \\ge 0$）：先由 `thm.nth-root` 取非负 $n$ 次方根，再用**唯一性**确认两边相等 —— $\\bigl(\\sqrt[n]{u}\\sqrt[n]{v}\\bigr)^{n} = uv$ 且左边非负，故它就是 $uv$ 的那个唯一非负 $n$ 次方根。没有存在唯一性，这个等式无从陈述，$\\limsup$ 的乘法性质也用不上。',
+      note: 'AUD-061 A 类。原记 definition；改 imp：拆分那一步确实以方根定理（存在 + 唯一 + 乘性）为引擎。'
     },
     {
       id: 'def-link.nthroot-p-series',
@@ -61841,10 +61909,12 @@ window.MG = window.MG || {};
     },
     {
       id: 'dep.pcp-urysohn-lemma-metrization',
-      kind: 'definition',
-      definition: 'lem.urysohn',
-      usedBy: 'thm.urysohn-metrization',
-      note: '构造可数多个分离函数那一步用的就是 Urysohn 引理（前提「正规」由第二可数 $+$ 正则推出）。'
+      kind: 'implication',
+      sources: ['lem.urysohn'],
+      target: 'thm.urysohn-metrization',
+      title: 'Urysohn 引理造可数族分离函数 $\\implies$ Urysohn 度量化定理',
+      proof: '节点注里那条嵌入证明的第 3 步：取可数基 $\\{B_n\\}$，对每一对满足 $\\overline{B_m}\\subseteq B_n$ 的 $(m,n)$，用 **Urysohn 引理**取连续函数 $f_{m,n}: X \\to [0,1]$，使 $f_{m,n}|_{\\overline{B_m}} \\equiv 0$、$f_{m,n}|_{X\\setminus B_n} \\equiv 1$。这样的函数只有可数多个，编号成 $f_k$ 后令 $F(x) := (f_k(x)/k)_{k\\ge 1}: X \\to [0,1]^{\\mathbb N}$，再验证 $F$ 是同胚嵌入。引理的前提「$X$ 正规」由第 2 步「正则 $+$ Lindelöf（第二可数）$\\implies$ 正规」给出。',
+      note: 'AUD-061 A 类。原记 definition；改 imp：分离函数族是整条证明的引擎。⚠ 本图 `thm.urysohn-metrization` 另有一条经 Nagata–Smirnov 的证明边（源是 `thm.nagata-smirnov`），本条对应注里那条嵌入证明，两条是**不同证明**，不是重复。'
     },
     {
       id: 'dep.pcp-normal-urysohn-metrization',
@@ -68060,13 +68130,6 @@ window.MG = window.MG || {};
       definition: 'def.form-on-manifold',
       usedBy: 'def.de-rham-complex',
       note: '链的每一项都是 $k$-形式的空间 $\\Omega^{k}(M)$；闭与恰当这两个词也是形式论里的词（`def.exterior-derivative`）。\n\n⭐ 2026-11-01 改指到**流形上**的 $\\Omega^{k}(M)$（原来指欧氏开集上那个坐标模型，于是「$\\Omega^{k}(M)$ 是什么」在图上无处可查）。\n\n层号是**算出来的**：de Rham 复形依赖 18 层的形式定义，它就自己在 20 层，不该反过来拿层号去将就。'
-    },
-    {
-      id: 'dep.mf-pullback-derham',
-      kind: 'definition',
-      definition: 'prop.pullback-form-manifold',
-      usedBy: 'def.de-rham-complex',
-      note: '「$H^{k}$ 是函子」全靠拉回与 $\\mathrm{d}$ 交换（$F^{\\ast}\\mathrm{d} = \\mathrm{d}F^{\\ast}$）；否则拉回只能作用在形式上、下不到商空间。\n\n⭐ 2026-11-01 改指到**流形间**的拉回（原来指开集间那个）。\n\n这一改把 de Rham 复形从 20 层推到 22 层 —— 那是应该的：它的每一项都是流形上的形式，凭什么排在拉回之前。\n\n层号是算出来的，不是拿来保的。'
     },
     {
       id: 'dep.mf-connected-h0',
@@ -77692,7 +77755,7 @@ window.MG = window.MG || {};
         '',
         '互素条件不能去掉：$x \\equiv 0 \\pmod 2$ 与 $x \\equiv 1 \\pmod 4$ 无解。',
         '',
-        '实际用处是把模 $N$ 的问题拆成模素数幂的问题 —— 乘性函数的公式就是靠它。',
+        '实际用处是把模 $N$ 的问题拆成模素数幂的问题（积性函数的公式靠的是唯一分解，不需要本条）。',
       ].join('\n\n'),
       refs: ['华罗庚《数论导引》§2'],
     },
@@ -78634,7 +78697,7 @@ window.MG = window.MG || {};
         '',
         '等价形式：$\\theta(x) \\sim x$、$\\psi(x) \\sim x$、$p_{n} \\sim n\\log n$（$p_{n}$ 是第 $n$ 个素数）。',
       ].join('\n'),
-      notes: '**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta\'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ\'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta\'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。',
+      notes: '**本节点已完整。** 引理 1–4、命题 A（$\\zeta$ 的解析延拓 + $\\operatorname{Re}s=1$ 上无零点）在本注中给完整证明；命题 B 是独立节点 `lem.newman-tauberian`（Newman 解析定理，围道证明在该节点内）。两者合起来就是素数定理。\n\n**记号**：$\\Lambda(n)=\\log p$（$n=p^{k}$）或 $0$（其它），$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$、$\\theta(x)=\\sum_{p\\le x}\\log p$、$\\pi(x)=\\#\\{p\\le x\\}$。\n\n**引理 1（$\\psi$ 与 $\\theta$ 的关系）**：$\\psi(x)=\\sum_{k\\ge1}\\theta\\bigl(x^{1/k}\\bigr)$。证明：按 $n=p^{k}$ 的 $k$ 分组，$p^{k}\\le x\\iff p\\le x^{1/k}$，每组贡献 $\\log p$，求和即得。\n\n**引理 2（$\\psi\\sim x\\iff\\theta\\sim x$）**：由引理 1，$0\\le\\psi(x)-\\theta(x)=\\sum_{k=2}^{\\lfloor\\log_{2}x\\rfloor}\\theta\\bigl(x^{1/k}\\bigr)\\le(\\log_{2}x)\\,\\theta\\bigl(\\sqrt{x}\\bigr)\\le(\\log_{2}x)\\,\\sqrt{x}\\,\\log x=o(x)$（用 $\\theta(y)\\le y\\log y$），故 $\\psi(x)=\\theta(x)+o(x)$。\n\n**引理 3（Abel 变换）**：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$，$\\pi(x)=\\frac{\\theta(x)}{\\log x}+\\int_{2}^{x}\\frac{\\theta(t)}{t\\log^{2}t}\\,\\mathrm{d}t$。证明：对 Stieltjes 积分 $\\sum_{p\\le x}f(p)=\\pi(x)f(x)-\\int_{2}^{x}\\pi(t)\\,\\mathrm{d}f(t)$ 分别取 $f=\\log t$ 与 $f=1/\\log t$ 即得。\n\n**引理 4（$\\theta\\sim x\\iff\\pi\\sim x/\\log x$）**：若 $\\theta\\sim x$，由引理 3 第二式 $\\pi(x)=\\frac{x(1+o(1))}{\\log x}+\\int_{2}^{x}\\frac{t(1+o(1))}{t\\log^{2}t}\\,\\mathrm{d}t=\\frac{x}{\\log x}(1+o(1))$（用 $\\int_{2}^{x}\\mathrm{d}t/\\log^{2}t=o(x/\\log x)$）。反向由第一式：$\\theta(x)=\\pi(x)\\log x-\\int_{2}^{x}\\frac{\\pi(t)}{t}\\mathrm{d}t$，代入 $\\pi(t)=t(1+o(1))/\\log t$ 得 $\\theta(x)=x(1+o(1))$。于是 $\\pi(x)\\sim x/\\log x\\iff\\psi(x)\\sim x$。\n\n**命题 A（已证）：** $\\zeta(s)=\\sum_{n\\ge1}n^{-s}$（$\\operatorname{Re}s>1$）亚纯延拓到 $\\operatorname{Re}s>0$，在 $s=1$ 有单极点、留数 $1$，且对一切 $t\\in\\mathbb{R}$ 有 $\\zeta(1+it)\\ne0$。\n\n**命题 A 的第一部分（解析延拓）**：对 $\\operatorname{Re}s>1$，分部求和给 $\\sum_{n\\le N}n^{-s}=N^{1-s}+s\\int_{1}^{N}\\lfloor x\\rfloor x^{-s-1}\\,\\mathrm{d}x$。令 $N\\to\\infty$（$N^{1-s}\\to0$），并写 $\\lfloor x\\rfloor=x-\\{x\\}$：\n\n$$\\zeta(s)=\\frac{s}{s-1}-s\\int_{1}^{\\infty}\\{x\\}\\,x^{-s-1}\\,\\mathrm{d}x\\qquad(\\operatorname{Re}s>1).$$\n\n右端积分对 $\\operatorname{Re}s>0$ 绝对收敛（$|\\{x\\}x^{-s-1}|\\le x^{-\\operatorname{Re}s-1}$），故它给出 $\\operatorname{Re}s>0$ 上的亚纯延拓；唯一极点在 $s=1$，来自 $s/(s-1)$，留数 $1$。\n\n**命题 A 的第二部分（$\\operatorname{Re}s=1$ 无零点）**：对 $\\sigma>1$，Euler 乘积给 $\\log\\zeta(\\sigma+it)=\\sum_{p}\\sum_{k\\ge1}\\frac{1}{k}p^{-k\\sigma}e^{-ikt\\log p}$。取 $t=0$、$t=t_{0}$、$t=2t_{0}$ 的实部并按 $3,4,1$ 加权：\n\n$$3\\log\\zeta(\\sigma)+4\\log|\\zeta(\\sigma+it_{0})|+\\log|\\zeta(\\sigma+2it_{0})|=\\sum_{p,k}\\frac{1}{k}p^{-k\\sigma}\\bigl(3+4\\cos\\theta+\\cos2\\theta\\bigr)\\ge0,$$\n\n其中 $\\theta=k t_{0}\\log p$，末步用 $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$。反设 $\\zeta(1+it_{0})=0$（$t_{0}\\ne0$）。当 $\\sigma\\to1^{+}$：$3\\log\\zeta(\\sigma)=-3\\log(\\sigma-1)+O(1)$（单极点留数 $1$）；$4\\log|\\zeta(\\sigma+it_{0})|=4m_{1}\\log(\\sigma-1)+O(1)$（$m_{1}\\ge1$ 为该零点阶）；$\\log|\\zeta(\\sigma+2it_{0})|=m_{2}\\log(\\sigma-1)+O(1)$（$m_{2}\\ge0$，非零点取 $0$）。代入得左端 $=(4m_{1}+m_{2}-3)\\log(\\sigma-1)+O(1)$；由 $4m_{1}+m_{2}-3\\ge1$ 且 $\\log(\\sigma-1)\\to-\\infty$，左端 $\\to-\\infty$，与 $\\ge0$ 矛盾。（零点阶展开：$s_{0}$ 为 $m$ 阶零点时 $\\zeta(s)=c(s-s_{0})^{m}+O((s-s_{0})^{m+1})$，$c\\ne0$，故 $\\log|\\zeta(\\sigma+it_{0})|=m\\log(\\sigma-1)+O(1)$。）$t_{0}=0$ 处是极点不是零点。于是 $\\zeta$ 在 $\\operatorname{Re}s=1$ 上无零点。∎\n\n**命题 B（Newman 解析定理，已由独立节点完整证明）。** 设 $f:[0,\\infty)\\to\\mathbb{R}$ 有界、局部可积，其 Laplace 变换 $g(z)=\\int_0^\\infty f(t)e^{-zt}\\,\\mathrm{d}t$（$\\operatorname{Re}z>0$）解析延拓到 $\\{\\operatorname{Re}z\\ge0\\}$ 的一个邻域。则 $\\int_0^\\infty f(t)\\,\\mathrm{d}t$ 收敛，且等于 $g(0)$。\n\n**命题 B 是 Newman 1980 的「解析定理」。** 见 Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)；Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997) 给出更简洁的围道写法。证明是一条围道积分：把 $g$ 与截断 $g_T(z)=\\int_0^T f(t)e^{-zt}\\,\\mathrm{d}t$ 的差在复平面上作围道积分，用 $|g(z)-g_T(z)|\\le C e^{-T\\operatorname{Re}z}/\\operatorname{Re}z$（$\\operatorname{Re}z>0$）控制右半平面、再控制大圆弧后令 $R,T\\to\\infty$；具体围道与估计已在 `lem.newman-tauberian` 节点内完整写出。**不需要 Mellin 反演，也不需要 Phragmén–Lindelöf**（这里修正旧稿的路线描述）。\n\n**命题 B 用在本节点。** 取 $f(t)=\\psi(e^t)e^{-t}-1$。由 Chebyshev 估计 $0\\le\\psi(x)\\le Cx$ 知 $f$ 有界。对 $\\operatorname{Re}z>0$， $g(z)=\\int_0^\\infty\\psi(e^t)e^{-(1+z)t}\\,\\mathrm{d}t-\\frac{1}{z}=\\frac{-\\zeta\'(1+z)/\\zeta(1+z)}{1+z}-\\frac{1}{z}$ 其中第一个等号是换元 $u=e^t$，第二个用 $-ζ\'/ζ(s)=s\\int_1^\\infty \\psi(u)u^{-s-1}\\,\\mathrm{d}u$（$s=1+z$）。由 $\\zeta$ 在 $s=1$ 有单极点、留数 $1$，有 $-\\zeta\'(1+z)/\\zeta(1+z)=1/z-\\gamma+O(z)$；代入得 $g(z)=-(1+\\gamma)+O(z)\\qquad(z\\to0)$ 故 $g$ 在 $z=0$ 的极点可去。结合命题 A（$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点），$g$ 在 $\\{\\operatorname{Re}z\\ge0\\}$ 的邻域全纯。由 `lem.newman-tauberian`（命题 B）得 $\\int_0^\\infty f$ 收敛。\n\n**从 $\\int f$ 收敛到 $\\psi(x)\\sim x$（完整初等收尾）。** 记 $h(t)=\\psi(e^t)e^{-t}$，则 $f=h-1$。对任意固定 $\\varepsilon>0$，由 $\\int_0^\\infty f$ 收敛得 $\\int_T^{T+\\varepsilon}f\\to0$，即 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h(t)\\,\\mathrm{d}t\\longrightarrow1 .$ 由 $\\psi$ 单调不减：当 $t\\in[T,T+\\varepsilon]$ 时 $e^{-\\varepsilon}h(T)\\le h(t)\\le e^{\\varepsilon}h(T+\\varepsilon)$。把两边对 $t$ 平均并令 $T\\to\\infty$：由 $e^{-\\varepsilon}h(T)\\le\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h$ 得 $h(T)\\le e^{\\varepsilon}(1+o(1))$，故 $\\limsup h\\le e^{\\varepsilon}$；由 $\\frac1\\varepsilon\\int_T^{T+\\varepsilon}h\\le e^{\\varepsilon}h(T+\\varepsilon)$ 得 $h(T+\\varepsilon)\\ge e^{-\\varepsilon}(1+o(1))$，故 $\\liminf h\\ge e^{-\\varepsilon}$。令 $\\varepsilon\\to0$ 得 $\\limsup h\\le1\\le\\liminf h$，故 $h(t)\\to1$，即 $\\psi(x)/x\\to1$。再由引理 1–4 得 $\\theta(x)\\sim x$、$\\pi(x)\\sim x/\\log x$。**至此本节点的链条完整**：命题 B 的围道证明已在 `lem.newman-tauberian` 中写出。\n\n⭐ **为什么这值得单列一个节点**：素数定理的「等价变形」几乎全是初等的（引理 1–4），真正困难的是复分析的两块——$\\zeta$ 在 $\\operatorname{Re}s=1$ 无零点（本注已证）与解析延拓下的 Tauber 收尾（命题 B）。两块都在本图中补齐（后者即 `lem.newman-tauberian`），素数定理因此完整。\n\n⚠️ **不能只靠 $\\zeta$ 延拓**：没有 Tauber 步骤，$\\psi(x)\\sim x$ 推不出来；反过来，Tauber 引理的假设（$g$ 的解析延拓）正是 $\\zeta$ 的无零点区域提供的。两者缺一不可。∎',
       refs: [
         'Newman, Simple analytic proof of the prime number theorem, Amer. Math. Monthly 87 (1980)',
         'Zagier, Newman short proof of the prime number theorem, Amer. Math. Monthly 104 (1997)',
@@ -78722,10 +78785,8 @@ window.MG = window.MG || {};
 
   edges: [
 
-    { kind: 'definition', definition: 'thm.crt', usedBy: 'def.mobius-function',
-      note: 'Möbius 函数的积性用中国剩余定理：互素的 $m,n$ 的素因子集不相交，$\\mu(mn) = \\mu(m)\\mu(n)$。' },
 
-    { kind: 'definition', definition: 'thm.fundamental-arithmetic', usedBy: 'def.multiplicative-function',
+    { kind: 'analogy', a: 'thm.fundamental-arithmetic', b: 'def.multiplicative-function',
       note: '积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。' },
 
     { kind: 'definition', definition: 'thm.fundamental-arithmetic', usedBy: 'thm.divisor-formula',
@@ -78868,9 +78929,9 @@ window.MG = window.MG || {};
     {
       id: 'imp.nt-pnt',
       kind: 'implication',
-      sources: ['def.prime-counting', 'def.riemann-zeta', 'thm.euler-product'],
+      sources: ['def.prime-counting', 'def.riemann-zeta', 'thm.euler-product', 'lem.newman-tauberian', 'thm.chebyshev-estimate'],
       target: 'thm.prime-number-theorem',
-      title: '素数定理：$\\zeta$ 在 $\\operatorname{Re}\\,s = 1$ 上无零点',
+      title: '素数定理：历史路线（$\\zeta$ 延拓 + $\\operatorname{Re}s = 1$ 无零点 + 零点分段）；Newman 版见 `imp.nt-newman`',
       proof: [
         '**① $\\zeta$ 的解析延拓。** 对 $\\operatorname{Re}\\,s > 1$，$\\zeta(s) = \\sum_{n\\ge1} n^{-s} = \\prod_{p}(1 - p^{-s})^{-1}$（Euler 乘积，靠唯一分解）。\n\n它在 $s = 1$ 有单极点、留数 $1$，并可延拓为 $\\mathbb{C}$ 上的亚纯函数。',
         '',
@@ -78884,7 +78945,7 @@ window.MG = window.MG || {};
         '',
         '**④ 收尾。** 由 ②，每个非平凡零点满足 $\\operatorname{Re}\\rho < 1$（准确说是 $0 < \\operatorname{Re}\\rho < 1$）。⚠️ 注意 $\\lvert\\rho\\rvert$ 本身**没有上界** —— 高度 $\\le T$ 的零点个数是 $\\frac{T}{2\\pi}\\log\\frac{T}{2\\pi e}+O(\\log T)$，随 $T$ 增长；所以不能用 $\\lvert\\rho\\rvert\\le 1$。每项 $x^{\\rho} = x^{\\operatorname{Re}\\rho}$（乘一个模长因子）确实严格低于 $x$，但「每项都 $o(x)$」推不出「求和也是 $o(x)$」：必须按高度把零点分段、用上面那个计数把段内项数与 $\\lvert\\rho\\rvert$ 一起压住（这一步才是本条的真正难点，本图不展开）。得 $\\sum_{\\rho}x^{\\rho}/\\rho = o(x)$，于是 $\\psi(x) \\sim x$；\n\n再由 $\\psi \\sim \\theta$（Abel 部分求和）与 $\\theta(x) = \\sum_{p\\le x}\\log p \\sim \\pi(x)\\log x$（因为 $\\sum_{p\\le x}\\log p = \\pi(x)\\log x - \\int_{2}^{x}\\frac{\\pi(t)}{t}\\,\\mathrm{d}t$ 再分部求和）得 $\\pi(x) \\sim x/\\log x$。',
         '',
-        '⛔ 本节点注已补出完整的 $\\psi$/$\\theta$/$\\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\\zeta$ 延拓 $+$ $\\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。',
+        '**说明**：本边保留为历史路线概述（显式公式 + 零点分段）；完整的两条组装见 `imp.nt-newman`（Newman 收尾）与 `thm.prime-number-theorem` 节点注（引理 1–4 与命题 A 的完整证明）。不要在需要完整证明的地方单独引用本边。',
       ].join('\n\n'),
     },
 
@@ -80641,15 +80702,22 @@ window.MG = window.MG || {};
     { id: 'dep.ln-spectral-unitary', kind: 'definition',
       definition: 'def.unitary-matrix', usedBy: 'thm.spectral-matrix',
       note: '对角化的变换限制为酉矩阵，才叫谱分解。' },
-    { id: 'dep.ln-spectral-diag', kind: 'definition',
-      definition: 'thm.diagonalizable', usedBy: 'thm.spectral-matrix',
+    { id: 'dep.ln-spectral-diag', kind: 'analogy',
+      a: 'thm.diagonalizable', b: 'thm.spectral-matrix',
       note: '谱定理是「可对角化」在正交条件下的加强版；先有一般的可对角化判据。' },
     { id: 'dep.ln-polar-posdef', kind: 'definition',
       definition: 'def.positive-definite-matrix', usedBy: 'thm.polar-decomposition',
       note: '$P = \\sqrt{A^{*}A}$ 是半正定的，正定那一条给出「半正定矩阵有唯一平方根」。' },
-    { id: 'dep.ln-polar-svd', kind: 'definition',
-      definition: 'thm.svd', usedBy: 'thm.polar-decomposition',
-      note: '把 $P$ 对角化即得 SVD，所以 SVD 可以看成极分解的推论；反过来也常用。' },
+    { id: 'dep.ln-polar-svd', kind: 'equivalence',
+      a: 'thm.svd', b: 'thm.polar-decomposition',
+      title: '奇异值分解 $\\iff$ 极分解',
+      proofs: [
+        { label: 'SVD $\\implies$ 极分解',
+          text: '设 $A = U\\Sigma V^{*}$。令 $P := V\\Sigma V^{*}$、$W := UV^{*}$：$\\Sigma$ 对角非负故 $P$ 半正定 Hermite，$U,V$ 酉故 $W$ 酉，且 $WP = UV^{*}V\\Sigma V^{*} = U\\Sigma V^{*} = A$。又 $P^{2} = V\\Sigma^{2}V^{*} = A^{*}A$，而半正定平方根唯一，故 $P = \\sqrt{A^{*}A}$ —— 正是极分解里那个 $P$。' },
+        { label: '极分解 $\\implies$ SVD（方阵）',
+          text: '设 $A = WP$，$W$ 酉、$P$ 半正定 Hermite。由谱定理 $P = V\\Sigma V^{*}$，$\\Sigma = \\operatorname{diag}(\\sigma_1,\\ldots,\\sigma_n)$、$\\sigma_i \\ge 0$。于是 $A = (WV)\\Sigma V^{*}$，取 $U := WV$ 即得 SVD（重排使 $\\sigma_1\\ge\\cdots$）。' }
+      ],
+      note: '两条定理在**方阵**情形互相推出（这正是等价的范围）；SVD 的陈述更宽、允许长方形，此时极分解要用等距代替酉。原记 analogy，FIX-065 按 AUD-062 改 equivalence 并补双向证明。' },
 
     /* ---------- 谱量 ---------- */
     { id: 'dep.ln-radius-eigen', kind: 'definition',
@@ -80669,12 +80737,26 @@ window.MG = window.MG || {};
       note: '定理要求 $A$ 是 Hermite（实对称）—— 否则特征值不是实的，不等式无从谈起。' },
 
     /* ---------- 把新节点接回旧图（避免孤岛） ---------- */
-    { id: 'dep.ln-spectral-old', kind: 'definition',
-      definition: 'thm.spectral-matrix', usedBy: 'thm.spectral-theorem',
-      note: '矩阵版把算子的谱定理落到标准正交基下的矩阵语言；两条互为翻译。' },
-    { id: 'dep.ln-normal-oldspectral', kind: 'definition',
-      definition: 'thm.spectral-matrix', usedBy: 'cor.spectral-normal',
-      note: '「复正规可酉对角化」的矩阵表述就是这一条。' },
+    { id: 'dep.ln-spectral-old', kind: 'equivalence',
+      a: 'thm.spectral-matrix', b: 'thm.spectral-theorem',
+      title: '算子版谱定理 $\\iff$ 矩阵版谱定理（实对称）',
+      proofs: [
+        { label: '算子版 $\\implies$ 矩阵版',
+          text: '设 $A$ 实对称，它定义 $\\mathbb{R}^{n}$（标准正交基）上的自伴算子 $T$。谱定理给 $T$ 的一组标准正交特征基 $u_1,\\ldots,u_n$，以它们为列得正交矩阵 $Q$；由 $T u_i = \\lambda_i u_i$ 得 $AQ = Q\\Lambda$，即 $Q^{\\mathsf{T}}AQ = \\Lambda$ 为实对角阵。' },
+        { label: '矩阵版 $\\implies$ 算子版',
+          text: '设 $V$ 有限维实内积空间、$T$ 自伴。取标准正交基把 $T$ 写成实对称矩阵 $A$；矩阵版给正交 $Q$ 使 $Q^{\\mathsf{T}}AQ = \\Lambda$。$Q$ 的列是 $V$ 的一组标准正交基，且 $AQ = Q\\Lambda$ 说明第 $i$ 列是特征值 $\\lambda_i$ 的特征向量 —— 这就是谱定理要的特征基，特征值全实由 $\\Lambda$ 直接读出。' }
+      ],
+      note: '两条是同一件事的算子语言与矩阵语言；关键一步「在标准正交基下取矩阵」在两个方向上都可逆。原记 analogy，FIX-065 改 equivalence 并补双向推导。' },
+    { id: 'dep.ln-normal-oldspectral', kind: 'equivalence',
+      a: 'thm.spectral-matrix', b: 'cor.spectral-normal',
+      title: '正规矩阵可酉对角化 $\\iff$ 正规算子可酉对角化',
+      proofs: [
+        { label: '算子版 $\\implies$ 矩阵版',
+          text: '设 $A$ 正规。取 $\\mathbb{C}^{n}$ 的标准正交基，$A$ 定义的算子 $T$ 满足 $T^{*}T = TT^{*}$。复谱定理给标准正交特征基，以之为列得酉矩阵 $U$；由 $AU = U\\Lambda$ 得 $U^{*}AU = \\Lambda$ 对角。' },
+        { label: '矩阵版 $\\implies$ 算子版',
+          text: '设 $T$ 是有限维复内积空间上的正规算子。取标准正交基把 $T$ 写成 $A$，正规性逐项传递：$A^{*}A = AA^{*}$。矩阵版给酉 $U$ 使 $U^{*}AU = \\Lambda$；$U$ 的列是标准正交基，$AU = U\\Lambda$ 说明第 $i$ 列是特征值 $\\lambda_i$ 的特征向量。' }
+      ],
+      note: '原记 analogy，FIX-065 改 equivalence：两个方向都归结为「标准正交基下的矩阵 + $AU = U\\Lambda$」这一条事实。' },
     { id: 'dep.ln-trace-spectral', kind: 'definition',
       definition: 'def.spectral-radius', usedBy: 'def.trace',
       note: '迹等于特征值之和；谱半径给的是「模最大的那个」，两者从不同角度记账。' },
@@ -81371,8 +81453,8 @@ window.MG = window.MG || {};
     { id: 'dep.nilp-eig', kind: 'definition',
       definition: 'def.eigenvalue', usedBy: 'def.nilpotent',
       note: '判据「特征值全为 $0$」直接用特征值来陈述。' },
-    { id: 'dep.nilp-cayley', kind: 'definition',
-      definition: 'thm.cayley-hamilton', usedBy: 'def.nilpotent',
+    { id: 'dep.nilp-cayley', kind: 'analogy',
+      a: 'thm.cayley-hamilton', b: 'def.nilpotent',
       note: '$T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻得到。' },
 
     { id: 'dep.idem-linmap', kind: 'definition',
@@ -81614,8 +81696,8 @@ window.MG = window.MG || {};
     { id: 'dep.lu-elem', kind: 'definition',
       definition: 'def.elementary-matrix', usedBy: 'thm.lu-decomposition',
       note: 'LU 分解就是高斯消元（初等行变换）的矩阵形式。' },
-    { id: 'dep.lu-sylvester', kind: 'definition',
-      definition: 'thm.sylvester-criterion', usedBy: 'thm.lu-decomposition',
+    { id: 'dep.lu-sylvester', kind: 'analogy',
+      a: 'thm.sylvester-criterion', b: 'thm.lu-decomposition',
       note: '「顺序主子式全非零」这个前提，与正定判据用的是同一批主子式。' },
     { id: 'dep.lu-posdef', kind: 'definition',
       definition: 'def.positive-definite-matrix', usedBy: 'thm.lu-decomposition',
@@ -84278,8 +84360,8 @@ window.MG = window.MG || {};
     { id: 'dep-cc-vector', kind: 'definition',
       definition: 'def.vector-bundle', usedBy: 'def.characteristic-class',
       note: '示性类是**向量丛**的不变量。' },
-    { id: 'dep-cc-class', kind: 'definition',
-      definition: 'thm.bundle-classification', usedBy: 'def.characteristic-class',
+    { id: 'dep-cc-class', kind: 'analogy',
+      a: 'thm.bundle-classification', b: 'def.characteristic-class',
       note: '它的存在理由就是「分类定理给出一个算不出的集合」—— 示性类把它接到可算的上同调。' },
     { id: 'dep-cc-sg', kind: 'definition',
       definition: 'def.structure-group', usedBy: 'def.characteristic-class',
@@ -87106,11 +87188,11 @@ window.MG = window.MG || {};
       note: '「含单位的子代数 + 分离点」就是这条定义的三个词。' },
     { id: 'def-link.fa-arzela-classic', kind: 'definition', definition: 'thm.arzela-ascoli', usedBy: 'thm.arzela-ascoli-general',
       note: '本图先有的经典版（$\\mathbb{R}$ 值、紧距离空、一致有界）是这条的特例：取 $E = \\mathbb{R}$ 即得。' },
-    { id: 'def-link.fa-invfn-banach', kind: 'definition', definition: 'thm.inverse-function-banach', usedBy: 'thm.bounded-inverse',
+    { id: 'def-link.fa-invfn-banach', kind: 'analogy', a: 'thm.inverse-function-banach', b: 'thm.bounded-inverse',
       note: '⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。' },
     { id: 'def-link.fa-function-closedgraph', kind: 'definition', definition: 'def.function', usedBy: 'thm.closed-graph',
       note: '「映射就是它的图像」是「映射」那条定义的直接后果（映射 = 一种特殊的关系 = 有序对的集合），所以闭图像定理里的 $G(u)$ 不是新对象。' },
-    { id: 'def-link.fa-openmapping-holo', kind: 'definition', definition: 'thm.open-mapping', usedBy: 'thm.open-mapping-banach',
+    { id: 'def-link.fa-openmapping-holo', kind: 'analogy', a: 'thm.open-mapping', b: 'thm.open-mapping-banach',
       note: '⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。' },
 
     /* ------------------------------------------------ 定位边：新区域不能悬空在层 0 */
@@ -88579,23 +88661,23 @@ window.MG = window.MG || {};
     },
     {
       id: 'dep.eulerchargenus-torus',
-      kind: 'definition',
-      definition: 'prop.eulerchar-genus',
-      usedBy: 'ex.torus',
+      kind: 'analogy',
+      a: 'prop.eulerchar-genus',
+      b: 'ex.torus',
       note: '例子里「$\\chi = 0$」这个值由这条命题（$2 - 2g$）算出，不是另算的。',
     },
     {
       id: 'dep.eulercharnonor-rp2',
-      kind: 'definition',
-      definition: 'prop.eulerchar-nonorientable',
-      usedBy: 'ex.projective-plane',
+      kind: 'analogy',
+      a: 'prop.eulerchar-nonorientable',
+      b: 'ex.projective-plane',
       note: '「$k = 1$、$\\chi = 1$」由不可定向那条判据（$2 - k$）读出。',
     },
     {
       id: 'dep.eulercharnonor-klein',
-      kind: 'definition',
-      definition: 'prop.eulerchar-nonorientable',
-      usedBy: 'ex.klein-bottle',
+      kind: 'analogy',
+      a: 'prop.eulerchar-nonorientable',
+      b: 'ex.klein-bottle',
       note: '「$k = 2$、$\\chi = 0$」同上。',
     },
     { id: 'def-link.toporient-eg', kind: 'definition', definition: 'def.topological-orientability', usedBy: 'prop.eulerchar-genus', note: '引理 D 用定向图册给 2-单形一致定向' },
@@ -89244,7 +89326,7 @@ window.MG = window.MG || {};
         '若 $\\overline{F}/F$ 是代数扩张且 $\\overline{F}$ 代数闭，则称 $\\overline{F}$ 是 $F$ 的**代数闭包**。',
       ].join('\n'),
       notes: [
-        '⭐ **$\\mathbb{C}$ 是代数闭的**，这就是代数基本定理（`thm.fundamental-algebra`）：' +
+        '⭐ **$\\mathbb{C}$ 是代数闭的**，这就是代数基本定理：' +
           '$\\mathbb{C} = \\mathbb{R}(i)$ 是 $\\mathbb{R}$ 的代数闭包。而 $\\overline{\\mathbb{Q}}$（$\\mathbb{Q}$ 在 $\\mathbb{C}$ 中的代数闭包）' +
           '是**代数扩张但次数无限**的典型例子 —— 这也正是「代数 $\\ne$ 有限」的出处。',
         '⭐ **代数闭包的存在性要靠选择**：把 $F$ 上所有首一不可约多项式排成良序，逐个模掉、' +
@@ -89303,26 +89385,11 @@ window.MG = window.MG || {};
       note: '代数闭包是「代数扩张 + 代数闭」两条一起说的，先要有扩张。',
     },
     {
-      id: 'dep.zorn-algclosed',
-      kind: 'definition',
-      definition: 'lem.zorn',
-      usedBy: 'def.algebraically-closed',
-      note: '**存在性**要 Zorn 引理：把「已经造好的代数扩张」按包含排成偏序集，取全序链的并，' +
-        '再用 Zorn 取极大元（极大元必代数闭，否则还能再扩）。⚠ 这是域论里少见的「需要 AC 的存在性定理」。',
-    },
-    {
       id: 'dep.complex-algclosed',
       kind: 'definition',
       definition: 'def.complex',
       usedBy: 'def.algebraically-closed',
       note: '$\\mathbb{C}$ 是代数闭域的**第一个例子**（代数基本定理），$\\overline{\\mathbb{Q}}$ 在里面取。',
-    },
-    {
-      id: 'dep.fundamentalgebra-algclosed',
-      kind: 'definition',
-      definition: 'thm.fundamental-algebra',
-      usedBy: 'def.algebraically-closed',
-      note: '$\\mathbb{C}$ 代数闭**就是**代数基本定理的内容：既然每个复系数多项式都有根，就能逐个除掉一次因子。',
     },
     /* ---------- 单位根：复数 + 循环群 + 多项式环 + Euler 函数 ---------- */
     {
@@ -90989,7 +91056,7 @@ window.MG.packs.push({
     /* 球面曲率 */
     { id: 'dep.spherecurv-K', kind: 'definition', definition: 'def.gauss-curvature', usedBy: 'ex.sphere-curvature',
       note: '例子的结论就是「$K = 1/R^{2}$」—— 用到 Gauss 曲率的定义（两主曲率之积）。' },
-    { id: 'dep.spherecurv-gb', kind: 'definition', definition: 'thm.gauss-bonnet', usedBy: 'ex.sphere-curvature',
+    { id: 'dep.spherecurv-gb', kind: 'analogy', a: 'thm.gauss-bonnet', b: 'ex.sphere-curvature',
       note: '注里用 $\\int_{S^{2}_{R}} K\\,\\mathrm{d}A = 4\\pi = 2\\pi\\chi$ **对账**，用的就是 Gauss–Bonnet 定理。' },
     { id: 'dep.spherecurv-sff', kind: 'definition', definition: 'def.second-fundamental-form', usedBy: 'ex.sphere-curvature',
       note: '计算过程取第二基本形式 $h = R\\,\\mathrm{d}\\theta^{2} + R\\sin^{2}\\theta\\,\\mathrm{d}\\varphi^{2}$ 来得到主曲率。' },
@@ -91693,7 +91760,7 @@ window.MG.packs.push({
       note: '注里把 $\\frac{1}{2\\pi i}\\oint \\mathrm{d}z/z$ 认作绕数 —— 用到绕数的定义。' },
     { id: 'dep.plane-proj', kind: 'definition', definition: 'def.orthogonal-projection', usedBy: 'ex.plane-projection',
       note: '例子给的是正交投影的矩阵，用定义（幂等 + 自伴）逐条验。' },
-    { id: 'dep.plane-ls', kind: 'definition', definition: 'thm.least-squares', usedBy: 'ex.plane-projection',
+    { id: 'dep.plane-ls', kind: 'analogy', a: 'thm.least-squares', b: 'ex.plane-projection',
       note: '注里把它当最小二乘的几何内核（残差与子空间正交）。' },
     { id: 'dep.cyl-first', kind: 'definition', definition: 'def.first-fundamental-form', usedBy: 'ex.cylinder-first-form',
       note: '例子的结果 $E, F, G$ 就是第一基本形式的系数。' },
@@ -91716,8 +91783,6 @@ window.MG.packs.push({
     { id: 'dep.zhat-profinite', kind: 'definition', definition: 'def.profinite', usedBy: 'def.profinite-integers',
       note: '**跨区域桥（topology $\\leftrightarrow$ number）**：$\\hat{\\mathbb{Z}}$ 是逆极限经 Tychonoff 得到的紧全不连通空间，' +
         '即 profinite 空间的一个实例 —— 用到 profinite（Stone）空间的定义。' },
-    { id: 'dep.zhat-crt', kind: 'definition', definition: 'thm.crt', usedBy: 'def.profinite-integers',
-      note: '注里的 $\\hat{\\mathbb{Z}} \\cong \\prod_{p}\\mathbb{Z}_{p}$ 就是中国剩余定理沿所有 $n$ 取极限。' },
   ],
 });
 
@@ -92168,17 +92233,8 @@ window.MG = window.MG || {};
     { id: 'def-link.cod-gauss', kind: 'definition',
       definition: 'thm.gauss-equation', usedBy: 'thm.codazzi-mainardi',
       note: 'Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。' },
-    { id: 'def-link.sf-rodrigues', kind: 'definition',
-      definition: 'thm.rodrigues', usedBy: 'def.second-fundamental-form',
-      note: 'Rodrigues 定理是第二基本形式在**主方向**上的一条具体结论。' },
-    { id: 'def-link.sf-eulerformula', kind: 'definition',
-      definition: 'thm.euler-formula-surface', usedBy: 'def.second-fundamental-form',
-      note: 'Euler 公式（$\\kappa_{n} = \\kappa_{1}\\cos^{2}\\theta + \\kappa_{2}\\sin^{2}\\theta$）同样写在第二基本形式上。' },
 
     /* ---------------- 实示性类（diffgeom.manifold） ---------------- */
-    { id: 'def-link.ec-echar', kind: 'definition',
-      definition: 'thm.euler-characteristic', usedBy: 'def.euler-class',
-      note: 'Euler 类与 Euler 示性数由 $\\int e = \\chi$ 相连 —— 一个是上同调类、一个是整数。' },
     { id: 'def-link.ec-k', kind: 'definition',
       definition: 'def.gauss-curvature', usedBy: 'def.euler-class',
       note: '曲面情形 $e(T\\Sigma)$ 就是 $K\\,\\mathrm{d}A$ 的上同调类（Gauss–Bonnet 的被积式）。' },
@@ -92554,7 +92610,7 @@ window.MG = window.MG || {};
         '⭐ **为什么「全部」只差常数**：若 $F\' = G\' = f$，则 $(F - G)\' = 0$，' +
           '由中值定理（`thm.mvt`）$F - G$ 是常数。这一步是「不定积分」这个记号 $\\int f\\,\\mathrm{d}x = F + C$ 的全部依据。',
         '⭐ **存在性不是白给的**：$f$ **连续**时一定有原函数 —— 取 $F(x) = \\int_{a}^{x} f$，' +
-          '就是变上限积分的导数（`thm.ftc-riemann-part1`）。而不连续的函数可能没有原函数' +
+          '就是变上限积分的导数（微积分基本定理第一部分）。而不连续的函数可能没有原函数' +
           '（有第一类间断点的导数不存在原函数：导函数不能有跳跃间断）。',
         '⚠ **「原函数」与「定积分」是两件事**：原函数是一个**函数**（差一个常数），' +
           '定积分是一个**数**；把它们粘起来的是微积分基本定理。',
@@ -92609,7 +92665,7 @@ window.MG = window.MG || {};
           '若不存在这样的 $n$，说 $x$ 的阶为**无穷**。',
       ].join('\n'),
       notes: [
-        '⭐ **两个「阶」靠 Lagrange 定理连起来**（`thm.lagrange`）：$G$ **有限**时 $\\operatorname{ord}(x)$ 整除 $|G|$（$G = \\mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），' +
+        '⭐ **两个「阶」靠 Lagrange 定理连起来**：$G$ **有限**时 $\\operatorname{ord}(x)$ 整除 $|G|$（$G = \\mathbb{Z}$、$x = 1$ 的阶是无穷，两边无从谈起），' +
           '而且 $\\operatorname{ord}(x)$ 就是循环子群 $\\langle x \\rangle$ 的阶。这条是初等群论里最常用的桥。',
         '⚠ **$|G|$ 这个记号在本图有两个含义**（同一个符号、不同语境，见 `notation` 的 R13）：' +
           '群的阶用 $|G|$，而**集合的势**用 $\\#A$。两者数学上是同一件事（群的阶就是其底层集合的势），' +
@@ -92711,14 +92767,6 @@ window.MG = window.MG || {};
       usedBy: 'def.antiderivative',
       note: '原函数是「在某个**区间**上」说的 —— 在两点集上取原函数没有意义（中值定理要区间）。',
     },
-    {
-      id: 'dep.ftc-antiderivative',
-      kind: 'definition',
-      definition: 'thm.ftc-riemann-part1',
-      usedBy: 'def.antiderivative',
-      note: '存在性的唯一来源：$f$ 连续时 $F(x) = \\int_{a}^{x} f$ 就是它的原函数 —— ' +
-        '这正是那条定理的内容。',
-    },
     /* ---------- 二元运算 ---------- */
     {
       id: 'dep.function-binaryop',
@@ -92734,13 +92782,6 @@ window.MG = window.MG || {};
       definition: 'def.group',
       usedBy: 'def.group-order',
       note: '群的阶与元素的阶都是**群**上的量。',
-    },
-    {
-      id: 'dep.lagrange-grouporder',
-      kind: 'definition',
-      definition: 'thm.lagrange',
-      usedBy: 'def.group-order',
-      note: '$\\operatorname{ord}(x) \\mid |G|$ 这条要用 Lagrange 定理（$\\operatorname{ord}(x) = |\\langle x\\rangle|$）。',
     },
     /* 与既有的群论节点互通：他们早就用 $|G|$，但没指向这个定义 */
     {
@@ -95317,7 +95358,13 @@ window.MG = window.MG || {};
     ['def.compactly-generated', 'prop.cg-cartesian-closed', 'def-dep.cgcc-cg',
       '定理说的是**紧生成空间**范畴。'],
     ['prop.cg-cartesian-closed', 'cor.cg-exponential-adjoint', 'def-dep.cgexp-cc',
-      '伴随那条是笛卡尔闭的重新表述。'],
+      '笛卡尔闭与「乘 $Y$ 有右伴随」是同一件事的两种说法。', 'equivalence',
+      [
+        { label: '笛卡尔闭 $\\implies$ 伴随',
+          text: '笛卡尔闭给出自然双射 $\\operatorname{Hom}(k(X\\times Y), Z) \\cong \\operatorname{Hom}(X, kC(kY, Z))$（右边就是把 currying 的双射用指数对象 $Z^{Y} = kC(kY,Z)$ 写出来；$Z$ 紧生成时 $kC(kY,Z)$ 与 $C(Y,Z)$ 一致）。这组自然双射按定义就是 $k(X\\times -) \\dashv kC(kY, -)$。' },
+        { label: '伴随 $\\implies$ 笛卡尔闭',
+          text: '设 $k(X\\times Y) \\dashv kC(kY,-)$，其伴随同构把 $f : k(X\\times Y)\\to Z$ 送到 $\\widehat{f} : X \\to kC(kY,Z)$，$\\widehat{f}(x)(y) = f(x,y)$。与 $k$-化同构 $\\operatorname{Hom}_{k\\mathbf{Top}}(X, kC(kY,Z)) \\cong \\operatorname{Hom}_{\\mathbf{Top}}(X\\times Y, Z)$ 拼起来即得 currying 的自然双射 $C(k(X\\times Y), Z)\\cong C(X, C(Y,Z))$，即 $k\\mathbf{Top}$ 笛卡尔闭。' }
+      ]],
     ['def.adjoint', 'cor.cg-exponential-adjoint', 'def-dep.cgexp-adjoint',
       '结论说的是「左伴随于」。'],
 
@@ -95401,7 +95448,7 @@ window.MG = window.MG || {};
     ['def.abelian-category', 'thm.five-lemma', 'def-dep.five-abelian',
       '五引理在**阿贝尔范畴**里说。'],
     ['thm.snake-lemma', 'thm.five-lemma', 'def-dep.five-snake',
-      '两者都在**阿贝尔范畴**里说、都只能走泛元与泛性质；五引理是比较同构的版本。'],
+      '两者都在**阿贝尔范畴**里说、都只能走泛元与泛性质；五引理是比较同构的版本。', 'analogy'],
     ['def.image', 'thm.five-lemma', 'def-dep.five-image',
       '用的还是「正合 = 核 = 像」。'],
 
@@ -95835,6 +95882,10 @@ window.MG = window.MG || {};
   ];
 
   var edges = E.map(function (e) {
+    /* FIX-063：少数条目不是定义依赖（举例/动机/同名不同物），第 5 位标 'analogy' 降成弱边 */
+    if (e[4] === 'analogy') return { id: e[2], kind: 'analogy', a: e[0], b: e[1], note: e[3] };
+    /* FIX-065：等价的条目把双向证明放第 6 位 */
+    if (e[4] === 'equivalence') return { id: e[2], kind: 'equivalence', a: e[0], b: e[1], note: e[3], proofs: e[5] };
     return { id: e[2], kind: 'definition', definition: e[0], usedBy: e[1], note: e[3] };
   });
 

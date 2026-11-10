@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 24 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.spectral-matrix.md` and `proofs/`.

@@ -3,10 +3,10 @@
 一致收敛造出的 Banach 空间：$C(K,E)$ 的完备性 → 等度连续 → 广义 Arzelà–Ascoli → 用代数条件（子代数 + 分离点 + 单位）拿到稠密性。
 中心天体 thm.stone-weierstrass　·　11 个节点　·　根 `../`
 
-- def.subalgebra-separating　子代数与分离点　layer 12
-- lem.closed-subalgebra-lattice　闭子代数是格　layer 13
-- thm.stone-weierstrass　Stone–Weierstrass 定理　layer 14
-- thm.stone-weierstrass-complex　Stone–Weierstrass（复情形）　layer 15
+- def.subalgebra-separating　子代数与分离点　layer 11
+- lem.closed-subalgebra-lattice　闭子代数是格　layer 12
+- thm.stone-weierstrass　Stone–Weierstrass 定理　layer 13
+- thm.stone-weierstrass-complex　Stone–Weierstrass（复情形）　layer 14
 - def.uniformly-equicontinuous　一致等度连续　layer 15
 - def.ck-space　C(K,E)　layer 17
 - def.equicontinuous　等度连续　layer 17

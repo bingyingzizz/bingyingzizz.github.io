@@ -3,4 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.positive-definite-matrix`](../nodes/def.positive-definite-matrix.md) 正定矩阵：用到了定义 正定矩阵　[proofs/dep.ln-polar-posdef.md](../proofs/dep.ln-polar-posdef.md)
-- [`thm.svd`](../nodes/thm.svd.md) 奇异值分解：用到了定义 奇异值分解　[proofs/dep.ln-polar-svd.md](../proofs/dep.ln-polar-svd.md)
+
+> 续见 [nodes/thm.polar-decomposition.4.md](./thm.polar-decomposition.4.md)

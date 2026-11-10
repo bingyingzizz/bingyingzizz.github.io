@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 12 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.matrix-linear-map.md` and `proofs/`.

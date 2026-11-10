@@ -11,6 +11,6 @@
 - def.strictly-convex　严格凸　layer 19
 - thm.milman-pettis　Milman–Pettis 定理　layer 19
 - thm.james　James 定理　layer 19
+- thm.complemented-subspace-criterion　可补子空间的判别　layer 20
 - def.separable-space　可分空间　layer 24
 - thm.frechet-derivative　Fréchet 导数　layer 29
-- thm.complemented-subspace-criterion　可补子空间的判别　layer 30

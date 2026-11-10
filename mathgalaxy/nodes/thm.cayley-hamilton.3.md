@@ -2,4 +2,4 @@
 [在星图里打开](../#n=thm.cayley-hamilton)　·　第 1 页 [nodes/thm.cayley-hamilton.md](./thm.cayley-hamilton.md)　·　上一页 [nodes/thm.cayley-hamilton.2.md](./thm.cayley-hamilton.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.nilpotent`](../nodes/def.nilpotent.md) 幂零 用
+- ～弱边 [`def.nilpotent`](../nodes/def.nilpotent.md) 幂零

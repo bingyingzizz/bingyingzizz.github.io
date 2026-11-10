@@ -1,6 +1,6 @@
 # 环面 T²　`ex.torus`
 环面 $T^{2} = S^{1} \times S^{1}$：亏格 1，$\chi = 0$
-layer 29 · 例 · 曲面的地形 · 拓扑学
+layer 22 · 例 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=ex.torus)　·　[节点索引](../index.md)
 
 $$T^{2} := S^{1} \times S^{1} ,$$
@@ -12,6 +12,9 @@ $$T^{2} := S^{1} \times S^{1} ,$$
 - [`def.genus`](../nodes/def.genus.md) 亏格：用到了定义 亏格　[proofs/dep.genus-torus.md](../proofs/dep.genus-torus.md)
 
 - …另有入边，续页见 [nodes/ex.torus.2.md](./ex.torus.2.md)
+
+## 它能推出什么 / 谁在用它
+- ～弱边 [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格
 
 refs: Munkres, Topology, Ch. 12；Hatcher, Algebraic Topology, Ch. 1
 

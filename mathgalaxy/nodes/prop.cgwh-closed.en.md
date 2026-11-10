@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 12 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `CGWH Is Closed` (short) · `Open, Closed Subspaces and Filtered Colimits in CGWH` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # Möbius 反演　`thm.mobius-inversion`
 从和函数还原原函数
-layer 18 · 定理 · 数论函数与素数分布 · 数论
+layer 2 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.mobius-inversion)　·　[节点索引](../index.md)
 
 设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则

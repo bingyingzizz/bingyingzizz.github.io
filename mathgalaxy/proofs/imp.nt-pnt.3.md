@@ -1,8 +1,8 @@
-# 素数定理：$\zeta$ 在 $\operatorname{Re}\,s = 1$ 上无零点
+# 素数定理：历史路线（$\zeta$ 延拓 + $\operatorname{Re}s = 1$ 无零点 + 零点分段）；Newman 版见 `imp.nt-newman`
 `imp.nt-pnt` · 推出 · strong 边 · 根 `../`
 
-`def.prime-counting` 素数计数函数 + `def.riemann-zeta` 黎曼 ζ 函数 + `thm.euler-product` Euler 乘积 → `thm.prime-number-theorem` 素数定理
+`def.prime-counting` 素数计数函数 + `def.riemann-zeta` 黎曼 ζ 函数 + `thm.euler-product` Euler 乘积 + `lem.newman-tauberian` Newman 解析定理 + `thm.chebyshev-estimate` Чебышёв 估计 → `thm.prime-number-theorem` 素数定理
 
-再由 $\psi \sim \theta$（Abel 部分求和）与 $\theta(x) = \sum_{p\le x}\log p \sim \pi(x)\log x$（因为 $\sum_{p\le x}\log p = \pi(x)\log x - \int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$ 再分部求和）得 $\pi(x) \sim x/\log x$。
+**④ 收尾。** 由 ②，每个非平凡零点满足 $\operatorname{Re}\rho < 1$（准确说是 $0 < \operatorname{Re}\rho < 1$）。⚠️ 注意 $\lvert\rho\rvert$ 本身**没有上界** —— 高度 $\le T$ 的零点个数是 $\frac{T}{2\pi}\log\frac{T}{2\pi e}+O(\log T)$，随 $T$ 增长；所以不能用 $\lvert\rho\rvert\le 1$。每项 $x^{\rho} = x^{\operatorname{Re}\rho}$（乘一个模长因子）确实严格低于 $x$，但「每项都 $o(x)$」推不出「求和也是 $o(x)$」：必须按高度把零点分段、用上面那个计数把段内项数与 $\lvert\rho\rvert$ 一起压住（这一步才是本条的真正难点，本图不展开
 
-⛔ 本节点注已补出完整的 $\psi$/$\theta$/$\pi$ 等价链与 Abel 求和；边 proof 仍是骨架，真正缺的是命题 A（$\zeta$ 延拓 $+$ $\operatorname{Re} s = 1$ 无零点）与命题 B（Tauber 收尾），故这里不勾 ∎。
+> 续见 proofs/imp.nt-pnt.4.md

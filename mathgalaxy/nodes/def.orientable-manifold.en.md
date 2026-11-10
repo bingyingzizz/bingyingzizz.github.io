@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 15 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.orientable-manifold.md` and `proofs/`.

@@ -3,7 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.total-differential`](../nodes/def.total-differential.md) 可微与全微分：用到了定义 可微与全微分　[proofs/dep.dg-ext-differential.md](../proofs/dep.dg-ext-differential.md)
-- [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面：两个「曲面」：拓扑的 vs $\mathbb{R}^{3}$ 里被参数化覆盖的　[proofs/e188.analogy.md](../proofs/e188.analogy.md)
+- [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面：两个「曲面」：拓扑的 vs $\mathbb{R}^{3}$ 里被参数化覆盖的　[proofs/e187.analogy.md](../proofs/e187.analogy.md)
 - [`def.differential-map`](../nodes/def.differential-map.md) 切映射：用到了定义 切映射　[proofs/dep.gap-regular-surface-differential-map.md](../proofs/dep.gap-regular-surface-differential-map.md)
 
 > 续见 [nodes/def.regular-surface.4.md](./def.regular-surface.4.md)

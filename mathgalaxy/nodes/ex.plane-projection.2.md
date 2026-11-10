@@ -2,4 +2,6 @@
 [在星图里打开](../#n=ex.plane-projection)　·　第 1 页 [nodes/ex.plane-projection.md](./ex.plane-projection.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘：用到了定义 最小二乘　[proofs/dep.plane-ls.md](../proofs/dep.plane-ls.md)
+- [`thm.least-squares`](../nodes/thm.least-squares.md) 最小二乘：dep.plane-ls　[proofs/dep.plane-ls.md](../proofs/dep.plane-ls.md)
+
+> 续见 [nodes/ex.plane-projection.3.md](./ex.plane-projection.3.md)

@@ -1,6 +1,6 @@
 # 伴随算子　`thm.adjoint-hilbert`
 伴随算子存在且 $\|u^*\| = \|u\|$
-layer 24 · 定理 · Hilbert 空间 · 泛函分析
+layer 23 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.adjoint-hilbert)　·　[节点索引](../index.md)
 
 设 $H, K$ 是 Hilbert 空间，$u \in B(H, K)$。则存在**唯一**的 $u^* \in B(K, H)$ 使

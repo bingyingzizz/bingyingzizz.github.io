@@ -13,7 +13,7 @@ $\left(\frac{a}{p}\right)$ 只取值 $\pm 1$：
 补充规定 $\left(\frac{a}{p}\right) = 0$ 当 $p \mid a$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.quadratic-residue`](../nodes/def.quadratic-residue.md) 二次剩余：用到了定义 二次剩余　[proofs/e156.definition.md](../proofs/e156.definition.md)
+- [`def.quadratic-residue`](../nodes/def.quadratic-residue.md) 二次剩余：用到了定义 二次剩余　[proofs/e155.definition.md](../proofs/e155.definition.md)
 
 - …另有入边，续页见 [nodes/def.legendre-symbol.2.md](./def.legendre-symbol.2.md)
 

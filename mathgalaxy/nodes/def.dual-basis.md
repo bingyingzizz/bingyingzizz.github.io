@@ -1,6 +1,6 @@
 # 对偶基　`def.dual-basis`
 对偶基
-layer 14 · 定义 · 线性映射与秩 · 抽象代数
+layer 13 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.dual-basis)　·　[节点索引](../index.md)
 
 设 $\mathcal{B} = (v_1, \ldots, v_n)$ 是 $V$ 的有序基。对每个 $i$ 定义 $v_i^{\ast} : V \to K$ 为

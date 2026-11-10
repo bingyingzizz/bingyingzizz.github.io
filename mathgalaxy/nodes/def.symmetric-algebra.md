@@ -1,6 +1,6 @@
 # 对称代数　`def.symmetric-algebra`
 对称代数 $\operatorname{Sym}^{\bullet} V$
-layer 16 · 定义 · 多重线性与张量 · 抽象代数
+layer 15 · 定义 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=def.symmetric-algebra)　·　[节点索引](../index.md)
 
 与外幂平行地：把**张量代数** $T^{\bullet}V$ 商掉由 $v \otimes w - w \otimes v$ 生成的**齐次双边理想**，它的**第 $k$ 次部分**就叫**对称幂** $\operatorname{Sym}^{k}V$（记像为 $v \cdot w$，交换）；各次直和起来得**对称代数**

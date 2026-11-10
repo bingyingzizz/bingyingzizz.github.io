@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 25 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.polar-decomposition.md` and `proofs/`.

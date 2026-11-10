@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 14 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `Cohomology by Bar Resolution` (short) · `Computing Group Cohomology via the Bar Resolution` (full)
 
 ## Statement and proof

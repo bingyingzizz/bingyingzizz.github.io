@@ -10,6 +10,9 @@ layer 32 · 例 · 曲面的地形 · 拓扑学
 
 - …另有入边，续页见 [nodes/ex.klein-bottle.2.md](./ex.klein-bottle.2.md)
 
+## 它能推出什么 / 谁在用它
+- ～弱边 [`prop.eulerchar-nonorientable`](../nodes/prop.eulerchar-nonorientable.md) Euler 示性数与不可定向亏格
+
 refs: Munkres, Topology, Ch. 12
 
 > 说明见 `notes/ex.klein-bottle.md`

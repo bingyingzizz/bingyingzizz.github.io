@@ -8,7 +8,7 @@ layer 34 · 定理 · 丛的示性类 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类 用
+- ～弱边 [`def.characteristic-class`](../nodes/def.characteristic-class.md) 示性类
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.bundle-classification.4.md](./thm.bundle-classification.4.md)

@@ -1,6 +1,6 @@
 # Euler 类　`def.euler-class`
 Euler 类：可定向实丛的顶维示性类
-layer 38 · 定义 · 流形与向量丛 · 微分几何
+layer 37 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.euler-class)　·　[节点索引](../index.md)
 
 **在做什么**：可定向实丛上唯一一个「整系数、顶维」的示性类。它在曲面情形就是高斯曲率的积分（Gauss–Bonnet），在一般维数由 Pfaffian 给出。

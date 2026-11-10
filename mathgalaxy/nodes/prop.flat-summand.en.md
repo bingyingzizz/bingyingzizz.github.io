@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 16 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flat Summands` (short) · `Flatness of Direct Summands and Direct Sums` (full)
 
 ## Statement and proof

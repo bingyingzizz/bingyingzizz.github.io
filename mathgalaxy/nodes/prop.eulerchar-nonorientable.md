@@ -8,8 +8,8 @@ layer 28 · 命题 · 曲面的地形 · 拓扑学
 $$\chi(S) = 2 - k .$$
 
 ## 它能推出什么 / 谁在用它
-- 被 [`ex.projective-plane`](../nodes/ex.projective-plane.md) 射影平面 RP² 用
-- 被 [`ex.klein-bottle`](../nodes/ex.klein-bottle.md) 克莱因瓶 用
+- ～弱边 [`ex.projective-plane`](../nodes/ex.projective-plane.md) 射影平面 RP²
+- ～弱边 [`ex.klein-bottle`](../nodes/ex.klein-bottle.md) 克莱因瓶
 
 - …另有出边，续页见 [nodes/prop.eulerchar-nonorientable.4.md](./prop.eulerchar-nonorientable.4.md)
 

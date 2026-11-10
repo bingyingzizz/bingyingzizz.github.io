@@ -1,5 +1,5 @@
 # dep.spherecurv-gb
-`dep.spherecurv-gb` · 定义引用 · strong 边 · 根 `../`
+`dep.spherecurv-gb` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.gauss-bonnet` Gauss–Bonnet 定理 → `ex.sphere-curvature` 球面的曲率
 

@@ -4,4 +4,3 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.derivative`](../nodes/def.derivative.md) 导数：用到了定义 导数　[proofs/dep.derivative-antiderivative.md](../proofs/dep.derivative-antiderivative.md)
 - [`def.interval`](../nodes/def.interval.md) 区间：用到了定义 区间　[proofs/dep.interval-antiderivative.md](../proofs/dep.interval-antiderivative.md)
-- [`thm.ftc-riemann-part1`](../nodes/thm.ftc-riemann-part1.md) 变上限积分的导数：用到了定义 变上限积分的导数　[proofs/dep.ftc-antiderivative.md](../proofs/dep.ftc-antiderivative.md)

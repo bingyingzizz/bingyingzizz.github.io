@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology / Number Theory
+layer 13 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology / Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.profinite-integers.md` and `proofs/`.

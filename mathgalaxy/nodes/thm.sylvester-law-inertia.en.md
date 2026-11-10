@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 22 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.sylvester-law-inertia.md` and `proofs/`.

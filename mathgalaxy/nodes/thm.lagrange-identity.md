@@ -1,6 +1,6 @@
 # Lagrange 恒等式　`thm.lagrange-identity`
 Lagrange 恒等式：内积与面积的关系
-layer 22 · 定理 · 多重线性与张量 · 抽象代数
+layer 21 · 定理 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=thm.lagrange-identity)　·　[节点索引](../index.md)
 
 **在做什么**：把 $\lVert u\rVert^{2}\lVert w\rVert^{2} - \langle u,w\rangle^{2}$ 写成「面积的平方」—— 它既是 Cauchy–Schwarz 不等式的等式来源，也是 Gram 行列式的二维情形。

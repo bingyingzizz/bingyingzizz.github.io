@@ -1,6 +1,6 @@
 # 纤维余积与基变换　`prop.scalar-extension-coproduct`
 $S \otimes_{R} T$ 是代数的推出，且与基变换相容
-layer 18 · 命题 · 模的张量积与标量限制 · 同调代数
+layer 17 · 命题 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=prop.scalar-extension-coproduct)　·　[节点索引](../index.md)
 
 设

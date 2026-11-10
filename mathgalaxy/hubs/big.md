@@ -8,7 +8,7 @@
 - **8 / 6** `thm.de-rham` de Rham 定理 · layer 32 · 微分形式、积分与 de Rham
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 23 · 同调群
 - **7 / 5** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
-- **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 35 · 内蕴几何
+- **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 33 · 内蕴几何
 - **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
 - **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 26 · 向量场与 Lie 结构

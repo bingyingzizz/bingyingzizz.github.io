@@ -3,6 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.field-extension`](../nodes/def.field-extension.md) 域扩张：用到了定义 域扩张　[proofs/dep.fieldext-algclosed.md](../proofs/dep.fieldext-algclosed.md)
-- [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理：用到了定义 Zorn 引理　[proofs/dep.zorn-algclosed.md](../proofs/dep.zorn-algclosed.md)
 - [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.complex-algclosed.md](../proofs/dep.complex-algclosed.md)
-- [`thm.fundamental-algebra`](../nodes/thm.fundamental-algebra.md) 代数基本定理：用到了定义 代数基本定理　[proofs/dep.fundamentalgebra-algclosed.md](../proofs/dep.fundamentalgebra-algclosed.md)

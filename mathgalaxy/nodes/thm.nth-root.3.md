@@ -3,6 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.induced-norm`](../nodes/def.induced-norm.md) 诱导范数与距离 用
-- 被 [`thm.root-test`](../nodes/thm.root-test.md) 根值判别法 用
-- 被 [`thm.convergence-radius`](../nodes/thm.convergence-radius.md) 收敛半径 用
+- ⇒ [`thm.root-test`](../nodes/thm.root-test.md) 根值判别法
+- ⇒ [`thm.convergence-radius`](../nodes/thm.convergence-radius.md) 收敛半径
 - 被 [`thm.p-series`](../nodes/thm.p-series.md) p-级数 用

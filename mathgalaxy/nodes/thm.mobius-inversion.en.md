@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 2 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.mobius-inversion.md` and `proofs/`.

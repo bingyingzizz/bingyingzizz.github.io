@@ -1,6 +1,6 @@
 # 浸入 / 淹没 / 嵌入　`def.submersion-immersion`
 浸入、淹没与嵌入
-layer 15 · 定义 · 多元微分 · 数学分析
+layer 14 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.submersion-immersion)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$ 是 $C^{1}$，$a \in U$。

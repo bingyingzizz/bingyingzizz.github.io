@@ -1,6 +1,6 @@
 # Gram–Schmidt 正交化　`thm.gram-schmidt`
 定理：Gram–Schmidt 正交化（标准正交基存在）
-layer 19 · 定理 · 内积空间与正交性 · 抽象代数
+layer 18 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.gram-schmidt)　·　[节点索引](../index.md)
 
 设 $(v_1, \ldots, v_k)$ 是内积空间 $V$ 中线性无关的向量组。则存在标准正交组 $(e_1, \ldots, e_k)$ 与上三角的可逆系数关系，使

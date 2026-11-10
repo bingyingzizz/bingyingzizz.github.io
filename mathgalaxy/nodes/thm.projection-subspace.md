@@ -1,6 +1,6 @@
 # 闭子空间的正交投影　`thm.projection-subspace`
 正交投影与正交分解：$H = E \oplus E^\perp$
-layer 22 · 定理 · Hilbert 空间 · 泛函分析
+layer 21 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.projection-subspace)　·　[节点索引](../index.md)
 
 设 $H$ 是 Hilbert 空间，$E \subseteq H$ 是**闭**子空间。则

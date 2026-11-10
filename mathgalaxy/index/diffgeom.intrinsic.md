@@ -3,7 +3,7 @@
 只靠第一基本形式就能读出的东西：测地线、测地曲率、指数映射、Gauss 绝妙定理（$K$ 内蕴）、Gauss–Bonnet。
 中心天体 def.geodesic　·　30 个节点　·　根 `../`　·　续页 `index/diffgeom.intrinsic.2.md`
 
-- def.integral-form　形式的积分　layer 18
+- def.integral-form　形式的积分　layer 17
 - def.smooth-manifold　光滑流形　layer 19
 - def.tangent-space-manifold　切空间　layer 20
 - def.affine-connection　仿射联络　layer 26
@@ -18,5 +18,6 @@
 - prop.christoffel-frame　标架下的联络系数　layer 30
 - def.geodesic　测地线　layer 30
 - def.sectional-curvature　截面曲率　layer 30
+- def.intrinsic-quantity　内蕴量　layer 31
 
 > 续见 `index/diffgeom.intrinsic.2.md`

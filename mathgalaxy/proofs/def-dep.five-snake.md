@@ -1,5 +1,5 @@
 # def-dep.five-snake
-`def-dep.five-snake` · 定义引用 · strong 边 · 根 `../`
+`def-dep.five-snake` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.snake-lemma` 蛇引理 → `thm.five-lemma` 五引理
 

@@ -2,6 +2,7 @@
 根 `../`　·　第 1 页 `index/hom.ab.md`
 
 - thm.snake-lemma　蛇引理　layer 17
+- thm.five-lemma　五引理　layer 17
 - prop.zero-object-final-criterion　零对象与终对象　layer 17
 - prop.biproduct-is-product　直和就是积　layer 17
 - prop.hom-enrichment-unique　预加性结构唯一　layer 17
@@ -10,7 +11,6 @@
 - prop.exact-at-points　正合就是逐点正合　layer 17
 - prop.mitchell-exactness　嵌入定理的细化　layer 18
 - def.grothendieck-category　Grothendieck 范畴　layer 18
-- thm.five-lemma　五引理　layer 18
 - prop.ab6　AB6：滤过余极限与积交换　layer 18
 - prop.subcat-additive　子范畴继承加法与阿贝尔性　layer 18
 - prop.grothendieck-enough-injectives　Grothendieck 范畴有足够多内射　layer 19

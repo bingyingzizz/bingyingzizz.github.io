@@ -7,9 +7,9 @@
 - **9 团 / 22 节点** `def.functor` 函子 · layer 8 · 函子与自然变换
 - **9 团 / 21 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **9 团 / 17 节点** `def.ring` 环 · layer 8 · 代数结构
-- **9 团 / 17 节点** `def.inner-product` 内积 · layer 14 · 内积空间与正交性
+- **9 团 / 17 节点** `def.inner-product` 内积 · layer 13 · 内积空间与正交性
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 986 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 980 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

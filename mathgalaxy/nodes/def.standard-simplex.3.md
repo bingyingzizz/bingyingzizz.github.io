@@ -3,6 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.simplex-category`](../nodes/def.simplex-category.md) 单纯形范畴：e75.analogy　[proofs/e75.analogy.md](../proofs/e75.analogy.md)
-- [`def.convex-hull`](../nodes/def.convex-hull.md) 凸包：用到了定义 凸包　[proofs/e175.definition.md](../proofs/e175.definition.md)
+- [`def.convex-hull`](../nodes/def.convex-hull.md) 凸包：用到了定义 凸包　[proofs/e174.definition.md](../proofs/e174.definition.md)
 
 > 续见 [nodes/def.standard-simplex.4.md](./def.standard-simplex.4.md)

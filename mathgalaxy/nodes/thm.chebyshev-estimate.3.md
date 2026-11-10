@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.bertrand`](../nodes/thm.bertrand.md) Bertrand 假设
 - ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
+- ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理

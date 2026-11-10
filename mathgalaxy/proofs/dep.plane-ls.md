@@ -1,5 +1,5 @@
 # dep.plane-ls
-`dep.plane-ls` · 定义引用 · strong 边 · 根 `../`
+`dep.plane-ls` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.least-squares` 最小二乘 → `ex.plane-projection` 到坐标平面的投影
 

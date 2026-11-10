@@ -10,7 +10,7 @@ $$(1-t)x + ty \in C.$$
 等价地：$C$ 包含任意两点之间的整条线段。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：用到了定义 向量空间　[proofs/e169.definition.md](../proofs/e169.definition.md)
+- [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：用到了定义 向量空间　[proofs/e168.definition.md](../proofs/e168.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.projection-convex`](../nodes/thm.projection-convex.md) 凸闭集的最近点 用

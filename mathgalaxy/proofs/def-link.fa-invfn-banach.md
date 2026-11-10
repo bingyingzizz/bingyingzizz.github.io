@@ -1,5 +1,5 @@
 # def-link.fa-invfn-banach
-`def-link.fa-invfn-banach` · 定义引用 · strong 边 · 根 `../`
+`def-link.fa-invfn-banach` · 类比（弱边） · weak 边 · 根 `../`
 
 `thm.inverse-function-banach` 逆映射定理（Banach 版） → `thm.bounded-inverse` 逆算子定理
 

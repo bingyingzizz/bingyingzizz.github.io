@@ -3,4 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.eigenvalue`](../nodes/def.eigenvalue.md) 特征值与特征向量：用到了定义 特征值与特征向量　[proofs/dep.nilp-eig.md](../proofs/dep.nilp-eig.md)
-- [`thm.cayley-hamilton`](../nodes/thm.cayley-hamilton.md) Cayley–Hamilton 定理：用到了定义 Cayley–Hamilton 定理　[proofs/dep.nilp-cayley.md](../proofs/dep.nilp-cayley.md)
+- [`thm.cayley-hamilton`](../nodes/thm.cayley-hamilton.md) Cayley–Hamilton 定理：dep.nilp-cayley　[proofs/dep.nilp-cayley.md](../proofs/dep.nilp-cayley.md)
+
+> 续见 [nodes/def.nilpotent.4.md](./def.nilpotent.4.md)

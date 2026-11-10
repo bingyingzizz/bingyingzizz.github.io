@@ -1,6 +1,6 @@
 # 标量限制　`def.scalar-restriction`
 标量限制 $f_{\ast} : S\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}$
-layer 13 · 定义 · 模的张量积与标量限制 · 同调代数
+layer 12 · 定义 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=def.scalar-restriction)　·　[节点索引](../index.md)
 
 设 $f : R \to S$ 是含幺环同态（$f(1) = 1$）。给定左 $S$-模 $P$，定义左 $R$-模 $f_

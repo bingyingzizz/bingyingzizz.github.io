@@ -1,6 +1,6 @@
 # 商空间的万有性质　`thm.quotient-universal-vs`
 定理：商空间的万有性质
-layer 14 · 定理 · 线性映射与秩 · 抽象代数
+layer 13 · 定理 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=thm.quotient-universal-vs)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是子空间、$\pi : V \to V/U$ 是商映射。则对每个线性映射 $T : V \to W$ 满足 $U \subseteq \ker T$，存在**唯一**的线性映射 $\overline{T} : V/U \to W$ 使下图交换：

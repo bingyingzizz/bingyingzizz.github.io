@@ -1,6 +1,6 @@
 # 完美配对　`def.perfect-pairing`
 完美配对（perfect pairing）
-layer 14 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 13 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.perfect-pairing)　·　[节点索引](../index.md)
 
 设 $X, Y$ 是 $\mathbb{K}$ 上的赋范空间，$\langle\cdot,\cdot\rangle : X \times Y \to \mathbb{K}$ 是双线性映射（$\mathbb{K} = \mathbb{C}$ 时对第二变元共轭线性）。称它是**完美配对**，若

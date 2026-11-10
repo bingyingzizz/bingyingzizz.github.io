@@ -4,16 +4,16 @@
   <url><loc>https://bingyingzizz.github.io/read.html</loc><lastmod>2026-11-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://bingyingzizz.github.io/research.html</loc><lastmod>2026-11-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://bingyingzizz.github.io/research-p-liquid.html</loc><lastmod>2026-11-07</lastmod><priority>0.9</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/</loc><lastmod>2026-11-09</lastmod><priority>1.0</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/all.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/questions.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/index.md</loc><lastmod>2026-11-09</lastmod><priority>0.4</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/llms.txt</loc><lastmod>2026-11-09</lastmod><priority>0.4</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/</loc><lastmod>2026-11-10</lastmod><priority>1.0</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/all.html</loc><lastmod>2026-11-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/questions.html</loc><lastmod>2026-11-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/index.md</loc><lastmod>2026-11-10</lastmod><priority>0.4</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/llms.txt</loc><lastmod>2026-11-10</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/reading.md</loc><lastmod>2026-11-03</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/policy.md</loc><lastmod>2026-09-23</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/hubs.md</loc><lastmod>2026-11-09</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/notation.md</loc><lastmod>2026-11-03</lastmod><priority>0.4</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/alias.md</loc><lastmod>2026-11-09</lastmod><priority>0.4</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/alias.md</loc><lastmod>2026-11-10</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/LICENSE.txt</loc><lastmod>2026-10-16</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/LICENSE-CC-BY-4.0.txt</loc><lastmod>2026-10-16</lastmod><priority>0.4</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ax.ext.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -384,24 +384,24 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.etale-space.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.etale-sheaf.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.etale-sheaf-examples.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.locally-finite-family.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.discrete-family.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.sigma-locally-finite.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.refinement.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.paracompact.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.shrink.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.paracompact-hausdorff-normal.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.paracompact-closed-refinement.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.michael-paracompact.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.partition-of-unity.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.second-countable.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.first-countable.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.metrizable.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.metric-paracompact.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.urysohn-metrization.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.nagata-smirnov.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bing-metrization.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.metrizable-normal.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.locally-finite-family.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.discrete-family.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.sigma-locally-finite.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.refinement.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.paracompact.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.shrink.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.paracompact-hausdorff-normal.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.paracompact-closed-refinement.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.michael-paracompact.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.partition-of-unity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.second-countable.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.first-countable.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.metrizable.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.metric-paracompact.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.urysohn-metrization.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.nagata-smirnov.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bing-metrization.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.metrizable-normal.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.moving-frame.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.connection-form.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.connection-antisymmetric.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -459,25 +459,25 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ricci-curvature.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.integral-form.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.stokes.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.signed-measure.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.positive-negative-null.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.positive-set-closure.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.hahn-decomposition.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mutually-singular.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.jordan-decomposition.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.absolute-continuity.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.ac-and-variations.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ac-epsilon-delta.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.integral-gives-ac.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ac-integral-continuity.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.singular-or-lower-bound.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lebesgue-radon-nikodym.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.rn-derivative.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.rn-chain-rule.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.rn-inverse.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.complex-measure.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.rn-complex.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.total-variation-basics.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.signed-measure.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.positive-negative-null.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.positive-set-closure.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.hahn-decomposition.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mutually-singular.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.jordan-decomposition.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.absolute-continuity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.ac-and-variations.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ac-epsilon-delta.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.integral-gives-ac.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ac-integral-continuity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.singular-or-lower-bound.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lebesgue-radon-nikodym.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.rn-derivative.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.rn-chain-rule.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.rn-inverse.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.complex-measure.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.rn-complex.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.total-variation-basics.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.complex-triangle.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.holomorphic.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.complex-partial.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -502,28 +502,28 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.residue-at-pole.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.residue.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.manifold-chart.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.maximal-atlas.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.smooth-map.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.differential-map.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tangent-bundle.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.vector-field.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-bracket.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tensor-field.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.vector-bundle.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.bundle-section.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.smooth-partition-unity.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.bundle-metric.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orientable-manifold.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.volume-form.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.volume-form-orientation.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.de-rham-complex.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.de-rham-h0.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.poincare-lemma.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mayer-vietoris.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-group.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-algebra.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.left-invariant-fields.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.manifold-chart.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.maximal-atlas.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.smooth-map.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.differential-map.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tangent-bundle.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.vector-field.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-bracket.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tensor-field.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.vector-bundle.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.bundle-section.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.smooth-partition-unity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.bundle-metric.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orientable-manifold.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.volume-form.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.volume-form-orientation.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.de-rham-complex.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.de-rham-h0.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.poincare-lemma.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mayer-vietoris.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-group.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lie-algebra.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.left-invariant-fields.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.boundary-manifold.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.singular-cube.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.singular-chain.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -668,21 +668,21 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.extended-plane-compact.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.chain-homotopy.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.homotopy-invariance.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.divides.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.int-division.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euclid-algorithm.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.gcd.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bezout.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.prime.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euclid-infinite-primes.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.fundamental-arithmetic.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.congruence.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.zmodn.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.crt.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.euler-phi.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euler-theorem.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.fermat-little.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.wilson.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.divides.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.int-division.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euclid-algorithm.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.gcd.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bezout.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.prime.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euclid-infinite-primes.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.fundamental-arithmetic.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.congruence.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.zmodn.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.crt.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.euler-phi.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euler-theorem.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.fermat-little.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.wilson.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.int-domain.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.irreducible-element.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.gcd-domain.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -692,17 +692,17 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ufd.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.comaximal.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.crt-rings.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.multiplicative-function.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.divisor-function.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.divisor-formula.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius-function.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mu-sum.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mobius-inversion.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.prime-counting.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.chebyshev-estimate.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bertrand.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.prime-number-theorem.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.newman-tauberian.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.multiplicative-function.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.divisor-function.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.divisor-formula.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius-function.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mu-sum.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.mobius-inversion.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.prime-counting.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.chebyshev-estimate.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bertrand.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.prime-number-theorem.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.newman-tauberian.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quadratic-residue.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.legendre-symbol.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euler-criterion.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -738,18 +738,18 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.local-trivialization.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.fiber-bundle.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.principal-bundle.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.transpose.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.conjugate-transpose.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.unitary-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.hermitian-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.positive-definite-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.schur-triangularization.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.spectral-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.polar-decomposition.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.spectral-radius.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.rayleigh-quotient.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.courant-fischer.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.transpose.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.conjugate-transpose.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.unitary-matrix.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.hermitian-matrix.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.normal-matrix.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.positive-definite-matrix.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.schur-triangularization.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.spectral-matrix.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.polar-decomposition.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.spectral-radius.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.rayleigh-quotient.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.courant-fischer.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.matrix-of-bilinear-form.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.gram-matrix.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.congruent-matrices.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -759,16 +759,16 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.inertia-index.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.sylvester-law-inertia.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.witt-cancellation.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.eigenspace.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.generalized-eigenvector.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.nilpotent.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.idempotent.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orthogonally-similar.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.matrix-norm.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lu-decomposition.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.qr-decomposition.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.least-squares.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.pseudoinverse.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.eigenspace.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.generalized-eigenvector.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.nilpotent.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.idempotent.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.orthogonally-similar.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.matrix-norm.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lu-decomposition.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.qr-decomposition.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.least-squares.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.pseudoinverse.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.symplectic-form.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.symplectic-basis.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.symplectic-normal-form.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -864,40 +864,40 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.one-point-compactification.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.net.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.filter.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.nowhere-dense.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.meager-set.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.g-delta.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.baire.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.locally-compact-baire.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.baire-characterizations.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.baire-open-subset.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.countable-closed-cover.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.pointwise-limit-continuity.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ubp.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ubp-resonance.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.open-mapping-banach.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bounded-inverse.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.closed-graph.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ck-space.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ck-complete.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.equicontinuous.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.equicontinuous-uniform.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.arzela-ascoli-general.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.subalgebra-separating.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.closed-subalgebra-lattice.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.stone-weierstrass.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.stone-weierstrass-complex.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bernstein-approximation.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ubp-pointwise-limit.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bilinear-jointly-continuous.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.uniformly-equicontinuous.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.nowhere-dense.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.meager-set.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.g-delta.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.baire.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.locally-compact-baire.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.baire-characterizations.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.baire-open-subset.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.countable-closed-cover.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.pointwise-limit-continuity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ubp.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ubp-resonance.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.open-mapping-banach.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bounded-inverse.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.closed-graph.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ck-space.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.ck-complete.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.equicontinuous.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.equicontinuous-uniform.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.arzela-ascoli-general.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.subalgebra-separating.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.closed-subalgebra-lattice.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.stone-weierstrass.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.stone-weierstrass-complex.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bernstein-approximation.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/cor.ubp-pointwise-limit.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.bilinear-jointly-continuous.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.uniformly-equicontinuous.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.frame-bundle.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.associated-bundle.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.lebesgue-number.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.riemann-lebesgue.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.transition-function.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.structure-group.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.characteristic-class.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.characteristic-class.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.relatively-compact.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.frechet-derivative.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.extended-real.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -928,13 +928,13 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.triangulation.html</loc><lastmod>2026-11-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.rado.html</loc><lastmod>2026-11-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.combinatorial-classification-surfaces.html</loc><lastmod>2026-11-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.eulerchar-genus.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.eulerchar-nonorientable.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topological-orientability.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sphere.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.torus.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.projective-plane.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.klein-bottle.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.eulerchar-genus.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.eulerchar-nonorientable.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topological-orientability.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sphere.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.torus.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.projective-plane.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.klein-bottle.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.field-extension.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.algebraic-element.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.algebraic-extension.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -946,8 +946,8 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.galois-correspondence.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.radical-solvable.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.quintic-unsolvable.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.algebraically-closed.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.roots-of-unity.html</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.algebraically-closed.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.roots-of-unity.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.union-inter.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.diff-complement.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.empty.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
@@ -955,19 +955,19 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.preimage.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.countable.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ae.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.isomorphism.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.antiderivative.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.binary-operation.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.group-order.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tan-cot-sec.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.inverse-trig.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.finite-field.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.trivial-group.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius-band.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sphere-curvature.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.s1-tangent-bundle.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.h1-circle.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sierpinski-space.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.isomorphism.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.antiderivative.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.binary-operation.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.group-order.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.tan-cot-sec.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.inverse-trig.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.finite-field.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.trivial-group.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mobius-band.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sphere-curvature.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.s1-tangent-bundle.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.h1-circle.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.sierpinski-space.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.banach-as-condensed.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.riesz-markov.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.power-object.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -975,13 +975,13 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.riemann-zeta.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.euler-product.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.dirichlet-character.html</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.polar-christoffel.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex-sl2-commutator.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.contour-1-over-z.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.plane-projection.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.cylinder-first-form.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.density-abs-continuous.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.profinite-integers.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.polar-christoffel.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex-sl2-commutator.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.contour-1-over-z.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.plane-projection.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.cylinder-first-form.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/ex.density-abs-continuous.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.profinite-integers.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ruled-surface.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.developable-surface.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.developable-iff-flat.html</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
@@ -1048,19 +1048,20 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.ff-faithful.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.essentially-surjective.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cat-equivalence.html</loc><lastmod>2026-11-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.commutative-diagram.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.simplicial.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cone.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.limit.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.final-initial.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.product.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.fibered-product.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.equalizer.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mono.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.subobject.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lim-functor.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.image.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.elements-category.html</loc><lastmod>2026-11-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.commutative-diagram.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.simplicial.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.cone.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.limit.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.final-initial.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.product.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.fibered-product.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.equalizer.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.mono.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.subobject.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.intersection-subobject.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.lim-functor.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.image.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.elements-category.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.presheaf.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.presheaf-cat.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.representable.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
@@ -1120,24 +1121,24 @@
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.canonical-topology.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.covering-sieve-epi.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.disjoint-universal.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.pretopos.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.pretopos-factorization.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.subobject-lattice.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.precanonical-topology.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-sheaf.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-preserves.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-mono-epi.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.generator.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topos.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.giraud.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.representable-quotient.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.topos-covering-epi.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.topos-sheaf-limits.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-compact.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.quasi-compact-properties.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-separated.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.pretopos-qcqs.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topos-morphism.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.pretopos.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.pretopos-factorization.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.subobject-lattice.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.precanonical-topology.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-sheaf.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-preserves.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.precanonical-mono-epi.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.generator.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topos.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.giraud.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/lem.representable-quotient.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.topos-covering-epi.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.topos-sheaf-limits.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-compact.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.quasi-compact-properties.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.quasi-separated.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/thm.pretopos-qcqs.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.topos-morphism.html</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.chaus-pretopos.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/def.condensed-set.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://bingyingzizz.github.io/mathgalaxy/nodes/prop.condensed-criterion.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>

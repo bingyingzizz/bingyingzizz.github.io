@@ -1,6 +1,6 @@
 # 闭图像定理　`thm.closed-graph`
 闭图像定理：图像闭的线性映射连续
-layer 30 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 20 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.closed-graph)　·　[节点索引](../index.md)
 
 设 $E, F$ 是 Banach 空间，$u : E \to F$ 线性。若 $u$ 的图像
