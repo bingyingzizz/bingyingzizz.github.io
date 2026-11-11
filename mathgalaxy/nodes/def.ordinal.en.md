@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.ordinal)　·　[Chinese page (authoritative)](./def.ordinal.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ordinal.md` and `proofs/`.
+## Statement · **draft**
+A set $\alpha$ is an **ordinal** (a von Neumann ordinal) iff:
 
+1. **$\alpha$ is transitive**: $\forall x \in \alpha,\; x \subseteq \alpha$ (an element of an element is again an element);
+2. **$\in$ well-orders $\alpha$**: restricted to $\alpha$, $\in$ makes $\alpha$ a **well-ordered set** — that is, for any $x, y \in \alpha$ exactly one of $x \in y$, $x = y$, $y \in x$ holds, and every non-empty subset of $\alpha$ has an $\in$-least element.
 
-Cite: `def.ordinal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ordinal.en.2.md

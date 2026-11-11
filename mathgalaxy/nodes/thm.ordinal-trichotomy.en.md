@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.ordinal-trichotomy)　·　[Chinese page (authoritative)](./thm.ordinal-trichotomy.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.ordinal-trichotomy.md` and `proofs/`.
+## Statement · **draft**
+For any two ordinals $\alpha, \beta$, **exactly one** of the following holds:
 
+$$\alpha \in \beta, \qquad \alpha = \beta, \qquad \beta \in \alpha$$
 
-Cite: `thm.ordinal-trichotomy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In particular, $\in$ is a **well-order** on the class of all ordinals: every non-empty family of ordinals has a least element.
 
+> continued in nodes/thm.ordinal-trichotomy.en.2.md

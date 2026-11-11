@@ -1,6 +1,6 @@
 # 完美配对　`def.perfect-pairing`
 完美配对（perfect pairing）
-layer 17 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 19 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.perfect-pairing)　·　[节点索引](../index.md)
 
 设 $X, Y$ 是 $\mathbb{K}$ 上的赋范空间，$\langle\cdot,\cdot\rangle : X \times Y \to \mathbb{K}$ 是双线性映射（$\mathbb{K} = \mathbb{C}$ 时对第二变元共轭线性）。称它是**完美配对**，若
@@ -8,7 +8,7 @@ layer 17 · 定义 · 赋范空间与有界算子 · 泛函分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.dual-space`](../nodes/def.dual-space.md) 对偶空间：用到了定义 对偶空间　[proofs/def-link.pp-dual.md](../proofs/def-link.pp-dual.md)
+- [`def.dual-banach`](../nodes/def.dual-banach.md) 连续对偶空间：用到了定义 连续对偶空间　[proofs/def-link.pp-dual.md](../proofs/def-link.pp-dual.md)
 
 - …另有入边，续页见 [nodes/def.perfect-pairing.3.md](./def.perfect-pairing.3.md)
 

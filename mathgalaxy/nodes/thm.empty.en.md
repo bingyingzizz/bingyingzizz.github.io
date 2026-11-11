@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=thm.empty)　·　[Chinese page (authoritative)](./thm.empty.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 5 · theorem · cluster Constructing Sets (`set.construct`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.empty.md` and `proofs/`.
+## Statement · **draft**
+There exists a set with no elements:
 
+$$\exists B \forall x ( x \notin B )$$
 
-Cite: `thm.empty` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+By the Axiom of Extensionality such a $B$ is unique; it is written $\emptyset$.
 
+## Notes · **draft**
+$\emptyset$ is the least element for $\in$ and also for $\subseteq$: $\emptyset \subseteq A$ holds for every $A$.
+
+> continued in nodes/thm.empty.en.2.md

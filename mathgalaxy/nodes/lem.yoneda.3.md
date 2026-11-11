@@ -5,4 +5,4 @@
 - ⇒ [`prop.yoneda-embedding`](../nodes/prop.yoneda-embedding.md) 米田嵌入
 - ⇒ [`thm.density`](../nodes/thm.density.md) 稠密性定理
 - ⇒ [`lem.presheaf-mono-pointwise`](../nodes/lem.presheaf-mono-pointwise.md) 预层态射的单满按点检验
-- 被 [`prop.universal-unique-iso`](../nodes/prop.universal-unique-iso.md) 万有元素唯一到唯一同构 用
+- ⇒ [`prop.universal-unique-iso`](../nodes/prop.universal-unique-iso.md) 万有元素唯一到唯一同构

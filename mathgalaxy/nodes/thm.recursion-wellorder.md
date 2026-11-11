@@ -12,7 +12,7 @@ $$F(w) = G\big( F \upharpoonright W_{< w} \big), \qquad \forall w \in W$$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.wellordering`](../nodes/thm.wellordering.md) 良序定理 用
+- ⇒ [`thm.wellordering`](../nodes/thm.wellordering.md) 良序定理
 
 - …另有出边，续页见 [nodes/thm.recursion-wellorder.4.md](./thm.recursion-wellorder.4.md)
 

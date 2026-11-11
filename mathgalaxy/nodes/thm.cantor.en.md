@@ -2,16 +2,22 @@
 English entry · root `../`
 [in graph](../#n=thm.cantor)　·　[Chinese page (authoritative)](./thm.cantor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cantor.md` and `proofs/`.
+## Statement · **draft**
+For every set $A$:
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Cantor%27s_theorem · nLab: https://ncatlab.org/nlab/show/Cantor%27s+theorem
+$$\#A < \#\mathcal{P}(A)$$
 
+That is, there is **no** surjection from $A$ onto $\mathcal{P}(A)$ (and hence no bijection either), while $a \mapsto \{a\}$ is an injection.
 
-Cite: `thm.cantor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+Corollary: **there is no largest cardinal** — from any set, taking the power set gives a larger one.
 
+Hence
+
+$\aleph_0 < 2^{\aleph_0} < 2^{2^{\aleph_0}} < \cdots$
+
+> continued in nodes/thm.cantor.en.2.md

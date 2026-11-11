@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.compact)　·　[Chinese page (authoritative)](./def.compact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.compact.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a **topological space**. $X$ is **compact** iff every **open cover** has a finite subcover: if a family $\{U_{i}\}_{i \in I}$ satisfies "each $U_{i}$ is open" and $X = \bigcup_{i \in I} U_{i}$, then there are finitely many indices with
 
+$$X = \bigcup_{k=1}^{n} U_{i_{k}}.$$
 
-Cite: `def.compact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+A subset $K \subseteq X$ is **compact** if $K$ with the subspace topology is a compact space.
 
+> continued in nodes/def.compact.en.2.md

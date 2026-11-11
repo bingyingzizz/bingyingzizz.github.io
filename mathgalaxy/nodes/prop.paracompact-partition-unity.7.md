@@ -4,5 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.paracompact-cech-equals-sheaf`](../nodes/thm.paracompact-cech-equals-sheaf.md) 仿紧空间上的 Čech 就是上同调
 - ⇒ [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解
-- 被 [`thm.change-of-variables-manifold`](../nodes/thm.change-of-variables-manifold.md) 流形上的换元公式 用
+- ⇒ [`thm.change-of-variables-manifold`](../nodes/thm.change-of-variables-manifold.md) 流形上的换元公式
 - ⇒ [`thm.change-of-variables-manifold`](../nodes/thm.change-of-variables-manifold.md) 流形上的换元公式

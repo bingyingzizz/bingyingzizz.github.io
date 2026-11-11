@@ -5,7 +5,7 @@
 
 - 一致等度连续 | 等度连续（一致） → def.uniformly-equicontinuous
 
-- 完美配对 | 完美对偶 → def.perfect-pairing
+- 完美配对 | 完美对偶 | 配对 | pairing | 对偶配对 → def.perfect-pairing
 
 - 完美配对 Riesz 定理 | 统一 Riesz 表示 → thm.riesz-perfect-pairing
 

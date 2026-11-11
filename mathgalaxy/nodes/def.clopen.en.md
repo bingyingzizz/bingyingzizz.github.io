@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.clopen)　·　[Chinese page (authoritative)](./def.clopen.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.clopen.md` and `proofs/`.
+## Statement · **draft**
+A subset $K$ of $X$ is **clopen** if it is both open and closed. Equivalently, $K$ and its complement $K^{c}$ are both open, i.e. $X = K \sqcup K^{c}$ is a union of disjoint non-empty open sets (when $K$ is non-trivial).
 
-
-Cite: `def.clopen` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.clopen.en.2.md

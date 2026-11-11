@@ -6,14 +6,14 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-11T10:41:45.798Z",
+  "generated": "2026-11-11T11:01:39.205Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
    "nodes": 1621,
-   "edges": 3376,
-   "strong": 3311,
-   "weak": 65,
+   "edges": 3381,
+   "strong": 3313,
+   "weak": 68,
    "derived": 36,
    "en_pages": 1621
   },
@@ -3502,19 +3502,31 @@
    "title": "选择函数",
    "label_en": "choice function",
    "title_en": "choice function",
+   "statement_en": "Let $F$ be a family of sets with $\\emptyset \\notin F$.\n\nA function $f$ is a **choice function** for $F$ iff **both** of the following hold:\n\n(i) $f$ is a function and $\\operatorname{dom} f = F$;\n(ii) $\\forall X \\in F$, $f(X) \\in X$.\n\nThat is, $f$ picks one element from each member of $F$.\n\nThe Axiom of Choice can therefore be stated concisely as: **every family $F$ with $\\emptyset \\notin F$ has a choice function**.",
+   "notes_en": "If $F$ is finite, one can pick the elements one by one, and no AC is needed. The difficulty lies only with infinite families, especially uncountable ones.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#f5549253",
+      "notes": "v0.9.3#6d9a6efe"
+     }
     }
    },
    "en_page": "nodes/def.choicefn.en.md",
@@ -3542,19 +3554,31 @@
    "title": "空集存在且唯一",
    "label_en": "the empty set exists",
    "title_en": "the empty set exists",
+   "statement_en": "There exists a set with no elements:\n\n$$\\exists B \\forall x ( x \\notin B )$$\n\nBy the Axiom of Extensionality such a $B$ is unique; it is written $\\emptyset$.",
+   "notes_en": "$\\emptyset$ is the least element for $\\in$ and also for $\\subseteq$: $\\emptyset \\subseteq A$ holds for every $A$.\n\nThe point of this theorem is that **$\\emptyset$ need not be taken as a primitive object**: the Axiom Scheme of Separation already produces it (from any set $A$, take $\\{x \\in A : x \\ne x\\}$). So in ZF the empty set is not an extra assumption.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#2debfc32",
+      "notes": "v0.9.3#acd90126"
+     }
     }
    },
    "en_page": "nodes/thm.empty.en.md",
@@ -3580,19 +3604,31 @@
    "title": "任何集合都不属于自身",
    "label_en": "no set is an element of itself",
    "title_en": "no set is an element of itself",
+   "statement_en": "$$\\forall A ( A \\notin A )$$\n\nMore generally, the Axiom of Foundation rules out every finite $\\in$-cycle:\n\n$$A_0 \\ni  A_1 \\ni  \\cdots \\ni  A_n = A_0$$",
+   "notes_en": "This theorem shows that the set $R = \\{ x : x \\notin x \\}$ from Russell's paradox cannot exist — otherwise $R \\in R$ and $R \\notin R$ would both hold.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#add1d770",
+      "notes": "v0.9.3#a5d74868"
+     }
     }
    },
    "en_page": "nodes/thm.noself.en.md",
@@ -3697,19 +3733,31 @@
    "title": "笛卡尔积 $A \\times B$ 存在",
    "label_en": "Cartesian product",
    "title_en": "Cartesian product",
+   "statement_en": "Given any two sets, the collection of all ordered pairs is again a set:\n\n$$\\forall A \\forall B \\exists C \\forall z [ z \\in C \\leftrightarrow  \\exists a \\in A, \\exists b \\in B, z = (a, b) ]$$\n\nIt is written $A \\times B = \\{ (a, b) : a \\in A, b \\in B \\}$.",
+   "notes_en": "It is the prerequisite for defining relations and functions as sets: without $A \\times B$ there is no such thing as $R \\subseteq A \\times B$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#f405d7a0",
+      "notes": "v0.9.3#a6658787"
+     }
     }
    },
    "en_page": "nodes/thm.product.en.md",
@@ -4130,19 +4178,31 @@
    "title": "Tukey 引理（Tukey's Lemma / Teichmüller–Tukey）",
    "label_en": "Tukey",
    "title_en": "Tukey's Lemma / Teichmüller–Tukey",
+   "statement_en": "Let $\\mathcal{A}$ be a **non-empty family of sets with finite character**. Then $(\\mathcal{A}, \\subseteq )$ has a maximal element.\n\nThat is, there is $A \\in \\mathcal{A}$ such that no $B \\in \\mathcal{A}$ satisfies $A \\subset B$.",
+   "notes_en": "The advantage of Tukey's lemma is that it **saves verification**: as soon as the family in question has finite character, the tedious check that \"every chain has an upper bound\" can be skipped.\n\nExample: the family of linearly independent sets has finite character ($X$ is linearly independent $\\iff$ every finite subset of $X$ is linearly independent), so \"every linearly independent set extends to a maximal one\" holds automatically.\n\nHistory: Teichmüller (1939) and Tukey (1940) stated it independently.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#0fcde180",
+      "notes": "v0.9.3#89317279"
+     }
     }
    },
    "en_page": "nodes/lem.tukey.en.md",
@@ -4477,19 +4537,31 @@
    "title": "紧空间（开覆盖定义）",
    "label_en": "compact",
    "title_en": "compact",
+   "statement_en": "Let $X$ be a **topological space**. $X$ is **compact** iff every **open cover** has a finite subcover: if a family $\\{U_{i}\\}_{i \\in I}$ satisfies \"each $U_{i}$ is open\" and $X = \\bigcup_{i \\in I} U_{i}$, then there are finitely many indices with\n\n$$X = \\bigcup_{k=1}^{n} U_{i_{k}}.$$\n\nA subset $K \\subseteq X$ is **compact** if $K$ with the subspace topology is a compact space.",
+   "notes_en": "**Only open sets are used**: the definition mentions no metric and no $\\mathbb{R}^{n}$ — compactness is a purely topological property, so it is preserved by continuous maps and invariant under homeomorphisms (`def.continuous-map` / `def.homeomorphism`).\n\n**Equivalent form (closed sets)**: every family of closed sets with the finite intersection property has non-empty intersection — that is, \"$\\{F_{i}\\}$ closed and every finite subfamily has non-empty intersection $\\implies$ the whole family has non-empty intersection\". This form is the one most often used in proofs by contradiction.\n\n**In metric spaces**: on a metric space, \"compact $\\iff$ sequentially compact $\\iff$ complete + totally bounded\" (`thm.metric-compact-equiv`) — that is a **theorem** (provable only with the metric), not part of the definition. In a general topological space **compactness and sequential compactness imply neither of the other**: $[0, \\omega_{1})$ with the order topology is sequentially compact but not compact (the cover $\\{[0, \\alpha) : \\alpha < \\omega_{1}\\}$ has no finite subcover); $\\{0,1\\}^{\\mathcal{P}(\\mathbb{N})}$ is compact by Tychonoff but not sequentially compact (take $x_{n}(A) = 1 \\iff n \\in A$; every subsequence fails to converge at the coordinate $A = \\{n_{2k}\\}$).\n\nExamples: $[a, b] \\subseteq \\mathbb{R}$ is compact (Heine–Borel, `cor.heine-borel`); $\\mathbb{R}$ is not compact (the cover $\\{(-n, n)\\}$ has no finite subcover); $(0, 1]$ is not compact. Standard examples in general topology are in `def.chaus` and `thm.tykhonov` (arbitrary products remain compact).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#d861e219",
+      "notes": "v0.9.3#c4fa4371"
+     }
     }
    },
    "en_page": "nodes/def.compact.en.md",
@@ -11412,19 +11484,31 @@
    "title": "空集",
    "label_en": "empty set",
    "title_en": "empty set",
+   "statement_en": "The **empty set** is the set with no elements, written $\\emptyset$:\n\n$$\\emptyset := \\{ x : x \\ne x \\}$$\n\n\"$x \\ne x$\" fails for every $x$, so this set has no elements at all. It is a **primitive object of the language**, on the same level as the Axiom of Extensionality and first-order logic.\n\nHence for every set $A$: $\\emptyset \\subseteq A$ (vacuously true), and $\\emptyset$ is the least element under $\\subseteq$.",
+   "notes_en": "Conditions such as \"$\\emptyset \\in \\mathcal{A}$\" and \"$\\emptyset \\notin F$\" are everywhere in measure theory (the Axiom of Choice requires the family to contain no empty set; $\\mu(\\emptyset) = 0$ is the first axiom of a measure).\n\nThe Axiom of Extensionality supplies **at most** one such set;\n\nthe half that says one **exists** is a separate result — see \"the empty set exists\".\n\nDistinguish $\\emptyset$ from $\\{\\emptyset\\}$: the latter has one element (namely the empty set), so $\\{\\emptyset\\} \\ne \\emptyset$.\n\n\n$\\emptyset \\subseteq A$ is **vacuously true**: there is no $x \\in \\emptyset$ to check.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e1460b5c",
+      "notes": "v0.9.3#9a3aa702"
+     }
     }
    },
    "en_page": "nodes/def.empty.en.md",
@@ -11612,19 +11696,31 @@
    "title": "幂集",
    "label_en": "power set",
    "title_en": "power set",
+   "statement_en": "Let $X$ be a set. The **power set** of $X$ is the set whose elements are all subsets of $X$:\n\n$$\\mathcal{P}(X) := \\{ A : A \\subseteq X \\}$$\n\nThus $A \\in \\mathcal{P}(X) \\iff A \\subseteq X$, and every element of $\\mathcal{P}(X)$ is itself a set.\n\nBy the **Axiom of Power Set**, $\\mathcal{P}(X)$ is indeed a set; by Extensionality it is unique.\n\nIn the finite case the number of elements is given by $\\#X = n \\implies \\#\\mathcal{P}(X) = 2^{n}$ (each element is either taken or not).",
+   "notes_en": "The power set is the step that **turns a property into an object**: to speak about \"all subsets of $X$\" as a thing in itself (rather than one subset at a time) one needs the power set.\n\n$\\mathcal{P}(X)$ is also the stage for several important constructions:\n- Outer measures are defined on **all subsets**: $\\mu^* : \\mathcal{P}(X) \\to [0, +\\infty]$;\n\n\n- Rings, $\\sigma$-algebras and monotone classes are each a family of subsets of $X$, i.e. a subfamily of $\\mathcal{P}(X)$;\n\n\n- The generated $\\sigma$-algebra is the intersection of all $\\sigma$-algebras containing $\\mathcal{E}$, and $\\mathcal{P}(X)$ guarantees that this intersection is non-empty.\n\n$\\emptyset \\in \\mathcal{P}(X)$ and $X \\in \\mathcal{P}(X)$ for every $X$ — a power set is never empty.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#46639831",
+      "notes": "v0.9.3#e4c969dd"
+     }
     }
    },
    "en_page": "nodes/def.power-set.en.md",
@@ -11651,19 +11747,31 @@
    "title": "等势",
    "label_en": "equipotent",
    "title_en": "equipotent",
+   "statement_en": "Sets $A$ and $B$ are **equinumerous** (written $\\#A = \\#B$ or $A \\approx B$) iff there is a **bijection**\n\n$$f : A \\to B$$\n\nEquinumerosity is an equivalence relation on sets: reflexive (identity map), symmetric (inverse map), transitive (composition).",
+   "notes_en": "This is the **right way to compare sizes**: instead of counting (an infinite set cannot be counted out), ask whether the two sets can be paired off one-to-one.\n\nClassical results:\n- $\\mathbb{N}$ is equinumerous with $\\mathbb{Q}$ and with $\\mathbb{N} \\times \\mathbb{N}$ (both are countable);\n\n\n- $(0, 1)$ is equinumerous with $\\mathbb{R}$ (via something like $x \\mapsto \\tan \\pi(x - 1/2)$);\n\n\n- $\\mathbb{N}$ and $\\mathbb{R}$ are **not** equinumerous (Cantor's theorem).\n\n$A \\subseteq B$ has nothing to do with equinumerosity: $\\mathbb{N} \\subset \\mathbb{Q}$ yet the two are equinumerous — this is precisely the dividing line between infinite and finite sets (Dedekind's characterization: equinumerous with a proper subset $\\iff$ infinite).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#8c01f4ed",
+      "notes": "v0.9.3#e9fe1f5a"
+     }
     }
    },
    "en_page": "nodes/def.equinumerous.en.md",
@@ -11729,19 +11837,31 @@
    "title": "Cantor 定理：$\\#A < \\#\\mathcal{P}(A)$",
    "label_en": "diagonal argument",
    "title_en": "diagonal argument",
+   "statement_en": "For every set $A$:\n\n$$\\#A < \\#\\mathcal{P}(A)$$\n\nThat is, there is **no** surjection from $A$ onto $\\mathcal{P}(A)$ (and hence no bijection either), while $a \\mapsto \\{a\\}$ is an injection.",
+   "notes_en": "Corollary: **there is no largest cardinal** — from any set, taking the power set gives a larger one.\n\nHence\n\n$\\aleph_0 < 2^{\\aleph_0} < 2^{2^{\\aleph_0}} < \\cdots$\n\nTaking $A = \\mathbb{N}$ gives \"$\\mathbb{R}$ is uncountable\" ($\\#\\mathbb{R} = 2^{\\aleph_0}$).\n\nThe proof uses the **diagonal method** (see the proof on the edge): the \"diagonal set\" $D = \\{ a \\in A : a \\notin f(a) \\}$ is not in the image of $f$.\n\nThis is the most theorem-producing construction in the history of mathematics; Cantor–Bernstein, Gödel's incompleteness theorem and the halting problem all use it.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#195c290e",
+      "notes": "v0.9.3#c411105f"
+     }
     }
    },
    "en_page": "nodes/thm.cantor.en.md",
@@ -11773,19 +11893,31 @@
    "title": "Schröder–Bernstein 定理",
    "label_en": "Schröder–Bernstein theorem",
    "title_en": "Schröder–Bernstein theorem",
+   "statement_en": "If there are injections $f : A \\to B$ and $g : B \\to A$, then there is a **bijection** $A \\to B$; that is,\n\n$$\\#A \\le \\#B \\ \\wedge \\ \\#B \\le \\#A \\implies \\#A = \\#B$$",
+   "notes_en": "Its value is **convenience**: to prove that two sets are equinumerous it suffices to build one injection in each direction; the bijection itself need not be written down. (Compare the other route to Cantor's theorem — an injection but no surjection — which is the dual statement.)\n\nIt **does not need** the Axiom of Choice: the proof is constructive (see the proof on the edge), which is what makes it more usable than \"any two cardinals are comparable\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c2d4190e",
+      "notes": "v0.9.3#2c2323bf"
+     }
     }
    },
    "en_page": "nodes/thm.schroder-bernstein.en.md",
@@ -11876,19 +12008,31 @@
    "title": "拓扑空间 / 开集",
    "label_en": "topology",
    "title_en": "topology",
+   "statement_en": "Let $X$ be a set and $\\mathcal{T} \\subseteq \\mathcal{P}(X)$ a family of subsets of $X$. Then $(X, \\mathcal{T})$ is a **topological space** and $\\mathcal{T}$ is a **topology** on $X$ iff:\n\n1. **Both ends**: $\\emptyset \\in \\mathcal{T}$ and $X \\in \\mathcal{T}$;\n2. **Closed under arbitrary unions**: $\\{ U_i \\}_{i \\in I} \\subseteq \\mathcal{T} \\implies \\bigcup_{i \\in I} U_i \\in \\mathcal{T}$ ($I$ is arbitrary, possibly uncountable);\n3. **Closed under finite intersections**: $U, V \\in \\mathcal{T} \\implies U \\cap V \\in \\mathcal{T}$.\n\nThe members of $\\mathcal{T}$ are called **open sets**, and their complements **closed sets**.",
+   "notes_en": "The three axioms abstract the properties of open intervals on the real line: a union of arbitrarily many open sets is open, but only **finitely** many open sets are guaranteed to have an open intersection ($\\bigcap_n (-1/n, 1/n) = \\{0\\}$ is not open).\n\nThe advantage of this language is that **only the question \"which sets count as open\" remains**, so distances, metrics and coordinates can all be thrown away — continuity, compactness, connectedness and limits can still be expressed.\n\nA set can carry several different topologies;\n\nthey are compared as \"finer / coarser\", not by size.\n\n\n\n**Which assumptions each direction uses** (a topology is defined by axioms and imposes no metric or separation requirement):\n- topology $\\iff$ the three listed axioms: both directions unfold the definition and need no compactness, Choice or metric.\n- closure under arbitrary unions $\\implies\\emptyset$ is open requires allowing the empty index family; closure under binary intersections $\\implies$ closure under non-empty finite intersections follows by induction, while the empty intersection being $X$ still needs the convention that $X$ is open.\n- the open-set axioms $\\iff$ the family of complements satisfies arbitrary intersections and finite unions: use De Morgan's identities; no extra topological assumption is needed.\n- finite intersections cannot be upgraded to arbitrary ones: in the usual topology on the reals $\\bigcap_{n\\ge1}(-1/n,1/n)=\\{0\\}$ is not open; nor is a topology automatically Hausdorff — the indiscrete topology on a set with more than one point is a counterexample.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#b6563e95",
+      "notes": "v0.9.3#677ccbc2"
+     }
     }
    },
    "en_page": "nodes/def.topology.en.md",
@@ -11916,19 +12060,31 @@
    "title": "闭集 / 闭包 / 稠密",
    "label_en": "closed set and closure",
    "title_en": "closed set and closure",
+   "statement_en": "Let $(X, \\mathcal{T})$ be a topological space.\n\n- $F \\subseteq X$ is **closed**: $X \\setminus F$ is open;\n- the **closure** $\\overline{A}$ of $A \\subseteq X$: the intersection of all closed sets containing $A$ (the smallest such closed set);\n- $A$ is **dense**: $\\overline{A} = X$;\n- a **neighbourhood** of $x$: any open set containing $x$ (or any set containing such an open set).\n\nBy De Morgan's laws, the three axioms for open sets become, for closed sets: $\\emptyset, X$ are closed; **arbitrary** intersections are closed; **finite** unions are closed.",
+   "notes_en": "Open and closed are not opposites: $\\emptyset$ and $X$ are both open and closed; in $\\mathbb{R}$, $[0, 1]$ is closed while $[0, 1)$ is neither open nor closed.\n\nThe closure \"collects all the limit points\": in a metric space, $\\overline{A}$ is exactly the set of limits of sequences in $A$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#466a9d0a",
+      "notes": "v0.9.3#a5e40953"
+     }
     }
    },
    "en_page": "nodes/def.closed-set.en.md",
@@ -12198,19 +12354,31 @@
    "title": "Hausdorff 空间 / $T_{2}$",
    "label_en": "Hausdorff",
    "title_en": "Hausdorff",
+   "statement_en": "A topological space $X$ is a **Hausdorff space** (or a **$T_{2}$ space**) if any two distinct points **can be separated by open sets**:\n\n$$\\forall x \\ne y \\in X,\\ \\exists U \\ni x,\\ V \\ni y\\ \\text{open}:\\quad U \\cap V = \\emptyset$$",
+   "notes_en": "In one phrase: **limits are unique**. A sequence that converges can converge to only one point — this is the kind of space analysis tacitly assumes.\n\nA stronger separation property is **normal** ($T_{4}$): any two disjoint closed sets can be separated by open sets. Every compact Hausdorff space is normal (the proof uses compactness twice, building open covers and passing to finite subcovers).\n\n$T_{3}$ and $T_{3.5}$ sit in between: $T_{3}$ says \"a point and a closed set not containing it can be separated by open sets\", and $T_{3.5}$ upgrades this to separation by **continuous functions** (the statement that \"there are enough continuous functions\").\n\nThe injectivity of the Stone–Čech compactification requires exactly $T_{3.5}$.\n\n**Convention.** The $T$-number names the bare property; the adjective adds $T_{1}$: \"regular\" = $T_{3} + T_{1}$ (`def.regular-space`), \"completely regular\" = $T_{3.5} + T_{1}$ (`def.completely-regular-space`).\n\nBare $T_{3}$ does not imply $T_{1}$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#861c3b52",
+      "notes": "v0.9.3#12672068"
+     }
     }
    },
    "en_page": "nodes/def.hausdorff.en.md",
@@ -12238,19 +12406,31 @@
    "title": "连通空间与连通分量",
    "label_en": "connected",
    "title_en": "connected",
+   "statement_en": "A topological space $X$ is **disconnected** if it can be written as the union of two disjoint non-empty open sets, $X = U \\sqcup V$; otherwise it is **connected**.\n\nFor a fixed $x \\in X$, the **connected component** $C(x)$ of $x$ is the union of all connected subsets containing $x$ — it is itself connected, and it is maximal.",
+   "notes_en": "The connected components form a partition of $X$, and each component is closed. Subsets that are **both open and closed** (called **clopen** sets) are the other face of connectedness: $X$ is connected iff its only clopen subsets are $\\emptyset$ and $X$ itself — so \"is there a non-trivial clopen set?\" is the same question as \"can the space be split?\".\n\n**Four equivalent formulations; the cost lies in \"taking complements\" and \"continuous images\"**:\n\n- connected $\\iff$ **not expressible as the union of two disjoint non-empty open sets**: this is the definition.\n- connected $\\iff$ **no non-trivial clopen subsets**: $(\\implies)$ use $V = X \\setminus U$, which is closed; $(\\Leftarrow)$ one line. **This step uses only the duality of open and closed sets**.\n- connected $\\iff$ **every continuous map $X \\to \\{0,1\\}$ (discrete two points) is constant**: $(\\implies)$ the image is connected and $\\{0,1\\}$ is not; $(\\Leftarrow)$ apply the previous item to a characteristic function. This turns connectedness into \"there is no surjection onto two points\", the standard form in the internal language.\n- **the union of a family of connected subsets with a common point is connected** (pairwise intersecting suffices, then induct to arbitrarily many; to avoid AC take the subfamily containing the fixed point). Conversely, **the union of all connected components is $X$, which of course need not be connected** — in the discrete two-point space the union of the two singleton components is $X$, and it is disconnected.\n\n**Connected $\\ne$ path-connected**: path-connected $\\implies$ connected, but not conversely (the topologist's sine curve). The gap between the two is exactly the gap between \"$\\pi_{0}$ and path $\\pi_{0}$\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#176a8df6",
+      "notes": "v0.9.3#3e6e9a27"
+     }
     }
    },
    "en_page": "nodes/def.connected.en.md",
@@ -12278,19 +12458,31 @@
    "title": "闭开集",
    "label_en": "clopen",
    "title_en": "clopen",
+   "statement_en": "A subset $K$ of $X$ is **clopen** if it is both open and closed. Equivalently, $K$ and its complement $K^{c}$ are both open, i.e. $X = K \\sqcup K^{c}$ is a union of disjoint non-empty open sets (when $K$ is non-trivial).",
+   "notes_en": "Clopen sets are a **rare species** in a general topological space: in connected spaces such as $\\mathbb{R}$ or $[0,1]$ there are only $\\emptyset$ and the whole space. **The more clopen sets, the more fragmented the space** — totally disconnected means \"every connected component is a single point\"; \"clopen sets separate any two points\" (= zero-dimensional) is equivalent to that only under **compact Hausdorff**; and in a profinite space \"the clopen sets form a base\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#48e208de",
+      "notes": "v0.9.3#0b77ac0a"
+     }
     }
    },
    "en_page": "nodes/def.clopen.en.md",
@@ -13125,19 +13317,31 @@
    "title": "序数",
    "label_en": "ordinal",
    "title_en": "ordinal",
+   "statement_en": "A set $\\alpha$ is an **ordinal** (a von Neumann ordinal) iff:\n\n1. **$\\alpha$ is transitive**: $\\forall x \\in \\alpha,\\; x \\subseteq \\alpha$ (an element of an element is again an element);\n2. **$\\in$ well-orders $\\alpha$**: restricted to $\\alpha$, $\\in$ makes $\\alpha$ a **well-ordered set** — that is, for any $x, y \\in \\alpha$ exactly one of $x \\in y$, $x = y$, $y \\in x$ holds, and every non-empty subset of $\\alpha$ has an $\\in$-least element.\n\nBy transitivity, **every element of $\\alpha$ is itself an ordinal**. Conventions: $0 := \\emptyset$, the **successor ordinal** $\\alpha + 1 := \\alpha \\cup \\{ \\alpha \\}$; a non-zero ordinal with no greatest element is a **limit ordinal**, and $\\omega$ is the least limit ordinal. The class of all ordinals is written $\\mathrm{On}$.\n\nThe first few are $\\emptyset,\\ \\{ \\emptyset \\},\\ \\{ \\emptyset, \\{ \\emptyset \\} \\},\\ \\ldots$, that is $0, 1, 2, \\ldots$;\n\nthen come $\\omega,\\ \\omega + 1,\\ \\omega + 2,\\ \\ldots,\\ \\omega + \\omega,\\ \\ldots$",
+   "notes_en": "**The format is still \"set + relation + axioms\"**: ordinals are not objects out of nowhere — a **transitive set** together with the **ready-made** relation $\\in$ determines an ordinal. To decide whether a set is an ordinal, check these two clauses.\n\n**Why not take order types as the objects** — this is the most important step in this pack: an order type is an isomorphism class, and there are more order types of well-orders than fit into any set, so they cannot be collected (see \"the ordinals do not form a set\"). Ordinals avoid this: each order type is given a **concrete representative**, namely a transitive well-ordered set. Comparing order types then becomes comparing $\\in$, which can be done outright.\n\n**$\\alpha \\in \\beta$ and $\\alpha < \\beta$ are the same thing**: on ordinals, $\\in$ is the order. Writing $\\alpha < \\beta$ really uses $\\in$ underneath.\n\nOrdinals are not just \"a generalization of $\\mathbb{N}$\". The ordinals after $\\omega$ get longer and longer, but their **size** (cardinality) can stay at $\\aleph_0$ — for ordinals, \"longer\" and \"larger\" are two different things.\n\n\n\n**Which assumptions each direction uses** (the definition of an ordinal needs no Choice; the existence of a representative for each order type is a separate construction):\n- being a von Neumann ordinal $\\iff$ transitive and well-ordered by membership: both directions are unfolding the definition, with no compactness, no Choice and no metric; the convention $\\alpha<\\beta\\iff\\alpha\\in\\beta$ is also a notational definition.\n- elements of an ordinal are ordinals: inherit the well-order and use transitivity of membership on the ambient set to show the element is transitive; a general transitive set does not by itself have transitive elements.\n- well-ordered set $\\implies$ existence of a unique ordinal of the same order type: build it by well-founded recursion and collect the image with Replacement; this is not an unfolding of the definition, and it does not need the Choice that well-orders an arbitrary set.\n- transitivity cannot be dropped: the members of $\\{\\{\\emptyset\\}\\}$ are well-ordered by membership as a single point, yet the set is not transitive; the well-order condition cannot be dropped either: $\\{0,1,\\{1\\}\\}$ is transitive, but $0$ and $\\{1\\}$ are incomparable under membership.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#42c21521",
+      "notes": "v0.9.3#b7e8d4cc"
+     }
     }
    },
    "en_page": "nodes/def.ordinal.en.md",
@@ -13210,19 +13414,31 @@
    "title": "序数的三歧性：$\\in$ 在 $\\mathrm{On}$ 上是良序",
    "label_en": "ordinals are comparable",
    "title_en": "ordinals are comparable",
+   "statement_en": "For any two ordinals $\\alpha, \\beta$, **exactly one** of the following holds:\n\n$$\\alpha \\in \\beta, \\qquad \\alpha = \\beta, \\qquad \\beta \\in \\alpha$$\n\nIn particular, $\\in$ is a **well-order** on the class of all ordinals: every non-empty family of ordinals has a least element.",
+   "notes_en": "Trichotomy lets ordinals serve as **coordinates**: the order types of any two **well-ordered sets** are comparable, and **no Choice is needed**.\n\nThis is a completely different statement from \"any two **cardinals** are comparable\", which does need AC (see \"the comparability theorem for cardinals\"). The difference is that an ordinal **carries** a well-order — namely $\\in$ — whereas a general set has no a priori well-order, and finding one for it is exactly the content of the well-ordering theorem ($\\iff$ the Axiom of Choice).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#191c1080",
+      "notes": "v0.9.3#4396eafd"
+     }
     }
    },
    "en_page": "nodes/thm.ordinal-trichotomy.en.md",
@@ -13294,19 +13510,31 @@
    "title": "Burali–Forti：序数全体不构成集合",
    "label_en": "Burali-Forti",
    "title_en": "Burali-Forti",
+   "statement_en": "The class $\\mathrm{On}$ of all ordinals **is not a set**: there is no set whose elements are exactly all the ordinals.",
+   "notes_en": "The proof is one line: if $\\mathrm{On}$ were a set, it would be **transitive** (elements of ordinals are ordinals) and $\\in$ would **well-order** it (trichotomy gives comparability), so $\\mathrm{On}$ would itself be an ordinal, hence $\\mathrm{On} \\in \\mathrm{On}$ — contradicting the fact that no ordinal is an element of itself ($\\in$ is a well-order on ordinals, which forbids $\\in$-cycles).\n\nThis is exactly the other face of **Hartogs' theorem**: there are too many ordinals to fit into any set. \"There is an ordinal that does not inject into $X$\" and \"the ordinals do not form a set\" say the same thing.\n\nRelation to Russell's paradox: both contradictions come from treating a certain \"totality\" as a set. In ZFC they are resolved the same way — that totality is not a set, so the Axiom Scheme of Separation cannot even be applied to it.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e28f5e4e",
+      "notes": "v0.9.3#cf126a32"
+     }
     }
    },
    "en_page": "nodes/thm.burali-forti.en.md",
@@ -17761,7 +17989,7 @@
     "覆盖"
    ],
    "statement": "1. 景 $\\mathcal{C}$ 中 $X$ 拟紧 $\\iff$ $X$ 在标准拓扑下拟紧；\n2. 若 $X$ 有一个由**拟紧**对象组成的**有限**覆盖，则 $X$ 拟紧；\n3. 预拓扑斯 $\\mathcal{C}$（配预标准拓扑）上的层 $F$ 拟紧 $\\iff$ 存在满射 $X \\to F$ 且 $X \\in \\mathcal{C}$。",
-   "notes": "**逐条证明。**\n**1.** 景里的覆盖族与它在标准拓扑下生成的层范畴里的覆盖族一一对应（次标准性保证可表示层原样保留），而「拟紧」只用到覆盖族这件事，故两种说法一致 ✓。\n**2.** 设 $X$ 被拟紧对象 $X_{1}, \\ldots, X_{n}$ 的有限族覆盖，给 $X$ 的任一覆盖 $(Y_{j}\\to X)$。\n\n对每个 $k$ 沿 $X_{k}\\to X$ 拉回得到 $X_{k}$ 的覆盖 $(Y_{j}\\times_{X}X_{k} \\to X_{k})$；\n\n由 $X_{k}$ 拟紧抽出有限子族 $(j \\in J_{k})$。\n\n则 $J := \\bigcup_{k}J_{k}$ 有限，且 $(Y_{j}\\to X)_{j\\in J}$ 已是覆盖（每支 $X_{k}$ 都被覆盖，而 $\\{X_{k}\\}$ 覆盖 $X$）✓。\n**3.** $(\\Longleftarrow)$ 若 $X \\to F$ 满且 $X \\in \\mathcal{C}$，则任何由可表示层给出的覆盖 $(h_{X_{i}} \\to F)$ 沿 $X \\to F$ 拉回得到 $X$ 的覆盖，由「$h_{X}$ 拟紧」（$X \\in \\mathcal{C}$）抽出有限子族，复合 $h_{X_{i}} \\to h_{X} \\to F$ 给出 $F$ 的有限子覆盖 ✓。\n$(\\implies)$ 反之，$\\mathcal{C}$ 的对象构成层范畴的生成元族，故有满态射 $\\coprod_{i}h_{X_{i}} \\to F$；由 $F$ 拟紧抽出有限子族 $(i \\in I,\\ |I| < \\infty)$，令 $X := \\coprod_{i\\in I}X_{i} \\in \\mathcal{C}$，则 $h_{X} = \\coprod_{i\\in I}h_{X_{i}} \\to F$ 仍满 ✓。\n\n—— 在凝聚态集里这条读作「凝聚态集拟紧 $\\iff$ 有紧 Hausdorff 空间到它的满射」✓。\n\n∎\n\n第 3 条最有用：它把「层 $F$ 拟紧」换成了「$F$ 能被一个小对象盖住」—— 在凝聚态集里，这就是「凝聚态集 $X$ 拟紧 $\\iff$ 存在紧 Hausdorff 空间到它的满射」。\n\n\n\n**各方向用到的假设**（有限覆盖判据依赖站点覆盖与层覆盖的对应）：\n- 第 1 条两个方向均需站点与其层范畴的覆盖比较，把可表示对象理解为层化后的表示预层；在次标准情形才可不写层化。这是覆盖比较，不能单靠改名证明。\n- 第 2 条从有限拟紧覆盖推出拟紧：将任意覆盖拉回各块、分别取有限子族，再用覆盖的传递性；无限离散空间的单点覆盖说明“有限”不能删。\n- 第 3 条正向：可表示层生成层范畴给出满覆盖，拟紧性抽有限支，有限余积把它们合成一个 $X$；最后一步用预标准拓扑下保有限余积。\n- 第 3 条反向：$h_X\\to F$ 满且 $h_X$ 拟紧时，拉回覆盖并取有限子族，再由满性下降覆盖。关键是该拓扑下可表示层拟紧；任意站点不能免费假定这一点，例如非拟紧拓扑空间的终层。\n",
+   "notes": "**逐条证明。**\n**1.** 景里的覆盖族与它在标准拓扑下生成的层范畴里的覆盖族一一对应（次标准性保证可表示层原样保留），而「拟紧」只用到覆盖族这件事，故两种说法一致 ✓。\n**2.** 设 $X$ 被拟紧对象 $X_{1}, \\ldots, X_{n}$ 的有限族覆盖，给 $X$ 的任一覆盖 $(Y_{j}\\to X)$。\n\n对每个 $k$ 沿 $X_{k}\\to X$ 拉回得到 $X_{k}$ 的覆盖 $(Y_{j}\\times_{X}X_{k} \\to X_{k})$；\n\n由 $X_{k}$ 拟紧抽出有限子族 $(j \\in J_{k})$。\n\n则 $J := \\bigcup_{k}J_{k}$ 有限，且 $(Y_{j}\\to X)_{j\\in J}$ 已是覆盖（每支 $X_{k}$ 都被覆盖，而 $\\{X_{k}\\}$ 覆盖 $X$）✓。\n**3.** $(\\Longleftarrow)$ 若 $X \\to F$ 满且 $X \\in \\mathcal{C}$，则任何由可表示层给出的覆盖 $(h_{X_{i}} \\to F)$ 沿 $X \\to F$ 拉回得到 $X$ 的覆盖，由「$h_{X}$ 拟紧」（$X \\in \\mathcal{C}$）抽出有限子族，复合 $h_{X_{i}} \\to h_{X} \\to F$ 给出 $F$ 的有限子覆盖 ✓。\n$(\\implies)$ 反之，$\\mathcal{C}$ 的对象构成层范畴的生成元族，故有满态射 $\\coprod_{i}h_{X_{i}} \\to F$；由 $F$ 拟紧抽出有限子族 $(i \\in I,\\ \\#I < \\infty)$，令 $X := \\coprod_{i\\in I}X_{i} \\in \\mathcal{C}$，则 $h_{X} = \\coprod_{i\\in I}h_{X_{i}} \\to F$ 仍满 ✓。\n\n—— 在凝聚态集里这条读作「凝聚态集拟紧 $\\iff$ 有紧 Hausdorff 空间到它的满射」✓。\n\n∎\n\n第 3 条最有用：它把「层 $F$ 拟紧」换成了「$F$ 能被一个小对象盖住」—— 在凝聚态集里，这就是「凝聚态集 $X$ 拟紧 $\\iff$ 存在紧 Hausdorff 空间到它的满射」。\n\n\n\n**各方向用到的假设**（有限覆盖判据依赖站点覆盖与层覆盖的对应）：\n- 第 1 条两个方向均需站点与其层范畴的覆盖比较，把可表示对象理解为层化后的表示预层；在次标准情形才可不写层化。这是覆盖比较，不能单靠改名证明。\n- 第 2 条从有限拟紧覆盖推出拟紧：将任意覆盖拉回各块、分别取有限子族，再用覆盖的传递性；无限离散空间的单点覆盖说明“有限”不能删。\n- 第 3 条正向：可表示层生成层范畴给出满覆盖，拟紧性抽有限支，有限余积把它们合成一个 $X$；最后一步用预标准拓扑下保有限余积。\n- 第 3 条反向：$h_X\\to F$ 满且 $h_X$ 拟紧时，拉回覆盖并取有限子族，再由满性下降覆盖。关键是该拓扑下可表示层拟紧；任意站点不能免费假定这一点，例如非拟紧拓扑空间的终层。\n",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §3.3"
    ]
@@ -60664,7 +60892,7 @@
     "定理"
    ],
    "statement": "设 $p, q$ 是两个不同的奇素数。则\n\n$$\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} .$$\n\n等价说法：$p, q$ 中至少有一个 $\\equiv 1 \\pmod 4$ 时 $\\left(\\frac{p}{q}\\right) = \\left(\\frac{q}{p}\\right)$；两个都 $\\equiv 3 \\pmod 4$ 时两者相反。补充公式：\n\n$$\\left(\\frac{-1}{p}\\right) = (-1)^{\\frac{p-1}{2}}, \\qquad \\left(\\frac{2}{p}\\right) = (-1)^{\\frac{p^{2}-1}{8}} .$$",
-   "notes": "**这是数论里最重要的一条定理**（Gauss 一生给了 8 个证明，第一个 1796 年、19 岁）。它把「$p$ 是不是模 $q$ 的剩余」这个难问题换成「$q$ 是不是模 $p$ 的剩余」这个更容易的小问题 —— 因为可以递归把 $p$ 降到 $< q$。\n\n\n\n⭐ 现在的主流证明走**有限域上的曲线计数**：$\\left(\\frac{p}{q}\\right)$ 与 $x^{2} \\equiv p \\pmod q$ 的解数有关，而这批解数可以按 $\\mathbb{F}_{p}$ 上的椭圆曲线/乘法群逐层数出来（Zolotarev 引理 + 置换的符号）。这只是**一条现代路线** —— 初等证明同样存在（Gauss 第三证明、Gauss 引理、Zolotarev 引理都是初等计数）。\n\n\n\n**用法**：判 $\\left(\\frac{a}{p}\\right)$ 时把它拆成素因子，逐个用互反律「翻过来」，再递归 —— 复杂度 $O(\\log p)$ 级别的除法。上面两条补充公式处理 $-1$ 与 $2$ 这两种「不能翻」的情形。\n\n\n\n**证明（Gauss 引理 + 矩形计数，初等）。** 记 $P = \\frac{p-1}{2}$、$Q = \\frac{q-1}{2}$。对 $1 \\le x \\le P$ 记 $m_{x} := \\left\\lfloor \\frac{qx}{p} \\right\\rfloor$，$r_{x}$ 为 $qx$ 模 $p$ 的最小正剩余（$1 \\le r_{x} \\le p-1$，因为 $p \\nmid qx$）。\n\n\n\n**第一步：Gauss 引理。** 令 $\\varepsilon_{x} = 1$（当 $r_{x} < p/2$）或 $-1$（当 $r_{x} > p/2$），并令 $s_{x} = r_{x}$（前一种）或 $s_{x} = p - r_{x}$（后一种），则 $1 \\le s_{x} \\le P$。断言 $x \\mapsto s_{x}$ 是 $\\{1, \\ldots, P\\}$ 的置换：若 $s_{x} = s_{y}$，则 $r_{x} \\equiv \\pm r_{y} \\pmod p$，即 $qx \\equiv \\pm qy \\pmod p$；$q$ 在模 $p$ 下可逆，故 $x \\equiv \\pm y \\pmod p$；而 $1 \\le x, y \\le P$ 且 $p$ 是奇数，$x \\equiv -y$ 会给出 $x + y = p$，与 $x + y \\le 2P = p - 1$ 矛盾，故 $x = y$ ✓。\n\n\n\n于是把 $\\{qx\\}_{x \\le P}$ 换成最小正剩余再取符号，得到\n\n\n\n$$\\prod_{x=1}^{P} qx \\equiv \\prod_{x=1}^{P} (\\varepsilon_{x} s_{x}) = \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) \\Bigl( \\prod_{x} s_{x} \\Bigr) \\equiv \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) P! \\pmod p .$$\n\n\n\n左边 $= q^{P} P!$，约去 $P!$（$p \\nmid P!$）得 $q^{P} \\equiv \\prod_{x} \\varepsilon_{x} = (-1)^{\\mu}$，其中 $\\mu = \\#\\{x : r_{x} > p/2\\}$。由 **`lem.gauss-qr`**（Gauss 引理），$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu}$，所以\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} .$$\n\n\n\n**第二步：$\\mu$ 与 $\\sum m_{x}$ 同奇偶。** 由 $r_{x} = qx - p m_{x}$ 与 $\\sum_{x} s_{x} = \\sum_{x=1}^{P} x = \\frac{P(P+1)}{2}$，一方面\n\n\n\n$$\\sum_{x} s_{x} = \\sum_{x} r_{x} + \\sum_{r_{x} > p/2} (p - 2r_{x}) ,$$\n\n\n\n另一方面 $\\sum_{x} r_{x} = q\\sum_{x} x - p \\sum_{x} m_{x}$。把这些代入并两边模 $2$：$\\sum_{r_{x} > p/2}(p - 2r_{x}) \\equiv p\\mu \\equiv \\mu \\pmod 2$，$q \\sum_{x} x \\equiv \\sum_{x} x \\pmod 2$，于是\n\n\n\n$$\\sum_{x} x \\equiv \\sum_{x} x + \\sum_{x} m_{x} + \\mu \\pmod 2 ,$$\n\n\n\n消去 $\\sum_{x} x$ 得 $\\sum_{x} m_{x} \\equiv \\mu \\pmod 2$。故\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} = (-1)^{\\sum_{x=1}^{P} \\lfloor qx/p \\rfloor} .$$\n\n\n\n**第三步：矩形计数。** 在矩形 $R = \\{(x, y) \\in \\mathbb{Z}^{2} : 1 \\le x \\le P,\\ 1 \\le y \\le Q\\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \\mid qx$ 且 $p \\nmid q$ 给出 $p \\mid x$，但 $1 \\le x \\le P < p$，矛盾。故 $R$ 分成 $R_{-} = \\{qx - py > 0\\}$ 与 $R_{+} = \\{qx - py < 0\\}$ 两部分，$\\#R = \\#R_{-} + \\#R_{+} = PQ$。\n\n\n\n对固定 $x$，$\\{y : 1 \\le y \\le Q,\\ qx - py > 0\\} = \\{y : y < qx/p\\}$ 恰有 $\\min(Q, \\lfloor qx/p \\rfloor)$ 个元素；而 $qx/p \\le qP/p = \\frac{q(p-1)}{2p} < \\frac{q}{2}$，故 $\\lfloor qx/p \\rfloor \\le \\frac{q-1}{2} = Q$，这个数就是 $\\lfloor qx/p \\rfloor$。于是 $|R_{-}| = \\sum_{x=1}^{P} \\lfloor qx/p \\rfloor$。对称地（交换 $p \\leftrightarrow q$、$x \\leftrightarrow y$）$|R_{+}| = \\sum_{y=1}^{Q} \\lfloor py/q \\rfloor$。因此\n\n\n\n$$\\sum_{x=1}^{P} \\left\\lfloor \\frac{qx}{p} \\right\\rfloor + \\sum_{y=1}^{Q} \\left\\lfloor \\frac{py}{q} \\right\\rfloor = PQ .$$\n\n\n\n**第四步：合并。** 把第二步用在 $(p, q)$ 与 $(q, p)$ 两个方向上，再代入第三步：\n\n\n\n$$\\left(\\frac{q}{p}\\right)\\left(\\frac{p}{q}\\right) = (-1)^{PQ} = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} ,$$\n\n\n\n这正是要证的二次互反律 ✓。∎",
+   "notes": "**这是数论里最重要的一条定理**（Gauss 一生给了 8 个证明，第一个 1796 年、19 岁）。它把「$p$ 是不是模 $q$ 的剩余」这个难问题换成「$q$ 是不是模 $p$ 的剩余」这个更容易的小问题 —— 因为可以递归把 $p$ 降到 $< q$。\n\n\n\n⭐ 现在的主流证明走**有限域上的曲线计数**：$\\left(\\frac{p}{q}\\right)$ 与 $x^{2} \\equiv p \\pmod q$ 的解数有关，而这批解数可以按 $\\mathbb{F}_{p}$ 上的椭圆曲线/乘法群逐层数出来（Zolotarev 引理 + 置换的符号）。这只是**一条现代路线** —— 初等证明同样存在（Gauss 第三证明、Gauss 引理、Zolotarev 引理都是初等计数）。\n\n\n\n**用法**：判 $\\left(\\frac{a}{p}\\right)$ 时把它拆成素因子，逐个用互反律「翻过来」，再递归 —— 复杂度 $O(\\log p)$ 级别的除法。上面两条补充公式处理 $-1$ 与 $2$ 这两种「不能翻」的情形。\n\n\n\n**证明（Gauss 引理 + 矩形计数，初等）。** 记 $P = \\frac{p-1}{2}$、$Q = \\frac{q-1}{2}$。对 $1 \\le x \\le P$ 记 $m_{x} := \\left\\lfloor \\frac{qx}{p} \\right\\rfloor$，$r_{x}$ 为 $qx$ 模 $p$ 的最小正剩余（$1 \\le r_{x} \\le p-1$，因为 $p \\nmid qx$）。\n\n\n\n**第一步：Gauss 引理。** 令 $\\varepsilon_{x} = 1$（当 $r_{x} < p/2$）或 $-1$（当 $r_{x} > p/2$），并令 $s_{x} = r_{x}$（前一种）或 $s_{x} = p - r_{x}$（后一种），则 $1 \\le s_{x} \\le P$。断言 $x \\mapsto s_{x}$ 是 $\\{1, \\ldots, P\\}$ 的置换：若 $s_{x} = s_{y}$，则 $r_{x} \\equiv \\pm r_{y} \\pmod p$，即 $qx \\equiv \\pm qy \\pmod p$；$q$ 在模 $p$ 下可逆，故 $x \\equiv \\pm y \\pmod p$；而 $1 \\le x, y \\le P$ 且 $p$ 是奇数，$x \\equiv -y$ 会给出 $x + y = p$，与 $x + y \\le 2P = p - 1$ 矛盾，故 $x = y$ ✓。\n\n\n\n于是把 $\\{qx\\}_{x \\le P}$ 换成最小正剩余再取符号，得到\n\n\n\n$$\\prod_{x=1}^{P} qx \\equiv \\prod_{x=1}^{P} (\\varepsilon_{x} s_{x}) = \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) \\Bigl( \\prod_{x} s_{x} \\Bigr) \\equiv \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) P! \\pmod p .$$\n\n\n\n左边 $= q^{P} P!$，约去 $P!$（$p \\nmid P!$）得 $q^{P} \\equiv \\prod_{x} \\varepsilon_{x} = (-1)^{\\mu}$，其中 $\\mu = \\#\\{x : r_{x} > p/2\\}$。由 **`lem.gauss-qr`**（Gauss 引理），$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu}$，所以\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} .$$\n\n\n\n**第二步：$\\mu$ 与 $\\sum m_{x}$ 同奇偶。** 由 $r_{x} = qx - p m_{x}$ 与 $\\sum_{x} s_{x} = \\sum_{x=1}^{P} x = \\frac{P(P+1)}{2}$，一方面\n\n\n\n$$\\sum_{x} s_{x} = \\sum_{x} r_{x} + \\sum_{r_{x} > p/2} (p - 2r_{x}) ,$$\n\n\n\n另一方面 $\\sum_{x} r_{x} = q\\sum_{x} x - p \\sum_{x} m_{x}$。把这些代入并两边模 $2$：$\\sum_{r_{x} > p/2}(p - 2r_{x}) \\equiv p\\mu \\equiv \\mu \\pmod 2$，$q \\sum_{x} x \\equiv \\sum_{x} x \\pmod 2$，于是\n\n\n\n$$\\sum_{x} x \\equiv \\sum_{x} x + \\sum_{x} m_{x} + \\mu \\pmod 2 ,$$\n\n\n\n消去 $\\sum_{x} x$ 得 $\\sum_{x} m_{x} \\equiv \\mu \\pmod 2$。故\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} = (-1)^{\\sum_{x=1}^{P} \\lfloor qx/p \\rfloor} .$$\n\n\n\n**第三步：矩形计数。** 在矩形 $R = \\{(x, y) \\in \\mathbb{Z}^{2} : 1 \\le x \\le P,\\ 1 \\le y \\le Q\\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \\mid qx$ 且 $p \\nmid q$ 给出 $p \\mid x$，但 $1 \\le x \\le P < p$，矛盾。故 $R$ 分成 $R_{-} = \\{qx - py > 0\\}$ 与 $R_{+} = \\{qx - py < 0\\}$ 两部分，$\\#R = \\#R_{-} + \\#R_{+} = PQ$。\n\n\n\n对固定 $x$，$\\{y : 1 \\le y \\le Q,\\ qx - py > 0\\} = \\{y : y < qx/p\\}$ 恰有 $\\min(Q, \\lfloor qx/p \\rfloor)$ 个元素；而 $qx/p \\le qP/p = \\frac{q(p-1)}{2p} < \\frac{q}{2}$，故 $\\lfloor qx/p \\rfloor \\le \\frac{q-1}{2} = Q$，这个数就是 $\\lfloor qx/p \\rfloor$。于是 $\\#R_{-} = \\sum_{x=1}^{P} \\lfloor qx/p \\rfloor$。对称地（交换 $p \\leftrightarrow q$、$x \\leftrightarrow y$）$\\#R_{+} = \\sum_{y=1}^{Q} \\lfloor py/q \\rfloor$。因此\n\n\n\n$$\\sum_{x=1}^{P} \\left\\lfloor \\frac{qx}{p} \\right\\rfloor + \\sum_{y=1}^{Q} \\left\\lfloor \\frac{py}{q} \\right\\rfloor = PQ .$$\n\n\n\n**第四步：合并。** 把第二步用在 $(p, q)$ 与 $(q, p)$ 两个方向上，再代入第三步：\n\n\n\n$$\\left(\\frac{q}{p}\\right)\\left(\\frac{p}{q}\\right) = (-1)^{PQ} = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} ,$$\n\n\n\n这正是要证的二次互反律 ✓。∎",
    "refs": [
     "华罗庚《数论导引》第四章",
     "Ireland–Rosen, A Classical Introduction to Modern Number Theory, Ch. 5"
@@ -66211,7 +66439,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 17,
+   "layer": 19,
    "tags": [
     "泛函分析",
     "对偶",
@@ -66251,14 +66479,14 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 18,
+   "layer": 20,
    "tags": [
     "泛函分析",
     "对偶",
     "Riesz 表示",
     "自反"
    ],
-   "statement": "设 $(X, Y, \\langle\\cdot,\\cdot\\rangle)$ 是完美配对（`def.perfect-pairing`）。则\n\n(a) $x \\mapsto \\langle x, \\cdot\\rangle$ 是等距同构 $X \\to Y^*$ 的像，$y \\mapsto \\langle \\cdot, y\\rangle$ 是 $Y \\to X^*$ 的等距嵌入；\n\n(b) 若其中一个映射满射，则另一个也满射，且 $X \\cong Y^*$、$Y \\cong X^*$（等距同构）；\n\n(c) Hilbert 空间 $H$ 与 $L^p$（$1 < p < \\infty$，$1/p + 1/q = 1$）的配对满足满射性，因此 $H^* \\cong H$、$(L^p)^* \\cong L^q$ 都是完美配对的直接推论。",
+   "statement": "设 $(X, Y, \\langle\\cdot,\\cdot\\rangle)$ 是完美配对（`def.perfect-pairing`）。则\n\n(a) $x \\mapsto \\langle x, \\cdot\\rangle$ 是等距同构 $X \\to Y^*$ 的像，$y \\mapsto \\langle \\cdot, y\\rangle$ 是 $Y \\to X^*$ 的等距嵌入；\n\n(b) 若其中一个映射满射，则另一个也满射，且 $X \\cong Y^*$、$Y \\cong X^*$（等距同构）；\n\n(c) Hilbert 空间 $H$ 与 $L^p$（$1 < p < \\infty$，$1/p + 1/q = 1$）的配对满足满射性（Hilbert 情形用投影定理，$L^p$ 情形用 Radon–Nikodym）；因此 $H^* \\cong H$、$(L^p)^* \\cong L^q$。",
    "notes": "**证明 (a)**：由定范条件，$\\|x\\| = \\sup_{\\|y\\| \\le 1}|\\langle x, y\\rangle| = \\|T x\\|$，其中 $T x := \\langle x, \\cdot\\rangle$；由非退化 $T$ 单射，故 $T$ 是等距嵌入。对 $y$ 同理。$\\blacksquare$\n\n\n\n**证明 (b)**：若 $T : X \\to Y^*$ 满射，则由等距性 $X \\cong Y^*$。对偶化得 $X^* \\cong Y^{**}$；把 (a) 用于 $Y$ 一侧得 $Y \\hookrightarrow X^*$ 等距嵌入。要证满：任取 $\\varphi \\in X^*$，它在 $X \\cong Y^*$ 下对应 $y_0 \\in Y$（$\\varphi(x) = \\langle x, y_0\\rangle$），这正是 $y \\mapsto \\langle\\cdot, y\\rangle$ 的像，故满。$\\blacksquare$\n\n\n\n**证明 (c)**：Hilbert 情形就是 `thm.riesz-hilbert`（每个连续线性泛函由内积给出）；$L^p$ 情形就是 `thm.riesz-representation-lp`（$(L^p)^* \\cong L^q$）。两条定理的证明里，满射性分别来自投影定理与 Radon–Nikodym（或测度论版本），配对本身只提供有界与定范。\n\n\n\n⭐ 统一的意义：两个 Riesz 定理不再像两个孤立技巧，而是同一个「完美配对 + 该配对满射」框架的两个实例；`172-audit-c1.js` 里的类比边 `analogy` 现在有了正式的共同祖先。\n\n⚠ 本图尚未立「Banach–Alaoglu / 弱拓扑 / Eberlein–Šmulian」节点；因此 (b) 的「谁满谁」只在具体例子里借 Riesz 定理验证，不试图从配对的三条公理推出满射（那是假的，见 `def.perfect-pairing` 的 $\\ell^1/c_0$ 反例）。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基",
@@ -67712,7 +67940,7 @@
     "元定理"
    ],
    "statement": "设 $\\Gamma$ 是一组公式，$\\varphi$ 是公式。则\n\n$$\\Gamma \\vdash \\varphi \\iff \\Gamma \\vDash \\varphi,$$\n\n即：**可证明**与**在所有模型中都真**是同一件事。等价的形式：$\\Gamma$ 有模型 $\\iff$ $\\Gamma$ 一致。",
-   "notes": "**约定**：$\\vdash$ 取 `def.provability` 的 Hilbert 型系统（分离规则 + 推广），逻辑公理取标准模式：命题公理 (A1) $\\psi\\to(\\chi\\to\\psi)$、(A2) $(\\psi\\to(\\chi\\to\\theta))\\to((\\psi\\to\\chi)\\to(\\psi\\to\\theta))$、(A3) $(\\neg\\chi\\to\\neg\\psi)\\to(\\psi\\to\\chi)$；量词公理 (Q1) $\\forall x\\,\\psi\\to\\psi[t/x]$（$t$ 对 $x$ 可代入）、(Q2) $\\forall x(\\psi\\to\\chi)\\to(\\psi\\to\\forall x\\,\\chi)$（$x\\notin\\operatorname{FV}(\\psi)$）；等词公理 (E1) $x=x$、(E2) $x=y\\to(\\psi\\to\\psi[y/x])$。`def.provability` 没有逐条列出公理表，这里按标准取法固定一套；换等价系统不改变 $\\vdash$。$\\Gamma$ **不一致**指存在 $\\psi$ 使 $\\Gamma\\vdash\\psi$ 且 $\\Gamma\\vdash\\neg\\psi$，它等价于 $\\Gamma\\vdash\\neg(\\theta\\to\\theta)$。\n\n**第一步：化到语句。** 对 $\\Gamma\\cup\\{\\varphi\\}$ 中出现的每个自由变元 $x$ 添一个新常元 $c_x$，把公式里的 $x$ 全换成 $c_x$，得 $\\Gamma_c,\\varphi_c$。则 (i) $\\Gamma\\vdash\\varphi\\iff\\Gamma_c\\vdash\\varphi_c$：把证明里的 $c_x$ 换回自由变元 $x$（公理模式对代入封闭，分离与推广保持形状），反向把 $x$ 换成 $c_x$；(ii) $\\Gamma\\vDash\\varphi\\iff\\Gamma_c\\vDash\\varphi_c$：$\\mathcal{L}_c$ 的结构就是「$\\mathcal{L}$ 的结构 + 一个赋值」，反之每个赋值唯一延拓。所以只需对**语句**证明。\n\n**第二步：可靠性（$\\vdash\\implies\\vDash$）。** 逐条验证：命题公理是重言式；(Q1) 若 $\\forall x\\,\\psi$ 在 $\\mathfrak{A}$ 中真，则 $\\psi[t/x]$ 对每个 $t$ 的解释真；(Q2) 在 $x\\notin\\operatorname{FV}(\\psi)$ 时，若 $\\forall x(\\psi\\to\\chi)$ 与 $\\psi$ 真，则对每个 $a$ 有 $\\chi$ 真；(E1)(E2) 是等词的标准语义。分离规则保持「真」，推广保持「对所有赋值真」。对证明长度归纳得 $\\Gamma\\vdash\\varphi\\implies\\Gamma\\vDash\\varphi$。\n\n**第三步：演绎定理（语句版）。** 若 $\\sigma$ 是语句且 $\\Gamma\\cup\\{\\sigma\\}\\vdash\\psi$，则 $\\Gamma\\vdash\\sigma\\to\\psi$。对推导长度归纳：若该步是公理或 $\\Gamma$ 中公式 $\\theta$，用 (A1) $\\theta\\to(\\sigma\\to\\theta)$ 与分离规则；若是分离规则，用 (A2)；若是推广 $\\theta\\mapsto\\forall x\\,\\theta$，归纳假设给 $\\Gamma\\vdash\\sigma\\to\\theta$，推广得 $\\Gamma\\vdash\\forall x(\\sigma\\to\\theta)$，再由 (Q2)（$\\sigma$ 无自由 $x$）与分离规则得 $\\Gamma\\vdash\\sigma\\to\\forall x\\,\\theta$。∎\n\n**推论**：若 $\\Gamma\\cup\\{\\sigma\\}$ 不一致，则 $\\Gamma\\vdash\\neg\\sigma$；特别地，若 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 不一致，则 $\\Gamma\\vdash\\varphi$。证明：演绎定理给 $\\Gamma\\vdash\\sigma\\to\\psi$ 与 $\\Gamma\\vdash\\sigma\\to\\neg\\psi$，而 $(\\sigma\\to\\psi)\\to((\\sigma\\to\\neg\\psi)\\to\\neg\\sigma)$ 是重言式，分离两次即得 $\\Gamma\\vdash\\neg\\sigma$。\n\n**第四步：极大一致扩张。** 引理：每个一致语句集 $\\Gamma$ 可扩张为极大一致语句集 $\\Gamma^{*}$。证明：取 $\\kappa=\\max(|\\mathcal{L}|,\\aleph_0)$（语言 $\\mathcal{L}$ 先良序 —— 这一步用选择公理），按序数枚举所有语句 $\\{\\psi_\\alpha:\\alpha<\\kappa\\}$；令 $\\Gamma_0=\\Gamma$，若 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 一致则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$，否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并；令 $\\Gamma^{*}=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$。一致性：若 $\\Gamma^{*}$ 不一致，则某个证明只用到有限多条假设，它们全在某个 $\\Gamma_\\alpha$ 中，与 $\\Gamma_\\alpha$ 一致矛盾。极大性：若 $\\psi_\\alpha\\notin\\Gamma^{*}$，则 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 不一致，由推论得 $\\Gamma_\\alpha\\vdash\\neg\\psi_\\alpha$，故 $\\Gamma^{*}\\vdash\\neg\\psi_\\alpha$。由此：对每个语句恰有 $\\psi\\in\\Gamma^{*}$ 或 $\\neg\\psi\\in\\Gamma^{*}$；$\\Gamma^{*}$ 对 $\\vdash$ 封闭（若 $\\Gamma^{*}\\vdash\\psi$ 而 $\\psi\\notin\\Gamma^{*}$，则 $\\neg\\psi\\in\\Gamma^{*}$，与一致性矛盾）；$\\Gamma^{*}$ 含全部逻辑公理。\n\n**第五步：Henkin 见证。** 设 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\\kappa$ 个新常元 $\\{c_\\beta:\\beta<\\kappa\\}$ 得 $\\mathcal{L}^{+}$，把 $\\mathcal{L}^{+}$ 中所有形如 $\\exists x\\,\\theta(x)$ 的语句按序数枚举为 $\\{\\xi_\\alpha:\\alpha<\\kappa\\}$。**按序数超限递归**造 $\\Gamma_\\alpha$：若 $\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致且 $\\xi_\\alpha=\\exists x\\,\\theta(x)$，取一个未用过的 $c_\\beta$，令 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$；否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并。\n\n各 $\\Gamma_\\alpha$ 一致（对 $\\alpha$ 归纳，极限步用有限特征）：若 $\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$ 不一致，推论给 $\\Gamma_\\alpha\\vdash\\neg\\theta(c_\\beta)$；$c_\\beta$ 不出现在 $\\Gamma_\\alpha$ 中，把 $c_\\beta$ 换成证明中未出现的变元 $y$ 并推广，得 $\\Gamma_\\alpha\\vdash\\forall y\\,\\neg\\theta(y)$，再由 (Q1) 与命题逻辑得 $\\Gamma_\\alpha\\vdash\\neg\\exists x\\,\\theta(x)$，与「$\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致」矛盾。于是 $\\Gamma_\\kappa=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$ 一致（有限特征），再由第四步扩为极大一致 $\\Gamma^{*}$。见证性质：若 $\\exists x\\,\\theta\\in\\Gamma^{*}$ 且编号为 $\\alpha$，则 $\\Gamma_\\alpha\\cup\\{\\exists x\\,\\theta\\}\\subseteq\\Gamma^{*}$ 一致，故第 $\\alpha$ 步添了 $\\theta(c_\\beta)$，即 $\\theta(c_\\beta)\\in\\Gamma^{*}$。\n\n**第六步：项模型。** 在 $\\mathcal{L}^{+}$ 上，对闭项 $t,s$ 定义 $t\\sim s\\iff\\Gamma^{*}\\vdash t=s$；由 (E1)(E2) 这是等价关系。令 $A$ 为闭项的 $\\sim$-类全体。常元 $c^{\\mathfrak{A}}:=[c]$；函数符号 $f^{\\mathfrak{A}}([t_1],\\ldots,[t_n]):=[f(t_1,\\ldots,t_n)]$；关系符号 $R^{\\mathfrak{A}}([t_1],\\ldots,[t_n])$ 为真 $\\iff\\Gamma^{*}\\vdash R(t_1,\\ldots,t_n)$。良定义用 (E2)：若 $t_i\\sim s_i$，逐步代入得 $\\Gamma^{*}\\vdash f(t)=f(s)$ 与 $\\Gamma^{*}\\vdash R(t)\\leftrightarrow R(s)$。等词解释成相等：$[t]=[s]\\iff t\\sim s$。\n\n**第七步：真值引理。** 对每个公式 $\\psi(x_1,\\ldots,x_m)$ 与任意闭项 $t_1,\\ldots,t_m$：$\\mathfrak{A}\\vDash\\psi[\\bar t]$（赋值 $x_i\\mapsto[t_i]$）$\\iff$ $\\Gamma^{*}\\vdash\\psi(t_1,\\ldots,t_m)$。对 $\\psi$ 的结构归纳：原子公式按第六步；$\\neg$ 用极大性（对每个语句恰有它或它的否定在 $\\Gamma^{*}$）；$\\wedge$ 用 $\\Gamma^{*}$ 对 $\\vdash$ 封闭与重言式 $\\psi\\to(\\chi\\to\\psi\\wedge\\chi)$、$\\psi\\wedge\\chi\\to\\psi$、$\\psi\\wedge\\chi\\to\\chi$。\n\n量词情形：先注意对任意闭项 $t$，$\\Gamma^{*}\\vdash\\forall x\\,\\psi\\to\\psi(t)$（(Q1) 加分离规则）。($\\Leftarrow$) 若 $\\forall x\\,\\psi\\in\\Gamma^{*}$，则每个实例 $\\psi(t)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\psi[\\bar t]$ 对所有 $[t]$，故 $\\mathfrak{A}\\vDash\\forall x\\,\\psi$。($\\implies$) 若 $\\forall x\\,\\psi\\notin\\Gamma^{*}$，则 $\\neg\\forall x\\,\\psi\\in\\Gamma^{*}$；命题逻辑（用 (Q1)）给 $\\Gamma^{*}\\vdash\\exists x\\,\\neg\\psi$，见证性质给 $c$ 使 $\\neg\\psi(c)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\neg\\psi[\\bar c]$，故 $\\mathfrak{A}\\not\\vDash\\forall x\\,\\psi$。\n\n**第八步：收尾。** 第七步给出 $\\mathfrak{A}\\vDash\\Gamma^{*}$，故 $\\Gamma$ 有模型。于是对语句：若 $\\Gamma\\not\\vdash\\varphi$，则 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 一致（否则推论给 $\\Gamma\\vdash\\varphi$），由第五至七步有模型 $\\mathfrak{A}\\vDash\\Gamma\\cup\\{\\neg\\varphi\\}$，即 $\\Gamma\\not\\vDash\\varphi$。逆否即 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$；与第二步合起来即 $\\Gamma\\vdash\\varphi\\iff\\Gamma\\vDash\\varphi$。一般公式由第一步化到语句。∎\n\n**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\\kappa=\\aleph_0$）：取 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$，添 $\\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\\{c_\\beta:\\beta<\\kappa\\}$，每步取最小未用 $\\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\\implies$ 整个理论有模型）由 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。",
+   "notes": "**约定**：$\\vdash$ 取 `def.provability` 的 Hilbert 型系统（分离规则 + 推广），逻辑公理取标准模式：命题公理 (A1) $\\psi\\to(\\chi\\to\\psi)$、(A2) $(\\psi\\to(\\chi\\to\\theta))\\to((\\psi\\to\\chi)\\to(\\psi\\to\\theta))$、(A3) $(\\neg\\chi\\to\\neg\\psi)\\to(\\psi\\to\\chi)$；量词公理 (Q1) $\\forall x\\,\\psi\\to\\psi[t/x]$（$t$ 对 $x$ 可代入）、(Q2) $\\forall x(\\psi\\to\\chi)\\to(\\psi\\to\\forall x\\,\\chi)$（$x\\notin\\operatorname{FV}(\\psi)$）；等词公理 (E1) $x=x$、(E2) $x=y\\to(\\psi\\to\\psi[y/x])$。`def.provability` 没有逐条列出公理表，这里按标准取法固定一套；换等价系统不改变 $\\vdash$。$\\Gamma$ **不一致**指存在 $\\psi$ 使 $\\Gamma\\vdash\\psi$ 且 $\\Gamma\\vdash\\neg\\psi$，它等价于 $\\Gamma\\vdash\\neg(\\theta\\to\\theta)$。\n\n**第一步：化到语句。** 对 $\\Gamma\\cup\\{\\varphi\\}$ 中出现的每个自由变元 $x$ 添一个新常元 $c_x$，把公式里的 $x$ 全换成 $c_x$，得 $\\Gamma_c,\\varphi_c$。则 (i) $\\Gamma\\vdash\\varphi\\iff\\Gamma_c\\vdash\\varphi_c$：把证明里的 $c_x$ 换回自由变元 $x$（公理模式对代入封闭，分离与推广保持形状），反向把 $x$ 换成 $c_x$；(ii) $\\Gamma\\vDash\\varphi\\iff\\Gamma_c\\vDash\\varphi_c$：$\\mathcal{L}_c$ 的结构就是「$\\mathcal{L}$ 的结构 + 一个赋值」，反之每个赋值唯一延拓。所以只需对**语句**证明。\n\n**第二步：可靠性（$\\vdash\\implies\\vDash$）。** 逐条验证：命题公理是重言式；(Q1) 若 $\\forall x\\,\\psi$ 在 $\\mathfrak{A}$ 中真，则 $\\psi[t/x]$ 对每个 $t$ 的解释真；(Q2) 在 $x\\notin\\operatorname{FV}(\\psi)$ 时，若 $\\forall x(\\psi\\to\\chi)$ 与 $\\psi$ 真，则对每个 $a$ 有 $\\chi$ 真；(E1)(E2) 是等词的标准语义。分离规则保持「真」，推广保持「对所有赋值真」。对证明长度归纳得 $\\Gamma\\vdash\\varphi\\implies\\Gamma\\vDash\\varphi$。\n\n**第三步：演绎定理（语句版）。** 若 $\\sigma$ 是语句且 $\\Gamma\\cup\\{\\sigma\\}\\vdash\\psi$，则 $\\Gamma\\vdash\\sigma\\to\\psi$。对推导长度归纳：若该步是公理或 $\\Gamma$ 中公式 $\\theta$，用 (A1) $\\theta\\to(\\sigma\\to\\theta)$ 与分离规则；若是分离规则，用 (A2)；若是推广 $\\theta\\mapsto\\forall x\\,\\theta$，归纳假设给 $\\Gamma\\vdash\\sigma\\to\\theta$，推广得 $\\Gamma\\vdash\\forall x(\\sigma\\to\\theta)$，再由 (Q2)（$\\sigma$ 无自由 $x$）与分离规则得 $\\Gamma\\vdash\\sigma\\to\\forall x\\,\\theta$。∎\n\n**推论**：若 $\\Gamma\\cup\\{\\sigma\\}$ 不一致，则 $\\Gamma\\vdash\\neg\\sigma$；特别地，若 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 不一致，则 $\\Gamma\\vdash\\varphi$。证明：演绎定理给 $\\Gamma\\vdash\\sigma\\to\\psi$ 与 $\\Gamma\\vdash\\sigma\\to\\neg\\psi$，而 $(\\sigma\\to\\psi)\\to((\\sigma\\to\\neg\\psi)\\to\\neg\\sigma)$ 是重言式，分离两次即得 $\\Gamma\\vdash\\neg\\sigma$。\n\n**第四步：极大一致扩张。** 引理：每个一致语句集 $\\Gamma$ 可扩张为极大一致语句集 $\\Gamma^{*}$。证明：取 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$（语言 $\\mathcal{L}$ 先良序 —— 这一步用选择公理），按序数枚举所有语句 $\\{\\psi_\\alpha:\\alpha<\\kappa\\}$；令 $\\Gamma_0=\\Gamma$，若 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 一致则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$，否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并；令 $\\Gamma^{*}=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$。一致性：若 $\\Gamma^{*}$ 不一致，则某个证明只用到有限多条假设，它们全在某个 $\\Gamma_\\alpha$ 中，与 $\\Gamma_\\alpha$ 一致矛盾。极大性：若 $\\psi_\\alpha\\notin\\Gamma^{*}$，则 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 不一致，由推论得 $\\Gamma_\\alpha\\vdash\\neg\\psi_\\alpha$，故 $\\Gamma^{*}\\vdash\\neg\\psi_\\alpha$。由此：对每个语句恰有 $\\psi\\in\\Gamma^{*}$ 或 $\\neg\\psi\\in\\Gamma^{*}$；$\\Gamma^{*}$ 对 $\\vdash$ 封闭（若 $\\Gamma^{*}\\vdash\\psi$ 而 $\\psi\\notin\\Gamma^{*}$，则 $\\neg\\psi\\in\\Gamma^{*}$，与一致性矛盾）；$\\Gamma^{*}$ 含全部逻辑公理。\n\n**第五步：Henkin 见证。** 设 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\\kappa$ 个新常元 $\\{c_\\beta:\\beta<\\kappa\\}$ 得 $\\mathcal{L}^{+}$，把 $\\mathcal{L}^{+}$ 中所有形如 $\\exists x\\,\\theta(x)$ 的语句按序数枚举为 $\\{\\xi_\\alpha:\\alpha<\\kappa\\}$。**按序数超限递归**造 $\\Gamma_\\alpha$：若 $\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致且 $\\xi_\\alpha=\\exists x\\,\\theta(x)$，取一个未用过的 $c_\\beta$，令 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$；否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并。\n\n各 $\\Gamma_\\alpha$ 一致（对 $\\alpha$ 归纳，极限步用有限特征）：若 $\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$ 不一致，推论给 $\\Gamma_\\alpha\\vdash\\neg\\theta(c_\\beta)$；$c_\\beta$ 不出现在 $\\Gamma_\\alpha$ 中，把 $c_\\beta$ 换成证明中未出现的变元 $y$ 并推广，得 $\\Gamma_\\alpha\\vdash\\forall y\\,\\neg\\theta(y)$，再由 (Q1) 与命题逻辑得 $\\Gamma_\\alpha\\vdash\\neg\\exists x\\,\\theta(x)$，与「$\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致」矛盾。于是 $\\Gamma_\\kappa=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$ 一致（有限特征），再由第四步扩为极大一致 $\\Gamma^{*}$。见证性质：若 $\\exists x\\,\\theta\\in\\Gamma^{*}$ 且编号为 $\\alpha$，则 $\\Gamma_\\alpha\\cup\\{\\exists x\\,\\theta\\}\\subseteq\\Gamma^{*}$ 一致，故第 $\\alpha$ 步添了 $\\theta(c_\\beta)$，即 $\\theta(c_\\beta)\\in\\Gamma^{*}$。\n\n**第六步：项模型。** 在 $\\mathcal{L}^{+}$ 上，对闭项 $t,s$ 定义 $t\\sim s\\iff\\Gamma^{*}\\vdash t=s$；由 (E1)(E2) 这是等价关系。令 $A$ 为闭项的 $\\sim$-类全体。常元 $c^{\\mathfrak{A}}:=[c]$；函数符号 $f^{\\mathfrak{A}}([t_1],\\ldots,[t_n]):=[f(t_1,\\ldots,t_n)]$；关系符号 $R^{\\mathfrak{A}}([t_1],\\ldots,[t_n])$ 为真 $\\iff\\Gamma^{*}\\vdash R(t_1,\\ldots,t_n)$。良定义用 (E2)：若 $t_i\\sim s_i$，逐步代入得 $\\Gamma^{*}\\vdash f(t)=f(s)$ 与 $\\Gamma^{*}\\vdash R(t)\\leftrightarrow R(s)$。等词解释成相等：$[t]=[s]\\iff t\\sim s$。\n\n**第七步：真值引理。** 对每个公式 $\\psi(x_1,\\ldots,x_m)$ 与任意闭项 $t_1,\\ldots,t_m$：$\\mathfrak{A}\\vDash\\psi[\\bar t]$（赋值 $x_i\\mapsto[t_i]$）$\\iff$ $\\Gamma^{*}\\vdash\\psi(t_1,\\ldots,t_m)$。对 $\\psi$ 的结构归纳：原子公式按第六步；$\\neg$ 用极大性（对每个语句恰有它或它的否定在 $\\Gamma^{*}$）；$\\wedge$ 用 $\\Gamma^{*}$ 对 $\\vdash$ 封闭与重言式 $\\psi\\to(\\chi\\to\\psi\\wedge\\chi)$、$\\psi\\wedge\\chi\\to\\psi$、$\\psi\\wedge\\chi\\to\\chi$。\n\n量词情形：先注意对任意闭项 $t$，$\\Gamma^{*}\\vdash\\forall x\\,\\psi\\to\\psi(t)$（(Q1) 加分离规则）。($\\Leftarrow$) 若 $\\forall x\\,\\psi\\in\\Gamma^{*}$，则每个实例 $\\psi(t)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\psi[\\bar t]$ 对所有 $[t]$，故 $\\mathfrak{A}\\vDash\\forall x\\,\\psi$。($\\implies$) 若 $\\forall x\\,\\psi\\notin\\Gamma^{*}$，则 $\\neg\\forall x\\,\\psi\\in\\Gamma^{*}$；命题逻辑（用 (Q1)）给 $\\Gamma^{*}\\vdash\\exists x\\,\\neg\\psi$，见证性质给 $c$ 使 $\\neg\\psi(c)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\neg\\psi[\\bar c]$，故 $\\mathfrak{A}\\not\\vDash\\forall x\\,\\psi$。\n\n**第八步：收尾。** 第七步给出 $\\mathfrak{A}\\vDash\\Gamma^{*}$，故 $\\Gamma$ 有模型。于是对语句：若 $\\Gamma\\not\\vdash\\varphi$，则 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 一致（否则推论给 $\\Gamma\\vdash\\varphi$），由第五至七步有模型 $\\mathfrak{A}\\vDash\\Gamma\\cup\\{\\neg\\varphi\\}$，即 $\\Gamma\\not\\vDash\\varphi$。逆否即 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$；与第二步合起来即 $\\Gamma\\vdash\\varphi\\iff\\Gamma\\vDash\\varphi$。一般公式由第一步化到语句。∎\n\n**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\\kappa=\\aleph_0$）：取 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$，添 $\\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\\{c_\\beta:\\beta<\\kappa\\}$，每步取最小未用 $\\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\\implies$ 整个理论有模型）由 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。",
    "refs": [
     "Enderton, A Mathematical Introduction to Logic, Ch. 2.5",
     "Kunen, Set Theory, Ch. I"
@@ -67725,19 +67953,31 @@
    "title": "紧致性定理：每个有限子集可满足 $\\implies$ 整个理论可满足",
    "label_en": "compactness theorem",
    "title_en": "compactness theorem",
+   "statement_en": "Let $\\Gamma$ be a set of first-order formulas. If **every finite subset** of $\\Gamma$ has a model, then $\\Gamma$ itself has a model.\n\nEquivalently: if $\\Gamma \\vDash \\varphi$, then there is a **finite** $\\Gamma_{0} \\subseteq \\Gamma$ with $\\Gamma_{0} \\vDash \\varphi$.",
+   "notes_en": "It is a **one-sentence corollary**: by the completeness theorem, having a model $\\iff$ being consistent; and inconsistency is witnessed by a **finite** proof, which uses only finitely many formulas of $\\Gamma$. So inconsistency is always finitely visible, and taking the contrapositive gives compactness.\n\n**Second proof** (avoiding completeness): use ultraproducts / Łoś's theorem — take the directed family of finite subsets as the index set, choose a model of each finite subset, and the ultraproduct is a model of the whole theory. Ultraproducts are not developed here, so this is only a remark.\n\nIt is **the reason first-order logic cannot express finiteness**: let $\\Gamma$ consist of infinitely many sentences saying \"field + characteristic 0 + finite\". Every finite subset is satisfiable in some finite field, so the whole of $\\Gamma$ has a model — an **infinite** \"finite field\". Likewise the standard model of the natural numbers cannot be characterised by first-order axioms: non-standard analysis is a direct product of this theorem.\n\n**The resemblance to topological compactness (`def.compact`) is only in the name**: that one says \"every open cover has a finite subcover\", this one says \"finitely satisfiable $\\implies$ satisfiable\". The two are connected only by an **analogy edge**, not by a dependence of theorems.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#39f5f6d3",
+      "notes": "v0.9.3#86ad03b3"
+     }
     }
    },
    "en_page": "nodes/thm.compactness.en.md",
@@ -68296,7 +68536,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 31,
+   "layer": 30,
    "tags": [
     "命题",
     "拓扑",
@@ -68337,7 +68577,7 @@
     "topology"
    ],
    "cluster": "topology.surfaces",
-   "layer": 31,
+   "layer": 30,
    "tags": [
     "命题",
     "拓扑",
@@ -70418,7 +70658,7 @@
     "complex"
    ],
    "cluster": "topology.surfaces",
-   "layer": 32,
+   "layer": 31,
    "tags": [
     "定理",
     "Riemann 面",
@@ -73715,10 +73955,14 @@
   },
   {
    "id": "def-link.recursion-wellordering",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.recursion-wellorder",
-   "usedBy": "thm.wellordering",
+   "sources": [
+    "thm.recursion-wellorder"
+   ],
+   "target": "thm.wellordering",
+   "title": "超限递归把选择函数展开成良序",
+   "proof": "良序定理的证明：给定集合 $X$ 与选择函数 $c$（取 $X$ 的每个非空子集的一个元素），沿序数递归定义 $f(\\alpha)$：若 $X\\setminus f[\\alpha]$ 非空则 $f(\\alpha)=c(X\\setminus f[\\alpha])$，否则停。`thm.recursion-wellorder` 保证「按前段已取到的值定义下一步」是合法的集合构造，于是「一直取下去」这件事本身是一个对象而非过程。取尽时 $\\alpha$ 段的序经 $f$ 拉回给出 $X$ 的良序；未取尽则得到 $X$ 到某段序数的单射，与 Hartogs 定理矛盾。∎",
    "note": "证明良序定理时用超限递归沿良序一步步往下取元素。"
   },
   {
@@ -75047,7 +75291,7 @@
    "strength": "strong",
    "definition": "lem.urysohn",
    "usedBy": "prop.paracompact-partition-unity",
-   "note": "构造 $g_{i}$ 那一步用的是 Urysohn 引理。"
+   "note": "构造 $g_{i}$ 那一步把 Urysohn 引理用到具体闭集对上 —— 按**实例化**理解，不是构造依赖。"
   },
   {
    "id": "def-link.constsheaf-presheaf",
@@ -75231,10 +75475,14 @@
   },
   {
    "id": "def-link.ttr-lc",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.pontryagin-van-kampen",
-   "usedBy": "prop.chaus-two-term-resolution",
+   "sources": [
+    "thm.pontryagin-van-kampen"
+   ],
+   "target": "prop.chaus-two-term-resolution",
+   "title": "对偶把「紧」换成「离散」造两项分解",
+   "proof": "命题要在 $\\mathbf{CHaus}$ 里为 $M$ 造出 $\\mathbb{Z}^{(I)}\\to M\\to 0$ 型的两项表现。第一步用 `thm.pontryagin-van-kampen`：对偶 $M\\mapsto\\widehat{M}=\\operatorname{Hom}_{\\mathrm{cts}}(M,T)$ 给出 $M$ 紧 $\\iff\\widehat{M}$ 离散，并把满射换成单射、单射换成满射。于是取 $\\widehat{M}$ 的生成元集 $(e_{i})_{i\\in I}$ 得满射 $\\mathbb{Z}^{(I)}\\twoheadrightarrow\\widehat{M}$，对偶回来得单射 $M\\hookrightarrow T^{I}$，取商即得所需正合列。紧性、离散性与满/单的互换整条都建立在该定理上。∎",
    "note": "「紧 $\\iff$ 对偶离散」用的是 Pontryagin–van Kampen 对偶。"
   },
   {
@@ -76599,10 +76847,14 @@
   },
   {
    "id": "def-link.univuniq-yoneda",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "lem.yoneda",
-   "usedBy": "prop.universal-unique-iso",
+   "sources": [
+    "lem.yoneda"
+   ],
+   "target": "prop.universal-unique-iso",
+   "title": "米田引理给出万有元素的唯一同构",
+   "proof": "设 $(X,s)$、$(X^{\\prime},s^{\\prime})$ 都是 $F$ 的万有元素。万有性给唯一 $f:X\\to X^{\\prime}$ 使 $F(f)(s)=s^{\\prime}$，以及 $g:X^{\\prime}\\to X$ 使 $F(g)(s^{\\prime})=s$。于是 $F(gf)(s)=s$，而 $F(\\operatorname{id}_{X})(s)=s$，由「满足 $F(h)(s)=s$ 的 $h$ 唯一」得 $gf=\\operatorname{id}_{X}$；对称地 $fg=\\operatorname{id}_{X^{\\prime}}$。唯一性这一步是 `lem.yoneda`：$\\operatorname{Nat}(h_{X},F)\\cong F(X)$ 是双射，故至多一个。∎",
    "note": "唯一性由米田引理给出。"
   },
   {
@@ -79884,7 +80136,7 @@
    "strength": "strong",
    "definition": "thm.nth-root",
    "usedBy": "thm.p-series",
-   "note": "凝聚判别法把 $1/n^{p}$ 换成 $2^{k(1-p)}$ 时，写的是 $2^{k} \\cdot 2^{-kp}$；指数与根号在这里是同一套约定。"
+   "note": "凝聚判别法把 /n^{p}$ 换成 $2^{k(1-p)}$ 时，指数与根号只是同一套约定的两种写法；按**实例化**理解，不是构造依赖。"
   },
   {
    "id": "imp.csz-free",
@@ -84061,10 +84313,14 @@
   },
   {
    "id": "dep.spivak-partition-changevars",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "prop.paracompact-partition-unity",
-   "usedBy": "thm.change-of-variables-manifold",
+   "sources": [
+    "prop.paracompact-partition-unity"
+   ],
+   "target": "thm.change-of-variables-manifold",
+   "title": "单位分解把逐卡换元拼成流形上的换元公式",
+   "proof": "设 $M$ 由保向图册 $\\{(U_\\alpha,\\varphi_\\alpha)\\}$ 覆盖，取从属于 $\\{U_\\alpha\\}$ 的光滑单位分解 $\\{\\rho_\\alpha\\}$（`prop.paracompact-partition-unity`）。对 $n$-形式 $\\omega$ 令 $\\int_M\\omega:=\\sum_\\alpha\\int_{U_\\alpha}\\rho_\\alpha\\omega$，每一项经 $\\varphi_\\alpha$ 拉回 $\\mathbb{R}^{n}$ 后按 $\\mathbb{R}^{n}$ 的换元公式计算。① 局部有限性保证每点只有有限多个 $\\rho_\\alpha$ 非零，右侧实质是有限和。② 与图册无关：换一组卡后两项在同一张卡上逐项比较，相等由 $\\mathbb{R}^{n}$ 上换元公式的 $|\\det|$ 因子给出，保向时该因子为正。③ 换定向使每张卡上 $\\det$ 变号，整体积分变号。∎",
    "note": "把流形上的积分拆成逐卡的 $\\mathbb{R}^{n}$ 积分，靠的是从属于保向图册的单位分解；没有它，定理只能逐卡陈述，拼不成整体。"
   },
   {
@@ -84659,10 +84915,14 @@
   },
   {
    "id": "dep.mf2-leftinv-liethird",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "prop.left-invariant-fields",
-   "usedBy": "thm.lie-third",
+   "sources": [
+    "prop.left-invariant-fields"
+   ],
+   "target": "thm.lie-third",
+   "title": "左不变向量场给出 $\\mathfrak{g}$ 上的括号",
+   "proof": "`prop.left-invariant-fields` 给出：$X\\mapsto X(e)$ 是左不变向量场空间到 $T_{e}G$ 的线性同构，且 $[X,Y]$ 仍左不变。于是把 $\\operatorname{Lie}(G)$ 定义为 $T_{e}G$ 并配 $[v,w]:=[X_{v},X_{w}](e)$ 是良定义的 —— 这就是第三定理里出现的括号。第三定理断言 $G\\mapsto\\mathfrak{g}$ 是函子且连通单连通时 $\\operatorname{Hom}(G,H)\\cong\\operatorname{Hom}(\\mathfrak{g},\\mathfrak{h})$；陈述里的 $\\mathfrak{g}$、$\\mathfrak{h}$ 及其括号全部经由上述同构定义，缺了这条命题连「$\\operatorname{Lie}(G)\\cong\\mathfrak{g}$」都无从写起。∎",
    "note": "$\\operatorname{Lie}(G) \\cong \\mathfrak{g}$ 这句话里的 $\\operatorname{Lie}(G)$ 就是「$T_{e}G$ 配上左不变向量场的括号」，出处是那条命题。"
   },
   {
@@ -86528,10 +86788,14 @@
   },
   {
    "id": "dep.sc-caratheodory",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "lem.caratheodory-osgood",
-   "usedBy": "thm.schwarz-christoffel",
+   "sources": [
+    "lem.caratheodory-osgood"
+   ],
+   "target": "thm.schwarz-christoffel",
+   "title": "Carathéodory–Osgood 提供 S–C 的存在性",
+   "proof": "S–C 要证：给定内角 $\\alpha_{k}\\in(0,2]$ 的多边形 $P$，存在上半平面到 $P$ 的共形映射，形状为 $f(z)=A\\int^{z}\\prod_{k}(\\zeta-x_{k})^{\\alpha_{k}-1}\\,d\\zeta+B$。形式那一半已在本节点完整证明；存在性用的正是 `lem.caratheodory-osgood`：多边形边界是 Jordan 曲线，故共形映射 $\\mathbb{H}\\to P$ 连续延拓到闭包、边界一一对应。有了这个延拓才能说「$x_{k}$ 映到第 $k$ 个顶点」，才能用 Schwarz 反射算出 $f^{\\prime}$ 的形状；没有它，证明停在「内部双全纯」，连顶点都指不出来。∎",
    "note": "S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由本引理提供；引用它而不是直接引用 `thm.riemann-mapping`。"
   },
   {
@@ -86540,7 +86804,7 @@
    "strength": "strong",
    "definition": "lem.caratheodory-osgood",
    "usedBy": "thm.boundary-correspondence",
-   "note": "`thm.boundary-correspondence` 的陈述就是本引理在 Jordan 区域上的形式；本引理把它拆成「连续延拓 + 边界单射」两条外部定理并给出同胚收尾。"
+   "note": "`thm.boundary-correspondence` 就是本引理在 Jordan 区域上的形式（同一命题的两种表述）；按**实例化**理解，不是构造依赖。"
   },
   {
    "id": "e106.implication",
@@ -89998,7 +90262,7 @@
    "strength": "strong",
    "definition": "thm.inverse-function-banach",
    "usedBy": "thm.frechet-derivative",
-   "note": "Banach 版逆映射定理的假设「$f'(a)$ 可逆」用的就是这个导数。"
+   "note": "Fréchet 导数的定义本身不依赖逆映射定理；这里记的是「定理假设 $f'(a)$ 可逆用的就是这个导数」这层实例化关系，不是构造依赖。"
   },
   {
    "id": "dep-ip-gl",
@@ -90102,7 +90366,7 @@
    "strength": "strong",
    "definition": "prop.chern-class-line-bundle",
    "usedBy": "thm.splitting-principle",
-   "note": "分裂到线丛之后，每一块都用线丛那条公式算。"
+   "note": "分裂到线丛之后逐块套用线丛公式 —— 按**实例化**理解（把一般公式用到具体对象上），不是构造依赖。"
   },
   {
    "id": "dep.weak-banach",
@@ -90124,7 +90388,7 @@
    "id": "def-link.pp-dual",
    "kind": "definition",
    "strength": "strong",
-   "definition": "def.dual-space",
+   "definition": "def.dual-banach",
    "usedBy": "def.perfect-pairing",
    "note": "配对的两侧嵌入到对方对偶空间；完美配对的第三条要求这两个嵌入保范。"
   },
@@ -90148,7 +90412,7 @@
    "id": "def-link.rpp-dual",
    "kind": "definition",
    "strength": "strong",
-   "definition": "def.dual-space",
+   "definition": "def.dual-banach",
    "usedBy": "thm.riesz-perfect-pairing",
    "note": "结论是 $X \\cong Y^*$、$Y \\cong X^*$，所以两边都是对偶空间。"
   },
@@ -90161,7 +90425,7 @@
    ],
    "target": "thm.riesz-perfect-pairing",
    "title": "完美配对 $\\implies$ 两个 Riesz 嵌入与互满准则",
-   "proof": "设 $(X, Y, \\langle\\cdot,\\cdot\\rangle)$ 是完美配对。\n\n**(a)** 令 $T x = \\langle x, \\cdot\\rangle \\in Y^*$。由定义第三条，$\\|x\\| = \\sup_{\\|y\\| \\le 1}|\\langle x, y\\rangle| = \\|T x\\|$；由第一条，$T x = 0 \\implies x = 0$。故 $T$ 是等距嵌入。对 $S y = \\langle\\cdot, y\\rangle \\in X^*$ 同理。\n\n**(b)** 若 $T$ 满，则 $T$ 是等距同构 $X \\to Y^*$。对偶化得 $T^* : Y^{**} \\to X^*$ 等距同构；而 $S : Y \\to X^*$ 是等距嵌入，且 $T^*$ 把 $J_Y(Y)$ 送到 $S(Y)$（验证：$T^* J_Y y (x) = J_Y y(T x) = \\langle x, y\\rangle = S y(x)$）。$J_Y$ 总是等距，故 $S(Y) = T^* J_Y(Y)$ 在 $T^*$ 下同构于 $Y$，而 $T^*$ 满（同构），所以 $S$ 也满。$\\blacksquare$\n\n于是 (b) 成立；把 (c) 的两个具体配对代入即得 $H^* \\cong H$ 与 $(L^p)^* \\cong L^q$。",
+   "proof": "设 $(X, Y, \\langle\\cdot,\\cdot\\rangle)$ 是完美配对。\n\n**(a)** 令 $T x = \\langle x, \\cdot\\rangle \\in Y^*$。由定义第三条，$\\|x\\| = \\sup_{\\|y\\| \\le 1}|\\langle x, y\\rangle| = \\|T x\\|$；由第一条，$T x = 0 \\implies x = 0$。故 $T$ 是等距嵌入。对 $S y = \\langle\\cdot, y\\rangle \\in X^*$ 同理。\n\n**(b)** 若 $T$ 满，则 $T$ 是等距同构 $X \\to Y^*$。对偶化得 $T^* : Y^{**} \\to X^*$ 等距同构；而 $S : Y \\to X^*$ 是等距嵌入，且 $T^*$ 把 $J_Y(Y)$ 送到 $S(Y)$（验证：$T^* J_Y y (x) = J_Y y(T x) = \\langle x, y\\rangle = S y(x)$）。$J_Y$ 总是等距，故 $S(Y) = T^* J_Y(Y)$ 在 $T^*$ 下同构于 $Y$，而 $T^*$ 满（同构），所以 $S$ 也满。$\\blacksquare$\n\n于是 (b) 成立。(c) 的满射性不属于本边：它分别由 `thm.riesz-hilbert`（投影定理）与 `thm.riesz-representation-lp`（Radon–Nikodym）提供，见 `imp.riesz-hilbert-pink`、`imp.riesz-lp-pink`。",
    "note": "注意 (b) 只用「一个满」推出「另一个满」，不声称三条公理本身蕴含满射——反例见 `def.perfect-pairing` 的 $\\ell^1/c_0$。"
   },
   {
@@ -90216,6 +90480,15 @@
    "definition": "def.banach-space",
    "usedBy": "def.reflexive-space",
    "note": "自反性是对 Banach 空间说的（完备性用于 $X^{**}$ 的范数结构）。"
+  },
+  {
+   "id": "ana.reflexive-perfect-pairing",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.reflexive-space",
+   "b": "def.perfect-pairing",
+   "title": "",
+   "note": "自反的等价刻画：自然嵌入满等价于完美配对的两侧嵌入全满；这是同一现象的两套语言，不是定义依赖。"
   },
   {
    "id": "def-link.lpref-ref",
@@ -90285,12 +90558,44 @@
    "id": "e169.definition",
    "kind": "definition",
    "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "thm.projection-convex",
+   "note": "投影定理的另一个核心假设：$C$ 闭（极小化序列的极限仍落在 $C$ 里）。"
+  },
+  {
+   "id": "e170.definition",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.closed-set",
+   "usedBy": "thm.projection-subspace",
+   "note": "正交分解要求子空间 $E$ 闭；否则最近点可能不落在 $E$ 里。"
+  },
+  {
+   "id": "e171.definition",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hilbert-space",
+   "usedBy": "thm.projection-subspace",
+   "note": "正交投影与正交分解在 Hilbert 空间中进行，完备性用于调用凸闭集投影。"
+  },
+  {
+   "id": "e172.definition",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.convex-set",
+   "usedBy": "def.convex-hull",
+   "note": "凸包定义为包含 $S$ 的最小凸集，直接用凸集概念。"
+  },
+  {
+   "id": "e173.definition",
+   "kind": "definition",
+   "strength": "strong",
    "definition": "def.star-shaped",
    "usedBy": "lem.poincare-lemma",
    "note": "Poincaré 引理里的星形区域就是这里的星形开集；星点可作收缩中心。"
   },
   {
-   "id": "e170.implication",
+   "id": "e174.implication",
    "kind": "implication",
    "strength": "strong",
    "sources": [
@@ -90302,7 +90607,7 @@
    "note": "「非空」不能省：空集是凸的但不是星形集（没有星点）。逆命题也不成立：十字形星形但不凸。"
   },
   {
-   "id": "e171.definition",
+   "id": "e175.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-set",
@@ -90310,7 +90615,7 @@
    "note": "凸组合是凸集对有限线性组合封闭的载体；两点情形就是凸集定义里的线段。"
   },
   {
-   "id": "e172.definition",
+   "id": "e176.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-combination",
@@ -90318,7 +90623,7 @@
    "note": "凸包的有限凸组合刻画直接用到凸组合。"
   },
   {
-   "id": "e173.definition",
+   "id": "e177.definition",
    "kind": "definition",
    "strength": "strong",
    "definition": "def.convex-hull",
@@ -90454,9 +90759,9 @@
    ],
    "target": "thm.riesz-hilbert",
    "layer": false,
-   "title": "配对框架到 Hilbert 版 Riesz 表示（组织性回头边）",
-   "proof": "**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 只给出完美配对框架，并把 Hilbert 内积配对列为实例：三条公理由 Cauchy–Schwarz 与非退化性验证。\n它**不**推出满射性 $H^{*}\\cong H$；满射性由 `thm.riesz-hilbert` 用投影定理/正交分解独立证明。\n因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。",
-   "note": "组织性回头边：配对定理只给框架；满射性仍由投影定理给出，不是从完美配对的三条公理单独推出。"
+   "title": "配对框架到 Hilbert 版 Riesz 表示（框架到实例）",
+   "proof": "由 `thm.riesz-perfect-pairing` (c)，Hilbert 内积配对满足满射性；结合 (a) 的等距性，$T:x\\mapsto\\langle x,\\cdot\\rangle$ 是等距同构 $H\\to H^{*}$。\n这正是 `thm.riesz-hilbert` 的内容（$H^{*}\\cong H$）。(c) 的满射性由投影定理/正交分解提供，与 target 的证明一致。\n因此这条边把定理 (c) 拆成具体入口（框架到实例），`layer: false` 表示它不参与分层。",
+   "note": "这是把定理 (c) 拆成具体入口的回头边；满射性由 (c) 的证明（投影定理/正交分解）提供。"
   },
   {
    "id": "imp.riesz-lp-pink",
@@ -90467,9 +90772,9 @@
    ],
    "target": "thm.riesz-representation-lp",
    "layer": false,
-   "title": "配对框架到 $L^p$ 版 Riesz 表示（组织性回头边）",
-   "proof": "**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 把 $(L^{p},L^{q})$ 列为完美配对实例：三条公理由 Hölder 与对偶刻画验证。\n它**不**推出 $(L^{p})^{*}\\cong L^{q}$；满射性由 `thm.riesz-representation-lp` 用 Radon–Nikodym 独立证明。\n因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。",
-   "note": "组织性回头边：配对定理只给框架；满射性仍由 Radon–Nikodym / 对偶刻画给出，不是从完美配对的三条公理单独推出。"
+   "title": "配对框架到 $L^p$ 版 Riesz 表示（框架到实例）",
+   "proof": "由 `thm.riesz-perfect-pairing` (c)，$(L^{p},L^{q})$ 配对满足满射性；结合 (a) 的等距性，$g\\mapsto\\int(\\cdot)g$ 是等距同构 $L^{q}\\to(L^{p})^{*}$。\n这正是 `thm.riesz-representation-lp` 的内容（$(L^{p})^{*}\\cong L^{q}$）。(c) 的满射性由 Radon–Nikodym 提供，与 target 的证明一致。\n因此这条边把定理 (c) 拆成具体入口（框架到实例），`layer: false` 表示它不参与分层。",
+   "note": "这是把定理 (c) 拆成具体入口的回头边；满射性由 (c) 的证明（Radon–Nikodym）提供。"
   },
   {
    "id": "imp.fa-baire-characterizations",
@@ -91408,7 +91713,7 @@
    "note": "线性同构 = 双射的线性映射；两端的结构就是向量空间结构。"
   },
   {
-   "id": "e174.analogy",
+   "id": "e178.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.first-iso",
@@ -91417,7 +91722,7 @@
    "note": "两个节点一个说「群同态 $G/\\ker\\varphi \\cong \\operatorname{im}\\varphi$」，一个说「线性映射 $V/\\ker T \\cong \\operatorname{im} T$」。\n\n**谁也没推出谁**（群不是向量空间、向量空间加法群也不决定标量乘法），但证明**逐字一样**：良定义 $\\to$ 同态（线性）$\\to$ 双射。群版那条的注已经把这件事写明了：「它其实是『集合 + 运算 + 公理』这套格式的通用定理，不是群的专利」。\n\n⭐ 所以这条只能当**类比**：想要真正的一次性说法，得有「阿贝尔范畴里的第一同构定理」那个节点。"
   },
   {
-   "id": "e175.analogy",
+   "id": "e179.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.mayer-vietoris",
@@ -91426,7 +91731,7 @@
    "note": "同一条长正合列，一个在 de Rham 上同调（`thm.mayer-vietoris`，微分几何侧），一个在奇异同调（`thm.mv-homology`，代数拓扑侧）。\n\n⚠ 两边此前**都是叶子**：几何侧不知道拓扑侧已经有同一条列，反之亦然。本图尚未收「奇异上同调 = de Rham」那座桥（de Rham 定理只在光滑流形上），所以这里只记类比。"
   },
   {
-   "id": "e176.analogy",
+   "id": "e180.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.riesz-representation-lp",
@@ -91447,7 +91752,7 @@
    "note": ""
   },
   {
-   "id": "e177.analogy",
+   "id": "e181.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.taylor",
@@ -91508,7 +91813,7 @@
    "note": ""
   },
   {
-   "id": "e178.analogy",
+   "id": "e182.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.compactness",
@@ -91517,7 +91822,7 @@
    "note": "名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。\n\n⚠ 但两者不是毫无关系：用 Stone 空间（`def.stone-space`），命题逻辑的紧致性可以从「$\\{0,1\\}^{\\text{公式集}}$ 紧」推出来 —— 本图没有把这条路径做成节点，所以这里只记类比。\n\n⛔ 不能做成 definition：已有的 `def.compact → … → def.formula` 路径意味着反向接线会成环。"
   },
   {
-   "id": "e179.analogy",
+   "id": "e183.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.compactness",
@@ -91526,7 +91831,7 @@
    "note": "两条都在说「**局部/有限**的都行 $\\implies$ 整体也行」：\n\nTychonoff 是每个坐标空间的紧性拼出乘积空间的紧性；紧致性定理是每个有限子集有模型拼出整体有模型。\n\n在 Boolean 代数 / Stone 对偶下它们确实相通（命题逻辑的紧致性可由 Cantor 空间紧得出），但那需要把 Stone 表示对偶做到逻辑层 —— 本图还没做，所以只记类比。"
   },
   {
-   "id": "e180.analogy",
+   "id": "e184.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.provability",
@@ -91655,7 +91960,7 @@
    "note": "「$g$ 就是几个环面的连通和」这个直觉要靠连通和才说得出来；但那件事本身是**定理**（分类定理，下一刀），定义里不用它。"
   },
   {
-   "id": "e181.analogy",
+   "id": "e185.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.genus",
@@ -91813,14 +92118,18 @@
   },
   {
    "id": "dep.eulerchar-classification",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.euler-characteristic",
-   "usedBy": "thm.classification-surfaces",
-   "note": "不同胚性用 $\\chi$ 作不变量（$\\chi$ 在同胚下不变）。⚠ 这条用的是**定理**当原理：`thm.euler-characteristic` 说「数单纯形 = 数 Betti 数」，正好给出 $\\chi$ 的组合与同调两种算法。"
+   "sources": [
+    "thm.euler-characteristic"
+   ],
+   "target": "thm.classification-surfaces",
+   "title": "标准形上用 $\\chi$ 区分曲面",
+   "proof": "分类定理第三步在标准形上读不变量：可定向性与 $\\chi$。要断言「$\\chi$ 不同则不同胚」，必须先知道 $\\chi$ 是同胚不变量 —— `thm.euler-characteristic` 给出 $\\chi(K)=\\sum_{p}(-1)^{p}\\alpha_{p}=\\sum_{p}(-1)^{p}\\beta_{p}$，右端只依赖同调型，于是同伦等价（从而同胚）保持 $\\chi$。同一等式还让「由三角剖分数出的 $\\chi$」与「由 Betti 数算出的 $\\chi$」对接，标准形与任意剖分才可比较。∎",
+   "note": "不同胚性用 $\\chi$ 作不变量（$\\chi$ 在同胚下不变）。这条用**定理**当原理：`thm.euler-characteristic` 说「数单纯形 = 数 Betti 数」，正好给出 $\\chi$ 的组合与同调两种算法。"
   },
   {
-   "id": "e182.analogy",
+   "id": "e186.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -91846,26 +92155,35 @@
   },
   {
    "id": "dep.comb-classification",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "lem.combinatorial-classification-surfaces",
-   "usedBy": "thm.classification-surfaces",
+   "sources": [
+    "lem.combinatorial-classification-surfaces"
+   ],
+   "target": "thm.classification-surfaces",
+   "title": "分类定理第二步由组合归类引理承载",
+   "proof": "分类定理分三步：(1) Radó 三角剖分；(2) 任意三角剖分经有限步操作化成标准形；(3) 标准形上读不变量。第二步的精确陈述、允许的操作清单与不变量保持性都放在 `lem.combinatorial-classification-surfaces` 里，定理的证明在此直接引用，不重复组合论证。该引理本身仍标 skeleton（缺口是归约操作的有限性与不变量保持），所以这条边记录的是「定理依赖引理」，不是「引理已证完」。∎",
    "note": "分类定理第二步（组合归类）的精确陈述与证明缺口现在由本节点承载；分类定理的证明引用它，而不是把整段组合论证塞进注里。"
   },
   {
    "id": "dep.classification-eulerchargenus",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.classification-surfaces",
-   "usedBy": "prop.eulerchar-genus",
-   "note": "「闭可定向曲面就是 $g$ 个环面的连通和」是分类定理给的标准形 —— 命题的**证明**用它，虽然结论 $\\chi = 2 - 2g$ 也能纯同调算出来（见注）。"
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.classification-surfaces",
+   "b": "prop.eulerchar-genus",
+   "title": "",
+   "note": "命题的证明**不用**分类定理（节点注写明改走 Radó + 初等路线，$\\chi=2-2g$ 可由同调直接算出）；保留这条只作「标准形 = $g$ 个环面的连通和」的类比视角。"
   },
   {
    "id": "dep.eulerchar-eulerchargenus",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.euler-characteristic",
-   "usedBy": "prop.eulerchar-genus",
+   "sources": [
+    "thm.euler-characteristic"
+   ],
+   "target": "prop.eulerchar-genus",
+   "title": "$\\chi$ 的两种算法给出 $\\chi=2-2g$",
+   "proof": "命题先由任一三角剖分数出 $\\chi(S)$，再由 $g=\\tfrac12\\operatorname{rank}H_{1}(S;\\mathbb{Z})$ 得 $\\beta_{0}=1$、$\\beta_{1}=2g$、$\\beta_{2}=1$，于是 $\\chi=2-2g$。把两种算法接起来靠的正是 `thm.euler-characteristic` 的 $\\chi=\\sum_{p}(-1)^{p}\\alpha_{p}=\\sum_{p}(-1)^{p}\\beta_{p}$；没有它，组合侧的数与同调侧的 $g$ 无法对齐，「与剖分无关」也无从谈起。∎",
    "note": "$\\chi$ 的两种算法（数单纯形 / 数 Betti 数）相等，正是这条定理的内容。"
   },
   {
@@ -91878,18 +92196,23 @@
   },
   {
    "id": "dep.classification-eulercharnonor",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "thm.classification-surfaces",
-   "usedBy": "prop.eulerchar-nonorientable",
-   "note": "不可定向标准形（$k$ 个射影平面的连通和）同样来自分类定理。"
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "thm.classification-surfaces",
+   "b": "prop.eulerchar-nonorientable",
+   "title": "",
+   "note": "不可定向标准形同样只是类比视角：命题假设已限定在标准形，不需要分类定理。"
   },
   {
    "id": "dep.eulerchar-eulercharnonor",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.euler-characteristic",
-   "usedBy": "prop.eulerchar-nonorientable",
+   "sources": [
+    "thm.euler-characteristic"
+   ],
+   "target": "prop.eulerchar-nonorientable",
+   "title": "$\\chi=V-E+F$ 递推给出 $\\chi=2-k$",
+   "proof": "先算 $\\chi(\\mathbb{RP}^{2})=6-15+10=1$（正二十面体按对径点粘合），再用连通和公式 $\\chi(S_{k})=\\chi(S_{k-1})+\\chi(\\mathbb{RP}^{2})-2$ 递推得 $\\chi(S_{k})=2-k$。两处用的都是 `thm.euler-characteristic` 的组合算法 $\\chi=V-E+F$；最后「与剖分无关」再用它的同调算法 $\\chi=\\sum_{p}(-1)^{p}\\beta_{p}$。∎",
    "note": "$\\chi$ 的组合算法（$V - E + F$）是这一条的另一半。"
   },
   {
@@ -92227,10 +92550,14 @@
   },
   {
    "id": "dep.solvablequotients-radical",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.solvable-quotients",
-   "usedBy": "thm.radical-solvable",
+   "sources": [
+    "thm.solvable-quotients"
+   ],
+   "target": "thm.radical-solvable",
+   "title": "可解性对子群与商群的封闭支撑两个方向",
+   "proof": "两个方向都要「可解性对子群、商群封闭」（`thm.solvable-quotients`）。$(\\implies)$ 设 $K/F$ 根式可解，塔 $F=F_{0}\\subseteq\\cdots\\subseteq F_{m}$ 每步是循环扩张（或 $S_{p}$ 型）。令 $G_{i}=\\operatorname{Gal}(K/F_{i})$，得 $G_{0}=G\\supseteq\\cdots\\supseteq G_{m}=1$；每步 $G_{i+1}\\trianglelefteq G_{i}$ 且 $G_{i}/G_{i+1}\\cong\\operatorname{Gal}(F_{i+1}/F_{i})$ 循环或 $S_{p}$ 型，故各商可解，由封闭性 $G$ 可解。$(\\Leftarrow)$ 设 $G$ 可解，取可解列 $G=G_{0}\\supseteq\\cdots\\supseteq G_{m}=1$，对应固定域塔 $F\\subseteq K^{G_{m}}\\subseteq\\cdots\\subseteq K$；每步 $K^{G_{i+1}}/K^{G_{i}}$ 是循环扩张，由 Kummer 理论（含足够单位根时）可写成根式添加，故 $K$ 落在根式塔内。反向用到的「子群亦可解」同样出自这条定理。∎",
    "note": "两个方向都要「可解性对商群/子群封闭」：塔的每一步商群可解 $\\iff$ 整个群可解。"
   },
   {
@@ -92247,14 +92574,18 @@
   },
   {
    "id": "dep.snsolvable-quintic",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "prop.sn-solvable",
-   "usedBy": "thm.quintic-unsolvable",
+   "sources": [
+    "prop.sn-solvable"
+   ],
+   "target": "thm.quintic-unsolvable",
+   "title": "$S_{5}$ 不可解排除根式解",
+   "proof": "取 $f=x^{5}-4x+2$。前三步定出伽罗瓦群是 $S_{5}$：不可约 $\\implies$ 传递含 $5$-循环；恰三实根 $\\implies$ 复共轭给一个换位；$5$-循环加换位生成 $S_{5}$。最后一步取逆否：若 $f$ 根式可解，`thm.radical-solvable` 给出 $\\operatorname{Gal}(f)$ 可解；但 $S_{5}$ 不可解 —— 这正是 `prop.sn-solvable` 的内容（$A_{5}$ 单且非交换，故 $S_{5}$ 的换位子列停在 $A_{5}\\ne1$）。矛盾。∎",
    "note": "$S_{5}$ 不可解（$A_{5}$ 单且非交换）—— 图里那句孤立的话，现在终于有下游了。"
   },
   {
-   "id": "e183.analogy",
+   "id": "e187.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.galois-group",
@@ -92348,7 +92679,7 @@
    "note": "可分性是**代数扩张**的性质（超越扩张上「极小多项式」都无从谈起）。"
   },
   {
-   "id": "e184.analogy",
+   "id": "e188.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.minimal-poly",
@@ -92357,7 +92688,7 @@
    "note": "写法**一模一样**：取 $\\{\\, p : p(\\text{对象}) = 0 \\,\\}$，验证它是 $K[x]$ 的**非零理想**，再由 $K[x]$ 是主理想整环取**首一生成元**。\n\n- 算子的（`def.minimal-poly`）：对象是线性算子 $T$，非零理由来自 Cayley–Hamilton（$\\chi_{T}$ 零化 $T$）；\n\n- 元素的（`def.algebraic-element`）：对象是扩域里的 $\\alpha$，非零理由来自「代数」这个前提本身。\n\n⚠ 别混：$\\mu_{T}$ 的**次数**刻画算子的可对角化性；$m_{\\alpha}$ 的**次数**是 $[F(\\alpha):F]$。同一个名字、同一套论证、完全不同的用途 —— 这类同名不同物只能用类比边，不能连依赖。"
   },
   {
-   "id": "e185.analogy",
+   "id": "e189.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.galois-group",
@@ -92382,7 +92713,7 @@
    "note": "球面是连通和的**单位元**（$S^{2}\\# M \\cong M$）—— 这句话要用连通和才说得出来，所以这个例子的说明依赖连通和。"
   },
   {
-   "id": "e186.analogy",
+   "id": "e190.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -92391,7 +92722,7 @@
    "note": "**同名不同物**，这正是审计 B2 点出的那件事：\n\n- `def.regular-surface` 说的是「$U \\subseteq \\mathbb{R}^{2}$ 经 $r$ 打到 $\\mathbb{R}^{3}$ 的像」，自带**嵌入、度量、曲率**；\n\n- 定义里只有「紧、连通、无边界、局部同胚于 $\\mathbb{R}^{2}$」，**没有任何外部空间**。\n\n所以「球面」在两边指的不是一回事：一边是 $\\mathbb{R}^{3}$ 里的单位球面（有面积、有 Gauss 曲率），一边是抽象的 $S^{2}$（只有拓扑）。\n\n⛔ 不能连 definition/implication：一边嵌在 $\\mathbb{R}^{3}$ 里、一边不嵌，没有谁是谁的前提。"
   },
   {
-   "id": "e187.analogy",
+   "id": "e191.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.closed-surface",
@@ -92400,7 +92731,7 @@
    "note": "**同名不同物**，而且维数说法都不一样：\n\n- 拓扑曲面是**实 2 维**（局部同胚于 $\\mathbb{R}^{2}$）；\n\n- Riemann 曲面是**复 1 维**（局部双全纯于 $\\mathbb{C}$ 的开集），它额外带一个**复结构**。\n\n⭐ 每个 Riemann 曲面都是拓扑曲面（忘记复结构即可），但反过来不成立 —— 球面恰好只有**一个**复结构（Riemann 映射定理的推论），环面却有一整族（模空间）。这条差别正是「复结构是额外数据」的体现。\n\n⛔ 不能连 implication：本图的 Riemann 曲面是从「一维复流形」定义的，而闭曲面是从拓扑定义的，两边的前提不同（真要连得先有「忘记复结构」这个函子）。"
   },
   {
-   "id": "e188.analogy",
+   "id": "e192.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "thm.classification-surfaces",
@@ -92409,7 +92740,7 @@
    "note": "一边是**纯拓扑**的分类（闭曲面由 $g$ 或 $k$ 决定，等价地由 $\\chi$ 与可定向性决定），一边是**几何**的等式（$\\int_{M} K\\,\\mathrm{d}A = 2\\pi\\chi(M)$）。\n\n把两者拼起来就得到微分几何里最有名的一句：**曲率的总量只由亏格决定** ——\n\n\n\n$$\\int_{M} K\\,\\mathrm{d}A = 4\\pi(1-g).$$\n\n\n\n球面（$g=0$）必须是 $4\\pi$，环面（$g=1$）必须是 $0$ —— 无论怎么把环面捏变形，只要不同胚就改不了。\n\n⚠ 本图**没有**那条「组合」命题（$\\int K = 4\\pi(1-g)$）的节点，所以这里只连类比；⛔ 也不连 implication：分类定理不推出 Gauss–Bonnet（后者要度量）。"
   },
   {
-   "id": "e189.analogy",
+   "id": "e193.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "prop.eulerchar-nonorientable",
@@ -94622,7 +94953,7 @@
    "note": "「每个向量空间都有基」的主语就是向量空间（而且证明要用 Zorn，见那条边）。"
   },
   {
-   "id": "e190.analogy",
+   "id": "e194.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.subspace",
@@ -94711,7 +95042,7 @@
    "note": "$\\mathbb{R}$ 是**完备有序域**：这里的完备是**序完备**（有上确界），它与「度量完备」（Cauchy 列收敛）在 $\\mathbb{R}$ 上等价 —— 但那要一条定理，不是定义。⚠ 两个「完备」不是同一个概念，只是在这条线上恰好重合。"
   },
   {
-   "id": "e191.analogy",
+   "id": "e195.analogy",
    "kind": "analogy",
    "strength": "weak",
    "a": "def.complete",
@@ -95801,10 +96132,14 @@
   },
   {
    "id": "def-dep.gleason-retract",
-   "kind": "definition",
+   "kind": "implication",
    "strength": "strong",
-   "definition": "thm.gleason",
-   "usedBy": "cor.stonean-retract",
+   "sources": [
+    "thm.gleason"
+   ],
+   "target": "cor.stonean-retract",
+   "title": "Gleason 定理把「投射」翻译成「收缩核」",
+   "proof": "推论断言：Stonean 空间 $A$ 在 $\\mathbf{CHaus}$ 中投射 $\\iff$ $A$ 是某个紧 Hausdorff 空间的收缩核。$(\\implies)$ 取自由紧 Hausdorff 空间 $F$ 与满射 $p:F\\twoheadrightarrow A$，投射性把 $\\operatorname{id}_{A}$ 沿 $p$ 抬起得截面 $s$，$A$ 即 $F$ 的收缩核。$(\\Leftarrow)$ 若 $A$ 是 $p:F\\twoheadrightarrow A$ 的收缩核，则对任意满射 $E\\twoheadrightarrow B$ 与 $A\\to B$，先沿 $F$ 的自由性把复合抬到 $E$，再与收缩映射复合。两个方向都把「投射」与「收缩核」互换，而这一步的资格由 `thm.gleason` 提供：Stonean 对象恰是投射对象。∎",
    "note": "推论把 Gleason 定理翻译成「Stonean = **收缩核**」。"
   },
   {
@@ -102986,7 +103321,7 @@
   {
    "a": "algebra.linmap",
    "b": "fa.norm",
-   "count": 6,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -103001,6 +103336,13 @@
    "a": "fa.hilbert",
    "b": "fa.norm",
    "count": 7,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "fa.hilbert",
+   "b": "topology.general",
+   "count": 2,
    "label": "",
    "explicit": false
   },

@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/def-link.fa-banachspace-dual.md](../proofs/def-link.fa-banachspace-dual.md)
+
+> 续见 [nodes/def.dual-banach.3.md](./def.dual-banach.3.md)

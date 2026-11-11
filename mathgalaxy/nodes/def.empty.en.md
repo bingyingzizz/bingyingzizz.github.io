@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.empty)　·　[Chinese page (authoritative)](./def.empty.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 0 · definition · cluster Constructing Sets (`set.construct`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.empty.md` and `proofs/`.
+## Statement · **draft**
+The **empty set** is the set with no elements, written $\emptyset$:
 
+$$\emptyset := \{ x : x \ne x \}$$
 
-Cite: `def.empty` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+"$x \ne x$" fails for every $x$, so this set has no elements at all. It is a **primitive object of the language**, on the same level as the Axiom of Extensionality and first-order logic.
 
+Hence for every set $A$: $\emptyset \subseteq A$ (vacuously true), and $\emptyset$ is the least element under $\subseteq$.
+
+> continued in nodes/def.empty.en.2.md

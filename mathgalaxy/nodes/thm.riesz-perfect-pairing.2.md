@@ -9,7 +9,7 @@ t-pairing`）。则
 (b) 若其中一个映射满射，则另一个也满射，且 $X \cong Y^*$、$Y \cong X^*$（等距同构
 ）；
 (c) Hilbert 空间 $H$ 与 $L^p$（$1 < p < \infty$，$1/p + 1/q = 
-1$）的配对满足满射性，因此 $H^* \cong H$、$(L^p)^* \cong L^q$ 都是完美配对的
-直接推论。
+1$）的配对满足满射性（Hilbert 情形用投影定理，$L^p$ 情形用 Radon–Nikodym）；因此 $H^
+* \cong H$、$(L^p)^* \cong L^q$。
 
 > 续见 [nodes/thm.riesz-perfect-pairing.3.md](./thm.riesz-perfect-pairing.3.md)

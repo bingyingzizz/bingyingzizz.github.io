@@ -2,8 +2,8 @@
 索引 `hubs.md`
 
 由最多前置一起推出（入边多）—— 学它之前得先懂一片，**不是**入门首选。
-- **10 / 8** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 31 · 曲面的地形
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · layer 19 · 测度的构造
+- **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 30 · 曲面的地形
 - **8 / 8** `thm.bundle-classification` 丛的分类 · layer 34 · 丛的示性类
 - **8 / 5** `thm.de-rham` de Rham 定理 · layer 34 · 微分形式、积分与 de Rham
 - **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 32 · 数论函数与素数分布

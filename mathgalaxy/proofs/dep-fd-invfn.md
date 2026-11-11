@@ -3,4 +3,4 @@
 
 `thm.inverse-function-banach` 逆映射定理（Banach 版） → `thm.frechet-derivative` Fréchet 导数
 
-Banach 版逆映射定理的假设「$f'(a)$ 可逆」用的就是这个导数。
+Fréchet 导数的定义本身不依赖逆映射定理；这里记的是「定理假设 $f'(a)$ 可逆用的就是这个导数」这层实例化关系，不是构造依赖。

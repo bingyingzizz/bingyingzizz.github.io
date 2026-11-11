@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.burali-forti)　·　[Chinese page (authoritative)](./thm.burali-forti.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.burali-forti.md` and `proofs/`.
+## Statement · **draft**
+The class $\mathrm{On}$ of all ordinals **is not a set**: there is no set whose elements are exactly all the ordinals.
 
-
-Cite: `thm.burali-forti` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.burali-forti.en.2.md

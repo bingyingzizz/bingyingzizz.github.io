@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.equinumerous)　·　[Chinese page (authoritative)](./def.equinumerous.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.equinumerous.md` and `proofs/`.
+## Statement · **draft**
+Sets $A$ and $B$ are **equinumerous** (written $\#A = \#B$ or $A \approx B$) iff there is a **bijection**
 
+$$f : A \to B$$
 
-Cite: `def.equinumerous` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Equinumerosity is an equivalence relation on sets: reflexive (identity map), symmetric (inverse map), transitive (composition).
 
+## Notes · **draft**
+This is the **right way to compare sizes**: instead of counting (an infinite set cannot be counted out), ask whether the two sets can be paired off one-to-one.
+
+> continued in nodes/def.equinumerous.en.2.md

@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.closed-set)　·　[Chinese page (authoritative)](./def.closed-set.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 5 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.closed-set.md` and `proofs/`.
+## Statement · **draft**
+Let $(X, \mathcal{T})$ be a topological space.
 
+- $F \subseteq X$ is **closed**: $X \setminus F$ is open;
+- the **closure** $\overline{A}$ of $A \subseteq X$: the intersection of all closed sets containing $A$ (the smallest such closed set);
+- $A$ is **dense**: $\overline{A} = X$;
+- a **neighbourhood** of $x$: any open set containing $x$ (or any set containing such an open set).
 
-Cite: `def.closed-set` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.closed-set.en.2.md

@@ -8,7 +8,7 @@ layer 16 · 命题 · 合成列与可解群 · 抽象代数
 等价地：$S_5$ 与它的一切 $S_n$（$n \ge 5$）都**不**可解，而 $S_1, S_2, S_3, S_4$ 都可解。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解 用
+- ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.sn-solvable.2.md](./prop.sn-solvable.2.md)

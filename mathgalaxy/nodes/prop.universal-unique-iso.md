@@ -6,7 +6,7 @@ layer 14 · 命题 · 预层与米田 · 范畴论
 若 $(X, s)$ 与 $(X', s')$ 都是函子 $F$ 的**万有元素**，则存在**唯一的同构** $f : X \to X'$ 使 $F(f)(s) = s'$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理：用到了定义 米田引理　[proofs/def-link.univuniq-yoneda.md](../proofs/def-link.univuniq-yoneda.md)
+- [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理：米田引理给出万有元素的唯一同构　[proofs/def-link.univuniq-yoneda.md](../proofs/def-link.univuniq-yoneda.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 1.23
 

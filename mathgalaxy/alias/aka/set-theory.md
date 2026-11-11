@@ -3,7 +3,7 @@
 
 - 外延 | extensionality | 集合相等 → ax.ext
 
-- 配对 | pairing | 无序对 → ax.pair
+- 无序对 → ax.pair
 
 - 并集公理 | union | 求和集 → ax.union
 

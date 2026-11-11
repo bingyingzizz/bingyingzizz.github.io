@@ -14,7 +14,7 @@ $$(1-t)x + ty \in C.$$
 
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.projection-convex`](../nodes/thm.projection-convex.md) 凸闭集的最近点 用
-- ⇒ [`def.star-shaped`](../nodes/def.star-shaped.md) 星形集
+- 被 [`def.convex-hull`](../nodes/def.convex-hull.md) 凸包 用
 
 - …另有出边，续页见 [nodes/def.convex-set.2.md](./def.convex-set.2.md)
 

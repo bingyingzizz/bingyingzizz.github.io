@@ -8,7 +8,7 @@ layer 30 · 命题 · Lie 群 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.lie-third`](../nodes/thm.lie-third.md) Lie 第三定理 用
+- ⇒ [`thm.lie-third`](../nodes/thm.lie-third.md) Lie 第三定理
 - ⇒ [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程
 
 ## 为什么成立（入边，证明在 proofs/）

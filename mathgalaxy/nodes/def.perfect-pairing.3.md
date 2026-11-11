@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.pp-norm.md](../proofs/def-link.pp-norm.md)
+- [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间：ana.reflexive-perfect-pairing　[proofs/ana.reflexive-perfect-pairing.md](../proofs/ana.reflexive-perfect-pairing.md)
 
 > 续见 [nodes/def.perfect-pairing.4.md](./def.perfect-pairing.4.md)

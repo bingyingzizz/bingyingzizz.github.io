@@ -8,7 +8,7 @@ layer 31 · 定理 · Lie 群 · 微分几何
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.lie-algebra`](../nodes/def.lie-algebra.md) Lie 代数：用到了定义 Lie 代数　[proofs/dep.mf2-liealgebra-liethird.md](../proofs/dep.mf2-liealgebra-liethird.md)
+- [`prop.left-invariant-fields`](../nodes/prop.left-invariant-fields.md) 左不变向量场：左不变向量场给出 $\mathfrak{g}$ 上的括号　[proofs/dep.mf2-leftinv-liethird.md](../proofs/dep.mf2-leftinv-liethird.md)
 
 - …另有入边，续页见 [nodes/thm.lie-third.3.md](./thm.lie-third.3.md)
 

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.topology)　·　[Chinese page (authoritative)](./def.topology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 4 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.topology.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a set and $\mathcal{T} \subseteq \mathcal{P}(X)$ a family of subsets of $X$. Then $(X, \mathcal{T})$ is a **topological space** and $\mathcal{T}$ is a **topology** on $X$ iff:
 
-
-Cite: `def.topology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.topology.en.2.md

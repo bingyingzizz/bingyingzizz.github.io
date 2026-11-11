@@ -14,6 +14,11 @@ $$E^* := B(E, \mathbb{K}) , \qquad \|\varphi\| := \sup_{\|x\| \le 1} |\varphi(x)
 
 - …另有入边，续页见 [nodes/def.dual-banach.2.md](./def.dual-banach.2.md)
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.perfect-pairing`](../nodes/def.perfect-pairing.md) 完美配对 用
+
+- …另有出边，续页见 [nodes/def.dual-banach.3.md](./def.dual-banach.3.md)
+
 refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
 > 说明见 `notes/def.dual-banach.md`

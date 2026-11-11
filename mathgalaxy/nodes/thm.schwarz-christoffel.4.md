@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.standard-maps`](../nodes/prop.standard-maps.md) 标准共形映射 + [`thm.schwarz-reflection`](../nodes/thm.schwarz-reflection.md) Schwarz 反射原理：$f'$ 的形状由「沿边反射」定出来　[proofs/e103.implication.md](../proofs/e103.implication.md)
-- [`lem.caratheodory-osgood`](../nodes/lem.caratheodory-osgood.md) Carathéodory–Osgood 边界对应：用到了定义 Carathéodory–Osgood 边界对应　[proofs/dep.sc-caratheodory.md](../proofs/dep.sc-caratheodory.md)
+- [`lem.caratheodory-osgood`](../nodes/lem.caratheodory-osgood.md) Carathéodory–Osgood 边界对应：Carathéodory–Osgood 提供 S–C 的存在性　[proofs/dep.sc-caratheodory.md](../proofs/dep.sc-caratheodory.md)

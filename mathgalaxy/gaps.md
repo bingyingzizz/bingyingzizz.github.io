@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1621 节点 / 3376 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1621 节点 / 3381 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,7 +59,7 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（33 处）
+## 二、陈述用到更深的定义却没有边（32 处）
 
 - `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 15
 - `def.weak-hausdorff`（弱 Hausdorff 空间 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
@@ -67,10 +67,10 @@
 - `def.orientable-manifold`（可定向流形 · L16）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 6
 - `prop.generator-coproduct-epi`（生成元的余积刻画 · L11）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 5
 - `thm.classification-surfaces`（闭曲面分类定理 · L30）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 5
+- `prop.eulerchar-nonorientable`（Euler 示性数与不可定向亏格 · L30）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 5
 - `prop.adjoint-additive`（伴随函子都加法 · L10）用到 `def.additive-category`（加法范畴 · L14）　落差 4
 - `prop.pullback-forms`（拉回（开集间） · L19）用到 `def.smooth-map`（光滑映射 · L23）　落差 4
 - `prop.volume-form-orientation`（定向与体积形式 · L18）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 4
-- `prop.eulerchar-nonorientable`（Euler 示性数与不可定向亏格 · L31）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 4
 - `prop.cgwh-fiber-product`（紧块的纤维积还是紧的 · L13）用到 `def.continuous-map`（连续映射 · L16）　落差 3
 - `def.cochain-complex`（上链复形 · L12）用到 `def.additive-category`（加法范畴 · L14）　落差 2
 - `def.module-category`（模范畴 · L10）用到 `def.linear-map`（线性映射 · L12）　落差 2
@@ -93,7 +93,6 @@
 - `prop.injective-iff-acyclic`（内射与零调的等价 · L16）用到 `def.abelian-category`（阿贝尔范畴 · L16）
 - `def.cotangent-bundle`（余切丛 · L25）用到 `def.bundle-section`（丛的截面 · L25）
 - `def.nilpotent`（幂零 · L16）用到 `def.char-poly`（特征多项式 · L16）
-- `thm.riesz-perfect-pairing`（Riesz 表示的配对版 · L18）用到 `def.hilbert-space`（Hilbert 空间 · L18）
 
 ## 二·补　白名单里的（39 条，已判「不是缺边」）
 

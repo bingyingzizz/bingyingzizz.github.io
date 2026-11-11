@@ -2,5 +2,5 @@
 [在星图里打开](../#n=prop.chaus-two-term-resolution)　·　第 1 页 [nodes/prop.chaus-two-term-resolution.md](./prop.chaus-two-term-resolution.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.pontryagin-van-kampen`](../nodes/thm.pontryagin-van-kampen.md) Pontryagin–van Kampen 对偶：对偶把「紧」换成「离散」造两项分解　[proofs/def-link.ttr-lc.md](../proofs/def-link.ttr-lc.md)
 - [`def.pontryagin-dual`](../nodes/def.pontryagin-dual.md) Pontryagin 对偶：用到了定义 Pontryagin 对偶　[proofs/def-link.ttr-dual.md](../proofs/def-link.ttr-dual.md)
-- [`thm.pontryagin-van-kampen`](../nodes/thm.pontryagin-van-kampen.md) Pontryagin–van Kampen 对偶：用到了定义 Pontryagin–van Kampen 对偶　[proofs/def-link.ttr-lc.md](../proofs/def-link.ttr-lc.md)

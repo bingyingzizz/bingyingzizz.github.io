@@ -13,7 +13,7 @@ layer 30 · 定理 · 曲面的地形 · 拓扑学
 - …另有入边，续页见 [nodes/thm.classification-surfaces.3.md](./thm.classification-surfaces.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.classification-surfaces.5.md](./thm.classification-surfaces.5.md)
+- …另有出边，续页见 [nodes/thm.classification-surfaces.6.md](./thm.classification-surfaces.6.md)
 
 refs: Munkres, Topology, Ch. 12（Classification of Surfaces）；Massey, A Basic Course in Algebraic Topology, Ch. 1；Radó, Über den Begriff der Riemannschen Fläche (1925)——三角剖分存在性
 

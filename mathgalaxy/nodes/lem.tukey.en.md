@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=lem.tukey)　·　[Chinese page (authoritative)](./lem.tukey.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · lemma · cluster Choice Principles (`order.choice`) · Order Theory
 names: `Tukey` (short) · `Tukey's Lemma / Teichmüller–Tukey` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.tukey.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be a **non-empty family of sets with finite character**. Then $(\mathcal{A}, \subseteq )$ has a maximal element.
 
+That is, there is $A \in \mathcal{A}$ such that no $B \in \mathcal{A}$ satisfies $A \subset B$.
 
-Cite: `lem.tukey` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.tukey.en.2.md
