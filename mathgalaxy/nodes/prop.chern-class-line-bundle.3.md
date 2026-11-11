@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.connection-form`](../nodes/def.connection-form.md) 联络形式：用到了定义 联络形式　[proofs/dep-clb-conn.md](../proofs/dep-clb-conn.md)
+- [`thm.splitting-principle`](../nodes/thm.splitting-principle.md) 分裂原理：ana.sp-clb　[proofs/ana.sp-clb.md](../proofs/ana.sp-clb.md)
 
 > 续见 [nodes/prop.chern-class-line-bundle.4.md](./prop.chern-class-line-bundle.4.md)

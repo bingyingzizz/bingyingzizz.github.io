@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-dep.tykhonov-compact.md](../proofs/def-dep.tykhonov-compact.md)
 - [`def.product-topology`](../nodes/def.product-topology.md) 积拓扑：用到了定义 积拓扑　[proofs/def-dep.tykhonov-product.md](../proofs/def-dep.tykhonov-product.md)
+
+> 续见 [nodes/thm.tykhonov.3.md](./thm.tykhonov.3.md)

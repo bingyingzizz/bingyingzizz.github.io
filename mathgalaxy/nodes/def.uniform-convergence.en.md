@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.uniform-convergence)　·　[Chinese page (authoritative)](./def.uniform-convergence.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.uniform-convergence.md` and `proofs/`.
+## Statement · **draft**
+With the notation above, $\{f_n\}$ **converges uniformly** to $f$ if and only if
 
+$$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N,\ \forall x \in X :\ |f_n(x) - f(x)| < \varepsilon$$
 
-Cite: `def.uniform-convergence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Write $f_n \rightrightarrows f$. An equivalent formulation (in terms of the supremum):
 
+> continued in nodes/def.uniform-convergence.en.2.md

@@ -9,7 +9,7 @@ $$\left(\frac{a}{p}\right) \equiv a^{\frac{p-1}{2}} \pmod p .$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶：Euler 判别法：$a^{(p-1)/2}$ 只能等于 $\pm 1$　[proofs/imp.nt-euler-criterion.md](../proofs/imp.nt-euler-criterion.md)
-- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e155.definition.md](../proofs/e155.definition.md)
+- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e151.definition.md](../proofs/e151.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.euler-criterion.2.md](./thm.euler-criterion.2.md)

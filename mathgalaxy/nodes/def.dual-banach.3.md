@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.riesz-perfect-pairing`](../nodes/thm.riesz-perfect-pairing.md) Riesz 表示的配对版 用
+- 被 [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert） 用
+- 被 [`thm.banach-alaoglu`](../nodes/thm.banach-alaoglu.md) Banach–Alaoglu 定理 用

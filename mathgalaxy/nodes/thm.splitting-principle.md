@@ -1,6 +1,6 @@
 # 分裂原理　`thm.splitting-principle`
 分裂原理：把丛拆成线丛来算
-layer 37 · 定理 · 丛的示性类 · 微分几何
+layer 36 · 定理 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=thm.splitting-principle)　·　[节点索引](../index.md)
 
 **在做什么**：陈类在一般秩上的公式难以直接写出来。分裂原理说：**为了算多项式恒等式，可以假装丛是一堆线丛的直和** —— 这不是真的分解，但足够推出一切公式。
@@ -11,6 +11,9 @@ layer 37 · 定理 · 丛的示性类 · 微分几何
 - [`def.chern-class`](../nodes/def.chern-class.md) 陈类：用到了定义 陈类　[proofs/dep-sp-cc.md](../proofs/dep-sp-cc.md)
 
 - …另有入边，续页见 [nodes/thm.splitting-principle.3.md](./thm.splitting-principle.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.splitting-principle.4.md](./thm.splitting-principle.4.md)
 
 refs: Milnor–Stasheff, Characteristic Classes · 分裂原理；Bott–Tu, Differential Forms in Algebraic Topology
 

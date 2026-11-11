@@ -1,6 +1,8 @@
 # 别名 → 节点 · 复变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
+- 三点决定分式线性变换 → prop.mobius-three-points
+
 - 调和函数的共轭 → thm.harmonic-conjugate
 
 - 指数函数的局部逆 → prop.exp-local-inverse
@@ -30,7 +32,5 @@
 - 整函数与亚纯函数 → def.entire-meromorphic
 
 - 对数与幂的分支 → def.logarithm-branch
-
-- Riemann 曲面 | 黎曼曲面 → def.riemann-surface
 
 > 续见 alias/aka/complex.6.md

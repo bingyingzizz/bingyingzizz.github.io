@@ -10,6 +10,9 @@ layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析+数学分析
 
 - …另有入边，续页见 [nodes/def.weak-topology.2.md](./def.weak-topology.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.weak-topology.3.md](./def.weak-topology.3.md)
+
 refs: Rudin, Functional Analysis, Ch. 3 · weak topology；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 3 · weak topology
 
 > 说明见 `notes/def.weak-topology.md`

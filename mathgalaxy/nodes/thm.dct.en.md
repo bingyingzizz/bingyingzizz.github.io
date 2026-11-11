@@ -2,16 +2,20 @@
 English entry · root `../`
 [in graph](../#n=thm.dct)　·　[Chinese page (authoritative)](./thm.dct.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.dct.md` and `proofs/`.
+## Statement · **draft**
+Let $\{f_n\} \subseteq L^1$, let $f$ be **measurable**, let $f_n \to f$ a.e., and suppose there is a **dominating function** $g \in L^1$ such that
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Dominated_convergence_theorem · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/Integral/DominatedConvergence.html
+$$|f_n| \le g\quad  \text{a.e.}\quad  \forall n$$
 
+Then $f \in L^1$ and
 
-Cite: `thm.dct` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\int f = \lim_{n\to\infty} \int f_n$$
 
+## Notes · **draft**
+⭐ This is the convergence theorem **used most often** in actual computation. None of the three hypotheses can be dropped:
+
+> continued in nodes/thm.dct.en.2.md

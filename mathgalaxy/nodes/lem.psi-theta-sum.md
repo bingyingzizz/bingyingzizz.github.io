@@ -14,6 +14,6 @@ layer 14 · 引理 · 数论函数与素数分布 · 数论
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 4
 
 ## 说明
-这是 $\psi$ 与 $\theta$ 的第一个桥：按 $n=p^{k}$ 的 $k$ 分组即可。证明见入边（按素数幂的指数分组）。
+这是 $\psi$ 与 $\theta$ 的第一个桥：按 $n=p^{k}$ 的 $k$ 分组即可（即按素数幂的指数分组）。
 
 引用：`lem.psi-theta-sum`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

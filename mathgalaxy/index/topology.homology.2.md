@@ -8,3 +8,5 @@
 - thm.sphere-homology　球面的同调　layer 29
 - thm.euler-characteristic　Euler 示性数　layer 29
 - def.cw-complex　CW 复形　layer 30
+- def.degree　映射的度　layer 30
+- thm.degree-nonextendable　度非零的映射不能延拓到球　layer 31

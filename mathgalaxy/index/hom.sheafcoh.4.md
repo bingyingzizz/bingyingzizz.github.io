@@ -6,5 +6,6 @@
 - thm.pushforward-enough-injectives　足够多内射层　layer 19
 - def.soft-sheaf　软层　layer 19
 - prop.cech-h1-equals-h1　一次 Čech 就是一次上同调　layer 20
+- thm.paracompact-cech-equals-sheaf　仿紧空间上的 Čech 就是上同调　layer 20
 - def.godement-resolution　Godement 消解　layer 20
-- thm.paracompact-cech-equals-sheaf　仿紧空间上的 Čech 就是上同调　layer 21
+- thm.soft-sheaf-acyclic　软层无环（Godement）　layer 21

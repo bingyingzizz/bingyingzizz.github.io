@@ -10,8 +10,8 @@ $$[a] + [b] := [a + b], \qquad [a]\,[b] := [ab] .$$
 它是一个有单位元的交换环，叫**剩余类环**（模 $n$ 的整数环）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.congruence`](../nodes/def.congruence.md) 同余：用到了定义 同余　[proofs/e120.definition.md](../proofs/e120.definition.md)
-- [`def.quotient-set`](../nodes/def.quotient-set.md) 商集与等价类：用到了定义 商集与等价类　[proofs/e121.definition.md](../proofs/e121.definition.md)
+- [`def.congruence`](../nodes/def.congruence.md) 同余：用到了定义 同余　[proofs/e119.definition.md](../proofs/e119.definition.md)
+- [`def.quotient-set`](../nodes/def.quotient-set.md) 商集与等价类：用到了定义 商集与等价类　[proofs/e120.definition.md](../proofs/e120.definition.md)
 
 - …另有入边，续页见 [nodes/def.zmodn.2.md](./def.zmodn.2.md)
 

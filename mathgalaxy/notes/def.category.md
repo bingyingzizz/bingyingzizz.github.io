@@ -9,7 +9,7 @@
 
 
 
-$$M = \{ (m, n, f) : m, n \in \mathbb{N},\ f : [m] \to [n] \text{ 递增} \}, \qquad [m] = \{ 1, \ldots, m \}$$
+$$M = \{ (m, n, f) : m, n \in \mathbb{N},\ f : [m] \to [n] \text{increasing} \}, \qquad [m] = \{ 1, \ldots, m \}$$
 
 
 

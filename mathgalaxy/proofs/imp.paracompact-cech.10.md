@@ -3,6 +3,6 @@
 
 `def.cech-cohomology` Čech 上同调 + `prop.paracompact-partition-unity` 仿紧性与单位分解 + `thm.cartan-leray` Cartan–Leray 谱序列 + `cor.cech-cohomology-spectral` Čech 到上同调的谱序列 + `def.right-derived-functor` 右导出函子 + `thm.derived-long-exact` 导出函子的长正合列 → `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调
 
-，松弛 $\implies$ 软）作维数转移；不能把内射消解 $\mathcal Q=\mathcal I/\mathcal M$ 当松弛层直接归纳 —— 松弛层的商未必松弛。本图无这条引理的节点，只以引理形式引用。
+**第五步：缺口 ②——比较步，以及逐覆盖断言为假。** 要把第一步的 Čech 消解当第三步的 $\mathcal{A}^{\bullet}$ 用，还差「软层对局部有限覆盖的 Čech 复形零调」，或等价的双复形比较（软消解 $\mathcal{S}^{\bullet}$，双复形 $\check{C}^{p}(\mathfrak{U},\mathcal{S}^{q})$ 的两
 
 > 续见 proofs/imp.paracompact-cech.11.md

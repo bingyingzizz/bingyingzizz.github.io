@@ -2,4 +2,4 @@
 [在星图里打开](../#n=prop.extended-plane-compact)　·　第 1 页 [nodes/prop.extended-plane-compact.md](./prop.extended-plane-compact.md)　·　上一页 [nodes/prop.extended-plane-compact.2.md](./prop.extended-plane-compact.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.riemann-sphere`](../nodes/def.riemann-sphere.md) 扩充复平面与球极投影：球极投影是同胚，$S^{2}$ 紧 $\implies$ $\widehat{\mathbb{C}}$ 紧　[proofs/e108.implication.md](../proofs/e108.implication.md)
+- [`def.riemann-sphere`](../nodes/def.riemann-sphere.md) 扩充复平面与球极投影：球极投影是同胚，$S^{2}$ 紧 $\implies$ $\widehat{\mathbb{C}}$ 紧　[proofs/e107.implication.md](../proofs/e107.implication.md)

@@ -7,6 +7,9 @@ layer 27 · 定义 · 同调群 · 拓扑学
 > 陈述续见 [nodes/def.reduced-homology.2.md](./def.reduced-homology.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.degree`](../nodes/def.degree.md) 映射的度 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.reduced-homology.3.md](./def.reduced-homology.3.md)
 

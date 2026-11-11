@@ -10,7 +10,7 @@ layer 20 · 定理 · 赋范空间与有界算子 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）
 
-- …另有出边，续页见 [nodes/thm.riesz-perfect-pairing.4.md](./thm.riesz-perfect-pairing.4.md)
+- …另有出边，续页见 [nodes/thm.riesz-perfect-pairing.5.md](./thm.riesz-perfect-pairing.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.riesz-perfect-pairing.3.md](./thm.riesz-perfect-pairing.3.md)

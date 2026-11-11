@@ -10,7 +10,7 @@ $$\left(\frac{ab}{n}\right) = \left(\frac{a}{n}\right)\left(\frac{b}{n}\right), 
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号：用到了定义 Jacobi 符号　[proofs/e158.definition.md](../proofs/e158.definition.md)
+- [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号：用到了定义 Jacobi 符号　[proofs/e154.definition.md](../proofs/e154.definition.md)
 
 refs: 华罗庚《数论导引》第四章
 

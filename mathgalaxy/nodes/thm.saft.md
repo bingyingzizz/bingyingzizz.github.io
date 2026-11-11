@@ -6,14 +6,14 @@ layer 13 · 定理 · 伴随与反射 · 范畴论
 设 $\mathcal{D}$ 是**小**且**完备**的范畴。则函子 $G : \mathcal{D} \to \mathcal{C}$ 有左伴随 $\iff$ $G$ 保持所有极限。
 
 左伴随由一个极限的构造给出：
+> 陈述续见 [nodes/thm.saft.2.md](./thm.saft.2.md)
 
-$$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/thm.saft.3.md](./thm.saft.3.md)
+- …另有入边，续页见 [nodes/thm.saft.4.md](./thm.saft.4.md)
 
-## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
-> English abstract 续见 [nodes/thm.saft.2.md](./thm.saft.2.md)
+## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+> English abstract 续见 [nodes/thm.saft.3.md](./thm.saft.3.md)
 
 refs: Mac Lane, Categories for the Working Mathematician, V.8
 

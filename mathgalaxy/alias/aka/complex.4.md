@@ -1,7 +1,7 @@
 # 别名 → 节点 · 复变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
-- 边界对应定理 → thm.boundary-correspondence
+- 边界对应定理 | Carathéodory–Osgood 边界对应 | Carathéodory–Osgood 定理 → thm.boundary-correspondence
 
 - 绕数的同伦不变性 → thm.winding-homotopy
 
@@ -32,7 +32,5 @@
 - Weierstrass 收敛性定理 | 魏尔斯特拉斯收敛性定理 → thm.weierstrass-convergence
 
 - Runge 逼近定理 | 龙格逼近定理 | 龙格 → thm.runge
-
-- 三点决定分式线性变换 → prop.mobius-three-points
 
 > 续见 alias/aka/complex.5.md

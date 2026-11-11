@@ -14,6 +14,6 @@ $\psi(x)-\theta(x)=O(\sqrt{x}\log x)=o(x)$。因此 $\psi(x)\sim x\iff\theta(x)\
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 4
 
 ## 说明
-只用到 $\theta(y)\le y\log y$ 与 $k\le\log_{2}x$；证明见入边（尾部 $O(\sqrt{x}\log x)$ 估计）。
+只用到 $\theta(y)\le y\log y$ 与 $k\le\log_{2}x$（尾部 $O(\sqrt{x}\log x)$ 估计）。
 
 引用：`lem.psi-theta-asymptotic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

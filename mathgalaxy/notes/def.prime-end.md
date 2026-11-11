@@ -7,4 +7,4 @@
 
 **Carathéodory 定理**：Riemann 映射 $f:\Omega\to\mathbb{D}$ 连续延拓为 $\overline{\Omega}^{p}\to\overline{\mathbb{D}}$ 的同胚（见 `thm.riemann-mapping`、`thm.boundary-correspondence`）。
 
-⚠ 本图无 Jordan 曲线定理与横截弧节点；此节点只给定义与用途，不含定理证明。
+⚠ 本图有 `thm.jordan-curve`（及其定义 `def.jordan-curve`），但没有横截弧（crosscut）节点；此节点只给定义与用途，不含定理证明。

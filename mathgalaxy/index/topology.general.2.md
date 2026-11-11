@@ -4,4 +4,6 @@
 - def.homeomorphism　同胚　layer 17
 - prop.closed-map-neighborhood-basis　闭映射的邻域基　layer 17
 - def.jordan-curve　Jordan 曲线　layer 18
+- lem.polygon-diagonal　简单多边形的对角线　layer 19
 - thm.jordan-curve　Jordan 曲线定理　layer 19
+- thm.jordan-polygon　多边形 Jordan 定理　layer 20

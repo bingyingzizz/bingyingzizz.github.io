@@ -12,7 +12,7 @@ layer 16 · 定理 · 群上同调 · 同调代数+抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.h1-semidirect.3.md](./thm.h1-semidirect.3.md)
 
-refs: Weibel, An Introduction to Homological Algebra, Section 6.5（分裂扩张）；Serre, Galois Cohomology —— 一维上同调与半直积
+refs: Weibel, An Introduction to Homological Algebra, Section 6.4（分裂扩张与截面）；Serre, Galois Cohomology —— 一维上同调与半直积
 
 > 说明见 `notes/thm.h1-semidirect.md`
 

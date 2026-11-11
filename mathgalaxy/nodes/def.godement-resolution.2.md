@@ -2,7 +2,9 @@
 [在星图里打开](../#n=def.godement-resolution)　·　第 1 页 [nodes/def.godement-resolution.md](./def.godement-resolution.md)
 
 ## 陈述（续）
-\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\
-mathcal{C}^{q}(\mathcal{F})$ 是松弛层（flabby），因而无环。
+}^{0}(\mathcal{F})\to\mathcal{C}^{1}(\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(
+\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\mathcal
+{C}^{q}(\mathcal{F})$ 是松弛层（flabby）；「松弛层无环」是另一条定理（Godement），本图未证，见 `thm.soft-sheaf-acy
+clic` 的第 3 步。
 
 > 续见 [nodes/def.godement-resolution.3.md](./def.godement-resolution.3.md)

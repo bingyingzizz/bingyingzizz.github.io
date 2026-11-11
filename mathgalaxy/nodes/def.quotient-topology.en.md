@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.quotient-topology)　·　[Chinese page (authoritative)](./def.quotient-topology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.quotient-topology.md` and `proofs/`.
+## Statement · **draft**
+Let $(X, \mathcal{T})$ be a topological space and $\pi : X \twoheadrightarrow Y$ a surjection. The **quotient topology** on $Y$ is
 
+$$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 
-Cite: `def.quotient-topology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+This is the finest topology making $\pi$ continuous; $Y$ with this topology is the **quotient space** of $X$.
 
+> continued in nodes/def.quotient-topology.en.2.md

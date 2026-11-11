@@ -11,7 +11,7 @@ layer 14 · 命题 · 范畴与图 · 范畴论
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.localization-hom-colim`](../nodes/prop.localization-hom-colim.md) 局部化的 Hom 是滤过余极限 用
+- ⇒ [`prop.localization-hom-colim`](../nodes/prop.localization-hom-colim.md) 局部化的 Hom 是滤过余极限
 
 - …另有出边，续页见 [nodes/prop.calculus-of-fractions.4.md](./prop.calculus-of-fractions.4.md)
 

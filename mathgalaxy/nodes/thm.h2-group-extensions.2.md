@@ -2,7 +2,7 @@
 [在星图里打开](../#n=thm.h2-group-extensions)　·　第 1 页 [nodes/thm.h2-group-extensions.md](./thm.h2-group-extensions.md)
 
 ## 陈述（续）
-的元素**一一对应**：
+一一对应**：
 - **给定扩张读上圈**：取一个集合论截面 $\sigma : G \to E$（$\pi \sigma = \operatorname{id}$，$\sigma(1) = 1$），令 $c(g_{1}, g_{2})$ 由
 $$\sigma(g_{1})\, \sigma(g_{2}) = i\bigl(c(g_{1}, g_{2})\bigr)\, \sigma(g_{1} g_{2})$$
 确定。则 $c \in Z^{2}(G, A)$，且它的类 $[c] \in H^{2}(G, A)$ 与 $\sigma$ 的选取无关（换截面只改一个上边界）。

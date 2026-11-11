@@ -13,6 +13,6 @@
 
 (vii) ⑦ 的投影公式要先把 ⑤ 做完。
 
-⚠ 所以本节点仍标 skeleton。边 imp.za-analytic 是**路线图 + 关键计算**，不是逐字证明；不要把「完整证明见边」当成已证事实引用。
+⚠ 所以本节点仍标 skeleton。边 imp.za-analytic 是**路线图 + 关键计算**，不是逐字证明；引用时勿当作已证事实。
 
 > 续见 notes/thm.za-analytic.4.md

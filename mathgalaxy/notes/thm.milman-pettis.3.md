@@ -1,8 +1,10 @@
 # Milman–Pettis 定理　`thm.milman-pettis`　·　说明
 根 `../`
 
-记 $y_\alpha = x_\alpha / \|x_\alpha\|$（当 $\|x_\alpha\| > 0$；最终成立），则 $y_\alpha \in S_X$、$\|y_\alpha - x_\alpha\| \to 0$，且 $\operatorname{Re}\varphi(y_\alpha) \to \operatorname{Re}\varphi(\xi) > 1 - \delta/2$。对充分大的 $\alpha, \beta$：若 $\|y_\alpha - y_\beta\| \ge \varepsilon$，由一致凸性 $\|(y_\alpha + y_\beta)/2\| \le 1 - \delta$，但 $\operatorname{Re}\varphi((y_\alpha + y_\beta)/2) > 1 - \delta/2 > 1 - \delta$，与 $\|\cdot\|$ 是范数矛盾；故最终 $\|y_\alpha - y_\beta\| < \varepsilon$。于是 $(y_\alpha)$ 是范数 Cauchy，$(x_\alpha)$ 也是（因两者差趋于 0）。
+但 $\operatorname{Re}\varphi\left(\frac{y_\alpha + y_\beta}{2}\right) > 1 - \delta/2$，而 $\operatorname{Re}\varphi(z) \le \|\varphi\|\,\|z\| = \|z\|$，故 $\|(y_\alpha + y_\beta)/2\| > 1 - \delta/2 > 1 - \delta$，矛盾。所以最终 $\|y_\alpha - y_\beta\| < \varepsilon$，$(y_\alpha)$ 是范数 Cauchy。由 $\|y_\alpha - x_\alpha\| \to 0$，$(x_\alpha)$ 也是范数 Cauchy。
 
-由 $X$ 完备，$x_\alpha \to x \in X$。范数收敛蕴含弱*收敛（$J_X x_\alpha \to J_X x$），而 $J_X x_\alpha = x_\alpha \to \xi$ 弱*；弱*极限唯一，故 $\xi = J_X x$。对 $\xi = 0$ 显然；对一般 $\xi \ne 0$ 用 $\xi/\|\xi\|$ 缩放。于是 $J_X$ 满射，$X$ 自反。$\blacksquare$（在 Goldstine 的前提下）
+**第五步：极限落在 $X$ 里。** $X$ 完备，故存在 $x \in X$ 使 $\|x_\alpha - x\| \to 0$。范数收敛蕴含弱*收敛：$J_X x_\alpha \to J_X x$。另一方面 $J_X x_\alpha = x_\alpha \to \xi$（弱*）。弱*拓扑 Hausdorff，极限唯一，故 $\xi = J_X x$。于是 $J_X$ 满射，$X$ 自反。∎
+
+**用到的外部输入**：只有 `thm.goldstine`（它由 `thm.hahn-banach` 与 `thm.banach-alaoglu` 推出，见各自的注释）。弱*拓扑与网收敛的语言在 `thm.goldstine` 与 `thm.banach-alaoglu` 的注释里给出，本条不再另立定义节点。
 
 > 续见 notes/thm.milman-pettis.4.md

@@ -8,8 +8,8 @@ layer 10 · 定义 · 整环与分解 · 抽象代数
 $$u a + v b = d = \gcd(a, b) .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e135.definition.md](../proofs/e135.definition.md)
-- [`thm.bezout`](../nodes/thm.bezout.md) Bézout 恒等式：Bézout 恒等式：从 $\mathbb{Z}$ 上的定理升级为一个环类　[proofs/e144.analogy.md](../proofs/e144.analogy.md)
+- [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e133.definition.md](../proofs/e133.definition.md)
+- [`thm.bezout`](../nodes/thm.bezout.md) Bézout 恒等式：Bézout 恒等式：从 $\mathbb{Z}$ 上的定理升级为一个环类　[proofs/e141.analogy.md](../proofs/e141.analogy.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.bezout-domain.2.md](./def.bezout-domain.2.md)

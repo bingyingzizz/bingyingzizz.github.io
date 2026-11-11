@@ -6,3 +6,5 @@
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/dep.godement-sheaf.md](../proofs/dep.godement-sheaf.md)
 - [`def.acyclic-sheaf`](../nodes/def.acyclic-sheaf.md) 无环层：用到了定义 无环层　[proofs/dep.godement-acyclic.md](../proofs/dep.godement-acyclic.md)
 - [`def.right-derived-functor`](../nodes/def.right-derived-functor.md) 右导出函子：用到了定义 右导出函子　[proofs/dep.godement-derived.md](../proofs/dep.godement-derived.md)
+
+> 续见 [nodes/def.godement-resolution.4.md](./def.godement-resolution.4.md)

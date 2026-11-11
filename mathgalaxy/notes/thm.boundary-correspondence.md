@@ -1,7 +1,7 @@
 # 边界对应定理　`thm.boundary-correspondence`　·　说明
 根 `../`
 
-**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`，已补完整证明）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。
+**这条命题就是 Carathéodory–Osgood 边界对应定理**（Jordan 区域版）：Riemann 映射的内部双全纯（`thm.riemann-mapping`）自动延拓到闭包并给出同胚。它不是 Riemann 映射定理的推论——内部双全纯完全不管边界行为，Jordan 条件是本质的。
 
 **能独立验证的一半：延拓加边界单射，则同胚。** 设 $f:\Omega\to\mathbb{D}$ 已连续延拓到 $\overline{\Omega}$，且在 $\partial\Omega$ 上单射。则：
 

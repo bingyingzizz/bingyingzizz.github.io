@@ -12,7 +12,7 @@
 - **7 / 6** `lem.newman-tauberian` Newman 解析定理 · layer 29 · 数论函数与素数分布
 - **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 24 · L^p 空间
 - **7 / 4** `thm.theorema-egregium` 绝妙定理 · layer 35 · 内蕴几何
-- **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 21 · 层上同调
+- **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 20 · 层上同调
 - **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 30 · 共形映射与正规族
 
 > 续见 hubs/big.2.md

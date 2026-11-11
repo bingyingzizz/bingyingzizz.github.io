@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 37 · theorem · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
+layer 36 · theorem · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.splitting-principle.md` and `proofs/`.

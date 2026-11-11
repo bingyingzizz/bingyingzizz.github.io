@@ -13,7 +13,7 @@ layer 15 · 定义 · 单满、子对象与像 · 范畴论
 - …另有入边，续页见 [nodes/def.intersection-subobject.3.md](./def.intersection-subobject.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.intersection-subobject.5.md](./def.intersection-subobject.5.md)
+- …另有出边，续页见 [nodes/def.intersection-subobject.4.md](./def.intersection-subobject.4.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §1.3（Def 1.3.10, p.23–24）；Mac Lane, Categories for the Working Mathematician, Ch. III §4
 

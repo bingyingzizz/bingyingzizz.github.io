@@ -15,4 +15,4 @@ $$\operatorname{RHom}(Z[S]^{\blacksquare}, C) \cong R\Gamma(S, C).$$
 
 
 
-⭐ **完整证明**见边 `imp.solid-abelian`：化到 $\prod_I\mathbb{Z}$ 型复形 $\to$ 核心断言 (6.1) $\to$ 把断言推回 $Z[S]^{\blacksquare}$ $\to$ 套用完备化判据。
+⭐ **证明**见边 `imp.solid-abelian`：化到 $\prod_I\mathbb{Z}$ 型复形 $\to$ 核心断言 (6.1) $\to$ 把断言推回 $Z[S]^{\blacksquare}$ $\to$ 套用完备化判据。

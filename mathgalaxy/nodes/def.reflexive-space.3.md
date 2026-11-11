@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.reflexive-space)　·　第 1 页 [nodes/def.reflexive-space.md](./def.reflexive-space.md)　·　上一页 [nodes/def.reflexive-space.2.md](./def.reflexive-space.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`thm.riesz-perfect-pairing`](../nodes/thm.riesz-perfect-pairing.md) Riesz 表示的配对版
 - ～弱边 [`def.perfect-pairing`](../nodes/def.perfect-pairing.md) 完美配对
 - 被 [`cor.lp-reflexive`](../nodes/cor.lp-reflexive.md) L^p 自反 用
 - 被 [`thm.milman-pettis`](../nodes/thm.milman-pettis.md) Milman–Pettis 定理 用

@@ -14,7 +14,7 @@ $$TS^{1} = \bigsqcup_{z \in S^{1}} T_{z}S^{1}$$
 
 - …另有入边，续页见 [nodes/ex.s1-tangent-bundle.2.md](./ex.s1-tangent-bundle.2.md)
 
-refs: Tu, Introduction to Manifolds, §8（切丛）
+refs: Tu, Introduction to Manifolds, §12（The Tangent Bundle）
 
 > 说明见 `notes/ex.s1-tangent-bundle.md`
 

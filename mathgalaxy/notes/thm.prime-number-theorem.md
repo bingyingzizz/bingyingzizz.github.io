@@ -1,7 +1,7 @@
 # 素数定理　`thm.prime-number-theorem`　·　说明
 根 `../`
 
-**本节点只给陈述、记号与依赖链；完整证明在组装边与各自节点的入边，不写回本注。**
+**本条只给陈述、记号与依赖链；证明由组装边与各自节点的入边承担，不写回本注。**
 
 **记号**：$\Lambda(n)=\log p$（$n=p^{k}$）或 $0$（其它），$\psi(x)=\sum_{n\le x}\Lambda(n)$、$\theta(x)=\sum_{p\le x}\log p$、$\pi(x)=\#\{p\le x\}$（见 `def.prime-counting`）。
 

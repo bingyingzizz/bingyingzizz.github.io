@@ -19,7 +19,7 @@ $$d_{m}(g) := g\, m - m \qquad (m \in M)$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.h1-crossed.3.md](./thm.h1-crossed.3.md)
 
-refs: Weibel, An Introduction to Homological Algebra, Section 6.5（一维上同调与交叉同态）；Serre, Galois Cohomology —— 一维上同调与交叉同态
+refs: Weibel, An Introduction to Homological Algebra, Section 6.4（Crossed Homomorphisms and H¹）；Serre, Galois Cohomology —— 一维上同调与交叉同态
 
 > 说明见 `notes/thm.h1-crossed.md`
 

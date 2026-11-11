@@ -4,4 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.argument-principle`](../nodes/thm.argument-principle.md) 辐角原理 用
 - ⇒ [`prop.winding-integral`](../nodes/prop.winding-integral.md) 绕数的积分表示
+- 被 [`def.degree`](../nodes/def.degree.md) 映射的度 用
 - 被 [`ex.contour-1-over-z`](../nodes/ex.contour-1-over-z.md) ∮dz/z 用

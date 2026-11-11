@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.natural-transformation)　·　[Chinese page (authoritative)](./def.natural-transformation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.natural-transformation.md` and `proofs/`.
+## Statement · **draft**
+Let $F, G : \mathcal{C} \to \mathcal{D}$ be two functors. A **natural transformation** $\alpha : F \implies G$ from $F$ to $G$ is a family of morphisms
 
+$$\alpha_X : F(X) \to G(X) \qquad (X \in \mathcal{C})$$
 
-Cite: `def.natural-transformation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+such that for every $f : X \to Y$ the square commutes:
 
+$$G(f) \circ \alpha_X = \alpha_Y \circ F(f)$$
+
+> continued in nodes/def.natural-transformation.en.2.md

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.integral-simple)　·　[Chinese page (authoritative)](./def.integral-simple.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.integral-simple.md` and `proofs/`.
+## Statement · **draft**
+Let $\varphi \in L^+$ be a simple function, written in standard form — non-negative coefficients, pairwise disjoint base sets, all in $\mathcal{M}$:
 
+$\varphi = \sum_{j=1}^{n} a_j \chi_{E_j}, \quad  a_j \ge 0,\ E_j \in \mathcal{M}$, **pairwise disjoint**
 
-Cite: `def.integral-simple` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then define
 
+$$\int \varphi d\mu := \sum_{j=1}^{n} a_j \mu(E_j)$$
+
+> continued in nodes/def.integral-simple.en.2.md

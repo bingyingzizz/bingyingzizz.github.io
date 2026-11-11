@@ -3,4 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理
-- 被 [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面 用
+- ⇒ [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面

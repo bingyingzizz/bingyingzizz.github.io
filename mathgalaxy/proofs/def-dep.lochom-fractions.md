@@ -1,6 +1,12 @@
-# def-dep.lochom-fractions
-`def-dep.lochom-fractions` · 定义引用 · strong 边 · 根 `../`
+# 右分式演算让局部化的 Hom 成为滤过余极限
+`def-dep.lochom-fractions` · 推出 · strong 边 · 根 `../`
 
 `prop.calculus-of-fractions` 分式演算下的局部化 → `prop.localization-hom-colim` 局部化的 Hom 是滤过余极限
 
-公式只在**右分式演算**成立时才对，且给出的是**滤过**余极限。
+分式的等价关系要传递，得用 **Ore 条件 2** 把两次比较拉到同一个 $X''$ 上，再用**消去条件 3** 抹掉剩余差异 —— 这两条正是 `prop.calculus-of-fractions` 里「$W$ 容许右分式演算」的内容。
+
+复合的通分、以及 $J$ 的滤过性（向上合并的余锥、平行态射可等化）是同一组条件的直接翻译。
+
+没有这两条，「两个分式相等」甚至不是传递关系，余极限无从谈起；有了它们才能把每个分式类数成一个滤过余极限的元素。∎
+
+> 公式只在**右分式演算**成立时才对，且给出的是**滤过**余极限。

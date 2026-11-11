@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.locally-compact-space)　·　[Chinese page (authoritative)](./def.locally-compact-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.locally-compact-space.md` and `proofs/`.
+## Statement · **draft**
+A topological space $X$ is **locally compact** if **every point has a compact neighbourhood**: for every $x \in X$ there is a compact set $K$ with
 
+$$x \in \mathring{K}$$
 
-Cite: `def.locally-compact-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Here $X$ is **not** required to be Hausdorff.
 
+> continued in nodes/def.locally-compact-space.en.2.md

@@ -14,6 +14,6 @@ $\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$，$\pi(x)=\fr
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 4
 
 ## 说明
-由 Stieltjes 分部求和（取 $f=\log t$ 与 $f=1/\log t$）得到；证明见入边（Stieltjes 分部求和）。
+由 Stieltjes 分部求和（取 $f=\log t$ 与 $f=1/\log t$）得到（Stieltjes 分部求和）。
 
 引用：`lem.abel-theta-pi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

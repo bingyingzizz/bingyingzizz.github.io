@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：用到了定义 Gauss 曲率　[proofs/dep.gap-thm.gauss-equation-gauss-curvature.md](../proofs/dep.gap-thm.gauss-equation-gauss-curvature.md)
+- [`thm.codazzi-mainardi`](../nodes/thm.codazzi-mainardi.md) Codazzi–Mainardi 方程：ana.cod-gauss　[proofs/ana.cod-gauss.md](../proofs/ana.cod-gauss.md)
 
 > 续见 [nodes/thm.gauss-equation.5.md](./thm.gauss-equation.5.md)

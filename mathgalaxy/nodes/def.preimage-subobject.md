@@ -14,7 +14,7 @@ $$f^{-1}(Y) := Y \times_{X} X^{\prime} \;\longrightarrow\; X^{\prime} ,$$
 ## 它能推出什么 / 谁在用它
 - ～弱边 [`def.preimage`](../nodes/def.preimage.md) 像与原像
 
-- …另有出边，续页见 [nodes/def.preimage-subobject.5.md](./def.preimage-subobject.5.md)
+- …另有出边，续页见 [nodes/def.preimage-subobject.4.md](./def.preimage-subobject.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.preimage-subobject.3.md](./def.preimage-subobject.3.md)

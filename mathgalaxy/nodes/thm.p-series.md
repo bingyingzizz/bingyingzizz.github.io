@@ -11,7 +11,7 @@ $$\sum_{n=1}^{\infty} \frac{1}{n^{p}}$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.cauchy-condensation`](../nodes/thm.cauchy-condensation.md) Cauchy 凝聚判别法 + [`thm.geometric-series`](../nodes/thm.geometric-series.md) 几何级数：凝聚判别法 + 几何级数 $\implies$ p-级数　[proofs/imp.p-series.md](../proofs/imp.p-series.md)
-- [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根：用到了定义 n 次方根　[proofs/def-link.nthroot-p-series.md](../proofs/def-link.nthroot-p-series.md)
+- [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根：ana.nthroot-p-series　[proofs/ana.nthroot-p-series.md](../proofs/ana.nthroot-p-series.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.p-series.2.md](./thm.p-series.2.md)

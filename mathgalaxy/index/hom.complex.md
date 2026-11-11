@@ -13,9 +13,9 @@
 - prop.additive-complex-construction　加法函子与复形构造交换　layer 13
 - def.homotopy-category　同伦范畴　layer 14
 - def.distinguished-triangle　导出三角　layer 14
+- thm.derived-long-exact　导出函子的长正合列　layer 14
 - def.f-acyclic　F-零调对象　layer 14
 - prop.left-exact-iff-R0　左正合性与 R⁰　layer 14
 - prop.derived-functor-kan-extension　导出函子就是 Kan 延拓　layer 14
-- def.category-of-complexes　复形范畴　layer 15
 
 > 续见 `index/hom.complex.2.md`

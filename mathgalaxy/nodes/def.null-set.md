@@ -14,7 +14,7 @@ $$\forall E \in \mathcal{M}, \forall F \subseteq E : \mu(E) = 0 \implies F \in \
 则称 $\mu$（或这个测度空间）**完备**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.complete`](../nodes/def.complete.md) 完备：两个「完备」：度量完备 vs 测度完备　[proofs/e195.analogy.md](../proofs/e195.analogy.md)
+- [`def.complete`](../nodes/def.complete.md) 完备：两个「完备」：度量完备 vs 测度完备　[proofs/e191.analogy.md](../proofs/e191.analogy.md)
 
 - …另有入边，续页见 [nodes/def.null-set.2.md](./def.null-set.2.md)
 

@@ -2,14 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.saft)　·　[Chinese page (authoritative)](./thm.saft.md)
 
-## Statement · **reviewed**
-Let $\mathcal{D}$ be a **small** and **complete** category. Then a functor $G : \mathcal{D} \to \mathcal{C}$ has a left adjoint $\iff$ $G$ preserves all limits.
-
-The left adjoint is given by a limit construction:
-
-$$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
-
-## Notes · **reviewed**
-**Preservation of limits is the only obstruction.** Together with "a right adjoint preserves limits" this gives a complete criterion: preservation of limits is necessary, and on a complete small category it is also sufficient.
+## Abstract · **stale**
+Let $\mathcal{D}$ be small and complete. A functor $G : \mathcal{D} \to \mathcal{C}$ has a left adjoint iff it preserves all limits; when it does, one may take $F(X) = \varprojlim_{(Y,f) \in (X \downarrow G)} Y$. So preservation of limits, which is automatic for right adjoints, is also sufficient under these hypotheses. The construction reads: $F(X)$ is the object of $\mathcal{D}$ closest to $X$, and every $X \to G(Y)$ factors through $X \to G(FX) \to G(Y)$.
 
 > continued in nodes/thm.saft.en.3.md

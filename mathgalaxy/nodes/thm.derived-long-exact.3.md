@@ -3,4 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.right-derived-functor`](../nodes/def.right-derived-functor.md) 右导出函子：用到了定义 右导出函子　[proofs/def-dep.derlex-rdf.md](../proofs/def-dep.derlex-rdf.md)
-- [`thm.long-exact`](../nodes/thm.long-exact.md) 长正合列：用到了定义 长正合列　[proofs/def-dep.derlex-longexact.md](../proofs/def-dep.derlex-longexact.md)
+- [`thm.long-exact`](../nodes/thm.long-exact.md) 长正合列：def-dep.derlex-longexact　[proofs/def-dep.derlex-longexact.md](../proofs/def-dep.derlex-longexact.md)
+
+> 续见 [nodes/thm.derived-long-exact.4.md](./thm.derived-long-exact.4.md)

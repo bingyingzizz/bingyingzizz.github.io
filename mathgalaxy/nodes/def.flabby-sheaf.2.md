@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.godement-resolution`](../nodes/def.godement-resolution.md) Godement 消解 用
+- 被 [`thm.soft-sheaf-acyclic`](../nodes/thm.soft-sheaf-acyclic.md) 软层无环（Godement） 用

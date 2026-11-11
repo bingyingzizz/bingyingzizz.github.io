@@ -14,6 +14,6 @@ $\theta(x)\sim x$ 当且仅当 $\pi(x)\sim x/\log x$（$x\to\infty$）。
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 4
 
 ## 说明
-用 Abel 变换与 $\int_{2}^{x}\mathrm{d}t/\log^{2}t=o(x/\log x)$；证明见入边（Abel 变换与积分估计）。
+用 Abel 变换与 $\int_{2}^{x}\mathrm{d}t/\log^{2}t=o(x/\log x)$（Abel 变换与积分估计）。
 
 引用：`lem.theta-pi-equivalence`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

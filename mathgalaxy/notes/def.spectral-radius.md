@@ -1,7 +1,7 @@
 # 谱半径　`def.spectral-radius`　·　说明
 根 `../`
 
-⚠️ **公式 (3) 在本图只做到有限维**。一般 Banach 代数上的 Gelfand 公式 $\rho(a) = \lim\lVert a^{n}\rVert^{1/n}$（以及「谱非空」「谱半径等于谱的上确界」）需要复分析（Liouville）与算子理论，**留给泛函那一批**，这里不展开成独立节点。
+⚠️ **公式 (3) 这里只做到有限维**。一般 Banach 代数上的 Gelfand 公式 $\rho(a) = \lim\lVert a^{n}\rVert^{1/n}$（以及「谱非空」「谱半径等于谱的上确界」）需要复分析（Liouville）与算子理论，**留给泛函那一批**，这里不展开成独立节点。
 
 **为什么第 (1) 条成立但常常严格**：取特征对 $Ax = \lambda x$，则 $\lvert\lambda\rvert\lVert x\rVert = \lVert Ax\rVert \le \lVert A\rVert\lVert x\rVert$。
 

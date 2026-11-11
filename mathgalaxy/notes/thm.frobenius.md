@@ -1,7 +1,7 @@
 # Frobenius 定理　`thm.frobenius`　·　说明
 根 `../`
 
-**证明结构**：四条等价里 (2) 是引擎。两条完整证明边是 `imp.mf2-frobenius-flat`（(1)$\implies$(2) 的流盒加降秩归纳）与 `imp.mf2-frobenius-integral`（(2)$\implies$(3)、(3)$\implies$(1)、(2)$\implies$(4)）。下面把主线逐步写清，可以独立阅读。
+**证明结构**：四条等价里 (2) 是引擎。两条证明边是 `imp.mf2-frobenius-flat`（(1)$\implies$(2) 的流盒加降秩归纳）与 `imp.mf2-frobenius-integral`（(2)$\implies$(3)、(3)$\implies$(1)、(2)$\implies$(4)）。下面把主线逐步写清，可以独立阅读。
 
 **一、(1)$\implies$(2)：流盒 + 降秩归纳。** 取 $p$，在 $p$ 的邻域取光滑生成元 $X_{1},\ldots,X_{k}$，它们处处独立。
 

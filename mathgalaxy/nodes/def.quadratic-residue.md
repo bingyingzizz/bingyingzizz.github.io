@@ -10,7 +10,7 @@ $$x^{2} \equiv a \pmod p$$
 有解，称 $a$ 是模 $p$ 的**二次剩余**；否则称**二次非剩余**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.congruence`](../nodes/def.congruence.md) 同余：用到了定义 同余　[proofs/e153.definition.md](../proofs/e153.definition.md)
+- [`def.congruence`](../nodes/def.congruence.md) 同余：用到了定义 同余　[proofs/e149.definition.md](../proofs/e149.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号 用

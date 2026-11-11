@@ -10,8 +10,6 @@ $$g(n) = \sum_{d \mid n} f(d)\quad \forall n \qquad \iff \qquad f(n) = \sum_{d \
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式：反演：交换求和次序，内层只剩 $n/m=1$　[proofs/imp.nt-mobius-inversion.md](../proofs/imp.nt-mobius-inversion.md)
 
-- …另有入边，续页见 [nodes/thm.mobius-inversion.2.md](./thm.mobius-inversion.2.md)
-
 refs: 华罗庚《数论导引》第三章；Apostol, Ch. 2
 
 > 说明见 `notes/thm.mobius-inversion.md`

@@ -14,6 +14,6 @@ layer 31 · 定理 · 数论函数与素数分布 · 数论+数学分析
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 12；Ingham, The Distribution of Prime Numbers, Ch. II
 
 ## 说明
-用 Euler 乘积取对数与 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$；$t=0$ 处是极点，不是零点。证明见入边（加权对数估计）。
+用 Euler 乘积取对数与 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$；$t=0$ 处是极点，不是零点。（加权对数估计）。
 
 引用：`thm.zeta-no-zeros-line1`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

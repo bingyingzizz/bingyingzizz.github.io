@@ -10,8 +10,8 @@ $$a = qb + r, \qquad 0 \le r < |b| .$$
 $q$ 叫**商**，$r$ 叫**余数**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e116.definition.md](../proofs/e116.definition.md)
-- [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法：整数与多项式：同一个带余除法　[proofs/e127.analogy.md](../proofs/e127.analogy.md)
+- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e115.definition.md](../proofs/e115.definition.md)
+- [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法：整数与多项式：同一个带余除法　[proofs/e125.analogy.md](../proofs/e125.analogy.md)
 
 - …另有入边，续页见 [nodes/thm.int-division.2.md](./thm.int-division.2.md)
 

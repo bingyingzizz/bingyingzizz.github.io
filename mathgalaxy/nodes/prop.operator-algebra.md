@@ -1,6 +1,6 @@
 # 算子乘法的范数不等式　`prop.operator-algebra`
 复合与算子范数：$\|vu\| \le \|v\|\,\|u\|$
-layer 18 · 命题 · 赋范空间与有界算子 · 泛函分析
+layer 14 · 命题 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=prop.operator-algebra)　·　[节点索引](../index.md)
 
 设 $u \in B(E, F)$，$v \in B(F, G)$。则 $v \circ u \in B(E, G)$ 且

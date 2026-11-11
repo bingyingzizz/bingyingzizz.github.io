@@ -4,7 +4,7 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.polynomial`](../nodes/def.polynomial.md) 一元多项式 + [`def.field`](../nodes/def.field.md) 域：多项式的次数 + $K$ 是域 $\implies$ 带余除法　[proofs/imp.division-algorithm.md](../proofs/imp.division-algorithm.md)
 - [`def.polynomial-ring`](../nodes/def.polynomial-ring.md) 多项式环：用到了定义 多项式环　[proofs/dep.polyring-division.md](../proofs/dep.polyring-division.md)
-- [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法：整数与多项式：同一个带余除法　[proofs/e127.analogy.md](../proofs/e127.analogy.md)
-- [`def.euclidean-domain`](../nodes/def.euclidean-domain.md) Euclid 整环：用到了定义 Euclid 整环　[proofs/e142.definition.md](../proofs/e142.definition.md)
+- [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法：整数与多项式：同一个带余除法　[proofs/e125.analogy.md](../proofs/e125.analogy.md)
+- [`def.euclidean-domain`](../nodes/def.euclidean-domain.md) Euclid 整环：用到了定义 Euclid 整环　[proofs/e139.definition.md](../proofs/e139.definition.md)
 
 > 续见 [nodes/thm.division-algorithm.3.md](./thm.division-algorithm.3.md)

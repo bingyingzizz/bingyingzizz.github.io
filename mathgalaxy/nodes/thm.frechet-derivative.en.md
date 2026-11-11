@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 29 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 21 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.frechet-derivative.md` and `proofs/`.

@@ -14,8 +14,6 @@ $$P \cup N = X, \quad  P \cap N = \emptyset, $$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.jordan-decomposition`](../nodes/thm.jordan-decomposition.md) Jordan 分解定理
 
-- …另有出边，续页见 [nodes/thm.hahn-decomposition.3.md](./thm.hahn-decomposition.3.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.hahn-decomposition.2.md](./thm.hahn-decomposition.2.md)
 

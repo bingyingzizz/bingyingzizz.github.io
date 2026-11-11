@@ -15,4 +15,4 @@ $$\psi(x) = \sum_{n \le x} \Lambda(n), \qquad \Lambda(n) = \begin{cases}\log p, 
 
 
 
-⭐ 人名按原文字母写：**Чебышёв**（不用音译，也不用英文拼法 Chebyshev）—— 这是本项目的口径。
+⭐ 人名按原文字母写：**Чебышёв**（不用音译，也不用英文拼法 Chebyshev）。

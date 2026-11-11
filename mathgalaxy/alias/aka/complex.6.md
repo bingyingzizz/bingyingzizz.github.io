@@ -1,6 +1,8 @@
 # 别名 → 节点 · 复变函数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../complex.md`
 
+- Riemann 曲面 | 黎曼曲面 → def.riemann-surface
+
 - 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
 
 - 分歧指数 | 分歧点 | 分支点 | ramification index | ramification point → def.ramification-index
@@ -22,8 +24,6 @@
 - 单位根 | 分圆多项式 | n 次单位根 | roots of unity → def.roots-of-unity
 
 - dz/z 的围道积分 → ex.contour-1-over-z
-
-- Carathéodory–Osgood 边界对应 → lem.caratheodory-osgood
 
 - 素端 | Carathéodory 紧化 → def.prime-end
 

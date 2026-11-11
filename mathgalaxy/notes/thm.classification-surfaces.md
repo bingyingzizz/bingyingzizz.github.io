@@ -1,7 +1,7 @@
 # 闭曲面分类定理　`thm.classification-surfaces`　·　说明
 根 `../`
 
-⚠ 本节点保持 status: skeleton。三步里第 (1) 步 Radó 与第 (2) 步组合归类都未证，第 (3) 步完整。**注意**：`prop.eulerchar-genus` 已不再依赖本条（它的注改走 Radó + 引理 D 的初等路线），所以本条不阻塞那条命题；反过来，本条也不把 `prop.eulerchar-genus` 当输入。
+⚠ 本节点保持 status: skeleton。三步里第 (1) 步 Radó 与第 (2) 步组合归类都未证，第 (3) 步已有证明。**注意**：`prop.eulerchar-genus` 已不再依赖本条（它的注改走 Radó + 引理 D 的初等路线），所以本条不阻塞那条命题；反过来，本条也不把 `prop.eulerchar-genus` 当输入。
 
 **三步的结构。** (1) Radó：闭曲面可三角剖分（`thm.rado`，skeleton）。(2) 组合归类：任意三角剖分经有限步操作化成标准形。(3) 标准形上读不变量：可定向性与 $\chi$ 给出 $(g)$ 或 $(k)$，且互不同胚。
 

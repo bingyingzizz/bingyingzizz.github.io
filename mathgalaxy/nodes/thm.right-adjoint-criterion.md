@@ -15,6 +15,6 @@ $$\operatorname{Hom}_{\mathcal{D}}\bigl(F(-),\ Y\bigr) : \mathcal{C}^{\mathrm{op
 refs: Mac Lane, Categories for the Working Mathematician, V.6
 
 ## 说明
-这是「造右伴随」的通用机器：先对每个 $Y$ 求出表示对象 $G(Y)$，再验证这样拼出来的 $G$ 是函子。证明见边上的推导。
+这是「造右伴随」的通用机器：先对每个 $Y$ 求出表示对象 $G(Y)$，再验证这样拼出来的 $G$ 是函子。
 
 引用：`thm.right-adjoint-criterion`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

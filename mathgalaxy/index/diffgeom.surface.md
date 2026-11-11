@@ -11,11 +11,11 @@
 - def.second-fundamental-form　第二基本形式　layer 32
 - def.principal-curvature　主曲率　layer 32
 - def.orientable-surface　R³ 中的可定向曲面　layer 32
+- thm.codazzi-mainardi　Codazzi–Mainardi 方程　layer 33
 - thm.meusnier　Meusnier 定理　layer 33
 - thm.euler-formula-surface　Euler 公式　layer 33
 - thm.rodrigues　Rodrigues 定理　layer 33
 - thm.gauss-equation　Gauss 方程　layer 34
 - prop.curvature-lines　曲率线网　layer 34
-- ex.cylinder-first-form　圆柱的第一基本形式　layer 34
 
 > 续见 `index/diffgeom.surface.2.md`

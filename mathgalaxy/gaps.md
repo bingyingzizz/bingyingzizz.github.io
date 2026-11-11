@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1621 节点 / 3381 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1628 节点 / 3402 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -11,8 +11,8 @@
 
 ## 一、提到了但没有节点（16 个）
 
-### 单位圆　出现 33 次
-`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `lem.caratheodory-osgood` · `def.jordan-curve` · `def.trig-function` 等 27 个节点
+### 单位圆　出现 31 次
+`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `def.jordan-curve` · `def.trig-function` · `def.normal-curvature` 等 26 个节点
 
 ### 角度　出现 12 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.trig-function` · `thm.euler-formula` · `def.isometry` · `def.intrinsic-quantity` 等 9 个节点
@@ -59,7 +59,7 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（32 处）
+## 二、陈述用到更深的定义却没有边（39 处）
 
 - `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 15
 - `def.weak-hausdorff`（弱 Hausdorff 空间 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
@@ -74,15 +74,22 @@
 - `prop.cgwh-fiber-product`（紧块的纤维积还是紧的 · L13）用到 `def.continuous-map`（连续映射 · L16）　落差 3
 - `def.cochain-complex`（上链复形 · L12）用到 `def.additive-category`（加法范畴 · L14）　落差 2
 - `def.module-category`（模范畴 · L10）用到 `def.linear-map`（线性映射 · L12）　落差 2
+- `thm.derived-long-exact`（导出函子的长正合列 · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.left-exact-criterion`（左正合性的判据 · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.left-exact-iff-R0`（左正合性与 R⁰ · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.additive-complex-construction`（加法函子与复形构造交换 · L13）用到 `def.category-of-complexes`（复形范畴 · L15）　落差 2
 - `thm.smooth-partition-unity`（光滑单位分解 · L20）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 2
+- `lem.almost-orthogonal`（几乎正交引理 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
+- `def.bounded-operator`（有界线性算子 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
+- `def.schauder-basis`（Schauder 基 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
+- `def.strictly-convex`（严格凸 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
+- `thm.hahn-banach`（Hahn–Banach 定理 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
 - `prop.injective-criterion`（内射对象的判据 · L15）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 1
 - `def.filtration`（过滤 · L15）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 1
 - `def.bicomplex`（双复形 · L13）用到 `def.additive-category`（加法范畴 · L14）　落差 1
 - `prop.simplicial-to-chain`（单纯对象给出链复形 · L13）用到 `def.additive-category`（加法范畴 · L14）　落差 1
 - `def.injective-dimension`（内射维数 · L20）用到 `def.flat-dimension`（平坦维数 · L21）　落差 1
+- `thm.linear-continuous-bounded`（连续 ⟺ 有界 · L14）用到 `def.normed-space`（赋范空间 · L15）　落差 1
 - `ex.klein-bottle`（克莱因瓶 · L34）用到 `def.nonorientable-genus`（不可定向亏格 · L35）　落差 1
 - `def.real-metric-space`（实数的度量 · L15）用到 `def.canonical-topology`（标准拓扑 · L15）
 - `def.category-of-groups`（群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）

@@ -2,15 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.saft)　·　[Chinese page (authoritative)](./thm.saft.md)
 
-What the construction means: all the ways of mapping $X$ into the image of $G$ form a category $X \downarrow G$, and one takes a limit in it — $F(X)$ is the object of $\mathcal{D}$ "closest" to $X$. Every $X \to G(Y)$ can be organised as $X \to G(F(X)) \to G(Y)$.
+## Statement · **reviewed**
+Let $\mathcal{D}$ be a **small** and **complete** category. Then a functor $G : \mathcal{D} \to \mathcal{C}$ has a left adjoint $\iff$ $G$ preserves all limits.
 
-The proof is the derivation on the edge.
+The left adjoint is given by a limit construction:
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+$$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Adjoint_functor_theorem · nLab: https://ncatlab.org/nlab/show/adjoint+functor+theorem
+## Notes · **stale**
+**Preservation of limits is the only obstruction.** Together with "a right adjoint preserves limits" this gives a complete criterion: preservation of limits is necessary, and on a complete small category it is also sufficient.
 
-
-Cite: `thm.saft` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.saft.en.4.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.ring)　·　[Chinese page (authoritative)](./def.ring.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ring.md` and `proofs/`.
+## Statement · **draft**
+Let $A$ be a **set** and $+$, $\cdot$ two **binary operations** on $A$. Then $(A, +, \cdot)$ is a **ring** if and only if:
 
+- $(A, +)$ is an **abelian group**;
+- $(A, \cdot)$ satisfies **associativity** (no identity and no commutativity is required);
+- the **distributive laws** $a(b + c) = ab + ac$, $(a + b)c = ac + bc$ hold.
 
-Cite: `def.ring` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ring.en.2.md

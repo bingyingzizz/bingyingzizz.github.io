@@ -8,7 +8,7 @@ layer 27 · 定理 · 同调群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群：奇异链上造棱柱算子 $P_{n}$　[proofs/e111.implication.md](../proofs/e111.implication.md)
+- [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群：奇异链上造棱柱算子 $P_{n}$　[proofs/e110.implication.md](../proofs/e110.implication.md)
 
 - …另有入边，续页见 [nodes/thm.homotopy-invariance.3.md](./thm.homotopy-invariance.3.md)
 

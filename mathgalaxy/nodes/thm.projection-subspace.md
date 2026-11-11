@@ -10,7 +10,7 @@ layer 20 · 定理 · Hilbert 空间 · 泛函分析
 3. 正交分解 $H = E \oplus E^\perp$，且 $\|x\|^2 = \|x - P_E x\|^2 + \|P_E x\|^2$。
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）
+- ⇒ [`thm.riesz-perfect-pairing`](../nodes/thm.riesz-perfect-pairing.md) Riesz 表示的配对版
 
 - …另有出边，续页见 [nodes/thm.projection-subspace.4.md](./thm.projection-subspace.4.md)
 

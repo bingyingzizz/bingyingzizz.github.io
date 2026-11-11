@@ -8,8 +8,6 @@ layer 14 · 定义 · 群上同调 · 同调代数+抽象代数
 $$H^{n}(G, M) := R^{n}(-)^{G}(M),$$
 
 等价地
-
-$$H^{n}(G, M) = \operatorname{Ext}^{n}_{R[G]}\bigl(R,\ M\bigr),$$
 > 陈述续见 [nodes/def.group-cohomology.2.md](./def.group-cohomology.2.md)
 
 
@@ -21,7 +19,7 @@ $$H^{n}(G, M) = \operatorname{Ext}^{n}_{R[G]}\bigl(R,\ M\bigr),$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.group-cohomology.4.md](./def.group-cohomology.4.md)
 
-refs: Weibel, An Introduction to Homological Algebra, Section 6.5；Rotman, An Introduction to Homological Algebra —— 群上同调一章
+refs: Weibel, An Introduction to Homological Algebra, Section 6.1（Definitions and First Properties）；Rotman, An Introduction to Homological Algebra —— 群上同调一章
 
 > 说明见 `notes/def.group-cohomology.md`
 

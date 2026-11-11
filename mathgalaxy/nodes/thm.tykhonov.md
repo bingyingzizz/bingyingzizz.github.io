@@ -7,12 +7,14 @@ layer 17 · 定理 · 收敛与紧性 · 拓扑学
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`ax.choice`](../nodes/ax.choice.md) 选择公理：选择公理：Tychonoff 定理（Alexander 子基引理）　[proofs/imp.ac-tykhonov.md](../proofs/imp.ac-tykhonov.md)
-- [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理：有限性原理的两个化身：紧致性定理与 Tychonoff　[proofs/e183.analogy.md](../proofs/e183.analogy.md)
+- [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理：有限性原理的两个化身：紧致性定理与 Tychonoff　[proofs/e179.analogy.md](../proofs/e179.analogy.md)
 
 - …另有入边，续页见 [nodes/thm.tykhonov.2.md](./thm.tykhonov.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ～弱边 [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理
+- 被 [`thm.banach-alaoglu`](../nodes/thm.banach-alaoglu.md) Banach–Alaoglu 定理 用
+
+- …另有出边，续页见 [nodes/thm.tykhonov.3.md](./thm.tykhonov.3.md)
 
 refs: Munkres, Topology, §37；Le Stum, Exercise 2.19
 

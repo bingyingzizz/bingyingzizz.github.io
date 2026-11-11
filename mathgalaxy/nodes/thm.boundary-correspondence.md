@@ -1,17 +1,19 @@
 # 边界对应定理　`thm.boundary-correspondence`
 边界对应：Jordan 区域的共形映射能延拓到边界
-layer 32 · 定理 · 共形映射与正规族 · 复变函数
+layer 31 · 定理 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=thm.boundary-correspondence)　·　[节点索引](../index.md)
 
 设 $\Omega \subset \mathbb{C}$ 是**单连通**区域，且边界 $\partial\Omega$ 是一
 > 陈述续见 [nodes/thm.boundary-correspondence.2.md](./thm.boundary-correspondence.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`def.prime-end`](../nodes/def.prime-end.md) 素端 用
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.prime-end`](../nodes/def.prime-end.md) 素端：ana.prime-boundary　[proofs/ana.prime-boundary.md](../proofs/ana.prime-boundary.md)
+
 - …另有入边，续页见 [nodes/thm.boundary-correspondence.3.md](./thm.boundary-correspondence.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.boundary-correspondence.4.md](./thm.boundary-correspondence.4.md)
 
 refs: 王晓光《复变函数》· 边界对应（介绍）；Ahlfors, Complex Analysis (3rd ed.), Ch. 6 · Conformal Mapping（boundary correspondence）；Pommerenke, Boundary Behaviour of Conformal Maps, Ch. 2
 

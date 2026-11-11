@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.riesz-representation-lp`](../nodes/thm.riesz-representation-lp.md) Riesz 表示定理
+- ⇒ [`thm.riesz-perfect-pairing`](../nodes/thm.riesz-perfect-pairing.md) Riesz 表示的配对版

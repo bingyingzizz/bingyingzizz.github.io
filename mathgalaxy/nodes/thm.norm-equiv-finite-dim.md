@@ -1,6 +1,6 @@
 # 有限维范数等价　`thm.norm-equiv-finite-dim`
 有限维空间上所有范数等价
-layer 18 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 17 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.norm-equiv-finite-dim)　·　[节点索引](../index.md)
 
 设 $\dim E < \infty$。则 $E$ 上任意两个范数等价；等价地，任取一组基 $e_1, \ldots, e_n$，则存在 $\alpha, \beta > 0$ 使

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.subspace-topology)　·　[Chinese page (authoritative)](./def.subspace-topology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 5 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.subspace-topology.md` and `proofs/`.
+## Statement · **draft**
+Let $(X, \mathcal{T})$ be a topological space and $Y \subseteq X$ a subset. The **subspace topology** on $Y$ is
 
+$$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 
-Cite: `def.subspace-topology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The resulting topology is the coarsest topology making the inclusion map $Y \hookrightarrow X$ continuous.
 
+> continued in nodes/def.subspace-topology.en.2.md

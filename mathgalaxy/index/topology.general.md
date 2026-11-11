@@ -1,7 +1,7 @@
 # 拓扑空间的基本语汇 / Topological Spaces and Basic Constructions（topology.general）· 节点清单（第 1/2 页）
 
 造出「开集」这套不依赖距离的语言：拓扑空间 → 闭集、闭包与内部 → 基与子基 → 连续映射 → 子空间 / 积 / 商 → 连通与闭开集 → 同胚。⚠️ 2026-11-02 拆团：分离公理（T0–T6、Urysohn、正规与正则那一条线）拆到「分离公理」，网 / 滤子 / 紧化 / 可数性拆到「收敛与紧性」。
-中心天体 def.topology　·　17 个节点　·　根 `../`　·　续页 `index/topology.general.2.md`
+中心天体 def.topology　·　19 个节点　·　根 `../`　·　续页 `index/topology.general.2.md`
 
 - def.topology　拓扑空间与开集　layer 4
 - def.closed-set　闭集与闭包　layer 5

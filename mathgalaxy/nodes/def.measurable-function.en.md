@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.measurable-function)　·　[Chinese page (authoritative)](./def.measurable-function.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.measurable-function.md` and `proofs/`.
+## Statement · **draft**
+Let $(X, \mathcal{M})$ and $(Y, \mathcal{N})$ be measurable spaces. A function $f : X \to Y$ is **$(\mathcal{M}, \mathcal{N})$-measurable** if and only if the preimage of every measurable set is measurable:
 
+$$f^{-1}(E) \in \mathcal{M}\quad  \forall E \in \mathcal{N}$$
 
-Cite: `def.measurable-function` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.measurable-function.en.2.md

@@ -8,7 +8,7 @@ layer 19 · 命题 · 层与拓扑 · 范畴论
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.sieve`](../nodes/def.sieve.md) 筛：用到了定义 筛　[proofs/def-dep.sieveequiv-sieve.md](../proofs/def-dep.sieveequiv-sieve.md)
+- [`thm.sheafification`](../nodes/thm.sheafification.md) 层化：层化的泛性质把「是不是覆盖」翻译成层论条件　[proofs/def-dep.sieveequiv-sheafification.md](../proofs/def-dep.sieveequiv-sheafification.md)
 
 - …另有入边，续页见 [nodes/prop.sieve-covering-equivalent.3.md](./prop.sieve-covering-equivalent.3.md)
 

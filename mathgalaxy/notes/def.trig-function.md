@@ -7,4 +7,4 @@
 
 ⚠ 几何意义（单位圆、角度、弧度）是**后来**才接上的：级数先告诉我们 $\cos$ 有零点、$\sin$ 有周期，几何图像才随之而来。
 
-⭐ 两个级数在全平面收敛的证明见 `imp.trig-series-radius`（Cauchy–Hadamard + 阶乘增长估计）。
+⭐ 两个级数在全平面的收敛半径由 `imp.trig-series-radius` 给出（Cauchy–Hadamard + 阶乘增长估计）。

@@ -3,3 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.jordan-curve`](../nodes/thm.jordan-curve.md) Jordan 曲线定理 用
+- 被 [`lem.polygon-diagonal`](../nodes/lem.polygon-diagonal.md) 简单多边形的对角线 用
+- 被 [`thm.jordan-polygon`](../nodes/thm.jordan-polygon.md) 多边形 Jordan 定理 用
+- 被 [`thm.boundary-correspondence`](../nodes/thm.boundary-correspondence.md) 边界对应定理 用

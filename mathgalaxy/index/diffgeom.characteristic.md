@@ -12,4 +12,4 @@
 - def.characteristic-class　示性类　layer 34
 - def.chern-class　陈类　layer 35
 - prop.chern-class-line-bundle　线丛的陈类计算　layer 36
-- thm.splitting-principle　分裂原理　layer 37
+- thm.splitting-principle　分裂原理　layer 36

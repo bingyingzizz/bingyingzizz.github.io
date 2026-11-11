@@ -14,8 +14,6 @@ $$(z - a)(\overline{z^{*}} - \bar a) = R^{2},$$
 ## 它能推出什么 / 谁在用它
 - ⇒ [`prop.mobius-symmetry`](../nodes/prop.mobius-symmetry.md) 分式线性变换保对称点
 
-- …另有出边，续页见 [nodes/def.symmetric-point.4.md](./def.symmetric-point.4.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.symmetric-point.3.md](./def.symmetric-point.3.md)
 

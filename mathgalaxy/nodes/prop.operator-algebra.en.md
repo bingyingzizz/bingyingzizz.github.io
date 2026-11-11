@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 14 · proposition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.operator-algebra.md` and `proofs/`.

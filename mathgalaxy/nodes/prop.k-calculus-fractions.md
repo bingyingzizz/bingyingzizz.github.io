@@ -6,7 +6,7 @@ layer 19 · 命题 · 复形与导出三角 · 同调代数
 $K(\mathcal{A})$ 关于**拟同构**这一族态射同时允许**左**与**右分式演算**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.quasi-iso`](../nodes/def.quasi-iso.md) 拟同构：用到了定义 拟同构　[proofs/dep.gap-k-calculus-fractions-quasi-iso.md](../proofs/dep.gap-k-calculus-fractions-quasi-iso.md)
+- [`prop.calculus-of-fractions`](../nodes/prop.calculus-of-fractions.md) 分式演算下的局部化：$K(\mathcal{A})$ 上拟同构满足右分式演算的 Ore 条件　[proofs/def-dep.kfrac-fractions.md](../proofs/def-dep.kfrac-fractions.md)
 
 - …另有入边，续页见 [nodes/prop.k-calculus-fractions.2.md](./prop.k-calculus-fractions.2.md)
 
