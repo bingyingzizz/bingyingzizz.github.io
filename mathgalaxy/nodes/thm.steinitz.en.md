@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 12 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.steinitz.md` and `proofs/`.

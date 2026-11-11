@@ -1,6 +1,6 @@
 # 凸包　`def.convex-hull`
 凸包：包含 $S$ 的最小凸集
-layer 12 · 定义 · Hilbert 空间 · 泛函分析
+layer 13 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.convex-hull)　·　[节点索引](../index.md)
 
 设 $S \subseteq V$。$S$ 的**凸包**定义为

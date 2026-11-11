@@ -7,6 +7,9 @@ layer 22 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
 > 陈述续见 [nodes/thm.arzela-ascoli-general.2.md](./thm.arzela-ascoli-general.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ～弱边 [`thm.arzela-ascoli`](../nodes/thm.arzela-ascoli.md) Arzelà–Ascoli 定理
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.arzela-ascoli-general.3.md](./thm.arzela-ascoli-general.3.md)
 

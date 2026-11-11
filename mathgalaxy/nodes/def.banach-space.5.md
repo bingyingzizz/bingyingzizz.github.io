@@ -1,0 +1,9 @@
+# Banach 空间　`def.banach-space`　·　续页（第 5 页）
+[在星图里打开](../#n=def.banach-space)　·　第 1 页 [nodes/def.banach-space.md](./def.banach-space.md)　·　上一页 [nodes/def.banach-space.4.md](./def.banach-space.4.md)
+
+## 它能推出什么 / 谁在用它（续）
+- 被 [`thm.bounded-operators-banach`](../nodes/thm.bounded-operators-banach.md) B(E,F) 完备 用
+- 被 [`thm.bounded-extension`](../nodes/thm.bounded-extension.md) 有界算子的延拓 用
+- 被 [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值） 用
+- 被 [`prop.banach-as-condensed`](../nodes/prop.banach-as-condensed.md) Banach 空间都是凝聚态阿贝尔群 用
+- ～弱边 [`def.ell2-space`](../nodes/def.ell2-space.md) ℓ²(I)

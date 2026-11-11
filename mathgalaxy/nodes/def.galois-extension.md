@@ -1,6 +1,6 @@
 # 伽罗瓦扩张　`def.galois-extension`
 伽罗瓦扩张（有限 + 正规 + 可分）
-layer 14 · 定义 · Galois 理论 · 抽象代数
+layer 15 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.galois-extension)　·　[节点索引](../index.md)
 
 有限扩张 $K/F$ 叫**伽罗瓦扩张**，如果它**同时**是正规的（`def.normal-extension`）与可分的（`def.separable-extension`）。

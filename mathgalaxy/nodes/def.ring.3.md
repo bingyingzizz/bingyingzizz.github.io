@@ -8,3 +8,5 @@
 - 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
 - 被 [`prop.ring-tensor-coproduct`](../nodes/prop.ring-tensor-coproduct.md) 交换环的纤维余积是张量积 用
 - 被 [`def.boolean-ring`](../nodes/def.boolean-ring.md) 布尔环 用
+- 被 [`thm.int-ring`](../nodes/thm.int-ring.md) ℤ 是交换整环 用
+- 被 [`thm.matrix-ring`](../nodes/thm.matrix-ring.md) M_n(K) 是环 用

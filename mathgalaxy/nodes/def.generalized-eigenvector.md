@@ -1,6 +1,6 @@
 # 广义特征向量　`def.generalized-eigenvector`
 广义特征向量与广义特征子空间
-layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 18 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.generalized-eigenvector)　·　[节点索引](../index.md)
 
 **在做什么**：特征向量不够用时（几何重数 < 代数重数）就退一步：不要求 $T(v) = \lambda v$，只要求「反复作用几次之后被 $\lambda$ 吃掉」。这样就能凑够维数。

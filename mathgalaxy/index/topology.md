@@ -3,7 +3,7 @@
 
 开集、连续、紧致与连通；再往上是紧 Hausdorff、Stone 空间与紧生成空间。
 
-- topology.general　拓扑空间的基本语汇 / Topological Spaces and Basic Constructions　中心天体 def.topology　15 点
+- topology.general　拓扑空间的基本语汇 / Topological Spaces and Basic Constructions　中心天体 def.topology　17 点
 - topology.separation　分离公理 / Separation Axioms　中心天体 def.hausdorff　13 点
 - topology.convergence　收敛与紧性 / Convergence and Compactness　中心天体 def.net　10 点
 - topology.metric　度量空间 / Metric Spaces　中心天体 def.metric-space　10 点

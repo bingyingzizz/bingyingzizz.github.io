@@ -1,6 +1,6 @@
 # QR 分解　`thm.qr-decomposition`
 QR 分解：把列正交化写成三角矩阵
-layer 19 · 定理 · 矩阵分解与最小二乘 · 抽象代数
+layer 20 · 定理 · 矩阵分解与最小二乘 · 抽象代数
 [在星图里打开](../#n=thm.qr-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：Gram–Schmidt 正交化其实也是在乘一串矩阵 —— 把结果记成 $R$、正交化后的基记成 $Q$，就得到 $A = QR$。

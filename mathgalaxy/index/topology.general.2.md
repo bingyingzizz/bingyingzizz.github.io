@@ -3,3 +3,5 @@
 
 - def.homeomorphism　同胚　layer 17
 - prop.closed-map-neighborhood-basis　闭映射的邻域基　layer 17
+- def.jordan-curve　Jordan 曲线　layer 18
+- thm.jordan-curve　Jordan 曲线定理　layer 19

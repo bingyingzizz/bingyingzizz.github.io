@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
+layer 27 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.flow-local.md` and `proofs/`.

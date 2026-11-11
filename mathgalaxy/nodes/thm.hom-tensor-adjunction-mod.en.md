@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 16 · theorem · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.hom-tensor-adjunction-mod.md` and `proofs/`.

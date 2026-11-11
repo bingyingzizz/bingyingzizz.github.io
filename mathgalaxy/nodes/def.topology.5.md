@@ -10,3 +10,6 @@
 - 被 [`def.product-topology`](../nodes/def.product-topology.md) 积拓扑 用
 - 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
 - 被 [`def.topo-ab-group`](../nodes/def.topo-ab-group.md) 拓扑阿贝尔群 用
+- 被 [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间 用
+
+> 续见 [nodes/def.topology.6.md](./def.topology.6.md)

@@ -1,6 +1,18 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 3.10 → prop.sieve-generated-by-family
+
+- Exercise 3.12 → prop.topology-alternative-axiom
+
+- Exercise 3.22 → prop.constant-sheaf-adjunction
+
+- Exercise 3.23 → prop.constant-sheaf-top
+
+- Exercise 3.63 | Exercise 3.64 → prop.slice-topos
+
+- Exercise 3.67 → def.crystalline-sheaf
+
 - Exercise 3.68 | Exercise 3.69 → prop.crystalline-sheaf-equiv
 
 - Exercise 3.70 | 拟紧层 → prop.qc-sheaf-etale
@@ -20,17 +32,5 @@
 - Exercise 1.13 → prop.op-category-is-modules
 
 - Exercise 1.14 → prop.forgetful-faithful-not-full
-
-- Exercise 1.16 → prop.nat-iso-invariants
-
-- Exercise 1.19 → prop.matrix-category
-
-- Exercise 1.20 → prop.forgetful-representable
-
-- Exercise 1.22 → prop.solution-functor-representable
-
-- Exercise 1.23 → prop.universal-unique-iso
-
-- Exercise 1.28 → prop.algebra-categories-limits
 
 > 续见 alias/aka/category.20.md

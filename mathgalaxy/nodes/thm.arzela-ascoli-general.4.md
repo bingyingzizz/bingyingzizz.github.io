@@ -2,4 +2,4 @@
 [在星图里打开](../#n=thm.arzela-ascoli-general)　·　第 1 页 [nodes/thm.arzela-ascoli-general.md](./thm.arzela-ascoli-general.md)　·　上一页 [nodes/thm.arzela-ascoli-general.3.md](./thm.arzela-ascoli-general.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`thm.arzela-ascoli`](../nodes/thm.arzela-ascoli.md) Arzelà–Ascoli 定理：用到了定义 Arzelà–Ascoli 定理　[proofs/def-link.fa-arzela-classic.md](../proofs/def-link.fa-arzela-classic.md)
+- [`thm.arzela-ascoli`](../nodes/thm.arzela-ascoli.md) Arzelà–Ascoli 定理：def-link.fa-arzela-classic　[proofs/def-link.fa-arzela-classic.md](../proofs/def-link.fa-arzela-classic.md)

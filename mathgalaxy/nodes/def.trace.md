@@ -1,6 +1,6 @@
 # 迹　`def.trace`
 迹 $\operatorname{tr} A$
-layer 16 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.trace)　·　[节点索引](../index.md)
 
 对方阵 $A = (a_{ij}) \in M_n(K)$，定义**迹**为对角线之和：

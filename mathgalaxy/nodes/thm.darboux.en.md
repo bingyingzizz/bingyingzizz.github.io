@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
+layer 29 · theorem · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.darboux.md` and `proofs/`.

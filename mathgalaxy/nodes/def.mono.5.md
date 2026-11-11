@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.mono)　·　第 1 页 [nodes/def.mono.md](./def.mono.md)　·　上一页 [nodes/def.mono.4.md](./def.mono.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.regular-epi`](../nodes/def.regular-epi.md) 正则满态射 用
 - 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 用
 - 被 [`prop.calculus-of-fractions`](../nodes/prop.calculus-of-fractions.md) 分式演算下的局部化 用
 - 被 [`prop.iso-unique-section`](../nodes/prop.iso-unique-section.md) 同构的截面与收缩唯一 用

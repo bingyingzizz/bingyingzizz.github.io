@@ -7,16 +7,14 @@
 
 - 单态射 | 满态射 | mono | epi | monomorphism | epimorphism | 可消 | Definition 1.3.9 | Def 1.3.9 → def.mono
 
-- 子对象 | subobject | 子对象之交 | 原像 | Definition 1.3.10 | Def 1.3.10 → def.subobject
+- 正则单态射 | 正则单射 | regular mono | equalizer of a pair | 等化子单态射 → def.regular-monomorphism
+
+- 子对象 | subobject | 子对象之交 | Definition 1.3.10 | Def 1.3.10 → def.subobject
 
 - 极限的函子性 | 极限是函子 | lim functor → thm.lim-functor
 
 - 像 | 余像 | image | coimage | strict | Definition 1.3.11 | Def 1.3.11 → def.image
 
 - 元素范畴 | category of elements | el(F) | 泛元素 | universal element → def.elements-category
-
-- 预层 | presheaf | 限制映射 | 可表示预层 | Definition 3.1.1 | Def 3.1.1 → def.presheaf
-
-- 预层范畴 | presheaf category | PSh | 函子范畴 → def.presheaf-cat
 
 > 续见 alias/aka/category.4.md

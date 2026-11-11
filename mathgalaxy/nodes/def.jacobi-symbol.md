@@ -8,7 +8,7 @@ layer 16 · 定义 · 二次剩余与原根 · 数论
 $$\left(\frac{a}{n}\right) := \prod_{i=1}^{r}\left(\frac{a}{q_{i}}\right)^{e_{i}} .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e160.definition.md](../proofs/e160.definition.md)
+- [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e159.definition.md](../proofs/e159.definition.md)
 
 - …另有入边，续页见 [nodes/def.jacobi-symbol.2.md](./def.jacobi-symbol.2.md)
 

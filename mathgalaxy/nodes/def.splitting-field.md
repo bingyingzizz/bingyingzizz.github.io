@@ -1,6 +1,6 @@
 # 分裂域　`def.splitting-field`
 分裂域：让 $f$ 彻底分解的最小扩域
-layer 11 · 定义 · Galois 理论 · 抽象代数
+layer 12 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.splitting-field)　·　[节点索引](../index.md)
 
 设 $F$ 是域，$f \in F[x]$ 是**非零**多项式。扩域 $K/F$ 叫 $f$ 的**分裂域**，如果

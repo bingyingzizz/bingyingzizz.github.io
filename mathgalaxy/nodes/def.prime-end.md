@@ -1,9 +1,9 @@
 # 素端　`def.prime-end`
 素端（prime end）与 Carathéodory 紧化
-layer 33 · 定义 · analysis.conformal · 数学分析
+layer 33 · 定义 · 共形映射与正规族 · 复变函数+数学分析
 [在星图里打开](../#n=def.prime-end)　·　[节点索引](../index.md)
 
-设 $\Omega\subset\mathbb{C}$ 是单连通真区域。$\Omega$ 中的**横截弧**是端点落在 $\partial\Omega$ 上、内部含于 $\Omega$ 的简单弧。横截弧把 $\Omega$ 分成两个区域；按包含关系取这些区域的极限，得到 $\Omega$ 的**素端**（prime end）的等价类。素端集合记 $\partial_{p}\Omega$，配以自然的极限拓扑（Carathéodory 紧化），使 $\overline{\O
+设 $\Omega\subset\mathbb{C}$ 是单连通真区域。$\Omega$ 中的**横截弧**是端点落在 $\partial\Omega$ 上、内部含于 $\Omega$ 的简单弧。横截弧把 $\Omega$ 分成两个区域；按包含关系取这些区域的极限，得到 $\Omega$ 的**素端**（prime end）的等价类。素端集合记 $\partial_{p}\Omega$，配以自然的极限拓扑（Carathéodory 紧化）
 > 陈述续见 [nodes/def.prime-end.2.md](./def.prime-end.2.md)
 
 

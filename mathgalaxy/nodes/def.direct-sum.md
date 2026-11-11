@@ -1,6 +1,6 @@
 # 直和与补空间　`def.direct-sum`
 直和 $V = U \oplus W$ 与补空间
-layer 13 · 定义 · 线性映射与秩 · 抽象代数
+layer 14 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.direct-sum)　·　[节点索引](../index.md)
 
 设 $U, W \subseteq V$ 是子空间。称 $V$ 是 $U$ 与 $W$ 的**（内部）直和**，记

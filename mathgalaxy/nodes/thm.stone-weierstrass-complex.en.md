@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 15 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.stone-weierstrass-complex.md` and `proofs/`.

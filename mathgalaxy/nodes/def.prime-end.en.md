@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 33 · definition · cluster analysis.conformal · Mathematical Analysis
+layer 33 · definition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.prime-end.md` and `proofs/`.

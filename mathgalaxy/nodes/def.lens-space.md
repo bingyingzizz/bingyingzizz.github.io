@@ -10,6 +10,9 @@ layer 21 · 定义 · 基本群 · 拓扑学
 
 - …另有入边，续页见 [nodes/def.lens-space.2.md](./def.lens-space.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.lens-space.3.md](./def.lens-space.3.md)
+
 refs: Hatcher, Algebraic Topology, Ch. 1 §1.3 · lens spaces；Munkres, Topology (2nd ed.), Ch. 9 · covering spaces
 
 > 说明见 `notes/def.lens-space.md`

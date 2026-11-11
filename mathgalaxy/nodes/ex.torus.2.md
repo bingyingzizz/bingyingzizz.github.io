@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.eulerchar-genus`](../nodes/prop.eulerchar-genus.md) Euler 示性数与亏格：dep.eulerchargenus-torus　[proofs/dep.eulerchargenus-torus.md](../proofs/dep.eulerchargenus-torus.md)
+- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：ana.smooth-extorus　[proofs/ana.smooth-extorus.md](../proofs/ana.smooth-extorus.md)
 
 > 续见 [nodes/ex.torus.3.md](./ex.torus.3.md)

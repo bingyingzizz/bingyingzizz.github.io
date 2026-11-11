@@ -1,6 +1,6 @@
 # 代数扩张　`def.algebraic-extension`
 代数扩张（每个元素都代数）
-layer 12 · 定义 · Galois 理论 · 抽象代数
+layer 13 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.algebraic-extension)　·　[节点索引](../index.md)
 
 域扩张 $K/F$ 叫**代数扩张**，如果 $K$ 中**每一个**元素在 $F$ 上都是代数的；否则叫**超越扩张**。

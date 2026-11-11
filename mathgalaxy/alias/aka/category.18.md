@@ -1,6 +1,16 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 1.49 → prop.projective-universal-epi
+
+- Exercise 1.53 → prop.functor-preserves-monoid-objects
+
+- Exercise 1.63 → prop.adjunction-extends-to-diagrams
+
+- Exercise 1.74 | 坎延拓 → prop.kan-extension-fully-faithful
+
+- Exercise 3.8 | ind-可表示 → prop.ind-representable-iff-left-exact
+
 - Exercise 3.11 → prop.covering-sieves-filter
 
 - Exercise 3.14 → prop.site-covering-families-pretopology
@@ -18,17 +28,5 @@
 - Exercise 1.38 | Exercise 1.45 | 完备范畴 → prop.set-top-ab-complete
 
 - Exercise 1.59 → prop.adjunction-composition
-
-- Exercise 3.10 → prop.sieve-generated-by-family
-
-- Exercise 3.12 → prop.topology-alternative-axiom
-
-- Exercise 3.22 → prop.constant-sheaf-adjunction
-
-- Exercise 3.23 → prop.constant-sheaf-top
-
-- Exercise 3.63 | Exercise 3.64 → prop.slice-topos
-
-- Exercise 3.67 → def.crystalline-sheaf
 
 > 续见 alias/aka/category.19.md

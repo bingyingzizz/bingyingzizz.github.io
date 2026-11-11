@@ -25,4 +25,6 @@
 
 - Carathéodory–Osgood 边界对应 → lem.caratheodory-osgood
 
+- 素端 | Carathéodory 紧化 → def.prime-end
+
 见 `../../alias.md`。

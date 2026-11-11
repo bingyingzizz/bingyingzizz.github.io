@@ -1,6 +1,6 @@
 # Euler 示性数　`thm.euler-characteristic`
 Euler 示性数：数单纯形与数 Betti 数给出同一个数
-layer 26 · 定理 · 同调群 · 拓扑学
+layer 29 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.euler-characteristic)　·　[节点索引](../index.md)
 
 设 $K$ 是**有限**单纯复形，$\alpha_{p}$ 是它的 $p$-单纯形个数，$\beta_{p} := \operatorname{rank} H_{p}(K)$ 是第 $p$ 个 **Betti 数**（自由部分的秩）。则

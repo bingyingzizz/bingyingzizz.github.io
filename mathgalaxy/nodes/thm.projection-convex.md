@@ -1,6 +1,6 @@
 # 凸闭集的最近点　`thm.projection-convex`
 凸闭集上的最近点（投影算子）
-layer 20 · 定理 · Hilbert 空间 · 泛函分析
+layer 19 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.projection-convex)　·　[节点索引](../index.md)
 
 设 $H$ 是 Hilbert 空间，$C \subseteq H$ 非空、**凸**、**闭**。则
@@ -12,6 +12,8 @@ layer 20 · 定理 · Hilbert 空间 · 泛函分析
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影
+
+- …另有出边，续页见 [nodes/thm.projection-convex.3.md](./thm.projection-convex.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.projection-convex.2.md](./thm.projection-convex.2.md)

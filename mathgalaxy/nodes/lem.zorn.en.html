@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zorn's Lemma · MathGalaxy</title>
+<meta name="description" content="Let (P, ≼) be a non-empty poset in which every chain has an upper bound in P . Then P has a maximal element. Both hypotheses are needed: the empty poset h…">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.html">
+<link rel="alternate" hreflang="en" href="https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.en.html">
+<link rel="alternate" hreflang="x-default" href="https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MathGalaxy">
+<meta property="og:title" content="Zorn's Lemma">
+<meta property="og:description" content="Let (P, ≼) be a non-empty poset in which every chain has an upper bound in P . Then P has a maximal element. Both hypotheses are needed: the empty poset h…">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.en.html">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2FA96B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.en.html#concept","name":"Zorn's Lemma","alternateName":"Zorn 引理","description":"Let (P, ≼) be a non-empty poset in which every chain has an upper bound in P . Then P has a maximal element. Both hypotheses are needed: the empty poset h…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/lem.zorn.en.html","inLanguage":"en","license":"https://creativecommons.org/licenses/by/4.0/","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"ZFC, 等价命题, 极大原理"}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#2FA96B">
+
+<nav class="crumb" aria-label="Breadcrumb">
+  <a href="../en/">MathGalaxy</a><span class="sep">›</span>
+  <a href="../all.html">All concepts</a><span class="sep">›</span>
+  <a href="../all.html#order-theory">Order Theory</a><span class="sep">›</span>
+  <a href="../all.html#order.choice">Choice Principles</a><span class="sep">›</span>
+  <span aria-current="page">Zorn's Lemma</span>
+</nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>Zorn's Lemma<span class="en" lang="zh-CN">Zorn 引理</span></h1>
+    <p class="np-cta">
+      <a class="np-open" href="../#n=lem.zorn">Open in the map <span aria-hidden="true">→</span></a>
+      <a class="np-alt" href="lem.zorn.html" hreflang="zh-CN" lang="zh-CN">中文完整页</a>
+      <a class="np-alt" href="../en/">All English entries</a>
+    </p>
+    <ul class="facts">
+      <li>Lemma</li>
+      <li>layer 8</li>
+      <li>Order Theory</li>
+      <li>Choice Principles</li>
+    </ul>
+    <p class="idline"><code>lem.zorn</code> · ZFC · 等价命题 · 极大原理</p>
+    <p class="status-note">Reviewed by the author. The Chinese text remains authoritative.</p>
+  </header>
+
+  <section class="sec statement"><h2>Abstract</h2><p>Let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>P</mi><mo separator="true">,</mo><mo>⪯</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(P, \preceq)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> be a non-empty poset in which every chain has an upper bound in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>. Then <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> has a maximal element. Both hypotheses are needed: the empty poset has none, and an upper bound for every chain yields maximality only, never a greatest element. It is the standard engine of existence proofs — bases, maximal ideals, compactness, Hahn–Banach — and it is non-constructive: an element is produced without telling you which one.</p></section>
+  <section class="sec statement"><h2>Statement</h2><p>Let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>P</mi><mo separator="true">,</mo><mo>⪯</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(P, \preceq )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪯</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> be a <strong>non-empty</strong> poset. If every chain in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> has an upper bound in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>, then <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> has a <strong>maximal element</strong>.</p></section>
+  <section class="sec notes"><h2>Notes</h2><p>Neither hypothesis can be dropped: the empty poset has no maximal element, and &quot;every chain has an upper bound&quot; does not give a <em>greatest</em> element — only a maximal one.</p><p>It is &quot;the universal engine of existence proofs&quot;: every vector space has a basis, every ring has a maximal ideal, the compactness theorem, Hahn–Banach — all of them rely on it.</p><p>The name is a historical accident: Zorn popularised the statement in the 1940s, while Kuratowski had already proved an equivalent form in 1922, so it is also called the Kuratowski–Zorn lemma.</p><p>⚠ Non-constructive: what one obtains is &quot;there exists a maximal element&quot;, and usually one cannot say which.</p></section>
+
+  <section class="rel-sec"><h2>Refers to <span class="n">9</span></h2><ul class="sibs"><li><a href="thm.hausdorff.html" hreflang="zh-CN">Hausdorff maximal principle</a></li><li><a href="ax.choice.html" hreflang="zh-CN">axiom of choice</a></li><li><a href="thm.vsbasis.html" hreflang="zh-CN">every vector space has a basis</a></li><li><a href="prop.prime-ideal.html" hreflang="zh-CN">Prime and Maximal Ideals</a></li><li><a href="lem.minimal-closed-surjection.html" hreflang="zh-CN">minimal closed subset for a surjection</a></li><li><a href="thm.baer-criterion.html" hreflang="zh-CN">Baer's Criterion</a></li><li><a href="def.integral-manifold.html" hreflang="zh-CN">integral manifold</a></li><li><a href="def.filter.html" hreflang="zh-CN">Filter and Ultrafilter</a></li><li><a href="thm.real-ordered-field.html" hreflang="zh-CN">least upper bound property</a></li></ul></section>
+  <section class="rel-sec"><h2>Referenced by <span class="n">7</span></h2><ul class="sibs"><li><a href="thm.wellordering.html" hreflang="zh-CN">well-ordering theorem</a></li><li><a href="ax.choice.html" hreflang="zh-CN">axiom of choice</a></li><li><a href="thm.hartogs.html" hreflang="zh-CN">Hartogs</a></li><li><a href="def.choicefn.html" hreflang="zh-CN">choice function</a></li><li><a href="def.poset.html" hreflang="zh-CN">partial order</a></li><li><a href="def.chain.html" hreflang="zh-CN">chain</a></li><li><a href="def.bound.html" hreflang="zh-CN">least upper bound</a></li></ul></section>
+  <section class="rel-sec sib-sec"><h2>Same cluster <span class="n">6</span></h2><ul class="sibs"><li><a href="def.choicefn.html" hreflang="zh-CN">choice function</a></li><li><a href="ax.choice.html" hreflang="zh-CN">axiom of choice</a></li><li><a href="lem.tukey.html" hreflang="zh-CN">Tukey's Lemma / Teichmüller–Tukey</a></li><li><a href="thm.hausdorff.html" hreflang="zh-CN">Hausdorff maximal principle</a></li><li><a href="thm.wellordering.html" hreflang="zh-CN">well-ordering theorem</a></li></ul></section>
+
+  <section class="sec jump">
+    <h2>Continue</h2>
+    <p>
+      <a href="../#n=lem.zorn">Open in the map</a>　·　
+      <a href="lem.zorn.html" hreflang="zh-CN">Full entry in Chinese</a>　·　
+      <a href="../all.html">All 1620 concepts</a>　·　
+      <a href="../en/">English overview</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>MathGalaxy · content v0.9.3 · English abstract, Chinese text authoritative</p>
+  <p>Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, engine MIT ·
+     <a href="../LICENSE.txt">license</a> · generated from the same graph as the Chinese page</p>
+</footer>
+
+</body>
+</html>

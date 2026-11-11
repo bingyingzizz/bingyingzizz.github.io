@@ -3,11 +3,11 @@
 造出线性代数的地基：线性无关 / 张成 → 基 → 维数（任意两组基等势）。$\operatorname{span} S = \bigcap \{W \supseteq S\}$ 这个「取一切之交」的模板与 $\sigma$-代数的生成是同一招。
 中心天体 def.vs　·　8 个节点　·　根 `../`
 
-- def.vector-space　向量空间　layer 9
-- def.vs　线性无关与基　layer 10
-- thm.vsbasis　每个向量空间有基　layer 11
-- def.subspace　子空间　layer 11
-- def.coordinate　坐标　layer 11
-- thm.steinitz　Steinitz 交换引理　layer 11
-- prop.subspace-criterion　子空间判据　layer 12
-- thm.dimension　维数良定义　layer 12
+- def.vector-space　向量空间　layer 10
+- def.vs　线性无关与基　layer 11
+- thm.vsbasis　每个向量空间有基　layer 12
+- def.subspace　子空间　layer 12
+- def.coordinate　坐标　layer 12
+- thm.steinitz　Steinitz 交换引理　layer 12
+- prop.subspace-criterion　子空间判据　layer 13
+- thm.dimension　维数良定义　layer 13

@@ -1,6 +1,6 @@
 # 代数元与极小多项式　`def.algebraic-element`
 代数元 / 超越元，极小多项式 $m_{\alpha}$
-layer 11 · 定义 · Galois 理论 · 抽象代数
+layer 12 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.algebraic-element)　·　[节点索引](../index.md)
 
 设 $K/F$ 是域扩张，$\alpha \in K$。称 $\alpha$ 在 $F$ 上**代数**，如果存在**非零**多项式 $f \in F[x]$ 使

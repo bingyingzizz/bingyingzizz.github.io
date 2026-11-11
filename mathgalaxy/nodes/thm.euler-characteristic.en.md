@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Homology Groups (`topology.homology`) · Topology
+layer 29 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.euler-characteristic.md` and `proofs/`.

@@ -5,3 +5,4 @@
 - 被 [`def.manifold-chart`](../nodes/def.manifold-chart.md) 图卡 用
 - 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
 - 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用
+- 被 [`def.jordan-curve`](../nodes/def.jordan-curve.md) Jordan 曲线 用

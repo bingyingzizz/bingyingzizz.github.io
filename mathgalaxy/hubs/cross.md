@@ -5,15 +5,15 @@
 - **16 团 / 33 节点** `def.group` 群 · layer 7 · 代数结构
 - **16 团 / 24 节点** `def.function` 映射 · layer 5 · 关系与函数
 - **15 团 / 30 节点** `def.compact` 紧 · layer 16 · 拓扑空间的基本语汇
-- **14 团 / 29 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
-- **14 团 / 20 节点** `def.metric-space` 距离空间 · layer 14 · 度量空间
+- **14 团 / 31 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
+- **14 团 / 21 节点** `def.metric-space` 距离空间 · layer 14 · 度量空间
 - **13 团 / 25 节点** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
-- **13 团 / 20 节点** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
+- **13 团 / 22 节点** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
+- **11 团 / 19 节点** `def.ring` 环 · layer 8 · 代数结构
 - **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
 - **10 团 / 22 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
-- **10 团 / 17 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
 
 > 续见 hubs/cross.2.md

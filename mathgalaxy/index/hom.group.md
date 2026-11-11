@@ -8,9 +8,9 @@
 - def.g-module　群模　layer 10
 - def.bar-resolution　标准消解　layer 10
 - def.semidirect-product　半直积　layer 11
-- def.invariant-functor　不变量函子　layer 12
-- prop.low-degree-exact　低次正合列　layer 13
+- def.invariant-functor　不变量函子　layer 13
 - def.group-cohomology　群上同调　layer 14
+- prop.low-degree-exact　低次正合列　layer 14
 - prop.group-cohom-compute　用标准消解计算群上同调　layer 15
 - thm.h1-crossed　一维上同调与交叉同态　layer 15
 - def.cocycle-2　二维上圈与上边界　layer 15

@@ -1,6 +1,6 @@
 # Rodrigues 定理　`thm.rodrigues`
 Rodrigues 定理
-layer 31 · 定理 · 曲面论 · 微分几何
+layer 33 · 定理 · 曲面论 · 微分几何
 [在星图里打开](../#n=thm.rodrigues)　·　[节点索引](../index.md)
 
 设 $v \in T_{p}U$，$v \ne 0$，$k := k_{n}(v)$。则下列三条等价：

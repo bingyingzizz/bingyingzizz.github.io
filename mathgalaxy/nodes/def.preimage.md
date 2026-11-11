@@ -10,6 +10,10 @@ layer 6 · 定义 · 关系与函数 · 集合论+数学分析
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.function`](../nodes/def.function.md) 映射：用到了定义 映射　[proofs/dep.preimage-function.md](../proofs/dep.preimage-function.md)
+- [`def.preimage-subobject`](../nodes/def.preimage-subobject.md) 子对象的原像：ana.preimg-set　[proofs/ana.preimg-set.md](../proofs/ana.preimg-set.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.preimage.2.md](./def.preimage.2.md)
 
 refs: Kunen, Set Theory, I.5
 

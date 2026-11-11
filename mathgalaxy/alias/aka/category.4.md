@@ -1,6 +1,10 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 预层 | presheaf | 限制映射 | 可表示预层 | Definition 3.1.1 | Def 3.1.1 → def.presheaf
+
+- 预层范畴 | presheaf category | PSh | 函子范畴 → def.presheaf-cat
+
 - 表示函子 | representable functor | 表示对象 | 万有元素 | universal element | Definition 1.2.5 | Def 1.2.5 → def.representable
 
 - 米田引理 | Yoneda lemma | Yoneda | Lemma 1.2.6 → lem.yoneda
@@ -16,7 +20,5 @@
 - 稠密性定理 | density theorem | 预层是余极限 → thm.density
 
 - 预层逐点检验 | 预层的单满 → lem.presheaf-mono-pointwise
-
-- 伴随函子 | adjoint functor | 左伴随 | 右伴随 | adjunction | Definition 1.5.1 | Def 1.5.1 | ⊣ | F ⊣ G → def.adjoint
 
 > 续见 alias/aka/category.5.md

@@ -1,6 +1,6 @@
 # 正交　`def.orthogonality`
 正交与正交分解
-layer 14 · 定义 · 内积空间与正交性 · 抽象代数
+layer 15 · 定义 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=def.orthogonality)　·　[节点索引](../index.md)
 
 设 $V$ 是内积空间。

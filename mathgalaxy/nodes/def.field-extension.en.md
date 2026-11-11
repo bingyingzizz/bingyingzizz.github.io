@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
+layer 11 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.field-extension.md` and `proofs/`.

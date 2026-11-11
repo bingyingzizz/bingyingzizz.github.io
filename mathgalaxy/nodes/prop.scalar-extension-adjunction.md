@@ -1,6 +1,6 @@
 # 标量扩张与限制互为伴随　`prop.scalar-extension-adjunction`
 $S \otimes_{R} - \dashv f_{\ast}$
-layer 16 · 命题 · 模的张量积与标量限制 · 同调代数
+layer 17 · 命题 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=prop.scalar-extension-adjunction)　·　[节点索引](../index.md)
 
 对

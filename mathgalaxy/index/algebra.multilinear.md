@@ -3,17 +3,17 @@
 造出「把双线性型变成线性映射」的机器：双线性型 → **张量积的万有性质** → 张量 ⊣ 内 Hom（伴随）→ 外幂与外代数 → 对称代数 → **行列式 = 最高外幂上的作用**（把行列式的来源统一到外代数）。
 中心天体 def.exterior-algebra　·　23 个节点　·　根 `../`　·　续页 `index/algebra.multilinear.2.md`
 
-- def.bilinear-form　双线性型　layer 12
-- def.exterior-power　外幂　layer 13
-- def.symplectic-form　辛形式　layer 13
-- def.tensor-product-vs　张量积（向量空间）　layer 14
-- def.matrix-of-bilinear-form　双线性型的矩阵　layer 14
-- def.isotropic-vector　迷向向量　layer 14
-- thm.tensor-universal-property　张量积的万有性质　layer 15
-- def.exterior-algebra　外代数　layer 15
-- def.symmetric-algebra　对称代数　layer 15
-- thm.det-as-exterior　行列式 = 最高外幂上的作用　layer 15
-- def.hyperbolic-plane　双曲平面　layer 15
-- prop.tensor-hom-adjunction　张量 ⊣ 内 Hom　layer 16
+- def.bilinear-form　双线性型　layer 13
+- def.exterior-power　外幂　layer 14
+- def.symplectic-form　辛形式　layer 14
+- def.tensor-product-vs　张量积（向量空间）　layer 15
+- def.matrix-of-bilinear-form　双线性型的矩阵　layer 15
+- def.isotropic-vector　迷向向量　layer 15
+- thm.tensor-universal-property　张量积的万有性质　layer 16
+- def.exterior-algebra　外代数　layer 16
+- def.symmetric-algebra　对称代数　layer 16
+- thm.det-as-exterior　行列式 = 最高外幂上的作用　layer 16
+- def.hyperbolic-plane　双曲平面　layer 16
+- prop.tensor-hom-adjunction　张量 ⊣ 内 Hom　layer 17
 
 > 续见 `index/algebra.multilinear.2.md`

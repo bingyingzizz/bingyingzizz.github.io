@@ -15,11 +15,11 @@
 - Euler 判别法（`thm.euler-criterion` L16）⇸ Euler 类（`def.euler-class` L37）
 - Pontryagin 类（`def.pontryagin-class` L36）⇸ Pontryagin 对偶（`def.pontryagin-dual` L19）
 - Euler 类（`def.euler-class` L37）⇸ Euler 公式（`thm.euler-formula` L23）
-- Euler 示性数（`thm.euler-characteristic` L26）⇸ Euler 类（`def.euler-class` L37）
+- Euler 示性数（`thm.euler-characteristic` L29）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔群范畴（`def.category-of-abelian-groups` L8）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔层（`def.abelian-sheaf` L16）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L23）
-- Euler 公式（`thm.euler-formula-surface` L31）⇸ Euler 类（`def.euler-class` L37）
+- Euler 公式（`thm.euler-formula-surface` L33）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔范畴（`def.abelian-category` L16）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 
 ## 三、黑边子图上的环（2 个）
@@ -53,7 +53,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**260** 处
+- 陈述里出现假设关键词、但没标注：**262** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -95,5 +95,5 @@
   - def.pre-analytic-ring  ‹Hausdorff›
   - def.analytic-ring  ‹完备›
   - thm.analytic-modules  ‹完备›
-  - …还有 220 处
+  - …还有 222 处
 

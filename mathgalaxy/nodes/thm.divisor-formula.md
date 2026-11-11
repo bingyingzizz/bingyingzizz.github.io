@@ -8,7 +8,7 @@ layer 14 · 定理 · 数论函数与素数分布 · 数论
 $$\tau(n) = \prod_{i=1}^{r} (e_{i} + 1), \qquad \sigma(n) = \prod_{i=1}^{r} \frac{p_{i}^{\,e_{i}+1} - 1}{p_{i} - 1} .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：$\tau$、$\sigma$ 的乘积公式：指数独立选取　[proofs/imp.nt-divisor-formula.md](../proofs/imp.nt-divisor-formula.md)
+- [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：唯一分解给出因数公式　[proofs/imp.divisor-formula.md](../proofs/imp.divisor-formula.md)
 
 - …另有入边，续页见 [nodes/thm.divisor-formula.2.md](./thm.divisor-formula.2.md)
 

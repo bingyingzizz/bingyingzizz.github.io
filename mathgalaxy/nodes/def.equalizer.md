@@ -10,7 +10,7 @@ $$\ker(f,g) \longrightarrow X \overset{f}{\underset{g}{\rightrightarrows}} Y \lo
 且中间的 $\ker(f,g) \to X$ 是单态射、右端的 $Y \to \operatorname{coker}(f,g)$ 是满态射。这一段叫**左正合**。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核 用
+- 被 [`def.regular-monomorphism`](../nodes/def.regular-monomorphism.md) 正则单态射 用
 
 - …另有出边，续页见 [nodes/def.equalizer.3.md](./def.equalizer.3.md)
 

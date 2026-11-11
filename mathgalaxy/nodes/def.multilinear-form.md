@@ -1,6 +1,6 @@
 # 多重线性型　`def.multilinear-form`
 多重线性型 $V^{n} \to K$
-layer 11 · 定义 · 矩阵与行列式 · 抽象代数
+layer 12 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.multilinear-form)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间。映射 $f : V^{n} := V \times \cdots \times V \to K$ 叫 **$n$ 重线性型**，当且仅当固定任意 $n - 1$ 个变元后，剩下的那个变元是线性的：对每个 $i$，

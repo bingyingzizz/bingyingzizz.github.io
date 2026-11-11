@@ -7,5 +7,5 @@
 - def.composition-series　合成列　layer 10
 - def.solvable-group　可解群　layer 10
 - thm.jordan-holder　Jordan–Hölder 定理　layer 11
-- thm.solvable-quotients　可解性对子群与商群封闭　layer 14
-- prop.sn-solvable　对称群的可解性　layer 15
+- thm.solvable-quotients　可解性对子群与商群封闭　layer 15
+- prop.sn-solvable　对称群的可解性　layer 16

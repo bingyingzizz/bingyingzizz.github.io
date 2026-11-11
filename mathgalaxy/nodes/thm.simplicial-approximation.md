@@ -1,6 +1,6 @@
 # 单纯逼近　`thm.simplicial-approximation`
 单纯逼近定理：奇异同调 $=$ 单纯同调
-layer 25 · 定理 · 同调群 · 拓扑学
+layer 28 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.simplicial-approximation)　·　[节点索引](../index.md)
 
 设

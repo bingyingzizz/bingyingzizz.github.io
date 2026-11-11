@@ -1,6 +1,6 @@
 # 线性同构　`def.linear-isomorphism`
 线性同构
-layer 12 · 定义 · 线性映射与秩 · 抽象代数
+layer 13 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.linear-isomorphism)　·　[节点索引](../index.md)
 
 线性映射 $T : V \to W$ 叫**线性同构**，当且仅当 $T$ 是**双射**。此时记 $V \cong W$，并称 $V$ 与 $W$ 同构。

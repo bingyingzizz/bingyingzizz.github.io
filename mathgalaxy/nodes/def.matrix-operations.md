@@ -1,6 +1,6 @@
 # 矩阵的加法与乘法　`def.matrix-operations`
 矩阵的加法、数乘与乘法
-layer 12 · 定义 · 矩阵与行列式 · 抽象代数
+layer 13 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.matrix-operations)　·　[节点索引](../index.md)
 
 设 $A = (a_{ij})$、$B = (b_{ij})$ 同型（都是 $m \times n$）。

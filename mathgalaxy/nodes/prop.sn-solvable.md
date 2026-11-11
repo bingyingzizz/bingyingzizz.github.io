@@ -1,6 +1,6 @@
 # 对称群的可解性　`prop.sn-solvable`
 命题：$S_n$ 可解当且仅当 $n \le 4$
-layer 15 · 命题 · 合成列与可解群 · 抽象代数
+layer 16 · 命题 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=prop.sn-solvable)　·　[节点索引](../index.md)
 
 对称群 $S_n$ 可解（`def.solvable-group`），当且仅当 $n \le 4$。

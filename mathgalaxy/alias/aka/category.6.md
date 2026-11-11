@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 极限的构造 | 构造极限 | 极限 = 积 + 等化子 | 完备范畴 | 积与等化子 | 小积 小等化子 | Exercise 1.37 | Exercise 1.35 → prop.limit-construction
+
 - 截面函子 | 全局截面 | sections functor | Γ(X,F) | Γ(F) | 层在 X 处的取值 → def.section-functor
 
 - 子范畴 | subcategory | 满子范畴 | Definition 1.1.5 | Def 1.1.5 → def.subcategory
@@ -11,10 +13,8 @@
 
 - Ind-对象 | ind-object | Ind(C) | Definition 1.4.3 | Def 1.4.3 → def.ind-object
 
-- 保极限 | preserves limits | 保余极限 | 连续函子 | Definition 1.4.4 | Def 1.4.4 → def.preserves-limit
+- 余滤过范畴 | 余滤过 | cofiltered | co-filtered category | 对偶滤过范畴 | 逆滤过范畴 → def.cofiltered-category
 
-- 正合 | 正合函子 | 左正合 | 右正合 | left exact | right exact | exact functor | Definition 1.4.6 | Def 1.4.6 → def.exact-functor
-
-- 有限表现 | finitely presented | 紧对象 | compact object | Definition 1.4.9 | Def 1.4.9 → def.finitely-presented
+- Pro-对象 | pro-object | Pro(C) | profinite object | 形式极限 → def.pro-object
 
 > 续见 alias/aka/category.7.md

@@ -11,9 +11,11 @@ layer 12 · 定义 · 图与极限 · 范畴论
 - [`def.filtered-category`](../nodes/def.filtered-category.md) 滤过范畴：用到了定义 滤过范畴　[proofs/def-dep.indobj-filtered.md](../proofs/def-dep.indobj-filtered.md)
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.pro-object`](../nodes/def.pro-object.md) Pro-对象 用
+
 - …另有出边，续页见 [nodes/def.ind-object.3.md](./def.ind-object.3.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §1.3
+refs: Le Stum, An introduction to condensed mathematics, §1.4
 
 > 说明见 `notes/def.ind-object.md`
 

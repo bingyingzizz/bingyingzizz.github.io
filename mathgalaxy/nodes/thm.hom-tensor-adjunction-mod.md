@@ -1,6 +1,6 @@
 # 张量与内同态的伴随　`thm.hom-tensor-adjunction-mod`
 $\operatorname{Hom}(M \otimes_{R} N, P) \cong \operatorname{Hom}(M, \operatorname{Hom}(N, P))$
-layer 15 · 定理 · 模的张量积与标量限制 · 同调代数
+layer 16 · 定理 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=thm.hom-tensor-adjunction-mod)　·　[节点索引](../index.md)
 
 设

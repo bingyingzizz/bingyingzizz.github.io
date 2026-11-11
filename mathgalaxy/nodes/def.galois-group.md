@@ -1,6 +1,6 @@
 # 伽罗瓦群　`def.galois-group`
 伽罗瓦群 $\operatorname{Gal}(K/F)$
-layer 12 · 定义 · Galois 理论 · 抽象代数
+layer 13 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.galois-group)　·　[节点索引](../index.md)
 
 设 $K/F$ 是域扩张。$K$ 的**$F$-自同构**指域同构 $\sigma : K \to K$ 且 $\sigma|_{F} = \mathrm{id}_{F}$。它们全体在复合下构成一个群，记

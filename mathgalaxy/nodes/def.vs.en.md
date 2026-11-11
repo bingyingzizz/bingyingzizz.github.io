@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 11 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.vs.md` and `proofs/`.

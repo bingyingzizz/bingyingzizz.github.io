@@ -1,6 +1,6 @@
 # 可解性对子群与商群封闭　`thm.solvable-quotients`
 定理：可解性在子群、商群与扩张下的行为
-layer 14 · 定理 · 合成列与可解群 · 抽象代数
+layer 15 · 定理 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=thm.solvable-quotients)　·　[节点索引](../index.md)
 
 设 $G$ 是群。

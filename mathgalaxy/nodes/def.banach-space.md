@@ -7,11 +7,12 @@ layer 17 · 定义 · 多元微分 · 数学分析
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/dep.complete-banach-space.md](../proofs/dep.complete-banach-space.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/def-link.banach-normed.md](../proofs/def-link.banach-normed.md)
+
+- …另有入边，续页见 [nodes/def.banach-space.2.md](./def.banach-space.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.inverse-function-banach`](../nodes/thm.inverse-function-banach.md) 逆映射定理（Banach 版） 用
-
-- …另有出边，续页见 [nodes/def.banach-space.2.md](./def.banach-space.2.md)
+- …另有出边，续页见 [nodes/def.banach-space.3.md](./def.banach-space.3.md)
 
 refs: Rudin, Functional Analysis, Ch. 1；Zeidler, Nonlinear Functional Analysis I, Ch. 1
 

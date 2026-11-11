@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 28 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 30 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Ricci Curvature` (short) · `Ricci Curvature and Scalar Curvature` (full)
 
 ## Statement and proof

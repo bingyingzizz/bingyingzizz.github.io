@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1613 nodes, 3341 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1620 nodes, 3372 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1613 nodes, 3341 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1620 nodes, 3372 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -1109,6 +1109,55 @@ html.ui-no-hint #hint { display: none; }
     var de = document.documentElement;
     de.dataset.theme = dark ? 'dark' : 'light';
     de.dataset.themeMode = mode;
+  } catch (e) {}
+})();
+</script>
+<!-- ===== 首次访问的界面语言：浏览器语言 + IP 归属国（2026-11-11） =====
+     只在**用户还没做过选择**时才跑。判定顺序：
+       URL ?lang=  →  localStorage 里存过的选择  →  这一步（浏览器语言 + IP 归属国）
+     IP 在中国的访客 ⇒ 中文；其它国家 ⇒ 英文（作者 2026-11-11 拍板）。
+     ⛔ 为什么不在 i18n.js 里做：那边是同步的，而归属国必须先发一次网络请求。
+        这里**不阻塞首屏**：先按浏览器语言出页面，查回来了只在不一致时整页重载一次
+        （带 `?lang=`，所以之后每页都命中前面的短路条件，不会再查）。
+     ⛔ 失败必须无声：1.2 秒没回来就放弃，保持浏览器语言；`file://` 双击时根本不查。
+     ⛔ Do-Not-Track 开着时完全不查 IP —— 一个语言默认值不值得换一次定位请求。 -->
+<script>
+(function () {
+  try {
+    if (!/^https?:$/.test(location.protocol)) return;                 // file:// 不查
+    if (/[?&]lang=(en|zh)\b/.test(location.search || '')) return;     // 显式选择（含本脚本自己的重载）
+    var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+    if (dnt === '1' || dnt === 'yes') return;
+    var KEY = 'mathgalaxy.read.lang', saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === 'en' || saved === 'zh') return;                     // 点过语言按钮
+    var nav = (navigator.language || navigator.userLanguage || '');
+    var guess = /^en\b/i.test(nav) ? 'en' : 'zh';
+    function go(x) {
+      if (x === guess) return;
+      try {
+        var u = new URL(location.href);
+        u.searchParams.set('lang', x);
+        location.replace(u.toString());                               // 保留 hash：深链不丢
+      } catch (e) {}
+    }
+    if (!window.fetch || !window.AbortController) return;
+    var cached = null;
+    try { cached = sessionStorage.getItem('mathgalaxy.geo'); } catch (e) {}
+    if (cached === 'CN') { go('zh'); return; }
+    if (cached === 'other') { go('en'); return; }
+    var ctl = new AbortController();
+    var timer = setTimeout(function () { ctl.abort(); }, 1200);
+    fetch('https://api.country.is/', { signal: ctl.signal, credentials: 'omit', cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        var c = j && typeof j.country === 'string' ? j.country.toUpperCase() : '';
+        if (!c) return;
+        try { sessionStorage.setItem('mathgalaxy.geo', c === 'CN' ? 'CN' : 'other'); } catch (e) {}
+        go(c === 'CN' ? 'zh' : 'en');
+      })
+      .catch(function () {})
+      .then(function () { clearTimeout(timer); });
   } catch (e) {}
 })();
 </script>
@@ -12377,6 +12426,8 @@ MG.aliases = {
     { id: 'def.topology-base', en: 'base and subbase', aka: ['基', '子基', 'base', 'subbase', '拓扑基'] },
     { id: 'def.continuous-map', aka: ['连续映射', 'continuous map', '连续性'] },
     { id: 'def.homeomorphism', aka: ['同胚', 'homeomorphism', '拓扑等价'] },
+    { id: 'def.jordan-curve', en: 'Jordan curve', aka: ['Jordan 曲线', '若尔当曲线', '简单闭曲线', 'simple closed curve', 'Jordan curve', 'S1 的同胚像'] },
+    { id: 'thm.jordan-curve', en: 'Jordan curve theorem', aka: ['Jordan 曲线定理', '若尔当曲线定理', '简单闭曲线定理', 'Jordan curve theorem', '内外定理'] },
 
     /* 度量空间 */
     { id: 'def.metric-space', aka: ['距离空间', '度量空间', 'metric space', '距离'] },
@@ -12591,7 +12642,8 @@ MG.aliases = {
     { id: 'def.fibered-product', en: 'pullback and pushout', aka: ['纤维积', '拉回', 'pullback', 'fibered product', '推出', 'pushout', '笛卡尔方块', 'Definition 1.3.7', 'Def 1.3.7', '纤维积 ×_S'] },
     { id: 'def.equalizer', en: 'equalizer and coequalizer', aka: ['等化子', '余等化子', 'equalizer', 'coequalizer', '核', 'ker', 'coker', 'Definition 1.3.8', 'Def 1.3.8', 'Exercise 1.36'] },
     { id: 'def.mono', en: 'monomorphism, epimorphism and isomorphism', aka: [ '单态射', '满态射', 'mono', 'epi', 'monomorphism', 'epimorphism', '可消', 'Definition 1.3.9', 'Def 1.3.9' ] },
-    { id: 'def.subobject', aka: ['子对象', 'subobject', '子对象之交', '原像', 'Definition 1.3.10', 'Def 1.3.10'] },
+    { id: 'def.regular-monomorphism', en: 'regular monomorphism', aka: ['正则单态射', '正则单射', 'regular mono', 'equalizer of a pair', '等化子单态射'] },
+    { id: 'def.subobject', aka: ['子对象', 'subobject', '子对象之交', 'Definition 1.3.10', 'Def 1.3.10'] },
     { id: 'thm.lim-functor', aka: ['极限的函子性', '极限是函子', 'lim functor'] },
     { id: 'def.image', en: 'image and coimage', aka: [ '像', '余像', 'image', 'coimage', 'strict', 'Definition 1.3.11', 'Def 1.3.11' ] },
     { id: 'def.elements-category', en: 'category of elements', aka: ['元素范畴', 'category of elements', 'el(F)', '泛元素', 'universal element'] },
@@ -12627,6 +12679,8 @@ MG.aliases = {
     { id: 'def.simplex-category', aka: ['单纯形范畴', 'simplex category', '面映射', '退化映射', 'Definition 1.1.2', 'Def 1.1.2'] },
     { id: 'prop.iso-unique-section', en: 'an isomorphism has a unique section and retraction', aka: ['Proposition 1.1.4', 'Prop 1.1.4', '同构的截面唯一'] },
     { id: 'def.ind-object', aka: ['Ind-对象', 'ind-object', 'Ind(C)', 'Definition 1.4.3', 'Def 1.4.3'] },
+    { id: 'def.cofiltered-category', en: 'cofiltered category', aka: ['余滤过范畴', '余滤过', 'cofiltered', 'co-filtered category', '对偶滤过范畴', '逆滤过范畴'] },
+    { id: 'def.pro-object', en: 'pro-object', aka: ['Pro-对象', 'pro-object', 'Pro(C)', 'profinite object', '形式极限'] },
     { id: 'def.preserves-limit', aka: ['保极限', 'preserves limits', '保余极限', '连续函子', 'Definition 1.4.4', 'Def 1.4.4'] },
     { id: 'def.exact-functor', en: 'exact functor', aka: ['正合', '正合函子', '左正合', '右正合', 'left exact', 'right exact', 'exact functor', 'Definition 1.4.6', 'Def 1.4.6'] },
     { id: 'def.enough-projectives', en: 'enough projectives', aka: ['足够多投射', 'enough projectives', '足够多内射', 'enough injectives', 'Definition 1.4.8', 'Def 1.4.8', 'Proposition 7.1.21'] },
@@ -13784,7 +13838,8 @@ MG.aliases = {
     { id: 'def.reflexive-space', en: 'reflexive Banach space', aka: ['自反空间', '自反 Banach 空间'] },
     { id: 'thm.milman-pettis', en: 'Milman–Pettis theorem', aka: ['Milman-Pettis', 'Milman–Pettis 定理'] },
     { id: 'thm.james', en: "James's theorem", aka: ['James 定理', 'James 紧性定理'] },
-    { id: 'def.intersection-subobject', en: 'intersection of subobjects', aka: ['子对象的交', 'subobject intersection', 'fibred product of subobjects'] },
+    { id: 'def.intersection-subobject', en: 'intersection of subobjects', aka: ['子对象的交', 'subobject intersection', 'fibred product of subobjects', '一般范畴中的交', '一般范畴里的交', '范畴中的交', '范畴里的交', 'categorical intersection', 'intersection in a category', 'intersection of subobjects'] },
+    { id: 'def.preimage-subobject', en: 'preimage of a subobject', aka: ['子对象的原像', '原像子对象', 'preimage subobject', 'pullback of a subobject', '范畴中的原像', '范畴里的原像'] },
     { id: 'def.dini-derivative', en: 'Dini derivative', aka: ['Dini 导数', '导数', '四个 Dini 导数'] },
     { id: 'def.polygon-representation', en: 'polygonal representation of a surface', aka: ['多边形表示', '边配对粘合', 'polygon representation'] },
     { id: 'def.handle', en: 'handle (connected sum with a torus)', aka: ['环柄', '加环柄', 'handle'] },
@@ -13795,6 +13850,7 @@ MG.aliases = {
     { id: 'def.free-group-universal', en: 'universal property of free groups', aka: ['自由群的泛性质', '自由群泛性质'] },
     { id: 'def.dihedral-group', en: 'dihedral group', aka: ['二面体群', '正多边形对称群'] },
     { id: 'def.lens-space', en: 'lens space', aka: ['透镜空间', 'L(p,q)'] },
+    { id: 'lem.free-proper-quotient-manifold', en: 'free proper discontinuous quotient manifold', aka: ['自由真不连续作用的商流形', '商流形引理', 'quotient manifold lemma'] },
     { id: 'def.flat-dimension', en: 'flat dimension', aka: ['平坦维数'] },
     { id: 'def.pre-additive-category', en: 'pre-additive category', aka: ['预加法范畴', 'Ab-范畴', 'Ab-category'] },
     { id: 'def.additive-category', en: 'additive category', aka: ['加法范畴'] },
@@ -14323,6 +14379,7 @@ MG.i18n = {
     'def.cochain-complex': { title_en: 'cochain complex', label_en: 'cochain complex', from: 'explicit' },
     'def.cocontinuous-functor': { title_en: 'cocontinuous', label_en: 'cocontinuous', from: 'aka' },
     'def.cocycle-2': { title_en: 'Two-Cocycles and Two-Coboundaries', label_en: 'Cocycles and Coboundaries', from: 'manual' },
+    'def.cofiltered-category': { title_en: 'cofiltered category', label_en: 'cofiltered category', from: 'explicit' },
     'def.cofinal-functor': { title_en: 'cofinal functor', label_en: 'cofinal functor', from: 'explicit' },
     'def.cohomological-functor': { title_en: 'cohomological functor', label_en: 'cohomological functor', from: 'aka' },
     'def.cohomology': { title_en: 'cohomology', label_en: 'cohomology', from: 'explicit' },
@@ -14563,6 +14620,7 @@ MG.i18n = {
     'def.isotropic-vector': { title_en: 'Isotropic Vector', label_en: 'Isotropic Vector', from: 'explicit' },
     'def.jacobi-symbol': { title_en: 'Jacobi symbol', label_en: 'Jacobi symbol', from: 'explicit' },
     'def.jacobian': { title_en: 'Jacobian Matrix', label_en: 'Jacobian', from: 'manual' },
+    'def.jordan-curve': { title_en: 'Jordan curve', label_en: 'Jordan curve', from: 'explicit' },
     'def.k-bounded-exact': { title_en: 'K-bounded exact', label_en: 'K-bounded exact', from: 'aka' },
     'def.k-topology': { title_en: 'k-Open, k-Closed and the k-Topology', label_en: 'k-Topology', from: 'manual' },
     'def.kan-extension': { title_en: 'Kan extension', label_en: 'Kan extension', from: 'aka' },
@@ -14692,6 +14750,7 @@ MG.i18n = {
     'def.pre-analytic-ring': { title_en: 'pre-analytic ring', label_en: 'pre-analytic ring', from: 'explicit' },
     'def.precanonical-topology': { title_en: 'precanonical topology', label_en: 'precanonical topology', from: 'aka' },
     'def.preimage': { title_en: 'image and preimage', label_en: 'image and preimage', from: 'explicit' },
+    'def.preimage-subobject': { title_en: 'preimage of a subobject', label_en: 'preimage of a subobject', from: 'explicit' },
     'def.premeasure': { title_en: 'Premeasure', label_en: 'premeasure', from: 'title' },
     'def.preserves-limit': { title_en: 'preserves limits', label_en: 'preserves limits', from: 'aka' },
     'def.presheaf': { title_en: 'presheaf', label_en: 'presheaf', from: 'aka' },
@@ -14705,6 +14764,7 @@ MG.i18n = {
     'def.primitive-root': { title_en: 'primitive root', label_en: 'primitive root', from: 'explicit' },
     'def.principal-bundle': { title_en: 'Principal Bundle', label_en: 'Principal Bundle', from: 'manual' },
     'def.principal-curvature': { title_en: 'Principal Curvatures', label_en: 'Principal Curvatures', from: 'manual' },
+    'def.pro-object': { title_en: 'pro-object', label_en: 'pro-object', from: 'explicit' },
     'def.product': { title_en: 'product and coproduct', label_en: 'product and coproduct', from: 'explicit' },
     'def.product-measure': { title_en: 'product measure', label_en: 'product measure', from: 'aka' },
     'def.product-sigma': { title_en: 'product sigma-algebra', label_en: 'product sigma-algebra', from: 'aka' },
@@ -14739,6 +14799,7 @@ MG.i18n = {
     'def.regular-curve': { title_en: 'Regular Curve', label_en: 'Regular Curve', from: 'manual' },
     'def.regular-epi': { title_en: 'regular epimorphism', label_en: 'regular epimorphism', from: 'explicit' },
     'def.regular-measure': { title_en: 'regular measure', label_en: 'regular measure', from: 'aka' },
+    'def.regular-monomorphism': { title_en: 'regular monomorphism', label_en: 'regular monomorphism', from: 'explicit' },
     'def.regular-space': { title_en: 'Regular Space', label_en: 'Regular Space', from: 'explicit' },
     'def.regular-surface': { title_en: 'Regular Surface and Gauss Map', label_en: 'Regular Surface', from: 'manual' },
     'def.rel': { title_en: 'binary relation', label_en: 'binary relation', from: 'aka' },
@@ -14937,6 +14998,7 @@ MG.i18n = {
     'lem.covering-free-acyclic': { title_en: 'The Free Complex of a Cover Is Acyclic', label_en: 'Free Complex of a Cover', from: 'manual' },
     'lem.ext-stonean-section': { title_en: 'Sections of Ext on Stonean Spaces', label_en: 'Ext Sections', from: 'manual' },
     'lem.fatou': { title_en: 'Fatou\'s lemma', label_en: 'Fatou\'s lemma', from: 'aka-title' },
+    'lem.free-proper-quotient-manifold': { title_en: 'free proper discontinuous quotient manifold', label_en: null, from: 'explicit' },
     'lem.gauss-lemma': { title_en: 'Gauss\'s Lemma', label_en: 'Gauss\'s Lemma', from: 'manual' },
     'lem.gauss-qr': { title_en: 'Gauss lemma on quadratic residues', label_en: null, from: 'explicit' },
     'lem.goursat-triangle': { title_en: 'Goursat\'s Triangle Lemma', label_en: 'Goursat Triangle Lemma', from: 'manual' },
@@ -15585,6 +15647,7 @@ MG.i18n = {
     'thm.jacobi-laws': { title_en: 'computing with the Jacobi symbol', label_en: 'computing with the Jacobi symbol', from: 'explicit' },
     'thm.james': { title_en: 'James\'s theorem', label_en: 'James\'s theorem', from: 'explicit' },
     'thm.jordan-canonical-form': { title_en: 'Jordan canonical form', label_en: 'Jordan canonical form', from: 'explicit' },
+    'thm.jordan-curve': { title_en: 'Jordan curve theorem', label_en: 'Jordan curve theorem', from: 'explicit' },
     'thm.jordan-decomposition': { title_en: 'Jordan decomposition', label_en: 'Jordan decomposition', from: 'aka' },
     'thm.jordan-holder': { title_en: 'Jordan–Hölder theorem', label_en: 'Jordan–Hölder theorem', from: 'explicit' },
     'thm.k-plus-injectives': { title_en: 'Bounded-Below Complexes of Injectives Model the Derived Category', label_en: 'K+ of Injectives', from: 'manual' },
@@ -28229,6 +28292,47 @@ window.MG = window.MG || {};
       ].join('\n'),
       notes: '闭开集在一般的拓扑空间里是「稀有物种」：在 $\\mathbb{R}$、$[0,1]$ 这类连通空间里只有 $\\emptyset$ 与全空间。**闭开集越多，空间越碎** —— 全不连通是「连通分量全是单点」；「闭开集能分开任意两点」（= 零维）只有在**紧 Hausdorff** 下才与之等价；投射有限空间则是「闭开集构成一组基」。',
       refs: ['Munkres, Topology']
+    },
+    /* ------------------------------------------------ Jordan 曲线 */
+    {
+      id: 'def.jordan-curve',
+      cluster: 'topology.general',
+      type: 'definition',
+      label: 'Jordan 曲线',
+      title: 'Jordan 曲线（简单闭曲线）',
+      regions: ['topology'],
+      tags: ['定义', '拓扑', '曲线', 'Jordan'],
+      statement: [
+        '平面 $\\mathbb{R}^{2}$（或 $\\mathbb{C}$）中的一条**Jordan 曲线**（**简单闭曲线**）是单位圆周 $S^{1} = \\{\\, z \\in \\mathbb{C} : |z| = 1 \\,\\}$ 在**同胚**下的像：存在同胚 $S^{1} \\to C \\subseteq \\mathbb{R}^{2}$（$C$ 带子空间拓扑，见 `def.homeomorphism`）。',
+        '',
+        '等价地，$C$ 是 $\\mathbb{R}^{2}$ 中一条**连续单射** $\\gamma : S^{1} \\to \\mathbb{R}^{2}$ 的像 —— 因为 $S^{1}$ 紧、$\\mathbb{R}^{2}$ Hausdorff，连续单射自动是到其像上的同胚。'
+      ].join('\n'),
+      notes: [
+        '**名字拆开**：「简单」= 无自交点（$\\gamma$ 单射）；「闭」= $S^{1}$ 紧，所以像是紧的、没有端点。',
+        '**例**：圆周、椭圆、正方形边界、任意多边形的边界都是 Jordan 曲线；「8 字形」不是（有自交点），一条线段也不是（不是闭的）。',
+        '⚠ Jordan 曲线可以很不规则（例如分形曲线），所以不能靠「看起来像圆」来论证；下面的 Jordan 曲线定理正是对这种一般曲线说的。'
+      ].join('\n\n'),
+      refs: ['Hatcher, Algebraic Topology, §2.B']
+    },
+    {
+      id: 'thm.jordan-curve',
+      cluster: 'topology.general',
+      type: 'theorem',
+      status: 'skeleton',
+      label: 'Jordan 曲线定理',
+      title: '定理（Jordan）：简单闭曲线把平面分成内外两块',
+      regions: ['topology'],
+      tags: ['定理', '拓扑', 'Jordan', '骨架'],
+      statement: [
+        '设 $C \\subseteq \\mathbb{R}^{2}$ 是一条 Jordan 曲线（见 `def.jordan-curve`）。则补集 $\\mathbb{R}^{2} \\setminus C$ 恰有两个连通分量：一个有界（**内部**），一个无界（**外部**）；两者都以 $C$ 为边界。',
+        '',
+        '等价地，$C$ **分离**平面：$\\mathbb{R}^{2} \\setminus C$ 不连通，且连通分量恰好两个。'
+      ].join('\n'),
+      notes: [
+        '**骨架**：本节点只给陈述，不给出证明。缺口就是 **Jordan 曲线定理本身** —— 本图没有它的证明，不能把「显然」当作证明。',
+        '常用证明路线：① 同调路线，证明 $H_{1}(\\mathbb{R}^{2} \\setminus C) \\cong \\mathbb{Z}$（配合 Mayer–Vietoris）；② 基本群与环绕数路线；③ 初等的射线/多边形逼近路线。三条都依赖非平凡的拓扑工具，本图未展开。'
+      ].join('\n\n'),
+      refs: ['Hatcher, Algebraic Topology, §2.B']
     }
   ],
 
@@ -28376,6 +28480,20 @@ window.MG = window.MG || {};
       definition: 'def.closed-set',
       usedBy: 'def.clopen',
       note: '闭开集 = **开集** 且 **闭集**，两个概念各占一半。'
+    },
+    {
+      id: 'dep.jordan-homeo',
+      kind: 'definition',
+      definition: 'def.homeomorphism',
+      usedBy: 'def.jordan-curve',
+      note: 'Jordan 曲线定义为 $S^{1}$ 在同胚下的像；「像」上的拓扑取子空间拓扑，同胚是定义的一部分。'
+    },
+    {
+      id: 'dep.jordantheorem-curve',
+      kind: 'definition',
+      definition: 'def.jordan-curve',
+      usedBy: 'thm.jordan-curve',
+      note: '定理以 Jordan 曲线（简单闭曲线）的定义为前提；本节点只陈述定理，证明见节点注的缺口说明。'
     }
   ]
 });
@@ -30609,6 +30727,30 @@ window.MG = window.MG || {};
       refs: ['Le Stum, An introduction to condensed mathematics, §1.1']
     },
 
+    /* ---------------------------------------------- 正则单态射 */
+    {
+      id: 'def.regular-monomorphism',
+      cluster: 'cat.structure',
+      type: 'definition',
+      label: '正则单态射',
+      title: '正则单态射',
+      regions: ['category'],
+      tags: ['范畴论', '单态射', '等化子'],
+      statement: [
+        '态射 $i : Y \\to X$ 叫**正则单态射**，如果它是某对平行态射 $f, g : X \\rightrightarrows Z$ 的**等化子**（见 `def.equalizer`）：',
+        '',
+        '$$i = \\ker(f, g) \\;:\\; Y \\longrightarrow X .$$',
+        '',
+        '若范畴有零对象（如 $\\mathbf{Ab}$），这等价于「$i$ 是某个态射的核」：$\\ker(f) = \\ker(f, 0)$。'
+      ].join('\n'),
+      notes: [
+        '**例**：在 $\\mathbf{Set}$ 中，正则单态射恰好是单射。给定单射 $i : Y \\to X$，取 $Z = \\{0, 1\\}$，令 $f$ 在 $i(Y)$ 上取 $0$、在补集上取 $1$，$g$ 恒取 $0$，则 $\\ker(f, g) = i(Y) \\cong Y$。',
+        '**与单态射的关系**：正则单态射总是单态射（等化子是单态射），但反过来不成立。在 $\\mathbf{Top}$ 里单态射是单射连续映射，而正则单态射要求子空间拓扑恰好由等化子给出，所以不全是正则的。',
+        '**在 $\\mathbf{Ab}$ 中**：单态射、正则单态射、某个映射的核三者重合；这也是「核」这个术语的来源。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.3（Definition 1.3.9）']
+    },
+
     /* ------------------------------------------------------ 子对象 */
     {
       id: 'def.subobject',
@@ -30619,14 +30761,14 @@ window.MG = window.MG || {};
       regions: ['category'],
       tags: ['范畴论', '子对象', '拉回'],
       statement: [
-        '把单态射 $Y \\rightarrowtail X$ 看作 $X$ 的一个**子对象**，记 $Y \\subseteq X$。两个子对象的**交**与原像都用拉回定义：',
+        '把单态射 $Y \\rightarrowtail X$ 看作 $X$ 的一个**子对象**，记 $Y \\subseteq X$。子对象的**交**与沿态射的**原像**分别见 `def.intersection-subobject` 与 `def.preimage-subobject`；下面把两种构造一并写出作为总览，细节以那两个节点为准。',
         '',
         '$$Y \\cap Z := Y \\times_{X} Z, \\qquad f^{-1}(Y) := Y \\times_{X} X\'$$',
         '',
         '（对 $Y, Z \\subseteq X$ 与任意 $f : X\' \\to X$；存在时才有定义）。'
       ].join('\n'),
       notes: [
-        '把「子集」换成「单态射」，好处是不再依赖元素 —— 于是这套语言可以照搬到没有元素的范畴里去。「交」变成拉回、「原像」也变成拉回，两种操作合成了一个：$Y \\cap Z$ 解的是「既在 $Y$ 里又在 $Z$ 里」的部分，$f^{-1}(Y)$ 解的是「$y = f(x)$ 有解」的部分。'
+        '把「子集」换成「单态射」，好处是不再依赖元素 —— 于是这套语言可以照搬到没有元素的范畴里去。「交」与「原像」都是拉回（纤维积）：$Y \\cap Z$ 解的是「既在 $Y$ 里又在 $Z$ 里」的部分，$f^{-1}(Y)$ 解的是「$y = f(x)$ 有解」的部分；细节分别见 `def.intersection-subobject` 与 `def.preimage-subobject`。'
       ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §1.1']
     },
@@ -30646,9 +30788,10 @@ window.MG = window.MG || {};
         '',
         '连同到 $X$ 的投影（若纤维积存在）。它在「同时包含于 $Y$ 与 $Z$ 的子对象」中泛：任何同时分解过两条单态射的 $T \\to X$ 都唯一地分解过 $Y \\cap Z \\to X$。',
         '',
-        '对任意 $f : X\' \\to X$，**原像** $f^{-1}(Y) := Y \\times_{X} X\'$ 是 $X\'$ 的子对象。在 $\\mathbf{Set}$ 中，交就是集合交 $Y \\cap Z$。'
+        '在 $\\mathbf{Set}$ 中，交就是集合交 $Y \\cap Z$；沿态射的原像见 `def.preimage-subobject`。'
       ].join('\n'),
       notes: [
+        '**消歧**：一般范畴里对象之间没有「交」；能谈的是**子对象的交**（纤维交），且要求相应的纤维积存在。',
         '**为什么用纤维积**：交要表达「同时落在 $Y$ 与 $Z$ 里」。用元素说，就是 $t \\in Y \\cap Z$；不用元素说，就是 $T \\to X$ 同时分解过 $Y \\rightarrowtail X$ 与 $Z \\rightarrowtail X$。纤维积的泛性正是这个「同时分解」的万有解；于是任何满足该性质的对象都唯一地分解过 $Y \\times_{X} Z$，即它是最大下界。',
         '',
         '**存在性**：交就是纤维积，所以「交存在」当且仅当沿 $X$ 的纤维积存在；没有纤维积的范畴里不能谈交。单态射沿任意态射的拉回仍是单态射（见 `def.mono`），所以 $Y \\times_{X} Z \\to X$ 确实是子对象。',
@@ -30657,12 +30800,38 @@ window.MG = window.MG || {};
         '',
         '**与并的关系**：并是余积的像 $Y \\cup Z := \\operatorname{im}(Y \\coprod Z \\to X)$，不是纤维余积。预拓扑斯里子对象构成有界格：交 = 纤维积（最大下界），并 = 像（最小上界），见 `prop.subobject-lattice`。',
         '',
-        '**原像**：对 $f : X\' \\to X$，$f^{-1}(Y) = Y \\times_{X} X\'$ 是 $X\'$ 的子对象；它满足「$f(x) \\in Y$」的泛性质，并随 $f$ 与拉回函子相容。原像与交是同一个构造（都取纤维积），只是沿的态射不同。',
         '',
         '**警告**：一般范畴里 $Y \\cap Z$ 不一定存在；即使存在，也不要把它与积 $Y \\times Z$ 或余积 $Y \\coprod Z$ 混为一谈。交是「沿 $X$ 的纤维积」，而不是「两个对象的积」。'
       ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §1.3（Def 1.3.10, p.23–24）', 'Mac Lane, Categories for the Working Mathematician, Ch. III §4']
     },
+    /* ---------------------------------------------------- 原像 */
+    {
+      id: 'def.preimage-subobject',
+      cluster: 'cat.structure',
+      type: 'definition',
+      label: '子对象的原像',
+      title: '子对象的原像',
+      regions: ['category'],
+      tags: ['范畴论', '子对象', '原像', '纤维积'],
+      statement: [
+        '设 $f : X^{\\prime} \\to X$ 是态射，$Y \\rightarrowtail X$ 是 $X$ 的子对象（见 `def.subobject`）。$Y$ 沿 $f$ 的**原像**是纤维积',
+        '',
+        '$$f^{-1}(Y) := Y \\times_{X} X^{\\prime} \\;\\longrightarrow\\; X^{\\prime} ,$$',
+        '',
+        '连同到 $X^{\\prime}$ 的投影（若纤维积存在）。它满足泛性：对任意 $g : T \\to X^{\\prime}$，若 $f \\circ g$ 分解过 $Y \\rightarrowtail X$，则 $g$ 唯一地分解过 $f^{-1}(Y) \\to X^{\\prime}$。',
+        '',
+        '在 $\\mathbf{Set}$ 中，$f^{-1}(Y) = \\{\\, x \\in X^{\\prime} : f(x) \\in Y \\,\\}$，即通常的集合原像。'
+      ].join('\n'),
+      notes: [
+        '**直观**：原像是「把 $Y$ 沿 $f$ 拉回到 $X^{\\prime}$」—— 解的是 $f(x) \\in Y$ 的那部分。',
+        '**与交是同一个构造**：交 $Y \\cap Z = Y \\times_{X} Z$ 是沿两条单态射的拉回，原像是沿任意态射 $f$ 的拉回；两者都是纤维积，只是沿的态射不同。',
+        '**仍是子对象**：单态射沿任意态射的拉回仍是单态射（拉回保持单态射），所以 $f^{-1}(Y) \\to X^{\\prime}$ 确实是子对象。',
+        '⚠ 需要沿 $f$ 的纤维积存在；没有纤维积的范畴里原像未必有定义。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.3']
+    },
+
     /* -------------------------------------------------- 极限的函子性 */
     {
       id: 'thm.lim-functor',
@@ -30770,6 +30939,55 @@ window.MG = window.MG || {};
       definition: 'def.simplex-category',
       usedBy: 'def.simplicial',
       note: '单纯对象是 $\\Delta^{\\mathrm{op}}$ 上的图，索引范畴正是 `def.simplex-category`；本节点陈述为了自足把 $\\Delta$ 的骨架重述了一遍，正式定义以那个节点为准。'
+    },
+    {
+      id: 'dep.regmono-equalizer',
+      kind: 'definition',
+      definition: 'def.equalizer',
+      usedBy: 'def.regular-monomorphism',
+      note: '正则单态射的定义就是「某对平行态的等化子」，先有等化子才谈得上。'
+    },
+    {
+      id: 'dep.regmono-mono',
+      kind: 'definition',
+      definition: 'def.mono',
+      usedBy: 'def.regular-monomorphism',
+      note: '正则单态射是单态射的一种特化（定义比单态射更强）；「等化子自动是单态射」是一条定理，不属于这条 definition 边的内容。'
+    },
+    {
+      id: 'dep.preimg-subobject',
+      kind: 'definition',
+      definition: 'def.subobject',
+      usedBy: 'def.preimage-subobject',
+      note: '原像以子对象（单态射的同构类）与沿它的拉回为前提。'
+    },
+    {
+      id: 'dep.preimg-fiber',
+      kind: 'definition',
+      definition: 'def.fibered-product',
+      usedBy: 'def.preimage-subobject',
+      note: '原像就是沿 $f$ 的纤维积，所以需要先有纤维积。'
+    },
+    {
+      id: 'ana.inter-set',
+      kind: 'analogy',
+      a: 'def.intersection-subobject',
+      b: 'def.union-inter',
+      note: '在 $\\mathbf{Set}$ 中，子对象的交（纤维积）就是集合交，故 `def.union-inter` 的**交**这一半是本构造的特例；并**不是**纤维积，而是余积（不交并）的像，属于对偶侧，只作类比。'
+    },
+    {
+      id: 'ana.preimg-set',
+      kind: 'analogy',
+      a: 'def.preimage-subobject',
+      b: 'def.preimage',
+      note: '在 $\\mathbf{Set}$ 中，子对象沿 $f$ 的原像（纤维积）就是通常的集合原像；`def.preimage` 是集合层面的原像，这里是它的范畴化类比。'
+    },
+    {
+      id: 'ana.inter-preimg',
+      kind: 'analogy',
+      a: 'def.intersection-subobject',
+      b: 'def.preimage-subobject',
+      note: '交与沿态射的原像是同一个构造（纤维积）的两个特例：交沿两条单态射拉回，原像沿任意态射拉回。'
     }
   ]
 });
@@ -37021,7 +37239,56 @@ window.MG = window.MG || {};
         '**例子**：$\\operatorname{Ind}(\\mathbf{FinSet})$ 是「所有集合」（每个集合都是它有限子集的滤过余极限）；$K$-理论的「向量丛按直和/余极限补全」用的也是它。',
         '📌 对偶地有 **Pro-对象**：把滤过图换成**余滤过**图，得到 $\\operatorname{Pro}(\\mathcal{C})$（profinite 空间就是 $\\operatorname{Pro}(\\mathbf{FinSet})$）。'
       ].join('\n\n'),
-      refs: ['Le Stum, An introduction to condensed mathematics, §1.3']
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.4']
+    },
+
+    /* ---------------------------------------------- 余滤过范畴 */
+    {
+      id: 'def.cofiltered-category',
+      cluster: 'cat.limit',
+      type: 'definition',
+      label: '余滤过范畴',
+      title: '余滤过范畴',
+      regions: ['category'],
+      tags: ['范畴论', '余滤过', '对偶', '形式极限'],
+      statement: [
+        '小范畴 $I$ 叫**余滤过**的，如果它的对偶 $I^{\\mathrm{op}}$ 是滤过范畴（`def.filtered-category`）：',
+        '1. $I$ 非空；',
+        '2. 任意 $X, Y \\in I$ 有**共同下界**：存在 $Z \\in I$ 与态射 $Z \\to X$、$Z \\to Y$；',
+        '3. 任意平行态射 $f, g : X \\rightrightarrows Y$ 有**共同右消解**：存在 $h : Z \\to X$ 使 $f \\circ h = g \\circ h$。',
+        '等价地，以 $I$ 为指标的**余滤过图**就是 $I^{\\mathrm{op}}$ 上的滤过图。'
+      ].join('\n'),
+      notes: [
+        '**对偶表**：滤过 $\\leftrightarrow$ 余滤过，余极限 $\\leftrightarrow$ 极限，Ind-对象 $\\leftrightarrow$ Pro-对象。三条条件正是滤过范畴三条条件取对偶。',
+        '**例**：profinite 空间的指标范畴、$p$-进整数 $\\mathbb{Z}_{p} = \\varprojlim_{n} \\mathbb{Z}/p^{n}$ 的指标范畴 $\\mathbb{N}^{\\mathrm{op}}$ 都是余滤过的（$\\mathbb{N}^{\\mathrm{op}}$ 是滤过范畴）。',
+        '⚠ 余滤过是**指标范畴**的性质，不是图的性质；「余滤过极限」指沿余滤过指标取极限，不要与「滤过余极限」混为一谈。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.4（Definition 1.4.1 的对偶）']
+    },
+
+    /* ---------------------------------------------------- Pro-对象 */
+    {
+      id: 'def.pro-object',
+      cluster: 'cat.limit',
+      type: 'definition',
+      label: 'Pro-对象',
+      title: 'Pro-对象与 $\\operatorname{Pro}(\\mathcal{C})$',
+      regions: ['category'],
+      tags: ['范畴论', 'Pro-对象', '余滤过极限', '形式极限'],
+      statement: [
+        '范畴 $\\mathcal{C}$ 的一个 **Pro-对象**「$\\varprojlim_{i \\in I} X_{i}$」是一个**余滤过图** $(X_{i})_{i \\in I}$（指标范畴余滤过，见 `def.cofiltered-category`；等价地，$I^{\\mathrm{op}}$ 上的滤过图）。它们组成范畴 $\\operatorname{Pro}(\\mathcal{C})$，其 Hom 为',
+        '',
+        '$$\\operatorname{Hom}_{\\operatorname{Pro}(\\mathcal{C})}\\Bigl(\\text{“}\\varprojlim_{i \\in I} X_{i}\\text{”},\\ \\text{“}\\varprojlim_{j \\in J} Y_{j}\\text{”}\\Bigr) \\;=\\; \\varprojlim_{i \\in I}\\ \\varinjlim_{j \\in J}\\ \\operatorname{Hom}_{\\mathcal{C}}(X_{i}, Y_{j}).$$',
+        '',
+        '这是 **Ind-对象**（`def.ind-object`）的对偶：把 $\\mathcal{C}$ 换成 $\\mathcal{C}^{\\mathrm{op}}$，滤过就变成余滤过，形式余极限就变成形式极限。'
+      ].join('\n'),
+      notes: [
+        '**读法**：引号里的 $\\varprojlim X_{i}$ 是**形式记法** —— 对象是「余滤过图」本身，不是它的极限（极限可能压根不存在）。',
+        '**例子**：$\\operatorname{Pro}(\\mathbf{FinSet})$ 就是 profinite 集合；$p$-进整数 $\\mathbb{Z}_{p} = \\varprojlim_{n} \\mathbb{Z}/p^{n}$ 是 pro-有限群的原型。',
+        '**对偶表**：Ind-对象 $\\leftrightarrow$ Pro-对象，滤过 $\\leftrightarrow$ 余滤过，余极限 $\\leftrightarrow$ 极限。因此凡是对 Ind-对象成立的构造，取 $\\mathcal{C}^{\\mathrm{op}}$ 就得到 Pro-对象的对应版本。',
+        '⚠ 与「极限存在」区分：$\\operatorname{Pro}(\\mathcal{C})$ 是形式完备化，即使 $\\mathcal{C}$ 没有相应的极限也有定义。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §1.4.3 Definition 1.4.3']
     },
 
     /* ---------------------------------------------- 保极限（定义） */
@@ -37219,7 +37486,29 @@ window.MG = window.MG || {};
     }
   ],
 
-  edges: []
+  edges: [
+    {
+      id: 'dep.proobj-ind',
+      kind: 'definition',
+      definition: 'def.ind-object',
+      usedBy: 'def.pro-object',
+      note: 'Pro-对象是 Ind-对象取对偶得到的构造：把滤过图换成余滤过图、形式余极限换成形式极限；定义方式与 Ind-对象平行。'
+    },
+    {
+      id: 'dep.cofiltered-filtered',
+      kind: 'definition',
+      definition: 'def.filtered-category',
+      usedBy: 'def.cofiltered-category',
+      note: '余滤过范畴按定义是对偶范畴滤过的指标范畴；三条条件逐条是滤过条件取对偶。'
+    },
+    {
+      id: 'dep.proobj-cofiltered',
+      kind: 'definition',
+      definition: 'def.cofiltered-category',
+      usedBy: 'def.pro-object',
+      note: 'Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无法陈述「余滤过图」。'
+    }
+  ]
 });
 
 </script>
@@ -41041,10 +41330,16 @@ window.MG = window.MG || {};
     },
     {
       id: 'def-link.injhom-injective',
-      kind: 'definition',
-      definition: 'prop.injective-criterion',
-      usedBy: 'prop.injective-complex-homotopy',
-      note: '证明的关键是内射对象的「分裂短正合列」判据。'
+      kind: 'implication',
+      sources: ['prop.injective-criterion', 'def.projective-object'],
+      target: 'prop.injective-complex-homotopy',
+      title: '内射判据给出链复形的可缩性',
+      proof: [
+        '要证零调的内射复形可缩，须逐层造收缩同伦 $s^{n} : I^{n} \\to I^{n-1}$。',
+        '每一层的短正合列 $0 \\to Z^{n} \\to I^{n} \\to Z^{n+1} \\to 0$ 由 $I^{n}$ 的内射性（`def.projective-object`）沿 $Z^{n} \\to I^{n-1}$ 分裂 —— 正是 `prop.injective-criterion` 给出的「分裂短正合列」判据。',
+        '分裂给出的截面就是 $s^{n}$ 的候选，逐层拼接即得 $ds + sd = \\mathrm{id}$，复形可缩。∎',
+      ].join('\n'),
+      note: '证明的关键是内射对象的「分裂短正合列」判据（`prop.injective-criterion`）。'
     },
     {
       id: 'def-link.injhom-quasi',
@@ -41062,10 +41357,16 @@ window.MG = window.MG || {};
     },
     {
       id: 'def-link.injl-injective',
-      kind: 'definition',
-      definition: 'prop.injective-criterion',
-      usedBy: 'prop.injective-resolution-lift',
-      note: '提升的每一步都靠内射对象抬起映射。'
+      kind: 'implication',
+      sources: ['prop.injective-criterion', 'def.projective-object'],
+      target: 'prop.injective-resolution-lift',
+      title: '内射性逐层抬起链映射',
+      proof: [
+        '比较定理要从 $F^{0}$ 逐层造出 $F^{n+1} : I^{n+1} \\to J^{n+1}$ 使 $Fd = dF$。',
+        '第 $0$ 层：$M \\hookrightarrow I^{0}$ 是单射，复合 $M \\to N \\to J^{0}$ 由 $J^{0}$ 的内射性（`def.projective-object`）抬成 $F^{0}$。',
+        '归纳步同理：障碍映射 $I^{n+1} \\to J^{n+1}$ 沿单射 $I^{n} \\hookrightarrow I^{n+1}$ 抬起，用的正是 `prop.injective-criterion` 的抬起性质。∎',
+      ].join('\n'),
+      note: '提升的每一步都靠内射对象抬起映射（判据见 `prop.injective-criterion`）。'
     }
 
   ]
@@ -41512,9 +41813,15 @@ window.MG = window.MG || {};
     },
     {
       id: 'def-link.injacy-injective',
-      kind: 'definition',
-      definition: 'prop.injective-criterion',
-      usedBy: 'prop.injective-iff-acyclic',
+      kind: 'implication',
+      sources: ['prop.injective-criterion'],
+      target: 'prop.injective-iff-acyclic',
+      title: '内射判据把「无环」接回内射性',
+      proof: [
+        '$\\operatorname{Ext}^{1}(A,I) = 0$ 对一切 $A$ 成立，是内射性的同调刻画。',
+        '`prop.injective-criterion` 正是这条判据；(3) $\\implies$ (1) 把它用在 $I$ 上，得到 $I$ 内射。',
+        '另一侧（内射 $\\implies$ 无环）由长正合列立刻得到。∎',
+      ].join('\n'),
       note: '$(3) \\implies (1)$ 用的是内射对象的判据（$\\operatorname{Ext}^{1}(-,I) = 0$）。'
     },
     {
@@ -68444,10 +68751,16 @@ window.MG = window.MG || {};
     },
     {
       id: 'dep.mf-bundlemetric-pu',
-      kind: 'definition',
-      definition: 'thm.smooth-partition-unity',
-      usedBy: 'prop.bundle-metric',
-      note: '证明是把局部标准内积做凸组合，权重恰是这个光滑单位分解；正定性靠「权重非负且和为 $1$」。'
+      kind: 'implication',
+      sources: ['thm.smooth-partition-unity'],
+      target: 'prop.bundle-metric',
+      title: '光滑单位分解把局部内积拼成整体内积',
+      proof: [
+        '取 $E$ 的局部平凡化覆盖 $\\{U_{\\alpha}\\}$，在每个 $U_{\\alpha}$ 上借平凡化取标准内积 $\\langle\\cdot,\\cdot\\rangle_{\\alpha}$。',
+        '由 `thm.smooth-partition-unity`（流形仿紧，故存在从属于 $\\{U_{\\alpha}\\}$ 的光滑单位分解 $\\{\\rho_{\\alpha}\\}$）令 $\\langle s,t\\rangle := \\sum_{\\alpha}\\rho_{\\alpha}\\langle s,t\\rangle_{\\alpha}$。',
+        '每一项 $\\rho_{\\alpha}\\langle\\cdot,\\cdot\\rangle_{\\alpha}$ 在 $U_{\\alpha}$ 外为 $0$，故和局部有限、光滑、双线性、对称；正定性：$\\langle s,s\\rangle = \\sum\\rho_{\\alpha}\\langle s,s\\rangle_{\\alpha} \\ge 0$，且若 $s(x) \\ne 0$ 则某 $\\alpha$ 有 $\\rho_{\\alpha}(x) > 0$、$\\langle s(x),s(x)\\rangle_{\\alpha} > 0$，故和 $> 0$。∎',
+      ].join('\n'),
+      note: '局部内积做凸组合，权重就是这个光滑单位分解；正定性靠「权重非负且和为 $1$」。'
     },
     {
       id: 'dep.mf-det-orientable',
@@ -75638,6 +75951,28 @@ window.MG = window.MG || {};
       notes: '**基本群**：$p>1$ 时 $\\pi_{1}(L(p,q))\\cong\\mathbb{Z}/p$；投影 $S^{3}\\to L(p,q)$ 是 $p$ 重覆叠（见 `def.covering-space`），$S^{3}$ 单连通故覆叠空间的基本群正是 $\\mathbb{Z}/p$。\n\n**例子**：$L(2,1)\\cong\\mathbb{R}P^{3}$（对径粘合）；$L(p,1)$ 是可定向的三维透镜空间。\n\n**同胚分类**：$L(p,q)\\cong L(p,q^{\\prime})$ 当且仅当 $q^{\\prime}\\equiv\\pm q^{\\pm1}\\pmod p$；$q$ 影响同胚型但不影响同伦型（透镜空间是「同伦等价而非同胚」的经典例子）。\n\n**同调**：$H_{1}\\cong\\mathbb{Z}/p$，$H_{2}=0$，$H_{3}\\cong\\mathbb{Z}$（$L(p,q)$ 是闭可定向三维流形）。\n\n⚠ 定义要求 $\\gcd(p,q)=1$，否则作用不自由、商空间不是流形。',
       refs: ['Hatcher, Algebraic Topology, Ch. 1 §1.3 · lens spaces', 'Munkres, Topology (2nd ed.), Ch. 9 · covering spaces'],
     },
+    {
+      id: 'lem.free-proper-quotient-manifold',
+      cluster: 'topology.fg',
+      type: 'lemma',
+      label: '自由真不连续作用的光滑商',
+      title: '有限群自由真不连续作用的光滑商流形',
+      regions: ['topology'],
+      tags: ['引理', '拓扑', '流形', '群作用', '商空间'],
+      statement: '设 $M$ 是 $n$ 维光滑流形，有限群 $\\Gamma$ 光滑地作用在 $M$ 上，且作用**自由**（$g\\ne e$ 时 $gx\\ne x$）、**真不连续**（每个 $x$ 有开邻域 $U$ 使 $gU\\cap U=\\emptyset$ 对所有 $g\\ne e$）。则轨道空间 $M/\\Gamma$ 有唯一的光滑结构使商映射 $\\pi:M\\to M/\\Gamma$ 是局部微分同胚；特别地 $M/\\Gamma$ 是 $n$ 维光滑流形。',
+      notes: [
+        '**开邻域**：对每个 $x\\in M$，因 $\\Gamma$ 有限且自由，对每个 $g\\ne e$ 有 $gx\\ne x$。由 $M$ Hausdorff，取 $x$ 与 $gx$ 的互不相交开邻域；对有限多个 $g$ 取交并回拉，得到 $x$ 的开邻域 $U$ 使 $gU\\cap U=\\emptyset$（$g\\ne e$）。',
+        '',
+        '**局部单射与开映射**：若 $u,v\\in U$ 且 $\\pi(u)=\\pi(v)$，则 $v=gu$，故 $u\\in U\\cap g^{-1}U$；由 $gU\\cap U=\\emptyset$（$g\\ne e$）得 $g=e$，$u=v$。所以 $\\pi|_{U}$ 是单射；又群作用的商映射是开映射，故 $\\pi|_{U}:U\\to\\pi(U)$ 是同胚。',
+        '',
+        '**图册**：取 $M$ 的图卡 $(U,\\varphi)$ 且 $U$ 满足上条；定义 $M/\\Gamma$ 上的卡 $(\\pi(U),\\varphi\\circ(\\pi|_{U})^{-1})$。这些 $\\pi(U)$ 覆盖 $M/\\Gamma$。若 $\\pi(z)\\in\\pi(U)\\cap\\pi(V)$，取 $h\\in\\Gamma$ 使 $hz\\in V$；在 $z$ 附近 $\\pi|_{V}^{-1}\\circ\\pi=h$（因为 $\\pi\\circ h=\\pi$，且 $hu\\in V$ 对 $u$ 靠近 $z$ 成立），故转移映射局部等于 $\\psi\\circ h\\circ\\varphi^{-1}$，是光滑的。',
+        '',
+        '**拓扑条件**：$M/\\Gamma$ 作为第二可数空间 $M$ 的商仍第二可数；又 $\\Gamma$ 有限且作用真不连续，不同轨道的饱和邻域可分离（对有限多个 $g$ 取 $gx$ 与 $\\Gamma y$ 的分离邻域），故 $M/\\Gamma$ Hausdorff。',
+        '',
+        '**唯一性**：若两种光滑结构都使 $\\pi$ 为局部微分同胚，则恒等映射在这两种结构下都是局部微分同胚，从而是微分同胚，两种结构相同。∎'
+      ].join('\n\n'),
+      refs: ['Lee, Introduction to Smooth Manifolds (2nd ed.), Ch. 21 · quotient manifolds', 'Hatcher, Algebraic Topology, Ch. 1 §1.3 · covering space actions'],
+    },
   ],
   edges: [
     { id: 'dep.lens-groupaction', kind: 'definition', definition: 'def.group-action', usedBy: 'def.lens-space',
@@ -75648,6 +75983,19 @@ window.MG = window.MG || {};
       note: 'L(p,q) 的基本群是 Z/p。' },
     { id: 'dep.lens-simply', kind: 'definition', definition: 'def.simply-connected', usedBy: 'def.lens-space',
       note: 'S^3 单连通是计算基本群的输入。' },
+    { id: 'imp.lens-space-smooth-manifold', kind: 'implication',
+      sources: ['def.lens-space', 'lem.free-proper-quotient-manifold'],
+      target: 'def.smooth-manifold',
+      title: '透镜空间是光滑三维流形',
+      proof: [
+        '$S^{3}\\subset\\mathbb{C}^{2}$ 由 $|z_{1}|^{2}+|z_{2}|^{2}=1$ 定义，梯度 $(2\\bar z_{1},2\\bar z_{2})$ 在球面上不为零，故 $S^{3}$ 是光滑三维流形。',
+        '',
+        '$\\Gamma=\\mathbb{Z}/p$ 以 $(z_{1},z_{2})\\mapsto(\\zeta z_{1},\\zeta^{q}z_{2})$ 光滑作用。$\\gcd(p,q)=1$ 时作用自由：若 $\\zeta z_{1}=z_{1}$ 且 $\\zeta^{q}z_{2}=z_{2}$，则 $z_{1}=0$ 或 $\\zeta=1$，$z_{2}=0$ 或 $\\zeta^{q}=1$；结合 $|z_{1}|^{2}+|z_{2}|^{2}=1$ 可知 $\\zeta=1$。',
+        '',
+        '有限群在 Hausdorff 空间上的自由作用自动真不连续：每个点有开邻域与所有非平凡像不交（即上一引理证明的第一段）。',
+        '',
+        '于是引理给出：轨道空间 $L(p,q)=S^{3}/\\Gamma$ 有唯一光滑结构使商映射为局部微分同胚，从而是三维光滑流形。∎'
+      ].join('\n\n') },
     /* ---------------------------------------------------- §A 同伦 → 基本群 */
     { kind: 'definition', definition: 'def.continuous-map', usedBy: 'def.homotopy-maps',
       note: '同伦 $F : X \\times [0, 1] \\to Y$ 本身要求**联合连续**（在乘积拓扑下），' +
@@ -77310,7 +77658,7 @@ window.MG = window.MG || {};
     },
     {
       id: 'def.prime-end',
-      cluster: 'analysis.conformal',
+      cluster: 'analysis.mapping',
       type: 'definition',
       label: '素端',
       title: '素端（prime end）与 Carathéodory 紧化',
@@ -79359,7 +79707,14 @@ window.MG = window.MG || {};
     { kind: 'analogy', a: 'thm.fundamental-arithmetic', b: 'def.multiplicative-function',
       note: '积性函数的「确定方式」直接来自唯一分解：函数值由各素数幂上的值决定。' },
 
-    { kind: 'definition', definition: 'thm.fundamental-arithmetic', usedBy: 'thm.divisor-formula',
+    { id: 'imp.divisor-formula', kind: 'implication',
+      sources: ['thm.fundamental-arithmetic'], target: 'thm.divisor-formula',
+      title: '唯一分解给出因数公式',
+      proof: [
+        '设 $n = p_{1}^{e_{1}} \\cdots p_{r}^{e_{r}}$。由 `thm.fundamental-arithmetic`，这是 $n$ 的分解里唯一的素数幂写法。',
+        '任一因数 $d$ 也随之写成 $d = p_{1}^{f_{1}} \\cdots p_{r}^{f_{r}}$（同一批素数，指数 $0 \\le f_{i} \\le e_{i}$），且这种写法唯一。',
+        '于是「选因数」等价于「每个指数独立选一个值」，共 $\\prod (e_{i}+1)$ 个；$\\sigma$ 同理逐素数幂求和。∎',
+      ].join('\n'),
       note: '公式靠唯一分解：$n$ 的因数与「指数向量」一一对应。' },
 
     { kind: 'definition', definition: 'def.prime', usedBy: 'def.prime-counting',
@@ -80535,8 +80890,14 @@ window.MG = window.MG || {};
     { id: 'dep.mf3-dm-extd', kind: 'definition',
       definition: 'def.exterior-derivative', usedBy: 'prop.exterior-derivative-manifold',
       note: '开集上的坐标公式直接搬过来，当图卡上的定义用。' },
-    { id: 'dep.mf3-dm-pullback', kind: 'definition',
-      definition: 'prop.pullback-forms', usedBy: 'prop.exterior-derivative-manifold',
+    { id: 'dep.mf3-dm-pullback', kind: 'implication',
+      sources: ['prop.pullback-forms'], target: 'prop.exterior-derivative-manifold',
+      title: '开集上的「$\\mathrm{d}$ 与拉回交换」定出流形上的外微分',
+      proof: [
+        '流形上的外微分只能在图卡里定义；要证明它与图卡无关，须说明两张卡上的坐标公式在重叠处给出同一个算子。',
+        '重叠处两张卡的坐标变换是开集间的微分同胚，`prop.pullback-forms` 已证 $F^{\\ast}\\mathrm{d} = \\mathrm{d}F^{\\ast}$（开集版本）。',
+        '于是两边的坐标公式被这条等式拉到同一个形式，图卡无关性成立，外微分良定义。∎',
+      ].join('\n'),
       note: '图卡无关性靠「$\\mathrm{d}$ 与拉回交换」这条（开集版已证），它才是证明的引擎。' },
     { id: 'dep.mf3-dm-form', kind: 'definition',
       definition: 'def.form-on-manifold', usedBy: 'prop.exterior-derivative-manifold',
@@ -80547,13 +80908,13 @@ window.MG = window.MG || {};
       note: '拉回的两端都是流形上的形式空间。' },
     { id: 'dep.mf3-pbm-rn', kind: 'definition',
       definition: 'prop.pullback-forms', usedBy: 'prop.pullback-form-manifold',
-      note: '开集间那条是这一条的图卡样子；证明靠局部化到图卡搬过来。' },
+      note: '开集间那条是这一条的图卡样子：本条的证明逐点验证四条公理，不依赖开集版的公理清单 —— 这是**定义实例化**，不是蕴含。' },
     { id: 'dep.mf3-pbm-dmap', kind: 'definition',
       definition: 'def.differential-map', usedBy: 'prop.pullback-form-manifold',
       note: '定义式里把切映射 $\\mathrm{d}F_{p}$ 塞进形式 $\\omega$ 的槽里 —— 没有它写不出这个式子。' },
     { id: 'dep.mf3-pbm-covm', kind: 'definition',
       definition: 'prop.pullback-form-manifold', usedBy: 'thm.change-of-variables-manifold',
-      note: '流形上的换元公式就是「拉回体积形式再积分」：$\\int_{F(M)}\\omega = \\int_{M}F^{\\ast}\\omega$（保向微分同胚时）。' },
+      note: '换元公式用拉回的语言陈述，但证明只用到 `def.integral-form` 的良定性与单位分解 —— 这是**定义实例化**（拉回是语言，不是前提），不是蕴含。' },
 
     /* ---------------------------------------------- §B 丛的定义链 */
     { id: 'dep.mf3-cotb-tbundle', kind: 'definition',
@@ -87704,8 +88065,8 @@ window.MG = window.MG || {};
       note: '正交分解用的就是 $E^\\perp$ 这个定义。' },
     { id: 'def-link.fa-orthproj', kind: 'definition', definition: 'def.orthogonal-projection', usedBy: 'thm.projection-subspace',
       note: '有限维里的正交投影是这里的特例（那时每个子空间都闭）。' },
-    { id: 'def-link.fa-projformula', kind: 'definition', definition: 'thm.projection-formula', usedBy: 'thm.projection-convex',
-      note: '有限维的最佳逼近公式是这条的有限维特例：那时最近点由内积显式给出。' },
+    { id: 'def-link.fa-projformula', kind: 'analogy', a: 'thm.projection-formula', b: 'thm.projection-convex',
+      note: '有限维的最佳逼近公式是 Hilbert 投影定理的有限维特例（那时最近点由内积显式给出）。用类比边，不当作定理依赖。' },
     { id: 'def-link.fa-unitarymatrix', kind: 'definition', definition: 'def.unitary-matrix', usedBy: 'def.unitary-operator',
       note: '有限维酉矩阵是酉算子的一种；无穷维还多出「等距但不满」的移位算子。' },
     { id: 'def-link.fa-adjoint-finitedim', kind: 'definition', definition: 'def.operator-adjoint', usedBy: 'thm.adjoint-hilbert',
@@ -87732,8 +88093,8 @@ window.MG = window.MG || {};
       note: '结论里的「全有界」与逐点的「全有界」都是这条定义（后者在 $E$ 里取）。' },
     { id: 'def-link.fa-subalgebra-sw', kind: 'definition', definition: 'def.subalgebra-separating', usedBy: 'thm.stone-weierstrass',
       note: '「含单位的子代数 + 分离点」就是这条定义的三个词。' },
-    { id: 'def-link.fa-arzela-classic', kind: 'definition', definition: 'thm.arzela-ascoli', usedBy: 'thm.arzela-ascoli-general',
-      note: '本图先有的经典版（$\\mathbb{R}$ 值、紧距离空、一致有界）是这条的特例：取 $E = \\mathbb{R}$ 即得。' },
+    { id: 'def-link.fa-arzela-classic', kind: 'analogy', a: 'thm.arzela-ascoli', b: 'thm.arzela-ascoli-general',
+      note: '同一个定理的两档：`thm.arzela-ascoli-general` 允许 $E$ 是任意度量空间，经典版（$\\mathbb{R}$ 值、一致有界）是它的特例。用类比边，不当作定理依赖。' },
     { id: 'def-link.fa-invfn-banach', kind: 'analogy', a: 'thm.inverse-function-banach', b: 'thm.bounded-inverse',
       note: '⚠️ 两条只共享「逆」这个字：那条是非线性的局部逆（Neumann + 压缩映射），这条是线性双射的全局逆（Baire）。' },
     { id: 'def-link.fa-function-closedgraph', kind: 'definition', definition: 'def.function', usedBy: 'thm.closed-graph',
@@ -87880,7 +88241,7 @@ window.MG = window.MG || {};
       usedBy: 'thm.gauss-bonnet',
       note: 'Gauss–Bonnet 的结论里直接出现 $\\chi(M)$，而 $\\chi$ 此前在几何侧是「外部输入」。' +
         '两边接上之后：把曲面三角剖分，$\\int_M K\\,\\mathrm{d}A = 2\\pi\\chi(M) = 2\\pi(V-E+F)$ —— ' +
-        '这就是「曲率积分 = 拓扑不变量」的完整走法。',
+        '这就是「曲率积分 = 拓扑不变量」的完整走法。方向是「曲率积分 $\\to$ 示性数」：本条反过来用示性数举例，**不依赖** Gauss–Bonnet —— 这是**定义实例化**，不是蕴含。',
     },
 
     /* ------------------------------------------------ D3：测度 ↔ 泛函 */
@@ -92615,13 +92976,20 @@ window.MG = window.MG || {};
       note: '判据写在直纹面的参数式上（三阶行列式）。' },
     { id: 'dep-dif-k', kind: 'definition', definition: 'def.gauss-curvature', usedBy: 'thm.developable-iff-flat',
       note: '证明要算第二基本形式与 $K$。' },
-    { id: 'dep-dif-egregium', kind: 'definition', definition: 'thm.theorema-egregium', usedBy: 'thm.developable-iff-flat',
+    { id: 'dep-dif-egregium', kind: 'implication',
+      sources: ['thm.theorema-egregium'], target: 'thm.developable-iff-flat',
+      title: '绝妙定理把「等距」的 $K = 0$ 一侧接上',
+      proof: [
+        '「可展 $\\implies$ 平坦」一侧要证：与平面局部等距的曲面必须 $K = 0$。',
+        '`thm.theorema-egregium` 说明 $K$ 只由第一基本形式决定，是等距不变量。',
+        '平面的 $K = 0$，故与它等距的曲面也 $K = 0$；反方向由常曲率分类的 $K = 0$ 情形给出。∎',
+      ].join('\n'),
       note: '$K$ 是等距不变量 —— 这是「可展与 $K = 0$ 等价」的另一半。' },
 
     { id: 'dep-cgc-k', kind: 'definition', definition: 'def.gauss-curvature', usedBy: 'thm.constant-gauss-curvature',
       note: '主语是「Gauss 曲率为常数」。' },
     { id: 'dep-cgc-geo', kind: 'definition', definition: 'lem.gauss-lemma', usedBy: 'thm.constant-gauss-curvature',
-      note: '测地极坐标下 $g = \\mathrm{d}r^{2} + f^{2}\\mathrm{d}\\theta^{2}$ 用的是 Gauss 引理。' },
+      note: '测地极坐标下 $g = \\mathrm{d}r^{2} + f^{2}\\mathrm{d}\\theta^{2}$ 要 Gauss 引理保证 $\\partial_r \\perp \\partial_\\theta$；本注只写结果形式、未展开这一步 —— 这是**证明梗概的引用**，不是定义依赖。' },
     { id: 'dep-cgc-form', kind: 'definition', definition: 'def.first-fundamental-form', usedBy: 'thm.constant-gauss-curvature',
       note: '整个论证只用第一基本形式（内蕴）。' },
     { id: 'dep-cgc-ds', kind: 'definition', definition: 'def.developable-surface', usedBy: 'thm.constant-gauss-curvature',
@@ -92846,13 +93214,13 @@ window.MG = window.MG || {};
       note: '「纸不能拉 $\\implies$ K 不变」这一步用绝妙定理（$K$ 是等距不变量）。' },
     { id: 'def-link.dif-cgc', kind: 'definition',
       definition: 'thm.constant-gauss-curvature', usedBy: 'thm.developable-iff-flat',
-      note: '$K \\equiv 0 \\implies$ 局部等距于平面，这一步就是常曲率分类的 $K = 0$ 情形。' },
+      note: '「$K \\equiv 0 \\implies$ 局部等距于平面」是常曲率分类的 $K = 0$ 行；本注把两边结论并列，未引用其证明 —— 这是**定义实例化**，不是蕴含。' },
     { id: 'def-link.mc-ds', kind: 'definition',
       definition: 'def.developable-surface', usedBy: 'def.mean-curvature',
       note: '平均曲率那条注里比较「极小曲面（$H = 0$）」与「可展曲面（$K = 0$）」，平面是唯一交点。' },
     { id: 'def-link.cod-gauss', kind: 'definition',
       definition: 'thm.gauss-equation', usedBy: 'thm.codazzi-mainardi',
-      note: 'Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的两半，必须并列引用。' },
+      note: 'Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的**两半**，彼此并列而不互推 —— 这是**并列关系**，不是蕴含。' },
 
     /* ---------------- 实示性类（diffgeom.manifold） ---------------- */
     { id: 'def-link.ec-k', kind: 'definition',
@@ -96500,6 +96868,44 @@ window.MG = window.MG || {};
       '拼出来的是**紧 Hausdorff 块**。'],
     ['def.weak-hausdorff', 'prop.closed-inclusion-filtered-limit', 'def-dep.clif-wh',
       '结论断言余极限仍**弱 Hausdorff**。'],
+    /* AUD-063 B 类：特例 = 一般 + 额外结构（definition，不写 proof） */
+    ['def.metric-space', 'def.normed-space', 'def-link.normed-metric',
+      '赋范空间带上距离 $d(v, w) = \\|v - w\\|$ 就是度量空间。'],
+    ['def.normed-space', 'def.banach-space', 'def-link.banach-normed',
+      'Banach 空间是**完备**的赋范空间；完备性是额外结构。'],
+    ['def.norm', 'def.lp-norm', 'def-link.norm-lpnorm',
+      '$\\ell^{p}$ 范数是范数公理的一个具体实例；这是定义实例化/特化，不是蕴含。'],
+    ['def.norm', 'def.matrix-norm', 'def-link.norm-matnorm',
+      '矩阵范数满足范数公理，是范数在矩阵空间上的实例；这是定义实例化/特化，不是蕴含。'],
+    ['def.norm', 'def.induced-norm', 'def-link.norm-induced',
+      '内积通过 $\\|v\\| = \\sqrt{\\langle v, v\\rangle}$ 诱导出范数；这是定义实例化/特化，不是蕴含。'],
+    ['def.module', 'def.vector-space', 'def-link.module-vectorspace',
+      '向量空间就是域上的模；标量域是额外的结构。'],
+    ['def.measure', 'def.regular-measure', 'def-link.measure-regular',
+      '正则测度首先是测度，正则性是额外要求。'],
+    ['def.topology', 'def.t35-space', 'def-link.topology-t35',
+      'T3½ 空间的定义以拓扑空间为底，再要求分离性与函数分离。'],
+    ['def.topology', 'def.completely-regular-space', 'def-link.topology-cr',
+      '完全正则空间的定义以拓扑空间为底，再加连续函数分离条件。'],
+    ['def.ring', 'thm.int-ring', 'def-link.ring-intring',
+      '整数环定理把环结构赋予整数集；整数集本身不是环定义的一部分。'],
+    ['def.ring', 'thm.matrix-ring', 'def-link.ring-matrixring',
+      '矩阵环定理把环结构赋予矩阵集；矩阵集本身不是环定义的一部分。'],
+    ['def.fibered-product', 'def.intersection-subobject', 'def-link.intersection-pullback',
+      '子对象的交就是沿目标对象的纤维积（图中纤维积节点即 pullback）。'],
+    ['def.fibered-product', 'def.preimage-subobject', 'def-link.preimage-pullback',
+      '子对象的原像就是换基的纤维积，这是原像构造的直接依据。'],
+    /* AUD-063 C 类：具体实例/原型（analogy 粉边，不写 proof） */
+    ['def.smooth-manifold', 'ex.sphere', 'ana.smooth-exsphere',
+      '$S^{2}$ 是光滑流形的具体实例。', 'analogy'],
+    ['def.smooth-manifold', 'ex.torus', 'ana.smooth-extorus',
+      '$T^{2}$ 是光滑流形的具体实例。', 'analogy'],
+    ['def.smooth-manifold', 'ex.projective-plane', 'ana.smooth-exrp2',
+      '$\\mathbb{RP}^{2}$ 是光滑流形的具体实例。', 'analogy'],
+    ['def.hilbert-space', 'def.ell2-space', 'ana.hilbert-ell2',
+      '$\\ell^{2}(I)$ 是 Hilbert 空间的原型实例。', 'analogy'],
+    ['def.banach-space', 'def.ell2-space', 'ana.banach-ell2',
+      '$\\ell^{2}(I)$ 同时是 Banach 空间的实例。', 'analogy'],
   ];
 
   var edges = E.map(function (e) {

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 15 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Immersion and Submersion` (short) · `Immersion, Submersion and Embedding` (full)
 
 ## Statement and proof

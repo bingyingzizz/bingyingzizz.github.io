@@ -1,6 +1,12 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 自由对象是投射的 → prop.free-projective
+
+- 自由表示 | free presentation | 自由表现 | Definition 2.2.3 | Def 2.2.3 → def.free-presentation
+
+- 紧 Haus 都有自由表示 | Corollary 2.2.4 | Cor 2.2.4 → cor.chaus-free-presentation
+
 - 连通分量是闭开邻域之交 | Proposition 2.2.6 | Prop 2.2.6 → prop.component-clopen
 
 - Stone 空间 | Stone space | Stonean 空间 | 极端不连通 | extremally disconnected | 全不连通 | totally disconnected → def.stone-space
@@ -14,9 +20,5 @@
 - 投射有限空间 | profinite space | profinite | Definition 2.2.8 | Def 2.2.8 | Exercise 2.18 → def.profinite
 
 - Stone 等价于投射有限 | Stone duality | Proposition 2.2.9 | Prop 2.2.9 → thm.stone-profinite
-
-- Gleason 定理 | Gleason | CHaus 的投射对象 | Theorem 2.2.11 | Thm 2.2.11 | 格利森定理 → thm.gleason
-
-- Stonean 是收缩核 | retract | 收缩核 | Corollary 2.2.12 | Cor 2.2.12 → cor.stonean-retract
 
 > 续见 alias/aka/topology.6.md

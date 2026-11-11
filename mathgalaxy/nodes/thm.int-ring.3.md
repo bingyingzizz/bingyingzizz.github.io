@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.int`](../nodes/def.int.md) 整数 ℤ + [`thm.nat-arith-laws`](../nodes/thm.nat-arith-laws.md) 自然数的运算律：商构造 + $\mathbb{N}$ 的运算律 $\implies$ $\mathbb{Z}$ 是整环　[proofs/imp.int-ring.md](../proofs/imp.int-ring.md)
+- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/def-link.ring-intring.md](../proofs/def-link.ring-intring.md)

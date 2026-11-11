@@ -15,8 +15,8 @@
 - def.subcategory　子范畴　layer 8
 - prop.functor-preserves-sections　函子保截面与收缩　layer 9
 - def.localization　局部化　layer 10
-- prop.matrix-category　矩阵范畴　layer 10
 - prop.preorder-as-category　预序集就是「Hom 至多一元」的小范畴　layer 11
+- prop.matrix-category　矩阵范畴　layer 11
 - prop.localization-functor-exact　允许右分式演算时局部化函子正合　layer 11
 - prop.cat-final-initial-products　Cat 的终始对象与有限积　layer 13
 

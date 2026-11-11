@@ -1,6 +1,6 @@
 # 伽罗瓦基本定理　`thm.galois-correspondence`
 伽罗瓦对应：中间域 $\leftrightarrow$ 子群（反包含、次数换指数）
-layer 15 · 定理 · Galois 理论 · 抽象代数
+layer 16 · 定理 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=thm.galois-correspondence)　·　[节点索引](../index.md)
 
 设 $K/F$ 是**有限伽罗瓦扩张**，$G = \operatorname{Gal}(K/F)$。则

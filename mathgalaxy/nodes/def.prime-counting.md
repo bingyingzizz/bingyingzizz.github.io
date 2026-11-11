@@ -10,7 +10,7 @@ $$\pi(x) := \sum_{p \le x} 1, \qquad \theta(x) := \sum_{p \le x} \log p, \qquad 
 $\pi$ 数素数个数，$\theta$ 按对数加权，$\psi$（**Чебышёв 函数**）把所有素数幂一起数。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/e147.definition.md](../proofs/e147.definition.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/e146.definition.md](../proofs/e146.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`lem.psi-theta-sum`](../nodes/lem.psi-theta-sum.md) ψ 与 θ 的分组恒等式

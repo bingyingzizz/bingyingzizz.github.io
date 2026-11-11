@@ -1,7 +1,7 @@
 # 共形映射与正规族 / Conformal Maps and Normal Families（analysis.mapping）· 节点清单（第 1/2 页）
 
 一套回答「两块区域什么时候共形等价」的装置：最大模原理 → Schwarz 引理与 Schwarz–Pick → 开映射 → Arzelà–Ascoli 与 Montel（正规族）→ Riemann 映射定理 → Poincaré 圆盘上的双曲度量。
-中心天体 thm.riemann-mapping　·　21 个节点　·　根 `../`　·　续页 `index/analysis.mapping.2.md`
+中心天体 thm.riemann-mapping　·　22 个节点　·　根 `../`　·　续页 `index/analysis.mapping.2.md`
 
 - thm.arzela-ascoli　Arzelà–Ascoli 定理　layer 21
 - def.cross-ratio　交比　layer 22

@@ -1,6 +1,6 @@
 # 第二基本形式对称　`lem.second-form-symmetric`
 第二基本形式的系数矩阵对称
-layer 28 · 引理 · 活动标架与结构方程 · 微分几何
+layer 30 · 引理 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=lem.second-form-symmetric)　·　[节点索引](../index.md)
 
 在 $e_{3} = n$ 的标架下记 $\omega^{i}_{\ 3} = \

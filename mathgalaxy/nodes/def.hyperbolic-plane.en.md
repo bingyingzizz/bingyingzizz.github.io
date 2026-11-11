@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 16 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.hyperbolic-plane.md` and `proofs/`.

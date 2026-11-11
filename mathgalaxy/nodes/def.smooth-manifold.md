@@ -1,6 +1,6 @@
 # 光滑流形　`def.smooth-manifold`
 光滑流形与图册
-layer 19 · 定义 · 内蕴几何 · 微分几何
+layer 22 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.smooth-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：把 $\mathbb{R}^{n}$ 上的微积分搬到「局部看起来像 $\mathbb{R}^{n}$」
@@ -10,7 +10,7 @@ layer 19 · 定义 · 内蕴几何 · 微分几何
 ## 它能推出什么 / 谁在用它
 - 被 [`def.tangent-space-manifold`](../nodes/def.tangent-space-manifold.md) 切空间 用
 
-- …另有出边，续页见 [nodes/def.smooth-manifold.8.md](./def.smooth-manifold.8.md)
+- …另有出边，续页见 [nodes/def.smooth-manifold.9.md](./def.smooth-manifold.9.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.smooth-manifold.6.md](./def.smooth-manifold.6.md)

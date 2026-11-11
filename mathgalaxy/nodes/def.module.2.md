@@ -11,3 +11,4 @@
 - 被 [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有 用
 - 被 [`thm.freyd-mitchell`](../nodes/thm.freyd-mitchell.md) Freyd–Mitchell 嵌入定理 用
 - 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
+- 被 [`def.vector-space`](../nodes/def.vector-space.md) 向量空间 用

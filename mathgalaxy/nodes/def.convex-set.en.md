@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 11 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.convex-set.md` and `proofs/`.

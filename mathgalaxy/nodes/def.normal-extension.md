@@ -1,6 +1,6 @@
 # 正规扩张　`def.normal-extension`
 正规扩张：一个根就有全部根
-layer 13 · 定义 · Galois 理论 · 抽象代数
+layer 14 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.normal-extension)　·　[节点索引](../index.md)
 
 代数扩张 $K/F$ 叫**正规**（normal），如果 $F[x]$ 中每个**不可约**多项式只要在 $K$ 中有一个根，就**在 $K$ 中分裂**（全部根都在 $K$ 里）。

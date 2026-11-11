@@ -6,16 +6,16 @@
 - def.closed-surface　闭曲面　layer 19
 - def.triangulation　三角剖分　layer 19
 - def.topological-orientability　拓扑可定向性　layer 19
-- def.connected-sum　连通和　layer 20
 - def.polygon-representation　多边形表示　layer 20
 - thm.rado　Radó 定理　layer 20
 - lem.combinatorial-classification-surfaces　曲面的组合分类引理　layer 20
 - ex.projective-plane　射影平面 RP²　layer 20
-- def.genus　亏格　layer 21
-- ex.sphere　球面 S²　layer 22
-- ex.torus　环面 T²　layer 22
-- def.handle　环柄　layer 23
+- def.connected-sum　连通和　layer 23
 - def.branched-cover　分支覆盖　layer 23
+- def.genus　亏格　layer 24
 - def.ramification-index　分歧指数　layer 24
+- ex.sphere　球面 S²　layer 25
+- ex.torus　环面 T²　layer 25
+- def.handle　环柄　layer 26
 
 > 续见 `index/topology.surfaces.2.md`

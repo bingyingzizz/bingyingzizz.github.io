@@ -1,6 +1,6 @@
 # 可对角化判据　`thm.diagonalizable`
 定理：可对角化的几个等价条件
-layer 18 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 19 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.diagonalizable)　·　[节点索引](../index.md)
 
 设 $\dim V = n < \infty$，$T : V \to V$ 线性，$T$ 的**特征多项式在 $K$ 上完全分裂**，$\lambda_1, \ldots, \lambda_m$ 是它在 $K$ 中互异的特征值。则下列命题等价：

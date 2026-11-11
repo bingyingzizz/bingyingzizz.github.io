@@ -11,11 +11,13 @@ layer 11 · 定义 · 图与极限 · 范畴论
 
 等价的说法是：**$I$ 中每个有限图都有余锥。** 沿滤过范畴取的余极限叫**滤过余极限**。
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.cofiltered-category`](../nodes/def.cofiltered-category.md) 余滤过范畴 用
+
+- …另有出边，续页见 [nodes/def.filtered-category.3.md](./def.filtered-category.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.filtered-category.2.md](./def.filtered-category.2.md)
-
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.filtered-category.3.md](./def.filtered-category.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §1.4.1
 

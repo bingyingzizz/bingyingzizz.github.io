@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.eulerchar-nonorientable`](../nodes/prop.eulerchar-nonorientable.md) Euler 示性数与不可定向亏格：dep.eulercharnonor-rp2　[proofs/dep.eulercharnonor-rp2.md](../proofs/dep.eulercharnonor-rp2.md)
+- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：ana.smooth-exrp2　[proofs/ana.smooth-exrp2.md](../proofs/ana.smooth-exrp2.md)
 
 > 续见 [nodes/ex.projective-plane.3.md](./ex.projective-plane.3.md)

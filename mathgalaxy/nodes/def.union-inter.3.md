@@ -2,4 +2,5 @@
 [在星图里打开](../#n=def.union-inter)　·　第 1 页 [nodes/def.union-inter.md](./def.union-inter.md)　·　上一页 [nodes/def.union-inter.2.md](./def.union-inter.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ～弱边 [`def.intersection-subobject`](../nodes/def.intersection-subobject.md) 子对象的交
 - 被 [`def.universe`](../nodes/def.universe.md) Grothendieck 宇宙 用

@@ -1,6 +1,14 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 奇异同调群 → def.singular-homology
+
+- 紧集上连续 ⟹ 有界 → prop.continuous-bounded-on-compact
+
+- 有界闭 ⟺ 紧（ℝⁿ） | 海涅–博雷尔定理 | 海涅–博雷尔 → cor.heine-borel
+
+- 紧集上连续 ⟹ 一致连续 → thm.uniform-continuity-compact
+
 - 链同伦 → def.chain-homotopy
 
 - 诱导同态 → prop.induced-homomorphism
@@ -34,19 +42,5 @@
 - 单纯复形 → def.simplicial-complex
 
 - 道路同伦 → def.path-homotopy
-
-- 单连通 → def.simply-connected
-
-- 标准单纯形 → def.standard-simplex
-
-- 第二可数空间 → def.second-countable
-
-- 第一可数空间 → def.first-countable
-
-- 映射同伦 → def.homotopy-maps
-
-- 基本群 | π_1 | π₁ | pi_1 → def.fundamental-group
-
-- 覆叠空间 → def.covering-space
 
 > 续见 alias/aka/topology.13.md

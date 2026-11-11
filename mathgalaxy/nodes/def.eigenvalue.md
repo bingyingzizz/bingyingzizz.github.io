@@ -1,6 +1,6 @@
 # 特征值与特征向量　`def.eigenvalue`
 特征值与特征向量
-layer 14 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 15 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.eigenvalue)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 线性，$V \ne \{0\}$。数 $\lambda \in K$ 叫 $T$ 的**特征值**，当且仅当存在**非零**向量 $v \in V$ 使

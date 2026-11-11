@@ -1,6 +1,6 @@
 # Riesz 表示的配对版　`thm.riesz-perfect-pairing`
 Riesz 表示定理：完美配对框架
-layer 14 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 18 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.riesz-perfect-pairing)　·　[节点索引](../index.md)
 
 设 $(X, Y, \langle\cdot,\cdot\rangle)$ 是完美配对（`def.perfec

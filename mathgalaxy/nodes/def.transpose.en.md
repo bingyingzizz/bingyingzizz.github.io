@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 14 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Transpose` (short) · `Transpose of a Matrix` (full)
 
 ## Statement and proof

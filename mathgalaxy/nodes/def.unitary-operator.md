@@ -1,6 +1,6 @@
 # 酉算子　`def.unitary-operator`
 酉算子
-layer 19 · 定义 · Hilbert 空间 · 泛函分析
+layer 20 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.unitary-operator)　·　[节点索引](../index.md)
 
 设 $u \in B(H)$。称 $u$ 是**酉算子**（unitary），若

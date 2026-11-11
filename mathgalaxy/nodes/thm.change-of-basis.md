@@ -1,6 +1,6 @@
 # 基变换与相似　`thm.change-of-basis`
 定理：换基给出相似矩阵
-layer 13 · 定理 · 矩阵与行列式 · 抽象代数
+layer 14 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.change-of-basis)　·　[节点索引](../index.md)
 
 设 $T : V \to V$ 线性，$\mathcal{B}, \mathcal{B}'$ 是 $V$ 的两组有序基。

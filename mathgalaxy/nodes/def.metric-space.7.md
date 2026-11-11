@@ -5,3 +5,4 @@
 - 被 [`def.sequentially-compact`](../nodes/def.sequentially-compact.md) 列紧 用
 - 被 [`def.compact`](../nodes/def.compact.md) 紧 用
 - 被 [`def.shrinks-nicely`](../nodes/def.shrinks-nicely.md) 可缩族 用
+- 被 [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间 用

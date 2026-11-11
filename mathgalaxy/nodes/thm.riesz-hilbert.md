@@ -1,6 +1,6 @@
 # Riesz 表示（Hilbert）　`thm.riesz-hilbert`
 Riesz 表示：$H^* \cong \overline{H}$
-layer 22 · 定理 · Hilbert 空间 · 泛函分析
+layer 21 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.riesz-hilbert)　·　[节点索引](../index.md)
 
 设 $H$ 是 Hilbert 空间，$\varphi \in H^*$。则存在**唯一**的 $y \in H$ 使

@@ -1,6 +1,6 @@
 # 零化子　`def.annihilator`
 零化子 $U^{0}$
-layer 13 · 定义 · 线性映射与秩 · 抽象代数
+layer 14 · 定义 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=def.annihilator)　·　[节点索引](../index.md)
 
 设 $U \subseteq V$ 是子空间。$U$ 的**零化子**定义为

@@ -3,3 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.connected-sum`](../nodes/def.connected-sum.md) 连通和：用到了定义 连通和　[proofs/dep.connectedsum-sphere.md](../proofs/dep.connectedsum-sphere.md)
+- [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形：ana.smooth-exsphere　[proofs/ana.smooth-exsphere.md](../proofs/ana.smooth-exsphere.md)
+
+> 续见 [nodes/ex.sphere.3.md](./ex.sphere.3.md)

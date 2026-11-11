@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 23 · example · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry / geometry
+layer 25 · example · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry / geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.s1-tangent-bundle.md` and `proofs/`.

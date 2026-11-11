@@ -1,6 +1,14 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Theorem 3.1.2 | Thm 3.1.2 | Exercise 1.67 → thm.presheaf-limits-colimits
+
+- Definition 3.2.10 | Def 3.2.10 → def.associated-sheaf
+
+- Theorem 3.4.2 | Thm 3.4.2 | Corollary 3.4.3 | Cor 3.4.3 → thm.induced-topos-morphism
+
+- Exercise 7.51 → prop.topos-morphism-abelian-adjunction
+
 - Exercise 7.52 | Exercise 3.51 | 拉回与内 Hom → prop.inverse-image-tensor
 
 - Exercise 7.57 → prop.abelian-slice-adjunction
@@ -18,15 +26,5 @@
 - Exercise 1.15 | Exercise 1.18 | 预序范畴 → prop.preorder-as-category
 
 - Exercise 1.32 → prop.slice-fully-faithful-mono
-
-- Exercise 1.49 → prop.projective-universal-epi
-
-- Exercise 1.53 → prop.functor-preserves-monoid-objects
-
-- Exercise 1.63 → prop.adjunction-extends-to-diagrams
-
-- Exercise 1.74 | 坎延拓 → prop.kan-extension-fully-faithful
-
-- Exercise 3.8 | ind-可表示 → prop.ind-representable-iff-left-exact
 
 > 续见 alias/aka/category.18.md

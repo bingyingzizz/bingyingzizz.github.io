@@ -12,7 +12,7 @@ $$\operatorname{ord}_{n}(g) = \varphi(n) ,$$
 等价说法：$\{[g]^{0}, [g]^{1}, \cdots, [g]^{\varphi(n)-1}\}$ 遍历整个单位群；即 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 是循环群、$g$ 是它的生成元。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶：用到了定义 模 n 的阶　[proofs/e161.definition.md](../proofs/e161.definition.md)
+- [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶：用到了定义 模 n 的阶　[proofs/e160.definition.md](../proofs/e160.definition.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.primitive-root.2.md](./def.primitive-root.2.md)

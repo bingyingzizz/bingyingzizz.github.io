@@ -1,6 +1,16 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 环面 | T^2 | 甜甜圈 | 咖啡杯 | torus → ex.torus
+
+- 射影平面 | RP^2 | 实射影平面 → ex.projective-plane
+
+- 克莱因瓶 | 克莱因壶 | Klein 瓶 → ex.klein-bottle
+
+- profinite 整数 | Z hat | ℤ̂ → def.profinite-integers
+
+- 莫比乌斯带 | Moebius band → def.mobius-band
+
 - 圆的同调 | 圆的 H1 → ex.h1-circle
 
 - Sierpinski 空间 | Sierpiński 空间 | 谢尔宾斯基空间 | 谢尔宾斯基 → ex.sierpinski-space
@@ -18,17 +28,5 @@
 - 多边形表示 | 边配对粘合 | polygon representation → def.polygon-representation
 
 - 环柄 | 加环柄 | handle → def.handle
-
-- 交叉帽 | 加交叉帽 → def.crosscap
-
-- 不可定向亏格 → def.nonorientable-genus
-
-- CW 复形 | 胞腔复形 | 胞腔分解 → def.cw-complex
-
-- 透镜空间 | L(p,q) → def.lens-space
-
-- 软层 → def.soft-sheaf
-
-- Godement 消解 | 戈德门消解 | 松弛层消解 → def.godement-resolution
 
 > 续见 alias/aka/topology.16.md

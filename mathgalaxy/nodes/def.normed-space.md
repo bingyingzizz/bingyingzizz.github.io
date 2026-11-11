@@ -1,6 +1,6 @@
 # 赋范空间　`def.normed-space`
 赋范空间
-layer 11 · 定义 · 多元微分 · 数学分析
+layer 15 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.normed-space)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间（$K = \mathbb{R}$ 或 $\mathbb{C}$）。$V$ 上的**范数**就是「范数」（`def.norm`）里定义的那三条公理在 $V$ 上的实例。
@@ -11,6 +11,8 @@ layer 11 · 定义 · 多元微分 · 数学分析
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.norm`](../nodes/def.norm.md) 范数 用
+
+- …另有出边，续页见 [nodes/def.normed-space.3.md](./def.normed-space.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.normed-space.2.md](./def.normed-space.2.md)

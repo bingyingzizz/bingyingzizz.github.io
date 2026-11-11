@@ -1,6 +1,6 @@
 # 标量扩张　`def.scalar-extension`
 标量扩张 $S \otimes_{R} -$
-layer 14 · 定义 · 模的张量积与标量限制 · 同调代数
+layer 15 · 定义 · 模的张量积与标量限制 · 同调代数
 [在星图里打开](../#n=def.scalar-extension)　·　[节点索引](../index.md)
 
 设 $f : R \to S$ 是含幺环同态，$M$ 是左 $R$-模。把 $S$ 看成 $(S, R)$-双模：

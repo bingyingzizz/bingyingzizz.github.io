@@ -3,8 +3,8 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/dep.group-galoisgroup.md](../proofs/dep.group-galoisgroup.md)
-- [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：「固定基域的自同构」与「保持结构的映射」是同一个套路　[proofs/e184.analogy.md](../proofs/e184.analogy.md)
-- [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群：Galois 群与基本群：覆盖空间版的伽罗瓦理论　[proofs/e186.analogy.md](../proofs/e186.analogy.md)
+- [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：「固定基域的自同构」与「保持结构的映射」是同一个套路　[proofs/e183.analogy.md](../proofs/e183.analogy.md)
+- [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群：Galois 群与基本群：覆盖空间版的伽罗瓦理论　[proofs/e185.analogy.md](../proofs/e185.analogy.md)
 - [`def.splitting-field`](../nodes/def.splitting-field.md) 分裂域：用到了定义 分裂域　[proofs/dep.gap-galois-group-splitting-field.md](../proofs/dep.gap-galois-group-splitting-field.md)
 
 > 续见 [nodes/def.galois-group.3.md](./def.galois-group.3.md)

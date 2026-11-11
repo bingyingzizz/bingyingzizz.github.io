@@ -1,6 +1,6 @@
 # 边界算子平方为零　`prop.boundary-squared-zero`
 边界算子平方为零
-layer 24 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 27 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.boundary-squared-zero)　·　[节点索引](../index.md)
 
 **在做什么**：连续取两次边界，什么也不剩。这一条把链变成链复形，也是 Stokes 定理两边能对上的代数前提。

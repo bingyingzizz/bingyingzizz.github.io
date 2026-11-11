@@ -1,6 +1,6 @@
 # 部分等距　`def.partial-isometry`
 部分等距与等价刻画
-layer 20 · 定义 · Hilbert 空间 · 泛函分析
+layer 21 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.partial-isometry)　·　[节点索引](../index.md)
 
 设 $u \in B(H)$。称 $u$ 是**部分等距**（partial isometry），若 $u^*u$ 是正交投影（记 $P = u^*u$）。

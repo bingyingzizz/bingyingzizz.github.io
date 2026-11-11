@@ -1,6 +1,6 @@
 # 圆的切丛是平凡丛　`ex.s1-tangent-bundle`
 切丛：$TS^{1} \cong S^{1} \times \mathbb{R}$（圆可平行化）
-layer 23 · 例 · 流形与向量丛 · 微分几何+geometry
+layer 25 · 例 · 流形与向量丛 · 微分几何+geometry
 [在星图里打开](../#n=ex.s1-tangent-bundle)　·　[节点索引](../index.md)
 
 把 $S^{1} = \{\, z \in \mathbb{C} : |z| = 1 \,\}$ 看成光滑流形。它的切丛

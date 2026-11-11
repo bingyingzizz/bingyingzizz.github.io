@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 18 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 names: `Fiber Coproduct` (short) · `Fiber Coproduct and Base Change` (full)
 
 ## Statement and proof

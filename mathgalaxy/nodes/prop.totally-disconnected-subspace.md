@@ -1,6 +1,6 @@
 # 全不连通对子空间封闭　`prop.totally-disconnected-subspace`
 命题：全不连通空间的子空间全不连通
-layer 12 · 命题 · Stone 与 Stonean · 拓扑学
+layer 13 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.totally-disconnected-subspace)　·　[节点索引](../index.md)
 
 **全不连通**空间的**子空间**仍全不连通；同样地，闭开集限制到子空间上仍是闭开集。

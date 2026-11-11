@@ -1,6 +1,6 @@
 # 有理标准形　`thm.rational-canonical-form`
 有理标准形：任意域上都成立的标准形
-layer 18 · 定理 · 特征值与 Jordan 型 · 抽象代数
+layer 19 · 定理 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=thm.rational-canonical-form)　·　[节点索引](../index.md)
 
 **在做什么**：Jorda

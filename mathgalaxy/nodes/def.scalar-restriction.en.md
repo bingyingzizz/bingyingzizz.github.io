@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 13 · definition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.scalar-restriction.md` and `proofs/`.

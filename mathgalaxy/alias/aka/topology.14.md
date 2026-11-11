@@ -1,6 +1,14 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- Riemann-Hurwitz 公式 | RH 公式 | Hurwitz 公式 | Riemann-Hurwitz | riemann hurwitz formula | 黎曼-赫尔维茨公式 → thm.riemann-hurwitz
+
+- 切赫上同调 → thm.paracompact-cech-equals-sheaf
+
+- 埃塔勒空间 | 平展空间 → def.etale-space
+
+- 相对紧 → def.relatively-compact
+
 - 勒贝格数 → def.lebesgue-number
 
 - 紧化 → def.compactification
@@ -26,15 +34,5 @@
 - 欧拉示性数与不可定向亏格 | chi=2-k | χ=2-k → prop.eulerchar-nonorientable
 
 - 球面 | S^2 | 二维球面 | sphere → ex.sphere
-
-- 环面 | T^2 | 甜甜圈 | 咖啡杯 | torus → ex.torus
-
-- 射影平面 | RP^2 | 实射影平面 → ex.projective-plane
-
-- 克莱因瓶 | 克莱因壶 | Klein 瓶 → ex.klein-bottle
-
-- profinite 整数 | Z hat | ℤ̂ → def.profinite-integers
-
-- 莫比乌斯带 | Moebius band → def.mobius-band
 
 > 续见 alias/aka/topology.15.md

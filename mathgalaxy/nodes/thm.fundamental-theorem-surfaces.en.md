@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 34 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 36 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 names: `Fundamental Theorem of Surfaces` (short) · `Fundamental Theorem of Surface Theory` (full)
 
 ## Statement and proof

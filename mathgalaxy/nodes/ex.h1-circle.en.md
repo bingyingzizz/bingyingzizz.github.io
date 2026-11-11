@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · example · cluster Homology Groups (`topology.homology`) · Topology / Mathematical Analysis
+layer 27 · example · cluster Homology Groups (`topology.homology`) · Topology / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.h1-circle.md` and `proofs/`.

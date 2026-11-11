@@ -1,6 +1,6 @@
 # 可分扩张　`def.separable-extension`
 可分扩张：极小多项式没有重根
-layer 13 · 定义 · Galois 理论 · 抽象代数
+layer 14 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.separable-extension)　·　[节点索引](../index.md)
 
 代数扩张 $K/F$ 叫**可分**（separable），如果每个 $\alpha \in K$ 的极小多项式 $m_{\alpha}$ 在 $K$ 上**没有重根**（等价地：$m_{\alpha}$ 与它的形式导数 $m_{\alpha}'$ 互素）。

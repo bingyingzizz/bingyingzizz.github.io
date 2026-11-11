@@ -1,6 +1,6 @@
 # Weingarten 变换　`def.weingarten-map`
 Weingarten 变换（形状算子）
-layer 29 · 定义 · 曲面论 · 微分几何
+layer 31 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.weingarten-map)　·　[节点索引](../index.md)
 
 设 $e_{3} = n$。**Weingarten 变换**定义为 Gauss 映射微分的相反数：

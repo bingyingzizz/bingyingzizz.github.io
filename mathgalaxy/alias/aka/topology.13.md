@@ -1,6 +1,20 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 单连通 → def.simply-connected
+
+- 标准单纯形 → def.standard-simplex
+
+- 第二可数空间 → def.second-countable
+
+- 第一可数空间 → def.first-countable
+
+- 映射同伦 → def.homotopy-maps
+
+- 基本群 | π_1 | π₁ | pi_1 → def.fundamental-group
+
+- 覆叠空间 → def.covering-space
+
 - 提升定理 → thm.lifting
 
 - 仿紧豪斯多夫空间正规 | 豪斯多夫 → thm.paracompact-hausdorff-normal
@@ -16,13 +30,5 @@
 - 分支覆盖 | 分支覆叠 | branched cover | ramified covering → def.branched-cover
 
 - 分歧指数 | 分歧点 | 分支点 | ramification index | ramification point → def.ramification-index
-
-- Riemann-Hurwitz 公式 | RH 公式 | Hurwitz 公式 | Riemann-Hurwitz | riemann hurwitz formula | 黎曼-赫尔维茨公式 → thm.riemann-hurwitz
-
-- 切赫上同调 → thm.paracompact-cech-equals-sheaf
-
-- 埃塔勒空间 | 平展空间 → def.etale-space
-
-- 相对紧 → def.relatively-compact
 
 > 续见 alias/aka/topology.14.md

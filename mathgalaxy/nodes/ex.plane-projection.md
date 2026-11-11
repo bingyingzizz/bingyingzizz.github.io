@@ -1,6 +1,6 @@
 # 到坐标平面的投影　`ex.plane-projection`
 正交投影：$P = \operatorname{diag}(1, 1, 0)$，$P^{2} = P = P^{\ast}$
-layer 18 · 例 · 内积空间与正交性 · 抽象代数
+layer 19 · 例 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=ex.plane-projection)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}^{3}$（标准内积）里取子空间 $W = \{\, (x, y, 0) \,\}$。到 $W$ 的正交投影是

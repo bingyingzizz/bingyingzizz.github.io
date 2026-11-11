@@ -1,6 +1,6 @@
 # sl₂ 的交换子　`ex-sl2-commutator`
 矩阵交换子：$[E, F] = H$、$[H, E] = 2E$、$[H, F] = -2F$
-layer 26 · 例 · 向量场与 Lie 结构 · 微分几何+geometry+抽象代数
+layer 28 · 例 · 向量场与 Lie 结构 · 微分几何+geometry+抽象代数
 [在星图里打开](../#n=ex-sl2-commutator)　·　[节点索引](../index.md)
 
 取

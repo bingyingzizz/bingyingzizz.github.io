@@ -1,6 +1,6 @@
 # Stone–Weierstrass（复情形）　`thm.stone-weierstrass-complex`
 Stone–Weierstrass 定理（复情形）
-layer 14 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
+layer 15 · 定理 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=thm.stone-weierstrass-complex)　·　[节点索引](../index.md)
 
 设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{C})$ 是含单位的子代数、分离点，且**对共轭封闭**（$f \in A \implies \bar f \in A$）。则 $\overline A = C(K, \mathbb{C})$。

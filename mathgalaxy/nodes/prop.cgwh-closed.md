@@ -1,6 +1,6 @@
 # 弱 Hausdorff 紧生成空间的开闭子空间与滤过余极限　`prop.cgwh-closed`
 $\mathrm{CGWH}$ 的封闭性
-layer 12 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 13 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.cgwh-closed)　·　[节点索引](../index.md)
 
 1. 紧生成的弱 Hausdorff 空间的**开子空间**与**闭子空间**仍紧生成且弱 Hausdorff。

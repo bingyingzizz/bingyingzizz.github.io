@@ -1,6 +1,6 @@
 # 秩-零化度定理　`thm.rank-nullity`
 定理（秩-零化度）：$\dim V = \operatorname{rank} T + \operatorname{null} T$
-layer 14 · 定理 · 线性映射与秩 · 抽象代数
+layer 15 · 定理 · 线性映射与秩 · 抽象代数
 [在星图里打开](../#n=thm.rank-nullity)　·　[节点索引](../index.md)
 
 设 $V$ 是有限维 $K$-向量空间，$T : V \to W$ 线性。则

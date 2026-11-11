@@ -1,6 +1,6 @@
 # Lie 代数　`def.lie-algebra`
 Lie 代数
-layer 25 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 27 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.lie-algebra)　·　[节点索引](../index.md)
 
 **在说什么**：一个向量空间配一个「反称、且满足 Jacobi」的括号 —— 它是 Lie 群在单位元处的线性化，也是「无穷小对称」的代数。

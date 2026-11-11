@@ -1,6 +1,6 @@
 # 域扩张　`def.field-extension`
 域扩张 $K/F$ 与次数 $[K:F]$
-layer 10 · 定义 · Galois 理论 · 抽象代数
+layer 11 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.field-extension)　·　[节点索引](../index.md)
 
 设 $F \subseteq K$ 都是域，且 $F$ 的运算就是 $K$ 的运算在 $F$ 上的限制。这时称 $K$ 是 $F$ 的一个**扩域**，记作 $K/F$（读作「$K$ over $F$」）。

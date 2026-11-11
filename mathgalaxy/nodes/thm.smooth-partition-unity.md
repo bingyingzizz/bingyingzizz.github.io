@@ -8,7 +8,7 @@ layer 20 · 定理 · 流形与向量丛 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量 用
+- ⇒ [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量
 - ⇒ [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量
 
 ## 为什么成立（入边，证明在 proofs/）

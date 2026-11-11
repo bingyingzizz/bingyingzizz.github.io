@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.orthogonal-projection`](../nodes/def.orthogonal-projection.md) 正交投影 + [`thm.gram-schmidt`](../nodes/thm.gram-schmidt.md) Gram–Schmidt 正交化：正交投影 + 标准正交基 $\implies$ 最佳逼近与显式公式　[proofs/imp.projection-formula.md](../proofs/imp.projection-formula.md)
+- [`thm.projection-convex`](../nodes/thm.projection-convex.md) 凸闭集的最近点：def-link.fa-projformula　[proofs/def-link.fa-projformula.md](../proofs/def-link.fa-projformula.md)
 
 > 续见 [nodes/thm.projection-formula.4.md](./thm.projection-formula.4.md)

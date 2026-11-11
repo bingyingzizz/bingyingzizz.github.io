@@ -5,3 +5,4 @@
 - 被 [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数 用
 - 被 [`def.essential-sup`](../nodes/def.essential-sup.md) 本性上界与 L^∞ 用
 - 被 [`def.shrinks-nicely`](../nodes/def.shrinks-nicely.md) 可缩族 用
+- 被 [`def.regular-measure`](../nodes/def.regular-measure.md) 正则 Borel 测度 用

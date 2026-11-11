@@ -1,6 +1,6 @@
 # 边界算子　`def.boundary-operator`
 边界算子
-layer 23 · 定义 · 微分形式、积分与 de Rham · 微分几何
+layer 26 · 定义 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=def.boundary-operator)　·　[节点索引](../index.md)
 
 **在做什么**：「把方块的一个面取出来」这件事有统一的写法：固定某个坐标为此端或彼端，再乘一个符号，全部加起来就是边界。

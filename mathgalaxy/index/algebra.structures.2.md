@@ -9,6 +9,6 @@
 - prop.ring-localization　环的局部化 W⁻¹R　layer 11
 - prop.prime-ideal　素理想与极大理想　layer 12
 - def.dihedral-group　二面体群　layer 13
-- prop.module-tensor-universal　张量积对双线性映射万有　layer 14
 - ex.algebra-categories　代数的几个范畴　layer 15
+- prop.module-tensor-universal　张量积对双线性映射万有　layer 15
 - prop.ring-tensor-coproduct　交换环的纤维余积是张量积　layer 21

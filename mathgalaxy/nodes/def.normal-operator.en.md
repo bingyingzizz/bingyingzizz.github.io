@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 18 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.normal-operator.md` and `proofs/`.

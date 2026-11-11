@@ -1,6 +1,6 @@
 # Steinitz 交换引理　`thm.steinitz`
 定理（Steinitz）：交换引理
-layer 11 · 定理 · 向量空间与基 · 抽象代数
+layer 12 · 定理 · 向量空间与基 · 抽象代数
 [在星图里打开](../#n=thm.steinitz)　·　[节点索引](../index.md)
 
 设 $V$ 是 $K$-向量空间，$S = (v_1, \ldots, v_n)$ 线性无关，$T = (w_1, \ldots, w_m)$ 生成 $V$。则

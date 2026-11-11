@@ -1,6 +1,14 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 紧 | 紧集 | compact | 开覆盖 | Definition 2.1.3 | Def 2.1.3 → def.compact
+
+- 紧的等价刻画 | 紧 等价 | Heine-Borel → thm.metric-compact-equiv
+
+- 紧子集是闭的 → prop.compact-subset-closed
+
+- 子集的紧性 → prop.subset-compact-equiv
+
 - 连续 | continuous | 连续函数 | 连续 ε-δ | ε-δ → def.continuous
 
 - Borel | Borel 集 | Borel σ代数 | 博雷尔 | 博雷尔集 | 博雷尔 σ-代数 | 博雷尔代数 → def.borel
@@ -16,11 +24,5 @@
 - 商拓扑 | quotient topology | 商空间 | 粘合空间 → def.quotient-topology
 
 - Hausdorff | 豪斯多夫 | T2 | T_2 | 分离公理 | Definition 2.1.1 | Def 2.1.1 → def.hausdorff
-
-- 连通 | connected | 连通分量 | 连通分支 | Definition 2.2.5 | Def 2.2.5 | Exercise 2.14 → def.connected
-
-- 闭开集 | clopen | 既开又闭 | Definition 2.2.5 | Def 2.2.5 → def.clopen
-
-- 闭映射的邻域基 | Exercise 8.6 → prop.closed-map-neighborhood-basis
 
 > 续见 alias/aka/topology.3.md

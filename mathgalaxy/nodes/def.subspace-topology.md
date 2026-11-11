@@ -10,7 +10,7 @@ $$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 这样得到的拓扑是使含入映射 $Y \hookrightarrow X$ 连续的最粗拓扑。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.subspace`](../nodes/def.subspace.md) 子空间：两个「子空间」：线性代数的 vs 拓扑的子空间拓扑　[proofs/e191.analogy.md](../proofs/e191.analogy.md)
+- [`def.subspace`](../nodes/def.subspace.md) 子空间：两个「子空间」：线性代数的 vs 拓扑的子空间拓扑　[proofs/e190.analogy.md](../proofs/e190.analogy.md)
 
 - …另有入边，续页见 [nodes/def.subspace-topology.2.md](./def.subspace-topology.2.md)
 
