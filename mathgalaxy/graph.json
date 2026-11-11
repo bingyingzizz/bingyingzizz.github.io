@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-11T10:27:10.009Z",
+  "generated": "2026-11-11T10:41:45.798Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1620,
-   "edges": 3372,
-   "strong": 3307,
+   "nodes": 1621,
+   "edges": 3376,
+   "strong": 3311,
    "weak": 65,
-   "derived": 34,
-   "en_pages": 1620
+   "derived": 36,
+   "en_pages": 1621
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -93,7 +93,7 @@
    "en": "Functional Analysis",
    "desc": "把「函数」本身当点：赋范空间与 Banach 空间、有界线性算子与对偶、$H^*\\cong H$ 的 Hilbert 空间，再用 Baire 纲一次抽出三大定理（一致有界 / 开映射 / 闭图像）。",
    "color": "#2C7FA8",
-   "nodeCount": 73
+   "nodeCount": 74
   },
   {
    "id": "analysis-measure",
@@ -1287,11 +1287,12 @@
    "en": "Hilbert Spaces",
    "parent": "functional-analysis",
    "desc": "范数来自内积的那一类：平行四边形法则把它挑出来 → 凸闭集上有投影 → $H^*\\cong\\overline H$（Riesz）→ 伴随算子 → 正交基与 $\\ell^2$。",
-   "nodeCount": 18,
+   "nodeCount": 19,
    "nodes": [
     "def.hilbert-space",
     "thm.polarization",
     "thm.parallelogram-inner-product",
+    "thm.hilbert-uniformly-convex",
     "def.convex-set",
     "def.star-shaped",
     "def.convex-combination",
@@ -3213,10 +3214,10 @@
    "title": "选择公理",
    "label_en": "axiom of choice",
    "title_en": "axiom of choice",
-   "statement_en": "From any family of non-empty sets one can pick one element from each, \"all at once\". Written in terms of a choice function:\n\n$\\operatorname{dom}$ is defined only for functions, so the assertion says: \"there is a function $f$ with $\\operatorname{dom} f = F$, and $f(X) \\in X$ for every $X \\in F$\":\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\\\n\nAnother common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint non-empty sets, then there is a set $C$ with $|C \\cap X| = 1$ for every $X \\in F$.\n\nThe choice function $f$ is the device for \"picking all at once\"; AC asserts that such a simultaneous choice is always possible.",
+   "statement_en": "From any family of non-empty sets one can pick one element from each, \"all at once\". Written in terms of a choice function:\n\n$\\operatorname{dom}$ is defined only for functions, so the assertion says: \"there is a function $f$ with $\\operatorname{dom} f = F$, and $f(X) \\in X$ for every $X \\in F$\":\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\\\n\nAnother common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint non-empty sets, then there is a set $C$ with $\\#(C \\cap X) = 1$ for every $X \\in F$.\n\nThe choice function $f$ is the device for \"picking all at once\"; AC asserts that such a simultaneous choice is always possible.",
    "translations": {
     "en": {
-     "status": "reviewed",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -3226,10 +3227,12 @@
       "statement"
      ],
      "fieldStatus": {
-      "statement": "reviewed",
+      "statement": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#96318197"
      }
@@ -3248,7 +3251,7 @@
     "选择",
     "等价命题"
    ],
-   "statement": "任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：\n\n$\\operatorname{dom}$ 只对函数有定义，所以这句说的是「存在函数 $f$，$\\operatorname{dom} f = F$，且每个 $X \\in F$ 都有 $f(X) \\in X$」：\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\n\n另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \\in F$ 都有 $|C \\cap X| = 1$。\n\n选择函数 $f$ 就是「同时挑元素」的工具；AC 断言这种同时挑选永远做得到。",
+   "statement": "任意一族非空集合都可以「同时」各挑出一个元素。写成选择函数的形式：\n\n$\\operatorname{dom}$ 只对函数有定义，所以这句说的是「存在函数 $f$，$\\operatorname{dom} f = F$，且每个 $X \\in F$ 都有 $f(X) \\in X$」：\n\n$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\n\n另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \\in F$ 都有 $\\#(C \\cap X) = 1$。\n\n选择函数 $f$ 就是「同时挑元素」的工具；AC 断言这种同时挑选永远做得到。",
    "notes": "AC 与 ZF 独立：Gödel (1938) 证明 $Con(ZF) \\to Con(ZF + AC)$，Cohen (1963) 证明 $Con(ZF) \\to Con(ZF + \\neg AC)$。\n\n它是本星系里大量命题的枢纽——佐恩引理、良序定理、Hausdorff 极大原理、Tukey 引理都与它等价。\n\n有限个非空集合可以逐个挑选，这正是 AC 只在无穷情形才显出力量的原因。",
    "refs": [
     "Jech, The Axiom of Choice",
@@ -37990,7 +37993,7 @@
     "线性代数"
    ],
    "statement": "设 $V$ 是 $K$-向量空间。$V$ 的**对偶空间**定义为从 $V$ 到 $K$ 的线性映射全体：\n\n$$V^{\\ast} := \\operatorname{Hom}_K(V, K)$$\n\n其中元素叫**线性泛函**。$V^{\\ast}$ 按逐点和与逐点数乘成为向量空间。\n\n若 $T : V \\to W$ 线性，定义**转置**（或对偶）映射\n\n$$T^{\\ast} : W^{\\ast} \\to V^{\\ast}, \\qquad \\varphi \\longmapsto \\varphi \\circ T$$\n\n它线性，且 $(S \\circ T)^{\\ast} = T^{\\ast} \\circ S^{\\ast}$（**反变**）。",
-   "notes": "⭐ 注意方向：$T : V \\to W$ 的对偶 $T^{\\ast}$ 是 $W^{\\ast} \\to V^{\\ast}$，**箭头反过来**。\n\n这就是「对偶」这一词的全部含义，也与 $(-)^{\\ast}$ 作为反变函子的地位一致。\n\n⭐ 有限维时 $V \\cong V^{\\ast}$（等维），但**没有自然的同构** —— 要找同构必须先选一组基。\n\n而 $V \\cong V^{\\ast\\ast}$ 有自然同构 $v \\mapsto (\\varphi \\mapsto \\varphi(v))$，这是「对偶的对偶回到自己」。\n\n⚠ 无限维时 $V^{\\ast}$ 严格大于 $V$：$\\dim V^{\\ast} = |K|^{\\dim V}$ 是 **Erdős–Kaplansky** 的基数定理（依赖 AC；$|V^{\\ast}| = |K|^{\\dim V}$ 是初等的，但「维数等于这个基数」不是），所以上述同构不成立。",
+   "notes": "⭐ 注意方向：$T : V \\to W$ 的对偶 $T^{\\ast}$ 是 $W^{\\ast} \\to V^{\\ast}$，**箭头反过来**。\n\n这就是「对偶」这一词的全部含义，也与 $(-)^{\\ast}$ 作为反变函子的地位一致。\n\n⭐ 有限维时 $V \\cong V^{\\ast}$（等维），但**没有自然的同构** —— 要找同构必须先选一组基。\n\n而 $V \\cong V^{\\ast\\ast}$ 有自然同构 $v \\mapsto (\\varphi \\mapsto \\varphi(v))$，这是「对偶的对偶回到自己」。\n\n⚠ 无限维时 $V^{\\ast}$ 严格大于 $V$：$\\dim V^{\\ast} = \\#(K)^{\\dim V}$ 是 **Erdős–Kaplansky** 的基数定理（依赖 AC；$\\#(V^{\\ast}) = \\#(K)^{\\dim V}$ 是初等的，但「维数等于这个基数」不是），所以上述同构不成立。",
    "refs": [
     "Lang, Linear Algebra",
     "Hoffman–Kunze, Linear Algebra, Ch. 3"
@@ -57880,7 +57883,7 @@
     "同调群"
    ],
    "statement": "设 $X = U \\cup V$，$U, V \\subseteq X$ 是**开集**（更一般：$U, V$ 的内部覆盖 $X$）。记 $i_{*}, j_{*}$ 为 $U \\cap V \\hookrightarrow U, V$ 的包含映射诱导的映射。则存在长正合列\n\n$$H_{p}(U \\cap V) \\to H_{p}(U) \\oplus H_{p}(V) \\to H_{p}(X)$$\n$$\\xrightarrow{\\ \\partial_{*}\\ } H_{p-1}(U \\cap V)$$\n\n（两端各再向左右无限延伸成 $\\cdots$）。其中两个不明显的映射是\n\n$$\\Phi[z] := (i_{*}[z],\\ -j_{*}[z]),\\qquad \\Psi[a, b] := [a + b].$$\n\n把 $H$ 换成约化同调 $\\tilde{H}$，只要 $U \\cap V \\ne \\emptyset$，同样的序列照样成立（否则 $\\tilde{H}_{0}$ 那段不正合：$X = \\{a, b\\}$、$U = \\{a\\}$、$V = \\{b\\}$ 时 $\\tilde{H}_{0}(U) = \\tilde{H}_{0}(V) = 0$ 而 $\\tilde{H}_{0}(X) = \\mathbb{Z}$）。",
-   "notes": "**证明**：分五步。① 挑出「每条小单纯形整体落在 $U$ 或 $V$ 里」的链，得到子复形；② 用重心重分证明这个子复形到全复形的包含在同调上是同构（全部难点）；③ 把子复形拆成 $U$ 的链与 $V$ 的链之和；④ 对短正合列接长正合列；⑤ 把 ② 代进去。\n\n**小链。** 称奇异单纯形 $\\sigma : \\Delta^{p} \\to X$ 关于覆盖 $\\{U, V\\}$ **小**，如果 $\\sigma(\\Delta^{p}) \\subseteq U$ 或 $\\sigma(\\Delta^{p}) \\subseteq V$。小单纯形的有限和组成子群 $S^{\\mathcal{U}}_{p}(X) \\subseteq S_{p}(X)$；边缘算子保持小性（面仍落在同一个集合里），故 $S^{\\mathcal{U}}_{*}(X)$ 是子复形。记 $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$。\n\n**第一步：重分链映射。** 在标准单纯形 $\\Delta^{p}$ 上递归定义两个链：\n\n$$\\operatorname{sd}_{0} := [v_{0}],\\qquad \\operatorname{sd}_{p} := [b_{p},\\ \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})],$$\n\n其中 $b_{p}$ 是 $\\Delta^{p}$ 的重心、$[b, c]$ 表示以 $b$ 为锥顶在链 $c$ 上作锥、$\\partial\\Delta^{p} = \\sum_{i}(-1)^{i}\\Delta^{p}_{i}$ 是标准边缘。锥公式 $\\partial[b, c] = c - [b, \\partial c]$ 给出\n\n$$\\partial\\operatorname{sd}_{p} = \\operatorname{sd}_{p-1}(\\partial\\Delta^{p}).$$\n\n再定义 $t_{0} := 0$ 与递归\n\n$$c_{p} := \\operatorname{sd}_{p} - \\operatorname{id}_{p} - t_{p-1}(\\partial\\Delta^{p}),\\qquad t_{p} := [b_{p},\\ c_{p}],$$\n\n其中 $\\operatorname{id}_{p}$ 是恒等 $p$-单纯形。对 $p$ 归纳验证 $\\partial c_{p} = 0$（用到 $\\partial\\partial = 0$ 与归纳假设），故 $\\partial t_{p} = c_{p}$，即\n\n$$\\partial t_{p} + t_{p-1}(\\partial\\Delta^{p}) = \\operatorname{sd}_{p} - \\operatorname{id}_{p}.$$\n\n基例 $p = 0$ 是 $\\operatorname{sd}_{0} = \\operatorname{id}_{0}$、$t_{0} = 0$。\n\n**第二步：自然性。** 对奇异单纯形 $\\sigma$ 令 $\\operatorname{Sd}(\\sigma) := \\sigma_{\\#}\\operatorname{sd}_{p}$、$T(\\sigma) := \\sigma_{\\#} t_{p}$，线性延拓。因 $\\sigma_{\\#}$ 是链映射且与连续映射相容，\n\n$$\\partial\\operatorname{Sd} = \\operatorname{Sd}\\partial,\\qquad \\partial T + T\\partial = \\operatorname{Sd} - \\operatorname{id}.$$\n\n（逐项抄上一条恒等式即得；$T$ 可能产生退化单纯形，这不影响链恒等式。）单个 $\\operatorname{Sd}(\\sigma)$ 未必小，小性要靠迭代。\n\n**第三步：直径收缩。** 设 $\\tau \\subseteq \\Delta^{p}$ 是直径 $\\delta$ 的单纯形，$b_{S}$ 表示面 $S$ 的重心。$\\operatorname{sd}(\\tau)$ 的顶点是某些面 $S_{0} \\subset \\cdots \\subset S_{q}$ 的重心，且对 $S \\subset S^{\\prime}$ 有\n\n$$b_{S^{\\prime}} - b_{S} = \\frac{1}{|S^{\\prime}|}\\sum_{v \\in S^{\\prime} \\setminus S}(v - b_{S}),$$\n\n故 $|b_{S^{\\prime}} - b_{S}| \\le \\left(1 - \\frac{|S|}{|S^{\\prime}|}\\right)\\delta \\le \\frac{p}{p+1}\\delta$。于是 $\\operatorname{mesh}(\\operatorname{sd}^{m}\\tau) \\le (p/(p+1))^{m}\\delta$：重分足够多次，小单纯形的直径可以任意小。\n\n**第四步：小链引理。** 包含 $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$ 诱导同调同构。\n\n证明：对每个奇异 $p$-单纯形 $\\sigma$，$\\{\\sigma^{-1}(U), \\sigma^{-1}(V)\\}$ 是紧空间 $\\Delta^{p}$ 的开覆盖，有 Lebesgue 数 $\\delta_{\\sigma} > 0$（直径 $< \\delta_{\\sigma}$ 的子集必落在其中一个里）。取 $m$ 使 $(p/(p+1))^{m}\\operatorname{diam}(\\Delta^{p}) < \\delta_{\\sigma}$，则 $\\operatorname{Sd}^{m}(\\sigma)$ 的每个小单纯形的像落在 $U$ 或 $V$ 里。\n\n记 $T_{M} := \\sum_{j=0}^{M-1}\\operatorname{Sd}^{j} T$，则 $\\partial T_{M} + T_{M}\\partial = \\operatorname{Sd}^{M} - \\operatorname{id}$。\n\n**满射**：任取闭链 $z$。$z$ 只有有限个单纯形，取 $M$ 使每个 $\\operatorname{Sd}^{M}(\\sigma)$（$\\sigma$ 跑遍 $z$ 的单纯形）都小，则 $\\operatorname{Sd}^{M} z \\in S^{\\mathcal{U}}_{*}(X)$，且 $\\operatorname{Sd}^{M} z - z = \\partial T_{M} z$，故 $\\iota_{*}[\\operatorname{Sd}^{M} z] = [z]$。\n\n**单射**：设 $z \\in S^{\\mathcal{U}}_{p}(X)$ 是闭链且 $z = \\partial b$（$b \\in S_{p+1}(X)$）。取 $M$ 同时使 $z$、$T z$、$b$ 的所有单纯形的 $M$ 次重分都小。则 $z = \\operatorname{Sd}^{M} z - \\partial T_{M} z$，其中 $\\operatorname{Sd}^{M} z$ 与 $T_{M} z$ 都在小链复形里；而 $\\operatorname{Sd}^{M} z = \\operatorname{Sd}^{M}\\partial b = \\partial(\\operatorname{Sd}^{M} b)$，$\\operatorname{Sd}^{M} b$ 也小。于是在 $H_{p}(S^{\\mathcal{U}}_{*}(X))$ 中 $[z] = [\\operatorname{Sd}^{M} z] = 0$。\n\n**第五步：拆成两块。** 一条链小，当且仅当它属于 $S_{*}(U) + S_{*}(V)$。于是有链复形的短正合列\n\n$$0 \\to S_{*}(U \\cap V) \\to S_{*}(U) \\oplus S_{*}(V) \\to S_{*}(U) + S_{*}(V) \\to 0,$$\n\n映射是 $a \\mapsto (a, -a)$ 与 $(a, b) \\mapsto a + b$。正合性：$S_{*}(U) \\cap S_{*}(V) = S_{*}(U \\cap V)$（每条单纯形的像同时在 $U$、$V$ 里，故在交里）；满射由定义；核由 $a + b = 0$ 即 $b = -a$ 得。\n\n**第六步：接长正合列。** 对上面的短正合列用 `thm.long-exact-pair`（链复形版，纯追图），得长正合列；其中 $H_{p}(S_{*}(U) \\oplus S_{*}(V)) = H_{p}(U) \\oplus H_{p}(V)$，而 $H_{p}(S_{*}(U) + S_{*}(V)) \\cong H_{p}(X)$ 由第四步。把两个映射对上：$(a) \\mapsto (a, -a)$ 给出 $\\Phi[z] = (i_{*}[z], -j_{*}[z])$，$(a, b) \\mapsto a + b$ 给出 $\\Psi[a, b] = [a + b]$。∎\n\n**约化版。** 对增广链复形做同样的论证。当 $U \\cap V \\ne \\emptyset$ 时取基点 $x_{0} \\in U \\cap V$，增广映射 $\\varepsilon$ 在三条复形上一致，短正合列连增广项仍正合，故得到约化长正合列。$U \\cap V = \\emptyset$ 时 $\\tilde{H}_{0}$ 段失效，反例见陈述。\n\n**为什么这里不需要好对。** 全部论证只用了开覆盖与 Lebesgue 数，没有用 $A$ 在 $X$ 中的邻域收缩；这是奇异同调比同伦群好用的地方。\n\n⭐ **难点的位置**：不是正合列（那是纯代数），而是「局部落在 $U$ 或 $V$」升级成「整体同调等价」——第四步的链同伦。符号全在锥构造里：$\\operatorname{sd}_{p} := [b_{p}, \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})]$ 与 $t_{p} := [b_{p}, c_{p}]$。\n\n⚠️ **与 `thm.mayer-vietoris` 的区别**：那个节点是 **de Rham 版**（光滑流形、实系数、微分形式复形，`def.de-rham-complex`）。这里是**奇异链版**（任意空间、$\\mathbb{Z}$ 系数）。两个序列形状一样，但一个有挠部信息、一个没有 —— 名字相似不等于同一个结论，不要互相引用当证明。\n\n💡 常用法：算 $\\tilde{H}_{*}(S^{n})$（`thm.sphere-homology`）、把环面拆成两张柱面、把连通和拆成两块挖掉小球的空间。",
+   "notes": "**证明**：分五步。① 挑出「每条小单纯形整体落在 $U$ 或 $V$ 里」的链，得到子复形；② 用重心重分证明这个子复形到全复形的包含在同调上是同构（全部难点）；③ 把子复形拆成 $U$ 的链与 $V$ 的链之和；④ 对短正合列接长正合列；⑤ 把 ② 代进去。\n\n**小链。** 称奇异单纯形 $\\sigma : \\Delta^{p} \\to X$ 关于覆盖 $\\{U, V\\}$ **小**，如果 $\\sigma(\\Delta^{p}) \\subseteq U$ 或 $\\sigma(\\Delta^{p}) \\subseteq V$。小单纯形的有限和组成子群 $S^{\\mathcal{U}}_{p}(X) \\subseteq S_{p}(X)$；边缘算子保持小性（面仍落在同一个集合里），故 $S^{\\mathcal{U}}_{*}(X)$ 是子复形。记 $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$。\n\n**第一步：重分链映射。** 在标准单纯形 $\\Delta^{p}$ 上递归定义两个链：\n\n$$\\operatorname{sd}_{0} := [v_{0}],\\qquad \\operatorname{sd}_{p} := [b_{p},\\ \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})],$$\n\n其中 $b_{p}$ 是 $\\Delta^{p}$ 的重心、$[b, c]$ 表示以 $b$ 为锥顶在链 $c$ 上作锥、$\\partial\\Delta^{p} = \\sum_{i}(-1)^{i}\\Delta^{p}_{i}$ 是标准边缘。锥公式 $\\partial[b, c] = c - [b, \\partial c]$ 给出\n\n$$\\partial\\operatorname{sd}_{p} = \\operatorname{sd}_{p-1}(\\partial\\Delta^{p}).$$\n\n再定义 $t_{0} := 0$ 与递归\n\n$$c_{p} := \\operatorname{sd}_{p} - \\operatorname{id}_{p} - t_{p-1}(\\partial\\Delta^{p}),\\qquad t_{p} := [b_{p},\\ c_{p}],$$\n\n其中 $\\operatorname{id}_{p}$ 是恒等 $p$-单纯形。对 $p$ 归纳验证 $\\partial c_{p} = 0$（用到 $\\partial\\partial = 0$ 与归纳假设），故 $\\partial t_{p} = c_{p}$，即\n\n$$\\partial t_{p} + t_{p-1}(\\partial\\Delta^{p}) = \\operatorname{sd}_{p} - \\operatorname{id}_{p}.$$\n\n基例 $p = 0$ 是 $\\operatorname{sd}_{0} = \\operatorname{id}_{0}$、$t_{0} = 0$。\n\n**第二步：自然性。** 对奇异单纯形 $\\sigma$ 令 $\\operatorname{Sd}(\\sigma) := \\sigma_{\\#}\\operatorname{sd}_{p}$、$T(\\sigma) := \\sigma_{\\#} t_{p}$，线性延拓。因 $\\sigma_{\\#}$ 是链映射且与连续映射相容，\n\n$$\\partial\\operatorname{Sd} = \\operatorname{Sd}\\partial,\\qquad \\partial T + T\\partial = \\operatorname{Sd} - \\operatorname{id}.$$\n\n（逐项抄上一条恒等式即得；$T$ 可能产生退化单纯形，这不影响链恒等式。）单个 $\\operatorname{Sd}(\\sigma)$ 未必小，小性要靠迭代。\n\n**第三步：直径收缩。** 设 $\\tau \\subseteq \\Delta^{p}$ 是直径 $\\delta$ 的单纯形，$b_{S}$ 表示面 $S$ 的重心。$\\operatorname{sd}(\\tau)$ 的顶点是某些面 $S_{0} \\subset \\cdots \\subset S_{q}$ 的重心，且对 $S \\subset S^{\\prime}$ 有\n\n$$b_{S^{\\prime}} - b_{S} = \\frac{1}{\\#S^{\\prime}}\\sum_{v \\in S^{\\prime} \\setminus S}(v - b_{S}),$$\n\n故 $|b_{S^{\\prime}} - b_{S}| \\le \\left(1 - \\frac{\\#S}{\\#S^{\\prime}}\\right)\\delta \\le \\frac{p}{p+1}\\delta$。于是 $\\operatorname{mesh}(\\operatorname{sd}^{m}\\tau) \\le (p/(p+1))^{m}\\delta$：重分足够多次，小单纯形的直径可以任意小。\n\n**第四步：小链引理。** 包含 $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$ 诱导同调同构。\n\n证明：对每个奇异 $p$-单纯形 $\\sigma$，$\\{\\sigma^{-1}(U), \\sigma^{-1}(V)\\}$ 是紧空间 $\\Delta^{p}$ 的开覆盖，有 Lebesgue 数 $\\delta_{\\sigma} > 0$（直径 $< \\delta_{\\sigma}$ 的子集必落在其中一个里）。取 $m$ 使 $(p/(p+1))^{m}\\operatorname{diam}(\\Delta^{p}) < \\delta_{\\sigma}$，则 $\\operatorname{Sd}^{m}(\\sigma)$ 的每个小单纯形的像落在 $U$ 或 $V$ 里。\n\n记 $T_{M} := \\sum_{j=0}^{M-1}\\operatorname{Sd}^{j} T$，则 $\\partial T_{M} + T_{M}\\partial = \\operatorname{Sd}^{M} - \\operatorname{id}$。\n\n**满射**：任取闭链 $z$。$z$ 只有有限个单纯形，取 $M$ 使每个 $\\operatorname{Sd}^{M}(\\sigma)$（$\\sigma$ 跑遍 $z$ 的单纯形）都小，则 $\\operatorname{Sd}^{M} z \\in S^{\\mathcal{U}}_{*}(X)$，且 $\\operatorname{Sd}^{M} z - z = \\partial T_{M} z$，故 $\\iota_{*}[\\operatorname{Sd}^{M} z] = [z]$。\n\n**单射**：设 $z \\in S^{\\mathcal{U}}_{p}(X)$ 是闭链且 $z = \\partial b$（$b \\in S_{p+1}(X)$）。取 $M$ 同时使 $z$、$T z$、$b$ 的所有单纯形的 $M$ 次重分都小。则 $z = \\operatorname{Sd}^{M} z - \\partial T_{M} z$，其中 $\\operatorname{Sd}^{M} z$ 与 $T_{M} z$ 都在小链复形里；而 $\\operatorname{Sd}^{M} z = \\operatorname{Sd}^{M}\\partial b = \\partial(\\operatorname{Sd}^{M} b)$，$\\operatorname{Sd}^{M} b$ 也小。于是在 $H_{p}(S^{\\mathcal{U}}_{*}(X))$ 中 $[z] = [\\operatorname{Sd}^{M} z] = 0$。\n\n**第五步：拆成两块。** 一条链小，当且仅当它属于 $S_{*}(U) + S_{*}(V)$。于是有链复形的短正合列\n\n$$0 \\to S_{*}(U \\cap V) \\to S_{*}(U) \\oplus S_{*}(V) \\to S_{*}(U) + S_{*}(V) \\to 0,$$\n\n映射是 $a \\mapsto (a, -a)$ 与 $(a, b) \\mapsto a + b$。正合性：$S_{*}(U) \\cap S_{*}(V) = S_{*}(U \\cap V)$（每条单纯形的像同时在 $U$、$V$ 里，故在交里）；满射由定义；核由 $a + b = 0$ 即 $b = -a$ 得。\n\n**第六步：接长正合列。** 对上面的短正合列用 `thm.long-exact-pair`（链复形版，纯追图），得长正合列；其中 $H_{p}(S_{*}(U) \\oplus S_{*}(V)) = H_{p}(U) \\oplus H_{p}(V)$，而 $H_{p}(S_{*}(U) + S_{*}(V)) \\cong H_{p}(X)$ 由第四步。把两个映射对上：$(a) \\mapsto (a, -a)$ 给出 $\\Phi[z] = (i_{*}[z], -j_{*}[z])$，$(a, b) \\mapsto a + b$ 给出 $\\Psi[a, b] = [a + b]$。∎\n\n**约化版。** 对增广链复形做同样的论证。当 $U \\cap V \\ne \\emptyset$ 时取基点 $x_{0} \\in U \\cap V$，增广映射 $\\varepsilon$ 在三条复形上一致，短正合列连增广项仍正合，故得到约化长正合列。$U \\cap V = \\emptyset$ 时 $\\tilde{H}_{0}$ 段失效，反例见陈述。\n\n**为什么这里不需要好对。** 全部论证只用了开覆盖与 Lebesgue 数，没有用 $A$ 在 $X$ 中的邻域收缩；这是奇异同调比同伦群好用的地方。\n\n⭐ **难点的位置**：不是正合列（那是纯代数），而是「局部落在 $U$ 或 $V$」升级成「整体同调等价」——第四步的链同伦。符号全在锥构造里：$\\operatorname{sd}_{p} := [b_{p}, \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})]$ 与 $t_{p} := [b_{p}, c_{p}]$。\n\n⚠️ **与 `thm.mayer-vietoris` 的区别**：那个节点是 **de Rham 版**（光滑流形、实系数、微分形式复形，`def.de-rham-complex`）。这里是**奇异链版**（任意空间、$\\mathbb{Z}$ 系数）。两个序列形状一样，但一个有挠部信息、一个没有 —— 名字相似不等于同一个结论，不要互相引用当证明。\n\n💡 常用法：算 $\\tilde{H}_{*}(S^{n})$（`thm.sphere-homology`）、把环面拆成两张柱面、把连通和拆成两块挖掉小球的空间。",
    "refs": [
     "Munkres, Elements of Algebraic Topology, §2.1 · Mayer–Vietoris sequence（含小链引理与重心重分）",
     "Hatcher, Algebraic Topology, Ch. 2 §2.1–2.2 · barycentric subdivision 与 Mayer–Vietoris"
@@ -60661,7 +60664,7 @@
     "定理"
    ],
    "statement": "设 $p, q$ 是两个不同的奇素数。则\n\n$$\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} .$$\n\n等价说法：$p, q$ 中至少有一个 $\\equiv 1 \\pmod 4$ 时 $\\left(\\frac{p}{q}\\right) = \\left(\\frac{q}{p}\\right)$；两个都 $\\equiv 3 \\pmod 4$ 时两者相反。补充公式：\n\n$$\\left(\\frac{-1}{p}\\right) = (-1)^{\\frac{p-1}{2}}, \\qquad \\left(\\frac{2}{p}\\right) = (-1)^{\\frac{p^{2}-1}{8}} .$$",
-   "notes": "**这是数论里最重要的一条定理**（Gauss 一生给了 8 个证明，第一个 1796 年、19 岁）。它把「$p$ 是不是模 $q$ 的剩余」这个难问题换成「$q$ 是不是模 $p$ 的剩余」这个更容易的小问题 —— 因为可以递归把 $p$ 降到 $< q$。\n\n\n\n⭐ 现在的主流证明走**有限域上的曲线计数**：$\\left(\\frac{p}{q}\\right)$ 与 $x^{2} \\equiv p \\pmod q$ 的解数有关，而这批解数可以按 $\\mathbb{F}_{p}$ 上的椭圆曲线/乘法群逐层数出来（Zolotarev 引理 + 置换的符号）。这只是**一条现代路线** —— 初等证明同样存在（Gauss 第三证明、Gauss 引理、Zolotarev 引理都是初等计数）。\n\n\n\n**用法**：判 $\\left(\\frac{a}{p}\\right)$ 时把它拆成素因子，逐个用互反律「翻过来」，再递归 —— 复杂度 $O(\\log p)$ 级别的除法。上面两条补充公式处理 $-1$ 与 $2$ 这两种「不能翻」的情形。\n\n\n\n**证明（Gauss 引理 + 矩形计数，初等）。** 记 $P = \\frac{p-1}{2}$、$Q = \\frac{q-1}{2}$。对 $1 \\le x \\le P$ 记 $m_{x} := \\left\\lfloor \\frac{qx}{p} \\right\\rfloor$，$r_{x}$ 为 $qx$ 模 $p$ 的最小正剩余（$1 \\le r_{x} \\le p-1$，因为 $p \\nmid qx$）。\n\n\n\n**第一步：Gauss 引理。** 令 $\\varepsilon_{x} = 1$（当 $r_{x} < p/2$）或 $-1$（当 $r_{x} > p/2$），并令 $s_{x} = r_{x}$（前一种）或 $s_{x} = p - r_{x}$（后一种），则 $1 \\le s_{x} \\le P$。断言 $x \\mapsto s_{x}$ 是 $\\{1, \\ldots, P\\}$ 的置换：若 $s_{x} = s_{y}$，则 $r_{x} \\equiv \\pm r_{y} \\pmod p$，即 $qx \\equiv \\pm qy \\pmod p$；$q$ 在模 $p$ 下可逆，故 $x \\equiv \\pm y \\pmod p$；而 $1 \\le x, y \\le P$ 且 $p$ 是奇数，$x \\equiv -y$ 会给出 $x + y = p$，与 $x + y \\le 2P = p - 1$ 矛盾，故 $x = y$ ✓。\n\n\n\n于是把 $\\{qx\\}_{x \\le P}$ 换成最小正剩余再取符号，得到\n\n\n\n$$\\prod_{x=1}^{P} qx \\equiv \\prod_{x=1}^{P} (\\varepsilon_{x} s_{x}) = \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) \\Bigl( \\prod_{x} s_{x} \\Bigr) \\equiv \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) P! \\pmod p .$$\n\n\n\n左边 $= q^{P} P!$，约去 $P!$（$p \\nmid P!$）得 $q^{P} \\equiv \\prod_{x} \\varepsilon_{x} = (-1)^{\\mu}$，其中 $\\mu = \\#\\{x : r_{x} > p/2\\}$。由 **`lem.gauss-qr`**（Gauss 引理），$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu}$，所以\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} .$$\n\n\n\n**第二步：$\\mu$ 与 $\\sum m_{x}$ 同奇偶。** 由 $r_{x} = qx - p m_{x}$ 与 $\\sum_{x} s_{x} = \\sum_{x=1}^{P} x = \\frac{P(P+1)}{2}$，一方面\n\n\n\n$$\\sum_{x} s_{x} = \\sum_{x} r_{x} + \\sum_{r_{x} > p/2} (p - 2r_{x}) ,$$\n\n\n\n另一方面 $\\sum_{x} r_{x} = q\\sum_{x} x - p \\sum_{x} m_{x}$。把这些代入并两边模 $2$：$\\sum_{r_{x} > p/2}(p - 2r_{x}) \\equiv p\\mu \\equiv \\mu \\pmod 2$，$q \\sum_{x} x \\equiv \\sum_{x} x \\pmod 2$，于是\n\n\n\n$$\\sum_{x} x \\equiv \\sum_{x} x + \\sum_{x} m_{x} + \\mu \\pmod 2 ,$$\n\n\n\n消去 $\\sum_{x} x$ 得 $\\sum_{x} m_{x} \\equiv \\mu \\pmod 2$。故\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} = (-1)^{\\sum_{x=1}^{P} \\lfloor qx/p \\rfloor} .$$\n\n\n\n**第三步：矩形计数。** 在矩形 $R = \\{(x, y) \\in \\mathbb{Z}^{2} : 1 \\le x \\le P,\\ 1 \\le y \\le Q\\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \\mid qx$ 且 $p \\nmid q$ 给出 $p \\mid x$，但 $1 \\le x \\le P < p$，矛盾。故 $R$ 分成 $R_{-} = \\{qx - py > 0\\}$ 与 $R_{+} = \\{qx - py < 0\\}$ 两部分，$|R| = |R_{-}| + |R_{+}| = PQ$。\n\n\n\n对固定 $x$，$\\{y : 1 \\le y \\le Q,\\ qx - py > 0\\} = \\{y : y < qx/p\\}$ 恰有 $\\min(Q, \\lfloor qx/p \\rfloor)$ 个元素；而 $qx/p \\le qP/p = \\frac{q(p-1)}{2p} < \\frac{q}{2}$，故 $\\lfloor qx/p \\rfloor \\le \\frac{q-1}{2} = Q$，这个数就是 $\\lfloor qx/p \\rfloor$。于是 $|R_{-}| = \\sum_{x=1}^{P} \\lfloor qx/p \\rfloor$。对称地（交换 $p \\leftrightarrow q$、$x \\leftrightarrow y$）$|R_{+}| = \\sum_{y=1}^{Q} \\lfloor py/q \\rfloor$。因此\n\n\n\n$$\\sum_{x=1}^{P} \\left\\lfloor \\frac{qx}{p} \\right\\rfloor + \\sum_{y=1}^{Q} \\left\\lfloor \\frac{py}{q} \\right\\rfloor = PQ .$$\n\n\n\n**第四步：合并。** 把第二步用在 $(p, q)$ 与 $(q, p)$ 两个方向上，再代入第三步：\n\n\n\n$$\\left(\\frac{q}{p}\\right)\\left(\\frac{p}{q}\\right) = (-1)^{PQ} = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} ,$$\n\n\n\n这正是要证的二次互反律 ✓。∎",
+   "notes": "**这是数论里最重要的一条定理**（Gauss 一生给了 8 个证明，第一个 1796 年、19 岁）。它把「$p$ 是不是模 $q$ 的剩余」这个难问题换成「$q$ 是不是模 $p$ 的剩余」这个更容易的小问题 —— 因为可以递归把 $p$ 降到 $< q$。\n\n\n\n⭐ 现在的主流证明走**有限域上的曲线计数**：$\\left(\\frac{p}{q}\\right)$ 与 $x^{2} \\equiv p \\pmod q$ 的解数有关，而这批解数可以按 $\\mathbb{F}_{p}$ 上的椭圆曲线/乘法群逐层数出来（Zolotarev 引理 + 置换的符号）。这只是**一条现代路线** —— 初等证明同样存在（Gauss 第三证明、Gauss 引理、Zolotarev 引理都是初等计数）。\n\n\n\n**用法**：判 $\\left(\\frac{a}{p}\\right)$ 时把它拆成素因子，逐个用互反律「翻过来」，再递归 —— 复杂度 $O(\\log p)$ 级别的除法。上面两条补充公式处理 $-1$ 与 $2$ 这两种「不能翻」的情形。\n\n\n\n**证明（Gauss 引理 + 矩形计数，初等）。** 记 $P = \\frac{p-1}{2}$、$Q = \\frac{q-1}{2}$。对 $1 \\le x \\le P$ 记 $m_{x} := \\left\\lfloor \\frac{qx}{p} \\right\\rfloor$，$r_{x}$ 为 $qx$ 模 $p$ 的最小正剩余（$1 \\le r_{x} \\le p-1$，因为 $p \\nmid qx$）。\n\n\n\n**第一步：Gauss 引理。** 令 $\\varepsilon_{x} = 1$（当 $r_{x} < p/2$）或 $-1$（当 $r_{x} > p/2$），并令 $s_{x} = r_{x}$（前一种）或 $s_{x} = p - r_{x}$（后一种），则 $1 \\le s_{x} \\le P$。断言 $x \\mapsto s_{x}$ 是 $\\{1, \\ldots, P\\}$ 的置换：若 $s_{x} = s_{y}$，则 $r_{x} \\equiv \\pm r_{y} \\pmod p$，即 $qx \\equiv \\pm qy \\pmod p$；$q$ 在模 $p$ 下可逆，故 $x \\equiv \\pm y \\pmod p$；而 $1 \\le x, y \\le P$ 且 $p$ 是奇数，$x \\equiv -y$ 会给出 $x + y = p$，与 $x + y \\le 2P = p - 1$ 矛盾，故 $x = y$ ✓。\n\n\n\n于是把 $\\{qx\\}_{x \\le P}$ 换成最小正剩余再取符号，得到\n\n\n\n$$\\prod_{x=1}^{P} qx \\equiv \\prod_{x=1}^{P} (\\varepsilon_{x} s_{x}) = \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) \\Bigl( \\prod_{x} s_{x} \\Bigr) \\equiv \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) P! \\pmod p .$$\n\n\n\n左边 $= q^{P} P!$，约去 $P!$（$p \\nmid P!$）得 $q^{P} \\equiv \\prod_{x} \\varepsilon_{x} = (-1)^{\\mu}$，其中 $\\mu = \\#\\{x : r_{x} > p/2\\}$。由 **`lem.gauss-qr`**（Gauss 引理），$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu}$，所以\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} .$$\n\n\n\n**第二步：$\\mu$ 与 $\\sum m_{x}$ 同奇偶。** 由 $r_{x} = qx - p m_{x}$ 与 $\\sum_{x} s_{x} = \\sum_{x=1}^{P} x = \\frac{P(P+1)}{2}$，一方面\n\n\n\n$$\\sum_{x} s_{x} = \\sum_{x} r_{x} + \\sum_{r_{x} > p/2} (p - 2r_{x}) ,$$\n\n\n\n另一方面 $\\sum_{x} r_{x} = q\\sum_{x} x - p \\sum_{x} m_{x}$。把这些代入并两边模 $2$：$\\sum_{r_{x} > p/2}(p - 2r_{x}) \\equiv p\\mu \\equiv \\mu \\pmod 2$，$q \\sum_{x} x \\equiv \\sum_{x} x \\pmod 2$，于是\n\n\n\n$$\\sum_{x} x \\equiv \\sum_{x} x + \\sum_{x} m_{x} + \\mu \\pmod 2 ,$$\n\n\n\n消去 $\\sum_{x} x$ 得 $\\sum_{x} m_{x} \\equiv \\mu \\pmod 2$。故\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} = (-1)^{\\sum_{x=1}^{P} \\lfloor qx/p \\rfloor} .$$\n\n\n\n**第三步：矩形计数。** 在矩形 $R = \\{(x, y) \\in \\mathbb{Z}^{2} : 1 \\le x \\le P,\\ 1 \\le y \\le Q\\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \\mid qx$ 且 $p \\nmid q$ 给出 $p \\mid x$，但 $1 \\le x \\le P < p$，矛盾。故 $R$ 分成 $R_{-} = \\{qx - py > 0\\}$ 与 $R_{+} = \\{qx - py < 0\\}$ 两部分，$\\#R = \\#R_{-} + \\#R_{+} = PQ$。\n\n\n\n对固定 $x$，$\\{y : 1 \\le y \\le Q,\\ qx - py > 0\\} = \\{y : y < qx/p\\}$ 恰有 $\\min(Q, \\lfloor qx/p \\rfloor)$ 个元素；而 $qx/p \\le qP/p = \\frac{q(p-1)}{2p} < \\frac{q}{2}$，故 $\\lfloor qx/p \\rfloor \\le \\frac{q-1}{2} = Q$，这个数就是 $\\lfloor qx/p \\rfloor$。于是 $|R_{-}| = \\sum_{x=1}^{P} \\lfloor qx/p \\rfloor$。对称地（交换 $p \\leftrightarrow q$、$x \\leftrightarrow y$）$|R_{+}| = \\sum_{y=1}^{Q} \\lfloor py/q \\rfloor$。因此\n\n\n\n$$\\sum_{x=1}^{P} \\left\\lfloor \\frac{qx}{p} \\right\\rfloor + \\sum_{y=1}^{Q} \\left\\lfloor \\frac{py}{q} \\right\\rfloor = PQ .$$\n\n\n\n**第四步：合并。** 把第二步用在 $(p, q)$ 与 $(q, p)$ 两个方向上，再代入第三步：\n\n\n\n$$\\left(\\frac{q}{p}\\right)\\left(\\frac{p}{q}\\right) = (-1)^{PQ} = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} ,$$\n\n\n\n这正是要证的二次互反律 ✓。∎",
    "refs": [
     "华罗庚《数论导引》第四章",
     "Ireland–Rosen, A Classical Introduction to Modern Number Theory, Ch. 5"
@@ -65242,7 +65245,7 @@
     "基数"
    ],
    "statement": "拓扑空间（特别地赋范空间）$E$ 叫**可分**，若它含一个可数稠密子集。",
-   "notes": "**可分的**：$\\ell^p(\\mathbb{N})$（$1 \\le p < \\infty$）、$L^p(\\Omega)$（Lebesgue 测度、$1 \\le p < \\infty$）、$C(K)$（$K$ 紧度量）、任何有限维空间。\n\n**不可分的**：$\\ell^\\infty(\\mathbb{N})$。证法：取 $A = \\{(e_n) : e_n = \\pm 1\\}$（$2^{\\aleph_0}$ 个点），任意两点距离 $\\ge 2$，故半径 $1$ 的两两不交球有不可数多个 —— 可数稠密集顶多覆盖可数多个。\n\n⭐ 讲义里那句「不可分 $\\implies$ 不能由一个可数集作为代数生成」很值得记：它把「基」的直觉挡在门外 —— $\\ell^\\infty$ 连可数 Schauder 基都没有（见「Schauder 基」）。\n\n⚠️ 可分性对**连续像**遗传（$D$ 可数稠密 $\\implies$ $f(D)$ 在 $f(X)$ 中稠密）；在**度量空间**里对子空间也遗传，但一般拓扑空间不成立（$D$ 不可数、开集全取含 $p$ 的集合时，$X = D \\cup \\{p\\}$ 可分而闭子空间 $D$ 是不可数离散空间）。乘积也不遗传：$\\{0,1\\}^{I}$（$|I| > 2^{\\aleph_0}$）不可分，而 $\\mathbb{R}^{\\mathbb{R}}$ **反而可分**。",
+   "notes": "**可分的**：$\\ell^p(\\mathbb{N})$（$1 \\le p < \\infty$）、$L^p(\\Omega)$（Lebesgue 测度、$1 \\le p < \\infty$）、$C(K)$（$K$ 紧度量）、任何有限维空间。\n\n**不可分的**：$\\ell^\\infty(\\mathbb{N})$。证法：取 $A = \\{(e_n) : e_n = \\pm 1\\}$（$2^{\\aleph_0}$ 个点），任意两点距离 $\\ge 2$，故半径 $1$ 的两两不交球有不可数多个 —— 可数稠密集顶多覆盖可数多个。\n\n⭐ 讲义里那句「不可分 $\\implies$ 不能由一个可数集作为代数生成」很值得记：它把「基」的直觉挡在门外 —— $\\ell^\\infty$ 连可数 Schauder 基都没有（见「Schauder 基」）。\n\n⚠️ 可分性对**连续像**遗传（$D$ 可数稠密 $\\implies$ $f(D)$ 在 $f(X)$ 中稠密）；在**度量空间**里对子空间也遗传，但一般拓扑空间不成立（$D$ 不可数、开集全取含 $p$ 的集合时，$X = D \\cup \\{p\\}$ 可分而闭子空间 $D$ 是不可数离散空间）。乘积也不遗传：$\\{0,1\\}^{I}$（$\\#I > 2^{\\aleph_0}$）不可分，而 $\\mathbb{R}^{\\mathbb{R}}$ **反而可分**。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
    ]
@@ -65322,7 +65325,7 @@
     "Hilbert 空间",
     "序列空间"
    ],
-   "statement": "对任意指标集 $I$，令\n\n$$\\ell^2(I) := \\left\\{ x = (x_i)_{i \\in I} \\subseteq \\mathbb{K} \\ : \\ \\|x\\|_2 := \\sup_{\\substack{J \\subseteq I \\\\ |J| < \\infty}} \\Bigl( \\sum_{j \\in J} |x_j|^2 \\Bigr)^{1/2} < \\infty \\right\\} ,$$\n\n内积 $\\langle x, y\\rangle := \\sum_{i \\in I} x_i \\overline{y_i}$。",
+   "statement": "对任意指标集 $I$，令\n\n$$\\ell^2(I) := \\left\\{ x = (x_i)_{i \\in I} \\subseteq \\mathbb{K} \\ : \\ \\|x\\|_2 := \\sup_{\\substack{J \\subseteq I \\\\ \\#J < \\infty}} \\Bigl( \\sum_{j \\in J} |x_j|^2 \\Bigr)^{1/2} < \\infty \\right\\} ,$$\n\n内积 $\\langle x, y\\rangle := \\sum_{i \\in I} x_i \\overline{y_i}$。",
    "notes": "⭐ 那个「上确界」是为了绕开「不可数求和」：$\\|x\\|_2 < \\infty$ 时，$\\{i : x_i \\ne 0\\}$ 一定**至多可数**（否则取 $J_n$ 含 $n$ 个 $|x_j| > 1/n$ 的指标，得 $\\|x\\|_2^2 \\ge n \\cdot 1/n^2 = 1/n \\to 0$ 的矛盾），于是求和其实是对一个可数集求和。\n\n于是 $(x_i) \\mapsto$（非零坐标的级数）是良定义的，$\\ell^2(I)$ 是 Hilbert 空间（完备性由「$\\ell^p(I)$ 是 Banach」那类逐项论证给出）。\n\n⭐ 这条是「可分 Hilbert 空间 $\\cong \\ell^2$」里 $\\ell^2$ 那一端：$I$ 取可数时就是通常的 $\\ell^2$。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
@@ -65446,6 +65449,45 @@
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基",
     "Jordan–von Neumann, Ann. of Math. 36 (1935)"
+   ]
+  },
+  {
+   "id": "thm.hilbert-uniformly-convex",
+   "type": "theorem",
+   "label": "Hilbert 空间一致凸",
+   "title": "Hilbert 空间一致凸（平行四边形律）",
+   "title_en": "Hilbert spaces are uniformly convex",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.hilbert-uniformly-convex.en.md",
+   "region": "functional-analysis",
+   "regions": [
+    "functional-analysis"
+   ],
+   "cluster": "fa.hilbert",
+   "layer": 19,
+   "tags": [
+    "泛函分析",
+    "Hilbert 空间",
+    "一致凸"
+   ],
+   "statement": "设 $H$ 是 Hilbert 空间。则 $H$ **一致凸**：对每个 $\\varepsilon \\in (0, 2]$，取\n\n$$\\delta = 1 - \\sqrt{1 - \\varepsilon^{2}/4} > 0 ,$$\n\n则当 $\\|x\\| = \\|y\\| = 1$、$\\|x - y\\| \\ge \\varepsilon$ 时，$\\left\\|\\frac{x + y}{2}\\right\\| \\le 1 - \\delta$。",
+   "notes": "**证明。** 令 $\\|x\\| = \\|y\\| = 1$。由平行四边形律，\n\n\n\n$$\\|x + y\\|^{2} + \\|x - y\\|^{2} = 2\\|x\\|^{2} + 2\\|y\\|^{2} = 4 ,$$\n\n\n\n即 $\\left\\|\\frac{x + y}{2}\\right\\|^{2} = 1 - \\frac{\\|x - y\\|^{2}}{4}$。当 $\\|x - y\\| \\ge \\varepsilon$ 时右端 $\\le 1 - \\varepsilon^{2}/4$，开方得 $\\left\\|\\frac{x + y}{2}\\right\\| \\le \\sqrt{1 - \\varepsilon^{2}/4} = 1 - \\delta$。$\\blacksquare$",
+   "refs": [
+    "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
    ]
   },
   {
@@ -65961,7 +66003,7 @@
     "Hilbert 空间",
     "同构"
    ],
-   "statement": "设 $H$ 是 Hilbert 空间，$\\dim H = |I|$（Hilbert 维数）。则 $H$ 等距同构于 $\\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\\ell^2(\\mathbb{N})$。",
+   "statement": "设 $H$ 是 Hilbert 空间，$\\dim H = \\#I$（Hilbert 维数）。则 $H$ 等距同构于 $\\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\\ell^2(\\mathbb{N})$。",
    "notes": "映射 $U : H \\to \\ell^2(I)$，$U(x) := (\\langle x, e_i\\rangle)_{i \\in I}$。\n\n由 Bessel 它入 $\\ell^2$、由 Parseval 它保范；\n\n满射性：若 $(\\lambda_i) \\in \\ell^2$，则部分和 $\\sum_{i \\in J}\\lambda_i e_i$ 是 Cauchy（$\\|\\sum_{J \\setminus J'}\\lambda_i e_i\\|^2 = \\sum_{J \\setminus J'}|\\lambda_i|^2$），其极限的坐标就是 $\\lambda_i$。\n\n⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。\n\n⚠️ 「可分」不能去掉：$\\ell^2(I)$（不可数 $I$）与 $\\ell^2(J)$ 同构 $\\iff \\#I = \\#J$（用正交基的基数比）。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
@@ -67670,7 +67712,7 @@
     "元定理"
    ],
    "statement": "设 $\\Gamma$ 是一组公式，$\\varphi$ 是公式。则\n\n$$\\Gamma \\vdash \\varphi \\iff \\Gamma \\vDash \\varphi,$$\n\n即：**可证明**与**在所有模型中都真**是同一件事。等价的形式：$\\Gamma$ 有模型 $\\iff$ $\\Gamma$ 一致。",
-   "notes": "**约定**：$\\vdash$ 取 `def.provability` 的 Hilbert 型系统（分离规则 + 推广），逻辑公理取标准模式：命题公理 (A1) $\\psi\\to(\\chi\\to\\psi)$、(A2) $(\\psi\\to(\\chi\\to\\theta))\\to((\\psi\\to\\chi)\\to(\\psi\\to\\theta))$、(A3) $(\\neg\\chi\\to\\neg\\psi)\\to(\\psi\\to\\chi)$；量词公理 (Q1) $\\forall x\\,\\psi\\to\\psi[t/x]$（$t$ 对 $x$ 可代入）、(Q2) $\\forall x(\\psi\\to\\chi)\\to(\\psi\\to\\forall x\\,\\chi)$（$x\\notin\\operatorname{FV}(\\psi)$）；等词公理 (E1) $x=x$、(E2) $x=y\\to(\\psi\\to\\psi[y/x])$。`def.provability` 没有逐条列出公理表，这里按标准取法固定一套；换等价系统不改变 $\\vdash$。$\\Gamma$ **不一致**指存在 $\\psi$ 使 $\\Gamma\\vdash\\psi$ 且 $\\Gamma\\vdash\\neg\\psi$，它等价于 $\\Gamma\\vdash\\neg(\\theta\\to\\theta)$。\n\n**第一步：化到语句。** 对 $\\Gamma\\cup\\{\\varphi\\}$ 中出现的每个自由变元 $x$ 添一个新常元 $c_x$，把公式里的 $x$ 全换成 $c_x$，得 $\\Gamma_c,\\varphi_c$。则 (i) $\\Gamma\\vdash\\varphi\\iff\\Gamma_c\\vdash\\varphi_c$：把证明里的 $c_x$ 换回自由变元 $x$（公理模式对代入封闭，分离与推广保持形状），反向把 $x$ 换成 $c_x$；(ii) $\\Gamma\\vDash\\varphi\\iff\\Gamma_c\\vDash\\varphi_c$：$\\mathcal{L}_c$ 的结构就是「$\\mathcal{L}$ 的结构 + 一个赋值」，反之每个赋值唯一延拓。所以只需对**语句**证明。\n\n**第二步：可靠性（$\\vdash\\implies\\vDash$）。** 逐条验证：命题公理是重言式；(Q1) 若 $\\forall x\\,\\psi$ 在 $\\mathfrak{A}$ 中真，则 $\\psi[t/x]$ 对每个 $t$ 的解释真；(Q2) 在 $x\\notin\\operatorname{FV}(\\psi)$ 时，若 $\\forall x(\\psi\\to\\chi)$ 与 $\\psi$ 真，则对每个 $a$ 有 $\\chi$ 真；(E1)(E2) 是等词的标准语义。分离规则保持「真」，推广保持「对所有赋值真」。对证明长度归纳得 $\\Gamma\\vdash\\varphi\\implies\\Gamma\\vDash\\varphi$。\n\n**第三步：演绎定理（语句版）。** 若 $\\sigma$ 是语句且 $\\Gamma\\cup\\{\\sigma\\}\\vdash\\psi$，则 $\\Gamma\\vdash\\sigma\\to\\psi$。对推导长度归纳：若该步是公理或 $\\Gamma$ 中公式 $\\theta$，用 (A1) $\\theta\\to(\\sigma\\to\\theta)$ 与分离规则；若是分离规则，用 (A2)；若是推广 $\\theta\\mapsto\\forall x\\,\\theta$，归纳假设给 $\\Gamma\\vdash\\sigma\\to\\theta$，推广得 $\\Gamma\\vdash\\forall x(\\sigma\\to\\theta)$，再由 (Q2)（$\\sigma$ 无自由 $x$）与分离规则得 $\\Gamma\\vdash\\sigma\\to\\forall x\\,\\theta$。∎\n\n**推论**：若 $\\Gamma\\cup\\{\\sigma\\}$ 不一致，则 $\\Gamma\\vdash\\neg\\sigma$；特别地，若 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 不一致，则 $\\Gamma\\vdash\\varphi$。证明：演绎定理给 $\\Gamma\\vdash\\sigma\\to\\psi$ 与 $\\Gamma\\vdash\\sigma\\to\\neg\\psi$，而 $(\\sigma\\to\\psi)\\to((\\sigma\\to\\neg\\psi)\\to\\neg\\sigma)$ 是重言式，分离两次即得 $\\Gamma\\vdash\\neg\\sigma$。\n\n**第四步：极大一致扩张。** 引理：每个一致语句集 $\\Gamma$ 可扩张为极大一致语句集 $\\Gamma^{*}$。证明：取 $\\kappa=\\max(|\\mathcal{L}|,\\aleph_0)$（语言 $\\mathcal{L}$ 先良序 —— 这一步用选择公理），按序数枚举所有语句 $\\{\\psi_\\alpha:\\alpha<\\kappa\\}$；令 $\\Gamma_0=\\Gamma$，若 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 一致则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$，否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并；令 $\\Gamma^{*}=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$。一致性：若 $\\Gamma^{*}$ 不一致，则某个证明只用到有限多条假设，它们全在某个 $\\Gamma_\\alpha$ 中，与 $\\Gamma_\\alpha$ 一致矛盾。极大性：若 $\\psi_\\alpha\\notin\\Gamma^{*}$，则 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 不一致，由推论得 $\\Gamma_\\alpha\\vdash\\neg\\psi_\\alpha$，故 $\\Gamma^{*}\\vdash\\neg\\psi_\\alpha$。由此：对每个语句恰有 $\\psi\\in\\Gamma^{*}$ 或 $\\neg\\psi\\in\\Gamma^{*}$；$\\Gamma^{*}$ 对 $\\vdash$ 封闭（若 $\\Gamma^{*}\\vdash\\psi$ 而 $\\psi\\notin\\Gamma^{*}$，则 $\\neg\\psi\\in\\Gamma^{*}$，与一致性矛盾）；$\\Gamma^{*}$ 含全部逻辑公理。\n\n**第五步：Henkin 见证。** 设 $\\kappa=\\max(|\\mathcal{L}|,\\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\\kappa$ 个新常元 $\\{c_\\beta:\\beta<\\kappa\\}$ 得 $\\mathcal{L}^{+}$，把 $\\mathcal{L}^{+}$ 中所有形如 $\\exists x\\,\\theta(x)$ 的语句按序数枚举为 $\\{\\xi_\\alpha:\\alpha<\\kappa\\}$。**按序数超限递归**造 $\\Gamma_\\alpha$：若 $\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致且 $\\xi_\\alpha=\\exists x\\,\\theta(x)$，取一个未用过的 $c_\\beta$，令 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$；否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并。\n\n各 $\\Gamma_\\alpha$ 一致（对 $\\alpha$ 归纳，极限步用有限特征）：若 $\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$ 不一致，推论给 $\\Gamma_\\alpha\\vdash\\neg\\theta(c_\\beta)$；$c_\\beta$ 不出现在 $\\Gamma_\\alpha$ 中，把 $c_\\beta$ 换成证明中未出现的变元 $y$ 并推广，得 $\\Gamma_\\alpha\\vdash\\forall y\\,\\neg\\theta(y)$，再由 (Q1) 与命题逻辑得 $\\Gamma_\\alpha\\vdash\\neg\\exists x\\,\\theta(x)$，与「$\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致」矛盾。于是 $\\Gamma_\\kappa=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$ 一致（有限特征），再由第四步扩为极大一致 $\\Gamma^{*}$。见证性质：若 $\\exists x\\,\\theta\\in\\Gamma^{*}$ 且编号为 $\\alpha$，则 $\\Gamma_\\alpha\\cup\\{\\exists x\\,\\theta\\}\\subseteq\\Gamma^{*}$ 一致，故第 $\\alpha$ 步添了 $\\theta(c_\\beta)$，即 $\\theta(c_\\beta)\\in\\Gamma^{*}$。\n\n**第六步：项模型。** 在 $\\mathcal{L}^{+}$ 上，对闭项 $t,s$ 定义 $t\\sim s\\iff\\Gamma^{*}\\vdash t=s$；由 (E1)(E2) 这是等价关系。令 $A$ 为闭项的 $\\sim$-类全体。常元 $c^{\\mathfrak{A}}:=[c]$；函数符号 $f^{\\mathfrak{A}}([t_1],\\ldots,[t_n]):=[f(t_1,\\ldots,t_n)]$；关系符号 $R^{\\mathfrak{A}}([t_1],\\ldots,[t_n])$ 为真 $\\iff\\Gamma^{*}\\vdash R(t_1,\\ldots,t_n)$。良定义用 (E2)：若 $t_i\\sim s_i$，逐步代入得 $\\Gamma^{*}\\vdash f(t)=f(s)$ 与 $\\Gamma^{*}\\vdash R(t)\\leftrightarrow R(s)$。等词解释成相等：$[t]=[s]\\iff t\\sim s$。\n\n**第七步：真值引理。** 对每个公式 $\\psi(x_1,\\ldots,x_m)$ 与任意闭项 $t_1,\\ldots,t_m$：$\\mathfrak{A}\\vDash\\psi[\\bar t]$（赋值 $x_i\\mapsto[t_i]$）$\\iff$ $\\Gamma^{*}\\vdash\\psi(t_1,\\ldots,t_m)$。对 $\\psi$ 的结构归纳：原子公式按第六步；$\\neg$ 用极大性（对每个语句恰有它或它的否定在 $\\Gamma^{*}$）；$\\wedge$ 用 $\\Gamma^{*}$ 对 $\\vdash$ 封闭与重言式 $\\psi\\to(\\chi\\to\\psi\\wedge\\chi)$、$\\psi\\wedge\\chi\\to\\psi$、$\\psi\\wedge\\chi\\to\\chi$。\n\n量词情形：先注意对任意闭项 $t$，$\\Gamma^{*}\\vdash\\forall x\\,\\psi\\to\\psi(t)$（(Q1) 加分离规则）。($\\Leftarrow$) 若 $\\forall x\\,\\psi\\in\\Gamma^{*}$，则每个实例 $\\psi(t)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\psi[\\bar t]$ 对所有 $[t]$，故 $\\mathfrak{A}\\vDash\\forall x\\,\\psi$。($\\implies$) 若 $\\forall x\\,\\psi\\notin\\Gamma^{*}$，则 $\\neg\\forall x\\,\\psi\\in\\Gamma^{*}$；命题逻辑（用 (Q1)）给 $\\Gamma^{*}\\vdash\\exists x\\,\\neg\\psi$，见证性质给 $c$ 使 $\\neg\\psi(c)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\neg\\psi[\\bar c]$，故 $\\mathfrak{A}\\not\\vDash\\forall x\\,\\psi$。\n\n**第八步：收尾。** 第七步给出 $\\mathfrak{A}\\vDash\\Gamma^{*}$，故 $\\Gamma$ 有模型。于是对语句：若 $\\Gamma\\not\\vdash\\varphi$，则 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 一致（否则推论给 $\\Gamma\\vdash\\varphi$），由第五至七步有模型 $\\mathfrak{A}\\vDash\\Gamma\\cup\\{\\neg\\varphi\\}$，即 $\\Gamma\\not\\vDash\\varphi$。逆否即 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$；与第二步合起来即 $\\Gamma\\vdash\\varphi\\iff\\Gamma\\vDash\\varphi$。一般公式由第一步化到语句。∎\n\n**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\\kappa=\\aleph_0$）：取 $\\kappa=\\max(|\\mathcal{L}|,\\aleph_0)$，添 $\\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\\{c_\\beta:\\beta<\\kappa\\}$，每步取最小未用 $\\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\\implies$ 整个理论有模型）由 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。",
+   "notes": "**约定**：$\\vdash$ 取 `def.provability` 的 Hilbert 型系统（分离规则 + 推广），逻辑公理取标准模式：命题公理 (A1) $\\psi\\to(\\chi\\to\\psi)$、(A2) $(\\psi\\to(\\chi\\to\\theta))\\to((\\psi\\to\\chi)\\to(\\psi\\to\\theta))$、(A3) $(\\neg\\chi\\to\\neg\\psi)\\to(\\psi\\to\\chi)$；量词公理 (Q1) $\\forall x\\,\\psi\\to\\psi[t/x]$（$t$ 对 $x$ 可代入）、(Q2) $\\forall x(\\psi\\to\\chi)\\to(\\psi\\to\\forall x\\,\\chi)$（$x\\notin\\operatorname{FV}(\\psi)$）；等词公理 (E1) $x=x$、(E2) $x=y\\to(\\psi\\to\\psi[y/x])$。`def.provability` 没有逐条列出公理表，这里按标准取法固定一套；换等价系统不改变 $\\vdash$。$\\Gamma$ **不一致**指存在 $\\psi$ 使 $\\Gamma\\vdash\\psi$ 且 $\\Gamma\\vdash\\neg\\psi$，它等价于 $\\Gamma\\vdash\\neg(\\theta\\to\\theta)$。\n\n**第一步：化到语句。** 对 $\\Gamma\\cup\\{\\varphi\\}$ 中出现的每个自由变元 $x$ 添一个新常元 $c_x$，把公式里的 $x$ 全换成 $c_x$，得 $\\Gamma_c,\\varphi_c$。则 (i) $\\Gamma\\vdash\\varphi\\iff\\Gamma_c\\vdash\\varphi_c$：把证明里的 $c_x$ 换回自由变元 $x$（公理模式对代入封闭，分离与推广保持形状），反向把 $x$ 换成 $c_x$；(ii) $\\Gamma\\vDash\\varphi\\iff\\Gamma_c\\vDash\\varphi_c$：$\\mathcal{L}_c$ 的结构就是「$\\mathcal{L}$ 的结构 + 一个赋值」，反之每个赋值唯一延拓。所以只需对**语句**证明。\n\n**第二步：可靠性（$\\vdash\\implies\\vDash$）。** 逐条验证：命题公理是重言式；(Q1) 若 $\\forall x\\,\\psi$ 在 $\\mathfrak{A}$ 中真，则 $\\psi[t/x]$ 对每个 $t$ 的解释真；(Q2) 在 $x\\notin\\operatorname{FV}(\\psi)$ 时，若 $\\forall x(\\psi\\to\\chi)$ 与 $\\psi$ 真，则对每个 $a$ 有 $\\chi$ 真；(E1)(E2) 是等词的标准语义。分离规则保持「真」，推广保持「对所有赋值真」。对证明长度归纳得 $\\Gamma\\vdash\\varphi\\implies\\Gamma\\vDash\\varphi$。\n\n**第三步：演绎定理（语句版）。** 若 $\\sigma$ 是语句且 $\\Gamma\\cup\\{\\sigma\\}\\vdash\\psi$，则 $\\Gamma\\vdash\\sigma\\to\\psi$。对推导长度归纳：若该步是公理或 $\\Gamma$ 中公式 $\\theta$，用 (A1) $\\theta\\to(\\sigma\\to\\theta)$ 与分离规则；若是分离规则，用 (A2)；若是推广 $\\theta\\mapsto\\forall x\\,\\theta$，归纳假设给 $\\Gamma\\vdash\\sigma\\to\\theta$，推广得 $\\Gamma\\vdash\\forall x(\\sigma\\to\\theta)$，再由 (Q2)（$\\sigma$ 无自由 $x$）与分离规则得 $\\Gamma\\vdash\\sigma\\to\\forall x\\,\\theta$。∎\n\n**推论**：若 $\\Gamma\\cup\\{\\sigma\\}$ 不一致，则 $\\Gamma\\vdash\\neg\\sigma$；特别地，若 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 不一致，则 $\\Gamma\\vdash\\varphi$。证明：演绎定理给 $\\Gamma\\vdash\\sigma\\to\\psi$ 与 $\\Gamma\\vdash\\sigma\\to\\neg\\psi$，而 $(\\sigma\\to\\psi)\\to((\\sigma\\to\\neg\\psi)\\to\\neg\\sigma)$ 是重言式，分离两次即得 $\\Gamma\\vdash\\neg\\sigma$。\n\n**第四步：极大一致扩张。** 引理：每个一致语句集 $\\Gamma$ 可扩张为极大一致语句集 $\\Gamma^{*}$。证明：取 $\\kappa=\\max(|\\mathcal{L}|,\\aleph_0)$（语言 $\\mathcal{L}$ 先良序 —— 这一步用选择公理），按序数枚举所有语句 $\\{\\psi_\\alpha:\\alpha<\\kappa\\}$；令 $\\Gamma_0=\\Gamma$，若 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 一致则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$，否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并；令 $\\Gamma^{*}=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$。一致性：若 $\\Gamma^{*}$ 不一致，则某个证明只用到有限多条假设，它们全在某个 $\\Gamma_\\alpha$ 中，与 $\\Gamma_\\alpha$ 一致矛盾。极大性：若 $\\psi_\\alpha\\notin\\Gamma^{*}$，则 $\\Gamma_\\alpha\\cup\\{\\psi_\\alpha\\}$ 不一致，由推论得 $\\Gamma_\\alpha\\vdash\\neg\\psi_\\alpha$，故 $\\Gamma^{*}\\vdash\\neg\\psi_\\alpha$。由此：对每个语句恰有 $\\psi\\in\\Gamma^{*}$ 或 $\\neg\\psi\\in\\Gamma^{*}$；$\\Gamma^{*}$ 对 $\\vdash$ 封闭（若 $\\Gamma^{*}\\vdash\\psi$ 而 $\\psi\\notin\\Gamma^{*}$，则 $\\neg\\psi\\in\\Gamma^{*}$，与一致性矛盾）；$\\Gamma^{*}$ 含全部逻辑公理。\n\n**第五步：Henkin 见证。** 设 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\\kappa$ 个新常元 $\\{c_\\beta:\\beta<\\kappa\\}$ 得 $\\mathcal{L}^{+}$，把 $\\mathcal{L}^{+}$ 中所有形如 $\\exists x\\,\\theta(x)$ 的语句按序数枚举为 $\\{\\xi_\\alpha:\\alpha<\\kappa\\}$。**按序数超限递归**造 $\\Gamma_\\alpha$：若 $\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致且 $\\xi_\\alpha=\\exists x\\,\\theta(x)$，取一个未用过的 $c_\\beta$，令 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$；否则 $\\Gamma_{\\alpha+1}=\\Gamma_\\alpha$，极限序数取并。\n\n各 $\\Gamma_\\alpha$ 一致（对 $\\alpha$ 归纳，极限步用有限特征）：若 $\\Gamma_\\alpha\\cup\\{\\theta(c_\\beta)\\}$ 不一致，推论给 $\\Gamma_\\alpha\\vdash\\neg\\theta(c_\\beta)$；$c_\\beta$ 不出现在 $\\Gamma_\\alpha$ 中，把 $c_\\beta$ 换成证明中未出现的变元 $y$ 并推广，得 $\\Gamma_\\alpha\\vdash\\forall y\\,\\neg\\theta(y)$，再由 (Q1) 与命题逻辑得 $\\Gamma_\\alpha\\vdash\\neg\\exists x\\,\\theta(x)$，与「$\\Gamma_\\alpha\\cup\\{\\xi_\\alpha\\}$ 一致」矛盾。于是 $\\Gamma_\\kappa=\\bigcup_{\\alpha<\\kappa}\\Gamma_\\alpha$ 一致（有限特征），再由第四步扩为极大一致 $\\Gamma^{*}$。见证性质：若 $\\exists x\\,\\theta\\in\\Gamma^{*}$ 且编号为 $\\alpha$，则 $\\Gamma_\\alpha\\cup\\{\\exists x\\,\\theta\\}\\subseteq\\Gamma^{*}$ 一致，故第 $\\alpha$ 步添了 $\\theta(c_\\beta)$，即 $\\theta(c_\\beta)\\in\\Gamma^{*}$。\n\n**第六步：项模型。** 在 $\\mathcal{L}^{+}$ 上，对闭项 $t,s$ 定义 $t\\sim s\\iff\\Gamma^{*}\\vdash t=s$；由 (E1)(E2) 这是等价关系。令 $A$ 为闭项的 $\\sim$-类全体。常元 $c^{\\mathfrak{A}}:=[c]$；函数符号 $f^{\\mathfrak{A}}([t_1],\\ldots,[t_n]):=[f(t_1,\\ldots,t_n)]$；关系符号 $R^{\\mathfrak{A}}([t_1],\\ldots,[t_n])$ 为真 $\\iff\\Gamma^{*}\\vdash R(t_1,\\ldots,t_n)$。良定义用 (E2)：若 $t_i\\sim s_i$，逐步代入得 $\\Gamma^{*}\\vdash f(t)=f(s)$ 与 $\\Gamma^{*}\\vdash R(t)\\leftrightarrow R(s)$。等词解释成相等：$[t]=[s]\\iff t\\sim s$。\n\n**第七步：真值引理。** 对每个公式 $\\psi(x_1,\\ldots,x_m)$ 与任意闭项 $t_1,\\ldots,t_m$：$\\mathfrak{A}\\vDash\\psi[\\bar t]$（赋值 $x_i\\mapsto[t_i]$）$\\iff$ $\\Gamma^{*}\\vdash\\psi(t_1,\\ldots,t_m)$。对 $\\psi$ 的结构归纳：原子公式按第六步；$\\neg$ 用极大性（对每个语句恰有它或它的否定在 $\\Gamma^{*}$）；$\\wedge$ 用 $\\Gamma^{*}$ 对 $\\vdash$ 封闭与重言式 $\\psi\\to(\\chi\\to\\psi\\wedge\\chi)$、$\\psi\\wedge\\chi\\to\\psi$、$\\psi\\wedge\\chi\\to\\chi$。\n\n量词情形：先注意对任意闭项 $t$，$\\Gamma^{*}\\vdash\\forall x\\,\\psi\\to\\psi(t)$（(Q1) 加分离规则）。($\\Leftarrow$) 若 $\\forall x\\,\\psi\\in\\Gamma^{*}$，则每个实例 $\\psi(t)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\psi[\\bar t]$ 对所有 $[t]$，故 $\\mathfrak{A}\\vDash\\forall x\\,\\psi$。($\\implies$) 若 $\\forall x\\,\\psi\\notin\\Gamma^{*}$，则 $\\neg\\forall x\\,\\psi\\in\\Gamma^{*}$；命题逻辑（用 (Q1)）给 $\\Gamma^{*}\\vdash\\exists x\\,\\neg\\psi$，见证性质给 $c$ 使 $\\neg\\psi(c)\\in\\Gamma^{*}$，归纳假设给 $\\mathfrak{A}\\vDash\\neg\\psi[\\bar c]$，故 $\\mathfrak{A}\\not\\vDash\\forall x\\,\\psi$。\n\n**第八步：收尾。** 第七步给出 $\\mathfrak{A}\\vDash\\Gamma^{*}$，故 $\\Gamma$ 有模型。于是对语句：若 $\\Gamma\\not\\vdash\\varphi$，则 $\\Gamma\\cup\\{\\neg\\varphi\\}$ 一致（否则推论给 $\\Gamma\\vdash\\varphi$），由第五至七步有模型 $\\mathfrak{A}\\vDash\\Gamma\\cup\\{\\neg\\varphi\\}$，即 $\\Gamma\\not\\vDash\\varphi$。逆否即 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$；与第二步合起来即 $\\Gamma\\vdash\\varphi\\iff\\Gamma\\vDash\\varphi$。一般公式由第一步化到语句。∎\n\n**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\\kappa=\\aleph_0$）：取 $\\kappa=\\max(\\#(\\mathcal{L}),\\aleph_0)$，添 $\\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\\{c_\\beta:\\beta<\\kappa\\}$，每步取最小未用 $\\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\\implies$ 整个理论有模型）由 $\\Gamma\\vDash\\varphi\\implies\\Gamma\\vdash\\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。",
    "refs": [
     "Enderton, A Mathematical Introduction to Logic, Ch. 2.5",
     "Kunen, Set Theory, Ch. I"
@@ -79279,7 +79321,7 @@
    ],
    "target": "thm.sylow",
    "title": "类方程 + 让 Sylow 子群作用 $\\implies$ Sylow 三条",
-   "proof": "记 $|G| = p^{a} m$、$p \\nmid m$。\n\n**（1）存在性：对 $|G|$ 归纳。** $a = 0$ 时取平凡子群。设 $a \\ge 1$。\n\n- **情形 A：$p \\mid |Z(G)|$。** 取 $z \\in Z(G)$，$\\operatorname{ord}(z) = p$（Cauchy 引理，由类方差的推论加上对阶归纳可得）。\n\n令 $\\overline G := G/\\langle z\\rangle$，则 $|\\overline G| = p^{a-1}m$。\n\n由归纳假设 $\\overline G$ 有 $p^{a-1}$ 阶子群 $\\overline P$；\n\n取 $\\pi^{-1}(\\overline P) \\le G$（$\\pi : G \\to \\overline G$ 是自然满同态），其阶为 $|\\overline P| \\cdot |\\langle z\\rangle| = p^{a}$。\n- **情形 B：$p \\nmid |Z(G)|$。** 由类方程$|G| = |Z(G)| + \\sum_i [G : C_G(x_i)]$。\n\n左端被 $p$ 整除、$|Z(G)|$ 不被 $p$ 整除，故存在某个 $i$ 使 $p \\nmid [G : C_G(x_i)]$。\n\n由 $|G| = [G : C_G(x_i)]\\cdot|C_G(x_i)|$ 与 $p^{a} \\mid |G|$ 得 $p^{a} \\mid |C_G(x_i)|$；\n\n又 $x_i$ 非中心故 $C_G(x_i) \\ne G$，于是 $|C_G(x_i)| < |G|$。\n\n对 $C_G(x_i)$ 用归纳假设得 $p^{a}$ 阶子群，它也是 $G$ 的。\n\n（$p^{i}$ 阶子群（$i < a$）由对 $p^{a}$ 阶子群再用一次「$p$-群有 $p^{i}$ 阶子群」的归纳得到。）\n\n**（2）共轭性。** 设 $P, Q$ 是 Sylow $p$-子群，考虑 $P$ 在左陪集集合 $X := G/Q$ 上的作用 $g \\cdot (hQ) := (gh)Q$。\n\n$$|X| = [G : Q] = m, \\qquad p \\nmid m.$$\n\n由轨道分解 $|X| = \\sum |\\text{轨道}|$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。\n\n若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \\mid |X| = m$，矛盾。\n\n故有不动点 $hQ$：对一切 $g \\in P$ 有 $ghQ = hQ$，即 $h^{-1}Ph \\le Q$。\n\n两端阶相同（都是 $p^{a}$），故 $h^{-1}Ph = Q$：$P$ 与 $Q$ 共轭。\n\n把上面论证中的 $P$ 换成任一 $p$-子群 $R$，同样得到 $h^{-1}Rh \\le Q$：**任何 $p$-子群都含在某个 Sylow 子群中**。\n\n**（3）计数。** 设 $\\mathcal{S}$ 是全体 Sylow $p$-子群的集合。$G$ 共轭作用在 $\\mathcal{S}$ 上（由 (2) 传递）；$P$ 的稳定子是 $N_G(P)$，故\n\n$$n_p = |\\mathcal{S}| = [G : N_G(P)].$$\n\n再由 $P \\le N_G(P)$ 得 $n_p \\mid [G : P] = m$。\n\n最后让 $P$ 共轭作用在 $\\mathcal{S}$ 上：轨道长是 $p$ 的幂，而 $P$ 的不动点只有 $P$ 自己（若 $P$ 固定 $Q$，则 $P \\le N_G(Q)$，于是 $P$ 与 $Q$ 都是 $N_G(Q)$ 的 Sylow 子群，由 (2) 在 $N_G(Q)$ 中共轭；\n\n但 $Q \\trianglelefteq N_G(Q)$ 故只能 $P = Q$）。\n\n于是\n\n$$n_p = 1 + \\sum (\\text{长度 } \\ge 2 \\text{ 的轨道长}) \\equiv 1 \\pmod p$$\n\n∎",
+   "proof": "记 $|G| = p^{a} m$、$p \\nmid m$。\n\n**（1）存在性：对 $|G|$ 归纳。** $a = 0$ 时取平凡子群。设 $a \\ge 1$。\n\n- **情形 A：$p \\mid |Z(G)|$。** 取 $z \\in Z(G)$，$\\operatorname{ord}(z) = p$（Cauchy 引理，由类方差的推论加上对阶归纳可得）。\n\n令 $\\overline G := G/\\langle z\\rangle$，则 $|\\overline G| = p^{a-1}m$。\n\n由归纳假设 $\\overline G$ 有 $p^{a-1}$ 阶子群 $\\overline P$；\n\n取 $\\pi^{-1}(\\overline P) \\le G$（$\\pi : G \\to \\overline G$ 是自然满同态），其阶为 $|\\overline P| \\cdot |\\langle z\\rangle| = p^{a}$。\n- **情形 B：$p \\nmid |Z(G)|$。** 由类方程$|G| = |Z(G)| + \\sum_i [G : C_G(x_i)]$。\n\n左端被 $p$ 整除、$|Z(G)|$ 不被 $p$ 整除，故存在某个 $i$ 使 $p \\nmid [G : C_G(x_i)]$。\n\n由 $|G| = [G : C_G(x_i)]\\cdot|C_G(x_i)|$ 与 $p^{a} \\mid |G|$ 得 $p^{a} \\mid |C_G(x_i)|$；\n\n又 $x_i$ 非中心故 $C_G(x_i) \\ne G$，于是 $|C_G(x_i)| < |G|$。\n\n对 $C_G(x_i)$ 用归纳假设得 $p^{a}$ 阶子群，它也是 $G$ 的。\n\n（$p^{i}$ 阶子群（$i < a$）由对 $p^{a}$ 阶子群再用一次「$p$-群有 $p^{i}$ 阶子群」的归纳得到。）\n\n**（2）共轭性。** 设 $P, Q$ 是 Sylow $p$-子群，考虑 $P$ 在左陪集集合 $X := G/Q$ 上的作用 $g \\cdot (hQ) := (gh)Q$。\n\n$$\\#X = [G : Q] = m, \\qquad p \\nmid m.$$\n\n由轨道分解 $\\#X = \\sum \\#\\text{轨道}$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。\n\n若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \\mid \\#X = m$，矛盾。\n\n故有不动点 $hQ$：对一切 $g \\in P$ 有 $ghQ = hQ$，即 $h^{-1}Ph \\le Q$。\n\n两端阶相同（都是 $p^{a}$），故 $h^{-1}Ph = Q$：$P$ 与 $Q$ 共轭。\n\n把上面论证中的 $P$ 换成任一 $p$-子群 $R$，同样得到 $h^{-1}Rh \\le Q$：**任何 $p$-子群都含在某个 Sylow 子群中**。\n\n**（3）计数。** 设 $\\mathcal{S}$ 是全体 Sylow $p$-子群的集合。$G$ 共轭作用在 $\\mathcal{S}$ 上（由 (2) 传递）；$P$ 的稳定子是 $N_G(P)$，故\n\n$$n_p = |\\mathcal{S}| = [G : N_G(P)].$$\n\n再由 $P \\le N_G(P)$ 得 $n_p \\mid [G : P] = m$。\n\n最后让 $P$ 共轭作用在 $\\mathcal{S}$ 上：轨道长是 $p$ 的幂，而 $P$ 的不动点只有 $P$ 自己（若 $P$ 固定 $Q$，则 $P \\le N_G(Q)$，于是 $P$ 与 $Q$ 都是 $N_G(Q)$ 的 Sylow 子群，由 (2) 在 $N_G(Q)$ 中共轭；\n\n但 $Q \\trianglelefteq N_G(Q)$ 故只能 $P = Q$）。\n\n于是\n\n$$n_p = 1 + \\sum (\\text{长度 } \\ge 2 \\text{ 的轨道长}) \\equiv 1 \\pmod p$$\n\n∎",
    "note": "⭐ 第二步的论证是整条定理的模板，值得单独记住：**让 $p$-群作用在一个「基数不被 $p$ 整除」的集合上，必有不共点** —— 因为轨道长都是 $p$ 的幂，若都 $\\ge p$ 就整除不了总和。这个「不动点论证」在表示论与代数拓扑里反复出现。"
   },
   {
@@ -90386,6 +90428,48 @@
    "title": "酉算子 $\\implies$ 部分等距",
    "proof": "设 $u$ 是酉算子，即 $u^*u = u\\,u^* = I$。\n$I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等距。$\\blacksquare$",
    "note": "反向不成立：单侧移位是部分等距但不是酉算子（$S\\,S^*$ 不是 $I$）。"
+  },
+  {
+   "id": "def-link.huc-hilbert",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hilbert-space",
+   "usedBy": "thm.hilbert-uniformly-convex",
+   "note": "证明用 Hilbert 空间的内积与由它诱导的范数（平行四边形律）。"
+  },
+  {
+   "id": "def-link.huc-uc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.uniformly-convex",
+   "usedBy": "thm.hilbert-uniformly-convex",
+   "note": "结论按一致凸的定义陈述：$\\delta$ 只依赖 $\\varepsilon$。"
+  },
+  {
+   "id": "imp.riesz-hilbert-pink",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.riesz-perfect-pairing"
+   ],
+   "target": "thm.riesz-hilbert",
+   "layer": false,
+   "title": "配对框架到 Hilbert 版 Riesz 表示（组织性回头边）",
+   "proof": "**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 只给出完美配对框架，并把 Hilbert 内积配对列为实例：三条公理由 Cauchy–Schwarz 与非退化性验证。\n它**不**推出满射性 $H^{*}\\cong H$；满射性由 `thm.riesz-hilbert` 用投影定理/正交分解独立证明。\n因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。",
+   "note": "组织性回头边：配对定理只给框架；满射性仍由投影定理给出，不是从完美配对的三条公理单独推出。"
+  },
+  {
+   "id": "imp.riesz-lp-pink",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.riesz-perfect-pairing"
+   ],
+   "target": "thm.riesz-representation-lp",
+   "layer": false,
+   "title": "配对框架到 $L^p$ 版 Riesz 表示（组织性回头边）",
+   "proof": "**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 把 $(L^{p},L^{q})$ 列为完美配对实例：三条公理由 Hölder 与对偶刻画验证。\n它**不**推出 $(L^{p})^{*}\\cong L^{q}$；满射性由 `thm.riesz-representation-lp` 用 Radon–Nikodym 独立证明。\n因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。",
+   "note": "组织性回头边：配对定理只给框架；满射性仍由 Radon–Nikodym / 对偶刻画给出，不是从完美配对的三条公理单独推出。"
   },
   {
    "id": "imp.fa-baire-characterizations",
@@ -102909,14 +102993,14 @@
   {
    "a": "analysis.lp",
    "b": "fa.norm",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
   {
    "a": "fa.hilbert",
    "b": "fa.norm",
-   "count": 5,
+   "count": 7,
    "label": "",
    "explicit": false
   },

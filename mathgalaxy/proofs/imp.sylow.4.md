@@ -3,7 +3,7 @@
 
 `thm.class-equation` 类方程 + `def.group-action` 群作用 + `thm.orbit-stabilizer` 轨道–稳定子定理 → `thm.sylow` Sylow 定理
 
-若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \mid |X| = m$，矛盾。
+若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \mid \#X = m$，矛盾。
 
 故有不动点 $hQ$：对一切 $g \in P$ 有 $ghQ = hQ$，即 $h^{-1}Ph \le Q$。
 

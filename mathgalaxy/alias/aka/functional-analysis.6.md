@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 可补子空间判别定理 → thm.complemented-subspace-criterion
+
 - 一致等度连续 | 等度连续（一致） → def.uniformly-equicontinuous
 
 - 完美配对 | 完美对偶 → def.perfect-pairing

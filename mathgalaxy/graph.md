@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-11T10:27:10.009Z
-> 15 星系 / 105 星团 / 1620 节点 / 3372 连线（强边 3307，弱边 65；其中**不分层**的「推论」34 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-11T10:41:45.798Z
+> 15 星系 / 105 星团 / 1621 节点 / 3376 连线（强边 3311，弱边 65；其中**不分层**的「推论」36 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -186,7 +186,7 @@ $$\Gamma \vdash \varphi \iff \Gamma \vDash \varphi,$$
 
 **第四步：极大一致扩张。** 引理：每个一致语句集 $\Gamma$ 可扩张为极大一致语句集 $\Gamma^{*}$。证明：取 $\kappa=\max(|\mathcal{L}|,\aleph_0)$（语言 $\mathcal{L}$ 先良序 —— 这一步用选择公理），按序数枚举所有语句 $\{\psi_\alpha:\alpha<\kappa\}$；令 $\Gamma_0=\Gamma$，若 $\Gamma_\alpha\cup\{\psi_\alpha\}$ 一致则 $\Gamma_{\alpha+1}=\Gamma_\alpha\cup\{\psi_\alpha\}$，否则 $\Gamma_{\alpha+1}=\Gamma_\alpha$，极限序数取并；令 $\Gamma^{*}=\bigcup_{\alpha<\kappa}\Gamma_\alpha$。一致性：若 $\Gamma^{*}$ 不一致，则某个证明只用到有限多条假设，它们全在某个 $\Gamma_\alpha$ 中，与 $\Gamma_\alpha$ 一致矛盾。极大性：若 $\psi_\alpha\notin\Gamma^{*}$，则 $\Gamma_\alpha\cup\{\psi_\alpha\}$ 不一致，由推论得 $\Gamma_\alpha\vdash\neg\psi_\alpha$，故 $\Gamma^{*}\vdash\neg\psi_\alpha$。由此：对每个语句恰有 $\psi\in\Gamma^{*}$ 或 $\neg\psi\in\Gamma^{*}$；$\Gamma^{*}$ 对 $\vdash$ 封闭（若 $\Gamma^{*}\vdash\psi$ 而 $\psi\notin\Gamma^{*}$，则 $\neg\psi\in\Gamma^{*}$，与一致性矛盾）；$\Gamma^{*}$ 含全部逻辑公理。
 
-**第五步：Henkin 见证。** 设 $\kappa=\max(|\mathcal{L}|,\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\kappa$ 个新常元 $\{c_\beta:\beta<\kappa\}$ 得 $\mathcal{L}^{+}$，把 $\mathcal{L}^{+}$ 中所有形如 $\exists x\,\theta(x)$ 的语句按序数枚举为 $\{\xi_\alpha:\alpha<\kappa\}$。**按序数超限递归**造 $\Gamma_\alpha$：若 $\Gamma_\alpha\cup\{\xi_\alpha\}$ 一致且 $\xi_\alpha=\exists x\,\theta(x)$，取一个未用过的 $c_\beta$，令 $\Gamma_{\alpha+1}=\Gamma_\alpha\cup\{\theta(c_\beta)\}$；否则 $\Gamma_{\alpha+1}=\Gamma_\alpha$，极限序数取并。
+**第五步：Henkin 见证。** 设 $\kappa=\max(\#(\mathcal{L}),\aleph_0)$（即便语言有限，语句也有可数多个）。添 $\kappa$ 个新常元 $\{c_\beta:\beta<\kappa\}$ 得 $\mathcal{L}^{+}$，把 $\mathcal{L}^{+}$ 中所有形如 $\exists x\,\theta(x)$ 的语句按序数枚举为 $\{\xi_\alpha:\alpha<\kappa\}$。**按序数超限递归**造 $\Gamma_\alpha$：若 $\Gamma_\alpha\cup\{\xi_\alpha\}$ 一致且 $\xi_\alpha=\exists x\,\theta(x)$，取一个未用过的 $c_\beta$，令 $\Gamma_{\alpha+1}=\Gamma_\alpha\cup\{\theta(c_\beta)\}$；否则 $\Gamma_{\alpha+1}=\Gamma_\alpha$，极限序数取并。
 
 各 $\Gamma_\alpha$ 一致（对 $\alpha$ 归纳，极限步用有限特征）：若 $\Gamma_\alpha\cup\{\theta(c_\beta)\}$ 不一致，推论给 $\Gamma_\alpha\vdash\neg\theta(c_\beta)$；$c_\beta$ 不出现在 $\Gamma_\alpha$ 中，把 $c_\beta$ 换成证明中未出现的变元 $y$ 并推广，得 $\Gamma_\alpha\vdash\forall y\,\neg\theta(y)$，再由 (Q1) 与命题逻辑得 $\Gamma_\alpha\vdash\neg\exists x\,\theta(x)$，与「$\Gamma_\alpha\cup\{\xi_\alpha\}$ 一致」矛盾。于是 $\Gamma_\kappa=\bigcup_{\alpha<\kappa}\Gamma_\alpha$ 一致（有限特征），再由第四步扩为极大一致 $\Gamma^{*}$。见证性质：若 $\exists x\,\theta\in\Gamma^{*}$ 且编号为 $\alpha$，则 $\Gamma_\alpha\cup\{\exists x\,\theta\}\subseteq\Gamma^{*}$ 一致，故第 $\alpha$ 步添了 $\theta(c_\beta)$，即 $\theta(c_\beta)\in\Gamma^{*}$。
 
@@ -198,7 +198,7 @@ $$\Gamma \vdash \varphi \iff \Gamma \vDash \varphi,$$
 
 **第八步：收尾。** 第七步给出 $\mathfrak{A}\vDash\Gamma^{*}$，故 $\Gamma$ 有模型。于是对语句：若 $\Gamma\not\vdash\varphi$，则 $\Gamma\cup\{\neg\varphi\}$ 一致（否则推论给 $\Gamma\vdash\varphi$），由第五至七步有模型 $\mathfrak{A}\vDash\Gamma\cup\{\neg\varphi\}$，即 $\Gamma\not\vDash\varphi$。逆否即 $\Gamma\vDash\varphi\implies\Gamma\vdash\varphi$；与第二步合起来即 $\Gamma\vdash\varphi\iff\Gamma\vDash\varphi$。一般公式由第一步化到语句。∎
 
-**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\kappa=\aleph_0$）：取 $\kappa=\max(|\mathcal{L}|,\aleph_0)$，添 $\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\{c_\beta:\beta<\kappa\}$，每步取最小未用 $\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\implies$ 整个理论有模型）由 $\Gamma\vDash\varphi\implies\Gamma\vdash\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。
+**备注**：证明只额外用了标准 Hilbert 公理模式（它们不是本图的节点，但每条都能逐字核验）。上面全程对**任意语言**成立（有限语言取 $\kappa=\aleph_0$）：取 $\kappa=\max(\#(\mathcal{L}),\aleph_0)$，添 $\kappa$ 个新常元、按序数超限递归造极大一致集，所以陈述不受基数的可数性限制。选择公理在这里只用在一处：把 $\mathcal{L}$ 良序、按序数枚举语句；新常元取显式索引 $\{c_\beta:\beta<\kappa\}$，每步取最小未用 $\beta$，不需要 AC。推论：紧致性定理（每个有限子集有模型 $\implies$ 整个理论有模型）由 $\Gamma\vDash\varphi\implies\Gamma\vdash\varphi$ 的有限性立刻得到。⚠ 完备性**不**与 Gödel 不完备性定理矛盾：后者谈的是像 PA/ZFC 这样足够强的**理论**里存在不可判定的句子，不是逻辑本身的完备性。
 
 参考：Enderton, A Mathematical Introduction to Logic, Ch. 2.5；Kunen, Set Theory, Ch. I
 
@@ -1473,7 +1473,7 @@ $\operatorname{dom}$ 只对函数有定义，所以这句说的是「存在函�
 
 $\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$
 
-另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \in F$ 都有 $|C \cap X| = 1$。
+另一种常见形式（两两不交形式）：若 $F$ 是两两不交的非空集合族，则存在集合 $C$，使对每个 $X \in F$ 都有 $\#(C \cap X) = 1$。
 
 选择函数 $f$ 就是「同时挑元素」的工具；AC 断言这种同时挑选永远做得到。
 
@@ -5236,9 +5236,9 @@ $$\partial\operatorname{Sd} = \operatorname{Sd}\partial,\qquad \partial T + T\pa
 
 **第三步：直径收缩。** 设 $\tau \subseteq \Delta^{p}$ 是直径 $\delta$ 的单纯形，$b_{S}$ 表示面 $S$ 的重心。$\operatorname{sd}(\tau)$ 的顶点是某些面 $S_{0} \subset \cdots \subset S_{q}$ 的重心，且对 $S \subset S^{\prime}$ 有
 
-$$b_{S^{\prime}} - b_{S} = \frac{1}{|S^{\prime}|}\sum_{v \in S^{\prime} \setminus S}(v - b_{S}),$$
+$$b_{S^{\prime}} - b_{S} = \frac{1}{\#S^{\prime}}\sum_{v \in S^{\prime} \setminus S}(v - b_{S}),$$
 
-故 $|b_{S^{\prime}} - b_{S}| \le \left(1 - \frac{|S|}{|S^{\prime}|}\right)\delta \le \frac{p}{p+1}\delta$。于是 $\operatorname{mesh}(\operatorname{sd}^{m}\tau) \le (p/(p+1))^{m}\delta$：重分足够多次，小单纯形的直径可以任意小。
+故 $|b_{S^{\prime}} - b_{S}| \le \left(1 - \frac{\#S}{\#S^{\prime}}\right)\delta \le \frac{p}{p+1}\delta$。于是 $\operatorname{mesh}(\operatorname{sd}^{m}\tau) \le (p/(p+1))^{m}\delta$：重分足够多次，小单纯形的直径可以任意小。
 
 **第四步：小链引理。** 包含 $\iota : S^{\mathcal{U}}_{*}(X) \hookrightarrow S_{*}(X)$ 诱导同调同构。
 
@@ -10122,7 +10122,7 @@ $$T^{\ast} : W^{\ast} \to V^{\ast}, \qquad \varphi \longmapsto \varphi \circ T$$
 
 而 $V \cong V^{\ast\ast}$ 有自然同构 $v \mapsto (\varphi \mapsto \varphi(v))$，这是「对偶的对偶回到自己」。
 
-⚠ 无限维时 $V^{\ast}$ 严格大于 $V$：$\dim V^{\ast} = |K|^{\dim V}$ 是 **Erdős–Kaplansky** 的基数定理（依赖 AC；$|V^{\ast}| = |K|^{\dim V}$ 是初等的，但「维数等于这个基数」不是），所以上述同构不成立。
+⚠ 无限维时 $V^{\ast}$ 严格大于 $V$：$\dim V^{\ast} = \#(K)^{\dim V}$ 是 **Erdős–Kaplansky** 的基数定理（依赖 AC；$\#(V^{\ast}) = \#(K)^{\dim V}$ 是初等的，但「维数等于这个基数」不是），所以上述同构不成立。
 
 参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
@@ -14686,7 +14686,7 @@ $$(I - u)^{-1} = \sum_{k=0}^{\infty} u^k , \qquad \|(I - u)^{-1}\| \le \frac{1}{
 
 ⭐ 讲义里那句「不可分 $\implies$ 不能由一个可数集作为代数生成」很值得记：它把「基」的直觉挡在门外 —— $\ell^\infty$ 连可数 Schauder 基都没有（见「Schauder 基」）。
 
-⚠️ 可分性对**连续像**遗传（$D$ 可数稠密 $\implies$ $f(D)$ 在 $f(X)$ 中稠密）；在**度量空间**里对子空间也遗传，但一般拓扑空间不成立（$D$ 不可数、开集全取含 $p$ 的集合时，$X = D \cup \{p\}$ 可分而闭子空间 $D$ 是不可数离散空间）。乘积也不遗传：$\{0,1\}^{I}$（$|I| > 2^{\aleph_0}$）不可分，而 $\mathbb{R}^{\mathbb{R}}$ **反而可分**。
+⚠️ 可分性对**连续像**遗传（$D$ 可数稠密 $\implies$ $f(D)$ 在 $f(X)$ 中稠密）；在**度量空间**里对子空间也遗传，但一般拓扑空间不成立（$D$ 不可数、开集全取含 $p$ 的集合时，$X = D \cup \{p\}$ 可分而闭子空间 $D$ 是不可数离散空间）。乘积也不遗传：$\{0,1\}^{I}$（$\#I > 2^{\aleph_0}$）不可分，而 $\mathbb{R}^{\mathbb{R}}$ **反而可分**。
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
@@ -14712,7 +14712,7 @@ Schauder 基要求的是**级数收敛**，所以可以是可数的；而且 Sch
 
 对任意指标集 $I$，令
 
-$$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 := \sup_{\substack{J \subseteq I \\ |J| < \infty}} \Bigl( \sum_{j \in J} |x_j|^2 \Bigr)^{1/2} < \infty \right\} ,$$
+$$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 := \sup_{\substack{J \subseteq I \\ \#J < \infty}} \Bigl( \sum_{j \in J} |x_j|^2 \Bigr)^{1/2} < \infty \right\} ,$$
 
 内积 $\langle x, y\rangle := \sum_{i \in I} x_i \overline{y_i}$。
 
@@ -15040,6 +15040,27 @@ $$\|x + y\|^2 + \|x - y\|^2 = 2\|x\|^2 + 2\|y\|^2 .$$
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基；Jordan–von Neumann, Ann. of Math. 36 (1935)
 
+#### Hilbert 空间一致凸　`thm.hilbert-uniformly-convex`
+*定理*　Hilbert 空间一致凸（平行四边形律）
+
+设 $H$ 是 Hilbert 空间。则 $H$ **一致凸**：对每个 $\varepsilon \in (0, 2]$，取
+
+$$\delta = 1 - \sqrt{1 - \varepsilon^{2}/4} > 0 ,$$
+
+则当 $\|x\| = \|y\| = 1$、$\|x - y\| \ge \varepsilon$ 时，$\left\|\frac{x + y}{2}\right\| \le 1 - \delta$。
+
+**证明。** 令 $\|x\| = \|y\| = 1$。由平行四边形律，
+
+
+
+$$\|x + y\|^{2} + \|x - y\|^{2} = 2\|x\|^{2} + 2\|y\|^{2} = 4 ,$$
+
+
+
+即 $\left\|\frac{x + y}{2}\right\|^{2} = 1 - \frac{\|x - y\|^{2}}{4}$。当 $\|x - y\| \ge \varepsilon$ 时右端 $\le 1 - \varepsilon^{2}/4$，开方得 $\left\|\frac{x + y}{2}\right\| \le \sqrt{1 - \varepsilon^{2}/4} = 1 - \delta$。$\blacksquare$
+
+参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
+
 #### 凸集　`def.convex-set`
 *定义*　凸集：任意两点的连线不跑出集合
 
@@ -15314,7 +15335,7 @@ Zorn 给极大元 $M$。
 #### 可分 Hilbert 空间等距于 ℓ²　`thm.separable-hilbert-is-l2`
 *定理*　可分 Hilbert 空间等距同构于 $\ell^2$
 
-设 $H$ 是 Hilbert 空间，$\dim H = |I|$（Hilbert 维数）。则 $H$ 等距同构于 $\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\ell^2(\mathbb{N})$。
+设 $H$ 是 Hilbert 空间，$\dim H = \#I$（Hilbert 维数）。则 $H$ 等距同构于 $\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\ell^2(\mathbb{N})$。
 
 映射 $U : H \to \ell^2(I)$，$U(x) := (\langle x, e_i\rangle)_{i \in I}$。
 
@@ -40279,7 +40300,7 @@ $$\left(\frac{q}{p}\right) = (-1)^{\mu} = (-1)^{\sum_{x=1}^{P} \lfloor qx/p \rfl
 
 
 
-**第三步：矩形计数。** 在矩形 $R = \{(x, y) \in \mathbb{Z}^{2} : 1 \le x \le P,\ 1 \le y \le Q\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \mid qx$ 且 $p \nmid q$ 给出 $p \mid x$，但 $1 \le x \le P < p$，矛盾。故 $R$ 分成 $R_{-} = \{qx - py > 0\}$ 与 $R_{+} = \{qx - py < 0\}$ 两部分，$|R| = |R_{-}| + |R_{+}| = PQ$。
+**第三步：矩形计数。** 在矩形 $R = \{(x, y) \in \mathbb{Z}^{2} : 1 \le x \le P,\ 1 \le y \le Q\}$（共 $PQ$ 个整点）里，直线 $qx = py$ 不含任何整点：$p \mid qx$ 且 $p \nmid q$ 给出 $p \mid x$，但 $1 \le x \le P < p$，矛盾。故 $R$ 分成 $R_{-} = \{qx - py > 0\}$ 与 $R_{+} = \{qx - py < 0\}$ 两部分，$\#R = \#R_{-} + \#R_{+} = PQ$。
 
 
 
@@ -49174,11 +49195,11 @@ $$\rho : G \to \operatorname{Sym}(G), \qquad g \mapsto (h \mapsto gh).$$
 
 **（2）共轭性。** 设 $P, Q$ 是 Sylow $p$-子群，考虑 $P$ 在左陪集集合 $X := G/Q$ 上的作用 $g \cdot (hQ) := (gh)Q$。
 
-$$|X| = [G : Q] = m, \qquad p \nmid m.$$
+$$\#X = [G : Q] = m, \qquad p \nmid m.$$
 
-由轨道分解 $|X| = \sum |\text{轨道}|$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。
+由轨道分解 $\#X = \sum \#\text{轨道}$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。
 
-若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \mid |X| = m$，矛盾。
+若**没有**不动点，则每个轨道长都被 $p$ 整除，于是 $p \mid \#X = m$，矛盾。
 
 故有不动点 $hQ$：对一切 $g \in P$ 有 $ghQ = hQ$，即 $h^{-1}Ph \le Q$。
 
@@ -59498,6 +59519,32 @@ $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等
 
 > 反向不成立：单侧移位是部分等距但不是酉算子（$S\,S^*$ 不是 $I$）。
 
+#### 定义引用：「Hilbert 空间」→ Hilbert 空间一致凸　`def-link.huc-hilbert`
+
+证明用 Hilbert 空间的内积与由它诱导的范数（平行四边形律）。
+
+#### 定义引用：「一致凸」→ Hilbert 空间一致凸　`def-link.huc-uc`
+
+结论按一致凸的定义陈述：$\delta$ 只依赖 $\varepsilon$。
+
+#### Riesz 表示的配对版 ⟹ Riesz 表示（Hilbert）　`imp.riesz-hilbert-pink`
+*配对框架到 Hilbert 版 Riesz 表示（组织性回头边）*
+
+**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 只给出完美配对框架，并把 Hilbert 内积配对列为实例：三条公理由 Cauchy–Schwarz 与非退化性验证。
+它**不**推出满射性 $H^{*}\cong H$；满射性由 `thm.riesz-hilbert` 用投影定理/正交分解独立证明。
+因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。
+
+> 组织性回头边：配对定理只给框架；满射性仍由投影定理给出，不是从完美配对的三条公理单独推出。
+
+#### Riesz 表示的配对版 ⟹ Riesz 表示定理　`imp.riesz-lp-pink`
+*配对框架到 $L^p$ 版 Riesz 表示（组织性回头边）*
+
+**组织性说明（非推导）。** `thm.riesz-perfect-pairing` 把 $(L^{p},L^{q})$ 列为完美配对实例：三条公理由 Hölder 与对偶刻画验证。
+它**不**推出 $(L^{p})^{*}\cong L^{q}$；满射性由 `thm.riesz-representation-lp` 用 Radon–Nikodym 独立证明。
+因此这条边表达「框架到实例」的回头关系（便于从框架跳到具体定理），不是从完美配对的三条公理单独推出满射，故 `layer: false`。
+
+> 组织性回头边：配对定理只给框架；满射性仍由 Radon–Nikodym / 对偶刻画给出，不是从完美配对的三条公理单独推出。
+
 #### Baire 纲定理 ⟹ Baire 的三条等价刻画　`imp.fa-baire-characterizations`
 *Baire 的三种说法等价*
 
@@ -65772,8 +65819,8 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **丛的示性类 ↔ 活动标架与结构方程**　2 条节点级连线
 - **丛的示性类 ↔ 微分形式、积分与 de Rham**　2 条节点级连线
 - **线性映射与秩 ↔ 赋范空间与有界算子**　6 条节点级连线
-- **L^p 空间 ↔ 赋范空间与有界算子**　5 条节点级连线
-- **Hilbert 空间 ↔ 赋范空间与有界算子**　5 条节点级连线
+- **L^p 空间 ↔ 赋范空间与有界算子**　6 条节点级连线
+- **Hilbert 空间 ↔ 赋范空间与有界算子**　7 条节点级连线
 - **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **Baire 纲与三大定理 ↔ 赋范空间与有界算子**　3 条节点级连线
 - **内积空间与正交性 ↔ Hilbert 空间**　10 条节点级连线

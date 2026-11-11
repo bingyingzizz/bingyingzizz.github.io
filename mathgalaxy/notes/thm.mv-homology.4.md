@@ -1,7 +1,7 @@
 # Mayer–Vietoris（同调）　`thm.mv-homology`　·　说明
 根 `../`
 
-故 $|b_{S^{\prime}} - b_{S}| \le \left(1 - \frac{|S|}{|S^{\prime}|}\right)\delta \le \frac{p}{p+1}\delta$。于是 $\operatorname{mesh}(\operatorname{sd}^{m}\tau) \le (p/(p+1))^{m}\delta$：重分足够多次，小单纯形的直径可以任意小。
+故 $|b_{S^{\prime}} - b_{S}| \le \left(1 - \frac{\#S}{\#S^{\prime}}\right)\delta \le \frac{p}{p+1}\delta$。于是 $\operatorname{mesh}(\operatorname{sd}^{m}\tau) \le (p/(p+1))^{m}\delta$：重分足够多次，小单纯形的直径可以任意小。
 
 **第四步：小链引理。** 包含 $\iota : S^{\mathcal{U}}_{*}(X) \hookrightarrow S_{*}(X)$ 诱导同调同构。
 

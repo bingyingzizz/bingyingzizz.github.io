@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- Bessel 不等式 | Parseval 等式 | 贝塞尔不等式 | 帕塞瓦尔等式 → thm.bessel-parseval
+
 - 正交基存在 | Zorn 正交基 → thm.orthonormal-basis-exists
 
 - 可分 Hilbert | Hilbert 空间同构 | l2 唯一 → thm.separable-hilbert-is-l2
@@ -22,7 +24,5 @@
 - 闭覆盖 | 内点之并稠密 → lem.countable-closed-cover
 
 - 连续点集 | Baire-Osgood | 逐点极限连续点 → thm.pointwise-limit-continuity
-
-- 共鸣定理 | 共振定理 | Banach-Steinhaus | Banach-Steinhaus 定理 | 一致有界 | 一致有界定理 | 一致有界性原理 | 共鸣 | uniform boundedness | Banach Steinhaus | 一致有界原理 | UBP → thm.ubp
 
 > 续见 alias/aka/functional-analysis.4.md

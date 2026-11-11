@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 共鸣定理 | 共振定理 | Banach-Steinhaus | Banach-Steinhaus 定理 | 一致有界 | 一致有界定理 | 一致有界性原理 | 共鸣 | uniform boundedness | Banach Steinhaus | 一致有界原理 | UBP → thm.ubp
+
 - 共振集 | 共鸣集 | 发散点稠密 → cor.ubp-resonance
 
 - 开映射定理（线性） | 巴拿赫开映射定理 | 开映射（线性算子） | open mapping for operators → thm.open-mapping-banach
@@ -20,7 +22,5 @@
 - 广义 Arzela-Ascoli | 阿尔泽拉-阿斯科利 | Arzela-Ascoli（一般版） → thm.arzela-ascoli-general
 
 - 分离点 | 子代数 | 格子代数 → def.subalgebra-separating
-
-- 闭子代数是格 | 格子代数引理 → lem.closed-subalgebra-lattice
 
 > 续见 alias/aka/functional-analysis.5.md

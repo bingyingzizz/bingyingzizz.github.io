@@ -5,7 +5,7 @@ layer 15 · 定义 · 赋范空间与有界算子 · 泛函分析
 
 对任意指标集 $I$，令
 
-$$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 := \sup_{\substack{J \subseteq I \\ |J| < \infty}} \Bigl( \sum_{j \in J} |x_j|^2 \Bigr)^{1/2} < \infty \right\} ,$$
+$$\ell^2(I) := \left\{ x = (x_i)_{i \in I} \subseteq \mathbb{K} \ : \ \|x\|_2 := \sup_{\substack{J \subseteq I \\ \#J < \infty}} \Bigl( \sum_{j \in J} |x_j|^2 \Bigr)^{1/2} < \infty \right\} ,$$
 
 内积 $\langle x, y\rangle := \sum_{i \in I} x_i \overline{y_i}$。
 

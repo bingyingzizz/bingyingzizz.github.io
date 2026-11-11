@@ -9,6 +9,6 @@ $$\partial\operatorname{Sd} = \operatorname{Sd}\partial,\qquad \partial T + T\pa
 
 **第三步：直径收缩。** 设 $\tau \subseteq \Delta^{p}$ 是直径 $\delta$ 的单纯形，$b_{S}$ 表示面 $S$ 的重心。$\operatorname{sd}(\tau)$ 的顶点是某些面 $S_{0} \subset \cdots \subset S_{q}$ 的重心，且对 $S \subset S^{\prime}$ 有
 
-$$b_{S^{\prime}} - b_{S} = \frac{1}{|S^{\prime}|}\sum_{v \in S^{\prime} \setminus S}(v - b_{S}),$$
+$$b_{S^{\prime}} - b_{S} = \frac{1}{\#S^{\prime}}\sum_{v \in S^{\prime} \setminus S}(v - b_{S}),$$
 
 > 续见 notes/thm.mv-homology.4.md

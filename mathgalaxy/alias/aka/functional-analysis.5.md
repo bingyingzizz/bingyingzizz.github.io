@@ -1,6 +1,8 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 闭子代数是格 | 格子代数引理 → lem.closed-subalgebra-lattice
+
 - Stone-Weierstrass | 斯通-魏尔斯特拉斯 | Weierstrass 逼近定理 | 斯通–魏尔斯特拉斯定理 | 史东-魏尔斯特拉斯定理 | 史东 | 斯通-魏尔斯特拉斯定理 → thm.stone-weierstrass
 
 - 复 Stone-Weierstrass | 圆盘代数 → thm.stone-weierstrass-complex
@@ -24,7 +26,5 @@
 - Lax-Milgram 定理 | 拉克斯-米尔格拉姆定理 → thm.lax-milgram
 
 - 可补子空间 | 拓扑可补子空间 → def.complemented-subspace
-
-- 可补子空间判别定理 → thm.complemented-subspace-criterion
 
 > 续见 alias/aka/functional-analysis.6.md

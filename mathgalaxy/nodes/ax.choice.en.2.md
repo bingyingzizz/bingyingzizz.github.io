@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=ax.choice)　·　[Chinese page (authoritative)](./ax.choice.md)
 
-Another common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint non-empty sets, then there is a set $C$ with $|C \cap X| = 1$ for every $X \in F$.
+Another common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint non-empty sets, then there is a set $C$ with $\#(C \cap X) = 1$ for every $X \in F$.
 
 The choice function $f$ is the device for "picking all at once"; AC asserts that such a simultaneous choice is always possible.
 

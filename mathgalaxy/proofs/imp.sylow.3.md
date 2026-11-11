@@ -9,8 +9,8 @@
 
 **（2）共轭性。** 设 $P, Q$ 是 Sylow $p$-子群，考虑 $P$ 在左陪集集合 $X := G/Q$ 上的作用 $g \cdot (hQ) := (gh)Q$。
 
-$$|X| = [G : Q] = m, \qquad p \nmid m.$$
+$$\#X = [G : Q] = m, \qquad p \nmid m.$$
 
-由轨道分解 $|X| = \sum |\text{轨道}|$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。
+由轨道分解 $\#X = \sum \#\text{轨道}$，每个轨道长 $= [P : P_{hQ}]$ 是 $p$ 的幂。
 
 > 续见 proofs/imp.sylow.4.md

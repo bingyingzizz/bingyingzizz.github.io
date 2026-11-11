@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.milman-pettis`](../nodes/thm.milman-pettis.md) Milman–Pettis 定理 用
+- 被 [`thm.hilbert-uniformly-convex`](../nodes/thm.hilbert-uniformly-convex.md) Hilbert 空间一致凸 用

@@ -13,6 +13,8 @@
 
 - 平行四边形法则 | Jordan-von Neumann | 内积判别 → thm.parallelogram-inner-product
 
+- Hilbert 空间一致凸 | 希尔伯特空间一致凸 | 一致凸 Hilbert 空间 → thm.hilbert-uniformly-convex
+
 - 最近点 | 变分不等式 | 凸投影 → thm.projection-convex
 
 - 正交投影 | 正交分解 | 正交补分解 → thm.projection-subspace
@@ -26,7 +28,5 @@
 - 部分等距 | partial isometry → def.partial-isometry
 
 - 正交基 | 标准正交集 | 完备正交集 → def.orthonormal-set
-
-- Bessel 不等式 | Parseval 等式 | 贝塞尔不等式 | 帕塞瓦尔等式 → thm.bessel-parseval
 
 > 续见 alias/aka/functional-analysis.3.md
