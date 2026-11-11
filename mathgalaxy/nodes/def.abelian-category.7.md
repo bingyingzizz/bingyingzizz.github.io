@@ -1,9 +1,13 @@
-# 加法 / 阿贝尔范畴　`def.abelian-category`　·　续页（第 7 页）
+# 阿贝尔范畴　`def.abelian-category`　·　续页（第 7 页）
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)　·　上一页 [nodes/def.abelian-category.6.md](./def.abelian-category.6.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构：用到了定义 单态射 / 满态射 / 同构　[proofs/def-dep.mono-abelian.md](../proofs/def-dep.mono-abelian.md)
-- [`def.image`](../nodes/def.image.md) 像 / 余像：用到了定义 像 / 余像　[proofs/def-dep.image-abelian.md](../proofs/def-dep.image-abelian.md)
-- [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.complex-abelian.md](../proofs/def-dep.complex-abelian.md)
+## 它能推出什么 / 谁在用它（续）
+- 被 [`lem.solid-completion-criterion`](../nodes/lem.solid-completion-criterion.md) 完备化判据 用
+- 被 [`prop.mitchell-exactness`](../nodes/prop.mitchell-exactness.md) 嵌入定理的细化 用
+- 被 [`def.exact-couple`](../nodes/def.exact-couple.md) 正合偶 用
+- ～弱边 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4*
+- 被 [`prop.zero-object-final-criterion`](../nodes/prop.zero-object-final-criterion.md) 零对象与终对象 用
+- 被 [`prop.biproduct-is-product`](../nodes/prop.biproduct-is-product.md) 直和就是积 用
+- 被 [`prop.hom-enrichment-unique`](../nodes/prop.hom-enrichment-unique.md) 预加性结构唯一 用
 
 > 续见 [nodes/def.abelian-category.8.md](./def.abelian-category.8.md)

@@ -8,7 +8,7 @@
 - 被 [`def.effective-equivalence`](../nodes/def.effective-equivalence.md) 有效等价关系 用
 - 被 [`def.quasi-separated`](../nodes/def.quasi-separated.md) 拟分离对象 用
 - 被 [`def.mapping-cone`](../nodes/def.mapping-cone.md) 映射锥 用
-- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴 用
+- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 用
 - 被 [`prop.cgwh-fiber-product`](../nodes/prop.cgwh-fiber-product.md) 紧块的纤维积还是紧的 用
 
 > 续见 [nodes/def.fibered-product.5.md](./def.fibered-product.5.md)

@@ -5,7 +5,7 @@
 - 被 [`def.boundary`](../nodes/def.boundary.md) 边缘 用
 - 被 [`prop.image-kernel-cokernel`](../nodes/prop.image-kernel-cokernel.md) 像就是余核的核 用
 - 被 [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解 用
-- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴 用
+- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 用
 - 被 [`thm.five-lemma`](../nodes/thm.five-lemma.md) 五引理 用
 - 被 [`def.strict-morphism`](../nodes/def.strict-morphism.md) 严格态射 用
 - 被 [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列 用

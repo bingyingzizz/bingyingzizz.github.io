@@ -1,10 +1,7 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-## Notes · **stale**
-In an abelian category one says **injective / surjective** rather than monomorphism / epimorphism — because condition 1 guarantees that "regular" and "cancellable" are the same thing.
-
-Examples: $A\text{-}\mathbf{Mod}$ is abelian; so is $\mathbf{Ab}(\mathcal{T})$ for a topos; so is $\mathbf{AbCHaus}$. But $\mathbf{AbTop}$ is **not** (the identity map $\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ is not strict), and neither is $\mathbf{AbHaus}$.
+An abelian category is the **working environment** of homological algebra as a whole: with kernels and cokernels one can even state "exact sequence"; an additive category only supplies the additive skeleton (zero object and direct sums).**Which of the four is the real axiom, and which are its consequences** (they are usually listed side by side, but condition 4 is the weakest and behaves most like an axiom, while the first three each cost something):
 
 > continued in nodes/def.abelian-category.en.8.md

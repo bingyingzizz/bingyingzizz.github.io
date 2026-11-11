@@ -1,9 +1,8 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-- (1) $\implies$ (2): **one kernel-plus-cokernel diagram chase.** $i : N \rightarrowtail M$ identifies $N$ with $\ker(M \to \operatorname{coker} i)$; this uses only the preabelian fact that a monomorphism is its own kernel — **no assumption beyond the additive structure**.
-- (2) $\implies$ (1): **almost free in reverse** ($N$ being isomorphic to the kernel of a cokernel simply says $i$ is a kernel, i.e. regular).
-- (1) $\iff$ (3): **this step needs kernels and cokernels** (i.e. preabelian). Factor $f = M \to N$ as $M \twoheadrightarrow \operatorname{im} f \rightarrowtail N$; "the epimorphism half is regular" i
+⚠ Uniqueness holds **up to isomorphism** — the word matters: the factorisation is not strict, since one image can have different representatives.
+- (1) $\iff$ (4): **the most "algebraic" one** (Abel's original form): $\ker(N \to \operatorname{coker} f) \cong \operatorname{coker}(\ker f \to M)$. It is equivalent to "the first isomorphism theorem holds in the category", and needs **kernels and cokernels to exist** plus **regularity of mono/epi**.
 
 > continued in nodes/def.abelian-category.en.10.md

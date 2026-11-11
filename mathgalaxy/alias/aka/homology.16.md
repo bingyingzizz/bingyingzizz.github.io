@@ -31,10 +31,12 @@
 
 - 平坦维数 → def.flat-dimension
 
+- 预加法范畴 | Ab-范畴 | Ab-category → def.pre-additive-category
+
+- 加法范畴 → def.additive-category
+
+- 预阿贝尔范畴 → def.pre-abelian-category
+
 - 软层 → def.soft-sheaf
-
-- Godement 消解 | 戈德门消解 | 松弛层消解 → def.godement-resolution
-
-- 松弛层 | flasque sheaf | 软弛层 → def.flabby-sheaf
 
 > 续见 alias/aka/homology.17.md

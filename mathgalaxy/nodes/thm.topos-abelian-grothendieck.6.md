@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.generator`](../nodes/def.generator.md) 生成元集：用到了定义 生成元集　[proofs/def-dep.generator-topos-ab.md](../proofs/def-dep.generator-topos-ab.md)
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴：用到了定义 加法 / 阿贝尔范畴　[proofs/def-dep.abeliancat-topos-ab.md](../proofs/def-dep.abeliancat-topos-ab.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-dep.abeliancat-topos-ab.md](../proofs/def-dep.abeliancat-topos-ab.md)

@@ -9,7 +9,7 @@
 - 被 [`def.regular-epi`](../nodes/def.regular-epi.md) 正则满态射 用
 - 被 [`def.effective-equivalence`](../nodes/def.effective-equivalence.md) 有效等价关系 用
 - 被 [`def.cohomology`](../nodes/def.cohomology.md) 同调 用
-- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴 用
+- 被 [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 用
 - 被 [`prop.limit-construction`](../nodes/prop.limit-construction.md) 极限的构造 用
 
 > 续见 [nodes/def.equalizer.4.md](./def.equalizer.4.md)

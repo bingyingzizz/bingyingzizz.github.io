@@ -1,10 +1,10 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-1. every monomorphism is regular (dually, every epimorphism is regular);
-2. if $i : N \rightarrowtail M$ is a monomorphism, then $N \cong \ker\bigl(M \twoheadrightarrow \operatorname{coker}(i)\bigr)$ (and dually);
-3. every morphism factors (uniquely up to isomorphism) as an epimorphism followed by a monomorphism;
-4. for every $f : M \to N$, $\ker\bigl(N \to \operatorname{coker} f\bigr) \cong \operatorname{coker}\bigl(\ker f \to M\bigr)$.
+## Notes · **stale**
+In an abelian category one says **injective / surjective** rather than monomorphism / epimorphism — because condition 1 guarantees that "regular" and "cancellable" are the same thing.
+
+Examples: $A\text{-}\mathbf{Mod}$ is abelian; so is $\mathbf{Ab}(\mathcal{T})$ for a topos; so is $\mathbf{AbCHaus}$. But $\mathbf{AbTop}$ is **not** (the identity map $\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ is not strict), and neither is $\mathbf{AbHaus}$.
 
 > continued in nodes/def.abelian-category.en.7.md

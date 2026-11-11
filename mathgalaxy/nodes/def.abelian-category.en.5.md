@@ -1,9 +1,10 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-ect sums (equivalently: all finite products exist, or all finite coproducts exist — in which case both exist and agree);
-- A **preabelian category** is an additive category in which every morphism has a kernel and a cokernel (equivalently: all finite limits and finite colimits exist);
-- An **abelian category** is a preabelian category satisfying one of the following **equivalent** conditions:
+1. every monomorphism is regular (dually, every epimorphism is regular);
+2. if $i : N \rightarrowtail M$ is a monomorphism, then $N \cong \ker\bigl(M \twoheadrightarrow \operatorname{coker}(i)\bigr)$ (and dually);
+3. every morphism factors (uniquely up to isomorphism) as an epimorphism followed by a monomorphism;
+4. for every $f : M \to N$, $\ker\bigl(N \to \operatorname{coker} f\bigr) \cong \operatorname{coker}\bigl(\ker f \to M\bigr)$.
 
 > continued in nodes/def.abelian-category.en.6.md

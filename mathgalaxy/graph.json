@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-10T15:21:56.476Z",
+  "generated": "2026-11-11T04:24:16.432Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1608,
-   "edges": 3329,
-   "strong": 3274,
+   "nodes": 1611,
+   "edges": 3335,
+   "strong": 3280,
    "weak": 55,
    "derived": 33,
-   "en_pages": 1608
+   "en_pages": 1611
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -117,7 +117,7 @@
    "en": "Homological Algebra",
    "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
    "color": "#C89A2B",
-   "nodeCount": 229
+   "nodeCount": 232
   },
   {
    "id": "condensed",
@@ -1642,11 +1642,14 @@
    "en": "Additive and Abelian Categories",
    "parent": "homology",
    "desc": "造出做同调代数的场地：预加法 / 加法范畴 → 预阿贝尔 → 阿贝尔范畴 → AB 公理 → Grothendieck 范畴。",
-   "nodeCount": 29,
+   "nodeCount": 32,
    "nodes": [
     "prop.mitchell-exactness",
     "def.ab-axioms",
     "def.grothendieck-category",
+    "def.pre-additive-category",
+    "def.additive-category",
+    "def.pre-abelian-category",
     "def.abelian-category",
     "thm.freyd-mitchell",
     "thm.snake-lemma",
@@ -51616,14 +51619,134 @@
    ]
   },
   {
+   "id": "def.pre-additive-category",
+   "type": "definition",
+   "label": "预加法范畴",
+   "title": "预加法范畴（Ab-范畴）",
+   "label_en": "Ab-category",
+   "title_en": "pre-additive category",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.pre-additive-category.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 8,
+   "tags": [
+    "同调代数",
+    "范畴论",
+    "预加法范畴"
+   ],
+   "statement": "**预加法范畴**（也叫 $\\mathbf{Ab}$-范畴）是这样一个范畴 $\\mathcal{C}$：对每对对象 $M, N$，态射集 $\\operatorname{Hom}_{\\mathcal{C}}(M, N)$ 带有**阿贝尔群**结构，并且复合映射\n\n$$\\operatorname{Hom}(M, N) \\times \\operatorname{Hom}(N, P) \\longrightarrow \\operatorname{Hom}(M, P)$$\n\n是**双线性**的（固定一个变量时，对另一个变量加性）。",
+   "notes": "等价说法：$\\operatorname{Hom}$ 函子 $\\mathcal{C}^{\\mathrm{op}} \\times \\mathcal{C} \\to \\mathbf{Ab}$ 存在，且遗忘函子 $\\mathbf{Ab} \\to \\mathbf{Set}$ 之后就是通常的 Hom 函子。\n\n因此每个 $\\operatorname{Hom}(M, N)$ 都有零元，这个零元就是**零态射** $0 : M \\to N$；零态射与任何态射复合仍为零态射。\n\n例：$A\\text{-}\\mathbf{Mod}$、$\\mathbf{Ab}$、$K\\text{-}\\mathbf{Vect}$ 都是预加法范畴。反例：$\\mathbf{Set}$ 的 Hom 集通常没有群结构。\n\n⚠️ 预加法**不要求**零对象与直和；加上这两样才叫加法范畴（见 `def.additive-category`）。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §5.1"
+   ]
+  },
+  {
+   "id": "def.additive-category",
+   "type": "definition",
+   "label": "加法范畴",
+   "title": "加法范畴",
+   "label_en": "additive category",
+   "title_en": "additive category",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.additive-category.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 14,
+   "tags": [
+    "同调代数",
+    "范畴论",
+    "加法范畴"
+   ],
+   "statement": "**加法范畴**是满足以下两条的预加法范畴：\n\n1. 有**零对象**（$\\operatorname{End}(M) = 1$，即 $1_{M} = 0_{M}$ 的对象，见 `def.zero-object`）；\n2. 任意两个对象有**直和** $M = M_{1} \\oplus M_{2}$：存在态射 $p_{k} : M \\to M_{k}$、$i_{k} : M_{k} \\to M$ 使 $p_{1} i_{1} = 1_{M_{1}}$、$p_{2} i_{2} = 1_{M_{2}}$、$i_{1} p_{1} + i_{2} p_{2} = 1_{M}$。\n\n等价地：加法范畴是「有限积与有限余积都存在、且二者重合（双积）」的预加法范畴。",
+   "notes": "直和与直积在加法范畴里是同一个对象（**双积**）：$M_{1} \\oplus M_{2}$ 同时带积的投影与余积的含入，且满足上面的三条等式。\n\n例：$A\\text{-}\\mathbf{Mod}$、$\\mathbf{Ab}$、复形范畴 $\\mathcal{C}(\\mathcal{C})$（逐项取直和）都是加法范畴。\n\n⚠️ 加法范畴只提供「加」与「直和」；要谈核、余核与正合列，还需要预阿贝尔（见 `def.pre-abelian-category`）。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §5.1"
+   ]
+  },
+  {
+   "id": "def.pre-abelian-category",
+   "type": "definition",
+   "label": "预阿贝尔范畴",
+   "title": "预阿贝尔范畴",
+   "label_en": "pre-abelian cat",
+   "title_en": "pre-abelian category",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.pre-abelian-category.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.ab",
+   "layer": 15,
+   "tags": [
+    "同调代数",
+    "范畴论",
+    "预阿贝尔范畴"
+   ],
+   "statement": "**预阿贝尔范畴**是每个态射都有**核**与**余核**的加法范畴（核与余核的定义见 `def.kernel-cokernel`）。\n\n等价地：预阿贝尔范畴是「所有有限极限与所有有限余极限都存在」的加法范畴。",
+   "notes": "核与余核都存在，就可以谈「正合列」；但预阿贝尔**不**保证「余像 $\\to$ 像」是同构 —— 这正是预阿贝尔与阿贝尔的分界。\n\n例：$\\mathbf{PreAb}$（预阿贝尔群范畴）、带滤过的向量空间范畴是预阿贝尔但非阿贝尔。\n\n加上四条等价条件中的任意一条（每个单态射正则、像分解唯一、$\\ker(\\operatorname{coker} f) \\cong \\operatorname{coker}(\\ker f)$ 等）就得到阿贝尔范畴，见 `def.abelian-category`。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §5.2"
+   ]
+  },
+  {
    "id": "def.abelian-category",
    "type": "definition",
-   "label": "加法 / 阿贝尔范畴",
-   "title": "加法范畴与阿贝尔范畴",
-   "label_en": "additive and abelian categories",
-   "title_en": "additive and abelian categories",
+   "label": "阿贝尔范畴",
+   "title": "阿贝尔范畴",
+   "label_en": "abelian category",
+   "title_en": "abelian category",
    "abstract_en": "The ladder of definitions runs $\\text{preadditive} \\to \\text{zero object} \\to \\text{direct sums} \\to \\text{additive} \\to \\text{preabelian} \\to \\text{abelian}$, where preadditive means $\\mathbf{Ab}$-enriched with bilinear composition, preabelian means that kernels and cokernels exist, and abelian means any one of four equivalent conditions: every monomorphism is regular; $N \\cong \\ker(M \\to \\operatorname{coker} i)$ for $i : N \\rightarrowtail M$; every map factors uniquely as an epimorphism followed by a monomorphism; $\\ker(N \\to \\operatorname{coker} f) \\cong \\operatorname{coker}(\\ker f \\to M)$. Abelian categories are the working environment of homological algebra — exactness needs kernels and cokernels. $A\\text{-}\\mathbf{Mod}$ and $\\mathbf{Ab}(\\mathcal{T})$ for a topos are abelian; $\\mathbf{AbTop}$ is not.",
-   "statement_en": "- A **preadditive category** (an $\\mathbf{Ab}$-category) is a category in which every $\\operatorname{Hom}$ set carries an abelian group structure and composition is bilinear;\n- A **zero object** is an object with $\\operatorname{End}(M) = 1$ (that is, $1_{M} = 0_{M}$); an object $M$ is the **direct sum** $M = M_{1} \\oplus M_{2}$ of $M_{1}, M_{2}$ if there are $p_{k} : M \\to M_{k}$, $i_{k} : M_{k} \\to M$ with $p_{1} i_{1} = 1$, $p_{2} i_{2} = 1$, $i_{1} p_{1} + i_{2} p_{2} = 1_{M}$;\n- An **additive category** is a preadditive category with a zero object and all direct sums (equivalently: all finite products exist, or all finite coproducts exist — in which case both exist and agree);\n- A **preabelian category** is an additive category in which every morphism has a kernel and a cokernel (equivalently: all finite limits and finite colimits exist);\n- An **abelian category** is a preabelian category satisfying one of the following **equivalent** conditions:\n\n1. every monomorphism is regular (dually, every epimorphism is regular);\n2. if $i : N \\rightarrowtail M$ is a monomorphism, then $N \\cong \\ker\\bigl(M \\twoheadrightarrow \\operatorname{coker}(i)\\bigr)$ (and dually);\n3. every morphism factors (uniquely up to isomorphism) as an epimorphism followed by a monomorphism;\n4. for every $f : M \\to N$, $\\ker\\bigl(N \\to \\operatorname{coker} f\\bigr) \\cong \\operatorname{coker}\\bigl(\\ker f \\to M\\bigr)$.",
+   "statement_en": "An **abelian category** is a **preabelian category** satisfying one of the following **equivalent** conditions (for preadditive, additive and preabelian categories see `def.pre-additive-category`, `def.additive-category`, `def.pre-abelian-category`):\n\n1. every monomorphism is regular (dually, every epimorphism is regular);\n2. if $i : N \\rightarrowtail M$ is a monomorphism, then $N \\cong \\ker\\bigl(M \\twoheadrightarrow \\operatorname{coker}(i)\\bigr)$ (and dually);\n3. every morphism factors (uniquely up to isomorphism) as an epimorphism followed by a monomorphism;\n4. for every $f : M \\to N$, $\\ker\\bigl(N \\to \\operatorname{coker} f\\bigr) \\cong \\operatorname{coker}\\bigl(\\ker f \\to M\\bigr)$.",
    "notes_en": "In an abelian category one says **injective / surjective** rather than monomorphism / epimorphism — because condition 1 guarantees that \"regular\" and \"cancellable\" are the same thing.\n\nExamples: $A\\text{-}\\mathbf{Mod}$ is abelian; so is $\\mathbf{Ab}(\\mathcal{T})$ for a topos; so is $\\mathbf{AbCHaus}$. But $\\mathbf{AbTop}$ is **not** (the identity map $\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ is not strict), and neither is $\\mathbf{AbHaus}$.\n\nAn abelian category is the **working environment** of homological algebra as a whole: with kernels and cokernels one can even state \"exact sequence\"; an additive category only supplies the additive skeleton (zero object and direct sums).**Which of the four is the real axiom, and which are its consequences** (they are usually listed side by side, but condition 4 is the weakest and behaves most like an axiom, while the first three each cost something):\n\n- (1) $\\implies$ (2): **one kernel-plus-cokernel diagram chase.** $i : N \\rightarrowtail M$ identifies $N$ with $\\ker(M \\to \\operatorname{coker} i)$; this uses only the preabelian fact that a monomorphism is its own kernel — **no assumption beyond the additive structure**.\n- (2) $\\implies$ (1): **almost free in reverse** ($N$ being isomorphic to the kernel of a cokernel simply says $i$ is a kernel, i.e. regular).\n- (1) $\\iff$ (3): **this step needs kernels and cokernels** (i.e. preabelian). Factor $f = M \\to N$ as $M \\twoheadrightarrow \\operatorname{im} f \\rightarrowtail N$; \"the epimorphism half is regular\" is exactly (1). ⚠ Uniqueness holds **up to isomorphism** — the word matters: the factorisation is not strict, since one image can have different representatives.\n- (1) $\\iff$ (4): **the most \"algebraic\" one** (Abel's original form): $\\ker(N \\to \\operatorname{coker} f) \\cong \\operatorname{coker}(\\ker f \\to M)$. It is equivalent to \"the first isomorphism theorem holds in the category\", and needs **kernels and cokernels to exist** plus **regularity of mono/epi**.\n\n⚠ **Preabelian $\\ne$ abelian — the point**: preabelian asks only that kernels and cokernels exist; any one of (1)–(4) can **fail**. The standard counterexamples are $\\mathbf{PreAb}$ (preabelian groups) or filtered vector spaces, where an epimorphism need not be a cokernel and a monomorphism need not be a kernel. So **abelian = preabelian + (any one of the equivalent conditions)**, and that last clause cannot be dropped.\n\n⚠ **Two more traps**: in the definition of \"additive category\", \"all direct sums\" and \"all finite products\" agree only **given preadditivity** (in a general category finite products and finite coproducts need not coincide); and \"all finite limits and colimits\" is the phrasing attached to (2), which does **not** imply abelianness ($\\mathbf{Set}$ has finite limits and coproducts yet is far from abelian) — the difference lies in disjointness, universality and effectiveness.",
    "translations": {
     "en": {
@@ -51642,12 +51765,13 @@
      ],
      "fieldStatus": {
       "abstract": "stale",
-      "statement": "reviewed",
+      "statement": "stale",
       "notes": "stale",
       "name": "derived"
      },
      "staleFields": [
       "abstract",
+      "statement",
       "notes"
      ],
      "basedOn": {
@@ -51666,10 +51790,9 @@
    "layer": 16,
    "tags": [
     "同调代数",
-    "阿贝尔范畴",
-    "加法范畴"
+    "阿贝尔范畴"
    ],
-   "statement": "- **预加法范畴**（$\\mathbf{Ab}$-范畴）是每个 $\\operatorname{Hom}$ 集都带有阿贝尔群结构、且复合双线性的范畴；\n- **零对象**是 $\\operatorname{End}(M) = 1$（即 $1_{M} = 0_{M}$）的对象；对象 $M$ 是 $M_{1}, M_{2}$ 的**直和** $M = M_{1} \\oplus M_{2}$，如果存在 $p_{k} : M \\to M_{k}$、$i_{k} : M_{k} \\to M$ 使 $p_{1} i_{1} = 1$、$p_{2} i_{2} = 1$、$i_{1} p_{1} + i_{2} p_{2} = 1_{M}$；\n- **加法范畴**是有零对象与所有直和的预加法范畴（等价地：所有有限积、或所有有限余积存在，此时二者存在且相等）；\n- **预阿贝尔范畴**是每个态射都有核与余核的加法范畴（等价地：所有有限极限与有限余极限存在）；\n- **阿贝尔范畴**是满足下列**等价**条件之一的预阿贝尔范畴：\n\n1. 每个单态射都是正则的（对偶地每个满态射都是正则的）；\n2. 若 $i : N \\rightarrowtail M$ 是单态射，则 $N \\cong \\ker\\bigl(M \\twoheadrightarrow \\operatorname{coker}(i)\\bigr)$（对偶同理）；\n3. 每个态射都能（在相差一个同构的意义下**唯一**地）分解成满态射接单态射；\n4. 对每个 $f : M \\to N$ 有 $\\ker\\bigl(N \\to \\operatorname{coker} f\\bigr) \\cong \\operatorname{coker}\\bigl(\\ker f \\to M\\bigr)$。",
+   "statement": "**阿贝尔范畴**是满足下列**等价**条件之一的**预阿贝尔范畴**（预加法、加法、预阿贝尔的定义见 `def.pre-additive-category`、`def.additive-category`、`def.pre-abelian-category`）：\n\n1. 每个单态射都是正则的（对偶地每个满态射都是正则的）；\n2. 若 $i : N \\rightarrowtail M$ 是单态射，则 $N \\cong \\ker\\bigl(M \\twoheadrightarrow \\operatorname{coker}(i)\\bigr)$（对偶同理）；\n3. 每个态射都能（在相差一个同构的意义下**唯一**地）分解成满态射接单态射；\n4. 对每个 $f : M \\to N$ 有 $\\ker\\bigl(N \\to \\operatorname{coker} f\\bigr) \\cong \\operatorname{coker}\\bigl(\\ker f \\to M\\bigr)$。",
    "notes": "在阿贝尔范畴里，人们习惯说**单射 / 满射**而不说单态射 / 满态射 —— 因为第 1 条保证了「正则的」与「可消的」是一回事。\n\n例：$A\\text{-}\\mathbf{Mod}$ 是阿贝尔范畴；拓扑斯上的 $\\mathbf{Ab}(\\mathcal{T})$ 也是；$\\mathbf{AbCHaus}$ 也是。\n\n而 $\\mathbf{AbTop}$ **不是**（$\\mathbb{Z}^{\\mathrm{disc}} \\to \\mathbb{Z}^{\\mathrm{coarse}}$ 这个恒等映射不严格），$\\mathbf{AbHaus}$ 也不是。\n\n阿贝尔范畴是整套同调代数的**工作环境**：有核有余核，「正合列」才说得出口；而加法范畴只提供零对象与直和这两样加法结构，还不足以谈「像」。\n\n**四条里哪条是“真公理”、哪条是它的推论**（阿贝尔范畴的这组等价常被并列，其实第 4 条最弱也最像“公理”，前三条各有代价）：\n\n- (1) $\\implies$ (2)：**一次取核 + 余核的图追踪**。$i : N \\rightarrowtail M$ 把 $N$ 等同到 $\\ker(M \\to \\operatorname{coker} i)$；这一步用「单态射 = 自身的核」这一条预阿贝尔性质，**不用加法结构之外的额外假设**。\n- (2) $\\implies$ (1)：**反向几乎免费**（$N$ 同构于余核的核 就是说 $i$ 是某个态的核，即正则）。\n- (1) $\\iff$ (3)：**这一步要「有核有余核」**（即预阿贝尔）。$f = M \\to N$ 分解成 $M \\twoheadrightarrow \\operatorname{im} f \\rightarrowtail N$；「满射段正则」正是 (1)。⚠️ 唯一性在**只差一个同构**的意义下成立 —— 「唯一」这个词在这里是本质的：分解不是严格的，因为同一个像可以有不同的代表。\n- (1) $\\iff$ (4)：**这是最“代数”的一条**（Abel 的原始形式）：$\\ker(N \\to \\operatorname{coker} f) \\cong \\operatorname{coker}(\\ker f \\to M)$。它等价于「第一同构定理在范畴里成立」，需要**核与余核都存在**且**单/满态射的正则性**。\n\n⚠️ **预阿贝尔 $\\ne$ 阿贝尔的关键**：预阿贝尔只要求核与余核存在；(1)–(4) 里任何一条都可以**失败**。最标准的反例是 $\\mathbf{PreAb}$（预阿贝尔群范畴）或「带滤过的向量空间」范畴 —— 里面有满态射不是余核、单态射不是核的情形。所以**阿贝尔 = 预阿贝尔 + （任一上述等价条件）**，这个“加一条”不能省。\n\n⚠️ **另两处易错**：\n- 「加法范畴」的定义里「所有直和」与「所有有限积」等价，但**要预加法**为前提（一般范畴里有限积与有限余积不必重合）。\n- 「有所有有限极限与余极限」是 (2) 那一行的说法，它**不**蕴含阿贝尔性（例如 $\\mathbf{Set}$ 有有限极限与余积，却远非阿贝尔）—— 差别正在「不交、万有、有效」这些附加条件。\n\n📌 **实践里怎么用**：最常验证的是 (3)。一旦每个映射都有「满射接单射」的像分解，就可以定义正合列、作蛇引理、取导出函子 —— 同调代数整套机器从这里开动。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §5.1–5.2"
@@ -90511,6 +90634,54 @@
    "note": "一句话记住：**「拓扑空间 $\\to$ 凝聚态集」这件事丢掉的东西，正好就是 $k$-化丢掉的东西。** 所以在 $k\\mathbf{Top}$ 上它不丢信息。"
   },
   {
+   "id": "def-dep.preadd-cat",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.pre-additive-category",
+   "note": "预加法范畴首先是范畴，额外带有 Hom 集的阿贝尔群结构。"
+  },
+  {
+   "id": "def-dep.additive-preadd",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.pre-additive-category",
+   "usedBy": "def.additive-category",
+   "note": "加法范畴 = 预加法范畴 + 零对象 + 二元直和。"
+  },
+  {
+   "id": "def-dep.additive-zero",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.zero-object",
+   "usedBy": "def.additive-category",
+   "note": "加法范畴要求存在零对象。"
+  },
+  {
+   "id": "def-dep.preabelian-additive",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.additive-category",
+   "usedBy": "def.pre-abelian-category",
+   "note": "预阿贝尔范畴首先是加法范畴。"
+  },
+  {
+   "id": "def-dep.preabelian-kernel",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.kernel-cokernel",
+   "usedBy": "def.pre-abelian-category",
+   "note": "预阿贝尔要求每个态射都有核与余核。"
+  },
+  {
+   "id": "def-dep.abelian-preabelian",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.pre-abelian-category",
+   "usedBy": "def.abelian-category",
+   "note": "阿贝尔范畴 = 预阿贝尔范畴 + 任一条正则性条件。"
+  },
+  {
    "id": "imp.triangle-rotation",
    "kind": "implication",
    "strength": "strong",
@@ -101987,16 +102158,16 @@
    "explicit": false
   },
   {
-   "a": "algebra.structures",
-   "b": "cat.adjoint",
-   "count": 2,
+   "a": "cat.limit",
+   "b": "hom.ab",
+   "count": 15,
    "label": "",
    "explicit": false
   },
   {
-   "a": "cat.limit",
-   "b": "hom.ab",
-   "count": 14,
+   "a": "algebra.structures",
+   "b": "cat.adjoint",
+   "count": 2,
    "label": "",
    "explicit": false
   },

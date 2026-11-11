@@ -14,11 +14,11 @@
 
 - **24 / 24** `def.function` mapping · 关系与函数
 - **23 / 23** `def.condensed-abelian-group` condensed abelian group · 凝聚态阿贝尔群
+- **22 / 22** `def.category` category · 范畴与图
 - **22 / 22** `def.functor` functor · 函子与自然变换
-- **21 / 22** `def.chaus` compact Hausdorff · 紧 Hausdorff 空间
 
+- **21 / 22** `def.chaus` compact Hausdorff · 紧 Hausdorff 空间
 - **21 / 21** `def.subset` subset · 集合的构造
-- **21 / 21** `def.category` category · 范畴与图
 - **20 / 21** `def.metric-space` metric space · 度量空间
 
 ## Comprehensive results

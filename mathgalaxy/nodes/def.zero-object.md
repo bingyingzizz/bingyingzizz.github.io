@@ -11,7 +11,7 @@ layer 13 · 定义 · 图与极限 · 范畴论
 - [`def.final-initial`](../nodes/def.final-initial.md) 终对象 / 始对象：用到了定义 终对象 / 始对象　[proofs/def-dep.zeroobj-finalinitial.md](../proofs/def-dep.zeroobj-finalinitial.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核 用
+- 被 [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴 用
 
 - …另有出边，续页见 [nodes/def.zero-object.2.md](./def.zero-object.2.md)
 

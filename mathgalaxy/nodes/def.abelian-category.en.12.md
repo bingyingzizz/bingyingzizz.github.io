@@ -1,9 +1,10 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-⚠ **Two more traps**: in the definition of "additive category", "all direct sums" and "all finite products" agree only **given preadditivity** (in a general category finite products and finite coproducts need not coincide); and "all finite limits and colimits" is the phrasing attached to (2), which does **not** imply abelianness ($\mathbf{Set}$ has finite limits and coproducts yet is far from abelian) — the difference lies in disjointness, universality and effectiveness.
+## Elsewhere
+Wikipedia: https://en.wikipedia.org/wiki/Abelian_category · nLab: https://ncatlab.org/nlab/show/abelian+category
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> continued in nodes/def.abelian-category.en.13.md
+Cite: `def.abelian-category` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

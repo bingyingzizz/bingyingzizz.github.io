@@ -1,4 +1,4 @@
-# 加法 / 阿贝尔范畴　`def.abelian-category`　·　说明
+# 阿贝尔范畴　`def.abelian-category`　·　说明
 根 `../`
 
 - (1) $\implies$ (2)：**一次取核 + 余核的图追踪**。$i : N \rightarrowtail M$ 把 $N$ 等同到 $\ker(M \to \operatorname{coker} i)$；这一步用「单态射 = 自身的核」这一条预阿贝尔性质，**不用加法结构之外的额外假设**。

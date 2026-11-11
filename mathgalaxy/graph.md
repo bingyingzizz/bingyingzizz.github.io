@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-10T15:21:56.476Z
-> 15 星系 / 105 星团 / 1608 节点 / 3329 连线（强边 3274，弱边 55；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-11T04:24:16.432Z
+> 15 星系 / 105 星团 / 1611 节点 / 3335 连线（强边 3280，弱边 55；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -23597,14 +23597,62 @@ $$\operatorname{Hom}_{\mathcal{C}}(P, X) \;\cong\; \operatorname{Hom}_{A\text{-}
 
 参考：Le Stum, An introduction to condensed mathematics, §5.1–5.2
 
-#### 加法 / 阿贝尔范畴　`def.abelian-category`
-*定义*　加法范畴与阿贝尔范畴
+#### 预加法范畴　`def.pre-additive-category`
+*定义*　预加法范畴（Ab-范畴）
 
-- **预加法范畴**（$\mathbf{Ab}$-范畴）是每个 $\operatorname{Hom}$ 集都带有阿贝尔群结构、且复合双线性的范畴；
-- **零对象**是 $\operatorname{End}(M) = 1$（即 $1_{M} = 0_{M}$）的对象；对象 $M$ 是 $M_{1}, M_{2}$ 的**直和** $M = M_{1} \oplus M_{2}$，如果存在 $p_{k} : M \to M_{k}$、$i_{k} : M_{k} \to M$ 使 $p_{1} i_{1} = 1$、$p_{2} i_{2} = 1$、$i_{1} p_{1} + i_{2} p_{2} = 1_{M}$；
-- **加法范畴**是有零对象与所有直和的预加法范畴（等价地：所有有限积、或所有有限余积存在，此时二者存在且相等）；
-- **预阿贝尔范畴**是每个态射都有核与余核的加法范畴（等价地：所有有限极限与有限余极限存在）；
-- **阿贝尔范畴**是满足下列**等价**条件之一的预阿贝尔范畴：
+**预加法范畴**（也叫 $\mathbf{Ab}$-范畴）是这样一个范畴 $\mathcal{C}$：对每对对象 $M, N$，态射集 $\operatorname{Hom}_{\mathcal{C}}(M, N)$ 带有**阿贝尔群**结构，并且复合映射
+
+$$\operatorname{Hom}(M, N) \times \operatorname{Hom}(N, P) \longrightarrow \operatorname{Hom}(M, P)$$
+
+是**双线性**的（固定一个变量时，对另一个变量加性）。
+
+等价说法：$\operatorname{Hom}$ 函子 $\mathcal{C}^{\mathrm{op}} \times \mathcal{C} \to \mathbf{Ab}$ 存在，且遗忘函子 $\mathbf{Ab} \to \mathbf{Set}$ 之后就是通常的 Hom 函子。
+
+因此每个 $\operatorname{Hom}(M, N)$ 都有零元，这个零元就是**零态射** $0 : M \to N$；零态射与任何态射复合仍为零态射。
+
+例：$A\text{-}\mathbf{Mod}$、$\mathbf{Ab}$、$K\text{-}\mathbf{Vect}$ 都是预加法范畴。反例：$\mathbf{Set}$ 的 Hom 集通常没有群结构。
+
+⚠️ 预加法**不要求**零对象与直和；加上这两样才叫加法范畴（见 `def.additive-category`）。
+
+参考：Le Stum, An introduction to condensed mathematics, §5.1
+
+#### 加法范畴　`def.additive-category`
+*定义*　加法范畴
+
+**加法范畴**是满足以下两条的预加法范畴：
+
+1. 有**零对象**（$\operatorname{End}(M) = 1$，即 $1_{M} = 0_{M}$ 的对象，见 `def.zero-object`）；
+2. 任意两个对象有**直和** $M = M_{1} \oplus M_{2}$：存在态射 $p_{k} : M \to M_{k}$、$i_{k} : M_{k} \to M$ 使 $p_{1} i_{1} = 1_{M_{1}}$、$p_{2} i_{2} = 1_{M_{2}}$、$i_{1} p_{1} + i_{2} p_{2} = 1_{M}$。
+
+等价地：加法范畴是「有限积与有限余积都存在、且二者重合（双积）」的预加法范畴。
+
+直和与直积在加法范畴里是同一个对象（**双积**）：$M_{1} \oplus M_{2}$ 同时带积的投影与余积的含入，且满足上面的三条等式。
+
+例：$A\text{-}\mathbf{Mod}$、$\mathbf{Ab}$、复形范畴 $\mathcal{C}(\mathcal{C})$（逐项取直和）都是加法范畴。
+
+⚠️ 加法范畴只提供「加」与「直和」；要谈核、余核与正合列，还需要预阿贝尔（见 `def.pre-abelian-category`）。
+
+参考：Le Stum, An introduction to condensed mathematics, §5.1
+
+#### 预阿贝尔范畴　`def.pre-abelian-category`
+*定义*　预阿贝尔范畴
+
+**预阿贝尔范畴**是每个态射都有**核**与**余核**的加法范畴（核与余核的定义见 `def.kernel-cokernel`）。
+
+等价地：预阿贝尔范畴是「所有有限极限与所有有限余极限都存在」的加法范畴。
+
+核与余核都存在，就可以谈「正合列」；但预阿贝尔**不**保证「余像 $\to$ 像」是同构 —— 这正是预阿贝尔与阿贝尔的分界。
+
+例：$\mathbf{PreAb}$（预阿贝尔群范畴）、带滤过的向量空间范畴是预阿贝尔但非阿贝尔。
+
+加上四条等价条件中的任意一条（每个单态射正则、像分解唯一、$\ker(\operatorname{coker} f) \cong \operatorname{coker}(\ker f)$ 等）就得到阿贝尔范畴，见 `def.abelian-category`。
+
+参考：Le Stum, An introduction to condensed mathematics, §5.2
+
+#### 阿贝尔范畴　`def.abelian-category`
+*定义*　阿贝尔范畴
+
+**阿贝尔范畴**是满足下列**等价**条件之一的**预阿贝尔范畴**（预加法、加法、预阿贝尔的定义见 `def.pre-additive-category`、`def.additive-category`、`def.pre-abelian-category`）：
 
 1. 每个单态射都是正则的（对偶地每个满态射都是正则的）；
 2. 若 $i : N \rightarrowtail M$ 是单态射，则 $N \cong \ker\bigl(M \twoheadrightarrow \operatorname{coker}(i)\bigr)$（对偶同理）；
@@ -44812,7 +44860,7 @@ $f_!$ 的定义用的正是 $X_{\mathrm{ad}} \to X_{\mathrm{ad}/Y}$ 这个 adic 
 
 仿射版的 $f_!$ 是全局定义的局部模型：在仿射开集上两者一致。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 完备化判据　`def-link.solid-criterion-abelian`
+#### 定义引用：「阿贝尔范畴」→ 完备化判据　`def-link.solid-criterion-abelian`
 
 引理的假设第一条就是「$\mathcal{A}$ 是阿贝尔范畴」—— 核、余核、复形、同调全都在这里取。
 
@@ -45545,7 +45593,7 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 
 两端的 $H_{n}$ 都是复形的同调。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 嵌入定理的细化　`def-link.mitchell-abelian`
+#### 定义引用：「阿贝尔范畴」→ 嵌入定理的细化　`def-link.mitchell-abelian`
 
 讨论的场地是小阿贝尔范畴与它的模范畴实现。
 
@@ -46432,7 +46480,7 @@ $$\rho_{i} := g_{i}/g$$
 
 天际线层是一个层：在 $x$ 处取 $A$、别处取零，粘合条件按开集逐条验证。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 正合偶　`def-link.exact-couple-abelian`
+#### 定义引用：「阿贝尔范畴」→ 正合偶　`def-link.exact-couple-abelian`
 
 正合偶是阿贝尔范畴里两族对象配上度数 $+1$ 的映射，正合性指的是这里的核与像。
 
@@ -58892,6 +58940,30 @@ $$\operatorname{Hom}_{\mathrm{Cond}}(\underline{X}, \underline{Y}) \;\cong\; \op
 
 > 一句话记住：**「拓扑空间 $\to$ 凝聚态集」这件事丢掉的东西，正好就是 $k$-化丢掉的东西。** 所以在 $k\mathbf{Top}$ 上它不丢信息。
 
+#### 定义引用：「范畴」→ 预加法范畴　`def-dep.preadd-cat`
+
+预加法范畴首先是范畴，额外带有 Hom 集的阿贝尔群结构。
+
+#### 定义引用：「预加法范畴」→ 加法范畴　`def-dep.additive-preadd`
+
+加法范畴 = 预加法范畴 + 零对象 + 二元直和。
+
+#### 定义引用：「零对象与直和」→ 加法范畴　`def-dep.additive-zero`
+
+加法范畴要求存在零对象。
+
+#### 定义引用：「加法范畴」→ 预阿贝尔范畴　`def-dep.preabelian-additive`
+
+预阿贝尔范畴首先是加法范畴。
+
+#### 定义引用：「核与余核」→ 预阿贝尔范畴　`def-dep.preabelian-kernel`
+
+预阿贝尔要求每个态射都有核与余核。
+
+#### 定义引用：「预阿贝尔范畴」→ 阿贝尔范畴　`def-dep.abelian-preabelian`
+
+阿贝尔范畴 = 预阿贝尔范畴 + 任一条正则性条件。
+
 #### 映射锥 + 导出三角 ⟹ 三角的旋转与延拓　`imp.triangle-rotation`
 *映射锥 $\implies$ 三角可旋转、可延拓*
 
@@ -59000,7 +59072,7 @@ $\ker f$ 就是 $f$ 与零态射的等化子，用的是「等化子」这个概
 
 核与余核的定义里出现**零态射**，它来自零对象。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 零对象与终对象　`def-link.zeroobj-additive`
+#### 定义引用：「阿贝尔范畴」→ 零对象与终对象　`def-link.zeroobj-additive`
 
 命题的前提「预加性范畴」是这条定义里的第一条。
 
@@ -59008,7 +59080,7 @@ $\ker f$ 就是 $f$ 与零态射的等化子，用的是「等化子」这个概
 
 要比较的两条定义都来自「零对象」。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 直和就是积　`def-link.biprod-additive`
+#### 定义引用：「阿贝尔范畴」→ 直和就是积　`def-link.biprod-additive`
 
 直和的定义（$p_{k}i_{k} = 1$、$i_{1}p_{1}+i_{2}p_{2} = 1$）与预加性都在这条定义里。
 
@@ -59016,7 +59088,7 @@ $\ker f$ 就是 $f$ 与零态射的等化子，用的是「等化子」这个概
 
 命题的另一半说的是「积」，用的是积的泛性。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 预加性结构唯一　`def-link.enrich-additive`
+#### 定义引用：「阿贝尔范畴」→ 预加性结构唯一　`def-link.enrich-additive`
 
 唯一性说的就是这条定义里「每个 $\operatorname{Hom}$ 带阿贝尔群结构且复合双线性」那部分。
 
@@ -59044,7 +59116,7 @@ $\ker f$ 就是 $f$ 与零态射的等化子，用的是「等化子」这个概
 
 命题里的对象就是正合列与短正合列。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 正合列构成子范畴　`def-link.exsub-abelian`
+#### 定义引用：「阿贝尔范畴」→ 正合列构成子范畴　`def-link.exsub-abelian`
 
 核与像的良好行为、以及与有限双积交换都来自阿贝尔范畴。
 
@@ -59172,7 +59244,7 @@ $N$ 与 $\operatorname{RHom}$ 都在凝聚态阿贝尔群里。
 
 讨论的对象是复形范畴。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 复形范畴是阿贝尔范畴　`def-link.cpxab-abelian`
+#### 定义引用：「阿贝尔范畴」→ 复形范畴是阿贝尔范畴　`def-link.cpxab-abelian`
 
 结论是「复形范畴满足阿贝尔范畴的定义」。
 
@@ -59180,7 +59252,7 @@ $N$ 与 $\operatorname{RHom}$ 都在凝聚态阿贝尔群里。
 
 列的两端就是同调 $H^{k}$。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 同调的两条正合列　`def-link.hseq-abelian`
+#### 定义引用：「阿贝尔范畴」→ 同调的两条正合列　`def-link.hseq-abelian`
 
 核、像、余核与正合都在阿贝尔范畴里说。
 
@@ -59472,7 +59544,7 @@ $$E^{p,q}_{2} = \check{H}^{p}\bigl(\mathfrak{X},\ H^{q}(M)\bigr) \;\Longrightarr
 
 公式里出现的核与余核。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 像就是余核的核　`def-link.imgkc-abelian`
+#### 定义引用：「阿贝尔范畴」→ 像就是余核的核　`def-link.imgkc-abelian`
 
 「每个态射都严格」只在阿贝尔范畴里成立。
 
@@ -59540,7 +59612,7 @@ $F$ 自由因而投射，$F \to f(S)$ 可提升为 $F \to S \hookrightarrow X$ �
 
 逐点读法用的核与余核。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 子范畴继承加法与阿贝尔性　`def-link.subcatadd-abelian`
+#### 定义引用：「阿贝尔范畴」→ 子范畴继承加法与阿贝尔性　`def-link.subcatadd-abelian`
 
 结论是「$\mathcal{C}$ 也加法 / 阿贝尔」。
 
@@ -60934,7 +61006,7 @@ $\mathcal{T}(\mathbf{Ab})$ 就是 $\mathcal{T}$ 上的**阿贝尔层**范畴。
 
 小生成元集取 $\{\mathbb{Z}\cdot X : X \in S\}$，$S$ 是 $\mathcal{T}$ 的生成元集。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.abeliancat-topos-ab`
+#### 定义引用：「阿贝尔范畴」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`def-dep.abeliancat-topos-ab`
 
 结论的一部分是「$\mathcal{T}(\mathbf{Ab})$ 是**阿贝尔**范畴」。
 
@@ -61870,27 +61942,27 @@ $\mathbf{K}(\mathcal{C})$ 本身是一个**范畴**（还是加法范畴）。
 
 谱序列的第二部分是**带过滤**的同调对象。
 
-#### 定义引用：「纤维积 / 纤维余积」→ 加法 / 阿贝尔范畴　`def-dep.fibered-abelian`
+#### 定义引用：「纤维积 / 纤维余积」→ 阿贝尔范畴　`def-dep.fibered-abelian`
 
 「直和 $M_{1} \oplus M_{2}$」的定义用的是 $p_{k} i_{k} = 1$、$i_{1}p_{1} + i_{2}p_{2} = 1_{M}$ —— **有限积与有限余积重合**。
 
-#### 定义引用：「等化子 / 余等化子」→ 加法 / 阿贝尔范畴　`def-dep.equalizer-abelian`
+#### 定义引用：「等化子 / 余等化子」→ 阿贝尔范畴　`def-dep.equalizer-abelian`
 
 预阿贝尔范畴说的是「每个态射都有**核与余核**」，阿贝尔范畴再加「单满都正则」。
 
-#### 定义引用：「单态射 / 满态射 / 同构」→ 加法 / 阿贝尔范畴　`def-dep.mono-abelian`
+#### 定义引用：「单态射 / 满态射 / 同构」→ 阿贝尔范畴　`def-dep.mono-abelian`
 
 阿贝尔范畴的判据之一：每个**单态射**都是正则的。
 
-#### 定义引用：「像 / 余像」→ 加法 / 阿贝尔范畴　`def-dep.image-abelian`
+#### 定义引用：「像 / 余像」→ 阿贝尔范畴　`def-dep.image-abelian`
 
 等价条件之一说的是「$\ker(N \to \operatorname{coker} f)\cong\operatorname{coker}(\ker f\to M)$」—— 像与余像重合。
 
-#### 定义引用：「上链复形」→ 加法 / 阿贝尔范畴　`def-dep.complex-abelian`
+#### 定义引用：「上链复形」→ 阿贝尔范畴　`def-dep.complex-abelian`
 
 复形定义在**加法范畴**上，同调定义在**阿贝尔范畴**上。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ Grothendieck 的 AB 公理　`def-dep.abelian-ab-axioms`
+#### 定义引用：「阿贝尔范畴」→ Grothendieck 的 AB 公理　`def-dep.abelian-ab-axioms`
 
 AB1 = **预阿贝尔**、AB2 = **阿贝尔** —— 前两条就是这两个词。
 
@@ -62178,7 +62250,7 @@ $C_{\mathbb{Z}}(M,N)$ 是 $C(M,N)$ 带**紧开拓扑**的子空间。
 
 假设里要求 $M''$ 是**弱 Hausdorff** 的。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 局部紧阿贝尔群不是阿贝尔范畴　`def-dep.lcab-abeliancat`
+#### 定义引用：「阿贝尔范畴」→ 局部紧阿贝尔群不是阿贝尔范畴　`def-dep.lcab-abeliancat`
 
 结论是「预阿贝尔但**不是阿贝尔**范畴」。
 
@@ -62222,7 +62294,7 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 模是**环**在阿贝尔群上的作用。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ Freyd–Mitchell 嵌入定理　`def-dep.freyd-abeliancat`
+#### 定义引用：「阿贝尔范畴」→ Freyd–Mitchell 嵌入定理　`def-dep.freyd-abeliancat`
 
 定理说的是**小阿贝尔范畴**。
 
@@ -62386,7 +62458,7 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 它就是可表示预层 $h_{X}$ 的 $\operatorname{Hom}$ 函子。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 蛇引理　`def-dep.snake-abelian`
+#### 定义引用：「阿贝尔范畴」→ 蛇引理　`def-dep.snake-abelian`
 
 蛇引理在**阿贝尔范畴**里说。
 
@@ -62394,7 +62466,7 @@ $(I,+)$ 是加法**子群**；商环先做加法商的**商群**。
 
 要用到核与像（等化子的语言）。
 
-#### 定义引用：「加法 / 阿贝尔范畴」→ 五引理　`def-dep.five-abelian`
+#### 定义引用：「阿贝尔范畴」→ 五引理　`def-dep.five-abelian`
 
 五引理在**阿贝尔范畴**里说。
 
@@ -64896,7 +64968,7 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 ⚠ 方向不同、范畴不同，所以只记**类比**，不当依赖：经典定理给出「测度」，凝聚态那个对象是**按定义取对偶**得到的。
 
-#### 凝聚态阿贝尔群满足 AB6 与 AB4* ～ 加法 / 阿贝尔范畴　`ana.condab-abeliancat`
+#### 凝聚态阿贝尔群满足 AB6 与 AB4* ～ 阿贝尔范畴　`ana.condab-abeliancat`
 *凝聚态阿贝尔群 $\leftrightarrow$ 阿贝尔范畴：都是「好到能算同调」的地方*
 
 两处在回答同一个问题：**什么样的范畴里可以放心地做同调代数？**
@@ -65344,8 +65416,8 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **拓扑斯 ↔ 凝聚态集**　11 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
+- **图与极限 ↔ 加法与阿贝尔范畴**　15 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
-- **图与极限 ↔ 加法与阿贝尔范畴**　14 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **阿贝尔层 ↔ 层上同调**　4 条节点级连线
 - **导出 Hom 的具体计算 ↔ 层上同调**　4 条节点级连线

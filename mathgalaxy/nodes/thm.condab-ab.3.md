@@ -2,4 +2,4 @@
 [在星图里打开](../#n=thm.condab-ab)　·　第 1 页 [nodes/thm.condab-ab.md](./thm.condab-ab.md)　·　上一页 [nodes/thm.condab-ab.2.md](./thm.condab-ab.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- ～弱边 [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴
+- ～弱边 [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴

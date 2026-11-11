@@ -8,7 +8,7 @@ layer 17 · 引理 · 加法与阿贝尔范畴 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴：用到了定义 加法 / 阿贝尔范畴　[proofs/def-dep.five-abelian.md](../proofs/def-dep.five-abelian.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-dep.five-abelian.md](../proofs/def-dep.five-abelian.md)
 - [`thm.snake-lemma`](../nodes/thm.snake-lemma.md) 蛇引理：def-dep.five-snake　[proofs/def-dep.five-snake.md](../proofs/def-dep.five-snake.md)
 - [`def.image`](../nodes/def.image.md) 像 / 余像：用到了定义 像 / 余像　[proofs/def-dep.five-image.md](../proofs/def-dep.five-image.md)
 

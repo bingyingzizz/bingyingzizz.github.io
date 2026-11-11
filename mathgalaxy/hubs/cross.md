@@ -12,8 +12,8 @@
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
 - **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
+- **10 团 / 22 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **10 团 / 17 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
-- **10 团 / 15 节点** `def.vs` 线性无关与基 · layer 10 · 向量空间与基
 
 > 续见 hubs/cross.2.md

@@ -8,7 +8,7 @@ layer 17 · 定理 · 加法与阿贝尔范畴 · 同调代数
 $$\mathcal{C} \longrightarrow A\text{-}\mathbf{Mod}.$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴：用到了定义 加法 / 阿贝尔范畴　[proofs/def-dep.freyd-abeliancat.md](../proofs/def-dep.freyd-abeliancat.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-dep.freyd-abeliancat.md](../proofs/def-dep.freyd-abeliancat.md)
 
 - …另有入边，续页见 [nodes/thm.freyd-mitchell.2.md](./thm.freyd-mitchell.2.md)
 

@@ -1,7 +1,9 @@
-# additive and abelian categories　`def.abelian-category`
+# abelian category　`def.abelian-category`
 English entry · root `../`
 [in graph](../#n=def.abelian-category)　·　[Chinese page (authoritative)](./def.abelian-category.md)
 
-⚠ **Preabelian $\ne$ abelian — the point**: preabelian asks only that kernels and cokernels exist; any one of (1)–(4) can **fail**. The standard counterexamples are $\mathbf{PreAb}$ (preabelian groups) or filtered vector spaces, where an epimorphism need not be a cokernel and a monomorphism need not be a kernel. So **abelian = preabelian + (any one of the equivalent conditions)**, and that last clause cannot be dropped.
+⚠ **Two more traps**: in the definition of "additive category", "all direct sums" and "all finite products" agree only **given preadditivity** (in a general category finite products and finite coproducts need not coincide); and "all finite limits and colimits" is the phrasing attached to (2), which does **not** imply abelianness ($\mathbf{Set}$ has finite limits and coproducts yet is far from abelian) — the difference lies in disjointness, universality and effectiveness.
+
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
 > continued in nodes/def.abelian-category.en.12.md

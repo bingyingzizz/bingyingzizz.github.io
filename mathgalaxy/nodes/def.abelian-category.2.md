@@ -1,242 +1,49 @@
-# 加法 / 阿贝尔范畴　`def.abelian-category`　·　续页（第 2 页）
+# 阿贝尔范畴　`def.abelian-category`　·　续页（第 2 页）
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)
 
 ## 陈述（续）
-*
-*
-预加
-法范
-畴
-*
-*
-（$
-\
-ma
-th
-bf
-{A
-b}
-$-
-范畴
-）是
-每个
- $
-\
-op
-er
-at
-or
-na
-me
-{H
-om
-}$
- 集
-都带
-有阿
-贝尔
-群结
-构、
-且复
-合双
-线性
-的范
-畴；
-
--
- 
-*
-*
-零对
-象
-*
-*
-是 
-$
-\
-op
-er
-at
-or
-na
-me
-{E
-nd
-}(
-M)
- =
- 1
-$（
-即 
-$1
-_
-{M
-} 
-= 
-0
-_
-{M
-}$
-）的
-对象
-；对
-象 
-$M
-$ 
-是 
-$M
-_
-{1
-},
- M
-_
-{2
-}$
- 的
-*
-*
-直和
-*
-*
- $
-M 
-= 
-M
-_
-{1
-} 
-\
-op
-lu
-s 
-M
-_
-{2
-}$
-，如
-果存
-在 
-$p
-_
-{k
-} 
-: 
-M 
-\
-to
- M
-_
-{k
-}$
-、$
-i
-_
-{k
-} 
-: 
-M
-_
-{k
-} 
-\
-to
- M
-$ 
-使 
-$p
-_
-{1
-} 
-i
-_
-{1
-} 
-= 
-1$
-、$
-p
-_
-{2
-} 
-i
-_
-{2
-} 
-= 
-1$
-、$
-i
-_
-{1
-} 
-p
-_
-{1
-} 
-+ 
-i
-_
-{2
-} 
-p
-_
-{2
-} 
-= 
-1
-_
-{M
-}$
-；
-
-- 
-*
-*
-加法
-范畴
-*
-*
-是有
-零对
-象与
-所有
-直和
-的预
-加法
-范畴
-（等
-价地
-：所
-有有
-限积
-、或
-所有
-有限
-余积
-存在
-，此
-时二
-者存
-在且
-相等
-）；
-
--
- 
-*
-*
-预阿
-贝尔
-范畴
-*
-*
-是每
-个态
-射都
-有核
-与余
-核的
-加法
-范畴
+*是满足下列**等
+价**条件之一的*
+*预阿贝尔范畴**
+（预加法、加法、预阿贝尔
+的定义见 `def.p
+re-additive-
+category`、
+`def.additi
+ve-category
+`、`def.pre
+-abelian-cat
+egory`）：
+1. 每个单态射都是正则
+的（对偶地每个满态射都是
+正则的）；
+2. 若 $
+i : N \righ
+tarrowtail M
+$ 是单态射，则 $N 
+\cong \ker
+\bigl(M \t
+woheadrighta
+rrow \opera
+torname{coke
+r}(i)\bigr)
+$（对偶同理）；
+3. 
+每个态射都能（在相差一个
+同构的意义下**唯一
+**地）分解成满态射
+接单态射；
+4. 对每个
+ $f : M \to
+ N$ 有 $\ker
+\bigl(N \t
+o \operator
+name{coker} 
+f\bigr) \c
+ong \operat
+orname{coker
+}\bigl(\ke
+r f \to M\
+bigr)$。
 
 > 续见 [nodes/def.abelian-category.3.md](./def.abelian-category.3.md)

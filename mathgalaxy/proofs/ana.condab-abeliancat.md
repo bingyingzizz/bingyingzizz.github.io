@@ -1,7 +1,7 @@
 # 凝聚态阿贝尔群 $\leftrightarrow$ 阿贝尔范畴：都是「好到能算同调」的地方
 `ana.condab-abeliancat` · 类比（弱边） · weak 边 · 根 `../`
 
-`thm.condab-ab` 凝聚态阿贝尔群满足 AB6 与 AB4* → `def.abelian-category` 加法 / 阿贝尔范畴
+`thm.condab-ab` 凝聚态阿贝尔群满足 AB6 与 AB4* → `def.abelian-category` 阿贝尔范畴
 
 两处在回答同一个问题：**什么样的范畴里可以放心地做同调代数？**
 - 阿贝尔范畴：核余核都存在、单满都正则 $\implies$ 蛇引理、长正合列都成立；

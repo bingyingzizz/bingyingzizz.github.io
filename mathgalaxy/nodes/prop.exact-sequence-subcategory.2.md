@@ -3,4 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列：用到了定义 一般正合列　[proofs/def-link.exsub-exact.md](../proofs/def-link.exsub-exact.md)
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 加法 / 阿贝尔范畴：用到了定义 加法 / 阿贝尔范畴　[proofs/def-link.exsub-abelian.md](../proofs/def-link.exsub-abelian.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-link.exsub-abelian.md](../proofs/def-link.exsub-abelian.md)

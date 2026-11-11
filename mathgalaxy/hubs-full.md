@@ -20,10 +20,10 @@
 - **25 / 28** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
 - **24 / 24** `def.function` 映射 · layer 5 · 关系与函数
 - **23 / 23** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 19 · 凝聚态阿贝尔群
+- **22 / 22** `def.category` 范畴 · layer 7 · 范畴与图
 - **22 / 22** `def.functor` 函子 · layer 8 · 函子与自然变换
 - **21 / 22** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 - **21 / 21** `def.subset` 子集 · layer 1 · 集合的构造
-- **21 / 21** `def.category` 范畴 · layer 7 · 范畴与图
 - **20 / 21** `def.metric-space` 距离空间 · layer 14 · 度量空间
 - **20 / 21** `def.projective-object` 投射 / 内射对象 · layer 14 · 紧 Hausdorff 空间
 - **20 / 21** `def.topos` 拓扑斯 · layer 17 · 拓扑斯
@@ -31,7 +31,7 @@
 - **20 / 20** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **19 / 21** `def.banach-space` Banach 空间 · layer 17 · 多元微分
 
-（共 993 个节点有非零计数；这里列前 20 条。）
+（共 996 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -50,15 +50,15 @@
 - **6 / 7** `thm.cartan-formula` Cartan 公式 · layer 26 · 向量场与 Lie 结构
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 31 · 内蕴几何
 - **6 / 6** `def.continuous` 连续（ε-δ 判据） · layer 16 · 实数与极限
+- **6 / 6** `def.abelian-category` 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
 - **6 / 6** `thm.baire` Baire 纲定理 · layer 18 · Baire 纲与三大定理
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
 - **6 / 6** `def.form-on-manifold` 微分形式 · layer 22 · 微分形式、积分与 de Rham
 - **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 27 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
-- **6 / 6** `def.submanifold-volume` 诱导体积 · layer 32 · 微分形式、积分与 de Rham
 
-（共 1600 个节点有非零计数；这里列前 20 条。）
+（共 1603 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -74,16 +74,16 @@
 - **12 团 / 30 节点** `def.limit` 极限 · layer 11 · 图与极限
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
 - **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 9 · 伴随与反射
+- **10 团 / 22 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **10 团 / 20 节点** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
 - **10 团 / 17 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 12 · 图与极限
 - **10 团 / 15 节点** `def.vs` 线性无关与基 · layer 10 · 向量空间与基
 - **10 团 / 14 节点** `def.continuous-map` 连续映射 · layer 16 · 拓扑空间的基本语汇
 - **9 团 / 31 节点** `def.measure` 测度 · layer 15 · 测度的构造
 - **9 团 / 22 节点** `def.functor` 函子 · layer 8 · 函子与自然变换
-- **9 团 / 21 节点** `def.category` 范畴 · layer 7 · 范畴与图
 - **9 团 / 17 节点** `def.ring` 环 · layer 8 · 代数结构
 - **9 团 / 17 节点** `def.inner-product` 内积 · layer 13 · 内积空间与正交性
 - **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
 
-（共 993 个节点有非零计数；这里列前 20 条。）
+（共 996 个节点有非零计数；这里列前 20 条。）
 
