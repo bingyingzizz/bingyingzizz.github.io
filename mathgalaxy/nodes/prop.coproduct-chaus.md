@@ -8,6 +8,8 @@ layer 19 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 $$\operatorname{Hom}(S \sqcup T,\ Z) \;\cong\; \operatorname{Hom}(S, Z) \times \operatorname{Hom}(T, Z).$$
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-link.coprodchaus-chaus.md](../proofs/def-link.coprodchaus-chaus.md)
+
 - …另有入边，续页见 [nodes/prop.coproduct-chaus.2.md](./prop.coproduct-chaus.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 2.12

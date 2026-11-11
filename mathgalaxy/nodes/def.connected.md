@@ -11,7 +11,7 @@ layer 5 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 - [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep.topology-connected.md](../proofs/dep.topology-connected.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.de-rham-h0`](../nodes/thm.de-rham-h0.md) 零次上同调 用
+- ⇒ [`prop.component-clopen`](../nodes/prop.component-clopen.md) 连通分量是闭开邻域之交
 
 - …另有出边，续页见 [nodes/def.connected.2.md](./def.connected.2.md)
 

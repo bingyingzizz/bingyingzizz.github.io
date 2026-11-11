@@ -8,8 +8,8 @@
 - 被 [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画 用
 - 被 [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的 用
 - 被 [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画 用
-- 被 [`thm.flow-complete`](../nodes/thm.flow-complete.md) 流完备性 用
-- ⇒ [`thm.flow-complete`](../nodes/thm.flow-complete.md) 流完备性
-- ⇒ [`def.normal-space`](../nodes/def.normal-space.md) 正规空间
+- ⇒ [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴
+- 被 [`prop.compact-basic-operations`](../nodes/prop.compact-basic-operations.md) 紧性的基本操作 用
+- 被 [`cor.heine-borel`](../nodes/cor.heine-borel.md) 有界闭 ⟺ 紧（ℝⁿ） 用
 
 > 续见 [nodes/def.compact.4.md](./def.compact.4.md)

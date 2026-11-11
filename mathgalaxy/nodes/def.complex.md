@@ -16,7 +16,7 @@ $$|zw| = |z|\,|w|, \qquad z \bar{z} = |z|^2$$
 于是每个 $z \ne 0$ 都有逆 $z^{-1} = \bar{z}/|z|^2$：$\mathbb{C}$ 是一个域。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.exact-couple`](../nodes/def.exact-couple.md) 正合偶 用
+- 被 [`def.integral-complex`](../nodes/def.integral-complex.md) 复函数的积分 用
 
 - …另有出边，续页见 [nodes/def.complex.3.md](./def.complex.3.md)
 

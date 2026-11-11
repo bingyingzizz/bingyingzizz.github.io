@@ -2,8 +2,8 @@
 [在星图里打开](../#n=thm.baire)　·　第 1 页 [nodes/thm.baire.md](./thm.baire.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲：用到了定义 第一纲 / 第二纲　[proofs/dep-link.meager-baire.md](../proofs/dep-link.meager-baire.md)
-- [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密：用到了定义 无处稠密　[proofs/dep-link.nowhere-baire.md](../proofs/dep-link.nowhere-baire.md)
+- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-link.fa-metric-baire.md](../proofs/def-link.fa-metric-baire.md)
+- [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/def-link.fa-complete-baire.md](../proofs/def-link.fa-complete-baire.md)
 - [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间：用到了定义 局部紧空间　[proofs/dep.gap-baire-locally-compact.md](../proofs/dep.gap-baire-locally-compact.md)
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/dep.gap-baire-hausdorff.md](../proofs/dep.gap-baire-hausdorff.md)
 

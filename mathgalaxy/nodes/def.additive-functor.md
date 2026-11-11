@@ -10,7 +10,7 @@ $$\operatorname{Hom}_{\mathcal{C}}(M, N) \longrightarrow \operatorname{Hom}_{\ma
 是**阿贝尔群同态**（即保加法、保 $0$）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.watts`](../nodes/thm.watts.md) 张量函子的刻画 用
+- 被 [`prop.additive-iff-preserves-biproduct`](../nodes/prop.additive-iff-preserves-biproduct.md) 加法函子的刻画 用
 
 - …另有出边，续页见 [nodes/def.additive-functor.3.md](./def.additive-functor.3.md)
 

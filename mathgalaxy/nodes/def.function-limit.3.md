@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限：用到了定义 数列极限　[proofs/dep.seqlimit-fnlimit.md](../proofs/dep.seqlimit-fnlimit.md)
+- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-fn-limit.md](../proofs/def-link.abs-fn-limit.md)
 
 > 续见 [nodes/def.function-limit.4.md](./def.function-limit.4.md)

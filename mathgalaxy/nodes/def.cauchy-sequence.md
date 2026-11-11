@@ -10,12 +10,12 @@ $$\forall \varepsilon > 0,\ \exists N,\ \forall m, n \ge N :\ |x_m - x_n| < \var
 即：只要取得足够靠后，**任意两项**都互相接近。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-cauchy-seq.md](../proofs/def-link.abs-cauchy-seq.md)
+- [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限：用到了定义 数列极限　[proofs/dep.seqlimit-cauchyseq.md](../proofs/dep.seqlimit-cauchyseq.md)
 
 - …另有入边，续页见 [nodes/def.cauchy-sequence.2.md](./def.cauchy-sequence.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.complete`](../nodes/def.complete.md) 完备 用
+- 被 [`thm.cauchy-criterion`](../nodes/thm.cauchy-criterion.md) Cauchy 收敛准则 用
 
 - …另有出边，续页见 [nodes/def.cauchy-sequence.3.md](./def.cauchy-sequence.3.md)
 

@@ -5,8 +5,8 @@
 
 - def.first-order-language　一阶语言　layer 0
 - def.formula　公式　layer 1
-- def.provability　可证明性　layer 2
 - def.substitution　代入　layer 2
 - def.satisfaction　满足关系　layer 2
+- def.provability　可证明性　layer 2
 - thm.completeness-first-order　完备性定理　layer 3
 - thm.compactness　紧致性定理　layer 4

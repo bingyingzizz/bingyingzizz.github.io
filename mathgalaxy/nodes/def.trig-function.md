@@ -12,8 +12,8 @@ $$\cos z := \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(2k)!}\, z^{2k}, \qquad \sin z :
 $$\cos' = -\sin, \qquad \sin' = \cos, \qquad \cos 0 = 1, \qquad \sin 0 = 0$$
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.tan-cot-sec`](../nodes/def.tan-cot-sec.md) 正切、余切、正割、余割 用
-- 被 [`def.inverse-trig`](../nodes/def.inverse-trig.md) 反三角函数 用
+- 被 [`def.pi`](../nodes/def.pi.md) 圆周率 π 用
+- ⇒ [`thm.euler-formula`](../nodes/thm.euler-formula.md) Euler 公式
 
 - …另有出边，续页见 [nodes/def.trig-function.3.md](./def.trig-function.3.md)
 

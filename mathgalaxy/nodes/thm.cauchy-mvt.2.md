@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.taylor`](../nodes/thm.taylor.md) Taylor 公式
+- ⇒ [`thm.mvt`](../nodes/thm.mvt.md) Lagrange 中值定理

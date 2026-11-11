@@ -10,11 +10,13 @@ $$X_{n} := X_{0} \times_{X} \cdots \times_{X} X_{0},$$
 > 陈述续见 [nodes/prop.cech-section-vanishing.2.md](./prop.cech-section-vanishing.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`lem.covering-free-acyclic`](../nodes/lem.covering-free-acyclic.md) 覆盖给出的自由复形零调
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.cech-functor`](../nodes/def.cech-functor.md) Čech 函子：用到了定义 Čech 函子　[proofs/def-link.cechsec-cech.md](../proofs/def-link.cechsec-cech.md)
+
 - …另有入边，续页见 [nodes/prop.cech-section-vanishing.3.md](./prop.cech-section-vanishing.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.cech-section-vanishing.4.md](./prop.cech-section-vanishing.4.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.3
 

@@ -12,7 +12,7 @@ $$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N,\ \forall x \in X :\ |f_
 $$\sup_{x \in X} |f_n(x) - f(x)| \xrightarrow{\;n \to \infty\;} 0$$
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.arzela-ascoli`](../nodes/thm.arzela-ascoli.md) Arzelà–Ascoli 定理
+- 被 [`def.uniform-cauchy`](../nodes/def.uniform-cauchy.md) 一致 Cauchy 列 用
 
 - …另有出边，续页见 [nodes/def.uniform-convergence.3.md](./def.uniform-convergence.3.md)
 

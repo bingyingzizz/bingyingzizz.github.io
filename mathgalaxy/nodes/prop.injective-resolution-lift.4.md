@@ -2,4 +2,4 @@
 [在星图里打开](../#n=prop.injective-resolution-lift)　·　第 1 页 [nodes/prop.injective-resolution-lift.md](./prop.injective-resolution-lift.md)　·　上一页 [nodes/prop.injective-resolution-lift.3.md](./prop.injective-resolution-lift.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.enough-projectives`](../nodes/def.enough-projectives.md) 足够多投射对象：用到了定义 足够多投射对象　[proofs/def-link.injl-res.md](../proofs/def-link.injl-res.md)
+- [`def.quasi-iso`](../nodes/def.quasi-iso.md) 拟同构：用到了定义 拟同构　[proofs/dep.gap-injective-resolution-lift-quasi-iso.md](../proofs/dep.gap-injective-resolution-lift-quasi-iso.md)

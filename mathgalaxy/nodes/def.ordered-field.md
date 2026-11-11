@@ -12,7 +12,7 @@ $$a \le b \implies a + c \le b + c, \qquad a \le b,\ 0 \le c \implies ac \le bc$
 $$|a| := \begin{cases} a, & a \ge 0 \\ -a, & a < 0 \end{cases}$$
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`prop.order-rules`](../nodes/prop.order-rules.md) 序与四则运算
+- 被 [`def.rat`](../nodes/def.rat.md) 有理数 ℚ 用
 
 - …另有出边，续页见 [nodes/def.ordered-field.3.md](./def.ordered-field.3.md)
 

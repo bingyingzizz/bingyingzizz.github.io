@@ -18,7 +18,7 @@ $$A = B \iff A \subseteq B \wedge  B \subseteq A$$
 - [`ax.ext`](../nodes/ax.ext.md) 外延公理：用到了定义 外延公理　[proofs/def-link.ext-subset.md](../proofs/def-link.ext-subset.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.simplicial-complex`](../nodes/def.simplicial-complex.md) 单纯复形 用
+- 被 [`def.union-inter`](../nodes/def.union-inter.md) 并集与交集 用
 
 - …另有出边，续页见 [nodes/def.subset.2.md](./def.subset.2.md)
 

@@ -8,7 +8,7 @@ layer 19 · 定义 · 同调与正合列 · 同调代数
 把箭头反过来（即到 $\mathcal{A}^{\mathrm{op}}$ 里去取同样的定义），得到**左消解**；若每个 $L^{n}$ 都是**投射**对象，就叫**投射消解**。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.comparison-theorem`](../nodes/thm.comparison-theorem.md) 比较定理 用
+- 被 [`prop.total-complex-injective-resolution`](../nodes/prop.total-complex-injective-resolution.md) 全复形还是内射消解 用
 
 - …另有出边，续页见 [nodes/def.resolution.3.md](./def.resolution.3.md)
 

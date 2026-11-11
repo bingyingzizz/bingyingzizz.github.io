@@ -12,8 +12,8 @@
 - prop.exact-sequence-subcategory　正合列构成子范畴　layer 17
 - prop.image-kernel-cokernel　像就是余核的核　layer 17
 - prop.exact-at-points　正合就是逐点正合　layer 17
-- prop.mitchell-exactness　嵌入定理的细化　layer 18
 - def.grothendieck-category　Grothendieck 范畴　layer 18
 - prop.ab6　AB6：滤过余极限与积交换　layer 18
+- prop.subcat-additive　子范畴继承加法与阿贝尔性　layer 18
 
 > 续见 `index/hom.ab.3.md`

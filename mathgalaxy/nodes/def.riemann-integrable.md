@@ -14,7 +14,7 @@ $$I = \int_a^b f = \int_a^b f(x)\,dx$$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.contour-integral`](../nodes/def.contour-integral.md) 复围道积分 用
+- 被 [`def.improper-integral`](../nodes/def.improper-integral.md) 反常积分 用
 
 - …另有出边，续页见 [nodes/def.riemann-integrable.4.md](./def.riemann-integrable.4.md)
 

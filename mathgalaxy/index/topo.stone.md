@@ -6,9 +6,9 @@
 - def.totally-disconnected　完全不连通与极不连通　layer 6
 - def.boolean-ring　布尔环　layer 9
 - def.profinite　投射有限空间　layer 12
-- def.profinite-integers　profinite 整数 ℤ̂　layer 13
 - prop.totally-disconnected-subspace　全不连通对子空间封闭　layer 13
 - prop.profinite-sets-spaces　投射有限集即投射有限空间　layer 13
+- def.profinite-integers　profinite 整数 ℤ̂　layer 13
 - prop.component-clopen　连通分量是闭开邻域之交　layer 18
 - def.stone-space　全不连通与 Stone 空间　layer 18
 - prop.stonean-basic　极端不连通的基本性质　layer 19

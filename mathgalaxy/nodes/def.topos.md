@@ -16,6 +16,8 @@ layer 17 · 定义 · 拓扑斯 · 范畴论
 - …另有入边，续页见 [nodes/def.topos.2.md](./def.topos.2.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理
+
 - …另有出边，续页见 [nodes/def.topos.3.md](./def.topos.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.3

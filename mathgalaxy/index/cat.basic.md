@@ -8,11 +8,11 @@
 - def.graph　图　layer 6
 - def.graph-morphism　图的态射　layer 7
 - def.category　范畴　layer 7
-- def.isomorphism　同构　layer 8
 - def.section-retraction　截面与收缩　layer 8
 - def.category-of-groups　群范畴　layer 8
 - def.category-of-abelian-groups　阿贝尔群范畴　layer 8
 - def.subcategory　子范畴　layer 8
+- def.isomorphism　同构　layer 8
 - prop.functor-preserves-sections　函子保截面与收缩　layer 9
 - def.localization　局部化　layer 10
 - prop.preorder-as-category　预序集就是「Hom 至多一元」的小范畴　layer 11

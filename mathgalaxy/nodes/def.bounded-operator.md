@@ -10,7 +10,7 @@ $$\|u\| := \sup_{\|x\| \le 1} \|u(x)\| = \sup_{\|x\| = 1} \|u(x)\| = \sup_{x \ne
 它使 $B(E, F)$ 成为赋范空间（$E = 0$ 时约定 $\|u\| = 0$）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.lax-milgram`](../nodes/thm.lax-milgram.md) Lax–Milgram 定理 用
+- 被 [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数 用
 
 - …另有出边，续页见 [nodes/def.bounded-operator.3.md](./def.bounded-operator.3.md)
 

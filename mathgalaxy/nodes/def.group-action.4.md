@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.group-action)　·　第 1 页 [nodes/def.group-action.md](./def.group-action.md)　·　上一页 [nodes/def.group-action.3.md](./def.group-action.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.dihedral-group`](../nodes/def.dihedral-group.md) 二面体群 用
 - 被 [`def.permutation-group`](../nodes/def.permutation-group.md) 置换群与对称群 用
 - 被 [`thm.orbit-stabilizer`](../nodes/thm.orbit-stabilizer.md) 轨道–稳定子定理 用
 - 被 [`thm.class-equation`](../nodes/thm.class-equation.md) 类方程 用
@@ -11,6 +12,5 @@
 - ⇒ [`thm.class-equation`](../nodes/thm.class-equation.md) 类方程
 - ⇒ [`thm.cayley`](../nodes/thm.cayley.md) Cayley 定理
 - ⇒ [`thm.sylow`](../nodes/thm.sylow.md) Sylow 定理
-- 被 [`def.semidirect-product`](../nodes/def.semidirect-product.md) 半直积 用
 
 > 续见 [nodes/def.group-action.5.md](./def.group-action.5.md)

@@ -16,7 +16,7 @@ $$\forall x, y \in K,\ x < y \implies \exists q \in \mathbb{Q} : x < q < y$$
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`cor.archimedean-epsilon`](../nodes/cor.archimedean-epsilon.md) Archimedes 的 ε 形式与取整
+- ⇒ [`thm.real-unique`](../nodes/thm.real-unique.md) 完备有序域的唯一性
 
 - …另有出边，续页见 [nodes/lem.archimedean.4.md](./lem.archimedean.4.md)
 

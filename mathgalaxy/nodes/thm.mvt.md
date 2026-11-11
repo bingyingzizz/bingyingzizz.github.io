@@ -10,12 +10,12 @@ $$f(b) - f(a) = f'(\xi)\,(b - a)$$
 等价地 $f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$：**平均变化率必在某点被瞬时变化率取到**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.taylor`](../nodes/thm.taylor.md) Taylor 公式：Taylor 公式取 $n=0$ 就是 Lagrange 中值定理　[proofs/imp.derived-mvt-from-taylor.md](../proofs/imp.derived-mvt-from-taylor.md)
+- [`thm.rolle`](../nodes/thm.rolle.md) Rolle 中值定理：Rolle 定理 $\implies$ Lagrange 中值定理　[proofs/imp.mvt.md](../proofs/imp.mvt.md)
 
 - …另有入边，续页见 [nodes/thm.mvt.2.md](./thm.mvt.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.mixed-partials`](../nodes/thm.mixed-partials.md) 混合偏导相等
+- ⇒ [`cor.constant-iff-zero-derivative`](../nodes/cor.constant-iff-zero-derivative.md) 导数为零 ⟺ 常函数
 
 - …另有出边，续页见 [nodes/thm.mvt.3.md](./thm.mvt.3.md)
 

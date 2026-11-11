@@ -12,7 +12,7 @@ $$\forall \varepsilon > 0, \exists N, \forall n \ge N : |x_n - x| < \varepsilon$
 不收敛的数列叫**发散**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-seq-limit.md](../proofs/def-link.abs-seq-limit.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.real-sequence.md](../proofs/dep.real-sequence.md)
 
 - …另有入边，续页见 [nodes/def.sequence-limit.2.md](./def.sequence-limit.2.md)
 

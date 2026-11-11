@@ -12,7 +12,7 @@ $$\varphi ::= R(t_{1}, \ldots, t_{n}) \;\mid\; \neg \varphi \;\mid\; (\varphi \w
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.provability`](../nodes/def.provability.md) 可证明性 用
+- 被 [`def.substitution`](../nodes/def.substitution.md) 代入 用
 
 - …另有出边，续页见 [nodes/def.formula.4.md](./def.formula.4.md)
 

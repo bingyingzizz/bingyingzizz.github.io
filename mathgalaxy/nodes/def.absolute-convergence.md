@@ -13,7 +13,7 @@ $$\sum_{n=1}^{\infty} |a_n|$$
 - [`def.series`](../nodes/def.series.md) 级数收敛：用到了定义 级数收敛　[proofs/dep.series-absolute.md](../proofs/dep.series-absolute.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.signed-measure`](../nodes/def.signed-measure.md) 符号测度 用
+- 被 [`def.conditional-convergence`](../nodes/def.conditional-convergence.md) 条件收敛 用
 
 - …另有出边，续页见 [nodes/def.absolute-convergence.2.md](./def.absolute-convergence.2.md)
 

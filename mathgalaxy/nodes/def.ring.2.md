@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.ring)　·　第 1 页 [nodes/def.ring.md](./def.ring.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.zmod-is-ab`](../nodes/prop.zmod-is-ab.md) Z-模就是阿贝尔群 用
 - 被 [`def.polynomial-ring`](../nodes/def.polynomial-ring.md) 多项式环 用
 - ⇒ [`prop.field-rules`](../nodes/prop.field-rules.md) 环与域的基本等式
 - ⇒ [`prop.ideal-basic`](../nodes/prop.ideal-basic.md) 理想的运算与商环泛性质
@@ -12,6 +13,5 @@
 - 被 [`def.int-domain`](../nodes/def.int-domain.md) 整环 用
 - 被 [`def.irreducible-element`](../nodes/def.irreducible-element.md) 相伴、不可约与素 用
 - 被 [`def.characteristic`](../nodes/def.characteristic.md) 域的特征 用
-- 被 [`prop.zmod-is-ab`](../nodes/prop.zmod-is-ab.md) Z-模就是阿贝尔群 用
 
 > 续见 [nodes/def.ring.3.md](./def.ring.3.md)

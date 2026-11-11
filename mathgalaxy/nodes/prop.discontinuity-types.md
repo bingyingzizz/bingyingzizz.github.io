@@ -10,6 +10,8 @@ layer 17 · 命题 · 连续与紧性 · 数学分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：用到了定义 连续（ε-δ 判据）　[proofs/dep.continuous-discontinuity.md](../proofs/dep.continuous-discontinuity.md)
+
 - …另有入边，续页见 [nodes/prop.discontinuity-types.3.md](./prop.discontinuity-types.3.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4

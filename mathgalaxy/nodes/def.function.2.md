@@ -3,14 +3,14 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.section`](../nodes/def.section.md) 截口 用
-- 被 [`def.path-homotopy`](../nodes/def.path-homotopy.md) 道路同伦 用
-- 被 [`thm.closed-graph`](../nodes/thm.closed-graph.md) 闭图像定理 用
 - 被 [`def.bijection`](../nodes/def.bijection.md) 单射 / 满射 / 双射 用
 - 被 [`def.preimage`](../nodes/def.preimage.md) 像与原像 用
-- 被 [`def.binary-operation`](../nodes/def.binary-operation.md) 二元运算 用
 - 被 [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑 用
 - 被 [`def.cauchy-null`](../nodes/def.cauchy-null.md) Cauchy 列与零列 用
 - 被 [`def.field`](../nodes/def.field.md) 域 用
+- 被 [`def.path-homotopy`](../nodes/def.path-homotopy.md) 道路同伦 用
+- 被 [`thm.closed-graph`](../nodes/thm.closed-graph.md) 闭图像定理 用
+- 被 [`def.binary-operation`](../nodes/def.binary-operation.md) 二元运算 用
 - 被 [`def.number-function`](../nodes/def.number-function.md) 函数 用
 - 被 [`def.choicefn`](../nodes/def.choicefn.md) 选择函数 用
 - 被 [`def.metric-space`](../nodes/def.metric-space.md) 距离空间 用

@@ -10,7 +10,7 @@ $$\operatorname{Hom}_{\mathcal{D}}\bigl(F(X),\ Y\bigr) \;\cong\; \operatorname{H
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.power-object`](../nodes/def.power-object.md) 幂对象 用
+- ⇒ [`thm.right-adjoint-criterion`](../nodes/thm.right-adjoint-criterion.md) 右伴随存在的判据
 
 - …另有出边，续页见 [nodes/def.adjoint.4.md](./def.adjoint.4.md)
 

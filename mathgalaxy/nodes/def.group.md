@@ -12,8 +12,7 @@ layer 7 · 定义 · 代数结构 · 抽象代数
 再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
-- 被 [`def.permutation-group`](../nodes/def.permutation-group.md) 置换群与对称群 用
+- 被 [`def.category-of-groups`](../nodes/def.category-of-groups.md) 群范畴 用
 
 - …另有出边，续页见 [nodes/def.group.3.md](./def.group.3.md)
 

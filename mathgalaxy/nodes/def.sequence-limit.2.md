@@ -2,6 +2,6 @@
 [在星图里打开](../#n=def.sequence-limit)　·　第 1 页 [nodes/def.sequence-limit.md](./def.sequence-limit.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.real-sequence.md](../proofs/dep.real-sequence.md)
+- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-seq-limit.md](../proofs/def-link.abs-seq-limit.md)
 
 > 续见 [nodes/def.sequence-limit.3.md](./def.sequence-limit.3.md)

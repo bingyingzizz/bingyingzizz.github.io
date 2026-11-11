@@ -11,6 +11,8 @@ $$f(x_{\min}) \le f(x) \le f(x_{\max})$$
 - [`prop.continuous-bounded-on-compact`](../nodes/prop.continuous-bounded-on-compact.md) 紧集上连续 ⟹ 有界 + [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域：有界 + 确界原理 $\implies$ 取到最值　[proofs/imp.bounded-evt.md](../proofs/imp.bounded-evt.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`thm.rolle`](../nodes/thm.rolle.md) Rolle 中值定理
+
 - …另有出边，续页见 [nodes/thm.evt.2.md](./thm.evt.2.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 4

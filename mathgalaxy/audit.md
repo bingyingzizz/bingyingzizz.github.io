@@ -13,12 +13,12 @@
 - Euler 定理（`thm.euler-theorem` L10）⇸ Euler 类（`def.euler-class` L37）
 - Euler 函数（`def.euler-phi` L14）⇸ Euler 类（`def.euler-class` L37）
 - Euler 判别法（`thm.euler-criterion` L16）⇸ Euler 类（`def.euler-class` L37）
-- Pontryagin 类（`def.pontryagin-class` L36）⇸ Pontryagin 对偶（`def.pontryagin-dual` L19）
-- Euler 类（`def.euler-class` L37）⇸ Euler 公式（`thm.euler-formula` L23）
-- Euler 示性数（`thm.euler-characteristic` L29）⇸ Euler 类（`def.euler-class` L37）
+- Pontryagin 对偶（`def.pontryagin-dual` L19）⇸ Pontryagin 类（`def.pontryagin-class` L36）
+- Euler 公式（`thm.euler-formula` L23）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔群范畴（`def.category-of-abelian-groups` L8）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
-- Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L37）
+- Euler 示性数（`thm.euler-characteristic` L29）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔层（`def.abelian-sheaf` L16）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L23）
+- Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L37）
 - Euler 公式（`thm.euler-formula-surface` L33）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔范畴（`def.abelian-category` L16）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 
@@ -36,6 +36,8 @@
 
 值只许 `complete`（缺省）/ `skeleton` / `external-input`。正文自己说「骨架 / 未展开 / 外部输入」却没标注的，列在下面。
 
+- 该标未标：`def.simplicial`
+- 该标未标：`def.simplex-category`
 - 该标未标：`def.cw-complex`
 - 该标未标：`thm.prime-number-theorem`
 - 该标未标：`def.partial-isometry`
@@ -44,8 +46,6 @@
 - 该标未标：`def.algebraic-extension`
 - 该标未标：`def.riemann-zeta`
 - 该标未标：`thm.developable-iff-flat`
-- 该标未标：`def.simplicial`
-- 该标未标：`def.simplex-category`
 
 
 ## 五、假设标注（hypotheses）
@@ -69,31 +69,31 @@
   - thm.caratheodory  ‹完备›
   - prop.complete-measurable  ‹完备›
   - prop.completion-measurable-function  ‹完备›
-  - def.linear-isomorphism  ‹有限维›
-  - thm.rank-nullity  ‹有限维›
-  - def.dual-basis  ‹有限维›
-  - thm.matrix-linear-map  ‹有限维›
-  - thm.fundamental-algebra  ‹代数闭›
-  - thm.cayley-hamilton  ‹有限维›
-  - thm.minimal-poly-divisor  ‹代数闭›
-  - thm.primary-decomposition  ‹代数闭›
-  - thm.jordan-canonical-form  ‹代数闭›
-  - def.orthogonal-complement  ‹有限维›
-  - thm.gram-schmidt  ‹有限维›
-  - def.orthogonal-projection  ‹有限维›
-  - thm.projection-formula  ‹有限维›
-  - def.operator-adjoint  ‹有限维›
-  - def.normal-operator  ‹有限维›
-  - thm.spectral-theorem  ‹有限维›
-  - cor.spectral-normal  ‹有限维›
-  - def.normed-space  ‹完备›
-  - def.banach-space  ‹完备›
-  - thm.banach-fixed-point  ‹完备›
-  - cor.archimedean-epsilon  ‹完备›
-  - thm.nth-root  ‹完备›
-  - def.cond-measure  ‹Hausdorff›
-  - def.pre-analytic-ring  ‹Hausdorff›
-  - def.analytic-ring  ‹完备›
-  - thm.analytic-modules  ‹完备›
+  - thm.fubini-complete  ‹完备›
+  - prop.product-incomplete  ‹完备›
+  - cor.integral-is-ac-nbv  ‹选择公理›
+  - lem.ac-subset-bv  ‹选择公理›
+  - def.lp-norm  ‹完备›
+  - thm.lp-banach  ‹完备›
+  - prop.dense-simple-compact-support  ‹局部紧›
+  - def.real-metric-space  ‹完备›
+  - def.ae  ‹完备›
+  - def.hausdorff  ‹Hausdorff›
+  - def.connected  ‹连通›
+  - def.jordan-curve  ‹Hausdorff›
+  - thm.jordan-curve  ‹连通›
+  - thm.real-ordered-field  ‹完备›
+  - lem.archimedean  ‹完备›
+  - thm.real-unique  ‹完备›
+  - thm.saft  ‹完备›
+  - def.chaus  ‹Hausdorff›
+  - prop.chaus-reflective  ‹Hausdorff›
+  - lem.minimal-closed-surjection  ‹Hausdorff›
+  - def.free-compact-hausdorff  ‹Hausdorff›
+  - prop.chaus-quotient-of-free  ‹Hausdorff›
+  - prop.free-projective  ‹Hausdorff›
+  - def.free-presentation  ‹Hausdorff›
+  - cor.chaus-free-presentation  ‹Hausdorff›
+  - prop.component-clopen  ‹Hausdorff›
   - …还有 222 处
 

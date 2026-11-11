@@ -12,7 +12,7 @@ $$|G| = |Z(G)| + \sum_{i=1}^{r} \bigl[ G : C_G(x_i) \bigr]$$
 **推论**：若 $|G| = p^{n}$（$p$ 素、$n \ge 1$），则 $p \mid |Z(G)|$，特别地 $Z(G) \ne \{e\}$。
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.sylow`](../nodes/thm.sylow.md) Sylow 定理
+- 被 [`def.dihedral-group`](../nodes/def.dihedral-group.md) 二面体群 用
 
 - …另有出边，续页见 [nodes/thm.class-equation.3.md](./thm.class-equation.3.md)
 

@@ -7,7 +7,7 @@ layer 21 · 定理 · 实数完备性的等价刻画 · 数学分析
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.bolzano-weierstrass`](../nodes/thm.bolzano-weierstrass.md) Bolzano–Weierstrass 定理：Bolzano–Weierstrass $\implies$ Cauchy 收敛准则　[proofs/imp.bw-cauchy.md](../proofs/imp.bw-cauchy.md)
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-cauchy-criterion.md](../proofs/def-link.abs-cauchy-criterion.md)
+- [`def.cauchy-sequence`](../nodes/def.cauchy-sequence.md) Cauchy 列：用到了定义 Cauchy 列　[proofs/dep.cauchyseq-criterion.md](../proofs/dep.cauchyseq-criterion.md)
 
 - …另有入边，续页见 [nodes/thm.cauchy-criterion.2.md](./thm.cauchy-criterion.2.md)
 

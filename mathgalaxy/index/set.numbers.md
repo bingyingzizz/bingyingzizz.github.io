@@ -6,8 +6,8 @@
 - thm.omega　自然数集存在　layer 5
 - thm.induction　归纳原理与递推定义　layer 6
 - def.nat-arith　自然数的加法与乘法　layer 7
-- thm.nat-arith-laws　自然数的运算律　layer 8
 - def.int　整数 ℤ　layer 8
+- thm.nat-arith-laws　自然数的运算律　layer 8
 - thm.int-ring　ℤ 是交换整环　layer 9
 - def.rat　有理数 ℚ　layer 10
 - thm.rat-ordered-field　ℚ 是有序域　layer 11

@@ -13,7 +13,7 @@ $$E^{p,q}_{2} := \check{H}^{p}\bigl(\mathfrak{X},\ H^{q}(M)\bigr) \;\Longrightar
 - …另有入边，续页见 [nodes/thm.cartan-leray.2.md](./thm.cartan-leray.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.paracompact-cech-equals-sheaf`](../nodes/thm.paracompact-cech-equals-sheaf.md) 仿紧空间上的 Čech 就是上同调
+- ⇒ [`cor.cech-cohomology-spectral`](../nodes/cor.cech-cohomology-spectral.md) Čech 到上同调的谱序列
 
 - …另有出边，续页见 [nodes/thm.cartan-leray.3.md](./thm.cartan-leray.3.md)
 

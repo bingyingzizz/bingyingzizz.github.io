@@ -5,20 +5,20 @@
 
 - def.binary-operation　二元运算　layer 6
 - def.group　群　layer 7
-- prop.group-basic　群的基本性质　layer 8
-- def.group-order　群的阶与元素的阶　layer 8
 - def.field　域　layer 8
 - def.subgroup　子群　layer 8
 - def.normal-subgroup　正规子群　layer 8
 - def.free-group　自由群　layer 8
 - def.ring　环　layer 8
-- def.characteristic　域的特征　layer 9
-- ex.trivial-group　平凡群　layer 9
+- prop.group-basic　群的基本性质　layer 8
+- def.group-order　群的阶与元素的阶　layer 8
 - def.ordered-field　有序域　layer 9
 - def.quotient-group　商群　layer 9
 - def.group-hom　群同态、核与像　layer 9
 - def.module　模　layer 9
 - prop.zmod-is-ab　Z-模就是阿贝尔群　layer 9
+- def.characteristic　域的特征　layer 9
+- ex.trivial-group　平凡群　layer 9
 - thm.first-iso　第一同构定理（Noether）　layer 10
 - def.free-group-universal　自由群的泛性质　layer 10
 

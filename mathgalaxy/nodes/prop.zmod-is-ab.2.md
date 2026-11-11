@@ -3,4 +3,3 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.subcategory`](../nodes/def.subcategory.md) 子范畴：用到了定义 子范畴　[proofs/dep.gap-zmod-is-ab-subcategory.md](../proofs/dep.gap-zmod-is-ab-subcategory.md)
-- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/def-link.zmod-ring.md](../proofs/def-link.zmod-ring.md)

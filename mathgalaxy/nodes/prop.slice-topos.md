@@ -8,7 +8,7 @@ layer 18 · 命题 · 拓扑斯 · 范畴论
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/dep.gap-slice-topos-topos.md](../proofs/dep.gap-slice-topos-topos.md)
+- [`def.slice-category`](../nodes/def.slice-category.md) 切片范畴：用到了定义 切片范畴　[proofs/def-link.slicetopos-slice.md](../proofs/def-link.slicetopos-slice.md)
 
 - …另有入边，续页见 [nodes/prop.slice-topos.3.md](./prop.slice-topos.3.md)
 

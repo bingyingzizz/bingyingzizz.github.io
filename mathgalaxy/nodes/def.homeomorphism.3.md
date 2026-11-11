@@ -2,7 +2,7 @@
 [在星图里打开](../#n=def.homeomorphism)　·　第 1 页 [nodes/def.homeomorphism.md](./def.homeomorphism.md)　·　上一页 [nodes/def.homeomorphism.2.md](./def.homeomorphism.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
 - 被 [`def.manifold-chart`](../nodes/def.manifold-chart.md) 图卡 用
 - 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
 - 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用
-- 被 [`def.jordan-curve`](../nodes/def.jordan-curve.md) Jordan 曲线 用

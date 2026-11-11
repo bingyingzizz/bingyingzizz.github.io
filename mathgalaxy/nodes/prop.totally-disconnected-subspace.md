@@ -6,7 +6,7 @@ layer 13 · 命题 · Stone 与 Stonean · 拓扑学
 **全不连通**空间的**子空间**仍全不连通；同样地，闭开集限制到子空间上仍是闭开集。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.subspace`](../nodes/def.subspace.md) 子空间：用到了定义 子空间　[proofs/dep.gap-totally-disconnected-subspace-subspace.md](../proofs/dep.gap-totally-disconnected-subspace-subspace.md)
+- [`def.totally-disconnected`](../nodes/def.totally-disconnected.md) 完全不连通与极不连通：用到了定义 完全不连通与极不连通　[proofs/def-link.tdsub-td.md](../proofs/def-link.tdsub-td.md)
 
 - …另有入边，续页见 [nodes/prop.totally-disconnected-subspace.2.md](./prop.totally-disconnected-subspace.2.md)
 

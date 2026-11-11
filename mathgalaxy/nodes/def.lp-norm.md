@@ -8,7 +8,7 @@ layer 20 · 定义 · L^p 空间 · 实变函数+数学分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-lp-norm.md](../proofs/def-link.abs-lp-norm.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.complex-lp.md](../proofs/dep.complex-lp.md)
 
 - …另有入边，续页见 [nodes/def.lp-norm.4.md](./def.lp-norm.4.md)
 

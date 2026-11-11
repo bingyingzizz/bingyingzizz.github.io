@@ -9,8 +9,8 @@ layer 18 · 定理 · Baire 纲与三大定理 · 泛函分析
 2. 每个非空开集都是**第二纲**的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-link.fa-metric-baire.md](../proofs/def-link.fa-metric-baire.md)
-- [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/def-link.fa-complete-baire.md](../proofs/def-link.fa-complete-baire.md)
+- [`def.meager-set`](../nodes/def.meager-set.md) 第一纲 / 第二纲：用到了定义 第一纲 / 第二纲　[proofs/dep-link.meager-baire.md](../proofs/dep-link.meager-baire.md)
+- [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密：用到了定义 无处稠密　[proofs/dep-link.nowhere-baire.md](../proofs/dep-link.nowhere-baire.md)
 
 - …另有入边，续页见 [nodes/thm.baire.2.md](./thm.baire.2.md)
 

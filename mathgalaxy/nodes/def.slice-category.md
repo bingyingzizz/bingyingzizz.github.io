@@ -13,7 +13,7 @@ layer 13 · 定义 · 预层与米田 · 范畴论
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.slice-cartesian`](../nodes/prop.slice-cartesian.md) 切片范畴是拉回 用
+- ⇒ [`thm.density`](../nodes/thm.density.md) 稠密性定理
 
 - …另有出边，续页见 [nodes/def.slice-category.4.md](./def.slice-category.4.md)
 

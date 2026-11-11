@@ -2,8 +2,8 @@
 [在星图里打开](../#n=def.riemann-integrable)　·　第 1 页 [nodes/def.riemann-integrable.md](./def.riemann-integrable.md)　·　上一页 [nodes/def.riemann-integrable.3.md](./def.riemann-integrable.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`thm.riemann-lebesgue`](../nodes/thm.riemann-lebesgue.md) Riemann–Lebesgue 引理 用
-- 被 [`def.improper-integral`](../nodes/def.improper-integral.md) 反常积分 用
 - ⇒ [`thm.darboux-criterion`](../nodes/thm.darboux-criterion.md) Darboux 判据
 - ⇒ [`prop.integral-order`](../nodes/prop.integral-order.md) 积分的保序与估计
 - ⇒ [`thm.euler-maclaurin`](../nodes/thm.euler-maclaurin.md) 欧拉–麦克劳林公式
+- 被 [`def.contour-integral`](../nodes/def.contour-integral.md) 复围道积分 用
+- 被 [`thm.riemann-lebesgue`](../nodes/thm.riemann-lebesgue.md) Riemann–Lebesgue 引理 用

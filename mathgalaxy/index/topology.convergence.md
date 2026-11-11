@@ -5,11 +5,11 @@
 
 - def.second-countable　第二可数空间　layer 6
 - def.first-countable　第一可数空间　layer 7
-- def.compactification　紧化　layer 17
-- def.net　网　layer 17
-- def.filter　滤子　layer 17
 - def.locally-compact-space　局部紧空间　layer 17
 - thm.tykhonov　Tychonoff 定理　layer 17
 - prop.compact-basic-operations　紧性的基本操作　layer 17
-- def.one-point-compactification　一点紧化　layer 18
+- def.compactification　紧化　layer 17
+- def.net　网　layer 17
+- def.filter　滤子　layer 17
 - prop.quotient-of-compact　紧空间的商紧　layer 18
+- def.one-point-compactification　一点紧化　layer 18

@@ -7,11 +7,11 @@
 - def.riemann-sum　Riemann 和　layer 16
 - def.darboux-sum　上和与下和　layer 16
 - def.riemann-integrable　Riemann 可积　layer 17
-- thm.riemann-lebesgue　Riemann–Lebesgue 引理　layer 18
-- def.antiderivative　原函数　layer 18
 - thm.darboux-criterion　Darboux 判据　layer 18
 - prop.integral-order　积分的保序与估计　layer 18
 - def.improper-integral　反常积分　layer 18
+- thm.riemann-lebesgue　Riemann–Lebesgue 引理　layer 18
+- def.antiderivative　原函数　layer 18
 - thm.riemann-criterion　可积的振幅判据　layer 19
 - thm.riemann-lebesgue-criterion　可积 ⟺ 不连续点零测　layer 20
 - prop.integral-linear　积分的线性与区间可加　layer 20

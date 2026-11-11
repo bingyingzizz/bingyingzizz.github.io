@@ -3,5 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.kan-extension-exists`](../nodes/prop.kan-extension-exists.md) 有余极限时 Kan 延拓总存在 用
+- 被 [`def.slice-category`](../nodes/def.slice-category.md) 切片范畴 用
 - 被 [`thm.saft`](../nodes/thm.saft.md) 伴随函子定理 用
 - 被 [`def.cofinal-functor`](../nodes/def.cofinal-functor.md) 共尾函子 用

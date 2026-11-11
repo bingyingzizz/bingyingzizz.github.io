@@ -2,11 +2,11 @@
 [在星图里打开](../#n=def.subset)　·　第 1 页 [nodes/def.subset.md](./def.subset.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.union-inter`](../nodes/def.union-inter.md) 并集与交集 用
 - 被 [`def.diff-complement`](../nodes/def.diff-complement.md) 差集与补集 用
 - 被 [`def.power-set`](../nodes/def.power-set.md) 幂集 𝒫(X) 用
 - 被 [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集 用
 - 被 [`def.subspace-topology`](../nodes/def.subspace-topology.md) 子空间拓扑 用
+- 被 [`def.simplicial-complex`](../nodes/def.simplicial-complex.md) 单纯复形 用
 - 被 [`ax.sep`](../nodes/ax.sep.md) 分离公理模式 用
 - 被 [`ax.power`](../nodes/ax.power.md) 幂集公理 用
 - 被 [`def.finchar`](../nodes/def.finchar.md) 有限特征 用

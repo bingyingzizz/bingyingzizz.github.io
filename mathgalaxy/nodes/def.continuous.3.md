@@ -3,7 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续：度量连续 $\iff$ $\varepsilon$-$\delta$ 判据　[proofs/eq.real-continuity-epsilon-delta.md](../proofs/eq.real-continuity-epsilon-delta.md)
-- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-continuous.md](../proofs/def-link.abs-continuous.md)
 - [`def.sequence-limit`](../nodes/def.sequence-limit.md) 数列极限：用到了定义 数列极限　[proofs/dep.real-continuous.md](../proofs/dep.real-continuous.md)
 - [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续：用到了定义 度量空间的连续　[proofs/def-link.mc-continuous.md](../proofs/def-link.mc-continuous.md)
 

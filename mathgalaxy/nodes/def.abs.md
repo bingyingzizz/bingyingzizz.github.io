@@ -13,7 +13,7 @@ $$|x| := \begin{cases} x, & x \ge 0 \\ -x, & x < 0 \end{cases} \qquad\text{i.e.}
 - [`def.ordered-field`](../nodes/def.ordered-field.md) 有序域：用到了定义 有序域　[proofs/dep.ordered-abs.md](../proofs/dep.ordered-abs.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`prop.abs-properties`](../nodes/prop.abs-properties.md) 绝对值的运算性质
+- 被 [`def.cauchy-null`](../nodes/def.cauchy-null.md) Cauchy 列与零列 用
 
 - …另有出边，续页见 [nodes/def.abs.2.md](./def.abs.2.md)
 

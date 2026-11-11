@@ -52,8 +52,8 @@
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 33 · 内蕴几何
 - **6 / 6** `def.continuous` 连续（ε-δ 判据） · layer 16 · 实数与极限
 - **6 / 6** `def.abelian-category` 阿贝尔范畴 · layer 16 · 加法与阿贝尔范畴
-- **6 / 6** `thm.baire` Baire 纲定理 · layer 18 · Baire 纲与三大定理
 - **6 / 6** `prop.quasi-compact-properties` 拟紧的性质 · layer 18 · 拓扑斯
+- **6 / 6** `thm.baire` Baire 纲定理 · layer 18 · Baire 纲与三大定理
 - **6 / 6** `def.lp-norm` L^p 范数 · layer 20 · L^p 空间
 - **6 / 6** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 21 · Galois 理论
 - **6 / 6** `def.form-on-manifold` 微分形式 · layer 24 · 微分形式、积分与 de Rham

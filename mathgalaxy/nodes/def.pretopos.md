@@ -16,7 +16,7 @@ layer 16 · 定义 · 拓扑斯 · 范畴论
 - …另有入边，续页见 [nodes/def.pretopos.2.md](./def.pretopos.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.quasi-compact-properties`](../nodes/prop.quasi-compact-properties.md) 拟紧的性质 用
+- ⇒ [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解
 
 - …另有出边，续页见 [nodes/def.pretopos.3.md](./def.pretopos.3.md)
 

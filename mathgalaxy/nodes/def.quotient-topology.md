@@ -15,8 +15,6 @@ $$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 - …另有入边，续页见 [nodes/def.quotient-topology.2.md](./def.quotient-topology.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.cw-complex`](../nodes/def.cw-complex.md) CW 复形 用
-
 - …另有出边，续页见 [nodes/def.quotient-topology.3.md](./def.quotient-topology.3.md)
 
 refs: Munkres, Topology

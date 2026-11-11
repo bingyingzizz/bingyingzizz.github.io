@@ -8,12 +8,12 @@
 - def.topology-base　基与子基　layer 5
 - def.subspace-topology　子空间拓扑　layer 5
 - def.connected　连通与连通分量　layer 5
-- def.interior　内部　layer 6
-- ex.sierpinski-space　Sierpiński 空间　layer 6
 - def.quotient-topology　商拓扑　layer 6
 - def.product-topology　积拓扑　layer 6
 - def.clopen　闭开集　layer 6
 - prop.connected-image-closure　连通的像与闭包　layer 6
+- def.interior　内部　layer 6
+- ex.sierpinski-space　Sierpiński 空间　layer 6
 - def.compact　紧　layer 16
 - def.continuous-map　连续映射　layer 16
 

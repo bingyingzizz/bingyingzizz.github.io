@@ -9,8 +9,8 @@
 - 被 [`def.linear-isomorphism`](../nodes/def.linear-isomorphism.md) 线性同构 用
 - 被 [`def.field-extension`](../nodes/def.field-extension.md) 域扩张 用
 - ～弱边 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群
-- 被 [`thm.dimension`](../nodes/thm.dimension.md) 维数良定义 用
-- 被 [`thm.vsbasis`](../nodes/thm.vsbasis.md) 每个向量空间有基 用
 - 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
+- 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
+- 被 [`thm.dimension`](../nodes/thm.dimension.md) 维数良定义 用
 
 > 续见 [nodes/def.vector-space.5.md](./def.vector-space.5.md)

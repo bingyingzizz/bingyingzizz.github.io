@@ -10,7 +10,7 @@ $$\alpha := \limsup_{n \to \infty} \sqrt[n]{a_n}$$
 则：$\alpha < 1$ 时 $\sum a_n$ 收敛；$\alpha > 1$ 时 $\sum a_n$ 发散；$\alpha = 1$ 时**无结论**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根：n 次方根的存在唯一性 $\implies$ 根值判别法的表达式有定义　[proofs/def-link.nthroot-root-test.md](../proofs/def-link.nthroot-root-test.md)
+- [`thm.comparison-test`](../nodes/thm.comparison-test.md) 比较判别法：与几何级数比较 $\implies$ 根值判别法　[proofs/imp.root-test.md](../proofs/imp.root-test.md)
 
 - …另有入边，续页见 [nodes/thm.root-test.2.md](./thm.root-test.2.md)
 

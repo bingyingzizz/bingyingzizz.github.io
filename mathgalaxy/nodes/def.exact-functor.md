@@ -9,7 +9,7 @@ layer 13 · 定义 · 函子与自然变换 · 范畴论
 - [`def.preserves-limit`](../nodes/def.preserves-limit.md) 保极限的函子：用到了定义 保极限的函子　[proofs/def-dep.exact-preslim.md](../proofs/def-dep.exact-preslim.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.flat-module`](../nodes/def.flat-module.md) 平坦模 用
+- 被 [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据 用
 
 - …另有出边，续页见 [nodes/def.exact-functor.2.md](./def.exact-functor.2.md)
 

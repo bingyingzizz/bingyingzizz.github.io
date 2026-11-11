@@ -13,7 +13,7 @@ $$a \le b \implies a + c \le b + c, \qquad a \le b,\ 0 \le c \implies ac \le bc$
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.nth-root`](../nodes/thm.nth-root.md) n 次方根
+- ⇒ [`lem.archimedean`](../nodes/lem.archimedean.md) Archimedes 性质
 
 - …另有出边，续页见 [nodes/thm.real-ordered-field.5.md](./thm.real-ordered-field.5.md)
 

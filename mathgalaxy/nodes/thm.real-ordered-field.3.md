@@ -3,8 +3,8 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.real`](../nodes/def.real.md) 实数系 ℝ：Cauchy 列的等价类 $\implies$ 完备有序域　[proofs/imp.real-ordered-field.md](../proofs/imp.real-ordered-field.md)
-- [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/dep.realcomplete-complete.md](../proofs/dep.realcomplete-complete.md)
 - [`def.ordered-field`](../nodes/def.ordered-field.md) 有序域：用到了定义 有序域　[proofs/dep.ordered-realfield.md](../proofs/dep.ordered-realfield.md)
+- [`def.complete`](../nodes/def.complete.md) 完备：用到了定义 完备　[proofs/dep.realcomplete-complete.md](../proofs/dep.realcomplete-complete.md)
 - [`def.bound`](../nodes/def.bound.md) 界与确界：用到了定义 界与确界　[proofs/def-link.sup-real-ordered-field.md](../proofs/def-link.sup-real-ordered-field.md)
 
 > 续见 [nodes/thm.real-ordered-field.4.md](./thm.real-ordered-field.4.md)

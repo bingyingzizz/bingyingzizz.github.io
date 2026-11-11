@@ -10,7 +10,7 @@ $$\prod_{a \in S} h_{a} : \mathcal{C} \longrightarrow \mathbf{Set}^{S}, \qquad X
 是**忠实**的。等价地：只要 $f \ne g : X \to Y$，就存在 $a \in S$ 与 $g_{0} : a \to X$ 使 $f \circ g_{0} \ne g \circ g_{0}$。$S = \{G\}$ 时，$G$ 叫**生成元**。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`lem.solid-completion-criterion`](../nodes/lem.solid-completion-criterion.md) 完备化判据 用
+- ⇒ [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理
 
 - …另有出边，续页见 [nodes/def.generator.3.md](./def.generator.3.md)
 

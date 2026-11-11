@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.hausdorff)　·　第 1 页 [nodes/def.hausdorff.md](./def.hausdorff.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.hausdorff-reflective`](../nodes/prop.hausdorff-reflective.md) Hausdorff 空间是反射子范畴 用
 - 被 [`thm.paracompact-hausdorff-normal`](../nodes/thm.paracompact-hausdorff-normal.md) 仿紧 Hausdorff 空间正规 用
 - ⇒ [`thm.paracompact-hausdorff-normal`](../nodes/thm.paracompact-hausdorff-normal.md) 仿紧 Hausdorff 空间正规
 - 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
@@ -10,6 +11,5 @@
 - ⇒ [`def.t1-space`](../nodes/def.t1-space.md) T1 空间
 - ⇒ [`def.completely-regular-space`](../nodes/def.completely-regular-space.md) 完全正则空间
 - ⇒ [`def.normal-space`](../nodes/def.normal-space.md) 正规空间
-- ⇒ [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间
 
 > 续见 [nodes/def.hausdorff.3.md](./def.hausdorff.3.md)

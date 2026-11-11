@@ -16,7 +16,7 @@ layer 17 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 - …另有入边，续页见 [nodes/def.homeomorphism.2.md](./def.homeomorphism.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
+- 被 [`def.jordan-curve`](../nodes/def.jordan-curve.md) Jordan 曲线 用
 
 - …另有出边，续页见 [nodes/def.homeomorphism.3.md](./def.homeomorphism.3.md)
 

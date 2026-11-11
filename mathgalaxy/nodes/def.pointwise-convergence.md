@@ -10,7 +10,7 @@ $$\forall \varepsilon > 0,\ \exists N,\ \forall n \ge N :\ |f_n(x) - f(x)| < \va
 记 $f_n \to f$（逐点）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
+- 被 [`def.uniform-convergence`](../nodes/def.uniform-convergence.md) 一致收敛 用
 
 - …另有出边，续页见 [nodes/def.pointwise-convergence.3.md](./def.pointwise-convergence.3.md)
 

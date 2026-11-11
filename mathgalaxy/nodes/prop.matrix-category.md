@@ -8,7 +8,7 @@ $k$ 交换时 $\operatorname{Mat}(k)$（对象 $\mathbb{N}$、$\operatorname{Hom
 $k$ 是域时 $\operatorname{Mat}(k) \simeq$ 有限维 $k$-向量空间范畴（**等价但不同构**）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.vector-space`](../nodes/def.vector-space.md) 向量空间：用到了定义 向量空间　[proofs/dep.gap-matrix-category-vector-space.md](../proofs/dep.gap-matrix-category-vector-space.md)
+- [`def.category`](../nodes/def.category.md) 范畴：用到了定义 范畴　[proofs/def-link.matcat-cat.md](../proofs/def-link.matcat-cat.md)
 
 - …另有入边，续页见 [nodes/prop.matrix-category.2.md](./prop.matrix-category.2.md)
 

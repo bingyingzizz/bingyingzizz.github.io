@@ -10,7 +10,7 @@ $$\sum_{n=0}^{\infty} a_n (x - x_0)^{n}$$
 的表达式叫**幂级数**。使它在某个 $x$ 处收敛的那些 $x$ 构成**收敛域**；收敛域的**内部**总是一个以 $x_0$ 为中心的区间（或圆盘）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.power`](../nodes/def.power.md) 整数幂：用到了定义 整数幂　[proofs/def-link.power-series-power.md](../proofs/def-link.power-series-power.md)
+- [`def.series`](../nodes/def.series.md) 级数收敛：用到了定义 级数收敛　[proofs/dep.series-powerseries.md](../proofs/dep.series-powerseries.md)
 
 - …另有入边，续页见 [nodes/def.power-series.2.md](./def.power-series.2.md)
 

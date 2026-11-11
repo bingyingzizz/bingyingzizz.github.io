@@ -12,7 +12,7 @@ $$\log := (\exp|_{\mathbb{R}})^{-1}, \qquad e := \exp 1 = \sum_{n=0}^{\infty} \f
 $$\log(xy) = \log x + \log y, \qquad \frac{d}{dx}\log x = \frac{1}{x}$$
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.elementary-derivatives`](../nodes/thm.elementary-derivatives.md) 初等函数的导数
+- ⇒ [`thm.bertrand-test`](../nodes/thm.bertrand-test.md) 贝特朗判别法（Bertrand）
 
 - …另有出边，续页见 [nodes/def.log-function.3.md](./def.log-function.3.md)
 
