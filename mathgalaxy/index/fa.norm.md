@@ -11,6 +11,7 @@
 - def.bounded-operator　有界线性算子　layer 17
 - def.schauder-basis　Schauder 基　layer 17
 - def.perfect-pairing　完美配对　layer 17
+- def.strictly-convex　严格凸　layer 17
 - thm.norm-equiv-finite-dim　有限维范数等价　layer 18
 - thm.linear-continuous-bounded　连续 ⟺ 有界　layer 18
 - prop.operator-algebra　算子乘法的范数不等式　layer 18

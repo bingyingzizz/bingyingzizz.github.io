@@ -9,7 +9,6 @@
 - def.weak-topology　弱拓扑　layer 18
 - thm.riesz-ball-compact　单位球紧 ⟺ 有限维　layer 19
 - thm.neumann-series　Neumann 级数　layer 19
-- def.strictly-convex　严格凸　layer 19
 - thm.milman-pettis　Milman–Pettis 定理　layer 19
 - thm.james　James 定理　layer 19
 - thm.complemented-subspace-criterion　可补子空间的判别　layer 20

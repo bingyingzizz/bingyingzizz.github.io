@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-11T08:08:35.027Z",
+  "generated": "2026-11-11T10:27:10.009Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
@@ -14,7 +14,7 @@
    "edges": 3372,
    "strong": 3307,
    "weak": 65,
-   "derived": 33,
+   "derived": 34,
    "en_pages": 1620
   },
   "readingGuide": {
@@ -66293,7 +66293,7 @@
     "functional-analysis"
    ],
    "cluster": "fa.norm",
-   "layer": 19,
+   "layer": 17,
    "tags": [
     "泛函分析",
     "Banach 空间",
@@ -90154,9 +90154,10 @@
     "def.uniformly-convex"
    ],
    "target": "def.strictly-convex",
+   "layer": false,
    "title": "一致凸 $\\implies$ 严格凸",
    "proof": "设 $X$ 一致凸，取 $\\|x\\| = \\|y\\| = 1$、$x \\ne y$，令 $\\varepsilon = \\|x - y\\| > 0$。\n由一致凸，存在 $\\delta = \\delta(\\varepsilon) > 0$ 使 $\\|(x + y)/2\\| \\le 1 - \\delta < 1$。\n按 `def.strictly-convex` 的定义，这正是严格凸。$\\blacksquare$",
-   "note": "反向不成立：存在严格凸但不一致凸的 Banach 空间。"
+   "note": "严格凸是独立定义，不由一致凸构造；这条只是逻辑包含，故不分层。反向不成立：存在严格凸但不一致凸的 Banach 空间。"
   },
   {
    "id": "def-link.ref-dual",
