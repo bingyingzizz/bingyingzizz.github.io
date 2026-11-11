@@ -1,6 +1,10 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 7.56 | 勒雷谱序列 → thm.leray-spectral-sequence
+
+- Exercise 7.22 | 导出函子 → prop.derived-functor-kan-extension
+
 - Exercise 7.36 → prop.cohomology-via-associated-sheaf
 
 - Exercise 7.42 → prop.cohomology-presheaf-H
@@ -32,11 +36,5 @@
 - 平坦维数 → def.flat-dimension
 
 - 预加法范畴 | Ab-范畴 | Ab-category → def.pre-additive-category
-
-- 加法范畴 → def.additive-category
-
-- 预阿贝尔范畴 → def.pre-abelian-category
-
-- 软层 → def.soft-sheaf
 
 > 续见 alias/aka/homology.17.md

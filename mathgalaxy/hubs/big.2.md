@@ -11,6 +11,6 @@
 - **6 / 6** `thm.classification-surfaces` 闭曲面分类定理 · layer 27 · 曲面的地形
 - **6 / 6** `thm.schur-triangularization` Schur 三角化 · layer 29 · 内积空间与正交性
 
-（共 1603 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1605 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

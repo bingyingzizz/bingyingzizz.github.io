@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
+layer 13 · definition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.bicomplex.md` and `proofs/`.

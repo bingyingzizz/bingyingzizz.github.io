@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-11T04:24:16.432Z
-> 15 星系 / 105 星团 / 1611 节点 / 3335 连线（强边 3280，弱边 55；其中**不分层**的「推论」33 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-11T04:40:21.987Z
+> 15 星系 / 105 星团 / 1613 节点 / 3341 连线（强边 3286，弱边 55；其中**不分层**的「推论」33 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.1 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -24473,18 +24473,49 @@ $$H^{n}(K) = 0 \qquad \text{对一切}\ n .$$
 
 参考：Weibel, An Introduction to Homological Algebra；Le Stum, An introduction to condensed mathematics, §7.1.4
 
+#### 态射序列　`def.sequence-of-morphisms`
+*定义*　序列
+
+设 $\mathcal{C}$ 是范畴。$\mathcal{C}$ 中的**（长）序列**是有序集 $(\mathbb{Z}, \le)$ 上的**交换图**，即函子 $K : (\mathbb{Z}, \le) \to \mathcal{C}$；展开写就是对象与态射
+
+$$\cdots \longrightarrow K^{n-1} \xrightarrow{d^{n-1}} K^{n} \xrightarrow{d^{n}} K^{n+1} \longrightarrow \cdots$$
+
+因 $(\mathbb{Z}, \le)$ 的任意两个对象之间至多一个态射，交换性自动成立：$d^{m-1} \circ \cdots \circ d^{n}$ 就是 $K^{n} \to K^{m}$ 的唯一态射。也称**态射序列**。
+
+序列**不要求** $d^{n} \circ d^{n-1} = 0$；加上这条才是（上）链复形（见 `def.cochain-complex`）。
+
+例：$\mathbf{Ab}$ 中的序列就是一串群同态；$\mathcal{C} = \mathbf{Vect}_{k}$ 时是一串线性映射。
+
+有限序列（只有有限多个非零项）与单边序列（只对 $n \ge 0$ 给出 $K^{n}$）都是常用变体；本图默认双边无穷序列，因为复形在同调代数里通常双边编号。
+
+参考：Le Stum, An introduction to condensed mathematics, §7.1, Definition 7.1.1
+
+#### 复形范畴　`def.category-of-complexes`
+*定义*　复形范畴
+
+设 $\mathcal{C}$ 是加法范畴。**复形范畴** $\mathcal{C}(\mathcal{C})$ 的对象是 $\mathcal{C}$ 中的上链复形，态射是**链映射** $f : K \to L$：一族 $f^{n} : K^{n} \to L^{n}$ 使
+
+$$d_{L}^{n} \circ f^{n} = f^{n+1} \circ d_{K}^{n}$$
+
+对一切 $n$ 成立。它是 $\mathcal{C}^{(\mathbb{Z}, \le)}$ 的**满**加法子范畴 —— 序列的态射正是自然变换，其条件恰为上面的交换关系。
+
+**满性**：两个复形之间的每个序列态射都自动与微分交换，所以 $\mathcal{C}(\mathcal{C})$ 的 Hom 集就是序列范畴的 Hom 集，不需要再筛。
+
+下有界、上有界、有界复形分别给出**满子范畴** $\mathcal{C}^{+}(\mathcal{C})$、$\mathcal{C}^{-}(\mathcal{C})$、$\mathcal{C}^{b}(\mathcal{C})$；同伦范畴那边同样加 $+$、$-$、$b$。
+
+极限与余极限**逐项**计算，加法结构也逐项（见 `prop.complex-additive`）；$\mathcal{C}$ 阿贝尔时 $\mathcal{C}(\mathcal{C})$ 也阿贝尔。
+
+参考：Le Stum, An introduction to condensed mathematics, §7.1, Exercise 7.1
+
 #### 上链复形　`def.cochain-complex`
 *定义*　复形
 
-设 $\mathcal{C}$ 是加法范畴。$\mathcal{C}$ 中的**（长）序列**是有序集 $(\mathbb{Z}, \le)$ 上的图
-
-$$\cdots \longrightarrow K^{n-1} \xrightarrow{\ d^{n-1}\ } K^{n} \xrightarrow{\ d^{n}\ } K^{n+1} \longrightarrow \cdots$$
-
-若对每个 $n$ 都有 $d^{n} \circ d^{n-1} = 0$，则称 $K$ 是一个**（上）链复形**，$d$ 叫**微分**。把箭头反向（或等价地在 $\mathcal{C}^{\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。
+设 $\mathcal{C}$ 是加法范畴。**（上）链复形**是 $\mathcal{C}$ 中的（长）序列（见 `def.sequence-of-morphisms`）$K$，且满足 $d^{n} \circ d^{n-1} = 0$ 对每个 $n$ 成立；$d$ 叫**微分**。
+把箭头反向（或等价地在 $\mathcal{C}^{\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。
 
 $K$ 叫**下有界**（$n \ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。
 
-相应地记复形范畴为 $\mathcal{C}(\mathcal{C})$，其下有界、上有界、有界的满子范畴分别记 $\mathcal{C}^{+}(\mathcal{C})$、$\mathcal{C}^{-}(\mathcal{C})$、$\mathcal{C}^{b}(\mathcal{C})$；
+相应地记复形范畴为 $\mathcal{C}(\mathcal{C})$（见 `def.category-of-complexes`），其下有界、上有界、有界的满子范畴分别记 $\mathcal{C}^{+}(\mathcal{C})$、$\mathcal{C}^{-}(\mathcal{C})$、$\mathcal{C}^{b}(\mathcal{C})$；
 
 同伦范畴那边同样加 $+$ $-$ $b$。
 
@@ -58940,6 +58971,30 @@ $$\operatorname{Hom}_{\mathrm{Cond}}(\underline{X}, \underline{Y}) \;\cong\; \op
 
 > 一句话记住：**「拓扑空间 $\to$ 凝聚态集」这件事丢掉的东西，正好就是 $k$-化丢掉的东西。** 所以在 $k\mathbf{Top}$ 上它不丢信息。
 
+#### 定义引用：「图与交换图」→ 态射序列　`def-dep.sequence-commdiagram`
+
+序列是 $(\mathbb{Z}, \le)$ 上的交换图，指标范畴是一条线序。
+
+#### 定义引用：「态射序列」→ 上链复形　`def-dep.cochain-sequence`
+
+复形 = 满足 $d^{2} = 0$ 的序列。
+
+#### 定义引用：「态射序列」→ 复形范畴　`def-dep.complexcat-sequence`
+
+复形范畴的对象是满足 $d^{2} = 0$ 的序列。
+
+#### 定义引用：「上链复形」→ 复形范畴　`def-dep.complexcat-cochain`
+
+复形范畴的对象就是上链复形。
+
+#### 定义引用：「加法范畴」→ 复形范畴　`def-dep.complexcat-additive`
+
+复形范畴是加法范畴：零对象与直和都逐项取。
+
+#### 定义引用：「复形范畴」→ 复形范畴是加法范畴　`def-dep.complex-additive-cat`
+
+这个命题陈述的对象就是复形范畴 C(C)。
+
 #### 定义引用：「范畴」→ 预加法范畴　`def-dep.preadd-cat`
 
 预加法范畴首先是范畴，额外带有 Hom 集的阿贝尔群结构。
@@ -65327,7 +65382,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　3 条节点级连线
 - **拓扑空间的基本语汇 ↔ 分离公理**　14 条节点级连线
 - **收敛与紧性 ↔ 分离公理**　4 条节点级连线
-- **加法与阿贝尔范畴 ↔ 复形与导出三角**　11 条节点级连线
+- **加法与阿贝尔范畴 ↔ 复形与导出三角**　12 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
 - **多元微分 ↔ 赋范空间与有界算子**　12 条节点级连线
@@ -65416,6 +65471,7 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **拓扑斯 ↔ 凝聚态集**　11 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
+- **图与极限 ↔ 复形与导出三角**　5 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　15 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
@@ -65425,7 +65481,6 @@ $\mathcal{P}(X)$（或整个空间）保证了候选族不空。这两句话就�
 - **导出 Hom 的具体计算 ↔ 拓扑阿贝尔群**　2 条节点级连线
 - **导出 Hom 的具体计算 ↔ 紧 Hausdorff 空间**　4 条节点级连线
 - **导出 Hom 的具体计算 ↔ 阿贝尔层**　2 条节点级连线
-- **图与极限 ↔ 复形与导出三角**　4 条节点级连线
 - **层与拓扑 ↔ 预层与米田**　8 条节点级连线
 - **函子与自然变换 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **函子与自然变换 ↔ 复形与导出三角**　3 条节点级连线

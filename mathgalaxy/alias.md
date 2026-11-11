@@ -13,7 +13,7 @@
 - 泛函分析　`alias/aka/functional-analysis.md` 0+73
 - 实变函数　`alias/analysis-measure.md` / `alias/aka/analysis-measure.md` 37+148
 - 范畴论　`alias/category.md` / `alias/aka/category.md` 63+208
-- 同调代数　`alias/homology.md` / `alias/aka/homology.md` 47+169
+- 同调代数　`alias/homology.md` / `alias/aka/homology.md` 47+171
 - 凝聚态数学　`alias/condensed.md` / `alias/aka/condensed.md` 40+109
 - 解析空间　`alias/aka/analytic.md` 0+15
 - 复变函数　`alias/complex.md` / `alias/aka/complex.md` 3+85

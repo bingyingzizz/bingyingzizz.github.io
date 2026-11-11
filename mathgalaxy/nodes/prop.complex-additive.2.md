@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核：用到了定义 核与余核　[proofs/dep.gap-complex-additive-kernel-cokernel.md](../proofs/dep.gap-complex-additive-kernel-cokernel.md)
+- [`def.category-of-complexes`](../nodes/def.category-of-complexes.md) 复形范畴：用到了定义 复形范畴　[proofs/def-dep.complex-additive-cat.md](../proofs/def-dep.complex-additive-cat.md)
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.complex-additive.md](../proofs/def-dep.complex-additive.md)
 - [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-dep.equalizer-complex-additive.md](../proofs/def-dep.equalizer-complex-additive.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 13 · definition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.k-bounded-exact.md` and `proofs/`.

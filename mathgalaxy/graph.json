@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-11T04:24:16.432Z",
+  "generated": "2026-11-11T04:40:21.987Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1611,
-   "edges": 3335,
-   "strong": 3280,
+   "nodes": 1613,
+   "edges": 3341,
+   "strong": 3286,
    "weak": 55,
    "derived": 33,
-   "en_pages": 1611
+   "en_pages": 1613
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -117,7 +117,7 @@
    "en": "Homological Algebra",
    "desc": "加法与阿贝尔范畴、复形与导出三角、同调与长正合列、谱序列。",
    "color": "#C89A2B",
-   "nodeCount": 232
+   "nodeCount": 234
   },
   {
    "id": "condensed",
@@ -1684,12 +1684,14 @@
    "en": "Complexes and Distinguished Triangles",
    "parent": "homology",
    "desc": "造出「两两复合为零」的机器：复形 → 同伦 → 同伦范畴 → 映射锥 → 导出三角，以及三角的旋转与延拓。",
-   "nodeCount": 38,
+   "nodeCount": 40,
    "nodes": [
     "thm.universal-coefficients",
     "def.cycle",
     "def.boundary",
     "def.acyclic-complex",
+    "def.sequence-of-morphisms",
+    "def.category-of-complexes",
     "def.cochain-complex",
     "prop.complex-additive",
     "def.homotopy",
@@ -17469,7 +17471,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17555,7 +17557,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17598,7 +17600,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17725,7 +17727,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17768,7 +17770,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "同调代数",
     "群上同调",
@@ -17811,7 +17813,7 @@
     "algebra"
    ],
    "cluster": "hom.group",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "同调代数",
     "群上同调",
@@ -51803,6 +51805,86 @@
    }
   },
   {
+   "id": "def.sequence-of-morphisms",
+   "type": "definition",
+   "label": "态射序列",
+   "title": "序列",
+   "label_en": "sequence",
+   "title_en": "sequence of morphisms",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.sequence-of-morphisms.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.complex",
+   "layer": 11,
+   "tags": [
+    "同调代数",
+    "序列",
+    "交换图"
+   ],
+   "statement": "设 $\\mathcal{C}$ 是范畴。$\\mathcal{C}$ 中的**（长）序列**是有序集 $(\\mathbb{Z}, \\le)$ 上的**交换图**，即函子 $K : (\\mathbb{Z}, \\le) \\to \\mathcal{C}$；展开写就是对象与态射\n\n$$\\cdots \\longrightarrow K^{n-1} \\xrightarrow{d^{n-1}} K^{n} \\xrightarrow{d^{n}} K^{n+1} \\longrightarrow \\cdots$$\n\n因 $(\\mathbb{Z}, \\le)$ 的任意两个对象之间至多一个态射，交换性自动成立：$d^{m-1} \\circ \\cdots \\circ d^{n}$ 就是 $K^{n} \\to K^{m}$ 的唯一态射。也称**态射序列**。",
+   "notes": "序列**不要求** $d^{n} \\circ d^{n-1} = 0$；加上这条才是（上）链复形（见 `def.cochain-complex`）。\n\n例：$\\mathbf{Ab}$ 中的序列就是一串群同态；$\\mathcal{C} = \\mathbf{Vect}_{k}$ 时是一串线性映射。\n\n有限序列（只有有限多个非零项）与单边序列（只对 $n \\ge 0$ 给出 $K^{n}$）都是常用变体；本图默认双边无穷序列，因为复形在同调代数里通常双边编号。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §7.1, Definition 7.1.1"
+   ]
+  },
+  {
+   "id": "def.category-of-complexes",
+   "type": "definition",
+   "label": "复形范畴",
+   "title": "复形范畴",
+   "label_en": "complexes category",
+   "title_en": "category of complexes",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.category-of-complexes.en.md",
+   "region": "homology",
+   "regions": [
+    "homology"
+   ],
+   "cluster": "hom.complex",
+   "layer": 15,
+   "tags": [
+    "同调代数",
+    "复形范畴",
+    "链映射"
+   ],
+   "statement": "设 $\\mathcal{C}$ 是加法范畴。**复形范畴** $\\mathcal{C}(\\mathcal{C})$ 的对象是 $\\mathcal{C}$ 中的上链复形，态射是**链映射** $f : K \\to L$：一族 $f^{n} : K^{n} \\to L^{n}$ 使\n\n$$d_{L}^{n} \\circ f^{n} = f^{n+1} \\circ d_{K}^{n}$$\n\n对一切 $n$ 成立。它是 $\\mathcal{C}^{(\\mathbb{Z}, \\le)}$ 的**满**加法子范畴 —— 序列的态射正是自然变换，其条件恰为上面的交换关系。",
+   "notes": "**满性**：两个复形之间的每个序列态射都自动与微分交换，所以 $\\mathcal{C}(\\mathcal{C})$ 的 Hom 集就是序列范畴的 Hom 集，不需要再筛。\n\n下有界、上有界、有界复形分别给出**满子范畴** $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；同伦范畴那边同样加 $+$、$-$、$b$。\n\n极限与余极限**逐项**计算，加法结构也逐项（见 `prop.complex-additive`）；$\\mathcal{C}$ 阿贝尔时 $\\mathcal{C}(\\mathcal{C})$ 也阿贝尔。",
+   "refs": [
+    "Le Stum, An introduction to condensed mathematics, §7.1, Exercise 7.1"
+   ]
+  },
+  {
    "id": "def.cochain-complex",
    "type": "definition",
    "label": "上链复形",
@@ -51830,14 +51912,14 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 11,
+   "layer": 12,
    "tags": [
     "同调代数",
     "复形",
     "微分"
    ],
-   "statement": "设 $\\mathcal{C}$ 是加法范畴。$\\mathcal{C}$ 中的**（长）序列**是有序集 $(\\mathbb{Z}, \\le)$ 上的图\n\n$$\\cdots \\longrightarrow K^{n-1} \\xrightarrow{\\ d^{n-1}\\ } K^{n} \\xrightarrow{\\ d^{n}\\ } K^{n+1} \\longrightarrow \\cdots$$\n\n若对每个 $n$ 都有 $d^{n} \\circ d^{n-1} = 0$，则称 $K$ 是一个**（上）链复形**，$d$ 叫**微分**。把箭头反向（或等价地在 $\\mathcal{C}^{\\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。",
-   "notes": "$K$ 叫**下有界**（$n \\ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。\n\n相应地记复形范畴为 $\\mathcal{C}(\\mathcal{C})$，其下有界、上有界、有界的满子范畴分别记 $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；\n\n同伦范畴那边同样加 $+$ $-$ $b$。\n\n例：$K$ 是（半）单纯对象时，令 $d^{n} := \\sum_{i} (-1)^{i} d_{i}^{n}$，则 $K$ 成为一个链复形 —— 系数 $(-1)^{i}$ 就是让相邻两项的复合正负相消的那个符号，和经典的单纯边界算子完全一致。",
+   "statement": "设 $\\mathcal{C}$ 是加法范畴。**（上）链复形**是 $\\mathcal{C}$ 中的（长）序列（见 `def.sequence-of-morphisms`）$K$，且满足 $d^{n} \\circ d^{n-1} = 0$ 对每个 $n$ 成立；$d$ 叫**微分**。\n把箭头反向（或等价地在 $\\mathcal{C}^{\\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。",
+   "notes": "$K$ 叫**下有界**（$n \\ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。\n\n相应地记复形范畴为 $\\mathcal{C}(\\mathcal{C})$（见 `def.category-of-complexes`），其下有界、上有界、有界的满子范畴分别记 $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；\n\n同伦范畴那边同样加 $+$ $-$ $b$。\n\n例：$K$ 是（半）单纯对象时，令 $d^{n} := \\sum_{i} (-1)^{i} d_{i}^{n}$，则 $K$ 成为一个链复形 —— 系数 $(-1)^{i}$ 就是让相邻两项的复合正负相消的那个符号，和经典的单纯边界算子完全一致。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.1"
    ]
@@ -51870,7 +51952,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 15,
+   "layer": 16,
    "tags": [
     "同调代数",
     "加法范畴",
@@ -51910,7 +51992,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "同调代数",
     "同伦",
@@ -51950,7 +52032,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "同调代数",
     "同伦范畴"
@@ -56893,7 +56975,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "同调代数",
     "导出函子",
@@ -57060,7 +57142,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "同调代数",
     "零调",
@@ -57101,7 +57183,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "同调代数",
     "零调",
@@ -57183,7 +57265,7 @@
     "homology"
    ],
    "cluster": "hom.spectral",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "同调代数",
     "双复形",
@@ -58221,7 +58303,7 @@
     "homology"
    ],
    "cluster": "cond.cohomology",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "凝聚态数学",
     "Banach",
@@ -60568,7 +60650,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "命题",
     "单纯对象",
@@ -60609,7 +60691,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "命题",
     "复形",
@@ -60650,7 +60732,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 14,
+   "layer": 15,
    "tags": [
     "命题",
     "同伦",
@@ -60894,7 +60976,7 @@
     "condensed"
    ],
    "cluster": "cond.cohomology",
-   "layer": 13,
+   "layer": 14,
    "tags": [
     "命题",
     "半范数",
@@ -62603,7 +62685,7 @@
     "homology"
    ],
    "cluster": "hom.complex",
-   "layer": 12,
+   "layer": 13,
    "tags": [
     "命题",
     "加法函子",
@@ -90634,6 +90716,54 @@
    "note": "一句话记住：**「拓扑空间 $\\to$ 凝聚态集」这件事丢掉的东西，正好就是 $k$-化丢掉的东西。** 所以在 $k\\mathbf{Top}$ 上它不丢信息。"
   },
   {
+   "id": "def-dep.sequence-commdiagram",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.commutative-diagram",
+   "usedBy": "def.sequence-of-morphisms",
+   "note": "序列是 $(\\mathbb{Z}, \\le)$ 上的交换图，指标范畴是一条线序。"
+  },
+  {
+   "id": "def-dep.cochain-sequence",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sequence-of-morphisms",
+   "usedBy": "def.cochain-complex",
+   "note": "复形 = 满足 $d^{2} = 0$ 的序列。"
+  },
+  {
+   "id": "def-dep.complexcat-sequence",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.sequence-of-morphisms",
+   "usedBy": "def.category-of-complexes",
+   "note": "复形范畴的对象是满足 $d^{2} = 0$ 的序列。"
+  },
+  {
+   "id": "def-dep.complexcat-cochain",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.cochain-complex",
+   "usedBy": "def.category-of-complexes",
+   "note": "复形范畴的对象就是上链复形。"
+  },
+  {
+   "id": "def-dep.complexcat-additive",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.additive-category",
+   "usedBy": "def.category-of-complexes",
+   "note": "复形范畴是加法范畴：零对象与直和都逐项取。"
+  },
+  {
+   "id": "def-dep.complex-additive-cat",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-complexes",
+   "usedBy": "prop.complex-additive",
+   "note": "这个命题陈述的对象就是复形范畴 C(C)。"
+  },
+  {
    "id": "def-dep.preadd-cat",
    "kind": "definition",
    "strength": "strong",
@@ -101537,7 +101667,7 @@
   {
    "a": "hom.ab",
    "b": "hom.complex",
-   "count": 11,
+   "count": 12,
    "label": "",
    "explicit": false
   },
@@ -102159,6 +102289,13 @@
   },
   {
    "a": "cat.limit",
+   "b": "hom.complex",
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
    "b": "hom.ab",
    "count": 15,
    "label": "",
@@ -102217,13 +102354,6 @@
    "a": "cond.compute",
    "b": "hom.sheaf",
    "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.limit",
-   "b": "hom.complex",
-   "count": 4,
    "label": "",
    "explicit": false
   },

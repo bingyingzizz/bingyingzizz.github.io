@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 16 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `H2 and Extensions` (short) · `Second Cohomology Classifies Group Extensions` (full)
 
 ## Statement and proof

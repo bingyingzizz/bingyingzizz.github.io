@@ -1,6 +1,12 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Exercise 7.27 → prop.additive-complex-construction
+
+- Exercise 7.29 → prop.spectral-degenerate-row
+
+- Exercise 7.30 → prop.five-term-spectral-sequence
+
 - Exercise 7.31 → prop.filtered-first-page
 
 - Exercise 7.34 → prop.total-complex-injective-resolution
@@ -24,9 +30,5 @@
 - Exercise 7.54 → prop.cohomology-functoriality
 
 - Exercise 7.55 → prop.derived-pushforward-composition
-
-- Exercise 7.56 | 勒雷谱序列 → thm.leray-spectral-sequence
-
-- Exercise 7.22 | 导出函子 → prop.derived-functor-kan-extension
 
 > 续见 alias/aka/homology.16.md

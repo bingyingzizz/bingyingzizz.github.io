@@ -3,7 +3,7 @@
 
 $K$ 叫**下有界**（$n \ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。
 
-相应地记复形范畴为 $\mathcal{C}(\mathcal{C})$，其下有界、上有界、有界的满子范畴分别记 $\mathcal{C}^{+}(\mathcal{C})$、$\mathcal{C}^{-}(\mathcal{C})$、$\mathcal{C}^{b}(\mathcal{C})$；
+相应地记复形范畴为 $\mathcal{C}(\mathcal{C})$（见 `def.category-of-complexes`），其下有界、上有界、有界的满子范畴分别记 $\mathcal{C}^{+}(\mathcal{C})$、$\mathcal{C}^{-}(\mathcal{C})$、$\mathcal{C}^{b}(\mathcal{C})$；
 
 同伦范畴那边同样加 $+$ $-$ $b$。
 

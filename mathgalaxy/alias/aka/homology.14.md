@@ -1,6 +1,10 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Cartan-Eilenberg | Cartan–Eilenberg 分解 | Lemma 7.2.19 | 卡当-艾伦伯格分解 → lem.cartan-eilenberg
+
+- Definition 7.1.20 | Def 7.1.20 → def.resolution
+
 - Proposition 7.2.18 | Prop 7.2.18 | Exercise 7.32 | Exercise 7.33 → prop.bicomplex-spectral
 
 - Lemma 7.3.2 → lem.covering-free-acyclic
@@ -24,11 +28,5 @@
 - Exercise 5.20 → prop.generators-abelian-sheaves
 
 - Exercise 5.29 → prop.free-sheaf-tensor
-
-- Exercise 7.27 → prop.additive-complex-construction
-
-- Exercise 7.29 → prop.spectral-degenerate-row
-
-- Exercise 7.30 → prop.five-term-spectral-sequence
 
 > 续见 alias/aka/homology.15.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 13 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Category into Complexes` (short) · `Embedding a Category into Its Complexes` (full)
 
 ## Statement and proof

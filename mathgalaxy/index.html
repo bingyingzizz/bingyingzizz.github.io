@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 <title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1611 nodes, 3335 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta name="description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1613 nodes, 3341 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <!-- 分享/收录用。线上地址固定是 GitHub Pages 那一个；file:// 打开时这几行不起作用，无害 -->
 <link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="数学星图 MathGalaxy" />
 <meta property="og:title" content="数学星图 MathGalaxy · 可交互的数学知识图谱" />
-<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1611 nodes, 3335 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
+<meta property="og:description" content="数学星图 MathGalaxy：把数学概念（定理 / 定义 / 引理）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图。每个概念都有独立页面可以单独检索。 MathGalaxy is a zoomable, searchable knowledge graph of mathematics: 1613 nodes, 3341 edges, four kinds of edges (implication / equivalence / definition / analogy); every concept has its own page." />
 <meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/" />
 <meta property="og:locale" content="zh_CN" />
 <!-- 同一个 URL 承载双语 ⇒ 不用 hreflang（那是给不同 URL 的），用 alternate 说明这页里也有英文 -->
@@ -12894,6 +12894,8 @@ MG.aliases = {
     { id: 'prop.sieve-covering-equivalent', aka: ['覆盖筛的四条等价', '覆盖筛等价条件', 'Proposition 3.2.12', 'Prop 3.2.12', '层化 覆盖筛'] },
 
     /* 同调代数 */
+    { id: 'def.sequence-of-morphisms', en: 'sequence of morphisms', aka: ['态射序列'] },
+    { id: 'def.category-of-complexes', en: 'category of complexes', aka: ['复形范畴'] },
     { id: 'def.cochain-complex', en: 'cochain complex', aka: ['复形', 'complex', '上链复形', 'cochain complex', '链复形', 'Definition 7.1.1', 'Def 7.1.1'] },
     { id: 'prop.complex-additive', aka: ['复形范畴是加法范畴', '逐项计算', 'Exercise 7.1', 'Exercise 7.7'] },
     { id: 'def.homotopy', en: 'homotopy', aka: [ '同伦', 'homotopy', '零伦', 'null-homotopic', 'Exercise 7.4', 'Exercise 7.5', 'Definition 7.1.2', 'Def 7.1.2' ] },
@@ -14295,6 +14297,7 @@ MG.i18n = {
     'def.cat-equivalence': { title_en: 'equivalence of categories', label_en: 'equivalence of categories', from: 'aka' },
     'def.category': { title_en: 'category', label_en: 'category', from: 'aka' },
     'def.category-of-abelian-groups': { title_en: 'category of abelian groups', label_en: 'category of abelian groups', from: 'explicit' },
+    'def.category-of-complexes': { title_en: 'category of complexes', label_en: 'complexes category', from: 'manual' },
     'def.category-of-groups': { title_en: 'category of groups', label_en: 'category of groups', from: 'explicit' },
     'def.cauchy-in-measure': { title_en: 'Cauchy in measure', label_en: 'Cauchy in measure', from: 'explicit' },
     'def.cauchy-null': { title_en: 'Cauchy sequences and null sequences', label_en: null, from: 'aka' },
@@ -14771,6 +14774,7 @@ MG.i18n = {
     'def.separable-extension': { title_en: 'separable extension', label_en: 'separable extension', from: 'explicit' },
     'def.separable-space': { title_en: 'separable space', label_en: 'separable space', from: 'explicit' },
     'def.sequence-limit': { title_en: 'limit of a sequence', label_en: 'limit of a sequence', from: 'explicit' },
+    'def.sequence-of-morphisms': { title_en: 'sequence of morphisms', label_en: 'sequence', from: 'manual' },
     'def.sequentially-compact': { title_en: 'sequentially compact', label_en: 'sequentially compact', from: 'aka' },
     'def.series': { title_en: 'series', label_en: 'series', from: 'aka' },
     'def.set-ring': { title_en: 'ring of sets', label_en: 'ring of sets', from: 'explicit' },
@@ -34088,6 +34092,54 @@ window.MG = window.MG || {};
       refs: ['Le Stum, An introduction to condensed mathematics, §5.1–5.2']
     },
 
+    /* ------------------------------------ 序列（复形的底层） */
+    {
+      id: 'def.sequence-of-morphisms',
+      cluster: 'hom.complex',
+      type: 'definition',
+      label: '态射序列',
+      title: '序列',
+      regions: ['homology'],
+      tags: ['同调代数', '序列', '交换图'],
+      statement: [
+        '设 $\\mathcal{C}$ 是范畴。$\\mathcal{C}$ 中的**（长）序列**是有序集 $(\\mathbb{Z}, \\le)$ 上的**交换图**，即函子 $K : (\\mathbb{Z}, \\le) \\to \\mathcal{C}$；展开写就是对象与态射',
+        '',
+        '$$\\cdots \\longrightarrow K^{n-1} \\xrightarrow{d^{n-1}} K^{n} \\xrightarrow{d^{n}} K^{n+1} \\longrightarrow \\cdots$$',
+        '',
+        '因 $(\\mathbb{Z}, \\le)$ 的任意两个对象之间至多一个态射，交换性自动成立：$d^{m-1} \\circ \\cdots \\circ d^{n}$ 就是 $K^{n} \\to K^{m}$ 的唯一态射。也称**态射序列**。'
+      ].join('\n'),
+      notes: [
+        '序列**不要求** $d^{n} \\circ d^{n-1} = 0$；加上这条才是（上）链复形（见 `def.cochain-complex`）。',
+        '例：$\\mathbf{Ab}$ 中的序列就是一串群同态；$\\mathcal{C} = \\mathbf{Vect}_{k}$ 时是一串线性映射。',
+        '有限序列（只有有限多个非零项）与单边序列（只对 $n \\ge 0$ 给出 $K^{n}$）都是常用变体；本图默认双边无穷序列，因为复形在同调代数里通常双边编号。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §7.1, Definition 7.1.1']
+    },
+
+    /* ------------------------------------ 复形范畴 */
+    {
+      id: 'def.category-of-complexes',
+      cluster: 'hom.complex',
+      type: 'definition',
+      label: '复形范畴',
+      title: '复形范畴',
+      regions: ['homology'],
+      tags: ['同调代数', '复形范畴', '链映射'],
+      statement: [
+        '设 $\\mathcal{C}$ 是加法范畴。**复形范畴** $\\mathcal{C}(\\mathcal{C})$ 的对象是 $\\mathcal{C}$ 中的上链复形，态射是**链映射** $f : K \\to L$：一族 $f^{n} : K^{n} \\to L^{n}$ 使',
+        '',
+        '$$d_{L}^{n} \\circ f^{n} = f^{n+1} \\circ d_{K}^{n}$$',
+        '',
+        '对一切 $n$ 成立。它是 $\\mathcal{C}^{(\\mathbb{Z}, \\le)}$ 的**满**加法子范畴 —— 序列的态射正是自然变换，其条件恰为上面的交换关系。'
+      ].join('\n'),
+      notes: [
+        '**满性**：两个复形之间的每个序列态射都自动与微分交换，所以 $\\mathcal{C}(\\mathcal{C})$ 的 Hom 集就是序列范畴的 Hom 集，不需要再筛。',
+        '下有界、上有界、有界复形分别给出**满子范畴** $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；同伦范畴那边同样加 $+$、$-$、$b$。',
+        '极限与余极限**逐项**计算，加法结构也逐项（见 `prop.complex-additive`）；$\\mathcal{C}$ 阿贝尔时 $\\mathcal{C}(\\mathcal{C})$ 也阿贝尔。'
+      ].join('\n\n'),
+      refs: ['Le Stum, An introduction to condensed mathematics, §7.1, Exercise 7.1']
+    },
+
     /* ------------------------------------------------------ 复形 */
     {
       id: 'def.cochain-complex',
@@ -34098,14 +34150,13 @@ window.MG = window.MG || {};
       regions: ['homology'],
       tags: ['同调代数', '复形', '微分'],
       statement: [
-        '设 $\\mathcal{C}$ 是加法范畴。$\\mathcal{C}$ 中的**（长）序列**是有序集 $(\\mathbb{Z}, \\le)$ 上的图',
-        '',
-        '$$\\cdots \\longrightarrow K^{n-1} \\xrightarrow{\\ d^{n-1}\\ } K^{n} \\xrightarrow{\\ d^{n}\\ } K^{n+1} \\longrightarrow \\cdots$$',
-        '',
-        '若对每个 $n$ 都有 $d^{n} \\circ d^{n-1} = 0$，则称 $K$ 是一个**（上）链复形**，$d$ 叫**微分**。把箭头反向（或等价地在 $\\mathcal{C}^{\\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。'
+        '设 $\\mathcal{C}$ 是加法范畴。**（上）链复形**是 $\\mathcal{C}$ 中的（长）序列（见 `def.sequence-of-morphisms`）$K$，且满足 $d^{n} \\circ d^{n-1} = 0$ 对每个 $n$ 成立；$d$ 叫**微分**。',
+        '把箭头反向（或等价地在 $\\mathcal{C}^{\\mathrm{op}}$ 里取）得**链复形**，记 $K_{n} := K^{-n}$、$d_{n} := d^{-n}$。'
       ].join('\n'),
       notes: [
-        '$K$ 叫**下有界**（$n \\ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。\n\n相应地记复形范畴为 $\\mathcal{C}(\\mathcal{C})$，其下有界、上有界、有界的满子范畴分别记 $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；\n\n同伦范畴那边同样加 $+$ $-$ $b$。',
+        '$K$ 叫**下有界**（$n \\ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**（两者兼备）。',
+        '相应地记复形范畴为 $\\mathcal{C}(\\mathcal{C})$（见 `def.category-of-complexes`），其下有界、上有界、有界的满子范畴分别记 $\\mathcal{C}^{+}(\\mathcal{C})$、$\\mathcal{C}^{-}(\\mathcal{C})$、$\\mathcal{C}^{b}(\\mathcal{C})$；',
+        '同伦范畴那边同样加 $+$ $-$ $b$。',
         '例：$K$ 是（半）单纯对象时，令 $d^{n} := \\sum_{i} (-1)^{i} d_{i}^{n}$，则 $K$ 成为一个链复形 —— 系数 $(-1)^{i}$ 就是让相邻两项的复合正负相消的那个符号，和经典的单纯边界算子完全一致。'
       ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §7.1']
@@ -34151,7 +34202,10 @@ window.MG = window.MG || {};
         '',
         '记 $f \\sim g$，$s$ 叫一个**同伦**。与 $0$ 同伦的态射叫**零伦的**。'
       ].join('\n'),
-      notes: '零伦态射构成 $\\operatorname{Hom}_{\\mathcal{C}(\\mathcal{C})}(K, L)$ 的一个**子群**；而且同伦是**两边都相容于复合**的等价关系（$f \\sim g$ 时 $h \\circ f \\circ k \\sim h \\circ g \\circ k$）。\n\n两条合起来，才允许把「同伦」当成要商掉的东西。',
+      notes: [
+        '零伦态射构成 $\\operatorname{Hom}_{\\mathcal{C}(\\mathcal{C})}(K, L)$ 的一个**子群**；而且同伦是**两边都相容于复合**的等价关系（$f \\sim g$ 时 $h \\circ f \\circ k \\sim h \\circ g \\circ k$）。',
+        '两条合起来，才允许把「同伦」当成要商掉的东西。'
+      ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §7.1']
     },
 
@@ -34176,7 +34230,8 @@ window.MG = window.MG || {};
         '- (a) 等价的说法：$f : K \\to L$ 是同伦等价' +
         '- (b) 存在 $g : L \\to K$ 使 $g \\circ f \\sim 1_{K}$、$f \\circ g \\sim 1_{L}$；$K$ 同伦平凡' +
         '- (c) $1_{K} \\sim 0_{K}$。',
-        '$\\mathbf{K}(\\mathcal{C})$ 是**加法范畴**，且 $\\mathcal{C}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C})$ 加法；\n\n任何加法函子 $F : \\mathcal{C} \\to \\mathcal{C}\'$ 诱导 $\\mathbf{K}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C}\')$。',
+        '$\\mathbf{K}(\\mathcal{C})$ 是**加法范畴**，且 $\\mathcal{C}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C})$ 加法；',
+        '任何加法函子 $F : \\mathcal{C} \\to \\mathcal{C}\'$ 诱导 $\\mathbf{K}(\\mathcal{C}) \\to \\mathbf{K}(\\mathcal{C}\')$。',
         '为什么要在同伦范畴里干活：同调函子在同伦下不变，所以**先商掉同伦，剩下的信息才是同调真正看得见的**。'
       ].join('\n\n'),
       refs: ['Le Stum, An introduction to condensed mathematics, §7.1']
@@ -34507,6 +34562,54 @@ window.MG = window.MG || {};
   ],
 
   edges: [
+
+    {
+      id: 'def-dep.sequence-commdiagram',
+      kind: 'definition',
+      definition: 'def.commutative-diagram',
+      usedBy: 'def.sequence-of-morphisms',
+      note: '序列是 $(\\mathbb{Z}, \\le)$ 上的交换图，指标范畴是一条线序。'
+    },
+
+    {
+      id: 'def-dep.cochain-sequence',
+      kind: 'definition',
+      definition: 'def.sequence-of-morphisms',
+      usedBy: 'def.cochain-complex',
+      note: '复形 = 满足 $d^{2} = 0$ 的序列。'
+    },
+
+    {
+      id: 'def-dep.complexcat-sequence',
+      kind: 'definition',
+      definition: 'def.sequence-of-morphisms',
+      usedBy: 'def.category-of-complexes',
+      note: '复形范畴的对象是满足 $d^{2} = 0$ 的序列。'
+    },
+
+    {
+      id: 'def-dep.complexcat-cochain',
+      kind: 'definition',
+      definition: 'def.cochain-complex',
+      usedBy: 'def.category-of-complexes',
+      note: '复形范畴的对象就是上链复形。'
+    },
+
+    {
+      id: 'def-dep.complexcat-additive',
+      kind: 'definition',
+      definition: 'def.additive-category',
+      usedBy: 'def.category-of-complexes',
+      note: '复形范畴是加法范畴：零对象与直和都逐项取。'
+    },
+
+    {
+      id: 'def-dep.complex-additive-cat',
+      kind: 'definition',
+      definition: 'def.category-of-complexes',
+      usedBy: 'prop.complex-additive',
+      note: '这个命题陈述的对象就是复形范畴 C(C)。'
+    },
 
     {
       id: 'def-dep.preadd-cat',

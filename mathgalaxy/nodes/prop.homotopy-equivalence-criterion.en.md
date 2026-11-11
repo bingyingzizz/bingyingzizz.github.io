@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 15 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Homotopy Equivalence Criterion` (short) · `Criterion for Homotopy Equivalence` (full)
 
 ## Statement and proof

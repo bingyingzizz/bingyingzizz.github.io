@@ -5,10 +5,10 @@
 - 被 [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理 用
 - 被 [`def.cycle`](../nodes/def.cycle.md) 闭链 用
 - 被 [`def.boundary`](../nodes/def.boundary.md) 边缘 用
+- 被 [`def.category-of-complexes`](../nodes/def.category-of-complexes.md) 复形范畴 用
 - 被 [`prop.simplicial-to-chain`](../nodes/prop.simplicial-to-chain.md) 单纯对象给出链复形 用
 - 被 [`prop.category-into-complexes`](../nodes/prop.category-into-complexes.md) 范畴嵌入复形 用
 - 被 [`prop.complexes-abelian`](../nodes/prop.complexes-abelian.md) 复形范畴是阿贝尔范畴 用
 - 被 [`prop.additive-complex-construction`](../nodes/prop.additive-complex-construction.md) 加法函子与复形构造交换 用
-- 被 [`prop.complex-additive`](../nodes/prop.complex-additive.md) 复形范畴是加法范畴 用
 
 > 续见 [nodes/def.cochain-complex.4.md](./def.cochain-complex.4.md)

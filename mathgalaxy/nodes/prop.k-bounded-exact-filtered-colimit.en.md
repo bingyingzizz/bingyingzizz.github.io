@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
+layer 14 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
 names: `Filtered Colimits` (short) · `K-Bounded Exactness Is Stable under Filtered Colimits` (full)
 
 ## Statement and proof

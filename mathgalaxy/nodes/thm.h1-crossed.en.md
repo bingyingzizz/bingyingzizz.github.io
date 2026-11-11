@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 15 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `H1 and Crossed Homomorphisms` (short) · `First Cohomology and Crossed Homomorphisms` (full)
 
 ## Statement and proof

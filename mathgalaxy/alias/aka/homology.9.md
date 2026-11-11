@@ -1,6 +1,8 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- 复形范畴是加法范畴 | 逐项计算 | Exercise 7.1 | Exercise 7.7 → prop.complex-additive
+
 - 同伦 | homotopy | 零伦 | null-homotopic | Exercise 7.4 | Exercise 7.5 | Definition 7.1.2 | Def 7.1.2 → def.homotopy
 
 - 同伦范畴 | homotopy category | K(C) | 同伦等价 | Definition 7.1.3 | Def 7.1.3 → def.homotopy-category
@@ -14,7 +16,5 @@
 - 三角态射的性质 | Proposition 7.1.9 | Prop 7.1.9 | Lemma 7.1.8 → lem.triangle-morphism
 
 - 闭链 | 上闭链 | cycle | cocycle | 闭链群 | 上闭链群 | Z^n → def.cycle
-
-- 边缘 | 上边缘 | boundary | coboundary | 边缘群 | 上边缘群 | B^n → def.boundary
 
 > 续见 alias/aka/homology.10.md
