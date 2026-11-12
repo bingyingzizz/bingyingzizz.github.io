@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 24 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.moving-frame.md` and `proofs/`.

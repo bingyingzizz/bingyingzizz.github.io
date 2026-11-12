@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.liouville)　·　[Chinese page (authoritative)](./thm.liouville.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.liouville.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: a function holomorphic on the whole complex plane and bounded must be constant — the complex plane is "too crowded" to accommodate a nonconstant bounded holomorphic function.
 
+If $f$ is holomorphic on $\mathbb{C}$ (such functions are called **entire**), and there is a constant $M$ with
 
-Cite: `thm.liouville` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$|f(z)| \le M, \qquad \forall z \in \mathbb{C},$$
 
+then $f$ is constant.
+
+> continued in nodes/thm.liouville.en.2.md

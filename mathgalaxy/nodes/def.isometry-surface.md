@@ -1,6 +1,6 @@
 # 等距　`def.isometry-surface`
 曲面的等距
-layer 29 · 定义 · 内蕴几何 · 微分几何
+layer 27 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.isometry-surface)　·　[节点索引](../index.md)
 
 设 $S_{1},S_{2}$ 是两张曲面。

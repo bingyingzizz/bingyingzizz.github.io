@@ -2,16 +2,22 @@
 English entry · root `../`
 [in graph](../#n=lem.yoneda)　·　[Chinese page (authoritative)](./lem.yoneda.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · lemma · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.yoneda.md` and `proofs/`.
+## Statement · **draft**
+Let $F : \mathcal{C} \to \mathbf{Set}$ be a functor, $X \in \mathcal{C}$, and write
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Yoneda_lemma · nLab: https://ncatlab.org/nlab/show/Yoneda+lemma
+$$h^{X} = \operatorname{Hom}_{\mathcal{C}}(X, -) : \mathcal{C} \to \mathbf{Set}$$
 
+Then there is a natural bijection
 
-Cite: `lem.yoneda` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\operatorname{Hom}(h^{X}, F) \;\cong\; F(X), \qquad \alpha \mapsto \alpha_{X}(1_{X})$$
 
+that is, "all natural transformations" correspond one-to-one with "elements of $F(X)$".
+
+## Notes · **draft**
+**Proof.** Define the map
+
+> continued in nodes/lem.yoneda.en.2.md

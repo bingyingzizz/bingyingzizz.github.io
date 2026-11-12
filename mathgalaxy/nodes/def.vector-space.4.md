@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.vector-space)　·　第 1 页 [nodes/def.vector-space.md](./def.vector-space.md)　·　上一页 [nodes/def.vector-space.3.md](./def.vector-space.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.star-shaped-at-point`](../nodes/def.star-shaped-at-point.md) 关于一点的星形集 用
 - 被 [`def.complemented-subspace`](../nodes/def.complemented-subspace.md) 可补子空间 用
 - 被 [`def.vs`](../nodes/def.vs.md) 线性无关与基 用
 - 被 [`def.subspace`](../nodes/def.subspace.md) 子空间 用
@@ -11,6 +12,5 @@
 - ～弱边 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群
 - 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
 - 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
-- 被 [`thm.dimension`](../nodes/thm.dimension.md) 维数良定义 用
 
 > 续见 [nodes/def.vector-space.5.md](./def.vector-space.5.md)

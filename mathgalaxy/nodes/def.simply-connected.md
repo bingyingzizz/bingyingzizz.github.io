@@ -1,6 +1,6 @@
 # 单连通　`def.simply-connected`
 单连通：道路连通且基本群平凡
-layer 20 · 定义 · 基本群 · 拓扑学
+layer 16 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.simply-connected)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**单连通的**，如果

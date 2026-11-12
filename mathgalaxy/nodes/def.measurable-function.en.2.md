@@ -3,7 +3,7 @@ English entry · root `../`
 [in graph](../#n=def.measurable-function)　·　[Chinese page (authoritative)](./def.measurable-function.md)
 
 ## Notes · **draft**
-Why **preimages** rather than images: preimages preserve intersections, unions and complements ($f^{-1}(\bigcup E_i) = \bigcup f^{-1}(E_i)$, etc.), whereas images lack these good properties. Measurability is therefore a condition pulled back along $f$.
+Why **preimages** rather than images: preimages preserve intersections, unions and complements ($f^{-1}(\bigcup E_i) = \bigcup f^{-1}(E_i)$, etc.), whereas images lack these good properties. Measurability is therefore a condition pulled back.
 
 Equivalent formulation (when $Y$ is a topological space and $\mathcal{N} = \mathfrak{B}_Y$): $f$ is measurable $\iff$ the preimage of every open set is measurable.
 

@@ -1,6 +1,10 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Proposition 1.5.10 | Prop 1.5.10 | 坎延拓 → prop.kan-extension-adjoint
+
+- Proposition 1.5.11 | Prop 1.5.11 | 坎延拓 → prop.kan-extension-exists
+
 - Theorem 3.1.2 | Thm 3.1.2 | Exercise 1.67 → thm.presheaf-limits-colimits
 
 - Definition 3.2.10 | Def 3.2.10 → def.associated-sheaf
@@ -20,11 +24,5 @@
 - Exercise 7.60 | Exercise 3.66 → prop.internal-hom-slice-value
 
 - Exercise 7.61 → prop.slice-shriek-projection
-
-- Exercise 1.17 → prop.fully-faithful-injective
-
-- Exercise 1.15 | Exercise 1.18 | 预序范畴 → prop.preorder-as-category
-
-- Exercise 1.32 → prop.slice-fully-faithful-mono
 
 > 续见 alias/aka/category.18.md

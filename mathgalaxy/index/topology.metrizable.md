@@ -6,6 +6,6 @@
 - def.metrizable　可度量化空间　layer 15
 - thm.metric-paracompact　Stone 定理　layer 15
 - thm.nagata-smirnov　局部有限基度量化定理　layer 16
+- prop.metrizable-normal　可度量化空间的性质　layer 16
 - thm.bing-metrization　离散基度量化定理　layer 17
-- prop.metrizable-normal　可度量化空间的性质　layer 18
-- thm.urysohn-metrization　Урысон 度量化定理　layer 19
+- thm.urysohn-metrization　Урысон 度量化定理　layer 18

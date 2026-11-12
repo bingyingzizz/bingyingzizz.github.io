@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.gcd-domain)　·　[Chinese page (authoritative)](./def.gcd-domain.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.gcd-domain.md` and `proofs/`.
+## Statement · **draft**
+An integral domain $A$ is called a **gcd domain** if every $a, b \in A$ has a **greatest common divisor**: there exists $d$ such that
 
+$$d \mid a,\quad d \mid b,$$
 
-Cite: `def.gcd-domain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+and **every $c$ dividing both $a, b$ divides $d$**.
 
+Note that "greatest" means the **greatest lower bound in the divisibility order**, not comparison of size — an integral domain has no total order.
+
+> continued in nodes/def.gcd-domain.en.2.md

@@ -2,14 +2,16 @@
 [在星图里打开](../#n=def.topology)　·　第 1 页 [nodes/def.topology.md](./def.topology.md)　·　上一页 [nodes/def.topology.4.md](./def.topology.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.g-delta`](../nodes/def.g-delta.md) G_δ 与 F_σ 用
-- 被 [`def.triangulation`](../nodes/def.triangulation.md) 三角剖分 用
-- 被 [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形 用
-- 被 [`ex.sierpinski-space`](../nodes/ex.sierpinski-space.md) Sierpiński 空间 用
-- 被 [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 用
-- 被 [`def.product-topology`](../nodes/def.product-topology.md) 积拓扑 用
-- 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
-- 被 [`def.topo-ab-group`](../nodes/def.topo-ab-group.md) 拓扑阿贝尔群 用
-- 被 [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间 用
+- 被 [`def.etale-space`](../nodes/def.etale-space.md) étale 空间 用
+- 被 [`def.discrete-family`](../nodes/def.discrete-family.md) 离散族 用
+- 被 [`def.refinement`](../nodes/def.refinement.md) 覆盖的加细 用
+- 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
+- 被 [`def.manifold-chart`](../nodes/def.manifold-chart.md) 图卡 用
+- 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
+- 被 [`def.t0-space`](../nodes/def.t0-space.md) T0 空间 用
+- 被 [`def.interior`](../nodes/def.interior.md) 内部 用
+- 被 [`def.net`](../nodes/def.net.md) 网 用
+- 被 [`def.filter`](../nodes/def.filter.md) 滤子 用
+- 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
 
 > 续见 [nodes/def.topology.6.md](./def.topology.6.md)

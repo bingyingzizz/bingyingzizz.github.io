@@ -1,6 +1,6 @@
 # 光滑映射　`def.smooth-map`
 光滑映射与光滑函数
-layer 23 · 定义 · 流形与向量丛 · 微分几何
+layer 19 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.smooth-map)　·　[节点索引](../index.md)
 
 **在说什么**：两个流形之间「映射光滑」只有一种可能的解释 —— 下到卡里之后是 $\mathbb{R}^{n}$ 之间的光滑映射。而这件事只需查图册里的卡就够，不必查所有卡。
@@ -15,7 +15,7 @@ layer 23 · 定义 · 流形与向量丛 · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.smooth-map.4.md](./def.smooth-map.4.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 流形之间的光滑映射；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 光滑函数与微分同胚
+refs: Tu, An Introduction to Manifolds, 2nd ed., Ch. 2 §6；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 光滑函数与微分同胚
 
 > 说明见 `notes/def.smooth-map.md`
 

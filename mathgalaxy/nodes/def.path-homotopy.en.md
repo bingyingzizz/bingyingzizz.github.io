@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 18 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 14 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 > continued in nodes/def.path-homotopy.en.2.md

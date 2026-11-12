@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.lie-bracket)　·　第 1 页 [nodes/def.lie-bracket.md](./def.lie-bracket.md)　·　上一页 [nodes/def.lie-bracket.3.md](./def.lie-bracket.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.lie-algebra`](../nodes/def.lie-algebra.md) Lie 代数 用
 - 被 [`prop.left-invariant-fields`](../nodes/prop.left-invariant-fields.md) 左不变向量场 用
 - ⇒ [`def.lie-algebra`](../nodes/def.lie-algebra.md) Lie 代数
 - ⇒ [`prop.left-invariant-fields`](../nodes/prop.left-invariant-fields.md) 左不变向量场

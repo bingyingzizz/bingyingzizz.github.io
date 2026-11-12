@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.ac-epsilon-delta)　·　[Chinese page (authoritative)](./thm.ac-epsilon-delta.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · theorem · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.ac-epsilon-delta.md` and `proofs/`.
+## Statement · **draft**
+Let $\nu$ be a **finite** signed measure and $\mu$ a measure. Then
 
+$$\nu \ll  \mu \iff \forall\varepsilon > 0, \exists\delta > 0 : \mu(E) < \delta \implies |\nu(E)| \le \varepsilon$$
 
-Cite: `thm.ac-epsilon-delta` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.ac-epsilon-delta.en.2.md

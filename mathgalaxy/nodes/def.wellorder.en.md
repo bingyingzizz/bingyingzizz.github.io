@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.wellorder)　·　[Chinese page (authoritative)](./def.wellorder.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.wellorder.md` and `proofs/`.
+## Statement · **draft**
+A totally ordered set $(W, \preceq )$ is **well-ordered** if and only if every nonempty subset of $W$ has a least element:
 
+$$\forall S \subseteq W ( S \ne \emptyset \to \exists m \in S, \forall s \in S, m \preceq s )$$
 
-Cite: `def.wellorder` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Equivalently: there is no infinite strictly decreasing chain $w_{0} \succ w_{1} \succ w_{2} \succ \cdots$.
 
+> continued in nodes/def.wellorder.en.2.md

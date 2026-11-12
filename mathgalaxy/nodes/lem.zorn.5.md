@@ -8,7 +8,6 @@
 - ⇒ [`prop.prime-ideal`](../nodes/prop.prime-ideal.md) 素理想与极大理想
 - ⇒ [`lem.minimal-closed-surjection`](../nodes/lem.minimal-closed-surjection.md) 满射的极小闭子集
 - ⇒ [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据
-- ⇒ [`thm.foliation-existence`](../nodes/thm.foliation-existence.md) 叶状结构存在定理
 - 被 [`def.filter`](../nodes/def.filter.md) 滤子 用
-- 被 [`thm.hahn-banach`](../nodes/thm.hahn-banach.md) Hahn–Banach 定理 用
+- ⇒ [`thm.hahn-banach`](../nodes/thm.hahn-banach.md) Hahn–Banach 定理
 - ～弱边 [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域

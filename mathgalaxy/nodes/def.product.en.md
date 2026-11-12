@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.product)　·　[Chinese page (authoritative)](./def.product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.product.md` and `proofs/`.
+## Statement · **draft**
+Take $I$ to be a **discrete category** (objects only, no non-identity morphisms); then the diagram $D : I \to \mathcal{C}$ is just a family of objects $(X_i)_{i \in I}$. Its limit is called the **product** $\prod_{i} X_i$, and its colimit the **coproduct** $\coprod_{i} X_i$. Written as an isomorphism of hom-sets, the universal property is
 
-
-Cite: `def.product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.product.en.2.md

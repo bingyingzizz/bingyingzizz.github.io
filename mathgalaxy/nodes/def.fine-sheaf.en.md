@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 16 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.fine-sheaf.md` and `proofs/`.

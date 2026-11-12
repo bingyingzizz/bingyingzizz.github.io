@@ -10,8 +10,6 @@ layer 17 · 定义 · 收敛与紧性 · 拓扑学
 $$e : X \hookrightarrow Y ,$$
 
 使得像 $e(X)$ 在 $Y$ 中**稠密**（`def.closed-set`）。通常把 $X$ 与 $e(X)$ 等同，直接写 $X \subseteq Y$、$\overline{X} = Y$。
-
-**两个极端**：
 > 陈述续见 [nodes/def.compactification.2.md](./def.compactification.2.md)
 
 
@@ -21,7 +19,7 @@ $$e : X \hookrightarrow Y ,$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.compactification.4.md](./def.compactification.4.md)
 
-refs: Engelking, General Topology；Munkres, Topology
+refs: Engelking, General Topology, Ch. 3 §3.5；Munkres, Topology
 
 > 说明见 `notes/def.compactification.md`
 

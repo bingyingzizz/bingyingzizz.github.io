@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.ac-and-variations)　·　[Chinese page (authoritative)](./prop.ac-and-variations.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.ac-and-variations.md` and `proofs/`.
+## Statement · **draft**
+Let $\mu$ be a measure and $\nu$ a signed measure. Then
 
+$$\nu \ll  \mu \iff |\nu| \ll  \mu \iff \nu^+ \ll  \mu\ \wedge \ \nu^- \ll  \mu$$
 
-Cite: `prop.ac-and-variations` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Moreover: if both $\nu \perp  \mu$ and $\nu \ll  \mu$ hold, then $\nu = 0$.
 
+> continued in nodes/prop.ac-and-variations.en.2.md

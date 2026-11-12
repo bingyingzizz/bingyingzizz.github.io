@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.fundamental-arithmetic)　·　[Chinese page (authoritative)](./thm.fundamental-arithmetic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.fundamental-arithmetic.md` and `proofs/`.
+## Statement · **draft**
+Every integer $n > 1$ can be written uniquely as
 
+$$n = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{r}^{e_{r}},$$
 
-Cite: `thm.fundamental-arithmetic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $p_{1} < p_{2} < \cdots < p_{r}$ are primes and $e_{i} \in \mathbb{Z}_{\ge 1}$.
 
+> continued in nodes/thm.fundamental-arithmetic.en.2.md

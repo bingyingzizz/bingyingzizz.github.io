@@ -9,12 +9,15 @@ $$\forall x \ne y \in X,\ \exists U \ni x,\ V \ni y\ \text{open}:\quad U \cap V 
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.regular-space`](../nodes/def.regular-space.md) 正则空间：正则空间推出 Hausdorff（$T_2$）　[proofs/imp.regular-hausdorff.md](../proofs/imp.regular-hausdorff.md)
-- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/dep.topology-hausdorff.md](../proofs/dep.topology-hausdorff.md)
+
+- …另有入边，续页见 [nodes/def.hausdorff.2.md](./def.hausdorff.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.hausdorff.2.md](./def.hausdorff.2.md)
+- 被 [`prop.hausdorff-reflective`](../nodes/prop.hausdorff-reflective.md) Hausdorff 空间是反射子范畴 用
 
-refs: Munkres, Topology
+- …另有出边，续页见 [nodes/def.hausdorff.3.md](./def.hausdorff.3.md)
+
+refs: Engelking, General Topology, Ch. 1 §1.5；Munkres, Topology
 
 > 说明见 `notes/def.hausdorff.md`
 

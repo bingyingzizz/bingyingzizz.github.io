@@ -1,6 +1,6 @@
 # Mayer–Vietoris（同调）　`thm.mv-homology`
 Mayer–Vietoris 序列（同调版，$\mathbb{Z}$ 系数）
-layer 28 · 定理 · 同调群 · 拓扑学
+layer 24 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.mv-homology)　·　[节点索引](../index.md)
 
 设 $X = U \cup V$，$U, V \subseteq X$ 是**开集**（更一般：$U, V$ 的内部覆盖 $X$）。记 $i_{*}, j_{*}$ 为 $U \cap V \hookrightarrow U, V$ 的包含映射诱导的映射。则存在长正合列

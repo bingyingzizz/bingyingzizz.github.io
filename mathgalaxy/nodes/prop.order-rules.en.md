@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=prop.order-rules)　·　[Chinese page (authoritative)](./prop.order-rules.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.order-rules.md` and `proofs/`.
+## Statement · **draft**
+Let $K$ be an ordered field, $a, b, c, d \in K$. Then
 
+**(i)** $a < b \iff a + c < b + c$;
 
-Cite: `prop.order-rules` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+**(ii)** $a < b$ and $c < d$ $\implies$ $a + c < b + d$;
 
+**(iii)** for $c > 0$, $a < b \implies ac < bc$; for $c < 0$, $a < b \implies ac > bc$;
+
+**(iv)** $0 < a < b \implies 0 < \dfrac{1}{b} < \dfrac{1}{a}$;
+
+> continued in nodes/prop.order-rules.en.2.md

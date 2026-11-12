@@ -5,10 +5,10 @@
 
 - def.int-domain　整环　layer 9
 - def.irreducible-element　相伴、不可约与素　layer 9
+- def.gcd-domain　gcd 整环　layer 10
 - def.bezout-domain　Bézout 整环　layer 10
 - def.euclidean-domain　Euclid 整环　layer 10
+- def.ufd　唯一分解整环　layer 10
 - def.pid　主理想整环　layer 11
 - def.comaximal　互素理想　layer 11
 - thm.crt-rings　中国剩余定理（环论形式）　layer 11
-- def.ufd　唯一分解整环　layer 12
-- def.gcd-domain　gcd 整环　layer 13

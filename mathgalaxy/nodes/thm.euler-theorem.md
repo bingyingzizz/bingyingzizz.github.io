@@ -8,13 +8,11 @@ layer 10 · 定理 · 整除与同余 · 数论
 $$a^{\varphi(n)} \equiv 1 \pmod n .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：Lagrange 定理用于单位群给出 Euler 定理　[proofs/imp.euler-lagrange.md](../proofs/imp.euler-lagrange.md)
 - [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：Euler 定理：Lagrange 定理在单位群上的特例　[proofs/imp.nt-lagrange-euler.md](../proofs/imp.nt-lagrange-euler.md)
-
-- …另有入边，续页见 [nodes/thm.euler-theorem.2.md](./thm.euler-theorem.2.md)
+- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/e124.definition.md](../proofs/e124.definition.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.euler-theorem.3.md](./thm.euler-theorem.3.md)
+- ⇒ [`thm.fermat-little`](../nodes/thm.fermat-little.md) Fermat 小定理
 
 refs: 华罗庚《数论导引》§2
 

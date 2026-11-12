@@ -13,7 +13,7 @@ layer 19 · 定理 · 特征值与 Jordan 型 · 抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.jordan-canonical-form.3.md](./thm.jordan-canonical-form.3.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
 
 > 说明见 `notes/thm.jordan-canonical-form.md`
 

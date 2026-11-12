@@ -2,7 +2,6 @@
 [在星图里打开](../#n=def.tangent-bundle)　·　第 1 页 [nodes/def.tangent-bundle.md](./def.tangent-bundle.md)　·　上一页 [nodes/def.tangent-bundle.4.md](./def.tangent-bundle.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.vector-field`](../nodes/def.vector-field.md) 向量场 用
 - 被 [`def.tangent-distribution`](../nodes/def.tangent-distribution.md) 切分布 用
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
 - 被 [`ex.s1-tangent-bundle`](../nodes/ex.s1-tangent-bundle.md) 圆的切丛是平凡丛 用

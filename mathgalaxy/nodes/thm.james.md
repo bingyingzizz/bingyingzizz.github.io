@@ -6,7 +6,7 @@ layer 20 · 定理 · 赋范空间与有界算子 · 泛函分析
 Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\varphi \in X^*$ 都在单位球 $B_X$ 上达到其范数：存在 $x \in B_X$ 使 $\varphi(x) = \|\varphi\|$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间：用到了定义 自反空间　[proofs/def-link.james-ref.md](../proofs/def-link.james-ref.md)
+- [`thm.banach-alaoglu`](../nodes/thm.banach-alaoglu.md) Banach–Alaoglu 定理：Banach–Alaoglu：自反 $\implies$ $B_X$ 弱紧　[proofs/imp.james-banach-alaoglu.md](../proofs/imp.james-banach-alaoglu.md)
 
 - …另有入边，续页见 [nodes/thm.james.2.md](./thm.james.2.md)
 

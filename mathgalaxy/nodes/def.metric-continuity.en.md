@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.metric-continuity)　·　[Chinese page (authoritative)](./def.metric-continuity.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.metric-continuity.md` and `proofs/`.
+## Statement · **draft**
+Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f : X \to Y$, and $x_0 \in X$.
 
+We say $f$ is **continuous at** $x_0$ if
 
-Cite: `def.metric-continuity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\forall \varepsilon > 0\ \exists \delta > 0:\quad d(x, x_0) < \delta \implies \rho(f(x), f(x_0)) < \varepsilon .$$
 
+> continued in nodes/def.metric-continuity.en.2.md

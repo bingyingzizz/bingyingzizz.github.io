@@ -2,13 +2,12 @@
 English entry · root `../`
 [in graph](../#n=thm.tykhonov)　·　[Chinese page (authoritative)](./thm.tykhonov.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 17 · theorem · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.tykhonov.md` and `proofs/`.
+## Statement · **draft**
+The **product** of any family of compact spaces (with the product topology) is again compact — for any number of factors, including uncountably many.
 
-
-Cite: `thm.tykhonov` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.tykhonov.en.2.md

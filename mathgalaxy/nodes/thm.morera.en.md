@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.morera)　·　[Chinese page (authoritative)](./thm.morera.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.morera.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: a continuous function whose integral along every closed triangle (equivalently, every small rectangle) is zero is holomorphic — this is the converse of Cauchy's theorem.
 
+Let $\Omega \subset \mathbb{C}$ be an **open set** (no connectedness needed — holomorphy is checked pointwise, applying Morera on a small disk at each point), and $f: \Omega \to \mathbb{C}$ **continuous**. If for every closed triangle $T \subset \Omega$ we have
 
-Cite: `thm.morera` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.morera.en.2.md

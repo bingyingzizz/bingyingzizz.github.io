@@ -4,16 +4,17 @@
 中心天体 def.fundamental-group　·　18 个节点　·　根 `../`　·　续页 `index/topology.fg.2.md`
 
 - lem.free-proper-quotient-manifold　自由真不连续作用的光滑商　layer 0
-- def.homotopy-maps　映射同伦　layer 17
-- def.covering-space　覆叠空间　layer 17
-- def.path-homotopy　道路同伦　layer 18
-- lem.path-product　道路拼接　layer 19
-- def.fundamental-group　基本群　layer 19
-- thm.lifting　提升定理　layer 19
-- prop.induced-homomorphism　诱导同态　layer 20
-- def.simply-connected　单连通　layer 20
-- prop.covering-index　覆叠的指数　layer 20
-- thm.van-kampen　van Kampen 定理　layer 20
-- prop.pi1-group　π₁ 是群　layer 20
+- def.homotopy-maps　映射同伦　layer 6
+- def.covering-space　覆叠空间　layer 6
+- def.path-homotopy　道路同伦　layer 14
+- lem.path-product　道路拼接　layer 15
+- def.fundamental-group　基本群　layer 15
+- prop.induced-homomorphism　诱导同态　layer 16
+- def.simply-connected　单连通　layer 16
+- prop.pi1-group　π₁ 是群　layer 16
+- prop.pi1-basepoint　基点变换　layer 17
+- def.lens-space　透镜空间　layer 17
+- thm.lifting　提升定理　layer 18
+- thm.van-kampen　van Kampen 定理　layer 18
 
 > 续见 `index/topology.fg.2.md`

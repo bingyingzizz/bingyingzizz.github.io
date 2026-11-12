@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.net)　·　第 1 页 [nodes/def.net.md](./def.net.md)
 
 ## 陈述（续）
+**收敛**：称网 $x_{\lambda}$ **收敛到** $x$（记 $x_{\lambda} \to x$），若对 $x$ 的每个邻域 $U$，存在 $\lambda_{0}$ 使
+
 $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 
 **两个刻画定理**：

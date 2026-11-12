@@ -8,18 +8,18 @@ layer 17 · 定义 · 收敛与紧性 · 拓扑学
 **有向集**：预序集 $(\Lambda, \le)$，且任意 $\lambda, \mu \in \Lambda$ 有上界（存在 $\nu$ 使 $\lambda, \mu \le \nu$）。
 
 **网**：映射 $x : \Lambda \to X$，记 $(x_{\lambda})_{\lambda \in \Lambda}$。
-
-**收敛**：称网 $x_{\lambda}$ **收敛到** $x$（记 $x_{\lambda} \to x$），若对 $x$ 的每个邻域 $U$，存在 $\lambda_{0}$ 使
 > 陈述续见 [nodes/def.net.2.md](./def.net.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⟺ [`def.filter`](../nodes/def.filter.md) 滤子
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.filter`](../nodes/def.filter.md) 滤子：网收敛与滤子收敛等价　[proofs/eq.net-filter.md](../proofs/eq.net-filter.md)
+
 - …另有入边，续页见 [nodes/def.net.3.md](./def.net.3.md)
 
-refs: Munkres, Topology；Kelley, General Topology
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.net.4.md](./def.net.4.md)
+
+refs: Engelking, General Topology, Ch. 1 §1.6；Munkres, Topology；Kelley, General Topology
 
 > 说明见 `notes/def.net.md`
 

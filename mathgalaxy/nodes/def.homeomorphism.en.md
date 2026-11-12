@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.homeomorphism)　·　[Chinese page (authoritative)](./def.homeomorphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 7 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.homeomorphism.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ and $Y$ be topological spaces. $f : X \to Y$ is a **homeomorphism** if and only if
 
+- $f$ is a bijection;
+- both $f$ and $f^{-1}$ are continuous.
 
-Cite: `def.homeomorphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In that case we write $X \cong Y$ and call the two spaces **homeomorphic**. Homeomorphism is an equivalence relation between topological spaces (identity, inverse and composition all preserve it).
 
+> continued in nodes/def.homeomorphism.en.2.md

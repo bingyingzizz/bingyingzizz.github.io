@@ -2,14 +2,14 @@
 [在星图里打开](../#n=def.metric-space)　·　第 1 页 [nodes/def.metric-space.md](./def.metric-space.md)　·　上一页 [nodes/def.metric-space.5.md](./def.metric-space.5.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- ⇒ [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间
-- 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
-- ⇒ [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画
-- 被 [`prop.norm-induces-metric`](../nodes/prop.norm-induces-metric.md) 范数诱导的距离 用
-- 被 [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理 用
-- 被 [`def.uniformly-equicontinuous`](../nodes/def.uniformly-equicontinuous.md) 一致等度连续 用
-- 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用
-- 被 [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数 用
-- 被 [`def.complete`](../nodes/def.complete.md) 完备 用
+- 被 [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续 用
+- 被 [`def.real-metric-space`](../nodes/def.real-metric-space.md) 实数的度量 用
+- 被 [`def.induced-norm`](../nodes/def.induced-norm.md) 诱导范数与距离 用
+- 被 [`def.contraction`](../nodes/def.contraction.md) 压缩映射 用
+- 被 [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间 用
+- ⇒ [`def.metrizable`](../nodes/def.metrizable.md) 可度量化空间
+- 被 [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理 用
+- 被 [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形 用
+- ⇒ [`def.perfectly-normal-space`](../nodes/def.perfectly-normal-space.md) 完美正规空间
 
 > 续见 [nodes/def.metric-space.7.md](./def.metric-space.7.md)

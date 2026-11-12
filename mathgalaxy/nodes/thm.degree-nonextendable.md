@@ -1,6 +1,6 @@
 # 度非零的映射不能延拓到球　`thm.degree-nonextendable`
 若 $f : S^{n-1} \to S^{n-1}$ 可延拓为 $\overline{B^{n}} \to S^{n-1}$，则 $\deg f = 0$
-layer 31 · 定理 · 同调群 · 拓扑学
+layer 27 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.degree-nonextendable)　·　[节点索引](../index.md)
 
 设 $n \ge 1$，$f : S^{n-1} \to S^{n-1}$ 连续（度见 `def.degree`）。若存在连续映射 $F : \overline{B^{n}} \to S^{n-1}$ 使 $F|_{S^{n-1}} = f$，则

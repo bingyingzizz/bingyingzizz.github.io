@@ -8,7 +8,6 @@
 称 $X^{*}$ 为 $X$ 的**一点紧化**（one-point compactification，也叫 Alexandrov 紧化）。
 
 **定理**：
-
 - $X^{*}$ **紧**（对任意 $X$）；
 - $X^{*}$ **Hausdorff** $\iff$ $X$ 是局部紧的 Hausdorff 空间。
 

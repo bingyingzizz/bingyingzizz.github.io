@@ -1,6 +1,6 @@
 # 曲面的组合分类引理　`lem.combinatorial-classification-surfaces`
 组合分类引理：三角剖分闭曲面可化为标准多边形
-layer 20 · 引理 · 曲面的地形 · 拓扑学
+layer 18 · 引理 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=lem.combinatorial-classification-surfaces)　·　[节点索引](../index.md)
 
 设

@@ -15,7 +15,7 @@ layer 18 · 定义 · 收敛与紧性 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.one-point-compactification.3.md](./def.one-point-compactification.3.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 3 §3.5
 
 > 说明见 `notes/def.one-point-compactification.md`
 

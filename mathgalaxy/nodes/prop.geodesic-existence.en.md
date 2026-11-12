@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 29 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Geodesic Existence` (short) · `Local Existence and Uniqueness of Geodesics` (full)
 
 ## Statement and proof

@@ -17,7 +17,7 @@ $$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.subspace-topology.3.md](./def.subspace-topology.3.md)
 
-refs: Munkres, Topology
+refs: Engelking, General Topology, Ch. 2 §2.1；Munkres, Topology
 
 > 说明见 `notes/def.subspace-topology.md`
 

@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.riemann-integrable)　·　[Chinese page (authoritative)](./def.riemann-integrable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Riemann Integrable` (short) · `Riemann Integrable Function` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.riemann-integrable.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be bounded on $[a, b]$. We say $f$ is **Riemann integrable** if and only if there exists a real number $I$ such that
 
+$$\forall \varepsilon > 0,\ \exists \delta > 0 :\ \|P\| < \delta \implies \bigl| S(f, P, \xi) - I \bigr| < \varepsilon$$
 
-Cite: `def.riemann-integrable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.riemann-integrable.en.2.md

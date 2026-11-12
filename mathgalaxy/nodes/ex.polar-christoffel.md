@@ -1,6 +1,6 @@
 # 极坐标的 Christoffel 符号　`ex.polar-christoffel`
 极坐标：$\Gamma^{r}_{\varphi\varphi} = -r$、$\Gamma^{\varphi}_{r\varphi} = 1/r$，其余为零
-layer 31 · 例 · 内蕴几何 · 微分几何+geometry
+layer 29 · 例 · 内蕴几何 · 微分几何+geometry
 [在星图里打开](../#n=ex.polar-christoffel)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}^{2}\setminus\{0\}$ 上取极坐标 $(r, \varphi)$，度量为 $g = \mathrm{d}r^{2} + r^{2}\,\mathrm{d}\varphi^{2}$。则 Christoffel 符号只有三个非零：

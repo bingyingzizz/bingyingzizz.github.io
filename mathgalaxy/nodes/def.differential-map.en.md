@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 24 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
+layer 22 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 names: `Differential` (short) · `Differential of a Smooth Map` (full)
 
 ## Statement and proof

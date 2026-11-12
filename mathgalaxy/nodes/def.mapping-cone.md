@@ -12,14 +12,13 @@ $$M(f)^{n} := K^{n+1} \oplus L^{n}, \qquad d^{n} := \begin{pmatrix} -d^{n+1} & 0
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.complex-mapping-cone.md](../proofs/def-dep.complex-mapping-cone.md)
 
+- …另有入边，续页见 [nodes/def.mapping-cone.3.md](./def.mapping-cone.3.md)
+
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.mapping-cone.4.md](./def.mapping-cone.4.md)
 
-refs: Le Stum, An introduction to condensed mathematics, §7.1
+refs: Weibel, An Introduction to Homological Algebra, Ch. 1 §1.5；Le Stum, An introduction to condensed mathematics, §7.1
 
-- …另有入边，续页见 [nodes/def.mapping-cone.3.md](./def.mapping-cone.3.md)
-
-## 说明
-用处：给出短正合列 $0 \to L \to M(f) \to K[1] \to 0$（一般不分裂）。于是**每个态射都能嵌进一条「几乎正合」的序列**，这是三角范畴的出发点 —— 后面所有导出三角的定义都靠它。
+> 说明见 `notes/def.mapping-cone.md`
 
 引用：`def.mapping-cone`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

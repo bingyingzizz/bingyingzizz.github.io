@@ -4,7 +4,7 @@
 ## 陈述（续）
 }^{0}(\mathcal{F})\to\mathcal{C}^{1}(\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(
 \mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\mathcal
-{C}^{q}(\mathcal{F})$ 是松弛层（flabby）；「松弛层无环」是另一条定理（Godement），本图未证，见 `thm.soft-sheaf-acy
-clic` 的第 3 步。
+{C}^{q}(\mathcal{F})$ 是松弛层（flabby）。它是无环消解这件事条件于 flabby acyclicity（松弛层无环，Godement 定理）；本
+图未证，见 `thm.soft-sheaf-acyclic` 的第 3 步。
 
 > 续见 [nodes/def.godement-resolution.3.md](./def.godement-resolution.3.md)

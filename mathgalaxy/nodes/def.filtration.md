@@ -9,13 +9,15 @@ $$\cdots \supseteq F^{n}M \supseteq F^{n+1}M \supseteq \cdots \supseteq M$$
 > 陈述续见 [nodes/def.filtration.2.md](./def.filtration.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.subobject`](../nodes/def.subobject.md) 子对象：用到了定义 子对象　[proofs/def-dep.subobject-filtration.md](../proofs/def-dep.subobject-filtration.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.filtration.3.md](./def.filtration.3.md)
+- 被 [`prop.filtered-first-page`](../nodes/prop.filtered-first-page.md) 过滤复形的第一页 用
 
-refs: Le Stum, An introduction to condensed mathematics, §7.2
+- …另有出边，续页见 [nodes/def.filtration.4.md](./def.filtration.4.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.filtration.3.md](./def.filtration.3.md)
+
+refs: Weibel, An Introduction to Homological Algebra, Ch. 5 §5.4；Le Stum, An introduction to condensed mathematics, §7.2
 
 ## 说明
 命题：$\mathbf{F}(\mathcal{C}(\mathcal{A})) \cong \mathcal{C}(\mathbf{F}(\mathcal{A}))$ —— **「带过滤」与「取复形」可以交换**。所以可以先把复形过滤好，再逐层算同调。

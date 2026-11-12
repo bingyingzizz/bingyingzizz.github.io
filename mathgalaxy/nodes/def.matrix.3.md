@@ -1,10 +1,7 @@
 # 矩阵　`def.matrix`　·　续页（第 3 页）
 [在星图里打开](../#n=def.matrix)　·　第 1 页 [nodes/def.matrix.md](./def.matrix.md)　·　上一页 [nodes/def.matrix.2.md](./def.matrix.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.elementary-matrix`](../nodes/def.elementary-matrix.md) 初等变换与初等矩阵 用
-- ⇒ [`thm.matrix-linear-map`](../nodes/thm.matrix-linear-map.md) 线性映射 ⟷ 矩阵
-- 被 [`def.jacobian`](../nodes/def.jacobian.md) Jacobi 矩阵 用
-- 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用
-- 被 [`def.unitary-matrix`](../nodes/def.unitary-matrix.md) 酉矩阵与正交矩阵 用
-- ⇒ [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.vs`](../nodes/def.vs.md) 线性无关与基：用到了定义 线性无关与基　[proofs/dep.vs-matrix.md](../proofs/dep.vs-matrix.md)
+
+> 续见 [nodes/def.matrix.4.md](./def.matrix.4.md)

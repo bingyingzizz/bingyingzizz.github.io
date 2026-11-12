@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.primary-decomposition)　·　[Chinese page (authoritative)](./thm.primary-decomposition.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.primary-decomposition.md` and `proofs/`.
+## Statement · **draft**
+Let $K$ be **algebraically closed**, $T : V \to V$, $\dim V = n < \infty$. Let
 
+$$\chi_T(x) = \prod_{i=1}^{r} (x - \lambda_i)^{m_i}$$
 
-Cite: `thm.primary-decomposition` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+($\lambda_i$ distinct, $m_i \ge 1$) be the factorization of the characteristic polynomial. Then
 
+> continued in nodes/thm.primary-decomposition.en.2.md

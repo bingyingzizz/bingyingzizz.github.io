@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.evt)　·　[Chinese page (authoritative)](./thm.evt.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.evt.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a **nonempty** compact metric space and $f : X \to \mathbb{R}$ continuous. Then $f$ **attains** its maximum and minimum: there exist $x_{\min}, x_{\max} \in X$ such that for all $x \in X$,
 
+$$f(x_{\min}) \le f(x) \le f(x_{\max})$$
 
-Cite: `thm.evt` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.evt.en.2.md

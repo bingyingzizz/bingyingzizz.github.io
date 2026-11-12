@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.ideal)　·　[Chinese page (authoritative)](./def.ideal.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ideal.md` and `proofs/`.
+## Statement · **draft**
+Let $A$ be a ring. A subset $I \subseteq A$ is called a **(two-sided) ideal** if $(I, +)$ is an additive subgroup and, for all $a \in A$ and $x \in I$,
 
+$$a x \in I, \qquad x a \in I.$$
 
-Cite: `def.ideal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(Requiring only $a x \in I$ gives a **left ideal**, and only $x a \in I$ a **right ideal**; in a commutative ring the three notions coincide.)
 
+> continued in nodes/def.ideal.en.2.md

@@ -4,6 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.orbit-stabilizer`](../nodes/thm.orbit-stabilizer.md) 轨道–稳定子定理
 - ⇒ [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理
-- ⇒ [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理
 - ⇒ [`thm.order-divides-phi`](../nodes/thm.order-divides-phi.md) 阶整除 Euler 函数
 - ⇒ [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理

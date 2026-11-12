@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.dual-space)　·　[Chinese page (authoritative)](./def.dual-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.dual-space.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a $K$-vector space. The **dual space** of $V$ is defined as the set of all linear maps from $V$ to $K$:
 
+$$V^{\ast} := \operatorname{Hom}_K(V, K)$$
 
-Cite: `def.dual-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+its elements are called **linear functionals**. $V^{\ast}$ becomes a vector space under pointwise addition and scalar multiplication.
 
+If $T : V \to W$ is linear, define the **transpose** (or dual) map
+
+> continued in nodes/def.dual-space.en.2.md

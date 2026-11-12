@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.lebesgue-measurable)　·　[Chinese page (authoritative)](./def.lebesgue-measurable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.lebesgue-measurable.md` and `proofs/`.
+## Statement · **draft**
+For $f : \mathbb{R} \to \mathbb{C}$:
 
+- if $f$ is $(\mathcal{L}, \mathfrak{B}_\mathbb{C})$-measurable, $f$ is called **Lebesgue measurable** ($\mathcal{L}$ is the $Lebesgue \sigma$-algebra);
+- if $f$ is $(\mathfrak{B}_\mathbb{R}, \mathfrak{B}_\mathbb{C})$-measurable, $f$ is called **Borel measurable**.
 
-Cite: `def.lebesgue-measurable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.lebesgue-measurable.en.2.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 16 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.pi1-group.md` and `proofs/`.

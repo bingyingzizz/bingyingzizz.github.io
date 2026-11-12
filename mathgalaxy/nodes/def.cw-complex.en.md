@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · definition · cluster Homology Groups (`topology.homology`) · Topology
+layer 26 · definition · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.cw-complex.md` and `proofs/`.

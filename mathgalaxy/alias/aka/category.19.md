@@ -1,6 +1,12 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 3.57 → prop.stalk-of-sheafification
+
+- Exercise 1.38 | Exercise 1.45 | 完备范畴 → prop.set-top-ab-complete
+
+- Exercise 1.59 → prop.adjunction-composition
+
 - Exercise 3.10 → prop.sieve-generated-by-family
 
 - Exercise 3.12 → prop.topology-alternative-axiom
@@ -26,11 +32,5 @@
 - Exercise 1.8 → prop.free-objects-examples
 
 - Exercise 1.11 → prop.functor-preserves-sections
-
-- Exercise 1.12 → def.mor-domain-codomain
-
-- Exercise 1.13 → prop.op-category-is-modules
-
-- Exercise 1.14 → prop.forgetful-faithful-not-full
 
 > 续见 alias/aka/category.20.md

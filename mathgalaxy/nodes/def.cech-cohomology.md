@@ -8,10 +8,12 @@ layer 17 · 定义 · 层上同调 · 同调代数+范畴论
 $$\check{H}^{n}(X, M^{\bullet}) := \Gamma\bigl(X,\ \check{H}^{n}(M^{\bullet})\bigr).$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.cech-functor`](../nodes/def.cech-functor.md) Čech 函子：用到了定义 Čech 函子　[proofs/def-dep.cechcoh-cech.md](../proofs/def-dep.cechcoh-cech.md)
+- [`def.cech-complex`](../nodes/def.cech-complex.md) Čech 复形：用到了定义 Čech 复形　[proofs/dep.cechcomplex-cechcoh.md](../proofs/dep.cechcomplex-cechcoh.md)
+
+- …另有入边，续页见 [nodes/def.cech-cohomology.2.md](./def.cech-cohomology.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.cech-cohomology.2.md](./def.cech-cohomology.2.md)
+- …另有出边，续页见 [nodes/def.cech-cohomology.3.md](./def.cech-cohomology.3.md)
 
 refs: Le Stum, Definition 7.3.5
 

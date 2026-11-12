@@ -17,7 +17,7 @@ $$\mathcal{T}_{d} = \mathcal{T},\qquad \mathcal{T}_{d} := \{\, U \subseteq X : \
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.metrizable.2.md](./def.metrizable.2.md)
 
-refs: Munkres, Topology (2nd ed.), Sections 20 and 40
+refs: Engelking, General Topology, Ch. 4 §4.1；Munkres, Topology (2nd ed.), Sections 20 and 40
 
 > 说明见 `notes/def.metrizable.md`
 

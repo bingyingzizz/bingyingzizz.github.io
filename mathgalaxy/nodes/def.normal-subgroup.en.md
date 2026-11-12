@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.normal-subgroup)　·　[Chinese page (authoritative)](./def.normal-subgroup.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.normal-subgroup.md` and `proofs/`.
+## Statement · **draft**
+Let $H \le G$ and $g \in G$. The **left coset** and **right coset** are
 
+$$gH := \{\, gh : h \in H \,\}, \qquad Hg := \{\, hg : h \in H \,\}.$$
 
-Cite: `def.normal-subgroup` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+We call $H$ a **normal subgroup** of $G$ (written $H \trianglelefteq G$) if $gH = Hg$ for all $g \in G$, equivalently $gHg^{-1} = H$.
 
+> continued in nodes/def.normal-subgroup.en.2.md

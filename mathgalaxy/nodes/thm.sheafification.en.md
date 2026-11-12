@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.sheafification)　·　[Chinese page (authoritative)](./thm.sheafification.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Sheafification` (short) · `Sheafification and the Sheaf Reflection` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.sheafification.md` and `proofs/`.
+## Statement · **draft**
+The category of sheaves is a **reflective subcategory** of the category of presheaves, with reflector
 
+$$\sharp : \widehat{\mathcal{C}} \longrightarrow \widehat{\mathcal{C}}, \qquad T \mapsto T^{\sharp}$$
 
-Cite: `thm.sheafification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+called **sheafification**: for every sheaf $F$,
 
+> continued in nodes/thm.sheafification.en.2.md

@@ -1,6 +1,6 @@
 # 闭曲面　`def.closed-surface`
 闭曲面（紧、连通、无边界的 2 维拓扑流形）
-layer 19 · 定义 · 曲面的地形 · 拓扑学
+layer 17 · 定义 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=def.closed-surface)　·　[节点索引](../index.md)
 
 一个 **2 维拓扑流形** $S$（见 `def.topological-manifold`）叫**闭曲面**，如果

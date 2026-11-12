@@ -1,6 +1,6 @@
 # 三角剖分　`def.triangulation`
 三角剖分（可剖分空间）
-layer 19 · 定义 · 曲面的地形 · 拓扑学
+layer 17 · 定义 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=def.triangulation)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间。$X$ 的一个**三角剖分**是一对 $(K, h)$：

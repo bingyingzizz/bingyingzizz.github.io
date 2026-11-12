@@ -1,6 +1,6 @@
 # 圆周的基本群　`thm.pi1-circle`
 $\pi_{1}(S^{1}, 1) \cong \mathbb{Z}$：绕数是一个完全的不变量
-layer 21 · 定理 · 基本群 · 拓扑学
+layer 20 · 定理 · 基本群 · 拓扑学
 [在星图里打开](../#n=thm.pi1-circle)　·　[节点索引](../index.md)
 
 令 $p : \mathbb{R} \to S^{1}$，$p(t) = e^{2\pi i t}$（这是覆叠映射）。对以 $1 \in S^{1}$ 为基点的闭道路 $\alpha$，取唯一提升 $\tilde{\alpha}$ 且 $\tilde{\alpha}(0) = 0$，定义

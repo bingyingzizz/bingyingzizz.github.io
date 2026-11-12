@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=lem.path-product)　·　[Chinese page (authoritative)](./lem.path-product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 15 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.path-product.md` and `proofs/`.
+## Statement · **draft**
+Let $\alpha$ be a path from $x_{0}$ to $x_{1}$, and $\beta$ a path from $x_{1}$ to $x_{2}$. Their **concatenation** is "first traverse $\alpha$, then $\beta$, each in half the time":
 
+$$(\alpha * \beta)(t) = \alpha(2t) \quad (0 \le t \le \tfrac{1}{2}),$$
+$$(\alpha * \beta)(t) = \beta(2t - 1) \quad (\tfrac{1}{2} \le t \le 1).$$
 
-Cite: `lem.path-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.path-product.en.2.md

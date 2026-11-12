@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **stale** · stale fields: abstract (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 32 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 30 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 
 > continued in nodes/thm.de-rham.en.2.md

@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.second-countable)　·　第 1 页 [nodes/def.second-countable.md](./def.second-countable.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Урысон 度量化定理 用
 - ⇒ [`def.first-countable`](../nodes/def.first-countable.md) 第一可数空间
 - ⇒ [`thm.urysohn-metrization`](../nodes/thm.urysohn-metrization.md) Урысон 度量化定理
 - 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用

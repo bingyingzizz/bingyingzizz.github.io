@@ -2,5 +2,5 @@
 [在星图里打开](../#n=thm.degree-nonextendable)　·　第 1 页 [nodes/thm.degree-nonextendable.md](./thm.degree-nonextendable.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.homotopy-invariance`](../nodes/thm.homotopy-invariance.md) 同伦不变性：同伦不变性：延拓存在则度为 0　[proofs/imp.degreenonext-homotopy.md](../proofs/imp.degreenonext-homotopy.md)
 - [`def.degree`](../nodes/def.degree.md) 映射的度：用到了定义 映射的度　[proofs/dep.degreenonext-degree.md](../proofs/dep.degreenonext-degree.md)
-- [`thm.homotopy-invariance`](../nodes/thm.homotopy-invariance.md) 同伦不变性：用到了定义 同伦不变性　[proofs/dep.degreenonext-homotopy.md](../proofs/dep.degreenonext-homotopy.md)

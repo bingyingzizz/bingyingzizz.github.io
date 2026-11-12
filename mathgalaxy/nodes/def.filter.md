@@ -19,7 +19,7 @@ layer 17 · 定义 · 收敛与紧性 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.filter.3.md](./def.filter.3.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 1 §1.6
 
 > 说明见 `notes/def.filter.md`
 

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.simple-approximation)　·　[Chinese page (authoritative)](./thm.simple-approximation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · theorem · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.simple-approximation.md` and `proofs/`.
+## Statement · **draft**
+**(a)** If $f : X \to [0, +\infty]$ is measurable, then there exists a sequence of simple functions $\{\varphi_n\}$ that approaches $f$ **increasingly at every point**:
 
+$$0 \le \varphi_1 \le \varphi_2 \le \cdots \le f, \quad  \varphi_n \to f$$
 
-Cite: `thm.simple-approximation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.simple-approximation.en.2.md

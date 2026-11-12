@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.second-countable)　·　[Chinese page (authoritative)](./def.second-countable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.second-countable.md` and `proofs/`.
+## Statement · **draft**
+A topological space $X$ is **second countable** if its topology has a **countable base**: there is a countable family $\mathcal{B} = \{\, B_{n} \,\}_{n \ge 1}$ such that every open set is a union of members of $\mathcal{B}$.
 
-
-Cite: `def.second-countable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.second-countable.en.2.md

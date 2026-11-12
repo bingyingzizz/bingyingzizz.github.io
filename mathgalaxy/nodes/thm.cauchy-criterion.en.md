@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.cauchy-criterion)　·　[Chinese page (authoritative)](./thm.cauchy-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cauchy-criterion.md` and `proofs/`.
+## Statement · **draft**
+A real sequence $\{x_n\}$ converges (to some real number) if and only if it is a Cauchy sequence.
 
-
-Cite: `thm.cauchy-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.cauchy-criterion.en.2.md

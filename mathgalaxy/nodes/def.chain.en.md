@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.chain)　·　[Chinese page (authoritative)](./def.chain.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.chain.md` and `proofs/`.
+## Statement · **draft**
+Let $(P, \preceq )$ be a poset and let $C \subseteq P$.
 
+**$C$ is a chain** (also called a totally ordered subset) if and only if any two elements of $C$ are comparable:
 
-Cite: `def.chain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\forall x, y \in C ( x \preceq y \vee  y \preceq x )$$
 
+**$C$ is an antichain** if and only if any two distinct elements of $C$ are incomparable.
+
+Convention: $\emptyset$ and every singleton count as chains.
+
+> continued in nodes/def.chain.en.2.md

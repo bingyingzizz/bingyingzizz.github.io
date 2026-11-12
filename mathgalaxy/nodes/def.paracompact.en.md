@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.paracompact)　·　[Chinese page (authoritative)](./def.paracompact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Paracompact Spaces and Partitions of Unity (`topology.paracompact`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.paracompact.md` and `proofs/`.
+## Statement · **draft**
+A topological space $X$ is **paracompact** if **every open cover has a locally finite open refinement**: for every open cover $\mathcal{U}$ there exists an open cover $\mathcal{V}$ such that
 
+$$\mathcal{V}\ \text{refines}\ \mathcal{U}\quad\text{and}\quad \mathcal{V}\ \text{is locally finite}.$$
 
-Cite: `def.paracompact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.paracompact.en.2.md

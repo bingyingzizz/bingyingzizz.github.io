@@ -1,6 +1,12 @@
 # 别名 → 节点 · 泛函分析
 根 `../../`　·　索引 `../../alias.md`
 
+- 双线性映射的联合连续性 | 分别连续双线性映射 → thm.bilinear-jointly-continuous
+
+- Lax-Milgram 定理 | 拉克斯-米尔格拉姆定理 → thm.lax-milgram
+
+- 可补子空间 | 拓扑可补子空间 → def.complemented-subspace
+
 - 可补子空间判别定理 → thm.complemented-subspace-criterion
 
 - 一致等度连续 | 等度连续（一致） → def.uniformly-equicontinuous
@@ -23,10 +29,4 @@
 
 - 弱*拓扑 | 弱星拓扑 | σ(E*,E) 拓扑 | 逐点收敛拓扑 → def.weak-star-topology
 
-- Hahn–Banach theorem | Hahn-Banach → thm.hahn-banach
-
-- Banach–Alaoglu theorem | Banach-Alaoglu → thm.banach-alaoglu
-
-- Goldstine | Goldstine’s theorem → thm.goldstine
-
-见 `../../alias.md`。
+> 续见 alias/aka/functional-analysis.7.md

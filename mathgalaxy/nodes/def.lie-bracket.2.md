@@ -2,8 +2,6 @@
 [在星图里打开](../#n=def.lie-bracket)　·　第 1 页 [nodes/def.lie-bracket.md](./def.lie-bracket.md)
 
 ## 陈述（续）
-右边看着用到二阶导数，但二阶偏导可交换，所以 $[X,Y]f$ 只含 $f$ 的一阶导数 —— 于是它仍是向量场。在卡里显式算出
-
 $$[X,Y] = \sum_{i=1}^{n}\Bigl(\sum_{j=1}^{n}\bigl(X^{j}\partial_{j}Y^{i} - Y^{j}\partial_{j}X^{i}\bigr)\Bigr)\frac{\partial}{\partial x^{i}} .$$
 
 四条性质（$f,g \in C^{\infty}(M)$）：

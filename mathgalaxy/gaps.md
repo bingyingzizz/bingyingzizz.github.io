@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1632 节点 / 3432 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1634 节点 / 3434 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -11,8 +11,8 @@
 
 ## 一、提到了但没有节点（16 个）
 
-### 单位圆　出现 31 次
-`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `def.jordan-curve` · `def.trig-function` · `def.normal-curvature` 等 26 个节点
+### 单位圆　出现 32 次
+`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `def.jordan-curve` · `def.trig-function` · `def.normal-curvature` 等 27 个节点
 
 ### 角度　出现 12 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.trig-function` · `thm.euler-formula` · `def.isometry` · `def.intrinsic-quantity` 等 9 个节点
@@ -59,28 +59,24 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（45 处）
+## 二、陈述用到更深的定义却没有边（44 处）
 
 - `thm.za-analytic`（有限生成代数的解析环 · L0）用到 `def.pre-analytic-ring`（预解析环 · L19）　落差 19
 - `thm.weierstrass-convergence`（Weierstrass 收敛性定理 · L0）用到 `def.uniform-convergence`（一致收敛 · L16）　落差 16
-- `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L33）　落差 13
-- `def.weak-hausdorff`（弱 Hausdorff 空间 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
-- `prop.connected-image-closure`（连通的像与闭包 · L6）用到 `def.continuous-map`（连续映射 · L16）　落差 10
-- `def.orientable-manifold`（可定向流形 · L16）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 6
+- `ex.projective-plane`（射影平面 RP² · L18）用到 `def.nonorientable-genus`（不可定向亏格 · L31）　落差 13
+- `def.completely-normal-space`（完全正规空间 · L6）用到 `def.subspace`（子空间 · L12）　落差 6
 - `prop.generator-coproduct-epi`（生成元的余积刻画 · L11）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 5
-- `prop.volume-form-orientation`（体积与定向 · L17）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 5
+- `thm.classification-surfaces`（闭曲面分类定理 · L26）用到 `def.nonorientable-genus`（不可定向亏格 · L31）　落差 5
+- `prop.eulerchar-nonorientable`（Euler 示性数与不可定向亏格 · L26）用到 `def.nonorientable-genus`（不可定向亏格 · L31）　落差 5
+- `def.jordan-curve`（Jordan 曲线 · L8）用到 `def.subspace`（子空间 · L12）　落差 4
 - `prop.adjoint-additive`（伴随函子都加法 · L10）用到 `def.additive-category`（加法范畴 · L14）　落差 4
-- `prop.pullback-forms`（拉回（开集间） · L19）用到 `def.smooth-map`（光滑映射 · L23）　落差 4
-- `prop.cgwh-fiber-product`（紧块的纤维积还是紧的 · L13）用到 `def.continuous-map`（连续映射 · L16）　落差 3
-- `thm.classification-surfaces`（闭曲面分类定理 · L30）用到 `def.nonorientable-genus`（不可定向亏格 · L33）　落差 3
-- `prop.eulerchar-nonorientable`（Euler 示性数与不可定向亏格 · L30）用到 `def.nonorientable-genus`（不可定向亏格 · L33）　落差 3
+- `def.riemannian-metric`（Riemann 度量 · L20）用到 `def.vector-field`（向量场 · L23）　落差 3
 - `def.cochain-complex`（上链复形 · L12）用到 `def.additive-category`（加法范畴 · L14）　落差 2
 - `def.module-category`（模范畴 · L10）用到 `def.linear-map`（线性映射 · L12）　落差 2
 - `thm.derived-long-exact`（导出函子的长正合列 · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.left-exact-criterion`（左正合性的判据 · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.left-exact-iff-R0`（左正合性与 R⁰ · L14）用到 `def.abelian-category`（阿贝尔范畴 · L16）　落差 2
 - `prop.additive-complex-construction`（加法函子与复形构造交换 · L13）用到 `def.category-of-complexes`（复形范畴 · L15）　落差 2
-- `thm.smooth-partition-unity`（光滑单位分解 · L20）用到 `def.smooth-manifold`（光滑流形 · L22）　落差 2
 - `lem.almost-orthogonal`（几乎正交引理 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
 - `def.bounded-operator`（有界线性算子 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
 - `def.schauder-basis`（Schauder 基 · L13）用到 `def.normed-space`（赋范空间 · L15）　落差 2
@@ -93,19 +89,22 @@
 - `prop.simplicial-to-chain`（单纯对象给出链复形 · L13）用到 `def.additive-category`（加法范畴 · L14）　落差 1
 - `def.injective-dimension`（内射维数 · L20）用到 `def.flat-dimension`（平坦维数 · L21）　落差 1
 - `thm.linear-continuous-bounded`（连续 ⟺ 有界 · L14）用到 `def.normed-space`（赋范空间 · L15）　落差 1
-- `ex.klein-bottle`（克莱因瓶 · L32）用到 `def.nonorientable-genus`（不可定向亏格 · L33）　落差 1
+- `ex.klein-bottle`（克莱因瓶 · L30）用到 `def.nonorientable-genus`（不可定向亏格 · L31）　落差 1
 - `def.real-metric-space`（实数的度量 · L15）用到 `def.canonical-topology`（标准拓扑 · L15）
 - `def.category-of-groups`（群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
 - `def.category-of-abelian-groups`（阿贝尔群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
 - `def.group-power`（群的整数幂 · L8）用到 `def.power`（整数幂 · L8）
+- `def.cech-complex`（Čech 复形 · L13）用到 `def.bicomplex`（双复形 · L13）
 - `def.exact-sequence`（一般正合列 · L16）用到 `def.abelian-category`（阿贝尔范畴 · L16）
 - `def.kernel-cokernel`（核与余核 · L14）用到 `def.additive-category`（加法范畴 · L14）
 - `prop.additive-iff-preserves-biproduct`（加法函子的刻画 · L14）用到 `def.additive-category`（加法范畴 · L14）
 - `prop.injective-iff-acyclic`（内射与零调的等价 · L16）用到 `def.abelian-category`（阿贝尔范畴 · L16）
-- `lem.adapted-frame`（适配标架 · L27）用到 `def.connection-form`（联络形式 · L27）
+- `lem.adapted-frame`（适配标架 · L25）用到 `def.connection-form`（联络形式 · L25）
+- `prop.pullback-forms`（拉回（开集间） · L19）用到 `def.smooth-map`（光滑映射 · L19）
+- `def.divergence`（散度 · L25）用到 `def.lie-derivative`（Lie 导数 · L25）
 - `def.primitive-root`（原根 · L9）用到 `def.cyclic-group`（循环群 · L9）
-- `def.cotangent-bundle`（余切丛 · L25）用到 `def.bundle-section`（丛的截面 · L25）
 - `def.nilpotent`（幂零 · L16）用到 `def.char-poly`（特征多项式 · L16）
+- `thm.convex-star-shaped-every-point`（凸集在每一点处星形 · L12）用到 `def.star-shaped`（星形集 · L12）
 
 ## 二·补　白名单里的（39 条，已判「不是缺边」）
 
@@ -151,7 +150,7 @@
 - `ex.ab-of-categories` 提到 `def.lie-group` —— 例子行「Ab(Manifold) = 阿贝尔 Lie 群」是**列答案**，不是依赖。
 - `def.injective-dimension` 提到 `def.projective-dimension` —— 陈述用的是平坦维数 fd（图里还没有 `def.flat-dimension`）；pd 只是对偶侧的类比，不是定义依赖 —— 陈述里提到 pd 的那句恰好是「不能写成 pd」的反例。
 
-⚠️ **过期白名单 5 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.form-on-manifold` · `def.bundle-section>def.differential-form` · `def.t35-space>def.regular-space` · `def.smooth-manifold>def.partial-derivative` · `def.injective-dimension>def.projective-dimension`
+⚠️ **过期白名单 3 条**（对应的缺口已经不存在了：改了陈述或加了边）—— 该清：`def.bundle-section>def.differential-form` · `thm.darboux>def.riemannian-metric` · `def.injective-dimension>def.projective-dimension`
 
 ## 三、候选词表里从没被提到的（19 个）
 

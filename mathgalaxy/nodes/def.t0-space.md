@@ -16,7 +16,7 @@ $$x \in U,\ y \notin U \qquad \text{或} \qquad y \in U,\ x \notin U .$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.t0-space.2.md](./def.t0-space.2.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 > 说明见 `notes/def.t0-space.md`
 

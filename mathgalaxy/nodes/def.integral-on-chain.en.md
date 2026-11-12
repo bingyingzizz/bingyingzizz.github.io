@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 22 · definition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Integral on a Chain` (short) · `Integration over a Chain` (full)
 
 ## Statement and proof

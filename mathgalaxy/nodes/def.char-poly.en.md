@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.char-poly)　·　[Chinese page (authoritative)](./def.char-poly.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.char-poly.md` and `proofs/`.
+## Statement · **draft**
+Let $T : V \to V$ be linear, $\dim V = n < \infty$. Choose any basis and write $T$ as a matrix $A$, and define
 
+$$\chi_T(x) := \det(x\,I_n - A) \in K[x]$$
 
-Cite: `def.char-poly` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+called the **characteristic polynomial** of $T$. It is a monic polynomial of degree $n$, independent of the choice of basis (a change of basis gives a similar $A$, and $\det(P^{-1}(xI - A)P) = \det(xI - A)$).
 
+> continued in nodes/def.char-poly.en.2.md

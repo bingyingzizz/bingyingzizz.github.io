@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 24 · definition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 20 · definition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.singular-cube.md` and `proofs/`.

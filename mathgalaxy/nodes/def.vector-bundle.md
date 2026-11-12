@@ -1,6 +1,6 @@
 # 向量丛　`def.vector-bundle`
 向量丛与局部平凡化
-layer 24 · 定义 · 流形与向量丛 · 微分几何
+layer 20 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.vector-bundle)　·　[节点索引](../index.md)
 
 **在说什么**：把「每点挂一个向量空间、并且挂得光滑」这件事公理化 —— 切丛、余切丛、张量丛都是它的例子。判据是「局部长得像 $U \times \mathbb{R}^{k}$」。
@@ -13,11 +13,9 @@ layer 24 · 定义 · 流形与向量丛 · 微分几何
 - …另有入边，续页见 [nodes/def.vector-bundle.4.md](./def.vector-bundle.4.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.bundle-section`](../nodes/def.bundle-section.md) 丛的截面 用
-
 - …另有出边，续页见 [nodes/def.vector-bundle.5.md](./def.vector-bundle.5.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛与局部平凡化
+refs: Tu, Differential Geometry, GTM 275, Ch. 1 §7；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛与局部平凡化
 
 > 说明见 `notes/def.vector-bundle.md`
 

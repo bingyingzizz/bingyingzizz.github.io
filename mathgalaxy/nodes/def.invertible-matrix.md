@@ -13,13 +13,16 @@ $$\operatorname{GL}_n(K) := \{\, A \in M_n(K) : A \text{ is invertible} \,\}$$
 
 叫**一般线性群**。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.matrix-operations`](../nodes/def.matrix-operations.md) 矩阵的加法与乘法：用到了定义 矩阵的加法与乘法　[proofs/dep.matrixops-invertible.md](../proofs/dep.matrixops-invertible.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.invertible-matrix.2.md](./def.invertible-matrix.2.md)
+- ⇒ [`thm.cramer`](../nodes/thm.cramer.md) Cramer 法则
+- 被 [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵 用
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 1
+- …另有出边，续页见 [nodes/def.invertible-matrix.3.md](./def.invertible-matrix.3.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.invertible-matrix.2.md](./def.invertible-matrix.2.md)
+
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 > 说明见 `notes/def.invertible-matrix.md`
 

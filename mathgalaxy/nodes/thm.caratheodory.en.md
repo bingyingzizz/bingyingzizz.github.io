@@ -2,16 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.caratheodory)　·　[Chinese page (authoritative)](./thm.caratheodory.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · theorem · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.caratheodory.md` and `proofs/`.
+## Statement · **draft**
+Let $\mu^{*}$ be an outer measure on $X$, and $\mathcal{M}$ the family of all $\mu^{*}$-measurable sets. Then
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Carath%C3%A9odory%27s_extension_theorem
+1. **$\mathcal{M}$ is a $\sigma$-algebra**;
+2. **$\mu^*|_\mathcal{M}$ is a measure on $(X, \mathcal{M})$** (that is, $\mu^{*}$ is genuinely additive on $\mathcal{M}$);
+3. this measure is **complete**.
 
-
-Cite: `thm.caratheodory` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.caratheodory.en.2.md

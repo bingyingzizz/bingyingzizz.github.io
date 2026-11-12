@@ -1,9 +1,9 @@
 # 层上同调 / Sheaf Cohomology（hom.sheafcoh）· 节点清单（第 3/4 页）
 根 `../`　·　第 1 页 `index/hom.sheafcoh.md`　·　上一页 `index/hom.sheafcoh.2.md`
 
+- prop.cohomology-via-associated-sheaf　用关联层算上同调　layer 18
+- prop.cohomology-presheaf-H　层化不改变导出的整体截面　layer 18
 - prop.skyscraper-injective　天际线层是内射层　layer 18
-- prop.etale-sheaf-examples　étale 层的例子　layer 18
-- def.fine-sheaf　细层　layer 18
 - prop.acyclic-iff-cech　无环 ⟺ Čech 上同调为零　layer 19
 - prop.stone-acyclic　Stone 空间上的上同调为零　layer 19
 - prop.topos-morphism-derived　拓扑斯态射的导出函子　layer 19

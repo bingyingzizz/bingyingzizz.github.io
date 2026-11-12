@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.det-laplace)　·　[Chinese page (authoritative)](./prop.det-laplace.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.det-laplace.md` and `proofs/`.
+## Statement · **draft**
+Let $A = (a_{ij}) \in M_n(K)$, and let $A_{ij}$ denote the matrix of order $(n-1)$ obtained by deleting row $i$ and column $j$, $M_{ij} := \det A_{ij}$ (**minor**), $C_{ij} := (-1)^{i+j} M_{ij}$ (**cofactor**). Then for each fixed $i$:
 
+$$\det A = \sum_{j=1}^{n} a_{ij}\, C_{ij}$$
 
-Cite: `prop.det-laplace` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.det-laplace.en.2.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Separation Axioms (`topology.separation`) · Topology
+layer 6 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.t35-space.md` and `proofs/`.

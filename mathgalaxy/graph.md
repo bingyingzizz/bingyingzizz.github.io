@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-12T04:38:49.620Z
-> 15 星系 / 105 星团 / 1632 节点 / 3432 连线（强边 3356，弱边 76；其中**不分层**的「推论」48 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-12T06:13:14.331Z
+> 15 星系 / 105 星团 / 1634 节点 / 3434 连线（强边 3357，弱边 77；其中**不分层**的「推论」64 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -1588,7 +1588,7 @@ $$X = \bigcup_{k=1}^{n} U_{i_{k}}.$$
 
 例子：$[a, b] \subseteq \mathbb{R}$ 紧（Heine–Borel，`cor.heine-borel`）；$\mathbb{R}$ 不紧（$\{(-n, n)\}$ 没有有限子覆盖）；$(0, 1]$ 不紧。一般拓扑里的标准例子见 `def.chaus`、`thm.tykhonov`（任意积仍紧）。
 
-参考：Munkres, Topology, §26（紧空间）
+参考：Engelking, General Topology, Ch. 3 §3.1；Munkres, Topology, §26（紧空间）
 
 #### 拓扑空间与开集　`def.topology`
 *定义*　拓扑空间 / 开集
@@ -1617,7 +1617,7 @@ $\mathcal{T}$ 的成员称为**开集**，它们的补集称为**闭集**。
 - 开集公理 $\iff$ 补集族满足任意交及有限并公理：用 De Morgan 恒等式，不需额外拓扑假设。
 - 有限交不能升级成任意交：通常实数拓扑中 $\bigcap_{n\ge1}(-1/n,1/n)=\{0\}$ 不开；拓扑也不自动 Hausdorff，非单点集合的不可分拓扑就是反例。
 
-参考：Munkres, Topology, Ch. 2
+参考：Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology, Ch. 2
 
 #### 闭集与闭包　`def.closed-set`
 *定义*　闭集 / 闭包 / 稠密
@@ -1635,7 +1635,7 @@ $\mathcal{T}$ 的成员称为**开集**，它们的补集称为**闭集**。
 
 闭包是「把极限点都收进来」：在距离空间里 $\overline{A}$ 恰好是「$A$ 中某个序列的极限」全体。
 
-参考：Munkres, Topology, Ch. 2
+参考：Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology, Ch. 2
 
 #### 基与子基　`def.topology-base`
 *定义*　拓扑的基 / 子基
@@ -1666,7 +1666,7 @@ $\mathcal{S} \subseteq \mathcal{P}(X)$ 是**子基**，当且仅当它的**有�
 - 节点列出的两条件不能单独反推是给定 $\mathcal T$ 的基：还须 $\mathcal T$ 等于所生成拓扑。例如离散的两点空间取 $\mathcal B=\{X\}$，满足两条件却不能生成单点开集。
 - 子基 $\iff$ 有限交全体为基：按约定是定义展开，有限交应含空交 $X$；通常实数拓扑的基元必须是通常开集，半开区间生成的是另一拓扑。
 
-参考：Munkres, Topology, Ch. 2
+参考：Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology, Ch. 2
 
 #### 连续映射　`def.continuous-map`
 *定义*　连续映射
@@ -1687,7 +1687,7 @@ $$V \in \mathcal{T}_Y \implies f^{-1}(V) \in \mathcal{T}_X$$
 
 这与可测函数的定义（$f^{-1}(E) \in \mathcal{M}$）是同一个套路。
 
-参考：Munkres, Topology, Ch. 2
+参考：Engelking, General Topology, Ch. 1 §1.4；Munkres, Topology, Ch. 2
 
 #### 同胚　`def.homeomorphism`
 *定义*　同胚
@@ -1712,7 +1712,7 @@ $\mathbb{R}$ 与开区间 $(0, 1)$ 同胚（$x \mapsto \frac{1}{2} + \frac{1}{\p
 
 ⚠️ 同胚是拓扑空间范畴的**同构**：它保持一切拓扑性质（连通、紧、可数性、分离性），这正是它作为「等价关系」的意义。
 
-参考：Munkres, Topology, Ch. 2
+参考：Engelking, General Topology, Ch. 1 §1.4；Munkres, Topology, Ch. 2
 
 #### 子空间拓扑　`def.subspace-topology`
 *定义*　子空间拓扑
@@ -1727,7 +1727,7 @@ $$\mathcal{T}_{Y} := \{\, U \cap Y : U \in \mathcal{T} \,\}$$
 
 📌 本图另有 `def.induced-topology`，但那是**同名不同物**：它指景上由函子诱导的 Grothendieck 拓扑，与子空间拓扑只共享中文名（不合并）。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 2 §2.1；Munkres, Topology
 
 #### 商拓扑　`def.quotient-topology`
 *定义*　商拓扑
@@ -1744,7 +1744,7 @@ $$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 
 📌 拓扑语境的「商空间」是这里；**向量空间**的商空间是 `def.quotient-vs`。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 2 §2.4；Munkres, Topology
 
 #### 积拓扑　`def.product-topology`
 *定义*　积拓扑与乘积空间
@@ -1760,7 +1760,7 @@ $$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},$$
 
 **范畴意义**：$\prod_{i} X_{i}$ 连同投影就是 $\mathbf{Top}$ 里的**积**。所以积拓扑不是随便挑的，它是泛性质唯一确定的那一个。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 2 §2.3；Munkres, Topology
 
 #### 连通与连通分量　`def.connected`
 *定义*　连通空间与连通分量
@@ -1780,7 +1780,7 @@ $$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},$$
 
 ⚠️ **连通 $\ne$ 道路连通**：道路连通 $\implies$ 连通，反之不成立（拓扑学家的正弦曲线）。两者的差距正是「$\pi_{0}$ 与道路 $\pi_{0}$」的差距。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 6 §6.1；Munkres, Topology
 
 #### 闭开集　`def.clopen`
 *定义*　闭开集
@@ -1985,7 +1985,7 @@ $$\mathring{A} := \bigcup\{\, U : U \subseteq A,\ U\ \text{开} \,\} ,$$
 
 ⚠️ **别把“内部”与“内点集”当两件事**：一般拓扑里「存在含于 $A$ 的开邻域的点」正好给出 $\mathring{A}$。但「开核」与「内部」是同义词，只是译法不同。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.3
 
 #### Sierpiński 空间　`ex.sierpinski-space`
 *例*　Sierpiński 空间 $\{0,1\}$：$T_{0}$ 但非 $T_{1}$，连通但非道路连通
@@ -2024,7 +2024,7 @@ Stone–Čech 紧化的单射性要求的正是 $T_{3.5}$。
 
 裸 $T_{3}$ 推不出 $T_{1}$。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 1 §1.5；Munkres, Topology
 
 #### 正规空间　`def.normal-space`
 *定义*　正规空间
@@ -2048,7 +2048,7 @@ Stone–Čech 紧化的单射性要求的正是 $T_{3.5}$。
 
 **证明**沿「紧 $\implies$ 仿紧」+「仿紧 $+$ Hausdorff $\implies$ 正规」两步走，见 `thm.paracompact-hausdorff-normal`；⚠️ **正规性不是遗传的**：正规空间的子空间未必正规。这一点与「紧」「Hausdorff」都不同。
 
-参考：Munkres, Topology
+参考：Engelking, General Topology, Ch. 1 §1.5；Munkres, Topology
 
 #### Урысон 引理　`lem.urysohn`
 *引理*　Урысон 引理
@@ -2132,7 +2132,7 @@ $$x \in U,\ y \notin U \qquad \text{或} \qquad y \in U,\ x \notin U .$$
 
 ⭐ 链的位置：$T_{0}$ 是最底下的一格。$T_{1}$ 往上每加一条，就多「看见」一点结构 —— 见 `def.t1-space` 的注里的那张表。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### T1 空间　`def.t1-space`
 *定义*　T1 空间（Fréchet）：单点是闭集
@@ -2169,7 +2169,7 @@ $$x \in U,\ y \notin U \qquad \text{或} \qquad y \in U,\ x \notin U .$$
 ⚠️ **最常见的误推**：以为 (3) 能加强成「可数集闭」。**不成立**：余可数拓扑里可数集未必闭（它只保证有限集闭）；那正是 $T_{1}$ 与 $T_{2}$ 的分界线 —— `def.hausdorff` 的注里给了余有限拓扑这个反例。
 ⚠️ **另一个误推**：$T_{1}$ 不蕴含「两个不同点有不交邻域」。那是 $T_{2}$；$T_{1}$ 只给「各自有一个不含对方的邻域」，两个邻域**可以相交**。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### T3 空间　`def.t3-space`
 *定义*　T3：单点与闭集可以分开
@@ -2202,7 +2202,7 @@ $$x \in U \subseteq \overline{U} \subseteq W ,$$
 
 ⚠️ **$T_{3}$ 不等于「点与闭集之间有连续函数」** —— 那是 $T_{3.5}$（`def.t35-space`）。$T_{3}$ 只给开集，不给函数。这个落差正是 Urysohn 引理要补的（而 Urysohn 引理要**正规**，不是 $T_{3}$）。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### 正则空间　`def.regular-space`
 *定义*　正则空间 = $T_{3} + T_{1}$
@@ -2230,7 +2230,7 @@ $$x \in U \subseteq \overline{U} \subseteq W ,$$
 
 ⭐ 与 `thm.paracompact-hausdorff-normal` 的关系：那条定理的「第 1 步」证的就是「仿紧 Hausdorff $\implies$ 正则」，用的正是 $T_{3}$ 的「$\overline{U} \subseteq W$」形式。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### T3.5 空间　`def.t35-space`
 *定义*　T3.5：单点与闭集可由连续函数分开
@@ -2255,7 +2255,7 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 
 ⚠️ **完全正则不等于正规**：Sorgenfrey 平面完全正则但不正规，所以 $T_{3.5}$ 严格弱于 $T_{4}$。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### 完全正则空间　`def.completely-regular-space`
 *定义*　完全正则空间 = $T_{3.5} + T_{1}$（Tychonoff 空间）
@@ -2293,7 +2293,7 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 - 嵌入方体 $\implies$ 完全正则：由坐标分离、有限坐标基本邻域及完全正则性的子空间遗传性；不能仅从连续单射推出嵌入。
 - $T_1$ 不能省：至少两点的不可分拓扑满足裸 $T_{3.5}$，但不能嵌入 Hausdorff 方体；正规 $\implies$ 完全正则另需 Urysohn 引理。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### 完全正规空间　`def.completely-normal-space`
 *定义*　完全正规空间（T5）：连子空间都正规
@@ -2318,7 +2318,7 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 
 ⚠️ **度量化空间都是 $T_{5}$**：距离空间的所有子空间都是距离空间、都正规。这也是为什么在分析里很少需要 $T_{5}$ —— 它自动成立（更强的是 $T_{6}$，见 `def.perfectly-normal-space`）。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 #### 完美正规空间　`def.perfectly-normal-space`
 *定义*　完美正规空间（T6）：每个闭集都可数交开集
@@ -2350,7 +2350,7 @@ $$f(x) = 0, \qquad f|_{F} \equiv 1 .$$
 - 正规且闭集 $F$ 为 $G_\delta$ $\implies$ $F$ 为连续函数零点集：对表示 $F=\bigcap_n U_n$ 用 Urysohn 引理分离 $F$ 与 $X\setminus U_n$，再以 $2^{-n}$ 加权作一致收敛级数；反向由连续函数取逆像直接得到。
 - 正规性不能靠“闭集都是 $G_\delta$”代替：Sierpinski 两点空间每个闭集都是开集，仍不满足本库要求的 $T_1$；正规也不自动完美正规，$[0,\omega_1]$ 的末点单集不是 $G_\delta$。
 
-参考：Engelking, General Topology；Munkres, Topology
+参考：Engelking, General Topology, Ch. 1 §1.5；Munkres, Topology
 
 ### 星团：收敛与紧性
 > 造出「逼近」这套工具：第一 / 第二可数 → **网**与**滤子**（一般拓扑里的收敛）→ 局部紧 → 紧化的两种极端（一点紧化 / Stone–Čech）→ Tychonoff 乘积定理 → 紧性的基本操作与商。
@@ -2370,7 +2370,7 @@ $$x \in \mathring{K}$$
 
 **用法**：需要 Hausdorff 时与 `def.hausdorff` 一起用；没有 Hausdorff 时本定义仍然有效，但每点有紧邻域基这一更强性质不一定成立。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 3 §3.3
 
 #### Tychonoff 定理　`thm.tykhonov`
 *定理*　Tychonoff 定理：紧空间的任意积紧
@@ -2378,7 +2378,7 @@ $$x \in \mathring{K}$$
 任意一族紧空间的**积**（带积拓扑）仍然紧 —— 任意多个，包括不可数多个。
 
 **证明（Alexander 子基引理 + 选择公理）。** 记 $X = \prod_{i\in I} X_{i}$，投影 $p_{i} : X\to X_{i}$。取**子基**
-$$\mathcal{S} := \{\, p_{i}^{-1}(U_{i}) \;:\; i\in I,\ U_{i}\subseteq X_{i}\ \text{开} \,\}.$$
+$$\mathcal{S} := \{\, p_{i}^{-1}(U_{i}) \;:\; i\in I,\ U_{i}\subseteq X_{i}\ \text{open} \,\}.$$
 **Alexander 子基引理**：拓扑空间紧 $\iff$ 每个由子基成员组成的覆盖都有有限子覆盖。所以只需验证后者。
 设 $\mathcal{S}_{0} \subseteq \mathcal{S}$ 覆盖 $X$，反设它**没有**有限子覆盖。对每个 $i$ 记
 $$\mathcal{U}_{i} := \{\, U_{i} : p_{i}^{-1}(U_{i}) \in \mathcal{S}_{0} \,\},\qquad F_{i} := X_{i}\setminus \bigcup \mathcal{U}_{i}.$$
@@ -2390,7 +2390,7 @@ $$\mathcal{U}_{i} := \{\, U_{i} : p_{i}^{-1}(U_{i}) \in \mathcal{S}_{0} \,\},\qq
 
 ⭐ **Tychonoff 与选择公理等价**（在 ZF 里互相推出）—— 这是「选择公理有多强」的一个标准刻度。
 
-参考：Munkres, Topology, §37；Le Stum, Exercise 2.19
+参考：Engelking, General Topology, Ch. 3 §3.2；Munkres, Topology, §37；Le Stum, Exercise 2.19
 
 #### 紧性的基本操作　`prop.compact-basic-operations`
 *命题*　命题：闭子集紧、连续像紧、紧 Hausdorff 正规
@@ -2449,7 +2449,7 @@ $A$ 紧，取有限个覆盖 $A$，令 $U := \bigcup_{i} U_{a_i}$，则 $\overli
 
 ⚠️ 一句话：**第二可数是“全局可数”，第一可数是“局部可数”**；度量空间里两者都可分等价，一般拓扑里不行。
 
-参考：Munkres, Topology (2nd ed.), Section 30
+参考：Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology (2nd ed.), Section 30
 
 #### 第一可数空间　`def.first-countable`
 *定义*　每点有可数局部基
@@ -2471,7 +2471,7 @@ $X$ 叫**第一可数的**，如果每个点都有**可数局部基**：存在�
 
 ⚠️ **第一可数是“序列够用”的精确门槛**：不可数空间里「闭包 $\ne$ 序列闭包」（$[0,\omega_{1}]$ 里的 $\omega_{1}$）。这也解释了为什么紧性在一般拓扑里要用**网**（`def.net`）而不能用序列。
 
-参考：Munkres, Topology (2nd ed.), Section 30
+参考：Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology (2nd ed.), Section 30
 
 #### 紧化　`def.compactification`
 *定义*　紧化：把空间塞进紧空间里
@@ -2512,7 +2512,7 @@ $$e : X \hookrightarrow Y ,$$
 - 非紧 Hausdorff 空间有 Hausdorff 一点紧化 $\iff$ 局部紧：这是额外定理；$\mathbb Q$ 非局部紧，不能作 Hausdorff 一点紧化。非 Hausdorff 的紧化不能套用此限制。
 - 原注所说任意 $X\sqcup\{*\}$ 都紧不成立：无限离散 $X$ 的这个不交并仍不紧。
 
-参考：Engelking, General Topology；Munkres, Topology
+参考：Engelking, General Topology, Ch. 3 §3.5；Munkres, Topology
 
 #### 一点紧化　`def.one-point-compactification`
 *定义*　一点紧化：只补一个无穷远点
@@ -2556,7 +2556,7 @@ $\mathbb{N}$ 的一点紧化是 $\{1/n\} \cup \{0\}$。
 
 ⚠️ **$\infty$ 的邻域为什么长那样**：第二条公理里「补集紧」不是随意规定 —— 若邻域是 $U\cup\{\infty\}$，那么「跑向无穷」的点最终必须落在 $U$ 里，即最终离开 $X\setminus U$；要求 $X\setminus U$ 紧，正是让「离开它」与「紧性」对齐，从而使 $X^{*}$ 紧。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 3 §3.5
 
 #### 网　`def.net`
 *定义*　网与网的收敛：一般拓扑里的序列
@@ -2596,7 +2596,7 @@ $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 - 紧 $\iff$ 每个网有收敛子网：用网的聚点与开覆盖有限子覆盖的对偶论证；不需 Hausdorff，但子网须满足标准共尾条件。
 - 改成序列不能刻画一般紧性：第一可数的序数空间 $[0,\omega_1)$ 序列紧却不紧，故原文括号里的第一可数不足以保证紧性的序列刻画。
 
-参考：Munkres, Topology；Kelley, General Topology
+参考：Engelking, General Topology, Ch. 1 §1.6；Munkres, Topology；Kelley, General Topology
 
 #### 滤子　`def.filter`
 *定义*　滤子与超滤子：收敛的另一套语言
@@ -2637,7 +2637,7 @@ $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 
 ⚠️ 与范畴论里的「滤过性」（`def.filtered-category`）**无关**，只是中文都带「滤」字。
 
-参考：Munkres, Topology；Engelking, General Topology
+参考：Munkres, Topology；Engelking, General Topology, Ch. 1 §1.6
 
 ### 星团：度量空间
 > 造出「用距离算出来的拓扑」：完备、全有界、列紧，以及紧性的几种等价刻画。
@@ -2671,7 +2671,7 @@ $$\lambda \ge \lambda_{0} \implies x_{\lambda} \in U .$$
 
 ⚠️ **「$d$ 取 $[0,+\infty)$ 而不是 $[0,+\infty]$」**：允许 $+\infty$ 会把「同一连通分支」搞乱（$d \equiv +\infty$ 的离散度量不满足三角不等式以外的直觉），所以标准定义取有限值；度量空间之间的映射若需要 $+\infty$，要显式说明。
 
-参考：Rudin, Principles of Mathematical Analysis, Ch. 2；Munkres, Topology, §20
+参考：Engelking, General Topology, Ch. 4 §4.1；Rudin, Principles of Mathematical Analysis, Ch. 2；Munkres, Topology, §20
 
 #### 完备　`def.complete`
 *定义*　完备距离空间
@@ -2690,7 +2690,7 @@ $$\{x_n\}\ \text{Cauchy} \implies \exists x \in X : x_n \to x$$
 
 **闭子集继承完备**：$X$ 完备时，$A \subseteq X$ 作为子空间完备 $\iff A$ 在 $X$ 中闭。这条在下面「子集的紧性刻画」里要用。
 
-参考：Rudin, Principles of Mathematical Analysis, Ch. 3
+参考：Engelking, General Topology, Ch. 4 §4.3；Rudin, Principles of Mathematical Analysis, Ch. 3
 
 #### 全有界　`def.totally-bounded`
 *定义*　全有界 / 预紧
@@ -2722,7 +2722,7 @@ $$X\ \text{全有界} \iff X\ \text{中每个序列都有 Cauchy 子列} .$$
 
 全有界被**一致连续**映射保持，但不被连续映射保持 —— 又一次说明它是度量性质而非拓扑性质。
 
-参考：Munkres, Topology, §43
+参考：Engelking, General Topology, Ch. 4 §4.3；Munkres, Topology, §43
 
 #### 列紧　`def.sequentially-compact`
 *定义*　列紧 / 序列紧
@@ -2735,10 +2735,10 @@ $$\forall\{x_n\} \subseteq X,\ \exists\{x_{n_k}\},\ \exists x \in X : x_{n_k} \t
 
 注意子列收敛到的是 $X$ 中的点：列紧是内蕴性质，不看外面那个空间。
 
-参考：Munkres, Topology, §28
+参考：Engelking, General Topology, Ch. 3 §3.10；Munkres, Topology, §28
 
 #### 紧的三个等价刻画　`thm.metric-compact-equiv`
-*定理*　度量空间中：紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
+*定理*　紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
 
 设 $X$ 是距离空间，度量记作 $d$。则以下三条**彼此等价**：
 
@@ -2746,11 +2746,9 @@ $$\forall\{x_n\} \subseteq X,\ \exists\{x_{n_k}\},\ \exists x \in X : x_{n_k} \t
 - (b) $X$ **列紧**：每个序列都有收敛（于 $X$ 中）的子列；
 - (c) $X$ **完备且全有界**。
 
-即 $X$ 紧 $\iff$ $X$ 列紧 $\iff$ $X$ 完备 $+$ 全有界。
+紧、列紧、完备且全有界三者的等价证明见边 `imp.metric-compact-equiv-proof`：紧 $\implies$ 列紧用「每点邻域只含有限项」的反证；列紧 $\implies$ 完备/全有界用 Cauchy 子列与 $\varepsilon$-网；全有界 $\implies$ 紧用 Lebesgue 数。
 
-text=紧、列紧、完备且全有界三者的等价证明见边 `imp.metric-compact-equiv-proof`：紧 $\implies$ 列紧用「每点邻域只含有限项」的反证；列紧 $\implies$ 完备/全有界用 Cauchy 子列与 $\varepsilon$-网；全有界 $\implies$ 紧用 Lebesgue 数。
-
-参考：Munkres, Topology, §28 与 §43
+参考：Engelking, Ch. 4 §4.3；Munkres, Topology, §28 与 §43
 
 #### 紧子集是闭的　`prop.compact-subset-closed`
 *命题*　命题：紧子集在 X 中是闭集
@@ -4076,7 +4074,7 @@ $$\forall s \in S,\ \exists i \in I :\quad V_{s} \subseteq U_{i}.$$
 
 ⚠️ 加细是**覆盖之间**的关系，不是集合之间的包含：$\mathcal{V}$ 加细 $\mathcal{U}$ 时，$\mathcal{V}$ 完全可以有更多、更小的成员。
 
-参考：Munkres, Topology (2nd ed.), Section 39
+参考：Engelking, General Topology, Ch. 5 §5.1；Munkres, Topology (2nd ed.), Section 39
 
 #### 仿紧空间　`def.paracompact`
 *定义*　每个开覆盖都有局部有限开加细
@@ -4274,7 +4272,7 @@ $$\mathcal{T}_{d} = \mathcal{T},\qquad \mathcal{T}_{d} := \{\, U \subseteq X : \
 
 ⚠️ 不是每个拓扑空间都可度量化：不可数离散空间虽然可度量化（离散度量）却不第二可数，而 Sorgenfrey 直线（下半开区间拓扑）是正规的、可分的、第一可数的，却不第二可数，因而**不**可度量化。
 
-参考：Munkres, Topology (2nd ed.), Sections 20 and 40
+参考：Engelking, General Topology, Ch. 4 §4.1；Munkres, Topology (2nd ed.), Sections 20 and 40
 
 #### Stone 定理　`thm.metric-paracompact`
 *定理*　度量空间必为仿紧空间
@@ -7047,7 +7045,7 @@ $$E_{\lambda} := \ker(T - \lambda\,I) \subseteq V$$
 
 ⚠ $\lambda$ 必须在 $K$ 里：实矩阵可能没有实特征值（旋转 $90^\circ$ 的特征值是 $\pm i$），此时要扩到 $\mathbb{C}$（或直接说「在 $K$ 上无特征值」）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 6
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6
 
 #### 特征多项式　`def.char-poly`
 *定义*　特征多项式 $\chi_T(x) = \det(x I - T)$
@@ -7072,7 +7070,7 @@ $$\chi_T(x) = x^{n} - (\operatorname{tr} T)\,x^{n-1} + \cdots + (-1)^{n} \det T$
 
 两者不等的例子是 $\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$（$\lambda = 1$：代数重数 2、几何重数 1）—— 这正是它不能对角化的原因。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 #### 迹　`def.trace`
 *定义*　迹 $\operatorname{tr} A$
@@ -7137,7 +7135,7 @@ $$\chi_T(T) = 0$$
 
 ⭐ 用途：算矩阵的幂（$A^{n}$ 可以用低次幂线性表出）、证明极小多项式整除特征多项式、求逆矩阵（$A^{-1}$ 由 $\chi_A$ 的系数给出）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 #### 可对角化判据　`thm.diagonalizable`
 *定理*　定理：可对角化的几个等价条件
@@ -7174,7 +7172,7 @@ $$\chi_T(T) = 0$$
 
 ⚠️ **必须的假设**：有限维 + **特征多项式在 $K$ 中分裂**（全部特征值落在 $K$ 里）。缺了后者，$T$ 在 $K$ 上可能根本没有特征值（例如 $\mathbb{R}$ 上的旋转 $90^{\circ}$）：此时 $m=0$，**(2)(3) 是假命题** —— 右边是零子空间 $0$，而 $V=\mathbb{R}^2$（空和 $0\ne2$）；只有 **(4) 真空成立**（「每个特征值」取遍空族）。所以等价链在 (2)(3) 处就断了，别误以为只差 (4)。正确的说法是「在代数闭包上可对角化 $\iff$ 极小多项式无重根」。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 6
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6
 
 #### 极小多项式　`def.minimal-poly`
 *定义*　极小多项式（算子的）$\mu_T$
@@ -7195,7 +7193,7 @@ $\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的
 
 ⚠ 极小多项式与特征多项式的根**相同**（差一个重数）：两者都等于「$T$ 的特征值全体」。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 #### 极小多项式整除特征多项式　`thm.minimal-poly-divisor`
 *定理*　定理：$\mu_T \mid \chi_T$，且两者同根
@@ -7271,7 +7269,7 @@ $$J = \begin{pmatrix} J_{1} & & \\ & \ddots & \\ & & J_{s} \end{pmatrix}, \qquad
 
 $\mathbb{R}$ 上只能用「实 Jordan 形」或改走有理标准型（`thm.rational-canonical-form`）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, Ch. 7；Lang, Algebra, Ch. XIV
 
 #### Jordan 型的唯一性　`cor.jordan-uniqueness`
 *推论*　推论：Jordan 型在块的排列之外唯一
@@ -7290,7 +7288,7 @@ $$A \sim B \iff \mu_A(\lambda) = \mu_B(\lambda) \ \ (\forall \lambda)$$
 
 ⚠ 「不计块的次序」是必须的：Jordan 形是按特征值与块的排列写的，重排块给出同一个算子的另一种写法（换个基而已）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 7
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, Ch. 7
 
 #### 特征子空间　`def.eigenspace`
 *定义*　特征子空间：一个特征值对应的全部特征向量
@@ -7495,7 +7493,7 @@ $$\|u + v\|^{2} + \|u - v\|^{2} = 2\|u\|^{2} + 2\|v\|^{2}$$
 
 ⭐ 由内积恢复内积的公式是**极化恒等式**：$\langle u, v\rangle = \frac{1}{4}\bigl( \|u+v\|^{2} - \|u-v\|^{2} \bigr)$（实情形）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 8
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 5；Hoffman–Kunze, Linear Algebra, Ch. 8
 
 #### Cauchy–Schwarz 不等式　`thm.cauchy-schwarz`
 *定理*　定理：Cauchy–Schwarz 不等式
@@ -7723,7 +7721,7 @@ $$V = E_{\lambda_1} \oplus \cdots \oplus E_{\lambda_m}$$
 
 ⭐ 无限维的推广是**Hilbert 空间上的谱定理**（自伴算子的谱测度 / 投影值测度）—— 那是泛函分析的内容，图上 `analysis.lp` 那一团的 $L^{2}$ 就是它的舞台。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, Ch. 11
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 2；Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, Ch. 11
 
 #### 谱定理（复正规）　`cor.spectral-normal`
 *推论*　推论：复正规算子可酉对角化
@@ -8004,7 +8002,7 @@ $$x^{*}Ax > 0 ;$$
 
 ⚠️ **三处最容易错的地方**：(a) 忘掉「Hermite/实对称」这个前提（复情形要用 $x^{*}$，用 $x^{T}Ax > 0$ 讨论复矩阵是没有意义的，它可能不是实数）；(b) 把「顺序主子式全正」换成「所有主子式全正」—— 后者是**更强**的条件（对正定也对，但半正定时只有后者能用）；(c) 半正定时 $P$ 不可逆、特征值可为 $0$、平方根只是半范数 —— 三条要同时放宽。
 
-参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正定；北大《高等代数》· 正定二次型
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 7；Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 正定；北大《高等代数》· 正定二次型
 
 #### Schur 三角化　`thm.schur-triangularization`
 *定理*　Schur 三角化：任何复方阵都酉相似于上三角
@@ -8053,7 +8051,7 @@ $$U^{*}AU = T ,$$
 
 ⚠️ 实情形**不能**做成实对角/实三角到「只有 $1\times1$ 块」的程度：旋转 $90^\circ$ 那个例子说明 $2\times 2$ 块躲不掉。
 
-参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Schur 定理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 复谱定理的证明
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 2；Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Schur 定理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 复谱定理的证明
 
 #### 谱定理（矩阵版）　`thm.spectral-matrix`
 *定理*　谱定理（矩阵版）：正规矩阵恰好是酉可对角化的那些
@@ -8772,7 +8770,7 @@ $\operatorname{char} K \ne 2$ 时两者等价；
 - 反对称 $\implies$ 交错：由 $2\omega(v,v)=0$ 推出，须 $\operatorname{char}K\ne2$；特征 $2$ 的一维型 $\omega(x,y)=xy$ 反对称且非退化，却不交错。
 - 非退化 $\iff$ $V\to V^*$ 为同构：单射是定义，满射还用有限维及等维；有限维辛标准形进而保证维数为偶数。定义交错型本身无需排除特征 $2$。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 2
 
 #### 辛基　`def.symplectic-basis`
 *定义*　辛基：让辛形式变成标准形的那组基
@@ -8799,7 +8797,7 @@ $$J_{0} = \begin{pmatrix} 0 & I_{n} \\ -I_{n} & 0\end{pmatrix} ,$$
 
 ⚠️ 别把 $J_{0}$ 与「Jordan 块」搞混：这里的 $J$ 是标准辛矩阵（也叫 Hamilton 矩阵），与 Jordan 形无关，记号撞车纯属历史。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 2
 
 #### 辛标准形定理　`thm.symplectic-normal-form`
 *定理*　辛标准形定理：维数必偶，且总有辛基
@@ -8836,7 +8834,7 @@ $$p(v) := \omega(v, f_{1})\, e_{1} - \omega(v, e_{1})\, f_{1},$$
 
 ⚠️ 这条定理是**辛流形上 Darboux 定理的线性影子**：局部看每一点切空间都是标准辛空间，拼起来就是「局部没有不变量」。辛几何之所以「硬」（刚性），正是因为局部平凡、所有信息都在整体。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 #### Lagrange 子空间　`def.lagrangian-subspace`
 *定义*　Lagrange 子空间：维数刚好一半的极大迷向子空间
@@ -9411,7 +9409,7 @@ $A$ 的第 $j$ **列**是 $K^{m}$ 中的列向量，第 $i$ **行**是 $K^{n}$ �
 
 ⭐ $M_{m \times n}(K)$ 作为集合就是 $K^{mn}$ —— 所以它当然是 $K$-向量空间（逐分量运算）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1（Matrix Algebra）；Hoffman–Kunze, Linear Algebra, Ch. 1；Lang, Linear Algebra
 
 #### 矩阵的加法与乘法　`def.matrix-operations`
 *定义*　矩阵的加法、数乘与乘法
@@ -9438,7 +9436,7 @@ $$(AB)_{ij} := \sum_{k=1}^{n} a_{ik} b_{kj}$$
 
 ⚠ $AB = 0$ 不必有 $A = 0$ 或 $B = 0$ —— 这就是「**$n \ge 2$ 时** $M_n(K)$ 是环但不是整环」的意思（$n = 1$ 时 $M_1(K) \cong K$ 是域，当然是整环；反例用 $E_{12}^{2} = 0$），也解释了行列式为什么必要（det 把这件事管住了）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 1
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 #### M_n(K) 是环　`thm.matrix-ring`
 *定理*　定理：$M_n(K)$ 是环，对加法构成 $K$-向量空间
@@ -9457,7 +9455,7 @@ $$(AB)_{ij} := \sum_{k=1}^{n} a_{ik} b_{kj}$$
 
 ⚠ 「非交换」是本质的：矩阵环是最典型的非交换环，也是有限维代数的原型（Wedderburn 定理说的就是「单的有限维代数都是 $M_n(D)$」）。
 
-参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 #### 线性映射 ⟷ 矩阵　`thm.matrix-linear-map`
 *定理*　定理：选定基后，线性映射与矩阵一一对应
@@ -9484,7 +9482,7 @@ $$[S \circ T]_{\mathcal{B}}^{\mathcal{E}} = [S]_{\mathcal{C}}^{\mathcal{E}}\; [T
 
 而线性映射本身不变。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 3；Lang, Linear Algebra
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 3；Lang, Linear Algebra
 
 #### 基变换与相似　`thm.change-of-basis`
 *定理*　定理：换基给出相似矩阵
@@ -9509,7 +9507,7 @@ $A$ 与 $B$ 等价（只要求 $B = PAQ$，$P, Q$ 可逆）$\iff$ 它们秩相�
 
 ⚠ 相似比等价严得多：相似的矩阵**秩相同、迹相同、行列式相同、特征多项式相同** —— 这些都是相似不变量（后面特征值那一团要用）。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 4
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 4
 
 #### 初等变换与初等矩阵　`def.elementary-matrix`
 *定义*　初等变换与初等矩阵
@@ -9625,7 +9623,7 @@ $$\operatorname{GL}_n(K) := \{\, A \in M_n(K) : A \text{ is invertible} \,\}$$
 
 ⭐ $\operatorname{GL}_n(K)$ 是矩阵环 $M_n(K)$ 的**单位群**，也是代数群的原型：它是 $K^{n^{2}}$ 里的**主开集** $\det A \ne 0$（不是闭代数集 —— $A^{-1}$ 不是 $K^{n^{2}}$ 上的多项式坐标）；仿射代数集的做法是**再加一个坐标 $t$**，用 $\det A \cdot t = 1$ 切出来—— 这一条与代数几何、李群都接得上。
 
-参考：Hoffman–Kunze, Linear Algebra, Ch. 1
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 #### 多重线性型　`def.multilinear-form`
 *定义*　多重线性型 $V^{n} \to K$
@@ -10362,7 +10360,7 @@ $$\lVert A\rVert := \sup_{x \ne 0}\frac{\lVert Ax\rVert}{\lVert x\rVert} = \sup_
 
 ⭐ **为什么 $\lVert\cdot\rVert$ 常用来估误差**：$\lVert x - x_{0}\rVert \le \lVert A^{-1}\rVert\,\lVert b - Ax_{0}\rVert$ —— 条件数 $\kappa = \lVert A\rVert\lVert A^{-1}\rVert$ 就是这么来的（本图不展开数值分析，只记这个接口）。
 
-参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 范数；Horn–Johnson, Matrix Analysis
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 范数；Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 5
 
 #### LU 分解　`thm.lu-decomposition`
 *定理*　LU 分解：把消元写成两个三角矩阵
@@ -10381,7 +10379,7 @@ $$A = LU ,$$
 
 text=**为什么是 $LU$**：高斯消元的每一步都是左乘初等矩阵，把消元步乘起来即 $L^{-1}$；顺序主子式非零保证不换行。完整证明（含 Schur 补归纳与唯一性）见边 `imp.lu-decomposition-proof`；置换版本用部分主元法，见同边证明末段。
 
-参考：Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化与消元；北大《高等代数》· 矩阵的三角分解
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化与消元；北大《高等代数》· 矩阵的三角分解
 
 #### QR 分解　`thm.qr-decomposition`
 *定理*　QR 分解：把列正交化写成三角矩阵
@@ -10410,7 +10408,7 @@ $$A = QR ,$$
 
 ⚠️ **列线性无关**这个前提不能去：否则 $Q$ 的列不全、$R$ 不可逆，分解仍可做但失去意义（那种情形要用列主元 QR 或伪逆）。
 
-参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis
+参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3
 
 #### 最小二乘　`thm.least-squares`
 *定理*　最小二乘：无解时求最近的解
@@ -15239,6 +15237,8 @@ $$(1-t)x + ty \in C.$$
 
 💡 凸组合、凸包、分离定理都从这里出发。
 
+📌 **凸集在其每一点处都是星形集**（见 `thm.convex-star-shaped-every-point`）；空集时这个全称命题真空成立，因此不与「空集不是星形集」冲突。
+
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 星形集　`def.star-shaped`
@@ -15254,7 +15254,41 @@ $$(1-t)x_{0} + t x \in S.$$
 
 ⚠ 星点不必唯一；Poincaré 引理只要求区域能缩成一点，因此星形比凸性弱（见 lem.poincare-lemma）。
 
+📌 凸集在其每一点处都是星形集（`thm.convex-star-shaped-every-point`）；但空集是凸的、不是星形集 —— 星形集要求存在星点，故「非空」不能省。
+
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
+
+#### 关于一点的星形集　`def.star-shaped-at-point`
+*定义*　关于一点的星形：该点能看见全集合
+
+设 $V$ 是实向量空间，$C \subseteq V$，$x_{0} \in V$。称 $C$ **关于 $x_{0}$ 星形**，若 $x_{0} \in C$ 且对每个 $y \in C$、$t \in [0,1]$，
+
+$$(1-t)x_{0} + t y \in C.$$
+
+等价地：$x_{0} \in C$，且 $C$ 包含从 $x_{0}$ 到 $C$ 中任一点的整条线段。
+
+⭐ 这是「星形集」的点版本：$C$ 是星形集，当且仅当存在 $x_{0}$ 使 $C$ 关于 $x_{0}$ 星形（见 `def.star-shaped`）。
+
+⚠ 空集不关于任何点星形（$x_{0} \in C$ 这一步就失败）。凸集则在它的每一点处都星形（见 `thm.convex-star-shaped-every-point`）。
+
+💡 例：平面里的十字形关于中心星形，却不凸；单位圆盘关于每个内点星形。
+
+参考：Conway, A Course in Functional Analysis；Rockafellar, Convex Analysis
+
+#### 凸集在每一点处星形　`thm.convex-star-shaped-every-point`
+*定理*　凸集在其每一点处都是星形集
+
+设 $V$ 是实向量空间，$C \subseteq V$ 是凸集。则对每个 $x_{0} \in C$，$C$ 关于 $x_{0}$ 星形。
+
+特别地，非空凸集是星形集。
+
+由凸性定义，任取 $x_{0} \in C$ 与 $y \in C$，整条线段 $(1-t)x_{0} + t y$（$t \in [0,1]$）都在 $C$ 内，即 $C$ 关于 $x_{0}$ 星形；证明写在边 `imp.convex-star-shaped-every-point` 上。
+
+⚠ 空集时「对每个 $x_{0} \in C$」是全称命题，真空成立；但空集本身不是星形集（没有星点），见 `def.star-shaped`。两者不矛盾：本条说的是「每个点都是星点」，不是「存在星点」。
+
+📌 因此「凸集 $\Longrightarrow$ 星形集」在非空凸集上成立；写成逐点形式后，空集也不再是反例。
+
+参考：Conway, A Course in Functional Analysis
 
 #### 凸组合　`def.convex-combination`
 *定义*　凸组合：系数非负且和为 1 的有限线性组合
@@ -23990,7 +24024,7 @@ $$\delta : K \longrightarrow \operatorname{coker} a, \qquad \delta \circ q = (A'
 
 ⭐ **用处**：它是**长正合列**的引擎 —— 把短正合列 $0 \to K \to L \to M \to 0$ 的每一层（核、余核）串起来，靠的就是每层的 $\delta$。凡是「有了短正合列想推长正合列」的地方，底下都在跑蛇引理。
 
-参考：Le Stum, An introduction to condensed mathematics, §5.1–5.2
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1；Le Stum, An introduction to condensed mathematics, §5.1–5.2
 
 #### 五引理　`thm.five-lemma`
 *引理*　五引理
@@ -24020,7 +24054,7 @@ $$\begin{array}{ccccccccc} A_{1} & \to & A_{2} & \to & A_{3} & \to & A_{4} & \to
 
 ⚠️ 与蛇引理的关系：**两者都不能靠追元素**，都得走泛元与泛性质；区别在五引理只讲同构传递（不必造连接同态），蛇引理要**造**出 $\delta$。凡是「想比较两个谱序列/两条长正合列」的地方，用五引理。
 
-参考：Le Stum, An introduction to condensed mathematics, §5.1–5.2
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1；Le Stum, An introduction to condensed mathematics, §5.1–5.2
 
 #### 加法函子　`def.additive-functor`
 *定义*　加法函子
@@ -24659,7 +24693,7 @@ $K$ 叫**下有界**（$n \ll 0$ 时 $K^{n} = 0$）、**上有界**、**有界**
 
 例：$K$ 是（半）单纯对象时，令 $d^{n} := \sum_{i} (-1)^{i} d_{i}^{n}$，则 $K$ 成为一个链复形 —— 系数 $(-1)^{i}$ 就是让相邻两项的复合正负相消的那个符号，和经典的单纯边界算子完全一致。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1 §1.1；Le Stum, An introduction to condensed mathematics, §7.1
 
 #### 复形范畴是加法范畴　`prop.complex-additive`
 *命题*　复形范畴的性质
@@ -24691,7 +24725,7 @@ $$f^{n} - g^{n} \;=\; s^{n+1} \circ d_{K}^{n} + d_{L}^{n-1} \circ s^{n}$$
 
 两条合起来，才允许把「同伦」当成要商掉的东西。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1 §1.4；Le Stum, An introduction to condensed mathematics, §7.1
 
 #### 同伦范畴　`def.homotopy-category`
 *定义*　同伦范畴
@@ -24711,7 +24745,7 @@ $\mathbf{K}(\mathcal{C})$ 是**加法范畴**，且 $\mathcal{C}(\mathcal{C}) \t
 
 为什么要在同伦范畴里干活：同调函子在同伦下不变，所以**先商掉同伦，剩下的信息才是同调真正看得见的**。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1 §1.4；Le Stum, An introduction to condensed mathematics, §7.1
 
 #### 映射锥　`def.mapping-cone`
 *定义*　映射锥与位移
@@ -24724,7 +24758,7 @@ $$M(f)^{n} := K^{n+1} \oplus L^{n}, \qquad d^{n} := \begin{pmatrix} -d^{n+1} & 0
 
 用处：给出短正合列 $0 \to L \to M(f) \to K[1] \to 0$（一般不分裂）。于是**每个态射都能嵌进一条「几乎正合」的序列**，这是三角范畴的出发点 —— 后面所有导出三角的定义都靠它。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1 §1.5；Le Stum, An introduction to condensed mathematics, §7.1
 
 #### 导出三角　`def.distinguished-triangle`
 *定义*　导出三角
@@ -24959,7 +24993,7 @@ $$\begin{array}{ccc} K^{+}(\mathcal{A}) & \xrightarrow{\;F\;} & K^{+}(\mathcal{A
 
 **对偶**：左导出函子 $LF$ 用**投射**消解，补的是「右半段断掉」的情形（$M \otimes_{A} -$、$\operatorname{Tor}$）。
 
-参考：Le Stum, Definition 7.2.7
+参考：Weibel, An Introduction to Homological Algebra, Ch. 2 §2.5；Le Stum, Definition 7.2.7
 
 #### 导出函子的长正合列　`thm.derived-long-exact`
 *定理*　短正合列 $\implies$ 右导出函子的长正合列
@@ -25004,7 +25038,7 @@ $$\operatorname{Ext}^{n}(K^{\bullet}, L^{\bullet}) := \operatorname{Hom}_{D(\mat
 
 ⭐ **两种算法**：$\operatorname{Ext}^{n} = $ 「导出范畴里的 Hom」（这条定义）$ = R^{n}\operatorname{Hom}$（用内射消解算）。两者一致 —— 见下一条。
 
-参考：Le Stum, Definition 7.2.9
+参考：Weibel, An Introduction to Homological Algebra, Ch. 3；Le Stum, Definition 7.2.9
 
 #### Ext 就是导出 Hom　`prop.ext-is-rhom`
 *命题*　$R^{n}\operatorname{Hom}(M, K^{\bullet}) = \operatorname{Ext}^{n}(M, K^{\bullet})$
@@ -25498,7 +25532,7 @@ $$H_{n}(C\otimes_{R} k) \cong H_{n}(C)\otimes_{R} k ,$$
 
 📌 同一条定理有**上同调版本**（$0 \to \operatorname{Ext}^{1}(H_{n-1}(C), A) \to H^{n}(\operatorname{Hom}(C, A)) \to \operatorname{Hom}(H_{n}(C), A) \to 0$），两项的角色由 $\operatorname{Tor}$ 换成 $\operatorname{Ext}$。
 
-参考：Rotman, An Introduction to Homological Algebra (2nd ed.), 万有系数定理（Universal Coefficient Theorem）的部分；Weibel, An Introduction to Homological Algebra, 关于万有系数定理（universal coefficient theorem）的部分
+参考：Rotman, An Introduction to Homological Algebra (2nd ed.), 万有系数定理（Universal Coefficient Theorem）的部分；Weibel, An Introduction to Homological Algebra, Ch. 3 §3.6
 
 #### 闭链　`def.cycle`
 *定义*　闭链与上闭链：被微分杀掉的元素
@@ -25617,7 +25651,7 @@ $$H^{n}(K) \;:=\; Z^{n}(K) \big/ B^{n}(K) \;=\; \ker d^{n} \big/ \operatorname{i
 
 $H^{n}$ 是**函子**，但它是**加法而不正合**的 —— 同调不可交换性是整个同调代数的起点。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.1–7.3
+参考：Weibel, An Introduction to Homological Algebra, Ch. 1 §1.1；Le Stum, An introduction to condensed mathematics, §7.1–7.3
 
 #### 同调的短正合列　`prop.cohomology-exact-sequence`
 *命题*　把同调夹在两个余核 / 核之间
@@ -25725,7 +25759,7 @@ $M$ **内射** $\iff M\prime\prime$ **内射**
 
 **例**：自由阿贝尔群层拼出的 $\mathbb{Z}\cdot X_{\bullet} \to \mathbb{Z}\cdot X$ 是一条**投射**消解（见「覆盖给出的自由复形零调」）。
 
-参考：Le Stum, An introduction to condensed mathematics, Definition 7.1.20
+参考：Weibel, An Introduction to Homological Algebra, Ch. 2；Le Stum, An introduction to condensed mathematics, Definition 7.1.20
 
 #### 上同调类　`def.cohomology-class`
 *定义*　上同调类：闭链模掉边缘
@@ -25774,7 +25808,7 @@ $$\cdots \supseteq F^{n}M \supseteq F^{n+1}M \supseteq \cdots \supseteq M$$
 
 命题：$\mathbf{F}(\mathcal{C}(\mathcal{A})) \cong \mathcal{C}(\mathbf{F}(\mathcal{A}))$ —— **「带过滤」与「取复形」可以交换**。所以可以先把复形过滤好，再逐层算同调。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.2
+参考：Weibel, An Introduction to Homological Algebra, Ch. 5 §5.4；Le Stum, An introduction to condensed mathematics, §7.2
 
 #### 谱序列　`def.spectral-sequence`
 *定义*　谱序列
@@ -25804,7 +25838,7 @@ $$F^{p}H^{n} := \operatorname{im}\bigl(H^{n}(F^{p}K) \to H^{n}(K)\bigr)$$
 
 谱序列说的就是：**对充分大的 $r$，$E_{r}$ 页稳定下来，恰好等于这个过滤的关联分次**。所以它是「从过滤的复形一层层逼近同调」的工具 —— 直接算 $H^{n}$ 太难时，就把 $H^{n}$ 拆成容易算的那些碎片。
 
-参考：Le Stum, An introduction to condensed mathematics, §7.2
+参考：Weibel, An Introduction to Homological Algebra, Ch. 5 §5.1–5.2；Le Stum, An introduction to condensed mathematics, §7.2
 
 #### 过滤复形给出谱序列　`thm.filtered-complex-spectral`
 *定理*　两侧有界过滤复形 $\implies$ 谱序列
@@ -25842,7 +25876,7 @@ $$d^{p+1,q} \circ d^{p,q} = 0, \qquad d'^{p,q+1} \circ d'^{p,q} = 0, \qquad d'^{
 
 **典型来源**：把复形作内射消解时自然会得到双复形（$I^{p,q}$ 里 $p$ 是原复形的次数、$q$ 是消解的次数）。**Grothendieck 谱序列**就是从它来的。
 
-参考：Le Stum, Definition 7.2.17
+参考：Weibel, An Introduction to Homological Algebra, Ch. 5 §5.6；Le Stum, Definition 7.2.17
 
 #### Grothendieck 谱序列　`cor.grothendieck-spectral`
 *推论*　Grothendieck 谱序列
@@ -26113,6 +26147,25 @@ $$H^{n}(X, M^{\bullet}) := R^{n}\Gamma(X, M^{\bullet}),$$
 📌 例：$H^{0}(X;\mathbb{Z})$ 就是整体截面的群；$H^{1}(S^{1};\mathbb{Z}) \cong \mathbb{Z}$（与奇异同调一致，见 `ex.h1-circle`）；层上同调在**细**层（如 $C^{\infty}$ 函数层）上高次为零。
 
 参考：Le Stum, Definition 7.3.1
+
+#### Čech 复形　`def.cech-complex`
+*定义*　Čech 复形 $\check{C}^{\bullet}(\mathfrak{X}, M)$
+
+设 $\mathcal{C}$ 是**有纤维积**的景，$\mathfrak{X}=(X_{i}\to X)_{i\in I}$ 是 $X\in\mathcal{C}$ 上的覆盖，$M$ 是阿贝尔预层。$\mathfrak{X}$ 的 **Čech 复形** $\check{C}^{\bullet}(\mathfrak{X},M)$ 是上链复形
+
+$$\check{C}^{n}(\mathfrak{X},M)=\prod_{i_{0}<\cdots<i_{n}}\Gamma\bigl(X_{i_{0}}\times_{X}\cdots\times_{X}X_{i_{n}},\,M\bigr),$$
+
+微分 $d^{n}=\sum_{k=0}^{n+1}(-1)^{k}(\text{第 }k\text{ 个面拉回})$，且 $d^{n+1}d^{n}=0$。对预层复形 $M^{\bullet}$，取相应双复形的总复形。
+
+**为什么是交错和**：$d^{2}=0$ 来自「相邻面抵消」——每个 $(n+2)$-单形被两种顺序打到同一个 $(n+1)$-单形，符号相反。这正是单纯复形边缘算子的公式。
+
+**与 Čech 上同调的关系**：$\check{H}^{n}(X,M)$ 就是 $\check{C}^{\bullet}(\mathfrak{X},M)$ 取同调再沿覆盖取余极限（`def.cech-cohomology`、`prop.cech-as-colim`）；对层 $M$ 要先把 $M$ 看成预层 $H(M)$。
+
+**出处与弱点**：Le Stum §7.3.3（PDF p.138）的 Proposition 7.3.4 只使用记号 $\check{C}^{\bullet}(X,M)$，全书**没有**给它编号 Definition；本条按标准写法补出定义，出处只到 §7.3.3 + Prop 7.3.4。这是少数「书只给记号、不给定义」的节点，读者应知道这一层。
+
+**一般景的积**：定义要求 $\mathcal{C}$ 有纤维积，否则乘积项不存在；在 $\mathbf{Set}$ 或 $\mathbf{Top}$ 的景里就是通常的交叠 $X_{i_{0}}\cap\cdots\cap X_{i_{n}}$。
+
+参考：Le Stum, §7.3.3（Proposition 7.3.4 使用该复形；书未编号定义）
 
 #### Čech 上同调　`def.cech-cohomology`
 *定义*　Čech 上同调 $\check{H}^{n}(X, M^{\bullet})$
@@ -26789,7 +26842,7 @@ $$\check{H}^{n}(X, \mathcal{M}) \;\cong\; H^{n}(X, \mathcal{M}) .$$
 
 这里 $\check{H}^{n}(X,\mathcal{M}):=\varinjlim_{\mathfrak{U}}\check{H}^{n}(\mathfrak{U},\mathcal{M})$ 是沿局部有限开覆盖的定向极限。**不能**对任意单个局部有限覆盖断言同构（反例见注）；若 $\mathfrak{U}$ 对 $\mathcal{M}$ 是**好覆盖**——所有有限交 $U_{i_{0}\cdots i_{p}}$ 满足 $H^{q}(U_{i_{0}\cdots i_{p}},\mathcal{M})=0$（$q>0$）——则 Cartan–Leray 谱序列退化，逐覆盖映射 $\check{H}^{n}(\mathfrak{U},\mathcal{M})\to H^{n}(X,\mathcal{M})$ 已是同构。
 
-**标准证明的零件。** ①、②、③ 已写出证明；④ 的比较步仍是缺口（本节点标 `status: 'skeleton'`）。
+**标准证明的零件。** ①、③ 已写出证明；② 条件于 `thm.soft-sheaf-acyclic` 的 flabby acyclicity（本图未证）；④ 的比较步仍是缺口（本节点标 `status: 'skeleton'`）。
 
 **① Čech 层复形是消解。** 对覆盖 $\mathfrak{U} = (U_{i})_{i}$ 令 $\check{\mathcal{C}}^{p}(\mathfrak{U}, \mathcal{M}) := \prod_{i_{0} < \cdots < i_{p}} j_{*}\bigl(\mathcal{M}|_{U_{i_{0} \cdots i_{p}}}\bigr)$，其中 $j : U_{i_{0} \cdots i_{p}} \hookrightarrow X$ 是含入。
 
@@ -26807,7 +26860,7 @@ $$\check{H}^{n}(X, \mathcal{M}) \;\cong\; H^{n}(X, \mathcal{M}) .$$
 
 **⑤ 好覆盖的情形可以收尾（用 `thm.cartan-leray`）。** 若覆盖 $\mathfrak{U}$ 的每个有限交 $U_{i_{0}\cdots i_{p}}$ 都满足 $H^{q}(U_{i_{0}\cdots i_{p}},\mathcal{M})=0$（$q>0$），则 Čech 复形 $C^{\bullet}(\mathfrak{U},H^{q}(\mathcal{M}))$ 的每一项都是这些 $H^{q}(U_{I},\mathcal{M})=0$ 的积（Čech 项按有限交取值，正是预层 $U\mapsto H^{q}(U,\mathcal{M})$ 的截面；这里只需预层在覆盖的交上消失，不必断言层 $H^{q}(\mathcal{M})$ 本身是零层），故 Cartan–Leray 谱序列的 $E_{2}^{p,q}=\check{H}^{p}(\mathfrak{U},H^{q}(\mathcal{M}))$ 在 $q>0$ 时为 $0$，谱序列退化，给出 $\check{H}^{n}(\mathfrak{U},\mathcal{M})\cong H^{n}(X,\mathcal{M})$。所以陈述中「好覆盖上逐覆盖同构」这一半已成立；一般局部有限覆盖的定向极限仍需 ② 与 ④。
 
-**结论**：② 条件于「松弛层无环」（`thm.soft-sheaf-acyclic` 第 0–2 步已写、第 3 步未闭合）；仍缺 ④ 的比较步，才能把 ① 的 Čech 消解当零调消解收尾（或对好覆盖用 Cartan–Leray 退化）。⚠ 本节点**仍标 skeleton**：缺的是 ④（软层 Čech 零调/双复形比较）；①、细 $\implies$ 软、②、③ 已写出。
+**结论**：② 条件于 `thm.soft-sheaf-acyclic` 的 flabby acyclicity（本图未证）；仍缺 ④ 的比较步，才能把 ① 的 Čech 消解当零调消解收尾（或对好覆盖用 Cartan–Leray 退化）。⚠ 本节点**仍标 skeleton**：缺的是 ④（软层 Čech 零调/双复形比较）；①、细 $\implies$ 软、③ 已写出；② 条件于 flabby acyclicity（本图未证）。
 
 ⭐ **与「紧 Hausdorff」那条的关系**：紧 Hausdorff 必仿紧，所以这一条把 `prop.chaus-cech-eq-h` 覆盖在内；但两条的**证明**完全不同 —— 紧性用的路子是「有限覆盖在滤过系统里共尾 + 有限直积可由可表对象控制」，仿紧性用的是「局部有限 + 单位分解给出的软性」。同一个结论，两套互不依赖的机制。
 
@@ -26925,7 +26978,7 @@ $t \mapsto t^{n}$ 是「$n$ 次 Kummer 覆叠」，把开 $n$ 次方这件事变
 
 **与软层的区别**：松弛层要求对**开集**可延拓；软层要求对**闭集**可延拓。两者一般互不包含，但在仿紧 Hausdorff 空间上松弛层是软层（这是定理，本节点不证）。
 
-**为什么重要**：松弛层无高阶上同调（Godement），所以松弛消解可以计算层上同调；Godement 消解的每一项正是松弛层（见 `def.godement-resolution`）。
+**为什么重要**：松弛层无高阶上同调（Godement）—— **本图未证**，请与 `thm.soft-sheaf-acyclic` 的骨架状态一并读；所以松弛消解可以计算层上同调；Godement 消解的每一项正是松弛层（见 `def.godement-resolution`）。
 
 **例子**：Godement 消解中的 $\mathcal{C}^{q}(\mathcal{F})$；不连续截面层 $U\mapsto\prod_{x\in U}\mathcal{F}_{x}$。常值层一般不是松弛层。
 
@@ -26955,7 +27008,7 @@ $t \mapsto t^{n}$ 是「$n$ 次 Kummer 覆叠」，把开 $n$ 次方这件事变
 
 **与细层的关系**：细层（有单位分解作用的层）一定是软层；仿紧 Hausdorff 上，$C^{\infty}$-模层（如微分形式层）是细层，因而软。常值层一般不是软层。
 
-**为什么重要**：仿紧 Hausdorff 上软层无高阶上同调（Godement 定理），因此软消解可用于计算层上同调。本图有 `thm.soft-sheaf-acyclic`（仍标 `status: 'skeleton'`）：第 0–2 步完整，第 3 步条件于「松弛层无环」，那条引理本图未立节点。
+**为什么重要**：仿紧 Hausdorff 上软层无高阶上同调（Godement 定理），因此软消解可用于计算层上同调；证明见 `thm.soft-sheaf-acyclic`（skeleton：第 0–2 步完整，第 3 步条件于「松弛层无环」）。
 
 ⚠ 软层与内射层不同：内射层一定软，反之不然；软性是「截面延拓」性质，内射性是范畴性质。
 
@@ -26964,7 +27017,7 @@ $t \mapsto t^{n}$ 是「$n$ 次 Kummer 覆叠」，把开 $n$ 次方这件事变
 #### Godement 消解　`def.godement-resolution`
 *定义*　Godement 消解（松弛层消解）
 
-设 $\mathcal{F}$ 是 $X$ 上的阿贝尔群层。**Godement 消解**是复形 $0\to\mathcal{F}\to\mathcal{C}^{0}(\mathcal{F})\to\mathcal{C}^{1}(\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\mathcal{C}^{q}(\mathcal{F})$ 是松弛层（flabby）；「松弛层无环」是另一条定理（Godement），本图未证，见 `thm.soft-sheaf-acyclic` 的第 3 步。
+设 $\mathcal{F}$ 是 $X$ 上的阿贝尔群层。**Godement 消解**是复形 $0\to\mathcal{F}\to\mathcal{C}^{0}(\mathcal{F})\to\mathcal{C}^{1}(\mathcal{F})\to\cdots$，其中 $\mathcal{C}^{q}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$（$q\ge0$），微分由茎的交替和给出。每个 $\mathcal{C}^{q}(\mathcal{F})$ 是松弛层（flabby）。它是无环消解这件事条件于 flabby acyclicity（松弛层无环，Godement 定理）；本图未证，见 `thm.soft-sheaf-acyclic` 的第 3 步。
 
 **构造要点**：$\mathcal{C}^{0}(\mathcal{F})(U)=\prod_{x\in U}\mathcal{F}_{x}$ 把截面逐点记录为茎的元素；限制映射是投影，故任意开集上的截面都能延拓（松弛）。$\mathcal{C}^{q}$ 取 $q$ 次「茎积」的交替版本，微分是 Čech 型交替和。
 
@@ -34993,7 +35046,7 @@ $$\mathrm{d}e_{i} = \sum_{j=1}^{3}\omega^{j}_{\ i}\,e_{j},\qquad \omega^{j}_{\ i
 
 只有在正交标架下它才变成干净的反对称矩阵。
 
-参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 联络形式
+参考：Tu, Differential Geometry, GTM 275, Ch. 2 §10；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 联络形式
 
 #### 联络形式反对称　`prop.connection-antisymmetric`
 *命题*　正交标架给出反对称的联络形式
@@ -35010,7 +35063,7 @@ $$\omega^{i}_{\ j}+\omega^{j}_{\ i} = 0 ;$$
 
 ⚠️ 若改用**不正交**的标架（如 $\{r_{u}, r_{v}, n\}$），$g_{ij}$ 不是 $\delta_{ij}$，反对称性不成立，$\omega$ 就退化成 $\Gamma$ 与 $h$ 的混合体 —— 那正是里那套公式的样子。
 
-参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性；Kühnel, Differential Geometry: Curves - Surfaces - Manifolds, 「Surfaces in three-space」· 结构方程
+参考：Tu, Differential Geometry, GTM 275, Ch. 2 §11；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 联络形式的反称性；Kühnel, Differential Geometry: Curves - Surfaces - Manifolds, 「Surfaces in three-space」· 结构方程
 
 #### 结构方程　`thm.structure-equations`
 *定理*　第一与第二结构方程
@@ -35041,7 +35094,7 @@ $\mathbb{R}^{3}$ 上 $\Omega \equiv 0$。
 
 ⚠️ **符号约定**：本包取 $\omega^{j}_{\ i} = \langle \mathrm{d}e_{i}, e_{j}\rangle$，即 $\mathrm{d}e_{i} = \sum_{j}\omega^{j}_{\ i}e_{j}$。上下指标换一种位置，第二式整体变号；引用前先对齐这一条。
 
-参考：陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程；陈维桓《微分几何讲义》, 「曲面的局部理论」· 结构方程
+参考：Tu, Differential Geometry, GTM 275, Ch. 2 §11；陈省身（S. S. Chern）, Curves and Surfaces in Euclidean Space, 「Surfaces」· 结构方程；陈维桓《微分几何讲义》, 「曲面的局部理论」· 结构方程
 
 #### 适配标架　`lem.adapted-frame`
 *引理*　沿曲面取法向标架
@@ -35259,7 +35312,7 @@ $\Omega^{0}(U) = C^{\infty}(U)$（函数就是 $0$-形式）；$k>n$ 时 $\Omega
 
 **流形上**：把 $\mathbb{R}^{n}$ 换成 $n$ 维流形 $M$，只需在某张卡上用坐标微分写开，再用转移映射的光滑性说明「是 $k$-形式」与卡无关 —— 与 `def.tangent-space-manifold` 里「切向量与卡无关」是同一套论证。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 微分形式的定义与楔积；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 形式与楔积
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 5 §18；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 形式与楔积
 
 #### 外微分（欧氏开集）　`def.exterior-derivative`
 *定义*　外微分：欧氏开集上的坐标公式
@@ -35315,7 +35368,7 @@ $\mathrm{d}\omega = 0$ 的 $\omega$ 叫**闭形式**，$\omega = \mathrm{d}\eta$
 
 📌 本节点是**欧氏开集**上的外微分；流形上的版本见 `prop.exterior-derivative-manifold`。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 外微分与闭形式；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 外微分
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 外微分与闭形式；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 外微分
 
 #### 拉回（开集间）　`prop.pullback-forms`
 *命题*　拉回：开集之间的形式
@@ -35349,7 +35402,7 @@ $$(F^{\ast}\omega)_{p}(v_{1},\ldots,v_{k}) := \omega_{F(p)}\bigl(\mathrm{d}F_{p}
 
 ⚠️ (4) 的次序不能记反：复合 $G\circ F$ 的拉回是 $F^{\ast}\circ G^{\ast}$，先拉后面那个。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 拉回及其性质；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 拉回
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 拉回及其性质；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 拉回
 
 ### 星团：曲面论
 > 曲面的两张基本形式与它们的关系：切映射与第一基本形式 → 单位法向与 Weingarten 变换 → 第二基本形式 → Gauss 方程与 Codazzi–Mainardi 方程 → Gauss 曲率与主曲率。全部按活动标架推导。
@@ -35408,7 +35461,7 @@ $I$ 是 $\mathbb{R}^{3}$ 的内积沿 $r$ 的**拉回**：$\mathrm{d}r$ 把参�
 
 📌 例：半径 $R$ 的圆柱用 $r(u,v) = (R\cos u, R\sin u, v)$ 参数化时 $\mathrm{I} = R^{2}\mathrm{d}u^{2} + \mathrm{d}v^{2}$（$E = R^{2}$、$F = 0$、$G = 1$），于是 $K = 0$（见 `ex.cylinder-first-form`）。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· 第一基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第一基本形式
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §3；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· 第一基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第一基本形式
 
 #### Weingarten 变换　`def.weingarten-map`
 *定义*　Weingarten 变换（形状算子）
@@ -35437,7 +35490,7 @@ $$W(e_{j}) = \sum_{i=1}^{2}h_{ij}\,e_{i},\qquad h_{ij} := -c_{ij} = -\omega^{i}_
 
 $W$ 的特征方程 $W^{2}-2HW+K\,\mathrm{id} = 0$ 翻成二次形式就是 $III-2H\,II+K\,I = 0$（Cayley–Hamilton）。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 形状算子与自伴性；陈维桓《微分几何讲义》, 「曲面的局部理论」· Weingarten 变换
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §5；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 形状算子与自伴性；陈维桓《微分几何讲义》, 「曲面的局部理论」· Weingarten 变换
 
 #### 第二基本形式　`def.second-fundamental-form`
 *定义*　第二基本形式
@@ -35464,7 +35517,7 @@ $$II = -\sum_{i=1}^{2}\omega^{i}\,\omega^{i}_{\ 3} = \sum_{i,j=1}^{2}h_{ij}\,\om
 
 **几何意义**：$II(v,v)$ 是「沿 $v$ 走、在法向上弯多少」；$L, M, N$ 与 $E, F, G$ 一起给出两个主曲率（解 $\det(h-kg) = 0$）。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 第二基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第二基本形式
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §5；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 第二基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第二基本形式
 
 #### Gauss 方程　`thm.gauss-equation`
 *定理*　Gauss 方程
@@ -35964,7 +36017,7 @@ $$2\langle \nabla_{X}Y,Z\rangle = X\langle Y,Z\rangle+Y\langle Z,X\rangle-Z\lang
 
 📌 例：极坐标 $(r, \varphi)$ 下 $g = \mathrm{d}r^{2} + r^{2}\mathrm{d}\varphi^{2}$，只有三个非零符号 $\Gamma^{r}_{\varphi\varphi} = -r$、$\Gamma^{\varphi}_{r\varphi} = \Gamma^{\varphi}_{\varphi r} = 1/r$（逐项算见 `ex.polar-christoffel`）。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 克里斯托费尔记号；do Carmo, Differential Forms and Applications, 第 3 章「联络形式」· 联络系数
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §6；do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 克里斯托费尔记号；do Carmo, Differential Forms and Applications, 第 3 章「联络形式」· 联络系数
 
 #### 标架下的联络系数　`prop.christoffel-frame`
 *命题*　正交标架下的联络系数
@@ -36025,7 +36078,7 @@ $$\frac{\mathrm{d}^{2}x^{k}}{\mathrm{d}s^{2}}+\Gamma^{k}_{ij}(\gamma(s))\frac{\m
 
 **唯一的例子都值得记住**：平面上的测地线是直线；球面上的测地线是大圆；旋转面上的测地线由 Clairaut 关系约束；圆柱面上把展开图里直线卷回去即可。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 测地线；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 测地线
+参考：Tu, Differential Geometry, GTM 275, Ch. 3 §14；do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 测地线；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 测地线
 
 #### 测地线的局部存在唯一性　`prop.geodesic-existence`
 *命题*　测地线的局部存在唯一性
@@ -36163,7 +36216,7 @@ $$(\mathrm{d}\exp_{p})_{0} = \mathrm{id}_{T_{p}S},$$
 
 ⭐ 指数映射的用处是**把测地线问题变成坐标问题**：所有「径向」的事情都变成「坐标线」，于是内蕴几何可以用微积分硬算。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 指数映射；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯映射的几何」· 法坐标
+参考：Tu, Differential Geometry, GTM 275, Ch. 3 §15；do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 指数映射；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「高斯映射的几何」· 法坐标
 
 #### Gauss 引理　`lem.gauss-lemma`
 *引理*　Gauss 引理与测地极坐标
@@ -36337,7 +36390,7 @@ $$K(p) = \frac{3}{\pi}\lim_{\rho\to0}\frac{2\pi\rho-L(\rho)}{\rho^{3}}.$$
 
 ⚠️ **不内蕴的东西**：$k_{1}$、$k_{2}$、$H$ 都不内蕴（柱面与平面就是反例：$k_{1}$ 分别是 $1/R$ 与 $0$）。绝妙定理只对**乘积**成立，不对因子成立。这也解释了为什么内蕴几何里 $K$ 处处出现而 $H$ 几乎不出现。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯的绝妙定理；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯方程与绝妙定理
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §8；do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯的绝妙定理；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯方程与绝妙定理
 
 #### Gauss–Bonnet 定理　`thm.gauss-bonnet`
 *定理*　Gauss–Bonnet 定理与 Euler 示性数
@@ -36370,7 +36423,7 @@ $$\int_{D}K\,\mathrm{d}A+\int_{\partial D}k_{g}\,\mathrm{d}s+\sum_{i}(\pi-\alpha
 
 ⚠️ 不需要**紧致**也可以有版本，但那时边界与端（尖点、漏斗）要各自记账，形式会变；这里只处理紧致情形，因为它是「$K$ 的积分 = 拓扑量」最干净的说法。
 
-参考：do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯–博内定理；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯–博内定理与指标定理
+参考：Tu, Differential Geometry, GTM 275, Ch. 3 §17；do Carmo, Differential Geometry of Curves and Surfaces, 第 4 章「曲面的内蕴几何」· 高斯–博内定理；do Carmo, Differential Forms and Applications, 第 4 章「结构方程」· 高斯–博内定理与指标定理
 
 #### 光滑流形　`def.smooth-manifold`
 *定义*　光滑流形与图册
@@ -36401,7 +36454,7 @@ $$\psi\circ\varphi^{-1} : \varphi(U\cap V)\longrightarrow\psi(U\cap V)$$
 
 ⚠️ 本图的曲面（`def.regular-surface`）是二维流形的具体模型：两张卡的重叠就是参数变换，而「$C^{\infty}$-相容」正是「换参数化后光滑性不变」。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 图卡、图册与光滑结构；Tu, An Introduction to Manifolds, 「Manifolds」· 光滑流形与转移映射
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 图卡、图册与光滑结构；Tu, An Introduction to Manifolds, 「Manifolds」· 光滑流形与转移映射
 
 #### 切空间　`def.tangent-space-manifold`
 *定义*　流形上的切空间
@@ -36440,7 +36493,7 @@ $$(\varphi\circ\gamma_{1})'(0) = (\varphi\circ\gamma_{2})'(0) .$$
 
 **与曲面切平面一致**：$S\subseteq\mathbb{R}^{3}$ 的 $T_{p}S$（由 $r_{u},r_{v}$ 张成）与上面的抽象定义给出同一个空间 —— 取卡 $\varphi = r^{-1}$ 一比就知道，曲线的速度正是 $\mathbb{R}^{3}$ 里的速度。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 切向量、导子与切空间；Tu, An Introduction to Manifolds, 「Tangent Vectors」· 曲线等价类与导子
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 切向量、导子与切空间；Tu, An Introduction to Manifolds, 「The Tangent Space」· 曲线等价类与导子
 
 #### 正则水平集定理　`thm.regular-level-set`
 *定理*　正则水平集定理
@@ -36475,7 +36528,7 @@ $F = \det$，$\mathrm{d}\det_{A}(B) = \operatorname{tr}(A^{-1}B)$（$\det A = 1$
 
 **它把两块连起来**：左边是多元微积分（隐函数定理），右边是几何（流形与切空间）。所以「微分几何离别的板块太远」在这一点上可以直接反驳 —— 水平集定理就是显式的桥。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「流形」· 正则水平集与隐函数定理；Tu, An Introduction to Manifolds, 「Manifolds」· 正则水平集定理；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 5 · Submanifolds
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 正则水平集与隐函数定理；Tu, An Introduction to Manifolds, 「Manifolds」· 正则水平集定理；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 5 · Submanifolds
 
 #### Riemann 度量　`def.riemannian-metric`
 *定义*　Riemann 度量
@@ -36717,7 +36770,7 @@ $k<n$ 的形式要积分，得先选一个 $k$ 维子流形把它拉回去 —�
 
 ⚠️ 记号：$\int_{M}\omega$ 只依赖 $\omega$ 与定向，不依赖图册与单位分解（两种不同选取的差可以逐项抵消）。这一点是 Stokes 定理能否写下来的前提。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式的积分」· 定向与积分；do Carmo, Differential Forms and Applications, 第 2 章「线积分」· 形式的积分与换元
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Integration」· 定向与积分；do Carmo, Differential Forms and Applications, 第 2 章「线积分」· 形式的积分与换元
 
 #### Stokes 定理　`thm.stokes`
 *定理*　Stokes 定理
@@ -36744,7 +36797,7 @@ $$\int_{M}\mathrm{d}\omega = \int_{\partial M}\omega ,$$
 
 **为什么需要定向**：两边都依赖定向，且同时变号，所以等式与定向的选取无关；但没有定向就写不出「积分」这件事（`def.integral-form`）。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式的积分」· Stokes 定理；do Carmo, Differential Forms and Applications, 第 3 章「联络形式」· Stokes 定理与结构方程
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Integration」· Stokes 定理；do Carmo, Differential Forms and Applications, 第 3 章「联络形式」· Stokes 定理与结构方程
 
 #### 球面的曲率　`ex.sphere-curvature`
 *例*　半径为 $R$ 的球面：$K = 1/R^{2}$，$H = \pm 1/R$
@@ -36855,7 +36908,7 @@ $S^{n} \subseteq \mathbb{R}^{n+1}$ 用两张球极投影卡（去北极、去南
 
 **与曲面的接口**：曲面论里的「正则参数化 $r : U \to S$」的逆就是一张图卡，重叠处的「参数变换」就是这里的转移映射 —— 「换参数化后光滑性不变」与「$C^{\infty}$-相容」是同一句话（`def.orientable-surface`）。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 图卡、坐标邻域与转移映射；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 图册与相容性
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 2 §5；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 图册与相容性
 
 #### 极大图册　`prop.maximal-atlas`
 *命题*　图册与光滑结构
@@ -36914,7 +36967,7 @@ $$\psi \circ F \circ \varphi^{-1} : \varphi\bigl(U \cap F^{-1}(V)\bigr) \longrig
 
 **按秩三分**：若 $\mathrm{d}F_{p}$ 处处单射、满射、同构，分别叫**浸入**、**淹没**、**局部微分同胚**（`def.submersion-immersion`）。分类的用处：淹没的原像是子流形，这是 `thm.regular-level-set` 的一般版本。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 流形之间的光滑映射；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 光滑函数与微分同胚
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 2 §6；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Manifolds」· 光滑函数与微分同胚
 
 #### 切丛　`def.tangent-bundle`
 *定义*　切丛与切丛的流形结构
@@ -36947,7 +37000,7 @@ $TS^{2}$ 与 $S^{2} \times \mathbb{R}^{2}$ 不同胚 —— 理由是球面上�
 
 **记号纪律**：$TM$ 里的元素是一个**带起点的向量**，$T_{p}M$ 里的元素只认起点为 $p$。写 $v \in T_{p}M \subseteq TM$ 时，下标的 $p$ 是信息的一部分，丢了下标就成了无主向量，$\mathrm{d}F_{p}$ 也就无从作用。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 切丛
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 3 §12
 
 #### 向量丛　`def.vector-bundle`
 *定义*　向量丛与局部平凡化
@@ -36985,7 +37038,7 @@ $TM$ 的结构群能缩到 $\operatorname{O}(n)$，靠的是「总可配黎曼�
 
 **记号**：$\pi$ 同时是投影与圆周率，本图里 $\pi : E \to M$ 一律是投影；$\operatorname{pr}_{1}$ 是乘积到第一因子的投影；$\Phi_{\alpha,p}$ 记 $\Phi_{\alpha}$ 限制在纤维 $E_{p}$ 上的线性同构。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛与局部平凡化
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §7；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛与局部平凡化
 
 #### 丛的截面　`def.bundle-section`
 *定义*　向量丛的截面
@@ -37018,7 +37071,7 @@ $E = M \times \mathbb{R}$ 时 $\Gamma(E) = C^{\infty}(M)$（函数）。
 
 **同名不同义**：`def.section` 那个「截口」是乘积集 $E \subseteq X \times Y$ 的纵切片与横切片，是集合论概念；这里的截面是向量丛的光滑选取。两个字一样、意思无关，取用时看星团。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛的截面与框架
+参考：Tu, Differential Geometry, GTM 275, Ch. 1 §7；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛的截面与框架
 
 #### 光滑单位分解　`thm.smooth-partition-unity`
 *定理*　单位分解
@@ -37119,7 +37172,7 @@ $$\det\Bigl(\mathrm{d}(\psi \circ \varphi^{-1})_{x}\Bigr) > 0\qquad \bigl(x \in 
 
 **$n = 0$ 的约定**：$0$ 维流形（离散点集）上 $\bigwedge^{0}T^{*}M \cong \mathbb{R}$，**定向就是每点选一个生成元**（等价于选 $\pm1$ 中的一个符号）；图册口径也自动满足 —— 过渡映射是恒等，其 Jacobian 是空矩阵、行列式约定为 $1 > 0$。所以 $0$ 维流形（**包括空流形**）一律可定向。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 定向图册与可定向性
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 6 §21
 
 #### 体积与定向　`prop.volume-form-orientation`
 *命题*　可定向当且仅当存在处处非零的最高次形式
@@ -37187,7 +37240,7 @@ $\partial M$ 自带一个 $(n-1)$ 维**无边**光滑流形结构：把每张卡
 
 **⚠️ 边界的边界是空的**：$\partial(\partial M) = \emptyset$，因为 $\partial M$ 是无边流形（它的卡值域落在 $\mathbb{R}^{n-1}$ 的开集里）。这一条让 Stokes 型公式能反复用而不会冒出「边界的边界」那一项。
 
-参考：Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· 带边流形与边界；Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 几何预备：奇异方块与半空间
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 6 §22；Spivak, Calculus on Manifolds, 第 5 章「Integration on Manifolds」· 带边流形与边界；Spivak, Calculus on Manifolds, 第 4 章「Integration on Chains」· 几何预备：奇异方块与半空间
 
 #### 余切丛　`def.cotangent-bundle`
 *定义*　余切丛：切空间的对偶丛
@@ -37579,7 +37632,7 @@ $$\Phi(u\cdot g) = \bigl(\pi(u),\ \varphi(u)\,g\bigr).$$
 - 局部光滑截面 $s$ $\implies$ 局部主丛图：对已知主丛用 $(b,g)\mapsto s(b)g$；反向由图取 $(b,e)$，不需全局截面。
 - 自由作用 $\implies$ 商为光滑主丛不是免费：通常还要作用 proper；无理斜率的 $\mathbb R$ 在二维环面上的平移作用自由但轨道稠密，商非 Hausdorff。
 
-参考：Tu, Differential Geometry: Connections, Curvature, and Characteristic Classes (GTM 275)
+参考：Tu, Differential Geometry, GTM 275, Ch. 6 §27
 
 #### 帧丛　`def.frame-bundle`
 *定义*　帧丛：把向量丛变成主 $\mathrm{GL}(k)$-丛
@@ -37711,7 +37764,7 @@ $$c_{i}(E) \in H^{i}(B; \Lambda),$$
 
 ⚠ **Euler 类不是 SW 类**：Euler 类 $e(E) \in H^{k}(B;\mathbb{Z})$ 取整数值，$w_{k}(E)$ 是 $e(E)$ 模 $2$ 的约化；$TS^{2}$ 的 $w_{1} = w_{2} = 0$ 但 $e(TS^{2}) = \chi(S^{2}) = 2 \ne 0$，这正是「整系数类能看见、$\mathbb{Z}/2$ 类看不见」的例子。
 
-参考：Milnor–Stasheff, Characteristic Classes · 示性类；Bott–Tu, Differential Forms in Algebraic Topology · 陈–Weil 理论
+参考：Tu, Differential Geometry, GTM 275, Ch. 5 §23；Milnor–Stasheff, Characteristic Classes · 示性类；Bott–Tu, Differential Forms in Algebraic Topology · 陈–Weil 理论
 
 #### 陈–Weil 同态　`thm.chern-weil`
 *定理*　陈–Weil 同态：用曲率算出的上同调类与联络无关
@@ -37748,10 +37801,10 @@ $$w_{P} : \{E \to B\ \text{上的联络}\} \longrightarrow H^{2m}(B), \qquad \na
 
 ⭐ **实向量的情形**：把 $\mathfrak{gl}(k,\mathbb{C})$ 换成 $\mathfrak{o}(k)$（反对称矩阵）时，$\operatorname{Pfaffian}$ 给出 Euler 类，$\operatorname{tr}(F^{2j})$ 给出 Pontryagin 类；机制与复情形完全一样，只是不变多项式的代数换成 $\mathfrak{o}(k)$ 的那套。
 
-参考：Milnor–Stasheff, Characteristic Classes · 陈–Weil 理论；Bott–Tu, Differential Forms in Algebraic Topology
+参考：Tu, Differential Geometry, GTM 275, Ch. 5 §23；Milnor–Stasheff, Characteristic Classes · 陈–Weil 理论；Bott–Tu, Differential Forms in Algebraic Topology
 
 #### 陈类　`def.chern-class`
-*定理*　陈类：由曲率算出的示性类
+*定义*　陈类：由曲率算出的示性类
 
 **在做什么**：把陈–Weil 同态用在**特定的不变多项式**上，得到 $k$ 个类 —— 这是复向量丛最完整的示性类。
 
@@ -37779,7 +37832,7 @@ $$c_{j}(E) := \Bigl[\, \text{上式第}\ j\ \text{个系数} \,\Bigr] \in H^{2j}
 
 ⚠️ **Whitney 公式不是从曲率直接看出来的**：曲率对直和是分块的，但 $\det$ 对分块矩阵是乘积 —— 所以公式的**代数根源**在 $\det(A \oplus B) = \det A \cdot \det B$。⚠️ 但要注意 $\smile$ 乘积会改变次数，所以陈述要写成「总陈类」的形式 $c(E\oplus E') = c(E)\smile c(E')$，逐项展开才是 $c_{j}(E\oplus E') = \sum_{a+b=j} c_{a}(E)\smile c_{b}(E')$。
 
-参考：Milnor–Stasheff, Characteristic Classes · 陈类；Bott–Tu, Differential Forms in Algebraic Topology
+参考：Tu, Differential Geometry, GTM 275, Ch. 5 §25；Milnor–Stasheff, Characteristic Classes · 陈类；Bott–Tu, Differential Forms in Algebraic Topology
 
 #### 线丛的陈类计算　`prop.chern-class-line-bundle`
 *命题*　命题：线丛的陈类就是曲率（差一个 $\frac{i}{2\pi}$）
@@ -37867,7 +37920,7 @@ $$\mathrm{d}(G \circ F)_{p} = \mathrm{d}G_{F(p)} \circ \mathrm{d}F_{p},\qquad \m
 
 它们不是两件事：$\mathrm{d}f$ 就是切映射 $\mathrm{d}f_{p} : T_{p}M \to \mathbb{R}$，即 $1$-形式（`def.exterior-derivative`）。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 切映射与链式法则
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「The Tangent Space」· 切映射与链式法则
 
 #### 向量场　`def.vector-field`
 *定义*　光滑向量场
@@ -37902,7 +37955,7 @@ $X$ 在 $p$ 处**为零**指 $X_{p} = 0_{p}$；$X$ 的**支集**是 $\overline{\
 
 **与积分曲线**：向量场给出一阶 ODE $\dot\gamma = X(\gamma)$，其解是积分曲线；局部总有解，整体未必能延拓。本图只用局部存在性，流与单参数群那条线暂不进图。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 向量场与导子
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 3 §14
 
 #### Lie 括号　`def.lie-bracket`
 *定义*　向量场的 Lie 括号
@@ -37939,7 +37992,7 @@ $$[X,Y] = \sum_{i=1}^{n}\Bigl(\sum_{j=1}^{n}\bigl(X^{j}\partial_{j}Y^{i} - Y^{j}
 **与联络的分界**：$\nabla_{X}Y$ 与 $[X,Y]$ 长得像但性质不同 —— 联络是额外结构（`def.affine-connection`），括号是流形自身就有的。无挠条件 $\nabla_{X}Y - \nabla_{Y}X = [X,Y]$ 就是拿这条免费的括号去约束联络。
 📌 例：矩阵群上的括号就是**交换子** $[A,B] = AB - BA$。取 $E,F,H$ 为 $\mathfrak{sl}_{2}$ 的标准基，则 $[E,F] = H$、$[H,E] = 2E$、$[H,F] = -2F$（见 `ex-sl2-commutator`）。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 向量场的 Lie 括号
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 3 §14
 
 #### 张量场　`def.tensor-field`
 *定义*　张量场与张量丛
@@ -38018,7 +38071,7 @@ $\dim\mathfrak{g}$ 叫 Lie 代数的维数。对括号封闭的子空间叫 **Li
 - 反称 $\implies$ 交替：需 $2$ 可逆，本节点在实数上满足；特征二中一维括号 $[e,e]=e$ 反称却不交替，因此单凭反称不能替代交替条件。
 - 结合代数 $\implies$ 交换子 Lie 代数：Jacobi 展开后逐项抵消，关键是假定原乘法结合；反称本身不推出 Jacobi。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 代数与例子
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 4 §16
 
 #### 切分布　`def.tangent-distribution`
 *定义*　切分布与光滑性
@@ -38110,7 +38163,7 @@ $$[X,Y] = [\partial_{x},\ \partial_{y} + x\,\partial_{z}] = \partial_{z},\qquad 
 
 ⚠️ 「对合」是分布的性质，与生成元的选取无关（换生成元只是乘以 $\operatorname{GL}(k)$-值函数矩阵，括号的封闭性不变）。所以反例里只验一组生成元就够。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· 对合分布；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 向量场的 Lie 括号
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」· 对合分布；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「The Tangent Space」· 向量场的 Lie 括号
 
 #### 积分流形　`def.integral-manifold`
 *定义*　积分流形与叶片坐标
@@ -38318,7 +38371,7 @@ $$\varphi_{s+t} = \varphi_{s}\circ\varphi_{t},\qquad \varphi_{0} = \operatorname
 
 ⚠️ 记号：本图用 $\varphi_{t}$ 记流（小写 phi 一律写 `\varphi`，见 `notation.js` 的禁用表）；曲面论里的参数化也爱用 $\varphi$，取用时看星团。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 向量场的流与单参数群；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 积分曲线
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 向量场的流与单参数群；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「The Tangent Space」· 积分曲线
 
 #### 局部流　`thm.flow-local`
 *定理*　流的局部存在唯一性
@@ -38476,22 +38529,6 @@ $k = n$ 时 $\mathrm{d}\omega = 0$，故 $\mathcal{L}_{X}\omega = \mathrm{d}\iot
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· Cartan 公式；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 内乘与 Lie 导数的关系
 
-#### 叶状结构存在定理　`thm.foliation-existence`
-*定理*　对合分布的整体叶存在：Zorn 引理
-
-设 $\mathcal{D}$ 是光滑流形 $M$ 上的**对合**光滑 $k$ 阶切分布（`def.involutive-distribution`）。则 $M$ 上存在**叶状结构**：
-
-- 过每点恰有一片**极大连通积分流形**（叶）$L$ 经过，$T L = \mathcal{D}|_{L}$（`def.integral-manifold`）；
-- 两片叶或相等或不相交；全体叶覆盖 $M$，每片是浸入子流形。
-
-本条只负责**整体**这一步：局部叶片的存在性是 Frobenius 定理的内容（本图见 Frobenius 节点），把局部叶片粘成极大叶、并证明叶与叶互不相交，用的是 Zorn 引理。
-
-⭐ 与 Frobenius 定理的分工：Frobenius 给的是**局部**可积（每点附近有积分流形），本条把局部叶片粘成**整体**的极大叶 —— 差别只在「整体」，所以剩下的工作是一次 Zorn 加一次局部唯一性。
-
-⚠ 本条不把 Frobenius 列为 source：局部可积性在这里当**已知输入**用（图上已由 Frobenius 节点陈述），本条要证的是它推不出的那一步。要写成显式依赖，得先确认不与 Frobenius 的分层成环。
-
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」
-
 #### sl₂ 的交换子　`ex-sl2-commutator`
 *例*　矩阵交换子：$[E, F] = H$、$[H, E] = 2E$、$[H, F] = -2F$
 
@@ -38556,7 +38593,7 @@ $k < n$ 的形式要积分得先拉回到 $k$ 维子流形上。
 **它不是度量的一部分**：同一个度量配两个定向，给出两个只差符号的体积形式；同一个定向配不同度量，给出不同的 $\sqrt{\det g}$。体积形式 = 定向 + 度量，两部分都要交代。
 📌 例：$\mathbb{R}^{3}$ 上的 $\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z$；$S^{2}_{R}$ 上取 $R^{2}\sin\theta\,\mathrm{d}\theta\wedge\mathrm{d}\varphi$，它的积分是 $4\pi R^{2}$（正好是球面积）。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 体积形式与定向；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 黎曼体积与正交余标架
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 6 §23；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 黎曼体积与正交余标架
 
 #### de Rham 上同调　`def.de-rham-complex`
 *定义*　de Rham 复形与上同调群
@@ -38599,7 +38636,7 @@ $k \ge 1$ 才需要 Poincaré 引理那类论证。
 
 **它不是同伦不变量意义上的「同调」**：$H^{k}$ 是**上**同调（用形式与拉回），对偶于用链与边界的同调。之所以也叫上同调，是因为拉回是逆变的；两者在 de Rham 定理里被证明同构。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· de Rham 复形与上同调群
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 7 §24
 
 #### 零次上同调　`thm.de-rham-h0`
 *定理*　零次上同调群与连通分支
@@ -38624,7 +38661,7 @@ $0$-形式就是光滑函数，$\mathrm{d}f = 0$ 等价于 $f$ 在每张连通�
 
 **别拿 Poincaré 引理套 $H^{0}$**：引理说的是 $k \ge 1$ 且区域可缩才有 $H^{k} = 0$。$H^{0}$ 对非空流形永远不为零，因为它数的是「有几个整体」而不是「有没有局部障碍」。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· 零次上同调与连通分支
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 7 §28
 
 #### Poincaré 引理　`lem.poincare-lemma`
 *引理*　Poincaré 引理：星形区域上的闭形式恰当
@@ -38657,7 +38694,7 @@ $$\mathrm{d}K + K\mathrm{d} = \operatorname{id}_{\Omega^{k}}\qquad (k \ge 1),$$
 
 **为什么叫 Poincaré**：Poincaré 在 19 世纪末的向量分析语言里证过「无旋场局部是梯度」这类结论；形式语言把它一句收完，并指出唯一假设是「区域能缩成一点」。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Poincaré 引理
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 7 §28
 
 #### Mayer–Vietoris 序列　`thm.mayer-vietoris`
 *定理*　Mayer–Vietoris 长正合列
@@ -38726,7 +38763,7 @@ $$\alpha := \rho_{V}\omega - \Psi|_{U},\qquad \beta := -\rho_{U}\omega - \Psi|_{
 
 **它的本质是同调代数**：短正合列里唯一用到流形结构的是「满射」那步的单位分解；其余全部是链复形的一般定理。所以 Mayer–Vietoris 对任何层都成立，形式只是其中一个特例。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Mayer–Vietoris 序列
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 7 §26
 
 #### 奇异方块　`def.singular-cube`
 *定义*　奇异方块
@@ -39230,7 +39267,7 @@ $\Phi^{k}$ 与拉回相容，故 $k \mapsto \Phi^{k}$ 是一族自然同构：$H
 
 **🔻 依赖与时序（本轮复核；节点保留 skeleton）。** 上面六步里，第 0–1 步（光滑奇异链、配对良定义）与第 2 步的「逐点正合」可独立验证；但第 2 步的「细层无环」是 Godement 定理，本图只有 `def.acyclic-sheaf` 的抽象定义，没有细层/软层节点。第 3 步要先有**好覆盖**（每个有限交可缩，例如测地凸邻域），本图没有这个节点；两条谱序列之间还要一步比较。第 4 步引用的 `thm.paracompact-cech-equals-sheaf` **本身仍是 skeleton**，所以即便补完 B–D，这一步也只能作为条件性输入。第 5 步的 Eilenberg–Steenrod 唯一性本图无节点。第 6 步的 Stokes 兼容性依赖 `thm.stokes-chain`（已证），但要逐项核对自然性。因此缺口 A–G 不是一句「标准」能带过的，尤其 E 是链式依赖；本节点不能删 skeleton。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· de Rham 定理；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Poincaré 引理与 Mayer–Vietoris 序列
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「De Rham Theory」· de Rham 定理；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「De Rham Theory」· Poincaré 引理与 Mayer–Vietoris 序列
 
 #### 诱导体积　`def.submanifold-volume`
 *定义*　子流形的诱导体积
@@ -39495,7 +39532,7 @@ $$\omega_{0} = \sum_{i=1}^{n} dq_{i} \wedge dp_{i} ,$$
 
 ⚠️ 紧辛流形有强限制：$[\omega] \in H^{2}(M)$ 非零（否则 $\omega=d\theta$ 使 $\omega^{n}=d(\theta\wedge\omega^{n-1})$ 恰当、积分为零，与「$\omega^{n}$ 是无处为零的体积形式」矛盾 —— 这是「辛流形不能是 $S^{2n}$，$n \ge 2$」的原因）。本图不展开上同调论证。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 #### Darboux 定理　`thm.darboux`
 *定理*　Darboux 定理：辛流形局部都长一样
@@ -39534,7 +39571,7 @@ $$\frac{d}{dt}\bigl(\varphi_{t}^{*}\omega_{t}\bigr) = \varphi_{t}^{*}\bigl(\math
 
 ⚠️ Darboux 这个名字在数学里有三处：本定理（辛几何）、Darboux 判据/上和下和（`thm.darboux-criterion`，Riemann 积分）、Darboux 定理（实分析：导函数有介值性）。三者无关。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics · Darboux 定理；McDuff–Salamon, Introduction to Symplectic Topology；da Silva, Lectures on Symplectic Geometry
+参考：Arnold, Mathematical Methods of Classical Mechanics · Darboux 定理；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3；da Silva, Lectures on Symplectic Geometry
 
 #### Hamilton 向量场　`def.hamiltonian-vector-field`
 *定义*　Hamilton 向量场：由函数生出流
@@ -39569,7 +39606,7 @@ Riemann 度量也能这么干（音乐同构），但得到的流不保持度量
 
 ⚠️ 不是所有辛流形上的向量场都来自某个 $H$（需要 $\iota_{X}\omega$ 恰当）。所以「辛向量场」比「Hamilton 向量场」宽一层。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 #### Poisson 括号　`def.poisson-bracket`
 *定义*　Poisson 括号：函数之间的辛配对
@@ -39596,7 +39633,7 @@ $$\{f, g\} = \sum_{i=1}^{n}\Bigl(\frac{\partial f}{\partial q_{i}}\frac{\partial
 
 ⚠️ **与量子力学的关系**：Dirac 的对应规则是 $\{f,g\} \mapsto \frac{1}{i\hbar}[\hat{f}, \hat{g}]$。这不是定理（没有唯一量子化），但它解释了为什么 Jacobi 恒等式必须成立 —— 它对应交换子的 Jacobi 恒等式。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 #### Lagrange 子流形　`def.lagrangian-submanifold`
 *定义*　Lagrange 子流形：维数刚好一半的辛子流形
@@ -39647,7 +39684,7 @@ $$\{f, g\} = \sum_{i=1}^{n}\Bigl(\frac{\partial f}{\partial q_{i}}\frac{\partial
 - 在余切坐标中，闭一形式的图像 $\iff$ Lagrange 图像，用典范辛形式的拉回计算；闭一形式局部为 $dF$ 则用 Poincaré 引理，全局还需恰当性。
 - 从一般 Lagrange 子流形反推固定位置坐标下的图像，另需投影为局部微分同胚；余切纤维本身是 Lagrange，却不能在该位置投影下写成 $p=dF(q)$。
 
-参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+参考：Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 #### Lagrange 括号　`def.lagrange-bracket`
 *定义*　Lagrange 括号：Poisson 括号的逆矩阵
@@ -39725,7 +39762,7 @@ $S^{1} \subseteq \mathbb{C}^{\times}$；
 
 **为什么关心它**：Lie 群把「对称性」变成可微的对象，于是在单位元处求导就得到 Lie 代数（`def.lie-algebra`、`prop.left-invariant-fields`）—— 非线性问题线性化，这是整个理论的技术核心。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 群与例子；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左平移与右平移
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 4 §15；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左平移与右平移
 
 #### 左不变向量场　`prop.left-invariant-fields`
 *命题*　左不变向量场与 Lie 代数
@@ -39760,7 +39797,7 @@ $$\mathrm{d}F\bigl([X,Y]_{p}\bigr) = \bigl[\mathrm{d}F(X),\mathrm{d}F(Y)\bigr]_{
 
 **下一步去哪**：左不变**形式**（对偶版本）给出 Maurer–Cartan 方程，本图不展开；那条线与结构方程（`def.connection-form`）是同一套记账。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左不变向量场与 Lie 代数；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 括号的自然性
+参考：Tu, An Introduction to Manifolds, 2nd ed., Ch. 4 §15；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 括号的自然性
 
 #### 左不变形式　`def.left-invariant-form`
 *定义*　左不变形式与左不变余标架
@@ -39904,7 +39941,7 @@ $$\operatorname{Lie}(G) \cong \mathfrak{g},$$
 
 ⚠️ 本图不展开模函数、左右不变测度的细节，也不证「哪些球面是 Lie 群」。
 
-参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups」· 左不变形式与体积形式；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 15 · orientations and volume forms
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左不变形式与体积形式；Lee, Introduction to Smooth Manifolds (2nd ed., GTM 218), Ch. 15 · orientations and volume forms
 
 ## 星系：数论（Number Theory）
 > 整数环的算术：整除与带余除法、辗转相除与 Bézout、素数与唯一分解、同余与剩余类环、中国剩余定理、Euler 函数与 Fermat 小定理。
@@ -41543,7 +41580,7 @@ $$d(y_k, y_l) < 2/K$$
 取 $\varepsilon > 0$ 使 $B_Y(f(x_0), \varepsilon) \subseteq V$；$\varepsilon$-$\delta$ 给 $\delta > 0$ 使 $f(B_X(x_0, \delta)) \subseteq B_Y(f(x_0), \varepsilon)$。
 于是 $B_X(x_0, \delta) \subseteq f^{-1}(V)$，即 $f^{-1}(V)$ 在 $X$ 中开；按 `def.continuous-map` 的定义 $f$ 连续。$\blacksquare$
 
-> 反向（拓扑连续 $\implies$ $\varepsilon$-$\delta$）同样直接：$B_Y(f(x_0), \varepsilon)$ 开，原像开给 $\delta$。
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。反向（拓扑连续 $\implies$ $\varepsilon$-$\delta$）同样直接：$B_Y(f(x_0), \varepsilon)$ 开，原像开给 $\delta$。
 
 #### 定义引用：「实数的度量」→ 度量空间的连续　`def-link.realmetric-metriccont`
 
@@ -43789,9 +43826,10 @@ Jordan 曲线定义为 $S^{1}$ 在同胚下的像；「像」上的拓扑取子�
 
 多边形区域的边界是 Jordan 曲线；本条的结论比 `thm.jordan-curve` 弱，只对折线成立。
 
-#### 定义引用：「简单多边形的对角线」→ 多边形 Jordan 定理　`dep.jp-diagonal`
+#### 简单多边形的对角线 ⟹ 多边形 Jordan 定理　`imp.jordan-polygon-diagonal`
+*对角线引理：多边形三角剖分的归纳步*
 
-对角线引理，用于三角剖分的归纳（对顶点数归纳，每步切一条对角线）。
+对顶点数 $n$ 归纳。由 `lem.polygon-diagonal` 取一条对角线 $[a,b]$，它把 $P$ 分成两个边数更少（$n_1,n_2<n$）的简单多边形 $P_1,P_2$。由归纳假设 $P_i$ 各有三角剖分 $\Gamma_i$，其并加上 $[a,b]$ 就是 $P$ 的三角剖分：三角形个数 $(n_1-2)+(n_2-2)=n-2$，两两内部不交，且并的边界恰为 $P$。∎
 
 #### 定义引用：「关系」→ 商集与等价类　`dep.rel-quotient`
 
@@ -45313,6 +45351,14 @@ Pro-对象是 Ind-对象取对偶得到的构造：把滤过图换成余滤过�
 #### 定义引用：「余滤过范畴」→ Pro-对象　`dep.proobj-cofiltered`
 
 Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无法陈述「余滤过图」。
+
+#### 定义引用：「上链复形」→ Čech 复形　`dep.cechcomplex-cochain`
+
+Čech 复形就是上链复形，微分按面拉回交错和定义。
+
+#### 定义引用：「Čech 复形」→ Čech 上同调　`dep.cechcomplex-cechcoh`
+
+Čech 上同调是 Čech 复形取同调后的结果（再沿覆盖取余极限）。
 
 #### 定义引用：「等化子 / 余等化子」→ 核与余核　`def-link.kernel-eq`
 
@@ -52011,6 +52057,8 @@ $$\rho_{i} := g_{i}/g$$
 取 $X$ 上原来的拓扑 $\mathcal{T}_{d}$ 与同一个 $d$：恒等映射 $\mathrm{id} : (X, \mathcal{T}_{d}) \to (X, \mathcal{T}_{d})$ 是同胚，故 $d$ 与拓扑相容，$X$ 可度量化 ✓。
 ⭐ 这条边看着废话，但它确定了术语的**方向**：「可度量化」是比较弱的性质（拓扑恰好来自某个度量），「距离空间」是带了具体度量的对象。图里所有「度量 $\implies$ 某性质」的结论都要经过这一条才能搬到可度量化空间上。
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### Stone 定理 ⟹ 可度量化空间的性质　`imp.pcp-stone-metrizable-paracompact`
 
 这是可度量化空间那条命题的第 3 条（仿紧）。设 $X$ 可度量化，取相容度量 $d$，则 $(X, d)$ 是距离空间，由 Stone 定理仿紧。
@@ -52026,6 +52074,8 @@ $$\rho_{i} := g_{i}/g$$
 
 ∎
 ⚠️ 反向不成立：不可数离散空间第一可数（每点取单点邻域即可），却没有可数基。
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 局部有限基度量化定理 + 可数并的局部有限族 ⟹ 离散基度量化定理　`imp.pcp-bing-from-ns`
 
@@ -53106,6 +53156,8 @@ $$f = f(p)+\sum_{i}\bigl(x^{i}-x^{i}(p)\bigr)h_{i},\qquad h_{i}(p) = \partial_{i
 **光滑性**：在一张卡里 $g_{ij} = \langle\partial_{i}r,\partial_{j}r\rangle$ 是 $r$ 的一阶偏导数的内积，$r$ 光滑则 $g_{ij}$ 光滑。
 
 于是 $(S,g)$ 是二维黎曼流形，而 $g$ 就是 `def.first-fundamental-form` 里的 $I$。反过来，任何二维黎曼流形在局部取卡，$(g_{ij})$ 就写成同样的形状 —— 两侧只是同一套记账的两种叫法。∎
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 联络形式 + 活动标架 ⟹ 仿射联络　`imp.tu-surface-connection`
 *标架联络 $\implies$ 曲面上有一个仿射联络*
@@ -56419,6 +56471,8 @@ $\Gamma=\mathbb{Z}/p$ 以 $(z_{1},z_{2})\mapsto(\zeta z_{1},\zeta^{q}z_{2})$ 光
 
 于是引理给出：轨道空间 $L(p,q)=S^{3}/\Gamma$ 有唯一光滑结构使商映射为局部微分同胚，从而是三维光滑流形。∎
 
+> 透镜空间是光滑三维流形的特例；这一条只作逻辑包含、不分层。
+
 #### 定义引用：「连续映射」→ 映射同伦　`e52.definition`
 
 同伦 $F : X \times [0, 1] \to Y$ 本身要求**联合连续**（在乘积拓扑下），不是「对每个 $t$ 各自连续」。
@@ -56918,9 +56972,10 @@ $n = 2$ 时两者是同一个整数：$S^{1} \to S^{1}$ 的度 = 绕 $0$ 的圈�
 
 结论整个用「度」表述：延拓存在，则度为 $0$。
 
-#### 定义引用：「同伦不变性」→ 度非零的映射不能延拓到球　`dep.degreenonext-homotopy`
+#### 同伦不变性 ⟹ 度非零的映射不能延拓到球　`imp.degreenonext-homotopy`
+*同伦不变性：延拓存在则度为 0*
 
-证明的最后一跳：$H(x,t) = F((1-t)x)$ 给出同伦，同伦不变性把它变成「度相等」。
+令 $H : S^{n-1}\times[0,1]\to S^{n-1}$，$H(x,t)=F((1-t)x)$。因 $0\le 1-t\le 1$ 且 $|x|=1$，有 $|(1-t)x|\le 1$，故 $(1-t)x\in\overline{B^{n}}$ 落在 $F$ 的定义域内；$H$ 是连续映射的复合、取值恒在 $S^{n-1}$，所以它是 $f$ 与常值映射 $x\mapsto F(0)$ 之间的同伦。由 `thm.homotopy-invariance`，同伦的映射在 $H_{n-1}$ 上诱导同一同态，而常值映射诱导零同态，故 $\deg f=0$。∎
 
 #### 定义引用：「单连通」→ 素端　`dep.prime-simply`
 
@@ -57066,7 +57121,7 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 
 #### 定义引用：「Riemann 映射定理」→ 边界对应定理　`dep.riemann-caratheodory`
 
-**对象依赖，不是推出**：本节谈的是「Riemann 映射 $f$ 在边界上的行为」，对象 $f$ 由 `thm.riemann-mapping` 提供；但边界延拓不是它的推论 —— 内部双全纯完全不管边界，Jordan 条件是本质的（这正是本节点保持 'skeleton' 的那条外部定理 Carathéodory–Osgood）。
+**对象依赖，不是推出**：本节谈的是「Riemann 映射 $f$ 在边界上的行为」，对象 $f$ 由 `thm.riemann-mapping` 提供；但边界延拓不是它的推论 —— 内部双全纯完全不管边界，Jordan 条件是本质的（这正是本节点保持 'skeleton' 的那条外部定理 Carathéodory–Osgood）。本图 schema 例外：这条按**对象/构造依赖**记 `definition`，不作命题推出。
 
 #### 边界对应定理 ⟹ Schwarz–Christoffel 公式　`dep.sc-caratheodory`
 *Carathéodory–Osgood 提供 S–C 的存在性*
@@ -57228,13 +57283,6 @@ $\varphi(n)$ 就是单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 的阶。
 
 单位群是群：Euler 定理的证明只用到「有限群的元素阶整除群阶」。
 
-#### Lagrange 定理 ⟹ Euler 定理　`imp.euler-lagrange`
-*Lagrange 定理用于单位群给出 Euler 定理*
-
-设 $G = (\mathbb{Z}/n\mathbb{Z})^{\times}$，则 $|G| = \varphi(n)$，且 $a$ 与 $n$ 互素 $\iff$ $[a] \in G$。由 Lagrange 定理，$G$ 中元素的阶整除 $|G|$，故 $[a]^{\varphi(n)} = 1$，即 $a^{\varphi(n)} \equiv 1 \pmod{n}$。∎
-
-> 整条证明只有这一行群论，其余是同余语言的翻译。
-
 #### 整数的带余除法 ⟹ 辗转相除法　`imp.nt-division-euclid`
 *辗转相除法：反复做带余除，余数严格下降*
 
@@ -57328,6 +57376,8 @@ $$e_{i} \equiv 1 \pmod{n_{i}}, \qquad e_{i} \equiv 0 \pmod{n_{j}}\ (j \ne i).$$
 
 
 而 $[a]^{|H|} = 1$（循环群的阶就是元素的阶），故 $[a]^{|G|} = ([a]^{|H|})^{m} = 1$。换回同余语言：$a^{\varphi(n)} \equiv 1 \pmod n$。
+
+> 这条证明里只有一步是群论（Lagrange 定理给出 $|H|\mid|G|$），其余都是同余语言的翻译；显式写出 $H=\langle[a]\rangle$ 只是把这一步落成子群的形式。
 
 #### Euler 定理 ⟹ Fermat 小定理　`imp.nt-euler-fermat`
 *Fermat 小定理：取 $n = p$ 的 Euler 定理*
@@ -57441,6 +57491,8 @@ $K[x]$ 的带余除法正是「$N = \deg$ 的欧几里得函数」，这条定�
 
 于是 $a = qb \in (b)$，即 $I \subseteq (b)$；反向 $(b) \subseteq I$ 显然。故 $I = (b)$ 是主理想，$A$ 是 PID。
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### 主理想整环 ⟹ 唯一分解整环　`imp.ring-pid-ufd`
 *PID $\implies$ UFD：升链条件给存在性，不可约=素给唯一性*
 
@@ -57461,6 +57513,8 @@ $K[x]$ 的带余除法正是「$N = \deg$ 的欧几里得函数」，这条定�
 
 
 **唯一性**：两个分解的素因子逐个用「素元整除乘积必整除某个因子」配对，约掉后归纳即得。所以 PID 是 UFD。
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 唯一分解整环 ⟹ gcd 整环　`imp.ring-ufd-gcd`
 *UFD $\implies$ gcd 整环：取公共素因子指数的最小值*
@@ -57487,6 +57541,8 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 所以 $d$ 是「被一切公因子整除」的那个公因子 —— 即 $\gcd$。UFD 是 gcd 整环。
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### Bézout 整环 ⟹ gcd 整环　`imp.ring-bezout-gcd`
 *Bézout 整环 $\implies$ gcd 整环：gcd 由线性组合直接给出*
 
@@ -57503,6 +57559,8 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 
 
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 素数计数函数 ⟹ ψ 与 θ 的分组恒等式　`imp.pnt-lemma1`
 *按素数幂的指数分组*
@@ -58125,25 +58183,6 @@ $$rx - r'x = (r - r')x = h(r - r') = f_{0}((r - r')b) = f_{0}(a' - a) = f_{0}(a'
 
 
 所以 $A_{0} = B$，$f_{0}$ 就是 $f$ 到 $B$ 的延拓。由于 $A \hookrightarrow B$ 与 $f$ 任意，$I$ 内射 ✓。∎
-
-#### Zorn 引理 + 对合分布 + 积分流形 ⟹ 叶状结构存在定理　`imp.zorn-foliation`
-*Zorn 引理：把局部叶片粘成极大叶*
-
-设 $\mathcal{D}$ 是 $M$ 上的对合 $k$ 阶光滑分布。**局部输入**：对合分布在每点附近有积分流形（Frobenius 定理的 (1)$\iff$(3)）；本条的职责是把它整体化，这一步当已知。
-
-**第一步：取候选族。** 令
-
-$$\mathcal{S} := \{\, L \subseteq M : L \text{ 是连通积分流形，且 } T L = \mathcal{D}|_{L} \,\},$$
-
-按包含排序；$\mathcal{S} \ne \emptyset$（每点附近的局部积分流形都在里面）。
-
-**第二步：链有上界。** 设 $\{L_{\alpha}\}$ 是全序链，$L^{*} := \bigcup_{\alpha} L_{\alpha}$。连通性：递增并仍连通（任两点落在同一成员里）。切空间：$T L^{*} = \bigcup T L_{\alpha} = \mathcal{D}|_{L^{*}}$。光滑性：$L^{*}$ 是浸入子流形的递增并，且链中每个成员都是开浸入子流形，故 $L^{*}$ 仍是浸入子流形。于是 $L^{*} \in \mathcal{S}$，是链的上界。
-
-**第三步：Zorn 取极大元。** 由 Zorn 引理得极大元 $L$，即过给定点的极大连通积分流形。
-
-**第四步：叶与叶互不相交。** 设 $L_{1}, L_{2}$ 是两片极大叶且有公共点 $p$。由局部唯一性（同一分布过同一点的两块积分流形在公共点附近重合，这是 Frobenius 平坦坐标的推论），$L_{1} \cup L_{2}$ 在 $p$ 附近仍是积分流形；两者都连通且交于 $p$，故并连通且是积分流形 —— 与极大性矛盾。所以或 $L_{1} = L_{2}$，或 $L_{1} \cap L_{2} = \emptyset$。
-
-**收尾。** 每点属于某片极大叶（第三步），叶两两不交或相等（第四步），故全体叶覆盖 $M$ 并构成叶状结构。∎
 
 #### 选择公理 ⟹ Tychonoff 定理　`imp.ac-tykhonov`
 *选择公理：Tychonoff 定理（Alexander 子基引理）*
@@ -59122,6 +59161,8 @@ $$U := h^{-1}\bigl([0, 1/3)\bigr), \qquad V := h^{-1}\bigl((2/3, 1]\bigr) ,$$
 
 **第四步：$H$ 任意。** 完全正规要求每个子空间都正规；$H \subseteq X$ 是任取的，故 $X$ 完全正规 ✓。∎
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### 距离空间 ⟹ 完美正规空间　`imp.metric-pn`
 
 设 $(X, d)$ 是距离空间，$F \subseteq X$ 闭。记 $d(x, F) := \inf_{y \in F} d(x, y)$（对空集约定 $+\infty$）。
@@ -59144,6 +59185,8 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 ⭐ 顺带：**子空间仍是距离空间**（限制度量），所以距离空间其实直接是 $T_{5}$、$T_{6}$ —— 这正是分析里从不操心分离公理的原因。
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### 紧 + Hausdorff 空间 ⟹ 正规空间　`imp.compact-hausdorff-normal`
 
 设 $X$ 紧 Hausdorff，$A, B \subseteq X$ 是不交闭集。先注意 $X$ 是 $T_{1}$：Hausdorff 空间中单点闭（`def.hausdorff`）。
@@ -59155,6 +59198,8 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 所以任意不交闭集都能被开集分离，配合 $T_{1}$ 得 $X$ 正规。∎
 
 ⭐ 这是**直接证明**，没有走 那条（紧 $\implies$ 仿紧 $\implies$ 正规）：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 紧 ⟹ 局部紧空间　`imp.compact-locally-compact`
 
@@ -59168,6 +59213,8 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 ⭐ 这条几乎是定义级别的，但它**不是**废话：局部紧的定义允许「每个点有个小的紧邻域」，紧性给的是「整体紧」，而整体紧在**子空间**上不遗传给邻域 —— 所以「紧 $\implies$ 局部紧」要用 $K = X$ 这一招，而「局部紧」的逆不成立（$\mathbb{R}$ 局部紧但不紧）。这条证明的是**局部紧**；要得到「局部紧 Hausdorff」，还需把 Hausdorff 作为额外假设（见下一条）。
 
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
 #### 紧 + Hausdorff 空间 ⟹ 局部紧空间　`imp.compact-hausdorff-locallycompact`
 
 设 $X$ 紧且 Hausdorff。紧性给：对任意 $x \in X$，取 $K = X$ 就是 $x$ 的紧邻域（$X$ 开于自身，故 $x \in \mathring{X}$）。Hausdorff 是额外假设。
@@ -59175,6 +59222,8 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 结论：$X$ **局部紧**（上一条）且 **Hausdorff**（本条假设）。∎
 
 ⭐ 与上一条的分工：上一条只给局部紧（不需要 Hausdorff）；本条的额外输入只有 Hausdorff 这一条假设。
+
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
 #### 紧 ⟹ 仿紧空间　`imp.compact-paracompact`
 
@@ -59754,13 +59803,18 @@ $L^p$ 的 Riesz 表示所用的配对 $(L^p, L^q)$ 是完美配对，且映射�
 
 Poincaré 引理里的星形区域就是这里的星形开集；星点可作收缩中心。
 
-#### 凸集 ⟹ 星形集　`e170.implication`
-*非空凸集 $\implies$ 星形集*
+#### 定义引用：「向量空间」→ 关于一点的星形集　`dep.ssap-vectorspace`
 
-设 $C \ne \emptyset$ 凸，取 $x_{0} \in C$。对任意 $x \in C$、$t \in [0,1]$，由凸性 $(1-t)x_{0} + tx \in C$。
-这正是星形集关于 $x_{0}$ 的定义，故 $C$ 是星形集。∎
+「关于一点的星形」只用向量空间里的线段，不用范数或内积。
 
-> 「非空」不能省：空集是凸的但不是星形集（没有星点）。逆命题也不成立：十字形星形但不凸。
+#### 定义引用：「关于一点的星形集」→ 星形集　`dep.star-ssap`
+
+星形集就是「存在一个星点，使集合关于它星形」；点版本是去掉存在量词后的基本关系。
+
+#### 凸集 + 关于一点的星形集 ⟹ 凸集在每一点处星形　`imp.convex-star-shaped-every-point`
+*凸集在每一点处星形*
+
+设 $C$ 凸、$x_{0} \in C$。任取 $y \in C$ 与 $t \in [0,1]$，由凸性 $(1-t)x_{0}+ty \in C$；这正是关于 $x_{0}$ 星形的定义，故每个 $x_{0} \in C$ 都是星点。$\blacksquare$
 
 #### 定义引用：「凸集」→ 凸组合　`e171.definition`
 
@@ -59833,7 +59887,7 @@ $\Phi : X \times Y \to E$，$\Phi(x, y) = x + y$，是有界线性双射。由�
 设 $u$ 是酉算子，即 $u^*u = u\,u^* = I$。
 $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等距。$\blacksquare$
 
-> 反向不成立：单侧移位是部分等距但不是酉算子（$S\,S^*$ 不是 $I$）。
+> 部分等距是一般定义；酉算子是满足 $u^*u = u\,u^* = I$ 的特例，这条只作逻辑包含、不分层。反向不成立：单侧移位是部分等距但不是酉算子（$S\,S^*$ 不是 $I$）。
 
 #### 定义引用：「Hilbert 空间」→ Hilbert 空间一致凸　`def-link.huc-hilbert`
 
@@ -59859,17 +59913,19 @@ $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等
 
 > 框架到实例的回头推论（打包，不提供独立证明），不参与分层：目标定理是 (c) 的 $L^{p}$ 特例；(c) 的证明只用 Radon–Nikodym，不依赖本定理。
 
-#### 定义引用：「Zorn 引理」→ Hahn–Banach 定理　`dep.hb-zorn`
+#### Zorn 引理 ⟹ Hahn–Banach 定理　`imp.hahn-banach-zorn`
+*Zorn 引理：把延拓推到整个空间*
 
-延拓用 Zorn 引理取极大元。
+考虑所有「$g$ 定义在子空间 $N\supseteq M$ 上、线性、$g|_{M}=f$、$g\le p$ 于 $N$」的 $g$，按延拓关系排序。任一全序子族的并仍是同类对象（定义域取并，线性与 $g\le p$ 逐点验证），故由 `lem.zorn` 取得极大元 $F$。若 $\operatorname{dom}F\ne X$，取 $x_{0}\notin\operatorname{dom}F$，用一维延拓引理把 $F$ 再延一步，与极大性矛盾；故 $F$ 定义在整个 $X$ 上且 $F\le p$。∎
 
 #### 定义引用：「范数」→ Hahn–Banach 定理　`dep.hb-norm`
 
 保范延拓推论取 $p(x) = \|\varphi\|\,\|x\|$。
 
-#### 定义引用：「Tychonoff 定理」→ Banach–Alaoglu 定理　`dep.ba-tych`
+#### Tychonoff 定理 ⟹ Banach–Alaoglu 定理　`imp.banach-alaoglu-tychonoff`
+*Tychonoff：把 $B_{X^{*}}$ 嵌进紧的积空间*
 
-积 $\prod_x [-\|x\|,\|x\|]$ 的紧性来自 Tychonoff。
+令 $P=\prod_{x\in X}[-\|x\|,\|x\|]$，$\Phi(\varphi)=(\varphi(x))_{x\in X}$。弱*拓扑正是积拓扑沿 $\Phi$ 拉回的拓扑，$\Phi$ 为单射。像闭：若 $\Phi(\varphi_\alpha)\to y$，则 $\varphi(x):=y_x$ 线性且 $\|\varphi\|\le1$，故 $y=\Phi(\varphi)$ 仍在像中；于是 $B_{X^{*}}$ 同胚于闭子集 $\Phi(B_{X^{*}})\subseteq P$。每个 $[-\|x\|,\|x\|]$ 紧，由 `thm.tykhonov` 得 $P$ 紧，闭子集紧，故 $B_{X^{*}}$ 弱*紧。∎
 
 #### 定义引用：「连续对偶空间」→ Banach–Alaoglu 定理　`dep.ba-dual`
 
@@ -59887,13 +59943,15 @@ $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等
 
 Banach–Alaoglu 的紧性是弱*拓扑下的紧性。
 
-#### 定义引用：「Hahn–Banach 定理」→ Goldstine 定理　`dep.gs-hb`
+#### Hahn–Banach 定理 ⟹ Goldstine 定理　`imp.goldstine-hahn-banach`
+*Hahn–Banach 分离：闭凸包与外面的点分开*
 
-点与闭凸集的分离用 Hahn–Banach 的几何形式。
+设 $K=\overline{J_X(B_X)}^{w^{*}}$，若 $K\ne B_{X^{**}}$ 取 $\xi_0\in B_{X^{**}}\setminus K$，令 $C=K-\xi_0$。$C$ 闭凸、不含 $0$，取 Minkowski 泛函 $p$：$p$ 次线性、在 $C$ 上 $\le1$、且 $p(-\xi_0)>1$。在一维子空间 $\mathbb{R}\xi_0$ 上令 $\ell_0(t\xi_0)=-t\,p(-\xi_0)$，验证 $\ell_0\le p$ 后用 `thm.hahn-banach` 延拓成 $X^{**}$ 上的线性泛函 $\ell\le p$；把 $\pm\ell$ 合并得弱*连续泛函把 $\xi_0$ 与 $K$ 分离，与 $K$ 是闭凸包矛盾。∎
 
-#### 定义引用：「Banach–Alaoglu 定理」→ Goldstine 定理　`dep.gs-ba`
+#### Banach–Alaoglu 定理 ⟹ Goldstine 定理　`imp.goldstine-banach-alaoglu`
+*Banach–Alaoglu：$B_{X^{**}}$ 弱*紧*
 
-$B_{X^{**}}$ 弱*紧（把 Banach–Alaoglu 用到 $X^{*}$ 上）。
+由 `thm.banach-alaoglu`（用在对偶对 $(X^{*},X^{**})$ 上），$B_{X^{**}}$ 弱*紧。$K:=\overline{J_X(B_X)}^{w^{*}}$ 是紧空间 $B_{X^{**}}$ 的闭子集，故弱*紧、从而是弱*闭凸集 —— 主证明正需要对闭凸集 $K$ 做分离并利用紧性取极值。∎
 
 #### 定义引用：「弱*拓扑」→ Goldstine 定理　`dep.gs-weakstar`
 
@@ -59906,9 +59964,10 @@ $B_{X^{**}}$ 弱*紧（把 Banach–Alaoglu 用到 $X^{*}$ 上）。
 
 > 本条把 Milman–Pettis 归到 Goldstine（`thm.goldstine`）这一个外部定理上；Goldstine 自身由 `thm.hahn-banach` 与 `thm.banach-alaoglu` 支撑。
 
-#### 定义引用：「Banach–Alaoglu 定理」→ James 定理　`dep.james-ba`
+#### Banach–Alaoglu 定理 ⟹ James 定理　`imp.james-banach-alaoglu`
+*Banach–Alaoglu：自反 $\implies$ $B_X$ 弱紧*
 
-正向（自反 $\implies$ 泛函达到范数）要用弱*紧性：$B_{X^{**}}$ 弱*紧，沿 $J_X$ 拉回得 $B_X$ 弱紧。反向不需要它。
+先看 $(\Longrightarrow)$，即自反的情形。设 $X$ 自反，则 $J_X(B_X)=B_{X^{**}}$。由 `thm.banach-alaoglu`，$B_{X^{**}}$ 弱*紧；而 $X$ 的弱拓扑就是沿 $J_X$ 拉回的弱*拓扑，故 $B_X=J_X^{-1}(B_{X^{**}})$ 弱紧。于是任取 $\varphi\in X^{*}$，$|\varphi|$ 在弱紧集 $B_X$ 上达到最大值 $\|\varphi\|$，即存在 $x\in B_X$ 使 $\varphi(x)=\|\varphi\|$。∎
 
 #### 定义引用：「弱拓扑」→ James 定理　`dep.james-weak`
 
@@ -60601,7 +60660,7 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 由定义存在 $\eta > 0$，使得 $\delta(x, x_0) < \eta$ 时对一切 $f$ 有 $d(f(x), f(x_0)) < \varepsilon$。
 取邻域 $U = B(x_0, \eta)$，即满足逐点等度连续的定义。$\blacksquare$
 
-> 反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。
 
 #### 第一纲 / 第二纲 + 闭集与闭包 + 内部 ⟹ 闭覆盖的内点　`imp.countable-closed-cover-proof`
 *可数闭覆盖：有内部者之并稠密*
@@ -60629,10 +60688,6 @@ $$\sqrt{1-u}=1-\sum_{k\ge1}c_k u^{k},\qquad c_k=\frac{(2k-3)!!}{2^{k}k!}>0,$$
 $A$ 对一致收敛封闭（$A$ 闭于 $C(K,\mathbb R)$），故 $\sqrt{1-u}=\sqrt{f^{2}}=|f|\in A$。一般 $f$ 用 $f/\max(\lVert f\rVert,1)$ 归约，结论相同。∎
 
 > 完整证明见本条边；节点注只保留动机与缺口。
-
-#### 定义引用：「Euler 示性数」→ Gauss–Bonnet 定理　`dep.gaussbonnet-eulerchar`
-
-Gauss–Bonnet 的结论里直接出现 $\chi(M)$，而 $\chi$ 此前在几何侧是「外部输入」。（依赖的是对象，不是命题。）两边接上之后：把曲面三角剖分，$\int_M K\,\mathrm{d}A = 2\pi\chi(M) = 2\pi(V-E+F)$ —— 这就是「曲率积分 = 拓扑不变量」的完整走法。方向是「曲率积分 $\to$ 示性数」：本条反过来用示性数举例，**不依赖** Gauss–Bonnet —— 这是**定义实例化**，不是蕴含。
 
 #### 定义引用：「范数」→ L^p 是 Banach 空间　`dep.lpbanach-norm`
 
@@ -65677,6 +65732,10 @@ $T^{n} = 0$ 这一条由 Cayley–Hamilton（特征多项式为 $x^{n}$）立刻
 
 ⚠️ 同名不同物：那条是「非常数全纯函数是开映射」，这条是「满射有界线性算子是开映射」，证明毫无关系。
 
+#### Euler 示性数 ～ Gauss–Bonnet 定理　`ana.gaussbonnet-eulerchar`
+
+两条定理都把曲率与 $\chi$ 联系起来，但方向相反：Gauss–Bonnet 的证明沿三角剖分求和、用 $\sum(3-n_i)=3\chi-6$ 得到 $\int_M K\,\mathrm{d}A=2\pi\chi$，即 $\chi$ 的计算是它的**推论**而不是前提。这里只记类比，不记依赖。
+
 #### 第一同构定理（Noether） ～ 第一同构定理（向量空间版）　`e174.analogy`
 *第一同构定理：群版与向量空间版是同一句话*
 
@@ -66185,6 +66244,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **代数结构 ↔ 群上同调**　6 条节点级连线
 - **群作用与置换 ↔ 代数结构**　10 条节点级连线
+- **复形与导出三角 ↔ 层上同调**　6 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 加法与阿贝尔范畴**　4 条节点级连线
 - **层与拓扑 ↔ 层上同调**　13 条节点级连线
@@ -66276,7 +66336,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 消解与维数**　2 条节点级连线
 - **代数结构 ↔ 平坦模**　2 条节点级连线
 - **层上同调 ↔ 仿紧与单位分解**　5 条节点级连线
-- **复形与导出三角 ↔ 层上同调**　5 条节点级连线
 - **拓扑空间的基本语汇 ↔ 仿紧与单位分解**　4 条节点级连线
 - **度量空间 ↔ 可度量化**　3 条节点级连线
 - **收敛与紧性 ↔ 可度量化**　3 条节点级连线
@@ -66344,7 +66403,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **基本群 ↔ 度量空间**　2 条节点级连线
 - **共形映射与正规族 ↔ 基本群**　2 条节点级连线
 - **代数结构 ↔ 整除与同余**　3 条节点级连线
-- **群作用与置换 ↔ 整除与同余**　2 条节点级连线
 - **多项式与因式分解 ↔ 整除与同余**　2 条节点级连线
 - **整环与分解 ↔ 代数结构**　6 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
@@ -66379,6 +66437,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **线性映射与秩 ↔ 赋范空间与有界算子**　5 条节点级连线
 - **Hilbert 空间 ↔ 赋范空间与有界算子**　10 条节点级连线
 - **L^p 空间 ↔ 赋范空间与有界算子**　6 条节点级连线
+- **向量空间与基 ↔ Hilbert 空间**　2 条节点级连线
 - **Hilbert 空间 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **Baire 纲与三大定理 ↔ 赋范空间与有界算子**　3 条节点级连线

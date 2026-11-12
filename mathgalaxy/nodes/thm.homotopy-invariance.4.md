@@ -4,5 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.simplicial-approximation`](../nodes/thm.simplicial-approximation.md) 单纯逼近
 - 被 [`def.degree`](../nodes/def.degree.md) 映射的度 用
-- 被 [`thm.degree-nonextendable`](../nodes/thm.degree-nonextendable.md) 度非零的映射不能延拓到球 用
+- ⇒ [`thm.degree-nonextendable`](../nodes/thm.degree-nonextendable.md) 度非零的映射不能延拓到球
 - ⇒ [`thm.sphere-homology`](../nodes/thm.sphere-homology.md) 球面的同调

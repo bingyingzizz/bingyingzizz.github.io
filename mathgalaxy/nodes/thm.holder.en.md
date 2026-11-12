@@ -2,16 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.holder)　·　[Chinese page (authoritative)](./thm.holder.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.holder.md` and `proofs/`.
+## Statement · **draft**
+Let $1 < p < \infty$, and let $q$ be the **conjugate exponent** of $p$: $\dfrac{1}{p} + \dfrac{1}{q} = 1$. Then for measurable $f, g$:
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality
+$$\|fg\|_1 \le \|f\|_p \, \|g\|_q$$
 
+## Notes · **draft**
+**Equality condition**: equality holds $\iff$ $|f|^p$ and $|g|^q$ are proportional a.e. (that is, $\alpha |f|^p = \beta |g|^q$ a.e.).
 
-Cite: `thm.holder` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.holder.en.2.md

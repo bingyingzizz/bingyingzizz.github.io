@@ -1,6 +1,6 @@
 # 同胚　`def.homeomorphism`
 同胚
-layer 17 · 定义 · 拓扑空间的基本语汇 · 拓扑学
+layer 7 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.homeomorphism)　·　[节点索引](../index.md)
 
 设 $X$、$Y$ 是拓扑空间。$f : X \to Y$ 是**同胚**，当且仅当
@@ -16,11 +16,9 @@ layer 17 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 - …另有入边，续页见 [nodes/def.homeomorphism.2.md](./def.homeomorphism.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.jordan-curve`](../nodes/def.jordan-curve.md) Jordan 曲线 用
-
 - …另有出边，续页见 [nodes/def.homeomorphism.3.md](./def.homeomorphism.3.md)
 
-refs: Munkres, Topology, Ch. 2
+refs: Engelking, General Topology, Ch. 1 §1.4；Munkres, Topology, Ch. 2
 
 > 说明见 `notes/def.homeomorphism.md`
 

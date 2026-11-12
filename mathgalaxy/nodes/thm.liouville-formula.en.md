@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 32 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 30 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.liouville-formula.md` and `proofs/`.

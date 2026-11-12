@@ -1,18 +1,19 @@
 # 第一可数空间　`def.first-countable`
 每点有可数局部基
-layer 7 · 定义 · 收敛与紧性 · 拓扑学
+layer 6 · 定义 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=def.first-countable)　·　[节点索引](../index.md)
 
 $X$ 叫**第一可数的**，如果每个点都有**可数局部基**：存在含 $x$ 的开集族 $\{\, B_{n} \,\}_{n \ge 1}$，使每个含 $x$ 的开集 $U$ 都包含某个 $B_{n}$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.second-countable`](../nodes/def.second-countable.md) 第二可数空间：imp.pcp-second-first　[proofs/imp.pcp-second-first.md](../proofs/imp.pcp-second-first.md)
-- [`def.topology-base`](../nodes/def.topology-base.md) 基与子基：用到了定义 基与子基　[proofs/def-link.first-countable-base.md](../proofs/def-link.first-countable-base.md)
+
+- …另有入边，续页见 [nodes/def.first-countable.2.md](./def.first-countable.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.first-countable.2.md](./def.first-countable.2.md)
+- 被 [`prop.metrizable-normal`](../nodes/prop.metrizable-normal.md) 可度量化空间的性质 用
 
-refs: Munkres, Topology (2nd ed.), Section 30
+refs: Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology (2nd ed.), Section 30
 
 > 说明见 `notes/def.first-countable.md`
 

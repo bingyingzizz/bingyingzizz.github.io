@@ -1,6 +1,12 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- Exercise 1.12 → def.mor-domain-codomain
+
+- Exercise 1.13 → prop.op-category-is-modules
+
+- Exercise 1.14 → prop.forgetful-faithful-not-full
+
 - Exercise 1.16 → prop.nat-iso-invariants
 
 - Exercise 1.19 → prop.matrix-category
@@ -28,11 +34,5 @@
 - Exercise 1.61 → prop.unit-counit-examples
 
 - Exercise 1.62 → prop.copowers-give-adjoint
-
-- Exercise 1.65 → prop.forgetful-preserves-limits
-
-- Exercise 1.66 → prop.forgetful-exactness
-
-- Exercise 1.71 → prop.reflection-criterion
 
 > 续见 alias/aka/category.21.md

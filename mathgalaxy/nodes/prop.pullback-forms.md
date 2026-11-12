@@ -16,7 +16,7 @@ layer 19 · 命题 · 活动标架与结构方程 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.pullback-forms.4.md](./prop.pullback-forms.4.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 拉回及其性质；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 拉回
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 拉回及其性质；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 拉回
 
 > 说明见 `notes/prop.pullback-forms.md`
 

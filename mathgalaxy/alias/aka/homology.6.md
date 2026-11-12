@@ -1,6 +1,8 @@
 # 别名 → 节点 · 同调代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../homology.md`
 
+- Cartan-Leray | Cartan–Leray 谱序列 | Theorem 7.3.6 | Thm 7.3.6 | Corollary 7.3.7 | 卡当-莱雷谱序列 → thm.cartan-leray
+
 - 无环层 | acyclic sheaf | Definition 7.3.9 | Def 7.3.9 → def.acyclic-sheaf
 
 - 无环等价于 Cech 为零 | Proposition 7.3.10 | Prop 7.3.10 → prop.acyclic-iff-cech

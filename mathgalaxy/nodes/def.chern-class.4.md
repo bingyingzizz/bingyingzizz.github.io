@@ -2,5 +2,6 @@
 [在星图里打开](../#n=def.chern-class)　·　第 1 页 [nodes/def.chern-class.md](./def.chern-class.md)　·　上一页 [nodes/def.chern-class.3.md](./def.chern-class.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.chern-class-line-bundle`](../nodes/prop.chern-class-line-bundle.md) 线丛的陈类计算 用
 - 被 [`thm.splitting-principle`](../nodes/thm.splitting-principle.md) 分裂原理 用
 - 被 [`def.pontryagin-class`](../nodes/def.pontryagin-class.md) Pontryagin 类 用

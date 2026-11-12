@@ -19,7 +19,7 @@ $$A = QR ,$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.qr-decomposition.4.md](./thm.qr-decomposition.4.md)
 
-refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis
+refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram–Schmidt；Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3
 
 > 说明见 `notes/thm.qr-decomposition.md`
 

@@ -21,7 +21,7 @@ $\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.minimal-poly.3.md](./def.minimal-poly.3.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 > 说明见 `notes/def.minimal-poly.md`
 

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 28 · theorem · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 26 · theorem · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.structure-equations.md` and `proofs/`.

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.finitely-additive)　·　[Chinese page (authoritative)](./def.finitely-additive.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.finitely-additive.md` and `proofs/`.
+## Statement · **draft**
+If $\mu$ satisfies only (i) and **finite** additivity:
 
+$$A, B \in \mathcal{M},\ A \cap B = \emptyset \implies \mu(A \cup B) = \mu(A) + \mu(B)$$
 
-Cite: `def.finitely-additive` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(by induction this extends to any finite number of disjoint sets),
 
+then $\mu$ is called a **finitely additive measure**.
+
+> continued in nodes/def.finitely-additive.en.2.md

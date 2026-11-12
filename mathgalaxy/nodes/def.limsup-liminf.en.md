@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.limsup-liminf)　·　[Chinese page (authoritative)](./def.limsup-liminf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.limsup-liminf.md` and `proofs/`.
+## Statement · **draft**
+For a sequence of real numbers $\{x_n\}$, set
 
+$$\limsup_{n \to \infty} x_n := \lim_{n \to \infty} \Bigl( \sup_{k \ge n} x_k \Bigr), \qquad \liminf_{n \to \infty} x_n := \lim_{n \to \infty} \Bigl( \inf_{k \ge n} x_k \Bigr)$$
 
-Cite: `def.limsup-liminf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.limsup-liminf.en.2.md

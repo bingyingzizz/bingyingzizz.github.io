@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.limit-arithmetic)　·　[Chinese page (authoritative)](./prop.limit-arithmetic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.limit-arithmetic.md` and `proofs/`.
+## Statement · **draft**
+Let $x_n \to x$, $y_n \to y$ (finite), $c \in \mathbb{R}$. Then
 
+- $x_n \pm y_n \to x \pm y$, $c\,x_n \to c\,x$, $x_n y_n \to xy$;
+- if $y \ne 0$, then for $n$ sufficiently large $y_n \ne 0$, and $x_n / y_n \to x / y$;
+- $|x_n| \to |x|$;
+- **Order preservation**: if there is $N_0$ such that $x_n \le y_n$ whenever $n \ge N_0$, then $x \le y$.
 
-Cite: `prop.limit-arithmetic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.limit-arithmetic.en.2.md

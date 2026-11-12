@@ -17,7 +17,7 @@ layer 18 · 定理 · 多重线性与张量 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.symplectic-normal-form.4.md](./thm.symplectic-normal-form.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 
 > 说明见 `notes/thm.symplectic-normal-form.md`
 

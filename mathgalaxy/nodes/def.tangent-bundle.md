@@ -1,6 +1,6 @@
 # 切丛　`def.tangent-bundle`
 切丛与切丛的流形结构
-layer 24 · 定义 · 流形与向量丛 · 微分几何
+layer 22 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.tangent-bundle)　·　[节点索引](../index.md)
 
 **在说什么**：把所有点的切空间按「住在哪个点」摞起来，得到一个维数翻倍的新流形 —— 流形上每点长着一根切线，切丛就是这束线的全体。
@@ -11,13 +11,15 @@ $TM$ 上有自然的 $2n$ 维光滑结构：对每张图卡 $(U,\varphi)$ 令
 > 陈述续见 [nodes/def.tangent-bundle.2.md](./def.tangent-bundle.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.vector-field`](../nodes/def.vector-field.md) 向量场 用
+
+- …另有出边，续页见 [nodes/def.tangent-bundle.5.md](./def.tangent-bundle.5.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.tangent-bundle.3.md](./def.tangent-bundle.3.md)
 
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.tangent-bundle.5.md](./def.tangent-bundle.5.md)
-
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 切丛
+refs: Tu, An Introduction to Manifolds, 2nd ed., Ch. 3 §12
 
 > 说明见 `notes/def.tangent-bundle.md`
 

@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.rank-nullity)　·　[Chinese page (authoritative)](./thm.rank-nullity.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.rank-nullity.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a finite-dimensional $K$-vector space, $T : V \to W$ linear. Then
 
+$$\dim V = \operatorname{rank} T + \operatorname{null} T = \dim \operatorname{im} T + \dim \ker T$$
 
-Cite: `thm.rank-nullity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ This is the **central theorem** of finite-dimensional linear algebra: the input dimension of a linear map is split exactly between what is "kept" and what is "lost", with nothing left over.
 
+> continued in nodes/thm.rank-nullity.en.2.md

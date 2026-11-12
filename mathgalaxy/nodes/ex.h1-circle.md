@@ -1,6 +1,6 @@
 # 圆的 H¹　`ex.h1-circle`
 圆的同调：$H_{1}(S^{1}) = \mathbb{Z}$、$H^{1}_{\mathrm{dR}}(S^{1}) = \mathbb{R}$
-layer 27 · 例 · 同调群 · 拓扑学+数学分析
+layer 25 · 例 · 同调群 · 拓扑学+数学分析
 [在星图里打开](../#n=ex.h1-circle)　·　[节点索引](../index.md)
 
 $H_{0}(S^{1}) \cong \mathbb{Z}$、$H_{1}(S^{1}) \cong \mathbb{Z}$，其余为 $0$；对偶地

@@ -3,20 +3,20 @@
 layer 14 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.metric-space)　·　[节点索引](../index.md)
 
-**距离空
+*
 > 陈述续见 [nodes/def.metric-space.2.md](./def.metric-space.2.md)
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.metric-space.4.md](./def.metric-space.4.md)
+- …另有入边，续页见 [nodes/def.metric-space.5.md](./def.metric-space.5.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.metric-space.5.md](./def.metric-space.5.md)
+- …另有出边，续页见 [nodes/def.metric-space.6.md](./def.metric-space.6.md)
 
 ## English abstract · reviewed by bingyingzizz (2026-10-16) · Chinese is authoritative
-> English abstract 续见 [nodes/def.metric-space.3.md](./def.metric-space.3.md)
+> English abstract 续见 [nodes/def.metric-space.4.md](./def.metric-space.4.md)
 
-refs: Rudin, Principles of Mathematical Analysis, Ch. 2；Munkres, Topology, §20
+refs: Engelking, General Topology, Ch. 4 §4.1；Rudin, Principles of Mathematical Analysis, Ch. 2；Munkres, Topology, §20
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Metric_space · nLab https://ncatlab.org/nlab/show/metric+space · Mathlib https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/MetricSpace/Basic.html
 

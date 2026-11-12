@@ -9,15 +9,15 @@ layer 14 · 定义 · 多重线性与张量 · 抽象代数
 > 陈述续见 [nodes/def.symplectic-form.2.md](./def.symplectic-form.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.alternating-form`](../nodes/def.alternating-form.md) 交错型：用到了定义 交错型　[proofs/dep.sympl-alt.md](../proofs/dep.sympl-alt.md)
-
-- …另有入边，续页见 [nodes/def.symplectic-form.3.md](./def.symplectic-form.3.md)
-
 ## 它能推出什么 / 谁在用它
+- 被 [`def.symplectic-basis`](../nodes/def.symplectic-basis.md) 辛基 用
+
 - …另有出边，续页见 [nodes/def.symplectic-form.4.md](./def.symplectic-form.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.symplectic-form.3.md](./def.symplectic-form.3.md)
+
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 2
 
 > 说明见 `notes/def.symplectic-form.md`
 

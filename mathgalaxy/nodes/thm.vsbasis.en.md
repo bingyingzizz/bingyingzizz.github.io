@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.vsbasis)　·　[Chinese page (authoritative)](./thm.vsbasis.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.vsbasis.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a vector space over a field $K$. Then
 
+$V$ has a basis;
+- more precisely: every linearly independent subset of $V$ can be extended to a basis of $V$, and every spanning set contains a basis.
 
-Cite: `thm.vsbasis` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+In ZF this statement is equivalent to AC — without AC one can construct a vector space with no basis.
 
+> continued in nodes/thm.vsbasis.en.2.md

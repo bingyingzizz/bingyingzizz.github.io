@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.equalizer)　·　[Chinese page (authoritative)](./def.equalizer.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.equalizer.md` and `proofs/`.
+## Statement · **draft**
+The limit of the parallel pair $f, g : X \rightrightarrows Y$ is called the **equaliser**, written $\operatorname{eq}(f,g) = \ker(f,g)$; the colimit is the **coequaliser**, written $\operatorname{coker}(f,g)$. They fit into
 
+$$\ker(f,g) \longrightarrow X \overset{f}{\underset{g}{\rightrightarrows}} Y \longrightarrow \operatorname{coker}(f,g)$$
 
-Cite: `def.equalizer` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.equalizer.en.2.md

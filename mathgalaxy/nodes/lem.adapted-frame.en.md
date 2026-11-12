@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 25 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.adapted-frame.md` and `proofs/`.

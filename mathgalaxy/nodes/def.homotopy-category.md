@@ -7,16 +7,18 @@ layer 14 · 定义 · 复形与导出三角 · 同调代数
 
 $$\operatorname{Hom}_{\mathbf{K}(\mathcal{C})}(K, L) \;:=\; \operatorname{Hom}_{\mathcal{C}(\mathcal{C})}(K, L) \big/\ \sim,$$
 其中 $\sim$ 由**零同伦**的映射生成。
+> 陈述续见 [nodes/def.homotopy-category.2.md](./def.homotopy-category.2.md)
 
-其中的同构叫**同伦等价**；在 $\mathbf{K}(\mathcal{C})$ 中变成 $0$ 的复形叫**同伦平凡的**。
-
-## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.homotopy-category.2.md](./def.homotopy-category.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.homotopy-category.3.md](./def.homotopy-category.3.md)
+- 被 [`prop.homotopy-equivalence-criterion`](../nodes/prop.homotopy-equivalence-criterion.md) 同伦等价的判据 用
 
-refs: Le Stum, An introduction to condensed mathematics, §7.1
+- …另有出边，续页见 [nodes/def.homotopy-category.4.md](./def.homotopy-category.4.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.homotopy-category.3.md](./def.homotopy-category.3.md)
+
+refs: Weibel, An Introduction to Homological Algebra, Ch. 1 §1.4；Le Stum, An introduction to condensed mathematics, §7.1
 
 > 说明见 `notes/def.homotopy-category.md`
 

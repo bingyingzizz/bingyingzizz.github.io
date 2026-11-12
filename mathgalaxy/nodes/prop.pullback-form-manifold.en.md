@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 25 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
+layer 23 · proposition · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Pullback` (short) · `Pullback Between Manifolds` (full)
 
 ## Statement · **reviewed**

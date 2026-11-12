@@ -7,4 +7,4 @@
 由定义存在 $\eta > 0$，使得 $\delta(x, x_0) < \eta$ 时对一切 $f$ 有 $d(f(x), f(x_0)) < \varepsilon$。
 取邻域 $U = B(x_0, \eta)$，即满足逐点等度连续的定义。$\blacksquare$
 
-> 反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。
+> 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。

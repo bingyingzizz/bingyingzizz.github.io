@@ -2,14 +2,20 @@
 English entry · root `../`
 [in graph](../#n=prop.ideal-basic)　·　[Chinese page (authoritative)](./prop.ideal-basic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Ideals and Quotients` (short) · `Operations on Ideals and Quotient Rings` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.ideal-basic.md` and `proofs/`.
+## Statement · **draft**
+Let $A$ be a ring and $I, J \subseteq A$ ideals. Then:
 
+**(i)** $I \cap J$ and
 
-Cite: `prop.ideal-basic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$I + J := \{\, x + y : x \in I,\ y \in J \,\}$$
 
+are ideals; $I + J$ is the **smallest** ideal containing $I \cup J$;
+
+**(ii)** the set of finite sums
+
+> continued in nodes/prop.ideal-basic.en.2.md

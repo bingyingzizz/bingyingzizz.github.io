@@ -2,7 +2,11 @@
 [在星图里打开](../#n=def.cech-cohomology)　·　第 1 页 [nodes/def.cech-cohomology.md](./def.cech-cohomology.md)　·　上一页 [nodes/def.cech-cohomology.2.md](./def.cech-cohomology.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`thm.cartan-leray`](../nodes/thm.cartan-leray.md) Cartan–Leray 谱序列 用
-- 被 [`prop.acyclic-iff-cech`](../nodes/prop.acyclic-iff-cech.md) 无环 ⟺ Čech 上同调为零 用
-- 被 [`lem.stone-cech-1-bounded`](../nodes/lem.stone-cech-1-bounded.md) Stone 满射的 Čech 复形 1-有界零调 用
-- 被 [`method.simplicial-cohomology`](../nodes/method.simplicial-cohomology.md) 单纯方法算层上同调 用
+- 被 [`lem.cech-finite-disjoint-acyclic`](../nodes/lem.cech-finite-disjoint-acyclic.md) 有限不交覆盖的 Čech 零调 用
+- 被 [`prop.cech-higher-cohomology-presheaf`](../nodes/prop.cech-higher-cohomology-presheaf.md) 高次上同调预层没有 Čech 上同调 用
+- 被 [`prop.cech-interval-vanishing`](../nodes/prop.cech-interval-vanishing.md) 区间上没有高阶 Čech 上同调 用
+- ⇒ [`thm.paracompact-cech-equals-sheaf`](../nodes/thm.paracompact-cech-equals-sheaf.md) 仿紧空间上的 Čech 就是上同调
+- 被 [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类 用
+- ⇒ [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类
+
+> 续见 [nodes/def.cech-cohomology.4.md](./def.cech-cohomology.4.md)

@@ -9,17 +9,16 @@ $$\forall\{x_n\} \subseteq X,\ \exists\{x_{n_k}\},\ \exists x \in X : x_{n_k} \t
 
 ## 它能推出什么 / 谁在用它
 - ⟺ [`def.compact`](../nodes/def.compact.md) 紧
+- ⇒ [`def.totally-bounded`](../nodes/def.totally-bounded.md) 全有界
+- ⇒ [`def.complete`](../nodes/def.complete.md) 完备
 
 - …另有出边，续页见 [nodes/def.sequentially-compact.3.md](./def.sequentially-compact.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.sequentially-compact.2.md](./def.sequentially-compact.2.md)
 
-refs: Munkres, Topology, §28
+refs: Engelking, General Topology, Ch. 3 §3.10；Munkres, Topology, §28
 
-## 说明
-在度量空间里「列紧 $\iff$ 紧」（见下面的箭头），但在一般拓扑空间里**不等价** —— 列紧严格更强。度量空间好用的地方正是这里。
-
-注意子列收敛到的是 $X$ 中的点：列紧是内蕴性质，不看外面那个空间。
+> 说明见 `notes/def.sequentially-compact.md`
 
 引用：`def.sequentially-compact`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

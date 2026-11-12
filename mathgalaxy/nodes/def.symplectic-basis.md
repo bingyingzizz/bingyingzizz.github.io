@@ -17,7 +17,7 @@ layer 17 · 定义 · 多重线性与张量 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.symplectic-basis.4.md](./def.symplectic-basis.4.md)
 
-refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology
+refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 2
 
 > 说明见 `notes/def.symplectic-basis.md`
 

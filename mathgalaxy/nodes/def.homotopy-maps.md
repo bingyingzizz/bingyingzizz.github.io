@@ -1,6 +1,6 @@
 # 映射同伦　`def.homotopy-maps`
 同伦：映射之间的一整段连续形变
-layer 17 · 定义 · 基本群 · 拓扑学
+layer 6 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.homotopy-maps)　·　[节点索引](../index.md)
 
 设 $X, Y$ 是拓扑空间，$f, g : X \to Y$ 连续。称 $f$ **同伦于** $g$，如果存在连续映射

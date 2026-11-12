@@ -10,15 +10,15 @@ $$\prod_{i \in I} U_{i} \qquad (U_{i} \in \mathcal{T}_{i},$$
 
 为基的拓扑 —— 也就是使所有投影 $\pi_{j} : \prod_{i} X_{i} \to X_{j}$ 都连续的**最粗**拓扑。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/def-dep.producttopo-topology.md](../proofs/def-dep.producttopo-topology.md)
-
-- …另有入边，续页见 [nodes/def.product-topology.2.md](./def.product-topology.2.md)
-
 ## 它能推出什么 / 谁在用它
+- 被 [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化 用
+
 - …另有出边，续页见 [nodes/def.product-topology.3.md](./def.product-topology.3.md)
 
-refs: Munkres, Topology
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.product-topology.2.md](./def.product-topology.2.md)
+
+refs: Engelking, General Topology, Ch. 2 §2.3；Munkres, Topology
 
 > 说明见 `notes/def.product-topology.md`
 

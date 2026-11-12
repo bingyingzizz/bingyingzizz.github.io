@@ -1,6 +1,6 @@
 # Baire 的三条等价刻画　`prop.baire-characterizations`
 Baire 空间的等价刻画与「纲的用法」
-layer 19 · 命题 · Baire 纲与三大定理 · 泛函分析
+layer 18 · 命题 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=prop.baire-characterizations)　·　[节点索引](../index.md)
 
 下列**等价**：

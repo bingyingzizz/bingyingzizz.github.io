@@ -2,14 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.integral-order)　·　[Chinese page (authoritative)](./prop.integral-order.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Integral Estimates` (short) · `Monotonicity and Estimates for Integrals` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.integral-order.md` and `proofs/`.
+## Statement · **draft**
+Let $f, g$ be integrable on $[a, b]$.
 
+- **Order preservation**: if $f(x) \le g(x)$ holds everywhere, then $\int_a^b f \le \int_a^b g$; in particular $f \ge 0 \implies \int_a^b f \ge 0$.
+- **Absolute value**: $|f|$ is integrable, and
 
-Cite: `prop.integral-order` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\Bigl| \int_a^b f \Bigr| \le \int_a^b |f|$$
 
+> continued in nodes/prop.integral-order.en.2.md

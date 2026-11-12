@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.spectral-theorem)　·　[Chinese page (authoritative)](./thm.spectral-theorem.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 30 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.spectral-theorem.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a finite-dimensional **real** inner product space, $T : V \to V$ **self-adjoint** (that is, real symmetric). Then there is an **orthonormal basis** of $V$ in which $T$ is diagonal:
 
+$$V = E_{\lambda_1} \oplus \cdots \oplus E_{\lambda_m}$$
 
-Cite: `thm.spectral-theorem` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(these eigenspaces are **pairwise orthogonal**.)
 
+> continued in nodes/thm.spectral-theorem.en.2.md

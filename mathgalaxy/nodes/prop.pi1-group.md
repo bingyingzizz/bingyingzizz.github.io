@@ -1,6 +1,6 @@
 # π₁ 是群　`prop.pi1-group`
 $\pi_{1}(X, x_{0})$ 确实是群
-layer 20 · 命题 · 基本群 · 拓扑学
+layer 16 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.pi1-group)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间、$x_{0} \in X$。在闭道路的同伦类之集 $\pi_{1}(X, x_{0})$（`def.fundamental-group`）上定义

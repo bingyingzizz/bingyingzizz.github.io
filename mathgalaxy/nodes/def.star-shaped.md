@@ -10,10 +10,10 @@ $$(1-t)x_{0} + t x \in S.$$
 这样的 $x_{0}$ 叫 $S$ 的一个**星点**（star center）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.convex-set`](../nodes/def.convex-set.md) 凸集：非空凸集 $\implies$ 星形集　[proofs/e170.implication.md](../proofs/e170.implication.md)
+- [`def.star-shaped-at-point`](../nodes/def.star-shaped-at-point.md) 关于一点的星形集：用到了定义 关于一点的星形集　[proofs/dep.star-ssap.md](../proofs/dep.star-ssap.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`lem.poincare-lemma`](../nodes/lem.poincare-lemma.md) Poincaré 引理 用
+- …另有出边，续页见 [nodes/def.star-shaped.2.md](./def.star-shaped.2.md)
 
 refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 

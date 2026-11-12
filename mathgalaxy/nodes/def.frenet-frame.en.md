@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 25 · definition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Frenet Frame` (short) · `Frenet Frame, Curvature and Torsion` (full)
 
 ## Statement and proof

@@ -3,7 +3,7 @@
 layer 30 · 命题 · Lie 群 · 微分几何
 [在星图里打开](../#n=prop.left-invariant-fields)　·　[节点索引](../index.md)
 
-**在做什么**：把 Lie 群「在单位元处求导」—— 左平移让单位元处的
+**在做什么**：把 Lie 群「在单位元处求导」—— 左平移让单位元处的每个切向量长成一个整体向量场，而这些向量场恰好构成一个 Lie 代数。
 > 陈述续见 [nodes/prop.left-invariant-fields.2.md](./prop.left-invariant-fields.2.md)
 
 
@@ -12,9 +12,9 @@ layer 30 · 命题 · Lie 群 · 微分几何
 - ⇒ [`thm.maurer-cartan`](../nodes/thm.maurer-cartan.md) Maurer–Cartan 方程
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/prop.left-invariant-fields.4.md](./prop.left-invariant-fields.4.md)
+- …另有入边，续页见 [nodes/prop.left-invariant-fields.3.md](./prop.left-invariant-fields.3.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· 左不变向量场与 Lie 代数；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 括号的自然性
+refs: Tu, An Introduction to Manifolds, 2nd ed., Ch. 4 §15；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Lie Groups and Lie Algebras」· Lie 括号的自然性
 
 > 说明见 `notes/prop.left-invariant-fields.md`
 

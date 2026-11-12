@@ -19,7 +19,7 @@ $$[T]_{\mathcal{B}'} = P^{-1}\,[T]_{\mathcal{B}}\,P$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.change-of-basis.2.md](./thm.change-of-basis.2.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 4
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 4
 
 > 说明见 `notes/thm.change-of-basis.md`
 

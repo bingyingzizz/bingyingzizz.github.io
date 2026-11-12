@@ -1,6 +1,6 @@
 # de Rham 定理　`thm.de-rham`
 de Rham 定理
-layer 32 · 定理 · 微分形式、积分与 de Rham · 微分几何
+layer 30 · 定理 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=thm.de-rham)　·　[节点索引](../index.md)
 
 *
@@ -16,7 +16,7 @@ layer 32 · 定理 · 微分形式、积分与 de Rham · 微分几何
 ## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.de-rham.4.md](./thm.de-rham.4.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· de Rham 定理；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Poincaré 引理与 Mayer–Vietoris 序列
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「De Rham Theory」· de Rham 定理；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「De Rham Theory」· Poincaré 引理与 Mayer–Vietoris 序列
 
 > 说明见 `notes/thm.de-rham.md`
 

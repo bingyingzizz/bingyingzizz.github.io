@@ -1,5 +1,5 @@
 # 紧的三个等价刻画　`thm.metric-compact-equiv`
-度量空间中：紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
+紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
 layer 17 · 定理 · 度量空间 · 拓扑学
 [在星图里打开](../#n=thm.metric-compact-equiv)　·　[节点索引](../index.md)
 
@@ -16,7 +16,7 @@ layer 17 · 定理 · 度量空间 · 拓扑学
 ## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.metric-compact-equiv.3.md](./thm.metric-compact-equiv.3.md)
 
-refs: Munkres, Topology, §28 与 §43
+refs: Engelking, Ch. 4 §4.3；Munkres, Topology, §28 与 §43
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Sequentially_compact_space · nLab https://ncatlab.org/nlab/show/compact+space
 

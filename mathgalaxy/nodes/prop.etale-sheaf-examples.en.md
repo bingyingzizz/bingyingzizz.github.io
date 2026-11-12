@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Abstract Algebra
+layer 17 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Abstract Algebra
 names: `Étale Sheaf Examples` (short) · `Examples of Étale Sheaves` (full)
 
 ## Statement and proof

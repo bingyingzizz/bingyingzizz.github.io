@@ -1,6 +1,6 @@
 # 映射的度　`def.degree`
 度：$S^{n-1} \to S^{n-1}$ 在 $H_{n-1} \cong \mathbb{Z}$ 上的倍数
-layer 30 · 定义 · 同调群 · 拓扑学
+layer 26 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.degree)　·　[节点索引](../index.md)
 
 设 $n \ge 1$，$f : S^{n-1} \to S^{n-1}$ 连续。取定约化同调 $\tilde{H}_{n-1}(S^{n-1}; \mathbb{Z}) \cong \mathbb{Z}$ 的一个生成元，记作 $[S^{n-1}]$（等价于给 $S^{n-1}$ 取一个**定向**；$n \ge 2$ 时它就是 $H_{n-1}$）。则存在**唯一**的整数 $d$ 使

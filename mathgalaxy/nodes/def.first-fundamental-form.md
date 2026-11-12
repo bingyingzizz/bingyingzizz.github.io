@@ -1,11 +1,9 @@
 # 第一基本形式　`def.first-fundamental-form`
 第一基本形式
-layer 28 · 定义 · 曲面论 · 微分几何
+layer 26 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.first-fundamental-form)　·　[节点索引](../index.md)
 
 曲面的**第一基本形式**是 $T_{p}U$ 上的对称双线性形式
-
-$$I(v,w) := \langle \mathrm{d}r(v), \mathrm{d}r(w)\rangle .$$
 > 陈述续见 [nodes/def.first-fundamental-form.2.md](./def.first-fundamental-form.2.md)
 
 
@@ -18,7 +16,7 @@ $$I(v,w) := \langle \mathrm{d}r(v), \mathrm{d}r(w)\rangle .$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.first-fundamental-form.3.md](./def.first-fundamental-form.3.md)
 
-refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· 第一基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第一基本形式
+refs: Tu, Differential Geometry, GTM 275, Ch. 1 §3；do Carmo, Differential Geometry of Curves and Surfaces, 第 2 章「正则曲面」· 第一基本形式；陈维桓《微分几何讲义》, 「曲面的局部理论」· 第一基本形式
 
 > 说明见 `notes/def.first-fundamental-form.md`
 

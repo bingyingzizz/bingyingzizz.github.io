@@ -8,7 +8,7 @@ layer 13 · 定理 · 赋范空间与有界算子 · 泛函分析
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理：用到了定义 Zorn 引理　[proofs/dep.hb-zorn.md](../proofs/dep.hb-zorn.md)
+- [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理：Zorn 引理：把延拓推到整个空间　[proofs/imp.hahn-banach-zorn.md](../proofs/imp.hahn-banach-zorn.md)
 
 - …另有入边，续页见 [nodes/thm.hahn-banach.3.md](./thm.hahn-banach.3.md)
 

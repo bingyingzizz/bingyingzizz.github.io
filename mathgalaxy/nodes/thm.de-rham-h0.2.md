@@ -1,7 +1,7 @@
 # 零次上同调　`thm.de-rham-h0`　·　续页（第 2 页）
 [在星图里打开](../#n=thm.de-rham-h0)　·　第 1 页 [nodes/thm.de-rham-h0.md](./thm.de-rham-h0.md)
 
-## 陈述（续）
-$0$-形式就是光滑函数，$\mathrm{d}f = 0$ 等价于 $f$ 在每张连通卡上是常数；而 $B^{0} = 0$，所以 $H^{0} = Z^{0}$，没有商可做。
-
-> 续见 [nodes/thm.de-rham-h0.3.md](./thm.de-rham-h0.3.md)
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调 + [`def.connected`](../nodes/def.connected.md) 连通与连通分量：局部常函数在分支上常值 $\implies$ 零次上同调是分支数　[proofs/imp.mf-h0.md](../proofs/imp.mf-h0.md)
+- [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理：de Rham 定理的 $k=0$ 情形：上同调数连通分支　[proofs/imp.derived-h0-from-de-rham.md](../proofs/imp.derived-h0-from-de-rham.md)
+- [`def.connected`](../nodes/def.connected.md) 连通与连通分量：用到了定义 连通与连通分量　[proofs/dep.mf-connected-h0.md](../proofs/dep.mf-connected-h0.md)

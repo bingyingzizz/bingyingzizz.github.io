@@ -11,15 +11,13 @@ $$\chi_T(T) = 0$$
 
 矩阵形式：对 $A \in M_n(K)$ 有 $\chi_A(A) = 0$（零矩阵）。
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.minimal-poly-divisor`](../nodes/thm.minimal-poly-divisor.md) 极小多项式整除特征多项式
-
-- …另有出边，续页见 [nodes/thm.cayley-hamilton.3.md](./thm.cayley-hamilton.3.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.cayley-hamilton.2.md](./thm.cayley-hamilton.2.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.cayley-hamilton.3.md](./thm.cayley-hamilton.3.md)
+
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6；Lang, Linear Algebra
 
 > 说明见 `notes/thm.cayley-hamilton.md`
 

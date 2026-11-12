@@ -3,9 +3,9 @@
 
 ## 陈述（续）
 设 $(M^{2n}, \omega)$ 是辛流形。浸入子流形 $L \subseteq M$ 叫 **Lagrange 子流形**（Lagrangian submanifold），若
-
 1. $\dim L = n$（即 $\dim M$ 的一半）；
 2. $\omega|_{L} = 0$（$L$ 上 $\omega$ 恒为零，即 $L$ 迷向）。
+
 等价说法：对每个 $p \in L$，$T_{p}L$ 是 $T_{p}M$ 的 Lagrange 子空间。
 
 **标准例子**：

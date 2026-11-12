@@ -13,14 +13,13 @@ $$V = E_{\lambda_1} \oplus \cdots \oplus E_{\lambda_m}$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`cor.spectral-normal`](../nodes/cor.spectral-normal.md) 谱定理（复正规）
-- ⇒ [`thm.sylvester-criterion`](../nodes/thm.sylvester-criterion.md) Sylvester 判据
 
 - …另有出边，续页见 [nodes/thm.spectral-theorem.4.md](./thm.spectral-theorem.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.spectral-theorem.3.md](./thm.spectral-theorem.3.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, Ch. 11
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 2；Hoffman–Kunze, Linear Algebra, Ch. 8；Roman, Advanced Linear Algebra, Ch. 11
 
 > 说明见 `notes/thm.spectral-theorem.md`
 

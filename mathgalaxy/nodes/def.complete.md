@@ -19,7 +19,7 @@ $$\{x_n\}\ \text{Cauchy} \implies \exists x \in X : x_n \to x$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.complete.3.md](./def.complete.3.md)
 
-refs: Rudin, Principles of Mathematical Analysis, Ch. 3
+refs: Engelking, General Topology, Ch. 4 §4.3；Rudin, Principles of Mathematical Analysis, Ch. 3
 
 > 说明见 `notes/def.complete.md`
 

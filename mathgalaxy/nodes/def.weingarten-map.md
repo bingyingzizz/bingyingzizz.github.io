@@ -1,11 +1,9 @@
 # Weingarten 变换　`def.weingarten-map`
 Weingarten 变换（形状算子）
-layer 30 · 定义 · 曲面论 · 微分几何
+layer 28 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.weingarten-map)　·　[节点索引](../index.md)
 
 设 $e_{3} = n$。**Weingarten 变换**定义为 Gauss 映射微分的相反数：
-
-$$W(v) := -\mathrm{d}n(v) = -\mathrm{d}e_{3}(v),\qquad W\colon T_{p}S \to T_{p}S .$$
 > 陈述续见 [nodes/def.weingarten-map.2.md](./def.weingarten-map.2.md)
 
 
@@ -17,7 +15,7 @@ $$W(v) := -\mathrm{d}n(v) = -\mathrm{d}e_{3}(v),\qquad W\colon T_{p}S \to T_{p}S
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.weingarten-map.4.md](./def.weingarten-map.4.md)
 
-refs: do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 形状算子与自伴性；陈维桓《微分几何讲义》, 「曲面的局部理论」· Weingarten 变换
+refs: Tu, Differential Geometry, GTM 275, Ch. 1 §5；do Carmo, Differential Geometry of Curves and Surfaces, 第 3 章「Gauss 映射的几何」· 形状算子与自伴性；陈维桓《微分几何讲义》, 「曲面的局部理论」· Weingarten 变换
 
 > 说明见 `notes/def.weingarten-map.md`
 

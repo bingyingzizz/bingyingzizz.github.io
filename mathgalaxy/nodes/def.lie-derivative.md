@@ -1,6 +1,6 @@
 # Lie 导数　`def.lie-derivative`
 Lie 导数
-layer 27 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 25 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.lie-derivative)　·　[节点索引](../index.md)
 
 **白话**：Lie 导数就是「沿 $X$ 的流把张量拖回来，再对时间求导」—— 它量的是张量在流下的变化率；对函数它是方向导数，对向量场它就是 Lie 括号。

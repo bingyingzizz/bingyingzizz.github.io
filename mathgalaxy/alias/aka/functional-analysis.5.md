@@ -15,16 +15,14 @@
 
 - 星形集 | 星形区域 → def.star-shaped
 
+- 关于一点的星形集 | 关于一点的星形 | 某点的星形 | star-shaped with respect to a point → def.star-shaped-at-point
+
+- 凸集在每一点处星形 | 凸集在其每一点处都是星形集 | convex sets are star-shaped → thm.convex-star-shaped-every-point
+
 - 凸组合 → def.convex-combination
 
 - 凸包 → def.convex-hull
 
 - 一致有界原理的逐点极限推论 | 逐点极限算子 → cor.ubp-pointwise-limit
-
-- 双线性映射的联合连续性 | 分别连续双线性映射 → thm.bilinear-jointly-continuous
-
-- Lax-Milgram 定理 | 拉克斯-米尔格拉姆定理 → thm.lax-milgram
-
-- 可补子空间 | 拓扑可补子空间 → def.complemented-subspace
 
 > 续见 alias/aka/functional-analysis.6.md

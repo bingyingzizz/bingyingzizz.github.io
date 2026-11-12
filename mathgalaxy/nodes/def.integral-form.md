@@ -15,7 +15,7 @@ layer 18 · 定义 · 内蕴几何 · 微分几何
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.integral-form.4.md](./def.integral-form.4.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式的积分」· 定向与积分；do Carmo, Differential Forms and Applications, 第 2 章「线积分」· 形式的积分与换元
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Integration」· 定向与积分；do Carmo, Differential Forms and Applications, 第 2 章「线积分」· 形式的积分与换元
 
 > 说明见 `notes/def.integral-form.md`
 

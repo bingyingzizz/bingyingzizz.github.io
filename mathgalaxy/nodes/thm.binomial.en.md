@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=thm.binomial)　·　[Chinese page (authoritative)](./thm.binomial.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.binomial.md` and `proofs/`.
+## Statement · **draft**
+Let $A$ be a commutative ring, $a, b \in A$, $n \in \mathbb{N}$. Then
 
+$$(a + b)^{n} = \sum_{k=0}^{n} \binom{n}{k} a^{k}\, b^{n-k}, \qquad \binom{n}{k} := \frac{n!}{k!\,(n-k)!}.$$
 
-Cite: `thm.binomial` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The coefficients satisfy the **Pascal recurrence**
 
+$$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k},$$
+
+and are therefore natural numbers ($\binom{n}{k}$ is the number of ways to "choose $k$ from $n$").
+
+> continued in nodes/thm.binomial.en.2.md

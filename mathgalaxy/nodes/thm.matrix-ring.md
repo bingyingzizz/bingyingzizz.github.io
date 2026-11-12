@@ -14,7 +14,7 @@ layer 14 · 定理 · 矩阵与行列式 · 抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.matrix-ring.2.md](./thm.matrix-ring.2.md)
 
-refs: Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 > 说明见 `notes/thm.matrix-ring.md`
 

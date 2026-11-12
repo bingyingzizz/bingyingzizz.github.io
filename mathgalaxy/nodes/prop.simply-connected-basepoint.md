@@ -1,6 +1,6 @@
 # 单连通与基点无关　`prop.simply-connected-basepoint`
 单连通的条件 2 与基点选取无关
-layer 22 · 命题 · 基本群 · 拓扑学
+layer 18 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.simply-connected-basepoint)　·　[节点索引](../index.md)
 
 设 $X$ 道路连通。则以下两条等价：

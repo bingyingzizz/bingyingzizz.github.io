@@ -23,7 +23,7 @@ $$\mathring{A} := \bigcup\{\, U : U \subseteq A,\ U\ \text{开} \,\} ,$$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.interior.3.md](./def.interior.3.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 1 §1.3
 
 > 说明见 `notes/def.interior.md`
 

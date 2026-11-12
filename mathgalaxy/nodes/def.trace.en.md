@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.trace)　·　[Chinese page (authoritative)](./def.trace.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.trace.md` and `proofs/`.
+## Statement · **draft**
+For a square matrix $A = (a_{ij}) \in M_n(K)$, define the **trace** as the sum of the diagonal entries:
 
+$$\operatorname{tr} A := \sum_{i=1}^{n} a_{ii}$$
 
-Cite: `def.trace` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Basic properties:
 
+> continued in nodes/def.trace.en.2.md

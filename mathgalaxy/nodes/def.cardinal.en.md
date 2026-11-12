@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.cardinal)　·　[Chinese page (authoritative)](./def.cardinal.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.cardinal.md` and `proofs/`.
+## Statement · **draft**
+Equipotence partitions all sets into classes. The **cardinality** $\#A$ of a set $A$ is the equipotence class of $A$ — it measures how large $A$ is, without regard to what the elements of $A$ are.
 
+Compare two cardinals:
 
-Cite: `def.cardinal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+- $\#A \le \#B$: there is an **injection** $A \to B$;
+- $\#A = \#B$: there is a **bijection** $A \to B$ (equipotence);
+- $\#A < \#B$: $\#A \le \#B$ but $\#A \ne \#B$.
 
+> continued in nodes/def.cardinal.en.2.md

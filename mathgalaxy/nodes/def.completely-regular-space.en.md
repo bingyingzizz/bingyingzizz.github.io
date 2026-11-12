@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Separation Axioms (`topology.separation`) · Topology
+layer 7 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.completely-regular-space.md` and `proofs/`.

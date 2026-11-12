@@ -11,11 +11,9 @@ $$d^{p+1,q} \circ d^{p,q} = 0, \qquad d'^{p,q+1} \circ d'^{p,q} = 0, \qquad d'^{
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.bicomplex-complex.md](../proofs/def-dep.bicomplex-complex.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.bicomplex-spectral`](../nodes/prop.bicomplex-spectral.md) 双复形给出谱序列 用
-
 - …另有出边，续页见 [nodes/def.bicomplex.2.md](./def.bicomplex.2.md)
 
-refs: Le Stum, Definition 7.2.17
+refs: Weibel, An Introduction to Homological Algebra, Ch. 5 §5.6；Le Stum, Definition 7.2.17
 
 > 说明见 `notes/def.bicomplex.md`
 

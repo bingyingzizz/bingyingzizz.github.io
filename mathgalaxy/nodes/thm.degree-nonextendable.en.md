@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · theorem · cluster Homology Groups (`topology.homology`) · Topology
+layer 27 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.degree-nonextendable.md` and `proofs/`.

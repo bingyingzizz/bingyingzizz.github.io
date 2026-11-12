@@ -9,8 +9,6 @@ $$\forall\varepsilon > 0,\ \exists x_1, \ldots , x_n \in X : X = \bigcup_{i=1}^{
 
 等价说法：对每个 $\varepsilon > 0$，$X$ 都能被**有限个**半径 $\varepsilon$ 的开球盖住。
 **等价刻画（序列版，最常用的一条）**：在度量空间里，「全有界」有一条**不提 $\varepsilon$-网**的等价说法 ——
-
-$$X\ \text{全有界} \iff X\ \text{中每个序列都有 Cauchy 子列} .$$
 > 陈述续见 [nodes/def.totally-bounded.2.md](./def.totally-bounded.2.md)
 
 
@@ -20,7 +18,7 @@ $$X\ \text{全有界} \iff X\ \text{中每个序列都有 Cauchy 子列} .$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.totally-bounded.5.md](./def.totally-bounded.5.md)
 
-refs: Munkres, Topology, §43
+refs: Engelking, General Topology, Ch. 4 §4.3；Munkres, Topology, §43
 
 > 说明见 `notes/def.totally-bounded.md`
 

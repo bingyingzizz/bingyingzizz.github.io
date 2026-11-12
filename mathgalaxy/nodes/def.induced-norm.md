@@ -21,7 +21,7 @@ $$\|v\| = 0 \iff v = 0, \qquad \|cv\| = |c|\,\|v\|, \qquad \|u + v\| \le \|u\| +
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.induced-norm.2.md](./def.induced-norm.2.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 8
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 5；Hoffman–Kunze, Linear Algebra, Ch. 8
 
 > 说明见 `notes/def.induced-norm.md`
 

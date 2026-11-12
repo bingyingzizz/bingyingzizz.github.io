@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.h0-components)　·　[Chinese page (authoritative)](./prop.h0-components.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · proposition · cluster Homology Groups (`topology.homology`) · Topology
+layer 23 · proposition · cluster Homology Groups (`topology.homology`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.h0-components.md` and `proofs/`.
+## Statement · **draft**
+Let $X \ne \emptyset$, and let $\pi_{0}(X)$ be the set of its **path components**. Then
 
+$$H_{0}(X) \;\cong\; \bigoplus_{C \in \pi_{0}(X)} \mathbb{Z}.$$
 
-Cite: `prop.h0-components` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+More precisely: choosing a point $C$ from each component $x_{C}$, the classes $[x_{C}]$ form a basis of $H_{0}(X)$. In particular
 
+$$\tilde{H}_{0}(X) = 0 \iff X \text{ is path-connected}.$$
+
+> continued in nodes/prop.h0-components.en.2.md

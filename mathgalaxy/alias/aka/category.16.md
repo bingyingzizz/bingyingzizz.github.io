@@ -1,6 +1,8 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
+- 幺半群对象 | monoid object | Mon(C) | 笛卡尔范畴 | cartesian category | Definition 1.4.10 | Def 1.4.10 | Exercise 1.51 → def.monoid-object
+
 - 群对象 | group object | 阿贝尔群对象 | abelian group object | Gr(C) | Ab(C) | Exercise 1.51 → def.group-object
 
 - Ab(Top) | Ab(Set) | 拓扑阿贝尔群怎么来的 | 群对象的例子 → ex.ab-of-categories
@@ -16,9 +18,5 @@
 - 正合列 | exact sequence | 短正合列 | Definition 5.2.3 → def.exact-sequence
 
 - Theorem 1.2.4 | Thm 1.2.4 → thm.equivalence-criterion
-
-- Proposition 1.5.10 | Prop 1.5.10 | 坎延拓 → prop.kan-extension-adjoint
-
-- Proposition 1.5.11 | Prop 1.5.11 | 坎延拓 → prop.kan-extension-exists
 
 > 续见 alias/aka/category.17.md

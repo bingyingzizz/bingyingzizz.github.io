@@ -1,6 +1,6 @@
 # 不可定向亏格　`def.nonorientable-genus`
 不可定向亏格 $k$（$\chi=2-k$）
-layer 33 · 定义 · 曲面的地形 · 拓扑学
+layer 31 · 定义 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=def.nonorientable-genus)　·　[节点索引](../index.md)
 
 设 $M$ 是闭不可定向曲面。它的**不可定向亏格** $k(M)$ 是使 $M$ 同胚于 $k$ 个射影平面的连通和的最小整数 $k\ge 1$。等价地，$k(M)$ 是标准形中交叉帽的个数，且 Euler 示性数满足 $\chi(M)=2-k(M)$。

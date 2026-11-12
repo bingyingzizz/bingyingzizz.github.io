@@ -15,14 +15,13 @@ $$E_{\lambda} := \ker(T - \lambda\,I) \subseteq V$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.diagonalizable`](../nodes/thm.diagonalizable.md) 可对角化判据
-- 被 [`def.principal-curvature`](../nodes/def.principal-curvature.md) 主曲率 用
 
 - …另有出边，续页见 [nodes/def.eigenvalue.3.md](./def.eigenvalue.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.eigenvalue.2.md](./def.eigenvalue.2.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 6
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 6
 
 > 说明见 `notes/def.eigenvalue.md`
 

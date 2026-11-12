@@ -8,16 +8,16 @@ layer 4 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 1. **含两端**：$\emptyset \in \mathcal{T}$ 且 $X \in \mathcal{T}$；
 2. **任意并封闭**：$\{ U_i \}_{i \in I} \subseteq \mathcal{T} \implies \bigcup_{i \in I} U_i \in \mathcal{T}$（$I$ 任意，可以不可数）；
 3. **有限交封闭**：$U, V \in \mathcal{T} \implies U \cap V \in \mathcal{T}$。
+> 陈述续见 [nodes/def.topology.2.md](./def.topology.2.md)
 
-$\mathcal{T}$ 的成员称为**开集**，它们的补集称为**闭集**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.topology.2.md](./def.topology.2.md)
+- …另有入边，续页见 [nodes/def.topology.3.md](./def.topology.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.topology.3.md](./def.topology.3.md)
+- …另有出边，续页见 [nodes/def.topology.4.md](./def.topology.4.md)
 
-refs: Munkres, Topology, Ch. 2
+refs: Engelking, General Topology, Ch. 1 §1.1；Munkres, Topology, Ch. 2
 
 > 说明见 `notes/def.topology.md`
 

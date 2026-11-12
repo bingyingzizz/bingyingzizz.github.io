@@ -1,6 +1,6 @@
 # Ricci 曲率　`def.ricci-curvature`
 Ricci 曲率与数量曲率
-layer 30 · 定义 · 内蕴几何 · 微分几何
+layer 28 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.ricci-curvature)　·　[节点索引](../index.md)
 
 **在做什么**：把曲率张量缩并一次得到 Ricci 曲率、再缩并一次得到数量曲率 —— 这两个更粗的量才是 Einstein 方程里出现的对象。

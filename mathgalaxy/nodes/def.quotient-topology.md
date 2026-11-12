@@ -17,7 +17,7 @@ $$\mathcal{T}_{Y} := \{\, V \subseteq Y : \pi^{-1}(V) \in \mathcal{T} \,\}$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.quotient-topology.3.md](./def.quotient-topology.3.md)
 
-refs: Munkres, Topology
+refs: Engelking, General Topology, Ch. 2 §2.4；Munkres, Topology
 
 > 说明见 `notes/def.quotient-topology.md`
 

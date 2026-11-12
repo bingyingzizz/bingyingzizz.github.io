@@ -1,6 +1,6 @@
 # 积分流形　`def.integral-manifold`
 积分流形与叶片坐标
-layer 27 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 25 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.integral-manifold)　·　[节点索引](../index.md)
 
 **白话**：一块 $k$ 维薄片，如果它在每点的切空间正好是分布给的那个子空间，它就是这分布的**积分流形** —— 「积分」就是把一堆方向积成一整块地。
@@ -9,7 +9,6 @@ layer 27 · 定义 · 向量场与 Lie 结构 · 微分几何
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
-- ⇒ [`thm.foliation-existence`](../nodes/thm.foliation-existence.md) 叶状结构存在定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.integral-manifold.4.md](./def.integral-manifold.4.md)

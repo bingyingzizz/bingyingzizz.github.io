@@ -1,6 +1,6 @@
 # Cartan 公式　`thm.cartan-formula`
 Cartan 公式
-layer 28 · 定理 · 向量场与 Lie 结构 · 微分几何
+layer 26 · 定理 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=thm.cartan-formula)　·　[节点索引](../index.md)
 
 **白话**：Lie 导数可以拆成「先缩再外微分」加「先外微分再缩」两部分 —— 一条公式把三个算子捆在一起，代价为零。

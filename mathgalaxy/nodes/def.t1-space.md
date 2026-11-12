@@ -16,7 +16,7 @@ layer 6 · 定义 · 分离公理 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.t1-space.3.md](./def.t1-space.3.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 > 说明见 `notes/def.t1-space.md`
 

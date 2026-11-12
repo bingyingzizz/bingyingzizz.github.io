@@ -13,8 +13,8 @@
 
 - Čech 上同调 | Cech 上同调 | Čech cohomology | Definition 7.3.5 | Def 7.3.5 → def.cech-cohomology
 
-- Čech 上同调是余极限 | Exercise 7.46 | Proposition 7.3.4 → prop.cech-as-colim
+- Čech 复形 | Cech complex | Čech 上链复形 | Proposition 7.3.4 → def.cech-complex
 
-- Cartan-Leray | Cartan–Leray 谱序列 | Theorem 7.3.6 | Thm 7.3.6 | Corollary 7.3.7 | 卡当-莱雷谱序列 → thm.cartan-leray
+- Čech 上同调是余极限 | Exercise 7.46 | Proposition 7.3.4 → prop.cech-as-colim
 
 > 续见 alias/aka/homology.6.md

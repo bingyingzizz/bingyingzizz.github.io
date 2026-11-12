@@ -1,9 +1,9 @@
 # 特征多项式　`def.char-poly`　·　续页（第 3 页）
 [在星图里打开](../#n=def.char-poly)　·　第 1 页 [nodes/def.char-poly.md](./def.char-poly.md)　·　上一页 [nodes/def.char-poly.2.md](./def.char-poly.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.minimal-poly`](../nodes/def.minimal-poly.md) 极小多项式 用
-- ⇒ [`thm.cayley-hamilton`](../nodes/thm.cayley-hamilton.md) Cayley–Hamilton 定理
-- 被 [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形 用
-- 被 [`def.similarity`](../nodes/def.similarity.md) 相似 用
-- 被 [`def.eigenspace`](../nodes/def.eigenspace.md) 特征子空间 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.fundamental-algebra`](../nodes/thm.fundamental-algebra.md) 代数基本定理：代数基本定理给出 $\mathbb{C}$ 上特征多项式的 $n$ 个根　[proofs/imp.derived-charpoly-splits.md](../proofs/imp.derived-charpoly-splits.md)
+- [`def.determinant`](../nodes/def.determinant.md) 行列式：用到了定义 行列式　[proofs/dep.determinant-charpoly.md](../proofs/dep.determinant-charpoly.md)
+- [`def.polynomial-ring`](../nodes/def.polynomial-ring.md) 多项式环：用到了定义 多项式环　[proofs/dep.polyring-charpoly.md](../proofs/dep.polyring-charpoly.md)
+
+> 续见 [nodes/def.char-poly.4.md](./def.char-poly.4.md)

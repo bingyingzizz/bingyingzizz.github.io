@@ -1,6 +1,6 @@
 # 仿紧性与单位分解　`prop.paracompact-partition-unity`
 命题：仿紧 Hausdorff / 正规 $\implies$ 单位分解存在
-layer 19 · 命题 · 仿紧与单位分解 · 拓扑学
+layer 18 · 命题 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=prop.paracompact-partition-unity)　·　[节点索引](../index.md)
 
 对

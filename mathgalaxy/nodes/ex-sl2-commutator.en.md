@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 28 · example · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry / geometry / Abstract Algebra
+layer 26 · example · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry / geometry / Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex-sl2-commutator.md` and `proofs/`.

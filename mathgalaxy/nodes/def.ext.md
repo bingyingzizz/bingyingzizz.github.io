@@ -15,7 +15,7 @@ $$\operatorname{Ext}^{n}(K^{\bullet}, L^{\bullet}) := \operatorname{Hom}_{D(\mat
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.ext.3.md](./def.ext.3.md)
 
-refs: Le Stum, Definition 7.2.9
+refs: Weibel, An Introduction to Homological Algebra, Ch. 3；Le Stum, Definition 7.2.9
 
 外部：Wikipedia https://en.wikipedia.org/wiki/Ext_functor · nLab https://ncatlab.org/nlab/show/Ext
 

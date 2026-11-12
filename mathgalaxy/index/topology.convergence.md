@@ -3,9 +3,9 @@
 造出「逼近」这套工具：第一 / 第二可数 → **网**与**滤子**（一般拓扑里的收敛）→ 局部紧 → 紧化的两种极端（一点紧化 / Stone–Čech）→ Tychonoff 乘积定理 → 紧性的基本操作与商。
 中心天体 def.net　·　10 个节点　·　根 `../`
 
+- def.locally-compact-space　局部紧空间　layer 0
 - def.second-countable　第二可数空间　layer 6
-- def.first-countable　第一可数空间　layer 7
-- def.locally-compact-space　局部紧空间　layer 17
+- def.first-countable　第一可数空间　layer 6
 - thm.tykhonov　Tychonoff 定理　layer 17
 - prop.compact-basic-operations　紧性的基本操作　layer 17
 - def.compactification　紧化　layer 17

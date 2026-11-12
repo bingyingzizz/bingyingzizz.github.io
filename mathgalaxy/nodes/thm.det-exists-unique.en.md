@@ -2,13 +2,21 @@
 English entry · root `../`
 [in graph](../#n=thm.det-exists-unique)　·　[Chinese page (authoritative)](./thm.det-exists-unique.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.det-exists-unique.md` and `proofs/`.
+## Statement · **draft**
+Let $\dim_K V = n$. Then there is a **unique** function
 
+$$D : V^{n} \longrightarrow K$$
 
-Cite: `thm.det-exists-unique` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+satisfying:
 
+**(i) Multilinear**: linear in each argument separately;
+
+**(ii) Alternating**: it takes the value $0$ whenever two arguments are equal;
+
+**(iii) Normalized**: $D(e_1, \ldots, e_n) = 1$ ($(e_i)$ being any fixed ordered basis).
+
+> continued in nodes/thm.det-exists-unique.en.2.md

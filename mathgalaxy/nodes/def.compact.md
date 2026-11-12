@@ -17,7 +17,7 @@ $$X = \bigcup_{k=1}^{n} U_{i_{k}}.$$
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.compact.3.md](./def.compact.3.md)
 
-refs: Munkres, Topology, §26（紧空间）
+refs: Engelking, General Topology, Ch. 3 §3.1；Munkres, Topology, §26（紧空间）
 
 > 说明见 `notes/def.compact.md`
 

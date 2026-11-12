@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.caratheodory-extension)　·　[Chinese page (authoritative)](./prop.caratheodory-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · proposition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.caratheodory-extension.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathfrak{A} \subseteq \mathcal{P}(X)$ be an **algebra**, $\mu _{0}$ a **premeasure** on $\mathfrak{A}$, and $\mu^{*}$ the outer measure induced by $\mu _{0}$ (as in the previous proposition, with $\mathcal{E} = \mathfrak{A}$, $\rho = \mu _{0}$).
 
+Then
 
-Cite: `prop.caratheodory-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.caratheodory-extension.en.2.md

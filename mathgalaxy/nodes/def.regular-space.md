@@ -18,7 +18,7 @@ layer 8 · 定义 · 分离公理 · 拓扑学
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.regular-space.3.md](./def.regular-space.3.md)
 
-refs: Munkres, Topology；Engelking, General Topology
+refs: Munkres, Topology；Engelking, General Topology, Ch. 1 §1.5
 
 > 说明见 `notes/def.regular-space.md`
 

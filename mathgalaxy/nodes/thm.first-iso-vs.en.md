@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.first-iso-vs)　·　[Chinese page (authoritative)](./thm.first-iso-vs.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.first-iso-vs.md` and `proofs/`.
+## Statement · **draft**
+Let $T : V \to W$ be a linear map. Then
 
+$$\overline{T} : V / \ker T \longrightarrow \operatorname{im} T, \qquad v + \ker T \longmapsto T(v)$$
 
-Cite: `thm.first-iso-vs` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is a well-defined **linear isomorphism**. In particular
 
+$$V / \ker T \cong \operatorname{im} T$$
+
+> continued in nodes/thm.first-iso-vs.en.2.md

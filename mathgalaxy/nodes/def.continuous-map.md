@@ -1,6 +1,6 @@
 # 连续映射　`def.continuous-map`
 连续映射
-layer 16 · 定义 · 拓扑空间的基本语汇 · 拓扑学+数学分析
+layer 5 · 定义 · 拓扑空间的基本语汇 · 拓扑学+数学分析
 [在星图里打开](../#n=def.continuous-map)　·　[节点索引](../index.md)
 
 设 $X$、$Y$ 是拓扑空间。映射 $f : X \to Y$ **连续**，当且仅当**每个开集的原像是开集**：
@@ -11,15 +11,16 @@ $$V \in \mathcal{T}_Y \implies f^{-1}(V) \in \mathcal{T}_X$$
 
 连续的复合仍连续：$f$、$g$ 连续 $\implies g \circ f$ 连续。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.metric-continuity`](../nodes/def.metric-continuity.md) 度量空间的连续：度量连续 $\implies$ 拓扑连续（开集原像开）　[proofs/imp.metric-continuity-open-preimage.md](../proofs/imp.metric-continuity-open-preimage.md)
-
-- …另有入边，续页见 [nodes/def.continuous-map.2.md](./def.continuous-map.2.md)
-
 ## 它能推出什么 / 谁在用它
+- 被 [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据） 用
+- 被 [`def.homeomorphism`](../nodes/def.homeomorphism.md) 同胚 用
+
 - …另有出边，续页见 [nodes/def.continuous-map.3.md](./def.continuous-map.3.md)
 
-refs: Munkres, Topology, Ch. 2
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.continuous-map.2.md](./def.continuous-map.2.md)
+
+refs: Engelking, General Topology, Ch. 1 §1.4；Munkres, Topology, Ch. 2
 
 > 说明见 `notes/def.continuous-map.md`
 

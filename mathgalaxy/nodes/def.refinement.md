@@ -11,13 +11,14 @@ $$\forall s \in S,\ \exists i \in I :\quad V_{s} \subseteq U_{i}.$$
 > 陈述续见 [nodes/def.refinement.2.md](./def.refinement.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/def-link.refinement-topology.md](../proofs/def-link.refinement-topology.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.refinement.3.md](./def.refinement.3.md)
+- 被 [`def.paracompact`](../nodes/def.paracompact.md) 仿紧空间 用
+- 被 [`thm.michael-paracompact`](../nodes/thm.michael-paracompact.md) Michael 仿紧判别法 用
 
-refs: Munkres, Topology (2nd ed.), Section 39
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/def.refinement.3.md](./def.refinement.3.md)
+
+refs: Engelking, General Topology, Ch. 5 §5.1；Munkres, Topology (2nd ed.), Section 39
 
 > 说明见 `notes/def.refinement.md`
 

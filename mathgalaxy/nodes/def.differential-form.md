@@ -3,7 +3,7 @@
 layer 17 · 定义 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=def.differential-form)　·　[节点索引](../index.md)
 
-**在做什么**：把「在每点吃进 $k$ 个切向量、吐出一个数，并且对换两个变元要变号」这件事做成光滑对象 —— 微分形式就是
+**在做什么**：把「在每点吃进 $k$ 个切向量、吐出一个数，并且对换两个变元要变号」这件事做成光滑对象 —— 微分形式就是流形上那类能被拉回、能被积分的量。
 > 陈述续见 [nodes/def.differential-form.2.md](./def.differential-form.2.md)
 
 
@@ -15,7 +15,7 @@ layer 17 · 定义 · 活动标架与结构方程 · 微分几何
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.differential-form.4.md](./def.differential-form.4.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「微分形式」· 微分形式的定义与楔积；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 形式与楔积
+refs: Tu, An Introduction to Manifolds, 2nd ed., Ch. 5 §18；do Carmo, Differential Forms and Applications, 第 1 章「微分形式」· 形式与楔积
 
 > 说明见 `notes/def.differential-form.md`
 

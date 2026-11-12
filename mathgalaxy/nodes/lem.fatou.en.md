@@ -2,16 +2,16 @@
 English entry · root `../`
 [in graph](../#n=lem.fatou)　·　[Chinese page (authoritative)](./lem.fatou.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · lemma · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.fatou.md` and `proofs/`.
+## Statement · **draft**
+Let $\{f_n\} \subseteq L^+$. Then
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Fatou%27s_lemma
+$$\int \liminf_{n\to\infty} f_n \le \liminf_{n\to\infty} \int f_n$$
 
+## Notes · **draft**
+⚠ Mind the direction of the inequality: the **lower** limit outside the integral is **at most** the lower limit of the integrals. In other words, passing to the limit can only make the integral **smaller**, never larger.
 
-Cite: `lem.fatou` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.fatou.en.2.md

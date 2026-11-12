@@ -12,18 +12,16 @@ $$(A + B)_{ij} := a_{ij} + b_{ij}, \qquad (cA)_{ij} := c\,a_{ij}$$
 **乘法**：设 $A \in M_{m \times n}(K)$、$B \in M_{n \times p}(K)$，则 $AB \in M_{m \times p}(K)$ 定义为
 
 $$(AB)_{ij} := \sum_{k=1}^{n} a_{ik} b_{kj}$$
+> 陈述续见 [nodes/def.matrix-operations.2.md](./def.matrix-operations.2.md)
 
-（$A$ 的列数必须等于 $B$ 的行数，否则不定义。）
-
-## 它能推出什么 / 谁在用它
-- 被 [`def.invertible-matrix`](../nodes/def.invertible-matrix.md) 可逆矩阵 用
-
-- …另有出边，续页见 [nodes/def.matrix-operations.3.md](./def.matrix-operations.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
-- …另有入边，续页见 [nodes/def.matrix-operations.2.md](./def.matrix-operations.2.md)
+- …另有入边，续页见 [nodes/def.matrix-operations.3.md](./def.matrix-operations.3.md)
 
-refs: Hoffman–Kunze, Linear Algebra, Ch. 1
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.matrix-operations.4.md](./def.matrix-operations.4.md)
+
+refs: Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 1；Hoffman–Kunze, Linear Algebra, Ch. 1
 
 > 说明见 `notes/def.matrix-operations.md`
 

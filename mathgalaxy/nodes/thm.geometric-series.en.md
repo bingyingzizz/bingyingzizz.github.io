@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.geometric-series)　·　[Chinese page (authoritative)](./thm.geometric-series.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.geometric-series.md` and `proofs/`.
+## Statement · **draft**
+Let $q \in \mathbb{R}$. Then the series $\sum_{n=0}^{\infty} q^{n}$ converges **if and only if** $|q| < 1$; in that case
 
+$$\sum_{n=0}^{\infty} q^{n} = \frac{1}{1 - q}.$$
 
-Cite: `thm.geometric-series` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ This is the **yardstick** for all series tests: the comparison test, root test and ratio test all ultimately reduce to "some geometric series converges".
 
+> continued in nodes/thm.geometric-series.en.2.md

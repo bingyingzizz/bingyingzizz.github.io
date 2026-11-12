@@ -1,6 +1,6 @@
 # 基本群　`def.fundamental-group`
 基本群 $\pi_{1}(X, x_{0})$：闭道路同伦类构成的群
-layer 19 · 定义 · 基本群 · 拓扑学
+layer 15 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.fundamental-group)　·　[节点索引](../index.md)
 
 固定基点 $x_{0} \in X$。令

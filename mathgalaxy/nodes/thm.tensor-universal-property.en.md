@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.tensor-universal-property)　·　[Chinese page (authoritative)](./thm.tensor-universal-property.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.tensor-universal-property.md` and `proofs/`.
+## Statement · **draft**
+For every **bilinear map** $B : V \times W \to U$ (a linear map on the product space need not be bilinear, e.g. $B(v,w) = v$), there is a **unique** linear map
 
+$$\widetilde{B} : V \otimes W \to U, \qquad \widetilde{B}(v \otimes w) = B(v, w)$$
 
-Cite: `thm.tensor-universal-property` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.tensor-universal-property.en.2.md

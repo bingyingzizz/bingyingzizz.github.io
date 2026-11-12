@@ -1,6 +1,6 @@
 # 同伦不变性　`thm.homotopy-invariance`
 同伦不变性：$f \simeq g$ 蕴含 $f_{*} = g_{*}$（棱柱算子）
-layer 27 · 定理 · 同调群 · 拓扑学
+layer 23 · 定理 · 同调群 · 拓扑学
 [在星图里打开](../#n=thm.homotopy-invariance)　·　[节点索引](../index.md)
 
 设

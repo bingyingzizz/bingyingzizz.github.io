@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 33 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 31 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.gauss-equation.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 切映射　`def.differential-map`
 切映射（微分）
-layer 24 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 22 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.differential-map)　·　[节点索引](../index.md)
 
 **在说什么**：光滑映射在每点给出一个线性映射，把「沿曲线的方向」送到像上的方向 —— 这就是流形上的导数；流形上没有减法，唯一能做的是「跟着曲线走」。
@@ -19,7 +19,7 @@ $$\mathrm{d}F_{p} : T_{p}N \longrightarrow T_{F(p)}M,\qquad \mathrm{d}F_{p}([\ga
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.differential-map.3.md](./def.differential-map.3.md)
 
-refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Tangent Vectors」· 切映射与链式法则
+refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「The Tangent Space」· 切映射与链式法则
 
 > 说明见 `notes/def.differential-map.md`
 

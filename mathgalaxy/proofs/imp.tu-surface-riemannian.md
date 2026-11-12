@@ -11,4 +11,4 @@
 
 **光滑性**：在一张卡里 $g_{ij} = \langle\partial_{i}r,\partial_{j}r\rangle$ 是 $r$ 的一阶偏导数的内积，$r$ 光滑则 $g_{ij}$ 光滑。
 
-于是 $(S,g)$ 是二维黎曼流形，而 $g$ 就是 `def.first-fundamental-form` 里的 $I$。反过来，任何二维黎曼流形在局部取卡，$(g_{ij})$ 就写成同样的形状 —— 两侧只是同一套记账的两种叫法。∎
+> 续见 proofs/imp.tu-surface-riemannian.2.md

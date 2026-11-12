@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.quotient-vs)　·　[Chinese page (authoritative)](./def.quotient-vs.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.quotient-vs.md` and `proofs/`.
+## Statement · **draft**
+Let $U \subseteq V$ be a subspace. Define an equivalence relation on $V$:
 
+$$v \sim v' \iff v - v' \in U$$
 
-Cite: `def.quotient-vs` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The equivalence class $v + U := \{\, v + u : u \in U \,\}$ is called a **coset** of $U$. The set of all cosets is denoted $V / U$; define on it
 
+$$(v + U) + (v' + U) := (v + v') + U, \qquad c\,(v + U) := (cv) + U$$
+
+> continued in nodes/def.quotient-vs.en.2.md

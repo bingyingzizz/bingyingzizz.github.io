@@ -9,8 +9,6 @@ Let $X$ be a metric space with metric $d$. Then the following three conditions a
 - (b) $X$ is **sequentially compact**: every sequence has a subsequence converging in $X$;
 - (c) $X$ is **complete and totally bounded**.
 
-That is, $X$ compact $\iff$ $X$ sequentially compact $\iff$ $X$ complete $+$ totally bounded.
-
 ## Notes · **stale**
 The whole logical skeleton is in the arrows (click an arrow to see its proof):
 

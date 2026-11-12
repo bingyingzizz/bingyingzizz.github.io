@@ -12,11 +12,9 @@ layer 17 · 定理 · 收敛与紧性 · 拓扑学
 - …另有入边，续页见 [nodes/thm.tykhonov.2.md](./thm.tykhonov.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.banach-alaoglu`](../nodes/thm.banach-alaoglu.md) Banach–Alaoglu 定理 用
-
 - …另有出边，续页见 [nodes/thm.tykhonov.3.md](./thm.tykhonov.3.md)
 
-refs: Munkres, Topology, §37；Le Stum, Exercise 2.19
+refs: Engelking, General Topology, Ch. 3 §3.2；Munkres, Topology, §37；Le Stum, Exercise 2.19
 
 > 说明见 `notes/thm.tykhonov.md`
 

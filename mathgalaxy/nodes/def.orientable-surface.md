@@ -1,6 +1,6 @@
 # R³ 中的可定向曲面　`def.orientable-surface`
 可定向曲面与定向
-layer 30 · 定义 · 曲面论 · 微分几何
+layer 28 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.orientable-surface)　·　[节点索引](../index.md)
 
 **在做什么**：判断能不能在整张曲面上连续地选一个「正面」—— 这决定了面积元的符号、整体法向与 Gauss 映射的存在，以及 Stokes 型公式能否写下来。
