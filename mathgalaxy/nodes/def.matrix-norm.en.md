@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Matrix Factorizations and Least Squares (`algebra.numeric`) · Abstract Algebra
+layer 32 · definition · cluster Matrix Factorizations and Least Squares (`algebra.numeric`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.matrix-norm.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
+layer 28 · theorem · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.poincare-solid.md` and `proofs/`.

@@ -6,8 +6,8 @@
 - **20 / 21** `def.topos` 拓扑斯 · layer 17 · 拓扑斯
 - **20 / 21** `def.condensed-set` 凝聚态集 · layer 18 · 凝聚态集
 - **20 / 20** `def.abs` 绝对值 |x| · layer 10 · 实数的运算与不等式
-- **19 / 21** `def.banach-space` Banach 空间 · layer 17 · 多元微分
+- **19 / 22** `def.banach-space` Banach 空间 · layer 17 · 多元微分
 
-（共 1011 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1021 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

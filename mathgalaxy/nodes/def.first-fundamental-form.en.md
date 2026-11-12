@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 28 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.first-fundamental-form.md` and `proofs/`.

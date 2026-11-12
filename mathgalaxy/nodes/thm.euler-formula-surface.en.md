@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 33 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 32 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 names: `Euler's Formula` (short) · `Euler's Formula for Principal Curvatures` (full)
 
 ## Statement and proof

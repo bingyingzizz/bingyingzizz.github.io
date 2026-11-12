@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.inverse-function`](../nodes/thm.inverse-function.md) 逆映射定理
+- ⇒ [`thm.inverse-function-banach`](../nodes/thm.inverse-function-banach.md) 逆映射定理（Banach 版）

@@ -7,6 +7,9 @@ layer 29 · 定理 · 内积空间与正交性 · 抽象代数
 > 陈述续见 [nodes/thm.schur-triangularization.2.md](./thm.schur-triangularization.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版）
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.schur-triangularization.3.md](./thm.schur-triangularization.3.md)
 

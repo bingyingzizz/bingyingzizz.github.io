@@ -1,6 +1,10 @@
 # 别名 → 节点 · 数学分析
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../analysis.md`
 
+- 弱*拓扑 | 弱星拓扑 | σ(E*,E) 拓扑 | 逐点收敛拓扑 → def.weak-star-topology
+
+- 素端 | Carathéodory 紧化 → def.prime-end
+
 - ζ 亚纯延拓 | zeta meromorphic continuation → prop.zeta-continuation
 
 - ζ 在 Re s=1 无零点 | zeta no zeros on Re 1 → thm.zeta-no-zeros-line1
@@ -20,7 +24,5 @@
 - Bernoulli numbers | 伯努利数 | 伯努利序列 → def.bernoulli-number
 
 - Euler-Maclaurin summation | 欧拉-麦克劳林公式 | 欧拉–麦克劳林求和 → thm.euler-maclaurin
-
-- summation by parts | Abel transformation | 阿贝尔求和 | 分部求和 → lem.abel-summation
 
 > 续见 alias/aka/analysis.21.md

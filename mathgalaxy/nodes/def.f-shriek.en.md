@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
+layer 24 · definition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.f-shriek.md` and `proofs/`.

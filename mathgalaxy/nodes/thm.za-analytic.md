@@ -1,6 +1,6 @@
 # 有限生成代数的解析环　`thm.za-analytic`
 定理：$A$ 有限生成 $\mathbb{Z}$-代数 $\implies$ $A_\blacksquare$ 是解析环（Thm 8.1）
-layer 24 · 定理 · 解析环与固态模 · 凝聚态数学
+layer 0 · 定理 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=thm.za-analytic)　·　[节点索引](../index.md)
 
 设 $A$ 是有限生成 $\mathbb{Z}$-代数，$A_\blacksquare$ 是自由模为

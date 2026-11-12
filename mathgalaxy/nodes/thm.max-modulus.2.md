@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.cauchy-integral-formula`](../nodes/thm.cauchy-integral-formula.md) Cauchy 积分公式：Cauchy 积分公式 $\implies$ 平均值公式 $\implies$ 最大模原理　[proofs/imp.max-modulus.md](../proofs/imp.max-modulus.md)
+
+> 续见 [nodes/thm.max-modulus.3.md](./thm.max-modulus.3.md)

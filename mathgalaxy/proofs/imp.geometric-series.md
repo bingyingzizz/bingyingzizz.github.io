@@ -1,7 +1,7 @@
 # 部分和公式 + Bernoulli $\implies$ 几何级数
 `imp.geometric-series` · 推出 · strong 边 · 根 `../`
 
-`def.series` 级数收敛 + `thm.bernoulli` Bernoulli 不等式 + `cor.archimedean-epsilon` Archimedes 的 ε 形式与取整 → `thm.geometric-series` 几何级数
+`def.series` 级数收敛 + `thm.bernoulli` Bernoulli 不等式 + `cor.archimedean-epsilon` Archimedes 的 ε 形式与取整 + `thm.cauchy-criterion-series` 级数的 Cauchy 准则 → `thm.geometric-series` 几何级数
 
 **$|q| < 1$。** 若 $q = 0$，则 $s_N = 1$ 对一切 $N$ 成立，收敛到 $1$ ✓；下面设 $q \ne 0$（此时 $q \ne 1$ 自动成立）。部分和
 

@@ -10,9 +10,9 @@ layer 25 · 命题 · 流形与向量丛 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类
+- ～弱边 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量
 
-- …另有出边，续页见 [nodes/prop.bundle-metric.4.md](./prop.bundle-metric.4.md)
+- …另有出边，续页见 [nodes/prop.bundle-metric.5.md](./prop.bundle-metric.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.bundle-metric.3.md](./prop.bundle-metric.3.md)

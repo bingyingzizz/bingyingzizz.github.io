@@ -3,6 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.curvature-tensor`](../nodes/def.curvature-tensor.md) Riemann 曲率张量：用到了定义 Riemann 曲率张量　[proofs/dep.curv-gauss.md](../proofs/dep.curv-gauss.md)
+- [`def.sectional-curvature`](../nodes/def.sectional-curvature.md) 截面曲率：ana.n12-gausscurv-sectional　[proofs/ana.n12-gausscurv-sectional.md](../proofs/ana.n12-gausscurv-sectional.md)
 - [`def.second-fundamental-form`](../nodes/def.second-fundamental-form.md) 第二基本形式：用到了定义 第二基本形式　[proofs/dep.gap-gauss-curvature-second-fundamental-form.md](../proofs/dep.gap-gauss-curvature-second-fundamental-form.md)
 
 > 续见 [nodes/def.gauss-curvature.4.md](./def.gauss-curvature.4.md)

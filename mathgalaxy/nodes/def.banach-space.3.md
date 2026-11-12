@@ -9,6 +9,5 @@
 - 被 [`def.uniformly-convex`](../nodes/def.uniformly-convex.md) 一致凸 用
 - 被 [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间 用
 - 被 [`def.complemented-subspace`](../nodes/def.complemented-subspace.md) 可补子空间 用
-- ⇒ [`thm.open-mapping-banach`](../nodes/thm.open-mapping-banach.md) 开映射定理（Banach 版）
 
 > 续见 [nodes/def.banach-space.4.md](./def.banach-space.4.md)

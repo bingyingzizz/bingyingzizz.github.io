@@ -2,5 +2,6 @@
 [在星图里打开](../#n=def.orthonormal-set)　·　第 1 页 [nodes/def.orthonormal-set.md](./def.orthonormal-set.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`thm.lagrange-identity`](../nodes/thm.lagrange-identity.md) Lagrange 恒等式
 - 被 [`thm.bessel-parseval`](../nodes/thm.bessel-parseval.md) Bessel 与 Parseval 用
 - 被 [`def.operator-adjoint`](../nodes/def.operator-adjoint.md) 伴随算子 用

@@ -2,6 +2,6 @@
 [在星图里打开](../#n=thm.polar-decomposition)　·　第 1 页 [nodes/thm.polar-decomposition.md](./thm.polar-decomposition.md)　·　上一页 [nodes/thm.polar-decomposition.2.md](./thm.polar-decomposition.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.spectral-matrix`](../nodes/thm.spectral-matrix.md) 谱定理（矩阵版）：谱定理 $\Longrightarrow$ 极分解　[proofs/imp.polar-decomposition.md](../proofs/imp.polar-decomposition.md)
+- [`thm.svd`](../nodes/thm.svd.md) 奇异值分解：奇异值分解 $\iff$ 极分解　[proofs/dep.ln-polar-svd.md](../proofs/dep.ln-polar-svd.md)
 - [`def.positive-definite-matrix`](../nodes/def.positive-definite-matrix.md) 正定矩阵：用到了定义 正定矩阵　[proofs/dep.ln-polar-posdef.md](../proofs/dep.ln-polar-posdef.md)
-
-> 续见 [nodes/thm.polar-decomposition.4.md](./thm.polar-decomposition.4.md)

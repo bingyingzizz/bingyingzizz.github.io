@@ -11,6 +11,7 @@ $$w \longmapsto \log w := \log|w| + i\arg_{U} w$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`prop.single-valued-branch`](../nodes/prop.single-valued-branch.md) 单值支的存在判据
+- ⇒ [`prop.standard-maps`](../nodes/prop.standard-maps.md) 标准共形映射
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.exp-local-inverse.3.md](./prop.exp-local-inverse.3.md)

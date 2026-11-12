@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-11T14:29:37.343Z
-> 15 星系 / 105 星团 / 1628 节点 / 3402 连线（强边 3329，弱边 73；其中**不分层**的「推论」37 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-12T04:38:49.620Z
+> 15 星系 / 105 星团 / 1632 节点 / 3432 连线（强边 3356，弱边 76；其中**不分层**的「推论」48 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -2748,43 +2748,7 @@ $$\forall\{x_n\} \subseteq X,\ \exists\{x_{n_k}\},\ \exists x \in X : x_{n_k} \t
 
 即 $X$ 紧 $\iff$ $X$ 列紧 $\iff$ $X$ 完备 $+$ 全有界。
 
-**证明**（绕一圈：(a) $\implies$ (b) $\implies$ (c) $\implies$ (b) $\implies$ (a)）：
-
-
-
-**① (a) $\implies$ (b)：紧 $\implies$ 列紧。** 设 $\{x_{n}\}$ 是 $X$ 中的序列，反设它没有收敛子列。令 $S = \{x_{n} : n \in \mathbb{N}\}$。$S$ 必无限：$S$ 有限时某个点出现无穷多次，给出常子列，它收敛。又对每个 $y \in X$ 存在 $\varepsilon_{y} > 0$ 使 $B(y, \varepsilon_{y})$ 只含 $S$ 中有限多个点：否则存在 $y$ 使每个球都含 $S$ 中无限多个点，于是可取 $n_{1} < n_{2} < \cdots$ 使 $x_{n_{k}} \in B(y, 1/k)$，得到收敛于 $y$ 的子列，矛盾。于是每个 $y \notin S$ 有开邻域不碰 $S$（把 $B(y, \varepsilon_{y})$ 里那有限个 $S$ 中的点去掉），故 $S$ 是闭集。开覆盖
-
-$$\{B(y, \varepsilon_{y})\}_{y \in X} \cup \{X \setminus S\}$$
-
-有有限子覆盖：其中每个 $B(y, \varepsilon_{y})$ 只含 $S$ 中有限多个点，$X \setminus S$ 不含 $S$ 的点，所以这个子覆盖总共只盖住 $S$ 中有限多个点 —— 与 $S$ 无限矛盾。故 $\{x_{n}\}$ 有收敛子列 ✓。
-
-
-
-**② (b) $\implies$ (c)：列紧 $\implies$ 完备 + 全有界。** **完备**：设 $\{x_{n}\}$ Cauchy，由 (b) 有子列 $x_{n_{k}} \to x$。任给 $\varepsilon > 0$，取 $N$ 使 $n, m \ge N$ 时 $d(x_{n}, x_{m}) < \varepsilon/2$，再取 $k$ 使 $n_{k} \ge N$ 且 $d(x_{n_{k}}, x) < \varepsilon/2$；则 $n \ge N$ 时 $d(x_{n}, x) \le d(x_{n}, x_{n_{k}}) + d(x_{n_{k}}, x) < \varepsilon$，故 $x_{n} \to x$ ✓。**全有界**：反设存在 $\varepsilon > 0$ 使 $X$ 没有有限的 $\varepsilon$-网。取 $x_{1} \in X$；若 $x_{1}, \ldots, x_{n}$ 已取好且两两距离 $\ge \varepsilon$，则 $\{x_{1}, \ldots, x_{n}\}$ 不是 $\varepsilon$-网，故存在 $x_{n+1}$ 使 $d(x_{n+1}, x_{i}) \ge \varepsilon$（$i \le n$）。如此得到两两距离 $\ge \varepsilon$ 的序列，它没有 Cauchy 子列、更没有收敛子列 —— 与 (b) 矛盾 ✓。⚠️ 这里的递归取点用**可数选择**（DC）。
-
-
-
-**③ (c) $\implies$ (b)：完备 + 全有界 $\implies$ 列紧。** 设 $\{x_{n}\}$ 是 $X$ 中的序列。对每个 $k$，全有界给有限多个半径 $1/k$ 的球盖住 $X$。归纳构造无限下标集 $\mathbb{N} = S_{0} \supseteq S_{1} \supseteq S_{2} \supseteq \cdots$：给定无限集 $S_{k-1}$，由有限覆盖必有一个球 $B(y_{k}, 1/k)$ 含 $\{x_{n} : n \in S_{k-1}\}$ 中无限多个点，令 $S_{k}$ 为这些下标。再取 $n_{k} \in S_{k}$ 为大于 $n_{k-1}$ 的最小下标（$S_{k}$ 无限，必存在；这条规则不用选择公理）。对 $k \le l$ 有 $x_{n_{k}}, x_{n_{l}} \in B(y_{k}, 1/k)$（$S_{l} \subseteq S_{k}$），故 $d(x_{n_{k}}, x_{n_{l}}) \le 2/k$：$\{x_{n_{k}}\}$ 是 Cauchy 列，由完备性收敛 ✓。
-
-
-
-**④ (b) $\implies$ (a)：列紧 $\implies$ 紧。** 由 ② 已知 $X$ 全有界。反设开覆盖 $\mathcal{U}$ 没有有限子覆盖。称 $E \subseteq X$ **坏**，若它不能被 $\mathcal{U}$ 中有限多个成员盖住；则 $X$ 坏。**坏性可下传到一个小球**：设 $E$ 坏，而 $X$ 被有限多个半径 $r$ 的球 $B_{1}, \ldots, B_{m}$ 盖住；若每个 $E \cap B_{j}$ 都能被有限多个成员盖住，则 $E = \bigcup_{j} (E \cap B_{j})$ 也能，矛盾，故某个 $E \cap B_{j}$ 坏。从 $E_{0} := X$ 出发，用半径 $2^{-k}$ 的有限覆盖逐层取坏球 $E_{k} := E_{k-1} \cap B_{k}$；则 $E_{k}$ 的直径 $\le 2^{1-k}$，且每层只需在有限多个球里挑一个（规定取编号最小的坏球），不用选择公理。取 $x_{k} \in E_{k}$（坏集非空）。对 $k \le l$ 有 $x_{k}, x_{l} \in E_{k}$，故 $d(x_{k}, x_{l}) \le 2^{1-k} \to 0$：$\{x_{k}\}$ 是 Cauchy 列，由完备性 $x_{k} \to x$。因 $\mathcal{U}$ 覆盖，$x \in U$ 对某个 $U \in \mathcal{U}$ 成立；取 $r > 0$ 使 $B(x, r) \subseteq U$。对足够大的 $k$，直径 $E_{k} < r/2$ 且 $d(x_{k}, x) < r/2$，于是 $E_{k} \subseteq B(x, r) \subseteq U$ —— 一个成员就盖住了坏集 $E_{k}$，矛盾 ✓。⚠️ 逐层取点 $x_{k} \in E_{k}$ 也用 DC（与 ② 同一种用法）。
-
-
-
-**闭环**：(a) $\implies$ (b) $\implies$ (c) $\implies$ (b) $\implies$ (a) ✓。注意 (b) $\implies$ (c) 拆成两半后，只有「全有界」那一半需要 DC；「完备」不需要。∎
-
-
-
-⚠️ **两个条件各管什么**：完备负责「缩到的点在空间里」，全有界负责「有子列可缩」；缺一不可（例：$\mathbb{R}$ 完备但不全有界，$(0, 1)$ 全有界但不完备）。
-
-⚠️ **一般拓扑空间里两个方向都不成立**：
-
-(a) $\implies$ (b) 的反例：取 $I = 2^{\mathbb{N}}$，对 $A \in \{0, 1\}^{\mathbb{N}}$ 令 $x_{n}(A) = A(n)$（于是 $x_{n} \in \{0, 1\}^{I}$）；$\{0, 1\}^{I}$ 由 Tychonoff 定理**紧**。对任意子列 $n_{k}$，取 $A$ 使 $A(n_{2j}) = 1$、$A(n_{2j+1}) = 0$，则 $x_{n_{k}}(A)$ 在 $1$ 与 $0$ 之间来回震荡、不收敛，故无收敛子列 —— **不是列紧**。
-
-(b) $\implies$ (a) 的反例是 $[0, \omega_{1})$ 上的序拓扑：任何序列都有收敛子列（可数个可数序数有上界，从而落进某个紧的 $[0, \alpha]$），但 $\{[0, \alpha) : \alpha < \omega_{1}\}$ 是开覆盖、没有有限子覆盖 —— **列紧但不紧**。
-
-⚠ 度量空间里两者才等价 —— 列紧是度量空间特有的好运气。
+text=紧、列紧、完备且全有界三者的等价证明见边 `imp.metric-compact-equiv-proof`：紧 $\implies$ 列紧用「每点邻域只含有限项」的反证；列紧 $\implies$ 完备/全有界用 Cauchy 子列与 $\varepsilon$-网；全有界 $\implies$ 紧用 Lebesgue 数。
 
 参考：Munkres, Topology, §28 与 §43
 
@@ -4656,13 +4620,7 @@ $$\tilde{\alpha} : [0, 1] \longrightarrow E,\qquad \tilde{\alpha}(0) = e_{0},\qu
 提升 $\tilde{F} : [0, 1] \times [0, 1] \to E$ 使 $\tilde{F}(0, 0) = e_{0}$、$p \circ \tilde{F} = F$。
 若 $F$ 是道路同伦（两端固定），则 $\tilde{F}$ 对每个 $s$ 的两个端点也都固定。
 
-**唯一性才是关键**：$p$ 在每片 $V_{j}$ 上是同胚，所以「提升在哪一片上」一旦定下，整段提升就完全被钉死。存在性就是把 $[0, 1]$ 切成有限多小段，每段落在一个均匀覆叠的邻域里，逐段接上去。
-
-**为什么切片是有限的**：$[0, 1]$ 紧，$\{\alpha^{-1}(U)\}$ 是它的开覆盖，由 Lebesgue 数引理存在 $\delta > 0$ 使每个长度 $\le \delta$ 的区间都落进某个 $U$ 里。（二维情形用 $[0, 1]^{2}$ 的紧性与同样的分割 + 逐格构造。）
-
-⭐ **推论（这一步最有用）**：把 (2) 用到「$\alpha$ 与常值道路之间的同伦」上，得到「$\alpha$ 道路同伦于常值 $\implies$ 提升 $\tilde{\alpha}$ 也道路同伦于常值（都从 $e_{0}$ 出发）」。这就是把 $B$ 里「缩成一点」翻译成 $E$ 里「缩成一点」的机器。
-
-⚠️ 提升**不总存在**：不是每个映射 $X \to B$ 都能提升。$\pi_{1}$ 正是障碍所在（`prop.covering-index`）。例如 $1_{S^{1}} : S^{1} \to S^{1}$ 不能提升成 $S^{1} \to \mathbb{R}$，因为那将给出绕数 $0$。
+text=**证明骨架**：用 Lebesgue 数把道路/同伦切成小段，每段落在均匀覆叠的开集里，逐段唯一提升。完整证明见边 `imp.lifting-proof`。
 
 参考：Munkres, Topology (2nd ed.), Ch. 9 · Covering Spaces（lifting theorem）；Hatcher, Algebraic Topology, Ch. 1 §1.3 · lifting properties
 
@@ -6264,6 +6222,25 @@ $n \times n$ 可逆矩阵在乘法下是群但**不阿贝尔**（$n \ge 2$）。
 
 参考：Lang, Algebra
 
+#### 群的整数幂　`def.group-power`
+*定义*　群的整数幂 $x^{n}$（$n \in \mathbb{Z}$）
+
+设 $G$ 是群，$x \in G$，$e$ 是单位元。**整数幂** $x^{n}$（$n \in \mathbb{Z}$）由
+
+$$x^{0} := e, \qquad x^{n+1} := x^{n} x \ (n \ge 0), \qquad x^{-n} := (x^{-1})^{n} \ (n \ge 1)$$
+
+定义；等价地 $x^{-n} = (x^{n})^{-1}$。
+
+**基本律。** 对 $m, n \in \mathbb{Z}$ 有 $x^{m+n} = x^{m} x^{n}$、$(x^{m})^{n} = x^{mn}$、$x^{-n} = (x^{n})^{-1}$。前两条对 $n \ge 0$ 归纳，负指数用逆元化归；第三条由 $x^{n} x^{-n} = e$ 与逆元唯一性得到。
+
+**与环的整数幂分开。** 含幺环上的整数幂（见实分析一团的「整数幂」）以环的乘法单位元 $1$ 为 $a^{0}$，且 $a^{-n}$ 只在 $a$ 可逆时才有定义；本条只要求群结构，$e$ 是群单位元。两者记号相同、载体不同 —— 引用时按语境取，不要互相代入。
+
+⭐ **元素的阶**：若存在 $n \ge 1$ 使 $x^{n} = e$，最小的这样的 $n$ 叫 $x$ 的阶；这正是「幂回到单位元」的步长。全体整数幂 $\{x^{n} : n \in \mathbb{Z}\}$ 构成 $G$ 的循环子群 $\langle x \rangle$。
+
+⚠ 非交换群里 $(xy)^{n} \ne x^{n} y^{n}$（$n \ge 2$）；只有 $x, y$ 交换时才成立。而 $x^{m} x^{n} = x^{m+n}$ 对**同一个** $x$ 总成立，这由结合律保证。
+
+参考：Lang, Algebra, Ch. I §2；Hungerford, Algebra, Ch. I §4
+
 #### 子群　`def.subgroup`
 *定义*　子群
 
@@ -6665,7 +6642,7 @@ $\mathbb{Z}\text{-}\mathbf{Mod} \cong \mathbf{Ab}$（范畴**同构**）；$\mat
 
 写成 $a^{-1}b^{-1}$ 一般是错的（$S_3$ 里取两个对换就能试出来）。
 
-⭐ (iii) 是 `def.power` 在群里的版本；
+⭐ (iii) 是 `def.group-power` 在群里的版本；
 
 证明同样是「先对非负整数归纳，再用逆元过渡到负指数」。
 
@@ -8105,6 +8082,8 @@ $$A = U \Lambda U^{*}, \qquad \Lambda = \operatorname{diag}(\lambda_{1}, \ldots,
 
 ⚠️ 非正规矩阵也可能可对角化（`thm.diagonalizable`），但特征向量**不正交**，相似矩阵 $P$ 一般病态。所以「可对角化」与「酉可对角化」是两件事：后者要求**正交**，强得多。
 
+**证明在出边上**：完整证明见本团「Schur 三角化 $\Longrightarrow$ 谱定理（矩阵版）」这条推论边 —— 正规性在酉相似下保持，上三角正规阵必对角；实对称情形再用「特征值实、特征向量可取实」归纳。
+
 参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 谱定理；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 谱定理
 
 #### 极分解　`thm.polar-decomposition`
@@ -8133,6 +8112,8 @@ $A^{*}A$ 总是半正定 Hermite（`def.positive-definite-matrix` 的注），�
 **与 SVD 的分工**：极分解强调「旋转 $\times$ 拉伸」这个**结构**，SVD 强调「$A = U\Sigma V^{*}$ 这个**坐标写法**」。两者信息量相同，SVD 多给了两组基底。
 
 ⚠️ 唯一性要说清：$P$ 永远唯一，但 $A$ 奇异时 $U$ 可以在 $A$ 的核上任意取 —— 所以「极分解唯一」这句话只在可逆时成立。
+
+**证明在出边上**：完整证明见本团「谱定理 $\Longrightarrow$ 极分解」这条推论边 —— 由 $A^{*}A$ 的谱分解构造 $\sqrt{A^{*}A}$ 并证唯一；可逆时 $U=AP^{-1}$ 酉，奇异时先在 $\operatorname{im}P$ 上定义等距再延拓为酉。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 极分解；Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 极分解
 
@@ -8753,6 +8734,8 @@ $$U \perp W \ \cong\ U' \perp W ,$$
 
 ⚠️ 更强的版本叫 **Witt 延拓定理**：非退化子空间之间的等距总能延拓成整个空间的等距。它与消去定理等价，但表述不同 —— 读文献时看到哪个都算。
 
+**本条的缺口（精确）。** 完整证明的标准路线是：先把等距 $U\to U'$ 延拓为 $V$ 的等距（Witt 延拓定理），再在 $U'$ 的正交补上把 $\varphi(W)$ 调到 $W$；延拓定理本身（非退化子空间间的等距可延拓）本图没有节点，也不在此处假装证明。故本条保留 `skeleton`，缺口就是延拓定理。
+
 参考：Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors
 
 #### 辛形式　`def.symplectic-form`
@@ -8934,17 +8917,7 @@ $$\det\begin{pmatrix} \langle u,u\rangle & \langle u,w\rangle \\ \langle w,u\ran
 
 所以几何上它说的是：**Gram 行列式 = 平行四边形的面积的平方**（`def.gram-matrix`）。
 
-**Cauchy–Schwarz 是它的推论**：右边是平方和，非负 $\implies$ 左边 $\ge 0$ $\implies$ $\lvert\langle u,w\rangle\rvert \le \lVert u\rVert\lVert w\rVert$。
-
-而且等号成立 $\iff$ 右边每项为零 $\iff$ $u, w$ 成比例。
-
-所以这条恒等式比 Cauchy–Schwarz **强**：它给出了差多少。
-
-⭐ **一般 $k$ 个向量**：Gram 行列式 $\det G$ 等于这 $k$ 个向量张成的平行体体积的平方（`def.gram-matrix` 的注）。$k=2$ 就是本条；$\det G \ge 0$ 就是「体积是实数」。
-
-⚠️ 它不是辛的：这里的 $\langle\cdot,\cdot\rangle$ 是**内积**（对称正定），不是辛形式。名字里的「Lagrange」与 `def.lagrangian-subspace` 是同一个人的不同贡献 —— 前者是内积几何，后者是辛几何，**别把两条接成因果关系**。
-
-⚠️ 复情形要小心：用 Hermite 内积时右边要改成模方 $\lvert u_{i}\bar{w}_{j} - u_{j}\bar{w}_{i}\rvert^{2}$，左边仍非负，结论不变。
+text=**几何读法**：左边是两个向量 Gram 矩阵的行列式，即它们张成的平行四边形面积的平方；右边是坐标形式的面积平方。完整展开见边 `imp.lagrange-identity-proof`。⚠ 坐标式只在正交归一基下成立，一般基要用 Gram 矩阵修正。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram 行列式；北大《高等代数》· Lagrange 恒等式
 
@@ -9112,7 +9085,7 @@ $n = 2$ 时 $A_2 = \{e\}$。
 设 $G$ 是群、$g \in G$。集合
 
 $$\langle g \rangle := \{\, g^{k} : k \in \mathbb{Z} \,\} \quad \subseteq\; G$$
-（约定 $g^{0} = e$、$g^{-k} = (g^{-1})^{k}$）是 $G$ 的最小子群，叫 $g$ **生成**的循环群。若 $G = \langle g\rangle$ 对某个 $g$ 成立，称 $G$ 为**循环群**，$g$ 叫**生成元**。
+（整数幂见 `def.group-power`）是 $G$ 的最小子群，叫 $g$ **生成**的循环群。若 $G = \langle g\rangle$ 对某个 $g$ 成立，称 $G$ 为**循环群**，$g$ 叫**生成元**。
 
 同构意义下只有两种：
 
@@ -10406,15 +10379,7 @@ $$A = LU ,$$
 
 **用途**：解 $Ax = b$ 变成「解 $Ly = b$（前代）+ 解 $Ux = y$（回代）」，两个都是 $O(n^{2})$；而且 $A$ 不变时 $L, U$ 可以反复用。
 
-**「顺序主子式全非零」不能去掉**：$\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}$ 的顺序主子式第一个是 $0$，它没有不带置换的 $LU$ 分解（但 $PA = LU$ 有）。这条前提就是「消元时主元不为零」的矩阵语言。
-
-⭐ **它和初等变换的关系**：`def.elementary-matrix` 里那三类初等矩阵，把「第三类（行加倍数）」按顺序乘起来就是 $L^{-1}$。所以 $LU$ 分解 = 高斯消元的矩阵形式，**没有新东西**，只是记账。
-
-**与 Cholesky 的关系**：若 $A$ 还是**对称正定**，则 $LU$ 可以写成 $A = LL^{T}$（$L$ 下三角），叫 Cholesky 分解。
-
-本图未单独收录，它是正定矩阵的直接推论：正定 $\implies$ 顺序主子式全正（`thm.sylvester-criterion`）$\implies$ 可做 Cholesky。
-
-⚠️ 有 $PA = LU$ 之后不要再写 $A = LU$：行交换改变了矩阵，$P$ 必须写出来。
+text=**为什么是 $LU$**：高斯消元的每一步都是左乘初等矩阵，把消元步乘起来即 $L^{-1}$；顺序主子式非零保证不换行。完整证明（含 Schur 补归纳与唯一性）见边 `imp.lu-decomposition-proof`；置换版本用部分主元法，见同边证明末段。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化与消元；北大《高等代数》· 矩阵的三角分解
 
@@ -14596,13 +14561,7 @@ $$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 
 $$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty := \max_{1 \le k \le n} |x_k| .$$
 
-证法只有两步：**上界**用三角不等式 $\|x\| \le \sum |x_k|\,\|e_k\| \le \|x\|_\infty \sum \|e_k\|$；
-
-**下界**把 $\|\cdot\|$ 看成单位球面 $S = \{x : \|x\|_\infty = 1\}$ 上的连续函数 —— $S$ 紧、$\|\cdot\|$ 无处为零，故取下确界 $\alpha > 0$。
-
-⭐ 整条定理的实质是「**紧 + 连续 + 无零点 $\implies$ 有正的最小值**」，也就是「单位球面紧」。所以它在无穷维必错（见「单位球紧 $\iff$ 有限维」）。
-
-⚠️ 反例（讲义没有列，但值得记）：$C[0,1]$ 上 $\|\cdot\|_\infty$ 严格强于 $\|\cdot\|_1$：$f_n(x) = x^n$ 在 $\|\cdot\|_1$ 下趋于 $0$，却**不**一致收敛于 $0$（点态极限是 $x = 1$ 处的跳变）。
+text=**为什么有限维特殊**：单位球面紧，范数在球面上取到正的最小值，于是任一范数被 $\lVert\cdot\rVert_\infty$ 双向控制。完整证明见边 `imp.norm-equiv-finite-dim-proof`。
 
 参考：Rudin, Functional Analysis · 赋范空间与有限维
 
@@ -14709,11 +14668,7 @@ $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
 特别地 $B(E)$ 是**赋范代数**（乘法连续）；$E \ne \{0\}$ 时 $\|\mathrm{id}\| = 1$。
 
-一句话：$\|vu(x)\| \le \|v\|\,\|u(x)\| \le \|v\|\,\|u\|\,\|x\|$。
-
-⚠️ $B(E)$ 一般**不交换**（$\dim E \ge 2$ 时），所以它是「非交换 Banach 代数」的原型，而不是函数代数的类比对象。
-
-$\|\cdot\|$ 是**次可乘**的（submultiplicative）——这条不等式就是「Banach 代数」定义里的第二条，也是 Neumann 级数能收敛的唯一依据。
+text=**一句话**：$\lVert vux\rVert\le\lVert v\rVert\lVert u\rVert\lVert x\rVert$，故复合有界且范数次乘；乘法连续性由双线性与这条不等式。完整证明见边 `imp.operator-algebra-proof`。
 
 参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
@@ -14740,15 +14695,7 @@ $\|\cdot\|$ 是**次可乘**的（submultiplicative）——这条不等式就�
 
 设 $E$ 赋范、$F$ Banach。则 $(B(E, F), \|\cdot\|)$ 是 Banach 空间。特别地，对偶空间 $E^* = B(E, \mathbb{K})$ **总是** Banach（不论 $E$ 是否完备）。
 
-证法（逐点取极限）：取 $B(E,F)$ 里的 Cauchy 列 $u_n$。
-
-对每个 $x$，$\|u_n x - u_m x\| \le \|u_n - u_m\|\,\|x\| \to 0$，故 $(u_n x)$ 在 $F$ 里 Cauchy，有极限 $u(x)$。
-
-$u$ 线性（极限保线性）、有界（取 $N$ 使 $n, m \ge N$ 时 $\|u_n - u_m\| < \varepsilon$，则 $\|u(x)\| \le \|u(x) - u_N(x)\| + \|u_N(x)\| \le (\varepsilon + \|u_N\|)\|x\|$），且 $\|u_n - u\| \to 0$。
-
-⭐ 要害是「$\|u_n\|$ 一致有界」（Cauchy 列必一致有界），所以极限的范数不会跳。
-
-⚠️ $E$ 不需要完备：完备性只用在 $F$ 上。
+text=**证明思路**：逐点取极限定义 $u$，再用一致有界控制 $\lVert u_k-u\rVert$。完整证明见边 `imp.bounded-operators-banach-proof`。特别地 $E^*=B(E,\mathbb K)$ 总是 Banach。
 
 参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
@@ -15088,11 +15035,26 @@ Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\varphi \
 
 **为什么用它**：弱拓扑把对偶的元素都变成连续函数，于是可以用泛函分离点、取弱紧性；自反空间的有界闭球弱紧（Eberlein–Šmulian，本图尚无节点）。
 
-**与弱*拓扑的区别**：弱*拓扑在 $E^{*}$ 上由 $E$ 的元素 $x\mapsto\varphi(x)$ 生成，$E^{*}$ 的弱*紧性即 Banach–Alaoglu 定理（本图尚无节点）。
+**与弱*拓扑的区别**：弱*拓扑在 $E^{*}$ 上由 $E$ 的元素 $x\mapsto\varphi(x)$ 生成，$E^{*}$ 的弱*紧性即 Banach–Alaoglu 定理（本图有该定理的节点）。
 
 ⚠ 弱拓扑不是范数拓扑：弱开集比范数开集少得多；无限维赋范空间的弱拓扑不第一可数。
 
 参考：Rudin, Functional Analysis, Ch. 3 · weak topology；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 3 · weak topology
+
+#### 弱*拓扑　`def.weak-star-topology`
+*定义*　弱*拓扑 $\sigma(E^{*},E)$：逐点收敛
+
+设 $E$ 是赋范空间，$E^{*}$ 是其连续对偶。$E^{*}$ 上的**弱*拓扑** $\sigma(E^{*},E)$ 是使所有求值泛函 $\varphi\mapsto\varphi(x)$（$x\in E$）都连续的最弱拓扑；等价地，它由半范数族 $p_{x}(\varphi)=|\varphi(x)|$（$x\in E$）生成。
+
+**收敛就是逐点收敛**：网 $\varphi_{\alpha}\to\varphi$ 在弱*拓扑下当且仅当对每个 $x\in E$ 有 $\varphi_{\alpha}(x)\to\varphi(x)$。因此弱*拓扑又叫「逐点收敛拓扑」。
+
+**与弱拓扑的对偶关系**：弱拓扑 $\sigma(E,E^{*})$ 在 $E$ 上由 $E^{*}$ 生成；弱*拓扑 $\sigma(E^{*},E)$ 在 $E^{*}$ 上由 $E$ 生成 —— 两者把「谁作用于谁」对调。当 $E$ 自反时 $E=E^{**}$，故 $E^{*}$ 上的弱*拓扑与弱拓扑 $\sigma(E^{*},E^{**})$ 重合。
+
+⭐ **Banach–Alaoglu**：$E^{*}$ 的单位球 $B_{E^{*}}$ 在弱*拓扑下紧。这是弱*拓扑最重要的用武之地（本图有该定理的节点）。Goldstine 定理也用它：$B_{E}$ 在 $B_{E^{**}}$ 中弱*稠密。
+
+⚠ 无限维时弱*拓扑不第一可数，序列不足以刻画收敛，必须用网或滤子；$E$ 可分时 $B_{E^{*}}$ 弱*序列紧（序列版本），但一般空间只有网紧。
+
+参考：Rudin, Functional Analysis, Ch. 3 · weak-star topology；Brezis, Functional Analysis, Sobolev Spaces and Partial Differential Equations, Ch. 3 · weak-star topology
 
 #### Hahn–Banach 定理　`thm.hahn-banach`
 *定理*　Hahn–Banach：次线性控制下的线性延拓
@@ -15188,11 +15150,7 @@ $$\langle x, y\rangle = \tfrac{1}{4}\bigl( \|x + y\|^2 - \|x - y\|^2 \bigr) .$$
 
 $$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
 
-直接把 $\|x \pm y\|^2 = \|x\|^2 \pm 2\,\operatorname{Re}\langle x,y\rangle + \|y\|^2$ 相减即得实情形；复情形多取一个 $iy$ 把虚部抽出来。
-
-⭐ 意义：**内积完全由范数决定**。所以「两个内积空间等距」就等于「内积空间同构」；也所以判断「一个范数是否来自内积」才是一个真问题（下一条）。
-
-⚠️ 复情形的系数是 $i^k$（四个都要：$1, i, -1, -i$），不是 $(-1)^k$ ——写成 $(-1)^k$ 只能抽出实部，会把内积丢掉一半信息。
+text=**用途**：把内积还原成范数，从而「保范」与「保内积」在实情形等价；复情形用四个方向的组合。完整推导见边 `imp.polarization-proof`。
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
@@ -15801,15 +15759,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{R})$ 是**含单位**的**闭**子代数。则 $A$ 对 $\min, \max$ 封闭。
 
-证法：$\max(f, g) = \frac12(f + g + |f - g|)$，所以只需证「$f \ge 0$、$f \in A$ $\implies$ $\sqrt f \in A$」。
-
-不妨 $\|f\| < 1$：$\sqrt{1 - u}$ 在 $[-1+\varepsilon, 1-\varepsilon]$ 上解析，其 Taylor 级数一致逼近，代 $u = 2 - \varepsilon - f^2 \in A$ 得多项式 $p(2-\varepsilon-f^2) \in A$，它一致逼近 $\sqrt f$；
-
-$A$ 闭故 $\sqrt f \in A$。
-
-⚠️ 「含单位」不能去掉：不给 $1$ 的话 $\sqrt{}$ 这一步没有常数可写。
-
-⭐ 这是 Stone–Weierstrass 的**第一步**：先把「代数」升级成「格」，后面才能用 $\min/\max$ 上下夹住 $f$。
+text=**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则运算拼出；$|f|=\sqrt{f^{2}}$ 再用二项级数一致逼近。完整证明见边 `imp.subalgebra-lattice-proof`。
 
 参考：Rudin, Functional Analysis · Stone–Weierstrass 定理
 
@@ -16063,9 +16013,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 设 $X$ 是 Baire 空间，$F_n \subseteq X$ 闭，且 $X = \bigcup_n F_n$。则 $\bigcup_n \operatorname{int} F_n$ 在 $X$ 中**稠密**。特别地，若 $X \ne \emptyset$，则至少有一个 $F_n$ 有非空内部（空空间满足 Baire 前提，但每个 $F_n$ 的内部都是空的）。
 
-这是把「有一块闭集能被盖住」变成「有一个球里的东西一致地被控制」—— 正是 UBP 与开映射定理要的那一句。
-
-它的对偶写法是「可数个无处稠密闭集之并不含非空开集」，两条是同一件事的两面。
+text=**这是 Baire 纲定理的「开集版」**：闭覆盖中那些有内部的成员，其内部之并稠密。完整证明（在非空开集上用 Baire 性）见边 `imp.countable-closed-cover-proof`。
 
 参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
@@ -32350,6 +32298,11 @@ $$\prod_I A \otimes_{A_\blacksquare} A[1/f]_\blacksquare \;\cong\; \prod_I A[1/f
 
 📌 仿射、有限型情形由 Lecture VIII 附录给出；一般情形归约到仿射。
 
+⚠ **本条在本图未证**：上面那段只是把 $j_{!}$ 的存在归约到「$\prod$ 与局部化交换」，
+而该等式在固态模里的证明（CS Lecture XI, Prop 11.2 的正文）本图没有写出节点。
+原先挂在本条上的一条「由 `def.f-shriek` 反推」的边方向反了（$j_{!}$ 是 $f_{!}$ 的构造起点），已删；
+不要拿定义去反推存在。
+
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture XI, Proposition 11.2
 
 #### 紧支撑推前 f_!　`def.f-shriek`
@@ -32375,7 +32328,24 @@ $$f_! := (f_{\mathrm{ad}/Y})_* \circ j_! : D(\mathcal{O}_{X,\blacksquare}) \long
 
 ⚠ 「保直和」是 $f^!$ 存在的关键：$j_!$ 作为左伴随保余极限，$(f^{\mathrm{ad}/Y})_*$ 在仿射局部上是有限个遗忘函子的极限，也保直和。
 
+⭐ 它的一般**存在性**见 `thm.f-shriek-existence`（仍标 skeleton：条件于开浸入的 $j_{!}$）。
+
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture XI, Definition 11.3
+
+#### 紧支撑推前的存在性　`thm.f-shriek-existence`
+*定理*　一般 $f_{!}$ 与 $f^{!}$ 的存在（Prop 11.2 的前半）
+
+设 $f : X \to Y$ 是**分离、有限型**的概形映射。则一般（紧支撑）推前
+
+$$f_{!} : D(X) \longrightarrow D(Y)$$
+
+**存在**：它是「先沿开浸入推出、再沿相对化空间正常推前」的复合 $f_{!} = (f_{\mathrm{ad}/Y})_{*} \circ j_{!}$（定义见 `def.f-shriek`）。并且 $f_{!}$ **保直和**，因此它的右伴随 $f^{!}$ 也存在。
+
+⭐ 本条只证**存在性**：$j_{!}$ 由开浸入那一条（`prop.open-immersion-shriek`）给出，正常推前总是存在，复合即得。$f$ 固有时 $j$ 是同构，$f_{!}$ 退化成 $(f^{\mathrm{ad}/Y})_{*}$。
+
+⚠ 本条仍标 `skeleton`：它**条件于**开浸入的 $j_{!}$ 存在，而那一条本图未证（见 `prop.open-immersion-shriek` 的注）。
+
+参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture XI, Proposition 11.2（存在性部分）
 
 #### 对偶函子的扭转与基变换　`prop.f-shriek-base-change`
 *命题*　命题：$f^!$ 是 $f^*$ 的扭转，且平坦基变换（Prop 11.4）
@@ -37051,9 +37021,9 @@ $E = M \times \mathbb{R}$ 时 $\Gamma(E) = C^{\infty}(M)$（函数）。
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Vector Bundles」· 向量丛的截面与框架
 
 #### 光滑单位分解　`thm.smooth-partition-unity`
-*定理*　流形上的光滑单位分解
+*定理*　单位分解
 
-**在做什么**：把「局部造出来的东西」粘成整体的通用工具 —— 在每块地皮上各造一份，乘上权重函数加起来，权重由光滑单位分解提供。
+**在做什么**：把「局部造出来的东西」粘成整体的通用工具：每块地皮上各造一份，乘上权重函数加起来，权重由光滑单位分解提供。
 
 设 $M$ 是光滑流形，$\mathcal{U} = \{U_{\alpha}\}_{\alpha \in A}$ 是 $M$ 的开覆盖。则存在光滑函数族 $\{\rho_{\alpha}\}_{\alpha \in A}$，使
 
@@ -37061,7 +37031,7 @@ $E = M \times \mathbb{R}$ 时 $\Gamma(E) = C^{\infty}(M)$（函数）。
 2. $\operatorname{supp}\rho_{\alpha} \subseteq U_{\alpha}$，且支撑族 $\{\operatorname{supp}\rho_{\alpha}\}$ **局部有限**；
 3. $\sum_{\alpha \in A}\rho_{\alpha} \equiv 1$（局部有限和，故逐点有意义且光滑）。
 
-$\{\rho_{\alpha}\}$ 叫**从属于 $\mathcal{U}$ 的光滑单位分解**。特别地：$M$ 的任意开覆盖都有从属于它的光滑单位分解。
+$\{\rho_{\alpha}\}$ 叫**从属于 $\mathcal{U}$ 的光滑单位分解**。特别：$M$ 的任意开覆盖都有从属于它的光滑单位分解。
 
 三条要求与 `def.partition-of-unity` 一字不差，区别只在把「连续」升成「光滑」。
 
@@ -37151,7 +37121,7 @@ $$\det\Bigl(\mathrm{d}(\psi \circ \varphi^{-1})_{x}\Bigr) > 0\qquad \bigl(x \in 
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 定向图册与可定向性
 
-#### 定向与体积形式　`prop.volume-form-orientation`
+#### 体积与定向　`prop.volume-form-orientation`
 *命题*　可定向当且仅当存在处处非零的最高次形式
 
 **在做什么**：给「可定向」一个不需要图册的判据 —— 只要能在整张流形上写出一个处处不为零的 $n$-形式。
@@ -38505,6 +38475,22 @@ $k = n$ 时 $\mathrm{d}\omega = 0$，故 $\mathcal{L}_{X}\omega = \mathrm{d}\iot
 - 不需要紧性或向量场完备性，零时刻附近的局部流已经足够；闭性不能从第二个推论删去，例如 $X=\partial_x$、$\omega=x^2\,\mathrm{d}y$ 时 $\mathcal{L}_X\omega=2x\,\mathrm{d}y$ 甚至不闭。
 
 参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· Cartan 公式；Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Differential Forms」· 内乘与 Lie 导数的关系
+
+#### 叶状结构存在定理　`thm.foliation-existence`
+*定理*　对合分布的整体叶存在：Zorn 引理
+
+设 $\mathcal{D}$ 是光滑流形 $M$ 上的**对合**光滑 $k$ 阶切分布（`def.involutive-distribution`）。则 $M$ 上存在**叶状结构**：
+
+- 过每点恰有一片**极大连通积分流形**（叶）$L$ 经过，$T L = \mathcal{D}|_{L}$（`def.integral-manifold`）；
+- 两片叶或相等或不相交；全体叶覆盖 $M$，每片是浸入子流形。
+
+本条只负责**整体**这一步：局部叶片的存在性是 Frobenius 定理的内容（本图见 Frobenius 节点），把局部叶片粘成极大叶、并证明叶与叶互不相交，用的是 Zorn 引理。
+
+⭐ 与 Frobenius 定理的分工：Frobenius 给的是**局部**可积（每点附近有积分流形），本条把局部叶片粘成**整体**的极大叶 —— 差别只在「整体」，所以剩下的工作是一次 Zorn 加一次局部唯一性。
+
+⚠ 本条不把 Frobenius 列为 source：局部可积性在这里当**已知输入**用（图上已由 Frobenius 节点陈述），本条要证的是它推不出的那一步。要写成显式依赖，得先确认不与 Frobenius 的分层成环。
+
+参考：Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「Frobenius Theorem」
 
 #### sl₂ 的交换子　`ex-sl2-commutator`
 *例*　矩阵交换子：$[E, F] = H$、$[H, E] = 2E$、$[H, F] = -2F$
@@ -40545,17 +40531,7 @@ $$\left(\frac{ab}{n}\right) = \left(\frac{a}{n}\right)\left(\frac{b}{n}\right), 
 
 $$\gcd(m,n) = 1:\quad \left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}, \qquad \left(\frac{-1}{n}\right) = (-1)^{\frac{n-1}{2}}, \qquad \left(\frac{2}{n}\right) = (-1)^{\frac{n^{2}-1}{8}} .$$
 
-算法：把 $\left(\frac{a}{n}\right)$ 里的 $a$ 拆成 $2^{k}$ 乘一个奇数，用 $\left(\frac{2}{n}\right)$ 的公式处理 $2$ 的部分；
-
-再把剩下的奇数因子用互反律翻过来（符号按 $m \equiv n \equiv 3 \pmod 4$ 判），然后对 $a \bmod n$ 取余 —— 与辗转相除同构，$O(\log n)$ 步。
-
-
-
-**为什么不分解 $n$**：互反律允许在 $\left(\frac{m}{n}\right)$ 与 $\left(\frac{n}{m}\right)$ 之间来回换，形状完全对称（除了那个符号）。这条「对称性 + 取余」就是 Jacobi 符号算法的全部。
-
-
-
-与 Legendre 符号的关系：$n$ 素时两者一致；$n$ 合数时 Jacobi 只是「乘积形式」，见 `def.jacobi-symbol` 的警告。
+text=**三条法则的分工**：前两条由定义展开（乘性），第三条（互反律）要 $\gcd(m,n)=1$，由 Legendre 互反律逐素因子相乘并合并指数得到。完整证明见边 `imp.jacobi-laws-proof`。
 
 参考：华罗庚《数论导引》第四章
 
@@ -45278,6 +45254,18 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 
 > 经典证明用蛇引理，这里用映射锥 + 旋转。两条路都通，但后者的好处是：**连接同态是什么**这件事，一眼就能看出来。
 
+#### 定义引用：「群」→ 群的整数幂　`dep.grouppower-group`
+
+整数幂只用群的乘法、单位元与逆元定义。
+
+#### 定义引用：「二元运算」→ 群的整数幂　`dep.grouppower-binary`
+
+幂的递归步 $x^{n+1}=x^{n}x$ 就是群的二元运算。
+
+#### 定义引用：「群的整数幂」→ 群的阶与元素的阶　`dep.grouppower-order`
+
+元素的阶是使 $x^{n}=e$ 的最小正整数，直接用整数幂陈述。
+
 #### 定义引用：「群」→ 自由群　`dep.fg-group`
 
 自由群的乘法与公理按群的定义验证。
@@ -49000,7 +48988,7 @@ $g$ 是 $C^{1}$ 的复合，故 $C^{1}$。
 
 > ⭐ 整条证明里**没有任何新的分析技巧** —— 全部内容都打包在 $\Phi$ 这个构造里。这就是「隐函数定理 = 逆映射定理的换装」的确切含义：同一件事换个写法，条件也随之翻译（$D\Phi$ 可逆 $\iff$ $D_yF$ 可逆）。
 
-#### 逆映射定理 + Banach 空间 ⟹ 逆映射定理（Banach 版）　`imp.inverse-function-banach`
+#### 逆映射定理 + Banach 空间 + 多元中值定理 ⟹ 逆映射定理（Banach 版）　`imp.inverse-function-banach`
 *同一套证明换到 Banach 空间（多一步 Neumann 级数）*
 
 证明与有限维版本（`imp.inverse-function`）**逐步对应**，只有两处需要替换：
@@ -49436,7 +49424,7 @@ $$n_p = 1 + \sum (\text{长度 } \ge 2 \text{ 的轨道长}) \equiv 1 \pmod p$$
 
 > ⭐ 第二步的论证是整条定理的模板，值得单独记住：**让 $p$-群作用在一个「基数不被 $p$ 整除」的集合上，必有不共点** —— 因为轨道长都是 $p$ 的幂，若都 $\ge p$ 就整除不了总和。这个「不动点论证」在表示论与代数拓扑里反复出现。
 
-#### 合成列 ⟹ Jordan–Hölder 定理　`imp.jordan-holder`
+#### 合成列 + 第一同构定理（Noether） ⟹ Jordan–Hölder 定理　`imp.jordan-holder`
 *Zassenhaus（蝴蝶）引理 + Schreier 加细 $\implies$ Jordan–Hölder*
 
 **引理 1（Zassenhaus / 蝴蝶引理）**：设 $A \trianglelefteq A^{\ast}$、$B \trianglelefteq B^{\ast}$ 都是群 $G$ 的子群。则
@@ -49668,7 +49656,7 @@ $$v^{n} - u^{n} = (v - u)\,(v^{n-1} + v^{n-2}u + \cdots + u^{n-1}) > 0,$$
 
 **乘法。** $(\sqrt[n]{a}\,\sqrt[n]{b})^{n} = ab$，两边都是正数，由唯一性得 $\sqrt[n]{ab} = \sqrt[n]{a}\,\sqrt[n]{b}$。$\blacksquare$
 
-#### n 次方根 + Archimedes 性质 ⟹ 有理指数与实数指数幂　`imp.real-power`
+#### n 次方根 + Archimedes 性质 + 指数律与幂的单调性 ⟹ 有理指数与实数指数幂　`imp.real-power`
 *n 次方根 $\implies$ 有理指数良定义；确界 $\implies$ 实数指数*
 
 **有理指数良定义。** 设 $m/n = m'/n'$（$n, n' \ge 1$），则 $mn' = m'n$。取 $n n'$ 次方根：
@@ -49858,7 +49846,7 @@ $$(\sin x)' = \sum_{k \ge 0} \frac{(-1)^{k}(2k+1)x^{2k}}{(2k+1)!} = \cos x, \qqu
 
 **$\sqrt{x}$**：由 $x = (\sqrt{x})^{2}$ 两边求导得 $1 = 2\sqrt{x}\,(\sqrt{x})'$。$\blacksquare$
 
-#### 级数收敛 + Bernoulli 不等式 + Archimedes 的 ε 形式与取整 ⟹ 几何级数　`imp.geometric-series`
+#### 级数收敛 + Bernoulli 不等式 + Archimedes 的 ε 形式与取整 + 级数的 Cauchy 准则 ⟹ 几何级数　`imp.geometric-series`
 *部分和公式 + Bernoulli $\implies$ 几何级数*
 
 **$|q| < 1$。** 若 $q = 0$，则 $s_N = 1$ 对一切 $N$ 成立，收敛到 $1$ ✓；下面设 $q \ne 0$（此时 $q \ne 1$ 自动成立）。部分和
@@ -49884,7 +49872,7 @@ $$\sum_{n \ge 1} \frac{1}{n^{p}} \ \text{收敛} \iff \sum_{k \ge 0} 2^{k} \cdot
 
 右边是公比 $q = 2^{1-p}$ 的几何级数。由 `thm.geometric-series`，它收敛 $\iff$ $q < 1$ $\iff$ $2^{1-p} < 1$ $\iff$ $p > 1$。$\blacksquare$
 
-#### 群 ⟹ 群的基本性质　`imp.group-basic`
+#### 群 + 群的整数幂 ⟹ 群的基本性质　`imp.group-basic`
 *群公理 $\implies$ 消去律与逆公式*
 
 **(i)** 若 $ab = ac$，两边左乘 $a^{-1}$：$a^{-1}(ab) = a^{-1}(ac)$，由结合律得 $b = c$。右消去对称。
@@ -49895,7 +49883,7 @@ $a^{-1}$ 的逆是 $a$ 由 $a^{-1}a = e$ 直接读出；
 
 $e^{-1} = e$ 同理。
 
-**(iii)** 非负指数对 $n$ 归纳（`def.power`）；负指数写成 $(a^{-1})^{k}$，再用 $(a^{-1})^{k} = (a^{k})^{-1}$（对 $k$ 归纳，用 (ii)）。$\blacksquare$
+**(iii)** 非负指数对 $n$ 归纳（def.group-power）；负指数写成 $(a^{-1})^{k}$，再用 $(a^{-1})^{k} = (a^{k})^{-1}$（对 $k$ 归纳，用 (ii)）。$\blacksquare$
 
 #### 理想 + 环 ⟹ 理想的运算与商环泛性质　`imp.ideal-basic`
 *理想的定义 $\implies$ 交、和、积与商环泛性质*
@@ -49955,6 +49943,10 @@ $\blacksquare$
 $$F(f)\,F(f^{-1}) = F(f f^{-1}) = F(1_Y) = 1_{F(Y)}.$$
 
 同理由 $f^{-1} f = 1_X$ 得 $F(f^{-1})\,F(f) = 1_{F(X)}$。故 $F(f)$ 可逆且逆为 $F(f^{-1})$。$\blacksquare$
+
+#### 定义引用：「群的整数幂」→ 循环群　`dep.n12-grouppower-cyclic`
+
+循环群用群的整数幂记 $g^{k}$；幂的约定见群幂节点。
 
 #### 定义引用：「绝对值 |x|」→ 数列极限　`def-link.abs-seq-limit`
 
@@ -50130,7 +50122,7 @@ $$\operatorname{RHom}(\prod_J \mathbb{Z},\ \mathbb{Z}) = \bigoplus_J \mathbb{Z}.
 
 右边是 $R\Gamma(T,\mathbb{Z}) = C(T,\mathbb{Z})$（$H^{>0} = 0$），由 `thm.csz-free` 也等于 $\bigoplus_J \mathbb{Z}$。两边一致。$\blacksquare$
 
-#### 完备化判据 + 自由固态群是固态的 + 自由固态群是大乘积 ⟹ 固态群构成阿贝尔子范畴　`imp.solid-abelian`
+#### 完备化判据 + 自由固态群是固态的 + 自由固态群是大乘积 + Breen–Deligne 分解 ⟹ 固态群构成阿贝尔子范畴　`imp.solid-abelian`
 *完备化判据 + 关键计算 $\implies$ $\mathbf{Solid}$ 是阿贝尔子范畴*
 
 **预备。** 取 $\mathcal{A} = \operatorname{Cond}(\mathbf{Ab})$，$\mathcal{A}_0 = \{\mathbb{Z}[S] : S\ \text{extremally disconnected}\}$（紧投射生成元），$F(\mathbb{Z}[S]) = Z[S]^{\blacksquare}$。
@@ -50151,7 +50143,7 @@ $$\operatorname{RHom}(Z[S]^{\blacksquare}, C)(S') \cong R\Gamma(S \times S', C).
 
 由 Lecture IV 的定理（Eilenberg–MacLane/Breen–Deligne，`thm.breen-deligne`）与 $\mathbb{Z}[X]$ 的 pseudocoherence，$M(S,\mathbb{R}/\mathbb{Z}) \cong \prod \mathbb{R}/\mathbb{Z}$ 是 pseudocoherent 的，从而 $M(S,\mathbb{R}/\mathbb{Z}) \otimes \mathbb{Z}[S']$ 也是。
 
-由 Theorem 4.3（`table.rhom-zrt` 那一条的母定理），
+由 Theorem 4.3（同调代数表 那一条的母定理），
 $$\operatorname{RHom}(M(S,\mathbb{R}/\mathbb{Z}), M)(S') = \bigoplus_i \prod_j \operatorname{RHom}(M(S,\mathbb{R}/\mathbb{Z}), \mathbb{Z})(S') = \bigoplus_i \prod_j C(S \times S', \mathbb{Z})[-1].$$
 另一方面 $R\Gamma(S, M) = \bigoplus_i \prod_j R\Gamma(S, \prod \mathbb{Z}) = \bigoplus_i \prod_j C(S,\mathbb{Z})[0]$（Theorem 3.3）。两边取 $S'$ 点后一致。
 
@@ -50275,6 +50267,14 @@ $$Z[S]^{\blacksquare} \otimes^{L\blacksquare} Z[T]^{\blacksquare} \cong Z[S \tim
 
 自由固态群 $Z[S]^{\blacksquare}$ 的下垫群就是测度群 $M(S,\mathbb{Z})$，见 `cor.free-solid-product`。
 
+#### 定义引用：「固态阿贝尔群」→ 固态张量积的计算　`dep.n11-solidtensor-group`
+
+固态张量积是固态群范畴中的运算
+
+#### 定义引用：「凝聚态阿贝尔群」→ 固态张量积的计算　`dep.n11-solidtensor-condab`
+
+固态群是凝聚阿贝尔群的子范畴
+
 #### 解析环 + 完备化判据 ⟹ 解析环上的模　`imp.analytic-modules`
 *解析环的定义 $\implies$ 模范畴是阿贝尔的*
 
@@ -50310,7 +50310,7 @@ $$\operatorname{RHom}(\mathbb{Z}_\blacksquare[S], C) \cong \operatorname{RHom}_{
 
 左边由 $C$ 固态等于 $\operatorname{RHom}(\mathbb{Z}[S], C)$，正是解析环定义要求的同构。$\blacksquare$
 
-#### 解析环的例子 + 解析环 + 固态群构成阿贝尔子范畴 ⟹ 有限生成代数的解析环　`imp.za-analytic`
+#### 解析环的例子 + 解析环 + 固态群构成阿贝尔子范畴 + 解析环的 base change ⟹ 有限生成代数的解析环　`imp.za-analytic`
 *边界函数 $A_\infty$ $\implies$ $A_\blacksquare$ 是解析环*
 
 设 $A = \mathbb{Z}[T]$，$A_\infty = \mathbb{Z}((T^{-1}))$。
@@ -50353,7 +50353,7 @@ $$j_! M := M \otimes_{A \otimes^L \mathbb{Z}^{\blacksquare}} (A_\infty/A)[-1],$$
 
 对 $n$ 归纳：$R^{\blacksquare}$ 已知解析，把 ①–⑥ 里的 $\mathbb{Z}$ 换成 $R$、$T$ 换成 $X_n$，逐步得到 $(A,R)^{\blacksquare}$ 解析（Appendix, Theorem 8.13）。
 
-#### 有限生成代数的解析环 ⟹ 仿射相干对偶　`imp.coherent-duality`
+#### 有限生成代数的解析环 + adic 结构层是层 ⟹ 仿射相干对偶　`imp.coherent-duality`
 *$j_! \dashv j^* \dashv j_*$ $\implies$ 仿射相干对偶*
 
 **记号。** 设 $f : A \to A'$ 是解析环之间的映射，$f^{\mathrm{ad}/\mathbb{Z}} : \operatorname{Spec} A' \to \operatorname{Spec} A$ 是对应的 adic 谱映射，$j : \operatorname{Spec} A' \to \operatorname{Spec}(A',\mathbb{Z})$。
@@ -50378,7 +50378,7 @@ $$f^! M \cong (M \otimes^L_{\mathbb{Z}^{\blacksquare}} A^{\blacksquare}) \otimes
 
 ⚠ 第 ⑤ 步同上：保紧性的完整展开是 Remark 11.7 的归约 + $\mathbb{A}^1$ 的情形，本图只写到归约。
 
-#### 解析环 ⟹ R_{ℓ¹} 不是解析环　`imp.rl1-not-analytic`
+#### 解析环 + 自由固态群是大乘积 ⟹ R_{ℓ¹} 不是解析环　`imp.rl1-not-analytic`
 *解析性要求 $\operatorname{Ext}^1 = 0$ $\implies$ $\mathbb{R}_{\ell^1}$ 不是解析环*
 
 若 $\mathcal{A}$ 是解析环，则对 extremally disconnected 的 $S, T$ 与 $i > 0$，由解析性取 $C = \mathcal{A}[T]$ 得
@@ -50553,29 +50553,14 @@ adic 空间是「局部同构于 $\operatorname{Spa}$」的空间，所以 $\ope
 
 每个 $D((A,A^+)_\blacksquare)$ 都嵌在凝聚态 $A$-模的导出范畴里，粘合是**凝聚态层**意义下的粘合。
 
-#### 紧支撑推前 f_! + 有限生成代数的解析环 ⟹ 开浸入的 j_!　`imp.open-immersion-shriek`
-*固态模里 $\prod$ 与局部化交换 $\implies$ $j_!$ 存在*
+#### 定义引用：「紧支撑推前 f_!」→ 紧支撑推前的存在性　`dep.fshriek-existence`
 
-$j_!$ 存在 $\iff$ $j^*$ 保极限。$j$ 是开浸入，$j^*$ 就是「把 $A$-模换成 $A[1/f]$-模」；要它保积就等价于
+定理说的「$f_{!}$ 存在」，说的就是这条定义里那个复合函子确实造得出来；对象先于存在性。
 
-$$\prod_I A \otimes_{A_\blacksquare} A[1/f]_\blacksquare \;\cong\; \prod_I A[1/f].$$
+#### 开浸入的 j_! + 6-函子形式 ⟹ 紧支撑推前的存在性　`imp.f-shriek`
+*开浸入的 $j_!$ $\implies$ 一般 $f_!$ 存在*
 
-在抽象 $A$-模里，左边是 $\prod_I A[1/f]$ 的**子集**（$\prod$ 与局部化不交换），一般不相等；在固态 $A$-模里，$\prod_I A$ 是紧投射对象（`cor.solid-compact-generators`），$\otimes_{A_\blacksquare}$ 保它，且 $A[1/f]_\blacksquare$ 与 $\prod$ 相容。
-
-
-
-仿射、有限型情形由 `thm.za-analytic` 的 $j_!$ 给出；
-
-一般情形取仿射开覆盖逐步粘合。
-
-$\blacksquare$
-
-> 「用更强的工具回头证」：构造顺序是 {!}$（开浸入）→ {!}$（见 imp.f-shriek），反向这一条是拿定义一般 {!}$ 之后的结果去反推 {!}$ 的存在，故按推论边处理（不参与分层）。
-
-#### 开浸入的 j_! + 6-函子形式 ⟹ 紧支撑推前 f_!　`imp.f-shriek`
-*开浸入的 $j_!$ $\implies$ 一般 $f_!$*
-
-对分离有限型 $f : X \to Y$，有交换图 $X_{\mathrm{ad}} \xrightarrow{j} X_{\mathrm{ad}/Y} \to Y_{\mathrm{ad}}$，$j$ 是开浸入（`prop.scheme-embeds-adic` 的类似论证）。定义
+对分离有限型 $f : X \to Y$，有交换图 $X_{\mathrm{ad}} \xrightarrow{j} X_{\mathrm{ad}/Y} \to Y_{\mathrm{ad}}$，$j$ 是开浸入（「概形嵌入 adic 空间」 的类似论证）。定义
 
 $$f_! := (f_{\mathrm{ad}/Y})_* \circ j_!.$$
 
@@ -50591,7 +50576,7 @@ $(f^{\mathrm{ad}/Y})_*$ 在仿射局部上是有限个遗忘函子的极限，�
 
 故 $f_!$ 保直和，右伴随 $f^!$ 存在。
 
-$\blacksquare$
+∎
 
 #### 紧支撑推前 f_! + 有限生成代数的解析环 ⟹ 对偶函子的扭转与基变换　`imp.f-shriek-base-change`
 *仿射情形 + 基变换*
@@ -50626,7 +50611,7 @@ $$f^!R = g^!p_1^!f^!R = g^!\bigl(p_1^*f^!R \otimes p_2^*f^!R\bigr) = f^!R \otime
 
 比较次数与行列式（$g^!(A\otimes_R A) = \det(I/I^2)^*[-d]$，而对角的 $I/I^2 = \Omega^1_{A/R}$），得 $f^!R = \det(\Omega^1_{A/R})[d]$。$\blacksquare$
 
-#### 光滑映射的对偶复形 + 6-函子形式 ⟹ 固态 Serre 对偶　`imp.poincare-solid`
+#### 光滑映射的对偶复形 + 6-函子形式 + 仿射相干对偶 ⟹ 固态 Serre 对偶　`imp.poincare-solid`
 *6-函子 + $f^!R=\omega[d]$ $\implies$ Serre 对偶*
 
 设 $f : X \to \operatorname{Spec} R$ 是相对维数 $d$ 的光滑映射，$\omega := f^! R$。
@@ -50672,6 +50657,10 @@ $f_!$ 的定义用的正是 $X_{\mathrm{ad}} \to X_{\mathrm{ad}/Y}$ 这个 adic 
 #### 定义引用：「仿射相干对偶」→ 紧支撑推前 f_!　`def-link.coherent-affine-global`
 
 仿射版的 $f_!$ 是全局定义的局部模型：在仿射开集上两者一致。
+
+#### 定义引用：「紧支撑推前 f_!」→ 固态 Serre 对偶　`dep.n12-fshriek-poincare`
+
+证明在紧化上把 $f_!$ 展开时直接使用 $j_!$ 的定义（$f_! = f_* \circ j_!$）。
 
 #### 定义引用：「阿贝尔范畴」→ 完备化判据　`def-link.solid-criterion-abelian`
 
@@ -50801,7 +50790,7 @@ $\operatorname{Tor}_{1}^{R}(M, N) = H_{1}(P_{\bullet} \otimes N)$。
 $$0 \longrightarrow \operatorname{Tor}_{1}^{R}(R/I, N) \longrightarrow I \otimes N \longrightarrow N \longrightarrow \cdots$$
 故 $\operatorname{Tor}_{1}^{R}(R/I, N) = 0$ 推出 $I \otimes N \to N$ 单 ✓。
 
-**4 蕴含 2**：先化到 $M$ 有限生成（$(-) \otimes N$ 保滤过余极限，而单射在滤过余极限下封闭），再对生成元个数归纳，每一步把「子模含入」拆成「理想含入 + 短正合列」，用蛇引理拼回去 —— 完整论证见 `thm.lambek` ✓。
+**4 蕴含 2**：先化到 $M$ 有限生成（$(-) \otimes N$ 保滤过余极限，而单射在滤过余极限下封闭），再对生成元个数归纳，每一步把「子模含入」拆成「理想含入 + 短正合列」，用蛇引理拼回去 —— 最后一步的完整论证就是 Lambek 判据，它与本条同层（互为等价刻画），这里不另列为前提 ✓。
 
 **5** 只是把 1、2 换成有限表现模的说法（$R^{n} \to M$ 有限生成自由），等价性是显然的 ✓。∎
 
@@ -50816,7 +50805,7 @@ $$A \otimes_{R} R^{(I)} \;\cong\; A \otimes_{R} \bigoplus_{i \in I} R \;\cong\; 
 
 一族函子的直和正合：$f : A \to A_{1}$ 单射 $\iff$ 每个分量 $f$ 单射，而 $(f)^{(I)}$ 就是 $f$ 的 $I$ 重直和、单射性逐分量判定 ✓。故自由模平坦。
 
-**投射模平坦**：投射模是某自由模的直和项，由 `prop.flat-summand` 继承平坦性 ✓。∎
+**投射模平坦**：投射模是某自由模的直和项，由直和项继承平坦性（同层事实，不另列为前提）✓。∎
 
 > 这条让「投射消解也是平坦消解」成立，于是 $\operatorname{Tor}$ 可以用更短的平坦消解来算。
 
@@ -50974,7 +50963,7 @@ $J$ 是左理想、$h$ 线性；
 
 > 整条证明只用了「$R$ 是环」与 Zorn 引理，没有任何小性/有限性假设 —— 所以它对**任意**环都成立，这是它比平坦的 Lambek 判据更「硬」的原因。
 
-#### 内射的理想判据 + 可除群 ⟹ 内射等价于可除　`imp.pid-injective-divisible`
+#### 内射的理想判据 + 可除群 + Z-模就是阿贝尔群 ⟹ 内射等价于可除　`imp.pid-injective-divisible`
 *Baer 判据 + 主理想 $\implies$ 内射即除*
 
 **（可除 $\implies$ 内射）** 用 Baer 判据。设 $J \subseteq R$ 是理想，$f : J \to I$。主理想整环里 $J = (a)$。
@@ -50997,7 +50986,7 @@ $$n \bar{y} = \overline{n y} = \bar{x},$$
 
 > 对比：可除群的**子群**不必可除（$\mathbb{Z} \subseteq \mathbb{Q}$）。所以「可除」对商封闭、对子不封闭。
 
-#### 可除群 + 内射等价于可除 ⟹ 可除群的例子　`imp.divisible-examples`
+#### 可除群 + 内射等价于可除 + 可除群的商 ⟹ 可除群的例子　`imp.divisible-examples`
 *可除的定义 $\implies$ 三个标准例子*
 
 **$\mathbb{Q}$**：给定 $q = a/b$（$b > 0$）与 $n \ne 0$，取 $x = a/(b n)$，则 $n x = a/b = q$ ✓。
@@ -51046,6 +51035,18 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 于是每个 $M$ 都有投射对象满射到它 —— 按 `def.enough-projectives` 的定义即「有足够多投射对象」；把核再这样盖住，递归得到投射消解 ✓。∎
 
 > 与 `thm.mod-enough-injectives` 对照：投射这一侧是**显式**的（自由模写得出），内射那一侧是**存在性**的。
+
+#### 定义引用：「张量积」→ 标量扩张与限制互为伴随　`dep.n12-tensormod-scalarext`
+
+张量积的万有性质给出 $S\otimes_R M \to P$ 的唯一 $S$-线性映射。
+
+#### 定义引用：「平坦模」→ 平坦但不投射　`dep.n11-flatnp-flat`
+
+平坦模的定义
+
+#### 定义引用：「投射 / 内射对象」→ 平坦但不投射　`dep.n11-flatnp-proj`
+
+投射对象的定义（与平坦对比例子）
 
 #### 定义引用：「平坦模」→ 平坦维数　`dep.fd-flat`
 
@@ -52273,23 +52274,6 @@ $$0 = \mathrm{d}^{2}e_{i} = \sum_{j}\mathrm{d}\omega^{j}_{\ i}\wedge e_{j}-\sum_
 
 ⭐ 反过来也是同一件事：能构造出标架的**唯一**障碍就是这个 $\mathrm{d}^{2}=0$（曲面论基本定理用的就是这一点）。
 
-#### 结构方程 + 曲面与参数化 ⟹ 适配标架　`imp.dg-adapt`
-*沿曲面取 $e_{3} = n$ $\implies$ $\omega^{3} = 0$*
-
-对任意切向量 $v$：$\omega^{3}(v) = \langle \mathrm{d}r(v), e_{3}\rangle = \langle \mathrm{d}r(v), n\rangle = 0$ —— $\mathrm{d}r(v)$ 是曲面的切向量（$r$ 的像落在 $S$ 里），与法向正交。
-
-故 $\omega^{3}$ 沿曲面为零，于是 $\mathrm{d}\omega^{3} = 0$。
-
-把 $i = 3$ 代入第一结构方程（含 $\omega^{3}$ 的项全部消失）：
-
-$$0 = \mathrm{d}\omega^{3} = \omega^{1}\wedge\omega^{3}_{\ 1}+\omega^{2}\wedge\omega^{3}_{\ 2}.$$
-
-这条恒等式把 $\omega^{1}_{\ 3}, \omega^{2}_{\ 3}$ 锁在 $\{\omega^{1}, \omega^{2}\}$ 张成的二维空间里：写出 $\omega^{3}_{\ i} = a_{i}\omega^{1}+b_{i}\omega^{2}+c_{i}\omega^{3}$ 代进去，比较 $\omega^{1}\wedge\omega^{3}$ 与 $\omega^{2}\wedge\omega^{3}$ 的系数即得 $c_{1} = c_{2} = 0$，于是 $\omega^{i}_{\ 3} = \sum_{j}c_{ij}\omega^{j}$。
-
-剩下的 $\omega^{1}\wedge\omega^{2}$ 系数给出 $b_{1} = a_{2}$，即系数的对称性（见 `lem.second-form-symmetric`）。
-
-∎
-
 #### 适配标架 + 结构方程 ⟹ 第二基本形式对称　`imp.dg-hsym`
 *$\mathrm{d}\omega^{3} = 0$ $\implies$ 第二基本形式的系数对称*
 
@@ -52340,7 +52324,7 @@ $$II = -\sum_{i,j}c_{ij}\,\omega^{i}\omega^{j} = \sum_{i,j}h_{ij}\,\omega^{i}\om
 
 换成参数 $(u,v)$ 就是 $L\,\mathrm{d}u^{2}+2M\,\mathrm{d}u\,\mathrm{d}v+N\,\mathrm{d}v^{2}$：$h_{ij}$ 与 $L, M, N$ 指的是同一组系数在不同基下的矩阵元。∎
 
-#### 结构方程 + 适配标架 + 第二基本形式对称 ⟹ Gauss 方程　`imp.dg-gauss`
+#### 结构方程 + 适配标架 + 第二基本形式对称 + 联络形式反对称 ⟹ Gauss 方程　`imp.dg-gauss`
 *结构方程拆出 $k=3$ 项 $\implies$ Gauss 方程*
 
 第二结构方程 $\mathrm{d}\omega^{i}_{\ j} = \sum_{k=1}^{3}\omega^{k}_{\ j}\wedge\omega^{i}_{\ k}$ 取 $i, j \in \{1,2\}$，把 $k$ 拆成 $1,2,3$：
@@ -52361,7 +52345,7 @@ $$\omega^{1}_{\ 3}\wedge\omega^{2}_{\ 3} = (c_{11}c_{22}-c_{12}^{2})\,\omega^{1}
 
 在参数网 $\{r_{u}, r_{v}\}$ 下 $h$ 与 $g$ 是同一对基下的两个矩阵，于是 $K = \det h/\det g = (LN-M^{2})/(EG-F^{2})$。
 
-**无指标形式**：同一段 $R^{\mathbb{R}^{3}} = 0$ 的展开，这一次取**切向**分量（而不是法向分量），就得到 $\langle R(X,Y)Z, W\rangle = II(Y,Z)II(X,W)-II(X,Z)II(Y,W)$ —— 法向分量那一半正是 `thm.codazzi-mainardi` 的入边里算的东西。
+**无指标形式**：同一段 $R^{\mathbb{R}^{3}} = 0$ 的展开，这一次取**切向**分量（而不是法向分量），就得到 $\langle R(X,Y)Z, W\rangle = II(Y,Z)II(X,W)-II(X,Z)II(Y,W)$ —— 法向分量那一半正是 Codazzi–Mainardi 方程 的入边里算的东西。
 
 ∎
 
@@ -52420,7 +52404,7 @@ $v$ 是主方向，按定义就是 $u$ 是 $W$ 的特征向量：$W(u) = k\,u$�
 
 ∎
 
-#### 主曲率 + Weingarten 变换 ⟹ Euler 公式　`imp.dg-euler`
+#### 主曲率 + Weingarten 变换 + Rodrigues 定理 ⟹ Euler 公式　`imp.dg-euler`
 *谱定理 $\implies$ Euler 公式*
 
 主方向标架下 $W(e_{1}) = k_{1}e_{1}$、$W(e_{2}) = k_{2}e_{2}$，且 $e_{1}\perp e_{2}$、$\lVert e_{1}\rVert = \lVert e_{2}\rVert = 1$（`thm.rodrigues` 给出特征向量的几何意义）。
@@ -53184,7 +53168,7 @@ $$\nabla^{2}Z(X,Y)-\nabla^{2}Z(Y,X) = \nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}
 #### Riemann 曲率张量 + 曲率张量的对称性 ⟹ 比安基恒等式　`imp.tu-bianchi`
 *法坐标下的三阶偏导抵消 $\implies$ 第二比安基恒等式*
 
-**第二比安基。** 取 $p\in M$ 处的**法坐标**（指数映射给的坐标，见 `def.exponential-map`）：$\Gamma^{k}_{ij}(p) = 0$、$\partial_{i}g_{jk}(p) = 0$，于是 $p$ 处 $\nabla_{i} = \partial_{i}$，且由 $R^{\ell}_{ijk} = \partial_{i}\Gamma^{\ell}_{jk}-\partial_{j}\Gamma^{\ell}_{ik}$ 与 $\Gamma$ 的公式得
+**第二比安基。** 取 $p\in M$ 处的**法坐标**（指数映射给的坐标，见 指数映射）：$\Gamma^{k}_{ij}(p) = 0$、$\partial_{i}g_{jk}(p) = 0$，于是 $p$ 处 $\nabla_{i} = \partial_{i}$，且由 $R^{\ell}_{ijk} = \partial_{i}\Gamma^{\ell}_{jk}-\partial_{j}\Gamma^{\ell}_{ik}$ 与 $\Gamma$ 的公式得
 
 $$R_{ijk\ell} = \frac{1}{2}\bigl(\partial_{i}\partial_{k}g_{j\ell}-\partial_{i}\partial_{\ell}g_{jk}-\partial_{j}\partial_{k}g_{i\ell}+\partial_{j}\partial_{\ell}g_{ik}\bigr).$$
 
@@ -53845,7 +53829,7 @@ $(1,0)$ 型张量场就是向量场；分量变换律 $X^{i} = \sum_{j}\frac{\pa
 
 系数 $\sqrt{\det(g_{ij})}$ 完全来自度量；没有 $g$ 就只剩「处处非零的 $n$-形式」，写不出体积。
 
-#### 定义引用：「可定向流形」→ 定向与体积形式　`dep.mf-orientable-volform-equiv`
+#### 定义引用：「可定向流形」→ 体积与定向　`dep.mf-orientable-volform-equiv`
 
 命题的主语就是「可定向」，它给的是不靠图册的等价判据；「同一个定向」那半句还要用到极大定向图册。
 
@@ -54108,7 +54092,7 @@ $$\rho_{\alpha} := \frac{\psi_{\alpha}}{\Psi}.$$
 
 ⭐ 复用的两件东西是「$\mathbb{R}^{n}$ 上的鼓包」与「仿紧给的局部有限加细」。所以流形上一切「局部造 + 整体粘」的论证都是这张图：局部造出想要的，再用 $\rho_{\alpha}$ 加权求和。
 
-#### 可定向流形 + 微分形式（欧氏开集） ⟹ 定向与体积形式　`imp.mf-volume-form-orientation`
+#### 可定向流形 + 微分形式（欧氏开集） + 光滑单位分解 ⟹ 体积与定向　`imp.mf-volume-form-orientation`
 *Jacobi 行列式同号 $\iff$ 处处非零的最高次形式*
 
 **（$\implies$）有定向就有体积形式。** 取定向图册 $\{(U_{\alpha},\varphi_{\alpha})\}$ 与从属于它的光滑单位分解 $\{\rho_{\alpha}\}$（`thm.smooth-partition-unity`，先加细成局部有限）。令
@@ -54195,7 +54179,7 @@ $$\mathrm{d}K + K\mathrm{d} = \operatorname{id}_{\Omega^{k}(U)}\qquad (k \ge 1).
 
 **可缩版本。** 把 $H$ 换成任意的收缩同伦（$H(\cdot,1) = \operatorname{id}$、$H(\cdot,0) = \text{const}$）逐字重复，故「星形」可放宽为「可缩」。∎
 
-#### de Rham 上同调 ⟹ Mayer–Vietoris 序列　`imp.mf-mayer-vietoris`
+#### de Rham 上同调 + 光滑单位分解 ⟹ Mayer–Vietoris 序列　`imp.mf-mayer-vietoris`
 *形式的短正合列取上同调 $\implies$ 长正合列*
 
 **短正合列。** 记 $W = U \cap V$。限制与差给出 
@@ -54463,7 +54447,7 @@ $$\int_{\partial I^{k}}\eta = \sum_{i=1}^{k}\sum_{\alpha=0}^{1}(-1)^{i+\alpha}(-
 
 ⭐ 全部内容就是「每个 $j$ 的两端之差」被数了两遍，两遍的符号对上。$k = 1$ 时退化成 $\int_{0}^{1}F^{\prime} = F(1)-F(0)$，可以当作符号约定是否抄对的检验。
 
-#### 方块上的 Stokes 公式 + 拉回（开集间） + 链上的积分 ⟹ 链上的 Stokes 定理　`imp.spivak-chain-stokes`
+#### 方块上的 Stokes 公式 + 拉回（开集间） + 链上的积分 + 链上积分的双线性 ⟹ 链上的 Stokes 定理　`imp.spivak-chain-stokes`
 *拉回到方块 + 方块上的公式 $\implies$ 链上的 Stokes*
 
 **方块情形。** 设 $c$ 是 $k$-方块，$\omega$ 是 $(k-1)$-形式，都在 $c(I^{k})$ 的某个邻域上有定义。令 $\eta := c^{\ast}\omega$。由拉回与外微分交换（$c^{\ast}\mathrm{d} = \mathrm{d}c^{\ast}$），
@@ -55292,7 +55276,7 @@ $$\mathrm{d}i\bigl([X_{N},Y_{N}]_{p}\bigr) = \bigl[\mathrm{d}i(X_{N}),\ \mathrm{
 
 **为什么 (1) 是本定理的核心**：(2)、(3)、(4) 都是「存在某个几何对象」，而 (1) 只是「有限个括号的封闭性」。定理真正说的是：**一条纯代数的条件等价于一条纯几何的结论** —— 前者有限步可验，后者要解偏微分方程组。∎
 
-#### 左不变形式 + 外微分（欧氏开集） + 左不变向量场 ⟹ Maurer–Cartan 方程　`imp.mf2-maurer-cartan`
+#### 左不变形式 + 外微分（欧氏开集） + 左不变向量场 + 拉回（开集间） ⟹ Maurer–Cartan 方程　`imp.mf2-maurer-cartan`
 *左不变性 $+$ 括号在左不变场上封闭 $\implies$ Maurer–Cartan 方程*
 
 **预备公式**：对任意 $1$-形式 $\theta$ 与向量场 $X, Y$，
@@ -55375,7 +55359,7 @@ $$\langle[\omega],[c]\rangle := \int_{c}\omega .$$
 
 **第二步：把左边认成层上同调。** $\Omega^{\bullet}$ 是常层 $\underline{\mathbb{R}}$ 的消解：逐点的正合性就是 Poincaré 引理，逐点的核是 $\mathbb{R}$；
 
-而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（`thm.de-rham-h0` 的论证），即 $\underline{\mathbb{R}}$ 的截面。
+而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（同层事实：d-闭 0-形式局部常），即 $\underline{\mathbb{R}}$ 的截面。
 
 于是复形的上同调 $H^{\bullet}_{\mathrm{dR}}(M)$ 就是层上同调 $H^{\bullet}(M;\underline{\mathbb{R}})$。
 
@@ -55436,7 +55420,7 @@ $$\tau \mapsto \Phi(s+\tau, y_{1}),\qquad \tau \mapsto \Phi\bigl(\tau, \Phi(s,y_
 
 **极大流的拼接。** 每点附近都有局部流，两个局部流在公共点附近由唯一性重合；把这一点当作等价关系把局部解接起来，得到定义域极大的那一个 $\mathcal{W} \subseteq \mathbb{R}\times M$。∎
 
-⭐ 全程只有一处用到流形结构：**在卡里做**。「流形上的 ODE」与「$\mathbb{R}^{n}$ 上的 ODE」在局部没有区别，区别只出现在**整体**行为（`thm.flow-complete`）。
+⭐ 全程只有一处用到流形结构：**在卡里做**。「流形上的 ODE」与「$\mathbb{R}^{n}$ 上的 ODE」在局部没有区别，区别只出现在**整体**行为（整体流）。
 
 #### 流 + 局部流 + 紧 ⟹ 流完备性　`imp.mf2-flow-complete`
 *局部存在 $+$ 紧性 $\implies$ 有限端点必逃逸，紧流形上处处完备*
@@ -55477,7 +55461,7 @@ $a_{q}$ 一端把 $t$ 换成 $-t$ 同证。
 
 ⚠️ 第 2 条与第 3 条合起来才是「完备性可判定」的原因：**端点有限 $\implies$ 曲线跑出每个紧集**，而「跑出每个紧集」正是曲线无法再延拓的几何形态。紧流形上「跑不出去」，所以端点不可能有限 —— 这就是整条定理的全部内容。
 
-#### Lie 导数 + 内乘 + 外微分（欧氏开集） ⟹ Cartan 公式　`imp.mf2-cartan-formula`
+#### Lie 导数 + 内乘 + 外微分（欧氏开集） + 拉回（开集间） ⟹ Cartan 公式　`imp.mf2-cartan-formula`
 *两者都是与 $\mathrm{d}$ 交换的次数 $0$ 导子 $\implies$ Cartan 公式*
 
 记 $D := \mathrm{d}\,\iota_{X} + \iota_{X}\,\mathrm{d}$，要证 $D = \mathcal{L}_{X}$ 作用在 $\Omega^{\bullet}(M)$ 上。分四步。
@@ -55506,7 +55490,7 @@ $$D(f_{0}\,\mathrm{d}g_{1}\wedge\cdots\wedge\mathrm{d}g_{k}) = D(f_{0})\,\mathrm
 
 结论用的就是「可定向流形」这个概念：处处非零的顶次形式给出定向，判据见 `prop.volume-form-orientation`。
 
-#### Lie 群 + 左不变形式 + 定向与体积形式 ⟹ Lie 群可定向　`imp.lieg-orientable`
+#### Lie 群 + 左不变形式 + 体积与定向 ⟹ Lie 群可定向　`imp.lieg-orientable`
 *左不变顶次形式处处非零 $\implies$ Lie 群可定向*
 
 设 $\dim G = n$，取 $\mathfrak{g}^{\ast} = T_{e}^{\ast}G$ 中任一非零元素 $\alpha$，并令 $\omega$ 为它的左平移：$\omega_{g} := L_{g^{-1}}^{\ast}\alpha$（`def.left-invariant-form` 的构造；左不变性即 $L_{h}^{\ast}\omega = \omega$）。
@@ -56028,7 +56012,7 @@ $$f(z) = (z - z_{0})^{m}\underbrace{\left(a_{m} + a_{m+1}(z - z_{0}) + \cdots\ri
 
 > 证明的力量全在「有界 $\implies$ 可去」这一句。
 
-#### Morera 定理 ⟹ Weierstrass 收敛性定理　`e11.implication`
+#### Morera 定理 + Cauchy–Goursat 积分定理 ⟹ Weierstrass 收敛性定理　`e11.implication`
 *Morera 判极限全纯；Cauchy 公式判导数收敛*
 
 **全纯性**：设 $T \subset \Omega$ 是闭三角形。每个 $f_{k}$ 全纯，故 $\oint_{\partial T} f_{k}\,\mathrm{d}z = 0$（`thm.cauchy-goursat`）。$\partial T$ 紧、$f_{k} \to f$ 在其上一致，故
@@ -56164,7 +56148,7 @@ $$\frac{1}{2\pi i}\oint_{\gamma}\frac{f'(z)}{f(z)}\,\mathrm{d}z = \sum_{j} m_{j}
 
 > 这是「绕数」进入「数零点」的桥：把 $f$ 的零点个数算成 $f\circ\gamma$ 绕 $0$ 的圈数。
 
-#### 开映射定理 ⟹ Schwarz 引理　`e21.implication`
+#### 开映射定理 + 最大模原理 ⟹ Schwarz 引理　`e21.implication`
 *（推论）开映射定理 $\implies$ Schwarz 引理的等号情形*
 
 **要证的**：若 $f : \mathbb{D} \to \mathbb{D}$ 全纯、$f(0) = 0$ 且 $|f^{\prime}(0)| = 1$，则 $f(z) = cz$，其中 $|c| = 1$。
@@ -56491,7 +56475,7 @@ $$f \circ (\alpha * \beta) = (f \circ \alpha) * (f \circ \beta)$$
 
 > 关键只有一句：$f$ 与「拼接」交换。这也说明为什么 $f_{*}$ 是**同态**而不是随便一个映射。
 
-#### 诱导同态 ⟹ 基点变换　`e57.implication`
+#### 诱导同态 + 道路拼接 ⟹ 基点变换　`e57.implication`
 *把「换基点」看成沿道路的共轭，再用函子性核对*
 
 **先验证 $\Pi_{\gamma}$ 是同态**（这是唯一需要动手的地方）。设 $\alpha, \alpha'$ 是以 $x_{0}$ 为基点的闭道路。由 `lem.path-product` 的结合律、单位律，以及 $\gamma * \bar{\gamma} \simeq_{p} e_{x_{1}}$：
@@ -56567,7 +56551,7 @@ $$\deg([\alpha][\beta]) = \tilde{h}(1) = \deg\beta + \deg\alpha.$$
 
 > 注意这条边的作用：`prop.covering-index` 只够等势，同态性必须靠**提升的唯一性**重新算一遍。
 
-#### 圆周的基本群 ⟹ 圆盘不收缩　`e63.implication`
+#### 圆周的基本群 + 诱导同态 ⟹ 圆盘不收缩　`e63.implication`
 *若有收缩，$\operatorname{id}_{\mathbb{Z}}$ 会穿过平凡群*
 
 设存在连续 $r : D^{2} \to S^{1}$ 且 $r|_{S^{1}} = \operatorname{id}$，记 $i : S^{1} \hookrightarrow D^{2}$ 为包含映射。则由 $r \circ i = \operatorname{id}_{S^{1}}$ 与**函子性**（`prop.induced-homomorphism` (3)）：
@@ -56656,6 +56640,19 @@ van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右�
 (i) $\implies$ (ii)：给定 $x_{0}$ 与任意 $x$，道路连通给出从 $x_{0}$ 到 $x$ 的道路 $\lambda$。由 `prop.pi1-basepoint`，$[\alpha] \mapsto [\overline{\lambda} \ast \alpha \ast \lambda]$ 给出同构 $\pi_{1}(X, x_{0}) \to \pi_{1}(X, x)$。同构是双射且保单位元，把 $1$ 送到 $1$，故 $\pi_{1}(X, x) = 1$。∎
 
 > 这里用了两次「平凡性在同构下不变」：同构是双射，平凡群只有一个元素，像也只能有一个。没有道路连通就没有 $\lambda$，同构无从谈起 —— 这就是条件里「道路连通」不可省的确切原因。
+
+#### 覆叠空间 + 道路同伦 + 勒贝格数 ⟹ 提升定理　`imp.lifting-proof`
+*覆叠空间的道路提升与同伦提升*
+
+道路提升：取 $b_0$ 的开覆盖 $\mathcal U$，使每个 $U\in\mathcal U$ 均匀覆叠、$p^{-1}(U)$ 是互不相交的开片且每片同胚到 $U$。由紧性取 Lebesgue 数 $\delta>0$：$[0,1]$ 中长度 $<\delta$ 的子区间落在某个 $\alpha^{-1}(U)$ 中。取分割 $0=t_0<\ldots<t_N=1$ 使每段长度 $<\delta$。
+
+归纳构造 $\tilde\alpha$：$\tilde\alpha(0)=e_0$；若已定义到 $t_k$，取 $U_k\ni\alpha(t_k)$ 均匀覆叠，$\alpha([t_k,t_{k+1}])\subseteq U_k$，令 $\tilde\alpha$ 在 $[t_k,t_{k+1}]$ 上为 $\alpha$ 在含 $\tilde\alpha(t_k)$ 的那片上的逆同胚下的像。唯一性：相邻两步的片由起点与连续性唯一确定。
+
+同伦提升：$F:[0,1]^2\to B$ 连续、$F(0,0)=b_0$。由紧性取 $\delta>0$ 使每个边长 $<\delta$ 的小方块落在某个均匀覆叠的开集里，并细分 $[0,1]^2$ 成这样的方块。先在 $s=0$ 的边上提升 $F(\cdot,0)$（道路提升），再对每个小方块用矩形提升引理：若 $F$ 把方块映进均匀覆叠的 $U$ 且已提升一条边，则唯一地提升整个方块。逐块延拓得 $\tilde F$，唯一性由每步唯一。
+
+若 $F$ 是道路同伦（$F(0,s)=b_0$、$F(1,s)=b_1$ 固定），则 $s\mapsto\tilde F(0,s)$ 是 $p^{-1}(b_0)$ 中的连通集，而 $p^{-1}(b_0)$ 离散，故它常值 $e_0$；同理 $\tilde F(1,s)$ 常值。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
 
 #### 定义引用：「单纯复形」→ CW 复形　`dep.cw-simplicial`
 
@@ -56951,7 +56948,7 @@ $$Tz_{i} - Tz_{j} = \frac{(ad - bc)(z_{i} - z_{j})}{(cz_{i} + d)(cz_{j} + d)}.$$
 
 由交比的不变性（`def.cross-ratio`），$(z_{1}, z_{2}; z_{3}, z_{4}) = (0, 1; \infty, Tz_{4}) = Tz_{4}$。
 
-于是「交比为实」$\iff$「$Tz_{4}$ 在实轴上」$\iff$「$z_{4} \in T^{-1}(\mathbb{R})$」。而 $T^{-1}(\mathbb{R})$ 是一条直线或一个圆（`prop.mobius-circle`），它经过 $z_{1}, z_{2}, z_{3}$，所以四点在同一个圆或直线上。∎
+于是「交比为实」$\iff$「$Tz_{4}$ 在实轴上」$\iff$「$z_{4} \in T^{-1}(\mathbb{R})$」。而 $T^{-1}(\mathbb{R})$ 是一条直线或一个圆（分式线性变换把实轴映成直线或圆，同层事实），它经过 $z_{1}, z_{2}, z_{3}$，所以四点在同一个圆或直线上。∎
 
 > 把「共圆」翻译成「一个复数是不是实数」——这是复数几何的基本动作。
 
@@ -57004,11 +57001,11 @@ $$(z, z_{1}; z_{2}, z_{3}) = (Tz, w_{1}; w_{2}, w_{3}).$$
 
 **复合对应乘法**：直接代入 $T_{1}(T_{2}(z))$ 得到的分式，其系数矩阵正是两个矩阵之积。**逆**：逆变换的矩阵是逆矩阵（差一个行列式纯量）。故 $\operatorname{PGL}(2,\mathbb{C})$ 成群。
 
-**自同构只有这些**：若 $\varphi$ 是 $\widehat{\mathbb{C}}$ 的双全纯自同构且 $\varphi(\infty) = \infty$，则 $\varphi$ 是整函数且单射，由 Liouville 型论证（`thm.liouville`）知它是 $az + b$；一般情形先复合 $z \mapsto 1/(z - z_{0})$ 归结之。∎
+**自同构只有这些**：若 $\varphi$ 是 $\widehat{\mathbb{C}}$ 的双全纯自同构且 $\varphi(\infty) = \infty$，则 $\varphi$ 是整函数且单射，由 Liouville 型论证（Liouville 定理）知它是 $az + b$；一般情形先复合 $z \mapsto 1/(z - z_{0})$ 归结之。∎
 
 > 群结构解释了「三点定变换」：等号左边的群在扩充平面上是 3-可迁的。
 
-#### 分式线性变换 + 保圆性 ⟹ 标准共形映射　`e101.implication`
+#### 分式线性变换 + 保圆性 + 指数函数的局部逆 ⟹ 标准共形映射　`e101.implication`
 *用保圆性与幂/指数把区域搬到标准位置*
 
 逐条来自 `def.mobius`（分式线性）与 `def.complex-elementary`（幂、指数、对数）：
@@ -57049,7 +57046,7 @@ $$\frac{\tau^{2}}{\Delta} = \frac{(\lambda_{1} + \lambda_{2})^{2}}{\lambda_{1}\l
 #### 分式线性变换 ⟹ Joukowski 映射　`e104.implication`
 *$z + 1/z$ 把同心圆映成共焦椭圆*
 
-由 `def.mobius` 的眼光看，$w = \tfrac12(z + 1/z)$ 是 $z$ 与 $1/z$ 的对称组合：它在 $z \mapsto 1/z$（一个反演，见 `def.symmetric-point`）下不变。
+由 `def.mobius` 的眼光看，$w = \tfrac12(z + 1/z)$ 是 $z$ 与 $1/z$ 的对称组合：它在 $z \mapsto 1/z$（一个反演，见 反演（对称点））下不变。
 
 **参数计算**：令 $z = r e^{i\theta}$，则
 
@@ -57077,6 +57074,14 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 S–C 要证：给定内角 $\alpha_{k}\in(0,2]$ 的多边形 $P$，存在上半平面到 $P$ 的共形映射，形状为 $f(z)=A\int^{z}\prod_{k}(\zeta-x_{k})^{\alpha_{k}-1}\,d\zeta+B$。形式那一半已在本节点给出证明；存在性用的正是 `thm.boundary-correspondence`：多边形边界是 Jordan 曲线，故共形映射 $\mathbb{H}\to P$ 连续延拓到闭包、边界一一对应。有了这个延拓才能说「$x_{k}$ 映到第 $k$ 个顶点」，才能用 Schwarz 反射算出 $f^{\prime}$ 的形状；没有它，证明停在「内部双全纯」，连顶点都指不出来。∎
 
 > S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由边界对应定理提供；引用它而不是直接引用 `thm.riemann-mapping`。
+
+#### 定义引用：「交比」→ 保圆性　`dep.n12-crossratio-mobiuscircle`
+
+交比在分式线性变换下不变，是判定四点共圆/共线的工具。
+
+#### 定义引用：「复数初等函数」→ 标准共形映射　`dep.n12-complexelem-standardmaps`
+
+幂、指数、对数等初等函数是标准共形映射的构件。
 
 #### 复数 ℂ ⟹ 扩充复平面与球极投影　`e105.implication`
 *在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义*
@@ -58015,6 +58020,23 @@ $|H| = k$：这 $k$ 个元素互不相同（若 $[a]^{i} = [a]^{j}$，$0 \le i <
 
 **③ 相加**。矩形 $\{1 \le i \le \frac{p-1}{2}\} \times \{1 \le j \le \frac{q-1}{2}\}$ 共有 $\frac{p-1}{2} \cdot \frac{q-1}{2}$ 个整点，且没有点落在直线上（$iq = jp$、$p \ne q$ 为素数、$i < p$，矛盾），故两和相加恰是这个数。代回 ①：$\left(\frac{q}{p}\right)\left(\frac{p}{q}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$。∎
 
+#### Jacobi 符号 + Legendre 符号 + 二次互反律 ⟹ Jacobi 符号的计算法则　`imp.jacobi-laws-proof`
+*Jacobi 符号的三条运算法则*
+
+记 $(a/\cdot)$ 为 Jacobi 符号，$m,n$ 正奇数。
+
+(1) 与 (2) 由定义直接展开：若 $n=\prod q_i^{e_i}$，则
+$$\Bigl(\frac{ab}{n}\Bigr)=\prod_i\Bigl(\frac{ab}{q_i}\Bigr)^{e_i}=\prod_i\Bigl(\frac{a}{q_i}\Bigr)^{e_i}\prod_i\Bigl(\frac{b}{q_i}\Bigr)^{e_i}=\Bigl(\frac{a}{n}\Bigr)\Bigl(\frac{b}{n}\Bigr);$$
+同理 $(a/mn)=\prod_q(a/q)^{v_q(m)+v_q(n)}=(a/m)(a/n)$。
+
+(3) 设 $\gcd(m,n)=1$，$m=\prod p_i^{a_i}$、$n=\prod q_j^{b_j}$。由 (2) 与 Legendre 互反律，
+$$\Bigl(\frac{m}{n}\Bigr)=\prod_{i,j}\Bigl(\frac{p_i}{q_j}\Bigr)^{a_ib_j}=\prod_{i,j}\Bigl((-1)^{\frac{p_i-1}{2}\frac{q_j-1}{2}}\Bigl(\frac{q_j}{p_i}\Bigr)\Bigr)^{a_ib_j}=(-1)^{\frac{m-1}{2}\frac{n-1}{2}}\Bigl(\frac{n}{m}\Bigr).$$
+其中用了 $\sum_{i,j}a_ib_j\frac{p_i-1}{2}\frac{q_j-1}{2}=\frac{m-1}{2}\frac{n-1}{2}$；这来自对每个奇素数幂 $p^{a}$ 有 $\frac{p^{a}-1}{2}\equiv a\frac{p-1}{2}\pmod2$，再对 $m,n$ 的因子求和。
+
+补充公式 $(-1/n)=(-1)^{(n-1)/2}$、$(2/n)=(-1)^{(n^{2}-1)/8}$：对 $n$ 的每个素因子用 Legendre 版本，再由 (2) 相乘；指数按模 $2$ 相加，同样由上面的同余得到。∎
+
+> Jacobi 符号运算法则直接由 Legendre 符号与互反律展开；互反律层号更高，故本边不参与分层。
+
 #### 定义引用：「选择函数」→ Zorn 引理　`e162.definition`
 
 Zorn 引理与选择公理等价（`imp.zorn-choice`）：证明里要从族里挑元素，用的就是选择函数。
@@ -58104,20 +58126,24 @@ $$rx - r'x = (r - r')x = h(r - r') = f_{0}((r - r')b) = f_{0}(a' - a) = f_{0}(a'
 
 所以 $A_{0} = B$，$f_{0}$ 就是 $f$ 到 $B$ 的延拓。由于 $A \hookrightarrow B$ 与 $f$ 任意，$I$ 内射 ✓。∎
 
-#### Zorn 引理 ⟹ 积分流形　`imp.zorn-foliation`
-*Zorn 引理：叶状结构的整体存在*
+#### Zorn 引理 + 对合分布 + 积分流形 ⟹ 叶状结构存在定理　`imp.zorn-foliation`
+*Zorn 引理：把局部叶片粘成极大叶*
 
-设 $\mathcal{D}$ 是流形 $M$ 上的对合分布。局部版 Frobenius（`thm.frobenius`）只给：过每点有局部积分流形。
+设 $\mathcal{D}$ 是 $M$ 上的对合 $k$ 阶光滑分布。**局部输入**：对合分布在每点附近有积分流形（Frobenius 定理的 (1)$\iff$(3)）；本条的职责是把它整体化，这一步当已知。
 
-要证明「过每点存在**极大**连通积分流形（叶）」，把
+**第一步：取候选族。** 令
 
-$$\mathcal{S} := \{\, L \subseteq M : L\ \text{连通积分流形, 且}\ T L = \mathcal{D}|_{L} \,\}$$
+$$\mathcal{S} := \{\, L \subseteq M : L \text{ 是连通积分流形，且 } T L = \mathcal{D}|_{L} \,\},$$
 
-按包含排序。链的并仍是连通的积分流形（连通性对递增并保持；局部上每点落在某个 $L_{\alpha}$ 里，故切空间仍是 $\mathcal{D}$）。
+按包含排序；$\mathcal{S} \ne \emptyset$（每点附近的局部积分流形都在里面）。
 
-由 Zorn 引理取极大元 $L$，即过该点的极大叶。
+**第二步：链有上界。** 设 $\{L_{\alpha}\}$ 是全序链，$L^{*} := \bigcup_{\alpha} L_{\alpha}$。连通性：递增并仍连通（任两点落在同一成员里）。切空间：$T L^{*} = \bigcup T L_{\alpha} = \mathcal{D}|_{L^{*}}$。光滑性：$L^{*}$ 是浸入子流形的递增并，且链中每个成员都是开浸入子流形，故 $L^{*}$ 仍是浸入子流形。于是 $L^{*} \in \mathcal{S}$，是链的上界。
 
-**叶片互不相交**：若两个极大叶 $L_{1}, L_{2}$ 有公共点 $p$，则由局部唯一性（同一分布过同一点只有一块局部积分流形），$L_{1} \cup L_{2}$ 仍是积分流形且连通 —— 与极大性矛盾。于是 $\{L\}$ 构成 $M$ 的叶状结构。
+**第三步：Zorn 取极大元。** 由 Zorn 引理得极大元 $L$，即过给定点的极大连通积分流形。
+
+**第四步：叶与叶互不相交。** 设 $L_{1}, L_{2}$ 是两片极大叶且有公共点 $p$。由局部唯一性（同一分布过同一点的两块积分流形在公共点附近重合，这是 Frobenius 平坦坐标的推论），$L_{1} \cup L_{2}$ 在 $p$ 附近仍是积分流形；两者都连通且交于 $p$，故并连通且是积分流形 —— 与极大性矛盾。所以或 $L_{1} = L_{2}$，或 $L_{1} \cap L_{2} = \emptyset$。
+
+**收尾。** 每点属于某片极大叶（第三步），叶两两不交或相等（第四步），故全体叶覆盖 $M$ 并构成叶状结构。∎
 
 #### 选择公理 ⟹ Tychonoff 定理　`imp.ac-tykhonov`
 *选择公理：Tychonoff 定理（Alexander 子基引理）*
@@ -58543,6 +58569,28 @@ Rayleigh 商只对 Hermite（实对称）矩阵有实值、有极值意义。
 
 **③ 下界与取等**。取 $S_{0} = \operatorname{span}(u_{1}, \ldots, u_{k})$：其上 $c_{k+1} = \cdots = c_{n} = 0$，故 $R_{A} \ge \lambda_{k}$，且 $x = u_{k}$ 取到等号。两边合起来得 $\max_{\dim S = k} \min_{S} R_{A} = \lambda_{k}$；把 $S$ 与维数 $n - k + 1$ 的 $T$ 对调（同样靠维数计数）、取 $T_{0} = \operatorname{span}(u_{k}, \ldots, u_{n})$ 验证取等，即得第二等式。∎
 
+#### Schur 三角化 ⟹ 谱定理（矩阵版）　`imp.spectral-matrix`
+*Schur 三角化 $\Longrightarrow$ 谱定理（矩阵版）*
+
+**($\Longleftarrow$)** 若 $A = U\Lambda U^{*}$，则 $AA^{*} = U\Lambda U^{*}U\Lambda^{*}U^{*} = U\Lambda\Lambda^{*}U^{*}$，而 $A^{*}A = U\Lambda^{*}\Lambda U^{*}$；对角阵的乘法可交换，$\Lambda\Lambda^{*} = \Lambda^{*}\Lambda$，故 $AA^{*} = A^{*}A$ —— $A$ 正规。
+
+**($\Longrightarrow$)** 设 $A$ 正规。由 Schur 三角化，存在酉 $U$ 使 $T = U^{*}AU$ 上三角。正规性在酉相似下保持：$T^{*}T = U^{*}A^{*}UU^{*}AU = U^{*}A^{*}AU$，$TT^{*} = U^{*}AUU^{*}A^{*}U = U^{*}AA^{*}U$，两者相等。
+
+对 $T$ 的第 $(1,1)$ 元比较：$(T^{*}T)_{11} = \sum_{j}|t_{j1}|^{2} = |t_{11}|^{2}$（第一列只有 $t_{11}$），$(TT^{*})_{11} = \sum_{j}|t_{1j}|^{2}$；相等给出 $t_{12} = \cdots = t_{1n} = 0$。于是 $T = \operatorname{diag}(t_{11}, T_{1})$，$T_{1}$ 仍上三角且正规；对 $T_{1}$ 重复该论证，归纳得 $T$ 对角。故 $A = UTU^{*}$ 酉可对角化。
+
+**实情形**：实对称矩阵是正规矩阵，故有复谱分解 $A = U\Lambda U^{*}$。其特征值全实：若 $Ax = \lambda x$、$x \ne 0$，则 $\lambda\|x\|^{2} = \langle Ax, x\rangle = \langle x, Ax\rangle = \overline{\lambda}\|x\|^{2}$，故 $\lambda = \overline{\lambda}$。对实特征值 $\lambda$，$(A - \lambda I)x = 0$ 是实系数方程组，其解空间有实基，故特征向量可取实；于是 $U$ 可取为实正交矩阵 $Q$，$Q^{T}AQ$ 为实对角阵。∎
+
+#### 谱定理（矩阵版） ⟹ 极分解　`imp.polar-decomposition`
+*谱定理 $\Longrightarrow$ 极分解*
+
+**① 构造 $P$**。$A^{*}A$ 是半正定 Hermite 矩阵，故正规；由谱定理（矩阵版）存在酉 $V$ 与实对角 $\mu = \operatorname{diag}(\mu_{1}, \ldots, \mu_{n})$ 使 $A^{*}A = V\mu V^{*}$，且 $\mu_{i} \ge 0$（半正定性：$\langle A^{*}Ax, x\rangle = \|Ax\|^{2} \ge 0$）。令 $P := V\operatorname{diag}(\sqrt{\mu_{1}}, \ldots, \sqrt{\mu_{n}})V^{*}$，则 $P$ 半正定 Hermite 且 $P^{2} = A^{*}A$。
+
+**② 唯一性**。若 $Q$ 半正定 Hermite 且 $Q^{2} = A^{*}A$，把 $Q$ 谱分解为 $Q = W\operatorname{diag}(\nu_{i})W^{*}$（$\nu_{i} \ge 0$），则 $Q^{2} = W\operatorname{diag}(\nu_{i}^{2})W^{*} = A^{*}A$。谱分解的谱值唯一，故 $\nu_{i}^{2} = \mu_{i}$、$\nu_{i} = \sqrt{\mu_{i}}$；在重特征值上 $Q$ 与 $A^{*}A$ 可同时对角化，于是 $Q = P$。
+
+**③ $A$ 可逆时**。令 $U := AP^{-1}$。则 $U^{*}U = P^{-1}A^{*}AP^{-1} = P^{-1}P^{2}P^{-1} = I$，故 $U$ 酉，且 $A = UP$；$P$ 正定（$A$ 可逆时 $A^{*}A$ 正定，$\mu_{i} > 0$）。
+
+**④ $A$ 奇异时**。由 $\|Px\|^{2} = \langle A^{*}Ax, x\rangle = \|Ax\|^{2}$ 得 $\ker P = \ker A$。在 $\operatorname{im}P$ 上定义 $U(Px) := Ax$：若 $Px = 0$ 则 $Ax = 0$，故良定义；且 $\|U(Px)\| = \|Ax\| = \|Px\|$，故 $U$ 是 $\operatorname{im}P \to \operatorname{im}A$ 的等距。把 $U$ 延拓为酉映射：取 $\operatorname{im}P$ 的标准正交基并延拓到全空间，令 $U$ 把 $(\operatorname{im}P)^{\perp} = \ker P$ 等距地送到 $(\operatorname{im}A)^{\perp}$（两边维数都等于 $n - \operatorname{rank}A$）。于是 $U$ 酉且 $A = UP$；$P$ 仍唯一，$U$ 在 $\ker A$ 上不唯一。∎
+
 #### 定义引用：「双线性型」→ 双线性型的矩阵　`dep.bf-matrix-bf`
 
 矩阵表示是双线性型的坐标写法，先有双线性型。
@@ -58697,7 +58745,9 @@ LU 分解就是高斯消元（初等行变换）的矩阵形式。
 
 #### Gram–Schmidt 正交化 ⟹ QR 分解　`dep.qr-gs`
 
-对 $A$ 的列向量作 Gram–Schmidt：$q_{j}$ 由 $a_{j}$ 减去它在前 $j-1$ 个 $q$ 上的投影再归一化，故 $a_{j}=\sum_{i\le j}r_{ij}q_{i}$，矩阵形式即 $A=QR$，$R$ 上三角源于递推只涉及 $i\le j$。∎
+**存在性（Gram–Schmidt）。** 对列 $a_{1},\ldots,a_{n}$ 作 Gram–Schmidt：$q_{k}=\bigl(a_{k}-\sum_{i<k}\langle a_{k},q_{i}\rangle q_{i}\bigr)\big/\|\cdots\|$，$r_{ik}=\langle a_{k},q_{i}\rangle$、$r_{kk}=\|a_{k}-\sum_{i<k}r_{ik}q_{i}\|>0$（列线性无关保证分母非零）。由递推 $a_{k}=\sum_{i\le k}r_{ik}q_{i}$，即 $A=QR$：$Q$ 的列标准正交，$R$ 上三角且对角元全正。
+
+**唯一性。** 设 $QR=Q'R'$，则 $Q'^{*}Q=R'R^{-1}$。左边是酉矩阵（两个列标准正交矩阵之积，$n\times n$），右边是上三角（上三角阵的逆与乘积仍是上三角）；酉且上三角的矩阵必为对角阵，其对角元模长为 $1$。$R,R'$ 的对角元均为正，故 $R'R^{-1}$ 的对角元是正实数，模长 $1$ 迫使它等于 $1$；于是 $R'R^{-1}=I$，即 $R=R'$、$Q=Q'$。∎
 
 > QR 分解就是 Gram–Schmidt 的矩阵写法 —— 这一步是理解 QR 的全部。
 
@@ -58728,6 +58778,25 @@ $AA^{+}$ 与 $A^{+}A$ 都是（正交）幂等算子，这是四条 Penrose 条�
 #### 定义引用：「可逆矩阵」→ 伪逆　`dep.pinv-invertible`
 
 可逆时伪逆就是逆 —— 它是「逆」的推广，不是另一样东西。
+
+#### 矩阵 + 初等变换与初等矩阵 + 可逆矩阵 ⟹ LU 分解　`imp.lu-decomposition-proof`
+*顺序主子式非零 $\implies$ 唯一的 $LU$ 分解*
+
+对 $n$ 归纳。$n=1$ 时 $A=(a_{11})$，$\Delta_1=a_{11}\ne0$，取 $L=(1)$、$U=(a_{11})$。
+
+设 $n\ge2$，$A=\begin{pmatrix}a&b^{T}\\ c&D\end{pmatrix}$，$a=a_{11}\ne0$。令 $E$ 为把第 $i$ 行减去 $(c_i/a)$ 倍第一行（$i=2,\ldots,n$）的初等矩阵之积，则 $EA=\begin{pmatrix}a&b^{T}\\ 0&S\end{pmatrix}$，其中 $S=D-cb^{T}/a$ 是 Schur 补。
+
+Schur 补的顺序主子式满足 $\Delta_{k+1}(A)=a\,\Delta_k(S)$（$k=1,\ldots,n-1$：对前 $k+1$ 阶主子矩阵同步做上述行变换，其行列式等于 $a\det S_k$）。由 $\Delta_j(A)\ne0$ 得 $\Delta_k(S)\ne0$，归纳得 $S=L_S U_S$。
+
+于是
+$$A=E^{-1}\begin{pmatrix}1&0\\ 0&L_S\end{pmatrix}\begin{pmatrix}a&b^{T}\\ 0&U_S\end{pmatrix},$$
+两个因子分别是单位下三角与上三角，乘起来即 $A=LU$。
+
+唯一性：若 $L_1U_1=L_2U_2$，则 $L_2^{-1}L_1=U_2U_1^{-1}$。左边是单位下三角，右边是上三角；一个矩阵同时是两者必为对角矩阵，而单位下三角的对角元全为 $1$，故两边都是 $I$，$L_1=L_2$、$U_1=U_2$。
+
+置换版本：对可逆 $A$ 做带行交换的高斯消元（部分主元法）；每次交换第 $i,j$ 行等于左乘置换矩阵 $P_{ij}$，消元步左乘初等矩阵。累积得 $PA=LU$，$P$ 为置换矩阵之积。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
 
 #### 定义引用：「交错型」→ 辛形式　`dep.sympl-alt`
 
@@ -58792,6 +58861,21 @@ Lagrange 子空间的本质是「极大全迷向子空间」。
 #### 定义引用：「内积」→ Lagrange 恒等式　`dep.lagid-inner`
 
 恒等式两边都用内积写。
+
+#### 内积 + Gram 矩阵 + 行列式 + 正交基 ⟹ Lagrange 恒等式　`imp.lagrange-identity-proof`
+*Lagrange 恒等式：面积平方的坐标展开*
+
+取 $u,w$ 张成的子空间的一组正交归一基 $e_1,\ldots,e_m$（由 Gram–Schmidt 得到；$m\le2$）。写 $u=\sum u_i e_i$、$w=\sum w_i e_i$，则 $\langle u,w\rangle=\sum u_i w_i$、$\lVert u\rVert^{2}=\sum u_i^{2}$、$\lVert w\rVert^{2}=\sum w_i^{2}$。
+
+展开：
+$$\lVert u\rVert^{2}\lVert w\rVert^{2}-\langle u,w\rangle^{2}=\Bigl(\sum_i u_i^{2}\Bigr)\Bigl(\sum_j w_j^{2}\Bigr)-\Bigl(\sum_i u_i w_i\Bigr)^{2}=\sum_{i<j}(u_i w_j-u_j w_i)^{2}.$$
+（右端展开后 $\sum u_i^2w_j^2$ 全部保留，交叉项 $2\sum_{i<j}u_iu_jw_iw_j$ 与左端平方展开的交叉项相消。）
+
+另一方面，$u,w$ 的 Gram 矩阵
+$$G=\begin{pmatrix}\langle u,u\rangle&\langle u,w\rangle\\ \langle w,u\rangle&\langle w,w\rangle\end{pmatrix}$$
+的行列式正是 $\lVert u\rVert^{2}\lVert w\rVert^{2}-\langle u,w\rangle^{2}$（实情形 $\langle w,u\rangle=\langle u,w\rangle$），故左边 $=\det G$。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
 
 #### 定义引用：「微分形式」→ 辛流形　`dep.sm-form`
 
@@ -59060,34 +59144,6 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 ⭐ 顺带：**子空间仍是距离空间**（限制度量），所以距离空间其实直接是 $T_{5}$、$T_{6}$ —— 这正是分析里从不操心分离公理的原因。
 
-#### 局部紧空间 + Hausdorff 空间 ⟹ 完全正则空间　`imp.lch-cr`
-
-局部紧 Hausdorff 空间已含 $T_{1}$，只需证 $T_{3.5}$。
-
-设 $F$ 闭、$x \notin F$。
-
-因 $X \setminus F$ 是 $x$ 的开邻域、且 $x$ 有紧邻域，可取**紧邻域** $K \ni x$ 使 $K \subseteq X \setminus F$（把原来的紧邻域与 $X \setminus F$ 取交，紧集的闭子集仍紧）。
-
-于是 $K \cap F = \emptyset$。
-
-记 $\partial K := K \setminus \mathring{K}$（紧集，闭）。
-
-$x \in \mathring{K}$ 故 $x \notin \partial K$。
-
-$K$ 作为紧 Hausdorff 空间是**正规**的（紧 $\implies$ 仿紧 $\implies$（加 Hausdorff）正规，见 `thm.paracompact-hausdorff-normal`），于是由 Urysohn 引理存在连续 $h : K \to [0,1]$ 使
-
-$$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
-
-定义 $f : X \to [0,1]$ 为：$f = h$ 在 $K$ 上，$f \equiv 1$ 在 $X \setminus \mathring{K}$ 上。
-
-两片在重叠处 $\partial K$ 都是 $1$，故 $f$ 良定义且连续（闭覆盖引理）。
-
-又 $F \cap K = \emptyset$ $\implies$ $F \subseteq X \setminus \mathring{K}$ $\implies$ $f|_{F} \equiv 1$，而 $f(x) = 0$。
-
-所以 $X$ 是 $T_{3.5}$，加上 $T_{1}$ 得完全正则 ✓。∎
-
-⭐ 这条是**一点紧化**理论的前置：局部紧 Hausdorff 的一点紧化是紧 Hausdorff，其上的函数全靠这条从 $X$ 上「拉回来」。
-
 #### 紧 + Hausdorff 空间 ⟹ 正规空间　`imp.compact-hausdorff-normal`
 
 设 $X$ 紧 Hausdorff，$A, B \subseteq X$ 是不交闭集。先注意 $X$ 是 $T_{1}$：Hausdorff 空间中单点闭（`def.hausdorff`）。
@@ -59098,7 +59154,7 @@ $$h(x) = 0, \qquad h|_{\partial K} \equiv 1 .$$
 
 所以任意不交闭集都能被开集分离，配合 $T_{1}$ 得 $X$ 正规。∎
 
-⭐ 这是**直接证明**，没有走 `thm.paracompact-hausdorff-normal`：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。
+⭐ 这是**直接证明**，没有走 那条（紧 $\implies$ 仿紧 $\implies$ 正规）：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。
 
 #### 紧 ⟹ 局部紧空间　`imp.compact-locally-compact`
 
@@ -59819,6 +59875,18 @@ $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等
 
 弱*拓扑建在连续对偶上。
 
+#### 定义引用：「对偶空间」→ 弱*拓扑　`dep.wstar-dual`
+
+弱*拓扑建在连续对偶 $E^{*}$ 上。
+
+#### 定义引用：「赋范空间」→ 弱*拓扑　`dep.wstar-normed`
+
+半范数 $p_x(\varphi)=|\varphi(x)|$ 由 $E$ 的范数控制。
+
+#### 定义引用：「弱*拓扑」→ Banach–Alaoglu 定理　`dep.wstar-ba`
+
+Banach–Alaoglu 的紧性是弱*拓扑下的紧性。
+
 #### 定义引用：「Hahn–Banach 定理」→ Goldstine 定理　`dep.gs-hb`
 
 点与闭凸集的分离用 Hahn–Banach 的几何形式。
@@ -59827,9 +59895,9 @@ $I$ 是正交投影，故按定义 $u^*u = I$ 是正交投影，$u$ 是部分等
 
 $B_{X^{**}}$ 弱*紧（把 Banach–Alaoglu 用到 $X^{*}$ 上）。
 
-#### 定义引用：「弱拓扑」→ Goldstine 定理　`dep.gs-weakstar`
+#### 定义引用：「弱*拓扑」→ Goldstine 定理　`dep.gs-weakstar`
 
-弱*拓扑是弱拓扑在对偶上的对偶版本，本条只用其半范数刻画。
+弱*拓扑是 $X^{**}$ 上由 $X^{*}$ 生成的逐点收敛拓扑，本条只用其半范数刻画。
 
 #### Goldstine 定理 + 一致凸 ⟹ Milman–Pettis 定理　`imp.milman-pettis`
 *Goldstine + 一致凸 $\implies$ 自反*
@@ -59845,6 +59913,84 @@ $B_{X^{**}}$ 弱*紧（把 Banach–Alaoglu 用到 $X^{*}$ 上）。
 #### 定义引用：「弱拓扑」→ James 定理　`dep.james-weak`
 
 弱拓扑 $\sigma(X,X^{*})$ 是「使 $X^{*}$ 全部连续」的最弱拓扑；正向用它把 $\varphi$ 变成弱连续函数。
+
+#### 距离空间 + 紧 + 列紧 + 完备 + 全有界 + 勒贝格数 ⟹ 紧的三个等价刻画　`imp.metric-compact-equiv-proof`
+*紧 $\iff$ 列紧 $\iff$ 完备且全有界*
+
+记 $d$ 为 $X$ 上的度量。
+
+**(a)$\implies$(b)**：设 $X$ 紧而 $(x_n)$ 无收敛子列。则每点 $x$ 有开球 $B(x,r_x)$ 只含有限多个 $x_n$（否则取 $r=1/k$ 可抽出收敛于 $x$ 的子列）。这些球覆盖 $X$，紧性给有限子覆盖，故 $(x_n)$ 只有有限多项，矛盾。
+
+**(b)$\implies$(c)**：完备性——若 $(x_n)$ 是 Cauchy 列，列紧给收敛子列 $x_{n_k}\to x$；对 $\varepsilon>0$ 取 $N$ 使 $m,n\ge N$ 时 $d(x_m,x_n)<\varepsilon/2$，再取 $k$ 使 $n_k\ge N$ 且 $d(x_{n_k},x)<\varepsilon/2$，则 $n\ge N$ 时 $d(x_n,x)<\varepsilon$。全有界性——若某 $\varepsilon>0$ 不能用有限个 $\varepsilon$-球覆盖，归纳取 $x_{n+1}\notin\bigcup_{k\le n}B(x_k,\varepsilon)$，则 $m\ne n$ 时 $d(x_m,x_n)\ge\varepsilon$，此列无 Cauchy 子列，与 (b) 矛盾。
+
+**(c)$\implies$(a)**：先证 Lebesgue 数引理：对开覆盖 $\mathcal U$，存在 $\varepsilon>0$ 使每个 $\varepsilon$-球含于某个 $U\in\mathcal U$。否则对每个 $n$ 取 $x_n$ 使 $B(x_n,1/n)$ 不含于任何 $U$；全有界给 Cauchy 子列（从而收敛子列）$x_{n_k}\to x$，取 $U_0\ni x$ 与 $r>0$ 使 $B(x,r)\subseteq U_0$；$k$ 充分大时 $d(x_{n_k},x)<r/2$、$1/n_k<r/2$，于是 $B(x_{n_k},1/n_k)\subseteq B(x,r)\subseteq U_0$，矛盾。
+
+取上述 $\varepsilon$，用全有界性取有限 $\varepsilon$-网 $y_1,\ldots,y_m$，并取 $U_i\in\mathcal U$ 使 $B(y_i,\varepsilon)\subseteq U_i$。对任意 $x\in X$ 有 $d(x,y_i)<\varepsilon$ 的 $i$，故 $x\in B(y_i,\varepsilon)\subseteq U_i$。于是 $U_1,\ldots,U_m$ 覆盖 $X$，$X$ 紧。∎
+
+> 紧性、列紧性与完备+全有界是同一性质的不同表述；证明用到 Lebesgue 数引理，各概念同处基础层，故本边不参与分层。
+
+#### 内积 + 诱导范数与距离 + 范数 ⟹ 极化恒等式　`imp.polarization-proof`
+*极化恒等式：实/复两种情形*
+
+实情形：由内积诱导范数，
+$$\lVert x\pm y\rVert^{2}=\lVert x\rVert^{2}+\lVert y\rVert^{2}\pm2\langle x,y\rangle .$$
+两式相减得 $4\langle x,y\rangle=\lVert x+y\rVert^{2}-\lVert x-y\rVert^{2}$。
+
+复情形：对 $k=0,1,2,3$，
+$$\lVert x+i^{k}y\rVert^{2}=\lVert x\rVert^{2}+\lVert y\rVert^{2}+2\operatorname{Re}\bigl(\overline{i^{k}}\langle x,y\rangle\bigr).$$
+记 $z=\langle x,y\rangle=a+bi$，逐项乘 $i^{k}$ 后相加：$i^{0}$ 项为 $2a$；$i^{1}$ 项为 $i\cdot2\operatorname{Re}(-iz)=2bi$；$i^{2}$ 项为 $-2\operatorname{Re}(-z)=2a$；$i^{3}$ 项为 $-i\cdot2\operatorname{Re}(iz)=2bi$。前两项 $\lVert x\rVert^{2}+\lVert y\rVert^{2}$ 乘 $\sum_k i^{k}=0$ 消失。合计 $4a+4bi=4z$，除以 $4$ 即得。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
+
+#### 范数 + 等价范数 + 紧 + 有界闭 ⟺ 紧（ℝⁿ） ⟹ 有限维范数等价　`imp.norm-equiv-finite-dim-proof`
+*有限维：任意两个范数等价*
+
+固定一组基 $e_1,\ldots,e_n$，写 $x=\sum x_k e_k$，令 $\lVert x\rVert_\infty=\max_k|x_k|$。
+
+上界：
+$$\lVert x\rVert\le\sum_k|x_k|\,\lVert e_k\rVert\le\Bigl(\sum_k\lVert e_k\rVert\Bigr)\lVert x\rVert_\infty=:\beta\lVert x\rVert_\infty .$$
+
+下界：单位球面 $S=\{x:\lVert x\rVert_\infty=1\}$ 是 $K^{n}$ 中的有界闭集；把 $K^{n}$ 看成 $\mathbb{R}^{n}$（$K=\mathbb{R}$）或 $\mathbb{R}^{2n}$（$K=\mathbb{C}$），由 Heine–Borel 它紧。范数 $\lVert\cdot\rVert$ 连续（由上面的上界，$|\lVert x\rVert-\lVert y\rVert|\le\beta\lVert x-y\rVert_\infty$），且在 $S$ 上处处 $>0$，故 $\alpha:=\min_{S}\lVert x\rVert>0$。对 $x\ne0$，$x/\lVert x\rVert_\infty\in S$，于是
+$$\lVert x\rVert=\lVert x\rVert_\infty\Bigl\lVert\frac{x}{\lVert x\rVert_\infty}\Bigr\rVert\ge\alpha\lVert x\rVert_\infty ;$$
+$x=0$ 时平凡。
+
+因此 $\alpha\lVert\cdot\rVert_\infty\le\lVert\cdot\rVert\le\beta\lVert\cdot\rVert_\infty$，$\lVert\cdot\rVert$ 与 $\lVert\cdot\rVert_\infty$ 等价。任意两个范数都与 $\lVert\cdot\rVert_\infty$ 等价，由等价关系的传递性它们彼此等价。∎
+
+> 有限维范数等价是基础结论；证明经 Heine–Borel 化归到紧性，故本边不参与分层。
+
+#### 有界线性算子 + Banach 空间 + 完备 ⟹ B(E,F) 完备　`imp.bounded-operators-banach-proof`
+*$B(E,F)$ 在 $F$ 完备时完备*
+
+设 $(u_k)$ 是 $B(E,F)$ 中的 Cauchy 列。对每个 $x\in E$，
+$$\lVert u_kx-u_lx\rVert\le\lVert u_k-u_l\rVert\,\lVert x\rVert ,$$
+故 $(u_kx)$ 是 $F$ 中的 Cauchy 列；$F$ 完备，定义 $ux=\lim_k u_kx$。
+
+$u$ 线性：$u(\lambda x+\mu y)=\lim_k(\lambda u_kx+\mu u_ky)=\lambda ux+\mu uy$。
+
+有界：$(u_k)$ 是 Cauchy 列故有界，设 $\lVert u_k\rVert\le C$。则 $\lVert ux\rVert=\lim_k\lVert u_kx\rVert\le C\lVert x\rVert$，故 $u\in B(E,F)$。
+
+收敛：给定 $\varepsilon>0$，取 $N$ 使 $k,l\ge N$ 时 $\lVert u_k-u_l\rVert<\varepsilon$。对任意 $x$ 与 $k\ge N$，
+$$\lVert u_kx-ux\rVert=\lim_l\lVert u_kx-u_lx\rVert\le\varepsilon\lVert x\rVert ,$$
+故 $\lVert u_k-u\rVert\le\varepsilon$（$k\ge N$）。于是 $u_k\to u$。
+
+特别地 $E^*=B(E,\mathbb K)$ 中 $\mathbb K$ 完备，故对偶空间总是 Banach。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
+
+#### 有界线性算子 + 范数 ⟹ 算子乘法的范数不等式　`imp.operator-algebra-proof`
+*$B(E,F)$ 是赋范代数：复合的次乘性*
+
+对 $x\in E$，
+$$\lVert v(ux)\rVert\le\lVert v\rVert\,\lVert ux\rVert\le\lVert v\rVert\,\lVert u\rVert\,\lVert x\rVert ,$$
+故 $vu$ 有界且 $\lVert vu\rVert\le\lVert v\rVert\lVert u\rVert$（右边是 $\lVert vu\rVert$ 的定义下确界的一个上界）。
+
+乘法连续性：
+$$\lVert v_1u_1-v_2u_2\rVert\le\lVert v_1\rVert\lVert u_1-u_2\rVert+\lVert v_1-v_2\rVert\lVert u_2\rVert ,$$
+故 $(u,v)\mapsto vu$ 连续。
+
+$B(E)$ 含单位 $\mathrm{id}$，$E\ne\{0\}$ 时 $\lVert\mathrm{id}\rVert=1$，故是赋范代数。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
 
 #### Baire 纲定理 ⟹ Baire 的三条等价刻画　`imp.fa-baire-characterizations`
 *Baire 的三种说法等价*
@@ -60457,6 +60603,33 @@ $E^*$ 永远完备这句话的依据是「$B(E,F)$ 在 $F$ 完备时完备」，
 
 > 反向不成立（见 `def.uniformly-equicontinuous` 的反例）；紧性才是反向往回的工具。
 
+#### 第一纲 / 第二纲 + 闭集与闭包 + 内部 ⟹ 闭覆盖的内点　`imp.countable-closed-cover-proof`
+*可数闭覆盖：有内部者之并稠密*
+
+设 $U\subseteq X$ 非空开。要证 $U$ 与 $\bigcup_n\operatorname{int}F_n$ 相交。
+
+$X$ 是 Baire 空间（第二纲），其非空开子集 $U$ 也是 Baire 空间：若 $U=\bigcup M_n$、每个 $M_n$ 在 $U$ 中无处稠密，则每个 $M_n$ 在 $X$ 中也无处稠密，于是 $X=U^c\cup\bigcup M_n$ 第一纲，矛盾。
+
+若 $U\cap\bigcup_n\operatorname{int}F_n=\emptyset$，则每个 $U\cap F_n$ 在 $U$ 中无处稠密：它在 $U$ 中的内部 $=U\cap\operatorname{int}F_n=\emptyset$，且 $U\cap F_n$ 闭于 $U$。而 $U=\bigcup_n(U\cap F_n)$，这与 $U$ 是 Baire 空间矛盾。故 $U$ 与 $\bigcup_n\operatorname{int}F_n$ 相交，即后者稠密。
+
+特别地若 $X\ne\emptyset$，取 $U=X$：$X=\bigcup_n\operatorname{int}F_n$；若每个 $\operatorname{int}F_n=\emptyset$ 则 $X=\emptyset$，矛盾，故某个 $F_n$ 有非空内部。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
+
+#### 子代数与分离点 + 闭集与闭包 ⟹ 闭子代数是格　`imp.subalgebra-lattice-proof`
+*闭子代数对 $\min,\max$ 封闭*
+
+只需证对 $f\in A$ 有 $|f|\in A$，因为
+$$\max(f,g)=\frac{f+g+|f-g|}{2},\qquad \min(f,g)=\frac{f+g-|f-g|}{2}.$$
+
+设 $\lVert f\rVert\le1$。则 $f^{2}\in A$、$0\le f^{2}\le1$。令 $u=1-f^{2}\in A$，$0\le u\le1$。二项级数
+$$\sqrt{1-u}=1-\sum_{k\ge1}c_k u^{k},\qquad c_k=\frac{(2k-3)!!}{2^{k}k!}>0,$$
+且 $\sum_k c_k=1$（代入 $u=1$）。部分和 $s_n=1-\sum_{k=1}^{n}c_k u^{k}\in A$，在 $[0,1]$ 上 $s_n\rightrightarrows\sqrt{1-u}$：余项 $\sum_{k>n}c_k u^{k}\le\sum_{k>n}c_k\to0$ 与 $u$ 无关。
+
+$A$ 对一致收敛封闭（$A$ 闭于 $C(K,\mathbb R)$），故 $\sqrt{1-u}=\sqrt{f^{2}}=|f|\in A$。一般 $f$ 用 $f/\max(\lVert f\rVert,1)$ 归约，结论相同。∎
+
+> 完整证明见本条边；节点注只保留动机与缺口。
+
 #### 定义引用：「Euler 示性数」→ Gauss–Bonnet 定理　`dep.gaussbonnet-eulerchar`
 
 Gauss–Bonnet 的结论里直接出现 $\chi(M)$，而 $\chi$ 此前在几何侧是「外部输入」。（依赖的是对象，不是命题。）两边接上之后：把曲面三角剖分，$\int_M K\,\mathrm{d}A = 2\pi\chi(M) = 2\pi(V-E+F)$ —— 这就是「曲率积分 = 拓扑不变量」的完整走法。方向是「曲率积分 $\to$ 示性数」：本条反过来用示性数举例，**不依赖** Gauss–Bonnet —— 这是**定义实例化**，不是蕴含。
@@ -60538,6 +60711,10 @@ $K$-向量空间就是 $K$-模，所以「向量空间的张量积」是模的�
 再由可靠性（$\vdash \implies \vDash$），$\Gamma_{0} \vDash \bot$ —— 即 $\Gamma_{0}$ 没有模型，与「每个有限子集都有模型」矛盾。∎
 
 ⚠ 用到了「证明有限」这一条（`def.provability` 的定义里就写着）—— 这是整个论证的关键。
+
+#### 定义引用：「可证明性」→ 紧致性定理　`dep.n12-provability-compactness`
+
+紧性定理的证明用到「证明是有限串」这条定义。
 
 #### 定义引用：「商拓扑」→ 多边形表示　`dep.poly-quotient`
 
@@ -60885,7 +61062,7 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 
 > 「$\operatorname{Gal}(f)$ 不可解 $\implies$ 无根式解」这一步就是那条定理的逆否。
 
-#### 对称群的可解性 ⟹ 五次方程没有根式解　`dep.snsolvable-quintic`
+#### 对称群的可解性 + 根式可解 与 伽罗瓦群可解 ⟹ 五次方程没有根式解　`dep.snsolvable-quintic`
 *$S_{5}$ 不可解排除根式解*
 
 取 $f=x^{5}-4x+2$。前三步定出伽罗瓦群是 $S_{5}$：不可约 $\implies$ 传递含 $5$-循环；恰三实根 $\implies$ 复共轭给一个换位；$5$-循环加换位生成 $S_{5}$。最后一步取逆否：若 $f$ 根式可解，`thm.radical-solvable` 给出 $\operatorname{Gal}(f)$ 可解；但 $S_{5}$ 不可解 —— 这正是 `prop.sn-solvable` 的内容（$A_{5}$ 单且非交换，故 $S_{5}$ 的换位子列停在 $A_{5}\ne1$）。矛盾。∎
@@ -61062,7 +61239,7 @@ $\operatorname{RHom}_{\mathbb{Z}}(-,\,T)$ 把离散群送到它自己的 $[-1]$�
 
 ⚠ **骨架说明**：本图没有把「上同调沿滤过余极限的行为」单独立节点，这一步只记机制；完整的比较需要 Clausen–Scholze 里那一套解析环上同调的估计。
 
-#### Breen–Deligne 分解 ⟹ Stonean 上 Breen–Deligne 的谱序列　`imp.bd-ss-stonean`
+#### Breen–Deligne 分解 + Stonean 上 Ext 的截面公式 ⟹ Stonean 上 Breen–Deligne 的谱序列　`imp.bd-ss-stonean`
 *Breen–Deligne 分解 $\implies$ Stonean 上的谱序列*
 
 取 Breen–Deligne 左消解 $F(M)^{\bullet} \twoheadrightarrow M$（每一项是有限个 $\mathbb{Z}\cdot M^{s_{n,i}}$ 的直和）。
@@ -65333,6 +65510,18 @@ Z-Mod 与 Ab 等价：整系数模就是阿贝尔群，这是模范畴与阿贝�
 
 $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}$ 恒有 $\alpha = \lim \sqrt[n]{n^{-p}} = 1$，判别法失效，而 $p$ 级数本身由 Cauchy 凝聚判别法定敛散。两者是同一族级数上的两种工具，不是依赖。
 
+#### 概形嵌入 adic 空间 ～ 紧支撑推前 f_!　`ana.n12-schemeembeds-fshriek`
+
+开浸入的 $j_!$ 与 $f_!$ 的定义同型：都是「紧化 + 补集上的 $j_!$」这套构造。
+
+#### Gauss 曲率 ～ 截面曲率　`ana.n12-gausscurv-sectional`
+
+同一曲率量的两种写法：正交基下 $K=R_{1221}$，与截面曲率一致。
+
+#### Riemann 度量 ～ 纤维度量　`ana.n12-riemannmetric-bundlemetric`
+
+同一个凸组合论证，把 $TM$ 换成任意向量丛即得丛度量。
+
 #### 映射同伦 ～ 同伦　`e69.analogy`
 *映射同伦与链同伦：同一句话的两个化身*
 
@@ -65924,7 +66113,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 
 - **集合的构造 ↔ ZFC 公理系统**　10 条节点级连线
 - **选择原理 ↔ 基数与等势**　3 条节点级连线
-- **拓扑空间的基本语汇 ↔ 度量空间**　15 条节点级连线
+- **拓扑空间的基本语汇 ↔ 度量空间**　16 条节点级连线
 - **实数与极限 ↔ 度量空间**　5 条节点级连线
 - **乘积测度与 Fubini ↔ 集合族与 σ-代数**　6 条节点级连线
 - **测度的构造 ↔ 集合族与 σ-代数**　5 条节点级连线
@@ -65995,7 +66184,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **同调与正合列 ↔ 复形与导出三角**　22 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **代数结构 ↔ 群上同调**　6 条节点级连线
-- **群作用与置换 ↔ 代数结构**　9 条节点级连线
+- **群作用与置换 ↔ 代数结构**　10 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 加法与阿贝尔范畴**　4 条节点级连线
 - **层与拓扑 ↔ 层上同调**　13 条节点级连线
@@ -66034,6 +66223,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **范畴里的代数结构 ↔ 图与极限**　4 条节点级连线
 - **实数完备性的等价刻画 ↔ 实数与极限**　5 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线
+- **实数完备性的等价刻画 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **连续与紧性 ↔ 实数与极限**　5 条节点级连线
 - **实数完备性的等价刻画 ↔ 连续与紧性**　5 条节点级连线
 - **微分中值定理与 Taylor ↔ 实数与极限**　6 条节点级连线
@@ -66053,29 +66243,30 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **矩阵与行列式 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
-- **内积空间与正交性 ↔ 多重线性与张量**　12 条节点级连线
-- **矩阵与行列式 ↔ 多重线性与张量**　9 条节点级连线
-- **多元微分 ↔ 度量空间**　4 条节点级连线
+- **内积空间与正交性 ↔ 多重线性与张量**　13 条节点级连线
+- **矩阵与行列式 ↔ 多重线性与张量**　10 条节点级连线
+- **多元微分 ↔ 度量空间**　5 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
 - **多元微分 ↔ 微分中值定理与 Taylor**　2 条节点级连线
-- **合成列与可解群 ↔ 代数结构**　6 条节点级连线
+- **合成列与可解群 ↔ 代数结构**　7 条节点级连线
 - **实数与极限 ↔ 实数的运算与不等式**　8 条节点级连线
 - **实数的运算与不等式 ↔ 函数列、幂级数与初等函数**　7 条节点级连线
 - **实数的运算与不等式 ↔ 数项级数的敛散性**　6 条节点级连线
 - **实数的运算与不等式 ↔ Riemann 积分**　2 条节点级连线
 - **L^p 空间 ↔ 实数的运算与不等式**　3 条节点级连线
 - **固态阿贝尔群 ↔ Stone 与 Stonean**　2 条节点级连线
-- **凝聚态阿贝尔群 ↔ 固态阿贝尔群**　3 条节点级连线
-- **解析环与固态模 ↔ 固态阿贝尔群**　4 条节点级连线
-- **adic 空间 ↔ 解析环与固态模**　2 条节点级连线
+- **凝聚态阿贝尔群 ↔ 固态阿贝尔群**　4 条节点级连线
+- **解析环与固态模 ↔ 固态阿贝尔群**　5 条节点级连线
+- **adic 空间 ↔ 解析环与固态模**　3 条节点级连线
+- **adic 空间 ↔ 相干对偶**　2 条节点级连线
 - **相干对偶 ↔ 解析环与固态模**　4 条节点级连线
 - **代数结构 ↔ 模的张量积与标量限制**　4 条节点级连线
 - **多重线性与张量 ↔ 模的张量积与标量限制**　2 条节点级连线
 - **函子与自然变换 ↔ 平坦模**　2 条节点级连线
 - **加法与阿贝尔范畴 ↔ 平坦模**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 内射模与可除群**　3 条节点级连线
-- **代数结构 ↔ 内射模与可除群**　3 条节点级连线
+- **代数结构 ↔ 内射模与可除群**　4 条节点级连线
 - **平坦模 ↔ 模的张量积与标量限制**　2 条节点级连线
 - **平坦模 ↔ 消解与维数**　3 条节点级连线
 - **同调与正合列 ↔ 消解与维数**　6 条节点级连线
@@ -66095,12 +66286,12 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **活动标架与结构方程 ↔ 内蕴几何**　8 条节点级连线
 - **特征值与 Jordan 型 ↔ 曲面论**　2 条节点级连线
 - **矩阵与行列式 ↔ 曲面论**　2 条节点级连线
-- **活动标架与结构方程 ↔ 曲面论**　12 条节点级连线
+- **活动标架与结构方程 ↔ 曲面论**　11 条节点级连线
 - **内蕴几何 ↔ 曲面论**　28 条节点级连线
 - **内蕴几何 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **多元微分 ↔ 内蕴几何**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线
-- **内蕴几何 ↔ 流形与向量丛**　12 条节点级连线
+- **内蕴几何 ↔ 流形与向量丛**　13 条节点级连线
 - **复变函数基础 ↔ 数系的构造**　6 条节点级连线
 - **Cauchy 理论 ↔ 复变函数基础**　12 条节点级连线
 - **Cauchy 理论 ↔ 共形映射与正规族**　6 条节点级连线
@@ -66123,11 +66314,11 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **内蕴几何 ↔ Lie 群**　2 条节点级连线
 - **Lie 群 ↔ 向量场与 Lie 结构**　4 条节点级连线
 - **多元微分 ↔ 流形与向量丛**　3 条节点级连线
-- **微分形式、积分与 de Rham ↔ 流形与向量丛**　7 条节点级连线
+- **微分形式、积分与 de Rham ↔ 流形与向量丛**　8 条节点级连线
 - **矩阵与行列式 ↔ 微分形式、积分与 de Rham**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 曲面论**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 仿紧与单位分解**　2 条节点级连线
-- **复变函数基础 ↔ 共形映射与正规族**　13 条节点级连线
+- **复变函数基础 ↔ 共形映射与正规族**　14 条节点级连线
 - **Cauchy 理论 ↔ 调和函数**　3 条节点级连线
 - **复变函数基础 ↔ 调和函数**　2 条节点级连线
 - **Cauchy 理论 ↔ 解析延拓与整函数**　11 条节点级连线
@@ -66150,6 +66341,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 同调群**　2 条节点级连线
 - **拓扑空间的基本语汇 ↔ 同调群**　2 条节点级连线
 - **复形与导出三角 ↔ 同调群**　6 条节点级连线
+- **基本群 ↔ 度量空间**　2 条节点级连线
 - **共形映射与正规族 ↔ 基本群**　2 条节点级连线
 - **代数结构 ↔ 整除与同余**　3 条节点级连线
 - **群作用与置换 ↔ 整除与同余**　2 条节点级连线
@@ -66166,38 +66358,38 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **选择原理 ↔ 收敛与紧性**　2 条节点级连线
 - **线性映射与秩 ↔ 流形与向量丛**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ Lie 群**　3 条节点级连线
-- **内积空间与正交性 ↔ 矩阵与行列式**　2 条节点级连线
+- **内积空间与正交性 ↔ 矩阵与行列式**　3 条节点级连线
 - **内积空间与正交性 ↔ 线性映射与秩**　2 条节点级连线
 - **内积空间与正交性 ↔ 多项式与因式分解**　2 条节点级连线
 - **多重线性与张量 ↔ 向量空间与基**　2 条节点级连线
 - **内积空间与正交性 ↔ 矩阵分解与最小二乘**　11 条节点级连线
-- **矩阵与行列式 ↔ 矩阵分解与最小二乘**　2 条节点级连线
+- **矩阵与行列式 ↔ 矩阵分解与最小二乘**　3 条节点级连线
+- **内积空间与正交性 ↔ Hilbert 空间**　12 条节点级连线
 - **微分形式、积分与 de Rham ↔ 辛流形与 Hamilton 力学**　4 条节点级连线
 - **多重线性与张量 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
 - **内蕴几何 ↔ 辛流形与 Hamilton 力学**　3 条节点级连线
 - **流形与向量丛 ↔ 辛流形与 Hamilton 力学**　2 条节点级连线
 - **辛流形与 Hamilton 力学 ↔ 向量场与 Lie 结构**　3 条节点级连线
-- **收敛与紧性 ↔ 分离公理**　4 条节点级连线
+- **收敛与紧性 ↔ 分离公理**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
-- **Baire 纲与三大定理 ↔ 拓扑空间的基本语汇**　4 条节点级连线
-- **多元微分 ↔ 赋范空间与有界算子**　13 条节点级连线
+- **Baire 纲与三大定理 ↔ 拓扑空间的基本语汇**　5 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　15 条节点级连线
 - **丛的示性类 ↔ 活动标架与结构方程**　2 条节点级连线
 - **丛的示性类 ↔ 微分形式、积分与 de Rham**　2 条节点级连线
-- **线性映射与秩 ↔ 赋范空间与有界算子**　4 条节点级连线
-- **Hilbert 空间 ↔ 赋范空间与有界算子**　9 条节点级连线
+- **线性映射与秩 ↔ 赋范空间与有界算子**　5 条节点级连线
+- **Hilbert 空间 ↔ 赋范空间与有界算子**　10 条节点级连线
 - **L^p 空间 ↔ 赋范空间与有界算子**　6 条节点级连线
 - **Hilbert 空间 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **向量空间与基 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **Baire 纲与三大定理 ↔ 赋范空间与有界算子**　3 条节点级连线
-- **内积空间与正交性 ↔ Hilbert 空间**　10 条节点级连线
+- **内积空间与正交性 ↔ 赋范空间与有界算子**　3 条节点级连线
+- **赋范空间与有界算子 ↔ 拓扑空间的基本语汇**　3 条节点级连线
+- **赋范空间与有界算子 ↔ 度量空间**　4 条节点级连线
 - **多元微分 ↔ Baire 纲与三大定理**　6 条节点级连线
 - **Baire 纲与三大定理 ↔ 分离公理**　3 条节点级连线
-- **赋范空间与有界算子 ↔ 度量空间**　3 条节点级连线
 - **C(K) 与 Stone–Weierstrass ↔ 度量空间**　4 条节点级连线
-- **C(K) 与 Stone–Weierstrass ↔ 拓扑空间的基本语汇**　2 条节点级连线
+- **C(K) 与 Stone–Weierstrass ↔ 拓扑空间的基本语汇**　3 条节点级连线
 - **共形映射与正规族 ↔ C(K) 与 Stone–Weierstrass**　2 条节点级连线
-- **赋范空间与有界算子 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **内积空间与正交性 ↔ 赋范空间与有界算子**　2 条节点级连线
 - **Baire 纲与三大定理 ↔ 度量空间**　2 条节点级连线
 - **微分形式、积分与 de Rham ↔ 同调群**　3 条节点级连线
 - **拓扑空间的基本语汇 ↔ 曲面的地形**　5 条节点级连线

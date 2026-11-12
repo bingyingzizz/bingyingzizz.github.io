@@ -1,6 +1,8 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 群同态 | group homomorphism | 核 | kernel | 像 | image → def.group-hom
+
 - Noether 第一同构定理 | 第一同构定理 | 同构定理 | first isomorphism theorem → thm.first-iso
 
 - 环 | ring | 交换环 | 含幺环 → def.ring
@@ -18,7 +20,5 @@
 - 环的局部化 | W^{-1}R | 乘性子集 | 分式环 | localization of a ring → prop.ring-localization
 
 - 布尔环 | Boolean ring | 幂等环 → def.boolean-ring
-
-- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 | 布尔环与斯通空间 | 斯通表示定理 → thm.boolean-stone
 
 > 续见 alias/aka/algebra.3.md

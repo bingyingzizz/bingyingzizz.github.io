@@ -8,7 +8,7 @@
 - 被 [`thm.real-complete-metric`](../nodes/thm.real-complete-metric.md) ℝ 是完备度量空间 用
 - 被 [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间 用
 - ⇒ [`thm.banach-fixed-point`](../nodes/thm.banach-fixed-point.md) 压缩映射原理
-- ⇒ [`thm.bounded-extension`](../nodes/thm.bounded-extension.md) 有界算子的延拓
-- ⇒ [`thm.ck-complete`](../nodes/thm.ck-complete.md) C(K,E) 完备
+- ⇒ [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画
+- ⇒ [`thm.bounded-operators-banach`](../nodes/thm.bounded-operators-banach.md) B(E,F) 完备
 
 > 续见 [nodes/def.complete.4.md](./def.complete.4.md)

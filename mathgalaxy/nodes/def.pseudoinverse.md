@@ -1,6 +1,6 @@
 # 伪逆　`def.pseudoinverse`
 Moore–Penrose 伪逆：不可逆矩阵的「逆」
-layer 26 · 定义 · 矩阵分解与最小二乘 · 抽象代数
+layer 32 · 定义 · 矩阵分解与最小二乘 · 抽象代数
 [在星图里打开](../#n=def.pseudoinverse)　·　[节点索引](../index.md)
 
 **在做什么**：奇异矩阵、长方矩阵都没有逆，但仍然有「最好用的那个替代品」。伪逆 $A^{+}$ 是唯一满足四条 Penrose 条件的矩阵。

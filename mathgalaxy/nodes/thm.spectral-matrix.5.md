@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⟺ [`thm.spectral-theorem`](../nodes/thm.spectral-theorem.md) 谱定理（实对称）
 - ⟺ [`cor.spectral-normal`](../nodes/cor.spectral-normal.md) 谱定理（复正规）
+- ⇒ [`thm.polar-decomposition`](../nodes/thm.polar-decomposition.md) 极分解

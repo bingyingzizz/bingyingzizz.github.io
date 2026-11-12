@@ -1,6 +1,6 @@
 # Sylvester 判据　`thm.sylvester-criterion`
 定理（Sylvester）：正定性 $\iff$ 各阶顺序主子式为正
-layer 25 · 定理 · 内积空间与正交性 · 抽象代数
+layer 31 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.sylvester-criterion)　·　[节点索引](../index.md)
 
 设 $A \in M_n(\mathbb{R})$ 对称。记 $D_k$ 为 $A$ 的**左上角** $k \times k$ 子矩阵的行列式（**顺序主子式**）。则

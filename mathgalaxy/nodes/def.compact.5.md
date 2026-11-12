@@ -6,10 +6,10 @@
 - 被 [`def.net`](../nodes/def.net.md) 网 用
 - 被 [`def.lebesgue-number`](../nodes/def.lebesgue-number.md) 勒贝格数 用
 - 被 [`def.relatively-compact`](../nodes/def.relatively-compact.md) 相对紧 用
+- ⇒ [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画
+- ⇒ [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价
 - ⇒ [`thm.equicontinuous-uniform`](../nodes/thm.equicontinuous-uniform.md) 等度连续与一致等度连续
 - 被 [`thm.riesz-ball-compact`](../nodes/thm.riesz-ball-compact.md) 单位球紧 ⟺ 有限维 用
 - 被 [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价 用
-- ～弱边 [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理
-- 被 [`thm.rado`](../nodes/thm.rado.md) Radó 定理 用
 
 > 续见 [nodes/def.compact.6.md](./def.compact.6.md)

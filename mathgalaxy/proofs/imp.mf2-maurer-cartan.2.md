@@ -1,7 +1,7 @@
 # 左不变性 $+$ 括号在左不变场上封闭 $\implies$ Maurer–Cartan 方程
 `imp.mf2-maurer-cartan` · 推出 · strong 边 · 根 `../`
 
-`def.left-invariant-form` 左不变形式 + `def.exterior-derivative` 外微分（欧氏开集） + `prop.left-invariant-fields` 左不变向量场 → `thm.maurer-cartan` Maurer–Cartan 方程
+`def.left-invariant-form` 左不变形式 + `def.exterior-derivative` 外微分（欧氏开集） + `prop.left-invariant-fields` 左不变向量场 + `prop.pullback-forms` 拉回（开集间） → `thm.maurer-cartan` Maurer–Cartan 方程
 
 **两边都是左不变的 $2$-形式。** 左边：$\mathrm{d}(L_{h}^{\ast}\omega^{i}) = L_{h}^{\ast}\mathrm{d}\omega^{i}$（拉回与外微分交换，`prop.pullback-forms`），而 $L_{h}^{\ast}\omega^{i} = \omega^{i}$，故 $L_{h}^{\ast}\mathrm{d}\omega^{i} = \mathrm{d}\omega^{i}$。
 

@@ -6,6 +6,6 @@
 - def.symplectic-manifold　辛流形　layer 26
 - def.lagrangian-submanifold　Lagrange 子流形　layer 27
 - thm.darboux　Darboux 定理　layer 29
-- def.hamiltonian-vector-field　Hamilton 向量场　layer 33
-- def.poisson-bracket　Poisson 括号　layer 34
-- def.lagrange-bracket　Lagrange 括号　layer 35
+- def.hamiltonian-vector-field　Hamilton 向量场　layer 31
+- def.poisson-bracket　Poisson 括号　layer 32
+- def.lagrange-bracket　Lagrange 括号　layer 33

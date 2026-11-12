@@ -8,7 +8,9 @@ layer 24 · 命题 · 解析环与固态模 · 凝聚态数学
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.adic-gluing`](../nodes/thm.adic-gluing.md) 导出范畴按无穷范畴粘合
+- ⇒ [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环
+
+- …另有出边，续页见 [nodes/prop.analytic-base-change.4.md](./prop.analytic-base-change.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.analytic-base-change.3.md](./prop.analytic-base-change.3.md)

@@ -8,8 +8,6 @@ layer 22 · 定理 · 多重线性与张量 · 抽象代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.gram-matrix`](../nodes/def.gram-matrix.md) Gram 矩阵：用到了定义 Gram 矩阵　[proofs/dep.lagid-gram.md](../proofs/dep.lagid-gram.md)
-
 - …另有入边，续页见 [nodes/thm.lagrange-identity.3.md](./thm.lagrange-identity.3.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram 行列式；北大《高等代数》· Lagrange 恒等式

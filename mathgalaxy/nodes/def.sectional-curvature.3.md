@@ -3,5 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.curvature-tensor`](../nodes/def.curvature-tensor.md) Riemann 曲率张量 + [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量：反称性 $\implies$ 截面曲率与基的选取无关　[proofs/imp.tu-sectional.md](../proofs/imp.tu-sectional.md)
+- [`def.gauss-curvature`](../nodes/def.gauss-curvature.md) Gauss 曲率：ana.n12-gausscurv-sectional　[proofs/ana.n12-gausscurv-sectional.md](../proofs/ana.n12-gausscurv-sectional.md)
 - [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量：用到了定义 Riemann 度量　[proofs/dep.tu-riemannian-sectional.md](../proofs/dep.tu-riemannian-sectional.md)
-- [`def.curvature-tensor`](../nodes/def.curvature-tensor.md) Riemann 曲率张量：用到了定义 Riemann 曲率张量　[proofs/dep.tu-curv-sectional.md](../proofs/dep.tu-curv-sectional.md)
+
+> 续见 [nodes/def.sectional-curvature.4.md](./def.sectional-curvature.4.md)

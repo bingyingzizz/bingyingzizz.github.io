@@ -8,4 +8,5 @@
 - 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用
 - 被 [`def.weak-topology`](../nodes/def.weak-topology.md) 弱拓扑 用
 - 被 [`def.reflexive-space`](../nodes/def.reflexive-space.md) 自反空间 用
+- 被 [`def.weak-star-topology`](../nodes/def.weak-star-topology.md) 弱*拓扑 用
 - 被 [`def.dual-banach`](../nodes/def.dual-banach.md) 连续对偶空间 用

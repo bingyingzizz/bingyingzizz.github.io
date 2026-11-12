@@ -1,6 +1,6 @@
 # 法曲率　`def.normal-curvature`
 法曲率
-layer 31 · 定义 · 曲面论 · 微分几何
+layer 29 · 定义 · 曲面论 · 微分几何
 [在星图里打开](../#n=def.normal-curvature)　·　[节点索引](../index.md)
 
 设 $v \in T_{p}U$，$v \ne 0$。$v$ 方向的**法曲率**是

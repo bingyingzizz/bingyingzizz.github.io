@@ -6,5 +6,5 @@
 - thm.qr-decomposition　QR 分解　layer 20
 - thm.lu-decomposition　LU 分解　layer 21
 - thm.least-squares　最小二乘　layer 22
-- def.matrix-norm　矩阵范数　layer 26
-- def.pseudoinverse　伪逆　layer 26
+- def.matrix-norm　矩阵范数　layer 32
+- def.pseudoinverse　伪逆　layer 32

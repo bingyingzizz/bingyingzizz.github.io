@@ -1,7 +1,7 @@
 # $j_! \dashv j^* \dashv j_*$ $\implies$ 仿射相干对偶
 `imp.coherent-duality` · 推出 · strong 边 · 根 `../`
 
-`thm.za-analytic` 有限生成代数的解析环 → `thm.coherent-duality` 仿射相干对偶
+`thm.za-analytic` 有限生成代数的解析环 + `thm.adic-structure-sheaf` adic 结构层是层 → `thm.coherent-duality` 仿射相干对偶
 
 **记号。** 设 $f : A \to A'$ 是解析环之间的映射，$f^{\mathrm{ad}/\mathbb{Z}} : \operatorname{Spec} A' \to \operatorname{Spec} A$ 是对应的 adic 谱映射，$j : \operatorname{Spec} A' \to \operatorname{Spec}(A',\mathbb{Z})$。
 

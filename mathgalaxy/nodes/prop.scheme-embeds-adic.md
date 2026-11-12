@@ -10,6 +10,9 @@ layer 25 · 命题 · adic 空间 · 解析空间
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.scheme-embeds-adic.3.md](./prop.scheme-embeds-adic.3.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.scheme-embeds-adic.4.md](./prop.scheme-embeds-adic.4.md)
+
 refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture IX, Proposition 9.6
 
 > 说明见 `notes/prop.scheme-embeds-adic.md`

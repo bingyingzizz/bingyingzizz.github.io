@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 29 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Isometry` (short) · `Isometry of Surfaces` (full)
 
 ## Statement and proof

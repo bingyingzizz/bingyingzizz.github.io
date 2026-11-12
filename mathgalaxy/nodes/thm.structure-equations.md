@@ -8,7 +8,7 @@ layer 28 · 定理 · 活动标架与结构方程 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`lem.adapted-frame`](../nodes/lem.adapted-frame.md) 适配标架
+- ⇒ [`lem.second-form-symmetric`](../nodes/lem.second-form-symmetric.md) 第二基本形式对称
 
 - …另有出边，续页见 [nodes/thm.structure-equations.4.md](./thm.structure-equations.4.md)
 

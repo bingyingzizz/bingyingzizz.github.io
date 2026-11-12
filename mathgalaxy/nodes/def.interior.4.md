@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.perfectly-normal-space`](../nodes/def.perfectly-normal-space.md) 完美正规空间 用
+- ⇒ [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点

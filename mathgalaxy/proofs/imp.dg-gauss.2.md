@@ -1,7 +1,7 @@
 # 结构方程拆出 $k=3$ 项 $\implies$ Gauss 方程
 `imp.dg-gauss` · 推出 · strong 边 · 根 `../`
 
-`thm.structure-equations` 结构方程 + `lem.adapted-frame` 适配标架 + `lem.second-form-symmetric` 第二基本形式对称 → `thm.gauss-equation` Gauss 方程
+`thm.structure-equations` 结构方程 + `lem.adapted-frame` 适配标架 + `lem.second-form-symmetric` 第二基本形式对称 + `prop.connection-antisymmetric` 联络形式反对称 → `thm.gauss-equation` Gauss 方程
 
 代入 $\omega^{i}_{\ 3} = \sum_{j}c_{ij}\omega^{j}$ 并用 $c_{12} = c_{21}$：
 

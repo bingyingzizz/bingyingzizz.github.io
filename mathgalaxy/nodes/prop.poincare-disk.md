@@ -1,6 +1,6 @@
 # Poincaré 圆盘与双曲几何　`prop.poincare-disk`
 单位圆盘上的 Poincaré 度量：Schwarz–Pick 就是等距性
-layer 33 · 命题 · 共形映射与正规族 · 复变函数
+layer 31 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.poincare-disk)　·　[节点索引](../index.md)
 
 在 $\mathbb{D}$ 上赋**Poincaré 度量**

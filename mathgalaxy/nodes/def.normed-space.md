@@ -10,7 +10,9 @@ layer 15 · 定义 · 多元微分 · 数学分析
 配了范数的 $V$ 叫**赋范空间**。它按 $d(v, w) := \|v - w\|$ 成为度量空间，于是「收敛」「连续」「完备」「紧」这些说法全都继承过来。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间 用
+- 被 [`def.weak-star-topology`](../nodes/def.weak-star-topology.md) 弱*拓扑 用
+
+- …另有出边，续页见 [nodes/def.normed-space.3.md](./def.normed-space.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.normed-space.2.md](./def.normed-space.2.md)

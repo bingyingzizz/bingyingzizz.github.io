@@ -1,6 +1,6 @@
 # 边界的符号约定　`prop.boundary-sign-convention`
 代数边界与诱导定向的边界一致
-layer 33 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 31 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.boundary-sign-convention)　·　[节点索引](../index.md)
 
 **在做什么**：把两个「边界」对齐 —— 一个是方块上按坐标编号定出来的代数边界 

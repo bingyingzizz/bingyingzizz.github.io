@@ -9,13 +9,11 @@ layer 27 · 定理 · 微分形式、积分与 de Rham · 微分几何
 > 陈述续见 [nodes/thm.mayer-vietoris.2.md](./thm.mayer-vietoris.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.de-rham-complex`](../nodes/def.de-rham-complex.md) de Rham 上同调：形式的短正合列取上同调 $\implies$ 长正合列　[proofs/imp.mf-mayer-vietoris.md](../proofs/imp.mf-mayer-vietoris.md)
-
-- …另有入边，续页见 [nodes/thm.mayer-vietoris.3.md](./thm.mayer-vietoris.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.mayer-vietoris.4.md](./thm.mayer-vietoris.4.md)
+- ～弱边 [`thm.mv-homology`](../nodes/thm.mv-homology.md) Mayer–Vietoris（同调）
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.mayer-vietoris.3.md](./thm.mayer-vietoris.3.md)
 
 refs: Tu, An Introduction to Manifolds (2nd ed., GTM 334), 「de Rham Cohomology」· Mayer–Vietoris 序列
 

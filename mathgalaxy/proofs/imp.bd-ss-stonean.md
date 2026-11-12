@@ -1,7 +1,7 @@
 # Breen–Deligne 分解 $\implies$ Stonean 上的谱序列
 `imp.bd-ss-stonean` · 推出 · strong 边 · 根 `../`
 
-`thm.breen-deligne` Breen–Deligne 分解 → `prop.breen-deligne-ss-stonean` Stonean 上 Breen–Deligne 的谱序列
+`thm.breen-deligne` Breen–Deligne 分解 + `lem.ext-stonean-section` Stonean 上 Ext 的截面公式 → `prop.breen-deligne-ss-stonean` Stonean 上 Breen–Deligne 的谱序列
 
 取 Breen–Deligne 左消解 $F(M)^{\bullet} \twoheadrightarrow M$（每一项是有限个 $\mathbb{Z}\cdot M^{s_{n,i}}$ 的直和）。
 

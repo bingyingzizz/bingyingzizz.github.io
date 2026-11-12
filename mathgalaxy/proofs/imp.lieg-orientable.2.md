@@ -1,7 +1,7 @@
 # 左不变顶次形式处处非零 $\implies$ Lie 群可定向
 `imp.lieg-orientable` · 推出 · strong 边 · 根 `../`
 
-`def.lie-group` Lie 群 + `def.left-invariant-form` 左不变形式 + `prop.volume-form-orientation` 定向与体积形式 → `prop.lie-group-orientable` Lie 群可定向
+`def.lie-group` Lie 群 + `def.left-invariant-form` 左不变形式 + `prop.volume-form-orientation` 体积与定向 → `prop.lie-group-orientable` Lie 群可定向
 
 **给出定向**：处处非零的 $n$-形式正是一个定向（`prop.volume-form-orientation`）。于是 $G$ 可定向，且该定向在左平移下不变。∎
 

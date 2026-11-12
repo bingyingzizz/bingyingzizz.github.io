@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · proposition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 23 · proposition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.mobius-circle.md` and `proofs/`.

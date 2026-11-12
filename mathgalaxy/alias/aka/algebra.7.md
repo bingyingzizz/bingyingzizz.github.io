@@ -1,6 +1,18 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 直和与补空间 | ⊕ | 直和 ⊕ → def.direct-sum
+
+- 矩阵 → def.matrix
+
+- 矩阵的加法与乘法 → def.matrix-operations
+
+- 初等变换与初等矩阵 → def.elementary-matrix
+
+- 可逆矩阵 → def.invertible-matrix
+
+- 交错型 → def.alternating-form
+
 - 一元多项式 → def.polynomial
 
 - 多项式环 | k[x] | K[X] | R[x] → def.polynomial-ring
@@ -32,17 +44,5 @@
 - 对称代数 → def.symmetric-algebra
 
 - 置换群与对称群 → def.permutation-group
-
-- 符号与交错群 → def.alternating-group
-
-- 循环群 → def.cyclic-group
-
-- 单群 → def.simple-group
-
-- 合成列 → def.composition-series
-
-- 可解群 → def.solvable-group
-
-- 整环（另一种叫法） | 无零因子环 → def.int-domain
 
 > 续见 alias/aka/algebra.8.md

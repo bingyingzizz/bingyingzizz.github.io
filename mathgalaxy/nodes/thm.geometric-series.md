@@ -1,6 +1,6 @@
 # 几何级数　`thm.geometric-series`
 定理：几何级数
-layer 20 · 定理 · 数项级数的敛散性 · 数学分析
+layer 9 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.geometric-series)　·　[节点索引](../index.md)
 
 设 $q \in \mathbb{R}$。则级数 $\sum_{n=0}^{\infty} q^{n}$ 收敛**当且仅当** $|q| < 1$；此时

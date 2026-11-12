@@ -1,16 +1,12 @@
 # 边界函数 $A_\infty$ $\implies$ $A_\blacksquare$ 是解析环
 `imp.za-analytic` · 推出 · strong 边 · 根 `../`
 
-`prop.analytic-examples` 解析环的例子 + `def.analytic-ring` 解析环 + `thm.solid-abelian` 固态群构成阿贝尔子范畴 → `thm.za-analytic` 有限生成代数的解析环
+`prop.analytic-examples` 解析环的例子 + `def.analytic-ring` 解析环 + `thm.solid-abelian` 固态群构成阿贝尔子范畴 + `prop.analytic-base-change` 解析环的 base change → `thm.za-analytic` 有限生成代数的解析环
 
-**⑥ 全忠实与 $j_!$。** ⑤ 给出 $j^\ast : D(A^{\blacksquare}) \to D((A,\mathbb{Z})^{\blacksquare})$ 全忠实；
-
-其左伴随记作 $j_! = -\otimes^L_{(A,\mathbb{Z})^{\blacksquare}} A^{\blacksquare}$（由 `prop.analytic-base-change`；⚠️ 不能再写成 $j^\ast$ —— 同一个符号在前面刚被用来表示 $D(A^{\blacksquare}) \to D((A,\mathbb{Z})^{\blacksquare})$，方向相反）。
-
-$\ker j^\ast$ 恰为 $A_\infty$-模（Observation 8.10）。
-
-定义
-$$j_! M := M \otimes_{A \otimes^L \mathbb{Z}^{\blacksquare}} (A_\infty/A)[-1],$$
-由 ②③ 它穿过 $D(A^{\blacksquare})$、全忠实，且是 $j^\ast$ 的左伴随（Observation 8.11）。
+**⑤ 解析性。** 设 $C$ 连通、各项为 $\prod_I A$ 的直和。由 $C \in D((A,\mathbb{Z})^{\blacksquare})$，
+$$\operatorname{RHom}_A(A[S], C) \cong \operatorname{RHom}_A((A,\mathbb{Z})^{\blacksquare}[S], C),$$
+且 $(A,\mathbb{Z})^{\blacksquare}[S] = \prod_I\mathbb{Z} \otimes A$、$A^{\blacksquare}[S] = \prod_I A$。要证的
+$$\operatorname{RHom}_A(\textstyle\prod_I \mathbb{Z} \otimes A, C) \cong \operatorname{RHom}_A(\prod_I A, C)$$
+来自 ④（余核是 $A_\infty$-模）与 ③（$A_\infty$-模上 $\operatorname{RHom}$ 消没）。
 
 > 续见 proofs/imp.za-analytic.6.md

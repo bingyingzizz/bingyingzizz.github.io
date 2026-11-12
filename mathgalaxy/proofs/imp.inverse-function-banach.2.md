@@ -1,7 +1,7 @@
 # 同一套证明换到 Banach 空间（多一步 Neumann 级数）
 `imp.inverse-function-banach` · 推出 · strong 边 · 根 `../`
 
-`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
+`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 + `thm.mean-value-multi` 多元中值定理 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
 
 **（ii）第二步之后不需要新东西。** $\Phi := \mathrm{id} - \widetilde f$ 满足 $D\Phi(0) = 0$，由 $x \mapsto D\Phi(x)$ 连续，存在 $r > 0$ 使 $\|x\| \le r$ 时 $\|D\Phi(x)\| \le \frac{1}{2}$；
 

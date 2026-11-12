@@ -7,3 +7,4 @@
 - 被 [`thm.quadratic-reciprocity`](../nodes/thm.quadratic-reciprocity.md) 二次互反律 用
 - 被 [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号 用
 - ～弱边 [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号
+- ⇒ [`thm.jacobi-laws`](../nodes/thm.jacobi-laws.md) Jacobi 符号的计算法则

@@ -1,7 +1,7 @@
 # Baer 判据 + 主理想 $\implies$ 内射即除
 `imp.pid-injective-divisible` · 推出 · strong 边 · 根 `../`
 
-`thm.baer-criterion` 内射的理想判据 + `def.divisible-group` 可除群 → `thm.pid-injective-divisible` 内射等价于可除
+`thm.baer-criterion` 内射的理想判据 + `def.divisible-group` 可除群 + `prop.zmod-is-ab` Z-模就是阿贝尔群 → `thm.pid-injective-divisible` 内射等价于可除
 
 **（可除 $\implies$ 内射）** 用 Baer 判据。设 $J \subseteq R$ 是理想，$f : J \to I$。主理想整环里 $J = (a)$。
 - $a = 0$：$J = 0$，取 $x = 0$ 即可；

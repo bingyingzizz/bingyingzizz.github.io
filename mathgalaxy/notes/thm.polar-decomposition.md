@@ -12,3 +12,5 @@ $A^{*}A$ 总是半正定 Hermite（`def.positive-definite-matrix` 的注），�
 **与 SVD 的分工**：极分解强调「旋转 $\times$ 拉伸」这个**结构**，SVD 强调「$A = U\Sigma V^{*}$ 这个**坐标写法**」。两者信息量相同，SVD 多给了两组基底。
 
 ⚠️ 唯一性要说清：$P$ 永远唯一，但 $A$ 奇异时 $U$ 可以在 $A$ 的核上任意取 —— 所以「极分解唯一」这句话只在可逆时成立。
+
+> 续见 notes/thm.polar-decomposition.2.md

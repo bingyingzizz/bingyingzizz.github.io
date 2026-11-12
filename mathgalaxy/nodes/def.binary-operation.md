@@ -13,7 +13,9 @@ $$\ast : S \times S \longrightarrow S, \qquad (a, b) \longmapsto a \ast b .$$
 - [`def.function`](../nodes/def.function.md) 映射：用到了定义 映射　[proofs/dep.function-binaryop.md](../proofs/dep.function-binaryop.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.group`](../nodes/def.group.md) 群 用
+- 被 [`def.group-power`](../nodes/def.group-power.md) 群的整数幂 用
+
+- …另有出边，续页见 [nodes/def.binary-operation.2.md](./def.binary-operation.2.md)
 
 refs: Lang, Algebra, Ch. I §1；Hungerford, Algebra, Ch. I
 

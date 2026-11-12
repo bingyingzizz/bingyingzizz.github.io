@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · proposition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
+layer 25 · proposition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.f-shriek-base-change.md` and `proofs/`.

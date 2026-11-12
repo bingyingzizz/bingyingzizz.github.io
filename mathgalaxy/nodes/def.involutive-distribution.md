@@ -9,6 +9,7 @@ layer 27 · 定义 · 向量场与 Lie 结构 · 微分几何
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.frobenius`](../nodes/thm.frobenius.md) Frobenius 定理
+- ⇒ [`thm.foliation-existence`](../nodes/thm.foliation-existence.md) 叶状结构存在定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.involutive-distribution.3.md](./def.involutive-distribution.3.md)

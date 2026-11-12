@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 0 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flatness Equivalences` (short) · `Equivalent Characterizations of Flatness` (full)
 
 ## Statement and proof

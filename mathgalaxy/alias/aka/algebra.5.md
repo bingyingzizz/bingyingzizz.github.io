@@ -1,6 +1,16 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 最佳逼近与投影公式 → thm.projection-formula
+
+- 轨道–稳定子定理 → thm.orbit-stabilizer
+
+- Sylow 定理 | 西罗定理 | 西罗 → thm.sylow
+
+- 第一同构定理（向量空间版） → thm.first-iso-vs
+
+- 线性方程组的解结构 → thm.linear-system-solutions
+
 - 行列式的乘性 → thm.det-multiplicative
 
 - K[x] 是唯一分解整环 → thm.poly-ufd
@@ -28,19 +38,5 @@
 - 基变换与相似 → thm.change-of-basis
 
 - 多重线性型 → def.multilinear-form
-
-- 诱导范数与距离 → def.induced-norm
-
-- 群作用 → def.group-action
-
-- Cayley 定理 | 凯莱定理 | 凯莱 → thm.cayley
-
-- 序与四则运算 → prop.order-rules
-
-- 子空间判据 → prop.subspace-criterion
-
-- 迹 | tr | Tr A → def.trace
-
-- 正交投影 → def.orthogonal-projection
 
 > 续见 alias/aka/algebra.6.md

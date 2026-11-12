@@ -13,4 +13,6 @@
 
 - 细层 | fine sheaf → def.fine-sheaf
 
+- soft sheaves are acyclic | 软层无环 → thm.soft-sheaf-acyclic
+
 见 `../../alias.md`。

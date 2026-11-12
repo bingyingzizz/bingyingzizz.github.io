@@ -11,7 +11,7 @@ layer 17 · 定理 · 度量空间 · 拓扑学
 - …另有入边，续页见 [nodes/thm.metric-compact-equiv.5.md](./thm.metric-compact-equiv.5.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.metric-compact-equiv.6.md](./thm.metric-compact-equiv.6.md)
+- …另有出边，续页见 [nodes/thm.metric-compact-equiv.7.md](./thm.metric-compact-equiv.7.md)
 
 ## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.metric-compact-equiv.3.md](./thm.metric-compact-equiv.3.md)

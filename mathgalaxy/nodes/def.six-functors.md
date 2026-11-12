@@ -10,7 +10,7 @@ layer 21 · 定义 · 相干对偶 · 解析空间
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`def.f-shriek`](../nodes/def.f-shriek.md) 紧支撑推前 f_!
+- ⇒ [`thm.f-shriek-existence`](../nodes/thm.f-shriek-existence.md) 紧支撑推前的存在性
 
 - …另有出边，续页见 [nodes/def.six-functors.5.md](./def.six-functors.5.md)
 

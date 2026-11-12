@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.ext-cond-set-section`](../nodes/cor.ext-cond-set-section.md) Ext 的截面公式
+- ⇒ [`prop.breen-deligne-ss-stonean`](../nodes/prop.breen-deligne-ss-stonean.md) Stonean 上 Breen–Deligne 的谱序列

@@ -1,6 +1,7 @@
 # 代数结构 / Algebraic Structures（algebra.structures）· 节点清单（第 2/2 页）
 根 `../`　·　第 1 页 `index/algebra.structures.md`
 
+- def.free-group-universal　自由群的泛性质　layer 10
 - def.ideal　理想　layer 10
 - def.module-category　模范畴　layer 10
 - prop.abelianization　交换化　layer 10

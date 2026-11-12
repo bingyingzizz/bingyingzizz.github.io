@@ -1,6 +1,6 @@
 # 仿射相干对偶　`thm.coherent-duality`
 定理：仿射相干对偶（Thm 8.2）
-layer 25 · 定理 · 解析环与固态模 · 凝聚态数学
+layer 0 · 定理 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=thm.coherent-duality)　·　[节点索引](../index.md)
 
 设 $A$ 是有限生成 $\mathbb{Z}$-代数，$f : \operatorname{Spec} A \to \operatorname{Spec} \mathbb{Z}$ 是结构映射（把系数环的谱投下来）。定义
@@ -12,7 +12,9 @@ $$f_! : D(A_\blacksquare) \xrightarrow{j_!} D((A,\mathbb{Z})_\blacksquare) \long
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.f-shriek`](../nodes/def.f-shriek.md) 紧支撑推前 f_! 用
+- ⇒ [`thm.poincare-solid`](../nodes/thm.poincare-solid.md) 固态 Serre 对偶
+
+- …另有出边，续页见 [nodes/thm.coherent-duality.4.md](./thm.coherent-duality.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.coherent-duality.3.md](./thm.coherent-duality.3.md)

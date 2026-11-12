@@ -16,7 +16,7 @@ layer 18 · 定义 · 分离公理 · 拓扑学
 - …另有入边，续页见 [nodes/def.completely-regular-space.3.md](./def.completely-regular-space.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.completely-regular-space.5.md](./def.completely-regular-space.5.md)
+- …另有出边，续页见 [nodes/def.completely-regular-space.4.md](./def.completely-regular-space.4.md)
 
 refs: Munkres, Topology；Engelking, General Topology
 

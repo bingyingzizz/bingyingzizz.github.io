@@ -12,6 +12,9 @@ $\mathbb{Z}\text{-}\mathbf{Mod} \cong \mathbf{Ab}$（范畴**同构**）；$\mat
 
 - …另有入边，续页见 [nodes/prop.zmod-is-ab.2.md](./prop.zmod-is-ab.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/prop.zmod-is-ab.3.md](./prop.zmod-is-ab.3.md)
+
 refs: Le Stum, An introduction to condensed mathematics, Exercise 1.10
 
 > 说明见 `notes/prop.zmod-is-ab.md`

@@ -3,3 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.solid-product-tensor`](../nodes/prop.solid-product-tensor.md) 大乘积的固态张量积 + [`cor.solid-compact-generators`](../nodes/cor.solid-compact-generators.md) 固态的紧投射对象：乘积公式 + $\mathbb{R}^{L\blacksquare}=0$ $\implies$ 具体计算　[proofs/imp.solid-tensor-computations.md](../proofs/imp.solid-tensor-computations.md)
+- [`def.solid-group`](../nodes/def.solid-group.md) 固态阿贝尔群：用到了定义 固态阿贝尔群　[proofs/dep.n11-solidtensor-group.md](../proofs/dep.n11-solidtensor-group.md)
+
+> 续见 [nodes/ex.solid-tensor-computations.4.md](./ex.solid-tensor-computations.4.md)

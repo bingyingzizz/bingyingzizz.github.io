@@ -5,8 +5,8 @@
 
 - def.invariant-polynomial　不变多项式　layer 13
 - def.orientable-manifold　可定向流形　layer 16
+- prop.volume-form-orientation　体积与定向　layer 17
 - def.manifold-chart　图卡　layer 18
-- prop.volume-form-orientation　定向与体积形式　layer 18
 - def.topological-manifold　拓扑流形　layer 18
 - prop.maximal-atlas　极大图册　layer 19
 - thm.smooth-partition-unity　光滑单位分解　layer 20

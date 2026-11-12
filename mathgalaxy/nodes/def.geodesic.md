@@ -1,6 +1,6 @@
 # 测地线　`def.geodesic`
 测地线与测地线方程
-layer 32 · 定义 · 内蕴几何 · 微分几何
+layer 30 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.geodesic)　·　[节点索引](../index.md)
 
 设 $\gamma : I\to S$ 是曲面 $S$ 上按弧长参数化的曲线（$\langle \dot\gamma,\dot\gamma\rangle = 1$）。$\gamma$ 叫**测地线**，如果它的切向量沿自身平行：

@@ -13,4 +13,6 @@
 
 - 李群可定向 | 李群都是可定向流形 → prop.lie-group-orientable
 
+- existence of foliations | 叶状结构存在 → thm.foliation-existence
+
 见 `../../alias.md`。

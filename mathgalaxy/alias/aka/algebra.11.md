@@ -1,6 +1,16 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 根式可解 | 根式解 | 可解性判据 → thm.radical-solvable
+
+- 五次方程没有根式解 | Abel-Ruffini | 五次方程 → thm.quintic-unsolvable
+
+- 代数闭 | 代数闭包 | algebraically closed → def.algebraically-closed
+
+- 单位根 | 分圆多项式 | n 次单位根 | roots of unity → def.roots-of-unity
+
+- 同构 | 可逆态射 | 同构映射 | isomorphic → def.isomorphism
+
 - 二元运算 | 二元算子 | 封闭运算 → def.binary-operation
 
 - 群的阶 | 元素的阶 | 阶（群论） → def.group-order
@@ -23,10 +33,4 @@
 
 - 自由群 | 自由群 F(S) → def.free-group
 
-- 自由群的泛性质 | 自由群泛性质 → def.free-group-universal
-
-- 二面体群 | 正多边形对称群 → def.dihedral-group
-
-- 平坦维数 → def.flat-dimension
-
-见 `../../alias.md`。
+> 续见 alias/aka/algebra.12.md

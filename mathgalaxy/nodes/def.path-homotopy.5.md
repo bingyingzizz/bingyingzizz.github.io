@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群 用
+- ⇒ [`thm.lifting`](../nodes/thm.lifting.md) 提升定理
 - 被 [`thm.lifting`](../nodes/thm.lifting.md) 提升定理 用

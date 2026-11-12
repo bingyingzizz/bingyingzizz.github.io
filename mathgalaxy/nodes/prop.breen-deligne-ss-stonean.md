@@ -1,6 +1,6 @@
 # Stonean 上 Breen–Deligne 的谱序列　`prop.breen-deligne-ss-stonean`
 $E^{p,q}_{1} = \bigoplus_{i} H^{q}(M^{s_{p,i}} \times S,\ N)$
-layer 21 · 命题 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
+layer 20 · 命题 · Breen–Deligne 谱序列 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.breen-deligne-ss-stonean)　·　[节点索引](../index.md)
 
 设 $M, N$ 是凝聚态阿贝尔群，$S$ 是 **Stonean 空间**。则有自然谱序列

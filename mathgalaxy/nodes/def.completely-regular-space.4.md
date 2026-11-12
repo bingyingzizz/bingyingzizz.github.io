@@ -1,8 +1,5 @@
 # 完全正则空间　`def.completely-regular-space`　·　续页（第 4 页）
 [在星图里打开](../#n=def.completely-regular-space)　·　第 1 页 [nodes/def.completely-regular-space.md](./def.completely-regular-space.md)　·　上一页 [nodes/def.completely-regular-space.3.md](./def.completely-regular-space.3.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.t1-space`](../nodes/def.t1-space.md) T1 空间：用到了定义 T1 空间　[proofs/dep.cr-t1.md](../proofs/dep.cr-t1.md)
-- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/def-link.topology-cr.md](../proofs/def-link.topology-cr.md)
-
-> 续见 [nodes/def.completely-regular-space.5.md](./def.completely-regular-space.5.md)
+## 它能推出什么 / 谁在用它（续）
+- ⇒ [`def.regular-space`](../nodes/def.regular-space.md) 正则空间

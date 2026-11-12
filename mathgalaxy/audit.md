@@ -2,9 +2,9 @@
 
 由 `tools/build.mjs` 生成。**不是硬门**：这三类都会误报，先看，别急着改数据。
 
-## 一、正文引用了不存在的 id（0 个）
+## 一、正文引用了不存在的 id（1 个）
 
-（没有）
+- `imp.lch-cr` ← def.one-point-compactification.notes
 
 ## 二、近同名却没有任何边（11 对）
 
@@ -19,7 +19,7 @@
 - Euler 示性数（`thm.euler-characteristic` L29）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔层（`def.abelian-sheaf` L16）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L23）
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L37）
-- Euler 公式（`thm.euler-formula-surface` L33）⇸ Euler 类（`def.euler-class` L37）
+- Euler 公式（`thm.euler-formula-surface` L32）⇸ Euler 类（`def.euler-class` L37）
 - 阿贝尔范畴（`def.abelian-category` L16）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 
 ## 三、黑边子图上的环（2 个）
@@ -39,6 +39,7 @@
 - 该标未标：`thm.jordan-polygon`
 - 该标未标：`def.simplicial`
 - 该标未标：`def.simplex-category`
+- 该标未标：`thm.lifting`
 - 该标未标：`def.cw-complex`
 - 该标未标：`thm.prime-number-theorem`
 - 该标未标：`def.partial-isometry`
@@ -55,7 +56,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**263** 处
+- 陈述里出现假设关键词、但没标注：**264** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -97,5 +98,5 @@
   - prop.free-projective  ‹Hausdorff›
   - def.free-presentation  ‹Hausdorff›
   - cor.chaus-free-presentation  ‹Hausdorff›
-  - …还有 223 处
+  - …还有 224 处
 

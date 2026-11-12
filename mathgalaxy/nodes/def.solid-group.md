@@ -9,13 +9,11 @@ layer 20 · 定义 · 固态阿贝尔群 · 凝聚态数学
 > 陈述续见 [nodes/def.solid-group.2.md](./def.solid-group.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`prop.analytic-examples`](../nodes/prop.analytic-examples.md) 解析环的例子 用
-
-- …另有出边，续页见 [nodes/def.solid-group.4.md](./def.solid-group.4.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.solid-group.3.md](./def.solid-group.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.solid-group.4.md](./def.solid-group.4.md)
 
 refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Definition 5.1
 

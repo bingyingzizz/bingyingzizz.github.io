@@ -1,6 +1,6 @@
 # Riemann 度量　`def.riemannian-metric`
 Riemann 度量
-layer 31 · 定义 · 内蕴几何 · 微分几何
+layer 29 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.riemannian-metric)　·　[节点索引](../index.md)
 
 **在做什么**：在每点的切空间上放一个内积，并要求它随点光滑变化 —— 有了它，流形上才有长度、角度、体积，也才有测地线与曲率。
@@ -11,7 +11,7 @@ layer 31 · 定义 · 内蕴几何 · 微分几何
 - 被 [`def.sectional-curvature`](../nodes/def.sectional-curvature.md) 截面曲率 用
 - ⇒ [`def.sectional-curvature`](../nodes/def.sectional-curvature.md) 截面曲率
 
-- …另有出边，续页见 [nodes/def.riemannian-metric.4.md](./def.riemannian-metric.4.md)
+- …另有出边，续页见 [nodes/def.riemannian-metric.5.md](./def.riemannian-metric.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.riemannian-metric.3.md](./def.riemannian-metric.3.md)

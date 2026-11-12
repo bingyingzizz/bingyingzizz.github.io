@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.cross-ratio-real`](../nodes/prop.cross-ratio-real.md) 交比为实 ⟺ 四点共圆 + [`def.mobius`](../nodes/def.mobius.md) 分式线性变换：保圆性 = 共圆判据 + 交比不变　[proofs/e97.implication.md](../proofs/e97.implication.md)
+- [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比：用到了定义 交比　[proofs/dep.n12-crossratio-mobiuscircle.md](../proofs/dep.n12-crossratio-mobiuscircle.md)

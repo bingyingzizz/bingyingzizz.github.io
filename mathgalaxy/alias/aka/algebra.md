@@ -21,12 +21,12 @@
 
 - 群 | group | 阿贝尔群 | 交换群 | Abelian group → def.group
 
+- 群的整数幂 | 整数幂（群） | 负指数幂 | x^n → def.group-power
+
 - 子群 | subgroup → def.subgroup
 
 - 正规子群 | normal subgroup | 陪集 | coset → def.normal-subgroup
 
 - 商群 | quotient group | G/N | 商映射 → def.quotient-group
-
-- 群同态 | group homomorphism | 核 | kernel | 像 | image → def.group-hom
 
 > 续见 alias/aka/algebra.2.md

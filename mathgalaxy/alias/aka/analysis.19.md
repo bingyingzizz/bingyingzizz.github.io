@@ -27,6 +27,4 @@
 
 - 弱拓扑 | σ(E,E*) 拓扑 → def.weak-topology
 
-- 素端 | Carathéodory 紧化 → def.prime-end
-
 > 续见 alias/aka/analysis.20.md

@@ -31,4 +31,6 @@
 
 - 离散 adic 空间 → def.discrete-adic-space
 
+- existence of f_! and f^! | 紧支撑推前存在性 → thm.f-shriek-existence
+
 见 `../../alias.md`。

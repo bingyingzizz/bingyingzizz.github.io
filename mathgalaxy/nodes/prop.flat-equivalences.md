@@ -1,6 +1,6 @@
 # 平坦的等价说法　`prop.flat-equivalences`
 平坦的五条等价刻画
-layer 18 · 命题 · 平坦模 · 同调代数
+layer 0 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.flat-equivalences)　·　[节点索引](../index.md)
 
 设 $R$ 是交换含幺环，$N$ 是 $R$-模。下列等价：

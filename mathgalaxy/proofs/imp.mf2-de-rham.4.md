@@ -5,7 +5,7 @@
 
 **第二步：把左边认成层上同调。** $\Omega^{\bullet}$ 是常层 $\underline{\mathbb{R}}$ 的消解：逐点的正合性就是 Poincaré 引理，逐点的核是 $\mathbb{R}$；
 
-而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（`thm.de-rham-h0` 的论证），即 $\underline{\mathbb{R}}$ 的截面。
+而 $\Omega^{0}$ 中 $\mathrm{d}$-闭的元素正是局部常函数（同层事实：d-闭 0-形式局部常），即 $\underline{\mathbb{R}}$ 的截面。
 
 于是复形的上同调 $H^{\bullet}_{\mathrm{dR}}(M)$ 就是层上同调 $H^{\bullet}(M;\underline{\mathbb{R}})$。
 

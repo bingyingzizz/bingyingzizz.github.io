@@ -13,6 +13,9 @@ $$m < n \iff a^{m} < a^{n};$$
 
 而 $0 < a < 1$ 时不等号反向；$a = 1$ 时 $a^{n} = 1$ 恒成立。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`def.real-power`](../nodes/def.real-power.md) 有理指数与实数指数幂
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.power-rules.2.md](./prop.power-rules.2.md)
 

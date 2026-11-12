@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.analytic-ring`](../nodes/def.analytic-ring.md) 解析环 + [`prop.analytic-examples`](../nodes/prop.analytic-examples.md) 解析环的例子：解析环映射 $\implies$ base change　[proofs/imp.analytic-base-change.md](../proofs/imp.analytic-base-change.md)
+
+> 续见 [nodes/prop.analytic-base-change.4.md](./prop.analytic-base-change.4.md)

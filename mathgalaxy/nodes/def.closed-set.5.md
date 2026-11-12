@@ -8,4 +8,7 @@
 - 被 [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影 用
 - 被 [`def.nowhere-dense`](../nodes/def.nowhere-dense.md) 无处稠密 用
 - 被 [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点 用
-- 被 [`def.normal-space`](../nodes/def.normal-space.md) 正规空间 用
+- ⇒ [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点
+- ⇒ [`lem.closed-subalgebra-lattice`](../nodes/lem.closed-subalgebra-lattice.md) 闭子代数是格
+
+> 续见 [nodes/def.closed-set.6.md](./def.closed-set.6.md)

@@ -8,6 +8,6 @@
 - thm.mean-value-multi　多元中值定理　layer 26
 - thm.taylor-multi　多元 Taylor 公式　layer 27
 - thm.inverse-function　逆映射定理　layer 27
-- thm.second-derivative-test　极值判别（Hessian 判据）　layer 28
+- thm.implicit-function　隐函数定理　layer 28
 
 > 续见 `index/analysis.multivariable.3.md`

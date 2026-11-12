@@ -6,3 +6,4 @@
 - ⇒ [`def.complete`](../nodes/def.complete.md) 完备
 - 被 [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画 用
 - 被 [`def.relatively-compact`](../nodes/def.relatively-compact.md) 相对紧 用
+- ⇒ [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画

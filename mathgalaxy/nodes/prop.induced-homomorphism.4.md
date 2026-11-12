@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.pi1-basepoint`](../nodes/prop.pi1-basepoint.md) 基点变换
+- ⇒ [`thm.no-retraction-disk`](../nodes/thm.no-retraction-disk.md) 圆盘不收缩

@@ -23,4 +23,12 @@
 
 - 单连通与基点无关 | 单连通不依赖基点 → prop.simply-connected-basepoint
 
-见 `../../alias.md`。
+- soft sheaves are acyclic | 软层无环 → thm.soft-sheaf-acyclic
+
+- degree | 映射的度 → def.degree
+
+- degree obstructs extension | 度非零不能延拓 → thm.degree-nonextendable
+
+- polygon diagonal lemma | 多边形对角线引理 → lem.polygon-diagonal
+
+> 续见 alias/aka/topology.17.md

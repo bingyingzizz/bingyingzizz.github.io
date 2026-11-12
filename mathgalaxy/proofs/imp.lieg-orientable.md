@@ -1,7 +1,7 @@
 # 左不变顶次形式处处非零 $\implies$ Lie 群可定向
 `imp.lieg-orientable` · 推出 · strong 边 · 根 `../`
 
-`def.lie-group` Lie 群 + `def.left-invariant-form` 左不变形式 + `prop.volume-form-orientation` 定向与体积形式 → `prop.lie-group-orientable` Lie 群可定向
+`def.lie-group` Lie 群 + `def.left-invariant-form` 左不变形式 + `prop.volume-form-orientation` 体积与定向 → `prop.lie-group-orientable` Lie 群可定向
 
 设 $\dim G = n$，取 $\mathfrak{g}^{\ast} = T_{e}^{\ast}G$ 中任一非零元素 $\alpha$，并令 $\omega$ 为它的左平移：$\omega_{g} := L_{g^{-1}}^{\ast}\alpha$（`def.left-invariant-form` 的构造；左不变性即 $L_{h}^{\ast}\omega = \omega$）。
 

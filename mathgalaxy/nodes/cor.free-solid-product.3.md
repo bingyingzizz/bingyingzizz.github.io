@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.solid-compact-generators`](../nodes/cor.solid-compact-generators.md) 固态的紧投射对象
+- ⇒ [`prop.rl1-not-analytic`](../nodes/prop.rl1-not-analytic.md) R_{ℓ¹} 不是解析环

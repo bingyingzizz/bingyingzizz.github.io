@@ -4,6 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解：光滑单位分解把局部内积拼成整体内积　[proofs/dep.mf-bundlemetric-pu.md](../proofs/dep.mf-bundlemetric-pu.md)
 - [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛 + [`thm.smooth-partition-unity`](../nodes/thm.smooth-partition-unity.md) 光滑单位分解：局部内积做凸组合 $\implies$ 每个向量丛都有纤维度量　[proofs/imp.mf-bundle-metric.md](../proofs/imp.mf-bundle-metric.md)
-- [`def.local-trivialization`](../nodes/def.local-trivialization.md) 局部平凡化：用到了定义 局部平凡化　[proofs/dep.mf3-triv-bmetric.md](../proofs/dep.mf3-triv-bmetric.md)
+- [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量：ana.n12-riemannmetric-bundlemetric　[proofs/ana.n12-riemannmetric-bundlemetric.md](../proofs/ana.n12-riemannmetric-bundlemetric.md)
 
 > 续见 [nodes/prop.bundle-metric.4.md](./prop.bundle-metric.4.md)

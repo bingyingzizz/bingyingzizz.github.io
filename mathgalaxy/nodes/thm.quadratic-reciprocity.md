@@ -11,6 +11,9 @@ $$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\fr
 > 陈述续见 [nodes/thm.quadratic-reciprocity.2.md](./thm.quadratic-reciprocity.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.jacobi-laws`](../nodes/thm.jacobi-laws.md) Jacobi 符号的计算法则
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.quadratic-reciprocity.3.md](./thm.quadratic-reciprocity.3.md)
 

@@ -1,7 +1,7 @@
 # 同一套证明换到 Banach 空间（多一步 Neumann 级数）
 `imp.inverse-function-banach` · 推出 · strong 边 · 根 `../`
 
-`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
+`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 + `thm.mean-value-multi` 多元中值定理 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
 
 证明「距恒等足够近的算子是拓扑同构」—— 级数的收敛性来自算子空间 $\mathcal{L}(F)$ 的完备性，这是 Banach 空间独有的工具，有限维里根本不需要（有限维自动完备）。有了它，就能把「$Df$ 在 $a$ 附近接近 $Df(a)$」升级成「$Df$ 在 $a$ 附近处处是拓扑同构」，从而**在整个邻域上**取逆。
 

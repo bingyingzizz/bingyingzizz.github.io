@@ -3,7 +3,8 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.normal-space`](../nodes/def.normal-space.md) 正规空间：imp.normal-completely-regular　[proofs/imp.normal-completely-regular.md](../proofs/imp.normal-completely-regular.md)
-- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间 + [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：imp.lch-cr　[proofs/imp.lch-cr.md](../proofs/imp.lch-cr.md)
 - [`def.t35-space`](../nodes/def.t35-space.md) T3.5 空间：用到了定义 T3.5 空间　[proofs/dep.cr-t35.md](../proofs/dep.cr-t35.md)
+- [`def.t1-space`](../nodes/def.t1-space.md) T1 空间：用到了定义 T1 空间　[proofs/dep.cr-t1.md](../proofs/dep.cr-t1.md)
+- [`def.topology`](../nodes/def.topology.md) 拓扑空间与开集：用到了定义 拓扑空间与开集　[proofs/def-link.topology-cr.md](../proofs/def-link.topology-cr.md)
 
 > 续见 [nodes/def.completely-regular-space.4.md](./def.completely-regular-space.4.md)

@@ -7,6 +7,9 @@ layer 9 · 命题 · 内射模与可除群 · 同调代数
 
 （同一条论证对任意环上的可除模成立；在 $\mathbb{Z}$ 上「可除」即「内射」，所以这同时说明 $\mathbb{Z}$-模里内射对象的商仍内射。）
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`ex.divisible-groups`](../nodes/ex.divisible-groups.md) 可除群的例子
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.divisible-quotient.2.md](./prop.divisible-quotient.2.md)
 

@@ -1,6 +1,6 @@
 # 标架下的联络系数　`prop.christoffel-frame`
 正交标架下的联络系数
-layer 32 · 命题 · 内蕴几何 · 微分几何
+layer 30 · 命题 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=prop.christoffel-frame)　·　[节点索引](../index.md)
 
 设 $e_{1},e_{2}$ 是曲面上的局部单位正交标架，联络形式由 $\nabla_{X}e_{j} = \omega^{k}_{j}(X)e_{k}$ 定义（于是 $\omeg

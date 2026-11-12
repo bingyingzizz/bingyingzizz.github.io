@@ -10,7 +10,9 @@ $$\mathcal{O}_X(U) := A\bigl[\tfrac{1}{f}\bigr], \qquad \mathcal{O}_X^+(U) := \w
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.adic-gluing`](../nodes/thm.adic-gluing.md) 导出范畴按无穷范畴粘合
+- ⇒ [`thm.coherent-duality`](../nodes/thm.coherent-duality.md) 仿射相干对偶
+
+- …另有出边，续页见 [nodes/thm.adic-structure-sheaf.4.md](./thm.adic-structure-sheaf.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.adic-structure-sheaf.3.md](./thm.adic-structure-sheaf.3.md)

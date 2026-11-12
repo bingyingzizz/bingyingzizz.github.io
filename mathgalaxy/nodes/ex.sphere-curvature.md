@@ -1,6 +1,6 @@
 # 球面的曲率　`ex.sphere-curvature`
 半径为 $R$ 的球面：$K = 1/R^{2}$，$H = \pm 1/R$
-layer 34 · 例 · 内蕴几何 · 微分几何+geometry
+layer 33 · 例 · 内蕴几何 · 微分几何+geometry
 [在星图里打开](../#n=ex.sphere-curvature)　·　[节点索引](../index.md)
 
 设 $S^{2}_{R} = \{\, x \in \mathbb{R}^{3} : \lVert x \rVert = R \,\}$，取向外的单位法向 $n = x/R$。则

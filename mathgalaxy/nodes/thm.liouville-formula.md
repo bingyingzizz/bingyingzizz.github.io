@@ -1,6 +1,6 @@
 # Liouville 公式　`thm.liouville-formula`
 测地曲率的 Liouville 公式
-layer 34 · 定理 · 内蕴几何 · 微分几何
+layer 32 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.liouville-formula)　·　[节点索引](../index.md)
 
 白话：**测地曲率 = 曲线自己转的角度减去标架被度量「带着转」的角度**，而后者只由 $E, G$ 的偏导数决定。所以只要知道度量（也就是 

@@ -1,6 +1,6 @@
 # 正则闭浸入的对偶复形　`prop.regular-immersion-dualizing`
 命题：正则闭浸入 $f^!R \cong \det(I/I^2)^*[-c]$（Prop 11.5）
-layer 28 · 命题 · 相干对偶 · 解析空间
+layer 26 · 命题 · 相干对偶 · 解析空间
 [在星图里打开](../#n=prop.regular-immersion-dualizing)　·　[节点索引](../index.md)
 
 白话：**闭浸入（把 $\operatorname{Spec} A$ 塞进 $\operatorname{Spec} R$）情形下，对偶复形能算成一行**：就是「法丛的行列式」挪到余维那么多次。

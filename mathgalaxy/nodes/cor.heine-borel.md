@@ -10,6 +10,8 @@ layer 21 · 推论 · 实数完备性的等价刻画 · 数学分析+拓扑学
 ## 它能推出什么 / 谁在用它
 - ⇒ [`prop.continuous-bounded-on-compact`](../nodes/prop.continuous-bounded-on-compact.md) 紧集上连续 ⟹ 有界
 
+- …另有出边，续页见 [nodes/cor.heine-borel.3.md](./cor.heine-borel.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/cor.heine-borel.2.md](./cor.heine-borel.2.md)
 

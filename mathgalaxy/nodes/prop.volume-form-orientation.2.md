@@ -1,4 +1,4 @@
-# 定向与体积形式　`prop.volume-form-orientation`　·　续页（第 2 页）
+# 体积与定向　`prop.volume-form-orientation`　·　续页（第 2 页）
 [在星图里打开](../#n=prop.volume-form-orientation)　·　第 1 页 [nodes/prop.volume-form-orientation.md](./prop.volume-form-orientation.md)
 
 ## 陈述（续）

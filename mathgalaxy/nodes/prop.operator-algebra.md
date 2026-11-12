@@ -9,11 +9,11 @@ $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
 特别地 $B(E)$ 是**赋范代数**（乘法连续）；$E \ne \{0\}$ 时 $\|\mathrm{id}\| = 1$。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子：用到了定义 有界线性算子　[proofs/def-link.fa-boundedop-opalgebra.md](../proofs/def-link.fa-boundedop-opalgebra.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.operator-algebra.2.md](./prop.operator-algebra.2.md)
+- ⇒ [`thm.neumann-series`](../nodes/thm.neumann-series.md) Neumann 级数
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.operator-algebra.2.md](./prop.operator-algebra.2.md)
 
 refs: Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 

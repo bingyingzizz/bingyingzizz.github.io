@@ -1,7 +1,7 @@
 # 同一套证明换到 Banach 空间（多一步 Neumann 级数）
 `imp.inverse-function-banach` · 推出 · strong 边 · 根 `../`
 
-`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
+`thm.inverse-function` 逆映射定理 + `def.banach-space` Banach 空间 + `thm.mean-value-multi` 多元中值定理 → `thm.inverse-function-banach` 逆映射定理（Banach 版）
 
 证明与有限维版本（`imp.inverse-function`）**逐步对应**，只有两处需要替换：
 

@@ -6,7 +6,7 @@
 - 被 [`prop.discrete-functor-coproduct`](../nodes/prop.discrete-functor-coproduct.md) 离散函子保直和 用
 - 被 [`prop.cond-quotient-topological`](../nodes/prop.cond-quotient-topological.md) 商群在凝聚态意义下一致 用
 - 被 [`def.solid-group`](../nodes/def.solid-group.md) 固态阿贝尔群 用
+- 被 [`ex.solid-tensor-computations`](../nodes/ex.solid-tensor-computations.md) 固态张量积的计算 用
 - 被 [`thm.adic-gluing`](../nodes/thm.adic-gluing.md) 导出范畴按无穷范畴粘合 用
-- 被 [`cor.free-solid-product`](../nodes/cor.free-solid-product.md) 自由固态群是大乘积 用
 
 > 续见 [nodes/def.condensed-abelian-group.5.md](./def.condensed-abelian-group.5.md)

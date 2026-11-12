@@ -7,4 +7,4 @@
 
 所以任意不交闭集都能被开集分离，配合 $T_{1}$ 得 $X$ 正规。∎
 
-⭐ 这是**直接证明**，没有走 `thm.paracompact-hausdorff-normal`：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。
+⭐ 这是**直接证明**，没有走 那条（紧 $\implies$ 仿紧 $\implies$ 正规）：那条（紧 $\implies$ 仿紧 $\implies$ 正规）当然也对，但这里只用了紧性取有限子覆盖与 Hausdorff 分点，两步都是定义级别的操作。

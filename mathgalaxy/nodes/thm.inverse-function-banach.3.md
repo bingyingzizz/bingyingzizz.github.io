@@ -2,8 +2,7 @@
 [在星图里打开](../#n=thm.inverse-function-banach)　·　第 1 页 [nodes/thm.inverse-function-banach.md](./thm.inverse-function-banach.md)　·　上一页 [nodes/thm.inverse-function-banach.2.md](./thm.inverse-function-banach.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`thm.inverse-function`](../nodes/thm.inverse-function.md) 逆映射定理 + [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：同一套证明换到 Banach 空间（多一步 Neumann 级数）　[proofs/imp.inverse-function-banach.md](../proofs/imp.inverse-function-banach.md)
+- [`thm.inverse-function`](../nodes/thm.inverse-function.md) 逆映射定理 + [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间 + [`thm.mean-value-multi`](../nodes/thm.mean-value-multi.md) 多元中值定理：同一套证明换到 Banach 空间（多一步 Neumann 级数）　[proofs/imp.inverse-function-banach.md](../proofs/imp.inverse-function-banach.md)
 - [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banachspace-inverse-banach.md](../proofs/dep.banachspace-inverse-banach.md)
-- [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数：用到了定义 Fréchet 导数　[proofs/dep-fd-invfn.md](../proofs/dep-fd-invfn.md)
 
 > 续见 [nodes/thm.inverse-function-banach.4.md](./thm.inverse-function-banach.4.md)

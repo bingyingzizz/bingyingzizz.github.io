@@ -1,7 +1,7 @@
 # 拉回到方块 + 方块上的公式 $\implies$ 链上的 Stokes
 `imp.spivak-chain-stokes` · 推出 · strong 边 · 根 `../`
 
-`lem.single-cube-stokes` 方块上的 Stokes 公式 + `prop.pullback-forms` 拉回（开集间） + `def.integral-on-chain` 链上的积分 → `thm.stokes-chain` 链上的 Stokes 定理
+`lem.single-cube-stokes` 方块上的 Stokes 公式 + `prop.pullback-forms` 拉回（开集间） + `def.integral-on-chain` 链上的积分 + `prop.integral-chain-linear` 链上积分的双线性 → `thm.stokes-chain` 链上的 Stokes 定理
 
 $$\int_{\partial I^{k}}c^{\ast}\omega = \sum_{i,\alpha}(-1)^{i+\alpha}\int_{I^{k-1}}(I^{k}_{(i,\alpha)})^{\ast}c^{\ast}\omega = \sum_{i,\alpha}(-1)^{i+\alpha}\int_{c_{(i,\alpha)}}\omega = \int_{\partial c}\omega .$$
 

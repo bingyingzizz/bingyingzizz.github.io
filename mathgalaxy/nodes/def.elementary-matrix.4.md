@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解 用
+- ⇒ [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解

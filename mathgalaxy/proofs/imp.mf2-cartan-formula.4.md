@@ -1,7 +1,7 @@
 # 两者都是与 $\mathrm{d}$ 交换的次数 $0$ 导子 $\implies$ Cartan 公式
 `imp.mf2-cartan-formula` · 推出 · strong 边 · 根 `../`
 
-`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分（欧氏开集） → `thm.cartan-formula` Cartan 公式
+`def.lie-derivative` Lie 导数 + `def.interior-product` 内乘 + `def.exterior-derivative` 外微分（欧氏开集） + `prop.pullback-forms` 拉回（开集间） → `thm.cartan-formula` Cartan 公式
 
 且 $D(\mathrm{d}g_{i}) = \mathrm{d}(Dg_{i})$（第 3 步），于是每一步都由 $D|_{C^{\infty}(M)}$ 决定。由 (4)，$D$ 与 $\mathcal{L}_{X}$ 在所有函数上相同，故处处相同。∎
 

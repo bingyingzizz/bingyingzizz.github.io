@@ -1,6 +1,6 @@
 # 奇异值分解　`thm.svd`
 奇异值分解定理：$A = U\Sigma V^{\mathsf{T}}$
-layer 25 · 定理 · 内积空间与正交性 · 抽象代数
+layer 31 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.svd)　·　[节点索引](../index.md)
 
 设 $A \in M_{m \times n}(\mathbb{R})$（或 $\mathbb{C}$），秩为 $r$。则存在正交（酉）矩阵 $U \in M_m$、$V \in M_n$ 与「对角」矩阵 $\Sigma$（只有前 $r$ 个对角元非零）使

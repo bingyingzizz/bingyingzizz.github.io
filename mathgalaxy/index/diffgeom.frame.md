@@ -10,10 +10,10 @@
 - prop.pullback-forms　拉回（开集间）　layer 19
 - def.moving-frame　活动标架　layer 26
 - def.connection-form　联络形式　layer 27
+- lem.adapted-frame　适配标架　layer 27
 - def.frenet-frame　曲率与挠率　layer 27
 - prop.connection-antisymmetric　联络形式反对称　layer 28
 - thm.structure-equations　结构方程　layer 28
 - thm.frenet-serret　Frenet–Serret 公式　layer 28
-- lem.adapted-frame　适配标架　layer 29
 
 > 续见 `index/diffgeom.frame.2.md`

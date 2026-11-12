@@ -13,6 +13,8 @@ $$|f(z)| < \|f\|_{\Omega} := \sup_{\zeta \in \Omega} |f(\zeta)|, \qquad \forall 
 - ⇒ [`lem.schwarz`](../nodes/lem.schwarz.md) Schwarz 引理
 - ⇒ [`thm.open-mapping`](../nodes/thm.open-mapping.md) 开映射定理
 
+- …另有出边，续页见 [nodes/thm.max-modulus.3.md](./thm.max-modulus.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.max-modulus.2.md](./thm.max-modulus.2.md)
 

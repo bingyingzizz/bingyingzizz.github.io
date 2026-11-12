@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.second-countable`](../nodes/def.second-countable.md) 第二可数空间：用到了定义 第二可数空间　[proofs/dep.mf-secondcountable-smooth-pu.md](../proofs/dep.mf-secondcountable-smooth-pu.md)
+
+> 续见 [nodes/thm.smooth-partition-unity.5.md](./thm.smooth-partition-unity.5.md)

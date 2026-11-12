@@ -7,6 +7,9 @@ layer 27 · 命题 · 微分形式、积分与 de Rham · 微分几何
 > 陈述续见 [nodes/prop.integral-chain-linear.2.md](./prop.integral-chain-linear.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.stokes-chain`](../nodes/thm.stokes-chain.md) 链上的 Stokes 定理
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.integral-chain-linear.3.md](./prop.integral-chain-linear.3.md)
 

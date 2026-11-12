@@ -1,7 +1,7 @@
 # 解析性要求 $\operatorname{Ext}^1 = 0$ $\implies$ $\mathbb{R}_{\ell^1}$ 不是解析环
 `imp.rl1-not-analytic` · 推出 · strong 边 · 根 `../`
 
-`def.analytic-ring` 解析环 → `prop.rl1-not-analytic` R_{ℓ¹} 不是解析环
+`def.analytic-ring` 解析环 + `cor.free-solid-product` 自由固态群是大乘积 → `prop.rl1-not-analytic` R_{ℓ¹} 不是解析环
 
 若 $\mathcal{A}$ 是解析环，则对 extremally disconnected 的 $S, T$ 与 $i > 0$，由解析性取 $C = \mathcal{A}[T]$ 得
 

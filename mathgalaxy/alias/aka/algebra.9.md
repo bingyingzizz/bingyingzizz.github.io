@@ -1,7 +1,19 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 库朗–费舍尔极小极大原理 → thm.courant-fischer
+
+- 格拉姆矩阵 → def.gram-matrix
+
+- 维特消去定理 → thm.witt-cancellation
+
+- 拉格朗日子空间 → def.lagrangian-subspace
+
+- 拉格朗日恒等式 → thm.lagrange-identity
+
 - 三角分解 → thm.lu-decomposition
+
+- 极分解 | 矩阵极分解 | UP 分解 → thm.polar-decomposition
 
 - 正交三角分解 → thm.qr-decomposition
 
@@ -28,23 +40,5 @@
 - 双曲平面 → def.hyperbolic-plane
 
 - 惯性指数 → def.inertia-index
-
-- 惯性定理 | 西尔维斯特惯性律 | 惯性律 → thm.sylvester-law-inertia
-
-- 特征子空间 → def.eigenspace
-
-- 广义特征向量 → def.generalized-eigenvector
-
-- 幂零 → def.nilpotent
-
-- 幂等 → def.idempotent
-
-- 正交相似 → def.orthogonally-similar
-
-- 矩阵范数 → def.matrix-norm
-
-- 最小二乘 → thm.least-squares
-
-- 伪逆 → def.pseudoinverse
 
 > 续见 alias/aka/algebra.10.md

@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.subcategory`](../nodes/def.subcategory.md) 子范畴：用到了定义 子范畴　[proofs/dep.gap-zmod-is-ab-subcategory.md](../proofs/dep.gap-zmod-is-ab-subcategory.md)
+
+> 续见 [nodes/prop.zmod-is-ab.3.md](./prop.zmod-is-ab.3.md)

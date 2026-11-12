@@ -5,3 +5,4 @@
 - ⇒ [`thm.stone-weierstrass`](../nodes/thm.stone-weierstrass.md) Stone–Weierstrass 定理
 - 被 [`thm.stone-weierstrass`](../nodes/thm.stone-weierstrass.md) Stone–Weierstrass 定理 用
 - 被 [`lem.closed-subalgebra-lattice`](../nodes/lem.closed-subalgebra-lattice.md) 闭子代数是格 用
+- ⇒ [`lem.closed-subalgebra-lattice`](../nodes/lem.closed-subalgebra-lattice.md) 闭子代数是格

@@ -1,7 +1,7 @@
 # 可除的定义 $\implies$ 三个标准例子
 `imp.divisible-examples` · 推出 · strong 边 · 根 `../`
 
-`def.divisible-group` 可除群 + `thm.pid-injective-divisible` 内射等价于可除 → `ex.divisible-groups` 可除群的例子
+`def.divisible-group` 可除群 + `thm.pid-injective-divisible` 内射等价于可除 + `prop.divisible-quotient` 可除群的商 → `ex.divisible-groups` 可除群的例子
 
 **$\mathbb{Q}$**：给定 $q = a/b$（$b > 0$）与 $n \ne 0$，取 $x = a/(b n)$，则 $n x = a/b = q$ ✓。
 

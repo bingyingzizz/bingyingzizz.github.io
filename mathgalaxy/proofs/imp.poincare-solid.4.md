@@ -1,7 +1,7 @@
 # 6-函子 + $f^!R=\omega[d]$ $\implies$ Serre 对偶
 `imp.poincare-solid` · 推出 · strong 边 · 根 `../`
 
-`thm.smooth-duality` 光滑映射的对偶复形 + `def.six-functors` 6-函子形式 → `thm.poincare-solid` 固态 Serre 对偶
+`thm.smooth-duality` 光滑映射的对偶复形 + `def.six-functors` 6-函子形式 + `thm.coherent-duality` 仿射相干对偶 → `thm.poincare-solid` 固态 Serre 对偶
 
 在 $\mathbb{A}^1$ 上，$f_!$ 由 `def.f-shriek` 的 $j_!$ 显式给出（$\mathbb{A}^1$ 的紧化 + 补集的 $A_\infty/A$ 形式），逐项代入即可看出它把有限生成投射复形送到有限生成投射复形。
 

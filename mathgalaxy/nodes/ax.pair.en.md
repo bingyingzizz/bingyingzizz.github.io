@@ -1,4 +1,4 @@
-# pairing　`ax.pair`
+# axiom of pairing　`ax.pair`
 English entry · root `../`
 [in graph](../#n=ax.pair)　·　[Chinese page (authoritative)](./ax.pair.md)
 

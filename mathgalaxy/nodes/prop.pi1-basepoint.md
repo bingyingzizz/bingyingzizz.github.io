@@ -8,7 +8,7 @@ layer 21 · 命题 · 基本群 · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态：把「换基点」看成沿道路的共轭，再用函子性核对　[proofs/e57.implication.md](../proofs/e57.implication.md)
+- [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态 + [`lem.path-product`](../nodes/lem.path-product.md) 道路拼接：把「换基点」看成沿道路的共轭，再用函子性核对　[proofs/e57.implication.md](../proofs/e57.implication.md)
 
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/prop.pi1-basepoint.3.md](./prop.pi1-basepoint.3.md)

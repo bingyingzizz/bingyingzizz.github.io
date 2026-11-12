@@ -1,7 +1,7 @@
 # Jacobi 行列式同号 $\iff$ 处处非零的最高次形式
 `imp.mf-volume-form-orientation` · 推出 · strong 边 · 根 `../`
 
-`def.orientable-manifold` 可定向流形 + `def.differential-form` 微分形式（欧氏开集） → `prop.volume-form-orientation` 定向与体积形式
+`def.orientable-manifold` 可定向流形 + `def.differential-form` 微分形式（欧氏开集） + `thm.smooth-partition-unity` 光滑单位分解 → `prop.volume-form-orientation` 体积与定向
 
 于是局部只有有限项非零、且没有异号项，$\omega_{p}$ 是若干非负倍数之和，而至少有一项系数 $\rho_{\alpha}(p) > 0$（和为 $1$）且那项在局部坐标下系数为正 —— 故 $\omega_{p} \ne 0$。
 

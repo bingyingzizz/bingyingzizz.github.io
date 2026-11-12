@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号
+- ⇒ [`thm.jacobi-laws`](../nodes/thm.jacobi-laws.md) Jacobi 符号的计算法则

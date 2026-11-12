@@ -21,4 +21,12 @@
 
 - 弱拓扑 | σ(E,E*) 拓扑 → def.weak-topology
 
+- 弱*拓扑 | 弱星拓扑 | σ(E*,E) 拓扑 | 逐点收敛拓扑 → def.weak-star-topology
+
+- Hahn–Banach theorem | Hahn-Banach → thm.hahn-banach
+
+- Banach–Alaoglu theorem | Banach-Alaoglu → thm.banach-alaoglu
+
+- Goldstine | Goldstine’s theorem → thm.goldstine
+
 见 `../../alias.md`。

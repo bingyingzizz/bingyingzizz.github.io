@@ -13,7 +13,9 @@ $$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.fa-norm-normeq.md](../proofs/def-link.fa-norm-normeq.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价 用
+- ⇒ [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价
+
+- …另有出边，续页见 [nodes/def.norm-equivalence.2.md](./def.norm-equivalence.2.md)
 
 refs: Rudin, Functional Analysis · 赋范空间与有限维
 

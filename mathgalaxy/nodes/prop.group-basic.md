@@ -1,6 +1,6 @@
 # 群的基本性质　`prop.group-basic`
 命题：群的消去律与逆的公式
-layer 8 · 命题 · 代数结构 · 抽象代数
+layer 9 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.group-basic)　·　[节点索引](../index.md)
 
 设 $G$ 是群，$a, b, c \in G$。则：
@@ -12,7 +12,7 @@ layer 8 · 命题 · 代数结构 · 抽象代数
 **(iii)** 对 $m, n \in \mathbb{Z}$：$a^{m}a^{n} = a^{m+n}$，$(a^{m})^{n} = a^{mn}$，$a^{0} = e$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.group`](../nodes/def.group.md) 群：群公理 $\implies$ 消去律与逆公式　[proofs/imp.group-basic.md](../proofs/imp.group-basic.md)
+- [`def.group`](../nodes/def.group.md) 群 + [`def.group-power`](../nodes/def.group-power.md) 群的整数幂：群公理 $\implies$ 消去律与逆公式　[proofs/imp.group-basic.md](../proofs/imp.group-basic.md)
 
 refs: Lang, Algebra, Ch. I
 

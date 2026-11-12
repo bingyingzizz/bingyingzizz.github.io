@@ -7,3 +7,4 @@
 - 被 [`def.jacobian`](../nodes/def.jacobian.md) Jacobi 矩阵 用
 - 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用
 - 被 [`def.unitary-matrix`](../nodes/def.unitary-matrix.md) 酉矩阵与正交矩阵 用
+- ⇒ [`thm.lu-decomposition`](../nodes/thm.lu-decomposition.md) LU 分解

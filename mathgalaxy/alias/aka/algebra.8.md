@@ -1,6 +1,18 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 符号与交错群 → def.alternating-group
+
+- 循环群 → def.cyclic-group
+
+- 单群 → def.simple-group
+
+- 合成列 → def.composition-series
+
+- 可解群 → def.solvable-group
+
+- 整环（另一种叫法） | 无零因子环 → def.int-domain
+
 - 不可约元 | 素元 | 相伴元 → def.irreducible-element
 
 - 最大公因子整环 | 最大公因子的整环 → def.gcd-domain
@@ -26,15 +38,5 @@
 - 舒尔三角化 → thm.schur-triangularization
 
 - 瑞利商 → def.rayleigh-quotient
-
-- 库朗–费舍尔极小极大原理 → thm.courant-fischer
-
-- 格拉姆矩阵 → def.gram-matrix
-
-- 维特消去定理 → thm.witt-cancellation
-
-- 拉格朗日子空间 → def.lagrangian-subspace
-
-- 拉格朗日恒等式 → thm.lagrange-identity
 
 > 续见 alias/aka/algebra.9.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 34 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 32 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Normal Coordinates` (short) · `Normal Coordinates Are Euclidean to First Order` (full)
 
 ## Statement and proof

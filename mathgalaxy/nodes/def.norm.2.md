@@ -7,10 +7,10 @@
 - 被 [`def.uniformly-convex`](../nodes/def.uniformly-convex.md) 一致凸 用
 - 被 [`def.strictly-convex`](../nodes/def.strictly-convex.md) 严格凸 用
 - 被 [`thm.hahn-banach`](../nodes/thm.hahn-banach.md) Hahn–Banach 定理 用
+- ⇒ [`thm.polarization`](../nodes/thm.polarization.md) 极化恒等式
+- ⇒ [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价
+- ⇒ [`prop.operator-algebra`](../nodes/prop.operator-algebra.md) 算子乘法的范数不等式
 - ⇒ [`prop.norm-induces-metric`](../nodes/prop.norm-induces-metric.md) 范数诱导的距离
 - 被 [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子 用
-- 被 [`def.norm-equivalence`](../nodes/def.norm-equivalence.md) 等价范数 用
-- 被 [`lem.almost-orthogonal`](../nodes/lem.almost-orthogonal.md) 几乎正交引理 用
-- 被 [`def.schauder-basis`](../nodes/def.schauder-basis.md) Schauder 基 用
 
 > 续见 [nodes/def.norm.3.md](./def.norm.3.md)

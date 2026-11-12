@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.hom-tensor-adjunction-mod`](../nodes/thm.hom-tensor-adjunction-mod.md) 张量与内同态的伴随 + [`def.scalar-extension`](../nodes/def.scalar-extension.md) 标量扩张：张量–内 Hom 伴随 $\implies$ 标量扩张 $\dashv$ 标量限制　[proofs/imp.scalar-extension-adjunction.md](../proofs/imp.scalar-extension-adjunction.md)
+- [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积：用到了定义 张量积　[proofs/dep.n12-tensormod-scalarext.md](../proofs/dep.n12-tensormod-scalarext.md)
 
 > 续见 [nodes/prop.scalar-extension-adjunction.5.md](./prop.scalar-extension-adjunction.5.md)
