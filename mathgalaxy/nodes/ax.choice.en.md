@@ -11,6 +11,4 @@ From any family of non-empty sets one can pick one element from each, "all at on
 
 $\operatorname{dom}$ is defined only for functions, so the assertion says: "there is a function $f$ with $\operatorname{dom} f = F$, and $f(X) \in X$ for every $X \in F$":
 
-$\forall F [ ( \forall X \in F, X \ne \emptyset ) \to \exists f ( \operatorname{dom} f = F \wedge  \forall X \in F, f(X) \in X ) ]$\
-
 > continued in nodes/ax.choice.en.2.md

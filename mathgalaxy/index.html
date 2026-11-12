@@ -3700,6 +3700,15 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     return set.filter(function (e) { return edgeNodes(e).indexOf(id) >= 0; });
   }
 
+  /** 这个节点有没有**独立英文 HTML 页**（`nodes/<id>.en.html`）。
+      ⚠️ 判据必须与 `tools/sitepages.mjs` 的 `hasEnHtmlOf()` **完全一致**：有英文摘要
+         或英文陈述。全库只认这一条 —— 站点据此决定生成不生成英文页，面板据此决定
+         链接进 `.en.html` 还是中文 `.html`；两边判据一漂就会出现「点进去 404」。
+      ⚠️ 这里不碰 `title_en/label_en`：只有英文名字的节点没有英文正文，站点不生成英文页。 */
+  function hasEnHtml(n) {
+    return !!(n && (String(n.abstract_en || '').trim() || String(n.statement_en || '').trim()));
+  }
+
   MG.buildGraph = buildGraph;
   MG.graphUtil = {
     edgeNodes: edgeNodes,
@@ -3709,6 +3718,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     isDerived: isDerived,
     visibleEdges: visibleEdges,
     visibleEdgesOf: visibleEdgesOf,
+    hasEnHtml: hasEnHtml,
     toArray: toArray
   };
 })(typeof window !== 'undefined' ? window : globalThis);
@@ -17875,7 +17885,7 @@ MG.i18nStatements = {
         'From any family of non-empty sets one can pick one element from each, "all at once". ' +
         'Written in terms of a choice function:\n\n' +
         '$\\operatorname{dom}$ is defined only for functions, so the assertion says: "there is a function $f$ with $\\operatorname{dom} f = F$, and $f(X) \\in X$ for every $X \\in F$\":\n\n' +
-        '$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\\\n\n' +
+        '$\\forall F [ ( \\forall X \\in F, X \\ne \\emptyset ) \\to \\exists f ( \\operatorname{dom} f = F \\wedge  \\forall X \\in F, f(X) \\in X ) ]$\n' +
         'Another common form (pairwise disjoint form): if $F$ is a family of pairwise disjoint ' +
         'non-empty sets, then there is a set $C$ with $\\#(C \\cap X) = 1$ for every $X \\in F$.\n\n' +
         'The choice function $f$ is the device for "picking all at once"; AC asserts that such a ' +
@@ -17891,14 +17901,14 @@ MG.i18nStatements = {
     'def.subset': {
       statement: {
         en:
-'Let $A$ and $B$ be sets.\\n\\n' +
+'Let $A$ and $B$ be sets.\n\n' +
 '- **$A$ is a subset of $B$** (written $A \\subseteq B$): ' +
-'$\\forall x ( x \\in A \\to x \\in B )$\\n' +
+'$\\forall x ( x \\in A \\to x \\in B )$\n' +
 '- **$A$ is a proper subset of $B$** (written $A \\subset B$): $A \\subseteq B$ and ' +
-'$A \\ne B$.\\n\\n' +
+'$A \\ne B$.\n\n' +
 'Basic properties: $\\subseteq$ is reflexive and transitive; and by the axiom of ' +
-'extensionality, two sets are equal exactly when they contain each other:\\n\\n' +
-'$$A = B \\iff A \\subseteq B \\wedge  B \\subseteq A$$\\n\\n' +
+'extensionality, two sets are equal exactly when they contain each other:\n\n' +
+'$$A = B \\iff A \\subseteq B \\wedge  B \\subseteq A$$\n\n' +
 'This is the most common way to prove two sets equal: **containment both ways**.',
         status: 'reviewed', basedOn: 'v0.9.3#6fb94ac5', reviewed: { by: 'bingyingzizz', date: '2026-11-01' },
       },
@@ -101378,8 +101388,13 @@ MG.trunk = [
       var href = '';
       try { href = String(location.href); } catch (e) { href = ''; }
       var onSite = /^https?:$/.test(location.protocol) && href.indexOf(origin) === 0;
-      return onSite ? 'nodes/' + encodeURIComponent(id) + '.html'
-        : origin + 'nodes/' + encodeURIComponent(id) + '.html';
+      /* ⭐ 英文模式且这个节点有独立英文页 ⇒ 进 `.en.html`；没有英文页的节点仍进中文页
+         （中文始终是权威版，站点只为有英文正文的节点生成英文页 —— 判据见
+         `MG.graphUtil.hasEnHtml`，与 tools/sitepages.mjs 的 hasEnHtmlOf() 同一口径）。 */
+      var n = view.graph && view.graph.byId && view.graph.byId[id];
+      var en = !!(MG.isEn && n && MG.graphUtil && MG.graphUtil.hasEnHtml(n));
+      var file = 'nodes/' + encodeURIComponent(id) + (en ? '.en.html' : '.html');
+      return onSite ? file : origin + file;
     }
 
     /* -------------------------------------------------- 引用此节点（T1.4） */
@@ -101401,8 +101416,12 @@ MG.trunk = [
       var n = view.graph.byId[id];
       var en = n && (n.title_en || n.label_en);
       var inside = [en, v ? '内容 ' + v : ''].filter(Boolean).join('，');
+      /* 引文里的地址跟界面语言走：英文模式引英文页（与面板「独立页面」同一判据），
+         没英文页的节点仍引中文页 —— 引到一个不存在的 .en.html 比中文页更糟。 */
+      var hasEn = !!(n && MG.graphUtil && MG.graphUtil.hasEnHtml(n));
+      var suffix = (MG.isEn && hasEn) ? '.en.html' : '.html';
       var text = 'MathGalaxy 节点 ' + id + (inside ? '（' + inside + '）' : '') + '\n' +
-        siteOrigin() + 'nodes/' + encodeURIComponent(id) + '.html';
+        siteOrigin() + 'nodes/' + encodeURIComponent(id) + suffix;
       return copyText(text);
     }
     /** 复制：先走异步剪贴板，失败退回 execCommand，再失败就如实报 false。 */
