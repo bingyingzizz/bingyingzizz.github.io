@@ -2480,11 +2480,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       return '\u0000M' + (math.length - 1) + '\u0000';
     });
     var out = escapeHtml(raw);
-    out = out.replace(/\u0000M(\d+)\u0000/g, function (m, idx) {
-      var tex = math[+idx];
-      if (MG.renderInlineMath) return MG.renderInlineMath(tex);
-      return '<code>' + escapeHtml(tex) + '</code>';
-    });
+    /* ⭐ 字面星号先保护起来（`\u0000K\u0000` = 一个原样的 `*`）：
+       ① `\*` 是 Markdown 转义（内容里 `AB3\*` 表示 AB3 带星，不是斜体）；
+       ② `弱*拓扑`：星号夹在两个汉字之间，是数学记号（弱星），不是强调；
+       ③ `AB3*`、`AB3* 与 AB4*` 这类连写：星号紧跟在字母数字后、
+          后面不是字母数字，也是字面量。
+       这些 `*` 若留给下面的斜体正则，会被和隔了半句话的下一个 `*` 配成 `<em>`，
+       跨过 `</strong>` 造成错位嵌套（线上 `弱*拓扑` 页就是这样坏掉的）。 */
+    out = out.replace(/\\\*/g, '\u0000K\u0000');
+    out = out.replace(/([\u4e00-\u9fff])\*([\u4e00-\u9fff])/g, '$1\u0000K\u0000$2');
+    out = out.replace(/([0-9A-Za-z])\*(?=[^0-9A-Za-z\u4e00-\u9fff])/g, '$1\u0000K\u0000');
     /* `行内代码`：内容正好是图里某个节点的 id ⇒ 渲染成可点链接（显示中文名），
        否则仍是 <code>。⭐ 见上面 idLink() 的说明。 */
     out = out.replace(/`([^`\n]+?)`/g, function (m, body) {
@@ -2492,13 +2497,33 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     });
     // 粗体：内容里允许出现单个 *（数学记号里 μ^*、f^* 很常见），
     // 只把 ** 当成定界符，别被里面那个 * 打断。
-    // ⚠ 内容类里**不能**排除换行：这里的换行只可能来自上一步塞进去的
-    //   KaTeX 输出 —— \widehat / \bar / \overline / \vec 这类重音符号
-    //   是用内联 SVG 画的，SVG 里带换行。排除 \n 会让「**… $\hat{X}$ …**」
-    //   整段匹配失败，页面上直接漏出四个星号。
-    //   （inlineMd 每次只收到一行 / 一段，本身不含换行。）
-    out = out.replace(/\*\*((?:[^*]|\*(?!\*))+?)\*\*/g, '<strong>$1</strong>');
+    // （公式此刻还是占位符、不含 *；KaTeX 的 SVG 换行要到函数最后一步才进来。）
+    /* ⭐ 粗体也先落占位符：`**弱*拓扑**` 里的单个 `*` 是字面量（数学里的弱* 记法），
+       不能留给下面的斜体正则 —— 它会把 `*拓扑 …` 和后面段落里的 `*` 配成 `<em>`，
+       跨过 `</strong>` 造成错位嵌套（线上 `弱*拓扑` 页就是这样坏掉的）。
+       占位符只含 NUL / S / 数字，em 正则碰不到；最后再还原成 `<strong>`。 */
+    var strongs = [];
+    out = out.replace(/\*\*((?:[^*]|\*(?!\*))+?)\*\*/g, function (m, body) {
+      strongs.push(body);
+      return '\u0000S' + (strongs.length - 1) + '\u0000';
+    });
     out = out.replace(/(^|[^*])\*([^*]+?)\*(?!\*)/g, '$1<em>$2</em>');
+    out = out.replace(/\u0000S(\d+)\u0000/g, function (m, idx) {
+      return '<strong>' + strongs[+idx] + '</strong>';
+    });
+    /* 字面星号还原（粗体里也可能有，所以放在粗体还原之后） */
+    out = out.replace(/\u0000K\u0000/g, '*');
+    /* ⭐ 公式必须**最后**插回来（不能像以前那样在 escapeHtml 之后立刻插）：
+       KaTeX 的静态 HTML 里 `<annotation>` 仍保留公式源码（如 `X^{*}`），
+       先插回去再跑粗体/斜体正则会拿这些 `*` 配对，把 annotation / 标签撕成
+       `<em>` —— 线上概念页因此漏出 `\Phi` 和裸 LaTeX。
+       占位符只含 NUL / M / 数字，上面几条 Markdown 规则碰不到它；
+       插在最后也保证 KaTeX 输出里的 SVG 换行不会被当成段内换行处理。 */
+    out = out.replace(/\u0000M(\d+)\u0000/g, function (m, idx) {
+      var tex = math[+idx];
+      if (MG.renderInlineMath) return MG.renderInlineMath(tex);
+      return '<code>' + escapeHtml(tex) + '</code>';
+    });
     return out;
   }
 
