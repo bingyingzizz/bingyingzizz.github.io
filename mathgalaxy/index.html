@@ -2480,15 +2480,14 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       return '\u0000M' + (math.length - 1) + '\u0000';
     });
     var out = escapeHtml(raw);
-    /* ⭐ 字面星号先保护起来（`\u0000K\u0000` = 一个原样的 `*`）：
-       ① `\*` 是 Markdown 转义（内容里 `AB3\*` 表示 AB3 带星，不是斜体）；
-       ② `弱*拓扑`：星号夹在两个汉字之间，是数学记号（弱星），不是强调；
-       ③ `AB3*`、`AB3* 与 AB4*` 这类写法：星号紧跟在字母数字后、后面不是字母数字，也是字面量。
-       这些 `*` 若留给下面的斜体正则，会被和隔了半句话的下一个 `*` 配成 `<em>`，
-       跨过 `</strong>` 造成错位嵌套（线上 `弱*拓扑` 页就是这样坏掉的）。 */
+    /* ⭐ 字面星号先保护起来（\u0000K\u0000 = 一个原样的 *）：
+       ① \* 是 Markdown 转义（内容里 AB3\* 表示 AB3 带星，不是斜体）；
+       ② 弱*拓扑：星号夹在两个汉字之间，是数学记号（弱星），不是强调。
+       ⚠️ 不再用「星号后面不是字母数字」当第三条规则：它会把 *Zyklus*（循环）
+          的闭星号也当成字面量（全角括号不是字母）。字面/强调的判别放到下面
+          emph() 里按一对星号的两侧统一判断。 */
     out = out.replace(/\\\*/g, '\u0000K\u0000');
     out = out.replace(/([\u4e00-\u9fff])\*([\u4e00-\u9fff])/g, '$1\u0000K\u0000$2');
-    out = out.replace(/([0-9A-Za-z])\*(?=[^0-9A-Za-z\u4e00-\u9fff])/g, '$1\u0000K\u0000');
     /* `行内代码`：内容正好是图里某个节点的 id ⇒ 渲染成可点链接（显示中文名），
        否则仍是 <code>。⭐ 见上面 idLink() 的说明。 */
     out = out.replace(/`([^`\n]+?)`/g, function (m, body) {
@@ -2506,7 +2505,20 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       strongs.push(body);
       return '\u0000S' + (strongs.length - 1) + '\u0000';
     });
-    out = out.replace(/(^|[^*])\*([^*]+?)\*(?!\*)/g, '$1<em>$2</em>');
+    /* ⭐ 斜体：只有一对星号两侧都是词边界，才算强调；否则是字面星号。
+       AB3*、3*3、弱*拓扑 这些 * 若配成 <em>，会跨过 </strong> 撕坏嵌套；
+       但只看「星号后面是不是字母」也不行：*Zyklus*（循环）的闭星号后面是全角括号。
+       所以判据放在一对星号的两侧：开星号前、闭星号后都不能紧挨字母/数字/汉字。 */
+    function emph(s2) {
+      return s2.replace(/(^|[^*])\*([^*]+?)\*(?!\*)/g, function (m, lead, body, off, str) {
+        var before = lead ? lead.charAt(lead.length - 1) : '';
+        var after = str.charAt(off + m.length);
+        if (/[0-9A-Za-z\u4e00-\u9fff]/.test(before)) return m;
+        if (/[0-9A-Za-z\u4e00-\u9fff]/.test(after)) return m;
+        return lead + '<em>' + body + '</em>';
+      });
+    }
+    out = emph(out);
     out = out.replace(/\u0000S(\d+)\u0000/g, function (m, idx) {
       return '<strong>' + strongs[+idx] + '</strong>';
     });
