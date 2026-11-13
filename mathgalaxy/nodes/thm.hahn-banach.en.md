@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.hahn-banach)　·　[Chinese page (authoritative)](./thm.hahn-banach.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.hahn-banach.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a **real** vector space, $p : X \to \mathbb{R}$ **sublinear** ($p(x + y) \le p(x) + p(y)$, and $p(tx) = t\,p(x)$ for $t \ge 0$), $M \subseteq X$ a subspace, and $f : M \to \mathbb{R}$ linear with $f \le p$ on $M$. Then there exists a linear $F : X \to \mathbb{R}$ such that $F|_M = f$ and $F \le p$.
 
-
-Cite: `thm.hahn-banach` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.hahn-banach.en.2.md

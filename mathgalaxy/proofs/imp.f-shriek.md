@@ -20,3 +20,5 @@ $(f^{\mathrm{ad}/Y})_*$ 在仿射局部上是有限个遗忘函子的极限，�
 故 $f_!$ 保直和，右伴随 $f^!$ 存在。
 
 ∎
+
+> ⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。

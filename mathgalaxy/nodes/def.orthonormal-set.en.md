@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.orthonormal-set)　·　[Chinese page (authoritative)](./def.orthonormal-set.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.orthonormal-set.md` and `proofs/`.
+## Statement · **draft**
+Let $\{f_i\}_{i \in I} \subseteq H$.
 
+- **Orthogonal**: $f_i \perp f_j$ ($i \ne j$);
+- **Orthonormal**: orthogonal + $\|f_i\| = 1$;
+- **Complete**: $\overline{\operatorname{span}\{f_i\}} = H$;
+- **Orthonormal basis**: orthonormal + complete.
 
-Cite: `def.orthonormal-set` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.orthonormal-set.en.2.md

@@ -11,6 +11,6 @@ $$\operatorname{Mod}^{\mathrm{cond}}_{\mathcal{A}} \subset \operatorname{Mod}^{\
 。则：
 **(i)** 它是阿贝尔范畴，对一切极限、余极限与扩张稳定；$\mathcal{A}[S]$ 构成一族紧投射生成元；含入有左伴随
 
-$$M \longmapsto M \otimes_{\mathcal{A}} \mathcal{A},$$
+$$M \longmapsto M \otimes_{A} \mathcal{A},$$
 
 > 续见 [nodes/thm.analytic-modules.3.md](./thm.analytic-modules.3.md)

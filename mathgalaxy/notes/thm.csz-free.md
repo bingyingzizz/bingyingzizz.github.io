@@ -7,4 +7,4 @@
 
 ⭐ 它是整个固态理论的支点：没有它，$Z[S]^{\blacksquare}$ 就说不成 $\prod_I \mathbb{Z}$，`thm.solid-abelian` 里的「紧投射生成元」也就无从谈起。
 
-⚠ 注意 $C(S,\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\mathbb{R})$ 行为完全不同：$C(S,\mathbb{R})$ 一般不是自由 $\mathbb{R}$-向量空间。
+⚠ 注意 $C(S,\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\mathbb{R})$ 行为完全不同：这里说的是 $C(S,\mathbb{Z})$ 作为抽象阿贝尔群；$C(S,\mathbb{R})$ 作为抽象向量空间当然有基，不能把前者的自由性直接搬过去。

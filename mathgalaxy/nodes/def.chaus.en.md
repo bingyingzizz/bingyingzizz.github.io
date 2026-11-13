@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.chaus)　·　[Chinese page (authoritative)](./def.chaus.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.chaus.md` and `proofs/`.
+## Statement · **draft**
+**Compact Hausdorff spaces** are the topological spaces that are both compact and Hausdorff. Taking them as objects and continuous maps as morphisms gives the category $\mathbf{CHaus}$. The inclusion functor is denoted $\mathbf{CHaus} \hookrightarrow \mathbf{Top}$.
 
-
-Cite: `def.chaus` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.chaus.en.2.md

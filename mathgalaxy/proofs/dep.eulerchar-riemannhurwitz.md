@@ -5,4 +5,4 @@
 
 Riemann–Hurwitz 的原形是 $2g(S)-2=n(2g(T)-2)+\sum_{p}(e_{p}-1)$；代入 $\chi=2-2g$（`prop.eulerchar-genus`）即得 $\chi(S)=n\chi(T)-\sum_{p}(e_{p}-1)$。∎
 
-> 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。
+> 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。 ⚠ 本边证明条件于 `prop.eulerchar-genus`（`prop.eulerchar-genus` 仍 skeleton）。

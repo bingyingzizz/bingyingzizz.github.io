@@ -12,3 +12,5 @@ $$f^! = \operatorname{RHom}_R(A, R) \otimes^{L}_{R_\blacksquare} f^*,$$
 而 $\operatorname{RHom}_R(A,R)$ 与平坦基变换交换。
 
 **$A = R[T]$。** $f_!M = M \otimes_{(A,R)_\blacksquare} R((T^{-1}))/R[T][-1]$，$f^!R = R[T][1]$；基变换就是 $R((T^{-1}))/R[T]$ 的基变换。$\blacksquare$
+
+> ⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。

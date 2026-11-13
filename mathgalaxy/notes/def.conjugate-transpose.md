@@ -3,7 +3,7 @@
 
 **它是伴随算子的矩阵**：若在**标准正交基**下取矩阵，线性映射 $T$ 的伴随算子 $T^{*}$（`def.operator-adjoint`）的矩阵就是 $T$ 的矩阵的共轭转置。⚠️ 换了非标准正交基，这两者不再相等 —— 那条关系是「标准正交基」的特权，不是坐标无关的恒等式。
 
-**为什么必须共轭**：$\mathbb{C}^{n}$ 的标准内积是 $\langle x, y\rangle = \sum \overline{x_i} y_i$（对第一个变元共轭），于是把 $A$ 从左边搬到右边时，$\overline{A}$ 会自然出现。
+**为什么必须共轭**：$\mathbb{C}^{n}$ 的标准内积是 $\langle x, y\rangle = \sum x_i \overline{y_i}$（对第二个变元共轭），于是把 $A$ 从左边搬到右边时，$\overline{A}$ 会自然出现。
 
 用「只转置」的版本，$\langle Ax,y\rangle = \langle x, A^{T}y\rangle$ 在复数域上是错的。
 

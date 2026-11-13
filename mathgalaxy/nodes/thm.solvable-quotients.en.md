@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.solvable-quotients)　·　[Chinese page (authoritative)](./thm.solvable-quotients.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · theorem · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.solvable-quotients.md` and `proofs/`.
+## Statement · **draft**
+Let $G$ be a group.
 
+**(a) Subgroups**: if $G$ is solvable and $H \le G$, then $H$ is solvable.
 
-Cite: `thm.solvable-quotients` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+**(b) Quotients**: if $G$ is solvable and $N \trianglelefteq G$, then $G/N$ is solvable.
 
+**(c) Extensions**: if $N \trianglelefteq G$, $N$ is solvable and $G/N$ is solvable, then $G$ is solvable.
+
+> continued in nodes/thm.solvable-quotients.en.2.md

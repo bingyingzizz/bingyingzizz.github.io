@@ -2,16 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.sheaf)　·　[Chinese page (authoritative)](./def.sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a site and $F : \mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$ a presheaf.
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Sheaf_(mathematics) · nLab: https://ncatlab.org/nlab/show/sheaf · Mathlib: https://leanprover-community.github.io/mathlib4_docs/Mathlib/CategoryTheory/Sites/Sheaf.html
+- $F$ is called **separated** if for every $X$ and every $R \in J(X)$, the restriction map
 
+$$\operatorname{Hom}(h_{X}, F) \longrightarrow \operatorname{Hom}(R, F)$$
 
-Cite: `def.sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is **injective**;
+- $F$ is called a **sheaf** if this map is **bijective**.
 
+> continued in nodes/def.sheaf.en.2.md

@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-12T12:15:56.133Z",
+  "generated": "2026-11-13T05:09:16.923Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
@@ -17242,23 +17242,35 @@
    "title": "紧 Hausdorff 空间范畴 $\\mathbf{CHaus}$",
    "label_en": "compact Hausdorff",
    "title_en": "compact Hausdorff",
+   "statement_en": "**Compact Hausdorff spaces** are the topological spaces that are both compact and Hausdorff. Taking them as objects and continuous maps as morphisms gives the category $\\mathbf{CHaus}$. The inclusion functor is denoted $\\mathbf{CHaus} \\hookrightarrow \\mathbf{Top}$.",
+   "notes_en": "Putting compactness and Hausdorffness together is a good bargain: **a compact Hausdorff space is regular and normal**, and a continuous bijection from a compact space to a Hausdorff space is automatically a homeomorphism. Many things that require extra hypotheses in $\\mathbf{Top}$ come for free here.\n\n**Arbitrary limits exist** in $\\mathbf{CHaus}$, and they are exactly the result computed in $\\mathbf{Top}$ (see the entry \"CHaus is a reflective subcategory\").",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c0b291a1",
+      "notes": "v0.9.3#a139660f"
+     }
     }
    },
    "en_page": "nodes/def.chaus.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -17466,23 +17478,35 @@
    "title": "投射对象与内射对象",
    "label_en": "Projective and Injective",
    "title_en": "Projective and Injective Objects",
+   "statement_en": "An object $P$ of a category $\\mathcal{C}$ is called **projective** if the functor $h_{P} = \\operatorname{Hom}_{\\mathcal{C}}(P, -)$ **preserves epimorphisms**. Dually, $I$ is called **injective** if $h^{I}$ sends monomorphisms to epimorphisms.\n\nExpanded as a lifting condition: for every epimorphism $A \\twoheadrightarrow B$ and every $P \\to B$ there exists a lift $P \\to A$ making the triangle commute:\n\n$$\\begin{array}{ccc} & P & \\\\ \\swarrow & \\downarrow & \\searrow \\\\ A & \\twoheadrightarrow & B \\end{array}$$\n\nDually, injectivity of $I$ says that every $A \\rightarrowtail B$ and every $A \\to I$ extend to $B \\to I$.",
+   "notes_en": "The name \"projective\" comes from module theory: the projective objects of $R\\text{-}\\mathbf{Mod}$ are exactly the projective modules, and the injective objects are exactly the injective modules — the two standard criteria ($P$ is a direct summand, $I$ is a direct summand) are this definition specialised to modules.\n\nTwo immediate corollaries: **if $P$ is projective, every epimorphism $Y \\twoheadrightarrow P$ has a section**; **if $X \\to Y$ has a retraction and $Y$ is projective, then $X$ is projective too** (the injective case is dual).\n\nIn $\\mathbf{Set}$ **every object is projective**, and this is precisely the axiom of choice: given a surjection $A \\twoheadrightarrow B$ and a point of $B$, one can always choose a preimage.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#36504573",
+      "notes": "v0.9.3#a2c94ab1"
+     }
     }
    },
    "en_page": "nodes/def.projective-object.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -18120,23 +18144,35 @@
    "title": "层与分离预层",
    "label_en": "sheaf",
    "title_en": "sheaf",
+   "statement_en": "Let $\\mathcal{C}$ be a site and $F : \\mathcal{C}^{\\mathrm{op}} \\to \\mathbf{Set}$ a presheaf.\n\n- $F$ is called **separated** if for every $X$ and every $R \\in J(X)$, the restriction map\n\n$$\\operatorname{Hom}(h_{X}, F) \\longrightarrow \\operatorname{Hom}(R, F)$$\n\nis **injective**;\n- $F$ is called a **sheaf** if this map is **bijective**.",
+   "notes_en": "By the Yoneda lemma $\\operatorname{Hom}(h_{X}, F) \\cong F(X)$, this definition can be read as two sentences: the left-hand side is $F(X)$ (global sections), while the right-hand side is \"a compatible family of sections along $R$\":\n\n- **Injective = separatedness**: two global sections that agree on $R$ must be equal;\n- **Bijective = gluing**: any compatible family of sections glues **uniquely** into a global section.\n\nIn the old language of topological spaces ($\\mathcal{C} = \\operatorname{Open}(X)^{\\mathrm{op}}$), these two conditions read: if $s|_{U_{i}} = t|_{U_{i}}$ holds everywhere then $s = t$; and local sections $s_{i}$ that agree on overlaps glue into a global section.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#63e93e16",
+      "notes": "v0.9.3#b8449802"
+     }
     }
    },
    "en_page": "nodes/def.sheaf.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "category",
    "regions": [
     "category"
@@ -20956,23 +20992,35 @@
    "title": "短正合列给出长正合列（蛇引理）",
    "label_en": "long exact sequence",
    "title_en": "long exact sequence",
+   "statement_en": "Let $\\mathcal{A}$ be an abelian category and $0 \\to K \\to L \\to M \\to 0$ a short exact sequence of complexes. Then there is a **long exact sequence**\n\n$$\\cdots \\to H^{n}(K) \\to H^{n}(L) \\to H^{n}(M) \\xrightarrow{\\ \\delta\\ } H^{n+1}(K) \\to \\cdots$$\n\nwhere $\\delta$ is called the **connecting homomorphism**.\n\nCorollary: $H^{n} : \\mathbf{K}(\\mathcal{A}) \\to \\mathcal{A}$ is a **cohomology functor**.",
+   "notes_en": "**What it says**: a short exact sequence of complexes $0 \\to K \\to L \\to M \\to 0$ yields a **long exact sequence** in cohomology, and the **connecting homomorphism** $\\delta : H^{n}(M) \\to H^{n+1}(K)$ in the middle raises the degree by one.\n\n⭐ How $\\delta$ is built: take a representative of $m \\in H^{n}(M)$, lift it along the surjection $L^{n} \\to M^{n}$, then apply $d_{L}$ and land in $K^{n+1}$ — one must show the result is independent of the choice of lift (two lifts differ by a coboundary), and this step is exactly **diagram chasing**.\n\n⚠ This is **not** the same as the long exact sequence of derived functors (the short exact sequence $\\to$ $R^{n}F$ gives a long exact sequence): that one concerns derived functors, this one concerns the cohomology of the complexes themselves.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#2c342631",
+      "notes": "v0.9.3#17fcb23f"
+     }
     }
    },
    "en_page": "nodes/thm.long-exact.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "homology",
    "regions": [
     "homology"
@@ -37965,23 +38013,35 @@
    "title": "命题：积分的线性性与区间可加性",
    "label_en": "Integral Linearity",
    "title_en": "Linearity and Additivity of the Integral",
+   "statement_en": "Let $f, g$ be integrable on $[a, b]$ and $c \\in \\mathbb{R}$. Then $f + g$ and $cf$ are integrable, and\n\n$$\\int_a^b (f + g) = \\int_a^b f + \\int_a^b g, \\qquad \\int_a^b cf = c\\int_a^b f$$\n\nMoreover, for $a < c < b$: $f$ is integrable on $[a, b]$ if and only if it is integrable on $[a, c]$ and $[c, b]$, in which case\n\n$$\\int_a^b f = \\int_a^c f + \\int_c^b f$$",
+   "notes_en": "⭐ \"Additivity over intervals\" is the most practical property of the Riemann integral: it cuts a problem on a large interval into two halves — and it is also the basis for defining improper integrals later.\n\n⚠ The **product** of two integrable functions is integrable (amplitude estimate: $\\omega(fg) \\le M\\omega(g) + N\\omega(f)$ on each subinterval), but the **quotient** need not be: one must first ensure the denominator stays away from zero.\n\n⭐ Integrability of sums and of products both rest on the amplitude criterion: substitute $\\omega(f + g) \\le \\omega(f) + \\omega(g)$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#f367a82a",
+      "notes": "v0.9.3#4b97a586"
+     }
     }
    },
    "en_page": "nodes/prop.integral-linear.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis",
    "regions": [
     "analysis"
@@ -41056,23 +41116,35 @@
    "title": "定理：选定基后，线性映射与矩阵一一对应",
    "label_en": "linear maps and matrices",
    "title_en": "linear maps and matrices",
+   "statement_en": "Let $V$ have ordered basis $\\mathcal{B} = (v_1, \\ldots, v_n)$ and $W$ have ordered basis $\\mathcal{C} = (w_1, \\ldots, w_m)$, both finite-dimensional $K$-vector spaces.\n\nThe $m \\times n$ matrix $[T]_{\\mathcal{B}}^{\\mathcal{C}}$ is called the **matrix** of $T$ with respect to these two bases, where the $j$-th column is the coordinate vector of $T(v_j)$ in $\\mathcal{C}$.\n\nThen the map $T \\mapsto [T]_{\\mathcal{B}}^{\\mathcal{C}}$ is an isomorphism of $K$-vector spaces\n\n$$\\operatorname{Hom}_K(V, W) \\;\\cong\\; M_{m \\times n}(K)$$\n\nand **composition corresponds to multiplication**: if $T : V \\to W$, $S : W \\to U$, then\n\n$$[S \\circ T]_{\\mathcal{B}}^{\\mathcal{E}} = [S]_{\\mathcal{C}}^{\\mathcal{E}}\\; [T]_{\\mathcal{B}}^{\\mathcal{C}}$$",
+   "notes_en": "⭐ This is the **birth certificate** of all matrix theory: a matrix is not a defined object but the **coordinates** of a linear map in chosen bases (exactly the same mechanism as the entry on coordinates, only with a basis chosen on each side).\n\n⭐ Thus every matrix operation acquires meaning: addition = sum of maps, multiplication = composition, identity matrix = identity map, invertible = isomorphism.\n\n**Every formula about matrices can be translated into the language of maps**, and conversely — this is why the graph puts the two in separate clusters yet connects them by edges.\n\n⚠ All of this **depends on the choice of bases**: change the basis and the matrix changes. **The same space** $V = W$ with the same basis used on both sides gives **similarity** $P^{-1}AP$; for a general $T : V \\to W$ the two bases change independently and one gets **equivalence** $Q^{-1}AP$ (e.g. $V = W = \\mathbb{R}$, $T = \\mathrm{id}$: changing only the basis of the domain to $(2)$ gives $[2]$, which is not similar to $[1]$).\n\nThe linear map itself, however, does not change.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#02b03eda",
+      "notes": "v0.9.3#f22335a9"
+     }
     }
    },
    "en_page": "nodes/thm.matrix-linear-map.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "algebra",
    "regions": [
     "algebra"
@@ -41720,23 +41792,35 @@
    "title": "定理：带余除法（$K[x]$ 是欧几里得整环）",
    "label_en": "division with remainder",
    "title_en": "division with remainder",
+   "statement_en": "Let $K$ be a field, $f, g \\in K[x]$, $g \\ne 0$. Then there exist **unique** $q, r \\in K[x]$ such that\n\n$$f = q\\,g + r, \\qquad \\deg r < \\deg g$$\n\n($r$ is called the **remainder**, $q$ the **quotient**; $r = 0$ is allowed.)\n\nConsequently $K[x]$ is a **Euclidean domain**: there is a Euclidean function \"degree\" satisfying $\\deg r < \\deg g$.",
+   "notes_en": "⭐ \"$K$ is a field\" cannot be dropped: over the ring $\\mathbb{Z}[x]$ there is no division with remainder ($x^{2}$ divided by $2x + 1$ does not produce a polynomial quotient).\n\nIts role is to guarantee that the **leading coefficient is invertible**, so that the highest-degree term can be eliminated.\n\n⭐ The consequences are far-reaching: division with remainder gives the **Euclidean algorithm** (for the gcd), hence **Bézout's identity** ($af + bg = \\gcd$), hence \"irreducible $\\implies$ prime\", hence **unique factorization** (`thm.poly-ufd`).\n\nEuclidean domains are the \"everything works\" class of rings.\n\n⚠ Uniqueness uses comparison of degrees, not \"uniqueness of the division procedure\" — the choices at each step of the division are not unique, but the final quotient and remainder are.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#443bcab8",
+      "notes": "v0.9.3#902b9473"
+     }
     }
    },
    "en_page": "nodes/thm.division-algorithm.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "algebra",
    "regions": [
     "algebra"
@@ -43681,23 +43765,35 @@
    "title": "Banach 空间（完备赋范空间）",
    "label_en": "Banach Space",
    "title_en": "Banach Space",
+   "statement_en": "A normed space $V$ is **complete** iff it is complete with respect to the metric $d(v, w) = \\|v - w\\|$, i.e. every Cauchy sequence converges. A complete normed space is a **Banach space**.",
+   "notes_en": "⭐ Three standard examples: $\\mathbb{R}^{n}$ (completeness is the finite-dimensional version of `thm.real-complete-metric`), $L^{p}$ (`thm.lp-banach`, Riesz–Fischer), and $C(S)$ on a compact Hausdorff space with the sup norm.\n\n⚠ Completeness is not automatic: $C[0, 1]$ with $\\|f\\|_{1} = \\int_0^1 |f|$ is **not** complete (one can approximate a discontinuous function).\n\nThe same set of functions is complete under one norm and incomplete under another — \"complete\" is a property of the norm, not of the set.\n\n⭐ Completeness is the engine of the contraction mapping principle below (`thm.banach-fixed-point`): without it one only gets a Cauchy sequence, not a fixed point.\n\nThe whole constructive proof of the inverse function theorem rests on this.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#ddbf3c4a",
+      "notes": "v0.9.3#e7c5b49d"
+     }
     }
    },
    "en_page": "nodes/def.banach-space.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis",
    "regions": [
     "analysis"
@@ -44060,23 +44156,35 @@
    "title": "定理：多元中值定理与中值不等式",
    "label_en": "Mean Value Theorem",
    "title_en": "Mean Value Theorem in Several Variables",
+   "statement_en": "**Mean value theorem**: let $f : U \\to \\mathbb{R}$ be differentiable on the open set $U \\subseteq \\mathbb{R}^{n}$, with $a, a + h \\in U$ and the segment $[a, a+h] \\subset U$. Then there exists $\\theta \\in (0, 1)$ such that\n\n$$f(a + h) - f(a) = Df(a + \\theta h)(h)$$\n\n**Mean value inequality**: if $f : U \\to \\mathbb{R}^{m}$ is differentiable, then\n\n$$\\|f(a + h) - f(a)\\| \\le \\Bigl( \\sup_{[a, a+h]} \\|Df\\| \\Bigr) \\|h\\|$$",
+   "notes_en": "⭐ The one-dimensional mean value theorem rests on Rolle, and Rolle on \"a continuous function on a closed interval attains its extrema\" — and **multivariable calculus has no such thing** (the equality version is **false** for $\\mathbb{R}^{m}$-valued functions: $f(t) = (\\cos t, \\sin t)$ goes once around a circle, $f(2\\pi) - f(0) = 0$, yet $Df$ is nowhere zero and $\\|Df\\| = 1$).\n\n⭐ So what is really useful in several variables is the **inequality version**: it needs only \"apply the one-variable mean value theorem along a line segment + estimate the norm\", and no existence of extrema.\n\nThe contraction mapping principle and the inverse function theorem later use nothing but this.\n\n⚠ In the scalar case ($f$ has values in $\\mathbb{R}$) the equality version needs care: the usual proof applies the one-dimensional MVT to $\\varphi(t) = f(a + th)$ and yields \"there exists $\\theta$ with $f(a+h) - f(a) = Df(a + \\theta h)(h)$\" — here $\\theta$ depends on $h$ and cannot be treated as a constant.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e94a7fbd",
+      "notes": "v0.9.3#7ef0fb14"
+     }
     }
    },
    "en_page": "nodes/thm.mean-value-multi.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis",
    "regions": [
     "analysis"
@@ -44102,23 +44210,35 @@
    "title": "定理：多元 Taylor 公式",
    "label_en": "Taylor Formula",
    "title_en": "Taylor Formula in Several Variables",
+   "statement_en": "Let $U \\subseteq \\mathbb{R}^{n}$ be open, $f : U \\to \\mathbb{R}$ of class $C^{k+1}$, $a \\in U$. Then for $h$ sufficiently small,\n\n$$f(a + h) = \\sum_{|\\alpha| \\le k} \\frac{D^{\\alpha} f(a)}{\\alpha!}\\, h^{\\alpha} + R_k(h)$$\n\nwhere the remainder can be written (for some $\\theta \\in (0,1)$)\n\n$$R_k(h) = \\sum_{|\\alpha| = k+1} \\frac{D^{\\alpha} f(a + \\theta h)}{\\alpha!}\\, h^{\\alpha} = O\\bigl(\\|h\\|^{k+1}\\bigr)$$\n\nThe two most-used cases:\n\n$$f(a+h) = f(a) + Df(a)(h) + o(\\|h\\|)$$\n\n$$f(a+h) = f(a) + Df(a)(h) + \\frac{1}{2}\\, D^{2}f(a)(h, h) + o\\bigl(\\|h\\|^{2}\\bigr)$$",
+   "notes_en": "⭐ Key observation: **the second derivative $D^{2}f(a)$ is a symmetric bilinear form on $\\mathbb{R}^{n}$**, not \"a bunch of second partials\".\n\nIn the formula for $k = 2$, $D^{2}f(a)(h,h)$ is precisely $\\sum_{i,j} \\partial_i \\partial_j f(a)\\, h_i h_j = h^{\\mathsf{T}} H_f(a)\\, h$.\n\n⭐ Thus multivariable Taylor meets linear algebra directly: $h^{\\mathsf{T}} H h$ is a **quadratic form**, and positive definiteness of quadratic forms has a ready criterion (`thm.sylvester-criterion`) — the second derivative test (`thm.second-derivative-test`) is this formula plus that criterion.\n\n⚠ Pitfall in the proof: applying one-variable Taylor to $t \\mapsto f(a + th)$ gives an expansion **only along one line**, and the $\\theta$ in the remainder depends on $h$.\n\nTo get uniformity in all $h$, one must induct on $k$ and write the remainder as a sum over multi-indices, using the one-variable MVT once per layer (or iterating over the coordinates of $h$).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#20ac58cc",
+      "notes": "v0.9.3#52015d28"
+     }
     }
    },
    "en_page": "nodes/thm.taylor-multi.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis",
    "regions": [
     "analysis"
@@ -45292,23 +45412,35 @@
    "label": "可解性对子群与商群封闭",
    "title": "定理：可解性在子群、商群与扩张下的行为",
    "title_en": "solvability passes to subgroups and quotients",
+   "statement_en": "Let $G$ be a group.\n\n**(a) Subgroups**: if $G$ is solvable and $H \\le G$, then $H$ is solvable.\n\n**(b) Quotients**: if $G$ is solvable and $N \\trianglelefteq G$, then $G/N$ is solvable.\n\n**(c) Extensions**: if $N \\trianglelefteq G$, $N$ is solvable and $G/N$ is solvable, then $G$ is solvable.\n\n((a) and (b) say that solvability descends; (c) says that solvability ascends along normal extensions.)",
+   "notes_en": "⭐ (c) is the most useful of the three: to show that $G$ is solvable it suffices to find a **normal subgroup** with $G$ sandwiched in between and both ends solvable — the standard way of breaking a big group into small pieces.\n\n⚠ The converses of (a) and (b) both **fail**, with tiny counterexamples:\n- a solvable subgroup **does not** imply that the group is solvable: $\\mathbb{Z}/2 \\le A_5$ is solvable, $A_5$ is not;\n\n- a solvable quotient **does not** imply that the group is solvable: $S_5 / A_5 \\cong \\mathbb{Z}/2$ is solvable, $S_5$ is not.\n\nSo \"solvable\" is not a local property; it ascends only by squeezing between two solvable ends as in (c).\n\n⭐ In terms of derived series all three are almost a single sentence: $H^{(k)} \\le G^{(k)}$;\n\n$\\pi(G^{(k)}) = (G/N)^{(k)}$.\n\nThe full proof is on the edges.\n\n⭐ This immediately gives a commonly used criterion: $G$ is solvable $\\iff$ there is a normal chain whose quotients are **cyclic** (not merely abelian) — because an abelian group can be refined further into cyclic factors.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#0685f884",
+      "notes": "v0.9.3#a2db1c65"
+     }
     }
    },
    "en_page": "nodes/thm.solvable-quotients.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "algebra",
    "regions": [
     "algebra"
@@ -45673,23 +45805,35 @@
    "title": "定理：$n$ 次方根的存在唯一性（Existence of $n$-th Roots）",
    "label_en": "nth roots",
    "title_en": "nth roots",
+   "statement_en": "Let $K$ be a complete ordered field (e.g. $\\mathbb{R}$), $a > 0$, $n \\ge 1$. Then there exists a **unique** $b > 0$ such that\n\n$$b^{n} = a;$$\n\nWrite $b = \\sqrt[n]{a} = a^{1/n}$. Moreover:\n\n- $a \\mapsto \\sqrt[n]{a}$ is strictly increasing on $(0, +\\infty)$;\n- $\\sqrt[n]{ab} = \\sqrt[n]{a}\\,\\sqrt[n]{b}$, $\\sqrt[n]{a^{m}} = \\left(\\sqrt[n]{a}\\right)^{m}$ ($m \\in \\mathbb{Z}$).",
+   "notes_en": "⭐ $n = 2$, $a = 2$ is exactly the **existence of $\\sqrt{2}$**: $\\{q \\in \\mathbb{Q} : q^{2} < 2\\}$ has no least upper bound in $\\mathbb{Q}$, but does in $\\mathbb{R}$ — that least upper bound is $\\sqrt{2}$.\n\nSo this theorem is the first concrete construction of \"what $\\mathbb{R}$ has beyond $\\mathbb{Q}$\".\n\n⭐ The proof is a **template for the least upper bound principle**: let $S = \\{t \\ge 0 : t^{n} \\le a\\}$, take $b = \\sup S$, then prove $b^{n} = a$ (neither inequality may be strict: if too small, raise a little; if too large, lower a little).\n\n⚠ The two estimates go in opposite directions: raising uses the **binomial theorem** (**one cannot keep only the first-order term**: from the binomial expansion $ (b+h)^{n} - b^{n} = h\\sum_{k\\ge1}\\binom{n}{k} b^{n-k} $, take $0 < h \\le 1$ and then make $h$ small enough), while lowering uses **Bernoulli** ($(1 - h/b)^{n} \\ge 1 - nh/b$).\n\nThis is where `thm.binomial` and `thm.bernoulli` are first genuinely used in the graph.\n\n⚠ Uniqueness rests on **strict monotonicity**: $0 \\le u < v \\implies u^{n} < v^{n}$ (factorization $v^{n} - u^{n} = (v-u)(v^{n-1} + \\cdots + u^{n-1}) > 0$).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c9db4cad",
+      "notes": "v0.9.3#b233302a"
+     }
     }
    },
    "en_page": "nodes/thm.nth-root.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis",
    "regions": [
     "analysis"
@@ -46609,7 +46753,7 @@
     "自由群"
    ],
    "statement": "白话：一件反直觉的事 —— 「$S$ 上取整数值的连续函数」看上去像「无穷多个 $\\mathbb{Z}$ 拼起来」的东西，它却**总是**自由阿贝尔群（有基、无关系）。这是整块固态理论能立住的那根钉子。\n\n对任意 profinite 集 $S$，连续函数群 $C(S, \\mathbb{Z})$（见 `def.cond-measure`）\n\n$$C(S, \\mathbb{Z}) = \\{\\, f : S \\to \\mathbb{Z}\\ \\mid f \\text{continuous}\\, \\}$$\n\n是**自由阿贝尔群**。",
-   "notes": "⭐ 这是 Specker（1950，$S$ 为 $\\mathbb{Z}_p$ 型）与 Nöbeling（1968，一般 profinite）的结果。\n\n反直觉的地方：$C(S,\\mathbb{Z})$ 看起来像「每点给一个整数」的无穷乘积，却**总是自由**的 —— 而它的对偶 $M(S,\\mathbb{Z}) = \\prod_I \\mathbb{Z}$ 才是大的那一头。\n\n⭐ 它是整个固态理论的支点：没有它，$Z[S]^{\\blacksquare}$ 就说不成 $\\prod_I \\mathbb{Z}$，`thm.solid-abelian` 里的「紧投射生成元」也就无从谈起。\n\n⚠ 注意 $C(S,\\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\\mathbb{R})$ 行为完全不同：$C(S,\\mathbb{R})$ 一般不是自由 $\\mathbb{R}$-向量空间。",
+   "notes": "⭐ 这是 Specker（1950，$S$ 为 $\\mathbb{Z}_p$ 型）与 Nöbeling（1968，一般 profinite）的结果。\n\n反直觉的地方：$C(S,\\mathbb{Z})$ 看起来像「每点给一个整数」的无穷乘积，却**总是自由**的 —— 而它的对偶 $M(S,\\mathbb{Z}) = \\prod_I \\mathbb{Z}$ 才是大的那一头。\n\n⭐ 它是整个固态理论的支点：没有它，$Z[S]^{\\blacksquare}$ 就说不成 $\\prod_I \\mathbb{Z}$，`thm.solid-abelian` 里的「紧投射生成元」也就无从谈起。\n\n⚠ 注意 $C(S,\\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\\mathbb{R})$ 行为完全不同：这里说的是 $C(S,\\mathbb{Z})$ 作为抽象阿贝尔群；$C(S,\\mathbb{R})$ 作为抽象向量空间当然有基，不能把前者的自由性直接搬过去。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Theorem 5.4"
    ]
@@ -46740,6 +46884,7 @@
    "type": "lemma",
    "label": "完备化判据",
    "title": "引理：把子范畴做成阿贝尔子范畴的抽象判据（Lemma 5.9）",
+   "status": "skeleton",
    "label_en": "criterion for solid completeness",
    "title_en": "criterion for solid completeness",
    "translations": {
@@ -46771,7 +46916,7 @@
     "范畴"
    ],
    "statement": "白话：这条引理是一把**通用扳手** —— 想说明「某个子范畴像模范畴一样好用（有紧对象、有左伴随、导出范畴全忠实）」，不用逐条验，只要验一条 $\\operatorname{RHom}$ 条件。\n\n设 $\\mathcal{A}$ 是有任意余极限的阿贝尔范畴，$\\mathcal{A}_0 \\subset \\mathcal{A}$ 是一族紧投射生成元（= 一族生成元，其中每个对象既是**紧对象**又是**投射对象**；\n\n这是模范畴里「有限自由模」的抽象版）。\n\n设 $F : \\mathcal{A}_0 \\to \\mathcal{A}$ 带**自然变换** $X \\to F(X)$，即一族映射 $\\eta_X : X \\to F(X)$，且对 $\\mathcal{A}_0$ 里每个映射 $u : X \\to X'$ 都有 $F(u) \\circ \\eta_X = \\eta_{X'} \\circ u$（「$F$ 与 $u$ 可交换」），它满足：\n\n对任意 $X \\in \\mathcal{A}_0$、任意由 $F$ 的像的直和构成的映射 $f : Y \\to Z$ 及其核 $K$，\n\n$$\\operatorname{RHom}(F(X), K) \\longrightarrow \\operatorname{RHom}(X, K)$$\n\n是同构。令 $\\mathcal{A}_F$ 为所有满足「$\\operatorname{Hom}(F(X), Y) \\to \\operatorname{Hom}(X, Y)$ 对一切 $X \\in \\mathcal{A}_0$ 是同构」的 $Y$ 组成的全子范畴。则：\n\n**(i)** $\\mathcal{A}_F \\subset \\mathcal{A}$ 是阿贝尔子范畴，对一切极限、余极限与扩张稳定；$F(X)$（$X \\in \\mathcal{A}_0$）是 $\\mathcal{A}_F$ 的一族紧投射生成元；含入有左伴随 $L$，它是 $F$ 的唯一保余极限延拓。\n\n**(ii)** $D(\\mathcal{A}_F) \\to D(\\mathcal{A})$ 全忠实，像恰为那些满足 $\\operatorname{RHom}(F(X), C) \\cong \\operatorname{RHom}(X, C)$ 的复形；\n\n$C \\in D(\\mathcal{A}_F)$ 当且仅当所有 $H^i(C) \\in \\mathcal{A}_F$；\n\n含入有左伴随（$L$ 的左导出）。",
-   "notes": "⭐ 这是一条**纯范畴论**的引理：它把「证明某个补全出来的子范畴性质良好」压缩成一条 Ext-消没条件。\n\n`thm.solid-abelian` 就是它的实例（$\\mathcal{A} = \\operatorname{Cond}(\\mathbf{Ab})$，$F(\\mathbb{Z}[S]) = Z[S]^{\\blacksquare}$）。\n\n⚠ 条件里只对**核**要求同构，不对余核要求 —— 但对偶地写成余核也一样（见原文 Remark 5.11）。\n\n📌 证明是标准的同调代数：先证 $\\mathcal{A}_F$ 对核与极限封闭，再用「两个直和之间的映射」把余核也拉进来，最后用 Postnikov 截断把复形的情形归约到单点。",
+   "notes": "⭐ 这是一条**纯范畴论**的引理：它把「证明某个补全出来的子范畴性质良好」压缩成一条 Ext-消没条件。\n\n`thm.solid-abelian` 就是它的实例（$\\mathcal{A} = \\operatorname{Cond}(\\mathbf{Ab})$，$F(\\mathbb{Z}[S]) = Z[S]^{\\blacksquare}$）。\n\n⚠ 条件里只对**核**要求同构，不对余核要求 —— 但对偶地写成余核也一样（见原文 Remark 5.11）。\n\n📌 证明是标准的同调代数：先证 $\\mathcal{A}_F$ 对核与极限封闭，再用「两个直和之间的映射」把余核也拉进来，最后用 Postnikov 截断把复形的情形归约到单点。\n\n⚠ 本图不展开 Lemma 5.9 的证明，按外部结论引用。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Lemma 5.9"
    ]
@@ -47065,23 +47210,35 @@
    "title": "解析环",
    "label_en": "analytic ring",
    "title_en": "analytic ring",
+   "statement_en": "A pre-analytic ring $\\mathcal{A}$ is called an **analytic ring** if and only if: for every complex\n\n$$C : \\cdots \\to C_i \\to \\cdots \\to C_1 \\to C_0 \\to 0$$\n\n(where each $C_i$ is a direct sum of copies of $\\mathcal{A}[T]$, with $T$ extremally disconnected), and for every extremally disconnected set $S$, the natural map\n\n$$\\operatorname{RHom}_{\\mathcal{A}}\\bigl(\\mathcal{A}[S],\\ C\\bigr) \\longrightarrow \\operatorname{RHom}_{A}\\bigl(A[S],\\ C\\bigr)$$\n\nis an isomorphism. Here \"natural map\" means **one concrete map**, not a figure of speech: it goes from the $\\mathcal{A}$ side to the $A$ side and is induced by composing along $\\iota_S$. Three steps make this precise:\n\n1. **First there is a canonical map** $\\iota_S : A[S] \\to \\mathcal{A}[S]$ — it sends a formal finite sum $\\sum a_s s$ into the free complete module (the data of a pre-analytic ring includes this family of maps; see `def.pre-analytic-ring`).\n2. **Pull back along it**: $\\operatorname{RHom}_A(-, C)$ is a contravariant functor, and $\\iota_S$ induces $\\operatorname{RHom}_A(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$, by the rule $g \\mapsto g \\circ \\iota_S$.\n3. **Rewrite the left-hand side (this step has a hypothesis)**: when $C$ carries an $\\mathcal{A}$-module structure (that is, lies in the image of (ii)), $\\mathcal{A}[S]$ is a free $\\mathcal{A}$-module, so an $\\mathcal{A}$-linear map is determined by its values on generators; hence there is an isomorphism\n\n$$\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\cong \\operatorname{RHom}_A(\\mathcal{A}[S], C),$$\n\nThis is the isomorphism supplied by the adjunction, not \"the same set\". For a general $A$-module complex $C$, the left-hand side has not even been defined — the \"comparison map\" is exactly the object to be checked in the definition; identifying the two directly at the derived level would first require a derived category of complete modules, which is not proved here (see the gap at the end of the notes).\n\nPutting 2 and 3 together gives the arrow appearing in the formula, $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$.",
+   "notes_en": "⭐ Reading: **\"$\\mathcal{A}[S]$ and the ordinary free module $A[S]$ cannot be distinguished inside $\\operatorname{RHom}$\"**.\n\nThis is the relative version of condition (ii) in the definition of solid groups;\n\ntaking $A = \\mathbb{Z}$ and $\\mathcal{A}[S] = Z[S]^{\\blacksquare}$ returns to the solid case.\n\n⚠ Why require **all** such complexes and not just a single module? Because the conclusion is needed at the level of derived categories (`thm.analytic-modules` (ii)); an isomorphism at a single point is not enough — it must hold for complexes as well.\n\n⭐ Deciding \"is this an analytic ring\" is usually done via concrete theorems such as `prop.analytic-examples` and `thm.za-analytic`, not by checking the definition item by item.\n\n**Which hypothesis each direction uses** (analyticity is a derived test over a whole class of complexes):\n- Analyticity $\\iff$ the comparison map for all the listed complexes and extremally disconnected $S$ is a quasi-isomorphism: this is the definition unwound, with the pre-analytic ring already given.\n- The canonical map $A[S]\\to\\mathcal A[S]$ $\\implies$ the contravariant derived Hom comparison map: this uses functoriality of precomposition and does not presuppose analyticity.\n- Testing only ordinary Hom in degree zero $\\implies$ does not make the derived comparison isomorphism free; ordinary Hom cannot see higher Ext and cannot replace the condition on complexes.\n- The original text's explanation identifying $\\operatorname{RHom}_{\\mathcal A}$ with $\\operatorname{RHom}_A$ directly carries a circularity risk: for a general pre-analytic ring the derived category of complete modules has not been set up, so this step is unverified and recorded as a gap; the test condition is better formulated first in the derived category of condensed $A$-modules.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#ad07bd38",
+      "notes": "v0.9.3#705376a3"
+     }
     }
    },
    "en_page": "nodes/def.analytic-ring.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "condensed",
    "regions": [
     "condensed"
@@ -47093,7 +47250,7 @@
     "凝聚态",
     "解析环"
    ],
-   "statement": "预解析环 $\\mathcal{A}$ 叫**解析环**，当且仅当：对任意复形\n\n$$C : \\cdots \\to C_i \\to \\cdots \\to C_1 \\to C_0 \\to 0$$\n\n（其中每个 $C_i$ 是若干 $\\mathcal{A}[T]$ 的直和，$T$ extremally disconnected），以及对任意 extremally disconnected 集 $S$，自然映射\n\n$$\\operatorname{RHom}_{\\mathcal{A}}\\bigl(\\mathcal{A}[S],\\ C\\bigr) \\longrightarrow \\operatorname{RHom}_{A}\\bigl(A[S],\\ C\\bigr)$$\n\n是同构。这里「自然映射」是**一个具体的映射**，不是修辞：它从 $\\mathcal{A}$ 那一边走到 $A$ 那一边，由「沿 $\\iota_S$ 复合」诱导。三步写清：\n\n1. **先有典范映射** $\\iota_S : A[S] \\to \\mathcal{A}[S]$ —— 把形式的有限和 $\\sum a_s s$ 送进自由完备模（预解析环的数据里自带这族映射，见 `def.pre-analytic-ring`）。\n2. **沿它拉回**：$\\operatorname{RHom}_A(-, C)$ 是反变函子，$\\iota_S$ 给出 $\\operatorname{RHom}_A(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$，规则是 $g \\mapsto g \\circ \\iota_S$。\n3. **左边换个写法**：$\\mathcal{A}[S]$ 是自由 $\\mathcal{A}$-模，所以 $\\mathcal{A}$-线性映射与「逐生成元给一个 $A$-线性映射」是一回事，于是 $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) = \\operatorname{RHom}_A(\\mathcal{A}[S], C)$ —— 同一个集合，只是记法不同。\n\n把 2、3 接起来，就是公式里那个箭头 $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$。",
+   "statement": "预解析环 $\\mathcal{A}$ 叫**解析环**，当且仅当：对任意复形\n\n$$C : \\cdots \\to C_i \\to \\cdots \\to C_1 \\to C_0 \\to 0$$\n\n（其中每个 $C_i$ 是若干 $\\mathcal{A}[T]$ 的直和，$T$ extremally disconnected），以及对任意 extremally disconnected 集 $S$，自然映射\n\n$$\\operatorname{RHom}_{\\mathcal{A}}\\bigl(\\mathcal{A}[S],\\ C\\bigr) \\longrightarrow \\operatorname{RHom}_{A}\\bigl(A[S],\\ C\\bigr)$$\n\n是同构。这里「自然映射」是**一个具体的映射**，不是修辞：它从 $\\mathcal{A}$ 那一边走到 $A$ 那一边，由「沿 $\\iota_S$ 复合」诱导。三步写清：\n\n1. **先有典范映射** $\\iota_S : A[S] \\to \\mathcal{A}[S]$ —— 把形式的有限和 $\\sum a_s s$ 送进自由完备模（预解析环的数据里自带这族映射，见 `def.pre-analytic-ring`）。\n2. **沿它拉回**：$\\operatorname{RHom}_A(-, C)$ 是反变函子，$\\iota_S$ 给出 $\\operatorname{RHom}_A(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$，规则是 $g \\mapsto g \\circ \\iota_S$。\n3. **左边换个写法（这一步有条件）**：当 $C$ 带有 $\\mathcal{A}$-模结构（即落在 (ii) 的像里）时，$\\mathcal{A}[S]$ 是自由 $\\mathcal{A}$-模，$\\mathcal{A}$-线性映射由生成元决定，于是有同构\n\n$$\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\cong \\operatorname{RHom}_A(\\mathcal{A}[S], C),$$\n\n这是伴随给出的同构，不是「同一个集合」。对一般的 $A$-模复形 $C$，左端还没有定义 ——「比较映射」正是定义里要检验的对象；把两者在导出层面直接识别，需要先建立完备模的导出范畴，本图未证（见注末的缺口说明）。\n\n把 2、3 接起来，就是公式里那个箭头 $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\to \\operatorname{RHom}_A(A[S], C)$。",
    "notes": "⭐ 读法：**「$\\mathcal{A}[S]$ 与普通自由模 $A[S]$ 在 $\\operatorname{RHom}$ 里无法区分」**。\n\n这正是固态群定义 (ii) 的相对版本；\n\n取 $A = \\mathbb{Z}$、$\\mathcal{A}[S] = Z[S]^{\\blacksquare}$ 就回到固态。\n\n⚠ 为什么要求**所有**这样的复形而不只是单个模？因为要得到导出范畴层面的结论（`thm.analytic-modules` (ii)），单点的同构不够，需要它对复形也成立。\n\n⭐ 判定「是不是解析环」通常靠 `prop.analytic-examples` 与 `thm.za-analytic` 这类具体定理，而不是逐条验证定义。\n\n**各方向用到的假设**（解析性是对整类复形的导出检验）：\n- 解析 $\\iff$ 所列所有复形与极端不连通 $S$ 的比较映射为拟同构：这是定义展开，前提已经给定预解析环。\n- 典范映射 $A[S]\\to\\mathcal A[S]$ $\\implies$ 反变的导出 Hom 比较映射：用预复合的函子性，不需要先假定解析性。\n- 只检验零次普通 Hom $\\implies$ 导出比较同构不免费；普通 Hom 看不到高次 Ext，不能替代对复形的条件。\n- 原文把 $\\operatorname{RHom}_{\\mathcal A}$ 与 $\\operatorname{RHom}_A$ 直接识别的解释有循环风险：一般预解析环尚未建立完备模导出范畴，该步未核实，记为缺口；检验条件宜先在底层凝聚态 $A$-模导出范畴表述。\n",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Definition 7.4"
@@ -47135,7 +47292,7 @@
     "解析环",
     "固态模"
    ],
-   "statement": "白话：解析环上的**固态模**（也就是**完备模**、$\\mathcal{A}$-完备模）就是那些「长得跟自由完备模 $\\mathcal{A}[S]$ 一模一样」的 $A$-模 —— 判别法只有一条：从 $\\mathcal{A}[S]$ 出发的线性映射不多不少等于 $S$ 上的「函数」。\n\n下面这个全子范畴把它们挑出来，并说明它们能像普通模范畴那样做同调代数。\n\n设 $\\mathcal{A}$ 是解析环。考虑全子范畴\n\n$$\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}} \\subset \\operatorname{Mod}^{\\mathrm{cond}}_{A}$$\n\n由所有满足「$\\operatorname{Hom}_{A}(\\mathcal{A}[S], M) \\to M(S)$ 对一切 extremally disconnected $S$ 是同构（⚠ 这里必须是 $\\operatorname{Hom}_{A}$，不能写 $\\operatorname{Hom}_{\\mathcal{A}}$ ——后者要先用 $\\mathcal{A}$-模这个**正在被定义**的子范畴，是循环的）」的 $A$-模 $M$ 组成。则：\n\n**(i)** 它是阿贝尔范畴，对一切极限、余极限与扩张稳定；$\\mathcal{A}[S]$ 构成一族紧投射生成元；含入有左伴随\n\n$$M \\longmapsto M \\otimes_{\\mathcal{A}} \\mathcal{A},$$\n\n它是 $A[S] \\mapsto \\mathcal{A}[S]$ 的唯一保余极限延拓。若 $A$ 交换，$\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ 上有唯一的对称幺半张量积 $\\otimes_{\\mathcal{A}}$。\n\n**(ii)** $D(\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}) \\to D(\\operatorname{Mod}^{\\mathrm{cond}}_{A})$ 全忠实，像由那些「$\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\cong \\operatorname{RHom}_{A}(A[S], C)$」的复形组成；\n\n$C$ 在像里当且仅当所有 $H^i(C)$ 在 $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ 里。\n\n含入有左伴随 $C \\mapsto C \\otimes^{L}_{\\mathcal{A}} \\mathcal{A}$。",
+   "statement": "白话：解析环上的**固态模**（也就是**完备模**、$\\mathcal{A}$-完备模）就是那些「长得跟自由完备模 $\\mathcal{A}[S]$ 一模一样」的 $A$-模 —— 判别法只有一条：从 $\\mathcal{A}[S]$ 出发的线性映射不多不少等于 $S$ 上的「函数」。\n\n下面这个全子范畴把它们挑出来，并说明它们能像普通模范畴那样做同调代数。\n\n设 $\\mathcal{A}$ 是解析环。考虑全子范畴\n\n$$\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}} \\subset \\operatorname{Mod}^{\\mathrm{cond}}_{A}$$\n\n由所有满足「$\\operatorname{Hom}_{A}(\\mathcal{A}[S], M) \\to M(S)$ 对一切 extremally disconnected $S$ 是同构（⚠ 这里必须是 $\\operatorname{Hom}_{A}$，不能写 $\\operatorname{Hom}_{\\mathcal{A}}$ ——后者要先用 $\\mathcal{A}$-模这个**正在被定义**的子范畴，是循环的）」的 $A$-模 $M$ 组成。则：\n\n**(i)** 它是阿贝尔范畴，对一切极限、余极限与扩张稳定；$\\mathcal{A}[S]$ 构成一族紧投射生成元；含入有左伴随\n\n$$M \\longmapsto M \\otimes_{A} \\mathcal{A},$$\n\n它是 $A[S] \\mapsto \\mathcal{A}[S]$ 的唯一保余极限延拓。若 $A$ 交换，$\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ 上有唯一的对称幺半张量积 $\\otimes_{\\mathcal{A}}$。\n\n**(ii)** $D(\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}) \\to D(\\operatorname{Mod}^{\\mathrm{cond}}_{A})$ 全忠实，像由那些「$\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C) \\cong \\operatorname{RHom}_{A}(A[S], C)$」的复形组成；\n\n$C$ 在像里当且仅当所有 $H^i(C)$ 在 $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ 里。\n\n含入有左伴随 $C \\mapsto C \\otimes^{L}_{A} \\mathcal{A}$。",
    "notes": "⭐ 这是 `thm.solid-abelian` 的相对版本：把 $\\mathbb{Z}$ 换成任意解析环。\n\n**固态模**就是 $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ 的对象，$D(\\mathcal{A}) := D(\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}})$ 就是「$\\mathcal{A}$ 上固态模的导出范畴」。\n\n⭐ 三个叫法指同一件事：**固态模 = 完备模 = $\\mathcal{A}$-完备模**。\n\n叫「完备模」是因为它是相对自由完备模 $\\mathcal{A}[S]$ 补全出来的，和「拓扑上把 Cauchy 列补全」无关。\n\n⭐ 证明就是 `lem.solid-completion-criterion` 的第二次应用：解析环的定义正好是那条判据的假设。\n\n⚠ 原文留了一个警告：$\\otimes^{L}_{\\mathcal{A}}$ 未必是 $\\otimes_{\\mathcal{A}}$ 的左导出（已知例子都成立）。\n\n这一点不影响这里的用法。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Proposition 7.5"
@@ -47148,23 +47305,35 @@
    "title": "命题：解析环映射给出 $-\\otimes_{\\mathcal{A}}\\mathcal{B}$（Prop 7.7）",
    "label_en": "base change for analytic rings",
    "title_en": "base change for analytic rings",
+   "statement_en": "Let $f : \\mathcal{A} \\to \\mathcal{B}$ be a map between analytic rings (that is, a map of condensed rings such that each $\\mathcal{B}[S]$ lies in $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ as an $A$-module). Then:\n\n**(i)** the composite functor $\\operatorname{Mod}^{\\mathrm{cond}}_{A} \\xrightarrow{-\\otimes_{A} B} \\operatorname{Mod}^{\\mathrm{cond}}_{B} \\xrightarrow{-\\otimes_{\\mathcal{B}}\\mathcal{B}} \\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{B}}$ factors through $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$, written\n\n$$M \\longmapsto M \\otimes_{\\mathcal{A}} \\mathcal{B} : \\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}} \\longrightarrow \\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{B}}.$$\n\n**(ii)** the derived version $C \\mapsto C \\otimes^{L}_{\\mathcal{A}} \\mathcal{B}$ is its left derived functor.",
+   "notes_en": "⭐ This makes $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$ functorial in $\\mathcal{A}$: changing the analytic ring is base change.\n\n⭐ The proof is short: by the definition of the map, $\\mathcal{B}[S]$ already lies in $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{A}}$, and these are compact projective generators, so all of $\\operatorname{Mod}^{\\mathrm{cond}}_{\\mathcal{B}}$ lands inside.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#acbea9f7",
+      "notes": "v0.9.3#253a9a90"
+     }
     }
    },
    "en_page": "nodes/prop.analytic-base-change.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "condensed",
    "regions": [
     "condensed"
@@ -47189,23 +47358,35 @@
    "title": "命题：$\\mathbb{Z}_{p,\\blacksquare}$ 与 $(A,\\mathbb{Z})_\\blacksquare$ 是解析环（Prop 7.9）",
    "label_en": "examples of analytic rings",
    "title_en": "examples of analytic rings",
+   "statement_en": "The following pre-analytic rings are analytic rings:\n\n**(i)** $\\mathbb{Z}_{p,\\blacksquare}$ (the $p$-adic solid ring);\n\n**(ii)** for any discrete ring $A$, $(A, \\mathbb{Z})_\\blacksquare$, whose free module is\n\n$$(A,\\mathbb{Z})_\\blacksquare[S] = Z[S]^{\\blacksquare} \\otimes_{\\mathbb{Z}} A.$$",
+   "notes_en": "⭐ (i) and (ii) in fact share one proof: in both cases one has\n\n$$\\mathcal{A}[S] = \\mathbb{Z}_\\blacksquare[S] \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} \\mathcal{A},$$\n\nand $C$ is, in $D(\\mathbf{Solid})$, an $\\mathcal{A}$-module, so\n\n$$\\operatorname{RHom}(\\mathbb{Z}_\\blacksquare[S], C) \\cong \\operatorname{RHom}_{\\mathcal{A}}(\\mathbb{Z}_\\blacksquare[S] \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} \\mathcal{A},\\ C),$$\n\nThe left-hand side is $\\operatorname{RHom}(\\mathbb{Z}[S], C)$ ($C$ solid), and the right-hand side is $\\operatorname{RHom}_{\\mathcal{A}}(\\mathcal{A}[S], C)$.\n\n⚠ $A$ must be **discrete**: for a general condensed ring the claim fails, which is also why `thm.za-analytic` needs \"finitely generated $\\mathbb{Z}$-algebra\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#4c03b9c1",
+      "notes": "v0.9.3#bfcc3465"
+     }
     }
    },
    "en_page": "nodes/prop.analytic-examples.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "condensed",
    "regions": [
     "condensed"
@@ -47230,23 +47411,35 @@
    "title": "定理：$A$ 有限生成 $\\mathbb{Z}$-代数 $\\implies$ $A_\\blacksquare$ 是解析环（Thm 8.1）",
    "status": "skeleton",
    "title_en": "analytic rings from finitely generated algebras",
+   "statement_en": "Let $A$ be a finitely generated $\\mathbb{Z}$-algebra and $A_\\blacksquare$ the pre-analytic ring whose free module is\n\n$$A_\\blacksquare[S] := \\varprojlim_i A[S_i] \\qquad (S = \\varprojlim_i S_i)$$\n\n(that is, the $A$-valued measure $M(S,A)$). Then $A_\\blacksquare$ is an analytic ring, and the forgetful functor\n\n$$j^* : D(A_\\blacksquare) \\hookrightarrow D((A,\\mathbb{Z})_\\blacksquare)$$\n\nhas a left adjoint $j^* = -\\otimes^{L}_{(A,\\mathbb{Z})_\\blacksquare} A_\\blacksquare$, which in turn has a left adjoint\n\n$$j_! : D(A_\\blacksquare) \\longrightarrow D((A,\\mathbb{Z})_\\blacksquare),$$\n\nsatisfying $j_! j^* M = M \\otimes_{(A,\\mathbb{Z})_\\blacksquare} j_! A$.",
+   "notes_en": "⭐ This is Clausen–Scholze, Lectures on Condensed Mathematics, Lecture VIII, Theorem 8.1. It is the first analytic ring in the graph that covers a genuine geometric object: for $A=\\mathbb{Z}[T]$, $A_\\blacksquare$ is the coefficient ring of \"solid modules over $\\mathbb{Z}[T]$\", and the coherent duality that follows (`thm.coherent-duality`) rests entirely on it.\n\n**The real size of the proof.** The full proof is the content of the first few sections of Lecture VIII and cannot fit into a single edge. The core route for $A=\\mathbb{Z}[T]$ is:\n\n① Set $A_\\infty:=\\mathbb{Z}((T^{-1}))$ and view it as \"functions on $\\operatorname{Spec} A$ at infinity\"; there is a short exact sequence\n\n$$0\\to \\mathbb{Z}[[U]]\\otimes_{\\mathbb{Z}} A \\xrightarrow{1-\\mathrm{shift}\\otimes T} \\mathbb{Z}[[U]]\\otimes_{\\mathbb{Z}} A \\to A_\\infty \\to 0 .$$\n\n② By ①, $A_\\infty$ is compact projective (the first two terms are of the form $\\prod_I \\mathbb{Z}\\otimes A$), and idempotent: $A_\\infty\\otimes^{L}_{A}A_\\infty\\cong A_\\infty$.\n\n③ By ②, $\\operatorname{RHom}_A(A_\\infty,C)=0$, where $C$ is built from direct sums of $\\prod_I A$.\n\n④ Analyticity: the category of solid modules over $A_\\blacksquare$ corresponds to the subcategory of complexes satisfying $\\operatorname{RHom}_A(A_\\infty,C)=0$ (this is the working form of the definition of an analytic ring).\n\n⑤ Existence of $j_!$: use $\\operatorname{coker}\\bigl(\\prod_I \\mathbb{Z}\\otimes A\\to\\prod_I A\\bigr)$ to construct $j_!A$, then use presentability / the adjoint functor theorem to extend $j_!$ to the whole derived category.\n\n⑥ General finitely generated $A$: by Noether normalisation find a polynomial ring $R=\\mathbb{Z}[X_1,\\ldots,X_n]$ and a finite injection $R\\to A$, and identify $A_\\blacksquare$ with $(A,R)_\\blacksquare$ at the derived level.\n\n⑦ The projection formula $j_!j^*M\\cong M\\otimes_{A_\\blacksquare}j_!A$ follows formally from $j_!\\dashv j^*$.\n\n**Gaps in the graph (item by item; the node therefore remains skeleton).**\n\n(i) Foundations: the definitions and functoriality of $D((A,\\mathbb{Z})_\\blacksquare)$ and $A_\\blacksquare$ are only cited in the graph (`def.pre-analytic-ring`, `def.analytic-ring`), not proved item by item.\n\n(ii) Compact projectivity in ② needs the sentence \"$\\prod_I\\mathbb{Z}\\cong\\mathbb{Z}[\\beta I]$, with $\\beta I$ extremally disconnected compact, hence $\\mathbb{Z}[\\beta I]$ is compact projective\"; the graph has no node for \"compact projective generator / $\\beta I$\".\n\n(iii) Idempotence in ②: the edge says \"compute directly\", but the required derived completion and the derived Sant lemma are not developed.\n\n(iv) The \"acyclicity\" of the two-term complex in ③ requires the middle map $f$ to be an **isomorphism**, not merely injective; the edge flags this but does not prove it.\n\n(v) Existence of $j_!$ in ⑤ relies on presentable functors / the adjoint functor theorem; the graph has no node for this.\n\n(vi) Noether normalisation in ⑥ only gives the idea: what must be proved is that $A_\\blacksquare$ and $(A,R)_\\blacksquare$ agree at the level of derived categories, not a one-line \"reduction\".\n\n(vii) The projection formula in ⑦ requires ⑤ to be completed first.\n\n⚠ Thus this node is still marked skeleton. The edge `imp.za-analytic` is a **road map plus key computations**, not a verbatim proof; do not cite it as an established fact.\n\n⭐ Relation to geometry: for $A=\\mathbb{Z}[T]$, $A_\\blacksquare$ corresponds to a kind of \"neighbourhood at infinity\" of $\\mathbb{A}^1$, with $A_\\infty$ the functions on its boundary; this theorem is the entry point for \"making the derived completion of an affine scheme into an analytic ring\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#dec0a246",
+      "notes": "v0.9.3#b39022e6"
+     }
     }
    },
    "en_page": "nodes/thm.za-analytic.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "condensed",
    "regions": [
     "condensed"
@@ -47270,25 +47463,38 @@
    "type": "theorem",
    "label": "仿射相干对偶",
    "title": "定理：仿射相干对偶（Thm 8.2）",
+   "status": "skeleton",
    "label_en": "affine coherent duality",
    "title_en": "affine coherent duality",
+   "statement_en": "Let $A$ be a finitely generated $\\mathbb{Z}$-algebra and $f : \\operatorname{Spec} A \\to \\operatorname{Spec} \\mathbb{Z}$ the structure map (projecting the spectrum of the coefficient ring down). Define\n\n$$f_! : D(A_\\blacksquare) \\xrightarrow{j_!} D((A,\\mathbb{Z})_\\blacksquare) \\longrightarrow D(\\mathbb{Z}_\\blacksquare).$$\n\nThen $f_!$ preserves all direct sums and preserves compact objects, and satisfies the **projection formula**\n\n$$f_!\\bigl((M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} A_\\blacksquare) \\otimes^{L}_{A_\\blacksquare} N\\bigr) \\cong M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} f_! N,$$\n\nwhere $M \\in D(\\mathbb{Z}_\\blacksquare)$ and $N \\in D(A_\\blacksquare)$. The functor $f_!$ has a right adjoint\n\n$$f^! : D(\\mathbb{Z}_\\blacksquare) \\longrightarrow D(A_\\blacksquare), \\qquad f^! M = (M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} A_\\blacksquare) \\otimes^{L}_{A_\\blacksquare} f^! \\mathbb{Z},$$\n\nwhich preserves direct sums; $f^! \\mathbb{Z} \\in D(A_\\blacksquare)$ is a bounded complex of finitely generated discrete $A$-modules.\n\nIf $f$ is a **complete intersection** (locally $A$ is obtained from $R$ by modding out a regular sequence, i.e. \"the cut is clean and there are no superfluous relations\"), then $f^!\\mathbb{Z}$ is invertible in $D(A)$ (locally it is a line bundle in some degree).",
+   "notes_en": "⭐ This is the \"affine model\" of Grothendieck's coherent duality: $f_!$ is **cohomology with compact support**, $f^!$ is the **dualising complex**, and both the projection formula and Serre duality follow formally from the adjunction.\n\n⭐ Difference from the classical approach: in classical coherent duality, $f_!$ in the affine case can only be manufactured artificially out of \"formal functions\";\n\nhere $f_!$ is a direct consequence of the adjunction pair ($j_! \\dashv j^*$), and it **does not preserve discrete objects** — exactly the gain of the condensed method.\n\n⚠ The identification of $f^!\\mathbb{Z}$ with the classical dualising complex $\\omega_A$ must be proved in the framework of `thm.za-analytic` (Lecture XI of the original).\n\n⚠ This conclusion is conditional on `thm.za-analytic` (still a skeleton); no complete proof is given here.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#1d53a34c",
+      "notes": "v0.9.3#8cbbb3c4"
+     }
     }
    },
    "en_page": "nodes/thm.coherent-duality.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "condensed",
    "regions": [
     "condensed"
@@ -47301,7 +47507,7 @@
     "相干对偶"
    ],
    "statement": "设 $A$ 是有限生成 $\\mathbb{Z}$-代数，$f : \\operatorname{Spec} A \\to \\operatorname{Spec} \\mathbb{Z}$ 是结构映射（把系数环的谱投下来）。定义\n\n$$f_! : D(A_\\blacksquare) \\xrightarrow{j_!} D((A,\\mathbb{Z})_\\blacksquare) \\longrightarrow D(\\mathbb{Z}_\\blacksquare).$$\n\n则 $f_!$ 保一切直和、保紧对象，并满足**投影公式**\n\n$$f_!\\bigl((M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} A_\\blacksquare) \\otimes^{L}_{A_\\blacksquare} N\\bigr) \\cong M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} f_! N,$$\n\n其中 $M \\in D(\\mathbb{Z}_\\blacksquare)$、$N \\in D(A_\\blacksquare)$。函子 $f_!$ 有右伴随\n\n$$f^! : D(\\mathbb{Z}_\\blacksquare) \\longrightarrow D(A_\\blacksquare), \\qquad f^! M = (M \\otimes^{L}_{\\mathbb{Z}_\\blacksquare} A_\\blacksquare) \\otimes^{L}_{A_\\blacksquare} f^! \\mathbb{Z},$$\n\n它保直和；$f^! \\mathbb{Z} \\in D(A_\\blacksquare)$ 是有限生成离散 $A$-模的有界复形。\n\n若 $f$ 是**完全交**（complete intersection：局部上 $A$ 由 $R$ 再模掉一个正则序列得到，即「切口干净、没有多余的关系」），则 $f^!\\mathbb{Z}$ 在 $D(A)$ 里可逆（局部是某个次数上的一条线丛）。",
-   "notes": "⭐ 这就是 Grothendieck 相干对偶的「仿射模型」：$f_!$ 是**紧支撑上同调**，$f^!$ 是**对偶复形**，投影公式与 Serre 对偶都由伴随形式地推出。\n\n⭐ 与经典做法的区别：经典相干对偶里 $f_!$ 在仿射情形只能靠「形式函数」硬造；\n\n这里 $f_!$ 是一对伴随（$j_! \\dashv j^*$）的直接产物，而且**不保持离散对象** —— 这正是凝聚态方法的收益。\n\n⚠ $f^!\\mathbb{Z}$ 与经典对偶复形 $\\omega_A$ 的等同要在 `thm.za-analytic` 的框架里证（原文 Lecture XI）。",
+   "notes": "⭐ 这就是 Grothendieck 相干对偶的「仿射模型」：$f_!$ 是**紧支撑上同调**，$f^!$ 是**对偶复形**，投影公式与 Serre 对偶都由伴随形式地推出。\n\n⭐ 与经典做法的区别：经典相干对偶里 $f_!$ 在仿射情形只能靠「形式函数」硬造；\n\n这里 $f_!$ 是一对伴随（$j_! \\dashv j^*$）的直接产物，而且**不保持离散对象** —— 这正是凝聚态方法的收益。\n\n⚠ $f^!\\mathbb{Z}$ 与经典对偶复形 $\\omega_A$ 的等同要在 `thm.za-analytic` 的框架里证（原文 Lecture XI）。\n\n⚠ 本结论条件于 `thm.za-analytic`（仍 skeleton），本图不展开完整证明。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VIII, Theorem 8.2"
    ]
@@ -47311,6 +47517,7 @@
    "type": "proposition",
    "label": "R_{ℓ¹} 不是解析环",
    "title": "命题：$\\mathbb{R}_{\\ell^1}$ 不是解析环（Ribe 扩张）",
+   "status": "skeleton",
    "title_en": "the l1-solidification is not an analytic ring",
    "translations": {
     "en": {
@@ -47342,7 +47549,7 @@
     "反例"
    ],
    "statement": "设 $\\mathbb{R}_{\\ell^1}$ 是如下预解析环：下垫凝聚态环为 $\\mathbb{R}$，对 extremally disconnected 集 $S$ 令\n\n$$\\mathbb{R}_{\\ell^1}[S] := M_b(S, \\mathbb{R})$$\n\n为**有界** $\\mathbb{R}$ 值测度（拓扑对偶于 Banach 空间 $C(S,\\mathbb{R})$），即 $\\ell^1$-范数下补全出来的那一个（把「有限和」补成「可数绝对收敛和」）。则对无限 extremally disconnected 集 $S$，\n\n$$\\operatorname{Ext}^1_{\\mathbb{R}}\\bigl(\\mathbb{R}_{\\ell^1}[S],\\ \\mathbb{R}_{\\ell^1}[S]\\bigr) \\ne 0.$$\n\n因此 $\\mathbb{R}_{\\ell^1}$ **不是**解析环。",
-   "notes": "⭐ 这条是整套理论的**边界标记**：固态/解析的好性质在阿基米德方向（$\\ell^1$ 补全）失效。\n\n$p$-进方向可以，实数方向不行 —— 这正是 Clausen–Scholze 后来要另做“analytic stacks / liquid modules”的动机。\n\n\n\n⭐ 非零的 $\\operatorname{Ext}^1$ 类与**熵函数** $(x_i) \\mapsto \\sum_i x_i \\log|x_i|$ 有关：Ribe 的扩张定理给出一个典范自扩张\n\n$$0 \\to \\mathbb{R}_{\\ell^1}[S] \\to E \\to \\mathbb{R}_{\\ell^1}[S] \\to 0,$$\n\n其中 $E$ 的「$\\le r$ 部分」同时约束 $\\sum |x_i|$ 与 $\\sum |y_i - x_i \\log|x_i||$。\n\n⚠ 这条不证明，只引 Ribe（1979）与原文 Remark 7.11–Prop 7.12。",
+   "notes": "⭐ 这条是整套理论的**边界标记**：固态/解析的好性质在阿基米德方向（$\\ell^1$ 补全）失效。\n\n$p$-进方向可以，实数方向不行 —— 这正是 Clausen–Scholze 后来要另做“analytic stacks / liquid modules”的动机。\n\n\n\n⭐ 非零的 $\\operatorname{Ext}^1$ 类与**熵函数** $(x_i) \\mapsto \\sum_i x_i \\log|x_i|$ 有关：Ribe 的扩张定理给出一个典范自扩张\n\n$$0 \\to \\mathbb{R}_{\\ell^1}[S] \\to E \\to \\mathbb{R}_{\\ell^1}[S] \\to 0,$$\n\n其中 $E$ 的「$\\le r$ 部分」同时约束 $\\sum |x_i|$ 与 $\\sum |y_i - x_i \\log|x_i||$。\n\n⚠ 本图不证 Ribe 定理（只引 Ribe 1979 与原文 Remark 7.11–Prop 7.12），结论条件于该外部结果。",
    "refs": [
     "Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Example 7.11 and Proposition 7.12"
    ]
@@ -52877,23 +53084,35 @@
    "title": "主曲率与主方向",
    "label_en": "Principal Curvatures",
    "title_en": "Principal Curvatures",
+   "statement_en": "The eigenvalues of $W$ (equivalently, of the symmetric matrix $(h_{ij})$) are called the **principal curvatures**, denoted $k_{1} \\ge k_{2}$; the corresponding unit eigen-directions are called **principal directions**. They are given by the characteristic equation:\n\n$$\\det(h_{ij}-k\\,g_{ij}) = 0,\\qquad \\det(W-k\\,\\mathrm{id}) = 0 .$$\n\nIn an orthonormal frame $g_{ij} = \\delta_{ij}$, the characteristic polynomial is $k^{2}-2Hk+K$, where $H = \\tfrac{1}{2}\\operatorname{tr}W$ and $K = \\det W$.",
+   "notes_en": "**Why eigenvalues**: $k_{n}$ is the Rayleigh quotient of $W$; extremal points on the unit circle satisfy $II(v,\\cdot) = k\\,I(v,\\cdot)$, i.e. $W(\\mathrm{d}r(v)) = k\\,\\mathrm{d}r(v)$ (Lagrange multipliers), and the extremal values are the eigenvalues — this is exactly the statement that \"the directions of extremal value are eigen-directions of $W$\".\n\n**Principal directions are orthogonal**: eigenvectors of a real symmetric matrix belonging to distinct eigenvalues are orthogonal (spectral theorem). The same conclusion follows from the Rayleigh quotient together with variations; the treatment here uses the spectral theorem directly.\n\n**Two characteristic equations**: $\\det(W-kI) = 0$ and $\\det(h-kg) = 0$ agree in an orthonormal frame; in a parameter net $\\{r_{u}, r_{v}\\}$ one must carry $g = \\begin{pmatrix} E & F \\\\ F & G \\end{pmatrix}$, so $g$ cannot be omitted.\n\n⚠️ $k_{1}, k_{2}$ depends on the choice of $n$ (all signs change under $n \\mapsto -n$), but \"$k_{1} = k_{2}$\" (umbilic point) and $K = k_{1}k_{2}$ are independent of the choice.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#48b0488f",
+      "notes": "v0.9.3#f6ba02ef"
+     }
     }
    },
    "en_page": "nodes/def.principal-curvature.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -58111,23 +58330,35 @@
    "label": "调和函数的均值性质",
    "title": "定理：调和函数的均值性质",
    "title_en": "mean value property of harmonic functions",
+   "statement_en": "**In plain words**: the value of a harmonic function at a point equals its average over the circle centred at that point of any radius; it also equals the area average over the disc.\n\nLet $u$ be harmonic on $B(a, R)$, $0 < r < R$. Then\n\n$$u(a) = \\frac{1}{2\\pi}\\int_0^{2\\pi} u(a + r e^{i\\theta})\\,\\mathrm{d}\\theta,$$\n\nand (area average)\n\n$$u(a) = \\frac{1}{\\pi r^2}\\iint_{B(a, r)} u(x, y)\\,\\mathrm{d}x\\,\\mathrm{d}y.$$",
+   "notes_en": "⭐ The proof has only two steps: write $u$ as the real part of a holomorphic function $f$ (the disc is simply connected), then take real parts on both sides of the Cauchy integral formula $f(a) = \\frac{1}{2\\pi}\\int_0^{2\\pi} f(a + r e^{i\\theta})\\,\\mathrm{d}\\theta$.\n\n⭐ The converse also holds: if $u$ is continuous and has the circle mean property, then $u$ is harmonic. So the \"mean property\" can serve as another definition of harmonic function — many books do exactly this, to avoid second-order differentiability.\n\n⚠ The mean must be taken over the **whole circle**, not just the few points straight above; nor over an arbitrary closed curve — that is precisely what the Poisson formula answers.\n\n⚠ $u$ need only be harmonic in the **interior** of $B(a, r)$; it is not required to be harmonic on the closed disc.\n\n📌 The mean property immediately yields the maximum principle (see the entry on the maximum principle for harmonic functions), and it is also the starting point for \"holomorphic functions are real-analytic\" (expand the integral into a power series).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#abcb117b",
+      "notes": "v0.9.3#f7ad2833"
+     }
     }
    },
    "en_page": "nodes/thm.harmonic-mean-value.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -59454,23 +59685,35 @@
    "label": "绕数的积分表示",
    "title": "绕数 = dz/(z−a) 的围道积分除以 2πi",
    "title_en": "integral formula for the winding number",
+   "statement_en": "Let $\\gamma : [0,1] \\to \\mathbb{C}$ be a piecewise $C^{1}$ closed curve and $a \\notin \\gamma([0,1])$. Then\n\n$$n(\\gamma, a) = \\frac{1}{2\\pi i} \\oint_{\\gamma} \\frac{\\mathrm{d}z}{z - a},$$\n\nIn particular the right-hand side is **always an integer**.",
+   "notes_en": "**Proof**: first translate $a$ to $0$ (translation does not change the integral). Set $\\varphi(t) := \\displaystyle\\int_{0}^{t} \\frac{\\gamma'(s)}{\\gamma(s)}\\,\\mathrm{d}s$; then $(\\gamma e^{-\\varphi})' = e^{-\\varphi}(\\gamma' - \\varphi'\\gamma) = 0$, so $\\gamma(t) e^{-\\varphi(t)}$ is constant;\n\nfrom $\\varphi(0) = 0$ we get $e^{\\varphi(t)} = \\gamma(t)/\\gamma(0)$.\n\nTake $t = 1$: since $\\gamma(1) = \\gamma(0)$, we have $e^{\\varphi(1)} = 1$, hence $\\varphi(1) \\in 2\\pi i \\mathbb{Z}$. Now $\\varphi(1) = \\oint_{\\gamma} \\mathrm{d}z/z$, so the integral divided by $2\\pi i$ is an integer; it varies continuously with $a$, hence is exactly the winding number (integer-valued + continuous $\\implies$ locally constant).\n\n⭐ **Meaning of the formula**: the winding number was originally the geometric phrase \"how many times the curve turns around the point\"; here it becomes an **integral**, so a \"geometric quantity\" can enter computations — the argument principle uses it to count zeros.\n\n⚠️ The value of the integral is independent of the parametrisation of $\\gamma$ and depends only on orientation: going around the other way changes the sign of the winding number.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#7fddbb28",
+      "notes": "v0.9.3#10496724"
+     }
     }
    },
    "en_page": "nodes/prop.winding-integral.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -59727,23 +59970,35 @@
    "title": "Arzelà–Ascoli 定理：一致有界 + 等度连续 $\\implies$ 相对紧",
    "label_en": "Arzelà–Ascoli theorem",
    "title_en": "Arzelà–Ascoli theorem",
+   "statement_en": "Let $X$ be a compact metric space, and let $\\mathcal{F} \\subset C(X)$ (continuous functions with the sup norm) satisfy\n\n1. **Uniformly bounded**: there exists $M$ such that $|f(x)| \\le M$ for all $f \\in \\mathcal{F}$, $x \\in X$;\n2. **Equicontinuous**: for every $\\forall \\varepsilon > 0$ there exists $\\delta > 0$ such that $d(x, y) < \\delta$ implies $|f(x) - f(y)| < \\varepsilon$ for **all** $f \\in \\mathcal{F}$ simultaneously.\n\nThen $\\mathcal{F}$ is **relatively compact** in $C(X)$: every sequence in $\\mathcal{F}$ has a subsequence converging in the sup norm.",
+   "notes_en": "**Proof (diagonal argument)**: since $X$ is compact, $\\implies$ one may take a countable dense set $\\{x_{1}, x_{2}, \\ldots\\}$. By uniform boundedness, $\\{f_{n}(x_{1})\\}$ has a convergent subsequence; from it choose a subsequence for which $\\{f_{n}(x_{2})\\}$ converges; continuing layer by layer and taking the diagonal $g_{k} := f_{n_{k}}$, we get that $g_{k}(x_{j})$ converges for every $j$.\n\n**Upgrading pointwise convergence to uniform convergence**: given $\\varepsilon$, use equicontinuity to choose $\\delta$; cover $x_{1}, \\ldots, x_{N}$ by finitely many $\\delta$-balls $X$.\n\nFirst take $K$ such that $j \\le N$ implies $|g_{k}(x_{j}) - g_{l}(x_{j})| < \\varepsilon$ ($k, l \\ge K$), then for arbitrary $x$ choose the nearest $x_{j}$ and use equicontinuity to bound $|g_{k}(x) - g_{l}(x)|$ by $3\\varepsilon$.\n\n∎\n\n⭐ **Each hypothesis governs one thing**: boundedness guarantees \"at each point there is a convergent subsequence\", while equicontinuity guarantees \"the same subsequence converges at all points simultaneously\". Dropping either one gives a counterexample ($f_{n}(x) = x^{n}$ is bounded but not equicontinuous; $f_{n}(x) = n$ is equicontinuous but not uniformly bounded).\n\n⚠️ The graph attaches this to complex analysis because Montel's theorem is exactly it plus Cauchy's inequality: for holomorphic functions, **uniform boundedness automatically gives equicontinuity** (through bounds on the derivative) — a convenience unique to complex analysis.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#dc9be25c",
+      "notes": "v0.9.3#dc242eaa"
+     }
     }
    },
    "en_page": "nodes/thm.arzela-ascoli.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex",
@@ -59772,23 +60027,35 @@
    "title": "Montel 定理：局部一致有界的全纯族是正规族",
    "label_en": "Montel's theorem",
    "title_en": "Montel's theorem",
+   "statement_en": "Let $\\mathcal{F}$ be a family of holomorphic functions on a domain $\\Omega$ that is **locally uniformly bounded**: every point has a neighbourhood on which the family is uniformly bounded (equivalently: uniformly bounded on every compact set $K \\subset \\Omega$). Then $\\mathcal{F}$ is a **normal family**: every sequence $f_{n} \\in \\mathcal{F}$ has a subsequence converging uniformly on compact subsets (with holomorphic limit).",
+   "notes_en": "**Proof**: take a compact exhaustion $K_{1} \\subset K_{2} \\subset \\cdots$, $\\bigcup K_{j} = \\Omega$. On $K_{j}$, by the **Cauchy inequality**: if $|f| \\le M_{j}$ throughout a neighbourhood of $K_{j}$ of radius $r$, then $|f'| \\le M_{j}/r$ on $K_{j}$ — the bound is independent of $f$, so $\\mathcal{F}$ is **equicontinuous** on $K_{j}$.\n\nUniform boundedness is supplied by hypothesis, so `thm.arzela-ascoli` gives a convergent subsequence on $K_{j}$;\n\ntaking diagonals successively over $j = 1, 2, \\ldots$ yields a subsequence converging uniformly on **every** $K_{j}$, i.e. uniformly on compact subsets.\n\n**The limit is holomorphic**: by `thm.weierstrass-convergence`. ∎\n\n⭐ **Relation to compactness**: Montel says \"$\\mathcal{F}$ is relatively compact\", so every **continuous** functional (e.g. $f \\mapsto |f'(z_{0})|$) attains its maximum on a bounded closed family. The whole strength of the Riemann mapping theorem comes from this one sentence: among the family with \"univalent + $f(z_{0}) = 0$ + $f'(z_{0}) > 0$\", take the one maximising $f'(z_{0})$, then prove it must map onto the disc.\n\n⚠️ \"Locally uniformly bounded\" cannot be weakened to \"pointwise bounded\": $f_{n}(z) = n z$ is pointwise bounded on $\\mathbb{C}$ (constant at each point) but not uniformly bounded on any compact set, and has no locally uniformly convergent subsequence.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#8b89fef9",
+      "notes": "v0.9.3#399cea64"
+     }
     }
    },
    "en_page": "nodes/thm.montel.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -62983,23 +63250,35 @@
    "label": "整数的带余除法",
    "title": "带余除法：商与余数，余数小于除数",
    "title_en": "division with remainder for integers",
+   "statement_en": "Let $a, b \\in \\mathbb{Z}$ with $b \\ne 0$. Then there exist **unique** $q, r \\in \\mathbb{Z}$ such that\n\n$$a = qb + r, \\qquad 0 \\le r < |b| .$$\n\n$q$ is called the **quotient** and $r$ the **remainder**.",
+   "notes_en": "Uniqueness: if $a = qb + r = q'b + r'$, then $(q - q')b = r' - r$, hence $|b| \\mid |r' - r|$; but $|r' - r| < |b|$, so necessarily $r' = r$, and then $q' = q$.\n\nExistence uses the well-ordering of $\\mathbb{Z}$: fix $b > 0$; the set $\\{\\, a - qb : q \\in \\mathbb{Z},\\ a - qb \\ge 0 \\,\\}$ is nonempty (Archimedean property), and its least element is $r$; if $r \\ge b$ then $r - b$ is smaller, a contradiction.\n\nThe corresponding theorem on $K[x]$ is `thm.division-algorithm`: the same proof structure, only \"degree\" is replaced by \"absolute value\" — both are Euclidean domains.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#26e6a9ce",
+      "notes": "v0.9.3#c9ab3c4c"
+     }
     }
    },
    "en_page": "nodes/thm.int-division.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "number",
    "regions": [
     "number"
@@ -65575,7 +65854,7 @@
     "内积"
    ],
    "statement": "**在做什么**：复数域上，光是转置不够 —— 内积对第二个变元是共轭线性的，所以「搬 $A$ 到另一边」时要连共轭一起搬。于是有了共轭转置。\n\n设 $A \\in M_{m\\times n}(\\mathbb{C})$。**共轭转置**（也叫**伴随矩阵**）是\n\n$$A^{*} := \\overline{A}^{T} = \\bigl(\\overline{A^{T}}\\bigr), \\qquad (A^{*})_{ij} := \\overline{a_{ji}} .$$\n\n性质：$(A+B)^{*} = A^{*} + B^{*}$、$(cA)^{*} = \\overline{c}\\,A^{*}$、$(AB)^{*} = B^{*}A^{*}$、$(A^{*})^{*} = A$。\n\n**与内积的关系（这才是它的定义性性质）**：对一切 $x, y$ 有\n\n$$\\langle Ax, y\\rangle = \\langle x, A^{*}y\\rangle .$$\n\n实矩阵时 $A^{*} = A^{T}$，两个概念重合。",
-   "notes": "**它是伴随算子的矩阵**：若在**标准正交基**下取矩阵，线性映射 $T$ 的伴随算子 $T^{*}$（`def.operator-adjoint`）的矩阵就是 $T$ 的矩阵的共轭转置。⚠️ 换了非标准正交基，这两者不再相等 —— 那条关系是「标准正交基」的特权，不是坐标无关的恒等式。\n\n**为什么必须共轭**：$\\mathbb{C}^{n}$ 的标准内积是 $\\langle x, y\\rangle = \\sum \\overline{x_i} y_i$（对第一个变元共轭），于是把 $A$ 从左边搬到右边时，$\\overline{A}$ 会自然出现。\n\n用「只转置」的版本，$\\langle Ax,y\\rangle = \\langle x, A^{T}y\\rangle$ 在复数域上是错的。\n\n⚠️ 三种记法并存：$A^{*}$、$A^{\\dagger}$、$A^{H}$。本条统一用 $A^{*}$（与伴随算子同一个星号）。\n\n⚠️ 「伴随矩阵」这个词在有些书里指**代数余子式矩阵**（本条用 `def.determinant` 那一支的记号）。这里按内积意义使用，遇到中文教材要注意分辨。",
+   "notes": "**它是伴随算子的矩阵**：若在**标准正交基**下取矩阵，线性映射 $T$ 的伴随算子 $T^{*}$（`def.operator-adjoint`）的矩阵就是 $T$ 的矩阵的共轭转置。⚠️ 换了非标准正交基，这两者不再相等 —— 那条关系是「标准正交基」的特权，不是坐标无关的恒等式。\n\n**为什么必须共轭**：$\\mathbb{C}^{n}$ 的标准内积是 $\\langle x, y\\rangle = \\sum x_i \\overline{y_i}$（对第二个变元共轭），于是把 $A$ 从左边搬到右边时，$\\overline{A}$ 会自然出现。\n\n用「只转置」的版本，$\\langle Ax,y\\rangle = \\langle x, A^{T}y\\rangle$ 在复数域上是错的。\n\n⚠️ 三种记法并存：$A^{*}$、$A^{\\dagger}$、$A^{H}$。本条统一用 $A^{*}$（与伴随算子同一个星号）。\n\n⚠️ 「伴随矩阵」这个词在有些书里指**代数余子式矩阵**（本条用 `def.determinant` 那一支的记号）。这里按内积意义使用，遇到中文教材要注意分辨。",
    "refs": [
     "Axler, Linear Algebra Done Right, 「Operators on Inner Product Spaces」· 伴随",
     "Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· 共轭转置"
@@ -68994,23 +69273,35 @@
    "title": "范数（赋范空间）",
    "label_en": "norm and normed space",
    "title_en": "norm and normed space",
+   "statement_en": "Let $E$ be a vector space over $\\mathbb{K}$ ($\\mathbb{K} = \\mathbb{R}$ or $\\mathbb{C}$). A function $\\|\\cdot\\| : E \\to [0, +\\infty)$ is called a **norm** if\n\n1. $\\|x\\| = 0 \\iff x = 0$;\n2. $\\|\\lambda x\\| = |\\lambda|\\,\\|x\\|$;\n3. $\\|x + y\\| \\le \\|x\\| + \\|y\\|$.\n\nA space equipped with a norm is a **normed space**. One satisfying only 2 and 3 (allowing nonzero elements to have zero norm) is a **seminorm**.",
+   "notes_en": "What a norm has beyond a distance is **linearity**: it records only \"how far from the origin\", and distances are obtained by translation (see \"the distance induced by a norm\"). So a normed space is a metric space \"with an origin, a scale, and translation invariance\".\n\n⚠️ A seminorm is not a norm: one must pass to the quotient by the zero-norm subspace to get a norm (in the construction of $L^p$, \"$\\|f\\|_p = 0$ only says $f = 0$ a.e.\" is exactly this; see \"the $L^p$ norm\").\n\n**Which hypothesis each direction uses** (the equivalences among the norm axioms and the facts derived from them must be kept separate):\n- **Norm** $\\iff$ **the three axioms**: both directions are expansions of the definition, and neither completeness nor finite dimension is needed.\n- $x=0\\implies\\|x\\|=0$: follows by taking the scalar to be zero in absolute homogeneity; the converse is the positive-definiteness axiom and cannot be derived from homogeneity and the triangle inequality.\n- Seminorm $\\implies$ norm holds only when the zero space is trivial; the zero function on a nontrivial space is a counterexample. Well-definedness of the norm on the quotient by the zero space uses the triangle inequality, not the axiom of choice.\n\n📌 **Normed space** is defined in `def.normed-space`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#3ac74b39",
+      "notes": "v0.9.3#62e48f61"
+     }
     }
    },
    "en_page": "nodes/def.norm.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69077,23 +69368,35 @@
    "title": "强弱范数与等价范数",
    "label_en": "equivalent norms",
    "title_en": "equivalent norms",
+   "statement_en": "Let $p, q$ be two norms on $E$. Call $p$ **stronger than** $q$ (written $q \\preceq p$) if there exists $C > 0$ such that\n\n$$q(x) \\le C\\,p(x) \\qquad \\forall x \\in E .$$\n\nIf each is stronger than the other, call $p$ and $q$ **equivalent**, written $p \\sim q$.",
+   "notes_en": "- (a) equivalence - (b) the same induced topology - (c) the same Cauchy sequences - (d) the same convergent sequences.\n\n⚠️ The relation is asymmetric, and its direction runs against intuition: a **strong** norm (larger $p$) has smaller balls, **more** open sets, harder convergence, and **fewer** Cauchy sequences. So \"passing to a stronger norm\" **removes** convergent objects — which is exactly why one chooses the weakest norm that suffices (e.g. the weak topology).\n\n⚠️ Equivalence preserves completeness and very little else: two equivalent norms give the same completeness (the same Cauchy sequences), but **extremal problems** can have different answers (the balls differ).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#837a258e",
+      "notes": "v0.9.3#4ad1c961"
+     }
     }
    },
    "en_page": "nodes/def.norm-equivalence.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69120,23 +69423,35 @@
     "有限维"
    ],
    "title_en": "all norms are equivalent in finite dimension",
+   "statement_en": "Let $\\dim E < \\infty$. Then any two norms on $E$ are equivalent; equivalently, for any basis $e_1, \\ldots, e_n$ there exist $\\alpha, \\beta > 0$ such that\n\n$$\\alpha\\,\\|x\\|_\\infty \\le \\|x\\| \\le \\beta\\,\\|x\\|_\\infty , \\qquad \\|x\\|_\\infty := \\max_{1 \\le k \\le n} |x_k| .$$",
+   "notes_en": "**Why finite dimension is special**: the unit sphere is compact, so a norm attains a positive minimum on it, and hence any norm is controlled from both sides by $\\lVert\\cdot\\rVert_\\infty$. The full proof is on the edge `imp.norm-equiv-finite-dim-proof`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#0d22915d",
+      "notes": "v0.9.3#29b17bc8"
+     }
     }
    },
    "en_page": "nodes/thm.norm-equiv-finite-dim.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69204,23 +69519,35 @@
     "有限维"
    ],
    "title_en": "the closed unit ball is compact iff finite dimensional",
+   "statement_en": "For a normed space $E$, the closed unit ball $B_E = \\{x \\in E : \\|x\\| \\le 1\\}$ is compact $\\iff$ $\\dim E < \\infty$.",
+   "notes_en": "\"$\\Longleftarrow$\": in finite dimension all norms are equivalent (`thm.norm-equiv-finite-dim`), so compactness can be tested using the coordinate ball of $\\|\\cdot\\|_\\infty$;\n\nthe coordinate ball $\\overline{B}^{\\infty}(0,1)$ is bounded and closed (in the real case it is $[-1,1]^{n}$; in the complex case it is the unit polydisc, regarded as a closed bounded subset of $\\mathbb{R}^{2n}$), and is compact by Heine–Borel (`cor.heine-borel`).\n\n∎\n\n\"$\\implies$\": if $\\dim E = \\infty$, use Riesz's lemma (`lem.almost-orthogonal`) to construct recursively unit vectors with $\\|e_n - e_m\\| \\ge 1/2$ ($n \\ne m$); such a sequence has no convergent subsequence, so the closed unit ball is not sequentially compact and hence not compact.\n\n⭐ This is one half of \"finite-dimensional if and only if locally compact\": finite-dimensional normed spaces are locally compact, while infinite-dimensional ones are **never** locally compact. It is also the precise version of \"bounded closed sets are compact\" holding only in finite dimension — Heine–Borel fails in infinite dimension.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#7199b914",
+      "notes": "v0.9.3#a2ae191e"
+     }
     }
    },
    "en_page": "nodes/thm.riesz-ball-compact.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69245,23 +69572,35 @@
    "label": "有界线性算子",
    "title": "有界线性算子与算子范数",
    "title_en": "bounded operator and operator norm",
+   "statement_en": "Let $u : E \\to F$ be linear. Call $u$ **bounded** if there exists $C$ such that $\\|u(x)\\| \\le C\\|x\\|$ for all $x$. The whole collection is denoted $B(E, F)$, and one writes $B(E) := B(E, E)$. Define\n\n$$\\|u\\| := \\sup_{\\|x\\| \\le 1} \\|u(x)\\| = \\sup_{\\|x\\| = 1} \\|u(x)\\| = \\sup_{x \\ne 0} \\frac{\\|u(x)\\|}{\\|x\\|} ,$$\n\nThis makes $B(E, F)$ a normed space (with the convention $\\|u\\| = 0$ when $E = 0$).",
+   "notes_en": "⚠️ **The name is a historical misunderstanding**: \"bounded\" here does **not** mean \"the function is bounded\": a linear map bounded as a function $\\iff$ it is the zero map (the zero map satisfies this for any $E \\ne 0$). The real meaning is \"sends bounded sets to bounded sets\", which is equivalent to **continuity** (next entry). Do not be misled by the name when reading old books.\n\n⚠️ The three sups are equal only when $E \\ne 0$ (otherwise the sphere is empty and the sup is meaningless).\n\n⭐ When $E$ is infinite-dimensional and $F \\ne \\{0\\}$, one has $L(E, F) \\ne B(E, F)$: discontinuous linear operators really do exist (constructed using the axiom of choice). This is why the graph separates \"linear\" and \"bounded\" into two nodes: $L(E,F)$ is the **algebraic** Hom, and $B(E,F)$ is the continuous part of it.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#4acdc3ed",
+      "notes": "v0.9.3#dba96e03"
+     }
     }
    },
    "en_page": "nodes/def.bounded-operator.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69405,23 +69744,35 @@
    "label": "B(E,F) 完备",
    "title": "$F$ 完备 $\\implies$ $B(E,F)$ 是 Banach 空间",
    "title_en": "bounded operators form a Banach space",
+   "statement_en": "Let $E$ be normed and $F$ Banach. Then $(B(E, F), \\|\\cdot\\|)$ is a Banach space. In particular, the dual space $E^* = B(E, \\mathbb{K})$ is **always** Banach (regardless of whether $E$ is complete).",
+   "notes_en": "**Idea of the proof**: define $u$ as the pointwise limit, then control $\\lVert u_k-u\\rVert$ by uniform boundedness. The full proof is on the edge `imp.bounded-operators-banach-proof`. In particular $E^*=B(E,\\mathbb K)$ is always Banach.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#467b6f7e",
+      "notes": "v0.9.3#ba597d57"
+     }
     }
    },
    "en_page": "nodes/thm.bounded-operators-banach.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69733,23 +70084,35 @@
    "title": "极化恒等式：内积由范数恢复",
    "label_en": "polarization identity",
    "title_en": "polarization identity",
+   "statement_en": "In a real inner product space:\n\n$$\\langle x, y\\rangle = \\tfrac{1}{4}\\bigl( \\|x + y\\|^2 - \\|x - y\\|^2 \\bigr) .$$\n\nIn a complex inner product space:\n\n$$\\langle x, y\\rangle = \\tfrac{1}{4}\\sum_{k=0}^{3} i^k \\,\\| x + i^k y \\|^2 .$$",
+   "notes_en": "**Use**: it recovers the inner product from the norm, so \"preserving the norm\" and \"preserving the inner product\" are equivalent in the real case; the complex case uses a combination of four directions. The full derivation is on the edge `imp.polarization-proof`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#35349119",
+      "notes": "v0.9.3#37b58dbc"
+     }
     }
    },
    "en_page": "nodes/thm.polarization.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -69855,23 +70218,35 @@
    "title": "凸集：任意两点的连线不跑出集合",
    "label_en": "convex set",
    "title_en": "convex set",
+   "statement_en": "Let $V$ be a real vector space and $C \\subseteq V$. Call $C$ a **convex set** if for all $x, y \\in C$ and $t \\in [0,1]$,\n\n$$(1-t)x + ty \\in C.$$\n\nEquivalently: $C$ contains the whole segment between any two of its points.",
+   "notes_en": "⭐ Convexity uses only the **affine structure**; no norm or inner product is needed. In infinite dimension it is the key hypothesis for \"existence of a minimiser\" (see `thm.projection-convex`).\n\n⚠ The empty set is convex under this definition (the condition \"for any two points\" holds vacuously); when non-emptiness is needed it is assumed separately in the theorem (as in the projection theorem).\n\n💡 Convex combinations, convex hulls and separation theorems all start here.\n\n📌 **A convex set is star-shaped at each of its points** (see `thm.convex-star-shaped-every-point`); for the empty set this universal statement holds vacuously, so there is no conflict with \"the empty set is not star-shaped\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#67fb4cdd",
+      "notes": "v0.9.3#0545677c"
+     }
     }
    },
    "en_page": "nodes/def.convex-set.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -70141,23 +70516,35 @@
    "label": "闭子空间的正交投影",
    "title": "正交投影与正交分解：$H = E \\oplus E^\\perp$",
    "title_en": "orthogonal projection onto a closed subspace",
+   "statement_en": "Let $H$ be a Hilbert space and $E \\subseteq H$ a **closed** subspace. Then\n\n1. $y = P_E(x) \\iff y \\in E$ and $x - y \\in E^\\perp$;\n2. $P_E$ is linear, and $\\|P_E\\| \\le 1$ (it is $1$ when $E \\ne 0$);\n3. Orthogonal decomposition $H = E \\oplus E^\\perp$, and $\\|x\\|^2 = \\|x - P_E x\\|^2 + \\|P_E x\\|^2$.",
+   "notes_en": "Proof: by the projection onto a closed convex set. For (1), the step \"$\\implies$\" replaces $z$ by $\\pm z$, kills the real part, and gives $\\operatorname{Re}\\langle x - y, z\\rangle \\le 0$ for all $z \\in E$, i.e. $x - y \\perp E$;\n\nthe step \"$\\Longleftarrow$\" uses $\\|x - z\\|^2 = \\|x - y\\|^2 + \\|y - z\\|^2 \\ge \\|x - y\\|^2$.\n\n(2) uses $\\alpha_1 x_1 + \\alpha_2 x_2 - \\alpha_1 P x_1 - \\alpha_2 P x_2 \\perp E$.\n\n(3) is Pythagoras.\n\n⚠️ The word \"closed\" in \"$E$ is closed\" cannot be dropped: for $E = $ the finitely supported sequences are dense in $\\ell^2$ but not closed; the distance is zero but not attained, so **no** nearest point in $E$ exists, and the orthogonal decomposition fails as well.\n\n⭐ This is one of the biggest differences between Hilbert spaces and general Banach spaces: in a general Banach space a closed subspace need not be complemented ($c_0 \\subset \\ell^\\infty$ is not), so the word \"projection\" cannot be used loosely in Banach spaces.\n\n**Which hypothesis each direction uses** (the orthogonal characterisation does not need completeness; the global decomposition needs existence of projections):\n- Nearest point $\\implies$ orthogonality: use variations in arbitrary real multiples of directions in the subspace; in the complex case one must also use purely imaginary multiples, so that vanishing of the real part forces the inner product to vanish.\n- $y\\in E$ and $x-y\\in E^\\perp\\implies y=P_E x$: the Pythagorean identity gives the unique minimiser directly, with no closedness or completeness required; the condition for the orthogonal complement itself is what the definition expands.\n- Every $x$ has an orthogonal decomposition: invoke `thm.projection-convex`, using completeness of the Hilbert space and closedness of $E$; linearity follows from uniqueness of the decomposition, and the norm bound from the Pythagorean identity.\n- Closedness cannot be removed: for $E=c_{00}\\subset\\ell^2$, the distance to $x\\in\\ell^2\\setminus c_{00}$ is zero but not attained, so no nearest point in $E$ exists.\n\n📌 The definition of \"orthogonal projection\" is in `def.orthogonal-projection`; this entry is about the statement that the image of the projection is exactly the closed subspace.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c978bb78",
+      "notes": "v0.9.3#b7ef8e99"
+     }
     }
    },
    "en_page": "nodes/thm.projection-subspace.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -70171,7 +70558,7 @@
     "正交补"
    ],
    "statement": "设 $H$ 是 Hilbert 空间，$E \\subseteq H$ 是**闭**子空间。则\n\n1. $y = P_E(x) \\iff y \\in E$ 且 $x - y \\in E^\\perp$；\n2. $P_E$ 线性，且 $\\|P_E\\| \\le 1$（$E \\ne 0$ 时为 $1$）；\n3. 正交分解 $H = E \\oplus E^\\perp$，且 $\\|x\\|^2 = \\|x - P_E x\\|^2 + \\|P_E x\\|^2$。",
-   "notes": "证法：由凸闭集投影，(1) 的「$\\implies$」把 $z$ 换成 $\\pm z$ 消掉实部得 $\\operatorname{Re}\\langle x - y, z\\rangle \\le 0$ 对所有 $z \\in E$，即 $x - y \\perp E$；\n\n「$\\Longleftarrow$」用 $\\|x - z\\|^2 = \\|x - y\\|^2 + \\|y - z\\|^2 \\ge \\|x - y\\|^2$。\n\n(2) 用 $\\alpha_1 x_1 + \\alpha_2 x_2 - \\alpha_1 P x_1 - \\alpha_2 P x_2 \\perp E$。\n\n(3) 勾股定理。\n\n⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\\ell^2$ 里稠密但不闭，最近点存在但**不落在 $E$ 里**，正交分解也失效。\n\n⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \\subset \\ell^\\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。\n\n\n\n**各方向用到的假设**（正交刻画不靠完备性，全局分解靠投影存在）：\n- 最近点 $\\implies$ 正交：用子空间中任意实数倍方向作变分；复空间还须用纯虚数倍方向，才能从实部为零推出内积为零。\n- $y\\in E$ 且 $x-y\\in E^\\perp\\implies y=P_E x$：由勾股恒等式直接得唯一最小点，不要求闭性或完备性；正交补本身的条件才是定义展开。\n- 每个 $x$ 都有正交分解：调用 `thm.projection-convex`，用 Hilbert 完备性与 $E$ 闭；线性由分解唯一性推出，范数界由勾股恒等式推出。\n- 闭性不能删：$E=c_{00}\\subset\\ell^2$ 时，对 $x\\in\\ell^2\\setminus c_{00}$ 距离为零却不取到，故不存在 $E$ 中最近点。\n\n📌 「正交投影」的定义在 `def.orthogonal-projection`；本节点讲的是「投影像恰是闭子空间」这条。\n",
+   "notes": "证法：由凸闭集投影，(1) 的「$\\implies$」把 $z$ 换成 $\\pm z$ 消掉实部得 $\\operatorname{Re}\\langle x - y, z\\rangle \\le 0$ 对所有 $z \\in E$，即 $x - y \\perp E$；\n\n「$\\Longleftarrow$」用 $\\|x - z\\|^2 = \\|x - y\\|^2 + \\|y - z\\|^2 \\ge \\|x - y\\|^2$。\n\n(2) 用 $\\alpha_1 x_1 + \\alpha_2 x_2 - \\alpha_1 P x_1 - \\alpha_2 P x_2 \\perp E$。\n\n(3) 勾股定理。\n\n⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\\ell^2$ 里稠密但不闭，距离为零但取不到，故**不存在** $E$ 中的最近点，正交分解也失效。\n\n⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \\subset \\ell^\\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。\n\n\n\n**各方向用到的假设**（正交刻画不靠完备性，全局分解靠投影存在）：\n- 最近点 $\\implies$ 正交：用子空间中任意实数倍方向作变分；复空间还须用纯虚数倍方向，才能从实部为零推出内积为零。\n- $y\\in E$ 且 $x-y\\in E^\\perp\\implies y=P_E x$：由勾股恒等式直接得唯一最小点，不要求闭性或完备性；正交补本身的条件才是定义展开。\n- 每个 $x$ 都有正交分解：调用 `thm.projection-convex`，用 Hilbert 完备性与 $E$ 闭；线性由分解唯一性推出，范数界由勾股恒等式推出。\n- 闭性不能删：$E=c_{00}\\subset\\ell^2$ 时，对 $x\\in\\ell^2\\setminus c_{00}$ 距离为零却不取到，故不存在 $E$ 中最近点。\n\n📌 「正交投影」的定义在 `def.orthogonal-projection`；本节点讲的是「投影像恰是闭子空间」这条。\n",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
    ]
@@ -70304,23 +70691,35 @@
    "label": "正交基",
    "title": "标准正交集、完备性与正交基",
    "title_en": "orthonormal set and orthonormal basis",
+   "statement_en": "Let $\\{f_i\\}_{i \\in I} \\subseteq H$.\n\n- **Orthogonal**: $f_i \\perp f_j$ ($i \\ne j$);\n- **Orthonormal**: orthogonal + $\\|f_i\\| = 1$;\n- **Complete**: $\\overline{\\operatorname{span}\\{f_i\\}} = H$;\n- **Orthonormal basis**: orthonormal + complete.",
+   "notes_en": "⚠️ Completeness is not \"spanning $H$\" but \"the **closure** of the span is the whole space\": the algebraic span of $\\{e_n\\}$ in $\\ell^2$ consists of finitely supported sequences, which is dense but not equal to $\\ell^2$.\n\n⚠️ In infinite dimension **uncountable orthonormal bases really occur**: the Hermite functions in $L^2(\\mathbb{R})$ are countable, but the orthonormal basis of a general $\\ell^2(I)$ is $\\{e_i\\}_{i \\in I}$, and $I$ can be arbitrarily large.\n\n⭐ Once an orthonormal basis is available, a Hilbert space becomes \"$\\ell^2$ without weights\" (see Bessel/Parseval and \"separable Hilbert $\\cong \\ell^2$\").",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#787b63d2",
+      "notes": "v0.9.3#a1669ec2"
+     }
     }
    },
    "en_page": "nodes/def.orthonormal-set.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -70422,10 +70821,7 @@
    "id": "thm.separable-hilbert-is-l2",
    "type": "theorem",
    "label": "可分 Hilbert 空间等距于 ℓ²",
-   "title": "可分 Hilbert 空间等距同构于 $\\ell^2$",
-   "hypotheses": [
-    "可分"
-   ],
+   "title": "Hilbert 空间等距同构于 $\\ell^2(I)$",
    "label_en": "separable Hilbert spaces are l2",
    "title_en": "separable Hilbert spaces are l2",
    "translations": {
@@ -70457,7 +70853,7 @@
     "同构"
    ],
    "statement": "设 $H$ 是 Hilbert 空间，$\\dim H = \\#I$（Hilbert 维数）。则 $H$ 等距同构于 $\\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\\ell^2(\\mathbb{N})$。",
-   "notes": "映射 $U : H \\to \\ell^2(I)$，$U(x) := (\\langle x, e_i\\rangle)_{i \\in I}$。\n\n由 Bessel 它入 $\\ell^2$、由 Parseval 它保范；\n\n满射性：若 $(\\lambda_i) \\in \\ell^2$，则部分和 $\\sum_{i \\in J}\\lambda_i e_i$ 是 Cauchy（$\\|\\sum_{J \\setminus J'}\\lambda_i e_i\\|^2 = \\sum_{J \\setminus J'}|\\lambda_i|^2$），其极限的坐标就是 $\\lambda_i$。\n\n⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。\n\n⚠️ 「可分」不能去掉：$\\ell^2(I)$（不可数 $I$）与 $\\ell^2(J)$ 同构 $\\iff \\#I = \\#J$（用正交基的基数比）。",
+   "notes": "映射 $U : H \\to \\ell^2(I)$，$U(x) := (\\langle x, e_i\\rangle)_{i \\in I}$。\n\n由 Bessel 它入 $\\ell^2$、由 Parseval 它保范；\n\n满射性：若 $(\\lambda_i) \\in \\ell^2$，则部分和 $\\sum_{i \\in J}\\lambda_i e_i$ 是 Cauchy（$\\|\\sum_{J \\setminus J'}\\lambda_i e_i\\|^2 = \\sum_{J \\setminus J'}|\\lambda_i|^2$），其极限的坐标就是 $\\lambda_i$。\n\n⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。\n\n⚠️ 若把靶空间固定为 $\\ell^2(\\mathbb{N})$，则「可分」不能去掉：不可数 $I$ 的 $\\ell^2(I)$ 与 $\\ell^2(\\mathbb{N})$ 不同构（用正交基基数比）。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
    ]
@@ -70816,23 +71212,35 @@
    "title": "自反 Banach 空间",
    "label_en": "reflexive Banach space",
    "title_en": "reflexive Banach space",
+   "statement_en": "Let $X$ be a Banach space and $J_X : X \\to X^{**}$ the natural embedding $J_X(x)(\\varphi) = \\varphi(x)$. Call $X$ **reflexive** if $J_X$ is surjective (hence an isometric isomorphism).",
+   "notes_en": "The natural embedding is always isometric (Hahn–Banach): $\\|J_X x\\| = \\sup_{\\|\\varphi\\| \\le 1}|\\varphi(x)| = \\|x\\|$. Hence reflexivity $\\iff$ every element of $X^{**}$ comes from $X$.\n\n**Examples**: Hilbert spaces; $L^p$ and $\\ell^p$ ($1 < p < \\infty$, see `cor.lp-reflexive`); finite-dimensional spaces.\n\n**Counterexamples**: $c_0$ ($c_0^{**} = \\ell^\\infty \\ne c_0$), $\\ell^1$ ($\\ell^{1**} = (\\ell^\\infty)^* \\supsetneq \\ell^1$), $C[0,1]$.\n\n⭐ The core use of reflexivity: bounded sequences have weakly convergent subsequences (Eberlein–Šmulian; the graph has no weak-topology node yet), which is the entry point to variational existence and to Milman–Pettis.\n\n📌 Relation to pairing language: $X$ is reflexive $\\iff$ both embeddings of the perfect pairing $(X, X^*)$ are surjective (`def.perfect-pairing`, `thm.riesz-perfect-pairing`).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#41bb29e0",
+      "notes": "v0.9.3#f7bd2e47"
+     }
     }
    },
    "en_page": "nodes/def.reflexive-space.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71035,23 +71443,35 @@
    "title": "Hahn–Banach：次线性控制下的线性延拓",
    "label_en": "Hahn–Banach",
    "title_en": "Hahn–Banach",
+   "statement_en": "Let $X$ be a **real** vector space, $p : X \\to \\mathbb{R}$ **sublinear** ($p(x + y) \\le p(x) + p(y)$, and $p(tx) = t\\,p(x)$ for $t \\ge 0$), $M \\subseteq X$ a subspace, and $f : M \\to \\mathbb{R}$ linear with $f \\le p$ on $M$. Then there exists a linear $F : X \\to \\mathbb{R}$ such that $F|_M = f$ and $F \\le p$.\n\n**Norm-preserving extension (corollary)**: let $X$ be a normed space, $M \\subseteq X$ a subspace, $\\varphi \\in M^{*}$. Then there exists $\\Phi \\in X^{*}$ such that $\\Phi|_M = \\varphi$ and $\\|\\Phi\\| = \\|\\varphi\\|$.",
+   "notes_en": "**Step 1: the one-dimensional extension lemma.** Let $x_0 \\notin M$, $N = M \\oplus \\mathbb{R}x_0$. Defining, on $N$, a map $g(m + t x_0) = f(m) + t c$ that preserves $g \\le p$ is equivalent to having, for every $m \\in M$,\n\n$f(m) + c \\le p(m + x_0), \\qquad f(m) - c \\le p(m - x_0).$\n\ni.e. $c$ lies in the interval $[\\sup_m (f(m) - p(m - x_0)),\\ \\inf_m (p(m + x_0) - f(m))]$. This interval is non-empty, because for any $m_1, m_2 \\in M$, sublinearity gives\n\n$f(m_1) + f(m_2) = f(m_1 + m_2) \\le p(m_1 + m_2) \\le p(m_1 - x_0) + p(m_2 + x_0),$\n\ni.e. $f(m_1) - p(m_1 - x_0) \\le p(m_2 + x_0) - f(m_2)$. Choose any $c$ in the interval; the extension then works.\n\n**Step 2: Zorn.** Consider all objects \"$g$ defined on a subspace $N \\supseteq M$, linear, $g|_M = f$, and $g \\le p$ on $N$\", ordered by extension ($g_1 \\preceq g_2$ when $g_2$ has larger domain and agrees on $g_1$ with $g_1$). The union of a totally ordered subfamily is again such an object (domains are unioned; linearity and $\\le p$ are checked pointwise), so `lem.zorn` gives a maximal element $F$. If $\\operatorname{dom} F \\ne X$, take $x_0 \\notin \\operatorname{dom} F$ and extend again by Step 1, contradicting maximality. Hence $F$ is defined on all of $X$. $\\blacksquare$\n\n**Step 3: norm-preserving extension.** Take $p(x) = \\|\\varphi\\| \\cdot \\|x\\|$ (sublinear) and $f = \\varphi$; then $\\varphi \\le p$ on $M$. This gives a linear $\\Phi$ with $\\Phi|_M = \\varphi$ and $\\Phi \\le p$ on $X$. Applying $\\Phi \\le p$ to $x$ and to $-x$ gives $|\\Phi(x)| \\le \\|\\varphi\\|\\,\\|x\\|$, hence $\\|\\Phi\\| \\le \\|\\varphi\\|$; the reverse inequality comes from the extension, so equality holds. $\\blacksquare$\n\n**The complex case**: regard $\\varphi$ as a real-linear functional, extend it, then set $\\Phi_{\\mathbb C}(x) = \\Psi(x) - i\\,\\Psi(ix)$; one checks that it is complex-linear and norm-preserving.\n\n📌 This entry proves only the \"sublinear domination\" form; the geometric form (separation of a point from a closed convex set) is derived from it and used in the notes to `thm.goldstine`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#4205eb81",
+      "notes": "v0.9.3#621163ee"
+     }
     }
    },
    "en_page": "nodes/thm.hahn-banach.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71455,23 +71875,35 @@
    "label": "闭覆盖的内点",
    "title": "可数个闭集覆盖 $X$ $\\implies$ 内点之并稠密",
    "title_en": "a countable closed cover has dense interior union",
+   "statement_en": "Let $X$ be a Baire space, $F_n \\subseteq X$ closed, and $X = \\bigcup_n F_n$. Then $\\bigcup_n \\operatorname{int} F_n$ is **dense** in $X$. In particular, if $X \\ne \\emptyset$, then at least one $F_n$ has non-empty interior (the empty space satisfies the Baire hypothesis, but every $F_n$ has empty interior).",
+   "notes_en": "**This is the \"open-set version\" of the Baire category theorem**: among the members of a closed cover that have interior, the union of those interiors is dense. The full proof (using the Baire property on non-empty open sets) is on the edge `imp.countable-closed-cover-proof`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e132d7bc",
+      "notes": "v0.9.3#2b376b26"
+     }
     }
    },
    "en_page": "nodes/lem.countable-closed-cover.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71747,23 +72179,35 @@
    "label": "C(K,E)",
    "title": "$C(K,E)$ 与一致度量",
    "title_en": "the space of continuous functions with the uniform metric",
+   "statement_en": "Let $K$ be compact Hausdorff and $(E, d)$ a metric space. On $C(K, E)$ define\n\n$$\\Delta(f, g) := \\sup_{x \\in K} d\\bigl(f(x), g(x)\\bigr) .$$\n\nWhen $E$ is normed this is the sup norm $\\|f\\| = \\sup_x \\|f(x)\\|$.",
+   "notes_en": "The supremum is attained (compactness plus continuity). This metric is the metric of \"uniform convergence\", not of \"pointwise convergence\" (the same convention as `def.uniform-convergence`).\n\n⭐ The notation allows an arbitrary metric space $E$, so the results in this cluster (completeness, Arzelà–Ascoli) are broader than the classical $\\mathbb{R}$-valued versions.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#4378ff9b",
+      "notes": "v0.9.3#243acb6f"
+     }
     }
    },
    "en_page": "nodes/def.ck-space.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71828,23 +72272,35 @@
    "title": "等度连续（逐点）",
    "label_en": "equicontinuity",
    "title_en": "equicontinuity",
+   "statement_en": "Let $K$ be a topological space, $(E, d)$ a metric space, and $\\mathcal{H} \\subseteq C(K, E)$.\n\n- $\\mathcal{H}$ is **equicontinuous at** $x_0 \\in K$: $\\forall \\varepsilon > 0$ there exists a neighbourhood $U$ of $x_0$ such that $d(f(x), f(x_0)) < \\varepsilon$ holds for **all** $f \\in \\mathcal{H}$ and $x \\in U$ simultaneously.\n- $\\mathcal{H}$ is equicontinuous on $K$: it is equicontinuous at every point $x \\in K$.",
+   "notes_en": "⚠️ The point is \"**for all $f$ simultaneously**\". Drop this condition and one only has \"each $f$ is continuous on its own\" — that is the definition of $\\mathcal{H} \\subseteq C(K,E)$ and says nothing new.\n\nWhen $\\mathcal{H} = \\{f\\}$, equicontinuity $\\iff$ $f$ being continuous.\n\n⭐ This is the **only non-trivial** hypothesis in compactness (Arzelà–Ascoli): pointwise total boundedness merely says \"does not diverge\", while equicontinuity says \"does not oscillate ever more wildly\".\n\n📌 When $K$ is a metric space there is also a stronger uniform version, see `def.uniformly-equicontinuous`; when $K$ is compact the two are equivalent (`thm.equicontinuous-uniform`).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c06cb1cf",
+      "notes": "v0.9.3#f19c49f6"
+     }
     }
    },
    "en_page": "nodes/def.equicontinuous.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71950,23 +72406,35 @@
    "title": "子代数、分离点、格",
    "label_en": "subalgebra and separating points",
    "title_en": "subalgebra and separating points",
+   "statement_en": "Let $K$ be compact Hausdorff and $A \\subseteq C(K, \\mathbb{K})$.\n\n- $A$ is a **subalgebra**: it is a vector space and is closed under multiplication;\n- $A$ **separates points**: $x \\ne y \\implies \\exists f \\in A$, $f(x) \\ne f(y)$;\n- $A$ is a **lattice**: closed under $\\min, \\max$.",
+   "notes_en": "\"Separates points\" is a necessary condition for Stone–Weierstrass: if two points are not separated, glue them into one, and $A$ cannot generate the functions on the glued space, $C$.\n\n⚠️ The example of self-adjoint matrices (from the lectures): self-adjoint matrices ordered by $A \\ge B \\iff A - B$ being positive semidefinite do not in general form a **lattice** (the pointwise min of two self-adjoint matrices need not be self-adjoint). So \"lattice\" is not automatic; it must be bought by \"closed + contains the unit\".",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#3810c039",
+      "notes": "v0.9.3#bae06c67"
+     }
     }
    },
    "en_page": "nodes/def.subalgebra-separating.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -71990,23 +72458,35 @@
    "label": "闭子代数是格",
    "title": "含单位的闭子代数是格",
    "title_en": "a closed unital subalgebra is a lattice",
+   "statement_en": "Let $K$ be compact Hausdorff and $A \\subseteq C(K, \\mathbb{R})$ a **closed** subalgebra **containing the unit**. Then $A$ is closed under $\\min, \\max$.",
+   "notes_en": "**Why it suffices to prove $|f|\\in A$**: $\\max,\\min$ can be assembled from $|\\cdot|$ and the four arithmetic operations; $|f|=\\sqrt{f^{2}}$ is then uniformly approximated by the binomial series. The full proof is on the edge `imp.subalgebra-lattice-proof`.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#ed69a1e6",
+      "notes": "v0.9.3#3569eb44"
+     }
     }
    },
    "en_page": "nodes/lem.closed-subalgebra-lattice.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "functional-analysis",
    "regions": [
     "functional-analysis"
@@ -78108,7 +78588,6 @@
    "id": "dep.jordantheorem-curve",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.jordan-curve",
    "usedBy": "thm.jordan-curve",
    "note": "定理以 Jordan 曲线（简单闭曲线）的定义为前提。"
@@ -84986,7 +85465,6 @@
    "id": "imp.coherent-duality",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.za-analytic",
     "thm.adic-structure-sheaf"
@@ -84995,7 +85473,7 @@
    "layer": false,
    "title": "$j_! \\dashv j^* \\dashv j_*$ $\\implies$ 仿射相干对偶",
    "proof": "**记号。** 设 $f : A \\to A'$ 是解析环之间的映射，$f^{\\mathrm{ad}/\\mathbb{Z}} : \\operatorname{Spec} A' \\to \\operatorname{Spec} A$ 是对应的 adic 谱映射，$j : \\operatorname{Spec} A' \\to \\operatorname{Spec}(A',\\mathbb{Z})$。\n\n按 `def.f-shriek`，$f_! := f^{\\mathrm{ad}/\\mathbb{Z}}_\\ast \\circ j_!$。\n\n**① $f_!$ 保直和。** $j_!$ 是左伴随，保余极限；正常推前按纤维、$\\operatorname{Spec}(A',\\mathbb{Z})$ 的基变换只在有限个连通块上发生（`thm.adic-structure-sheaf` 的结构层是恒定层），故保直和。合起来 $f_!$ 保直和。\n\n**② 投影公式。** 由 $j_!$ 的张量表达式，对 $M \\in D(\\mathbb{Z}^{\\blacksquare})$、$N \\in D(A^{\\blacksquare})$，\n$$f_!\\big((M \\otimes^L A^{\\blacksquare}) \\otimes^L_{A^{\\blacksquare}} N\\big) \\cong M \\otimes^L_{\\mathbb{Z}^{\\blacksquare}} f_! N.$$\n逐项验证：$j_!$ 与张量结合律、$A'$ 上 $\\mathbb{Z}$-线性结构相容。\n\n**③ 右伴随与显式公式。** 由 ②，$f_!$ 保余极限，故由伴随函子定理它有右伴随 $f^!$；并可用余单位 $f_! f^! \\to \\mathrm{id}$ 把它写成\n$$f^! M \\cong (M \\otimes^L_{\\mathbb{Z}^{\\blacksquare}} A^{\\blacksquare}) \\otimes^L_{A^{\\blacksquare}} f^! \\mathbb{Z}.$$\n这就是材料里「先基变换到 $A$、再乘相对对偶」的分步。\n\n**④ $f^! \\mathbb{Z}$ 的形状。** 由 Appendix 8.13(iv)（即本定理的一般 $A$ 情形）：$f^! \\mathbb{Z}$ 是有界、左有界、各项有限生成的**离散** $A$-复形。\n\n当 $f$ 是完全交时（映射的余切复形是完美复形），由 Koszul 复形算出 $f^! \\mathbb{Z}$ 可逆，即 $f^!$ 可由「乘一个可逆复形」实现。\n\n**⑤ $f_!$ 保紧。** 见 Remark 11.7：局部化到 $\\mathbb{A}^1$ 后用 Lecture VIII 的显式计算；一般情形由 Noether 归一化 + 粘合回到有限个 $\\mathbb{A}^1$ 因子。$\\blacksquare$\n\n⚠ 第 ⑤ 步同上：保紧性的完整展开是 Remark 11.7 的归约 + $\\mathbb{A}^1$ 的情形，本图只写到归约。",
-   "note": ""
+   "note": "⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。"
   },
   {
    "id": "imp.rl1-not-analytic",
@@ -85144,7 +85622,6 @@
    "id": "dep.fshriek-existence",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.f-shriek",
    "usedBy": "thm.f-shriek-existence",
    "note": "定理说的「$f_{!}$ 存在」，说的就是这条定义里那个复合函子确实造得出来；对象先于存在性。"
@@ -85153,7 +85630,6 @@
    "id": "imp.f-shriek",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "prop.open-immersion-shriek",
     "def.six-functors"
@@ -85161,13 +85637,12 @@
    "target": "thm.f-shriek-existence",
    "title": "开浸入的 $j_!$ $\\implies$ 一般 $f_!$ 存在",
    "proof": "对分离有限型 $f : X \\to Y$，有交换图 $X_{\\mathrm{ad}} \\xrightarrow{j} X_{\\mathrm{ad}/Y} \\to Y_{\\mathrm{ad}}$，$j$ 是开浸入（「概形嵌入 adic 空间」 的类似论证）。定义\n\n$$f_! := (f_{\\mathrm{ad}/Y})_* \\circ j_!.$$\n\n$j_!$ 存在由 `prop.open-immersion-shriek`；$(f_{\\mathrm{ad}/Y})_*$ 是正常推前。\n\n$f$ 固有时 $j$ 是同构，$f_! = (f^{\\mathrm{ad}/Y})_*$。\n\n\n\n**保直和。** $j_!$ 作为左伴随保余极限；\n\n$(f^{\\mathrm{ad}/Y})_*$ 在仿射局部上是有限个遗忘函子的极限，保直和。\n\n故 $f_!$ 保直和，右伴随 $f^!$ 存在。\n\n∎",
-   "note": ""
+   "note": "⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。"
   },
   {
    "id": "imp.f-shriek-base-change",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "def.f-shriek",
     "thm.za-analytic"
@@ -85175,7 +85650,7 @@
    "target": "prop.f-shriek-base-change",
    "title": "仿射情形 + 基变换",
    "proof": "一切局部化良好，归约到 $f : R \\to A$ 是 $A = R[T]$ 或 $f$ 满射两种情形。\n\n**$f$ 满射。** $f_! = f_*$ 是遗忘函子，$f^! = \\operatorname{RHom}_R(A,-)$；有限 Tor 维数使 $A$ 是 $R$ 上的 perfect 复形，于是\n\n$$f^! = \\operatorname{RHom}_R(A, R) \\otimes^{L}_{R_\\blacksquare} f^*,$$\n\n而 $\\operatorname{RHom}_R(A,R)$ 与平坦基变换交换。\n\n**$A = R[T]$。** $f_!M = M \\otimes_{(A,R)_\\blacksquare} R((T^{-1}))/R[T][-1]$，$f^!R = R[T][1]$；基变换就是 $R((T^{-1}))/R[T]$ 的基变换。$\\blacksquare$",
-   "note": ""
+   "note": "⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。"
   },
   {
    "id": "imp.regular-immersion-dualizing",
@@ -86135,7 +86610,6 @@
    "id": "dep.softacyclic-soft",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.soft-sheaf",
    "usedBy": "thm.soft-sheaf-acyclic",
    "note": "定理的主语是仿紧空间上的软层。"
@@ -86144,7 +86618,6 @@
    "id": "dep.softacyclic-flabby",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.flabby-sheaf",
    "usedBy": "thm.soft-sheaf-acyclic",
    "note": "第 0 步：松弛层是软层，故 Godement 消解的项都是软层。**只覆盖第 0 步**；第 3 步的「松弛层无环」未证。"
@@ -86153,7 +86626,6 @@
    "id": "dep.softacyclic-paracompact",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.paracompact",
    "usedBy": "thm.soft-sheaf-acyclic",
    "note": "第 1 步的提升引理用局部有限闭覆盖与良序归纳，依赖仿紧性。"
@@ -86162,7 +86634,6 @@
    "id": "dep.softacyclic-godement",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.godement-resolution",
    "usedBy": "thm.soft-sheaf-acyclic",
    "note": "第 3 步用 Godement 消解作维数转移；该步条件于「松弛层无环」，本图未证。"
@@ -86171,7 +86642,6 @@
    "id": "dep.softacyclic-sheafcoh",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.sheaf-cohomology",
    "usedBy": "thm.soft-sheaf-acyclic",
    "note": "结论是层上同调的高阶项消失。"
@@ -86927,7 +87397,6 @@
    "id": "def-link.paracompact-cech",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.paracompact",
    "usedBy": "thm.paracompact-cech-equals-sheaf",
    "note": "这条定理的前提正是「仿紧 + Hausdorff」：仿紧给出局部有限的加细，单位分解才拼得出来，Čech 与层上同调才会重合。"
@@ -89690,7 +90159,6 @@
    "id": "dep.mf2-derham-derhamthm",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.de-rham-complex",
    "usedBy": "thm.de-rham",
    "note": "左边的 $H^{k}_{\\mathrm{dR}}$ 是「闭形式模恰当形式」，全部依赖 $\\mathrm{d}^{2} = 0$ 与商空间的构造。"
@@ -89699,7 +90167,6 @@
    "id": "dep.mf2-singchain-derhamthm",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.singular-chain",
    "usedBy": "thm.de-rham",
    "note": "右边的 $H^{k}_{\\mathrm{sing}}$ 是奇异链取对偶再取上同调；链群是「单形的形式和」，边界算子由 $\\partial^{2} = 0$ 支撑。"
@@ -89708,7 +90175,6 @@
    "id": "dep.mf2-cohomology-derhamthm",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.cohomology",
    "usedBy": "thm.de-rham",
    "note": "「取上同调」这个操作在两边的含义一致（$\\ker/\\operatorname{im}$）；同构说的是两个不同复形算出的同调群相同。"
@@ -89717,7 +90183,6 @@
    "id": "dep.mf2-integralonchain-derhamthm",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.integral-on-chain",
    "usedBy": "thm.de-rham",
    "note": "同构由 $[\\omega] \\mapsto \\bigl([c] \\mapsto \\int_{c}\\omega\\bigr)$ 给出，所以「形式在链上的积分」是这条定理的**构造**而不是例子：没有它就没有映射。"
@@ -90161,7 +90626,6 @@
    "id": "imp.derived-h0-from-de-rham",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.de-rham"
    ],
@@ -90169,7 +90633,7 @@
    "layer": false,
    "title": "de Rham 定理的 $k=0$ 情形：上同调数连通分支",
    "proof": "de Rham 定理给 $k = 0$ 的自然同构\n\n$$\\Phi^{0} : H^{0}_{\\mathrm{dR}}(M) \\longrightarrow H^{0}_{\\mathrm{sing}}(M;\\mathbb{R}), \\qquad [\\omega] \\longmapsto \\Bigl([c]\\mapsto \\int_{c}\\omega\\Bigr).$$\n\n**右边直接算。** 奇异 $0$-链是点的形式和，所以 $0$-上链就是「给每个点一个实数」的函数；对一条道路 $\\sigma$，\n\n$$\\delta^{0}f(\\sigma) = f\\bigl(\\sigma(1)\\bigr) - f\\bigl(\\sigma(0)\\bigr).$$\n\n于是 $f$ 是上循环当且仅当它在每条道路两端取值相同，即 $f$ 在**道路连通分支**上常值；又因为没有 $-1$-单形，上边缘群为零。流形局部道路连通，连通与道路连通一致，设连通分支有 $c$ 个，则\n\n$$H^{0}_{\\mathrm{sing}}(M;\\mathbb{R}) \\cong \\mathbb{R}^{c},$$\n\n再由 $\\Phi^{0}$ 得 $H^{0}_{\\mathrm{dR}}(M) \\cong \\mathbb{R}^{c}$；特别地 $M \\ne \\emptyset$ 时 $M$ 连通当且仅当 $\\dim H^{0}_{\\mathrm{dR}}(M) = 1$。$\\blacksquare$",
-   "note": "这里没有任何「形式」的计算：$H^{0}$ 的整条结论都是从 de Rham 定理借来的，$k \\ge 1$ 才需要 Poincaré 引理那一套。"
+   "note": "这里没有任何「形式」的计算：$H^{0}$ 的整条结论都是从 de Rham 定理借来的，$k \\ge 1$ 才需要 Poincaré 引理那一套。 ⚠ 本边证明条件于 `thm.de-rham`（`thm.de-rham` 仍 skeleton）。"
   },
   {
    "id": "imp.derived-cif-from-residue",
@@ -91445,7 +91909,6 @@
    "strength": "weak",
    "a": "def.prime-end",
    "b": "thm.boundary-correspondence",
-   "status": "skeleton",
    "title": "",
    "note": "两种「边界对象」：素端对**一般**单连通区域定义（横截弧的极限），边界对应定理里的是 **Jordan 区域**的边界点。Jordan 情形下二者一一对应（Carathéodory 紧化就是通常闭包），但素端是多出来的那层构造，不是边界对应定理的实例 —— 所以是类比，不是定义依赖。"
   },
@@ -91595,7 +92058,6 @@
    "id": "dep.bc-simply",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.simply-connected",
    "usedBy": "thm.boundary-correspondence",
    "note": "陈述以「$\\Omega$ 是单连通区域」为前提。"
@@ -91604,7 +92066,6 @@
    "id": "dep.bc-jordan",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.jordan-curve",
    "usedBy": "thm.boundary-correspondence",
    "note": "陈述以「边界 $\\partial\\Omega$ 是 Jordan 曲线」为前提。"
@@ -91613,7 +92074,6 @@
    "id": "dep.riemann-caratheodory",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "thm.riemann-mapping",
    "usedBy": "thm.boundary-correspondence",
    "note": "**对象依赖，不是推出**：本节谈的是「Riemann 映射 $f$ 在边界上的行为」，对象 $f$ 由 `thm.riemann-mapping` 提供；但边界延拓不是它的推论 —— 内部双全纯完全不管边界，Jordan 条件是本质的（这正是本节点保持 'skeleton' 的那条外部定理 Carathéodory–Osgood）。本图 schema 例外：这条按**对象/构造依赖**记 `definition`，不作命题推出。"
@@ -91622,14 +92082,13 @@
    "id": "dep.sc-caratheodory",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.boundary-correspondence"
    ],
    "target": "thm.schwarz-christoffel",
    "title": "Carathéodory–Osgood 提供 S–C 的存在性",
    "proof": "S–C 要证：给定内角 $\\alpha_{k}\\in(0,2]$ 的多边形 $P$，存在上半平面到 $P$ 的共形映射，形状为 $f(z)=A\\int^{z}\\prod_{k}(\\zeta-x_{k})^{\\alpha_{k}-1}\\,d\\zeta+B$。形式那一半已在本节点给出证明；存在性用的正是 `thm.boundary-correspondence`：多边形边界是 Jordan 曲线，故共形映射 $\\mathbb{H}\\to P$ 连续延拓到闭包、边界一一对应。有了这个延拓才能说「$x_{k}$ 映到第 $k$ 个顶点」，才能用 Schwarz 反射算出 $f^{\\prime}$ 的形状；没有它，证明停在「内部双全纯」，连顶点都指不出来。∎",
-   "note": "S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由边界对应定理提供；引用它而不是直接引用 `thm.riemann-mapping`。"
+   "note": "S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由边界对应定理提供；引用它而不是直接引用 `thm.riemann-mapping`。 ⚠ 本边证明条件于 `thm.boundary-correspondence`（`thm.boundary-correspondence` 仍 skeleton）。"
   },
   {
    "id": "dep.n12-crossratio-mobiuscircle",
@@ -93122,7 +93581,7 @@
    "strength": "strong",
    "definition": "def.inner-product",
    "usedBy": "def.conjugate-transpose",
-   "note": "共轭的来源是内积对第一个变元共轭；没有内积就没有 $A^{*}$。"
+   "note": "共轭的来源是内积对第二个变元共轭；没有内积就没有 $A^{*}$。"
   },
   {
    "id": "dep.ln-ctranspose-transpose",
@@ -93575,7 +94034,6 @@
    "id": "dep.witt-hyp",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.hyperbolic-plane",
    "usedBy": "thm.witt-cancellation",
    "note": "唯一分解里的「块」就是双曲平面。"
@@ -93584,7 +94042,6 @@
    "id": "dep.witt-isosub",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.isotropic-subspace",
    "usedBy": "thm.witt-cancellation",
    "note": "Witt 指标 = 迷向子空间的最大维数；定理保证它良定义。"
@@ -95409,7 +95866,6 @@
    "id": "def-link.james-ref",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.reflexive-space",
    "usedBy": "thm.james",
    "note": "James 定理用自反性刻画「每个泛函达到范数」。"
@@ -95460,7 +95916,7 @@
    "strength": "strong",
    "definition": "def.closed-set",
    "usedBy": "thm.projection-subspace",
-   "note": "正交分解要求子空间 $E$ 闭；否则最近点可能不落在 $E$ 里。"
+   "note": "正交分解要求子空间 $E$ 闭；否则最近点可能不存在。"
   },
   {
    "id": "e167.definition",
@@ -95799,7 +96255,6 @@
    "id": "imp.james-banach-alaoglu",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.banach-alaoglu"
    ],
@@ -95812,7 +96267,6 @@
    "id": "dep.james-weak",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.weak-topology",
    "usedBy": "thm.james",
    "note": "弱拓扑 $\\sigma(X,X^{*})$ 是「使 $X^{*}$ 全部连续」的最弱拓扑；正向用它把 $\\varphi$ 变成弱连续函数。"
@@ -96909,7 +97363,6 @@
    "id": "dep.immersion-openshriek",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.submersion-immersion",
    "usedBy": "prop.open-immersion-shriek",
    "note": "开浸入是**浸入**的特例（$U \\subseteq V$ 开，包含映射），所以「开浸入」这个概念先要有。"
@@ -96918,7 +97371,6 @@
    "id": "dep.sixfunctors-openshriek",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.six-functors",
    "usedBy": "prop.open-immersion-shriek",
    "note": "这条命题要证的就是六函子里的反常推前 $j_{!}$ 存在 —— 没有「六函子」这层框架，它连「要造什么」都说不出来。"
@@ -97135,7 +97587,6 @@
    "id": "dep.triangulation-eulerchar",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.triangulation",
    "usedBy": "prop.eulerchar-genus",
    "note": "“chi 与刨分无关”这条命题本身就**得先有刨分**（chi 是用刨分算出来的），而且它做的正是三角刨分那条注里说的「用刨分定义的量先证与刨分无关」。"
@@ -97144,7 +97595,6 @@
    "id": "dep.topmanifold-rado",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.topological-manifold",
    "usedBy": "thm.rado",
    "note": "Radó 的主角是「紧曲面」= 2 维拓扑流形 + 紧（可带边界），所以它直接用拓扑流形这条定义。"
@@ -97169,7 +97619,6 @@
    "id": "dep.triangulation-rado",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.triangulation",
    "usedBy": "thm.rado",
    "note": "Radó 定理的结论就是「这种 $(K,h)$ 存在」。"
@@ -97178,23 +97627,17 @@
    "id": "dep.compact-rado",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.compact",
    "usedBy": "thm.rado",
    "note": "「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。"
   },
   {
    "id": "dep.rado-classification",
-   "kind": "implication",
+   "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
-   "sources": [
-    "thm.rado"
-   ],
-   "target": "thm.classification-surfaces",
-   "title": "",
-   "proof": "Radó 定理给出曲面 $S$ 的三角剖分 $K$；分类定理的证明正是在 $K$ 的有限多边形的组合层面做「删三角形、翻边、收拢」三步化简，故以 Radó 为第一步前提。∎",
-   "note": "分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。"
+   "definition": "thm.rado",
+   "usedBy": "thm.classification-surfaces",
+   "note": "分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。这是依赖说明，不是严格蕴含。"
   },
   {
    "id": "dep.triangulation-simphomology",
@@ -97256,7 +97699,6 @@
    "id": "dep.closedsurface-classification",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.closed-surface",
    "usedBy": "thm.classification-surfaces",
    "note": "定理的主语就是闭曲面。"
@@ -97265,7 +97707,6 @@
    "id": "dep.connectedsum-classification",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.connected-sum",
    "usedBy": "thm.classification-surfaces",
    "note": "结论的两种标准形都是**连通和**（环面的、射影平面的）。"
@@ -97274,7 +97715,6 @@
    "id": "dep.genus-classification",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.genus",
    "usedBy": "thm.classification-surfaces",
    "note": "可定向侧的分类量就是亏格 $g$；「不同胚」靠 $g$（等价地 $\\chi$）分辨。"
@@ -97283,7 +97723,6 @@
    "id": "dep.eulerchar-classification",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.euler-characteristic"
    ],
@@ -97305,7 +97744,6 @@
    "id": "dep.comb-triangulation",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.triangulation",
    "usedBy": "lem.combinatorial-classification-surfaces",
    "note": "组合分类的操作对象是有限的连通三角剖分闭曲面，直接用三角剖分的定义。"
@@ -97314,7 +97752,6 @@
    "id": "dep.comb-closed",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.closed-surface",
    "usedBy": "lem.combinatorial-classification-surfaces",
    "note": "「闭曲面」给紧、连通、无边界；本引理只处理这类曲面。"
@@ -97338,7 +97775,6 @@
    "strength": "weak",
    "a": "thm.classification-surfaces",
    "b": "prop.eulerchar-genus",
-   "status": "skeleton",
    "title": "",
    "note": "命题的证明**不用**分类定理（节点注写明改走 Radó + 初等路线，$\\chi=2-2g$ 可由同调直接算出）；保留这条只作「标准形 = $g$ 个环面的连通和」的类比视角。"
   },
@@ -97346,7 +97782,6 @@
    "id": "dep.eulerchar-eulerchargenus",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.euler-characteristic"
    ],
@@ -97359,7 +97794,6 @@
    "id": "dep.genus-eulerchargenus",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.genus",
    "usedBy": "prop.eulerchar-genus",
    "note": "命题说的就是「$\\chi$ 与 $g$ 互相决定」，$g$ 的定义必须在这里。"
@@ -97370,7 +97804,6 @@
    "strength": "weak",
    "a": "thm.classification-surfaces",
    "b": "prop.eulerchar-nonorientable",
-   "status": "skeleton",
    "title": "",
    "note": "不可定向标准形同样只是类比视角：命题假设已限定在标准形，不需要分类定理。"
   },
@@ -97448,7 +97881,6 @@
    "strength": "weak",
    "a": "prop.eulerchar-genus",
    "b": "ex.torus",
-   "status": "skeleton",
    "title": "",
    "note": "例子里「$\\chi = 0$」这个值由这条命题（$2 - 2g$）算出，不是另算的。"
   },
@@ -97474,7 +97906,6 @@
    "id": "def-link.toporient-eg",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.topological-orientability",
    "usedBy": "prop.eulerchar-genus",
    "note": "引理 D 用定向图册给 2-单形一致定向"
@@ -97499,7 +97930,6 @@
    "id": "def-link.lebnum-eulerchar",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.lebesgue-number",
    "usedBy": "prop.eulerchar-genus",
    "note": "证明对覆盖取勒贝格数来控制单纯形直径（小于勒贝格数就整块落在一个开集里）—— 定义直接进入第 2 步。"
@@ -97508,7 +97938,6 @@
    "id": "def-link.barysub-eulerchar",
    "kind": "definition",
    "strength": "strong",
-   "status": "skeleton",
    "definition": "def.barycentric-subdivision",
    "usedBy": "prop.eulerchar-genus",
    "note": "证明反复作重心重分把网格按 $n/(n+1)$ 缩小，同调不变性由这条定义的性质给出。"
@@ -97517,16 +97946,15 @@
    "id": "imp.eulerchar-inputs",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "thm.rado",
     "thm.simplicial-approximation",
     "prop.h0-components"
    ],
    "target": "prop.eulerchar-genus",
-   "title": "Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\\implies \\chi = 2-2g$（依赖登记）",
+   "title": "Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\\implies \\chi = 2-2g$（依赖登记，不是蕴含）",
    "proof": "**这条边只登记依赖，不证结论。** 三者合起来才是证明的输入，没有哪一个单独能推出 $\\chi = 2 - 2g$：\n\n1. `thm.rado`（Radó 三角剖分存在性）：先把闭可定向曲面变成有限单纯复形 $K$，之后 $\\chi(K)$ 才有定义；\n2. `thm.simplicial-approximation`：把连续映射换成单纯映射，于是 $H_{2}(S) \\cong H_{2}(K^{\\prime}) \\cong \\mathbb{Z}$；\n3. `prop.h0-components`：$H_{0}(S) \\cong \\mathbb{Z}$ 来自 $S$ 连通，即 $b_{0} = 1$。\n\n代入 $\\chi = b_{0} - b_{1} + b_{2}$ 得 $\\chi = 1 - 2g + 1 = 2 - 2g$。",
-   "note": "⚠ 这是**依赖登记**边，不是蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。"
+   "note": "⚠ 这是依赖登记边，不是逻辑蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。"
   },
   {
    "id": "dep.field-fieldext",
@@ -97913,7 +98341,6 @@
    "strength": "weak",
    "a": "thm.classification-surfaces",
    "b": "thm.gauss-bonnet",
-   "status": "skeleton",
    "title": "分类定理与 Gauss–Bonnet：被同一个 $\\chi$ 焊在一起",
    "note": "一边是**纯拓扑**的分类（闭曲面由 $g$ 或 $k$ 决定，等价地由 $\\chi$ 与可定向性决定），一边是**几何**的等式（$\\int_{M} K\\,\\mathrm{d}A = 2\\pi\\chi(M)$）。\n\n把两者拼起来就得到微分几何里最有名的一句：**曲率的总量只由亏格决定** ——\n\n\n\n$$\\int_{M} K\\,\\mathrm{d}A = 4\\pi(1-g).$$\n\n\n\n球面（$g=0$）必须是 $4\\pi$，环面（$g=1$）必须是 $0$ —— 无论怎么把环面捏变形，只要不同胚就改不了。\n\n⚠ 本图**没有**那条「组合」命题（$\\int K = 4\\pi(1-g)$）的节点，所以这里只连类比；⛔ 也不连 implication：分类定理不推出 Gauss–Bonnet（后者要度量）。"
   },
@@ -100117,14 +100544,13 @@
    "id": "dep.eulerchar-riemannhurwitz",
    "kind": "implication",
    "strength": "strong",
-   "status": "skeleton",
    "sources": [
     "prop.eulerchar-genus"
    ],
    "target": "thm.riemann-hurwitz",
    "title": "",
    "proof": "Riemann–Hurwitz 的原形是 $2g(S)-2=n(2g(T)-2)+\\sum_{p}(e_{p}-1)$；代入 $\\chi=2-2g$（`prop.eulerchar-genus`）即得 $\\chi(S)=n\\chi(T)-\\sum_{p}(e_{p}-1)$。∎",
-   "note": "换成 $\\chi$ 的写法要用 $\\chi = 2 - 2g$ 这条命题。"
+   "note": "换成 $\\chi$ 的写法要用 $\\chi = 2 - 2g$ 这条命题。 ⚠ 本边证明条件于 `prop.eulerchar-genus`（`prop.eulerchar-genus` 仍 skeleton）。"
   },
   {
    "id": "dep.vectorspace-dimension",

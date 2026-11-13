@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.analytic-ring)　·　[Chinese page (authoritative)](./def.analytic-ring.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.analytic-ring.md` and `proofs/`.
+## Statement · **draft**
+A pre-analytic ring $\mathcal{A}$ is called an **analytic ring** if and only if: for every complex
 
+$$C : \cdots \to C_i \to \cdots \to C_1 \to C_0 \to 0$$
 
-Cite: `def.analytic-ring` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(where each $C_i$ is a direct sum of copies of $\mathcal{A}[T]$, with $T$ extremally disconnected), and for every extremally disconnected set $S$, the natural map
 
+> continued in nodes/def.analytic-ring.en.2.md

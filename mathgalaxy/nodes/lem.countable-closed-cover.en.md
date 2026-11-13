@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.countable-closed-cover)　·　[Chinese page (authoritative)](./lem.countable-closed-cover.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · lemma · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.countable-closed-cover.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a Baire space, $F_n \subseteq X$ closed, and $X = \bigcup_n F_n$. Then $\bigcup_n \operatorname{int} F_n$ is **dense** in $X$. In particular, if $X \ne \emptyset$, then at least one $F_n$ has non-empty interior (the empty space satisfies the Baire hypothesis, but every $F_n$ has empty interior).
 
-
-Cite: `lem.countable-closed-cover` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.countable-closed-cover.en.2.md

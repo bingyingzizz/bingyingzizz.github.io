@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.projective-object)　·　[Chinese page (authoritative)](./def.projective-object.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 names: `Projective and Injective` (short) · `Projective and Injective Objects` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.projective-object.md` and `proofs/`.
+## Statement · **draft**
+An object $P$ of a category $\mathcal{C}$ is called **projective** if the functor $h_{P} = \operatorname{Hom}_{\mathcal{C}}(P, -)$ **preserves epimorphisms**. Dually, $I$ is called **injective** if $h^{I}$ sends monomorphisms to epimorphisms.
 
-
-Cite: `def.projective-object` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.projective-object.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.banach-space)　·　[Chinese page (authoritative)](./def.banach-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.banach-space.md` and `proofs/`.
+## Statement · **draft**
+A normed space $V$ is **complete** iff it is complete with respect to the metric $d(v, w) = \|v - w\|$, i.e. every Cauchy sequence converges. A complete normed space is a **Banach space**.
 
-
-Cite: `def.banach-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.banach-space.en.2.md

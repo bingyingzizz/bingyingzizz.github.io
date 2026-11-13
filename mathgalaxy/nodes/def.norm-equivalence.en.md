@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.norm-equivalence)　·　[Chinese page (authoritative)](./def.norm-equivalence.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.norm-equivalence.md` and `proofs/`.
+## Statement · **draft**
+Let $p, q$ be two norms on $E$. Call $p$ **stronger than** $q$ (written $q \preceq p$) if there exists $C > 0$ such that
 
+$$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 
-Cite: `def.norm-equivalence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+If each is stronger than the other, call $p$ and $q$ **equivalent**, written $p \sim q$.
 
+> continued in nodes/def.norm-equivalence.en.2.md

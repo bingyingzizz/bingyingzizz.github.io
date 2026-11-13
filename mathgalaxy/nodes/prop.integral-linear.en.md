@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.integral-linear)　·　[Chinese page (authoritative)](./prop.integral-linear.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Integral Linearity` (short) · `Linearity and Additivity of the Integral` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.integral-linear.md` and `proofs/`.
+## Statement · **draft**
+Let $f, g$ be integrable on $[a, b]$ and $c \in \mathbb{R}$. Then $f + g$ and $cf$ are integrable, and
 
+$$\int_a^b (f + g) = \int_a^b f + \int_a^b g, \qquad \int_a^b cf = c\int_a^b f$$
 
-Cite: `prop.integral-linear` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.integral-linear.en.2.md

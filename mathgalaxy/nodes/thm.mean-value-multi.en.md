@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.mean-value-multi)　·　[Chinese page (authoritative)](./thm.mean-value-multi.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Mean Value Theorem` (short) · `Mean Value Theorem in Several Variables` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.mean-value-multi.md` and `proofs/`.
+## Statement · **draft**
+**Mean value theorem**: let $f : U \to \mathbb{R}$ be differentiable on the open set $U \subseteq \mathbb{R}^{n}$, with $a, a + h \in U$ and the segment $[a, a+h] \subset U$. Then there exists $\theta \in (0, 1)$ such that
 
+$$f(a + h) - f(a) = Df(a + \theta h)(h)$$
 
-Cite: `thm.mean-value-multi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.mean-value-multi.en.2.md

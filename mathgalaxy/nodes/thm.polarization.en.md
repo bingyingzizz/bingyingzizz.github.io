@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.polarization)　·　[Chinese page (authoritative)](./thm.polarization.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.polarization.md` and `proofs/`.
+## Statement · **draft**
+In a real inner product space:
 
+$$\langle x, y\rangle = \tfrac{1}{4}\bigl( \|x + y\|^2 - \|x - y\|^2 \bigr) .$$
 
-Cite: `thm.polarization` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In a complex inner product space:
 
+$$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
+
+> continued in nodes/thm.polarization.en.2.md

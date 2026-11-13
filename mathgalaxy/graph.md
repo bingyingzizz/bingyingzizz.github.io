@@ -1,6 +1,6 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-12T12:15:56.133Z
+> 由 `tools/build.mjs` 自动生成于 2026-11-13T05:09:16.923Z
 > 15 星系 / 105 星团 / 1634 节点 / 3434 连线（强边 3357，弱边 77；其中**不分层**的「推论」64 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
@@ -7873,7 +7873,7 @@ $$\langle Ax, y\rangle = \langle x, A^{*}y\rangle .$$
 
 **它是伴随算子的矩阵**：若在**标准正交基**下取矩阵，线性映射 $T$ 的伴随算子 $T^{*}$（`def.operator-adjoint`）的矩阵就是 $T$ 的矩阵的共轭转置。⚠️ 换了非标准正交基，这两者不再相等 —— 那条关系是「标准正交基」的特权，不是坐标无关的恒等式。
 
-**为什么必须共轭**：$\mathbb{C}^{n}$ 的标准内积是 $\langle x, y\rangle = \sum \overline{x_i} y_i$（对第一个变元共轭），于是把 $A$ 从左边搬到右边时，$\overline{A}$ 会自然出现。
+**为什么必须共轭**：$\mathbb{C}^{n}$ 的标准内积是 $\langle x, y\rangle = \sum x_i \overline{y_i}$（对第二个变元共轭），于是把 $A$ 从左边搬到右边时，$\overline{A}$ 会自然出现。
 
 用「只转置」的版本，$\langle Ax,y\rangle = \langle x, A^{T}y\rangle$ 在复数域上是错的。
 
@@ -15383,7 +15383,7 @@ $$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + 
 
 (3) 勾股定理。
 
-⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\ell^2$ 里稠密但不闭，最近点存在但**不落在 $E$ 里**，正交分解也失效。
+⚠️ 「$E$ 闭」不能去掉：$E = $ 有限支撑序列在 $\ell^2$ 里稠密但不闭，距离为零但取不到，故**不存在** $E$ 中的最近点，正交分解也失效。
 
 ⭐ 这条是 Hilbert 空间与一般 Banach 空间的最大区别之一：一般 Banach 空间里闭子空间不一定有补（$c_0 \subset \ell^\infty$ 就没有），所以「投影」这个词在 Banach 空间里不能乱用。
 
@@ -15530,7 +15530,7 @@ Zorn 给极大元 $M$。
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 #### 可分 Hilbert 空间等距于 ℓ²　`thm.separable-hilbert-is-l2`
-*定理*　可分 Hilbert 空间等距同构于 $\ell^2$
+*定理*　Hilbert 空间等距同构于 $\ell^2(I)$
 
 设 $H$ 是 Hilbert 空间，$\dim H = \#I$（Hilbert 维数）。则 $H$ 等距同构于 $\ell^2(I)$。特别地，无穷维可分 Hilbert 空间都等距同构于 $\ell^2(\mathbb{N})$。
 
@@ -15542,7 +15542,7 @@ Zorn 给极大元 $M$。
 
 ⭐ 结论：**可分无穷维 Hilbert 空间在等距意义下只有一个**。Banach 空间完全不是这样：$\ell^p$（不同 $p$）两两不同构，$C[0,1]$、$L^1$、$c_0$ 也各自不同。这就是「Hilbert 空间简单」的确切含义。
 
-⚠️ 「可分」不能去掉：$\ell^2(I)$（不可数 $I$）与 $\ell^2(J)$ 同构 $\iff \#I = \#J$（用正交基的基数比）。
+⚠️ 若把靶空间固定为 $\ell^2(\mathbb{N})$，则「可分」不能去掉：不可数 $I$ 的 $\ell^2(I)$ 与 $\ell^2(\mathbb{N})$ 不同构（用正交基基数比）。
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
@@ -31526,7 +31526,7 @@ $$C(S, \mathbb{Z}) = \{\, f : S \to \mathbb{Z}\ \mid f \text{continuous}\, \}$$
 
 ⭐ 它是整个固态理论的支点：没有它，$Z[S]^{\blacksquare}$ 就说不成 $\prod_I \mathbb{Z}$，`thm.solid-abelian` 里的「紧投射生成元」也就无从谈起。
 
-⚠ 注意 $C(S,\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\mathbb{R})$ 行为完全不同：$C(S,\mathbb{R})$ 一般不是自由 $\mathbb{R}$-向量空间。
+⚠ 注意 $C(S,\mathbb{Z})$ 与它的**有界**版本以及 $C(S,\mathbb{R})$ 行为完全不同：这里说的是 $C(S,\mathbb{Z})$ 作为抽象阿贝尔群；$C(S,\mathbb{R})$ 作为抽象向量空间当然有基，不能把前者的自由性直接搬过去。
 
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Theorem 5.4
 
@@ -31607,6 +31607,8 @@ $C \in D(\mathcal{A}_F)$ 当且仅当所有 $H^i(C) \in \mathcal{A}_F$；
 ⚠ 条件里只对**核**要求同构，不对余核要求 —— 但对偶地写成余核也一样（见原文 Remark 5.11）。
 
 📌 证明是标准的同调代数：先证 $\mathcal{A}_F$ 对核与极限封闭，再用「两个直和之间的映射」把余核也拉进来，最后用 Postnikov 截断把复形的情形归约到单点。
+
+⚠ 本图不展开 Lemma 5.9 的证明，按外部结论引用。
 
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture V, Lemma 5.9
 
@@ -31815,7 +31817,11 @@ $$\operatorname{RHom}_{\mathcal{A}}\bigl(\mathcal{A}[S],\ C\bigr) \longrightarro
 
 1. **先有典范映射** $\iota_S : A[S] \to \mathcal{A}[S]$ —— 把形式的有限和 $\sum a_s s$ 送进自由完备模（预解析环的数据里自带这族映射，见 `def.pre-analytic-ring`）。
 2. **沿它拉回**：$\operatorname{RHom}_A(-, C)$ 是反变函子，$\iota_S$ 给出 $\operatorname{RHom}_A(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$，规则是 $g \mapsto g \circ \iota_S$。
-3. **左边换个写法**：$\mathcal{A}[S]$ 是自由 $\mathcal{A}$-模，所以 $\mathcal{A}$-线性映射与「逐生成元给一个 $A$-线性映射」是一回事，于是 $\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) = \operatorname{RHom}_A(\mathcal{A}[S], C)$ —— 同一个集合，只是记法不同。
+3. **左边换个写法（这一步有条件）**：当 $C$ 带有 $\mathcal{A}$-模结构（即落在 (ii) 的像里）时，$\mathcal{A}[S]$ 是自由 $\mathcal{A}$-模，$\mathcal{A}$-线性映射由生成元决定，于是有同构
+
+$$\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \cong \operatorname{RHom}_A(\mathcal{A}[S], C),$$
+
+这是伴随给出的同构，不是「同一个集合」。对一般的 $A$-模复形 $C$，左端还没有定义 ——「比较映射」正是定义里要检验的对象；把两者在导出层面直接识别，需要先建立完备模的导出范畴，本图未证（见注末的缺口说明）。
 
 把 2、3 接起来，就是公式里那个箭头 $\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$。
 
@@ -31852,7 +31858,7 @@ $$\operatorname{Mod}^{\mathrm{cond}}_{\mathcal{A}} \subset \operatorname{Mod}^{\
 
 **(i)** 它是阿贝尔范畴，对一切极限、余极限与扩张稳定；$\mathcal{A}[S]$ 构成一族紧投射生成元；含入有左伴随
 
-$$M \longmapsto M \otimes_{\mathcal{A}} \mathcal{A},$$
+$$M \longmapsto M \otimes_{A} \mathcal{A},$$
 
 它是 $A[S] \mapsto \mathcal{A}[S]$ 的唯一保余极限延拓。若 $A$ 交换，$\operatorname{Mod}^{\mathrm{cond}}_{\mathcal{A}}$ 上有唯一的对称幺半张量积 $\otimes_{\mathcal{A}}$。
 
@@ -31860,7 +31866,7 @@ $$M \longmapsto M \otimes_{\mathcal{A}} \mathcal{A},$$
 
 $C$ 在像里当且仅当所有 $H^i(C)$ 在 $\operatorname{Mod}^{\mathrm{cond}}_{\mathcal{A}}$ 里。
 
-含入有左伴随 $C \mapsto C \otimes^{L}_{\mathcal{A}} \mathcal{A}$。
+含入有左伴随 $C \mapsto C \otimes^{L}_{A} \mathcal{A}$。
 
 ⭐ 这是 `thm.solid-abelian` 的相对版本：把 $\mathbb{Z}$ 换成任意解析环。
 
@@ -32008,6 +32014,8 @@ $$f^! : D(\mathbb{Z}_\blacksquare) \longrightarrow D(A_\blacksquare), \qquad f^!
 
 ⚠ $f^!\mathbb{Z}$ 与经典对偶复形 $\omega_A$ 的等同要在 `thm.za-analytic` 的框架里证（原文 Lecture XI）。
 
+⚠ 本结论条件于 `thm.za-analytic`（仍 skeleton），本图不展开完整证明。
+
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VIII, Theorem 8.2
 
 #### R_{ℓ¹} 不是解析环　`prop.rl1-not-analytic`
@@ -32035,7 +32043,7 @@ $$0 \to \mathbb{R}_{\ell^1}[S] \to E \to \mathbb{R}_{\ell^1}[S] \to 0,$$
 
 其中 $E$ 的「$\le r$ 部分」同时约束 $\sum |x_i|$ 与 $\sum |y_i - x_i \log|x_i||$。
 
-⚠ 这条不证明，只引 Ribe（1979）与原文 Remark 7.11–Prop 7.12。
+⚠ 本图不证 Ribe 定理（只引 Ribe 1979 与原文 Remark 7.11–Prop 7.12），结论条件于该外部结果。
 
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Example 7.11 and Proposition 7.12
 
@@ -50424,6 +50432,8 @@ $$f^! M \cong (M \otimes^L_{\mathbb{Z}^{\blacksquare}} A^{\blacksquare}) \otimes
 
 ⚠ 第 ⑤ 步同上：保紧性的完整展开是 Remark 11.7 的归约 + $\mathbb{A}^1$ 的情形，本图只写到归约。
 
+> ⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。
+
 #### 解析环 + 自由固态群是大乘积 ⟹ R_{ℓ¹} 不是解析环　`imp.rl1-not-analytic`
 *解析性要求 $\operatorname{Ext}^1 = 0$ $\implies$ $\mathbb{R}_{\ell^1}$ 不是解析环*
 
@@ -50624,6 +50634,8 @@ $(f^{\mathrm{ad}/Y})_*$ 在仿射局部上是有限个遗忘函子的极限，�
 
 ∎
 
+> ⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。
+
 #### 紧支撑推前 f_! + 有限生成代数的解析环 ⟹ 对偶函子的扭转与基变换　`imp.f-shriek-base-change`
 *仿射情形 + 基变换*
 
@@ -50636,6 +50648,8 @@ $$f^! = \operatorname{RHom}_R(A, R) \otimes^{L}_{R_\blacksquare} f^*,$$
 而 $\operatorname{RHom}_R(A,R)$ 与平坦基变换交换。
 
 **$A = R[T]$。** $f_!M = M \otimes_{(A,R)_\blacksquare} R((T^{-1}))/R[T][-1]$，$f^!R = R[T][1]$；基变换就是 $R((T^{-1}))/R[T]$ 的基变换。$\blacksquare$
+
+> ⚠ 本边证明条件于 `prop.open-immersion-shriek`（`prop.open-immersion-shriek` 仍 skeleton）。
 
 #### 对偶函子的扭转与基变换 + 紧支撑推前 f_! ⟹ 正则闭浸入的对偶复形　`imp.regular-immersion-dualizing`
 *Koszul 复形 $\implies$ 正则闭浸入的对偶复形*
@@ -55779,7 +55793,7 @@ $$H^{0}_{\mathrm{sing}}(M;\mathbb{R}) \cong \mathbb{R}^{c},$$
 
 再由 $\Phi^{0}$ 得 $H^{0}_{\mathrm{dR}}(M) \cong \mathbb{R}^{c}$；特别地 $M \ne \emptyset$ 时 $M$ 连通当且仅当 $\dim H^{0}_{\mathrm{dR}}(M) = 1$。$\blacksquare$
 
-> 这里没有任何「形式」的计算：$H^{0}$ 的整条结论都是从 de Rham 定理借来的，$k \ge 1$ 才需要 Poincaré 引理那一套。
+> 这里没有任何「形式」的计算：$H^{0}$ 的整条结论都是从 de Rham 定理借来的，$k \ge 1$ 才需要 Poincaré 引理那一套。 ⚠ 本边证明条件于 `thm.de-rham`（`thm.de-rham` 仍 skeleton）。
 
 #### 留数定理 ⟹ Cauchy 积分公式　`imp.derived-cif-from-residue`
 *留数定理在 $f(\zeta)/(\zeta-z)$ 上就是 Cauchy 积分公式*
@@ -57128,7 +57142,7 @@ $$u = \tfrac12\left(r + \tfrac1r\right)\cos\theta,\quad v = \tfrac12\left(r - \t
 
 S–C 要证：给定内角 $\alpha_{k}\in(0,2]$ 的多边形 $P$，存在上半平面到 $P$ 的共形映射，形状为 $f(z)=A\int^{z}\prod_{k}(\zeta-x_{k})^{\alpha_{k}-1}\,d\zeta+B$。形式那一半已在本节点给出证明；存在性用的正是 `thm.boundary-correspondence`：多边形边界是 Jordan 曲线，故共形映射 $\mathbb{H}\to P$ 连续延拓到闭包、边界一一对应。有了这个延拓才能说「$x_{k}$ 映到第 $k$ 个顶点」，才能用 Schwarz 反射算出 $f^{\prime}$ 的形状；没有它，证明停在「内部双全纯」，连顶点都指不出来。∎
 
-> S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由边界对应定理提供；引用它而不是直接引用 `thm.riemann-mapping`。
+> S–C 存在性的 (i)（多边形边界是 Jordan 曲线，共形映射连续延拓、边界点一一对应）由边界对应定理提供；引用它而不是直接引用 `thm.riemann-mapping`。 ⚠ 本边证明条件于 `thm.boundary-correspondence`（`thm.boundary-correspondence` 仍 skeleton）。
 
 #### 定义引用：「交比」→ 保圆性　`dep.n12-crossratio-mobiuscircle`
 
@@ -58452,7 +58466,7 @@ Stokes 要的是**可定向的 $n$ 维带边流形**，不是 $R^{3}$ 里的 2 �
 
 #### 定义引用：「内积」→ 共轭转置　`dep.ln-ctranspose-inner`
 
-共轭的来源是内积对第一个变元共轭；没有内积就没有 $A^{*}$。
+共轭的来源是内积对第二个变元共轭；没有内积就没有 $A^{*}$。
 
 #### 定义引用：「转置」→ 共轭转置　`dep.ln-ctranspose-transpose`
 
@@ -59789,7 +59803,7 @@ $L^p$ 的 Riesz 表示所用的配对 $(L^p, L^q)$ 是完美配对，且映射�
 
 #### 定义引用：「闭集与闭包」→ 闭子空间的正交投影　`e166.definition`
 
-正交分解要求子空间 $E$ 闭；否则最近点可能不落在 $E$ 里。
+正交分解要求子空间 $E$ 闭；否则最近点可能不存在。
 
 #### 定义引用：「Hilbert 空间」→ 闭子空间的正交投影　`e167.definition`
 
@@ -60859,11 +60873,9 @@ Radó 定理的结论就是「这种 $(K,h)$ 存在」。
 
 「紧」是 Radó 的必要假设（开曲面也能剖分，但要局部有限的 $K$，证明也不同）。
 
-#### Radó 定理 ⟹ 闭曲面分类定理　`dep.rado-classification`
+#### 定义引用：「Radó 定理」→ 闭曲面分类定理　`dep.rado-classification`
 
-Radó 定理给出曲面 $S$ 的三角剖分 $K$；分类定理的证明正是在 $K$ 的有限多边形的组合层面做「删三角形、翻边、收拢」三步化简，故以 Radó 为第一步前提。∎
-
-> 分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。
+分类定理的**第一步**就是它：先有剖分，才能在组合层面做「删三角形 / 翻边」的化简。这是依赖说明，不是严格蕴含。
 
 #### 定义引用：「三角剖分」→ 单纯逼近　`dep.triangulation-simphomology`
 
@@ -60994,7 +61006,7 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 证明反复作重心重分把网格按 $n/(n+1)$ 缩小，同调不变性由这条定义的性质给出。
 
 #### Radó 定理 + 单纯逼近 + H₀ 与分支 ⟹ Euler 示性数与亏格　`imp.eulerchar-inputs`
-*Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\implies \chi = 2-2g$（依赖登记）*
+*Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\implies \chi = 2-2g$（依赖登记，不是蕴含）*
 
 **这条边只登记依赖，不证结论。** 三者合起来才是证明的输入，没有哪一个单独能推出 $\chi = 2 - 2g$：
 
@@ -61004,7 +61016,7 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 
 代入 $\chi = b_{0} - b_{1} + b_{2}$ 得 $\chi = 1 - 2g + 1 = 2 - 2g$。
 
-> ⚠ 这是**依赖登记**边，不是蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。
+> ⚠ 这是依赖登记边，不是逻辑蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。
 
 #### 定义引用：「域」→ 域扩张　`dep.field-fieldext`
 
@@ -62312,7 +62324,7 @@ Pontryagin 类是实丛的示性类，继承自然性与同构不变。
 
 Riemann–Hurwitz 的原形是 $2g(S)-2=n(2g(T)-2)+\sum_{p}(e_{p}-1)$；代入 $\chi=2-2g$（`prop.eulerchar-genus`）即得 $\chi(S)=n\chi(T)-\sum_{p}(e_{p}-1)$。∎
 
-> 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。
+> 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。 ⚠ 本边证明条件于 `prop.eulerchar-genus`（`prop.eulerchar-genus` 仍 skeleton）。
 
 #### 定义引用：「向量空间」→ 维数良定义　`dep.vectorspace-dimension`
 

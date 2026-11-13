@@ -1,5 +1,5 @@
 # 可分 Hilbert 空间等距于 ℓ²　`thm.separable-hilbert-is-l2`
-可分 Hilbert 空间等距同构于 $\ell^2$
+Hilbert 空间等距同构于 $\ell^2(I)$
 layer 19 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.separable-hilbert-is-l2)　·　[节点索引](../index.md)
 

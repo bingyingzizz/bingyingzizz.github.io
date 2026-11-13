@@ -1,4 +1,4 @@
-# Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\implies \chi = 2-2g$（依赖登记）
+# Radó 三角剖分 + 单纯逼近 + $H_{0}$ 连通分支 $\implies \chi = 2-2g$（依赖登记，不是蕴含）
 `imp.eulerchar-inputs` · 推出 · strong 边 · 根 `../`
 
 `thm.rado` Radó 定理 + `thm.simplicial-approximation` 单纯逼近 + `prop.h0-components` H₀ 与分支 → `prop.eulerchar-genus` Euler 示性数与亏格
@@ -11,4 +11,4 @@
 
 代入 $\chi = b_{0} - b_{1} + b_{2}$ 得 $\chi = 1 - 2g + 1 = 2 - 2g$。
 
-> ⚠ 这是**依赖登记**边，不是蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。
+> ⚠ 这是依赖登记边，不是逻辑蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。

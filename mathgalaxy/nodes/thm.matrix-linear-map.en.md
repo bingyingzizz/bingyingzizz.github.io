@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.matrix-linear-map)　·　[Chinese page (authoritative)](./thm.matrix-linear-map.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.matrix-linear-map.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ have ordered basis $\mathcal{B} = (v_1, \ldots, v_n)$ and $W$ have ordered basis $\mathcal{C} = (w_1, \ldots, w_m)$, both finite-dimensional $K$-vector spaces.
 
+The $m \times n$ matrix $[T]_{\mathcal{B}}^{\mathcal{C}}$ is called the **matrix** of $T$ with respect to these two bases, where the $j$-th column is the coordinate vector of $T(v_j)$ in $\mathcal{C}$.
 
-Cite: `thm.matrix-linear-map` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.matrix-linear-map.en.2.md

@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.convex-set)　·　[Chinese page (authoritative)](./def.convex-set.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.convex-set.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a real vector space and $C \subseteq V$. Call $C$ a **convex set** if for all $x, y \in C$ and $t \in [0,1]$,
 
+$$(1-t)x + ty \in C.$$
 
-Cite: `def.convex-set` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Equivalently: $C$ contains the whole segment between any two of its points.
 
+## Notes · **draft**
+⭐ Convexity uses only the **affine structure**; no norm or inner product is needed. In infinite dimension it is the key hypothesis for "existence of a minimiser" (see `thm.projection-convex`).
+
+> continued in nodes/def.convex-set.en.2.md

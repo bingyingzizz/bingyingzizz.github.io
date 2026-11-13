@@ -11,8 +11,4 @@ $$\Phi^{0} : H^{0}_{\mathrm{dR}}(M) \longrightarrow H^{0}_{\mathrm{sing}}(M;\mat
 
 $$\delta^{0}f(\sigma) = f\bigl(\sigma(1)\bigr) - f\bigl(\sigma(0)\bigr).$$
 
-于是 $f$ 是上循环当且仅当它在每条道路两端取值相同，即 $f$ 在**道路连通分支**上常值；又因为没有 $-1$-单形，上边缘群为零。流形局部道路连通，连通与道路连通一致，设连通分支有 $c$ 个，则
-
-$$H^{0}_{\mathrm{sing}}(M;\mathbb{R}) \cong \mathbb{R}^{c},$$
-
 > 续见 proofs/imp.derived-h0-from-de-rham.2.md

@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.equicontinuous)　·　[Chinese page (authoritative)](./def.equicontinuous.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.equicontinuous.md` and `proofs/`.
+## Statement · **draft**
+Let $K$ be a topological space, $(E, d)$ a metric space, and $\mathcal{H} \subseteq C(K, E)$.
 
+- $\mathcal{H}$ is **equicontinuous at** $x_0 \in K$: $\forall \varepsilon > 0$ there exists a neighbourhood $U$ of $x_0$ such that $d(f(x), f(x_0)) < \varepsilon$ holds for **all** $f \in \mathcal{H}$ and $x \in U$ simultaneously.
+- $\mathcal{H}$ is equicontinuous on $K$: it is equicontinuous at every point $x \in K$.
 
-Cite: `def.equicontinuous` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.equicontinuous.en.2.md

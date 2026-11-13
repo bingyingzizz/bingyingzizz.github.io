@@ -13,4 +13,4 @@ $$0 \to \mathbb{R}_{\ell^1}[S] \to E \to \mathbb{R}_{\ell^1}[S] \to 0,$$
 
 其中 $E$ 的「$\le r$ 部分」同时约束 $\sum |x_i|$ 与 $\sum |y_i - x_i \log|x_i||$。
 
-⚠ 这条不证明，只引 Ribe（1979）与原文 Remark 7.11–Prop 7.12。
+⚠ 本图不证 Ribe 定理（只引 Ribe 1979 与原文 Remark 7.11–Prop 7.12），结论条件于该外部结果。
