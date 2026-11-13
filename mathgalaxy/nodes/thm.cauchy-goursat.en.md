@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.cauchy-goursat)　·　[Chinese page (authoritative)](./thm.cauchy-goursat.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cauchy-goursat.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: on a simply connected region, the integral of a holomorphic function along any closed curve is $0$ — this is the engine of all of complex analysis.
 
+Let $\Omega$ be a **simply connected** plane region, $f$ holomorphic on $\Omega$, and $\gamma$ a piecewise smooth closed curve in $\Omega$. Then
 
-Cite: `thm.cauchy-goursat` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\oint_\gamma f(z)\,\mathrm{d}z = 0.$$
 
+> continued in nodes/thm.cauchy-goursat.en.2.md

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.cauchy-riemann)　·　[Chinese page (authoritative)](./thm.cauchy-riemann.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cauchy-riemann.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: $f = u + iv$ is complex differentiable if and only if it is real differentiable and its two partial derivatives satisfy a very specific pair of equations — the "two-dimensional limit condition" is completely replaced by two one-dimensional equations.
 
+Let $\Omega$ be a plane region, $f = u + iv: \Omega \to \mathbb{C}$, $z_0 \in \Omega$. The following are equivalent:
 
-Cite: `thm.cauchy-riemann` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.cauchy-riemann.en.2.md

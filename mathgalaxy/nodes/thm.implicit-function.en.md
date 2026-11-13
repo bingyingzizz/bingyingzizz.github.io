@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.implicit-function)　·　[Chinese page (authoritative)](./thm.implicit-function.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.implicit-function.md` and `proofs/`.
+## Statement · **draft**
+Let $U \subseteq \mathbb{R}^{n} \times \mathbb{R}^{m}$ be open, $F : U \to \mathbb{R}^{m}$ of class $C^{1}$, $(a, b) \in U$ with $F(a, b) = 0$, and $D_y F(a, b)$ **invertible**:
 
+$$F(a, b) = 0, \qquad D_y F(a, b) \in M_m(\mathbb{R})\ \text{invertible}$$
 
-Cite: `thm.implicit-function` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.implicit-function.en.2.md

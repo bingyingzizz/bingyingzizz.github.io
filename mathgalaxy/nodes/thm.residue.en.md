@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.residue)　·　[Chinese page (authoritative)](./thm.residue.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · theorem · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.residue.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: the integral along a closed curve equals $2\pi i$ times the sum of the residues at all singularities inside the curve — a two-dimensional integration problem is compressed into finitely many algebraic computations.
 
-
-Cite: `thm.residue` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.residue.en.2.md

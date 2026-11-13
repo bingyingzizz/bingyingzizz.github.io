@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.inverse-function)　·　[Chinese page (authoritative)](./thm.inverse-function.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.inverse-function.md` and `proofs/`.
+## Statement · **draft**
+Let $U \subseteq \mathbb{R}^{n}$ be open, $f : U \to \mathbb{R}^{n}$ of class $C^{1}$, $a \in U$ with $Df(a)$ **invertible**.
 
+Then there exist an open neighbourhood $V \subseteq U$ of $a$ and an open neighbourhood $W$ of $f(a)$ such that the restriction $f\bigl|_{V}$ is a **bijection** $V \to W$,
 
-Cite: `thm.inverse-function` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$f\bigl|_{V} : V \to W \quad \text{bijective},$$
 
+> continued in nodes/thm.inverse-function.en.2.md

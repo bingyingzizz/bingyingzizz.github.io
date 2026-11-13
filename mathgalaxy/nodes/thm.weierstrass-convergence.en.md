@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.weierstrass-convergence)　·　[Chinese page (authoritative)](./thm.weierstrass-convergence.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 0 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.weierstrass-convergence.md` and `proofs/`.
+## Statement · **draft**
+Let $f_{k}$ be holomorphic on a region $\Omega$ and converge uniformly to $K \subset \Omega$ on every compact set $f$. Then
 
+1. $f$ is holomorphic on $\Omega$;
+2. for every $m \ge 1$, $f_{k}^{(m)} \to f^{(m)}$ uniformly on every compact set.
 
-Cite: `thm.weierstrass-convergence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.weierstrass-convergence.en.2.md

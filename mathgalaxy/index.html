@@ -20422,6 +20422,266 @@ MG.i18nStatements = {
         basedOn: 'v0.9.3#08cce631',
       },
     },
+
+    'def.holomorphic': {
+      statement: {
+        en: "**In plain words**: complex differentiability means \"the difference quotient converges in the complex sense\" — $h$ may approach $0$ from **any direction, in any manner**, but the quotient must tend to the same complex number.\n\nLet $\\Omega$ be a plane region (a connected open set), $f: \\Omega \\to \\mathbb{C}$, $z_0 \\in \\Omega$. If the limit\n\n$$f'(z_0) := \\lim_{h \\to 0} \\frac{f(z_0 + h) - f(z_0)}{h} \\qquad (h \\in \\mathbb{C},\\ h \\ne 0,\\ z_0 + h \\in \\Omega)$$\n\nexists, then $f$ is called **complex differentiable** at $z_0$, and $f'(z_0)$ is called the **derivative** of $f$ at $z_0$. If $f$ is complex differentiable at every point of $\\Omega$, then $f$ is called **holomorphic** on $\\Omega$.\n\nComplex differentiability implies continuity: rewrite the definition as\n\n$$f(z_0 + h) - f(z_0) = f'(z_0)\\,h + o(h),$$\n\nletting $h \\to 0$ gives $f(z_0 + h) \\to f(z_0)$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#b61d4e40',
+      },
+      notes: {
+        en: "⭐ The **only** difference from real differentiability: $h$ is a complex number.\n\nIn the real case it suffices that the left and right directions agree; in the complex case **infinitely many directions** ($h = t e^{i\\theta}$, $\\theta$ arbitrary) must all agree. The requirement is very strong and the reward is very large: one derivative gives infinitely many.\n\n⚠ This requirement is **not automatic**.\n\n$f(z) = \\bar z$ is nowhere complex differentiable: along the real axis, $h = t$ gives difference quotient $1$; along the imaginary axis, $h = it$ gives quotient $-1$.\n\nThe two one-sided limits differ.\n\nSo \"real differentiable\" is far from implying \"complex differentiable\".\n\n⭐ An equivalent formulation of complex differentiability is $\\Delta f = A\\,\\Delta z + o(\\Delta z)$ — the increment is **only** a linear function of $\\Delta z$, and $\\overline{\\Delta z}$ may not appear.\n\nIn partial-derivative language this is $\\partial f/\\partial \\bar z = 0$ (see the Cauchy–Riemann equations).\n\n📌 Sums, products, quotients (with nonzero denominator) and composites of holomorphic functions are holomorphic, with the same derivative formulas as in the real case — because these are only the arithmetic of limits and never use the realness of $h$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#66d6ae7e',
+      },
+    },
+
+    'thm.cauchy-riemann': {
+      statement: {
+        en: "**In plain words**: $f = u + iv$ is complex differentiable if and only if it is real differentiable and its two partial derivatives satisfy a very specific pair of equations — the \"two-dimensional limit condition\" is completely replaced by two one-dimensional equations.\n\nLet $\\Omega$ be a plane region, $f = u + iv: \\Omega \\to \\mathbb{C}$, $z_0 \\in \\Omega$. The following are equivalent:\n\n**(i)** $f$ is complex differentiable at $z_0$;\n\n**(ii)** $f$ is real differentiable at $z_0$, and\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y}, \\qquad \\frac{\\partial u}{\\partial y} = -\\frac{\\partial v}{\\partial x};$$\n\n**(iii)** $f$ is real differentiable at $z_0$, and $\\dfrac{\\partial f}{\\partial \\bar z}(z_0) = 0$.\n\nWhen they hold, $f'(z_0) = \\dfrac{\\partial f}{\\partial z}(z_0) = \\dfrac{\\partial u}{\\partial x}(z_0) + i\\,\\dfrac{\\partial v}{\\partial x}(z_0)$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#ac3317e1',
+      },
+      notes: {
+        en: "⭐ The three are really one.\n\n$\\Delta z$ and $\\overline{\\Delta z}$ form a basis of $\\mathbb{C}$ as a real vector space, and the increment can be \"multiplication by a complex number\" only if **only** $\\Delta z$ appears;\n\nthe coefficient of $\\Delta z$ is exactly $u_x + i v_x$.\n\nThe CR equations are simply \"the coefficient of $\\overline{\\Delta z}$ is $0$\", written in components.\n\n⭐ A useful by-product: the Jacobian determinant of $f$ at $z_0$ is $= u_x v_y - u_y v_x = u_x^2 + v_x^2 = |f'(z_0)|^2 \\ge 0$.\n\nHence a holomorphic map is **orientation-preserving** wherever the derivative is nonzero, which is the source of its conformality.\n\n⚠ **Checking the CR equations alone is not enough**; one also needs $f$ to be real differentiable.\n\nCounterexample: $f(x + iy) = \\sqrt{|xy|}$ has all four partial derivatives equal to $0$ at the origin (CR holds), yet the difference quotient along $h = t(1+i)$ tends to $1/(1+i) \\ne 0$, so it is not complex differentiable.\n\nThis also shows that \"partial derivatives exist\" is far weaker than \"real differentiable\".\n\n📌 Holomorphy therefore has two practical routes: the abstract difference quotient (good geometric intuition), or checking CR concretely (convenient for computation).",
+        status: 'draft',
+        basedOn: 'v0.9.3#485dac38',
+      },
+    },
+
+    'thm.cauchy-goursat': {
+      statement: {
+        en: "**In plain words**: on a simply connected region, the integral of a holomorphic function along any closed curve is $0$ — this is the engine of all of complex analysis.\n\nLet $\\Omega$ be a **simply connected** plane region, $f$ holomorphic on $\\Omega$, and $\\gamma$ a piecewise smooth closed curve in $\\Omega$. Then\n\n$$\\oint_\\gamma f(z)\\,\\mathrm{d}z = 0.$$\n\nThe multiply connected case: let $\\gamma_0, \\gamma_1, \\cdots, \\gamma_n$ be piecewise smooth simple closed curves in $\\Omega$, with $\\gamma_1, \\cdots, \\gamma_n$ lying inside $\\gamma_0$ and pairwise disjoint, **all oriented counterclockwise**, and $f$ holomorphic on some open set containing the **closed region** they bound (holomorphy \"on the region\" alone is not enough: the curves themselves must lie in the domain). Then\n\n$$\\oint_{\\gamma_0} f\\,\\mathrm{d}z = \\sum_{k=1}^{n} \\oint_{\\gamma_k} f\\,\\mathrm{d}z.$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#d9d1a5c5',
+      },
+      notes: {
+        en: "⚠ \"Simply connected\" cannot be dropped.\n\n$f(z) = 1/z$ is holomorphic on $\\mathbb{C} \\setminus \\{0\\}$, yet $\\oint_{|z| = 1} \\mathrm{d}z/z = 2\\pi i \\ne 0$.\n\nThat hole is the obstruction — its presence makes the winding number detectable.\n\n⭐ Equivalent statement: contour integrals of holomorphic functions are **homotopy invariant** (continuous deformation of the path inside the region leaves the integral unchanged);\n\nsimply connected = every closed curve in the region is homotopic to a point.\n\n⭐ Immediate corollary: a holomorphic function on a simply connected region **has a primitive** (take $F(z) = \\int_{z_0}^{z} f\\,\\mathrm{d}z$, which is path-independent by Cauchy's theorem, and then $F' = f$).\n\nThere is no **clean** counterpart in real analysis: $F(x) = \\log|x|$ is indeed a primitive of $1/x$ on $\\mathbb{R} \\setminus \\{0\\}$ — the difference is that $\\mathbb{R} \\setminus \\{0\\}$ is **disconnected**, so \"path independence\" fails there (the integral around $0$ is nonzero).\n\n⚠ The \"Goursat\" in the name: Cauchy's original 1825 proof required $f'$ to be continuous (via Green's formula);\n\nGoursat later removed this hypothesis by subdividing into triangles.\n\nModern textbooks therefore treat it as the **fundamental theorem of holomorphy**: the conclusion is not bought with a stronger hypothesis.",
+        status: 'draft',
+        basedOn: 'v0.9.3#0c0f846f',
+      },
+    },
+
+    'thm.cauchy-integral-formula': {
+      statement: {
+        en: "**In plain words**: the value of a holomorphic function at an interior point is **completely determined** by its values on the boundary — every interior point \"listens\" to the boundary.\n\nLet $\\Omega$ be a bounded region whose boundary $\\partial\\Omega$ is a piecewise smooth simple closed curve, oriented positively, and $f$ holomorphic on an open set containing $\\overline{\\Omega}$. Then for every $z \\in \\Omega$,\n\n$$f(z) = \\frac{1}{2\\pi i}\\oint_{\\partial\\Omega} \\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta.$$\n\nMore generally, if $\\gamma$ is a **simple** closed curve in the region and $f$ is holomorphic inside $\\gamma$ and on $\\gamma$, then the formula holds for every point $z$ inside $\\gamma$ (for a general closed curve, write $\\operatorname{Ind}(\\gamma, z)f(z) = \\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta$).",
+        status: 'draft',
+        basedOn: 'v0.9.3#3dc2e720',
+      },
+      notes: {
+        en: "⭐ **The key is punching a hole**: the integrand $g(\\zeta) = f(\\zeta)/(\\zeta - z)$ is undefined at $\\zeta = z$, so Cauchy's theorem cannot be applied directly to all of $\\Omega$. Fix $z \\in \\Omega$, let $d = \\operatorname{dist}(z, \\partial\\Omega) > 0$, choose $0 < r < d$, remove the closed disk $\\overline{B(z,r)}$ to get the doubly connected region $\\Omega_{r} = \\Omega \\setminus \\overline{B(z,r)}$. $g$ is holomorphic on $\\Omega_{r}$ (the denominator never vanishes), so the multiply connected Cauchy–Goursat theorem (`thm.cauchy-goursat`) gives $\\oint_{\\partial\\Omega_{r}} g\\,\\mathrm{d}\\zeta = 0$. The boundary $\\partial\\Omega_{r}$ consists of the outer boundary $\\partial\\Omega$ (positive) and the inner circle $|\\zeta - z| = r$ (negative); rearranging gives $\\oint_{\\partial\\Omega} \\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta = \\oint_{|\\zeta - z| = r} \\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta.$.\n\n**Split off the main term**: on the right, write the integrand as $\\frac{f(\\zeta)}{\\zeta - z} = \\frac{f(z)}{\\zeta - z} + \\frac{f(\\zeta) - f(z)}{\\zeta - z}.$. The integral of the first term is computed directly with $\\zeta = z + re^{i\\theta}$: $\\oint_{|\\zeta - z| = r} \\frac{\\mathrm{d}\\zeta}{\\zeta - z} = \\int_{0}^{2\\pi} \\frac{ire^{i\\theta}}{re^{i\\theta}}\\,\\mathrm{d}\\theta = 2\\pi i$, hence contributes $2\\pi i\\,f(z)$.\n\n**The second term vanishes as $r \\to 0$**: $f$ is holomorphic at $z$, so $\\lim_{\\zeta \\to z}\\frac{f(\\zeta) - f(z)}{\\zeta - z} = f'(z)$; in particular there are $M$ and $\\rho > 0$ such that for $|\\zeta - z| < \\rho$ the quotient is bounded by $\\le M$. Hence for $0 < r < \\min(\\rho, d)$, the ML inequality gives $\\left|\\oint_{|\\zeta - z| = r} \\frac{f(\\zeta) - f(z)}{\\zeta - z}\\,\\mathrm{d}\\zeta\\right| \\le M\\cdot 2\\pi r \\longrightarrow 0.$.\n\n**Finish**: the outer integral is independent of $r$ (the identity holds for all $0 < r < d$), so letting $r \\to 0$ gives $\\oint_{\\partial\\Omega}\\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta = 2\\pi i\\,f(z)$, as required. ∎\n\n**General closed curves**: if $\\gamma$ does not enclose $z$, Cauchy's theorem on the region inside $\\gamma$ gives $\\oint_{\\gamma} = 0$; if $\\gamma$ encloses $z$, the same argument on the annulus between the outer boundary and the inner circle gives the form with the winding number $\\operatorname{Ind}(\\gamma, z)\\,f(z) = \\frac{1}{2\\pi i}\\oint_{\\gamma}\\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta$.\n\n⭐ **Hub**: from it follow infinite differentiability, Cauchy's inequalities, Liouville, the maximum modulus principle, Taylor/Laurent expansions, and the residue theorem — almost every result in this galaxy grows from here.\n\n⚠ The integrand $f(\\zeta)/(\\zeta - z)$ is **not** holomorphic at $\\zeta = z$, which is exactly why \"punching a hole\" is not a trick but a necessity.",
+        status: 'draft',
+        basedOn: 'v0.9.3#78d40f05',
+      },
+    },
+
+    'def.contour-integral': {
+      statement: {
+        en: "**In plain words**: cut the path into many small pieces, multiply the value of $f$ at each sample point by the corresponding **complex displacement**, sum and take the limit — that is the integral along this path.\n\nLet $\\gamma: [a, b] \\to \\mathbb{C}$ be piecewise smooth (a parametrized curve) and $f$ continuous on $\\gamma$. Define\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z := \\lim_{\\lVert\\Delta\\rVert \\to 0} \\sum_{k=1}^{n} f(\\gamma(\\tau_k))\\,(\\gamma(t_k) - \\gamma(t_{k-1})),$$\n\nwhere $[a, b]$ is any refinement of a partition and $\\tau_k \\in [t_{k-1}, t_k]$ is arbitrary; the limit exists and is independent of the choices. It equals\n\n$$\\int_\\gamma f(z)\\,\\mathrm{d}z = \\int_a^b f(\\gamma(t))\\,\\gamma'(t)\\,\\mathrm{d}t,$$\n\nwhose right-hand side is a complex-valued Riemann integral over the real parameter $t$. Splitting into real and imaginary parts ($f = u + iv$, $z = x + iy$) gives two real line integrals:\n\n$$\\int_\\gamma f\\,\\mathrm{d}z = \\int_\\gamma (u\\,\\mathrm{d}x - v\\,\\mathrm{d}y) + i\\int_\\gamma (v\\,\\mathrm{d}x + u\\,\\mathrm{d}y).$$\n\nWhen $\\gamma$ is a closed curve we write $\\oint_\\gamma$; on the reversed curve $\\gamma^{-1}$ the integral changes sign: $\\int_{\\gamma^{-1}} f\\,\\mathrm{d}z = -\\int_\\gamma f\\,\\mathrm{d}z$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#34ac3895',
+      },
+      notes: {
+        en: "⭐ That real integral on the right is the whole definition: **a complex contour integral is a complex-valued Riemann integral over the real parameter $t$**.\n\nThus every property of the real integral (linearity, additivity over intervals, the triangle inequality, substitution) carries over automatically.\n\n⭐ The real difference from the real integral is **path dependence**: $\\int_\\gamma f\\,\\mathrm{d}z$ is in general not a function of the endpoints alone.\n\nCauchy's theorem is exactly the statement that \"when the function is holomorphic it suddenly depends only on the endpoints, and vanishes on closed curves\" ($0$).\n\n⭐ The real/imaginary splitting above is the interface to Green's formula: applying Green once to $P = u$, $Q = -v$ and once to $P = v$, $Q = u$ yields the Cauchy–Green identity.",
+        status: 'draft',
+        basedOn: 'v0.9.3#7d980e94',
+      },
+    },
+
+    'thm.residue': {
+      statement: {
+        en: "**In plain words**: the integral along a closed curve equals $2\\pi i$ times the sum of the residues at all singularities inside the curve — a two-dimensional integration problem is compressed into finitely many algebraic computations.\n\nLet $\\Omega$ be a bounded region whose boundary $\\partial\\Omega$ consists of finitely many piecewise smooth simple closed curves, oriented positively. Let $f$ be holomorphic on $\\Omega$ except at finitely many points $z_1, \\cdots, z_n$, all **isolated** singularities not lying on $\\partial\\Omega$; and let $f$ be holomorphic on some **neighbourhood** of $\\overline{\\Omega}$ except at these points. (⚠ The last condition cannot be omitted: saying only \"the singularities are not on the boundary\" is not enough — for example $\\Omega = \\mathbb{D}$, $f = 1/(1-z)$, where $z = 1$ lies on $\\partial\\mathbb{D}$ and $f$ is undefined there, so $\\oint_{\\partial\\Omega} f\\,dz$ does not exist at all.) Then\n\n$$\\oint_{\\partial\\Omega} f(z)\\,\\mathrm{d}z = 2\\pi i \\sum_{k=1}^{n} \\operatorname{Res}(f, z_k).$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#9356c036',
+      },
+      notes: {
+        en: "⭐ Proof: around each $z_k$ remove a closed disk of radius $\\varepsilon$ (pairwise disjoint, all contained in $\\Omega$), obtaining $\\Omega_\\varepsilon = \\Omega \\setminus \\bigcup_k \\overline{B(z_k, \\varepsilon)}$.\n\n$f$ is holomorphic on $\\Omega_\\varepsilon$, so the **multiply connected** Cauchy–Goursat theorem gives $\\oint_{\\partial\\Omega_\\varepsilon} f = 0$, that is,\n\n$$\\oint_{\\partial\\Omega} f\\,\\mathrm{d}z = \\sum_{k=1}^{n} \\oint_{|\\zeta - z_k| = \\varepsilon} f\\,\\mathrm{d}\\zeta = 2\\pi i \\sum_{k=1}^{n} \\operatorname{Res}(f, z_k),$$\n\nThe last step is the definition of the residue.\n\n⭐ This is the hardest-working theorem in complex analysis: the whole batch of real integrals in Chapters 23 and 24 ($\\int_0^{2\\pi} Q(\\sin\\theta, \\cos\\theta)\\,\\mathrm{d}\\theta$, $\\int_{-\\infty}^{\\infty} f(x)\\,\\mathrm{d}x$, $\\int_{-\\infty}^{\\infty} e^{iax}f(x)\\,\\mathrm{d}x$, $\\int_0^{\\infty} x^{a-1}f(x)\\,\\mathrm{d}x$, series sums) rests on it and becomes residue computation.\n\n⚠ The closed curves must be **positively** oriented (counterclockwise);\n\nreversing the orientation changes the overall sign.\n\nSingularities **outside** the curve contribute nothing to the integral — alternatively one may compute with the residue at infinity.",
+        status: 'draft',
+        basedOn: 'v0.9.3#b6977743',
+      },
+    },
+
+    'def.mobius': {
+      statement: {
+        en: "**In plain words**: a fractional linear transformation is the most \"rigid\" class of holomorphic bijections of the Riemann sphere — it sends circles (including lines) to circles and preserves the cross-ratio.\n\nA map of the form\n\n$$f(z) = \\frac{az + b}{cz + d}, \\qquad a, b, c, d \\in \\mathbb{C},\\ ad - bc \\ne 0$$\n\nis called a **fractional linear transformation** (Möbius transformation).\n\nIt extends to a bijection of the Riemann sphere $\\hat{\\mathbb{C}} = \\mathbb{C} \\cup \\{\\infty\\}$ onto itself: when $c \\ne 0$, $f(-d/c) = \\infty$ and $f(\\infty) = a/c$;\n\nwhen $c = 0$, $f(\\infty) = \\infty$.\n\nThe inverse is again a fractional linear transformation:\n\n$$f^{-1}(w) = \\frac{dw - b}{-cw + a}.$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#3cfe9130',
+      },
+      notes: {
+        en: "⭐ $ad - bc \\ne 0$ is the **nondegeneracy** condition: when it equals $0$, $f$ degenerates to a constant.\n\nIt also guarantees $f'(z) = (ad - bc)/(cz + d)^2 \\ne 0$, so $f$ is **conformal everywhere** (angle-preserving; see the entry on conformality).\n\n⭐ Three basic building blocks: translation $z \\mapsto z + b$, dilation-rotation $z \\mapsto az$ ($a \\ne 0$), inversion $z \\mapsto 1/z$.\n\nEvery Möbius transformation is a composite of these, and $ad - bc \\ne 0$ guarantees that the composite does not collapse to a constant.\n\n⭐ Geometric properties (Chapter 13): it sends **circles or lines** to circles or lines (collectively \"generalized circles\", which on the sphere are simply \"circles\");\n\nand it preserves the **cross-ratio**:\n\n$$(z_1, z_2; z_3, z_4) = \\frac{(z_1 - z_3)(z_2 - z_4)}{(z_1 - z_4)(z_2 - z_3)}.$$\n\nThus $f$ is **uniquely** determined by the images of three points — the cross-ratio is a complete invariant of Möbius transformations.\n\n⚠ The point $\\infty$ on the sphere is not \"a very large number\": it is a point adjoined by stereographic projection.\n\nOnly on the sphere is the statement \"$f$ is a bijection\" clean — on $\\mathbb{C}$ it always misses one or two points.",
+        status: 'draft',
+        basedOn: 'v0.9.3#38bf42a2',
+      },
+    },
+
+    'lem.schwarz': {
+      statement: {
+        en: "**In plain words**: a holomorphic map of the unit disk into itself that fixes the origin must be dominated by $z \\mapsto z$: image points lie closer to the centre than their preimages.\n\nLet $\\mathbb{D} = \\{\\, z : |z| < 1 \\,\\}$, with $f: \\mathbb{D} \\to \\mathbb{D}$ holomorphic and $f(0) = 0$. Then\n\n(1) $|f(z)| \\le |z|$ for all $z \\in \\mathbb{D}$;\n\n(2) $|f'(0)| \\le 1$;\n\n(3) if there is $z_0 \\ne 0$ with $|f(z_0)| = |z_0|$, or if $|f'(0)| = 1$, then $f$ is a rotation $f(z) = e^{i\\theta} z$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#b3167693',
+      },
+      notes: {
+        en: "⭐ The proof route: $f(0) = 0$ makes $f(z)/z$ have a removable singularity at $0$; filling in $f'(0)$ gives a holomorphic function $g$ on the disk. On $|z| = r$ one has $|g| \\le 1/r$, and the maximum modulus principle followed by $r \\to 1$ gives the result.\n\n⭐ The three conclusions are really one chain of inequalities: $|g(z)| \\le 1$ immediately yields (1) and (2); (3) is \"when equality holds in the maximum modulus principle\".\n\n⚠ $f(0) = 0$ cannot be omitted. $f(z) = (z + 1)/2$ maps the disk to the disk, but $|f(0)| = 1/2 > 0$ — as soon as the origin is moved, the lemma's conclusions all fail.\n\n⚠ Equality in $|f(z)| \\le |z|$ at **a single interior point** already suffices; it need not hold everywhere — this is the rigidity of the maximum modulus principle.\n\n📌 The version without the hypothesis $f(0) = 0$ is the Schwarz–Pick theorem. This lemma is also the source of \"the automorphism group of the disk is small\", and a basic tool in conformal mapping.",
+        status: 'draft',
+        basedOn: 'v0.9.3#343e9102',
+      },
+    },
+
+    'thm.weierstrass-convergence': {
+      statement: {
+        en: "Let $f_{k}$ be holomorphic on a region $\\Omega$ and converge uniformly to $K \\subset \\Omega$ on every compact set $f$. Then\n\n1. $f$ is holomorphic on $\\Omega$;\n2. for every $m \\ge 1$, $f_{k}^{(m)} \\to f^{(m)}$ uniformly on every compact set.",
+        status: 'draft',
+        basedOn: 'v0.9.3#e1dd5014',
+      },
+      notes: {
+        en: "**Proof of (1)**: holomorphy is tested by `thm.morera`. Take any closed triangle $T$ in $\\Omega$ (with its interior); the integral of each $f_{k}$ along $\\partial T$ vanishes (Cauchy–Goursat). Since $\\partial T$ is compact, uniform convergence lets the integral pass to the limit, so $\\oint_{\\partial T} f = \\lim_{k} \\oint_{\\partial T} f_{k} = 0$. By Morera, $f$ is holomorphic.\n\n**Proof of (2)**: let $K \\subset \\Omega$ be compact and choose $r > 0$ so that the $r$-neighbourhood of $K$ still lies in $\\Omega$. For $z \\in K$, integrate the Cauchy formula for higher derivatives over the circle of radius $r$:\n\n$$\\left|f_{k}^{(m)}(z) - f^{(m)}(z)\\right| \\le \\frac{m!}{r^{m}}\\,\\sup_{|\\zeta - z| \\le r}\\left|f_{k}(\\zeta) - f(\\zeta)\\right|.$$\n\nThe right-hand side is independent of $z$ and tends to $0$ as $k \\to \\infty$, hence the convergence is uniform on $K$. ∎\n\n⭐ **Why this is the foundation of the whole chapter**: it says that holomorphy is **closed** under uniform convergence, so one may safely pass to limits — normal families (`thm.montel`), the Riemann mapping theorem, and Hurwitz's theorem all rely on it to justify that \"the limit function is still holomorphic\".\n\n⚠️ The hypothesis must be **uniform on compact subsets** (uniform on every compact set). With pointwise convergence alone the limit need not be holomorphic and the derivatives need not converge. (Note: $f_k(z) = z^{k}$ is **not** a counterexample — it converges uniformly on compact subsets of $|z| < 1$, and its derivatives converge uniformly to $0$. A genuine counterexample needs compact sets that touch the boundary of convergence.)",
+        status: 'draft',
+        basedOn: 'v0.9.3#820063f1',
+      },
+    },
+
+    'thm.max-modulus': {
+      statement: {
+        en: "**In plain words**: the modulus of a holomorphic function cannot attain a maximum in the interior of a region — unless the function is constant. The maximum can only occur on the boundary.\n\nLet $\\Omega$ be a plane region (a connected open set) and $f$ holomorphic on $\\Omega$. Then either $f$ is constant, or\n\n$$|f(z)| < \\|f\\|_{\\Omega} := \\sup_{\\zeta \\in \\Omega} |f(\\zeta)|, \\qquad \\forall z \\in \\Omega.$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#9c3dcb0d',
+      },
+      notes: {
+        en: "⭐ The proof uses the **mean value formula**: the Cauchy integral formula at the centre $\\zeta = z + re^{i\\theta}$ gives\n\n$$f(z) = \\frac{1}{2\\pi}\\int_0^{2\\pi} f(z + re^{i\\theta})\\,\\mathrm{d}\\theta$$\n\n(as long as $\\overline{B(z, r)} \\subset \\Omega$).\n\nIf $|f|$ attains its maximum $M$ at an **interior** point $z_0$, then $M = |f(z_0)| \\le \\frac{1}{2\\pi}\\int_0^{2\\pi} |f(z_0 + re^{i\\theta})|\\,\\mathrm{d}\\theta \\le M$; equality at both ends forces $|f| \\equiv M$ on the circle.\n\n⭐ By connectedness: the set $\\{ z : |f(z)| = M \\}$ is both open (a whole circle around every point) and closed ($|f|$ is continuous), hence is all of $\\Omega$;\n\nso $|f|$ is constant, and adding the holomorphic $f$ gives that $f$ is constant.\n\n⭐ Corollary for bounded regions: if $\\Omega$ is bounded, $f$ is continuous on $\\overline{\\Omega}$ and holomorphic on $\\Omega$, then $\\|f\\|_{\\overline{\\Omega}} = \\|f\\|_{\\partial\\Omega}$ — the maximum is attained on the boundary.\n\nThis is the strongest form of \"control the interior by boundary values\".\n\n⚠ There is no analogue for the **minimum** of $|f|$: $f(z) = z$ attains its minimum on the unit disk at $0$ (an interior point).\n\nThe correct minimum modulus principle: if $f$ is holomorphic and **nowhere zero**, apply the maximum modulus principle to $1/f$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#266783db',
+      },
+    },
+
+    'thm.rouche': {
+      statement: {
+        en: "**In plain words**: if on the boundary of a closed curve the modulus of a \"perturbation term\" is strictly smaller than the modulus of a \"main term\", then adding the perturbation does not change the number of zeros inside the curve.\n\nLet $\\gamma$ be a **positively oriented, simple** piecewise smooth closed curve (counterclockwise, no self-intersection), let $f, g$ be holomorphic on $\\gamma$ and its interior, and suppose that everywhere on $\\gamma$\n\n$$|g(z)| < |f(z)|.$$\n\nThen $f$ and $f + g$ have the same number of zeros inside $\\gamma$ (both counted with multiplicity).",
+        status: 'draft',
+        basedOn: 'v0.9.3#b23c23ac',
+      },
+      notes: {
+        en: "⭐ Use: count zeros without solving equations — just compare sizes on the boundary.\n\nExample: $f(z) = -5z^3$, $g(z) = z^7 + z - 2$; on $|z| = 1$ we have $|g| \\le 1 + 1 + 2 = 4 < 5 = |f|$, so $z^7 - 5z^3 + z - 2$ has exactly $3$ zeros in $|z| < 1$ (the same as $-5z^3$).\n\n⭐ Another proof of the fundamental theorem of algebra: $f(z) = a_n z^n$, $g(z) = a_{n-1}z^{n-1} + \\cdots + a_0$; on $|z| = R$ with $R$ large enough one has $|g| < |f|$, so $p$ and $a_n z^n$ have the same number of zeros in $|z| < R$, namely $n$.\n\n⚠ The inequality must be **strict** and must hold on the **whole boundary**. Equality is exactly where things can break: $f = z$, $g = -z$ on $|z| = 1$ satisfy $|g| = |f|$, yet $f$ and $f + g = 0$ have completely different numbers of zeros.\n\n📌 How to choose the \"main term\": take the term with the largest modulus on the boundary. This is the same fact as \"the behaviour of a polynomial at infinity is governed by its leading term\".\n\n⚠ **\"Simple\" cannot be dropped**: the assertion is about the number of zeros inside (unweighted). For a general closed curve the correct statement is weighted by the winding number — by the argument principle $\\dfrac{1}{2\\pi i}\\oint f'/f$ is always a weighted sum, and the two sides agree only when the winding number at every interior point is $= 1$ (see the notes to `thm.argument-principle`).",
+        status: 'draft',
+        basedOn: 'v0.9.3#a3fac96f',
+      },
+    },
+
+    'thm.argument-principle': {
+      statement: {
+        en: "**In plain words**: the number of turns made by a holomorphic function along a closed curve equals the number of zeros minus the number of poles inside the curve (both counted with multiplicity) — counting the change of argument is the same as counting zeros and poles.\n\nLet $\\gamma$ be a **positively oriented, simple** piecewise smooth closed curve (counterclockwise, no self-intersection), let $\\Omega$ contain $\\gamma$ and its interior, let $f$ be holomorphic on $\\Omega$ except at finitely many poles, and suppose $\\gamma$ contains neither zeros nor poles. Then\n\n$$\\frac{1}{2\\pi i}\\oint_{\\gamma} \\frac{f'(z)}{f(z)}\\,\\mathrm{d}z = Z - P = n(f \\circ \\gamma,\\, 0),$$\n\nwhere $Z$ is the number of zeros of $f$ inside $\\gamma$ (counted with multiplicity), $P$ is the number of poles (counted with order), and $n$ is the winding number.",
+        status: 'draft',
+        basedOn: 'v0.9.3#61c651a4',
+      },
+      notes: {
+        en: "⭐ The most common special case: when $f$ is **holomorphic** inside, $P = 0$ and hence $\\oint_{\\gamma} f'/f = 2\\pi i Z$ — \"the number of zeros\" becomes an integral.\n\n⭐ Geometric reading: $f \\circ \\gamma$ is a closed curve around $0$, and $Z - P$ is the number of times it winds around $0$. Zeros twist the image curve one turn outward, poles one turn inward.\n\n⚠ There must be no zeros or poles on the boundary — otherwise $f'/f$ is undefined on $\\gamma$ and the integral does not exist at all.\n\n⭐ A by-product: $Z - P$ is **invariant** under small deformations of the curve (as long as no zero or pole is swept), because it is an integer and varies continuously.\n\n📌 Every technique for \"counting zeros\" (Rouché, Hurwitz) starts from this identity; it also explains why zeros and poles can cancel each other at the level of integrals.\n\n⚠ **\"Simple\" cannot be dropped**: the assertion is the unweighted $Z - P$, valid only for **positively oriented simple** closed curves. For a general closed curve the correct form is weighted by winding numbers: $\\dfrac{1}{2\\pi i}\\oint_{\\gamma}\\dfrac{f'}{f} = \\sum_k m_k\\,n(\\gamma, a_k) - \\sum_j n_j\\,n(\\gamma, b_j)$ (where $a_k$ are zeros, $b_j$ poles, $n$ the winding number; see `def.winding-number` / `prop.winding-integral`) — the right-hand side $n(f\\circ\\gamma, 0)$ is always a **weighted** quantity, so the two sides agree only when the winding number at every interior point is $=1$, in which case both equal $Z - P$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#a0120106',
+      },
+    },
+
+    'thm.convergence-radius': {
+      statement: {
+        en: "Let $\\sum a_n (x - x_0)^{n}$ be a power series and put (with the conventions $1/0 = +\\infty$, $1/{+\\infty} = 0$)\n\n$$R := \\frac{1}{\\limsup_{n \\to \\infty} \\sqrt[n]{|a_n|}}$$\n\nThen: for $|x - x_0| < R$ the series **converges absolutely**; for $|x - x_0| > R$ it **diverges**; for $|x - x_0| = R$ there is **no conclusion**.",
+        status: 'draft',
+        basedOn: 'v0.9.3#a0d73c51',
+      },
+      notes: {
+        en: "⭐ $R$ is called the **radius of convergence**, $(x_0 - R, x_0 + R)$ the interval of convergence.\n\nThe proof is just the **root test** applied to the coefficients: $\\limsup \\sqrt[n]{|a_n (x - x_0)^{n}|} = |x - x_0| \\cdot \\limsup \\sqrt[n]{|a_n|}$.\n\n⚠ One must use $\\limsup$ here, not $\\lim$: $\\sqrt[n]{|a_n|}$ need not converge.\n\n⚠ At $|x - x_0| = R$ all three behaviours can occur ($\\sum x^{n}$ diverges at both ends, $\\sum x^{n}/n$ converges at one end and diverges at the other, $\\sum x^{n}/n^{2}$ converges at both ends).",
+        status: 'draft',
+        basedOn: 'v0.9.3#9870cbe9',
+      },
+    },
+
+    'thm.real-ordered-field': {
+      statement: {
+        en: "The $(\\mathbb{R}, +, \\cdot, \\le)$ constructed above satisfies three groups of properties:\n\n**(i) Field axioms**: $(\\mathbb{R}, +, \\cdot)$ is a field — closed under addition, subtraction, multiplication and division (by nonzero elements), with associative, commutative and distributive laws;\n\n**(ii) Order axioms**: $\\le$ is a total order compatible with the operations:\n$$a \\le b \\implies a + c \\le b + c, \\qquad a \\le b,\\ 0 \\le c \\implies ac \\le bc$$\n\n**(iii) Completeness (least upper bound principle)**: **every nonempty subset of $\\mathbb{R}$ that is bounded above has a least upper bound**.\n\nMoreover the embedded image of $\\mathbb{Q}$ is **dense** in $\\mathbb{R}$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#65eb0f17',
+      },
+      notes: {
+        en: "⚠ **Note where this statement sits**: it is a **theorem**, not a definition — first comes the construction (\"the real number system $\\mathbb{R}$\"), then the proof that what was constructed has these three groups of properties.\n\n⭐ **Item (iii) is the engine of analysis**: without it $\\mathbb{Q}$ also satisfies the first two items, but $\\{ x \\in \\mathbb{Q} : x^2 < 2 \\}$ has no least upper bound in $\\mathbb{Q}$.\n\n($\\mathbb{Q}$ is therefore not a complete ordered field — this is not a defect, but precisely the reason to complete $\\mathbb{Q}$ into $\\mathbb{R}$.)\n\nFrom (iii) follow the two most-used facts in analysis:\n- **monotone bounded sequences converge**;\n\n- **the nested interval theorem**, **Bolzano–Weierstrass**, and **convergence of Cauchy sequences**.\n\n⚠ Completeness says \"**a least upper bound exists**\", not \"a limit necessarily exists\" — the latter is a corollary.\n\n📌 The route to (iii) has two steps (see the proof on the edge): first prove that **every Cauchy sequence in $\\mathbb{R}$ converges** (extract a rational Cauchy sequence from the representatives by a diagonal argument), then derive the least upper bound principle from Cauchy completeness (bisection produces an increasing sequence and a decreasing sequence of upper bounds, squeezed to the same limit).\n\n📌 Properties derived from these three items and used everywhere later: the **Archimedean property** and the **density of $\\mathbb{Q}$ in $\\mathbb{R}$** (see the entry on the Archimedean property);\n\n$\\mathbb{R}$ is also **uncountable** ($\\#\\mathbb{R} = 2^{\\aleph_0}$) — \"dense\" and \"equinumerous\" are two different things.",
+        status: 'draft',
+        basedOn: 'v0.9.3#3930fe25',
+      },
+    },
+
+    'thm.baire': {
+      statement: {
+        en: "Let $X$ be a complete metric space (or a locally compact Hausdorff space). Then the intersection of countably many dense open sets is still **dense**. Equivalently:\n\n1. the union of countably many nowhere dense closed sets has empty interior;\n2. every nonempty open set is of the **second category**.",
+        status: 'draft',
+        basedOn: 'v0.9.3#e1e853ed',
+      },
+      notes: {
+        en: "Proof (nested balls), four steps:\n\n1. **Start**: write $B_0 := B(x, \\varepsilon)$.\n\n$O_1$ dense open $\\implies$ $B_0 \\cap O_1$ is nonempty open, so choose $x_1$ and $\\varepsilon_1 < \\min(\\varepsilon/2,\\ 1)$ with\n\n$$\\overline{B(x_1, \\varepsilon_1)} \\subseteq B(x, \\varepsilon) \\cap O_1 .$$\n\n2. **Induction**: suppose $x_n, \\varepsilon_n$ have been chosen (with $\\varepsilon_n < 1/n$).\n\nSince $O_{n+1}$ is dense open, $B(x_n, \\varepsilon_n) \\cap O_{n+1}$ is still nonempty open; choose\n\n$$\\overline{B(x_{n+1}, \\varepsilon_{n+1})} \\subseteq B(x_n, \\varepsilon_n) \\cap O_{n+1}, \\qquad \\varepsilon_{n+1} < \\frac{1}{n+1} .$$\n\n3. **Pick a point in the nested closed balls**: radius $\\varepsilon_n \\to 0$, and $X$ is complete, so $\\bigcap_n \\overline{B(x_n, \\varepsilon_n)} \\ne \\emptyset$; take a point $y$ in it.\n\n(Here \"the radii tend to $0$\" cannot be dropped: completeness only guarantees a common point for nested closed balls whose radii tend to $0$.)\n\n4. **Finish**: for every $n$, $y \\in \\overline{B(x_n, \\varepsilon_n)} \\subseteq B_0 \\cap O_n$, so $y \\in B_0$ and $y \\in \\bigcap_n O_n$.\n\n$B_0$ was arbitrary, so $\\bigcap_n O_n$ meets every nonempty open set, hence is dense.\n\n∎\n\n⭐ All three equivalent formulations should be usable; passing between them is just taking complements.\n\n⚠️ Completeness cannot be dropped: in $\\mathbb{Q}$ every singleton is closed and nowhere dense, and $\\mathbb{Q}$ is countable, so $\\mathbb{Q}$ is of the first category — it is not a Baire space.\n\n**Which hypothesis each direction uses** (the translations between the three formulations are free; their validity rests on Baire's theorem):\n- Countable intersection of dense open sets is dense $\\iff$ countable union of nowhere dense closed sets has empty interior: take complements; holds in any topological space, no completeness needed.\n- The closed nowhere dense formulation $\\iff$ every nonempty open set is not of the first category in the whole space: replace each nowhere dense set by its closure and unwind the definition of first category.\n- Complete metric space $\\implies$ the above properties: recursively choose nested closed balls with radii tending to zero and use completeness to get a common point; in the usual foundational setting this recursion uses dependent choice.\n- The locally compact Hausdorff version replaces completeness by nested compact neighbourhoods and compactness. A metric space alone is not enough: $\\mathbb Q$ is a countable union of nowhere dense singletons; but completeness is sufficient, not necessary, for the Baire property.",
+        status: 'draft',
+        basedOn: 'v0.9.3#067d011c',
+      },
+    },
+
+    'thm.lagrange': {
+      statement: {
+        en: "Let $G$ be a finite group and $H \\le G$. For $g \\in G$ write the **left coset** $gH := \\{\\, gh : h \\in H \\,\\}$. Then the left cosets form a partition of $G$, each left coset is equinumerous with $H$, hence\n\n$$|G| = [G : H] \\cdot |H|, \\qquad |H| \\mid |G|$$\n\nwhere $[G : H] := |G|/|H|$ is called the **index** of $H$ in $G$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#64135c2e',
+      },
+      notes: {
+        en: "⭐ The proof is two sentences: **cosets form a partition** ($g_1 H \\cap g_2 H \\ne \\emptyset \\implies g_1 H = g_2 H$, using that $H$ is closed under multiplication) + **translation is a bijection** ($h \\mapsto gh$ is a bijection $H \\to gH$).\n\nThe full proof is on the edge.\n\n⭐ Three immediate corollaries:\n- the order of every element $g$ divides $|G|$ (take $\\langle g\\rangle$ as $H$);\n\n- a group of prime order is cyclic (take any non-identity element; its order is either $1$ or $p$);\n\n- $g^{|G|} = e$ holds for every $g$ — so Euler's theorem $a^{\\varphi(n)} \\equiv 1 \\pmod n$ is a special case (take $G = (\\mathbb{Z}/n)^{\\times}$).\n\n⚠ **The converse fails**: \"$d \\mid |G|$ $\\implies$ has a subgroup of order $d$\" is **false**.\n\nSmallest counterexample: $|A_4| = 12$, $6 \\mid 12$, yet $A_4$ has no subgroup of order $6$ (a subgroup of order $6$ would have index $2$ and hence be normal, while the only normal subgroups of $A_4$ are $V_4$ and $A_4$).\n\nSo divisibility is only a necessary condition — a partial converse requires Sylow's theorem.",
+        status: 'draft',
+        basedOn: 'v0.9.3#a3083983',
+      },
+    },
+
+    'thm.factor-theorem': {
+      statement: {
+        en: "Let $f \\in K[x]$, $a \\in K$. Then\n\n$$f(a) = 0 \\iff (x - a) \\text{ divides } f \\ \\text{ in } K[x]$$\n\nThat is: there exists $h \\in K[x]$ with $f = (x - a)\\,h$. In this case $a$ is called a **root** (zero) of $f$.",
+        status: 'draft',
+        basedOn: 'v0.9.3#4918315c',
+      },
+      notes: {
+        en: "⭐ The proof is two lines: divide $f$ by $(x - a)$ ($x - a$ is monic, so division with remainder applies); the remainder $r$ has degree $< 1$, so $r$ is a constant; substituting $x = a$ gives $f(a) = r$.\n\nSo \"the remainder\" is exactly \"the value of the function\".\n\n⭐ This immediately gives **that the number of roots does not exceed the degree** (next entry), and \"a linear polynomial always has a root\".\n\n⚠ $a$ must be an element of $K$: $x^{2} + 1$ has no root in $\\mathbb{R}$, but of course it is not divisible by $(x - a)$ ($a \\in \\mathbb{R}$).\n\nThe **existence** of roots depends on $K$ — that is precisely what the fundamental theorem of algebra addresses.",
+        status: 'draft',
+        basedOn: 'v0.9.3#b09f507b',
+      },
+    },
+
+    'thm.inverse-function': {
+      statement: {
+        en: "Let $U \\subseteq \\mathbb{R}^{n}$ be open, $f : U \\to \\mathbb{R}^{n}$ of class $C^{1}$, $a \\in U$ with $Df(a)$ **invertible**.\n\nThen there exist an open neighbourhood $V \\subseteq U$ of $a$ and an open neighbourhood $W$ of $f(a)$ such that the restriction $f\\bigl|_{V}$ is a **bijection** $V \\to W$,\n\n$$f\\bigl|_{V} : V \\to W \\quad \\text{bijective},$$\n\nand its inverse $g := (f\\bigl|_{V})^{-1} : W \\to V$ is also $C^{1}$, and for every $y \\in W$\n\n$$Dg(y) = \\bigl( Df(g(y)) \\bigr)^{-1}$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#15a84bd0',
+      },
+      notes: {
+        en: "⭐ The shape of the theorem is worth remembering: **locally invertible $\\iff$ $Df(a)$ invertible**, and \"the derivative of the inverse is the inverse of the derivative\".\n\nThe second half is pure linear algebra — once $f$ is viewed locally as \"a linear map plus higher-order terms\", inversion naturally lands on $Df$.\n\n⚠ \"Locally\" cannot be dropped.\n\nFor $f(x, y) = (e^{x}\\cos y,\\ e^{x}\\sin y)$, $\\det Df = e^{2x} \\ne 0$ holds everywhere, yet $f$ is far from injective globally ($y$ has period $2\\pi$).\n\n⚠ The theorem guarantees only $C^{1}$;\n\nbut from $Dg = (Df \\circ g)^{-1}$ it follows at once: $f$ smooth $\\implies$ $g$ smooth ($Df\\circ g$ smooth, and inversion is a smooth operation).\n\nThis is \"$f$ is a diffeomorphism $\\implies$ $f^{-1}$ is too\".\n\n⭐ The theorem also shows that $f$ is an **open map** (it sends the open set $V$ to the open set $W$) — this is **free** in both finite dimensions and Banach spaces (the inverse function theorem itself gives a local homeomorphism, and a local homeomorphism automatically sends open sets to open sets). ⚠ Do not confuse this with the **open mapping theorem** of functional analysis: that one says a surjective bounded linear operator is open, a different notion sharing the name with \"a nonconstant holomorphic function is open\".\n\n⚠ It belongs to the same family as `thm.regular-value` and `cor.rank-theorem`: the rank theorem says \"a constant-rank map locally has only a standard form\", and the inverse function theorem is the case $r = n = m$.\n\nThe full proof is on the edge (reduce to $Df(a) = I$, build a local inverse of $f$ by the contraction mapping principle, then solve for $Dg$ from $f \\circ g = \\mathrm{id}$).",
+        status: 'draft',
+        basedOn: 'v0.9.3#37b62d26',
+      },
+    },
+
+    'thm.implicit-function': {
+      statement: {
+        en: "Let $U \\subseteq \\mathbb{R}^{n} \\times \\mathbb{R}^{m}$ be open, $F : U \\to \\mathbb{R}^{m}$ of class $C^{1}$, $(a, b) \\in U$ with $F(a, b) = 0$, and $D_y F(a, b)$ **invertible**:\n\n$$F(a, b) = 0, \\qquad D_y F(a, b) \\in M_m(\\mathbb{R})\\ \\text{invertible}$$\n\n($D_y F$ denotes the matrix of partial derivatives with respect to the last $m$ variables.) Then there exist an open neighbourhood $V \\subseteq \\mathbb{R}^{n}$ of $a$, an open neighbourhood $W \\subseteq \\mathbb{R}^{m}$ of $b$, and a **unique** $C^{1}$ map $g : V \\to W$ such that\n\n$$g(a) = b, \\qquad F\\bigl(x,\\ g(x)\\bigr) = 0 \\quad (x \\in V)$$\n\nand\n\n$$Dg(x) = - \\bigl( D_y F(x, g(x)) \\bigr)^{-1} D_x F(x, g(x))$$",
+        status: 'draft',
+        basedOn: 'v0.9.3#7c56a6d3',
+      },
+      notes: {
+        en: "⭐ In one sentence: **the equation $F(x, y) = 0$ can be solved uniquely for $y = g(x)$ where $D_yF$ is invertible, and the resulting map is automatically $C^{1}$**.\n\nThat is the entire content of the name \"implicit function\" — it turns \"implicitly determined by an equation\" into \"a function really exists\".\n\n⭐ It is the **inverse function theorem in disguise**: assemble $F$ into $\\Phi(x, y) := (x, F(x, y))$; then $D\\Phi$ is block upper triangular, $\\det D\\Phi = \\det D_y F$, so invertibility is equivalent;\n\nand the inverse of $\\Phi$ must have the form $(x, y) \\mapsto (x, h(x, y))$; setting $g(x) := h(x, 0)$ gives the desired implicit function.\n\nThe two theorems are two ways of saying the same thing.\n\n⚠ The invertibility of $D_yF$ is **essential**: for $F(x, y) = x^{2} - y^{2}$ at $(0,0)$, $D_yF = 0$, and the equation $x^{2} = y^{2}$ cannot be solved uniquely for $y = g(x)$ near the origin (there are two branches $y = \\pm x$).\n\n⭐ The formula for $Dg$ need not be memorized: differentiate $F(x, g(x)) = 0$ on both sides and use the chain rule — $D_xF + D_yF \\cdot Dg = 0$, then solve for $Dg$.\n\nThe full proof is on the edge.",
+        status: 'draft',
+        basedOn: 'v0.9.3#91f87be7',
+      },
+    },
+
+    'thm.structure-equations': {
+      statement: {
+        en: "**In plain words**: **these two equations govern how the frame moves**. The first (zero torsion) says \"the change of the coframe is completely determined by the connection forms, with no extra twist\"; the second ($\\mathbb{R}^{3}$ is flat) says \"rotating once in each of two directions gives the same result regardless of order\". Together they express $\\mathrm{d}^{2} = 0$ in a frame.\n\nLet $\\omega^{i}$ be the dual coframe ($\\mathrm{d}r = \\sum_{i}\\omega^{i}e_{i}$) and $\\omega^{i}_{\\ j}$ the connection forms. Then\n\n**First structure equation** (zero torsion)\n\n$$\\mathrm{d}\\omega^{i} = \\sum_{j}\\omega^{j}\\wedge\\omega^{i}_{\\ j} ;$$\n\n**Second structure equation** ($\\mathbb{R}^{3}$ flat)\n\n$$\\mathrm{d}\\omega^{i}_{\\ j}+\\sum_{k}\\omega^{i}_{\\ k}\\wedge\\omega^{k}_{\\ j} = 0 ,\\qquad \\mathrm{d}\\omega^{i}_{\\ j} = \\sum_{k}\\omega^{k}_{\\ j}\\wedge\\omega^{i}_{\\ k}.$$\n\nTogether they express $\\mathrm{d}^{2}=0$ on the frame: applying the exterior derivative to $\\mathrm{d}r$ gives the first equation, and to $\\mathrm{d}e_{i}$ gives the second.",
+        status: 'draft',
+        basedOn: 'v0.9.3#bfd58c6b',
+      },
+      notes: {
+        en: "**Why \"structure\"**: these two equations determine all constraints on \"how the frame moves\". Given the coframe and the connection, the shape of the surface together with its position in $\\mathbb{R}^{3}$ is determined; conversely the only compatibility to check is $\\mathrm{d}^{2}=0$. The fundamental theorem of surface theory turns this sentence into a theorem.\n\n**Curvature form**: on a general manifold the right-hand side of the second equation is nonzero; that term is called the curvature form $\\Omega^{i}_{\\ j} := \\mathrm{d}\\omega^{i}_{\\ j}+\\sum_{k}\\omega^{i}_{\\ k}\\wedge\\omega^{k}_{\\ j}$;\n\non $\\mathbb{R}^{3}$, $\\Omega \\equiv 0$.\n\nRestricted to a surface it becomes $\\Omega^{i}_{\\ j} = \\omega^{i}_{\\ 3}\\wedge\\omega^{j}_{\\ 3}$ — this is the Gauss equation.\n\nThe same thing can be written as \"the mixed partial derivatives of $r_{ij} = \\Gamma^{k}_{\\ ij}r_{k}+h_{ij}n$ and $n_{i} = -h^{j}_{\\ i}r_{j}$ commute (integrability condition)\". Here one only replaces \"mixed partial derivatives\" by $\\mathrm{d}^{2}=0$ and $\\Gamma$ by $\\omega$: the same compatibility, in shorter notation.\n\n⚠️ **Sign convention**: this pack takes $\\omega^{j}_{\\ i} = \\langle \\mathrm{d}e_{i}, e_{j}\\rangle$, i.e. $\\mathrm{d}e_{i} = \\sum_{j}\\omega^{j}_{\\ i}e_{j}$. Moving an index up or down flips the sign of the whole second equation; align this before quoting.",
+        status: 'draft',
+        basedOn: 'v0.9.3#bd8918ef',
+      },
+    },
   },
 };
 

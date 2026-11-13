@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.lagrange)　·　[Chinese page (authoritative)](./thm.lagrange.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lagrange.md` and `proofs/`.
+## Statement · **draft**
+Let $G$ be a finite group and $H \le G$. For $g \in G$ write the **left coset** $gH := \{\, gh : h \in H \,\}$. Then the left cosets form a partition of $G$, each left coset is equinumerous with $H$, hence
 
+$$|G| = [G : H] \cdot |H|, \qquad |H| \mid |G|$$
 
-Cite: `thm.lagrange` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $[G : H] := |G|/|H|$ is called the **index** of $H$ in $G$.
 
+> continued in nodes/thm.lagrange.en.2.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.convergence-radius)　·　[Chinese page (authoritative)](./thm.convergence-radius.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.convergence-radius.md` and `proofs/`.
+## Statement · **draft**
+Let $\sum a_n (x - x_0)^{n}$ be a power series and put (with the conventions $1/0 = +\infty$, $1/{+\infty} = 0$)
 
+$$R := \frac{1}{\limsup_{n \to \infty} \sqrt[n]{|a_n|}}$$
 
-Cite: `thm.convergence-radius` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then: for $|x - x_0| < R$ the series **converges absolutely**; for $|x - x_0| > R$ it **diverges**; for $|x - x_0| = R$ there is **no conclusion**.
 
+> continued in nodes/thm.convergence-radius.en.2.md

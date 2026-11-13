@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.contour-integral)　·　[Chinese page (authoritative)](./def.contour-integral.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.contour-integral.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: cut the path into many small pieces, multiply the value of $f$ at each sample point by the corresponding **complex displacement**, sum and take the limit — that is the integral along this path.
 
+Let $\gamma: [a, b] \to \mathbb{C}$ be piecewise smooth (a parametrized curve) and $f$ continuous on $\gamma$. Define
 
-Cite: `def.contour-integral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.contour-integral.en.2.md
