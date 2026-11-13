@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.arzela-ascoli-general)　·　[Chinese page (authoritative)](./thm.arzela-ascoli-general.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.arzela-ascoli-general.md` and `proofs/`.
+## Statement · **draft**
+Let $K$ be compact, $(E, d)$ a metric space, and $\mathcal{H} \subseteq C(K, E)$. Then the following are **equivalent**:
 
+1. $\mathcal{H}$ is **totally bounded** in $(C(K,E), \Delta)$;
+2. (a) $\mathcal{H}$ is equicontinuous; (b) $\mathcal{H}(x) := \{f(x) : f \in \mathcal{H}\}$ is **totally bounded** for every $x \in K$.
 
-Cite: `thm.arzela-ascoli-general` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.arzela-ascoli-general.en.2.md

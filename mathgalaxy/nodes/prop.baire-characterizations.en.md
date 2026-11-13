@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.baire-characterizations)　·　[Chinese page (authoritative)](./prop.baire-characterizations.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · proposition · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.baire-characterizations.md` and `proofs/`.
+## Statement · **draft**
+The following are **equivalent**:
 
+1. $X$ is a Baire space (the intersection of countably many dense open sets is dense);
+2. every non-empty open subset of $X$ is of the second category;
+3. a countable union of nowhere dense closed sets contains no non-empty open set (has empty interior).
 
-Cite: `prop.baire-characterizations` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.baire-characterizations.en.2.md

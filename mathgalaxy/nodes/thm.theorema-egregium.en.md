@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.theorema-egregium)　·　[Chinese page (authoritative)](./thm.theorema-egregium.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 32 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.theorema-egregium.md` and `proofs/`.
+## Statement · **draft**
+The Gaussian curvature $K$ depends only on the first fundamental form $I$. Precisely: if $\varphi : S_{1}\to S_{2}$ is a local isometry, then
 
+$$K_{1}(p) = K_{2}(\varphi(p))\qquad (p \in S_{1}).$$
 
-Cite: `thm.theorema-egregium` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Equivalently, $K$ can be written as a single formula in $g_{ij}$ and its first and second derivatives.
 
+> continued in nodes/thm.theorema-egregium.en.2.md

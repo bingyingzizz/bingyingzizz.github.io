@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.single-valued-branch)　·　[Chinese page (authoritative)](./prop.single-valued-branch.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.single-valued-branch.md` and `proofs/`.
+## Statement · **draft**
+Let $D \subset \mathbb{C}$ be a region and $F$ a multivalued function on $D$ (assigning to each point a nonempty value set $F(z)$). A **single-valued branch** of $F$ is a continuous function $f : D \to \mathbb{C}$ such that $f(z) \in F(z)$ for all $z \in D$; if $F$ comes from analytic continuation, the branch is automatically holomorphic.
 
-
-Cite: `prop.single-valued-branch` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.single-valued-branch.en.2.md

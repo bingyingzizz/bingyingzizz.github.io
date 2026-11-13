@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.breen-deligne)　·　[Chinese page (authoritative)](./thm.breen-deligne.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster Breen-Deligne Spectral Sequences (`cond.ss`) · Condensed Mathematics / Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.breen-deligne.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be an abelian group in a topos (for example $M \in \mathrm{CondAb}$). Then there is a **natural left resolution**
 
+$$F(M)^{\bullet} \twoheadrightarrow M,$$
 
-Cite: `thm.breen-deligne` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+each term of which is a finite direct sum of "free abelian groups $\mathbb{Z} \cdot M^{s}$":
 
+$$F(M)_{n} = \bigoplus_{i=1}^{r_{n}} \mathbb{Z} \cdot M^{s_{n,i}}.$$
+
+> continued in nodes/thm.breen-deligne.en.2.md

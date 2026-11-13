@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.ufd)　·　[Chinese page (authoritative)](./def.ufd.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ufd.md` and `proofs/`.
+## Statement · **draft**
+An integral domain $A$ is a **unique factorization domain** (UFD) if
 
+1. **Existence**: every non-zero non-unit $a$ can be written as a product of finitely many irreducible elements;
+2. **Uniqueness**: two such factorizations differ only by order and by associates (that is, the factors can be paired off as associates).
 
-Cite: `def.ufd` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ufd.en.2.md

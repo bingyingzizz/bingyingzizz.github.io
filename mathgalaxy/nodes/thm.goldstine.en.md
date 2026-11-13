@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.goldstine)　·　[Chinese page (authoritative)](./thm.goldstine.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.goldstine.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a normed space and $J_X : X \to X^{**}$ the natural embedding. Then $J_X(B_X)$ is dense in $B_{X^{**}}$ in the **weak* topology**.
 
-
-Cite: `thm.goldstine` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.goldstine.en.2.md

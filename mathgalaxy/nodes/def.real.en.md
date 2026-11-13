@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.real)　·　[Chinese page (authoritative)](./def.real.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.real.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ denote the set of all **rational Cauchy sequences**, and $\sim$ the equivalence relation "difference is a **null sequence**" (see "Cauchy sequences and null sequences"). Put
 
+$$\mathbb{R} := \mathcal{C} / \sim$$
 
-Cite: `def.real` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The elements are equivalence classes $[x_n]$. Operations are defined **termwise**, and the order is defined using representatives:
 
+> continued in nodes/def.real.en.2.md

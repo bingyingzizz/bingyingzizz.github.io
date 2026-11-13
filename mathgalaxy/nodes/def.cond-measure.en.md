@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.cond-measure)　·　[Chinese page (authoritative)](./def.cond-measure.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.cond-measure.md` and `proofs/`.
+## Statement · **draft**
+In plain words: the continuous functions on $S$ with values in $\mathbb{Z}$ form a group under pointwise addition, denoted $C(S,\mathbb{Z})$; an **integer-valued measure** is "something that can take weighted sums (that is, 'integrals') of these functions", i.e. a group homomorphism from $C(S,\mathbb{Z})$ to $\mathbb{Z}$.
 
-
-Cite: `def.cond-measure` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.cond-measure.en.2.md

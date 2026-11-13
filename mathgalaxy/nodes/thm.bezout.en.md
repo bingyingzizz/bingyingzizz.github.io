@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=thm.bezout)　·　[Chinese page (authoritative)](./thm.bezout.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.bezout.md` and `proofs/`.
+## Statement · **draft**
+Let $a, b \in \mathbb{Z}$ be not both zero and put $d = \gcd(a, b)$. Then there exist $u, v \in \mathbb{Z}$ with
 
+$$u a + v b = d .$$
 
-Cite: `thm.bezout` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+More generally, $\{\, ua + vb : u, v \in \mathbb{Z} \,\} = d\,\mathbb{Z}$.
 
+## Notes · **draft**
+Corollary: $a$ and $b$ are coprime $\iff$ there exist $u, v$ with $ua + vb = 1$.
+
+> continued in nodes/thm.bezout.en.2.md

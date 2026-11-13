@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.inner-product)　·　[Chinese page (authoritative)](./def.inner-product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.inner-product.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a $K$-vector space ($K = \mathbb{R}$ or $\mathbb{C}$). The map
 
+$$\langle \cdot, \cdot \rangle : V \times V \longrightarrow K$$
 
-Cite: `def.inner-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is an **inner product** on $V$ iff for all $u, v, w \in V$ and $c \in K$:
 
+> continued in nodes/def.inner-product.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.pullback-forms)　·　[Chinese page (authoritative)](./prop.pullback-forms.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · proposition · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Pullback (Open Sets)` (short) · `Pullback: Between Open Sets` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.pullback-forms.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: it pulls forms back along a smooth map — a capability specific to forms (vector fields can only be pushed forward), and the precise statement that $\mathrm{d}$ is coordinate-free.
 
-
-Cite: `prop.pullback-forms` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.pullback-forms.en.2.md

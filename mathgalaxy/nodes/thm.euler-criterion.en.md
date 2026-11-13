@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.euler-criterion)　·　[Chinese page (authoritative)](./thm.euler-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.euler-criterion.md` and `proofs/`.
+## Statement · **draft**
+Let $p$ be an odd prime with $p \nmid a$. Then
 
+$$\left(\frac{a}{p}\right) \equiv a^{\frac{p-1}{2}} \pmod p .$$
 
-Cite: `thm.euler-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+**Why**: $\mathbb{F}_{p}^{\times}$ is a cyclic group of order $p-1$. Write $a = g^{k}$ ($g$ a primitive root).
 
+> continued in nodes/thm.euler-criterion.en.2.md

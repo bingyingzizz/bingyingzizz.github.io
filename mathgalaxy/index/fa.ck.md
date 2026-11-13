@@ -12,5 +12,5 @@
 - def.ck-space　C(K,E)　layer 17
 - thm.equicontinuous-uniform　等度连续与一致等度连续　layer 17
 - thm.ck-complete　C(K,E) 完备　layer 18
-- thm.bernstein-approximation　Bernstein 多项式逼近　layer 18
 - thm.arzela-ascoli-general　广义 Arzelà–Ascoli　layer 22
+- thm.bernstein-approximation　Bernstein 多项式逼近　layer 22

@@ -2,14 +2,18 @@
 English entry · root `../`
 [in graph](../#n=thm.h1-crossed)　·　[Chinese page (authoritative)](./thm.h1-crossed.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · theorem · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `H1 and Crossed Homomorphisms` (short) · `First Cohomology and Crossed Homomorphisms` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.h1-crossed.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a $G$-module (written additively). A map $d : G \to M$ is called a **crossed homomorphism** (that is, a $1$-cocycle) if
 
+$$d(g_{1} g_{2}) = d(g_{1}) + g_{1}\, d(g_{2}) \qquad (g_{1}, g_{2} \in G).$$
 
-Cite: `thm.h1-crossed` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The class given by **a fixed element**,
 
+$$d_{m}(g) := g\, m - m \qquad (m \in M)$$
+
+> continued in nodes/thm.h1-crossed.en.2.md

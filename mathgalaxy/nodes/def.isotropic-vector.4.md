@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.isotropic-subspace`](../nodes/def.isotropic-subspace.md) 迷向子空间 用
 - 被 [`def.hyperbolic-plane`](../nodes/def.hyperbolic-plane.md) 双曲平面 用
+- ⇒ [`lem.witt-extension`](../nodes/lem.witt-extension.md) Witt 延拓引理

@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.invertible-matrix)　·　[Chinese page (authoritative)](./def.invertible-matrix.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.invertible-matrix.md` and `proofs/`.
+## Statement · **draft**
+A square matrix $A \in M_n(K)$ is **invertible** iff there exists $B \in M_n(K)$ with
 
+$$AB = BA = I_n$$
 
-Cite: `def.invertible-matrix` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then $B$ is unique and written $A^{-1}$. The invertible $n$ matrices form a group under multiplication, denoted
 
+$$\operatorname{GL}_n(K) := \{\, A \in M_n(K) : A \text{ is invertible} \,\}$$
+
+and called the **general linear group**.
+
+> continued in nodes/def.invertible-matrix.en.2.md

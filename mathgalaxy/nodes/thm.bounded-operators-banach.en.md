@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.bounded-operators-banach)　·　[Chinese page (authoritative)](./thm.bounded-operators-banach.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 18 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 

@@ -2,7 +2,9 @@
 English entry · root `../`
 [in graph](../#n=thm.norm-equiv-finite-dim)　·　[Chinese page (authoritative)](./thm.norm-equiv-finite-dim.md)
 
-## Notes · **draft**
+$$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty := \max_{1 \le k \le n} |x_k| .$$
+
+## Notes · **stale**
 **Why finite dimension is special**: the unit sphere is compact, so a norm attains a positive minimum on it, and hence any norm is controlled from both sides by $\lVert\cdot\rVert_\infty$. The full proof is on the edge `imp.norm-equiv-finite-dim-proof`.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.

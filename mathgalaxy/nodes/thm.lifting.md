@@ -18,6 +18,6 @@ layer 18 · 定理 · 基本群 · 拓扑学
 refs: Munkres, Topology (2nd ed.), Ch. 9 · Covering Spaces（lifting theorem）；Hatcher, Algebraic Topology, Ch. 1 §1.3 · lifting properties
 
 ## 说明
-text=**证明骨架**：用 Lebesgue 数把道路/同伦切成小段，每段落在均匀覆叠的开集里，逐段唯一提升。完整证明见边 `imp.lifting-proof`。
+**证明骨架**：用 Lebesgue 数把道路/同伦切成小段，每段落在均匀覆叠的开集里，逐段唯一提升。完整证明见边 `imp.lifting-proof`。
 
 引用：`thm.lifting`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

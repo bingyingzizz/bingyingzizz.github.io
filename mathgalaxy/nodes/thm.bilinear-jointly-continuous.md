@@ -3,7 +3,7 @@
 layer 19 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.bilinear-jointly-continuous)　·　[节点索引](../index.md)
 
-设 $E, F, G$ 是赋范空间，$B : E \times F \to G$ 双线性（对每个变量分别线性）。若 $E, F$ 都是 Banach 空间，且
+设 $E, F, G$ 是赋范空间，$B : E \times F \to G$ 双线性（对每个变量分别线性）。若 $F$ 是 Banach 空间（$E$ 只须赋范），且
 > 陈述续见 [nodes/thm.bilinear-jointly-continuous.2.md](./thm.bilinear-jointly-continuous.2.md)
 
 

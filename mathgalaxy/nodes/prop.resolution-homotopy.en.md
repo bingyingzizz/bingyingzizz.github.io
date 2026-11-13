@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.resolution-homotopy)　·　[Chinese page (authoritative)](./prop.resolution-homotopy.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 names: `Resolution Homotopy` (short) · `Homotopy Uniqueness of Projective Resolutions` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.resolution-homotopy.md` and `proofs/`.
+## Statement · **draft**
+Let $P_{\bullet} \twoheadrightarrow M$ and $Q_{\bullet} \twoheadrightarrow M$ be two **projective resolutions** of the same $R$-module $M$. Then there are chain maps
 
-
-Cite: `prop.resolution-homotopy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.resolution-homotopy.en.2.md

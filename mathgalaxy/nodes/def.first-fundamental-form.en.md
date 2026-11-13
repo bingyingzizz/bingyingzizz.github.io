@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.first-fundamental-form)　·　[Chinese page (authoritative)](./def.first-fundamental-form.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.first-fundamental-form.md` and `proofs/`.
+## Statement · **draft**
+The **first fundamental form** of a surface is the symmetric bilinear form on $T_{p}U$
 
+$$I(v,w) := \langle \mathrm{d}r(v), \mathrm{d}r(w)\rangle .$$
 
-Cite: `def.first-fundamental-form` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.first-fundamental-form.en.2.md

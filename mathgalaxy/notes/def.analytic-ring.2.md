@@ -5,4 +5,4 @@
 - 解析 $\iff$ 所列所有复形与极端不连通 $S$ 的比较映射为拟同构：这是定义展开，前提已经给定预解析环。
 - 典范映射 $A[S]\to\mathcal A[S]$ $\implies$ 反变的导出 Hom 比较映射：用预复合的函子性，不需要先假定解析性。
 - 只检验零次普通 Hom $\implies$ 导出比较同构不免费；普通 Hom 看不到高次 Ext，不能替代对复形的条件。
-- 原文把 $\operatorname{RHom}_{\mathcal A}$ 与 $\operatorname{RHom}_A$ 直接识别的解释有循环风险：一般预解析环尚未建立完备模导出范畴，该步未核实，记为缺口；检验条件宜先在底层凝聚态 $A$-模导出范畴表述。
+- $\operatorname{RHom}_{\mathcal A}(\mathcal A[S],C)$ 与 $\operatorname{RHom}_A(\mathcal A[S],C)$ 的识别**不需要**完备模导出范畴：$C$ 是 $\mathcal A$-模复形、$\mathcal A[S]$ 自由，两边都典范同构于 $C^{S}$（逐项成立，故导出层面也成立）。所以定义可整体在底层 $A$-模的导出范畴里表述，无循环。

@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=thm.lebesgue-set-full)　·　[Chinese page (authoritative)](./thm.lebesgue-set-full.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · theorem · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lebesgue-set-full.md` and `proofs/`.
+## Statement · **draft**
+If $f \in L^1_{loc}$, then
 
+$$m(L_f^c) = 0$$
 
-Cite: `thm.lebesgue-set-full` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, **almost every point is a Lebesgue point**.
 
+## Notes · **draft**
+The idea of the proof is neat: for each complex number $c$, apply the differentiation theorem to the function $|f(x) - c|$, obtaining "outside a null set $E_c$, $\lim_{1/m(B)}\int|f(y) - c|dy = |f(x) - c|$".
+
+> continued in nodes/thm.lebesgue-set-full.en.2.md

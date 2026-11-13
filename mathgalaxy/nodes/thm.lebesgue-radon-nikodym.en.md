@@ -2,16 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.lebesgue-radon-nikodym)　·　[Chinese page (authoritative)](./thm.lebesgue-radon-nikodym.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lebesgue-radon-nikodym.md` and `proofs/`.
+## Statement · **draft**
+Let $\nu$ be a **$\sigma$-finite** signed measure and $\mu$ a **$\sigma$-finite** positive measure, both on $(X, \mathcal{M})$. Then there is a **unique** pair of $\sigma$-finite signed measures $\lambda$, $\rho$ such that
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Radon%E2%80%93Nikodym_theorem
+$$\lambda \perp  \mu, \quad  \rho \ll  \mu, \quad  \nu = \lambda + \rho$$
 
-
-Cite: `thm.lebesgue-radon-nikodym` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.lebesgue-radon-nikodym.en.2.md

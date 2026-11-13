@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.continuous-bounded-on-compact)　·　[Chinese page (authoritative)](./prop.continuous-bounded-on-compact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.continuous-bounded-on-compact.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a compact metric space (for example the closed interval $[a, b]$ in $\mathbb{R}$), and let $f : X \to \mathbb{R}$ be continuous. Then $f$ is bounded on $X$: there exists $M$ such that $|f(x)| \le M$ for all $x \in X$.
 
-
-Cite: `prop.continuous-bounded-on-compact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.continuous-bounded-on-compact.en.2.md

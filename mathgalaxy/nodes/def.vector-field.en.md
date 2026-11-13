@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.vector-field)　·　[Chinese page (authoritative)](./def.vector-field.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.vector-field.md` and `proofs/`.
+## Statement · **draft**
+**What it says**: at each point choose a tangent vector, and choose it smoothly as the point varies — that is a vector field. Its real identity is "the operator that takes directional derivatives of smooth functions".
 
-
-Cite: `def.vector-field` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.vector-field.en.2.md

@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.smooth-manifold)　·　[Chinese page (authoritative)](./def.smooth-manifold.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> fields: abstract reviewed · statement draft · notes draft · name derived
 
 layer 9 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 

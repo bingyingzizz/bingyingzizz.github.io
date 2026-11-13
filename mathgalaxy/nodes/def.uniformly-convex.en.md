@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.uniformly-convex)　·　[Chinese page (authoritative)](./def.uniformly-convex.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.uniformly-convex.md` and `proofs/`.
+## Statement · **draft**
+A normed space $(X, \|\cdot\|)$ is **uniformly convex** if for every $\varepsilon \in (0, 2]$ there is $\delta > 0$ such that
 
+$\|x\| = \|y\| = 1,\quad \|x - y\| \ge \varepsilon \implies \left\|\frac{x + y}{2}\right\| \le 1 - \delta .$
 
-Cite: `def.uniformly-convex` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, two points on the unit sphere that are not close have a midpoint strictly inside the ball, and the depth depends only on the distance.
 
+> continued in nodes/def.uniformly-convex.en.2.md

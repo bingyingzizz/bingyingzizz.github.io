@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.bar-resolution)　·　[Chinese page (authoritative)](./def.bar-resolution.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.bar-resolution.md` and `proofs/`.
+## Statement · **draft**
+Let $R$ be a commutative ring with $1$, $G$ a group, and $R$ carry the trivial $G$-action. The **standard resolution** (bar resolution) is a free $R[G]$-module resolution of $R$
 
+$$\cdots \longrightarrow B_{2} \xrightarrow{\ d_{2}\ } B_{1} \xrightarrow{\ d_{1}\ } B_{0} \xrightarrow{\ \varepsilon\ } R \longrightarrow 0 ,$$
 
-Cite: `def.bar-resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.bar-resolution.en.2.md

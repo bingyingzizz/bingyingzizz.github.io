@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.power-series)　·　[Chinese page (authoritative)](./def.power-series.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.power-series.md` and `proofs/`.
+## Statement · **draft**
+Given a sequence $\{a_n\} \subseteq \mathbb{R}$ (or $\mathbb{C}$) and a centre $x_0$, an expression of the form
 
+$$\sum_{n=0}^{\infty} a_n (x - x_0)^{n}$$
 
-Cite: `def.power-series` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.power-series.en.2.md

@@ -1,9 +1,7 @@
 # Stone–Weierstrass 定理　`thm.stone-weierstrass`　·　说明
 根 `../`
 
-- **对称地压上方**：对 $-f$ 重复上面两步（等价地直接用 $\min$），得 $h' \in \overline{A}$ 使 $h' < f + \varepsilon$。
-
-- **合起来**：$h' \le h$ 在 $\overline{A}$ 里夹住 $f$，取 $h'' := \max(h', \min(h, f))$ 或直接用 $\|h - f\| \le \varepsilon$，得 $\|f - h\| < 2\varepsilon$。
+- **对 $x$ 覆盖并取有限 $\max$**：令 $U_{x} := \{t \in K : h_{x}(t) > f(t) - \varepsilon\}$，它含 $x$ 且开。取有限个 $U_{x_1}, \ldots, U_{x_m}$ 覆盖 $K$，令 $k := \max_{i} h_{x_i} \in \overline{A}$。下界：任一点落在某个 $U_{x_j}$ 里，故 $k \ge h_{x_j} > f - \varepsilon$。上界：每个 $h_{x_j}$ 都**处处**满足 $h_{x_j} < f + \varepsilon$，取有限 $\max$ 后仍有 $k < f + \varepsilon$。合起来 $f - \varepsilon < k < f + \varepsilon$，即 $\|k - f\|_\infty < \varepsilon$。
 
 $\varepsilon$ 任意，于是 $f \in \overline{A}$，于是 $\overline{A} = C(K)$。
 

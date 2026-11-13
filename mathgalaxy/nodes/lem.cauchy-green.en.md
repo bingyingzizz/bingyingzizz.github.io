@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.cauchy-green)　·　[Chinese page (authoritative)](./lem.cauchy-green.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · lemma · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.cauchy-green.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: a complex integral along a closed curve can be converted into a double integral over the area inside the curve, whose integrand is exactly $\partial f/\partial \bar z$ — so "holomorphic $\implies$ integral zero" becomes "the integrand is $0$".
 
-
-Cite: `lem.cauchy-green` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.cauchy-green.en.2.md

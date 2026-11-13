@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.residue)　·　[Chinese page (authoritative)](./def.residue.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.residue.md` and `proofs/`.
+## Statement · **draft**
+**In words**: the residue is the coefficient of $(z - a)^{-1}$ in the Laurent expansion of $f$ near an isolated singularity — equivalently, the number obtained by integrating along a small circle and dividing by $2\pi i$.
 
+Let $a$ be an isolated singularity of $f$, with $f$ holomorphic on $B(a, \varepsilon) \setminus \{a\}$. Define
 
-Cite: `def.residue` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.residue.en.2.md

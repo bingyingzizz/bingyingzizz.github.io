@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.baire-open-subset)　·　[Chinese page (authoritative)](./thm.baire-open-subset.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.baire-open-subset.md` and `proofs/`.
+## Statement · **draft**
+If $X$ is Baire and $\Omega \subseteq X$ is open, then $\implies$ $\Omega$ (with the subspace topology) is a Baire space.
 
+## Notes · **draft**
+Proof: let $O_n$ be dense open in $\Omega$ and write $O_n = \Omega \cap O_n'$ with $O_n'$ open in $X$.
 
-Cite: `thm.baire-open-subset` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.baire-open-subset.en.2.md

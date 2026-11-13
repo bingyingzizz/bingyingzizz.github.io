@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=lem.closed-subalgebra-lattice)　·　[Chinese page (authoritative)](./lem.closed-subalgebra-lattice.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 13 · lemma · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 

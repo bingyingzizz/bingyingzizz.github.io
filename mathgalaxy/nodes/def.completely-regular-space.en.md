@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.completely-regular-space)　·　[Chinese page (authoritative)](./def.completely-regular-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.completely-regular-space.md` and `proofs/`.
+## Statement · **draft**
+**What this condition is**: $T_{3.5}$ together with $T_{1}$. This class is the standard setting for "there are enough continuous functions", and the default hypothesis in compactification and metrization theory.
 
+A topological space $X$ is a **completely regular space** if
 
-Cite: `def.completely-regular-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.completely-regular-space.en.2.md

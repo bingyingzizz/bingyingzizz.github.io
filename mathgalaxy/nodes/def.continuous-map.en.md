@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.continuous-map)　·　[Chinese page (authoritative)](./def.continuous-map.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 5 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.continuous-map.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ and $Y$ be topological spaces. A map $f : X \to Y$ is **continuous** iff **the preimage of every open set is open**:
 
+$$V \in \mathcal{T}_Y \implies f^{-1}(V) \in \mathcal{T}_X$$
 
-Cite: `def.continuous-map` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+it suffices to check this on a **basis** (or subbasis).
 
+Composites of continuous maps are continuous: $f$ and $g$ continuous $\implies g \circ f$ continuous.
+
+> continued in nodes/def.continuous-map.en.2.md

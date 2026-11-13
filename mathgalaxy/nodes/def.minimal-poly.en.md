@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.minimal-poly)　·　[Chinese page (authoritative)](./def.minimal-poly.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.minimal-poly.md` and `proofs/`.
+## Statement · **draft**
+Let $\dim V < \infty$ and $T : V \to V$. The set
 
+$$I_T := \{\, p \in K[x] : p(T) = 0 \,\}$$
 
-Cite: `def.minimal-poly` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is a non-zero ideal of $K[x]$ (by Cayley–Hamilton, $\chi_T \in I_T$). Since $K[x]$ is a principal ideal domain, there is a **unique** monic polynomial $\mu_T$ with $I_T = (\mu_T)$.
 
+> continued in nodes/def.minimal-poly.en.2.md

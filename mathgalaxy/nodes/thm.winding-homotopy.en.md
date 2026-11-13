@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.winding-homotopy)　·　[Chinese page (authoritative)](./thm.winding-homotopy.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.winding-homotopy.md` and `proofs/`.
+## Statement · **draft**
+Let $\gamma_{0}, \gamma_{1}$ be closed curves in $\mathbb{C} \setminus \{a\}$ that are homotopic there (a homotopy $H : [0,1]^{2} \to \mathbb{C}\setminus\{a\}$ whose two ends give $\gamma_{0}, \gamma_{1}$ respectively, and for every $s \in [0,1]$ the curve $H(\cdot, s)$ is closed, i.e. $H(0, s) = H(1, s)$). Then
 
+$$n(\gamma_{0}, a) = n(\gamma_{1}, a).$$
 
-Cite: `thm.winding-homotopy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.winding-homotopy.en.2.md

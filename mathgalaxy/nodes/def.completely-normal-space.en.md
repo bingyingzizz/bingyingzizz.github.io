@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.completely-normal-space)　·　[Chinese page (authoritative)](./def.completely-normal-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 6 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.completely-normal-space.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: normality is a relation between closed sets. It is **not inherited** by subspaces — so requiring that **every** subspace be normal is a genuine strengthening, and that is $T_{5}$.
 
+A topological space $X$ is **completely normal** (also **hereditarily normal**) if **every subspace** of $X$ is normal (`def.normal-space`).
 
-Cite: `def.completely-normal-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.completely-normal-space.en.2.md

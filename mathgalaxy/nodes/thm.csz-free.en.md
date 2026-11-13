@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.csz-free)　·　[Chinese page (authoritative)](./thm.csz-free.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.csz-free.md` and `proofs/`.
+## Statement · **draft**
+In plain terms: something counterintuitive — "continuous integer-valued functions on $S$" look like "infinitely many copies of $\mathbb{Z}$ glued together", yet they are **always** free abelian groups (a basis, no relations). This is the nail that holds up the whole theory of solid groups.
 
+For every profinite set $S$, the group $C(S, \mathbb{Z})$ of continuous functions (see `def.cond-measure`),
 
-Cite: `thm.csz-free` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.csz-free.en.2.md

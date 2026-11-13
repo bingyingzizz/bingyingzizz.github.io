@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=cor.free-solid-product)　·　[Chinese page (authoritative)](./cor.free-solid-product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · corollary · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/cor.free-solid-product.md` and `proofs/`.
+## Statement · **draft**
+For every profinite set $S$, there exist a set $I$ (with $\#I \le 2^{\#S}$) and an isomorphism of condensed abelian groups
 
+$$Z[S]^{\blacksquare} \cong \prod_{I} \mathbb{Z}.$$
 
-Cite: `cor.free-solid-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+whose underlying abelian group is the measure group $M(S,\mathbb{Z})$.
 
+> continued in nodes/cor.free-solid-product.en.2.md

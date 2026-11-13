@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.bernstein-approximation)　·　[Chinese page (authoritative)](./thm.bernstein-approximation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 22 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.bernstein-approximation.md` and `proofs/`.
+## Statement · **draft**
+For $f \in C[0, 1]$, put
 
+$$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x)^{n-k} .$$
 
-Cite: `thm.bernstein-approximation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then $\|B_n f - f\|_\infty \to 0$.
 
+> continued in nodes/thm.bernstein-approximation.en.2.md

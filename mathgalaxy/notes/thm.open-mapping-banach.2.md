@@ -1,16 +1,8 @@
 # 开映射定理（Banach 版）　`thm.open-mapping-banach`　·　说明
 根 `../`
 
+把这一点搬回原点，分**平移**与**相减**两小步。取 $x_0 \in k B_E$ 使 $\|y_0 - u(x_0)\| < \delta/2$（$y_0$ 在闭包里，故可这样逼近）。**平移**：对 $\|z\| < \delta/2$ 有 $\|z + (u(x_0) - y_0)\| \le \|z\| + \|u(x_0) - y_0\| < \delta/2 + \delta/2 = \delta$，故 $u(x_0) + z = y_0 + \bigl(z + u(x_0) - y_0\bigr) \in B_F(y_0, \delta) \subseteq \overline{u(kB_E)}$，即 $B_F(u(x_0), \delta/2) \subseteq \overline{u(kB_E)}$。**相减**：由 $u(x_0) + z \in \overline{u(kB_E)}$ 得 $z = \bigl(u(x_0)+z\bigr) - u(x_0) \in \overline{u(kB_E)} - u(x_0) \subseteq \overline{u(kB_E) - u(x_0)} = \overline{u(kB_E - x_0)}$，而 $x_0 \in kB_E$ 给 $kB_E - x_0 \subseteq 2k\,B_E$，故 $z \in \overline{u(2k\,B_E)}$。于是
+
 $$\overline{u(2k\, B_E)} \supseteq B_F(0, \delta/2) ,$$
-
-再由齐次性（两边同时除以 $2k$）得到：存在 $r = \delta/(4k) > 0$ 使
-
-$$\overline{u(B_E)} \supseteq 2r\, B_F .$$
-
-**第二步：把闭包去掉。** 要证 $u(B_E) \supseteq r B_F$。取 $\|y\| < r$。由第一步，$\overline{u(B_E)} \supseteq 2r B_F$，故 $y \in \overline{u(B(0, 1/2))}$：存在 $x_1$，$\|x_1\| < 1/2$，使 $\|y - u(x_1)\| < r/2$。对 $y - u(x_1)$（范数 $< r/2 < r$）重复同一论证，得 $x_2$，$\|x_2\| < 1/4$，使 $\|y - u(x_1) - u(x_2)\| < r/4$。如此得到 $(x_n)$，满足
-
-$$\|x_n\| < 2^{-n}, \qquad \Bigl\| y - u\Bigl(\sum_{j \le n} x_j\Bigr) \Bigr\| < r\,2^{-n} .$$
-
-因为 $\sum \|x_n\| < 1$ 而 $E$ **完备**，级数 $x := \sum_{n} x_n$ 收敛，且 $\|x\| < 1$。又 $u$ 连续，故 $u(x) = \lim_n u(\sum_{j\le n} x_j) = y$。于是 $y = u(x)$ 且 $\|x\| < 1$，即 $y \in u(B_E)$。
 
 > 续见 notes/thm.open-mapping-banach.3.md

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.free-presentation)　·　[Chinese page (authoritative)](./def.free-presentation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.free-presentation.md` and `proofs/`.
+## Statement · **draft**
+A continuous surjection $F \twoheadrightarrow S$ between compact Hausdorff spaces is called a **free presentation** of $S$ if
 
+1. $F$ is a free compact Hausdorff space;
+2. $F \to S$ is an epimorphism;
+3. with $R := F \times_{S} F$, the map $F \to R$ is an epimorphism.
 
-Cite: `def.free-presentation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then $S \cong \operatorname{coker}(R \rightrightarrows F)$.
 
+> continued in nodes/def.free-presentation.en.2.md

@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham-h0)　·　[Chinese page (authoritative)](./thm.de-rham-h0.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 names: `Zeroth Cohomology` (short) · `Zeroth de Rham Cohomology` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.de-rham-h0.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: compute the lowest degree — a $0$-form is a function, "closed" means "locally constant", so $H^{0}$ counts exactly the number of connected components.
 
+Let $M$ be a smooth manifold and $c$ its number of connected components. Then
 
-Cite: `thm.de-rham-h0` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$H^{0}_{\mathrm{dR}}(M) \cong \mathbb{R}^{c}.$$
 
+> continued in nodes/thm.de-rham-h0.en.2.md

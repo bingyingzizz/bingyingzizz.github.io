@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1634 节点 / 3434 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1636 节点 / 3438 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -20,8 +20,8 @@
 ### 素因子　出现 10 次
 `thm.minimal-poly-divisor` · `def.simple-group` · `def.divisor-function` · `def.mobius-function` · `thm.mu-sum` · `thm.chebyshev-estimate` 等 10 个节点
 
-### 概率　出现 8 次
-`def.lebesgue-stieltjes` · `thm.dct` · `thm.termwise-L1` · `def.convex-function` · `thm.cauchy-schwarz` · `def.tangent-distribution` 等 7 个节点
+### 概率　出现 9 次
+`def.lebesgue-stieltjes` · `thm.dct` · `thm.termwise-L1` · `def.convex-function` · `thm.cauchy-schwarz` · `def.tangent-distribution` 等 8 个节点
 
 ### Fourier 变换　出现 6 次
 `thm.riemann-lebesgue` · `def.pontryagin-dual` · `thm.pontryagin-van-kampen` · `thm.bounded-extension` · `thm.closed-graph`

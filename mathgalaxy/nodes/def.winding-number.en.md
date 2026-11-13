@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.winding-number)　·　[Chinese page (authoritative)](./def.winding-number.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.winding-number.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: the winding number is an integer counting "how many times one goes around a point" — one counterclockwise turn is $+1$, one clockwise turn is $-1$, no turn is $0$.
 
+Let $\gamma: [a, b] \to \mathbb{C}$ be a piecewise smooth closed curve and $a_0 \notin \gamma$. Define the **winding number** (also called index) of $\gamma$ about $a_0$ by
 
-Cite: `def.winding-number` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.winding-number.en.2.md

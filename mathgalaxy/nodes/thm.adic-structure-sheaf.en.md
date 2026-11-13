@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.adic-structure-sheaf)　·　[Chinese page (authoritative)](./thm.adic-structure-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · theorem · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.adic-structure-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $X = \operatorname{Spa}(A,A^+)$. On rational open sets define
 
+$$\mathcal{O}_X(U) := A\bigl[\tfrac{1}{f}\bigr], \qquad \mathcal{O}_X^+(U) := \widetilde{A^+\bigl[\tfrac{g_1}{f}, \ldots, \tfrac{g_n}{f}\bigr]}$$
 
-Cite: `thm.adic-structure-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+($U = U\!\left(\frac{g_1,\ldots,g_n}{f}\right)$). Then:
 
+**(i)** $\mathcal{O}_X$ and $\mathcal{O}_X^+$ are both **sheaves**;
+
+> continued in nodes/thm.adic-structure-sheaf.en.2.md

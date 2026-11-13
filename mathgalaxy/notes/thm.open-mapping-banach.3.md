@@ -1,8 +1,14 @@
 # 开映射定理（Banach 版）　`thm.open-mapping-banach`　·　说明
 根 `../`
 
-**第三步：收尾。** 任取开集 $\Omega \subseteq E$ 与 $x \in \Omega$，取 $\rho > 0$ 使 $B(x, \rho) \subseteq \Omega$。由齐次性 $u(B(x,\rho)) = u(x) + \rho\, u(B_E) \supseteq u(x) + \rho r B_F$，这是 $u(x)$ 的一个邻域，含于 $u(\Omega)$。故 $u(\Omega)$ 开。$\square$
+再由齐次性（$u(2k\,B_E) = 2k\,u(B_E)$，两头同除以 $2k$）得到：存在 $r = \delta/(8k) > 0$ 使
 
-**两条假设各管什么。** $F$ 完备只用在第一步（要纲定理）；$E$ 完备只用在第二步（要级数收敛）。两个缺一不可：**靶** $F = (C[0,1], \|\cdot\|_1)$ 不完备时恒等映射 $(C[0,1], \|\cdot\|_\infty) \to (C[0,1], \|\cdot\|_1)$ 是连续双射但不开（$E = (C[0,1], \|\cdot\|_\infty)$ 其实是完备的）—— 上面这个恒等映射就是 $F$ 不完备的反例本身。
+$$\overline{u(B_E)} \supseteq 2r\, B_F .$$
 
-**与闭图像定理的关系。** 第二步的「完备性去掉闭包」是这条定理真正的技术核心；闭图像定理反过来把它当工具用（先证 $\pi_1^{-1}$ 有界，再用它得到 $u$ 有界）。所以这两条不是彼此独立的：**开映射 $\implies$ 逆算子 $\implies$ 闭图像**。
+**第二步：把闭包去掉。** 要证 $u(B_E) \supseteq r B_F$。取 $\|y\| < r$。由第一步，$\overline{u(B_E)} \supseteq 2r B_F$，故 $y \in \overline{u(B(0, 1/2))}$：存在 $x_1$，$\|x_1\| < 1/2$，使 $\|y - u(x_1)\| < r/2$。对 $y - u(x_1)$（范数 $< r/2 < r$）重复同一论证，得 $x_2$，$\|x_2\| < 1/4$，使 $\|y - u(x_1) - u(x_2)\| < r/4$。如此得到 $(x_n)$，满足
+
+$$\|x_n\| < 2^{-n}, \qquad \Bigl\| y - u\Bigl(\sum_{j \le n} x_j\Bigr) \Bigr\| < r\,2^{-n} .$$
+
+因为 $\sum \|x_n\| < 1$ 而 $E$ **完备**，级数 $x := \sum_{n} x_n$ 收敛，且 $\|x\| < 1$。又 $u$ 连续，故 $u(x) = \lim_n u(\sum_{j\le n} x_j) = y$。于是 $y = u(x)$ 且 $\|x\| < 1$，即 $y \in u(B_E)$。
+
+> 续见 notes/thm.open-mapping-banach.4.md

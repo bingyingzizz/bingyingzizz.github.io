@@ -13,6 +13,6 @@ layer 17 · 定理 · 二次剩余与原根 · 数论
 refs: 华罗庚《数论导引》第四章
 
 ## 说明
-text=**三条法则的分工**：前两条由定义展开（乘性），第三条（互反律）要 $\gcd(m,n)=1$，由 Legendre 互反律逐素因子相乘并合并指数得到。完整证明见边 `imp.jacobi-laws-proof`。
+**三条法则的分工**：前两条由定义展开（乘性），第三条（互反律）要 $\gcd(m,n)=1$，由 Legendre 互反律逐素因子相乘并合并指数得到。完整证明见边 `imp.jacobi-laws-proof`。
 
 引用：`thm.jacobi-laws`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.path-homotopy)　·　[Chinese page (authoritative)](./def.path-homotopy.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> fields: abstract reviewed · statement draft · notes draft · name derived
 
 layer 14 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 

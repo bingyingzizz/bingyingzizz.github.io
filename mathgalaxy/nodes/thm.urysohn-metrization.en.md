@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.urysohn-metrization)　·　[Chinese page (authoritative)](./thm.urysohn-metrization.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> fields: abstract reviewed · statement draft · notes draft · name derived
 
 layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 

@@ -14,6 +14,6 @@ layer 13 · 引理 · C(K) 与 Stone–Weierstrass · 泛函分析
 refs: Rudin, Functional Analysis · Stone–Weierstrass 定理
 
 ## 说明
-text=**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则运算拼出；$|f|=\sqrt{f^{2}}$ 再用二项级数一致逼近。完整证明见边 `imp.subalgebra-lattice-proof`。
+**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则运算拼出；$|f|=\sqrt{f^{2}}$ 再用二项级数一致逼近。完整证明见边 `imp.subalgebra-lattice-proof`。
 
 引用：`lem.closed-subalgebra-lattice`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

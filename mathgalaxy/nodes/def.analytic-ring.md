@@ -15,7 +15,7 @@ $$C : \cdots \to C_i \to \cdots \to C_1 \to C_0 \to 0$$
 - [`def.pre-analytic-ring`](../nodes/def.pre-analytic-ring.md) 预解析环：用到了定义 预解析环　[proofs/def-link.preanalytic-analytic.md](../proofs/def-link.preanalytic-analytic.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.analytic-ring.4.md](./def.analytic-ring.4.md)
+- …另有出边，续页见 [nodes/def.analytic-ring.5.md](./def.analytic-ring.5.md)
 
 refs: Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Definition 7.4
 

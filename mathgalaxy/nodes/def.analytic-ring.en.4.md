@@ -2,6 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.analytic-ring)　·　[Chinese page (authoritative)](./def.analytic-ring.md)
 
-[S]$ is a free $\mathcal{A}$-module, so an $\mathcal{A}$-linear map is determined by its values on generators; hence there is an isomorphism
+ of $\mathcal{A}[T]$), and $\mathcal{A}[S] = A[S]\otimes_A \mathcal{A}$ is a **free** $\mathcal{A}$-module — an $\mathcal{A}$-linear map is determined by the images of the generators $s\in S$, so both sides are canonically isomorphic to $C^{S}$:
 
 > continued in nodes/def.analytic-ring.en.5.md

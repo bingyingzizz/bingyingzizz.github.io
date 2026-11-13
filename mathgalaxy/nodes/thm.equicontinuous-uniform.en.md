@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.equicontinuous-uniform)　·　[Chinese page (authoritative)](./thm.equicontinuous-uniform.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.equicontinuous-uniform.md` and `proofs/`.
+## Statement · **draft**
+Let $(K, \delta)$ be a compact metric space, $(E, d)$ a metric space, and $\mathcal{H} \subseteq C(K, E)$ equicontinuous. Then $\mathcal{H}$ is **uniformly equicontinuous**.
 
-
-Cite: `thm.equicontinuous-uniform` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.equicontinuous-uniform.en.2.md

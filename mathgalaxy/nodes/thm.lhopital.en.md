@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.lhopital)　·　[Chinese page (authoritative)](./thm.lhopital.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lhopital.md` and `proofs/`.
+## Statement · **draft**
+Let $f, g$ be differentiable on a punctured neighbourhood of $x_0$, with $g' \ne 0$, and suppose
 
+$$\lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = 0$$
 
-Cite: `thm.lhopital` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(or both tend to $\pm\infty$). If $\lim_{x \to x_0} \dfrac{f'(x)}{g'(x)}$ exists (allowing $\pm\infty$), then
 
+$$\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)}$$
+
+> continued in nodes/thm.lhopital.en.2.md

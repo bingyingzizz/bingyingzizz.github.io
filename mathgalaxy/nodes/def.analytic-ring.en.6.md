@@ -2,9 +2,9 @@
 English entry · root `../`
 [in graph](../#n=def.analytic-ring)　·　[Chinese page (authoritative)](./def.analytic-ring.md)
 
-Putting 2 and 3 together gives the arrow appearing in the formula, $\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$.
+Putting 2 and 3 together gives the arrow $\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$ appearing in the formula.
 
-## Notes · **draft**
+## Notes · **stale**
 ⭐ Reading: **"$\mathcal{A}[S]$ and the ordinary free module $A[S]$ cannot be distinguished inside $\operatorname{RHom}$"**.
 
 This is the relative version of condition (ii) in the definition of solid groups;

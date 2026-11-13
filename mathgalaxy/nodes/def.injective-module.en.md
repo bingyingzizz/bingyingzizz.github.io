@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.injective-module)　·　[Chinese page (authoritative)](./def.injective-module.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · definition · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.injective-module.md` and `proofs/`.
+## Statement · **draft**
+Let $R$ be a ring with identity. A left $R$-module $I$ is **injective** if for every injection $A \rightarrowtail B$ and every $R$-linear map $A \to I$, there exists (in general **not unique**) an $R$-linear map $B \to I$ making the diagram commute:
 
-
-Cite: `def.injective-module` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.injective-module.en.2.md

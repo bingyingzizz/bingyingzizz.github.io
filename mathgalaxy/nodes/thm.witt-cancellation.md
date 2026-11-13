@@ -8,8 +8,6 @@ layer 18 · 定理 · 多重线性与张量 · 抽象代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.hyperbolic-plane`](../nodes/def.hyperbolic-plane.md) 双曲平面：用到了定义 双曲平面　[proofs/dep.witt-hyp.md](../proofs/dep.witt-hyp.md)
-
 - …另有入边，续页见 [nodes/thm.witt-cancellation.3.md](./thm.witt-cancellation.3.md)
 
 refs: Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.geodesic-curvature)　·　[Chinese page (authoritative)](./def.geodesic-curvature.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.geodesic-curvature.md` and `proofs/`.
+## Statement · **draft**
+Let $\gamma$ be an arc-length parametrized curve on $S$ and let $n$ be the unit normal of $S$. The **geodesic curvature vector** and the **geodesic curvature** are
 
+$$\vec\kappa_{g} = \nabla_{\dot\gamma}\dot\gamma = (\ddot\gamma)^{\top},\qquad k_{g} = \langle \vec\kappa_{g},\,n\times\dot\gamma\rangle = \langle \ddot\gamma,\,n\times\dot\gamma\rangle,$$
 
-Cite: `def.geodesic-curvature` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.geodesic-curvature.en.2.md

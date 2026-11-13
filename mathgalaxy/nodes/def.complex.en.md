@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.complex)　·　[Chinese page (authoritative)](./def.complex.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.complex.md` and `proofs/`.
+## Statement · **draft**
+**The complex numbers** $\mathbb{C} := \mathbb{R}^2$, with the operations
 
+$$(a, b) + (c, d) := (a + c, b + d), \qquad (a, b)(c, d) := (ac - bd, ad + bc)$$
 
-Cite: `def.complex` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Write $i := (0, 1)$; then every complex number is written uniquely as $z = a + bi$ ($a, b \in \mathbb{R}$).
 
+$\bar{z} := a - bi$ is **conjugation**, $|z| := \sqrt{a^2 + b^2}$ is the **modulus**; and
+
+$$|zw| = |z|\,|w|, \qquad z \bar{z} = |z|^2$$
+
+> continued in nodes/def.complex.en.2.md

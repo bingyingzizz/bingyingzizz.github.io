@@ -2,13 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.solid-hypercover)　·　[Chinese page (authoritative)](./prop.solid-hypercover.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.solid-hypercover.md` and `proofs/`.
-
-
-Cite: `prop.solid-hypercover` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.solid-hypercover.en.2.md

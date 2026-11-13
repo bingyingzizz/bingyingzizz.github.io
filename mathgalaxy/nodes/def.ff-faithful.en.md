@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.ff-faithful)　·　[Chinese page (authoritative)](./def.ff-faithful.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ff-faithful.md` and `proofs/`.
+## Statement · **draft**
+A functor $F : \mathcal{C} \to \mathcal{C}'$ assigns to each pair of objects $X, Y$ a map
 
+$$\operatorname{Hom}_{\mathcal{C}}(X, Y) \longrightarrow \operatorname{Hom}_{\mathcal{C}'}(F(X), F(Y)), \qquad f \mapsto F(f)$$
 
-Cite: `def.ff-faithful` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The names are given according to the properties of this map:
 
+> continued in nodes/def.ff-faithful.en.2.md

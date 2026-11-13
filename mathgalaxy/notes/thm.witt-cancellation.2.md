@@ -1,4 +1,4 @@
 # Witt 消去定理　`thm.witt-cancellation`　·　说明
 根 `../`
 
-**本条的缺口（精确）。** 完整证明的标准路线是：先把等距 $U\to U'$ 延拓为 $V$ 的等距（Witt 延拓定理），再在 $U'$ 的正交补上把 $\varphi(W)$ 调到 $W$；延拓定理本身（非退化子空间间的等距可延拓）本图没有节点，也不在此处假装证明。故本条保留 `skeleton`，缺口就是延拓定理。
+**读法与证明。** $U'\perp W$ 指等距像空间中的那块正交和（不要求 $U'\subseteq V$）。完整证明在边 `imp.witt-cancellation` 上：先用 `lem.witt-extension` 把 $f|_W$ 延拓成 $V_2$ 的等距，再用 $F^{-1}\circ f$ 固定 $W$，最后由 $W^{\perp}$ 的唯一性得到 $U\cong U'$。

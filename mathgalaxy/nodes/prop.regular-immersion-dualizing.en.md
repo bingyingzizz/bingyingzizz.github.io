@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.regular-immersion-dualizing)　·　[Chinese page (authoritative)](./prop.regular-immersion-dualizing.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · proposition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.regular-immersion-dualizing.md` and `proofs/`.
+## Statement · **draft**
+In plain words: **in the closed immersion case (embedding $\operatorname{Spec} A$ into $\operatorname{Spec} R$), the dualizing complex collapses to one line**: it is the "determinant of the normal bundle" shifted by the codimension.
 
-
-Cite: `prop.regular-immersion-dualizing` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.regular-immersion-dualizing.en.2.md

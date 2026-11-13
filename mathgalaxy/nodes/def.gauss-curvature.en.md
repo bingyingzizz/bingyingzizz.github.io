@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.gauss-curvature)　·　[Chinese page (authoritative)](./def.gauss-curvature.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 30 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.gauss-curvature.md` and `proofs/`.
+## Statement · **draft**
+In plain words: on a surface "curvature" is really only **one number**, the Gaussian curvature $K$. Here it is computed from one component of the curvature tensor; the next node (the Theorema Egregium) then shows that it is the same number as $k_{1}k_{2}$.
 
+The **Gaussian curvature** of a surface $S$ at a point $p$ is defined by the curvature tensor as
 
-Cite: `def.gauss-curvature` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.gauss-curvature.en.2.md

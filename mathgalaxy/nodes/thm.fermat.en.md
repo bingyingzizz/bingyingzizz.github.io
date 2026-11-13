@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.fermat)　·　[Chinese page (authoritative)](./thm.fermat.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.fermat.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be defined on a neighbourhood of $x_0$, differentiable at $x_0$, and suppose $x_0$ is an **interior** local extremum of $f$. Then
 
+$$f'(x_0) = 0$$
 
-Cite: `thm.fermat` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ This is the **prime mover** of the whole differential calculus: it translates the order-theoretic notion of "extremum" into the algebraic condition "the derivative vanishes", so finding extrema becomes solving $f' = 0$.
 
+> continued in nodes/thm.fermat.en.2.md

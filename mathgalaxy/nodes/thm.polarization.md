@@ -20,6 +20,6 @@ $$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
 refs: Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
 ## 说明
-text=**用途**：把内积还原成范数，从而「保范」与「保内积」在实情形等价；复情形用四个方向的组合。完整推导见边 `imp.polarization-proof`。
+**用途**：把内积还原成范数，从而「保范」与「保内积」在实情形等价；复情形用四个方向的组合。完整推导见边 `imp.polarization-proof`。
 
 引用：`thm.polarization`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -57,7 +57,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**264** 处
+- 陈述里出现假设关键词、但没标注：**266** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -99,5 +99,5 @@
   - prop.free-projective  ‹Hausdorff›
   - def.free-presentation  ‹Hausdorff›
   - cor.chaus-free-presentation  ‹Hausdorff›
-  - …还有 224 处
+  - …还有 226 处
 

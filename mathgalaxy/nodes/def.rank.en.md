@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.rank)　·　[Chinese page (authoritative)](./def.rank.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.rank.md` and `proofs/`.
+## Statement · **draft**
+Let $T : V \to W$ be linear. The **rank** of $T$ is the dimension of its image:
 
+$$\operatorname{rank} T := \dim \operatorname{im} T$$
 
-Cite: `def.rank` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The rank of a matrix $A \in M_{m \times n}(K)$ is the rank of the linear map $K^{n} \to K^{m}$ ($x \mapsto Ax$) it defines.
 
+## Notes · **draft**
+⭐ Rank measures how much information, in dimensions, $T$ retains.
+
+> continued in nodes/def.rank.en.2.md

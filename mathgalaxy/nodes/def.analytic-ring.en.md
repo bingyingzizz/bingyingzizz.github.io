@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.analytic-ring)　·　[Chinese page (authoritative)](./def.analytic-ring.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 20 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 

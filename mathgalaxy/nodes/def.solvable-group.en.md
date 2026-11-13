@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.solvable-group)　·　[Chinese page (authoritative)](./def.solvable-group.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.solvable-group.md` and `proofs/`.
+## Statement · **draft**
+A group $G$ is **solvable** iff there is a normal chain
 
+$$
+\{e\} = G_0 \trianglelefteq G_1 \trianglelefteq \cdots \trianglelefteq G_n = G
+$$
 
-Cite: `def.solvable-group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+such that every quotient $G_i / G_{i-1}$ is an **abelian group**.
 
+**Equivalent description**: put $G^{(0)} := G$ and $G^{(k+1)} := [G^{(k)}, G^{(k)}]$ (the commutator subgroup), obtaining the **derived series**
+
+> continued in nodes/def.solvable-group.en.2.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.harmonic)　·　[Chinese page (authoritative)](./def.harmonic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · definition · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.harmonic.md` and `proofs/`.
+## Statement · **draft**
+**In words**: a real-valued function with continuous second partials satisfying $\Delta u = 0$. Loosely: a function that is "nowhere more convex or more concave than its surroundings".
 
+Let $\Omega \subset \mathbb{R}^2 \cong \mathbb{C}$ be a region and $u: \Omega \to \mathbb{R}$ of class $C^2$. If
 
-Cite: `def.harmonic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\Delta u := \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$$
 
+> continued in nodes/def.harmonic.en.2.md

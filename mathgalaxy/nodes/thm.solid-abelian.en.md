@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.solid-abelian)　·　[Chinese page (authoritative)](./thm.solid-abelian.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.solid-abelian.md` and `proofs/`.
+## Statement · **draft**
+In plain terms: **the solid subcategory $\mathbf{Solid}$ is a place "as convenient as a category of modules"** — it has enough compact projective objects ($\prod_I \mathbb{Z}$), so one can form tensor products, Ext and derived categories without pathologies. This is the engine of the whole theory.
 
-
-Cite: `thm.solid-abelian` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.solid-abelian.en.2.md

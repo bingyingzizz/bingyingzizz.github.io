@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.profinite)　·　[Chinese page (authoritative)](./def.profinite.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.profinite.md` and `proofs/`.
+## Statement · **draft**
+**A profinite space** is a topological space obtained as the limit of finite discrete spaces along a **directed** system:
 
+$$X \;=\; \varprojlim_{i \in I} X_{i},$$
 
-Cite: `def.profinite` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where each $X_{i}$ is a **finite discrete** space and $I$ is a **directed** set.
 
+> continued in nodes/def.profinite.en.2.md

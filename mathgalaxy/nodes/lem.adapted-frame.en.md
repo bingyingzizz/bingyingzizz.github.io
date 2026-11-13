@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=lem.adapted-frame)　·　[Chinese page (authoritative)](./lem.adapted-frame.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.adapted-frame.md` and `proofs/`.
+## Statement · **draft**
+Suppose the frame is adapted to the surface: $e_{3} = n$. Then along the surface
 
+$$\omega^{3} = 0,\qquad \omega^{i}_{\ 3} = \sum_{j=1}^{2}c_{ij}\,\omega^{j}\quad (i = 1,2),$$
 
-Cite: `lem.adapted-frame` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, all extrinsic connection forms lie in the span of $\{\omega^{1}, \omega^{2}\}$ and are determined by the three functions $c_{11}, c_{12}, c_{22}$ ($c_{12} = c_{21}$; see `lem.second-form-symmetric`).
 
+> continued in nodes/lem.adapted-frame.en.2.md

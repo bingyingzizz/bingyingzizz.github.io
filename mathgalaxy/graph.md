@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-13T05:09:16.923Z
-> 15 星系 / 105 星团 / 1634 节点 / 3434 连线（强边 3357，弱边 77；其中**不分层**的「推论」64 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-13T14:29:45.369Z
+> 15 星系 / 105 星团 / 1636 节点 / 3438 连线（强边 3361，弱边 77；其中**不分层**的「推论」64 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -4618,7 +4618,7 @@ $$\tilde{\alpha} : [0, 1] \longrightarrow E,\qquad \tilde{\alpha}(0) = e_{0},\qu
 提升 $\tilde{F} : [0, 1] \times [0, 1] \to E$ 使 $\tilde{F}(0, 0) = e_{0}$、$p \circ \tilde{F} = F$。
 若 $F$ 是道路同伦（两端固定），则 $\tilde{F}$ 对每个 $s$ 的两个端点也都固定。
 
-text=**证明骨架**：用 Lebesgue 数把道路/同伦切成小段，每段落在均匀覆叠的开集里，逐段唯一提升。完整证明见边 `imp.lifting-proof`。
+**证明骨架**：用 Lebesgue 数把道路/同伦切成小段，每段落在均匀覆叠的开集里，逐段唯一提升。完整证明见边 `imp.lifting-proof`。
 
 参考：Munkres, Topology (2nd ed.), Ch. 9 · Covering Spaces（lifting theorem）；Hatcher, Algebraic Topology, Ch. 1 §1.3 · lifting properties
 
@@ -8546,11 +8546,13 @@ $$G := \bigl(\langle v_{i}, v_{j}\rangle\bigr)_{1 \le i,j \le k} ,$$
 
 $$B = P^{T} A\, P .$$
 
-复情形也用**同一个公式**：双线性型的合同是 $B = P^{T} A\, P$，用**转置**而非共轭转置（例：$A = [1]$、$P = [i]$ 时 $P^{T}AP = [-1]$，而 $P^{*}AP = [1]$）。带星号的 $P^{*}AP$ 属于 **Hermite 型**的星合同，不是这里。
+**公式只有这一条**，复情形也用**转置**而非共轭转置：$A = [1]$、$P = [i]$ 时 $P^{T}AP = [-1]$，而 $P^{*}AP = [1]$。带星号的 $P^{*}AP$ 是 **Hermite 型**的星合同，是另一个等价关系，不是这里的合同。
 
-**合同保持的量**：秩、对称性、交错性、正定性、半正定性，以及实对称情形下的**惯性指数**。
+**合同保持的量**：秩、对称性、交错性；在**实对称**矩阵上还保持**惯性指数** $(p,q)$，因而保持正定性、半正定性。
 
 **不保持**：特征值、迹、行列式的具体值。
+
+⚠️ **「正定」只在实对称（或 Hermite 星合同）里谈**：$P^{T}AP$ 会改变符号（$[1] \mapsto [-1]$），所以「正定/半正定」**不是** $P^{T}AP$ 的不变量 —— 把它当复情形的不变量，就会得出 $[1]$ 与 $[-1]$ 合同却一正一负的矛盾。
 
 **合同 vs 相似，一句话分清**：相似 $P^{-1}AP$ 是「同一个**线性算子**换基」；合同 $P^{T}AP$ 是「同一个**双线性型**换基」。前者保持特征值，后者保持惯性 —— 两者只在 $P$ 正交（$P^{-1} = P^{T}$）时重合，那时也叫**正交相似**。
 
@@ -8730,11 +8732,33 @@ $$U \perp W \ \cong\ U' \perp W ,$$
 
 ⚠️ $\operatorname{char} K \ne 2$ 不能去：特征 $2$ 时「对称」与「交错」重合、$\frac{1}{2}$ 不存在，配方法与 Witt 理论都要重写（那是另一门学问）。本图不展开。
 
-⚠️ 更强的版本叫 **Witt 延拓定理**：非退化子空间之间的等距总能延拓成整个空间的等距。它与消去定理等价，但表述不同 —— 读文献时看到哪个都算。
+⭐ 更强的版本叫 **Witt 延拓引理**（`lem.witt-extension`）：非退化子空间之间的等距总能延拓成整个空间的等距。消去定理由它直接推出，证明见边 `imp.witt-cancellation`。
 
-**本条的缺口（精确）。** 完整证明的标准路线是：先把等距 $U\to U'$ 延拓为 $V$ 的等距（Witt 延拓定理），再在 $U'$ 的正交补上把 $\varphi(W)$ 调到 $W$；延拓定理本身（非退化子空间间的等距可延拓）本图没有节点，也不在此处假装证明。故本条保留 `skeleton`，缺口就是延拓定理。
+**读法与证明。** $U'\perp W$ 指等距像空间中的那块正交和（不要求 $U'\subseteq V$）。完整证明在边 `imp.witt-cancellation` 上：先用 `lem.witt-extension` 把 $f|_W$ 延拓成 $V_2$ 的等距，再用 $F^{-1}\circ f$ 固定 $W$，最后由 $W^{\perp}$ 的唯一性得到 $U\cong U'$。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Bilinear Forms」· Witt 定理；Chevalley, The Algebraic Theory of Spinors
+
+#### 等长向量由反射互达　`lem.equal-norm-isometry`
+*引理*　等长向量由反射互达
+
+设 $N$ 是有限维非退化对称双线性空间，$\operatorname{char}K\ne2$，$q$ 是其二次型。若 $x,y\in N$ 满足 $q(x)=q(y)\ne0$，则存在 $N$ 的等距 $\rho$ 使 $\rho(x)=y$。
+
+反射 $s_v(z)=z-\frac{2\beta(z,v)}{q(v)}v$（$q(v)\ne0$）是等距并把 $v$ 送到 $-v$；本引理说一个反射（必要时再复合中心反转 $z\mapsto-z$）就能把等长向量互送。这是 Cartan–Dieudonné 分解的最基本一块。
+
+证明见边 `imp.equal-norm-isometry`。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 10；Chevalley, The Algebraic Theory of Spinors, Ch. 1
+
+#### Witt 延拓引理　`lem.witt-extension`
+*引理*　Witt 延拓引理：非退化子空间上的等距可延拓
+
+设 $N$ 是有限维非退化对称双线性空间，$\operatorname{char}K\ne2$，$A\subseteq N$ 是非退化子空间。若 $\sigma:A\to N$ 是到 $\sigma(A)$ 的等距，则 $\sigma$ 可延拓为 $N$ 的等距。
+
+证明对 $\dim A$ 归纳：取非迷向 $a\in A$，把 $A$ 写成 $A_0\perp\operatorname{span}(a)$，归纳延拓 $\sigma|_{A_0}$，再用一个反射把像点调到 $\sigma(a)$ 上，最后正交拼接。
+
+证明见边 `imp.witt-extension`；它是 Witt 消去定理的直接来源。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 10；Chevalley, The Algebraic Theory of Spinors, Ch. 1
 
 #### 辛形式　`def.symplectic-form`
 *定义*　辛形式：非退化交错双线性型
@@ -8915,7 +8939,7 @@ $$\det\begin{pmatrix} \langle u,u\rangle & \langle u,w\rangle \\ \langle w,u\ran
 
 所以几何上它说的是：**Gram 行列式 = 平行四边形的面积的平方**（`def.gram-matrix`）。
 
-text=**几何读法**：左边是两个向量 Gram 矩阵的行列式，即它们张成的平行四边形面积的平方；右边是坐标形式的面积平方。完整展开见边 `imp.lagrange-identity-proof`。⚠ 坐标式只在正交归一基下成立，一般基要用 Gram 矩阵修正。
+**几何读法**：左边是两个向量 Gram 矩阵的行列式，即它们张成的平行四边形面积的平方；右边是坐标形式的面积平方。完整展开见边 `imp.lagrange-identity-proof`。⚠ 坐标式只在正交归一基下成立，一般基要用 Gram 矩阵修正。
 
 参考：Hoffman–Kunze, Linear Algebra, 「Operators on Inner Product Spaces」· Gram 行列式；北大《高等代数》· Lagrange 恒等式
 
@@ -10377,7 +10401,7 @@ $$A = LU ,$$
 
 **用途**：解 $Ax = b$ 变成「解 $Ly = b$（前代）+ 解 $Ux = y$（回代）」，两个都是 $O(n^{2})$；而且 $A$ 不变时 $L, U$ 可以反复用。
 
-text=**为什么是 $LU$**：高斯消元的每一步都是左乘初等矩阵，把消元步乘起来即 $L^{-1}$；顺序主子式非零保证不换行。完整证明（含 Schur 补归纳与唯一性）见边 `imp.lu-decomposition-proof`；置换版本用部分主元法，见同边证明末段。
+**为什么是 $LU$**：高斯消元的每一步都是左乘初等矩阵，把消元步乘起来即 $L^{-1}$；顺序主子式非零保证不换行。完整证明（含 Schur 补归纳与唯一性）见边 `imp.lu-decomposition-proof`；置换版本用部分主元法，见同边证明末段。
 
 参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 3；Hoffman–Kunze, Linear Algebra, 「Linear Transformations」· 三角化与消元；北大《高等代数》· 矩阵的三角分解
 
@@ -14559,7 +14583,7 @@ $$q(x) \le C\,p(x) \qquad \forall x \in E .$$
 
 $$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty := \max_{1 \le k \le n} |x_k| .$$
 
-text=**为什么有限维特殊**：单位球面紧，范数在球面上取到正的最小值，于是任一范数被 $\lVert\cdot\rVert_\infty$ 双向控制。完整证明见边 `imp.norm-equiv-finite-dim-proof`。
+**为什么有限维特殊**：单位球面紧，范数在球面上取到正的最小值，于是任一范数被 $\lVert\cdot\rVert_\infty$ 双向控制。完整证明见边 `imp.norm-equiv-finite-dim-proof`。
 
 参考：Rudin, Functional Analysis · 赋范空间与有限维
 
@@ -14666,7 +14690,7 @@ $$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
 特别地 $B(E)$ 是**赋范代数**（乘法连续）；$E \ne \{0\}$ 时 $\|\mathrm{id}\| = 1$。
 
-text=**一句话**：$\lVert vux\rVert\le\lVert v\rVert\lVert u\rVert\lVert x\rVert$，故复合有界且范数次乘；乘法连续性由双线性与这条不等式。完整证明见边 `imp.operator-algebra-proof`。
+**一句话**：$\lVert vux\rVert\le\lVert v\rVert\lVert u\rVert\lVert x\rVert$，故复合有界且范数次乘；乘法连续性由双线性与这条不等式。完整证明见边 `imp.operator-algebra-proof`。
 
 参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
@@ -14693,7 +14717,7 @@ text=**一句话**：$\lVert vux\rVert\le\lVert v\rVert\lVert u\rVert\lVert x\rV
 
 设 $E$ 赋范、$F$ Banach。则 $(B(E, F), \|\cdot\|)$ 是 Banach 空间。特别地，对偶空间 $E^* = B(E, \mathbb{K})$ **总是** Banach（不论 $E$ 是否完备）。
 
-text=**证明思路**：逐点取极限定义 $u$，再用一致有界控制 $\lVert u_k-u\rVert$。完整证明见边 `imp.bounded-operators-banach-proof`。特别地 $E^*=B(E,\mathbb K)$ 总是 Banach。
+**证明思路**：逐点取极限定义 $u$，再用一致有界控制 $\lVert u_k-u\rVert$。完整证明见边 `imp.bounded-operators-banach-proof`。特别地 $E^*=B(E,\mathbb K)$ 总是 Banach。
 
 参考：Rudin, Functional Analysis · 有界线性算子、对偶与 Neumann 级数
 
@@ -15148,7 +15172,7 @@ $$\langle x, y\rangle = \tfrac{1}{4}\bigl( \|x + y\|^2 - \|x - y\|^2 \bigr) .$$
 
 $$\langle x, y\rangle = \tfrac{1}{4}\sum_{k=0}^{3} i^k \,\| x + i^k y \|^2 .$$
 
-text=**用途**：把内积还原成范数，从而「保范」与「保内积」在实情形等价；复情形用四个方向的组合。完整推导见边 `imp.polarization-proof`。
+**用途**：把内积还原成范数，从而「保范」与「保内积」在实情形等价；复情形用四个方向的组合。完整推导见边 `imp.polarization-proof`。
 
 参考：Conway, A Course in Functional Analysis · Hilbert 空间与正交基
 
@@ -15793,7 +15817,7 @@ $\mathcal{H} = \{f\}$ 时等度连续 $\iff$ $f$ 连续。
 
 设 $K$ 紧 Hausdorff，$A \subseteq C(K, \mathbb{R})$ 是**含单位**的**闭**子代数。则 $A$ 对 $\min, \max$ 封闭。
 
-text=**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则运算拼出；$|f|=\sqrt{f^{2}}$ 再用二项级数一致逼近。完整证明见边 `imp.subalgebra-lattice-proof`。
+**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则运算拼出；$|f|=\sqrt{f^{2}}$ 再用二项级数一致逼近。完整证明见边 `imp.subalgebra-lattice-proof`。
 
 参考：Rudin, Functional Analysis · Stone–Weierstrass 定理
 
@@ -15808,25 +15832,13 @@ text=**为什么只需证 $|f|\in A$**：$\max,\min$ 可由 $|\cdot|$ 与四则�
 
 ② **两点插值**：$x \ne y$、目标值 $\alpha, \beta \in \mathbb{R}$。取 $g \in A$ 使 $g(x) \ne g(y)$，解二元一次方程组得 $f = a\cdot 1 + b g \in A$ 使 $f(x) = \alpha$、$f(y) = \beta$。
 
-③ **上下夹**（两小步，全程都在 $\overline{A}$ 里做 —— 它已经由①②验过是闭子代数）：
+③ **上下夹**（全程在 $\overline{A}$ 里做 —— 它已由①②验过是含单位的闭子代数，且对 $\max,\min$ 封闭）：
 
-- **逐点从下方压**：固定 $f \in C(K)$ 与 $\varepsilon > 0$。
+- **两点同时命中**：给定 $x \ne y$ 与 $\varepsilon > 0$。由②取 $g_{xy} \in \overline{A}$ 使 $g_{xy}(x) = f(x)$、$g_{xy}(y) = f(y)$。
 
-对每个 $x \in K$，由①（单点上逼近）存在 $h_{x} \in \overline{A}$ 使 $h_{x}(x) > f(x) - \varepsilon$；
+- **固定 $x$、对 $y$ 取有限 $\max$**：对每个 $y$，由 $g_{xy}(y) = f(y) < f(y) + \varepsilon$ 与连续性，存在 $y$ 的开邻域 $V_{y}$，在其上 $g_{xy} < f + \varepsilon$。$K$ 紧，取有限个 $V_{y_1}, \ldots, V_{y_n}$ 覆盖 $K$，令 $h_{x} := \max_{j} g_{xy_j} \in \overline{A}$。则 $h_{x} < f + \varepsilon$ 处处成立，且 $h_{x}(x) = f(x) > f(x) - \varepsilon$。
 
-由 $h_x - f$ 连续，存在 $x$ 的开邻域 $U_{x}$，在其上 $h_{x} > f - \varepsilon$。
-
-
-- **紧性取有限并**：$K$ 紧，于是 有限个 $U_{x_{1}}, \ldots, U_{x_{m}}$ 覆盖 $K$。
-
-由②（$\overline{A}$ 对 $\max$ 封闭）得 $h := \max_{i} h_{x_{i}} \in \overline{A}$，且 $h > f - \varepsilon$ 处处成立。
-
-
-
-- **对称地压上方**：对 $-f$ 重复上面两步（等价地直接用 $\min$），得 $h' \in \overline{A}$ 使 $h' < f + \varepsilon$。
-
-
-- **合起来**：$h' \le h$ 在 $\overline{A}$ 里夹住 $f$，取 $h'' := \max(h', \min(h, f))$ 或直接用 $\|h - f\| \le \varepsilon$，得 $\|f - h\| < 2\varepsilon$。
+- **对 $x$ 覆盖并取有限 $\max$**：令 $U_{x} := \{t \in K : h_{x}(t) > f(t) - \varepsilon\}$，它含 $x$ 且开。取有限个 $U_{x_1}, \ldots, U_{x_m}$ 覆盖 $K$，令 $k := \max_{i} h_{x_i} \in \overline{A}$。下界：任一点落在某个 $U_{x_j}$ 里，故 $k \ge h_{x_j} > f - \varepsilon$。上界：每个 $h_{x_j}$ 都**处处**满足 $h_{x_j} < f + \varepsilon$，取有限 $\max$ 后仍有 $k < f + \varepsilon$。合起来 $f - \varepsilon < k < f + \varepsilon$，即 $\|k - f\|_\infty < \varepsilon$。
 
 $\varepsilon$ 任意，于是 $f \in \overline{A}$，于是 $\overline{A} = C(K)$。
 
@@ -15874,7 +15886,7 @@ $$B_n f(x) := \sum_{k=0}^{n} \binom{n}{k} f\!\left(\frac{k}{n}\right) x^k (1 - x
 
 则 $\|B_n f - f\|_\infty \to 0$。
 
-这是 Weierstrass 逼近定理的**显式**证明：$B_n f(x) = \mathbb{E}[f(S_n/n)]$（$S_n$ 服从参数 $x$ 的二项分布），用三条恒等式（$\sum \binom nk x^k(1-x)^{n-k} = 1$、$\sum k\binom nk x^k(1-x)^{n-k} = nx$、方差 $\le n/4$）加 $f$ 的一致连续性把误差压住。
+证明写在边 `imp.bernstein-approximation` 上：把 $B_nf(x)$ 看成 $f(S_n/n)$ 的期望（$S_n\sim\mathrm{Bin}(n,x)$），用二项矩恒等式 $\mathbb E[S_n/n]=x$、$\operatorname{Var}(S_n/n)=x(1-x)/n\le 1/(4n)$ 与 $f$ 的一致连续性把误差拆成两段（偏差 $<\delta$ 处 $<\varepsilon$，其余用 Markov 不等式给概率 $\le 1/(4n\delta^2)$），取 $n$ 充分大即得一致收敛。
 
 ⭐ 与 Stone–Weierstrass 分工：这条给「一个显式算子列」，只对 $[0,1]$、只对实值；S-W 给「只要代数性质就够」，不管构造。两者互相印证，也互相不能替代。
 
@@ -15933,7 +15945,7 @@ $A \subseteq X$ 叫**第一纲集**（meager，贫集），若 $A$ 可写成可�
 
 $A$ 叫 **$G_\delta$ 集**，若 $A$ 是可数个开集之交；叫 **$F_\sigma$ 集**，若 $A$ 是可数个闭集之并。
 
-在度量空间里单点闭、开集是可数多个球的并（**需可分**：不可数离散度量空间里，不可数开集不能是可数球的并），所以「闭 $\subseteq F_\sigma$」「开 $\subseteq G_\delta$」。
+两个方向先分清。**平凡的**：闭集是「一个闭集之并」，故 闭 $\subseteq F_\sigma$；开集是「一个开集之交」，故 开 $\subseteq G_\delta$。**度量空间里反过来也对**（这才是非平凡的那一半）：开 $\subseteq F_\sigma$、闭 $\subseteq G_\delta$。证法：$U$ 开时令 $F_n := \{x : d(x, X\setminus U) \ge 1/n\}$，每个 $F_n$ 闭、且 $U = \bigcup_n F_n$（$x \in U$ 取 $n > 1/d(x, X\setminus U)$），于是 $U$ 是 $F_\sigma$；对补集取对偶即得「闭 $\subseteq G_\delta$」。这一步不需要可分性 ——「开集是可数多个球的并」是另一条（更粗的）写法，那条才需要可分。
 
 ⭐ Baire 之后，「稠密 $G_\delta$」是「几乎全部的点」的标准写法：对**连续函数列的逐点极限** $f$，其连续点集是稠密 $G_\delta$（无条件成立的只有这条 —— 「可微点集」不行：$f = \mathbf{1}_{\mathbb{Q}}$ 的连续点集与可微点集都是空集）；$C[0,1]$ 里无处可微函数的全体也是稠密 $G_\delta$。
 
@@ -16015,7 +16027,7 @@ $B_0$ 是任取的，于是 $\bigcap_n O_n$ 与每个非空开集相交 ，故�
 
 **三条为什么等价、各自用什么**（这一条最容易“看起来显然，其实要用补集与可数性各一次”）：
 
-- (1) $\implies$ (2)：**反证 + 取补**。若某非空开集 $U$ 是第一纲（$U \subseteq \bigcup_{n} F_{n}$，$F_{n}$ 无处稠密闭），则 $U^{c} \cup \bigcup_{n} F_{n} = X$ —— 于是 $U = \bigcap_{n}(X \setminus F_{n})$ 中那族稠密开集的交**不含** $U$ 里任何点，与「交稠密」矛盾。**这一步只用到「稠密开集之交错密」的定义**。
+- (1) $\implies$ (2)：**反证**。设某非空开集 $U$ 是第一纲：$U \subseteq \bigcup_{n} F_{n}$，各 $F_{n}$ 无处稠密（不妨取闭）。令 $G_{n} := X \setminus F_{n}$，则每个 $G_{n}$ 是稠密开集。由 (1)，$G := \bigcap_{n} G_{n}$ 稠密，故 $G \cap U \ne \emptyset$；但 $x \in G \cap U$ 会给出 $x \in U$ 且 $x \notin \bigcup_n F_n$，与 $U \subseteq \bigcup_{n} F_{n}$ 矛盾。**这一步只用到「稠密开集之交错密」**。
 - (2) $\implies$ (3)：**同上反向**，仍只做补集：若可数个无处稠密闭集之并含有非空开集 $U$，则 $U$ 就是第一纲，与 (2) 矛盾。
 - (3) $\implies$ (1)：**这一步要用可数交的构造**。设 $O_{n}$ 稠密开，令 $F_{n} := X \setminus O_{n}$（无处稠密闭）。要证 $\bigcap O_{n}$ 稠密，即证它的补 $\bigcup F_{n}$ 内部为空 —— 那正是 (3)。
 - **注意 (1) 里的「可数」不能换成「有限」**：有限个稠密开集之交稠密在**任何**拓扑空间都成立（不用任何假设），所以 Baire 性完全是「可数」带来的。
@@ -16047,7 +16059,7 @@ $X$ Baire、$\Omega \subseteq X$ 开 $\implies$ $\Omega$（带子空间拓扑）
 
 设 $X$ 是 Baire 空间，$F_n \subseteq X$ 闭，且 $X = \bigcup_n F_n$。则 $\bigcup_n \operatorname{int} F_n$ 在 $X$ 中**稠密**。特别地，若 $X \ne \emptyset$，则至少有一个 $F_n$ 有非空内部（空空间满足 Baire 前提，但每个 $F_n$ 的内部都是空的）。
 
-text=**这是 Baire 纲定理的「开集版」**：闭覆盖中那些有内部的成员，其内部之并稠密。完整证明（在非空开集上用 Baire 性）见边 `imp.countable-closed-cover-proof`。
+**这是 Baire 纲定理的「开集版」**：闭覆盖中那些有内部的成员，其内部之并稠密。完整证明（在非空开集上用 Baire 性）见边 `imp.countable-closed-cover-proof`。
 
 参考：Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
@@ -16138,11 +16150,11 @@ $$F = u(E) = \bigcup_{k \ge 1} u(k B_E) \subseteq \bigcup_{k \ge 1} \overline{u(
 
 若每个 $\overline{u(k B_E)}$ 都无处稠密，$F$ 就是可数个无处稠密集之并，与「$F$ 完备 $\implies$ 第二纲」矛盾。所以某个 $k$ 使 $\overline{u(k B_E)}$ 含内点：存在 $y_0$ 与 $\delta > 0$ 使 $B_F(y_0, \delta) \subseteq \overline{u(k B_E)}$。
 
-把这一点搬回原点。取 $x_0 \in k B_E$ 使 $\|y_0 - u(x_0)\| < \delta/2$（$y_0$ 在闭包里，故可这样逼近），则对任意 $\|z\| < \delta/2$ 有 $y_0 + z \in \overline{u(k B_E)}$，于是 $z = (y_0 + z) - u(x_0) + (u(x_0) - y_0)$ 落在 $\overline{u(kB_E)} - u(x_0) + B(0,\delta/2)$ 里；而 $u(kB_E) - u(x_0) = u(kB_E - x_0) \subseteq u(2k B_E)$（$x_0 \in kB_E$）。合并得
+把这一点搬回原点，分**平移**与**相减**两小步。取 $x_0 \in k B_E$ 使 $\|y_0 - u(x_0)\| < \delta/2$（$y_0$ 在闭包里，故可这样逼近）。**平移**：对 $\|z\| < \delta/2$ 有 $\|z + (u(x_0) - y_0)\| \le \|z\| + \|u(x_0) - y_0\| < \delta/2 + \delta/2 = \delta$，故 $u(x_0) + z = y_0 + \bigl(z + u(x_0) - y_0\bigr) \in B_F(y_0, \delta) \subseteq \overline{u(kB_E)}$，即 $B_F(u(x_0), \delta/2) \subseteq \overline{u(kB_E)}$。**相减**：由 $u(x_0) + z \in \overline{u(kB_E)}$ 得 $z = \bigl(u(x_0)+z\bigr) - u(x_0) \in \overline{u(kB_E)} - u(x_0) \subseteq \overline{u(kB_E) - u(x_0)} = \overline{u(kB_E - x_0)}$，而 $x_0 \in kB_E$ 给 $kB_E - x_0 \subseteq 2k\,B_E$，故 $z \in \overline{u(2k\,B_E)}$。于是
 
 $$\overline{u(2k\, B_E)} \supseteq B_F(0, \delta/2) ,$$
 
-再由齐次性（两边同时除以 $2k$）得到：存在 $r = \delta/(4k) > 0$ 使
+再由齐次性（$u(2k\,B_E) = 2k\,u(B_E)$，两头同除以 $2k$）得到：存在 $r = \delta/(8k) > 0$ 使
 
 $$\overline{u(B_E)} \supseteq 2r\, B_F .$$
 
@@ -16245,7 +16257,7 @@ $$\|u x\| = \lim_n \|u_n x\| = \liminf_n \|u_n x\| \le \liminf_n \bigl( \|u_n\| 
 #### 分别连续双线性映射联合连续　`thm.bilinear-jointly-continuous`
 *定理*　定理：分别连续的双线性映射联合连续（Banach 空间）
 
-设 $E, F, G$ 是赋范空间，$B : E \times F \to G$ 双线性（对每个变量分别线性）。若 $E, F$ 都是 Banach 空间，且
+设 $E, F, G$ 是赋范空间，$B : E \times F \to G$ 双线性（对每个变量分别线性）。若 $F$ 是 Banach 空间（$E$ 只须赋范），且
 
 $$\text{对每个 } x \in E,\ B(x, \cdot) \text{ 连续}; \qquad \text{对每个 } y \in F,\ B(\cdot, y) \text{ 连续},$$
 
@@ -16291,7 +16303,7 @@ $$\|B(x_n, y_n) - B(x, y)\| \le \|B(x_n - x, y_n)\| + \|B(x, y_n - y)\| \le C \|
 
 ⚠️ 双线性不能去掉：$f(x, y) = \dfrac{xy}{x^{2} + y^{2}}$（$f(0,0)=0$）在 $\mathbb{R}^{2}$ 上分别连续，却在原点不连续。
 
-⚠️ 两个完备性都用在共鸣定理上（定义域 $F$ 要 Banach）；只假设「赋范」时结论可能失效。乘积空间用 $\max$ 范数或和范数都行，两者等价。
+⚠️ 只有 **$F$**（算子族的定义域）的完备性用在共鸣定理上；$E$ 只用来给这族算子做参数（$\{x \in E : \|x\| \le 1\}$），本身不必完备，$E$ 不完备时结论照样成立。乘积空间用 $\max$ 范数或和范数都行，两者等价。
 
 参考：泛函分析讲义（用户手写笔记，2026-11-09）；Rudin, Functional Analysis, Ch. 2（Baire 纲与三大定理）
 
@@ -31817,11 +31829,11 @@ $$\operatorname{RHom}_{\mathcal{A}}\bigl(\mathcal{A}[S],\ C\bigr) \longrightarro
 
 1. **先有典范映射** $\iota_S : A[S] \to \mathcal{A}[S]$ —— 把形式的有限和 $\sum a_s s$ 送进自由完备模（预解析环的数据里自带这族映射，见 `def.pre-analytic-ring`）。
 2. **沿它拉回**：$\operatorname{RHom}_A(-, C)$ 是反变函子，$\iota_S$ 给出 $\operatorname{RHom}_A(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$，规则是 $g \mapsto g \circ \iota_S$。
-3. **左边换个写法（这一步有条件）**：当 $C$ 带有 $\mathcal{A}$-模结构（即落在 (ii) 的像里）时，$\mathcal{A}[S]$ 是自由 $\mathcal{A}$-模，$\mathcal{A}$-线性映射由生成元决定，于是有同构
+3. **左边换个写法（这一步无条件，也不循环）**：$C$ 本就是 $\mathcal{A}$-模复形（各项是 $\mathcal{A}[T]$ 的直和），而 $\mathcal{A}[S] = A[S]\otimes_A \mathcal{A}$ 是**自由** $\mathcal{A}$-模 —— $\mathcal{A}$-线性映射由生成元 $s\in S$ 的像决定，所以两边都典范同构于 $C^{S}$：
 
-$$\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \cong \operatorname{RHom}_A(\mathcal{A}[S], C),$$
+$$\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \cong \operatorname{RHom}_A(\mathcal{A}[S], C) \cong \operatorname{RHom}_A(A[S], C),$$
 
-这是伴随给出的同构，不是「同一个集合」。对一般的 $A$-模复形 $C$，左端还没有定义 ——「比较映射」正是定义里要检验的对象；把两者在导出层面直接识别，需要先建立完备模的导出范畴，本图未证（见注末的缺口说明）。
+两个同构都逐项成立（$\operatorname{Hom}$ 逐项取 $C^{S}$），故在导出层面也成立。于是定义里的比较映射就是 $\iota_S$ 诱导的 $\operatorname{RHom}_A(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$ —— **整条定义只用底层 $A$-模，不涉及正在定义的完备模子范畴**，没有循环。
 
 把 2、3 接起来，就是公式里那个箭头 $\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \to \operatorname{RHom}_A(A[S], C)$。
 
@@ -31839,7 +31851,7 @@ $$\operatorname{RHom}_{\mathcal{A}}(\mathcal{A}[S], C) \cong \operatorname{RHom}
 - 解析 $\iff$ 所列所有复形与极端不连通 $S$ 的比较映射为拟同构：这是定义展开，前提已经给定预解析环。
 - 典范映射 $A[S]\to\mathcal A[S]$ $\implies$ 反变的导出 Hom 比较映射：用预复合的函子性，不需要先假定解析性。
 - 只检验零次普通 Hom $\implies$ 导出比较同构不免费；普通 Hom 看不到高次 Ext，不能替代对复形的条件。
-- 原文把 $\operatorname{RHom}_{\mathcal A}$ 与 $\operatorname{RHom}_A$ 直接识别的解释有循环风险：一般预解析环尚未建立完备模导出范畴，该步未核实，记为缺口；检验条件宜先在底层凝聚态 $A$-模导出范畴表述。
+- $\operatorname{RHom}_{\mathcal A}(\mathcal A[S],C)$ 与 $\operatorname{RHom}_A(\mathcal A[S],C)$ 的识别**不需要**完备模导出范畴：$C$ 是 $\mathcal A$-模复形、$\mathcal A[S]$ 自由，两边都典范同构于 $C^{S}$（逐项成立，故导出层面也成立）。所以定义可整体在底层 $A$-模的导出范畴里表述，无循环。
 
 参考：Clausen–Scholze, Lectures on Condensed Mathematics (Bonn 2019), Lecture VII, Definition 7.4
 
@@ -40576,7 +40588,7 @@ $$\left(\frac{ab}{n}\right) = \left(\frac{a}{n}\right)\left(\frac{b}{n}\right), 
 
 $$\gcd(m,n) = 1:\quad \left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}, \qquad \left(\frac{-1}{n}\right) = (-1)^{\frac{n-1}{2}}, \qquad \left(\frac{2}{n}\right) = (-1)^{\frac{n^{2}-1}{8}} .$$
 
-text=**三条法则的分工**：前两条由定义展开（乘性），第三条（互反律）要 $\gcd(m,n)=1$，由 Legendre 互反律逐素因子相乘并合并指数得到。完整证明见边 `imp.jacobi-laws-proof`。
+**三条法则的分工**：前两条由定义展开（乘性），第三条（互反律）要 $\gcd(m,n)=1$，由 Legendre 互反律逐素因子相乘并合并指数得到。完整证明见边 `imp.jacobi-laws-proof`。
 
 参考：华罗庚《数论导引》第四章
 
@@ -58724,6 +58736,41 @@ $\beta(v,v) = q(v)$，所以「迷向」也可以直接用二次型说。
 
 Witt 指标 = 迷向子空间的最大维数；定理保证它良定义。
 
+#### 双线性型 + 二次型 + 等距与正交变换 ⟹ 等长向量由反射互达　`imp.equal-norm-isometry`
+*反射把等长向量互送*
+
+若 $x=y$，取恒等。以下设 $x\ne y$。
+
+**情形 1：$q(x-y)\ne0$。** 令 $s(z)=z-\frac{2\beta(z,x-y)}{q(x-y)}(x-y)$。直接计算 $q(s(z))=q(z)$、$\beta(s(z),s(w))=\beta(z,w)$，故 $s$ 是等距，且 $s(x-y)=-(x-y)$。由极化恒等式 $q(x-y)=2(q(x)-\beta(x,y))$，得 $s(x)=x-(x-y)=y$。
+
+**情形 2：$q(x-y)=0$。** 此时 $\beta(x,y)=q(x)\ne0$，从而 $q(x+y)=2(q(x)+\beta(x,y))=4q(x)\ne0$。对 $v=x+y$ 作反射 $s_v$：$s_v(x)=x-\frac{2\beta(x,x+y)}{q(x+y)}(x+y)=x-(x+y)=-y$。再复合中心反转 $\iota(z)=-z$（它显然保 $\beta$），得 $\iota\circ s_v(x)=y$。
+
+两种情形都给出 $N$ 的等距把 $x$ 送到 $y$。$\blacksquare$
+
+#### 等距与正交变换 + 正交补 + 迷向向量 + 等长向量由反射互达 ⟹ Witt 延拓引理　`imp.witt-extension`
+*对子空间维数归纳延拓等距*
+
+对 $\dim A$ 归纳。$\dim A=0$ 时取恒等。设 $\dim A>0$。
+
+**取非迷向向量。** 若 $q(a)=0$ 对一切 $a\in A$ 成立，则极化恒等式给 $2\beta(x,y)=q(x+y)-q(x)-q(y)=0$，即 $\beta$ 在 $A$ 上恒为零，与 $A$ 非退化矛盾（$\operatorname{char}K\ne2$）。故存在 $a\in A$ 使 $q(a)\ne0$。令 $A_0=a^{\perp}\cap A$。由 $q(a)\ne0$ 得 $A=A_0\perp\operatorname{span}(a)$。
+
+**归纳。** $\sigma_0:=\sigma|_{A_0}$ 是到 $\sigma(A_0)$ 的等距，$A_0$ 非退化、维数更小；归纳假设把它延拓为等距 $\tau:N\to N$。令 $x=\tau(a)$、$y=\sigma(a)$。则 $q(x)=q(a)=q(y)\ne0$。对 $u\in A_0$，$\beta(x-y,\sigma(u))=\beta(\tau(a),\tau(u))-\beta(\sigma(a),\sigma(u))=\beta(a,u)-\beta(a,u)=0$，故 $x-y\in M:=\sigma(A_0)^{\perp}$；又 $x,y\in M$（$\tau,\sigma$ 都是等距）。
+
+**在正交补里修正。** $\sigma(A_0)$ 非退化，$N$ 非退化，故 $M$ 非退化。由 `lem.equal-norm-isometry`，存在 $M$ 的等距 $\rho$ 使 $\rho(x)=y$。把 $\rho$ 与 $\operatorname{id}_{\sigma(A_0)}$ 在正交分解 $N=\sigma(A_0)\perp M$ 下拼成等距 $\tilde\rho:N\to N$。则 $\tilde\rho\circ\tau$ 是 $N$ 的等距，在 $A_0$ 上与 $\sigma$ 一致，并把 $a$ 送到 $\tilde\rho(x)=y=\sigma(a)$；所以它是 $\sigma$ 在 $A$ 上的延拓。归纳完成。$\blacksquare$
+
+#### 双线性型 + 正交补 + Witt 延拓引理 ⟹ Witt 消去定理　`imp.witt-cancellation`
+*延拓后固定 $W$，再用正交补的唯一性消去*
+
+记 $V_1=U\perp W$、$V_2=U'\perp W$，$f:V_1\to V_2$ 是等距。
+
+**正交补就是另一块。** $W$ 非退化，故 $V_1=W\perp(W^{\perp}\cap V_1)$，且 $\dim(W^{\perp}\cap V_1)=\dim V_1-\dim W=\dim U$；由 $U\subseteq W^{\perp}\cap V_1$ 得 $U=W^{\perp}\cap V_1$。同理 $U'=W^{\perp}\cap V_2$。因此只需找等距 $g:V_1\to V_2$ 使 $g(W)=W$。
+
+**把 $f$ 修正成固定 $W$。** $f(W)$ 非退化。对等距 $f|_W:W\to f(W)$ 用 `lem.witt-extension`（环境 $V_2$ 非退化、$\operatorname{char}K\ne2$）得等距 $F:V_2\to V_2$，且 $F|_W=f|_W$。令 $g=F^{-1}\circ f$。$g$ 是等距；对 $w\in W$，$g(w)=F^{-1}(f(w))=w$，即 $g|_W=\operatorname{id}_W$，故 $g(W)=W$。
+
+**收尾。** $g(U)=g(W^{\perp}\cap V_1)=g(W)^{\perp}\cap g(V_1)=W^{\perp}\cap V_2=U'$，所以 $U\cong U'$。$\blacksquare$
+
+**唯一分解的推论。** 存在性对 $\dim V$ 归纳：若有迷向 $v\ne0$，因 $\beta$ 非退化可取 $w$ 使 $\beta(v,w)=1$，则 $H=\operatorname{span}(v,w)$ 是非退化双曲平面且 $V=H\perp H^{\perp}$，对 $H^{\perp}$ 归纳；若没有迷向向量，$V$ 自己就是非迷向块。唯一性：设 $V=H_1\perp\cdots\perp H_r\perp A=H_1'\perp\cdots\perp H_s'\perp A'$（$H_i,H_j'$ 双曲平面，$A,A'$ 非迷向），对 $r+s$ 归纳，用本定理消去 $H_1$ 与某个双曲块；双曲平面含迷向向量而非迷向块不含，故只能与双曲块同构，最后 $A\cong A'$。
+
 #### 定义引用：「特征值与特征向量」→ 特征子空间　`dep.eigsp-eig`
 
 特征子空间是「属于某个特征值的全部特征向量」，先有特征值。
@@ -60702,6 +60749,21 @@ $$\sqrt{1-u}=1-\sum_{k\ge1}c_k u^{k},\qquad c_k=\frac{(2k-3)!!}{2^{k}k!}>0,$$
 $A$ 对一致收敛封闭（$A$ 闭于 $C(K,\mathbb R)$），故 $\sqrt{1-u}=\sqrt{f^{2}}=|f|\in A$。一般 $f$ 用 $f/\max(\lVert f\rVert,1)$ 归约，结论相同。∎
 
 > 完整证明见本条边；节点注只保留动机与缺口。
+
+#### 紧集上连续 ⟹ 一致连续 ⟹ Bernstein 多项式逼近　`imp.bernstein-approximation`
+*紧区间上一致连续 $\implies$ Bernstein 多项式一致逼近*
+
+取 $f\in C[0,1]$、$\varepsilon>0$。由 `thm.uniform-continuity-compact`（$[0,1]$ 紧），$f$ 一致连续：存在 $\delta>0$ 使 $|x-y|<\delta$ 时 $|f(x)-f(y)|<\varepsilon$。
+
+固定 $x\in[0,1]$，令 $S_n\sim\mathrm{Bin}(n,x)$，则 $B_nf(x)=\mathbb E[f(S_n/n)]$。二项矩恒等式（对 $\sum_k\binom nk x^k(1-x)^{n-k}=1$ 求导两次即得）给出
+$$\mathbb E\Bigl[\frac{S_n}{n}\Bigr]=x,\qquad \mathbb E\Bigl[\Bigl(\frac{S_n}{n}-x\Bigr)^{2}\Bigr]=\frac{x(1-x)}{n}\le\frac{1}{4n}.$$
+
+按 $|S_n/n-x|$ 是否小于 $\delta$ 分两段：近处 $|f(S_n/n)-f(x)|<\varepsilon$；远处 $\le2\lVert f\rVert_\infty$，而这情形的概率由 Markov 不等式
+$$\mathbb P\Bigl(\Bigl|\frac{S_n}{n}-x\Bigr|\ge\delta\Bigr)\le\frac{1}{4n\delta^{2}}.$$
+
+合并得 $|B_nf(x)-f(x)|\le\varepsilon+\dfrac{\lVert f\rVert_\infty}{2n\delta^{2}}$，与 $x$ 无关。取 $n>\dfrac{\lVert f\rVert_\infty}{2\varepsilon\delta^{2}}$ 便有 $\lVert B_nf-f\rVert_\infty\le2\varepsilon$。$\varepsilon$ 任意，故 $B_nf\rightrightarrows f$。∎
+
+> 唯一的外部输入是紧集上连续 $\implies$ 一致连续；二项矩与 Markov 不等式都在边里现算。
 
 #### 定义引用：「范数」→ L^p 是 Banach 空间　`dep.lpbanach-norm`
 
@@ -66315,7 +66377,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **矩阵与行列式 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
-- **内积空间与正交性 ↔ 多重线性与张量**　13 条节点级连线
+- **内积空间与正交性 ↔ 多重线性与张量**　16 条节点级连线
 - **矩阵与行列式 ↔ 多重线性与张量**　10 条节点级连线
 - **多元微分 ↔ 度量空间**　5 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线

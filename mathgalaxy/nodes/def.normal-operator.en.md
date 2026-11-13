@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.normal-operator)　·　[Chinese page (authoritative)](./def.normal-operator.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.normal-operator.md` and `proofs/`.
+## Statement · **draft**
+Let $T : V \to V$ be a linear operator on a finite-dimensional inner product space.
 
+- $T$ is **self-adjoint** (called **symmetric** in the real case and **Hermitian** in the complex case): $T^{\ast} = T$;
+- $T$ is **normal**: $T^{\ast}T = T T^{\ast}$ (it commutes with its own adjoint);
+- $T$ is **unitary** (orthogonal): $T^{\ast}T = T T^{\ast} = I$.
 
-Cite: `def.normal-operator` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.normal-operator.en.2.md

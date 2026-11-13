@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.geodesic)　·　[Chinese page (authoritative)](./def.geodesic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.geodesic.md` and `proofs/`.
+## Statement · **draft**
+Let $\gamma : I\to S$ be a curve on a surface $S$ parametrized by arc length ($\langle \dot\gamma,\dot\gamma\rangle = 1$). $\gamma$ is a **geodesic** if its tangent vector is parallel along itself:
 
+$$\nabla_{\dot\gamma(s)}\dot\gamma(s) = 0,\qquad s \in I.$$
 
-Cite: `def.geodesic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Expanded in coordinates this is the **geodesic equation**:
 
+> continued in nodes/def.geodesic.en.2.md

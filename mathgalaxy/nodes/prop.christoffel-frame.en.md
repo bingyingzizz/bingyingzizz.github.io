@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.christoffel-frame)　·　[Chinese page (authoritative)](./prop.christoffel-frame.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Connection Coefficients` (short) · `Connection Coefficients in an Orthonormal Frame` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.christoffel-frame.md` and `proofs/`.
+## Statement · **draft**
+Let $e_{1},e_{2}$ be a local orthonormal frame on a surface, and define the connection forms by $\nabla_{X}e_{j} = \omega^{k}_{j}(X)e_{k}$ (so that $\omega^{k}_{j} = -\omega^{j}_{k}$). Then
 
+① **The Koszul formula gives all the coefficients**:
 
-Cite: `prop.christoffel-frame` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.christoffel-frame.en.2.md

@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.locally-compact-baire)　·　[Chinese page (authoritative)](./thm.locally-compact-baire.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.locally-compact-baire.md` and `proofs/`.
+## Statement · **draft**
+Every locally compact Hausdorff space is a Baire space.
 
+## Notes · **draft**
+The proof is the same as in the complete metric case, replacing "the radii of nested closed balls tend $\to 0$" by "nested compact neighbourhoods": non-empty intersection is guaranteed by the **finite intersection property** of compact sets (no shrinking radius is needed).
 
-Cite: `thm.locally-compact-baire` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.locally-compact-baire.en.2.md

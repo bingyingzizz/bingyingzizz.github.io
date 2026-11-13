@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.singular-homology)　·　[Chinese page (authoritative)](./def.singular-homology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · definition · cluster Homology Groups (`topology.homology`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.singular-homology.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be an arbitrary topological space. A **singular $p$-simplex** is an arbitrary continuous map
 
+$$\sigma : \Delta^{p} \longrightarrow X,$$
 
-Cite: `def.singular-homology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.singular-homology.en.2.md

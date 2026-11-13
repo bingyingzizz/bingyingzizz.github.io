@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.second-fundamental-form)　·　[Chinese page (authoritative)](./def.second-fundamental-form.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.second-fundamental-form.md` and `proofs/`.
+## Statement · **draft**
+The **second fundamental form** of a surface is
 
+$$II(v,w) := \langle \mathrm{d}r(v), -\mathrm{d}n(w)\rangle = \langle W(\mathrm{d}r(v)), \mathrm{d}r(w)\rangle .$$
 
-Cite: `def.second-fundamental-form` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In an orthonormal frame with $e_{3} = n$,
 
+$$II = -\sum_{i=1}^{2}\omega^{i}\,\omega^{i}_{\ 3} = \sum_{i,j=1}^{2}h_{ij}\,\omega^{i}\omega^{j},$$
+
+> continued in nodes/def.second-fundamental-form.en.2.md

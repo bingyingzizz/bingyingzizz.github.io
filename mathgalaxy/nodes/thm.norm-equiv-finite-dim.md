@@ -16,6 +16,6 @@ $$\alpha\,\|x\|_\infty \le \|x\| \le \beta\,\|x\|_\infty , \qquad \|x\|_\infty :
 refs: Rudin, Functional Analysis · 赋范空间与有限维
 
 ## 说明
-text=**为什么有限维特殊**：单位球面紧，范数在球面上取到正的最小值，于是任一范数被 $\lVert\cdot\rVert_\infty$ 双向控制。完整证明见边 `imp.norm-equiv-finite-dim-proof`。
+**为什么有限维特殊**：单位球面紧，范数在球面上取到正的最小值，于是任一范数被 $\lVert\cdot\rVert_\infty$ 双向控制。完整证明见边 `imp.norm-equiv-finite-dim-proof`。
 
 引用：`thm.norm-equiv-finite-dim`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

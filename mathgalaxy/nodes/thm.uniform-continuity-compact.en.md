@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.uniform-continuity-compact)　·　[Chinese page (authoritative)](./thm.uniform-continuity-compact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.uniform-continuity-compact.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a compact metric space and $f : X \to \mathbb{R}$ continuous. Then $f$ is **uniformly continuous** on $X$.
 
+In particular: a continuous function on a closed interval $[a, b]$ is uniformly continuous.
 
-Cite: `thm.uniform-continuity-compact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.uniform-continuity-compact.en.2.md
