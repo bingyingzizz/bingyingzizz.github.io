@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.topos-morphism-from-object)　·　[Chinese page (authoritative)](./prop.topos-morphism-from-object.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Object to Topos Morphism` (short) · `An Object Induces a Topos Morphism` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.topos-morphism-from-object.md` and `proofs/`.
+## Statement · **draft**
+Viewing $X \in \mathcal{C}$ as a functor $X : \mathbf{1} \to \mathcal{C}$, it induces a topos morphism $\widehat{X} : \mathbf{Set} \to \widehat{\mathcal{C}}$, and the three functors are given on objects by
 
-
-Cite: `prop.topos-morphism-from-object` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.topos-morphism-from-object.en.2.md

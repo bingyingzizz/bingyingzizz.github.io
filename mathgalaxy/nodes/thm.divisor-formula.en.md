@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.divisor-formula)　·　[Chinese page (authoritative)](./thm.divisor-formula.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.divisor-formula.md` and `proofs/`.
+## Statement · **draft**
+Let $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$. Then
 
+$$\tau(n) = \prod_{i=1}^{r} (e_{i} + 1), \qquad \sigma(n) = \prod_{i=1}^{r} \frac{p_{i}^{\,e_{i}+1} - 1}{p_{i} - 1} .$$
 
-Cite: `thm.divisor-formula` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.divisor-formula.en.2.md

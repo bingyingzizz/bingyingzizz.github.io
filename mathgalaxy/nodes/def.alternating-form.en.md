@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.alternating-form)　·　[Chinese page (authoritative)](./def.alternating-form.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.alternating-form.md` and `proofs/`.
+## Statement · **draft**
+Let $f : V^{n} \to K$ be a multilinear form.
 
-
-Cite: `def.alternating-form` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.alternating-form.en.2.md

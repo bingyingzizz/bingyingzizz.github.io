@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.elementary-matrix)　·　[Chinese page (authoritative)](./def.elementary-matrix.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.elementary-matrix.md` and `proofs/`.
+## Statement · **draft**
+An **elementary row operation** is one of the following three operations:
 
+- **swap** row $i$ and row $j$;
+- multiply row $i$ by a nonzero constant $c$;
+- take row $j$, multiply it by $c$, and **add** the result to row $i$ (**with $i \ne j$**; taking $i = j$ and $c = -1$ would give the non-invertible $\operatorname{diag}(0, 1)$).
 
-Cite: `def.elementary-matrix` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.elementary-matrix.en.2.md

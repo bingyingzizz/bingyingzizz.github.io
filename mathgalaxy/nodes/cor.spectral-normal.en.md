@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=cor.spectral-normal)　·　[Chinese page (authoritative)](./cor.spectral-normal.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 30 · corollary · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/cor.spectral-normal.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a finite-dimensional **complex** inner product space and $T : V \to V$ **normal** ($T^{\ast}T = TT^{\ast}$). Then there is an **orthonormal basis** of $V$ in which $T$ is diagonal:
 
+$$T = U \Lambda\, U^{\dagger}, \qquad U^{\dagger}U = I,\ \Lambda = \operatorname{diag}(\lambda_1, \ldots, \lambda_n)$$
 
-Cite: `cor.spectral-normal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Moreover:
 
+> continued in nodes/cor.spectral-normal.en.2.md

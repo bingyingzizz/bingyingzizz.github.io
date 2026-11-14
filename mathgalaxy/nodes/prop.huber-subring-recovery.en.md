@@ -2,13 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.huber-subring-recovery)　·　[Chinese page (authoritative)](./prop.huber-subring-recovery.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.huber-subring-recovery.md` and `proofs/`.
-
-
-Cite: `prop.huber-subring-recovery` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.huber-subring-recovery.en.2.md

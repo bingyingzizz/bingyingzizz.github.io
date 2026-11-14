@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.flat-equivalences)　·　[Chinese page (authoritative)](./prop.flat-equivalences.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 0 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flatness Equivalences` (short) · `Equivalent Characterizations of Flatness` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.flat-equivalences.md` and `proofs/`.
+## Statement · **draft**
+Let $R$ be a commutative ring with unit and $N$ an $R$-module. The following are equivalent:
 
-
-Cite: `prop.flat-equivalences` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.flat-equivalences.en.2.md

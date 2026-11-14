@@ -5,7 +5,7 @@
 
 把「与 $\mathcal{A}$ 中每张卡都 $C^{\infty}$-相容的卡」全部收进来，得到 $\mathcal{A}^{+}$。逐条验证。
 
-**(1) 相容（传递性）。** 取 $(V,\psi), (W,\theta) \in \mathcal{A}^{+}$，要证 $\theta \circ \psi^{-1}$ 光滑。
+**关于 2（相容性；传递性）。** 取 $(V,\psi), (W,\theta) \in \mathcal{A}^{+}$，要证 $\theta \circ \psi^{-1}$ 光滑。
 
 在 $V \cap W$ 上任取 $p$，由 $\mathcal{A}$ 覆盖 $M$ 取含 $p$ 的一张卡 $(U,\varphi) \in \mathcal{A}$。
 
@@ -14,7 +14,5 @@
 $$\theta \circ \psi^{-1} = (\theta \circ \varphi^{-1}) \circ (\varphi \circ \psi^{-1}),$$
 
 右边两个因子都是 $\mathbb{R}^{n}$ 开集之间的 $C^{\infty}$ 映射（这正是「与 $\varphi$ 相容」的意思），故复合光滑。$p$ 任意，得该转移映射处处光滑 —— 这就是相容性的传递性。
-
-**(2) 包含与覆盖。** $(V,\psi) \in \mathcal{A}$ 时它与 $\mathcal{A}$ 中每张卡相容（$\mathcal{A}$ 本身相容），故 $\mathcal{A} \subseteq \mathcal{A}^{+}$；
 
 > 续见 proofs/imp.mf-maximal-atlas.2.md

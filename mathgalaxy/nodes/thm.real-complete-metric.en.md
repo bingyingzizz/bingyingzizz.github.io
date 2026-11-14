@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.real-complete-metric)　·　[Chinese page (authoritative)](./thm.real-complete-metric.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.real-complete-metric.md` and `proofs/`.
+## Statement · **draft**
+On $\mathbb{R}$ take the distance $d(x, y) := |x - y|$. Then $(\mathbb{R}, d)$ is a **complete** metric space: every Cauchy sequence in it converges.
 
+This is exactly the Cauchy criterion rewritten in the language of metric spaces — in one sentence: $\mathbb{R}$ is complete.
 
-Cite: `thm.real-complete-metric` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.real-complete-metric.en.2.md

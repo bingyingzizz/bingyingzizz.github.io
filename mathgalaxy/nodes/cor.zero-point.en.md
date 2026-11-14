@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=cor.zero-point)　·　[Chinese page (authoritative)](./cor.zero-point.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · corollary · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/cor.zero-point.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be continuous on $[a, b]$, and suppose $f(a)$ and $f(b)$ have **opposite signs** ($f(a) f(b) < 0$). Then there is $\xi \in (a, b)$ with
 
+$$f(\xi) = 0$$
 
-Cite: `cor.zero-point` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ It is the intermediate value theorem with $c = 0$; it is stated separately because it is used so often (bisection in numerical analysis is its algorithmic form).
 
+> continued in nodes/cor.zero-point.en.2.md

@@ -8,10 +8,8 @@ layer 32 · 定理 · 内蕴几何 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`def.isometry-surface`](../nodes/def.isometry-surface.md) 等距
 - ⇒ [`thm.developable-iff-flat`](../nodes/thm.developable-iff-flat.md) 可展的判据
-
-- …另有出边，续页见 [nodes/thm.theorema-egregium.5.md](./thm.theorema-egregium.5.md)
+- 被 [`def.developable-surface`](../nodes/def.developable-surface.md) 可展曲面 用
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.theorema-egregium.3.md](./thm.theorema-egregium.3.md)

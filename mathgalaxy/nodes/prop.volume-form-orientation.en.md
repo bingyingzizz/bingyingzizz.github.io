@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.volume-form-orientation)　·　[Chinese page (authoritative)](./prop.volume-form-orientation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Orientation and Volume` (short) · `Orientation and Volume Forms` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.volume-form-orientation.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: it gives orientability a criterion that needs no atlas — it is enough to write down an everywhere nonzero $n$-form on the whole manifold.
 
-
-Cite: `prop.volume-form-orientation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.volume-form-orientation.en.2.md

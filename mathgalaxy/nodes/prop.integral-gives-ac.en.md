@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.integral-gives-ac)　·　[Chinese page (authoritative)](./prop.integral-gives-ac.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.integral-gives-ac.md` and `proofs/`.
+## Statement · **draft**
+Let $\mu$ be a measure and $f$ a generalized $\mu$-integrable function; define
 
+$$\nu(E) := \int_E f d\mu$$
 
-Cite: `prop.integral-gives-ac` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then $\nu$ is a signed measure and $\nu \ll  \mu$. Moreover
 
+$\nu$ is **finite** $\iff f \in L^1(\mu)$
+
+> continued in nodes/prop.integral-gives-ac.en.2.md

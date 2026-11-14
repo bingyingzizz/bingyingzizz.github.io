@@ -9,6 +9,4 @@
 
 覆盖 $M$ 的每张卡 $(U_{\alpha},\varphi_{\alpha})$ 上，$\omega\big|_{U_{\alpha}} = f_{\alpha}\,\mathrm{d}x^{1}\wedge\cdots\wedge\mathrm{d}x^{n}$ 且 $f_{\alpha}$ 处处非零。
 
-把 $f_{\alpha} < 0$ 的那些卡换成 $(U_{\alpha}, \sigma \circ \varphi_{\alpha})$，其中 $\sigma$ 是交换前两个坐标的换位（它把 $\mathrm{d}x^{1}\wedge\cdots$ 变号）。
-
 > 续见 proofs/imp.mf-volume-form-orientation.3.md

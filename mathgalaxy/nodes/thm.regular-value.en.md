@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.regular-value)　·　[Chinese page (authoritative)](./thm.regular-value.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Preimage of a Regular Value` (short) · `Regular Value Theorem` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.regular-value.md` and `proofs/`.
+## Statement · **draft**
+Let $U \subseteq \mathbb{R}^{n}$ be open and $f : U \to \mathbb{R}^{m}$ be $C^{1}$ ($m \le n$).
 
+A point $c \in \mathbb{R}^{m}$ is called a **regular value** of $f$ if and only if for every $x \in f^{-1}(c)$ the differential $Df(x)$ is **surjective**;
 
-Cite: `thm.regular-value` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+otherwise it is called a **critical value**.
 
+> continued in nodes/thm.regular-value.en.2.md

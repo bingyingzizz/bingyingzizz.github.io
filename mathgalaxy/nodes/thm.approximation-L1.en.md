@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.approximation-L1)　·　[Chinese page (authoritative)](./thm.approximation-L1.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.approximation-L1.md` and `proofs/`.
+## Statement · **draft**
+Let $f \in L^1(\mu)$. Then for every $\varepsilon > 0$ there is a simple function $\varphi = \sum_j a_j \chi_{E_j}$ such that
 
+$$\int |f - \varphi| d\mu < \varepsilon$$
 
-Cite: `thm.approximation-L1` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.approximation-L1.en.2.md

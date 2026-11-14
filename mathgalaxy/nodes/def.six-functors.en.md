@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.six-functors)　·　[Chinese page (authoritative)](./def.six-functors.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · definition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.six-functors.md` and `proofs/`.
+## Statement · **draft**
+In plain words: **a 6-functor formalism = attach to every space six operations "base change, pushforward, duality", and require them to be compatible as in classical Poincaré / Serre duality**. The goal is single: turn "cohomology" into "an inner product", so that cohomology classes can be paired and the result computed. Classical geometry (sheaves, $\ell$-adic cohomology) and solid geometry each have such a system of six functors.
 
-
-Cite: `def.six-functors` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.six-functors.en.2.md

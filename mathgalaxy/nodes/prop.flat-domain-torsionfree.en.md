@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.flat-domain-torsionfree)　·　[Chinese page (authoritative)](./prop.flat-domain-torsionfree.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flat Implies Torsion-Free` (short) · `Flatness and Torsion-Freeness over a Domain` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.flat-domain-torsionfree.md` and `proofs/`.
+## Statement · **draft**
+Let $R$ be an **integral domain** and $M$ a flat $R$-module. Then $M$ is **torsion-free**: for $r \ne 0$ and $m \in M$, $r m = 0$ implies $m = 0$. Equivalently, multiplication by $r$, $M \xrightarrow{\;\cdot r\;} M$, is injective.
 
-
-Cite: `prop.flat-domain-torsionfree` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.flat-domain-torsionfree.en.2.md

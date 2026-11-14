@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.differential-map)　·　[Chinese page (authoritative)](./def.differential-map.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 names: `Differential` (short) · `Differential of a Smooth Map` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.differential-map.md` and `proofs/`.
+## Statement · **draft**
+**What it says**: a smooth map gives a linear map at every point, sending "directions along curves" to directions on the image — this is the derivative on manifolds; there is no subtraction on a manifold, and the only thing one can do is follow curves.
 
+Let $F : N \to M$ be smooth and $p \in N$. Define
 
-Cite: `def.differential-map` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.differential-map.en.2.md

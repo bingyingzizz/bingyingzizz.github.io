@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.bundle-metric)　·　[Chinese page (authoritative)](./prop.bundle-metric.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Fiber Metric` (short) · `Fiber Metric on a Vector Bundle` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.bundle-metric.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: it builds "an inner product on every fibre" globally — locally such products always exist, and a partition of unity glues them. This is the general version of "every manifold carries a Riemannian metric".
 
-
-Cite: `prop.bundle-metric` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.bundle-metric.en.2.md

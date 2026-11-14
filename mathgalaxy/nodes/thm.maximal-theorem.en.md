@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.maximal-theorem)　·　[Chinese page (authoritative)](./thm.maximal-theorem.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · theorem · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.maximal-theorem.md` and `proofs/`.
+## Statement · **draft**
+There is a constant $C > 0$ (depending only on the dimension $n$) such that for every $f \in L^1$ and every $\alpha > 0$,
 
+$$m(\{x : Hf(x) > \alpha\}) \le (C/\alpha)\cdot\int |f(x)| dx$$
 
-Cite: `thm.maximal-theorem` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.maximal-theorem.en.2.md

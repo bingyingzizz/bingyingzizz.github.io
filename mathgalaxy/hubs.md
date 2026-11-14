@@ -15,7 +15,7 @@
 ## 综合结论榜
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
-- **8 / 8** `thm.bundle-classification` 丛的分类 · 丛的示性类
+- **8 / 5** `thm.de-rham` de Rham 定理 · 微分形式、积分与 de Rham
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜

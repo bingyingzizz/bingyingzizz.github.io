@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.rhom-banach-discrete-zero)　·　[Chinese page (authoritative)](./prop.rhom-banach-discrete-zero.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `RHom to Discrete Vanishes` (short) · `Derived Hom from Finite-Dimensional Banach Spaces to Discrete Groups Vanishes` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.rhom-banach-discrete-zero.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a **finite-dimensional real Banach space** and $N$ a **discrete** abelian group. Then
 
-
-Cite: `prop.rhom-banach-discrete-zero` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.rhom-banach-discrete-zero.en.2.md

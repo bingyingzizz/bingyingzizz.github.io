@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.scalar-extension-adjunction)　·　[Chinese page (authoritative)](./prop.scalar-extension-adjunction.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.scalar-extension-adjunction.md` and `proofs/`.
+## Statement · **draft**
+For every unital ring homomorphism $f : R \to S$ there is an adjunction
 
+$$S \otimes_{R} - \;\dashv\; f_{\ast} : R\text{-}\mathbf{Mod} \rightleftarrows S\text{-}\mathbf{Mod},$$
 
-Cite: `prop.scalar-extension-adjunction` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, for every left $R$-module $M$ and left $S$-module $P$ a natural isomorphism
 
+> continued in nodes/prop.scalar-extension-adjunction.en.2.md

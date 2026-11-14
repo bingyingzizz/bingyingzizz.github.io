@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.bezout-domain)　·　[Chinese page (authoritative)](./def.bezout-domain.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.bezout-domain.md` and `proofs/`.
+## Statement · **draft**
+A domain $A$ is called a **Bézout domain** if every **finitely generated** ideal is principal — equivalently: for any $a, b \in A$ there exist $d, u, v$ such that
 
+$$u a + v b = d = \gcd(a, b) .$$
 
-Cite: `def.bezout-domain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.bezout-domain.en.2.md

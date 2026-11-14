@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.operator-algebra)　·　[Chinese page (authoritative)](./prop.operator-algebra.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.operator-algebra.md` and `proofs/`.
+## Statement · **draft**
+Let $u \in B(E, F)$ and $v \in B(F, G)$. Then $v \circ u \in B(E, G)$ and
 
+$$\|v \circ u\| \le \|v\| \, \|u\| .$$
 
-Cite: `prop.operator-algebra` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In particular $B(E)$ is a **normed algebra** (multiplication is continuous); if $E \ne \{0\}$ then $\|\mathrm{id}\| = 1$.
 
+> continued in nodes/prop.operator-algebra.en.2.md

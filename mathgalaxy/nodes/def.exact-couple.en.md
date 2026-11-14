@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.exact-couple)　·　[Chinese page (authoritative)](./def.exact-couple.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.exact-couple.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be an abelian category and $D = \bigoplus D^{p,q}$, $E = \bigoplus E^{p,q}$ bigraded objects. An **exact couple** is a triple $(D, E, i, j, k)$ forming the "triangle"
 
+$$D \xrightarrow{\ i\ } D \xrightarrow{\ j\ } E \xrightarrow{\ k\ } D ,$$
 
-Cite: `def.exact-couple` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $i, j, k$ are bihomogeneous morphisms and exact at every position:
 
+> continued in nodes/def.exact-couple.en.2.md

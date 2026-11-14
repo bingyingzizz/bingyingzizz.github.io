@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.vector-bundle)　·　[Chinese page (authoritative)](./def.vector-bundle.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.vector-bundle.md` and `proofs/`.
+## Statement · **draft**
+**What it says**: it axiomatizes "attach a vector space to every point, smoothly" — the tangent, cotangent and tensor bundles are examples. The criterion is "locally it looks like $U \times \mathbb{R}^{k}$".
 
-
-Cite: `def.vector-bundle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.vector-bundle.en.2.md

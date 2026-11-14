@@ -1,7 +1,7 @@
 # imp.gauss-bonnet
 `imp.gauss-bonnet` · 推出 · strong 边 · 根 `../`
 
-`thm.liouville-formula` Liouville 公式 + `def.geodesic-curvature` 测地曲率 + `def.gauss-curvature` Gauss 曲率 → `thm.gauss-bonnet` Gauss–Bonnet 定理
+`thm.liouville-formula` Liouville 公式 + `def.geodesic-curvature` 测地曲率 + `def.gauss-curvature` Gauss 曲率 + `thm.stokes` Stokes 定理 → `thm.gauss-bonnet` Gauss–Bonnet 定理
 
 **第一步（局部版）：简单闭曲线围成的区域。** 设 $D$ 由分段光滑简单闭曲线 $\partial D$ 围成，取正交单位标架与联络形式 $\omega^{1}_{2}$。
 

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.isotropic-vector)　·　[Chinese page (authoritative)](./def.isotropic-vector.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.isotropic-vector.md` and `proofs/`.
+## Statement · **draft**
+**What this is about**: in a space with an inner product, $\langle v,v\rangle = 0$ has only the zero solution. A general bilinear form has no such property — a nonzero vector whose "length" is zero is called an **isotropic vector**, and this is where this geometry parts ways with inner-product geometry.
 
-
-Cite: `def.isotropic-vector` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.isotropic-vector.en.2.md

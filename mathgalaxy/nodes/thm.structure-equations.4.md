@@ -5,3 +5,4 @@
 - ⇒ [`thm.codazzi-mainardi`](../nodes/thm.codazzi-mainardi.md) Codazzi–Mainardi 方程
 - ⇒ [`thm.fundamental-theorem-surfaces`](../nodes/thm.fundamental-theorem-surfaces.md) 曲面论基本定理
 - ⇒ [`thm.theorema-egregium`](../nodes/thm.theorema-egregium.md) 绝妙定理
+- ⇒ [`thm.constant-gauss-curvature`](../nodes/thm.constant-gauss-curvature.md) 常 Gauss 曲率曲面

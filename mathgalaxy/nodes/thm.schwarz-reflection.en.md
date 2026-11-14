@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.schwarz-reflection)　·　[Chinese page (authoritative)](./thm.schwarz-reflection.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.schwarz-reflection.md` and `proofs/`.
+## Statement · **draft**
+Let $\Omega$ be symmetric about the real axis and $\Omega^{+} = \Omega \cap \{\, \operatorname{Im} z > 0 \,\}$. If $f$ is holomorphic on $\Omega^{+}$, continuous on $\Omega \cap \mathbb{R}$ and **real-valued** there, then $f$ extends to a holomorphic function on $\Omega$, namely $F$, and
 
+$$F(\bar z) = \overline{F(z)}.$$
 
-Cite: `thm.schwarz-reflection` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.schwarz-reflection.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.left-invariant-fields)　·　[Chinese page (authoritative)](./prop.left-invariant-fields.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 30 · proposition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
 names: `Left-Invariant Fields` (short) · `Left-Invariant Vector Fields` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.left-invariant-fields.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: it differentiates a Lie group at the identity — left translation spreads each tangent vector at the identity into a global vector field, and these fields form a Lie algebra.
 
-
-Cite: `prop.left-invariant-fields` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.left-invariant-fields.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.power-series-analytic)　·　[Chinese page (authoritative)](./thm.power-series-analytic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · theorem · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.power-series-analytic.md` and `proofs/`.
+## Statement · **draft**
+Let $f(x) := \sum_{n=0}^{\infty} a_n (x - x_0)^{n}$ have radius of convergence $R > 0$. Then:
 
-
-Cite: `thm.power-series-analytic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.power-series-analytic.en.2.md

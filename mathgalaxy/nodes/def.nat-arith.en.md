@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.nat-arith)　·　[Chinese page (authoritative)](./def.nat-arith.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.nat-arith.md` and `proofs/`.
+## Statement · **draft**
+Let $\omega = \mathbb{N}$, $S(n) := n \cup \{n\}$, $0 := \emptyset$. Define two operations on $\omega$ by **recursion**.
 
+**Addition**: for each fixed $m$, the map $n \mapsto m + n$ is the unique $g : \omega \to \omega$ satisfying
 
-Cite: `def.nat-arith` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$m + 0 := m, \qquad m + S(n) := S(m + n)$$
 
+**Multiplication**: likewise,
+
+$$m \cdot 0 := 0, \qquad m \cdot S(n) := m \cdot n + m$$
+
+> continued in nodes/def.nat-arith.en.2.md

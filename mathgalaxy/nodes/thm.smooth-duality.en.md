@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.smooth-duality)　·　[Chinese page (authoritative)](./thm.smooth-duality.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · theorem · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.smooth-duality.md` and `proofs/`.
+## Statement · **draft**
+In words: **in the smooth case $f^!R$ is a "twisted line bundle" given by the determinant of differential forms**. This is the **dualizing bundle** $\omega_{X/Y}$ (canonical bundle) of classical geometry.
 
-
-Cite: `thm.smooth-duality` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.smooth-duality.en.2.md

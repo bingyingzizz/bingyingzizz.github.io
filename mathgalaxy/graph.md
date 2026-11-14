@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-14T05:13:05.468Z
-> 15 星系 / 105 星团 / 1637 节点 / 3443 连线（强边 3364，弱边 79；其中**不分层**的「推论」64 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-14T05:42:00.644Z
+> 15 星系 / 105 星团 / 1637 节点 / 3443 连线（强边 3364，弱边 79；其中**不分层**的「推论」63 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -36733,7 +36733,7 @@ $$K(\sigma) = \langle R(X,Y)Y,X\rangle = R_{1221}\qquad (X = e_{1},\ Y = e_{2}).
 
 $$R(X,Y)Z = K\bigl(\langle Y,Z\rangle X-\langle X,Z\rangle Y\bigr).$$
 
-⚠ **逐点 $\ne$ 整体**：那条 $R(X,Y)Z = K(\langle Y,Z\rangle X - \langle X,Z\rangle Y)$ 只在**同一个点** $p$ 上成立。要让 $K$ 成为整块流形的常数还要额外条件：$\dim M \ge 3$ 时由 **Schur 引理**自动成立（逐点常曲率 $\implies$ 整体常曲率）；而 $\dim M = 2$ 时**不成立** —— 椭球面极点处 $K = 4$、赤道处 $K = 1/4$：二维时逐点只有一个截面，「与 $\sigma$ 无关」平凡成立，$K$ 却并非常数。
+⚠ **逐点 $\ne$ 整体**：那条 $R(X,Y)Z = K(\langle Y,Z\rangle X - \langle X,Z\rangle Y)$ 只在**同一个点** $p$ 上成立。要让 $K$ 成为整块流形的常数还要额外条件：$\dim M \ge 3$ 时由 **Schur 引理**自动成立（逐点常曲率 $\implies$ 整体常曲率）；而 $\dim M = 2$ 时**不成立** —— 取半轴 $a = b = 1$、$c = 2$ 的椭球面（$x^{2}+y^{2}+z^{2}/4 = 1$）：$c$ 轴端点处 $K = c^{2}/(a^{2}b^{2}) = 4$，$a$ 轴端点处 $K = a^{2}/(b^{2}c^{2}) = 1/4$。二维时逐点只有一个截面，「与 $\sigma$ 无关」平凡成立，$K$ 却并非常数。
 
 **为什么它能代表曲率**：截面曲率是最便宜的读数（一个数），但它**决定整个** $R$ —— 由双线性型的极化，$\langle R(X,Y)Z,W\rangle$ 可以由若干截面曲率组合出来。所以「所有截面曲率」与「曲率张量」是同一份信息。
 
@@ -36822,7 +36822,7 @@ $k<n$ 的形式要积分，得先选一个 $k$ 维子流形把它拉回去 —�
 
 **在做什么**：把微积分基本定理升到任意维 —— 边界上的积分等于内部外微分的积分，一个公式吃掉 Green、Gauss–Ostrogradsky 与 Kelvin–Stokes。
 
-设 $M$ 是 $n$ 维**紧致、定向、带边**的光滑流形，$\omega$ 是 $M$ 上的 $(n-1)$-形式（连续到边界即可）。则
+设 $M$ 是 $n$ 维**紧致、定向、带边**的光滑流形，$\omega$ 是 $M$ 上的 $(n-1)$-形式，要求 $\omega$ 光滑到以 $\partial M$ 为界、且 $\mathrm{d}\omega$ 在 $M$ 上可积（$\partial M$ 是零测集，故只需 $\mathrm{d}\omega$ 在内部可积）。更一般地，「$\omega$ 在内部 $C^{1}$、$\mathrm{d}\omega$ 可积、且 $\omega$ 在 $\partial M$ 上有连续迹」就够。则
 
 $$\int_{M}\mathrm{d}\omega = \int_{\partial M}\omega ,$$
 
@@ -36833,6 +36833,8 @@ $$\int_{M}\mathrm{d}\omega = \int_{\partial M}\omega ,$$
 对 $i<n$ 的分量在对应坐标方向有紧支、积分为零；
 
 只剩 $i = n$ 的分量，用一元微积分基本定理积出 $f_{n}(x^{1},\ldots,x^{n-1},0)$ —— 那正是 $\omega$ 在边界上的积分。
+
+⚠️ **「连续到边界」不够，必须写清可微性与可积性**：$n = 1$、$M = [0,1]$ 时定理要求 $\omega = f\,\mathrm{d}x$ 满足微积分基本定理 $f(1)-f(0) = \int_{0}^{1}f\,\mathrm{d}x$。而 Cantor 函数 $f$ 连续、$f(0)=0$、$f(1)=1$，却在 $[0,1]$ 上几乎处处可导且导数几乎处处为 $0$（它甚至不是绝对连续的）—— 右端积分为 $0$，左端却是 $1$。所以「$f$ 连续」不足以保证公式成立；本条的假设（$C^{1}$ 到边界 + $\mathrm{d}\omega$ 可积）在 $n=1$ 时退化为「$f$ 绝对连续」，正好是微积分基本定理的正确条件。
 
 **特例清单**：$n = 1$ 是微积分基本定理；$n = 2$ 是 Green 公式；$n = 3$ 的两种样子分别是 Gauss–Ostrogradsky（通量）与 Kelvin–Stokes（环量）。它们不是四条定理，是同一条。
 
@@ -37037,7 +37039,7 @@ $\pi$ 光滑；**零截面** $o : M \to TM$、$p \mapsto 0_{p}$ 是光滑映射�
 
 **为什么不能直接把 $TM$ 当 $M \times \mathbb{R}^{n}$**：$\mathbb{R}^{n}$ 的开集上可以（一张卡整体平凡化），一般流形不行。
 
-$TS^{2}$ 与 $S^{2} \times \mathbb{R}^{2}$ 不同胚 —— 理由是球面上的光滑向量场必有零点（毛球定理），所以 $TS^{2}$ 里找不到处处非零的截面。
+$TS^{2}$ 与 $S^{2} \times \mathbb{R}^{2}$ **作为 $S^{2}$ 上的向量丛**不同构：$e(TS^{2}) = \chi(S^{2}) = 2 \ne 0 = e(S^{2}\times\mathbb{R}^{2})$；等价地，$TS^{2}$ 的任何连续截面必有零点（毛球定理），而 $S^{2}\times\mathbb{R}^{2}$ 有处处非零的截面。这正是「切丛不能整体平凡化」的意思 —— 它**不**涉及两个全空间作为 $4$ 维流形是否同胚（那是另一个问题，本图不展开）。
 
 **转移映射就是 Jacobi 矩阵**：这条把「切向量怎么换坐标」写成显式公式，也是 $TM$ 光滑的**唯一**实质内容 —— 前半分量的光滑性来自图册相容，后半是 $\mathrm{d}(\psi\varphi^{-1})$ 光滑。
 
@@ -37493,7 +37495,7 @@ $$w_{i}(E) \in H^{i}(B; \mathbb{Z}/2), \qquad i = 0, 1, \ldots, k ,$$
 
 **最低一条的含义**：$w_{1}(E) = 0$ 当且仅当 $E$ **可定向**（见 `prop.orientable-iff-w1`）。
 
-**怎么算出来（与陈类对照）**：把实丛 $E$ 复化得 $E \otimes \mathbb{C}$，它是复丛，有陈类 $c_{i}$。**Pontryagin 类**取 $p_{i} = (-1)^{i}c_{2i}(E\otimes\mathbb{C})$；而 $w_{i}$ 是 $c_{i}$ 模 $2$ 的「影子」：$\rho_{2}\bigl(c_{i}(E\otimes\mathbb{C})\bigr) = w_{i}(E)^{2}$（**次数要对**：$w_{i} \in H^{i}$ 而 $c_{i} \in H^{2i}$，所以是 $c_{i}$ 的模 $2$ 约化等于 $w_{i}$ 的**平方**，不是 $w_{i}$ 本身；公理版只是它的最小刻画）。⚠️ 严格陈述要用 Thom–Wu 或 Steenrod 平方才能把模 $2$ 讲清楚，本图不展开。
+**怎么算出来（与陈类对照）**：把实丛 $E$ 复化得 $E \otimes \mathbb{C}$，它是复丛，有陈类 $c_{i}$。**Pontryagin 类**取 $p_{i} = (-1)^{i}c_{2i}(E\otimes\mathbb{C})$；而 $w_{i}$ 是 $c_{i}$ 模 $2$ 的「影子」：$\rho_{2}\bigl(c_{i}(E\otimes\mathbb{C})\bigr) = w_{i}(E)^{2}$（**次数要对**：$w_{i} \in H^{i}$ 而 $c_{i} \in H^{2i}$，所以是 $c_{i}$ 的模 $2$ 约化等于 $w_{i}$ 的**平方**，不是 $w_{i}$ 本身；公理版只是它的最小刻画）。对实线丛可以直接验：$L\otimes\mathbb{C}\cong L\oplus L$，故 $c_{1}(L\otimes\mathbb{C}) = e(L\oplus L)$（复线丛的 $c_{1}$ 就是其底层实 $2$ 平面丛的 Euler 类），而 $\rho_{2}\bigl(e(L\oplus L)\bigr) = w_{1}(L)^{2}$ —— 在 $\mathbb{RP}^{2}$ 的 tautological 线丛上它**不是零**（是 $H^{2}(\mathbb{RP}^{2};\mathbb{Z})\cong\mathbb{Z}/2$ 的生成元），与 $w_{1}^{2}\ne 0$ 一致。⚠️ 严格陈述要用 Thom–Wu 或 Steenrod 平方才能把模 $2$ 讲清楚，本图不展开。
 
 **为什么系数是 $\mathbb{Z}/2$ 而不是 $\mathbb{Z}$**：实丛没有「复数相位」，其示性类天然带 $2$-挠。用 $\mathbb{Z}$ 系数时 $p_{i}$ 只能取到偶次类、且丢掉奇次信息；这正是 $w_{2}$ 与 $p_{1}$ 分工的原因（$w_{2}$ 还能测「非 Spin」这类纯 $2$-挠现象）。
 
@@ -37516,7 +37518,7 @@ $$E\ \text{可定向} \iff w_{1}(E) = 0 .$$
 
 **对切丛**：$M$ 可定向（`def.orientable-manifold`）$\iff$ $w_{1}(TM) = 0$。
 
-**为什么是 $w_{1}$ 而不是别的**：约化 $\mathrm{GL}(k) \rightsquigarrow \mathrm{SO}(k)$ 等价于「转移函数（`def.transition-function`）可以全部取在 $\mathrm{SO}(k)$ 里」，即行列式处处为正 —— 这只给 $\mathrm{GL}^{+}(k)$；要再配纤维度量才能约化到 $\mathrm{SO}(k)$（两步不等价：秩 $1$ 平凡丛取转移函数 $(2)$ 行列式为正但不在 $\mathrm{SO}(1)$ 里）。而行列式取值 $\pm 1$ 给出一个 $\mathbb{Z}/2$-值上闭链 —— 那正是 $w_{1}$：它记的是「绕一圈回来符号是否翻转」。所以 $w_{1} = 0$ 就是「能统一符号」。
+**为什么是 $w_{1}$ 而不是别的**：约化 $\mathrm{GL}(k) \rightsquigarrow \mathrm{SO}(k)$ 等价于「转移函数（`def.transition-function`）可以全部取在 $\mathrm{SO}(k)$ 里」，即行列式处处为正 —— 这只给 $\mathrm{GL}^{+}(k)$；而 $\mathrm{GL}^{+}(k)$ 形变收缩到 $\mathrm{SO}(k)$（对纤维度量做 Gram–Schmidt 正交化），配上度量后自动落进 $\mathrm{SO}(k)$ —— 两种口径等价。而行列式取值 $\pm 1$ 给出一个 $\mathbb{Z}/2$-值上闭链 —— 那正是 $w_{1}$：它记的是「绕一圈回来符号是否翻转」。所以 $w_{1} = 0$ 就是「能统一符号」。
 
 ⭐ **同一件事的三种说法**：$w_{1} = 0$ $\iff$ $\Lambda^{k}E^{*}$ 有处处非零的截面（$E = TB$ 时它正是体积形式，`def.orientable-manifold`）$\iff$ 定向双重覆叠 $\tilde B \to B$ 分裂（有截面）。三者互为翻译，但**计算上只有第一条方便** —— 它就是这条命题的价值。
 
@@ -37579,7 +37581,7 @@ $$p_{i}(E) := (-1)^{i}\, c_{2i}\bigl(E \otimes_{\mathbb{R}} \mathbb{C}\bigr) \in
 
 ⚠️ **$S^{4}$ 反而是「$p_{1}$ 为零」的例子**：$S^{4}$ 稳定可平行化（$TS^{4} \oplus \underline{\mathbb{R}} \cong \underline{\mathbb{R}}^{5}$），故 $p_{1}(TS^{4}) = 0$；它非平凡要靠 Euler 类检出（$e(TS^{4}) = \chi(S^{4}) = 2 \ne 0$）。更著名的是 $\mathbb{CP}^{2}$ 的 $p_{1}$ 与符号差定理（signature theorem）：$\sigma(M) = \frac{1}{3}\int p_{1}$（四维闭可定向流形），这是 Hirzebruch 指标定理的特例。
 
-⚠️ **Whitney 公式的 $2$-挠警告**：$p(E\oplus E') = p(E)p(E')$ 在 $H^{*}(B;\mathbb{Z})$ 里**只对模 $2$-挠**成立（严格版要写到 $H^{*}(B;\mathbb{Z})/\text{挠}$，或用 $\mathbb{Z}[1/2]$ 系数）。这一点与陈类形成鲜明对照（陈类的 Whitney 公式是无条件的）—— 因为复化会引入 $2$-挠。
+⚠️ **Whitney 公式的 $2$-挠警告**：$p(E\oplus E') = p(E)p(E')$ 在 $H^{*}(B;\mathbb{Z})$ 里**只模 $2$-挠**成立。机制：$p_{k} = (-1)^{k}c_{2k}$ 只取偶次陈类，而 $c_{2k}\bigl((E\oplus E')\otimes\mathbb{C}\bigr)$ 里 $j$ 为奇数的项 $c_{j}(E\otimes\mathbb{C})\,c_{2k-j}(E'\otimes\mathbb{C})$ 被丢掉了；$c_{\text{奇}}$ 恰是 $2$-挠（复化与共轭同构，故 $c_{j} = (-1)^{j}c_{j}$），其乘积仍是 $2$-挠。反例（说明「整系数无条件成立」是错的）：$B = \mathbb{RP}^{2}\times\mathbb{RP}^{2}$、$E = L_{1}\oplus\underline{\mathbb{R}}$、$E' = L_{2}\oplus\underline{\mathbb{R}}$（$L_{i}$ 是第 $i$ 个因子的 tautological 线丛），则 $p_{1}(E) = p_{1}(E') = 0$，而 $p_{1}(E\oplus E') = -c_{2}\bigl((E\oplus E')\otimes\mathbb{C}\bigr) = -xy \ne 0$（$x,y$ 是两个因子的 $H^{2}$ 生成元）。对照：陈类的 Whitney 公式无条件成立。
 
 ⚠️ **三种实示性类的角色**：$w_{i}$（$\mathbb{Z}/2$，全维数、能测定向与 Spin）、$e$（$\mathbb{Z}$，只在可定向且偶数秩、顶维）、$p_{i}$（$\mathbb{Z}$，$4$ 的倍数维、丢奇次信息）。三者不互相包含 —— 判断某个实丛非平凡时，可能要几种一起用。
 
@@ -52810,7 +52812,7 @@ $$K = -\frac{1}{G}\left(\frac{G_{\rho\rho}}{2}-\frac{G_{\rho}^{2}}{4G}\right) = 
 **③ 结论。** 右端只有 $G$，而 $G$ 是 $I$ 的系数。所以 $K$ 由 $I$ 决定，绝妙定理成立。$\blacksquare$
 **④ 副产品：小圆的读数。** 把 $\sqrt G = \rho-\frac{K(p)}{6}\rho^{3}+O(\rho^{5})$（高斯引理那一条的展开）代回上式，两端逐阶相符 —— 这说明上面的公式是自洽的，也给出可操作的读数：$K(p)$ 就是「半径 $\rho$ 的测地圆比 $2\pi\rho$ 短多少」的三阶速率。
 
-#### Liouville 公式 + 测地曲率 + Gauss 曲率 ⟹ Gauss–Bonnet 定理　`imp.gauss-bonnet`
+#### Liouville 公式 + 测地曲率 + Gauss 曲率 + Stokes 定理 ⟹ Gauss–Bonnet 定理　`imp.gauss-bonnet`
 
 **第一步（局部版）：简单闭曲线围成的区域。** 设 $D$ 由分段光滑简单闭曲线 $\partial D$ 围成，取正交单位标架与联络形式 $\omega^{1}_{2}$。
 
@@ -54003,7 +54005,7 @@ $\mathfrak{g} := T_{e}G$ —— Lie 代数的载体就是单位元处的切空�
 
 把「与 $\mathcal{A}$ 中每张卡都 $C^{\infty}$-相容的卡」全部收进来，得到 $\mathcal{A}^{+}$。逐条验证。
 
-**(1) 相容（传递性）。** 取 $(V,\psi), (W,\theta) \in \mathcal{A}^{+}$，要证 $\theta \circ \psi^{-1}$ 光滑。
+**关于 2（相容性；传递性）。** 取 $(V,\psi), (W,\theta) \in \mathcal{A}^{+}$，要证 $\theta \circ \psi^{-1}$ 光滑。
 
 在 $V \cap W$ 上任取 $p$，由 $\mathcal{A}$ 覆盖 $M$ 取含 $p$ 的一张卡 $(U,\varphi) \in \mathcal{A}$。
 
@@ -54013,19 +54015,19 @@ $$\theta \circ \psi^{-1} = (\theta \circ \varphi^{-1}) \circ (\varphi \circ \psi
 
 右边两个因子都是 $\mathbb{R}^{n}$ 开集之间的 $C^{\infty}$ 映射（这正是「与 $\varphi$ 相容」的意思），故复合光滑。$p$ 任意，得该转移映射处处光滑 —— 这就是相容性的传递性。
 
-**(2) 包含与覆盖。** $(V,\psi) \in \mathcal{A}$ 时它与 $\mathcal{A}$ 中每张卡相容（$\mathcal{A}$ 本身相容），故 $\mathcal{A} \subseteq \mathcal{A}^{+}$；
+**关于 1 与 3（包含、覆盖，故是图册）。** $(V,\psi) \in \mathcal{A}$ 时它与 $\mathcal{A}$ 中每张卡相容（$\mathcal{A}$ 本身相容），故 $\mathcal{A} \subseteq \mathcal{A}^{+}$；
 
 $\mathcal{A}^{+}$ 覆盖 $M$ 因为它含覆盖的 $\mathcal{A}$。
 
-由 (1) 它是图册。
+由上面的相容性它是图册。
 
-**(3) 极大。** 设 $\mathcal{B} \supseteq \mathcal{A}^{+}$ 是图册，取 $(V,\theta) \in \mathcal{B}$。
+**关于 4（极大）。** 设 $\mathcal{B} \supseteq \mathcal{A}^{+}$ 是图册，取 $(V,\theta) \in \mathcal{B}$。
 
 由 $\mathcal{A} \subseteq \mathcal{A}^{+} \subseteq \mathcal{B}$ 与 $\mathcal{B}$ 内两两相容，$(V,\theta)$ 与 $\mathcal{A}$ 中每张卡相容，故 $(V,\theta) \in \mathcal{A}^{+}$。
 
 于是 $\mathcal{B} = \mathcal{A}^{+}$。
 
-**(4) 唯一。** 若 $\mathcal{A}_{1}^{+}, \mathcal{A}_{2}^{+}$ 都是包含 $\mathcal{A}$ 的极大图册，对 $\mathcal{A}_{1}^{+}$ 用一次 (3) 得 $\mathcal{A}_{2}^{+} \subseteq \mathcal{A}_{1}^{+}$、对 $\mathcal{A}_{2}^{+}$ 用一次得反向包含，故两者相等。
+**唯一性（陈述末句）。** 若 $\mathcal{A}_{1}^{+}, \mathcal{A}_{2}^{+}$ 都是包含 $\mathcal{A}$ 的极大图册，对 $\mathcal{A}_{1}^{+}$ 用一次 (3) 得 $\mathcal{A}_{2}^{+} \subseteq \mathcal{A}_{1}^{+}$、对 $\mathcal{A}_{2}^{+}$ 用一次得反向包含，故两者相等。
 
 ∎
 
@@ -54224,7 +54226,7 @@ $$\omega := \sum_{\alpha}\rho_{\alpha}\,\varphi_{\alpha}^{\ast}\bigl(\mathrm{d}x
 
 覆盖 $M$ 的每张卡 $(U_{\alpha},\varphi_{\alpha})$ 上，$\omega\big|_{U_{\alpha}} = f_{\alpha}\,\mathrm{d}x^{1}\wedge\cdots\wedge\mathrm{d}x^{n}$ 且 $f_{\alpha}$ 处处非零。
 
-把 $f_{\alpha} < 0$ 的那些卡换成 $(U_{\alpha}, \sigma \circ \varphi_{\alpha})$，其中 $\sigma$ 是交换前两个坐标的换位（它把 $\mathrm{d}x^{1}\wedge\cdots$ 变号）。
+把 $f_{\alpha} < 0$ 的那些卡换成 $(U_{\alpha}, \sigma \circ \varphi_{\alpha})$，其中 $\sigma$ 在 $n\ge 2$ 时交换前两个坐标、在 $n = 1$ 时取 $x\mapsto -x$ —— 两者都把 $\mathrm{d}x^{1}\wedge\cdots\wedge\mathrm{d}x^{n}$ 变号。
 
 这族卡仍覆盖 $M$、仍两两相容（只差一个固定微分同胚），而新坐标系下系数全为正。
 
@@ -55424,7 +55426,7 @@ $$-\frac{1}{2}\sum_{a,b}c^{i}_{\ ab}\bigl(\omega^{a}\wedge\omega^{b}\bigr)(\tild
 
 ⭐ 证明里没有一处用到「群的具体样子」：只用左不变性（把 $\omega^{i}(\tilde e_{l})$ 变成常数）与括号在左不变场上封闭。所以这条公式是纯结构常数的事 —— 也正是它能把「群」与「Lie 代数」直接对上的原因。
 
-#### 向量丛 + Čech 上同调 + 纤维度量 ⟹ 丛的分类　`imp.mf2-bundle-classification`
+#### 向量丛 + Čech 上同调 ⟹ 丛的分类　`imp.mf2-bundle-classification`
 *局部平凡化给出上闭链 $\implies$ 丛的同构类 $=$ $1$-上闭链模等价*
 
 **丛 $\mapsto$ 上闭链。** 取局部平凡化 $\Phi_{\alpha} : \pi^{-1}(U_{\alpha}) \to U_{\alpha}\times\mathbb{R}^{k}$，令 $g_{\alpha\beta} := \Phi_{\alpha}\circ\Phi_{\beta}^{-1}$。
@@ -55810,20 +55812,9 @@ $\blacksquare$
 
 > 定义本身只写了「怎么平均」，没有写「平均收敛到谁」；后一半是定理的内容，而它恰好就是 Lebesgue 微分定理。
 
-#### 绝妙定理 ⟹ 等距　`imp.derived-isometry-curvature`
-*绝妙定理说高斯曲率是局部等距的不变量*
+#### 定义引用：「等距」→ 绝妙定理　`imp.derived-isometry-curvature`
 
-绝妙定理：若 $\varphi : S_{1}\to S_{2}$ 是局部等距，则
-
-$$K_{1}(p) = K_{2}\bigl(\varphi(p)\bigr) \qquad (p \in S_{1}).$$
-
-**取逆否。** 若存在 $p$ 使 $K_{1}(p) \ne K_{2}(\varphi(p))$，则 $\varphi$ 不是局部等距 —— 于是「$K$ 取值不同」直接否掉局部等距，不必逐点比较第一基本形式。
-
-**例子。** 柱面 $K = 0$、半径 $R$ 的球面 $K = 1/R^{2}$，两者不局部等距（虽然都摆在 $\mathbb{R}^{3}$ 里、看上去都「弯」）；反过来 $K$ 相同也不够（等距的真正判据是「存在参数化使 $E,F,G$ 逐个相等」）。
-
-所以 $K$ 是定义 $\varphi$ 时**唯一**能只看一个数就否掉局部等距的量：它是局部等距的不变量，而主曲率 $k_{1},k_{2}$ 与平均曲率 $H$ 都不是。$\blacksquare$
-
-> 这条把「等距」这个定义与「曲率」这个度量量接上：等距保持 $I$（定义如此），绝妙定理再把 $K$ 说成 $I$ 的函数，两步合起来才是「$K$ 是等距不变量」。
+绝妙定理的比较对象就是「局部等距」这个定义：得先有 $\varphi$ 是局部等距，才谈得上「$K$ 在 $\varphi$ 下不变」。定理本身（$K$ 只由第一基本形式决定，因而是等距不变量）写在 `thm.theorema-egregium` 的陈述与证明里，不在这条边上 —— 这条边只登记「定理用到该定义」。
 
 #### de Rham 定理 ⟹ 零次上同调　`imp.derived-h0-from-de-rham`
 *de Rham 定理的 $k=0$ 情形：上同调数连通分支*
@@ -62273,12 +62264,18 @@ $\operatorname{Re}s > 1$ 时 $\sum n^{-s}$ **绝对收敛** —— 这是「可�
 
 主语是「Gauss 曲率为常数」。
 
-#### Gauss 引理 ⟹ 常 Gauss 曲率曲面　`dep-cgc-geo`
-*Gauss 引理给出测地极坐标的度量形式*
+#### Gauss 引理 + 结构方程 + Gauss 方程 ⟹ 常 Gauss 曲率曲面　`dep-cgc-geo`
+*Gauss 引理 + 结构方程给出测地极坐标的度量形式*
 
-在 $p$ 处取测地极坐标 $(r,\theta)$。由 Gauss 引理（推论二：极坐标展开），径向测地线与测地圆正交，故 $\partial_{r}\perp\partial_{\theta}$，度量写成 $g = \mathrm{d}r^{2} + f(r,\theta)^{2}\,\mathrm{d}\theta^{2}$。把这一形式代入 Cartan 结构方程 $\mathrm{d}\omega^{2} = K\,\omega^{1}\wedge\omega^{2}$，得 $f$ 满足 $f_{rr} + Kf = 0$；$K$ 为常数时特征根为 $\pm\sqrt{-K}$，配合测地极坐标的初值 $f(0)=0$、$f_{r}(0)=1$，解只有三角、线性、双曲三族，即三种常曲率度量形式。∎
+在 $p$ 处取测地极坐标 $(r,\theta)$。由 Gauss 引理（推论二：极坐标展开），径向测地线与测地圆正交，故 $\partial_{r}\perp\partial_{\theta}$，度量写成 $g = \mathrm{d}r^{2} + f(r,\theta)^{2}\,\mathrm{d}\theta^{2}$，即余标架 $\omega^{1} = \mathrm{d}r$、$\omega^{2} = f\,\mathrm{d}\theta$。
 
-> Gauss 引理只用在这一步：它把度量在测地极坐标下压成 $\mathrm{d}r^{2}+f^{2}\mathrm{d}\theta^{2}$，其余全是 ODE。
+**第一步（一阶，只能定联络）**：对 $\omega^{2}$ 用第一结构方程 $\mathrm{d}\omega^{2} = \omega^{2}_{\ 1}\wedge\omega^{1}$，配合挠率为零可把联络形式解成 $\omega^{1}_{\ 2}$ 的表达式。这一步只给 $f$ 的**一阶**关系，解不出三族解。
+
+**第二步（二阶，要曲率方程）**：把 $g = \mathrm{d}r^{2}+f^{2}\mathrm{d}\theta^{2}$ 代入 **Gauss 方程**（`thm.gauss-equation`，即第二结构方程在曲面上的分量）$\mathrm{d}\omega^{1}_{\ 2} = K\,\omega^{1}\wedge\omega^{2}$，两边都是 $\omega^{1}\wedge\omega^{2} = f\,\mathrm{d}r\wedge\mathrm{d}\theta$ 的倍数，比较系数得 $f_{rr} + Kf = 0$ —— 这是 $f$ 的**二阶**线性 ODE（只靠一阶的 $\mathrm{d}\omega^{2}$ 得不到它）。
+
+**第三步（解 ODE）**：$K$ 为常数时特征根为 $\pm\sqrt{-K}$，配合测地极坐标的初值 $f(0)=0$、$f_{r}(0)=1$，$f$ 只有三角（$K>0$）、线性（$K=0$）、双曲（$K<0$）三族解，代回 $g$ 即三种常曲率度量形式。∎
+
+> Gauss 引理只用在这一步：它把度量在测地极坐标下压成 $\mathrm{d}r^{2}+f^{2}\mathrm{d}\theta^{2}$。剩下的是一条二阶 ODE，来自 Gauss 方程 $\mathrm{d}\omega^{1}_{\ 2} = K\,\omega^{1}\wedge\omega^{2}$（第二结构方程），而不是一阶的 $\mathrm{d}\omega^{2}$。
 
 #### 定义引用：「第一基本形式」→ 常 Gauss 曲率曲面　`dep-cgc-form`
 
@@ -66461,11 +66458,11 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **可度量化 ↔ 分离公理**　3 条节点级连线
 - **可度量化 ↔ 仿紧与单位分解**　3 条节点级连线
 - **层上同调 ↔ 拓扑空间的基本语汇**　2 条节点级连线
-- **活动标架与结构方程 ↔ 内蕴几何**　8 条节点级连线
+- **活动标架与结构方程 ↔ 内蕴几何**　9 条节点级连线
 - **特征值与 Jordan 型 ↔ 曲面论**　2 条节点级连线
 - **矩阵与行列式 ↔ 曲面论**　2 条节点级连线
-- **活动标架与结构方程 ↔ 曲面论**　11 条节点级连线
-- **内蕴几何 ↔ 曲面论**　28 条节点级连线
+- **活动标架与结构方程 ↔ 曲面论**　12 条节点级连线
+- **内蕴几何 ↔ 曲面论**　29 条节点级连线
 - **内蕴几何 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **多元微分 ↔ 内蕴几何**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线

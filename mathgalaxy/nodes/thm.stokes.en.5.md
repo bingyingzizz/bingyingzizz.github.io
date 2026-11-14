@@ -2,10 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.stokes)　·　[Chinese page (authoritative)](./thm.stokes.md)
 
-**Why orientability is needed**: both sides depend on the orientation and change sign together, so the identity is independent of the choice of orientation; but without an orientation one cannot even write down "the integral" (`def.integral-form`).
+⚠️ **"Continuous up to the boundary" is not enough; differentiability and integrability must be stated explicitly**: for $n = 1$ and $M = [0,1]$ the theorem requires $\omega = f\,\mathrm{d}x$ to satisfy the fundamental theorem of calculus $f(1)-f(0) = \int_{0}^{1}f\,\mathrm{d}x$. But the Cantor function $f$ is continuous, $f(0)=0$, $f(1)=1$, and yet on $[0,1]$ it is differentiable almost everywhere with derivative $0$ almost everywhere (it is not even absolutely continuous) — the right-hand integral is $0$, while the left-hand side is $1$. So "$f$ continuous" does not guarantee the formula; the hypotheses here ($C^{1}$ up to the boundary plus $\mathrm{d}\omega$ integrable) reduce, for
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-
-Cite: `thm.stokes` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.stokes.en.6.md

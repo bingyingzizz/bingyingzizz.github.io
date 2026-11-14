@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=lem.ext-stonean-section)　·　[Chinese page (authoritative)](./lem.ext-stonean-section.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · lemma · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Ext Sections` (short) · `Sections of Ext on Stonean Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.ext-stonean-section.md` and `proofs/`.
+## Statement · **draft**
+Let $M, N$ be condensed abelian groups and $S$ a **Stonean space**. Write $M \cdot S := M \otimes_{\mathbb{Z}} \mathbb{Z}[S]$. Then for all $n \ge 0$
 
+$$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N)(S) \cong \operatorname{Ext}^{n}_{\mathbb{Z}}(M \cdot S,\ N).$$
 
-Cite: `lem.ext-stonean-section` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.ext-stonean-section.en.2.md

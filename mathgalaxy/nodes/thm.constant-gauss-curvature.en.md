@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.constant-gauss-curvature)　·　[Chinese page (authoritative)](./thm.constant-gauss-curvature.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 34 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.constant-gauss-curvature.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: it pushes "$K$ constant" to its limit — the answer is extremely clean: locally there are only three possibilities. This is where intrinsic geometry really shows its power (only the first fundamental form is used throughout).
 
-
-Cite: `thm.constant-gauss-curvature` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.constant-gauss-curvature.en.2.md

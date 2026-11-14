@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.tensor-right-exact)　·　[Chinese page (authoritative)](./prop.tensor-right-exact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Tensor Is Right Exact` (short) · `Right Exactness of the Tensor Functor` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.tensor-right-exact.md` and `proofs/`.
+## Statement · **draft**
+Let $R$ be a unital ring and $N$ a left $R$-module. The functor $(-) \otimes_{R} N : \mathbf{Mod}\text{-}R \to \mathbf{Ab}$ is **right exact**: every short exact sequence
 
+$$0 \longrightarrow M_{1} \xrightarrow{\;f\;} M \xrightarrow{\;g\;} M_{2} \longrightarrow 0$$
 
-Cite: `prop.tensor-right-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+gives an exact sequence
 
+> continued in nodes/prop.tensor-right-exact.en.2.md

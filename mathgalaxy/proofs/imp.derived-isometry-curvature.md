@@ -1,14 +1,6 @@
-# 绝妙定理说高斯曲率是局部等距的不变量
-`imp.derived-isometry-curvature` · 推出 · strong 边 · 根 `../`
+# imp.derived-isometry-curvature
+`imp.derived-isometry-curvature` · 定义引用 · strong 边 · 根 `../`
 
-`thm.theorema-egregium` 绝妙定理 → `def.isometry-surface` 等距
+`def.isometry-surface` 等距 → `thm.theorema-egregium` 绝妙定理
 
-绝妙定理：若 $\varphi : S_{1}\to S_{2}$ 是局部等距，则
-
-$$K_{1}(p) = K_{2}\bigl(\varphi(p)\bigr) \qquad (p \in S_{1}).$$
-
-**取逆否。** 若存在 $p$ 使 $K_{1}(p) \ne K_{2}(\varphi(p))$，则 $\varphi$ 不是局部等距 —— 于是「$K$ 取值不同」直接否掉局部等距，不必逐点比较第一基本形式。
-
-**例子。** 柱面 $K = 0$、半径 $R$ 的球面 $K = 1/R^{2}$，两者不局部等距（虽然都摆在 $\mathbb{R}^{3}$ 里、看上去都「弯」）；反过来 $K$ 相同也不够（等距的真正判据是「存在参数化使 $E,F,G$ 逐个相等」）。
-
-> 续见 proofs/imp.derived-isometry-curvature.2.md
+绝妙定理的比较对象就是「局部等距」这个定义：得先有 $\varphi$ 是局部等距，才谈得上「$K$ 在 $\varphi$ 下不变」。定理本身（$K$ 只由第一基本形式决定，因而是等距不变量）写在 `thm.theorema-egregium` 的陈述与证明里，不在这条边上 —— 这条边只登记「定理用到该定义」。

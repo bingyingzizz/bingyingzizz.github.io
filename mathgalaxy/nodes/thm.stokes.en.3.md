@@ -2,10 +2,9 @@
 English entry · root `../`
 [in graph](../#n=thm.stokes)　·　[Chinese page (authoritative)](./thm.stokes.md)
 
-For $i<n$ the components have compact support in the corresponding coordinate direction, so their integrals vanish;
+where $\partial M$ carries the **induced orientation** (outward normal first, then the orientation of $M$), and $\partial M$ is allowed to be empty (then the right-hand side is zero).
 
-only the $i = n$ component remains, and one-variable FTC integrates it to $f_{n}(x^{1},\ldots,x^{n-1},0)$ — which is precisely the integral of $\omega$ over the boundary.
-
-**List of special cases**: $n = 1$ is the fundamental theorem of calculus; $n = 2$ is Green's formula; the two faces for $n = 3$ are Gauss–Ostrogradsky (flux) and Kelvin–Stokes (circulation). They are not four theorems but one.
+## Notes · **draft**
+**Proof route**: use a partition of unity to reduce to a cube in the half-space $\mathbb{H}^{n} = \{x^{n}\le 0\}$; write $\omega$ as $\sum_{i}(-1)^{i-1}f_{i}\,\mathrm{d}x^{1}\wedge\cdots\widehat{\mathrm{d}x^{i}}\wedge\cdots\wedge\mathrm{d}x^{n}$ (a hat means that factor is omitted), so that $\mathrm{d}\omega = \sum_{i}\partial_{i}f_{i}\,\mathrm{d}x^{1}\wedge\cdots\wedge\mathrm{d}x^{n}$.
 
 > continued in nodes/thm.stokes.en.4.md

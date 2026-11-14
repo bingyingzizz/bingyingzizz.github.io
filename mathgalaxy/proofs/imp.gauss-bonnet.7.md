@@ -1,7 +1,7 @@
 # imp.gauss-bonnet
 `imp.gauss-bonnet` · 推出 · strong 边 · 根 `../`
 
-`thm.liouville-formula` Liouville 公式 + `def.geodesic-curvature` 测地曲率 + `def.gauss-curvature` Gauss 曲率 → `thm.gauss-bonnet` Gauss–Bonnet 定理
+`thm.liouville-formula` Liouville 公式 + `def.geodesic-curvature` 测地曲率 + `def.gauss-curvature` Gauss 曲率 + `thm.stokes` Stokes 定理 → `thm.gauss-bonnet` Gauss–Bonnet 定理
 
 球面 $\chi = 2$ 给出 $\int K\,\mathrm{d}A = 4\pi$（$K = 1/R^{2}$、面积 $4\pi R^{2}$，相符）；
 

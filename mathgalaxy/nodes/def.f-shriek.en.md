@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.f-shriek)　·　[Chinese page (authoritative)](./def.f-shriek.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · definition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.f-shriek.md` and `proofs/`.
+## Statement · **draft**
+In plain words: **$f_!$ is the composite of "first push into the open part, then proper pushforward along the relative space"**; its right adjoint $f^!$ is the dualizing complex functor. The name "compact support" comes from the intuition that $f_!$ remembers only the cohomology "supported on compact subsets of each fibre", just as an integral is computed only over bounded regions.
 
-
-Cite: `def.f-shriek` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.f-shriek.en.2.md

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.rearrangement)　·　[Chinese page (authoritative)](./thm.rearrangement.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.rearrangement.md` and `proofs/`.
+## Statement · **draft**
+Let $\sum a_n$ be **absolutely convergent** and let $\sigma : \mathbb{N} \to \mathbb{N}$ be any bijection. Then $\sum a_{\sigma(n)}$ is also absolutely convergent, and
 
+$$\sum_{n=1}^{\infty} a_{\sigma(n)} = \sum_{n=1}^{\infty} a_n$$
 
-Cite: `thm.rearrangement` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.rearrangement.en.2.md

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.invariant-subspace)　·　[Chinese page (authoritative)](./def.invariant-subspace.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.invariant-subspace.md` and `proofs/`.
+## Statement · **draft**
+Let $T : V \to V$ be linear. A subspace $U \subseteq V$ is called $T$-**invariant** if and only if
 
+$$T(U) \subseteq U$$
 
-Cite: `def.invariant-subspace` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, $u \in U \implies T(u) \in U$. In that case $T$ restricted to $U$ gives a linear map $T|_U : U \to U$.
 
+$\{0\}$ and $V$ are always $T$-invariant (**trivial** invariant subspaces); the kernel and image of $T$ are also $T$-invariant.
+
+> continued in nodes/def.invariant-subspace.en.2.md

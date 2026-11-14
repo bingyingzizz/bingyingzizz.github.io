@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.developable-iff-flat)　·　[Chinese page (authoritative)](./thm.developable-iff-flat.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 35 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.developable-iff-flat.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: it gives a workable criterion for whether a ruled surface is developable — a determinant identity, with no PDE to solve.
 
+Let $X(u,v) = a(u) + v\,b(u)$ be a ruled surface (`def.ruled-surface`). Then the following are equivalent:
 
-Cite: `thm.developable-iff-flat` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.developable-iff-flat.en.2.md

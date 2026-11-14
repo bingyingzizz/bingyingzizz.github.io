@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.local-extremum)　·　[Chinese page (authoritative)](./def.local-extremum.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.local-extremum.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be defined on a neighbourhood of $x_0$. Call $x_0$ a
 
+- **local maximum point** of $f$: there is $\delta > 0$ such that $|x - x_0| < \delta$ implies $f(x) \le f(x_0)$;
+- **local minimum point**: there is $\delta > 0$ such that $|x - x_0| < \delta$ implies $f(x) \ge f(x_0)$.
 
-Cite: `def.local-extremum` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.local-extremum.en.2.md

@@ -2,9 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.stokes)　·　[Chinese page (authoritative)](./thm.stokes.md)
 
-where $\partial M$ carries the **induced orientation** (outward normal first, then the orientation of $M$); $\partial M$ is allowed to be empty (then the right-hand side is zero).
+Let $M$ be a compact, oriented smooth $n$-manifold with boundary, and let $\omega$ be a form on $M$ of degree $(n-1)$. Require $\omega$ to be smooth up to the boundary $\partial M$ and $\mathrm{d}\omega$ to be integrable on $M$ (since $\partial M$ is a null set, it is enough that $\mathrm{d}\omega$ be integrable on the interior). More generally, it suffices that $\omega$ be $C^{1}$ in the interior, that $\mathrm{d}\omega$ be integrable, and that $\omega$ have a continuous trace on $\partial M$. Then
 
-## Notes · **draft**
-**Proof route**: use a partition of unity to reduce to a cube in the half-space $\mathbb{H}^{n} = \{x^{n}\le 0\}$; write $\omega$ as $\sum_{i}(-1)^{i-1}f_{i}\,\mathrm{d}x^{1}\wedge\cdots\widehat{\mathrm{d}x^{i}}\wedge\cdots\wedge\mathrm{d}x^{n}$ (a hat means that factor is omitted), so that $\mathrm{d}\omega = \sum_{i}\partial_{i}f_{i}\,\mathrm{d}x^{1}\wedge\cdots\wedge\mathrm{d}x^{n}$.
+$$\int_{M}\mathrm{d}\omega = \int_{\partial M}\omega ,$$
 
 > continued in nodes/thm.stokes.en.3.md

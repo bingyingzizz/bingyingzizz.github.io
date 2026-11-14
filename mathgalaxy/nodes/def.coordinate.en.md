@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.coordinate)　·　[Chinese page (authoritative)](./def.coordinate.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.coordinate.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{B} = (v_1, \ldots, v_n)$ be an **ordered** basis of $V$ (the order is part of the data). By the definition of a basis, every $v \in V$ can be written **uniquely** as
 
+$$v = c_1 v_1 + \cdots + c_n v_n, \qquad c_i \in K$$
 
-Cite: `def.coordinate` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Arrange the coefficients into a column
 
+$$[v]_{\mathcal{B}} := \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \in K^{n}$$
+
+> continued in nodes/def.coordinate.en.2.md

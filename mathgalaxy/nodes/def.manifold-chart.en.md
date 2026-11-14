@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.manifold-chart)　·　[Chinese page (authoritative)](./def.manifold-chart.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Chart` (short) · `Chart and Transition Maps` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.manifold-chart.md` and `proofs/`.
+## Statement · **draft**
+**What it says**: a manifold has no built-in coordinates, so coordinates must be issued chart by chart — a chart is a piece of ground plus a coordinate sign, and changing signs has to be smooth.
 
+Let $M$ be a topological space and $n \ge 0$.
 
-Cite: `def.manifold-chart` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.manifold-chart.en.2.md

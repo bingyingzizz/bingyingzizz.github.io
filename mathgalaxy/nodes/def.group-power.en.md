@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.group-power)　·　[Chinese page (authoritative)](./def.group-power.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.group-power.md` and `proofs/`.
+## Statement · **draft**
+Let $G$ be a group, $x \in G$, and $e$ the identity. The **integer powers** $x^{n}$ ($n \in \mathbb{Z}$) are defined by
 
+$$x^{0} := e, \qquad x^{n+1} := x^{n} x \ (n \ge 0), \qquad x^{-n} := (x^{-1})^{n} \ (n \ge 1)$$
 
-Cite: `def.group-power` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+equivalently $x^{-n} = (x^{n})^{-1}$.
 
+> continued in nodes/def.group-power.en.2.md

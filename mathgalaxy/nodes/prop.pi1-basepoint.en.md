@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.pi1-basepoint)　·　[Chinese page (authoritative)](./prop.pi1-basepoint.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.pi1-basepoint.md` and `proofs/`.
+## Statement · **draft**
+Let $\gamma : [0, 1] \to X$ be a path from $x_{0}$ to $x_{1}$, and let $\bar{\gamma}$ be the reverse path. Define
 
+$$\Pi_{\gamma} : \pi_{1}(X, x_{0}) \longrightarrow \pi_{1}(X, x_{1}),$$
+$$\Pi_{\gamma}([\alpha]) := [\bar{\gamma} * \alpha * \gamma].$$
 
-Cite: `prop.pi1-basepoint` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Then $\Pi_{\gamma}$ is a **group isomorphism**, and $\Pi_{\bar{\gamma}} = \Pi_{\gamma}^{-1}$.
 
+> continued in nodes/prop.pi1-basepoint.en.2.md
