@@ -9,6 +9,8 @@
 
 - 初等变换与初等矩阵 → def.elementary-matrix
 
+- 相抵矩阵 | 等价矩阵 | 相抵 | 矩阵相抵 | equivalence of matrices → def.equivalent-matrices
+
 - 可逆矩阵 → def.invertible-matrix
 
 - 交错型 → def.alternating-form
@@ -38,11 +40,5 @@
 - 双线性型 → def.bilinear-form
 
 - 向量空间的张量积 → def.tensor-product-vs
-
-- 外幂 → def.exterior-power
-
-- 对称代数 → def.symmetric-algebra
-
-- 置换群与对称群 → def.permutation-group
 
 > 续见 alias/aka/algebra.8.md

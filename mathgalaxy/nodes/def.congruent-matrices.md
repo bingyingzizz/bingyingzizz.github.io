@@ -12,9 +12,9 @@ $$B = P^{T} A\, P .$$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理 用
+- ～弱边 [`def.equivalent-matrices`](../nodes/def.equivalent-matrices.md) 相抵矩阵（等价矩阵）
 
-- …另有出边，续页见 [nodes/def.congruent-matrices.4.md](./def.congruent-matrices.4.md)
+- …另有出边，续页见 [nodes/def.congruent-matrices.5.md](./def.congruent-matrices.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.congruent-matrices.3.md](./def.congruent-matrices.3.md)

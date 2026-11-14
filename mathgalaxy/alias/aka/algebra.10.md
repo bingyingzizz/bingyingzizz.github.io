@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 迷向子空间 → def.isotropic-subspace
+
+- 双曲平面 → def.hyperbolic-plane
+
+- 惯性指数 → def.inertia-index
+
 - 惯性定理 | 西尔维斯特惯性律 | 惯性律 → thm.sylvester-law-inertia
 
 - 特征子空间 → def.eigenspace
@@ -34,7 +40,5 @@
 - 伽罗瓦群 | Galois 群 | F-自同构 → def.galois-group
 
 - 伽罗瓦扩张 | Galois 扩张 → def.galois-extension
-
-- 伽罗瓦基本定理 | 伽罗瓦对应 | 基本定理（Galois） → thm.galois-correspondence
 
 > 续见 alias/aka/algebra.11.md

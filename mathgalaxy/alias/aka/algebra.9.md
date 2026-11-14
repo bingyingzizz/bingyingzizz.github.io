@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 埃尔米特矩阵 | 厄米矩阵 → def.hermitian-matrix
+
+- 舒尔三角化 → thm.schur-triangularization
+
+- 瑞利商 → def.rayleigh-quotient
+
 - 库朗–费舍尔极小极大原理 → thm.courant-fischer
 
 - 格拉姆矩阵 → def.gram-matrix
@@ -34,11 +40,5 @@
 - 合同矩阵 → def.congruent-matrices
 
 - 迷向向量 → def.isotropic-vector
-
-- 迷向子空间 → def.isotropic-subspace
-
-- 双曲平面 → def.hyperbolic-plane
-
-- 惯性指数 → def.inertia-index
 
 > 续见 alias/aka/algebra.10.md

@@ -12,7 +12,7 @@ $P$ 叫**过渡矩阵**。相似的**等价**说法：$A$ 与 $B$ 是同一个�
 相似的不变量：秩、迹、行列式、特征多项式（从而特征值与它们的代数重数）、极小多项式。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`thm.change-of-basis`](../nodes/thm.change-of-basis.md) 基变换与相似：用到了定义 基变换与相似　[proofs/dep.changeofbasis-similarity.md](../proofs/dep.changeofbasis-similarity.md)
+- [`def.equivalent-matrices`](../nodes/def.equivalent-matrices.md) 相抵矩阵（等价矩阵）：ana.equivmat-similarity　[proofs/ana.equivmat-similarity.md](../proofs/ana.equivmat-similarity.md)
 
 - …另有入边，续页见 [nodes/def.similarity.2.md](./def.similarity.2.md)
 

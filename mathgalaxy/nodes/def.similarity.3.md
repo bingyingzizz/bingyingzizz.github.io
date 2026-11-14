@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.similarity)　·　第 1 页 [nodes/def.similarity.md](./def.similarity.md)　·　上一页 [nodes/def.similarity.2.md](./def.similarity.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ～弱边 [`def.equivalent-matrices`](../nodes/def.equivalent-matrices.md) 相抵矩阵（等价矩阵）
 - ⇒ [`cor.jordan-uniqueness`](../nodes/cor.jordan-uniqueness.md) Jordan 型的唯一性
 - 被 [`def.orthogonally-similar`](../nodes/def.orthogonally-similar.md) 正交相似 用
 - 被 [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形 用

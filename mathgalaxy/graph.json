@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-13T14:29:45.369Z",
+  "generated": "2026-11-14T05:13:05.468Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1636,
-   "edges": 3438,
-   "strong": 3361,
-   "weak": 77,
+   "nodes": 1637,
+   "edges": 3443,
+   "strong": 3364,
+   "weak": 79,
    "derived": 64,
-   "en_pages": 1636
+   "en_pages": 1637
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 218
+   "nodeCount": 219
   },
   {
    "id": "analysis",
@@ -519,7 +519,7 @@
    "en": "Matrices and Determinants",
    "parent": "algebra",
    "desc": "造出「把线性映射写成数字阵列」的整套工具：矩阵 → 选定基后的线性映射 ⟷ 矩阵 → 基变换与相似 → 初等变换与秩 → 线性方程组的解结构 → **行列式**（交错多重线性的唯一刻画）→ 乘性 → Laplace 展开与 Cramer 法则。",
-   "nodeCount": 16,
+   "nodeCount": 17,
    "nodes": [
     "def.matrix",
     "def.matrix-operations",
@@ -527,6 +527,7 @@
     "thm.matrix-linear-map",
     "thm.change-of-basis",
     "def.elementary-matrix",
+    "def.equivalent-matrices",
     "thm.rank-row-col",
     "thm.linear-system-solutions",
     "def.invertible-matrix",
@@ -41805,6 +41806,47 @@
    "notes": "⭐ 「左乘 = 行变换」这条对应关系把**操作**变成了**对象**：于是「用消元法解方程组」就是「在左边乘一串初等矩阵」，可以写成等式 $E_k \\cdots E_1 A = R$（$R$ 是行简化阶梯形）。\n\n⭐ 最重要的一条推论：$A$ **可逆当且仅当它是有限多个初等矩阵之积**（消元法把 $A$ 化成 $I_n$，把这一串操作记录下来就是 $A^{-1}$ 的显式分解）。\n\n这也是「算逆矩阵」那套 $[A \\mid I] \\to [I \\mid A^{-1}]$ 手法的道理。\n\n⚠ 初等**列**变换对应的是**右乘**。\n\n行列混着做就成了等价变换（$A \\mapsto PAQ$），它保持秩但不保持相似。",
    "refs": [
     "Hoffman–Kunze, Linear Algebra, Ch. 1"
+   ]
+  },
+  {
+   "id": "def.equivalent-matrices",
+   "type": "definition",
+   "label": "相抵矩阵（等价矩阵）",
+   "title": "相抵：$B = PAQ$",
+   "label_en": "Equivalent matrices",
+   "title_en": "Equivalent matrices",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/def.equivalent-matrices.en.md",
+   "en_html": false,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.matrix",
+   "layer": 15,
+   "tags": [
+    "定义",
+    "线性代数"
+   ],
+   "statement": "设 $A, B \\in M_{m \\times n}(K)$。若存在可逆矩阵 $P \\in GL_m(K)$ 与 $Q \\in GL_n(K)$ 使\n\n$$B = P A Q,$$\n\n则称 $A$ 与 $B$ **相抵**（也叫**等价**）。这等价于：$A$ 能经过有限次初等行变换与初等列变换化成 $B$。\n\n相抵是 $M_{m \\times n}(K)$ 上的**等价关系**，而且允许 $m \\ne n$。在域 $K$ 上，相抵类由秩完全分类：每个 $A$ 都相抵于唯一的标准形\n\n$$\\operatorname{diag}(I_r, 0), \\qquad r = \\operatorname{rank} A.$$\n\n相抵比**相似**（$B = P^{-1} A P$）与**合同**（$B = P^{T} A P$）都弱：后两者只对同阶方阵陈述，且各自保留更多不变量。",
+   "notes": "⭐ **相抵只记得秩**：左乘换行空间的基、右乘换列空间的基，行与列可各自消元。\n\n⭐ 标准形：初等行变换化行简化阶梯形，再用初等列变换把主元列化为单位向量、其余列消零，得 $\\operatorname{diag}(I_r,0)$。每一步都是左乘或右乘初等矩阵；把这些初等矩阵乘起来就得到 $P,Q$。\n\n⚠ 相似、合同都是相抵的特例（同阶方阵；取 $Q=P^{-1}$ 或 $Q=P^{T}$），但互不包含。\n\n⚠ 在 $\\mathbb{Z}$ 上改由 Smith 标准形分类。",
+   "refs": [
+    "Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 0",
+    "Hoffman–Kunze, Linear Algebra, Ch. 4"
    ]
   },
   {
@@ -85899,6 +85941,48 @@
    "note": "「可逆」这个词要用乘法来陈述（$AB = BA = I_n$），所以先要有乘法。"
   },
   {
+   "id": "dep.equivmat-elementary",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.elementary-matrix",
+   "usedBy": "def.equivalent-matrices",
+   "note": "相抵的第二种说法「有限次初等行/列变换」用的就是初等矩阵：左乘管行、右乘管列。"
+  },
+  {
+   "id": "dep.equivmat-invertible",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.invertible-matrix",
+   "usedBy": "def.equivalent-matrices",
+   "note": "$P,Q$ 必须是可逆矩阵（$P \\in GL_m(K)$、$Q \\in GL_n(K)$），所以定义直接用到可逆矩阵与一般线性群。"
+  },
+  {
+   "id": "dep.equivmat-rank",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.rank",
+   "usedBy": "def.equivalent-matrices",
+   "note": "域上相抵类的完全不变量是秩；标准形写成 $\\operatorname{diag}(I_r,0)$，其中 $r=\\operatorname{rank}A$。"
+  },
+  {
+   "id": "ana.equivmat-similarity",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.equivalent-matrices",
+   "b": "def.similarity",
+   "title": "",
+   "note": "比较：相似 $B=P^{-1}AP$ 是相抵 $B=PAQ$ 取 $Q=P^{-1}$ 的特例，只对同阶方阵；相似保特征值，相抵只保秩。"
+  },
+  {
+   "id": "ana.equivmat-congruent",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.equivalent-matrices",
+   "b": "def.congruent-matrices",
+   "title": "",
+   "note": "比较：合同 $B=P^{T}AP$ 是相抵取 $Q=P^{T}$ 的特例，也只对同阶方阵；合同保对称型的惯性指数，相抵只保秩。"
+  },
+  {
    "id": "dep.multilinear-alternating",
    "kind": "definition",
    "strength": "strong",
@@ -110553,7 +110637,21 @@
   {
    "a": "algebra.linmap",
    "b": "algebra.matrix",
-   "count": 6,
+   "count": 7,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.matrix",
+   "b": "algebra.spectral",
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.matrix",
+   "b": "algebra.multilinear",
+   "count": 11,
    "label": "",
    "explicit": false
   },
@@ -110566,13 +110664,6 @@
   },
   {
    "a": "algebra.linmap",
-   "b": "algebra.spectral",
-   "count": 4,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "algebra.matrix",
    "b": "algebra.spectral",
    "count": 4,
    "label": "",
@@ -110596,13 +110687,6 @@
    "a": "algebra.inner",
    "b": "algebra.multilinear",
    "count": 16,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "algebra.matrix",
-   "b": "algebra.multilinear",
-   "count": 10,
    "label": "",
    "explicit": false
   },

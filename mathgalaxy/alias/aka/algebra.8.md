@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 外幂 → def.exterior-power
+
+- 对称代数 → def.symmetric-algebra
+
+- 置换群与对称群 → def.permutation-group
+
 - 符号与交错群 → def.alternating-group
 
 - 循环群 → def.cyclic-group
@@ -32,11 +38,5 @@
 - 埃塔勒层 | 平展层 → def.etale-sheaf
 
 - 埃塔勒层的例子 → prop.etale-sheaf-examples
-
-- 埃尔米特矩阵 | 厄米矩阵 → def.hermitian-matrix
-
-- 舒尔三角化 → thm.schur-triangularization
-
-- 瑞利商 → def.rayleigh-quotient
 
 > 续见 alias/aka/algebra.9.md

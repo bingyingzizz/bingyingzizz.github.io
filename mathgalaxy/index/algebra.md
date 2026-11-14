@@ -10,6 +10,6 @@
 - algebra.multilinear　多重线性与张量 / Multilinear Algebra and Tensors　中心天体 def.exterior-algebra　25 点
 - algebra.group-action　群作用与置换 / Group Actions and Permutations　中心天体 def.group-action　9 点
 - algebra.solvable　合成列与可解群 / Composition Series and Solvable Groups　中心天体 thm.jordan-holder　6 点
-- algebra.matrix　矩阵与行列式 / Matrices and Determinants　中心天体 def.determinant　16 点
+- algebra.matrix　矩阵与行列式 / Matrices and Determinants　中心天体 def.determinant　17 点
 
 > 续见 `index/algebra.2.md`

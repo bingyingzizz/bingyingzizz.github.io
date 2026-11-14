@@ -14,8 +14,7 @@ $$\operatorname{GL}_n(K) := \{\, A \in M_n(K) : A \text{ is invertible} \,\}$$
 叫**一般线性群**。
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.cramer`](../nodes/thm.cramer.md) Cramer 法则
-- 被 [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵 用
+- 被 [`def.equivalent-matrices`](../nodes/def.equivalent-matrices.md) 相抵矩阵（等价矩阵） 用
 
 - …另有出边，续页见 [nodes/def.invertible-matrix.3.md](./def.invertible-matrix.3.md)
 
