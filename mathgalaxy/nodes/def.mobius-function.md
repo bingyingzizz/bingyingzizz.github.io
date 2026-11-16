@@ -1,6 +1,6 @@
 # Möbius 函数　`def.mobius-function`
 Möbius 函数 $\mu$：按素因子个数取符号
-layer 0 · 定义 · 数论函数与素数分布 · 数论
+layer 14 · 定义 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=def.mobius-function)　·　[节点索引](../index.md)
 
 定义
@@ -11,9 +11,11 @@ $\mu : \mathbb{N} \to \mathbb{Z}$ 按 $n$ 的素因子结构定义：
 - $n$ 是 $r$ 个**互不相同**素数之积（$n = p_{1}p_{2}\cdots p_{r}$）时 $\mu(n) = (-1)^{r}$；
 - $n$ **含平方因子**（存在素数 $p$ 使 $p^{2} \mid n$）时 $\mu(n) = 0$。
 
+## 为什么成立（入边，证明在 proofs/）
+- [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数：用到了定义 积性函数　[proofs/dep.mobius-multiplicative.md](../proofs/dep.mobius-multiplicative.md)
+
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式 用
-- ⇒ [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式
+- …另有出边，续页见 [nodes/def.mobius-function.2.md](./def.mobius-function.2.md)
 
 refs: 华罗庚《数论导引》第三章；Apostol, Ch. 2
 

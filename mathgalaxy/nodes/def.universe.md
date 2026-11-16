@@ -1,6 +1,6 @@
 # Grothendieck 宇宙　`def.universe`
 Grothendieck 宇宙
-layer 4 · 定义 · 范畴与图 · 范畴论
+layer 7 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.universe)　·　[节点索引](../index.md)
 
 一个集合 $U$ 叫**宇宙**，如果它对集合论的基本构造封闭：

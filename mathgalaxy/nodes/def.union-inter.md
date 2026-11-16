@@ -1,6 +1,6 @@
 # 并集与交集　`def.union-inter`
 并集 / 交集
-layer 2 · 定义 · 集合的构造 · 集合论
+layer 6 · 定义 · 集合的构造 · 集合论
 [在星图里打开](../#n=def.union-inter)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是一族集合（**取交时要求 $\mathcal{A} \ne \emptyset$**：$\bigcap\emptyset$ 会是「全体集合」的类而不成集合；$A$ 的**并**与**交**是它只有两个成员时的特例）：

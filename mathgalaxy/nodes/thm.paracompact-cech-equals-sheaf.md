@@ -1,6 +1,6 @@
 # 仿紧空间上的 Čech 就是上同调　`thm.paracompact-cech-equals-sheaf`
 仿紧 Hausdorff：Čech 上同调等于层上同调
-layer 20 · 定理 · 层上同调 · 同调代数+拓扑学
+layer 22 · 定理 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=thm.paracompact-cech-equals-sheaf)　·　[节点索引](../index.md)
 
 设 $X$ 是**仿紧 Hausdorff** 空间（仿紧性的定义

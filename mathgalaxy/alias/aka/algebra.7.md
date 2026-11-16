@@ -11,6 +11,14 @@
 
 - 相抵矩阵 | 等价矩阵 | 相抵 | 矩阵相抵 | equivalence of matrices → def.equivalent-matrices
 
+- 行空间 | 行秩 | row rank → def.row-space
+
+- 列空间 | 列秩 | column rank | 像空间 → def.column-space
+
+- 行阶梯形 | 行简化阶梯形 | RREF | reduced row echelon form | 主元 → def.row-echelon-form
+
+- Smith 标准形 | smith标准形 | Smith normal form | 不变因子标准形 → thm.smith-normal-form
+
 - 可逆矩阵 → def.invertible-matrix
 
 - 交错型 → def.alternating-form
@@ -24,21 +32,5 @@
 - 不变子空间 → def.invariant-subspace
 
 - 特征值与特征向量 | 几何重数 | 特征值 → def.eigenvalue
-
-- 内积 | ⟨u,v⟩ | 内积 ⟨,⟩ → def.inner-product
-
-- 正交 → def.orthogonality
-
-- 正交补 → def.orthogonal-complement
-
-- 伴随算子 → def.operator-adjoint
-
-- 等距与正交变换 → def.isometry
-
-- 二次型 → def.quadratic-form
-
-- 双线性型 → def.bilinear-form
-
-- 向量空间的张量积 → def.tensor-product-vs
 
 > 续见 alias/aka/algebra.8.md

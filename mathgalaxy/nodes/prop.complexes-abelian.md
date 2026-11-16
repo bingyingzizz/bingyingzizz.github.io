@@ -1,6 +1,6 @@
 # 复形范畴是阿贝尔范畴　`prop.complexes-abelian`
 命题：$\mathcal{A}$ 阿贝尔 $\implies \mathcal{C}(\mathcal{A})$ 阿贝尔
-layer 17 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.complexes-abelian)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是**阿贝尔范畴**。

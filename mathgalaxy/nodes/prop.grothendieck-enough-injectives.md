@@ -1,6 +1,6 @@
 # Grothendieck 范畴有足够多内射　`prop.grothendieck-enough-injectives`
 Grothendieck 范畴有足够多的内射对象
-layer 19 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 20 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.grothendieck-enough-injectives)　·　[节点索引](../index.md)
 
 任意 **Grothendieck 范畴**（即带生成元的 AB5 范畴）都有**足够多的内射对象**：

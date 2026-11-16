@@ -14,7 +14,7 @@ layer 12 · 定义 · 向量空间与基 · 抽象代数
 子空间之间的**包含关系**按集合包含定义，任意多个子空间的**交**仍是子空间（加法与数乘逐条验证即可）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.subspace-criterion`](../nodes/prop.subspace-criterion.md) 子空间判据 用
+- 被 [`def.jordan-curve`](../nodes/def.jordan-curve.md) Jordan 曲线 用
 
 - …另有出边，续页见 [nodes/def.subspace.3.md](./def.subspace.3.md)
 

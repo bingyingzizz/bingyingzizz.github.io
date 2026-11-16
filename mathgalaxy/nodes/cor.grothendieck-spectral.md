@@ -1,6 +1,6 @@
 # Grothendieck 谱序列　`cor.grothendieck-spectral`
 Grothendieck 谱序列
-layer 17 · 推论 · 过滤与谱序列 · 同调代数
+layer 20 · 推论 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=cor.grothendieck-spectral)　·　[节点索引](../index.md)
 
 设 $\mathcal{A} \xrightarrow{F} \mathcal{A}' \xrightarrow{G} \mathcal{A}''$ 是**左正合**加法函子，$\mathcal{A}, \mathcal{A}'$ **有足够多内射**、且 $F$ 把内射对象送到 $G$-零调对象。则存在谱序列（⚠️ 左正合不能省：$F = \operatorname{Hom}(\mathbb{Z}/2, -)$、$G = -\otimes \mathbb{Z}/2$ 时 $G$ 把内射全杀掉，$E_{2}$ 全零，而 $GF \cong F$ 给 $R^{0}(GF)(\mathbb{Z}/2)

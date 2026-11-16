@@ -4,3 +4,7 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.ideal-basic`](../nodes/prop.ideal-basic.md) 理想的运算与商环泛性质 + [`def.ideal`](../nodes/def.ideal.md) 理想：商环 + 理想对应 $\implies$ 素 / 极大理想的刻画　[proofs/imp.prime-ideal.md](../proofs/imp.prime-ideal.md)
 - [`lem.zorn`](../nodes/lem.zorn.md) Zorn 引理：Zorn 引理：每个真理想都含在极大理想里　[proofs/imp.zorn-maximal-ideal.md](../proofs/imp.zorn-maximal-ideal.md)
+- [`def.quotient-ring`](../nodes/def.quotient-ring.md) 商环：用到了定义 商环　[proofs/dep.quotient-prime.md](../proofs/dep.quotient-prime.md)
+- [`def.prime-ideal`](../nodes/def.prime-ideal.md) 素理想：用到了定义 素理想　[proofs/dep.prop-prime.md](../proofs/dep.prop-prime.md)
+
+> 续见 [nodes/prop.prime-ideal.3.md](./prop.prime-ideal.3.md)

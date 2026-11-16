@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/e121.definition.md](../proofs/e121.definition.md)
+- [`def.euler-phi`](../nodes/def.euler-phi.md) Euler 函数：$\varphi(n)$ 与单位群的阶　[proofs/e123.definition.md](../proofs/e123.definition.md)
 
 > 续见 [nodes/def.zmodn.3.md](./def.zmodn.3.md)

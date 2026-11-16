@@ -15,6 +15,8 @@ layer 8 · 定义 · 代数结构 · 抽象代数
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/def-dep.ring-group.md](../proofs/def-dep.ring-group.md)
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.ring-hom`](../nodes/def.ring-hom.md) 环同态 用
+
 - …另有出边，续页见 [nodes/def.ring.2.md](./def.ring.2.md)
 
 refs: Lang, Algebra, Ch. II；Dummit & Foote, Abstract Algebra, §7.1

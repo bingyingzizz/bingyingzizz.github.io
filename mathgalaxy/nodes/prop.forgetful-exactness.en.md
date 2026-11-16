@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.forgetful-exactness)　·　[Chinese page (authoritative)](./prop.forgetful-exactness.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.forgetful-exactness.md` and `proofs/`.
+## Statement · **draft**
+Algebraic forgetful functors **preserve limits but not colimits**; the inclusion $\widetilde{\mathcal{C}} \hookrightarrow \widehat{\mathcal{C}}$ preserves limits but not colimits, while its left adjoint (**sheafification**) is **exact**.
 
-
-Cite: `prop.forgetful-exactness` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.forgetful-exactness.en.2.md

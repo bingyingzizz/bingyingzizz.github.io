@@ -7,10 +7,10 @@ English entry · root `../`
 layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
-Let $A$ be a ring. A subset $I \subseteq A$ is called a **(two-sided) ideal** if $(I, +)$ is an additive subgroup and, for all $a \in A$ and $x \in I$,
+Let $A$ be a ring. A subset $I \subseteq A$ is a **(two-sided) ideal** if $(I, +)$ is an additive subgroup and, for all $a \in A$ and $x \in I$,
 
 $$a x \in I, \qquad x a \in I.$$
 
-(Requiring only $a x \in I$ gives a **left ideal**, and only $x a \in I$ a **right ideal**; in a commutative ring the three notions coincide.)
+(An ideal requiring only $a x \in I$ is a **left ideal**, and one requiring only $x a \in I$ is a **right ideal**; for a commutative ring the three notions agree.)
 
 > continued in nodes/def.ideal.en.2.md

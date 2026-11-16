@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · lemma · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 14 · lemma · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.polygon-diagonal.md` and `proofs/`.

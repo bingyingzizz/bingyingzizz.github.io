@@ -8,8 +8,8 @@
 - **9 团 / 32 节点** `def.measure` 测度 · layer 15 · 测度的构造
 - **9 团 / 22 节点** `def.functor` 函子 · layer 8 · 函子与自然变换
 - **9 团 / 18 节点** `def.inner-product` 内积 · layer 14 · 内积空间与正交性
-- **8 团 / 21 节点** `def.chaus` 紧 Hausdorff 空间范畴 · layer 17 · 紧 Hausdorff 空间
+- **9 团 / 15 节点** `def.linear-map` 线性映射 · layer 12 · 线性映射与秩
 
-（共 1025 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1048 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

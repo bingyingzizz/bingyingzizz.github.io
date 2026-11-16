@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 12 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement · **draft**
 Let $a, n \ge 1$ with $\gcd(a, n) = 1$. Then

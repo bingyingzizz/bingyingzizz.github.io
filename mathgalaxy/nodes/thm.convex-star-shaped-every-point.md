@@ -1,6 +1,6 @@
 # 凸集在每一点处星形　`thm.convex-star-shaped-every-point`
 凸集在其每一点处都是星形集
-layer 12 · 定理 · Hilbert 空间 · 泛函分析
+layer 13 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.convex-star-shaped-every-point)　·　[节点索引](../index.md)
 
 设 $V$ 是实向量空间，$C \subseteq V$ 是凸集。则对每个 $x_{0} \in C$，$C$ 关于 $x_{0}$ 星形。

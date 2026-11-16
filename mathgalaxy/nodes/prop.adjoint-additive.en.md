@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 15 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Adjoints Are Additive` (short) · `Adjoints between Additive Categories Are Additive` (full)
 
 ## Statement and proof

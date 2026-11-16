@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
+layer 13 · definition · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.discrete-log.md` and `proofs/`.

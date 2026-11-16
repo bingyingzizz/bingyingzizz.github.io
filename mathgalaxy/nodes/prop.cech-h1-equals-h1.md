@@ -1,6 +1,6 @@
 # 一次 Čech 就是一次上同调　`prop.cech-h1-equals-h1`
 命题：$\check{H}^{1}(X, M) \cong H^{1}(X, M)$
-layer 20 · 命题 · 层上同调 · 同调代数
+layer 22 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.cech-h1-equals-h1)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是有纤维积的景、$X \in \mathcal{C}$、$M$ 是阿贝尔层。则

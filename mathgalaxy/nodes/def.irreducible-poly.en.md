@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 13 · definition · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.irreducible-poly.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 22 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement · **draft**
 Let $A$ be a finitely generated $\mathbb{Z}$-algebra and $f : \operatorname{Spec} A \to \operatorname{Spec} \mathbb{Z}$ the structure map (projecting the spectrum of the coefficient ring down). Define

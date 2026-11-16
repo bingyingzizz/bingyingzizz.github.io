@@ -1,6 +1,6 @@
 # 蛇引理　`thm.snake-lemma`
 蛇引理
-layer 17 · 引理 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 引理 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=thm.snake-lemma)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，下面这张交换图的两行都正合：

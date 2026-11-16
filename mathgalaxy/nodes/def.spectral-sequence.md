@@ -1,6 +1,6 @@
 # 谱序列　`def.spectral-sequence`
 谱序列
-layer 16 · 定义 · 过滤与谱序列 · 同调代数
+layer 19 · 定义 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=def.spectral-sequence)　·　[节点索引](../index.md)
 
 **谱序列**由两部分组成：

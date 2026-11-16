@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
+layer 12 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
 ## Statement · **draft**
 Let a finite group $G$ act on a set $X$, and let $x \in X$. Then $\operatorname{Stab}(x) \le G$ and

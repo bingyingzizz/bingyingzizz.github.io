@@ -1,6 +1,6 @@
 # 预阿贝尔范畴　`def.pre-abelian-category`
 预阿贝尔范畴
-layer 15 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 16 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.pre-abelian-category)　·　[节点索引](../index.md)
 
 **预阿贝尔范畴**是每个态射都有**核**与**余核**的加法范畴（核与余核的定义见 `def.kernel-cokernel`）。

@@ -1,6 +1,6 @@
 # 理想的运算与商环泛性质　`prop.ideal-basic`
 命题：理想的交、和、积与商环的泛性质
-layer 11 · 命题 · 代数结构 · 抽象代数
+layer 12 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.ideal-basic)　·　[节点索引](../index.md)
 
 设 $A$ 是环，$I, J \subseteq A$ 是理想。则：

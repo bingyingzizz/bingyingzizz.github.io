@@ -1,9 +1,9 @@
 # Weierstrass 收敛性定理　`thm.weierstrass-convergence`
 Weierstrass 收敛性定理：内闭一致收敛的全纯列，极限全纯且导数也收敛
-layer 0 · 定理 · Cauchy 理论 · 复变函数
+layer 21 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.weierstrass-convergence)　·　[节点索引](../index.md)
 
-设 $f_{k}$ 在区域
+设 $f_{k}$ 在区
 > 陈述续见 [nodes/thm.weierstrass-convergence.2.md](./thm.weierstrass-convergence.2.md)
 
 

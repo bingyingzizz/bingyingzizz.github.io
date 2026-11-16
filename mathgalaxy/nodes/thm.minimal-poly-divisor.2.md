@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.cayley-hamilton`](../nodes/thm.cayley-hamilton.md) Cayley–Hamilton 定理 + [`def.minimal-poly`](../nodes/def.minimal-poly.md) 极小多项式：Cayley–Hamilton $\implies \mu_T \mid \chi_T$ 且同根　[proofs/imp.minimal-poly-divisor.md](../proofs/imp.minimal-poly-divisor.md)
+- [`def.algebraic-closure`](../nodes/def.algebraic-closure.md) 代数闭包：用到了定义 代数闭包　[proofs/dep.minpoly-algebraicclosure.md](../proofs/dep.minpoly-algebraicclosure.md)

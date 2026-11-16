@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 18 · proposition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement · **draft**
 Let $\mathcal{A}$ be an abelian category and $I \in \mathcal{A}$. The following are equivalent:

@@ -3,3 +3,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bingyingzizz.github.io/sitemap.xml
+Sitemap: https://bingyingzizz.github.io/mathgalaxy/sitemap.xml

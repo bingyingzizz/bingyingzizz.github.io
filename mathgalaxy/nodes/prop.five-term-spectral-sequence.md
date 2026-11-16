@@ -1,6 +1,6 @@
 # 谱序列的五项正合列　`prop.five-term-spectral-sequence`
 命题：$0 \to E^{1,0}_{2} \to H^{1} \to E^{0,1}_{2} \xrightarrow{d_{2}} E^{2,0}_{2} \to H^{2}$
-layer 18 · 命题 · 过滤与谱序列 · 同调代数
+layer 21 · 命题 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=prop.five-term-spectral-sequence)　·　[节点索引](../index.md)
 
 第一象限谱序列 $E^{p,q}_{2} \implies H^{p+q}$ 给出**五项正合列**

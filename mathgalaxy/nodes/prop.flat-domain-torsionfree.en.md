@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 16 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flat Implies Torsion-Free` (short) · `Flatness and Torsion-Freeness over a Domain` (full)
 
 ## Statement · **draft**

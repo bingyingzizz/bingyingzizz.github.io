@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.exterior-derivative`](../nodes/def.exterior-derivative.md) 外微分（欧氏开集）：用到了定义 外微分（欧氏开集）　[proofs/dep.tu-d-pullback.md](../proofs/dep.tu-d-pullback.md)
+- [`def.smooth-map`](../nodes/def.smooth-map.md) 光滑映射：用到了定义 光滑映射　[proofs/dep.pullback-smoothmap.md](../proofs/dep.pullback-smoothmap.md)
 
 > 续见 [nodes/prop.pullback-forms.6.md](./prop.pullback-forms.6.md)

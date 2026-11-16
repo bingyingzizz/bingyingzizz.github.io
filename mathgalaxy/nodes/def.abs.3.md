@@ -11,3 +11,5 @@
 - 被 [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数 用
 - 被 [`def.essential-sup`](../nodes/def.essential-sup.md) 本性上界与 L^∞ 用
 - 被 [`def.bounded-variation`](../nodes/def.bounded-variation.md) 有界变差函数 用
+
+> 续见 [nodes/def.abs.4.md](./def.abs.4.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 21 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.simply-connected-basepoint.md` and `proofs/`.

@@ -6,7 +6,10 @@
 - ⇒ [`prop.free-flat`](../nodes/prop.free-flat.md) 自由模平坦
 - ⇒ [`prop.flat-domain-torsionfree`](../nodes/prop.flat-domain-torsionfree.md) 平坦模无挠
 - 被 [`ex.flat-not-projective`](../nodes/ex.flat-not-projective.md) 平坦但不投射 用
+- 被 [`prop.flat-equivalences`](../nodes/prop.flat-equivalences.md) 平坦的等价说法 用
+- 被 [`prop.free-flat`](../nodes/prop.free-flat.md) 自由模平坦 用
 - 被 [`def.flat-dimension`](../nodes/def.flat-dimension.md) 平坦维数 用
 - 被 [`prop.tor-flat-vanishing`](../nodes/prop.tor-flat-vanishing.md) 平坦与挠积消失 用
 - 被 [`thm.tor-torsion`](../nodes/thm.tor-torsion.md) 挠积给出挠元 用
-- 被 [`thm.lazard`](../nodes/thm.lazard.md) 平坦模的结构定理 用
+
+> 续见 [nodes/def.flat-module.5.md](./def.flat-module.5.md)

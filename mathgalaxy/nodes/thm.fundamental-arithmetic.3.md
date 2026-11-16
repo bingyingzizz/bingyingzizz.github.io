@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`thm.poly-ufd`](../nodes/thm.poly-ufd.md) K[x] 是唯一分解整环
+- ～弱边 [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环
 - ～弱边 [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数
 - ⇒ [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数
 - ⇒ [`thm.divisor-formula`](../nodes/thm.divisor-formula.md) τ 与 σ 的乘积公式

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.essentially-surjective)　·　[Chinese page (authoritative)](./def.essentially-surjective.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.essentially-surjective.md` and `proofs/`.
+## Statement · **draft**
+A functor $F : \mathcal{C} \to \mathcal{C}'$ is **essentially surjective** if for every object of $\mathcal{C}'$, say $X'$, there is an object of $\mathcal{C}$, say $X$, with
 
+$$F(X) \cong X'$$
 
-Cite: `def.essentially-surjective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.essentially-surjective.en.2.md

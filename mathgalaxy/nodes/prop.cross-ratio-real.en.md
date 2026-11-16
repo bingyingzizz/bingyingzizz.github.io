@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · proposition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 23 · proposition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement · **draft**
 Let $z_{1}, z_{2}, z_{3}, z_{4}$ be pairwise distinct. Then

@@ -7,5 +7,6 @@
 - ⇒ [`prop.analytic-examples`](../nodes/prop.analytic-examples.md) 解析环的例子
 - ⇒ [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环
 - ⇒ [`prop.rl1-not-analytic`](../nodes/prop.rl1-not-analytic.md) R_{ℓ¹} 不是解析环
+- 被 [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环 用
 - 被 [`def.six-functors`](../nodes/def.six-functors.md) 6-函子形式 用
 - 被 [`def.discrete-huber-pair`](../nodes/def.discrete-huber-pair.md) 离散 Huber pair 用

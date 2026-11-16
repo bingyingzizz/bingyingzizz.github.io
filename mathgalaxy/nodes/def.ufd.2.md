@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.irreducible-element`](../nodes/def.irreducible-element.md) 相伴、不可约与素：用到了定义 相伴、不可约与素　[proofs/e129.definition.md](../proofs/e129.definition.md)
 - [`def.int-domain`](../nodes/def.int-domain.md) 整环：用到了定义 整环　[proofs/e130.definition.md](../proofs/e130.definition.md)
+- [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理：$\mathbb{Z}$ 是唯一分解整环：一个例子，不是定义依赖　[proofs/e137.definition.md](../proofs/e137.definition.md)
 
 > 续见 [nodes/def.ufd.3.md](./def.ufd.3.md)

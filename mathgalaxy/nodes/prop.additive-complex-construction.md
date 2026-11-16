@@ -1,6 +1,6 @@
 # 加法函子与复形构造交换　`prop.additive-complex-construction`
 命题：$F(C(\mathcal{A})) \cong C(F(\mathcal{A}))$
-layer 13 · 命题 · 复形与导出三角 · 同调代数
+layer 17 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.additive-complex-construction)　·　[节点索引](../index.md)
 
 加法函子 $F : \mathcal{A} \to \mathcal{A}'$ 逐项作用给出函子

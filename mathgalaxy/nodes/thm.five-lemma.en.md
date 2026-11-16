@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · lemma · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 18 · lemma · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.five-lemma.md` and `proofs/`.

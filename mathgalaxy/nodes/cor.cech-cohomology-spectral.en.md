@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · corollary · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 21 · corollary · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Čech Spectral Sequence` (short) · `Čech-to-Cohomology Spectral Sequence` (full)
 
 ## Statement · **draft**

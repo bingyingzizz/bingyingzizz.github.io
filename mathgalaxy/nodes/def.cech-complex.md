@@ -1,6 +1,6 @@
 # Čech 复形　`def.cech-complex`
 Čech 复形 $\check{C}^{\bullet}(\mathfrak{X}, M)$
-layer 13 · 定义 · 层上同调 · 同调代数+范畴论
+layer 16 · 定义 · 层上同调 · 同调代数+范畴论
 [在星图里打开](../#n=def.cech-complex)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是**有纤维积**的景，$\mathfrak{X}=(X_{i}\to X)_{i\in I}$ 是 $X\in\mathcal{C}$ 上的覆盖，$M$ 是阿贝尔预层。$\mathfrak{X}$ 的 **Čech 复形** $\check{C}^{\bullet}(\mathfrak{X},M)$ 是上链复形

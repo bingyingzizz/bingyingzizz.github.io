@@ -1,6 +1,6 @@
 # 谱序列的退化行　`prop.spectral-degenerate-row`
 命题：只有 $p = 0$ 那一行时 $E^{0,q} \cong H^{q}$
-layer 17 · 命题 · 过滤与谱序列 · 同调代数
+layer 20 · 命题 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=prop.spectral-degenerate-row)　·　[节点索引](../index.md)
 
 设 $E^{p,q}_{r} \implies H^{p+q}$ 是**第一象限**谱序列。若对某个 $r \ge 1$ 有

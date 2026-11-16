@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 18 · theorem · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Tor and Torsion` (short) · `First Tor Computes the Torsion Subgroup` (full)
 
 ## Statement and proof

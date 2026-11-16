@@ -1,6 +1,6 @@
 # Hahn–Banach 定理　`thm.hahn-banach`
 Hahn–Banach：次线性控制下的线性延拓
-layer 13 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 16 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.hahn-banach)　·　[节点索引](../index.md)
 
 设 $X$ 是**实**向量空间，$p : X \to \mathbb{R}$ 是**次线性**的（$p(x + y) \le p(x) + p(y)$，且 $p(tx) = t\,p(x)$ 对 $t \ge 0$），$M \subseteq X$ 是子空间，$f : M \to \mathbb{R}$ 线性且满足 $f \le p$ 于 $M$。则存在线性 $F : X \to \mathbb{R}$ 使 $F|_M = f$ 且 $F \le p$。

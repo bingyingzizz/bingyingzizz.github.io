@@ -1,6 +1,6 @@
 # 闭曲面分类定理　`thm.classification-surfaces`
 闭曲面分类：每个闭曲面是球面、或若干环面 / 射影平面的连通和
-layer 26 · 定理 · 曲面的地形 · 拓扑学
+layer 33 · 定理 · 曲面的地形 · 拓扑学
 [在星图里打开](../#n=thm.classification-surfaces)　·　[节点索引](../index.md)
 
 设 $S$ 是**闭曲面**（`def.closed-surface`）。则 $S$ 同胚于下列之一，且这些

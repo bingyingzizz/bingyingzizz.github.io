@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 19 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Tensor Is Right Exact` (short) · `Right Exactness of the Tensor Functor` (full)
 
 ## Statement · **draft**

@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵：ana.equivmat-congruent　[proofs/ana.equivmat-congruent.md](../proofs/ana.equivmat-congruent.md)
+
+> 续见 [nodes/def.equivalent-matrices.5.md](./def.equivalent-matrices.5.md)

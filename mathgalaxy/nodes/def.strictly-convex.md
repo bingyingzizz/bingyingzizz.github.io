@@ -1,6 +1,6 @@
 # 严格凸　`def.strictly-convex`
 严格凸空间
-layer 13 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.strictly-convex)　·　[节点索引](../index.md)
 
 称赋范空间 $(X, \|\cdot\|)$ **严格凸**（strictly convex），若单位球面不含线段：

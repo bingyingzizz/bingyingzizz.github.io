@@ -1,9 +1,9 @@
 # 简单多边形的对角线　`lem.polygon-diagonal`
 引理：$n \ge 4$ 的简单多边形必有一条对角线
-layer 9 · 引理 · 拓扑空间的基本语汇 · 拓扑学
+layer 14 · 引理 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=lem.polygon-diagonal)　·　[节点索引](../index.md)
 
-设 $P = v_0v_1\cdots v_{n-1}$ 是简单闭多边形（`def.jordan-curve` 的多边形特例），$K$ 是它围成的多边形区域。若 $n \ge 4$，则存在两个**不相邻**的顶点 $v_i, v_j$，使开线段 $(v_i, v_j)$ 落在 $\operator
+设 $P = v_0v_1\cdots v_{n-1}$ 是简单闭多边形（`def.jordan-curve` 的多边形特例），$K$ 是它围成的多边形区域。若 $n \ge 4$，则存在两个**不相邻**的顶点 $v_i, v_j$，使开线段 $(v_i, v_j)$ 落在 $\operato
 > 陈述续见 [nodes/lem.polygon-diagonal.2.md](./lem.polygon-diagonal.2.md)
 
 

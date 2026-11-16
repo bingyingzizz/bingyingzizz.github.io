@@ -14,7 +14,9 @@ $$\langle g \rangle := \{\, g^{k} : k \in \mathbb{Z} \,\} \quad \subseteq\; G$$
 - 无限循环群 $\cong \mathbb{Z}$。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根 用
+- 被 [`def.primitive-root`](../nodes/def.primitive-root.md) 原根 用
+
+- …另有出边，续页见 [nodes/def.cyclic-group.3.md](./def.cyclic-group.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.cyclic-group.2.md](./def.cyclic-group.2.md)

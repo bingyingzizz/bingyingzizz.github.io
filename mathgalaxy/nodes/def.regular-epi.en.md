@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.regular-epi)　·　[Chinese page (authoritative)](./def.regular-epi.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.regular-epi.md` and `proofs/`.
+## Statement · **draft**
+A morphism $f : X \to Y$ is a **regular epimorphism** if it is the **coequalizer** of some parallel pair: there exist $u, v : W \rightrightarrows X$ with $f = \operatorname{coker}(u, v)$.
 
-
-Cite: `def.regular-epi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.regular-epi.en.2.md

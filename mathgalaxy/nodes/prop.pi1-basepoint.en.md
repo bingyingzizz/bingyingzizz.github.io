@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 20 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $\gamma : [0, 1] \to X$ be a path from $x_{0}$ to $x_{1}$, and let $\bar{\gamma}$ be the reverse path. Define

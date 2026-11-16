@@ -1,12 +1,14 @@
 # Wilson 定理　`cor.wilson`
 Wilson 定理：用阶乘同余判定素数
-layer 14 · 推论 · 整除与同余 · 数论
+layer 12 · 推论 · 整除与同余 · 数论
 [在星图里打开](../#n=cor.wilson)　·　[节点索引](../index.md)
 
 整数 $p \ge 2$：$p$ 是素数 $\iff$ $(p - 1)! \equiv -1 \pmod p$。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环：Wilson 定理：把单位群的元素两两配对成逆　[proofs/imp.nt-wilson.md](../proofs/imp.nt-wilson.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.wilson-prime.md](../proofs/dep.wilson-prime.md)
+- [`def.congruence`](../nodes/def.congruence.md) 同余：用到了定义 同余　[proofs/dep.wilson-congr.md](../proofs/dep.wilson-congr.md)
 
 refs: 华罗庚《数论导引》§2
 

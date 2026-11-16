@@ -1,6 +1,6 @@
 # 正合列给出导出三角　`prop.exact-to-triangle`
 复形的短正合列 $\implies$ 导出三角
-layer 15 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.exact-to-triangle)　·　[节点索引](../index.md)
 
 若 $0 \to K^{\bullet} \xrightarrow{\;f\;} L^{\bullet} \xrightarrow{\;g\;} M^{\bullet} \to 0$ 是复形的**短正合列**，则在 $D(\mathcal{A})$ 里存在**导出三角**

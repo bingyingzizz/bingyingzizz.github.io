@@ -1,6 +1,6 @@
 # 挠积给出挠元　`thm.tor-torsion`
 一阶挠积算出阿贝尔群的挠子群
-layer 17 · 定理 · 平坦模 · 同调代数
+layer 18 · 定理 · 平坦模 · 同调代数
 [在星图里打开](../#n=thm.tor-torsion)　·　[节点索引](../index.md)
 
 对任意阿贝尔群 $A$（即 $\mathbb{Z}$-模）：

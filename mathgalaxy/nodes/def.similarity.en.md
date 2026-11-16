@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.similarity)　·　[Chinese page (authoritative)](./def.similarity.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.similarity.md` and `proofs/`.
+## Statement · **draft**
+Two square matrices $A, B \in M_n(K)$ are **similar**, written $A \sim B$, iff there is an invertible matrix $P$ such that
 
+$$B = P^{-1} A\, P$$
 
-Cite: `def.similarity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$P$ is called the **transition matrix**. An equivalent way to say it: $A$ and $B$ are matrices of the same linear map in two bases.
 
+Invariants of similarity: rank, trace, determinant, characteristic polynomial (hence eigenvalues and their algebraic multiplicities), minimal polynomial.
+
+> continued in nodes/def.similarity.en.2.md

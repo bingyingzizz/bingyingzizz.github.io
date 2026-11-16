@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.mapping-cone)　·　[Chinese page (authoritative)](./def.mapping-cone.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 16 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.mapping-cone.md` and `proofs/`.
+## Statement · **draft**
+The **mapping cone** of a morphism $f : K \to L$ is the complex
 
+$$M(f)^{n} := K^{n+1} \oplus L^{n}, \qquad d^{n} := \begin{pmatrix} -d^{n+1} & 0 \\ f^{n} & d^{n} \end{pmatrix}$$
 
-Cite: `def.mapping-cone` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.mapping-cone.en.2.md

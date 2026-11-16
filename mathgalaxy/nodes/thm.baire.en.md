@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
+layer 18 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
 ## Statement · **draft**
 Let $X$ be a complete metric space (or a locally compact Hausdorff space). Then the intersection of countably many dense open sets is still **dense**. Equivalently:

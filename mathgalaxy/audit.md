@@ -2,17 +2,17 @@
 
 由 `tools/build.mjs` 生成。**不是硬门**：这三类都会误报，先看，别急着改数据。
 
-## 一、正文引用了不存在的 id（1 个）
+## 一、正文引用了不存在的 id（0 个）
 
-- `imp.lch-cr` ← def.one-point-compactification.notes
+（没有）
 
 ## 二、近同名却没有任何边（11 对）
 
 判据：label 去掉括注/空格后相同或前缀相近（与 `_tools/_nov15.mjs` 同口径），且两颗星之间一条边都没有。
 
-- Euler 定理（`thm.euler-theorem` L10）⇸ Euler 类（`def.euler-class` L37）
-- Euler 函数（`def.euler-phi` L14）⇸ Euler 类（`def.euler-class` L37）
-- Euler 判别法（`thm.euler-criterion` L16）⇸ Euler 类（`def.euler-class` L37）
+- Euler 函数（`def.euler-phi` L11）⇸ Euler 类（`def.euler-class` L37）
+- Euler 定理（`thm.euler-theorem` L12）⇸ Euler 类（`def.euler-class` L37）
+- Euler 判别法（`thm.euler-criterion` L13）⇸ Euler 类（`def.euler-class` L37）
 - Pontryagin 对偶（`def.pontryagin-dual` L19）⇸ Pontryagin 类（`def.pontryagin-class` L36）
 - Euler 公式（`thm.euler-formula` L23）⇸ Euler 类（`def.euler-class` L37）
 - Euler 示性数（`thm.euler-characteristic` L25）⇸ Euler 类（`def.euler-class` L37）
@@ -20,7 +20,7 @@
 - 阿贝尔层（`def.abelian-sheaf` L16）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L23）
 - Euler 公式（`thm.euler-formula-surface` L30）⇸ Euler 类（`def.euler-class` L37）
 - Euler 乘积（`thm.euler-product` L30）⇸ Euler 类（`def.euler-class` L37）
-- 阿贝尔范畴（`def.abelian-category` L16）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
+- 阿贝尔范畴（`def.abelian-category` L17）⇸ 阿贝尔层（`def.abelian-sheaf` L16）
 
 ## 三、黑边子图上的环（2 个）
 
@@ -57,7 +57,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**266** 处
+- 陈述里出现假设关键词、但没标注：**267** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -99,5 +99,5 @@
   - prop.free-projective  ‹Hausdorff›
   - def.free-presentation  ‹Hausdorff›
   - cor.chaus-free-presentation  ‹Hausdorff›
-  - …还有 226 处
+  - …还有 227 处
 

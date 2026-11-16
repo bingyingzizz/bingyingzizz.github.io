@@ -1,6 +1,6 @@
 # 一维上同调与分裂扩张　`thm.h1-semidirect`
 $H^{1}(G, A)$ 与半直积式的分裂结构
-layer 16 · 定理 · 群上同调 · 同调代数+抽象代数
+layer 19 · 定理 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=thm.h1-semidirect)　·　[节点索引](../index.md)
 
 设 $A$ 是 $G$-模，$1 \to A \xrightarrow{i} E \xrightarrow{\pi} G \to 1$ 是一个固定的扩张，并且它有**同态截面** $s : G \to E$（即 $\pi s = \operatorname{id}_{G}$）。则：

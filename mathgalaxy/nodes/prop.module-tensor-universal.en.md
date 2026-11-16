@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.module-tensor-universal)　·　[Chinese page (authoritative)](./prop.module-tensor-universal.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Tensor Universal Property` (short) · `Universal Property of the Tensor Product` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.module-tensor-universal.md` and `proofs/`.
+## Statement · **draft**
+The tensor product $M \otimes_{\mathbb{Z}} N$ (resp. $M \otimes_{k} N$) is **universal** for $\mathbb{Z}$-bilinear (resp. $k$-bilinear) maps:
 
-
-Cite: `prop.module-tensor-universal` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.module-tensor-universal.en.2.md

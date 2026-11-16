@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 5 · theorem · cluster Constructing Sets (`set.construct`) · Set Theory
+layer 6 · theorem · cluster Constructing Sets (`set.construct`) · Set Theory
 
 ## Statement · **draft**
 There exists a set with no elements:

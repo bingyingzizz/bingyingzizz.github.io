@@ -1,6 +1,6 @@
 # 原根　`def.primitive-root`
 原根：单位群的生成元
-layer 9 · 定义 · 二次剩余与原根 · 数论
+layer 12 · 定义 · 二次剩余与原根 · 数论
 [在星图里打开](../#n=def.primitive-root)　·　[节点索引](../index.md)
 
 设 $\gcd(g, n) = 1$。若
@@ -14,8 +14,10 @@ $$\operatorname{ord}_{n}(g) = \varphi(n) ,$$
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶：用到了定义 模 n 的阶　[proofs/e156.definition.md](../proofs/e156.definition.md)
 
+- …另有入边，续页见 [nodes/def.primitive-root.2.md](./def.primitive-root.2.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.primitive-root.2.md](./def.primitive-root.2.md)
+- …另有出边，续页见 [nodes/def.primitive-root.3.md](./def.primitive-root.3.md)
 
 refs: 华罗庚《数论导引》第五章
 

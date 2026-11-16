@@ -1,6 +1,6 @@
 # 基点变换　`prop.pi1-basepoint`
 沿道路换基点：同构，但彼此只差一个共轭
-layer 17 · 命题 · 基本群 · 拓扑学
+layer 20 · 命题 · 基本群 · 拓扑学
 [在星图里打开](../#n=prop.pi1-basepoint)　·　[节点索引](../index.md)
 
 设 $\gamma : [0, 1] \to X$ 是从 $x_{0}$ 到 $x_{1}$ 的道路，$\bar{\gamma}$ 是它的反向道路。定义

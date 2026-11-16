@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.presheaf-limits-colimits)　·　[Chinese page (authoritative)](./thm.presheaf-limits-colimits.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.presheaf-limits-colimits.md` and `proofs/`.
+## Statement · **draft**
+In a presheaf category $\widehat{\mathcal{C}}$ **all small limits and small colimits exist**, and they are computed **pointwise**: for every $X \in \mathcal{C}$,
 
+$$\Bigl(\varinjlim_{i} T_{i}\Bigr)(X) \;\cong\; \varinjlim_{i} T_{i}(X), \qquad \Bigl(\varprojlim_{i} T_{i}\Bigr)(X) \;\cong\; \varprojlim_{i} T_{i}(X).$$
 
-Cite: `thm.presheaf-limits-colimits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.presheaf-limits-colimits.en.2.md

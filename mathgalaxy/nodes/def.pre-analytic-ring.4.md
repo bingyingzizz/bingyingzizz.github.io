@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.analytic-ring`](../nodes/def.analytic-ring.md) 解析环 用
+- 被 [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环 用

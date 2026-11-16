@@ -1,6 +1,6 @@
 # 二面体群　`def.dihedral-group`
 二面体群 $D_{n}$（正 $n$ 边形的对称群）
-layer 13 · 定义 · 代数结构 · 抽象代数
+layer 14 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.dihedral-group)　·　[节点索引](../index.md)
 
 设 $n\ge 3$。**二面体群** $D_{n}$ 是正 $n$ 边形的对称群，阶为 $2n$，由旋转 $r$（转角 $2\pi/n$）与一个反射 $s$ 生成，满足关系 $r^{n}=1$、$s^{2}=1$、$srs=r^{-1}$。等价地，$D_{n}=\langle r,s\mid r^{n}=s^{2}=1,\ srs=r^{-1}\rangle$。

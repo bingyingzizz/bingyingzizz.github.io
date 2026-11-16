@@ -16,8 +16,8 @@ $$\ker T = \{0\}$$
 $T$ **满射**，当且仅当 $\operatorname{im} T = W$。
 
 ## 它能推出什么 / 谁在用它
+- 被 [`def.submodule`](../nodes/def.submodule.md) 子模 用
 - 被 [`def.rank`](../nodes/def.rank.md) 秩 用
-- 被 [`def.nullity`](../nodes/def.nullity.md) 零化度 用
 
 - …另有出边，续页见 [nodes/def.kernel-image-vs.3.md](./def.kernel-image-vs.3.md)
 

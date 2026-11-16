@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 28 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 29 · proposition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Connection Coefficients` (short) · `Connection Coefficients in an Orthonormal Frame` (full)
 
 ## Statement · **draft**

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 20 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 
 ## Statement · **draft**
 If $\mathfrak{X}$ is a **cover** of $X$ and $M$ is an abelian sheaf, then there is a spectral sequence

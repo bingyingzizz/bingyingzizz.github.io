@@ -1,6 +1,6 @@
 # 预加性结构唯一　`prop.hom-enrichment-unique`
 命题：加法范畴里 $\operatorname{Hom}$ 的阿贝尔群结构唯一
-layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=prop.hom-enrichment-unique)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是**加法范畴**。则使复合双线性、并与直和结构相容的 $\operatorname{Hom}_{\mathcal{C}}(M,N)$ 的阿贝尔群结构是**唯一**的。

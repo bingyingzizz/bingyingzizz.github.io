@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 17 · proposition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement · **draft**
 Let $u \in B(E, F)$ and $v \in B(F, G)$. Then $v \circ u \in B(E, G)$ and

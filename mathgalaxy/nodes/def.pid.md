@@ -1,6 +1,6 @@
 # 主理想整环　`def.pid`
 主理想整环（PID）：每个理想都由一个元素生成
-layer 11 · 定义 · 整环与分解 · 抽象代数
+layer 12 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.pid)　·　[节点索引](../index.md)
 
 整环 $A$ 叫**主理想整环**（PID），若每个理想都是主理想：对任意理想 $I$ 存在 $a$ 使 $I = (a) = aA$。
@@ -8,9 +8,10 @@ layer 11 · 定义 · 整环与分解 · 抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.euclidean-domain`](../nodes/def.euclidean-domain.md) Euclid 整环：Euclid 整环 $\implies$ PID：取范数最小的元素生成理想　[proofs/imp.ring-euclid-pid.md](../proofs/imp.ring-euclid-pid.md)
 - [`def.ideal`](../nodes/def.ideal.md) 理想：用到了定义 理想　[proofs/e134.definition.md](../proofs/e134.definition.md)
+- [`def.principal-ideal`](../nodes/def.principal-ideal.md) 主理想：用到了定义 主理想　[proofs/dep.pid-principal.md](../proofs/dep.pid-principal.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环
+- …另有出边，续页见 [nodes/def.pid.2.md](./def.pid.2.md)
 
 refs: Atiyah–Macdonald, Ch. 1
 

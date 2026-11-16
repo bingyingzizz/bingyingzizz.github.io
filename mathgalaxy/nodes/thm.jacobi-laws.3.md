@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号 + [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号 + [`thm.quadratic-reciprocity`](../nodes/thm.quadratic-reciprocity.md) 二次互反律：Jacobi 符号的三条运算法则　[proofs/imp.jacobi-laws-proof.md](../proofs/imp.jacobi-laws-proof.md)
 - [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号：用到了定义 Jacobi 符号　[proofs/e154.definition.md](../proofs/e154.definition.md)
+- [`def.gcd`](../nodes/def.gcd.md) 最大公因数：用到了定义 最大公因数　[proofs/dep.jacobilaws-gcd.md](../proofs/dep.jacobilaws-gcd.md)

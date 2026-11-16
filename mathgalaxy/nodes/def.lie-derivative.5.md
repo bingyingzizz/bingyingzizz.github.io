@@ -2,5 +2,6 @@
 [在星图里打开](../#n=def.lie-derivative)　·　第 1 页 [nodes/def.lie-derivative.md](./def.lie-derivative.md)　·　上一页 [nodes/def.lie-derivative.4.md](./def.lie-derivative.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.divergence`](../nodes/def.divergence.md) 散度 用
 - 被 [`thm.cartan-formula`](../nodes/thm.cartan-formula.md) Cartan 公式 用
 - ⇒ [`thm.cartan-formula`](../nodes/thm.cartan-formula.md) Cartan 公式

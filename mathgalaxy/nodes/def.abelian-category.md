@@ -1,6 +1,6 @@
 # 阿贝尔范畴　`def.abelian-category`
 阿贝尔范畴
-layer 16 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 17 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.abelian-category)　·　[节点索引](../index.md)
 
 **阿贝尔范畴*

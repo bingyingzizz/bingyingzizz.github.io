@@ -8,12 +8,12 @@
 - def.t0-space　T0 空间　layer 6
 - def.t1-space　T1 空间　layer 6
 - def.t35-space　T3.5 空间　layer 6
-- def.completely-normal-space　完全正规空间　layer 6
 - prop.normal-locally-closed　正规空间的邻域里有闭邻域　layer 7
 - def.t3-space　T3 空间　layer 7
 - def.completely-regular-space　完全正则空间　layer 7
 - def.perfectly-normal-space　完美正规空间　layer 7
 - def.regular-space　正则空间　layer 8
 - prop.hausdorff-reflective　Hausdorff 空间是反射子范畴　layer 11
+- def.completely-normal-space　完全正规空间　layer 13
 
 > 续见 `index/topology.separation.2.md`

@@ -1,14 +1,8 @@
 # 类方程 + 让 Sylow 子群作用 $\implies$ Sylow 三条
 `imp.sylow` · 推出 · strong 边 · 根 `../`
 
-`thm.class-equation` 类方程 + `def.group-action` 群作用 + `thm.orbit-stabilizer` 轨道–稳定子定理 → `thm.sylow` Sylow 定理
+`thm.class-equation` 类方程 + `def.group-action` 群作用 + `thm.orbit-stabilizer` 轨道–稳定子定理 + `lem.p-group-subgroups` p-群的真子群严格小于其正规化子 → `thm.sylow` Sylow 定理
 
-但 $Q \trianglelefteq N_G(Q)$ 故只能 $P = Q$）。
+**（1'）所有 $p^{i}$ 阶子群（$0 \le i \le a$）。** 上面已造出 $P \le G$、$|P| = p^{a}$（Sylow $p$-子群）。对 $i$ 归纳造 $P$ 的 $p^{i}$ 阶子群：$i = 0$ 取 $\{e\}$。设已有 $H \le P$、$|H| = p^{i} < p^{a}$。对 $p$-群 $P$ 用 `lem.p-group-subgroups`：$H$ 是真子群，故 $H < N_P(H)$，于是 $N_P(H)/H$ 是非平凡 $p$-群；同一条引理给出它的中心非平凡，取中心里非平凡元 $x$、令 $k = \operatorn
 
-于是
-
-$$n_p = 1 + \sum (\text{长度 } \ge 2 \text{ 的轨道长}) \equiv 1 \pmod p$$
-
-∎
-
-> ⭐ 第二步的论证是整条定理的模板，值得单独记住：**让 $p$-群作用在一个「基数不被 $p$ 整除」的集合上，必有不共点** —— 因为轨道长都是 $p$ 的幂，若都 $\ge p$ 就整除不了总和。这个「不动点论证」在表示论与代数拓扑里反复出现。
+> 续见 proofs/imp.sylow.7.md

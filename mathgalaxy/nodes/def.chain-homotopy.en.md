@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.chain-homotopy)　·　[Chinese page (authoritative)](./def.chain-homotopy.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Homology Groups (`topology.homology`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.chain-homotopy.md` and `proofs/`.
+## Statement · **draft**
+Let $C = \{\, C_{n}, \partial_{n} \,\}$ and $D = \{\, D_{n}, \partial_{n}' \,\}$ be two chain complexes, and $f, g : C \to D$ chain maps (i.e. $\partial' f = f \partial$).
 
+A **chain homotopy** between $f$ and $g$ is a family of homomorphisms $P_{n} : C_{n} \to D_{n+1}$ satisfying
 
-Cite: `def.chain-homotopy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\partial_{n+1}' P_{n} + P_{n-1} \partial_{n} = g_{n} - f_{n}.$$
 
+> continued in nodes/def.chain-homotopy.en.2.md

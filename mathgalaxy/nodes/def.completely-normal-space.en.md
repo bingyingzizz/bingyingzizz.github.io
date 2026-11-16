@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Separation Axioms (`topology.separation`) · Topology
+layer 13 · definition · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement · **draft**
 **What it does**: normality is a relation between closed sets. It is **not inherited** by subspaces — so requiring that **every** subspace be normal is a genuine strengthening, and that is $T_{5}$.

@@ -4,9 +4,9 @@
 中心天体 thm.real-banach-chaus-acyclic　·　11 个节点　·　根 `../`　·　续页 `index/cond.cohomology.2.md`
 
 - def.semi-normed-ab-group　半范数阿贝尔群　layer 8
-- def.k-bounded-exact　K-有界正合　layer 13
-- prop.k-bounded-exact-filtered-colimit　K-有界正合沿滤过余极限保持　layer 14
+- def.k-bounded-exact　K-有界正合　layer 16
 - def.banach-ab-group　Banach 阿贝尔群　layer 17
+- prop.k-bounded-exact-filtered-colimit　K-有界正合沿滤过余极限保持　layer 17
 - lem.k-bounded-completion　K-有界正合在完备化下不变　layer 18
 - prop.k-bounded-implies-exact　相邻两条 K-有界 推出 正合　layer 18
 

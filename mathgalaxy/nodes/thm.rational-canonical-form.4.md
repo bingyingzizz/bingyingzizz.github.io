@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.similarity`](../nodes/def.similarity.md) 相似：用到了定义 相似　[proofs/dep.rcf-similarity.md](../proofs/dep.rcf-similarity.md)
 - [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式：用到了定义 特征多项式　[proofs/dep.rcf-poly.md](../proofs/dep.rcf-poly.md)
+- [`def.invariant-factor`](../nodes/def.invariant-factor.md) 不变因子：用到了定义 不变因子　[proofs/dep.invariant-rcf.md](../proofs/dep.invariant-rcf.md)

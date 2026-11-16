@@ -1,6 +1,6 @@
 # 二次互反律　`thm.quadratic-reciprocity`
 Gauss 的二次互反律
-layer 18 · 定理 · 二次剩余与原根 · 数论
+layer 15 · 定理 · 二次剩余与原根 · 数论
 [在星图里打开](../#n=thm.quadratic-reciprocity)　·　[节点索引](../index.md)
 
 设 $p, q$ 是两个不同的奇素数。则

@@ -1,6 +1,6 @@
 # 正合就是逐点正合　`prop.exact-at-points`
 命题：短正合 $\iff$ 三处都正合
-layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 19 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.exact-at-points)　·　[节点索引](../index.md)
 
 设 $0 \to M' \xrightarrow{\ i\ } M \xrightarrow{\ p\ } M'' \to 0$ 是阿贝尔范畴里的列。则

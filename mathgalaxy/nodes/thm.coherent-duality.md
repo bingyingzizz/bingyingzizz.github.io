@@ -1,6 +1,6 @@
 # 仿射相干对偶　`thm.coherent-duality`
 定理：仿射相干对偶（Thm 8.2）
-layer 0 · 定理 · 解析环与固态模 · 凝聚态数学
+layer 22 · 定理 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=thm.coherent-duality)　·　[节点索引](../index.md)
 
 设 $A$ 是有限生成 $\mathbb{Z}$-代数，$f : \operatorname{Spec} A \to \operatorname{Spec} \mathbb{Z}$ 是结构映射（把系数环的谱投下来）。定义

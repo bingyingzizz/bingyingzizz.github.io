@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.analytic-examples`](../nodes/prop.analytic-examples.md) 解析环的例子 + [`def.analytic-ring`](../nodes/def.analytic-ring.md) 解析环 + [`thm.solid-abelian`](../nodes/thm.solid-abelian.md) 固态群构成阿贝尔子范畴 + [`prop.analytic-base-change`](../nodes/prop.analytic-base-change.md) 解析环的 base change：边界函数 $A_\infty$ $\implies$ $A_\blacksquare$ 是解析环　[proofs/imp.za-analytic.md](../proofs/imp.za-analytic.md)
+- [`def.analytic-ring`](../nodes/def.analytic-ring.md) 解析环：用到了定义 解析环　[proofs/dep.za-analytic-ring.md](../proofs/dep.za-analytic-ring.md)
 
 > 续见 [nodes/thm.za-analytic.4.md](./thm.za-analytic.4.md)

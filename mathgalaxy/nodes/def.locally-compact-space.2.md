@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.compact`](../nodes/def.compact.md) 紧 + [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：imp.compact-hausdorff-locallycompact　[proofs/imp.compact-hausdorff-locallycompact.md](../proofs/imp.compact-hausdorff-locallycompact.md)
+- [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/dep.lch-compact.md](../proofs/dep.lch-compact.md)
 
 > 续见 [nodes/def.locally-compact-space.3.md](./def.locally-compact-space.3.md)

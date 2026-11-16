@@ -1,12 +1,13 @@
 # 素数有无穷多个　`thm.euclid-infinite-primes`
 Euclid 的证明：乘积加一必带新素因子
-layer 13 · 定理 · 整除与同余 · 数论
+layer 12 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.euclid-infinite-primes)　·　[节点索引](../index.md)
 
 素数有无穷多个。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法：素数无穷：乘积加一必带新素因子　[proofs/imp.nt-primes-infinite.md](../proofs/imp.nt-primes-infinite.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.inftprimes-prime.md](../proofs/dep.inftprimes-prime.md)
 
 refs: 华罗庚《数论导引》§1
 

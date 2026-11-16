@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ideal`](../nodes/def.ideal.md) 理想 + [`def.ring`](../nodes/def.ring.md) 环：理想的定义 $\implies$ 交、和、积与商环泛性质　[proofs/imp.ideal-basic.md](../proofs/imp.ideal-basic.md)
+- [`def.ring-hom`](../nodes/def.ring-hom.md) 环同态：用到了定义 环同态　[proofs/dep.ringhom-propideal.md](../proofs/dep.ringhom-propideal.md)
+- [`def.quotient-ring`](../nodes/def.quotient-ring.md) 商环：用到了定义 商环　[proofs/dep.quotient-propideal.md](../proofs/dep.quotient-propideal.md)

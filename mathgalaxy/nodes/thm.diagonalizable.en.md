@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 23 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.diagonalizable.md` and `proofs/`.

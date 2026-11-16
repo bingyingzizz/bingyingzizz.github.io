@@ -1,6 +1,6 @@
 # θ~x 与 π~x/log x 等价　`lem.theta-pi-equivalence`
 $\theta(x)\sim x\iff\pi(x)\sim x/\log x$
-layer 15 · 引理 · 数论函数与素数分布 · 数论
+layer 13 · 引理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=lem.theta-pi-equivalence)　·　[节点索引](../index.md)
 
 $\theta(x)\sim x$ 当且仅当 $\pi(x)\sim x/\log x$（$x\to\infty$）。

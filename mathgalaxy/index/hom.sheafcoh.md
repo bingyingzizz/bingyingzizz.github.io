@@ -4,19 +4,18 @@
 中心天体 def.sheaf-cohomology　·　44 个节点　·　根 `../`　·　续页 `index/hom.sheafcoh.2.md`
 
 - def.etale-space　étale 空间　layer 6
-- def.cech-complex　Čech 复形　layer 13
+- def.cech-complex　Čech 复形　layer 16
 - def.skyscraper-sheaf　天际线层　layer 16
 - def.etale-sheaf　étale 层　layer 16
 - def.flabby-sheaf　松弛层　layer 16
 - def.fine-sheaf　细层　layer 16
 - def.sheaf-cohomology　层上同调　layer 17
 - def.cech-cohomology　Čech 上同调　layer 17
-- lem.cartan-eilenberg　Cartan–Eilenberg 分解　layer 17
 - prop.skyscraper-stalks　天际线层的茎　layer 17
 - prop.etale-sheaf-examples　étale 层的例子　layer 17
 - prop.cech-as-colim　Čech 上同调是沿覆盖筛的余极限　layer 18
-- thm.cartan-leray　Cartan–Leray 谱序列　layer 18
 - def.acyclic-sheaf　无环层　layer 18
 - prop.chaus-cech-eq-h　紧 Hausdorff 上 Čech 就是上同调　layer 18
+- prop.filtered-limit-cohomology　滤过极限的上同调　layer 18
 
 > 续见 `index/hom.sheafcoh.2.md`

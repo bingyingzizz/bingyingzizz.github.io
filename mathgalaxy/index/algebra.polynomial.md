@@ -6,8 +6,8 @@
 - def.polynomial　一元多项式　layer 9
 - def.polynomial-ring　多项式环　layer 10
 - thm.division-algorithm　带余除法　layer 11
-- def.irreducible-poly　不可约多项式　layer 11
 - thm.factor-theorem　因式定理与根　layer 12
-- thm.poly-ufd　K[x] 是唯一分解整环　layer 12
 - prop.root-bound　根的个数不超过次数　layer 13
+- def.irreducible-poly　不可约多项式　layer 13
+- thm.poly-ufd　K[x] 是唯一分解整环　layer 14
 - thm.fundamental-algebra　代数基本定理　layer 28

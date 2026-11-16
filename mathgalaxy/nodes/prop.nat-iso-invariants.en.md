@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.nat-iso-invariants)　·　[Chinese page (authoritative)](./prop.nat-iso-invariants.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.nat-iso-invariants.md` and `proofs/`.
+## Statement · **draft**
+If $F \cong F'$, then $F$ is faithful (resp. full, fully faithful, essentially surjective, an equivalence) $\iff$ $F'$ is as well.
 
-
-Cite: `prop.nat-iso-invariants` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.nat-iso-invariants.en.2.md

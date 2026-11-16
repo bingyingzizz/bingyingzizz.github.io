@@ -1,6 +1,6 @@
 # Leray 零调性　`prop.leray-acyclicity`
 Leray 零调性：零调复形算导出函子
-layer 15 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.leray-acyclicity)　·　[节点索引](../index.md)
 
 若 $K^{\bullet} \in C^{+}(\mathcal{A})$ 且每个 $K^{n}$ 都是 **$F$-零调**的，则 $RFK^{\bullet} = FK^{\bullet}$。

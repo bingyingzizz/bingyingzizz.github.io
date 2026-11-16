@@ -1,6 +1,6 @@
 # Cartan–Eilenberg 分解　`lem.cartan-eilenberg`
 Cartan–Eilenberg 分解（双复形内射消解）
-layer 17 · 引理 · 层上同调 · 同调代数
+layer 20 · 引理 · 层上同调 · 同调代数
 [在星图里打开](../#n=lem.cartan-eilenberg)　·　[节点索引](../index.md)
 
 设 $K^{\bullet}$ 是阿贝尔范畴中的**下有界**复形。则存在下有界**双复形** $I^{\bullet,\bullet}$（即 $I^{p,q} = 0$ 对 $q < 0$）与复形态射 $K^{\bullet} \to I^{\bullet,0}$，使得

@@ -1,6 +1,6 @@
 # 可解群　`def.solvable-group`
 可解群（Solvable Group）与导出列
-layer 10 · 定义 · 合成列与可解群 · 抽象代数
+layer 11 · 定义 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=def.solvable-group)　·　[节点索引](../index.md)
 
 群 $G$ 叫**可解**的，当且仅当存在正规链

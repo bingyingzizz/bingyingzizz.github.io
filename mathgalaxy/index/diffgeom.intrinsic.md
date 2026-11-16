@@ -8,16 +8,16 @@
 - def.tangent-space-manifold　切空间　layer 19
 - def.riemannian-metric　Riemann 度量　layer 20
 - def.affine-connection　仿射联络　layer 26
-- def.isometry-surface　等距　layer 27
-- def.christoffel-symbol　克里斯托费尔记号　layer 27
 - def.curvature-tensor　Riemann 曲率张量　layer 27
-- prop.christoffel-frame　标架下的联络系数　layer 28
-- def.geodesic　测地线　layer 28
+- def.isometry-surface　等距　layer 28
+- def.christoffel-symbol　克里斯托费尔记号　layer 28
 - prop.curvature-tensor-symmetries　曲率张量的对称性　layer 28
 - def.sectional-curvature　截面曲率　layer 28
 - def.ricci-curvature　Ricci 曲率　layer 28
-- prop.geodesic-existence　测地线的局部存在唯一性　layer 29
-- def.geodesic-curvature　测地曲率　layer 29
-- def.exponential-map　指数映射　layer 29
+- prop.christoffel-frame　标架下的联络系数　layer 29
+- def.geodesic　测地线　layer 29
+- thm.regular-level-set　正则水平集定理　layer 29
+- thm.bianchi-identity　比安基恒等式　layer 29
+- def.intrinsic-quantity　内蕴量　layer 30
 
 > 续见 `index/diffgeom.intrinsic.2.md`

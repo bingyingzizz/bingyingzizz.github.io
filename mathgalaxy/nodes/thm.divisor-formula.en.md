@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 13 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
 ## Statement · **draft**
 Let $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$. Then

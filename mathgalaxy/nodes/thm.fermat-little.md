@@ -1,6 +1,6 @@
 # Fermat 小定理　`thm.fermat-little`
 Fermat 小定理：模素数时幂同余于一
-layer 11 · 定理 · 整除与同余 · 数论
+layer 13 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.fermat-little)　·　[节点索引](../index.md)
 
 设 $p$ 是素数且 $p \nmid a$。则
@@ -11,6 +11,9 @@ $$a^{p-1} \equiv 1 \pmod p ,$$
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理：Fermat 小定理：取 $n = p$ 的 Euler 定理　[proofs/imp.nt-euler-fermat.md](../proofs/imp.nt-euler-fermat.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.fermat-prime.md](../proofs/dep.fermat-prime.md)
+
+- …另有入边，续页见 [nodes/thm.fermat-little.2.md](./thm.fermat-little.2.md)
 
 refs: 华罗庚《数论导引》§2
 

@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：Jacobi 符号：把 Legendre 符号从素数推到奇数　[proofs/e161.analogy.md](../proofs/e161.analogy.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.jacobi-prime.md](../proofs/dep.jacobi-prime.md)
 
 > 续见 [nodes/def.jacobi-symbol.3.md](./def.jacobi-symbol.3.md)

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.generator)　·　[Chinese page (authoritative)](./def.generator.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.generator.md` and `proofs/`.
+## Statement · **draft**
+In a category $\mathcal{C}$, a set $S \subseteq \mathcal{C}$ is a **set of generators** if the functor
 
+$$\prod_{a \in S} h_{a} : \mathcal{C} \longrightarrow \mathbf{Set}^{S}, \qquad X \mapsto \bigl(\operatorname{Hom}_{\mathcal{C}}(a, X)\bigr)_{a \in S}$$
 
-Cite: `def.generator` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.generator.en.2.md

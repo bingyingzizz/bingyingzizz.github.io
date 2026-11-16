@@ -1,6 +1,6 @@
 # 密度与定向无关　`prop.volume-density-well-defined`
 体积密度在换卡下不变，体积形式随定向变号
-layer 28 · 命题 · 微分形式、积分与 de Rham · 微分几何
+layer 29 · 命题 · 微分形式、积分与 de Rham · 微分几何
 [在星图里打开](../#n=prop.volume-density-well-defined)　·　[节点索引](../index.md)
 
 **在做什么**：说明「密度」这个词为什

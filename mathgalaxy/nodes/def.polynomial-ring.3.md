@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.polynomial-ring)　·　第 1 页 [nodes/def.polynomial-ring.md](./def.polynomial-ring.md)　·　上一页 [nodes/def.polynomial-ring.2.md](./def.polynomial-ring.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.quotient-ring`](../nodes/def.quotient-ring.md) 商环 用
 - 被 [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法 用
 - 被 [`def.irreducible-poly`](../nodes/def.irreducible-poly.md) 不可约多项式 用
 - 被 [`def.char-poly`](../nodes/def.char-poly.md) 特征多项式 用

@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.homotopy)　·　[Chinese page (authoritative)](./def.homotopy.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 16 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.homotopy.md` and `proofs/`.
+## Statement · **draft**
+Morphisms of complexes $f, g : K \to L$ are **homotopic** if there is a family of morphisms
 
+$$s^{n} : K^{n} \longrightarrow L^{n-1}$$
 
-Cite: `def.homotopy` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+such that for every $n$,
 
+$$f^{n} - g^{n} \;=\; s^{n+1} \circ d_{K}^{n} + d_{L}^{n-1} \circ s^{n}$$
+
+Write $f \sim g$; $s$ is a **homotopy**. A morphism homotopic to $0$ is called **null-homotopic**.
+
+> continued in nodes/def.homotopy.en.2.md

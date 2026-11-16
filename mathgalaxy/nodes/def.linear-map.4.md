@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.linear-map)　·　第 1 页 [nodes/def.linear-map.md](./def.linear-map.md)　·　上一页 [nodes/def.linear-map.3.md](./def.linear-map.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用
+- 被 [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子 用
 - 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
 - 被 [`thm.quotient-universal-vs`](../nodes/thm.quotient-universal-vs.md) 商空间的万有性质 用
 - 被 [`def.scalar-restriction`](../nodes/def.scalar-restriction.md) 标量限制 用

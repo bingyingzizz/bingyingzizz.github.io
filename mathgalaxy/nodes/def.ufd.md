@@ -14,7 +14,7 @@ layer 10 · 定义 · 整环与分解 · 抽象代数
 - …另有入边，续页见 [nodes/def.ufd.2.md](./def.ufd.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理 用
+- ～弱边 [`thm.fundamental-arithmetic`](../nodes/thm.fundamental-arithmetic.md) 算术基本定理
 
 - …另有出边，续页见 [nodes/def.ufd.3.md](./def.ufd.3.md)
 

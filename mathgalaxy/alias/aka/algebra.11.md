@@ -1,6 +1,18 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 代数扩张 | 超越扩张 → def.algebraic-extension
+
+- 分裂域 | 分解域 → def.splitting-field
+
+- 正规扩张 | 正规扩域 → def.normal-extension
+
+- 可分扩张 | 不可分扩张 → def.separable-extension
+
+- 伽罗瓦群 | Galois 群 | F-自同构 → def.galois-group
+
+- 伽罗瓦扩张 | Galois 扩张 → def.galois-extension
+
 - 伽罗瓦基本定理 | 伽罗瓦对应 | 基本定理（Galois） → thm.galois-correspondence
 
 - 根式可解 | 根式解 | 可解性判据 → thm.radical-solvable
@@ -16,19 +28,5 @@
 - 二元运算 | 二元算子 | 封闭运算 → def.binary-operation
 
 - 群的阶 | 元素的阶 | 阶（群论） → def.group-order
-
-- sl2 的交换子 → ex-sl2-commutator
-
-- 到坐标平面的投影 → ex.plane-projection
-
-- 有限域 | F_p | 素域 → ex.finite-field
-
-- 平凡群 → ex.trivial-group
-
-- 狄利克雷特征标 → def.dirichlet-character
-
-- 群范畴 | Grp → def.category-of-groups
-
-- 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
 
 > 续见 alias/aka/algebra.12.md

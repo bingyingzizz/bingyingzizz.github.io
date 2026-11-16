@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
+layer 33 · theorem · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.classification-surfaces.md` and `proofs/`.

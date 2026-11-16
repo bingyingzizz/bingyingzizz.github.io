@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Generator Criterion` (short) · `Generators via Coproduct Epimorphisms` (full)
 
 ## Statement and proof

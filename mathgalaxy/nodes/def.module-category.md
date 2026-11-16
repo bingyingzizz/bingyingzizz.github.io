@@ -1,6 +1,6 @@
 # 模范畴　`def.module-category`
 模范畴 $A\text{-}\mathbf{Mod}$
-layer 10 · 定义 · 代数结构 · 抽象代数+同调代数
+layer 13 · 定义 · 代数结构 · 抽象代数+同调代数
 [在星图里打开](../#n=def.module-category)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺环。**左 $A$-模范畴** $A\text{-}\mathbf{Mod}$ 的对象是左 $A$-模，态射是 $A$-线性映射，复合与单位逐点定义。

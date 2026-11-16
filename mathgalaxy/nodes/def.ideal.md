@@ -9,15 +9,15 @@ $$a x \in I, \qquad x a \in I.$$
 
 （只要求 $a x \in I$ 的叫**左理想**，只要求 $x a \in I$ 的叫**右理想**；交换环里三者一致。）
 
-商集 $A/I$（按加法陪集）上的乘法 $(a + I)(b + I) := ab + I$ 良定义，得到的环叫**商环**。
+商环的构造（商集、运算良定义与泛性质）单独成节点，见 `def.quotient-ring`。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ring`](../nodes/def.ring.md) 环：用到了定义 环　[proofs/def-dep.ideal-ring.md](../proofs/def-dep.ideal-ring.md)
+- [`def.ring-hom`](../nodes/def.ring-hom.md) 环同态：环同态的核是理想　[proofs/dep.ringhom-ideal.md](../proofs/dep.ringhom-ideal.md)
 
 - …另有入边，续页见 [nodes/def.ideal.2.md](./def.ideal.2.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`prop.ideal-basic`](../nodes/prop.ideal-basic.md) 理想的运算与商环泛性质
+- 被 [`def.quotient-ring`](../nodes/def.quotient-ring.md) 商环 用
 
 - …另有出边，续页见 [nodes/def.ideal.3.md](./def.ideal.3.md)
 

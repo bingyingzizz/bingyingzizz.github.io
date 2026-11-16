@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/dep.hb-norm.md](../proofs/dep.hb-norm.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/dep.hahnbanach-normed.md](../proofs/dep.hahnbanach-normed.md)
 
 > 续见 [nodes/thm.hahn-banach.4.md](./thm.hahn-banach.4.md)

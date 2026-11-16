@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 27 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 The **first fundamental form** of a surface is the symmetric bilinear form on $T_{p}U$

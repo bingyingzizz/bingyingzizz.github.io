@@ -1,6 +1,6 @@
 # 像就是余核的核　`prop.image-kernel-cokernel`
 命题：$\operatorname{im} f = \ker(\operatorname{coker} f)$，每个态射都严格
-layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.image-kernel-cokernel)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是阿贝尔范畴，$f : M \to N$。则

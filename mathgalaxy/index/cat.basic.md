@@ -3,11 +3,11 @@
 造出「范畴」这个概念本身：先有图 $(V, E, s, t)$，再配上复合与单位，得到一个六元组。
 中心天体 def.category　·　21 个节点　·　根 `../`　·　续页 `index/cat.basic.2.md`
 
-- def.universe　Grothendieck 宇宙　layer 4
-- ax.grothendieck-universe　Grothendieck 宇宙公理　layer 5
 - def.graph　图　layer 6
+- def.universe　Grothendieck 宇宙　layer 7
 - def.graph-morphism　图的态射　layer 7
 - def.category　范畴　layer 7
+- ax.grothendieck-universe　Grothendieck 宇宙公理　layer 8
 - def.section-retraction　截面与收缩　layer 8
 - def.category-of-groups　群范畴　layer 8
 - def.category-of-abelian-groups　阿贝尔群范畴　layer 8

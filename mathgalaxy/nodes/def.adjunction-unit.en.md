@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.adjunction-unit)　·　[Chinese page (authoritative)](./def.adjunction-unit.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Unit and Counit` (short) · `Unit and Counit of an Adjunction` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.adjunction-unit.md` and `proofs/`.
+## Statement · **draft**
+Let $F \dashv G$, and write the natural isomorphism as
 
+$$\Phi_{X, Y} : \operatorname{Hom}_{\mathcal{D}}\bigl(F(X), Y\bigr) \longrightarrow \operatorname{Hom}_{\mathcal{C}}\bigl(X, G(Y)\bigr)$$
 
-Cite: `def.adjunction-unit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Evaluating it on the two "identity morphisms" gives two natural transformations:
 
+> continued in nodes/def.adjunction-unit.en.2.md

@@ -1,6 +1,6 @@
 # 局部紧空间　`def.locally-compact-space`
 局部紧空间
-layer 0 · 定义 · 收敛与紧性 · 拓扑学
+layer 17 · 定义 · 收敛与紧性 · 拓扑学
 [在星图里打开](../#n=def.locally-compact-space)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**局部紧的**，如果**每个点都有紧邻域**：对每个 $x \in X$，存在紧集 $K$ 使

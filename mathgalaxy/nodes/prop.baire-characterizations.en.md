@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
+layer 19 · proposition · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
 ## Statement · **draft**
 The following are **equivalent**:

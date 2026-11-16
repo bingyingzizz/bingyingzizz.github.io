@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
+layer 14 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.jacobi-laws.md` and `proofs/`.

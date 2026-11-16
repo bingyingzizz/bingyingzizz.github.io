@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.fully-faithful-injective)　·　[Chinese page (authoritative)](./prop.fully-faithful-injective.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.fully-faithful-injective.md` and `proofs/`.
+## Statement · **draft**
+If $F : \mathcal{C} \to \mathcal{D}$ is **fully faithful**, then it is **essentially injective**:
 
+$$F(X) \cong F(Y) \implies X \cong Y.$$
 
-Cite: `prop.fully-faithful-injective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+**Proof.** Let $u : F(X) \to F(Y)$ be an isomorphism.
 
+> continued in nodes/prop.fully-faithful-injective.en.2.md

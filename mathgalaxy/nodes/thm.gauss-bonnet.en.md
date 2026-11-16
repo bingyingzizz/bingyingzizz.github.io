@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **stale** · stale fields: abstract (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 31 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 32 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 > continued in nodes/thm.gauss-bonnet.en.2.md

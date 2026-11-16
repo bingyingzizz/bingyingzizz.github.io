@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.tensor-functor-properties`](../nodes/prop.tensor-functor-properties.md) 张量积的函子性质 + [`def.flat-module`](../nodes/def.flat-module.md) 平坦模：与直和交换 + 单位 $\implies$ 自由模平坦　[proofs/imp.free-flat.md](../proofs/imp.free-flat.md)
+- [`def.flat-module`](../nodes/def.flat-module.md) 平坦模：用到了定义 平坦模　[proofs/dep.free-flat-flatmodule.md](../proofs/dep.free-flat-flatmodule.md)

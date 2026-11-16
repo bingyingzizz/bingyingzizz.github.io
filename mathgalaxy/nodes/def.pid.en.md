@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 12 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
 ## Statement · **draft**
 An integral domain $A$ is a **principal ideal domain** (PID) if every ideal is principal: for every ideal $I$ there is $a$ such that $I = (a) = aA$.

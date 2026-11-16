@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.right-adjoint-criterion)　·　[Chinese page (authoritative)](./thm.right-adjoint-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.right-adjoint-criterion.md` and `proofs/`.
+## Statement · **draft**
+A functor $F : \mathcal{C} \to \mathcal{D}$ has a right adjoint $\iff$ for every $Y \in \mathcal{D}$ the functor
 
+$$\operatorname{Hom}_{\mathcal{D}}\bigl(F(-),\ Y\bigr) : \mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$$
 
-Cite: `thm.right-adjoint-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is representable.
 
+> continued in nodes/thm.right-adjoint-criterion.en.2.md

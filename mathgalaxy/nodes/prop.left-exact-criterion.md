@@ -1,6 +1,6 @@
 # 左正合性的判据　`prop.left-exact-criterion`
 命题：$F$ 左正合 $\iff$ $F$ 加法且保左正合列
-layer 14 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.left-exact-criterion)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}, \mathcal{D}$ 是阿贝尔范畴，$F : \mathcal{C} \to \mathcal{D}$ 是函子。则

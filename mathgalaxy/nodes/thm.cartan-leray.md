@@ -1,6 +1,6 @@
 # Cartan–Leray 谱序列　`thm.cartan-leray`
 Cartan–Leray：Čech 到层上同调的谱序列
-layer 18 · 定理 · 层上同调 · 同调代数
+layer 20 · 定理 · 层上同调 · 同调代数
 [在星图里打开](../#n=thm.cartan-leray)　·　[节点索引](../index.md)
 
 若 $\mathfrak{X}$ 是 $X$ 的一个**覆盖**、$M$ 是阿贝尔层，则存在谱序列

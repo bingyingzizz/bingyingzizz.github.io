@@ -2,8 +2,11 @@
 [在星图里打开](../#n=def.subgroup)　·　第 1 页 [nodes/def.subgroup.md](./def.subgroup.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
 - 被 [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理 用
 - 被 [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群 用
 - ⇒ [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理
+- 被 [`def.stabilizer`](../nodes/def.stabilizer.md) 稳定子 用
+- 被 [`def.normalizer`](../nodes/def.normalizer.md) 正规化子 用
 - 被 [`ex.trivial-group`](../nodes/ex.trivial-group.md) 平凡群 用
 - 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用

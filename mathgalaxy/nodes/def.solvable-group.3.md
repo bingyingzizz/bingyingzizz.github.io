@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.solvable-group)　·　第 1 页 [nodes/def.solvable-group.md](./def.solvable-group.md)　·　上一页 [nodes/def.solvable-group.2.md](./def.solvable-group.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.nilpotent-group`](../nodes/def.nilpotent-group.md) 幂零群：幂零群可解　[proofs/imp.nilpotent-solvable.md](../proofs/imp.nilpotent-solvable.md)
+- [`def.commutator-subgroup`](../nodes/def.commutator-subgroup.md) 换位子群：用到了定义 换位子群　[proofs/dep.commutator-solvable.md](../proofs/dep.commutator-solvable.md)
 - [`def.subgroup`](../nodes/def.subgroup.md) 子群：用到了定义 子群　[proofs/dep.subgroup-solvable.md](../proofs/dep.subgroup-solvable.md)
 - [`def.quotient-group`](../nodes/def.quotient-group.md) 商群：用到了定义 商群　[proofs/dep.quotient-solvable.md](../proofs/dep.quotient-solvable.md)
 

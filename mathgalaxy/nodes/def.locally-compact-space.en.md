@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
+layer 17 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement · **draft**
 A topological space $X$ is **locally compact** if **every point has a compact neighbourhood**: for every $x \in X$ there is a compact set $K$ with

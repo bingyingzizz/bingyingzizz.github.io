@@ -5,3 +5,4 @@
 - 被 [`def.rat`](../nodes/def.rat.md) 有理数 ℚ 用
 - ⇒ [`thm.int-ring`](../nodes/thm.int-ring.md) ℤ 是交换整环
 - 被 [`def.divides`](../nodes/def.divides.md) 整除 用
+- 被 [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法 用

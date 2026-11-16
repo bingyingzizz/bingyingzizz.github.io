@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 12 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 names: `Abel transform` (short) · `Abel transform for theta and pi` (full)
 
 ## Statement · **draft**

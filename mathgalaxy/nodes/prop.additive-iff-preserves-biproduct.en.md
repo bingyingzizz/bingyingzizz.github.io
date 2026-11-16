@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 15 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Additive iff Biproducts` (short) · `Additive Functors Preserve Zero Objects and Biproducts` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
+layer 12 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
 ## Statement · **draft**
 Let $\gcd(a, n) = 1$. Then $\operatorname{ord}_{n}(a) \mid \varphi(n)$; in particular $a^{\varphi(n)} \equiv 1 \pmod n$ (Euler's theorem).

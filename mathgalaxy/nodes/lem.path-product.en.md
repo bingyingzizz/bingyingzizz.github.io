@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 18 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $\alpha$ be a path from $x_{0}$ to $x_{1}$, and $\beta$ a path from $x_{1}$ to $x_{2}$. Their **concatenation** is "first traverse $\alpha$, then $\beta$, each in half the time":

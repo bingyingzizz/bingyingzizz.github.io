@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 10 · definition · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.gcd.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 左正合性与 R⁰　`prop.left-exact-iff-R0`
 命题：$F$ 左正合 $\iff$ $R^{0}F \cong F$
-layer 14 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.left-exact-iff-R0)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴（有足够多内射）、$\mathcal{A}'$ 是阿贝尔范畴，$F : \mathcal{A} \to \mathcal{A}'$ 是**加法**函子。则

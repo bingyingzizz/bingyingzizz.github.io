@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 18 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
 ## Statement · **draft**
 In $\mathbf{K}(\mathcal{C})$:

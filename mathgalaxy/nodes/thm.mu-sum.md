@@ -1,6 +1,6 @@
 # Möbius 和的恒等式　`thm.mu-sum`
 $\mu$ 的和：只有 $n=1$ 剩下 $1$
-layer 1 · 定理 · 数论函数与素数分布 · 数论
+layer 15 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.mu-sum)　·　[节点索引](../index.md)
 
 对 $n \ge 1$，
@@ -12,7 +12,7 @@ $$\sum_{d \mid n} \mu(d) = \begin{cases} 1, & n = 1, \\ 0, & n > 1 . \end{cases}
 - [`def.mobius-function`](../nodes/def.mobius-function.md) Möbius 函数：用到了定义 Möbius 函数　[proofs/e147.definition.md](../proofs/e147.definition.md)
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`thm.mobius-inversion`](../nodes/thm.mobius-inversion.md) Möbius 反演
+- …另有出边，续页见 [nodes/thm.mu-sum.2.md](./thm.mu-sum.2.md)
 
 refs: 华罗庚《数论导引》第三章
 

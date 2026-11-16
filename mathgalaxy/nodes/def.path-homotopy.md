@@ -1,6 +1,6 @@
 # 道路同伦　`def.path-homotopy`
 道路与固定端点的同伦：同伦类 $[\alpha]$
-layer 14 · 定义 · 基本群 · 拓扑学
+layer 17 · 定义 · 基本群 · 拓扑学
 [在星图里打开](../#n=def.path-homotopy)　·　[节点索引](../index.md)
 
 $X$ 中的一条**道路**是连续映射 $\alpha : [0, 1] \to X$；$\alpha(0)$ 是**起点**，$\alpha(1)$ 是**终点**。

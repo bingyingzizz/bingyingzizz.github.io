@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Ideals and Quotients` (short) · `Operations on Ideals and Quotient Rings` (full)
 
 ## Statement · **draft**

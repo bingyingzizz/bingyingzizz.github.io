@@ -1,6 +1,6 @@
 # Sylow 定理　`thm.sylow`
 定理（Sylow）：存在性、共轭性、计数
-layer 13 · 定理 · 群作用与置换 · 抽象代数
+layer 15 · 定理 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=thm.sylow)　·　[节点索引](../index.md)
 
 设 $G$ 是有限群，$|G| = p^{a} m$，其中 $p$ 是素数、$p \nmid m$。则

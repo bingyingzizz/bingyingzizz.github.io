@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`lem.gauss-qr`](../nodes/lem.gauss-qr.md) Gauss 引理（二次剩余）：Gauss 引理 $\Longrightarrow$ 二次互反律（数矩形里的整点）　[proofs/imp.gauss-qr-quadratic-reciprocity.md](../proofs/imp.gauss-qr-quadratic-reciprocity.md)
 - [`def.legendre-symbol`](../nodes/def.legendre-symbol.md) Legendre 符号：用到了定义 Legendre 符号　[proofs/e153.definition.md](../proofs/e153.definition.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.reciprocity-prime.md](../proofs/dep.reciprocity-prime.md)

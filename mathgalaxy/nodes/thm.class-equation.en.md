@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
+layer 13 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.class-equation.md` and `proofs/`.

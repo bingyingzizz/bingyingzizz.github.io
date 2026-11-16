@@ -15,6 +15,8 @@ $$B = P A Q,$$
 - ～弱边 [`def.similarity`](../nodes/def.similarity.md) 相似
 - ～弱边 [`def.congruent-matrices`](../nodes/def.congruent-matrices.md) 合同矩阵
 
+- …另有出边，续页见 [nodes/def.equivalent-matrices.5.md](./def.equivalent-matrices.5.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.equivalent-matrices.3.md](./def.equivalent-matrices.3.md)
 

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 21 · theorem · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement · **draft**
 Let $A$ be a finitely generated $\mathbb{Z}$-algebra and $A_\blacksquare$ the pre-analytic ring whose free module is

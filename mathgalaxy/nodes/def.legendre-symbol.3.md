@@ -6,5 +6,6 @@
 - 被 [`lem.gauss-qr`](../nodes/lem.gauss-qr.md) Gauss 引理（二次剩余） 用
 - 被 [`thm.quadratic-reciprocity`](../nodes/thm.quadratic-reciprocity.md) 二次互反律 用
 - 被 [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号 用
+- ～弱边 [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数
 - ～弱边 [`def.jacobi-symbol`](../nodes/def.jacobi-symbol.md) Jacobi 符号
 - ⇒ [`thm.jacobi-laws`](../nodes/thm.jacobi-laws.md) Jacobi 符号的计算法则

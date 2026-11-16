@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 21 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 Let $f_{k}$ be holomorphic on a region $\Omega$ and converge uniformly to $K \subset \Omega$ on every compact set $f$. Then

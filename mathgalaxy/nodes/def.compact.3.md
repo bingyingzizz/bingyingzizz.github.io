@@ -9,7 +9,7 @@
 - 被 [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的 用
 - 被 [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画 用
 - ⇒ [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴
+- 被 [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间 用
 - 被 [`prop.compact-basic-operations`](../nodes/prop.compact-basic-operations.md) 紧性的基本操作 用
-- 被 [`cor.heine-borel`](../nodes/cor.heine-borel.md) 有界闭 ⟺ 紧（ℝⁿ） 用
 
 > 续见 [nodes/def.compact.4.md](./def.compact.4.md)

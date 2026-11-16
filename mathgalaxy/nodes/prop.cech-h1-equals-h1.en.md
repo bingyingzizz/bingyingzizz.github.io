@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 22 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `H1 Čech and H1` (short) · `First Čech Cohomology Equals First Cohomology` (full)
 
 ## Statement and proof

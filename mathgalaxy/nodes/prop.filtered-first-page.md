@@ -1,6 +1,6 @@
 # 过滤复形的第一页　`prop.filtered-first-page`
 命题：$E^{1}_{p,q} = H^{p+q}(\operatorname{Gr}^{p}K^{\bullet})$
-layer 18 · 命题 · 过滤与谱序列 · 同调代数
+layer 21 · 命题 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=prop.filtered-first-page)　·　[节点索引](../index.md)
 
 设 $K^{\bullet}$ 是带（递降）过滤的复形，$E^{p,q}_{r}$ 是它给出的谱序列。则

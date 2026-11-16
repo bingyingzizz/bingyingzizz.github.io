@@ -1,6 +1,6 @@
 # 双复形给出谱序列　`prop.bicomplex-spectral`
 命题：下有界双复形 $\implies$ $E^{0}_{p,q} = K^{p,q} \Longrightarrow H^{p+q}(K^{\bullet})$
-layer 18 · 命题 · 过滤与谱序列 · 同调代数
+layer 21 · 命题 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=prop.bicomplex-spectral)　·　[节点索引](../index.md)
 
 设 $K^{\bullet,\bullet}$ 是双复形，且在**两个方向上都下有界**。则存在谱序列

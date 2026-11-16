@@ -1,6 +1,6 @@
 # 三角态射的性质　`lem.triangle-morphism`
 导出三角之间态射的性质
-layer 15 · 引理 · 复形与导出三角 · 同调代数
+layer 18 · 引理 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=lem.triangle-morphism)　·　[节点索引](../index.md)
 
 设 $(u, v, w)$ 是 $\mathbf{K}(\mathcal{C})$ 中导出三角之间的态射。则

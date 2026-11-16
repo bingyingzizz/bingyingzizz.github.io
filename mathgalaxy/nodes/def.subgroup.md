@@ -15,7 +15,7 @@ layer 8 · 定义 · 代数结构 · 抽象代数
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/def-dep.subgroup-group.md](../proofs/def-dep.subgroup-group.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
+- 被 [`def.commutator-subgroup`](../nodes/def.commutator-subgroup.md) 换位子群 用
 
 - …另有出边，续页见 [nodes/def.subgroup.2.md](./def.subgroup.2.md)
 

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 26 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
 ## Statement · **draft**
 Suppose the frame is adapted to the surface: $e_{3} = n$. Then along the surface

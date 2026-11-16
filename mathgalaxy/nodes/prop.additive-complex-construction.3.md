@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子：用到了定义 加法函子　[proofs/def-link.addcomplex-functor.md](../proofs/def-link.addcomplex-functor.md)
+- [`def.category-of-complexes`](../nodes/def.category-of-complexes.md) 复形范畴：用到了定义 复形范畴　[proofs/dep.addcomplex-complexcat.md](../proofs/dep.addcomplex-complexcat.md)

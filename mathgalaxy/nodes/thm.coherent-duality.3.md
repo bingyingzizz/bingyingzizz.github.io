@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环 + [`thm.adic-structure-sheaf`](../nodes/thm.adic-structure-sheaf.md) adic 结构层是层：$j_! \dashv j^* \dashv j_*$ $\implies$ 仿射相干对偶　[proofs/imp.coherent-duality.md](../proofs/imp.coherent-duality.md)
+- [`thm.za-analytic`](../nodes/thm.za-analytic.md) 有限生成代数的解析环：用到了定义 有限生成代数的解析环　[proofs/dep.coherent-za.md](../proofs/dep.coherent-za.md)
 
 > 续见 [nodes/thm.coherent-duality.4.md](./thm.coherent-duality.4.md)

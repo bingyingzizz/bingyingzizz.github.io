@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · theorem · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 15 · theorem · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.jordan-polygon.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`thm.topos-abelian-grothendieck`
 $\mathcal{T}(\mathbf{Ab})$ 是 Grothendieck 范畴
-layer 19 · 定理 · 阿贝尔层 · 同调代数
+layer 20 · 定理 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=thm.topos-abelian-grothendieck)　·　[节点索引](../index.md)
 
 若

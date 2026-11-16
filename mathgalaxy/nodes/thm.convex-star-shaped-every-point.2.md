@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.convex-set`](../nodes/def.convex-set.md) 凸集 + [`def.star-shaped-at-point`](../nodes/def.star-shaped-at-point.md) 关于一点的星形集：凸集在每一点处星形　[proofs/imp.convex-star-shaped-every-point.md](../proofs/imp.convex-star-shaped-every-point.md)
+- [`def.star-shaped`](../nodes/def.star-shaped.md) 星形集：用到了定义 星形集　[proofs/dep.convexstar-star.md](../proofs/dep.convexstar-star.md)

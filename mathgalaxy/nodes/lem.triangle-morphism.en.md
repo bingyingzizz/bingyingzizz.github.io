@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · lemma · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 18 · lemma · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Triangle Morphisms` (short) · `Morphisms of Distinguished Triangles` (full)
 
 ## Statement and proof

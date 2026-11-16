@@ -1,6 +1,6 @@
 # 零对象与终对象　`prop.zero-object-final-criterion`
 命题：预加性范畴里零对象 $\iff$ 终对象 $\iff$ 始对象
-layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=prop.zero-object-final-criterion)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是**预加性范畴**，$M \in \mathcal{C}$。则

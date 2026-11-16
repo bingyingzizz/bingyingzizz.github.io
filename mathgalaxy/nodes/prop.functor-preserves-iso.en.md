@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.functor-preserves-iso)　·　[Chinese page (authoritative)](./prop.functor-preserves-iso.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 9 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.functor-preserves-iso.md` and `proofs/`.
+## Statement · **draft**
+Let $F : \mathcal{C} \to \mathcal{D}$ be a functor and $f : X \to Y$ an isomorphism in $\mathcal{C}$ with inverse $f^{-1} : Y \to X$. Then $F(f)$ is an isomorphism, and
 
+$$F(f)^{-1} = F\left(f^{-1}\right).$$
 
-Cite: `prop.functor-preserves-iso` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ In one line: $F(f)\,F(f^{-1}) = F(f f^{-1}) = F(1_Y) = 1_{F(Y)}$, and symmetrically.
 
+> continued in nodes/prop.functor-preserves-iso.en.2.md

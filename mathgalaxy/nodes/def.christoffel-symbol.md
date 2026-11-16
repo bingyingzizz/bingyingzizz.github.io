@@ -1,6 +1,6 @@
 # 克里斯托费尔记号　`def.christoffel-symbol`
 克里斯托费尔记号
-layer 27 · 定义 · 内蕴几何 · 微分几何
+layer 28 · 定义 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=def.christoffel-symbol)　·　[节点索引](../index.md)
 
 白话：在曲面上「把向量沿曲线搬家」要一个规则，这个规则

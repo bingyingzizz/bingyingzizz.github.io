@@ -1,6 +1,6 @@
 # 平坦模无挠　`prop.flat-domain-torsionfree`
 整环上平坦蕴含无挠；主理想整环上二者等价
-layer 15 · 命题 · 平坦模 · 同调代数
+layer 16 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.flat-domain-torsionfree)　·　[节点索引](../index.md)
 
 设 $R$ 是**整

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 18 · theorem · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Freyd–Mitchell Theorem` (short) · `Freyd–Mitchell Embedding Theorem` (full)
 
 ## Statement and proof

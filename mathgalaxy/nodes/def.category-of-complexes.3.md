@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.complex-additive`](../nodes/prop.complex-additive.md) 复形范畴是加法范畴 用
+- 被 [`prop.additive-complex-construction`](../nodes/prop.additive-complex-construction.md) 加法函子与复形构造交换 用

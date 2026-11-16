@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Zero Object Criterion` (short) · `Zero, Terminal and Initial Objects in Preabelian Categories` (full)
 
 ## Statement and proof

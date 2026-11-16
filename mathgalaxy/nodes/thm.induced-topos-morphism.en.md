@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.induced-topos-morphism)　·　[Chinese page (authoritative)](./thm.induced-topos-morphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · theorem · cluster Toposes (`cat.topos`) · Category Theory
 names: `Induced Topos Morphism` (short) · `Every Functor Induces a Topos Morphism` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.induced-topos-morphism.md` and `proofs/`.
+## Statement · **draft**
+Let $g : \mathcal{C} \to \mathcal{C}'$ be any functor. Then precomposition
 
+$$\hat{g}^{-1} : \widehat{\mathcal{C}'} \longrightarrow \widehat{\mathcal{C}}, \qquad T' \longmapsto T' \circ g^{\mathrm{op}}$$
 
-Cite: `thm.induced-topos-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.induced-topos-morphism.en.2.md

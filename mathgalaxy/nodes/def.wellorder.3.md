@@ -5,7 +5,7 @@
 - 被 [`def.ordinal`](../nodes/def.ordinal.md) 序数 用
 - 被 [`thm.recursion-wellorder`](../nodes/thm.recursion-wellorder.md) 超限递归 用
 - ⇒ [`thm.recursion-wellorder`](../nodes/thm.recursion-wellorder.md) 超限递归
-- 被 [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法 用
+- ⇒ [`thm.int-division`](../nodes/thm.int-division.md) 整数的带余除法
 - 被 [`thm.wellordering`](../nodes/thm.wellordering.md) 良序定理 用
 - 被 [`thm.hartogs`](../nodes/thm.hartogs.md) Hartogs 定理 用
 - ～弱边 [`def.finchar`](../nodes/def.finchar.md) 有限特征

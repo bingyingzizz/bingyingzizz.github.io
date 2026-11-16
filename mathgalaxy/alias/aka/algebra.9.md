@@ -1,6 +1,18 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 主理想整环 | PID → def.pid
+
+- 唯一分解整环 | UFD → def.ufd
+
+- 互素理想 | 互极大理想 → def.comaximal
+
+- 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
+
+- 埃塔勒层 | 平展层 → def.etale-sheaf
+
+- 埃塔勒层的例子 → prop.etale-sheaf-examples
+
 - 埃尔米特矩阵 | 厄米矩阵 → def.hermitian-matrix
 
 - 舒尔三角化 → thm.schur-triangularization
@@ -25,20 +37,6 @@
 
 - 有理标准形 → thm.rational-canonical-form
 
-- 域的特征 → def.characteristic
-
-- 辛形式 → def.symplectic-form
-
-- 辛基 → def.symplectic-basis
-
-- 辛标准形定理 → thm.symplectic-normal-form
-
-- 辛矩阵与辛群 → def.symplectic-matrix
-
-- 双线性型的矩阵 → def.matrix-of-bilinear-form
-
-- 合同矩阵 → def.congruent-matrices
-
-- 迷向向量 → def.isotropic-vector
+- 不变因子 | invariant factor | 行列式因子 → def.invariant-factor
 
 > 续见 alias/aka/algebra.10.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 18 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.fundamental-group.md` and `proofs/`.

@@ -7,5 +7,7 @@
 - ⇒ [`thm.uniform-limit-derivative`](../nodes/thm.uniform-limit-derivative.md) 导数与极限交换
 - ⇒ [`thm.dini`](../nodes/thm.dini.md) Dini 定理
 - ⇒ [`thm.arzela-ascoli`](../nodes/thm.arzela-ascoli.md) Arzelà–Ascoli 定理
+- 被 [`thm.weierstrass-convergence`](../nodes/thm.weierstrass-convergence.md) Weierstrass 收敛性定理 用
 - 被 [`def.ck-space`](../nodes/def.ck-space.md) C(K,E) 用
-- 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
+
+> 续见 [nodes/def.uniform-convergence.4.md](./def.uniform-convergence.4.md)

@@ -1,13 +1,15 @@
 # 素理想与极大理想　`prop.prime-ideal`
 命题：素理想、极大理想与商环
-layer 12 · 命题 · 代数结构 · 抽象代数
+layer 14 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.prime-ideal)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺交换环，$P, M \subset A$ 是**真理想**（proper；若允许 $P = A$，则「$A/P$ 是整环」失效；若允许 $M = A$，「极大」也失效）。
 
-**(i)** $P$ 叫**素理想**，若 $ab \in P \implies a \in P$ 或 $b \in P$。等价地：$A/P$ 是**整环**。
+素理想与极大理想的定义分别见 `def.prime-ideal`、`def.maximal-ideal`。
 
-**(ii)** $M$ 叫**极大理想**，若不存在理想 $J$ 使 $M \subset J \subset A$。等价地：$A/M$ 是**域**。
+**(i)** $P$ 是素理想 $\iff$ $A/P$ 是**整环**。
+
+**(ii)** $M$ 是极大理想 $\iff$ $A/M$ 是**域**。
 
 **(iii)** 极大 $\implies$ 素（$A/M$ 是域 $\implies$ 是整环）。
 

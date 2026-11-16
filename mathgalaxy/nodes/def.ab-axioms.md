@@ -1,6 +1,6 @@
 # Grothendieck 的 AB 公理　`def.ab-axioms`
 Grothendieck 的 AB 公理（AB1–AB6）
-layer 17 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.ab-axioms)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 的**正合性等级**（Grothendieck 的 AB 公理）逐条加强如下：

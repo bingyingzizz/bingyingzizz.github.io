@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 15 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Free and Projective Are Flat` (short) · `Free and Projective Modules Are Flat` (full)
 
 ## Statement · **draft**

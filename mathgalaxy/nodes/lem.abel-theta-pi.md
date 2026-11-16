@@ -1,6 +1,6 @@
 # θ 与 π 的 Abel 变换　`lem.abel-theta-pi`
 Abel 变换：$\theta$ 与 $\pi$ 的互相表示
-layer 14 · 引理 · 数论函数与素数分布 · 数论
+layer 12 · 引理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=lem.abel-theta-pi)　·　[节点索引](../index.md)
 
 $\theta(x)=\pi(x)\log x-\int_{2}^{x}\frac{\pi(t)}{t}\,\mathrm{d}t$，$\pi(x)=\frac{\theta(x)}{\log x}+\int_{2}^{x}\frac{\theta(t)}{t\log^{2}t}\,\mathrm{d}t$（$x\ge2$）。

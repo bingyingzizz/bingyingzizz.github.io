@@ -14,7 +14,7 @@ $$(AB)^{T} = B^{T} A^{T}$$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.conjugate-transpose`](../nodes/def.conjugate-transpose.md) 共轭转置 用
+- 被 [`def.row-space`](../nodes/def.row-space.md) 行空间 用
 
 - …另有出边，续页见 [nodes/def.transpose.4.md](./def.transpose.4.md)
 

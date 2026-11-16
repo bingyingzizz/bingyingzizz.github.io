@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Hom Enrichment Is Unique` (short) · `Uniqueness of the Abelian Group Structure on Hom` (full)
 
 ## Statement and proof

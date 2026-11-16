@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=thm.cayley)　·　[Chinese page (authoritative)](./thm.cayley.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · theorem · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cayley.md` and `proofs/`.
+## Statement · **draft**
+Let $G$ be a group. **Left multiplication** gives an injective homomorphism
 
+$$\rho : G \hookrightarrow \operatorname{Sym}(G), \qquad \rho(g)(h) := gh$$
 
-Cite: `thm.cayley` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+In particular, if $|G| = n$ then $G$ is isomorphic to a subgroup of $S_n$.
 
+## Notes · **draft**
+⭐ The philosophical content of the theorem exceeds its computational content: **every abstract group can be realized concretely as a group of permutations**.
+
+> continued in nodes/thm.cayley.en.2.md

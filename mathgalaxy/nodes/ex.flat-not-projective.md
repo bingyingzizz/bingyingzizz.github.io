@@ -1,6 +1,6 @@
 # 平坦但不投射　`ex.flat-not-projective`
 例子：$\mathbb{Q}$ 是平坦但不投射的 $\mathbb{Z}$-模
-layer 16 · 例 · 平坦模 · 同调代数
+layer 17 · 例 · 平坦模 · 同调代数
 [在星图里打开](../#n=ex.flat-not-projective)　·　[节点索引](../index.md)
 
 $\mathbb{Q}$ 是**平坦**的 $\mathbb{Z}$-模，但**不是投射**的。于是「平坦」严

@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-14T05:42:00.644Z
-> 15 星系 / 105 星团 / 1637 节点 / 3443 连线（强边 3364，弱边 79；其中**不分层**的「推论」63 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-16T04:03:08.859Z
+> 15 星系 / 105 星团 / 1664 节点 / 3615 连线（强边 3529，弱边 86；其中**不分层**的「推论」63 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -2541,9 +2541,7 @@ $\mathbb{N}$ 的一点紧化是 $\{1/n\} \cup \{0\}$。
 
 ⚠️ **为什么必须有局部紧**：$X$ 不局部紧时 $X^{*}$ 不 Hausdorff —— 直观上「$\infty$ 的邻域」太大，会与某些点的邻域永远相交。所以一点紧化存在性与 Hausdorff 性是**两件事**：$X^{*}$ 总是紧的，但要它 Hausdorff 就得付局部紧的代价。
 
-⚠️ **与 `imp.lch-cr` 的关系**：那条证明「局部紧 Hausdorff 空间完全正则」时，用的正是「$X^{*}$ 是紧 Hausdorff $\implies$ 正规 $\implies$ 可在 $X^{*}$ 上造 Urysohn 函数再拉回」。一点紧化是把**紧空间的好性质搬到 $X$ 上**的标准接口。
-
-
+⚠️ **与「局部紧 Hausdorff 蕴含完全正则」的关系**：那条证明用的正是「$X^{*}$ 是紧 Hausdorff $\implies$ 正规 $\implies$ 可在 $X^{*}$ 上造 Urysohn 函数再拉回」。一点紧化是把**紧空间的好性质搬到 $X$ 上**的标准接口。
 
 **两条结论的依赖完全不同**（这也是它值得单列的原因）：
 
@@ -6239,6 +6237,22 @@ $$x^{0} := e, \qquad x^{n+1} := x^{n} x \ (n \ge 0), \qquad x^{-n} := (x^{-1})^{
 
 参考：Lang, Algebra, Ch. I §2；Hungerford, Algebra, Ch. I §4
 
+#### p-群　`def.p-group`
+*定义*　p-群与 p-子群
+
+设 $p$ 是素数，$G$ 是有限群。若 $|G| = p^{n}$（$n \ge 0$），称 $G$ 是 **$p$-群**。
+等价地，$G$ 的每个元素的阶都是 $p$ 的幂：元素的阶整除 $|G|$，故只能是 $p$ 的幂；反之若每个元素的阶都是 $p$ 的幂，由 Cauchy 定理 $|G|$ 没有其他素因子，故 $|G|$ 是 $p$ 的幂。
+
+子群 $H \le G$ 若本身是 $p$-群，称 **$p$-子群**；$G$ 的极大 $p$-子群（按包含关系）叫 **Sylow $p$-子群**，见 `def.sylow-subgroup`。
+
+⭐ 例：$\mathbb{Z}/p^{n}$、$V_4 = \mathbb{Z}/2 \times \mathbb{Z}/2$、$p$-群的中心非平凡（类方程的直接推论）。
+
+⚠ $p$-群不必阿贝尔：$D_8$（$8$ 阶二面体群）是 $2$-群但不交换。
+
+⭐ $p$-群可解，而且是幂零群：它的下中心列每一步都真增长，有限步到 $G$（因为中心非平凡，对 $G/Z$ 归纳）。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.3
+
 #### 子群　`def.subgroup`
 *定义*　子群
 
@@ -6299,6 +6313,80 @@ $$(g N) \cdot (g' N) := (g g') N.$$
 ⚠️ 商**群**只对正规子群有；商**集** $G/H$ 对任何子群都有（左陪集照样划分 $G$），但那个商集上一般没有群结构。
 
 参考：Lang, Algebra
+
+#### 换位子群　`def.commutator-subgroup`
+*定义*　换位子与换位子群（导群）
+
+设 $G$ 是群。对 $x, y \in G$，元素
+$[x, y] := x y x^{-1} y^{-1}$
+叫 $x$ 与 $y$ 的**交换子**。由全体交换子生成的子群
+$[G, G] := \langle\, [x, y] : x, y \in G \,\rangle \le G$
+叫 $G$ 的**换位子群**（也叫**导群**）。
+
+**[G,G] 正规**，且商 $G/[G,G]$ 阿贝尔。更强地，若 $N \trianglelefteq G$ 使 $G/N$ 阿贝尔，则 $[G,G] \subseteq N$；所以 $G/[G,G]$ 是 $G$ 的**极大阿贝尔商**。
+
+⭐ 交换子本身不满足结合律，$[[x,y],z] \ne [x,[y,z]]$ 一般；生成的子群才是有用的对象。
+
+⭐ 例：$[S_n, S_n] = A_n$；$[G, G] = \{e\}$ 当且仅当 $G$ 阿贝尔。
+
+⭐ 与可解性的关系：令 $G^{(0)} = G$、$G^{(i+1)} = [G^{(i)}, G^{(i)}]$（**导列**）。$G$ 可解当且仅当某个 $G^{(i)} = \{e\}$。
+
+⚠ 与**下中心列** $\gamma_{i+1} = [G, \gamma_i]$ 不同：导列要求每步把自己换位，下中心列只与 $G$ 换位；下中心列终止给出幂零群，比可解强。
+
+参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §5.4
+
+#### 幂零群　`def.nilpotent-group`
+*定义*　幂零群：下中心列终止
+
+设 $G$ 是群。归纳定义**下中心列**
+$\gamma_0 = G, \qquad \gamma_{i+1} = [G, \gamma_i] = \langle\, [g, x] : g \in G,\ x \in \gamma_i \,\rangle .$
+若存在 $c \ge 0$ 使 $\gamma_c = \{e\}$，称 $G$ 是**幂零群**；最小的这样的 $c$ 叫 $G$ 的**幂零类**。
+
+等价地，**上中心列** $Z_0 = \{e\}$、$Z_{i+1}/Z_i := Z(G/Z_i)$ 在有限步到达 $G$。
+
+⭐ 例：非平凡阿贝尔群幂零类 $1$（$\gamma_1 = \{e\}$），平凡群幂零类 $0$；$D_8$ 幂零类 $2$；有限 $p$-群都幂零；$S_3$ 不幂零（$\gamma_1 = A_3$，$\gamma_2 = A_3 \ne \{e\}$）。
+
+⭐ 幂零 $\implies$ 可解：归纳有 $\gamma_i \subseteq G^{(i)}$，故导列比下中心列先终止。反之不然（$S_3$ 可解不幂零）。
+
+⚠ 幂零群的子群与商群仍幂零；但扩张不必幂零。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §6.1
+
+#### 自同构群　`def.automorphism-group`
+*定义*　自同构群与内自同构群
+
+设 $G$ 是群。$G$ 到自身的同构 $\sigma : G \to G$ 叫**自同构**；全体自同构在复合下构成群
+$\operatorname{Aut}(G) \le \operatorname{Sym}(G),$
+叫 $G$ 的**自同构群**。
+
+对 $g \in G$，映射 $c_g(x) := gxg^{-1}$ 是自同构，叫**内自同构**；全体内自同构
+$\operatorname{Inn}(G) := \{\, c_g : g \in G \,\} \trianglelefteq \operatorname{Aut}(G)$
+构成正规子群，且 $\operatorname{Inn}(G) \cong G/Z(G)$。商 $\operatorname{Out}(G) := \operatorname{Aut}(G)/\operatorname{Inn}(G)$ 叫**外自同构群**。
+
+⭐ 例：$\operatorname{Aut}(\mathbb{Z}/n) \cong (\mathbb{Z}/n)^{\times}$；$\operatorname{Aut}(V_4) \cong S_3$；$n \ne 6$ 时 $\operatorname{Aut}(S_n) = \operatorname{Inn}(S_n) \cong S_n$。
+
+⚠ $n = 6$ 是例外：$S_6$ 有外自同构，$\operatorname{Out}(S_6)$ 阶 $2$。
+
+⭐ 内自同构的核是中心 $Z(G)$：$c_g = \mathrm{id} \iff g \in Z(G)$，这正是 $G/Z(G) \cong \operatorname{Inn}(G)$ 的来源。
+
+参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.4
+
+#### 内自同构　`def.inner-automorphism`
+*定义*　内自同构：共轭作用给出的自同构
+
+设 $G$ 是群，$g \in G$。映射
+$c_g : G \to G, \qquad c_g(x) := g x g^{-1}$
+是 $G$ 的自同构，称为由 $g$ 决定的**内自同构**。全体内自同构
+$\operatorname{Inn}(G) := \{\, c_g : g \in G \,\}$
+在复合下构成群，且 $\operatorname{Inn}(G) \cong G/Z(G)$、$\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$。
+
+⭐ 内自同构正是**共轭作用** $G$ 在自身上的像：$c_g$ 就是 $x \mapsto g \cdot x$（共轭作用）。
+
+⭐ 内自同构群平凡 $\iff$ $G$ 阿贝尔；此时 $\operatorname{Inn}(G) = \{\mathrm{id}\}$、$\operatorname{Out}(G) = \operatorname{Aut}(G)$。
+
+⭐ 例：$S_n$ 的内自同构就是按循环型保持的共轭；$GL_n(K)$ 的内自同构是 $A \mapsto P A P^{-1}$。
+
+参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.4
 
 #### 群同态、核与像　`def.group-hom`
 *定义*　群同态
@@ -6445,7 +6533,7 @@ $$a x \in I, \qquad x a \in I.$$
 
 （只要求 $a x \in I$ 的叫**左理想**，只要求 $x a \in I$ 的叫**右理想**；交换环里三者一致。）
 
-商集 $A/I$（按加法陪集）上的乘法 $(a + I)(b + I) := ab + I$ 良定义，得到的环叫**商环**。
+商环的构造（商集、运算良定义与泛性质）单独成节点，见 `def.quotient-ring`。
 
 **为什么理想这样定义。** 与正规子群一模一样的问题：想在商集上定义乘法，就要让 $(a + I)(b + I)$ 与代表元无关。算一下 $(a + x)(b + y) = ab + ay + xb + xy$ —— 后面三项都得落在 $I$ 里。$xy \in I$ 由「$I$ 是子群」保证不了，必须**额外要求**。
 
@@ -6454,6 +6542,106 @@ $$a x \in I, \qquad x a \in I.$$
 **主理想** $(a) := \{\, xa : x \in A \,\}$（交换环里就是 $a$ 的倍数全体）。⚠️ 一般环里这个集合只是**左**理想：$A = M_2(\mathbb{R})$、$a = E_{11}$ 时 $E_{11}E_{12} = E_{12} \notin Aa$；一般环里 $(a)$ 的正确定义是「含 $a$ 的最小双边理想」。$A/(a)$ 是「把 $a$ 当成 $0$」造出来的环；$\mathbb{Z}/(n) = \mathbb{Z}/n\mathbb{Z}$ 就是模 $n$ 同余。
 
 参考：Lang, Algebra
+
+#### 环同态　`def.ring-hom`
+*定义*　环同态、核与像
+
+设 $R, S$ 是含幺环。映射 $f : R \to S$ 称为**环同态**，若
+$f(a+b) = f(a)+f(b), \qquad f(ab) = f(a)f(b), \qquad f(1_R) = 1_S$
+对一切 $a, b \in R$ 成立。
+
+**核** $\ker f := \{\, a \in R : f(a) = 0 \,\}$ 是 $R$ 的**理想**；**像** $\operatorname{im} f$ 是 $S$ 的子环。$f$ 单当且仅当 $\ker f = 0$；双射的环同态叫**同构**。
+
+⭐ 例：$\mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$、$K[x] \to K$、$f \mapsto f(a)$（求值）、$\mathbb{C} \to \mathbb{C}$、$z \mapsto \bar z$（共轭，是环同构但不是 $\mathbb{C}$-代数同态）。
+
+⚠ 有些教材不要求 $f(1_R) = 1_S$；本图采用「含幺环 + 保 $1$」的约定。若不保 $1$，核仍是理想，但「$R/\ker f \cong \operatorname{im} f$」需要把像的 $1$ 对齐。
+
+⭐ 第一同构定理：$R/\ker f \cong \operatorname{im} f$（商环见 `def.quotient-ring`）。
+
+参考：Lang, Algebra, Ch. II；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1
+
+#### 商环　`def.quotient-ring`
+*定义*　商环：模掉一个理想
+
+设 $A$ 是环，$I \subseteq A$ 是理想。在加法商群 $A/I$ 上定义
+$(a+I)+(b+I) := (a+b)+I, \qquad (a+I)(b+I) := ab+I .$
+这两个运算良定义，使 $A/I$ 成为环，称为**商环**；商映射 $\pi : A \to A/I$、$\pi(a) = a+I$ 是环同态，且 $\ker \pi = I$。
+
+**泛性质**：若 $f : A \to B$ 是环同态且 $f(I) = 0$，则存在唯一环同态 $\bar f : A/I \to B$ 使 $\bar f \circ \pi = f$。
+
+⭐ 为什么必须是理想：要让 $(a+x)(b+y) \equiv ab \pmod I$，需要 $ay, xb, xy \in I$；$x, y \in I$ 而 $a, b$ 任意，所以 $I$ 必须从两边吸收乘法。
+
+⭐ 例：$\mathbb{Z}/n\mathbb{Z}$、$K[x]/(f)$（$f$ 不可约时是域）、$\mathbb{F}_p[x]/(x^{2}+1)$。
+
+⭐ 若 $A$ 是含幺**交换**环，则 $A/I$ 是整环当且仅当 $I$ 是素理想；$A/I$ 是域当且仅当 $I$ 是极大理想（两个对象见后续节点，本包先给商环的构造）。交换性不能省：$M_2(\mathbb{R})$ 的零理想 $(0)$ 是极大双边理想，但 $M_2(\mathbb{R})/(0)\cong M_2(\mathbb{R})$ 既不是整环也不是域。
+
+参考：Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Lang, Algebra, Ch. II
+
+#### 素理想　`def.prime-ideal`
+*定义*　素理想：商环是整环
+
+设 $A$ 是含幺交换环，$P \subset A$ 是真理想。称 $P$ 是**素理想**，若
+$a b \in P \implies a \in P \ \text{or}\ b \in P \qquad (a, b \in A).$
+等价地，商环 $A/P$ 是**整环**（见 `def.quotient-ring`）。
+
+⭐ 例：$\mathbb{Z}$ 中 $(p)$（$p$ 素数）与 $(0)$ 都是素理想；$K[x]$ 中 $(f)$ 素 $\iff$ $f$ 不可约，$(0)$ 也素。
+
+⚠ 素理想不必极大：$\mathbb{Z}[x]$ 中 $(x)$ 素（$\mathbb{Z}[x]/(x) \cong \mathbb{Z}$ 是整环）但不极大。
+
+⭐ 素理想是「整除」的抽象：$a \in (p) \iff p \mid a$；$ab \in (p) \implies p \mid ab \implies p \mid a$ 或 $p \mid b$ 正是 Euclid 引理。
+
+参考：Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Lang, Algebra, Ch. II
+
+#### 极大理想　`def.maximal-ideal`
+*定义*　极大理想：商环是域
+
+设 $A$ 是含幺交换环，$M \subset A$ 是真理想。称 $M$ 是**极大理想**，若不存在理想 $J$ 使
+$M \subset J \subset A.$
+等价地，商环 $A/M$ 是**域**（见 `def.quotient-ring`）。每个真理想都含于某个极大理想（用 Zorn 引理）。
+
+⭐ 极大 $\implies$ 素：域一定是整环，故 $A/M$ 是整环。反之不然：$\mathbb{Z}[x]$ 中 $(x)$ 素但不极大（$(x) \subset (2, x)$）。
+
+⭐ 在 PID 中，非零素理想都极大：$K[x]$ 中 $(f)$ 极大 $\iff$ $f$ 不可约。
+
+⭐ 例：$\mathbb{Z}$ 中 $(p)$ 极大；$K[x_1,\ldots,x_n]$ 中 $(x_1,\ldots,x_n)$ 极大。
+
+参考：Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Lang, Algebra, Ch. II
+
+#### 主理想　`def.principal-ideal`
+*定义*　主理想：由一个元素生成
+
+设 $A$ 是含幺交换环，$a \in A$。集合
+$(a) := aA := \{\, a x : x \in A \,\}$
+是 $A$ 的理想，称为由 $a$ 生成的**主理想**。若理想 $I$ 对某个 $a$ 有 $I = (a)$，称 $I$ 是**主理想**。
+
+若环 $A$ 的每个理想都是主理想，称 $A$ 是**主理想整环**（PID，另见 `def.pid`）。
+
+⭐ 例：$\mathbb{Z}$ 的每个理想都是 $(n)$，故 $\mathbb{Z}$ 是 PID；域 $K$ 上 $K[x]$ 也是 PID。
+
+⚠ 一般环里「$a$ 的倍数」未必是双边理想：$M_2(\mathbb{R})$ 中 $E_{11} M_2$ 不是双边理想；非交换环要取「含 $a$ 的最小双边理想」。
+
+⚠ $K[x,y]$ 中 $(x, y)$ 不是主理想：它不能由单个多项式生成。
+
+参考：Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1；Lang, Algebra, Ch. II
+
+#### 分式域　`def.field-of-fractions`
+*定义*　分式域：整环的形式商
+
+设 $A$ 是整环。在集合 $A \times (A \setminus \{0\})$ 上定义
+$(a, s) \sim (b, t) \iff a t = b s .$
+这是等价关系；商集记 $\operatorname{Frac}(A)$，元素写成 $\frac{a}{s}$，按
+$\frac{a}{s} + \frac{b}{t} := \frac{a t + b s}{s t}, \qquad \frac{a}{s} \cdot \frac{b}{t} := \frac{a b}{s t}$
+构成**域**，叫 $A$ 的**分式域**。映射 $a \mapsto \frac{a}{1}$ 是单环同态。
+
+**泛性质**：若 $K$ 是域且 $\varphi : A \to K$ 是单环同态，则存在唯一域同态 $\bar\varphi : \operatorname{Frac}(A) \to K$ 使 $\bar\varphi(a/1) = \varphi(a)$。
+
+⭐ 例：$\operatorname{Frac}(\mathbb{Z}) = \mathbb{Q}$；$\operatorname{Frac}(K[x]) = K(x)$（有理函数域）。
+
+⚠ 必须是**整环**：有零因子时 $\frac{a}{s}$ 的等价类会退化（$s$ 可能变成零因子），构造失败。
+
+⭐ 分式域是「包含 $A$ 的最小域」，泛性质说的正是这件事。
+
+参考：Lang, Algebra, Ch. II；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 1
 
 #### 模　`def.module`
 *定义*　模与模同态
@@ -6482,6 +6670,57 @@ $$A \times M \longrightarrow M, \qquad (a, m) \longmapsto a \cdot m,$$
 所以「在 $A\text{-}\mathbf{Mod}$ 里能做的」，就是同调代数想推广到一般范畴的东西。**其余范畴能做的事情，都以它为标尺。**
 
 参考：Lang, Algebra
+
+#### 子模　`def.submodule`
+*定义*　子模：对环作用封闭的加法子群
+
+设 $A$ 是含幺环，$M$ 是 $A$-模。加法子群 $N \subseteq M$ 若满足
+$a \cdot n \in N \qquad \text{for all } a \in A,\ n \in N,$
+则称 $N$ 是 $M$ 的 **$A$-子模**。等价地，$N$ 在限制作用下本身是 $A$-模，且包含映射 $N \hookrightarrow M$ 是模同态。
+
+模同态的核与像都是子模；$A$ 的左理想正是左 $A$-模 $A$ 的子模。
+
+⭐ 三层对照：子群（群）$\subset$ 子模（模）$\subset$ 子空间（域上的模）。子模要求对**环作用**封闭，比「加法子群」多一条。
+
+⭐ 例：$A = \mathbb{Z}$ 时子模就是子群 $n\mathbb{Z}$；$A = K[x]$ 时子模是 $K[x]$-子空间。
+
+⭐ 子模格：任意交仍是子模，但并一般不是；由 $S$ 生成的子模是含 $S$ 的最小子模。商模按 $M/N$ 构造（见 `def.quotient-module`，后续节点）。
+
+参考：Lang, Algebra, Ch. III；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 2
+
+#### 模同态　`def.module-hom`
+*定义*　模同态：保持加法与环作用
+
+设 $A$ 是含幺环，$M, N$ 是 $A$-模。映射 $f : M \to N$ 称为 **$A$-模同态**，若
+$f(m + m') = f(m) + f(m'), \qquad f(a m) = a f(m)$
+对一切 $m, m' \in M$、$a \in A$ 成立。
+
+全体 $A$-模同态记 $\operatorname{Hom}_A(M, N)$，在逐点加法下是阿贝尔群。核 $\ker f$ 与像 $\operatorname{im} f$ 都是子模；$f$ 是同构 $\iff$ 双射。
+
+⭐ 例：$A = \mathbb{Z}$ 时模同态就是阿贝尔群同态；$A = K$ 时就是线性映射。
+
+⚠ $\operatorname{Hom}_A(M, N)$ 一般只是阿贝尔群，不是 $A$-模；只有 $A$ 交换时才有自然的 $A$-模结构。
+
+⭐ 第一同构定理：$M/\ker f \cong \operatorname{im} f$（商模见 `def.quotient-module`）。
+
+参考：Lang, Algebra, Ch. III；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 2
+
+#### 商模　`def.quotient-module`
+*定义*　商模：模掉一个子模
+
+设 $A$ 是含幺环，$M$ 是 $A$-模，$N \subseteq M$ 是子模。在加法商群 $M/N$ 上定义
+$(m + N) + (m' + N) := (m + m') + N, \qquad a(m + N) := a m + N .$
+这两个运算良定义，使 $M/N$ 成为 $A$-模，叫**商模**；商映射 $\pi : M \to M/N$ 是模同态，$\ker \pi = N$。
+
+**泛性质**：若 $f : M \to L$ 是模同态且 $f(N) = 0$，则存在唯一模同态 $\bar f : M/N \to L$ 使 $\bar f \circ \pi = f$。
+
+⭐ 为什么必须是子模：要让 $a(m + n) \equiv a m \pmod N$，需要 $a n \in N$ 对一切 $a \in A$、$n \in N$。
+
+⭐ 例：$\mathbb{Z}$-模 $\mathbb{Z}/n\mathbb{Z}$；向量空间 $V/W$；$A/I$ 作为 $A$-模就是商模。
+
+⭐ 第一同构：$M/\ker f \cong \operatorname{im} f$，见 `def.module-hom`。
+
+参考：Lang, Algebra, Ch. III；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 2
 
 #### 模范畴　`def.module-category`
 *定义*　模范畴 $A\text{-}\mathbf{Mod}$
@@ -6682,9 +6921,11 @@ $$IJ := \left\{ \sum_{k=1}^{n} x_k y_k : x_k \in I,\ y_k \in J,\ n \ge 0 \right\
 
 设 $A$ 是含幺交换环，$P, M \subset A$ 是**真理想**（proper；若允许 $P = A$，则「$A/P$ 是整环」失效；若允许 $M = A$，「极大」也失效）。
 
-**(i)** $P$ 叫**素理想**，若 $ab \in P \implies a \in P$ 或 $b \in P$。等价地：$A/P$ 是**整环**。
+素理想与极大理想的定义分别见 `def.prime-ideal`、`def.maximal-ideal`。
 
-**(ii)** $M$ 叫**极大理想**，若不存在理想 $J$ 使 $M \subset J \subset A$。等价地：$A/M$ 是**域**。
+**(i)** $P$ 是素理想 $\iff$ $A/P$ 是**整环**。
+
+**(ii)** $M$ 是极大理想 $\iff$ $A/M$ 是**域**。
 
 **(iii)** 极大 $\implies$ 素（$A/M$ 是域 $\implies$ 是整环）。
 
@@ -7423,6 +7664,27 @@ $$C_{d} := \begin{pmatrix} 0 & & & & -a_{0} \\ 1 & 0 & & & -a_{1} \\ & \ddots & 
 ⚠️ **本图缺的节点/边**：证明用到 Cayley–Hamilton（有节点，但没有连到本条）与「$K[x]$ 上有限生成模的结构定理」（本图没有这个节点），所以两条引理连同证明一起写在这里，而不是引用一条并不存在的边。
 
 参考：Hoffman–Kunze, Linear Algebra, Ch. 7（The Rational and Jordan Forms）· 有理标准形；Dummit–Foote, Abstract Algebra, Ch. 12（Modules over Principal Ideal Domains）· 主理想整环上的模；北大《高等代数》· 有理标准形
+
+#### 不变因子　`def.invariant-factor`
+*定义*　不变因子：Smith 标准形的对角元
+
+设 $R$ 是主理想整环，$A \in M_{m \times n}(R)$ 的 Smith 标准形为
+
+$P A Q = \operatorname{diag}(d_1, \ldots, d_r, 0, \ldots, 0), \qquad d_1 \mid d_2 \mid \cdots \mid d_r .$
+
+这些非零元 $d_i$（在相差单位的意义下唯一；$R = K[x]$ 时取首一代表）称为 $A$ 的**不变因子**。等价地，$d_1 \cdots d_k$ 是 $A$ 的所有 $k$ 阶子式的最大公因子。
+
+特别地，对 $A \in M_n(K)$，把 $xI - A \in M_n(K[x])$ 的非常数不变因子称为线性算子 $A$ 的**不变因子**。
+
+**与有理标准形**：若 $d_1 \mid \cdots \mid d_s$ 是 $xI - A$ 的非常数不变因子，则 $A$ 相似于 $\operatorname{diag}(C_{d_1}, \ldots, C_{d_s})$，其中 $C_d$ 是友矩阵；这正是有理标准形。
+
+**与极小/特征多项式**：最大的不变因子 $d_s$ 是极小多项式，乘积 $d_1 \cdots d_s$ 是特征多项式。
+
+**与初等因子**：把每个 $d_i$ 分解成不可约多项式的幂，得到的素幂因子叫初等因子；Jordan 标准形在域分裂时用初等因子陈述。
+
+**矩阵版本 vs 算子版本**：Smith 标准形对任意矩阵（可长方形、环上）陈述；算子的不变因子是 $xI - A$ 这一特殊矩阵的不变因子。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12
 
 ### 星团：内积空间与正交性
 > 在向量空间上加一把「尺子」：内积 → 诱导范数与距离 → Cauchy–Schwarz → 正交与正交补 → **Gram–Schmidt** 与正交投影 → 伴随算子 → **谱定理**（实对称 / 复正规可正交对角化）→ 二次型与 Sylvester 判据 → 奇异值分解。
@@ -8947,7 +9209,7 @@ $$\det\begin{pmatrix} \langle u,u\rangle & \langle u,w\rangle \\ \langle w,u\ran
 > 造出「让群去搬东西」这套机器：群作用（轨道 / 稳定子）→ **轨道–稳定子定理** → 类方程 → Lagrange 定理 → 置换群 $S_n$ 与循环分解 → 符号与交错群 $A_n$ → Cayley 定理 → 循环群 → Sylow 定理。核心一句话：**数轨道的大小 = 算稳定子的指数**。
 
 #### 群作用　`def.group-action`
-*定义*　群作用、轨道与稳定子
+*定义*　群作用
 
 设 $G$ 是群、$X$ 是集合。$G$ 在 $X$ 上的**（左）作用**是一个映射
 
@@ -8958,11 +9220,7 @@ $$\alpha : G \times X \to X, \qquad (g, x) \mapsto g \cdot x$$
 - $e \cdot x = x$ 对一切 $x \in X$；
 - $(gh) \cdot x = g \cdot (h \cdot x)$ 对一切 $g, h \in G$、$x \in X$。
 
-两个基本对象：
-
-$$\operatorname{Orb}(x) := Gx := \{\, g \cdot x : g \in G \,\}, \qquad \operatorname{Stab}(x) := G_x := \{\, g \in G : g \cdot x = x \,\}$$
-
-分别叫 $x$ 的**轨道**与**稳定子**。$G_x \le G$ 是子群；作用的**核**是 $\bigcap_{x \in X} G_x$。
+轨道与稳定子分别单独成节点，见 `def.orbit` 与 `def.stabilizer`。
 
 ⭐ **等价说法（全团的技巧都从这里来）**：一个作用等价于一个群同态 $\rho : G \to \operatorname{Sym}(X)$，$\rho(g)(x) := g \cdot x$。
 
@@ -8993,6 +9251,40 @@ $$\operatorname{Orb}(x) := Gx := \{\, g \cdot x : g \in G \,\}, \qquad \operator
 
 参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
 
+#### 轨道　`def.orbit`
+*定义*　轨道：一个点能到达的全体
+
+设群 $G$ 作用在集合 $X$ 上，$x \in X$。集合
+$\operatorname{Orb}(x) := G x := \{\, g \cdot x : g \in G \,\} \subseteq X$
+称为 $x$ 的**轨道**。
+
+关系 $x \sim y \iff \exists g \in G,\ y = g \cdot x$ 是 $X$ 上的等价关系，轨道正是它的等价类；因此 $X$ 是轨道的**无交并**。作用称为**传递**的，若 $X$ 只有一个轨道。
+
+⭐ $G$ 有限时，轨道大小整除 $|G|$：轨道–稳定子给出 $|Gx| = [G : G_x]$（见 `thm.orbit-stabilizer`；无限群时读作等势）。
+
+⭐ 例：$S_n$ 在 $\{1,\ldots,n\}$ 上传递；共轭作用的轨道是共轭类；左乘作用的轨道只有一个。
+
+⚠ 不同的 $x$ 给出的轨道要么相等、要么不交，不会「部分重叠」。
+
+参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
+
+#### 稳定子　`def.stabilizer`
+*定义*　稳定子：不动某一点的群元素
+
+设群 $G$ 作用在集合 $X$ 上，$x \in X$。集合
+$G_x := \operatorname{Stab}(x) := \{\, g \in G : g \cdot x = x \,\} \le G$
+称为 $x$ 的**稳定子**（或迷向子群）。
+
+$G_x$ 是 $G$ 的子群；作用的**核**是 $\bigcap_{x \in X} G_x$。轨道–稳定子给出双射 $G/G_x \to Gx$、$gG_x \mapsto g \cdot x$。共轭点有共轭稳定子：$G_{g \cdot x} = g G_x g^{-1}$。
+
+⭐ $G$ 有限时，稳定子越大、轨道越小；两者由 $|G| = |Gx| \cdot |G_x|$ 精确平衡。
+
+⭐ 作用**自由**当且仅当所有稳定子平凡（例如左乘作用）；作用**忠实**当且仅当核平凡。
+
+⭐ 例：$S_n$ 自然作用中 $G_n \cong S_{n-1}$；共轭作用中 $G_x = C_G(x)$ 是中心化子，见 `def.centralizer`。
+
+参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
+
 #### 轨道–稳定子定理　`thm.orbit-stabilizer`
 *定理*　定理（轨道–稳定子）：$|\operatorname{Orb} x| = [G : \operatorname{Stab} x]$
 
@@ -9014,10 +9306,44 @@ $$|G| = \bigl| \operatorname{Orb}(x) \bigr| \cdot \bigl| \operatorname{Stab}(x) 
 
 参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
 
+#### 中心化子　`def.centralizer`
+*定义*　中心化子：与给定集合逐元素交换的元素
+
+设 $G$ 是群，$S \subseteq G$。集合
+$$C_G(S) := \{\, g \in G : g s = s g \ \text{for all}\ s \in S \,\} \le G$$
+称为 $S$ 在 $G$ 中的**中心化子**；$C_G(x) := C_G(\{x\})$。约定 $C_G(\emptyset) = G$。
+
+$C_G(S)$ 是子群。$C_G(G) = Z(G)$ 就是 $G$ 的**中心**。在共轭作用 $g \cdot x = gxg^{-1}$ 下，$C_G(x)$ 正是 $x$ 的稳定子。
+
+⭐ 中心化子与正规化子的关系：$C_G(S) \trianglelefteq N_G(S)$，且 $C_G(S) \subseteq N_G(S)$（逐元素交换当然整体保持 $S$）。
+
+⭐ 例：$GL_n(K)$ 中数量矩阵的中心化子是全体可逆矩阵（数量矩阵在中心里）；$S_3$ 中 $C_{S_3}((12)) = \{e, (12)\}$。
+
+⭐ 类方程中非中心共轭类的大小是 $[G : C_G(x)]$，见 \`thm.class-equation\`。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.3
+
+#### 正规化子　`def.normalizer`
+*定义*　正规化子：把子群整体送到自己的元素
+
+设 $G$ 是群，$S \subseteq G$。集合
+$N_G(S) := \{\, g \in G : g S g^{-1} = S \,\} \le G$
+称为 $S$ 在 $G$ 中的**正规化子**。对子群 $H \le G$，$N_G(H)$ 是 $G$ 中含 $H$ 的、使 $H$ 在其内正规的**最大**子群。
+
+若 $H \le G$，则 $H \trianglelefteq G \iff N_G(H) = G$；又 $H \subseteq N_G(H)$，且 $H \trianglelefteq N_G(H)$。Sylow 计数 $n_p = [G : N_G(P)]$。
+
+⭐ 正规化子 vs 中心化子：$C_G(H) \subseteq N_G(H)$，一般不相等。$N_G(H)/C_G(H)$ 嵌入 $\operatorname{Aut}(H)$（共轭作用），这是「正规化子商中心化子」的标准结论。
+
+⭐ 例：$S_3$ 中 $N_{S_3}(\langle(12)\rangle) = \langle(12)\rangle$（三个对换互相共轭，正规化子不再变大）；$N_{S_3}(A_3) = S_3$。
+
+⚠ $N_G(S)$ 只要求把集合 $S$ 整体送到自己，不要求逐元素固定 —— 后者是中心化子。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.3
+
 #### 类方程　`thm.class-equation`
 *定理*　定理（类方程）：$|G| = |Z(G)| + \sum [G : C_G(x_i)]$
 
-设 $G$ 是有限群，$Z(G)$ 是它的中心，$x_1, \ldots, x_r$ 是**非中心共轭类**的一组代表元，$C_G(x) := \{g : gx = xg\}$ 是中心化子。则
+设 $G$ 是有限群，$Z(G)$ 是它的中心，$x_1, \ldots, x_r$ 是**非中心共轭类**的一组代表元，$C_G(x)$ 是 $x$ 的中心化子（见 `def.centralizer`）。则
 
 $$|G| = |Z(G)| + \sum_{i=1}^{r} \bigl[ G : C_G(x_i) \bigr]$$
 
@@ -9180,6 +9506,38 @@ $$\rho : G \hookrightarrow \operatorname{Sym}(G), \qquad \rho(g)(h) := gh$$
 ⭐ 左乘作用还是**自由**的（每个稳定子都平凡：$gh = h \implies g = e$），所以它自动是单射 —— 这是证明的核心一句。
 
 参考：Lang, Algebra, Ch. I §5；Dummit–Foote, Abstract Algebra, §4.1
+
+#### Sylow 子群　`def.sylow-subgroup`
+*定义*　Sylow p-子群：p-部分的最大子群
+
+设 $G$ 是有限群，$|G| = p^{a} m$，其中 $p$ 是素数、$p \nmid m$。$G$ 的 $p^{a}$ 阶子群 $P$ 称为 **Sylow $p$-子群**。
+
+等价地，$P$ 是 $G$ 的**极大 $p$-子群**（按包含关系）。全体 Sylow $p$-子群记作 $\operatorname{Syl}_p(G)$；若 $P \in \operatorname{Syl}_p(G)$，则 $[G : P] = m$。
+
+⭐ 存在性、共轭性、计数见 `thm.sylow`；本节点只负责「对象是什么」。
+
+⭐ 例：$S_3$（$|S_3| = 6 = 2 \cdot 3$）的 Sylow $3$-子群是 $A_3$（唯一，正规），Sylow $2$-子群是三个对换生成的三个 $2$ 阶子群。
+
+⚠ $p$-子群是「阶为 $p$ 的幂」的子群，Sylow $p$-子群是其中**最大**的那一档；一个群可以有多个 Sylow 子群。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.5
+
+#### p-群的真子群严格小于其正规化子　`lem.p-group-subgroups`
+*引理*　引理：p-群的真子群不会等于自己的正规化子
+
+设 $G$ 是有限 $p$-群，$H < G$ 是真子群。则
+$H < N_G(H),$
+即 $H$ 真包含于它在 $G$ 中的正规化子。
+
+特别地，指数 $p$ 的子群正规；并且 $p$-群的中心非平凡。
+
+证明见边 `imp.p-group-subgroups`：对 $|G|$ 归纳，用类方程给出 $Z(G) \ne \{e\}$，再分 $HZ(G) < G$ 与 $HZ(G) = G$ 两种情形。
+
+⭐ 用途：对 $i$ 归纳可证 $p$-群有所有 $p^{i}$ 阶子群（$0 \le i \le n$）；这是 Sylow 存在性证明中「$i < a$ 部分」的关键一步。
+
+⚠ 结论对一般有限群不成立：$S_3$ 中 $H = \langle(12)\rangle$ 的 $N_{S_3}(H) = H$，但 $S_3$ 不是 $p$-群。
+
+参考：Lang, Algebra, Ch. I §6；Dummit–Foote, Abstract Algebra, §4.3
 
 #### Sylow 定理　`thm.sylow`
 *定理*　定理（Sylow）：存在性、共轭性、计数
@@ -9582,6 +9940,83 @@ $$\operatorname{diag}(I_r, 0), \qquad r = \operatorname{rank} A.$$
 ⚠ 在 $\mathbb{Z}$ 上改由 Smith 标准形分类。
 
 参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 0；Hoffman–Kunze, Linear Algebra, Ch. 4
+
+#### 行空间　`def.row-space`
+*定义*　行空间：矩阵各行张成的子空间
+
+设 $A \in M_{m \times n}(K)$，其 $m$ 个行向量为 $a_1, \ldots, a_m \in K^{n}$。它们张成的子空间
+
+$\operatorname{Row}(A) := \operatorname{span}\{a_1, \ldots, a_m\} \subseteq K^{n}$
+
+称为 $A$ 的**行空间**，其维数称为**行秩**。等价地，$\operatorname{Row}(A) = \operatorname{Col}(A^{\mathsf T})$，即 $A^{\mathsf T}$ 的列空间。
+
+**初等行变换不改变行空间**：左乘可逆矩阵只是换掉行向量的一组基（行变换把各行换成它们的可逆线性组合），所以行等价矩阵有同一个行空间。因此行阶梯形的非零行给出 $\operatorname{Row}(A)$ 的一组基。
+
+行空间住在 $K^{n}$（行的长度是 $n$），列空间住在 $K^{m}$ —— 一般**不是同一个空间**，不要混。
+
+维数关系：$\dim \operatorname{Row}(A) = \operatorname{rank} A$（行秩等于矩阵的秩）。
+
+行空间与齐次方程组的解空间满足正交关系：$x \in \ker A$ 当且仅当 $x$ 与每个行向量正交；于是 $\dim \operatorname{Row}(A) + \dim \ker A = n$。
+
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 0；Hoffman–Kunze, Linear Algebra, Ch. 4
+
+#### 列空间　`def.column-space`
+*定义*　列空间：矩阵各列张成的子空间（线性映射的像）
+
+设 $A \in M_{m \times n}(K)$，列向量为 $c_1, \ldots, c_n \in K^{m}$。它们张成的子空间
+
+$\operatorname{Col}(A) := \operatorname{span}\{c_1, \ldots, c_n\} = \{\, A x : x \in K^{n} \,\} \subseteq K^{m}$
+
+称为 $A$ 的**列空间**，即线性映射 $T_A : K^{n} \to K^{m}$、$T_A(x) = Ax$ 的**像**。其维数称为**列秩**，等于 $\operatorname{rank} A$。
+
+**方程组的可解性**：$b \in \operatorname{Col}(A)$ 当且仅当 $Ax = b$ 有解。把 $A$ 化成行简化阶梯形后，主元所在的列（即 $A$ 的主元列）给出 $\operatorname{Col}(A)$ 的一组基。
+
+列空间是「$A$ 能到达哪里」；零空间（齐次解空间）是「哪些方向被 $A$ 压成 $0$」。两者维数相加为 $n$。
+
+行空间与列空间的维数相等（都等于秩），但它们是不同空间里的子空间；联系来自转置：$\operatorname{Col}(A) = \operatorname{Row}(A^{\mathsf T})$。
+
+秩–零化度：$\dim \operatorname{Col}(A) + \dim \ker A = n$。
+
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 0；Hoffman–Kunze, Linear Algebra, Ch. 4
+
+#### 行阶梯形与行简化阶梯形　`def.row-echelon-form`
+*定义*　行阶梯形：消元法化出的标准形状
+
+设 $R \in M_{m \times n}(K)$。若
+
+- 所有零行都排在非零行之下；
+- 每个非零行的首个非零元（称为**主元**）所在的列，严格在上一行主元的右侧，
+
+则称 $R$ 为**行阶梯形**（row echelon form）。若进一步每个主元都等于 $1$、且主元所在列的其他元素全为 $0$，则称 $R$ 为**行简化阶梯形**（reduced row echelon form，RREF）。
+
+**定理（消元法）**：任何 $A \in M_{m \times n}(K)$ 都能经过有限次初等行变换化为行简化阶梯形，而且这个行简化阶梯形是**唯一**的。主元的个数等于 $\operatorname{rank} A$。
+
+唯一性是 RREF 的关键：行阶梯形不唯一（可以继续做行变换），但「主元为 $1$、主元列其余为零」把自由度全部消掉，只剩一个。
+
+用途：解线性方程组（主元列对应基本变量，其余列自由变量）、求秩（数主元）、求逆（对 $[A \mid I]$ 化 RREF）、求列空间的一组基（主元列）。
+
+初等行变换对应左乘初等矩阵；RREF 是「行变换下的标准形」，而相抵还允许列变换，标准形是 $\operatorname{diag}(I_r, 0)$。
+
+参考：Horn–Johnson, Matrix Analysis, 2nd ed., Ch. 0；Hoffman–Kunze, Linear Algebra, Ch. 1
+
+#### Smith 标准形　`thm.smith-normal-form`
+*定理*　Smith 标准形：主理想整环上矩阵在相抵下的标准形
+
+设 $R$ 是主理想整环，$A \in M_{m \times n}(R)$。则存在可逆矩阵 $P \in \operatorname{GL}_{m}(R)$、$Q \in \operatorname{GL}_{n}(R)$，使
+
+$P A Q = \operatorname{diag}(d_1, d_2, \ldots, d_r, 0, \ldots, 0),$
+
+其中 $d_i \ne 0$，且 $d_1 \mid d_2 \mid \cdots \mid d_r$。这些 $d_i$ 在相差单位的意义下由 $A$ 唯一确定，称为 $A$ 的**不变因子**（invariant factors）。
+
+等价地，$d_1 \cdots d_k$ 等于 $A$ 的全部 $k$ 阶子式的最大公因子（**行列式因子**），这给出唯一性的具体算法。
+
+**与域上相抵的关系**：$K$ 是域时 $K$ 是 PID（除环），Smith 标准形退化为 $\operatorname{diag}(I_r, 0)$，即域上相抵只由秩分类。
+
+**证明思路**：在 $A$ 的等价类中取 $(1,1)$ 元素生成的理想极大的矩阵，证明它整除所有元素（否则用 Bézout 把 gcd 放到 $(1,1)$ 得到更大的理想），清空第一行第一列后对余块归纳。唯一性用行列式因子。
+
+**典型例子**：$R = \mathbb{Z}$ 时 $\operatorname{diag}(2, 6)$ 满足 $2 \mid 6$；$R = K[x]$ 时对 $xI - A$ 作 Smith 标准形，得到的非常数不变因子就是线性算子 $A$ 的不变因子，见有理标准形。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12
 
 #### 行秩 = 列秩　`thm.rank-row-col`
 *定理*　定理：行秩等于列秩，都等于矩阵的秩
@@ -10682,6 +11117,40 @@ $$f(\sigma(\alpha)) = \sigma(f(\alpha)) = \sigma(0) = 0$$
 ⚠ **最常见的误会**：以为「分裂域 = 伽罗瓦扩张」。缺的是**可分**：char $p$ 下 $x^{p} - t$ 的分裂域（$\mathbb{F}_{p}(t)$ 上）不可分，所以不是伽罗瓦扩张。char 0 下这个区别消失 —— 这也是为什么初学时看不出来。
 
 参考：Lang, Algebra, Ch. VI §1；Hungerford, Algebra, Ch. V §4
+
+#### 不动域　`def.fixed-field`
+*定义*　不动域：自同构群固定下来的元素
+
+设 $L/K$ 是域扩张，$H \le \operatorname{Aut}(L/K)$ 是 $K$-自同构群的子群。集合
+$L^{H} := \{\, x \in L : \sigma(x) = x \ \text{for all } \sigma \in H \,\}$
+称为 $H$ 的**不动域**（fixed field）。它是 $L$ 的子域，且 $K \subseteq L^{H} \subseteq L$。
+
+在有限 Galois 扩张的 Galois 对应中，$H \mapsto L^{H}$ 与中间域 $M \mapsto \operatorname{Gal}(L/M)$ 互为逆映射（见 `thm.galois-correspondence`）。
+
+⭐ 反包含：$H_1 \subseteq H_2 \implies L^{H_2} \subseteq L^{H_1}$ —— 群越大，不动的东西越少。
+
+⭐ 例：$\mathbb{C}/\mathbb{R}$ 的共轭自同构生成 $2$ 阶群，其不动域是 $\mathbb{R}$；有限域 $\mathbb{F}_{p^n}/\mathbb{F}_p$ 的 Frobenius 生成群的不动域是 $\mathbb{F}_p$。
+
+⚠ 不动域一般**不等于**「固定每个元素的域」的某种初等构造：它是把 $H$ 的全部元素一起看，不是逐个元素单独取固定点。
+
+参考：Lang, Algebra, Ch. VI；Dummit–Foote, Abstract Algebra, §14.2
+
+#### 代数闭包　`def.algebraic-closure`
+*定义*　代数闭包：代数扩张且代数闭
+
+设 $K$ 是域。域扩张 $\bar K / K$ 称为 $K$ 的**代数闭包**，若
+1. $\bar K$ 是**代数闭**的（每个非常数多项式在 $\bar K$ 中有根，见 `def.algebraically-closed`）；
+2. $\bar K / K$ 是**代数扩张**（每个元素都是 $K$ 上某个非零多项式的根）。
+
+在 Zorn 引理下，每个域都有代数闭包；并且任意两个代数闭包之间存在 $K$-同构（在同构意义下唯一）。
+
+⭐ 例：$\mathbb{C}$ 是 $\mathbb{R}$ 的代数闭包；$\overline{\mathbb{Q}}$（$\mathbb{Q}$ 上全体代数数）是 $\mathbb{Q}$ 的代数闭包；$\mathbb{F}_p$ 的代数闭包是 $\bigcup_{n} \mathbb{F}_{p^n}$。
+
+⚠ 代数闭包不是「唯一的集合」，而是「在同构意义下唯一」；不同构造给出 $K$-同构的域。
+
+⭐ 存在性用 Zorn，但要先取**集合**：全体代数扩张是真类，不能直接排序。先给候选域一个基数上界 $\le \max(|K|, \aleph_0)$（每个代数元是 $K[x]$ 中某个非零多项式的根，而 $K[x]$ 只有 $\max(|K|,\aleph_0)$ 个元素、每个多项式只有有限个根，故代数元的总数不超过这个界），只保留界内的代数扩张，再对它们用 Zorn；极大元必代数闭（否则添一个根继续扩张）。
+
+参考：Lang, Algebra, Ch. V；Dummit–Foote, Abstract Algebra, §13.4
 
 #### 伽罗瓦基本定理　`thm.galois-correspondence`
 *定理*　伽罗瓦对应：中间域 $\leftrightarrow$ 子群（反包含、次数换指数）
@@ -43668,6 +44137,10 @@ $L^p$ 的元素取复值：$f : X \to \mathbb{C}$。
 
 像 $f(A)$ 与原像 $f^{-1}(B)$ 都预设 $f$ 是**映射**。
 
+#### 定义引用：「分离公理模式」→ 空集 ∅　`dep.empty-sep`
+
+空集由分离公理模式 $\{x \in A : x \ne x\}$ 得到（$A$ 任取）。
+
 #### 定义引用：「子集」→ 幂集 𝒫(X)　`dep.subset-powerset`
 
 幂集的元素就是**子集**：$A \in \mathcal{P}(X) \iff A \subseteq X$。
@@ -43877,6 +44350,10 @@ Jordan 曲线定义为 $S^{1}$ 在同胚下的像；「像」上的拓扑取子�
 *对角线引理：多边形三角剖分的归纳步*
 
 对顶点数 $n$ 归纳。由 `lem.polygon-diagonal` 取一条对角线 $[a,b]$，它把 $P$ 分成两个边数更少（$n_1,n_2<n$）的简单多边形 $P_1,P_2$。由归纳假设 $P_i$ 各有三角剖分 $\Gamma_i$，其并加上 $[a,b]$ 就是 $P$ 的三角剖分：三角形个数 $(n_1-2)+(n_2-2)=n-2$，两两内部不交，且并的边界恰为 $P$。∎
+
+#### 定义引用：「子空间」→ Jordan 曲线　`dep.jordan-subspace`
+
+Jordan 曲线带子空间拓扑。
 
 #### 定义引用：「关系」→ 商集与等价类　`dep.rel-quotient`
 
@@ -45339,6 +45816,18 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 
 > 经典证明用蛇引理，这里用映射锥 + 旋转。两条路都通，但后者的好处是：**连接同态是什么**这件事，一眼就能看出来。
 
+#### 定义引用：「加法范畴」→ 上链复形　`dep.cochain-additive`
+
+复形定义在加法范畴中。
+
+#### 定义引用：「阿贝尔范畴」→ 内射对象的判据　`dep.injcrit-abelian`
+
+内射性判据在阿贝尔范畴中。
+
+#### 定义引用：「阿贝尔范畴」→ 过滤　`dep.filtration-abelian`
+
+滤过是阿贝尔范畴中对象上的结构。
+
 #### 定义引用：「群」→ 群的整数幂　`dep.grouppower-group`
 
 整数幂只用群的乘法、单位元与逆元定义。
@@ -45379,6 +45868,57 @@ D_n 作用在正 n 边形的顶点集上。
 
 D_n 的共轭类可用类方程分析。
 
+#### 定义引用：「群」→ p-群　`dep.pgroup-group`
+
+p-群首先是一个群；定义在其上再加阶为素数幂的条件。
+
+#### 定义引用：「群」→ 换位子群　`dep.commutator-group`
+
+交换子用群乘法与逆元定义。
+
+#### 定义引用：「子群」→ 换位子群　`dep.commutator-subgroup`
+
+换位子群是由交换子生成的子群。
+
+#### 定义引用：「换位子群」→ 可解群　`dep.commutator-solvable`
+
+可解性用导列 $G^{(i+1)}=[G^{(i)},G^{(i)}]$ 定义。
+
+#### 定义引用：「群」→ 幂零群　`dep.nilpotent-group`
+
+下中心列用群乘法与换位子定义。
+
+#### 定义引用：「换位子群」→ 幂零群　`dep.nilpotent-commutator`
+
+下中心列是换位子子群的迭代。
+
+#### 幂零群 ⟹ 可解群　`imp.nilpotent-solvable`
+*幂零群可解*
+
+设 $\gamma_0 = G$、$\gamma_{i+1} = [G, \gamma_i]$，并设 $G^{(i)}$ 是导列。对 $i$ 归纳证明 $\gamma_i \subseteq G^{(i)}$。
+
+$i = 0$：$\gamma_0 = G = G^{(0)}$。若 $\gamma_i \subseteq G^{(i)}$，则
+$$\gamma_{i+1} = [G, \gamma_i] \subseteq [G, G^{(i)}] = G^{(i+1)} .$$
+若 $G$ 幂零，取 $c$ 使 $\gamma_c = \{e\}$，则 $G^{(c)} \supseteq \gamma_c = \{e\}$，故 $G^{(c)} = \{e\}$，即 $G$ 可解。$\blacksquare$
+
+> $\gamma_i \subseteq G^{(i)}$ 是关键：下中心列夹在导列与 $G$ 之间。
+
+#### 定义引用：「群」→ 自同构群　`dep.automorphism-group`
+
+自同构是群到自身的同构，先有群结构。
+
+#### 定义引用：「群同态、核与像」→ 自同构群　`dep.automorphism-hom`
+
+自同构是同态的特殊情形（双射同态）。
+
+#### 定义引用：「自同构群」→ 内自同构　`dep.inner-automorphism`
+
+内自同构是自同构群的正规子群。
+
+#### 定义引用：「群作用」→ 内自同构　`dep.inner-conjugation`
+
+共轭作用是群在自身上的作用，其像即内自同构。
+
 #### 定义引用：「范畴」→ 模范畴　`def-link.category-module-category`
 
 模范畴是「对象为模、态射为模同态」的范畴，是 def.category 在代数里的标准例子。
@@ -45386,6 +45926,131 @@ D_n 的共轭类可用类方程分析。
 #### 定义引用：「模」→ 模范畴　`def-link.module-module-category`
 
 模范畴的对象类正是全体左 A-模。
+
+#### 定义引用：「环」→ 环同态　`dep.ringhom-ring`
+
+环同态是含幺环之间的映射。
+
+#### 环同态 ⟹ 理想　`dep.ringhom-ideal`
+*环同态的核是理想*
+
+设 $\varphi : A \to B$ 是环同态。$\varphi(0)=0$ 故 $0\in \ker\varphi$。若 $x, y \in \ker\varphi$，则 $\varphi(x-y) = \varphi(x) - \varphi(y) = 0$；若 $a \in A$，则 $\varphi(ax) = \varphi(a)\varphi(x) = 0$、$\varphi(xa) = \varphi(x)\varphi(a) = 0$。故 $\ker\varphi$ 对减法与双边乘法封闭，即 $A$ 的理想。∎
+
+> 这是判定（核落在理想里），不是定义依赖：环同态的定义不要求先有理想。
+
+#### 定义引用：「环同态」→ 理想的运算与商环泛性质　`dep.ringhom-propideal`
+
+该命题用环同态的核与像表述。
+
+#### 定义引用：「理想」→ 商环　`dep.quotient-ideal`
+
+商环模掉的是理想。
+
+#### 定义引用：「环」→ 商环　`dep.quotient-ring`
+
+商环的加法与乘法来自原环。
+
+#### 定义引用：「多项式环」→ 商环　`dep.quotient-poly`
+
+$K[x]/(f)$ 是商环的标准例子。
+
+#### 定义引用：「商环」→ 理想的运算与商环泛性质　`dep.quotient-propideal`
+
+该命题讨论商环中的理想对应。
+
+#### 定义引用：「商环」→ 素理想与极大理想　`dep.quotient-prime`
+
+素理想与极大理想通过商环刻画。
+
+#### 定义引用：「模」→ 子模　`dep.submodule-module`
+
+子模是模的加法子群并封闭于环作用。
+
+#### 定义引用：「子模」→ 内射模　`dep.submodule-injective`
+
+内射模用子模的扩张性质定义。
+
+#### 定义引用：「模」→ 模同态　`dep.module-hom`
+
+模同态保持模的加法与环作用。
+
+#### 模同态 ⟹ 子模　`dep.modulehom-submodule`
+*模同态的核与像是子模*
+
+设 $f : M \to N$ 是 $R$-模同态。$f(0)=0$ 故 $0\in \ker f$；若 $x, y \in \ker f$、$r \in R$，则 $f(x-y)=0$、$f(rx) = r f(x) = 0$，故 $\ker f \le M$ 是子模。同理 $x, y$ 在像里时 $f(x-y) = f(x)-f(y)$ 仍在像里、$r f(x) = f(rx)$ 仍在像里，且 $0 = f(0)$ 在像里，故 $\operatorname{im} f \le N$ 是子模。∎
+
+> 这是判定（核与像落在子模里），不是定义依赖：模同态的定义不要求先有子模。
+
+#### 定义引用：「模」→ 商模　`dep.quotient-module`
+
+商模是模对子模的商。
+
+#### 定义引用：「子模」→ 商模　`dep.quotient-submodule`
+
+商模商掉的必须是子模。
+
+#### 定义引用：「模同态」→ 商模　`dep.quotient-map`
+
+商映射是模同态，商模满足同态的泛性质。
+
+#### 定义引用：「理想」→ 素理想　`dep.prime-ideal`
+
+素理想是环的理想，附加 $ab \in P \implies a \in P$ 或 $b \in P$。
+
+#### 定义引用：「商环」→ 素理想　`dep.prime-quotient`
+
+素性等价于商环 $A/P$ 是整环。
+
+#### 定义引用：「理想」→ 极大理想　`dep.maximal-ideal`
+
+极大理想是理想，附加极大性。
+
+#### 定义引用：「商环」→ 极大理想　`dep.maximal-quotient`
+
+极大性等价于商环 $A/M$ 是域。
+
+#### 定义引用：「素理想」→ 素理想与极大理想　`dep.prop-prime`
+
+命题给出素理想的商环刻画。
+
+#### 定义引用：「极大理想」→ 素理想与极大理想　`dep.prop-maximal`
+
+命题给出极大理想的商环刻画。
+
+#### 极大理想 ⟹ 素理想　`imp.maximal-prime`
+*极大理想是素理想*
+
+设 $M$ 是极大理想，则 $A/M$ 是域（极大性的商环刻画）。域一定是整环，故 $A/M$ 是整环；由素理想的商环刻画，$M$ 是素理想。$\blacksquare$
+
+> 这是真蕴含；因 $M$ 更特殊、层号不低于素理想，按层向规则标 `layer:false`。
+
+#### 定义引用：「理想」→ 主理想　`dep.principal-ideal`
+
+主理想是理想的特例：由单个元素生成。
+
+#### 定义引用：「环」→ 分式域　`dep.fractions-ring`
+
+分式域从整环（含幺交换环）构造。
+
+#### 定义引用：「域」→ 分式域　`dep.fractions-field`
+
+分式域的构造以域为目标范畴。
+
+#### 定义引用：「核与像」→ 子模　`dep.submodule-kernelimage`
+
+子模的例子是同态的核与像。
+
+#### 定义引用：「环同态」→ 分式域　`dep.fractions-ringhom`
+
+分式域的泛性质用环同态陈述。
+
+#### 定义引用：「线性映射」→ 模范畴　`dep.modcat-linearmap`
+
+模范畴的态射是线性映射。
+
+#### 定义引用：「环同态」→ 商环　`dep.quotient-ringhom`
+
+商环的商映射与泛性质都用环同态陈述。
 
 #### 定义引用：「Ind-对象」→ Pro-对象　`dep.proobj-ind`
 
@@ -45399,6 +46064,18 @@ Pro-对象是 Ind-对象取对偶得到的构造：把滤过图换成余滤过�
 
 Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无法陈述「余滤过图」。
 
+#### 定义引用：「紧」→ 局部紧空间　`dep.lch-compact`
+
+局部紧空间的紧子集讨论以紧性为基础。
+
+#### 定义引用：「阿贝尔范畴」→ 导出函子的长正合列　`dep.derivedlong-abelian`
+
+导出函子长正合列在阿贝尔范畴中。
+
+#### 定义引用：「加法范畴」→ 双复形　`dep.bicomplex-additive`
+
+双复形定义在加法范畴中。
+
 #### 定义引用：「上链复形」→ Čech 复形　`dep.cechcomplex-cochain`
 
 Čech 复形就是上链复形，微分按面拉回交错和定义。
@@ -45406,6 +46083,10 @@ Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无�
 #### 定义引用：「Čech 复形」→ Čech 上同调　`dep.cechcomplex-cechcoh`
 
 Čech 上同调是 Čech 复形取同调后的结果（再沿覆盖取余极限）。
+
+#### 定义引用：「阿贝尔范畴」→ 一般正合列　`dep.exactseq-abelian`
+
+正合列在阿贝尔范畴中定义。
 
 #### 定义引用：「等化子 / 余等化子」→ 核与余核　`def-link.kernel-eq`
 
@@ -45474,6 +46155,18 @@ $\ker f$ 就是 $f$ 与零态射的等化子，用的是「等化子」这个概
 #### 定义引用：「一般正合列」→ Hausdorff 拓扑阿贝尔群的核与余核　`def-link.abhaus-exact`
 
 「严格正合」是在正合列之上再加「嵌入闭、满射开」两条。
+
+#### 定义引用：「加法范畴」→ 伴随函子都加法　`dep.adjoint-additive`
+
+加性伴随命题以加法范畴为背景。
+
+#### 定义引用：「加法范畴」→ 核与余核　`dep.kernelcokernel-additive`
+
+核与余核在加法范畴中。
+
+#### 定义引用：「加法范畴」→ 加法函子的刻画　`dep.additive-biproduct`
+
+加性等价于保持双积，在加法范畴中。
 
 #### 定义引用：「Čech 函子」→ 带截面的覆盖上 Čech 零调　`def-link.cechsec-cech`
 
@@ -45625,6 +46318,10 @@ $N$ 与 $\operatorname{RHom}$ 都在凝聚态阿贝尔群里。
 
 > 提升的每一步都靠内射对象抬起映射（判据见 `prop.injective-criterion`）。
 
+#### 定义引用：「加法范畴」→ 单纯对象给出链复形　`dep.simplicialchain-additive`
+
+单纯复形到链复形的构造在加法范畴中。
+
 #### 定义引用：「K-有界正合」→ K-有界正合沿滤过余极限保持　`def-link.kbfc-kbounded`
 
 命题要证的就是「$K$-有界正合」在滤过余极限下保持。
@@ -45713,6 +46410,10 @@ $\operatorname{Ext}^{1}(A,I) = 0$ 对一切 $A$ 成立，是内射性的同调�
 
 结论是「预层情形下可表示对象的上同调为零」，与层上同调对照。
 
+#### 定义引用：「阿贝尔范畴」→ 内射与零调的等价　`dep.injacyclic-abelian`
+
+内射等价于无环，在阿贝尔范畴中。
+
 #### 定义引用：「闭开集」→ Stone 空间的闭开加细　`def-link.clopenref-clopen`
 
 加细用的块就是闭开集。
@@ -45748,6 +46449,14 @@ $\operatorname{Ext}^{1}(A,I) = 0$ 对一切 $A$ 成立，是内射性的同调�
 #### 定义引用：「正合函子」→ 左正合性与 R⁰　`def-link.r0-exactfun`
 
 结论是「$F$ 左正合」。
+
+#### 定义引用：「阿贝尔范畴」→ 左正合性的判据　`dep.leftexact-abelian`
+
+左正合判据在阿贝尔范畴中。
+
+#### 定义引用：「阿贝尔范畴」→ 左正合性与 R⁰　`dep.leftexactR0-abelian`
+
+左正合等价于 R^1 消失，在阿贝尔范畴中。
 
 #### 定义引用：「Pontryagin 对偶」→ 紧阿贝尔群的两项消解　`def-link.ttr-dual`
 
@@ -46021,6 +46730,10 @@ $F$ 自由因而投射，$F \to f(S)$ 可提升为 $F \to S \hookrightarrow X$ �
 
 两边都是自由对象。
 
+#### 定义引用：「阿贝尔范畴」→ 生成元的余积刻画　`dep.gencoproduct-abelian`
+
+命题在阿贝尔范畴中讨论生成元与余积。
+
 #### 定义引用：「上链复形」→ 加法函子与复形构造交换　`def-link.addcomplex-complex`
 
 命题说的就是复形范畴本身。
@@ -46087,6 +46800,10 @@ $F$ 自由因而投射，$F \to f(S)$ 可提升为 $F \to S \hookrightarrow X$ �
 #### 定义引用：「自由阿贝尔群层」→ Čech 上链的具体公式　`def-link.cechformula-free`
 
 推导用的是自由对象把余积换成直和。
+
+#### 定义引用：「复形范畴」→ 加法函子与复形构造交换　`dep.addcomplex-complexcat`
+
+复形构造以复形范畴为语境。
 
 #### 定义引用：「层上同调」→ 高次上同调预层的关联层为零　`def-link.higherpresheaf0-sheafcoh`
 
@@ -48260,6 +48977,67 @@ $$x_j = \frac{1}{\det A} \sum_i C_{ij} b_i$$
 
 多重线性型是定义在 $K$-向量空间 $V$ 上的映射 $V^{n} \to K$，所以要先用向量空间。
 
+#### 定义引用：「矩阵」→ 行空间　`dep.rowspace-matrix`
+
+行空间由矩阵的行向量张成。
+
+#### 定义引用：「秩」→ 行空间　`dep.rowspace-rank`
+
+行秩定义为行空间的维数，等于矩阵的秩。
+
+#### 定义引用：「转置」→ 行空间　`dep.rowspace-transpose`
+
+行空间等于转置矩阵的列空间。
+
+#### 定义引用：「矩阵」→ 列空间　`dep.colspace-matrix`
+
+列空间由矩阵的列向量张成。
+
+#### 定义引用：「线性映射」→ 列空间　`dep.colspace-linearmap`
+
+列空间就是线性映射 $x \mapsto Ax$ 的像。
+
+#### 定义引用：「秩」→ 列空间　`dep.colspace-rank`
+
+列秩等于矩阵的秩。
+
+#### 定义引用：「矩阵」→ 行阶梯形与行简化阶梯形　`dep.rref-matrix`
+
+行阶梯形是对矩阵作初等行变换得到形状。
+
+#### 定义引用：「初等变换与初等矩阵」→ 行阶梯形与行简化阶梯形　`dep.rref-elementary`
+
+化行阶梯形用的是初等行变换（左乘初等矩阵）。
+
+#### 定义引用：「主理想整环」→ Smith 标准形　`dep.smith-pid`
+
+Smith 标准形要求基环是主理想整环。
+
+#### 定义引用：「矩阵」→ Smith 标准形　`dep.smith-matrix`
+
+定理对环上的 $m \times n$ 矩阵陈述。
+
+#### 定义引用：「初等变换与初等矩阵」→ Smith 标准形　`dep.smith-elementary`
+
+证明用初等行、列变换实现等价变形。
+
+#### 定义引用：「相抵矩阵（等价矩阵）」→ Smith 标准形　`dep.smith-equivalent`
+
+Smith 标准形是相抵关系下的标准形。
+
+#### 主理想整环 + 初等变换与初等矩阵 + 相抵矩阵（等价矩阵） ⟹ Smith 标准形　`imp.smith-normal-form`
+*PID 上的 gcd 消元 $\implies$ Smith 标准形*
+
+**存在性**。若 $A = 0$ 取 $r = 0$。否则在 $A$ 的等价类中取一个矩阵 $B$，使 $(1,1)$ 元素 $a$ 生成的理想 $(a)$ 在包含关系下极大（PID 是 Noether 环，理想升链稳定，故这样的 $B$ 存在）。
+
+先证 $a$ 整除 $B$ 的每个元素。若第一行有 $b$ 不被 $a$ 整除（设它在第 $j$ 列，$j \ge 2$），令 $d = \gcd(a, b)$，则 $(d) \supsetneq (a)$；由 Bézout 写 $d = u a + v b$，对**列**作可逆变换 $C_{1} \leftarrow u C_{1} + v C_{j}$、$C_{j} \leftarrow -\frac{b}{d} C_{1} + \frac{a}{d} C_{j}$（系数矩阵的行列式 $\frac{u a + v b}{d} = 1$，故整体可逆），它把 $(1,1)$ 换成 $u a + v b = d$，与 $(a)$ 的极大性矛盾。**这里必须动列**：$b$ 本来就在第一行，动行只能把第一行换成它自身的线性组合，清不掉 $b$。故 $a$ 整除第一行每个元素；同法（转置后动行）得 $a$ 整除第一列每个元素。于是用列变换 $C_{j} \leftarrow C_{j} - \frac{a_{1j}}{a} C_{1}$ 清掉第一行、再用行变换 $R_{i} \leftarrow R_{i} - \frac{a_{i1}}{a} R_{1}$ 清掉第一列，且不动 $(1,1)$。
+
+若余下的 $(m-1) \times (n-1)$ 子块有元素 $c$ 不被 $a$ 整除（设它在第 $j$ 列），把 $c$ 所在行加到第一行：$(1,1)$ 仍是 $a$，而 $(1,j)$ 变成 $c$，这与 $(a)$ 的极大性矛盾（上一段的论证说明：第一行一旦出现不被 $a$ 整除的元素，就能把 $(1,1)$ 换成 $\gcd(a,c)$）。故 $a$ 整除整个余块。对余块归纳，得 $\operatorname{diag}(a, d_2, \ldots, d_r, 0)$；因为 $a$ 整除余块的所有元素，故 $a \mid d_2$，归纳假设给出整除链。
+
+**唯一性**。对 $k \ge 1$，令 $\Delta_k$ 为 $A$ 的全部 $k$ 阶子式的最大公因子（$\Delta_0 := 1$）。左乘或右乘可逆矩阵只把 $k$ 阶子式乘上可逆元，故 $\Delta_k$ 在相抵下不变。而 $\operatorname{diag}(d_1, \ldots, d_r, 0)$ 的 $k$ 阶子式（$k \le r$）的非零值只有 $d_{i_1} \cdots d_{i_k}$，由整除链其最大公因子为 $d_1 \cdots d_k$。于是 $d_k = \Delta_k / \Delta_{k-1}$ 由 $A$ 唯一决定（相差单位）。∎
+
+> 关键一步是在等价类中取 $(1,1)$ 理想极大的矩阵；PID 的 Noether 性保证它存在。
+
 #### 定义引用：「环」→ 多项式环　`dep.ring-polyring`
 
 $K[x]$ 是环的一个具体例子：加法逐项、乘法卷积，验证的就是环公理。
@@ -48398,6 +49176,14 @@ $$a f + b g = d$$
 #### 定义引用：「域」→ 一元多项式　`dep.field-polynomial`
 
 多项式定义在系数域 $K$ 上（换成一般交换环也成立，但 $K[x]$ 的除法性质要靠域）。
+
+#### 定义引用：「极大理想」→ 不可约多项式　`dep.irreducible-maximal`
+
+不可约多项式等价于主理想极大。
+
+#### 定义引用：「主理想」→ 不可约多项式　`dep.irreducible-principal`
+
+不可约多项式的判据用主理想。
 
 #### 定义引用：「线性映射」→ 不变子空间　`dep.linearmap-invariant`
 
@@ -48550,6 +49336,10 @@ $$\dim \ker (T - \lambda I)^{k}$$
 #### 定义引用：「商空间」→ Jordan 标准形　`def-link.quotient-jordan`
 
 归纳步在商空间 $V/\ker(T-\lambda I)$ 上做 —— 商空间的定义与泛性质直接进入证明。
+
+#### 定义引用：「代数闭包」→ 极小多项式整除特征多项式　`dep.minpoly-algebraicclosure`
+
+最小多项式在代数闭包中分裂。
 
 #### 定义引用：「线性无关与基」→ 内积　`dep.vs-innerproduct`
 
@@ -49471,14 +50261,14 @@ $$\rho : G \to \operatorname{Sym}(G), \qquad g \mapsto (h \mapsto gh).$$
 
 > ⭐ 第三步「取 $h = e$」这一步是全部内容：**自由性（稳定子平凡）就是单性**。任何自由作用都会给出一个单同态，Cayley 只是取作用为左乘。
 
-#### 类方程 + 群作用 + 轨道–稳定子定理 ⟹ Sylow 定理　`imp.sylow`
+#### 类方程 + 群作用 + 轨道–稳定子定理 + p-群的真子群严格小于其正规化子 ⟹ Sylow 定理　`imp.sylow`
 *类方程 + 让 Sylow 子群作用 $\implies$ Sylow 三条*
 
 记 $|G| = p^{a} m$、$p \nmid m$。
 
 **（1）存在性：对 $|G|$ 归纳。** $a = 0$ 时取平凡子群。设 $a \ge 1$。
 
-- **情形 A：$p \mid |Z(G)|$。** 取 $z \in Z(G)$，$\operatorname{ord}(z) = p$（Cauchy 引理，由类方差的推论加上对阶归纳可得）。
+- **情形 A：$p \mid |Z(G)|$。** 取 $z \in Z(G)$，$\operatorname{ord}(z) = p$（这一步要交代清楚，不能白拿。由类方程 $|G| = |Z(G)| + \sum_i [G:C_G(x_i)]$，右端非中心共轭类的长度都是 $p$ 的正幂、故全被 $p$ 整除，而 $p \mid |G|$，所以 $p \mid |Z(G)|$。$Z(G)$ 是阿贝尔群，对它的阶归纳即可取出 $p$ 阶元：取 $x \ne e$，若 $p \mid \operatorname{ord}(x)$ 则 $x^{\operatorname{ord}(x)/p}$ 的阶恰为 $p$；否则 $Z(G)/\langle x \rangle$ 的阶仍被 $p$ 整除，降阶归纳取出后再沿商映射提升。$z$ 取这个 $p$ 阶元即可）。
 
 令 $\overline G := G/\langle z\rangle$，则 $|\overline G| = p^{a-1}m$。
 
@@ -49495,7 +50285,7 @@ $$\rho : G \to \operatorname{Sym}(G), \qquad g \mapsto (h \mapsto gh).$$
 
 对 $C_G(x_i)$ 用归纳假设得 $p^{a}$ 阶子群，它也是 $G$ 的。
 
-（$p^{i}$ 阶子群（$i < a$）由对 $p^{a}$ 阶子群再用一次「$p$-群有 $p^{i}$ 阶子群」的归纳得到。）
+**（1'）所有 $p^{i}$ 阶子群（$0 \le i \le a$）。** 上面已造出 $P \le G$、$|P| = p^{a}$（Sylow $p$-子群）。对 $i$ 归纳造 $P$ 的 $p^{i}$ 阶子群：$i = 0$ 取 $\{e\}$。设已有 $H \le P$、$|H| = p^{i} < p^{a}$。对 $p$-群 $P$ 用 `lem.p-group-subgroups`：$H$ 是真子群，故 $H < N_P(H)$，于是 $N_P(H)/H$ 是非平凡 $p$-群；同一条引理给出它的中心非平凡，取中心里非平凡元 $x$、令 $k = \operatorname{ord}(x)$，则 $y := x^{p^{k-1}}$ 的阶为 $p$ 且仍中心，故 $\langle y \rangle \trianglelefteq N_P(H)/H$ 是 $p$ 阶子群。取它在 $N_P(H)$ 中的原像 $H^{\prime} \le N_P(H) \le P$，则 $|H^{\prime}| = p^{i+1}$，且 $H \trianglelefteq H^{\prime}$。归纳到 $i = a$，$P$ 的全部阶都取到，它们当然也是 $G$ 的子群。
 
 **（2）共轭性。** 设 $P, Q$ 是 Sylow $p$-子群，考虑 $P$ 在左陪集集合 $X := G/Q$ 上的作用 $g \cdot (hQ) := (gh)Q$。
 
@@ -49634,6 +50424,87 @@ $$|N| = 1 + (\text{若干个 } 15, 20, 12, 12 \text{ 之和}).$$
 ⚠ 第四步用了一个小事实：$A_5 \le A_n$（$n \ge 5$）—— 固定后 $n-5$ 个点、在前 $5$ 个点上做偶置换即可。
 
 它是 $A_n$ 的子群，而子群可解性向下传（`thm.solvable-quotients` (a)）。
+
+#### 定义引用：「群作用」→ 轨道　`dep.orbit-action`
+
+轨道是群作用的一个基本对象。
+
+#### 定义引用：「群作用」→ 稳定子　`dep.stabilizer-action`
+
+稳定子是群作用的另一个基本对象。
+
+#### 定义引用：「子群」→ 稳定子　`dep.stabilizer-subgroup`
+
+稳定子被证明是子群。
+
+#### 定义引用：「轨道」→ 轨道–稳定子定理　`dep.orbit-os`
+
+轨道–稳定子定理的陈述用到轨道。
+
+#### 定义引用：「稳定子」→ 轨道–稳定子定理　`dep.stabilizer-os`
+
+轨道–稳定子定理的陈述用到稳定子。
+
+#### 定义引用：「群作用」→ 中心化子　`dep.centralizer-action`
+
+中心化子是共轭作用的稳定子。
+
+#### 稳定子 + 群作用 ⟹ 中心化子　`dep.centralizer-stab`
+*共轭作用的稳定子 $\implies$ 中心化子*
+
+共轭作用 $g\cdot x := g x g^{-1}$。按定义 $G_x = \{\, g : g x g^{-1} = x \,\} = \{\, g : gx = xg \,\} = C_G(x)$，两者逐元素相同。∎
+
+> 这是识别（同一子群的两种写法），不是定义依赖：中心化子先有独立定义，本边只登记「共轭作用的稳定子恰是它」。
+
+#### 定义引用：「中心化子」→ 类方程　`dep.centralizer-class`
+
+类方程中非中心共轭类的大小是 $[G:C_G(x)]$。
+
+#### 定义引用：「群作用」→ 正规化子　`dep.normalizer-action`
+
+正规化子描述共轭作用如何保持子群。
+
+#### 定义引用：「子群」→ 正规化子　`dep.normalizer-subgroup`
+
+正规化子是含该子群的子群。
+
+#### 定义引用：「正规化子」→ Sylow 定理　`dep.normalizer-sylow`
+
+Sylow 计数 $n_p=[G:N_G(P)]$ 用正规化子表述。
+
+#### 定义引用：「p-群」→ Sylow 子群　`dep.sylow-pgroup`
+
+Sylow 子群是 $p$-子群中最大的一档。
+
+#### 定义引用：「群的阶与元素的阶」→ Sylow 子群　`dep.sylow-order`
+
+Sylow 子群的阶 $p^a$ 由 $|G|=p^a m$ 界定。
+
+#### 定义引用：「Sylow 子群」→ Sylow 定理　`dep.sylow-thm`
+
+Sylow 定理研究 Sylow 子群的存在、共轭与计数。
+
+#### 定义引用：「p-群」→ p-群的真子群严格小于其正规化子　`dep.pgroup-lemma`
+
+引理的对象是有限 $p$-群。
+
+#### 定义引用：「类方程」→ p-群的真子群严格小于其正规化子　`dep.lemma-class`
+
+证明用类方程得到中心非平凡。
+
+#### p-群 + 类方程 ⟹ p-群的真子群严格小于其正规化子　`imp.p-group-subgroups`
+
+对 $|G|=p^{n}$ 归纳。$n=1$ 时 $G$ 没有真子群，结论真空成立。
+
+设 $n>1$，由类方程 $Z(G)\ne\{e\}$；记 $Z=Z(G)$。
+
+**情形 1：$HZ<G$。** 因为 $Z$ 中心，$HZ=ZH$ 是子群，且 $H\le HZ$。分两种子情形。**1a：$HZ>H$。** 由 $Z\ne\{e\}$ 且 $HZ>H$ 知 $HZ$ 是比 $G$ 小的 $p$-群；对 $(HZ,H)$ 用归纳假设，得 $H<N_{HZ}(H)\le N_G(H)$。**1b：$HZ=H$**（即 $Z\subseteq H$）。此时 $H/Z$ 是 $G/Z$ 的真子群，而 $|G/Z|=p^{n-1}<p^{n}=|G|$；对 $(G/Z,H/Z)$ 用归纳假设，得 $H/Z<N_{G/Z}(H/Z)$。又 $N_{G/Z}(H/Z)=N_G(H)/Z$（$Z$ 中心且 $Z\subseteq H$），故 $H<N_G(H)$。
+
+**情形 2：$HZ=G$。** 任取 $g\in G$，写 $g=hz$（$h\in H,z\in Z$）。则 $gHg^{-1}=hzHz^{-1}h^{-1}=hHh^{-1}=H$，故 $H\trianglelefteq G$，即 $N_G(H)=G>H$。
+
+两种情形都给出 $H<N_G(H)$。指数 $p$ 的子群自动正规：这时 $[G:N_G(H)]$ 整除 $p$ 且 $N_G(H)>H$，故 $N_G(H)=G$。$\blacksquare$
+
+> 多源：$p$-群的定义与类方程（中心非平凡）共同支撑；证明按 $HZ$ 是否等于 $G$ 分情形。
 
 #### 环 ⟹ 环与域的基本等式　`imp.field-rules`
 *环公理 $\implies$ 基本等式*
@@ -50512,6 +51383,18 @@ $$0 \ne \operatorname{Ext}^1_{\mathbb{R}}(\mathbb{R}_{\ell^1}[S], \mathbb{R}_{\e
 
 $\mathbb{Z}_{p,\blacksquare}$ 与 $(A,\mathbb{Z})_\blacksquare$ 的解析性直接归约到 $\mathbb{Z}_\blacksquare$ 的固态性。
 
+#### 定义引用：「解析环」→ 有限生成代数的解析环　`dep.za-analytic-ring`
+
+Zariski 主定理的陈述以解析环（Noetherian 完备环）为对象。
+
+#### 定义引用：「有限生成代数的解析环」→ 仿射相干对偶　`dep.coherent-za`
+
+凝聚对偶的证明引用 Zariski 主定理处理解析环的结构。
+
+#### 定义引用：「预解析环」→ 有限生成代数的解析环　`dep.za-preanalytic`
+
+Zariski 主定理以预解析环为对象。
+
 #### adic 谱 Spa + 离散 Huber pair ⟹ A⁺ 由谱决定　`imp.huber-subring-recovery`
 *赋值的定义 $\implies$ $A^+$ 由谱决定*
 
@@ -51158,6 +52041,14 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 #### 定义引用：「投射 / 内射对象」→ 平坦但不投射　`dep.n11-flatnp-proj`
 
 投射对象的定义（与平坦对比例子）
+
+#### 定义引用：「平坦模」→ 平坦的等价说法　`dep.flat-equiv-flatmodule`
+
+平坦等价条件以平坦模的定义为出发点。
+
+#### 定义引用：「平坦模」→ 自由模平坦　`dep.free-flat-flatmodule`
+
+自由模平坦的论证用到平坦模的泛性质刻画。
 
 #### 定义引用：「平坦模」→ 平坦维数　`dep.fd-flat`
 
@@ -52588,6 +53479,10 @@ $$II = -\sum_{i=1}^{2}\omega^{i}\omega^{i}_{\ 3} = \sum_{ij}\tilde h_{ij}\omega^
 
 **唯一性**：两解 $(r, e_{i})$ 与 $(\tilde r, \tilde e_{i})$ 的 $\omega$ 相同，故它们的相对变换是常数（平行的正交变换），再配一次平移即重合。∎
 
+#### 定义引用：「联络形式」→ 适配标架　`dep.adapted-connection`
+
+适配标架的联络形式落在切向形式中。
+
 #### 定义引用：「等距」→ 内蕴量　`dep.isometry-intrinsic`
 
 「内蕴量」正是用等距来定义的：等距不变的量叫内蕴量。所以内蕴性的判据永远是「拿一个等距去试」。
@@ -53382,6 +54277,10 @@ $$\int_{Q}\partial_{i}f_{i}\,\mathrm{d}x^{1}\cdots\mathrm{d}x^{n} = 0 .$$
 **拼回去。** 各块相加时，内部边界出现两次、方向相反、互相抵消，剩下恰好是 $\partial M$ 上的积分。∎
 
 ⚠️ 符号全部来自「诱导定向 = 外法向在前」这一条约定；约定改一个字，整条公式就差一个负号。
+
+#### 定义引用：「光滑映射」→ 拉回（开集间）　`dep.pullback-smoothmap`
+
+拉回形式沿光滑映射定义。
 
 #### 复数 ℂ ⟹ 模长的三角不等式　`imp.complex-triangle`
 *复数的模与辐角 $\implies$ 模长三角不等式*
@@ -54677,6 +55576,10 @@ $$\int_{U}g^{\ast}\omega = \int_{U}(\beta\circ g)\,\det\Bigl(\frac{\partial g}{\
 **（4）拼回去。** 逐项相加，再用单位分解「和为一」把系数约掉，得 $\int_{M}f^{\ast}\omega = \varepsilon\int_{N}\omega$。∎
 
 ⭐ 绝对值的有无就是「有没有定向」：$n$-形式自带符号，故换元带 $\det$；密度不带符号，故换元带 $|\det|$。两条公式的差别全在这里。
+
+#### 定义引用：「Lie 导数」→ 散度　`dep.divergence-liederiv`
+
+散度用 Lie 导数作用在体积形式上定义。
 
 #### 全纯函数 + 复围道积分 ⟹ Goursat 三角形引理　`imp.goursat-triangle-proof`
 *全纯 + 围道积分 $\implies$ 三角形上的积分为零*
@@ -56281,6 +57184,14 @@ $$g(z) := \frac{f(z)}{z}, \qquad |g(z)| \le 1;$$
 
 > 粉红边：真推出，但反过来更自然 —— 只作补充线索。
 
+#### 定义引用：「全纯函数」→ Weierstrass 收敛性定理　`dep.weierstrass-holomorphic`
+
+Weierstrass 收敛定理的对象是全纯函数列。
+
+#### 定义引用：「一致收敛」→ Weierstrass 收敛性定理　`dep.weierstrass-uniform`
+
+Weierstrass 收敛定理的前提是一致收敛。
+
 #### 全纯函数的 Taylor 展开 + 唯一性定理 ⟹ 解析延拓　`e22.implication`
 *幂级数当载体、唯一性定理当粘合剂*
 
@@ -56762,6 +57673,10 @@ van Kampen 算的就是 $\pi_{1}$：两边是诱导映射 $i_{*}, j_{*}$，右�
 
 > 完整证明见本条边；节点注只保留动机与缺口。
 
+#### 定义引用：「光滑流形」→ 自由真不连续作用的光滑商　`dep.quotient-manifold-smooth`
+
+商流形引理的结论是商空间为光滑流形，需先有光滑流形定义。
+
 #### 定义引用：「单纯复形」→ CW 复形　`dep.cw-simplicial`
 
 单纯复形是 CW 复形的特例。
@@ -57192,6 +58107,10 @@ S–C 要证：给定内角 $\alpha_{k}\in(0,2]$ 的多边形 $P$，存在上半
 
 幂、指数、对数等初等函数是标准共形映射的构件。
 
+#### 定义引用：「交比」→ 交比为实 ⟺ 四点共圆　`dep.crossratio-real-crossratio`
+
+实交比命题是交比在实轴上的特殊情形。
+
 #### 复数 ℂ ⟹ 扩充复平面与球极投影　`e105.implication`
 *在 $\mathbb{C}$ 上补一个点：邻域用 $|z| > R$ 定义*
 
@@ -57293,14 +58212,6 @@ $$2au + 2bv + c(|z|^{2} - 1) = d(1 + |z|^{2}).$$
 
 整数 $\mathbb{Z}$ 是整除关系的载体：$a \mid b$ 的定义直接落在 $\mathbb{Z}$ 的元素上。
 
-#### 定义引用：「理想」→ 整除　`e114.definition`
-
-整除就是主理想的包含：$a \mid b \iff (b) \subseteq (a)$。这条把初等数论与环论对齐。
-
-#### 定义引用：「整除」→ 整数的带余除法　`e115.definition`
-
-带余除法的陈述里直接用了「整除」：$b \ne 0$，$r < |b|$，而 $a - qb = r$ 就是「$b$ 除 $a$ 的余数」。
-
 #### 定义引用：「整除」→ 最大公因数　`e116.definition`
 
 最大公因数的定义是「同时整除 $a$ 与 $b$ 的最大正整数」—— 没有整除就没有公因数。
@@ -57328,14 +58239,6 @@ $\mathbb{Z}/n\mathbb{Z}$ 是环：加法、乘法、单位元全由 $\mathbb{Z}$
 #### 定义引用：「剩余类环」→ 中国剩余定理　`e122.definition`
 
 中国剩余定理说的是「剩余类环的直积分解」—— 陈述里两个对象都是 $\mathbb{Z}/n\mathbb{Z}$。
-
-#### 定义引用：「剩余类环」→ Euler 函数　`e123.definition`
-
-$\varphi(n)$ 就是单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 的阶。
-
-#### 定义引用：「群」→ Euler 定理　`e124.definition`
-
-单位群是群：Euler 定理的证明只用到「有限群的元素阶整除群阶」。
 
 #### 整数的带余除法 ⟹ 辗转相除法　`imp.nt-division-euclid`
 *辗转相除法：反复做带余除，余数严格下降*
@@ -57467,6 +58370,78 @@ $\gcd(a,b) > 1$ 的情形改用 $n$ 的一个真因子与 $n/\text{它}$ 同样�
 
 故不可能 $\equiv -1$。
 
+#### 定义引用：「最大公因数」→ Euler 函数　`dep.phi-gcd`
+
+定义里的计数条件是 $\gcd(a,n)=1$，直接用到最大公因数。
+
+#### 定义引用：「素数」→ Euler 函数　`dep.phi-prime`
+
+乘积公式里的 $p_i$ 是 $n$ 的两两不同素因子，直接用到素数的概念。
+
+#### 定义引用：「整数 ℤ」→ 整数的带余除法　`dep.intdiv-int`
+
+陈述的载体是 $a,b,q,r\in\mathbb{Z}$。
+
+#### 定义引用：「绝对值 |x|」→ 整数的带余除法　`dep.intdiv-abs`
+
+陈述写的是 $0\le r<|b|$，直接用到绝对值。
+
+#### 定义引用：「最大公因数」→ 辗转相除法　`dep.euclidalg-gcd`
+
+陈述的输出就是 $\gcd(a,b)$。
+
+#### 定义引用：「绝对值 |x|」→ 辗转相除法　`dep.euclidalg-abs`
+
+算法从 $|a|,|b|$ 起步并保证余数非负。
+
+#### 定义引用：「最大公因数」→ Bézout 恒等式　`dep.bezout-gcd`
+
+陈述写 $d=\gcd(a,b)$。
+
+#### 定义引用：「素数」→ 素数有无穷多个　`dep.inftprimes-prime`
+
+陈述的主语就是素数。
+
+#### 定义引用：「素数」→ 算术基本定理　`dep.fta-prime`
+
+陈述把整数写成素数的乘积。
+
+#### 定义引用：「最大公因数」→ 中国剩余定理　`dep.crt-gcd`
+
+陈述的条件是 $n_i$ 两两互素，用最大公因数表述。
+
+#### 定义引用：「Euler 函数」→ Euler 定理　`dep.eulertheorem-phi`
+
+陈述的指数是 $\varphi(n)$。
+
+#### 定义引用：「最大公因数」→ Euler 定理　`dep.eulertheorem-gcd`
+
+陈述的条件是 $\gcd(a,n)=1$。
+
+#### 定义引用：「同余」→ Euler 定理　`dep.eulertheorem-congr`
+
+结论写成同余式 $a^{\varphi(n)}\equiv1\pmod n$。
+
+#### 定义引用：「素数」→ Fermat 小定理　`dep.fermat-prime`
+
+陈述要求 $p$ 是素数。
+
+#### 定义引用：「整除」→ Fermat 小定理　`dep.fermat-divides`
+
+陈述的条件 $p\nmid a$ 与结论都用整除写。
+
+#### 定义引用：「同余」→ Fermat 小定理　`dep.fermat-congr`
+
+结论是同余式 $a^{p-1}\equiv1\pmod p$。
+
+#### 定义引用：「素数」→ Wilson 定理　`dep.wilson-prime`
+
+陈述要求 $p$ 是素数。
+
+#### 定义引用：「同余」→ Wilson 定理　`dep.wilson-congr`
+
+结论是同余式 $(p-1)!\equiv-1\pmod p$。
+
 #### 定义引用：「环」→ 整环　`e127.definition`
 
 整环是「交换、含幺、无零因子」的环 —— 三个条件全是对 `def.ring` 的追加。
@@ -57513,10 +58488,6 @@ PID 的定义就是「每个理想都是主理想」—— 没有理想这个概
 考虑 $\varphi: A \to A/I \times A/J$，$a \mapsto (a \bmod I,\ a \bmod J)$，它是环同态。核 $\ker\varphi = I \cap J$。由第一同构定理，$A/(I \cap J) \cong \operatorname{im}\varphi$；再由互素 $I+J=A$ 写出 $1 = u+v$（$u\in I$、$v\in J$），对任意 $(x,y)$ 取 $a = xv + yu$ 即得 $a\equiv x \pmod I$、$a \equiv y \pmod J$，故 $\varphi$ 满射、$\operatorname{im}\varphi = A/I\times A/J$。合起来 $A/(I\cap J)\cong A/I\times A/J$；两两互素的情形对 $k$ 归纳。∎
 
 > 第一同构定理提供「商掉核」这一步；满射性不用它，用互素给出的显式构造。
-
-#### 定义引用：「唯一分解整环」→ 算术基本定理　`e137.definition`
-
-算术基本定理就是「$\mathbb{Z}$ 是 UFD」这句话在整数上的展开。
 
 #### 定义引用：「唯一分解整环」→ K[x] 是唯一分解整环　`e138.definition`
 
@@ -57615,6 +58586,14 @@ $$a \sim \prod_{i} p_{i}^{\,m_{i}}, \qquad b \sim \prod_{i} p_{i}^{\,n_{i}} .$$
 （这也说明 Bézout 整环里 Euclid 引理可以直接搬：$p \mid ab$ 时取 $(p, a) = (d)$ 论证，与 PID 的证明一字不差。）
 
 > 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
+
+#### 定义引用：「主理想」→ Bézout 整环　`dep.bezout-principal`
+
+Bézout 整环要求有限生成理想主。
+
+#### 定义引用：「主理想」→ 主理想整环　`dep.pid-principal`
+
+主理想整环要求每个理想都是主理想。
 
 #### 素数计数函数 ⟹ ψ 与 θ 的分组恒等式　`imp.pnt-lemma1`
 *按素数幂的指数分组*
@@ -57979,6 +58958,10 @@ $f$ 有界、局部可积是假设；Laplace 变换与尾项估计都以此为�
 
 整个证明就是对 $C=\partial D$ 的围道积分做估计。
 
+#### 定义引用：「积性函数」→ Möbius 函数　`dep.mobius-multiplicative`
+
+Möbius 函数是积性函数，积性定义是其直接上位概念。
+
 #### 定义引用：「同余」→ 二次剩余　`e149.definition`
 
 二次剩余的陈述就是同余方程 $x^{2} \equiv a$ 有没有解。
@@ -58011,21 +58994,9 @@ Jacobi 符号是把 Legendre 符号按素因子幂乘起来。
 
 原根的定义就是「阶等于 $\varphi(n)$」。
 
-#### 定义引用：「群」→ 模 n 的阶　`e157.definition`
-
-阶就是元素在单位群里的阶 —— 群论概念在模算术里的坐标。
-
 #### 定义引用：「原根」→ 离散对数　`e158.definition`
 
 离散对数以原根为底，唯一性来自「生成元」。
-
-#### 定义引用：「模素数有原根」→ 离散对数　`e159.definition`
-
-原根存在，离散对数才有定义。
-
-#### 定义引用：「积性函数」→ Legendre 符号　`e160.definition`
-
-Legendre 符号对第一个变量完全积性（$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$）。
 
 #### 模 n 的阶 ⟹ Euler 判别法　`imp.nt-euler-criterion`
 *Euler 判别法：$a^{(p-1)/2}$ 只能等于 $\pm 1$*
@@ -58148,6 +59119,122 @@ $$\Bigl(\frac{m}{n}\Bigr)=\prod_{i,j}\Bigl(\frac{p_i}{q_j}\Bigr)^{a_ib_j}=\prod_
 补充公式 $(-1/n)=(-1)^{(n-1)/2}$、$(2/n)=(-1)^{(n^{2}-1)/8}$：对 $n$ 的每个素因子用 Legendre 版本，再由 (2) 相乘；指数按模 $2$ 相加，同样由上面的同余得到。∎
 
 > Jacobi 符号运算法则直接由 Legendre 符号与互反律展开；互反律层号更高，故本边不参与分层。
+
+#### 定义引用：「循环群」→ 原根　`dep.primroot-cyclic`
+
+原根使单位群成为循环群。
+
+#### 定义引用：「最大公因数」→ 模 n 的阶　`dep.ordmod-gcd`
+
+陈述的前提是 $\gcd(a,n)=1$。
+
+#### 定义引用：「同余」→ 模 n 的阶　`dep.ordmod-congr`
+
+定义式为 $a^{k}\equiv1\pmod n$，是同余式。
+
+#### 定义引用：「最大公因数」→ 原根　`dep.primroot-gcd`
+
+陈述的前提是 $\gcd(g,n)=1$。
+
+#### 定义引用：「Euler 函数」→ 原根　`dep.primroot-phi`
+
+定义要求 $\operatorname{ord}_n(g)=\varphi(n)$。
+
+#### 定义引用：「剩余类环」→ 原根　`dep.primroot-zmodn`
+
+陈述直接出现单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$。
+
+#### 定义引用：「最大公因数」→ 离散对数　`dep.dlog-gcd`
+
+陈述的前提是 $\gcd(a,n)=1$。
+
+#### 定义引用：「Euler 函数」→ 离散对数　`dep.dlog-phi`
+
+陈述把 $k$ 的范围限定为 $0\le k<\varphi(n)$。
+
+#### 定义引用：「同余」→ 离散对数　`dep.dlog-congr`
+
+定义式 $a\equiv g^{k}\pmod n$ 是同余式。
+
+#### 定义引用：「素数」→ 二次剩余　`dep.qr-prime`
+
+陈述要求 $p$ 是奇素数。
+
+#### 定义引用：「整除」→ 二次剩余　`dep.qr-divides`
+
+陈述的条件 $p\nmid a$ 用整除写。
+
+#### 定义引用：「素数」→ Legendre 符号　`dep.legendre-prime`
+
+陈述要求 $p$ 是奇素数。
+
+#### 定义引用：「同余」→ Legendre 符号　`dep.legendre-congr`
+
+定义分成 $a\equiv x^{2}\pmod p$ 与其余两类，都是同余式。
+
+#### 定义引用：「整除」→ Legendre 符号　`dep.legendre-divides`
+
+陈述的条件 $p\nmid a$ 用整除写。
+
+#### 定义引用：「素数」→ Jacobi 符号　`dep.jacobi-prime`
+
+定义对 $n$ 作素因子分解，用素数。
+
+#### 定义引用：「模 n 的阶」→ 阶整除 Euler 函数　`dep.orddivphi-order`
+
+陈述用 $\operatorname{ord}_n(a)$。
+
+#### 定义引用：「Euler 函数」→ 阶整除 Euler 函数　`dep.orddivphi-phi`
+
+结论是 $\operatorname{ord}_n(a)\mid\varphi(n)$。
+
+#### 定义引用：「最大公因数」→ 阶整除 Euler 函数　`dep.orddivphi-gcd`
+
+前提 $\gcd(a,n)=1$。
+
+#### 定义引用：「素数」→ 模素数有原根　`dep.primexists-prime`
+
+陈述的对象是素数 $p$。
+
+#### 定义引用：「剩余类环」→ 模素数有原根　`dep.primexists-zmodn`
+
+陈述写 $\mathbb{F}_p^{\times}=(\mathbb{Z}/p\mathbb{Z})^{\times}$。
+
+#### 定义引用：「Euler 函数」→ 模素数有原根　`dep.primexists-phi`
+
+陈述用 $\varphi(p)=p-1$。
+
+#### 定义引用：「循环群」→ 模素数有原根　`dep.primexists-cyclic`
+
+结论断言单位群是循环群。
+
+#### 定义引用：「原根」→ 模素数有原根　`dep.primexists-primroot`
+
+结论断言存在模 $p$ 的原根。
+
+#### 定义引用：「素数」→ Euler 判别法　`dep.eulercrit-prime`
+
+陈述要求 $p$ 是奇素数。
+
+#### 定义引用：「同余」→ Euler 判别法　`dep.eulercrit-congr`
+
+判据用同余式 $a^{(p-1)/2}\equiv\pm1$。
+
+#### 定义引用：「素数」→ Gauss 引理（二次剩余）　`dep.gaussqr-prime`
+
+陈述要求 $p$ 是奇素数。
+
+#### 定义引用：「同余」→ Gauss 引理（二次剩余）　`dep.gaussqr-congr`
+
+引理的表述与证明都用同余。
+
+#### 定义引用：「素数」→ 二次互反律　`dep.reciprocity-prime`
+
+陈述要求 $p,q$ 是奇素数。
+
+#### 定义引用：「最大公因数」→ Jacobi 符号的计算法则　`dep.jacobilaws-gcd`
+
+陈述的条件是 $\gcd(m,n)=1$。
 
 #### 定义引用：「选择函数」→ Zorn 引理　`e162.definition`
 
@@ -58847,6 +59934,10 @@ $T - \lambda I$ 在 $G_{\lambda}$ 上是幂零的 —— 这就是「广义」�
 
 复情形把正交矩阵换成酉矩阵。
 
+#### 定义引用：「特征多项式」→ 幂零　`dep.nilpotent-charpoly`
+
+幂零的等价条件用特征多项式表述。
+
 #### 定义引用：「线性无关与基」→ 矩阵范数　`dep.mnorm-vs`
 
 算子范数由向量范数诱导，所以先有向量空间与它的范数概念。
@@ -59290,6 +60381,10 @@ $$f(x) := \frac{d(x, A)}{d(x, A) + d(x, B)} ,$$
 
 > 源头是特例或更强的条件、目标是独立的一般定义，这条只作逻辑包含、不分层。
 
+#### 定义引用：「子空间」→ 完全正规空间　`dep.cnormal-subspace`
+
+完全正规性要求每个子空间正规。
+
 #### 紧 ⟹ 局部紧空间　`imp.compact-locally-compact`
 
 设 $X$ 紧。
@@ -59446,6 +60541,18 @@ de Rham 复形里的边缘就是**恰当形式**（$\omega = d\eta$）。
 #### 定义引用：「环」→ 域的特征　`dep.char-primering`
 
 定义走 $\mathbb{Z} \to K$ 这个环同态，要先有环与理想。
+
+#### 定义引用：「Smith 标准形」→ 不变因子　`dep.invariant-smith`
+
+不变因子就是 Smith 标准形的对角元。
+
+#### 定义引用：「不变因子」→ 有理标准形　`dep.invariant-rcf`
+
+有理标准形按不变因子分块成友矩阵。
+
+#### 定义引用：「环同态」→ 域的特征　`dep.characteristic-ringhom`
+
+特征用唯一环同态 Z 到 K 的核定义。
 
 #### 定义引用：「同调」→ 上同调类　`dep.cc-hom`
 
@@ -60139,6 +61246,34 @@ $$\lVert v_1u_1-v_2u_2\rVert\le\lVert v_1\rVert\lVert u_1-u_2\rVert+\lVert v_1-v
 $B(E)$ 含单位 $\mathrm{id}$，$E\ne\{0\}$ 时 $\lVert\mathrm{id}\rVert=1$，故是赋范代数。∎
 
 > 完整证明见本条边；节点注只保留动机与缺口。
+
+#### 定义引用：「赋范空间」→ 几乎正交引理　`dep.almostorth-normed`
+
+几乎正交引理在赋范空间中进行。
+
+#### 定义引用：「赋范空间」→ 有界线性算子　`dep.boundedop-normed`
+
+有界算子定义在赋范空间之间。
+
+#### 定义引用：「赋范空间」→ Schauder 基　`dep.schauder-normed`
+
+Schauder 基是赋范空间中的序列。
+
+#### 定义引用：「赋范空间」→ 严格凸　`dep.strictlyconvex-normed`
+
+严格凸性是赋范空间范数的性质。
+
+#### 定义引用：「赋范空间」→ 连续 ⟺ 有界　`dep.linearcont-normed`
+
+线性映射连续等价有界，在赋范空间之间。
+
+#### 定义引用：「星形集」→ 凸集在每一点处星形　`dep.convexstar-star`
+
+定理的结论是每点处星形。
+
+#### 定义引用：「赋范空间」→ Hahn–Banach 定理　`dep.hahnbanach-normed`
+
+Hahn–Banach 定理在赋范空间（次线性泛函控制）中陈述。
 
 #### Baire 纲定理 ⟹ Baire 的三条等价刻画　`imp.fa-baire-characterizations`
 *Baire 的三种说法等价*
@@ -61029,6 +62164,10 @@ Hausdorff 是定义的一部分（排除「带两个原点的直线」那类局�
 
 > 分类定理第二步（组合归类）的精确陈述与证明缺口现在由本节点承载；分类定理的证明引用它，而不是把整段组合论证塞进注里。
 
+#### 定义引用：「不可定向亏格」→ 闭曲面分类定理　`dep.classsurf-genus`
+
+曲面分类按可定向性与亏格分型。
+
 #### Euler 示性数 ⟹ Euler 示性数与亏格　`dep.eulerchar-eulerchargenus`
 *$\chi$ 的两种算法给出 $\chi=2-2g$*
 
@@ -61107,6 +62246,14 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 代入 $\chi = b_{0} - b_{1} + b_{2}$ 得 $\chi = 1 - 2g + 1 = 2 - 2g$。
 
 > ⚠ 这是依赖登记边，不是逻辑蕴含：把证明用到的三个外部输入登记在图上，读图时能看到本命题缺哪一块就不成立。
+
+#### 定义引用：「不可定向亏格」→ Euler 示性数与不可定向亏格　`dep.eulernonorient-genus`
+
+不可定向曲面的 Euler 示性数用亏格表达。
+
+#### 定义引用：「不可定向亏格」→ 克莱因瓶　`dep.klein-genus`
+
+Klein 瓶的不可定向亏格为 2。
 
 #### 定义引用：「域」→ 域扩张　`dep.field-fieldext`
 
@@ -61225,6 +62372,26 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 取 $f=x^{5}-4x+2$。前三步定出伽罗瓦群是 $S_{5}$：不可约 $\implies$ 传递含 $5$-循环；恰三实根 $\implies$ 复共轭给一个换位；$5$-循环加换位生成 $S_{5}$。最后一步取逆否：若 $f$ 根式可解，`thm.radical-solvable` 给出 $\operatorname{Gal}(f)$ 可解；但 $S_{5}$ 不可解 —— 这正是 `prop.sn-solvable` 的内容（$A_{5}$ 单且非交换，故 $S_{5}$ 的换位子列停在 $A_{5}\ne1$）。矛盾。∎
 
 > $S_{5}$ 不可解（$A_{5}$ 单且非交换）—— 图里那句孤立的话，现在终于有下游了。
+
+#### 定义引用：「伽罗瓦群」→ 不动域　`dep.fixedfield-galois`
+
+不动域是 Galois 群的自同构固定下来的元素。
+
+#### 定义引用：「域」→ 不动域　`dep.fixedfield-field`
+
+不动域是扩域的子域。
+
+#### 定义引用：「不动域」→ 伽罗瓦基本定理　`dep.fixedfield-correspondence`
+
+Galois 对应用不动域与中间域互相对应。
+
+#### 定义引用：「域」→ 代数闭包　`dep.algebraic-closure`
+
+代数闭包是域扩张。
+
+#### 定义引用：「代数闭域」→ 代数闭包　`dep.closure-algebraically-closed`
+
+代数闭包要求扩域代数闭。
 
 #### 定义引用：「域扩张」→ 代数闭域　`dep.fieldext-algclosed`
 
@@ -62203,9 +63370,12 @@ $\operatorname{Re}s > 1$ 时 $\sum n^{-s}$ **绝对收敛** —— 这是「可�
 
 **跨区域桥（analysis-measure $\leftrightarrow$ diffgeom）**：密度是「能对 Lebesgue 测度积分的量」，它的良定性证明（`prop.volume-density-well-defined`）就是换元公式 + 测度。
 
-#### 定义引用：「良序集」→ 整数的带余除法　`dep.intdiv-wellorder`
+#### 良序集 ⟹ 整数的带余除法　`dep.intdiv-wellorder`
+*整数良序给出带余除法的存在性*
 
-**跨区域桥（order-theory $\leftrightarrow$ number）**：带余除法的存在性标准证法取 $\{\, a - qb \ge 0 \,\}$ 的最小元，用的正是 $\mathbb{N}$ 的**良序**性。
+先设 $b>0$。集合 $S=\{\, a-qb : q\in\mathbb{Z},\ a-qb\ge 0 \,\}$ 非空（Archimedes 性质保证可取到使 $qb>a$ 的 $q$），由 $\mathbb{N}$ 的良序取 $r=\min S$，写 $r=a-qb$。若 $r\ge b$，则 $r-b=a-(q+1)b\ge0$ 且更小，与最小性矛盾；故 $0\le r<b$。$b<0$ 时把 $b$ 换成 $|b|$、$q$ 换成 $-q$ 即化归。唯一性见节点注。∎
+
+> **跨区域桥（order-theory $\leftrightarrow$ number）**：存在性一步用的是 $\mathbb{N}$ 的良序（取最小非负余数），这是**证明依赖**而不是定义依赖 —— 带余除法的陈述里没有良序。
 
 #### 定义引用：「投射有限空间」→ profinite 整数 ℤ̂　`dep.zhat-profinite`
 
@@ -65677,6 +66847,10 @@ Z-Mod 与 Ab 等价：整系数模就是阿贝尔群，这是模范畴与阿贝�
 
 比较：合同 $B=P^{T}AP$ 是相抵取 $Q=P^{T}$ 的特例，也只对同阶方阵；合同保对称型的惯性指数，相抵只保秩。
 
+#### 行空间 ～ 列空间　`ana.rowspace-colspace`
+
+行空间与列空间维数相等（都等于秩），但分别住在 $K^n$ 与 $K^m$；转置把两者互换。
+
 #### n 次方根 ～ p-级数　`ana.nthroot-p-series`
 
 $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}$ 恒有 $\alpha = \lim \sqrt[n]{n^{-p}} = 1$，判别法失效，而 $p$ 级数本身由 Cauchy 凝聚判别法定敛散。两者是同一族级数上的两种工具，不是依赖。
@@ -65730,6 +66904,21 @@ $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}
 
 两种「边界对象」：素端对**一般**单连通区域定义（横截弧的极限），边界对应定理里的是 **Jordan 区域**的边界点。Jordan 情形下二者一一对应（Carathéodory 紧化就是通常闭包），但素端是多出来的那层构造，不是边界对应定理的实例 —— 所以是类比，不是定义依赖。
 
+#### 理想 ～ 整除　`e114.definition`
+*主理想包含与整除：对齐，不是定义依赖*
+
+整数上的 $a\mid b$ 对应主理想的包含 $(b)\subseteq(a)$ —— 这是把初等数论与环论对齐的**类比**，不是定义依赖：『def.divides』的陈述只用 $\mathbb{Z}$ 与乘法，没有理想；反过来一般的理想包含也推不出整数整除。
+
+#### 剩余类环 ～ Euler 函数　`e123.definition`
+*$\varphi(n)$ 与单位群的阶*
+
+$\varphi(n)$ 的定义只用 $\gcd$ 与计数；「$\varphi(n)$ 等于单位群 $(\mathbb{Z}/n\mathbb{Z})^{\times}$ 的阶」是**定理**，不是 $\varphi$ 的定义。这里只是把两个对象放在一起对照。
+
+#### 群 ～ Euler 定理　`e124.definition`
+*Euler 定理的证明用到有限群的阶*
+
+证明里用的是「有限群中元素的阶整除群阶」这一群论事实，属**证明工具**；定理陈述本身只有 $\gcd(a,n)=1$ 与 $a^{\varphi(n)}\equiv1$，不出现群。
+
 #### 整数的带余除法 ～ 带余除法　`e125.analogy`
 *整数与多项式：同一个带余除法*
 
@@ -65751,6 +66940,11 @@ $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}
 
 
 但 UFD 不是自动的：$\mathbb{Z}[\sqrt{-5}]$ 与 $K[x, y]$ 都不是 UFD。反例的形状也一样 —— 同一个元素有两条真分解。
+
+#### 唯一分解整环 ～ 算术基本定理　`e137.definition`
+*$\mathbb{Z}$ 是唯一分解整环：一个例子，不是定义依赖*
+
+「$\mathbb{Z}$ 是 UFD」是把算术基本定理放进一般环的框架里看的**例子**；定理陈述只讲素数与分解，不出现 UFD 的定义，UFD 也不以整数分解为前提。
 
 #### 中国剩余定理 ～ 中国剩余定理（环论形式）　`e140.analogy`
 *中国剩余定理：数论版是环论版在 $\mathbb{Z}$ 上的样子*
@@ -65794,6 +66988,16 @@ $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}
 
 
 所以「积性函数」这条定义是四个具体公式的共同外壳 —— 与「张量场是向量场、微分形式、度量的共同外壳」是同一种组织方式。
+
+#### 群 ～ 模 n 的阶　`e157.definition`
+*模 $n$ 的阶与群论里的元素阶*
+
+『def.order-mod-n』的陈述只写 $\gcd(a,n)=1$ 与 $a^{k}\equiv1\pmod n$，没有单位群；把它读成「单位群中元素的阶」是同一件事的另一种说法（见节点注），不算定义依赖。
+
+#### 积性函数 ～ Legendre 符号　`e160.definition`
+*Legendre 符号的完全积性*
+
+「$\left(\frac{ab}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$」是关于 Legendre 符号的**定理**，不是它的定义；『def.legendre-symbol』的陈述里也没有「积性函数」这一概念。
 
 #### Jacobi 符号 ～ Legendre 符号　`e161.analogy`
 *Jacobi 符号：把 Legendre 符号从素数推到奇数*
@@ -66286,7 +67490,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 
 ## 星团级连接（整块对整块）
 
-- **集合的构造 ↔ ZFC 公理系统**　10 条节点级连线
+- **集合的构造 ↔ ZFC 公理系统**　11 条节点级连线
 - **选择原理 ↔ 基数与等势**　3 条节点级连线
 - **拓扑空间的基本语汇 ↔ 度量空间**　16 条节点级连线
 - **实数与极限 ↔ 度量空间**　5 条节点级连线
@@ -66323,6 +67527,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **集合的构造 ↔ 拓扑空间的基本语汇**　4 条节点级连线
 - **关系与函数 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **拓扑空间的基本语汇 ↔ 分离公理**　16 条节点级连线
+- **向量空间与基 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **数系的构造 ↔ 关系与函数**　6 条节点级连线
 - **代数结构 ↔ 数系的构造**　3 条节点级连线
 - **代数结构 ↔ 实数的运算与不等式**　6 条节点级连线
@@ -66354,12 +67559,19 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
 - **图与极限 ↔ 复形与导出三角**　5 条节点级连线
-- **加法与阿贝尔范畴 ↔ 复形与导出三角**　12 条节点级连线
+- **加法与阿贝尔范畴 ↔ 复形与导出三角**　17 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　15 条节点级连线
 - **同调与正合列 ↔ 复形与导出三角**　22 条节点级连线
+- **加法与阿贝尔范畴 ↔ 同调与正合列**　2 条节点级连线
+- **加法与阿贝尔范畴 ↔ 过滤与谱序列**　3 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **代数结构 ↔ 群上同调**　6 条节点级连线
-- **群作用与置换 ↔ 代数结构**　10 条节点级连线
+- **群作用与置换 ↔ 代数结构**　17 条节点级连线
+- **合成列与可解群 ↔ 代数结构**　9 条节点级连线
+- **多项式与因式分解 ↔ 代数结构**　6 条节点级连线
+- **代数结构 ↔ 内射模与可除群**　5 条节点级连线
+- **线性映射与秩 ↔ 代数结构**　3 条节点级连线
+- **收敛与紧性 ↔ 拓扑空间的基本语汇**　16 条节点级连线
 - **复形与导出三角 ↔ 层上同调**　6 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 加法与阿贝尔范畴**　4 条节点级连线
@@ -66391,7 +67603,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **单满、子对象与像 ↔ 预层与米田**　4 条节点级连线
 - **范畴与图 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **范畴与图 ↔ 图与极限**　6 条节点级连线
-- **收敛与紧性 ↔ 拓扑空间的基本语汇**　15 条节点级连线
 - **图与极限 ↔ 预层与米田**　6 条节点级连线
 - **函子与自然变换 ↔ 预层与米田**　11 条节点级连线
 - **图与极限 ↔ 紧 Hausdorff 空间**　2 条节点级连线
@@ -66413,19 +67624,20 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **微分中值定理与 Taylor ↔ 函数列、幂级数与初等函数**　2 条节点级连线
 - **线性映射与秩 ↔ 向量空间与基**　9 条节点级连线
 - **矩阵与行列式 ↔ 向量空间与基**　3 条节点级连线
-- **线性映射与秩 ↔ 矩阵与行列式**　7 条节点级连线
-- **矩阵与行列式 ↔ 特征值与 Jordan 型**　5 条节点级连线
+- **线性映射与秩 ↔ 矩阵与行列式**　10 条节点级连线
+- **矩阵与行列式 ↔ 特征值与 Jordan 型**　6 条节点级连线
 - **矩阵与行列式 ↔ 多重线性与张量**　11 条节点级连线
-- **多项式与因式分解 ↔ 代数结构**　3 条节点级连线
+- **内积空间与正交性 ↔ 矩阵与行列式**　4 条节点级连线
+- **矩阵与行列式 ↔ 整环与分解**　2 条节点级连线
 - **线性映射与秩 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
+- **Galois 理论 ↔ 特征值与 Jordan 型**　2 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
 - **内积空间与正交性 ↔ 多重线性与张量**　16 条节点级连线
 - **多元微分 ↔ 度量空间**　5 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
 - **多元微分 ↔ 微分中值定理与 Taylor**　2 条节点级连线
-- **合成列与可解群 ↔ 代数结构**　7 条节点级连线
 - **实数与极限 ↔ 实数的运算与不等式**　8 条节点级连线
 - **实数的运算与不等式 ↔ 函数列、幂级数与初等函数**　7 条节点级连线
 - **实数的运算与不等式 ↔ 数项级数的敛散性**　6 条节点级连线
@@ -66442,7 +67654,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **函子与自然变换 ↔ 平坦模**　2 条节点级连线
 - **加法与阿贝尔范畴 ↔ 平坦模**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 内射模与可除群**　3 条节点级连线
-- **代数结构 ↔ 内射模与可除群**　4 条节点级连线
 - **平坦模 ↔ 模的张量积与标量限制**　2 条节点级连线
 - **平坦模 ↔ 消解与维数**　3 条节点级连线
 - **同调与正合列 ↔ 消解与维数**　6 条节点级连线
@@ -66467,12 +67678,13 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **多元微分 ↔ 内蕴几何**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线
 - **内蕴几何 ↔ 流形与向量丛**　13 条节点级连线
+- **活动标架与结构方程 ↔ 流形与向量丛**　2 条节点级连线
 - **复变函数基础 ↔ 数系的构造**　6 条节点级连线
-- **Cauchy 理论 ↔ 复变函数基础**　12 条节点级连线
+- **Cauchy 理论 ↔ 复变函数基础**　13 条节点级连线
 - **Cauchy 理论 ↔ 共形映射与正规族**　6 条节点级连线
 - **Cauchy 理论 ↔ 留数与辐角原理**　9 条节点级连线
 - **复变函数基础 ↔ Riemann 积分**　2 条节点级连线
-- **Cauchy 理论 ↔ 函数列、幂级数与初等函数**　2 条节点级连线
+- **Cauchy 理论 ↔ 函数列、幂级数与初等函数**　3 条节点级连线
 - **复变函数基础 ↔ 留数与辐角原理**　10 条节点级连线
 - **流形与向量丛 ↔ 拓扑空间的基本语汇**　7 条节点级连线
 - **流形与向量丛 ↔ 分离公理**　2 条节点级连线
@@ -66493,6 +67705,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **矩阵与行列式 ↔ 微分形式、积分与 de Rham**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 曲面论**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 仿紧与单位分解**　2 条节点级连线
+- **微分形式、积分与 de Rham ↔ 向量场与 Lie 结构**　8 条节点级连线
 - **复变函数基础 ↔ 共形映射与正规族**　14 条节点级连线
 - **Cauchy 理论 ↔ 调和函数**　3 条节点级连线
 - **复变函数基础 ↔ 调和函数**　2 条节点级连线
@@ -66501,7 +67714,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **活动标架与结构方程 ↔ Lie 群**　4 条节点级连线
 - **丛的示性类 ↔ 流形与向量丛**　24 条节点级连线
 - **丛的示性类 ↔ 层上同调**　2 条节点级连线
-- **微分形式、积分与 de Rham ↔ 向量场与 Lie 结构**　7 条节点级连线
 - **向量场与 Lie 结构 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **活动标架与结构方程 ↔ 向量场与 Lie 结构**　2 条节点级连线
 - **Lie 群 ↔ 流形与向量丛**　2 条节点级连线
@@ -66516,11 +67728,14 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 同调群**　2 条节点级连线
 - **拓扑空间的基本语汇 ↔ 同调群**　2 条节点级连线
 - **复形与导出三角 ↔ 同调群**　6 条节点级连线
+- **内蕴几何 ↔ 基本群**　2 条节点级连线
 - **基本群 ↔ 度量空间**　2 条节点级连线
 - **共形映射与正规族 ↔ 基本群**　2 条节点级连线
+- **整除与同余 ↔ 数系的构造**　2 条节点级连线
 - **代数结构 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整除与同余**　2 条节点级连线
-- **整环与分解 ↔ 代数结构**　6 条节点级连线
+- **实数的运算与不等式 ↔ 整除与同余**　2 条节点级连线
+- **整环与分解 ↔ 代数结构**　8 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
 - **Cauchy 理论 ↔ 数论函数与素数分布**　2 条节点级连线
@@ -66528,11 +67743,12 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **复变函数基础 ↔ 数论函数与素数分布**　4 条节点级连线
 - **解析延拓与整函数 ↔ 数论函数与素数分布**　3 条节点级连线
 - **整除与同余 ↔ 数论函数与素数分布**　7 条节点级连线
+- **整除与同余 ↔ 二次剩余与原根**　26 条节点级连线
+- **群作用与置换 ↔ 二次剩余与原根**　3 条节点级连线
 - **选择原理 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **选择原理 ↔ 收敛与紧性**　2 条节点级连线
 - **线性映射与秩 ↔ 流形与向量丛**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ Lie 群**　3 条节点级连线
-- **内积空间与正交性 ↔ 矩阵与行列式**　3 条节点级连线
 - **内积空间与正交性 ↔ 线性映射与秩**　2 条节点级连线
 - **内积空间与正交性 ↔ 多项式与因式分解**　2 条节点级连线
 - **多重线性与张量 ↔ 向量空间与基**　2 条节点级连线
@@ -66547,7 +67763,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **收敛与紧性 ↔ 分离公理**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 复形与导出三角**　4 条节点级连线
 - **Baire 纲与三大定理 ↔ 拓扑空间的基本语汇**　5 条节点级连线
-- **多元微分 ↔ 赋范空间与有界算子**　15 条节点级连线
+- **多元微分 ↔ 赋范空间与有界算子**　21 条节点级连线
 - **丛的示性类 ↔ 活动标架与结构方程**　2 条节点级连线
 - **丛的示性类 ↔ 微分形式、积分与 de Rham**　2 条节点级连线
 - **线性映射与秩 ↔ 赋范空间与有界算子**　5 条节点级连线
@@ -66572,7 +67788,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **内蕴几何 ↔ 曲面的地形**　5 条节点级连线
 - **流形与向量丛 ↔ 曲面的地形**　4 条节点级连线
 - **曲面论 ↔ 曲面的地形**　3 条节点级连线
-- **Galois 理论 ↔ 代数结构**　5 条节点级连线
+- **Galois 理论 ↔ 代数结构**　7 条节点级连线
 - **Galois 理论 ↔ 向量空间与基**　2 条节点级连线
 - **Galois 理论 ↔ 多项式与因式分解**　3 条节点级连线
 - **Galois 理论 ↔ 群作用与置换**　2 条节点级连线

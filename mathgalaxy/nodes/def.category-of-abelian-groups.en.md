@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-abelian-groups)　·　[Chinese page (authoritative)](./def.category-of-abelian-groups.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.category-of-abelian-groups.md` and `proofs/`.
+## Statement · **draft**
+**The category of abelian groups** $\mathbf{Ab}$: objects are abelian groups, morphisms are group homomorphisms; it is a **full subcategory** of $\mathbf{Grp}$.
 
+The forgetful functor $\mathbf{Ab}\to\mathbf{Set}$ sends an abelian group to its underlying set; $\mathbb Z\text{-}\mathbf{Mod}$ and $\mathbf{Ab}$ are equivalent.
 
-Cite: `def.category-of-abelian-groups` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-abelian-groups.en.2.md

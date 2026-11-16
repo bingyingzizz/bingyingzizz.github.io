@@ -1,6 +1,6 @@
 # 整除　`def.divides`
 整除与它的基本性质
-layer 11 · 定义 · 整除与同余 · 数论
+layer 9 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.divides)　·　[节点索引](../index.md)
 
 设 $a, b \in \mathbb{Z}$。若存在 $c \in \mathbb{Z}$ 使 $b = ac$，就说 **$a$ 整除 $b$**，记 $a \mid b$；否则记 $a \nmid b$。
@@ -15,6 +15,8 @@ layer 11 · 定义 · 整除与同余 · 数论
 - …另有入边，续页见 [nodes/def.divides.2.md](./def.divides.2.md)
 
 ## 它能推出什么 / 谁在用它
+- ～弱边 [`def.ideal`](../nodes/def.ideal.md) 理想
+
 - …另有出边，续页见 [nodes/def.divides.3.md](./def.divides.3.md)
 
 refs: 华罗庚《数论导引》第一章

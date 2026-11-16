@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
+layer 19 · theorem · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
 ## Statement · **draft**
 If $X$ is Baire and $\Omega \subseteq X$ is open, then $\implies$ $\Omega$ (with the subspace topology) is a Baire space.

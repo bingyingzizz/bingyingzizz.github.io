@@ -1,6 +1,6 @@
 # 复形范畴　`def.category-of-complexes`
 复形范畴
-layer 15 · 定义 · 复形与导出三角 · 同调代数
+layer 16 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.category-of-complexes)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是加法范畴。**复形范畴** $\mathcal{C}(\mathcal{C})$ 的对象是 $\mathcal{C}$ 中的上链复形，态射是**链映射** $f : K \to L$：一族 $f^{n} : K^{n} \to L^{n}$ 使

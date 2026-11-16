@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 12 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
 ## Statement · **draft**
 A domain $A$ is called a **Bézout domain** if every **finitely generated** ideal is principal — equivalently: for any $a, b \in A$ there exist $d, u, v$ such that

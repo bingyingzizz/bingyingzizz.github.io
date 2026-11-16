@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 31 · lemma · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.gauss-lemma.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # Leray 谱序列　`thm.leray-spectral-sequence`
 定理：$E^{p,q}_{2} = H^{p}\bigl(X', R^{q}f_{*}M^{\bullet}\bigr) \implies H^{p+q}\bigl(f^{-1}X', M^{\bullet}\bigr)$
-layer 18 · 定理 · 层上同调 · 同调代数
+layer 21 · 定理 · 层上同调 · 同调代数
 [在星图里打开](../#n=thm.leray-spectral-sequence)　·　[节点索引](../index.md)
 
 设 $f : \mathcal{T} \to \mathcal{T}'$ 是拓扑斯态射、$X' \in \mathcal{T}'$、$M^{\bullet}$ 是 $\mathcal{T}$ 里的阿贝尔群复形。则存在谱序列

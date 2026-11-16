@@ -1,6 +1,6 @@
 # ψ 与 θ 的分组恒等式　`lem.psi-theta-sum`
 $\psi(x)=\sum_{k\ge1}\theta(x^{1/k})$
-layer 14 · 引理 · 数论函数与素数分布 · 数论
+layer 12 · 引理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=lem.psi-theta-sum)　·　[节点索引](../index.md)
 
 对 $x\ge1$，$\psi(x)=\sum_{k\ge1}\theta\bigl(x^{1/k}\bigr)$。和式有限：$p^{k}\le x$ 迫使 $k\le\log_{2}x$。

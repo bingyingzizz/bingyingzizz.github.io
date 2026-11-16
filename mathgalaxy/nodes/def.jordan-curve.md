@@ -1,6 +1,6 @@
 # Jordan 曲线　`def.jordan-curve`
 Jordan 曲线（简单闭曲线）
-layer 8 · 定义 · 拓扑空间的基本语汇 · 拓扑学
+layer 13 · 定义 · 拓扑空间的基本语汇 · 拓扑学
 [在星图里打开](../#n=def.jordan-curve)　·　[节点索引](../index.md)
 
 平面 $\mathbb{R}^{2}$（或 $\mathbb{C}$）中的一条**Jordan 曲线**（**简单闭曲线**）是单位圆周 $S^{1} = \{\, z \in \mathbb{C} : |z| = 1 \,\}$ 在**同胚**下的像：存在同胚 $S^{1} \to C \subseteq \mathbb{R}^{2}$（$C$ 带子空间拓扑，见 `def.homeomorphism`）。

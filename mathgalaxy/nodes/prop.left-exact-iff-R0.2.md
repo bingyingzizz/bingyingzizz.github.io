@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.right-derived-functor`](../nodes/def.right-derived-functor.md) 右导出函子：用到了定义 右导出函子　[proofs/def-link.r0-derfun.md](../proofs/def-link.r0-derfun.md)
 - [`def.exact-functor`](../nodes/def.exact-functor.md) 正合函子：用到了定义 正合函子　[proofs/def-link.r0-exactfun.md](../proofs/def-link.r0-exactfun.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/dep.leftexactR0-abelian.md](../proofs/dep.leftexactR0-abelian.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 14 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.dihedral-group.md` and `proofs/`.

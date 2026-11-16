@@ -6,8 +6,8 @@
 - def.convex-set　凸集　layer 11
 - def.star-shaped-at-point　关于一点的星形集　layer 11
 - def.star-shaped　星形集　layer 12
-- thm.convex-star-shaped-every-point　凸集在每一点处星形　layer 12
 - def.convex-combination　凸组合　layer 12
+- thm.convex-star-shaped-every-point　凸集在每一点处星形　layer 13
 - def.convex-hull　凸包　layer 13
 - def.orthonormal-set　正交基　layer 16
 - thm.bessel-parseval　Bessel 与 Parseval　layer 17

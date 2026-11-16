@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.graph-morphism)　·　[Chinese page (authoritative)](./def.graph-morphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 7 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.graph-morphism.md` and `proofs/`.
+## Statement · **draft**
+A **morphism** from a graph $(V, E, s, t)$ to a graph $(V', E', s', t')$ is a pair of functions
 
+$$\varphi_1 : V \to V', \qquad \varphi_2 : E \to E'$$
 
-Cite: `def.graph-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+such that both squares commute:
 
+$$s' \circ \varphi_2 = \varphi_1 \circ s, \qquad t' \circ \varphi_2 = \varphi_1 \circ t$$
+
+That is, $\varphi_1$ sends the source of an edge to the source of the image of that edge, and the target to the target.
+
+> continued in nodes/def.graph-morphism.en.2.md

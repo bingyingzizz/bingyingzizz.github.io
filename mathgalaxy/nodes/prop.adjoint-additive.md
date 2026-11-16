@@ -1,6 +1,6 @@
 # 伴随函子都加法　`prop.adjoint-additive`
 命题：加法范畴之间的伴随函子都是加法函子
-layer 10 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 15 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=prop.adjoint-additive)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}, \mathcal{D}$ 是加法范畴，$F : \mathcal{C} \to \mathcal{D}$ 左伴随 $G : \mathcal{D} \to \mathcal{C}$（记 $F \dashv G$）。则 $F$ 与 $G$ **都加法**，并且伴随的双射

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 17 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
 ## Statement · **draft**
 Let $M$ be a $G$-module. The **$n$-th cohomology group** of the group $G$ with coefficients in $M$ is the right derived functor of the invariant functor:

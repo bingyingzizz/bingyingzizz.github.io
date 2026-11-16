@@ -1,6 +1,6 @@
 # 轨道–稳定子定理　`thm.orbit-stabilizer`
 定理（轨道–稳定子）：$|\operatorname{Orb} x| = [G : \operatorname{Stab} x]$
-layer 11 · 定理 · 群作用与置换 · 抽象代数
+layer 12 · 定理 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=thm.orbit-stabilizer)　·　[节点索引](../index.md)
 
 设有限群 $G$ 作用在集合 $X$ 上，$x \in X$。则 $\operatorname{Stab}(x) \le G$ 且

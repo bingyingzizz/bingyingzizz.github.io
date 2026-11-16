@@ -7,6 +7,9 @@ layer 20 · 定义 · Galois 理论 · 抽象代数
 
 若 $\overline{F}/F$ 是代数扩张且 $\overline{F}$ 代数闭，则称 $\overline{F}$ 是 $F$ 的**代数闭包**。
 
+## 它能推出什么 / 谁在用它
+- 被 [`def.algebraic-closure`](../nodes/def.algebraic-closure.md) 代数闭包 用
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.algebraically-closed.2.md](./def.algebraically-closed.2.md)
 

@@ -1,6 +1,6 @@
 # 挠积的对称性　`prop.tor-symmetry`
 交换环上挠积对两个变量对称
-layer 17 · 命题 · 平坦模 · 同调代数
+layer 18 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.tor-symmetry)　·　[节点索引](../index.md)
 
 设 $R$ 是**交换环**，$M, N$ 是 $R$-模。则对一切 $n \ge 0$：

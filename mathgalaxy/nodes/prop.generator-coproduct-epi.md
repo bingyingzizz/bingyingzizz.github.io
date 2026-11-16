@@ -1,6 +1,6 @@
 # 生成元的余积刻画　`prop.generator-coproduct-epi`
 命题：$G$ 生成 $\iff$ 每个 $M$ 都有 $G^{(I)} \twoheadrightarrow M$
-layer 11 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.generator-coproduct-epi)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是有余积的阿贝尔范畴、$G \in \mathcal{C}$。则

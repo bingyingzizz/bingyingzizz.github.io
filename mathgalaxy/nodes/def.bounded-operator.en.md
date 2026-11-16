@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 16 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement · **draft**
 Let $u : E \to F$ be linear. Call $u$ **bounded** if there exists $C$ such that $\|u(x)\| \le C\|x\|$ for all $x$. The whole collection is denoted $B(E, F)$, and one writes $B(E) := B(E, E)$. Define

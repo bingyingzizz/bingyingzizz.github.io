@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · corollary · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
+layer 20 · corollary · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
 > continued in nodes/cor.grothendieck-spectral.en.2.md

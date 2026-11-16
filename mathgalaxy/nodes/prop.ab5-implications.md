@@ -1,6 +1,6 @@
 # AB5 与 AB3*/AB4* 的关系　`prop.ab5-implications`
 AB 公理之间的蕴含关系
-layer 19 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 20 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.ab5-implications)　·　[节点索引](../index.md)
 
 1. **Grothendieck 范畴自动满足 AB3\***（有所有极限）—— 即 AB5 加上生成元，就免费得到 AB3\*；

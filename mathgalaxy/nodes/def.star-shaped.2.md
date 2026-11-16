@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`lem.poincare-lemma`](../nodes/lem.poincare-lemma.md) Poincaré 引理 用
+- 被 [`thm.convex-star-shaped-every-point`](../nodes/thm.convex-star-shaped-every-point.md) 凸集在每一点处星形 用

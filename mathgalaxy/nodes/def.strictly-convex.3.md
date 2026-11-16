@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.sc-norm.md](../proofs/def-link.sc-norm.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/dep.strictlyconvex-normed.md](../proofs/dep.strictlyconvex-normed.md)

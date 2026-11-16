@@ -1,6 +1,6 @@
 # 加法函子的刻画　`prop.additive-iff-preserves-biproduct`
 命题：$F$ 加法 $\iff$ 保零对象与直和 $\iff$ 保有限积
-layer 14 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 15 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=prop.additive-iff-preserves-biproduct)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}, \mathcal{D}$ 是加法范畴，$F : \mathcal{C} \to \mathcal{D}$ 是函子。则三者等价：

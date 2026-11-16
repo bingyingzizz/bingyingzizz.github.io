@@ -2,14 +2,17 @@
 English entry · root `../`
 [in graph](../#n=thm.right-adjoint-preserves-limits)　·　[Chinese page (authoritative)](./thm.right-adjoint-preserves-limits.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `RAPL` (short) · `Right Adjoints Preserve Limits` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.right-adjoint-preserves-limits.md` and `proofs/`.
+## Statement · **draft**
+Let $F \dashv G$. Then $G$ **preserves all limits** (that exist in $\mathcal{D}$): for every diagram $D : I \to \mathcal{D}$,
 
+$$G\bigl(\lim D\bigr) \;\cong\; \lim\, (G \circ D)$$
 
-Cite: `thm.right-adjoint-preserves-limits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+Dually, **left adjoints preserve all colimits**.
 
+> continued in nodes/thm.right-adjoint-preserves-limits.en.2.md

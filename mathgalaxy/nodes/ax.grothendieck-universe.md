@@ -1,6 +1,6 @@
 # Grothendieck 宇宙公理　`ax.grothendieck-universe`
 Grothendieck 宇宙公理
-layer 5 · 公理 · 范畴与图 · 范畴论+集合论
+layer 8 · 公理 · 范畴与图 · 范畴论+集合论
 [在星图里打开](../#n=ax.grothendieck-universe)　·　[节点索引](../index.md)
 
 **每个集合都装得进某个宇宙。** 这是一条独立的公理：

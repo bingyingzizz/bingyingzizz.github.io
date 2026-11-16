@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.forgetful-preserves-limits)　·　[Chinese page (authoritative)](./prop.forgetful-preserves-limits.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.forgetful-preserves-limits.md` and `proofs/`.
+## Statement · **draft**
+The forgetful functors from $\mathbf{Mon}$, $\mathbf{Gr}$, $\mathbf{Rng}$, $G\text{-}\mathbf{Set}$, $A\text{-}\mathbf{Mod}$, $k\text{-}\mathbf{Alg}$ to $\mathbf{Set}$ all **preserve all limits**.
 
-
-Cite: `prop.forgetful-preserves-limits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.forgetful-preserves-limits.en.2.md

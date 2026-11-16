@@ -1,6 +1,6 @@
 # 过滤　`def.filtration`
 过滤
-layer 15 · 定义 · 过滤与谱序列 · 同调代数
+layer 18 · 定义 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=def.filtration)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴。$M \in \mathcal{A}$ 上的（**递降**）**过滤**是 $M$ 的子对象沿 $(\mathbb{Z}, \ge)$ 的图：

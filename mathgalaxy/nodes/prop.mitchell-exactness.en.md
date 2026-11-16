@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 19 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Mitchell Exactness` (short) · `Refinement of the Embedding Theorem` (full)
 
 ## Statement and proof

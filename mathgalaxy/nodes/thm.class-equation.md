@@ -1,9 +1,9 @@
 # 类方程　`thm.class-equation`
 定理（类方程）：$|G| = |Z(G)| + \sum [G : C_G(x_i)]$
-layer 12 · 定理 · 群作用与置换 · 抽象代数
+layer 13 · 定理 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=thm.class-equation)　·　[节点索引](../index.md)
 
-设 $G$ 是有限群，$Z(G)$ 是它的中心，$x_1, \ldots, x_r$ 是**非中心共轭类**的一组代表元，$C_G(x) := \{g : gx = xg\}$ 是中心化子。则
+设 $G$ 是有限群，$Z(G)$ 是它的中心，$x_1, \ldots, x_r$ 是**非中心共轭类**的一组代表元，$C_G(x)$ 是 $x$ 的中心化子（见 `def.centralizer`）。则
 
 $$|G| = |Z(G)| + \sum_{i=1}^{r} \bigl[ G : C_G(x_i) \bigr]$$
 

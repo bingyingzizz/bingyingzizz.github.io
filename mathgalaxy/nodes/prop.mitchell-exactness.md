@@ -1,6 +1,6 @@
 # 嵌入定理的细化　`prop.mitchell-exactness`
 嵌入定理的细化：正合，且反射投射与内射
-layer 18 · 命题 · 加法与阿贝尔范畴 · 同调代数
+layer 19 · 命题 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=prop.mitchell-exactness)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是**小阿贝尔**范畴，$E : \mathcal{C} \to A\text{-}\mathbf{Mod}$ 是 Freyd–Mitchell 嵌入（全忠实、正合）。则

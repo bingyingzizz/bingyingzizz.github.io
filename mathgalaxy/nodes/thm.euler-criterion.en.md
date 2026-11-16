@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
+layer 13 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
 ## Statement · **draft**
 Let $p$ be an odd prime with $p \nmid a$. Then

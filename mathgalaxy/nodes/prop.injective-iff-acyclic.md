@@ -1,6 +1,6 @@
 # 内射与零调的等价　`prop.injective-iff-acyclic`
 命题：内射 $\iff$ 对一切左正合函子零调
-layer 16 · 命题 · 复形与导出三角 · 同调代数
+layer 19 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.injective-iff-acyclic)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$I \in \mathcal{A}$。则下列等价：

@@ -1,6 +1,6 @@
 # Freyd–Mitchell 嵌入定理　`thm.freyd-mitchell`
 Freyd–Mitchell 嵌入定理
-layer 17 · 定理 · 加法与阿贝尔范畴 · 同调代数
+layer 18 · 定理 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=thm.freyd-mitchell)　·　[节点索引](../index.md)
 
 若 $\mathcal{C}$ 是**小**阿贝尔范畴，则存在一个环 $A$ 与一个**全忠实**的**正合**函子

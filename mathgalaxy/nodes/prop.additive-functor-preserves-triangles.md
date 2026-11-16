@@ -1,6 +1,6 @@
 # 加法函子保导出三角　`prop.additive-functor-preserves-triangles`
 命题：加法函子把导出三角送到导出三角
-layer 15 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.additive-functor-preserves-triangles)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{C} \to \mathcal{C}'$ 是加法范畴之间的**加法函子**。若

@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **stale** · stale fields: abstract, statement, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 16 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 17 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 
 > continued in nodes/def.abelian-category.en.2.md

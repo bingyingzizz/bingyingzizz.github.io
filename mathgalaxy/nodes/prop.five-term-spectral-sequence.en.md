@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
+layer 21 · proposition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
 ## Statement · **draft**
 A first-quadrant spectral sequence $E^{p,q}_{2} \implies H^{p+q}$ gives the **five-term exact sequence**

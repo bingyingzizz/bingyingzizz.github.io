@@ -1,6 +1,6 @@
 # 几乎正交引理　`lem.almost-orthogonal`
 闭真子空间外的单位向量（Riesz 引理）
-layer 13 · 引理 · 赋范空间与有界算子 · 泛函分析
+layer 16 · 引理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=lem.almost-orthogonal)　·　[节点索引](../index.md)
 
 设 $F \subset E$ 是赋范空间 $E$ 的**闭**真子空间。则对每个 $\varepsilon \in (0,1)$ 存在 $e \in E$ 使
@@ -8,10 +8,12 @@ layer 13 · 引理 · 赋范空间与有界算子 · 泛函分析
 $$\|e\| = 1, \qquad d(e, F) := \inf_{y \in F} \|e - y\| \ge 1 - \varepsilon .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.norm`](../nodes/def.norm.md) 范数：用到了定义 范数　[proofs/def-link.fa-norm-almostorth.md](../proofs/def-link.fa-norm-almostorth.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/dep.almostorth-normed.md](../proofs/dep.almostorth-normed.md)
+
+- …另有入边，续页见 [nodes/lem.almost-orthogonal.2.md](./lem.almost-orthogonal.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/lem.almost-orthogonal.2.md](./lem.almost-orthogonal.2.md)
+- …另有出边，续页见 [nodes/lem.almost-orthogonal.3.md](./lem.almost-orthogonal.3.md)
 
 refs: Rudin, Functional Analysis · 赋范空间与有限维
 

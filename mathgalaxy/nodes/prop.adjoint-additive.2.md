@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-link.adjadd-adjoint.md](../proofs/def-link.adjadd-adjoint.md)
 - [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子：用到了定义 加法函子　[proofs/def-link.adjadd-addfun.md](../proofs/def-link.adjadd-addfun.md)
+- [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：用到了定义 加法范畴　[proofs/dep.adjoint-additive.md](../proofs/dep.adjoint-additive.md)

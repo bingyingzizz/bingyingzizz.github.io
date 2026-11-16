@@ -1,6 +1,6 @@
 # 核与余核　`def.kernel-cokernel`
 核 / 余核与左正合、右正合列
-layer 14 · 定义 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 15 · 定义 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=def.kernel-cokernel)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是（预）加法范畴，$f : M \to N$。

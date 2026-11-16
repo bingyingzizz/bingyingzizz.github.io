@@ -1,6 +1,6 @@
 # 素数计数函数　`def.prime-counting`
 $\pi(x)$、$\theta(x)$ 与 $\psi(x)$
-layer 13 · 定义 · 数论函数与素数分布 · 数论
+layer 11 · 定义 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=def.prime-counting)　·　[节点索引](../index.md)
 
 对 $x > 0$ 定义

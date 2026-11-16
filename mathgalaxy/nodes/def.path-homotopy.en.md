@@ -5,6 +5,6 @@ English entry · root `../`
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 > fields: abstract reviewed · statement draft · notes draft · name derived
 
-layer 14 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 17 · definition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 > continued in nodes/def.path-homotopy.en.2.md

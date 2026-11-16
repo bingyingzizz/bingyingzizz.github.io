@@ -1,6 +1,6 @@
 # 过滤复形给出谱序列　`thm.filtered-complex-spectral`
 两侧有界过滤复形 $\implies$ 谱序列
-layer 17 · 定理 · 过滤与谱序列 · 同调代数
+layer 20 · 定理 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=thm.filtered-complex-spectral)　·　[节点索引](../index.md)
 
 设 $K^{\bullet}$ 是**带过滤**的复形（递降过滤 $F^{p}K^{\bullet}$），且**两侧有界**（对每个 $n$：$p \ll 0$ 时 $F^{p}K^{n} = K^{n}$，且 $p \gg 0$ 时 $F^{p}K^{n} = 0$ —— 只有前者不够，$Z^{p,q}_{r}$ 的稳定靠后者）。则存在谱序列

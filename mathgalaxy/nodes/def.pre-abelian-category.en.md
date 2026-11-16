@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 16 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `pre-abelian cat` (short) · `pre-abelian category` (full)
 
 ## Statement and proof

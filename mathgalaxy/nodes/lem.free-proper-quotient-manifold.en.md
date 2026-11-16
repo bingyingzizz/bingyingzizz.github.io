@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 0 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 10 · lemma · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.free-proper-quotient-manifold.md` and `proofs/`.

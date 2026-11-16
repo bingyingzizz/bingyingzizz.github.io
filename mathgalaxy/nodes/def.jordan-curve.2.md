@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.homeomorphism`](../nodes/def.homeomorphism.md) 同胚：用到了定义 同胚　[proofs/dep.jordan-homeo.md](../proofs/dep.jordan-homeo.md)
+- [`def.subspace`](../nodes/def.subspace.md) 子空间：用到了定义 子空间　[proofs/dep.jordan-subspace.md](../proofs/dep.jordan-subspace.md)
 
 > 续见 [nodes/def.jordan-curve.3.md](./def.jordan-curve.3.md)

@@ -3,7 +3,8 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.poly-ufd`](../nodes/thm.poly-ufd.md) K[x] 是唯一分解整环：唯一分解：$\mathbb{Z}$ 与 $K[x]$ 的共同形状　[proofs/e126.analogy.md](../proofs/e126.analogy.md)
-- [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环：用到了定义 唯一分解整环　[proofs/e137.definition.md](../proofs/e137.definition.md)
+- [`def.prime`](../nodes/def.prime.md) 素数：用到了定义 素数　[proofs/dep.fta-prime.md](../proofs/dep.fta-prime.md)
+- [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环：$\mathbb{Z}$ 是唯一分解整环：一个例子，不是定义依赖　[proofs/e137.definition.md](../proofs/e137.definition.md)
 - [`def.multiplicative-function`](../nodes/def.multiplicative-function.md) 积性函数：e142.analogy　[proofs/e142.analogy.md](../proofs/e142.analogy.md)
 
 > 续见 [nodes/thm.fundamental-arithmetic.3.md](./thm.fundamental-arithmetic.3.md)

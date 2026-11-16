@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · corollary · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 12 · corollary · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.wilson.md` and `proofs/`.

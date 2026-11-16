@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.kan-extension)　·　[Chinese page (authoritative)](./def.kan-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.kan-extension.md` and `proofs/`.
+## Statement · **draft**
+Let $p : \mathcal{C} \to \mathcal{C}'$ be a functor between small categories and $F : \mathcal{C} \to \mathcal{D}$. The **left Kan extension** of $F$ along $p$ is a functor $p_{!}F : \mathcal{C}' \to \mathcal{D}$ together with a natural transformation
 
+$$\alpha : F \implies p_{!}F \circ p$$
 
-Cite: `def.kan-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.kan-extension.en.2.md

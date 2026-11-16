@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.exact-sequence)　·　第 1 页 [nodes/def.exact-sequence.md](./def.exact-sequence.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/dep.exactseq-abelian.md](../proofs/dep.exactseq-abelian.md)
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.exseq-complex.md](../proofs/def-dep.exseq-complex.md)
 - [`def.image`](../nodes/def.image.md) 像 / 余像：用到了定义 像 / 余像　[proofs/def-dep.exseq-image.md](../proofs/def-dep.exseq-image.md)
 

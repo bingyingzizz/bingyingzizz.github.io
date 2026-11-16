@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Image and Cokernel` (short) · `The Image Is the Kernel of the Cokernel` (full)
 
 ## Statement and proof

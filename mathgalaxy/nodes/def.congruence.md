@@ -1,6 +1,6 @@
 # 同余　`def.congruence`
 模 $n$ 同余：与运算相容的等价关系
-layer 12 · 定义 · 整除与同余 · 数论
+layer 10 · 定义 · 整除与同余 · 数论
 [在星图里打开](../#n=def.congruence)　·　[节点索引](../index.md)
 
 设 $n \ge 1$。称 $a$ 与 $b$ **模 $n$ 同余**，记 $a \equiv b \pmod n$，若 $n \mid (a - b)$。
@@ -12,7 +12,7 @@ layer 12 · 定义 · 整除与同余 · 数论
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.zmodn`](../nodes/def.zmodn.md) 剩余类环 用
-- 被 [`def.quadratic-residue`](../nodes/def.quadratic-residue.md) 二次剩余 用
+- 被 [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理 用
 
 - …另有出边，续页见 [nodes/def.congruence.2.md](./def.congruence.2.md)
 

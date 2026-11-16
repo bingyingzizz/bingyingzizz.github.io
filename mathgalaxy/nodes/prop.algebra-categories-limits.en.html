@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Limits and colimits in categories of algebras · MathGalaxy</title>
+<meta name="description" content="In Mon , Gr , Rng , G-Set , A-Mod , k-Alg limits are computed pointwise (forgetting to sets gives the limit of sets); colimits are given by &quot;first generat…">
+<link rel="canonical" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.html">
+<link rel="alternate" hreflang="en" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.en.html">
+<link rel="alternate" hreflang="x-default" href="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MathGalaxy">
+<meta property="og:title" content="Limits and colimits in categories of algebras">
+<meta property="og:description" content="In Mon , Gr , Rng , G-Set , A-Mod , k-Alg limits are computed pointwise (forgetting to sets gives the limit of sets); colimits are given by &quot;first generat…">
+<meta property="og:url" content="https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.en.html">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#B03A5B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.en.html#concept","name":"Limits and colimits in categories of algebras","alternateName":"代数范畴里的极限与余极限","description":"In Mon , Gr , Rng , G-Set , A-Mod , k-Alg limits are computed pointwise (forgetting to sets gives the limit of sets); colimits are given by \"first generat…","url":"https://bingyingzizz.github.io/mathgalaxy/nodes/prop.algebra-categories-limits.en.html","inLanguage":"en","license":"https://creativecommons.org/licenses/by/4.0/","isPartOf":{"@type":"DefinedTermSet","@id":"https://bingyingzizz.github.io/mathgalaxy/all.html#graph","name":"MathGalaxy","url":"https://bingyingzizz.github.io/mathgalaxy/all.html"},"keywords":"命题, 极限, 余极限, 自由对象, 代数范畴"}]}</script>
+<link rel="stylesheet" href="../../assets/katex.min.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/node.css">
+</head>
+<body class="node-page" style="--rc:#B03A5B">
+
+<nav class="crumb" aria-label="Breadcrumb">
+  <a href="../en/">MathGalaxy</a><span class="sep">›</span>
+  <a href="../all.html">All concepts</a><span class="sep">›</span>
+  <a href="../all.html#category">Category Theory</a><span class="sep">›</span>
+  <a href="../all.html#cat.algebra">Algebraic Structures in a Category</a><span class="sep">›</span>
+  <span aria-current="page">Limits and colimits in categories of algebras</span>
+</nav>
+
+<main class="wrap">
+
+  <header class="np-head">
+    <h1>Limits and colimits in categories of algebras<span class="en" lang="zh-CN">代数范畴里的极限与余极限</span></h1>
+    <p class="np-cta">
+      <a class="np-open" href="../#n=prop.algebra-categories-limits">Open in the map <span aria-hidden="true">→</span></a>
+      <a class="np-alt" href="prop.algebra-categories-limits.html" hreflang="zh-CN" lang="zh-CN">中文完整页</a>
+      <a class="np-alt" href="../en/">All English entries</a>
+    </p>
+    <ul class="facts">
+      <li>Proposition</li>
+      <li>layer 12</li>
+      <li>Category Theory</li>
+      <li>Algebraic Structures in a Category</li>
+    </ul>
+    <p class="idline"><code>prop.algebra-categories-limits</code> · 命题 · 极限 · 余极限 · 自由对象 · 代数范畴</p>
+    <p class="status-note">Machine-drafted and pending author review. The Chinese text is authoritative.</p>
+  </header>
+
+  
+  <section class="sec statement"><h2>Statement</h2><p>In <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">M</mi><mi mathvariant="bold">o</mi><mi mathvariant="bold">n</mi></mrow><annotation encoding="application/x-tex">\mathbf{Mon}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord"><span class="mord mathbf">Mon</span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">G</mi><mi mathvariant="bold">r</mi></mrow><annotation encoding="application/x-tex">\mathbf{Gr}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord"><span class="mord mathbf">Gr</span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">R</mi><mi mathvariant="bold">n</mi><mi mathvariant="bold">g</mi></mrow><annotation encoding="application/x-tex">\mathbf{Rng}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8805em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">Rng</span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mtext>-</mtext><mrow><mi mathvariant="bold">S</mi><mi mathvariant="bold">e</mi><mi mathvariant="bold">t</mi></mrow></mrow><annotation encoding="application/x-tex">G\text{-}\mathbf{Set}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathnormal">G</span><span class="mord text"><span class="mord">-</span></span><span class="mord"><span class="mord mathbf">Set</span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mtext>-</mtext><mrow><mi mathvariant="bold">M</mi><mi mathvariant="bold">o</mi><mi mathvariant="bold">d</mi></mrow></mrow><annotation encoding="application/x-tex">A\text{-}\mathbf{Mod}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">A</span><span class="mord text"><span class="mord">-</span></span><span class="mord"><span class="mord mathbf">Mod</span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mtext>-</mtext><mrow><mi mathvariant="bold">A</mi><mi mathvariant="bold">l</mi><mi mathvariant="bold">g</mi></mrow></mrow><annotation encoding="application/x-tex">k\text{-}\mathbf{Alg}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord text"><span class="mord">-</span></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">Alg</span></span></span></span></span> <strong>limits are computed pointwise</strong> (forgetting to sets gives the limit of sets);</p><p><strong>colimits</strong> are given by &quot;first generate freely, then quotient&quot; — for example the coproduct in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">G</mi><mi mathvariant="bold">r</mi></mrow><annotation encoding="application/x-tex">\mathbf{Gr}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord"><span class="mord mathbf">Gr</span></span></span></span></span> is the free product.</p></section>
+  <section class="sec notes"><h2>Notes</h2><p><strong>Proof.</strong> These forgetful functors <strong>preserve limits</strong> ✓, so a limit is the limit of underlying sets equipped with the structure given pointwise by the universal property ✓; for coproducts one first glues generators freely and then quotients by the relations ✓. ∎</p></section>
+
+  
+  <section class="rel-sec"><h2>Referenced by <span class="n">1</span></h2><ul class="sibs"><li><a href="def.limit.html" hreflang="zh-CN">limit and colimit</a></li></ul></section>
+  <section class="rel-sec sib-sec"><h2>Same cluster <span class="n">10</span></h2><ul class="sibs"><li><a href="def.monoid-object.html" hreflang="zh-CN">monoid object</a></li><li><a href="def.group-object.html" hreflang="zh-CN">group object</a></li><li><a href="prop.bialgebra-examples.html" hreflang="zh-CN">examples of bialgebras</a></li><li><a href="prop.forgetful-exactness.html" hreflang="zh-CN">exactness of forgetful and inclusion functors</a></li><li><a href="prop.forgetful-preserves-limits.html" hreflang="zh-CN">forgetful functors for algebras preserve limits</a></li><li><a href="prop.free-objects-examples.html" hreflang="zh-CN">examples of free objects</a></li><li><a href="prop.op-category-is-modules.html" hreflang="zh-CN">objects with operators are modules</a></li><li><a href="prop.functor-preserves-monoid-objects.html" hreflang="zh-CN">functors preserving finite products act on algebraic objects</a></li><li><a href="ex.ab-of-categories.html" hreflang="zh-CN">examples of abelian categories</a></li></ul></section>
+
+  <section class="sec jump">
+    <h2>Continue</h2>
+    <p>
+      <a href="../#n=prop.algebra-categories-limits">Open in the map</a>　·　
+      <a href="prop.algebra-categories-limits.html" hreflang="zh-CN">Full entry in Chinese</a>　·　
+      <a href="../all.html">All 1664 concepts</a>　·　
+      <a href="../en/">English overview</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="np-foot">
+  <p>MathGalaxy · content v0.9.3 · English abstract, Chinese text authoritative</p>
+  <p>Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, engine MIT ·
+     <a href="../LICENSE.txt">license</a> · generated from the same graph as the Chinese page</p>
+</footer>
+
+</body>
+</html>

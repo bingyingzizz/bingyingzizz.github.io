@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.quasi-separated)　·　[Chinese page (authoritative)](./def.quasi-separated.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.quasi-separated.md` and `proofs/`.
+## Statement · **draft**
+In a topos $\mathcal{T}$, an object $X$ is **quasi-separated** if for all $Y \to X$ and $Z \to X$ (with $Y, Z$ quasi-compact) the fibre product
 
+$$Y \times_{X} Z$$
 
-Cite: `def.quasi-separated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is again quasi-compact.
 
+## Notes · **draft**
+Properties: **closed under subobjects** (a subobject of a quasi-separated object is quasi-separated); **closed under coproducts**; **closed under filtered colimits along injections**.
+
+> continued in nodes/def.quasi-separated.en.2.md

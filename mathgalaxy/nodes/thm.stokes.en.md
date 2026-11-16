@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 30 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement · **draft**
 **What it does**: raise the fundamental theorem of calculus to arbitrary dimension — the integral over the boundary equals the integral of the exterior derivative inside; one formula absorbs Green, Gauss–Ostrogradsky and Kelvin–Stokes.

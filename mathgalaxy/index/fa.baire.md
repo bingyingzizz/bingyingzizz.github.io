@@ -7,13 +7,13 @@
 - def.nowhere-dense　无处稠密　layer 6
 - def.meager-set　第一纲 / 第二纲　layer 7
 - lem.countable-closed-cover　闭覆盖的内点　layer 8
-- thm.baire　Baire 纲定理　layer 17
-- thm.locally-compact-baire　局部紧 Hausdorff 是 Baire　layer 18
-- prop.baire-characterizations　Baire 的三条等价刻画　layer 18
-- thm.baire-open-subset　Baire 的开子集是 Baire　layer 18
-- thm.pointwise-limit-continuity　连续点集是稠密 G_δ　layer 18
+- thm.baire　Baire 纲定理　layer 18
 - thm.ubp　共鸣定理　layer 18
 - thm.open-mapping-banach　开映射定理（Banach 版）　layer 18
+- thm.locally-compact-baire　局部紧 Hausdorff 是 Baire　layer 19
+- prop.baire-characterizations　Baire 的三条等价刻画　layer 19
+- thm.baire-open-subset　Baire 的开子集是 Baire　layer 19
+- thm.pointwise-limit-continuity　连续点集是稠密 G_δ　layer 19
 - cor.ubp-resonance　共振集是稠密 G_δ　layer 19
 - thm.bounded-inverse　逆算子定理　layer 19
 

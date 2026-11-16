@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.sylow`](../nodes/thm.sylow.md) Sylow 定理
+- 被 [`lem.p-group-subgroups`](../nodes/lem.p-group-subgroups.md) p-群的真子群严格小于其正规化子 用
+- ⇒ [`lem.p-group-subgroups`](../nodes/lem.p-group-subgroups.md) p-群的真子群严格小于其正规化子

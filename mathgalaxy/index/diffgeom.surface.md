@@ -4,13 +4,13 @@
 中心天体 def.first-fundamental-form　·　20 个节点　·　根 `../`　·　续页 `index/diffgeom.surface.2.md`
 
 - def.regular-surface　曲面与参数化　layer 23
-- def.first-fundamental-form　第一基本形式　layer 26
-- def.normal-curvature　法曲率　layer 27
-- def.area-element　面积元　layer 27
+- def.first-fundamental-form　第一基本形式　layer 27
 - def.weingarten-map　Weingarten 变换　layer 28
-- def.orientable-surface　R³ 中的可定向曲面　layer 28
+- def.normal-curvature　法曲率　layer 28
+- def.area-element　面积元　layer 28
 - def.second-fundamental-form　第二基本形式　layer 29
 - def.principal-curvature　主曲率　layer 29
+- def.orientable-surface　R³ 中的可定向曲面　layer 29
 - thm.codazzi-mainardi　Codazzi–Mainardi 方程　layer 30
 - thm.meusnier　Meusnier 定理　layer 30
 - thm.euler-formula-surface　Euler 公式　layer 30

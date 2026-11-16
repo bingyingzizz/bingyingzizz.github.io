@@ -9,7 +9,6 @@
 - 被 [`def.lie-group`](../nodes/def.lie-group.md) Lie 群 用
 - 被 [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形 用
 - 被 [`def.singular-cube`](../nodes/def.singular-cube.md) 奇异方块 用
-- 被 [`def.form-on-manifold`](../nodes/def.form-on-manifold.md) 微分形式 用
-- 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
+- 被 [`lem.free-proper-quotient-manifold`](../nodes/lem.free-proper-quotient-manifold.md) 自由真不连续作用的光滑商 用
 
 > 续见 [nodes/def.smooth-manifold.10.md](./def.smooth-manifold.10.md)

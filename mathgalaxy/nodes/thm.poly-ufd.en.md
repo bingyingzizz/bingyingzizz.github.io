@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 14 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be a field. Then every nonzero, non-unit polynomial $f \in K[x]$ can be written as a product of finitely many irreducible polynomials

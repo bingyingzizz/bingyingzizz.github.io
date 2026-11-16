@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.bounded-operator`](../nodes/def.bounded-operator.md) 有界线性算子：有界 $\iff$ 连续（线性）　[proofs/imp.fa-lincont-bounded.md](../proofs/imp.fa-lincont-bounded.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/dep.linearcont-normed.md](../proofs/dep.linearcont-normed.md)

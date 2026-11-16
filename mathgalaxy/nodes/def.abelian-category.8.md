@@ -2,12 +2,12 @@
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)　·　上一页 [nodes/def.abelian-category.7.md](./def.abelian-category.7.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.subcat-additive`](../nodes/prop.subcat-additive.md) 子范畴继承加法与阿贝尔性 用
-- 被 [`lem.solid-completion-criterion`](../nodes/lem.solid-completion-criterion.md) 完备化判据 用
-- 被 [`prop.mitchell-exactness`](../nodes/prop.mitchell-exactness.md) 嵌入定理的细化 用
-- 被 [`def.exact-couple`](../nodes/def.exact-couple.md) 正合偶 用
-- ～弱边 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4*
-- 被 [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
-- 被 [`def.ab-axioms`](../nodes/def.ab-axioms.md) Grothendieck 的 AB 公理 用
+- 被 [`prop.exact-sequence-subcategory`](../nodes/prop.exact-sequence-subcategory.md) 正合列构成子范畴 用
+- 被 [`prop.complexes-abelian`](../nodes/prop.complexes-abelian.md) 复形范畴是阿贝尔范畴 用
+- 被 [`prop.cohomology-short-exact`](../nodes/prop.cohomology-short-exact.md) 同调的两条正合列 用
+- 被 [`prop.injective-iff-acyclic`](../nodes/prop.injective-iff-acyclic.md) 内射与零调的等价 用
+- 被 [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据 用
+- 被 [`prop.left-exact-iff-R0`](../nodes/prop.left-exact-iff-R0.md) 左正合性与 R⁰ 用
+- 被 [`prop.image-kernel-cokernel`](../nodes/prop.image-kernel-cokernel.md) 像就是余核的核 用
 
 > 续见 [nodes/def.abelian-category.9.md](./def.abelian-category.9.md)

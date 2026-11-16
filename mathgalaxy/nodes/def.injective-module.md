@@ -7,12 +7,13 @@ layer 15 · 定义 · 内射模与可除群 · 同调代数
 > 陈述续见 [nodes/def.injective-module.2.md](./def.injective-module.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`prop.injective-splitting`](../nodes/prop.injective-splitting.md) 内射的单射可裂
-- ⇒ [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据
-
 ## 为什么成立（入边，证明在 proofs/）
+- [`def.submodule`](../nodes/def.submodule.md) 子模：用到了定义 子模　[proofs/dep.submodule-injective.md](../proofs/dep.submodule-injective.md)
+
 - …另有入边，续页见 [nodes/def.injective-module.3.md](./def.injective-module.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.injective-module.4.md](./def.injective-module.4.md)
 
 refs: Cartan–Eilenberg, Homological Algebra, Chapter II, injective modules；Rotman, An Introduction to Homological Algebra (2nd ed.), injective modules and the lifting property
 

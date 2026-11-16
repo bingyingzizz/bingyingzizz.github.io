@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · example · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 17 · example · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flat Not Projective` (short) · `Flat but Not Projective` (full)
 
 ## Statement and proof

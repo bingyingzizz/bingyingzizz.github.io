@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 13 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 names: `theta-pi link` (short) · `equivalence of theta and pi asymptotics` (full)
 
 ## Statement · **draft**

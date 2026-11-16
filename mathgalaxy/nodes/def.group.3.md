@@ -6,11 +6,11 @@
 - 被 [`def.group-power`](../nodes/def.group-power.md) 群的整数幂 用
 - 被 [`def.free-group`](../nodes/def.free-group.md) 自由群 用
 - 被 [`def.dihedral-group`](../nodes/def.dihedral-group.md) 二面体群 用
+- 被 [`def.p-group`](../nodes/def.p-group.md) p-群 用
+- 被 [`def.commutator-subgroup`](../nodes/def.commutator-subgroup.md) 换位子群 用
+- 被 [`def.nilpotent-group`](../nodes/def.nilpotent-group.md) 幂零群 用
+- 被 [`def.automorphism-group`](../nodes/def.automorphism-group.md) 自同构群 用
 - 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
 - 被 [`def.permutation-group`](../nodes/def.permutation-group.md) 置换群与对称群 用
-- 被 [`def.cyclic-group`](../nodes/def.cyclic-group.md) 循环群 用
-- ⇒ [`prop.group-basic`](../nodes/prop.group-basic.md) 群的基本性质
-- 被 [`def.divisible-group`](../nodes/def.divisible-group.md) 可除群 用
-- 被 [`def.group-ring`](../nodes/def.group-ring.md) 群环 用
 
 > 续见 [nodes/def.group.4.md](./def.group.4.md)

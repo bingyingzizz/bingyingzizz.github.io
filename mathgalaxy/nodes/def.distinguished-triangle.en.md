@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 17 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
 ## Statement · **draft**
 A **distinguished triangle** in $\mathbf{K}(\mathcal{C})$ is a diagram of the shape

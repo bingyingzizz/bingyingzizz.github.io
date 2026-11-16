@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 0 · definition · cluster Constructing Sets (`set.construct`) · Set Theory
+layer 5 · definition · cluster Constructing Sets (`set.construct`) · Set Theory
 
 ## Statement · **draft**
 The **empty set** is the set with no elements, written $\emptyset$:

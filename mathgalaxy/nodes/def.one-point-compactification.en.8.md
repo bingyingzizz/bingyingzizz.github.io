@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.one-point-compactification)　·　[Chinese page (authoritative)](./def.one-point-compactification.md)
 
-ftarrow$) uses **local compactness**: given $x \in X$, separating it from $\infty$ requires "a compact neighbourhood $K$ of $x$", so $X\setminus K$ is open and $K^{\circ}$ is an open neighbourhood of $x$, the two disjoint. **Without local compactness this compact neighbourhood cannot be produced**.
-  $\cdot$ ($\implies$): deriving Hausdorffness of $X$ from that of $X^{*}$ is free (subspaces inherit it); deriving local compactness uses **closedness of compact sets**: an open neighbourhood $U\cup\{\infty\}$ of $\infty$ has $X\setminus U$ compact, so the closure of $U$ i
+- **$X^{*}$ is compact: no hypothesis is needed**. Take any open cover of $X^{*}$; some member contains $\infty$ (call it $U\cup\{\infty\}$), so $X\setminus U$ is compact; it is covered by the remaining open sets, compactness yields a finite subcover, and adding $U\cup\{\infty\}$ itself gives a finite subcover. The whole argument uses only "an open cover of a compact set has a finite subcover" — **neither Hausdorffness nor local compactness is used**.
+- **$X^{*}$ is Hausdorff $\iff$ $X$ is locally compact Hausdorff**: both directions cost something.
+  $\cdot$ ($\Le
 
 > continued in nodes/def.one-point-compactification.en.9.md

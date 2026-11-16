@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.simplicial`](../nodes/def.simplicial.md) 单纯对象：用到了定义 单纯对象　[proofs/def-link.simpchain-simplicial.md](../proofs/def-link.simpchain-simplicial.md)
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-link.simpchain-complex.md](../proofs/def-link.simpchain-complex.md)
+- [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：用到了定义 加法范畴　[proofs/dep.simplicialchain-additive.md](../proofs/dep.simplicialchain-additive.md)

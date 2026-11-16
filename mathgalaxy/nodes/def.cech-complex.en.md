@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
+layer 16 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.cech-complex.md` and `proofs/`.

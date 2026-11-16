@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比 + [`prop.mobius-three-points`](../nodes/prop.mobius-three-points.md) 三点决定分式线性变换：把三点送到 $0,1,\infty$，第四点的像就是交比　[proofs/e95.implication.md](../proofs/e95.implication.md)
+- [`def.cross-ratio`](../nodes/def.cross-ratio.md) 交比：用到了定义 交比　[proofs/dep.crossratio-real-crossratio.md](../proofs/dep.crossratio-real-crossratio.md)

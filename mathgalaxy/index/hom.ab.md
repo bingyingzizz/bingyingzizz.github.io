@@ -5,17 +5,18 @@
 
 - def.pre-additive-category　预加法范畴　layer 8
 - def.additive-functor　加法函子　layer 9
-- prop.adjoint-additive　伴随函子都加法　layer 10
-- prop.generator-coproduct-epi　生成元的余积刻画　layer 11
 - def.additive-category　加法范畴　layer 14
 - def.split-exact　分裂短正合列　layer 14
-- def.kernel-cokernel　核与余核　layer 14
-- prop.additive-iff-preserves-biproduct　加法函子的刻画　layer 14
-- prop.left-exact-criterion　左正合性的判据　layer 14
-- def.pre-abelian-category　预阿贝尔范畴　layer 15
 - def.enough-projectives　足够多投射对象　layer 15
 - prop.projective-coproduct　投射对象的余积投射　layer 15
 - prop.ab-limits-forgetful　Ab(C) 的极限　layer 15
-- def.abelian-category　阿贝尔范畴　layer 16
+- def.kernel-cokernel　核与余核　layer 15
+- prop.additive-iff-preserves-biproduct　加法函子的刻画　layer 15
+- prop.adjoint-additive　伴随函子都加法　layer 15
+- def.pre-abelian-category　预阿贝尔范畴　layer 16
+- def.abelian-category　阿贝尔范畴　layer 17
+- def.ab-axioms　Grothendieck 的 AB 公理　layer 18
+- thm.freyd-mitchell　Freyd–Mitchell 嵌入定理　layer 18
+- thm.snake-lemma　蛇引理　layer 18
 
 > 续见 `index/hom.ab.2.md`

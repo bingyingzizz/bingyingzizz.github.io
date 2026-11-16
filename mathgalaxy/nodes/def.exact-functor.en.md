@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.exact-functor)　·　[Chinese page (authoritative)](./def.exact-functor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.exact-functor.md` and `proofs/`.
+## Statement · **draft**
+A functor $F$ is **left exact** if it preserves all **finite limits**; **right exact** if it preserves all **finite colimits**; and **exact** if both.
 
-
-Cite: `def.exact-functor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.exact-functor.en.2.md

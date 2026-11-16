@@ -1,6 +1,6 @@
 # 张量函子右正合　`prop.tensor-right-exact`
 $(-) \otimes_{R} N$ 右正合，左正合当且仅当 $N$ 平坦
-layer 17 · 命题 · 平坦模 · 同调代数
+layer 19 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.tensor-right-exact)　·　[节点索引](../index.md)
 
 设 $R$ 是含幺环，$N$ 是左 $R$-模。函子 $(-) \

@@ -1,6 +1,6 @@
 # 整数的带余除法　`thm.int-division`
 带余除法：商与余数，余数小于除数
-layer 12 · 定理 · 整除与同余 · 数论
+layer 11 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.int-division)　·　[节点索引](../index.md)
 
 设 $a, b \in \mathbb{Z}$ 且 $b \ne 0$。则存在**唯一**的 $q, r \in \mathbb{Z}$ 使
@@ -10,7 +10,7 @@ $$a = qb + r, \qquad 0 \le r < |b| .$$
 $q$ 叫**商**，$r$ 叫**余数**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.divides`](../nodes/def.divides.md) 整除：用到了定义 整除　[proofs/e115.definition.md](../proofs/e115.definition.md)
+- [`def.wellorder`](../nodes/def.wellorder.md) 良序集：整数良序给出带余除法的存在性　[proofs/dep.intdiv-wellorder.md](../proofs/dep.intdiv-wellorder.md)
 - [`thm.division-algorithm`](../nodes/thm.division-algorithm.md) 带余除法：整数与多项式：同一个带余除法　[proofs/e125.analogy.md](../proofs/e125.analogy.md)
 
 - …另有入边，续页见 [nodes/thm.int-division.2.md](./thm.int-division.2.md)

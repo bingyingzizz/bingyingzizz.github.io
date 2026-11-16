@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 19 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $f : X \to Y$ be continuous with $f(x_{0}) = y_{0}$. Define

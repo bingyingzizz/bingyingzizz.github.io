@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 19 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Subcategory Additivity` (short) · `Subcategories Inherit Additivity and Abelianness` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # Grothendieck 范畴　`def.grothendieck-category`
 Grothendieck 范畴
-layer 18 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 19 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.grothendieck-category)　·　[节点索引](../index.md)
 
 **Grothendieck 范畴**是带**生成元**的 **AB5** 范畴（AB5 即：有所有余极限，且滤过余极限正合）。

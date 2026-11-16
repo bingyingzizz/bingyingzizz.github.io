@@ -1,6 +1,6 @@
 # 三角的旋转与延拓　`prop.triangle-rotation`
 导出三角的基本性质
-layer 15 · 命题 · 复形与导出三角 · 同调代数
+layer 18 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.triangle-rotation)　·　[节点索引](../index.md)
 
 在 $\mathbf{K}(\mathcal{C})$ 中：

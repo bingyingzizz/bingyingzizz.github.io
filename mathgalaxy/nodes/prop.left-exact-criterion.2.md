@@ -5,3 +5,4 @@
 - [`def.exact-functor`](../nodes/def.exact-functor.md) 正合函子：用到了定义 正合函子　[proofs/def-link.lcrit-exactfun.md](../proofs/def-link.lcrit-exactfun.md)
 - [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子：用到了定义 加法函子　[proofs/def-link.lcrit-addfun.md](../proofs/def-link.lcrit-addfun.md)
 - [`def.preserves-limit`](../nodes/def.preserves-limit.md) 保极限的函子：用到了定义 保极限的函子　[proofs/def-link.lcrit-res.md](../proofs/def-link.lcrit-res.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/dep.leftexact-abelian.md](../proofs/dep.leftexact-abelian.md)

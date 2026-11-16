@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.kan-extension-fully-faithful)　·　[Chinese page (authoritative)](./prop.kan-extension-fully-faithful.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Kan Extension along Inclusion` (short) · `Kan Extension along a Fully Faithful Functor` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.kan-extension-fully-faithful.md` and `proofs/`.
+## Statement · **draft**
+Let $p : \mathcal{C} \to \mathcal{C}'$ be **fully faithful** and $\mathcal{D}$ cocomplete. Then for every $F : \mathcal{C} \to \mathcal{D}$ the left Kan extension satisfies
 
+$$p_{!}F \circ p \;\cong\; F.$$
 
-Cite: `prop.kan-extension-fully-faithful` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.kan-extension-fully-faithful.en.2.md

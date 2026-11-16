@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.group)　·　第 1 页 [nodes/def.group.md](./def.group.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`thm.euler-theorem`](../nodes/thm.euler-theorem.md) Euler 定理：Euler 定理的证明用到有限群的阶　[proofs/e124.definition.md](../proofs/e124.definition.md)
+- [`def.order-mod-n`](../nodes/def.order-mod-n.md) 模 n 的阶：模 $n$ 的阶与群论里的元素阶　[proofs/e157.definition.md](../proofs/e157.definition.md)
 - [`def.binary-operation`](../nodes/def.binary-operation.md) 二元运算：用到了定义 二元运算　[proofs/dep.gap-group-binary-operation.md](../proofs/dep.gap-group-binary-operation.md)
 - [`def.function`](../nodes/def.function.md) 映射：用到了定义 映射　[proofs/def-dep.group-function.md](../proofs/def-dep.group-function.md)
 

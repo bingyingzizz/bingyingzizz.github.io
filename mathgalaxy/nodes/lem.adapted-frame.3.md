@@ -1,9 +1,7 @@
 # 适配标架　`lem.adapted-frame`　·　续页（第 3 页）
 [在星图里打开](../#n=lem.adapted-frame)　·　第 1 页 [nodes/lem.adapted-frame.md](./lem.adapted-frame.md)　·　上一页 [nodes/lem.adapted-frame.2.md](./lem.adapted-frame.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- ⇒ [`lem.second-form-symmetric`](../nodes/lem.second-form-symmetric.md) 第二基本形式对称
-- ⇒ [`def.first-fundamental-form`](../nodes/def.first-fundamental-form.md) 第一基本形式
-- ⇒ [`def.second-fundamental-form`](../nodes/def.second-fundamental-form.md) 第二基本形式
-- ⇒ [`thm.gauss-equation`](../nodes/thm.gauss-equation.md) Gauss 方程
-- ⇒ [`thm.codazzi-mainardi`](../nodes/thm.codazzi-mainardi.md) Codazzi–Mainardi 方程
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.connection-form`](../nodes/def.connection-form.md) 联络形式：用到了定义 联络形式　[proofs/dep.adapted-connection.md](../proofs/dep.adapted-connection.md)
+
+> 续见 [nodes/lem.adapted-frame.4.md](./lem.adapted-frame.4.md)

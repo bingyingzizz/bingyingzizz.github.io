@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 19 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Exact Sequence Subcategory` (short) · `Exact Sequences Form a Subcategory` (full)
 
 ## Statement and proof

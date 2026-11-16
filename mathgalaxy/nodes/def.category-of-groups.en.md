@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-groups)　·　[Chinese page (authoritative)](./def.category-of-groups.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.category-of-groups.md` and `proofs/`.
+## Statement · **draft**
+**The category of groups** $\mathbf{Grp}$: objects are groups, morphisms are group homomorphisms, composition is composition of maps, and identities are identity homomorphisms.
 
+It has a **forgetful functor** $\mathbf{Grp}\to\mathbf{Set}$; abelian groups form the full subcategory $\mathbf{Ab}$, and finite groups form the full subcategory $\mathbf{FinGrp}$.
 
-Cite: `def.category-of-groups` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-groups.en.2.md

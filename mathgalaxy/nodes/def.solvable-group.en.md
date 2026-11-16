@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
+layer 11 · definition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
 ## Statement · **draft**
 A group $G$ is **solvable** iff there is a normal chain
