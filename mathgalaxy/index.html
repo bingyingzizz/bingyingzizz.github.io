@@ -109508,6 +109508,20 @@ MG.trunk = [
       }
     }
 
+    /* 边版的 revealForFocus：一条边要「看得见」，**两端**都得在过滤里。
+       用户报的坑（2026-11-16）：层 7 打开「覆叠空间」→ 点定义引用 `dep.lens-covering`
+       → 目标「透镜空间」在第 20+ 层 ⇒ 整条边被 extraFilter 挡掉，面板打开了、画布上却没有。
+       所以按两端节点的最大层把滑杆抬上去（revealForFocus 内部还会处理手动隐藏与主干/子图）。 */
+    function revealForEdge(e) {
+      if (!e) return;
+      var pts = MG.graphUtil.edgeNodes(e);
+      for (var i = 0; i < pts.length; i++) {
+        revealForFocus(pts[i]);
+        /* 手动点隐藏过的端点：聚焦这条边就要让它重新出现（不然只剩一半） */
+        if (!vis.isNodeVisible(pts[i])) vis.setNode(pts[i], true);
+      }
+    }
+
     function focusNode(id, opts) {
       opts = opts || {};
       // 被藏起来的点：先让它可见 —— 否则点了搜索结果/深链，星图上什么也没有
@@ -109528,10 +109542,12 @@ MG.trunk = [
 
     function focusEdge(id, opts) {
       opts = opts || {};
+      /* 先让两端真的可见，再设 focus/开面板（否则层过滤会把整条边藏掉，见 revealForEdge） */
+      var e = findEdge(id);
+      if (e) revealForEdge(e);
       view.focus = { type: 'edge', id: id };
       panel.show({ type: 'edge', id: id });
       panelOpen = true;
-      var e = findEdge(id);
       if (e && opts.center !== false) {
         var pts = MG.graphUtil.edgeNodes(e);
         var mid = { x: 0, y: 0 }, cnt = 0;
