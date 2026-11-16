@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 23 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\varphi \in L^+$ be a simple function, written in standard form — non-negative coefficients, pairwise disjoint base sets, all in $\mathcal{M}$:

@@ -1,6 +1,6 @@
 # 伴随函子定理　`thm.saft`
 伴随函子定理
-layer 13 · 定理 · 伴随与反射 · 范畴论
+layer 15 · 定理 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=thm.saft)　·　[节点索引](../index.md)
 
 设 $\mathcal{D}$ 是**小**且**完备**的范畴。则函子 $G : \mathcal{D} \to \mathcal{C}$ 有左伴随 $\iff$ $G$ 保持所有极限。

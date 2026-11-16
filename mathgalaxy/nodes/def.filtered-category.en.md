@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 13 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.filtered-category.md` and `proofs/`.

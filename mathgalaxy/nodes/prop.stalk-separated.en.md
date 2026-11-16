@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 20 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.stalk-separated.md` and `proofs/`.

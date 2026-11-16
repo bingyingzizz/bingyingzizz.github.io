@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
+layer 25 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.pontryagin-finite-dim-banach.md` and `proofs/`.

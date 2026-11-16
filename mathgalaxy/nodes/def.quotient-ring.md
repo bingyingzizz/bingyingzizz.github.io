@@ -1,6 +1,6 @@
 # 商环　`def.quotient-ring`
 商环：模掉一个理想
-layer 11 · 定义 · 代数结构 · 抽象代数
+layer 13 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.quotient-ring)　·　[节点索引](../index.md)
 
 设 $A$ 是环，$I \subseteq A$ 是理想。在加法商群 $A/I$ 上定义

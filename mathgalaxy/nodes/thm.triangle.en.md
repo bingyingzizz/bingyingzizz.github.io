@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
+layer 13 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
 
 ## Statement · **draft**
 Let $K$ be an ordered field (such as $\mathbb{Q}$ or $\mathbb{R}$) and $x, y \in K$. Then

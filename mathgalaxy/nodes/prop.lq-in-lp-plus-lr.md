@@ -1,6 +1,6 @@
 # L^q 落在 L^p + L^r 里　`prop.lq-in-lp-plus-lr`
 命题：$L^q \subseteq L^p + L^r$（$0 < p < q < r \le \infty$）
-layer 21 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 26 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.lq-in-lp-plus-lr)　·　[节点索引](../index.md)
 
 设 $0 < p < q < r \le \infty$。则

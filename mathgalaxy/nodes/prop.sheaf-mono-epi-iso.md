@@ -1,6 +1,6 @@
 # 层中单满即同构　`prop.sheaf-mono-epi-iso`
 层里的单满分解
-layer 13 · 命题 · 层与拓扑 · 范畴论
+layer 15 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sheaf-mono-epi-iso)　·　[节点索引](../index.md)
 
 设 $u : F \to G$ 是层之间的态射。则：

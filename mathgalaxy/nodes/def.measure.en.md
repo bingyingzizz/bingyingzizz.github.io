@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
+layer 17 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\mathcal{M}$ be a $\sigma$-algebra on $X$. A function $\mu : \mathcal{M} \to [0, +\infty]$ is a **measure** if and only if

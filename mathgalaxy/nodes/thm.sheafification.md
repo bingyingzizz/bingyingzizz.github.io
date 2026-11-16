@@ -1,6 +1,6 @@
 # 层化　`thm.sheafification`
 层化：层范畴是预层范畴的反射子范畴
-layer 18 · 定理 · 层与拓扑 · 范畴论
+layer 20 · 定理 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=thm.sheafification)　·　[节点索引](../index.md)
 
 层范畴是预层范畴的**反射子范畴**，反射

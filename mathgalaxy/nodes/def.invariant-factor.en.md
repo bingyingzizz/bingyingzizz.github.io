@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 19 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $R$ be a principal ideal domain and let the Smith normal form of $A \in M_{m \times n}(R)$ be

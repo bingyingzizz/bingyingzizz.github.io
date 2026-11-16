@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
+layer 24 · definition · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
 ## Statement · **draft**
 **In words**: a real-valued function with continuous second partials satisfying $\Delta u = 0$. Loosely: a function that is "nowhere more convex or more concave than its surroundings".

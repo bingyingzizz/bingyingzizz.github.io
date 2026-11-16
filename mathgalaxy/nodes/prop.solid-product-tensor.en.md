@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 27 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement · **draft**
 Let $M = \prod_I \mathbb{Z}$ and $N = \prod_J \mathbb{Z}$. Then

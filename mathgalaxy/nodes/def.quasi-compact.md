@@ -1,6 +1,6 @@
 # 拟紧对象　`def.quasi-compact`
 拟紧对象
-layer 18 · 定义 · 拓扑斯 · 范畴论
+layer 20 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.quasi-compact)　·　[节点索引](../index.md)
 
 景 $\mathcal{C}$ 的对象 $X$ 叫**拟紧的**，如果任给生成覆盖筛的族 $(X_{i} \to X)_{i \in I}$，都存在**有限**的 $J \subseteq I$，使 $(X_{i} \to X)_{i \in J}$ 生成的筛**也是**覆盖筛。

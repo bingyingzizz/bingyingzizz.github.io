@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 18 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
 ## Statement · **draft**
 Morphisms of complexes $f, g : K \to L$ are **homotopic** if there is a family of morphisms

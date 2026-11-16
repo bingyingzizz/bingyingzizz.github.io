@@ -1,6 +1,6 @@
 # 切片上的正合左伴随　`prop.abelian-slice-adjunction`
 命题：$j_{X!} \dashv j_{X}^{-1}$ 且 $j_{X!}$ 正合
-layer 18 · 命题 · 拓扑斯 · 范畴论
+layer 20 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.abelian-slice-adjunction)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯、$X \in \mathcal{T}$。则函子

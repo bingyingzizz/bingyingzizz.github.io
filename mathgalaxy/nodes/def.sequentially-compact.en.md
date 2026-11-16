@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology
+layer 18 · definition · cluster Metric Spaces (`topology.metric`) · Topology
 
 ## Statement · **draft**
 A metric space $(X, d)$ is **sequentially compact** iff every sequence in $X$ has a subsequence converging in $X$:

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 13 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `sequence` (short) · `sequence of morphisms` (full)
 
 ## Statement and proof

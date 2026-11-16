@@ -1,6 +1,6 @@
 # 复数 ℂ　`def.complex`
 复数系 $\mathbb{C}$
-layer 19 · 定义 · 数系的构造 · 集合论+数学分析+抽象代数
+layer 21 · 定义 · 数系的构造 · 集合论+数学分析+抽象代数
 [在星图里打开](../#n=def.complex)　·　[节点索引](../index.md)
 
 **复数系** $\mathbb{C} := \mathbb{R}^2$，配以下运算：
@@ -16,7 +16,7 @@ $$|zw| = |z|\,|w|, \qquad z \bar{z} = |z|^2$$
 于是每个 $z \ne 0$ 都有逆 $z^{-1} = \bar{z}/|z|^2$：$\mathbb{C}$ 是一个域。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.integral-complex`](../nodes/def.integral-complex.md) 复函数的积分 用
+- 被 [`prop.measurable-product-and-realimag`](../nodes/prop.measurable-product-and-realimag.md) 积空间与实虚部 用
 
 - …另有出边，续页见 [nodes/def.complex.3.md](./def.complex.3.md)
 

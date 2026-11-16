@@ -1,6 +1,6 @@
 # 紧的三个等价刻画　`thm.metric-compact-equiv`
 紧 $\iff$ 列紧 $\iff$ 完备 + 全有界
-layer 17 · 定理 · 度量空间 · 拓扑学
+layer 19 · 定理 · 度量空间 · 拓扑学
 [在星图里打开](../#n=thm.metric-compact-equiv)　·　[节点索引](../index.md)
 
 设

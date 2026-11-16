@@ -1,6 +1,6 @@
 # 黎曼 ζ 函数　`def.riemann-zeta`
 黎曼 $\zeta$ 函数：$\zeta(s) = \sum_{n \ge 1} n^{-s}$（$\operatorname{Re}s > 1$）
-layer 29 · 定义 · 数论函数与素数分布 · 数论+数学分析
+layer 33 · 定义 · 数论函数与素数分布 · 数论+数学分析
 [在星图里打开](../#n=def.riemann-zeta)　·　[节点索引](../index.md)
 
 对 $\operatorname{Re} s > 1$ 定义

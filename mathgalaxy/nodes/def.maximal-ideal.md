@@ -1,6 +1,6 @@
 # 极大理想　`def.maximal-ideal`
 极大理想：商环是域
-layer 12 · 定义 · 代数结构 · 抽象代数
+layer 14 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.maximal-ideal)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺交换环，$M \subset A$ 是真理想。称 $M$ 是**极大理想**，若不存在理想 $J$ 使

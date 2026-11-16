@@ -1,6 +1,6 @@
 # 幂级数　`def.power-series`
 幂级数
-layer 16 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 22 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.power-series)　·　[节点索引](../index.md)
 
 给定数列 $\{a_n\} \subseteq \mathbb{R}$（或 $\mathbb{C}$）与中心 $x_0$，形如

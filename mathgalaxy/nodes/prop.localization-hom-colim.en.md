@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 17 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.localization-hom-colim.md` and `proofs/`.

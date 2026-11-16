@@ -1,6 +1,6 @@
 # 软层无环（Godement）　`thm.soft-sheaf-acyclic`
 定理：仿紧 Hausdorff 上软层无环
-layer 21 · 定理 · 层上同调 · 同调代数+拓扑学
+layer 23 · 定理 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=thm.soft-sheaf-acyclic)　·　[节点索引](../index.md)
 
 设 $X$ 是仿紧 Hausdorff 空间，$\mathcal{F}$ 是 $X$ 上的软层。则对一切 $n \ge 1$，$H^{n}(X,\mathcal{F}) = 0$。

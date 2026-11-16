@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 13 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be a field, $f, g \in K[x]$, $g \ne 0$. Then there exist **unique** $q, r \in K[x]$ such that

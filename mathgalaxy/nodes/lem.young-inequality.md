@@ -1,6 +1,6 @@
 # Young 不等式　`lem.young-inequality`
 Young 不等式（$a^\lambda \cdot b^{1-\lambda} \le \lambda a + (1-\lambda)b$）
-layer 20 · 引理 · L^p 空间 · 实变函数+数学分析
+layer 22 · 引理 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=lem.young-inequality)　·　[节点索引](../index.md)
 
 设 $a \ge 0$，$b \ge 0$，$0 < \lambda < 1$。则

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 19 · proposition · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 
 ## Statement · **draft**
 For every unital ring homomorphism $f : R \to S$ there is an adjunction

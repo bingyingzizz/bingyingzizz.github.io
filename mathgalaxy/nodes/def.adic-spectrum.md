@@ -1,6 +1,6 @@
 # adic 谱 Spa　`def.adic-spectrum`
 adic 谱 $\operatorname{Spa}(A,A^+)$
-layer 22 · 定义 · adic 空间 · 解析空间
+layer 24 · 定义 · adic 空间 · 解析空间
 [在星图里打开](../#n=def.adic-spectrum)　·　[节点索引](../index.md)
 
 白话：**把环 $A$ 的元素「量大小」的所有方式收集起来，就得到 adic 谱**。

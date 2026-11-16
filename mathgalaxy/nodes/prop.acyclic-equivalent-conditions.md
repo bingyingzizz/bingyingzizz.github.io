@@ -1,6 +1,6 @@
 # 无环性的四条等价说法　`prop.acyclic-equivalent-conditions`
 命题：$M$ 无环 $\iff$ 处处上同调为零 $\iff$ 处处 Čech 为零
-layer 19 · 命题 · 层上同调 · 同调代数
+layer 21 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.acyclic-equivalent-conditions)　·　[节点索引](../index.md)
 
 设 $M$ 是景 $\mathcal{C}$ 上的阿贝尔层。以下四条等价：

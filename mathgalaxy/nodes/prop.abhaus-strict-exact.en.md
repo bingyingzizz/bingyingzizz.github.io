@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
+layer 21 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.abhaus-strict-exact.md` and `proofs/`.

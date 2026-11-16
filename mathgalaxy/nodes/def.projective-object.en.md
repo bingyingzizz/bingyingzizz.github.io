@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 16 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 names: `Projective and Injective` (short) · `Projective and Injective Objects` (full)
 
 ## Statement · **draft**

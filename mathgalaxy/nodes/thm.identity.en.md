@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 31 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.identity.md` and `proofs/`.

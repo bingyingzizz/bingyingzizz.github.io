@@ -1,6 +1,6 @@
 # 不变因子　`def.invariant-factor`
 不变因子：Smith 标准形的对角元
-layer 17 · 定义 · 特征值与 Jordan 型 · 抽象代数
+layer 19 · 定义 · 特征值与 Jordan 型 · 抽象代数
 [在星图里打开](../#n=def.invariant-factor)　·　[节点索引](../index.md)
 
 设 $R$ 是主理想整环，$A \in M_{m \times n}(R)$ 的 Smith 标准形为

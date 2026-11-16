@@ -1,6 +1,6 @@
 # 大乘积的固态张量积　`prop.solid-product-tensor`
 命题：$\prod_I\mathbb{Z} \otimes^{L\blacksquare} \prod_J\mathbb{Z} \cong \prod_{I\times J}\mathbb{Z}$
-layer 25 · 命题 · 固态阿贝尔群 · 凝聚态数学
+layer 27 · 命题 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.solid-product-tensor)　·　[节点索引](../index.md)
 
 设 $M = \prod_I \mathbb{Z}$、$N = \prod_J \mathbb{Z}$。则

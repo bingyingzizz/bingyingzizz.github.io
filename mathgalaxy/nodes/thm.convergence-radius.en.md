@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
+layer 23 · theorem · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $\sum a_n (x - x_0)^{n}$ be a power series and put (with the conventions $1/0 = +\infty$, $1/{+\infty} = 0$)

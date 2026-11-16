@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
+layer 28 · theorem · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\mu(X) < \infty$, and $f_n \to f$ a.e. Then $f_n \to f$ **almost uniformly**:

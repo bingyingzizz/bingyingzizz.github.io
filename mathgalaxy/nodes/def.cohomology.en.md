@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 20 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.cohomology.md` and `proofs/`.

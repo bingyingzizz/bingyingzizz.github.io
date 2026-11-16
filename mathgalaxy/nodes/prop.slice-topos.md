@@ -1,6 +1,6 @@
 # 切片拓扑斯　`prop.slice-topos`
 命题：$\widetilde{\mathcal{C}/T} \simeq \widetilde{\mathcal{C}}/\widetilde{T}$，且 $j_{T} : \widetilde{\mathcal{C}/T} \to \widetilde{\mathcal{C}}$ 是拓扑斯态射
-layer 18 · 命题 · 拓扑斯 · 范畴论
+layer 20 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.slice-topos)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景、$T \in \widehat{\mathcal{C}}$。则

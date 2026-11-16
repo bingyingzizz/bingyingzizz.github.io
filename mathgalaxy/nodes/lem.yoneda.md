@@ -1,6 +1,6 @@
 # 米田引理　`lem.yoneda`
 米田引理
-layer 13 · 引理 · 预层与米田 · 范畴论
+layer 15 · 引理 · 预层与米田 · 范畴论
 [在星图里打开](../#n=lem.yoneda)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{C} \to \mathbf{Set}$ 是函子，$X \in \mathcal{C}$，并记

@@ -1,6 +1,6 @@
 # 自然同构不改变函子的性质　`prop.nat-iso-invariants`
 命题：$F \cong F'$ 则两者忠实/满/全忠实/本质满/等价性一致
-layer 11 · 命题 · 函子与自然变换 · 范畴论
+layer 13 · 命题 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=prop.nat-iso-invariants)　·　[节点索引](../index.md)
 
 若 $F \cong F'$，则 $F$ 忠实（resp. 满、全忠实、本质满、是等价）$\iff$ $F'$ 也如此。

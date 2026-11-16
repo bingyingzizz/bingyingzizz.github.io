@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 17 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 names: `psi-theta = o(x)` (short) · `psi minus theta is little-o of x` (full)
 
 ## Statement · **draft**

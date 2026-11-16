@@ -1,6 +1,6 @@
 # 预拓扑　`def.pretopology`
 预拓扑
-layer 13 · 定义 · 层与拓扑 · 范畴论
+layer 15 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.pretopology)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 上的**预拓扑**是对每个 $X$ 指定一族**覆盖族** $\operatorname{Cov}(X)$（每个元素是一族态射 $(X_{i} \to X)_{i \in I}$），满足：

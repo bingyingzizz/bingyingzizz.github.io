@@ -1,6 +1,6 @@
 # 足够多内射对象　`thm.mod-enough-injectives`
 $R\text{-}\mathbf{Mod}$ 有足够多的内射对象
-layer 19 · 定理 · 内射模与可除群 · 同调代数
+layer 21 · 定理 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=thm.mod-enough-injectives)　·　[节点索引](../index.md)
 
 $R\text{-}\mathbf{Mod}$ **有足够多的内射对象**：每个左 $R$-模都能嵌入

@@ -1,6 +1,6 @@
 # James 定理　`thm.james`
 James 定理：自反 $\iff$ 每个泛函达到范数
-layer 20 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 27 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.james)　·　[节点索引](../index.md)
 
 Banach 空间 $X$ 自反（`def.reflexive-space`）当且仅当每个 $\varphi \in X^*$ 都在单位球 $B_X$ 上达到其范数：存在 $x \in B_X$ 使 $\varphi(x) = \|\varphi\|$。

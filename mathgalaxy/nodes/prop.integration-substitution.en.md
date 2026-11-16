@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 28 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Substitution` (short) · `Integration by Substitution` (full)
 
 ## Statement and proof

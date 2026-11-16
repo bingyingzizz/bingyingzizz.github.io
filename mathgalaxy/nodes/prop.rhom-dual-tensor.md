@@ -1,6 +1,6 @@
 # 离散对偶的导出 Hom 与导出张量　`prop.rhom-dual-tensor`
 $\operatorname{RHom}(\operatorname{RHom}(M, T), N) \cong M \otimes^{\mathbf{L}}_{\mathbb{Z}} N[-1]$
-layer 22 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
+layer 26 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.rhom-dual-tensor)　·　[节点索引](../index.md)
 
 设 $M, N$ 是**离散**阿贝尔群，$T = \mathbb{R}/\mathbb{Z}$。则

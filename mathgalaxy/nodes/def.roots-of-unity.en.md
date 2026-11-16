@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra / Complex Analysis
+layer 22 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra / Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.roots-of-unity.md` and `proofs/`.

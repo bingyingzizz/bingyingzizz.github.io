@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.abelianization.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 一致收敛　`def.uniform-convergence`
 一致收敛 $f_n \rightrightarrows f$
-layer 16 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 18 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.uniform-convergence)　·　[节点索引](../index.md)
 
 沿用上面的记号。称 $\{f_n\}$ **一致收敛**到 $f$，当且仅当

@@ -1,6 +1,6 @@
 # 加法范畴　`def.additive-category`
 加法范畴
-layer 14 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 16 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.additive-category)　·　[节点索引](../index.md)
 
 **加法范畴**是满足以下两条的预加法范畴：

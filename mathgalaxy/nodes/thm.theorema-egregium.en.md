@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 32 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 37 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement · **draft**
 The Gaussian curvature $K$ depends only on the first fundamental form $I$. Precisely: if $\varphi : S_{1}\to S_{2}$ is a local isometry, then

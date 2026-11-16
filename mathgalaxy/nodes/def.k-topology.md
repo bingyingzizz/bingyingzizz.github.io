@@ -1,6 +1,6 @@
 # k-开、k-闭与 k-拓扑　`def.k-topology`
 $k$-开集与 $k$-化（$k$-Topology）
-layer 19 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 21 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=def.k-topology)　·　[节点索引](../index.md)
 
 子集 $Y \subseteq X$ 叫 **$k$-开**（**$k$-闭**）的，如果对每个连续映射 $f : S \to X$（$S$ 紧 Hausdorff），$f^{-1}(Y)$ 在 $S$ 中开（闭）。

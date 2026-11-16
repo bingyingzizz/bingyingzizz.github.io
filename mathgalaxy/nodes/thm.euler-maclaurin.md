@@ -1,6 +1,6 @@
 # 欧拉–麦克劳林公式　`thm.euler-maclaurin`
 Euler–Maclaurin 求和公式
-layer 27 · 定理 · 数项级数的敛散性 · 数学分析
+layer 29 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.euler-maclaurin)　·　[节点索引](../index.md)
 
 设 $f\in C^{2m}[a,b]$，$a<b$ 为整数。记 $B_n(\{x\})$ 为周期 Bernoulli 多项式（$B_1(\{x\})=\{x\}-\tfrac12$）。则

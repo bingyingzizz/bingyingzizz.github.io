@@ -1,6 +1,6 @@
 # 张量函子的刻画　`thm.watts`
 保直和的右正合函子都同构于张量函子
-layer 14 · 定理 · 平坦模 · 同调代数
+layer 16 · 定理 · 平坦模 · 同调代数
 [在星图里打开](../#n=thm.watts)　·　[节点索引](../index.md)
 
 设 $R$ 是**交换环**，$F : R\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}$ 是**右正合**的 **$R$-线性**加性函子（只有加性不够：复共轭扭曲 $F(M)$，标量作用取 $a \cdot m = \bar a m$，它加性、正

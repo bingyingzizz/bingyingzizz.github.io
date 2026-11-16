@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/dep.fgu-adjoint.md](../proofs/dep.fgu-adjoint.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-def-free-group-universal.md](../proofs/dep.cat-sets-def-free-group-universal.md)

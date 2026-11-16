@@ -1,6 +1,6 @@
 # 整值测度　`def.cond-measure`
 整值测度 $M(S,\mathbb{Z})$
-layer 13 · 定义 · 固态阿贝尔群 · 凝聚态数学
+layer 15 · 定义 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=def.cond-measure)　·　[节点索引](../index.md)
 
 白话：$S$ 上取值在 $\mathbb{Z}$ 的连续函数全体记作 $C(S,\mathbb{Z})$（按逐点相加成群）；**整值测度**就是「能对这些函数做带权和（也就是『积分』）的东西」，即从 $C(S,\mathbb{Z})$ 到 $\mathbb{Z}$ 的群同态。

@@ -1,6 +1,6 @@
 # 实数的度量　`def.real-metric-space`
 实数作为度量空间
-layer 15 · 定义 · 实数与极限 · 数学分析+拓扑学
+layer 17 · 定义 · 实数与极限 · 数学分析+拓扑学
 [在星图里打开](../#n=def.real-metric-space)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}$ 上定义 $d(x, y) = |x - y|$。则 $(\mathbb{R}, d)$ 是完备的可分度量空间，其度量拓扑就是 $\mathbb{R}$ 的标准拓扑（开区间为基）。

@@ -1,6 +1,6 @@
 # 狄利克雷特征标　`def.dirichlet-character`
 狄利克雷特征标 $\chi \bmod n$：$(\mathbb{Z}/n)^{\times} \to \mathbb{C}^{\times}$，延拓成完全积性函数
-layer 30 · 定义 · 数论函数与素数分布 · 数论+抽象代数
+layer 34 · 定义 · 数论函数与素数分布 · 数论+抽象代数
 [在星图里打开](../#n=def.dirichlet-character)　·　[节点索引](../index.md)
 
 固定 $n \ge 1$。**狄利克雷特征标**（mod $n$）是一个群同态

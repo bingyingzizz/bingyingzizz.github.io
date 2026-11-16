@@ -1,6 +1,6 @@
 # 拟分离 推出 底空间弱 Hausdorff　`lem.qseparated-underlying-weak-hausdorff`
 拟分离凝聚态集的底空间弱 Hausdorff
-layer 20 · 引理 · 凝聚态集 · 凝聚态数学
+layer 22 · 引理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=lem.qseparated-underlying-weak-hausdorff)　·　[节点索引](../index.md)
 
 若凝聚态集 $X$ 拟分离，则它的底空间 $X(\bullet)$ 弱 Hausdorff。

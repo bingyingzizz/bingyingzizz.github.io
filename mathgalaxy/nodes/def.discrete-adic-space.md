@@ -1,6 +1,6 @@
 # 离散 adic 空间　`def.discrete-adic-space`
 离散 adic 空间
-layer 23 · 定义 · adic 空间 · 解析空间
+layer 25 · 定义 · adic 空间 · 解析空间
 [在星图里打开](../#n=def.discrete-adic-space)　·　[节点索引](../index.md)
 
 白话：**把仿射的 $\operatorname{Spa}(A,A^+)$ 像橡皮泥一样一块块粘起来，就得到 adic 空间** —— 它是「环层 + 每点一个赋值」的三元组，局部看起来就是上面的仿射谱。它扮演的是概形里 $\operatorname{Spec}$ 的角色，只是多了「每点能量大小」。

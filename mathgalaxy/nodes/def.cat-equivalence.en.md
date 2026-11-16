@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 12 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 A functor $F : \mathcal{C} \to \mathcal{C}'$ is an **equivalence of categories** if there exist a functor $G : \mathcal{C}' \to \mathcal{C}$ and natural isomorphisms

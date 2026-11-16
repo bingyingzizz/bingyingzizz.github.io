@@ -3,14 +3,14 @@
 造出「紧 Hausdorff 这套范畴」：Stone–Čech 紧化 → 自由对象 → 投射对象 → 自由表示。它是一切「紧块」的来源。
 中心天体 prop.chaus-reflective　·　11 个节点　·　根 `../`
 
-- def.projective-object　投射 / 内射对象　layer 14
-- def.chaus　紧 Hausdorff 空间范畴　layer 17
-- lem.minimal-closed-surjection　满射的极小闭子集　layer 17
-- prop.chaus-reflective　紧 Haus 是反射子范畴　layer 18
-- def.free-compact-hausdorff　自由紧 Hausdorff 空间　layer 18
-- prop.chaus-quotient-equiv　紧 Hausdorff 上商映射的四种说法　layer 18
-- prop.chaus-quotient-of-free　紧 Haus 是自由的商　layer 19
-- prop.free-projective　自由紧 Haus 是投射对象　layer 19
-- def.free-presentation　自由表示　layer 19
-- prop.coproduct-chaus　不交并是紧 Hausdorff 的余积　layer 19
-- cor.chaus-free-presentation　紧 Haus 都有自由表示　layer 20
+- def.projective-object　投射 / 内射对象　layer 16
+- def.chaus　紧 Hausdorff 空间范畴　layer 19
+- lem.minimal-closed-surjection　满射的极小闭子集　layer 19
+- prop.chaus-reflective　紧 Haus 是反射子范畴　layer 20
+- def.free-compact-hausdorff　自由紧 Hausdorff 空间　layer 20
+- prop.chaus-quotient-equiv　紧 Hausdorff 上商映射的四种说法　layer 20
+- prop.chaus-quotient-of-free　紧 Haus 是自由的商　layer 21
+- prop.free-projective　自由紧 Haus 是投射对象　layer 21
+- def.free-presentation　自由表示　layer 21
+- prop.coproduct-chaus　不交并是紧 Hausdorff 的余积　layer 21
+- cor.chaus-free-presentation　紧 Haus 都有自由表示　layer 22

@@ -1,6 +1,6 @@
 # 滤过极限的上同调　`prop.filtered-limit-cohomology`
 紧 Hausdorff 的滤过极限上，常值系数的上同调是余极限
-layer 18 · 命题 · 层上同调 · 同调代数+拓扑学
+layer 20 · 命题 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=prop.filtered-limit-cohomology)　·　[节点索引](../index.md)
 
 若 $X = \varprojlim_{i \in I} X_{i}$ 是紧 Hausdorff 空间的**滤过极限**（过渡映射满）、$M$ 是**常值**阿贝尔群，则

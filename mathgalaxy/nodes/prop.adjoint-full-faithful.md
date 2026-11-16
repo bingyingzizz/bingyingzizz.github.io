@@ -1,6 +1,6 @@
 # 全忠实与单位　`prop.adjoint-full-faithful`
 全忠实 $\iff$ 单位（余单位）是同构
-layer 11 · 命题 · 伴随与反射 · 范畴论
+layer 13 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.adjoint-full-faithful)　·　[节点索引](../index.md)
 
 设

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 24 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $f \in L^+$. Define the integral of $f$ as the supremum of the integrals of simple functions not exceeding it:

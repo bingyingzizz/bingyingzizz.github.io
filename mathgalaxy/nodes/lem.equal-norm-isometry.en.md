@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · lemma · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 24 · lemma · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 names: `Equal-norm reflection` (short) · `Equal-norm vectors are related by a reflection` (full)
 
 ## Statement · **draft**

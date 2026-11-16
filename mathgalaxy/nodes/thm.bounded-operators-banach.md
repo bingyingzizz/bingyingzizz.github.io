@@ -1,6 +1,6 @@
 # B(E,F) 完备　`thm.bounded-operators-banach`
 $F$ 完备 $\implies$ $B(E,F)$ 是 Banach 空间
-layer 18 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 25 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.bounded-operators-banach)　·　[节点索引](../index.md)
 
 设 $E$ 赋范、$F$ Banach。则 $(B(E, F), \|\cdot\|)$ 是 Banach 空间。特别地，对偶空间 $E^* = B(E, \mathbb{K})$ **总是** Banach（不论 $E$ 是否完备）。

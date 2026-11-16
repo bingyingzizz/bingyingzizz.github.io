@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 21 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `Filtered Limit of Blocks` (short) · `Spaces Built from Compact Hausdorff Blocks along Closed Inclusions` (full)
 
 ## Statement and proof

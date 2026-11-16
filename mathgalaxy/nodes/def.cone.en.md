@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 12 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
 ## Statement · **draft**
 Let $D : I \to \mathcal{C}$ be a diagram. A **cone** over $D$ is an object $X \in \mathcal{C}$ together with a family of morphisms

@@ -1,6 +1,6 @@
 # 序数可比　`thm.ordinal-trichotomy`
 序数的三歧性：$\in$ 在 $\mathrm{On}$ 上是良序
-layer 8 · 定理 · 序数与超限 · 集合论
+layer 10 · 定理 · 序数与超限 · 集合论
 [在星图里打开](../#n=thm.ordinal-trichotomy)　·　[节点索引](../index.md)
 
 对任意两个序数 $\alpha, \beta$，下式**恰有一个**成立：

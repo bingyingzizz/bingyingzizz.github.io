@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 10 · definition · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 
 ## Statement · **draft**
 An abelian group $D$ is **divisible** if for every $d \in D$ and every $0 \ne n \in \mathbb{Z}$ the equation

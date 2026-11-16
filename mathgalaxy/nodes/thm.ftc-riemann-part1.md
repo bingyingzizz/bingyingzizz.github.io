@@ -1,6 +1,6 @@
 # 变上限积分的导数　`thm.ftc-riemann-part1`
 定理（第一基本定理）：变上限积分及其导数
-layer 21 · 定理 · Riemann 积分 · 数学分析
+layer 23 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.ftc-riemann-part1)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上可积，定义

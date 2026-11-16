@@ -1,6 +1,6 @@
 # 积性函数　`def.multiplicative-function`
 积性函数与完全积性
-layer 13 · 定义 · 数论函数与素数分布 · 数论
+layer 22 · 定义 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=def.multiplicative-function)　·　[节点索引](../index.md)
 
 称 $f : \mathbb{N}^{+} \to \mathbb{C}$ 是**积性函数**，若 $f(1) = 1$ 且对互素的 $m, n$（即 $\gcd(m,n) = 1$）有

@@ -1,6 +1,6 @@
 # 极限的基本性质　`prop.limit-basic`
 命题：极限的唯一性、有界性与保号性
-layer 15 · 命题 · 实数与极限 · 数学分析
+layer 17 · 命题 · 实数与极限 · 数学分析
 [在星图里打开](../#n=prop.limit-basic)　·　[节点索引](../index.md)
 
 设数列 $\{x_n\} \subseteq \mathbb{R}$ 收敛到 $x$。则：

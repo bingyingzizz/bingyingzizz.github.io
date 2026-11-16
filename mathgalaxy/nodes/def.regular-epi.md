@@ -1,6 +1,6 @@
 # 正则满态射　`def.regular-epi`
 正则满态射
-layer 14 · 定义 · 层与拓扑 · 范畴论
+layer 16 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.regular-epi)　·　[节点索引](../index.md)
 
 态射 $f : X \to Y$ 叫**正则满态射**，如果它是某个平行对的**余等化子**：存在 $u, v : W \rightrightarrows X$ 使 $f = \operatorname{coker}(u, v)$。

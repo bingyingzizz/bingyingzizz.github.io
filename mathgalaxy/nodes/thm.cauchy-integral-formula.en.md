@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 24 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 28 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: the value of a holomorphic function at an interior point is **completely determined** by its values on the boundary — every interior point "listens" to the boundary.

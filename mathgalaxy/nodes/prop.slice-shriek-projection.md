@@ -1,6 +1,6 @@
 # 切片的投影公式　`prop.slice-shriek-projection`
 命题：$j_{X!}(M \otimes j_{X}^{-1}N) = j_{X!}M \otimes N$
-layer 22 · 命题 · 拓扑斯 · 范畴论
+layer 24 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.slice-shriek-projection)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯、$X \in \mathcal{T}$。则对 $M \in \mathrm{Ab}(\mathcal{T}/X)$、$N \in \mathrm{Ab}(\mathcal{T})$ 有

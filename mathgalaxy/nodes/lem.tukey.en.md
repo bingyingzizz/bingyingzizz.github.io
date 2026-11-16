@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · lemma · cluster Choice Principles (`order.choice`) · Order Theory
+layer 10 · lemma · cluster Choice Principles (`order.choice`) · Order Theory
 names: `Tukey` (short) · `Tukey's Lemma / Teichmüller–Tukey` (full)
 
 ## Statement · **draft**

@@ -1,6 +1,6 @@
 # 拟紧层与紧的 étale 空间　`prop.qc-sheaf-etale`
 命题：$X$ 上的层拟紧 $\iff$ 对应 espace étalé 紧
-layer 19 · 命题 · 拓扑斯 · 范畴论
+layer 21 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.qc-sheaf-etale)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 上的层（对**标准拓扑**而言）**拟紧** $\iff$ 与它对应的 **espace étalé** 是**紧**空间。

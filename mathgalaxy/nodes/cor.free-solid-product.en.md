@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · corollary · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 22 · corollary · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement · **draft**
 For every profinite set $S$, there exist a set $I$ (with $\#I \le 2^{\#S}$) and an isomorphism of condensed abelian groups

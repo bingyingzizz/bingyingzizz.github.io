@@ -1,6 +1,6 @@
 # k-闭等价关系与弱 Hausdorff 商　`prop.cg-kclosed-quotient`
 $R$ 是 $k$-闭 $\iff$ $X/R$ 弱 Hausdorff
-layer 7 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 9 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.cg-kclosed-quotient)　·　[节点索引](../index.md)
 
 设 $X$ 紧生成，$R$ 是 $X$ 上的等价关系（看作 $R \subseteq X \times X$）。则 $R$ 是 $k$-闭的 $\iff$ 商空间 $X/R$ 弱 Hausdorff。

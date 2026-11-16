@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 15 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement · **draft**
 A **pretopology** on a category $\mathcal{C}$ assigns to each $X$ a family of **covering families** $\operatorname{Cov}(X)$ (each element is a family $(X_{i} \to X)_{i \in I}$), subject to:

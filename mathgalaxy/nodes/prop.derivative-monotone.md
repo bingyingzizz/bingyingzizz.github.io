@@ -1,6 +1,6 @@
 # 导数符号 ⟹ 单调性　`prop.derivative-monotone`
 命题：导数符号与单调性
-layer 26 · 命题 · 微分中值定理与 Taylor · 数学分析
+layer 28 · 命题 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=prop.derivative-monotone)　·　[节点索引](../index.md)
 
 设 $f$ 在区间 $I$ 上可导。

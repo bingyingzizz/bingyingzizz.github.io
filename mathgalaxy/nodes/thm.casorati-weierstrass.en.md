@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 30 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 names: `Casorati-Weierstrass` (short) · `Casorati–Weierstrass` (full)
 
 ## Statement · **draft**

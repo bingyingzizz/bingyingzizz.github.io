@@ -1,6 +1,6 @@
 # 单纯方法算层上同调　`method.simplicial-cohomology`
 用单纯超覆盖计算 $H^{n}(X, M)$
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=method.simplicial-cohomology)　·　[节点索引](../index.md)
 
 设 $M$ 是景 $\mathcal{C}$ 上的阿贝尔层，$X \in \mathcal{C}$。取 $M$ 的一个**超覆盖**（即一个复形 $F_{\bullet} \to M$，其中每个 $F_{n}$ 是若干可表层的直和，且增广后处处正合）。则 $M$ 的上同调等于「逐层取截面」得到的**单纯阿贝尔群**的同伦群：

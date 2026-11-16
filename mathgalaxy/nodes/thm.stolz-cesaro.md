@@ -1,6 +1,6 @@
 # Stolz–Cesàro 定理　`thm.stolz-cesaro`
 Stolz–Cesàro：数列极限的离散 L'Hôpital 法则
-layer 15 · 定理 · 实数与极限 · 数学分析
+layer 17 · 定理 · 实数与极限 · 数学分析
 [在星图里打开](../#n=thm.stolz-cesaro)　·　[节点索引](../index.md)
 
 设 $\{x_n\}$、$\{y_n\}$ 是实数列，$y_n$ 严格单调。

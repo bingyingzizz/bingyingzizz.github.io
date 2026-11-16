@@ -1,6 +1,6 @@
 # 忠实 / 满 / 全忠实　`def.ff-faithful`
 忠实、满、全忠实函子
-layer 9 · 定义 · 函子与自然变换 · 范畴论
+layer 11 · 定义 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=def.ff-faithful)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathcal{C}'$ 对每一对对象 $X, Y$ 给出一个映射

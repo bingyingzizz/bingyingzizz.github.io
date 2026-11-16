@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Abstract Algebra
+layer 11 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.field-rules.md` and `proofs/`.

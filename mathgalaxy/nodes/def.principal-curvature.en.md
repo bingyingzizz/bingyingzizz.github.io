@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 34 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 The eigenvalues of $W$ (equivalently, of the symmetric matrix $(h_{ij})$) are called the **principal curvatures**, denoted $k_{1} \ge k_{2}$; the corresponding unit eigen-directions are called **principal directions**. They are given by the characteristic equation:

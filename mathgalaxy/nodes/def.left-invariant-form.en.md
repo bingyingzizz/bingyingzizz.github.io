@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · definition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
+layer 32 · definition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
 
 ## Statement · **draft**
 **In words**: a differential form on a Lie group that is "untouched" by left translations is completely determined by a multilinear form at the identity — hence on $G$ the left-invariant $k$-forms coincide with $\bigwedge^{k}\mathfrak{g}^{\ast}$.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 20 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Sheafification` (short) · `Sheafification and the Sheaf Reflection` (full)
 
 ## Statement · **draft**

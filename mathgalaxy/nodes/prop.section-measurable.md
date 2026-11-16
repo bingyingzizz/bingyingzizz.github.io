@@ -1,6 +1,6 @@
 # 截口可测　`prop.section-measurable`
 命题：可测集的截口可测，可测函数的截口可测
-layer 7 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 11 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=prop.section-measurable)　·　[节点索引](../index.md)
 
 **(a)** 若 $E \in \mathcal{M} \otimes  \mathcal{N}$，则对一切 $x \in X$ 有 $E_x \in \mathcal{N}$，对一切 $y \in Y$ 有 $E^y \in \mathcal{M}$。

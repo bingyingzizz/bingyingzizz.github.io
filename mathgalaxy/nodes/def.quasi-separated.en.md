@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Toposes (`cat.topos`) · Category Theory
+layer 21 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
 ## Statement · **draft**
 In a topos $\mathcal{T}$, an object $X$ is **quasi-separated** if for all $Y \to X$ and $Z \to X$ (with $Y, Z$ quasi-compact) the fibre product

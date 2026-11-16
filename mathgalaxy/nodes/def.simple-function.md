@@ -1,6 +1,6 @@
 # 简单函数　`def.simple-function`
 简单函数
-layer 7 · 定义 · 可测函数与收敛 · 实变函数+数学分析
+layer 22 · 定义 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=def.simple-function)　·　[节点索引](../index.md)
 
 可测函数 $\varphi : X \to \mathbb{C}$ 是**简单函数**，当且仅当它只取**有限多个值**。等价地，它可以写成

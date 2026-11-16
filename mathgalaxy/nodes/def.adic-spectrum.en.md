@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · definition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
+layer 24 · definition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
 ## Statement · **draft**
 In plain words: **collect all ways of "measuring the size" of elements of a ring $A$, and you get the adic spectrum**.

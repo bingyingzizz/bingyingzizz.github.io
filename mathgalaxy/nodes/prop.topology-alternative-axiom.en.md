@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Alternative Topology Axiom` (short) · `Alternative Axiom for a Grothendieck Topology` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # 有限可加测度　`def.finitely-additive`
 有限可加测度
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 18 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.finitely-additive)　·　[节点索引](../index.md)
 
 若 $\mu$ 只满足 (i) 与**有限**可加性：

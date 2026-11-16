@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 12 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement · **draft**
 A **(set-valued) presheaf** on a category $\mathcal{C}$ is a functor

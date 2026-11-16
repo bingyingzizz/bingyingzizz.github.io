@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.homeomorphism`](../nodes/def.homeomorphism.md) 同胚：用到了定义 同胚　[proofs/dep.mf-homeo-chart.md](../proofs/dep.mf-homeo-chart.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.sym-real-def-manifold-chart.md](../proofs/dep.sym-real-def-manifold-chart.md)
 
 > 续见 [nodes/def.manifold-chart.5.md](./def.manifold-chart.5.md)

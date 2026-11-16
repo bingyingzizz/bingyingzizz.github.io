@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 29 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 names: `Removable Singularity` (short) · `Riemann's Removable Singularity Theorem` (full)
 
 ## Statement · **draft**

@@ -1,6 +1,6 @@
 # Riemann 可去奇点定理　`thm.riemann-removable`
 定理：Riemann 可去奇点定理
-layer 25 · 定理 · Cauchy 理论 · 复变函数
+layer 29 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.riemann-removable)　·　[节点索引](../index.md)
 
 **白话**：如果 $f$ 在 $a$ 附近全纯，而且靠近 $a$ 时「爆得比 $1/|z - a|$ 慢」，那 $a$ 这个洞可以补上，补完还是全纯。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 18 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement · **draft**
 Let $X$ be a **topological space**. $X$ is **compact** iff every **open cover** has a finite subcover: if a family $\{U_{i}\}_{i \in I}$ satisfies "each $U_{i}$ is open" and $X = \bigcup_{i \in I} U_{i}$, then there are finitely many indices with

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 names: `Nagata–Smirnov Theorem` (short) · `Nagata–Smirnov Metrization Theorem` (full)
 
 ## Statement and proof

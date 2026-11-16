@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 18 · proposition · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 names: `Injective Splitting` (short) · `Splitting of Monomorphisms into an Injective` (full)
 
 ## Statement and proof

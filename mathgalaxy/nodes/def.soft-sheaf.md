@@ -1,6 +1,6 @@
 # 软层　`def.soft-sheaf`
 软层（闭集截面可延拓）
-layer 19 · 定义 · 层上同调 · 同调代数+拓扑学
+layer 21 · 定义 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=def.soft-sheaf)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间，$\mathcal{F}$ 是 $X$ 上的阿贝尔群层。称 $\mathcal{F}$ 为**软层**，如果对任意闭集 $A\subseteq X$，限制映射 $\Gamma(X,\mathcal{F})\to\Gamma(A,\mathcal{F})$ 是满射：即闭集上的每个截面都能延拓为全空间上的截面。

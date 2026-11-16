@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 21 · definition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
 ## Statement · **draft**
 A continuous surjection $F \twoheadrightarrow S$ between compact Hausdorff spaces is called a **free presentation** of $S$ if

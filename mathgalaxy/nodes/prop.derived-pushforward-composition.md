@@ -1,6 +1,6 @@
 # 推前的复合　`prop.derived-pushforward-composition`
 命题：$Rf'_{*} \circ Rf_{*} = R(f' \circ f)_{*}$
-layer 19 · 命题 · 层上同调 · 同调代数
+layer 22 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.derived-pushforward-composition)　·　[节点索引](../index.md)
 
 设 $\mathcal{T} \xrightarrow{\ f\ } \mathcal{T}' \xrightarrow{\ f'\ } \mathcal{T}''$ 是拓扑斯态射的序列。则

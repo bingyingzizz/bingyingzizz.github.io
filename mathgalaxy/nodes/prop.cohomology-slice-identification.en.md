@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 22 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Slice Cohomology` (short) · `Cohomology on the Slice Is Cohomology of the Original` (full)
 
 ## Statement and proof

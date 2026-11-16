@@ -1,6 +1,6 @@
 # 正集的封闭性　`prop.positive-set-closure`
 命题：正集的可测子集仍是正集；可数个正集之并仍是正集
-layer 19 · 命题 · 符号测度与分解 · 实变函数+数学分析
+layer 25 · 命题 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=prop.positive-set-closure)　·　[节点索引](../index.md)
 
 设 $\nu$ 是符号测度。

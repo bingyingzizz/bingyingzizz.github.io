@@ -1,6 +1,6 @@
 # 极限的构造　`prop.limit-construction`
 极限 = 无限积 + 等化子
-layer 13 · 命题 · 图与极限 · 范畴论
+layer 15 · 命题 · 图与极限 · 范畴论
 [在星图里打开](../#n=prop.limit-construction)　·　[节点索引](../index.md)
 
 设 $D : I \to \mathcal{C}$ 是**小**图。若 $\mathcal{C}$ 有 $I$ 中对象为指标的所有**积**、以及一对平行映射的**等化子**，则 $\lim D$ 存在，并且可以具体地造出来：

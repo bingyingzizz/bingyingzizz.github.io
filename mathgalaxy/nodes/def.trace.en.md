@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 23 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 For a square matrix $A = (a_{ij}) \in M_n(K)$, define the **trace** as the sum of the diagonal entries:

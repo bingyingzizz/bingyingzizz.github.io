@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 12 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
 ## Statement · **draft**
 Let $I$ be a **small category** (its objects and morphisms form a small set). A **diagram in $\mathcal{C}$ indexed by $I$** is a functor

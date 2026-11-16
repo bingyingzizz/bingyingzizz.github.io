@@ -1,6 +1,6 @@
 # Abel–Dirichlet 判别法　`thm.abel-dirichlet-series`
 定理：Abel 与 Dirichlet 判别法（非绝对收敛那一族）
-layer 23 · 定理 · 数项级数的敛散性 · 数学分析
+layer 25 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.abel-dirichlet-series)　·　[节点索引](../index.md)
 
 **(Dirichlet)** 设 $\{b_n\}$ 单调且 $b_n \to 0$，而 $\sum a_n$ 的**部分和有界**（存在 $M$ 使 $\bigl| \sum_{n \le N} a_n \bigr| \le M$ 对一切 $N$ 成立）。则 $\sum a_n b_n$ 收敛。

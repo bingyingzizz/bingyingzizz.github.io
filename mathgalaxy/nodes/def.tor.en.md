@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 19 · definition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.tor.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 极分解　`thm.polar-decomposition`
 极分解：$A = UP$，把矩阵拆成「旋转 $\times$ 拉伸」
-layer 31 · 定理 · 内积空间与正交性 · 抽象代数
+layer 35 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.polar-decomposition)　·　[节点索引](../index.md)
 
 **在做什么**：复数可以写成 $z = e^{i\theta}\lvert z\rvert$（方向 $\times$ 长度）。矩阵也有同款分解：**酉（方向）$\times$ 半正定（长度）**。

@@ -1,6 +1,6 @@
 # 区间上没有高阶 Čech 上同调　`prop.cech-interval-vanishing`
 命题：$M$ 常 $\implies \check{H}^{n}([0,1], M) = 0$（$n \ne 0$）
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.cech-interval-vanishing)　·　[节点索引](../index.md)
 
 设 $M$ 是 $[0,1]$ 上的**常**阿贝尔群。则

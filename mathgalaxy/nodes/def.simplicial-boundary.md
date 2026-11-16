@@ -1,6 +1,6 @@
 # 边缘算子　`def.simplicial-boundary`
 边缘算子 $\partial_{p}$ 与 $\partial^{2} = 0$
-layer 18 · 定义 · 同调群 · 拓扑学
+layer 20 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.simplicial-boundary)　·　[节点索引](../index.md)
 
 设 $\sigma = [v_{0}, \ldots, v_{p}]$ 是有序 $p$-单纯形（$v_{0} < \cdots < v_{p}$）。它的**边缘**定义为

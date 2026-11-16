@@ -1,6 +1,6 @@
 # 离散群的导出 Hom 是常层　`prop.discrete-cond-rhom-constant`
 命题：离散阿贝尔群的导出 Hom 与导出张量积都落在常层里
-layer 20 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
+layer 22 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=prop.discrete-cond-rhom-constant)　·　[节点索引](../index.md)
 
 设 $M, N$ 是**离散**阿贝尔群，也把它们看成对应的常凝聚态阿贝尔群。则

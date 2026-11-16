@@ -1,6 +1,6 @@
 # 可数积的生成集　`prop.product-sigma-generated`
 命题：指标集可数时，积 σ-代数由「矩形」生成
-layer 7 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 11 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=prop.product-sigma-generated)　·　[节点索引](../index.md)
 
 若指标集 $A$ **可数**，则

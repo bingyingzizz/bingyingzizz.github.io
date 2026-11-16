@@ -1,6 +1,6 @@
 # Čech 上同调　`def.cech-cohomology`
 Čech 上同调 $\check{H}^{n}(X, M^{\bullet})$
-layer 17 · 定义 · 层上同调 · 同调代数+范畴论
+layer 19 · 定义 · 层上同调 · 同调代数+范畴论
 [在星图里打开](../#n=def.cech-cohomology)　·　[节点索引](../index.md)
 
 设 $M^{\bullet}$ 是景 $\mathcal{C}$ 上的**阿贝尔预层复形**，$X \in \mathcal{C}$。它的第 $n$ 个 **Čech 上同调群**是

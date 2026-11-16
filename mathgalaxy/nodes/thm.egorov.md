@@ -1,6 +1,6 @@
 # Егоров 定理　`thm.egorov`
 Егоров 定理：a.e. 收敛 $\implies$ 近一致
-layer 23 · 定理 · 可测函数与收敛 · 实变函数+数学分析
+layer 28 · 定理 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=thm.egorov)　·　[节点索引](../index.md)
 
 设 $\mu(X) < \infty$，且 $f_n \to f$ a.e.。则 $f_n \to f$ **近一致**：

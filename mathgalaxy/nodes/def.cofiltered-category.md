@@ -1,6 +1,6 @@
 # 余滤过范畴　`def.cofiltered-category`
 余滤过范畴
-layer 12 · 定义 · 图与极限 · 范畴论
+layer 14 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.cofiltered-category)　·　[节点索引](../index.md)
 
 小范畴 $I$ 叫**余滤过**的，如果它的对偶 $I^{\mathrm{op}}$ 是滤过范畴（`def.filtered-category`）：

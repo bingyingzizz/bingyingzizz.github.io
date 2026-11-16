@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
+layer 35 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
 names: `zeta nonvanishing` (short) · `zeta has no zeros on the line Re(s)=1` (full)
 
 ## Statement and proof

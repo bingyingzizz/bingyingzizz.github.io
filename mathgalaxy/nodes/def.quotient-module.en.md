@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 17 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a ring with identity, $M$ an $A$-module and $N \subseteq M$ a submodule. On the additive quotient group $M/N$ define

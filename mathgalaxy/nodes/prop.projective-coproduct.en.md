@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Projective Coproducts` (short) · `Coproducts of Projectives Are Projective` (full)
 
 ## Statement and proof

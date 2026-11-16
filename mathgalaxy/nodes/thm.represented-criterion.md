@@ -1,6 +1,6 @@
 # 表示的两个定义等价　`thm.represented-criterion`
 表示 $\iff$ 与 $h^{X}$ 同构
-layer 14 · 定理 · 预层与米田 · 范畴论
+layer 16 · 定理 · 预层与米田 · 范畴论
 [在星图里打开](../#n=thm.represented-criterion)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathbf{Set}$ 被 $X \in \mathcal{C}$ 表示 $\iff$ $h^{X} \cong F$。

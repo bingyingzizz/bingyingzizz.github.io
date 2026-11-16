@@ -1,6 +1,6 @@
 # 万有关系　`def.universal-colimit`
 万有余极限、万有满态射、不交余积
-layer 15 · 定义 · 层与拓扑 · 范畴论
+layer 17 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.universal-colimit)　·　[节点索引](../index.md)
 
 1. 余极限 $X = \varinjlim_{i} X_{i}$ 叫**万有的**，如果对任意 $X \to Y$ 与 $Y' \to Y$，

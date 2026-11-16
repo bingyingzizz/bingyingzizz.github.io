@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
+layer 11 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
 
 ## Statement · **draft**
 **The category of abelian groups** $\mathbf{Ab}$: objects are abelian groups, morphisms are group homomorphisms; it is a **full subcategory** of $\mathbf{Grp}$.

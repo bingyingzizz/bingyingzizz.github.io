@@ -1,6 +1,6 @@
 # 离散即常　`prop.discrete-iff-constant`
 命题：$X$ 离散 $\iff$ 常 $\iff$ 只依赖紧 Hausdorff 的离散商
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.discrete-iff-constant)　·　[节点索引](../index.md)
 
 对凝聚态集 $X$，三条等价：

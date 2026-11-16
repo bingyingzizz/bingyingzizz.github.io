@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · example · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 13 · example · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.finite-field.md` and `proofs/`.

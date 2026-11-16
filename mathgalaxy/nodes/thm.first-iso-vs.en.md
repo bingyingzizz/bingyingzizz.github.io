@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 16 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $T : V \to W$ be a linear map. Then

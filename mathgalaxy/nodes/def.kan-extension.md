@@ -1,6 +1,6 @@
 # Kan 延拓　`def.kan-extension`
 Kan 延拓
-layer 10 · 定义 · 伴随与反射 · 范畴论
+layer 12 · 定义 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=def.kan-extension)　·　[节点索引](../index.md)
 
 设 $p : \mathcal{C} \to \mathcal{C}'$ 是小范畴之间的函子，$F : \mathcal{C} \to \mathcal{D}$。$F$ 沿 $p$ 的**左 Kan 延拓**是一个函子 $p_{!}F : \mathcal{C}' \to \mathcal{D}$ 连同一个自然变换

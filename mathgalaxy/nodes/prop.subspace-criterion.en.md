@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 15 · proposition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 **(Merged form)** A nonempty subset $U \subseteq V$ is a subspace if and only if for all $u, v \in U$ and $c \in K$ one has $cu + v \in U$.

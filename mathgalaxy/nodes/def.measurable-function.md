@@ -1,6 +1,6 @@
 # 可测函数　`def.measurable-function`
 可测函数
-layer 6 · 定义 · 可测函数与收敛 · 实变函数+数学分析
+layer 8 · 定义 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=def.measurable-function)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M})$ 与 $(Y, \mathcal{N})$ 是可测空间。函数 $f : X \to Y$ 是 **$(\mathcal{M}, \mathcal{N})$可测的**，当且仅当每个可测集的原像可测：

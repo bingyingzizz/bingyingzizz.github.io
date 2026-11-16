@@ -1,6 +1,6 @@
 # 上极限与下极限　`def.limsup-liminf`
 上极限与下极限 $\limsup$ / $\liminf$
-layer 7 · 定义 · 实数与极限 · 数学分析
+layer 16 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.limsup-liminf)　·　[节点索引](../index.md)
 
 对实数列 $\{x_n\}$，令
@@ -11,11 +11,11 @@ $$\limsup_{n \to \infty} x_n := \lim_{n \to \infty} \Bigl( \sup_{k \ge n} x_k \B
 > 陈述续见 [nodes/def.limsup-liminf.2.md](./def.limsup-liminf.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- 被 [`def.dini-derivative`](../nodes/def.dini-derivative.md) Dini 导数 用
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.limsup-liminf.3.md](./def.limsup-liminf.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.limsup-liminf.4.md](./def.limsup-liminf.4.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 3
 

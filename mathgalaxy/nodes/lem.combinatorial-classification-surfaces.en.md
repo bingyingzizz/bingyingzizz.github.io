@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
+layer 20 · lemma · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.combinatorial-classification-surfaces.md` and `proofs/`.

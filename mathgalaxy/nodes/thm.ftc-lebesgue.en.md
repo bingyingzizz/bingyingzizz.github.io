@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 24 · theorem · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
+layer 29 · theorem · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $F : [a, b] \to \mathbb{C}$, with a compact interval. Then the following three statements are **equivalent**:

@@ -1,6 +1,6 @@
 # 投影公式　`prop.projection-formula-cond`
 投影公式：$S \times X(\cdot) \cong (S \times X)(\cdot)$
-layer 21 · 命题 · 凝聚态集 · 凝聚态数学
+layer 23 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.projection-formula-cond)　·　[节点索引](../index.md)
 
 设 $X$ 是凝聚态集，$S$ 是**局部紧 Hausdorff** 拓扑空间。则

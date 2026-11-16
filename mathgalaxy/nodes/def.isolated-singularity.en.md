@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 24 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 names: `Isolated Singularity` (short) · `Isolated Singularity and Its Types` (full)
 
 ## Statement and proof

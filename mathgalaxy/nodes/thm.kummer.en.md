@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 22 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $\sum a_n$ be a series of **positive terms** ($a_n > 0$), and $\{c_n\}$ a sequence of positive numbers. Put

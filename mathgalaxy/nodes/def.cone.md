@@ -1,6 +1,6 @@
 # 锥　`def.cone`
 锥与余锥
-layer 10 · 定义 · 图与极限 · 范畴论
+layer 12 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.cone)　·　[节点索引](../index.md)
 
 设 $D : I \to \mathcal{C}$ 是一个图。$D$ 上的**锥**是一个对象 $X \in \mathcal{C}$ 连同一族态射

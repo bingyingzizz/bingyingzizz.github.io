@@ -1,6 +1,6 @@
 # 超限递归　`thm.recursion-wellorder`
 良序集上的递归定理（含超限归纳）
-layer 7 · 定理 · 序数与超限 · 集合论
+layer 9 · 定理 · 序数与超限 · 集合论
 [在星图里打开](../#n=thm.recursion-wellorder)　·　[节点索引](../index.md)
 
 设 $(W, \preceq )$ 是**良序集**，$G$ 是任给的函数（可以取在一个比任何集合都大的收集上）。记 $W_{< w} = \{ v \in W : v \prec w \}$。则存在**唯一**的函数 $F$ 定义在 $W$ 上，使

@@ -1,9 +1,9 @@
 # Hausdorff 极大原理　`thm.hausdorff`
 Hausdorff 极大原理 / 极大公理
-layer 8 · 定理 · 选择原理 · 序理论
+layer 10 · 定理 · 选择原理 · 序理论
 [在星图里打开](../#n=thm.hausdorff)　·　[节点索引](../index.md)
 
-设 $(P, \preceq )$ 是偏序集，$C_{0} \subseteq P$ 是链。则存在 $P$ 的**极大链** $M$ 使 $C_{0} \subsete
+设 $(P, \preceq )$ 是偏序集，$C_{0} \subseteq P$ 是链。则存在 $P$ 的**极大链** $M$ 使 $C_{0} \subset
 > 陈述续见 [nodes/thm.hausdorff.2.md](./thm.hausdorff.2.md)
 
 

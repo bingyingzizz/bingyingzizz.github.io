@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 19 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Čech Functor Properties` (short) · `Properties of the Čech Functor` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # Hartogs 定理　`thm.hartogs`
 Hartogs 定理 —— ZF 中即可证明
-layer 8 · 定理 · 基数与等势 · 集合论
+layer 10 · 定理 · 基数与等势 · 集合论
 [在星图里打开](../#n=thm.hartogs)　·　[节点索引](../index.md)
 
 对任意集合 $X$，都存在一个**不能单射进 $X$** 的序数；取其中最小的那个，记作 $\aleph (X)$，叫做 $X$ 的 **Hartogs 数**（Hartogs 序数）。

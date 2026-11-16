@@ -1,6 +1,6 @@
 # 数列极限　`def.sequence-limit`
 数列极限 $x_n \to x$
-layer 14 · 定义 · 实数与极限 · 数学分析
+layer 16 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.sequence-limit)　·　[节点索引](../index.md)
 
 数列 $\{x_n\} \subseteq \mathbb{R}$ **收敛到** $x$（记 $x_n \to x$ 或 $\lim_{n \to \infty} x_n = x$），当且仅当

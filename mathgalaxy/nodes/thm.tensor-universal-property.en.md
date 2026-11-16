@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 18 · theorem · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement · **draft**
 For every **bilinear map** $B : V \times W \to U$ (a linear map on the product space need not be bilinear, e.g. $B(v,w) = v$), there is a **unique** linear map

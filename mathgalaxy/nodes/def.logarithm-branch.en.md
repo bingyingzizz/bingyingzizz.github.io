@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 25 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.logarithm-branch.md` and `proofs/`.

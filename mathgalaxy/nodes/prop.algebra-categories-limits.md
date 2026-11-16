@@ -1,6 +1,6 @@
 # 代数范畴里的极限与余极限　`prop.algebra-categories-limits`
 命题：极限逐点算，余极限由自由构造加商给出
-layer 12 · 命题 · 范畴里的代数结构 · 范畴论
+layer 14 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.algebra-categories-limits)　·　[节点索引](../index.md)
 
 $\mathbf{Mon}$、$\mathbf{Gr}$、$\mathbf{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$ 里的**极限逐点算**（忘到底集合就是集合的极限）；

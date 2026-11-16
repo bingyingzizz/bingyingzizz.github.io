@@ -1,6 +1,6 @@
 # 绝对连续的 ε–δ 刻画　`thm.ac-epsilon-delta`
 定理（有限情形）：$\nu \ll \mu \iff \forall\varepsilon>0 \exists\delta>0$ ( $\mu(E)<\delta \implies |\nu(E)|\le\varepsilon$ )
-layer 19 · 定理 · 符号测度与分解 · 实变函数+数学分析
+layer 25 · 定理 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=thm.ac-epsilon-delta)　·　[节点索引](../index.md)
 
 设 $\nu$ 是**有限**符号测度、$\mu$ 是测度。则

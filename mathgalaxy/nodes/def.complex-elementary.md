@@ -1,6 +1,6 @@
 # 复数初等函数　`def.complex-elementary`
 复数初等超越函数（指数、三角、双曲）
-layer 21 · 定义 · 复变函数基础 · 复变函数
+layer 24 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.complex-elementary)　·　[节点索引](../index.md)
 
 对 $z = x + iy \in \mathbb{C}$，用**幂级数**定义

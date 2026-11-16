@@ -1,6 +1,6 @@
 # 像与原像　`def.preimage`
 像与原像
-layer 6 · 定义 · 关系与函数 · 集合论+数学分析
+layer 8 · 定义 · 关系与函数 · 集合论+数学分析
 [在星图里打开](../#n=def.preimage)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 是映射。

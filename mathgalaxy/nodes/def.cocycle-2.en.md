@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 20 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 names: `Cocycles and Coboundaries` (short) · `Two-Cocycles and Two-Coboundaries` (full)
 
 ## Statement and proof

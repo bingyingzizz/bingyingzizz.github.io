@@ -1,6 +1,6 @@
 # 商映射与局部紧空间作积　`thm.quotient-product`
 商映射与局部紧因子作积仍是商映射
-layer 7 · 定理 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 9 · 定理 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=thm.quotient-product)　·　[节点索引](../index.md)
 
 设 $q : X \to Y$ 是**商映射**，$Z$ 是**局部紧 Hausdorff** 

@@ -1,6 +1,6 @@
 # Smith 标准形　`thm.smith-normal-form`
 Smith 标准形：主理想整环上矩阵在相抵下的标准形
-layer 16 · 定理 · 矩阵与行列式 · 抽象代数
+layer 18 · 定理 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=thm.smith-normal-form)　·　[节点索引](../index.md)
 
 设 $R$ 是主理想整环，$A \in M_{m \times n}(R)$。则存在可逆矩阵 $P \in \operatorname{GL}_{m}(R)$、$Q \in \operatorname{GL}_{n}(R)$，使

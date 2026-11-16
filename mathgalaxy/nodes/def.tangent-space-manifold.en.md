@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 24 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement · **draft**
 **What this does**: it defines "all directions at a point" on a manifold. There is no ambient space to use, so directions are captured by "curves through the point": two curves point in the same direction if they have the same velocity in some chart.

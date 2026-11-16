@@ -1,6 +1,6 @@
 # 天际线层的茎　`prop.skyscraper-stalks`
 天际线层在各点的茎
-layer 17 · 命题 · 层上同调 · 同调代数+范畴论
+layer 19 · 命题 · 层上同调 · 同调代数+范畴论
 [在星图里打开](../#n=prop.skyscraper-stalks)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间、$x \in X$、$A$ 是阿贝尔群。则天际线层 $i_{x,*}A$ 在 $y \in X$ 处的茎是

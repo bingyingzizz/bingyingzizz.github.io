@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 24 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Flat Tensors` (short) · `Flat Tensors Preserve Acyclicity` (full)
 
 ## Statement and proof

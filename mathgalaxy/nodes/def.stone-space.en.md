@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
+layer 20 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
 ## Statement · **draft**
 - $X$ is **totally disconnected** if every connected component is a single point;

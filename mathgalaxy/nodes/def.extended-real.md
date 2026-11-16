@@ -1,6 +1,6 @@
 # 扩充实数 [−∞,+∞]　`def.extended-real`
 扩充实数系 $\overline{\mathbb{R}}$
-layer 14 · 定义 · 实数与极限 · 数学分析
+layer 16 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.extended-real)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}$ 上添两个记号 $+\infty$、$-\infty$，得到**扩充实数系**

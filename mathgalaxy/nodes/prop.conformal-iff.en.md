@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 26 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 names: `Conformality` (short) · `Nonvanishing Derivative and Conformality` (full)
 
 ## Statement · **draft**

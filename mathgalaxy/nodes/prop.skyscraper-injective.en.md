@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
+layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 names: `Skyscraper Is Injective` (short) · `Skyscraper Sheaves Are Injective` (full)
 
 ## Statement · **draft**

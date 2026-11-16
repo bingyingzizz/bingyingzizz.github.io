@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 20 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 names: `Integral of a Form` (short) · `Integral of a Differential Form` (full)
 
 ## Statement · **draft**

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 20 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Crystalline Sheaf Equivalence` (short) · `Crystalline Sheaves Are Sheaves on X` (full)
 
 ## Statement and proof

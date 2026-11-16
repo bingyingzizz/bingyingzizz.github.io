@@ -1,6 +1,6 @@
 # Bézout 恒等式　`thm.bezout`
 Bézout：最大公因数是整系数组合
-layer 13 · 定理 · 整除与同余 · 数论
+layer 15 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.bezout)　·　[节点索引](../index.md)
 
 设 $a, b \in \mathbb{Z}$ 不全为零，$d = \gcd(a, b)$。则存在 $u, v \in \mathbb{Z}$ 使

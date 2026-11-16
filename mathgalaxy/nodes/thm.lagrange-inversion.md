@@ -1,6 +1,6 @@
 # Lagrange 反演公式　`thm.lagrange-inversion`
 Lagrange 反演：由 $w = x\varphi(w)$ 反解系数
-layer 18 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 24 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.lagrange-inversion)　·　[节点索引](../index.md)
 
 设 $\varphi(t) = \sum_{n \ge 0} \varphi_n t^n$ 是形式幂级数，$\varphi_0 \ne 0$。则方程

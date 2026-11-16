@@ -1,6 +1,6 @@
 # 列空间　`def.column-space`
 列空间：矩阵各列张成的子空间（线性映射的像）
-layer 15 · 定义 · 矩阵与行列式 · 抽象代数
+layer 17 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.column-space)　·　[节点索引](../index.md)
 
 设 $A \in M_{m \times n}(K)$，列向量为 $c_1, \ldots, c_n \in K^{m}$。它们张成的子空间

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
+layer 27 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.linf-properties.md` and `proofs/`.

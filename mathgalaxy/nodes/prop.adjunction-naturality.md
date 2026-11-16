@@ -1,6 +1,6 @@
 # 伴随双射的自然性　`prop.adjunction-naturality`
 命题：$\Phi$ 自然的显式写法
-layer 10 · 命题 · 伴随与反射 · 范畴论
+layer 12 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.adjunction-naturality)　·　[节点索引](../index.md)
 
 伴随双射 $\Phi_{X, X'} : \operatorname{Hom}\bigl(F(X), X'\bigr) \cong \operatorname{Hom}\bigl(X, G(X')\bigr)$ 的自然性说的是：对 $g : Y \to X$、$g' : X' \to Y'$ 与 $f : F(X) \to X'$，有 $\Phi\bigl(g' \circ f 

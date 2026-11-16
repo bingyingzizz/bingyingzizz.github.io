@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 A real sequence $\{x_n\}$ is a **Cauchy sequence** iff

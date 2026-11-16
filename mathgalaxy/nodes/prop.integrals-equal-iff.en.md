@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 27 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $f, g \in L^1(\mu)$. Then the following three are equivalent:

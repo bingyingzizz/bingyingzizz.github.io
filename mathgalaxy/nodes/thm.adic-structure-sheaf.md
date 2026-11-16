@@ -1,6 +1,6 @@
 # adic 结构层是层　`thm.adic-structure-sheaf`
 定理：$\mathcal{O}_X$ 与 $\mathcal{O}_X^+$ 是层（Prop 9.4）
-layer 25 · 定理 · adic 空间 · 解析空间
+layer 27 · 定理 · adic 空间 · 解析空间
 [在星图里打开](../#n=thm.adic-structure-sheaf)　·　[节点索引](../index.md)
 
 设 $X = \operatorname{Spa}(A,A^+)$。在有理开集上定义

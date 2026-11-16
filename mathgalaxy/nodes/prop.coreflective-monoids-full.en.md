@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 16 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Coreflective Monoids` (short) · `Monoids in a Coreflective Subcategory` (full)
 
 ## Statement and proof

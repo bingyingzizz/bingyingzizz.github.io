@@ -1,6 +1,6 @@
 # 态射序列　`def.sequence-of-morphisms`
 序列
-layer 11 · 定义 · 复形与导出三角 · 同调代数
+layer 13 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.sequence-of-morphisms)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是范畴。$\mathcal{C}$ 中的**（长）序列**是有序集 $(\mathbb{Z}, \le)$ 上的**交换图**，即函子 $K : (\mathbb{Z}, \le) \to \mathcal{C}$；展开写就是对象与态射

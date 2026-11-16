@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 35 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 Let $v \in T_{p}U$, $v \ne 0$, and set $k := k_{n}(v)$. Then the following three conditions are equivalent:

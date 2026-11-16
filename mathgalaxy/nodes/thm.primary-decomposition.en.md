@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 20 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be **algebraically closed**, $T : V \to V$, $\dim V = n < \infty$. Let

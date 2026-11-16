@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
+layer 22 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
 ## Statement · **draft**
 Every bounded sequence of real numbers has a convergent subsequence. Equivalently: every bounded infinite subset of $\mathbb{R}$ has a limit point.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 24 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be defined on a neighbourhood of $x_0$, differentiable at $x_0$, and suppose $x_0$ is an **interior** local extremum of $f$. Then

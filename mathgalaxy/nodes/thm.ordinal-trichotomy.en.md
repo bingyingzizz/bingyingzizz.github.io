@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
+layer 10 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
 ## Statement · **draft**
 For any two ordinals $\alpha, \beta$, **exactly one** of the following holds:

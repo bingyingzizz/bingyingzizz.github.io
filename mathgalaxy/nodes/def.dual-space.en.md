@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 15 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a $K$-vector space. The **dual space** of $V$ is defined as the set of all linear maps from $V$ to $K$:

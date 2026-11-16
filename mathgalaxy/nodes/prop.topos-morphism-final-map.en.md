@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 23 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Terminal Map Morphism` (short) · `The Topos Morphism Induced by a Map to the Terminal Object` (full)
 
 ## Statement and proof

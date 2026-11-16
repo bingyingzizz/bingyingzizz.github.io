@@ -3,8 +3,8 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`cor.cg-exponential-adjoint`](../nodes/cor.cg-exponential-adjoint.md) 紧生成空间的指数伴随：def-dep.cgexp-cc　[proofs/def-dep.cgexp-cc.md](../proofs/def-dep.cgexp-cc.md)
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-cg-cartesian-closed.md](../proofs/dep.cat-top-prop-cg-cartesian-closed.md)
 - [`def.power-object`](../nodes/def.power-object.md) 幂对象：用到了定义 幂对象　[proofs/dep.cgcc-power.md](../proofs/dep.cgcc-power.md)
 - [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑：用到了定义 紧开拓扑　[proofs/def-dep.cgcc-compactopen.md](../proofs/def-dep.cgcc-compactopen.md)
-- [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间：用到了定义 紧生成空间　[proofs/def-dep.cgcc-cg.md](../proofs/def-dep.cgcc-cg.md)
 
 > 续见 [nodes/prop.cg-cartesian-closed.3.md](./prop.cg-cartesian-closed.3.md)

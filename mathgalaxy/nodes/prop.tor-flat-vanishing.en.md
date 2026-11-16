@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 18 · proposition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 names: `Flatness and Tor` (short) · `Flatness and the Vanishing of Tor` (full)
 
 ## Statement and proof

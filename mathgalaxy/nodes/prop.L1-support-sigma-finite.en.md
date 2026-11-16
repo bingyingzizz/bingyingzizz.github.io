@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 27 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.L1-support-sigma-finite.md` and `proofs/`.

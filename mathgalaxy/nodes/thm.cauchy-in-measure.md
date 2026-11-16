@@ -1,6 +1,6 @@
 # 依测度 Cauchy ⟹ 收敛　`thm.cauchy-in-measure`
 定理：依测度 Cauchy 列必有依测度极限，且有一子列 a.e. 收敛
-layer 18 · 定理 · 可测函数与收敛 · 实变函数+数学分析
+layer 20 · 定理 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=thm.cauchy-in-measure)　·　[节点索引](../index.md)
 
 若 $\{f_n\}$ 依测度 Cauchy，则存在可测函数 $f$ 使

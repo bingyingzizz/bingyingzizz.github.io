@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
+layer 19 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 
 ## Statement · **draft**
 Let $M^{\bullet}$ be an **abelian presheaf complex** on a site $\mathcal{C}$, and let $X \in \mathcal{C}$. Its $n$-th **Čech cohomology group** is

@@ -1,6 +1,6 @@
 # 子范畴　`def.subcategory`
 子范畴与满子范畴
-layer 8 · 定义 · 范畴与图 · 范畴论
+layer 10 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.subcategory)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 的**子范畴** $\mathcal{C}'$ 由以下数据组成：

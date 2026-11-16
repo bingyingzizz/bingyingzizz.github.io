@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 23 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 A real (or complex) series $\sum a_n$ is called **conditionally convergent** if and only if it converges but $\sum |a_n|$ **diverges**.

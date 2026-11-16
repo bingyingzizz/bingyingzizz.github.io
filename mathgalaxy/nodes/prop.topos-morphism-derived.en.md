@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
+layer 21 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 names: `Derived Functors of a Morphism` (short) · `Derived Functors of a Topos Morphism` (full)
 
 ## Statement and proof

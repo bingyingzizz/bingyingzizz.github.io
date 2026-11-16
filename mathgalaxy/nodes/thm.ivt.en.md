@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
+layer 20 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be continuous on $[a, b]$, and let $c$ be **any** real number between $f(a)$ and $f(b)$. Then there exists $\xi \in [a, b]$ with

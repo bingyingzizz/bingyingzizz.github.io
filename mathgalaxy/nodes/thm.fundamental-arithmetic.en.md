@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement · **draft**
 Every integer $n > 1$ can be written uniquely as

@@ -1,6 +1,6 @@
 # 有余极限时 Kan 延拓总存在　`prop.kan-extension-exists`
 命题：$\mathcal{D}$ 有余极限 $\implies$ 沿 $p$ 的左 Kan 延拓总存在
-layer 13 · 命题 · 伴随与反射 · 范畴论
+layer 15 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.kan-extension-exists)　·　[节点索引](../index.md)
 
 若 $\mathcal{D}$ 有**所有小余极限**，则任意 $F : \mathcal{C} \to \mathcal{D}$ 沿任意 $p : \mathcal{C} \to \mathcal{C}'$ 的**左 Kan 延拓总存在**，并可由**逐点公式**算出：

@@ -1,6 +1,6 @@
 # 满-单分解　`prop.pretopos-factorization`
 预拓扑斯中的满-单分解
-layer 17 · 命题 · 拓扑斯 · 范畴论
+layer 19 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.pretopos-factorization)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是预拓扑斯。则

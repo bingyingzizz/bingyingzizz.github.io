@@ -1,6 +1,6 @@
 # 单侧极限　`def.function-limit-onesided`
 左极限与右极限
-layer 16 · 定义 · 实数与极限 · 数学分析
+layer 18 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.function-limit-onesided)　·　[节点索引](../index.md)
 
 **左极限** $\lim_{x \to x_0^{-}} f(x) = L$ 指

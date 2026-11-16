@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.injective-criterion`](../nodes/prop.injective-criterion.md) 内射对象的判据 用
 - 被 [`def.filtration`](../nodes/def.filtration.md) 过滤 用
+- 被 [`def.cohomology`](../nodes/def.cohomology.md) 同调 用
 - 被 [`thm.derived-long-exact`](../nodes/thm.derived-long-exact.md) 导出函子的长正合列 用
 - 被 [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列 用
 - 被 [`prop.zero-object-final-criterion`](../nodes/prop.zero-object-final-criterion.md) 零对象与终对象 用

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
+layer 21 · definition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.real-power.md` and `proofs/`.

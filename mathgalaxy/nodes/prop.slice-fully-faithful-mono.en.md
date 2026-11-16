@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
+layer 16 · proposition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.slice-fully-faithful-mono.md` and `proofs/`.

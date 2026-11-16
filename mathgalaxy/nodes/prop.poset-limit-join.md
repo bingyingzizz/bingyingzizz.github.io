@@ -1,6 +1,6 @@
 # 偏序集里的极限是交　`prop.poset-limit-join`
 偏序集里：极限 = 下确界，余极限 = 上确界
-layer 12 · 命题 · 图与极限 · 范畴论+序理论
+layer 14 · 命题 · 图与极限 · 范畴论+序理论
 [在星图里打开](../#n=prop.poset-limit-join)　·　[节点索引](../index.md)
 
 把偏序集 $(P, \preceq)$ 看作范畴（对象是元素，$x \to y \iff x \preceq y$）。则对任何图 $D : I \to P$：

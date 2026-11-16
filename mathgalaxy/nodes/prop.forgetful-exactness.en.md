@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
+layer 16 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
 
 ## Statement · **draft**
 Algebraic forgetful functors **preserve limits but not colimits**; the inclusion $\widetilde{\mathcal{C}} \hookrightarrow \widehat{\mathcal{C}}$ preserves limits but not colimits, while its left adjoint (**sheafification**) is **exact**.

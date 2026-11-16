@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 22 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f : [1, +\infty) \to [0, +\infty)$ be **non-negative and decreasing**. Then the series $\sum f(n)$ and the improper integral $\int_1^{+\infty} f$ converge or diverge together, that is,

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 19 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Subobject Lattice` (short) · `Subobjects Form a Bounded Lattice` (full)
 
 ## Statement and proof

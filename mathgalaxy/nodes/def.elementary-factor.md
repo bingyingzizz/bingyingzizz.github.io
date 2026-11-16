@@ -1,6 +1,6 @@
 # Weierstrass 初等因子　`def.elementary-factor`
 Weierstrass 初等因子：不给零点就得零的「近似因子」
-layer 22 · 定义 · 解析延拓与整函数 · 复变函数
+layer 25 · 定义 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=def.elementary-factor)　·　[节点索引](../index.md)
 
 对整数 $p \ge 0$ 定义**初等因子**

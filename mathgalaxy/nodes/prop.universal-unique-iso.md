@@ -1,6 +1,6 @@
 # 万有元素唯一到唯一同构　`prop.universal-unique-iso`
 命题：$(X,s)$ 与 $(X',s')$ 都万有 $\implies$ 唯一的 $f : X \cong X'$ 带 $s$ 到 $s'$
-layer 14 · 命题 · 预层与米田 · 范畴论
+layer 16 · 命题 · 预层与米田 · 范畴论
 [在星图里打开](../#n=prop.universal-unique-iso)　·　[节点索引](../index.md)
 
 若 $(X, s)$ 与 $(X', s')$ 都是函子 $F$ 的**万有元素**，则存在**唯一的同构** $f : X \to X'$ 使 $F(f)(s) = s'$。

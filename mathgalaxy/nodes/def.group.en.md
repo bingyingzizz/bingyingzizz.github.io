@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 9 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a **set** and $\cdot$ a **binary operation** on $G$ (that is, a function $G \times G \to G$, $(a, b) \mapsto a \cdot b$). Then $(G, \cdot)$ is a **group** if and only if:

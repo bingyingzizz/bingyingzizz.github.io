@@ -1,6 +1,6 @@
 # 局部化的 Hom 是滤过余极限　`prop.localization-hom-colim`
 $\operatorname{Hom}_{\mathrm{ho}}(X,Y) = \varinjlim_{X' \to X \in W} \operatorname{Hom}(X', Y)$
-layer 15 · 命题 · 范畴与图 · 范畴论
+layer 17 · 命题 · 范畴与图 · 范畴论
 [在星图里打开](../#n=prop.localization-hom-colim)　·　[节点索引](../index.md)
 
 设小范畴 $\mathcal{C}$ 关于 $W$ 容许**右分式演算**。则

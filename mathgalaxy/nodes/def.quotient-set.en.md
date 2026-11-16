@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 5 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
+layer 7 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.quotient-set.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 测度　`def.measure`
 测度
-layer 15 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 17 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.measure)　·　[节点索引](../index.md)
 
 设 $\mathcal{M}$ 是 $X$ 上的 $\sigma$代数。函数 $\mu : \mathcal{M} \to [0, +\infty]$ 是一个**测度**，当且仅当

@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1664 节点 / 3615 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1668 节点 / 3761 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,20 +59,17 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（12 处）
+## 二、陈述用到更深的定义却没有边（9 处）
 
-- `ex.projective-plane`（射影平面 RP² · L18）用到 `def.nonorientable-genus`（不可定向亏格 · L32）　落差 14
-- `def.riemannian-metric`（Riemann 度量 · L20）用到 `def.vector-field`（向量场 · L23）　落差 3
-- `def.weak-star-topology`（弱*拓扑 · L16）用到 `def.weak-topology`（弱拓扑 · L18）　落差 2
-- `def.injective-dimension`（内射维数 · L20）用到 `def.flat-dimension`（平坦维数 · L21）　落差 1
-- `prop.low-degree-exact`（低次正合列 · L14）用到 `def.cochain-complex`（上链复形 · L15）　落差 1
-- `def.real-metric-space`（实数的度量 · L15）用到 `def.canonical-topology`（标准拓扑 · L15）
-- `def.category-of-groups`（群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
-- `def.category-of-abelian-groups`（阿贝尔群范畴 · L8）用到 `def.subcategory`（子范畴 · L8）
-- `def.cohomology`（同调 · L17）用到 `def.abelian-category`（阿贝尔范畴 · L17）
-- `def.group-power`（群的整数幂 · L8）用到 `def.power`（整数幂 · L8）
-- `def.cech-complex`（Čech 复形 · L16）用到 `def.bicomplex`（双复形 · L16）
-- `prop.derived-pushforward-composition`（推前的复合 · L19）用到 `def.spectral-sequence`（谱序列 · L19）
+- `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L37）　落差 17
+- `def.symplectic-basis`（辛基 · L19）用到 `def.orthonormal-set`（正交基 · L24）　落差 5
+- `def.category-of-topological-spaces`（拓扑空间范畴 · L10）用到 `def.subspace`（子空间 · L14）　落差 4
+- `thm.riesz-markov`（Riesz–Markov 表示 · L21）用到 `def.signed-measure`（符号测度 · L23）　落差 2
+- `def.weak-star-topology`（弱*拓扑 · L24）用到 `def.weak-topology`（弱拓扑 · L25）　落差 1
+- `def.real-metric-space`（实数的度量 · L17）用到 `def.canonical-topology`（标准拓扑 · L17）
+- `def.category-of-groups`（群范畴 · L10）用到 `def.subcategory`（子范畴 · L10）
+- `def.cech-complex`（Čech 复形 · L18）用到 `def.bicomplex`（双复形 · L18）
+- `def.complex-partial`（复偏导数 · L24）用到 `def.directional-derivative`（方向导数 · L24）
 
 ## 二·补　白名单里的（39 条，已判「不是缺边」）
 

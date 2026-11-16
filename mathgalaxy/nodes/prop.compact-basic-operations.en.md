@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
+layer 19 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement · **draft**
 1. A **closed subspace** of a compact space is compact;

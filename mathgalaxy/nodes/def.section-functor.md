@@ -1,6 +1,6 @@
 # 截面函子　`def.section-functor`
 截面函子与全局截面
-layer 16 · 定义 · 层与拓扑 · 范畴论
+layer 18 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.section-functor)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景，$X \in \mathcal{C}$，$\widetilde{\mathcal{C}}$ 是层范畴。**在 $X$ 处的截面函子**是

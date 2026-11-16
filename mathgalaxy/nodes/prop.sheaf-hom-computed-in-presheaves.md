@@ -1,6 +1,6 @@
 # 层之间的 Hom 在预层里算　`prop.sheaf-hom-computed-in-presheaves`
 命题：$\operatorname{Hom}_{\widetilde{\mathcal{C}}}(T^{\#}, F) = \operatorname{Hom}_{\widehat{\mathcal{C}}}(T, F)$
-layer 11 · 命题 · 层与拓扑 · 范畴论
+layer 13 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sheaf-hom-computed-in-presheaves)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景、$T$ 是预层、$F$ 是**层**。则

@@ -3,4 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积：万有性质 $\implies$ 双函子性、结合、对称与保直和　[proofs/imp.tensor-functor-properties.md](../proofs/imp.tensor-functor-properties.md)
-- [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积：用到了定义 张量积　[proofs/dep.gap-tensor-functor-properties-tensor-module.md](../proofs/dep.gap-tensor-functor-properties-tensor-module.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-tensor-functor-properties.md](../proofs/dep.cat-ab-prop-tensor-functor-properties.md)
+
+> 续见 [nodes/prop.tensor-functor-properties.6.md](./prop.tensor-functor-properties.6.md)

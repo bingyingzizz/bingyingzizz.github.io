@@ -1,6 +1,6 @@
 # 合冲　`def.syzygy`
 合冲与高阶合冲
-layer 10 · 定义 · 消解与维数 · 同调代数
+layer 12 · 定义 · 消解与维数 · 同调代数
 [在星图里打开](../#n=def.syzygy)　·　[节点索引](../index.md)
 
 设 $M$ 是 $R$-模，取满射 $\pi_{0} : P_{0} \twoheadrightarrow M$（通常 $P_{0}$ 自由）。它的核

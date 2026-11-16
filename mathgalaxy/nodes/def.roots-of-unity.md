@@ -1,6 +1,6 @@
 # 单位根　`def.roots-of-unity`
 $n$ 次单位根与分圆多项式 $\Phi_{n}$
-layer 20 · 定义 · Galois 理论 · 抽象代数+复变函数
+layer 22 · 定义 · Galois 理论 · 抽象代数+复变函数
 [在星图里打开](../#n=def.roots-of-unity)　·　[节点索引](../index.md)
 
 设 $n \ge 1$。多项式 $x^{n} - 1$ 在 $\mathbb{C}$ 中的根叫 **$n$ 次单位根**：

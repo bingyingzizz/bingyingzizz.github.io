@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Quotient R Sections` (short) · `Sections of the Quotient of R by Its Discrete Subgroup` (full)
 
 ## Statement and proof

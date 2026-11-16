@@ -1,6 +1,6 @@
 # 代数闭包　`def.algebraic-closure`
 代数闭包：代数扩张且代数闭
-layer 21 · 定义 · Galois 理论 · 抽象代数
+layer 23 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.algebraic-closure)　·　[节点索引](../index.md)
 
 设 $K$ 是域。域扩张 $\bar K / K$ 称为 $K$ 的**代数闭包**，若

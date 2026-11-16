@@ -1,6 +1,6 @@
 # 联络形式反对称　`prop.connection-antisymmetric`
 正交标架给出反对称的联络形式
-layer 26 · 命题 · 活动标架与结构方程 · 微分几何
+layer 31 · 命题 · 活动标架与结构方程 · 微分几何
 [在星图里打开](../#n=prop.connection-antisymmetric)　·　[节点索引](../index.md)
 
 设

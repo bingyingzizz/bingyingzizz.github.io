@@ -1,6 +1,6 @@
 # 有余幂则可表示函子有伴随　`prop.copowers-give-adjoint`
 命题：$\mathcal{C}$ 有余幂 $\implies$ $X^{(I)} \dashv h_{X}$
-layer 13 · 命题 · 伴随与反射 · 范畴论
+layer 15 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.copowers-give-adjoint)　·　[节点索引](../index.md)
 
 若小范畴 $\mathcal{C}$ 有**余幂**，则每个可表示函子 $h_{X}$ 都有左伴随：$\mathbf{Set} \to \mathcal{C},\ I \mapsto X^{(I)}$ **$\dashv$** $h_{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$。

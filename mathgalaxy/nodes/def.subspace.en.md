@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 14 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a vector space over a field $K$. Then $U \subseteq V$ is called a **(linear) subspace** of $V$ if and only if

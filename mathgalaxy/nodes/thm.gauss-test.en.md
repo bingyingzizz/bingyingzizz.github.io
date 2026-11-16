@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 24 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.gauss-test.md` and `proofs/`.

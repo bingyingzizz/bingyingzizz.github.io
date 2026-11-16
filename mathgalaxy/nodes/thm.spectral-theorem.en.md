@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 34 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a finite-dimensional **real** inner product space, $T : V \to V$ **self-adjoint** (that is, real symmetric). Then there is an **orthonormal basis** of $V$ in which $T$ is diagonal:

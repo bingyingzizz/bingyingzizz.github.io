@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 21 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
+layer 23 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be a field. A field extension $\bar K / K$ is an **algebraic closure** of $K$ if

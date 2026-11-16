@@ -1,6 +1,6 @@
 # 点给出的拓扑斯态射　`prop.topos-morphism-point`
 命题：$x : \mathbf{1} \to X$ 给出 $(x_{*}E)(U) = E$（$x \in U$）与 $x^{-1}\mathcal{F} = \mathcal{F}_{x}$
-layer 19 · 命题 · 拓扑斯 · 范畴论
+layer 21 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.topos-morphism-point)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间、$x : \mathbf{1} \to X$ 是一个点。则它给出的拓扑斯态射满足

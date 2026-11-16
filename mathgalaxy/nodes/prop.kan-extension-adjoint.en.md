@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 13 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Kan Extensions and Adjoints` (short) · `Kan Extensions and the Existence of Adjoints` (full)
 
 ## Statement · **draft**

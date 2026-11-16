@@ -1,6 +1,6 @@
 # 反函数连续　`thm.monotone-inverse`
 定理：严格单调连续函数的反函数连续
-layer 19 · 定理 · 连续与紧性 · 数学分析
+layer 21 · 定理 · 连续与紧性 · 数学分析
 [在星图里打开](../#n=thm.monotone-inverse)　·　[节点索引](../index.md)
 
 设 $f$ 在区间 $I$ 上**严格单调**且连续。则

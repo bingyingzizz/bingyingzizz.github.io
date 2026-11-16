@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 27 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement · **draft**
 Let $H$ be a Hilbert space and $E \subseteq H$ a **closed** subspace. Then

@@ -1,6 +1,6 @@
 # 凝聚态阿贝尔群　`def.condensed-abelian-group`
 凝聚态阿贝尔群
-layer 19 · 定义 · 凝聚态阿贝尔群 · 凝聚态数学
+layer 21 · 定义 · 凝聚态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=def.condensed-abelian-group)　·　[节点索引](../index.md)
 
 **凝聚态阿贝尔群**就是 $\mathrm{Cond}$ 上的**阿贝尔层**。四种说法给出同一个范畴：

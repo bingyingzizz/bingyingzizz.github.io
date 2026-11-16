@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 25 · definition · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: an entire function is one holomorphic everywhere on the whole complex plane; a meromorphic function is one "holomorphic except at a bunch of isolated poles", that is, locally a quotient of two holomorphic functions.

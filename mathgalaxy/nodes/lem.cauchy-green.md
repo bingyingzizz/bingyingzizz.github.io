@@ -1,6 +1,6 @@
 # Cauchy–Green 恒等式　`lem.cauchy-green`
 引理：Cauchy–Green 恒等式
-layer 22 · 引理 · 复变函数基础 · 复变函数
+layer 26 · 引理 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=lem.cauchy-green)　·　[节点索引](../index.md)
 
 **白话**：沿闭曲线的复积分，可以换算成曲线内部面积上的一个二重积分，被积的正是 $\partial f/\partial \bar z$ —— 于是「全纯 $\implies$ 积分为零」变成了「被积函数是 $0$」。

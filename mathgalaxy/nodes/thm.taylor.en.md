@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 28 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ have $n$ continuous derivatives on $[a, b]$ and be $n+1$ times differentiable on $(a, b)$, and choose $x_0 \in [a, b]$. Then for every $x \in [a, b]$ with $x \ne x_0$, there exists $\xi$ between $x_0$ and $x$ such that

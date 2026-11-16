@@ -1,6 +1,6 @@
 # 扩充复平面与球极投影　`def.riemann-sphere`
 扩充复平面：把 $\infty$ 补进来，并用球极投影给出模型
-layer 20 · 定义 · 复变函数基础 · 复变函数
+layer 22 · 定义 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=def.riemann-sphere)　·　[节点索引](../index.md)
 
 **扩充复平面** $\widehat{\mathbb{C}} := \mathbb{C} \cup \{\infty\}$：在复平面上补一个点 $\infty$，规定它的邻域是 $\{\, |z| > R \,\} \cup \{\infty\}$（$R > 0$）。

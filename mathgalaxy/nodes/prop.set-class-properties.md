@@ -1,6 +1,6 @@
 # 集合族的基本性质　`prop.set-class-properties`
 命题：基本类 / 环 / σ-代数的几条基本性质
-layer 16 · 命题 · 集合族与 σ-代数 · 实变函数+数学分析
+layer 18 · 命题 · 集合族与 σ-代数 · 实变函数+数学分析
 [在星图里打开](../#n=prop.set-class-properties)　·　[节点索引](../index.md)
 
 (1) 由基本类**生成的环**（(5) 里的 $\mathfrak{A}$）包含 $\emptyset$ —— 它是**空并**；基本类本身**未必**含 $\emptyset$（例：$\mathcal{E} = \{A\}$、$A \ne \emptyset$ 满足基本类定义，但 $\emptyset \notin \mathcal{E}$）。

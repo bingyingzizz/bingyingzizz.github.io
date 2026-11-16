@@ -1,6 +1,6 @@
 # Jordan–Hölder 定理　`thm.jordan-holder`
 定理（Jordan–Hölder）：合成因子与重数唯一
-layer 11 · 定理 · 合成列与可解群 · 抽象代数
+layer 13 · 定理 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=thm.jordan-holder)　·　[节点索引](../index.md)
 
 设 $G$ 有两条合成列

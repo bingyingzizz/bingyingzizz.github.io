@@ -1,6 +1,6 @@
 # 合冲的稳定性　`prop.syzygy-stability`
 合冲在相差投射直和项的意义下与消解无关
-layer 16 · 命题 · 消解与维数 · 同调代数
+layer 18 · 命题 · 消解与维数 · 同调代数
 [在星图里打开](../#n=prop.syzygy-stability)　·　[节点索引](../index.md)
 
 设 $M$ 是 $R$-模，$P_{\bullet}$、$Q_{\bullet}$ 是它的两条投射消解，

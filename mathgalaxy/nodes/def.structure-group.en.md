@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 33 · definition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
+layer 35 · definition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.structure-group.md` and `proofs/`.

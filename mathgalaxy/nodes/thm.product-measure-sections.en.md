@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis
+layer 21 · theorem · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.product-measure-sections.md` and `proofs/`.

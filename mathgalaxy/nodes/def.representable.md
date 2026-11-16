@@ -1,6 +1,6 @@
 # 表示函子　`def.representable`
 表示函子与万有元素
-layer 12 · 定义 · 预层与米田 · 范畴论
+layer 14 · 定义 · 预层与米田 · 范畴论
 [在星图里打开](../#n=def.representable)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{C} \to \mathbf{Set}$ 是函子。

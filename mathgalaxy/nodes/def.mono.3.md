@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.mono)　·　第 1 页 [nodes/def.mono.md](./def.mono.md)　·　上一页 [nodes/def.mono.2.md](./def.mono.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-def-mono.md](../proofs/dep.cat-sets-def-mono.md)
 - [`def.fibered-product`](../nodes/def.fibered-product.md) 纤维积 / 纤维余积：用到了定义 纤维积 / 纤维余积　[proofs/def-dep.fibered-mono.md](../proofs/def-dep.fibered-mono.md)
 - [`def.section-retraction`](../nodes/def.section-retraction.md) 截面与收缩：用到了定义 截面与收缩　[proofs/def-dep.mono-section.md](../proofs/def-dep.mono-section.md)
 

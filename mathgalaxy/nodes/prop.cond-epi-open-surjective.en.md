@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 23 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Open Surjections` (short) · `Open Surjections Are Epimorphisms of Condensed Sets` (full)
 
 ## Statement and proof

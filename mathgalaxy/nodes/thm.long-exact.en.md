@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 22 · theorem · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement · **draft**
 Let $\mathcal{A}$ be an abelian category and $0 \to K \to L \to M \to 0$ a short exact sequence of complexes. Then there is a **long exact sequence**

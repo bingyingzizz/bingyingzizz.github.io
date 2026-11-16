@@ -1,6 +1,6 @@
 # 复偏导数的运算法则　`prop.complex-partial-rules`
 命题：复偏导数的运算法则
-layer 21 · 命题 · 复变函数基础 · 复变函数
+layer 25 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.complex-partial-rules)　·　[节点索引](../index.md)
 
 **白话**：$\partial/\partial z$ 与 $\partial/\partial \bar z$ 和普通偏导数一样服从线性法则、乘积法则、链式法则，而且两者互为共轭。

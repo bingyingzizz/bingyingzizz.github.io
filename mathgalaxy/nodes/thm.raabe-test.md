@@ -1,6 +1,6 @@
 # 拉阿伯判别法（Raabe）　`thm.raabe-test`
 Raabe 判别法：$n(a_n/a_{n+1}-1)$ 的极限
-layer 21 · 定理 · 数项级数的敛散性 · 数学分析
+layer 23 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.raabe-test)　·　[节点索引](../index.md)
 
 设 $a_n>0$，$R=\lim_{n\to\infty} n\Bigl(\frac{a_n}{a_{n+1}}-1\Bigr)$。则

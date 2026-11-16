@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 15 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A = (a_{ij})$ and $B = (b_{ij})$ have the same shape (both $m \times n$).

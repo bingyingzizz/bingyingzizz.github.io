@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 22 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Tensor of Sheaves` (short) · `Tensor Product of Abelian Sheaves` (full)
 
 ## Statement and proof

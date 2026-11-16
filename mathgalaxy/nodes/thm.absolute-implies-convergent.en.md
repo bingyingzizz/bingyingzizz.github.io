@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 25 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 If $\sum |a_n|$ converges, then $\sum a_n$ converges, and

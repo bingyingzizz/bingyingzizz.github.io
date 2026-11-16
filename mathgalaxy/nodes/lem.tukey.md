@@ -1,6 +1,6 @@
 # Tukey 引理　`lem.tukey`
 Tukey 引理（Tukey's Lemma / Teichmüller–Tukey）
-layer 8 · 引理 · 选择原理 · 序理论
+layer 10 · 引理 · 选择原理 · 序理论
 [在星图里打开](../#n=lem.tukey)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是**具有有限特征的非空集合族**，则 $(\mathcal{A}, \subseteq )$ 有极大元。

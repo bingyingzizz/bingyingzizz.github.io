@@ -1,6 +1,6 @@
 # 完备　`def.complete`
 完备距离空间
-layer 16 · 定义 · 度量空间 · 拓扑学
+layer 18 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.complete)　·　[节点索引](../index.md)
 
 序列 $\{x_{n}\}$ 是 **Cauchy 列**，当且仅当

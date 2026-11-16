@@ -1,6 +1,6 @@
 # 紧生成空间　`def.compactly-generated`
 紧生成空间 / $k$-空间
-layer 18 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 20 · 定义 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=def.compactly-generated)　·　[节点索引](../index.md)
 
 拓扑空间 $X$ 叫**紧生成的**（也叫 **$k$-空间**），如果它是紧 Hausdorff 空间的余极限。

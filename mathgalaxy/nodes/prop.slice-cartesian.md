@@ -1,6 +1,6 @@
 # 切片范畴是拉回　`prop.slice-cartesian`
 切片范畴的方块是笛卡尔的
-layer 14 · 命题 · 预层与米田 · 范畴论
+layer 16 · 命题 · 预层与米田 · 范畴论
 [在星图里打开](../#n=prop.slice-cartesian)　·　[节点索引](../index.md)
 
 对任取的一个预层，下面这个方块

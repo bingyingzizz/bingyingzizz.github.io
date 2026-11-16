@@ -1,6 +1,6 @@
 # Cauchy 积分公式　`thm.cauchy-integral-formula`
 定理：Cauchy 积分公式
-layer 24 · 定理 · Cauchy 理论 · 复变函数
+layer 28 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.cauchy-integral-formula)　·　[节点索引](../index.md)
 
 **白话**：全纯函数在内部一点的值，由它在边界上的值**完全决定** —— 内部的每一点都在「听」边界的话。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Order Theory
+layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Order Theory
 
 ## Statement · **draft**
 Let $(F, +, \cdot)$ be a **field** and $\le$ a **total order** on $F$ (a partial order in which any two elements are comparable). If $\le$ is **compatible** with the two operations:

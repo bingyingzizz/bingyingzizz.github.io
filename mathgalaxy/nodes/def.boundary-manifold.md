@@ -1,6 +1,6 @@
 # 带边流形　`def.boundary-manifold`
 带边流形与边界
-layer 20 · 定义 · 流形与向量丛 · 微分几何
+layer 25 · 定义 · 流形与向量丛 · 微分几何
 [在星图里打开](../#n=def.boundary-manifold)　·　[节点索引](../index.md)
 
 **在做什么**：把一个方向上砍掉一边，让「闭区间」「闭圆盘」这类带

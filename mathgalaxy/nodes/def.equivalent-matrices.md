@@ -1,6 +1,6 @@
 # 相抵矩阵（等价矩阵）　`def.equivalent-matrices`
 相抵：$B = PAQ$
-layer 15 · 定义 · 矩阵与行列式 · 抽象代数
+layer 17 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.equivalent-matrices)　·　[节点索引](../index.md)
 
 设 $A, B \in M_{m \times n}(K)$。若存在可逆矩阵 $P \in GL_m(K)$ 与 $Q \in GL_n(K)$ 使

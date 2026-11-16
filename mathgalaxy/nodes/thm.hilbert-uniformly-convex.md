@@ -1,6 +1,6 @@
 # Hilbert 空间一致凸　`thm.hilbert-uniformly-convex`
 Hilbert 空间一致凸（平行四边形律）
-layer 19 · 定理 · Hilbert 空间 · 泛函分析
+layer 26 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.hilbert-uniformly-convex)　·　[节点索引](../index.md)
 
 设 $H$ 是 Hilbert 空间。则 $H$ **一致凸**：对每个 $\varepsilon \in (0, 2]$，取

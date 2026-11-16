@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 31 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement · **draft**
 Let $\mathcal{F}$ be a family of holomorphic functions on a domain $\Omega$ that is **locally uniformly bounded**: every point has a neighbourhood on which the family is uniformly bounded (equivalently: uniformly bounded on every compact set $K \subset \Omega$). Then $\mathcal{F}$ is a **normal family**: every sequence $f_{n} \in \mathcal{F}$ has a subsequence converging uniformly on compact subsets (with holomorphic limit).

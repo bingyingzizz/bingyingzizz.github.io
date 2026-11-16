@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 16 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.ind-representable-iff-left-exact.md` and `proofs/`.

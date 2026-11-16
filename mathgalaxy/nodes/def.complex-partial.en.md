@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 24 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: recombine the two real partial derivatives $\partial f/\partial x$ and $\partial f/\partial y$ to obtain two complex directional derivatives, "along $z$" and "along $\bar z$".

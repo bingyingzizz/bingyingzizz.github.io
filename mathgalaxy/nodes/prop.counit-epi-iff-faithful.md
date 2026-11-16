@@ -1,6 +1,6 @@
 # 余单位与忠实性　`prop.counit-epi-iff-faithful`
 $G$ 忠实 $\iff$ 余单位是满
-layer 11 · 命题 · 伴随与反射 · 范畴论
+layer 13 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.counit-epi-iff-faithful)　·　[节点索引](../index.md)
 
 设 $F \dashv G$，单位 $\eta$、余单位 $\varepsilon$。则 $G$ **忠实** $\iff$ 余单位 $\varepsilon$ 是**满态射**（对偶地：$F$ 忠实 $\iff$ 单位是单态射）。

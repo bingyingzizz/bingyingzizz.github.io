@@ -1,6 +1,6 @@
 # 完备化判据　`lem.solid-completion-criterion`
 引理：把子范畴做成阿贝尔子范畴的抽象判据（Lemma 5.9）
-layer 20 · 引理 · 固态阿贝尔群 · 凝聚态数学
+layer 23 · 引理 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=lem.solid-completion-criterion)　·　[节点索引](../index.md)
 
 白话：这条引理是一把**通用扳手** —— 想说明「某个子范畴像模范畴一样好用（有紧对象、有左伴随、导出范畴全忠实）」，不用逐条验，只要验一条 $\operatorname{RHom}$ 条件。

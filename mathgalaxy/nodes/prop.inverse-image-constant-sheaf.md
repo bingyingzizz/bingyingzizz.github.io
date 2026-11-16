@@ -1,6 +1,6 @@
 # 常层沿拉回不变　`prop.inverse-image-constant-sheaf`
 命题：$f^{-1}\overline{E} = \overline{E}$
-layer 19 · 命题 · 层与拓扑 · 范畴论
+layer 21 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.inverse-image-constant-sheaf)　·　[节点索引](../index.md)
 
 设 $f : \mathcal{T} \to \mathcal{T}'$ 是拓扑斯态射、$\overline{E}$ 是常层（$E$ 是集合）。则

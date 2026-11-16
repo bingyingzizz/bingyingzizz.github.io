@@ -1,6 +1,6 @@
 # 平坦张量保持零调　`prop.flat-tensor-acyclic`
 命题：$P$ 平坦、$M$ 下有界零调 $\implies P \otimes M$ 零调
-layer 22 · 命题 · 阿贝尔层 · 同调代数
+layer 24 · 命题 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=prop.flat-tensor-acyclic)　·　[节点索引](../index.md)
 
 设 $P$ 是拓扑斯里的**平坦**阿贝尔群，$M$ 是幂（下有界、在 $n \ne 0$ 处同调为零）的**零调**复形。则 $P \otimes_{\mathbb{Z}} M$ 也零调。

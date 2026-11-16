@@ -1,6 +1,6 @@
 # n 次方根　`thm.nth-root`
 定理：$n$ 次方根的存在唯一性（Existence of $n$-th Roots）
-layer 18 · 定理 · 实数的运算与不等式 · 数学分析
+layer 20 · 定理 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=thm.nth-root)　·　[节点索引](../index.md)
 
 设 $K$ 是完备有序域（如 $\mathbb{R}$），$a > 0$，$n \ge 1$。则存在**唯一**的 $b > 0$ 使

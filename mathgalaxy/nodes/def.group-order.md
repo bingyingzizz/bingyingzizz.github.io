@@ -1,6 +1,6 @@
 # 群的阶与元素的阶　`def.group-order`
 群的阶 $|G|$ 与元素的阶 $\operatorname{ord}(x)$
-layer 9 · 定义 · 代数结构 · 抽象代数
+layer 11 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.group-order)　·　[节点索引](../index.md)
 
 设 $G$ 是群。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a ring. A subset $I \subseteq A$ is a **(two-sided) ideal** if $(I, +)$ is an additive subgroup and, for all $a \in A$ and $x \in I$,

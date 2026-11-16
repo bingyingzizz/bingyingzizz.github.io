@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 23 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $p \in \mathbb{R}$. Then the series

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 15 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V, W, U$ be $K$-vector spaces. A map $B : V \times W \to U$ is **bilinear** iff fixing one variable leaves a linear map in the other:

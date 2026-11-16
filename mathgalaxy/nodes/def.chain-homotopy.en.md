@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Homology Groups (`topology.homology`) · Topology
+layer 20 · definition · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement · **draft**
 Let $C = \{\, C_{n}, \partial_{n} \,\}$ and $D = \{\, D_{n}, \partial_{n}' \,\}$ be two chain complexes, and $f, g : C \to D$ chain maps (i.e. $\partial' f = f \partial$).

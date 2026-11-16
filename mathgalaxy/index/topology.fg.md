@@ -5,15 +5,15 @@
 
 - def.homotopy-maps　映射同伦　layer 6
 - def.covering-space　覆叠空间　layer 6
-- lem.free-proper-quotient-manifold　自由真不连续作用的光滑商　layer 10
-- def.path-homotopy　道路同伦　layer 17
-- lem.path-product　道路拼接　layer 18
-- def.fundamental-group　基本群　layer 18
-- thm.lifting　提升定理　layer 18
-- prop.induced-homomorphism　诱导同态　layer 19
-- def.simply-connected　单连通　layer 19
-- prop.covering-index　覆叠的指数　layer 19
-- thm.van-kampen　van Kampen 定理　layer 19
-- prop.pi1-group　π₁ 是群　layer 19
+- lem.free-proper-quotient-manifold　自由真不连续作用的光滑商　layer 18
+- def.path-homotopy　道路同伦　layer 19
+- lem.path-product　道路拼接　layer 20
+- def.fundamental-group　基本群　layer 20
+- thm.lifting　提升定理　layer 20
+- prop.induced-homomorphism　诱导同态　layer 21
+- def.simply-connected　单连通　layer 21
+- prop.covering-index　覆叠的指数　layer 21
+- thm.van-kampen　van Kampen 定理　layer 21
+- prop.pi1-group　π₁ 是群　layer 21
 
 > 续见 `index/topology.fg.2.md`

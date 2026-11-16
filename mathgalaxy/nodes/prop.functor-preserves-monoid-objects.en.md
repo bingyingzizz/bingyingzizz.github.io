@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
+layer 17 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.functor-preserves-monoid-objects.md` and `proofs/`.

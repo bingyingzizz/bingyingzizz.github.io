@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis / Topology
+layer 10 · definition · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.product-sigma.md` and `proofs/`.

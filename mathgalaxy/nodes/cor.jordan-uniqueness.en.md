@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · corollary · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 22 · corollary · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 > continued in nodes/cor.jordan-uniqueness.en.2.md

@@ -1,6 +1,6 @@
 # 预层　`def.presheaf`
 预层
-layer 10 · 定义 · 预层与米田 · 范畴论
+layer 12 · 定义 · 预层与米田 · 范畴论
 [在星图里打开](../#n=def.presheaf)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 上的**（集合值）预层**是函子
@@ -10,7 +10,7 @@ $$T : \mathcal{C}^{\mathrm{op}} \longrightarrow \mathbf{Set}$$
 预层之间的**态射**就是它们之间的自然变换。记法：对态射 $f : Y \to X$ 记 $f^{-1} = T(f) : T(X) \to T(Y)$；对 $s \in T(X)$ 记 $s|_Y = f^{-1}(s)$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.natural-transformation`](../nodes/def.natural-transformation.md) 自然变换：用到了定义 自然变换　[proofs/dep.gap-presheaf-natural-transformation.md](../proofs/dep.gap-presheaf-natural-transformation.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-def-presheaf.md](../proofs/dep.cat-sets-def-presheaf.md)
 
 - …另有入边，续页见 [nodes/def.presheaf.2.md](./def.presheaf.2.md)
 

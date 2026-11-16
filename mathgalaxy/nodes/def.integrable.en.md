@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 26 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 A real-valued measurable $f$ is **integrable** iff $\int f^+ < \infty$ and $\int f^- < \infty$. Equivalently, $f$ is integrable iff the integral of $|f|$ is finite:

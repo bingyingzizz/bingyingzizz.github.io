@@ -1,6 +1,6 @@
 # 右伴随保极限　`thm.right-adjoint-preserves-limits`
 右伴随保持所有极限
-layer 12 · 定理 · 伴随与反射 · 范畴论
+layer 14 · 定理 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=thm.right-adjoint-preserves-limits)　·　[节点索引](../index.md)
 
 设 $F \dashv G$。则 $G$ **保持所有（在 $\mathcal{D}$ 中存在的）极限**：对每个图 $D : I \to \mathcal{D}$，

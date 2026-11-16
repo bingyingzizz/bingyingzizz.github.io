@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · definition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 A measurable function $\varphi : X \to \mathbb{C}$ is a **simple function** if and only if it takes only **finitely many values**. Equivalently, it can be written as

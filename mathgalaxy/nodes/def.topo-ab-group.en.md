@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
+layer 20 · definition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.topo-ab-group.md` and `proofs/`.

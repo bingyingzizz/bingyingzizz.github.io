@@ -1,6 +1,6 @@
 # ψ 与 θ 的差是 o(x)　`lem.psi-theta-asymptotic`
 $\psi(x)-\theta(x)=o(x)$
-layer 15 · 引理 · 数论函数与素数分布 · 数论
+layer 17 · 引理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=lem.psi-theta-asymptotic)　·　[节点索引](../index.md)
 
 $\psi(x)-\theta(x)=O(\sqrt{x}\log x)=o(x)$。因此 $\psi(x)\sim x\iff\theta(x)\sim x$。

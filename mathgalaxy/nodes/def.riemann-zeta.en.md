@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · definition · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
+layer 33 · definition · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
 
 ## Statement · **draft**
 For $\operatorname{Re} s > 1$ define

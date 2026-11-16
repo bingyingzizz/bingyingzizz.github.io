@@ -3,3 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ff-faithful`](../nodes/def.ff-faithful.md) 忠实 / 满 / 全忠实：用到了定义 忠实 / 满 / 全忠实　[proofs/def-link.ffnotfull-ff.md](../proofs/def-link.ffnotfull-ff.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-forgetful-faithful-not-full.md](../proofs/dep.cat-sets-prop-forgetful-faithful-not-full.md)
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-forgetful-faithful-not-full.md](../proofs/dep.cat-top-prop-forgetful-faithful-not-full.md)
+
+> 续见 [nodes/prop.forgetful-faithful-not-full.3.md](./prop.forgetful-faithful-not-full.3.md)

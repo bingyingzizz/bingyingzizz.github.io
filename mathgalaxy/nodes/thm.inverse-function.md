@@ -1,6 +1,6 @@
 # 逆映射定理　`thm.inverse-function`
 定理（逆映射定理）：$Df(a)$ 可逆 $\implies$ 局部可逆
-layer 27 · 定理 · 多元微分 · 数学分析
+layer 29 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.inverse-function)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{n}$ 是 $C^{1}$，$a \in U$ 且 $Df(a)$ **可逆**。

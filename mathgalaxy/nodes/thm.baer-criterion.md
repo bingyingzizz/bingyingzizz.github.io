@@ -1,6 +1,6 @@
 # 内射的理想判据　`thm.baer-criterion`
 Baer 判据（只需对理想检验提升）
-layer 17 · 定理 · 内射模与可除群 · 同调代数
+layer 19 · 定理 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=thm.baer-criterion)　·　[节点索引](../index.md)
 
 设 $R$ 是含幺环，$I$ 是左 $R$-模。则 $I$ **内射**当且仅当：对每个**左理想** $J \subseteq R$ 与每个 $R$-线性映射 $f : J \to I$，都存在 $x \in I$ 使

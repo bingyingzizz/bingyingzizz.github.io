@@ -1,6 +1,6 @@
 # 晶体层　`def.crystalline-sheaf`
 定义：所有过渡都是同构的 $\mathbf{Top}_{/X}$ 上的层
-layer 16 · 定义 · 层与拓扑 · 范畴论
+layer 18 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.crystalline-sheaf)　·　[节点索引](../index.md)
 
 给出 $\mathbf{Top}_{/X}$ 上的一个层 $\mathcal{F}$，等价于给出所有 $\mathcal{F}_{Y}$（$Y \to X$）连同相容的态射

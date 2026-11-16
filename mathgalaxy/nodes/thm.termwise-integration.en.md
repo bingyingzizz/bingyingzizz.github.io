@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 26 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\{f_n\} \subseteq L^+$. Then

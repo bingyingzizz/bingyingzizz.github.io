@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 20 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Sheaf Generators` (short) · `Generators of Abelian Sheaves` (full)
 
 ## Statement and proof

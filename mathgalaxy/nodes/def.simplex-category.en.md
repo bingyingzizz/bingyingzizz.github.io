@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 10 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.simplex-category.md` and `proofs/`.

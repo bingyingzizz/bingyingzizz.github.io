@@ -1,6 +1,6 @@
 # Stone 空间的闭开加细　`prop.stone-clopen-refinement`
 命题：Stone 空间的开覆盖有有限不交闭开加细
-layer 19 · 命题 · Stone 与 Stonean · 拓扑学
+layer 21 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.stone-clopen-refinement)　·　[节点索引](../index.md)
 
 设 $S$ 是 **Stone** 空间。则 $S$ 的**任何开覆盖都有有限的、两两不交的闭开加细**：存在有限族 $(C_{r})_{r \le m}$ 使

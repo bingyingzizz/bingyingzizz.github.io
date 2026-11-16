@@ -1,6 +1,6 @@
 # 解析环的 base change　`prop.analytic-base-change`
 命题：解析环映射给出 $-\otimes_{\mathcal{A}}\mathcal{B}$（Prop 7.7）
-layer 24 · 命题 · 解析环与固态模 · 凝聚态数学
+layer 26 · 命题 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=prop.analytic-base-change)　·　[节点索引](../index.md)
 
 设 $f : \mathcal{A} \to \mathcal{B}$ 是解析环之间的映射（即凝聚态环映射，且每个 $\mathcal{B}[S]$ 作为 $A$-模落在 $\operatorname{Mod}^{\mathrm{cond}}_{\mathcal{A}}$ 里）。则：

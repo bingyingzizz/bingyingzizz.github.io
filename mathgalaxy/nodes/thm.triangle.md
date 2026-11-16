@@ -1,6 +1,6 @@
 # 三角不等式　`thm.triangle`
 三角不等式 $|x + y| \le |x| + |y|$
-layer 11 · 定理 · 实数的运算与不等式 · 数学分析+集合论
+layer 13 · 定理 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=thm.triangle)　·　[节点索引](../index.md)
 
 设 $K$ 是有序域（如 $\mathbb{Q}$、$\mathbb{R}$），$x, y \in K$。则

@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.smooth-manifold)　·　第 1 页 [nodes/def.smooth-manifold.md](./def.smooth-manifold.md)　·　上一页 [nodes/def.smooth-manifold.7.md](./def.smooth-manifold.7.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`ex.sphere`](../nodes/ex.sphere.md) 球面 S²：ana.smooth-exsphere　[proofs/ana.smooth-exsphere.md](../proofs/ana.smooth-exsphere.md)
 - [`ex.torus`](../nodes/ex.torus.md) 环面 T²：ana.smooth-extorus　[proofs/ana.smooth-extorus.md](../proofs/ana.smooth-extorus.md)
 - [`ex.projective-plane`](../nodes/ex.projective-plane.md) 射影平面 RP²：ana.smooth-exrp2　[proofs/ana.smooth-exrp2.md](../proofs/ana.smooth-exrp2.md)
 

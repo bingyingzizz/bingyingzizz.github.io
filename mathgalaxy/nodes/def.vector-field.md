@@ -1,6 +1,6 @@
 # 向量场　`def.vector-field`
 光滑向量场
-layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
+layer 28 · 定义 · 向量场与 Lie 结构 · 微分几何
 [在星图里打开](../#n=def.vector-field)　·　[节点索引](../index.md)
 
 **在说什么**：在每一点各挑一个切向量，并挑得随点光滑 —— 这就是向量场。它真正的身份是「对光滑函数求方向导数」的算子。
@@ -12,7 +12,7 @@ layer 23 · 定义 · 向量场与 Lie 结构 · 微分几何
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.lie-bracket`](../nodes/def.lie-bracket.md) Lie 括号 用
+- 被 [`def.riemannian-metric`](../nodes/def.riemannian-metric.md) Riemann 度量 用
 
 - …另有出边，续页见 [nodes/def.vector-field.4.md](./def.vector-field.4.md)
 

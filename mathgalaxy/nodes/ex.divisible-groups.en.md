@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · example · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 23 · example · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 names: `Divisible Groups` (short) · `Examples of Divisible Groups` (full)
 
 ## Statement and proof

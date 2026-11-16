@@ -1,6 +1,6 @@
 # 弱 Hausdorff 的基本性质　`prop.weak-hausdorff-basic`
 弱 Hausdorff 的几条基本性质
-layer 20 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 22 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.weak-hausdorff-basic)　·　[节点索引](../index.md)
 
 设 $X$ 弱 Hausdorff。则

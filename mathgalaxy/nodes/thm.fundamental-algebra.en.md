@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 28 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra / Mathematical Analysis
+layer 32 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra / Mathematical Analysis
 
 ## Statement · **draft**
 Every polynomial $p \in \mathbb{C}[z]$ of degree $\ge 1$ with complex coefficients has a complex root. Equivalently:

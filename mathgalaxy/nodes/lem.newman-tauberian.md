@@ -1,6 +1,6 @@
 # Newman 解析定理　`lem.newman-tauberian`
 Newman 解析定理：Laplace 变换的解析延拓推出原函数积分收敛
-layer 29 · 引理 · 数论函数与素数分布 · 数论
+layer 33 · 引理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=lem.newman-tauberian)　·　[节点索引](../index.md)
 
 设

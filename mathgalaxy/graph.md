@@ -1,9 +1,9 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-16T04:03:08.859Z
-> 15 星系 / 105 星团 / 1664 节点 / 3615 连线（强边 3529，弱边 86；其中**不分层**的「推论」63 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-16T10:15:55.134Z
+> 15 星系 / 105 星团 / 1668 节点 / 3761 连线（强边 3675，弱边 86；其中**不分层**的「推论」63 条（layer:false））
 
-> ⛔ **这是全量 bulk 导出（约 4.2 MB），不要单次抓取** —— 抓取工具单次通常只返回
+> ⛔ **这是全量 bulk 导出（约 4.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
 > 而且同一地址反复抓也只会拿到同样的开头。**要检索请走 `llms.txt` 里的检索协议**：
 > `index.md` → `index/<星团id>.md` → `nodes/<节点id>.md`。
@@ -441,6 +441,23 @@ $$\forall A \forall B \exists C \forall z [ z \in C \leftrightarrow  \exists a \
 它是「关系」「函数」得以定义为集合的前提：没有 $A \times B$，就没有 $R \subseteq A \times B$ 这个说法。
 
 参考：Kunen, Set Theory, I.5
+
+#### 任意族笛卡尔积存在　`thm.arbitrary-product`
+*定理*　任意小族的笛卡尔积 $\prod_{i \in I} A_i$ 存在
+
+设 $I$ 是集合，$\{A_i\}_{i\in I}$ 是一族集合。则存在集合
+
+$$\prod_{i\in I} A_i = \Bigl\{ f : f \text{ 是函数},\ \operatorname{dom} f = I,\ \forall i\in I,\ f(i)\in A_i \Bigr\}$$
+
+即全体**选择函数**之集。$I$ 有限时它就是反复取二元积 $A_{i_1}\times\cdots\times A_{i_n}$；一般情形用**幂集公理 + 分离公理模式 + 并集公理**：$\prod_i A_i$ 是 $\mathcal P(I\times\bigcup_i A_i)$ 中满足 $f(i)\in A_i$ 的函数的子集；替换公理不必需。
+
+**存在性不需要选择公理。** 这里只收集「所有选择函数」这一集合，并不声称它非空。
+
+**非空性**是另一回事：若每个 $A_i$ 非空而 $I$ 无限，断言 $\prod_i A_i \ne \emptyset$ 正是选择公理的一条形式；$I$ 有限时不需要。
+
+与 `thm.product` 的关系：二元积是 $I=\{0,1\}$ 的特例；本定理把「逐对构造」换成「一次性收集所有选择函数」，从而对任意小族有定义。
+
+参考：Kunen, Set Theory, I.9（函数与积）
 
 #### 并集与交集　`def.union-inter`
 *定义*　并集 / 交集
@@ -20510,6 +20527,34 @@ $$g \circ f = 1_X$$
 
 参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II；Weibel, An Introduction to Homological Algebra, Ch. 1
 
+#### 集合范畴　`def.category-of-sets`
+*定义*　集合范畴 $\mathbf{Set}$
+
+**集合范畴** $\mathbf{Set}$：对象是集合，态射是函数，复合是映射复合，单位是恒等映射。
+$\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子的标准靶。
+
+**完备且余完备**：小积与等化子给出所有小极限，小余积与余等化子给出所有小余极限。
+
+**不是加性范畴**：$\hom(A,B)$ 一般没有群结构，不能逐点相加。
+
+**与拓扑空间范畴的关系**：存在遗忘函子 $\mathbf{Top}\to\mathbf{Set}$，它保极限与余极限，因为拓扑都按底层集合逐点构造。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
+
+#### 拓扑空间范畴　`def.category-of-topological-spaces`
+*定义*　拓扑空间范畴 $\mathbf{Top}$
+
+**拓扑空间范畴** $\mathbf{Top}$：对象是拓扑空间，态射是连续映射，复合是映射复合，单位是恒等映射。
+积取积拓扑，余积取不交并拓扑，等化子取子空间拓扑，余等化子取商拓扑。
+
+**完备且余完备**：上述构造逐项给出小极限与小余极限。
+
+**遗忘函子** $\mathbf{Top}\to\mathbf{Set}$ 保所有极限与余极限，但它忠实而不满：不是每个函数都连续。
+
+**不是加性范畴**：$\hom(X,Y)$ 一般没有群结构；开映射也不是态射（态射只要求连续）。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
+
 #### 局部化　`def.localization`
 *定义*　范畴的局部化
 
@@ -21594,6 +21639,18 @@ $$\operatorname{Hom}_{\operatorname{Ind}}\bigl(X, \varinjlim_{j}Y_{j}\bigr) \;=\
 ⚠️ 前提「有限余极限」不能只留「余积」：还要有推出 / 余等化子，上面的两步走才封得住。
 
 参考：Le Stum, An introduction to condensed mathematics, §1.3
+
+#### 笛卡尔积是集合范畴的积　`prop.cartesian-product-is-set-product`
+*命题*　命题：$\mathbf{Set}$ 中的积就是笛卡尔积
+
+在 $\mathbf{Set}$ 中，**范畴论积就是笛卡尔积**：积对象是 $X\times Y$，两条投影 $\pi_1,\pi_2$ 是两个分量映射。
+对任意集合 $Z$ 与函数 $f:Z\to X$、$g:Z\to Y$，配对映射 $\langle f,g\rangle:Z\to X\times Y$（$z\mapsto(f(z),g(z))$）是唯一使 $\pi_1\circ\langle f,g\rangle=f$、$\pi_2\circ\langle f,g\rangle=g$ 的映射。
+
+**证明**：笛卡尔积 $X\times Y$ 与投影满足积的泛性质——存在性由配对映射给出，唯一性由「两个分量都相同则映射相同」给出 ✓。
+
+与 `def.product` 的关系：`def.product` 是范畴积的定义，本条说明它在 $\mathbf{Set}$ 中的具体实现；`thm.product` 提供笛卡尔积的存在性。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, III
 
 #### Set、Top、Ab 的完备性　`prop.set-top-ab-complete`
 *命题*　命题：$\mathbf{Set} / \mathbf{Top} / \mathbf{Ab}$ 完备且余完备
@@ -29040,7 +29097,7 @@ $$0 \to M \to I^{0} \to I^{1} \to \cdots \to I^{n} \to 0$$
 
 而每项 $I^{k}$ 都内射。$M$ 的**内射维数** $\operatorname{id}_{R} M$ 是使此式成立的最小 $n$（不存在则记 $\infty$）。
 
-**对偶（不要写错）**：$\operatorname{id}_{R} M = \operatorname{fd}_{R^{\mathrm{op}}} \operatorname{Hom}_{\mathbb{Z}}(M,\, \mathbb{Q}/\mathbb{Z})$ —— 即「取特征对偶之后**同侧**的平坦维数（fd；本图未单列平坦维数节点）」。
+**对偶（不要写错）**：$\operatorname{id}_{R} M = \operatorname{fd}_{R^{\mathrm{op}}} \operatorname{Hom}_{\mathbb{Z}}(M,\, \mathbb{Q}/\mathbb{Z})$ —— 即「取特征对偶之后**同侧**的平坦维数（fd 见 `def.flat-dimension`）」。
 
 ⚠ 不能写成 $\operatorname{id}_{R} M = \operatorname{pd}_{R^{\mathrm{op}}} M$：取 $R = \mathbb{Z}$、$M = \mathbb{Q}$，$\mathbb{Q}$ 可除 $\implies$ $\operatorname{id} = 0$，而 $\operatorname{pd}_{\mathbb{Z}}\mathbb{Q} = 1$（$\mathbb{Q}$ 不投射），两者不等。
 
@@ -41542,6 +41599,22 @@ $$B = \{ y : \exists x \in A, \psi(x, y, p) \} = \{ x \in A : \varphi(x, p) \}$$
 
 > 所以 ZF 里其实只需要「替换 + 一个集合存在」就够了，教材仍保留分离公理是为了方便陈述与使用。
 
+#### 定义引用：「笛卡尔积存在」→ 任意族笛卡尔积存在　`dep.arbproduct-product`
+
+有限族情形由二元积反复构造，是本定理的特例
+
+#### 定义引用：「笛卡尔积存在」→ 关系　`dep.sym-product-def-rel`
+
+关系定义为笛卡尔积的子集，故以二元积为前提
+
+#### 定义引用：「任意族笛卡尔积存在」→ 积空间与实虚部　`dep.bridge-arbitrary-product`
+
+命题 (1) 的积空间底集是任意族笛卡尔积
+
+#### 定义引用：「任意族笛卡尔积存在」→ 积 σ-代数　`dep.bridge-arbitrary-product-sigma`
+
+积 σ-代数定义在任意族笛卡尔积的底集上
+
 #### 分离公理模式 ⟹ 空集存在　`imp.sep-to-empty`
 *分离公理模式 $\implies$ 空集存在*
 
@@ -41615,6 +41688,10 @@ $$C = \{ z \in \mathcal{P}(\mathcal{P}(A \cup B)) : \exists a \in A, \exists b \
 则 $C$ 恰是 $A \times B$：一方面每个 (a, b) 都在 $\mathcal{P}(\mathcal{P}(A \cup B))$ 中，另一方面 $z$ 是不在 $A$、$B$ 中任意点处取到的有序对时不会被选进来。∎
 
 > 这个证明展示了一个典型套路：先用幂集「造一个足够大的容器」，再用分离公理模式「筛出真正想要的东西」。
+
+#### 定义引用：「选择函数」→ 任意族笛卡尔积存在　`dep.choicefn-arbproduct`
+
+积集元素就是选择函数，定义直接用到选择函数
 
 #### 选择公理 ⟺ 良序定理　`eq.ac-wo`
 *选择公理 $\iff$ 良序定理*
@@ -42516,6 +42593,44 @@ Borel 可测用的是 $\mathfrak{B}_\mathbb{R}$ 与 $\mathfrak{B}_\mathbb{C}$。
 #### 定义引用：「测度」→ 可测函数的封闭性　`def-link.measure-closure`
 
 封闭性里的极限都是相对测度 $\mu$ 而言的。
+
+#### 定义引用：「复数 ℂ」→ 积空间与实虚部　`dep.measurable-realimag-complex`
+
+(2) 的靶空间是复平面，实部与虚部都取实值。
+
+#### 任意族笛卡尔积存在 ⟹ 积空间与实虚部　`imp.measurable-product-cartesian`
+
+积空间 $Y=\prod_\alpha Y_\alpha$ 的底集就是任意族笛卡尔积 $\prod_\alpha Y_\alpha$（全体选择函数之集，见 `thm.arbitrary-product`）；可测结构 $\mathcal N=\otimes_\alpha\mathcal N_\alpha$ 建在这个底集上。因此命题 (1) 讨论的 $Y$ 确实由笛卡尔积给出；有限指标时即 `thm.product` 的反复二元积。$\blacksquare$
+
+> 积空间的底集是任意族笛卡尔积，二元积只是有限特例。
+
+#### 定义引用：「可测函数」→ 积空间与实虚部　`dep.measurable-realimag-function`
+
+(1) 中「$f$ 可测」指可测映射，是定义级依赖。
+
+#### 定义引用：「复数 ℂ」→ Lebesgue 可测　`dep.sym-complex-def-lebesgue-measurable`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 可测函数的封闭性　`dep.sym-complex-prop-measurable-closure`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 简单函数　`dep.sym-complex-def-simple-function`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 简单函数逼近　`dep.sym-complex-thm-simple-approximation`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「实数系 ℝ」→ Lebesgue 可测　`dep.sym-real-def-lebesgue-measurable`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
+#### 定义引用：「Borel σ-代数」→ 连续 ⟹ Borel 可测　`dep.continuousmeasurable-borel`
+
+连续映射对 Borel σ-代数可测
 
 #### 非负函数的积分 + 简单函数积分的性质 ⟹ 单调收敛定理　`imp.mct`
 *非负积分的定义 $\implies$ 单调收敛定理*
@@ -43735,6 +43850,14 @@ $>$ ⭐ 最容易错的直觉是「a.e. 可导 $F' \in L^{1}$ 就够」——**C
 
 推论同时落在 NBV 与 AC 的交里。
 
+#### 定义引用：「复数 ℂ」→ 有界变差函数　`dep.sym-complex-def-bounded-variation`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 绝对连续函数　`dep.sym-complex-def-ac-function`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
 #### Young 不等式 ⟹ Hölder 不等式　`imp.holder`
 *Young 不等式 $\implies$ Hölder 不等式*
 
@@ -43948,6 +44071,10 @@ Minkowski 就是 L^p 范数的三角不等式。
 
 自反性谈的是 L^p 与它的二次对偶。
 
+#### 定义引用：「复数 ℂ」→ 本性上界与 L^∞　`dep.sym-complex-def-essential-sup`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
 #### 定义引用：「实数系 ℝ」→ 扩充实数 [−∞,+∞]　`dep.real-extended`
 
 扩充实数就是在 $\mathbb{R}$ 上添两个记号。
@@ -44048,6 +44175,10 @@ $$|b_n-L|\le\frac1n\sum_{k=1}^{N}|a_k-L|+\frac{n-N}{n}\varepsilon .$$
 第一项当 $n\to\infty$ 时趋于 $0$（分子固定），故 $\limsup|b_n-L|\le\varepsilon$。令 $\varepsilon\to0$，得 $b_n\to L$。$\blacksquare$
 **逆命题不真**：$a_n=(-1)^n$ 的平均趋于 $0$，但 $a_n$ 本身不收敛。
 📌 与 Stolz–Cesàro 的关系：取 $y_n=n$、$x_n=\sum_{k=1}^{n}a_k$，Stolz 的差商 $\Delta x_n/\Delta y_n=a_{n+1}$，得到的正是本条；Stolz 是它的推广。
+
+#### 定义引用：「复数 ℂ」→ 导数　`dep.sym-complex-def-derivative`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
 
 #### 定义引用：「子集」→ 并集与交集　`dep.subset-union-inter`
 
@@ -44354,6 +44485,10 @@ Jordan 曲线定义为 $S^{1}$ 在同胚下的像；「像」上的拓扑取子�
 #### 定义引用：「子空间」→ Jordan 曲线　`dep.jordan-subspace`
 
 Jordan 曲线带子空间拓扑。
+
+#### 定义引用：「复数 ℂ」→ Jordan 曲线　`dep.sym-complex-def-jordan-curve`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
 
 #### 定义引用：「关系」→ 商集与等价类　`dep.rel-quotient`
 
@@ -44926,6 +45061,18 @@ $\models$ 按**公式的复杂度**递归定义 —— 没有「公式由语法�
 
 公理只断言「这样的 $U$ 存在」，把封闭性那四条交给定义。分开写的好处：换一套宇宙的定义（比如换成 Tarski 的写法），公理本身一个字不用改。
 
+#### 定义引用：「范畴」→ 集合范畴　`dep.catset-category`
+
+集合范畴是「对象为集合、态射为函数」的范畴，是 def.category 的标准例子。
+
+#### 定义引用：「范畴」→ 拓扑空间范畴　`dep.cattop-category`
+
+拓扑空间范畴是「对象为拓扑空间、态射为连续映射」的范畴，是 def.category 的标准例子。
+
+#### 定义引用：「集合范畴」→ 阿贝尔群范畴　`dep.cat-sets-def-category-of-abelian-groups`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 忠实 / 满 / 全忠实 + 本质满 ⟹ 范畴等价　`imp.equiv-criterion`
 *全忠实 $+$ 本质满 $\implies$ 范畴等价*
 
@@ -44994,6 +45141,22 @@ $$f = \beta_B \circ G(h) \circ \beta_A^{-1} : A \to B$$
 #### 定义引用：「纤维积 / 纤维余积」→ 子对象的原像　`dep.preimg-fiber`
 
 原像就是沿 $f$ 的纤维积，所以需要先有纤维积。
+
+#### 定义引用：「集合范畴」→ 单态射 / 满态射 / 同构　`dep.cat-sets-def-mono`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 子对象的交　`dep.cat-sets-def-intersection-subobject`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 子对象的原像　`dep.cat-sets-def-preimage-subobject`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 元素范畴　`dep.cat-sets-def-elements-category`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
 
 #### 米田引理 ⟹ 表示的两个定义等价　`imp.yoneda-criterion`
 *米田引理 $\implies$ 表示的两个定义等价*
@@ -45088,6 +45251,26 @@ $$(\varphi \circ f)_{Y}(\psi) = \varphi_{Y}\bigl(T(\psi)(a)\bigr) = T'(\psi)\big
 满态射的情形对偶（把范畴换成 $\mathcal{C}^{\mathrm{op}}$）。∎
 
 > 这里能看到米田引理的典型用法：**要把「元素层」的问题搬到「箭头层」，就先让元素变成 $h_{X}$ 到 $T$ 的箭头**。
+
+#### 定义引用：「集合范畴」→ 预层　`dep.cat-sets-def-presheaf`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 预层范畴　`dep.cat-sets-def-presheaf-cat`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 表示函子　`dep.cat-sets-def-representable`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 米田引理　`dep.cat-sets-lem-yoneda`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 表示的两个定义等价　`dep.cat-sets-thm-represented-criterion`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
 
 #### 伴随函子 + 表示函子 ⟹ 右伴随存在的判据　`imp.adjoint-criterion`
 *伴随 $\implies$ 右伴随存在的判据*
@@ -45234,6 +45417,14 @@ $$\operatorname{Hom}(F_{!}1_{\mathcal{C}},\ G) \;\cong\; \operatorname{Hom}(1_{\
 
 > 看完这两条，前面那些定义就串成一条线了：**极限与余极限是「沿到终范畴的函子」延拓，伴随是「沿函数子本身」延拓**。
 
+#### 定义引用：「集合范畴」→ 右伴随存在的判据　`dep.cat-sets-thm-right-adjoint-criterion`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 滤过余极限正合　`dep.cat-sets-prop-filtered-exact`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 紧 Hausdorff 空间范畴 + 紧 ⟹ 紧 Haus 是反射子范畴　`imp.stone-cech`
 *构造 $\beta X$ 并验证泛性质*
 
@@ -45370,6 +45561,22 @@ $f(x) = f(x') \in V \cap V'$，所以 $V \cap V' \ne \emptyset$。
 
 > 两个方向用的是**同一条投射性**的两种面貌：一面是「把对象从它的两块拼回来」（$U \sqcup F \to S$ 有截面），另一面是「每个满射有截面」。
 
+#### 定义引用：「拓扑空间范畴」→ 紧 Hausdorff 空间范畴　`dep.cat-top-def-chaus`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 紧 Haus 是反射子范畴　`dep.cat-top-prop-chaus-reflective`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 自由紧 Hausdorff 空间　`dep.cat-top-def-free-compact-hausdorff`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 全不连通空间是反射子范畴　`dep.cat-top-prop-td-reflective`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
 #### 层 + 预拓扑 + 筛 ⟹ 层的下降条件　`imp.sheaf-descent`
 *预拓扑下的层 $\iff$ 正合列*
 
@@ -45492,6 +45699,14 @@ $$u \circ g = u \circ f_{i} \circ h = v \circ f_{i} \circ h = v \circ g$$
 
 > 这条把「覆盖」这件听起来很几何的事，变成了一句纯箭头的话。以后凡是要在景上验覆盖，都可以改写成一个余积是否满射的问题。
 
+#### 定义引用：「集合范畴」→ 层　`dep.cat-sets-def-sheaf`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 有效等价关系　`dep.cat-sets-def-effective-equivalence`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 定义引用：「子对象的交」→ 子对象构成有界格　`dep.inter-lattice`
 
 子对象格的交就是子对象的交（纤维积）。
@@ -45606,6 +45821,14 @@ $$F(X) \;\cong\; \varprojlim_{X' \to X \in R} F(X')$$
 
 > 证明短得出奇 —— 因为**标准拓扑对覆盖筛的规定，本来就是「$X$ 是这些 $X'$ 的余极限」**。所以「层」在拓扑斯上等于「把余极限送回极限」，几何与范畴在这里合成一句话。
 
+#### 定义引用：「集合范畴」→ 生成元集　`dep.cat-sets-def-generator`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 拓扑斯上的层即保极限的预层　`dep.cat-sets-prop-topos-sheaf-limits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 紧 Hausdorff 空间构成预拓扑斯 + 自由表示 + Giraud 定理 ⟹ Cond 是拓扑斯　`imp.cond-topos`
 *$\mathbf{CHaus}$ 是预拓扑斯 $\implies$ $\mathrm{Cond}$ 是拓扑斯*
 
@@ -45703,6 +45926,14 @@ $$\operatorname{Hom}_{\mathrm{Cond}}(\underline{X}, \underline{Y}) \;\cong\; \op
 ∎
 
 > 一句话记住：**「拓扑空间 $\to$ 凝聚态集」这件事丢掉的东西，正好就是 $k$-化丢掉的东西。** 所以在 $k\mathbf{Top}$ 上它不丢信息。
+
+#### 定义引用：「拓扑空间范畴」→ Top 与 Cond 的伴随　`dep.cat-top-thm-top-cond-adjoint`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 截面函子保极限余极限　`dep.cat-ab-prop-condab-section`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「图与交换图」→ 态射序列　`def-dep.sequence-commdiagram`
 
@@ -45828,6 +46059,50 @@ $$\cdots \to H^{n}(K) \to H^{n}(L) \to H^{n}(M) \xrightarrow{\ \delta\ } H^{n+1}
 
 滤过是阿贝尔范畴中对象上的结构。
 
+#### 定义引用：「阿贝尔群范畴」→ 预加法范畴　`dep.cat-ab-def-pre-additive-category`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔范畴」→ 同调　`dep.abelian-cohomology`
+
+同调定义设在阿贝尔范畴中的上链复形上
+
+#### 定义引用：「阿贝尔群范畴」→ 阿贝尔层　`dep.cat-ab-def-abelian-sheaf`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`dep.cat-ab-thm-topos-abelian-grothendieck`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 内 Hom　`dep.cat-ab-def-internal-hom`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 阿贝尔层的张量积　`dep.cat-ab-def-tensor-abelian-sheaf`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ kX 是紧空间的余极限　`dep.cat-top-prop-ktx-colimit`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 紧生成空间是余反射子范畴　`dep.cat-top-prop-cg-coreflective`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ k-化与积　`dep.cat-top-prop-k-product`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 紧开拓扑　`dep.cat-top-def-compact-open-topology`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 紧生成空间是笛卡尔闭的　`dep.cat-top-prop-cg-cartesian-closed`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
 #### 定义引用：「群」→ 群的整数幂　`dep.grouppower-group`
 
 整数幂只用群的乘法、单位元与逆元定义。
@@ -45918,6 +46193,10 @@ $$\gamma_{i+1} = [G, \gamma_i] \subseteq [G, G^{(i)}] = G^{(i+1)} .$$
 #### 定义引用：「群作用」→ 内自同构　`dep.inner-conjugation`
 
 共轭作用是群在自身上的作用，其像即内自同构。
+
+#### 定义引用：「集合范畴」→ 自由群的泛性质　`dep.cat-sets-def-free-group-universal`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
 
 #### 定义引用：「范畴」→ 模范畴　`def-link.category-module-category`
 
@@ -46052,6 +46331,22 @@ $K[x]/(f)$ 是商环的标准例子。
 
 商环的商映射与泛性质都用环同态陈述。
 
+#### 定义引用：「集合范畴」→ 可表函子保所有极限　`dep.cat-sets-prop-representable-preserves-limits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ Ab(C) 的例子　`dep.cat-sets-ex-ab-of-categories`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ Ab(C) 的例子　`dep.cat-top-ex-ab-of-categories`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 截面函子　`dep.cat-sets-def-section-functor`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 定义引用：「Ind-对象」→ Pro-对象　`dep.proobj-ind`
 
 Pro-对象是 Ind-对象取对偶得到的构造：把滤过图换成余滤过图、形式余极限换成形式极限；定义方式与 Ind-对象平行。
@@ -46067,6 +46362,18 @@ Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无�
 #### 定义引用：「紧」→ 局部紧空间　`dep.lch-compact`
 
 局部紧空间的紧子集讨论以紧性为基础。
+
+#### 定义引用：「集合范畴」→ 代数的几个范畴　`dep.cat-sets-ex-algebra-categories`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 交换化　`dep.cat-ab-prop-abelianization`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ AB6：滤过余极限与积交换　`dep.cat-ab-prop-ab6`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「阿贝尔范畴」→ 导出函子的长正合列　`dep.derivedlong-abelian`
 
@@ -46084,9 +46391,37 @@ Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无�
 
 Čech 上同调是 Čech 复形取同调后的结果（再沿覆盖取余极限）。
 
+#### 定义引用：「实数系 ℝ」→ 半范数阿贝尔群　`dep.sym-real-def-semi-normed-ab-group`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
+#### 定义引用：「Banach 空间」→ 实 Banach 在紧 Hausdorff 上零调　`dep.banach-realchaus-acyclic`
+
+定理以实 Banach 空间 V 为前提
+
+#### 定义引用：「Banach 空间」→ 紧 Haus 到实 Banach 全零　`dep.banach-rhomchaus`
+
+N 是实 Banach 空间，是命题的前提
+
+#### 定义引用：「Banach 空间」→ 有限维 Banach 到离散群全零　`dep.banach-rhomdisc`
+
+M 是有限维实 Banach 空间
+
+#### 定义引用：「Banach 空间」→ 有限维 Banach 空间之间的导出 Hom　`dep.banach-finite-rhom`
+
+M、N 均为有限维实 Banach 空间
+
 #### 定义引用：「阿贝尔范畴」→ 一般正合列　`dep.exactseq-abelian`
 
 正合列在阿贝尔范畴中定义。
+
+#### 定义引用：「阿贝尔群范畴」→ AB5 与 AB3*/AB4* 的关系　`dep.cat-ab-prop-ab5-implications`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ AB 公理的例子表　`dep.cat-ab-prop-ab-axioms-examples`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「等化子 / 余等化子」→ 核与余核　`def-link.kernel-eq`
 
@@ -46365,6 +46700,10 @@ $\pi$ 是连续的闭映射。
 
 常层是常预层的层化。
 
+#### 定义引用：「集合范畴」→ 常层函子保极限　`dep.cat-sets-prop-constant-sheaf-preserves-limits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
 #### 定义引用：「扩展群 Ext」→ 阿贝尔群的 Ext　`def-link.extab-ext`
 
 命题算的就是这条定义里的扩展群 $\operatorname{Ext}^{n}$。
@@ -46372,6 +46711,10 @@ $\pi$ 是连续的闭映射。
 #### 定义引用：「足够多投射对象」→ 阿贝尔群的 Ext　`def-link.extab-enough`
 
 Ab 有足够多投射（自由群），消解才存在。
+
+#### 定义引用：「阿贝尔群范畴」→ 阿贝尔群的 Ext　`dep.cat-ab-prop-ext-abelian-groups`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「扩展群 Ext」→ 投射对象没有高次 Ext　`def-link.extproj-ext`
 
@@ -46429,6 +46772,10 @@ $\operatorname{Ext}^{1}(A,I) = 0$ 对一切 $A$ 成立，是内射性的同调�
 #### 定义引用：「拓扑斯」→ 茎与分离预层　`def-link.stalk-topos`
 
 把点看成拓扑斯态射 $1 \to \operatorname{Sh}(X)$，用的是拓扑斯之间的态射。
+
+#### 定义引用：「集合范畴」→ 茎与分离预层　`dep.cat-sets-prop-stalk-separated`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
 
 #### 定义引用：「正合函子」→ 左正合性的判据　`def-link.lcrit-exactfun`
 
@@ -46601,6 +46948,14 @@ $$E^{p,q}_{2} = \check{H}^{p}\bigl(\mathfrak{X},\ H^{q}(M)\bigr) \;\Longrightarr
 再沿所有覆盖取**滤过余极限**：$\check{H}^{p}(X, -) = \varinjlim_{\mathfrak{X} \in \operatorname{Cov}(X)} \check{H}^{p}(\mathfrak{X}, -)$ ✓（Čech 上同调就是沿覆盖取的余极限）。
 滤过余极限**正合**（保有限极限、保正合列），所以它把每一页的谱序列逐项保下来 —— 页、微分、以及收敛到同一个 $H^{p+q}(X, M)$ 都被保住 ✓。于是得到 $E^{p,q}_{2} = \check{H}^{p}(X, H^{q}(M)) \implies H^{p+q}(X, M)$ ✓。∎
 
+#### 定义引用：「集合范畴」→ 预层范畴的极限与余极限　`dep.cat-sets-thm-presheaf-limits-colimits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 底空间保有限积　`dep.cat-top-cor-cond-ktop-finite-products`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
 #### 定义引用：「阿贝尔层」→ 自由阿贝尔群层　`def-link.freeab-abelian`
 
 自由对象要造的是阿贝尔层。
@@ -46634,6 +46989,10 @@ $$(S \times X)(\cdot) \;\cong\; k\bigl(S(\cdot) \times X(\cdot)\bigr) = k\bigl(S
 **（二）$S$ 只假设局部紧 Hausdorff 的情形（思路）。** 两边作为集合都是 $S \times X(\ast)$ ✓；而底空间的拓扑由「紧 Hausdorff 空间到它的映射」决定（底空间的定义）✓。$S$ 局部紧 Hausdorff 时是它自己的紧子空间的滤过余极限，把 (一) 逐块用上去即可 ✓。
 两步合起来即得 $S \times X(\cdot) \cong (S \times X)(\cdot)$ ✓。∎
 ⚠️ **(二) 只是化归的思路**：真正的证明要把「底空间的拓扑由紧块决定」这句话在两边各写清楚（左边靠底空间的定义、右边靠 $k$-化的定义）。这一步不做也没有数学风险，但严格说这里只到「化归到紧的情形」为止。
+
+#### 定义引用：「阿贝尔群范畴」→ 自由阿贝尔群层　`dep.cat-ab-def-free-abelian-sheaf`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 凝聚态集满态射的判据 ⟹ 开满射是满态射　`imp-link.condepi-opensurj`
 *满态射判据 $\implies$ 开满射是满态射*
@@ -46733,6 +47092,18 @@ $F$ 自由因而投射，$F \to f(S)$ 可提升为 $F \to S \hookrightarrow X$ �
 #### 定义引用：「阿贝尔范畴」→ 生成元的余积刻画　`dep.gencoproduct-abelian`
 
 命题在阿贝尔范畴中讨论生成元与余积。
+
+#### 定义引用：「阿贝尔群范畴」→ 阿贝尔层即拓扑斯里的阿贝尔群　`dep.cat-ab-thm-abelian-sheaf-equiv`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 自由的预层是投射的　`dep.cat-ab-prop-presheaf-free-projective`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 生成元给出阿贝尔层的生成元　`dep.cat-ab-prop-generators-abelian-sheaves`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「上链复形」→ 加法函子与复形构造交换　`def-link.addcomplex-complex`
 
@@ -46882,6 +47253,18 @@ $\operatorname{Hom}_{\mathbb{Z}}(\mathbb{Z}, j_{X}^{-1}M) = \operatorname{Hom}_{
 把两边对到同一处 Hom：用 $j_{X!} \dashv j_{X}^{-1}$ 把左边的 Hom 换到 $\operatorname{Hom}(M \otimes j_{X}^{-1}N, j_{X}^{-1}-)$，再用 $f^{-1}$ 与张量积的相容性 ✓，由米田引理得同构 ✓。
 最后一式取 $N = \mathbb{Z}$，并用 $j_{X!}\mathbb{Z} = \mathbb{Z}\cdot X$ ✓。∎
 
+#### 定义引用：「阿贝尔群范畴」→ 拓扑斯态射在阿贝尔群上给出伴随　`dep.cat-ab-prop-topos-morphism-abelian-adjunction`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 切片上的正合左伴随　`dep.cat-ab-prop-abelian-slice-adjunction`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「谱序列」→ 推前的复合　`dep.spectral-derivedpush`
+
+结论断言存在谱序列，需谱序列定义
+
 #### 定义引用：「忠实 / 满 / 全忠实」→ 全忠实函子本质单射　`def-link.ffinj-ff`
 
 命题的假设就是全忠实。
@@ -47010,6 +47393,10 @@ ind-可表示用的就是 Ind-对象。
 
 层化之后取茎。
 
+#### 定义引用：「拓扑空间范畴」→ Hausdorff 空间是反射子范畴　`dep.cat-top-prop-hausdorff-reflective`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
 #### 定义引用：「模」→ 张量积对双线性映射万有　`def-link.tensoruniv-bilinear`
 
 张量积是模上的构造。
@@ -47045,6 +47432,38 @@ ind-可表示用的就是 Ind-对象。
 #### 定义引用：「Pontryagin 对偶」→ 有限维 Banach 空间的对偶是向量空间对偶　`def-link.pontbanach-dual`
 
 有限维情形下对偶退化成向量空间对偶。
+
+#### 定义引用：「集合范畴」→ Set、Top、Ab 的完备性　`dep.set-top-ab-sets`
+
+命题讨论的范畴之一是集合范畴 $\mathbf{Set}$。
+
+#### 定义引用：「拓扑空间范畴」→ Set、Top、Ab 的完备性　`dep.set-top-ab-top`
+
+命题讨论的范畴之一是拓扑空间范畴 $\mathbf{Top}$。
+
+#### 定义引用：「阿贝尔群范畴」→ Set、Top、Ab 的完备性　`dep.set-top-ab-ab`
+
+命题讨论的范畴之一是阿贝尔群范畴 $\mathbf{Ab}$。
+
+#### 笛卡尔积存在 ⟹ 笛卡尔积是集合范畴的积　`imp.cartesian-set-product`
+
+由 `thm.product`，$X\times Y$ 存在且带投影 $\pi_1,\pi_2$。给定 $f:Z\to X$、$g:Z\to Y$，令 $h(z)=(f(z),g(z))$，则 $\pi_1\circ h=f$、$\pi_2\circ h=g$。若 $h'$ 也满足，则对每个 $z$，$h'(z)$ 的两个分量分别为 $f(z),g(z)$，故 $h'=h$。这正是积的泛性质，故 $\mathbf{Set}$ 中的积就是笛卡尔积。$\blacksquare$
+
+#### 定义引用：「积 / 余积」→ 笛卡尔积是集合范畴的积　`dep.cartesian-set-product`
+
+本条把 def.product 的泛性质在 $\mathbf{Set}$ 中具体化为笛卡尔积。
+
+#### 定义引用：「集合范畴」→ 笛卡尔积是集合范畴的积　`dep.cartesian-set-cat`
+
+命题在集合范畴 $\mathbf{Set}$ 中陈述。
+
+#### 任意族笛卡尔积存在 ⟹ Set、Top、Ab 的完备性　`imp.set-top-ab-cartesian`
+
+在 $\mathbf{Set}$ 中，任意小族的积取任意族笛卡尔积（`thm.arbitrary-product`；有限族时由 `thm.product` 反复取二元积得到）；配合等化子即得所有小极限。这正是该命题中 $\mathbf{Set}$ 完备性论证的第一步。$\blacksquare$
+
+#### 定义引用：「Banach 空间」→ 有限维 Banach 空间的对偶是向量空间对偶　`dep.banach-pontryagin-fd`
+
+V 是有限维实 Banach 空间
 
 #### 定义引用：「紧 Hausdorff 空间范畴」→ 紧 Hausdorff 上商映射的四种说法　`def-link.chausquot-chaus`
 
@@ -47162,6 +47581,26 @@ ind-可表示用的就是 Ind-对象。
 
 命题说「上同调预层的取值就是上同调」。
 
+#### 定义引用：「集合范畴」→ 常层的伴随　`dep.cat-sets-prop-constant-sheaf-adjunction`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 对象给出拓扑斯态射　`dep.cat-sets-prop-topos-morphism-from-object`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 拓扑空间上的常层就是离散空间的层　`dep.cat-top-prop-constant-sheaf-top`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 晶体层　`dep.cat-top-def-crystalline-sheaf`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 晶体层就是 X 上的层　`dep.cat-top-prop-crystalline-sheaf-equiv`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
 #### 定义引用：「幺半群对象」→ 自由对象的例子　`def-link.freeobj-mon`
 
 自由对象要在这些代数范畴里造。
@@ -47273,6 +47712,58 @@ Currying 就是一对伴随。
 #### 定义引用：「谱序列」→ 谱序列的页画在 (p,q) 平面上　`def-link.sspage-ss`
 
 把谱序列的页画在平面上。
+
+#### 定义引用：「集合范畴」→ 自由对象的例子　`dep.cat-sets-prop-free-objects-examples`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 遗忘函子忠实但不满　`dep.cat-sets-prop-forgetful-faithful-not-full`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 遗忘函子可表示　`dep.cat-sets-prop-forgetful-representable`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 代数范畴里的极限与余极限　`dep.cat-sets-prop-algebra-categories-limits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 函数的柯里化　`dep.cat-sets-prop-currying`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 有余幂则可表示函子有伴随　`dep.cat-sets-prop-copowers-give-adjoint`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「集合范畴」→ 代数遗忘函子保极限　`dep.cat-sets-prop-forgetful-preserves-limits`
+
+陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 遗忘函子忠实但不满　`dep.cat-top-prop-forgetful-faithful-not-full`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「拓扑空间范畴」→ 遗忘函子的伴随　`dep.cat-top-prop-forgetful-adjoints-examples`
+
+陈述以拓扑空间范畴 $\mathbf{Top}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ Z-模就是阿贝尔群　`dep.cat-ab-prop-zmod-is-ab`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 遗忘函子忠实但不满　`dep.cat-ab-prop-forgetful-faithful-not-full`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 遗忘函子的伴随　`dep.cat-ab-prop-forgetful-adjoints-examples`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 余反射子范畴上的幺半群　`dep.cat-ab-prop-coreflective-monoids-full`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
 
 #### 定义引用：「数列极限」→ 函数极限　`dep.seqlimit-fnlimit`
 
@@ -47493,6 +47984,10 @@ $K$ 闭，故 $x \in K$。
 **($\implies$)** 设 $K$ 紧。紧集在度量空间里总是闭的（见「紧子集是闭的」）。若有界性不成立，则对每个 $k$ 可取 $x_k \in K \setminus B(0, k)$，这样的数列没有任何收敛子列（$|x_k| \to \infty$），与列紧矛盾。故 $K$ 有界。∎
 
 > 两条前提缺一不可：$\mathbb{R}^{n}$ 的**完备性**（Bolzano–Weierstrass）给出「有界 $\implies$ 有子列收敛」，度量空间的**一般事实**给出「紧 $\iff$ 列紧」与「紧 $\implies$ 闭」。
+
+#### 定义引用：「实数系 ℝ」→ 上极限与下极限　`dep.sym-real-def-limsup-liminf`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
 
 #### 定义引用：「连续（ε-δ 判据）」→ 一致连续　`dep.continuous-uniform`
 
@@ -48371,6 +48866,10 @@ $$\sum_{k=m+1}^{n}a_kb_k=A_nb_n-A_mb_m+\sum_{k=m+1}^{n-1}A_k(b_k-b_{k+1}),$$
 $$\Bigl|\sum_{k=m+1}^{n}a_kb_k\Bigr|\le M\Bigl(b_n+b_m+\sum_{k=m+1}^{n-1}(b_k-b_{k+1})\Bigr)\le3Mb_{m+1}\to0\qquad(m\to\infty).$$
 由 Cauchy 准则（`thm.cauchy-criterion-series`）得 $\sum a_nb_n$ 收敛。$\blacksquare$
 
+#### 定义引用：「复数 ℂ」→ 绝对收敛　`dep.sym-complex-def-absolute-convergence`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
 #### 定义引用：「数列极限」→ 逐点收敛　`dep.seqlimit-pointwise`
 
 逐点收敛就是「对每个固定的 $x$，数列 $f_n(x)$ 按原来的定义收敛」—— 把数列极限逐点地用一遍。
@@ -48593,6 +49092,18 @@ $$H\varphi^{n-1}(\varphi-t\varphi')=H\varphi^n-\frac tn\bigl(F'-H'\varphi^n\bigr
 $$[x^n]H(w)=\frac1n[t^{n-1}]\,H'(t)\,\varphi(t)^n .$$
 取 $H(t)=t$ 即得 $[x^n]w=\frac1n[t^{n-1}]\varphi^n$。$\blacksquare$
 ⚠ 以上是形式幂级数层面的推导，不涉及收敛半径；解析情形（反函数定理）是同一公式在收敛域内的解释。
+
+#### 定义引用：「复数 ℂ」→ 幂级数　`dep.sym-complex-def-power-series`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 指数函数　`dep.sym-complex-def-exp-function`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「绝对收敛」→ Weierstrass 判别法　`dep.absconv-weierstrass-m`
+
+结论断言级数绝对收敛
 
 #### 定义引用：「线性无关与基」→ 子空间　`dep.vs-subspace`
 
@@ -49507,6 +50018,10 @@ $$\|v - u'\|^{2} = \|v - P_U v\|^{2} + \|P_U v - u'\|^{2} \ge \|v - P_U v\|^{2}$
 
 对称双线性型 $B$ 与二次型 $q$ 由极化恒等式互相确定（$2B(u, v) = q(u + v) - q(u) - q(v)$），所以二次型是「对称双线性型的对角化写法」。
 
+#### 定义引用：「复数 ℂ」→ 内积　`dep.sym-complex-def-inner-product`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
 #### 定义引用：「多重线性型」→ 双线性型　`dep.multilinearform-bilinear`
 
 双线性型就是 $n = 2$ 的多重线性型（多了一层「两个空间可以不同、值域可以不是 $K$」的推广）。
@@ -50096,6 +50611,10 @@ $$m\bigl(f(C)\bigr)\le\sum_{\ell\ge\ell_{0}}\varepsilon\,2^{-\ell} = \varepsilon
 细节：Milnor《Topology from the Differentiable Viewpoint》§3；Sternberg《Lectures on Differential Geometry》§II.3；Guillemin–Pollack §2。∎（提纲）
 
 > ⚠ 「∎」在这里标记的是**提纲的完整交付**，不是定理的完整证明。这一条是本图上少数几条明确标注「不给完整证明」的定理之一 —— 理由是完整证明的篇幅与所用工具（Fubini + Whitney 分解）都超出了本团其余内容的层次。
+
+#### 定义引用：「复数 ℂ」→ 赋范空间　`dep.sym-complex-def-normed-space`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
 
 #### 定义引用：「群」→ 群作用　`dep.group-groupaction`
 
@@ -50848,6 +51367,10 @@ $$\sum_{n \ge 1} \frac{1}{n^{p}} \ \text{收敛} \iff \sum_{k \ge 0} 2^{k} \cdot
 
 右边是公比 $q = 2^{1-p}$ 的几何级数。由 `thm.geometric-series`，它收敛 $\iff$ $q < 1$ $\iff$ $2^{1-p} < 1$ $\iff$ $p > 1$。$\blacksquare$
 
+#### 定义引用：「实数系 ℝ」→ 几何级数　`dep.sym-real-thm-geometric-series`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
 #### 群 + 群的整数幂 ⟹ 群的基本性质　`imp.group-basic`
 *群公理 $\implies$ 消去律与逆公式*
 
@@ -51251,6 +51774,22 @@ $$Z[S]^{\blacksquare} \otimes^{L\blacksquare} Z[T]^{\blacksquare} \cong Z[S \tim
 
 固态群是凝聚阿贝尔群的子范畴
 
+#### 定义引用：「阿贝尔群范畴」→ 固态阿贝尔群　`dep.cat-ab-def-solid-group`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 自由固态群是固态的　`dep.cat-ab-prop-free-solid-solid`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 固态群构成阿贝尔子范畴　`dep.cat-ab-thm-solid-abelian`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 固态复形与导出范畴　`dep.cat-ab-thm-solid-derived`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
 #### 解析环 + 完备化判据 ⟹ 解析环上的模　`imp.analytic-modules`
 *解析环的定义 $\implies$ 模范畴是阿贝尔的*
 
@@ -51394,6 +51933,10 @@ Zariski 主定理的陈述以解析环（Noetherian 完备环）为对象。
 #### 定义引用：「预解析环」→ 有限生成代数的解析环　`dep.za-preanalytic`
 
 Zariski 主定理以预解析环为对象。
+
+#### 定义引用：「Banach 空间」→ R_{ℓ¹} 不是解析环　`dep.banach-rl1`
+
+构造中把 C(S,R) 的拓扑对偶识别为 Banach 空间，使用 Banach 空间概念
 
 #### adic 谱 Spa + 离散 Huber pair ⟹ A⁺ 由谱决定　`imp.huber-subring-recovery`
 *赋值的定义 $\implies$ $A^+$ 由谱决定*
@@ -52050,6 +52593,18 @@ $$\varphi : R^{(I)} \to M, \qquad \varphi\bigl((r_{i})_{i}\bigr) := \sum_{i} r_{
 
 自由模平坦的论证用到平坦模的泛性质刻画。
 
+#### 定义引用：「阿贝尔群范畴」→ 张量积的函子性质　`dep.cat-ab-prop-tensor-functor-properties`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 张量与内同态的伴随　`dep.cat-ab-thm-hom-tensor-adjunction-mod`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 张量函子右正合　`dep.cat-ab-prop-tensor-right-exact`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
 #### 定义引用：「平坦模」→ 平坦维数　`dep.fd-flat`
 
 平坦维数用平坦模的消解定义。
@@ -52307,6 +52862,14 @@ $$\operatorname{Ext}^{1}_{R}(M, N) \cong \operatorname{coker}\bigl(\operatorname
 
 而 $E$ 正合（Freyd–Mitchell 定理的另一半）把 $\mathcal{C}$ 里的单态射送到单态射，故左边也如此 ✓。
 **正合部分**就是 Freyd–Mitchell 定理本身的陈述（$E$ 正合），这条只把「反射」补上 ✓。∎
+
+#### 定义引用：「阿贝尔群范畴」→ 平坦模　`dep.cat-ab-def-flat-module`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「平坦维数」→ 内射维数　`dep.flatdim-injectivedim`
+
+内射维数的对偶刻画用到平坦维数 fd
 
 #### 定义引用：「层」→ 松弛层　`dep.flabby-sheaf`
 
@@ -52838,6 +53401,22 @@ $t \mapsto t^{n} : \mathbb{G}_{m} \to \mathbb{G}_{m}$：有限平坦；
 #### 定义引用：「étale 层」→ étale 层的例子　`def-link.etalesheaf-examples`
 
 三个例子要验的都是同一个层条件：在联合满射的 étale 族上，截面由各成员上的截面 + 双重纤维积上的一致性唯一决定。
+
+#### 定义引用：「阿贝尔群范畴」→ 天际线层是内射层　`dep.cat-ab-prop-skyscraper-injective`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ 足够多内射层　`dep.cat-ab-thm-pushforward-enough-injectives`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「阿贝尔群范畴」→ étale 层　`dep.cat-ab-def-etale-sheaf`
+
+陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
+
+#### 定义引用：「上链复形」→ 低次正合列　`dep.cochain-lowdegree`
+
+命题讨论标准上链复形的低次项
 
 #### 定义引用：「局部有限族」→ 仿紧空间　`dep.pcp-lf-paracompact`
 
@@ -54282,6 +54861,14 @@ $$\int_{Q}\partial_{i}f_{i}\,\mathrm{d}x^{1}\cdots\mathrm{d}x^{n} = 0 .$$
 
 拉回形式沿光滑映射定义。
 
+#### 定义引用：「实数系 ℝ」→ 光滑流形　`dep.sym-real-def-smooth-manifold`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
+#### 定义引用：「向量场」→ Riemann 度量　`dep.vfield-riemannian`
+
+光滑性条件要求对任意光滑向量场 X,Y 验证，故以向量场定义为前提
+
 #### 复数 ℂ ⟹ 模长的三角不等式　`imp.complex-triangle`
 *复数的模与辐角 $\implies$ 模长三角不等式*
 
@@ -54743,6 +55330,18 @@ $\blacksquare$
 #### 定义引用：「全纯函数」→ Goursat 三角形引理　`def-link.goursat-holomorphic`
 
 引理的前提就是「$f$ 在包含 $T$ 的开集上全纯」—— 证明里用到它的地方只有一处：差商 $\dfrac{f(z) - f(z^*)}{z - z^*}$ 在 $z \to z^*$ 时有极限（这正是复可微的定义）。
+
+#### 定义引用：「复数 ℂ」→ 复围道积分　`dep.sym-complex-def-contour-integral`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 孤立奇点及其分类　`dep.sym-complex-def-isolated-singularity`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「偏导数」→ 复偏导数　`dep.partial-complexpartial`
+
+定义用偏导数组合出 $\partial/\partial z$ 与 $\partial/\partial \bar z$
 
 #### 定义引用：「拓扑空间与开集」→ 图卡　`dep.mf-topology-chart`
 
@@ -55283,6 +55882,10 @@ $$\langle s,t\rangle_{p} := \sum_{\alpha}\rho_{\alpha}(p)\,\bigl\langle s(p), t(
 **为什么这条对极性敏感。** 上面只用到两件事：**内积的全体是凸集**（非负权重的加权平均仍是内积），以及**局部总存在**。复结构要求 $J^{2} = -\operatorname{id}$（不是凸条件）、辛结构要求 $\omega$ 闭（闭性对凸组合仍保持，但非退化不保持），所以它们不能靠这一招造出来。∎
 
 ⭐ 这条与 `def.riemannian-metric` 的 notes 里那句「每个光滑流形都能配黎曼度量」是同一个证明，只是把 $E$ 从 $TM$ 换成任意丛。
+
+#### 定义引用：「实数系 ℝ」→ 图卡　`dep.sym-real-def-manifold-chart`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
 
 #### 定义引用：「光滑流形」→ 带边流形　`dep.spivak-manifold-boundary`
 
@@ -58962,6 +59565,14 @@ $f$ 有界、局部可积是假设；Laplace 变换与尾项估计都以此为�
 
 Möbius 函数是积性函数，积性定义是其直接上位概念。
 
+#### 定义引用：「复数 ℂ」→ 积性函数　`dep.sym-complex-def-multiplicative-function`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ Möbius 反演　`dep.sym-complex-thm-mobius-inversion`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
 #### 定义引用：「同余」→ 二次剩余　`e149.definition`
 
 二次剩余的陈述就是同余方程 $x^{2} \equiv a$ 有没有解。
@@ -59770,6 +60381,14 @@ Rayleigh 商只对 Hermite（实对称）矩阵有实值、有极值意义。
 **③ $A$ 可逆时**。令 $U := AP^{-1}$。则 $U^{*}U = P^{-1}A^{*}AP^{-1} = P^{-1}P^{2}P^{-1} = I$，故 $U$ 酉，且 $A = UP$；$P$ 正定（$A$ 可逆时 $A^{*}A$ 正定，$\mu_{i} > 0$）。
 
 **④ $A$ 奇异时**。由 $\|Px\|^{2} = \langle A^{*}Ax, x\rangle = \|Ax\|^{2}$ 得 $\ker P = \ker A$。在 $\operatorname{im}P$ 上定义 $U(Px) := Ax$：若 $Px = 0$ 则 $Ax = 0$，故良定义；且 $\|U(Px)\| = \|Ax\| = \|Px\|$，故 $U$ 是 $\operatorname{im}P \to \operatorname{im}A$ 的等距。把 $U$ 延拓为酉映射：取 $\operatorname{im}P$ 的标准正交基并延拓到全空间，令 $U$ 把 $(\operatorname{im}P)^{\perp} = \ker P$ 等距地送到 $(\operatorname{im}A)^{\perp}$（两边维数都等于 $n - \operatorname{rank}A$）。于是 $U$ 酉且 $A = UP$；$P$ 仍唯一，$U$ 在 $\ker A$ 上不唯一。∎
+
+#### 定义引用：「复数 ℂ」→ 共轭转置　`dep.sym-complex-def-conjugate-transpose`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「复数 ℂ」→ 谱半径　`dep.sym-complex-def-spectral-radius`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
 
 #### 定义引用：「双线性型」→ 双线性型的矩阵　`dep.bf-matrix-bf`
 
@@ -61275,6 +61894,14 @@ Schauder 基是赋范空间中的序列。
 
 Hahn–Banach 定理在赋范空间（次线性泛函控制）中陈述。
 
+#### 定义引用：「复数 ℂ」→ 范数　`dep.sym-complex-def-norm`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「实数系 ℝ」→ 范数　`dep.sym-real-def-norm`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
 #### Baire 纲定理 ⟹ Baire 的三条等价刻画　`imp.fa-baire-characterizations`
 *Baire 的三种说法等价*
 
@@ -61928,6 +62555,14 @@ $$\mathbb P\Bigl(\Bigl|\frac{S_n}{n}-x\Bigr|\ge\delta\Bigr)\le\frac{1}{4n\delta^
 
 > 唯一的外部输入是紧集上连续 $\implies$ 一致连续；二项矩与 Markov 不等式都在边里现算。
 
+#### 定义引用：「复数 ℂ」→ Stone–Weierstrass（复情形）　`dep.sym-complex-thm-stone-weierstrass-complex`
+
+陈述以复数 $\mathbb{C}$ 为对象（符号依赖）
+
+#### 定义引用：「Banach 空间」→ C(K,E) 完备　`dep.banach-ckcomplete`
+
+结论中 C(K,E) 的完备性以 Banach 空间（完备赋范空间）定义为前提
+
 #### 定义引用：「范数」→ L^p 是 Banach 空间　`dep.lpbanach-norm`
 
 「$L^{p}$ 是 Banach 空间」这句话里的「空间」是**赋范空间**：先有 $\|\cdot\|_{p}$ 这个范数，完备性才是相对它说的。此前 `def.lp-norm` 的出边全在测度/分析内部，一条也没通向泛函分析。
@@ -62168,6 +62803,10 @@ Hausdorff 是定义的一部分（排除「带两个原点的直线」那类局�
 
 曲面分类按可定向性与亏格分型。
 
+#### 定义引用：「实数系 ℝ」→ 拓扑流形　`dep.sym-real-def-topological-manifold`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
+
 #### Euler 示性数 ⟹ Euler 示性数与亏格　`dep.eulerchar-eulerchargenus`
 *$\chi$ 的两种算法给出 $\chi=2-2g$*
 
@@ -62254,6 +62893,10 @@ $S^{1} \times S^{1}$ 是紧空间的乘积，故紧；连通、无边界同理�
 #### 定义引用：「不可定向亏格」→ 克莱因瓶　`dep.klein-genus`
 
 Klein 瓶的不可定向亏格为 2。
+
+#### 定义引用：「实数系 ℝ」→ 拓扑可定向性　`dep.sym-real-def-topological-orientability`
+
+陈述以实数 $\mathbb{R}$ 为对象（符号依赖）
 
 #### 定义引用：「域」→ 域扩张　`dep.field-fieldext`
 
@@ -67490,6 +68133,9 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 
 ## 星团级连接（整块对整块）
 
+- **集合的构造 ↔ 关系与函数**　4 条节点级连线
+- **可测函数与收敛 ↔ 集合的构造**　2 条节点级连线
+- **乘积测度与 Fubini ↔ 集合的构造**　4 条节点级连线
 - **集合的构造 ↔ ZFC 公理系统**　11 条节点级连线
 - **选择原理 ↔ 基数与等势**　3 条节点级连线
 - **拓扑空间的基本语汇 ↔ 度量空间**　16 条节点级连线
@@ -67498,12 +68144,12 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **测度的构造 ↔ 集合族与 σ-代数**　5 条节点级连线
 - **可测函数与收敛 ↔ 测度的构造**　10 条节点级连线
 - **可测函数与收敛 ↔ 乘积测度与 Fubini**　2 条节点级连线
-- **可测函数与收敛 ↔ 集合族与 σ-代数**　2 条节点级连线
+- **可测函数与收敛 ↔ 集合族与 σ-代数**　3 条节点级连线
+- **可测函数与收敛 ↔ 数系的构造**　6 条节点级连线
 - **积分 ↔ 可测函数与收敛**　8 条节点级连线
 - **积分 ↔ 测度的构造**　11 条节点级连线
 - **测度的构造 ↔ 乘积测度与 Fubini**　6 条节点级连线
 - **积分 ↔ 乘积测度与 Fubini**　2 条节点级连线
-- **乘积测度与 Fubini ↔ 集合的构造**　3 条节点级连线
 - **乘积测度与 Fubini ↔ 关系与函数**　2 条节点级连线
 - **积分 ↔ 符号测度与分解**　5 条节点级连线
 - **测度的构造 ↔ 符号测度与分解**　8 条节点级连线
@@ -67512,15 +68158,15 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **有界变差与绝对连续 ↔ 符号测度与分解**　5 条节点级连线
 - **有界变差与绝对连续 ↔ 测度的构造**　2 条节点级连线
 - **有界变差与绝对连续 ↔ 积分**　4 条节点级连线
+- **有界变差与绝对连续 ↔ 数系的构造**　2 条节点级连线
 - **积分 ↔ L^p 空间**　4 条节点级连线
-- **实数与极限 ↔ 数系的构造**　4 条节点级连线
+- **L^p 空间 ↔ 数系的构造**　3 条节点级连线
+- **实数与极限 ↔ 数系的构造**　6 条节点级连线
 - **实数与极限 ↔ 序结构**　2 条节点级连线
 - **实数与极限 ↔ 拓扑空间的基本语汇**　3 条节点级连线
-- **集合的构造 ↔ 关系与函数**　3 条节点级连线
 - **基数与等势 ↔ 关系与函数**　4 条节点级连线
 - **基数与等势 ↔ 数系的构造**　4 条节点级连线
 - **有界变差与绝对连续 ↔ 实数与极限**　3 条节点级连线
-- **L^p 空间 ↔ 数系的构造**　2 条节点级连线
 - **基数与等势 ↔ 集合的构造**　2 条节点级连线
 - **集合族与 σ-代数 ↔ 集合的构造**　4 条节点级连线
 - **测度的构造 ↔ 集合的构造**　2 条节点级连线
@@ -67541,29 +68187,39 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **序结构 ↔ ZFC 公理系统**　2 条节点级连线
 - **序数与超限 ↔ ZFC 公理系统**　3 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
-- **代数结构 ↔ 范畴与图**　6 条节点级连线
+- **代数结构 ↔ 范畴与图**　10 条节点级连线
 - **图与极限 ↔ 单满、子对象与像**　7 条节点级连线
 - **单满、子对象与像 ↔ 关系与函数**　2 条节点级连线
+- **范畴与图 ↔ 单满、子对象与像**　7 条节点级连线
+- **范畴与图 ↔ 预层与米田**　11 条节点级连线
 - **伴随与反射 ↔ 预层与米田**　5 条节点级连线
 - **伴随与反射 ↔ 图与极限**　13 条节点级连线
 - **伴随与反射 ↔ 函子与自然变换**　8 条节点级连线
+- **伴随与反射 ↔ 范畴与图**　8 条节点级连线
 - **紧 Hausdorff 空间 ↔ 拓扑空间的基本语汇**　6 条节点级连线
 - **Stone 与 Stonean ↔ 拓扑空间的基本语汇**　10 条节点级连线
 - **紧 Hausdorff 空间 ↔ Stone 与 Stonean**　5 条节点级连线
+- **范畴与图 ↔ 紧 Hausdorff 空间**　5 条节点级连线
 - **伴随与反射 ↔ 层与拓扑**　2 条节点级连线
 - **层与拓扑 ↔ 单满、子对象与像**　2 条节点级连线
+- **范畴与图 ↔ 层与拓扑**　10 条节点级连线
 - **单满、子对象与像 ↔ 拓扑斯**　3 条节点级连线
 - **层与拓扑 ↔ 拓扑斯**　24 条节点级连线
+- **范畴与图 ↔ 拓扑斯**　5 条节点级连线
 - **凝聚态集 ↔ 紧 Hausdorff 空间**　13 条节点级连线
 - **拓扑斯 ↔ 凝聚态集**　11 条节点级连线
 - **层与拓扑 ↔ 凝聚态集**　6 条节点级连线
 - **凝聚态集 ↔ 紧生成空间与弱 Hausdorff**　10 条节点级连线
+- **范畴与图 ↔ 凝聚态集**　2 条节点级连线
 - **图与极限 ↔ 复形与导出三角**　5 条节点级连线
 - **加法与阿贝尔范畴 ↔ 复形与导出三角**　17 条节点级连线
+- **范畴与图 ↔ 加法与阿贝尔范畴**　5 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　15 条节点级连线
 - **同调与正合列 ↔ 复形与导出三角**　22 条节点级连线
-- **加法与阿贝尔范畴 ↔ 同调与正合列**　2 条节点级连线
+- **加法与阿贝尔范畴 ↔ 同调与正合列**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 过滤与谱序列**　3 条节点级连线
+- **范畴与图 ↔ 阿贝尔层**　8 条节点级连线
+- **范畴与图 ↔ 紧生成空间与弱 Hausdorff**　5 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **代数结构 ↔ 群上同调**　6 条节点级连线
 - **群作用与置换 ↔ 代数结构**　17 条节点级连线
@@ -67571,8 +68227,11 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **多项式与因式分解 ↔ 代数结构**　6 条节点级连线
 - **代数结构 ↔ 内射模与可除群**　5 条节点级连线
 - **线性映射与秩 ↔ 代数结构**　3 条节点级连线
+- **范畴里的代数结构 ↔ 范畴与图**　5 条节点级连线
 - **收敛与紧性 ↔ 拓扑空间的基本语汇**　16 条节点级连线
 - **复形与导出三角 ↔ 层上同调**　6 条节点级连线
+- **多元微分 ↔ 凝聚态导出函子**　2 条节点级连线
+- **多元微分 ↔ 导出 Hom 的具体计算**　3 条节点级连线
 - **伴随与反射 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 加法与阿贝尔范畴**　4 条节点级连线
 - **层与拓扑 ↔ 层上同调**　13 条节点级连线
@@ -67587,6 +68246,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **复形与导出三角 ↔ 紧 Hausdorff 空间**　3 条节点级连线
 - **仿紧与单位分解 ↔ 分离公理**　6 条节点级连线
 - **层与拓扑 ↔ 预层与米田**　8 条节点级连线
+- **范畴与图 ↔ 复形与导出三角**　5 条节点级连线
 - **函子与自然变换 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **函子与自然变换 ↔ 复形与导出三角**　3 条节点级连线
 - **伴随与反射 ↔ 拓扑斯**　3 条节点级连线
@@ -67597,16 +68257,15 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **凝聚态阿贝尔群 ↔ 阿贝尔层**　3 条节点级连线
 - **拓扑斯 ↔ 阿贝尔层**　9 条节点级连线
 - **复形与导出三角 ↔ 过滤与谱序列**　6 条节点级连线
-- **层上同调 ↔ 过滤与谱序列**　5 条节点级连线
+- **层上同调 ↔ 过滤与谱序列**　6 条节点级连线
 - **拓扑斯 ↔ 层上同调**　4 条节点级连线
-- **范畴与图 ↔ 函子与自然变换**　5 条节点级连线
+- **范畴与图 ↔ 函子与自然变换**　8 条节点级连线
 - **单满、子对象与像 ↔ 预层与米田**　4 条节点级连线
-- **范畴与图 ↔ 紧 Hausdorff 空间**　2 条节点级连线
-- **范畴与图 ↔ 图与极限**　6 条节点级连线
+- **范畴与图 ↔ 图与极限**　10 条节点级连线
 - **图与极限 ↔ 预层与米田**　6 条节点级连线
 - **函子与自然变换 ↔ 预层与米田**　11 条节点级连线
 - **图与极限 ↔ 紧 Hausdorff 空间**　2 条节点级连线
-- **范畴与图 ↔ 预层与米田**　3 条节点级连线
+- **图与极限 ↔ 集合的构造**　4 条节点级连线
 - **范畴里的代数结构 ↔ 图与极限**　4 条节点级连线
 - **实数完备性的等价刻画 ↔ 实数与极限**　5 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线
@@ -67619,9 +68278,11 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **实数与极限 ↔ 数项级数的敛散性**　7 条节点级连线
 - **实数完备性的等价刻画 ↔ 数项级数的敛散性**　2 条节点级连线
 - **Riemann 积分 ↔ 数项级数的敛散性**　2 条节点级连线
-- **数项级数的敛散性 ↔ 函数列、幂级数与初等函数**　6 条节点级连线
+- **数项级数的敛散性 ↔ 函数列、幂级数与初等函数**　7 条节点级连线
+- **数项级数的敛散性 ↔ 数系的构造**　2 条节点级连线
 - **实数与极限 ↔ 函数列、幂级数与初等函数**　4 条节点级连线
 - **微分中值定理与 Taylor ↔ 函数列、幂级数与初等函数**　2 条节点级连线
+- **函数列、幂级数与初等函数 ↔ 数系的构造**　2 条节点级连线
 - **线性映射与秩 ↔ 向量空间与基**　9 条节点级连线
 - **矩阵与行列式 ↔ 向量空间与基**　3 条节点级连线
 - **线性映射与秩 ↔ 矩阵与行列式**　10 条节点级连线
@@ -67634,6 +68295,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **Galois 理论 ↔ 特征值与 Jordan 型**　2 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
 - **内积空间与正交性 ↔ 多重线性与张量**　16 条节点级连线
+- **内积空间与正交性 ↔ 数系的构造**　3 条节点级连线
 - **多元微分 ↔ 度量空间**　5 条节点级连线
 - **线性映射与秩 ↔ 多元微分**　3 条节点级连线
 - **内积空间与正交性 ↔ 多元微分**　3 条节点级连线
@@ -67645,6 +68307,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **L^p 空间 ↔ 实数的运算与不等式**　3 条节点级连线
 - **固态阿贝尔群 ↔ Stone 与 Stonean**　2 条节点级连线
 - **凝聚态阿贝尔群 ↔ 固态阿贝尔群**　4 条节点级连线
+- **范畴与图 ↔ 固态阿贝尔群**　4 条节点级连线
 - **解析环与固态模 ↔ 固态阿贝尔群**　5 条节点级连线
 - **adic 空间 ↔ 解析环与固态模**　3 条节点级连线
 - **adic 空间 ↔ 相干对偶**　2 条节点级连线
@@ -67655,6 +68318,8 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **加法与阿贝尔范畴 ↔ 平坦模**　3 条节点级连线
 - **加法与阿贝尔范畴 ↔ 内射模与可除群**　3 条节点级连线
 - **平坦模 ↔ 模的张量积与标量限制**　2 条节点级连线
+- **范畴与图 ↔ 模的张量积与标量限制**　2 条节点级连线
+- **范畴与图 ↔ 平坦模**　2 条节点级连线
 - **平坦模 ↔ 消解与维数**　3 条节点级连线
 - **同调与正合列 ↔ 消解与维数**　6 条节点级连线
 - **消解与维数 ↔ 紧 Hausdorff 空间**　4 条节点级连线
@@ -67663,6 +68328,8 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 消解与维数**　2 条节点级连线
 - **代数结构 ↔ 平坦模**　2 条节点级连线
 - **层上同调 ↔ 仿紧与单位分解**　5 条节点级连线
+- **范畴与图 ↔ 层上同调**　3 条节点级连线
+- **复形与导出三角 ↔ 群上同调**　2 条节点级连线
 - **拓扑空间的基本语汇 ↔ 仿紧与单位分解**　4 条节点级连线
 - **度量空间 ↔ 可度量化**　3 条节点级连线
 - **收敛与紧性 ↔ 可度量化**　3 条节点级连线
@@ -67679,7 +68346,8 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **特征值与 Jordan 型 ↔ 内蕴几何**　2 条节点级连线
 - **内蕴几何 ↔ 流形与向量丛**　13 条节点级连线
 - **活动标架与结构方程 ↔ 流形与向量丛**　2 条节点级连线
-- **复变函数基础 ↔ 数系的构造**　6 条节点级连线
+- **内蕴几何 ↔ 向量场与 Lie 结构**　4 条节点级连线
+- **复变函数基础 ↔ 数系的构造**　8 条节点级连线
 - **Cauchy 理论 ↔ 复变函数基础**　13 条节点级连线
 - **Cauchy 理论 ↔ 共形映射与正规族**　6 条节点级连线
 - **Cauchy 理论 ↔ 留数与辐角原理**　9 条节点级连线
@@ -67689,7 +68357,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **流形与向量丛 ↔ 拓扑空间的基本语汇**　7 条节点级连线
 - **流形与向量丛 ↔ 分离公理**　2 条节点级连线
 - **多元微分 ↔ 向量场与 Lie 结构**　3 条节点级连线
-- **内蕴几何 ↔ 向量场与 Lie 结构**　3 条节点级连线
 - **流形与向量丛 ↔ 向量场与 Lie 结构**　10 条节点级连线
 - **多重线性与张量 ↔ 向量场与 Lie 结构**　3 条节点级连线
 - **特征值与 Jordan 型 ↔ 向量场与 Lie 结构**　3 条节点级连线
@@ -67702,6 +68369,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **Lie 群 ↔ 向量场与 Lie 结构**　4 条节点级连线
 - **多元微分 ↔ 流形与向量丛**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 流形与向量丛**　8 条节点级连线
+- **流形与向量丛 ↔ 数系的构造**　2 条节点级连线
 - **矩阵与行列式 ↔ 微分形式、积分与 de Rham**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 曲面论**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ 仿紧与单位分解**　2 条节点级连线
@@ -67743,6 +68411,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **复变函数基础 ↔ 数论函数与素数分布**　4 条节点级连线
 - **解析延拓与整函数 ↔ 数论函数与素数分布**　3 条节点级连线
 - **整除与同余 ↔ 数论函数与素数分布**　7 条节点级连线
+- **数论函数与素数分布 ↔ 数系的构造**　2 条节点级连线
 - **整除与同余 ↔ 二次剩余与原根**　26 条节点级连线
 - **群作用与置换 ↔ 二次剩余与原根**　3 条节点级连线
 - **选择原理 ↔ 紧 Hausdorff 空间**　2 条节点级连线
@@ -67776,6 +68445,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **内积空间与正交性 ↔ 赋范空间与有界算子**　3 条节点级连线
 - **赋范空间与有界算子 ↔ 拓扑空间的基本语汇**　3 条节点级连线
 - **赋范空间与有界算子 ↔ 度量空间**　4 条节点级连线
+- **赋范空间与有界算子 ↔ 数系的构造**　2 条节点级连线
 - **多元微分 ↔ Baire 纲与三大定理**　6 条节点级连线
 - **Baire 纲与三大定理 ↔ 分离公理**　3 条节点级连线
 - **C(K) 与 Stone–Weierstrass ↔ 度量空间**　4 条节点级连线
@@ -67825,13 +68495,10 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **范畴与图 ↔ 集合的构造**　5 条节点级连线
 - **范畴与图 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 关系与函数**　2 条节点级连线
-- **图与极限 ↔ 集合的构造**　2 条节点级连线
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
 - **图与极限 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 紧 Hausdorff 空间**　2 条节点级连线
-- **范畴与图 ↔ 复形与导出三角**　4 条节点级连线
 - **预层与米田 ↔ 阿贝尔层**　2 条节点级连线
-- **范畴与图 ↔ 单满、子对象与像**　3 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧生成空间与弱 Hausdorff**　4 条节点级连线
 - **代数结构 ↔ 加法与阿贝尔范畴**　2 条节点级连线
 - **图与极限 ↔ 序结构**　2 条节点级连线

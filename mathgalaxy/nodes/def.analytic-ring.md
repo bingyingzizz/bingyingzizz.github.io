@@ -1,6 +1,6 @@
 # 解析环　`def.analytic-ring`
 解析环
-layer 20 · 定义 · 解析环与固态模 · 凝聚态数学
+layer 22 · 定义 · 解析环与固态模 · 凝聚态数学
 [在星图里打开](../#n=def.analytic-ring)　·　[节点索引](../index.md)
 
 预解析环 $\mathcal{A}$ 叫**解析环**，当且仅当：对任意复形

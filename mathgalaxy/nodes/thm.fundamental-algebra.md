@@ -1,6 +1,6 @@
 # 代数基本定理　`thm.fundamental-algebra`
 定理（代数基本定理）：$\mathbb{C}$ 代数闭
-layer 28 · 定理 · 多项式与因式分解 · 抽象代数+数学分析
+layer 32 · 定理 · 多项式与因式分解 · 抽象代数+数学分析
 [在星图里打开](../#n=thm.fundamental-algebra)　·　[节点索引](../index.md)
 
 每个次数 $\ge 1$ 的复系数多项式 $p \in \mathbb{C}[z]$ 都有复根。等价地：

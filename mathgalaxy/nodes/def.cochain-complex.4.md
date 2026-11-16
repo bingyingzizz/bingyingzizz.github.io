@@ -8,7 +8,7 @@
 - 被 [`prop.complexes-abelian`](../nodes/prop.complexes-abelian.md) 复形范畴是阿贝尔范畴 用
 - 被 [`prop.additive-complex-construction`](../nodes/prop.additive-complex-construction.md) 加法函子与复形构造交换 用
 - 被 [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理 用
+- 被 [`prop.low-degree-exact`](../nodes/prop.low-degree-exact.md) 低次正合列 用
 - 被 [`def.cycle`](../nodes/def.cycle.md) 闭链 用
-- 被 [`def.boundary`](../nodes/def.boundary.md) 边缘 用
 
 > 续见 [nodes/def.cochain-complex.5.md](./def.cochain-complex.5.md)

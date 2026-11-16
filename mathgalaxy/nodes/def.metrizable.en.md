@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Metrizability (`topology.metrizable`) · Topology
+layer 17 · definition · cluster Metrizability (`topology.metrizable`) · Topology
 
 ## Statement · **draft**
 A topological space $(X, \mathcal{T})$ is called **metrizable** if there is a distance $d$ on $X$ such that the topology induced by $d$ is exactly $\mathcal{T}$:

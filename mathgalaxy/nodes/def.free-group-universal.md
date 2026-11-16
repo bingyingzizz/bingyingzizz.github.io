@@ -1,6 +1,6 @@
 # 自由群的泛性质　`def.free-group-universal`
 自由群的泛性质（左伴随）
-layer 10 · 定义 · 代数结构 · 抽象代数
+layer 12 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.free-group-universal)　·　[节点索引](../index.md)
 
 设 $S$ 是集合，$F(S)$ 是自由群，$\iota:S\to F(S)$ 是包含。对任意群 $G$ 与任意映射 $f:S\to G$，存在唯一的群同态 $\tilde f:F(S)\to G$ 使 $\tilde f\circ\iota=f$。等价地，$\operatorname{Hom}

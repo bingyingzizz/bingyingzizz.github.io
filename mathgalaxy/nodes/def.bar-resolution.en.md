@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 12 · definition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
 ## Statement · **draft**
 Let $R$ be a commutative ring with $1$, $G$ a group, and $R$ carry the trivial $G$-action. The **standard resolution** (bar resolution) is a free $R[G]$-module resolution of $R$

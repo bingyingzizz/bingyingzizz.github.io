@@ -1,6 +1,6 @@
 # Darboux 判据　`thm.darboux-criterion`
 定理（Darboux 判据）：可积 $\iff \inf_P U = \sup_P L$
-layer 18 · 定理 · Riemann 积分 · 数学分析
+layer 20 · 定理 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=thm.darboux-criterion)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上有界。则 $f$ Riemann 可积，当且仅当

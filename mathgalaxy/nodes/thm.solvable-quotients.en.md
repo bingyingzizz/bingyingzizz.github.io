@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
+layer 17 · theorem · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a group.

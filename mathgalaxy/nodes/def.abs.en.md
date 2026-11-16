@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
+layer 12 · definition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
 
 ## Statement · **draft**
 Let $K$ be an **ordered field** (both $\mathbb{Q}$ and $\mathbb{R}$ are), and let $x \in K$. Define

@@ -1,6 +1,6 @@
 # 常见伴随的单位与余单位　`prop.unit-counit-examples`
 命题：从单位/余单位读出忠实性
-layer 11 · 命题 · 伴随与反射 · 范畴论
+layer 13 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.unit-counit-examples)　·　[节点索引](../index.md)
 
 几对常见伴随的单位：**自由 $\dashv$ 遗忘** 的单位是「把 $x$ 送进生成元」；**层化 $\dashv$ 含入** 的单位是 $T \to T^{\#}$；**$k$-化 $\dashv$ 含入** 的单位是恒等（$X \to kX$ 当 $X$ 已紧生成时）。

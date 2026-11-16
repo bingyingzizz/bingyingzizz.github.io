@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
+layer 23 · proposition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f_n : X \to \mathbb{R}$ satisfy $|f_n(x)| \le M_n$ for all $x \in X$, and suppose the **positive-term series** $\sum M_n$ converges. Then the series of functions

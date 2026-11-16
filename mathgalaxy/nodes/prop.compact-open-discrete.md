@@ -1,6 +1,6 @@
 # 离散时函数空间是积　`prop.compact-open-discrete`
 离散 $X$ 时 $C(X,Y) \cong Y^{X}$
-layer 18 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 20 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.compact-open-discrete)　·　[节点索引](../index.md)
 
 若 $X$ 是**离散**空间，则 $C(X, Y) \cong Y^{X}$（右边取**积拓扑**）。

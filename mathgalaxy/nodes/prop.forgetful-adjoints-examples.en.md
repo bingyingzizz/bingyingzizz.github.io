@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Forgetful Adjoints` (short) · `Forgetful Functors and Their Adjoints` (full)
 
 ## Statement and proof

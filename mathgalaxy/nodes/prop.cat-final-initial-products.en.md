@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 15 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.cat-final-initial-products.md` and `proofs/`.

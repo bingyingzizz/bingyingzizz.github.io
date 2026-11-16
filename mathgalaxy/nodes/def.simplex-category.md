@@ -1,6 +1,6 @@
 # 单纯形范畴　`def.simplex-category`
 单纯形范畴 $\Delta$
-layer 8 · 定义 · 图与极限 · 范畴论
+layer 10 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.simplex-category)　·　[节点索引](../index.md)
 
 **单纯形范畴** $\Delta$ 的对象是正整数

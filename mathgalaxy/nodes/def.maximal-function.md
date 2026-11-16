@@ -1,6 +1,6 @@
 # 极大函数　`def.maximal-function`
 Hardy–Littlewood 极大函数 Hf
-layer 24 · 定义 · 微分定理 · 实变函数+数学分析
+layer 29 · 定义 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=def.maximal-function)　·　[节点索引](../index.md)
 
 设 $f \in L^1_{loc}$。定义

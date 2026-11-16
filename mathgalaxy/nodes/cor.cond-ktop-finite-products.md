@@ -1,6 +1,6 @@
 # 底空间保有限积　`cor.cond-ktop-finite-products`
 推论：$(X \times Y)(\cdot) \;\cong\; k\bigl(X(\cdot) \times Y(\cdot)\bigr)$
-layer 20 · 推论 · 凝聚态集 · 凝聚态数学
+layer 22 · 推论 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=cor.cond-ktop-finite-products)　·　[节点索引](../index.md)
 
 函子 $\mathrm{Cond} \to k\mathbf{Top}$，$X \mapsto X(\cdot)$，**保有限积**：对任意 $X, Y \in \mathrm{Cond}$，
@@ -13,7 +13,7 @@ $$(X \times Y)(\cdot) \;\cong\; k\bigl(X(\cdot) \times Y(\cdot)\bigr).$$
 - …另有入边，续页见 [nodes/cor.cond-ktop-finite-products.3.md](./cor.cond-ktop-finite-products.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/cor.cond-ktop-finite-products.4.md](./cor.cond-ktop-finite-products.4.md)
+- …另有出边，续页见 [nodes/cor.cond-ktop-finite-products.5.md](./cor.cond-ktop-finite-products.5.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Corollary 4.2.7
 

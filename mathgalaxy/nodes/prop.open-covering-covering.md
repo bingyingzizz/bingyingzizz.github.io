@@ -1,6 +1,6 @@
 # 开覆盖给出覆盖　`prop.open-covering-covering`
 命题：开覆盖 $X = \bigsqcup_{i} X_{i}$ $\implies$ 它是覆盖
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.open-covering-covering)　·　[节点索引](../index.md)
 
 若 $X = \bigcup_{i \in I} X_{i}$ 是拓扑空间 $X$ 的**开覆盖**（$X_i$ 开），则把每个 $X_i$ 看成凝聚态集时，$(X_{i} \to X)_{i \in I}$ 是 $X$ 在 $\mathrm{Cond}$ 中的一个**覆盖**。

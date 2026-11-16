@@ -1,6 +1,6 @@
 # 景的层范畴的好性质　`prop.site-properties`
 Grothendieck 拓扑下的层范畴
-layer 19 · 命题 · 层与拓扑 · 范畴论
+layer 21 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.site-properties)　·　[节点索引](../index.md)
 
 若 $\mathcal{C}$ 是景，则层范畴 $\widehat{\mathcal{C}}$ 中所有极限与余极限存在，并且：

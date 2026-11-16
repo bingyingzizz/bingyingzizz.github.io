@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
+layer 12 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.rat.md` and `proofs/`.

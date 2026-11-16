@@ -1,6 +1,6 @@
 # 示性类　`def.characteristic-class`
 示性类：向量丛到上同调的自然变换
-layer 34 · 定义 · 丛的示性类 · 微分几何
+layer 36 · 定义 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=def.characteristic-class)　·　[节点索引](../index.md)
 
 **要解决什么问题**：丛的同构类由 $\check{H}^{1}(B; \mathrm{GL}(k))$ 分类（`thm.bundle-classification`），但那个集合非阿贝尔、没法直接算。示性类把「丛」翻译成「上同

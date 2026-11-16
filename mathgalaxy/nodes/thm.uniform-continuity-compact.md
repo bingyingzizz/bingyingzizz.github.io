@@ -1,6 +1,6 @@
 # 紧集上连续 ⟹ 一致连续　`thm.uniform-continuity-compact`
 定理（Cantor）：紧集上的连续函数一致连续
-layer 21 · 定理 · 连续与紧性 · 数学分析+拓扑学
+layer 23 · 定理 · 连续与紧性 · 数学分析+拓扑学
 [在星图里打开](../#n=thm.uniform-continuity-compact)　·　[节点索引](../index.md)
 
 设 $X$ 是紧度量空间，$f : X \to \mathbb{R}$ 连续。则 $f$ 在 $X$ 上**一致连续**。

@@ -1,6 +1,6 @@
 # 列紧　`def.sequentially-compact`
 列紧 / 序列紧
-layer 16 · 定义 · 度量空间 · 拓扑学
+layer 18 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.sequentially-compact)　·　[节点索引](../index.md)
 
 距离空间 $(X, d)$ **列紧**（序列紧），当且仅当 $X$ 中每个序列都有收敛到 $X$ 中的子列：

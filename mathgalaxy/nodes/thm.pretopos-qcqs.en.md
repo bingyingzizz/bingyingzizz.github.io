@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Toposes (`cat.topos`) · Category Theory
+layer 22 · theorem · cluster Toposes (`cat.topos`) · Category Theory
 names: `Pretopos Is QCQS` (short) · `A Pretopos Is Determined by Its Topos` (full)
 
 ## Statement and proof

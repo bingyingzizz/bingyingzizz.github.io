@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Discrete RHom Is Constant` (short) · `Derived Hom and Tensor of Discrete Groups Are Constant` (full)
 
 ## Statement and proof

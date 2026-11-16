@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 21 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Riemann Criterion` (short) · `Riemann Criterion for Integrability` (full)
 
 ## Statement · **draft**

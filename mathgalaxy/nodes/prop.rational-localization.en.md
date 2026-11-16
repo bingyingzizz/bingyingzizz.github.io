@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 24 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
+layer 26 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
 ## Statement · **draft**
 Let $(A,A^+) \to (B,B^+)$ be a map of discrete Huber pairs such that $\operatorname{Spa}(B,B^+) \to \operatorname{Spa}(A,A^+)$ factors through the rational open set $U = U\!\left(\frac{g_1,\ldots,g_n}{f}\right)$.

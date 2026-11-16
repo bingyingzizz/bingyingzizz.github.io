@@ -1,6 +1,6 @@
 # 天际线层　`def.skyscraper-sheaf`
 天际线层 $i_{x,*}A$
-layer 16 · 定义 · 层上同调 · 同调代数+范畴论
+layer 18 · 定义 · 层上同调 · 同调代数+范畴论
 [在星图里打开](../#n=def.skyscraper-sheaf)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间、$x \in X$、$A$ 是阿贝尔群，$i_{x} : \{x\} \hookrightarrow X$ 是含入。**$x$ 处取值 $A$ 的天际线层**（skyscraper sheaf）是推前层

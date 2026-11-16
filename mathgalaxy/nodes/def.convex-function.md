@@ -1,6 +1,6 @@
 # 凸函数　`def.convex-function`
 凸函数与 Jensen 不等式
-layer 15 · 定义 · 微分中值定理与 Taylor · 数学分析+序理论
+layer 17 · 定义 · 微分中值定理与 Taylor · 数学分析+序理论
 [在星图里打开](../#n=def.convex-function)　·　[节点索引](../index.md)
 
 设 $I$ 是区间，$f : I \to \mathbb{R}$。称 $f$ **凸**，当且仅当对一切 $x, y \in I$ 与一切 $t \in [0, 1]$，

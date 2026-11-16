@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 12 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
 ## Statement · **draft**
 An integral domain $A$ is a **unique factorization domain** (UFD) if

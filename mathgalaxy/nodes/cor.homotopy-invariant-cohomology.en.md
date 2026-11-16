@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · corollary · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 20 · corollary · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Homotopy Invariance` (short) · `Sheaf Cohomology Is a Homotopy Invariant` (full)
 
 ## Statement and proof

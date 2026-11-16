@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 13 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement · **draft**
 In a presheaf category $\widehat{\mathcal{C}}$ **all small limits and small colimits exist**, and they are computed **pointwise**: for every $X \in \mathcal{C}$,

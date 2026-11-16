@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 20 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 22 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement · **draft**
 A pre-analytic ring $\mathcal{A}$ is called an **analytic ring** if and only if: for every complex

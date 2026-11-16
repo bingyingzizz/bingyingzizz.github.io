@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 22 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $p : \mathbb{R} \to S^{1}$, $p(t) = e^{2\pi i t}$ (this is a covering map). For a closed path $\alpha$ based at $1 \in S^{1}$, take the unique lift $\tilde{\alpha}$ with $\tilde{\alpha}(0) = 0$, and define

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
+layer 25 · theorem · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 **(a)** If the real and imaginary parts of $F$ are both $BV$, then $F \in BV$; and conversely: $F \in BV \iff \operatorname{Re} F \in BV$ **and** $\operatorname{Im} F \in BV$.

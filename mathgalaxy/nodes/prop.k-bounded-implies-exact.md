@@ -1,6 +1,6 @@
 # 相邻两条 K-有界 推出 正合　`prop.k-bounded-implies-exact`
 $K$-有界正合（相邻两处）$\implies$ 通常正合
-layer 18 · 命题 · 凝聚态导出函子 · 凝聚态数学+同调代数
+layer 20 · 命题 · 凝聚态导出函子 · 凝聚态数学+同调代数
 [在星图里打开](../#n=prop.k-bounded-implies-exact)　·　[节点索引](../index.md)
 
 设 $M^{\bullet}$ 是 **Banach** 阿贝尔群复形。若它在 $M^{n-1}$ 与 $M^{n}$ 两处都 $K$-有界正合，**且 $\operatorname{im} d^{n+1}$ 是 $M^{n}$ 的闭子空间**（即 $d^{n+1}$ 有闭值域），则它在 $M^{n}$ 处（通常意义下）**正合**。

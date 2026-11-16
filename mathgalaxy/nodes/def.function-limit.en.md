@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be defined on a **punctured neighbourhood** of $x_0$, with $L \in \mathbb{R}$. We say that $f(x)$ tends to $L$ as $x \to x_0$ (written $\lim_{x \to x_0} f(x) = L$) if and only if

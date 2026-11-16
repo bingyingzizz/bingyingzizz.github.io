@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 23 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Top-Cond Adjunction` (short) · `Adjunction between Topological Spaces and Condensed Sets` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 24 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Comparison Test` (short) · `Comparison Test for Improper Integrals` (full)
 
 ## Statement and proof

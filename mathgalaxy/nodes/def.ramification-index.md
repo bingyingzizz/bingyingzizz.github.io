@@ -1,6 +1,6 @@
 # 分歧指数　`def.ramification-index`
 分歧指数（局部的 $e$ 对 $1$）
-layer 24 · 定义 · 曲面的地形 · 拓扑学+复变函数
+layer 27 · 定义 · 曲面的地形 · 拓扑学+复变函数
 [在星图里打开](../#n=def.ramification-index)　·　[节点索引](../index.md)
 
 设 $p : Y \to X$ 是紧 Riemann 面之间的非常数全纯映射，$q \in Y$、$p(q) = r$。取 $q, r$ 附近的局部坐标，把 $p$ 写成

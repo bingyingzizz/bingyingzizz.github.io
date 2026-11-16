@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 27 · theorem · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\{f_n\} \subseteq L^1$, let $f$ be **measurable**, let $f_n \to f$ a.e., and suppose there is a **dominating function** $g \in L^1$ such that

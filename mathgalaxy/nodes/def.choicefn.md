@@ -1,6 +1,6 @@
 # 选择函数　`def.choicefn`
 选择函数
-layer 6 · 定义 · 选择原理 · 序理论+集合论
+layer 8 · 定义 · 选择原理 · 序理论+集合论
 [在星图里打开](../#n=def.choicefn)　·　[节点索引](../index.md)
 
 设 $F$ 是一个集合族，且 $\emptyset \notin F$。

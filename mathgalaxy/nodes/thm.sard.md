@@ -1,6 +1,6 @@
 # Sard 定理　`thm.sard`
 定理（Sard）：临界值集是零测集
-layer 28 · 定理 · 多元微分 · 数学分析
+layer 30 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.sard)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$ 是 $C^{k}$ 且 $k > n - m$（$C^{\infty}$ 时自然满足）。则 $f$ 的**临界值**全体

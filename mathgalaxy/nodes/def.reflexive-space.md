@@ -1,6 +1,6 @@
 # 自反空间　`def.reflexive-space`
 自反 Banach 空间
-layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 25 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.reflexive-space)　·　[节点索引](../index.md)
 
 设 $X$ 是 Banach 空间，$J_X : X \to X^{**}$ 是自然嵌入 $J_X(x)(\varphi) = \varphi(x)$。称 $X$ **自反**（reflexive），若 $J_X$ 是满射（从而是等距同构）。

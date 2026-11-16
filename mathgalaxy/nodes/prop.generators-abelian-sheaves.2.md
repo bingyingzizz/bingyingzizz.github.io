@@ -3,4 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.generator`](../nodes/def.generator.md) 生成元集：用到了定义 生成元集　[proofs/def-link.gensab-generator.md](../proofs/def-link.gensab-generator.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-generators-abelian-sheaves.md](../proofs/dep.cat-ab-prop-generators-abelian-sheaves.md)
 - [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/dep.gap-generators-abelian-sheaves-topos.md](../proofs/dep.gap-generators-abelian-sheaves-topos.md)

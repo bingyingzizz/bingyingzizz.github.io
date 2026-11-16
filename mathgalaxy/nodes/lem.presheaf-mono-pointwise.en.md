@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · lemma · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 16 · lemma · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.presheaf-mono-pointwise.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 紧生成空间的例子　`ex.cg-examples`
 哪些空间是紧生成的
-layer 20 · 例 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 22 · 例 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=ex.cg-examples)　·　[节点索引](../index.md)
 
 **例 1**　局部紧 Hausdorff 空间是紧生成的。

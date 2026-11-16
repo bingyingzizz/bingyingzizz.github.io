@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 21 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Quasi-Compact Sheaves` (short) · `Quasi-Compact Sheaves and Compact Étale Spaces` (full)
 
 ## Statement and proof

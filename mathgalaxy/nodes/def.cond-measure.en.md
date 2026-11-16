@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 15 · definition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement · **draft**
 In plain words: the continuous functions on $S$ with values in $\mathbb{Z}$ form a group under pointwise addition, denoted $C(S,\mathbb{Z})$; an **integer-valued measure** is "something that can take weighted sums (that is, 'integrals') of these functions", i.e. a group homomorphism from $C(S,\mathbb{Z})$ to $\mathbb{Z}$.

@@ -1,7 +1,7 @@
 # 集合的构造 / Constructing Sets（set.construct）· 节点清单（第 1/1 页）
 
 造出日常要用的零件：空集、子集、并交差补、幂集、有序对、笛卡尔积。
-中心天体 def.subset　·　9 个节点　·　根 `../`
+中心天体 def.subset　·　10 个节点　·　根 `../`
 
 - def.subset　子集　layer 1
 - thm.binunion　二元并存在　layer 1
@@ -12,3 +12,4 @@
 - def.empty　空集 ∅　layer 5
 - thm.empty　空集存在　layer 6
 - def.union-inter　并集与交集　layer 6
+- thm.arbitrary-product　任意族笛卡尔积存在　layer 9

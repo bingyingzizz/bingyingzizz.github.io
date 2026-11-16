@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Toposes (`cat.topos`) · Category Theory
+layer 21 · theorem · cluster Toposes (`cat.topos`) · Category Theory
 names: `Induced Topos Morphism` (short) · `Every Functor Induces a Topos Morphism` (full)
 
 ## Statement · **draft**

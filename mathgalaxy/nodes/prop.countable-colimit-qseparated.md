@@ -1,6 +1,6 @@
 # 可数递增余极限是拟分离的　`prop.countable-colimit-qseparated`
 命题：$X = \varinjlim_{n} S_{n}$（含入、可数）$\implies$ 拟分离
-layer 20 · 命题 · 凝聚态集 · 凝聚态数学
+layer 22 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.countable-colimit-qseparated)　·　[节点索引](../index.md)
 
 若 $X = \varinjlim_{n \in \mathbb{N}} S_{n}$ 是一列紧 Hausdorff 空间沿**含入** $S_{n} \hookrightarrow S_{n+1}$ 的拓扑余极限，则

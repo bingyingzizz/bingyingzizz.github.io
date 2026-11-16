@@ -1,6 +1,6 @@
 # Top 与 Cond 的伴随　`thm.top-cond-adjoint`
 $\mathbf{Top} \to \mathrm{Cond}$ 与它的伴随
-layer 21 · 定理 · 凝聚态集 · 凝聚态数学
+layer 23 · 定理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=thm.top-cond-adjoint)　·　[节点索引](../index.md)
 
 函子

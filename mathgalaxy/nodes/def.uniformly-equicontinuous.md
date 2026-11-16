@@ -1,6 +1,6 @@
 # 一致等度连续　`def.uniformly-equicontinuous`
 一致等度连续
-layer 15 · 定义 · C(K) 与 Stone–Weierstrass · 泛函分析
+layer 17 · 定义 · C(K) 与 Stone–Weierstrass · 泛函分析
 [在星图里打开](../#n=def.uniformly-equicontinuous)　·　[节点索引](../index.md)
 
 设 $(K, \delta)$ 度量空间、$(E, d)$ 度量、$\mathcal{H} \subseteq C(K, E)$。称 $\mathcal{H}$ **一致等度连续**，若

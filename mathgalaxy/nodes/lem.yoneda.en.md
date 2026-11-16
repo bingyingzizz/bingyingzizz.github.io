@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · lemma · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 15 · lemma · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 ## Statement · **draft**
 Let $F : \mathcal{C} \to \mathbf{Set}$ be a functor, $X \in \mathcal{C}$, and write

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
+layer 29 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.poisson-formula.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Covering Sieve Filter` (short) · `Covering Sieves Form a Filter` (full)
 
 ## Statement and proof

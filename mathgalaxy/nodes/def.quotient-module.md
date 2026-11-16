@@ -1,6 +1,6 @@
 # 商模　`def.quotient-module`
 商模：模掉一个子模
-layer 15 · 定义 · 代数结构 · 抽象代数
+layer 17 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.quotient-module)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺环，$M$ 是 $A$-模，$N \subseteq M$ 是子模。在加法商群 $M/N$ 上定义

@@ -1,6 +1,6 @@
 # 零集与完备　`def.null-set`
 μ-零集 / 完备测度空间
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 18 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.null-set)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间，$E \in \mathcal{M}$。

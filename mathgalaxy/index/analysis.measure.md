@@ -3,21 +3,21 @@
 造出「测度」这个对象本身：预测度 → 外测度 → Carathéodory 扩张 → 完备化与唯一性 → Lebesgue–Stieltjes 测度。
 中心天体 def.measure　·　20 个节点　·　根 `../`　·　续页 `index/analysis.measure.2.md`
 
-- def.measure　测度　layer 15
-- def.outer-measure　外测度　layer 15
-- def.radon-measure　Radon 测度　layer 16
-- def.premeasure　预测度　layer 16
-- def.finitely-additive　有限可加测度　layer 16
-- def.measure-space　有限 / σ-有限 / 半有限　layer 16
-- prop.measure-basic　测度的基本性质　layer 16
-- def.null-set　零集与完备　layer 16
-- def.caratheodory-measurable　μ*-可测集　layer 16
-- def.lebesgue-stieltjes　Lebesgue–Stieltjes 测度　layer 16
-- thm.completion　完备化定理　layer 17
-- def.semifinite-part　半有限部分　layer 17
-- prop.outer-measure-induced　由预测度诱导外测度　layer 17
-- thm.caratheodory　Carathéodory 定理　layer 17
-- prop.ls-premeasure　F 给出的预测度　layer 17
-- def.ae　几乎处处　layer 17
+- def.measure　测度　layer 17
+- def.outer-measure　外测度　layer 17
+- def.radon-measure　Radon 测度　layer 18
+- def.premeasure　预测度　layer 18
+- def.finitely-additive　有限可加测度　layer 18
+- def.measure-space　有限 / σ-有限 / 半有限　layer 18
+- prop.measure-basic　测度的基本性质　layer 18
+- def.null-set　零集与完备　layer 18
+- def.caratheodory-measurable　μ*-可测集　layer 18
+- def.lebesgue-stieltjes　Lebesgue–Stieltjes 测度　layer 18
+- thm.completion　完备化定理　layer 19
+- def.semifinite-part　半有限部分　layer 19
+- prop.outer-measure-induced　由预测度诱导外测度　layer 19
+- thm.caratheodory　Carathéodory 定理　layer 19
+- prop.ls-premeasure　F 给出的预测度　layer 19
+- def.ae　几乎处处　layer 19
 
 > 续见 `index/analysis.measure.2.md`

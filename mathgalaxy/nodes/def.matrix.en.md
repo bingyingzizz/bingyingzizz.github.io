@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 14 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be a field and $m, n \ge 1$. An $m \times n$ **matrix** is a rectangular array of elements of $K$,

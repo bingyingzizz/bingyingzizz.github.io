@@ -1,6 +1,6 @@
 # Radon–Nikodym 导数与 Lebesgue 分解　`def.rn-derivative`
 Radon–Nikodym 导数 $d\nu/d\mu$ 与 Lebesgue 分解
-layer 19 · 定义 · 符号测度与分解 · 实变函数+数学分析
+layer 25 · 定义 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=def.rn-derivative)　·　[节点索引](../index.md)
 
 设 $\nu \ll  \mu$（都是 $\sigma$有限的）。取定理里的 $f$，称

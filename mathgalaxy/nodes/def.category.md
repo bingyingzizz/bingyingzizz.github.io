@@ -1,6 +1,6 @@
 # 范畴　`def.category`
 范畴
-layer 7 · 定义 · 范畴与图 · 范畴论
+layer 9 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.category)　·　[节点索引](../index.md)
 
 一个**范畴**是一个六元组

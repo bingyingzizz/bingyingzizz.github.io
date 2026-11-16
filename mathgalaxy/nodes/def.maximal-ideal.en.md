@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 14 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a commutative ring with identity and $M \subset A$ a proper ideal. Then $M$ is a **maximal ideal** if there is no ideal $J$ with

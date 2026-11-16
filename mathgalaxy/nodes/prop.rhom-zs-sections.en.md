@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 25 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `RHom of Free Modules` (short) · `Derived Hom of Free Modules over Stonean Spaces` (full)
 
 ## Statement · **draft**

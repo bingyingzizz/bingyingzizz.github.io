@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
+layer 26 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: on a simply connected region every harmonic function is the real part of some holomorphic function — the imaginary part is called its "harmonic conjugate" and is unique up to a constant.

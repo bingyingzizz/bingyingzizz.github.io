@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 20 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 24 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement · **draft**
 In a real inner product space:

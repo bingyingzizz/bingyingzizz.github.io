@@ -1,6 +1,6 @@
 # 切片左伴随作用在 Z 上　`prop.slice-shriek-z`
 命题：$j_{X!}\mathbb{Z} = \mathbb{Z}\cdot X$
-layer 19 · 命题 · 拓扑斯 · 范畴论
+layer 21 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.slice-shriek-z)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯、$X \in \mathcal{T}$。则

@@ -1,6 +1,6 @@
 # 伴随的复合　`prop.adjunction-composition`
 命题：$F_{1} \dashv G_{1}$、$F_{2} \dashv G_{2}$ $\implies$ $F_{2}F_{1} \dashv G_{1}G_{2}$
-layer 10 · 命题 · 伴随与反射 · 范畴论
+layer 12 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.adjunction-composition)　·　[节点索引](../index.md)
 
 若 $F_{1} \dashv G_{1}$（$\mathcal{C} \to \mathcal{D}$）与 $F_{2} \dashv G_{2}$（$\mathcal{D} \to \mathcal{E}$），则

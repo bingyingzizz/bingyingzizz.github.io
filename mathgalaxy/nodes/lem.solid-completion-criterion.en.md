@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · lemma · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 23 · lemma · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement · **draft**
 In words: this lemma is a **universal wrench** — to show that some subcategory works as well as modules (compact objects, a left adjoint, a fully faithful derived category), one need not check each item; a single $\operatorname{RHom}$ condition suffices.

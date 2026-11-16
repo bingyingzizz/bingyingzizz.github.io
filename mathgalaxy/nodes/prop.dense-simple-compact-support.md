@@ -1,6 +1,6 @@
 # 紧支简单函数稠密　`prop.dense-simple-compact-support`
 命题：紧支集简单函数在 $L^p$ 中稠密
-layer 21 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 26 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.dense-simple-compact-support)　·　[节点索引](../index.md)
 
 设 $1 \le p < \infty$。**有限测度支撑的简单函数**在 $L^p$ 中稠密（$p = \infty$ 时不成立；一般测度空间没有「紧支」这个概念 —— 要保留「紧支」得假设 $X$ 局部紧、$\mu$ 是 Radon 测度）。

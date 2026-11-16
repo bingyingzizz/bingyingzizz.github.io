@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
+layer 14 · definition · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a group and $S \subseteq G$. The set

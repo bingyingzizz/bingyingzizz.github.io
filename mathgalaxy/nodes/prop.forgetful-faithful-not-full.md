@@ -1,6 +1,6 @@
 # 遗忘函子忠实但不满　`prop.forgetful-faithful-not-full`
 命题：$\mathbf{Top} \to \mathbf{Set}$ 与 $\mathbf{Ab} \to \mathbf{Set}$ 忠实不满
-layer 10 · 命题 · 函子与自然变换 · 范畴论
+layer 12 · 命题 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=prop.forgetful-faithful-not-full)　·　[节点索引](../index.md)
 
 遗忘函子 $\mathbf{Top} \to \mathbf{Set}$ 与 $\mathbf{Ab} \to \mathbf{Set}$ 都是**忠实但不满**的。

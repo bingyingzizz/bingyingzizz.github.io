@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 11 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 A functor $F : \mathcal{C} \to \mathcal{C}'$ is **essentially surjective** if for every object of $\mathcal{C}'$, say $X'$, there is an object of $\mathcal{C}$, say $X$, with

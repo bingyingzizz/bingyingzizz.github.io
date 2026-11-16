@@ -1,6 +1,6 @@
 # 行空间　`def.row-space`
 行空间：矩阵各行张成的子空间
-layer 15 · 定义 · 矩阵与行列式 · 抽象代数
+layer 17 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.row-space)　·　[节点索引](../index.md)
 
 设 $A \in M_{m \times n}(K)$，其 $m$ 个行向量为 $a_1, \ldots, a_m \in K^{n}$。它们张成的子空间

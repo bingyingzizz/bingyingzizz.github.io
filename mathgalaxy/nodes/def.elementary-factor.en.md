@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · definition · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
+layer 25 · definition · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
 
 ## Statement · **draft**
 For an integer $p \ge 0$ define the **elementary factor**

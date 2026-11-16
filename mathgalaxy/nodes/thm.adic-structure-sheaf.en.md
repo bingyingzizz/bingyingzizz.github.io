@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
+layer 27 · theorem · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
 ## Statement · **draft**
 Let $X = \operatorname{Spa}(A,A^+)$. On rational open sets define

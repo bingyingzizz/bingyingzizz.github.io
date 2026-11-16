@@ -1,6 +1,6 @@
 # 取值一般的预层与层　`def.presheaf-valued`
 取值在一般范畴里的层
-layer 10 · 定义 · 阿贝尔层 · 同调代数
+layer 12 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.presheaf-valued)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$、$\mathcal{D}$ 是范畴。

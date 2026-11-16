@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
+layer 19 · definition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement · **draft**
 **What it does**: in general topology **sequences do not suffice** — neither compactness nor continuity can be characterised by sequences (unless the space is first countable). Replacing $\mathbb{N}$ by an arbitrary **directed set** yields a “net”, and then every theorem about sequences carries over.

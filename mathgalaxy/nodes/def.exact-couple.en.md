@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
+layer 22 · definition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
 ## Statement · **draft**
 Let $\mathcal{A}$ be an abelian category and $D = \bigoplus D^{p,q}$, $E = \bigoplus E^{p,q}$ bigraded objects. An **exact couple** is a triple $(D, E, i, j, k)$ forming the "triangle"

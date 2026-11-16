@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 16 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $T : V \to V$ be linear. A subspace $U \subseteq V$ is called $T$-**invariant** if and only if

@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.condab-section`](../nodes/prop.condab-section.md) 截面函子保极限余极限：整体截面函子保积 $\implies$ 阿贝尔层即拓扑斯里的阿贝尔群　[proofs/imp-link.section-absheafequiv.md](../proofs/imp-link.section-absheafequiv.md)
 - [`def.abelian-sheaf`](../nodes/def.abelian-sheaf.md) 阿贝尔层：用到了定义 阿贝尔层　[proofs/def-link.absheafequiv-abelian.md](../proofs/def-link.absheafequiv-abelian.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-thm-abelian-sheaf-equiv.md](../proofs/dep.cat-ab-thm-abelian-sheaf-equiv.md)

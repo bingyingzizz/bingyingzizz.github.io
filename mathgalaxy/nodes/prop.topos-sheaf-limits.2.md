@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.topos-sheaf-limits)　·　第 1 页 [nodes/prop.topos-sheaf-limits.md](./prop.topos-sheaf-limits.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-topos-sheaf-limits.md](../proofs/dep.cat-sets-prop-topos-sheaf-limits.md)
 - [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/dep.gap-topos-sheaf-limits-topos.md](../proofs/dep.gap-topos-sheaf-limits-topos.md)
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-dep.sheaf-limits.md](../proofs/def-dep.sheaf-limits.md)
 - [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.limit-sheaf-limits.md](../proofs/def-dep.limit-sheaf-limits.md)

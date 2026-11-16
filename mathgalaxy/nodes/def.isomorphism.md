@@ -1,6 +1,6 @@
 # 同构　`def.isomorphism`
 同构（可逆态射）—— 各分支的通名
-layer 8 · 定义 · 范畴与图 · 范畴论+抽象代数
+layer 10 · 定义 · 范畴与图 · 范畴论+抽象代数
 [在星图里打开](../#n=def.isomorphism)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是范畴，$f : X \to Y$ 是其中的态射。称 $f$ 是**同构**，如果存在态射 $g : Y \to X$ 使

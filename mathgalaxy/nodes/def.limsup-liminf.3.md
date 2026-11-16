@@ -3,3 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.bound`](../nodes/def.bound.md) 界与确界：用到了定义 界与确界　[proofs/dep.bound-limsup.md](../proofs/dep.bound-limsup.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.sym-real-def-limsup-liminf.md](../proofs/dep.sym-real-def-limsup-liminf.md)
+
+> 续见 [nodes/def.limsup-liminf.4.md](./def.limsup-liminf.4.md)

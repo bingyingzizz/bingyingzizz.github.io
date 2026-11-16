@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
+layer 16 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $L/K$ be a field extension and $H \le \operatorname{Aut}(L/K)$ a subgroup of the group of $K$-automorphisms. The set

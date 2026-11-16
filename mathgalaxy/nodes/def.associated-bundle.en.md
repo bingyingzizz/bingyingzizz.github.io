@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 32 · definition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
+layer 34 · definition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.associated-bundle.md` and `proofs/`.

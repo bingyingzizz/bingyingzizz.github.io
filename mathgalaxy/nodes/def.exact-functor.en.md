@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 15 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 A functor $F$ is **left exact** if it preserves all **finite limits**; **right exact** if it preserves all **finite colimits**; and **exact** if both.

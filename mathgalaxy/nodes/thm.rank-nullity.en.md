@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 17 · theorem · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a finite-dimensional $K$-vector space, $T : V \to W$ linear. Then

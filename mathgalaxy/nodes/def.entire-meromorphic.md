@@ -1,6 +1,6 @@
 # 整函数与亚纯函数　`def.entire-meromorphic`
 定义：整函数与亚纯函数
-layer 21 · 定义 · Cauchy 理论 · 复变函数
+layer 25 · 定义 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=def.entire-meromorphic)　·　[节点索引](../index.md)
 
 **白话**：整函数就是在整个复平面上处处全纯的函数；亚纯函数是「除了一堆孤立极点之外处处全纯」的函数，也就是局部上两个全纯函数的商。

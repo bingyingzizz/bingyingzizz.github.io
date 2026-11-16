@@ -1,6 +1,6 @@
 # 生成元集　`def.generator`
 生成元集与生成元
-layer 10 · 定义 · 拓扑斯 · 范畴论
+layer 12 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.generator)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 的一个集合 $S \subseteq \mathcal{C}$ 叫**生成元集**，如果函子

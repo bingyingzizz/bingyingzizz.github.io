@@ -1,6 +1,6 @@
 # 投射有限集即投射有限空间　`prop.profinite-sets-spaces`
 命题：有限集的 pro-对象 $\simeq$ 投射有限空间
-layer 13 · 命题 · Stone 与 Stonean · 拓扑学
+layer 15 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.profinite-sets-spaces)　·　[节点索引](../index.md)
 
 有限集合范畴的 **pro-对象**所成范畴，与**投射有限空间**所成范畴**等价**。

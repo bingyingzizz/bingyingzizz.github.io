@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Condensed Criterion` (short) · `Criterion for a Presheaf to Be Condensed` (full)
 
 ## Statement and proof

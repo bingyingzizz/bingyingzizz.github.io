@@ -1,6 +1,6 @@
 # 用关联层算上同调　`prop.cohomology-via-associated-sheaf`
 命题：$\mathrm{R}\Gamma(X, M^{\bullet}) = \mathrm{R}\Gamma(\underline{X}, M^{\bullet})$
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.cohomology-via-associated-sheaf)　·　[节点索引](../index.md)
 
 设 $X \in \mathcal{C}$、$\underline{X} = h_{X}^{\#}$ 是它的**关联层**。则

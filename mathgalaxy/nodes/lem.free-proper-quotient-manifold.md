@@ -1,6 +1,6 @@
 # 自由真不连续作用的光滑商　`lem.free-proper-quotient-manifold`
 有限群自由真不连续作用的光滑商流形
-layer 10 · 引理 · 基本群 · 拓扑学
+layer 18 · 引理 · 基本群 · 拓扑学
 [在星图里打开](../#n=lem.free-proper-quotient-manifold)　·　[节点索引](../index.md)
 
 设 $M$ 是 $n$ 维光滑流形，有限群 $\Gamma$ 光滑地作用在 $M$ 上，且作用**自由**（$g\ne e$ 时 

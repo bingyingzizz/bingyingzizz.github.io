@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 20 · lemma · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.k-bounded-completion.md` and `proofs/`.

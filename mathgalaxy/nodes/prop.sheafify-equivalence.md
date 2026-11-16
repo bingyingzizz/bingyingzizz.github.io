@@ -1,6 +1,6 @@
 # 层化与等价关系交换　`prop.sheafify-equivalence`
 层化保持等价关系与商
-layer 14 · 命题 · 层与拓扑 · 范畴论
+layer 16 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sheafify-equivalence)　·　[节点索引](../index.md)
 
 若 $R$ 是预层 $T$ 上的等价关系，则层化之后 $R^{\sharp}$ 是 $T^{\sharp}$ 上的等价关系，并且

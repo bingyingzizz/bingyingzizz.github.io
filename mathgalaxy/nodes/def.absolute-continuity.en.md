@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
+layer 24 · definition · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\mu$ be a measure on $(X, \mathcal{M})$ and $\nu$ a signed measure. Then $\nu$ is **absolutely continuous with respect to $\mu$**, written

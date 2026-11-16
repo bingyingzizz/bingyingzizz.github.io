@@ -1,6 +1,6 @@
 # Cauchy 列　`def.cauchy-sequence`
 Cauchy 列
-layer 15 · 定义 · 实数与极限 · 数学分析
+layer 17 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.cauchy-sequence)　·　[节点索引](../index.md)
 
 实数列 $\{x_n\}$ 是 **Cauchy 列**，当且仅当

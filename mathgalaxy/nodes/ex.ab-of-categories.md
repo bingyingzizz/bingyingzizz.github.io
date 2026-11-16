@@ -1,6 +1,6 @@
 # Ab(C) 的例子　`ex.ab-of-categories`
 $\mathrm{Ab}(-)$ 在几个范畴上的样子
-layer 19 · 例 · 范畴里的代数结构 · 范畴论+抽象代数
+layer 21 · 例 · 范畴里的代数结构 · 范畴论+抽象代数
 [在星图里打开](../#n=ex.ab-of-categories)　·　[节点索引](../index.md)
 
 - $\mathrm{Ab}(\mathbf{Set}) = \mathbf{Ab}$；

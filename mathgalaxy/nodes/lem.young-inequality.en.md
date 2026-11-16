@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · lemma · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
+layer 22 · lemma · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.young-inequality.md` and `proofs/`.

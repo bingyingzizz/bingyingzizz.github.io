@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
+layer 24 · definition · cluster Sequences of Functions, Power Series and Elementary Functions (`analysis.uniform`) · Mathematical Analysis
 
 ## Statement · **draft**
 $\exp$ is strictly increasing on $\mathbb{R}$ (because $(\exp x)' = \exp x > 0$), with image $(0, +\infty)$. Define $\log : (0, +\infty) \to \mathbb{R}$ as its inverse:

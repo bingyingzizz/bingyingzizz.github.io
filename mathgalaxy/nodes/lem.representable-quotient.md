@@ -1,6 +1,6 @@
 # 可表示性的下降　`lem.representable-quotient`
 可表示性的下降引理
-layer 18 · 引理 · 拓扑斯 · 范畴论
+layer 20 · 引理 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=lem.representable-quotient)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯（配标准拓扑）。若层之间的满态射

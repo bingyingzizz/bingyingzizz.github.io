@@ -1,6 +1,6 @@
 # Lie 第三定理　`thm.lie-third`
 Lie 第三定理
-layer 31 · 定理 · Lie 群 · 微分几何
+layer 33 · 定理 · Lie 群 · 微分几何
 [在星图里打开](../#n=thm.lie-third)　·　[节点索引](../index.md)
 
 **白话**：反过来也成立 —— 随便给一个有限维 Lie 代数，总能找到一个 Lie 群以它为 Lie 代数。这条保证了「Lie 代数」不是凭空造出来的对象。

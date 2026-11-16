@@ -1,6 +1,6 @@
 # 预标准拓扑下的层　`prop.precanonical-sheaf`
 预标准拓扑下「层」的两条等式
-layer 18 · 命题 · 拓扑斯 · 范畴论
+layer 20 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.precanonical-sheaf)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是预拓扑斯、配预标准拓扑。预层 $F$ 是层 $\iff$ 对每个有限族 $(X_{i} \to X)$ 且 $\coprod_{i} X_{i} \to X$ 满，

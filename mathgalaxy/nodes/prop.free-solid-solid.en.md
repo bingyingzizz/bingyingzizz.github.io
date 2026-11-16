@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
+layer 23 · proposition · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
 ## Statement · **draft**
 For any profinite set $S$, $Z[S]^{\blacksquare}$ is a solid abelian group; and $Z[S]^{\blacksquare}[0] \in D(\operatorname{Cond}(\mathbf{Ab}))$ is a solid complex.

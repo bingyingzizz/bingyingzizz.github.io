@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 31 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement · **draft**
 **In words**: take a holomorphic map from the disk to itself and use a fractional linear transformation to move the base point (and its image) to the origin; Schwarz's lemma then becomes an estimate for an arbitrary base point, with no distinguished origin.

@@ -1,6 +1,6 @@
 # 局部化　`def.localization`
 范畴的局部化
-layer 10 · 定义 · 范畴与图 · 范畴论
+layer 12 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.localization)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是范畴，$W$ 是 $\mathcal{C}$ 中一族态射（想「当成同构」的那些）。

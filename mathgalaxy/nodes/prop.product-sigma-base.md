@@ -1,6 +1,6 @@
 # 积 σ-代数的生成基　`prop.product-sigma-base`
 命题：把各坐标的 σ-代数换成生成元，积 σ-代数不变
-layer 7 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
+layer 11 · 命题 · 乘积测度与 Fubini · 实变函数+数学分析
 [在星图里打开](../#n=prop.product-sigma-base)　·　[节点索引](../index.md)
 
 设每个 $\mathcal{M}_\alpha = \mathcal{M}(\mathcal{E}_\alpha )$（即 $\mathcal{M}_\alpha$ 由 $\mathcal{E}_\alpha$ 生成）。令

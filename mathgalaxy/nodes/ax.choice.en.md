@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **stale** · stale fields: statement (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 8 · axiom · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
+layer 10 · axiom · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
 
 ## Statement · **stale**
 From any family of non-empty sets one can pick one element from each, "all at once". Written in terms of a choice function:

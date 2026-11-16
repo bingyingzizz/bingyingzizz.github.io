@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 15 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a $K$-vector space, and $\mathcal{B}$, $\mathcal{B}'$ two bases of $V$. Then $\mathcal{B}$ and $\mathcal{B}'$ are **equipotent** (there is a bijection).

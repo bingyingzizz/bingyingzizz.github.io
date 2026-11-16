@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.measure`](../nodes/def.measure.md) 测度：用到了定义 测度　[proofs/def-link.measure-closure.md](../proofs/def-link.measure-closure.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-prop-measurable-closure.md](../proofs/dep.sym-complex-prop-measurable-closure.md)

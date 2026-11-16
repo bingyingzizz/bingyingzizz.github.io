@@ -1,6 +1,6 @@
 # 带算子的对象就是模　`prop.op-category-is-modules`
 命题：$\operatorname{Op}(k\text{-}\mathbf{Mod}) \simeq k[T]\text{-}\mathbf{Mod}$
-layer 14 · 命题 · 范畴里的代数结构 · 范畴论
+layer 16 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.op-category-is-modules)　·　[节点索引](../index.md)
 
 记 $\operatorname{Op}(\mathcal{C}) \subseteq \operatorname{Mor}(\mathcal{C})$ 为由「**定义域 = 余定义域**」的态射组成的**满子范畴**（带算子的对象）。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
+layer 18 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
 ## Statement · **draft**
 The **mapping cone** of a morphism $f : K \to L$ is the complex

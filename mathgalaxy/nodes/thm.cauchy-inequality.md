@@ -1,6 +1,6 @@
 # Cauchy 不等式　`thm.cauchy-inequality`
 定理：Cauchy 不等式
-layer 26 · 定理 · Cauchy 理论 · 复变函数
+layer 30 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.cauchy-inequality)　·　[节点索引](../index.md)
 
 **白话**：$n$ 阶导数是一个半径 $R$ 的圆周上的积分，所以它的模被「圆上 $|f|$ 的最大值除以 $R^n$」卡住 —— 半径越大，导数估计越好。

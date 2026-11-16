@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
+layer 17 · definition · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $S \subseteq \mathbb{R}$ and $x \in \mathbb{R}$. A point $x$ is a **limit point** (also called an accumulation point) of $S$ iff every punctured neighbourhood of $x$ meets $S$:

@@ -1,6 +1,10 @@
 # 别名 → 节点 · 拓扑学
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../topology.md`
 
+- 多边形表示 | 边配对粘合 | polygon representation → def.polygon-representation
+
+- 环柄 | 加环柄 | handle → def.handle
+
 - 交叉帽 | 加交叉帽 → def.crosscap
 
 - 不可定向亏格 → def.nonorientable-genus
@@ -28,7 +32,5 @@
 - degree | 映射的度 → def.degree
 
 - degree obstructs extension | 度非零不能延拓 → thm.degree-nonextendable
-
-- polygon diagonal lemma | 多边形对角线引理 → lem.polygon-diagonal
 
 > 续见 alias/aka/topology.17.md

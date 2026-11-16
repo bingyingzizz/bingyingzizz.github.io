@@ -1,6 +1,6 @@
 # 逐点收敛　`def.pointwise-convergence`
 逐点收敛
-layer 15 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.pointwise-convergence)　·　[节点索引](../index.md)
 
 设 $f_n : X \to \mathbb{R}$（$n = 1, 2, \ldots$）与 $f : X \to \mathbb{R}$。称 $\{f_n\}$ **逐点收敛**到 $f$，当且仅当对**每个固定的** $x \in X$ 都有

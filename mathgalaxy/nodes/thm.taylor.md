@@ -1,6 +1,6 @@
 # Taylor 公式　`thm.taylor`
 Taylor 公式（带 Lagrange 余项）
-layer 26 · 定理 · 微分中值定理与 Taylor · 数学分析
+layer 28 · 定理 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=thm.taylor)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上有 $n$ 阶连续导数、在 $(a, b)$ 内 $n+1$ 阶可导，取 $x_0 \in [a, b]$。则对每个 $x \in [a, b]$，$x \ne x_0$，存在介于 $x_0$ 与 $x$ 之间的 $\xi$，使

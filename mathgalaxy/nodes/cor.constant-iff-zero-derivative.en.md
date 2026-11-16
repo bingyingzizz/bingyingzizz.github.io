@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · corollary · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 28 · corollary · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be differentiable on an interval $I$. Then $f$ is constant on $I$ if and only if for every $x \in I$,

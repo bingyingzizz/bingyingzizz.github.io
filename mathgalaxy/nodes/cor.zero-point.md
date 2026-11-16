@@ -1,6 +1,6 @@
 # 零点定理　`cor.zero-point`
 推论：零点定理（Bolzano 定理）
-layer 19 · 推论 · 连续与紧性 · 数学分析
+layer 21 · 推论 · 连续与紧性 · 数学分析
 [在星图里打开](../#n=cor.zero-point)　·　[节点索引](../index.md)
 
 设 $f$ 在 $[a, b]$ 上连续，且 $f(a)$ 与 $f(b)$ **异号**（$f(a) f(b) < 0$）。则存在 $\xi \in (a, b)$ 使

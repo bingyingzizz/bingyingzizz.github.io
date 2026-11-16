@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 14 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 names: `Terminal and Initial` (short) · `Terminal and Initial Objects` (full)
 
 ## Statement and proof

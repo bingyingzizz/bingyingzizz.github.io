@@ -1,6 +1,6 @@
 # Lebesgue 可测　`def.lebesgue-measurable`
 Lebesgue 可测 / Borel 可测（$\mathbb{R} \to \mathbb{C}$ 的情形）
-layer 7 · 定义 · 可测函数与收敛 · 实变函数+数学分析
+layer 22 · 定义 · 可测函数与收敛 · 实变函数+数学分析
 [在星图里打开](../#n=def.lebesgue-measurable)　·　[节点索引](../index.md)
 
 对 $f : \mathbb{R} \to \mathbb{C}$：

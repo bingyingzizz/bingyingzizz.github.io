@@ -1,6 +1,6 @@
 # 高阶导数公式　`thm.cauchy-higher-derivative`
 定理：高阶导数公式与无穷次可微
-layer 25 · 定理 · Cauchy 理论 · 复变函数
+layer 29 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.cauchy-higher-derivative)　·　[节点索引](../index.md)
 
 **白话**：全纯函数不但无穷次可微，而且每一阶导数都能用**同一个**边界积分写出来 —— 只把分母的幂次加一。

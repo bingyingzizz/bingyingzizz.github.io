@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.comparison-test`](../nodes/thm.comparison-test.md) 比较判别法 + [`def.uniform-cauchy`](../nodes/def.uniform-cauchy.md) 一致 Cauchy 列：比较判别法 + 一致 Cauchy $\implies$ Weierstrass 判别法　[proofs/imp.weierstrass-m-test.md](../proofs/imp.weierstrass-m-test.md)
+- [`def.absolute-convergence`](../nodes/def.absolute-convergence.md) 绝对收敛：用到了定义 绝对收敛　[proofs/dep.absconv-weierstrass-m.md](../proofs/dep.absconv-weierstrass-m.md)

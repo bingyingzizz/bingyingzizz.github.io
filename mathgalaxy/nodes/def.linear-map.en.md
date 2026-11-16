@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 14 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V, W$ be vector spaces over a field $K$. A map $T : V \to W$ is called **$K$-linear** (or a linear map) if and only if

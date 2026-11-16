@@ -1,6 +1,6 @@
 # 共鸣定理　`thm.ubp`
 共鸣定理（一致有界原理 / Banach–Steinhaus）
-layer 18 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 25 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.ubp)　·　[节点索引](../index.md)
 
 设 $E$ 是 Banach 空间，$F$ 赋范，$\{u_i\}_{i \in I} \subseteq B(E, F)$。若对每个 $x \in E$，

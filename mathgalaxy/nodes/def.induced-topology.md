@@ -1,6 +1,6 @@
 # 诱导拓扑　`def.induced-topology`
 诱导拓扑
-layer 17 · 定义 · 拓扑斯 · 范畴论
+layer 19 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.induced-topology)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}'$ 是景，$f^{-1} : \mathcal{C} \to \mathcal{C}'$ 是任何函子。$\mathcal{C}$ 上的**诱导拓扑**是使 $f^{-1}$ **连续**的最细拓扑。

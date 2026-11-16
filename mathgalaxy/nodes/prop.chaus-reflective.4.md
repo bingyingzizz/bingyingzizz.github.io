@@ -3,7 +3,7 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 + [`def.compact`](../nodes/def.compact.md) 紧：构造 $\beta X$ 并验证泛性质　[proofs/imp.stone-cech.md](../proofs/imp.stone-cech.md)
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-chaus-reflective.md](../proofs/dep.cat-top-prop-chaus-reflective.md)
 - [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-link.compact-stonecech.md](../proofs/def-link.compact-stonecech.md)
-- [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-dep.adjoint-chaus-reflective.md](../proofs/def-dep.adjoint-chaus-reflective.md)
 
 > 续见 [nodes/prop.chaus-reflective.5.md](./prop.chaus-reflective.5.md)

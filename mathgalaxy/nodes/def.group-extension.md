@@ -1,6 +1,6 @@
 # 群扩张　`def.group-extension`
 群扩张 $1 \to A \to E \to G \to 1$
-layer 9 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 11 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.group-extension)　·　[节点索引](../index.md)
 
 设 $A$ 是阿贝尔群。$A$ 被 $G$ 的**扩张**是短正合列
@@ -13,13 +13,11 @@ $$g \cdot a := \tilde g\, a\, \tilde g^{-1}, \qquad \tilde g \in \pi^{-1}(g),$$
 > 陈述续见 [nodes/def.group-extension.2.md](./def.group-extension.2.md)
 
 
-## 它能推出什么 / 谁在用它
-- ⇒ [`thm.h2-group-extensions`](../nodes/thm.h2-group-extensions.md) 二维上同调分类群扩张
-
-- …另有出边，续页见 [nodes/def.group-extension.4.md](./def.group-extension.4.md)
-
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.group-extension.3.md](./def.group-extension.3.md)
+
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.group-extension.4.md](./def.group-extension.4.md)
 
 refs: Weibel, An Introduction to Homological Algebra, Chapter 6（群扩张）
 

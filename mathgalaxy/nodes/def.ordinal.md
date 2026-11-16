@@ -1,6 +1,6 @@
 # 序数　`def.ordinal`
 序数
-layer 7 · 定义 · 序数与超限 · 集合论
+layer 9 · 定义 · 序数与超限 · 集合论
 [在星图里打开](../#n=def.ordinal)　·　[节点索引](../index.md)
 
 集合 $\alpha$ 称为**序数**（von Neumann 序数），当且仅当：

@@ -1,6 +1,6 @@
 # ℝ 是完备有序域　`thm.real-ordered-field`
 $\mathbb{R}$ 是完备有序域（确界原理）
-layer 17 · 定理 · 实数完备性的等价刻画 · 数学分析+集合论
+layer 19 · 定理 · 实数完备性的等价刻画 · 数学分析+集合论
 [在星图里打开](../#n=thm.real-ordered-field)　·　[节点索引](../index.md)
 
 上面构造出来的 $(\mathbb{R}, +, \cdot, \le)$ 满足三组性质：

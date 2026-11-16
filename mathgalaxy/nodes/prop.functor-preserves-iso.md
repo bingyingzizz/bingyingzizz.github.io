@@ -1,6 +1,6 @@
 # 函子保同构　`prop.functor-preserves-iso`
 命题：函子把同构送到同构
-layer 9 · 命题 · 函子与自然变换 · 范畴论
+layer 11 · 命题 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=prop.functor-preserves-iso)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{C} \to \mathcal{D}$ 是函子，$f : X \to Y$ 是 $\mathcal{C}$ 中的同构，逆为 $f^{-1} : Y \to X$。则 $F(f)$ 是同构，且

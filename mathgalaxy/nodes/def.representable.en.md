@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 14 · definition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 > continued in nodes/def.representable.en.2.md

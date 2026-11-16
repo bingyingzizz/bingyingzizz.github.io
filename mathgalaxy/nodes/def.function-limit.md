@@ -1,6 +1,6 @@
 # 函数极限　`def.function-limit`
 函数极限 $\lim_{x \to x_0} f(x) = L$
-layer 15 · 定义 · 实数与极限 · 数学分析
+layer 17 · 定义 · 实数与极限 · 数学分析
 [在星图里打开](../#n=def.function-limit)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 的某个**去心邻域**上有定义，$L \in \mathbb{R}$。称 $x \to x_0$ 时 $f(x)$ 趋于 $L$（记 $\lim_{x \to x_0} f(x) = L$），当且仅当

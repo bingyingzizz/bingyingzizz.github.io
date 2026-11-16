@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
+layer 23 · theorem · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 **(a)** If $f : X \to [0, +\infty]$ is measurable, then there exists a sequence of simple functions $\{\varphi_n\}$ that approaches $f$ **increasingly at every point**:

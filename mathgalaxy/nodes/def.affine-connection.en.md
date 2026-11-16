@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 31 · definition · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement · **draft**
 **What it does**: it specifies "how a vector changes when transported in a given direction" — only with this rule can one differentiate vector fields and then speak of acceleration, geodesics, and curvature.

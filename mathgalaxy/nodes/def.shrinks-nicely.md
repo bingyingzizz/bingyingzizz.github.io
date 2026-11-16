@@ -1,6 +1,6 @@
 # 可缩族　`def.shrinks-nicely`
 可缩地趋于 x
-layer 16 · 定义 · 微分定理 · 实变函数+数学分析
+layer 18 · 定义 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=def.shrinks-nicely)　·　[节点索引](../index.md)
 
 $\mathbb{R}^n$ 的一族 Borel 子集 $\{E_r\}_{r > 0}$ 叫**可缩地趋于 $x$**，当且仅当

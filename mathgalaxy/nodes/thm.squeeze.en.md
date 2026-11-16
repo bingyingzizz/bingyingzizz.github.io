@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 18 · theorem · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 **(Sequences)** Suppose there is $N_0$ such that $a_n \le x_n \le b_n$ for all $n \ge N_0$. If $a_n \to L$ and $b_n \to L$, then $x_n \to L$.

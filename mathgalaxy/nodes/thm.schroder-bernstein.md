@@ -1,6 +1,6 @@
 # Schröder–Bernstein 定理　`thm.schroder-bernstein`
 Schröder–Bernstein 定理
-layer 7 · 定理 · 基数与等势 · 集合论
+layer 9 · 定理 · 基数与等势 · 集合论
 [在星图里打开](../#n=thm.schroder-bernstein)　·　[节点索引](../index.md)
 
 若存在单射 $f : A \to B$ 与单射 $g : B \to A$，则存在**双射** $A \to B$，即

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 19 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $(K, \delta)$ be a compact metric space, $(E, d)$ a metric space, and $\mathcal{H} \subseteq C(K, E)$ equicontinuous. Then $\mathcal{H}$ is **uniformly equicontinuous**.

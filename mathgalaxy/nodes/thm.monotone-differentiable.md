@@ -1,6 +1,6 @@
 # 单调函数几乎处处可导　`thm.monotone-differentiable`
 定理：单调函数几乎处处可导，且不连续点可数
-layer 18 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
+layer 23 · 定理 · 有界变差与绝对连续 · 实变函数+数学分析
 [在星图里打开](../#n=thm.monotone-differentiable)　·　[节点索引](../index.md)
 
 设 $F : \mathbb{R} \to \mathbb{R}$ 递增，$G(x) := F(x+)$（右极限）。则

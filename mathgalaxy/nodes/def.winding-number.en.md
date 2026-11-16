@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 23 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: the winding number is an integer counting "how many times one goes around a point" — one counterclockwise turn is $+1$, one clockwise turn is $-1$, no turn is $0$.

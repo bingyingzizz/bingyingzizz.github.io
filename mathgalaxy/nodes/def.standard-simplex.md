@@ -1,6 +1,6 @@
 # 标准单纯形　`def.standard-simplex`
 标准单纯形 $\Delta^{p}$ 与面映射 $d_{i}$
-layer 15 · 定义 · 同调群 · 拓扑学
+layer 17 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.standard-simplex)　·　[节点索引](../index.md)
 
 **标准 $p$-单纯形**是

@@ -1,6 +1,6 @@
 # 凝聚态集的刻画　`prop.condensed-criterion`
 预层是凝聚态集的两条判据
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.condensed-criterion)　·　[节点索引](../index.md)
 
 $\mathbf{CHaus}$ 上的集合预层 $X$ 是凝聚态集 $\iff$

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 23 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `FTC Part I` (short) · `Fundamental Theorem of Calculus, Part I` (full)
 
 ## Statement and proof

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
+layer 9 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
 ## Statement · **draft**
 If there are injections $f : A \to B$ and $g : B \to A$, then there is a **bijection** $A \to B$; that is,

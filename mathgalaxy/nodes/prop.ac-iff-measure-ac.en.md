@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · proposition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
+layer 28 · proposition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $F \in NBV$. Then $F$ is **absolutely continuous** iff its associated measure $\mu_F$ is absolutely continuous with respect to Lebesgue measure:

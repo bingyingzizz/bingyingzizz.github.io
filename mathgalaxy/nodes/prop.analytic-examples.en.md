@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · proposition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 25 · proposition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement · **draft**
 The following pre-analytic rings are analytic rings:

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement · **draft**
 A **graph** is a quadruple

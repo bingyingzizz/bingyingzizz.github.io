@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 9 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement · **draft**
 Let $X$ and $Y$ be topological spaces. $f : X \to Y$ is a **homeomorphism** if and only if

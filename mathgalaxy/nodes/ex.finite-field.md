@@ -1,6 +1,6 @@
 # 有限域 F_p　`ex.finite-field`
 有限域：$\mathbb{F}_{p} = \mathbb{Z}/p\mathbb{Z}$，以及 $\mathbb{F}_{4}$
-layer 11 · 例 · 代数结构 · 抽象代数
+layer 13 · 例 · 代数结构 · 抽象代数
 [在星图里打开](../#n=ex.finite-field)　·　[节点索引](../index.md)
 
 设 $p$ 是素数，则 $\mathbb{F}_{p} := \mathbb{Z}/p\mathbb{Z}$ 在模 $p$ 的加法与乘法下是一个**域**，恰有 $p$ 个元素。

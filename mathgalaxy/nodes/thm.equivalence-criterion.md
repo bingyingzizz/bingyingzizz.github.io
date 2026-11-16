@@ -1,6 +1,6 @@
 # 等价函子的判据　`thm.equivalence-criterion`
 定理：$F$ 是等价 $\iff$ $F$ 全忠实且本质满
-layer 11 · 定理 · 函子与自然变换 · 范畴论
+layer 13 · 定理 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=thm.equivalence-criterion)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathcal{C}'$ 是**范畴等价** $\iff$ $F$ **全忠实**且**本质满**。

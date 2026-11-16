@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 34 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
+layer 39 · theorem · cluster Intrinsic Geometry (`diffgeom.intrinsic`) · Differential Geometry
 
 ## Statement · **draft**
 **What this does**: it pushes "$K$ constant" to its limit — the answer is extremely clean: locally there are only three possibilities. This is where intrinsic geometry really shows its power (only the first fundamental form is used throughout).

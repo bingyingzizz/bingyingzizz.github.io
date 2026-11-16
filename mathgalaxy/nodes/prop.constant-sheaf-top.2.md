@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.associated-sheaf`](../nodes/def.associated-sheaf.md) 关联层：用到了定义 关联层　[proofs/def-link.consttop-const.md](../proofs/def-link.consttop-const.md)
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-constant-sheaf-top.md](../proofs/dep.cat-top-prop-constant-sheaf-top.md)
 
 > 续见 [nodes/prop.constant-sheaf-top.3.md](./prop.constant-sheaf-top.3.md)

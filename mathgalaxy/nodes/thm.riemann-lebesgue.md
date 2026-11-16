@@ -1,6 +1,6 @@
 # Riemann–Lebesgue 引理　`thm.riemann-lebesgue`
 Riemann–Lebesgue 引理：Fourier 系数趋于零
-layer 18 · 定理 · Riemann 积分 · 数学分析+拓扑学
+layer 20 · 定理 · Riemann 积分 · 数学分析+拓扑学
 [在星图里打开](../#n=thm.riemann-lebesgue)　·　[节点索引](../index.md)
 
 **在说什么**：高频振荡把积分抹平。它既是 Fourier 级数收敛性的第一步，也是「Riemann 可积函数在频率轴上衰减」的定量说法。

@@ -1,6 +1,6 @@
 # 反射的判据　`prop.reflection-criterion`
 命题：$F$ 是反射 $\iff$ 存在 $\alpha_{X} : X \to F(X)$，在 $\mathcal{C}'$ 上是同构
-layer 11 · 命题 · 伴随与反射 · 范畴论
+layer 13 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.reflection-criterion)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}'$ 是 $\mathcal{C}$ 的**满**子范畴、$F : \mathcal{C} \to \mathcal{C}'$。

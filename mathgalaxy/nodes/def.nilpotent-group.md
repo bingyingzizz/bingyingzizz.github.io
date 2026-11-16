@@ -1,6 +1,6 @@
 # 幂零群　`def.nilpotent-group`
 幂零群：下中心列终止
-layer 10 · 定义 · 代数结构 · 抽象代数
+layer 12 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.nilpotent-group)　·　[节点索引](../index.md)
 
 设 $G$ 是群。归纳定义**下中心列**

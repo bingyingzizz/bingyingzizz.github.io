@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 19 · theorem · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $T : V \to V$ be a linear map on a finite-dimensional $K$-vector space, and $\chi_T$ its characteristic polynomial. Replace $x$ appearing in $\chi_T$ by $T$ (multiplying the constant term by $I$), obtaining the operator $\chi_T(T)$. Then

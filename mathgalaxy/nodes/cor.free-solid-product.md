@@ -1,6 +1,6 @@
 # 自由固态群是大乘积　`cor.free-solid-product`
 推论：$Z[S]^{\blacksquare} \cong \prod_I \mathbb{Z}$
-layer 20 · 推论 · 固态阿贝尔群 · 凝聚态数学
+layer 22 · 推论 · 固态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=cor.free-solid-product)　·　[节点索引](../index.md)
 
 对任意 profinite 集 $S$，存在集合 $I$（$\#I \le 2^{\#S}$）与凝聚态阿贝尔群的同构

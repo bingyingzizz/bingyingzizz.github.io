@@ -1,6 +1,6 @@
 # Kan 延拓的两个例子　`ex.kan-extension`
 余极限与右伴随都是 Kan 延拓
-layer 12 · 命题 · 伴随与反射 · 范畴论
+layer 14 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=ex.kan-extension)　·　[节点索引](../index.md)
 
 **(1)** 图 $D : I \to \mathcal{C}$ 有余极限 $X$ $\iff$ 沿投影

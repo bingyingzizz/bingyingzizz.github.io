@@ -1,6 +1,6 @@
 # 分割　`def.partition`
 分割与加细
-layer 15 · 定义 · Riemann 积分 · 数学分析
+layer 17 · 定义 · Riemann 积分 · 数学分析
 [在星图里打开](../#n=def.partition)　·　[节点索引](../index.md)
 
 设 $a < b$。闭区间 $[a, b]$ 的一个**分割**是一组有限点

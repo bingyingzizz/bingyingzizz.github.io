@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 21 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Stone Spaces Are Acyclic` (short) · `Sheaf Cohomology on Stone Spaces` (full)
 
 ## Statement and proof

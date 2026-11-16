@@ -1,6 +1,6 @@
 # 覆盖筛即余积满射　`prop.covering-sieve-epi`
 覆盖族生成覆盖筛 $\iff$ 余积满射
-layer 15 · 命题 · 层与拓扑 · 范畴论
+layer 17 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.covering-sieve-epi)　·　[节点索引](../index.md)
 
 族 $(X_{i} \to X)_{i \in I}$ 生成一个**覆盖筛** $\iff$ 余积 $\coprod_{i \in I} X_{i} \to X$ 是**满态射**（在 $\mathcal{C}$ 中）。

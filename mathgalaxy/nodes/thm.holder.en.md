@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
+layer 26 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $1 < p < \infty$, and let $q$ be the **conjugate exponent** of $p$: $\dfrac{1}{p} + \dfrac{1}{q} = 1$. Then for measurable $f, g$:

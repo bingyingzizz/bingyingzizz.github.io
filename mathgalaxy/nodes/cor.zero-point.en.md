@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · corollary · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
+layer 21 · corollary · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be continuous on $[a, b]$, and suppose $f(a)$ and $f(b)$ have **opposite signs** ($f(a) f(b) < 0$). Then there is $\xi \in (a, b)$ with

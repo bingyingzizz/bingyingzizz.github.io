@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
+layer 20 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $f \in L^+$. Then

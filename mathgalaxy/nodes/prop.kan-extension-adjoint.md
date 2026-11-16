@@ -1,6 +1,6 @@
 # Kan 延拓与伴随的存在性　`prop.kan-extension-adjoint`
 命题：$p^{-1}$ 有左伴随 $\iff$ 沿 $p$ 的 Kan 延拓都存在
-layer 11 · 命题 · 伴随与反射 · 范畴论
+layer 13 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.kan-extension-adjoint)　·　[节点索引](../index.md)
 
 设 $p : \mathcal{C} \to \mathcal{C}'$ 是小范畴之间的函子，$\mathcal{D}$ 是范畴。则**预复合函子**

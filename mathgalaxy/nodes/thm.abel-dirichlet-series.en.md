@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 25 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 **(Dirichlet)** Let $\{b_n\}$ be monotone with $b_n \to 0$, and suppose the **partial sums** of $\sum a_n$ are bounded (there is $M$ such that $\bigl| \sum_{n \le N} a_n \bigr| \le M$ for all $N$). Then $\sum a_n b_n$ converges.

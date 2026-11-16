@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Flat Modules (`hom.flat`) · Homological Algebra
+layer 16 · definition · cluster Flat Modules (`hom.flat`) · Homological Algebra
 
 ## Statement · **draft**
 Let $R$ be a ring and $F$ a **right** $R$-module. $F$ is **flat** if the functor

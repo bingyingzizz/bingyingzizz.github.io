@@ -1,6 +1,6 @@
 # 层化不改变茎　`prop.stalk-of-sheafification`
 命题：$(T^{\#})_{x} = T_{x}$
-layer 16 · 命题 · 层与拓扑 · 范畴论
+layer 18 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.stalk-of-sheafification)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间、$T$ 是 $X$ 上的预层、$x \in X$。则层化不改变茎：

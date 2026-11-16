@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 12 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
 ## Statement · **draft**
 A domain $A$ is called a **Euclidean domain** if there is a function $N : A \setminus \{0\} \to \mathbb{N}$ (a **Euclidean function**) such that for every $a \in A$ and every $b \ne 0$ there exist $q, r \in A$ with

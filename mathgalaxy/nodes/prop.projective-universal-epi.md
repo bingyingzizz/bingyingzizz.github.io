@@ -1,6 +1,6 @@
 # 投射对象与满态射的截面　`prop.projective-universal-epi`
 命题：满态射万有时，投射 $\iff$ 到它的满射都分裂
-layer 15 · 命题 · 范畴与图 · 范畴论
+layer 17 · 命题 · 范畴与图 · 范畴论
 [在星图里打开](../#n=prop.projective-universal-epi)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 有纤维积、且**满态射是万有的**（沿任意态射拉回仍是满态射）。则

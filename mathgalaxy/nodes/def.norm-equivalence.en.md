@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 23 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement · **draft**
 Let $p, q$ be two norms on $E$. Call $p$ **stronger than** $q$ (written $q \preceq p$) if there exists $C > 0$ such that

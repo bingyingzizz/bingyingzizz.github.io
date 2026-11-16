@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 13 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a ring and $I \subseteq A$ an ideal. On the additive quotient group $A/I$ define

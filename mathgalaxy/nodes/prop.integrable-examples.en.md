@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 24 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 26 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Integrable Examples` (short) · `Examples of Integrable Functions` (full)
 
 ## Statement and proof

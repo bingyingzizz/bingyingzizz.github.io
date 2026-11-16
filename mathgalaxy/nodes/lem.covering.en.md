@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · lemma · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
+layer 18 · lemma · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\mathcal{E}$ be a family of open balls in $\mathbb{R}^{n}$ and $U = \bigcup\mathcal{E}$. If $c < m(U)$, then there are **pairwise disjoint** balls $B_1, \ldots , B_k$ in $\mathcal{E}$ such that

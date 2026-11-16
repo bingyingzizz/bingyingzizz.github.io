@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · example · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
+layer 21 · example · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `AB Axiom Examples` (short) · `Examples of AB Axioms` (full)
 
 ## Statement and proof

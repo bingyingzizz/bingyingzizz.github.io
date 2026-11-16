@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
+layer 11 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.wellorder-ordinal.md` and `proofs/`.

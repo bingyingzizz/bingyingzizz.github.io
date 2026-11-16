@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · lemma · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
+layer 16 · lemma · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 names: `p-group lemma` (short) · `p-group subgroup lemma` (full)
 
 ## Statement · **draft**

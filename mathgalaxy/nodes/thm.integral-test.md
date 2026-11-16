@@ -1,6 +1,6 @@
 # 积分判别法　`thm.integral-test`
 定理：积分判别法（Cauchy 积分判别法）
-layer 20 · 定理 · 数项级数的敛散性 · 数学分析
+layer 22 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.integral-test)　·　[节点索引](../index.md)
 
 设 $f : [1, +\infty) \to [0, +\infty)$ **非负且递减**。则级数 $\sum f(n)$ 与反常积分 $\int_1^{+\infty} f$ 同敛散，即

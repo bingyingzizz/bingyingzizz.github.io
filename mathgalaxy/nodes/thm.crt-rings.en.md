@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
+layer 13 · theorem · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.crt-rings.md` and `proofs/`.

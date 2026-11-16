@@ -1,6 +1,6 @@
 # Giraud 定理　`thm.giraud`
 Giraud 定理
-layer 19 · 定理 · 拓扑斯 · 范畴论
+layer 21 · 定理 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=thm.giraud)　·　[节点索引](../index.md)
 
 对范畴 $\mathcal{T}$，下列四条等价：

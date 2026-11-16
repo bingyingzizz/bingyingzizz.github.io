@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
+layer 19 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
 
 ## Statement · **draft**
 Let $(X, d)$ be a **complete** metric space and $A \subseteq X$. Then

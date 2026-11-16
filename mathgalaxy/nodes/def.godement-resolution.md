@@ -1,6 +1,6 @@
 # Godement 消解　`def.godement-resolution`
 Godement 消解（松弛层消解）
-layer 20 · 定义 · 层上同调 · 同调代数+拓扑学
+layer 22 · 定义 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=def.godement-resolution)　·　[节点索引](../index.md)
 
 设 $\mathcal{F}$ 是 $X$ 上的阿贝尔群层。**Godement 消解**是复形 $0\to\mathcal{F}\to\mathcal{C

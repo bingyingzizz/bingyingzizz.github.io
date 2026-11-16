@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · proposition · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
+layer 34 · proposition · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
 names: `zeta continuation` (short) · `meromorphic continuation of zeta` (full)
 
 ## Statement · **draft**

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
+layer 34 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.euler-product.md` and `proofs/`.

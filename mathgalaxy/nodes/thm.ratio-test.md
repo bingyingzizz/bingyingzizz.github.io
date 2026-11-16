@@ -1,6 +1,6 @@
 # 比值判别法（d'Alembert）　`thm.ratio-test`
 比值判别法：$\lim a_{n+1}/a_n$ 与收敛性
-layer 21 · 定理 · 数项级数的敛散性 · 数学分析
+layer 23 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.ratio-test)　·　[节点索引](../index.md)
 
 设 $a_n>0$，$q=\lim_{n\to\infty}\frac{a_{n+1}}{a_n}$（极限可以为 $+\infty$）。则

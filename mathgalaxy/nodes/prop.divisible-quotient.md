@@ -1,6 +1,6 @@
 # 可除群的商　`prop.divisible-quotient`
 可除群的商仍可除
-layer 9 · 命题 · 内射模与可除群 · 同调代数
+layer 11 · 命题 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=prop.divisible-quotient)　·　[节点索引](../index.md)
 
 若 $D$ 是可除群、$H \subseteq D$ 是子群，则 $D/H$ 可除。

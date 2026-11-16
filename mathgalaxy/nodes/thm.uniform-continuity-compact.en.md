@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
+layer 23 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
 ## Statement · **draft**
 Let $X$ be a compact metric space and $f : X \to \mathbb{R}$ continuous. Then $f$ is **uniformly continuous** on $X$.

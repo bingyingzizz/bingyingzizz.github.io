@@ -1,6 +1,6 @@
 # 上链复形　`def.cochain-complex`
 复形
-layer 15 · 定义 · 复形与导出三角 · 同调代数
+layer 17 · 定义 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=def.cochain-complex)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是加法范畴。**（上）链复形**是 $\mathcal{C}$ 中的（长）序列（见 `def.sequence-of-morphisms`）$K$，且满足 $d^{n} \circ d^{n-1} = 0$ 对每个 $n$ 成立；$d$ 叫**微分**。

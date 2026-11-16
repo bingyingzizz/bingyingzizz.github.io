@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **stale** · stale fields: abstract, statement, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 
-layer 15 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
+layer 17 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
 > continued in nodes/def.outer-measure.en.2.md

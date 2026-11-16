@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 24 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 The **Bernoulli numbers** $B_n$ are determined by $B_0=1$ and the recursion

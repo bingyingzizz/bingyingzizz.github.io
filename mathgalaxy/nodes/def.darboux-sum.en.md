@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 18 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Darboux Sums` (short) · `Upper and Lower Darboux Sums` (full)
 
 ## Statement and proof

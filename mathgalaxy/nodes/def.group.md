@@ -1,6 +1,6 @@
 # 群　`def.group`
 群与阿贝尔群
-layer 7 · 定义 · 代数结构 · 抽象代数
+layer 9 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.group)　·　[节点索引](../index.md)
 
 设 $G$ 是**集合**，$\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \times G \to G$，$(a, b) \mapsto a \cdot b$）。称 $(G, \cdot)$ 是一个**群**，当且仅当：

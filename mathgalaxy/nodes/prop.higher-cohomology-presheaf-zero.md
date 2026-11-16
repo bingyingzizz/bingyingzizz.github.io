@@ -1,6 +1,6 @@
 # 高次上同调预层的关联层为零　`prop.higher-cohomology-presheaf-zero`
 命题：$n \ne 0$ 时 $\widetilde{H^{n}(M)} = 0$
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.higher-cohomology-presheaf-zero)　·　[节点索引](../index.md)
 
 设 $M$ 是景 $\mathcal{C}$ 上的阿贝尔层、$n \ne 0$。则预层

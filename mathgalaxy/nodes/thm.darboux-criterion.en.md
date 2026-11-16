@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 20 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be bounded on $[a, b]$. Then $f$ is Riemann integrable iff

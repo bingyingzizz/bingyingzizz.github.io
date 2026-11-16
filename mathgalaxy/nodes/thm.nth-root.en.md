@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
+layer 20 · theorem · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $K$ be a complete ordered field (e.g. $\mathbb{R}$), $a > 0$, $n \ge 1$. Then there exists a **unique** $b > 0$ such that

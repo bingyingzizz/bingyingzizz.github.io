@@ -1,6 +1,6 @@
 # Pontryagin–van Kampen 对偶　`thm.pontryagin-van-kampen`
 Pontryagin–van Kampen 对偶定理
-layer 20 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
+layer 22 · 定理 · 拓扑阿贝尔群 · 凝聚态数学+拓扑学
 [在星图里打开](../#n=thm.pontryagin-van-kampen)　·　[节点索引](../index.md)
 
 函子

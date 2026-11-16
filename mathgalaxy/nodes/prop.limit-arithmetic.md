@@ -1,6 +1,6 @@
 # 极限的四则运算与保序性　`prop.limit-arithmetic`
 命题：极限的四则运算、保序性与绝对值
-layer 16 · 命题 · 实数与极限 · 数学分析
+layer 18 · 命题 · 实数与极限 · 数学分析
 [在星图里打开](../#n=prop.limit-arithmetic)　·　[节点索引](../index.md)
 
 设 $x_n \to x$、$y_n \to y$（有限），$c \in \mathbb{R}$。则

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 9 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement · **draft**
 A **morphism** from a graph $(V, E, s, t)$ to a graph $(V', E', s', t')$ is a pair of functions

@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · example · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory / Abstract Algebra
+layer 21 · example · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory / Abstract Algebra
 
 > continued in nodes/ex.ab-of-categories.en.2.md

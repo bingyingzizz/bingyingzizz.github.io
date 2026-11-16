@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
+layer 13 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
 ## Statement · **draft**
 The **limit** of the diagram $D : I \to \mathcal{C}$ is the cone over $D$ with the universal property: a cone $(\lim D,\ p_i)$ such that for every cone $(Y,\ g_i)$ there is a **unique** morphism $g : Y \to \lim D$ with

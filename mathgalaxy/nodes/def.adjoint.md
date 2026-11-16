@@ -1,6 +1,6 @@
 # 伴随函子　`def.adjoint`
 伴随函子
-layer 9 · 定义 · 伴随与反射 · 范畴论
+layer 11 · 定义 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=def.adjoint)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{C} \to \mathcal{D}$、$G : \mathcal{D} \to \mathcal{C}$ 是一对函子。$(F, G)$ 叫一对**伴随函子**，如果存在自然同构

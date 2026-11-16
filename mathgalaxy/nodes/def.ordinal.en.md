@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
+layer 9 · definition · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
 ## Statement · **draft**
 A set $\alpha$ is an **ordinal** (a von Neumann ordinal) iff:

@@ -1,6 +1,6 @@
 # 范数　`def.norm`
 范数（赋范空间）
-layer 12 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 22 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.norm)　·　[节点索引](../index.md)
 
 设 $E$ 是 $\mathbb{K}$（$\mathbb{K} = \mathbb{R}$ 或 $\mathbb{C}$）上的向量空间。函数 $\|\cdot\| : E \to [0, +\infty)$ 叫**范数**，若
@@ -12,10 +12,12 @@ layer 12 · 定义 · 赋范空间与有界算子 · 泛函分析
 带范数的空间叫**赋范空间**。只满足 2、3（允许非零元素有零范数）叫**半范数**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.vs`](../nodes/def.vs.md) 线性无关与基：用到了定义 线性无关与基　[proofs/def-link.fa-vs-norm2.md](../proofs/def-link.fa-vs-norm2.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-def-norm.md](../proofs/dep.sym-complex-def-norm.md)
+
+- …另有入边，续页见 [nodes/def.norm.2.md](./def.norm.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.norm.2.md](./def.norm.2.md)
+- …另有出边，续页见 [nodes/def.norm.3.md](./def.norm.3.md)
 
 refs: Rudin, Functional Analysis · 赋范空间与有限维；Rudin, Functional Analysis, Ch. 1
 

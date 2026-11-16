@@ -2,5 +2,6 @@
 [在星图里打开](../#n=prop.ab5-implications)　·　第 1 页 [nodes/prop.ab5-implications.md](./prop.ab5-implications.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-ab5-implications.md](../proofs/dep.cat-ab-prop-ab5-implications.md)
 - [`def.ab-axioms`](../nodes/def.ab-axioms.md) Grothendieck 的 AB 公理：用到了定义 Grothendieck 的 AB 公理　[proofs/def-dep.ab5imp-ab.md](../proofs/def-dep.ab5imp-ab.md)
 - [`def.grothendieck-category`](../nodes/def.grothendieck-category.md) Grothendieck 范畴：用到了定义 Grothendieck 范畴　[proofs/def-dep.ab5imp-groth.md](../proofs/def-dep.ab5imp-groth.md)

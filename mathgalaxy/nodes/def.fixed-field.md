@@ -1,6 +1,6 @@
 # 不动域　`def.fixed-field`
 不动域：自同构群固定下来的元素
-layer 14 · 定义 · Galois 理论 · 抽象代数
+layer 16 · 定义 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=def.fixed-field)　·　[节点索引](../index.md)
 
 设 $L/K$ 是域扩张，$H \le \operatorname{Aut}(L/K)$ 是 $K$-自同构群的子群。集合

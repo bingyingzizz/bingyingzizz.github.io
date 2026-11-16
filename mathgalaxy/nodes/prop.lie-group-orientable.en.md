@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 31 · proposition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
+layer 33 · proposition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.lie-group-orientable.md` and `proofs/`.

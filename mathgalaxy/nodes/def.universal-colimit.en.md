@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 17 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Universal Colimits` (short) · `Universal Colimits and Disjoint Coproducts` (full)
 
 ## Statement and proof

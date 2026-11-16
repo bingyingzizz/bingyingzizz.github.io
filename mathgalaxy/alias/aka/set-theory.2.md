@@ -1,6 +1,8 @@
 # 别名 → 节点 · 集合论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../set-theory.md`
 
+- 任意族笛卡尔积 | 任意积 | 无穷积 | 选择函数空间 → thm.arbitrary-product
+
 - 二元关系 | binary relation | 关系 → def.rel
 
 - 映射 | mapping | map | 对应 → def.function
@@ -22,7 +24,5 @@
 - Hartogs | 哈托格斯 → thm.hartogs
 
 - 可数 | countable | 可数无穷 | 可列 → def.countable
-
-- 基数 | cardinality | 势 | cardinal number | #A | |A| | card → def.cardinal
 
 > 续见 alias/aka/set-theory.3.md

@@ -1,6 +1,6 @@
 # 凸集　`def.convex-set`
 凸集：任意两点的连线不跑出集合
-layer 11 · 定义 · Hilbert 空间 · 泛函分析
+layer 13 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.convex-set)　·　[节点索引](../index.md)
 
 设 $V$ 是实向量空间，$C \subseteq V$。称 $C$ 为**凸集**，若 对任意 $x, y \in C$、$t \in [0,1]$，

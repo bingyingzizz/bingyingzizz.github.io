@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 31 · theorem · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 
 ## Statement · **draft**
 Let $\gamma$ be an arc-length parametrized $C^{3}$ regular curve with $\kappa>0$. Then

@@ -1,6 +1,6 @@
 # 预测度　`def.premeasure`
 预测度（Premeasure）—— 定义在环上的「测度」
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 18 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.premeasure)　·　[节点索引](../index.md)
 
 若 $\mathcal{M}$ 只是一个**环**（不必是 $\sigma$代数），而 $\mu : \mathcal{M} \to [0, +\infty]$ 仍满足测度的两条：

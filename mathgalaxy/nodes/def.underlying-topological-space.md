@@ -1,6 +1,6 @@
 # 底拓扑空间　`def.underlying-topological-space`
 凝聚态集的底拓扑空间
-layer 19 · 定义 · 凝聚态集 · 凝聚态数学
+layer 21 · 定义 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=def.underlying-topological-space)　·　[节点索引](../index.md)
 
 凝聚态集 $X$ 的**底拓扑空间** $X(\cdot)$ 取集合 $X(\ast)$（在单点空间处的截面），并赋予使所有映射

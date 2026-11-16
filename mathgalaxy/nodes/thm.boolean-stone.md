@@ -1,6 +1,6 @@
 # Boolean 环与 Stone 空间等价　`thm.boolean-stone`
 Stone 表示定理：$\mathbf{BoolRing}^{\mathrm{op}} \simeq \mathbf{Stone}$
-layer 19 · 定理 · Stone 与 Stonean · 拓扑学+抽象代数
+layer 21 · 定理 · Stone 与 Stonean · 拓扑学+抽象代数
 [在星图里打开](../#n=thm.boolean-stone)　·　[节点索引](../index.md)
 
 设 $\mathbf{BoolRing}$ 是**含单位元**的布尔环配上**保单位**的环同态（缺这一条，反等价不成立：$\mathbb{F}_{2}$ 上允许零映射时，$\operatorname{Spec}$ 会把两点粘成一点，还原出来是 $4$ 元环）。在这个约定下，布尔环范畴与 Stone 空间范畴**反等价**：

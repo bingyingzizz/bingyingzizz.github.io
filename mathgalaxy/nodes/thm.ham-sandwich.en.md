@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 29 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
+layer 33 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.ham-sandwich.md` and `proofs/`.

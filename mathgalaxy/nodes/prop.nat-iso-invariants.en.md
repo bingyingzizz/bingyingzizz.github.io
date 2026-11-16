@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 13 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 If $F \cong F'$, then $F$ is faithful (resp. full, fully faithful, essentially surjective, an equivalence) $\iff$ $F'$ is as well.

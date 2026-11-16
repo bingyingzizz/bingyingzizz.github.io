@@ -1,6 +1,6 @@
 # 伯努利数　`def.bernoulli-number`
 Bernoulli 数：递推与生成函数
-layer 18 · 定义 · 数项级数的敛散性 · 数学分析
+layer 24 · 定义 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=def.bernoulli-number)　·　[节点索引](../index.md)
 
 **Bernoulli 数** $B_n$ 由 $B_0=1$ 与递推

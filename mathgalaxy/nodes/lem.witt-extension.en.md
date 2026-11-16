@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · lemma · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 25 · lemma · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 names: `Witt extension` (short) · `Witt extension lemma` (full)
 
 ## Statement · **draft**

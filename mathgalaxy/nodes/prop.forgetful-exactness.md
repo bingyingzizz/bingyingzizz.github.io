@@ -1,6 +1,6 @@
 # 遗忘与含入函子的正合性　`prop.forgetful-exactness`
 命题：遗忘保极限不保余极限；层化正合
-layer 14 · 命题 · 范畴里的代数结构 · 范畴论
+layer 16 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.forgetful-exactness)　·　[节点索引](../index.md)
 
 代数遗忘函子**保极限但不保余极限**；含入 $\widetilde{\mathcal{C}} \hookrightarrow \widehat{\mathcal{C}}$ 保极限不保余极限，而它的左伴随（**层化**）**正合**。

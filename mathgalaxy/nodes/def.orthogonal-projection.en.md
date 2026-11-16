@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 26 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $U \subseteq V$ be a finite-dimensional subspace and $V = U \oplus U^{\perp}$. For $v \in V$ write uniquely $v = u + w$ ($u \in U$, $w \in U^{\perp}$), and define

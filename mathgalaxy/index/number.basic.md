@@ -7,14 +7,14 @@
 - def.gcd　最大公因数　layer 10
 - def.prime　素数　layer 10
 - def.congruence　同余　layer 10
-- thm.int-division　整数的带余除法　layer 11
 - def.zmodn　剩余类环　layer 11
 - def.euler-phi　Euler 函数　layer 11
-- thm.euclid-algorithm　辗转相除法　layer 12
-- thm.euclid-infinite-primes　素数有无穷多个　layer 12
-- thm.fundamental-arithmetic　算术基本定理　layer 12
 - thm.euler-theorem　Euler 定理　layer 12
 - cor.wilson　Wilson 定理　layer 12
-- thm.bezout　Bézout 恒等式　layer 13
+- thm.int-division　整数的带余除法　layer 13
 - thm.fermat-little　Fermat 小定理　layer 13
-- thm.crt　中国剩余定理　layer 14
+- thm.euclid-algorithm　辗转相除法　layer 14
+- thm.euclid-infinite-primes　素数有无穷多个　layer 14
+- thm.fundamental-arithmetic　算术基本定理　layer 14
+- thm.bezout　Bézout 恒等式　layer 15
+- thm.crt　中国剩余定理　layer 16

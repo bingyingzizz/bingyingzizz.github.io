@@ -1,6 +1,6 @@
 # 逗号范畴　`def.comma-category`
 逗号范畴
-layer 12 · 定义 · 伴随与反射 · 范畴论
+layer 14 · 定义 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=def.comma-category)　·　[节点索引](../index.md)
 
 设 $F : \mathcal{A} \to \mathcal{C}$、$G : \mathcal{B} \to \mathcal{C}$ 是两个**靶相同**的函子。**逗号范畴** $F \downarrow G$ 以

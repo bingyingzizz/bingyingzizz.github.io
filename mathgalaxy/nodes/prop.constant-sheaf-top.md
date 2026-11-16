@@ -1,6 +1,6 @@
 # 拓扑空间上的常层就是离散空间的层　`prop.constant-sheaf-top`
 命题：$\widetilde{E}_{\mathbf{Top}} \cong \underline{E^{\mathrm{disc}}}$
-layer 17 · 命题 · 层与拓扑 · 范畴论
+layer 19 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.constant-sheaf-top)　·　[节点索引](../index.md)
 
 设 $E$ 是集合。则 $\mathbf{Top}$ 上的**常层**就是**离散空间** $E$ 所给出的层：

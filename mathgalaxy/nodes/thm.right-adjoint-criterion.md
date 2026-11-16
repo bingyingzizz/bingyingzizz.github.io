@@ -1,6 +1,6 @@
 # 右伴随存在的判据　`thm.right-adjoint-criterion`
 右伴随存在 $\iff$ 可表示
-layer 13 · 定理 · 伴随与反射 · 范畴论
+layer 15 · 定理 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=thm.right-adjoint-criterion)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathcal{D}$ 有右伴随 $\iff$ 对每个 $Y \in \mathcal{D}$，函子

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · proposition · cluster Homology Groups (`topology.homology`) · Topology
+layer 28 · proposition · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement · **draft**
 Let $X \ne \emptyset$, and let $\pi_{0}(X)$ be the set of its **path components**. Then

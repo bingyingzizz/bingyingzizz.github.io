@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · definition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
+layer 31 · definition · cluster Lie Groups (`diffgeom.lieg`) · Differential Geometry
 
 ## Statement · **draft**
 **What it is about**: a set that is both a group and a smooth manifold, with the two structures respecting each other — multiplication and inversion are both smooth. Group operations can therefore be studied with calculus.

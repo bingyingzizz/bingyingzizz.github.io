@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 27 · theorem · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $F : [a, b] \to \mathbb{R}$ be differentiable and $F'$ integrable on $[a, b]$. Then

@@ -1,6 +1,6 @@
 # 聚点　`def.limit-point`
 聚点 / 极限点
-layer 15 · 定义 · 实数完备性的等价刻画 · 数学分析
+layer 17 · 定义 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=def.limit-point)　·　[节点索引](../index.md)
 
 设 $S \subseteq \mathbb{R}$，$x \in \mathbb{R}$。称 $x$ 是 $S$ 的**聚点**（也叫极限点），当且仅当 $x$ 的每个去心邻域都与 $S$ 相交：

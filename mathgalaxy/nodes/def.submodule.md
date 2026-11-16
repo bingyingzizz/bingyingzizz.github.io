@@ -1,6 +1,6 @@
 # 子模　`def.submodule`
 子模：对环作用封闭的加法子群
-layer 14 · 定义 · 代数结构 · 抽象代数
+layer 16 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.submodule)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺环，$M$ 是 $A$-模。加法子群 $N \subseteq M$ 若满足

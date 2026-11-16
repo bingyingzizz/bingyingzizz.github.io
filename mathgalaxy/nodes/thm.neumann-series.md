@@ -1,6 +1,6 @@
 # Neumann 级数　`thm.neumann-series`
 $\|u\| < 1 \implies I - u$ 可逆（Neumann 级数）
-layer 19 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 26 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.neumann-series)　·　[节点索引](../index.md)
 
 设 $E$ Banach，$u \in B(E)$，$\|u\| < 1$。则 $I - u$ 可逆，且

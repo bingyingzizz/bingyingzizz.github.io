@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 23 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $D^{2} := \{\, z \in \mathbb{C} : |z| \le 1 \,\}$, $S^{1} = \partial D^{2}$. Then there is **no** continuous map

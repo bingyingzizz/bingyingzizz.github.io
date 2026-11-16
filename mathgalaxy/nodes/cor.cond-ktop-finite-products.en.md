@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · corollary · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 22 · corollary · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Finite Products` (short) · `The Underlying Space Preserves Finite Products` (full)
 
 ## Statement · **draft**

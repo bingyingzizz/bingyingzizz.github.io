@@ -1,6 +1,6 @@
 # 紧 Hausdorff 上商映射的四种说法　`prop.chaus-quotient-equiv`
 命题：商映射 $\iff$ 正则满 $\iff$ 满态射 $\iff$ 满射
-layer 18 · 命题 · 紧 Hausdorff 空间 · 拓扑学
+layer 20 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=prop.chaus-quotient-equiv)　·　[节点索引](../index.md)
 
 设 $\pi : S \to T$ 是**紧 Hausdorff** 空间之间的连续映射。以下四条等价：

@@ -1,6 +1,6 @@
 # 重心重分　`def.barycentric-subdivision`
 重心重分：把单纯形再切细
-layer 17 · 定义 · 同调群 · 拓扑学
+layer 19 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.barycentric-subdivision)　·　[节点索引](../index.md)
 
 设 $K$ 是单纯复形。$K$ 的**一阶重心重分** $K^{(1)}$ 的顶点是 $K$ 的所有非空单纯形 $\sigma$ 的重心 $\hat\sigma$；$\hat\sigma_{0}, \ldots, \hat\sigma_{p}$ 张成 $K^{(1)}$ 的一个 $p$-单纯形，当且仅当

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis / Set Theory
+layer 19 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis / Set Theory
 
 ## Statement · **draft**
 The $(\mathbb{R}, +, \cdot, \le)$ constructed above satisfies three groups of properties:

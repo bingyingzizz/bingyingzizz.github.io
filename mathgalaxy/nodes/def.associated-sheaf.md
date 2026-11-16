@@ -1,6 +1,6 @@
 # 关联层　`def.associated-sheaf`
 定义：$X^{\sharp} := h_{X}^{\#}$
-layer 16 · 定义 · 层与拓扑 · 范畴论
+layer 18 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.associated-sheaf)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景，$X \in \mathcal{C}$。**关联层**（associated sheaf）是「先米田嵌入、再层化」：

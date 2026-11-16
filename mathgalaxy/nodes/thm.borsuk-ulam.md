@@ -1,6 +1,6 @@
 # Borsuk–Ulam 定理（二维）　`thm.borsuk-ulam`
 Borsuk–Ulam 定理：$S^{2} \to \mathbb{R}^{2}$ 必有对径点同值
-layer 28 · 定理 · 复分析的拓扑应用 · 复变函数
+layer 32 · 定理 · 复分析的拓扑应用 · 复变函数
 [在星图里打开](../#n=thm.borsuk-ulam)　·　[节点索引](../index.md)
 
 对每个连续映射 $f : S^{2} \to \mathbb{R}^{2}$，存在 $x \in S^{2}$ 使

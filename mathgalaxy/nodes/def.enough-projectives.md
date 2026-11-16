@@ -1,6 +1,6 @@
 # 足够多投射对象　`def.enough-projectives`
 足够多投射对象
-layer 15 · 定义 · 加法与阿贝尔范畴 · 同调代数
+layer 17 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.enough-projectives)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ **有足够多的投射对象**，如果对每个 $X \in \mathcal{C}$，都存在投射对象 $P$ 与**满态射**

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 23 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: a fractional linear transformation is the most "rigid" class of holomorphic bijections of the Riemann sphere — it sends circles (including lines) to circles and preserves the cross-ratio.

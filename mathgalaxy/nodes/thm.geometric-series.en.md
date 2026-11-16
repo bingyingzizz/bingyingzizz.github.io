@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 16 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $q \in \mathbb{R}$. Then the series $\sum_{n=0}^{\infty} q^{n}$ converges **if and only if** $|q| < 1$; in that case

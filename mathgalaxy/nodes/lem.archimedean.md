@@ -1,6 +1,6 @@
 # Archimedes 性质　`lem.archimedean`
 Archimedes 性质与 $\mathbb{Q}$ 的稠密性
-layer 18 · 引理 · 实数的运算与不等式 · 数学分析+集合论
+layer 20 · 引理 · 实数的运算与不等式 · 数学分析+集合论
 [在星图里打开](../#n=lem.archimedean)　·　[节点索引](../index.md)
 
 设 $K$ 是一个**完备有序域**（比如 $\mathbb{R}$）。则：

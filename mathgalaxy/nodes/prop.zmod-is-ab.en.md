@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 9 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Z-Mod and Ab` (short) · `Z-Modules Are Abelian Groups` (full)
 
 ## Statement and proof

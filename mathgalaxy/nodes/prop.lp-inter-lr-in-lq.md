@@ -1,6 +1,6 @@
 # L^p 与 L^r 的交包含于 L^q　`prop.lp-inter-lr-in-lq`
 命题（插值）：$L^p \cap L^r \subseteq L^q$
-layer 21 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 26 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.lp-inter-lr-in-lq)　·　[节点索引](../index.md)
 
 设 $0 < p < q < r \le \infty$。若 $f \in L^p \cap L^r$，则 $f \in L^q$，且

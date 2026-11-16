@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 28 · definition · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
+layer 32 · definition · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
 
 ## Statement · **draft**
 A **function element** is a pair $(f, D)$: $D$ is an open disk and $f$ is holomorphic on $D$.

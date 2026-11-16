@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · corollary · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
+layer 21 · corollary · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $K$ be a complete ordered field (e.g. $\mathbb{R}$).

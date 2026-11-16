@@ -1,6 +1,6 @@
 # 图与交换图　`def.commutative-diagram`
 图与交换图
-layer 10 · 定义 · 图与极限 · 范畴论
+layer 12 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.commutative-diagram)　·　[节点索引](../index.md)
 
 设 $I$ 是一个**小范畴**（只有一个小集合那么多对象与态射）。$\mathcal{C}$ 中**以 $I$ 为索引范畴的图**就是一个函子

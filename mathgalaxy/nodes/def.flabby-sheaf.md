@@ -1,6 +1,6 @@
 # 松弛层　`def.flabby-sheaf`
 松弛层（flabby sheaf）
-layer 16 · 定义 · 层上同调 · 同调代数+拓扑学
+layer 18 · 定义 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=def.flabby-sheaf)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间，$\mathcal{F}$ 是 $X$ 上的阿贝尔群层。称 $\mathcal{F}$ 为**松弛层**（或**软弛层**、flabby sheaf），如果对任意开集 $U\subseteq X$，限制映射 $\Gamma(X,\mathcal{F})\to\Gamma(U,\mathcal{F})$ 是满射：即每个开集上的截面都能延拓为全空间上的截面。

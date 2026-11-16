@@ -1,6 +1,6 @@
 # 自由群　`def.free-group`
 自由群 $F(S)$（约化字）
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 10 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.free-group)　·　[节点索引](../index.md)
 
 设 $S$ 是集合。$S$ 上的**自由群** $F(S)$ 由所有**约化字** $s_{1}^{\varepsilon_{1}}\cdots s_{n}^{\varepsilon_{n}}$ 组成，其中 $s_{i}\in S$、$\varepsilon_{i}=\pm1$，且相邻的 $s_{i}=s_{i+1}$、$\varepsilon_{i}=-\varepsilon_{i+1}$ 已被相消；空字记 $1$。乘法为字的拼接后再约化。包含映射 $\iota:S\to F(S)$ 把 $s$ 送到单字母字。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis / Topology
+layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.real-metric-space.md` and `proofs/`.

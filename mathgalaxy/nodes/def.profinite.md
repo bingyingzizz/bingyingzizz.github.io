@@ -1,6 +1,6 @@
 # 投射有限空间　`def.profinite`
 投射有限空间
-layer 12 · 定义 · Stone 与 Stonean · 拓扑学
+layer 14 · 定义 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=def.profinite)　·　[节点索引](../index.md)
 
 **投射有限空间**是有限离散空间沿一个**有向**系统取极限得到的拓扑空间：

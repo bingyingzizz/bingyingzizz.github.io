@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.enough-projectives`](../nodes/def.enough-projectives.md) 足够多投射对象：用到了定义 足够多投射对象　[proofs/def-link.extab-enough.md](../proofs/def-link.extab-enough.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-ext-abelian-groups.md](../proofs/dep.cat-ab-prop-ext-abelian-groups.md)

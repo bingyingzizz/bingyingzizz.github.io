@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 24 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 For $z = x + iy \in \mathbb{C}$, define by **power series**

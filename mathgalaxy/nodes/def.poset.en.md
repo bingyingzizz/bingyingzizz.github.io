@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 5 · definition · cluster Order Structures (`order.structure`) · Order Theory
+layer 7 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
 ## Statement · **draft**
 Let $\preceq$ be a binary relation on a set $A$. Then $\preceq$ is a **partial order on $A$** if and only if:

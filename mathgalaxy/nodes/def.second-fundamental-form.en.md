@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 34 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 The **second fundamental form** of a surface is

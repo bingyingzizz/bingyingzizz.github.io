@@ -1,6 +1,6 @@
 # 阿贝尔群范畴　`def.category-of-abelian-groups`
 阿贝尔群范畴 $\mathbf{Ab}$
-layer 8 · 定义 · 范畴与图 · 范畴论+抽象代数
+layer 11 · 定义 · 范畴与图 · 范畴论+抽象代数
 [在星图里打开](../#n=def.category-of-abelian-groups)　·　[节点索引](../index.md)
 
 **阿贝尔群范畴** $\mathbf{Ab}$：对象是阿贝尔群，态射是群同态；它是 $\mathbf{Grp}$ 的**全子范畴**。
@@ -13,7 +13,7 @@ layer 8 · 定义 · 范畴与图 · 范畴论+抽象代数
 - …另有入边，续页见 [nodes/def.category-of-abelian-groups.3.md](./def.category-of-abelian-groups.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.category-of-abelian-groups.4.md](./def.category-of-abelian-groups.4.md)
+- …另有出边，续页见 [nodes/def.category-of-abelian-groups.5.md](./def.category-of-abelian-groups.5.md)
 
 refs: Mac Lane, Categories for the Working Mathematician, Ch. I, II；Weibel, An Introduction to Homological Algebra, Ch. 1
 

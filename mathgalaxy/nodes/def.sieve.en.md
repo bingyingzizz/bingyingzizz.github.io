@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 13 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement · **draft**
 Let $X \in \mathcal{C}$.

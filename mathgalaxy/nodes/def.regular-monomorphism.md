@@ -1,6 +1,6 @@
 # 正则单态射　`def.regular-monomorphism`
 正则单态射
-layer 14 · 定义 · 单满、子对象与像 · 范畴论
+layer 16 · 定义 · 单满、子对象与像 · 范畴论
 [在星图里打开](../#n=def.regular-monomorphism)　·　[节点索引](../index.md)
 
 态射 $i : Y \to X$ 叫**正则单态射**，如果它是某对平行态射 $f, g : X \rightrightarrows Z$ 的**等化子**（见 `def.equalizer`）：

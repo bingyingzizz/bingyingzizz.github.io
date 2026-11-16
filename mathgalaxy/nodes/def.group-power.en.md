@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a group, $x \in G$, and $e$ the identity. The **integer powers** $x^{n}$ ($n \in \mathbb{Z}$) are defined by

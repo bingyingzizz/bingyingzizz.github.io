@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · lemma · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 21 · lemma · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Free Complex of a Cover` (short) · `The Free Complex of a Cover Is Acyclic` (full)
 
 ## Statement and proof

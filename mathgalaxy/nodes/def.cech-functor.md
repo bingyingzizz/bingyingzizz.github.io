@@ -1,6 +1,6 @@
 # Čech 函子　`def.cech-functor`
 Čech 函子（Čech Functor）
-layer 16 · 定义 · 层与拓扑 · 范畴论
+layer 18 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.cech-functor)　·　[节点索引](../index.md)
 
 景 $\mathcal{C}$ 上的 **Čech 函子** $\widehat{H}$ 定义在预层上：

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 13 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Hom of Sheaves` (short) · `Hom of Sheaves Computed in Presheaves` (full)
 
 ## Statement and proof

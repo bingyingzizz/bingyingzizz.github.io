@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · corollary · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 31 · corollary · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Rank Theorem` (short) · `Constant Rank Theorem` (full)
 
 ## Statement · **draft**

@@ -1,6 +1,6 @@
 # 内射对象的判据　`prop.injective-criterion`
 内射对象的四条等价说法
-layer 18 · 命题 · 同调与正合列 · 同调代数
+layer 20 · 命题 · 同调与正合列 · 同调代数
 [在星图里打开](../#n=prop.injective-criterion)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$I \in \mathcal{A}$。下列等价：

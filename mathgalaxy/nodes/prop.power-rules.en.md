@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
+layer 12 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $A$ be a commutative ring, $a, b \in A$, $m, n \in \mathbb{Z}$ (when negative exponents occur, $a, b$ is required to be invertible). Then

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 22 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $a_n \ge 0$ and suppose the sequence is **decreasing**. Then the original series and the one obtained by sampling at $2^{k}$ converge or diverge together, that is,

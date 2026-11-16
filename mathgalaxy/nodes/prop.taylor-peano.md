@@ -1,6 +1,6 @@
 # Taylor 公式（Peano 余项）　`prop.taylor-peano`
 命题：Taylor 公式的 Peano 余项形式
-layer 27 · 命题 · 微分中值定理与 Taylor · 数学分析
+layer 29 · 命题 · 微分中值定理与 Taylor · 数学分析
 [在星图里打开](../#n=prop.taylor-peano)　·　[节点索引](../index.md)
 
 设 $f$ 在 $x_0$ 的邻域内有 $n$ 阶导数（第 $n$ 阶在 $x_0$ 处连续即可），则当 $x \to x_0$ 时

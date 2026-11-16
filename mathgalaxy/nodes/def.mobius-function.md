@@ -1,6 +1,6 @@
 # Möbius 函数　`def.mobius-function`
 Möbius 函数 $\mu$：按素因子个数取符号
-layer 14 · 定义 · 数论函数与素数分布 · 数论
+layer 23 · 定义 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=def.mobius-function)　·　[节点索引](../index.md)
 
 定义

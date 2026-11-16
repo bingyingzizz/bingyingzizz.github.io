@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 14 · definition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 Let $D : I \to \mathcal{C}$ be a diagram and $F : \mathcal{C} \to \mathcal{D}$ a functor. $F$ induces a comparison map between cones

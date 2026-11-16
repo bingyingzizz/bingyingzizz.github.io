@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · corollary · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
+layer 22 · corollary · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.stonean-retract.md` and `proofs/`.

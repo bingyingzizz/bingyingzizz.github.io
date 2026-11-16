@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
+layer 15 · definition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
 ## Statement · **draft**
 A morphism $i : Y \to X$ is a **monomorphism** (mono) if for every object $Z$ and all $f, g : Z \to Y$,

@@ -1,6 +1,6 @@
 # R/R_disc 在 Stone 上的截面　`prop.condab-quotient-r-disc`
 命题：$Q = \mathbb{R}/\mathbb{R}^{\mathrm{disc}}$ 的截面是连续函数模局部常值函数
-layer 20 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
+layer 22 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 [在星图里打开](../#n=prop.condab-quotient-r-disc)　·　[节点索引](../index.md)
 
 记 $Q := \mathbb{R}/\mathbb{R}^{\mathrm{disc}}$（把 $\mathbb{R}^{\mathrm{disc}}$ 看成离散拓扑的加法群，$\mathbb{R}$ 取通常拓扑，商在凝聚态阿贝尔群里取）。设 $S$ 是 **Stone** 空间。则

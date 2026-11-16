@@ -1,6 +1,6 @@
 # 合成列　`def.composition-series`
 合成列与合成因子
-layer 10 · 定义 · 合成列与可解群 · 抽象代数
+layer 12 · 定义 · 合成列与可解群 · 抽象代数
 [在星图里打开](../#n=def.composition-series)　·　[节点索引](../index.md)
 
 群 $G$ 的一条**正规链**是一串子群

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Filtered Limit Cohomology` (short) · `Cohomology of a Filtered Limit` (full)
 
 ## Statement and proof

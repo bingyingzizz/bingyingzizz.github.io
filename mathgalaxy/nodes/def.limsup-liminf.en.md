@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 16 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 For a sequence of real numbers $\{x_n\}$, set

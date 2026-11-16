@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 17 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 names: `Stone's Theorem` (short) · `A. H. Stone's Theorem` (full)
 
 ## Statement and proof

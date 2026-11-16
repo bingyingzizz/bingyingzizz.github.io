@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 15 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 ## Statement · **draft**
 A functor $F : \mathcal{C} \to \mathcal{D}$ has a right adjoint $\iff$ for every $Y \in \mathcal{D}$ the functor

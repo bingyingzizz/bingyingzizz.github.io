@@ -1,6 +1,6 @@
 # 全纯函数的 Taylor 展开　`thm.taylor-complex`
 定理：全纯函数可展成 Taylor 级数
-layer 25 · 定理 · Cauchy 理论 · 复变函数
+layer 29 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.taylor-complex)　·　[节点索引](../index.md)
 
 **白话**：全纯函数在任意一点的附近都是一个幂级数 —— 也就是说，对复函数而言「可微」与「能写成幂级数」是同一件事。

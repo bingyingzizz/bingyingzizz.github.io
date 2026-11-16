@@ -1,6 +1,6 @@
 # 幂级数的逐项运算　`thm.power-series-analytic`
 定理：收敛区间内幂级数可逐项求导与积分
-layer 27 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 29 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.power-series-analytic)　·　[节点索引](../index.md)
 
 设 $f(x) := \sum_{n=0}^{\infty} a_n (x - x_0)^{n}$ 的收敛半径为 $R > 0$。则：

@@ -1,6 +1,6 @@
 # 复函数的积分　`def.integral-complex`
 复值函数的积分：正负部相减
-layer 20 · 定义 · 积分 · 实变函数+数学分析
+layer 25 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integral-complex)　·　[节点索引](../index.md)
 
 设 $f : X \to \overline{\mathbb{R}}$ 可测，记正部与负部

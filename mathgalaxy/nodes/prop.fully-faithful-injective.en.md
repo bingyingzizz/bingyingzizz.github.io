@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 12 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 If $F : \mathcal{C} \to \mathcal{D}$ is **fully faithful**, then it is **essentially injective**:

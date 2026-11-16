@@ -1,6 +1,6 @@
 # 正规化子　`def.normalizer`
 正规化子：把子群整体送到自己的元素
-layer 11 · 定义 · 群作用与置换 · 抽象代数
+layer 13 · 定义 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=def.normalizer)　·　[节点索引](../index.md)
 
 设 $G$ 是群，$S \subseteq G$。集合

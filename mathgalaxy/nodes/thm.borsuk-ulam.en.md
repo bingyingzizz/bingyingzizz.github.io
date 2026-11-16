@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 28 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
+layer 32 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
 
 ## Statement · **draft**
 For every continuous map $f : S^{2} \to \mathbb{R}^{2}$ there is $x \in S^{2}$ such that

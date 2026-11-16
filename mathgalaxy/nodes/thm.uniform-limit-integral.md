@@ -1,6 +1,6 @@
 # 积分与极限交换　`thm.uniform-limit-integral`
 定理：一致收敛 $\implies$ 极限与积分可交换（Riemann 版）
-layer 19 · 定理 · 函数列、幂级数与初等函数 · 数学分析
+layer 21 · 定理 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=thm.uniform-limit-integral)　·　[节点索引](../index.md)
 
 设 $f_n$ 在 $[a, b]$ 上可积、$f_n \rightrightarrows f$。则 $f$ 可积，且

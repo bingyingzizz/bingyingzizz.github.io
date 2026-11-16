@@ -21,8 +21,10 @@
 
 - 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
 
-- 子对象的交 | subobject intersection | fibred product of subobjects | 一般范畴中的交 | 一般范畴里的交 | 范畴中的交 | 范畴里的交 | categorical intersection | intersection in a category | intersection of subobjects → def.intersection-subobject
+- 集合范畴 | Set 范畴 | 集合的范畴 | Set → def.category-of-sets
 
-- 子对象的原像 | 原像子对象 | preimage subobject | pullback of a subobject | 范畴中的原像 | 范畴里的原像 → def.preimage-subobject
+- 拓扑空间范畴 | Top 范畴 | 拓扑空间的范畴 | Top → def.category-of-topological-spaces
 
-见 `../../alias.md`。
+- 笛卡尔积是集合范畴的积 | Set 中的积是笛卡尔积 | 笛卡尔积的泛性质 → prop.cartesian-product-is-set-product
+
+> 续见 alias/aka/category.22.md

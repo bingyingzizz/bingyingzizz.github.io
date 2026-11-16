@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
+layer 19 · definition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis / Topology
 
 ## Statement · **draft**
 Let $X \subseteq \mathbb{R}$, $f : X \to \mathbb{R}$. Then $f$ is **uniformly continuous** if and only if

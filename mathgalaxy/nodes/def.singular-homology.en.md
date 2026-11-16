@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · definition · cluster Homology Groups (`topology.homology`) · Topology
+layer 27 · definition · cluster Homology Groups (`topology.homology`) · Topology
 
 ## Statement · **draft**
 Let $X$ be an arbitrary topological space. A **singular $p$-simplex** is an arbitrary continuous map

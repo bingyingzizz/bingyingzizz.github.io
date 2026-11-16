@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 16 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Chart` (short) · `Chart and Transition Maps` (full)
 
 ## Statement · **draft**

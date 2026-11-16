@@ -1,6 +1,6 @@
 # 拓扑斯的态射　`def.topos-morphism`
 拓扑斯的态射
-layer 18 · 定义 · 拓扑斯 · 范畴论
+layer 20 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.topos-morphism)　·　[节点索引](../index.md)
 
 拓扑斯的**态射** $f : \mathcal{T} \to \mathcal{T}'$ 是一对函子

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · corollary · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis / Topology
+layer 23 · corollary · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis / Topology
 
 ## Statement · **draft**
 Let $K \subseteq \mathbb{R}^{n}$, regarded as a metric space with the Euclidean distance. Then $K$ is compact if and only if $K$ is bounded and closed.

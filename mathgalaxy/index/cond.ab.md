@@ -3,11 +3,11 @@
 在凝聚态集上做代数：阿贝尔群值层 → 截面函子 → 足够多投射对象 → 张量与内 Hom。
 中心天体 def.condensed-abelian-group　·　8 个节点　·　根 `../`
 
-- def.condensed-abelian-group　凝聚态阿贝尔群　layer 19
-- prop.condab-section　截面函子保极限余极限　layer 19
-- thm.condab-ab　凝聚态阿贝尔群满足 AB6 与 AB4*　layer 20
-- lem.stonean-projective　Stonean 给出有限表现投射对象　layer 20
-- prop.condab-generated　CondAb 由有限表现投射对象生成　layer 20
-- prop.discrete-functor-coproduct　离散函子保直和　layer 20
-- prop.cond-quotient-topological　商群在凝聚态意义下一致　layer 20
-- prop.banach-as-condensed　Banach 空间都是凝聚态阿贝尔群　layer 20
+- def.condensed-abelian-group　凝聚态阿贝尔群　layer 21
+- prop.condab-section　截面函子保极限余极限　layer 21
+- thm.condab-ab　凝聚态阿贝尔群满足 AB6 与 AB4*　layer 22
+- lem.stonean-projective　Stonean 给出有限表现投射对象　layer 22
+- prop.condab-generated　CondAb 由有限表现投射对象生成　layer 22
+- prop.discrete-functor-coproduct　离散函子保直和　layer 22
+- prop.cond-quotient-topological　商群在凝聚态意义下一致　layer 22
+- prop.banach-as-condensed　Banach 空间都是凝聚态阿贝尔群　layer 26

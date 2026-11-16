@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 25 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 For every $z_{0} \in \mathbb{C}$ there are a neighbourhood $U$ of $z_{0}$ and an open set $V$ such that $\exp : U \to V$ is biholomorphic, and its inverse

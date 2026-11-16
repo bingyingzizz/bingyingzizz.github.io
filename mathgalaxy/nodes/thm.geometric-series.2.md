@@ -3,4 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.series`](../nodes/def.series.md) 级数收敛 + [`thm.bernoulli`](../nodes/thm.bernoulli.md) Bernoulli 不等式 + [`cor.archimedean-epsilon`](../nodes/cor.archimedean-epsilon.md) Archimedes 的 ε 形式与取整 + [`thm.cauchy-criterion-series`](../nodes/thm.cauchy-criterion-series.md) 级数的 Cauchy 准则：部分和公式 + Bernoulli $\implies$ 几何级数　[proofs/imp.geometric-series.md](../proofs/imp.geometric-series.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.sym-real-thm-geometric-series.md](../proofs/dep.sym-real-thm-geometric-series.md)
 - [`def.power`](../nodes/def.power.md) 整数幂：用到了定义 整数幂　[proofs/def-link.power-geometric.md](../proofs/def-link.power-geometric.md)

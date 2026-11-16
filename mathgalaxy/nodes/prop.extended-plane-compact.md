@@ -1,6 +1,6 @@
 # 扩充复平面是紧的　`prop.extended-plane-compact`
 $\widehat{\mathbb{C}} \cong S^{2}$：紧、列紧，$z_{n} \to \infty$ 就是 $|z_{n}| \to \infty$
-layer 21 · 命题 · 复变函数基础 · 复变函数
+layer 23 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.extended-plane-compact)　·　[节点索引](../index.md)
 
 球极投影是 $\widehat{\mathbb{C}} \to S^{2}$ 的同胚，因此：

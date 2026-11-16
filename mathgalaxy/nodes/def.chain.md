@@ -1,6 +1,6 @@
 # 链　`def.chain`
 链 / 反链
-layer 6 · 定义 · 序结构 · 序理论
+layer 8 · 定义 · 序结构 · 序理论
 [在星图里打开](../#n=def.chain)　·　[节点索引](../index.md)
 
 设 $(P, \preceq )$ 是偏序集，$C \subseteq P$。

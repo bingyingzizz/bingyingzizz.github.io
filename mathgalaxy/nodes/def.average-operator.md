@@ -1,6 +1,6 @@
 # 平均算子 Aᵣ　`def.average-operator`
 平均算子（Averaging Operator $A_{r} f$）
-layer 23 · 定义 · 微分定理 · 实变函数+数学分析
+layer 28 · 定义 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=def.average-operator)　·　[节点索引](../index.md)
 
 设 $f \in L^1_{loc}$，$x \in \mathbb{R}^n$，$r > 0$。定义

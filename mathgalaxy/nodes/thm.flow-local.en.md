@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
+layer 30 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
 ## Statement · **draft**
 **In plain terms**: integral curves of a vector field always exist and are unique locally, and the family of solutions depends smoothly on the starting point and on time — that is, a local flow always exists.

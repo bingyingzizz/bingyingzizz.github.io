@@ -1,6 +1,6 @@
 # Sylow 子群　`def.sylow-subgroup`
 Sylow p-子群：p-部分的最大子群
-layer 10 · 定义 · 群作用与置换 · 抽象代数
+layer 12 · 定义 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=def.sylow-subgroup)　·　[节点索引](../index.md)
 
 设 $G$ 是有限群，$|G| = p^{a} m$，其中 $p$ 是素数、$p \nmid m$。$G$ 的 $p^{a}$ 阶子群 $P$ 称为 **Sylow $p$-子群**。

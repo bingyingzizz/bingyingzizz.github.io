@@ -1,6 +1,6 @@
 # 单值支的存在判据　`prop.single-valued-branch`
 单值支：多值函数在区域上何时能取到一个连续单值分支
-layer 29 · 命题 · 复变函数基础 · 复变函数
+layer 33 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.single-valued-branch)　·　[节点索引](../index.md)
 
 设 $D \subset \mathbb{C}$ 是区域，$F$ 是 $D$ 上的多值函数（每点给一个非空值集 $F(z)$）。$F$ 的**单值支**是连续函数 $f : D \to \math

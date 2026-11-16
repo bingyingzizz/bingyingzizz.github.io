@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 24 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $\{a_n\} \subseteq \mathbb{R}$, $s_N := \sum_{n=1}^{N} a_n$. Then $\sum a_n$ converges if and only if

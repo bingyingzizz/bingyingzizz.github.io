@@ -1,6 +1,6 @@
 # 开映射定理（Banach 版）　`thm.open-mapping-banach`
 开映射定理：满射有界算子把开集映成开集
-layer 18 · 定理 · Baire 纲与三大定理 · 泛函分析
+layer 25 · 定理 · Baire 纲与三大定理 · 泛函分析
 [在星图里打开](../#n=thm.open-mapping-banach)　·　[节点索引](../index.md)
 
 设 $E, F$ 是 Banach 空间，$u \in B(E, F)$ **满射**。则 $u$ 是开映射：开集的像是开集。

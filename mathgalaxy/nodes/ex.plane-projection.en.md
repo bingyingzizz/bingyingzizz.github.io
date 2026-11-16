@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · example · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 27 · example · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.plane-projection.md` and `proofs/`.

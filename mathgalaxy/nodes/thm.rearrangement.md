@@ -1,6 +1,6 @@
 # 重排不变性　`thm.rearrangement`
 定理：绝对收敛级数任意重排后和不变
-layer 24 · 定理 · 数项级数的敛散性 · 数学分析
+layer 26 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.rearrangement)　·　[节点索引](../index.md)
 
 设 $\sum a_n$ **绝对收敛**，$\sigma : \mathbb{N} \to \mathbb{N}$ 是任意双射。则 $\sum a_{\sigma(n)}$ 也绝对收敛，且

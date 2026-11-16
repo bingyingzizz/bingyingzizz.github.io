@@ -1,6 +1,6 @@
 # 删除消解　`def.deleted-resolution`
 删除消解：去掉增广之后剩下的复形
-layer 15 · 定义 · 消解与维数 · 同调代数
+layer 17 · 定义 · 消解与维数 · 同调代数
 [在星图里打开](../#n=def.deleted-resolution)　·　[节点索引](../index.md)
 
 设 $\varepsilon : P_{0} \to M$ 是 $R$-模 

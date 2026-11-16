@@ -1,6 +1,6 @@
 # Cesàro 平均收敛　`thm.cesaro-mean-limit`
 Cesàro 平均：收敛数列的算术平均同极限
-layer 15 · 定理 · 实数与极限 · 数学分析
+layer 17 · 定理 · 实数与极限 · 数学分析
 [在星图里打开](../#n=thm.cesaro-mean-limit)　·　[节点索引](../index.md)
 
 若实数列 $a_n \to L$，则其前 $n$ 项算术平均 $\sigma_n := \dfrac{a_1 + \cdots + a_n}{n}$ 也满足 $\sigma_n \to L$。逆命题不成立。

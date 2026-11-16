@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.measurable-function`](../nodes/def.measurable-function.md) 可测函数：用到了定义 可测函数　[proofs/def-link.measurable-simple.md](../proofs/def-link.measurable-simple.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-def-simple-function.md](../proofs/dep.sym-complex-def-simple-function.md)
 
 > 续见 [nodes/def.simple-function.3.md](./def.simple-function.3.md)

@@ -1,6 +1,6 @@
 # Maurer–Cartan 方程　`thm.maurer-cartan`
 Maurer–Cartan 方程
-layer 31 · 定理 · Lie 群 · 微分几何
+layer 33 · 定理 · Lie 群 · 微分几何
 [在星图里打开](../#n=thm.maurer-cartan)　·　[节点索引](../index.md)
 
 **白话**：Lie 群上那组「随群一起平移」的 $1$-形式，其外微分完全由结构常数决定 —— 一条公式把群的乘法（结构常数）和流形的微分（$\mat

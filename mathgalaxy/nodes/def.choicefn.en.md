@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
+layer 8 · definition · cluster Choice Principles (`order.choice`) · Order Theory / Set Theory
 
 ## Statement · **draft**
 Let $F$ be a family of sets with $\emptyset \notin F$.

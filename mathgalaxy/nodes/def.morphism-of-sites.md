@@ -1,6 +1,6 @@
 # 景的态射　`def.morphism-of-sites`
 景的态射
-layer 17 · 定义 · 拓扑斯 · 范畴论
+layer 19 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.morphism-of-sites)　·　[节点索引](../index.md)
 
 **景的态射**是一个**连续函子** $f^{-1} := g : \mathcal{C} \to \mathcal{C}'$，并且要求 $f^{-1}$ 是**左正合**的（保有限极限）。若 $f^{-1}$ 另有右伴随 $f_{*}$，则记 $f^{-1} \dashv f_{*}$。

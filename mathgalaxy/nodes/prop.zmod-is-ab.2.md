@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.zmod-is-ab)　·　第 1 页 [nodes/prop.zmod-is-ab.md](./prop.zmod-is-ab.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-zmod-is-ab.md](../proofs/dep.cat-ab-prop-zmod-is-ab.md)
 - [`def.subcategory`](../nodes/def.subcategory.md) 子范畴：用到了定义 子范畴　[proofs/dep.gap-zmod-is-ab-subcategory.md](../proofs/dep.gap-zmod-is-ab-subcategory.md)
 
 > 续见 [nodes/prop.zmod-is-ab.3.md](./prop.zmod-is-ab.3.md)

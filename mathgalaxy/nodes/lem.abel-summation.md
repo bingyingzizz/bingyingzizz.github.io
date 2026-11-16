@@ -1,6 +1,6 @@
 # 阿贝尔求和（分部求和）　`lem.abel-summation`
 Abel 分部求和：有限和恒等式与 Dirichlet 判别法
-layer 23 · 引理 · 数项级数的敛散性 · 数学分析
+layer 25 · 引理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=lem.abel-summation)　·　[节点索引](../index.md)
 
 设 $(a_n),(b_n)$ 为数列，$A_n=\sum_{k=1}^{n}a_k$（$A_0=0$）。则对 $n\ge1$，

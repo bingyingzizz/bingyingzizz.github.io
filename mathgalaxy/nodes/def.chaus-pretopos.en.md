@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 20 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `CHaus Is a Pretopos` (short) · `Compact Hausdorff Spaces Form a Pretopos` (full)
 
 ## Statement and proof

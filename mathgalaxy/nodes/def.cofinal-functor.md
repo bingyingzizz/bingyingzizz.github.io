@@ -1,6 +1,6 @@
 # 共尾函子　`def.cofinal-functor`
 共尾函子
-layer 13 · 定义 · 图与极限 · 范畴论
+layer 15 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.cofinal-functor)　·　[节点索引](../index.md)
 
 设 $F : J \to I$ 是函子。对 $i \in I$，记 $i \downarrow F$ 为逗号范畴，它的对象是 $\{\, f : i \to F(j) \,\}$（$j \in J$）。

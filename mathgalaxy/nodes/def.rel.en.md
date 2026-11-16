@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 4 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
+layer 6 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
 
 ## Statement · **reviewed**
 Let $A$ and $B$ be sets.

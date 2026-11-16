@@ -1,6 +1,6 @@
 # 内射等价于可除　`thm.pid-injective-divisible`
 主理想整环上，内射当且仅当可除
-layer 18 · 定理 · 内射模与可除群 · 同调代数
+layer 20 · 定理 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=thm.pid-injective-divisible)　·　[节点索引](../index.md)
 
 设 $R$ 是**主理想整环**（例如 $\mathbb{Z

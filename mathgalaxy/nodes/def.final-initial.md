@@ -1,6 +1,6 @@
 # 终对象 / 始对象　`def.final-initial`
 终对象与始对象
-layer 12 · 定义 · 图与极限 · 范畴论
+layer 14 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.final-initial)　·　[节点索引](../index.md)
 
 $\mathcal{C}$ 的**终对象** $\mathbf{1}_{\mathcal{C}}$ 是空图 $\emptyset \to \mathcal{C}$ 的极限，**始对象** $\mathbf{0}_{\mathcal{C}}$ 是它的余极限。用同构集来刻画：

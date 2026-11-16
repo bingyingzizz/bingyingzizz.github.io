@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $p$ be a prime and $G$ a finite group. If $|G| = p^{n}$ with $n \ge 0$, then $G$ is a **$p$-group**.

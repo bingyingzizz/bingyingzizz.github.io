@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 15 · proposition · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $f \in K[x]$ be a nonzero polynomial, $\deg f = n$. Then $f$ has at most $n$ roots in $K$ (distinct roots).

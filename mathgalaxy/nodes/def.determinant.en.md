@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 17 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 For $A = (a_{ij}) \in M_n(K)$, define the **determinant**

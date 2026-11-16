@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topos-morphism`](../nodes/def.topos-morphism.md) 拓扑斯的态射：用到了定义 拓扑斯的态射　[proofs/def-link.derivedcomp-toposmor.md](../proofs/def-link.derivedcomp-toposmor.md)
+- [`def.spectral-sequence`](../nodes/def.spectral-sequence.md) 谱序列：用到了定义 谱序列　[proofs/dep.spectral-derivedpush.md](../proofs/dep.spectral-derivedpush.md)

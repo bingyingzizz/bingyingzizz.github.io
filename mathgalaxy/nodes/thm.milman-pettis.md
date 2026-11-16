@@ -1,6 +1,6 @@
 # Milman–Pettis 定理　`thm.milman-pettis`
 一致凸 Banach 空间自反（Milman–Pettis）
-layer 21 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 28 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.milman-pettis)　·　[节点索引](../index.md)
 
 一致凸 Banach 空间（`def.uniformly-convex`）是自反的（`def.reflexive-space`）。

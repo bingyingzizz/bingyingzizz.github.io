@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Order Structures (`order.structure`) · Order Theory
+layer 8 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
 ## Statement · **draft**
 Let $(P, \preceq )$ be a poset and let $C \subseteq P$.

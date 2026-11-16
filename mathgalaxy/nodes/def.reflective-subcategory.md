@@ -1,6 +1,6 @@
 # 反射子范畴　`def.reflective-subcategory`
 反射子范畴
-layer 10 · 定义 · 伴随与反射 · 范畴论
+layer 12 · 定义 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=def.reflective-subcategory)　·　[节点索引](../index.md)
 
 满子范畴 $\mathcal{C}' \subseteq \mathcal{C}$ 叫**反射的**，如果含入函子 $\mathcal{C}' \hookrightarrow \mathcal{C}$ 有左伴随；这个左伴随叫**反射**。对偶的说法是**余反射的**。

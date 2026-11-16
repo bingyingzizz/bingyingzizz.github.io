@@ -1,6 +1,6 @@
 # 距离空间　`def.metric-space`
 距离空间 / 度量空间
-layer 14 · 定义 · 度量空间 · 拓扑学
+layer 16 · 定义 · 度量空间 · 拓扑学
 [在星图里打开](../#n=def.metric-space)　·　[节点索引](../index.md)
 
 *

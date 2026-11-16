@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · proposition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
+layer 28 · proposition · cluster Coherent Duality (`analytic.dual`) · Analytic Spaces
 
 ## Statement · **draft**
 In plain words: **in the closed immersion case (embedding $\operatorname{Spec} A$ into $\operatorname{Spec} R$), the dualizing complex collapses to one line**: it is the "determinant of the normal bundle" shifted by the codimension.

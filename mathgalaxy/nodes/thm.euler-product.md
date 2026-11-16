@@ -1,6 +1,6 @@
 # Euler 乘积　`thm.euler-product`
 Euler 乘积：$\zeta(s) = \prod_{p}\bigl(1 - p^{-s}\bigr)^{-1}$（$\operatorname{Re}s > 1$）
-layer 30 · 定理 · 数论函数与素数分布 · 数论+数学分析
+layer 34 · 定理 · 数论函数与素数分布 · 数论+数学分析
 [在星图里打开](../#n=thm.euler-product)　·　[节点索引](../index.md)
 
 对 $\operatorname{Re} s > 1$，

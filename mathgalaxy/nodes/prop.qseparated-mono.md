@@ -1,6 +1,6 @@
 # 拟分离嵌入底空间　`prop.qseparated-mono`
 命题：$X$ 拟分离 $\implies$ $X \hookrightarrow X(\cdot)$ 是单态射
-layer 21 · 命题 · 凝聚态集 · 凝聚态数学
+layer 23 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.qseparated-mono)　·　[节点索引](../index.md)
 
 若 $X$ 是**拟分离**的凝聚态集，则典范映射

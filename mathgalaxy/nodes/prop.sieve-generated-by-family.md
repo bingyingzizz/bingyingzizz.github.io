@@ -1,6 +1,6 @@
 # 族生成的筛　`prop.sieve-generated-by-family`
 命题：$R = \coprod_{i} \operatorname{im}(h_{f_{i}})$
-layer 12 · 命题 · 层与拓扑 · 范畴论
+layer 14 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sieve-generated-by-family)　·　[节点索引](../index.md)
 
 族 $(f_{i} : X_{i} \to X)_{i \in I}$ 生成的筛是

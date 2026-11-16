@@ -1,6 +1,6 @@
 # Banach 空间　`def.banach-space`
 Banach 空间（完备赋范空间）
-layer 17 · 定义 · 多元微分 · 数学分析
+layer 24 · 定义 · 多元微分 · 数学分析
 [在星图里打开](../#n=def.banach-space)　·　[节点索引](../index.md)
 
 赋范空间 $V$ 叫**完备**的，当且仅当它按度量 $d(v, w) = \|v - w\|$ 完备，即每个 Cauchy 列都收敛。完备的赋范空间叫 **Banach 空间**。

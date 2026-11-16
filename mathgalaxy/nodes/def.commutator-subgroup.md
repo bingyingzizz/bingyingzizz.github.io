@@ -1,6 +1,6 @@
 # 换位子群　`def.commutator-subgroup`
 换位子与换位子群（导群）
-layer 9 · 定义 · 代数结构 · 抽象代数
+layer 11 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.commutator-subgroup)　·　[节点索引](../index.md)
 
 设 $G$ 是群。对 $x, y \in G$，元素

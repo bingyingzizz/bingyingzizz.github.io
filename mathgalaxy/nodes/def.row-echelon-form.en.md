@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 16 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $R \in M_{m \times n}(K)$. If

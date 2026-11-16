@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · definition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 27 · definition · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement · **draft**
 Let the circle $C$ have centre $a$ and radius $R$. One says that $z$ and $z^{*}$ are **symmetric with respect to** $C$ if

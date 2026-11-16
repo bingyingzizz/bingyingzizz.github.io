@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 12 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.reflective-subcategory.md` and `proofs/`.

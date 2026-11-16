@@ -1,6 +1,6 @@
 # 自然变换　`def.natural-transformation`
 自然变换
-layer 9 · 定义 · 函子与自然变换 · 范畴论
+layer 11 · 定义 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=def.natural-transformation)　·　[节点索引](../index.md)
 
 设 $F, G : \mathcal{C} \to \mathcal{D}$ 是两个函子。从 $F$ 到 $G$ 的**自然变换** $\alpha : F \implies G$ 是一族态射

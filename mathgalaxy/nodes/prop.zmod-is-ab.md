@@ -1,6 +1,6 @@
 # Z-模就是阿贝尔群　`prop.zmod-is-ab`
 命题：$\mathbb{Z}\text{-}\mathbf{Mod} \cong \mathbf{Ab}$、$\mathbb{Z}\text{-}\mathbf{Alg} \cong \mathbf{Rng}$
-layer 9 · 命题 · 代数结构 · 抽象代数
+layer 12 · 命题 · 代数结构 · 抽象代数
 [在星图里打开](../#n=prop.zmod-is-ab)　·　[节点索引](../index.md)
 
 $\mathbb{Z}\text{-}\mathbf{Mod} \cong \mathbf{Ab}$（范畴**同构**）；$\mathbb{Z}\text{-}\mathbf{Alg} \cong \mathbf{Rng}$；

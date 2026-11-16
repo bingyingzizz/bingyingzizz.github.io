@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
+layer 18 · proposition · cluster Group Cohomology (`hom.group`) · Homological Algebra / Abstract Algebra
 
 ## Statement · **draft**
 Let $M$ be a $G$-module. The low-degree terms of the standard cochain complex give the exact sequence

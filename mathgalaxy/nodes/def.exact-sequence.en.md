@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
+layer 20 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.exact-sequence.md` and `proofs/`.

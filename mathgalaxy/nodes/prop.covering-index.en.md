@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
+layer 21 · proposition · cluster The Fundamental Group (`topology.fg`) · Topology
 
 ## Statement · **draft**
 Let $p : (E, e_{0}) \to (B, b_{0})$ be a covering map with $E, B$ path-connected and locally path-connected. Then

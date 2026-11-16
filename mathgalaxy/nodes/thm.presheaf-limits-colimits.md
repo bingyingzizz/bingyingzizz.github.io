@@ -1,6 +1,6 @@
 # 预层范畴的极限与余极限　`thm.presheaf-limits-colimits`
 定理：$\widehat{\mathcal{C}}$ 里极限余极限都存在，而且逐点算
-layer 11 · 定理 · 预层与米田 · 范畴论
+layer 13 · 定理 · 预层与米田 · 范畴论
 [在星图里打开](../#n=thm.presheaf-limits-colimits)　·　[节点索引](../index.md)
 
 预层范畴 $\widehat{\mathcal{C}}$ 里**所有小极限与小余极限都存在**，而且都是**逐点**算的：对每个 $X \in \mathcal{C}$，

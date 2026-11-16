@@ -1,6 +1,6 @@
 # 条件收敛　`def.conditional-convergence`
 条件收敛
-layer 17 · 定义 · 数项级数的敛散性 · 数学分析
+layer 23 · 定义 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=def.conditional-convergence)　·　[节点索引](../index.md)
 
 称实（或复）级数 $\sum a_n$ **条件收敛**，当且仅当它收敛，但 $\sum |a_n|$ **发散**。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 17 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $(X, d)$ be a metric space and $T : X \to X$. The map $T$ is called a **contraction** if and only if there is a constant $q \in [0, 1)$ such that

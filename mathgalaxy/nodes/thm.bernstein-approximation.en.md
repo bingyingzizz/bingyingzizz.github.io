@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 24 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 For $f \in C[0, 1]$, put

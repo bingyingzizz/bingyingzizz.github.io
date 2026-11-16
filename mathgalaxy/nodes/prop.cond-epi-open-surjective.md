@@ -1,6 +1,6 @@
 # 开满射是满态射　`prop.cond-epi-open-surjective`
 命题：开满 + 弱 Hausdorff $\implies$ 在 $\mathrm{Cond}$ 里满
-layer 21 · 命题 · 凝聚态集 · 凝聚态数学
+layer 23 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-epi-open-surjective)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 是连续映射。若 $Y$ **弱 Hausdorff**，且每个紧 Hausdorff 子集 $K \subseteq Y$ 都含于某个 $f(S)$（$S$ 紧 Hausdorff），则 $f$ 在 $\mathrm{Cond}$ 里是**满态射**。

@@ -1,6 +1,6 @@
 # 极限的函子性　`thm.lim-functor`
 极限是函子
-layer 12 · 定理 · 图与极限 · 范畴论
+layer 14 · 定理 · 图与极限 · 范畴论
 [在星图里打开](../#n=thm.lim-functor)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 具有所有以 $I$ 为索引的极限。给定图 $F, G : I \to \mathcal{C}$ 与自然变换 $\alpha : F \implies G$，族

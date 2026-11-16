@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 22 · definition · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement · **draft**
 Let $E$ be a vector space over $\mathbb{K}$ ($\mathbb{K} = \mathbb{R}$ or $\mathbb{C}$). A function $\|\cdot\| : E \to [0, +\infty)$ is called a **norm** if

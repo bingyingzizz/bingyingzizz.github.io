@@ -1,6 +1,6 @@
 # 单位与余单位　`def.adjunction-unit`
 单位与余单位
-layer 10 · 定义 · 伴随与反射 · 范畴论
+layer 12 · 定义 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=def.adjunction-unit)　·　[节点索引](../index.md)
 
 设 $F \dashv G$，记那个自然同构为

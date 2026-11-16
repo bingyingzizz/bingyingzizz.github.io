@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 12 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 ## Statement · **draft**
 Let $p : \mathcal{C} \to \mathcal{C}'$ be a functor between small categories and $F : \mathcal{C} \to \mathcal{D}$. The **left Kan extension** of $F$ along $p$ is a functor $p_{!}F : \mathcal{C}' \to \mathcal{D}$ together with a natural transformation

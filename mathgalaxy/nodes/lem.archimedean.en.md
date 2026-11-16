@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
+layer 20 · lemma · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Set Theory
 
 ## Statement · **draft**
 Let $K$ be a **complete ordered field** (for example $\mathbb{R}$). Then:

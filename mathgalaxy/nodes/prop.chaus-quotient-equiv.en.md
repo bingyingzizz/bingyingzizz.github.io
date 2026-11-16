@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
+layer 20 · proposition · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.chaus-quotient-equiv.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # 连续同态与内部 Hom　`prop.continuous-hom-condensed`
 $C_{\mathbb{Z}}(M,N) \cong \operatorname{Hom}_{\mathbb{Z}}(M,N)$（$M$ 紧生成）
-layer 20 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
+layer 22 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.continuous-hom-condensed)　·　[节点索引](../index.md)
 
 若 $M, N$ 是两个拓扑阿贝尔群、且 $M$ **紧生成**，则存在凝聚态阿贝尔群的自然同构 $C_{\mathbb{Z}}(M, N) \cong \operatorname{Hom}_{\mathbb{Z}}(M, N)$。

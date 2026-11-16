@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
+layer 22 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Derived Pushforward Composition` (short) · `Composition of Derived Pushforwards` (full)
 
 ## Statement and proof

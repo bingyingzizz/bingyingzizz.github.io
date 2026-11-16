@@ -1,6 +1,6 @@
 # 拟紧 与 拟紧拟分离 的判定　`thm.qcqs-chaus-equiv`
 紧 Hausdorff 空间 $\cong$ 拟紧拟分离 凝聚态集
-layer 20 · 定理 · 凝聚态集 · 凝聚态数学
+layer 22 · 定理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=thm.qcqs-chaus-equiv)　·　[节点索引](../index.md)
 
 1. 凝聚态集 $X$ 是**拟紧**的 $\iff$ 存在**自由**紧 Hausdorff 空间 $F$ 与满态射

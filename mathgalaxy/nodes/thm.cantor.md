@@ -1,6 +1,6 @@
 # Cantor 定理　`thm.cantor`
 Cantor 定理：$\#A < \#\mathcal{P}(A)$
-layer 9 · 定理 · 基数与等势 · 集合论
+layer 11 · 定理 · 基数与等势 · 集合论
 [在星图里打开](../#n=thm.cantor)　·　[节点索引](../index.md)
 
 对任意集合 $A$：

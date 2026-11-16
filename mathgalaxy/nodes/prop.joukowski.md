@@ -1,6 +1,6 @@
 # Joukowski 映射　`prop.joukowski`
 Joukowski 映射：机翼剖面的来历
-layer 22 · 命题 · 共形映射与正规族 · 复变函数
+layer 24 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.joukowski)　·　[节点索引](../index.md)
 
 **Joukowski 映射** $w = \dfrac{1}{2}\left(z + \dfrac{1}{z}\right)$ 把

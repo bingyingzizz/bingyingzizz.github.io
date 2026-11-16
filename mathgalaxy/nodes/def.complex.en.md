@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis / Abstract Algebra
+layer 21 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis / Abstract Algebra
 
 ## Statement · **draft**
 **The complex numbers** $\mathbb{C} := \mathbb{R}^2$, with the operations

@@ -1,6 +1,6 @@
 # 可补子空间　`def.complemented-subspace`
 定义：代数互补、拓扑互补与可补子空间
-layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 25 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.complemented-subspace)　·　[节点索引](../index.md)
 
 设 $E$ 是赋范空间，$X, Y \subseteq E$ 是线性子空间。

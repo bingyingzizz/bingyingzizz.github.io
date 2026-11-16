@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 24 · proposition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 names: `Resolution Homotopy` (short) · `Homotopy Uniqueness of Projective Resolutions` (full)
 
 ## Statement · **draft**

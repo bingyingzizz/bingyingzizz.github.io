@@ -1,6 +1,6 @@
 # 链同伦　`def.chain-homotopy`
 链同伦：两个链映射之间的「代数同伦」
-layer 18 · 定义 · 同调群 · 拓扑学
+layer 20 · 定义 · 同调群 · 拓扑学
 [在星图里打开](../#n=def.chain-homotopy)　·　[节点索引](../index.md)
 
 设 $C = \{\, C_{n}, \partial_{n} \,\}$、$D = \{\, D_{n}, \partial_{n}' \,\}$ 是两个链复形，$f, g : C \to D$ 是链映射（即 $\partial' f = f \partial$）。

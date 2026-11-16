@@ -1,6 +1,6 @@
 # 界与确界　`def.bound`
 上界 / 下界 / 确界 / 极大元
-layer 6 · 定义 · 序结构 · 序理论
+layer 8 · 定义 · 序结构 · 序理论
 [在星图里打开](../#n=def.bound)　·　[节点索引](../index.md)
 
 设 $(P, \preceq )$ 是偏序集，$S \subseteq P$，$u, l, m \in P$。

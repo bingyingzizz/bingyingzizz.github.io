@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 17 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Tensor Universal Property` (short) · `Universal Property of the Tensor Product` (full)
 
 ## Statement · **draft**

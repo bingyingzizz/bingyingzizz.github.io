@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Constant Sheaf Adjunction` (short) · `Adjunction for Constant Sheaves` (full)
 
 ## Statement and proof

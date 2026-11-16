@@ -1,6 +1,6 @@
 # 紧 Hausdorff 上 Čech 就是上同调　`prop.chaus-cech-eq-h`
 紧 Hausdorff：$\check{H}^{n}(X, M) = H^{n}(X, M)$
-layer 18 · 命题 · 层上同调 · 同调代数+拓扑学
+layer 20 · 命题 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=prop.chaus-cech-eq-h)　·　[节点索引](../index.md)
 
 若 $X$ 是**紧 Hausdorff** 空间，则 $\check{H}^{n}(X, M) = H^{n}(X, M)$（对一切阿贝尔层 $M$）。

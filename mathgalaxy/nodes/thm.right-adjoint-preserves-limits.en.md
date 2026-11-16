@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 14 · theorem · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `RAPL` (short) · `Right Adjoints Preserve Limits` (full)
 
 ## Statement · **draft**

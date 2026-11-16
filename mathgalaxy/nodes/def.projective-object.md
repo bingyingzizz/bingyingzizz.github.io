@@ -1,6 +1,6 @@
 # 投射 / 内射对象　`def.projective-object`
 投射对象与内射对象
-layer 14 · 定义 · 紧 Hausdorff 空间 · 拓扑学
+layer 16 · 定义 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=def.projective-object)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 中对象 $P$ 叫**投射的**，如果函子 $h_{P} = \operatorname{Hom}_{\mathcal{C}}(P, -)$ **保持满态射**。对偶地，$I$ 叫**内射的**，如果 $h^{I}$ 把单态射送到满态射。

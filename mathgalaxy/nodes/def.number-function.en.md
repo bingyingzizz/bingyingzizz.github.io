@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory / Mathematical Analysis
+layer 16 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory / Mathematical Analysis
 
 ## Statement · **reviewed**
 Let $X$ be a set and $f : X \to Y$ a **map**. If its values lie in a **set of numbers** — that is, $Y \subseteq \mathbb{R}$ or $Y \subseteq \mathbb{C}$ — then $f$ is called a **function**.

@@ -1,6 +1,6 @@
 # p-级数　`thm.p-series`
 定理：$p$-级数的敛散性（$p$-Series）
-layer 21 · 定理 · 数项级数的敛散性 · 数学分析
+layer 23 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.p-series)　·　[节点索引](../index.md)
 
 设 $p \in \mathbb{R}$。则级数

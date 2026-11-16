@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · corollary · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 25 · corollary · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Ext Section Formula` (short) · `Section Formula for Ext` (full)
 
 ## Statement and proof

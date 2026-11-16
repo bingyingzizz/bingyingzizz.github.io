@@ -1,6 +1,6 @@
 # 函数　`def.number-function`
 函数
-layer 14 · 定义 · 关系与函数 · 集合论+数学分析
+layer 16 · 定义 · 关系与函数 · 集合论+数学分析
 [在星图里打开](../#n=def.number-function)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 是**映射**。若它的取值落在**数集**里 —— 即 $Y \subseteq \mathbb{R}$ 或 $Y \subseteq \mathbb{C}$ —— 就叫 $f$ 是一个**函数**。

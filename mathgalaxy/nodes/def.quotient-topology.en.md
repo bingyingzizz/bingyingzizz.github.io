@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
+layer 8 · definition · cluster Topological Spaces and Basic Constructions (`topology.general`) · Topology
 
 ## Statement · **draft**
 Let $(X, \mathcal{T})$ be a topological space and $\pi : X \twoheadrightarrow Y$ a surjection. The **quotient topology** on $Y$ is

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Sheaves and Limits` (short) · `Sheaves Are Presheaves Preserving Limits` (full)
 
 ## Statement and proof

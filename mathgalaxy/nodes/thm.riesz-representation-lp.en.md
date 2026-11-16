@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 24 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
+layer 30 · theorem · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $1 < p < \infty$ and let $q$ be the conjugate exponent. Then for every $\Phi \in (L^p)^*$ there is a **unique** (a.e.) $g \in L^q$ such that

@@ -1,6 +1,6 @@
 # L^p 自反　`cor.lp-reflexive`
 推论：$1 < p < \infty$ 时 $L^p \cong (L^p)^{**}$
-layer 21 · 推论 · L^p 空间 · 实变函数+数学分析
+layer 26 · 推论 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=cor.lp-reflexive)　·　[节点索引](../index.md)
 
 设 $1 < p < \infty$。则

@@ -1,6 +1,6 @@
 # 幂对象　`def.power-object`
 幂对象 $Y^{X}$：积的左伴随，即「函数空间」的对象化
-layer 10 · 定义 · 单满、子对象与像 · 范畴论
+layer 12 · 定义 · 单满、子对象与像 · 范畴论
 [在星图里打开](../#n=def.power-object)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 有有限积，$X, Y \in \mathcal{C}$。若存在对象 $Y^{X}$ 与态射 $\operatorname{ev} : Y^{X} \times X \to Y$，使得对任意 $Z$ 与任意 $f : Z \times X \to Y$，存在**唯一**的 $\tilde f : Z \to Y^{X}$ 使

@@ -3,4 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.solid-abelian`](../nodes/thm.solid-abelian.md) 固态群构成阿贝尔子范畴 + [`lem.solid-completion-criterion`](../nodes/lem.solid-completion-criterion.md) 完备化判据：阿贝尔子范畴 $\implies$ 导出范畴全忠实　[proofs/imp.solid-derived.md](../proofs/imp.solid-derived.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-thm-solid-derived.md](../proofs/dep.cat-ab-thm-solid-derived.md)
 - [`def.solid-group`](../nodes/def.solid-group.md) 固态阿贝尔群：用到了定义 固态阿贝尔群　[proofs/dep.gap-solid-derived-solid-group.md](../proofs/dep.gap-solid-derived-solid-group.md)

@@ -5,6 +5,6 @@ English entry · root `../`
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 > fields: abstract reviewed · statement draft · notes draft · name derived
 
-layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
+layer 20 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 
 > continued in nodes/thm.urysohn-metrization.en.2.md

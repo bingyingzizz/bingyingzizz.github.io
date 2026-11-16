@@ -1,6 +1,6 @@
 # ℚ 是有序域　`thm.rat-ordered-field`
 定理：$\mathbb{Q}$ 是有序域（$\mathbb{Q}$ is an Ordered Field）
-layer 11 · 定理 · 数系的构造 · 集合论
+layer 13 · 定理 · 数系的构造 · 集合论
 [在星图里打开](../#n=thm.rat-ordered-field)　·　[节点索引](../index.md)
 
 在 $\mathbb{Q} = (\mathbb{Z} \times (\mathbb{Z}\setminus\{0\}))/{\sim}$ 上取 `def.rat` 定义的运算与序。则 $(\mathbb{Q}, +, \cdot, \le)$ 是**有序域**：

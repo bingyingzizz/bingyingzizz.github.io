@@ -1,6 +1,10 @@
 # 别名 → 节点 · 集合论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../set-theory.md`
 
+- 完备有序域唯一 | 实数唯一 → thm.real-unique
+
+- 序数 | ordinal | 序数定义 → def.ordinal
+
 - 超限归纳 | 超限递归 | transfinite recursion | transfinite induction → thm.recursion-wellorder
 
 - 序数可比 | 序数三分 → thm.ordinal-trichotomy

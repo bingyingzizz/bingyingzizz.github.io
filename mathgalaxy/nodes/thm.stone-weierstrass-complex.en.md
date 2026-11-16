@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 22 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff, and let $A \subseteq C(K, \mathbb{C})$ be a subalgebra containing the unit, separating points, and **closed under conjugation** ($f \in A \implies \bar f \in A$). Then $\overline A = C(K, \mathbb{C})$.

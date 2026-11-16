@@ -1,6 +1,6 @@
 # 预层在可表示对象上没有高次上同调　`prop.presheaf-representable-acyclic`
 命题：$H^{n}(h_{X}, M) = 0$（$n > 0$，预层情形）
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.presheaf-representable-acyclic)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是任意范畴、$\widehat{\mathcal{C}}$ 配标准拓扑，$X \in \mathcal{C}$、$M$ 是 $\widehat{\mathcal{C}}$ 上的阿贝尔**预层**。则

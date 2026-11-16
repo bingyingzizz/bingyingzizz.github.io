@@ -1,6 +1,6 @@
 # Lie 群可定向　`prop.lie-group-orientable`
 每个 Lie 群都可定向
-layer 31 · 命题 · Lie 群 · 微分几何
+layer 33 · 命题 · Lie 群 · 微分几何
 [在星图里打开](../#n=prop.lie-group-orientable)　·　[节点索引](../index.md)
 
 设 $G$ 是 $n$ 维 Lie 群（$n \ge 1$）。则 $G$ **可定向**，而且定向可选成

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Toposes (`cat.topos`) · Category Theory
+layer 12 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
 ## Statement · **draft**
 In a category $\mathcal{C}$, a set $S \subseteq \mathcal{C}$ is a **set of generators** if the functor

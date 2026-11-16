@@ -1,6 +1,6 @@
 # 整数的带余除法　`thm.int-division`
 带余除法：商与余数，余数小于除数
-layer 11 · 定理 · 整除与同余 · 数论
+layer 13 · 定理 · 整除与同余 · 数论
 [在星图里打开](../#n=thm.int-division)　·　[节点索引](../index.md)
 
 设 $a, b \in \mathbb{Z}$ 且 $b \ne 0$。则存在**唯一**的 $q, r \in \mathbb{Z}$ 使

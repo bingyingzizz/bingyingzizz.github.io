@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 20 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 names: `Injective iff Divisible` (short) · `Injective and Divisible Modules over a PID` (full)
 
 ## Statement · **draft**

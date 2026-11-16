@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 11 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Group Properties` (short) · `Basic Properties of Groups` (full)
 
 ## Statement · **draft**

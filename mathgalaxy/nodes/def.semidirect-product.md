@@ -1,6 +1,6 @@
 # 半直积　`def.semidirect-product`
 半直积 $M \rtimes_{\varphi} G$
-layer 11 · 定义 · 群上同调 · 同调代数+抽象代数
+layer 13 · 定义 · 群上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.semidirect-product)　·　[节点索引](../index.md)
 
 设 $H$、$G$ 是群，$\varphi : G \to \operatorname{Aut}(H)$ 是群同态。**半直积** $H \rtimes_{\varphi} G$ 的底层集合是 $H \times G$，乘法取

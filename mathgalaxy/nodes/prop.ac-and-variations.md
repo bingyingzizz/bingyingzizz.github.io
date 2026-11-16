@@ -1,6 +1,6 @@
 # 绝对连续与变差　`prop.ac-and-variations`
 命题：$\nu \ll \mu \iff |\nu| \ll \mu \iff \nu^{+}$、$\nu^{-} \ll \mu$；$\nu \perp \mu$ 且 $\nu \ll \mu \implies \nu = 0$
-layer 22 · 命题 · 符号测度与分解 · 实变函数+数学分析
+layer 28 · 命题 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=prop.ac-and-variations)　·　[节点索引](../index.md)
 
 设 $\mu$ 是测度，$\nu$ 是符号测度。则

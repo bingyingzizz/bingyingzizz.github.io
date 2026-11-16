@@ -1,6 +1,6 @@
 # Riemann 重排定理　`thm.riemann-rearrangement`
 定理（Riemann）：条件收敛级数可以重排成任意和
-layer 18 · 定理 · 数项级数的敛散性 · 数学分析
+layer 24 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.riemann-rearrangement)　·　[节点索引](../index.md)
 
 设实级数 $\sum a_n$ **条件收敛**（收敛但不绝对收敛）。则对**任意** $s \in \overline{\mathbb{R}}$（即任意实数，或 $\pm\infty$）都存在双射 $\sigma : \mathbb{N} \to \mathbb{N}$ 使

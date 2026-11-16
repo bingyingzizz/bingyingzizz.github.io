@@ -1,6 +1,6 @@
 # Čech 函子的性质　`prop.cech-properties`
 Čech 函子的三条性质
-layer 17 · 命题 · 层与拓扑 · 范畴论
+layer 19 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.cech-properties)　·　[节点索引](../index.md)
 
 1. $\widehat{H}$ **左正合**（保有限极限）；

@@ -1,6 +1,6 @@
 # 五次方程没有根式解　`thm.quintic-unsolvable`
 Abel–Ruffini：一般五次方程无根式解
-layer 22 · 定理 · Galois 理论 · 抽象代数
+layer 24 · 定理 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=thm.quintic-unsolvable)　·　[节点索引](../index.md)
 
 存在有理系数的五次多项式 $f \in \mathbb{Q}[x]$，它的根**不能**用四则运算与开方从 $\mathbb{Q}$ 的元素表示；更准确地说，$\operatorname{Gal}(f) \cong S_{5}$，而 $S_{5}$ 不可解。

@@ -1,6 +1,6 @@
 # Laurent 级数　`def.laurent-series`
 定义：Laurent 级数与主部
-layer 17 · 定义 · Cauchy 理论 · 复变函数
+layer 23 · 定义 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=def.laurent-series)　·　[节点索引](../index.md)
 
 **白话**：把幂级数放宽成「两边都有」的级数 —— 负幂次项负责描述函数在中心附近的爆炸，正幂次项负责描述它远处的行为。

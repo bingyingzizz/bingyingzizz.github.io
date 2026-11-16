@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 18 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.abelian-sheaf.md` and `proofs/`.

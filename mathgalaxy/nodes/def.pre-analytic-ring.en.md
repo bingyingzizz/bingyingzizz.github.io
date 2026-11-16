@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
+layer 21 · definition · cluster Analytic Rings and Solid Modules (`cond.analytic`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.pre-analytic-ring.md` and `proofs/`.

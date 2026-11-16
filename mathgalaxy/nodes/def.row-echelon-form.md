@@ -1,6 +1,6 @@
 # 行阶梯形与行简化阶梯形　`def.row-echelon-form`
 行阶梯形：消元法化出的标准形状
-layer 14 · 定义 · 矩阵与行列式 · 抽象代数
+layer 16 · 定义 · 矩阵与行列式 · 抽象代数
 [在星图里打开](../#n=def.row-echelon-form)　·　[节点索引](../index.md)
 
 设 $R \in M_{m \times n}(K)$。若

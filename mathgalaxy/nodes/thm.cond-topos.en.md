@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 22 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.cond-topos.md` and `proofs/`.

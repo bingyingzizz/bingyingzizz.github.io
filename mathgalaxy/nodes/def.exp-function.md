@@ -1,6 +1,6 @@
 # 指数函数　`def.exp-function`
 指数函数 $\exp$（由幂级数定义）
-layer 17 · 定义 · 函数列、幂级数与初等函数 · 数学分析
+layer 23 · 定义 · 函数列、幂级数与初等函数 · 数学分析
 [在星图里打开](../#n=def.exp-function)　·　[节点索引](../index.md)
 
 对 $z \in \mathbb{C}$，定义
@@ -14,8 +14,10 @@ $$\exp(z + w) = \exp z \cdot \exp w, \qquad \exp 0 = 1, \qquad \frac{d}{dz}\exp 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.power-series`](../nodes/def.power-series.md) 幂级数：用到了定义 幂级数　[proofs/dep.powerseries-exp.md](../proofs/dep.powerseries-exp.md)
 
+- …另有入边，续页见 [nodes/def.exp-function.2.md](./def.exp-function.2.md)
+
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.exp-function.2.md](./def.exp-function.2.md)
+- …另有出边，续页见 [nodes/def.exp-function.3.md](./def.exp-function.3.md)
 
 refs: Rudin, Principles of Mathematical Analysis, Ch. 8
 

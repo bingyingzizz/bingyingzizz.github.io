@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.module`](../nodes/def.module.md) 模：用到了定义 模　[proofs/def-link.flat-module.md](../proofs/def-link.flat-module.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-def-flat-module.md](../proofs/dep.cat-ab-def-flat-module.md)
 
 > 续见 [nodes/def.flat-module.4.md](./def.flat-module.4.md)

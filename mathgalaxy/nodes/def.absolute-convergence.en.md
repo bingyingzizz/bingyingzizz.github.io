@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 22 · definition · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $\{a_n\} \subseteq \mathbb{R}$ (or $\mathbb{C}$). The series $\sum a_n$ is said to **converge absolutely** iff the series of positive terms

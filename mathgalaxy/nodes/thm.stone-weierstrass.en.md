@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 16 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff and $A \subseteq C(K, \mathbb{R})$ a **subalgebra** containing the unit and **separating points**; write $A$ for it. Then $\overline A = C(K, \mathbb{R})$.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.euclid-infinite-primes.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
+layer 19 · proposition · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f, g : \mathbb{R} \to \mathbb{R}$ be continuous at $x_0$ and $c \in \mathbb{R}$. Then the following are continuous at $x_0$:

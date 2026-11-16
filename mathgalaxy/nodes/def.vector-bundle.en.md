@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 25 · definition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
 ## Statement · **draft**
 **What it says**: it axiomatizes "attach a vector space to every point, smoothly" — the tangent, cotangent and tensor bundles are examples. The criterion is "locally it looks like $U \times \mathbb{R}^{k}$".

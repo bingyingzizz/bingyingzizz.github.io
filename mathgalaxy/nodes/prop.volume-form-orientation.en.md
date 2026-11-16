@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
+layer 19 · proposition · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 names: `Orientation and Volume` (short) · `Orientation and Volume Forms` (full)
 
 ## Statement · **draft**

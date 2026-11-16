@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 20 · definition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.compactly-generated.md` and `proofs/`.

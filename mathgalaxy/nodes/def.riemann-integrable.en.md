@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 19 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Riemann Integrable` (short) · `Riemann Integrable Function` (full)
 
 ## Statement · **draft**

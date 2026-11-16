@@ -1,6 +1,6 @@
 # Cond 是拓扑斯　`thm.cond-topos`
 凝聚态集的范畴是拓扑斯
-layer 20 · 定理 · 凝聚态集 · 凝聚态数学
+layer 22 · 定理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=thm.cond-topos)　·　[节点索引](../index.md)
 
 **凝聚态集的范畴 $\mathrm{Cond}$ 是拓扑斯。**

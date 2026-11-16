@@ -1,6 +1,6 @@
 # Ind-对象　`def.ind-object`
 Ind-对象与 $\operatorname{Ind}(\mathcal{C})$
-layer 12 · 定义 · 图与极限 · 范畴论
+layer 14 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.ind-object)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 的一个 **Ind-对象**「$\varinjlim_{i \in I} X_{i}$」是一个**滤过图** $(X_{i})_{i \in I}$。它们组成范畴 $\operatorname{Ind}(\mathcal{C})$，其 Hom 为

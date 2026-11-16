@@ -1,6 +1,6 @@
 # Stone 空间是紧 Hausdorff 空间的反射子范畴　`prop.stone-reflective`
 Stone 空间是 $\mathbf{CHaus}$ 的反射子范畴
-layer 19 · 命题 · Stone 与 Stonean · 拓扑学
+layer 21 · 命题 · Stone 与 Stonean · 拓扑学
 [在星图里打开](../#n=prop.stone-reflective)　·　[节点索引](../index.md)
 
 Stone 空间构成的范畴是 $\mathbf{CHaus}$ 的反射子范畴。

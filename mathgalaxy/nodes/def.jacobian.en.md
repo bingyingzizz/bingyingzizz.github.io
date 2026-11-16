@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 26 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 names: `Jacobian` (short) · `Jacobian Matrix` (full)
 
 ## Statement · **draft**

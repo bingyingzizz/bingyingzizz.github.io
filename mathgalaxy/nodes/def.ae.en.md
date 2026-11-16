@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
+layer 19 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement · **draft**
 Let $(X, \mathcal{M}, \mu)$ be a measure space. A proposition $P(x)$ about a point $x$ holds **almost everywhere** (written a.e.) if and only if

@@ -1,6 +1,6 @@
 # 第一同构定理（Noether）　`thm.first-iso`
 第一同构定理
-layer 10 · 定理 · 代数结构 · 抽象代数+集合论
+layer 12 · 定理 · 代数结构 · 抽象代数+集合论
 [在星图里打开](../#n=thm.first-iso)　·　[节点索引](../index.md)
 
 设 $\varphi : G \to G'$ 是**群同态**。则 $\varphi$ 诱导出同构

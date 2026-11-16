@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $(G, \cdot)$ and $(G', \ast)$ be groups. A map $\varphi : G \to G'$ is called a **group homomorphism** if

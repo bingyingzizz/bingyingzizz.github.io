@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
+layer 32 · lemma · cluster Moving Frames and Structure Equations (`diffgeom.frame`) · Differential Geometry
 names: `Second Form Symmetry` (short) · `Symmetry of the Second Fundamental Form` (full)
 
 ## Statement · **draft**

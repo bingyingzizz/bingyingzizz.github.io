@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
+layer 11 · theorem · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
 ## Statement · **draft**
 For every set $A$:

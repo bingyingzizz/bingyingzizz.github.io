@@ -1,6 +1,6 @@
 # 同调的两条正合列　`prop.cohomology-short-exact`
 命题：$0 \to H^{k} \to \operatorname{coker} d^{k-1} \to Z^{k+1} \to H^{k+1} \to 0$
-layer 18 · 命题 · 复形与导出三角 · 同调代数
+layer 21 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.cohomology-short-exact)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$K^{\bullet}$ 是 $\mathcal{A}$ 中的上链复形。

@@ -1,6 +1,6 @@
 # 图的态射　`def.graph-morphism`
 图的态射
-layer 7 · 定义 · 范畴与图 · 范畴论
+layer 9 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.graph-morphism)　·　[节点索引](../index.md)
 
 从图 $(V, E, s, t)$ 到图 $(V', E', s', t')$ 的**态射**是一对函数

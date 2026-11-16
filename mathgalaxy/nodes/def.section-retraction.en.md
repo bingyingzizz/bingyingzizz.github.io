@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
+layer 10 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
 ## Statement · **draft**
 Let $f : X \to Y$ be a morphism in a category.

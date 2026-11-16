@@ -1,6 +1,6 @@
 # 绕数的积分表示　`prop.winding-integral`
 绕数 = dz/(z−a) 的围道积分除以 2πi
-layer 20 · 命题 · 复变函数基础 · 复变函数
+layer 24 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.winding-integral)　·　[节点索引](../index.md)
 
 设 $\gamma : [0,1] \to \mathbb{C}$ 是分段 $C^{1}$ 的闭曲线，$a \notin \gamma([0,1])$。则

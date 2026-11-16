@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 17 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 names: `row space` (short) · `row space of a matrix` (full)
 
 ## Statement · **draft**

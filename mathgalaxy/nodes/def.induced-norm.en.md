@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra / Mathematical Analysis
+layer 23 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra / Mathematical Analysis
 
 ## Statement · **draft**
 Let $(V, \langle \cdot, \cdot \rangle)$ be an inner product space. Define

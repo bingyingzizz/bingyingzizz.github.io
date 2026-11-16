@@ -1,6 +1,6 @@
 # 星形集　`def.star-shaped`
 星形集：存在一个能看见全集合的点
-layer 12 · 定义 · Hilbert 空间 · 泛函分析
+layer 14 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.star-shaped)　·　[节点索引](../index.md)
 
 设 $V$ 是实向量空间，$S \subseteq V$。称 $S$ 为**星形集**，若存在 $x_{0} \in S$，使对每个 $x \in S$ 与 $t \in [0,1]$，

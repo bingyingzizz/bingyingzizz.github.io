@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 16 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement · **draft**
 A **Grothendieck topology** on a category $\mathcal{C}$ assigns to each $X$ a family of **covering sieves** $J(X)$, subject to:

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 19 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Sheafification as Colimit` (short) · `Sheafification as a Colimit over the Slice` (full)
 
 ## Statement and proof

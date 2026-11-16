@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Abstract Algebra
+layer 12 · proposition · cluster Arithmetic and Inequalities on the Reals (`analysis.real-calc`) · Mathematical Analysis / Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be an ordered field, $a, b, c, d \in K$. Then

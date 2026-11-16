@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · lemma · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 23 · lemma · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/lem.horseshoe.md` and `proofs/`.

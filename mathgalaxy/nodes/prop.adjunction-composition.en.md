@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 ## Statement · **draft**
 If $F_{1} \dashv G_{1}$ ($\mathcal{C} \to \mathcal{D}$) and $F_{2} \dashv G_{2}$ ($\mathcal{D} \to \mathcal{E}$), then

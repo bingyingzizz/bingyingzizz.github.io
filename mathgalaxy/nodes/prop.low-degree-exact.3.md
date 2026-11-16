@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.bar-resolution`](../nodes/def.bar-resolution.md) 标准消解 + [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子：标准复形的低次项 $\implies$ 低次正合列　[proofs/imp.low-degree.md](../proofs/imp.low-degree.md)
 - [`thm.long-exact`](../nodes/thm.long-exact.md) 长正合列：长正合列的头几项就是低次正合列　[proofs/imp.derived-low-degree-exact.md](../proofs/imp.derived-low-degree-exact.md)
+- [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/dep.cochain-lowdegree.md](../proofs/dep.cochain-lowdegree.md)

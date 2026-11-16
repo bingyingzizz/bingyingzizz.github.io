@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $N \trianglelefteq G$. The set of all left cosets $\{\, gN : g \in G \,\}$ is denoted $G/N$; define on it

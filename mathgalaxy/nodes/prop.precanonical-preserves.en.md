@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Precanonical Coproducts` (short) · `Coproducts and Quotients under the Precanonical Topology` (full)
 
 ## Statement and proof

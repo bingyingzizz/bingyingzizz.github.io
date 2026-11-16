@@ -1,6 +1,6 @@
 # 完备化定理　`thm.completion`
 定理：任何测度空间都能完备化
-layer 17 · 定理 · 测度的构造 · 实变函数+数学分析
+layer 19 · 定理 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=thm.completion)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{M}, \mu )$ 是测度空间。令

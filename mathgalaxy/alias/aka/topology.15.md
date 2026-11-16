@@ -17,6 +17,8 @@
 
 - 重心重分 | 重心剖分 → def.barycentric-subdivision
 
+- 拓扑空间范畴 | Top 范畴 | 拓扑空间的范畴 | Top → def.category-of-topological-spaces
+
 - 拓扑可定向性 | 曲面的可定向性 → def.topological-orientability
 
 - 组合分类引理 → lem.combinatorial-classification-surfaces
@@ -24,9 +26,5 @@
 - 度量连续 | 度量空间之间的连续 | ε-δ 连续 → def.metric-continuity
 
 - 实数度量空间 | R 的度量 | 实数直线 → def.real-metric-space
-
-- 多边形表示 | 边配对粘合 | polygon representation → def.polygon-representation
-
-- 环柄 | 加环柄 | handle → def.handle
 
 > 续见 alias/aka/topology.16.md

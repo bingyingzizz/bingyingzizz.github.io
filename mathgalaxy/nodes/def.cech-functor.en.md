@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 18 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement · **draft**
 On a site $\mathcal{C}$, the **Čech functor** $\widehat{H}$ is defined on presheaves by

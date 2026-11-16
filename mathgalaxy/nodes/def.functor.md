@@ -1,6 +1,6 @@
 # 函子　`def.functor`
 函子
-layer 8 · 定义 · 函子与自然变换 · 范畴论
+layer 10 · 定义 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=def.functor)　·　[节点索引](../index.md)
 
 从范畴 $\mathcal{C}$ 到范畴 $\mathcal{D}$ 的**函子** $F : \mathcal{C} \to \mathcal{D}$ 由两部分组成：

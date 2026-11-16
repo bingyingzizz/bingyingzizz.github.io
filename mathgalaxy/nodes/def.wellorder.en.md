@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Order Structures (`order.structure`) · Order Theory
+layer 8 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
 ## Statement · **draft**
 A totally ordered set $(W, \preceq )$ is **well-ordered** if and only if every nonempty subset of $W$ has a least element:

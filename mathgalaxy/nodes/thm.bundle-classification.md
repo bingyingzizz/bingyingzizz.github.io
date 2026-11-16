@@ -1,6 +1,6 @@
 # 丛的分类　`thm.bundle-classification`
 向量丛的分类与 Čech 上同调
-layer 34 · 定理 · 丛的示性类 · 微分几何
+layer 36 · 定理 · 丛的示性类 · 微分几何
 [在星图里打开](../#n=thm.bundle-classification)　·　[节点索引](../index.md)
 
 **白话**：向量丛怎么「粘」，全记在转移函数上；所以「有多少种秩 $k$ 丛」这个问题就是「这些转移函数模掉

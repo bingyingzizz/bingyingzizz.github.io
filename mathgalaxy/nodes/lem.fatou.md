@@ -1,6 +1,6 @@
 # Fatou 引理　`lem.fatou`
 Fatou 引理（Fatou's Lemma）
-layer 20 · 引理 · 积分 · 实变函数+数学分析
+layer 26 · 引理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=lem.fatou)　·　[节点索引](../index.md)
 
 设 $\{f_n\} \subseteq L^+$，则

@@ -1,6 +1,6 @@
 # 闭区间套定理　`lem.nested-intervals`
 引理：闭区间套定理
-layer 19 · 引理 · 实数完备性的等价刻画 · 数学分析
+layer 21 · 引理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=lem.nested-intervals)　·　[节点索引](../index.md)
 
 设 $I_n = [a_n, b_n]$ 是一列**闭**区间，满足

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 33 · lemma · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
 ## Statement · **draft**
 Let $f:[0,\infty)\to\mathbb{C}$ be bounded and locally integrable, and suppose its Laplace transform

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 22 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 names: `Triangle Inequality` (short) · `Triangle Inequality for Moduli` (full)
 
 ## Statement and proof

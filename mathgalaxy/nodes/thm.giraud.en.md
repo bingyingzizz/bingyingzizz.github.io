@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Toposes (`cat.topos`) · Category Theory
+layer 21 · theorem · cluster Toposes (`cat.topos`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.giraud.md` and `proofs/`.

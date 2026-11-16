@@ -1,6 +1,6 @@
 # 密度型测度绝对连续　`ex.density-abs-continuous`
 绝对连续：$\nu = f\,\mathrm{d}\mu$ 则 $\nu \ll \mu$，$\mathrm{d}\nu/\mathrm{d}\mu = f$；而 $\delta_{0} \perp \mu$
-layer 20 · 例 · 符号测度与分解 · 实变函数
+layer 26 · 例 · 符号测度与分解 · 实变函数
 [在星图里打开](../#n=ex.density-abs-continuous)　·　[节点索引](../index.md)
 
 取 $\mu$ = $[0,1]$ 上的 Lebesgue 测度。

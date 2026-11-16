@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 14 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 ## Statement · **draft**
 Let $F : \mathcal{A} \to \mathcal{C}$ and $G : \mathcal{B} \to \mathcal{C}$ be two functors **with the same target**. The **comma category** $F \downarrow G$ has as objects

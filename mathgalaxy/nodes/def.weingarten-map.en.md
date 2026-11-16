@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 28 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 33 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 names: `Weingarten Map` (short) · `Weingarten Map (Shape Operator)` (full)
 
 ## Statement · **draft**

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
+layer 14 · proposition · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory
 
 ## Statement · **draft**
 In $\mathbf{Mon}$, $\mathbf{Gr}$, $\mathbf{Rng}$, $G\text{-}\mathbf{Set}$, $A\text{-}\mathbf{Mod}$, $k\text{-}\mathbf{Alg}$ **limits are computed pointwise** (forgetting to sets gives the limit of sets);

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology / Mathematical Analysis
+layer 18 · definition · cluster Metric Spaces (`topology.metric`) · Topology / Mathematical Analysis
 
 ## Statement · **draft**
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f : X \to Y$, and $x_0 \in X$.

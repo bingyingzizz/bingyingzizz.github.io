@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 18 · theorem · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.sheaf-descent.md` and `proofs/`.

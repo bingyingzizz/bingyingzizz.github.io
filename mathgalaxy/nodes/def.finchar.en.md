@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 7 · definition · cluster Order Structures (`order.structure`) · Order Theory
+layer 9 · definition · cluster Order Structures (`order.structure`) · Order Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.finchar.md` and `proofs/`.

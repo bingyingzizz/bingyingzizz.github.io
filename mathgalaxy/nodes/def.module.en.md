@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a unital ring and $M$ an **abelian group**. We say that $M$ is a **$A$-module** if there is a map

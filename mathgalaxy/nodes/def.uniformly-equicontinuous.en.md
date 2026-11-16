@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 17 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $(K, \delta)$ be a metric space, $(E, d)$ a metric space, and $\mathcal{H} \subseteq C(K, E)$. Call $\mathcal{H}$ **uniformly equicontinuous** if

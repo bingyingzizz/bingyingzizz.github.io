@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
+layer 16 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
 > continued in nodes/prop.yoneda-embedding.en.2.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis / Order Theory
+layer 17 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis / Order Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.convex-function.md` and `proofs/`.

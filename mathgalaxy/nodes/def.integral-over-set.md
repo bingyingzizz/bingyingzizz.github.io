@@ -1,6 +1,6 @@
 # 集合上的积分　`def.integral-over-set`
 $\int_E f\,d\mu$：可测集上的 Lebesgue 积分
-layer 19 · 定义 · 积分 · 实变函数+数学分析
+layer 25 · 定义 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=def.integral-over-set)　·　[节点索引](../index.md)
 
 设 $(X, \mathcal{A}, \mu)$ 是测度空间，$E \in \mathcal{A}$，$f$ 可测。若 $f \ge 0$，定义

@@ -2,11 +2,14 @@
 [在星图里打开](../#n=def.norm)　·　第 1 页 [nodes/def.norm.md](./def.norm.md)　·　上一页 [nodes/def.norm.2.md](./def.norm.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.norm-equivalence`](../nodes/def.norm-equivalence.md) 等价范数 用
-- 被 [`lem.almost-orthogonal`](../nodes/lem.almost-orthogonal.md) 几乎正交引理 用
-- 被 [`def.schauder-basis`](../nodes/def.schauder-basis.md) Schauder 基 用
-- 被 [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间 用
-- 被 [`thm.lp-banach`](../nodes/thm.lp-banach.md) L^p 是 Banach 空间 用
-- 被 [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数 用
-- 被 [`def.matrix-norm`](../nodes/def.matrix-norm.md) 矩阵范数 用
-- 被 [`def.induced-norm`](../nodes/def.induced-norm.md) 诱导范数与距离 用
+- 被 [`thm.frechet-derivative`](../nodes/thm.frechet-derivative.md) Fréchet 导数 用
+- 被 [`def.perfect-pairing`](../nodes/def.perfect-pairing.md) 完美配对 用
+- 被 [`def.uniformly-convex`](../nodes/def.uniformly-convex.md) 一致凸 用
+- 被 [`def.strictly-convex`](../nodes/def.strictly-convex.md) 严格凸 用
+- 被 [`thm.hahn-banach`](../nodes/thm.hahn-banach.md) Hahn–Banach 定理 用
+- ⇒ [`thm.polarization`](../nodes/thm.polarization.md) 极化恒等式
+- ⇒ [`thm.norm-equiv-finite-dim`](../nodes/thm.norm-equiv-finite-dim.md) 有限维范数等价
+- ⇒ [`prop.operator-algebra`](../nodes/prop.operator-algebra.md) 算子乘法的范数不等式
+- ⇒ [`prop.norm-induces-metric`](../nodes/prop.norm-induces-metric.md) 范数诱导的距离
+
+> 续见 [nodes/def.norm.4.md](./def.norm.4.md)

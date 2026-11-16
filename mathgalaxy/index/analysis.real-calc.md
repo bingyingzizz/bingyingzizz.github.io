@@ -5,16 +5,16 @@
 
 - thm.bernoulli　Bernoulli 不等式　layer 7
 - def.power　整数幂　layer 8
-- prop.field-rules　环与域的基本等式　layer 9
 - thm.binomial　二项式定理　layer 9
-- def.abs　绝对值 |x|　layer 10
-- prop.order-rules　序与四则运算　layer 10
-- prop.power-rules　指数律与幂的单调性　layer 10
-- thm.triangle　三角不等式　layer 11
-- prop.abs-properties　绝对值的运算性质　layer 11
-- lem.archimedean　Archimedes 性质　layer 18
-- thm.nth-root　n 次方根　layer 18
-- cor.archimedean-epsilon　Archimedes 的 ε 形式与取整　layer 19
-- def.real-power　有理指数与实数指数幂　layer 19
+- prop.field-rules　环与域的基本等式　layer 11
+- def.abs　绝对值 |x|　layer 12
+- prop.order-rules　序与四则运算　layer 12
+- prop.power-rules　指数律与幂的单调性　layer 12
+- thm.triangle　三角不等式　layer 13
+- prop.abs-properties　绝对值的运算性质　layer 13
+- lem.archimedean　Archimedes 性质　layer 20
+- thm.nth-root　n 次方根　layer 20
+- cor.archimedean-epsilon　Archimedes 的 ε 形式与取整　layer 21
+- def.real-power　有理指数与实数指数幂　layer 21
 
 > 续见 `index/analysis.real-calc.2.md`

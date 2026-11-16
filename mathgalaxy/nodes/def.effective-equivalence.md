@@ -1,6 +1,6 @@
 # 有效等价关系　`def.effective-equivalence`
 有效等价关系
-layer 13 · 定义 · 层与拓扑 · 范畴论
+layer 15 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.effective-equivalence)　·　[节点索引](../index.md)
 
 对象 $X$ 上的**等价关系**是一个图 $R \rightrightarrows X$，使得对每个 $Y$，$\operatorname{Hom}(Y, R) \to \operatorname{Hom}(Y, X) \times \operatorname{Hom}(Y, X)$ 是等价关系（在 $\mathbf{Set}$ 里取）。

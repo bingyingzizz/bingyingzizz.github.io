@@ -1,6 +1,6 @@
 # 切片里的覆盖筛　`prop.slice-covering-sieve`
 命题：$R$ 在 $\mathcal{C}/T$ 里覆盖 $\iff$ $\hat j_{T!}R$ 在 $\mathcal{C}$ 里是覆盖筛
-layer 19 · 命题 · 拓扑斯 · 范畴论
+layer 21 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.slice-covering-sieve)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景、$T \in \widehat{\mathcal{C}}$、$s \in T(X)$。则 $s$ 上的一个筛 $R$ 在 $\mathcal{C}/T$ 里是**覆盖** $\iff$ $\hat j_{T!}R$ 是 $X$ 在 $\mathcal{C}$ 里的**覆盖筛**。

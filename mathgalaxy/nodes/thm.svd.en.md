@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 31 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 35 · theorem · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A \in M_{m \times n}(\mathbb{R})$ (or over $\mathbb{C}$), of rank $r$. Then there exist orthogonal (unitary) matrices $U \in M_m$, $V \in M_n$ and a "diagonal" matrix $\Sigma$ (only the first $r$ diagonal entries nonzero) such that

@@ -1,6 +1,6 @@
 # 分式线性变换的分类　`prop.mobius-classification`
 分式线性变换的三种类型：椭圆、双曲、抛物
-layer 23 · 命题 · 共形映射与正规族 · 复变函数
+layer 25 · 命题 · 共形映射与正规族 · 复变函数
 [在星图里打开](../#n=prop.mobius-classification)　·　[节点索引](../index.md)
 
 设 $T(z) = (az + b)/(cz + d)$，$ad - bc \ne 0$，且 $T$ 不是恒等。记 $\tau := a + d$、$\Delta := ad - bc$。按 $\tau^{2}/\Delta$ 分类：

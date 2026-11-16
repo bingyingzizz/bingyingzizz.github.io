@@ -3,12 +3,12 @@
 造出「连续函数长什么样」：紧集上有界、取到最值、一致连续；介值定理与零点定理。反函数的连续性、初等函数的合法性都挂在这里。
 中心天体 thm.ivt　·　9 个节点　·　根 `../`
 
-- def.uniform-continuity　一致连续　layer 17
-- prop.discontinuity-types　间断点分类　layer 17
-- prop.continuous-arithmetic　连续函数的运算　layer 17
-- thm.ivt　介值定理　layer 18
-- cor.zero-point　零点定理　layer 19
-- thm.monotone-inverse　反函数连续　layer 19
-- thm.uniform-continuity-compact　紧集上连续 ⟹ 一致连续　layer 21
-- prop.continuous-bounded-on-compact　紧集上连续 ⟹ 有界　layer 22
-- thm.evt　最值定理　layer 23
+- def.uniform-continuity　一致连续　layer 19
+- prop.discontinuity-types　间断点分类　layer 19
+- prop.continuous-arithmetic　连续函数的运算　layer 19
+- thm.ivt　介值定理　layer 20
+- cor.zero-point　零点定理　layer 21
+- thm.monotone-inverse　反函数连续　layer 21
+- thm.uniform-continuity-compact　紧集上连续 ⟹ 一致连续　layer 23
+- prop.continuous-bounded-on-compact　紧集上连续 ⟹ 有界　layer 24
+- thm.evt　最值定理　layer 25

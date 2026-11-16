@@ -1,6 +1,6 @@
 # K(A) 允许分式演算　`prop.k-calculus-fractions`
 $K(\mathcal{A})$ 关于拟同构允许左右分式演算
-layer 19 · 命题 · 复形与导出三角 · 同调代数
+layer 22 · 命题 · 复形与导出三角 · 同调代数
 [在星图里打开](../#n=prop.k-calculus-fractions)　·　[节点索引](../index.md)
 
 $K(\mathcal{A})$ 关于**拟同构**这一族态射同时允许**左**与**右分式演算**。

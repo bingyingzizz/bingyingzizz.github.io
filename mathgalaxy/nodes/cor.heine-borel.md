@@ -1,6 +1,6 @@
 # 有界闭 ⟺ 紧（ℝⁿ）　`cor.heine-borel`
 推论：Heine–Borel 定理 —— $\mathbb{R}^{n}$ 中紧 $\iff$ 有界且闭
-layer 21 · 推论 · 实数完备性的等价刻画 · 数学分析+拓扑学
+layer 23 · 推论 · 实数完备性的等价刻画 · 数学分析+拓扑学
 [在星图里打开](../#n=cor.heine-borel)　·　[节点索引](../index.md)
 
 设 $K \subseteq \mathbb{R}^{n}$，按 Euclidean 距离看成一个度量空间。则 $K$ 是紧空间，当且仅当 $K$ 有界且闭。

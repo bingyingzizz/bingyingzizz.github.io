@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis / Mathematical Analysis
+layer 23 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis / Mathematical Analysis
 
 ## Statement · **draft**
 Let $X$ be a compact metric space, and let $\mathcal{F} \subset C(X)$ (continuous functions with the sup norm) satisfy

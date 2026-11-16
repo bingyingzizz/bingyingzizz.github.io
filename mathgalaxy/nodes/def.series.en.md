@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 Given a sequence $\{a_n\}$, let $s_N := \sum_{n=1}^{N} a_n$ be its **partial sums**.

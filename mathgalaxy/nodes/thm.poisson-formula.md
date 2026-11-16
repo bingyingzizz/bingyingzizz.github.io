@@ -1,6 +1,6 @@
 # Poisson 积分公式　`thm.poisson-formula`
 定理：Poisson 积分公式
-layer 25 · 定理 · 调和函数 · 复变函数
+layer 29 · 定理 · 调和函数 · 复变函数
 [在星图里打开](../#n=thm.poisson-formula)　·　[节点索引](../index.md)
 
 **白话**：圆内的取值由边界上的取值**唯一决定**，而且是有明确公式的加权平均 —— 权重就是 Poisson 核，它在边界附近会「尖起来」。

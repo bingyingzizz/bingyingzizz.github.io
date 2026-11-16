@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 11 · proposition · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement · **draft**
 Let $F : \mathcal{C} \to \mathcal{D}$ be a functor and $f : X \to Y$ an isomorphism in $\mathcal{C}$ with inverse $f^{-1} : Y \to X$. Then $F(f)$ is an isomorphism, and

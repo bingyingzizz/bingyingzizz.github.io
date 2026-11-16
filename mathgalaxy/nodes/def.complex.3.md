@@ -2,15 +2,14 @@
 [在星图里打开](../#n=def.complex)　·　第 1 页 [nodes/def.complex.md](./def.complex.md)　·　上一页 [nodes/def.complex.2.md](./def.complex.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`def.complex-measure`](../nodes/def.complex-measure.md) 复测度 用
-- 被 [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数 用
-- 被 [`def.exact-couple`](../nodes/def.exact-couple.md) 正合偶 用
-- ⇒ [`prop.complex-triangle`](../nodes/prop.complex-triangle.md) 模长的三角不等式
-- 被 [`def.holomorphic`](../nodes/def.holomorphic.md) 全纯函数 用
-- 被 [`def.complex-partial`](../nodes/def.complex-partial.md) 复偏导数 用
-- 被 [`def.mobius`](../nodes/def.mobius.md) 分式线性变换 用
-- 被 [`def.logarithm-branch`](../nodes/def.logarithm-branch.md) 对数与幂的分支 用
-- ⇒ [`def.riemann-sphere`](../nodes/def.riemann-sphere.md) 扩充复平面与球极投影
-- 被 [`def.algebraically-closed`](../nodes/def.algebraically-closed.md) 代数闭域 用
+- 被 [`def.lebesgue-measurable`](../nodes/def.lebesgue-measurable.md) Lebesgue 可测 用
+- 被 [`prop.measurable-closure`](../nodes/prop.measurable-closure.md) 可测函数的封闭性 用
+- 被 [`def.simple-function`](../nodes/def.simple-function.md) 简单函数 用
+- 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
+- 被 [`def.bounded-variation`](../nodes/def.bounded-variation.md) 有界变差函数 用
+- 被 [`def.ac-function`](../nodes/def.ac-function.md) 绝对连续函数 用
+- 被 [`def.essential-sup`](../nodes/def.essential-sup.md) 本性上界与 L^∞ 用
+- 被 [`def.derivative`](../nodes/def.derivative.md) 导数 用
+- 被 [`def.integral-complex`](../nodes/def.integral-complex.md) 复函数的积分 用
 
 > 续见 [nodes/def.complex.4.md](./def.complex.4.md)

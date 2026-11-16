@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 18 · proposition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $x_n \to x$, $y_n \to y$ (finite), $c \in \mathbb{R}$. Then

@@ -1,6 +1,6 @@
 # 全变差的基本性质　`prop.total-variation-basics`
 命题：$|\nu(E)| \le |\nu|(E)$，且 $d|\nu| = |f| d\mu$
-layer 21 · 命题 · 符号测度与分解 · 实变函数+数学分析
+layer 25 · 命题 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=prop.total-variation-basics)　·　[节点索引](../index.md)
 
 设 $\nu$ 是复测度（或符号测度），$|\nu|$ 是它的全变差。则

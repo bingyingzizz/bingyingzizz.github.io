@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 31 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 36 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 In an adapted frame $e_{3} = n$, split the second structure equation according to $k = 1,2,3$; the $k = 3$ term that remains is the curvature of the surface:

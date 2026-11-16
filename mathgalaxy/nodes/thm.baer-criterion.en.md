@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 19 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 
 ## Statement · **draft**
 Let $R$ be a unital ring and $I$ a left $R$-module. Then $I$ is **injective** iff: for every **left ideal** $J \subseteq R$ and every $R$-linear map $f : J \to I$, there is $x \in I$ such that

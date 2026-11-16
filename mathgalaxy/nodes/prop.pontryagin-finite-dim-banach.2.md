@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.pontryagin-dual`](../nodes/def.pontryagin-dual.md) Pontryagin 对偶：用到了定义 Pontryagin 对偶　[proofs/def-link.pontbanach-dual.md](../proofs/def-link.pontbanach-dual.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-pontryagin-fd.md](../proofs/dep.banach-pontryagin-fd.md)

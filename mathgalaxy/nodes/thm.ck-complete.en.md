@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 25 · theorem · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff. If $E$ is complete, then $\implies$ $(C(K, E), \Delta)$ is complete; when $E$ is a normed space, $C(K, E)$ is a Banach space.

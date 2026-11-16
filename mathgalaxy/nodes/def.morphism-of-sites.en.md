@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Toposes (`cat.topos`) · Category Theory
+layer 19 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.morphism-of-sites.md` and `proofs/`.

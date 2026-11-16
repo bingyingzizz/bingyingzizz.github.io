@@ -1,6 +1,6 @@
 # Arzelà–Ascoli 定理　`thm.arzela-ascoli`
 Arzelà–Ascoli 定理：一致有界 + 等度连续 $\implies$ 相对紧
-layer 21 · 定理 · 共形映射与正规族 · 复变函数+数学分析
+layer 23 · 定理 · 共形映射与正规族 · 复变函数+数学分析
 [在星图里打开](../#n=thm.arzela-ascoli)　·　[节点索引](../index.md)
 
 设 $X$ 是紧距离空间，$\mathcal{F} \subset C(X)$（连续函数，取一致范数）满足

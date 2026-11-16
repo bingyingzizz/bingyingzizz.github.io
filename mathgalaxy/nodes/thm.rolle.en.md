@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 24 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 26 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $a < b$, and suppose $f$ is continuous on the closed interval $[a, b]$ and differentiable on the open interval $(a, b)$, with $f(a) = f(b)$. Then there exists $\xi \in (a, b)$ such that

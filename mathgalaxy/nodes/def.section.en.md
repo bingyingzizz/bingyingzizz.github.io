@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 6 · definition · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis
+layer 8 · definition · cluster Product Measures and Fubini (`analysis.product`) · Functions of a Real Variable / Mathematical Analysis
 
 > continued in nodes/def.section.en.2.md

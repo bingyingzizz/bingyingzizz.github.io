@@ -1,6 +1,6 @@
 # 带截面的覆盖上 Čech 零调　`prop.cech-section-vanishing`
 命题：满射有截面时增广 Čech 复形同伦平凡
-layer 18 · 命题 · 层上同调 · 同调代数
+layer 20 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.cech-section-vanishing)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯，$X_{0} \xrightarrow{\ p\ } X$ 是态射且**有截面** $s$（$p s = 1_{X}$）。记

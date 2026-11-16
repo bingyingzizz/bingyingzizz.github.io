@@ -1,6 +1,6 @@
 # 正则值原像定理　`thm.regular-value`
 定理：正则值的原像是子流形
-layer 29 · 定理 · 多元微分 · 数学分析
+layer 31 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.regular-value)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}^{m}$ 是 $C^{1}$（$m \le n$）。

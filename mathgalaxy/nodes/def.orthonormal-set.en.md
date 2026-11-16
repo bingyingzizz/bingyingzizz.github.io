@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
+layer 24 · definition · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
 ## Statement · **draft**
 Let $\{f_i\}_{i \in I} \subseteq H$.

@@ -1,6 +1,6 @@
 # 分式演算下的局部化　`prop.calculus-of-fractions`
 右分式演算 $\implies$ 局部化好算
-layer 14 · 命题 · 范畴与图 · 范畴论
+layer 16 · 命题 · 范畴与图 · 范畴论
 [在星图里打开](../#n=prop.calculus-of-fractions)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是小范畴、$W$ 是其中一族态射。称 $W$ **容许右分式演算**，如果：

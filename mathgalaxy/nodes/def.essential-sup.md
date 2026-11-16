@@ -1,6 +1,6 @@
 # 本性上界与 L^∞　`def.essential-sup`
 本性上界 $\|f\|_\infty$ 与空间 $L^\infty$
-layer 17 · 定义 · L^p 空间 · 实变函数+数学分析
+layer 22 · 定义 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=def.essential-sup)　·　[节点索引](../index.md)
 
 定义

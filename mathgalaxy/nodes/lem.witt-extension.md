@@ -1,6 +1,6 @@
 # Witt 延拓引理　`lem.witt-extension`
 Witt 延拓引理：非退化子空间上的等距可延拓
-layer 17 · 引理 · 多重线性与张量 · 抽象代数
+layer 25 · 引理 · 多重线性与张量 · 抽象代数
 [在星图里打开](../#n=lem.witt-extension)　·　[节点索引](../index.md)
 
 设 $N$ 是有限维非退化对称双线性空间，$\operatorname{char}K\ne2$，$A\subseteq N$ 是非退化子空间。若 $\sigma:A\to N$ 是到 $\sigma(A)$ 的等距，则 $\sigma$ 可延拓为 $N$ 的等距。

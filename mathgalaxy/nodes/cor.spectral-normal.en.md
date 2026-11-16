@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · corollary · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
+layer 34 · corollary · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a finite-dimensional **complex** inner product space and $T : V \to V$ **normal** ($T^{\ast}T = TT^{\ast}$). Then there is an **orthonormal basis** of $V$ in which $T$ is diagonal:

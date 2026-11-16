@@ -10,10 +10,11 @@ $$\forall A \forall B \exists C \forall z [ z \in C \leftrightarrow  \exists a \
 记作 $A \times B = \{ (a, b) : a \in A, b \in B \}$。
 
 ## 它能推出什么 / 谁在用它
+- 被 [`thm.arbitrary-product`](../nodes/thm.arbitrary-product.md) 任意族笛卡尔积存在 用
+- 被 [`def.rel`](../nodes/def.rel.md) 关系 用
 - ⇒ [`def.section`](../nodes/def.section.md) 截口
-- ～弱边 [`thm.omega`](../nodes/thm.omega.md) 自然数集存在
-- 被 [`def.category`](../nodes/def.category.md) 范畴 用
-- 被 [`def.product`](../nodes/def.product.md) 积 / 余积 用
+
+- …另有出边，续页见 [nodes/thm.product.3.md](./thm.product.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.product.2.md](./thm.product.2.md)

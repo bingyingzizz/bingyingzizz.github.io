@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Aut group` (short) · `automorphism group` (full)
 
 ## Statement · **draft**

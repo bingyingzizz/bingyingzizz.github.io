@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.condab-section)　·　第 1 页 [nodes/prop.condab-section.md](./prop.condab-section.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间：用到了定义 自由紧 Hausdorff 空间　[proofs/def-dep.free-condab-section.md](../proofs/def-dep.free-condab-section.md)
 - [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.limit-condab-section.md](../proofs/def-dep.limit-condab-section.md)
 
 > 续见 [nodes/prop.condab-section.3.md](./prop.condab-section.3.md)

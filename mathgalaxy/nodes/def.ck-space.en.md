@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 19 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff and $(E, d)$ a metric space. On $C(K, E)$ define

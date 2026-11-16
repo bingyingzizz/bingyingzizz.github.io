@@ -1,6 +1,6 @@
 # F 给出的预测度　`prop.ls-premeasure`
 命题：单调右连续的 F 给出半开区间上的预测度
-layer 17 · 命题 · 测度的构造 · 实变函数+数学分析
+layer 19 · 命题 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=prop.ls-premeasure)　·　[节点索引](../index.md)
 
 设 $F : \mathbb{R} \to \mathbb{R}$ 是**递增**且**右连续**的函数。在半开区间的全体上定义

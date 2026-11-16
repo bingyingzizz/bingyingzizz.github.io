@@ -1,6 +1,6 @@
 # 连续函子（景之间）　`def.continuous-functor`
 连续函子
-layer 16 · 定义 · 拓扑斯 · 范畴论
+layer 18 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.continuous-functor)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}, \mathcal{C}'$ 是两个景。函子

@@ -1,6 +1,6 @@
 # 有限紧 Hausdorff 空间上的预拓扑　`prop.fchaus-pretopology`
 有限不交并给出自由紧 Hausforff 空间上的预拓扑
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.fchaus-pretopology)　·　[节点索引](../index.md)
 
 记 $\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\beta I$）构成的满子范畴。

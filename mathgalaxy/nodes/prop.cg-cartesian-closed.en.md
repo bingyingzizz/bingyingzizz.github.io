@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 21 · theorem · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `CG Is Cartesian Closed` (short) · `Compactly Generated Spaces Are Cartesian Closed` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # 凝聚态阿贝尔群满足 AB6 与 AB4*　`thm.condab-ab`
 凝聚态阿贝尔群的 AB 公理
-layer 20 · 定理 · 凝聚态阿贝尔群 · 凝聚态数学
+layer 22 · 定理 · 凝聚态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=thm.condab-ab)　·　[节点索引](../index.md)
 
 $\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\***。

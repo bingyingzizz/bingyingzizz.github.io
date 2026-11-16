@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 22 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Object to Topos Morphism` (short) · `An Object Induces a Topos Morphism` (full)
 
 ## Statement · **draft**

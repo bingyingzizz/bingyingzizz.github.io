@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 12 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Adjunction Naturality` (short) · `Naturality of the Adjunction Bijection` (full)
 
 > continued in nodes/prop.adjunction-naturality.en.2.md

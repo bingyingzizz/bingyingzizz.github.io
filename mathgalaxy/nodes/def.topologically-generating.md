@@ -1,6 +1,6 @@
 # 拓扑生成集　`def.topologically-generating`
 拓扑生成集
-layer 15 · 定义 · 层与拓扑 · 范畴论
+layer 17 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.topologically-generating)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景。集合 $G \subseteq \mathcal{C}$ 叫**拓扑生成集**，如果每个 $X \in \mathcal{C}$ 都容许一个由**落在 $G$ 里的对象**组成的覆盖族 $(G_{i} \to X)_{i}$。

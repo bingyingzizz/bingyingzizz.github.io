@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · lemma · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 24 · lemma · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 names: `Goursat Triangle Lemma` (short) · `Goursat's Triangle Lemma` (full)
 
 ## Statement · **draft**

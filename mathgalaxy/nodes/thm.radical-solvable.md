@@ -1,6 +1,6 @@
 # 根式可解 与 伽罗瓦群可解　`thm.radical-solvable`
 根式可解 $\iff$ $\operatorname{Gal}(f)$ 可解（char 0）
-layer 21 · 定理 · Galois 理论 · 抽象代数
+layer 23 · 定理 · Galois 理论 · 抽象代数
 [在星图里打开](../#n=thm.radical-solvable)　·　[节点索引](../index.md)
 
 设 $F$ 是**特征 0** 的域，$f \in F[x]$ 非零，$K$ 是 $f$ 的分裂域。则

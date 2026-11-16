@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.stone-weierstrass`](../nodes/thm.stone-weierstrass.md) Stone–Weierstrass 定理：实情形 $\implies$ 复情形（多一条共轭封闭）　[proofs/imp.fa-sw-complex.md](../proofs/imp.fa-sw-complex.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-thm-stone-weierstrass-complex.md](../proofs/dep.sym-complex-thm-stone-weierstrass-complex.md)

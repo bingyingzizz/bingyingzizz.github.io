@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a **set** and $+$, $\cdot$ two **binary operations** on $A$. Then $(A, +, \cdot)$ is a **ring** if and only if:

@@ -1,6 +1,6 @@
 # ∮dz/z　`ex.contour-1-over-z`
 $\oint_{|z| = 1} \dfrac{\mathrm{d}z}{z} = 2\pi i$：最简单的「闭而不恰当」
-layer 20 · 例 · 复变函数基础 · 复变函数
+layer 24 · 例 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=ex.contour-1-over-z)　·　[节点索引](../index.md)
 
 取单位圆 $\gamma(\theta) = e^{i\theta}$（$0 \le \theta \le 2\pi$，逆时针）。则

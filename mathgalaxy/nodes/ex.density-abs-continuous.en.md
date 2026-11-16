@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · example · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable
+layer 26 · example · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.density-abs-continuous.md` and `proofs/`.

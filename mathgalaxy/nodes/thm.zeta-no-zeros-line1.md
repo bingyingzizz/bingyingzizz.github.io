@@ -1,6 +1,6 @@
 # ζ 在 Re s=1 上无零点　`thm.zeta-no-zeros-line1`
 $\zeta(1+it)\ne0$（$t\in\mathbb{R}$）
-layer 31 · 定理 · 数论函数与素数分布 · 数论+数学分析
+layer 35 · 定理 · 数论函数与素数分布 · 数论+数学分析
 [在星图里打开](../#n=thm.zeta-no-zeros-line1)　·　[节点索引](../index.md)
 
 对一切 $t\in\mathbb{R}$，$\zeta(1+it)\ne0$。

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · proposition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
+layer 18 · proposition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
 ## Statement · **draft**
 The symmetric group $S_n$ is solvable (`def.solvable-group`) if and only if $n \le 4$.

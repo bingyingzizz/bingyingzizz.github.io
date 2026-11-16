@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 10 · theorem · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Set Theory
+layer 12 · theorem · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Set Theory
 
 > continued in nodes/thm.first-iso.en.2.md

@@ -1,6 +1,6 @@
 # 正合偶　`def.exact-couple`
 正合偶
-layer 20 · 定义 · 过滤与谱序列 · 同调代数
+layer 22 · 定义 · 过滤与谱序列 · 同调代数
 [在星图里打开](../#n=def.exact-couple)　·　[节点索引](../index.md)
 
 设 $\mathcal{A}$ 是阿贝尔范畴，$D = \bigoplus D^{p,q}$、$E = \bigoplus E^{p,q}$ 是双分次对象。一个**正合偶**是三元组 $(D, E, i, j, k)$，由下面的「三角形」组成：

@@ -1,6 +1,6 @@
 # Liouville 定理　`thm.liouville`
 定理：Liouville 定理
-layer 27 · 定理 · Cauchy 理论 · 复变函数
+layer 31 · 定理 · Cauchy 理论 · 复变函数
 [在星图里打开](../#n=thm.liouville)　·　[节点索引](../index.md)
 
 **白话**：在整个复平面上全纯、又有界的函数只能是常数 —— 复平面「太挤」了，容不下一个非常数的有界全纯函数。

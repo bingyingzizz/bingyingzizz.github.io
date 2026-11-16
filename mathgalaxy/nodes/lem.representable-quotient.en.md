@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · lemma · cluster Toposes (`cat.topos`) · Category Theory
+layer 20 · lemma · cluster Toposes (`cat.topos`) · Category Theory
 names: `Representability Descent` (short) · `Descent for Representability` (full)
 
 ## Statement and proof

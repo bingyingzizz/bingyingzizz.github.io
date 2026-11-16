@@ -1,6 +1,6 @@
 # 群的整数幂　`def.group-power`
 群的整数幂 $x^{n}$（$n \in \mathbb{Z}$）
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 10 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.group-power)　·　[节点索引](../index.md)
 
 设 $G$ 是群，$x \in G$，$e$ 是单位元。**整数幂** $x^{n}$（$n \in \mathbb{Z}$）由

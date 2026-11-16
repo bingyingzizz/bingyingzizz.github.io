@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topological-manifold`](../nodes/def.topological-manifold.md) 拓扑流形：用到了定义 拓扑流形　[proofs/def-link.topmanifold-toporient.md](../proofs/def-link.topmanifold-toporient.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.sym-real-def-topological-orientability.md](../proofs/dep.sym-real-def-topological-orientability.md)
 
 > 续见 [nodes/def.topological-orientability.4.md](./def.topological-orientability.4.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology
+layer 18 · definition · cluster Metric Spaces (`topology.metric`) · Topology
 
 ## Statement · **draft**
 A sequence $\{x_{n}\}$ is a **Cauchy sequence** if and only if

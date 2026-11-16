@@ -1,6 +1,6 @@
 # 内 Hom　`def.internal-hom`
 内 Hom
-layer 18 · 定义 · 阿贝尔层 · 同调代数
+layer 20 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.internal-hom)　·　[节点索引](../index.md)
 
 设 $\mathcal{T}$ 是拓扑斯，$X \in \mathcal{T}$、$M \in \mathcal{T}(\mathbf{Ab})$。则

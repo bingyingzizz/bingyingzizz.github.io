@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
+layer 10 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Abstract Algebra
 
 ## Statement · **draft**
 **The category of groups** $\mathbf{Grp}$: objects are groups, morphisms are group homomorphisms, composition is composition of maps, and identities are identity homomorphisms.

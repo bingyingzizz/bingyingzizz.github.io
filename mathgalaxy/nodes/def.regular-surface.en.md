@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 28 · definition · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 names: `Regular Surface` (short) · `Regular Surface and Gauss Map` (full)
 
 ## Statement · **draft**

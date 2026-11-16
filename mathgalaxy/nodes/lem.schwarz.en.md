@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · lemma · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
+layer 30 · lemma · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: a holomorphic map of the unit disk into itself that fixes the origin must be dominated by $z \mapsto z$: image points lie closer to the centre than their preimages.

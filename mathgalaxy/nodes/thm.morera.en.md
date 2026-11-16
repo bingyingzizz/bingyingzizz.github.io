@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 24 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: a continuous function whose integral along every closed triangle (equivalently, every small rectangle) is zero is holomorphic — this is the converse of Cauchy's theorem.

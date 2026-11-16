@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · lemma · cluster Separation Axioms (`topology.separation`) · Topology
+layer 19 · lemma · cluster Separation Axioms (`topology.separation`) · Topology
 
 ## Statement · **draft**
 Let $X$ be a topological space. Then $X$ is **normal** $\iff$ for any two disjoint closed sets $A, B \subseteq X$, there exists a continuous function

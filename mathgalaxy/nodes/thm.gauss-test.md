@@ -1,6 +1,6 @@
 # 高斯判别法（Gauss）　`thm.gauss-test`
 Gauss 判别法：比值展开到 $1/n$ 项
-layer 22 · 定理 · 数项级数的敛散性 · 数学分析
+layer 24 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.gauss-test)　·　[节点索引](../index.md)
 
 设 $a_n>0$，且存在 $\mu\in\mathbb{R}$ 与 $\delta>0$，使

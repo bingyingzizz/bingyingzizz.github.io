@@ -1,6 +1,6 @@
 # 代数的几个范畴　`ex.algebra-categories`
 $\mathrm{Mon}$、$\mathrm{Gr}$、$\mathrm{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$
-layer 15 · 例 · 代数结构 · 抽象代数+范畴论
+layer 17 · 例 · 代数结构 · 抽象代数+范畴论
 [在星图里打开](../#n=ex.algebra-categories)　·　[节点索引](../index.md)
 
 常用的代数范畴（对象 + 保结构映射）：

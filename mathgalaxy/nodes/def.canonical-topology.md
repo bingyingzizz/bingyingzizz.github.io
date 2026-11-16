@@ -1,6 +1,6 @@
 # 标准拓扑　`def.canonical-topology`
 标准拓扑与次标准拓扑
-layer 15 · 定义 · 层与拓扑 · 范畴论
+layer 17 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.canonical-topology)　·　[节点索引](../index.md)
 
 在任何范畴 $\mathcal{C}$ 上，存在**最细**的拓扑使得所有可表示预层都是层：规定 $X$ 上的筛 $R$ 是覆盖筛，当且仅当

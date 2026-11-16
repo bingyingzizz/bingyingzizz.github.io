@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · corollary · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
+layer 26 · corollary · cluster Baire Category and the Three Big Theorems (`fa.baire`) · Functional Analysis
 
 ## Statement · **draft**
 Let $E$ be Banach, $F$ normed, $u_n \in B(E, F)$, and suppose $\sup_n \|u_n\| = \infty$. Then

@@ -1,6 +1,6 @@
 # 逐项积分　`thm.termwise-integration`
 定理：非负函数级数可以逐项积分
-layer 20 · 定理 · 积分 · 实变函数+数学分析
+layer 26 · 定理 · 积分 · 实变函数+数学分析
 [在星图里打开](../#n=thm.termwise-integration)　·　[节点索引](../index.md)
 
 设 $\{f_n\} \subseteq L^+$，则

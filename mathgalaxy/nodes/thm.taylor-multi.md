@@ -1,6 +1,6 @@
 # 多元 Taylor 公式　`thm.taylor-multi`
 定理：多元 Taylor 公式
-layer 27 · 定理 · 多元微分 · 数学分析
+layer 29 · 定理 · 多元微分 · 数学分析
 [在星图里打开](../#n=thm.taylor-multi)　·　[节点索引](../index.md)
 
 设 $U \subseteq \mathbb{R}^{n}$ 开，$f : U \to \mathbb{R}$ 是 $C^{k+1}$，$a \in U$。则对 $h$ 充分小，

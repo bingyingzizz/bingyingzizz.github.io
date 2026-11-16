@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
+layer 25 · theorem · cluster Normed Spaces and Bounded Operators (`fa.norm`) · Functional Analysis
 
 ## Statement · **draft**
 For a normed space $E$, the closed unit ball $B_E = \{x \in E : \|x\| \le 1\}$ is compact $\iff$ $\dim E < \infty$.

@@ -1,6 +1,6 @@
 # 切片范畴　`def.slice-category`
 预层的切片范畴
-layer 13 · 定义 · 预层与米田 · 范畴论
+layer 15 · 定义 · 预层与米田 · 范畴论
 [在星图里打开](../#n=def.slice-category)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是范畴，$T$ 是 $\mathcal{C}$ 上的预层。**切片范畴** $\mathcal{C}/T$（也记 $\mathcal{C}_{T}$）定义如下：

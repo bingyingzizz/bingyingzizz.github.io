@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 14 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement · **draft**
 Let $a, b \in \mathbb{Z}$ be not both zero. First take absolute values ($a, b$ may be negative); if $b = 0$, return $|a|$ directly; otherwise put $r_{-1} = |a|$ and $r_{0} = |b|$, and perform the division with remainder repeatedly

@@ -1,6 +1,6 @@
 # Pro-对象　`def.pro-object`
 Pro-对象与 $\operatorname{Pro}(\mathcal{C})$
-layer 13 · 定义 · 图与极限 · 范畴论
+layer 15 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.pro-object)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 的一个 **Pro-对象**「$\varprojlim_{i \in I} X_{i}$」是一个**余滤过图** $(X_{i})_{i \in I}$（指标范畴余滤过，见 `def.cofiltered-category`；等价地，$I^{\mathrm{op}}$ 上的滤过图）。它们组成范畴 $\operatorname{Pro}(\mathcal{C})$，其 Hom 为

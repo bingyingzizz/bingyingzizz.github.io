@@ -1,6 +1,6 @@
 # 足够多内射层　`thm.pushforward-enough-injectives`
 阿贝尔层范畴有足够多内射对象
-layer 19 · 定理 · 层上同调 · 同调代数+范畴论
+layer 21 · 定理 · 层上同调 · 同调代数+范畴论
 [在星图里打开](../#n=thm.pushforward-enough-injectives)　·　[节点索引](../index.md)
 
 设 $X$ 是拓扑空间。则阿贝尔层范畴 $\mathbf{Ab}(X)$ **有足够多内射对象**：对每个 $\mathcal{F} \in \mathbf{Ab}(X)$，把每根茎嵌进它在 $

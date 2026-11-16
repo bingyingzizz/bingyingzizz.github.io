@@ -1,6 +1,6 @@
 # Goldstine 定理　`thm.goldstine`
 Goldstine：$B_X$ 在 $B_{X^{**}}$ 中弱*稠密
-layer 20 · 定理 · 赋范空间与有界算子 · 泛函分析
+layer 27 · 定理 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=thm.goldstine)　·　[节点索引](../index.md)
 
 设 $X$ 是赋范空间，$J_X : X \to X^{**}$ 是自然嵌入。则 $J_X(B_X)$ 在 $B_{X^{**}}$ 的**弱*拓扑**下稠密。

@@ -1,6 +1,6 @@
 # Euclid 整环　`def.euclidean-domain`
 Euclid 整环：带余除法成立
-layer 10 · 定义 · 整环与分解 · 抽象代数
+layer 12 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.euclidean-domain)　·　[节点索引](../index.md)
 
 整环 $A$ 叫 **Euclid 整环**，若存在函数 $N : A \setminus \{0\} \to \mathbb{N}$（**欧几里得函数**），使对任意 $a \in A$、$b \ne 0$，存在 $q, r \in A$ 满足

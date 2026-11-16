@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 22 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 $F : (a, b) \to \mathbb{C}$ is **differentiable** at $x_0 \in (a, b)$ if and only if the limit

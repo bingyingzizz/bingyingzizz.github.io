@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 24 · definition · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
 ## Statement · **draft**
 A normed space $V$ is **complete** iff it is complete with respect to the metric $d(v, w) = \|v - w\|$, i.e. every Cauchy sequence converges. A complete normed space is a **Banach space**.

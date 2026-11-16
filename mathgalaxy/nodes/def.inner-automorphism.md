@@ -1,6 +1,6 @@
 # 内自同构　`def.inner-automorphism`
 内自同构：共轭作用给出的自同构
-layer 11 · 定义 · 代数结构 · 抽象代数
+layer 13 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.inner-automorphism)　·　[节点索引](../index.md)
 
 设 $G$ 是群，$g \in G$。映射

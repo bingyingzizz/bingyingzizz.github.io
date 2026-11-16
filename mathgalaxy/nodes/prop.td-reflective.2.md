@@ -2,4 +2,6 @@
 [在星图里打开](../#n=prop.td-reflective)　·　第 1 页 [nodes/prop.td-reflective.md](./prop.td-reflective.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-td-reflective.md](../proofs/dep.cat-top-prop-td-reflective.md)
+- [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间：用到了定义 全不连通与 Stone 空间　[proofs/def-dep.stone-td-reflective.md](../proofs/def-dep.stone-td-reflective.md)
 - [`def.connected`](../nodes/def.connected.md) 连通与连通分量：用到了定义 连通与连通分量　[proofs/def-dep.connected-td-reflective.md](../proofs/def-dep.connected-td-reflective.md)

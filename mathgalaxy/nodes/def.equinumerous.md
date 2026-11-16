@@ -1,6 +1,6 @@
 # 等势　`def.equinumerous`
 等势
-layer 7 · 定义 · 基数与等势 · 集合论
+layer 9 · 定义 · 基数与等势 · 集合论
 [在星图里打开](../#n=def.equinumerous)　·　[节点索引](../index.md)
 
 集合 $A$ 与 $B$ **等势**（记 $\#A = \#B$ 或 $A \approx B$），当且仅当存在**双射**

@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.presheaf-cat`](../nodes/def.presheaf-cat.md) 预层范畴：用到了定义 预层范畴　[proofs/def-link.pfcat-limits.md](../proofs/def-link.pfcat-limits.md)
 - [`def.presheaf`](../nodes/def.presheaf.md) 预层：用到了定义 预层　[proofs/def-link.pfcat-eval.md](../proofs/def-link.pfcat-eval.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-thm-presheaf-limits-colimits.md](../proofs/dep.cat-sets-thm-presheaf-limits-colimits.md)
 
 > 续见 [nodes/thm.presheaf-limits-colimits.4.md](./thm.presheaf-limits-colimits.4.md)

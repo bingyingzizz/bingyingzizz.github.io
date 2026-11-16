@@ -1,6 +1,6 @@
 # 群范畴　`def.category-of-groups`
 群范畴 $\mathbf{Grp}$
-layer 8 · 定义 · 范畴与图 · 范畴论+抽象代数
+layer 10 · 定义 · 范畴与图 · 范畴论+抽象代数
 [在星图里打开](../#n=def.category-of-groups)　·　[节点索引](../index.md)
 
 **群范畴** $\mathbf{Grp}$：对象是群，态射是群同态，复合是映射复合，单位是恒等同态。

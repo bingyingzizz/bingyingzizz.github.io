@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.skyscraper-sheaf`](../nodes/def.skyscraper-sheaf.md) 天际线层 + [`prop.skyscraper-stalks`](../nodes/prop.skyscraper-stalks.md) 天际线层的茎：天际线层 + 取茎 $\implies$ 系数内射则层内射　[proofs/imp.skyscraper-injective.md](../proofs/imp.skyscraper-injective.md)
 - [`def.skyscraper-sheaf`](../nodes/def.skyscraper-sheaf.md) 天际线层：用到了定义 天际线层　[proofs/def-link.skyscraper-inj.md](../proofs/def-link.skyscraper-inj.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-skyscraper-injective.md](../proofs/dep.cat-ab-prop-skyscraper-injective.md)

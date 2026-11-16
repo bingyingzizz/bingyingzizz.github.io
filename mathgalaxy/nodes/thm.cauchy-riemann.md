@@ -1,6 +1,6 @@
 # Cauchy–Riemann 方程　`thm.cauchy-riemann`
 定理：全纯性与 Cauchy–Riemann 方程等价
-layer 21 · 定理 · 复变函数基础 · 复变函数
+layer 25 · 定理 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=thm.cauchy-riemann)　·　[节点索引](../index.md)
 
 **白话**：$f = u + iv$ 复可微，当且仅当它实可微、且两个偏导满足一对很具体的方程 —— 「二维的极限条件」被两个一维方程完全替代。

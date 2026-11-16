@@ -1,6 +1,6 @@
 # 内射模　`def.injective-module`
 内射模与延拓性质
-layer 15 · 定义 · 内射模与可除群 · 同调代数
+layer 17 · 定义 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=def.injective-module)　·　[节点索引](../index.md)
 
 设 $R$ 是含幺环。左 $R$-模 $I$ 叫**内射的**（injective），如果对每个单射 $A \rightarrowtail B$ 与每个 $R$-线性映射 $A \to I$，都存在（一般**不唯一**）$R$-线性映射 $B \to I$ 使下图交换：

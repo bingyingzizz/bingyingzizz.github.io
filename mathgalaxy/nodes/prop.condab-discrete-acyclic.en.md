@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
+layer 23 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Discrete Acyclicity` (short) · `Acyclicity on Discrete and Discrete Times Stonean Spaces` (full)
 
 ## Statement and proof

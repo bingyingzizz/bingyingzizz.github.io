@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · theorem · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
+layer 18 · theorem · cluster Tensor Products and Scalar Restriction (`hom.module`) · Homological Algebra
 
 ## Statement · **draft**
 Let $R$ be a **commutative** unital ring and $M, N, P$ $R$-modules. Then there is a **natural isomorphism**

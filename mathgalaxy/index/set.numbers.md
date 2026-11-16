@@ -8,11 +8,11 @@
 - def.nat-arith　自然数的加法与乘法　layer 7
 - def.int　整数 ℤ　layer 8
 - thm.nat-arith-laws　自然数的运算律　layer 8
-- thm.int-ring　ℤ 是交换整环　layer 9
-- def.rat　有理数 ℚ　layer 10
-- thm.rat-ordered-field　ℚ 是有序域　layer 11
-- def.cauchy-null　Cauchy 列与零列　layer 12
-- def.real　实数系 ℝ　layer 13
-- thm.real-uncountable　ℝ 不可数　layer 18
-- def.complex　复数 ℂ　layer 19
-- thm.real-unique　完备有序域的唯一性　layer 19
+- thm.int-ring　ℤ 是交换整环　layer 11
+- def.rat　有理数 ℚ　layer 12
+- thm.rat-ordered-field　ℚ 是有序域　layer 13
+- def.cauchy-null　Cauchy 列与零列　layer 14
+- def.real　实数系 ℝ　layer 15
+- thm.real-uncountable　ℝ 不可数　layer 20
+- def.complex　复数 ℂ　layer 21
+- thm.real-unique　完备有序域的唯一性　layer 21

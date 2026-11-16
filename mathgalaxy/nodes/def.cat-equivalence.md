@@ -1,6 +1,6 @@
 # 范畴等价　`def.cat-equivalence`
 范畴等价
-layer 10 · 定义 · 函子与自然变换 · 范畴论
+layer 12 · 定义 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=def.cat-equivalence)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathcal{C}'$ 叫**范畴等价**，如果存在函子 $G : \mathcal{C}' \to \mathcal{C}$ 与自然同构

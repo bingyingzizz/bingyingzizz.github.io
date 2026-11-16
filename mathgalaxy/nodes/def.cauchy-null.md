@@ -1,6 +1,6 @@
 # Cauchy 列与零列　`def.cauchy-null`
 有理 Cauchy 列 / 零列 / 等价
-layer 12 · 定义 · 数系的构造 · 集合论+数学分析
+layer 14 · 定义 · 数系的构造 · 集合论+数学分析
 [在星图里打开](../#n=def.cauchy-null)　·　[节点索引](../index.md)
 
 设 $(x_n)$ 是**有理数列**（即函数 $\omega \to \mathbb{Q}$），$|x|$ 是 $\mathbb{Q}$ 上的绝对值，$\varepsilon$ 一律取**正有理数**（此时还不需要实数）。

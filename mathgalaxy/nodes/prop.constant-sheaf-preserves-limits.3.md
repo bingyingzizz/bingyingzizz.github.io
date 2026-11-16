@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.presheaf`](../nodes/def.presheaf.md) 预层：用到了定义 预层　[proofs/def-link.constsheaf-presheaf.md](../proofs/def-link.constsheaf-presheaf.md)
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-link.constsheaf-sheaf.md](../proofs/def-link.constsheaf-sheaf.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-constant-sheaf-preserves-limits.md](../proofs/dep.cat-sets-prop-constant-sheaf-preserves-limits.md)

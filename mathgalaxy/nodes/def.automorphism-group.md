@@ -1,6 +1,6 @@
 # 自同构群　`def.automorphism-group`
 自同构群与内自同构群
-layer 10 · 定义 · 代数结构 · 抽象代数
+layer 12 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.automorphism-group)　·　[节点索引](../index.md)
 
 设 $G$ 是群。$G$ 到自身的同构 $\sigma : G \to G$ 叫**自同构**；全体自同构在复合下构成群

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
+layer 25 · proposition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 
 ## Statement · **draft**
 Let $0 \to K \to P \xrightarrow{\ \pi\ } M \to 0$ be a short exact sequence of $R$-modules with $P$ **projective** (equivalently: $K$ is a syzygy of $M$). Then for every $n \ge 1$ and every $R$-module $N$:

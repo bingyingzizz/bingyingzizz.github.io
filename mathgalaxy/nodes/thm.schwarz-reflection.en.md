@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 29 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
+layer 33 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis
 
 ## Statement · **draft**
 Let $\Omega$ be symmetric about the real axis and $\Omega^{+} = \Omega \cap \{\, \operatorname{Im} z > 0 \,\}$. If $f$ is holomorphic on $\Omega^{+}$, continuous on $\Omega \cap \mathbb{R}$ and **real-valued** there, then $f$ extends to a holomorphic function on $\Omega$, namely $F$, and

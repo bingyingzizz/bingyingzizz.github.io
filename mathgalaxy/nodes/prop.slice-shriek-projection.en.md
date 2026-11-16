@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 22 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 24 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Slice Projection Formula` (short) · `Projection Formula on the Slice` (full)
 
 ## Statement and proof

@@ -1,6 +1,6 @@
 # 由预测度诱导外测度　`prop.outer-measure-induced`
 命题：从 $\mathcal{E}$ 上的 $\rho$ 诱导出一个外测度
-layer 17 · 命题 · 测度的构造 · 实变函数+数学分析
+layer 19 · 命题 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=prop.outer-measure-induced)　·　[节点索引](../index.md)
 
 设 $\mathcal{E} \subseteq \mathcal{P}(X)$，$\emptyset \in \mathcal{E}$，$X \in \mathcal{E}$，$\rho : \mathcal{E} \to [0, +\infty ]$ 满足 $\rho (\emptyset ) = 0$。

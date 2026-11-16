@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 14 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $\mathcal{B} = (v_1, \ldots, v_n)$ be an **ordered** basis of $V$ (the order is part of the data). By the definition of a basis, every $v \in V$ can be written **uniquely** as

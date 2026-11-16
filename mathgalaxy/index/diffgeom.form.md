@@ -3,17 +3,17 @@
 让「积分」在流形上跑起来：奇异方块与链 → 边界算子与 ∂²=0 → 链上的积分与换元、Stokes 与散度定理 → 体积形式与密度 → de Rham 复形、Poincaré 引理、Mayer–Vietoris，最后到 de Rham 定理。
 中心天体 thm.stokes-chain　·　27 个节点　·　根 `../`　·　续页 `index/diffgeom.form.2.md`
 
-- def.singular-cube　奇异方块　layer 20
-- def.singular-chain　奇异链　layer 21
-- def.boundary-operator　边界算子　layer 22
-- def.integral-on-chain　链上的积分　layer 22
-- def.form-on-manifold　微分形式　layer 22
-- def.volume-form　体积形式　layer 23
-- prop.boundary-squared-zero　边界算子平方为零　layer 23
-- prop.integral-chain-linear　链上积分的双线性　layer 23
-- lem.single-cube-stokes　方块上的 Stokes 公式　layer 23
-- prop.exterior-derivative-manifold　外微分　layer 23
-- prop.pullback-form-manifold　拉回　layer 23
-- def.de-rham-complex　de Rham 上同调　layer 24
+- def.singular-cube　奇异方块　layer 25
+- def.singular-chain　奇异链　layer 26
+- def.boundary-operator　边界算子　layer 27
+- def.integral-on-chain　链上的积分　layer 27
+- def.form-on-manifold　微分形式　layer 27
+- prop.boundary-squared-zero　边界算子平方为零　layer 28
+- prop.integral-chain-linear　链上积分的双线性　layer 28
+- lem.single-cube-stokes　方块上的 Stokes 公式　layer 28
+- prop.exterior-derivative-manifold　外微分　layer 28
+- prop.pullback-form-manifold　拉回　layer 28
+- def.de-rham-complex　de Rham 上同调　layer 29
+- thm.stokes-chain　链上的 Stokes 定理　layer 29
 
 > 续见 `index/diffgeom.form.2.md`

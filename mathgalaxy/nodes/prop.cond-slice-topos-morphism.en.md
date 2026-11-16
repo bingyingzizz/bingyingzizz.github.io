@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics / Category Theory
+layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics / Category Theory
 names: `Cond/X to Open(X)` (short) · `A Topos Morphism from Cond over X to Sheaves on Opens` (full)
 
 ## Statement and proof

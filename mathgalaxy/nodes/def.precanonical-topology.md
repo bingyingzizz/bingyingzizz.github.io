@@ -1,6 +1,6 @@
 # 预标准拓扑　`def.precanonical-topology`
 预标准拓扑
-layer 17 · 定义 · 拓扑斯 · 范畴论
+layer 19 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.precanonical-topology)　·　[节点索引](../index.md)
 
 预拓扑斯 $\mathcal{C}$ 上的**预标准预拓扑**由所有**有限**族 $(X_{i} \to X)_{i \in I}$ 组成，使得

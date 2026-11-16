@@ -1,6 +1,6 @@
 # 态射范畴上的域与余域函子　`def.mor-domain-codomain`
 定义：$\operatorname{Mor}(\mathcal{C}) \to \mathcal{C}$ 的两个投影
-layer 14 · 定义 · 范畴与图 · 范畴论
+layer 16 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.mor-domain-codomain)　·　[节点索引](../index.md)
 
 $\operatorname{Mor}(\mathcal{C})$ 上有**域函子**与**余域函子**到 $\mathcal{C}$；对固定 $X$，切片 $\mathcal{C}/X \to \mathcal{C}$ 与余切片 $X\backslash\mathcal{C} \to \mathcal{C}$ 是遗忘函子。

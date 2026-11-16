@@ -1,6 +1,6 @@
 # 平坦阿贝尔层　`def.flat-abelian-sheaf`
 平坦性
-layer 21 · 定义 · 阿贝尔层 · 同调代数
+layer 23 · 定义 · 阿贝尔层 · 同调代数
 [在星图里打开](../#n=def.flat-abelian-sheaf)　·　[节点索引](../index.md)
 
 拓扑斯 $\mathcal{T}$ 中的阿贝尔群 $P$ 叫**平坦的**，如果函子

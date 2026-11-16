@@ -1,6 +1,6 @@
 # 共尾函子不改变余极限　`thm.cofinal-colimit`
 共尾 $\implies$ 沿 $F$ 算余极限与沿 $I$ 算同构
-layer 14 · 定理 · 图与极限 · 范畴论
+layer 16 · 定理 · 图与极限 · 范畴论
 [在星图里打开](../#n=thm.cofinal-colimit)　·　[节点索引](../index.md)
 
 设 $F : J \to I$ **共尾**，$D : I \to \mathcal{C}$ 是图。若 $\varinjlim_{j \in J} D(F(j))$ 存在，则 $\varinjlim_{i \in I} D(i)$ 存在，并且

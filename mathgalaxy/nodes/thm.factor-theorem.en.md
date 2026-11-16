@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
+layer 14 · theorem · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $f \in K[x]$, $a \in K$. Then

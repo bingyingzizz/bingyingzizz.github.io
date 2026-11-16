@@ -1,6 +1,6 @@
 # 一致凸　`def.uniformly-convex`
 一致凸空间
-layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析
+layer 25 · 定义 · 赋范空间与有界算子 · 泛函分析
 [在星图里打开](../#n=def.uniformly-convex)　·　[节点索引](../index.md)
 
 称赋范空间 $(X, \|\cdot\|)$ **一致凸**（uniformly convex），若对每个 $\varepsilon \in (0, 2]$ 存在 $\delta > 0$，使得

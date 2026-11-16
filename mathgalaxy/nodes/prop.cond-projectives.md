@@ -1,6 +1,6 @@
 # Cond 有足够多投射对象　`prop.cond-projectives`
 $\mathrm{Cond}$ 的投射对象
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-projectives)　·　[节点索引](../index.md)
 
 自由紧 Hausdorff 空间（看作凝聚态集）都是**投射对象**；并且 $\mathrm{Cond}$ 有**足够多的投射对象**。

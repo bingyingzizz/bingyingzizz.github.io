@@ -4,5 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/def-link.condab-solid.md](../proofs/def-link.condab-solid.md)
 - [`def.cond-measure`](../nodes/def.cond-measure.md) 整值测度：用到了定义 整值测度　[proofs/def-link.measure-solid.md](../proofs/def-link.measure-solid.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-def-solid-group.md](../proofs/dep.cat-ab-def-solid-group.md)
 
 > 续见 [nodes/def.solid-group.4.md](./def.solid-group.4.md)

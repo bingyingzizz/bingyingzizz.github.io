@@ -1,6 +1,6 @@
 # 紧支撑推前的存在性　`thm.f-shriek-existence`
 一般 $f_{!}$ 与 $f^{!}$ 的存在（Prop 11.2 的前半）
-layer 25 · 定理 · 相干对偶 · 解析空间
+layer 27 · 定理 · 相干对偶 · 解析空间
 [在星图里打开](../#n=thm.f-shriek-existence)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 是**分离、有限型**的概形映射。则一般（紧支撑）推前

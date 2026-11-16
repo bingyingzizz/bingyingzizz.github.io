@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.continuous`](../nodes/def.continuous.md) 连续（ε-δ 判据）：用到了定义 连续（ε-δ 判据）　[proofs/dep.continuous-derivative.md](../proofs/dep.continuous-derivative.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-def-derivative.md](../proofs/dep.sym-complex-def-derivative.md)
 
 > 续见 [nodes/def.derivative.3.md](./def.derivative.3.md)

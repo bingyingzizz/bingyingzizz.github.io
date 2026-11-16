@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-link.algcatlim-limit.md](../proofs/def-link.algcatlim-limit.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-algebra-categories-limits.md](../proofs/dep.cat-sets-prop-algebra-categories-limits.md)

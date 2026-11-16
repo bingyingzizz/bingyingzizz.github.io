@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 30 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 35 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 In an adapted frame, take the $j = 3$ component of the second structure equation (that is, the normal component of the curvature of $\mathbb{R}^{3}$ vanishes):

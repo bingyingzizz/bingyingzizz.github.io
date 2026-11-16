@@ -1,6 +1,6 @@
 # 覆盖筛构成滤子　`prop.covering-sieves-filter`
 命题：$J(X)$ 是筛的序集上的滤子
-layer 15 · 命题 · 层与拓扑 · 范畴论
+layer 17 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.covering-sieves-filter)　·　[节点索引](../index.md)
 
 对每个 $X$，$J(X)$（$X$ 上的覆盖筛全体）是筛的序集上的**滤子**：

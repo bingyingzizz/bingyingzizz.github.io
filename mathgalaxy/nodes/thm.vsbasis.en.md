@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 14 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a vector space over a field $K$. Then

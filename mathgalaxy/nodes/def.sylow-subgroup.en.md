@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 10 · definition · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
+layer 12 · definition · cluster Group Actions and Permutations (`algebra.group-action`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a finite group with $|G| = p^{a} m$, where $p$ is a prime and $p \nmid m$. A subgroup of $G$ of order $p^{a}$, call it $P$, is called a **Sylow $p$-subgroup**.

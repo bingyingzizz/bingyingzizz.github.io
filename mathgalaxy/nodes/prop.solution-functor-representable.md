@@ -1,6 +1,6 @@
 # 解集函子可表示　`prop.solution-functor-representable`
 命题：$A \mapsto \{a \in A^{n} : f_{i}(a) = 0\}$ 可表示
-layer 13 · 命题 · 预层与米田 · 范畴论
+layer 15 · 命题 · 预层与米田 · 范畴论
 [在星图里打开](../#n=prop.solution-functor-representable)　·　[节点索引](../index.md)
 
 设 $f_{1}, \ldots, f_{r} \in k[t_{1}, \ldots, t_{n}]$。

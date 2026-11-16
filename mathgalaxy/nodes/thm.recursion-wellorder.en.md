@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 7 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
+layer 9 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
 ## Statement · **draft**
 Let $(W, \preceq )$ be a **well-ordered set** and $G$ an arbitrary function (it may take values in a collection larger than any set). Write $W_{< w} = \{ v \in W : v \prec w \}$. Then there is a **unique** function $F$ defined on $W$ such that

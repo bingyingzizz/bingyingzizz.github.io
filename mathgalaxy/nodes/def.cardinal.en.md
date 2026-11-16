@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 8 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
+layer 10 · definition · cluster Cardinals and Equinumerosity (`set.cardinal`) · Set Theory
 
 ## Statement · **draft**
 Equipotence partitions all sets into classes. The **cardinality** $\#A$ of a set $A$ is the equipotence class of $A$ — it measures how large $A$ is, without regard to what the elements of $A$ are.

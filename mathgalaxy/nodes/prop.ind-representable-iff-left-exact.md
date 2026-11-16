@@ -1,6 +1,6 @@
 # ind-可表示即左正合　`prop.ind-representable-iff-left-exact`
 命题：$T$ ind-可表示 $\iff$ $\mathcal{C}/T$ 滤过 $\iff$ $T$ 左正合
-layer 14 · 命题 · 预层与米田 · 范畴论
+layer 16 · 命题 · 预层与米田 · 范畴论
 [在星图里打开](../#n=prop.ind-representable-iff-left-exact)　·　[节点索引](../index.md)
 
 预层 $T \in \widehat{\mathcal{C}}$ 的三条说法等价：

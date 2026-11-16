@@ -1,6 +1,6 @@
 # 凸组合　`def.convex-combination`
 凸组合：系数非负且和为 1 的有限线性组合
-layer 12 · 定义 · Hilbert 空间 · 泛函分析
+layer 14 · 定义 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=def.convex-combination)　·　[节点索引](../index.md)
 
 设 $V$ 是实向量空间，$x_{1}, \ldots, x_{n} \in V$。若 $\lambda_{i} \ge 0$ 且 $\sum_{i=1}^{n} \lambda_{i} = 1$，称

@@ -1,6 +1,6 @@
 # 覆盖筛的四条等价　`prop.sieve-covering-equivalent`
 覆盖筛的等价刻画（$\widetilde{R} \simeq \underline{X}$）
-layer 19 · 命题 · 层与拓扑 · 范畴论
+layer 21 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sieve-covering-equivalent)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景，$X \in \mathcal{C}$，$R$ 是 $X$ 上的一个**筛**。则下列四条等价：

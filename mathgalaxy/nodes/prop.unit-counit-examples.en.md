@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 13 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Unit and Counit Examples` (short) · `Units and Counits in Common Adjunctions` (full)
 
 ## Statement and proof

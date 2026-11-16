@@ -1,6 +1,6 @@
 # 素理想　`def.prime-ideal`
 素理想：商环是整环
-layer 13 · 定义 · 代数结构 · 抽象代数
+layer 15 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.prime-ideal)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺交换环，$P \subset A$ 是真理想。称 $P$ 是**素理想**，若

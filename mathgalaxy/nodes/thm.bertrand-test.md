@@ -1,6 +1,6 @@
 # 贝特朗判别法（Bertrand）　`thm.bertrand-test`
 Bertrand 判别法：比值展开到 $1/(n\log n)$ 项
-layer 21 · 定理 · 数项级数的敛散性 · 数学分析
+layer 25 · 定理 · 数项级数的敛散性 · 数学分析
 [在星图里打开](../#n=thm.bertrand-test)　·　[节点索引](../index.md)
 
 设 $a_n>0$，且存在 $\beta\in\mathbb{R}$，使

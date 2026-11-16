@@ -1,6 +1,6 @@
 # Radon 测度　`def.radon-measure`
 Radon 测度：局部有限的 Borel 测度，外正则 + 开集内正则
-layer 16 · 定义 · 测度的构造 · 实变函数+数学分析
+layer 18 · 定义 · 测度的构造 · 实变函数+数学分析
 [在星图里打开](../#n=def.radon-measure)　·　[节点索引](../index.md)
 
 设 $X$ 是局部紧 Hausdorff 空间。$X$ 上的 **Radon 测度** 是 Borel 测度 $\mu$，满足：

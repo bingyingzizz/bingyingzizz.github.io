@@ -1,6 +1,6 @@
 # 单态射的切片刻画　`prop.slice-fully-faithful-mono`
 命题：$f$ 单 $\iff$ $\mathcal{C}/Y \to \mathcal{C}/X$ 全忠实
-layer 14 · 命题 · 单满、子对象与像 · 范畴论
+layer 16 · 命题 · 单满、子对象与像 · 范畴论
 [在星图里打开](../#n=prop.slice-fully-faithful-mono)　·　[节点索引](../index.md)
 
 态射 $f : Y \to X$ 是**单态射** $\iff$ 沿 $f$ 的切片函子

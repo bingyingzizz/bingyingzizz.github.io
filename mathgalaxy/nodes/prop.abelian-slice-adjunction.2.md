@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/def-link.sliceadj-slice.md](../proofs/def-link.sliceadj-slice.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-abelian-slice-adjunction.md](../proofs/dep.cat-ab-prop-abelian-slice-adjunction.md)

@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.topos-morphism`](../nodes/def.topos-morphism.md) 拓扑斯的态射：用到了定义 拓扑斯的态射　[proofs/def-link.toposab-adjunction.md](../proofs/def-link.toposab-adjunction.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-topos-morphism-abelian-adjunction.md](../proofs/dep.cat-ab-prop-topos-morphism-abelian-adjunction.md)

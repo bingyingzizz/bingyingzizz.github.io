@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 24 · theorem · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be differentiable at $x_0$, and $g$ differentiable at $f(x_0)$ (the first four formulas below only need $f, g$ to be differentiable at $x_0$ each), $c \in \mathbb{R}$. Then

@@ -1,6 +1,6 @@
 # Riesz 表示定理　`thm.riesz-representation-lp`
 定理（Riesz 表示）：$1 < p < \infty$ 时 $(L^p)^{*} \cong L^q$
-layer 24 · 定理 · L^p 空间 · 实变函数+数学分析
+layer 30 · 定理 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=thm.riesz-representation-lp)　·　[节点索引](../index.md)
 
 设 $1 < p < \infty$，$q$ 是共轭指数。则对每个 $\Phi \in (L^p)^*$，存在**唯一**（a.e.）的 $g \in L^q$ 使

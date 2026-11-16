@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 16 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 18 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f : [a, b] \to \mathbb{R}$ (**no boundedness is required**), let $P = \{ x_0 < \cdots < x_n \}$ be a partition, and choose a **tag** $\xi_i \in I_i$ in each subinterval. The **Riemann sum** is

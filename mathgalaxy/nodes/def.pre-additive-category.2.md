@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.category`](../nodes/def.category.md) 范畴：用到了定义 范畴　[proofs/def-dep.preadd-cat.md](../proofs/def-dep.preadd-cat.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-def-pre-additive-category.md](../proofs/dep.cat-ab-def-pre-additive-category.md)
 
 > 续见 [nodes/def.pre-additive-category.3.md](./def.pre-additive-category.3.md)

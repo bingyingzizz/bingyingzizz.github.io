@@ -1,6 +1,6 @@
 # 层上同调是同伦不变量　`cor.homotopy-invariant-cohomology`
 同伦等价的映射给同构的上同调
-layer 18 · 推论 · 层上同调 · 同调代数+拓扑学
+layer 20 · 推论 · 层上同调 · 同调代数+拓扑学
 [在星图里打开](../#n=cor.homotopy-invariant-cohomology)　·　[节点索引](../index.md)
 
 设 $M$ 是**常值**阿贝尔群。

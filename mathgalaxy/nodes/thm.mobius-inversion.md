@@ -1,6 +1,6 @@
 # Möbius 反演　`thm.mobius-inversion`
 从和函数还原原函数
-layer 16 · 定理 · 数论函数与素数分布 · 数论
+layer 25 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.mobius-inversion)　·　[节点索引](../index.md)
 
 设 $f, g : \mathbb{N}^{+} \to \mathbb{C}$。则
@@ -9,6 +9,8 @@ $$g(n) = \sum_{d \mid n} f(d)\quad \forall n \qquad \iff \qquad f(n) = \sum_{d \
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`thm.mu-sum`](../nodes/thm.mu-sum.md) Möbius 和的恒等式：反演：交换求和次序，内层只剩 $n/m=1$　[proofs/imp.nt-mobius-inversion.md](../proofs/imp.nt-mobius-inversion.md)
+
+- …另有入边，续页见 [nodes/thm.mobius-inversion.2.md](./thm.mobius-inversion.2.md)
 
 refs: 华罗庚《数论导引》第三章；Apostol, Ch. 2
 

@@ -1,6 +1,6 @@
 # 极限即伴随　`prop.limit-adjoint`
 极限 $\iff$ 常图函子有伴随
-layer 12 · 命题 · 伴随与反射 · 范畴论
+layer 14 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.limit-adjoint)　·　[节点索引](../index.md)
 
 $\mathcal{C}$ 中所有以 $I$ 为索引的极限存在 $\iff$ 常图函子 $\Delta : \mathcal{C} \to \mathcal{C}^{I}$ 有**右伴随**，且该右伴随由

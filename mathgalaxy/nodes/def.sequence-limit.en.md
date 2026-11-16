@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
+layer 16 · definition · cluster Real Numbers and Limits (`analysis.real`) · Mathematical Analysis
 
 ## Statement · **draft**
 A sequence $\{x_n\} \subseteq \mathbb{R}$ **converges to** $x$ (written $x_n \to x$ or $\lim_{n \to \infty} x_n = x$), iff

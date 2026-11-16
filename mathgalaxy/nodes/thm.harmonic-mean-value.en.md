@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 25 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
+layer 29 · theorem · cluster Harmonic Functions (`analysis.harmonic`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: the value of a harmonic function at a point equals its average over the circle centred at that point of any radius; it also equals the area average over the disc.

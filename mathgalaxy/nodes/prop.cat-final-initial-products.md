@@ -1,6 +1,6 @@
 # Cat 的终始对象与有限积　`prop.cat-final-initial-products`
 命题：$\mathbf{Cat}$ 有终对象 $\mathbf{1}$、始对象 $\mathbf{0}$ 与积范畴
-layer 13 · 命题 · 范畴与图 · 范畴论
+layer 15 · 命题 · 范畴与图 · 范畴论
 [在星图里打开](../#n=prop.cat-final-initial-products)　·　[节点索引](../index.md)
 
 $\mathbf{Cat}$ 有**终对象**（单对象范畴 $\mathbf{1}$）、有**始对象**（空范畴 $\mathbf{0}$）、有**有限积**（积范畴 $\mathcal{C} \times \mathcal{C}'$）；

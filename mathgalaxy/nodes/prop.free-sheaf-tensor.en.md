@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
+layer 23 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Free Sheaf Tensor` (short) · `Tensor Product of Free Sheaves` (full)
 
 ## Statement and proof

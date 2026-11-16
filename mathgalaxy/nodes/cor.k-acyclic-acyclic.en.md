@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · corollary · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
+layer 20 · corollary · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `K-Bounded Acyclicity` (short) · `K-Bounded Acyclicity Implies Acyclicity` (full)
 
 ## Statement and proof

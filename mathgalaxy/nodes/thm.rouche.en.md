@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · theorem · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
+layer 30 · theorem · cluster Residues and the Argument Principle (`analysis.residue`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: if on the boundary of a closed curve the modulus of a "perturbation term" is strictly smaller than the modulus of a "main term", then adding the perturbation does not change the number of zeros inside the curve.

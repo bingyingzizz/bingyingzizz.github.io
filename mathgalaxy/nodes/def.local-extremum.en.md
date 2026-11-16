@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
+layer 23 · definition · cluster Mean Value Theorems and Taylor (`analysis.mvt`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $f$ be defined on a neighbourhood of $x_0$. Call $x_0$ a

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 16 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Covering Families` (short) · `Covering Families Form a Pretopology` (full)
 
 ## Statement and proof

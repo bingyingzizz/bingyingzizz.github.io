@@ -3,5 +3,6 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.bundle-metric`](../nodes/prop.bundle-metric.md) 纤维度量：ana.n12-riemannmetric-bundlemetric　[proofs/ana.n12-riemannmetric-bundlemetric.md](../proofs/ana.n12-riemannmetric-bundlemetric.md)
+- [`def.vector-field`](../nodes/def.vector-field.md) 向量场：用到了定义 向量场　[proofs/dep.vfield-riemannian.md](../proofs/dep.vfield-riemannian.md)
 
 > 续见 [nodes/def.riemannian-metric.5.md](./def.riemannian-metric.5.md)

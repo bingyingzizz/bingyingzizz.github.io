@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 14 · definition · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff and $A \subseteq C(K, \mathbb{K})$.

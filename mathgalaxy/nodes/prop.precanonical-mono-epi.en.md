@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Toposes (`cat.topos`) · Category Theory
+layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Precanonical Mono and Epi` (short) · `Monomorphisms and Epimorphisms under the Precanonical Topology` (full)
 
 ## Statement and proof

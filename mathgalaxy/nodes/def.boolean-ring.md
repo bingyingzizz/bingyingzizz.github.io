@@ -1,6 +1,6 @@
 # 布尔环　`def.boolean-ring`
 布尔环
-layer 9 · 定义 · Stone 与 Stonean · 拓扑学+抽象代数
+layer 11 · 定义 · Stone 与 Stonean · 拓扑学+抽象代数
 [在星图里打开](../#n=def.boolean-ring)　·　[节点索引](../index.md)
 
 **布尔环**是一个环 $B$，其中每个元素都**幂等**：

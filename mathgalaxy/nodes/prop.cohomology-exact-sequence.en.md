@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 13 · proposition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
+layer 15 · proposition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.cohomology-exact-sequence.md` and `proofs/`.

@@ -1,6 +1,6 @@
 # ℝ 是完备度量空间　`thm.real-complete-metric`
 定理：$(\mathbb{R}, |x - y|)$ 是完备度量空间
-layer 22 · 定理 · 实数完备性的等价刻画 · 数学分析
+layer 24 · 定理 · 实数完备性的等价刻画 · 数学分析
 [在星图里打开](../#n=thm.real-complete-metric)　·　[节点索引](../index.md)
 
 在 $\mathbb{R}$ 上取距离 $d(x, y) := |x - y|$。则 $(\mathbb{R}, d)$ 是**完备**度量空间：其中每个 Cauchy 列都收敛。

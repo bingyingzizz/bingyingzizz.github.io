@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
+layer 22 · theorem · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.pontryagin-van-kampen.md` and `proofs/`.

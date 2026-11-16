@@ -1,6 +1,6 @@
 # 球极投影保圆且共形　`prop.stereographic-circle`
 球极投影：球面上的圆对应扩充平面上的圆，且保角
-layer 21 · 命题 · 复变函数基础 · 复变函数
+layer 23 · 命题 · 复变函数基础 · 复变函数
 [在星图里打开](../#n=prop.stereographic-circle)　·　[节点索引](../index.md)
 
 球极投影把 $S^{2}$ 上的圆映成 $\widehat{\mathbb{C}}$ 上的圆：

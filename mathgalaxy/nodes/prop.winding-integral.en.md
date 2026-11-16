@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 24 · proposition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 Let $\gamma : [0,1] \to \mathbb{C}$ be a piecewise $C^{1}$ closed curve and $a \notin \gamma([0,1])$. Then

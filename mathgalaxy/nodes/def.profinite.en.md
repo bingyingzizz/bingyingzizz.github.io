@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
+layer 14 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
 ## Statement · **draft**
 **A profinite space** is a topological space obtained as the limit of finite discrete spaces along a **directed** system:

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
+layer 11 · theorem · cluster Constructing the Number Systems (`set.numbers`) · Set Theory
 
 ## Statement · **draft**
 On $\mathbb{Z} = (\mathbb{N} \times \mathbb{N})/{\sim}$, take the operations and order defined in `def.int`. Then:

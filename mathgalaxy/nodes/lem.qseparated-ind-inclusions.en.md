@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · lemma · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
+layer 22 · lemma · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Ind(CHaus)` (short) · `Quasi-Separated Condensed Sets as Filtered Colimits` (full)
 
 ## Statement and proof

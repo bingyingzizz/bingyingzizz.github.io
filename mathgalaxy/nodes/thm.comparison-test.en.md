@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 21 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $0 \le a_n \le b_n$ hold for all sufficiently large $n$. Then

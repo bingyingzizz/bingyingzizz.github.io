@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 15 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ have ordered basis $\mathcal{B} = (v_1, \ldots, v_n)$ and $W$ have ordered basis $\mathcal{C} = (w_1, \ldots, w_m)$, both finite-dimensional $K$-vector spaces.

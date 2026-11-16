@@ -8,17 +8,18 @@
 
 ## 基础工具榜
 - **36 / 36** `def.group` 群 · 代数结构
-- **32 / 33** `def.measure` 测度 · 测度的构造
-- **31 / 31** `def.topology` 拓扑空间与开集 · 拓扑空间的基本语汇
+- **35 / 35** `def.category-of-sets` 集合范畴 · 范畴与图
+- **35 / 35** `def.complex` 复数 ℂ · 数系的构造
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
-- **8 / 5** `thm.de-rham` de Rham 定理 · 微分形式、积分与 de Rham
+- **8 / 7** `def.smooth-manifold` 光滑流形 · 内蕴几何
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
+- **17 团 / 35 节点** `def.complex` 复数 ℂ · 数系的构造
 - **16 团 / 24 节点** `def.function` 映射 · 关系与函数
 - **15 团 / 30 节点** `def.compact` 紧 · 拓扑空间的基本语汇
 - 全部：`hubs/cross.md`

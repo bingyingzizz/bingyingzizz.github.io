@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 5 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
+layer 7 · definition · cluster Relations and Mappings (`set.rel`) · Set Theory
 
 ## Statement · **reviewed**
 Let $f$ be a relation from $A$ to $B$. Then $f$ is a **map** (written $f : A \to B$) if and only if every input has exactly one output:

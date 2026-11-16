@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 16 · definition · cluster Metric Spaces (`topology.metric`) · Topology
+layer 18 · definition · cluster Metric Spaces (`topology.metric`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/def.totally-bounded.md` and `proofs/`.

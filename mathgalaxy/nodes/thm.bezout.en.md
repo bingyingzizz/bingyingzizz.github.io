@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 15 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement · **draft**
 Let $a, b \in \mathbb{Z}$ be not both zero and put $d = \gcd(a, b)$. Then there exist $u, v \in \mathbb{Z}$ with

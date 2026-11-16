@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
+layer 24 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
 ## Statement · **draft**
 On $\mathbb{R}$ take the distance $d(x, y) := |x - y|$. Then $(\mathbb{R}, d)$ is a **complete** metric space: every Cauchy sequence in it converges.

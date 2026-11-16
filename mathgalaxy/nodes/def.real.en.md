@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 13 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
+layer 15 · definition · cluster Constructing the Number Systems (`set.numbers`) · Set Theory / Mathematical Analysis
 
 ## Statement · **draft**
 Let $\mathcal{C}$ denote the set of all **rational Cauchy sequences**, and $\sim$ the equivalence relation "difference is a **null sequence**" (see "Cauchy sequences and null sequences"). Put

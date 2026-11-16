@@ -1,6 +1,6 @@
 # τ 与 σ 的乘积公式　`thm.divisor-formula`
 用素因子分解算 $\tau(n)$ 与 $\sigma(n)$
-layer 13 · 定理 · 数论函数与素数分布 · 数论
+layer 15 · 定理 · 数论函数与素数分布 · 数论
 [在星图里打开](../#n=thm.divisor-formula)　·　[节点索引](../index.md)
 
 设 $n = p_{1}^{e_{1}} \cdots p_{r}^{e_{r}}$。则

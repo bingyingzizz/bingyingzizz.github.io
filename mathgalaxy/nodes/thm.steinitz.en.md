@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 14 · theorem · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a $K$-vector space, $S = (v_1, \ldots, v_n)$ linearly independent, $T = (w_1, \ldots, w_m)$ generating $V$. Then

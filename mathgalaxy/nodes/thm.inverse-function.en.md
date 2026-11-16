@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
+layer 29 · theorem · cluster Multivariable Differentiation (`analysis.multivariable`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $U \subseteq \mathbb{R}^{n}$ be open, $f : U \to \mathbb{R}^{n}$ of class $C^{1}$, $a \in U$ with $Df(a)$ **invertible**.

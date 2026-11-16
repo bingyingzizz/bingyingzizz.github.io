@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
+layer 23 · theorem · cluster Convergence Tests for Series (`analysis.series`) · Mathematical Analysis
 
 ## Statement · **draft**
 Let $a_n>0$ and $R=\lim_{n\to\infty} n\Bigl(\frac{a_n}{a_{n+1}}-1\Bigr)$. Then

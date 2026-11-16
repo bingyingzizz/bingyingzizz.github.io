@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 11 · definition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Adjunction` (short) · `Adjoint Functors` (full)
 
 ## Statement · **draft**

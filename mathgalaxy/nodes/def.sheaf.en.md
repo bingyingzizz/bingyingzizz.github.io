@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 17 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
 ## Statement · **draft**
 Let $\mathcal{C}$ be a site and $F : \mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$ a presheaf.

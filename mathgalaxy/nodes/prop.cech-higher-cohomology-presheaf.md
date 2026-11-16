@@ -1,6 +1,6 @@
 # 高次上同调预层没有 Čech 上同调　`prop.cech-higher-cohomology-presheaf`
 命题：$n \ne 0 \implies \check{H}^{p}\bigl(H^{n}(M)\bigr) = 0$
-layer 19 · 命题 · 层上同调 · 同调代数
+layer 21 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.cech-higher-cohomology-presheaf)　·　[节点索引](../index.md)
 
 设 $M$ 是景上的阿贝尔层、$n \ne 0$，并把 $H^{n}(M)$ 记作预层 $U \mapsto H^{n}(U, M)$。则

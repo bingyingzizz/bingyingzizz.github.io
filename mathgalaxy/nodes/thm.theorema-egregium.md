@@ -1,6 +1,6 @@
 # 绝妙定理　`thm.theorema-egregium`
 Gauss 曲率是内蕴量
-layer 32 · 定理 · 内蕴几何 · 微分几何
+layer 37 · 定理 · 内蕴几何 · 微分几何
 [在星图里打开](../#n=thm.theorema-egregium)　·　[节点索引](../index.md)
 
 高斯曲率 $K$ 只依赖第一基本形式 $I$。准确地说：若 $\varphi 

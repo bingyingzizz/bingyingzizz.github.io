@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
+layer 16 · definition · cluster Multilinear Algebra and Tensors (`algebra.multilinear`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a $K$-vector space. $V$'s **$k$-th exterior power** $\bigwedge^{k} V$ is the quotient of $V^{\otimes k}$ by the subspace spanned by

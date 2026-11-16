@@ -1,6 +1,6 @@
 # 底函子保不交并　`prop.underlying-preserves-coproduct`
 命题：$X = \coprod_{i} X_{i}$ $\implies$ $\underline{X} = \coprod_{i}\underline{X_{i}}$
-layer 20 · 命题 · 凝聚态集 · 凝聚态数学
+layer 22 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.underlying-preserves-coproduct)　·　[节点索引](../index.md)
 
 若拓扑空间 $X$ 是子空间的不交并 $X = \coprod_{i \in I} X_{i}$，则它的凝聚态集就是各块的凝聚态集在 $\mathrm{Cond}$ 里的**余积**：

@@ -1,6 +1,6 @@
 # 实 Banach 在紧 Hausdorff 上零调　`thm.real-banach-chaus-acyclic`
 实 Banach 空间在紧 Hausdorff 空间上零调
-layer 18 · 定理 · 凝聚态导出函子 · 凝聚态数学+同调代数
+layer 25 · 定理 · 凝聚态导出函子 · 凝聚态数学+同调代数
 [在星图里打开](../#n=thm.real-banach-chaus-acyclic)　·　[节点索引](../index.md)
 
 设 $V$ 是**实 Banach 空间**，$S$ 是**紧 Hausdorff** 空间。则对一切 $n > 0$
@@ -8,7 +8,7 @@ layer 18 · 定理 · 凝聚态导出函子 · 凝聚态数学+同调代数
 $$H^{n}_{\mathrm{cond}}(S,\ V) = 0.$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-dep.realbanach-chaus.md](../proofs/def-dep.realbanach-chaus.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-realchaus-acyclic.md](../proofs/dep.banach-realchaus-acyclic.md)
 
 - …另有入边，续页见 [nodes/thm.real-banach-chaus-acyclic.2.md](./thm.real-banach-chaus-acyclic.2.md)
 

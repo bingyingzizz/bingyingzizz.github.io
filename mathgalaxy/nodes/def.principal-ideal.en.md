@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 13 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $A$ be a commutative ring with identity and $a \in A$. The set

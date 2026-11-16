@@ -1,6 +1,6 @@
 # 极化恒等式　`thm.polarization`
 极化恒等式：内积由范数恢复
-layer 20 · 定理 · Hilbert 空间 · 泛函分析
+layer 24 · 定理 · Hilbert 空间 · 泛函分析
 [在星图里打开](../#n=thm.polarization)　·　[节点索引](../index.md)
 
 在实内积空间：

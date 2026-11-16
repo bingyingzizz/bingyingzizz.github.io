@@ -1,6 +1,6 @@
 # 内射的单射可裂　`prop.injective-splitting`
 $I$ 内射当且仅当每个单射 $I \rightarrowtail M$ 可裂
-layer 16 · 命题 · 内射模与可除群 · 同调代数
+layer 18 · 命题 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=prop.injective-splitting)　·　[节点索引](../index.md)
 
 设 $I$ 是左 $R$-模。则下列等价：

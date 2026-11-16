@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 21 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
+layer 23 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.soft-sheaf-acyclic.md` and `proofs/`.

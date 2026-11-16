@@ -1,6 +1,6 @@
 # Runge 逼近定理　`thm.runge`
 Runge 逼近定理：没有洞的区域上，全纯函数可以用多项式逼近
-layer 25 · 定理 · 解析延拓与整函数 · 复变函数
+layer 29 · 定理 · 解析延拓与整函数 · 复变函数
 [在星图里打开](../#n=thm.runge)　·　[节点索引](../index.md)
 
 设 $K \subset \mathbb{C}$ 是紧集，$f$ 在 $K$ 的某个邻域上全纯。若 $\mathbb{C} \setminus K$ 连通（即 $K$ 没有洞），则对每个 $\varepsilon > 0$ 存在**多项式** $p$，使

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
+layer 16 · definition · cluster Linear Maps and Rank (`algebra.linmap`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $T : V \to W$ be linear. The **nullity** of $T$ is defined as the dimension of its kernel:

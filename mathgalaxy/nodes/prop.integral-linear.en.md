@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 22 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Integral Linearity` (short) · `Linearity and Additivity of the Integral` (full)
 
 ## Statement · **draft**

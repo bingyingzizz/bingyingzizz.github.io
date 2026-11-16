@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 17 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
+layer 19 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 names: `Skyscraper Stalks` (short) · `Stalks of a Skyscraper Sheaf` (full)
 
 ## Statement · **draft**

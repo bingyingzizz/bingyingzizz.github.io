@@ -1,6 +1,6 @@
 # Archimedes 的 ε 形式与取整　`cor.archimedean-epsilon`
 推论：$1/n < \varepsilon$ 与取整函数
-layer 19 · 推论 · 实数的运算与不等式 · 数学分析
+layer 21 · 推论 · 实数的运算与不等式 · 数学分析
 [在星图里打开](../#n=cor.archimedean-epsilon)　·　[节点索引](../index.md)
 
 设 $K$ 是完备有序域（如 $\mathbb{R}$）。

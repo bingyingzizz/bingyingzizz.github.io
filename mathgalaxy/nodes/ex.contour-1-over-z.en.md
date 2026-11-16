@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · example · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 24 · example · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.contour-1-over-z.md` and `proofs/`.

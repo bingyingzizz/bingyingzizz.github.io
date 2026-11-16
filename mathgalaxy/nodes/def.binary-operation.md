@@ -1,6 +1,6 @@
 # 二元运算　`def.binary-operation`
 二元运算（$S \times S \to S$）
-layer 6 · 定义 · 代数结构 · 抽象代数
+layer 8 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.binary-operation)　·　[节点索引](../index.md)
 
 集合 $S$ 上的**（二元）运算**就是一个映射

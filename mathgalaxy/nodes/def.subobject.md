@@ -1,6 +1,6 @@
 # 子对象　`def.subobject`
 子对象
-layer 14 · 定义 · 单满、子对象与像 · 范畴论
+layer 16 · 定义 · 单满、子对象与像 · 范畴论
 [在星图里打开](../#n=def.subobject)　·　[节点索引](../index.md)
 
 把单态射 $Y \rightarrowtail X$ 看作 $X$ 的一个**子对象**，记 $Y \subseteq X$。子对象的**交**与沿态射的**原像**分别见 `def.intersection-subobject` 与 `def.preimage-subobject`；下面把两种构造一并写出作为总览，细节以那两个节点为准。

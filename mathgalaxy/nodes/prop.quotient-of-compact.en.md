@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 18 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
+layer 20 · proposition · cluster Convergence and Compactness (`topology.convergence`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.quotient-of-compact.md` and `proofs/`.

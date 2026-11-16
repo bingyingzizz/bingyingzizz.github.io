@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.analytic-ring`](../nodes/def.analytic-ring.md) 解析环 + [`cor.free-solid-product`](../nodes/cor.free-solid-product.md) 自由固态群是大乘积：解析性要求 $\operatorname{Ext}^1 = 0$ $\implies$ $\mathbb{R}_{\ell^1}$ 不是解析环　[proofs/imp.rl1-not-analytic.md](../proofs/imp.rl1-not-analytic.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-rl1.md](../proofs/dep.banach-rl1.md)

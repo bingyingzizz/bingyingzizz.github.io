@@ -1,6 +1,6 @@
 # 主理想　`def.principal-ideal`
 主理想：由一个元素生成
-layer 11 · 定义 · 代数结构 · 抽象代数
+layer 13 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.principal-ideal)　·　[节点索引](../index.md)
 
 设 $A$ 是含幺交换环，$a \in A$。集合

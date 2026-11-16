@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 10 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
+layer 12 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $G$ be a group. Define the **lower central series** inductively by

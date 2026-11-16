@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
+layer 21 · theorem · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
 ## Statement · **draft**
 The **projective objects** in $\mathbf{CHaus}$ are exactly the Stonean spaces.

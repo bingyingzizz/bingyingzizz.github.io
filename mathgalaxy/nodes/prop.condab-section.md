@@ -1,6 +1,6 @@
 # 截面函子保极限余极限　`prop.condab-section`
 截面函子 $\Gamma(F, -)$
-layer 19 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
+layer 21 · 命题 · 凝聚态阿贝尔群 · 凝聚态数学
 [在星图里打开](../#n=prop.condab-section)　·　[节点索引](../index.md)
 
 设 $F \in \mathbf{FCHaus}$。则**截面函子**
@@ -10,7 +10,7 @@ $$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \
 保**所有极限与所有余极限**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间：用到了定义 自由紧 Hausdorff 空间　[proofs/def-dep.free-condab-section.md](../proofs/def-dep.free-condab-section.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-condab-section.md](../proofs/dep.cat-ab-prop-condab-section.md)
 
 - …另有入边，续页见 [nodes/prop.condab-section.2.md](./prop.condab-section.2.md)
 

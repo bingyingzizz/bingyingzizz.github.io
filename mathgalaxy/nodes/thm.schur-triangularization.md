@@ -1,6 +1,6 @@
 # Schur 三角化　`thm.schur-triangularization`
 Schur 三角化：任何复方阵都酉相似于上三角
-layer 29 · 定理 · 内积空间与正交性 · 抽象代数
+layer 33 · 定理 · 内积空间与正交性 · 抽象代数
 [在星图里打开](../#n=thm.schur-triangularization)　·　[节点索引](../index.md)
 
 *

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 15 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
+layer 17 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $T : V \to V$ be linear with $V \ne \{0\}$. A scalar $\lambda \in K$ is called an **eigenvalue** of $T$ if and only if there is a **nonzero** vector $v \in V$ such that

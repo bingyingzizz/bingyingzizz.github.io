@@ -1,6 +1,6 @@
 # Grothendieck 拓扑　`def.grothendieck-topology`
 Grothendieck 拓扑与景
-layer 14 · 定义 · 层与拓扑 · 范畴论
+layer 16 · 定义 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=def.grothendieck-topology)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 上的 **Grothendieck 拓扑**是对每个 $X$ 指定一族**覆盖筛** $J(X)$，满足：

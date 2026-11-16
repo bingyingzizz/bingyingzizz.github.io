@@ -1,6 +1,6 @@
 # 层化与像交换　`prop.sheafification-image`
 命题：$\operatorname{im}(T^{\#} \to T'^{\#}) = \bigl(\operatorname{im}(T \to T')\bigr)^{\#}$
-layer 16 · 命题 · 层与拓扑 · 范畴论
+layer 18 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.sheafification-image)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是景、$u : T \to T'$ 是预层态射。则

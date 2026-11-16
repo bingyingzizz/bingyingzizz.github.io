@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
+layer 24 · theorem · cluster Arithmetic Functions and Distribution of Primes (`number.functions`) · Number Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.mu-sum.md` and `proofs/`.

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 33 · example · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
+layer 38 · example · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/ex.klein-bottle.md` and `proofs/`.

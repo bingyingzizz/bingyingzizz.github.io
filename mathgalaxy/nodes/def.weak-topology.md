@@ -1,6 +1,6 @@
 # 弱拓扑　`def.weak-topology`
 弱拓扑 $\sigma(E,E^{*})$
-layer 18 · 定义 · 赋范空间与有界算子 · 泛函分析+数学分析
+layer 25 · 定义 · 赋范空间与有界算子 · 泛函分析+数学分析
 [在星图里打开](../#n=def.weak-topology)　·　[节点索引](../index.md)
 
 设 $E$ 是赋范空间，$E^{*}$ 是其连续对偶。$E$ 上的**弱拓扑** $\sigma(E,E^{*})$ 是使所有 $\varphi\in E^{*}$ 都连续的最弱拓扑；等价地，它由半范数族 $p_{\varphi}(x)=|\varphi(x)|$（$\varphi\in E^{*}$）生成。

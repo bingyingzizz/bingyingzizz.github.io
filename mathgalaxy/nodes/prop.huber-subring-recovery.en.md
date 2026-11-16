@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
+layer 25 · proposition · cluster Adic Spaces (`analytic.adic`) · Analytic Spaces
 
 > continued in nodes/prop.huber-subring-recovery.en.2.md

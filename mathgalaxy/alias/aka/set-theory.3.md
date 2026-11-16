@@ -1,6 +1,8 @@
 # 别名 → 节点 · 集合论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../set-theory.md`
 
+- 基数 | cardinality | 势 | cardinal number | #A | |A| | card → def.cardinal
+
 - 对角线论证 | diagonal argument | 幂集比原集大 | 康托 | 康托尔 | 康托尔定理 → thm.cantor
 
 - 基数可比 | 三分律 | comparability of cardinals → thm.cardinal-comparable
@@ -26,9 +28,5 @@
 - 阿基米德 | Archimedean | 阿基米德性质 → lem.archimedean
 
 - 实数不可数 | ℝ 不可数 | uncountability of the reals → thm.real-uncountable
-
-- 完备有序域唯一 | 实数唯一 → thm.real-unique
-
-- 序数 | ordinal | 序数定义 → def.ordinal
 
 > 续见 alias/aka/set-theory.4.md

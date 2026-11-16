@@ -10,3 +10,5 @@ $$U \longmapsto \begin{cases} E, & x \in U \\ \emptyset, & x \notin U \end{cases
 半：在某个覆盖的每支上限制相等 $\implies$ 自身相等）$\iff$ 对每个开集 $U$，映射
 $$T(U) \longrightarrow \prod_{x \in U} T_{x}$$
 是**单射**。
+
+> 续见 [nodes/prop.stalk-separated.3.md](./prop.stalk-separated.3.md)

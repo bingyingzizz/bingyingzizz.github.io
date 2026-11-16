@@ -1,6 +1,6 @@
 # 子对象的原像　`def.preimage-subobject`
 子对象的原像
-layer 15 · 定义 · 单满、子对象与像 · 范畴论
+layer 17 · 定义 · 单满、子对象与像 · 范畴论
 [在星图里打开](../#n=def.preimage-subobject)　·　[节点索引](../index.md)
 
 设 $f : X^{\prime} \to X$ 是态射，$Y \rightarrowtail X$ 是 $X$ 的子对象（见 `def.subobject`）。$Y$ 沿 $f$ 的**原像**是纤维积
@@ -14,7 +14,7 @@ $$f^{-1}(Y) := Y \times_{X} X^{\prime} \;\longrightarrow\; X^{\prime} ,$$
 ## 它能推出什么 / 谁在用它
 - ～弱边 [`def.preimage`](../nodes/def.preimage.md) 像与原像
 
-- …另有出边，续页见 [nodes/def.preimage-subobject.4.md](./def.preimage-subobject.4.md)
+- …另有出边，续页见 [nodes/def.preimage-subobject.5.md](./def.preimage-subobject.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.preimage-subobject.3.md](./def.preimage-subobject.3.md)

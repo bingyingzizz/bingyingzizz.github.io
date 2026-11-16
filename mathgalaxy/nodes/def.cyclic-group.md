@@ -1,6 +1,6 @@
 # 循环群　`def.cyclic-group`
 循环群
-layer 9 · 定义 · 群作用与置换 · 抽象代数
+layer 11 · 定义 · 群作用与置换 · 抽象代数
 [在星图里打开](../#n=def.cyclic-group)　·　[节点索引](../index.md)
 
 设 $G$ 是群、$g \in G$。集合

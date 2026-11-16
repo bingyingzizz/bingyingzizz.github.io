@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 27 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 31 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: a function holomorphic on the whole complex plane and bounded must be constant — the complex plane is "too crowded" to accommodate a nonconstant bounded holomorphic function.

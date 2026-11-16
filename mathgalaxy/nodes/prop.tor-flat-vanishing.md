@@ -1,6 +1,6 @@
 # 平坦与挠积消失　`prop.tor-flat-vanishing`
 平坦当且仅当所有高次挠积为零
-layer 16 · 命题 · 平坦模 · 同调代数
+layer 18 · 命题 · 平坦模 · 同调代数
 [在星图里打开](../#n=prop.tor-flat-vanishing)　·　[节点索引](../index.md)
 
 设 $R$ 是环、$F$ 是右 $R$-模。下列条件等价：

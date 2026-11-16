@@ -1,6 +1,6 @@
 # 任意函子诱导拓扑斯态射　`thm.induced-topos-morphism`
 定理：$\hat{g}_{!} \dashv \hat{g}^{-1} \dashv \hat{g}_{*}$，于是 $\hat{g}$ 是拓扑斯的态射
-layer 19 · 定理 · 拓扑斯 · 范畴论
+layer 21 · 定理 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=thm.induced-topos-morphism)　·　[节点索引](../index.md)
 
 设 $g : \mathcal{C} \to \mathcal{C}'$ 是任意函子。则预复合

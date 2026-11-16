@@ -1,6 +1,6 @@
 # 分式域　`def.field-of-fractions`
 分式域：整环的形式商
-layer 10 · 定义 · 代数结构 · 抽象代数
+layer 12 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.field-of-fractions)　·　[节点索引](../index.md)
 
 设 $A$ 是整环。在集合 $A \times (A \setminus \{0\})$ 上定义

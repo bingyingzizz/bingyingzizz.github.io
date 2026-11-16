@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
+layer 13 · theorem · cluster Functors and Natural Transformations (`cat.functor`) · Category Theory
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/thm.equivalence-criterion.md` and `proofs/`.

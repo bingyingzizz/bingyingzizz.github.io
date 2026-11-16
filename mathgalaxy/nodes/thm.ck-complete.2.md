@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.ck-space`](../nodes/def.ck-space.md) C(K,E)：用到了定义 C(K,E)　[proofs/def-link.fa-ck-complete.md](../proofs/def-link.fa-ck-complete.md)
 - [`def.totally-bounded`](../nodes/def.totally-bounded.md) 全有界：用到了定义 全有界　[proofs/def-link.fa-totbdd-ck.md](../proofs/def-link.fa-totbdd-ck.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-ckcomplete.md](../proofs/dep.banach-ckcomplete.md)

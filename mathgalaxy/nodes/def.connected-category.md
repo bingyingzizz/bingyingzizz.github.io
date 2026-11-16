@@ -1,6 +1,6 @@
 # 连通范畴　`def.connected-category`
 连通范畴
-layer 9 · 定义 · 图与极限 · 范畴论
+layer 11 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.connected-category)　·　[节点索引](../index.md)
 
 范畴 $\mathcal{C}$ 叫**连通的**，如果对任意两个对象 $A, B \in \mathcal{C}$，都存在一条**有限锯齿**

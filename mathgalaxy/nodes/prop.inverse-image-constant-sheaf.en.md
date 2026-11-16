@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
+layer 21 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Constant Sheaf Pullback` (short) · `Constant Sheaves Are Stable under Pullback` (full)
 
 ## Statement and proof

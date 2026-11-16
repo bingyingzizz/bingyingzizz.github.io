@@ -1,6 +1,6 @@
 # 连续函数的运算　`prop.continuous-arithmetic`
 命题：连续函数的和差积商与复合
-layer 17 · 命题 · 连续与紧性 · 数学分析
+layer 19 · 命题 · 连续与紧性 · 数学分析
 [在星图里打开](../#n=prop.continuous-arithmetic)　·　[节点索引](../index.md)
 
 设 $f, g : \mathbb{R} \to \mathbb{R}$ 在 $x_0$ 连续，$c \in \mathbb{R}$。则下列函数在 $x_0$ 连续：

@@ -1,6 +1,6 @@
 # ℤ 是交换整环　`thm.int-ring`
 定理：$\mathbb{Z}$ 是含幺交换整环，且序与运算相容
-layer 9 · 定理 · 数系的构造 · 集合论
+layer 11 · 定理 · 数系的构造 · 集合论
 [在星图里打开](../#n=thm.int-ring)　·　[节点索引](../index.md)
 
 在 $\mathbb{Z} = (\mathbb{N} \times \mathbb{N})/{\sim}$ 上取 `def.int` 定义的运算与序。则：

@@ -1,6 +1,6 @@
 # 有限测度时方向反过来　`prop.lp-inclusion-finite`
 命题（只有爆破的场合）：$\mu(X) < \infty$ 时 $L^p(\mu) \supseteq L^q(\mu)$
-layer 21 · 命题 · L^p 空间 · 实变函数+数学分析
+layer 26 · 命题 · L^p 空间 · 实变函数+数学分析
 [在星图里打开](../#n=prop.lp-inclusion-finite)　·　[节点索引](../index.md)
 
 设 $\mu(X) < \infty$，$0 < p < q \le \infty$。则

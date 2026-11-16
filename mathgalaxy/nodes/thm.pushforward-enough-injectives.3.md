@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`prop.skyscraper-injective`](../nodes/prop.skyscraper-injective.md) 天际线层是内射层 + [`prop.skyscraper-stalks`](../nodes/prop.skyscraper-stalks.md) 天际线层的茎：内射的天际线层 $\implies$ 层范畴有足够多内射　[proofs/imp.enough-injectives-sheaf.md](../proofs/imp.enough-injectives-sheaf.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-thm-pushforward-enough-injectives.md](../proofs/dep.cat-ab-thm-pushforward-enough-injectives.md)

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
+layer 13 · theorem · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
 ## Statement · **draft**
 Let $a, b \in \mathbb{Z}$ with $b \ne 0$. Then there exist **unique** $q, r \in \mathbb{Z}$ such that

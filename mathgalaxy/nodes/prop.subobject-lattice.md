@@ -1,6 +1,6 @@
 # 子对象构成有界格　`prop.subobject-lattice`
 预拓扑斯中子对象构成有界格
-layer 17 · 命题 · 拓扑斯 · 范畴论
+layer 19 · 命题 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=prop.subobject-lattice)　·　[节点索引](../index.md)
 
 设 $\mathcal{C}$ 是预拓扑斯，$X \in \mathcal{C}$。则子对象全体 $\{X' : X' \rightarrowtail X\}$ 构成一个**有界格**：

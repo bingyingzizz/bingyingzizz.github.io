@@ -5,7 +5,7 @@ English entry · root `../`
 > English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
 > fields: statement draft · notes stale · name derived
 
-layer 13 · lemma · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
+layer 15 · lemma · cluster C(K) and Stone–Weierstrass (`fa.ck`) · Functional Analysis
 
 ## Statement · **draft**
 Let $K$ be compact Hausdorff and $A \subseteq C(K, \mathbb{R})$ a **closed** subalgebra **containing the unit**. Then $A$ is closed under $\min, \max$.

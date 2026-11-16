@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 12 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
+layer 14 · definition · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $V$ be a $K$-vector space. A map $f : V^{n} := V \times \cdots \times V \to K$ is called an **$n$-linear form** iff, after fixing any $n - 1$ arguments, the remaining argument is linear: for each $i$,

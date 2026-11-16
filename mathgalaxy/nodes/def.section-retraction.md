@@ -1,6 +1,6 @@
 # 截面与收缩　`def.section-retraction`
 截面与收缩
-layer 8 · 定义 · 范畴与图 · 范畴论
+layer 10 · 定义 · 范畴与图 · 范畴论
 [在星图里打开](../#n=def.section-retraction)　·　[节点索引](../index.md)
 
 设 $f : X \to Y$ 是范畴里的一条态射。

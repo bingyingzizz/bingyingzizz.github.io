@@ -1,6 +1,6 @@
 # 弱*拓扑　`def.weak-star-topology`
 弱*拓扑 $\sigma(E^{*},E)$：逐点收敛
-layer 16 · 定义 · 赋范空间与有界算子 · 泛函分析+数学分析
+layer 24 · 定义 · 赋范空间与有界算子 · 泛函分析+数学分析
 [在星图里打开](../#n=def.weak-star-topology)　·　[节点索引](../index.md)
 
 设 $E$ 是赋范空间，$E^{*}$ 是其连续对偶。$E^{*}$ 上的**弱*拓扑** $\sigma(E^{*},E)$ 是使所有求值泛函 $\varphi\mapsto\varphi(x)$（$x\in E$）都

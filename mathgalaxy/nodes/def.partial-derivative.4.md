@@ -6,5 +6,6 @@
 - ⇒ [`thm.mixed-partials`](../nodes/thm.mixed-partials.md) 混合偏导相等
 - 被 [`def.tangent-space-manifold`](../nodes/def.tangent-space-manifold.md) 切空间 用
 - ⇒ [`def.tangent-space-manifold`](../nodes/def.tangent-space-manifold.md) 切空间
+- 被 [`def.complex-partial`](../nodes/def.complex-partial.md) 复偏导数 用
 - 被 [`def.harmonic`](../nodes/def.harmonic.md) 调和函数 用
 - 被 [`def.smooth-map`](../nodes/def.smooth-map.md) 光滑映射 用

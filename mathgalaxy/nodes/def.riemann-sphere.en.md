@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 22 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 **The extended complex plane** $\widehat{\mathbb{C}} := \mathbb{C} \cup \{\infty\}$: add a point $\infty$ to the complex plane, and declare its neighbourhoods to be $\{\, |z| > R \,\} \cup \{\infty\}$ ($R > 0$).

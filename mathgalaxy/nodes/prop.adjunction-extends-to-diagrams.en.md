@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 14 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 16 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Adjunctions on Diagrams` (short) · `Adjunctions Extend to Diagram Categories` (full)
 
 ## Statement · **draft**

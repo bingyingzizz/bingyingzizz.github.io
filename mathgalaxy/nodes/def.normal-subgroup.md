@@ -1,6 +1,6 @@
 # 正规子群　`def.normal-subgroup`
 正规子群与陪集
-layer 8 · 定义 · 代数结构 · 抽象代数
+layer 10 · 定义 · 代数结构 · 抽象代数
 [在星图里打开](../#n=def.normal-subgroup)　·　[节点索引](../index.md)
 
 设 $H \le G$，$g \in G$。**左陪集**与**右陪集**分别是

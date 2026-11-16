@@ -1,6 +1,6 @@
 # 序数全体不构成集合　`thm.burali-forti`
 Burali–Forti：序数全体不构成集合
-layer 9 · 定理 · 序数与超限 · 集合论
+layer 11 · 定理 · 序数与超限 · 集合论
 [在星图里打开](../#n=thm.burali-forti)　·　[节点索引](../index.md)
 
 序数全体 $\mathrm{On}$ **不构成集合**：不存在一个集合，它的元素恰好是全部序数。

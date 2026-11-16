@@ -1,6 +1,6 @@
 # 不交并是紧 Hausdorff 的余积　`prop.coproduct-chaus`
 命题：$S \sqcup T$ 是 $\mathbf{CHaus}$ 里的余积
-layer 19 · 命题 · 紧 Hausdorff 空间 · 拓扑学
+layer 21 · 命题 · 紧 Hausdorff 空间 · 拓扑学
 [在星图里打开](../#n=prop.coproduct-chaus)　·　[节点索引](../index.md)
 
 在**紧 Hausdorff** 空间范畴里（自由紧 Hausdorff 空间之间也一样），**不交并**是**余积**：

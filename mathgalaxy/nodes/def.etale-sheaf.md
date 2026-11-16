@@ -1,6 +1,6 @@
 # étale 层　`def.etale-sheaf`
 $X_{\text{et}}$ 上的 étale 层
-layer 16 · 定义 · 层上同调 · 同调代数+抽象代数
+layer 18 · 定义 · 层上同调 · 同调代数+抽象代数
 [在星图里打开](../#n=def.etale-sheaf)　·　[节点索引](../index.md)
 
 设 $X$ 是概形。

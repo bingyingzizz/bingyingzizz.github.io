@@ -1,6 +1,6 @@
 # 保有限积的函子作用于代数对象　`prop.functor-preserves-monoid-objects`
 命题：$F$ 保有限积 $\implies F$ 诱导 $\mathrm{Mon}(\mathcal{C}) \to \mathrm{Mon}(\mathcal{D})$
-layer 15 · 命题 · 范畴里的代数结构 · 范畴论
+layer 17 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.functor-preserves-monoid-objects)　·　[节点索引](../index.md)
 
 若 $F : \mathcal{C} \to \mathcal{D}$ **保有限积**（含终对象），则

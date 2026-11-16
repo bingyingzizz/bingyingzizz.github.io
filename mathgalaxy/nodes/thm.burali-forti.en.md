@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 9 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
+layer 11 · theorem · cluster Ordinals and Transfinite Recursion (`set.ordinal`) · Set Theory
 
 ## Statement · **draft**
 The class $\mathrm{On}$ of all ordinals **is not a set**: there is no set whose elements are exactly all the ordinals.

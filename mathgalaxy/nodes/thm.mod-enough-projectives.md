@@ -1,6 +1,6 @@
 # 足够多投射对象　`thm.mod-enough-projectives`
 $R\text{-}\mathbf{Mod}$ 有足够多的投射对象
-layer 16 · 定理 · 内射模与可除群 · 同调代数
+layer 18 · 定理 · 内射模与可除群 · 同调代数
 [在星图里打开](../#n=thm.mod-enough-projectives)　·　[节点索引](../index.md)
 
 $R\text{-}\mathbf{Mod}$ **有足够多的投射对象**：每个左

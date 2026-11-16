@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 23 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 27 · theorem · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: on a simply connected region, the integral of a holomorphic function along any closed curve is $0$ — this is the engine of all of complex analysis.

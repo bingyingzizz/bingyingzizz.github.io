@@ -1,6 +1,6 @@
 # 拟分离对象　`def.quasi-separated`
 拟分离对象
-layer 19 · 定义 · 拓扑斯 · 范畴论
+layer 21 · 定义 · 拓扑斯 · 范畴论
 [在星图里打开](../#n=def.quasi-separated)　·　[节点索引](../index.md)
 
 拓扑斯 $\mathcal{T}$ 的对象 $X$ 叫**拟分离的**，如果任给 $Y \to X$、$Z \to X$（其中 $Y, Z$ 都拟紧），纤维积

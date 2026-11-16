@@ -1,6 +1,6 @@
 # Ab(C) 的极限　`prop.ab-limits-forgetful`
 $\mathrm{Ab}(\mathcal{C})$ 有所有极限
-layer 15 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
+layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 [在星图里打开](../#n=prop.ab-limits-forgetful)　·　[节点索引](../index.md)
 
 若 $\mathcal{C}$ 有所有极限，则 $\mathrm{Ab}(\mathcal{C})$ 也有所有极限，并且**遗忘函子** $\mathrm{Ab}(\mathcal{C}) \to \mathcal{C}$ 保它们。

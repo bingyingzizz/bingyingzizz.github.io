@@ -4,6 +4,6 @@ English entry · root `../`
 
 > English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
 
-layer 11 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 13 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
 > continued in nodes/prop.adjoint-full-faithful.en.2.md

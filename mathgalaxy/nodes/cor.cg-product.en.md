@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · corollary · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
+layer 21 · corollary · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `CG and Products` (short) · `Compactly Generated Spaces Are Closed under Products` (full)
 
 ## Statement and proof

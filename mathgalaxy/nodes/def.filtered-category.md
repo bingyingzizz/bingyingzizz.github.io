@@ -1,6 +1,6 @@
 # 滤过范畴　`def.filtered-category`
 滤过范畴与滤过余极限
-layer 11 · 定义 · 图与极限 · 范畴论
+layer 13 · 定义 · 图与极限 · 范畴论
 [在星图里打开](../#n=def.filtered-category)　·　[节点索引](../index.md)
 
 范畴 $I$ 叫**滤过的**（filtered），如果：

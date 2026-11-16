@@ -1,6 +1,6 @@
 # 本质满　`def.essentially-surjective`
 本质满函子
-layer 9 · 定义 · 函子与自然变换 · 范畴论
+layer 11 · 定义 · 函子与自然变换 · 范畴论
 [在星图里打开](../#n=def.essentially-surjective)　·　[节点索引](../index.md)
 
 函子 $F : \mathcal{C} \to \mathcal{C}'$ 叫**本质满**，如果对 $\mathcal{C}'$ 的每个对象 $X'$，都存在 $\mathcal{C}$ 中的对象 $X$ 使

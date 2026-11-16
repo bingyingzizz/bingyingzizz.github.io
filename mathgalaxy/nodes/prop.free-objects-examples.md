@@ -1,6 +1,6 @@
 # 自由对象的例子　`prop.free-objects-examples`
 命题：各代数范畴里的自由对象
-layer 14 · 命题 · 范畴里的代数结构 · 范畴论
+layer 16 · 命题 · 范畴里的代数结构 · 范畴论
 [在星图里打开](../#n=prop.free-objects-examples)　·　[节点索引](../index.md)
 
 「自由」在几个代数范畴里的样子：$\mathbf{Mon}$ 里是以 $X$ 为生成元的**字幺半群**；$\mathbf{Gr}$ 里是**字群**（允许消去）；$\mathbf{Rng}$ 里是非交换多项式环；

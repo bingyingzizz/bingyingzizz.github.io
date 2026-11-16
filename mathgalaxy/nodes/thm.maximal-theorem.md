@@ -1,6 +1,6 @@
 # 极大定理　`thm.maximal-theorem`
 极大定理（弱 (1,1) 不等式）
-layer 25 · 定理 · 微分定理 · 实变函数+数学分析
+layer 30 · 定理 · 微分定理 · 实变函数+数学分析
 [在星图里打开](../#n=thm.maximal-theorem)　·　[节点索引](../index.md)
 
 存在常数 $C > 0$（只依赖维数 $n$），使对一切 $f \in L^1$ 与一切 $\alpha > 0$：

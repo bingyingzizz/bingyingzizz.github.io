@@ -1,6 +1,6 @@
 # Bézout 整环　`def.bezout-domain`
 Bézout 整环：有限生成理想都是主理想
-layer 12 · 定义 · 整环与分解 · 抽象代数
+layer 14 · 定义 · 整环与分解 · 抽象代数
 [在星图里打开](../#n=def.bezout-domain)　·　[节点索引](../index.md)
 
 整环 $A$ 叫 **Bézout 整环**，若每个**有限生成**理想都是主理想 —— 等价地：任意 $a, b \in A$ 存在 $d, u, v$ 使

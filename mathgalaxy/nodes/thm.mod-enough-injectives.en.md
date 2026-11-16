@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 19 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
+layer 21 · theorem · cluster Injective Modules and Divisible Groups (`hom.injective`) · Homological Algebra
 names: `Enough Injectives` (short) · `Modules Have Enough Injectives` (full)
 
 ## Statement and proof

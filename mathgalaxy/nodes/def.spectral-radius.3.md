@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.eigenvalue`](../nodes/def.eigenvalue.md) 特征值与特征向量：用到了定义 特征值与特征向量　[proofs/dep.ln-radius-eigen.md](../proofs/dep.ln-radius-eigen.md)
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-def-spectral-radius.md](../proofs/dep.sym-complex-def-spectral-radius.md)

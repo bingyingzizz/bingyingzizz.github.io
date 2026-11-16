@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 18 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
+layer 20 · definition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 
 ## Statement · **draft**
 **Infinite interval**: if $f$ is integrable on every $[a, R]$, define

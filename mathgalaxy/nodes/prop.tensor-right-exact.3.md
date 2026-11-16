@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.hom-tensor-adjunction-mod`](../nodes/thm.hom-tensor-adjunction-mod.md) 张量与内同态的伴随：左伴随保余极限 $\implies$ 张量右正合　[proofs/imp.tensor-right-exact.md](../proofs/imp.tensor-right-exact.md)
 - [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列：用到了定义 一般正合列　[proofs/def-link.tensorrightexact-exactseq.md](../proofs/def-link.tensorrightexact-exactseq.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-tensor-right-exact.md](../proofs/dep.cat-ab-prop-tensor-right-exact.md)

@@ -1,6 +1,6 @@
 # 凝聚态集就是有限紧 Hausdorff 空间上的层　`thm.cond-equiv-fchaus`
 $\mathrm{Cond} \simeq \widehat{\mathbf{FCHaus}}$
-layer 20 · 定理 · 凝聚态集 · 凝聚态数学
+layer 22 · 定理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=thm.cond-equiv-fchaus)　·　[节点索引](../index.md)
 
 $\mathbf{CHaus}$ 上的层与 $\mathbf{FCHaus}$ 上的层是**同一个范畴**：

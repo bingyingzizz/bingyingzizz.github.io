@@ -1,6 +1,6 @@
 # 稠密性定理　`thm.density`
 稠密性定理
-layer 14 · 定理 · 预层与米田 · 范畴论
+layer 16 · 定理 · 预层与米田 · 范畴论
 [在星图里打开](../#n=thm.density)　·　[节点索引](../index.md)
 
 $\widehat{\mathcal{C}}$ 中的每个预层 $T$ 都是**可表示预层的余极限**：

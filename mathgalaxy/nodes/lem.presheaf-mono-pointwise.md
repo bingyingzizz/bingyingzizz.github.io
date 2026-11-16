@@ -1,6 +1,6 @@
 # 预层态射的单满按点检验　`lem.presheaf-mono-pointwise`
 预层是逐点算的
-layer 14 · 引理 · 预层与米田 · 范畴论
+layer 16 · 引理 · 预层与米田 · 范畴论
 [在星图里打开](../#n=lem.presheaf-mono-pointwise)　·　[节点索引](../index.md)
 
 预层态射 $\varphi : T \implies T'$ 在 $\widehat{\mathcal{C}}$ 中是单态射（满态射）$\iff$ 对每个 $X \in \mathcal{C}$，$\varphi_{X} : T(X) \to T'(X)$ 是单射（满射）。

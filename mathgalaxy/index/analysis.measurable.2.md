@@ -1,7 +1,7 @@
 # 可测函数与收敛 / Measurable Functions and Convergence（analysis.measurable）· 节点清单（第 2/2 页）
 根 `../`　·　第 1 页 `index/analysis.measurable.md`
 
-- prop.convergence-counterexamples　四个标准反例　layer 23
-- prop.L1-implies-measure　L¹ 收敛 ⟹ 依测度收敛　layer 23
-- thm.egorov　Егоров 定理　layer 23
-- cor.lusin　Лузин 定理　layer 24
+- prop.convergence-counterexamples　四个标准反例　layer 28
+- prop.L1-implies-measure　L¹ 收敛 ⟹ 依测度收敛　layer 28
+- thm.egorov　Егоров 定理　layer 28
+- cor.lusin　Лузин 定理　layer 29

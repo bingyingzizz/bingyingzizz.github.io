@@ -1,6 +1,6 @@
 # Cond 的满态射都是正则的　`prop.cond-epi-regular`
 $\mathrm{Cond}$ 中满态射 $=$ 余等化子
-layer 19 · 命题 · 凝聚态集 · 凝聚态数学
+layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=prop.cond-epi-regular)　·　[节点索引](../index.md)
 
 在 $\mathrm{Cond}$ 中，每个满态射 $f : X \to Y$ 都是**正则**的：它是它自己那对投影的余等化子，

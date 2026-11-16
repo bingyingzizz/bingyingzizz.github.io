@@ -1,6 +1,6 @@
 # 半范数阿贝尔群　`def.semi-normed-ab-group`
 半范数阿贝尔群
-layer 8 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
+layer 16 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
 [在星图里打开](../#n=def.semi-normed-ab-group)　·　[节点索引](../index.md)
 
 **半范数阿贝尔群**是一个阿贝尔群 $M$ 配上函数 $\|\cdot\| : M \to \mathbb{R}_{\ge 0}$，满足
@@ -10,10 +10,12 @@ layer 8 · 定义 · 凝聚态导出函子 · 凝聚态数学+数学分析
 - $\|-s\| = \|s\|$（对称性）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/def-dep.seminorm-group.md](../proofs/def-dep.seminorm-group.md)
+- [`def.real`](../nodes/def.real.md) 实数系 ℝ：用到了定义 实数系 ℝ　[proofs/dep.sym-real-def-semi-normed-ab-group.md](../proofs/dep.sym-real-def-semi-normed-ab-group.md)
+
+- …另有入边，续页见 [nodes/def.semi-normed-ab-group.2.md](./def.semi-normed-ab-group.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.semi-normed-ab-group.2.md](./def.semi-normed-ab-group.2.md)
+- …另有出边，续页见 [nodes/def.semi-normed-ab-group.3.md](./def.semi-normed-ab-group.3.md)
 
 refs: Le Stum, §8.2
 

@@ -3,19 +3,19 @@
 选出「度量」里能算长度的那一层（范数 → 等价范数 → 单位球紧 ⟺ 有限维），再把线性算子装上算子范数：有界 ⟺ 连续 → B(E,F) 是 Banach → 对偶 $E^*$。
 中心天体 def.norm　·　32 个节点　·　根 `../`　·　续页 `index/fa.norm.2.md`
 
-- def.norm　范数　layer 12
-- def.norm-equivalence　等价范数　layer 13
-- prop.norm-induces-metric　范数诱导的距离　layer 15
-- def.ell2-space　ℓ²(I)　layer 15
-- lem.almost-orthogonal　几乎正交引理　layer 16
-- def.bounded-operator　有界线性算子　layer 16
-- def.schauder-basis　Schauder 基　layer 16
-- def.strictly-convex　严格凸　layer 16
-- def.weak-star-topology　弱*拓扑　layer 16
-- thm.hahn-banach　Hahn–Banach 定理　layer 16
-- thm.norm-equiv-finite-dim　有限维范数等价　layer 17
-- thm.linear-continuous-bounded　连续 ⟺ 有界　layer 17
-- prop.operator-algebra　算子乘法的范数不等式　layer 17
-- thm.riesz-ball-compact　单位球紧 ⟺ 有限维　layer 18
+- def.norm　范数　layer 22
+- prop.norm-induces-metric　范数诱导的距离　layer 23
+- def.norm-equivalence　等价范数　layer 23
+- def.ell2-space　ℓ²(I)　layer 23
+- thm.norm-equiv-finite-dim　有限维范数等价　layer 24
+- lem.almost-orthogonal　几乎正交引理　layer 24
+- def.bounded-operator　有界线性算子　layer 24
+- def.schauder-basis　Schauder 基　layer 24
+- def.strictly-convex　严格凸　layer 24
+- def.weak-star-topology　弱*拓扑　layer 24
+- thm.hahn-banach　Hahn–Banach 定理　layer 24
+- thm.riesz-ball-compact　单位球紧 ⟺ 有限维　layer 25
+- thm.linear-continuous-bounded　连续 ⟺ 有界　layer 25
+- prop.operator-algebra　算子乘法的范数不等式　layer 25
 
 > 续见 `index/fa.norm.2.md`

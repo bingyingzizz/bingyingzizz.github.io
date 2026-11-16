@@ -1,6 +1,6 @@
 # 拟分离即含入的滤过余极限　`lem.qseparated-ind-inclusions`
 拟分离 $\iff$ 紧 Hausdorff 块沿含入拼起来
-layer 20 · 引理 · 凝聚态集 · 凝聚态数学
+layer 22 · 引理 · 凝聚态集 · 凝聚态数学
 [在星图里打开](../#n=lem.qseparated-ind-inclusions)　·　[节点索引](../index.md)
 
 凝聚态集 $X$ 是**拟分离**的 $\iff$ 它可以写成

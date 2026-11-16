@@ -1,6 +1,6 @@
 # 无环 ⟺ Čech 上同调为零　`prop.acyclic-iff-cech`
 $M$ 无环 $\iff \check{H}^{n}(M) = 0$（$n \ne 0$）
-layer 19 · 命题 · 层上同调 · 同调代数
+layer 21 · 命题 · 层上同调 · 同调代数
 [在星图里打开](../#n=prop.acyclic-iff-cech)　·　[节点索引](../index.md)
 
 $\mathcal{C}$ 上的阿贝尔层 $M$ **无环** $\iff \check{H}^{n}(M) = 0$ 对一切 $n \ne 0$。

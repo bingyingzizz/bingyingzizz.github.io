@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · proposition · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
+layer 30 · proposition · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
 ## Statement · **draft**
 Let $f$ be holomorphic on a region $\Omega$, with $f(z_{0}) = 0$, and suppose that $f$ is not identically zero in any neighbourhood of $z_{0}$. Then there are a **unique** integer $m \ge 1$ and a function $g$ holomorphic near $z_{0}$ such that

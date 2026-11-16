@@ -1,6 +1,6 @@
 # 单射 / 满射 / 双射　`def.bijection`
 单射 / 满射 / 双射
-layer 6 · 定义 · 关系与函数 · 集合论
+layer 8 · 定义 · 关系与函数 · 集合论
 [在星图里打开](../#n=def.bijection)　·　[节点索引](../index.md)
 
 设 $f : A \to B$。

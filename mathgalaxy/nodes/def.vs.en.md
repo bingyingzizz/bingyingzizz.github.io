@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 11 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
+layer 13 · definition · cluster Bases of Vector Spaces (`algebra.vectorspace`) · Abstract Algebra
 
 ## Statement · **draft**
 Let $K$ be a field, $V$ a vector space over $K$, and $S \subseteq V$.

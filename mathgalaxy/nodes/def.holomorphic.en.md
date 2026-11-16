@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
+layer 23 · definition · cluster Foundations of Complex Analysis (`analysis.complex`) · Complex Analysis
 
 ## Statement · **draft**
 **In plain words**: complex differentiability means "the difference quotient converges in the complex sense" — $h$ may approach $0$ from **any direction, in any manner**, but the quotient must tend to the same complex number.

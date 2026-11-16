@@ -1,6 +1,6 @@
 # 滤过范畴可换成有向集　`prop.filtered-directed`
 滤过 $\implies$ 存在共尾的有向集
-layer 14 · 命题 · 图与极限 · 范畴论
+layer 16 · 命题 · 图与极限 · 范畴论
 [在星图里打开](../#n=prop.filtered-directed)　·　[节点索引](../index.md)
 
 若 $I$ 是**滤过**范畴，则存在**有向集** $J$ 与函子 $u : J \to I$，使得对任何图 $D : I \to \mathcal{C}$：

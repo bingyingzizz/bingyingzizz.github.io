@@ -1,6 +1,6 @@
 # ℝ 不可数　`thm.real-uncountable`
 实数集是稠密而不可数的：$\#\mathbb{R} = 2^{\aleph_0}$
-layer 18 · 定理 · 数系的构造 · 集合论+数学分析
+layer 20 · 定理 · 数系的构造 · 集合论+数学分析
 [在星图里打开](../#n=thm.real-uncountable)　·　[节点索引](../index.md)
 
 *

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics / Mathematical Analysis
+layer 26 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/prop.banach-as-condensed.md` and `proofs/`.

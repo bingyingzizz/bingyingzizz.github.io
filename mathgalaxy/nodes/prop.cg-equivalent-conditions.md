@@ -1,6 +1,6 @@
 # 紧生成空间的等价刻画　`prop.cg-equivalent-conditions`
 紧生成性的六条等价说法
-layer 19 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
+layer 21 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 [在星图里打开](../#n=prop.cg-equivalent-conditions)　·　[节点索引](../index.md)
 
 下面六条等价：

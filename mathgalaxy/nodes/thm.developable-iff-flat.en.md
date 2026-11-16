@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 35 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
+layer 40 · theorem · cluster Theory of Surfaces (`diffgeom.surface`) · Differential Geometry
 
 ## Statement · **draft**
 **What this does**: it gives a workable criterion for whether a ruled surface is developable — a determinant identity, with no PDE to solve.

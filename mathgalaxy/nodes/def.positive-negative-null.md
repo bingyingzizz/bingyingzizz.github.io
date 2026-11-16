@@ -1,6 +1,6 @@
 # 正集 / 负集 / 零集　`def.positive-negative-null`
 正集 / 负集 / 零集
-layer 18 · 定义 · 符号测度与分解 · 实变函数+数学分析
+layer 24 · 定义 · 符号测度与分解 · 实变函数+数学分析
 [在星图里打开](../#n=def.positive-negative-null)　·　[节点索引](../index.md)
 
 设 $\nu$ 是符号测度，$E \in \mathcal{M}$。
