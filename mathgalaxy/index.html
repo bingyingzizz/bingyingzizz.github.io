@@ -1676,12 +1676,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
 
     /* 节点 */
     node: {
-      baseRadius: 3.0,           // ⭐ 2026-11-16：固定**屏幕像素**半径（不再乘 k^radiusPower）
-      /* 2026-11-16 用户：基准要回到旧版 fit 的观感（旧 fit k≈0.245 时典型 ~3.1px、hub ~5.1px）。
-         6px 基准在手机上点大一圈，所以基准按「旧 fit 的屏幕尺寸」重新钉：3.0 × sizeMul。 */
-      minRadius: 2.0,
-      maxRadius: 26,
-      radiusPower: 0.62,          // 已废弃（2026-11-16 起半径不随 k 变；留着是为了旧脚本读配置不报错）
+      baseRadius: 10,            // ⭐ 2026-11-16：**世界坐标**半径（屏幕半径 = 它 × sizeMul × cam.k）
+      /* 2026-11-16 用户最终口径：「绝对大小不变」——缩放变小点就变小、放大点就变大。
+         锚点（对照图实测定）：fit 档 k≈0.247 时典型 2–3 CSS px、hub ~5px ⇒ 世界半径 10（hub 20.5）。
+         min/max 是世界单位（不是屏幕像素）；sizeClamp 已废弃。 */
+      minRadius: 5,
+      maxRadius: 25,
+      radiusPower: 0.62,          // 已废弃（2026-11-16 起半径 = 世界常量 × cam.k；留着是怕旧脚本读配置报错）
       ringWidth: 2.0,
       labelOffset: 13,            // 文字在节点下方多远（世界单位）
       labelSize: 14,              // 字号（缩放 1 时）
@@ -1736,7 +1737,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
           [0, 0.78]             // 叶子：只有一条边的边角小点
         ]
       },
-      sizeClamp: 33             // 放大之后的最终上限（世界单位）；minGap 是 64，不会撞
+      sizeClamp: 33             // 已废弃（2026-11-16 起不做任何半径上限；留着是怕旧脚本读配置报错）
     },
 
     /* 连线 */
@@ -5773,19 +5774,16 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     }
 
     function nodeRadius(node) {
-      /* ⭐ 2026-11-16（用户）：「节点大小比例别随视口缩放变」。
-         以前是 baseRadius × k^0.62 —— 放大后节点巨大、缩小后缩成小点，
-         同一张图在不同缩放下观感完全不同。现在**固定屏幕像素半径**：
-         只保留 sizeMul 的「度数 / hub」相对比例，min/max/sizeClamp 仍是
-         屏幕像素的上下限（它们本来就是这个口径）。
+      /* ⭐ 2026-11-16（用户，第二次口径）：「不是点在屏幕中占的比例不变，是绝对大小不变，
+         缩放变小了点肯定要变小、放大了肯定要变大」。
+         所以半径是**世界坐标常量**（`config.node.baseRadius` 世界单位 × sizeMul），
+         屏幕半径 = 世界半径 × cam.k —— 线性、不做屏幕像素钳制。
+         `minRadius/maxRadius` 也是世界单位，只兜底极端配置；`sizeClamp` 已废弃。
          ⚠️ 所有调用方（边端点 trim、命中测试、光晕、已读环、hover、导出）
-         都按「屏幕像素」用它，几何在屏幕坐标里算，所以改这里就够。 */
-      var r = C.node.baseRadius;
-      r = U.clamp(r, C.node.minRadius, C.node.maxRadius);
+         本来就用「屏幕像素」口径，这里返回的正是屏幕像素，所以改这一处就够。 */
+      var r = U.clamp(C.node.baseRadius, C.node.minRadius, C.node.maxRadius);
       r *= sizeMul(node);
-      // 放大之后也要有上限，否则高缩放下中心天体会顶到邻居
-      if (C.node.sizeClamp) r = Math.min(r, C.node.sizeClamp);
-      return r;
+      return r * Math.max(0.0001, camNow().k);
     }
 
     function labelFont() {
