@@ -67,6 +67,25 @@
   ol.refs li { margin:.42rem 0; }
   .foot { margin-top:2.6rem; padding-top:.9rem; border-top:1px solid var(--line);
     font-size:.78rem; color:var(--dim); font-family:system-ui,sans-serif; line-height:1.7; }
+  /* ---------- 语言开关（本页不加载 site.css，所以这一小段在这里重写一份） ---------- */
+  /* 论文正文只有英文：EN 是当前页，中文指向研究列表（那里有中文标题与摘要）。 */
+  .topnav { display:flex; flex-wrap:wrap; align-items:center; }
+  .lang-switch { margin-left:auto; display:inline-flex; align-items:center; gap:1px; padding:2px;
+    border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.92);
+    line-height:1; white-space:nowrap; }
+  .lang-switch .ls-item { display:inline-block; padding:4px 9px; border-radius:999px;
+    font-family:system-ui,sans-serif; font-size:.74rem; font-weight:600; color:var(--dim);
+    text-decoration:none; }
+  .topnav .lang-switch a.ls-item { margin-right:0; color:var(--dim); }
+  .topnav .lang-switch a.ls-item:hover { background:#eef1f6; color:var(--ink); text-decoration:none; }
+  .lang-switch .ls-item[aria-current="true"] { background:var(--ink); color:#fff; }
+  .lang-switch .ls-sep { color:#b6bdc7; font-size:.7rem; padding:0 1px; user-select:none; }
+  /* 中文说明条：论文是英文写的，这一条把中文读者接回中文页面，不伪造中文正文 */
+  .zh-note { max-width:49rem; margin:0 auto; padding:.55rem 1.4rem 0; }
+  .zh-note p { margin:0; font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+    font-size:.82rem; line-height:1.7; color:#4a515c; background:#f7f8fa;
+    border:1px solid var(--line); border-radius:3px; padding:.6rem .85rem; }
+  .zh-note b { color:var(--ink); }
   @media (max-width:640px){ body{font-size:16px} .paper{padding:1.8rem 1rem 4rem} }
 </style>
 </head>
@@ -76,9 +95,25 @@
   <a href="./">← bingyingzizz</a>
   <a href="research.html">星图研究</a>
   <a href="mathgalaxy/">数学星图</a>
+  <!-- 全站统一的「中文 / EN」：本页正文用英文写成，所以 EN 是当前页；
+       中文指向研究列表（中文标题、摘要、状态都在那儿）—— 本页不另造中文正文。 -->
+  <nav class="lang-switch" aria-label="语言 / Language">
+    <a class="ls-item" href="research.html?lang=zh" hreflang="zh-CN" lang="zh">中文</a>
+    <span class="ls-sep" aria-hidden="true">/</span>
+    <span class="ls-item" aria-current="true" lang="en">EN</span>
+  </nav>
 </div>
 
-<main class="paper">
+<!-- 中文说明条（chrome，不是正文）：英文论文页对中文读者的落点。
+     中文标题、摘要与状态都在研究列表里；这里只交代「本页为什么是英文」。 -->
+<div class="zh-note" lang="zh-CN">
+  <p><b>本页是英文论文稿</b> —— 正文只有英文，站点不提供中文翻译；中文框架稿保存在本地仓库里，
+  没有随站点发布。中文标题、摘要与状态见 <a href="research.html?lang=zh">星图研究</a>；
+  论文里的数学内容与中文页面上的同名命题是同一套。
+  标题：紧群上平凡 p-liquid 系数的低次上同调。</p>
+</div>
+
+<main class="paper" lang="en">
 
 <h1>Low-degree cohomology of compact groups with trivial p-liquid coefficients</h1>
 <p class="byline">bingyingzizz · 16 November 2026</p>

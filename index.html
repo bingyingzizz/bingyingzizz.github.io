@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>数学星图 MathGalaxy · 可交互的数学知识图谱</title>
-<meta name="description" content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」三层知识尺度组织（外层还有一个「大板块」把星系归类），每个概念一页，边是推出、等价与定义引用。人可读，AI 可查。">
+<title data-title-en="MathGalaxy · an interactive knowledge graph of mathematics">数学星图 MathGalaxy · 可交互的数学知识图谱</title>
+<meta name="description" data-desc-en="MathGalaxy is an interactive knowledge graph of mathematics: every definition, theorem and lemma is a node, every arrow is a derivation. One page per concept, theorem pages with proofs on the edges. Readable by people, queryable by AI." content="数学星图 MathGalaxy —— 可交互的数学知识图谱：定理、定义、引理按「星系 / 星团 / 恒星」三层知识尺度组织（外层还有一个「大板块」把星系归类），每个概念一页，边是推出、等价与定义引用。人可读，AI 可查。">
 <!-- Google Search Console 的站点所有权验证（用户 2026-10-14 从 GSC 取的）。
      ⛔ 别删这行：删掉 = Google 认为所有权失效，已经建好的索引会慢慢掉光。
      ⚠️ 只放首页 ——「网址前缀」资源的验证就是查 https://bingyingzizz.github.io/ 这一个 URL。
@@ -26,15 +26,47 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M9 9 23 15 12 24' stroke='%234f7cf5' stroke-width='1.7' fill='none' opacity='.5'/><circle cx='9' cy='9' r='3.2' fill='%234f7cf5'/><circle cx='23' cy='15' r='3.2' fill='%234f7cf5'/><circle cx='12' cy='24' r='3.2' fill='%234f7cf5'/></svg>">
 <link rel="stylesheet" href="assets/site.css">
+<!-- 语言：首屏之前就把 <html lang data-lang> 定下来，否则英文读者会先闪一屏中文。
+     规则顺序 = ?lang → localStorage → navigator.language，与 assets/lang.js 的 detect() 完全一致
+     （改一处必须改另一处；GitHub Pages 读不到 IP，这里判的是浏览器语言）。 -->
+<script>
+(function(){try{
+  var q=new URLSearchParams(location.search).get('lang');
+  var s=localStorage.getItem('mathgalaxy.read.lang');
+  var b=String(navigator.language||'').toLowerCase().indexOf('en')===0?'en':'zh';
+  var l=(q==='en'||q==='zh')?q:((s==='en'||s==='zh')?s:b);
+  var r=document.documentElement;
+  r.setAttribute('data-lang',l);
+  r.lang=(l==='en'?'en':'zh-CN');
+}catch(e){document.documentElement.setAttribute('data-lang','zh');}})();
+</script>
+<script src="assets/lang.js" defer></script>
 </head>
-<body>
+<body class="bi">
+
+<!-- 顶栏：语言开关固定在页面顶部（移动端同一行，不折叠进菜单）。
+     两个都是 <button>：本页自带中英两套文案，切换不需要跳转。
+     无 JS 时它们不可点，但页面照样显示「中文/英文」两份内容里的中文那份。 -->
+<div class="topbar">
+  <div class="in">
+    <span class="who">MathGalaxy</span>
+    <span class="sp"></span>
+    <nav class="lang-switch" aria-label="语言 / Language">
+      <button type="button" class="ls-item" data-lang-set="zh" aria-pressed="true" lang="zh">中文</button>
+      <span class="ls-sep" aria-hidden="true">/</span>
+      <button type="button" class="ls-item" data-lang-set="en" aria-pressed="false" lang="en">EN</button>
+    </nav>
+  </div>
+</div>
+
 <div class="wrap">
 
   <!-- ⚠️ h1 里必须有「数学星图 MathGalaxy」：搜索引擎靠这一行建立站点主题。
        以前这里写的是用户名 —— 那正是「只有搜用户名才找得到」的直接原因
-       （实测 site: 查询全站只收到 3 个 URL）。个人标识保留在副标题与页脚。 -->
-  <h1 class="enter" style="--i:0">数学星图 MathGalaxy</h1>
-  <p class="sub enter" style="--i:1">bingyingzizz 的数学笔记与一些别的</p>
+       （实测 site: 查询全站只收到 3 个 URL）。个人标识保留在副标题与页脚。
+       英文页的 h1 是 MathGalaxy —— 同一行在两种语言下都点到站名。 -->
+  <h1 class="enter" style="--i:0"><span class="zh">数学星图 MathGalaxy</span><span class="en">MathGalaxy</span></h1>
+  <p class="sub enter" style="--i:1"><span class="zh">bingyingzizz 的数学笔记与一些别的</span><span class="en">bingyingzizz's mathematics notes, and a few other things</span></p>
 
   <!-- ⭐ 首屏就让人「能开始做一件事」（外部评审 2026-11-02 提的，认了）：
        三个入口都只用**已有的**深链能力（#n= 节点 / #e= 连线 / all.html 索引），
@@ -43,124 +75,184 @@
        送到索引页重新开始。现在星图支持 `#q=<关键词>`，这里就能放一个真搜索框：
        提交后直接把词带过去、结果已经在图上列好。
        ⛔ 不引 JS 框架：随机示例只有下面一小段内联脚本；无脚本时退回静态链接。 -->
-  <form class="find enter" style="--i:2" role="search" aria-label="在星图里搜索"
+  <form class="find enter" style="--i:2" role="search"
+        aria-label="在星图里搜索" data-label-zh="在星图里搜索" data-label-en="Search the graph"
         onsubmit="var v=this.q.value.trim();if(!v){return false;}location.href='mathgalaxy/#q='+encodeURIComponent(v);return false;">
-    <input id="landing-search" type="search" name="q" placeholder="搜一个概念：一致收敛 · 紧 · 示性类 …" aria-label="搜索节点" autocomplete="off">
-    <button type="submit">在星图里搜</button>
-    <noscript><a href="mathgalaxy/all.html">索引页</a></noscript>
+    <input id="landing-search" type="search" name="q" autocomplete="off"
+           placeholder="搜一个概念：一致收敛 · 紧 · 示性类 …"
+           data-ph-zh="搜一个概念：一致收敛 · 紧 · 示性类 …"
+           data-ph-en="Search a concept: uniform convergence · compact · characteristic class …"
+           aria-label="搜索节点" data-label-zh="搜索节点" data-label-en="Search a concept">
+    <button type="submit"><span class="zh">在星图里搜</span><span class="en">Search</span></button>
+    <noscript><a href="mathgalaxy/all.html"><span class="zh">索引页</span><span class="en">index</span></a></noscript>
   </form>
 
-  <nav class="tasks enter" style="--i:2" aria-label="开始使用">
-    <a href="mathgalaxy/all.html"><b>浏览索引</b><span>按星系 / 星团列出全部节点 —— 不想打字时从这里看</span></a>
-    <a href="mathgalaxy/#n=thm.de-rham"><b>看前置知识</b><span>选一个目标，右侧面板列出它依赖什么、又被谁依赖</span></a>
-    <a href="mathgalaxy/"><b>随便探索</b><span>直接进完整星图：滚轮缩放、拖拽平移、点节点看详情</span></a>
+  <nav class="tasks enter" style="--i:2" aria-label="开始使用" data-label-zh="开始使用" data-label-en="Get started">
+    <a href="mathgalaxy/all.html">
+      <b><span class="zh">浏览索引</span><span class="en">Browse the index</span></b>
+      <span><span class="zh">按星系 / 星团列出全部节点 —— 不想打字时从这里看</span><span class="en">Every node listed by galaxy and cluster — for when you would rather not type</span></span>
+    </a>
+    <a href="mathgalaxy/#n=thm.de-rham">
+      <b><span class="zh">看前置知识</span><span class="en">See the prerequisites</span></b>
+      <span><span class="zh">选一个目标，右侧面板列出它依赖什么、又被谁依赖</span><span class="en">Pick a result; the side panel lists what it rests on and what rests on it</span></span>
+    </a>
+    <a href="mathgalaxy/">
+      <b><span class="zh">随便探索</span><span class="en">Just explore</span></b>
+      <span><span class="zh">直接进完整星图：滚轮缩放、拖拽平移、点节点看详情</span><span class="en">Into the full map: scroll to zoom, drag to pan, click a node to read it</span></span>
+    </a>
   </nav>
-  <p class="try enter" id="landing-try" style="--i:2">试一个：
-    <a href="mathgalaxy/#e=imp.repl-to-sep">为什么分离公理模式可以由替换公理模式推出？</a>
-    <a href="mathgalaxy/#n=lem.zorn">Zorn 引理站在哪些前置上？</a>
-    <a href="mathgalaxy/#n=def.sheaf">层到底是什么？</a></p>
+  <p class="try enter" id="landing-try" style="--i:2"><span class="zh">试一个：</span><span class="en">Try one:</span>
+    <a href="mathgalaxy/#e=imp.repl-to-sep"><span class="zh">为什么分离公理模式可以由替换公理模式推出？</span><span class="en">Why does replacement imply separation?</span></a>
+    <a href="mathgalaxy/#n=lem.zorn"><span class="zh">Zorn 引理站在哪些前置上？</span><span class="en">What does Zorn's lemma rest on?</span></a>
+    <a href="mathgalaxy/#n=def.sheaf"><span class="zh">层到底是什么？</span><span class="en">What is a sheaf, really?</span></a></p>
 
-  <h2 class="enter" style="--i:2">项目</h2>
+  <h2 class="enter" style="--i:2"><span class="zh">项目</span><span class="en">Project</span></h2>
 
   <a class="card enter" style="--i:3" href="mathgalaxy/">
-    <b>数学星图 · MathGalaxy</b>
-    <span>可交互的数学知识图谱 —— 按「大板块 / 星系 / 星团 / 节点」四级导航组织，
+    <b><span class="zh">数学星图 · MathGalaxy</span><span class="en">The graph</span></b>
+    <span><span class="zh">可交互的数学知识图谱 —— 按「大板块 / 星系 / 星团 / 节点」四级导航组织，
     后三级就是「星系 / 星团 / 恒星」三层知识尺度（大板块只是把星系再归一次类）；
     箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。<br>
-    内容覆盖 15 星系 / 105 星团 / 1673 节点 / 3784 连线，从 ZF 公理一路到凝聚态数学，还在长。</span>
+    内容覆盖 <span data-counts-zh>15 星系 / 105 星团 / 1673 节点 / 3784 连线</span>，从 ZF 公理一路到凝聚态数学，还在长。</span><span class="en">An interactive
+    knowledge graph of mathematics, navigated as region / galaxy / cluster / node — the three
+    knowledge scales are galaxy, cluster and star; a region only groups galaxies once more.
+    Arrows are derivations, black lines are equivalences, blue lines are definition references,
+    purple dashes are analogies across fields.<br>
+    Content covers <span data-counts-en>every branch of mathematics</span>, from the ZF axioms
+    all the way to condensed mathematics — and it is still growing.</span></span>
     <i class="go">→</i>
   </a>
 
-  <h2 class="enter" style="--i:3">星图研究</h2>
+  <h2 class="enter" style="--i:3"><span class="zh">星图研究</span><span class="en">Research</span></h2>
 
   <a class="card enter" style="--i:3" href="research.html">
-    <b>论文稿</b>
-    <span>从整理星图过程中长出来的推导。每条独立成篇，注明状态。<br>
+    <b><span class="zh">论文稿</span><span class="en">Papers</span></b>
+    <span><span class="zh">从整理星图过程中长出来的推导。每条独立成篇，注明状态。<br>
     当前收录：Schölze《Lectures on Analytic Geometry》Question 0.10.4
     —— 在一般 p-liquid 系数下是否定的；p-Banach 情形仍开，但已被压成一个标量缺口。<br>
-    未经同行评审，按工作笔记读。</span>
+    未经同行评审，按工作笔记读。</span><span class="en">Derivations that grew out of building
+    the graph. Each one stands alone and carries its status.<br>
+    Currently: Schölze, <i>Lectures on Analytic Geometry</i>, Question 0.10.4 — answered
+    negatively for general p-liquid coefficients; the p-Banach case is still open, but has been
+    reduced to a single scalar gap.<br>
+    Not peer-reviewed: read them as working notes.</span></span>
     <i class="go">→</i>
   </a>
 
-  <h2 class="enter" style="--i:4">怎么读这张图</h2>
+  <h2 class="enter" style="--i:4"><span class="zh">怎么读这张图</span><span class="en">How to read the map</span></h2>
 
   <a class="card enter" style="--i:5" href="read.html#reading">
-    <b data-vt>读图指南</b>
-    <span>三层尺度、四种边加一种「推论」、依赖深度、字段与深链 —— 先看这一份，图上那些线和大小
-    才不是装饰。</span>
+    <b data-vt="reading"><span class="zh">读图指南</span><span class="en">Reading guide</span></b>
+    <span><span class="zh">三层尺度、四种边加一种「推论」、依赖深度、字段与深链 —— 先看这一份，图上那些线和大小
+    才不是装饰。</span><span class="en">Three scales, four kinds of edge plus one inference,
+    dependency depth, fields and deep links — read this first, and the lines and sizes on the map
+    stop being decoration.</span></span>
     <i class="go">→</i>
   </a>
   <a class="card enter" style="--i:6" href="read.html#notation">
-    <b data-vt>记号对照表</b>
-    <span>全图记号的唯一权威：包含 / 真包含 / 补集怎么写，每个希腊字母、花体字母
-    在哪儿是什么意思。写内容之前先过这一关。</span>
+    <b data-vt="notation"><span class="zh">记号对照表</span><span class="en">Notation</span></b>
+    <span><span class="zh">全图记号的唯一权威：包含 / 真包含 / 补集怎么写，每个希腊字母、花体字母
+    在哪儿是什么意思。写内容之前先过这一关。</span><span class="en">The single authority for
+    notation: how inclusion, strict inclusion and complement are written, and what every Greek or
+    script letter means where. Pass this before you write anything.</span></span>
     <i class="go">→</i>
   </a>
   <a class="card enter" style="--i:7" href="read.html#llms">
-    <b data-vt>检索协议</b>
-    <span>给 AI 的入口，也是给人看的地图：先读目录、再读星团清单、最后读单个节点。
-    要跟着图一步一步走，从这里开始。</span>
+    <b data-vt="llms"><span class="zh">检索协议</span><span class="en">Protocol for AI</span></b>
+    <span><span class="zh">给 AI 的入口，也是给人看的地图：先读目录、再读星团清单、最后读单个节点。
+    要跟着图一步一步走，从这里开始。</span><span class="en">An entry point for AI and a map for
+    people: read the index, then the cluster lists, then single nodes. If you want to walk the
+    graph one step at a time, start here.</span></span>
     <i class="go">→</i>
   </a>
   <a class="card enter" style="--i:8" href="read.html#policy">
-    <b data-vt>内容准则</b>
-    <span>这张图为什么这么长出来的：每一层都由上一层构造出来、同一结论只收一份、
-    只保留最通用的版本、星团按「装置」分不按课程分。</span>
+    <b data-vt="policy"><span class="zh">内容准则</span><span class="en">Editorial policy</span></b>
+    <span><span class="zh">这张图为什么这么长出来的：每一层都由上一层构造出来、同一结论只收一份、
+    只保留最通用的版本、星团按「装置」分不按课程分。</span><span class="en">Why the graph grew
+    this way: each layer is built from the one above, a claim is kept once, only the most general
+    version, and clusters are grouped by apparatus rather than by course.</span></span>
     <i class="go">→</i>
   </a>
   <a class="card enter" style="--i:9" href="read.html#hubs">
-    <b data-vt>枢纽定理榜</b>
-    <span>三个榜：<b>基础工具</b>（很多结论靠它，值得先学熟）·<b>综合结论</b>（由很多前置推出，
-    学之前得先懂一片）·<b>跨领域连接</b>（位置中心，但不是入门顺序）。</span>
+    <b data-vt="hubs"><span class="zh">枢纽定理榜</span><span class="en">Hub theorems</span></b>
+    <span><span class="zh">三个榜：<b>基础工具</b>（很多结论靠它，值得先学熟）·<b>综合结论</b>（由很多前置推出，
+    学之前得先懂一片）·<b>跨领域连接</b>（位置中心，但不是入门顺序）。</span><span class="en">Three
+    rankings: <b>foundational tools</b> (many results rest on them — learn these first),
+    <b>synthesis theorems</b> (they follow from many prerequisites — you need a whole field
+    first), and <b>cross-field bridges</b> (central, but not a beginner's order).</span></span>
     <i class="go">→</i>
   </a>
 
-  <h2 class="enter" style="--i:10">全量下载（给 AI 的 bulk 导出）</h2>
+  <h2 class="enter" style="--i:10"><span class="zh">全量下载（给 AI 的 bulk 导出）</span><span class="en">Full download (bulk export for AI)</span></h2>
   <a class="card dl enter" style="--i:11" href="mathgalaxy/graph.md" download>
     <b>graph.md</b>
-    <span>整张星图的 Markdown 全量导出（约 4.3 MB）。适合一次下载、本地处理；
-    ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span>
+    <span><span class="zh">整张星图的 Markdown 全量导出（约 4.3 MB）。适合一次下载、本地处理；
+    ⛔ 不适合让 AI 单次抓取 —— 抓取工具有长度上限，只会返回开头一小段。</span><span class="en">The
+    whole graph as one Markdown export (about 4.3 MB). Made for downloading and
+    processing locally; ⛔ not for a single AI fetch — fetchers truncate, you would only get the
+    opening.</span></span>
     <i class="go">↓</i>
   </a>
   <a class="card dl enter" style="--i:12" href="mathgalaxy/graph.json" download>
     <b>graph.json</b>
-    <span>机器可读的全量版本（约 7.1 MB），每条边带 strength（强边 / 弱边）与完整证明。
-    同样只适合下载，不适合单次抓取。</span>
+    <span><span class="zh">机器可读的全量版本（约 7.1 MB），每条边带 strength（强边 / 弱边）与完整证明。
+    同样只适合下载，不适合单次抓取。</span><span class="en">The machine-readable full graph
+    (about 7.1 MB); every edge carries its strength (strong / weak) and its full
+    proof. Again: download it, do not fetch it in one go.</span></span>
     <i class="go">↓</i>
   </a>
 
-  <!-- ⭐ 2026-10-20：英文落地段落。为什么要有它 —— 英文查询要命中，页面上就得
-       真的有英文。之前整站只有中文（概念页 44% 连英文名都没有），英文搜索自然拿不到。
+  <!-- ⭐ 2026-10-20：英文段落（当时是为了让英文查询命中 —— 页面上得真的有英文）。
+       2026-11-16 起这块不再单独挂在页尾当「About · English」，而是与中文并排放在
+       同一节里：中文读者看中文，英文读者看英文，语言开关切的就是这一段。
        ⛔ 这里是**描述**，不是关键字堆砌：写的是这张图到底是什么、怎么用。
        ⛔ 不要为了塞词把句子写坏 —— 人也要能读。 -->
-  <h2 class="enter" style="--i:13">About · English</h2>
-  <section class="about-en enter" style="--i:14" lang="en">
-    <p><b>MathGalaxy</b> is an interactive knowledge graph of mathematics. Every definition,
-    theorem and lemma is a node; every arrow is a derivation. Zoom out and you see the
-    branches of the subject; zoom in and you read a single statement together with its
-    remarks, its references, and the proofs that tie it to what it rests on.</p>
-    <p>The graph is organised at three scales — a <b>galaxy</b> (a branch of mathematics),
-    a <b>cluster</b> (a self-contained apparatus built to make one thing work), and a
-    <b>star</b> (one result). It runs from the ZFC axioms and the equivalence chain around
-    the axiom of choice, through algebra, topology, measure theory and homological algebra,
-    up to category theory and condensed mathematics — the parts of the subject a student
-    actually has to walk through in dependency order.</p>
-    <p>It doubles as <b>lecture notes</b>, a <b>study reference</b> and a <b>course companion</b>:
-    read a topic along its prerequisite chain instead of in the order a textbook prints it,
-    and when a proof cites something you have not met yet, follow the edge. Each concept has
-    its own page with statement, notes and references; the whole graph is exported as
-    <code>graph.json</code>, <code>graph.md</code> and <code>llms.txt</code> as well, so an AI
-    agent can look a result up without first guessing the Chinese terminology.</p>
-    <p class="meta-en">Content is licensed CC BY 4.0; the engine is MIT and has no dependencies.
-    Interface and prose are Chinese-first, with English names on the concepts that have them.</p>
-    <p class="meta-en"><a href="mathgalaxy/en/">English overview of the graph →</a>
-    — what it is, how to read it, and the entries that have an English abstract so far.</p>
+  <h2 class="enter" style="--i:13"><span class="zh">关于这张图</span><span class="en">About</span></h2>
+  <section class="about enter" style="--i:14">
+    <div class="zh">
+      <p><b>数学星图</b>是一张可交互的数学知识图谱：每个定义、定理、引理都是一个节点，每条箭头
+      都是一次推导。缩到远处看学科的分支，放大看一条陈述和它的注、它的引用，以及把它接在前提上
+      的证明。</p>
+      <p>图按三层尺度组织 —— <b>星系</b>（数学的一个分支）、<b>星团</b>（为做成某一件事而搭起来的
+      一套装置）、<b>恒星</b>（一条结论）。从 ZFC 公理与选择公理周围的等价链，经代数、拓扑、测度论、
+      同调代数，一直到范畴论与凝聚态数学 —— 一个学生真正要按依赖顺序走过的那部分。</p>
+      <p>它同时是<b>讲义</b>、<b>复习参考</b>与<b>课程伴读</b>：沿前置链读一个主题，而不是按教科书
+      的印刷顺序；证明引用了你还没见过的东西时，就顺着那条边走。每个概念一页，有陈述、说明和参考；
+      整张图也导出成 <code>graph.json</code>、<code>graph.md</code> 与 <code>llms.txt</code>，
+      AI 可以直接查，不必先猜中文术语。</p>
+      <p class="meta-en">内容按 CC BY 4.0 授权，引擎 MIT 且零依赖。界面与正文以中文为准，
+      有英文名的概念都在页面上标出；已写英文摘要的概念另有英文页。</p>
+      <p class="meta-en"><a href="mathgalaxy/en/">英文概览 →</a></p>
+    </div>
+    <div class="en" lang="en">
+      <p><b>MathGalaxy</b> is an interactive knowledge graph of mathematics. Every definition,
+      theorem and lemma is a node; every arrow is a derivation. Zoom out and you see the
+      branches of the subject; zoom in and you read a single statement together with its
+      remarks, its references, and the proofs that tie it to what it rests on.</p>
+      <p>The graph is organised at three scales — a <b>galaxy</b> (a branch of mathematics),
+      a <b>cluster</b> (a self-contained apparatus built to make one thing work), and a
+      <b>star</b> (one result). It runs from the ZFC axioms and the equivalence chain around
+      the axiom of choice, through algebra, topology, measure theory and homological algebra,
+      up to category theory and condensed mathematics — the parts of the subject a student
+      actually has to walk through in dependency order.</p>
+      <p>It doubles as <b>lecture notes</b>, a <b>study reference</b> and a <b>course companion</b>:
+      read a topic along its prerequisite chain instead of in the order a textbook prints it,
+      and when a proof cites something you have not met yet, follow the edge. Each concept has
+      its own page with statement, notes and references; the whole graph is exported as
+      <code>graph.json</code>, <code>graph.md</code> and <code>llms.txt</code> as well, so an AI
+      agent can look a result up without first guessing the Chinese terminology.</p>
+      <p class="meta-en">Content is licensed CC BY 4.0; the engine is MIT and has no dependencies.
+      Interface and prose are Chinese-first, with English names on the concepts that have them;
+      the entries with an English abstract have an English page too.</p>
+      <p class="meta-en"><a href="mathgalaxy/en/">English overview of the graph →</a></p>
+    </div>
   </section>
 
   <footer class="enter" style="--i:15">
-    最近更新：2026-11-16 ·
-    由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
-    <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+    <span class="zh">最近更新：2026-11-16 · 由 <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> 生成 ·
+    <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a></span>
+    <span class="en">Last updated 2026-11-16 · generated from <a href="https://github.com/bingyingzizz/MathGalaxy">MathGalaxy</a> ·
+    <a href="https://github.com/bingyingzizz/bingyingzizz.github.io">site source</a></span>
   </footer>
 
 </div>
@@ -168,16 +260,22 @@
 <script>
 /* 点卡片换页时，让**卡片标题**平滑变成阅读页的大标题（View Transitions 的
    共用元素变形）。名字只能有一个元素持有，所以先把其它的清掉再挂。
-   浏览器不支持就是普通跳转，这段等于没写。 */
+   浏览器不支持就是普通跳转，这段等于没写。
+   ⚠️ 标题现在是「中文/英文两个 span」，所以命中点要从卡片挪到那个 span 上：
+      viewTransitionName 挂在被**显示**的那个 span 上，变形才会在同一段文字之间发生。 */
 (function(){
-  var marks = document.querySelectorAll('[data-vt]');
-  marks.forEach(function(el){
+  var cards = document.querySelectorAll('[data-vt]');
+  cards.forEach(function(el){
     var link = el.closest('a');
     if(!link) return;
     link.addEventListener('click', function(e){
       if(e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      marks.forEach(function(m){ m.style.viewTransitionName = ''; });
-      el.style.viewTransitionName = 'doc-hero';
+      cards.forEach(function(m){ m.style.viewTransitionName = ''; });
+      var live = null;
+      el.querySelectorAll('.zh,.en').forEach(function(s){
+        if(s.getClientRects().length) live = s;
+      });
+      (live || el).style.viewTransitionName = 'doc-hero';
     });
   });
 })();
@@ -185,36 +283,45 @@
 
 <script>
 /* 主页的两个「小惊喜」：搜索框示例与「试一个」问题每次加载随机抽。
-   ⛔ 不引框架；无脚本时上面的静态三条/固定 placeholder 仍然可用。
-   只在加载时抽一次，不在滚动或聚焦时换 —— 否则读者会以为链接跳了。 */
+   ⛔ 不引框架；无脚本时上面那三条静态链接与固定 placeholder 仍然可用。
+   只在加载时抽一次，切语言时不重新抽 —— 只是把同一批条目换成另一种语言，
+   否则读者会以为链接跳了（#q= 的查询词两种语言共用，结果页按界面语言显示）。 */
 (function(){
-  var tries = [
-    '为什么分离公理模式可以由替换公理模式推出？',
-    'Zorn 引理站在哪些前置上？',
-    '层到底是什么？',
-    '为什么交换图会交换？',
-    '为什么球面摊不平？',
-    '为什么不能除以零？',
-    '为什么调和级数会发散？',
-    '为什么实数比自然数多？',
-    '连续映射怎么定义？',
-    '为什么向量空间一定有基？',
-    '层和预层有什么区别？',
-    '为什么右伴随保极限？',
-    '预层怎么变成层？',
-    '测度是怎么造出来的？',
-    '为什么可以用 Zorn 引理？',
-    '莫比乌斯带为什么只有一个面？',
-    '为什么复变函数一次可导就无穷次可导？',
-    '留数是怎么算出来的？',
-    '怎么比较两个无穷的大小？',
-    '实数为什么是完备的？',
-    '超限归纳怎么做？',
-    '什么是模范畴？',
-    '群范畴和 Ab 范畴有什么关系？',
-    '为什么紧空间上连续函数有最大值？'
+  var TRIES = [
+    ['为什么分离公理模式可以由替换公理模式推出？','Why does replacement imply separation?'],
+    ['Zorn 引理站在哪些前置上？','What does Zorn\'s lemma rest on?'],
+    ['层到底是什么？','What is a sheaf, really?'],
+    ['为什么交换图会交换？','Why do commutative diagrams commute?'],
+    ['为什么球面摊不平？','Why can\'t a sphere be flattened?'],
+    ['为什么不能除以零？','Why can\'t you divide by zero?'],
+    ['为什么调和级数会发散？','Why does the harmonic series diverge?'],
+    ['为什么实数比自然数多？','Why are there more reals than naturals?'],
+    ['连续映射怎么定义？','How is a continuous map defined?'],
+    ['为什么向量空间一定有基？','Why must every vector space have a basis?'],
+    ['层和预层有什么区别？','How is a sheaf different from a presheaf?'],
+    ['为什么右伴随保极限？','Why do right adjoints preserve limits?'],
+    ['预层怎么变成层？','How does a presheaf become a sheaf?'],
+    ['测度是怎么造出来的？','How is a measure constructed?'],
+    ['为什么可以用 Zorn 引理？','Why is Zorn\'s lemma usable here?'],
+    ['莫比乌斯带为什么只有一个面？','Why does a Möbius band have only one side?'],
+    ['为什么复变函数一次可导就无穷次可导？','Why is one complex derivative enough for infinitely many?'],
+    ['留数是怎么算出来的？','How is a residue computed?'],
+    ['怎么比较两个无穷的大小？','How do you compare two infinities?'],
+    ['实数为什么是完备的？','Why are the reals complete?'],
+    ['超限归纳怎么做？','How does transfinite induction work?'],
+    ['什么是模范畴？','What is a category of modules?'],
+    ['群范畴和 Ab 范畴有什么关系？','How does Grp relate to Ab?'],
+    ['为什么紧空间上连续函数有最大值？','Why does a continuous function on a compact space attain its maximum?']
   ];
-  var samples = ['一致收敛','紧','示性类','层','范畴','测度','群','环','模','拓扑','微分形式','同调'];
+  var SAMPLES = {
+    zh: ['一致收敛','紧','示性类','层','范畴','测度','群','环','模','拓扑','微分形式','同调'],
+    en: ['uniform convergence','compact','characteristic class','sheaf','category','measure',
+         'group','ring','module','topology','differential form','homology']
+  };
+  var line = document.getElementById('landing-try');
+  var input = document.getElementById('landing-search');
+  var picked = null, ph = {};
+
   function pick(pool, n){
     var a = pool.slice(), i, j, t;
     for(i = a.length - 1; i > 0; i--){
@@ -223,21 +330,47 @@
     }
     return a.slice(0, n);
   }
-  var line = document.getElementById('landing-try');
-  if(line){
-    line.textContent = '试一个：';
-    pick(tries, 3).forEach(function(q, i){
-      var a = document.createElement('a');
-      a.href = 'mathgalaxy/#q=' + encodeURIComponent(q);
-      a.textContent = q;
-      if(i) line.appendChild(document.createTextNode(' '));
-      line.appendChild(a);
-    });
+  function lang(){
+    if(window.MGLang) return MGLang.get();
+    return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'zh';
   }
-  var input = document.getElementById('landing-search');
-  if(input){
-    input.placeholder = '搜一个概念：' + pick(samples, 3).join(' · ') + ' …';
+  function render(){
+    var l = lang();
+    if(!picked) picked = pick(TRIES, 3);
+    if(line){
+      line.textContent = (l === 'en' ? 'Try one: ' : '试一个：');
+      picked.forEach(function(t, i){
+        var a = document.createElement('a');
+        a.href = 'mathgalaxy/#q=' + encodeURIComponent(t[0]);
+        a.textContent = t[l === 'en' ? 1 : 0];
+        if(i) line.appendChild(document.createTextNode(' '));
+        line.appendChild(a);
+      });
+    }
+    if(input){
+      if(!ph[l]) ph[l] = pick(SAMPLES[l] || SAMPLES.zh, 3);
+      input.placeholder = (l === 'en' ? 'Search a concept: ' : '搜一个概念：')
+        + ph[l].join(' · ') + ' …';
+    }
   }
+  render();
+  document.addEventListener('mg:lang', render);
+})();
+</script>
+
+<script>
+/* 英文那句里的数字从中文的 15 星系 / 105 星团 / 1673 节点 / 3784 连线 现推：内容一直在长，写死会立刻过期；
+   而又不能给 publish.mjs 加新的 {{…}} 占位符（它只认固定名单）。
+   把「15 星系 / 105 星团 / 1673 节点 / 3784 连线」换成同样的四个数字 +
+   英文量词。推不出来就保留兜底文案，不显示半截句子。 */
+(function(){
+  var zh = document.querySelector('[data-counts-zh]');
+  var en = document.querySelector('[data-counts-en]');
+  if(!zh || !en) return;
+  var m = zh.textContent.match(/([\d,]+)\D+([\d,]+)\D+([\d,]+)\D+([\d,]+)/);
+  if(!m) return;
+  en.textContent = m[1] + ' galaxies · ' + m[2] + ' clusters · ' +
+    m[3] + ' concepts · ' + m[4] + ' links';
 })();
 </script>
 </body>

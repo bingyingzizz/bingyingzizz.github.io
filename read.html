@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-site="bingyingzizz">
+<html lang="zh-CN" data-lang="zh" data-site="bingyingzizz">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,17 +24,22 @@
 <link rel="stylesheet" href="assets/katex.min.css">
 <script src="assets/katex.min.js"></script>
 <script>document.documentElement.classList.add('js');</script>
-<!-- 语言：?lang=en 直链 > 上次选的（localStorage）> 浏览器语言里是英文就英文，否则中文。
-     ⚠️ 必须在**首屏之前**定下 data-lang —— 否则英文用户会先看到一屏中文再跳。
+<!-- 语言：首屏之前就把 <html lang data-lang> 定下来（规则 = assets/lang.js 的 detect()，
+     两处必须一致）。⚠️ 必须在这里定 —— 否则英文用户会先看到一屏中文再跳。
+     ⛔ GitHub Pages 读不到 IP，这里判的是浏览器语言，不是地理位置。
      没 JS 时 data-lang 不设 ⇒ CSS 默认显示中文（真源）。 -->
-<script>(function(){try{
+<script>
+(function(){try{
   var q=new URLSearchParams(location.search).get('lang');
   var s=localStorage.getItem('mathgalaxy.read.lang');
   var b=String(navigator.language||'').toLowerCase().indexOf('en')===0?'en':'zh';
-  var l=(q||s||b)==='en'?'en':'zh';
-  document.documentElement.setAttribute('data-lang',l);
-  document.documentElement.lang=(l==='en'?'en':'zh-CN');
-}catch(e){document.documentElement.setAttribute('data-lang','zh');}})();</script>
+  var l=(q==='en'||q==='zh')?q:((s==='en'||s==='zh')?s:b);
+  var r=document.documentElement;
+  r.setAttribute('data-lang',l);
+  r.lang=(l==='en'?'en':'zh-CN');
+}catch(e){document.documentElement.setAttribute('data-lang','zh');}})();
+</script>
+<script src="assets/lang.js" defer></script>
 <noscript><style>.doc{display:block!important}</style></noscript>
 </head>
 <body class="reader">
@@ -45,7 +50,13 @@
     <span class="sp"></span>
     <a class="mini" href="mathgalaxy/"><span class="zh">数学星图 →</span><span class="en">MathGalaxy →</span></a>
     <a class="mini" id="raw" href="mathgalaxy/reading.md" target="_blank" rel="noopener"><span class="zh">原文 ↗</span><span class="en">raw ↗</span></a>
-    <button class="mini lang" id="lang" type="button" aria-live="polite"><span class="zh">English</span><span class="en">中文</span></button>
+    <!-- 语言开关：与首页/研究页/概念页同一个组件（assets/lang.js）——
+         ⛔ 这里不要再写第二套判定逻辑，否则两处会漂。 -->
+    <nav class="lang-switch" aria-label="语言 / Language">
+      <button type="button" class="ls-item" data-lang-set="zh" aria-pressed="true" lang="zh">中文</button>
+      <span class="ls-sep" aria-hidden="true">/</span>
+      <button type="button" class="ls-item" data-lang-set="en" aria-pressed="false" lang="en">EN</button>
+    </nav>
   </div>
 </header>
 
@@ -289,15 +300,16 @@
 </div>
 
 <script>
-/* 阅读页只做四件事：按 hash 切换文档、给每块内容排错峰进场的延迟、
-   更新顶栏的「原文」链接、切中英。
-   正文是构建期就渲染好的静态 HTML —— 打开即读，不依赖任何脚本。 */
+/* 阅读页只做三件事：按 hash 切换文档、给每块内容排错峰进场的延迟、
+   语言切换时更新顶栏的「原文」链接与页面标题。
+   正文是构建期就渲染好的静态 HTML —— 打开即读，不依赖任何脚本。
+   ⚠️ 语言的**判定与切换**都在 assets/lang.js 里（全站一份）；这里只听它广播的
+      `mg:lang`，不许再写一套 localStorage / URL 逻辑 —— 两套必然漂。 */
 (function () {
   var SITE = document.documentElement.dataset.site || '';
   var secs = [].slice.call(document.querySelectorAll('.doc'));
   var navs = [].slice.call(document.querySelectorAll('.side a'));
   var raw = document.getElementById('raw');
-  var langBtn = document.getElementById('lang');
   var ids = secs.map(function (s) { return s.id; });
   var cur = ids[0];
 
@@ -306,8 +318,7 @@
     return ids.indexOf(h) >= 0 ? h : ids[0];
   }
 
-  /* 语言：data-lang 由 <head> 里那段先定好，这里只负责切换和同步。
-     ⚠️ 判据是 html 上的 data-lang，CSS 的两条规则跟着它走（read.css 末尾）。 */
+  /* 判据是 html 上的 data-lang（lang.js 写它，CSS 的两条规则也跟着它走） */
   function lang() {
     return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'zh';
   }
@@ -317,23 +328,7 @@
   }
   function syncTitle(sec) {
     var t = (lang() === 'en' && sec.dataset.titleEn) ? sec.dataset.titleEn : sec.dataset.title;
-    document.title = t + ' · ' + SITE;
-  }
-  function setLang(next, push) {
-    document.documentElement.setAttribute('data-lang', next);
-    document.documentElement.lang = next === 'en' ? 'en' : 'zh-CN';
-    try { localStorage.setItem('mathgalaxy.read.lang', next); } catch (e) {}
-    var u = new URL(location.href);
-    if (next === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
-    if (push !== false) history.replaceState(null, '', u.pathname + (u.search || '') + u.hash);
-    var sec = document.getElementById(cur);
-    if (sec) { syncRaw(sec); syncTitle(sec); replay(sec); }
-  }
-  if (langBtn) {
-    langBtn.addEventListener('click', function () {
-      setLang(lang() === 'en' ? 'zh' : 'en');
-      langBtn.setAttribute('aria-label', lang() === 'en' ? '切换到中文' : 'Switch to English');
-    });
+    document.title = t + ' · ' + (SITE || 'MathGalaxy');
   }
 
   // 重放进场动画：先摘掉 .run，强制一次重排，再挂回去
@@ -368,7 +363,16 @@
 
   window.addEventListener('hashchange', function () { show(target(), false); });
   show(target(), true);
-  if (lang() === 'en' && langBtn) langBtn.setAttribute('aria-label', 'Switch to Chinese');
+
+  /* lang.js 切完语言会广播 mg:lang（首屏对账时也发一次）：把当前文档的
+     「原文」链接与标题按新语言重算一遍，再放一次进场动画。 */
+  document.addEventListener('mg:lang', function () {
+    var sec = document.getElementById(cur);
+    if (!sec) return;
+    syncRaw(sec);
+    syncTitle(sec);
+    replay(sec);
+  });
 })();
 
 /* 行内数学：正文里写成 $…$ 的地方交给 KaTeX 渲染。

@@ -44,14 +44,14 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);
   color:var(--faint);font-size:13px}
 footer a{color:var(--soft)}
 
-/* 英文落地段落（首页 About · English）。字号略小于正文、颜色略淡 ——
-   它是给英文读者与爬虫看的第二语言，不与中文主文争轻重。 */
-.about-en{margin:0 0 8px}
-.about-en p{margin:0 0 14px;color:var(--soft);font-size:15px;line-height:1.72}
-.about-en b{color:var(--ink);font-weight:600}
-.about-en code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);
+/* 「关于这张图」：中英两段同一处排版。字号略小于正文、颜色略淡 ——
+   它是说明性文字，不与上面的入口争轻重。 */
+.about{margin:0 0 8px}
+.about p{margin:0 0 14px;color:var(--soft);font-size:15px;line-height:1.72}
+.about b{color:var(--ink);font-weight:600}
+.about code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);
   padding:1px 5px;border-radius:5px}
-.about-en .meta-en{color:var(--faint);font-size:13.5px;margin-bottom:0}
+.about .meta-en{color:var(--faint);font-size:13.5px;margin-bottom:0}
 
 /* ------------------------------------------------------------ 卡片（首页） */
 /* 首屏的三个任务入口（浏览索引 / 看前置 / 随便探索）—— 搜索框单独在它们上面。
@@ -135,3 +135,54 @@ footer a{color:var(--soft)}
   ::view-transition-old(root),::view-transition-new(root),
   ::view-transition-group(doc-hero){animation:none!important}
 }
+
+/* ------------------------------------------------------ 顶栏与语言开关 ------ */
+/* 全站统一的「中文 / EN」。落地页、研究列表、索引页用这条吸顶条；
+   阅读页塞进它自己已有的 .rhead，概念页塞进面包屑那一行。
+   ⛔ 吸顶元素不挂 backdrop-filter —— 它每帧都参与合成，不值得。 */
+.topbar{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.topbar .in{display:flex;align-items:center;gap:14px;
+  max-width:760px;margin:0 auto;padding:8px 24px}
+.topbar .sp{flex:1}
+.topbar .who{font-size:12.5px;font-weight:650;color:var(--ink);text-decoration:none;white-space:nowrap}
+.topbar .who:hover{color:var(--accent)}
+
+.lang-switch{display:inline-flex;align-items:center;gap:1px;padding:2px;
+  border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.92);
+  font-family:var(--font);line-height:1;white-space:nowrap;flex:0 0 auto}
+.lang-switch .ls-item{display:inline-block;padding:5px 10px;border-radius:999px;
+  border:0;background:none;font:inherit;font-size:12.5px;font-weight:600;color:var(--soft);
+  text-decoration:none;cursor:pointer;
+  transition:background .18s var(--ease),color .18s var(--ease)}
+.lang-switch .ls-item:hover{background:var(--accent-soft);color:var(--accent);text-decoration:none}
+.lang-switch .ls-item[aria-pressed="true"],
+.lang-switch .ls-item[aria-current="true"]{background:var(--accent);color:#fff}
+.lang-switch .ls-sep{color:var(--faint);font-size:11.5px;padding:0 1px;user-select:none}
+/* 这一页没有那种语言的内容：不链过去（不造 404），只标灰并说明原因 */
+.lang-switch .ls-off{opacity:.4;cursor:not-allowed}
+.lang-switch .ls-off:hover{background:none;color:var(--soft)}
+@media (max-width:640px){
+  .topbar .in{padding:7px 18px;gap:10px}
+  .lang-switch .ls-item{padding:5px 9px;font-size:12px}
+}
+
+/* ---------------------------------------------------------- 双语内容 -------- */
+/* 同一份 HTML 里放两套文案，靠 <html data-lang> 二选一显示：
+     <span class="zh">中文</span><span class="en">English</span>
+   ⚠️ 只作用于 body.bi。node.css 里 `.np-head h1 .en` 是「永远显示的英文名副其实」，
+      不能套一条全局的 .en{display:none} 把它一起藏掉 —— 概念页因此不加 body.bi。 */
+html[data-lang="en"] .bi .zh{display:none}
+html:not([data-lang="en"]) .bi .en{display:none}
+
+/* 双语块里的英文用同一行的余量排，不另起一段（搜索框按钮、卡片标题这类） */
+.bi .en{font-style:normal}
+
+/* 双语 span 只是包装，不该接管父元素的排版：.tasks span / .card span 都是**后代**
+   选择器，会把标题里的 .zh/.en 一起改成 12.5px 并 block 掉。 */
+.tasks b .zh,.tasks b .en,.card b .zh,.card b .en,
+.tasks > a > span > .zh,.tasks > a > span > .en,
+.card > span > .zh,.card > span > .en{
+  display:inline;color:inherit;font-size:inherit;line-height:inherit;font-weight:inherit;margin:0}
+
+/* 让「怎么读 / 下载」这类小节标题的中英并排时不挤成两行 */
+.sub .en,.card b .en{display:inline}

@@ -18,12 +18,21 @@
 .crumb a{color:var(--soft)}
 .crumb .sep{margin:0 .5em;color:var(--faint);opacity:.7}
 .wrap.wide ~ .crumb,.all-page .crumb{max-width:1080px}
+/* 顶栏（2026-11）：面包屑在左、语言开关在右，同一行；窄屏自然换行。
+   ⚠️ 开关不藏在页尾 —— 概念页和索引页的切换入口只有这一处。 */
+.crumb.crumb-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.crumb.crumb-top .crumb-path{flex:1 1 auto;min-width:0}
+.crumb.crumb-top .lang-switch{margin-left:auto}
 
 /* 概念页的大标题区 */
 .np-head{margin-bottom:8px}
 /* 证明完成度（T13/I5）：概念页也要一眼看出来（研究者从搜索点进来的第一眼） */
 .status-note{margin:10px 0 0;padding:6px 10px;border-radius:8px;border:1px solid #e6d3b3;
   background:#fdf7ea;color:#7a5a1e;font-size:.86rem;line-height:1.55}
+/* 英文覆盖说明：概念页没有英文正文时写在页首（⛔ 不链 404、不用中文冒充英文） */
+.cov-note{margin:10px 0 0;padding:6px 10px;border-radius:8px;border:1px solid #d8dee9;
+  background:#f4f6fa;color:#4a515c;font-size:.86rem;line-height:1.6}
+.cov-note i{font-style:italic}
 .np-head h1{font-size:clamp(24px,4.4vw,34px);line-height:1.3;margin:0 0 8px;font-weight:700}
 /* 英文名（T1.2）：与中文名并列在同一个 h1 里 —— 小一号、淡一档，
    只在中文名里没有它的时候才出现（中文 title 本来就常带英文）。 */
@@ -285,3 +294,17 @@
   .crumb,.toc,.jump{display:none}
   .edges>li.edge{break-inside:avoid}
 }
+
+/* ------------------------------------------------ 双语索引（all.html） ----- */
+/* 同一行里既放中文名又放英文名（`.zh` / `.en`，由 site.css 的 body.bi 规则二选一）。
+   下面只处理「原本把 `.en` 当副标题排版」的地方：语言一切，它就是主标题。 */
+html[data-lang="en"] .bi .rg > h2 .en,
+html[data-lang="en"] .bi .cl > h3 .en{
+  font-size:inherit;font-weight:inherit;color:inherit;letter-spacing:inherit
+}
+/* 概念行：`.nl .en` 原本是「补一句中文标题」的淡色小字；现在名字本身是双语，
+   链接里的那份要跟随链接排版，注解那份改用 `.note`。 */
+.nl a .zh,.nl a .en{display:inline;font-size:inherit;color:inherit;
+  white-space:normal;overflow:visible;flex:0 1 auto}
+.nl .note{font-size:11.5px;color:var(--faint);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;min-width:0;flex:1}

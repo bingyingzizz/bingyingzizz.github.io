@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>星图研究 · bingyingzizz</title>
-<meta name="description" content="星图研究：从整理数学星图过程中产生的推导笔记与论文稿。每条注明状态；未经同行评审。">
+<title data-title-en="Research · bingyingzizz">星图研究 · bingyingzizz</title>
+<meta name="description" data-desc-en="Research: derivation notes and paper drafts that grew out of building MathGalaxy. Each entry carries its status; none is peer-reviewed." content="星图研究：从整理数学星图过程中产生的推导笔记与论文稿。每条注明状态；未经同行评审。">
 <link rel="canonical" href="https://bingyingzizz.github.io/research.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="数学星图 MathGalaxy">
@@ -40,34 +40,74 @@
   .plist p { margin:.35rem 0 0; font-size:.92rem; color:#31363f; line-height:1.72; }
   .note { margin-top:2.4rem; padding-top:1rem; border-top:1px solid var(--line);
     font-family:system-ui,sans-serif; font-size:.8rem; color:var(--dim); line-height:1.7; }
+  /* 英文标题用衬线体的英文面（宋体的拉丁字母在 Windows 上会掉成 Georgia，正好） */
+  .en { font-style:normal; }
 </style>
+<!-- 语言：首屏前定 <html lang data-lang>（规则 = assets/lang.js 的 detect()）。
+     ⛔ GitHub Pages 读不到 IP，这里判的是浏览器语言，不是地理位置。 -->
+<script>
+(function(){try{
+  var q=new URLSearchParams(location.search).get('lang');
+  var s=localStorage.getItem('mathgalaxy.read.lang');
+  var b=String(navigator.language||'').toLowerCase().indexOf('en')===0?'en':'zh';
+  var l=(q==='en'||q==='zh')?q:((s==='en'||s==='zh')?s:b);
+  var r=document.documentElement;
+  r.setAttribute('data-lang',l);
+  r.lang=(l==='en'?'en':'zh-CN');
+}catch(e){document.documentElement.setAttribute('data-lang','zh');}})();
+</script>
+<script src="assets/lang.js" defer></script>
 </head>
-<body>
+<body class="bi">
+
+<!-- 顶栏：语言开关固定顶部，移动端同一行 -->
+<div class="topbar">
+  <div class="in">
+    <a class="who" href="./">← bingyingzizz</a>
+    <span class="sp"></span>
+    <nav class="lang-switch" aria-label="语言 / Language">
+      <button type="button" class="ls-item" data-lang-set="zh" aria-pressed="true" lang="zh">中文</button>
+      <span class="ls-sep" aria-hidden="true">/</span>
+      <button type="button" class="ls-item" data-lang-set="en" aria-pressed="false" lang="en">EN</button>
+    </nav>
+  </div>
+</div>
+
 <div class="wrap">
 
-  <h1 class="enter" style="--i:0">星图研究</h1>
-  <p class="sub2 enter" style="--i:1">整理数学星图时产生的推导。每条都注明状态。</p>
+  <h1 class="enter" style="--i:0"><span class="zh">星图研究</span><span class="en">Research</span></h1>
+  <p class="sub2 enter" style="--i:1"><span class="zh">整理数学星图时产生的推导。每条都注明状态。</span><span class="en">Derivations that grew out of building the graph. Every entry carries its status.</span></p>
 
   <ol class="plist">
     <li class="enter" style="--i:2">
-      <div class="meta"><span class="tag">预印本</span>2026-10-31</div>
-      <a class="t" href="research-p-liquid.html">紧群上 p-liquid 系数的正次数上同调：一般系数的反例</a>
-      <p>对 G = SU(2) 与 V<sub>p</sub> = coker(∂₄) 的平凡作用，证明三阶上同调非零，
+      <div class="meta"><span class="tag"><span class="zh">预印本</span><span class="en">Preprint</span></span>2026-10-31</div>
+      <a class="t" href="research-p-liquid.html"><span class="zh">紧群上 p-liquid 系数的正次数上同调：一般系数的反例</span><span class="en" lang="en">Positive-degree cohomology of compact groups with p-liquid coefficients: a counterexample for general coefficients</span></a>
+      <p><span class="zh">对 G = SU(2) 与 V<sub>p</sub> = coker(∂₄) 的平凡作用，证明三阶上同调非零，
       从而在「任意 p-liquid 系数」的量词下否定 Question 0.10.4。
-      p-Banach 情形仍开，归约为一个显式标量下确界。</p>
+      p-Banach 情形仍开，归约为一个显式标量下确界。</span><span class="en" lang="en">For G = SU(2)
+      acting trivially on V<sub>p</sub> = coker(∂₄), we prove that the third cohomology group is
+      non-zero — so Question 0.10.4 fails once the coefficients range over all p-liquid spaces.
+      The p-Banach case stays open, reduced to one explicit scalar infimum.</span></p>
     </li>
     <li class="enter" style="--i:3">
-      <div class="meta"><span class="tag">预印本</span>2026-11-16</div>
-      <a class="t" href="research-low-degree-vanishing.html">紧群上平凡 p-liquid 系数的低次上同调</a>
-      <p>对任意紧群证明 H¹(G, V) = 0，对 G = SU(2) 证明 H²(G, V) = 0，V 取任意 p-liquid 实系数。
-      核心是一个替代 Haar 平均的算子 2 − f<sup>*</sup>，不经过局部凸性，也不要求系数来自 Banach 空间。</p>
+      <div class="meta"><span class="tag"><span class="zh">预印本</span><span class="en">Preprint</span></span>2026-11-16</div>
+      <a class="t" href="research-low-degree-vanishing.html"><span class="zh">紧群上平凡 p-liquid 系数的低次上同调</span><span class="en" lang="en">Low-degree cohomology of compact groups with trivial p-liquid coefficients</span></a>
+      <p><span class="zh">对任意紧群证明 H¹(G, V) = 0，对 G = SU(2) 证明 H²(G, V) = 0，V 取任意 p-liquid 实系数。
+      核心是一个替代 Haar 平均的算子 2 − f<sup>*</sup>，不经过局部凸性，也不要求系数来自 Banach 空间。</span><span class="en" lang="en">For any compact group we prove H¹(G, V) = 0,
+      and for G = SU(2) also H²(G, V) = 0, with V any p-liquid real coefficients. The heart of it
+      is an operator 2 − f<sup>*</sup> that replaces averaging over the group: no local convexity
+      is used, and the coefficients need not come from a Banach space.</span></p>
     </li>
   </ol>
 
   <p class="note">
-    本板块只收录有独立推导的条目，不含星图本身的节点内容（那些在
-    <a href="mathgalaxy/">数学星图</a>）。所有条目未经同行评审，引用请注明。
-    <br>最近更新：2026-11-16　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a>
+    <span class="zh">本板块只收录有独立推导的条目，不含星图本身的节点内容（那些在
+    <a href="mathgalaxy/">数学星图</a>）。所有条目未经同行评审，引用请注明。</span>
+    <span class="en" lang="en">This section lists only entries with a derivation of their own; the
+    nodes of the graph itself live in <a href="mathgalaxy/">MathGalaxy</a>. None of it is
+    peer-reviewed — cite with care.</span>
+    <br><span class="zh">最近更新：2026-11-16　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io">本站源码</a></span>
+    <span class="en" lang="en">Last updated: 2026-11-16　·　<a href="https://github.com/bingyingzizz/bingyingzizz.github.io">site source</a></span>
   </p>
 
 </div>

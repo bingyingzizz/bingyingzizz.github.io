@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh" data-lang-lock>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,10 +24,14 @@
 <link rel="stylesheet" href="../../assets/katex.min.css">
 <link rel="stylesheet" href="../../assets/site.css">
 <link rel="stylesheet" href="../../assets/node.css">
+<script src="../../assets/lang.js" defer></script>
 </head>
 <body class="node-page" style="--rc:#C89A2B">
 
-<nav class="crumb" aria-label="面包屑"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.module">模的张量积与标量限制</a><span class="sep">›</span><span aria-current="page">张量与内同态的伴随</span></nav>
+<nav class="crumb crumb-top" aria-label="面包屑">
+  <span class="crumb-path"><a href="https://bingyingzizz.github.io/mathgalaxy/all.html">数学星图</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#homology">同调代数</a><span class="sep">›</span><a href="https://bingyingzizz.github.io/mathgalaxy/all.html#hom.module">模的张量积与标量限制</a><span class="sep">›</span><span aria-current="page">张量与内同态的伴随</span></span>
+  <div class="lang-switch" role="group" aria-label="语言 / Language"><span class="ls-item" aria-current="true" lang="zh-CN">中文</span><span class="ls-sep" aria-hidden="true">/</span><a class="ls-item" href="thm.hom-tensor-adjunction-mod.en.html" hreflang="en" lang="en" data-lang-go="en">EN</a></div>
+</nav>
 
 <main class="wrap">
 
@@ -41,6 +45,7 @@
     <p class="full"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>M</mi><msub><mo>⊗</mo><mi>R</mi></msub><mi>N</mi><mo separator="true">,</mo><mi>P</mi><mo stretchy="false">)</mo><mo>≅</mo><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>M</mi><mo separator="true">,</mo><mi mathvariant="normal">Hom</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>P</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Hom}(M \otimes_{R} N, P) \cong \operatorname{Hom}(M, \operatorname{Hom}(N, P))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mbin">⊗</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm">Hom</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">))</span></span></span></span></p>
     <ul class="facts"><li>定理</li><li>依赖深度 layer 18</li><li>同调代数</li><li>模的张量积与标量限制</li></ul>
     <p class="idline"><code>thm.hom-tensor-adjunction-mod</code> · 定理 · 同调代数 · 张量积 · 伴随 · 内同态</p>
+    
     
     
     
@@ -107,7 +112,7 @@
       <a href="../#n=thm.hom-tensor-adjunction-mod">在星图里打开「张量与内同态的伴随」</a>　·　
       <a href="../all.html">全部 1673 个概念</a>　·　
       <a href="thm.hom-tensor-adjunction-mod.md">Markdown 原文</a>　·　
-      <a href="thm.hom-tensor-adjunction-mod.en.md" hreflang="en">English entry</a>　·　<a href="../read.html">读图指南与记号表</a>
+      <a href="thm.hom-tensor-adjunction-mod.en.md" hreflang="en">English entry</a>　·　<a href="../../read.html">读图指南与记号表</a>
     </p>
   </section>
 
