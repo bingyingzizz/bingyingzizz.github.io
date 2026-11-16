@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-16T10:15:55.134Z
-> 15 星系 / 105 星团 / 1668 节点 / 3761 连线（强边 3675，弱边 86；其中**不分层**的「推论」63 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-16T11:22:08.190Z
+> 15 星系 / 105 星团 / 1673 节点 / 3784 连线（强边 3693，弱边 91；其中**不分层**的「推论」63 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -10808,6 +10808,27 @@ $$V = U \oplus W$$
 
 参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
 
+#### 对偶映射　`def.dual-map`
+*定义*　对偶映射 $T^{\ast}$
+
+设 $T:V\to W$ 是 $K$-线性映射。它的**对偶映射**（也叫转置映射）$T^{\ast}:W^{\ast}\to V^{\ast}$ 由
+
+$$\langle T^{\ast}\varphi,\,v\rangle=\langle\varphi,\,Tv\rangle,\qquad v\in V,\ \varphi\in W^{\ast}$$
+
+定义；等价地 $T^{\ast}\varphi=\varphi\circ T$。
+
+性质：$T^{\ast}$ 线性；$(S\circ T)^{\ast}=T^{\ast}\circ S^{\ast}$；$(\operatorname{id}_V)^{\ast}=\operatorname{id}_{V^{\ast}}$。因此 $(-)^{\ast}$ 是反变函子（见对偶函子节点）。
+
+有限维、取定基时，$T^{\ast}$ 的矩阵是 $T$ 的矩阵的转置：$[T^{\ast}]_{\mathcal{B}^{\ast}}^{\mathcal{C}^{\ast}}=([T]_{\mathcal{C}}^{\mathcal{B}})^{\mathsf T}$。
+
+**方向**：$T:V\to W$ 诱导 $W^{\ast}\to V^{\ast}$，箭头反向；这是「对偶」的核心。
+
+**与转置矩阵**：转置矩阵是 $T^{\ast}$ 在**对偶基**下的矩阵；两者不是同一层面的对象（映射 vs 矩阵）。
+
+**复情形**：内积空间里对应的是共轭转置（伴随），见共轭转置节点；差别在于对偶用 $K$-线性泛函，而内积对第二变元共轭线性。
+
+参考：Lang, Linear Algebra；Hoffman–Kunze, Linear Algebra, Ch. 3
+
 #### 幂等　`def.idempotent`
 *定义*　幂等算子与投影
 
@@ -20555,6 +20576,23 @@ $\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子�
 
 参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
 
+#### 向量空间范畴　`def.category-of-vector-spaces`
+*定义*　向量空间范畴 $\mathbf{Vect}_K$
+
+**向量空间范畴** $\mathbf{Vect}_K$：对象是域 $K$ 上的向量空间，态射是 $K$-线性映射，复合是映射复合，单位是恒等映射。
+
+有限维向量空间构成**全子范畴** $\mathbf{Vect}_K^{\mathrm{fd}}$：对象只取有限维空间，态射仍是全部线性映射。
+
+$\mathbf{Vect}_K$ 是**加性范畴**：$\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。
+
+**为什么单列**：线性代数的「对象 + 线性映射」在范畴语言里就是 $\mathbf{Vect}_K$；有了它，「对偶」「Hom」才能写成函子。
+
+**忘掉结构**：遗忘函子 $\mathbf{Vect}_K\to\mathbf{Set}$ 忘掉加法与数乘，只留底层集合与函数；它忠实但不满（不是每个函数都线性）。
+
+**与加性范畴**：Hom 集本身是向量空间，复合双线性；有限直和 = 有限积，所以它是加性范畴，进而是预阿贝尔范畴（核与余核逐点取）。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II；Weibel, An Introduction to Homological Algebra, Ch. 1
+
 #### 局部化　`def.localization`
 *定义*　范畴的局部化
 
@@ -20809,6 +20847,49 @@ $$g \circ f = \mathrm{id}_{X}, \qquad f \circ g = \mathrm{id}_{Y}.$$
 ### 星团：函子与自然变换
 > 造出「范畴之间的翻译」：函子 → 忠实 / 满 / 全忠实 → 自然变换 → 范畴等价。
 
+#### Hom 函子　`def.hom-functor`
+*定义*　Hom 函子 $\operatorname{Hom}(V,-)$ 与 $\operatorname{Hom}(-,W)$
+
+固定 $V\in\mathbf{Vect}_K$。**协变 Hom 函子**
+
+$$\operatorname{Hom}_K(V,-):\mathbf{Vect}_K\to\mathbf{Vect}_K$$
+
+在对象上 $U\mapsto\operatorname{Hom}_K(V,U)$，在态射上把 $T:U_1\to U_2$ 送到前复合 $T\circ(-):\operatorname{Hom}_K(V,U_1)\to\operatorname{Hom}_K(V,U_2)$。
+
+固定 $W$。**反变 Hom 函子** $\operatorname{Hom}_K(-,W):\mathbf{Vect}_K^{\mathrm{op}}\to\mathbf{Vect}_K$ 在对象上 $U\mapsto\operatorname{Hom}_K(U,W)$，在态射上把 $T:U_1\to U_2$ 送到后复合 $(-)\circ T:\operatorname{Hom}_K(U_2,W)\to\operatorname{Hom}_K(U_1,W)$。
+
+两个 Hom 集都按逐点和、逐点数乘成为 $K$-向量空间，且函子的态射部分线性，所以靶范畴是 $\mathbf{Vect}_K$，不只是 $\mathbf{Set}$。
+
+**函子性**：$\operatorname{Hom}(V,-)$ 保恒等与复合；$\operatorname{Hom}(-,W)$ 反变，把复合顺序倒过来。
+
+**与对偶的关系**：取 $W=K$，$\operatorname{Hom}_K(-,K)=(-)^{\ast}$ 就是对偶函子；对偶空间是 Hom 函子在 $K$ 处的取值。
+
+**内 Hom**：在闭结构里 Hom 函子由内 Hom 对象表示；本图的内 Hom 是拓扑斯里的版本，表示关系是「内 Hom 表示 Hom 函子」。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. II；Weibel, An Introduction to Homological Algebra, Ch. 1
+
+#### 遗忘函子　`def.forgetful-functor`
+*定义*　遗忘函子
+
+**遗忘函子**是把结构「忘掉」一部分、只保留底层数据的函子：对象上 $(X,\text{structure})\mapsto X$，态射上保持同一个底层映射。
+
+典型例子：
+
+- $\mathbf{Top}\to\mathbf{Set}$：忘掉开集，只留底层集合与函数；
+- $\mathbf{Grp}\to\mathbf{Set}$：忘掉群运算与单位元；
+- $\mathbf{Vect}_K\to\mathbf{Set}$：忘掉加法与数乘；
+- $\mathbf{Vect}_K\to\mathbf{Ab}$：忘掉 $K$-数乘，只留加法群。
+
+严格说，遗忘函子不是单一函子，而是一类**具体范畴**（带忠实函子到 $\mathbf{Set}$ 的范畴）到 $\mathbf{Set}$ 的标准函子。
+
+**忠实但通常不满**：底层映射相同不保证保持结构；$\mathbf{Top}\to\mathbf{Set}$、$\mathbf{Ab}\to\mathbf{Set}$ 都忠实而不满。
+
+**左伴随是自由构造**：自由群、自由向量空间分别是相应遗忘函子的左伴随；$\mathbf{Top}\to\mathbf{Set}$ 的左伴随是**密着拓扑**（indiscrete，只含 $\emptyset$ 与全集），右伴随才是**离散拓扑** —— 两侧方向不能对调。
+
+**极限与余极限**：代数类遗忘函子（$\mathbf{Mon}$、$\mathbf{Gr}$、$\mathbf{Ab}$、$A\text{-}\mathbf{Mod}$ 等）保所有极限（逐点构造），但一般不保余极限；拓扑类行为不同 —— $\mathbf{Top}\to\mathbf{Set}$ 反而保所有余极限（商拓扑逐点拼出）。所以「保不保」要按具体范畴看，不能一概而论。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. IV；Riehl, Category Theory in Context, Section 1.2
+
 #### 函子　`def.functor`
 *定义*　函子
 
@@ -21051,6 +21132,26 @@ $$F(X) \cong F(Y) \implies X \cong Y.$$
 **证明。** 自然同构在每对 Hom 集上给出一族与复合相容的双射 ✓，于是「$\operatorname{Hom}(X,Y) \to \operatorname{Hom}(FX, FY)$ 是不是双射」这件事两边同时成立 ✓；本质满与等价同理（同构平移对象）✓。∎
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.16
+
+#### 对偶函子　`def.dual-functor`
+*定义*　对偶函子 $(-)^{\ast}$
+
+**对偶函子** $(-)^{\ast}:\mathbf{Vect}_K^{\mathrm{op}}\to\mathbf{Vect}_K$ 定义如下：
+
+- 对象上 $V\mapsto V^{\ast}=\operatorname{Hom}_K(V,K)$；
+- 态射上把 $T:V\to W$ 送到 $T^{\ast}:W^{\ast}\to V^{\ast}$。
+
+由于 $(S\circ T)^{\ast}=T^{\ast}\circ S^{\ast}$ 且 $(\operatorname{id})^{\ast}=\operatorname{id}$，它是从 $\mathbf{Vect}_K^{\mathrm{op}}$ 出发的**协变**函子——等价地说，是 $\mathbf{Vect}_K$ 上的**反变**函子。
+
+自然变换 $\eta_V:V\to V^{\ast\ast}$，$\eta_V(v)(\varphi)=\varphi(v)$，给出 $1_{\mathbf{Vect}_K}\implies(-)^{\ast\ast}$；有限维时 $\eta$ 是同构，对偶于是给出 $\mathbf{Vect}_K^{\mathrm{fd}}$ 与自身对偶范畴的等价。
+
+**反变不等于从对偶范畴出发**：这只是把反变函子写成 $\mathbf{Vect}_K^{\mathrm{op}}$ 上的协变函子，复合顺序因此要倒过来。
+
+**无限维**：$\eta_V$ 单射但一般不满，$V\to V^{\ast\ast}$ 不是同构；对偶不给出整个 $\mathbf{Vect}_K$ 的自对偶。
+
+**与 Hom 函子**：$(-)^{\ast}=\operatorname{Hom}_K(-,K)$ 是反变 Hom 函子在 $W=K$ 的特例（见 Hom 函子节点）。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. II；Lang, Linear Algebra
 
 #### 函子保同构　`prop.functor-preserves-iso`
 *命题*　命题：函子把同构送到同构
@@ -22843,13 +22944,15 @@ $$\operatorname{Hom}_{\mathcal{E}}\bigl(F_{2}F_{1}X,\ Z\bigr) \cong \operatornam
 
 常见的一对对子：**自由 $\dashv$ 遗忘**（$\mathbf{Mon}$、$\mathbf{Gr}$、$\mathbf{Ab}$、$A\text{-}\mathbf{Mod}$……）、**层化 $\dashv$ 含入**（$\widetilde{\mathcal{C}} \hookrightarrow \widehat{\mathcal{C}}$）、**$k$-化 $\dashv$ 含入**（$k\mathbf{Top} \hookrightarrow \mathbf{Top}$）。
 
-一般规律：**「忘掉结构 / 放宽结构」的函子是右伴随，其左伴随即「自由地补上结构」**。
+一般规律（代数类）：**「忘掉结构 / 放宽结构」的函子是右伴随，其左伴随即「自由地补上结构」**。
 
 **证明。** 逐例核对万能性质：$\operatorname{Hom}_{\mathbf{Mon}}(\text{自由幺半群},\ G) \cong \operatorname{Hom}_{\mathbf{Set}}(X, G)$ ✓；
 
 $\operatorname{Hom}(T^{\#}, F) \cong \operatorname{Hom}(T, F)$ ✓；
 
 $\operatorname{Hom}_{k\mathbf{Top}}(kX, Y) \cong \operatorname{Hom}_{\mathbf{Top}}(X, Y)$ ✓。
+
+**拓扑类不算在内**：$\mathbf{Top}\to\mathbf{Set}$ 的「补结构」有两个方向 —— 密着拓扑给左伴随、离散拓扑给右伴随，所以上面这条代数类的规律不能直接套到拓扑例子上。
 
 ∎
 
@@ -45073,6 +45176,58 @@ $\models$ 按**公式的复杂度**递归定义 —— 没有「公式由语法�
 
 陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
 
+#### 定义引用：「范畴」→ 向量空间范畴　`dep.cvect-category`
+
+向量空间范畴是范畴的一般定义在「对象=向量空间、态射=线性映射」上的实例
+
+#### 定义引用：「向量空间」→ 向量空间范畴　`dep.cvect-vectorspace`
+
+对象类正是域 K 上的向量空间
+
+#### 定义引用：「线性映射」→ 向量空间范畴　`dep.cvect-linearmap`
+
+态射类正是 K-线性映射
+
+#### 定义引用：「函子」→ Hom 函子　`dep.homfunctor-functor`
+
+Hom 函子是两个具体函子，按函子定义验证函子性
+
+#### 定义引用：「向量空间范畴」→ Hom 函子　`dep.homfunctor-cvect`
+
+源范畴与靶范畴都是向量空间范畴
+
+#### 定义引用：「线性映射」→ Hom 函子　`dep.homfunctor-linearmap`
+
+Hom 集由线性映射组成，态射作用为前复合或后复合
+
+#### 定义引用：「Hom 函子」→ 内 Hom　`dep.homfunctor-internal`
+
+内 Hom 对象表示 Hom 函子，故以 Hom 函子为前提
+
+#### 定义引用：「函子」→ 遗忘函子　`dep.forgetful-functor`
+
+遗忘函子是函子的一般定义在具体范畴上的实例
+
+#### 定义引用：「集合范畴」→ 遗忘函子　`dep.forgetful-sets`
+
+标准靶范畴是集合范畴
+
+#### 定义引用：「遗忘函子」→ 遗忘函子忠实但不满　`dep.forgetful-prop-ffnf`
+
+命题说的正是遗忘函子的忠实性与不满性
+
+#### 定义引用：「遗忘函子」→ 遗忘函子的伴随　`dep.forgetful-prop-fae`
+
+命题列举遗忘函子的左伴随
+
+#### 定义引用：「遗忘函子」→ 遗忘函子可表示　`dep.forgetful-prop-frep`
+
+命题讨论以 Set 为值的遗忘函子的可表示性
+
+#### 定义引用：「遗忘函子」→ 代数遗忘函子保极限　`dep.forgetful-prop-fpl`
+
+命题讨论遗忘函子保极限
+
 #### 忠实 / 满 / 全忠实 + 本质满 ⟹ 范畴等价　`imp.equiv-criterion`
 *全忠实 $+$ 本质满 $\implies$ 范畴等价*
 
@@ -49284,6 +49439,26 @@ $$\dim V = \operatorname{rank} T + \operatorname{null} T$$
 （另一条路：由第一同构定理 $\operatorname{im} T \cong V/\ker T$，而 $\dim(V/U) = \dim V - \dim U$ 由第 1 步的扩充直接得到 —— 两条路是同一件事的两种说法。）∎
 
 > 第 2 步的「无关」是最容易漏的一半：**把无关性从 $V$ 的基搬到像上**，用的是「$\ker T$ 已经作为基的一部分被单独列出」。
+
+#### 定义引用：「对偶空间」→ 对偶映射　`dep.dualmap-dualspace`
+
+对偶映射的源与靶都是对偶空间
+
+#### 定义引用：「线性映射」→ 对偶映射　`dep.dualmap-linearmap`
+
+对偶映射由线性映射 T 诱导
+
+#### 定义引用：「函子」→ 对偶函子　`dep.dualfunctor-functor`
+
+对偶函子是从对偶范畴出发的协变函子
+
+#### 定义引用：「向量空间范畴」→ 对偶函子　`dep.dualfunctor-cvect`
+
+定义域是向量空间范畴的对偶
+
+#### 定义引用：「对偶映射」→ 对偶函子　`dep.dualfunctor-dualmap`
+
+对偶函子在态射上的作用就是取对偶映射
 
 #### 定义引用：「线性无关与基」→ 矩阵　`dep.vs-matrix`
 
@@ -67466,6 +67641,18 @@ T3½ 空间的定义以拓扑空间为底，再要求分离性与函数分离。
 
 Ab 是 Grp 的全子范畴；把群运算再加交换律就得到阿贝尔群。
 
+#### 对偶空间 ～ Hom 函子　`dep.homfunctor-dualspace`
+
+对偶空间是 Hom 函子在 $W=K$ 处的取值：这是特例/实例，不是 Hom 函子定义的一部分
+
+#### 拓扑空间范畴 ～ 遗忘函子　`dep.forgetful-top`
+
+$\mathbf{Top}\to\mathbf{Set}$ 的遗忘函子是标准例子，不是一般定义的依赖
+
+#### 向量空间范畴 ～ 遗忘函子　`dep.forgetful-cvect`
+
+$\mathbf{Vect}_K\to\mathbf{Set}$ 的遗忘函子是标准例子，不是一般定义的依赖
+
 #### 子对象的交 ～ 并集与交集　`ana.inter-set`
 
 在 $\mathbf{Set}$ 中，子对象的交（纤维积）就是集合交，故 `def.union-inter` 的**交**这一半是本构造的特例；并**不是**纤维积，而是余积（不交并）的像，属于对偶侧，只作类比。
@@ -67481,6 +67668,14 @@ Ab 是 Grp 的全子范畴；把群运算再加交换律就得到阿贝尔群。
 #### 模范畴 ～ 阿贝尔群范畴　`analogy.module-category-abelian`
 
 Z-Mod 与 Ab 等价：整系数模就是阿贝尔群，这是模范畴与阿贝尔群范畴的共同特例。
+
+#### 转置 ～ 对偶映射　`dep.dualmap-transpose`
+
+有限维取定基时对偶映射的矩阵就是转置矩阵：这是性质/表示，不是对偶映射的定义依赖（无限维也有对偶映射）
+
+#### 对偶映射 ～ 共轭转置　`ana.dualmap-conjtranspose`
+
+对偶映射与共轭转置是同一现象的两套语言：实情形一致，复情形差一个共轭
 
 #### 相抵矩阵（等价矩阵） ～ 相似　`ana.equivmat-similarity`
 
@@ -68188,13 +68383,19 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **序数与超限 ↔ ZFC 公理系统**　3 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
 - **代数结构 ↔ 范畴与图**　10 条节点级连线
+- **向量空间与基 ↔ 范畴与图**　2 条节点级连线
+- **范畴与图 ↔ 函子与自然变换**　13 条节点级连线
+- **线性映射与秩 ↔ 函子与自然变换**　3 条节点级连线
+- **函子与自然变换 ↔ 阿贝尔层**　2 条节点级连线
+- **伴随与反射 ↔ 函子与自然变换**　9 条节点级连线
+- **函子与自然变换 ↔ 预层与米田**　12 条节点级连线
+- **范畴里的代数结构 ↔ 函子与自然变换**　2 条节点级连线
 - **图与极限 ↔ 单满、子对象与像**　7 条节点级连线
 - **单满、子对象与像 ↔ 关系与函数**　2 条节点级连线
 - **范畴与图 ↔ 单满、子对象与像**　7 条节点级连线
 - **范畴与图 ↔ 预层与米田**　11 条节点级连线
 - **伴随与反射 ↔ 预层与米田**　5 条节点级连线
 - **伴随与反射 ↔ 图与极限**　13 条节点级连线
-- **伴随与反射 ↔ 函子与自然变换**　8 条节点级连线
 - **伴随与反射 ↔ 范畴与图**　8 条节点级连线
 - **紧 Hausdorff 空间 ↔ 拓扑空间的基本语汇**　6 条节点级连线
 - **Stone 与 Stonean ↔ 拓扑空间的基本语汇**　10 条节点级连线
@@ -68259,11 +68460,9 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **复形与导出三角 ↔ 过滤与谱序列**　6 条节点级连线
 - **层上同调 ↔ 过滤与谱序列**　6 条节点级连线
 - **拓扑斯 ↔ 层上同调**　4 条节点级连线
-- **范畴与图 ↔ 函子与自然变换**　8 条节点级连线
 - **单满、子对象与像 ↔ 预层与米田**　4 条节点级连线
 - **范畴与图 ↔ 图与极限**　10 条节点级连线
 - **图与极限 ↔ 预层与米田**　6 条节点级连线
-- **函子与自然变换 ↔ 预层与米田**　11 条节点级连线
 - **图与极限 ↔ 紧 Hausdorff 空间**　2 条节点级连线
 - **图与极限 ↔ 集合的构造**　4 条节点级连线
 - **范畴里的代数结构 ↔ 图与极限**　4 条节点级连线
@@ -68284,6 +68483,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **微分中值定理与 Taylor ↔ 函数列、幂级数与初等函数**　2 条节点级连线
 - **函数列、幂级数与初等函数 ↔ 数系的构造**　2 条节点级连线
 - **线性映射与秩 ↔ 向量空间与基**　9 条节点级连线
+- **内积空间与正交性 ↔ 线性映射与秩**　4 条节点级连线
 - **矩阵与行列式 ↔ 向量空间与基**　3 条节点级连线
 - **线性映射与秩 ↔ 矩阵与行列式**　10 条节点级连线
 - **矩阵与行列式 ↔ 特征值与 Jordan 型**　6 条节点级连线
@@ -68418,7 +68618,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **选择原理 ↔ 收敛与紧性**　2 条节点级连线
 - **线性映射与秩 ↔ 流形与向量丛**　3 条节点级连线
 - **微分形式、积分与 de Rham ↔ Lie 群**　3 条节点级连线
-- **内积空间与正交性 ↔ 线性映射与秩**　2 条节点级连线
 - **内积空间与正交性 ↔ 多项式与因式分解**　2 条节点级连线
 - **多重线性与张量 ↔ 向量空间与基**　2 条节点级连线
 - **内积空间与正交性 ↔ 矩阵分解与最小二乘**　11 条节点级连线

@@ -1,6 +1,7 @@
 # 共轭转置　`def.conjugate-transpose`　·　续页（第 4 页）
 [在星图里打开](../#n=def.conjugate-transpose)　·　第 1 页 [nodes/def.conjugate-transpose.md](./def.conjugate-transpose.md)　·　上一页 [nodes/def.conjugate-transpose.3.md](./def.conjugate-transpose.3.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`def.hermitian-matrix`](../nodes/def.hermitian-matrix.md) Hermite 矩阵与对称矩阵 用
-- 被 [`def.normal-matrix`](../nodes/def.normal-matrix.md) 正规矩阵 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.sym-complex-def-conjugate-transpose.md](../proofs/dep.sym-complex-def-conjugate-transpose.md)
+
+> 续见 [nodes/def.conjugate-transpose.5.md](./def.conjugate-transpose.5.md)

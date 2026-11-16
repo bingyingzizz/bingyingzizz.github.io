@@ -8,7 +8,7 @@
 
 ## 基础工具榜
 - **36 / 36** `def.group` 群 · 代数结构
-- **35 / 35** `def.category-of-sets` 集合范畴 · 范畴与图
+- **36 / 36** `def.category-of-sets` 集合范畴 · 范畴与图
 - **35 / 35** `def.complex` 复数 ℂ · 数系的构造
 - 全部：`hubs/base.md`
 

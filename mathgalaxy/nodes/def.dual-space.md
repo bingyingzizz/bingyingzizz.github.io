@@ -16,7 +16,7 @@ $$T^{\ast} : W^{\ast} \to V^{\ast}, \qquad \varphi \longmapsto \varphi \circ T$$
 它线性，且 $(S \circ T)^{\ast} = T^{\ast} \circ S^{\ast}$（**反变**）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.dual-basis`](../nodes/def.dual-basis.md) 对偶基 用
+- ～弱边 [`def.hom-functor`](../nodes/def.hom-functor.md) Hom 函子
 
 - …另有出边，续页见 [nodes/def.dual-space.3.md](./def.dual-space.3.md)
 

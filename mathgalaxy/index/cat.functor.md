@@ -1,9 +1,10 @@
-# 函子与自然变换 / Functors and Natural Transformations（cat.functor）· 节点清单（第 1/1 页）
+# 函子与自然变换 / Functors and Natural Transformations（cat.functor）· 节点清单（第 1/2 页）
 
 造出「范畴之间的翻译」：函子 → 忠实 / 满 / 全忠实 → 自然变换 → 范畴等价。
-中心天体 def.natural-transformation　·　14 个节点　·　根 `../`
+中心天体 def.natural-transformation　·　17 个节点　·　根 `../`　·　续页 `index/cat.functor.2.md`
 
 - def.functor　函子　layer 10
+- def.forgetful-functor　遗忘函子　layer 11
 - def.natural-transformation　自然变换　layer 11
 - def.ff-faithful　忠实 / 满 / 全忠实　layer 11
 - def.essentially-surjective　本质满　layer 11
@@ -15,5 +16,6 @@
 - prop.nat-iso-invariants　自然同构不改变函子的性质　layer 13
 - def.preserves-limit　保极限的函子　layer 14
 - def.exact-functor　正合函子　layer 15
-- prop.preserves-products-kernels　保积与核 ⟹ 保所有有限极限　layer 16
-- prop.preserves-fibered-products-mono　保纤维积 ⟹ 保单态射　layer 16
+- def.hom-functor　Hom 函子　layer 16
+
+> 续见 `index/cat.functor.2.md`

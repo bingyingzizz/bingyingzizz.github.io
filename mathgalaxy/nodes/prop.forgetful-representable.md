@@ -6,7 +6,7 @@ layer 15 · 命题 · 预层与米田 · 范畴论
 以 $\mathbf{Set}$ 为值的常见遗忘函子都是**可表示的**，表示对象就是相应的**自由对象**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.representable`](../nodes/def.representable.md) 表示函子：用到了定义 表示函子　[proofs/def-link.forgetrepr-representable.md](../proofs/def-link.forgetrepr-representable.md)
+- [`def.forgetful-functor`](../nodes/def.forgetful-functor.md) 遗忘函子：用到了定义 遗忘函子　[proofs/dep.forgetful-prop-frep.md](../proofs/dep.forgetful-prop-frep.md)
 
 - …另有入边，续页见 [nodes/prop.forgetful-representable.2.md](./prop.forgetful-representable.2.md)
 

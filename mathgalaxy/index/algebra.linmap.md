@@ -1,7 +1,7 @@
 # 线性映射与秩 / Linear Maps and Rank（algebra.linmap）· 节点清单（第 1/1 页）
 
 造出「线性映射」这套语言：线性映射 → 核与像 → 商空间与第一同构定理 → **秩-零化度定理** → 对偶空间与零化子。它是「群同态 → 正规子群 → 第一同构定理」那套模板在向量空间上的重演。
-中心天体 thm.rank-nullity　·　14 个节点　·　根 `../`
+中心天体 thm.rank-nullity　·　15 个节点　·　根 `../`
 
 - def.linear-map　线性映射　layer 14
 - def.linear-isomorphism　线性同构　layer 15
@@ -15,5 +15,6 @@
 - def.dual-basis　对偶基　layer 16
 - def.annihilator　零化子　layer 16
 - def.direct-sum　直和与补空间　layer 16
+- def.dual-map　对偶映射　layer 16
 - thm.rank-nullity　秩-零化度定理　layer 17
 - def.idempotent　幂等　layer 27

@@ -15,7 +15,7 @@ $$F(1_X) = 1_{F(X)}, \qquad F(g \circ f) = F(g) \circ F(f)$$
 （只要 $g \circ f$ 有定义）。反方向的函子 $F : \mathcal{C}^{\mathrm{op}} \to \mathcal{D}$ 叫**反变函子**。
 
 ## 它能推出什么 / 谁在用它
-- ⇒ [`prop.functor-preserves-iso`](../nodes/prop.functor-preserves-iso.md) 函子保同构
+- 被 [`def.hom-functor`](../nodes/def.hom-functor.md) Hom 函子 用
 
 - …另有出边，续页见 [nodes/def.functor.3.md](./def.functor.3.md)
 

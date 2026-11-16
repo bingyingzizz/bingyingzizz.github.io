@@ -2,7 +2,9 @@
 [在星图里打开](../#n=def.dual-space)　·　第 1 页 [nodes/def.dual-space.md](./def.dual-space.md)　·　上一页 [nodes/def.dual-space.2.md](./def.dual-space.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.dual-basis`](../nodes/def.dual-basis.md) 对偶基 用
 - 被 [`def.annihilator`](../nodes/def.annihilator.md) 零化子 用
+- 被 [`def.dual-map`](../nodes/def.dual-map.md) 对偶映射 用
 - 被 [`def.gradient`](../nodes/def.gradient.md) 梯度 用
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
 - 被 [`def.transpose`](../nodes/def.transpose.md) 转置 用

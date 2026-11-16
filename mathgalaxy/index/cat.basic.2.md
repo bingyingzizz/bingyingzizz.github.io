@@ -2,6 +2,7 @@
 根 `../`　·　第 1 页 `index/cat.basic.md`
 
 - prop.localization-functor-exact　允许右分式演算时局部化函子正合　layer 13
+- def.category-of-vector-spaces　向量空间范畴　layer 15
 - prop.cat-final-initial-products　Cat 的终始对象与有限积　layer 15
 - prop.calculus-of-fractions　分式演算下的局部化　layer 16
 - prop.iso-unique-section　同构的截面与收缩唯一　layer 16

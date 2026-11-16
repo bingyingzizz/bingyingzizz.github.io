@@ -16,7 +16,7 @@ $$\operatorname{Hom}_K(V, W) := \{\, T : V \to W \ \text{linear} \,\}$$
 复合 $S \circ T$ 仍是线性的。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.module-category`](../nodes/def.module-category.md) 模范畴 用
+- 被 [`def.category-of-vector-spaces`](../nodes/def.category-of-vector-spaces.md) 向量空间范畴 用
 
 - …另有出边，续页见 [nodes/def.linear-map.3.md](./def.linear-map.3.md)
 

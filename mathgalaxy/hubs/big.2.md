@@ -11,6 +11,6 @@
 - **6 / 6** `def.representable` 表示函子 · layer 14 · 预层与米田
 - **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
 
-（共 1662 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1667 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

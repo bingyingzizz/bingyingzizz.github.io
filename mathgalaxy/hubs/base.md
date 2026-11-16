@@ -3,7 +3,7 @@
 
 被最多结论当作前置（出边多）—— 值得优先学熟。
 - **36 / 36** `def.group` 群 · layer 9 · 代数结构
-- **35 / 35** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **36 / 36** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
 - **35 / 35** `def.complex` 复数 ℂ · layer 21 · 数系的构造
 - **33 / 33** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
 - **32 / 33** `def.measure` 测度 · layer 17 · 测度的构造
@@ -14,8 +14,8 @@
 - **29 / 32** `def.sheaf` 层 · layer 17 · 层与拓扑
 - **26 / 29** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **26 / 26** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
+- **25 / 25** `def.category` 范畴 · layer 9 · 范畴与图
+- **25 / 25** `def.functor` 函子 · layer 10 · 函子与自然变换
 - **24 / 27** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
-- **24 / 24** `def.function` 映射 · layer 7 · 关系与函数
-- **24 / 24** `def.category` 范畴 · layer 9 · 范畴与图
 
 > 续见 hubs/base.2.md

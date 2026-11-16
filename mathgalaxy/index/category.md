@@ -3,8 +3,8 @@
 
 范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。
 
-- cat.basic　范畴与图 / Categories and Diagrams　中心天体 def.category　23 点
-- cat.functor　函子与自然变换 / Functors and Natural Transformations　中心天体 def.natural-transformation　14 点
+- cat.basic　范畴与图 / Categories and Diagrams　中心天体 def.category　24 点
+- cat.functor　函子与自然变换 / Functors and Natural Transformations　中心天体 def.natural-transformation　17 点
 - cat.limit　图与极限 / Diagrams and Limits　中心天体 def.limit　25 点
 - cat.structure　单满、子对象与像 / Monos, Epis, Subobjects and Images　中心天体 def.subobject　10 点
 - cat.algebra　范畴里的代数结构 / Algebraic Structures in a Category　中心天体 def.group-object　10 点

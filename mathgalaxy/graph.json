@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-16T10:15:55.134Z",
+  "generated": "2026-11-16T11:22:08.190Z",
   "counts": {
    "regions": 15,
    "clusters": 105,
-   "nodes": 1668,
-   "edges": 3761,
-   "strong": 3675,
-   "weak": 86,
+   "nodes": 1673,
+   "edges": 3784,
+   "strong": 3693,
+   "weak": 91,
    "derived": 63,
-   "en_pages": 1668
+   "en_pages": 1673
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 246
+   "nodeCount": 250
   },
   {
    "id": "analysis",
@@ -109,7 +109,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 220
+   "nodeCount": 224
   },
   {
    "id": "homology",
@@ -590,7 +590,7 @@
    "en": "Linear Maps and Rank",
    "parent": "algebra",
    "desc": "造出「线性映射」这套语言：线性映射 → 核与像 → 商空间与第一同构定理 → **秩-零化度定理** → 对偶空间与零化子。它是「群同态 → 正规子群 → 第一同构定理」那套模板在向量空间上的重演。",
-   "nodeCount": 14,
+   "nodeCount": 15,
    "nodes": [
     "def.linear-map",
     "def.linear-isomorphism",
@@ -605,6 +605,7 @@
     "def.dual-basis",
     "def.annihilator",
     "def.direct-sum",
+    "def.dual-map",
     "def.idempotent"
    ]
   },
@@ -1401,7 +1402,7 @@
    "en": "Categories and Diagrams",
    "parent": "category",
    "desc": "造出「范畴」这个概念本身：先有图 $(V, E, s, t)$，再配上复合与单位，得到一个六元组。",
-   "nodeCount": 23,
+   "nodeCount": 24,
    "nodes": [
     "def.universe",
     "ax.grothendieck-universe",
@@ -1413,6 +1414,7 @@
     "def.category-of-abelian-groups",
     "def.category-of-sets",
     "def.category-of-topological-spaces",
+    "def.category-of-vector-spaces",
     "def.localization",
     "prop.calculus-of-fractions",
     "prop.localization-hom-colim",
@@ -1434,8 +1436,10 @@
    "en": "Functors and Natural Transformations",
    "parent": "category",
    "desc": "造出「范畴之间的翻译」：函子 → 忠实 / 满 / 全忠实 → 自然变换 → 范畴等价。",
-   "nodeCount": 14,
+   "nodeCount": 17,
    "nodes": [
+    "def.hom-functor",
+    "def.forgetful-functor",
     "def.functor",
     "def.natural-transformation",
     "def.ff-faithful",
@@ -1449,6 +1453,7 @@
     "prop.fully-faithful-injective",
     "prop.forgetful-faithful-not-full",
     "prop.nat-iso-invariants",
+    "def.dual-functor",
     "prop.functor-preserves-iso"
    ]
   },
@@ -15685,6 +15690,173 @@
    "notes": "**完备且余完备**：上述构造逐项给出小极限与小余极限。\n\n**遗忘函子** $\\mathbf{Top}\\to\\mathbf{Set}$ 保所有极限与余极限，但它忠实而不满：不是每个函数都连续。\n\n**不是加性范畴**：$\\hom(X,Y)$ 一般没有群结构；开映射也不是态射（态射只要求连续）。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
+   ]
+  },
+  {
+   "id": "def.category-of-vector-spaces",
+   "type": "definition",
+   "label": "向量空间范畴",
+   "title": "向量空间范畴 $\\mathbf{Vect}_K$",
+   "label_en": "Vect_K",
+   "title_en": "category of vector spaces",
+   "statement_en": "**The category of vector spaces** $\\mathbf{Vect}_K$: its objects are the vector spaces over a field $K$, its morphisms are the $K$-linear maps, composition is composition of maps, and the identity is the identity map.\n\nThe finite-dimensional vector spaces form the **full subcategory** $\\mathbf{Vect}_K^{\\mathrm{fd}}$: the objects are only the finite-dimensional spaces, while the morphisms are still all linear maps.\n\n$\\mathbf{Vect}_K$ is an **additive category**: $\\operatorname{Hom}_K(V,W)$ becomes a $K$-vector space under pointwise addition and pointwise scalar multiplication, composition is linear in each variable, and finite direct sums are simultaneously products and coproducts.",
+   "notes_en": "**Why it is listed separately**: the pair \"objects + linear maps\" of linear algebra is, in categorical language, $\\mathbf{Vect}_K$; once it is available, \"duality\" and \"Hom\" can be written as functors.\n\n**Forgetting structure**: the forgetful functor $\\mathbf{Vect}_K\\to\\mathbf{Set}$ forgets addition and scalar multiplication, retaining only the underlying sets and functions; it is faithful but not full (not every function is linear).\n\n**Relation to additive categories**: each Hom-set is itself a vector space and composition is bilinear; finite direct sums coincide with finite products, so it is an additive category, hence a preabelian category (kernels and cokernels are taken pointwise).",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#0c8288c9",
+      "notes": "v0.9.3#770faf65"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-vector-spaces.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 15,
+   "tags": [
+    "范畴论",
+    "线性代数",
+    "Vect"
+   ],
+   "statement": "**向量空间范畴** $\\mathbf{Vect}_K$：对象是域 $K$ 上的向量空间，态射是 $K$-线性映射，复合是映射复合，单位是恒等映射。\n\n有限维向量空间构成**全子范畴** $\\mathbf{Vect}_K^{\\mathrm{fd}}$：对象只取有限维空间，态射仍是全部线性映射。\n\n$\\mathbf{Vect}_K$ 是**加性范畴**：$\\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。",
+   "notes": "**为什么单列**：线性代数的「对象 + 线性映射」在范畴语言里就是 $\\mathbf{Vect}_K$；有了它，「对偶」「Hom」才能写成函子。\n\n**忘掉结构**：遗忘函子 $\\mathbf{Vect}_K\\to\\mathbf{Set}$ 忘掉加法与数乘，只留底层集合与函数；它忠实但不满（不是每个函数都线性）。\n\n**与加性范畴**：Hom 集本身是向量空间，复合双线性；有限直和 = 有限积，所以它是加性范畴，进而是预阿贝尔范畴（核与余核逐点取）。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II",
+    "Weibel, An Introduction to Homological Algebra, Ch. 1"
+   ]
+  },
+  {
+   "id": "def.hom-functor",
+   "type": "definition",
+   "label": "Hom 函子",
+   "title": "Hom 函子 $\\operatorname{Hom}(V,-)$ 与 $\\operatorname{Hom}(-,W)$",
+   "label_en": "Hom functor",
+   "title_en": "Hom functor",
+   "statement_en": "Fix $V\\in\\mathbf{Vect}_K$. The **covariant Hom functor**\n\n$$\\operatorname{Hom}_K(V,-):\\mathbf{Vect}_K\\to\\mathbf{Vect}_K$$\n\nsends an object to $U\\mapsto\\operatorname{Hom}_K(V,U)$ and a morphism $T:U_1\\to U_2$ to precomposition $T\\circ(-):\\operatorname{Hom}_K(V,U_1)\\to\\operatorname{Hom}_K(V,U_2)$.\n\nFix $W$. The **contravariant Hom functor** $\\operatorname{Hom}_K(-,W):\\mathbf{Vect}_K^{\\mathrm{op}}\\to\\mathbf{Vect}_K$ sends an object to $U\\mapsto\\operatorname{Hom}_K(U,W)$ and a morphism $T:U_1\\to U_2$ to postcomposition $(-)\\circ T:\\operatorname{Hom}_K(U_2,W)\\to\\operatorname{Hom}_K(U_1,W)$.\n\nBoth Hom-sets become $K$-vector spaces under pointwise addition and pointwise scalar multiplication, and the morphism part of the functor is linear, so the target category is $\\mathbf{Vect}_K$, not merely $\\mathbf{Set}$.",
+   "notes_en": "**Functoriality**: $\\operatorname{Hom}(V,-)$ preserves identities and composition; $\\operatorname{Hom}(-,W)$ is contravariant and reverses the order of composition.\n\n**Relation to duality**: taking $W=K$, $\\operatorname{Hom}_K(-,K)=(-)^{\\ast}$ is the dual functor; the dual space is the value of the Hom functor at $K$.\n\n**Internal Hom**: in a closed structure the Hom functor is represented by an internal Hom object; the version used here lives in a topos, and the representing relation is \"the internal Hom represents the Hom functor\".",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#bcead6b8",
+      "notes": "v0.9.3#384ef4c9"
+     }
+    }
+   },
+   "en_page": "nodes/def.hom-functor.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.functor",
+   "layer": 16,
+   "tags": [
+    "范畴论",
+    "Hom",
+    "函子"
+   ],
+   "statement": "固定 $V\\in\\mathbf{Vect}_K$。**协变 Hom 函子**\n\n$$\\operatorname{Hom}_K(V,-):\\mathbf{Vect}_K\\to\\mathbf{Vect}_K$$\n\n在对象上 $U\\mapsto\\operatorname{Hom}_K(V,U)$，在态射上把 $T:U_1\\to U_2$ 送到前复合 $T\\circ(-):\\operatorname{Hom}_K(V,U_1)\\to\\operatorname{Hom}_K(V,U_2)$。\n\n固定 $W$。**反变 Hom 函子** $\\operatorname{Hom}_K(-,W):\\mathbf{Vect}_K^{\\mathrm{op}}\\to\\mathbf{Vect}_K$ 在对象上 $U\\mapsto\\operatorname{Hom}_K(U,W)$，在态射上把 $T:U_1\\to U_2$ 送到后复合 $(-)\\circ T:\\operatorname{Hom}_K(U_2,W)\\to\\operatorname{Hom}_K(U_1,W)$。\n\n两个 Hom 集都按逐点和、逐点数乘成为 $K$-向量空间，且函子的态射部分线性，所以靶范畴是 $\\mathbf{Vect}_K$，不只是 $\\mathbf{Set}$。",
+   "notes": "**函子性**：$\\operatorname{Hom}(V,-)$ 保恒等与复合；$\\operatorname{Hom}(-,W)$ 反变，把复合顺序倒过来。\n\n**与对偶的关系**：取 $W=K$，$\\operatorname{Hom}_K(-,K)=(-)^{\\ast}$ 就是对偶函子；对偶空间是 Hom 函子在 $K$ 处的取值。\n\n**内 Hom**：在闭结构里 Hom 函子由内 Hom 对象表示；本图的内 Hom 是拓扑斯里的版本，表示关系是「内 Hom 表示 Hom 函子」。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. II",
+    "Weibel, An Introduction to Homological Algebra, Ch. 1"
+   ]
+  },
+  {
+   "id": "def.forgetful-functor",
+   "type": "definition",
+   "label": "遗忘函子",
+   "title": "遗忘函子",
+   "label_en": "forgetful functor",
+   "title_en": "forgetful functor",
+   "statement_en": "**A forgetful functor** is a functor that \"forgets\" part of an algebraic structure and keeps only the underlying data: on objects $(X,\\text{structure})\\mapsto X$, and on morphisms it keeps the same underlying map.\n\nTypical examples:\n\n- $\\mathbf{Top}\\to\\mathbf{Set}$: forgets the open sets, keeping only the underlying sets and functions;\n- $\\mathbf{Grp}\\to\\mathbf{Set}$: forgets the group operation and the unit;\n- $\\mathbf{Vect}_K\\to\\mathbf{Set}$: forgets addition and scalar multiplication;\n- $\\mathbf{Vect}_K\\to\\mathbf{Ab}$: forgets the $K$-scalar multiplication, keeping only the additive group.\n\nStrictly speaking, \"forgetful functor\" is not a single functor but a standard class of functors from **concrete categories** (categories equipped with a faithful functor to $\\mathbf{Set}$) to $\\mathbf{Set}$.",
+   "notes_en": "**Faithful but usually not full**: having the same underlying map does not guarantee preserving structure; $\\mathbf{Top}\\to\\mathbf{Set}$ and $\\mathbf{Ab}\\to\\mathbf{Set}$ are both faithful and not full.\n\n**Left adjoints are free constructions**: free groups, free vector spaces, and the discrete topology are the left adjoints of the corresponding forgetful functors.\n\n**Preservation of limits**: forgetful functors to $\\mathbf{Set}$ usually preserve all limits (constructed pointwise), but in general they do not preserve colimits.",
+   "translations": {
+    "en": {
+     "status": "stale",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "stale",
+      "notes": "stale",
+      "name": "derived"
+     },
+     "staleFields": [
+      "statement",
+      "notes"
+     ],
+     "basedOn": {
+      "statement": "v0.9.3#7ce43ab5",
+      "notes": "v0.9.3#05b11634"
+     }
+    }
+   },
+   "en_page": "nodes/def.forgetful-functor.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.functor",
+   "layer": 11,
+   "tags": [
+    "范畴论",
+    "函子",
+    "具体范畴"
+   ],
+   "statement": "**遗忘函子**是把结构「忘掉」一部分、只保留底层数据的函子：对象上 $(X,\\text{structure})\\mapsto X$，态射上保持同一个底层映射。\n\n典型例子：\n\n- $\\mathbf{Top}\\to\\mathbf{Set}$：忘掉开集，只留底层集合与函数；\n- $\\mathbf{Grp}\\to\\mathbf{Set}$：忘掉群运算与单位元；\n- $\\mathbf{Vect}_K\\to\\mathbf{Set}$：忘掉加法与数乘；\n- $\\mathbf{Vect}_K\\to\\mathbf{Ab}$：忘掉 $K$-数乘，只留加法群。\n\n严格说，遗忘函子不是单一函子，而是一类**具体范畴**（带忠实函子到 $\\mathbf{Set}$ 的范畴）到 $\\mathbf{Set}$ 的标准函子。",
+   "notes": "**忠实但通常不满**：底层映射相同不保证保持结构；$\\mathbf{Top}\\to\\mathbf{Set}$、$\\mathbf{Ab}\\to\\mathbf{Set}$ 都忠实而不满。\n\n**左伴随是自由构造**：自由群、自由向量空间分别是相应遗忘函子的左伴随；$\\mathbf{Top}\\to\\mathbf{Set}$ 的左伴随是**密着拓扑**（indiscrete，只含 $\\emptyset$ 与全集），右伴随才是**离散拓扑** —— 两侧方向不能对调。\n\n**极限与余极限**：代数类遗忘函子（$\\mathbf{Mon}$、$\\mathbf{Gr}$、$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$ 等）保所有极限（逐点构造），但一般不保余极限；拓扑类行为不同 —— $\\mathbf{Top}\\to\\mathbf{Set}$ 反而保所有余极限（商拓扑逐点拼出）。所以「保不保」要按具体范畴看，不能一概而论。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. IV",
+    "Riehl, Category Theory in Context, Section 1.2"
    ]
   },
   {
@@ -37660,8 +37832,8 @@
     "含入",
     "自由对象"
    ],
-   "statement": "常见的一对对子：**自由 $\\dashv$ 遗忘**（$\\mathbf{Mon}$、$\\mathbf{Gr}$、$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$……）、**层化 $\\dashv$ 含入**（$\\widetilde{\\mathcal{C}} \\hookrightarrow \\widehat{\\mathcal{C}}$）、**$k$-化 $\\dashv$ 含入**（$k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$）。\n\n一般规律：**「忘掉结构 / 放宽结构」的函子是右伴随，其左伴随即「自由地补上结构」**。",
-   "notes": "**证明。** 逐例核对万能性质：$\\operatorname{Hom}_{\\mathbf{Mon}}(\\text{自由幺半群},\\ G) \\cong \\operatorname{Hom}_{\\mathbf{Set}}(X, G)$ ✓；\n\n$\\operatorname{Hom}(T^{\\#}, F) \\cong \\operatorname{Hom}(T, F)$ ✓；\n\n$\\operatorname{Hom}_{k\\mathbf{Top}}(kX, Y) \\cong \\operatorname{Hom}_{\\mathbf{Top}}(X, Y)$ ✓。\n\n∎",
+   "statement": "常见的一对对子：**自由 $\\dashv$ 遗忘**（$\\mathbf{Mon}$、$\\mathbf{Gr}$、$\\mathbf{Ab}$、$A\\text{-}\\mathbf{Mod}$……）、**层化 $\\dashv$ 含入**（$\\widetilde{\\mathcal{C}} \\hookrightarrow \\widehat{\\mathcal{C}}$）、**$k$-化 $\\dashv$ 含入**（$k\\mathbf{Top} \\hookrightarrow \\mathbf{Top}$）。\n\n一般规律（代数类）：**「忘掉结构 / 放宽结构」的函子是右伴随，其左伴随即「自由地补上结构」**。",
+   "notes": "**证明。** 逐例核对万能性质：$\\operatorname{Hom}_{\\mathbf{Mon}}(\\text{自由幺半群},\\ G) \\cong \\operatorname{Hom}_{\\mathbf{Set}}(X, G)$ ✓；\n\n$\\operatorname{Hom}(T^{\\#}, F) \\cong \\operatorname{Hom}(T, F)$ ✓；\n\n$\\operatorname{Hom}_{k\\mathbf{Top}}(kX, Y) \\cong \\operatorname{Hom}_{\\mathbf{Top}}(X, Y)$ ✓。\n\n**拓扑类不算在内**：$\\mathbf{Top}\\to\\mathbf{Set}$ 的「补结构」有两个方向 —— 密着拓扑给左伴随、离散拓扑给右伴随，所以上面这条代数类的规律不能直接套到拓扑例子上。\n\n∎",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.56"
    ]
@@ -43479,6 +43651,115 @@
    "refs": [
     "Lang, Linear Algebra",
     "Hoffman–Kunze, Linear Algebra, Ch. 3"
+   ]
+  },
+  {
+   "id": "def.dual-map",
+   "type": "definition",
+   "label": "对偶映射",
+   "title": "对偶映射 $T^{\\ast}$",
+   "label_en": "dual map",
+   "title_en": "dual (transpose) map",
+   "statement_en": "Let $T:V\\to W$ be a $K$-linear map. Its **dual map** (also called the transpose map) $T^{\\ast}:W^{\\ast}\\to V^{\\ast}$ is defined by\n\n$$\\langle T^{\\ast}\\varphi,\\,v\\rangle=\\langle\\varphi,\\,Tv\\rangle,\\qquad v\\in V,\\ \\varphi\\in W^{\\ast}$$\n\nEquivalently, $T^{\\ast}\\varphi=\\varphi\\circ T$.\n\nProperties: $T^{\\ast}$ is linear; $(S\\circ T)^{\\ast}=T^{\\ast}\\circ S^{\\ast}$; $(\\operatorname{id}_V)^{\\ast}=\\operatorname{id}_{V^{\\ast}}$. Hence $(-)^{\\ast}$ is a contravariant functor (see `def.dual-functor`).\n\nIn finite dimension, after bases are fixed, the matrix of $T^{\\ast}$ is the transpose of the matrix of $T$: $[T^{\\ast}]_{\\mathcal{B}^{\\ast}}^{\\mathcal{C}^{\\ast}}=([T]_{\\mathcal{C}}^{\\mathcal{B}})^{\\mathsf T}$.",
+   "notes_en": "**Direction**: $T:V\\to W$ induces $W^{\\ast}\\to V^{\\ast}$, so the arrow reverses; this is the heart of \"duality\".\n\n**Relation to the transpose matrix**: the transpose matrix is the matrix of $T^{\\ast}$ in the **dual bases**; the two are objects at different levels (a map versus a matrix).\n\n**Complex case**: in an inner-product space the corresponding notion is the conjugate transpose (adjoint), see `def.operator-adjoint`; the difference is that duality uses $K$-linear functionals, while the inner product is conjugate-linear in the second variable.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#eff448b5",
+      "notes": "v0.9.3#4fda5469"
+     }
+    }
+   },
+   "en_page": "nodes/def.dual-map.en.md",
+   "en_html": true,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.linmap",
+   "layer": 16,
+   "tags": [
+    "定义",
+    "线性代数",
+    "对偶"
+   ],
+   "statement": "设 $T:V\\to W$ 是 $K$-线性映射。它的**对偶映射**（也叫转置映射）$T^{\\ast}:W^{\\ast}\\to V^{\\ast}$ 由\n\n$$\\langle T^{\\ast}\\varphi,\\,v\\rangle=\\langle\\varphi,\\,Tv\\rangle,\\qquad v\\in V,\\ \\varphi\\in W^{\\ast}$$\n\n定义；等价地 $T^{\\ast}\\varphi=\\varphi\\circ T$。\n\n性质：$T^{\\ast}$ 线性；$(S\\circ T)^{\\ast}=T^{\\ast}\\circ S^{\\ast}$；$(\\operatorname{id}_V)^{\\ast}=\\operatorname{id}_{V^{\\ast}}$。因此 $(-)^{\\ast}$ 是反变函子（见对偶函子节点）。\n\n有限维、取定基时，$T^{\\ast}$ 的矩阵是 $T$ 的矩阵的转置：$[T^{\\ast}]_{\\mathcal{B}^{\\ast}}^{\\mathcal{C}^{\\ast}}=([T]_{\\mathcal{C}}^{\\mathcal{B}})^{\\mathsf T}$。",
+   "notes": "**方向**：$T:V\\to W$ 诱导 $W^{\\ast}\\to V^{\\ast}$，箭头反向；这是「对偶」的核心。\n\n**与转置矩阵**：转置矩阵是 $T^{\\ast}$ 在**对偶基**下的矩阵；两者不是同一层面的对象（映射 vs 矩阵）。\n\n**复情形**：内积空间里对应的是共轭转置（伴随），见共轭转置节点；差别在于对偶用 $K$-线性泛函，而内积对第二变元共轭线性。",
+   "refs": [
+    "Lang, Linear Algebra",
+    "Hoffman–Kunze, Linear Algebra, Ch. 3"
+   ]
+  },
+  {
+   "id": "def.dual-functor",
+   "type": "definition",
+   "label": "对偶函子",
+   "title": "对偶函子 $(-)^{\\ast}$",
+   "label_en": "dual functor",
+   "title_en": "dual functor",
+   "statement_en": "**The dual functor** $(-)^{\\ast}:\\mathbf{Vect}_K^{\\mathrm{op}}\\to\\mathbf{Vect}_K$ is defined as follows:\n\n- on objects, $V\\mapsto V^{\\ast}=\\operatorname{Hom}_K(V,K)$;\n- on morphisms, it sends $T:V\\to W$ to $T^{\\ast}:W^{\\ast}\\to V^{\\ast}$.\n\nSince $(S\\circ T)^{\\ast}=T^{\\ast}\\circ S^{\\ast}$ and $(\\operatorname{id})^{\\ast}=\\operatorname{id}$, it is a **covariant** functor from $\\mathbf{Vect}_K^{\\mathrm{op}}$ — equivalently, a **contravariant** functor on $\\mathbf{Vect}_K$.\n\nThe natural transformation $\\eta_V:V\\to V^{\\ast\\ast}$, $\\eta_V(v)(\\varphi)=\\varphi(v)$, gives $1_{\\mathbf{Vect}_K}\\implies(-)^{\\ast\\ast}$; in finite dimension $\\eta$ is an isomorphism, so duality gives an equivalence between $\\mathbf{Vect}_K^{\\mathrm{fd}}$ and its opposite category.",
+   "notes_en": "**Contravariant is not the same as starting from the opposite category**: this is only a way of writing a contravariant functor as a covariant functor on $\\mathbf{Vect}_K^{\\mathrm{op}}$, which is why the order of composition is reversed.\n\n**Infinite dimension**: $\\eta_V$ is injective but generally not surjective, so $V\\to V^{\\ast\\ast}$ is not an isomorphism; duality does not make all of $\\mathbf{Vect}_K$ self-dual.\n\n**Relation to the Hom functor**: $(-)^{\\ast}=\\operatorname{Hom}_K(-,K)$ is the special case $W=K$ of the contravariant Hom functor (see the Hom functor node).",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#665212ff",
+      "notes": "v0.9.3#612034ff"
+     }
+    }
+   },
+   "en_page": "nodes/def.dual-functor.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.functor",
+   "layer": 17,
+   "tags": [
+    "范畴论",
+    "线性代数",
+    "对偶"
+   ],
+   "statement": "**对偶函子** $(-)^{\\ast}:\\mathbf{Vect}_K^{\\mathrm{op}}\\to\\mathbf{Vect}_K$ 定义如下：\n\n- 对象上 $V\\mapsto V^{\\ast}=\\operatorname{Hom}_K(V,K)$；\n- 态射上把 $T:V\\to W$ 送到 $T^{\\ast}:W^{\\ast}\\to V^{\\ast}$。\n\n由于 $(S\\circ T)^{\\ast}=T^{\\ast}\\circ S^{\\ast}$ 且 $(\\operatorname{id})^{\\ast}=\\operatorname{id}$，它是从 $\\mathbf{Vect}_K^{\\mathrm{op}}$ 出发的**协变**函子——等价地说，是 $\\mathbf{Vect}_K$ 上的**反变**函子。\n\n自然变换 $\\eta_V:V\\to V^{\\ast\\ast}$，$\\eta_V(v)(\\varphi)=\\varphi(v)$，给出 $1_{\\mathbf{Vect}_K}\\implies(-)^{\\ast\\ast}$；有限维时 $\\eta$ 是同构，对偶于是给出 $\\mathbf{Vect}_K^{\\mathrm{fd}}$ 与自身对偶范畴的等价。",
+   "notes": "**反变不等于从对偶范畴出发**：这只是把反变函子写成 $\\mathbf{Vect}_K^{\\mathrm{op}}$ 上的协变函子，复合顺序因此要倒过来。\n\n**无限维**：$\\eta_V$ 单射但一般不满，$V\\to V^{\\ast\\ast}$ 不是同构；对偶不给出整个 $\\mathbf{Vect}_K$ 的自对偶。\n\n**与 Hom 函子**：$(-)^{\\ast}=\\operatorname{Hom}_K(-,K)$ 是反变 Hom 函子在 $W=K$ 的特例（见 Hom 函子节点）。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. II",
+    "Lang, Linear Algebra"
    ]
   },
   {
@@ -85407,6 +85688,137 @@
    "note": "陈述以集合范畴 $\\mathbf{Set}$ 为环境范畴"
   },
   {
+   "id": "dep.cvect-category",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-vector-spaces",
+   "note": "向量空间范畴是范畴的一般定义在「对象=向量空间、态射=线性映射」上的实例"
+  },
+  {
+   "id": "dep.cvect-vectorspace",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.vector-space",
+   "usedBy": "def.category-of-vector-spaces",
+   "note": "对象类正是域 K 上的向量空间"
+  },
+  {
+   "id": "dep.cvect-linearmap",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.linear-map",
+   "usedBy": "def.category-of-vector-spaces",
+   "note": "态射类正是 K-线性映射"
+  },
+  {
+   "id": "dep.homfunctor-functor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "def.hom-functor",
+   "note": "Hom 函子是两个具体函子，按函子定义验证函子性"
+  },
+  {
+   "id": "dep.homfunctor-cvect",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.hom-functor",
+   "note": "源范畴与靶范畴都是向量空间范畴"
+  },
+  {
+   "id": "dep.homfunctor-linearmap",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.linear-map",
+   "usedBy": "def.hom-functor",
+   "note": "Hom 集由线性映射组成，态射作用为前复合或后复合"
+  },
+  {
+   "id": "dep.homfunctor-dualspace",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.dual-space",
+   "b": "def.hom-functor",
+   "title": "",
+   "note": "对偶空间是 Hom 函子在 $W=K$ 处的取值：这是特例/实例，不是 Hom 函子定义的一部分"
+  },
+  {
+   "id": "dep.homfunctor-internal",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.hom-functor",
+   "usedBy": "def.internal-hom",
+   "note": "内 Hom 对象表示 Hom 函子，故以 Hom 函子为前提"
+  },
+  {
+   "id": "dep.forgetful-functor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "def.forgetful-functor",
+   "note": "遗忘函子是函子的一般定义在具体范畴上的实例"
+  },
+  {
+   "id": "dep.forgetful-sets",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "def.forgetful-functor",
+   "note": "标准靶范畴是集合范畴"
+  },
+  {
+   "id": "dep.forgetful-top",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.category-of-topological-spaces",
+   "b": "def.forgetful-functor",
+   "title": "",
+   "note": "$\\mathbf{Top}\\to\\mathbf{Set}$ 的遗忘函子是标准例子，不是一般定义的依赖"
+  },
+  {
+   "id": "dep.forgetful-cvect",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.category-of-vector-spaces",
+   "b": "def.forgetful-functor",
+   "title": "",
+   "note": "$\\mathbf{Vect}_K\\to\\mathbf{Set}$ 的遗忘函子是标准例子，不是一般定义的依赖"
+  },
+  {
+   "id": "dep.forgetful-prop-ffnf",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.forgetful-functor",
+   "usedBy": "prop.forgetful-faithful-not-full",
+   "note": "命题说的正是遗忘函子的忠实性与不满性"
+  },
+  {
+   "id": "dep.forgetful-prop-fae",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.forgetful-functor",
+   "usedBy": "prop.forgetful-adjoints-examples",
+   "note": "命题列举遗忘函子的左伴随"
+  },
+  {
+   "id": "dep.forgetful-prop-frep",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.forgetful-functor",
+   "usedBy": "prop.forgetful-representable",
+   "note": "命题讨论以 Set 为值的遗忘函子的可表示性"
+  },
+  {
+   "id": "dep.forgetful-prop-fpl",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.forgetful-functor",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "命题讨论遗忘函子保极限"
+  },
+  {
    "id": "imp.equiv-criterion",
    "kind": "implication",
    "strength": "strong",
@@ -90811,6 +91223,64 @@
    "title": "第一同构定理 + 维数 $\\implies$ 秩-零化度定理",
    "proof": "设 $\\dim V = n < \\infty$。\n\n1. 取 $\\ker T$ 的一组基 $u_1, \\ldots, u_k$（$k = \\operatorname{null} T$），并把它扩充成 $V$ 的一组基\n\n$$u_1, \\ldots, u_k,\\ v_1, \\ldots, v_{n-k}$$\n\n（扩充的合法性：Steinitz 交换引理 / 「每个线性无关集都能扩充成基」）。\n2. **断言 $T(v_1), \\ldots, T(v_{n-k})$ 是 $\\operatorname{im} T$ 的基。**\n   - *生成*：任取 $T(v)$，把 $v$ 按上面的基展开，落在 $\\ker T$ 的那些项被 $T$ 杀掉，剩下 $T(v) = \\sum_j c_j T(v_j)$。\n   - *无关*：若 $\\sum_j c_j T(v_j) = 0$，则 $T\\bigl(\\sum_j c_j v_j\\bigr) = 0$，即 $\\sum_j c_j v_j \\in \\ker T$；把它用 $u_i$ 展开并与 $v_j$ 那部分的唯一性比较，得所有 $c_j = 0$。\n3. 于是 $\\operatorname{rank} T = \\dim \\operatorname{im} T = n - k = \\dim V - \\operatorname{null} T$，移项即得\n\n$$\\dim V = \\operatorname{rank} T + \\operatorname{null} T$$\n\n（另一条路：由第一同构定理 $\\operatorname{im} T \\cong V/\\ker T$，而 $\\dim(V/U) = \\dim V - \\dim U$ 由第 1 步的扩充直接得到 —— 两条路是同一件事的两种说法。）∎",
    "note": "第 2 步的「无关」是最容易漏的一半：**把无关性从 $V$ 的基搬到像上**，用的是「$\\ker T$ 已经作为基的一部分被单独列出」。"
+  },
+  {
+   "id": "dep.dualmap-dualspace",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.dual-space",
+   "usedBy": "def.dual-map",
+   "note": "对偶映射的源与靶都是对偶空间"
+  },
+  {
+   "id": "dep.dualmap-linearmap",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.linear-map",
+   "usedBy": "def.dual-map",
+   "note": "对偶映射由线性映射 T 诱导"
+  },
+  {
+   "id": "dep.dualmap-transpose",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.transpose",
+   "b": "def.dual-map",
+   "title": "",
+   "note": "有限维取定基时对偶映射的矩阵就是转置矩阵：这是性质/表示，不是对偶映射的定义依赖（无限维也有对偶映射）"
+  },
+  {
+   "id": "ana.dualmap-conjtranspose",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.dual-map",
+   "b": "def.conjugate-transpose",
+   "title": "",
+   "note": "对偶映射与共轭转置是同一现象的两套语言：实情形一致，复情形差一个共轭"
+  },
+  {
+   "id": "dep.dualfunctor-functor",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.functor",
+   "usedBy": "def.dual-functor",
+   "note": "对偶函子是从对偶范畴出发的协变函子"
+  },
+  {
+   "id": "dep.dualfunctor-cvect",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.dual-functor",
+   "note": "定义域是向量空间范畴的对偶"
+  },
+  {
+   "id": "dep.dualfunctor-dualmap",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.dual-map",
+   "usedBy": "def.dual-functor",
+   "note": "对偶函子在态射上的作用就是取对偶映射"
   },
   {
    "id": "dep.vs-matrix",
@@ -116244,6 +116714,55 @@
    "explicit": false
   },
   {
+   "a": "algebra.vectorspace",
+   "b": "cat.basic",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.basic",
+   "b": "cat.functor",
+   "count": 13,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.linmap",
+   "b": "cat.functor",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.functor",
+   "b": "hom.sheaf",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.adjoint",
+   "b": "cat.functor",
+   "count": 9,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.functor",
+   "b": "cat.yoneda",
+   "count": 12,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.algebra",
+   "b": "cat.functor",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "cat.limit",
    "b": "cat.structure",
    "count": 7,
@@ -116282,13 +116801,6 @@
    "a": "cat.adjoint",
    "b": "cat.limit",
    "count": 13,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.adjoint",
-   "b": "cat.functor",
-   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -116741,13 +117253,6 @@
    "explicit": false
   },
   {
-   "a": "cat.basic",
-   "b": "cat.functor",
-   "count": 8,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cat.structure",
    "b": "cat.yoneda",
    "count": 4,
@@ -116765,13 +117270,6 @@
    "a": "cat.limit",
    "b": "cat.yoneda",
    "count": 6,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cat.functor",
-   "b": "cat.yoneda",
-   "count": 11,
    "label": "",
    "explicit": false
   },
@@ -116912,6 +117410,13 @@
    "a": "algebra.linmap",
    "b": "algebra.vectorspace",
    "count": 9,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.inner",
+   "b": "algebra.linmap",
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -117850,13 +118355,6 @@
    "a": "diffgeom.form",
    "b": "diffgeom.lieg",
    "count": 3,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "algebra.inner",
-   "b": "algebra.linmap",
-   "count": 2,
    "label": "",
    "explicit": false
   },

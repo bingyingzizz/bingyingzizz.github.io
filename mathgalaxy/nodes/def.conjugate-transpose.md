@@ -8,9 +8,10 @@ layer 26 · 定义 · 内积空间与正交性 · 抽象代数
 
 
 ## 它能推出什么 / 谁在用它
+- ～弱边 [`def.dual-map`](../nodes/def.dual-map.md) 对偶映射
 - 被 [`def.unitary-matrix`](../nodes/def.unitary-matrix.md) 酉矩阵与正交矩阵 用
 
-- …另有出边，续页见 [nodes/def.conjugate-transpose.4.md](./def.conjugate-transpose.4.md)
+- …另有出边，续页见 [nodes/def.conjugate-transpose.5.md](./def.conjugate-transpose.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.conjugate-transpose.3.md](./def.conjugate-transpose.3.md)

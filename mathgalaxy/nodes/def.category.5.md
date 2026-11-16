@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.category)　·　第 1 页 [nodes/def.category.md](./def.category.md)　·　上一页 [nodes/def.category.4.md](./def.category.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
 - 被 [`def.isomorphism`](../nodes/def.isomorphism.md) 同构 用
 - 被 [`def.section-retraction`](../nodes/def.section-retraction.md) 截面与收缩 用
 - 被 [`def.functor`](../nodes/def.functor.md) 函子 用
@@ -11,7 +12,5 @@
 - 被 [`def.presheaf`](../nodes/def.presheaf.md) 预层 用
 - 被 [`def.representable`](../nodes/def.representable.md) 表示函子 用
 - 被 [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子 用
-- 被 [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 用
-- 被 [`def.pretopology`](../nodes/def.pretopology.md) 预拓扑 用
 
 > 续见 [nodes/def.category.6.md](./def.category.6.md)

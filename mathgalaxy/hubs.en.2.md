@@ -3,7 +3,7 @@
 > page 1 `hubs.en.md`
 
 - **36 / 36** `def.group` group · 代数结构
-- **35 / 35** `def.category-of-sets` category of sets · 范畴与图
+- **36 / 36** `def.category-of-sets` category of sets · 范畴与图
 - **35 / 35** `def.complex` complex numbers · 数系的构造
 - **33 / 33** `def.category-of-abelian-groups` category of abelian groups · 范畴与图
 
@@ -17,9 +17,9 @@
 - **26 / 29** `def.banach-space` Banach Space · 多元微分
 - **26 / 26** `def.abelian-category` abelian category · 加法与阿贝尔范畴
 
+- **25 / 25** `def.category` category · 范畴与图
+- **25 / 25** `def.functor` functor · 函子与自然变换
 - **24 / 27** `def.hausdorff` Hausdorff · 分离公理
-- **24 / 24** `def.function` mapping · 关系与函数
-- **24 / 24** `def.category` category · 范畴与图
 
 ## Comprehensive results
 

@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.forgetful-adjoints-examples)　·　第 1 页 [nodes/prop.forgetful-adjoints-examples.md](./prop.forgetful-adjoints-examples.md)　·　上一页 [nodes/prop.forgetful-adjoints-examples.2.md](./prop.forgetful-adjoints-examples.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.forgetful-functor`](../nodes/def.forgetful-functor.md) 遗忘函子：用到了定义 遗忘函子　[proofs/dep.forgetful-prop-fae.md](../proofs/dep.forgetful-prop-fae.md)
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-link.forgetadj-adjoint.md](../proofs/def-link.forgetadj-adjoint.md)
 - [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-forgetful-adjoints-examples.md](../proofs/dep.cat-top-prop-forgetful-adjoints-examples.md)
 

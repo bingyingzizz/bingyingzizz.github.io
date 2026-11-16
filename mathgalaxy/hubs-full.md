@@ -11,7 +11,7 @@
 被最多结论当作前置（出边多）—— 值得优先学熟。
 
 - **36 / 36** `def.group` 群 · layer 9 · 代数结构
-- **35 / 35** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **36 / 36** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
 - **35 / 35** `def.complex` 复数 ℂ · layer 21 · 数系的构造
 - **33 / 33** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
 - **32 / 33** `def.measure` 测度 · layer 17 · 测度的构造
@@ -22,16 +22,16 @@
 - **29 / 32** `def.sheaf` 层 · layer 17 · 层与拓扑
 - **26 / 29** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **26 / 26** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
+- **25 / 25** `def.category` 范畴 · layer 9 · 范畴与图
+- **25 / 25** `def.functor` 函子 · layer 10 · 函子与自然变换
 - **24 / 27** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
 - **24 / 24** `def.function` 映射 · layer 7 · 关系与函数
-- **24 / 24** `def.category` 范畴 · layer 9 · 范畴与图
 - **24 / 24** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 21 · 凝聚态阿贝尔群
 - **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 - **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
-- **22 / 22** `def.functor` 函子 · layer 10 · 函子与自然变换
 - **22 / 22** `def.ring` 环 · layer 10 · 代数结构
 
-（共 1053 个节点有非零计数；这里列前 20 条。）
+（共 1057 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -58,7 +58,7 @@
 - **6 / 6** `def.representable` 表示函子 · layer 14 · 预层与米田
 - **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
 
-（共 1662 个节点有非零计数；这里列前 20 条。）
+（共 1667 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -79,11 +79,11 @@
 - **11 团 / 26 节点** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **11 团 / 22 节点** `def.ring` 环 · layer 10 · 代数结构
 - **11 团 / 22 节点** `def.abs` 绝对值 |x| · layer 12 · 实数的运算与不等式
-- **10 团 / 35 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **11 团 / 18 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
+- **10 团 / 36 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
 - **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
-- **10 团 / 24 节点** `def.category` 范畴 · layer 9 · 范畴与图
+- **10 团 / 25 节点** `def.category` 范畴 · layer 9 · 范畴与图
 - **10 团 / 19 节点** `def.category-of-topological-spaces` 拓扑空间范畴 · layer 10 · 范畴与图
-- **10 团 / 18 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 
-（共 1053 个节点有非零计数；这里列前 20 条。）
+（共 1057 个节点有非零计数；这里列前 20 条。）
 
