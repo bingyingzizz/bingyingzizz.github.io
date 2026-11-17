@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.character-inner-product-hom)　·　[Chinese page (authoritative)](./prop.character-inner-product-hom.md)
 
-## Notes · **stale**
+## Notes · **draft**
 Let $W=\operatorname{Hom}_F(V_1,V_2)$ with action $(g\cdot f)(v)=g\,f(g^{-1}v)$; then $W^G=\operatorname{Hom}_G(V_1,V_2)$.
 The character is $\chi_W(g)=\chi_{V_1^*}(g)\chi_{V_2}(g)=\chi_{V_1}(g^{-1})\chi_{V_2}(g)$.
 Applying the fixed-space dimension lemma to $W$ gives $\dim W^G=\langle\chi_W,\mathbf 1\rangle=\langle\chi_{V_1},\chi_{V_2}\rangle$.

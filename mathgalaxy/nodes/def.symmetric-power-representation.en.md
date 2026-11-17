@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=def.symmetric-power-representation)　·　[Chinese page (authoritative)](./def.symmetric-power-representation.md)
 
-> English: **stale** · stale fields: statement, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Symmetric square` (short) · `Symmetric Square Representation` (full)

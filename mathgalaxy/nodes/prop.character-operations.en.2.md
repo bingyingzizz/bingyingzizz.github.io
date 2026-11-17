@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.character-operations)　·　[Chinese page (authoritative)](./prop.character-operations.md)
 
-## Statement · **stale**
+## Statement · **draft**
 Let $V,W$ be finite-dimensional representations of a finite group $G$ with $\operatorname{char}F\nmid|G|$. Then:
 (1) $\chi_{V\oplus W}=\chi_V+\chi_W$;
 (2) $\chi_{V\otimes W}=\chi_V\chi_W$;

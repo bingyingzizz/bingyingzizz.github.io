@@ -2,7 +2,13 @@
 English entry · root `../`
 [in graph](../#n=lem.fixed-space-dimension)　·　[Chinese page (authoritative)](./lem.fixed-space-dimension.md)
 
-## Statement · **stale**
-Let $\operatorname{char}F\nmid|G|$ and let $(V,\rho)$ be a finite-dimensional representation. Then $\dim_F V^G=\langle\chi_\rho,\mathbf 1\rangle$, where $V^G=\{v\in V:\rho(g)v=v\ \text{for all }g\in G\}$ and $\mathbf 1$ is the constant function $g\mapsto1$.
+## Notes · **draft**
+The averaging operator $\varphi(v)=\frac1{|G|}\sum_g\rho(g)v$ is a $G$-equivariant projection onto $V^G$.
+In a basis making $\varphi$ diagonal with eigenvalue 1 on $V^G$ and 0 on a complement, $\operatorname{tr}\varphi=\dim V^G$.
+On the other hand $\operatorname{tr}\varphi=\frac1{|G|}\sum_g\operatorname{tr}\rho(g)=\langle\chi_\rho,\mathbf 1\rangle$.
 
-> continued in nodes/lem.fixed-space-dimension.en.3.md
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `lem.fixed-space-dimension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

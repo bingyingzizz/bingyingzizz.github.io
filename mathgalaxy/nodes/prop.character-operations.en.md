@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.character-operations)　·　[Chinese page (authoritative)](./prop.character-operations.md)
 
-> English: **stale** · stale fields: statement, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · proposition · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Character operations` (short) · `Operations on Characters` (full)

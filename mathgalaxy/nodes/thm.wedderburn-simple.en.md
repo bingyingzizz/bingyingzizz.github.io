@@ -2,10 +2,12 @@
 English entry · root `../`
 [in graph](../#n=thm.wedderburn-simple)　·　[Chinese page (authoritative)](./thm.wedderburn-simple.md)
 
-> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
-> fields: statement draft · notes stale · name derived
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Wedderburn simple` (short) · `Wedderburn Structure Theorem for Simple Algebras` (full)
+
+## Statement · **draft**
+Let $A$ be a finite-dimensional simple $F$-algebra. Then $A\cong M_n(D^{\mathrm{op}})$, where $D$ is a division algebra, $n\ge1$, and for a simple left ideal $V$ one has $D\cong\operatorname{End}_A(V)$. If $F$ is algebraically closed, then $D=F$ and $A\cong M_n(F)$.
 
 > continued in nodes/thm.wedderburn-simple.en.2.md

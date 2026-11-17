@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=def.algebra-representation)　·　[Chinese page (authoritative)](./def.algebra-representation.md)
 
-> English: **stale** · stale fields: statement, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Algebra rep` (short) · `Linear Representation of an Algebra` (full)

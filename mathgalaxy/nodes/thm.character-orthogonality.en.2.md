@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.character-orthogonality)　·　[Chinese page (authoritative)](./thm.character-orthogonality.md)
 
-## Notes · **stale**
+## Notes · **draft**
 By prop.character-inner-product-hom the inner product equals $\dim\operatorname{Hom}_G(V_1,V_2)$.
 Schur's lemma: there are no nonzero homomorphisms between non-isomorphic irreducible representations; when isomorphic, $\operatorname{End}_G(V_1)=F$ (algebraically closed, see cor.schur-scalar), of dimension 1.
 Hence the inner product is $\delta_{12}$.

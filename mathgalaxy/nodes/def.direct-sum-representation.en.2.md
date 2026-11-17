@@ -2,7 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.direct-sum-representation)　·　[Chinese page (authoritative)](./def.direct-sum-representation.md)
 
-## Statement · **stale**
-Given representations $V_1,\ldots,V_n$ of $A$, the direct sum $V_1\oplus\cdots\oplus V_n$ carries the componentwise action $a(v_1,\ldots,v_n)=(av_1,\ldots,av_n)$; it is a biproduct in $\mathrm{Rep}_A$.
+## Notes · **draft**
+The inclusions and projections are $A$-linear and satisfy the biproduct identities. In a basis adapted to the decomposition, each $\theta(a)$ is block diagonal with blocks $\theta_i(a)$. The notation $nV$ denotes the direct sum of $n$ copies of $V$. An internal direct sum means $V=W_1\oplus\cdots\oplus W_n$ with each $W_i$ a subrepresentation.
 
-> continued in nodes/def.direct-sum-representation.en.3.md
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `def.direct-sum-representation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

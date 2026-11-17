@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-17T05:46:56.190Z",
+  "generated": "2026-11-17T11:13:48.348Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
@@ -82069,7 +82069,7 @@
    "notes_en": "The base ring is commutative so that the left and right $R$-actions agree. A unital algebra has a structure map $R\\to A$, $r\\mapsto r1_A$, whose image lies in the centre of $A$. Examples are $M_n(F)$, the polynomial algebra $F[x_1,\\ldots,x_n]$, and the group algebra $F[G]$. Associativity and unitality are additional axioms; this cluster works with unital associative algebras.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -82082,15 +82082,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#398e2f8d",
-      "notes": "v0.9.3#53b66a71"
+      "notes": "v0.9.3#76005d89"
      }
     }
    },
@@ -82124,7 +82122,7 @@
    "notes_en": "A general representation only requires $\\theta$ to preserve addition and multiplication, not the unit. The condition $\\theta(1_A)=\\operatorname{id}_M$ makes $M$ a left $A$-module; under this equivalence $A$-linear maps are exactly morphisms of representations. The natural action of $M_n(F)$ on $F^n$ is a basic example. An $F[x_1,\\ldots,x_n]$-module structure is the same as $n$ commuting endomorphisms $T_i$.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -82136,17 +82134,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#741e4775",
-      "notes": "v0.9.3#e032b807"
+      "statement": "v0.9.3#92102a0e",
+      "notes": "v0.9.3#a08a930e"
      }
     }
    },
@@ -82232,7 +82227,7 @@
    "notes_en": "The representation of $G$ need not be finite-dimensional; most results in this cluster are stated in the finite-dimensional case. The trivial representation has $\\rho(g)=\\operatorname{id}_V$; the regular representation is left multiplication on $F[G]$. The group algebra $F[G]$ consists of formal sums $\\sum a_g g$ with convolution, and $\\rho$ extends uniquely to a unital algebra homomorphism $F[G]\\to\\operatorname{End}_F(V)$. This equivalence transfers all results on algebra representations to groups.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -82244,17 +82239,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#655deb87",
-      "notes": "v0.9.3#634af6ab"
+      "statement": "v0.9.3#4d22851c",
+      "notes": "v0.9.3#65ccad2a"
      }
     }
    },
@@ -82444,7 +82436,7 @@
    "notes_en": "The inclusions and projections are $A$-linear and satisfy the biproduct identities. In a basis adapted to the decomposition, each $\\theta(a)$ is block diagonal with blocks $\\theta_i(a)$. The notation $nV$ denotes the direct sum of $n$ copies of $V$. An internal direct sum means $V=W_1\\oplus\\cdots\\oplus W_n$ with each $W_i$ a subrepresentation.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -82456,15 +82448,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
+      "statement": "draft",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#7b22b878",
+      "statement": "v0.9.3#da285aee",
       "notes": "v0.9.3#bc1be476"
      }
     }
@@ -82810,7 +82800,7 @@
    "label_en": "Class function",
    "title_en": "Class Function",
    "statement_en": "A function $f:G\\to F$ is a class function if $f(hgh^{-1})=f(g)$ for all $g,h\\in G$; equivalently, $f$ is constant on conjugacy classes. Group characters are class functions.",
-   "notes_en": "Class functions form an $F$-vector space of dimension the number of conjugacy classes, $\\#\\mathrm{CL}(G)$.\nWhen $\\operatorname{char}F=0$ (or $\\operatorname{char}F\\nmid|G|$), characters of pairwise non-isomorphic irreducible representations are linearly independent (orthogonality relations).\nA class function is determined by its values on conjugacy classes.\nThe centralizer of $g$ is its stabilizer under conjugation.",
+   "notes_en": "Class functions form an $F$-vector space of dimension the number of conjugacy classes, $\\#\\mathrm{CL}(G)$.\nWhen $\\operatorname{char}F=0$ (or $\\operatorname{char}F\\nmid|G|$), characters of pairwise non-isomorphic irreducible representations are linearly independent (orthogonality relations).\nA class function is determined by its values on conjugacy classes.\nThe centralizer of $g$ is the stabilizer of $g$ under conjugation.",
    "translations": {
     "en": {
      "status": "draft",
@@ -82972,7 +82962,7 @@
    "notes_en": "The matrix algebra $M_n(D)$ over a division algebra $D$ is a simple algebra and serves as the model case. A finite-dimensional simple algebra is isomorphic to a matrix algebra over a division algebra (Wedderburn). A group algebra $F[G]$ is simple only in very small cases. Simplicity is a two-sided condition and is not the same as having no nontrivial left ideal.\n\nTerminology: this map calls an algebra with no nontrivial two-sided ideals simple; the lecture calls this property quasi-simple and reserves simple for semisimple algebras with a unique isomorphism class of simple left ideals. In finite dimension the two notions agree (see thm.wedderburn-simple).",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -82985,15 +82975,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#776178d5",
-      "notes": "v0.9.3#f97cd264"
+      "notes": "v0.9.3#f8a79a37"
      }
     }
    },
@@ -83290,7 +83278,7 @@
    "notes_en": "Single vector: since $V$ is semisimple, $V=Av\\oplus W$; the projection $p:V\\to Av$ is $A$-linear, so $p\\in A'$. For $f\\in A''$, $f(v)=f(pv)=p f(v)\\in Av$, hence there is $a\\in A$ with $av=f(v)$. Finite tuple: apply the same argument to the diagonal action on $V^n$ to find one $a$ matching any finite tuple $v_i$. In finite dimension $V$ is finitely generated over $A'$: take generators $v_1,\\ldots,v_n$ and choose $a$ with $av_i=f(v_i)$ for every index; any $v=\\sum a'_iv_i$ then satisfies $f(v)=\\sum a'_i f(v_i)=av$, so $\\Phi(a)=f$. This is the elementary form of the double centralizer theorem and does not need Jacobson density.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83302,17 +83290,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#0de082f1",
-      "notes": "v0.9.3#30041a74"
+      "statement": "v0.9.3#9ebfa0cd",
+      "notes": "v0.9.3#48a09167"
      }
     }
    },
@@ -83346,7 +83331,7 @@
    "notes_en": "Take a minimal nonzero left ideal $V$; it is a simple $A$-module, so $V$ is semisimple, and by Schur's lemma $D=\\operatorname{End}_A(V)$ is a division algebra. The natural map $A\\to\\operatorname{End}_D(V)$ is injective because $A$ is simple: if $aV=0$, then $\\operatorname{Ann}(V)$ is a nonzero two-sided ideal, hence equals $A$, contradicting $AV=V$. Burnside's theorem makes it surjective, so $A\\cong\\operatorname{End}_D(V)\\cong M_n(D^{\\mathrm{op}})$. If the field is algebraically closed, Schur's lemma gives $D=F$. Note the direction: $A$ is a matrix algebra over $D^{\\mathrm{op}}$.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83359,15 +83344,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#4664f6cb",
-      "notes": "v0.9.3#1ede1219"
+      "notes": "v0.9.3#9591699c"
      }
     }
    },
@@ -83401,7 +83384,7 @@
    "notes_en": "Since $A$ is semisimple, the left regular module decomposes as $A=\\bigoplus_i S_i^{\\oplus n_i}$, with the $S_i$ pairwise non-isomorphic simple left modules.\nRight multiplication gives $A^{\\mathrm{op}}\\cong\\operatorname{End}_A(A)$: $a\\mapsto R_a$, $R_a(x)=xa$; the inverse is $f\\mapsto f(1)$.\nBy Schur's lemma, $\\operatorname{Hom}_A(S_i,S_j)=0$ for $i\\ne j$, hence $\\operatorname{End}_A(A)\\cong\\prod_i\\operatorname{End}_A(S_i^{\\oplus n_i})\\cong\\prod_i M_{n_i}(D_i)$, where $D_i=\\operatorname{End}_A(S_i)$ is a division algebra.\nPassing to opposite algebras gives $A\\cong\\prod_i M_{n_i}(D_i^{\\mathrm{op}})$.\nConversely, each matrix algebra $M_{n_i}(D_i)$ is semisimple and a product of semisimple algebras is semisimple; modules over a finite-dimensional semisimple algebra are semisimple (submodules have complements). $\\blacksquare$",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83414,15 +83397,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#f074e1cc",
-      "notes": "vv0.9.3#e2e7f6f7"
+      "notes": "v0.9.3#e2e7f6f7"
      }
     }
    },
@@ -83508,7 +83489,7 @@
    "notes_en": "Apply Burnside to $V=V_1\\oplus\\cdots\\oplus V_s$: $A''=\\operatorname{End}_{A'}(V)$ contains the projection $e_i$ onto $V_i$. Surjectivity gives $a_i\\in A$ with $\\theta(a_i)=e_i$. Then $\\theta_j(a_i)=\\delta_{ij}\\operatorname{id}_{V_j}$, since $e_i$ acts as $\\delta_{ij}$ times the identity on $V_j$. These $a_i$ are orthogonal idempotents separating the multiplicities of the irreducible summands. The proof uses Burnside surjectivity (thm.burnside-surjectivity).",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83520,17 +83501,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#4dbb7fc8",
-      "notes": "v0.9.3#0006c616"
+      "statement": "v0.9.3#e5487c2a",
+      "notes": "v0.9.3#caa870d4"
      }
     }
    },
@@ -83563,7 +83541,7 @@
    "notes_en": "Write $W=\\oplus n_iV_i$ with pairwise non-isomorphic irreducibles $V_i$. The partition-of-unity elements $a_i$ give $\\chi_W(a_i)=n_i\\dim V_i$, so the multiplicities $n_i$ are recovered from $\\chi_W$; $\\operatorname{char}F=0$ allows division by $\\dim V_i$. Semisimplicity is essential: over $F[x]$ the identity and a Jordan block can have the same character without being isomorphic. This is the basis of character-table theory; the proof goes through prop.partition-of-unity, which follows from Burnside surjectivity.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83576,15 +83554,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#15da98bf",
-      "notes": "v0.9.3#da50f1b4"
+      "notes": "v0.9.3#4694cb44"
      }
     }
    },
@@ -83774,7 +83750,7 @@
    "notes_en": "By cor.indecomposable-endomorphism, any $f$ that is not an automorphism is nilpotent, so the non-units are exactly the nilpotent elements.\\nIf $f$ is nilpotent then $\\operatorname{id}-f$ is invertible (inverse given by a finite geometric series); hence the nilpotent elements are closed under addition: if $f,g$ are nilpotent and $f+g$ is invertible, then $f=(f+g)(\\operatorname{id}-(f+g)^{-1}g)$ is invertible (as $g$ is nilpotent, the parenthesis is invertible), a contradiction; so $f+g$ is not a unit, and cor.indecomposable-endomorphism makes it nilpotent.\\nThus the nilpotent elements form a two-sided ideal whose quotient is a division ring, so the ring is local; conversely, any non-invertible $f$ is nilpotent, so the maximal ideal is exactly the nilpotent elements.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83787,15 +83763,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#9505ef1d",
-      "notes": "vv0.9.3#7075bcaf"
+      "notes": "v0.9.3#7075bcaf"
      }
     }
    },
@@ -83987,7 +83961,7 @@
    "notes_en": "Maschke's theorem gives that $F[G]$ is semisimple. By thm.wedderburn-artin, $F[G]\\cong\\prod_i M_{n_i}(D_i)$.\nSince $\\operatorname{char}F=0$ and $F$ is algebraically closed, every finite-dimensional division $F$-algebra satisfies $D_i=F$: if $a\\in D_i$ lies outside $F$, then $F(a)$ is a finite extension, contradicting algebraic closedness.\nHence $F[G]\\cong\\prod_i M_{n_i}(F)$. As a left $F[G]$-module, the natural module $F^{n_i}$ of $M_{n_i}(F)$ is simple, so $F[G]\\cong\\bigoplus_i n_iV_i$ with $V_i=F^{n_i}$ and $n_i=\\dim V_i$.\nComparing dimensions gives $|G|=\\sum_i n_i^2$. $\\blacksquare$",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -84000,15 +83974,13 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "stale",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
       "statement": "v0.9.3#1ad83389",
-      "notes": "vv0.9.3#4ce696b9"
+      "notes": "v0.9.3#4ce696b9"
      }
     }
    },
@@ -84042,7 +84014,7 @@
    "notes_en": "(1)-(3) hold in any characteristic; (4)(5) use the $\\pm1$ decomposition of the swap and require $\\operatorname{char}F\\ne2$. In (3), $V^*$ is an $A^{\\mathrm{op}}$-representation, i.e. $g\\mapsto\\rho(g^{-1})^T$ for groups. When $\\operatorname{char}F\\ne2$, the characters of Sym²/Alt² follow from the trace decomposition of $V^{\\otimes2}$.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -84054,17 +84026,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#1f2e9c15",
-      "notes": "v0.9.3#00dda92b"
+      "statement": "v0.9.3#fdb6e611",
+      "notes": "v0.9.3#3c56a94a"
      }
     }
    },
@@ -84098,7 +84067,7 @@
    "notes_en": "The definition does not require $\\operatorname{char}F\\ne2$; the subspace generated by $v\\otimes w-w\\otimes v$ need not be complemented. When $\\operatorname{char}F\\ne2$, $\\operatorname{Sym}^2V$ coincides with the $+1$-eigenspace of the swap and has dimension $n(n+1)/2$. For group representations the action of $g$ is well defined; for the character formula see prop.character-operations.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -84110,17 +84079,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#af7cd556",
-      "notes": "v0.9.3#57f7d78a"
+      "statement": "v0.9.3#81a31d1b",
+      "notes": "v0.9.3#c5d33b94"
      }
     }
    },
@@ -84154,7 +84120,7 @@
    "notes_en": "The definition does not require $\\operatorname{char}F\\ne2$; when $\\operatorname{char}F\\ne2$ it coincides with the $-1$-eigenspace of the swap and has dimension $n(n-1)/2$. The exterior square is also denoted $\\bigwedge^2V$.",
    "translations": {
     "en": {
-     "status": "stale",
+     "status": "draft",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -84166,17 +84132,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "v0.9.3#9e52ba22",
-      "notes": "v0.9.3#a542ca00"
+      "statement": "v0.9.3#01b7ced8",
+      "notes": "v0.9.3#af3d53b3"
      }
     }
    },
@@ -84263,8 +84226,8 @@
    "notes_en": "Bilinearity is immediate; symmetry follows from the substitution $g\\mapsto g^{-1}$.\\nOn class functions $\\langle f,f\\rangle=\\frac1{|G|}\\sum_g f(g)f(g^{-1})$; for complex representations ($F\\subseteq\\mathbb C$) with $f$ complex conjugation, it is a positive definite Hermitian form when restricted to the space of characters; over a general field only nondegeneracy is required.\\nThe pairing writes the orthogonality of irreducible characters as $\\langle\\chi_i,\\chi_j\\rangle=\\delta_{ij}$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84275,17 +84238,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#2ab69dad",
-      "notes": "vv0.9.3#b68b7093"
+      "statement": "v0.9.3#2ab69dad",
+      "notes": "v0.9.3#b68b7093"
      }
     }
    },
@@ -84320,8 +84280,8 @@
    "notes_en": "The averaging operator $\\varphi(v)=\\frac1{|G|}\\sum_g\\rho(g)v$ is a $G$-equivariant projection onto $V^G$.\nIn a basis making $\\varphi$ diagonal with eigenvalue 1 on $V^G$ and 0 on a complement, $\\operatorname{tr}\\varphi=\\dim V^G$.\nOn the other hand $\\operatorname{tr}\\varphi=\\frac1{|G|}\\sum_g\\operatorname{tr}\\rho(g)=\\langle\\chi_\\rho,\\mathbf 1\\rangle$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84332,17 +84292,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#52979ee3",
-      "notes": "vv0.9.3#a0d31627"
+      "statement": "v0.9.3#52979ee3",
+      "notes": "v0.9.3#a0d31627"
      }
     }
    },
@@ -84376,8 +84333,8 @@
    "notes_en": "Let $W=\\operatorname{Hom}_F(V_1,V_2)$ with action $(g\\cdot f)(v)=g\\,f(g^{-1}v)$; then $W^G=\\operatorname{Hom}_G(V_1,V_2)$.\nThe character is $\\chi_W(g)=\\chi_{V_1^*}(g)\\chi_{V_2}(g)=\\chi_{V_1}(g^{-1})\\chi_{V_2}(g)$.\nApplying the fixed-space dimension lemma to $W$ gives $\\dim W^G=\\langle\\chi_W,\\mathbf 1\\rangle=\\langle\\chi_{V_1},\\chi_{V_2}\\rangle$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84388,17 +84345,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#157e3575",
-      "notes": "vv0.9.3#dd53f6b2"
+      "statement": "v0.9.3#157e3575",
+      "notes": "v0.9.3#dd53f6b2"
      }
     }
    },
@@ -84432,8 +84386,8 @@
    "notes_en": "By prop.character-inner-product-hom the inner product equals $\\dim\\operatorname{Hom}_G(V_1,V_2)$.\nSchur's lemma: there are no nonzero homomorphisms between non-isomorphic irreducible representations; when isomorphic, $\\operatorname{End}_G(V_1)=F$ (algebraically closed, see cor.schur-scalar), of dimension 1.\nHence the inner product is $\\delta_{12}$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84444,17 +84398,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#2b4e6711",
-      "notes": "vv0.9.3#22235b91"
+      "statement": "v0.9.3#2b4e6711",
+      "notes": "v0.9.3#22235b91"
      }
     }
    },
@@ -84489,8 +84440,8 @@
    "notes_en": "By prop.character-operations (1), $\\chi_V=\\sum_j n_j\\chi_{V_j}$.\nTaking the inner product with $\\chi_{V_i}$ and using orthogonality $\\langle\\chi_{V_j},\\chi_{V_i}\\rangle=\\delta_{ji}$ gives $\\langle\\chi_V,\\chi_{V_i}\\rangle=n_i$.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84501,17 +84452,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#1002e29c",
-      "notes": "vv0.9.3#cf3b2a1b"
+      "statement": "v0.9.3#1002e29c",
+      "notes": "v0.9.3#cf3b2a1b"
      }
     }
    },
@@ -84545,8 +84493,8 @@
    "notes_en": "The rows are the irreducible characters; $\\operatorname{char}F=0$ guarantees that $\\chi_i=\\chi_j$ iff $V_i\\cong V_j$ (thm.character-determines-semisimple).\nThe rows are orthonormal for the character inner product (thm.character-orthogonality).\nCharacters are class functions, so the columns depend only on the conjugacy class; $s\\le r$, with equality requiring the additional fact that the characters form a basis of the class-function space.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84557,17 +84505,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#27b992c8",
-      "notes": "vv0.9.3#3c62a3c7"
+      "statement": "v0.9.3#27b992c8",
+      "notes": "v0.9.3#3c62a3c7"
      }
     }
    },
@@ -84602,8 +84547,8 @@
    "notes_en": "Maschke's theorem gives that $F[G]$ is semisimple, so the regular module decomposes as $F[G]\\cong\\bigoplus_i n_iV_i$.\nBy cor.character-multiplicity, $n_i=\\langle\\chi_{\\mathrm{reg}},\\chi_{V_i}\\rangle$; since $\\chi_{\\mathrm{reg}}(1)=|G|$ and $\\chi_{\\mathrm{reg}}(g)=0$ for $g\\ne1$, we get $n_i=\\frac1{|G|}|G|\\chi_{V_i}(1)=\\dim V_i$.\nEvaluating at $g=1$ and at $g\\ne1$ gives the two identities.",
    "translations": {
     "en": {
-     "status": "stale",
-     "version": "vv0.9.3",
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
       "statement",
       "notes",
@@ -84614,17 +84559,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "stale",
-      "notes": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [
-      "statement",
-      "notes"
-     ],
+     "staleFields": [],
      "basedOn": {
-      "statement": "vv0.9.3#9bc4b266",
-      "notes": "vv0.9.3#d81e7be2"
+      "statement": "v0.9.3#9bc4b266",
+      "notes": "v0.9.3#d81e7be2"
      }
     }
    },
