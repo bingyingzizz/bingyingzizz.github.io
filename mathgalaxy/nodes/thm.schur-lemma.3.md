@@ -2,5 +2,6 @@
 [在星图里打开](../#n=thm.schur-lemma)　·　第 1 页 [nodes/thm.schur-lemma.md](./thm.schur-lemma.md)　·　上一页 [nodes/thm.schur-lemma.2.md](./thm.schur-lemma.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`thm.wedderburn-artin`](../nodes/thm.wedderburn-artin.md) Wedderburn–Artin 定理
 - ⇒ [`cor.schur-scalar`](../nodes/cor.schur-scalar.md) 代数闭域上的 Schur 推论
 - ⇒ [`thm.character-orthogonality`](../nodes/thm.character-orthogonality.md) 不可约特征标的正交性

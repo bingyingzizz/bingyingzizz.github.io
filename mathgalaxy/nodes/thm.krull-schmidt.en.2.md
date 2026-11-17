@@ -3,7 +3,7 @@ English entry · root `../`
 [in graph](../#n=thm.krull-schmidt)　·　[Chinese page (authoritative)](./thm.krull-schmidt.md)
 
 ## Notes · **draft**
-Existence is by induction on dimension: if $V$ is indecomposable the decomposition is complete, otherwise split and induct. Uniqueness compares two decompositions and matches indecomposable summands one by one using the isomorphism factorization lemma; the nilpotent-sum lemma handles the bookkeeping of endomorphisms. No assumption on the field is needed beyond finite dimension. Hence it applies in particular to finite-dimensional representations of finite groups.
+The proof is on the edge `imp.krull-schmidt`: existence is by induction on dimension; uniqueness uses projections and the nilpotent-sum lemma to match isomorphic summands, cancels them by the isomorphism factorization lemma, and inducts on the remainder. No assumption on the field is needed beyond finite dimensionality.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

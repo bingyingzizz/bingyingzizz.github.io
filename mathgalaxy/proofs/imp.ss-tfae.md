@@ -1,8 +1,10 @@
 # imp.ss-tfae
 `imp.ss-tfae` · 推出 · strong 边 · 根 `../`
 
-`def.semisimple-representation` 半单表示 + `def.subrepresentation` 子表示 + `def.direct-sum-representation` 表示的直和 → `thm.semisimple-characterizations` 半单表示的等价刻画
+`def.semisimple-representation` 半单表示 + `def.subrepresentation` 子表示 + `def.direct-sum-representation` 表示的直和 + `def.irreducible-representation` 不可约表示 + `def.quotient-representation` 商表示 → `thm.semisimple-characterizations` 半单表示的等价刻画
 
-(1)推出(2)：半单表示按定义是不可约表示的直和，故是不可约子表示之和。
-(2)推出(3)：对有限维 $V$ 归纳。取不可约子表示 $U\subseteq V$，其和 $S$ 有补？若 $S\ne V$，取 $v\notin S$，其生成的子表示含不可约子表示 $U'$，把 $U'$ 并入 $S$；有限维保证终止，得 $V=\oplus U_i$。再把给定的 $W$ 与各 $U_i$ 相交，用不可约性逐个分裂。
-(3)推出(1)：反复取不可约子表示并用 (3) 取补，维数下降，终止于直和分解。$\blacksquare$
+(1)$\implies$(2)：半单表示按定义是不可约表示的直和，特别地是不可约子表示之和。
+(2)$\implies$(1)：设 $V=\sum_{i\in I}V_i$，$V_i$ 不可约。取极大子集 $J$ 使 $\sum_{j\in J}V_j$ 为直和（有限维保证直和项数不超过 $\dim V$，故极大者存在）。若 $i\notin J$，则 $V_i\cap\bigoplus_{j\in J}V_j$ 是 $V_i$ 的子表示，故为 $0$ 或 $V_i$；由 $J$ 极大它不能为 $0$，故 $V_i\subseteq\bigoplus_{j\in J}V_j$。于是 $V=\bigoplus_{j\in J}V_j$。
+(1)$\implies$(3)：设 $W\subseteq V$ 是子表示，$V=\bigoplus_i V_i$ 不可约。取极大子集 $K$ 使 $W+\sum_{k\in K}V_k$ 为直和。若 $i\notin K$，则 $V_i\cap(W\oplus\bigoplus_{k\in K}V_k)$ 是 $V_i$ 的子表示，
+
+> 续见 proofs/imp.ss-tfae.2.md

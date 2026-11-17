@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 26 · corollary · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
+layer 23 · corollary · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Group algebra split` (short) · `Wedderburn Decomposition of a Group Algebra` (full)
 
 > continued in nodes/cor.group-algebra-wedderburn.en.2.md

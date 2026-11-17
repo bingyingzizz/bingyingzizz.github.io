@@ -1,12 +1,15 @@
 # 半单表示的子与商　`prop.semisimple-subquotient`
 半单表示的子与商
-layer 20 · 命题 · 群与代数表示 · 抽象代数
+layer 21 · 命题 · 群与代数表示 · 抽象代数
 [在星图里打开](../#n=prop.semisimple-subquotient)　·　[节点索引](../index.md)
 
 半单表示的子表示与商表示都是半单的。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.jacobson-criterion`](../nodes/thm.jacobson-criterion.md) Jacobson 根判定半单
+
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.semisimple-representation`](../nodes/def.semisimple-representation.md) 半单表示 + [`def.subrepresentation`](../nodes/def.subrepresentation.md) 子表示 + [`def.quotient-representation`](../nodes/def.quotient-representation.md) 商表示：imp.subquotient　[proofs/imp.subquotient.md](../proofs/imp.subquotient.md)
+- …另有入边，续页见 [nodes/prop.semisimple-subquotient.2.md](./prop.semisimple-subquotient.2.md)
 
 refs: Serre, Linear Representations of Finite Groups (GTM 42), Part I
 

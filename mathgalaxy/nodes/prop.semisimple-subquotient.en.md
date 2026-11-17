@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · proposition · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
+layer 21 · proposition · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Semisimple subquotients` (short) · `Subrepresentations and Quotients of Semisimple Representations` (full)
 
 ## Statement · **draft**

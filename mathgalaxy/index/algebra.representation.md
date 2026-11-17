@@ -6,12 +6,12 @@
 - def.algebra-over-ring　环上的代数　layer 12
 - def.simple-algebra　单代数　layer 13
 - def.division-algebra　除法代数　layer 13
+- thm.jacobson-criterion　Jacobson 根判定半单　layer 13
 - def.class-function　类函数　layer 15
 - def.algebra-representation　代数的线性表示　layer 16
 - def.representation-morphism　表示同态　layer 17
 - def.group-representation　有限群表示　layer 17
 - def.subrepresentation　子表示　layer 17
 - def.direct-sum-representation　表示的直和　layer 17
-- def.dual-representation　对偶表示　layer 17
 
 > 续见 `index/algebra.representation.2.md`

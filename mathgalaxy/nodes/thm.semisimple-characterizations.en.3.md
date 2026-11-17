@@ -3,7 +3,7 @@ English entry · root `../`
 [in graph](../#n=thm.semisimple-characterizations)　·　[Chinese page (authoritative)](./thm.semisimple-characterizations.md)
 
 ## Notes · **draft**
-(1) implies (2) is clear; (2) implies (3) splits off irreducible summands by induction on dimension; (3) implies (1) by repeatedly taking an irreducible subrepresentation and a complement. Finite dimension guarantees that the process terminates. This is the usual criterion for complete reducibility.
+The proof is on the edge `imp.ss-tfae`: the three equivalences use two finite-dimensional arguments — taking a maximal direct summand, and taking a complement of a maximal proper subrepresentation; for (3) implies (2), first use (3) to split the quotient by a maximal proper subrepresentation into a subrepresentation.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

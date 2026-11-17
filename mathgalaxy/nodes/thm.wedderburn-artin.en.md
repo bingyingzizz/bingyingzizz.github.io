@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 22 · theorem · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
+layer 20 · theorem · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Wedderburn–Artin` (short) · `Wedderburn–Artin Theorem` (full)
 
 ## Statement · **draft**

@@ -16,7 +16,7 @@ refs: Lang, Algebra (GTM 211)；Bourbaki, Algebra
 ## 说明
 $J(A)$ 也等于所有极大右理想的交，且零化每个不可约左模。
 有限维时 $J(A)=0$ 等价于 $A$ 半单（见 Jacobson 判据）。
-商 $A/J(A)$ 半单。
+$A$ 有限维时，商 $A/J(A)$ 半单。
 原笔记记号 $\operatorname{Rad}(A)$ 与 $J(A)$ 同义。
 
 引用：`def.jacobson-radical`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

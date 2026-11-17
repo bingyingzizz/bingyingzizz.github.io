@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
-layer 20 · theorem · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
+layer 13 · theorem · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `Jacobson criterion` (short) · `Semisimplicity via the Jacobson Radical` (full)
 
 ## Statement · **draft**

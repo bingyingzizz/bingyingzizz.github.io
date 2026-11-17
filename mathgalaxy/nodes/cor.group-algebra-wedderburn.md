@@ -1,6 +1,6 @@
 # 群代数的 Wedderburn 分解　`cor.group-algebra-wedderburn`
 群代数的 Wedderburn 分解
-layer 26 · 推论 · 群与代数表示 · 抽象代数
+layer 23 · 推论 · 群与代数表示 · 抽象代数
 [在星图里打开](../#n=cor.group-algebra-wedderburn)　·　[节点索引](../index.md)
 
 设 $G$ 有限，$\operatorname{char}F=0$，$F$ 代数闭。则 $F[G]\cong\prod_{i=1}^s M_{n_i}(F)$，且作为左 $F[G]$-模有 $F[G]\cong\bigoplus_{i=1}^s n

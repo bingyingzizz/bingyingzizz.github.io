@@ -8,8 +8,12 @@ layer 20 · 定理 · 群与代数表示 · 抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.semisimple-characterizations.2.md](./thm.semisimple-characterizations.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/thm.semisimple-characterizations.3.md](./thm.semisimple-characterizations.3.md)
+
 refs: Serre, Linear Representations of Finite Groups (GTM 42), Part I
 
-> 说明见 `notes/thm.semisimple-characterizations.md`
+## 说明
+证明见边 `imp.ss-tfae`：三条等价用「取极大直和项」与「极大真子表示取补」两个有限维论证；(3) 推出 (2) 时先用 (3) 把极大真子表示的商补成子表示。
 
 引用：`thm.semisimple-characterizations`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)
