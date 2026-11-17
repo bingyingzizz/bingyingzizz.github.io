@@ -25,14 +25,12 @@
 
 - 平坦维数 → def.flat-dimension
 
-- p-群 | p 群 | p-group | p-subgroup | p-子群 → def.p-group
+- 环上的代数 | 结合代数 | 含幺代数 | R-algebra → def.algebra-over-ring
 
-- 换位子群 | 导群 | derived subgroup | commutator group → def.commutator-subgroup
+- 代数的线性表示 | 代数表示 | A-模表示 → def.algebra-representation
 
-- 轨道 | group orbit | orbit of a group action → def.orbit
+- 表示同态 | intertwiner | 缠结算子 | A-线性映射 → def.representation-morphism
 
-- 稳定子 | 迷向子群 | isotropy subgroup | stabilizer subgroup → def.stabilizer
-
-- 中心化子 | centralizer subgroup | centralizer of a set → def.centralizer
+- 有限群表示 | 群表示 | group representation → def.group-representation
 
 > 续见 alias/aka/algebra.13.md

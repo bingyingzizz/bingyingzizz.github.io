@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.field-extension`](../nodes/def.field-extension.md) 域扩张：用到了定义 域扩张　[proofs/dep.fieldext-algclosed.md](../proofs/dep.fieldext-algclosed.md)
 - [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.complex-algclosed.md](../proofs/dep.complex-algclosed.md)
+
+> 续见 [nodes/def.algebraically-closed.3.md](./def.algebraically-closed.3.md)

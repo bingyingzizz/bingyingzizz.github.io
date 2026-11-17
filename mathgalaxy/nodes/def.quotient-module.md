@@ -12,6 +12,9 @@ $(m + N) + (m' + N) := (m + m') + N, \qquad a(m + N) := a m + N .$
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.quotient-module.2.md](./def.quotient-module.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.quotient-module.3.md](./def.quotient-module.3.md)
+
 refs: Lang, Algebra, Ch. III；Atiyah–Macdonald, Introduction to Commutative Algebra, Ch. 2
 
 > 说明见 `notes/def.quotient-module.md`

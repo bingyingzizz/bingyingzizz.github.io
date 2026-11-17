@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-16T11:22:08.190Z
-> 15 星系 / 105 星团 / 1673 节点 / 3784 连线（强边 3693，弱边 91；其中**不分层**的「推论」63 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-17T05:17:23.885Z
+> 15 星系 / 106 星团 / 1714 节点 / 3869 连线（强边 3778，弱边 91；其中**不分层**的「推论」65 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -10987,6 +10987,505 @@ $$A^{+} = V\Sigma^{+}U^{*} ,$$
 ⚠️ 记号：$A^{+}$ 与 $A^{\dagger}$ 都在用（后者在物理里常见）。本图用 $A^{+}$，以免与共轭转置 $A^{*}$ 混淆。
 
 参考：Horn–Johnson, Matrix Analysis；Ben-Israel–Greville, Generalized Inverses: Theory and Applications
+
+### 星团：群与代数表示
+> 造出「让代数作用在向量空间上」这套机器：表示 ⇔ 模 → 子表示 / 商 / 直和 / 张量 / 对偶 → 不可约与半单 → **Schur 引理** → 半单代数的 Wedderburn–Artin 结构 → 有限群的**特征标**与正交关系 → **Maschke 定理**与群代数的 Wedderburn 分解 → **Krull–Schmidt**。核心一句话：**线性作用就是模，半单就是能拆成不可约直和**。
+
+#### 环上的代数　`def.algebra-over-ring`
+*定义*　环上的代数
+
+设 $R$ 是有单位元的交换环。$R$-代数是一个 $R$-模 $A$ 连同 $R$-双线性乘法 $A\times A\to A$，$(x,y)\mapsto xy$。若乘法满足结合律，称 $A$ 为结合代数；若存在 $1_A\in A$ 使 $1_Ax=x1_A=x$，称 $A$ 为含幺代数。含幺结合 $R$-代数与保乘法、保单位的 $R$-线性映射构成范畴 $\mathrm{Alg}_R^{\mathrm{uni}}$。
+
+基环交换，左右 $R$-作用才一致。
+含幺代数有结构映射 $R\to A$，$r\mapsto r1_A$，其像落在 $A$ 的中心。
+例：$M_n(F)$、多项式代数 $F[x_1,\ldots,x_n]$、群代数 $F[G]$。
+结合性与含幺性是附加公理，不属于「代数」的裸定义；本团默认含幺结合。
+
+参考：Lang, Algebra (GTM 211)；Bourbaki, Algebra
+
+#### 代数的线性表示　`def.algebra-representation`
+*定义*　代数的线性表示
+
+设 $A$ 是含幺结合 $F$-代数。$A$ 的线性表示是一对 $(M,\theta)$，其中 $M$ 是 $F$-向量空间，$\theta:A\to\operatorname{End}_F(M)$ 是含幺代数同态。令 $a\cdot m=\theta(a)(m)$，则 $M$ 成为左 $A$-模；此构造给出含幺表示与左 $A$-模的等价。
+
+条件 $\theta(1_A)=\operatorname{id}_M$ 是「含幺」的一部分。
+在此等价下，$A$-线性映射恰是表示的同态，故 $\mathrm{Rep}_A^{\mathrm{uni}}$ 与 $A\text{-}\mathrm{Mod}$ 等价。
+$M_n(F)$ 在 $F^n$ 上的自然作用是基本例子。
+$F[x_1,\ldots,x_n]$-模结构等价于 $n$ 个两两交换的自同态 $T_i$。
+
+参考：Lang, Algebra (GTM 211)；Bourbaki, Algebra
+
+#### 表示同态　`def.representation-morphism`
+*定义*　表示同态
+
+设 $(V,\theta)$、$(W,\varphi)$ 是 $A$ 的表示。$A$-线性映射（ intertwiner）是 $F$-线性映射 $h:V\to W$，满足对所有 $a\in A$、$v\in V$ 有 $h(\theta(a)v)=\varphi(a)h(v)$。以这些态射构成范畴 $\mathrm{Rep}_A$。
+
+同构恰是双射 intertwiner，其逆仍 $A$-线性。
+intertwiner 的核与像都是子表示。
+$\operatorname{End}_A(V)=\operatorname{Hom}_A(V,V)$ 是 $F$-代数；Schur 引理将对不可约 $V$ 描述它。
+对 $A=F[G]$，intertwiner 恰是 $G$-等变映射。
+
+参考：Lang, Algebra (GTM 211)
+
+#### 有限群表示　`def.group-representation`
+*定义*　有限群表示
+
+设 $G$ 是有限群。$G$ 在 $F$ 上的表示是一对 $(V,\rho)$，其中 $V$ 是有限维 $F$-向量空间，$\rho:G\to GL(V)$ 是群同态。它等价于 $V$ 上的含幺左 $F[G]$-模结构；因此 $G$ 的表示与群代数 $F[G]$ 的含幺表示相同。
+
+表示的维数是 $\dim_F V$。
+平凡表示取 $\rho(g)=\operatorname{id}_V$；正则表示是 $G$ 在 $F[G]$ 上的左乘作用。
+群代数 $F[G]$ 由形式和 $\sum a_g g$ 与卷积乘法组成，$\rho$ 唯一延拓为含幺代数同态 $F[G]\to\operatorname{End}_F(V)$。
+这个等价把代数表示的全部结果搬到群上。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Fulton–Harris, Representation Theory: A First Course (GTM 129), Ch. 1–2
+
+#### 子表示　`def.subrepresentation`
+*定义*　子表示
+
+子空间 $W\subseteq V$ 称为子表示，若对所有 $a\in A$ 有 $\theta(a)W\subseteq W$；此时 $\theta$ 限制为 $W$ 上的表示。对群表示即对所有 $g\in G$ 有 $\rho(g)W\subseteq W$。
+
+零子空间与 $V$ 总是子表示。
+子表示的和与交仍是子表示；intertwiner 的核与像也是子表示。
+对群表示，子表示恰是 $G$-不变子空间。
+商表示另立节点。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 不可约表示　`def.irreducible-representation`
+*定义*　不可约表示
+
+非零表示 $V$ 称为不可约（单）表示，若它只有 $0$ 与 $V$ 两个子表示。
+
+每个一维表示不可约。
+不可约推出不可分解，反之不成立：$F[x]$ 上 $T=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ 不可分解但有不变直线，故可约。
+用模的语言，不可约表示就是单 $A$-模。
+代数闭域上 Schur 引理迫使 $\operatorname{End}_A(V)$ 只含纯量。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 商表示　`def.quotient-representation`
+*定义*　商表示
+
+若 $W\subseteq V$ 是子表示，商空间 $V/W$ 上有良定义的表示作用 $a(v+W)=av+W$；商映射 $V\to V/W$ 是 $A$-线性的。
+
+良定义用 $\theta(a)W\subseteq W$。
+商表示的维数是 $\dim V-\dim W$。
+对群表示作用为 $\rho(g)(v+W)=\rho(g)v+W$。
+半单表示的商仍半单，见后续命题。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 表示的直和　`def.direct-sum-representation`
+*定义*　表示的直和
+
+给定 $A$ 的表示 $V_1,\ldots,V_n$，直和 $V_1\oplus\cdots\oplus V_n$ 上取分量作用 $a(v_1,\ldots,v_n)=(av_1,\ldots,av_n)$；它是 $\mathrm{Rep}_A$ 中的双积。
+
+包含与投影都是 $A$-线性的，并满足双积恒等式。
+在适配分解的基下，每个 $\theta(a)$ 是分块对角矩阵，块为 $\theta_i(a)$。
+记号 $nV$ 表示 $V$ 的 $n$ 份直和。
+内直和指 $V=W_1\oplus\cdots\oplus W_n$ 且每个 $W_i$ 是子表示。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 张量积表示　`def.tensor-representation`
+*定义*　张量积表示
+
+设 $(V,\rho)$、$(W,\sigma)$ 是群 $G$ 的表示。张量积 $V\otimes_F W$ 上取作用 $g(v\otimes w)=\rho(g)v\otimes\sigma(g)w$，称为 $G$ 的张量积表示。对一般 $F$-代数 $A$，需要代数同态 $A\to A\otimes A$ 才能这样作用；群情形用的是对角。
+
+作用良定义因为 $\otimes$ 双线性且 $\rho(g),\sigma(g)$ 线性。
+维数为 $(\dim V)(\dim W)$。
+特征标满足 $\chi_{V\otimes W}(g)=\chi_V(g)\chi_W(g)$，见特征标运算节点。
+对一般代数 $A$，$V\otimes W$ 只是 $A\otimes A$-模，除非 $A$ 是双代数；群代数 $F[G]$ 是本章的主要情形。
+
+参考：Fulton–Harris, Representation Theory: A First Course (GTM 129)
+
+#### 对偶表示　`def.dual-representation`
+*定义*　对偶表示
+
+设 $(V,\theta)$ 是 $A$ 的表示。对偶空间 $V^*=\operatorname{Hom}_F(V,F)$ 上取 $\theta^*(a)\ell=\ell\circ\theta(a)$。由于 $\theta^*(ab)=\theta^*(b)\theta^*(a)$，$V^*$ 是反代数 $A^{\mathrm{op}}$ 的表示，一般不是 $A$ 的表示。对群表示，$\rho^*(g)=\rho(g^{-1})^T$ 使 $V^*$ 成为 $G$ 的表示。
+
+转置约定由反变性逼出：$\theta^*$ 是反同态。
+群情形用逆元恢复真正的作用。
+在基下，$\rho^*(g)$ 的矩阵是 $\rho(g)$ 的逆转置。
+有限维时双对偶与 $V$ 自然同构。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 不可分解表示　`def.indecomposable-representation`
+*定义*　不可分解表示
+
+非零表示 $V$ 称为不可分解，若由子表示写成 $V=W_1\oplus W_2$ 时必有 $W_1=0$ 或 $W_2=0$。
+
+不可约表示不可分解。
+反之不成立：$F[x]$ 上 $T=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ 不可分解，但有不变直线 $F e_1$，故可约。
+Krull–Schmidt 定理给出不可分解分解的唯一性。
+不可分解比不可约弱。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### 半单表示　`def.semisimple-representation`
+*定义*　半单表示
+
+$A$ 的表示 $V$ 称为半单（完全可约），若它是若干不可约子表示的直和。
+
+零表示约定为半单（空直和）。
+有限维时直和项数为有限。
+等价刻画（不可约之和、子表示有补）另立定理。
+Maschke 定理说明当 $\operatorname{char}F\nmid |G|$ 时 $F[G]$ 半单。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 代数的特征标　`def.character`
+*定义*　代数的特征标
+
+设 $(V,\theta)$ 是 $A$ 的有限维表示。其特征标是函数 $\chi_\theta:A\to F$，$\chi_\theta(a)=\operatorname{tr}\theta(a)$。它只依赖 $V$ 的同构类；$\chi_{V\oplus W}=\chi_V+\chi_W$，$\chi_V(1_A)=\dim V$。
+
+迹与基无关，故 $\chi_\theta$ 良定义。
+特征标对直和加法，但一般不是乘性的：$\chi(ab)\ne\chi(a)\chi(b)$。
+对 $A=F[G]$，把 $\chi_\theta$ 限制到 $G$ 得群特征标。
+若 $W$ 是子表示，则 $\chi_V=\chi_W+\chi_{V/W}$。
+
+参考：Lang, Algebra (GTM 211)；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### 群特征标　`def.group-character`
+*定义*　群特征标
+
+设 $(V,\rho)$ 是有限群 $G$ 的有限维表示。其特征标是 $\chi_\rho:G\to F$，$\chi_\rho(g)=\operatorname{tr}\rho(g)$。它满足 $\chi_\rho(1)=\dim V$，且在共轭类上为常数。
+
+共轭不变由迹的循环性：$\chi(hgh^{-1})=\operatorname{tr}(\rho(h)\rho(g)\rho(h)^{-1})=\chi(g)$。
+同构表示有相同特征标。
+直和的特征标是特征标之和；张量积的是乘积（见特征标运算节点）。
+特征标不是群同态 $G\to F^\times$。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Isaacs, Character Theory of Finite Groups
+
+#### 类函数　`def.class-function`
+*定义*　类函数
+
+函数 $f:G\to F$ 称为类函数，若对所有 $g,h\in G$ 有 $f(hgh^{-1})=f(g)$；等价地，$f$ 在共轭类上为常数。群特征标是类函数。
+
+类函数构成 $F$-向量空间，维数为共轭类个数 $\#\mathrm{CL}(G)$。
+当 $\operatorname{char}F=0$（或 $\operatorname{char}F\nmid|G|$）时，两两不同构不可约表示的特征标线性无关（正交关系）。
+类函数由其在共轭类上的值决定，即由共轭作用的轨道决定。
+$g$ 的中心化子是共轭作用下 $g$ 的稳定化子。
+
+参考：Isaacs, Character Theory of Finite Groups；Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 表示的零化子　`def.representation-annihilator`
+*定义*　表示的零化子
+
+对 $A$ 的表示 $V$，定义 $\operatorname{Ann}(V)=\{a\in A: aV=0\}$。它是 $A$ 的双边理想，等于代数同态 $\theta:A\to\operatorname{End}_F(V)$ 的核；若 $\operatorname{Ann}(V)=0$ 则称 $V$ 忠实。
+
+$\operatorname{Ann}(V)$ 是结构映射的核，故为理想。
+忠实等价于 $A\to\operatorname{End}_F(V)$ 单射。
+单模的零化子是原初理想；有限维半单情形这些恰是极大双边理想。
+直和的零化子是各零化子之交。
+
+参考：Lang, Algebra (GTM 211)；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### Jacobson 根　`def.jacobson-radical`
+*定义*　Jacobson 根
+
+环 $A$ 的 Jacobson 根 $J(A)=\bigcap_{V}\operatorname{Ann}(V)$，其中 $V$ 取遍单左模；等价地，它等于所有极大左理想的交。它是双边理想。
+
+$J(A)$ 也等于所有极大右理想的交，且零化每个不可约左模。
+有限维时 $J(A)=0$ 等价于 $A$ 半单（见 Jacobson 判据）。
+商 $A/J(A)$ 半单。
+原笔记记号 $\operatorname{Rad}(A)$ 与 $J(A)$ 同义。
+
+参考：Lang, Algebra (GTM 211)；Bourbaki, Algebra
+
+#### 单代数　`def.simple-algebra`
+*定义*　单代数
+
+非零代数 $A$ 称为单代数，若它只有 $0$ 与 $A$ 两个双边理想。
+
+除法代数 $D$ 上的矩阵代数 $M_n(D)$ 是单代数，这是模型情形。
+有限维单代数同构于除法代数上的矩阵代数（Wedderburn）。
+群代数 $F[G]$ 只在很小的情形下单。
+单性是双边条件，不等同于没有非平凡左理想。
+
+参考：Lang, Algebra (GTM 211)；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### 除法代数　`def.division-algebra`
+*定义*　除法代数
+
+$F$ 上的除法代数是一个含幺 $F$-代数 $D$（不假定交换），其中每个非零元素可逆；等价地，$D$ 是作为 $F$-代数的除环。
+
+域 $F$ 本身是除法代数；四元数是 $\mathbb{R}$ 上的非交换例。
+对不可约表示 $V$，Schur 引理给出 $\operatorname{End}_A(V)$ 是除法代数。
+Wedderburn 定理中的 $D$ 是 $\operatorname{End}_A(V)$（至多差一个反代数）。
+代数闭且 $\dim V<\infty$ 时 $D=F$。
+
+参考：Lang, Algebra (GTM 211)；Bourbaki, Algebra
+
+#### 代数闭域上的 Schur 推论　`cor.schur-scalar`
+*推论*　代数闭域上的 Schur 推论
+
+设 $F$ 代数闭，$V$ 是 $A$ 的有限维不可约表示。则 $\operatorname{End}_A(V)=F\cdot\operatorname{id}_V$，即每个 $A$-自同态都是纯量。
+
+由 thm.schur-lemma，$D=\operatorname{End}_A(V)$ 是有限维 $F$-除法代数。对 $a\in D$，$F(a)$ 是 $F$ 的有限扩张；$F$ 代数闭迫使 $F(a)=F$，故 $a\in F$。
+也可用特征值：$a$ 有特征值 $\lambda$，$a-\lambda\operatorname{id}$ 不可逆，故为零。
+这条推论是有限群特征标理论里「自同态即纯量」的来源。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Fulton–Harris, Representation Theory: A First Course (GTM 129)
+
+#### Schur 引理　`thm.schur-lemma`
+*定理*　Schur 引理
+
+设 $V_1,V_2$ 是 $A$ 的不可约表示。任意非零 $A$-线性映射 $h:V_1\to V_2$ 是同构；特别地，$\operatorname{End}_A(V)$ 是除法代数。$F$ 代数闭时的纯量结论见推论 cor.schur-scalar。
+
+证明用 $\ker h$ 与 $\operatorname{im}h$ 都是子表示；不可约性迫使 $\ker h=0$、$\operatorname{im}h=V_2$。
+这是半单表示分解的主要工具。
+代数闭域上的纯量结论单独列为 cor.schur-scalar。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Fulton–Harris, Representation Theory: A First Course (GTM 129)
+
+#### 半单表示的等价刻画　`thm.semisimple-characterizations`
+*定理*　半单表示的等价刻画
+
+对 $A$ 的有限维表示 $V$，下列条件等价：(1) $V$ 半单；(2) $V$ 是不可约子表示的和；(3) 每个子表示 $W\subseteq V$ 都有补 $W'$ 使 $V=W\oplus W'$。
+
+(1) 推出 (2) 显然；(2) 推出 (3) 用有限维归纳把不可约直和项分裂出来；(3) 推出 (1) 反复取不可约子表示与补。
+有限维性用于保证过程终止。
+这就是通常的「完全可约」判据。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 半单表示的子与商　`prop.semisimple-subquotient`
+*命题*　半单表示的子与商
+
+半单表示的子表示与商表示都是半单的。
+
+对 $V=\oplus V_i$ 的子表示 $W$，可证明 $W$ 是它与各 $V_i$ 之交的和，故半单。
+商表示用补空间与等价刻画处理。
+迭代得：半单表示的所有子商都半单。
+此结论用于 Wedderburn–Artin 的证明。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### Burnside 满射性定理　`thm.burnside-surjectivity`
+*定理*　Burnside 满射性定理
+
+设 $V$ 是有限维半单 $A$-模，$A'=\operatorname{End}_A(V)$，$A''=\operatorname{End}_{A'}(V)$。自然映射 $\Phi:A\to A''$，$a\mapsto(v\mapsto av)$，是满射。等价地，对任意 $f\in A''$ 与任意有限组 $v_1,\ldots,v_n\in V$，存在 $a\in A$ 使 $av_i=f(v_i)$ 对所有 $i$ 成立。
+
+单向量情形用半单性把 $V$ 分裂为 $Av$ 与补空间，再把 $f$ 作用在第一个直和项上。
+多向量情形对 $V^n$ 的对角作用用单向量结果；$V^n$ 的半单性由 $V$ 的半单性得到。
+这是有限维半单模的双中心化子定理。
+骨架缺口：$f(v)\in Av$ 一般不成立，$V^n$ 论证无法直接收口；完整证明需 Jacobson 密度定理或独立双中心化子论证，本图尚无节点。
+它是 Wedderburn 定理的关键一步。
+
+参考：Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras；Lang, Algebra (GTM 211)
+
+#### 单代数的 Wedderburn 结构定理　`thm.wedderburn-simple`
+*定理*　单代数的 Wedderburn 结构定理
+
+设 $A$ 是有限维单 $F$-代数。则 $A\cong M_n(D^{\mathrm{op}})$，其中 $D$ 是除法代数、$n\ge1$，且对单左理想 $V$ 有 $D\cong\operatorname{End}_A(V)$。若 $F$ 代数闭，则 $D=F$，$A\cong M_n(F)$。
+
+取极小非零左理想 $V$；$V$ 是单 $A$-模，由 Schur 引理 $D=\operatorname{End}_A(V)$ 是除法代数。
+自然映射 $A\to\operatorname{End}_D(V)$ 因 $A$ 单而单射，Burnside 定理使它满射；故 $A\cong\operatorname{End}_D(V)\cong M_n(D^{\mathrm{op}})$。
+代数闭时 Schur 引理给出 $D=F$。
+注意方向：$A$ 同构于 $D^{\mathrm{op}}$ 上的矩阵代数。
+证明经由 Burnside 满射性（thm.burnside-surjectivity，本图 skeleton），因此本条仍为 skeleton。
+
+参考：Lang, Algebra (GTM 211)；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### Wedderburn–Artin 定理　`thm.wedderburn-artin`
+*定理*　Wedderburn–Artin 定理
+
+设 $A$ 是有限维半单 $F$-代数。则 $A\cong\prod_{i=1}^s M_{n_i}(D_i)$，其中 $D_i$ 是除法代数；等价地，每个有限维 $A$-模都是半单的。
+
+把正则模 $A$ 分解为单左理想，按同构类分组得到双边理想 $A_i$，且 $A=\prod A_i$。
+每个 $A_i$ 是单代数，用单代数的 Wedderburn 定理。
+反向：矩阵代数的乘积半单。
+$n_i$ 与 $D_i$ 在同构与置换意义下唯一。
+证明经由 thm.wedderburn-simple，而后者依赖 Burnside 满射性（本图 skeleton），故本条仍为 skeleton。
+
+参考：Lang, Algebra (GTM 211)；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### Jacobson 根判定半单　`thm.jacobson-criterion`
+*定理*　Jacobson 根判定半单
+
+有限维 $F$-代数 $A$ 半单当且仅当 $J(A)=0$。
+
+若 $A$ 半单，正则模是单模直和，而 $J(A)$ 零化每个单模，故 $J(A)\subseteq\operatorname{Ann}(A)=0$。
+反向：若 $J(A)=0$，则 $A/J(A)=A$ 半单；更直接地，正则模有单子模，用 $J(A)$ 零化根基把单子模分裂出来。
+有限维性用于终止。
+
+参考：Lang, Algebra (GTM 211)
+
+#### 不可约表示的单位分解　`prop.partition-of-unity`
+*命题*　不可约表示的单位分解
+
+设 $V_1,\ldots,V_s$ 是 $A$ 的两两不同构的有限维不可约表示。则存在 $a_i\in A$，使对所有 $i,j$ 有 $\theta_j(a_i)=\delta_{ij}\operatorname{id}_{V_j}$。
+
+对直和 $V=V_1\oplus\cdots\oplus V_s$ 用 Burnside 定理；到 $V_i$ 的投影属于 $A''=\operatorname{End}_{A'}(V)$。
+$a_i$ 是这些投影的原像。
+它们在 $V_j$ 上表现为正交幂等元。
+这用于分离半单表示中每个不可约的重数。
+证明直接使用 Burnside 满射性（thm.burnside-surjectivity，本图 skeleton），故本条仍为 skeleton。
+
+参考：Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### 特征标决定半单表示　`thm.character-determines-semisimple`
+*定理*　特征标决定半单表示
+
+设 $\operatorname{char}F=0$。若 $W_1,W_2$ 是 $A$ 的有限维半单表示，则 $W_1\cong W_2$ 当且仅当 $\chi_{W_1}=\chi_{W_2}$。
+
+写 $W=\oplus n_iV_i$，$V_i$ 两两不同构不可约。
+单位分解元素 $a_i$ 给出 $\chi_W(a_i)=n_i\dim V_i$，故重数 $n_i$ 由 $\chi_W$ 恢复；$\operatorname{char}F=0$ 允许除以 $\dim V_i$。
+半单性不可省：$F[x]$ 上恒等与 Jordan 块可有相同特征标但不同构。
+此结论是特征标表理论的基础。
+证明经由 prop.partition-of-unity，而后者依赖 Burnside 满射性（本图 skeleton），故本条仍为 skeleton。
+
+参考：Isaacs, Character Theory of Finite Groups；Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### Fitting 分解　`prop.fitting-decomposition`
+*命题*　Fitting 分解
+
+设 $f\in\operatorname{End}_A(V)$，$\dim V<\infty$。则 $V=\operatorname{Im}(f^\infty)\oplus\operatorname{Ker}(f^\infty)$，其中 $\operatorname{Im}(f^\infty)=\bigcap_n\operatorname{Im}(f^n)$，$\operatorname{Ker}(f^\infty)=\bigcup_n\operatorname{Ker}(f^n)$；$f$ 在 $\operatorname{Im}(f^\infty)$ 上是自同构，在 $\operatorname{Ker}(f^\infty)$ 上幂零。
+
+链 $\operatorname{Im}(f^n)$ 与 $\operatorname{Ker}(f^n)$ 因有限维而稳定。
+在交 $\operatorname{Im}(f^\infty)$ 上 $f$ 满且单，故为自同构；在并 $\operatorname{Ker}(f^\infty)$ 上 $f$ 的某次幂为零。
+两子空间交为 $0$，维数之和为 $\dim V$。
+两者都 $f$-不变；当 $f$ 为 $A$-线性时是子表示。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras
+
+#### 不可分解表示的自同态　`cor.indecomposable-endomorphism`
+*推论*　不可分解表示的自同态
+
+设 $V$ 是有限维不可分解表示。则每个 $f\in\operatorname{End}_A(V)$ 要么是自同构，要么幂零。
+
+由 Fitting 分解 $V=\operatorname{Im}(f^\infty)\oplus\operatorname{Ker}(f^\infty)$。
+两个直和项都是子表示；不可分解性迫使其中一个为 $0$。
+若 $\operatorname{Ker}=0$，$f$ 单故为自同构；若 $\operatorname{Im}=0$，$f$ 幂零。
+这是 Krull–Schmidt 用到的「全有或全无」性质。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras
+
+#### 幂零自同态之和　`lem.nilpotent-sum`
+*引理*　幂零自同态之和
+
+设 $V$ 是有限维不可分解表示，$r,\eta\in\operatorname{End}_A(V)$ 幂零。则 $r+\eta$ 幂零。
+
+由 lem.endomorphism-local，$\operatorname{End}_A(V)$ 是局部环，幂零自同态全体是其极大理想；极大理想对加法封闭，故 $r+\eta$ 幂零。
+不可分解性不可省：对 $V=F^2$ 与 $r=E_{12}$、$\eta=E_{21}$，两者幂零但 $r+\eta$ 可逆。
+无须假设 $r,\eta$ 交换。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras
+
+#### 自同态环是局部环　`lem.endomorphism-local`
+*引理*　不可分解表示的自同态环是局部环
+
+设 $V$ 是有限维不可分解表示。则 $\operatorname{End}_A(V)$ 是局部环，其极大理想恰为幂零自同态全体。
+
+由 cor.indecomposable-endomorphism，非自同构的 $f$ 必幂零，故非单位恰为幂零元。
+若 $f$ 幂零则 $\operatorname{id}-f$ 可逆（逆为有限几何级数）；故幂零元构成双边理想，商是除法环，这给出局部环。
+反过来，若 $f$ 不可逆则幂零，故极大理想正是幂零元全体。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### 同构因子引理　`lem.iso-factorization`
+*引理*　同构因子引理
+
+设 $V,W$ 是有限维不可分解表示，$\alpha:W\to V$、$\beta:V\to W$ 是 $A$-线性映射，且 $\alpha\circ\beta$ 是 $V$ 的自同构。则 $\alpha,\beta$ 是同构。
+
+$\alpha\beta$ 自同构推出 $\beta$ 单、$\alpha$ 满。
+写 $W=\operatorname{im}\beta\oplus\ker\alpha$；两项都是子表示，不可分解性迫使 $\ker\alpha=0$。
+于是 $\alpha$ 单且满，为同构；$\beta$ 也随之同构。
+这是 Krull–Schmidt 的消去步。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras
+
+#### Krull–Schmidt 定理　`thm.krull-schmidt`
+*定理*　Krull–Schmidt 定理
+
+每个有限维表示都可分解为有限个不可分解表示的直和，且该分解在置换与同构意义下唯一。
+
+存在性对维数归纳：若 $V$ 不可分解则完成，否则分裂后归纳。
+唯一性比较两个分解，用同构因子引理逐个匹配不可分解直和项；幂零和引理处理自同态记账。
+除有限维外不需对域作假设。
+因此它特别适用于有限群的有限维表示。
+
+参考：Drozd–Kirichenko, Finite Dimensional Algebras；Curtis–Reiner, Representation Theory of Finite Groups and Associative Algebras
+
+#### Maschke 定理　`thm.maschke`
+*定理*　Maschke 定理
+
+设 $G$ 是有限群，$F$ 是域且 $\operatorname{char}F\nmid|G|$。则群代数 $F[G]$ 半单；等价地，$G$ 的每个有限维表示都半单（完全可约）。
+
+给定子表示 $W\subseteq V$，取任意线性投影 $p:V\to W$，并对 $G$ 平均：$\bar p(v)=\frac1{|G|}\sum_g g\,p(g^{-1}v)$。
+条件 $\operatorname{char}F\nmid|G|$ 使 $\frac1{|G|}$ 有意义；$\bar p$ 是 $G$-等变投影，故 $V=W\oplus\ker\bar p$。
+对每个子表示如此分裂即得完全可约；群代数版本由表示与 $F[G]$-模的等价得到。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Fulton–Harris, Representation Theory: A First Course (GTM 129)
+
+#### 群代数的 Wedderburn 分解　`cor.group-algebra-wedderburn`
+*推论*　群代数的 Wedderburn 分解
+
+设 $G$ 有限，$\operatorname{char}F=0$，$F$ 代数闭。则 $F[G]\cong\prod_{i=1}^s M_{n_i}(F)$，且作为左 $F[G]$-模有 $F[G]\cong\bigoplus_{i=1}^s n_iV_i$，其中 $V_i$ 是两两不同构的不可约表示，$n_i=\dim V_i$。
+
+Maschke 给出半单性，Wedderburn–Artin 把 $F[G]$ 分解为矩阵代数；代数闭把除法代数换成 $F$。
+正则模分解的重数为 $n_i=\dim V_i$，比较维数得 $|G|=\sum n_i^2$。
+$V_i$ 的特征标构成类函数空间的一组基（正交关系，见特征标理论）。
+$n_i=\dim V_i$ 用 Wedderburn 与正则特征标计算。
+证明经由 thm.wedderburn-artin，而后者依赖 Burnside 满射性（本图 skeleton），故本条仍为 skeleton。
+
+参考：Serre, Linear Representations of Finite Groups (GTM 42), Part I；Fulton–Harris, Representation Theory: A First Course (GTM 129)
+
+#### 特征标的运算　`prop.character-operations`
+*命题*　特征标的运算
+
+设 $V,W$ 是有限群 $G$ 的有限维表示，$\operatorname{char}F\nmid|G|$，且 $\operatorname{char}F\ne2$。则：
+(1) $\chi_{V\oplus W}=\chi_V+\chi_W$；
+(2) $\chi_{V\otimes W}=\chi_V\chi_W$；
+(3) $\chi_{V^*}(g)=\chi_V(g^{-1})$；
+(4) $\chi_{\operatorname{Sym}^2V}(g)=\frac12(\chi_V(g)^2+\chi_V(g^2))$；
+(5) $\chi_{\operatorname{Alt}^2V}(g)=\frac12(\chi_V(g)^2-\chi_V(g^2))$。
+
+(1)(2) 从迹的加性与 $\operatorname{tr}(A\otimes B)=\operatorname{tr}A\operatorname{tr}B$ 得到。
+(3) 用对偶表示的逆转置与迹的循环性。
+(4)(5) 在代数闭包上把 $\rho(g)$ 上三角化，特征值为 $\lambda_i$；$\operatorname{Sym}^2$ 的特征值是 $\lambda_i\lambda_j$（$i\le j$），$\operatorname{Alt}^2$ 的是 $\lambda_i\lambda_j$（$i<j$），再用 $\sum_{i<j}\lambda_i\lambda_j=\frac12((\sum\lambda_i)^2-\sum\lambda_i^2)$。
+原笔记 (4) 的符号有笔误，正确符号为加号；$\operatorname{Alt}^2$ 用减号。
+
+参考：Fulton–Harris, Representation Theory: A First Course (GTM 129)；Serre, Linear Representations of Finite Groups (GTM 42), Part I
+
+#### 对称平方表示　`def.symmetric-power-representation`
+*定义*　对称平方表示
+
+设 $\operatorname{char}F\ne2$，$(V,\rho)$ 是群 $G$ 的表示。对称平方 $\operatorname{Sym}^2V$ 是 $V\otimes V$ 对换子 $\tau(v\otimes w)=w\otimes v$ 的 $+1$ 特征子空间；$G$ 的作用由 $g(vw)=\rho(g)v\,\rho(g)w$ 给出，称为对称平方表示。若 $e_1,\ldots,e_n$ 是 $V$ 的基，则 $\{e_ie_j:1\le i\le j\le n\}$ 是 $\operatorname{Sym}^2V$ 的基。
+
+$\operatorname{Sym}^2V$ 的维数是 $n(n+1)/2$。
+它是对换作用的 $+1$ 特征空间，$\operatorname{Alt}^2V$ 是 $-1$ 特征空间。
+特征标公式见特征标运算节点。
+$\operatorname{char}F=2$ 时对称与外幂不再互补，本团只讨论 $\operatorname{char}F\ne2$。
+
+参考：Fulton–Harris, Representation Theory: A First Course (GTM 129)；Weyl, The Classical Groups
+
+#### 外平方表示　`def.exterior-power-representation`
+*定义*　外平方表示
+
+设 $\operatorname{char}F\ne2$，$(V,\rho)$ 是群 $G$ 的表示。外平方 $\operatorname{Alt}^2V$（亦记 $\bigwedge^2V$）是 $V\otimes V$ 对换子的 $-1$ 特征子空间；$G$ 的作用由 $g(v\wedge w)=\rho(g)v\wedge\rho(g)w$ 给出。若 $e_1,\ldots,e_n$ 是基，则 $\{e_i\wedge e_j:1\le i<j\le n\}$ 是基。
+
+外平方的维数是 $n(n-1)/2$。
+$\operatorname{char}F\ne2$ 时 $V\otimes V\cong\operatorname{Sym}^2V\oplus\operatorname{Alt}^2V$。
+特征标公式为 $\chi_{\operatorname{Alt}^2V}(g)=\frac12(\chi_V(g)^2-\chi_V(g^2))$。
+它与对称平方是互补的两个构造。
+
+参考：Fulton–Harris, Representation Theory: A First Course (GTM 129)；Weyl, The Classical Groups
+
+#### 正则表示　`ex.regular-representation`
+*例*　正则表示
+
+设 $G$ 是有限群。正则表示是 $G$ 在 $F[G]$ 上的左乘作用 $\rho_{\mathrm{reg}}(g)(h)=gh$，作为 $F^G$ 上的置换表示。其特征标为 $\chi_{\mathrm{reg}}(1)=|G|$，且 $g\ne1$ 时 $\chi_{\mathrm{reg}}(g)=0$。
+
+正则表示的维数是 $|G|$。
+特征标公式：$g$ 在基 $G$ 上的置换矩阵对角元为 $1$ 当且仅当 $gh=h$，即 $g=1$。
+$\operatorname{char}F\nmid|G|$ 且 $F$ 代数闭时，$\rho_{\mathrm{reg}}\cong\bigoplus_V(\dim V)V$（$V$ 取遍不可约表示）。
+比较维数得 $|G|=\sum_V(\dim V)^2$。
+
+参考：Fulton–Harris, Representation Theory: A First Course (GTM 129)；Serre, Linear Representations of Finite Groups (GTM 42), Part I
 
 ### 星团：Galois 理论
 > 从「域扩张」到「五次方程没有根式解」的一条链：域扩张与次数 → 代数元与极小多项式 → 分裂域 → 正规 / 可分 → 伽罗瓦群 → 伽罗瓦扩张 → 伽罗瓦对应（基本定理）→ 根式可解 ⟺ 群可解 → 五次方程。核心是「域与群是同一张格子的两面」。
@@ -59701,25 +60200,6 @@ $$\frac{4^{n}}{2n+1} \le (2n)^{\sqrt{2n}}\,4^{2n/3} \iff 4^{n/3} \le (2n)^{\sqrt
 
 ⚠ 这是骨架：三段计数里最容易错的是「$2n/3 < p \le n$ 不贡献」（上面已改正）；更细的分段与小 $n$ 的逐个验证没有逐条写。细节见华罗庚《数论导引》第九章。
 
-#### Cauchy 积分公式 + 留数定理 + Cauchy–Goursat 积分定理 ⟹ Newman 解析定理　`imp.newman-cauchy-residue`
-*Cauchy 积分公式、留数公式与 Cauchy–Goursat $\implies$ Newman 围道恒等式*
-
-**Cauchy 积分公式。** 设 $D=\{|z|\le R,\ \operatorname{Re}z\ge-\delta\}$ 是 $g$ 的全纯邻域，$C=\partial D$ 取正向。在 $D$ 上考虑 $(g-g_T)F/z$，其中 $F(z)=e^{zT}(1+z^{2}/R^{2})$ 整、$F(0)=1$。它唯一的极点是 $z=0$（单极点），由 Cauchy 积分公式
-
-
-
-$$g(0)-g_T(0)=\frac{1}{2\pi i}\oint_C (g-g_T)(z)\,F(z)\,\frac{dz}{z}.$$
-
-
-
-**留数公式。** 上式右端正是 $z=0$ 处留数的 $2\pi i$ 倍：$\operatorname{Res}_{z=0}\bigl((g-g_T)F/z\bigr)=(g(0)-g_T(0))F(0)=g(0)-g_T(0)$。
-
-
-
-**Cauchy–Goursat 变形。** $g_T$ 是整函数，故 $g_TF/z$ 在 $z=0$ 有可去奇点、在整个 $D$ 上全纯；由 Cauchy–Goursat 定理，它沿 $C$ 的积分为 $0$。于是可以把 $C_-$ 一段上的 $g$ 换到左半圆上：$gF/z$ 在左半圆盘（不含 $0$）上全纯，沿 $C_-$ 与左半圆的积分相等。这两步合起来正是把围道 $C_-$ 变形成左半圆、并让 $g_T$ 项消失的依据。
-
-> 本引理的证明用到这三条；此前只挂了到 PNT 的出边，故层号错为 0。
-
 #### 定义引用：「解析延拓」→ Newman 解析定理　`def-link.newman-analytic`
 
 假设「$g$ 解析延拓到 $\{\operatorname{Re}z\ge0\}$ 的邻域」用的就是解析延拓。
@@ -64410,6 +64890,363 @@ Riemann–Hurwitz 的原形是 $2g(S)-2=n(2g(T)-2)+\sum_{p}(e_{p}-1)$；代入 $
 
 > 换成 $\chi$ 的写法要用 $\chi = 2 - 2g$ 这条命题。 ⚠ 本边证明条件于 `prop.eulerchar-genus`（`prop.eulerchar-genus` 仍 skeleton）。
 
+#### 定义引用：「环上的代数」→ 代数的线性表示　`dep.arep-algebra`
+
+表示是代数的模，作用由代数同态给出
+
+#### 定义引用：「模」→ 代数的线性表示　`dep.arep-module`
+
+表示等价于左 $A$-模，模公理是表示的公理
+
+#### 定义引用：「向量空间」→ 代数的线性表示　`dep.arep-vectorspace`
+
+表示空间是向量空间
+
+#### 定义引用：「模范畴」→ 代数的线性表示　`dep.arep-category`
+
+等价把表示范畴与模范畴联系起来
+
+#### 定义引用：「代数的线性表示」→ 表示同态　`dep.rmorph-arep`
+
+同态的定义域与靶都是表示
+
+#### 定义引用：「模同态」→ 表示同态　`dep.rmorph-modulehom`
+
+表示同态就是模同态
+
+#### 定义引用：「线性映射」→ 表示同态　`dep.rmorph-linear`
+
+intertwiner 首先是线性映射
+
+#### 定义引用：「群」→ 有限群表示　`dep.grep-group`
+
+表示的定义域是群
+
+#### 定义引用：「向量空间」→ 有限群表示　`dep.grep-vs`
+
+表示空间是向量空间
+
+#### 定义引用：「群环」→ 有限群表示　`dep.grep-groupring`
+
+群表示等价于群代数的表示
+
+#### 定义引用：「群模」→ 有限群表示　`dep.grep-gmodule`
+
+群表示等价于 $G$-模
+
+#### 定义引用：「代数的线性表示」→ 有限群表示　`dep.grep-arep`
+
+群表示是代数表示的特例
+
+#### 定义引用：「群作用」→ 有限群表示　`dep.grep-action`
+
+表示是线性的群作用
+
+#### 定义引用：「代数的线性表示」→ 子表示　`dep.subrep-arep`
+
+子表示是表示的子对象
+
+#### 定义引用：「不变子空间」→ 子表示　`dep.subrep-invariant`
+
+子表示就是不变子空间
+
+#### 定义引用：「子表示」→ 不可约表示　`dep.irr-subrep`
+
+不可约性用子表示定义
+
+#### 定义引用：「子表示」→ 商表示　`dep.quot-subrep`
+
+商表示由子表示构造
+
+#### 定义引用：「商模」→ 商表示　`dep.quot-quotmodule`
+
+商表示就是商模
+
+#### 定义引用：「直和与补空间」→ 表示的直和　`dep.dsum-directsum`
+
+直和表示是直和的特例
+
+#### 定义引用：「代数的线性表示」→ 表示的直和　`dep.dsum-arep`
+
+分量作用由表示给出
+
+#### 定义引用：「张量积（向量空间）」→ 张量积表示　`dep.tensor-tensor`
+
+张量积表示用张量积构造
+
+#### 定义引用：「有限群表示」→ 张量积表示　`dep.tensor-grep`
+
+对角作用定义在群表示上
+
+#### 定义引用：「对偶空间」→ 对偶表示　`dep.dual-dualspace`
+
+对偶表示用对偶空间
+
+#### 定义引用：「代数的线性表示」→ 对偶表示　`dep.dual-arep`
+
+对偶作用是表示的反作用
+
+#### 定义引用：「表示的直和」→ 不可分解表示　`dep.indec-dsum`
+
+不可分解性用直和定义
+
+#### 定义引用：「子表示」→ 不可分解表示　`dep.indec-subrep`
+
+直和项是子表示
+
+#### 定义引用：「不可约表示」→ 半单表示　`dep.ss-irr`
+
+半单表示由不可约表示拼成
+
+#### 定义引用：「表示的直和」→ 半单表示　`dep.ss-dsum`
+
+半单性用直和表述
+
+#### 定义引用：「代数的线性表示」→ 代数的特征标　`dep.char-arep`
+
+特征标是表示的函数
+
+#### 定义引用：「迹」→ 代数的特征标　`dep.char-trace`
+
+特征标定义为迹
+
+#### 定义引用：「有限群表示」→ 群特征标　`dep.gchar-grep`
+
+群特征标来自群表示
+
+#### 定义引用：「代数的特征标」→ 群特征标　`dep.gchar-char`
+
+群特征标是代数特征标的限制
+
+#### 定义引用：「中心化子」→ 群特征标　`dep.gchar-centralizer`
+
+共轭类由中心化子刻画
+
+#### 定义引用：「群」→ 类函数　`dep.cf-group`
+
+类函数定义在群上
+
+#### 定义引用：「群作用」→ 类函数　`dep.cf-action`
+
+共轭作用是类函数的来源
+
+#### 定义引用：「中心化子」→ 类函数　`dep.cf-centralizer`
+
+中心化子是共轭作用的稳定化子
+
+#### 定义引用：「代数的线性表示」→ 表示的零化子　`dep.ann-arep`
+
+零化子由表示定义
+
+#### 定义引用：「理想」→ 表示的零化子　`dep.ann-ideal`
+
+零化子是双边理想
+
+#### 定义引用：「表示的零化子」→ Jacobson 根　`dep.jac-ann`
+
+根等于所有单模零化子之交
+
+#### 定义引用：「不可约表示」→ Jacobson 根　`dep.jac-irr`
+
+等价刻画用不可约左模
+
+#### 定义引用：「环」→ 单代数　`dep.simple-ring`
+
+单代数是环
+
+#### 定义引用：「理想」→ 单代数　`dep.simple-ideal`
+
+单性用双边理想定义
+
+#### 定义引用：「环」→ 除法代数　`dep.div-ring`
+
+除法代数是环
+
+#### 定义引用：「域」→ 除法代数　`dep.div-field`
+
+域是交换除法代数
+
+#### 定义引用：「向量空间」→ 除法代数　`dep.div-vs`
+
+底层是向量空间
+
+#### 定义引用：「环上的代数」→ 除法代数　`dep.div-algebra`
+
+除法代数是代数的特例
+
+#### 不可约表示 ⟹ 不可分解表示　`imp.irr-indec`
+*不可约推出不可分解*
+
+若 $V=W_1\oplus W_2$ 且 $W_1,W_2$ 非零，则 $W_1$ 是非平凡子表示，与不可约性矛盾；故 $V$ 不可分解。$\blacksquare$
+
+#### 群特征标 ⟹ 类函数　`imp.gchar-cf`
+*群特征标是类函数*
+
+对 $h,g\in G$，$\chi(hgh^{-1})=\operatorname{tr}(\rho(h)\rho(g)\rho(h)^{-1})=\operatorname{tr}\rho(g)=\chi(g)$，故 $\chi$ 在共轭类上为常数。$\blacksquare$
+
+#### 半单表示 + 子表示 + 表示的直和 ⟹ 半单表示的等价刻画　`imp.ss-tfae`
+
+(1)推出(2)：半单表示按定义是不可约表示的直和，故是不可约子表示之和。
+(2)推出(3)：对有限维 $V$ 归纳。取不可约子表示 $U\subseteq V$，其和 $S$ 有补？若 $S\ne V$，取 $v\notin S$，其生成的子表示含不可约子表示 $U'$，把 $U'$ 并入 $S$；有限维保证终止，得 $V=\oplus U_i$。再把给定的 $W$ 与各 $U_i$ 相交，用不可约性逐个分裂。
+(3)推出(1)：反复取不可约子表示并用 (3) 取补，维数下降，终止于直和分解。$\blacksquare$
+
+#### 半单表示 + 子表示 + 商表示 ⟹ 半单表示的子与商　`imp.subquotient`
+
+设 $V$ 半单，$W\subseteq V$ 是子表示。由半单性的等价刻画 (3)，$W$ 在 $V$ 中有补：$V=W\oplus W'$。
+对任意子表示 $U\subseteq W$，再对 $U$ 用 (3) 取 $V=U\oplus U'$；模律给出 $W=U\oplus(W\cap U')$，故 $U$ 在 $W$ 中有补。
+于是 $W$ 满足 (3)，由等价刻画 $W$ 半单。
+商 $V/W\cong W'$；$W'$ 是半单表示 $V$ 的子表示，由上一段半单。$\blacksquare$
+
+#### 半单表示 + 表示同态 ⟹ Burnside 满射性定理　`imp.burnside`
+*Burnside 满射性*
+
+单向量：令 $W=Av$，取 $A$-子模 $U$ 使 $V=W\oplus U$。线性映射 $g(w+u)=f(w)$ 是 $A$-线性的（$f$ 与 $A$ 的作用交换），但 $g\in\operatorname{End}_A(V)$ 不一定等于某个 $a\in A$ 的作用——这里正是缺口。
+多向量：把 $f$ 对角地作用在 $V^n$ 上，取 $v=(v_1,\ldots,v_n)$；要得到 $a$ 使 $av=f(v)$，需先证明 $f(v)\in Av$，一般不对。
+完整证明需要 Jacobson 密度定理（本图无节点），故本条标 skeleton。
+
+#### 单代数 + 除法代数 + Burnside 满射性定理 ⟹ 单代数的 Wedderburn 结构定理　`imp.wedderburn-simple`
+
+取极小非零左理想 $V$，则 $V$ 是单 $A$-模。由 Schur 引理 $D=\operatorname{End}_A(V)$ 是除法代数。定义 $\Phi:A\to\operatorname{End}_D(V)$，$a\mapsto(v\mapsto av)$。若 $\Phi(a)=0$，则 $aV=0$；但 $AV=V$ 且 $A$ 单，故 $a=0$，所以 $\Phi$ 单。由 Burnside 满射性，$\Phi$ 满。于是 $A\cong\operatorname{End}_D(V)\cong M_n(D^{\mathrm{op}})$，$n=\dim_DV$。代数闭时 Schur 给出 $D=F$。$\blacksquare$
+
+#### 单代数的 Wedderburn 结构定理 + 半单表示 ⟹ Wedderburn–Artin 定理　`imp.wedderburn-artin`
+
+把正则模 $A$ 分解为单左理想 $A=\oplus_{i=1}^mS_i$。按同构类分组：令 $A_i$ 为与第 $i$ 类单左理想同构的直和项之和；不同类的乘积为 $0$（若 $S_iS_j\ne0$，则 $S_iS_j$ 是 $S_i$ 的商，故与 $S_i$ 同构，矛盾）。于是 $A=\prod A_i$，每个 $A_i$ 是单代数。对 $A_i$ 用单代数的 Wedderburn 定理得 $A_i\cong M_{n_i}(D_i)$。反向由矩阵代数乘积半单得到。$\blacksquare$
+
+#### Jacobson 根 + 半单表示 ⟹ Jacobson 根判定半单　`imp.jacobson`
+
+若 $A$ 半单，正则模是单模直和；$J(A)$ 零化每个单模，故 $J(A)\subseteq\operatorname{Ann}(A)=0$。
+反之设 $J(A)=0$。若正则模有非零根基，取极大左理想 $M$，则 $A/M$ 单；$J(A)\subseteq M$ 给出 $J(A)A\subseteq M$，但 $J(A)=0$ 不直接矛盾。改用标准论证：$A$ 的每个非零左理想含单左理想；若 $A$ 不半单，正则模有不分裂的子模，用 Zorn 取极大不分裂子模，导出 $J(A)\ne0$。有限维使过程终止。$\blacksquare$
+
+#### Burnside 满射性定理 + 不可约表示 ⟹ 不可约表示的单位分解　`imp.partition`
+
+对 $V=\oplus_{i=1}^sV_i$ 用 Burnside：$A''=\operatorname{End}_{A'}(V)$ 含到 $V_i$ 的投影 $e_i$。由满射性取 $a_i\in A$ 使 $\theta(a_i)=e_i$。则 $\theta_j(a_i)=\delta_{ij}\operatorname{id}_{V_j}$，因为 $e_i$ 在 $V_j$ 上是 $\delta_{ij}$ 倍恒等。$\blacksquare$
+
+#### 代数的特征标 + 半单表示 + 不可约表示的单位分解 ⟹ 特征标决定半单表示　`imp.char-determines`
+
+写 $W=\oplus n_iV_i$。由单位分解，$\chi_W(a_i)=n_i\dim V_i$。若 $\chi_{W_1}=\chi_{W_2}$，则对每个 $i$，$n_i^{(1)}\dim V_i=n_i^{(2)}\dim V_i$；$\operatorname{char}F=0$ 保证 $\dim V_i\ne0$ 可除，故重数相同，$W_1\cong W_2$。反向由同构表示特征标相同。$\blacksquare$
+
+#### 表示同态 + 表示的直和 ⟹ Fitting 分解　`imp.fitting`
+
+链 $\operatorname{Im}(f^n)$ 递减、$\operatorname{Ker}(f^n)$ 递增，有限维使其稳定。令 $U=\operatorname{Im}(f^\infty)$，$K=\operatorname{Ker}(f^\infty)$。若 $x\in U\cap K$，则 $x=f^n(y)$ 且 $f^m(x)=0$；取 $n$ 大使 $f^n|_U$ 满，得 $f^n:U\to U$ 双射，于是 $x=0$。维数：$\dim U+\dim K=\dim V$（秩-零化度对充分大的 $n$）。故 $V=U\oplus K$。$f|_U$ 满故双射；$f|_K$ 幂零。$\blacksquare$
+
+#### Fitting 分解 + 不可分解表示 ⟹ 不可分解表示的自同态　`imp.indec-end`
+
+由 Fitting，$V=\operatorname{Im}(f^\infty)\oplus\operatorname{Ker}(f^\infty)$。两者都是子表示。不可分解性迫使一个为 $0$。若 $\operatorname{Ker}=0$，$f$ 单，有限维故自同构；若 $\operatorname{Im}=0$，$f$ 幂零。$\blacksquare$
+
+#### 自同态环是局部环 + 幂零 ⟹ 幂零自同态之和　`imp.nilpotent-sum`
+
+由 lem.endomorphism-local，$\operatorname{End}_A(V)$ 是局部环，幂零元全体是极大理想，对加法封闭。$r,\eta$ 幂零，故 $r+\eta$ 幂零。∎
+
+#### Fitting 分解 + 不可分解表示 ⟹ 同构因子引理　`imp.iso-factor`
+
+$\alpha\beta$ 是同构，故 $\beta$ 单、$\alpha$ 满。令 $U=\operatorname{im}\beta$，$K=\ker\alpha$，则 $W=U\oplus K$（因为 $\alpha\beta$ 满给出 $W=U+\ker\alpha$，且 $U\cap K=0$）。$U,K$ 都是子表示。不可分解性迫使 $K=0$ 或 $U=W$。若 $K=0$，$\alpha$ 单，故同构，$\beta$ 也同构；若 $U=W$，$\beta$ 满，故同构，$\alpha$ 也同构。$\blacksquare$
+
+#### 同构因子引理 + 幂零自同态之和 + 不可分解表示 ⟹ Krull–Schmidt 定理　`imp.krull-schmidt`
+
+存在性对维数归纳。唯一性：设 $V=\oplus_{i=1}^m V_i=\oplus_{j=1}^n W_j$。取第一个 $V_1$，投影 $p:V\to V_1$ 与包含 $i_1:V_1\to V$；$p|_{W_j}$ 对某个 $j$ 非零（否则 $p$ 在 $\oplus W_j$ 上为零）。由不可分解性与同构因子引理，$V_1\cong W_j$ 且可消去；对剩余部分归纳。幂零和引理用于处理自同态的组合。$\blacksquare$
+
+#### 有限群表示 + 半单表示 + 商表示 ⟹ Maschke 定理　`imp.maschke`
+
+设 $W\subseteq V$ 是子表示。取线性投影 $p:V\to W$（存在，因 $W$ 是子空间），定义 $\bar p(v)=\frac1{|G|}\sum_{g\in G}g\,p(g^{-1}v)$。条件 $\operatorname{char}F\nmid|G|$ 使 $\frac1{|G|}\in F$。对 $h\in G$，$\bar p(hv)=\frac1{|G|}\sum_g g p(g^{-1}hv)=\frac1{|G|}\sum_{g'}hg'p(g'^{-1}v)=h\bar p(v)$，故 $\bar p$ 是 $G$-等变。又 $w\in W$ 时 $g^{-1}w\in W$，$p(g^{-1}w)=g^{-1}w$，故 $\bar p(w)=w$。于是 $\bar p$ 是到 $W$ 的等变投影，$V=W\oplus\ker\bar p$。对每个子表示如此分裂即得完全可约。$\blacksquare$
+
+#### Maschke 定理 + Wedderburn–Artin 定理 + 群特征标 ⟹ 群代数的 Wedderburn 分解　`imp.group-algebra-wedderburn`
+
+Maschke 给出 $F[G]$ 半单；Wedderburn–Artin 给出 $F[G]\cong\prod M_{n_i}(D_i)$。代数闭时 $D_i=F$。正则模分解为不可约直和，重数 $n_i$ 由 $\chi_{\mathrm{reg}}$ 与特征标内积计算：$n_i=\langle\chi_{\mathrm{reg}},\chi_i\rangle=\dim V_i$。比较维数得 $|G|=\sum n_i^2$。$\blacksquare$
+
+#### 群特征标 + 对称平方表示 + 外平方表示 ⟹ 特征标的运算　`imp.char-ops`
+
+(1)(2) 由迹的加性与张量积的迹公式。
+(3) 对偶作用为逆转置，$\operatorname{tr}(A^{-1})=\operatorname{tr}(A^{-1})$？具体地 $\chi_{V^*}(g)=\operatorname{tr}(\rho(g^{-1})^T)=\operatorname{tr}\rho(g^{-1})$。
+(4)(5) 在代数闭包上把 $\rho(g)$ 上三角化，特征值 $\lambda_i$；$\operatorname{Sym}^2$ 的特征值为 $\lambda_i\lambda_j$（$i\le j$），$\operatorname{Alt}^2$ 的为 $\lambda_i\lambda_j$（$i<j$）。用 $\sum_{i<j}\lambda_i\lambda_j=\frac12((\sum\lambda_i)^2-\sum\lambda_i^2)$ 得公式。$\blacksquare$
+
+#### 定义引用：「环」→ 环上的代数　`dep.alg-ring`
+
+代数首先是环，乘法沿用环结构
+
+#### 定义引用：「不可约表示」→ Schur 引理　`dep.schur-irr`
+
+Schur 引理的前提是不可约表示
+
+#### 定义引用：「表示同态」→ Schur 引理　`dep.schur-rmorph`
+
+结论陈述的是表示之间的同态
+
+#### 定义引用：「张量积表示」→ 对称平方表示　`dep.sym2-tensor`
+
+对称平方是张量平方的商
+
+#### 定义引用：「代数的线性表示」→ 对称平方表示　`dep.sym2-arep`
+
+对称平方作用在表示空间上
+
+#### 定义引用：「张量积表示」→ 外平方表示　`dep.alt2-tensor`
+
+外平方是张量平方的商
+
+#### 定义引用：「代数的线性表示」→ 外平方表示　`dep.alt2-arep`
+
+外平方作用在表示空间上
+
+#### 定义引用：「群环」→ 正则表示　`dep.regrep-gring`
+
+正则表示是群代数上的左乘作用
+
+#### 定义引用：「有限群表示」→ 正则表示　`dep.regrep-grep`
+
+正则表示是群表示的特例
+
+#### 定义引用：「模」→ 环上的代数　`dep.alg-module`
+
+代数首先是基环上的模
+
+#### 定义引用：「群环」→ 环上的代数　`dep.alg-gring`
+
+群环是环上代数的标准例
+
+#### 定义引用：「除法代数」→ Schur 引理　`dep.schur-div`
+
+Schur 引理断言自同态环是除法代数
+
+#### 定义引用：「代数闭域」→ 代数闭域上的 Schur 推论　`dep.schurscalar-ac`
+
+纯量结论要用代数闭性
+
+#### 定义引用：「不可分解表示」→ 自同态环是局部环　`dep.local-indecomposable`
+
+不可分解性是局部性的前提
+
+#### 定义引用：「Fitting 分解」→ 自同态环是局部环　`dep.local-fitting`
+
+Fitting 分解给出非自同构即幂零
+
+#### 定义引用：「不可分解表示的自同态」→ 自同态环是局部环　`dep.local-cor`
+
+用「自同构或幂零」推出非单位即幂零
+
+#### Schur 引理 + 代数闭域 + 除法代数 ⟹ 代数闭域上的 Schur 推论　`imp.schur-scalar`
+
+Schur 给出 $D=\operatorname{End}_A(V)$ 是有限维除法代数。任取 $a\in D$，$F(a)$ 是 $F$ 的有限扩张；$F$ 代数闭，故 $F(a)=F$，即 $a\in F$。因此 $D=F$，所有自同态都是纯量。∎
+
+#### Fitting 分解 + 不可分解表示的自同态 ⟹ 自同态环是局部环　`imp.endomorphism-local`
+
+由 cor.indecomposable-endomorphism，每个 $f\in\operatorname{End}_A(V)$ 或为自同构或幂零，故非单位恰为幂零元。若 $f$ 幂零，$\operatorname{id}-f$ 可逆，故幂零元构成理想；商环中每个非零元可逆，是除法环。于是 $\operatorname{End}_A(V)$ 是局部环，极大理想为幂零元全体。∎
+
+#### 定义引用：「不可分解表示」→ Krull–Schmidt 定理　`dep.krull-indec`
+
+Krull–Schmidt 分解的因子是不可分解表示
+
+#### 定义引用：「表示的直和」→ Krull–Schmidt 定理　`dep.krull-directsum`
+
+分解写成表示的直和
+
+#### 定义引用：「不可分解表示」→ 幂零自同态之和　`dep.nilpotent-indec`
+
+引理的前提是 $V$ 不可分解
+
+#### 定义引用：「子表示」→ Maschke 定理　`dep.maschke-subrep`
+
+Maschke 定理对子表示作平均投影
+
 #### 定义引用：「向量空间」→ 维数良定义　`dep.vectorspace-dimension`
 
 「维数良定义」的陈述第一句就是「设 $V$ 是 $K$ 上的向量空间」—— 它测的是**向量空间**的维数，此前这条边不在图上（`def.vector-space` 的注里写了「见 `thm.dimension`」，却是空的）。
@@ -68550,7 +69387,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **复变函数基础 ↔ 数系的构造**　8 条节点级连线
 - **Cauchy 理论 ↔ 复变函数基础**　13 条节点级连线
 - **Cauchy 理论 ↔ 共形映射与正规族**　6 条节点级连线
-- **Cauchy 理论 ↔ 留数与辐角原理**　9 条节点级连线
+- **Cauchy 理论 ↔ 留数与辐角原理**　8 条节点级连线
 - **复变函数基础 ↔ Riemann 积分**　2 条节点级连线
 - **Cauchy 理论 ↔ 函数列、幂级数与初等函数**　3 条节点级连线
 - **复变函数基础 ↔ 留数与辐角原理**　10 条节点级连线
@@ -68606,8 +69443,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **整环与分解 ↔ 代数结构**　8 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
-- **Cauchy 理论 ↔ 数论函数与素数分布**　2 条节点级连线
-- **留数与辐角原理 ↔ 数论函数与素数分布**　2 条节点级连线
 - **复变函数基础 ↔ 数论函数与素数分布**　4 条节点级连线
 - **解析延拓与整函数 ↔ 数论函数与素数分布**　3 条节点级连线
 - **整除与同余 ↔ 数论函数与素数分布**　7 条节点级连线
@@ -68673,6 +69508,13 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **凝聚态阿贝尔群 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **伴随与反射 ↔ 单满、子对象与像**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 分离公理**　4 条节点级连线
+- **群与代数表示 ↔ 代数结构**　13 条节点级连线
+- **群与代数表示 ↔ 向量空间与基**　3 条节点级连线
+- **线性映射与秩 ↔ 群与代数表示**　3 条节点级连线
+- **群与代数表示 ↔ 群上同调**　4 条节点级连线
+- **群作用与置换 ↔ 群与代数表示**　4 条节点级连线
+- **群与代数表示 ↔ 特征值与 Jordan 型**　3 条节点级连线
+- **Galois 理论 ↔ 群与代数表示**　2 条节点级连线
 - **序结构 ↔ 集合的构造**　4 条节点级连线
 - **选择原理 ↔ 序结构**　7 条节点级连线
 - **微分定理 ↔ 度量空间**　2 条节点级连线

@@ -13,3 +13,5 @@
 - 被 [`def.fixed-field`](../nodes/def.fixed-field.md) 不动域 用
 - 被 [`def.algebraic-closure`](../nodes/def.algebraic-closure.md) 代数闭包 用
 - 被 [`ex.finite-field`](../nodes/ex.finite-field.md) 有限域 F_p 用
+
+> 续见 [nodes/def.field.4.md](./def.field.4.md)

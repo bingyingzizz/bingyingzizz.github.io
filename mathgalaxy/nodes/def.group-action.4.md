@@ -11,3 +11,6 @@
 - 被 [`def.semidirect-product`](../nodes/def.semidirect-product.md) 半直积 用
 - 被 [`def.lens-space`](../nodes/def.lens-space.md) 透镜空间 用
 - 被 [`def.principal-bundle`](../nodes/def.principal-bundle.md) 主丛 用
+- 被 [`def.group-representation`](../nodes/def.group-representation.md) 有限群表示 用
+
+> 续见 [nodes/def.group-action.5.md](./def.group-action.5.md)

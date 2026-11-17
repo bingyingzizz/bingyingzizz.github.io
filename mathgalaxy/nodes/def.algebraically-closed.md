@@ -10,6 +10,8 @@ layer 22 · 定义 · Galois 理论 · 抽象代数
 ## 它能推出什么 / 谁在用它
 - 被 [`def.algebraic-closure`](../nodes/def.algebraic-closure.md) 代数闭包 用
 
+- …另有出边，续页见 [nodes/def.algebraically-closed.3.md](./def.algebraically-closed.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.algebraically-closed.2.md](./def.algebraically-closed.2.md)
 

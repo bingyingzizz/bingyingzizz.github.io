@@ -11,6 +11,9 @@ $C_G(S)$ 是子群。$C_G(G) = Z(G)$ 就是 $G$ 的**中心**。在共轭作用 
 
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.class-equation`](../nodes/thm.class-equation.md) 类方程 用
+- 被 [`def.group-character`](../nodes/def.group-character.md) 群特征标 用
+
+- …另有出边，续页见 [nodes/def.centralizer.3.md](./def.centralizer.3.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.centralizer.2.md](./def.centralizer.2.md)

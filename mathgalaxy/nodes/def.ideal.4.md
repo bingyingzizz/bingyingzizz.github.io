@@ -3,3 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`ex.finite-field`](../nodes/ex.finite-field.md) 有限域 F_p 用
+- 被 [`def.representation-annihilator`](../nodes/def.representation-annihilator.md) 表示的零化子 用
+- 被 [`def.simple-algebra`](../nodes/def.simple-algebra.md) 单代数 用

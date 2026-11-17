@@ -12,6 +12,6 @@
 - 被 [`def.syzygy`](../nodes/def.syzygy.md) 合冲 用
 - 被 [`lem.schanuel`](../nodes/lem.schanuel.md) 合冲比较引理 用
 - 被 [`def.flat-module`](../nodes/def.flat-module.md) 平坦模 用
-- 被 [`thm.freyd-mitchell`](../nodes/thm.freyd-mitchell.md) Freyd–Mitchell 嵌入定理 用
+- 被 [`def.algebra-representation`](../nodes/def.algebra-representation.md) 代数的线性表示 用
 
 > 续见 [nodes/def.module.3.md](./def.module.3.md)

@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子 用
+- 被 [`def.group-representation`](../nodes/def.group-representation.md) 有限群表示 用

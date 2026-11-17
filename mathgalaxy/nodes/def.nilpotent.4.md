@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`thm.cayley-hamilton`](../nodes/thm.cayley-hamilton.md) Cayley–Hamilton 定理
+- ⇒ [`lem.nilpotent-sum`](../nodes/lem.nilpotent-sum.md) 幂零自同态之和

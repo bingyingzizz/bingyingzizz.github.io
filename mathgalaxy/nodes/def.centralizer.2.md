@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.stabilizer`](../nodes/def.stabilizer.md) 稳定子 + [`def.group-action`](../nodes/def.group-action.md) 群作用：共轭作用的稳定子 $\implies$ 中心化子　[proofs/dep.centralizer-stab.md](../proofs/dep.centralizer-stab.md)
 - [`def.group-action`](../nodes/def.group-action.md) 群作用：用到了定义 群作用　[proofs/dep.centralizer-action.md](../proofs/dep.centralizer-action.md)
+
+> 续见 [nodes/def.centralizer.3.md](./def.centralizer.3.md)

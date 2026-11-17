@@ -11,3 +11,5 @@
 - 被 [`thm.quotient-universal-vs`](../nodes/thm.quotient-universal-vs.md) 商空间的万有性质 用
 - 被 [`def.scalar-restriction`](../nodes/def.scalar-restriction.md) 标量限制 用
 - 被 [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子 用
+
+> 续见 [nodes/def.linear-map.5.md](./def.linear-map.5.md)

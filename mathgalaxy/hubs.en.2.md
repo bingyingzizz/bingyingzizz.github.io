@@ -2,7 +2,7 @@
 
 > page 1 `hubs.en.md`
 
-- **36 / 36** `def.group` group · 代数结构
+- **38 / 38** `def.group` group · 代数结构
 - **36 / 36** `def.category-of-sets` category of sets · 范畴与图
 - **35 / 35** `def.complex` complex numbers · 数系的构造
 - **33 / 33** `def.category-of-abelian-groups` category of abelian groups · 范畴与图
@@ -19,7 +19,7 @@
 
 - **25 / 25** `def.category` category · 范畴与图
 - **25 / 25** `def.functor` functor · 函子与自然变换
-- **24 / 27** `def.hausdorff` Hausdorff · 分离公理
+- **25 / 25** `def.ring` ring · 代数结构
 
 ## Comprehensive results
 

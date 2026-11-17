@@ -5,3 +5,5 @@
 - [`def.module`](../nodes/def.module.md) 模：用到了定义 模　[proofs/dep.quotient-module.md](../proofs/dep.quotient-module.md)
 - [`def.submodule`](../nodes/def.submodule.md) 子模：用到了定义 子模　[proofs/dep.quotient-submodule.md](../proofs/dep.quotient-submodule.md)
 - [`def.module-hom`](../nodes/def.module-hom.md) 模同态：用到了定义 模同态　[proofs/dep.quotient-map.md](../proofs/dep.quotient-map.md)
+
+> 续见 [nodes/def.quotient-module.3.md](./def.quotient-module.3.md)

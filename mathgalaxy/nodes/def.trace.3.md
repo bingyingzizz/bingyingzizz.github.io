@@ -6,3 +6,4 @@
 - ⇒ [`def.ricci-curvature`](../nodes/def.ricci-curvature.md) Ricci 曲率
 - 被 [`def.tensor-field`](../nodes/def.tensor-field.md) 张量场 用
 - 被 [`def.tensor-contraction`](../nodes/def.tensor-contraction.md) 缩并 用
+- 被 [`def.character`](../nodes/def.character.md) 代数的特征标 用

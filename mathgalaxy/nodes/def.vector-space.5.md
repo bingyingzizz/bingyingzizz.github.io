@@ -5,5 +5,8 @@
 - ～弱边 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群
 - 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
 - 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
+- 被 [`def.algebra-representation`](../nodes/def.algebra-representation.md) 代数的线性表示 用
+- 被 [`def.group-representation`](../nodes/def.group-representation.md) 有限群表示 用
+- 被 [`def.division-algebra`](../nodes/def.division-algebra.md) 除法代数 用
 - 被 [`thm.dimension`](../nodes/thm.dimension.md) 维数良定义 用
 - 被 [`thm.vsbasis`](../nodes/thm.vsbasis.md) 每个向量空间有基 用

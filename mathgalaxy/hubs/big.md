@@ -12,7 +12,7 @@
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 27 · 同调群
 - **7 / 7** `thm.cartan-formula` Cartan 公式 · layer 31 · 向量场与 Lie 结构
 - **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
-- **7 / 6** `lem.newman-tauberian` Newman 解析定理 · layer 33 · 数论函数与素数分布
 - **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 30 · L^p 空间
+- **7 / 5** `thm.constant-gauss-curvature` 常 Gauss 曲率曲面 · layer 39 · 内蕴几何
 
 > 续见 hubs/big.2.md

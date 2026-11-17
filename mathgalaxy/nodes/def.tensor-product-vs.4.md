@@ -5,3 +5,4 @@
 - 被 [`def.symmetric-algebra`](../nodes/def.symmetric-algebra.md) 对称代数 用
 - ⇒ [`thm.tensor-universal-property`](../nodes/thm.tensor-universal-property.md) 张量积的万有性质
 - 被 [`def.tensor-field`](../nodes/def.tensor-field.md) 张量场 用
+- 被 [`def.tensor-representation`](../nodes/def.tensor-representation.md) 张量积表示 用

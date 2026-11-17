@@ -1,28 +1,28 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 正规化子 | normalizer subgroup | normalizer of a subgroup → def.normalizer
+- 子表示 | 不变子空间 | G-不变子空间 → def.subrepresentation
 
-- Sylow 子群 | Sylow p-子群 | Sylow p-subgroup → def.sylow-subgroup
+- 不可约表示 | 单表示 | simple representation → def.irreducible-representation
 
-- p-群子群引理 | 正规化子严格增大 | p-group proper subgroup lemma → lem.p-group-subgroups
+- 商表示 | quotient module → def.quotient-representation
 
-- 环同态 | ring map | homomorphism of rings → def.ring-hom
+- 表示的直和 | 直和表示 | 分块对角表示 → def.direct-sum-representation
 
-- 商环 | factor ring | quotient of a ring → def.quotient-ring
+- 张量积表示 | 张量表示 → def.tensor-representation
 
-- 子模 | submodule of a module | A-submodule → def.submodule
+- 对偶表示 | 反变对偶 | contragredient representation → def.dual-representation
 
-- 不动域 | fixed field of a group | invariant field → def.fixed-field
+- 不可分解表示 | indecomposable module → def.indecomposable-representation
 
-- 幂零群 | 下中心列 | nilpotent → def.nilpotent-group
+- 半单表示 | 完全可约表示 | completely reducible → def.semisimple-representation
 
-- 自同构群 | Aut(G) | automorphism group of a group → def.automorphism-group
+- 代数的特征标 | 表示的特征标 | 迹特征标 → def.character
 
-- 内自同构 | 共轭自同构 | conjugation automorphism → def.inner-automorphism
+- 群特征标 | 特征标 | group character → def.group-character
 
-- 素理想 | prime ideal of a ring → def.prime-ideal
+- 类函数 | 共轭类函数 | central function → def.class-function
 
-- 极大理想 | maximal ideal of a ring → def.maximal-ideal
+- 表示的零化子 | 零化子理想 | 忠实表示的零化子 → def.representation-annihilator
 
 > 续见 alias/aka/algebra.14.md
