@@ -34,11 +34,10 @@ s \\ & & 1 & 0 & -a_{m-2
 \end{pmatrix} ,$$
 且 $d_{1} \mid d_{2} \m
 id \cdots \mid d_{s}$（
-依次整除）。这些
- $d_{i}$ 叫**不变因
-子**。
-**与 Jordan 形的分
-工**：$K$ 上特征多
-项式分裂时，有理
+依次整除），其中
+每个 $d_{i}$ 是**非
+单位首一多项式**
+（$\deg d_{i}\ge1$）
+；若没有非单位因
 
 > 续见 [nodes/thm.rational-canonical-form.3.md](./thm.rational-canonical-form.3.md)

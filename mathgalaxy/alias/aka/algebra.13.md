@@ -1,6 +1,18 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 二面体群 | 正多边形对称群 → def.dihedral-group
+
+- 平坦维数 → def.flat-dimension
+
+- 环上的代数 | 结合代数 | 含幺代数 | R-algebra → def.algebra-over-ring
+
+- 代数的线性表示 | 代数表示 | A-模表示 → def.algebra-representation
+
+- 表示同态 | intertwiner | 缠结算子 | A-线性映射 → def.representation-morphism
+
+- 有限群表示 | 群表示 | group representation → def.group-representation
+
 - 子表示 | 不变子空间 | G-不变子空间 → def.subrepresentation
 
 - 不可约表示 | 单表示 | simple representation → def.irreducible-representation
@@ -14,15 +26,5 @@
 - 对偶表示 | 反变对偶 | contragredient representation → def.dual-representation
 
 - 不可分解表示 | indecomposable module → def.indecomposable-representation
-
-- 半单表示 | 完全可约表示 | completely reducible → def.semisimple-representation
-
-- 代数的特征标 | 表示的特征标 | 迹特征标 → def.character
-
-- 群特征标 | 特征标 | group character → def.group-character
-
-- 类函数 | 共轭类函数 | central function → def.class-function
-
-- 表示的零化子 | 零化子理想 | 忠实表示的零化子 → def.representation-annihilator
 
 > 续见 alias/aka/algebra.14.md

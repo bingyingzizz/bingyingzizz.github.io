@@ -15,12 +15,11 @@
 ## 综合结论榜
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
 - **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
-- **8 / 7** `def.smooth-manifold` 光滑流形 · 内蕴几何
+- **9 / 5** `thm.rational-canonical-form` 有理标准形 · 特征值与 Jordan 型
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
 - **17 团 / 35 节点** `def.complex` 复数 ℂ · 数系的构造
 - **16 团 / 24 节点** `def.function` 映射 · 关系与函数
-- **15 团 / 38 节点** `def.group` 群 · 代数结构
 - 全部：`hubs/cross.md`
 

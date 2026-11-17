@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.minimal-poly-divisor`](../nodes/thm.minimal-poly-divisor.md) 极小多项式整除特征多项式
+- ⇒ [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形
 - ～弱边 [`def.nilpotent`](../nodes/def.nilpotent.md) 幂零

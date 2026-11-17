@@ -7,9 +7,10 @@ layer 21 · 定理 · 特征值与 Jordan 型 · 抽象代数
 > 陈述续见 [nodes/thm.rational-canonical-form.2.md](./thm.rational-canonical-form.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.minimal-poly`](../nodes/def.minimal-poly.md) 极小多项式：用到了定义 极小多项式　[proofs/dep.rcf-minpoly.md](../proofs/dep.rcf-minpoly.md)
+## 它能推出什么 / 谁在用它
+- ～弱边 [`thm.jordan-canonical-form`](../nodes/thm.jordan-canonical-form.md) Jordan 标准形
 
+## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.rational-canonical-form.4.md](./thm.rational-canonical-form.4.md)
 
 refs: Hoffman–Kunze, Linear Algebra, Ch. 7（The Rational and Jordan Forms）· 有理标准形；Dummit–Foote, Abstract Algebra, Ch. 12（Modules over Principal Ideal Domains）· 主理想整环上的模；北大《高等代数》· 有理标准形

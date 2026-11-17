@@ -11,4 +11,6 @@ Let $R$ be a principal ideal domain and let the Smith normal form of $A \in M_{m
 
 $P A Q = \operatorname{diag}(d_1, \ldots, d_r, 0, \ldots, 0), \qquad d_1 \mid d_2 \mid \cdots \mid d_r .$
 
+The nonzero elements $d_i$ (unique up to units; for $R = K[x]$ one takes the monic representative) are the **invariant factors** of $A$.
+
 > continued in nodes/def.invariant-factor.en.2.md

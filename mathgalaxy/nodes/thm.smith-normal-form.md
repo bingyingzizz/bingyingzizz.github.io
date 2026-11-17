@@ -10,7 +10,9 @@ $P A Q = \operatorname{diag}(d_1, d_2, \ldots, d_r, 0, \ldots, 0),$
 
 
 ## 它能推出什么 / 谁在用它
-- 被 [`def.invariant-factor`](../nodes/def.invariant-factor.md) 不变因子 用
+- ⇒ [`thm.pid-fg-module-structure`](../nodes/thm.pid-fg-module-structure.md) PID 上有限生成模的结构
+
+- …另有出边，续页见 [nodes/thm.smith-normal-form.5.md](./thm.smith-normal-form.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.smith-normal-form.3.md](./thm.smith-normal-form.3.md)

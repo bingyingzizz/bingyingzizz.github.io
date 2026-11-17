@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.invariant-subspace`](../nodes/def.invariant-subspace.md) 不变子空间 用
+- 被 [`def.cyclic-subspace`](../nodes/def.cyclic-subspace.md) 循环子空间 用
 - 被 [`def.total-differential`](../nodes/def.total-differential.md) 可微与全微分 用
 - 被 [`def.idempotent`](../nodes/def.idempotent.md) 幂等 用
 - 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用
@@ -10,6 +11,5 @@
 - 被 [`def.quotient-vs`](../nodes/def.quotient-vs.md) 商空间 用
 - 被 [`thm.quotient-universal-vs`](../nodes/thm.quotient-universal-vs.md) 商空间的万有性质 用
 - 被 [`def.scalar-restriction`](../nodes/def.scalar-restriction.md) 标量限制 用
-- 被 [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子 用
 
 > 续见 [nodes/def.linear-map.5.md](./def.linear-map.5.md)

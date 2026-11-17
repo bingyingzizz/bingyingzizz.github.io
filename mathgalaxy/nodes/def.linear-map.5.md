@@ -2,4 +2,5 @@
 [在星图里打开](../#n=def.linear-map)　·　第 1 页 [nodes/def.linear-map.md](./def.linear-map.md)　·　上一页 [nodes/def.linear-map.4.md](./def.linear-map.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子 用
 - 被 [`def.representation-morphism`](../nodes/def.representation-morphism.md) 表示同态 用

@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-17T13:09:55.802Z
-> 15 星系 / 106 星团 / 1721 节点 / 3882 连线（强边 3791，弱边 91；其中**不分层**的「推论」66 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-17T13:52:05.562Z
+> 15 星系 / 106 星团 / 1725 节点 / 3891 连线（强边 3799，弱边 92；其中**不分层**的「推论」66 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.3 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -7481,6 +7481,58 @@ $\mu_T$ 叫 $T$ 的**极小多项式**。它是零化 $T$ 的**次数最低**的
 
 参考：Hoffman–Kunze, Linear Algebra, Ch. 6
 
+#### 循环子空间　`def.cyclic-subspace`
+*定义*　循环子空间与循环向量
+
+设 $T:V\to V$ 是域 $K$ 上有限维向量空间的线性映射，$v\in V$。子空间
+$K[T]v:=\operatorname{span}_K\{v,Tv,T^2v,\ldots\}=\{p(T)v:p\in K[x]\}$
+称为由 $v$ **生成**的循环子空间；若 $K[T]v=V$，称 $v$ 为 $T$ 的**循环向量**。存在循环向量的 $V$ 称为**循环**的。
+
+$K[T]v$ 是包含 $v$ 的最小 $T$-不变子空间；反之，任何包含 $v$ 的 $T$-不变子空间都包含全部 $T^kv$。
+令 $\mu_v$ 是使 $p(T)v=0$ 的首一多项式（$K[x]$ 是主理想整环，故存在且唯一），则 $\dim_K K[T]v=\deg\mu_v$，且作为 $K[x]$-模有 $K[T]v\cong K[x]/(\mu_v)$。
+有限维时，$v$ 是循环向量当且仅当 $\deg\mu_v=\dim V$；此时 $\mu_T=\chi_T$。反之，若 $\mu_T=\chi_T$，则存在循环向量（例如取 $1,x,\ldots$ 的模对应）。
+例：友矩阵 $C_d$ 的 $e_1$ 是循环向量（见 `def.companion-matrix`）；$\operatorname{diag}(C_d,C_d)$ 不是循环的，因为它的极小多项式仍为 $d$ 而维数是 $2\deg d$。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12
+
+#### 友矩阵　`def.companion-matrix`
+*定义*　友矩阵：循环模的标准矩阵
+
+设 $K$ 是域，$d(x)=x^m+a_{m-1}x^{m-1}+\cdots+a_0\in K[x]$ 首一、$m\ge1$。其**友矩阵**是
+$C_d=\begin{pmatrix}0&0&\cdots&0&-a_0\\ 1&0&\cdots&0&-a_1\\ 0&1&\cdots&0&-a_2\\ \vdots& &\ddots& &\vdots\\ 0&0&\cdots&1&-a_{m-1}\end{pmatrix}\in M_m(K),$
+即次对角线全为 $1$、最后一列为 $(-a_0,\ldots,-a_{m-1})^T$。则 $C_d$ 的特征多项式与极小多项式都等于 $d$，且 $e_1$ 是循环向量。
+
+这是 $K[x]/(d)$ 上乘 $x$ 在基 $1,x,\ldots,x^{m-1}$ 下的矩阵：$x^m\equiv-(a_0+a_1x+\cdots+a_{m-1}x^{m-1})$ 给出最后一列。
+由 $d(C_d)=0$ 得 $\mu_{C_d}\mid d$；而 $1,x,\ldots,x^{m-1}$ 在 $K[x]/(d)$ 中线性无关，故 $\deg\mu_{C_d}=m=\deg d$，从而 $\mu_{C_d}=d$；又 $\chi_{C_d}$ 与 $d$ 都是首一 $m$ 次且 $\mu\mid\chi$，故 $\chi_{C_d}=d$。
+约定：有的教材把 $1$ 放在上对角线、把系数放在第一行；两种写法差一个转置，特征/极小多项式不变。
+$d=1$ 时 $m=0$，$C_d$ 是空矩阵，本定义只讨论 $m\ge1$。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12；Lang, Algebra, Ch. XIV
+
+#### PID 上有限生成模的结构　`thm.pid-fg-module-structure`
+*定理*　主理想整环上有限生成模的结构定理
+
+设 $R$ 是主理想整环，$M$ 是有限生成 $R$-模。则存在 $r\ge0$、$k\ge0$ 与非零非单位 $d_1,\ldots,d_k\in R$，满足 $d_1\mid d_2\mid\cdots\mid d_k$，使
+$M\cong R^r\oplus R/(d_1)\oplus\cdots\oplus R/(d_k).$
+自由秩 $r$ 与理想 $(d_1),\ldots,(d_k)$（在相差单位的意义下）由 $M$ 唯一确定；$k=0$ 当且仅当 $M$ 无挠。
+
+证明见边 `imp.pid-fg-module-structure`。
+$R=K[x]$、$M$ 来自线性算子 $A$ 时，自由部分为零，$d_i$ 就是 $xI-A$ 的不变因子，分块给出有理标准形（`thm.rational-canonical-form`）。
+在 $K[x]$ 中要求 $d_i$ 首一时，它们唯一；一般 PID 中只在相差单位的意义下唯一。
+
+参考：Dummit–Foote, Abstract Algebra, Ch. 12；Lang, Algebra, Ch. XIV；Hoffman–Kunze, Linear Algebra, Ch. 7
+
+#### 初等因子（矩阵）　`def.elementary-divisor`
+*定义*　矩阵的初等因子：不变因子的素幂分解
+
+设 $R$ 是主理想整环，$A\in M_{m\times n}(R)$ 的非零不变因子为 $d_1\mid\cdots\mid d_r$。把每个 $d_i$ 分解为素元幂的乘积 $d_i=\prod_p p^{e_{i,p}}$；所有满足 $e_{i,p}>0$ 的素幂 $p^{e_{i,p}}$（计重数）称为 $A$ 的**初等因子**。对 $A\in M_n(K)$，把 $xI-A$ 的初等因子称为线性算子 $A$ 的初等因子。
+
+⚠ 消歧：这里的初等因子是矩阵/模论概念，**不是** Weierstrass 初等因子 $E_p(z)=(1-z)\exp(z+\cdots+z^p/p)$（`def.elementary-factor`，复分析中的整函数）。两者仅中文名相同。
+与不变因子的关系：$d_i$ 是初等因子按整除链分组后的乘积；反过来，初等因子唯一决定全部不变因子。
+例：若不变因子为 $x-1$ 与 $(x-1)(x-2)$，则初等因子为 $x-1,\ x-1,\ x-2$。$K$ 代数闭时，$xI-A$ 的初等因子恰为 $(x-\lambda)^s$，每个对应一个 $s$ 阶 Jordan 块（`thm.jordan-canonical-form`）。
+
+参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12
+
 #### 根子空间分解　`thm.primary-decomposition`
 *定理*　定理（主分解）：$V = \bigoplus_i \ker (T - \lambda_i I)^{m_i}$
 
@@ -7658,27 +7710,15 @@ $$\operatorname{diag}\bigl(C_{d_{1}}, C_{d_{2}}, \ldots, C_{d_{s}}\bigr) ,$$
 
 $$C_{d} := \begin{pmatrix} 0 & & & & -a_{0} \\ 1 & 0 & & & -a_{1} \\ & \ddots & \ddots & & \vdots \\ & & 1 & 0 & -a_{m-2} \\ & & & 1 & -a_{m-1} \end{pmatrix} ,$$
 
-且 $d_{1} \mid d_{2} \mid \cdots \mid d_{s}$（依次整除）。这些 $d_{i}$ 叫**不变因子**。
+且 $d_{1} \mid d_{2} \mid \cdots \mid d_{s}$（依次整除），其中每个 $d_{i}$ 是**非单位首一多项式**（$\deg d_{i}\ge1$）；若没有非单位因子（如 $V=0$），约定 $s=0$、分块对角为空矩阵。这些 $d_{i}$ 叫**不变因子**。
 
 **与 Jordan 形的分工**：$K$ 上特征多项式分裂时，有理标准形与 Jordan 形都是完整不变量；不分裂时**只有**有理标准形（在 $K$ 上）可用 —— Jordan 形要到扩域上才存在。
 
 ⭐ **为什么叫「有理」**：历史上指 $K = \mathbb{Q}$ 的情形 —— 正是「特征多项式在 $\mathbb{Q}$ 上不分裂」的典型场合。名字沿用下来，现在指「对任意域都成立」。
 
-**第一步：把矩阵变成模**。把 $V = K^{n}$ 看成 $K[x]$-模，规定 $x \cdot v := Av$。于是 $K[x]$-子模就是 $A$-不变子空间，$K[x]$-模同构就是相似：$A \sim B$ 当且仅当 $V_{A} \cong V_{B}$。由 Cayley–Hamilton 定理 $\chi_{A}(A) = 0$，故 $\chi_{A} \in \operatorname{Ann}(V)$，$V$ 是**挠模**；又 $\dim_{K} V = n$ 给出有限生成。
+**证明思路（完整证明见边 `imp.rational-canonical-form-proof`）**：把 $V=K^n$ 看成 $K[x]$-模（$x\cdot v=Av$）。Cayley–Hamilton 给 $\chi_A(A)=0$，故 $V$ 是有限生成挠模。由 PID 上有限生成模的结构定理（`thm.pid-fg-module-structure`），$V\cong\bigoplus_i K[x]/(d_i)$，$d_1\mid\cdots\mid d_s$ 非单位首一。每个循环模取基 $1,x,\ldots,x^{m-1}$，乘 $x$ 的矩阵正是友矩阵 $C_{d_i}$（`def.companion-matrix`；循环子空间见 `def.cyclic-subspace`）。唯一性由 $xI-A$ 的 Smith 不变因子给出（`def.invariant-factor`、`thm.smith-normal-form`）。
 
-**引理 1（Smith 标准形，$K[x]$ 版）**：设 $R = K[x]$。任意 $m \times n$ 矩阵 $M$ 经初等行/列变换可化成 $\operatorname{diag}(d_{1}, \ldots, d_{r}, 0, \ldots, 0)$，其中 $d_{1} \mid d_{2} \mid \cdots \mid d_{r}$ 非零，$r = \operatorname{rank} M$。**证明**：在所有与 $M$ 等价的矩阵中，取「非零元素的最小次数」$\delta$ 最小的一个；把达到 $\delta$ 的元素挪到 $(1,1)$，记作 $a$。若第一列某元素 $b$ 不被 $a$ 整除，作带余除法 $b = qa + r$（$\deg r < \delta$），把第 1 行乘 $-q$ 加到该行，得到含次数更小非零元的等价矩阵，与 $\delta$ 的最小性矛盾；故 $a$ 整除第一列全部元素，用行变换清空第一列。同理用列变换清空第一行。若余下子块有元素不被 $a$ 整除，把该行加到第 1 行、再用列变换减去 $a$ 的倍数，又得到次数更小的非零元，矛盾；故 $a$ 整除整个余下子块。对余下子块归纳，得 $\operatorname{diag}(a, e_{1}, \ldots)$；初等变换不改变「全部元素生成的理想」，故 $a \mid e_{1}$，整除链成立。$\square$
-
-**引理 2（结构定理）**：设 $M$ 是有限生成 $R$-模。取生成元 $x_{1}, \ldots, x_{n}$，得满射 $R^{n} \to M$，其核由有限多个列向量 $a_{1}, \ldots, a_{m} \in R^{n}$ 生成（$K[x]$ 是 PID 故为 Noether 环，PID 上自由模的子模有限生成 —— 标准事实，本图未单列节点），即 $M \cong \operatorname{coker}(A)$，$A = (a_{1} \cdots a_{m})$。对 $A$ 取 Smith 标准形：存在可逆矩阵 $P, Q$ 使 $PAQ = \operatorname{diag}(d_{1}, \ldots, d_{r}, 0)$。可逆矩阵只是换基，故 $\operatorname{coker}(A) \cong \operatorname{coker}(PAQ) \cong R^{n-r} \oplus R/(d_{1}) \oplus \cdots \oplus R/(d_{r})$：第 $i$ 个坐标方向被 $d_{i} e_{i}$ 生成，$i > r$ 的方向不被任何关系碰到。$\square$
-
-**存在性**：对 $V_{A}$ 用引理 2。因 $V$ 挠，自由部分必须为零：若 $R^{n-r} \ne 0$，取 $e_{1}$，则 $\chi_{A} e_{1} \ne 0$，与 $\chi_{A} \in \operatorname{Ann}(V)$ 矛盾。再删去单位 $d_{i}$（此时 $R/(d_{i}) = 0$），得 $V \cong \bigoplus_{i=1}^{s} R/(d_{i})$，其中 $d_{1} \mid \cdots \mid d_{s}$ 非单位首一多项式。
-
-**从循环模到友矩阵**：在 $R/(d)$（$d = x^{m} + a_{m-1}x^{m-1} + \cdots + a_{0}$）中取 $K$-基 $1, x, \ldots, x^{m-1}$。乘 $x$ 把前 $m-1$ 个基向量送到下一个，把 $x^{m-1}$ 送到 $x^{m} \equiv -(a_{0} + a_{1}x + \cdots + a_{m-1}x^{m-1})$。该算子在这组基下的矩阵正是 $C_{d}$（次对角线全 $1$，最后一列 $(-a_{0}, \ldots, -a_{m-1})^{T}$）。把各循环块的基拼起来，$A$ 相似于 $\operatorname{diag}(C_{d_{1}}, \ldots, C_{d_{s}})$。
-
-**唯一性**：设 $\bigoplus_{i} R/(d_{i}) \cong \bigoplus_{j} R/(e_{j})$，两条链都整除。对不可约 $p \in K[x]$ 与 $k \ge 1$，令 $M[p^{k}] := \{m : p^{k}m = 0\}$ —— 这是由 $M$ 本身决定的子模，不依赖分解。对 $R/(d)$，写 $d = p^{v}u$、$p \nmid u$，由中国剩余定理 $R/(d) \cong R/(p^{v}) \oplus R/(u)$，故 $R/(d)[p^{k}] \cong R/(p^{\min(k,v)})$。于是 $M[p^{k}] \cong \bigoplus_{i} R/(p^{\min(k, v_{p}(d_{i}))})$；把 $p^{k-1}M[p^{k}]/p^{k}M[p^{k}]$ 看成 $R/(p)$-向量空间，其维数恰为「$v_{p}(d_{i}) \ge k$ 的 $i$ 的个数」$c_{k}(p)$。这个维数由 $M$ 决定，故所有 $c_{k}(p)$ 由 $M$ 决定。注意整除链是**递增**的 $d_{1}\mid d_{2}\mid\cdots\mid d_{s}$，故 $v_{p}(d_{1})\le\cdots\le v_{p}(d_{s})$；把 $c_{k}(p)$ 从大端读：$\#\{k : c_{k}(p)\ge i\}$ 数的是「满足 $v_{p}(d_{j})\ge k$ 的 $j$ 至少有 $i$ 个」的那些 $k$，而 $j$ 单调递增，所以它等于 $v_{p}(d_{s-i+1})$。于是 $v_{p}(d_{s-i+1}) = \#\{k : c_{k}(p) \ge i\}$ 由 $M$ 决定（$i=1$ 对应链上最大的 $d_{s}$）；对每个 $p$ 都如此，全部 $d_{i}$ 就由 $M$ 决定。
-
-**收尾：极小多项式与特征多项式**：每个 $C_{d}$ 的特征多项式与极小多项式都是 $d$（对 $R/(d)$ 上乘 $x$ 的算子，$d$ 是零化多项式且次数最小：$1, x, \ldots, x^{m-1}$ 线性无关，而 $x^{m}$ 已落入它们的张成）。分块对角矩阵的特征多项式是各块之积 $d_{1}\cdots d_{s}$；极小多项式是各块极小多项式的最小公倍，整除链下即 $d_{s}$。这正是「$d_{s}$ 是极小多项式、$d_{1}\cdots d_{s}$ 是特征多项式」的来历。∎
-
-⚠️ **本图缺的节点/边**：证明用到 Cayley–Hamilton（有节点，但没有连到本条）与「$K[x]$ 上有限生成模的结构定理」（本图没有这个节点），所以两条引理连同证明一起写在这里，而不是引用一条并不存在的边。
+**链条**：特征多项式 $\chi_A$（`def.char-poly`）$\to$ Cayley–Hamilton（`thm.cayley-hamilton`）$\to$ 挠模 $\to$ 结构定理 $\to$ 不变因子（`def.invariant-factor`）$\to$ 友矩阵分块。特征多项式是各块之积 $d_1\cdots d_s$，极小多项式是 $d_s$；这两条也解释了「$d_s$ 是极小多项式」的来源。
 
 参考：Hoffman–Kunze, Linear Algebra, Ch. 7（The Rational and Jordan Forms）· 有理标准形；Dummit–Foote, Abstract Algebra, Ch. 12（Modules over Principal Ideal Domains）· 主理想整环上的模；北大《高等代数》· 有理标准形
 
@@ -7689,7 +7729,7 @@ $$C_{d} := \begin{pmatrix} 0 & & & & -a_{0} \\ 1 & 0 & & & -a_{1} \\ & \ddots & 
 
 $P A Q = \operatorname{diag}(d_1, \ldots, d_r, 0, \ldots, 0), \qquad d_1 \mid d_2 \mid \cdots \mid d_r .$
 
-这些非零元 $d_i$（在相差单位的意义下唯一；$R = K[x]$ 时取首一代表）称为 $A$ 的**不变因子**。等价地，$d_1 \cdots d_k$ 是 $A$ 的所有 $k$ 阶子式的最大公因子。
+这些非零元 $d_i$（在相差单位的意义下唯一；$R = K[x]$ 时取首一代表）称为 $A$ 的**不变因子**。
 
 特别地，对 $A \in M_n(K)$，把 $xI - A \in M_n(K[x])$ 的非常数不变因子称为线性算子 $A$ 的**不变因子**。
 
@@ -7699,7 +7739,7 @@ $P A Q = \operatorname{diag}(d_1, \ldots, d_r, 0, \ldots, 0), \qquad d_1 \mid d_
 
 **与初等因子**：把每个 $d_i$ 分解成不可约多项式的幂，得到的素幂因子叫初等因子；Jordan 标准形在域分裂时用初等因子陈述。
 
-**矩阵版本 vs 算子版本**：Smith 标准形对任意矩阵（可长方形、环上）陈述；算子的不变因子是 $xI - A$ 这一特殊矩阵的不变因子。
+**矩阵版 vs 算子版**：Smith 标准形对任意矩阵陈述；算子的不变因子是 $xI-A$ 的不变因子。
 
 参考：Hoffman–Kunze, Linear Algebra, Ch. 7；Dummit–Foote, Abstract Algebra, Ch. 12
 
@@ -50591,6 +50631,58 @@ $$\dim \ker (T - \lambda I)^{k}$$
 
 最小多项式在代数闭包中分裂。
 
+#### 定义引用：「线性映射」→ 循环子空间　`dep.cyclic-linearmap`
+
+循环子空间由 $T$ 的迭代生成。
+
+#### 定义引用：「向量空间」→ 循环子空间　`dep.cyclic-vectorspace`
+
+子空间与张成都在 $K$-向量空间里。
+
+#### 定义引用：「矩阵」→ 友矩阵　`dep.companion-matrix`
+
+友矩阵是 $M_m(K)$ 中的具体矩阵。
+
+#### 定义引用：「不变因子」→ 初等因子（矩阵）　`dep.elemdiv-invariant`
+
+初等因子由不变因子的素幂分解得到。
+
+#### 定义引用：「模」→ PID 上有限生成模的结构　`dep.pidfg-module`
+
+结构定理的对象是有限生成模。
+
+#### 定义引用：「主理想整环」→ PID 上有限生成模的结构　`dep.pidfg-pid`
+
+主理想整环保证理想由单个元素生成。
+
+#### 模 + 主理想整环 + Smith 标准形 ⟹ PID 上有限生成模的结构　`imp.pid-fg-module-structure`
+
+设 $x_1,\ldots,x_n$ 生成 $M$，取满射 $\varphi:R^n\to M$、$e_i\mapsto x_i$。核 $K=\ker\varphi$ 是 $R^n$ 的子模。
+
+先证 $K$ 有限生成且自由（PID 上自由模的子模自由）：对 $n$ 归纳。$n=0$ 显然。$n\ge1$ 时令 $\pi:R^n\to R$ 为最后一个坐标，$\pi(K)$ 是 $R$ 的理想，故 $\pi(K)=(a)$。若 $a=0$，则 $K\subseteq R^{n-1}$，由归纳 $K$ 自由。若 $a\ne0$，取 $k_0\in K$ 使 $\pi(k_0)=a$；对任意 $k\in K$ 有 $\pi(k)=ra$，故 $k-rk_0\in K\cap R^{n-1}$。于是 $K=Rk_0\oplus(K\cap R^{n-1})$，由归纳 $K$ 自由。
+
+取 $K$ 的 $R$-基为列向量 $a_1,\ldots,a_m$，组成 $n\times m$ 矩阵 $A$。换基给出 $M\cong R^n/K=\operatorname{coker}(A)$。对 $A$ 用 Smith 标准形：存在 $P\in\operatorname{GL}_n(R)$、$Q\in\operatorname{GL}_m(R)$ 使
+$$PAQ=\operatorname{diag}(d_1,\ldots,d_r,0,\ldots,0),\qquad d_1\mid\cdots\mid d_r.$$
+左乘 $P$、右乘 $Q$ 只是换 $R^n$ 与 $R^m$ 的基，故 $\operatorname{coker}(A)\cong\operatorname{coker}(PAQ)$。后者的像由 $d_1e_1,\ldots,d_re_r$ 生成，故
+$$\operatorname{coker}(PAQ)\cong R^{n-r}\oplus R/(d_1)\oplus\cdots\oplus R/(d_r).$$
+删去单位 $d_i$（此时 $R/(d_i)=0$），余下的非零非单位项仍满足整除链，即得所述分解。
+
+唯一性。自由秩由 $r=\dim_{\operatorname{Frac}R}(M\otimes_R\operatorname{Frac}R)$ 决定。对素元 $p$ 与 $j\ge1$，令 $M[p^j]=\{m\in M:p^jm=0\}$，它由 $M$ 决定；$p^{j-1}M[p^j]/p^jM[p^j]$ 是 $R/(p)$-向量空间。对 $R/(d)$，写 $d=p^vu$（$p\nmid u$），由中国剩余定理 $R/(d)\cong R/(p^v)\oplus R/(u)$，且 $R/(d)[p^j]\cong R/(p^{\min(j,v)})$。于是
+$$c_j(p):=\dim_{R/(p)}\frac{p^{j-1}M[p^j]}{p^jM[p^j]}=\#\{i:v_p(d_i)\ge j\}$$
+由 $M$ 决定。整除链给出 $v_p(d_1)\le\cdots\le v_p(d_k)$，故
+$$v_p(d_i)=\#\{j\ge1:c_j(p)\ge k-i+1\},$$
+全部 $d_i$ 由 $M$ 决定（相差单位）。$K[x]$ 中取首一代表即唯一。$\blacksquare$
+
+#### 友矩阵 + 循环子空间 + PID 上有限生成模的结构 + Cayley–Hamilton 定理 + Smith 标准形 + 不变因子 ⟹ 有理标准形　`imp.rational-canonical-form-proof`
+
+把 $V=K^n$ 看成 $K[x]$-模，$x\cdot v=Av$。Cayley–Hamilton 给 $\chi_A(A)=0$，故 $V$ 是挠模；$\dim_KV=n$ 给有限生成。
+
+由 `thm.pid-fg-module-structure`（$R=K[x]$），$V\cong\bigoplus_{i=1}^s K[x]/(d_i)$，其中 $d_1\mid\cdots\mid d_s$ 是非单位首一多项式；自由部分为零，因为 $V$ 挠。
+
+对每个循环模 $K[x]/(d)$，记 $d=x^m+a_{m-1}x^{m-1}+\cdots+a_0$，取 $K$-基 $1,x,\ldots,x^{m-1}$。乘 $x$ 的矩阵正是友矩阵 $C_d$（`def.companion-matrix`）：$x^m\equiv-(a_0+a_1x+\cdots+a_{m-1}x^{m-1})$ 给出最后一列。把各循环块的基拼起来，$A$ 相似于 $\operatorname{diag}(C_{d_1},\ldots,C_{d_s})$。
+
+唯一性：$d_i$ 恰是 $xI-A$ 的非单位不变因子（Smith 标准形，`thm.smith-normal-form`；`def.invariant-factor`），而 Smith 标准形的对角元在相差单位下由 $xI-A$ 唯一确定；取首一代表即唯一。反过来，若 $B=\operatorname{diag}(C_{d_1},\ldots,C_{d_s})$ 且整除链相同，则对应的 $K[x]$-模同构，故 $B\sim A$。$\blacksquare$
+
 #### 定义引用：「线性无关与基」→ 内积　`dep.vs-innerproduct`
 
 内积是加在向量空间上的**额外结构**：三条公理里的第一条就是「对第一变元线性」，它用的就是 $V$ 的运算。
@@ -68673,6 +68765,10 @@ Z-Mod 与 Ab 等价：整系数模就是阿贝尔群，这是模范畴与阿贝�
 
 行空间与列空间维数相等（都等于秩），但分别住在 $K^n$ 与 $K^m$；转置把两者互换。
 
+#### Jordan 标准形 ～ 有理标准形　`ana.jcf-rcf`
+
+同一相似分类问题的两种标准形：Jordan 形要求特征多项式分裂，把循环块进一步拆成 Jordan 块；有理标准形对任意域都成立，用不变因子/友矩阵作块。分裂域上 Jordan 形是有理标准形按初等因子 $(x-\lambda)^s$ 的细化。
+
 #### n 次方根 ～ p-级数　`ana.nthroot-p-series`
 
 $p$ 级数族是说明根值判别法边界的标准例子：对 $a_{n} = n^{-p}$ 恒有 $\alpha = \lim \sqrt[n]{n^{-p}} = 1$，判别法失效，而 $p$ 级数本身由 Cauchy 凝聚判别法定敛散。两者是同一族级数上的两种工具，不是依赖。
@@ -69470,13 +69566,17 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **内积空间与正交性 ↔ 线性映射与秩**　4 条节点级连线
 - **矩阵与行列式 ↔ 向量空间与基**　3 条节点级连线
 - **线性映射与秩 ↔ 矩阵与行列式**　10 条节点级连线
-- **矩阵与行列式 ↔ 特征值与 Jordan 型**　6 条节点级连线
+- **矩阵与行列式 ↔ 特征值与 Jordan 型**　9 条节点级连线
 - **矩阵与行列式 ↔ 多重线性与张量**　11 条节点级连线
 - **内积空间与正交性 ↔ 矩阵与行列式**　4 条节点级连线
-- **矩阵与行列式 ↔ 整环与分解**　2 条节点级连线
-- **线性映射与秩 ↔ 特征值与 Jordan 型**　4 条节点级连线
+- **矩阵与行列式 ↔ 整环与分解**　3 条节点级连线
+- **线性映射与秩 ↔ 特征值与 Jordan 型**　5 条节点级连线
 - **多项式与因式分解 ↔ 特征值与 Jordan 型**　4 条节点级连线
 - **Galois 理论 ↔ 特征值与 Jordan 型**　2 条节点级连线
+- **特征值与 Jordan 型 ↔ 代数结构**　2 条节点级连线
+- **整环与分解 ↔ 特征值与 Jordan 型**　2 条节点级连线
+- **整环与分解 ↔ 代数结构**　9 条节点级连线
+- **矩阵与行列式 ↔ 代数结构**　2 条节点级连线
 - **内积空间与正交性 ↔ 特征值与 Jordan 型**　6 条节点级连线
 - **内积空间与正交性 ↔ 多重线性与张量**　16 条节点级连线
 - **内积空间与正交性 ↔ 数系的构造**　3 条节点级连线
@@ -69587,7 +69687,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **代数结构 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整除与同余**　2 条节点级连线
 - **实数的运算与不等式 ↔ 整除与同余**　2 条节点级连线
-- **整环与分解 ↔ 代数结构**　8 条节点级连线
 - **整环与分解 ↔ 整除与同余**　3 条节点级连线
 - **多项式与因式分解 ↔ 整环与分解**　2 条节点级连线
 - **复变函数基础 ↔ 数论函数与素数分布**　4 条节点级连线

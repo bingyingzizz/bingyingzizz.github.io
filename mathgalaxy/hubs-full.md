@@ -31,7 +31,7 @@
 - **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 - **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
 
-（共 1100 个节点有非零计数；这里列前 20 条。）
+（共 1103 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -39,6 +39,7 @@
 
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · layer 21 · 测度的构造
 - **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 31 · 曲面的地形
+- **9 / 5** `thm.rational-canonical-form` 有理标准形 · layer 21 · 特征值与 Jordan 型
 - **8 / 7** `def.smooth-manifold` 光滑流形 · layer 17 · 内蕴几何
 - **8 / 5** `thm.de-rham` de Rham 定理 · layer 36 · 微分形式、积分与 de Rham
 - **8 / 5** `thm.theorema-egregium` 绝妙定理 · layer 37 · 内蕴几何
@@ -56,9 +57,8 @@
 - **6 / 6** `thm.primitive-root-exists` 模素数有原根 · layer 13 · 二次剩余与原根
 - **6 / 6** `def.representable` 表示函子 · layer 14 · 预层与米田
 - **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
-- **6 / 6** `def.group-representation` 有限群表示 · layer 17 · 群与代数表示
 
-（共 1715 个节点有非零计数；这里列前 20 条。）
+（共 1719 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -77,7 +77,7 @@
 - **12 团 / 30 节点** `def.limit` 极限 · layer 13 · 图与极限
 - **12 团 / 25 节点** `def.ring` 环 · layer 10 · 代数结构
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
-- **12 团 / 19 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
+- **12 团 / 20 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
 - **11 团 / 26 节点** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **11 团 / 22 节点** `def.abs` 绝对值 |x| · layer 12 · 实数的运算与不等式
 - **10 团 / 36 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
@@ -85,5 +85,5 @@
 - **10 团 / 25 节点** `def.category` 范畴 · layer 9 · 范畴与图
 - **10 团 / 19 节点** `def.category-of-topological-spaces` 拓扑空间范畴 · layer 10 · 范畴与图
 
-（共 1100 个节点有非零计数；这里列前 20 条。）
+（共 1103 个节点有非零计数；这里列前 20 条。）
 

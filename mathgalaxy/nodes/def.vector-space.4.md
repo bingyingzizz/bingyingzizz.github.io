@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.category-of-vector-spaces`](../nodes/def.category-of-vector-spaces.md) 向量空间范畴 用
+- 被 [`def.cyclic-subspace`](../nodes/def.cyclic-subspace.md) 循环子空间 用
 - 被 [`def.convex-set`](../nodes/def.convex-set.md) 凸集 用
 - 被 [`def.star-shaped-at-point`](../nodes/def.star-shaped-at-point.md) 关于一点的星形集 用
 - 被 [`def.complemented-subspace`](../nodes/def.complemented-subspace.md) 可补子空间 用
@@ -10,6 +11,5 @@
 - 被 [`def.subspace`](../nodes/def.subspace.md) 子空间 用
 - 被 [`def.linear-map`](../nodes/def.linear-map.md) 线性映射 用
 - 被 [`def.linear-isomorphism`](../nodes/def.linear-isomorphism.md) 线性同构 用
-- 被 [`def.field-extension`](../nodes/def.field-extension.md) 域扩张 用
 
 > 续见 [nodes/def.vector-space.5.md](./def.vector-space.5.md)

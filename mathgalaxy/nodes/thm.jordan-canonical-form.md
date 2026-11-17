@@ -9,6 +9,7 @@ layer 21 · 定理 · 特征值与 Jordan 型 · 抽象代数
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`cor.jordan-uniqueness`](../nodes/cor.jordan-uniqueness.md) Jordan 型的唯一性
+- ～弱边 [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.jordan-canonical-form.3.md](./thm.jordan-canonical-form.3.md)

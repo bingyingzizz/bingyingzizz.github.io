@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1721 节点 / 3882 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1725 节点 / 3891 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,11 +59,13 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（13 处）
+## 二、陈述用到更深的定义却没有边（15 处）
 
 - `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L37）　落差 17
 - `def.symplectic-basis`（辛基 · L19）用到 `def.orthonormal-set`（正交基 · L24）　落差 5
 - `def.category-of-topological-spaces`（拓扑空间范畴 · L10）用到 `def.subspace`（子空间 · L14）　落差 4
+- `def.companion-matrix`（友矩阵 · L15）用到 `def.minimal-poly`（极小多项式 · L19）　落差 4
+- `def.companion-matrix`（友矩阵 · L15）用到 `def.char-poly`（特征多项式 · L18）　落差 3
 - `prop.matrix-category`（矩阵范畴 · L13）用到 `def.category-of-vector-spaces`（向量空间范畴 · L15）　落差 2
 - `thm.riesz-markov`（Riesz–Markov 表示 · L21）用到 `def.signed-measure`（符号测度 · L23）　落差 2
 - `def.algebra-over-ring`（环上的代数 · L12）用到 `def.linear-map`（线性映射 · L14）　落差 2
