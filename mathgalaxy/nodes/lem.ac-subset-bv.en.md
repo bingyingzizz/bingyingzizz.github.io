@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=lem.ac-subset-bv)　·　[Chinese page (authoritative)](./lem.ac-subset-bv.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · lemma · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.ac-subset-bv.md` and `proofs/`.
+## Statement · **draft**
+$$AC([a, b]) \subseteq BV([a, b])$$
 
+## Notes · **draft**
+Proof: by absolute continuity choose $\delta$ such that “total length $< \delta \implies$ total variation $< 1$”. Split [a,b] into finitely many pieces each of length $< \delta$; then the variation of each piece is $\le 1$, and summing gives $\le$ the number of pieces — finite. ∎
 
-Cite: `lem.ac-subset-bv` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.ac-subset-bv.en.2.md

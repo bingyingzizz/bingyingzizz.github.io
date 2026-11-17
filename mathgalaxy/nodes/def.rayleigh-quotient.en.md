@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.rayleigh-quotient)　·　[Chinese page (authoritative)](./def.rayleigh-quotient.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.rayleigh-quotient.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: turns "eigenvalue" into an **extremal problem**. In this way eigenvalues can be "optimized" instead of only "solved for".
 
+Let $A$ be a Hermitian matrix of order $n$. For $x \ne 0$ define the **Rayleigh quotient**
 
-Cite: `def.rayleigh-quotient` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$R_{A}(x) := \frac{x^{*}Ax}{x^{*}x} .$$
 
+> continued in nodes/def.rayleigh-quotient.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.orthogonally-similar)　·　[Chinese page (authoritative)](./def.orthogonally-similar.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 31 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.orthogonally-similar.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: fills the cell between "similarity" and "congruence" — when a change of basis both preserves the structure (similarity) and preserves lengths (orthogonal/unitary), this is it. The spectral theorem says exactly that "a symmetric matrix is orthogonally similar to a diagonal matrix".
 
-
-Cite: `def.orthogonally-similar` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.orthogonally-similar.en.2.md

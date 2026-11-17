@@ -1,0 +1,9 @@
+# integral over a set　`def.integral-over-set`
+English entry · root `../`
+[in graph](../#n=def.integral-over-set)　·　[Chinese page (authoritative)](./def.integral-over-set.md)
+
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `def.integral-over-set` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

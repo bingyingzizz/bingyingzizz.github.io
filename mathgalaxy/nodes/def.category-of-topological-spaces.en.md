@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-topological-spaces)　·　[Chinese page (authoritative)](./def.category-of-topological-spaces.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.category-of-topological-spaces.md` and `proofs/`.
+## Statement · **draft**
+**The category of topological spaces** $\mathbf{Top}$: objects are topological spaces, morphisms are continuous maps, composition is composition of maps, and identities are identity maps.
 
-
-Cite: `def.category-of-topological-spaces` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-topological-spaces.en.2.md

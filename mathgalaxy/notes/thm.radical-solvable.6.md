@@ -1,6 +1,6 @@
 # 根式可解 与 伽罗瓦群可解　`thm.radical-solvable`　·　说明
 根 `../`
 
-**逐层加闭包**：令 $M_{i}$ 为 $E_{i}$ 的所有 $F^{\prime}$-共轭生成的合成域，则 $M_{0}=F^{\prime}$、$M_{m}=M$，且每个 $M_{i}/F^{\prime}$ 伽罗瓦。关键是 $M_{i}$ 由 $M_{i-1}$ 添加若干 $\alpha_{i}$ 的共轭 $\beta$ 得到，$\beta^{n_{i}}\in M_{i-1}$：写 $\beta=\sigma(\alpha_{i})$，则 $\beta^{n_{i}}=\sigma(\alpha_{i}^{n_{i}})\in\sigma(F_{i-1})\subseteq M_{i-1}$。于是 $M_{i}/M_{i-1}$ 由若干 $n_{i}$ 次根生成，且 $\zeta_{n_{i}}\in F^{\prime}\subseteq M_{i-1}$，它是 Kummer 扩张：任意 $\tau\in\operatorname{Gal}(M_{i}/M_{i-1})$ 把每个生成元 $\beta$ 送到 $\zeta_{n_{i}}^{k_{\beta}}\beta$，$\tau\mapsto(k_{\beta})_{\beta}$ 是到 $(\mathbb{Z}/n_{i})^{r}$ 的单同态，故 $\operatorname{Gal}(M_{i}/M_{i-1})$ 交换。
+**$\implies$（根式可解 $\implies$ 群可解）**：设 $F=F_{0}\subseteq\cdots\subseteq F_{m}$ 是根式塔、$K\subseteq F_{m}$、$\alpha_{i}^{n_{i}}\in F_{i-1}$。取 $N$ 为各 $n_{i}$ 的公倍数，令 $F^{\prime}=F(\zeta_{N})$、$E_{i}=F_{i}(\zeta_{N})$；则 $E_{i}=E_{i-1}(\alpha_{i})$、$\alpha_{i}^{n_{i}}\in E_{i-1}$，仍是根式塔，且底域 $E_{0}=F^{\prime}$ 含 $\zeta_{n_{i}}$。令 $M$ 为 $E_{m}$ 在 $F^{\prime}$ 上的伽罗瓦闭包（各生成元极小多项式之积的分裂域），则 $M/F^{\prime}$ 伽罗瓦，且 $K^{\prime}=K(\zeta_{N})\subseteq M$。
 
 > 续见 notes/thm.radical-solvable.7.md

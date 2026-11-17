@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.polynomial-ring)　·　[Chinese page (authoritative)](./def.polynomial-ring.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 12 · definition · cluster Polynomials and Factorization (`algebra.polynomial`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.polynomial-ring.md` and `proofs/`.
+## Statement · **draft**
+For a field $K$, on the set $K[x]$ of all univariate polynomials over it define
 
+$$(f + g)_i := a_i + b_i, \qquad (fg)_i := \sum_{j=0}^{i} a_j\, b_{i-j}$$
 
-Cite: `def.polynomial-ring` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(addition termwise, multiplication **convolution**). Then $K[x]$ is a commutative ring with unity, called the **polynomial ring** over $K$, and
 
+$$\deg(fg) = \deg f + \deg g \qquad (f, g \ne 0)$$
+
+> continued in nodes/def.polynomial-ring.en.2.md

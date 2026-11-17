@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.algebraic-extension)　·　[Chinese page (authoritative)](./def.algebraic-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.algebraic-extension.md` and `proofs/`.
+## Statement · **draft**
+A field extension $K/F$ is **algebraic** if **every** element of $K$ is algebraic over $F$; otherwise it is **transcendental**.
 
-
-Cite: `def.algebraic-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.algebraic-extension.en.2.md

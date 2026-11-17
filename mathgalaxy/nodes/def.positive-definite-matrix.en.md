@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.positive-definite-matrix)　·　[Chinese page (authoritative)](./def.positive-definite-matrix.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.positive-definite-matrix.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: writes "this quadratic form is positive everywhere" as a matrix condition. In physics it is an "energy form"; in geometry it is another way of writing an inner product.
 
+Let $A \in M_{n}(\mathbb{C})$ be a Hermitian matrix. Call $A$ **positive definite** if for every $x \ne 0$
 
-Cite: `def.positive-definite-matrix` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$x^{*}Ax > 0 ;$$
 
+> continued in nodes/def.positive-definite-matrix.en.2.md

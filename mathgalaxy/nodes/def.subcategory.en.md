@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.subcategory)　·　[Chinese page (authoritative)](./def.subcategory.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.subcategory.md` and `proofs/`.
+## Statement · **draft**
+A **subcategory** of a category $\mathcal{C}$, written $\mathcal{C}'$, consists of:
 
+1. a subclass $\operatorname{Ob}(\mathcal{C}') \subseteq \operatorname{Ob}(\mathcal{C})$ of the objects;
+2. for each pair $X, Y \in \mathcal{C}'$, a subset $\operatorname{Hom}_{\mathcal{C}'}(X, Y) \subseteq \operatorname{Hom}_{\mathcal{C}}(X, Y)$;
 
-Cite: `def.subcategory` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.subcategory.en.2.md

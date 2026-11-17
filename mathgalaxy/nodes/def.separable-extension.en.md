@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.separable-extension)　·　[Chinese page (authoritative)](./def.separable-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.separable-extension.md` and `proofs/`.
+## Statement · **draft**
+An algebraic extension $K/F$ is **separable** if for every $\alpha \in K$ the minimal polynomial $m_{\alpha}$ has **no repeated roots** in $K$ (equivalently: $m_{\alpha}$ and its formal derivative $m_{\alpha}'$ are coprime).
 
+**Over a field of characteristic 0 every algebraic extension is automatically separable.**
 
-Cite: `def.separable-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.separable-extension.en.2.md

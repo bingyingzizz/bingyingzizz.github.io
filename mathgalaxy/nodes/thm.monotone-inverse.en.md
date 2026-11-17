@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-inverse)　·　[Chinese page (authoritative)](./thm.monotone-inverse.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Continuity and Compactness (`analysis.continuity`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.monotone-inverse.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be **strictly monotone** and continuous on the interval $I$. Then
 
+- $f(I)$ is an interval ($f$ maps intervals to intervals);
+- $f : I \to f(I)$ is a bijection, its inverse $f^{-1} : f(I) \to I$ is also continuous, and it is monotone **in the same direction** (if $f$ is increasing then $f^{-1}$ is increasing).
 
-Cite: `thm.monotone-inverse` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.monotone-inverse.en.2.md

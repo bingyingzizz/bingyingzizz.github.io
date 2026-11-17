@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.hermitian-matrix)　·　[Chinese page (authoritative)](./def.hermitian-matrix.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Hermitian / Symmetric Matrix` (short) · `Hermitian and Symmetric Matrices` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.hermitian-matrix.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: writes "self-adjoint" as a matrix condition. In the complex case it is called **Hermitian**, in the real case **symmetric**. Their hallmarks are: **all eigenvalues real**, and **orthogonally diagonalizable**.
 
-
-Cite: `def.hermitian-matrix` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.hermitian-matrix.en.2.md

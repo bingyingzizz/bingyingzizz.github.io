@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.conjugate-transpose)　·　[Chinese page (authoritative)](./def.conjugate-transpose.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 names: `Conjugate Transpose` (short) · `Conjugate Transpose (Adjugate)` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.conjugate-transpose.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: over the complex field the transpose alone is not enough — the inner product is conjugate-linear in the second variable, so moving $A$ to the other side moves the conjugate along with it. This is the conjugate transpose.
 
-
-Cite: `def.conjugate-transpose` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.conjugate-transpose.en.2.md

@@ -3,4 +3,3 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.galois-extension`](../nodes/def.galois-extension.md) 伽罗瓦扩张 用
-- 被 [`thm.solvable-quotients`](../nodes/thm.solvable-quotients.md) 可解性对子群与商群封闭 用

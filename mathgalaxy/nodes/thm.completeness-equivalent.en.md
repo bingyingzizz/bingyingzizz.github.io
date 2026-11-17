@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.completeness-equivalent)　·　[Chinese page (authoritative)](./thm.completeness-equivalent.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · theorem · cluster Equivalent Forms of Completeness of the Reals (`analysis.completeness`) · Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.completeness-equivalent.md` and `proofs/`.
+## Statement · **draft**
+On $\mathbb{R}$ the following six statements are **mutually equivalent**:
 
+**(1) Supremum principle**: every nonempty subset of $\mathbb{R}$ that is bounded above has a supremum.
 
-Cite: `thm.completeness-equivalent` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+**(2) Monotone bounded theorem**: every increasing sequence bounded above converges.
 
+> continued in nodes/thm.completeness-equivalent.en.2.md

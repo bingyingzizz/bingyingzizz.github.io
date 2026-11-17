@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-sets)　·　[Chinese page (authoritative)](./def.category-of-sets.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.category-of-sets.md` and `proofs/`.
+## Statement · **draft**
+**The category of sets** $\mathbf{Set}$: objects are sets, morphisms are functions, composition is composition of maps, and identities are identity maps.
 
+In $\mathbf{Set}$ products are cartesian products and coproducts are disjoint unions; it is the standard target of the forgetful functor.
 
-Cite: `def.category-of-sets` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-sets.en.2.md

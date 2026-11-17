@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.caratheodory-measurable)　·　[Chinese page (authoritative)](./def.caratheodory-measurable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Constructing Measures (`analysis.measure`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.caratheodory-measurable.md` and `proofs/`.
+## Statement · **draft**
+Let $\mu^{*}$ be an outer measure on $X$. A set $A \subseteq X$ is called **$\mu^{*}$-measurable** iff $A$ splits every set “cleanly into two pieces”:
 
+$$\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)\quad  \forall E \subseteq X$$
 
-Cite: `def.caratheodory-measurable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.caratheodory-measurable.en.2.md

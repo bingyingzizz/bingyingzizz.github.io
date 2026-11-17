@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.laurent-series)　·　[Chinese page (authoritative)](./def.laurent-series.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · definition · cluster Cauchy Theory (`analysis.cauchy`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.laurent-series.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: relax a power series into a series “on both sides” — the negative powers describe the blow-up of the function near the centre, the positive powers describe its behaviour far away.
 
+Let $0 \le r < R \le +\infty$, and the annulus $A_{r,R}(a) := \{ z : r < |z - a| < R \}$. A series of the form
 
-Cite: `def.laurent-series` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.laurent-series.en.2.md

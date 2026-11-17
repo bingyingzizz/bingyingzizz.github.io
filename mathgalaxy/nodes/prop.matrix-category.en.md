@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.matrix-category)　·　[Chinese page (authoritative)](./prop.matrix-category.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.matrix-category.md` and `proofs/`.
+## Statement · **draft**
+When $k$ is commutative, $\operatorname{Mat}(k)$ (objects $\mathbb{N}$, $\operatorname{Hom}(m,n) = M_{n \times m}(k)$, composition matrix multiplication) is a **small category**;
 
+when $k$ is a field, $\operatorname{Mat}(k) \simeq$ the category of finite-dimensional $k$-vector spaces (**equivalent but not isomorphic**).
 
-Cite: `prop.matrix-category` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.matrix-category.en.2.md

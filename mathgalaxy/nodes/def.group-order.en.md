@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.group-order)　·　[Chinese page (authoritative)](./def.group-order.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.group-order.md` and `proofs/`.
+## Statement · **draft**
+Let $G$ be a group.
 
+- The **order** of $G$ means its **cardinality**, written $|G|$ (when $G$ is finite, this is the number of elements);
+- The **order** of $x \in G$ means that $x^{n} = e$ holds for some positive integer, and the **least** such integer $n$ is written $\operatorname{ord}(x)$; if no such $n$ exists, $x$ is said to have **infinite** order.
 
-Cite: `def.group-order` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.group-order.en.2.md

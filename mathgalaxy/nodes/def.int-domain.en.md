@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.int-domain)　·　[Chinese page (authoritative)](./def.int-domain.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Integral Domains and Factorisation (`algebra.rings`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.int-domain.md` and `proofs/`.
+## Statement · **draft**
+Let $A$ be a commutative ring with unity and $A \ne \{0\}$. If $ab = 0$ forces $a = 0$ or $b = 0$, then $A$ is called an **integral domain** ($A$ has no zero divisors).
 
+Equivalent form (cancellation): for $a \ne 0$, $ab = ac$ $\implies$ $b = c$.
 
-Cite: `def.int-domain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.int-domain.en.2.md

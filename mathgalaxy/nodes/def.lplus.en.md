@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.lplus)　·　[Chinese page (authoritative)](./def.lplus.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.lplus.md` and `proofs/`.
+## Statement · **draft**
+Fix a measure space $(X, \mathcal{M}, \mu )$. Denote by $L^+$ the set of all **measurable** functions with values in the **extended** nonnegative reals:
 
+$L^+ := \{ f : X \to [0, +\infty] : f$ **measurable** $\}$
 
-Cite: `def.lplus` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.lplus.en.2.md

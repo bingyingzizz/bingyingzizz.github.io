@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.orthogonality)　·　[Chinese page (authoritative)](./def.orthogonality.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · definition · cluster Inner Product Spaces and Orthogonality (`algebra.inner`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.orthogonality.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be an inner product space.
 
-
-Cite: `def.orthogonality` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.orthogonality.en.2.md

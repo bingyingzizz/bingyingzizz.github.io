@@ -8,6 +8,6 @@
 - **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 - **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
 
-（共 1103 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1104 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

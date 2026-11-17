@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.cauchy-in-measure)　·　[Chinese page (authoritative)](./def.cauchy-in-measure.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.cauchy-in-measure.md` and `proofs/`.
+## Statement · **draft**
+A sequence $\{f_n\}$ of measurable functions is **Cauchy in measure** iff
 
+$$\forall\varepsilon > 0, \mu(\{x : |f_n(x) - f_m(x)| \ge \varepsilon\}) \to 0\quad  (m, n \to \infty)$$
 
-Cite: `def.cauchy-in-measure` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is: in the sense of measure, once the indices are large enough the terms get closer and closer to each other.
 
+> continued in nodes/def.cauchy-in-measure.en.2.md

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.normal-extension)　·　[Chinese page (authoritative)](./def.normal-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.normal-extension.md` and `proofs/`.
+## Statement · **draft**
+An algebraic extension $K/F$ is **normal** if every **irreducible** polynomial in $F[x]$ that has one root in $K$ **splits in $K$** (all its roots lie in $K$).
 
+Equivalent form: $K$ is the splitting field of **some family** of polynomials in $F[x]$.
 
-Cite: `def.normal-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.normal-extension.en.2.md

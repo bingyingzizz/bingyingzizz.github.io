@@ -9,6 +9,6 @@
 - def.euclidean-domain　Euclid 整环　layer 12
 - def.ufd　唯一分解整环　layer 12
 - def.comaximal　互素理想　layer 13
-- thm.crt-rings　中国剩余定理（环论形式）　layer 13
 - def.bezout-domain　Bézout 整环　layer 14
 - def.pid　主理想整环　layer 14
+- thm.crt-rings　中国剩余定理（环论形式）　layer 14

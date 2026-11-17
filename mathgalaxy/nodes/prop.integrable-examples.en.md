@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.integrable-examples)　·　[Chinese page (authoritative)](./prop.integrable-examples.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · proposition · cluster The Riemann Integral (`analysis.riemann`) · Mathematical Analysis
 names: `Integrable Examples` (short) · `Examples of Integrable Functions` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.integrable-examples.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be bounded on $[a, b]$.
 
+- $f$ **continuous** $\implies$ $f$ integrable;
+- $f$ **monotone** $\implies$ $f$ integrable;
+- $f$ bounded with only **finitely many** discontinuities $\implies$ $f$ integrable.
 
-Cite: `prop.integrable-examples` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.integrable-examples.en.2.md

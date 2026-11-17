@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.functor-preserves-sections)　·　[Chinese page (authoritative)](./prop.functor-preserves-sections.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · proposition · cluster Categories and Diagrams (`cat.basic`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.functor-preserves-sections.md` and `proofs/`.
+## Statement · **draft**
+A functor sends **sections** (resp. **retractions**, **isomorphisms**) to sections (resp. retractions, isomorphisms); in particular a functor sends isomorphisms to isomorphisms.
 
-
-Cite: `prop.functor-preserves-sections` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.functor-preserves-sections.en.2.md

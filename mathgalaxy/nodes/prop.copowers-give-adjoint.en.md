@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.copowers-give-adjoint)　·　[Chinese page (authoritative)](./prop.copowers-give-adjoint.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Copowers and Adjoints` (short) · `Copowers Give Adjoints to Representables` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.copowers-give-adjoint.md` and `proofs/`.
+## Statement · **draft**
+If a small category $\mathcal{C}$ has **copowers**, then every representable functor $h_{X}$ has a left adjoint: $\mathbf{Set} \to \mathcal{C},\ I \mapsto X^{(I)}$ **$\dashv$** $h_{X} = \operatorname{Hom}_{\mathcal{C}}(X, -)$.
 
-
-Cite: `prop.copowers-give-adjoint` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.copowers-give-adjoint.en.2.md

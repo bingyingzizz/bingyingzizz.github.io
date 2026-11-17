@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=prop.L1-implies-measure)　·　[Chinese page (authoritative)](./prop.L1-implies-measure.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · proposition · cluster Measurable Functions and Convergence (`analysis.measurable`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.L1-implies-measure.md` and `proofs/`.
+## Statement · **draft**
+If $f_n \to f$ in $L^1$, then $f_n \to f$ in measure:
 
+$$\int |f_n - f| \to 0 \implies f_n \xrightarrow{\ \mu\ } f$$
 
-Cite: `prop.L1-implies-measure` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+The tool is the **Markov (Chebyshev) inequality**:
 
+$$
+\mu(\{|g| \ge \varepsilon\}) \le (1/\varepsilon)\cdot\int |g| d\mu$$
+
+> continued in nodes/prop.L1-implies-measure.en.2.md

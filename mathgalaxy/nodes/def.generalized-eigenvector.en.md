@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.generalized-eigenvector)　·　[Chinese page (authoritative)](./def.generalized-eigenvector.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Eigenvalues and Jordan Form (`algebra.spectral`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.generalized-eigenvector.md` and `proofs/`.
+## Statement · **draft**
+**What it does**: when eigenvectors are not enough (geometric multiplicity < algebraic multiplicity), one steps back: instead of requiring $T(v) = \lambda v$, one only requires that repeated application be killed by $\lambda$ after finitely many steps. This makes up the dimension.
 
-
-Cite: `def.generalized-eigenvector` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.generalized-eigenvector.en.2.md

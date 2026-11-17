@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.ac-function)　·　[Chinese page (authoritative)](./def.ac-function.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · definition · cluster Bounded Variation and Absolute Continuity (`analysis.bv`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ac-function.md` and `proofs/`.
+## Statement · **draft**
+A function $F : [a, b] \to \mathbb{C}$ is **absolutely continuous** iff: for every $\varepsilon > 0$ there is $\delta > 0$ such that for **any finite family of pairwise disjoint intervals** $(a_j, b_j) \subseteq [a, b]$,
 
+$\sum (b_j - a_j) < \delta \implies \sum |F(b_j) - F(a_j)| < \varepsilon$
 
-Cite: `def.ac-function` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ac-function.en.2.md

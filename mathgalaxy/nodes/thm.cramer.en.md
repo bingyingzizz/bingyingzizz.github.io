@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.cramer)　·　[Chinese page (authoritative)](./thm.cramer.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · theorem · cluster Matrices and Determinants (`algebra.matrix`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cramer.md` and `proofs/`.
+## Statement · **draft**
+Let $A \in M_n(K)$ with $\det A \ne 0$ and $b \in K^{n}$. Then the system $Ax = b$ has a unique solution, namely
 
+$$x_j = \frac{\det A_j}{\det A}, \qquad j = 1, \ldots, n$$
 
-Cite: `thm.cramer` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $A_j$ is the matrix obtained from $A$ by replacing its $j$-th column with $b$.
 
+> continued in nodes/thm.cramer.en.2.md

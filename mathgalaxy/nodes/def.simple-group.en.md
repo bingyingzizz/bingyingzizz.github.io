@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.simple-group)　·　[Chinese page (authoritative)](./def.simple-group.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Composition Series and Solvable Groups (`algebra.solvable`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.simple-group.md` and `proofs/`.
+## Statement · **draft**
+A group $G \ne \{e\}$ is **simple** iff it has only two normal subgroups: $\{e\}$ and $G$ itself (that is, it has no nontrivial **proper** normal subgroup).
 
+## Notes · **draft**
+⭐ A simple group is “the prime of group theory”: the factors of a composition series are all simple, and Jordan–Hölder says these factors are unique — simple groups play exactly the role of prime factors in integer factorization.
 
-Cite: `def.simple-group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.simple-group.en.2.md

@@ -2,6 +2,9 @@
 English entry · root `../`
 [in graph](../#n=thm.solvable-quotients)　·　[Chinese page (authoritative)](./thm.solvable-quotients.md)
 
+⚠ The converses of (a) and (b) both **fail**, with tiny counterexamples:
+- a solvable subgroup **does not** imply that the group is solvable: $\mathbb{Z}/2 \le A_5$ is solvable, $A_5$ is not;
+
 - a solvable quotient **does not** imply that the group is solvable: $S_5 / A_5 \cong \mathbb{Z}/2$ is solvable, $S_5$ is not.
 
 So "solvable" is not a local property; it ascends only by squeezing between two solvable ends as in (c).
