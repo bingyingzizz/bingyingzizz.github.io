@@ -1,4 +1,4 @@
-# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 3/5 页）
+# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 3/6 页）
 根 `../`　·　第 1 页 `index/algebra.representation.md`　·　上一页 `index/algebra.representation.2.md`
 
 - thm.schur-lemma　Schur 引理　layer 19

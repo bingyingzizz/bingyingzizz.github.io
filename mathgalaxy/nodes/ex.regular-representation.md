@@ -10,6 +10,9 @@ layer 18 · 例 · 群与代数表示 · 抽象代数
 
 - …另有入边，续页见 [nodes/ex.regular-representation.2.md](./ex.regular-representation.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/ex.regular-representation.3.md](./ex.regular-representation.3.md)
+
 refs: Fulton–Harris, Representation Theory: A First Course (GTM 129)；Serre, Linear Representations of Finite Groups (GTM 42), Part I
 
 > 说明见 `notes/ex.regular-representation.md`

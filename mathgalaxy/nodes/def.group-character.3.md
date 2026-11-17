@@ -4,3 +4,8 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.group-algebra-wedderburn`](../nodes/cor.group-algebra-wedderburn.md) 群代数的 Wedderburn 分解
 - ⇒ [`prop.character-operations`](../nodes/prop.character-operations.md) 特征标的运算
+- 被 [`def.character-inner-product`](../nodes/def.character-inner-product.md) 特征标内积 用
+- 被 [`lem.fixed-space-dimension`](../nodes/lem.fixed-space-dimension.md) 不动点维数与特征标 用
+- ⇒ [`lem.fixed-space-dimension`](../nodes/lem.fixed-space-dimension.md) 不动点维数与特征标
+- 被 [`def.character-table`](../nodes/def.character-table.md) 特征标表 用
+- ⇒ [`cor.regular-character-decomposition`](../nodes/cor.regular-character-decomposition.md) 正则特征标的分解

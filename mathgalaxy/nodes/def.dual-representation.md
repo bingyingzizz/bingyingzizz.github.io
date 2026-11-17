@@ -10,6 +10,9 @@ layer 17 · 定义 · 群与代数表示 · 抽象代数
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.dual-representation.3.md](./def.dual-representation.3.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.dual-representation.4.md](./def.dual-representation.4.md)
+
 refs: Serre, Linear Representations of Finite Groups (GTM 42), Part I
 
 ## 说明

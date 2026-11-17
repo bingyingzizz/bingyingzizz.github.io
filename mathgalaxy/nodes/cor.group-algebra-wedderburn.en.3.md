@@ -3,6 +3,8 @@ English entry · root `../`
 [in graph](../#n=cor.group-algebra-wedderburn)　·　[Chinese page (authoritative)](./cor.group-algebra-wedderburn.md)
 
 ## Notes · **stale**
-Maschke gives semisimplicity, and Wedderburn–Artin decomposes $F[G]$ into matrix algebras; algebraic closedness replaces division algebras by $F$. The multiplicity of the regular module is $n_i=\dim V_i$, and comparing dimensions gives $|G|=\sum n_i^2$. The characters of the $V_i$ form a basis of the space of class functions (orthogonality relations, see character theory). The equality $n_i=\dim V_i$ is computed with Wedderburn and the regular character.
+Maschke's theorem gives that $F[G]$ is semisimple. By thm.wedderburn-artin, $F[G]\cong\prod_i M_{n_i}(D_i)$.
+Since $\operatorname{char}F=0$ and $F$ is algebraically closed, every finite-dimensional division $F$-algebra satisfies $D_i=F$: if $a\in D_i$ lies outside $F$, then $F(a)$ is a finite extension, contradicting algebraic closedness.
+Hence $F[G]\cong\prod_i M_{n_i}(F)$. As a left $F[G]$-module, the natural module $F^{n_i}$ of $M_{n_i}(F)$ is simple, so $F[G]\cong\bigoplus_i n_iV_i$ with $V_i=F^{n_i}$ and $n_i=\dim V_
 
 > continued in nodes/cor.group-algebra-wedderburn.en.4.md

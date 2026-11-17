@@ -2,11 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.exterior-power-representation)　·　[Chinese page (authoritative)](./def.exterior-power-representation.md)
 
-## Notes · **draft**
-The dimension of the exterior square is $n(n-1)/2$.
-When $\operatorname{char}F\ne2$, $V\otimes V\cong\operatorname{Sym}^2V\oplus\operatorname{Alt}^2V$.
-The character formula is $\chi_{\operatorname{Alt}^2V}(g)=\frac12(\chi_V(g)^2-\chi_V(g^2))$.
-It is complementary to the symmetric square.
+## Notes · **stale**
+The definition does not require $\operatorname{char}F\ne2$; when $\operatorname{char}F\ne2$ it coincides with the $-1$-eigenspace of the swap and has dimension $n(n-1)/2$. The exterior square is also denoted $\bigwedge^2V$.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

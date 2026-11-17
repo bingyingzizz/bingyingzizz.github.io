@@ -3,10 +3,6 @@ English entry · root `../`
 [in graph](../#n=prop.partition-of-unity)　·　[Chinese page (authoritative)](./prop.partition-of-unity.md)
 
 ## Notes · **stale**
-Apply Burnside's theorem to the direct sum $V=V_1\oplus\cdots\oplus V_s$; the projection onto $V_i$ lies in $A''=\operatorname{End}_{A'}(V)$. The elements $a_i$ are preimages of these projections. They act as orthogonal idempotents on the $V_j$. This is used to isolate the multiplicity of each irreducible in a semisimple representation.
+Apply Burnside to $V=V_1\oplus\cdots\oplus V_s$: $A''=\operatorname{End}_{A'}(V)$ contains the projection $e_i$ onto $V_i$. Surjectivity gives $a_i\in A$ with $\theta(a_i)=e_i$. Then $\theta_j(a_i)=\delta_{ij}\operatorname{id}_{V_j}$, since $e_i$ acts as $\delta_{ij}$ times the identity on $V_j$. These $a_i$ are orthogonal idempotents separating the multiplicities of the irreducible summands. The proof uses Burnside surjectivity (thm.burnside-surjectivity).
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-
-Cite: `prop.partition-of-unity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.partition-of-unity.en.4.md

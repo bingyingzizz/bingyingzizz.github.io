@@ -8,3 +8,5 @@
 - ⇒ [`thm.jacobson-criterion`](../nodes/thm.jacobson-criterion.md) Jacobson 根判定半单
 - ⇒ [`thm.character-determines-semisimple`](../nodes/thm.character-determines-semisimple.md) 特征标决定半单表示
 - ⇒ [`thm.maschke`](../nodes/thm.maschke.md) Maschke 定理
+
+> 续见 [nodes/def.semisimple-representation.4.md](./def.semisimple-representation.4.md)

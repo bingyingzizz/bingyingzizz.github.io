@@ -1,4 +1,4 @@
-# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 2/5 页）
+# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 2/6 页）
 根 `../`　·　第 1 页 `index/algebra.representation.md`
 
 - def.representation-annihilator　表示的零化子　layer 17

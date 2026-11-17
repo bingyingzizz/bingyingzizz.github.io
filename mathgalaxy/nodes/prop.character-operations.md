@@ -3,12 +3,18 @@
 layer 26 · 命题 · 群与代数表示 · 抽象代数
 [在星图里打开](../#n=prop.character-operations)　·　[节点索引](../index.md)
 
-设 $V,W$ 是有限群 $G$ 的有限维表示，$\operatorname{char}F\nmid|G|$，且 $\operatorname{char}F\ne2$。则：
+设 $V,W$ 是有限群 $G$ 的有限维表示，$\operatorname{char}F\nmid|G|$。则：
 (1) $\chi_{V\oplus W}=\chi_V+\chi_W$；
 (2) $\chi_{V\otimes W}=\chi_V\chi_W$；
-(3) $\chi_{
+(3) $\chi_{V^*}(g)=\chi_V(g^{-1})$；
+(4)
 > 陈述续见 [nodes/prop.character-operations.2.md](./prop.character-operations.2.md)
 
+
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.character-inner-product-hom`](../nodes/prop.character-inner-product-hom.md) 特征标内积与 Hom 维数
+
+- …另有出边，续页见 [nodes/prop.character-operations.4.md](./prop.character-operations.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.character-operations.3.md](./prop.character-operations.3.md)

@@ -6,7 +6,7 @@
 
 （没有）
 
-## 二、近同名却没有任何边（10 对）
+## 二、近同名却没有任何边（12 对）
 
 判据：label 去掉括注/空格后相同或前缀相近（与 `_tools/_nov15.mjs` 同口径），且两颗星之间一条边都没有。
 
@@ -20,6 +20,8 @@
 - Euler 乘积（`thm.euler-product` L34）⇸ Euler 类（`def.euler-class` L39）
 - Euler 公式（`thm.euler-formula-surface` L35）⇸ Euler 类（`def.euler-class` L39）
 - 阿贝尔范畴（`def.abelian-category` L19）⇸ 阿贝尔层（`def.abelian-sheaf` L18）
+- 特征标的运算（`prop.character-operations` L26）⇸ 特征标表（`def.character-table` L26）
+- 特征标内积（`def.character-inner-product` L26）⇸ 特征标表（`def.character-table` L26）
 
 ## 三、黑边子图上的环（2 个）
 
@@ -56,7 +58,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**291** 处
+- 陈述里出现假设关键词、但没标注：**296** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -98,5 +100,5 @@
   - prop.chaus-quotient-of-free  ‹Hausdorff›
   - prop.free-projective  ‹Hausdorff›
   - def.free-presentation  ‹Hausdorff›
-  - …还有 251 处
+  - …还有 256 处
 

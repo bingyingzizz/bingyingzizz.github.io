@@ -11,6 +11,6 @@
 - **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
 - **6 / 6** `def.group-representation` 有限群表示 · layer 17 · 群与代数表示
 
-（共 1708 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1715 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

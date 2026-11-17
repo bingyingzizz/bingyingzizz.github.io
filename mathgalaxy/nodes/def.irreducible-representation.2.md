@@ -6,3 +6,5 @@
 - ⇒ [`def.indecomposable-representation`](../nodes/def.indecomposable-representation.md) 不可分解表示
 - ⇒ [`prop.partition-of-unity`](../nodes/prop.partition-of-unity.md) 不可约表示的单位分解
 - 被 [`thm.schur-lemma`](../nodes/thm.schur-lemma.md) Schur 引理 用
+- ⇒ [`thm.character-orthogonality`](../nodes/thm.character-orthogonality.md) 不可约特征标的正交性
+- 被 [`def.character-table`](../nodes/def.character-table.md) 特征标表 用

@@ -3,7 +3,7 @@
 layer 17 · 定义 · 群与代数表示 · 抽象代数
 [在星图里打开](../#n=def.group-representation)　·　[节点索引](../index.md)
 
-设 $G$ 是有限群。$G$ 在 $F$ 上的表示是一对 $(V,\rho)$，其中 $V$ 是有限维 $F$-向量空间，$\rho:G\to GL(V)$ 是群同态。它等价于 $V$ 上的含幺左 $F[G]$-模结构；因此 $G$ 的表示与群代数 $F[G]$ 的含幺表示相同。
+设 $G$ 是有限群。$G$ 在 $F$ 上的表示是一对 $(V,\rho)$，其中 $V$ 是 $F$-向量空间，$\rho:G\to GL(V)$ 是群同态。它等价于 $V$ 上的含幺左 $F[G]$-模结构；因此 $G$ 的表示与群代数 $F[G]$ 的含幺表示相同。
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.group`](../nodes/def.group.md) 群：用到了定义 群　[proofs/dep.grep-group.md](../proofs/dep.grep-group.md)

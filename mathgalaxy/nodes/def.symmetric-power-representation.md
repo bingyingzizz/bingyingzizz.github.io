@@ -3,7 +3,7 @@
 layer 19 · 定义 · 群与代数表示 · 抽象代数
 [在星图里打开](../#n=def.symmetric-power-representation)　·　[节点索引](../index.md)
 
-设 $\operatorname{char}F\ne2$，$(V,\rho)$ 是群 $G$ 的表示。对称平方 $\operatorname{Sym}^2V$ 是 $V\otimes V$ 对换子 $\tau(v\otimes w)=w\otimes v$ 的 $+1$ 特征子空间；$G$ 的作用由 $g(vw)=\rho(g)v\,
+设 $(V,\rho)$ 是群 $G$ 的表示。对称平方表示定义为商表示 $\operatorname{Sym}^2V=(V\otimes V)/\langle v\otimes w-w\otimes v\rangle$，$G$ 通过 $g(vw)=\rho(g)v\,\rho(g)w$ 作用（$vw$ 记 $v\otimes w$
 > 陈述续见 [nodes/def.symmetric-power-representation.2.md](./def.symmetric-power-representation.2.md)
 
 

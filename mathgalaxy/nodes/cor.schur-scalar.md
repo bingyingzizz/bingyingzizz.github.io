@@ -5,6 +5,9 @@ layer 23 · 推论 · 群与代数表示 · 抽象代数
 
 设 $F$ 代数闭，$V$ 是 $A$ 的有限维不可约表示。则 $\operatorname{End}_A(V)=F\cdot\operatorname{id}_V$，即每个 $A$-自同态都是纯量。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.character-orthogonality`](../nodes/thm.character-orthogonality.md) 不可约特征标的正交性
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/cor.schur-scalar.2.md](./cor.schur-scalar.2.md)
 

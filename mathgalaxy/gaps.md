@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1714 节点 / 3869 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1721 节点 / 3881 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,7 +59,7 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（15 处）
+## 二、陈述用到更深的定义却没有边（13 处）
 
 - `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L37）　落差 17
 - `def.symplectic-basis`（辛基 · L19）用到 `def.orthonormal-set`（正交基 · L24）　落差 5
@@ -74,8 +74,6 @@
 - `def.category-of-abelian-groups`（阿贝尔群范畴 · L11）用到 `def.forgetful-functor`（遗忘函子 · L11）
 - `def.cech-complex`（Čech 复形 · L18）用到 `def.bicomplex`（双复形 · L18）
 - `def.complex-partial`（复偏导数 · L24）用到 `def.directional-derivative`（方向导数 · L24）
-- `def.symmetric-power-representation`（对称平方表示 · L19）用到 `def.eigenspace`（特征子空间 · L19）
-- `def.exterior-power-representation`（外平方表示 · L19）用到 `def.eigenspace`（特征子空间 · L19）
 
 ## 二·补　白名单里的（39 条，已判「不是缺边」）
 

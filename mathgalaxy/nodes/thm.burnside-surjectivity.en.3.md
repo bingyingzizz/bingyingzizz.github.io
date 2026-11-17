@@ -3,10 +3,6 @@ English entry · root `../`
 [in graph](../#n=thm.burnside-surjectivity)　·　[Chinese page (authoritative)](./thm.burnside-surjectivity.md)
 
 ## Notes · **stale**
-The one-vector case splits $V$ into $Av$ and a complement using semisimplicity, then applies $f$ to the first summand. The several-vector case applies the one-vector result to the diagonal action on $V^n$; the semisimplicity of $V^n$ follows from that of $V$, so the result transfers. This is the double centralizer theorem for finite-dimensional semisimple modules. It is a key step toward Wedderburn's theorem.
+Single vector: since $V$ is semisimple, $V=Av\oplus W$; the projection $p:V\to Av$ is $A$-linear, so $p\in A'$. For $f\in A''$, $f(v)=f(pv)=p f(v)\in Av$, hence there is $a\in A$ with $av=f(v)$. Finite tuple: apply the same argument to the diagonal action on $V^n$ to find one $a$ matching any finite tuple $v_i$. In finite dimension $V$ is finitely generated over $A'$: take generators $v_1,\ldots,v_n$ and choose $a$ with $av_i=f(v_i)$ for every index; any $v=\sum a'_iv_i$ then satisfies $f(v)=\sum a'_i f(v_i)=av$, so $\Phi(a)=f$. This is the elementary form of the doubl
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-
-Cite: `thm.burnside-surjectivity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.burnside-surjectivity.en.4.md

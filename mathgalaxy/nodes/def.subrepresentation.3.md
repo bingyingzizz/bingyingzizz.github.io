@@ -6,4 +6,6 @@
 - 被 [`def.indecomposable-representation`](../nodes/def.indecomposable-representation.md) 不可分解表示 用
 - ⇒ [`thm.semisimple-characterizations`](../nodes/thm.semisimple-characterizations.md) 半单表示的等价刻画
 - ⇒ [`prop.semisimple-subquotient`](../nodes/prop.semisimple-subquotient.md) 半单表示的子与商
+- ⇒ [`thm.burnside-surjectivity`](../nodes/thm.burnside-surjectivity.md) Burnside 满射性定理
+- ⇒ [`prop.partition-of-unity`](../nodes/prop.partition-of-unity.md) 不可约表示的单位分解
 - 被 [`thm.maschke`](../nodes/thm.maschke.md) Maschke 定理 用

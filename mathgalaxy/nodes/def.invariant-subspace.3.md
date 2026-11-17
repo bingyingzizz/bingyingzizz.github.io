@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.eigenspace`](../nodes/def.eigenspace.md) 特征子空间 用
 - 被 [`def.subrepresentation`](../nodes/def.subrepresentation.md) 子表示 用
+- 被 [`lem.fixed-space-dimension`](../nodes/lem.fixed-space-dimension.md) 不动点维数与特征标 用
+- ⇒ [`lem.fixed-space-dimension`](../nodes/lem.fixed-space-dimension.md) 不动点维数与特征标

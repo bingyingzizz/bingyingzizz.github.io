@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.schur-scalar`](../nodes/cor.schur-scalar.md) 代数闭域上的 Schur 推论
+- ⇒ [`thm.character-orthogonality`](../nodes/thm.character-orthogonality.md) 不可约特征标的正交性

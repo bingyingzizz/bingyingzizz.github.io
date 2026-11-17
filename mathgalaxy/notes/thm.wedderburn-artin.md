@@ -1,8 +1,4 @@
 # Wedderburn–Artin 定理　`thm.wedderburn-artin`　·　说明
 根 `../`
 
-把正则模 $A$ 分解为单左理想，按同构类分组得到双边理想 $A_i$，且 $A=\prod A_i$。
-每个 $A_i$ 是单代数，用单代数的 Wedderburn 定理。
-反向：矩阵代数的乘积半单。
-$n_i$ 与 $D_i$ 在同构与置换意义下唯一。
-证明经由 thm.wedderburn-simple，而后者依赖 Burnside 满射性（本图 skeleton），故本条仍为 skeleton。
+因 $A$ 半单，左正则模分解为 $A=\bigoplus_i S_i^{\oplus n_i}$，$S_i$ 两两不同构单左模。\n右乘给出 $A^{\mathrm{op}}\cong\operatorname{End}_A(A)$：$a\mapsto R_a$，$R_a(x)=xa$；逆由 $f\mapsto f(1)$ 给出。\n由 Schur 引理，$\operatorname{Hom}_A(S_i,S_j)=0$（$i\ne j$），故 $\operatorname{End}_A(A)\cong\prod_i\operatorname{End}_A(S_i^{\oplus n_i})\cong\prod_i M_{n_i}(D_i)$，其中 $D_i=\operatorname{End}_A(S_i)$ 是除法代数。\n取相反代数得 $A\cong\prod_i M_{n_i}(D_i^{\mathrm{op}})$。\n反向：每个矩阵代数 $M_{n_i}(D_i)$ 半单，乘积半单；有限维半单代数的模都半单（子模有补）。$\blacksquare$

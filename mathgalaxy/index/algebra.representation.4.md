@@ -1,4 +1,4 @@
-# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 4/5 页）
+# 群与代数表示 / Group and Algebra Representations（algebra.representation）· 节点清单（第 4/6 页）
 根 `../`　·　第 1 页 `index/algebra.representation.md`　·　上一页 `index/algebra.representation.3.md`
 
 - thm.jacobson-criterion　Jacobson 根判定半单　layer 20

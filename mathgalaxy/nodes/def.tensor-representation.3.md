@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.exterior-power-representation`](../nodes/def.exterior-power-representation.md) 外平方表示 用
+- ⇒ [`prop.character-inner-product-hom`](../nodes/prop.character-inner-product-hom.md) 特征标内积与 Hom 维数

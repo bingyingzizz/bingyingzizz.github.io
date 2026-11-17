@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`cor.group-algebra-wedderburn`](../nodes/cor.group-algebra-wedderburn.md) 群代数的 Wedderburn 分解
+- ⇒ [`cor.regular-character-decomposition`](../nodes/cor.regular-character-decomposition.md) 正则特征标的分解

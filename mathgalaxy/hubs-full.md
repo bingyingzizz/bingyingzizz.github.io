@@ -31,7 +31,7 @@
 - **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 - **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
 
-（共 1089 个节点有非零计数；这里列前 20 条。）
+（共 1098 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -58,7 +58,7 @@
 - **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
 - **6 / 6** `def.group-representation` 有限群表示 · layer 17 · 群与代数表示
 
-（共 1708 个节点有非零计数；这里列前 20 条。）
+（共 1715 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -85,5 +85,5 @@
 - **10 团 / 25 节点** `def.category` 范畴 · layer 9 · 范畴与图
 - **10 团 / 19 节点** `def.category-of-topological-spaces` 拓扑空间范畴 · layer 10 · 范畴与图
 
-（共 1089 个节点有非零计数；这里列前 20 条。）
+（共 1098 个节点有非零计数；这里列前 20 条。）
 

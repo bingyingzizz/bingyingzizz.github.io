@@ -2,8 +2,7 @@
 English entry · root `../`
 [in graph](../#n=cor.group-algebra-wedderburn)　·　[Chinese page (authoritative)](./cor.group-algebra-wedderburn.md)
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+i$.
+Comparing dimensions gives $|G|=\sum_i n_i^2$. $\blacksquare$
 
-
-Cite: `cor.group-algebra-wedderburn` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/cor.group-algebra-wedderburn.en.5.md

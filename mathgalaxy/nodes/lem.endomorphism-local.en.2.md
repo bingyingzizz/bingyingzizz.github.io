@@ -2,13 +2,7 @@
 English entry · root `../`
 [in graph](../#n=lem.endomorphism-local)　·　[Chinese page (authoritative)](./lem.endomorphism-local.md)
 
-## Notes · **draft**
-By cor.indecomposable-endomorphism, any $f$ that is not an automorphism is nilpotent, so the non-units are exactly the nilpotent elements.
-If $f$ is nilpotent then $\operatorname{id}-f$ is invertible (inverse given by a finite geometric series); hence the nilpotent elements form a two-sided ideal whose quotient is a division ring, so the ring is local.
-Conversely, any non-invertible $f$ is nilpotent, so the maximal ideal is exactly the nilpotent elements.
+## Notes · **stale**
+By cor.indecomposable-endomorphism, any $f$ that is not an automorphism is nilpotent, so the non-units are exactly the nilpotent elements.\nIf $f$ is nilpotent then $\operatorname{id}-f$ is invertible (inverse given by a finite geometric series); hence the nilpotent elements are closed under addition: if $f,g$ are nilpotent and $f+g$ is invertible, then $f=(f+g)(\operatorname{id}-(f+g)^{-1}g)$ is invertible (as $g$ is nilpotent, the parenthesis is invertible), a contradiction; so $f+g$ is not a unit, and cor.indecomposable-endomorphism makes it nilpotent.\nThus the nilpotent elements form a two-sided 
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-
-Cite: `lem.endomorphism-local` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.endomorphism-local.en.3.md

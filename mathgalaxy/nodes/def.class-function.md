@@ -11,6 +11,9 @@ layer 15 · 定义 · 群与代数表示 · 抽象代数
 
 - …另有入边，续页见 [nodes/def.class-function.2.md](./def.class-function.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/def.class-function.3.md](./def.class-function.3.md)
+
 refs: Isaacs, Character Theory of Finite Groups；Serre, Linear Representations of Finite Groups (GTM 42), Part I
 
 > 说明见 `notes/def.class-function.md`

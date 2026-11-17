@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.group-character`](../nodes/def.group-character.md) 群特征标 + [`def.symmetric-power-representation`](../nodes/def.symmetric-power-representation.md) 对称平方表示 + [`def.exterior-power-representation`](../nodes/def.exterior-power-representation.md) 外平方表示：imp.char-ops　[proofs/imp.char-ops.md](../proofs/imp.char-ops.md)
+
+> 续见 [nodes/prop.character-operations.4.md](./prop.character-operations.4.md)

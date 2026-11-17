@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=lem.endomorphism-local)　·　[Chinese page (authoritative)](./lem.endomorphism-local.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 20 · lemma · cluster Group and Algebra Representations (`algebra.representation`) · Abstract Algebra
 names: `local endomorphism ring` (short) · `endomorphism ring is local` (full)
