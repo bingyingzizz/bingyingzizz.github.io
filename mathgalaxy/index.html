@@ -1228,8 +1228,6 @@ html.ui-no-hint #hint { display: none; }
 #mg-loading.mgl-real #mgl-fill { animation: none; transition: transform .35s ease-out; }
 #mg-loading.mgl-fail #mgl-fill { background: #d0483c; }
 #mgl-hint { margin-top: 26px; font-size: 11px; letter-spacing: .14em; color: var(--ink-faint, #b7bcc4); }
-.hint-stat { margin: 6px 0 2px; font-size: 12.5px; line-height: 1.7; color: #44484f; }
-.hint-stat a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 /* 关了 JS 时显示：静态索引页，不是隐藏文字（<noscript> 只在不跑脚本时渲染） */
 #mg-noscript { max-width: 720px; margin: 48px auto; padding: 0 20px; font-size: 14px; line-height: 1.8; color: #1c1c1e; }
 #mg-noscript h1 { font-size: 22px; margin: 0 0 12px; }
@@ -1523,13 +1521,9 @@ window.MG = window.MG || {};
         ⛔ 但 h1 不参与折叠，它永远可见。 -->
 <div id="hint" class="floating">
   <h1>数学星图 MathGalaxy</h1>
-  <!-- ⭐ 这段必须保持「正常 DOM + 可见」：它是给不跑 JS 的抓取器与 AI 的第一段文字。
-       数字用构建期占位符，别写死（tools/build.mjs 的 fillShellCounts）。 -->
-  <p class="hint-stat"><b>1725</b> 个概念 · <b>3892</b> 条推导边 · <b>15</b> 个分支 ——
-  <a href="all.html">全部概念索引</a> · <a href="questions.html">常见问法</a> ·
-  <a href="en/">英文总览</a> · <a href="llms.txt">给 AI 的检索协议</a></p>
   <details>
     <summary data-t="这是什么 · 怎么用">这是什么 · 怎么用</summary>
+    <p class="hint-home"><span data-t="这一页是可交互的星图；文字版的站点首页（说明、规模、全部入口）在">这一页是可交互的星图；文字版的站点首页（说明、规模、全部入口）在</span> <a href="https://bingyingzizz.github.io/">bingyingzizz.github.io</a>。</p>
     <p class="hint-lead" data-t="把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 › 领域 › 星团 › 节点」四级导航组织成一张可交互的依赖图 —— 后三级就是星图的「星系 / 星团 / 恒星」三层尺度（大板块只是把领域再归一次类）。箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。">把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「大板块 › 领域 › 星团 › 节点」
     四级导航组织成一张可交互的依赖图 —— 后三级就是星图的「星系 / 星团 / 恒星」三层尺度
     （大板块只是把领域再归一次类）。箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。</p>
@@ -31377,6 +31371,7 @@ MG.uiEn = {
 
     /* ------------------------------------------------------ 底部说明 */
     '这是什么 · 怎么用': 'What this is · how to use it',
+    '这一页是可交互的星图；文字版的站点首页（说明、规模、全部入口）在': 'This page is the interactive map. The text-first home page (overview, scale, every entry point) is at',
     '把数学概念（公理 / 定义 / 定理 / 引理 / 命题）按「星系 / 星团 / 恒星」三层组织成一张可交互的依赖图 —— 箭头是推出，黑线是等价，蓝线是定义引用，紫色虚线是跨领域类比。':
       'An interactive dependency graph of mathematical concepts (axioms / definitions / theorems / lemmas / propositions), ' +
       'organised on three scales: galaxy → cluster → star. Arrows are implications, black lines are equivalences, ' +
