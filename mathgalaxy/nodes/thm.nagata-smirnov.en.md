@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=thm.nagata-smirnov)　·　[Chinese page (authoritative)](./thm.nagata-smirnov.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Metrizability (`topology.metrizable`) · Topology
 names: `Nagata–Smirnov Theorem` (short) · `Nagata–Smirnov Metrization Theorem` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.nagata-smirnov.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a **regular** space (including $T_{1}$) whose topology has a **$\sigma$-locally finite base** (a base expressible as the union of countably many locally finite subfamilies). Then $X$ is **metrizable**.
 
-
-Cite: `thm.nagata-smirnov` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.nagata-smirnov.en.2.md

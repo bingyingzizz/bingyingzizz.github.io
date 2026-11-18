@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.long-exact-pair)　·　[Chinese page (authoritative)](./thm.long-exact-pair.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 28 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.long-exact-pair.md` and `proofs/`.
+## Statement · **draft**
+A **topological pair** is a pair of spaces $A \subseteq X$ with one a subspace of the other. Since every singular simplex in $A$ is also a singular simplex in $X$, $S_{*}(A) \subseteq S_{*}(X)$ is a **subcomplex**. Define the **relative chain groups** and **relative homology groups** by
 
-
-Cite: `thm.long-exact-pair` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.long-exact-pair.en.2.md

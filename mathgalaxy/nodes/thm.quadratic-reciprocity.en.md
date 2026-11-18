@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.quadratic-reciprocity)　·　[Chinese page (authoritative)](./thm.quadratic-reciprocity.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · theorem · cluster Quadratic Residues and Primitive Roots (`number.quadratic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.quadratic-reciprocity.md` and `proofs/`.
+## Statement · **draft**
+Let $p, q$ be two distinct odd primes. Then
 
+$$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}} .$$
 
-Cite: `thm.quadratic-reciprocity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.quadratic-reciprocity.en.2.md

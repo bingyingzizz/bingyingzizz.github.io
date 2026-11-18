@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.lifting)　·　[Chinese page (authoritative)](./thm.lifting.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster The Fundamental Group (`topology.fg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lifting.md` and `proofs/`.
+## Statement · **draft**
+Let $p : E \to B$ be a covering map and suppose $p(e_{0}) = b_{0}$.
 
+**(1) Path lifting.** For any path $\alpha : [0, 1] \to B$ with $\alpha(0) = b_{0}$, there exists a **unique** path
 
-Cite: `thm.lifting` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$\tilde{\alpha} : [0, 1] \longrightarrow E,\qquad \tilde{\alpha}(0) = e_{0},\quad p \circ \tilde{\alpha} = \alpha.$$
 
+> continued in nodes/thm.lifting.en.2.md

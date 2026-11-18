@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.stokes-chain)　·　[Chinese page (authoritative)](./thm.stokes-chain.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Differential Forms, Integration and de Rham Cohomology (`diffgeom.form`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.stokes-chain.md` and `proofs/`.
+## Statement · **draft**
+**What it says**: Integrating a $(k-1)$-form over the **boundary chain** gives the same result as integrating its exterior derivative over the **chain**. This is the common generalization of the fundamental theorem of calculus, Green's theorem, Gauss's theorem, and the Kelvin–Stokes theorem.
 
-
-Cite: `thm.stokes-chain` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.stokes-chain.en.2.md

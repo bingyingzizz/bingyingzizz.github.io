@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.average-continuous)　·　[Chinese page (authoritative)](./lem.average-continuous.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · lemma · cluster Differentiation Theorems (`analysis.differentiation`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.average-continuous.md` and `proofs/`.
+## Statement · **draft**
+Suppose $f \in L^1_{loc}$. Then $A_r f(x)$ is **jointly continuous** as a function of $(r, x)$.
 
-
-Cite: `lem.average-continuous` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.average-continuous.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.frobenius)　·　[Chinese page (authoritative)](./thm.frobenius.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 31 · theorem · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.frobenius.md` and `proofs/`.
+## Statement · **draft**
+**In plain language**: A smooth family of directions fits together into sheets if and only if it is involutive. Involutivity is the only obstruction. This is the geometric version of solvability for systems of first-order partial differential equations, and it explains how foliations arise.
 
-
-Cite: `thm.frobenius` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.frobenius.en.2.md

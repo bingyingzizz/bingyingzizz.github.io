@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-18T11:07:53.227Z",
+  "generated": "2026-11-18T11:16:24.563Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
@@ -10158,23 +10158,35 @@
    "label": "平均算子联合连续",
    "title": "引理：$A_{r} f(x)$ 关于 (r, x) 联合连续",
    "title_en": "the averaging operator is jointly continuous",
+   "statement_en": "Suppose $f \\in L^1_{loc}$. Then $A_r f(x)$ is **jointly continuous** as a function of $(r, x)$.",
+   "notes_en": "**Proof.** Let $m$ denote Lebesgue measure and set $\\omega_n := m(B(0,1))$. Then $m(B(x,r)) = \\omega_n r^n$. To prove joint continuity, it suffices to show that for every sequence satisfying $r_k > 0$ and $(x_k, r_k) \\to (x_0, r_0)$, we have $A_{r_k} f(x_k) \\to A_{r_0} f(x_0)$.\n\n**Step 1. Split the difference.** Write the difference as\n\n$$A_r f(x) - A_{r_0} f(x_0) = \\frac{1}{m(B(x,r))}\\int_{\\mathbb{R}^n} \\bigl(\\chi_{B(x,r)} - \\chi_{B(x_0,r_0)}\\bigr) f + \\Bigl(\\frac{1}{m(B(x,r))} - \\frac{1}{m(B(x_0,r_0))}\\Bigr)\\int_{B(x_0,r_0)} f .$$\n\nThe second term tends to $0$. Indeed, $\\omega_n r_k^n \\to \\omega_n r_0^n > 0$, so the coefficient tends to $0$, while $\\int_{B(x_0,r_0)} f$ is constant.\n\n**Step 2. Find a dominating function.** Choose $\\delta = 1/2$. If $|x - x_0| < 1/2$ and $|r - r_0| < 1/2$, then $r < r_0 + 1/2$, and $|y - x| < r$ implies\n\n$$|y - x_0| \\le |y - x| + |x - x_0| < r + 1/2 < r_0 + 1,$$\n\nthat is, $B(x,r) \\subseteq B(x_0, r_0 + 1)$. Thus for such $(x,r)$ and every $y$,\n\n$$|\\chi_{B(x,r)}(y) - \\chi_{B(x_0,r_0)}(y)|\\,|f(y)| \\le \\chi_{B(x_0, r_0+1)}(y)\\,|f(y)| \\in L^1.$$\n\n**Step 3. Almost-everywhere pointwise convergence.** The sphere $\\partial B(x_0, r_0)$ has measure zero. Suppose $y \\notin \\partial B(x_0, r_0)$.\n\n- If $|y - x_0| < r_0$, choose $\\varepsilon = r_0 - |y - x_0| > 0$. When $|x - x_0| < \\varepsilon/2$ and $|r - r_0| < \\varepsilon/2$, we have $|y - x| \\le |y - x_0| + |x - x_0| < r_0 - \\varepsilon/2 < r$, hence $\\chi_{B(x,r)}(y) = 1 = \\chi_{B(x_0,r_0)}(y)$.\n\n- If $|y - x_0| > r_0$, choose $\\varepsilon = |y - x_0| - r_0 > 0$. For the same small perturbations, $|y - x| > r_0 + \\varepsilon/2 > r$, hence $\\chi_{B(x,r)}(y) = 0 = \\chi_{B(x_0,r_0)}(y)$.\n\nThus $\\chi_{B(x_k,r_k)} \\to \\chi_{B(x_0,r_0)}$ holds for almost every $y$.\n\n**Step 4. Dominated convergence.** By Steps 2 and 3 and the dominated convergence theorem, $\\int (\\chi_{B(x_k,r_k)} - \\chi_{B(x_0,r_0)}) f \\to 0$. The coefficient $1/m(B(x_k,r_k))$ is bounded and tends to $1/m(B(x_0,r_0))$, so the first term tends to $0$. Adding the second term gives $A_{r_k} f(x_k) \\to A_{r_0} f(x_0)$. ∎",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#370b8ea4",
+      "notes": "v0.9.3#275d5fae"
+     }
     }
    },
    "en_page": "nodes/lem.average-continuous.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "analysis-measure",
    "regions": [
     "analysis-measure",
@@ -55893,23 +55905,35 @@
    "title": "平坦当且仅当所有高次挠积为零",
    "label_en": "Flatness and Tor",
    "title_en": "Flatness and the Vanishing of Tor",
+   "statement_en": "Let $R$ be a ring and $F$ a right $R$-module. The following conditions are equivalent:\n\n1. $F$ is **flat**;\n2. For every left $R$-module $N$, $\\operatorname{Tor}_{1}^{R}(F, N) = 0$;\n3. For every left $R$-module $N$ and every $n \\ge 1$, $\\operatorname{Tor}_{n}^{R}(F, N) = 0$.\n\nThus the flat modules are precisely those for which all higher Tor groups vanish. This is exactly parallel to the characterization of projective modules by the vanishing of all higher $\\operatorname{Ext}$ groups.",
+   "notes_en": "**Proof.**\n$(1) \\implies (3)$: For $F$ take a projective resolution $P_{\\bullet} \\to F$.\n\nWhen $F$ is flat, $\\operatorname{Tor}_{n}$ can also be computed using a resolution of $N$. Take a projective resolution of $N$, denoted by $Q_{\\bullet}$. The resolution on the $N$ side gives $\\operatorname{Tor}_{n}(F, N) = H_{n}(F\\otimes Q_{\\bullet})$.\n\nSince $F\\otimes -$ is exact and $Q_{\\bullet} \\to N$ is exact, $F\\otimes Q_{\\bullet}$ has homology only in degree $0$, and its higher homology vanishes ✓.\n$(3) \\implies (2)$: Take $n = 1$ ✓.\n$(2) \\implies (1)$: Take any injection $f : M_{1} \\rightarrowtail M$. We must show that $F\\otimes M_{1} \\to F\\otimes M$ is injective. Include it in the short exact sequence $0 \\to M_{1} \\to M \\to M/M_{1} \\to 0$, tensor with $F$, and take the long exact sequence\n$$\\operatorname{Tor}_{1}^{R}(F,\\ M/M_{1}) \\to F\\otimes M_{1} \\to F\\otimes M \\to F\\otimes M/M_{1} \\to 0 ,$$\nThe leftmost term is zero by condition 2, so $F\\otimes M_{1} \\to F\\otimes M$ is **injective** ✓, which gives exactness of $F\\otimes -$ ✓. ∎\n\n**Of the three conditions, (2)$\\implies$(3) is the only step that requires induction. The equivalence (1)$\\iff$(2) uses a long exact sequence**:\n\n- (1) $\\iff$ (2): **A long exact sequence is needed** (flatness means that $(-)\\otimes F$ is exact. Its equivalence to the universal vanishing of $\\operatorname{Tor}_{1}$ follows from the long exact sequence for $\\operatorname{Tor}$).\n- (2) $\\implies$ (3): **This step uses dimension shifting**. If $\\operatorname{Tor}_{1}(F, N) = 0$ for all $N$, take the short exact sequence for $N$ and use the long exact sequence to obtain $\\operatorname{Tor}_{n} = 0$ by induction. ⚠️ This requires the long exact sequence (the Tor version of `thm.long-exact`).\n- (3) $\\implies$ (2): **A special case** ($n = 1$).\n\n⚠️ **Comparison with projectivity**: Projective $\\iff$ $\\operatorname{Ext}^{n}(M,-) = 0$ for all $n \\ge 1$. Flat $\\iff$ $\\operatorname{Tor}_{n}(-,N) = 0$ for all $n \\ge 1$. The criteria are parallel in form, but **flatness is weaker than projectivity** (projective $\\implies$ flat, and the converse fails. For example, $\\mathbb{Q}$ is flat over $\\mathbb{Z}$ but is not projective).\n⚠️ $\\operatorname{Tor}$ can be computed in **either variable**. Here $F$ is on the left and $N$ is on the right. Reversing the order gives isomorphic results ($\\operatorname{Tor}$ is balanced), but over a noncommutative ring one must also pass to the opposite ring: $\\operatorname{Tor}_{n}^{R}(M,N) \\cong \\operatorname{Tor}_{n}^{R^{\\mathrm{op}}}(N,M)$ (for example, when $R = M_{2}(k)$, the original structures put $N$ and $M$ on different sides).\n\n\n**Assumptions used in each direction** (flatness is defined by exactness of tensoring, and the Tor criterion uses derived functors):\n- Flatness $\\iff$ exactness of $F\\otimes_R-$ is the definition. The implication (1) $\\implies$ (3) also uses a projective resolution of the left module $N$ to compute Tor and uses the fact that exact functors preserve exactness of resolutions.\n- (3) $\\implies$ (2): Take $n=1$, a direct specialization. (2) $\\implies$ (1): The Tor long exact sequence of a short exact sequence shows that tensoring preserves injections. Combine this with the right exactness of tensoring.\n- These implications hold over any unital ring, with no commutativity, Noetherian, or PID hypothesis. The pairing of $F$ as a right module with $N$ as a left module is essential. Over a noncommutative ring the two inputs cannot be interchanged freely.\n- Vanishing is required for every $N$. Testing only $N=R$ gives vanishing for any $F$, including $F=\\mathbb Z/2$, which is not flat. Flatness cannot be replaced by projectivity either. For example, $\\mathbb Q$ is a flat, nonprojective $\\mathbb Z$-module.\n\n\n⭐ **This gives a condition for flatness that can be checked one case at a time**. Instead of examining all injections, compute, for each $N$, the group $\\operatorname{Tor}_{1}$. In practice this is often used with Lambek's criterion, which requires testing only finitely generated ideals.\n\n📌 **Corollaries**: **Direct summands** of flat modules are flat ($\\operatorname{Tor}$ commutes with direct sums), and direct sums of flat modules are **flat**. Projective modules are flat (vanishing in higher degrees on the $\\operatorname{Ext}$ side is the dual manifestation of the same phenomenon).\n\n⚠️ Here $\\operatorname{Tor}_{n}^{R}(F, -)$ treats $F$ as a **right** module. Over a noncommutative ring, right flatness of $F$ and left flatness of $F$ (that is, $\\operatorname{Tor}_{n}^{R}(-, F) = 0$) are **two distinct conditions**. This result concerns right flatness. Over a commutative ring the two conditions coincide ✓.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#58c6a52b",
+      "notes": "v0.9.3#c802fb7f"
+     }
     }
    },
    "en_page": "nodes/prop.tor-flat-vanishing.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "homology",
    "regions": [
     "homology"
@@ -57033,23 +57057,35 @@
    "status": "skeleton",
    "label_en": "Čech Equals Sheaf Cohomology",
    "title_en": "Čech Cohomology Equals Sheaf Cohomology on Paracompact Spaces",
+   "statement_en": "Let $X$ be a **paracompact Hausdorff** space (see `def.paracompact` in the topology cluster for the definition and equivalent characterizations of paracompactness). Then for every sheaf of abelian groups $\\mathcal{M}$ and every $n \\ge 0$,\n\n$$\\check{H}^{n}(X, \\mathcal{M}) \\;\\cong\\; H^{n}(X, \\mathcal{M}) .$$\n\nHere $\\check{H}^{n}(X,\\mathcal{M}):=\\varinjlim_{\\mathfrak{U}}\\check{H}^{n}(\\mathfrak{U},\\mathcal{M})$ is the direct limit over locally finite open covers. The isomorphism **does not hold** for an arbitrary individual locally finite cover (see the counterexample in the notes). If $\\mathfrak{U}$ is a **good cover** for $\\mathcal{M}$, meaning that every finite intersection $U_{i_{0}\\cdots i_{p}}$ satisfies $H^{q}(U_{i_{0}\\cdots i_{p}},\\mathcal{M})=0$ ($q>0$), then the Cartan–Leray spectral sequence degenerates, and the map $\\check{H}^{n}(\\mathfrak{U},\\mathcal{M})\\to H^{n}(X,\\mathcal{M})$ for that cover is already an isomorphism.",
+   "notes_en": "**Ingredients of the standard proof.** Proofs of ① and ③ are given below. Step ② depends on the acyclicity of flabby sheaves used in `thm.soft-sheaf-acyclic`, which is unproved in the graph. The comparison in ④ is still missing, so this node is marked `status: 'skeleton'`.\n\n**① The Čech complex of sheaves is a resolution.** For a cover $\\mathfrak{U} = (U_{i})_{i}$, set $\\check{\\mathcal{C}}^{p}(\\mathfrak{U}, \\mathcal{M}) := \\prod_{i_{0} < \\cdots < i_{p}} j_{*}\\bigl(\\mathcal{M}|_{U_{i_{0} \\cdots i_{p}}}\\bigr)$, where $j : U_{i_{0} \\cdots i_{p}} \\hookrightarrow X$ is the inclusion.\n\n**Proof of ①.** It suffices to check the stalks. Fix $x$ and choose $i$ such that $x \\in U_{i}$. Define a contracting homotopy $h^{p} : (\\check{\\mathcal{C}}^{p})_{x} \\to (\\check{\\mathcal{C}}^{p-1})_{x}$ on the stalk. For $\\sigma \\in (\\check{\\mathcal{C}}^{p})_{x}$, set $(h\\sigma)_{i_{0} \\cdots i_{p-1}} := \\sigma_{i\\,i_{0} \\cdots i_{p-1}}$ (set the remaining components to $0$, and on a sufficiently small neighborhood of $x$ the same choice $U_{i}$ remains valid). A direct computation with the signs of the Čech differential $\\delta$ gives $\\delta h + h \\delta = \\operatorname{id}$ ($p \\ge 1$), and when $p = 0$, the map $\\delta h = \\operatorname{id}$ is precisely the augmentation $\\mathcal{M}_{x} \\to (\\check{\\mathcal{C}}^{0})_{x}$. Thus the augmented complex $0 \\to \\mathcal{M}_{x} \\to (\\check{\\mathcal{C}}^{0})_{x} \\to (\\check{\\mathcal{C}}^{1})_{x} \\to \\cdots$ is exact. Exactness on stalks gives exactness of sheaves. Taking global sections gives $\\Gamma(X, \\check{\\mathcal{C}}^{p}) = \\check{C}^{p}(\\mathfrak{U}, \\mathcal{M})$, so its cohomology is $\\check{H}^{\\bullet}(\\mathfrak{U}, \\mathcal{M})$.\n\n**② Fine sheaves $\\implies$ soft sheaves (Čech terms need not be soft).** On a paracompact Hausdorff space, locally finite covers admit subordinate partitions of unity (`prop.paracompact-partition-unity`). The two formulations of fineness apply as follows. **(a) Sheaves of $\\mathcal C(X)$-modules**: A partition of unity for a locally finite cover $\\{V_{j}\\}$, denoted by $\\{\\rho_{j}\\}$ ($\\sum_{j}\\rho_{j}=1$, $\\operatorname{supp}\\rho_{j}\\subseteq V_{j}$), gives endomorphisms by multiplication by $\\rho_{j}$, so $\\rho_{j}s_{j}$ is defined pointwise. **(b) General sheaves of abelian groups**: Use a **partition by endomorphisms** $\\eta_{j}:\\mathcal F \\to \\mathcal F$, with $\\operatorname{supp}\\eta_{j}\\subseteq V_{j}$ and $\\sum_{j}\\eta_{j}=\\operatorname{id}_{\\mathcal F}$ (a locally finite sum). The argument has the same form in both cases. Let $F \\subseteq X$ be closed and take $s \\in \\mathcal F(F)$. Each $x \\in F$ has a neighborhood $U_{x}$ and a section $s_{x} \\in \\mathcal F(U_{x})$ such that $s_{x}|_{F \\cap U_{x}}=s$. Take a locally finite refinement of $\\{U_{x}\\}_{x \\in F} \\cup \\{X \\setminus F\\}$, denoted by $\\{V_{j}\\}$, with the corresponding $\\rho_{j}$ or $\\eta_{j}$ as above. Take $s_{j} \\in \\mathcal F(V_{j})$ to be the corresponding local section (when $V_{j} \\subseteq X \\setminus F$, take $0$). In case (b), $\\operatorname{supp}\\eta_{j} \\subseteq V_{j}$ ensures that $\\eta_{j}(s_{j})$ extends outside $V_{j}$ by $0$ (both sections equal $0$ on the overlap, so they agree). Thus $\\tilde{s}:=\\sum_{j}\\rho_{j}s_{j}$ (case (a), multiplication of a section by a function) or $\\tilde{s}:=\\sum_{j}\\eta_{j}(s_{j})$ (case (b), application of an endomorphism) is a global section on $X$, given by a locally finite sum, and on $F$ it equals $s$. Hence $\\mathcal F$ is soft.\n\n**② Gap: acyclicity of soft sheaves (Godement).** On a paracompact Hausdorff space, a soft sheaf $\\mathcal{M}$ satisfies $H^{n}(X,\\mathcal{M})=0$ ($n \\ge 1$). This does not follow directly from ①. That step only proves that the Čech complex is a resolution, and Čech cohomology for a fixed cover can differ from derived functor cohomology (see the counterexample in ④). There are two standard approaches. For $n=1$, use the fact that softness makes the global sections of $0 \\to \\mathcal{M} \\to \\mathcal{G} \\to \\mathcal{H} \\to 0$ exact. Apply Zorn's lemma along a locally finite closed refinement $\\{A_{i}\\}$. Given a lift over the closed union $B$, denoted by $s$, choose $A_{i} \\not\\subseteq B$. By softness, the difference $s-s_{i} \\in \\mathcal{M}(B \\cap A_{i})$ extends to a global section $t$. On $A_{i}$ use $s_{i}+t$ instead, and glue along the closed cover $\\{B,A_{i}\\}$. Maximality gives $B=X$. The standard approach for $n \\ge 2$ uses a **Godement resolution** (each term is flabby, and flabby $\\implies$ soft) and dimension shifting. ⚠️ **This gap is only partially filled**. In the same cluster, `thm.soft-sheaf-acyclic` gives steps 0–2 (flabby $\\implies$ soft, the lifting lemma, and softness of the quotient). Its step 3 (dimension shifting) **depends on the acyclicity of flabby sheaves**, for which the graph has no lemma node. Step ② therefore remains conditional. With an injective resolution $0 \\to \\mathcal{M} \\to \\mathcal{I} \\to \\mathcal{Q} \\to 0$, treating $\\mathcal{Q}=\\mathcal{I}/\\mathcal{M}$ as flabby sheaves and arguing directly by descending induction **still fails**. **Quotients of flabby sheaves need not be flabby**, so this does not provide an alternative proof.\n\n**③ Acyclic resolutions compute derived functors (the graph has no separate node for this lemma).** If $0 \\to \\mathcal{M} \\to \\mathcal{A}^{0} \\to \\mathcal{A}^{1} \\to \\cdots$ is a resolution and each $\\mathcal{A}^{q}$ satisfies $H^{n}(X,\\mathcal{A}^{q})=0$ ($n \\ge 1$), then $H^{n}(X,\\mathcal{M}) \\cong H^{n}(\\Gamma(X,\\mathcal{A}^{\\bullet}))$. The proof uses dimension shifting. Set $\\mathcal{Z}^{0}=\\mathcal{M}$ and $\\mathcal{Z}^{q+1}=\\operatorname{im}(\\mathcal{A}^{q} \\to \\mathcal{A}^{q+1})$. The long exact sequence of the short exact sequence $0 \\to \\mathcal{Z}^{q} \\to \\mathcal{A}^{q} \\to \\mathcal{Z}^{q+1} \\to 0$ gives $H^{n}(\\mathcal{Z}^{q+1}) \\cong H^{n+1}(\\mathcal{Z}^{q})$ ($n \\ge 1$) and $H^{1}(\\mathcal{Z}^{q}) \\cong \\operatorname{coker}(\\Gamma(\\mathcal{A}^{q}) \\to \\Gamma(\\mathcal{Z}^{q+1}))$. Iterating gives the result. The graph contains `def.right-derived-functor` and `thm.derived-long-exact` as references. The argument is complete and only a separate lemma node is missing, as in step 3 of the edge `imp.paracompact-cech`.\n\n**④ The missing comparison step (correcting the earlier claim that every term is soft).** In ①, $\\check{\\mathcal{C}}^{p}$ is a product of direct images along open inclusions $j_{*}$, and $j_{*}$ is generally only left exact. For an arbitrary sheaf $\\mathcal{M}$, $\\check{\\mathcal{C}}^{p}(\\mathfrak{U},\\mathcal{M})$ **need not be soft or acyclic**, so ③ cannot be applied directly to ①. To finish the proof, one needs Čech acyclicity of the soft sheaf $\\implies$ for locally finite covers, or the equivalent double complex comparison. For the latter, replace $\\mathcal{M}$ with a soft resolution $\\mathcal{S}^{\\bullet}$ and use the two filtrations of the double complex $\\check{C}^{p}(\\mathfrak{U},\\mathcal{S}^{q})$. The graph contains `thm.cartan-leray` and `cor.cech-cohomology-spectral`, but has no lemma on Čech acyclicity of soft sheaves and no account of the two filtrations detailed enough to verify. Completing ④ gives $\\check{H}^{n}(X,\\mathcal{M})\\cong H^{n}(X,\\mathcal{M})$. Until then, this node remains marked as a skeleton.\n\n⚠️ **Why the claim fails for an arbitrary individual cover (the last sentence of the statement reflects this)**: Take $X=S^{2}$, $\\mathcal{M}=\\mathbb{Z}$, and the open cover by two hemispheres $\\{U,V\\}$, which is locally finite. The intersection $U\\cap V$ is homeomorphic to an annulus, and $\\check{C}^{2}=0$, so $\\check{H}^{2}(\\mathfrak{U},\\mathbb{Z})=0$, whereas $H^{2}(S^{2},\\mathbb{Z})=\\mathbb{Z}$. The claim for an individual cover is therefore false in general. The correct general statement uses the direct limit over covers $\\check{H}^{n}(X,\\mathcal{M})=\\varinjlim_{\\mathfrak{U}}\\check{H}^{n}(\\mathfrak{U},\\mathcal{M})\\cong H^{n}(X,\\mathcal{M})$. The isomorphism holds for an individual **good cover** (one whose finite intersections have vanishing higher cohomology, with contractible finite intersections in the constant sheaf case).\n\n**⑤ The proof for a good cover can be completed using `thm.cartan-leray`.** If every finite intersection of the cover $\\mathfrak{U}$, denoted by $U_{i_{0}\\cdots i_{p}}$, satisfies $H^{q}(U_{i_{0}\\cdots i_{p}},\\mathcal{M})=0$ ($q>0$), each term of the Čech complex $C^{\\bullet}(\\mathfrak{U},H^{q}(\\mathcal{M}))$ is a product of these groups $H^{q}(U_{I},\\mathcal{M})=0$. The Čech terms are evaluated on finite intersections and are precisely sections of the presheaf $U\\mapsto H^{q}(U,\\mathcal{M})$. Only vanishing of the presheaf on intersections of the covering sets is needed, regardless of whether the sheaf $H^{q}(\\mathcal{M})$ itself is zero. Thus the term $E_{2}^{p,q}=\\check{H}^{p}(\\mathfrak{U},H^{q}(\\mathcal{M}))$ of the Cartan–Leray spectral sequence is, when $q>0$, equal to $0$. The spectral sequence degenerates and gives $\\check{H}^{n}(\\mathfrak{U},\\mathcal{M})\\cong H^{n}(X,\\mathcal{M})$. This establishes the isomorphism for an individual good cover. The general direct limit over locally finite covers still requires ② and ④.\n\n**Conclusion**: Step ② depends on the acyclicity of flabby sheaves used in `thm.soft-sheaf-acyclic`, which is unproved in the graph. The comparison in ④ is still needed to finish the proof using the Čech resolution in ① as an acyclic resolution. For good covers, degeneration of the Cartan–Leray spectral sequence suffices. ⚠ This node **remains marked as a skeleton**. The missing step is ④ (Čech acyclicity of soft sheaves or the double complex comparison). Step ①, fine $\\implies$ soft, and step ③ are proved above. Step ② depends on flabby acyclicity, which is unproved in the graph.\n\n⭐ **Relation to the compact Hausdorff result**: Every compact Hausdorff space is paracompact, so this result includes `prop.chaus-cech-eq-h`. The **proofs** use different arguments. The compactness proof uses the cofinality of finite covers in the filtered system and the control of finite products by representable objects. The paracompactness proof uses local finiteness and the softness obtained from partitions of unity. The two arguments establish the same conclusion independently.\n\n⚠️ **Paracompactness cannot be dropped**. On general spaces, even compactly generated ones, Čech cohomology and sheaf cohomology can differ. The claim that Čech cohomology equals sheaf cohomology is often quoted without qualification in topology and sheaf theory. Include the hypotheses on the space when citing it.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#32fa9132",
+      "notes": "v0.9.3#4c4ae610"
+     }
     }
    },
    "en_page": "nodes/thm.paracompact-cech-equals-sheaf.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "homology",
    "regions": [
     "homology",
@@ -58339,23 +58375,35 @@
    "title": "正则且基为可数层局部有限族的空间可度量化",
    "label_en": "Nagata–Smirnov Theorem",
    "title_en": "Nagata–Smirnov Metrization Theorem",
+   "statement_en": "Let $X$ be a **regular** space (including $T_{1}$) whose topology has a **$\\sigma$-locally finite base** (a base expressible as the union of countably many locally finite subfamilies). Then $X$ is **metrizable**.\n\nConversely, every metrizable space has a $\\sigma$-locally finite base, so this is a **necessary and sufficient condition**.",
+   "notes_en": "**Why this is stronger than Urysohn's theorem**: A countable base can be split into countably many discrete families by placing each basic open set in a singleton family. Thus second countability is a special case of having a $\\sigma$-locally finite base. Here the hypothesis is weakened to $\\sigma$-local finiteness, with the same conclusion.\n\n**Proof sketch**\n- Arrange the $\\sigma$-locally finite base in layers. Each layer is a locally finite family, and regularity allows these to be turned into **locally finite open covers**.\n- The key step (Nagata's systematic neighborhoods) is to construct a countable sequence of locally finite covers $\\mathcal{G}_{n}$ ($n \\ge 1$) such that for every open set $U$ and every $x \\in U$, some member of one cover contains $x$ in its interior and is contained in $U$.\n- Use these covers to define a nonnegative symmetric function by summing contributions to separation from each layer. Verify the three metric axioms and check that the induced topology is exactly the original topology.\n\n⚠️ **Scope**: This node gives a proof outline and a reference. Munkres devotes all of Section 40 to the theorem.\n\n⚠️ Regularity is essential. The base condition alone does not guarantee metrizability. The proof uses the ability to separate a point from a closed set by basic open sets.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#566559a6",
+      "notes": "v0.9.3#62ae1028"
+     }
     }
    },
    "en_page": "nodes/thm.nagata-smirnov.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -59879,23 +59927,35 @@
    "title": "测地曲率的 Liouville 公式",
    "label_en": "Liouville's Formula",
    "title_en": "Liouville's Formula",
+   "statement_en": "In plain terms, **geodesic curvature is the turning rate of the curve minus the turning rate of the frame due to the metric**. The latter is determined solely by the partial derivatives of $E, G$. Thus the metric, that is, $I$, suffices to compute the geodesic curvature of any curve, independently of how the surface is embedded in $\\mathbb{R}^{3}$.\n\nLet $(u,v)$ be an **orthogonal** coordinate net on $S$ ($F = 0$, $I = E\\,\\mathrm{d}u^{2}+G\\,\\mathrm{d}v^{2}$). Let $\\gamma$ be parametrized by arc length, and let $\\theta(s)$ be the angle between $\\dot\\gamma(s)$ and the $u$ coordinate line (in the direction $\\partial_{u}$). Then\n\n$$k_{g}(\\gamma) = \\frac{\\mathrm{d}\\theta}{\\mathrm{d}s}-\\frac{(\\ln E)_{v}}{2\\sqrt{G}}\\cos\\theta+\\frac{(\\ln G)_{u}}{2\\sqrt{E}}\\sin\\theta.$$\n\nIn particular, $\\gamma$ is a geodesic if and only if $\\theta$ satisfies this first-order equation. The change in direction of a geodesic is completely determined by the derivatives of the metric coefficients.",
+   "notes_en": "**Structure**: $k_{g} = \\frac{\\mathrm{d}\\theta}{\\mathrm{d}s}-\\omega^{1}_{2}(\\dot\\gamma)$, where the first term is the turning rate of the curve relative to the frame and the second is the turning rate of the frame itself.\n\nSubstituting $\\omega^{1}_{2} = \\frac{(\\ln E)_{v}}{2\\sqrt G}\\omega^{1}-\\frac{(\\ln G)_{u}}{2\\sqrt E}\\omega^{2}$ gives the formula above.\n\n**Two checks** (both can be done by hand):\n\n- In plane polar coordinates ($E = 1$, $G = \\rho^{2}$), a circle of radius $\\rho_{0}$ centered at the origin has $\\theta\\equiv\\frac{\\pi}{2}$ and $\\frac{\\mathrm{d}\\theta}{\\mathrm{d}s} = 0$; the formula gives $k_{g} = \\frac{2/\\rho_{0}}{2} = \\frac{1}{\\rho_{0}}$, the curvature of that circle for the polar metric.\n\n\n- On the sphere ($I = \\mathrm{d}\\rho^{2}+\\sin^{2}\\rho\\,\\mathrm{d}\\theta^{2}$), the circle of latitude $\\rho = \\rho_{0}$ gives $k_{g} = \\frac{2\\cot\\rho_{0}}{2} = \\cot\\rho_{0}$, in agreement with direct computation.\n\n⚠️ A common error is to simplify the formula to $\\frac{\\mathrm{d}\\theta}{\\mathrm{d}s}+(k_{1}-k_{2})\\sin\\theta\\cos\\theta$ in curvature-line coordinates.\n\nThe sphere gives a counterexample. On a circle of latitude, $\\theta\\equiv\\frac{\\pi}{2}$ and $\\frac{\\mathrm{d}\\theta}{\\mathrm{d}s}\\equiv 0$, while $k_{g} = \\cot\\rho_{0}\\ne0$.\n\nOn the sphere, $k_{1} = k_{2} = 1$ also makes both terms on the right-hand side vanish.\n\n**This simplified formula is invalid. Do not use it.**\n\n**Special case**: If the orthogonal net also uses geodesic coordinates ($E\\equiv1$), the formula reduces to $k_{g} = \\frac{\\mathrm{d}\\theta}{\\mathrm{d}s}+\\frac{(\\ln G)_{u}}{2}\\sin\\theta$. If, in addition, $G$ is independent of $u$, this is the plane polar coordinate case.\n\n⭐ This formula makes it **explicit** that computing $k_{g}$ requires only $I$. The right-hand side involves only $E,G$ and the angle of the curve, with no extrinsic data.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#4caec749",
+      "notes": "v0.9.3#be086964"
+     }
     }
    },
    "en_page": "nodes/thm.liouville-formula.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -64206,23 +64266,35 @@
    "title": "单个方块上的 Stokes 公式",
    "label_en": "Stokes on a Cube",
    "title_en": "Stokes' Formula on a Single Cube",
+   "statement_en": "**The calculation on a standard cube**: Stokes' theorem is first verified on a single standard cube. The left-hand side is a multiple integral, and the right-hand side integrates over $2k$ faces. The two sides agree term by term, checking all the sign conventions.\n\nLet $\\eta$ be defined on an open set containing $I^{k} = [0,1]^{k}$ and be a $(k-1)$-form ($k\\ge 1$). Then\n\n$$\\int_{I^{k}}\\mathrm{d}\\eta = \\int_{\\partial I^{k}}\\eta ,$$\n\nHere $I^{k}$ has the standard orientation, and $\\partial I^{k}$ is interpreted according to the sign convention in `def.boundary-operator` as a $(k-1)$-chain.\n\nWhen $k = 1$, this is the fundamental theorem of calculus: $\\int_{0}^{1}F^{\\prime}(t)\\,\\mathrm{d}t = F(1)-F(0)$.",
+   "notes_en": "**Proof**: Expand $\\eta$ uniquely according to which $\\mathrm{d}x^{j}$ is omitted:\n\n$$\\eta = \\sum_{j=1}^{k}(-1)^{j-1} f_{j}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\widehat{\\mathrm{d}x^{j}}\\wedge\\cdots\\wedge\\mathrm{d}x^{k},$$\n\nHere $f_{j}$ are smooth functions on an open set containing $I^{k}$ (a hat indicates that the factor is omitted).\n\n**Left-hand side.** Take the exterior derivative term by term. When $\\mathrm{d}f_{j}$ is wedged with the remaining factors, only the $\\mathrm{d}x^{j}$ term survives, and\n\n$$\\mathrm{d}\\left((-1)^{j-1} f_{j}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\widehat{\\mathrm{d}x^{j}}\\cdots\\wedge\\mathrm{d}x^{k}\\right) = \\partial_{j} f_{j}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\mathrm{d}x^{k},$$\n\nHence $\\mathrm{d}\\eta = \\sum_{j=1}^{k}\\partial_{j} f_{j}\\,\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\mathrm{d}x^{k}$. By Fubini's theorem and the one-variable fundamental theorem of calculus (integrating first with respect to $x^{j}$ and denoting the remaining coordinates by $y$),\n\n$$\\int_{I^{k}}\\mathrm{d}\\eta = \\sum_{j=1}^{k}\\int_{I^{k-1}}\\left[f_{j}\\big|_{x^{j}=1} - f_{j}\\big|_{x^{j}=0}\\right]\\mathrm{d}y.$$\n\n**Right-hand side.** By `def.boundary-operator`, $\\partial I^{k} = \\sum_{i=1}^{k}\\sum_{\\alpha=0}^{1}(-1)^{i+\\alpha} I^{k}_{(i,\\alpha)}$. On face $(i,\\alpha)$, the pullback of $\\mathrm{d}x^{i}$ is $0$, so only the term with $j = i$ survives:\n\n$$I^{k}_{(i,\\alpha)}{}^{*}\\eta = (-1)^{i-1} f_{i}\\big|_{x^{i}=\\alpha}\\,\\mathrm{d}y^{1}\\wedge\\cdots\\wedge\\mathrm{d}y^{k-1},$$\n\nHere $y$ denotes the remaining $k-1$ coordinates on the face, in their original order. Thus\n\n$$\\int_{\\partial I^{k}}\\eta = \\sum_{i=1}^{k}\\sum_{\\alpha=0}^{1}(-1)^{i+\\alpha}(-1)^{i-1}\\int_{I^{k-1}} f_{i}\\big|_{x^{i}=\\alpha}\\,\\mathrm{d}y = \\sum_{i=1}^{k}\\int_{I^{k-1}}\\left[f_{i}\\big|_{x^{i}=1} - f_{i}\\big|_{x^{i}=0}\\right]\\mathrm{d}y,$$\n\nThe last step uses $(-1)^{i+\\alpha+i-1} = (-1)^{\\alpha+1}$. The case $\\alpha=1$ gives $+1$, and the case $\\alpha=0$ gives $-1$.\n\nThe two sides agree term by term, so $\\int_{I^{k}}\\mathrm{d}\\eta = \\int_{\\partial I^{k}}\\eta$. When $k = 1$, we have $\\eta = f$ and $\\mathrm{d}\\eta = f^{\\prime}\\mathrm{d}x$. The two sides give $\\int_{0}^{1} f^{\\prime} = f(1) - f(0)$ and $f(1) - f(0)$, respectively, so the sign conventions agree. ∎\n\n**Why this case comes first**: The case of a general cube $c$ follows by pullback ($c^{\\ast}\\mathrm{d} = \\mathrm{d}c^{\\ast}$), which reduces it to this lemma. This lemma therefore supplies the **only** substantive calculation in Stokes' theorem for chains. The rest is the passage to general cubes and chains.\n\n**⚠️ The most common sign error**: When $\\eta$ is written as $\\sum_{j}(-1)^{j-1}f_{j}\\mathrm{d}x^{1}\\wedge\\cdots\\widehat{\\mathrm{d}x^{j}}\\cdots\\wedge\\mathrm{d}x^{k}$ (a hat indicates that the factor is omitted), there is **no** additional sign in $\\mathrm{d}\\eta = \\sum_{j}\\partial_{j}f_{j}\\mathrm{d}x^{1}\\wedge\\cdots\\wedge\\mathrm{d}x^{k}$. Inserting an extra $(-1)^{j-1}$ here throws off the matching of the face terms on the right-hand side.\n\n**⚠️ Measure-zero sets on the boundary**: The form $\\eta$ need only be defined on an open set and continuous up to the boundary. The facewise pullbacks use the values of $\\eta$ on each face, and $\\partial I^{k}$ has measure zero, so the integrals are independent of the choice of extension.\n\n**Relation to the classical formulas**: When $k = 2$, this is Green's theorem. When $k = 3$, it is the Kelvin–Stokes theorem in circulation form. Both are special cases of this lemma.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#1b1f3aa2",
+      "notes": "v0.9.3#d9e65b0a"
+     }
     }
    },
    "en_page": "nodes/lem.single-cube-stokes.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -64250,23 +64322,35 @@
    "title": "链上的 Stokes 定理",
    "label_en": "Stokes' Theorem on Chains",
    "title_en": "Stokes' Theorem on Chains",
+   "statement_en": "**What it says**: Integrating a $(k-1)$-form over the **boundary chain** gives the same result as integrating its exterior derivative over the **chain**. This is the common generalization of the fundamental theorem of calculus, Green's theorem, Gauss's theorem, and the Kelvin–Stokes theorem.\n\nLet $c$ be a chain in $M$ of dimension $k$ ($k\\ge 1$), and let $\\omega$ be defined on a neighborhood of the image of $c$ and be a $(k-1)$-form. Then\n\n$$\\int_{\\partial c}\\omega = \\int_{c}\\mathrm{d}\\omega .$$\n\n**Relation to the manifold version** (`thm.stokes`): The manifold version requires $M$ to be compact and orientable with boundary, and $\\omega$ to be defined on $M$. The chain version does not require $M$ to be orientable or compact, or $\\omega$ to have compact support. It uses a chain in place of a manifold.\n\nEach is a special case of the other. Decompose (or subdivide) $M$ into a covering $n$-chain. Summing the chain formula term by term gives the manifold version.\n\nConversely, restricting the manifold version to a single orientation-preserving parametrized cube gives the single-cube case of the chain version.\n\nWhen $k = 1$ and $c = \\gamma : [0,1]\\to\\mathbb{R}$, we have $\\partial\\gamma = \\gamma(1)-\\gamma(0)$, and the formula becomes $F(\\gamma(1))-F(\\gamma(0)) = \\int_{0}^{1}(F^{\\prime}\\circ\\gamma)\\,\\gamma^{\\prime}\\,\\mathrm{d}t$, precisely the fundamental theorem of calculus.",
+   "notes_en": "**The proof takes only three lines**: $\\int_{c}\\mathrm{d}\\omega = \\int_{I^{k}}c^{\\ast}\\mathrm{d}\\omega = \\int_{I^{k}}\\mathrm{d}(c^{\\ast}\\omega) = \\int_{\\partial I^{k}}c^{\\ast}\\omega = \\int_{\\partial c}\\omega$.\n\nThe four steps use, respectively, the definition of integration over a chain, commutation of $c^{\\ast}$ with $\\mathrm{d}$, `lem.single-cube-stokes`, and the definition and linearity of $\\partial$.\n\nThe lemma contains the entire difficulty. Here we simply express it in chain language.\n\n**Why no orientation is required**: For chains, the parametrization already encodes the orientation (`def.integral-on-chain`), so orientability does not enter the statement. An orientation is needed when passing back from the chain version to the manifold version. The signs then come from `prop.boundary-sign-convention`.\n\n**Four in one**: $k = 1$ gives the fundamental theorem of calculus. $k = 2$ gives Green's theorem. The two forms of $k = 3$ are Gauss–Ostrogradsky (flux, i.e., the divergence theorem `thm.divergence-theorem`) and Kelvin–Stokes (circulation). These are readings of the same theorem for different $k$.\n\n**⚠️ Degree and dimension**: The degree of $\\omega$ must be one less than the dimension of the chain. When $k = 0$, we have $\\partial c = 0$ and the right-hand side is zero, so the formula reduces to $0 = 0$. Thus the theorem starts at $k\\ge 1$.\n\n**⚠️ Stating the theorem only for closed chains would be too restrictive**: The theorem does not require $c$ to be a closed chain. When $\\partial c\\ne 0$, the two sides still agree. The vanishing of the pairing between a closed chain and an exact form ($\\int_{c}\\mathrm{d}\\omega = 0$) is a corollary.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#7601ae5f",
+      "notes": "v0.9.3#2061b2d4"
+     }
     }
    },
    "en_page": "nodes/thm.stokes-chain.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -65668,23 +65752,35 @@
    "title": "Frobenius 定理",
    "label_en": "Frobenius theorem",
    "title_en": "Frobenius theorem",
+   "statement_en": "**In plain language**: A smooth family of directions fits together into sheets if and only if it is involutive. Involutivity is the only obstruction. This is the geometric version of solvability for systems of first-order partial differential equations, and it explains how foliations arise.\n\nLet $\\mathcal{D}$ be a tangent distribution on an $n$-dimensional smooth manifold $M$, smooth and of rank $k$. The following four conditions are equivalent:\n\n1. $\\mathcal{D}$ is involutive (`def.involutive-distribution`).\n2. **Existence of flat coordinates**: Each point $p$ has a neighborhood $U$ with coordinates $(x^{1},\\ldots,x^{n})$ in which $\\mathcal{D}|_{U}$ is spanned by $\\partial_{1},\\ldots,\\partial_{k}$.\n3. **Local integrability**: Each point $p$ lies in an $k$-dimensional integral manifold (`def.integral-manifold`).\n4. **Existence of a foliation**: $M$ is covered by a family of pairwise disjoint maximal connected integral manifolds (leaves), each of which is an immersed submanifold.\n\nIn particular, involutivity holds **if and only if** there are always local coordinates that straighten $\\mathcal{D}$ into coordinate slices. When $k = n-1$ and $\\mathcal{D} = \\ker\\omega$ (with $\\omega$ nowhere zero), involutivity is equivalent to\n\n$$\\omega \\wedge \\mathrm{d}\\omega = 0,$$\n\nThis is the classical Frobenius condition. Its proof is the explicit calculation for hyperplane distributions corresponding to the flow-box argument for (1)$\\iff$(2) below.",
+   "notes_en": "**Proof structure**: Condition (2) drives the proof of the four-way equivalence. The two proof edges are `imp.mf2-frobenius-flat` (the flow-box argument and induction on rank for (1)$\\implies$(2)) and `imp.mf2-frobenius-integral` ((2)$\\implies$(3), (3)$\\implies$(1), (2)$\\implies$(4)). The main argument is presented step by step below and can be read independently.\n\n**I. (1)$\\implies$(2): Flow box and induction on rank.** Choose $p$ and, on a neighborhood of $p$, take smooth pointwise independent generators $X_{1},\\ldots,X_{k}$.\n\n1. By `thm.flow-local`, straighten $X_{1}$ along its local flow. There are coordinates $(y^{1},\\ldots,y^{n})$ such that $X_{1}=\\partial_{1}$ (the flow-box theorem).\n2. Write the remaining generators as $X_{i}=a_{i}\\,\\partial_{1}+Y_{i}$ ($i\\ge2$), where $Y_{i}$ has only $\\partial_{2},\\ldots,\\partial_{n}$ components. Since $\\mathrm{d}y^{1}$ is a closed form,\n\n$$\\mathrm{d}y^{1}\\bigl([\\partial_{1},Y_{i}]\\bigr)=\\partial_{1}\\bigl(\\mathrm{d}y^{1}(Y_{i})\\bigr)-Y_{i}\\bigl(\\mathrm{d}y^{1}(\\partial_{1})\\bigr)=0,$$\n\nso $[\\partial_{1},Y_{i}]$ also has only $\\partial_{2},\\ldots,\\partial_{n}$ components.\n3. Involutivity gives that $[X_{1},X_{i}]=[\\partial_{1},a_{i}\\partial_{1}+Y_{i}]=(\\partial_{1}a_{i})\\partial_{1}+[\\partial_{1},Y_{i}]$ lies in $\\mathcal{D}=\\operatorname{span}\\{\\partial_{1},Y_{2},\\ldots,Y_{k}\\}$. Comparing the $\\partial_{1}$ components and using the preceding step gives\n\n$$\\partial_{1}a_{i}=0,\\qquad [\\partial_{1},Y_{i}]\\in\\operatorname{span}\\{Y_{2},\\ldots,Y_{k}\\}.$$\n\nThe latter equation shows that on the transverse hypersurface $S=\\{y^{1}=0\\}$, the distribution $\\mathcal{D}_{S}=\\operatorname{span}\\{Y_{2},\\ldots,Y_{k}\\}$ is involutive (of rank $k-1$).\n4. Induct on $k$ (when $k=1$, $\\partial_{1}$ itself gives the desired coordinates). By the induction hypothesis, on $S$ there are coordinates $(x^{2},\\ldots,x^{n})$ in which $\\mathcal{D}_{S}$ is spanned by $\\partial_{2},\\ldots,\\partial_{k}$. Use the flow of $X_{1}=\\partial_{1}$ to transport the coordinates of $S$ in the $x^{1}$ direction, obtaining on a neighborhood of $p$ the coordinates $(x^{1},x^{2},\\ldots,x^{n})$.\n5. In these coordinates, $[\\partial_{1},\\partial_{a}]=0$ ($a\\ge2$). Write $Y_{i}$ as $Y_{i}=\\sum_{a\\ge2}f^{a}_{i}\\,\\partial_{a}$. Since $[\\partial_{1},Y_{i}]\\in\\operatorname{span}\\{Y_{j}\\}$ has no $\\partial_{1}$ component and $[\\partial_{1},\\partial_{a}]=0$, we obtain $\\partial_{1}f^{a}_{i}=0$. On the slice $x^{1}=0$, we have $Y_{i}=\\partial_{i}$ ($i=2,\\ldots,k$ by the induction hypothesis), so $f^{a}_{i}=\\delta^{a}_{i}$ is independent of $x^{1}$. Thus $Y_{i}=\\partial_{i}$ holds throughout the neighborhood. Hence\n\n$$\\mathcal{D}=\\operatorname{span}\\{\\partial_{1},\\ldots,\\partial_{k}\\}.\\qquad\\blacksquare$$\n\n**II. (2)$\\implies$(3):** In flat coordinates, the tangent spaces of $N=\\{x^{k+1}=\\cdots=x^{n}=0\\}$ are spanned precisely by $\\partial_{1},\\ldots,\\partial_{k}$, so $N$ is an $k$-dimensional integral manifold through $p$. $\\square$\n\n**III. (3)$\\implies$(1):** If $X,Y$ are tangent at $p$ to an integral manifold $N$, then $[X,Y]_{p}$ is also tangent to $N$ (by naturality of the bracket, $[X,Y]$ depends only on first-order information about $X,Y$, and after extending $X,Y$ to vector fields tangent to $N$, their bracket still lies in $TN$, see `def.lie-bracket`). Thus $\\mathcal{D}$ is involutive. $\\square$\n\n**IV. (2)$\\implies$(4):** Each point has a coordinate chart $N_{q}$. Order all connected integral manifolds by inclusion and apply Zorn's lemma to obtain maximal elements. The union of a chain is still a connected integral manifold, since locally it is part of a coordinate chart and smoothness is preserved along the chain. The maximal elements are pairwise disjoint, since otherwise their union would still be a connected integral manifold, and they cover $M$. We need $M$ to be second countable to ensure that the set of leaves is countable and the construction is well-defined. Second countability is already part of the definition of a manifold. See `imp.mf2-frobenius-integral` for all four steps. $\\square$\n\n**V. The calculation for $k=n-1$ and $\\omega\\wedge\\mathrm{d}\\omega=0$.** Suppose $\\mathcal{D}=\\ker\\omega$ and $\\omega$ is nowhere zero. For $X,Y\\in\\ker\\omega$,\n\n$$\\mathrm{d}\\omega(X,Y)=X\\omega(Y)-Y\\omega(X)-\\omega([X,Y])=-\\omega([X,Y]).$$\n\nThus involutivity ($[X,Y]\\in\\ker\\omega$) is equivalent to $\\mathrm{d}\\omega$ vanishing identically on $\\ker\\omega\\times\\ker\\omega$. In turn, $\\mathrm{d}\\omega$ vanishes on $\\ker\\omega$ if and only if $\\mathrm{d}\\omega=\\omega\\wedge\\alpha$ (for some $1$-form $\\alpha$), which is equivalent to $\\omega\\wedge\\mathrm{d}\\omega=0$, as one sees by expanding both sides using the same $\\alpha$. $\\square$\n\n**VI. The condition is sharp.** A contact distribution is a counterexample (see the notes to `def.involutive-distribution`). It is smooth, has rank $2$, and is nowhere zero, yet fails to be involutive, so no surface can be an integral manifold for it. Involutivity is therefore necessary as well as sufficient.\n\n**VII. The conclusion is local.** The theorem gives foliation coordinates near each point. It does **not** guarantee global coordinates straightening $\\mathcal{D}$ into coordinate slices of $\\mathbb{R}^{n}$, which would require the leaf space itself to be a product manifold. The irrational-slope foliation on the torus is a counterexample. Its leaves are locally straight lines, yet each winds densely around the torus.\n\n**VIII. Analytic formulation and smoothness.** Frobenius gives the compatibility condition for local solvability of the system of first-order linear partial differential equations $\\partial_{i}f=\\sum_{j}a^{j}_{i}\\partial_{j}f$ ($i>k$). Compatibility is precisely involutivity, which is also how to read $\\mathrm{d}^{2}=0$. Step 1 uses Picard–Lindelöf to solve the ODE, so $\\mathcal{D}$ must be smooth (at least $C^{2}$ to discuss brackets). Below $C^{1}$, there are counterexamples that are nowhere involutive yet have integral surfaces everywhere.\n\n**IX. Notation.** Here we use the language of families of $k$-dimensional subspaces. Textbooks often use integral manifolds of a differential ideal $I\\subseteq\\Omega^{\\bullet}(M)$. The two formulations are equivalent (take $I$ to be the ideal generated by forms annihilating $\\mathcal{D}$). We use only the distribution formulation here to avoid introducing a second notation. The cases $k=n$ and $k=0$ are trivial. $k=1$ is always involutive, and the nontrivial examples begin at $2\\le k\\le n-1$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#cb3c206c",
+      "notes": "v0.9.3#9617c8aa"
+     }
     }
    },
    "en_page": "nodes/thm.frobenius.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "diffgeom",
    "regions": [
     "diffgeom"
@@ -65908,26 +66004,36 @@
    "label_en": "de Rham theorem",
    "title_en": "de Rham theorem",
    "abstract_en": "Integrating forms pairs de Rham cohomology, closed forms modulo exact ones, with singular homology, and the de Rham theorem says the pairing is perfect: for every $k$ there is an isomorphism $H^{k}_{\\mathrm{dR}}(M)\\to H^{k}_{\\mathrm{sing}}(M;\\mathbb{R})$ sending $[\\omega]$ to the functional $[c]\\mapsto\\int_{c}\\omega$. The maps are compatible with pullbacks, so they form a natural isomorphism of graded algebras. The theorem welds analysis, geometry and topology into a single object.",
+   "statement_en": "**In plain language**: The cohomology defined using calculus (closed forms modulo exact forms) is the same as the topological cohomology built from simplices (by dualizing singular chains). This theorem connects analysis, geometry, and topology.\n\nLet $M$ be a smooth manifold. For each $k \\ge 0$ there is an isomorphism\n\n$$\\Phi^{k} : H^{k}_{\\mathrm{dR}}(M) \\longrightarrow H^{k}_{\\mathrm{sing}}(M;\\mathbb{R}),\\qquad [\\omega] \\longmapsto \\Bigl([c] \\mapsto \\int_{c}\\omega\\Bigr),$$\n\nwhere $H^{k}_{\\mathrm{sing}}(M;\\mathbb{R}) := H^{k}\\bigl(\\operatorname{Hom}(C^{\\mathrm{sing}}_{\\bullet}(M),\\mathbb{R})\\bigr)$ is the cohomology of the dual of the singular chain complex (`def.singular-chain`), and $\\int_{c}\\omega$ is integration of forms over chains.\n\n$\\Phi^{k}$ is compatible with pullbacks, so $k \\mapsto \\Phi^{k}$ is a family of natural isomorphisms. $H^{\\bullet}_{\\mathrm{dR}}$ and $H^{\\bullet}_{\\mathrm{sing}}$ are two ways to compute the same functor.",
+   "notes_en": "**This node retains skeleton status**: The graph has no full proof of the de Rham theorem. The outline below divides the proof into six steps and identifies which parts can be verified in full within the graph and which require external theorems. It names each missing result so that it can be checked individually as nodes are added.\n**Step 0: Conventions.** For smooth singular chains $C^{\\infty}_{\\bullet}(M)$, each simplex $\\sigma:\\Delta^{k}\\to M$ is smooth and extends to a prism neighborhood of $\\Delta^{k}$, so every face is smooth. $\\Omega^{q}$ is the sheaf of $q$-forms, and $\\mathrm{d}$ is the differential of the complex of sheaves. $\\Gamma(M,\\Omega^{\\bullet})=\\Omega^{\\bullet}(M)$ is the de Rham complex.\n**Step 1: The pairing is well-defined (fully verifiable within the graph).** First note that $\\int_{c}\\omega$ is undefined on **continuous** singular chains, since $c$ need not be smooth and $\\omega$ is defined only on smooth tangent vectors. We therefore use smooth singular chains. Both invariance properties follow from `thm.stokes-chain`: if $\\omega$ is closed and $c=\\partial b$, then $\\int_{c}\\omega=\\int_{b}\\mathrm{d}\\omega=0$. If $\\omega=\\mathrm{d}\\eta$, then $\\int_{c}\\mathrm{d}\\eta=\\int_{\\partial c}\\eta=0$ (with $c$ a closed chain). Thus $\\Phi^{k}([\\omega])([c])=\\int_{c}\\omega$ is well-defined and clearly $\\mathbb{R}$-bilinear.\n**Step 2: $\\Omega^{\\bullet}$ is a resolution of the constant sheaf $\\underline{\\mathbb{R}}$ (exactness is fully verifiable within the graph).** Exactness at each stalk follows from the Poincaré lemma (`lem.poincare-lemma`). $\\ker(\\mathrm{d}:\\Omega^{0}\\to\\Omega^{1})$ is the sheaf of locally constant functions $\\underline{\\mathbb{R}}$. Since $\\Omega^{q}$ is a fine sheaf and fine sheaves on paracompact manifolds have vanishing higher cohomology (Godement's lemma), we obtain $H^{k}_{\\mathrm{dR}}(M)=H^{k}\\bigl(\\Gamma(M,\\Omega^{\\bullet})\\bigr)\\cong H^{k}(M;\\underline{\\mathbb{R}}).$. The **exactness** in this step can be checked in full. **Acyclicity of fine sheaves** is an external lemma (Gap D).\n**Step 3: The Čech–de Rham double complex.** Choose a good cover $\\mathfrak{U}=\\{U_\\alpha\\}$ (each point has a basis of contractible neighborhoods). Arrange $\\check{C}^{p}(\\mathfrak{U},\\Omega^{q})$ into a double complex with the Čech coboundary $\\delta$ as the horizontal differential and $\\mathrm{d}$ as the vertical differential. The cohomology of the total complex $\\operatorname{Tot}$ can be computed in either direction. Taking cohomology first with respect to $\\mathrm{d}$ (each column $\\Omega^{\\bullet}(U_{p})$ is exact by the Poincaré lemma, leaving only, at $q=0$, the term $H^{0}_{\\mathrm{dR}}(U_{p})=\\mathbb{R}$ in the sense of the corresponding column term) gives $E_{1}^{p,0}=\\check{C}^{p}(\\mathfrak{U};\\underline{\\mathbb{R}})$, hence $H^{\\bullet}(\\operatorname{Tot})\\cong\\check{H}^{\\bullet}(\\mathfrak{U};\\underline{\\mathbb{R}})$. Taking cohomology first with respect to $\\delta$ ($\\Omega^{q}$ is fine and the Čech complex on a good cover is exact at $p>0$) gives $E_{1}^{0,q}=\\Omega^{q}(M)$, hence $H^{\\bullet}(\\operatorname{Tot})\\cong H^{\\bullet}_{\\mathrm{dR}}(M)$. Thus $H^{\\bullet}_{\\mathrm{dR}}(M)\\cong\\check{H}^{\\bullet}(\\mathfrak{U};\\underline{\\mathbb{R}})$. This requires **Gap B (existence of good covers)** and **Gap C (spectral sequences of double complexes)**.\n**Step 4: Čech cohomology equals sheaf cohomology.** On paracompact spaces, $\\check{H}^{\\bullet}(\\mathfrak{U};\\underline{\\mathbb{R}})\\cong H^{\\bullet}(M;\\underline{\\mathbb{R}})$ (`thm.paracompact-cech-equals-sheaf`). ⚠️ That node **also remains a skeleton**. It outlines the argument using the facts that fine sheaves are soft and soft sheaves are acyclic, followed by an acyclic resolution, but leaves Godement's lemma and the comparison lemma unproved. This step is therefore also unproved in the graph and is labeled **Gap E**.\n**Step 5: Sheaf cohomology equals singular cohomology.** Both functors are homotopy invariant, agree with $\\mathbb{R}$ on a point, and have long exact sequences for good covers. The Eilenberg–Steenrod uniqueness theorem gives a natural isomorphism. The graph has neither a node nor a proof for this axiomatic uniqueness result, labeled **Gap F**.\n**Step 6: $\\Phi$ agrees with these isomorphisms (naturality).** One must verify that the chain-level map $\\omega\\mapsto\\bigl(c\\mapsto\\int_{c}\\omega\\bigr)$ agrees with the composite of the isomorphisms constructed in Steps 2–3 and is natural under pullbacks ($\\int_{f_{*}c}f^{*}\\omega=\\int_{c}\\omega$). Stokes gives commutativity, but the full verification, especially the passage between smooth and continuous chains, is missing. This is **Gap G**.\n**Summary of gaps**: (A) Smooth singular chains $\\simeq$ continuous singular chains (simplicial approximation and smoothing). (B) Existence of good covers on smooth manifolds (geodesically convex neighborhoods and convexity radius). (C) Convergence of spectral sequences of double complexes (the graph has only ingredients such as `def.spectral-sequence`, `thm.filtered-complex-spectral`, and `cor.cech-cohomology-spectral`). (D) Acyclicity of fine sheaves (Godement). (E) Čech cohomology equals sheaf cohomology (`thm.paracompact-cech-equals-sheaf` remains a skeleton). (F) Sheaf cohomology equals singular cohomology (Eilenberg–Steenrod uniqueness). (G) Full verification of compatibility via Stokes and of naturality. **The well-definedness and exactness assertions in Steps 1 and 2 can be verified in full. The remaining parts rely on standard external results unproved in the graph, so the proof carries no ∎ and retains skeleton status.**\n**Why this is a theorem**: The two complexes are entirely different (smooth forms and topological simplices), so their agreement requires proof. The central step is Step 2, where the assertion that $\\Omega^{\\bullet}$ resolves the constant sheaf globalizes the Poincaré lemma.\n**Corollaries**: $H^{k}_{\\mathrm{dR}}$ is homotopy invariant. On a compact manifold, each $H^{k}_{\\mathrm{dR}}$ is finite-dimensional and vanishes when $k>\\dim M$. Thus the number of independent classes of closed forms modulo exact forms is purely topological, given by the Betti numbers.\n**Relation to the three de Rham nodes in pack 131**: $H^{0}$ counts connected components (`thm.de-rham-h0`), cohomology vanishes locally (`lem.poincare-lemma`), and combining open sets gives a long exact sequence (`thm.mayer-vietoris`). These are the local versions of Steps 2 and 5.\n\n**🔻 Dependencies and order (reviewed here, with skeleton status retained).** Steps 0–1 (smooth singular chains and well-definedness of the pairing) and stalkwise exactness in Step 2 can be verified independently. Acyclicity of fine sheaves in Step 2 requires Godement's theorem. The graph has only the abstract definition `def.acyclic-sheaf` and has no nodes on fine or soft sheaves. Step 3 first requires a **good cover** (every nonempty finite intersection is contractible, as with geodesically convex neighborhoods), for which the graph has no node. Comparing the two spectral sequences also requires a separate step. The node cited in Step 4, `thm.paracompact-cech-equals-sheaf`, **also remains a skeleton**, so even after filling Gaps B–D, this step can only serve as a conditional input. The graph has no node for Eilenberg–Steenrod uniqueness in Step 5. Compatibility via Stokes in Step 6 relies on `thm.stokes-chain`, which is proved, but naturality still needs a term-by-term check. Calling Gaps A–G standard leaves these dependencies unresolved, especially the chain of dependencies in Gap E. This node therefore retains skeleton status.",
    "translations": {
     "en": {
      "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "abstract",
+      "statement",
+      "notes",
       "name"
      ],
      "creative": [
-      "abstract"
+      "abstract",
+      "statement",
+      "notes"
      ],
      "fieldStatus": {
       "abstract": "stale",
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [
       "abstract"
      ],
      "basedOn": {
-      "abstract": "v0.9.3#9a6ce556"
+      "abstract": "v0.9.3#9a6ce556",
+      "statement": "v0.9.3#a08b3fdf",
+      "notes": "v0.9.3#c48111c9"
      }
     }
    },
@@ -66988,23 +67094,35 @@
    "title": "开映射定理：非常数全纯函数把开集映成开集",
    "label_en": "open mapping theorem",
    "title_en": "open mapping theorem",
+   "statement_en": "Suppose $f$ is holomorphic and **nonconstant** on a domain $\\Omega$. Then $f$ is an open map: every open subset of $\\Omega$ has open image.\n\nCorollaries:\n\n1. **Another formulation of the maximum modulus principle**: $|f|$ cannot attain a maximum in the interior of $\\Omega$, since otherwise the image would fail to be open.\n2. A holomorphic **injection** is biholomorphic onto its image (its inverse is also holomorphic).\n3. If the image of $f$ is contained in an open set, then “$\\operatorname{Im} f$ has empty interior” is equivalent to “$f$ is constant.”",
+   "notes_en": "**Proof**: Take $z_{0} \\in \\Omega$ and $w_{0} := f(z_{0})$. It suffices to show that $w_{0}$ is an interior point of $f(\\Omega)$. By translation, we may assume $w_{0} = 0$.\n\nBy `prop.zero-isolated`, $z_{0}$ is an isolated zero of $f$ of order $m \\ge 1$. Thus in some neighborhood of $z_{0}$, the only zero of $f$ is $z_{0}$. Choose a small circle $|z - z_{0}| = \\rho$ on which $f$ does not vanish, and set $\\delta := \\min_{|z - z_{0}| = \\rho}|f(z)| > 0$.\n\nNow take any $|w| < \\delta$ and compare $f$ with the constant $-w$. On the circle, $|f(z)| \\ge \\delta > |w| = |{-w} - f(z) + f(z)|$… More directly, on the circle, $|f(z) - (-w)| \\ge |f(z)| - |w| > 0$. **Rouché's theorem** compares the number of zeros of $f$ and $-w$ inside the circle. When $|f| > |{-w} - f|$ holds on the circle, the two have the same number of zeros.\n\nInside the circle, $f$ has $m \\ge 1$ zeros counted with multiplicity, so $f + w$ also has a zero inside the circle, meaning that $w = -f(z)$ is attained.\n\nThus $B(0, \\delta) \\subseteq f(\\Omega)$, and $w_{0}$ is an interior point.\n\n∎\n\n⭐ **A more intuitive way to read the theorem**: A nonconstant holomorphic function cannot collapse an open set to a line or a point. The maximum modulus principle, Schwarz's lemma, and the implication univalent $\\implies$ biholomorphic are different expressions of this idea.\n\n⚠️ Nonconstancy is essential, since a constant function maps an open set to a point. ⚠️ The theorem requires **holomorphicity**. Continuous real-valued functions lack this property.\n\n**Hypotheses used in each direction** (the open mapping theorem is an analytic result, and the equivalence between constancy and empty interior is a corollary):\n- Being an open map $\\iff$ having open image for every open set follows in both directions by definition. The implication nonconstant and holomorphic $\\implies$ open uses isolated zeros and Rouché's theorem, comparing $f-f(z_0)$ with $f-f(z_0)-w$.\n- Constant $\\implies$ image with empty interior follows directly. Image with empty interior $\\implies$ constant follows by contraposition of the open mapping theorem and requires the domain to be connected. Here the image refers to the set $f(\\Omega)$ rather than the imaginary part of the function.\n- Open map $\\implies$ nonconstant follows because a constant map on a nonempty domain has a singleton image. Continuity alone is insufficient. For example, the image of $f(z)=\\operatorname{Re}z$ has empty interior in the complex plane.\n- Holomorphic injection $\\implies$ biholomorphism: The open mapping theorem first gives continuity of the inverse. The local zero-multiplicity argument then gives $f'\\ne0$, and the inverse function theorem gives holomorphicity of the inverse. This uses more than the definition of injectivity.\n- Without connectedness, global nonconstancy is insufficient. A function taking different constant values on two disjoint disks is holomorphic and nonconstant but fails to be open. The interior maximum modulus principle follows from openness of the image and the geometry of disks.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#d4dde314",
+      "notes": "v0.9.3#6e80ef6d"
+     }
     }
    },
    "en_page": "nodes/thm.open-mapping.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -67444,23 +67562,35 @@
    "title": "Runge 逼近定理：没有洞的区域上，全纯函数可以用多项式逼近",
    "label_en": "Runge approximation theorem",
    "title_en": "Runge approximation theorem",
+   "statement_en": "Let $K \\subset \\mathbb{C}$ be compact, and let $f$ be holomorphic on a neighborhood of $K$. If $\\mathbb{C} \\setminus K$ is connected (that is, $K$ has no holes), then for each $\\varepsilon > 0$ there is a **polynomial** $p$ such that\n\n$$\\sup_{z \\in K} |f(z) - p(z)| < \\varepsilon.$$\n\nIn the general case (when $\\mathbb{C}\\setminus K$ has holes), $f$ can be approximated by **rational functions** whose poles are restricted to one point chosen in advance in each connected component of $\\mathbb{C}\\setminus K$.",
+   "notes_en": "**Proof**: There are four steps. ① Express $f$ as a Cauchy integral over a grid boundary outside $K$. ② Discretize the integral to obtain rational functions with poles outside $K$. ③ Move the poles along paths in $\\mathbb{C}\\setminus K$ to the prescribed locations. ④ If there are no holes, move them out to infinity and expand to obtain polynomials.\n\n**Lemma A (Cauchy representation)**: Let $K$ be compact, let $V$ be an open neighborhood of $K$, and let $f$ be holomorphic on $V$. Then there is a finite union of closed squares $S$ with positively oriented boundary $\\Gamma = \\partial S$ such that $K \\subset \\operatorname{int} S,\\qquad S \\subset V,\\qquad f(z) = \\frac{1}{2\\pi i}\\int_{\\Gamma}\\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta\\quad(z\\in K).$. Proof: $d := \\operatorname{dist}(K,\\mathbb{C}\\setminus V) > 0$. Take a square grid of side length $h$, with $h\\sqrt{2} < d$. Let $S$ be the union of all closed grid squares that meet $K$. Then $K\\subset\\operatorname{int} S$, and the distance from $S$ to $K$ is at most $h\\sqrt{2} < d$, so $S\\subset V$. Orient each square boundary counterclockwise and add them. The integrals along shared edges cancel, giving $\\Gamma = \\partial S$. For $z\\in K\\subset\\operatorname{int} S$, the function $h(\\zeta) := (f(\\zeta)-f(z))/(\\zeta - z)$ (extended at $\\zeta = z$ by the value $f'(z)$) is holomorphic on a neighborhood of $S$. Applying Cauchy–Goursat (`thm.cauchy-goursat`) on each square gives $\\int_{\\partial Q} h = 0$, and summing gives $\\int_{\\Gamma} h = 0$. Hence $\\int_{\\Gamma}\\frac{f(\\zeta)}{\\zeta - z}\\,\\mathrm{d}\\zeta = f(z)\\int_{\\Gamma}\\frac{\\mathrm{d}\\zeta}{\\zeta - z} = 2\\pi i\\, f(z)\\,\\operatorname{Ind}_{\\Gamma}(z) = 2\\pi i\\,f(z),$. The last step uses the fact that the positively oriented boundary of a bounded region has index $1$ about each interior point (the index is constant on each connected component of $\\mathbb{C}\\setminus\\Gamma$ and equals $0$ on the unbounded component).\n\n**Step 1: Discretizing the integral.** $\\Gamma$ is compact and $\\Gamma\\cap K = \\emptyset$, so $g(\\zeta,z) := f(\\zeta)/(\\zeta - z)$ is continuous on $\\Gamma\\times K$ and hence uniformly continuous. Divide each edge of $\\Gamma$ into equal segments of length $<\\delta$. Take midpoints $\\zeta_{j}$ and increments $\\Delta\\zeta_{j}$, and form the Riemann sum $R(z) := \\frac{1}{2\\pi i}\\sum_{j}\\frac{f(\\zeta_{j})}{\\zeta_{j} - z}\\,\\Delta\\zeta_{j}.$. By uniform continuity, taking $\\delta$ sufficiently small ensures that $\\sup_{z\\in K}\\Bigl|\\frac{1}{2\\pi i}\\int_{\\Gamma} g(\\zeta,z)\\,\\mathrm{d}\\zeta - R(z)\\Bigr| < \\frac{\\varepsilon}{2}.$. Here $R$ is a rational function whose poles lie only at the midpoints $\\zeta_{j}\\in\\Gamma\\subset\\mathbb{C}\\setminus K$.\n\n**Step 2: Moving the poles.** Suppose $b,b^{\\prime}$ lie in the same component of $\\mathbb{C}\\setminus K$, denoted by $\\Omega$. Take a polygonal path in $\\Omega$ from $b$ to $b^{\\prime}$, and choose points $b = b_{0}, b_{1}, \\ldots, b_{N} = b^{\\prime}$ along it such that $|b_{i+1} - b_{i}| < \\operatorname{dist}(b_{i},K)$. For $z\\in K$, we have $|b_{i}-z| \\ge \\operatorname{dist}(b_{i},K) > |b_{i+1}-b_{i}|$, so the geometric series $\\frac{1}{b_{i+1} - z} = \\frac{1}{b_{i} - z}\\cdot\\frac{1}{1 - \\frac{b_{i}-b_{i+1}}{b_{i}-z}} = \\sum_{k=0}^{\\infty}\\frac{(b_{i}-b_{i+1})^{k}}{(b_{i}-z)^{k+1}}$ converges uniformly on $K$ (with common ratio $\\le q_{i} < 1$). Truncating at $k\\le N_{i}$ uniformly approximates $1/(b_{i+1}-z)$ to arbitrary accuracy by a rational function with poles only at $b_{i}$. Repeating this step shows that $1/(b-z)$ can be uniformly approximated by rational functions with poles only at $b^{\\prime}$. Taking linear combinations of these basic terms gives uniform approximation of any rational function on $K$, moving its poles one at a time.\n\n**Step 3: Obtaining polynomials when there are no holes.** If $\\mathbb{C}\\setminus K$ is connected, it is an unbounded connected open set. Choose $b^{\\prime}$ such that $|b^{\\prime}| > 2\\max_{z\\in K}|z|$. For $z\\in K$, we have $|z/b^{\\prime}| \\le 1/2$, so $\\frac{1}{b^{\\prime} - z} = \\frac{1}{b^{\\prime}}\\sum_{k=0}^{\\infty}\\Bigl(\\frac{z}{b^{\\prime}}\\Bigr)^{k}$ converges uniformly on $K$, and its truncations are polynomials. Thus $f$ is uniformly approximated on $K$ by polynomials to within $\\varepsilon$.\n\n**General case**: In $\\mathbb{C}\\setminus K$, choose in advance, for each connected component $\\Omega$, one point $b_{\\Omega}$. Step 1 gives poles in $\\Gamma$ for a rational function $R$. Since $\\Gamma\\subset\\mathbb{C}\\setminus K$, each pole lies in some component $\\Omega$, and Step 2 moves it to $b_{\\Omega}$. There are finitely many poles and the error in each step can be made arbitrarily small, so $R$ is uniformly approximated by a rational function with poles at $\\{b_{\\Omega}\\}$ to within $\\varepsilon/2$. Combining this with the error $\\varepsilon/2$ from Step 1 proves the result. ∎\n\n⭐ **Runge's theorem, Mittag-Leffler's theorem, and the Weierstrass product theorem (`thm.weierstrass-product`) belong together**: Runge concerns approximation, Mittag-Leffler constructs functions with prescribed principal parts, and Weierstrass constructs functions with prescribed zeros. All three answer the same question: **What kinds of holomorphic or meromorphic functions can be constructed on a domain?**\n\n⚠️ Connectedness of $\\mathbb{C}\\setminus K$ is essential. When $K = $ is the unit circle, $1/z$ is holomorphic near the circle, but cannot be uniformly approximated by polynomials on $K$. Otherwise the maximum modulus principle would imply that $1/z$ extends holomorphically to $\\{|z|\\le 1\\}$, contradicting the singularity at $z=0$.\n\n⚠️ The graph has no separate nodes on path integrals as Riemann sums or on the index (winding number) being 1 for a positively oriented boundary. Lemma A therefore spells out these points. `thm.cauchy-goursat` is already in the graph.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e557d52f",
+      "notes": "v0.9.3#64243440"
+     }
     }
    },
    "en_page": "nodes/thm.runge.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -67656,23 +67786,35 @@
    "title": "Weierstrass 乘积定理：给定零点就能造出整函数",
    "label_en": "Weierstrass product theorem",
    "title_en": "Weierstrass product theorem",
+   "statement_en": "Let $\\{a_{n}\\}$ be a sequence of points in $\\mathbb{C}$ tending to $\\infty$ (repetitions are allowed, and the number of occurrences gives the multiplicity of the zero). Then there exists an entire function $f$ whose zero set is **exactly** $\\{a_{n}\\}$ and which can be written as\n\n$$f(z) = z^{m} e^{g(z)} \\prod_{n=1}^{\\infty} E_{p_{n}}\\left(\\frac{z}{a_{n}}\\right),$$\n\nHere $m$ is the multiplicity of $0$ as a zero, and $p_{n}$ are suitably chosen nonnegative integers that ensure uniform convergence of the product on compact subsets.\n\nThus **the zeros of an entire function, together with their multiplicities, can be prescribed arbitrarily**. The only remaining freedom is a zero-free entire factor $e^{g}$.",
+   "notes_en": "**Proof.** First remove the terms of the sequence equal to $0$ (they contribute only the factor $z^{m}$). Continue to denote the remaining sequence by $a_{n}\\ne 0$ and take the elementary factors to be $E_{p}(z) = (1-z)\\exp\\Bigl(z + \\frac{z^{2}}{2} + \\cdots + \\frac{z^{p}}{p}\\Bigr),\\qquad E_{0}(z) = 1-z .$.\n\n**Lemma 1 (estimate for elementary factors).** If $|z|\\le \\frac{1}{2}$, then $|1 - E_{p}(z)| \\le 4|z|^{p+1}$. To prove this, observe that when $|z|<1$, we have $\\log E_{p}(z) = -\\sum_{k>p} z^{k}/k$, so $|\\log E_{p}(z)| \\le \\sum_{k>p}\\frac{|z|^{k}}{k} \\le \\frac{|z|^{p+1}}{(p+1)(1-|z|)} \\le 2|z|^{p+1};$. Also, $|1-e^{w}|\\le 2|w|$ ($|w|\\le 1$). Taking $w = \\log E_{p}(z)$ gives the result (when $p=0$, we obtain $1-E_{0}(z) = z$ directly).\n\n**Lemma 2 (convergence of the product).** If $u_{n}$ are holomorphic on a domain and $\\sum_{n}|u_{n}|$ converges uniformly on every compact subset, then $\\prod_{n}(1+u_{n})$ converges uniformly on every compact subset to a holomorphic function $F$, and the zeros of $F$ are exactly the zeros of the factors $1+u_{n}$, with multiplicities added. The partial products are uniformly Cauchy by the telescoping estimate $|\\prod_{n\\le N}-\\prod_{n\\le M}| \\le \\prod(1+|u_{n}|)\\bigl(e^{\\sum_{n>\\min}|u_{n}|}-1\\bigr)$, and the limit is holomorphic by `thm.weierstrass-convergence`. At a point where no factor vanishes, eventually $|u_{n}|\\le 1/2$, hence $|1+u_{n}|\\ge 1/2$, so the product is nonzero.\n\n**Step 1. Choose $p_{n}$ so that the product converges.** Take $p_{n} = n$. Given any $R>0$, since $a_{n}\\to\\infty$, there exists $N$ such that whenever $n\\ge N$, we have $|a_{n}|\\ge 2R$; then for $|z|\\le R$ and $n\\ge N$, we have $|z/a_{n}|\\le 1/2$. By Lemma 1, $\\bigl|1 - E_{n}(z/a_{n})\\bigr| \\le 4\\Bigl(\\frac{R}{|a_{n}|}\\Bigr)^{n+1} \\le 4\\cdot 2^{-(n+1)},$, so $\\sum_{n}\\bigl|1 - E_{n}(z/a_{n})\\bigr|$ converges uniformly on $|z|\\le R$. By Lemma 2, $F(z) := \\prod_{n=1}^{\\infty} E_{n}(z/a_{n})$ is entire, its zeros are exactly the points $a_{n}$, and their multiplicities equal the multiplicities of $a_{n}$ in the sequence.\n\n**Step 2. Restore $z^{m}$.** Set $f_{0}(z) := z^{m}F(z)$. Then $f_{0}$ is entire with zeros exactly $\\{a_{n}\\}$, counting multiplicities. The multiplicity at $0$ is $m$, and the other zeros are given by $F$.\n\n**Step 3. Remove the zero-free factor.** Since $F$ is nowhere zero, $F'/F$ is entire. Set $g_{0}(z) := \\int_{0}^{1}\\frac{F'(tz)}{F(tz)}\\,z\\,\\mathrm{d}t .$. The integrand is continuous, $g_{0}$ is entire, and $g_{0}'(z) = F'(z)/F(z)$ (differentiate under the integral sign, or use $g_{0}(z) = \\int_{0}^{z}F'(\\zeta)/F(\\zeta)\\,\\mathrm{d}\\zeta$ along a line segment, with path independence ensured by Cauchy's theorem). Thus $(F e^{-g_{0}})' = 0$, so $F = C e^{g_{0}}$ and $C\\ne 0$. Writing $C = e^{c}$ and $g := g_{0} + c$ gives $F = e^{g}$. Combining these gives the desired $f_{0}(z) = z^{m}e^{g(z)}\\prod_{n=1}^{\\infty}E_{n}(z/a_{n}),$. ∎\n\n⭐ **This is the factorization “entire function = zeros $\\times$ zero-free factor.”** In comparison, Weierstrass handles **zeros** multiplicatively, while Mittag-Leffler handles **principal parts and poles** additively.\n\n⚠️ The product representation **is not unique** ($p_{n}$ can be chosen larger), so the theorem asserts existence rather than uniqueness.\n\n⚠️ The node `def.elementary-factor` contains a stronger estimate for elementary factors. Hurwitz's theorem has no separate node, so Lemma 2 is given here in full.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#494a9f40",
+      "notes": "v0.9.3#2eed544a"
+     }
     }
    },
    "en_page": "nodes/thm.weierstrass-product.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex"
@@ -67701,23 +67843,35 @@
    "title": "Hadamard 分解定理：有限阶整函数的因子分解",
    "label_en": "Hadamard factorization theorem",
    "title_en": "Hadamard factorization theorem",
+   "statement_en": "Let $f$ be an entire function of **finite order** $\\rho$ with zeros $\\{a_{n}\\}$, counted with multiplicity. Then\n\n$$f(z) = z^{m} e^{P(z)} \\prod_{n} E_{p}\\left(\\frac{z}{a_{n}}\\right),$$\n\nwhere $P$ is a polynomial of degree $\\le \\rho$ and $p \\le \\rho$ is a **single** fixed integer used for all factors (the Weierstrass construction chooses it separately for each factor).\n\nIn particular, when $\\rho < 1$, we have $p = 0$, hence $\\sum |a_{n}|^{-1} < \\infty$ (there may still be infinitely many zeros. For example, $\\prod_{n}(1 - z/n^{2})$ has order $\\frac{1}{2}$ and infinitely many zeros).",
+   "notes_en": "**Notation.** Let $f$ be entire of finite order $\\rho$, with zeros $a_{n}\\ne 0$ counted with multiplicity. The zero at $z=0$ has multiplicity $m$. Let $n(r)$ count the zeros with modulus $\\le r$, and let $M(r)=\\max_{|z|=r}|f(z)|$ and $E_{p}(w)=(1-w)e^{w+w^{2}/2+\\cdots+w^{p}/p}$. Take $p=\\lfloor\\rho\\rfloor$ (when $\\rho<1$, we have $p=0$), so $p+1>\\rho$. Fix $\\varepsilon>0$ such that $p+1>\\rho+\\varepsilon$.\n\n**Step 1. Density of zeros.** Apply Jensen's formula (`prop.jensen`) to $f/z^{m}$, whose value at the origin is nonzero, to obtain $n(R)\\log 2\\le\\log M(2R)-\\log|f(0)|+O(1)$. Finite order gives $\\log M(2R)\\le C\\,R^{\\rho+\\varepsilon}$, hence $n(R)\\le C\\,R^{\\rho+\\varepsilon}$. Thus for any $\\sigma>\\rho$, summation by parts gives $\\sum_{n}|a_{n}|^{-\\sigma}=\\sigma\\int_{0}^{\\infty}n(r)\\,r^{-\\sigma-1}\\,\\mathrm{d}r<\\infty$ ($n(r)$, when $r<|a_{1}|$, equals $0$, so there is no boundary term). In particular, $\\sum_{n}|a_{n}|^{-(p+1)}<\\infty$.\n\n**Step 2. Convergence of the product.** Write $\\mathcal{P}(z):=\\prod_{n}E_{p}(z/a_{n})$. For $|w|\\le1/2$, we have $\\log E_{p}(w)=-\\sum_{k>p}w^{k}/k$, hence $|E_{p}(w)-1|\\le C_{p}|w|^{p+1}$. Given $R$, there are only finitely many $|a_{n}|\\le2R$. For the remaining terms, $|z/a_{n}|\\le1/2$, so $\\sum_{|a_{n}|>2R}|z/a_{n}|^{p+1}\\le R^{p+1}\\sum_{n}|a_{n}|^{-(p+1)}<\\infty$. Therefore $\\mathcal{P}$ converges uniformly on $|z|\\le R$ and defines an entire function.\n\n**Step 3. The quotient is zero-free.** Set $\\Phi(z):=f(z)\\big/\\bigl(z^{m}\\mathcal{P}(z)\\bigr)$. At each $a_{n}$, $E_{p}(z/a_{n})$ has a simple zero that cancels a zero of $f$. At all other points, $f\\ne0$ and the product is nonzero. Thus $\\Phi$ is entire and nowhere zero.\n\n**Step 4. The order of $\\Phi$ is $\\le\\rho$.** Let $h$ be an entire logarithm of $\\Phi$. Its construction in Step 5 uses only that $\\Phi$ is nowhere zero, so we may use it here independently of the estimates in this step. Then $\\operatorname{Re}h=\\log|\\Phi|$. It suffices to show that for every sufficiently large $r$ there is an $R\\in[r,2r]$ such that on $|z|=R$ we have $\\log|\\Phi(z)|\\le C\\,r^{\\rho+\\varepsilon}$. The maximum principle ($\\operatorname{Re}h$ is harmonic) and Borel–Carathéodory from Step 6 then give $|h|\\le C\\,R^{\\rho+\\varepsilon}$, and Cauchy's estimates show that $h$ is a polynomial.\n\n**(i) Two elementary estimates for $E_{p}$.** For $|w|\\le1/2$, we have $\\log|E_{p}(w)|=\\operatorname{Re}\\bigl(-\\sum_{k>p}w^{k}/k\\bigr)$, hence $|\\log|E_{p}(w)||\\le2|w|^{p+1}$. For $|w|\\ge1/2$, we have $\\log|E_{p}(w)|=\\log|1-w|+\\operatorname{Re}\\sum_{j\\le p}w^{j}/j\\ge\\log|1-w|-C_{p}|w|^{p}$.\n\n**Step 4 (continued). The good-radius lemma.** Take $M:=\\lceil\\rho\\rceil+3$ and $\\delta:=r^{-M}$. The number of zeros in $[r/2,4r]$ is $N\\le n(4r)\\le C\\,r^{\\rho+\\varepsilon}$. Each such zero excludes an interval of radii of length $2\\delta$. Since $2\\delta N\\le2C\\,r^{\\rho+\\varepsilon-M}<r$ for large $r$, there exists $R\\in[r,2r]$ such that every $|a_{n}|\\in[r/2,4r]$ satisfies $\\bigl||a_{n}|-R\\bigr|\\ge\\delta$. Fix such an $R$.\n\nFor $|z|=R$, split the terms according to $|a_{n}|\\le4r$ and $|a_{n}|>4r$ in $\\log|\\mathcal{P}(z)|=\\sum\\log|E_{p}(z/a_{n})|$.\n\n• For $|a_{n}|>4r$, we have $|z/a_{n}|<1/2$, and by (i) each term satisfies $\\ge-C(R/|a_{n}|)^{p+1}$. Summation by parts and $n(t)\\le C t^{\\rho+\\varepsilon}$ give $\\sum_{|a_{n}|>4r}(R/|a_{n}|)^{p+1}\\le C\\,r^{\\rho+\\varepsilon}$.\n\n• For $|a_{n}|\\le4r$, we have $|z-a_{n}|\\ge\\delta$ (when $|a_{n}|\\in[r/2,4r]$, this follows from the choice of $R$, and when $|a_{n}|<r/2$, we have $|z-a_{n}|\\ge R-r/2\\ge r/2$). Thus $\\log|1-z/a_{n}|=\\log|z-a_{n}|-\\log|a_{n}|\\ge\\log(\\delta/(4r))$, and by (i) each term satisfies $\\ge\\log(\\delta/(4r))-C(R/|a_{n}|)^{p}$. Summing over at most $N\\le C r^{\\rho+\\varepsilon}$ terms and using $\\sum_{|a_{n}|\\le4r}(R/|a_{n}|)^{p}\\le C r^{\\rho+\\varepsilon}$ (by summation by parts) gives $\\sum_{|a_{n}|\\le4r}\\log|E_{p}(z/a_{n})|\\ge-C\\,r^{\\rho+\\varepsilon}\\log r$.\n\nCombining these gives $\\log|\\mathcal{P}(z)|\\ge-C\\,r^{\\rho+\\varepsilon}\\log r$. Thus $\\log|\\Phi(z)|=\\log|f(z)|-m\\log R-\\log|\\mathcal{P}(z)|\\le C\\,r^{\\rho+\\varepsilon}+C\\,r^{\\rho+\\varepsilon}\\log r\\le C_{1}\\,r^{\\rho+\\varepsilon_{1}}$ for any $\\varepsilon_{1}>\\varepsilon$.\n\n**Step 5. Zero-free $\\implies$ exponential.** Since $\\Phi$ is entire and zero-free and $\\mathbb{C}$ is simply connected, `prop.single-valued-branch` gives an entire function $h$ such that $\\Phi=e^{h}$. Also, $\\operatorname{Re}h=\\log|\\Phi|$.\n\n**Step 6. Borel–Carathéodory.** The lemma states that if $g$ is holomorphic on $|z|\\le R$, $g(0)=0$, and $\\operatorname{Re}g\\le A$ ($A>0$), then for $|z|=r<R$ we have $|g(z)|\\le2Ar/(R-r)$. For the proof, $\\varphi:=g/(2A-g)$ is holomorphic on $|z|\\le R$ (the real part of the denominator is $\\ge A$), and $|\\varphi|\\le1$ ($|g|^{2}\\le(2A-\\operatorname{Re}g)^{2}+(\\operatorname{Im}g)^{2}$ is equivalent to $\\operatorname{Re}g\\le A$), with $\\varphi(0)=0$. Schwarz's lemma (`lem.schwarz`) gives $|\\varphi(z)|\\le r/R$, hence $|g|=\\bigl|2A\\varphi/(1+\\varphi)\\bigr|\\le2A|\\varphi|/(1-|\\varphi|)\\le2Ar/(R-r)$.\n\n**Step 7. $h$ is a polynomial.** By Step 4, on $|z|\\le R$ we have $\\operatorname{Re}(h-h(0))\\le C_{1}R^{\\rho+\\varepsilon_{1}}+|\\operatorname{Re}h(0)|=:A$. Apply Step 6 to $g=h-h(0)$ with $r=R/2$ to obtain $|h(z)-h(0)|\\le2A$ ($|z|\\le R/2$). Cauchy's estimates (`thm.cauchy-inequality`) then give, for $k>\\rho+\\varepsilon_{1}$, the bound $|h^{(k)}(0)|\\le k!\\,2A/(R/2)^{k}\\to0$ ($R\\to\\infty$). Hence $h^{(k)}(0)=0$, so $h$ is a polynomial of degree $\\le\\lfloor\\rho\\rfloor$.\n\n**Conclusion.** $f=z^{m}e^{h}\\prod_{n}E_{p}(z/a_{n})=z^{m}e^{P}\\prod_{n}E_{p}(z/a_{n})$ gives the Hadamard factorization. ∎ Steps 1–3 establish convergence and cancel the zeros. Step 4 uses the good-radius lemma, elementary estimates, and Borel–Carathéodory. Steps 5–7 express the zero-free quotient as the exponential of a polynomial.\n\n⭐ **This is a quantitative version of the Weierstrass product.** Knowing the order of growth lets us use the same $p$ for every factor and reduces the remaining freedom to a polynomial $P$. When $\\rho<1$, we have $p=0$ and $\\sum|a_{n}|^{-1}<\\infty$, but there can still be infinitely many zeros ($\\prod(1-z/n^{2})$ has order $1/2$). ⚠️ The finite-order hypothesis is essential. Entire functions of infinite order still admit Weierstrass products, but the exponent need no longer be a polynomial and the conclusion is weaker.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#fde82eb2",
+      "notes": "v0.9.3#9f9ab9d1"
+     }
     }
    },
    "en_page": "nodes/thm.hadamard-factorization.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "complex",
    "regions": [
     "complex",
@@ -68262,23 +68416,35 @@
    "title": "道路与同伦在覆叠里的唯一提升",
    "label_en": "lifting theorem",
    "title_en": "lifting theorem",
+   "statement_en": "Let $p : E \\to B$ be a covering map and suppose $p(e_{0}) = b_{0}$.\n\n**(1) Path lifting.** For any path $\\alpha : [0, 1] \\to B$ with $\\alpha(0) = b_{0}$, there exists a **unique** path\n\n$$\\tilde{\\alpha} : [0, 1] \\longrightarrow E,\\qquad \\tilde{\\alpha}(0) = e_{0},\\quad p \\circ \\tilde{\\alpha} = \\alpha.$$\n\n**(2) Homotopy lifting.** For any homotopy $F : [0, 1] \\times [0, 1] \\to B$ with $F(0, 0) = b_{0}$, there exists a **unique**\nlift $\\tilde{F} : [0, 1] \\times [0, 1] \\to E$ such that $\\tilde{F}(0, 0) = e_{0}$ and $p \\circ \\tilde{F} = F$.\nIf $F$ is a path homotopy relative to its endpoints, then both endpoints of $\\tilde{F}$ are also fixed for every $s$.",
+   "notes_en": "**Proof outline.** Use a Lebesgue number to subdivide the path or homotopy into pieces, each lying in an evenly covered open set, and lift the pieces uniquely in succession. See the edge `imp.lifting-proof` for the full proof.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#d4491ecc",
+      "notes": "v0.9.3#0bb3af6c"
+     }
     }
    },
    "en_page": "nodes/thm.lifting.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -69146,23 +69312,35 @@
    "title": "$H_{p}(S^{n})$：只有在 $p = 0$ 与 $p = n$ 处非平凡",
    "label_en": "homology of spheres",
    "title_en": "homology of spheres",
+   "statement_en": "For $n \\ge 1$,\n\n$$H_{0}(S^{n}) = \\mathbb{Z},\\qquad H_{n}(S^{n}) = \\mathbb{Z},$$\n$$H_{p}(S^{n}) = 0 \\quad (p \\ne 0, n).$$\n\nUsing **reduced** homology, we can write a single formula for all $p$ (including $n = 0$)\n\n$$\\tilde{H}_{p}(S^{n}) = \\mathbb{Z} \\ (p = n),\\qquad \\tilde{H}_{p}(S^{n}) = 0 \\ (p \\ne n).$$",
+   "notes_en": "**Proof.** Induct on $n$ using reduced homology (`def.reduced-homology`) and the reduced Mayer–Vietoris sequence (`thm.mv-homology`). Set $S^{n} \\subset \\mathbb{R}^{n+1}$, with north pole $N := (0, \\ldots, 0, 1)$ and south pole $S := -N$.\n\n**Base case $n = 0$.** The space $S^{0} = \\{\\pm 1\\}$ consists of two points. By `prop.h0-components`, $H_{0}(S^{0}) = \\mathbb{Z}^{2}$, hence $\\tilde{H}_{0}(S^{0}) = \\mathbb{Z}$. When $p > 0$, we have $\\tilde{H}_{p}(S^{0}) = 0$.\n\n**Inductive step.** Suppose $n \\ge 1$ and set $U := S^{n} \\setminus \\{S\\}$ and $V := S^{n} \\setminus \\{N\\}$. Both are open.\n\n**$U, V$ is contractible.** For $U$, use the homotopy\n\n$$H_{s}(x) := \\frac{(1-s)x + sN}{\\lVert (1-s)x + sN \\rVert}\\qquad (x \\in U,\\ s \\in [0,1]).$$\n\nThe denominator is nonzero. Indeed, $(1-s)x + sN = 0$ forces $\\lVert x \\rVert = s/(1-s) = 1$, that is, $x = S$ (at the endpoint $s = 1$, the numerator is $N \\ne 0$), whereas $S \\notin U$. Thus $H_{0} = \\mathrm{id}_{U}$ and $H_{1} \\equiv N$, so $U$ is contractible. Similarly, $V$ is contractible. By homotopy invariance (`thm.homotopy-invariance`), all reduced homology groups of a contractible space vanish, so $\\tilde{H}_{p}(U) = \\tilde{H}_{p}(V) = 0$ for every $p$.\n\n**The intersection deformation retracts onto the equator.** We have $U \\cap V = S^{n} \\setminus \\{N, S\\}$. Write a point as $(x, t)$, where $x \\in \\mathbb{R}^{n}$, $t \\in (-1, 1)$, and $\\lVert x \\rVert^{2} + t^{2} = 1$. Since $t \\ne \\pm 1$, we have $x \\ne 0$. Define\n\n$$H_{s}(x, t) := \\frac{(x,\\, s t)}{\\sqrt{\\lVert x \\rVert^{2} + s^{2} t^{2}}}\\qquad (s \\in [0,1]).$$\n\nThis map is continuous and takes values in $S^{n}$. The point $H_{0}(x, t) = (x/\\lVert x \\rVert, 0)$ lies on the equator $S^{n-1}$, we have $H_{1} = \\mathrm{id}$, and $H_{s}$ maps the equator into itself. Thus $S^{n-1}$ is a deformation retract of $U \\cap V$, so $\\tilde{H}_{p}(U \\cap V) \\cong \\tilde{H}_{p}(S^{n-1})$ by homotopy invariance.\n\n**Reduced Mayer–Vietoris.** Since $U \\cup V = S^{n}$ and $U \\cap V \\ne \\emptyset$, we have the long exact sequence\n\n$$\\cdots \\to \\tilde{H}_{p}(U \\cap V) \\to \\tilde{H}_{p}(U) \\oplus \\tilde{H}_{p}(V) \\to \\tilde{H}_{p}(S^{n}) \\to \\tilde{H}_{p-1}(U \\cap V) \\to \\cdots$$\n\nThe middle terms all vanish, so for every $p \\ge 1$ we have $\\tilde{H}_{p}(S^{n}) \\cong \\tilde{H}_{p-1}(S^{n-1})$. For $p = 0$, the end of the sequence $\\tilde{H}_{0}(U) \\oplus \\tilde{H}_{0}(V) \\to \\tilde{H}_{0}(S^{n}) \\to 0$ gives $\\tilde{H}_{0}(S^{n}) = 0$ (when $n \\ge 1$, the space $S^{n}$ is path connected).\n\n**Conclusion of the induction.** The base case and the recurrence give $\\tilde{H}_{p}(S^{n}) = \\mathbb{Z}$ when $p = n$, and $0$ otherwise.\n\n**Return to unreduced homology.** When $n \\ge 1$, the space $S^{n}$ is path connected, so $H_{0}(S^{n}) = \\mathbb{Z}$ (that is, $\\tilde{H}_{0} = 0$). When $p \\ge 1$, we have $H_{p} = \\tilde{H}_{p}$. Thus $H_{0}(S^{n}) = \\mathbb{Z}$ and $H_{n}(S^{n}) = \\mathbb{Z}$, with $H_{p}(S^{n}) = 0$ in all other cases. ∎\n\n⭐ **Interpretation.** This makes precise the statement that homology detects a hole of dimension $n$. Compare `cor.pi1-sphere` ($\\pi_{1}(S^{n}) = 1$ for $n \\ge 2$). The group $\\pi_{1}$ detects only degree $n = 1$, while $H_{n}$ detects every degree ($\\pi_{n}$ can also detect these holes, through a different theory).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#c27fe014",
+      "notes": "v0.9.3#16d39143"
+     }
     }
    },
    "en_page": "nodes/thm.sphere-homology.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -69244,23 +69422,35 @@
    "title": "拓扑对 (X, A) 的长正合列",
    "label_en": "long exact sequence of a pair",
    "title_en": "long exact sequence of a pair",
+   "statement_en": "A **topological pair** is a pair of spaces $A \\subseteq X$ with one a subspace of the other. Since every singular simplex in $A$ is also a singular simplex in $X$, $S_{*}(A) \\subseteq S_{*}(X)$ is a **subcomplex**. Define the **relative chain groups** and **relative homology groups** by\n\n$$S_{p}(X, A) := S_{p}(X) \\big/ S_{p}(A),$$\n$$H_{p}(X, A) := \\ker\\bar\\partial \\big/ \\operatorname{im}\\bar\\partial.$$\n\nThen there is a **long exact sequence** (at each $\\cdot$, the exactness condition is $\\operatorname{im} = \\ker$)\n\n$$\\cdots \\to H_{p}(A) \\to H_{p}(X) \\to H_{p}(X, A)$$\n$$\\xrightarrow{\\ \\partial_{*}\\ } H_{p-1}(A) \\to \\cdots$$\n\nwhere $\\partial_{*}$ is called the **connecting homomorphism**. The sequence holds for every pair of spaces. It **requires no assumption** that $A$ is closed, open, or otherwise well behaved, and no cofibration hypothesis is needed.",
+   "notes_en": "**Proof.** Let $i : S_{*}(A) \\hookrightarrow S_{*}(X)$ denote the inclusion and $q : S_{*}(X) \\twoheadrightarrow S_{*}(X, A) := S_{*}(X)/S_{*}(A)$ the quotient map. Both are chain maps, and for each $p$,\n\n$$0 \\to S_{p}(A) \\xrightarrow{\\ i\\ } S_{p}(X) \\xrightarrow{\\ q\\ } S_{p}(X, A) \\to 0$$\n\nis a short exact sequence. The long exact sequence in homology follows from this short exact sequence. We give the connecting homomorphism and verify exactness at all three positions below.\n\n**Connecting homomorphism.** Take $[c] \\in H_{p}(X, A)$, where $c \\in S_{p}(X)$ and $\\bar\\partial[c] = 0$, that is, $\\partial c \\in S_{p-1}(A)$. Set $\\partial_{*}[c] := [\\partial c] \\in H_{p-1}(A)$.\n\nWell-definedness follows from $\\partial\\partial c = 0$, so $\\partial c$ is a cycle in $A$. If $c^{\\prime} - c = \\partial d + a$ ($d \\in S_{p+1}(X)$, $a \\in S_{p}(A)$), then $\\partial c^{\\prime} - \\partial c = \\partial a$ is a boundary in $A$, so the homology class is unchanged.\n\n**Exactness.** Let $j_{*} : H_{p}(A) \\to H_{p}(X)$ and $q_{*} : H_{p}(X) \\to H_{p}(X, A)$ denote the induced maps.\n\n**(a) $\\operatorname{im} j_{*} = \\ker q_{*}$.** If $[c] = j_{*}[a]$ (where $a$ is a cycle in $A$), then $q_{*}[c] = [q(a)] = 0$, since $a \\in S_{*}(A)$ is $0$ in the quotient complex. Conversely, suppose $q_{*}[c] = 0$, so $q(c) = \\partial b$ for some $b \\in S_{p+1}(X)$. Then $q(c - \\partial b) = 0$, so $c - \\partial b \\in S_{p}(A)$ and $\\partial(c - \\partial b) = 0$, hence $[c] = j_{*}[c - \\partial b]$.\n\n**(b) $\\operatorname{im} q_{*} = \\ker \\partial_{*}$.** If $[c] = q_{*}[z]$ and $z$ is a cycle in $X$, then $\\partial c = \\partial z = 0$, so $\\partial_{*}[c] = 0$. Conversely, suppose $\\partial_{*}[c] = 0$, so $\\partial c = \\partial a$ for some $a \\in S_{p-1}(A)$. Set $z := c - a$. Then $\\partial z = 0$ and $q(z) = q(c)$, so $[c] = q_{*}[z]$.\n\n**(c) $\\operatorname{im} \\partial_{*} = \\ker j_{*}$.** If $[c]$ comes from relative homology, then $j_{*}(\\partial_{*}[c]) = [\\partial c]$, and $\\partial c$ is a boundary in $X$, so its class is $0$. Conversely, if $a \\in S_{p-1}(A)$ is a cycle and $j_{*}[a] = 0$, so $a = \\partial b$ for some $b \\in S_{p}(X)$, then $b$ is a relative cycle ($\\partial b = a \\in S_{*}(A)$), and $\\partial_{*}[b] = [\\partial b] = [a]$.\n\nTogether, these three exactness checks give the long exact sequence. The argument uses only that $S_{*}(A) \\subseteq S_{*}(X)$ is a subcomplex, with no closedness, openness, or other assumptions on $A$. ∎\n\n**Why this is simpler in homology than in homotopy.** The long exact sequence of **relative** homotopy groups holds for every pair $(X, A)$ and requires no fibration. The delicate step is replacing the relative groups by the absolute groups of the quotient space $X/A$; it requires a good pair hypothesis (NDR pair or cofibration) on $(X, A)$. The homology sequence applies whenever $A \\subseteq X$ is a subspace. This is one of the main reasons chain complexes are easier to work with than homotopy groups.\n\n💡 Application. Break the homology of a large space into a smaller space $+$ a relative part, and use the known groups to compute the unknown ones (`thm.mv-homology` is obtained this way).",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#76a24ce5",
+      "notes": "v0.9.3#4c9e3130"
+     }
     }
    },
    "en_page": "nodes/thm.long-exact-pair.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -69286,23 +69476,35 @@
    "label": "Mayer–Vietoris（同调）",
    "title": "Mayer–Vietoris 序列（同调版，$\\mathbb{Z}$ 系数）",
    "title_en": "Mayer–Vietoris sequence in homology",
+   "statement_en": "Suppose $X = U \\cup V$ and $U, V \\subseteq X$ are **open sets** (more generally, the interiors of $U, V$ cover $X$). Let $i_{*}, j_{*}$ denote the maps induced by the inclusions of $U \\cap V \\hookrightarrow U, V$. Then there is a long exact sequence\n\n$$H_{p}(U \\cap V) \\to H_{p}(U) \\oplus H_{p}(V) \\to H_{p}(X)$$\n$$\\xrightarrow{\\ \\partial_{*}\\ } H_{p-1}(U \\cap V)$$\n\n(extending in both directions to give $\\cdots$). The two maps that require explanation are\n\n$$\\Phi[z] := (i_{*}[z],\\ -j_{*}[z]),\\qquad \\Psi[a, b] := [a + b].$$\n\nOn replacing $H$ by reduced homology $\\tilde{H}$, the same sequence holds provided $U \\cap V \\ne \\emptyset$ (otherwise exactness fails in the segment $\\tilde{H}_{0}$. When $X = \\{a, b\\}$, $U = \\{a\\}$, and $V = \\{b\\}$, we have $\\tilde{H}_{0}(U) = \\tilde{H}_{0}(V) = 0$ while $\\tilde{H}_{0}(X) = \\mathbb{Z}$).",
+   "notes_en": "**Proof.** There are five steps. ① Take the chains whose simplices each lie entirely in $U$ or $V$ to obtain a subcomplex. ② Use barycentric subdivision to prove that the inclusion of this subcomplex into the full complex induces an isomorphism in homology (this is the main difficulty). ③ Express the subcomplex as the sum of the chains in $U$ and the chains in $V$. ④ Obtain a long exact sequence from the short exact sequence. ⑤ Substitute the isomorphism from step ②.\n\n**Small chains.** A singular simplex $\\sigma : \\Delta^{p} \\to X$ is **small** with respect to the cover $\\{U, V\\}$ if $\\sigma(\\Delta^{p}) \\subseteq U$ or $\\sigma(\\Delta^{p}) \\subseteq V$. Finite sums of small simplices form a subgroup $S^{\\mathcal{U}}_{p}(X) \\subseteq S_{p}(X)$. The boundary operator preserves smallness because the faces still lie in the same set, so $S^{\\mathcal{U}}_{*}(X)$ is a subcomplex. Write $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$.\n\n**Step 1. The subdivision chain map.** On the standard simplex $\\Delta^{p}$, define two chains recursively:\n\n$$\\operatorname{sd}_{0} := [v_{0}],\\qquad \\operatorname{sd}_{p} := [b_{p},\\ \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})],$$\n\nHere $b_{p}$ is the barycenter of $\\Delta^{p}$, $[b, c]$ denotes coning with apex $b$ over the chain $c$, and $\\partial\\Delta^{p} = \\sum_{i}(-1)^{i}\\Delta^{p}_{i}$ is the standard boundary. The cone formula $\\partial[b, c] = c - [b, \\partial c]$ gives\n\n$$\\partial\\operatorname{sd}_{p} = \\operatorname{sd}_{p-1}(\\partial\\Delta^{p}).$$\n\nNext define $t_{0} := 0$ and the recursion\n\n$$c_{p} := \\operatorname{sd}_{p} - \\operatorname{id}_{p} - t_{p-1}(\\partial\\Delta^{p}),\\qquad t_{p} := [b_{p},\\ c_{p}],$$\n\nwhere $\\operatorname{id}_{p}$ is the identity $p$-simplex. Induction on $p$ gives $\\partial c_{p} = 0$ using $\\partial\\partial = 0$ and the inductive hypothesis. Thus $\\partial t_{p} = c_{p}$, that is,\n\n$$\\partial t_{p} + t_{p-1}(\\partial\\Delta^{p}) = \\operatorname{sd}_{p} - \\operatorname{id}_{p}.$$\n\nIn the base case $p = 0$, we have $\\operatorname{sd}_{0} = \\operatorname{id}_{0}$ and $t_{0} = 0$.\n\n**Step 2. Naturality.** For a singular simplex $\\sigma$, set $\\operatorname{Sd}(\\sigma) := \\sigma_{\\#}\\operatorname{sd}_{p}$ and $T(\\sigma) := \\sigma_{\\#} t_{p}$, and extend linearly. Since $\\sigma_{\\#}$ is a chain map and is compatible with continuous maps,\n\n$$\\partial\\operatorname{Sd} = \\operatorname{Sd}\\partial,\\qquad \\partial T + T\\partial = \\operatorname{Sd} - \\operatorname{id}.$$\n\n(This follows by applying the preceding identity term by term. $T$ may produce degenerate simplices, which do not affect the chain identity.) A single $\\operatorname{Sd}(\\sigma)$ may fail to be small. Iteration ensures smallness.\n\n**Step 3. Diameter contraction.** Let $\\tau \\subseteq \\Delta^{p}$ be a simplex of diameter $\\delta$, and let $b_{S}$ denote the barycenter of the face $S$. The vertices of $\\operatorname{sd}(\\tau)$ are the barycenters of certain faces $S_{0} \\subset \\cdots \\subset S_{q}$, and for $S \\subset S^{\\prime}$ we have\n\n$$b_{S^{\\prime}} - b_{S} = \\frac{1}{\\#S^{\\prime}}\\sum_{v \\in S^{\\prime} \\setminus S}(v - b_{S}),$$\n\nHence $|b_{S^{\\prime}} - b_{S}| \\le \\left(1 - \\frac{\\#S}{\\#S^{\\prime}}\\right)\\delta \\le \\frac{p}{p+1}\\delta$. It follows that $\\operatorname{mesh}(\\operatorname{sd}^{m}\\tau) \\le (p/(p+1))^{m}\\delta$. After sufficiently many subdivisions, the smaller simplices can have arbitrarily small diameter.\n\n**Step 4. The small-chain lemma.** The inclusion $\\iota : S^{\\mathcal{U}}_{*}(X) \\hookrightarrow S_{*}(X)$ induces an isomorphism in homology.\n\nProof. For each singular $p$-simplex $\\sigma$, $\\{\\sigma^{-1}(U), \\sigma^{-1}(V)\\}$ is an open cover of the compact space $\\Delta^{p}$ and has a Lebesgue number $\\delta_{\\sigma} > 0$ (any subset of diameter $< \\delta_{\\sigma}$ lies in one member of the cover). Choose $m$ so that $(p/(p+1))^{m}\\operatorname{diam}(\\Delta^{p}) < \\delta_{\\sigma}$. Then the image of each smaller simplex of $\\operatorname{Sd}^{m}(\\sigma)$ lies in $U$ or $V$.\n\nWrite $T_{M} := \\sum_{j=0}^{M-1}\\operatorname{Sd}^{j} T$. Then $\\partial T_{M} + T_{M}\\partial = \\operatorname{Sd}^{M} - \\operatorname{id}$.\n\n**Surjectivity.** Take any cycle $z$. Since $z$ contains only finitely many simplices, choose $M$ so that each $\\operatorname{Sd}^{M}(\\sigma)$ is small as $\\sigma$ ranges over the simplices of $z$. Then $\\operatorname{Sd}^{M} z \\in S^{\\mathcal{U}}_{*}(X)$ and $\\operatorname{Sd}^{M} z - z = \\partial T_{M} z$, so $\\iota_{*}[\\operatorname{Sd}^{M} z] = [z]$.\n\n**Injectivity.** Suppose $z \\in S^{\\mathcal{U}}_{p}(X)$ is a cycle and $z = \\partial b$ ($b \\in S_{p+1}(X)$). Choose $M$ so that, for every simplex in $z$, $T z$, and $b$, the $M$-fold subdivision is small. Then $z = \\operatorname{Sd}^{M} z - \\partial T_{M} z$, with both $\\operatorname{Sd}^{M} z$ and $T_{M} z$ in the small-chain complex. Also, $\\operatorname{Sd}^{M} z = \\operatorname{Sd}^{M}\\partial b = \\partial(\\operatorname{Sd}^{M} b)$, and $\\operatorname{Sd}^{M} b$ is small as well. Thus in $H_{p}(S^{\\mathcal{U}}_{*}(X))$ we have $[z] = [\\operatorname{Sd}^{M} z] = 0$.\n\n**Step 5. Splitting into two pieces.** A chain is small if and only if it belongs to $S_{*}(U) + S_{*}(V)$. Thus there is a short exact sequence of chain complexes\n\n$$0 \\to S_{*}(U \\cap V) \\to S_{*}(U) \\oplus S_{*}(V) \\to S_{*}(U) + S_{*}(V) \\to 0,$$\n\nwith maps $a \\mapsto (a, -a)$ and $(a, b) \\mapsto a + b$. For exactness, observe that $S_{*}(U) \\cap S_{*}(V) = S_{*}(U \\cap V)$ (the image of each simplex lies in both $U$ and $V$, hence in their intersection). Surjectivity follows by definition, and the kernel follows from $a + b = 0$, that is, $b = -a$.\n\n**Step 6. Obtaining the long exact sequence.** Apply `thm.long-exact-pair` to the short exact sequence above, using the chain complex version proved by diagram chasing, to obtain the long exact sequence. Here $H_{p}(S_{*}(U) \\oplus S_{*}(V)) = H_{p}(U) \\oplus H_{p}(V)$, and $H_{p}(S_{*}(U) + S_{*}(V)) \\cong H_{p}(X)$ follows from Step 4. To identify the two maps, $(a) \\mapsto (a, -a)$ gives $\\Phi[z] = (i_{*}[z], -j_{*}[z])$, and $(a, b) \\mapsto a + b$ gives $\\Psi[a, b] = [a + b]$. ∎\n\n**Reduced version.** Apply the same argument to the augmented chain complexes. When $U \\cap V \\ne \\emptyset$, choose a basepoint $x_{0} \\in U \\cap V$. The augmentation map $\\varepsilon$ agrees on all three complexes, and the short exact sequence remains exact in the augmentation degree, giving the reduced long exact sequence. When $U \\cap V = \\emptyset$, exactness fails in the segment $\\tilde{H}_{0}$. See the statement for a counterexample.\n\n**Why no good pair hypothesis is needed.** The argument uses only the open cover and Lebesgue numbers. It requires no neighborhood deformation retraction of $A$ in $X$. This is one way singular homology is easier to work with than homotopy groups.\n\n⭐ **The main difficulty** is passing from simplices that lie locally in $U$ or $V$ to a global isomorphism in homology. The chain homotopy in Step 4 does this, and the exact sequence then follows by algebra. The signs are all in the cone construction, $\\operatorname{sd}_{p} := [b_{p}, \\operatorname{sd}_{p-1}(\\partial\\Delta^{p})]$ and $t_{p} := [b_{p}, c_{p}]$.\n\n⚠️ **Difference from `thm.mayer-vietoris`.** That node gives the **de Rham version** for smooth manifolds with real coefficients and the complex of differential forms (`def.de-rham-complex`). This is the **singular-chain version** for arbitrary spaces with $\\mathbb{Z}$ coefficients. The sequences have the same form, but only one retains torsion information. They are distinct results and should not be cited as proofs of each other.\n\n💡 Common applications include computing $\\tilde{H}_{*}(S^{n})$ (`thm.sphere-homology`), decomposing a torus into two cylinders, and decomposing a connected sum into two spaces with a small ball removed from each.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#e4e652a1",
+      "notes": "v0.9.3#84dd1aa6"
+     }
     }
    },
    "en_page": "nodes/thm.mv-homology.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "topology",
    "regions": [
     "topology"
@@ -71740,23 +71942,35 @@
    "label": "Möbius 和的恒等式",
    "title": "$\\mu$ 的和：只有 $n=1$ 剩下 $1$",
    "title_en": "sum of the Möbius function over divisors",
+   "statement_en": "For $n \\ge 1$,\n\n$$\\sum_{d \\mid n} \\mu(d) = \\begin{cases} 1, & n = 1, \\\\ 0, & n > 1 . \\end{cases}$$",
+   "notes_en": "Proof. $n = 1$ is immediate. Suppose $n = p_{1}^{e_{1}}\\cdots p_{r}^{e_{r}}$, $r \\ge 1$. Any $d$ with a square factor contributes $0$, so we need only sum over $d$ made up of distinct prime factors:\n\n\n\n$$\\sum_{d\\mid n}\\mu(d) = \\sum_{S \\subseteq \\{1,\\cdots,r\\}} (-1)^{\\#S} = (1 - 1)^{r} = 0 .$$\n\n\n\nThis is the binomial expansion. This identity is the **only** use of $\\mu$ here. It turns summation into projection onto $n = 1$.",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#175c779d",
+      "notes": "v0.9.3#3dc62dba"
+     }
     }
    },
    "en_page": "nodes/thm.mu-sum.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "number",
    "regions": [
     "number"
@@ -72326,23 +72540,35 @@
    "title": "$\\zeta(1+it)\\ne0$（$t\\in\\mathbb{R}$）",
    "label_en": "zeta nonvanishing",
    "title_en": "zeta has no zeros on the line Re(s)=1",
+   "statement_en": "For every $t\\in\\mathbb{R}$, $\\zeta(1+it)\\ne0$.",
+   "notes_en": "Use the logarithm of the Euler product together with $3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}\\ge0$. There is a pole at $t=0$, so that point is excluded from the zeros. (Weighted logarithmic estimate.)",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#2f1f8993",
+      "notes": "v0.9.3#2acbf6f8"
+     }
     }
    },
    "en_page": "nodes/thm.zeta-no-zeros-line1.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "number",
    "regions": [
     "number",
@@ -72558,23 +72784,35 @@
    "title": "Gauss 的二次互反律",
    "label_en": "law of quadratic reciprocity",
    "title_en": "law of quadratic reciprocity",
+   "statement_en": "Let $p, q$ be two distinct odd primes. Then\n\n$$\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} .$$\n\nEquivalently, if at least one of $p, q$ is $\\equiv 1 \\pmod 4$, then $\\left(\\frac{p}{q}\\right) = \\left(\\frac{q}{p}\\right)$. If both are $\\equiv 3 \\pmod 4$, the two values have opposite signs. The supplementary formulas are\n\n$$\\left(\\frac{-1}{p}\\right) = (-1)^{\\frac{p-1}{2}}, \\qquad \\left(\\frac{2}{p}\\right) = (-1)^{\\frac{p^{2}-1}{8}} .$$",
+   "notes_en": "**This is the most important theorem in number theory** (Gauss gave eight proofs in his lifetime, the first in 1796 at age 19). It turns the difficult question of whether $p$ is a quadratic residue modulo $q$ into the easier question of whether $q$ is a quadratic residue modulo $p$, since one can recursively reduce $p$ to $< q$.\n\n\n\n⭐ A mainstream approach today uses **point counting on curves over finite fields**. $\\left(\\frac{p}{q}\\right)$ is related to the number of solutions of $x^{2} \\equiv p \\pmod q$, and these solutions can be counted in stages using elliptic curves or multiplicative groups over $\\mathbb{F}_{p}$ (Zolotarev's lemma and the signs of permutations). This is **one modern approach**. Elementary proofs also exist, including Gauss's third proof and proofs using Gauss's lemma or Zolotarev's lemma, all based on elementary counting.\n\n\n\n**Application.** To evaluate $\\left(\\frac{a}{p}\\right)$, factor it into primes, use reciprocity to swap the arguments for each prime factor, and recurse. This takes on the order of $O(\\log p)$ divisions. The two supplementary formulas above handle $-1$ and $2$, the two cases where the arguments cannot be swapped.\n\n\n\n**Proof (Gauss's lemma and lattice-point counting in a rectangle, elementary).** Write $P = \\frac{p-1}{2}$ and $Q = \\frac{q-1}{2}$. For $1 \\le x \\le P$, write $m_{x} := \\left\\lfloor \\frac{qx}{p} \\right\\rfloor$ and let $r_{x}$ be the least positive residue of $qx$ modulo $p$ ($1 \\le r_{x} \\le p-1$ because $p \\nmid qx$).\n\n\n\n**Step 1. Gauss's lemma.** Set $\\varepsilon_{x} = 1$ when $r_{x} < p/2$, or $-1$ when $r_{x} > p/2$. Set $s_{x} = r_{x}$ in the former case and $s_{x} = p - r_{x}$ in the latter. Then $1 \\le s_{x} \\le P$. We claim that $x \\mapsto s_{x}$ is a permutation of $\\{1, \\ldots, P\\}$. If $s_{x} = s_{y}$, then $r_{x} \\equiv \\pm r_{y} \\pmod p$, that is, $qx \\equiv \\pm qy \\pmod p$. Since $q$ is invertible modulo $p$, we have $x \\equiv \\pm y \\pmod p$. But $1 \\le x, y \\le P$ and $p$ is odd, so $x \\equiv -y$ would imply $x + y = p$, contradicting $x + y \\le 2P = p - 1$. Hence $x = y$ ✓.\n\n\n\nReplacing $\\{qx\\}_{x \\le P}$ by the least positive residues and then taking signs gives\n\n\n\n$$\\prod_{x=1}^{P} qx \\equiv \\prod_{x=1}^{P} (\\varepsilon_{x} s_{x}) = \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) \\Bigl( \\prod_{x} s_{x} \\Bigr) \\equiv \\Bigl( \\prod_{x} \\varepsilon_{x} \\Bigr) P! \\pmod p .$$\n\n\n\nThe left-hand side is $= q^{P} P!$. Canceling $P!$ ($p \\nmid P!$) gives $q^{P} \\equiv \\prod_{x} \\varepsilon_{x} = (-1)^{\\mu}$, where $\\mu = \\#\\{x : r_{x} > p/2\\}$. By **`lem.gauss-qr`** (Gauss's lemma), $\\left(\\frac{q}{p}\\right) = (-1)^{\\mu}$, so\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} .$$\n\n\n\n**Step 2. $\\mu$ and $\\sum m_{x}$ have the same parity.** From $r_{x} = qx - p m_{x}$ and $\\sum_{x} s_{x} = \\sum_{x=1}^{P} x = \\frac{P(P+1)}{2}$ we obtain\n\n\n\n$$\\sum_{x} s_{x} = \\sum_{x} r_{x} + \\sum_{r_{x} > p/2} (p - 2r_{x}) ,$$\n\n\n\nWe also have $\\sum_{x} r_{x} = q\\sum_{x} x - p \\sum_{x} m_{x}$. Substitute these expressions and reduce both sides modulo $2$. Then $\\sum_{r_{x} > p/2}(p - 2r_{x}) \\equiv p\\mu \\equiv \\mu \\pmod 2$ and $q \\sum_{x} x \\equiv \\sum_{x} x \\pmod 2$, so\n\n\n\n$$\\sum_{x} x \\equiv \\sum_{x} x + \\sum_{x} m_{x} + \\mu \\pmod 2 ,$$\n\n\n\nCanceling $\\sum_{x} x$ gives $\\sum_{x} m_{x} \\equiv \\mu \\pmod 2$. Hence\n\n\n\n$$\\left(\\frac{q}{p}\\right) = (-1)^{\\mu} = (-1)^{\\sum_{x=1}^{P} \\lfloor qx/p \\rfloor} .$$\n\n\n\n**Step 3. Counting lattice points in a rectangle.** In the rectangle $R = \\{(x, y) \\in \\mathbb{Z}^{2} : 1 \\le x \\le P,\\ 1 \\le y \\le Q\\}$ (with $PQ$ lattice points in total), the line $qx = py$ contains no lattice points. Indeed, $p \\mid qx$ and $p \\nmid q$ imply $p \\mid x$, but $1 \\le x \\le P < p$, a contradiction. Thus $R$ splits into two parts $R_{-} = \\{qx - py > 0\\}$ and $R_{+} = \\{qx - py < 0\\}$, with $\\#R = \\#R_{-} + \\#R_{+} = PQ$.\n\n\n\nFor fixed $x$, $\\{y : 1 \\le y \\le Q,\\ qx - py > 0\\} = \\{y : y < qx/p\\}$ has exactly $\\min(Q, \\lfloor qx/p \\rfloor)$ elements. Since $qx/p \\le qP/p = \\frac{q(p-1)}{2p} < \\frac{q}{2}$, we have $\\lfloor qx/p \\rfloor \\le \\frac{q-1}{2} = Q$, and this count is $\\lfloor qx/p \\rfloor$. Thus $\\#R_{-} = \\sum_{x=1}^{P} \\lfloor qx/p \\rfloor$. By symmetry, interchanging $p \\leftrightarrow q$ and $x \\leftrightarrow y$ gives $\\#R_{+} = \\sum_{y=1}^{Q} \\lfloor py/q \\rfloor$. Therefore\n\n\n\n$$\\sum_{x=1}^{P} \\left\\lfloor \\frac{qx}{p} \\right\\rfloor + \\sum_{y=1}^{Q} \\left\\lfloor \\frac{py}{q} \\right\\rfloor = PQ .$$\n\n\n\n**Step 4. Combining the results.** Apply Step 2 in both directions, $(p, q)$ and $(q, p)$, and substitute the result of Step 3:\n\n\n\n$$\\left(\\frac{q}{p}\\right)\\left(\\frac{p}{q}\\right) = (-1)^{PQ} = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}} ,$$\n\n\n\nThis is the desired quadratic reciprocity law ✓. ∎",
    "translations": {
     "en": {
-     "status": "derived",
-     "version": null,
+     "status": "draft",
+     "version": "v0.9.3",
      "fields": [
+      "statement",
+      "notes",
       "name"
      ],
-     "creative": [],
+     "creative": [
+      "statement",
+      "notes"
+     ],
      "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
       "name": "derived"
      },
      "staleFields": [],
-     "basedOn": {}
+     "basedOn": {
+      "statement": "v0.9.3#8cda3eb3",
+      "notes": "v0.9.3#f977da75"
+     }
     }
    },
    "en_page": "nodes/thm.quadratic-reciprocity.en.md",
-   "en_html": false,
+   "en_html": true,
    "region": "number",
    "regions": [
     "number"

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.hadamard-factorization)　·　[Chinese page (authoritative)](./thm.hadamard-factorization.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 34 · theorem · cluster Analytic Continuation and Entire Functions (`analysis.entire`) · Complex Analysis / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.hadamard-factorization.md` and `proofs/`.
+## Statement · **draft**
+Let $f$ be an entire function of **finite order** $\rho$ with zeros $\{a_{n}\}$, counted with multiplicity. Then
 
+$$f(z) = z^{m} e^{P(z)} \prod_{n} E_{p}\left(\frac{z}{a_{n}}\right),$$
 
-Cite: `thm.hadamard-factorization` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.hadamard-factorization.en.2.md

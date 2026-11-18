@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.open-mapping)　·　[Chinese page (authoritative)](./thm.open-mapping.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 31 · theorem · cluster Conformal Maps and Normal Families (`analysis.mapping`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.open-mapping.md` and `proofs/`.
+## Statement · **draft**
+Suppose $f$ is holomorphic and **nonconstant** on a domain $\Omega$. Then $f$ is an open map: every open subset of $\Omega$ has open image.
 
+Corollaries:
 
-Cite: `thm.open-mapping` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.open-mapping.en.2.md
