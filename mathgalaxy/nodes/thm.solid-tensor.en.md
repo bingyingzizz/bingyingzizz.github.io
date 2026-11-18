@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.solid-tensor)　·　[Chinese page (authoritative)](./thm.solid-tensor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · theorem · cluster Solid Abelian Groups (`cond.solid`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.solid-tensor.md` and `proofs/`.
+## Statement · **draft**
+**(i)** On $\mathbf{Solid}$ there is a unique symmetric monoidal tensor product $\otimes^{\blacksquare}$ making the solidification functor $M \mapsto M^{\blacksquare}$ symmetric monoidal. Explicitly,
 
+$$M \otimes^{\blacksquare} N := (M \otimes N)^{\blacksquare}.$$
 
-Cite: `thm.solid-tensor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.solid-tensor.en.2.md

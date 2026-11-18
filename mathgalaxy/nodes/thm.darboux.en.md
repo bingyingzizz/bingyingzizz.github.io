@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.darboux)　·　[Chinese page (authoritative)](./thm.darboux.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 32 · theorem · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.darboux.md` and `proofs/`.
+## Statement · **draft**
+**What the theorem says**: This is the theorem that symplectic geometry has no local invariants. Around every point there are coordinates in which $\omega$ becomes $\omega_{0}$, so all the information in a symplectic manifold is **global**.
 
-
-Cite: `thm.darboux` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.darboux.en.2.md

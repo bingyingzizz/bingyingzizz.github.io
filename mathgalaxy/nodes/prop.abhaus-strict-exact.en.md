@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.abhaus-strict-exact)　·　[Chinese page (authoritative)](./prop.abhaus-strict-exact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.abhaus-strict-exact.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathbf{AbHaus}$ be the category of **Hausdorff topological abelian groups** (with continuous homomorphisms as morphisms). Then
 
-
-Cite: `prop.abhaus-strict-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.abhaus-strict-exact.en.2.md

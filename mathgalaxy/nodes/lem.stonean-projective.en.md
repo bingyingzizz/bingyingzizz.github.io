@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.stonean-projective)　·　[Chinese page (authoritative)](./lem.stonean-projective.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · lemma · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.stonean-projective.md` and `proofs/`.
+## Statement · **draft**
+Let $F$ be a **free compact Hausdorff space** (or, more generally, a **Stonean space**). Then the free condensed abelian group $\mathbb{Z}\cdot F$ is a **finitely presented projective** condensed abelian group.
 
-
-Cite: `lem.stonean-projective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.stonean-projective.en.2.md

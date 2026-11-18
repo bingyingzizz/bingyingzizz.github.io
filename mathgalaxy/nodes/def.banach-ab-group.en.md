@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.banach-ab-group)　·　[Chinese page (authoritative)](./def.banach-ab-group.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.banach-ab-group.md` and `proofs/`.
+## Statement · **draft**
+A **Banach abelian group** is a seminormed abelian group $M$ satisfying
 
+- $\|s\| = 0 \implies s = 0$ (**separation**, meaning that the seminorm is a norm);
+- $M$ is **complete** in the metric induced by the norm.
 
-Cite: `def.banach-ab-group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Every seminormed abelian group $M$ has a **Banach completion** obtained by first taking the Hausdorff quotient and then completing,
 
+> continued in nodes/def.banach-ab-group.en.2.md

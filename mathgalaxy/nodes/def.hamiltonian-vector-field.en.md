@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.hamiltonian-vector-field)　·　[Chinese page (authoritative)](./def.hamiltonian-vector-field.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 31 · definition · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.hamiltonian-vector-field.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: Provides the correspondence ‘function $\implies$ vector field’ on a symplectic manifold. It turns an energy function (the Hamiltonian) into equations of motion, the central construction of analytical mechanics.
 
-
-Cite: `def.hamiltonian-vector-field` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.hamiltonian-vector-field.en.2.md

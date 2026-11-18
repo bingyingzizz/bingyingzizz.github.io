@@ -52,6 +52,14 @@ footer a{color:var(--soft)}
 .about code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);
   padding:1px 5px;border-radius:5px}
 .about .meta-en{color:var(--faint);font-size:13.5px;margin-bottom:0}
+/* 首页「索引」那一节：五条入口 + 分支名。用圆点列表而不是卡片 ——
+   这里要的是短、能扫，卡片太占高度。 */
+.idx{margin:0 0 14px;padding:0;list-style:none}
+.idx li{position:relative;margin:0 0 7px;padding-left:15px;color:var(--soft);font-size:15px;line-height:1.66}
+.idx li::before{content:'';position:absolute;left:0;top:.68em;width:5px;height:5px;border-radius:50%;
+  background:var(--accent);opacity:.55}
+.idx a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.idx a:hover{border-bottom-color:var(--accent)}
 
 /* ------------------------------------------------------------ 卡片（首页） */
 /* 首屏的三个任务入口（浏览索引 / 看前置 / 随便探索）—— 搜索框单独在它们上面。

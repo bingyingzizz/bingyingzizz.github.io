@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.smooth-partition-unity)　·　[Chinese page (authoritative)](./thm.smooth-partition-unity.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Manifolds and Vector Bundles (`diffgeom.manifold`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.smooth-partition-unity.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: Glues locally defined objects into a global one. Construct an object on each open set and take a weighted sum, using the functions of a smooth partition of unity as weights.
 
-
-Cite: `thm.smooth-partition-unity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.smooth-partition-unity.en.2.md

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.topo-ab-group)　·　[Chinese page (authoritative)](./def.topo-ab-group.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.topo-ab-group.md` and `proofs/`.
+## Statement · **draft**
+A **topological abelian group** $(M, +, \tau)$ is an **abelian group** $M$ equipped with a topology $\tau$ for which the group operations are continuous:
 
+$$+ : M \times M \longrightarrow M, \qquad - : M \longrightarrow M.$$
 
-Cite: `def.topo-ab-group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The **continuous homomorphisms** between two topological abelian groups are denoted by
 
+$$C_{\mathbb{Z}}(M, N) \;\subseteq\; C(M, N),$$
+
+> continued in nodes/def.topo-ab-group.en.2.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.lu-decomposition)　·　[Chinese page (authoritative)](./thm.lu-decomposition.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Matrix Factorizations and Least Squares (`algebra.numeric`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lu-decomposition.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: Expresses Gaussian elimination as multiplication by a sequence of elementary matrices. Denote the product of those elementary matrices by $L$ and the result of elimination by $U$ to obtain $A = LU$.
 
+Suppose $A \in M_{n}(K)$ and all its $n$ **leading principal minors** are nonzero. There is then a unique factorization
 
-Cite: `thm.lu-decomposition` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$A = LU ,$$
 
+> continued in nodes/thm.lu-decomposition.en.2.md

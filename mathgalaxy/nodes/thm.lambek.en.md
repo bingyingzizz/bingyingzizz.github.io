@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.lambek)　·　[Chinese page (authoritative)](./thm.lambek.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · theorem · cluster Flat Modules (`hom.flat`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lambek.md` and `proofs/`.
+## Statement · **draft**
+Suppose $R$ is a **unital Noetherian ring** and $M$ is a **left** $R$-module. (The criterion holds for arbitrary unital rings, but the induction below uses the fact that submodules are still finitely generated. The non-Noetherian case requires a filtered colimit argument, which is omitted here.) Then $M$ is flat if and only if, for every **finitely generated right ideal** $I \subseteq R$, the multiplication map
 
-
-Cite: `thm.lambek` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.lambek.en.2.md

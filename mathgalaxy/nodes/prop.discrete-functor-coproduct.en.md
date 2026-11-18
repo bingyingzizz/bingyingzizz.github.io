@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.discrete-functor-coproduct)　·　[Chinese page (authoritative)](./prop.discrete-functor-coproduct.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.discrete-functor-coproduct.md` and `proofs/`.
+## Statement · **draft**
+Let $(M_{i})_{i \in I}$ be a family of abelian groups. Then
 
+$$\Bigl(\bigoplus_{i \in I} M_{i}\Bigr)^{\mathrm{disc}} \;\cong\; \bigoplus_{i \in I} M_{i}^{\mathrm{disc}},$$
 
-Cite: `prop.discrete-functor-coproduct` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $(-)^{\mathrm{disc}}$ is the functor that views an abelian group as a discrete condensed abelian group.
 
+> continued in nodes/prop.discrete-functor-coproduct.en.2.md

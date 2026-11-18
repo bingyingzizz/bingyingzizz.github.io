@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.pontryagin-dual)　·　[Chinese page (authoritative)](./def.pontryagin-dual.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · definition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.pontryagin-dual.md` and `proofs/`.
+## Statement · **draft**
+Write the **circle group** as
 
+$$\mathbb{T} := \{\, z \in \mathbb{C} : |z| = 1 \,\}.$$
 
-Cite: `def.pontryagin-dual` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The **Pontryagin dual** of a topological abelian group $M$ is
 
+$$\widehat{M} := C_{\mathbb{Z}}(M, \mathbb{T}),$$
+
+that is, the group of all continuous homomorphisms from $M$ to $\mathbb{T}$, equipped with the compact-open topology.
+
+> continued in nodes/def.pontryagin-dual.en.2.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.semi-normed-ab-group)　·　[Chinese page (authoritative)](./def.semi-normed-ab-group.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.semi-normed-ab-group.md` and `proofs/`.
+## Statement · **draft**
+A **seminormed abelian group** is an abelian group $M$ equipped with a function $\|\cdot\| : M \to \mathbb{R}_{\ge 0}$ satisfying
 
+- $\|0\| = 0$;
+- $\|s + t\| \le \|s\| + \|t\|$ (triangle inequality);
+- $\|-s\| = \|s\|$ (symmetry).
 
-Cite: `def.semi-normed-ab-group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.semi-normed-ab-group.en.2.md

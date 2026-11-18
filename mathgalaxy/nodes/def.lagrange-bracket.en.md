@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.lagrange-bracket)　·　[Chinese page (authoritative)](./def.lagrange-bracket.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 33 · definition · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.lagrange-bracket.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: Gives the earlier counterpart of the Poisson bracket (Lagrange 1808, Poisson 1809), essentially the inverse of the Poisson bracket matrix. It measures the area between two families of curves, making it natural in the theory of canonical transformations.
 
-
-Cite: `def.lagrange-bracket` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.lagrange-bracket.en.2.md

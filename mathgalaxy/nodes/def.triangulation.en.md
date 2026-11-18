@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.triangulation)　·　[Chinese page (authoritative)](./def.triangulation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.triangulation.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a topological space. A **triangulation** of $X$ is a pair $(K, h)$:
 
+- $K$ is a **simplicial complex** (`def.simplicial-complex`), and $|K|$ is its geometric realization;
+- $h : |K| \to X$ is a **homeomorphism**.
 
-Cite: `def.triangulation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.triangulation.en.2.md

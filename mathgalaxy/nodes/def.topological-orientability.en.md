@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.topological-orientability)　·　[Chinese page (authoritative)](./def.topological-orientability.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.topological-orientability.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a $n$-dimensional topological manifold ($n\ge 1$). Call $M$ **orientable** if there is a collection of charts $(U_{\alpha},\varphi_{\alpha})$ covering $M$ such that the transition maps between any two charts,
 
-
-Cite: `def.topological-orientability` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.topological-orientability.en.2.md

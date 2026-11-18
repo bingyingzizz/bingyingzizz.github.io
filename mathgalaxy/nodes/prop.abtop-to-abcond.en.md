@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=prop.abtop-to-abcond)　·　[Chinese page (authoritative)](./prop.abtop-to-abcond.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.abtop-to-abcond.md` and `proofs/`.
+## Statement · **draft**
+There is a **faithful** functor that **preserves all limits**
 
+$$\mathbf{AbTop} \longrightarrow \mathrm{AbCond}, \qquad M \longmapsto \underline{M}.$$
 
-Cite: `prop.abtop-to-abcond` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+and is **fully faithful** on **compactly generated** abelian groups.
 
+## Notes · **draft**
+**Construction**: A topological abelian group $M$ gives the condensed abelian group
+
+> continued in nodes/prop.abtop-to-abcond.en.2.md

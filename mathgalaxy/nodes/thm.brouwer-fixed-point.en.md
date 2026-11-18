@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.brouwer-fixed-point)　·　[Chinese page (authoritative)](./thm.brouwer-fixed-point.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 31 · theorem · cluster Topological Applications of Complex Analysis (`analysis.topology-app`) · Complex Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.brouwer-fixed-point.md` and `proofs/`.
+## Statement · **draft**
+Suppose $f : \overline{\mathbb{D}} \to \overline{\mathbb{D}}$ is continuous ($\overline{\mathbb{D}} = \{\, |z| \le 1 \,\}$). Then there exists $z \in \overline{\mathbb{D}}$ such that $f(z) = z$.
 
-
-Cite: `thm.brouwer-fixed-point` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.brouwer-fixed-point.en.2.md

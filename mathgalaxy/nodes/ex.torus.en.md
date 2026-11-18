@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=ex.torus)　·　[Chinese page (authoritative)](./ex.torus.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · example · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/ex.torus.md` and `proofs/`.
+## Statement · **draft**
+$$T^{2} := S^{1} \times S^{1} ,$$
 
+With the product topology, this is a **closed orientable surface** of genus $g = 1$ and Euler characteristic $\chi(T^{2}) = 0$.
 
-Cite: `ex.torus` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/ex.torus.en.2.md

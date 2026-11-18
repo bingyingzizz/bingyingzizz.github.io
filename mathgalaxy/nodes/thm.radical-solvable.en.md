@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.radical-solvable)　·　[Chinese page (authoritative)](./thm.radical-solvable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Galois Theory (`algebra.galois`) · Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.radical-solvable.md` and `proofs/`.
+## Statement · **draft**
+Let $F$ be a field of **characteristic zero**, let $f \in F[x]$ be nonzero, and let $K$ be the splitting field of $f$. Then
 
+The roots of $f$ can be expressed by **radicals** (arithmetic operations and extraction of $n$th roots) from elements of $F$ $\iff$ $\operatorname{Gal}(K/F)$ is a **solvable group**.
 
-Cite: `thm.radical-solvable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.radical-solvable.en.2.md

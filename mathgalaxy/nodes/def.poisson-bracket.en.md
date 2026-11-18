@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.poisson-bracket)　·　[Chinese page (authoritative)](./def.poisson-bracket.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 32 · definition · cluster Symplectic Manifolds and Hamiltonian Mechanics (`diffgeom.symplectic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.poisson-bracket.md` and `proofs/`.
+## Statement · **draft**
+**What this does**: Translates the vector field construction back into functions by assigning a function to each pair of functions. It makes $C^{\infty}(M)$ a Lie algebra and is the operation that takes $\{,\}$ to $\frac{1}{i\hbar}[,]$ in quantization.
 
+Let $(M, \omega)$ be a symplectic manifold and let $f, g \in C^{\infty}(M)$. The **Poisson bracket** is defined by
 
-Cite: `def.poisson-bracket` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.poisson-bracket.en.2.md

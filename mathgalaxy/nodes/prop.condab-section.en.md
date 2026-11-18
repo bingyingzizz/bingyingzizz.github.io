@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.condab-section)　·　[Chinese page (authoritative)](./prop.condab-section.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.condab-section.md` and `proofs/`.
+## Statement · **draft**
+Let $F \in \mathbf{FCHaus}$. Then the **section functor**
 
+$$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \Gamma(F, M) := M(F)$$
 
-Cite: `prop.condab-section` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+preserves **all limits and all colimits**.
 
+> continued in nodes/prop.condab-section.en.2.md

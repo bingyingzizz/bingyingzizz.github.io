@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.k-bounded-exact-filtered-colimit)　·　[Chinese page (authoritative)](./prop.k-bounded-exact-filtered-colimit.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · proposition · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics
 names: `Filtered Colimits` (short) · `K-Bounded Exactness Is Stable under Filtered Colimits` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.k-bounded-exact-filtered-colimit.md` and `proofs/`.
+## Statement · **draft**
+Let $M^{\bullet} = \varinjlim_{k} M^{\bullet}_{k}$ be a **filtered colimit** of complexes of seminormed abelian groups, with **isometric** transition maps.
 
-
-Cite: `prop.k-bounded-exact-filtered-colimit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.k-bounded-exact-filtered-colimit.en.2.md

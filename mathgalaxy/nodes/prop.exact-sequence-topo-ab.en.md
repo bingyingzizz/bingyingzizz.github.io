@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.exact-sequence-topo-ab)　·　[Chinese page (authoritative)](./prop.exact-sequence-topo-ab.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.exact-sequence-topo-ab.md` and `proofs/`.
+## Statement · **draft**
+Suppose
 
+$$0 \longrightarrow M' \xrightarrow{\;u\;} M \xrightarrow{\;v\;} M'' \longrightarrow 0$$
 
-Cite: `prop.exact-sequence-topo-ab` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is an **exact sequence** of topological abelian groups, with $M''$ **weak Hausdorff**, and assume the following:
 
+> continued in nodes/prop.exact-sequence-topo-ab.en.2.md

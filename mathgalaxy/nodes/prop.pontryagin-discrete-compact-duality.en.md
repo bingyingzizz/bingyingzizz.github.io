@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.pontryagin-discrete-compact-duality)　·　[Chinese page (authoritative)](./prop.pontryagin-discrete-compact-duality.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.pontryagin-discrete-compact-duality.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a locally compact Hausdorff abelian group and let $\widehat{M} = C_{\mathbb{Z}}(M, \mathbb{T})$ be its Pontryagin dual. Then
 
-
-Cite: `prop.pontryagin-discrete-compact-duality` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.pontryagin-discrete-compact-duality.en.2.md

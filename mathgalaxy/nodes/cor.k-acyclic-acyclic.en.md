@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=cor.k-acyclic-acyclic)　·　[Chinese page (authoritative)](./cor.k-acyclic-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · corollary · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `K-Bounded Acyclicity` (short) · `K-Bounded Acyclicity Implies Acyclicity` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/cor.k-acyclic-acyclic.md` and `proofs/`.
+## Statement · **draft**
+If a complex of Banach abelian groups $M^{\bullet}$ is $K$-bounded acyclic (for some $K$), then it is acyclic in the usual sense.
 
-
-Cite: `cor.k-acyclic-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/cor.k-acyclic-acyclic.en.2.md

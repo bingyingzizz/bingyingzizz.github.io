@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.real-banach-chaus-acyclic)　·　[Chinese page (authoritative)](./thm.real-banach-chaus-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · theorem · cluster Condensed Derived Functors (`cond.cohomology`) · Condensed Mathematics / Homological Algebra
 names: `Banach on Compact Hausdorff` (short) · `Real Banach Spaces Are Acyclic on Compact Hausdorff Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.real-banach-chaus-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a **real Banach space** and let $S$ be a **compact Hausdorff** space. Then for every $n > 0$
 
+$$H^{n}_{\mathrm{cond}}(S,\ V) = 0.$$
 
-Cite: `thm.real-banach-chaus-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.real-banach-chaus-acyclic.en.2.md

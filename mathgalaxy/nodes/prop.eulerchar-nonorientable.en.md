@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.eulerchar-nonorientable)　·　[Chinese page (authoritative)](./prop.eulerchar-nonorientable.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 38 · proposition · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.eulerchar-nonorientable.md` and `proofs/`.
+## Statement · **draft**
+Let $S$ be a **closed nonorientable surface** already in **standard form**, the connected sum of $k$ copies of $\mathbb{RP}^{2}$ ($k\ge1$, see `thm.classification-surfaces`; $k$ is called the **nonorientable genus**). Then
 
+$$\chi(S) = 2 - k .$$
 
-Cite: `prop.eulerchar-nonorientable` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.eulerchar-nonorientable.en.2.md

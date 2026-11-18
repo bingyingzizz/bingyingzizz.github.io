@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=ex.projective-plane)　·　[Chinese page (authoritative)](./ex.projective-plane.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · example · cluster Surfaces: connected sum and genus (`topology.surfaces`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/ex.projective-plane.md` and `proofs/`.
+## Statement · **draft**
+$$\mathbb{RP}^{2} := S^{2} \big/ (x \sim -x) ,$$
 
+With the quotient topology from antipodal identification, this is a **closed nonorientable surface** of nonorientable genus $k = 1$ and Euler characteristic $\chi(\mathbb{RP}^{2}) = 1$.
 
-Cite: `ex.projective-plane` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/ex.projective-plane.en.2.md

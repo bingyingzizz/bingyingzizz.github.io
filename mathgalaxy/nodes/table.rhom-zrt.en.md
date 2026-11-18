@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=table.rhom-zrt)　·　[Chinese page (authoritative)](./table.rhom-zrt.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 26 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `RHom Table` (short) · `Table of Derived Hom for Z, R and T` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/table.rhom-zrt.md` and `proofs/`.
+## Statement · **draft**
+The table gives $\operatorname{RHom}_{\mathbb{Z}}(M, N)$ (rows correspond to $M$ and columns to $N$):
 
-
-Cite: `table.rhom-zrt` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/table.rhom-zrt.en.2.md

@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.condab-ab)　·　[Chinese page (authoritative)](./thm.condab-ab.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.condab-ab.md` and `proofs/`.
+## Statement · **draft**
+$\mathrm{CondAb}$ is a **Grothendieck category** satisfying **AB6** and **AB4\***.
 
+## Notes · **draft**
+Consequently, $\mathrm{CondAb}$ is an **abelian category** and (1) has a generator, (2) has all limits and colimits, (3) has **exact** products and coproducts, and (4) has **exact filtered colimits that commute with products**.
 
-Cite: `thm.condab-ab` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.condab-ab.en.2.md

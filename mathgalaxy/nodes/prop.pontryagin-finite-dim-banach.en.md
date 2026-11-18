@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.pontryagin-finite-dim-banach)　·　[Chinese page (authoritative)](./prop.pontryagin-finite-dim-banach.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · proposition · cluster Topological Abelian Groups (`cond.topo`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.pontryagin-finite-dim-banach.md` and `proofs/`.
+## Statement · **draft**
+Let $V$ be a **finite-dimensional** real Banach space. Then its Pontryagin dual is the usual vector space dual:
 
+$$\widehat{V} \;\cong\; V^{\ast} = \operatorname{Hom}_{\mathbb{R}}(V,\ \mathbb{R}).$$
 
-Cite: `prop.pontryagin-finite-dim-banach` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.pontryagin-finite-dim-banach.en.2.md

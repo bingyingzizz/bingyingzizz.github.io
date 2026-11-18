@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.simplicial-approximation)　·　[Chinese page (authoritative)](./thm.simplicial-approximation.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Homology Groups (`topology.homology`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.simplicial-approximation.md` and `proofs/`.
+## Statement · **draft**
+Let $K, L$ be simplicial complexes, with $K$ **finite**, and let $f : |K| \to |L|$ be continuous. Write $K^{(m)}$ for the result of applying **barycentric subdivision** to $K$ a total of $m$ times ($|K^{(m)}| = |K|$, with simplex diameters shrinking by a fixed factor). Then there exist $m \ge 1$ and a **simplicial map**
 
+$$g : K^{(m)} \longrightarrow L$$
 
-Cite: `thm.simplicial-approximation` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.simplicial-approximation.en.2.md
