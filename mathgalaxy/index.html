@@ -112046,6 +112046,11 @@ MG.trunk = [
            r 按 0.25 分档、nodeDot 的闸门（r=1.32~1.42）落在同一档里，
            于是「全景的圆点」被烘进位图后不再重烘，用户没滚轮也擦不掉。 */
         + renderer.lodPaintKey() + '|'
+        /* ⭐ ENG-025：可见集合的「过滤代次」也是绘制输入。层号 / 主干 / 子图一变，
+           `view.visible` 就换了，但 hiddenCount 没变（那是手动隐藏）⇒ 以前 paintKey 不变
+           ⇒ 位图认为「输入没变」不重烘，屏幕上留着上一层的线，非得拖一下画布（相机变）
+           才刷新。用户报的就是这个。 */
+        + 'f' + filterEpoch + '|'
         + (view.focus ? view.focus.type + ':' + view.focus.id : '-');
     }
     var rafId = 0;
@@ -112652,7 +112657,28 @@ MG.trunk = [
     var subCount = 0;
     var SUB_DIR_NAME = { deps: '它靠什么', users: '谁用它', both: '它周围' };
 
-    function applyFilter() {
+    /* ENG-025：过滤代次 —— layerMax / trunkOnly / subIds 任一变化都要 +1，
+       让位图的 paintKey 看见「可见集合变了」，从而自动重烘（不用等用户拖画布）。
+       ⚠️ 拖分层滑杆时每条 input 都会调到这里：立刻 +1 就会「每颗火星烘一次」
+       （实测连续 24 次 input：24 次烘焙、p90 帧 120ms、最长 163ms，滑块拖不动）。
+       所以拖动中的 input 走 60ms 尾随去抖；松手（change，调用方不带 fit:false）
+       或程序化设层立刻 +1 —— 单次改层的位图换新在 ~40ms（2~3 帧）内完成。
+       可见性本身**马上**生效（实时层立即变），只有位图那一份延后。 */
+    var filterEpoch = 0, filterEpochTimer = 0;
+    function flushFilterEpoch() {
+      if (filterEpochTimer) { clearTimeout(filterEpochTimer); filterEpochTimer = 0; }
+      filterEpoch++;
+    }
+    function scheduleFilterEpoch() {
+      if (filterEpochTimer) clearTimeout(filterEpochTimer);
+      filterEpochTimer = setTimeout(function () {
+        filterEpochTimer = 0;
+        filterEpoch++;
+        requestDraw();
+      }, 60);
+    }
+    function applyFilter(slow) {
+      if (slow) scheduleFilterEpoch(); else flushFilterEpoch();
       if (!trunkOnly && layerMax == null && !subIds) { vis.setFilter(null); return; }
       vis.setFilter(function (id) {
         var n = graph.byId[id];
@@ -112695,22 +112721,17 @@ MG.trunk = [
     }
 
     /** k = 只显示第 0…k 层；k >= 最大层 或 null = 不限。
-        opts.fit=false 用于「拖滑杆的过程中」：那时不重新适配镜头，否则画面会跟着抖。 */
+        ⭐ ENG-025：只改可见性，**相机一点都不动**（不 fitAll、不 centerOn、不改 cam.k）。
+        opts 保留只为兼容旧调用方（其中的 fit 已无意义）。 */
     function setLayerMax(k, opts) {
-      opts = opts || {};
       var max = graph.maxLayer || 0;
       layerMax = (k == null || k >= max) ? null : Math.max(0, k);
-      applyFilter();
-      /* ⭐ 2026-11-16：切层只改「看哪些点」，**不改 cam.k**（用户报：切层时缩放被强制
-         拉到最小）。保留用户当前的显示大小，只把可见集合的 bbox 中心平移到可用区中心；
-         空集合就什么都不动。 */
-      if (layerMax != null && opts.fit !== false) {
-        var live = visibleNodes();
-        if (live.length) {
-          var bb = bboxOf(live);
-          cam.centerOn((bb.minX + bb.maxX) / 2, (bb.minY + bb.maxY) / 2);
-        }
-      }
+      /* 拖动中（fit:false）只去抖位图；松手/程序化立刻刷新位图。 */
+      applyFilter(!!(opts && opts.fit === false));
+      /* ⭐ ENG-025：切层只改「看哪些点」——**相机一点都不动**（不 fitAll、不 centerOn、
+         不改 cam.k）。2026-11-16 这里曾按可见 bbox 调 cam.centerOn，用户报「拖层号时
+         视口中心还在漂」：只要动镜头，屏幕中心对应的世界点就变了，层号变化应当是纯过滤。
+         需要「切层后看全」的用户自己按 fit 键。 */
       syncHash('push');
     }
 
