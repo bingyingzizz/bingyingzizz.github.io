@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-18T11:16:24.563Z",
+  "generated": "2026-11-18T12:15:51.660Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
@@ -111855,7 +111855,7 @@
    "a": "thm.compactness",
    "b": "def.compact",
    "title": "两种「紧」：有限可满足 vs 有限子覆盖",
-   "note": "名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。\n\n⚠ 但两者不是毫无关系：用 Stone 空间（`def.stone-space`），命题逻辑的紧致性可以从「$\\{0,1\\}^{\\text{公式集}}$ 紧」推出来 —— 本图没有把这条路径做成节点，所以这里只记类比。\n\n⛔ 不能做成 definition：已有的从 `def.compact` 到 `def.formula` 的路径意味着反向接线会成环。"
+   "note": "名字撞车，机制不同：拓扑的紧是**开覆盖**的有限性，逻辑的紧是**有限可满足**推出整体可满足。\n\n⚠ 但两者不是毫无关系：用 Stone 空间（`def.stone-space`），命题逻辑的紧致性可以从「$\\{0,1\\}^{\\text{formulas}}$ 紧」推出来 —— 本图没有把这条路径做成节点，所以这里只记类比。\n\n⛔ 不能做成 definition：已有的从 `def.compact` 到 `def.formula` 的路径意味着反向接线会成环。"
   },
   {
    "id": "e179.analogy",
