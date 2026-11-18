@@ -10418,6 +10418,28 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       return '<div class="pn-sec"><h4>' + U.escapeHtml(title) + '</h4>' + html + '</div>';
     }
 
+    /* --------------------------------------------- ENG-026 英文正文的回退规则
+       ⚠️ `MG.isEn` 是整页重载时定下的**静态值**（i18n 初始化），这里不做热切换。
+       pickText：英文模式优先 `*_en`；没有英文时回落中文，并用 fallback 标记让
+       调用方**显式**告诉读者「这是缺翻译，不是界面没切过去」。中文模式行为不变。 */
+    function pickText(obj, zhKey, enKey) {
+      if (!MG.isEn) return { text: obj[zhKey] || '', fallback: false };
+      var en = (obj[enKey] == null ? '' : String(obj[enKey])).trim();
+      if (en) return { text: en, fallback: false };
+      var zh = (obj[zhKey] == null ? '' : String(obj[zhKey])).trim();
+      return { text: zh, fallback: !!zh };
+    }
+    function missingNote() {
+      return MG.isEn
+        ? '<div class="pn-note pn-fallback">English translation not available; showing the Chinese original.</div>'
+        : '';
+    }
+    function proofOnlyZhNote() {
+      return MG.isEn
+        ? '<div class="pn-note pn-fallback">Proof text is currently only available in Chinese.</div>'
+        : '';
+    }
+
     function listOrNone(rows, emptyText) {
       if (!rows.length) return '<div class="pn-none">' + U.escapeHtml(emptyText) + '</div>';
       return '<div class="pn-list">' + rows.join('') + '</div>';
@@ -10540,8 +10562,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         html += '<div class="pn-status pn-status-' + U.escapeHtml(n.status) + '">' +
           U.escapeHtml('⚠ ' + stChip) + '</div>';
       }
-      if (n.statement) html += section(tf('陈述'), '<div class="pn-body">' + U.md(n.statement) + '</div>');
-      if (n.notes) html += section(tf('说明 / 备注'), '<div class="pn-body">' + U.md(n.notes) + '</div>');
+      /* ENG-026：英文模式优先 *_en；缺英文时回落中文并显式标注（不再静默混排）。 */
+      var st = pickText(n, 'statement', 'statement_en');
+      if (st.text) html += section(tf('陈述'),
+        (st.fallback ? missingNote() : '') + '<div class="pn-body">' + U.md(st.text) + '</div>');
+      var nt = pickText(n, 'notes', 'notes_en');
+      if (nt.text) html += section(tf('说明 / 备注'),
+        (nt.fallback ? missingNote() : '') + '<div class="pn-body">' + U.md(nt.text) + '</div>');
       if (n.refs && n.refs.length) {
         html += section(tf('参考'), '<div class="pn-body"><ul>' + n.refs.map(function (r) {
           return '<li>' + U.escapeHtml(r) + '</li>';
@@ -10659,7 +10686,7 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       }
 
       if (steps.length) {
-        html += section(tf('为什么等价'), steps.map(function (p, i) {
+        html += section(tf('为什么等价'), proofOnlyZhNote() + steps.map(function (p, i) {
           return '<div class="pn-step">' +
             '<div class="pn-step-title"><span class="badge">' + (p.tag || (i + 1)) + '</span>' +
             U.titleHtml(p.label || '') + '</div>' +
@@ -10668,20 +10695,26 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       } else if (e.kind === 'implication' && e.proofs && e.proofs.length > 1) {
         /* 多证法：第一个展开，其余折叠（用原生 <details>，零脚本） */
         html += section(tf('推导过程 · {n} 种证法', { n: e.proofs.length }),
-          e.proofs.map(function (p, i) {
+          proofOnlyZhNote() + e.proofs.map(function (p, i) {
             var body = '<div class="pn-body">' + U.md(p.text || '') + '</div>';
             var head = U.titleHtml(p.label || tf('证法 {n}', { n: i + 1 }));
             return i === 0 ? '<div class="pn-step">' + head + body + '</div>'
               : '<details class="pn-step"><summary>' + head + '</summary>' + body + '</details>';
           }).join(''));
       } else if (e.proof) {
-        html += section(tf(e.kind === 'implication' ? '推导过程' : '说明'), '<div class="pn-body">' + U.md(e.proof) + '</div>');
+        html += section(tf(e.kind === 'implication' ? '推导过程' : '说明'),
+          proofOnlyZhNote() + '<div class="pn-body">' + U.md(e.proof) + '</div>');
       } else if (e.kind === 'definition') {
         var d = g.byId[e.definition];
         html += section(tf('说明'), '<div class="pn-body">' +
           U.md(e.note || tf('该结论的陈述中使用了定义「{名}」。', { 名: lbl(g, e.definition) })) + '</div>');
-        if (d && d.statement) {
-          html += section(tf('定义原文 · {名}', { 名: MG.labelOf(d) }), '<div class="pn-body">' + U.md(d.statement) + '</div>');
+        if (d) {
+          /* ENG-026：定义原文同样优先英文；缺英文时标注「显示的是中文原文」。 */
+          var ds = pickText(d, 'statement', 'statement_en');
+          if (ds.text) {
+            html += section(tf('定义原文 · {名}', { 名: MG.labelOf(d) }),
+              (ds.fallback ? missingNote() : '') + '<div class="pn-body">' + U.md(ds.text) + '</div>');
+          }
         }
       }
 
