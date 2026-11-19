@@ -2,11 +2,10 @@
 English entry · root `../`
 [in graph](../#n=prop.lc-ab-preabelian)　·　[Chinese page (authoritative)](./prop.lc-ab-preabelian.md)
 
-∎
-(Equivalently, $\mathrm{id}$ is isomorphic to its image but is not the kernel of its cokernel, so the mono-epi factorization is not strict.)
+It is continuous because the discrete topology is finer than the Euclidean topology, and it is injective, hence a monomorphism.
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+Its **cokernel** is $\mathbb{R}/\mathbb{R} = 0$.
 
+In an abelian category every monomorphism is **strict**, meaning $f = \ker(\operatorname{coker} f)$. Here $\ker(0) = \mathbb{R}$, but $\ker(0)$ carries the Euclidean topology and $\mathbb{R}^{\mathrm{disc}}$ does not. The two are **isomorphic but unequal** (they are not isomorphic as morphisms of topological groups) ✗.
 
-Cite: `prop.lc-ab-preabelian` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.lc-ab-preabelian.en.7.md

@@ -16,6 +16,4 @@ layer 17 · 命题 · 代数结构 · 抽象代数
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 1.21
 
-> 说明见 `notes/prop.module-tensor-universal.md`
-
 引用：`prop.module-tensor-universal`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

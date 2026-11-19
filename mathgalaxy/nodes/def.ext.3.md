@@ -9,7 +9,7 @@
 - ⇒ [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext
 - ⇒ [`prop.ext-is-rhom`](../nodes/prop.ext-is-rhom.md) Ext 就是导出 Hom
 - ⇒ [`prop.ext-projective-vanishes`](../nodes/prop.ext-projective-vanishes.md) 投射对象没有高次 Ext
-- 被 [`prop.ext-is-rhom`](../nodes/prop.ext-is-rhom.md) Ext 就是导出 Hom 用
-- 被 [`lem.ext-stonean-section`](../nodes/lem.ext-stonean-section.md) Stonean 上 Ext 的截面公式 用
+- ⇒ [`lem.ext-stonean-section`](../nodes/lem.ext-stonean-section.md) Stonean 上 Ext 的截面公式
+- ⇒ [`thm.lc-ext-vanishing`](../nodes/thm.lc-ext-vanishing.md) 局部紧阿贝尔群高次 Ext 消失
 
 > 续见 [nodes/def.ext.4.md](./def.ext.4.md)

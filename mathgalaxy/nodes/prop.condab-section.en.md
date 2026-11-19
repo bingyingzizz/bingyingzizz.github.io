@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.condab-section)　·　[Chinese page (authoritative)](./prop.condab-section.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 21 · proposition · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 

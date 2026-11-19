@@ -8,12 +8,11 @@ layer 25 · 定理 · 凝聚态导出函子 · 凝聚态数学+同调代数
 $$H^{n}_{\mathrm{cond}}(S,\ V) = 0.$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-realchaus-acyclic.md](../proofs/dep.banach-realchaus-acyclic.md)
-
 - …另有入边，续页见 [nodes/thm.real-banach-chaus-acyclic.2.md](./thm.real-banach-chaus-acyclic.2.md)
 
 refs: Le Stum, Theorem 8.2.8
 
-> 说明见 `notes/thm.real-banach-chaus-acyclic.md`
+## 说明
+⭐ **这是 §8.2 的主定理**，也是整章的枢纽：它把「零调」从 Stone 空间推到了一般紧 Hausdorff 空间，代价是系数必须落在实 Banach 空间里。
 
 引用：`thm.real-banach-chaus-acyclic`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

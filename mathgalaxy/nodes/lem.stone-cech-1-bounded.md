@@ -9,13 +9,11 @@ $$\check{C}^{\bullet}\bigl((S_{0} \to S)^{+},\ M\bigr)$$
 
 是 **$1$-有界零调**的。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间：用到了定义 全不连通与 Stone 空间　[proofs/def-dep.stonecech-stone.md](../proofs/def-dep.stonecech-stone.md)
-
-- …另有入边，续页见 [nodes/lem.stone-cech-1-bounded.2.md](./lem.stone-cech-1-bounded.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/lem.stone-cech-1-bounded.3.md](./lem.stone-cech-1-bounded.3.md)
+- ⇒ [`prop.breen-deligne-ss-stonean`](../nodes/prop.breen-deligne-ss-stonean.md) Stonean 上 Breen–Deligne 的谱序列
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/lem.stone-cech-1-bounded.2.md](./lem.stone-cech-1-bounded.2.md)
 
 refs: Le Stum, Lemma 8.2.5
 

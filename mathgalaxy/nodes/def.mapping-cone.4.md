@@ -3,5 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.triangle-rotation`](../nodes/prop.triangle-rotation.md) 三角的旋转与延拓
+- ⇒ [`prop.exact-to-triangle`](../nodes/prop.exact-to-triangle.md) 正合列给出导出三角
 - 被 [`def.distinguished-triangle`](../nodes/def.distinguished-triangle.md) 导出三角 用
 - 被 [`prop.exact-to-triangle`](../nodes/prop.exact-to-triangle.md) 正合列给出导出三角 用

@@ -8,8 +8,8 @@
 - ⇒ [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限
 - ⇒ [`thm.cofinal-colimit`](../nodes/thm.cofinal-colimit.md) 共尾函子不改变余极限
 - ⇒ [`thm.lim-functor`](../nodes/thm.lim-functor.md) 极限的函子性
+- ⇒ [`prop.ab-limits-forgetful`](../nodes/prop.ab-limits-forgetful.md) Ab(C) 的极限
 - 被 [`prop.yoneda-embedding`](../nodes/prop.yoneda-embedding.md) 米田嵌入 用
 - 被 [`thm.density`](../nodes/thm.density.md) 稠密性定理 用
-- 被 [`thm.right-adjoint-preserves-limits`](../nodes/thm.right-adjoint-preserves-limits.md) 右伴随保极限 用
 
 > 续见 [nodes/def.limit.6.md](./def.limit.6.md)

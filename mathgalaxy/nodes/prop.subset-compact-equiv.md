@@ -10,8 +10,6 @@ $A$ **紧** $\iff$ $A$ 闭**且** $A$ **全有界**。
 （「$A$ 全有界」按子空间度量 $d|_A$ 理解。）
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-link.compact-subset-equiv.md](../proofs/def-link.compact-subset-equiv.md)
-
 - …另有入边，续页见 [nodes/prop.subset-compact-equiv.2.md](./prop.subset-compact-equiv.2.md)
 
 refs: Munkres, Topology, §28；Rudin, Principles of Mathematical Analysis, Ch. 2

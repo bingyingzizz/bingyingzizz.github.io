@@ -7,6 +7,6 @@
 - 被 [`prop.derived-pushforward-composition`](../nodes/prop.derived-pushforward-composition.md) 推前的复合 用
 - 被 [`prop.spectral-sequence-page-picture`](../nodes/prop.spectral-sequence-page-picture.md) 谱序列的页画在 (p,q) 平面上 用
 - ⇒ [`prop.tor-symmetry`](../nodes/prop.tor-symmetry.md) 挠积的对称性
-- 被 [`thm.filtered-complex-spectral`](../nodes/thm.filtered-complex-spectral.md) 过滤复形给出谱序列 用
+- ⇒ [`prop.rhom-chaus-banach-zero`](../nodes/prop.rhom-chaus-banach-zero.md) 紧 Haus 到实 Banach 全零
 
 > 续见 [nodes/def.spectral-sequence.5.md](./def.spectral-sequence.5.md)

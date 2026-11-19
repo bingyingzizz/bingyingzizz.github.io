@@ -11,13 +11,11 @@ $$k(kX \times Y) \;=\; k(X \times Y).$$
 
 $$kX \times Y \;=\; k(X \times Y).$$
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-k-product.md](../proofs/dep.cat-top-prop-k-product.md)
-
-- …另有入边，续页见 [nodes/prop.k-product.2.md](./prop.k-product.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.k-product.3.md](./prop.k-product.3.md)
+- ⇒ [`prop.projection-formula-cond`](../nodes/prop.projection-formula-cond.md) 投影公式
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.k-product.2.md](./prop.k-product.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §2.3
 

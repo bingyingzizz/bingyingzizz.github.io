@@ -2,11 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.k-bounded-completion)　·　[Chinese page (authoritative)](./lem.k-bounded-completion.md)
 
-## Notes · **draft**
+Then $M^{\bullet}$ is boundedly exact at $M^{n}$ with bound $K$ $\iff$ $\widehat{M}^{\bullet}$ is boundedly exact at $\widehat{M}^{n}$ with bound $K$.
+
+## Notes · **stale**
 **Purpose**: This reduces the general seminormed case **to the Banach case**. Proving subsequent theorems for Banach groups therefore suffices for the general case.
 
 **Why it holds**.
-
-Completion embeds $M^{n}$ as a **dense** subspace. The condition of $K$-bounded exactness involves only norm inequalities and an arbitrary choice of $\varepsilon > 0$. Such conditions are **preserved in both directions** when passing to a dense subspace. Density gives sufficiently good approximations in $M^{n}$, and limits in the complete space can lie back in $\widehat{M}^{\bullet}$.
 
 > continued in nodes/lem.k-bounded-completion.en.3.md

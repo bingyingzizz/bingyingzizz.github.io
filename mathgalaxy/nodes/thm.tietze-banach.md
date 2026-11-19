@@ -10,12 +10,8 @@ $$C(X,\ V) \twoheadrightarrow C(K,\ V)$$
 是**满**的：每个连续映射 $K \to V$ 都能延拓到 $X$ 上。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.gap-tietze-banach-banach-space.md](../proofs/dep.gap-tietze-banach-banach-space.md)
-
 - …另有入边，续页见 [nodes/thm.tietze-banach.2.md](./thm.tietze-banach.2.md)
 
 refs: Le Stum, Theorem 8.2.7；Dugundji, An extension of Tietze's theorem (1951)
-
-> 说明见 `notes/thm.tietze-banach.md`
 
 引用：`thm.tietze-banach`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

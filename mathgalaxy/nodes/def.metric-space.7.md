@@ -10,6 +10,5 @@
 - 被 [`def.uniformly-equicontinuous`](../nodes/def.uniformly-equicontinuous.md) 一致等度连续 用
 - ⇒ [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数
 - ⇒ [`thm.metric-paracompact`](../nodes/thm.metric-paracompact.md) Stone 定理
-- 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用
 
 > 续见 [nodes/def.metric-space.8.md](./def.metric-space.8.md)

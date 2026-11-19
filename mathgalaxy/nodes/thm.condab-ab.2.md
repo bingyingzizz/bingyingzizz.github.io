@@ -2,6 +2,8 @@
 [在星图里打开](../#n=thm.condab-ab)　·　第 1 页 [nodes/thm.condab-ab.md](./thm.condab-ab.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：凝聚态阿贝尔群 $\leftrightarrow$ 阿贝尔范畴：都是「好到能算同调」的地方　[proofs/ana.condab-abeliancat.md](../proofs/ana.condab-abeliancat.md)
+- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/def-dep.condab-ab.md](../proofs/def-dep.condab-ab.md)
 - [`def.grothendieck-category`](../nodes/def.grothendieck-category.md) Grothendieck 范畴：用到了定义 Grothendieck 范畴　[proofs/def-dep.grothendieck-condab.md](../proofs/def-dep.grothendieck-condab.md)
 - [`def.ab-axioms`](../nodes/def.ab-axioms.md) Grothendieck 的 AB 公理：用到了定义 Grothendieck 的 AB 公理　[proofs/def-dep.ab-condab.md](../proofs/def-dep.ab-condab.md)
 

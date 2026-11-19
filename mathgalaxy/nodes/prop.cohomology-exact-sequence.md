@@ -1,6 +1,6 @@
 # 同调的短正合列　`prop.cohomology-exact-sequence`
 把同调夹在两个余核 / 核之间
-layer 15 · 命题 · 同调与正合列 · 同调代数
+layer 21 · 命题 · 同调与正合列 · 同调代数
 [在星图里打开](../#n=prop.cohomology-exact-sequence)　·　[节点索引](../index.md)
 
 设 $K$ 是复形。则对每个 $k$ 有正合列

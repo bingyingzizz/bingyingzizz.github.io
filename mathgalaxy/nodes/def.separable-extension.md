@@ -9,6 +9,7 @@ layer 16 · 定义 · Galois 理论 · 抽象代数
 
 ## 它能推出什么 / 谁在用它
 - 被 [`def.galois-extension`](../nodes/def.galois-extension.md) 伽罗瓦扩张 用
+- ⇒ [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.separable-extension.2.md](./def.separable-extension.2.md)

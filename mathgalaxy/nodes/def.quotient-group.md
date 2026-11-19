@@ -17,6 +17,8 @@ $$(g N) \cdot (g' N) := (g g') N.$$
 - …另有入边，续页见 [nodes/def.quotient-group.2.md](./def.quotient-group.2.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`prop.abelianization`](../nodes/prop.abelianization.md) 交换化
+
 - …另有出边，续页见 [nodes/def.quotient-group.3.md](./def.quotient-group.3.md)
 
 refs: Lang, Algebra

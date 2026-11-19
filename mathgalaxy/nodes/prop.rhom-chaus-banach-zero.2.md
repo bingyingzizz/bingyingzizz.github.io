@@ -2,7 +2,7 @@
 [在星图里打开](../#n=prop.rhom-chaus-banach-zero)　·　第 1 页 [nodes/prop.rhom-chaus-banach-zero.md](./prop.rhom-chaus-banach-zero.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-dep.rcbz-chaus.md](../proofs/def-dep.rcbz-chaus.md)
-- [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-dep.rcbz-banach.md](../proofs/def-dep.rcbz-banach.md)
+- [`def.spectral-sequence`](../nodes/def.spectral-sequence.md) 谱序列 + [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 + [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间 + [`def.derived-category`](../nodes/def.derived-category.md) 导出范畴：imp.rhom-chaus-banach-zero　[proofs/imp.rhom-chaus-banach-zero.md](../proofs/imp.rhom-chaus-banach-zero.md)
+- [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间：用到了定义 Banach 空间　[proofs/dep.banach-rhomchaus.md](../proofs/dep.banach-rhomchaus.md)
 
 > 续见 [nodes/prop.rhom-chaus-banach-zero.3.md](./prop.rhom-chaus-banach-zero.3.md)

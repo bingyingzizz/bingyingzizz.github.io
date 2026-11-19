@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=lem.stonean-projective)　·　[Chinese page (authoritative)](./lem.stonean-projective.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 22 · lemma · cluster Condensed Abelian Groups (`cond.ab`) · Condensed Mathematics
 

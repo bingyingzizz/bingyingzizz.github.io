@@ -12,6 +12,6 @@
 - 被 [`def.pid`](../nodes/def.pid.md) 主理想整环 用
 - 被 [`def.comaximal`](../nodes/def.comaximal.md) 互素理想 用
 - 被 [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式） 用
-- 被 [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式 用
+- ⇒ [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
 
 > 续见 [nodes/def.ideal.4.md](./def.ideal.4.md)

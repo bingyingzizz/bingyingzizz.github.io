@@ -7,8 +7,8 @@
 - ⇒ [`prop.preserves-products-kernels`](../nodes/prop.preserves-products-kernels.md) 保积与核 ⟹ 保所有有限极限
 - ⇒ [`prop.sheaf-mono-epi-iso`](../nodes/prop.sheaf-mono-epi-iso.md) 层中单满即同构
 - ⇒ [`prop.sheafify-equivalence`](../nodes/prop.sheafify-equivalence.md) 层化与等价关系交换
-- 被 [`prop.sheaf-mono-epi-iso`](../nodes/prop.sheaf-mono-epi-iso.md) 层中单满即同构 用
-- 被 [`prop.complex-additive`](../nodes/prop.complex-additive.md) 复形范畴是加法范畴 用
-- 被 [`prop.cohomology-exact-sequence`](../nodes/prop.cohomology-exact-sequence.md) 同调的短正合列 用
+- ⇒ [`prop.lc-ab-preabelian`](../nodes/prop.lc-ab-preabelian.md) 局部紧阿贝尔群不是阿贝尔范畴
+- ⇒ [`prop.cond-epi-regular`](../nodes/prop.cond-epi-regular.md) Cond 的满态射都是正则的
+- ⇒ [`prop.cond-equivalence-effective`](../nodes/prop.cond-equivalence-effective.md) Cond 的等价关系有效
 
 > 续见 [nodes/def.equalizer.4.md](./def.equalizer.4.md)

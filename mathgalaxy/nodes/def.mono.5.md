@@ -2,6 +2,7 @@
 [在星图里打开](../#n=def.mono)　·　第 1 页 [nodes/def.mono.md](./def.mono.md)　·　上一页 [nodes/def.mono.4.md](./def.mono.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`prop.injective-criterion`](../nodes/prop.injective-criterion.md) 内射对象的判据 用
 - 被 [`def.subobject`](../nodes/def.subobject.md) 子对象 用
 - 被 [`def.image`](../nodes/def.image.md) 像 / 余像 用
 - 被 [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象 用

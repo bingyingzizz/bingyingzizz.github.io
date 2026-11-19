@@ -2,10 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.lc-ab-preabelian)　·　[Chinese page (authoritative)](./prop.lc-ab-preabelian.md)
 
-It is continuous because the discrete topology is finer than the Euclidean topology, and it is injective, hence a monomorphism.
-
-Its **cokernel** is $\mathbb{R}/\mathbb{R} = 0$.
-
-In an abelian category every monomorphism is **strict**, meaning $f = \ker(\operatorname{coker} f)$. Here $\ker(0) = \mathbb{R}$, but $\ker(0)$ carries the Euclidean topology and $\mathbb{R}^{\mathrm{disc}}$ does not. The two are **isomorphic but unequal** (they are not isomorphic as morphisms of topological groups) ✗.
+**Proof.**
+- **Preabelian**: Finite products and finite coproducts exist (a product is the product group with the product topology, and a coproduct is the direct sum with the coproduct topology), as do kernels and cokernels. The kernel is the usual kernel with the **subspace topology**. The cokernel is $N/\overline{f(M)}$ with the **quotient topology** ($f(M)$ need not be closed, so one must quotient by the **closure**. A quotient by a closed subgroup with the quotient topology is locally compact Hausdorff) ✓.
+- **Failure to be abelian**: Take $\mathrm{id} : \mathbb{R}^{\mathrm{disc}} \to \mathbb{R}$.
 
 > continued in nodes/prop.lc-ab-preabelian.en.6.md

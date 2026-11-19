@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.automorphism-group`](../nodes/def.automorphism-group.md) 自同构群 用
+- ⇒ [`prop.abelianization`](../nodes/prop.abelianization.md) 交换化
 - 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
 - 被 [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态 用
 - 被 [`def.dirichlet-character`](../nodes/def.dirichlet-character.md) 狄利克雷特征标 用

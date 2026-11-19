@@ -12,6 +12,8 @@ $$\check{C}^{n}(\mathfrak{X},M)=\prod_{i_{0}<\cdots<i_{n}}\Gamma\bigl(X_{i_{0}}\
 ## 它能推出什么 / 谁在用它
 - 被 [`def.cech-cohomology`](../nodes/def.cech-cohomology.md) Čech 上同调 用
 
+- …另有出边，续页见 [nodes/def.cech-complex.4.md](./def.cech-complex.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.cech-complex.3.md](./def.cech-complex.3.md)
 

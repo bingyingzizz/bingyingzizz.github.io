@@ -25,16 +25,16 @@
 
 - 分裂域 | 分解域 → def.splitting-field
 
+- 同构延拓 | 域同构延拓 | isomorphism extension → lem.isomorphism-extension
+
+- 分裂域存在 | 分裂域的存在性 | splitting field exists → thm.splitting-field-exists
+
+- 分裂域唯一 | 分裂域的唯一性 | splitting field unique → thm.splitting-field-unique
+
 - 正规扩张 | 正规扩域 → def.normal-extension
 
 - 可分扩张 | 不可分扩张 → def.separable-extension
 
 - 伽罗瓦群 | Galois 群 | F-自同构 → def.galois-group
-
-- 伽罗瓦扩张 | Galois 扩张 → def.galois-extension
-
-- 伽罗瓦基本定理 | 伽罗瓦对应 | 基本定理（Galois） → thm.galois-correspondence
-
-- 根式可解 | 根式解 | 可解性判据 → thm.radical-solvable
 
 > 续见 alias/aka/algebra.12.md

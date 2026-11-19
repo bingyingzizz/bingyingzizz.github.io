@@ -9,3 +9,4 @@
 - ⇒ [`thm.metric-compact-equiv`](../nodes/thm.metric-compact-equiv.md) 紧的三个等价刻画
 - 被 [`thm.arzela-ascoli-general`](../nodes/thm.arzela-ascoli-general.md) 广义 Arzelà–Ascoli 用
 - 被 [`thm.ck-complete`](../nodes/thm.ck-complete.md) C(K,E) 完备 用
+- ⇒ [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画

@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1725 节点 / 4029 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1728 节点 / 4073 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -11,8 +11,8 @@
 
 ## 一、提到了但没有节点（16 个）
 
-### 单位圆　出现 32 次
-`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `def.jordan-curve` · `def.trig-function` · `def.normal-curvature` 等 27 个节点
+### 单位圆　出现 31 次
+`thm.integral-trig` · `thm.euler-formula` · `thm.boundary-correspondence` · `def.jordan-curve` · `def.trig-function` · `def.normal-curvature` 等 26 个节点
 
 ### 角度　出现 12 次
 `thm.liouville-formula` · `prop.conformal-iff` · `def.trig-function` · `thm.euler-formula` · `def.isometry` · `def.intrinsic-quantity` 等 9 个节点

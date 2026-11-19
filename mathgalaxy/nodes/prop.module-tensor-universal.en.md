@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.module-tensor-universal)　·　[Chinese page (authoritative)](./prop.module-tensor-universal.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 17 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 names: `Tensor Universal Property` (short) · `Universal Property of the Tensor Product` (full)

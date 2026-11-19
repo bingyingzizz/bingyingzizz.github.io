@@ -11,6 +11,8 @@ $f$ 的根可以用**根式**（四则运算与开 $n$ 次方）从 $F$ 的元�
 - ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
 - ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
 
+- …另有出边，续页见 [nodes/thm.radical-solvable.5.md](./thm.radical-solvable.5.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.radical-solvable.2.md](./thm.radical-solvable.2.md)
 

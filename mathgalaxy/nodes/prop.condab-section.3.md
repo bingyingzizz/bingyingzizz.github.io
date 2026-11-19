@@ -1,5 +1,6 @@
 # 截面函子保极限余极限　`prop.condab-section`　·　续页（第 3 页）
 [在星图里打开](../#n=prop.condab-section)　·　第 1 页 [nodes/prop.condab-section.md](./prop.condab-section.md)　·　上一页 [nodes/prop.condab-section.2.md](./prop.condab-section.2.md)
 
-## 它能推出什么 / 谁在用它（续）
-- ⇒ [`thm.abelian-sheaf-equiv`](../nodes/thm.abelian-sheaf-equiv.md) 阿贝尔层即拓扑斯里的阿贝尔群
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间：用到了定义 自由紧 Hausdorff 空间　[proofs/def-dep.free-condab-section.md](../proofs/def-dep.free-condab-section.md)
+- [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.limit-condab-section.md](../proofs/def-dep.limit-condab-section.md)

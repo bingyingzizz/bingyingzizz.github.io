@@ -1,6 +1,14 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
+
+- 模范畴 | A-Mod → def.module-category
+
+- 自由群 | 自由群 F(S) → def.free-group
+
+- 自由群的泛性质 | 自由群泛性质 → def.free-group-universal
+
 - 二面体群 | 正多边形对称群 → def.dihedral-group
 
 - 平坦维数 → def.flat-dimension
@@ -20,11 +28,5 @@
 - 商表示 | quotient module → def.quotient-representation
 
 - 表示的直和 | 直和表示 | 分块对角表示 → def.direct-sum-representation
-
-- 张量积表示 | 张量表示 → def.tensor-representation
-
-- 对偶表示 | 反变对偶 | contragredient representation → def.dual-representation
-
-- 不可分解表示 | indecomposable module → def.indecomposable-representation
 
 > 续见 alias/aka/algebra.14.md

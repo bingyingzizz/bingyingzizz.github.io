@@ -2,12 +2,13 @@
 [在星图里打开](../#n=def.chaus)　·　第 1 页 [nodes/def.chaus.md](./def.chaus.md)　·　上一页 [nodes/def.chaus.4.md](./def.chaus.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.chaus-cech-eq-h`](../nodes/prop.chaus-cech-eq-h.md) 紧 Hausdorff 上 Čech 就是上同调 用
-- 被 [`thm.real-banach-chaus-acyclic`](../nodes/thm.real-banach-chaus-acyclic.md) 实 Banach 在紧 Hausdorff 上零调 用
-- 被 [`prop.rhom-chaus-banach-zero`](../nodes/prop.rhom-chaus-banach-zero.md) 紧 Haus 到实 Banach 全零 用
-- 被 [`ex.chaus-banach-rhom`](../nodes/ex.chaus-banach-rhom.md) 紧空间对实 Banach 空间的导出 Hom 用
-- 被 [`thm.lc-structure`](../nodes/thm.lc-structure.md) 局部紧阿贝尔群结构定理 用
-- 被 [`prop.pontryagin-discrete-compact-duality`](../nodes/prop.pontryagin-discrete-compact-duality.md) 离散 与 紧 Hausdorff 用
-- 被 [`prop.filtered-limit-cohomology`](../nodes/prop.filtered-limit-cohomology.md) 滤过极限的上同调 用
+- ⇒ [`thm.real-banach-chaus-acyclic`](../nodes/thm.real-banach-chaus-acyclic.md) 实 Banach 在紧 Hausdorff 上零调
+- ⇒ [`prop.rhom-chaus-banach-zero`](../nodes/prop.rhom-chaus-banach-zero.md) 紧 Haus 到实 Banach 全零
+- 被 [`prop.chaus-quotient-of-free`](../nodes/prop.chaus-quotient-of-free.md) 紧 Haus 是自由的商 用
+- 被 [`prop.component-clopen`](../nodes/prop.component-clopen.md) 连通分量是闭开邻域之交 用
+- 被 [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间 用
+- 被 [`def.free-presentation`](../nodes/def.free-presentation.md) 自由表示 用
+- 被 [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间 用
+- 被 [`def.chaus-pretopos`](../nodes/def.chaus-pretopos.md) 紧 Hausdorff 空间构成预拓扑斯 用
 
 > 续见 [nodes/def.chaus.6.md](./def.chaus.6.md)

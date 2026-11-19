@@ -3,5 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.continuous-arithmetic`](../nodes/prop.continuous-arithmetic.md) 连续函数的运算
+- ⇒ [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值）
+- ⇒ [`prop.discontinuity-types`](../nodes/prop.discontinuity-types.md) 间断点分类
 - 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
 - 被 [`lem.urysohn`](../nodes/lem.urysohn.md) Урысон 引理 用

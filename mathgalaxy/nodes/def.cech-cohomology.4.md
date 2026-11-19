@@ -7,7 +7,7 @@
 - ⇒ [`prop.cech-as-colim`](../nodes/prop.cech-as-colim.md) Čech 上同调是沿覆盖筛的余极限
 - ⇒ [`prop.cech-properties`](../nodes/prop.cech-properties.md) Čech 函子的性质
 - ⇒ [`prop.stone-acyclic`](../nodes/prop.stone-acyclic.md) Stone 空间上的上同调为零
-- 被 [`prop.cech-as-colim`](../nodes/prop.cech-as-colim.md) Čech 上同调是沿覆盖筛的余极限 用
-- 被 [`thm.cartan-leray`](../nodes/thm.cartan-leray.md) Cartan–Leray 谱序列 用
+- ⇒ [`lem.stone-constant-acyclic`](../nodes/lem.stone-constant-acyclic.md) Stone 上常系数零调
+- ⇒ [`thm.real-banach-chaus-acyclic`](../nodes/thm.real-banach-chaus-acyclic.md) 实 Banach 在紧 Hausdorff 上零调
 
 > 续见 [nodes/def.cech-cohomology.5.md](./def.cech-cohomology.5.md)

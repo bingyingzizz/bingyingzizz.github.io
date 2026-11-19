@@ -6,8 +6,7 @@ layer 22 · 定理 · 凝聚态阿贝尔群 · 凝聚态数学
 $\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\***。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：凝聚态阿贝尔群 $\leftrightarrow$ 阿贝尔范畴：都是「好到能算同调」的地方　[proofs/ana.condab-abeliancat.md](../proofs/ana.condab-abeliancat.md)
-- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/def-dep.condab-ab.md](../proofs/def-dep.condab-ab.md)
+- [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集 + [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 + [`def.grothendieck-topology`](../nodes/def.grothendieck-topology.md) Grothendieck 拓扑 + [`prop.condab-section`](../nodes/prop.condab-section.md) 截面函子保极限余极限：imp.condab-ab　[proofs/imp.condab-ab.md](../proofs/imp.condab-ab.md)
 
 - …另有入边，续页见 [nodes/thm.condab-ab.2.md](./thm.condab-ab.2.md)
 

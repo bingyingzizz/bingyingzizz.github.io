@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- p-群 | p 群 | p-group | p-subgroup | p-子群 → def.p-group
+
+- 换位子群 | 导群 | derived subgroup | commutator group → def.commutator-subgroup
+
+- 轨道 | group orbit | orbit of a group action → def.orbit
+
 - 稳定子 | 迷向子群 | isotropy subgroup | stabilizer subgroup → def.stabilizer
 
 - 中心化子 | centralizer subgroup | centralizer of a set → def.centralizer
@@ -18,11 +24,5 @@
 - 子模 | submodule of a module | A-submodule → def.submodule
 
 - 不动域 | fixed field of a group | invariant field → def.fixed-field
-
-- 幂零群 | 下中心列 | nilpotent → def.nilpotent-group
-
-- 自同构群 | Aut(G) | automorphism group of a group → def.automorphism-group
-
-- 内自同构 | 共轭自同构 | conjugation automorphism → def.inner-automorphism
 
 > 续见 alias/aka/algebra.18.md

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.cotangent-bundle`](../nodes/def.cotangent-bundle.md) 余切丛 用
 - 被 [`def.fiber-bundle`](../nodes/def.fiber-bundle.md) 纤维丛 用
+- ⇒ [`lem.free-proper-quotient-manifold`](../nodes/lem.free-proper-quotient-manifold.md) 自由真不连续作用的光滑商

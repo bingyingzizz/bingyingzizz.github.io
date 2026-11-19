@@ -5,5 +5,5 @@
 - algebra.linmap　线性映射与秩 / Linear Maps and Rank　中心天体 thm.rank-nullity　15 点
 - algebra.numeric　矩阵分解与最小二乘 / Matrix Factorizations and Least Squares　中心天体 thm.least-squares　5 点
 - algebra.representation　群与代数表示 / Group and Algebra Representations　中心天体 def.group-representation　48 点
-- algebra.galois　Galois 理论 / Galois Theory　中心天体 thm.galois-correspondence　15 点
+- algebra.galois　Galois 理论 / Galois Theory　中心天体 thm.galois-correspondence　18 点
 - algebra.rings　整环与分解 / Integral Domains and Factorisation　中心天体 def.ufd　9 点

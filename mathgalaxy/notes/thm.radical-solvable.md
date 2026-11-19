@@ -1,6 +1,6 @@
 # 根式可解 与 伽罗瓦群可解　`thm.radical-solvable`　·　说明
 根 `../`
 
-**证明**。先把「根式可解」说清楚：存在域塔 $F=F_{0}\subseteq F_{1}\subseteq\cdots\subseteq F_{m}$，$F_{i}=F_{i-1}(\alpha_{i})$、$\alpha_{i}^{n_{i}}\in F_{i-1}$（$1\le i\le m$），且 $K\subseteq F_{m}$。char 0 下 $K/F$ 是伽罗瓦扩张（分裂域 + 可分）。两个方向分别证。
+⭐ **为什么必须 char 0**：两个方向都用了「$x^{m}-1$ 无重根」（从而 $\sigma$ 可对角化）与可分性。char $p$ 时纯开方扩张要换成 Artin–Schreier 扩张 $x^{p}-x-a$，结论要改写。
 
-> 续见 notes/thm.radical-solvable.2.md
+📌 **这条定理是「五次方程」那条线的唯一入口**：它把「有没有根式公式」这个分析/代数混着的问题，换成一个纯群论问题（$S_{n}$ 可解 $\iff n\le4$，见「对称群的可解性」）。注意反过来用时要说清：$\operatorname{Gal}(f)$ 不可解 $\implies$ 无根式解；而不是「方程无解」。

@@ -11,3 +11,5 @@
 - ⇒ [`thm.polarization`](../nodes/thm.polarization.md) 极化恒等式
 - 被 [`def.hilbert-space`](../nodes/def.hilbert-space.md) Hilbert 空间 用
 - 被 [`def.ell2-space`](../nodes/def.ell2-space.md) ℓ²(I) 用
+
+> 续见 [nodes/def.inner-product.6.md](./def.inner-product.6.md)

@@ -7,9 +7,8 @@
 - ⇒ [`prop.category-into-complexes`](../nodes/prop.category-into-complexes.md) 范畴嵌入复形
 - ⇒ [`prop.complexes-abelian`](../nodes/prop.complexes-abelian.md) 复形范畴是阿贝尔范畴
 - ⇒ [`prop.simplicial-to-chain`](../nodes/prop.simplicial-to-chain.md) 单纯对象给出链复形
+- ⇒ [`prop.cohomology-exact-sequence`](../nodes/prop.cohomology-exact-sequence.md) 同调的短正合列
+- ⇒ [`prop.exact-to-triangle`](../nodes/prop.exact-to-triangle.md) 正合列给出导出三角
 - 被 [`prop.complex-additive`](../nodes/prop.complex-additive.md) 复形范畴是加法范畴 用
-- 被 [`def.homotopy`](../nodes/def.homotopy.md) 同伦 用
-- 被 [`def.mapping-cone`](../nodes/def.mapping-cone.md) 映射锥 用
-- 被 [`def.cohomology`](../nodes/def.cohomology.md) 同调 用
 
 > 续见 [nodes/def.cochain-complex.6.md](./def.cochain-complex.6.md)

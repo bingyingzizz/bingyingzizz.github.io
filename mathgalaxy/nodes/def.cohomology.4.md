@@ -9,6 +9,6 @@
 - 被 [`def.acyclic-complex`](../nodes/def.acyclic-complex.md) 零调复形 用
 - ⇒ [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理
 - ⇒ [`prop.cohomology-short-exact`](../nodes/prop.cohomology-short-exact.md) 同调的两条正合列
-- 被 [`thm.long-exact`](../nodes/thm.long-exact.md) 长正合列 用
+- ⇒ [`prop.cohomology-exact-sequence`](../nodes/prop.cohomology-exact-sequence.md) 同调的短正合列
 
 > 续见 [nodes/def.cohomology.5.md](./def.cohomology.5.md)

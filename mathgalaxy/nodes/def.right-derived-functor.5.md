@@ -6,8 +6,8 @@
 - 被 [`def.group-cohomology`](../nodes/def.group-cohomology.md) 群上同调 用
 - ⇒ [`prop.left-exact-iff-R0`](../nodes/prop.left-exact-iff-R0.md) 左正合性与 R⁰
 - ⇒ [`prop.leray-acyclicity`](../nodes/prop.leray-acyclicity.md) Leray 零调性
+- ⇒ [`prop.topos-morphism-derived`](../nodes/prop.topos-morphism-derived.md) 拓扑斯态射的导出函子
 - 被 [`thm.derived-long-exact`](../nodes/thm.derived-long-exact.md) 导出函子的长正合列 用
 - 被 [`def.f-acyclic`](../nodes/def.f-acyclic.md) F-零调对象 用
-- 被 [`prop.leray-acyclicity`](../nodes/prop.leray-acyclicity.md) Leray 零调性 用
 
 > 续见 [nodes/def.right-derived-functor.6.md](./def.right-derived-functor.6.md)

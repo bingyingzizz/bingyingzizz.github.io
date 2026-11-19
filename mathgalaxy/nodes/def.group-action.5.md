@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.class-function`](../nodes/def.class-function.md) 类函数 用
+- ⇒ [`lem.free-proper-quotient-manifold`](../nodes/lem.free-proper-quotient-manifold.md) 自由真不连续作用的光滑商

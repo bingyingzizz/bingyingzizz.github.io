@@ -5,13 +5,11 @@ layer 22 · 引理 · 凝聚态阿贝尔群 · 凝聚态数学
 
 设 $F$ 是**自由紧 Hausdorff 空间**（更一般地，**Stonean 空间**）。则自由凝聚态阿贝尔群 $\mathbb{Z}\cdot F$ 是**有限表现**的**投射**凝聚态阿贝尔群。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/dep.gap-stonean-projective-condensed-abelian-group.md](../proofs/dep.gap-stonean-projective-condensed-abelian-group.md)
-
-- …另有入边，续页见 [nodes/lem.stonean-projective.2.md](./lem.stonean-projective.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/lem.stonean-projective.3.md](./lem.stonean-projective.3.md)
+- ⇒ [`prop.condab-generated`](../nodes/prop.condab-generated.md) CondAb 由有限表现投射对象生成
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/lem.stonean-projective.2.md](./lem.stonean-projective.2.md)
 
 refs: Le Stum, Lemma 6.1.6
 

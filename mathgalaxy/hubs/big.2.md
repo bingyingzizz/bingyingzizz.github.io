@@ -2,15 +2,15 @@
 索引 `hubs.md`
 
 由最多前置一起推出（入边多）—— 学它之前得先懂一片，**不是**入门首选。
+- **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
+- **7 / 5** `thm.tietze-banach` Tietze 延拓（Banach 值） · layer 25 · 凝聚态导出函子
 - **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 30 · L^p 空间
 - **7 / 5** `thm.constant-gauss-curvature` 常 Gauss 曲率曲面 · layer 39 · 内蕴几何
+- **7 / 4** `prop.condab-section` 截面函子保极限余极限 · layer 21 · 凝聚态阿贝尔群
+- **7 / 4** `thm.condab-ab` 凝聚态阿贝尔群满足 AB6 与 AB4* · layer 22 · 凝聚态阿贝尔群
+- **7 / 4** `lem.stone-constant-acyclic` Stone 上常系数零调 · layer 22 · 导出 Hom 的具体计算
 - **7 / 4** `thm.solid-abelian` 固态群构成阿贝尔子范畴 · layer 24 · 固态阿贝尔群
-- **7 / 2** `thm.paracompact-cech-equals-sheaf` 仿紧空间上的 Čech 就是上同调 · layer 24 · 层上同调
-- **7 / 1** `thm.riemann-mapping` Riemann 映射定理 · layer 34 · 共形映射与正规族
-- **6 / 7** `thm.stokes` Stokes 定理 · layer 35 · 内蕴几何
-- **6 / 6** `thm.primitive-root-exists` 模素数有原根 · layer 13 · 二次剩余与原根
-- **6 / 6** `def.representable` 表示函子 · layer 14 · 预层与米田
 
-（共 1719 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1722 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

@@ -2,8 +2,6 @@
 [在星图里打开](../#n=thm.galois-correspondence)　·　第 1 页 [nodes/thm.galois-correspondence.md](./thm.galois-correspondence.md)　·　上一页 [nodes/thm.galois-correspondence.2.md](./thm.galois-correspondence.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.galois-extension`](../nodes/def.galois-extension.md) 伽罗瓦扩张：用到了定义 伽罗瓦扩张　[proofs/dep.galoisext-correspondence.md](../proofs/dep.galoisext-correspondence.md)
-- [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群：用到了定义 伽罗瓦群　[proofs/dep.galoisgroup-correspondence.md](../proofs/dep.galoisgroup-correspondence.md)
-- [`def.normal-subgroup`](../nodes/def.normal-subgroup.md) 正规子群：用到了定义 正规子群　[proofs/dep.normalsubgroup-correspondence.md](../proofs/dep.normalsubgroup-correspondence.md)
+- [`def.galois-extension`](../nodes/def.galois-extension.md) 伽罗瓦扩张 + [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群 + [`def.fixed-field`](../nodes/def.fixed-field.md) 不动域 + [`def.separable-extension`](../nodes/def.separable-extension.md) 可分扩张 + [`def.normal-subgroup`](../nodes/def.normal-subgroup.md) 正规子群 + [`thm.lagrange`](../nodes/thm.lagrange.md) Lagrange 定理：imp.galois-correspondence　[proofs/imp.galois-correspondence.md](../proofs/imp.galois-correspondence.md)
 
 > 续见 [nodes/thm.galois-correspondence.4.md](./thm.galois-correspondence.4.md)

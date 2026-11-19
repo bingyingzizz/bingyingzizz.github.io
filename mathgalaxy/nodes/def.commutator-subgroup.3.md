@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群 用
 - 被 [`def.nilpotent-group`](../nodes/def.nilpotent-group.md) 幂零群 用
+- ⇒ [`prop.abelianization`](../nodes/prop.abelianization.md) 交换化

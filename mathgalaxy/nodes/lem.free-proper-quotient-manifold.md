@@ -3,7 +3,7 @@
 layer 18 · 引理 · 基本群 · 拓扑学
 [在星图里打开](../#n=lem.free-proper-quotient-manifold)　·　[节点索引](../index.md)
 
-设 $M$ 是 $n$ 维光滑流形，有限群 $\Gamma$ 光滑地作用在 $M$ 上，且作用**自由**（$g\ne e$ 时 
+设 $M$ 是 $n$ 维光滑流形，有限群 $\Gamma$ 光滑地作用在 $M$ 上，且作用**自由**（$g\ne e$ 时 $gx\ne x$）、**真不连续**（每个 $x$ 有开邻域 $U$ 使 $gU\cap U=
 > 陈述续见 [nodes/lem.free-proper-quotient-manifold.2.md](./lem.free-proper-quotient-manifold.2.md)
 
 
@@ -14,7 +14,5 @@ layer 18 · 引理 · 基本群 · 拓扑学
 - …另有入边，续页见 [nodes/lem.free-proper-quotient-manifold.3.md](./lem.free-proper-quotient-manifold.3.md)
 
 refs: Lee, Introduction to Smooth Manifolds (2nd ed.), Ch. 21 · quotient manifolds；Hatcher, Algebraic Topology, Ch. 1 §1.3 · covering space actions
-
-> 说明见 `notes/lem.free-proper-quotient-manifold.md`
 
 引用：`lem.free-proper-quotient-manifold`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -10,6 +10,4 @@ layer 22 · 引理 · 凝聚态集 · 凝聚态数学
 
 refs: Le Stum, Lemma 4.2.11
 
-> 说明见 `notes/lem.qseparated-underlying-weak-hausdorff.md`
-
 引用：`lem.qseparated-underlying-weak-hausdorff`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

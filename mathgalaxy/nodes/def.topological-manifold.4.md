@@ -7,3 +7,4 @@
 - 被 [`def.topological-orientability`](../nodes/def.topological-orientability.md) 拓扑可定向性 用
 - 被 [`def.smooth-manifold`](../nodes/def.smooth-manifold.md) 光滑流形 用
 - ～弱边 [`def.regular-surface`](../nodes/def.regular-surface.md) 曲面与参数化
+- ⇒ [`lem.free-proper-quotient-manifold`](../nodes/lem.free-proper-quotient-manifold.md) 自由真不连续作用的光滑商

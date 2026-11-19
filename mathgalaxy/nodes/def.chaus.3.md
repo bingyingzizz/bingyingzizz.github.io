@@ -9,6 +9,6 @@
 - 被 [`prop.chaus-quotient-equiv`](../nodes/prop.chaus-quotient-equiv.md) 紧 Hausdorff 上商映射的四种说法 用
 - ⇒ [`prop.chaus-cech-eq-h`](../nodes/prop.chaus-cech-eq-h.md) 紧 Hausdorff 上 Čech 就是上同调
 - ⇒ [`prop.chaus-quotient-equiv`](../nodes/prop.chaus-quotient-equiv.md) 紧 Hausdorff 上商映射的四种说法
-- 被 [`prop.chaus-quotient-of-free`](../nodes/prop.chaus-quotient-of-free.md) 紧 Haus 是自由的商 用
+- ⇒ [`prop.fchaus-pretopology`](../nodes/prop.fchaus-pretopology.md) 有限紧 Hausdorff 空间上的预拓扑
 
 > 续见 [nodes/def.chaus.4.md](./def.chaus.4.md)

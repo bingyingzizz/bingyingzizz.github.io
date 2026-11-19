@@ -2,7 +2,7 @@
 [在星图里打开](../#n=prop.condab-section)　·　第 1 页 [nodes/prop.condab-section.md](./prop.condab-section.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间：用到了定义 自由紧 Hausdorff 空间　[proofs/def-dep.free-condab-section.md](../proofs/def-dep.free-condab-section.md)
-- [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.limit-condab-section.md](../proofs/def-dep.limit-condab-section.md)
+- [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集 + [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 + [`def.grothendieck-topology`](../nodes/def.grothendieck-topology.md) Grothendieck 拓扑 + [`def.sheaf`](../nodes/def.sheaf.md) 层：imp.condab-section　[proofs/imp.condab-section.md](../proofs/imp.condab-section.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-condab-section.md](../proofs/dep.cat-ab-prop-condab-section.md)
 
 > 续见 [nodes/prop.condab-section.3.md](./prop.condab-section.3.md)

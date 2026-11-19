@@ -9,4 +9,6 @@
 - 被 [`thm.bounded-extension`](../nodes/thm.bounded-extension.md) 有界算子的延拓 用
 - 被 [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值） 用
 - 被 [`prop.banach-as-condensed`](../nodes/prop.banach-as-condensed.md) Banach 空间都是凝聚态阿贝尔群 用
-- ～弱边 [`def.ell2-space`](../nodes/def.ell2-space.md) ℓ²(I)
+- ⇒ [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值）
+
+> 续见 [nodes/def.banach-space.7.md](./def.banach-space.7.md)

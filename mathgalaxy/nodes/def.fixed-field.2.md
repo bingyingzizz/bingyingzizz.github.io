@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群：用到了定义 伽罗瓦群　[proofs/dep.fixedfield-galois.md](../proofs/dep.fixedfield-galois.md)
 - [`def.field`](../nodes/def.field.md) 域：用到了定义 域　[proofs/dep.fixedfield-field.md](../proofs/dep.fixedfield-field.md)
+
+> 续见 [nodes/def.fixed-field.3.md](./def.fixed-field.3.md)

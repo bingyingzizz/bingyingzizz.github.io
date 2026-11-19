@@ -6,8 +6,7 @@ layer 19 · 命题 · 度量空间 · 拓扑学
 设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。若 $A$ **紧**，则 $A$ 是 $X$ 中的**闭集**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.compact`](../nodes/def.compact.md) 紧：用到了定义 紧　[proofs/def-link.compact-closed.md](../proofs/def-link.compact-closed.md)
-- [`def.closed-set`](../nodes/def.closed-set.md) 闭集与闭包：用到了定义 闭集与闭包　[proofs/dep.closed-set-compact-closed.md](../proofs/dep.closed-set-compact-closed.md)
+- …另有入边，续页见 [nodes/prop.compact-subset-closed.2.md](./prop.compact-subset-closed.2.md)
 
 refs: Munkres, Topology, §26
 

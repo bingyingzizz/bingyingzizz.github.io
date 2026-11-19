@@ -14,6 +14,8 @@ $$f = g\,h, \qquad \deg g \ge 1, \ \deg h \ge 1$$
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.poly-ufd`](../nodes/thm.poly-ufd.md) K[x] 是唯一分解整环 用
 
+- …另有出边，续页见 [nodes/def.irreducible-poly.3.md](./def.irreducible-poly.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.irreducible-poly.2.md](./def.irreducible-poly.2.md)
 

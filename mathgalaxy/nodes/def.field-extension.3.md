@@ -5,4 +5,7 @@
 - 被 [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式 用
 - 被 [`def.splitting-field`](../nodes/def.splitting-field.md) 分裂域 用
 - 被 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群 用
+- ⇒ [`lem.isomorphism-extension`](../nodes/lem.isomorphism-extension.md) 同构延拓
+- ⇒ [`thm.splitting-field-exists`](../nodes/thm.splitting-field-exists.md) 分裂域存在
+- ⇒ [`thm.splitting-field-unique`](../nodes/thm.splitting-field-unique.md) 分裂域唯一
 - 被 [`def.algebraically-closed`](../nodes/def.algebraically-closed.md) 代数闭域 用

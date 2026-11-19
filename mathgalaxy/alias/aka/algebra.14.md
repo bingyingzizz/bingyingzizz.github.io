@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 张量积表示 | 张量表示 → def.tensor-representation
+
+- 对偶表示 | 反变对偶 | contragredient representation → def.dual-representation
+
+- 不可分解表示 | indecomposable module → def.indecomposable-representation
+
 - 半单表示 | 完全可约表示 | completely reducible → def.semisimple-representation
 
 - 代数的特征标 | 表示的特征标 | 迹特征标 → def.character
@@ -20,9 +26,5 @@
 - 代数闭域上的 Schur 推论 | 纯量自同态 | endomorphisms are scalars → cor.schur-scalar
 
 - Schur 引理 | 舒尔引理 | Schur’s lemma → thm.schur-lemma
-
-- 自同态环是局部环 | 不可分解表示的自同态环 | local endomorphism ring → lem.endomorphism-local
-
-- 半单表示的等价刻画 | 半单判据 | 完全可约判据 → thm.semisimple-characterizations
 
 > 续见 alias/aka/algebra.15.md

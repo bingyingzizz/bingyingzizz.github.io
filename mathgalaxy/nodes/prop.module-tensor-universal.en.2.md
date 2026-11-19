@@ -6,7 +6,7 @@ $$\operatorname{Bil}_{\mathbb{Z}}(M \times N,\ P) \;\cong\; \operatorname{Hom}_{
 
 bilinear maps on the left correspond one-to-one to group homomorphisms on the right.
 
-## Notes · **draft**
+## Notes · **stale**
 **Proof.** First build the tensor product on free modules: take $\mathbb{Z}\cdot(M \times N)$ (the free abelian group) and quotient by the "bilinear relations"
 
 $$(m + m', n) \sim (m, n) + (m', n), \quad (m, n + n') \sim (m, n) + (m, n'), \quad (am, n) \sim a(m,n) \sim (m, an) ✓$$

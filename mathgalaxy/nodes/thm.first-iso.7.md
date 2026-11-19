@@ -3,4 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
+- ⇒ [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
 - ～弱边 [`thm.first-iso-vs`](../nodes/thm.first-iso-vs.md) 第一同构定理（向量空间版）

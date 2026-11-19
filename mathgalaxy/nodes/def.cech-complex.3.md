@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/dep.cechcomplex-cochain.md](../proofs/dep.cechcomplex-cochain.md)
+
+> 续见 [nodes/def.cech-complex.4.md](./def.cech-complex.4.md)

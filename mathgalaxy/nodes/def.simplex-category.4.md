@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.simplicial`](../nodes/def.simplicial.md) 单纯对象 用
 - ～弱边 [`def.standard-simplex`](../nodes/def.standard-simplex.md) 标准单纯形
+- ⇒ [`method.simplicial-cohomology`](../nodes/method.simplicial-cohomology.md) 单纯方法算层上同调

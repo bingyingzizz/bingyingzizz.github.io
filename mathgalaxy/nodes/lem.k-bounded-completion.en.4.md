@@ -2,16 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.k-bounded-completion)　·　[Chinese page (authoritative)](./lem.k-bounded-completion.md)
 
-Thus
-$$\|s - ds'\| \le \|s-t\| + K\|dt\| + \frac{\varepsilon}{2} = K\|ds\| + \Bigl(\|s-t\| + K\|ds - dt\| + \frac{\varepsilon}{2}\Bigr) \le K\|ds\| + \varepsilon .$$
-- **$\Longleftarrow$**: Given $s \in M^{n} \subseteq \widehat{M}^{n}$.
+**Proof (estimate $\varepsilon/2$ in each direction).** First quotient out $M_{0}$ ($K$-bounded exactness is invariant under quotienting by the elements of norm zero). We may therefore assume that $M^{\bullet} \subseteq \widehat{M}^{\bullet}$ is an isometric embedding with dense image.
+- **$\implies$**: Given $s \in \widehat{M}^{n}$ and $\varepsilon>0$.
 
-By the boundedness of $\widehat{M}^{\bullet}$ with bound $K$, choose $t' \in \widehat{M}^{n+1}$ such that $\|s - dt'\| \le K\|ds\| + \frac{\varepsilon}{2}$;
+By density, choose $t \in M^{n}$ such that $\|s - t\| \le \frac{\varepsilon}{2(1+K\|d^{n}\|)}$;
 
-then by density, choose $s' \in M^{n+1}$ such that $\|s' - t'\| \le \frac{\varepsilon}{2(1+\|d^{n+1}\|)}$.
-
-Thus $\|s - ds'\| \le K\|ds\| + \varepsilon$.
-
-∎
+by the boundedness of $M^{\bullet}$ with bound $K$, choose $s' \in M^{n+1}$ such that $\|t - ds'\| \le K\|dt\| + \frac{\varepsilon}{2}$.
 
 > continued in nodes/lem.k-bounded-completion.en.5.md

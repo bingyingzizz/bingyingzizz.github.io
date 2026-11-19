@@ -2,7 +2,7 @@
 [在星图里打开](../#n=lem.stonean-projective)　·　第 1 页 [nodes/lem.stonean-projective.md](./lem.stonean-projective.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间：用到了定义 全不连通与 Stone 空间　[proofs/def-dep.stonean-projective.md](../proofs/def-dep.stonean-projective.md)
-- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-dep.projective-stonean.md](../proofs/def-dep.projective-stonean.md)
+- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象 + [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集 + [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 + [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积（向量空间）：imp.stonean-projective　[proofs/imp.stonean-projective.md](../proofs/imp.stonean-projective.md)
+- [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群：用到了定义 凝聚态阿贝尔群　[proofs/dep.gap-stonean-projective-condensed-abelian-group.md](../proofs/dep.gap-stonean-projective-condensed-abelian-group.md)
 
 > 续见 [nodes/lem.stonean-projective.3.md](./lem.stonean-projective.3.md)

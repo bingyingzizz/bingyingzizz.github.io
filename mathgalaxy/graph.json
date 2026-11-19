@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-19T04:35:57.126Z",
+  "generated": "2026-11-19T05:21:57.346Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
-   "nodes": 1725,
-   "edges": 4029,
-   "strong": 3937,
+   "nodes": 1728,
+   "edges": 4073,
+   "strong": 3981,
    "weak": 92,
    "derived": 100,
-   "en_pages": 1725
+   "en_pages": 1728
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 302
+   "nodeCount": 305
   },
   {
    "id": "analysis",
@@ -2831,12 +2831,15 @@
    "en": "Galois Theory",
    "parent": "algebra",
    "desc": "从「域扩张」到「五次方程没有根式解」的一条链：域扩张与次数 → 代数元与极小多项式 → 分裂域 → 正规 / 可分 → 伽罗瓦群 → 伽罗瓦扩张 → 伽罗瓦对应（基本定理）→ 根式可解 ⟺ 群可解 → 五次方程。核心是「域与群是同一张格子的两面」。",
-   "nodeCount": 15,
+   "nodeCount": 18,
    "nodes": [
     "def.field-extension",
     "def.algebraic-element",
     "def.algebraic-extension",
     "def.splitting-field",
+    "lem.isomorphism-extension",
+    "thm.splitting-field-exists",
+    "thm.splitting-field-unique",
     "def.normal-extension",
     "def.separable-extension",
     "def.galois-group",
@@ -4954,7 +4957,7 @@
    "notes_en": "In fact it suffices that $X$ be Hausdorff: compact subsets are then closed, and metric spaces are Hausdorff.\n\nPutting this together with “$X$ is complete” prepares the **subset** characterisation of compactness below: that result uses “$A$ compact $\\implies A$ closed” and “$A$ closed $X$ complete $\\implies A$ complete”.\n\n**Proof.** Let $A$ be compact and take $x \\in X\\setminus A$; we must show it is an interior point.\n- For each $a \\in A$, by Hausdorffness take an open neighbourhood $U_{a}$ of $a$ and an open neighbourhood $V_{a}$ of $x$ with $U_{a}\\cap V_{a} = \\emptyset$ (in a metric space take $U_{a} = B(a, r/2)$ and $V_{a} = B(x, r/2)$, where $r = d(a,x)$);\n- $\\{U_{a}\\}_{a\\in A}$ is an open cover of $A$; by **compactness** take a finite subcover $U_{a_{1}}, \\ldots, U_{a_{n}}$;\n- $V := \\bigcap_{i=1}^{n} V_{a_{i}}$ is an open neighbourhood of $x$, and $V\\cap U_{a_{i}} = \\emptyset$ holds for every $i$, hence $V \\cap A = \\emptyset$, i.e. $V \\subseteq X\\setminus A$ ✓.\nThus $X\\setminus A$ is open and $A$ is closed. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -4967,10 +4970,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#f78af910",
       "notes": "v0.9.3#1bc20fbc"
@@ -4991,7 +4996,7 @@
     "闭集"
    ],
    "statement": "设 $A$ 是距离空间 $X$ 的子集（按子空间度量）。若 $A$ **紧**，则 $A$ 是 $X$ 中的**闭集**。",
-   "notes": "其实只要 $X$ 是 Hausdorff 空间，紧子集就是闭的；距离空间自然 Hausdorff。\n\n把它和「$X$ 完备」放在一起，正是为了下面那条**子集**的紧性刻画做准备：那条要用「$A$ 紧 $\\implies A$ 闭」和「$A$ 闭 $X$ 完备 $\\implies A$ 完备」。\n\n**证明。** 设 $A$ 紧，取 $x \\in X\\setminus A$ 要证它是内点。\n- 对每个 $a \\in A$，由 Hausdorff 性取 $a$ 的开邻域 $U_{a}$ 与 $x$ 的开邻域 $V_{a}$ 使 $U_{a}\\cap V_{a} = \\emptyset$（距离空间里取 $U_{a} = B(a, r/2)$、$V_{a} = B(x, r/2)$，$r = d(a,x)$）；\n- $\\{U_{a}\\}_{a\\in A}$ 是 $A$ 的开覆盖，由**紧性**取有限子覆盖 $U_{a_{1}}, \\ldots, U_{a_{n}}$；\n- $V := \\bigcap_{i=1}^{n} V_{a_{i}}$ 是 $x$ 的开邻域，且 $V\\cap U_{a_{i}} = \\emptyset$ 对每个 $i$ 成立，故 $V \\cap A = \\emptyset$，即 $V \\subseteq X\\setminus A$ ✓。\n于是 $X\\setminus A$ 开，$A$ 闭。∎",
+   "notes": "其实只要 $X$ 是 Hausdorff 空间，紧子集就是闭的；距离空间自然 Hausdorff。\n\n把它和「$X$ 完备」放在一起，正是为了下面那条**子集**的紧性刻画做准备：那条要用「$A$ 紧 $\\implies A$ 闭」和「$A$ 闭 $X$ 完备 $\\implies A$ 完备」。",
    "refs": [
     "Munkres, Topology, §26"
    ]
@@ -5006,7 +5011,7 @@
    "notes_en": "⚠ **The hypothesis that $X$ is complete cannot be dropped.** The reason is the middle step: $A$ is complete as a subspace $\\iff A$ closed in $X$ — this step uses completeness of $X$. Without it, $A$ closed and $A$ totally bounded does not imply $A$ compact.\n\nThis is also a generalization of **Heine–Borel**: $\\mathbb{R}^{n}$ is complete, and in $\\mathbb{R}^{n}$, $A$ bounded $\\iff A$ totally bounded, so \"bounded closed sets are compact\" is exactly the special case.\n\n**Proof.**\n- **$\\implies$**: $A$ compact $\\implies$ $A$ closed in $X$ (the previous item).\n\nTotal boundedness: given $\\varepsilon > 0$, the family $\\{B(a,\\varepsilon)\\cap A\\}_{a\\in A}$ is an open cover of $A$ (with the subspace metric); compactness gives a finite subcover, and those finitely many centers form an $\\varepsilon$-net ✓.\n- **$\\Longleftarrow$**: suppose $A$ is closed and totally bounded.\n\nFirst **completeness**: $X$ is complete and $A$ is closed, so a Cauchy sequence in $A$ converges in $X$ to some point, and the limit lies in the closed set $A$; hence $A$ is complete as a subspace ✓.\n\nNow **compactness**: total boundedness gives a countable dense subset, so any sequence in $A$ has a Cauchy subsequence, obtained layer by layer from $2^{-n}$-nets and the pigeonhole principle;\n\ncompleteness makes that subsequence converge ✓.\n\nHence $A$ is **sequentially compact**;\n\nand in a **metric space** sequential compactness $\\iff$ compactness ✓.\n\n∎\n\n⚠️ The step \"$X$ complete $\\implies$ $A$ complete\" is exactly where the hypothesis in the title is used (see the previous remark).",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -5019,10 +5024,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#3ad6d8e2",
       "notes": "v0.9.3#a5b00a3e"
@@ -5044,7 +5051,7 @@
     "全有界"
    ],
    "statement": "设 $(X, d)$ 是**完备**的距离空间，$A \\subseteq X$。则\n\n$A$ **紧** $\\iff$ $A$ 闭**且** $A$ **全有界**。\n\n（「$A$ 全有界」按子空间度量 $d|_A$ 理解。）",
-   "notes": "⚠ **「$X$ 完备」这个前提不能省。** 理由是中间那一步：$A$ 作为子空间完备 $\\iff A$ 在 $X$ 中闭 —— 这一步要用 $X$ 完备。少了它，$A$ 闭 $A$ 全有界推不出 $A$ 紧。\n\n这也是 **Heine–Borel** 的推广：$\\mathbb{R}^{n}$ 完备，而在 $\\mathbb{R}^{n}$ 中 $A$ 有界 $\\iff A$ 全有界，于是「有界闭集紧」正是它的特例。\n\n**证明。**\n- **$\\implies$**：$A$ 紧 $\\implies$ $A$ 在 $X$ 中闭（上一条）。\n\n全有界：任给 $\\varepsilon > 0$，$\\{B(a,\\varepsilon)\\cap A\\}_{a\\in A}$ 是 $A$（带子空间度量）的开覆盖，紧性给有限子覆盖，那有限个中心就是 $\\varepsilon$-网 ✓。\n- **$\\Longleftarrow$**：设 $A$ 闭、全有界。\n\n先看**完备性**：$X$ 完备、$A$ 闭，则 $A$ 里的 Cauchy 列在 $X$ 里收敛到某点，极限落在闭的 $A$ 里，故 $A$ 作为子空间完备 ✓。\n\n再证**紧**：全有界给可数稠密子集，于是 $A$ 里的任意序列可以用「逐层取 $2^{-n}$-网 + 抽屉原理」抽出 Cauchy 子列；\n\n完备性让这个子列收敛 ✓。\n\n所以 $A$ **列紧**；\n\n而在**度量空间**里列紧 $\\iff$ 紧 ✓。\n\n∎\n⚠️ 「$X$ 完备 $\\implies$ $A$ 完备」那一步正是标题里那个前提的用处（见上一条说明）。",
+   "notes": "⚠ **「$X$ 完备」这个前提不能省。** 理由是中间那一步：$A$ 作为子空间完备 $\\iff A$ 在 $X$ 中闭 —— 这一步要用 $X$ 完备。少了它，$A$ 闭 $A$ 全有界推不出 $A$ 紧。\n\n这也是 **Heine–Borel** 的推广：$\\mathbb{R}^{n}$ 完备，而在 $\\mathbb{R}^{n}$ 中 $A$ 有界 $\\iff A$ 全有界，于是「有界闭集紧」正是它的特例。\n\n⚠️ 「$X$ 完备 $\\implies$ $A$ 完备」那一步正是标题里那个前提的用处（见上一条说明）。",
    "refs": [
     "Munkres, Topology, §28",
     "Rudin, Principles of Mathematical Analysis, Ch. 2"
@@ -21031,7 +21038,7 @@
     "预拓扑"
    ],
    "statement": "记 $\\mathbf{FCHaus}$ 为**自由紧 Hausdorff 空间**（即 $\\beta I$）构成的满子范畴。\n\n$\\mathbf{FCHaus}$ 中的对象都是 $\\mathrm{Cond}$ 的**投射对象**，满射 $S \\to S'$ 总有截面 —— 于是**有限不交并给出 $\\mathbf{FCHaus}$ 上的一个预拓扑**。",
-   "notes": "为什么层条件「自动成立」：在自由紧 Hausdorff 空间上，满射有截面，所以「局部有原像」总能在整体上补出来（分离性由截面的存在直接给出）。**能取截面**是这里最省事的一点。\n\n**证明（验证预拓扑的三条公理）。** 覆盖约定为：$(F_{i} \\to F)_{i \\in I}$，$I$ 有限且 $\\coprod_{i} F_{i} \\to F$ 双射。\n- **恒等**：$\\{\\mathrm{id}_{F}\\}$ 是覆盖；\n- **拉回稳定**：给覆盖与任意 $F' \\to F$，拉回族 $(F_{i} \\times_{F} F' \\to F')_{i}$ 仍然有限，且由「不交并沿任意映射拉回仍是不交并」得 $\\coprod_{i}(F_{i} \\times_{F} F') \\cong F'$；\n\n$\\mathbf{FCHaus}$ 对有限不交并与纤维积封闭（自由对象的有限不交并还是自由的：$\\beta I \\coprod \\beta J = \\beta(I \\coprod J)$）；\n\n\n- **复合**：覆盖的覆盖拼起来还是覆盖。\n另外，$\\mathbf{FCHaus}$ 里的覆盖 $\\coprod_{i} F_{i} \\to F$ 是**双射**，于是每个 $F_{i} \\to F$ 都是含入，而「$F \\to F_{i}$ 的截面」由 $F_{i}$ 的闭性 + 完全性给出 —— 这就是为什么这里的层条件好验。∎",
+   "notes": "为什么层条件「自动成立」：在自由紧 Hausdorff 空间上，满射有截面，所以「局部有原像」总能在整体上补出来（分离性由截面的存在直接给出）。**能取截面**是这里最省事的一点。",
    "refs": [
     "Le Stum, Exercise 4.1"
    ]
@@ -21342,7 +21349,7 @@
    "notes_en": "The reason is that sections of a sheaf at $F$ are computed pointwise, and in $\\mathbf{Ab}$ finite products agree with finite coproducts and filtered colimits are exact.\n\nThis is **how properties of $\\mathrm{CondAb}$ are reduced pointwise to properties of $\\mathbf{Ab}$**. The result on the AB axioms below uses this reduction.\n\n**Proof.** Identify $\\mathrm{CondAb}$ with the category of abelian sheaves on $\\mathbf{FCHaus}$ (the additive version of $\\mathrm{Cond} \\simeq \\widehat{\\mathbf{FCHaus}}$).\n- **Preservation of colimits**: It suffices to show that a presheaf colimit is **already a sheaf**. When $F$ is free, covers on $\\mathbf{FCHaus}$ are finite disjoint unions, so for $\\coprod_{j=1}^{r} F_{j}$:\n$$\\Bigl(\\varinjlim_{i} M_{i}\\Bigr)\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} M_{i}\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} \\bigoplus_{j} M_{i}(F_{j}) = \\bigoplus_{j} \\varinjlim_{i} M_{i}(F_{j}),$$\nThe middle step uses the fact that sheaves on $\\mathbf{FCHaus}$ preserve finite products (that is, $M(\\coprod F_{j}) = \\bigoplus M(F_{j})$). The last step uses the fact that in $\\mathbf{Ab}$ finite products agree with finite coproducts and filtered colimits are exact. Since the colimit still satisfies the sheaf condition, it is the colimit in sheaves, and $\\Gamma(F, -)$ commutes with it ✓.\n- **Preservation of limits**: Limits in sheaves are computed **objectwise** (a presheaf limit of sheaves is already a sheaf), so $\\Gamma(F, \\varprojlim M_{i}) = \\varprojlim \\Gamma(F, M_{i})$ ✓. ∎\n⭐ As a corollary, $\\Gamma(F,-)$ is also **exact** (it preserves both kernels and cokernels). This is why free compact Hausdorff spaces give projective objects.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -21355,10 +21362,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#17d3648e",
       "notes": "v0.9.3#acb390ed"
@@ -21379,7 +21388,7 @@
     "正合"
    ],
    "statement": "设 $F \\in \\mathbf{FCHaus}$。则**截面函子**\n\n$$\\Gamma(F, -) : \\mathrm{CondAb} \\longrightarrow \\mathbf{Ab}, \\qquad M \\mapsto \\Gamma(F, M) := M(F)$$\n\n保**所有极限与所有余极限**。",
-   "notes": "理由：层在 $F$ 处的截面是「逐点」算出来的，而 $\\mathbf{Ab}$ 里有限积与有限余积一致、滤过余极限正合。\n\n这条是**把 $\\mathrm{CondAb}$ 的性质逐点归到 $\\mathbf{Ab}$** 的通道 —— 下面的 AB 公理那一条就是靠它推出来的。\n\n**证明。** 把 $\\mathrm{CondAb}$ 等同于 $\\mathbf{FCHaus}$ 上的阿贝尔层范畴（这是「$\\mathrm{Cond} \\simeq \\widehat{\\mathbf{FCHaus}}$」的加法版本）。\n- **保余极限**：只需证预层意义的余极限**自动是层**。$F$ 自由时，$\\mathbf{FCHaus}$ 上的覆盖就是有限不交并，于是对 $\\coprod_{j=1}^{r} F_{j}$：\n$$\\Bigl(\\varinjlim_{i} M_{i}\\Bigr)\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} M_{i}\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} \\bigoplus_{j} M_{i}(F_{j}) = \\bigoplus_{j} \\varinjlim_{i} M_{i}(F_{j}),$$\n中间一步用「$\\mathbf{FCHaus}$ 上的层保有限积」（即 $M(\\coprod F_{j}) = \\bigoplus M(F_{j})$），最后一步用 $\\mathbf{Ab}$ 里有限积与有限余积一致、且滤过余极限正合。既然余极限仍满足层条件，它就是层内的余极限，且 $\\Gamma(F, -)$ 与它交换 ✓。\n- **保极限**：层范畴里的极限**逐项**计算（预层极限自动是层），故 $\\Gamma(F, \\varprojlim M_{i}) = \\varprojlim \\Gamma(F, M_{i})$ ✓。∎\n⭐ 推论：$\\Gamma(F,-)$ 还是**正合**的（既保核又保余核）—— 这正是「自由紧 Hausdorff 空间给投射对象」的根源。",
+   "notes": "理由：层在 $F$ 处的截面是「逐点」算出来的，而 $\\mathbf{Ab}$ 里有限积与有限余积一致、滤过余极限正合。\n\n这条是**把 $\\mathrm{CondAb}$ 的性质逐点归到 $\\mathbf{Ab}$** 的通道 —— 下面的 AB 公理那一条就是靠它推出来的。\n\n⭐ 推论：$\\Gamma(F,-)$ 还是**正合**的（既保核又保余核）—— 这正是「自由紧 Hausdorff 空间给投射对象」的根源。",
    "refs": [
     "Le Stum, Lemma 6.1.3"
    ]
@@ -21476,7 +21485,7 @@
    "notes_en": "Consequently, $\\mathrm{CondAb}$ is an **abelian category** and (1) has a generator, (2) has all limits and colimits, (3) has **exact** products and coproducts, and (4) has **exact filtered colimits that commute with products**.\n\nThe Grothendieck category assertion holds for **every** topos (see “abelian groups in a topos form a Grothendieck category”). The additional properties here are **AB6 and AB4\\***, which need not both hold for abelian groups in a general topos.\n\nAs a result, the homological algebra of $\\mathrm{CondAb}$ works as it does in $\\mathbf{Ab}$, including derived functors, long exact sequences, and derived categories.\n\n**Proof (reduce each assertion to $\\mathbf{Ab}$).** The key tool is the preceding result: **each $\\Gamma(F,-)$ (with $F$ free) preserves all limits and colimits**. Thus any property expressed using finite limits and colimits can be checked objectwise, where it reduces to a familiar fact in $\\mathbf{Ab}$.\n- **Existence of colimits and limits**: The presheaf obtained by taking colimits objectwise is still a sheaf (by the preceding result) $\\implies$ exist ✓;\n- **Exactness of filtered colimits (AB5)**: Compute objectwise and use exactness of filtered colimits in $\\mathbf{Ab}$ ✓;\n- **Existence of a generator**: $\\mathrm{Cond}$ is generated by $\\{h_{F}\\}$ (with $F$ free compact Hausdorff) $\\implies$ $\\mathrm{CondAb}$ is generated by $\\{\\mathbb{Z}\\cdot F\\}$ ✓;\n- **AB4\\* (exactness of products)**: Products are computed objectwise, and products are exact in $\\mathbf{Ab}$ ✓;\n- **AB6 (filtered colimits commute with products)**: Objectwise computation reduces this to AB6 in $\\mathbf{Ab}$ ✓;\n- **Abelian**: Kernels and cokernels are computed objectwise as kernels and cokernels in $\\mathbf{Ab}$. The epi-mono factorization and $\\operatorname{im}\\cong\\operatorname{coim}$ both hold objectwise ✓. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -21489,10 +21498,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#ff77b844",
       "notes": "v0.9.3#bcdddcc8"
@@ -21513,7 +21524,7 @@
     "正合"
    ],
    "statement": "$\\mathrm{CondAb}$ 是**Grothendieck 范畴**，并且满足 **AB6** 与 **AB4\\***。",
-   "notes": "推论：$\\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。\n\n「是 Grothendieck 范畴」那一半其实对**任意**拓扑斯都成立（见「拓扑斯上的阿贝尔群是 Grothendieck 范畴」）；这里真正多出来的是 **AB6 与 AB4\\*** —— 一般拓扑斯上的阿贝尔群并不同时具备这两条。\n\n这一整段的好处是：$\\mathrm{CondAb}$ 上能照搬 $\\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。\n\n**证明（逐条归约到 $\\mathbf{Ab}$）。** 关键工具就是上一条：**每个 $\\Gamma(F,-)$（$F$ 自由）都保所有极限与余极限**，所以任何「用有限极限 + 余极限写出来的性质」都可以逐项检验，而逐项之后就是 $\\mathbf{Ab}$ 里的熟事实。\n- **有余极限 / 有极限**：逐项取余极限得到的预层仍是层（上一条）$\\implies$ 存在 ✓；\n- **滤过余极限正合（AB5）**：逐项算，$\\mathbf{Ab}$ 里滤过余极限正合 ✓；\n- **有生成元**：$\\mathrm{Cond}$ 由 $\\{h_{F}\\}$（$F$ 自由紧 Hausdorff）生成 $\\implies$ $\\mathrm{CondAb}$ 由 $\\{\\mathbb{Z}\\cdot F\\}$ 生成 ✓；\n- **AB4\\*（积正合）**：积逐项算，$\\mathbf{Ab}$ 里积正合 ✓；\n- **AB6（滤过余极限与积交换）**：逐项化归到 $\\mathbf{Ab}$ 的 AB6 ✓；\n- **阿贝尔**：核、余核逐项算都是 $\\mathbf{Ab}$ 里的核余核，单满分解、$\\operatorname{im}\\cong\\operatorname{coim}$ 都逐项成立 ✓。∎",
+   "notes": "推论：$\\mathrm{CondAb}$ 是**阿贝尔范畴**，并且（1）有生成元；（2）所有极限与余极限存在；（3）所有积与余积都**正合**；（4）**滤过余极限正合，且与积交换**。\n\n「是 Grothendieck 范畴」那一半其实对**任意**拓扑斯都成立（见「拓扑斯上的阿贝尔群是 Grothendieck 范畴」）；这里真正多出来的是 **AB6 与 AB4\\*** —— 一般拓扑斯上的阿贝尔群并不同时具备这两条。\n\n这一整段的好处是：$\\mathrm{CondAb}$ 上能照搬 $\\mathbf{Ab}$ 上那一套同调代数 —— 求导函子、长正合列、导出范畴，一样都不缺。",
    "refs": [
     "Le Stum, Theorem 6.1.4",
     "Le Stum, Corollary 6.1.5"
@@ -21529,7 +21540,7 @@
    "notes_en": "Equivalently, we must show that the functor $M \\mapsto \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong \\Gamma(F, M)$ preserves epimorphisms and filtered colimits.\n\nThe first assertion follows from the projectivity of free compact Hausdorff spaces in $\\mathrm{Cond}$. The second follows from the construction of the section functor, which in fact **preserves all colimits**.\n\n**Proof.** By the tensor–Hom adjunction, $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong M(F) = \\Gamma(F, M)$ ✓, so it suffices to consider $\\Gamma(F,-)$.\n- **Preservation of epimorphisms**: The preceding result says that $\\Gamma(F,-)$ preserves **all** colimits, in particular cokernels. $v$ is an epimorphism $\\iff$ $\\operatorname{coker} v = 0$ $\\implies$ $\\operatorname{coker}\\Gamma(v) = 0$ $\\implies$ $\\Gamma(v)$ is an epimorphism ✓;\n\n\n- **Preservation of filtered colimits**: This also follows from preservation of all colimits ✓.\nThe standard criteria are: $P$ is **projective** $\\iff$ $\\operatorname{Hom}(P,-)$ preserves epimorphisms, and $P$ is **finitely presented** $\\iff$ $\\operatorname{Hom}(P,-)$ preserves filtered colimits. Together, these give that $\\mathbb{Z}\\cdot F$ is finitely presented and projective. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -21542,10 +21553,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#4adc22c6",
       "notes": "v0.9.3#7f43dd7d"
@@ -21566,7 +21579,7 @@
     "投射"
    ],
    "statement": "设 $F$ 是**自由紧 Hausdorff 空间**（更一般地，**Stonean 空间**）。则自由凝聚态阿贝尔群 $\\mathbb{Z}\\cdot F$ 是**有限表现**的**投射**凝聚态阿贝尔群。",
-   "notes": "要证的等价形式是：函子 $M \\mapsto \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong \\Gamma(F, M)$ 保满态射与滤过余极限。\n\n前半由「自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里投射」给出，后半由截面函子的构造给出 —— 而截面函子实际上**保所有余极限**。\n\n**证明。** 由张量—Hom 伴随，$\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong M(F) = \\Gamma(F, M)$ ✓，所以只需看 $\\Gamma(F,-)$。\n- **保满态射**：上一条说 $\\Gamma(F,-)$ 保**所有**余极限，特别地保余核；$v$ 满 $\\iff$ $\\operatorname{coker} v = 0$ $\\implies$ $\\operatorname{coker}\\Gamma(v) = 0$ $\\implies$ $\\Gamma(v)$ 满 ✓；\n\n\n- **保滤过余极限**：同样由「保所有余极限」✓。\n而标准判据是：$P$ **投射** $\\iff$ $\\operatorname{Hom}(P,-)$ 保满态射；$P$ **有限表现** $\\iff$ $\\operatorname{Hom}(P,-)$ 保滤过余极限。两条合起来，$\\mathbb{Z}\\cdot F$ 就是有限表现的投射对象。∎",
+   "notes": "要证的等价形式是：函子 $M \\mapsto \\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong \\Gamma(F, M)$ 保满态射与滤过余极限。\n\n前半由「自由紧 Hausdorff 空间在 $\\mathrm{Cond}$ 里投射」给出，后半由截面函子的构造给出 —— 而截面函子实际上**保所有余极限**。",
    "refs": [
     "Le Stum, Lemma 6.1.6"
    ]
@@ -22341,14 +22354,14 @@
     "homology"
    ],
    "cluster": "hom.cohomology",
-   "layer": 15,
+   "layer": 21,
    "tags": [
     "同调代数",
     "同调",
     "正合列"
    ],
    "statement": "设 $K$ 是复形。则对每个 $k$ 有正合列\n\n$$0 \\longrightarrow H^{k}(K) \\longrightarrow \\operatorname{coker} d^{k-1} \\longrightarrow \\ker d^{k+1} \\longrightarrow H^{k+1}(K) \\longrightarrow 0$$",
-   "notes": "也就是 $0 \\to Z^{k}/B^{k} \\to K^{k}/B^{k} \\to Z^{k+1} \\to Z^{k+1}/B^{k+1} \\to 0$。这条把「同调」拆成两段：**先取余核去掉上一步的像，再取核挑出闭链，最后取商** —— 于是复形里的信息被一层层剥出来。\n\n**证明。** 记 $Z^{k} := \\ker d^{k}$、$B^{k} := \\operatorname{im} d^{k-1}$，于是 $H^{k} = Z^{k}/B^{k}$、$\\operatorname{coker} d^{k-1} = K^{k}/B^{k}$。要证的四个箭头依次是：\n- $Z^{k}/B^{k} \\to K^{k}/B^{k}$：由含入 $Z^{k} \\hookrightarrow K^{k}$ 诱导，单射（$Z^{k}$ 在 $K^{k}$ 里，商掉同一个 $B^{k}$）；\n- $K^{k}/B^{k} \\to Z^{k+1}$：由 $d^{k}$ 诱导（它把 $B^{k} = \\operatorname{im} d^{k-1}$ 送到 $d^{k}d^{k-1} = 0$，故下降得良定义）。核正是「$d^{k}x = 0$ 的那些 $x + B^{k}$」＝ $Z^{k}/B^{k}$；\n- $Z^{k+1} \\to Z^{k+1}/B^{k+1} = H^{k+1}$：取商映射，满，核是 $B^{k+1} = \\operatorname{im} d^{k}$ —— 正好是上一个箭头的像。∎\n三段正合各只用到「$d^{2} = 0$」和核/余核的泛性质。",
+   "notes": "也就是 $0 \\to Z^{k}/B^{k} \\to K^{k}/B^{k} \\to Z^{k+1} \\to Z^{k+1}/B^{k+1} \\to 0$。这条把「同调」拆成两段：**先取余核去掉上一步的像，再取核挑出闭链，最后取商** —— 于是复形里的信息被一层层剥出来。\n\n三段正合各只用到「$d^{2} = 0$」和核/余核的泛性质。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §7.1–7.3"
    ]
@@ -23305,7 +23318,7 @@
     "k-化"
    ],
    "statement": "对任何 $X, Y \\in \\mathbf{Top}$，\n\n$$k(kX \\times Y) \\;=\\; k(X \\times Y).$$\n\n若 $Y$ 还**局部紧 Hausdorff**，则更强：\n\n$$kX \\times Y \\;=\\; k(X \\times Y).$$",
-   "notes": "两式的差别正好是余反射子范畴的两个层次：一般情形下 $k$ 不是「积封闭」的，得对积再取一次 $k$；$Y$ 局部紧 Hausdorff 时（由商映射与积那条定理）$k$ 与「乘 $Y$」可交换。**这就是为什么 $k\\mathbf{Top}$ 里的乘积得取 $k(X \\times Y)$ 而不是 $X \\times Y$。**\n\n**证明（第一式）。** $k$-拓扑由「哪些紧 Hausdorff 块映射连续」决定，而关键是一条逐点事实：\n- **对 $T$ 紧 Hausdorff，$g : T \\to X$ 连续 $\\iff$ $g : T \\to kX$ 连续。** 反正向显然（$kX$ 拓扑更细）；正向因为 $kX$ 的开集就是这么定义的：$U \\subseteq kX$ 开 $\\iff$ 沿每个紧 Hausdorff 映射的拉回开，取 $g$ 即得 $g^{-1}(U)$ 开。\n- 于是对 $T$ 紧 Hausdorff：$(g_{1}, g_{2}) : T \\to X \\times Y$ 连续 $\\iff$ $g_{1} : T\\to X$ 与 $g_{2} : T \\to Y$ 都连续 $\\iff$ $g_{1} : T \\to kX$ 与 $g_{2}$ 都连续 $\\iff$ $T \\to kX\\times Y$ 连续。\n- 两张 $k$-拓扑 $k(X\\times Y)$ 与 $k(kX\\times Y)$ 由**同一族**测试映射（全体 $T \\to$ 该底集合，$T$ 紧 Hausdorff）的连续性刻画，故它们的开集族相同，即 $k(kX\\times Y) = k(X\\times Y)$。\n**第二式**：由上一条「$X$ 紧生成、$Y$ 局部紧 Hausdorff $\\implies$ $kX \\times Y$ 紧生成」得 $kX\\times Y$ 已经是紧生成的，对它取 $k$ 不再改变：$k(kX\\times Y) = kX\\times Y$；\n\n代入第一式即得 $kX\\times Y = k(X\\times Y)$。\n\n∎",
+   "notes": "两式的差别正好是余反射子范畴的两个层次：一般情形下 $k$ 不是「积封闭」的，得对积再取一次 $k$；$Y$ 局部紧 Hausdorff 时（由商映射与积那条定理）$k$ 与「乘 $Y$」可交换。**这就是为什么 $k\\mathbf{Top}$ 里的乘积得取 $k(X \\times Y)$ 而不是 $X \\times Y$。**",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.3"
    ]
@@ -23469,7 +23482,7 @@
     "对角"
    ],
    "statement": "设 $X$ 弱 Hausdorff。则\n\n- $X$ 的每个紧 Hausdorff 子空间都闭；\n- $X$ 是 $T_{1}$ 的（单点是紧 Hausdorff 子空间）；\n- 对每个连续 $f : S \\to X$（$S$ 紧 Hausdorff），$f(S)$ 是**紧 Hausdorff** 的；\n- **对角** $\\Delta_{X} \\subseteq X \\times X$ 是 $k$-闭的；反过来，若 $X$ 紧生成，则对角 $k$-闭 $\\implies$ $X$ 弱 Hausdorff；\n- 若还有 $Y$ 弱 Hausdorff、$f, g : X \\rightrightarrows Y$ 连续，则 $\\ker(f, g) = \\{\\, x : f(x) = g(x) \\,\\} \\subseteq X$ 是 $k$-闭的。",
-   "notes": "**为什么叫「弱」Hausdorff。** Hausdorff 要求任意两点的开邻域能分开；弱 Hausdorff 只要求「紧块的像是闭的」—— 条件弱得多，却正好够用：出现在 $\\mathrm{CGWH}$ 里的那些构造（商、函数空间、纤维积）都不需要全 Hausdorff。\n\n⚠️ 弱 Hausdorff **不蕴含** Hausdorff（存在紧生成的弱 Hausdorff 而非 Hausdorff 的空间）；但它蕴含 $T_{1}$，上面第二条就是。\n\n**对角那条的作用**：$\\Delta_{X}$ $k$-闭 $\\iff$ 「两个映射相等的点集」是 $k$-闭的 —— 这与 $T_{1}$、$T_{2}$ 在一般拓扑里的刻画（对角闭）平行，只是这里闭的判据换成了 $k$-闭。紧生成是让这个等价反过来的补充条件。\n\n**证明。** 五条都只用定义。\n- **紧 Hausdorff 子空间闭**：$K \\subseteq X$ 紧 Hausdorff，含入 $K \\hookrightarrow X$ 就是定义里的那个 $f$，故 $K = f(K)$ 闭。\n- **$T_{1}$**：单点 $\\{x\\}$ 是紧 Hausdorff 空间（它自己的）的像，故闭 —— 单点闭就是 $T_{1}$。\n- **$f(S)$ 紧 Hausdorff**：$f(S)$ 紧（连续像），且由定义它在 $X$ 中闭；闭子空间的子空间拓扑是 Hausdorff 的，故 $f(S)$ 紧 Hausdorff。\n- **$\\Delta_{X}$ 是 $k$-闭的**：取紧 Hausdorff 的 $g = (g_{1}, g_{2}) : T \\to X\\times X$。\n\n$g_{1}(T)$、$g_{2}(T)$ 由上一款是紧 Hausdorff，故 $g_{1}(T)\\times g_{2}(T)$ 紧 Hausdorff，于是 $\\Delta_{X} \\cap \\bigl(g_{1}(T)\\times g_{2}(T)\\bigr) = \\Delta_{g_{1}(T)}$（两个紧 Hausdorff 集的「相等点」）在其中**闭**；\n\n而 $g^{-1}(\\Delta_{X}) = g^{-1}\\bigl(\\Delta_{X}\\cap(g_{1}(T)\\times g_{2}(T))\\bigr)$ 是闭集的逆像，闭 ✓。\n- **反过来（$X$ 紧生成 + $\\Delta$ $k$-闭 $\\implies$ 弱 Hausdorff）**：取 $f : S\\to X$（$S$ 紧 Hausdorff），要证 $f(S)$ 闭。\n\n$X$ 紧生成，故只需证对每个紧 Hausdorff 的 $h : T \\to X$，$h^{-1}\\bigl(f(S)\\bigr)$ 在 $T$ 中闭。\n\n而\n$$h^{-1}\\bigl(f(S)\\bigr) = \\operatorname{pr}_{T}\\Bigl(\\{(s, t) : f(s) = h(t)\\}\\Bigr) = \\operatorname{pr}_{T}\\Bigl((f,h)^{-1}(\\Delta_{X})\\Bigr),$$\n其中 $(f,h)^{-1}(\\Delta_{X})$ 在 $S\\times T$ 中闭（$S\\times T$ 紧 Hausdorff，$\\Delta$ $k$-闭）；而 $\\operatorname{pr}_{T} : S\\times T\\to T$ 是**闭映射**（$S$ 紧），故 $h^{-1}(f(S))$ 闭 ✓。\n- **$\\ker(f,g)$ 是 $k$-闭的**：$\\ker(f,g) = (f,g)^{-1}(\\Delta_{Y})$，而 $k$-闭集沿连续映射的拉回仍 $k$-闭（用紧 Hausdorff 测试：$(f,g)\\circ h$ 连续，$h^{-1}(\\ker) = ((f,g)\\circ h)^{-1}(\\Delta_{Y})$ 闭）。\n\n∎",
+   "notes": "**为什么叫「弱」Hausdorff。** Hausdorff 要求任意两点的开邻域能分开；弱 Hausdorff 只要求「紧块的像是闭的」—— 条件弱得多，却正好够用：出现在 $\\mathrm{CGWH}$ 里的那些构造（商、函数空间、纤维积）都不需要全 Hausdorff。\n\n⚠️ 弱 Hausdorff **不蕴含** Hausdorff（存在紧生成的弱 Hausdorff 而非 Hausdorff 的空间）；但它蕴含 $T_{1}$，上面第二条就是。\n\n**对角那条的作用**：$\\Delta_{X}$ $k$-闭 $\\iff$ 「两个映射相等的点集」是 $k$-闭的 —— 这与 $T_{1}$、$T_{2}$ 在一般拓扑里的刻画（对角闭）平行，只是这里闭的判据换成了 $k$-闭。紧生成是让这个等价反过来的补充条件。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, §2.3"
    ]
@@ -25016,7 +25029,7 @@
    "notes_en": "⭐ This shows that the category of topological abelian groups **lacks the structure needed** for homological algebra. This motivates passing to condensed abelian groups, which form a Grothendieck category with the requisite structure.\n\n**Why having kernels and cokernels is insufficient.** In an abelian category, every monomorphism is the kernel of some morphism. Equivalently, it is isomorphic to the kernel of its cokernel, or **strict**.\n\n$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ is a monomorphism (it is isomorphic to its image), but its cokernel is $0$. The entire image is quotiented out in the cokernel.\n\nThe kernel of the cokernel is therefore different from the original object, so strictness fails.\n\n**Proof.**\n- **Preabelian**: Finite products and finite coproducts exist (a product is the product group with the product topology, and a coproduct is the direct sum with the coproduct topology), as do kernels and cokernels. The kernel is the usual kernel with the **subspace topology**. The cokernel is $N/\\overline{f(M)}$ with the **quotient topology** ($f(M)$ need not be closed, so one must quotient by the **closure**. A quotient by a closed subgroup with the quotient topology is locally compact Hausdorff) ✓.\n- **Failure to be abelian**: Take $\\mathrm{id} : \\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$.\n\nIt is continuous because the discrete topology is finer than the Euclidean topology, and it is injective, hence a monomorphism.\n\nIts **cokernel** is $\\mathbb{R}/\\mathbb{R} = 0$.\n\nIn an abelian category every monomorphism is **strict**, meaning $f = \\ker(\\operatorname{coker} f)$. Here $\\ker(0) = \\mathbb{R}$, but $\\ker(0)$ carries the Euclidean topology and $\\mathbb{R}^{\\mathrm{disc}}$ does not. The two are **isomorphic but unequal** (they are not isomorphic as morphisms of topological groups) ✗.\n\n∎\n(Equivalently, $\\mathrm{id}$ is isomorphic to its image but is not the kernel of its cokernel, so the mono-epi factorization is not strict.)",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -25029,10 +25042,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#28251225",
       "notes": "v0.9.3#cbc0a55e"
@@ -25055,7 +25070,7 @@
     "严格态射"
    ],
    "statement": "局部紧 Hausdorff 阿贝尔群构成的范畴是**预阿贝尔**的，但**不是阿贝尔**范畴。\n\n具体地：核 = 通常的核带子空间拓扑；余核 = 商群 $N/\\overline{f(M)}$ 带商拓扑（须商掉**闭包**，否则商拓扑不是 Hausdorff）；但态射**不必是严格的** ——\n\n$$\\mathrm{id} : \\mathbb{R}^{\\mathrm{disc}} \\longrightarrow \\mathbb{R}$$\n\n（同一个群，一个取离散拓扑、一个取通常拓扑）就不是严格的。",
-   "notes": "⭐ 这条说明「拓扑阿贝尔群」这个范畴**不够好**：没法在里面做同调代数。这正是要把它搬进凝聚态那侧的理由 —— 那边是 Grothendieck 范畴，要什么有什么。\n\n**为什么核余核都造得出还是不行。** 阿贝尔范畴要求「每个单态射都是某个态射的核」（等价地：单态射与其余核的核同构，即**严格**）。\n\n$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ 是单态射（它同构于自己的像），但它的余核是 $0$ —— 像在余核里被整个商掉了。\n\n于是「余核的核」不是原来的对象，严格性破掉。\n\n**证明。**\n- **预阿贝尔**：有有限积与有限余积（积 = 积群配积拓扑；余积 = 直和配「余积拓扑」）、核与余核都存在 —— 核是通常的核配**子空间拓扑**；余核是 $N/\\overline{f(M)}$ 配**商拓扑**（$f(M)$ 未必闭，必须商掉**闭包**：对闭子群商群配商拓扑才是局部紧 Hausdorff）✓。\n- **不是阿贝尔**：取 $\\mathrm{id} : \\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$。\n\n它连续（离散拓扑比欧氏拓扑细）且是单射，故是单态射；\n\n它的**余核** $\\mathbb{R}/\\mathbb{R} = 0$。\n\n而阿贝尔范畴要求单态射是**严格的**，即 $f = \\ker(\\operatorname{coker} f)$ —— 这里 $\\ker(0) = \\mathbb{R}$，但 $\\ker(0)$ 要带的拓扑是欧氏拓扑，而 $\\mathbb{R}^{\\mathrm{disc}}$ 不是它，二者**同构但不相等**（作为拓扑群的态射不同构）✗。\n\n∎\n（等价的说法：$\\mathrm{id}$ 同构于它的像，但不是「余核的核」，于是单满分解不是严格的。）",
+   "notes": "⭐ 这条说明「拓扑阿贝尔群」这个范畴**不够好**：没法在里面做同调代数。这正是要把它搬进凝聚态那侧的理由 —— 那边是 Grothendieck 范畴，要什么有什么。\n\n**为什么核余核都造得出还是不行。** 阿贝尔范畴要求「每个单态射都是某个态射的核」（等价地：单态射与其余核的核同构，即**严格**）。\n\n$\\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$ 是单态射（它同构于自己的像），但它的余核是 $0$ —— 像在余核里被整个商掉了。\n\n于是「余核的核」不是原来的对象，严格性破掉。\n\n（等价的说法：$\\mathrm{id}$ 同构于它的像，但不是「余核的核」，于是单满分解不是严格的。）",
    "refs": [
     "Le Stum, Exercise 6.4"
    ]
@@ -27691,7 +27706,7 @@
     "伴随"
    ],
    "statement": "**交换化**函子\n\n$$(-)^{\\mathrm{ab}} : \\mathbf{Grp} \\longrightarrow \\mathbf{Ab}, \\qquad G \\longmapsto G^{\\mathrm{ab}} := G / [G, G]$$\n\n是含入函子 $\\mathbf{Ab} \\hookrightarrow \\mathbf{Grp}$ 的**左伴随**。",
-   "notes": "记号 $[G, G]$ 是**换位子子群**（由所有 $g h g^{-1} h^{-1}$ 生成）—— 它是正规子群，商掉它正好把「非交换性」清零。\n\n⭐ **伴随的读法**：任何群同态 $G \\to A$（$A$ 阿贝尔）都唯一地穿过 $G \\to G^{\\mathrm{ab}}$。也就是说**「从 $G$ 到阿贝尔群」的映射全都只看 $G^{\\mathrm{ab}}$** —— 这就是「交换化是最经济的把群变阿贝尔的办法」。\n\n**例子**：自由群 $F(S)^{\\mathrm{ab}} \\cong \\mathbb{Z}^{\\oplus S}$（自由阿贝尔群）。所以「自由阿贝尔群函子」= 「自由群函子」再交换化。\n\n**证明。** 要造自然双射\n$$\\operatorname{Hom}_{\\mathbf{Grp}}(G,\\ A) \\;\\cong\\; \\operatorname{Hom}_{\\mathbf{Ab}}\\bigl(G^{\\mathrm{ab}},\\ A\\bigr),\\qquad A\\ \\text{阿贝尔}.$$\n- **良定义**：任给群同态 $\\varphi : G\\to A$（$A$ 阿贝尔）。\n\n换位子 $ghg^{-1}h^{-1}$ 被送到 $\\varphi(g)\\varphi(h)\\varphi(g)^{-1}\\varphi(h)^{-1} = e$（交换性！），故 $[G,G] \\subseteq \\ker\\varphi$，于是 $\\varphi$ 唯一地穿过商 $G\\twoheadrightarrow G^{\\mathrm{ab}}$ ✓。\n- **反向**是 $G\\to G^{\\mathrm{ab}}$ 与函数的复合 ✓，且两个方向互逆（在 $G^{\\mathrm{ab}}$ 上验一次、在 $\\operatorname{Hom}(G,A)$ 上验一次）✓。\n- **自然性**对 $G$ 与 $A$ 都逐项验证（$G\\to G'$ 的像把 $[G,G]$ 送进 $[G',G']$，故诱导 $G^{\\mathrm{ab}}\\to G'^{\\mathrm{ab}}$）✓。∎\n⭐ 这正是「交换化是左伴随」的含义：它是「把非交换性清零」的**最经济**的函子 —— 任何到阿贝尔群的映射都只能看到 $G^{\\mathrm{ab}}$。",
+   "notes": "⭐ 这正是「交换化是左伴随」的含义：它是「把非交换性清零」的**最经济**的函子 —— 任何到阿贝尔群的映射都只能看到 $G^{\\mathrm{ab}}$。",
    "refs": [
     "Le Stum, Exercise 1.9"
    ]
@@ -27946,7 +27961,7 @@
     "遗忘函子"
    ],
    "statement": "若 $\\mathcal{C}$ 有所有极限，则 $\\mathrm{Ab}(\\mathcal{C})$ 也有所有极限，并且**遗忘函子** $\\mathrm{Ab}(\\mathcal{C}) \\to \\mathcal{C}$ 保它们。",
-   "notes": "⭐ **实用价值**：这条让「在 $\\mathcal{C}$ 里算极限」与「在 $\\mathrm{Ab}(\\mathcal{C})$ 里算极限」完全一致 —— 凝聚态那一侧 $\\mathrm{Ab}(\\mathrm{Cond}) = \\mathrm{CondAb}$ 有所有极限，就是这条在 $\\mathcal{C} = \\mathrm{Cond}$ 上的一次应用。\n\n**证明（极限在遗忘函子下逐项算）。** 阿贝尔群对象的定义是一组态射与**交换图**：\n$$m : X \\times X \\to X, \\qquad e : 1 \\to X, \\qquad i : X \\to X$$\n配上一串等式（结合、单位、逆、交换性）—— 全是「两个复合相等」形式的图。\n- 设 $D : I \\to \\mathrm{Ab}(\\mathcal{C})$ 是可图表，记 $UX$ 为 $X$ 的底对象。\n\n因为极限保持极限（特别地保持有限积与终对象），把上述各图和等式逐项送进 $\\mathcal{C}$ 后仍然成立；\n\n于是底对象上的 $\\lim UD$ **自动**带上阿贝尔群对象的结构，$m$ 取 $\\lim (Um \\circ \\text{交换}) $、$e$ 取 $\\lim Ue$。\n- 于是 $\\mathrm{Ab}(\\mathcal{C})$ 有 $I$-极限，而遗忘函子把它送到 $\\mathcal{C}$ 里的 $\\lim UD$ —— 即**保极限**。\n- 细节只在一处：$\\lim$ 与有限积的交换（$U \\lim = \\lim U$ 与 $\\lim(X_{i}\\times Y_{i}) = \\lim X_{i}\\times \\lim Y_{i}$），那是极限的一般性质。∎",
+   "notes": "⭐ **实用价值**：这条让「在 $\\mathcal{C}$ 里算极限」与「在 $\\mathrm{Ab}(\\mathcal{C})$ 里算极限」完全一致 —— 凝聚态那一侧 $\\mathrm{Ab}(\\mathrm{Cond}) = \\mathrm{CondAb}$ 有所有极限，就是这条在 $\\mathcal{C} = \\mathrm{Cond}$ 上的一次应用。",
    "refs": [
     "Le Stum, Exercise 1.52"
    ]
@@ -28322,7 +28337,7 @@
     "映射锥"
    ],
    "statement": "若 $0 \\to K^{\\bullet} \\xrightarrow{\\;f\\;} L^{\\bullet} \\xrightarrow{\\;g\\;} M^{\\bullet} \\to 0$ 是复形的**短正合列**，则在 $D(\\mathcal{A})$ 里存在**导出三角**\n\n$$K^{\\bullet} \\xrightarrow{\\;f\\;} L^{\\bullet} \\xrightarrow{\\;g\\;} M^{\\bullet} \\longrightarrow K^{\\bullet}[1].$$",
-   "notes": "本质上是说：这个短正合列「就是」某个映射锥三角（在 $D(\\mathcal{A})$ 里同构于 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f) \\to K^{\\bullet}[1]$）。\n\n**证明。** 由映射锥的显式写法（$M(f)^{n} = L^{n}\\oplus K^{n+1}$），复合\n$$M(f)^{n} \\longrightarrow L^{n} \\xrightarrow{\\;g\\;} M^{n}$$\n是复形态射（把 $L^{n}$ 那一块投过去），记作 $\\varphi : M(f)^{\\bullet} \\to M^{\\bullet}$。于是有复形的短正合列\n$$0 \\to M(\\mathrm{id}_{K^{\\bullet}})^{\\bullet} \\longrightarrow M(f)^{\\bullet} \\xrightarrow{\\;\\varphi\\;} M^{\\bullet} \\to 0 .$$\n而 $M(\\mathrm{id}_{K^{\\bullet}})$ 是**零调**的（$\\mathrm{id}_{K}$ 是拟同构；显式看就是可缩复形）。\n\n取长正合列，两头零调把首尾杀掉，读出 $\\varphi$ 是**拟同构** —— 于是它在 $D(\\mathcal{A})$ 里是同构，三角 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f)^{\\bullet} \\to K^{\\bullet}[1]$ 与要的那条同构。\n\n∎\n\n⭐ **这就是长正合列的来源**：有了三角，取同调函子（三角 $\\implies$ 同调长正合列）就直接得到长正合列 —— 见「导出函子的长正合列」。",
+   "notes": "本质上是说：这个短正合列「就是」某个映射锥三角（在 $D(\\mathcal{A})$ 里同构于 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f) \\to K^{\\bullet}[1]$）。\n\n⭐ **这就是长正合列的来源**：有了三角，取同调函子（三角 $\\implies$ 同调长正合列）就直接得到长正合列 —— 见「导出函子的长正合列」。",
    "refs": [
     "Le Stum, Proposition 7.2.4"
    ]
@@ -29297,7 +29312,7 @@
     "导出函子"
    ],
    "statement": "若 $f : \\mathcal{T} \\to \\mathcal{T}'$ 是**拓扑斯的态射**，则 $R^{n}f_{*}M$ 是预层 $X' \\mapsto H^{n}\\bigl(f^{-1}(X'),\\ M\\bigr)$ 所**层化**得到的层。",
-   "notes": "⭐ **读法**：想算拓扑斯态射的导出函子，先逐点算「另一边像处的上同调」，再把结果层化回去。这与层上同调的定义（截面函子的右导出函子）是同一回事，只是把「一个点的截面」换成了「拓扑斯态射的拉回」。\n\n**证明。** 记 $f = (f^{-1} \\dashv f_{*})$，并把 $f^{-1}$、$f_{*}$ 在**预层**上的版本记作 $\\hat{f}^{-1}$、$\\hat{f}_{*}$。两个关键事实：\n- $f^{-1}$ 与**层化**都是正合的（拓扑斯态射的定义要求 $f^{-1}$ 正合；层化左正合且右正合，因为它是伴随）。\n- $f_{*} = \\sharp \\circ \\hat{f}_{*}$（先按预层推，再层化）。\n于是 $R f_{*} = \\sharp \\circ \\hat{f}_{*} \\circ R H$（记 $H$ 为「把层看成预层」，它是左正合且正合的嵌入）。取第 $n$ 阶：**$R^{n}f_{*}M$ 就是预层 $\\hat{f}_{*}H^{n}(M)$ 的层化**。\n最后认这个预层：由伴随 $f^{-1} \\dashv \\hat{f}_{*}$，对每个 $X' \\in \\mathcal{T}'$\n$$\\bigl(\\hat{f}_{*}H^{n}(M)\\bigr)(X') = H^{n}(M)\\bigl(f^{-1}(X')\\bigr) = H^{n}\\bigl(f^{-1}(X'),\\ M\\bigr).$$\n两边一合就是要证的。∎",
+   "notes": "⭐ **读法**：想算拓扑斯态射的导出函子，先逐点算「另一边像处的上同调」，再把结果层化回去。这与层上同调的定义（截面函子的右导出函子）是同一回事，只是把「一个点的截面」换成了「拓扑斯态射的拉回」。",
    "refs": [
     "Le Stum, Proposition 7.4.1"
    ]
@@ -29382,7 +29397,7 @@
     "笛卡尔闭"
    ],
    "statement": "设 $X$ 是凝聚态集、$Y$ 是紧生成空间（视为凝聚态集 $\\underline{Y}$）。则凝聚态集之间有自然同构\n\n$$C\\bigl(X(\\bullet),\\ Y\\bigr) \\cong \\operatorname{Hom}(X,\\ \\underline{Y}),$$\n\n其中左边是「测试对象 $S \\mapsto C\\bigl(X(S), Y\\bigr)$」（连续映射空间配紧开拓扑）所定的凝聚态集，右边是 $\\mathrm{Cond}$ 的**内部 Hom**。\n\n特别地，若 $X$ 与 $Y$ **都紧生成**，则 $kC(X, Y) \\cong \\operatorname{Hom}(X, Y)$。",
-   "notes": "**为什么需要它。** $\\mathrm{Cond}$ 是拓扑斯，内部 Hom 由拓扑斯结构**自动**给出 —— 但那是抽象的。这一条给出它的**具体实现**：「内部 Hom 就是连续函数空间」。有了它，内部 Hom 才是一个可以算、可以往 $\\mathbf{Top}$ 里搬的东西。\n\n**两边分别在说什么。** $X(\\bullet)$ 是 $X$ 的**底空间**（把 $X$ 喂给紧 Hausdorff 测试对象 $S$ 得到的集合，再装上由测试映射定出的拓扑）；$\\operatorname{Hom}(X, \\underline{Y})$ 是「从 $X$ 到 $Y$ 的映射」这个**对象**。\n\n等号说：先取底空间再取函数空间，和先取内部 Hom 再取底空间，是一回事。\n\n⭐ 与「$\\mathrm{Cond}$ 是笛卡尔闭」连起来看：笛卡尔闭给的是**存在性**，这一条给的是**具体形状**。$Y$ 紧生成这个假设不能去掉 —— 紧生成正是让「紧开拓扑」够用的那个条件。\n\n**证明。** 先设 $X = S$ 是紧 Hausdorff 空间（此时 $X(\\bullet) = S$）。对任意紧 Hausdorff 的 $T$，两边在 $T$ 上取值并逐步用「内部 Hom 的伴随」与「紧生成空间上的指数律」：\n$$\\underline{\\operatorname{Hom}}(S, \\underline{Y})(T) = \\operatorname{Hom}\\bigl(T,\\ \\underline{\\operatorname{Hom}}(S,\\underline{Y})\\bigr) \\cong \\operatorname{Hom}(T \\times S,\\ \\underline{Y}) \\cong C(T\\times S,\\ Y) \\cong C\\bigl(T,\\ C(S, Y)\\bigr) = \\underline{C(X(\\bullet), Y)}(T).$$\n其中第四步是紧生成空间（$T \\times S$ 与 $Y$）上的**指数律**。取 $T = \\bullet$ 得自然变换；一般 $X$ 再用 Yoneda：对紧 Hausdorff 的 $S$，\n$$\\operatorname{Hom}(X, \\underline{Y})(S) \\cong \\operatorname{Hom}(S, \\operatorname{Hom}(X, \\underline{Y})) \\cong \\operatorname{Hom}(X, \\operatorname{Hom}(S, \\underline{Y})) \\cong \\operatorname{Hom}\\bigl(X, C(S, Y)\\bigr) \\cong C\\bigl(X(\\bullet), C(S, Y)\\bigr) \\cong C\\bigl(S, C(X(\\bullet), Y)\\bigr),$$\n最后一步又是指数律。于是两边作为 $\\mathbf{CHaus}$ 上的层逐点同构，即自然同构。\n**紧生成的情形**：$X$ 也紧生成时，$X(\\bullet) = X$（底空间就是它自己），且两侧都落在 $\\mathrm{CGWH}$ 里，取 $k$-化即得 $kC(X, Y) \\cong \\operatorname{Hom}(X, \\underline{Y})$。∎",
+   "notes": "**为什么需要它。** $\\mathrm{Cond}$ 是拓扑斯，内部 Hom 由拓扑斯结构**自动**给出 —— 但那是抽象的。这一条给出它的**具体实现**：「内部 Hom 就是连续函数空间」。有了它，内部 Hom 才是一个可以算、可以往 $\\mathbf{Top}$ 里搬的东西。\n\n**两边分别在说什么。** $X(\\bullet)$ 是 $X$ 的**底空间**（把 $X$ 喂给紧 Hausdorff 测试对象 $S$ 得到的集合，再装上由测试映射定出的拓扑）；$\\operatorname{Hom}(X, \\underline{Y})$ 是「从 $X$ 到 $Y$ 的映射」这个**对象**。\n\n等号说：先取底空间再取函数空间，和先取内部 Hom 再取底空间，是一回事。\n\n⭐ 与「$\\mathrm{Cond}$ 是笛卡尔闭」连起来看：笛卡尔闭给的是",
    "refs": [
     "Le Stum, Proposition 4.2.6"
    ]
@@ -29466,7 +29481,7 @@
     "纤维积"
    ],
    "statement": "设 $X$ 是弱 Hausdorff 空间（且 $X$ 紧生成），$X_{1}, X_{2} \\hookrightarrow X$ 是**拟紧**子空间。则纤维积\n\n$$X_{1} \\times_{X} X_{2}$$\n\n紧 Hausdorff。特别地，任意两个拟紧开子空间的交是拟紧的，即 $X$ 是**拟分离**的。",
-   "notes": "**直觉**：拟分离要的是「两个紧块的交还是紧块」。弱 Hausdorff 正好保证了这件事 —— 它说紧块的像都是闭的，于是两个紧块沿 $X$ 的拉回落在紧块里。\n\n⚠️ 这里 $X_{1} \\times_{X} X_{2}$ 的紧性是 $\\mathrm{CGWH}$ 系里那条「紧 Hausdorff 沿弱 Hausdorff 的纤维积」的直接应用。\n\n**证明。** 不妨设 $X$ 紧生成（弱 Hausdorff 的 $k$-化不改变结论）。对 $i = 1, 2$，由拟紧性取紧 Hausdorff 空间 $S_{i}$ 与满态射 $S_{i} \\twoheadrightarrow X_{i}$（「拟紧 $\\iff$ 有从自由紧 Hausdorff 的满射」）。于是有满态射\n$$S_{1} \\times_{X} S_{2} \\twoheadrightarrow X_{1} \\times_{X} X_{2},$$\n（纤维积保满射）。\n\n而 $X$ 弱 Hausdorff、$S_{1}, S_{2}$ 紧 Hausdorff，于是 $S_{1} \\times_{X} S_{2}$ 是 $S_{1} \\times S_{2}$ 里的**闭**子集（弱 Hausdorff 的定义：紧 Hausdorff 子空间沿连续映射的纤维积仍紧 Hausdorff），故紧 Hausdorff。\n紧 Hausdorff 空间的商还是紧 Hausdorff（连续满像是紧的，Hausdorff 商还是 Hausdorff），故 $X_{1} \\times_{X} X_{2}$ 紧 Hausdorff。∎",
+   "notes": "**直觉**：拟分离要的是「两个紧块的交还是紧块」。弱 Hausdorff 正好保证了这件事 —— 它说紧块的像都是闭的，于是两个紧块沿 $X$ 的拉回落在紧块里。\n\n⚠️ 这里 $X_{1} \\times_{X} X_{2}$ 的紧性是 $\\mathrm{CGWH}$ 系里那条「紧 Hausdorff 沿弱 Hausdorff 的纤维积」的直接应用。",
    "refs": [
     "Le Stum, Lemma 4.2.9"
    ]
@@ -29508,7 +29523,7 @@
     "滤过余极限"
    ],
    "statement": "凝聚态集 $X$ 是**拟分离**的 $\\iff$ 它可以写成\n\n$$X \\cong \\varinjlim_{i \\in I}\\ S_{i},$$\n\n其中每个 $S_{i}$ 是紧 Hausdorff 空间、每个过渡映射 $S_{i} \\hookrightarrow S_{j}$ 都是**含入**。\n\n**推论**：$\\operatorname{Ind}(\\mathbf{CHaus})$ 中那些「过渡映射为单射」的对象，恰好就是 拟紧拟分离 的凝聚态集。",
-   "notes": "⚠️ **不要读成 $\\operatorname{Ind}(\\mathbf{CHaus}) \\cong \\mathrm{Cond}$。** 整块 $\\operatorname{Ind}(\\mathbf{CHaus})$ 比凝聚态集**大**：一般凝聚态集的紧块过渡映射只是映射、不是含入，所以只有「含入过渡」那一部分才对得上 拟紧拟分离 的对象。\n\n**为什么这条重要。** 它把「拟分离」这个抽象的有限性条件换成了一个**可操作**的写法：$X$ 是一串越来越大的紧 Hausdorff 块 $S_{1} \\hookrightarrow S_{2} \\hookrightarrow \\cdots$ 的余极限。\n\n$\\operatorname{Ind}$-对象这套语言正是为「滤过余极限拼出来的东西」准备的，于是 $\\mathrm{Cond}$ 的很多计算可以逐块做再取余极限。\n\n⭐ 这条也是后面「层上同调用紧块算」那一路技术的起点：先在紧 Hausdorff 块上算，再沿滤过余极限抬上去（滤过余极限正合）。\n\n**证明。** 只需证正向（反向是定义）。\n- 任何凝聚态集 $X$ 都能写成 $X \\cong \\varinjlim_{i} T_{i}$（$T_{i}$ 紧 Hausdorff）—— 这是 $\\mathrm{Cond}$ 里「用紧块拼出来」的一般事实。\n- 记 $X_{i}$ 为 $T_{i}$ 在 $X$ 中的**像**，则 $X = \\varinjlim_{i} X_{i}$。\n\n每个 $X_{i}$ 作为 $T_{i}$ 的像是**拟紧**的；\n\n而 $X$ 拟分离，故每个 $X_{i}$ 也拟分离（拟分离沿子对象遗传）。\n\n于是由「拟紧拟分离 $\\cong$ 紧 Hausdorff」得 $X_{i} \\cong S_{i}$，$S_{i}$ 紧 Hausdorff。\n- 把族 $(S_{i})$ 换成 $S_{J} := \\bigcup_{i \\in J} S_{i}$（$J$ 有限）—— 因为 $X$ 拟分离，两个紧 Hausdorff 块的交还是紧 Hausdorff（上一条），有限并仍紧 Hausdorff，于是得到一个**有向**的族 $S_{J}$，且 $X = \\varinjlim_{J} S_{J}$，过渡映射都是含入。\n\n∎",
+   "notes": "⚠️ **不要读成 $\\operatorname{Ind}(\\mathbf{CHaus}) \\cong \\mathrm{Cond}$。** 整块 $\\operatorname{Ind}(\\mathbf{CHaus})$ 比凝聚态集**大**：一般凝聚态集的紧块过渡映射只是映射、不是含入，所以只有「含入过渡」那一部分才对得上 拟紧拟分离 的对象。\n\n**为什么这条重要。** 它把「拟分离」这个抽象的有限性条件换成了一个**可操作**的写法：$X$ 是一串越来越大的紧 Hausdorff 块 $S_{1} \\hookrightarrow S_{2} \\hookrightarrow \\cdots$ 的余极限。\n\n$\\operatorname{Ind}$-对象这套语言正是为「滤过余极限拼出来的东西」准备的，于是 $\\mathrm{Cond}$ 的很多计算可以逐块做再取余极限。\n\n⭐ 这条也是后面「层上同调用紧块算」那一路技术的起点：先在紧 Hausdorff 块上算，再沿滤过余极限抬上去（滤过余极限正合）。",
    "refs": [
     "Le Stum, Lemma 4.2.10"
    ]
@@ -29550,7 +29565,7 @@
     "底空间"
    ],
    "statement": "若凝聚态集 $X$ 拟分离，则它的底空间 $X(\\bullet)$ 弱 Hausdorff。",
-   "notes": "**证法**：把 $X$ 写成紧 Hausdorff 块沿含入的滤过余极限（上一条），再对底空间取 $k$-化。滤过余极限在 $\\mathrm{CGWH}$ 里被保留，而每个紧 Hausdorff 块都弱 Hausdorff，于是余极限仍弱 Hausdorff。\n\n**方向别弄反**：这条是「拟分离 $\\implies$ 弱 Hausdorff」，反向要加**紧生成**才成立（见下一条）。\n\n**证明。** 由拟分离的刻画，把 $X$ 写成紧 Hausdorff 块沿**含入**的滤过余极限 $X = \\varinjlim_{i} S_{i}$（$S_{i} \\hookrightarrow S_{j}$）。底空间沿滤过余极限是正合的：\n$$X(\\bullet) = \\varinjlim_{i} S_{i}$$\n（在 $\\mathrm{CGWH}$ 里取 $k$-化后这个余极限仍被保留）。而**每个** $S_{i}$ 是紧 Hausdorff，当然弱 Hausdorff；$\\mathrm{CGWH}$ 是**余完备且对滤过余极限封闭**的，于是余极限 $X(\\bullet)$ 仍弱 Hausdorff。∎",
+   "notes": "",
    "refs": [
     "Le Stum, Lemma 4.2.11"
    ]
@@ -29591,7 +29606,7 @@
     "紧生成"
    ],
    "statement": "设 $X$ 是**紧生成**空间。则 $X$ 弱 Hausdorff $\\iff$ $X$（视为凝聚态集）拟分离。",
-   "notes": "**两个方向分别来自哪**：「弱 Hausdorff $\\implies$ 拟分离」是那条纤维积引理；「拟分离 $\\implies$ 弱 Hausdorff」是底空间那条。紧生成是用来让「底空间」这个概念和 $X$ 自己对齐的。\n\n⭐ **合起来的意义**：在紧生成的范围里，「弱 Hausdorff」这个**拓扑**条件与「拟分离」这个**层论**条件说的是同一件事。于是 $\\mathrm{CGWH}$ 这一整套同伦论的栖息地，在凝聚态世界里有了一个纯层论的名字。\n\n**证明。** 两个方向各用一条引理：\n- **$\\implies$**：$X$ 紧生成且弱 Hausdorff，则视为凝聚态集时拟分离 —— 这正是「弱 Hausdorff $\\implies$ 拟分离」那条纤维积引理。\n- **$\\Longleftarrow$**：$X$ 紧生成且拟分离，则底空间 $X(\\bullet)$ 弱 Hausdorff；而 $X$ 紧生成意味着 $X(\\bullet) \\cong X$（紧生成空间的 $k$-化就是它自己，且它在凝聚态世界里由 $\\underline{S} \\mapsto \\operatorname{Hom}(S, X)$ 决定），所以 $X$ 本身弱 Hausdorff。\n\n∎",
+   "notes": "**两个方向分别来自哪**：「弱 Hausdorff $\\implies$ 拟分离」是那条纤维积引理；「拟分离 $\\implies$ 弱 Hausdorff」是底空间那条。紧生成是用来让「底空间」这个概念和 $X$ 自己对齐的。\n\n⭐ **合起来的意义**：在紧生成的范围里，「弱 Hausdorff」这个**拓扑**条件与「拟分离」这个**层论**条件说的是同一件事。于是 $\\mathrm{CGWH}$ 这一整套同伦论的栖息地，在凝聚态世界里有了一个纯层论的名字。",
    "refs": [
     "Le Stum, Proposition 4.2.12"
    ]
@@ -29634,7 +29649,7 @@
     "开集"
    ],
    "statement": "设 $X$ 是拓扑空间。存在拓扑斯态射\n\n$$c_{X} : \\mathrm{Cond}/X \\rightleftarrows \\mathrm{Open}(X),$$\n\n其中 $\\mathrm{Open}(X)$ 是 $X$ 的开集所成的拓扑空间对应的拓扑斯（开集按含入组成的偏序，配上它的标准拓扑）。\n\n**逆像**把 $Y \\in \\mathrm{Cond}/X$ 送到 $U \\mapsto \\operatorname{Hom}_{/X}(\\underline{U}, Y)$；\n**顺像**把 $F \\in \\mathrm{Open}(X)$ 送到 $\\varinjlim_{U \\subseteq X,\\ s \\in F(U)} \\underline{U}$。",
-   "notes": "**在做什么。** $\\mathrm{Cond}/X$ 是「把 $X$ 当成基点、在上面做凝聚态数学」的世界；$\\mathrm{Open}(X)$ 是「$X$ 的开集格」这个世界。这条态射把两边接起来：**两个世界算出来的上同调可以互相换算**。\n\n**逆像的形状怎么读**：$\\operatorname{Hom}_{/X}(\\underline{U}, Y)$ 是「越过 $X$ 的、从 $U$ 到 $Y$ 的映射」。$U$ 越小能给的映射越多 —— 这正是层的「限制」味道。\n\n**顺像的形状怎么读**：$\\varinjlim \\underline{U}$ 是「把所有开集拼起来」的余极限 —— 开集沿含入的余极限就是它们并起来。\n\n⭐ 这条是下面 Dyckhoff 定理那条谱序列的**构造基础**：有了这两个方向，$\\mathrm{Cond}/X$ 上的上同调才能被 $\\mathrm{Open}(X)$ 上的层上同调逼近。\n\n**证明。** 先看两个函子都有定义：逆像把 $Y \\in \\mathrm{Cond}/X$ 送到预层 $U \\mapsto \\operatorname{Hom}_{/X}(\\underline{U}, Y)$，而 $\\mathrm{Open}(X)$ 上的层条件只涉及开集的含入，逐条验即可；\n\n顺像 $\\varinjlim_{U \\subseteq X,\\ s \\in F(U)} \\underline{U}$ 取的是**滤过**余极限（开集沿含入滤过），在 $\\mathrm{Cond}$ 里存在。\n**逆像左正合**：$\\varinjlim$ 在 $\\mathrm{Cond}$ 里正合（AB5）。\n**伴随**：逐项算\n$$\\operatorname{Hom}_{/X}\\Bigl(\\varinjlim_{U, s} \\underline{U},\\ Y\\Bigr) = \\varinjlim_{U, s} \\operatorname{Hom}_{/X}(\\underline{U}, Y) = \\operatorname{Hom}(F, Y),$$\n第一式是余极限的泛性质，第二式就是把「从 $F$ 到 $Y$ 的映射」按 $F$ 的定义写成相容族 $\\{F(U) \\to \\operatorname{Hom}_{/X}(\\underline{U}, Y)\\}$ —— 两者是同一件事。\n\n于是有伴随 $\\varinjlim \\underline{U} \\dashv \\bigl(U \\mapsto \\operatorname{Hom}_{/X}(\\underline{U}, -)\\bigr)$，逆像左正合，故 $c_{X}$ 是拓扑斯态射。\n\n∎",
+   "notes": "**在做什么。** $\\mathrm{Cond}/X$ 是「把 $X$ 当成基点、在上面做凝聚态数学」的世界；$\\mathrm{Open}(X)$ 是「$X$ 的开集格」这个世界。这条态射把两边接起来：**两个世界算出来的上同调可以互相换算**。\n\n**逆像的形状怎么读**：$\\operatorname{Hom}_{/X}(\\underline{U}, Y)$ 是「越过 $X$ 的、从 $U$ 到 $Y$ 的映射」。$U$ 越小能给的映射越多 —— 这正是层的「限制」味道。\n\n**顺像的形状怎么读**：$\\varinjlim \\underline{U}$ 是「把所有开集拼起来」的余极限 —— 开集沿含入的余极限就是它们并起来。\n\n⭐ 这条是下面 Dyckhoff 定理那条谱序列的",
    "refs": [
     "Le Stum, Proposition 8.1.3"
    ]
@@ -29720,7 +29735,7 @@
     "Čech"
    ],
    "statement": "设 $S$ 是 **Stone 空间**（紧、Hausdorff、全不连通），$A$ 是普通阿贝尔群（看作常值凝聚态阿贝尔群 $\\underline{A}$）。则对一切 $n > 0$\n\n$$H^{n}_{\\mathrm{cond}}(S,\\ \\underline{A}) = 0.$$",
-   "notes": "**与 Stonean 那条的区别**。Stonean 要求**极**不连通（开集的闭包还开），Stone 只要求**全**不连通（没有非平凡连通分支）。全不连通比极不连通弱，所以这条不能直接由上面那条得到，得另证 —— 但结论形状一样：零调。\n\n**证法**。把 $S$ 与它的一个 Stone 满射 $S_{0} \\twoheadrightarrow S$ 都写成**有限离散空间**的滤过**逆**极限（Stone 空间按定义就是投射有限空间的逆极限）。增广 Čech 复形逐段零调（有限离散情形是好算的），而滤过逆极限沿着正合列取极限仍然正合，于是整体零调。\n\n**为什么值得单列**：常系数是最常用的系数，这条让「Stone 空间上的常系数上同调」这一整类计算直接归零。\n\n**证明（先有限、再取逆极限）。** 由「无环 $\\iff$ Čech 上同调为零」，只需对 Stone 空间之间的**满射** $f : S_{0} \\twoheadrightarrow S$ 证明增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr)$ 零调（有限**不交**覆盖那情形由「有限不交覆盖的高次 Čech 为零」给出）。\n- **$S, S_{0}$ 有限的情形**：此时它们是有限离散集，$f$ 是有限满射，增广 Čech 复形是**零伦**的（有截面的态射那条），故零调。\n- **一般情形**：Stone 空间是**投射有限空间**的滤过逆极限，写 $S_{0} = \\varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），记 $S_{k}$ 为 $S_{0,k}$ 在 $S$ 里的像。$M$ **离散**，于是交叠上的连续函数就是逐块给定的，而逆极限的取值是滤过余极限：\n$$\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+},\\ M\\bigr) = \\varinjlim_{k} \\check{C}^{\\bullet}\\bigl((S_{0,k}\\to S_{k})^{+},\\ M\\bigr).$$\n- **滤过余极限正合**（AB5），所以「每一项都零调」沿这个余极限传下去：整体零调。∎",
+   "notes": "**与 Stonean 那条的区别**。Stonean 要求**极**不连通（开集的闭包还开），Stone 只要求**全**不连通（没有非平凡连通分支）。全不连通比极不连通弱，所以这条不能直接由上面那条得到，得另证 —— 但结论形状一样：零调。",
    "refs": [
     "Le Stum, Lemma 8.1.2"
    ]
@@ -29943,7 +29958,7 @@
    "notes_en": "**Purpose**: This reduces the general seminormed case **to the Banach case**. Proving subsequent theorems for Banach groups therefore suffices for the general case.\n\n**Why it holds**.\n\nCompletion embeds $M^{n}$ as a **dense** subspace. The condition of $K$-bounded exactness involves only norm inequalities and an arbitrary choice of $\\varepsilon > 0$. Such conditions are **preserved in both directions** when passing to a dense subspace. Density gives sufficiently good approximations in $M^{n}$, and limits in the complete space can lie back in $\\widehat{M}^{\\bullet}$.\n\n**Proof (estimate $\\varepsilon/2$ in each direction).** First quotient out $M_{0}$ ($K$-bounded exactness is invariant under quotienting by the elements of norm zero). We may therefore assume that $M^{\\bullet} \\subseteq \\widehat{M}^{\\bullet}$ is an isometric embedding with dense image.\n- **$\\implies$**: Given $s \\in \\widehat{M}^{n}$ and $\\varepsilon>0$.\n\nBy density, choose $t \\in M^{n}$ such that $\\|s - t\\| \\le \\frac{\\varepsilon}{2(1+K\\|d^{n}\\|)}$;\n\nby the boundedness of $M^{\\bullet}$ with bound $K$, choose $s' \\in M^{n+1}$ such that $\\|t - ds'\\| \\le K\\|dt\\| + \\frac{\\varepsilon}{2}$.\n\nThus\n$$\\|s - ds'\\| \\le \\|s-t\\| + K\\|dt\\| + \\frac{\\varepsilon}{2} = K\\|ds\\| + \\Bigl(\\|s-t\\| + K\\|ds - dt\\| + \\frac{\\varepsilon}{2}\\Bigr) \\le K\\|ds\\| + \\varepsilon .$$\n- **$\\Longleftarrow$**: Given $s \\in M^{n} \\subseteq \\widehat{M}^{n}$.\n\nBy the boundedness of $\\widehat{M}^{\\bullet}$ with bound $K$, choose $t' \\in \\widehat{M}^{n+1}$ such that $\\|s - dt'\\| \\le K\\|ds\\| + \\frac{\\varepsilon}{2}$;\n\nthen by density, choose $s' \\in M^{n+1}$ such that $\\|s' - t'\\| \\le \\frac{\\varepsilon}{2(1+\\|d^{n+1}\\|)}$.\n\nThus $\\|s - ds'\\| \\le K\\|ds\\| + \\varepsilon$.\n\n∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -29956,10 +29971,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#4dbfa1de",
       "notes": "v0.9.3#7a28b3e9"
@@ -29982,7 +29999,7 @@
     "K-有界"
    ],
    "statement": "设 $M^{\\bullet}$ 是半范数阿贝尔群复形，$\\widehat{M}^{\\bullet}$ 是它的 Banach 化（Hausdorff 化后再完备化）。\n\n则 $M^{\\bullet}$ 在 $M^{n}$ 处 $K$-有界正合 $\\iff$ $\\widehat{M}^{\\bullet}$ 在 $\\widehat{M}^{n}$ 处 $K$-有界正合。",
-   "notes": "**作用**：这条把「半范数」的一般情形**归结为 Banach 情形**。于是后面只要在 Banach 层面上证定理，一般情形自动跟着走。\n\n**为什么成立**。\n\n完备化把 $M^{n}$ 嵌成一个**稠密**子空间，而 $K$-有界正合只用到范数不等式与「任取 $\\varepsilon > 0$」—— 这类条件在取稠密子空间时**两边都保持**：稠密性保证能在 $M^{n}$ 里找到足够好的逼近，而完备空间的极限点又能落回 $\\widehat{M}^{\\bullet}$。\n\n**证明（两个方向各算一次 $\\varepsilon/2$）。** 先商掉 $M_{0}$（$K$-有界正合在商掉范数为零的元素下不变），于是可设 $M^{\\bullet} \\subseteq \\widehat{M}^{\\bullet}$ 是稠密保范嵌入。\n- **$\\implies$**：给 $s \\in \\widehat{M}^{n}$ 与 $\\varepsilon>0$。\n\n由稠密性取 $t \\in M^{n}$ 使 $\\|s - t\\| \\le \\frac{\\varepsilon}{2(1+K\\|d^{n}\\|)}$；\n\n由 $M^{\\bullet}$ 的 $K$-有界性取 $s' \\in M^{n+1}$ 使 $\\|t - ds'\\| \\le K\\|dt\\| + \\frac{\\varepsilon}{2}$。\n\n于是\n$$\\|s - ds'\\| \\le \\|s-t\\| + K\\|dt\\| + \\frac{\\varepsilon}{2} = K\\|ds\\| + \\Bigl(\\|s-t\\| + K\\|ds - dt\\| + \\frac{\\varepsilon}{2}\\Bigr) \\le K\\|ds\\| + \\varepsilon .$$\n- **$\\Longleftarrow$**：给 $s \\in M^{n} \\subseteq \\widehat{M}^{n}$。\n\n由 $\\widehat{M}^{\\bullet}$ 的 $K$-有界性取 $t' \\in \\widehat{M}^{n+1}$ 使 $\\|s - dt'\\| \\le K\\|ds\\| + \\frac{\\varepsilon}{2}$；\n\n再由稠密性取 $s' \\in M^{n+1}$ 使 $\\|s' - t'\\| \\le \\frac{\\varepsilon}{2(1+\\|d^{n+1}\\|)}$。\n\n于是 $\\|s - ds'\\| \\le K\\|ds\\| + \\varepsilon$。\n\n∎",
+   "notes": "**作用**：这条把「半范数」的一般情形**归结为 Banach 情形**。于是后面只要在 Banach 层面上证定理，一般情形自动跟着走。\n\n**为什么成立**。\n\n完备化把 $M^{n}$ 嵌成一个**稠密**子空间，而 $K$-有界正合只用到范数不等式与「任取 $\\varepsilon > 0$」—— 这类条件在取稠密子空间时**两边都保持**：稠密性保证能在 $M^{n}$ 里找到足够好的逼近，而完备空间的极限点又能落回 $\\widehat{M}^{\\bullet}$。",
    "refs": [
     "Le Stum, Lemma 8.2.2"
    ]
@@ -30135,7 +30152,7 @@
     "零伦"
    ],
    "statement": "设 $M$ 是半范数阿贝尔群，$S_{0} \\twoheadrightarrow S$ 是 **Stone 空间之间的满射**。则增广 Čech 复形\n\n$$\\check{C}^{\\bullet}\\bigl((S_{0} \\to S)^{+},\\ M\\bigr)$$\n\n是 **$1$-有界零调**的。",
-   "notes": "**要做的事**：造一个零伦（contraction），把复形每一项的「闭链」都显式地写成边界，并且**范数不超过原来的 $1$ 倍**。$K = 1$ 是能得到的最好常数。\n\n**怎么造**。\n\n先归约到 $S_{0}$、$S$ 都**有限离散**的情形（Stone 空间是投射有限的逆极限，逆极限保持零伦）。\n\n有限离散时，满射 $S_{0} \\twoheadrightarrow S$ 允许把一个函数「在 $S$ 的每个纤维内逐点常值化」—— 这一步是线性的、范数不增的，正好给出所需零伦，于是 $\\|h\\| \\le 1$。\n\n**为什么只到 Stone / 有限离散为止。** 这一步只处理「Stone 空间之间的满射」。要把结论推到紧 Hausdorff，得先把它 Stone 化，再用 Čech 复形与层上同调的谱序列去比较偏差 —— 那正是下面两条要做的事。\n\n**证明。** 三步归约。\n- **归约到 $M$ 离散**：Stone 空间写 $S_{0} = \\varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），$S_{k}$ 为它在 $S$ 里的像，则\n$$\\varinjlim_{k} \\check{C}^{\\bullet}\\bigl((S_{0,k}\\to S_{k})^{+}, M\\bigr) = \\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M^{\\mathrm{disc}}\\bigr) \\hookrightarrow \\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr),$$\n左端的直极限拓扑就是**上确界范数**拓扑；而 $C(S, M^{\\mathrm{disc}})$ 在 $C(S, M)$ 里**稠密**（极不连通性给出有限不交闭开细化，在每块上取常值逼近）。配上「$K$-有界正合在完备化下不变」与「滤过余极限保持 $K$-有界」，只需证**离散那一个**复形 $1$-有界零调（对它自己的拓扑）。\n- **归约到 $S, S_{0}$ 有限**：同一个余极限再把离散情形化归到有限。\n- **有限情形**：由「有截面的态射给出零调」，$\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr)$ 是**零伦**的，且零伦有形式 $h^{n} : f \\mapsto f \\circ k_{n}$（逐纤维取一个截面点），于是 $\\|h^{n}\\| \\le 1$。\n\n由 $\\mathrm{id} = h\\circ d + d\\circ h$，对任意 $s$：\n$$\\|s - d(hs)\\| = \\|h(ds)\\| \\le \\|ds\\| ,$$\n这正是 $K = 1$ 的 $K$-有界正合。∎",
+   "notes": "**要做的事**：造一个零伦（contraction），把复形每一项的「闭链」都显式地写成边界，并且**范数不超过原来的 $1$ 倍**。$K = 1$ 是能得到的最好常数。\n\n**怎么造**。\n\n先归约到 $S_{0}$、$S$ 都**有限离散**的情形（Stone 空间是投射有限的逆极限，逆极限保持零伦）。\n\n有限离散时，满射 $S_{0} \\twoheadrightarrow S$ 允许把一个函数「在 $S$ 的每个纤维内逐点常值化」—— 这一步是线性的、范数不增的，正好给出所需零伦，于是 $\\|h\\| \\le 1$。\n\n**为什么只到 Stone / 有限离散为止。** 这一步只处理「Stone 空间之间的满射」。要把结论推到紧 Hausdorff，得先把它 Stone 化，再用 Čech 复形与层上同调的谱序列去比较偏差 —— 那正是下面两条要做的事。",
    "refs": [
     "Le Stum, Lemma 8.2.5"
    ]
@@ -30206,7 +30223,7 @@
    "notes_en": "**Reduction in stages**.\n\n(1) Finite-dimensional case: $V = \\mathbb{R}^{m}$. Apply the classical Tietze extension theorem coordinatewise (extension of continuous real-valued functions on normal spaces, based on Urysohn's lemma).\n\n(2) General separable Banach case: Every separable Banach space is isomorphic to a closed subspace of $\\ell^{\\infty}$, and $\\ell^{\\infty}$ is a **Lipschitz retract**. First extend the map to $\\ell^{\\infty}$ and then retract.\n\n(3) In the nonseparable case, the compact image lies in a separable closed subspace, reducing the problem to (2).\n\n⭐ **Why condensed mathematics uses this.** The main theorem of §8.2, acyclicity of real Banach spaces on compact Hausdorff spaces, covers a general compact Hausdorff space $S$ by a Stonean space $S_{0}$ and then eliminates the discrepancy;\n\nthe discrepancy term lies in a function space $C(K, V)$, and **eliminating it requires extension**, supplied by this Tietze theorem.\n\n⚠️ **General topology also has a real-valued version** (the Tietze extension theorem). Here **the target can be any real Banach space**.\n\n**Proof (Dugundji extension theorem).** Dugundji's theorem is the version of Tietze for maps into topological vector spaces. Suppose $X$ is **paracompact** (a metric space suffices), $A \\subseteq X$ is **closed**, and $V$ is a **locally convex** topological vector space. Then there is a **linear** extension operator $C(A, V) \\to C(X, V)$, so the restriction map is surjective.\n- **Construction**: Paracompactness gives a locally finite refinement of an open neighborhood system for $A$, denoted by $\\{U_{i}\\}$, and an associated **partition of unity** $\\{\\varphi_{i}\\}$ ($\\sum \\varphi_{i} = 1$, $\\varphi_{i} \\ge 0$, with support in $U_{i}$).\n\nOn each $U_{i}$, first extend $g|_{A \\cap U_{i}}$ to a constant map $g_{i}$ (take the value at some point of $A\\cap U_{i}$);\n\nthen set\n$$G := \\sum_{i} \\varphi_{i}\\, g_{i} .$$\n- **Why it is well-defined**: Local finiteness $\\implies$ only finitely many $\\varphi_{i}$ are nonzero near each point, so the sum is finite. Since $V$ is a **vector space**, convex combinations make sense. Since $\\varphi_{i}$ is continuous, so is $G$.\n- **Why it is an extension**: If $x \\in A$, then for every instance of $\\varphi_{i}(x) > 0$ the corresponding $U_{i}$ contains $x$. Each $g_{i}$ equals, on $A \\cap U_{i}$, the value $g$, so $G(x) = \\sum \\varphi_{i}(x) g(x) = g(x)$.\n**Application here**: $X$ is normal (metric and paracompact spaces are normal), $K \\subseteq X$ is compact and hence closed, and $V$ is a real Banach space (locally convex). Thus the restriction map $C(X,V) \\twoheadrightarrow C(K,V)$ is surjective. In case $V = \\mathbb{R}^{m}$, apply the classical Tietze theorem coordinatewise. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -30219,10 +30236,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#8a28e5a4",
       "notes": "v0.9.3#7017fbd0"
@@ -30246,7 +30265,7 @@
     "正规空间"
    ],
    "statement": "设 $X$ 是**正规**拓扑空间，$K \\subseteq X$ 是**紧**子集，$V$ 是**实 Banach 空间**。则限制映射\n\n$$C(X,\\ V) \\twoheadrightarrow C(K,\\ V)$$\n\n是**满**的：每个连续映射 $K \\to V$ 都能延拓到 $X$ 上。",
-   "notes": "**分层归约**。\n\n① 有限维：$V = \\mathbb{R}^{m}$，逐坐标用经典 Tietze 延拓（正规空间上实值连续函数的延拓，本质是 Urysohn 引理）。\n\n② 一般可分 Banach：每个可分 Banach 空间都同构于 $\\ell^{\\infty}$ 的闭子空间，而 $\\ell^{\\infty}$ 是 **Lipschitz 收缩核** —— 于是可以先把映射延拓到 $\\ell^{\\infty}$ 再收缩回来。\n\n③ 不可分的情形用「紧像落在某个可分闭子空间里」再归约到 ②。\n\n⭐ **为什么凝聚态数学要用它。** §8.2 的主定理「实 Banach 空间在紧 Hausdorff 空间上零调」走的是「把一般紧 Hausdorff 空间 $S$ 用 Stonean 的 $S_{0}$ 覆盖、再把偏差压回去」的路线；\n\n偏差项住在一个函数空间 $C(K, V)$ 里，而**要把它压掉就得靠延拓**，即这条 Tietze。\n\n⚠️ **这条一般拓扑里也有实值版本**（Tietze 延拓定理）；这里的增量是：**取值可以让是任意实 Banach 空间**。\n\n**证明（Dugundji 延拓定理）。** 取值在拓扑向量空间里的 Tietze 是 Dugundji 的定理：设 $X$ **仿紧**（度量空间即可）、$A \\subseteq X$ **闭**、$V$ 是**局部凸**拓扑向量空间，则存在**线性**延拓算子 $C(A, V) \\to C(X, V)$，特别地限制映射满。\n- **构造**：仿紧性给出 $A$ 的一个开邻域系 $\\{U_{i}\\}$ 的局部有限细化与配套的**单位分解** $\\{\\varphi_{i}\\}$（$\\sum \\varphi_{i} = 1$，$\\varphi_{i} \\ge 0$，支集在 $U_{i}$ 里）。\n\n每个 $U_{i}$ 上先把 $g|_{A \\cap U_{i}}$ 延拓成一个常值映射 $g_{i}$（取 $A\\cap U_{i}$ 上某点的值）；\n\n再令\n$$G := \\sum_{i} \\varphi_{i}\\, g_{i} .$$\n- **为什么良定义**：局部有限 $\\implies$ 每个点附近只有有限个 $\\varphi_{i}$ 非零，和是有限的；$V$ 是**向量空间**，凸组合有意义；$\\varphi_{i}$ 连续，故 $G$ 连续。\n- **为什么是延拓**：若 $x \\in A$，则所有满足 $\\varphi_{i}(x) > 0$ 的 $U_{i}$ 都含 $x$，而每个 $g_{i}$ 在 $A \\cap U_{i}$ 上等于 $g$，于是 $G(x) = \\sum \\varphi_{i}(x) g(x) = g(x)$。\n**应用到这里**：$X$ 正规（度量 / 仿紧空间都正规）、$K \\subseteq X$ 紧故闭，$V$ 实 Banach 空间（局部凸），于是限制映射 $C(X,V) \\twoheadrightarrow C(K,V)$ 满。$V = \\mathbb{R}^{m}$ 是逐坐标用经典 Tietze。∎",
+   "notes": "",
    "refs": [
     "Le Stum, Theorem 8.2.7",
     "Dugundji, An extension of Tietze's theorem (1951)"
@@ -30263,7 +30282,7 @@
    "notes_en": "⭐ **This is the main theorem of §8.2** and the central result of the chapter. It extends acyclicity from Stone spaces to general compact Hausdorff spaces, with coefficients in a real Banach space.\n\n**Proof strategy**.\n\n(1) Map a Stonean space $S_{0}$ onto $S$ (using filtered colimits of compact Hausdorff spaces along closed inclusions and Stonean covers). (2) On $S_{0}$, acyclicity for Banach coefficients on Stone spaces gives acyclicity of the Čech complex;\n\n(3) Compare the Čech complex of $S_{0} \\to S$ with the cohomology of $S$ itself. The discrepancy term lies in $C(K, V)$;\n\n(4) Use **Banach-valued Tietze extension** to eliminate the discrepancy, obtaining **bounded** acyclicity on $S$;\n\n(5) Use “$K$-bounded acyclicity $\\implies$ acyclicity” to obtain ordinary acyclicity.\n\n⚠️ **The result fails for complex Banach spaces.** This is one direct motivation for the theory of solid modules and solid quasi-coherent sheaves. In the real case one can use the **order structure** behind Tietze extension (suprema on $\\mathbb{R}$ and partitions) to eliminate the discrepancy. The complex case lacks these tools and requires different machinery.\n\n📌 Compare the identification of condensed and sheaf cohomology on locally compact spaces. That result concerns **discrete coefficients** (the space need only be locally compact), whereas this one concerns **Banach coefficients** (the space need only be compact). Together they cover most computations in Chapter 8.\n\n**Proof (eliminating the discrepancy with a partition of unity).** By the identification of Čech and sheaf cohomology on compact Hausdorff spaces, acyclicity for Banach coefficients on Stone spaces, and “$K$-bounded acyclicity $\\implies$ acyclicity,” it suffices to show that for a continuous surjection $S_{0} \\to S$ from a Stone space, the augmented Čech complex $\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, V\\bigr)$ is **$1$-bounded acyclic**.\nFix $\\varepsilon > 0$ and $f \\in \\check{C}^{n}$ (that is, $S_{n} \\to V$ is continuous and $S_{n}$ is the fiber product of $S_{0}$ over $S$ with $(n{+}1)$ factors).\n\nWrite $\\pi_{n} : S_{n} \\to S$ and $f_{x} := f|_{\\pi_{n}^{-1}(x)}$.\n- For each $x \\in S$, apply the result that the Čech complex of a Stone surjection is boundedly acyclic to the fiberwise surjection $\\pi_{n}^{-1}(x) \\to \\{x\\}$, with bound $1$ (the fiberwise version). This gives $g_{x} : \\pi_{n+1}^{-1}(x) \\to V$ such that\n$$\\|f_{x} - d g_{x}\\| \\le \\|d f_{x}\\| + \\frac{\\varepsilon}{2} \\le \\|df\\| + \\frac{\\varepsilon}{2}.$$\n- By **Banach-valued Tietze extension**, $g_{x}$ extends on $S_{n+1}$ to $G_{x}$. By continuity, $x$ has a neighborhood $V_{x}$ such that on $\\pi_{n+1}^{-1}(V_{x})$ one has $\\|f - dG_{x}\\| < \\|df\\| + \\varepsilon$.\n- Choose finitely many $V_{1}, \\ldots, V_{r}$ covering $S$ (by **compactness**), take a subordinate partition of unity $\\{\\varphi_{i}\\}$, and set $g := \\sum_{i} (\\varphi_{i}\\circ\\pi_{n+1})\\,G_{i}$.\n\nFrom $\\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) = 1$ we get $f = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) f$, and also $dg = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n})\\, dG_{i}$. Subtracting the two identities gives\n$$\\|f - dg\\| = \\Bigl\\|\\sum_{i} (\\varphi_{i}\\circ\\pi_{n})\\,(f - dG_{i})\\Bigr\\| \\le \\max_{i} \\|f - dG_{i}\\| \\le \\|df\\| + \\varepsilon,$$\nThe last step uses the fact that the norm of a convex combination is at most the maximum norm ($\\varphi_{i} \\ge 0$, $\\sum\\varphi_{i} = 1$). This is exactly bounded exactness for $K = 1$ with bound $K$. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -30276,10 +30295,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#e5d6ab82",
       "notes": "v0.9.3#ebd6c227"
@@ -30302,7 +30323,7 @@
     "零调"
    ],
    "statement": "设 $V$ 是**实 Banach 空间**，$S$ 是**紧 Hausdorff** 空间。则对一切 $n > 0$\n\n$$H^{n}_{\\mathrm{cond}}(S,\\ V) = 0.$$",
-   "notes": "⭐ **这是 §8.2 的主定理**，也是整章的枢纽：它把「零调」从 Stone 空间推到了一般紧 Hausdorff 空间，代价是系数必须落在实 Banach 空间里。\n\n**证法**。\n\n① 用 Stonean 空间 $S_{0}$ 满射到 $S$（由「紧 Hausdorff 空间沿闭含入的滤过余极限 / Stonean 覆盖」那套技术得到）；② 在 $S_{0}$ 上由「Banach 在 Stone 上零调」知道 Čech 复形零调；\n\n③ 比较 $S_{0} \\to S$ 的 Čech 复形与 $S$ 本身的上同调，偏差项住在 $C(K, V)$ 里；\n\n④ 用 **Tietze 延拓（Banach 值）** 把偏差压掉，得到 $S$ 上的**有界**零调；\n\n⑤ 用「$K$-有界零调 $\\implies$ 零调」转成通常零调。\n\n⚠️ **复 Banach 空间不成立。** 这是「solid 模 / solid 拟凝聚层」那一整套理论出现的直接原因之一 —— 实的情形能用 Tietze 那样的**序结构**（$\\mathbb{R}$ 上的上确界、分割）把它压下来，复的情形没有这套工具，得上完全不同的机器。\n\n📌 与「局部紧上凝聚态＝层上同调」对照：那条处理的是**离散系数**（且空间只需局部紧），这条处理的是 **Banach 系数**（而空间只需紧）—— 两条合起来覆盖了第 8 章大半的计算。\n\n**证明（把偏差用单位分解压掉）。** 由「紧 Hausdorff 上 Čech = 层上同调」、「Banach 在 Stone 上零调」与「$K$-有界零调 $\\implies$ 零调」，只需证：对 Stone 空间的连续满射 $S_{0} \\to S$，增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, V\\bigr)$ 是 **$1$-有界零调**的。\n固定 $\\varepsilon > 0$ 与 $f \\in \\check{C}^{n}$（即 $S_{n} \\to V$ 连续，$S_{n}$ 是 $S_{0}$ 在 $S$ 上的 $(n{+}1)$ 重纤维积）。\n\n记 $\\pi_{n} : S_{n} \\to S$ 与 $f_{x} := f|_{\\pi_{n}^{-1}(x)}$。\n- 对每个 $x \\in S$，对纤维上的满射 $\\pi_{n}^{-1}(x) \\to \\{x\\}$ 用「Stone 满射的 Čech 复形 $1$-有界零调」（逐纤维的版本），得 $g_{x} : \\pi_{n+1}^{-1}(x) \\to V$ 使\n$$\\|f_{x} - d g_{x}\\| \\le \\|d f_{x}\\| + \\frac{\\varepsilon}{2} \\le \\|df\\| + \\frac{\\varepsilon}{2}.$$\n- 由 **Tietze（Banach 值）**，$g_{x}$ 延拓成 $S_{n+1}$ 上的 $G_{x}$；由连续性，$x$ 有邻域 $V_{x}$ 使在 $\\pi_{n+1}^{-1}(V_{x})$ 上 $\\|f - dG_{x}\\| < \\|df\\| + \\varepsilon$。\n- 取有限的 $V_{1}, \\ldots, V_{r}$ 覆盖 $S$（**紧性**），配从属的单位分解 $\\{\\varphi_{i}\\}$，令 $g := \\sum_{i} (\\varphi_{i}\\circ\\pi_{n+1})\\,G_{i}$。\n\n由 $\\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) = 1$ 得 $f = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) f$，又 $dg = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n})\\, dG_{i}$，两式相减：\n$$\\|f - dg\\| = \\Bigl\\|\\sum_{i} (\\varphi_{i}\\circ\\pi_{n})\\,(f - dG_{i})\\Bigr\\| \\le \\max_{i} \\|f - dG_{i}\\| \\le \\|df\\| + \\varepsilon,$$\n最后一步是「凸组合的范数不超过最大范数」（$\\varphi_{i} \\ge 0$、$\\sum\\varphi_{i} = 1$）。这正是 $K = 1$ 的 $K$-有界正合。∎",
+   "notes": "⭐ **这是 §8.2 的主定理**，也是整章的枢纽：它把「零调」从 Stone 空间推到了一般紧 Hausdorff 空间，代价是系数必须落在实 Banach 空间里。",
    "refs": [
     "Le Stum, Theorem 8.2.8"
    ]
@@ -30318,7 +30339,7 @@
    "notes_en": "**What it does.** The left side is \"the sections of the Ext sheaf over $S$\", the right side is \"an ordinary Ext computed out\". It trades the **sheaf** Ext for a **single** Ext — so \"computing an Ext sheaf\" becomes \"computing one concrete derived Hom\".\n\n**Why Stonean is enough.** Over a Stonean space $S$, the group $\\mathbb{Z}[S]$ is **projective**, hence $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ is exact. Apply this exact functor to both sides of the natural isomorphism\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n\nand the conclusion follows: the right side is \"sections of an internal Hom\", the left side is \"tensor first, then Hom\".\n\n⚠️ The key hypothesis is **Stonean** (extremally disconnected), not merely compact Hausdorff — extremal disconnectedness is exactly the source of projectivity of $\\mathbb{Z}[S]$.\n\n⭐ This is the **connecting port** for the spectral sequence below: the Breen–Deligne decomposition expands Ext into free objects, and the Ext of each term is brought back from a sheaf computation to an ordinary one by this lemma.\n\n**Proof.** $S$ Stonean $\\implies$ $\\mathbb{Z}[S]$ is **projective**, hence $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ is **exact**.\n\nFor the natural isomorphism\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n\n(the adjoint form of $M \\cdot S = M \\otimes_{\\mathbb{Z}} \\mathbb{Z}[S]$), take right derived functors on both sides: the left gives $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M\\cdot S, N)$;\n\nthe right, since $\\operatorname{Hom}(\\mathbb{Z}[S],-)$ is exact, passes through the derived functor and gives $\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S], \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)\\bigr)$, which by definition is $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)(S)$.\n\nCompare the two sides.\n\n∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -30331,10 +30352,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#8edc857b",
       "notes": "v0.9.3#1c9a45ed"
@@ -30357,7 +30380,7 @@
     "投射对象"
    ],
    "statement": "设 $M, N$ 是凝聚态阿贝尔群，$S$ 是 **Stonean 空间**。记 $M \\cdot S := M \\otimes_{\\mathbb{Z}} \\mathbb{Z}[S]$。则对一切 $n \\ge 0$\n\n$$\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, N)(S) \\cong \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M \\cdot S,\\ N).$$",
-   "notes": "**在做什么。** 左边是「Ext 层在 $S$ 上的截面」，右边是「把一个普通 Ext 算出来」。这条把**层的** Ext 换成了**单次**的 Ext —— 于是「算 Ext 层」这件事变成「算一个具体的导出 Hom」。\n\n**为什么 Stonean 可以。** Stonean 空间 $S$ 上，$\\mathbb{Z}[S]$ 是**投射**的，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ 正合。把这个正合函子搬到自然同构\n\n\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n\n\n\n两边，就得到了结论：右边是「内 Hom 的截面」，左边是「先张量再 Hom」。\n\n⚠️ 关键前提是 **Stonean**（极不连通），不是一般的紧 Hausdorff —— 极不连通性正是 $\\mathbb{Z}[S]$ 投射的来源。\n\n⭐ 这条是下面谱序列的**接线口**：Breen–Deligne 分解把 Ext 展开成若干「自由对象」，而每一项的 Ext 恰好可以用这条把层的计算搬回普通计算。\n\n**证明。** $S$ Stonean $\\implies$ $\\mathbb{Z}[S]$ 是**投射**对象，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ **正合**。\n对自然同构\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n（这是 $M \\cdot S = M \\otimes_{\\mathbb{Z}} \\mathbb{Z}[S]$ 的伴随形式）两边取右导出：左端给出 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M\\cdot S, N)$；\n\n右端因为 $\\operatorname{Hom}(\\mathbb{Z}[S],-)$ 正合，可以直接穿过导出函子，得 $\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S], \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)\\bigr)$，而后者按定义就是 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)(S)$。\n\n两边一比即得。\n\n∎",
+   "notes": "**在做什么。** 左边是「Ext 层在 $S$ 上的截面」，右边是「把一个普通 Ext 算出来」。这条把**层的** Ext 换成了**单次**的 Ext —— 于是「算 Ext 层」这件事变成「算一个具体的导出 Hom」。\n\n**为什么 Stonean 可以。** Stonean 空间 $S$ 上，$\\mathbb{Z}[S]$ 是**投射**的，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ 正合。把这个正合函子搬到自然同构\n\n\n\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n\n\n\n两边，就得到了结论：右边是「内 Hom 的截面」，左边是「先张量再 Hom」。\n\n⚠️ 关键前提是 **Stonean**（极不连通），不是一般的紧 Hausdorff —— 极不连通性正是 $\\mathbb{Z}[S]$ 投射的来源。\n\n⭐ 这条是下面谱序列的**接线口**：Breen–Deligne 分解把 Ext 展开成若干「自由对象」，而每一项的 Ext 恰好可以用这条把层的计算搬回普通计算。",
    "refs": [
     "Le Stum, Lemma 8.3.1"
    ]
@@ -30608,7 +30631,7 @@
     "Banach 空间"
    ],
    "statement": "设 $M$ 是**紧 Hausdorff 阿贝尔群**、$N$ 是**实 Banach 空间**。则\n\n$$\\operatorname{RHom}_{\\mathbb{Z}}(M,\\ N) = 0.$$",
-   "notes": "**与上一条对偶**：上一条说「实向量空间 $\\to$ 离散」全零；这条说「紧 Hausdorff 群 $\\to$ 实 Banach」全零。两条合起来正好是后面「分三类归约」时用来掐掉两端的两把剪刀。\n\n**证法里的关键工具**是分解上乘 $p$ 的同伦：紧 Hausdorff 群上有「乘 $2$」这个映射，它在 Banach 空间里**可逆**（除以 $2$）；利用 $2 - [2]$ 的同伦，可以把一个闭链写成 $d$(一个收敛级数)，即每个闭链都是边界。收敛用 Banach 的完备性。\n\n⚠️ 要求 $N$ 是**实** Banach 空间（带 $\\mathbb{R}$-模结构），不是任意 Banach 阿贝尔群 —— 除以 $2$ 那一步要用到标量结构。\n\n**证明（把闭链写成收敛级数）。** 仍用 Breen–Deligne 谱序列 $E^{p,q}_{1} = \\bigoplus_{i} H^{q}(M^{s_{p,i}}\\times S, N) \\implies \\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M,N)(S)$。\n- 由 **Thm（实 Banach 在紧 Hausdorff 上零调）**，$M^{s_{p,i}}\\times S$ 是紧 Hausdorff（$M$ 紧、$S$ Stonean 紧），故 $q > 0$ 的整行是 $0$；\n\n只剩下 $q = 0$ 那一行，即复形 $K^{\\bullet}$，$K^{n} := \\bigoplus_{i} C\\bigl(M^{s_{n,i}}\\times S,\\ N\\bigr)$（Banach 空间）。\n\n只要证 $K^{\\bullet}$ 零调。\n- **关键工具**是「乘 $2$ 与 $[2]$ 同伦」：由 $2 - [2] = dh + hd$，对闭链 $f \\in K^{n}$（$df = 0$）有 $2f - [2]f = dh^{n+1}f$，于是\n$$f = \\tfrac{1}{2}[2]f + d\\Bigl(\\tfrac{1}{2}h^{n+1}f\\Bigr).$$\n- 把这一式对 $f$ 反复代入 $n$ 次：\n$$f = \\frac{1}{2^{n}}[2^{n}]f + d\\Bigl(\\sum_{k=1}^{n} \\frac{1}{2^{k}} h^{n+1}\\bigl([2^{k-1}]f\\bigr)\\Bigr).$$\n- 因为 $\\|[2]\\| \\le 1$、$\\|h^{n+1}\\| \\le \\|h^{n+1}\\| < \\infty$ 且 $N$ 是 Banach（**完备**），级数 $\\sum_{k} \\frac{1}{2^{k}} h^{n+1}([2^{k-1}]f)$ **收敛**；\n\n又 $\\frac{1}{2^{n}}[2^{n}]f \\to 0$。\n\n令 $n\\to\\infty$：\n$$f = d\\Bigl(\\sum_{k=1}^{\\infty} \\frac{1}{2^{k}} h^{n+1}\\bigl([2^{k-1}]f\\bigr)\\Bigr),$$\n即每个闭链都是边界，$K^{\\bullet}$ 零调。∎",
+   "notes": "**与上一条对偶**：上一条说「实向量空间 $\\to$ 离散」全零；这条说「紧 Hausdorff 群 $\\to$ 实 Banach」全零。两条合起来正好是后面「分三类归约」时用来掐掉两端的两把剪刀。",
    "refs": [
     "Le Stum, Proposition 8.3.6"
    ]
@@ -30749,7 +30772,7 @@
     "结构定理"
    ],
    "statement": "设 $M, N$ 是**局部紧 Hausdorff 阿贝尔群**。则对一切 $n \\ne 0, 1$\n\n$$\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, N) = 0.$$",
-   "notes": "⭐ **这是 §8.3 的终点**：局部紧 Hausdorff 阿贝尔群之间的 Ext 只在 $0$ 次和 $1$ 次上可能非零，再高一律消失。凝聚态数学对局部紧阿贝尔群给出的最终结论就是这个。\n\n**证法：先归约、再逐类掐掉**。\n\n由局部紧阿贝尔群的**结构定理**（每个这样的群都是「离散群」被「有限维实 Banach 空间 $\\oplus$ 连通紧 Hausdorff 群」扩张出来的），只要对三类源与三类靶交叉验证即可。\n\n$M$ 离散时用两段自由消解，$N$ 离散时用那条练习（连通局部紧群对离散群）；\n\n$N$ 是 Banach 时用「紧 $\\to$ Banach 全零」与「有限维 Banach 之间的 RHom 只有 0 次」。\n\n**为什么是「只剩 $\\operatorname{Ext}^{0}, \\operatorname{Ext}^{1}$」**：$\\operatorname{Ext}^{0}$ 就是 $\\operatorname{Hom}$，$\\operatorname{Ext}^{1}$ 分类扩张 —— 这两项是**代数**上本来就该有的；\n\n这条定理说的是**没有更多**，即凝聚态阿贝尔群的范畴在局部紧对象上「同调维数 $\\le 1$」。\n\n⚠️ 结论**不适用于非局部紧**的对象：像 $\\mathbb{R}^{I}$（任意大的积）这类东西，$\\operatorname{RHom}$ 的行为完全是另一回事。\n\n**证明（按结构定理分三类，逐类掐掉）。** 局部紧 Hausdorff 阿贝尔群都是「离散群」被「有限维实 Banach 空间 $\\oplus$ 连通紧 Hausdorff 阿贝尔群」扩张出来的。于是只需对三类源与三类靶交叉处理：\n- **$M$ 离散**：有两段自由消解，长正合列把 $\\operatorname{Ext}^{n}$（$n \\ge 2$）全部掐掉（自由对象只在 $0$ 次有 Ext）。\n- **$N$ 离散**：由连通局部紧群对离散群的那条（Exercises 8.18）同样只剩 $0, 1$ 两格。\n- **$N$ 实 Banach**：由「紧 $\\to$ Banach 全零」与「有限维 Banach 之间的 $\\operatorname{RHom}$ 只有 $0$ 次」把高次掐掉。\n- **$N$ 连通紧 Hausdorff**：有兩段消解 $0 \\to N \\to T^{E} \\to T^{E'} \\to 0$，故只需证 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, T^{E}) = \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, T)^{E} = 0$（$n \\ne 0,1$），而这由 $\\operatorname{RHom}_{\\mathbb{Z}}(M, T) \\cong M^{\\vee}$（上一条 Pontryagin 对偶）集中在次数 $0$ 给出。\n\n∎",
+   "notes": "⭐ **这是 §8.3 的终点**：局部紧 Hausdorff 阿贝尔群之间的 Ext 只在 $0$ 次和 $1$ 次上可能非零，再高一律消失。凝聚态数学对局部紧阿贝尔群给出的最终结论就是这个。",
    "refs": [
     "Le Stum, Theorem 8.3.9"
    ]
@@ -31038,7 +31061,7 @@
    "notes_en": "**How to read the theorem.** Locally compact Hausdorff abelian groups have three basic building blocks: **discrete groups**, **finite-dimensional real vector spaces**, and **compact Hausdorff groups**. The theorem says that every such group is an extension of $V \\oplus K$ by a discrete group.\n\n**Why $V$ must be finite-dimensional**: The additive group of a real vector space is locally compact $\\iff$ it is finite-dimensional. Infinite-dimensional real Banach spaces (such as $\\ell^{2}$) **fail to be locally compact** and fall outside the scope of the structure theorem.\n\n**What an open subgroup means**: $V \\oplus K \\subseteq M$ is an open subgroup, so the cokernel $D = M/(V\\oplus K)$ carries the quotient topology. Because $V \\oplus K$ is open, the quotient is **discrete**. Openness is what makes the quotient discrete.\n\n⭐ **This theorem drives Chapter 8.** It is used to show that higher Ext groups between locally compact abelian groups vanish. Since every object is built by extensions from three classes (discrete, finite-dimensional real Banach, and compact connected), it suffices to verify Ext vanishing for pairs from those classes. This reduces infinitely many kinds of groups to $3 \\times 3$ cases.\n\n**Proof (standard approach).**\n1. **Connected component**: $M^{0}$ (the connected component of the identity) is a closed subgroup. $M^0$ is a **connected locally compact abelian group**, and such groups are precisely those of the form $\\mathbb{R}^{n}\\times K$ (with $K$ a compact connected abelian group). This is classical theory (the no-small-subgroups property and Lie theory separate the compact subgroup part of $M^{0}$ from the vector group part).\n2. **Totally disconnected quotient**: $M/M^{0}$ is a **totally disconnected** locally compact Hausdorff group. Such a group has a **compact open subgroup** (take a compact neighborhood of the identity and then the closure of the subgroup it generates).\n3. **Putting the pieces together**: Take $M_{1}$ to be the preimage of a compact open subgroup. Then $M_{1}$ is open and $M_{1}/M^{0}$ is compact. Thus $M_{1}$ is an extension of the compact group $K$ by $\\mathbb{R}^{n}$: $0 \\to K \\to M_{1} \\to \\mathbb{R}^{n} \\to 0$.\n4. **Splitting the extension**: $\\mathbb{R}^{n}$ is a **vector group**, and an extension of a compact group by a vector group splits (average over the compact direction, or use a local section and compactness to globalize it). Hence $M_{1} \\cong \\mathbb{R}^{n}\\times K$ ✓.\n5. **Discrete quotient**: $M_{1}$ is open $\\implies$ $D := M/M_{1}$ is **discrete** in the quotient topology ✓, so $0\\to V\\oplus K\\to M\\to D\\to 0$ is exact. ∎\n**Standard reference**: Morris (as above).",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -31051,10 +31074,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#23c132c8",
       "notes": "v0.9.3#3f4dd6a8"
@@ -31077,7 +31102,7 @@
     "紧群"
    ],
    "statement": "设 $M$ 是**局部紧 Hausdorff 阿贝尔群**。则 $M$ 含有一个**开**子群，它同构于\n\n$$V \\oplus K,$$\n\n其中 $V$ 是**有限维实向量空间**（看作加法群）、$K$ 是**紧 Hausdorff 阿贝尔群**。\n\n等价地说：存在正合列\n\n$$0 \\longrightarrow V \\oplus K \\longrightarrow M \\longrightarrow D \\longrightarrow 0,$$\n\n其中 $D$ 是**离散**阿贝尔群。",
-   "notes": "**怎么读这条。** 局部紧 Hausdorff 阿贝尔群看着种类繁多，其实只有三种「基本块」：**离散群**、**有限维实向量空间**、**紧 Hausdorff 群**。这条定理说：任意一个这样的群，都是「$V \\oplus K$」被一个离散群扩张出来的。\n\n**为什么 $V$ 必须有限维**：实向量空间的加法群局部紧 $\\iff$ 有限维。无限维的实 Banach 空间（如 $\\ell^{2}$）**不局部紧**，所以不在结构定理的覆盖范围内。\n\n**「开子群」是什么意思**：$V \\oplus K \\subseteq M$ 是一个开子群，于是余核 $D = M/(V\\oplus K)$ 带商拓扑 —— 由于 $V \\oplus K$ 开，商是**离散**的。开性正是让商离散的原因。\n\n⭐ **它是第 8 章的引擎**。「局部紧阿贝尔群之间的高次 Ext 消失」那一步，用的就是这条定理：既然每个对象都是「离散 / 有限维实 Banach / 紧连通」三类扩张出来的，那么只要对这三类交叉验证 Ext 的消失就够了 —— 也就是把无穷多种群的情形归约成 $3 \\times 3$ 种。\n\n**证明（标准路线）。**\n1. **连通部分**：$M^{0}$（单位元的连通分支）是闭子群。$M^0$ 是**连通局部紧阿贝尔群**，而这一类群恰好形如 $\\mathbb{R}^{n}\\times K$（$K$ 紧连通阿贝尔群）—— 这一步是经典理论（用「无小子群」/Lie 理论把 $M^{0}$ 的紧子群部分与向量群部分分开）。\n2. **全不连通商**：$M/M^{0}$ 是**全不连通**的局部紧 Hausdorff 群；这类群必有**开紧子群**（取单位元的紧邻域并取它生成的子群的闭包）。\n3. **拼起来**：取 $M_{1}$ 为某个开紧子群的原像，则 $M_{1}$ 开、$M_{1}/M^{0}$ 紧。于是 $M_{1}$ 是紧群 $K$ 被 $\\mathbb{R}^{n}$ 扩张：$0 \\to K \\to M_{1} \\to \\mathbb{R}^{n} \\to 0$。\n4. **扩张分裂**：$\\mathbb{R}^{n}$ 是**向量群**，而「紧群被向量群扩张必分裂」（对紧方向取平均 / 用局部截面 + 紧性把它整体化），故 $M_{1} \\cong \\mathbb{R}^{n}\\times K$ ✓。\n5. **余商离散**：$M_{1}$ 开 $\\implies$ $D := M/M_{1}$ 带商拓扑是**离散**的 ✓，于是 $0\\to V\\oplus K\\to M\\to D\\to 0$ 正合。∎\n**标准出处**：Morris（同上）。",
+   "notes": "**怎么读这条。** 局部紧 Hausdorff 阿贝尔群看着种类繁多，其实只有三种「基本块」：**离散群**、**有限维实向量空间**、**紧 Hausdorff 群**。这条定理说：任意一个这样的群，都是「$V \\oplus K$」被一个离散群扩张出来的。\n\n**为什么 $V$ 必须有限维**：实向量空间的加法群局部紧 $\\iff$ 有限维。无限维的实 Banach 空间（如 $\\ell^{2}$）**不局部紧**，所以不在结构定理的覆盖范围内。\n\n**「开子群」是什么意思**：$V \\oplus K \\subseteq M$ 是一个开子群，于是余核 $D = M/(V\\oplus K)$ 带商拓扑 —— 由于 $V \\oplus K$ 开，商是**离散**的。开性正是让商离散的原因。\n\n⭐ **它是第 8 章的引擎**。「局部紧阿贝尔群之间的高次 Ext 消失」那一步，用的就是这条定理：既然每个对象都是「离散 / 有限维实 Banach / 紧连通」三类扩张出来的，那么只要对这三类交叉验证 Ext 的消失就够了 —— 也就是把无穷多种群的情形归约成 $3 \\times 3$ 种。\n\n**标准出处**：Morris（同上）。",
    "refs": [
     "Le Stum, Theorem 6.2.5",
     "Morris, Pontryagin Duality and the Structure of Locally Compact Abelian Groups"
@@ -31276,7 +31301,7 @@
     "等价关系"
    ],
    "statement": "在 $\\mathrm{Cond}$ 中，每个满态射 $f : X \\to Y$ 都是**正则**的：它是它自己那对投影的余等化子，\n\n$$Y \\cong \\operatorname{coeq}\\bigl(X \\times_{Y} X \\rightrightarrows X\\bigr).$$",
-   "notes": "**在说什么。** 一般的范畴里，「满态射」（右边可消）和「余等化子」（是某对映射的商）是两个不同的概念。拓扑斯里两者**重合** —— 这就是为什么在拓扑斯里可以放心地「取商」：任何满态射都真的在商掉一个等价关系。\n\n**$X \\times_{Y} X \\rightrightarrows X$ 是什么**：$X \\times_{Y} X = \\{\\, (x, x') : f(x) = f(x') \\,\\}$ 是 $f$ 的**核对**；\n\n它的两个投影就是那对映射。\n\n余等化子就是把「被 $f$ 认同的点」粘起来 —— 粘出来的结果正好是 $Y$。\n\n📌 这条与下一条（等价关系有效）是同一枚硬币的两面：这条说「商是良态的」，下一条说「每个等价关系都能当成某个商来出现」。\n\n**证明。** 一般范畴里「满」与「有效满」是两个概念；拓扑斯里两者重合。\n- 先看「$f$ 有效 $\\implies$ $f$ 满」：有效满按定义是余等化子，而余等化子总是满的。\n- 再看「$f: X \\to Y$ 满 $\\implies$ 有效」：令 $\\bar f : \\operatorname{coeq}(X \\times_{Y} X \\rightrightarrows X) \\to Y$ 为余等化子的泛性质给出的映射，它是满的，且由余等化子的泛性质本身就单 —— 于是只需证 **$\\bar f$ 是满**这一点在层论上「局部能验」。\n- 具体验：满态射的局部判据说 $f$ 在**自由**紧 Hausdorff 对象上逐点满（$X(F) \\to Y(F)$ 是满射）。\n\n取 $y \\in Y(F)$，有原像 $x \\in X(F)$；\n\n把 $x$ 送到余等化子，再送回来还是 $y$ —— 于是 $\\bar f$ 在 $F$ 上满。\n\n$\\bar f$ 单且满，故是同构，$f$ 是它自己核对对的余等化子。\n\n∎",
+   "notes": "**在说什么。** 一般的范畴里，「满态射」（右边可消）和「余等化子」（是某对映射的商）是两个不同的概念。拓扑斯里两者**重合** —— 这就是为什么在拓扑斯里可以放心地「取商」：任何满态射都真的在商掉一个等价关系。\n\n**$X \\times_{Y} X \\rightrightarrows X$ 是什么**：$X \\times_{Y} X = \\{\\, (x, x') : f(x) = f(x') \\,\\}$ 是 $f$ 的**核对**；\n\n它的两个投影就是那对映射。\n\n余等化子就是把「被 $f$ 认同的点」粘起来 —— 粘出来的结果正好是 $Y$。\n\n📌 这条与下一条（等价关系有效）是同一枚硬币的两面：这条说「商是良态的」，下一条说「每个等价关系都能当成某个商来出现」。",
    "refs": [
     "Le Stum, §4.1"
    ]
@@ -31319,7 +31344,7 @@
     "Giraud"
    ],
    "statement": "在 $\\mathrm{Cond}$ 中，每个等价关系 $R \\rightrightarrows X$（即 $R \\subseteq X \\times X$ 是一个「自反、对称、传递」的子对象）都是**有效的**：\n\n$$R \\cong X \\times_{Y} X,\\qquad Y := \\operatorname{coeq}\\bigl(R \\rightrightarrows X\\bigr).$$\n\n也就是说：等价关系的商存在，而且 $R$ 恰好是那个商的核对。",
-   "notes": "**「有效」是什么意思。** 给定一个等价关系，先取商 $Y = X/R$（这总能做），再把 $Y$ 沿商映射拉回 $X \\times X$。一般范畴里拉回来的东西可能**比 $R$ 大**（多粘了一些东西）。有效等价关系就是**恰好拉回 $R$ 自己**的那些。\n\n**为什么它重要**：只有有效等价关系才能「商了再拉回来还原」，也就是「取商」这个操作**不丢信息**。聚集到 $\\mathrm{Cond}$ 上，这条保证：把两个紧 Hausdorff 块按一个等价关系粘起来，得到的商对象在层论意义上「就是」那个等价关系本身。\n\n⭐ **这三条合起来正好是 Giraud 定理的输入**：一个有所有余极限、余极限万有且有效等价关系有效的范畴就是拓扑斯。反过来说，$\\mathrm{Cond}$ 是拓扑斯这件事可以从这三条**逐条验证**，不必回到「它是一个景上的层范畴」那个定义。\n\n📌 与「Cond 是拓扑斯」那条合起来看：那条给**结论**，这三条给**理由**；有了理由，才知道 $\\mathrm{Cond}$ 的拓扑斯结构具体好在哪里（能做商、能做内部 Hom、能做层上同调）。\n\n**证明。** 给定 $R \\rightrightarrows X$。\n\n因为 $\\mathrm{Cond}$ 有余极限，商 $Y := \\operatorname{coeq}(R \\rightrightarrows X)$ 存在，且商映射 $q : X \\to Y$ 满（余等化子总是满）。\n\n由**上一条**，$q$ 是有效满：$q$ 是 $X \\times_{Y} X \\rightrightarrows X$ 的余等化子。\n现在比较 $R$ 与 $X\\times_{Y} X$：\n- 两个投影 $R \\rightrightarrows X$ 复合到 $Y$ 相同（余等化子的定义），故 $R \\subseteq X \\times_{Y} X$；\n- 反过来，$X \\times_{Y} X$ 是「被 $q$ 认同的点对」，而层论上「$q$ 在两个点上取同值」这件事可以在**覆盖上逐点验**：取覆盖 $(X_{i} \\to X)$，$X\\times_{Y}X$ 在每块上就是 $R$ 在每块上的值（用 $X$ 与 $R$ 的层条件 + 余等化子的泛性质），于是 $X \\times_{Y} X \\subseteq R$。\n两边互包，$R \\cong X \\times_{Y} X$ —— 这正是有效性，也正是 Giraud 判据里那一条。∎",
+   "notes": "**「有效」是什么意思。** 给定一个等价关系，先取商 $Y = X/R$（这总能做），再把 $Y$ 沿商映射拉回 $X \\times X$。一般范畴里拉回来的东西可能**比 $R$ 大**（多粘了一些东西）。有效等价关系就是**恰好拉回 $R$ 自己**的那些。\n\n**为什么它重要**：只有有效等价关系才能「商了再拉回来还原」，也就是「取商」这个操作**不丢信息**。聚集到 $\\mathrm{Cond}$ 上，这条保证：把两个紧 Hausdorff 块按一个等价关系粘起来，得到的商对象在层论意义上「就是」那个等价关系本身。\n\n⭐ **这三条合起来正好是 Giraud 定理的输入**：一个有所有余极限、余极限万有且有效等价关系有效的范畴就是拓扑斯。反过来说，$\\mathrm{Cond}$ 是拓扑斯这件事可以从这三条**逐条验证**，不必回到「它是一个景上的层范畴」那个定义。\n\n📌 与「Cond 是拓扑斯」那条合起来看：那条给**结论**，这三条给**理由**；有了理由，才知道 $\\mathrm{Cond}$ 的拓扑斯结构具体好在哪里（能做商、能做内部 Hom、能做层上同调）。",
    "refs": [
     "Le Stum, §4.1"
    ]
@@ -31531,7 +31556,7 @@
     "单纯对象"
    ],
    "statement": "设 $M$ 是景 $\\mathcal{C}$ 上的阿贝尔层，$X \\in \\mathcal{C}$。取 $M$ 的一个**超覆盖**（即一个复形 $F_{\\bullet} \\to M$，其中每个 $F_{n}$ 是若干可表层的直和，且增广后处处正合）。则 $M$ 的上同调等于「逐层取截面」得到的**单纯阿贝尔群**的同伦群：\n\n$$H^{n}(X,\\ M) \\cong \\pi^{n}\\bigl(\\Gamma(X,\\ F_{\\bullet})\\bigr).$$",
-   "notes": "**在说什么。** 层上同调的定义是「取内射消解、取截面、取上同调」，而内射消解**无法计算**（内射对象太大）。这条给出一个**能算的替代品**：把内射消解换成「自由 / 可表对象的消解」，逐层取截面之后得到一个单纯阿贝尔群（或链复形），它的同伦群就是 $H^{n}$。\n\n**为什么可行**：$F_{n}$ 由可表对象组成时，截面 $\\Gamma(X, F_{n})$ 是可以直接写下来的（就是 $F_{n}$ 在该对象上的值）。而两个消解之间的映射给出**链同伦**，所以算出来的同伦群与消解的选取无关。\n\n⭐ **这就是 Godement 分解的现代形式，也是 $\\infty$-范畴方法的入口**：在 $\\infty$-范畴的语言里，「超覆盖」被换成「$X$ 的单纯分解」，而上同调就是那个单纯对象的映射空间的同伦群。整个导出代数几何的层上同调计算都走这条路。\n\n**证明。** 分两步。\n- **超覆盖的每一项在 $\\Gamma(X, -)$ 下零调。** $F_{n}$ 是可表层的直和，而 $\\Gamma(X, h_{U}) = \\operatorname{Hom}(X, U)$ 直接可算；\n\n「有截面 $\\implies$ 高阶为零」那套（$\\mathbb{Z}\\cdot h_{X}$ 是投射对象，投射 $\\implies$ 无环）保证 $H^{p}(\\Gamma(X, F_{n})) = 0$（$p > 0$）。\n- **于是 $F_{\\bullet} \\to M$ 就是一个「由 $\\Gamma(X, -)$-零调对象组成的消解」。** 把 Leray 零调性搬过来：$R\\Gamma(X, M)$ 可以直接用 $\\Gamma(X, F_{\\bullet})$ 这个复形算，即 $H^{n}(X, M) = H^{n}\\bigl(\\Gamma(X, F_{\\bullet})\\bigr)$。\n最后把链复形读成单纯阿贝尔群（Dold–Kan：单纯阿贝尔群的同伦群就是归一化链复形的上同调），就得到 $H^{n}(X, M) \\cong \\pi^{n}(\\Gamma(X, F_{\\bullet}))$。两个超覆盖之间的比较给出链同伦（投射性 / 已有的 Ext 论证），所以右边与超覆盖的选取无关。∎\n\n📌 **三个输入**：单纯对象、单纯形范畴的定义（已有），以及 Čech 复形（已有的「便宜算法」）。这条把它们接成一台计算上同调的机器。",
+   "notes": "**在说什么。** 层上同调的定义是「取内射消解、取截面、取上同调」，而内射消解**无法计算**（内射对象太大）。这条给出一个**能算的替代品**：把内射消解换成「自由 / 可表对象的消解」，逐层取截面之后得到一个单纯阿贝尔群（或链复形），它的同伦群就是 $H^{n}$。\n\n**为什么可行**：$F_{n}$ 由可表对象组成时，截面 $\\Gamma(X, F_{n})$ 是可以直接写下来的（就是 $F_{n}$ 在该对象上的值）。而两个消解之间的映射给出**链同伦**，所以算出来的同伦群与消解的选取无关。\n\n⭐ **这就是 Godement 分解的现代形式，也是 $\\infty$-范畴方法的入口**：在 $\\infty$-范畴的语言里，「超覆盖」被换成「$X$ 的单纯分解」，而上同调就是那个单纯对象的映射空间的同伦群。整个导出代数几何的层上同调计算都走这条路。\n\n📌 **三个输入**：单纯对象、单纯形范畴的定义（已有），以及 Čech 复形（已有的「便宜算法」）。这条把它们接成一台计算上同调的机器。",
    "refs": [
     "Le Stum, §7.3（配合 Lemma 7.3.2）"
    ]
@@ -31573,7 +31598,7 @@
     "谱序列"
    ],
    "statement": "设 $K^{\\bullet}$ 是阿贝尔范畴中的**下有界**复形。则存在下有界**双复形** $I^{\\bullet,\\bullet}$（即 $I^{p,q} = 0$ 对 $q < 0$）与复形态射 $K^{\\bullet} \\to I^{\\bullet,0}$，使得\n\n- 每个 $K^{p} \\to I^{p,\\bullet}$ 是**内射消解**；\n- 每个 $H^{p}(K^{\\bullet}) \\to H^{p}(I^{\\bullet,\\bullet})$ 也是**内射消解**。",
-   "notes": "**为什么需要它。** 双复形可以按两种方式过滤（先按列、或先按行），各得一条谱序列。要让这两条谱序列**同时**收敛到同一个总复形的上同调，就必须在构造上保证「行和列都是内射消解」—— 这正是 Cartan–Eilenberg 分解给出的东西。\n\n**「$H^{p}$ 那一层也是内射消解」是关键的额外要求**：只要求每列是内射消解还不够（那样第二条谱序列会退化）；要求上同调层也是内射消解，才能让两条过滤都读到完整信息。\n\n⭐ **用在哪**：推导「两个导出函子的复合 = 谱序列」（Grothendieck 谱序列）、以及导出范畴里「有界下有界复形可以换成分解」的标准论证，都要先有这条。\n\n**构造（归纳 + 马蹄引理）。** 记 $Z^{p} := \\ker d^{p}$、$B^{p} := \\operatorname{im} d^{p-1}$，于是每个 $p$ 有两条短正合列\n$$0 \\to Z^{p} \\to K^{p} \\to B^{p+1} \\to 0, \\qquad 0 \\to B^{p} \\to Z^{p} \\to H^{p}(K^{\\bullet}) \\to 0 .$$\n- 对**大序数/整个复形同时**取内射消解：先取 $K^{p}$ 的内射消解 $I^{p,\\bullet}$，再用**马蹄引理**（horseshoe lemma）把它与 $B^{p+1}$、$Z^{p}$ 的消解拼起来 —— 因为 $B^{p+1}$ 与 $Z^{p}$ 的消解可以从 $K^{p}$ 的消解里「切」出来；\n- 两条正合列各用一次马蹄引理，就能保证**同时**满足两个要求：每个 $K^{p} \\to I^{p,\\bullet}$ 是内射消解，且每个 $H^{p}(K^{\\bullet}) \\to H^{p}(I^{\\bullet,\\bullet})$ 也是内射消解（后者靠第二条正合列与「分次内射」的逐层内射性）；\n- 下有界：从最小的 $p$ 起递推，$q < 0$ 的层取 $0$。∎\n⚠️ 第二条要求是关键：只要求「每列是内射消解」不够，那样按行的过滤会退化；要求**上同调层也是内射消解**，两条过滤才都读到完整信息。",
+   "notes": "**为什么需要它。** 双复形可以按两种方式过滤（先按列、或先按行），各得一条谱序列。要让这两条谱序列**同时**收敛到同一个总复形的上同调，就必须在\n⚠️ 第二条要求是关键：只要求「每列是内射消解」不够，那样按行的过滤会退化；要求**上同调层也是内射消解**，两条过滤才都读到完整信息。",
    "refs": [
     "Le Stum, Lemma 7.2.19"
    ]
@@ -36662,7 +36687,7 @@
    "notes_en": "**Proof.** First build the tensor product on free modules: take $\\mathbb{Z}\\cdot(M \\times N)$ (the free abelian group) and quotient by the \"bilinear relations\"\n\n$$(m + m', n) \\sim (m, n) + (m', n), \\quad (m, n + n') \\sim (m, n) + (m, n'), \\quad (am, n) \\sim a(m,n) \\sim (m, an) ✓$$\n\nA general module is a quotient of a free one (take a presentation) ✓, and the tensor product over the quotient is the quotient ✓. Then $M \\times N \\to M \\otimes N$ is bilinear ✓, and any bilinear map $M \\times N \\to P$ factors uniquely through it ✓ — that is exactly the universal property ✓. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -36675,10 +36700,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#fa47dc3f",
       "notes": "v0.9.3#e7ade41a"
@@ -36700,7 +36727,7 @@
     "泛性质"
    ],
    "statement": "张量积 $M \\otimes_{\\mathbb{Z}} N$（resp. $M \\otimes_{k} N$）对 $\\mathbb{Z}$-双线性（resp. $k$-双线性）映射**万有**：\n\n$$\\operatorname{Bil}_{\\mathbb{Z}}(M \\times N,\\ P) \\;\\cong\\; \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(M \\otimes_{\\mathbb{Z}} N,\\ P\\bigr),$$\n\n左边的双线性映射与右边的群同态一一对应。",
-   "notes": "**证明。** 先造自由模上的张量积：取 $\\mathbb{Z}\\cdot(M \\times N)$（自由阿贝尔群），商掉「双线性关系」\n\n$$(m + m', n) \\sim (m, n) + (m', n), \\quad (m, n + n') \\sim (m, n) + (m, n'), \\quad (am, n) \\sim a(m,n) \\sim (m, an) ✓$$\n\n一般模由自由模商出（取表现）✓，商上的张量积就是商 ✓。这时 $M \\times N \\to M \\otimes N$ 双线性 ✓，任何双线性映射 $M \\times N \\to P$ 唯一地穿过它 ✓ —— 这正是万有性质 ✓。∎",
+   "notes": "",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.21"
    ]
@@ -40230,7 +40257,7 @@
    "notes_en": "⭐ This classification is not just terminology in the graph: **the discontinuities of a monotone function are all jumps, and there are at most countably many of them** — that is the starting point of the BV and measure-theory cluster (the atoms of $\\mu_F$, $F' = 0$ a.e.).\n\n⚠ The point of “removable” is that $f$ is **defined at $x_0$ but does not equal the limit**: for example $f(x) = \\sin x / x$ becomes continuous after filling in $f(0) = 1$.\n\nWhen $x_0$ is not in the domain at all (e.g. $1/x$ at $0$), it does not count as a discontinuity with domain $0$.\n\n⭐ The typical second-kind example: $\\sin(1/x)$ at $0$ (oscillation, the limit does not exist).\n\n**Proof** (the classification is exhaustive).\n\nAt a discontinuity $x_0$, each one-sided limit has only two states: exists and is finite, or does not exist / is infinite.\n\nThus “both one-sided limits are finite” and “at least one fails” are mutually exclusive and exhaustive, and the former splits according to whether the two limits are equal into removable and jump — the three cases are mutually exclusive and all possibilities are listed.\n\n∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -40243,10 +40270,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#4ec39df9",
       "notes": "v0.9.3#a2a1efff"
@@ -40266,7 +40295,7 @@
     "连续"
    ],
    "statement": "设 $f$ 在 $x_0$ 的去心邻域上有定义，但在 $x_0$ 处**不连续**。称 $x_0$ 是 $f$ 的**间断点**，并按两个单侧极限是否存在分成两类：\n\n**第一类**：$\\lim_{x \\to x_0^{-}} f(x)$ 与 $\\lim_{x \\to x_0^{+}} f(x)$ 都存在（有限）。其中\n\n- **可去间断**：两个单侧极限相等（记公共值 $L$）。此时把 $f(x_0)$ 改定义为 $L$ 就连续了；\n- **跳跃间断**：两个单侧极限不相等，差 $f(x_0^{+}) - f(x_0^{-})$ 叫**跳跃**。\n\n**第二类**：至少有一个单侧极限不存在，或为 $\\pm\\infty$。",
-   "notes": "⭐ 这一分类在图上不只是名词：**单调函数的间断点全是跳跃间断，而且这样的点至多可数** —— 那是 BV 与测度论那一团（$\\mu_F$ 的原子、$F' = 0$ a.e.）的起点。\n\n⚠ 「可去」的关键是 $f$ 在 $x_0$ 处**有定义但不等于极限**：例如 $f(x) = \\sin x / x$ 补上 $f(0) = 1$ 就连续。\n\n$x_0$ 根本不在定义域里时（如 $1/x$ 在 $0$）不算以 $0$ 为定义域上的间断点。\n\n⭐ 第二类的典型：$\\sin(1/x)$ 在 $0$ 处（振荡，极限不存在）。\n\n**证明**（分类是穷尽的）。\n\n在间断点 $x_0$ 处，每个单侧极限只有两种状态：存在且有限，或不存在 / 为无穷。\n\n于是「两个单侧极限都有限」与「至少一个不满足」互斥且穷尽，前者再按两侧极限是否相等分成可去与跳跃两类 —— 三种情形互斥且已列出全部可能。\n\n∎",
+   "notes": "⭐ 这一分类在图上不只是名词：**单调函数的间断点全是跳跃间断，而且这样的点至多可数** —— 那是 BV 与测度论那一团（$\\mu_F$ 的原子、$F' = 0$ a.e.）的起点。\n\n⚠ 「可去」的关键是 $f$ 在 $x_0$ 处**有定义但不等于极限**：例如 $f(x) = \\sin x / x$ 补上 $f(0) = 1$ 就连续。\n\n$x_0$ 根本不在定义域里时（如 $1/x$ 在 $0$）不算以 $0$ 为定义域上的间断点。\n\n⭐ 第二类的典型：$\\sin(1/x)$ 在 $0$ 处（振荡，极限不存在）。",
    "refs": [
     "Rudin, Principles of Mathematical Analysis, Ch. 4"
    ]
@@ -68846,7 +68875,7 @@
     "商空间"
    ],
    "statement": "设 $M$ 是 $n$ 维光滑流形，有限群 $\\Gamma$ 光滑地作用在 $M$ 上，且作用**自由**（$g\\ne e$ 时 $gx\\ne x$）、**真不连续**（每个 $x$ 有开邻域 $U$ 使 $gU\\cap U=\\emptyset$ 对所有 $g\\ne e$）。则轨道空间 $M/\\Gamma$ 有唯一的光滑结构使商映射 $\\pi:M\\to M/\\Gamma$ 是局部微分同胚；特别地 $M/\\Gamma$ 是 $n$ 维光滑流形。",
-   "notes": "**开邻域**：对每个 $x\\in M$，因 $\\Gamma$ 有限且自由，对每个 $g\\ne e$ 有 $gx\\ne x$。由 $M$ Hausdorff，取 $x$ 与 $gx$ 的互不相交开邻域；对有限多个 $g$ 取交并回拉，得到 $x$ 的开邻域 $U$ 使 $gU\\cap U=\\emptyset$（$g\\ne e$）。\n\n\n\n**局部单射与开映射**：若 $u,v\\in U$ 且 $\\pi(u)=\\pi(v)$，则 $v=gu$，故 $u\\in U\\cap g^{-1}U$；由 $gU\\cap U=\\emptyset$（$g\\ne e$）得 $g=e$，$u=v$。所以 $\\pi|_{U}$ 是单射；又群作用的商映射是开映射，故 $\\pi|_{U}:U\\to\\pi(U)$ 是同胚。\n\n\n\n**图册**：取 $M$ 的图卡 $(U,\\varphi)$ 且 $U$ 满足上条；定义 $M/\\Gamma$ 上的卡 $(\\pi(U),\\varphi\\circ(\\pi|_{U})^{-1})$。这些 $\\pi(U)$ 覆盖 $M/\\Gamma$。若 $\\pi(z)\\in\\pi(U)\\cap\\pi(V)$，取 $h\\in\\Gamma$ 使 $hz\\in V$；在 $z$ 附近 $\\pi|_{V}^{-1}\\circ\\pi=h$（因为 $\\pi\\circ h=\\pi$，且 $hu\\in V$ 对 $u$ 靠近 $z$ 成立），故转移映射局部等于 $\\psi\\circ h\\circ\\varphi^{-1}$，是光滑的。\n\n\n\n**拓扑条件**：$M/\\Gamma$ 作为第二可数空间 $M$ 的商仍第二可数；又 $\\Gamma$ 有限且作用真不连续，不同轨道的饱和邻域可分离（对有限多个 $g$ 取 $gx$ 与 $\\Gamma y$ 的分离邻域），故 $M/\\Gamma$ Hausdorff。\n\n\n\n**唯一性**：若两种光滑结构都使 $\\pi$ 为局部微分同胚，则恒等映射在这两种结构下都是局部微分同胚，从而是微分同胚，两种结构相同。∎",
+   "notes": "",
    "refs": [
     "Lee, Introduction to Smooth Manifolds (2nd ed.), Ch. 21 · quotient manifolds",
     "Hatcher, Algebraic Topology, Ch. 1 §1.3 · covering space actions"
@@ -71720,7 +71749,7 @@
     "定理"
    ],
    "statement": "设 $I, J$ 是环 $A$ 的两个理想且 $I + J = A$。则\n\n$$A/(I \\cap J) \\;\\cong\\; A/I \\times A/J, \\qquad a \\longmapsto (a \\bmod I,\\ a \\bmod J) .$$\n\n更一般地：若 $I_{1}, \\cdots, I_{k}$ 两两互素，则\n\n$$A\\Big/\\bigcap_{i} I_{i} \\;\\cong\\; \\prod_{i=1}^{k} A/I_{i} .$$",
-   "notes": "**构造**：由互素写 $1 = u + v$（$u \\in I$、$v \\in J$），令 $e := u$（于是 $e \\in I$、$e \\equiv 1 \\pmod J$）。则\n\n\n\n$$e \\equiv 0 \\pmod I, \\qquad e \\equiv 1 \\pmod J, \\qquad e^{2} \\equiv e \\pmod{I \\cap J} .$$\n\n\n\n（$e$ 不是幂等元本身：$e(1-e)=uv\\in IJ\\subseteq I\\cap J$，只在模 $I\\cap J$ 的意义下幂等；又 $1-e=v$。）于是对任意右端 $(x, y)$，元素 $a = x(1-e) + y e = xv + yu$ 满足 $a \\equiv x \\pmod I$、$a \\equiv y \\pmod J$ —— 存在性。唯一性：两解之差被 $I$ 与 $J$ 同时整除，故落在 $I \\cap J$。\n\n\n\n**同构**：由第一同构定理（`thm.first-iso`），核是 $I \\cap J$、商掉即得；满射由上面的构造给出。\n\n\n\n**分母可以写成乘积**：互素时 $I \\cap J = IJ$（见 `def.comaximal`），所以也常写成 $A/IJ \\cong A/I \\times A/J$。\n\n\n\n**与数论的关系**：取 $A = \\mathbb{Z}$、$I = (m)$、$J = (n)$、$\\gcd(m,n) = 1$，就是 `thm.crt`：$\\mathbb{Z}/(mn) \\cong \\mathbb{Z}/m \\times \\mathbb{Z}/n$。\n\n这条环论形式才是它的「正确形状」—— 数论版只是 $A = \\mathbb{Z}$ 的特例。",
+   "notes": "**分母可以写成乘积**：互素时 $I \\cap J = IJ$（见 `def.comaximal`），所以也常写成 $A/IJ \\cong A/I \\times A/J$。\n\n\n\n**与数论的关系**：取 $A = \\mathbb{Z}$、$I = (m)$、$J = (n)$、$\\gcd(m,n) = 1$，就是 `thm.crt`：$\\mathbb{Z}/(mn) \\cong \\mathbb{Z}/m \\times \\mathbb{Z}/n$。\n\n这条环论形式才是它的「正确形状」—— 数论版只是 $A = \\mathbb{Z}$ 的特例。",
    "refs": [
     "Atiyah–Macdonald, Ch. 1",
     "Borevich–Shafarevich, Number Theory, Ch. 2"
@@ -78734,7 +78763,7 @@
     "凸集"
    ],
    "statement": "设 $H$ 是 Hilbert 空间，$C \\subseteq H$ 非空、**凸**、**闭**。则\n\n1. 每个 $x \\in H$ 有**唯一**的 $y = P_C(x) \\in C$ 使 $\\|x - y\\| = d(x, C)$；\n2. $y = P_C(x) \\iff \\operatorname{Re}\\langle x - y, z - y\\rangle \\le 0$ 对一切 $z \\in C$；\n3. $\\|P_C(x) - P_C(x')\\| \\le \\|x - x'\\|$（非扩张）；\n4. $P_C \\circ P_C = P_C$。",
-   "notes": "(1) 的证明全靠平行四边形法则：取极小化序列 $y_n$，则\n\n\n\n$$\\|y_n - y_m\\|^2 = 2\\|x - y_n\\|^2 + 2\\|x - y_m\\|^2 - 4\\Bigl\\| x - \\tfrac{y_n + y_m}{2} \\Bigr\\|^2 \\le 2(d^2 + \\tfrac1n) + 2(d^2 + \\tfrac1m) - 4d^2 \\to 0 ,$$\n\n\n\n（中间那个点落在 $C$ 里，所以它的距离 $\\ge d$）—— Cauchy 列 + $C$ 闭给出极限。唯一性同式取两个最小点即得。\n\n(2) 是「变分不等式」：对 $z \\in C$、$t \\in (0,1)$，$y + t(z-y) \\in C$，展开 $\\|x - (y + t(z-y))\\|^2 \\ge d^2$、舍 $t^2$ 项。\n\n⚠️ **凸**不能去掉：$\\mathbb{R}^2$ 的单位圆周上最近点不唯一；闭但不能去掉：开圆盘里没有最近点。\n\n⭐ 这是无穷维里「极小元存在」最干净的样本：强制性（$\\|x\\| \\to \\infty$）+ 弱下半连续 + 凸，就能推出存在性；这里的凸集不然。\n\n\n\n**四条里第一条是“存在+唯一”，第二条才是“怎么算”，后两条是推论**：\n\n- **① 存在且唯一**：存在用**极小化序列 + 凸性取中点**（$\\frac{x_{n}+x_{m}}{2}$ 仍在 $C$ 里，于是 $\\lVert\\cdot\\rVert^{2}$ 的平行四边形法则给 Cauchy），唯一用**严格凸性**（内积空间的范数是严格凸的：等号只在同一点）。⚠️ 这一步**要完备性**（Hilbert 而非一般内积空间，否则极小区间可能不收敛）。\n- **② 变分不等式**：$y = P_C(x)$ $\\iff$ $\\operatorname{Re}\\langle x-y, z-y\\rangle \\le 0$（$\\forall z\\in C$）。$(\\implies)$ 用 $y + t(z-y) \\in C$ 对 $t \\in (0,1)$ 展开 $\\lVert x - (\\cdot)\\rVert^2$ 取 $t \\to 0$；$(\\Leftarrow)$ 由同一个展开式（凸性保证二次项 $\\ge 0$）。**这一条不需要完备性**（只要 $P_C(x)$ 存在）。\n- **③ 非扩张**：**由 ② 两边相加**（对 $x$ 与 $x'$ 各写一次变分不等式）得 $\\lVert P x - P x'\\rVert^2 \\le \\operatorname{Re}\\langle x - x', Px - Px'\\rangle$，再 Cauchy–Schwarz。\n- **④ 幂等**：$y \\in C$ 时 $P_C(y) = y$（距离为 $0$ 且唯一）。\n\n⚠️ **凸性与闭性都不可去**：非凸闭集最小点可以不唯一（圆周上两点等距）；凸但非闭可以没有最小点（$\\mathbb{R}^{2}$ 里的开半平面）。⚠️ **复 Hilbert 空间要写 $\\operatorname{Re}\\langle\\cdot,\\cdot\\rangle$**，直接写 $\\le 0$ 会退化成对复数的比较（无意义）。\n\n\n\n\n**各方向用到的假设**（存在性有完备性代价，变分刻画是局部代数论证）：\n- 最近点 $\\implies$ 变分不等式：先要求 $y\\in C$，用凸性保证 $y+t(z-y)\\in C$，展开平方后令 $t\\to0$；不是定义展开，不需要完备性。\n- 变分不等式 $\\implies$ 最近点：仍须 $y\\in C$，平方展开即可，此方向甚至不用凸性、闭性或完备性。\n- 对所有 $x$ 的存在唯一性：用非空性、凸性、平行四边形恒等式、完备性及闭性；非凸圆周对圆心最近点不唯一，开区间对外点不取到距离。\n- 非扩张由两次变分不等式与 Cauchy–Schwarz 推出；幂等由距离为零及唯一性直接得，不是四条互相等价。\n",
+   "notes": "⚠️ **复 Hilbert 空间要写 $\\operatorname{Re}\\langle\\cdot,\\cdot\\rangle$**，直接写 $\\le 0$ 会退化成对复数的比较（无意义）。\n\n\n\n\n**各方向用到的假设**（存在性有完备性代价，变分刻画是局部代数论证）：\n- 最近点 $\\implies$ 变分不等式：先要求 $y\\in C$，用凸性保证 $y+t(z-y)\\in C$，展开平方后令 $t\\to0$；不是定义展开，不需要完备性。\n- 变分不等式 $\\implies$ 最近点：仍须 $y\\in C$，平方展开即可，此方向甚至不用凸性、闭性或完备性。\n- 对所有 $x$ 的存在唯一性：用非空性、凸性、平行四边形恒等式、完备性及闭性；非凸圆周对圆心最近点不唯一，开区间对外点不取到距离。\n- 非扩张由两次变分不等式与 Cauchy–Schwarz 推出；幂等由距离为零及唯一性直接得，不是四条互相等价。",
    "refs": [
     "Conway, A Course in Functional Analysis · Hilbert 空间与正交基"
    ]
@@ -82619,7 +82648,133 @@
     "域论"
    ],
    "statement": "设 $F$ 是域，$f \\in F[x]$ 是**非零**多项式。扩域 $K/F$ 叫 $f$ 的**分裂域**，如果\n\n- $f$ 在 $K[x]$ 中分解成**一次因子**的乘积：$f = c\\,(x - \\alpha_{1})\\cdots(x - \\alpha_{n})$，$c \\in F^{\\times}$；\n- 且 $K = F(\\alpha_{1}, \\ldots, \\alpha_{n})$ —— 由这些根**生成**，不多不少。",
-   "notes": "⭐ **存在性靠构造**（准则①）：把 $f$ 的一个不可约因子模掉，得到 $F_{1} = F[x]/(g)$，$f$ 在 $F_{1}$ 上多了一个根；对 $f / (x - \\alpha)$ 递归，最多 $\\deg f$ 步就停下来。所以分裂域**总是存在且次数 $\\le (\\deg f)!$**。\n\n⭐ **唯一性（同构意义下）**：两个分裂域之间存在 $F$-同构（保持 $F$ 不动的同构）。所以「$f$ 的分裂域」这个说法有意义 —— 但**只在同构意义下**，具体的域可以长得不一样。⚠ 证明要用「同构延拓」（把 $F$-同构延拓到 $F(\\alpha) \\to F'(\\alpha')$），本图未成节点。\n\n⭐ 例子：$f = x^{2} - 2$ 在 $\\mathbb{Q}$ 上：分裂域 $\\mathbb{Q}(\\sqrt{2})$，次数 2。$f = x^{3} - 2$ 在 $\\mathbb{Q}$ 上：根是 $\\sqrt[3]{2}, \\omega\\sqrt[3]{2}, \\omega^{2}\\sqrt[3]{2}$（$\\omega = e^{2\\pi i/3}$），分裂域 $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$，次数 **6** —— 注意它比 $\\mathbb{Q}(\\sqrt[3]{2})$（次数 3）大，因为**加一个根不等于加全部根**。这正是下面「正规扩张」要管的事。",
+   "notes": "⭐ 分裂域是「刚好装下全部根」的最小扩域：$K=F(\\alpha_{1},\\ldots,\\alpha_{n})$，只加根、不多加别的。\n\n⭐ **唯一性只在 $F$-同构意义下成立**：不同的域可以同构，所以「$f$ 的分裂域」是一个同构类而不是一个具体的域；见 `thm.splitting-field-unique`。\n\n⭐ 例子：$f = x^{2} - 2$ 在 $\\mathbb{Q}$ 上：分裂域 $\\mathbb{Q}(\\sqrt{2})$，次数 2。$f = x^{3} - 2$ 在 $\\mathbb{Q}$ 上：根是 $\\sqrt[3]{2}, \\omega\\sqrt[3]{2}, \\omega^{2}\\sqrt[3]{2}$（$\\omega = e^{2\\pi i/3}$），分裂域 $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$，次数 **6** —— 注意它比 $\\mathbb{Q}(\\sqrt[3]{2})$（次数 3）大，因为**加一个根不等于加全部根**。这正是下面「正规扩张」要管的事。",
+   "refs": [
+    "Lang, Algebra, Ch. V §2",
+    "Hungerford, Algebra, Ch. V §3"
+   ]
+  },
+  {
+   "id": "lem.isomorphism-extension",
+   "type": "lemma",
+   "label": "同构延拓",
+   "title": "同构延拓：把基域同构延到单代数扩张",
+   "label_en": "isomorphism extension",
+   "title_en": "isomorphism extension",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/lem.isomorphism-extension.en.md",
+   "en_html": false,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.galois",
+   "layer": 16,
+   "tags": [
+    "定理",
+    "代数",
+    "域论"
+   ],
+   "statement": "设 $\\sigma:F\\to F'$ 是域同构，$p\\in F[x]$ 不可约，$p^{\\sigma}\\in F'[x]$ 是系数逐项取 $\\sigma$ 的像所得多项式。若 $\\alpha$ 是 $p$ 在 $F$ 的扩域中的根，$\\alpha'$ 是 $p^{\\sigma}$ 在 $F'$ 的扩域中的根，则 $\\sigma$ 唯一地延拓为域同构 $\\tilde\\sigma:F(\\alpha)\\to F'(\\alpha')$，且 $\\tilde\\sigma(\\alpha)=\\alpha'$。",
+   "notes": "这是把基域上的同构搬到单代数扩张上的最小引理：$p$ 与 $p^{\\sigma}$ 不可约且次数相同，于是两个单扩张作为「模掉同一个不可约多项式」的商域同构。",
+   "refs": [
+    "Lang, Algebra, Ch. V §3",
+    "Hungerford, Algebra, Ch. V §2"
+   ]
+  },
+  {
+   "id": "thm.splitting-field-exists",
+   "type": "theorem",
+   "label": "分裂域存在",
+   "title": "分裂域存在：次数不超过 $n!$",
+   "label_en": "splitting field exists",
+   "title_en": "splitting field existence",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.splitting-field-exists.en.md",
+   "en_html": false,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.galois",
+   "layer": 16,
+   "tags": [
+    "定理",
+    "代数",
+    "域论"
+   ],
+   "statement": "设 $F$ 是域、$f\\in F[x]$ 非零，$n=\\deg f$。则 $f$ 在 $F$ 上有分裂域 $K$，且 $[K:F]\\le n!$。",
+   "notes": "次数界来自归纳构造：每添加一个根，次数乘以当前不可约因子的次数，最多 $n$ 步；这也是构造性证明给出的上界。",
+   "refs": [
+    "Lang, Algebra, Ch. V §2",
+    "Hungerford, Algebra, Ch. V §3"
+   ]
+  },
+  {
+   "id": "thm.splitting-field-unique",
+   "type": "theorem",
+   "label": "分裂域唯一",
+   "title": "分裂域唯一：同构意义下",
+   "label_en": "splitting field unique",
+   "title_en": "splitting field uniqueness",
+   "translations": {
+    "en": {
+     "status": "derived",
+     "version": null,
+     "fields": [
+      "name"
+     ],
+     "creative": [],
+     "fieldStatus": {
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {}
+    }
+   },
+   "en_page": "nodes/thm.splitting-field-unique.en.md",
+   "en_html": false,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.galois",
+   "layer": 17,
+   "tags": [
+    "定理",
+    "代数",
+    "域论"
+   ],
+   "statement": "设 $\\sigma:F\\to F'$ 是域同构，$f\\in F[x]$ 非零，$f^{\\sigma}$ 是系数像，$K/F$ 与 $K'/F'$ 分别是 $f$ 与 $f^{\\sigma}$ 的分裂域。则 $\\sigma$ 可延拓为域同构 $K\\to K'$；特别地，$f$ 在 $F$ 上的任意两个分裂域是 $F$-同构的。",
+   "notes": "这把「分裂域」从某个具体的域变成同构类；唯一性只到 $F$-同构，不能要求两个域相等。",
    "refs": [
     "Lang, Algebra, Ch. V §2",
     "Hungerford, Algebra, Ch. V §3"
@@ -82986,7 +83141,7 @@
     "域论"
    ],
    "statement": "设 $K/F$ 是**有限伽罗瓦扩张**，$G = \\operatorname{Gal}(K/F)$。则\n\n- 映射 $E \\mapsto \\operatorname{Gal}(K/E)$ 给出「中间域 $F \\subseteq E \\subseteq K$」与「$G$ 的子群」之间的**反序双射**\n（$E_{1} \\subseteq E_{2} \\iff \\operatorname{Gal}(K/E_{1}) \\supseteq \\operatorname{Gal}(K/E_{2})$）；\n- $[K:E] = |\\operatorname{Gal}(K/E)|$，且 $[E:F] = [G : \\operatorname{Gal}(K/E)]$；\n- $E/F$ 是**正规**扩张 $\\iff \\operatorname{Gal}(K/E) \\trianglelefteq G$；此时\n\n$$\\operatorname{Gal}(E/F) \\;\\cong\\; G \\big/ \\operatorname{Gal}(K/E).$$",
-   "notes": "**证明**：核心是 Artin 定理（有限自同构群的阶 = 大域对固定域的次数）。先证三个引理，再逐条推。记 $K^{H} := \\{x\\in K : \\sigma(x)=x\\ \\text{对一切}\\ \\sigma\\in H\\}$。\n\n**引理 1（Dedekind 线性无关）**：域 $K$ 的两两不同的自同构 $\\sigma_{1},\\ldots,\\sigma_{n}$，作为 $K\\to K$ 的函数，在 $K$ 上线性无关。证明：设 $\\sum_{i}c_{i}\\sigma_{i}=0$ 是非零关系、非零系数个数 $r$ 最少；则 $r\\ge 2$ 且 $c_{1},\\ldots,c_{r}\\ne 0$（重排后）。取 $x\\in K$ 使 $\\sigma_{1}(x)\\ne\\sigma_{2}(x)$。对任意 $y$，把关系作用在 $xy$ 上得 $\\sum c_{i}\\sigma_{i}(x)\\sigma_{i}(y)=0$，再减去 $\\sigma_{1}(x)\\sum c_{i}\\sigma_{i}(y)=0$，得 $\\sum_{i\\ge 2}c_{i}\\bigl(\\sigma_{i}(x)-\\sigma_{1}(x)\\bigr)\\sigma_{i}(y)=0.$ 这是非零关系（$i=2$ 项系数 $c_{2}(\\sigma_{2}(x)-\\sigma_{1}(x))\\ne 0$），非零系数个数 $\\le r-1$，矛盾。\n\n**引理 2**：$|\\operatorname{Aut}(K/F)|\\le [K:F]$。证明：设 $m=[K:F]$，取 $F$-基 $e_{1},\\ldots,e_{m}$。若 $n>m$ 个不同自同构 $\\sigma_{1},\\ldots,\\sigma_{n}$ 存在，则 $K^{m}$ 中 $n$ 个向量 $\\bigl(\\sigma_{i}(e_{1}),\\ldots,\\sigma_{i}(e_{m})\\bigr)$ 线性相关：存在不全为零的 $c_{i}\\in K$ 使 $\\sum_{i}c_{i}\\sigma_{i}(e_{j})=0$ 对每个 $j$，于是 $\\sum_{i}c_{i}\\sigma_{i}=0$ 在 $K$ 上成立，违背引理 1。\n\n**引理 3（Artin 定理）**：设 $G$ 是 $K$ 的有限自同构群、$n=|G|$、$F=K^{G}$。则 $[K:F]=n$。证明分两步。先证 $[K:F]\\le n$：反设 $m=[K:F]>n$，取 $F$-线性无关的 $x_{1},\\ldots,x_{n+1}\\in K$。方程组 $\\sum_{j=1}^{n+1}\\sigma_{i}(x_{j})c_{j}=0$（$i=1,\\ldots,n$）是 $n$ 个方程、$n+1$ 个未知量，有非零解 $c\\in K^{n+1}$。在所有非零解中取非零分量个数 $r$ 最小者。$r\\ge 2$：若只有 $c_{j}\\ne 0$，由 $\\sigma_{1}=\\operatorname{id}$ 的方程得 $c_{j}x_{j}=0$，与 $x_{j}\\ne 0$ 矛盾。重排并伸缩，使 $c_{r}=1$（于是 $c_{r}\\in F$）；若此时所有分量都落在 $F$，则由 $\\sigma_{1}=\\operatorname{id}$ 的方程 $\\sum c_{j}x_{j}=0$ 与 $x_{j}$ 的 $F$-线性无关得所有 $c_{j}=0$，与非零解矛盾。故有某个分量 $\\notin F$，它必不是第 $r$ 个；重排前 $r-1$ 个分量使 $c_{1}\\notin F$。取 $\\tau\\in G$ 使 $\\tau(c_{1})\\ne c_{1}$。把方程组逐项作用 $\\tau$，并由 $\\{\\tau\\sigma_{i}\\}=\\{\\sigma_{i}\\}$ 重排，知 $\\bigl(\\tau(c_{j})\\bigr)$ 也是解；相减得解 $d_{j}=c_{j}-\\tau(c_{j})$：$d_{r}=0$、$d_{1}\\ne 0$，故非零分量个数 $\\le r-1$，矛盾。于是 $[K:F]\\le n$。再证 $n\\le[K:F]$：$G\\subseteq\\operatorname{Aut}(K/F)$，由引理 2 得 $n\\le|\\operatorname{Aut}(K/F)|\\le[K:K^{G}]=[K:F]$。合起来 $[K:F]=n$。∎\n\n**回到定理**。先说明 $K^{G}=F$：$K/F$ 正规且可分，若 $\\alpha\\notin F$，其极小多项式在 $K$ 中分裂且有另一个根 $\\beta\\ne\\alpha$（可分性保证无重根、正规性保证其它根都在 $K$），$F$-嵌入 $\\alpha\\mapsto\\beta$ 由正规性延拓为 $K$ 的自同构，它移动 $\\alpha$。故固定域恰为 $F$，引理 3 给出 $[K:F] = |G|.$ 对中间域 $E$，$K/E$ 仍有限伽罗瓦（正规、可分都继承），故 $|\\operatorname{Gal}(K/E)|=[K:E]$。\n\n**反序双射**。记 $\\Phi(E)=\\operatorname{Gal}(K/E)$。反序显然：$E_{1}\\subseteq E_{2}$ 时，固定 $E_{2}$ 的自同构也固定 $E_{1}$。单射：若 $\\Phi(E_{1})=\\Phi(E_{2})=H$，把引理 3 用于 $K$ 与 $H$ 得 $[K:K^{H}]=|H|$；而 $[K:E_{i}]=|\\Phi(E_{i})|=|H|$，且 $E_{i}\\subseteq K^{H}$，次数相等故 $E_{i}=K^{H}$，于是 $E_{1}=E_{2}$。满射：任给子群 $H\\le G$，令 $E=K^{H}$；引理 3 给 $[K:E]=|H|$，而 $H\\subseteq\\operatorname{Gal}(K/E)$ 且 $|\\operatorname{Gal}(K/E)|=[K:E]=|H|$，故 $H=\\operatorname{Gal}(K/E)=\\Phi(E)$。\n\n**次数与指数**。$[K:E]=|\\operatorname{Gal}(K/E)|$ 已证；由 $[K:F]=[K:E][E:F]$ 与 $[K:F]=|G|$ 得 $[E:F]=\\frac{|G|}{|\\operatorname{Gal}(K/E)|}=[G:\\operatorname{Gal}(K/E)].$\n\n**正规性**。$E/F$ 正规 $\\iff$ 对每个 $\\sigma\\in G$ 有 $\\sigma(E)=E$。理由：若 $E/F$ 正规、$\\sigma\\in G$，则 $\\sigma|_{E}$ 是 $E$ 到代数闭包里的 $F$-嵌入，正规性迫使 $\\sigma(E)\\subseteq E$，次数相同故相等；反之若 $\\sigma(E)=E$ 对一切 $\\sigma$，则 $E$ 中元素的每个共轭仍在 $E$，故 $E/F$ 正规。又 $\\operatorname{Gal}(K/\\sigma(E))=\\sigma\\operatorname{Gal}(K/E)\\sigma^{-1},$ 于是 $\\operatorname{Gal}(K/E)\\trianglelefteq G \\iff \\operatorname{Gal}(K/\\sigma(E))=\\operatorname{Gal}(K/E)\\ \\text{对一切}\\ \\sigma \\iff \\sigma(E)=E\\ \\text{对一切}\\ \\sigma \\iff E/F\\ \\text{正规},$ 中间一步用双射的单射性。最后，限制映射 $G\\to\\operatorname{Gal}(E/F)$ 是满射（$E/F$ 正规，$E$ 的 $F$-自同构可延拓到 $K$），核为 $\\operatorname{Gal}(K/E)$，故 $\\operatorname{Gal}(E/F)\\cong G/\\operatorname{Gal}(K/E)$。∎\n\n⭐ **第三条（正规 $\\iff$ 正规子群）是这条定理最有用的部分**：它把「域扩张的正规性」这个看起来抽象的条件，翻译成「对应的子群正规」。五次方程那条线就是靠它把「域的可解性」降成「群的可解性」。\n\n⚠ **三个条件都不能省**：不有限（$\\overline{\\mathbb{Q}}/\\mathbb{Q}$）时子群太多、中间域太多，双射变成「子群 $\\to$ 中间域」的单向且不满（伽罗瓦群是 profinite 群，要做无穷版本）；不可分时 $|\\operatorname{Gal}| < [K:F]$，数都对不上。",
+   "notes": "⭐ **第三条（正规 $\\iff$ 正规子群）是这条定理最有用的部分**：它把「域扩张的正规性」这个看起来抽象的条件，翻译成「对应的子群正规」。五次方程那条线就是靠它把「域的可解性」降成「群的可解性」。\n\n⚠ **三个条件都不能省**：不有限（$\\overline{\\mathbb{Q}}/\\mathbb{Q}$）时子群太多、中间域太多，双射变成「子群 $\\to$ 中间域」的单向且不满（伽罗瓦群是 profinite 群，要做无穷版本）；不可分时 $|\\operatorname{Gal}| < [K:F]$，数都对不上。",
    "refs": [
     "Lang, Algebra, Ch. VI §2",
     "Hungerford, Algebra, Ch. V §4",
@@ -83004,7 +83159,7 @@
    "notes_en": "**Proof**. First make precise what it means to be solvable by radicals: There is a tower of fields $F=F_{0}\\subseteq F_{1}\\subseteq\\cdots\\subseteq F_{m}$ with $F_{i}=F_{i-1}(\\alpha_{i})$ and $\\alpha_{i}^{n_{i}}\\in F_{i-1}$ ($1\\le i\\le m$), and $K\\subseteq F_{m}$. In characteristic zero, $K/F$ is Galois (a separable splitting field). We prove the two directions separately.\n\n**Lemma (one Kummer step)**: Suppose $F$ contains a primitive $m$th root of unity $\\zeta$ and $E/F$ is a cyclic extension of degree $m$. Then $E=F(\\beta)$ and $\\beta^{m}\\in F$. To prove this, choose a generator $\\sigma$ and regard $\\sigma$ on $E$ as a $F$-linear transformation. We have $\\sigma^{m}=1$, and $x^{m}-1$ splits over $F$ with no repeated roots, so $\\sigma$ is diagonalizable and all its eigenvalues are $m$th roots of unity. **The key is that the minimal polynomial of $\\sigma$ is exactly $x^{m}-1$**. By Dedekind's linear independence theorem (Lemma 1 in the Galois correspondence proof: pairwise distinct automorphisms are linearly independent as functions), $1,\\sigma,\\ldots,\\sigma^{m-1}$ is linearly independent over $E$. Thus no nonzero polynomial of degree $<m$ annihilates $\\sigma$, and the minimal polynomial has degree $\\ge m$. Also, $\\sigma^{m}=1$ implies that it divides $x^{m}-1$ (of degree $m$), so the minimal polynomial is $=x^{m}-1$. The minimal polynomial also divides the characteristic polynomial $\\chi_{\\sigma}$ (by Cayley–Hamilton, $\\chi_{\\sigma}$ annihilates $\\sigma$ and hence is divisible by the minimal polynomial). Since $\\deg\\chi_{\\sigma}=\\dim_{F}E=m=\\deg\\mu_{\\sigma}$ and both polynomials are monic of the same degree, $\\chi_{\\sigma}=\\mu_{\\sigma}=x^{m}-1$. Thus the $m$ eigenvalues are **all** the $m$th roots of unity, including the primitive root $\\zeta^{k}$. Take a corresponding eigenvector $\\beta$ with $\\sigma(\\beta)=\\zeta^{k}\\beta$. Then $\\sigma(\\beta^{m})=\\beta^{m}$, so $\\beta^{m}$ lies in the fixed field of $\\sigma$. The fixed field of the cyclic extension is precisely $F$, so $\\beta^{m}\\in F$. Also, $\\beta\\notin F$ (otherwise $\\sigma(\\beta)=\\beta$). Since $\\zeta^{k}$ is primitive, $\\sigma^{d}(\\beta)=\\beta$ if and only if $m\\mid d$. Thus the subgroup fixing $F(\\beta)$ contains only the identity, so $[F(\\beta):F]=m$ and hence $E=F(\\beta)$. ∎\n\n**$\\Leftarrow$ (solvable group $\\implies$ solvable by radicals)**: Suppose $G=\\operatorname{Gal}(K/F)$ is solvable. First assume that $F$ contains a primitive $n$th root of unity, with $n=|G|$. Induct on $|G|$. When $|G|=1$, we have $K=F$ and there is nothing to prove. Suppose $|G|>1$. The solvable group has a maximal proper normal subgroup $H$, so $G/H$ is simple and abelian, hence cyclic of prime order $p$. Set $E=K^{H}$. The Galois correspondence gives $[E:F]=p$, with $\\operatorname{Gal}(E/F)=G/H$ cyclic. Since $F$ contains $\\zeta_{p}$, the Kummer step gives $E=F(\\beta)$ and $\\beta^{p}\\in F$. Also, $K/E$ is Galois with group $H$, and $H$ is solvable with $|H|<|G|$. Since $E$ contains a primitive $|H|$th root of unity ($|H|$ divides $n$), the induction hypothesis gives a radical tower from $E$ to $K$. Appending it to the step $F\\subseteq E$ gives a radical tower for $K$ over $F$.\n\n**Removing the roots-of-unity hypothesis**: In general, $F$ need not contain $\\zeta_{n}$. Choose $N$ to be a common multiple of $1,2,\\ldots,n$ (for example, $n!$), and set $F_{1}=F(\\zeta_{N})$ and $K_{1}=K(\\zeta_{N})$. The extension $K_{1}/F_{1}$ is Galois, and the restriction map $\\operatorname{Gal}(K_{1}/F_{1})\\to\\operatorname{Gal}(K/F)$ is injective, so $G_{1}=\\operatorname{Gal}(K_{1}/F_{1})$ is solvable and $|G_{1}|\\le n$. The field $F_{1}$ contains all roots of unity of orders $\\le n$, in particular $\\zeta_{|G_{1}|}$. The case already proved gives a radical tower for $K_{1}$ over $F_{1}$. Also, $F\\subseteq F_{1}=F(\\zeta_{N})$ is itself a one-step radical extension ($\\zeta_{N}^{N}=1\\in F$). Combining these towers places $K\\subseteq K_{1}$ inside a radical tower over $F$, so the roots of $f$ are solvable by radicals.\n\n**$\\implies$ (solvable by radicals $\\implies$ solvable group)**: Let $F=F_{0}\\subseteq\\cdots\\subseteq F_{m}$ be a radical tower with $K\\subseteq F_{m}$ and $\\alpha_{i}^{n_{i}}\\in F_{i-1}$. Choose $N$ to be a common multiple of all the $n_{i}$ and set $F^{\\prime}=F(\\zeta_{N})$ and $E_{i}=F_{i}(\\zeta_{N})$. Then $E_{i}=E_{i-1}(\\alpha_{i})$ and $\\alpha_{i}^{n_{i}}\\in E_{i-1}$, and this is still a radical tower, with base field $E_{0}=F^{\\prime}$ containing $\\zeta_{n_{i}}$. Let $M$ be the Galois closure of $E_{m}$ over $F^{\\prime}$ (the splitting field of the product of the minimal polynomials of the generators). Then $M/F^{\\prime}$ is Galois and $K^{\\prime}=K(\\zeta_{N})\\subseteq M$.\n\n**Taking closures at each level**: Let $M_{i}$ be the compositum of all conjugates of $E_{i}$ generated under $F^{\\prime}$. Then $M_{0}=F^{\\prime}$ and $M_{m}=M$, and each $M_{i}/F^{\\prime}$ is Galois. The key is that $M_{i}$ is obtained from $M_{i-1}$ by adjoining several conjugates of $\\alpha_{i}$, denoted by $\\beta$, with $\\beta^{n_{i}}\\in M_{i-1}$. Write $\\beta=\\sigma(\\alpha_{i})$. Then $\\beta^{n_{i}}=\\sigma(\\alpha_{i}^{n_{i}})\\in\\sigma(F_{i-1})\\subseteq M_{i-1}$. Thus $M_{i}/M_{i-1}$ is generated by several $n_{i}$th roots, and $\\zeta_{n_{i}}\\in F^{\\prime}\\subseteq M_{i-1}$, so it is a Kummer extension. Any $\\tau\\in\\operatorname{Gal}(M_{i}/M_{i-1})$ sends each generator $\\beta$ to $\\zeta_{n_{i}}^{k_{\\beta}}\\beta$, and $\\tau\\mapsto(k_{\\beta})_{\\beta}$ is an injective homomorphism into $(\\mathbb{Z}/n_{i})^{r}$. Hence $\\operatorname{Gal}(M_{i}/M_{i-1})$ is abelian.\n\n**Solvable series**: Since $M_{i}/M_{i-1}$ is Galois, $\\operatorname{Gal}(M/M_{i})\\trianglelefteq\\operatorname{Gal}(M/M_{i-1})$, and the quotient is isomorphic to $\\operatorname{Gal}(M_{i}/M_{i-1})$, which is abelian. Thus $\\operatorname{Gal}(M/F^{\\prime})\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{1})\\ \\trianglerighteq\\ \\cdots\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{m})=1$ is a normal series with abelian quotients, so $\\operatorname{Gal}(M/F^{\\prime})$ is solvable.\n\n**Returning to $K$**: The extension $K^{\\prime}/F$ is Galois (as a compositum of two normal extensions). The restriction map $\\operatorname{Gal}(M/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ is surjective, so $\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ is solvable. We also have the exact sequence $1\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F)\\to\\operatorname{Gal}(F^{\\prime}/F)\\to1$ (the cyclotomic extension is Galois and restriction is surjective). Both ends are solvable and $\\operatorname{Gal}(F^{\\prime}/F)$ is abelian, so $\\operatorname{Gal}(K^{\\prime}/F)$ is solvable. Finally, $\\operatorname{Gal}(K/F)$ is a quotient of $\\operatorname{Gal}(K^{\\prime}/F)$. The extension $K^{\\prime}/F$ is normal, and every automorphism of $K$ over $F$ extends to $K^{\\prime}$. A quotient of a solvable group is solvable, so $\\operatorname{Gal}(K/F)$ is solvable. ∎\n\n⭐ **Why characteristic zero is required**: Both directions use that $x^{m}-1$ has no repeated roots (so $\\sigma$ is diagonalizable), as well as separability. In characteristic $p$, pure radical extensions must be replaced by Artin–Schreier extensions $x^{p}-x-a$, and the conclusion must be reformulated.\n\n📌 **This theorem is the entry point to the quintic problem**: It turns the question of whether a radical formula exists into a purely group-theoretic question ($S_{n}$ is solvable $\\iff n\\le4$, see the solvability of symmetric groups). When applying it in reverse, distinguish the absence of a radical solution from the absence of any solution: $\\operatorname{Gal}(f)$ is not solvable $\\implies$ has no solution by radicals.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -83017,10 +83172,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#66154e45",
       "notes": "v0.9.3#35d499a6"
@@ -83042,7 +83199,7 @@
     "群论"
    ],
    "statement": "设 $F$ 是**特征 0** 的域，$f \\in F[x]$ 非零，$K$ 是 $f$ 的分裂域。则\n\n$f$ 的根可以用**根式**（四则运算与开 $n$ 次方）从 $F$ 的元素表示出来 $\\iff$ $\\operatorname{Gal}(K/F)$ 是**可解群**。",
-   "notes": "**证明**。先把「根式可解」说清楚：存在域塔 $F=F_{0}\\subseteq F_{1}\\subseteq\\cdots\\subseteq F_{m}$，$F_{i}=F_{i-1}(\\alpha_{i})$、$\\alpha_{i}^{n_{i}}\\in F_{i-1}$（$1\\le i\\le m$），且 $K\\subseteq F_{m}$。char 0 下 $K/F$ 是伽罗瓦扩张（分裂域 + 可分）。两个方向分别证。\n\n**引理（Kummer 一步）**：设 $F$ 含本原 $m$ 次单位根 $\\zeta$，$E/F$ 是 $m$ 次循环扩张，则 $E=F(\\beta)$ 且 $\\beta^{m}\\in F$。证明：取生成元 $\\sigma$，把 $\\sigma$ 看成 $E$ 上的 $F$-线性变换。$\\sigma^{m}=1$，而 $x^{m}-1$ 在 $F$ 上分裂且无重根，故 $\\sigma$ 可对角化，其特征值全是 $m$ 次单位根。**这里关键是 $\\sigma$ 的极小多项式恰为 $x^{m}-1$**：由 Dedekind 线性无关（「伽罗瓦对应」那条的引理 1：两两不同的自同构作为函数线性无关），$1,\\sigma,\\ldots,\\sigma^{m-1}$ 在 $E$ 上线性无关，故任何次数 $<m$ 的非零多项式都不零化 $\\sigma$，极小多项式次数 $\\ge m$；又 $\\sigma^{m}=1$ 使它整除 $x^{m}-1$（次数 $m$），故极小多项式 $=x^{m}-1$。又极小多项式整除特征多项式 $\\chi_{\\sigma}$（Cayley–Hamilton 定理的一般形式：$\\chi_{\\sigma}$ 零化 $\\sigma$，故被极小多项式整除），而 $\\deg\\chi_{\\sigma}=\\dim_{F}E=m=\\deg\\mu_{\\sigma}$，两者首一且次数相同，故 $\\chi_{\\sigma}=\\mu_{\\sigma}=x^{m}-1$。于是 $m$ 个特征值恰为**全部** $m$ 次单位根，其中必有本原的 $\\zeta^{k}$。取对应的特征向量 $\\beta$：$\\sigma(\\beta)=\\zeta^{k}\\beta$。于是 $\\sigma(\\beta^{m})=\\beta^{m}$，$\\beta^{m}$ 在 $\\sigma$ 的固定域里；循环扩张的固定域恰为 $F$，故 $\\beta^{m}\\in F$。又 $\\beta\\notin F$（否则 $\\sigma(\\beta)=\\beta$）。由于 $\\zeta^{k}$ 本原，$\\sigma^{d}(\\beta)=\\beta$ 当且仅当 $m\\mid d$；故 $F(\\beta)$ 的固定子群只含单位元，$[F(\\beta):F]=m$，从而 $E=F(\\beta)$。∎\n\n**$\\Leftarrow$（群可解 $\\implies$ 根式可解）**：设 $G=\\operatorname{Gal}(K/F)$ 可解。先假设 $F$ 含本原 $n$ 次单位根，$n=|G|$；对 $|G|$ 归纳。$|G|=1$ 时 $K=F$，无事可做。设 $|G|>1$。可解群有极大的真正规子群 $H$，此时 $G/H$ 单且交换，故是素数阶 $p$ 的循环群。令 $E=K^{H}$，伽罗瓦对应给 $[E:F]=p$、$\\operatorname{Gal}(E/F)=G/H$ 循环。$F$ 含 $\\zeta_{p}$，由 Kummer 一步，$E=F(\\beta)$、$\\beta^{p}\\in F$。另一方面 $K/E$ 伽罗瓦、群为 $H$，$H$ 可解且 $|H|<|G|$；$E$ 含本原 $|H|$ 次单位根（$|H|$ 整除 $n$），归纳假设给出从 $E$ 到 $K$ 的根式塔。把它接在一步 $F\\subseteq E$ 之后，就是 $K$ 在 $F$ 上的根式塔。\n\n**去掉单位根假设**：一般 $F$ 未必含 $\\zeta_{n}$。取 $N$ 为 $1,2,\\ldots,n$ 的公倍数（例如 $n!$），令 $F_{1}=F(\\zeta_{N})$、$K_{1}=K(\\zeta_{N})$。$K_{1}/F_{1}$ 伽罗瓦，限制映射 $\\operatorname{Gal}(K_{1}/F_{1})\\to\\operatorname{Gal}(K/F)$ 是单射，故 $G_{1}=\\operatorname{Gal}(K_{1}/F_{1})$ 可解且 $|G_{1}|\\le n$。$F_{1}$ 含所有次数 $\\le n$ 的单位根，特别是 $\\zeta_{|G_{1}|}$；上面已证的情形给出 $K_{1}$ 在 $F_{1}$ 上的根式塔。又 $F\\subseteq F_{1}=F(\\zeta_{N})$ 本身是一步根式扩张（$\\zeta_{N}^{N}=1\\in F$）。两段接起来，$K\\subseteq K_{1}$ 含在 $F$ 的根式塔中，故 $f$ 的根根式可解。\n\n**$\\implies$（根式可解 $\\implies$ 群可解）**：设 $F=F_{0}\\subseteq\\cdots\\subseteq F_{m}$ 是根式塔、$K\\subseteq F_{m}$、$\\alpha_{i}^{n_{i}}\\in F_{i-1}$。取 $N$ 为各 $n_{i}$ 的公倍数，令 $F^{\\prime}=F(\\zeta_{N})$、$E_{i}=F_{i}(\\zeta_{N})$；则 $E_{i}=E_{i-1}(\\alpha_{i})$、$\\alpha_{i}^{n_{i}}\\in E_{i-1}$，仍是根式塔，且底域 $E_{0}=F^{\\prime}$ 含 $\\zeta_{n_{i}}$。令 $M$ 为 $E_{m}$ 在 $F^{\\prime}$ 上的伽罗瓦闭包（各生成元极小多项式之积的分裂域），则 $M/F^{\\prime}$ 伽罗瓦，且 $K^{\\prime}=K(\\zeta_{N})\\subseteq M$。\n\n**逐层加闭包**：令 $M_{i}$ 为 $E_{i}$ 的所有 $F^{\\prime}$-共轭生成的合成域，则 $M_{0}=F^{\\prime}$、$M_{m}=M$，且每个 $M_{i}/F^{\\prime}$ 伽罗瓦。关键是 $M_{i}$ 由 $M_{i-1}$ 添加若干 $\\alpha_{i}$ 的共轭 $\\beta$ 得到，$\\beta^{n_{i}}\\in M_{i-1}$：写 $\\beta=\\sigma(\\alpha_{i})$，则 $\\beta^{n_{i}}=\\sigma(\\alpha_{i}^{n_{i}})\\in\\sigma(F_{i-1})\\subseteq M_{i-1}$。于是 $M_{i}/M_{i-1}$ 由若干 $n_{i}$ 次根生成，且 $\\zeta_{n_{i}}\\in F^{\\prime}\\subseteq M_{i-1}$，它是 Kummer 扩张：任意 $\\tau\\in\\operatorname{Gal}(M_{i}/M_{i-1})$ 把每个生成元 $\\beta$ 送到 $\\zeta_{n_{i}}^{k_{\\beta}}\\beta$，$\\tau\\mapsto(k_{\\beta})_{\\beta}$ 是到 $(\\mathbb{Z}/n_{i})^{r}$ 的单同态，故 $\\operatorname{Gal}(M_{i}/M_{i-1})$ 交换。\n\n**可解列**：因 $M_{i}/M_{i-1}$ 伽罗瓦，$\\operatorname{Gal}(M/M_{i})\\trianglelefteq\\operatorname{Gal}(M/M_{i-1})$，且商同构于 $\\operatorname{Gal}(M_{i}/M_{i-1})$，交换。于是 $\\operatorname{Gal}(M/F^{\\prime})\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{1})\\ \\trianglerighteq\\ \\cdots\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{m})=1$ 是正规列，各商交换，故 $\\operatorname{Gal}(M/F^{\\prime})$ 可解。\n\n**回到 $K$**：$K^{\\prime}/F$ 伽罗瓦（两个正规扩张的合成），限制映射 $\\operatorname{Gal}(M/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ 满射，故 $\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ 可解。又有正合列 $1\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F)\\to\\operatorname{Gal}(F^{\\prime}/F)\\to1$（分圆扩张伽罗瓦，限制满射），两端可解、$\\operatorname{Gal}(F^{\\prime}/F)$ 交换，故 $\\operatorname{Gal}(K^{\\prime}/F)$ 可解。最后 $\\operatorname{Gal}(K/F)$ 是 $\\operatorname{Gal}(K^{\\prime}/F)$ 的商：$K^{\\prime}/F$ 正规，$K$ 的每个 $F$-自同构都可延拓到 $K^{\\prime}$。可解群的商可解，故 $\\operatorname{Gal}(K/F)$ 可解。∎\n\n⭐ **为什么必须 char 0**：两个方向都用了「$x^{m}-1$ 无重根」（从而 $\\sigma$ 可对角化）与可分性。char $p$ 时纯开方扩张要换成 Artin–Schreier 扩张 $x^{p}-x-a$，结论要改写。\n\n📌 **这条定理是「五次方程」那条线的唯一入口**：它把「有没有根式公式」这个分析/代数混着的问题，换成一个纯群论问题（$S_{n}$ 可解 $\\iff n\\le4$，见「对称群的可解性」）。注意反过来用时要说清：$\\operatorname{Gal}(f)$ 不可解 $\\implies$ 无根式解；而不是「方程无解」。",
+   "notes": "⭐ **为什么必须 char 0**：两个方向都用了「$x^{m}-1$ 无重根」（从而 $\\sigma$ 可对角化）与可分性。char $p$ 时纯开方扩张要换成 Artin–Schreier 扩张 $x^{p}-x-a$，结论要改写。\n\n📌 **这条定理是「五次方程」那条线的唯一入口**：它把「有没有根式公式」这个分析/代数混着的问题，换成一个纯群论问题（$S_{n}$ 可解 $\\iff n\\le4$，见「对称群的可解性」）。注意反过来用时要说清：$\\operatorname{Gal}(f)$ 不可解 $\\implies$ 无根式解；而不是「方程无解」。",
    "refs": [
     "Lang, Algebra, Ch. VI §6",
     "Hungerford, Algebra, Ch. V §5",
@@ -83086,7 +83243,7 @@
     "群论"
    ],
    "statement": "存在有理系数的五次多项式 $f \\in \\mathbb{Q}[x]$，它的根**不能**用四则运算与开方从 $\\mathbb{Q}$ 的元素表示；更准确地说，$\\operatorname{Gal}(f) \\cong S_{5}$，而 $S_{5}$ 不可解。\n\n因此**不存在**用根式写出一般五次方程根的通用公式（Abel–Ruffini，1824）。",
-   "notes": "**证明**。取 $f = x^{5} - 4x + 2$，分四步：$f$ 不可约 $\\implies$ 伽罗瓦群传递且含 5-循环；$f$ 恰有三个实根 $\\implies$ 复共轭给出换位；5-循环与换位生成 $S_{5}$；最后用 `thm.radical-solvable` 与 `prop.sn-solvable`。\n\n**第一步：$f$ 在 $\\mathbb{Q}$ 上不可约**。反设 $f = gh$，其中 $g, h \\in \\mathbb{Z}[x]$ 本原、$1 \\le \\deg g \\le 4$（Gauss 引理把 $\\mathbb{Q}[x]$ 的分解搬到 $\\mathbb{Z}[x]$）。模 $2$ 约化：$f \\equiv x^{5} \\pmod 2$，因为 $-4x$ 与 $2$ 都被 $2$ 整除。$\\mathbb{F}_{2}[x]$ 是唯一分解整环，$x^{5}$ 的非常数首一因子只有 $x^{k}$，故 $\\bar g = x^{k}$、$\\bar h = x^{5-k}$（$1 \\le k \\le 4$）。于是 $g(0) \\equiv h(0) \\equiv 0 \\pmod 2$，即 $4 \\mid g(0)h(0) = f(0) = 2$，矛盾。故 $f$ 不可约。∎\n\n**第二步：$G = \\operatorname{Gal}(f)$ 传递且含 5-循环**。不可约多项式的伽罗瓦群在根集上传递：任取两根 $\\alpha, \\beta$，$\\mathbb{Q}(\\alpha) \\cong \\mathbb{Q}[x]/(f) \\cong \\mathbb{Q}(\\beta)$ 给出一个把 $\\alpha$ 送到 $\\beta$ 的 $\\mathbb{Q}$-嵌入，再延拓到分裂域。传递群的轨道大小 $5$ 整除 $|G|$，故 $5 \\mid |G|$；由 Cauchy 定理，$G$ 含 5 阶元，而 $S_{5}$ 中的 5 阶元恰是 5-循环。记其中一个为 $\\sigma$。\n\n**第三步：$G$ 含一个换位**。$f^{\\prime}(x) = 5x^{4} - 4$，唯一临界点为 $\\pm\\alpha$，$\\alpha = (4/5)^{1/4} \\in (3/4, 1)$。$f$ 在 $(-\\infty, -\\alpha)$ 与 $(\\alpha, \\infty)$ 上递增、在 $(-\\alpha, \\alpha)$ 上递减。又 $\\alpha^{5} = \\tfrac{4}{5}\\alpha$，故 $f(\\alpha) = 2 - \\tfrac{16}{5}\\alpha < 2 - \\tfrac{16}{5}\\cdot\\tfrac{3}{4} = -\\tfrac{2}{5} < 0$，而 $f(-\\alpha) = 2 + \\tfrac{16}{5}\\alpha > 0$；且 $x \\to -\\infty$ 时 $f \\to -\\infty$，$x \\to +\\infty$ 时 $f \\to +\\infty$。由介值定理与上述单调性，$f$ 恰有三个实根，分别落在 $(-\\infty, -\\alpha)$、$(-\\alpha, \\alpha)$、$(\\alpha, \\infty)$ 内。复共轭 $\\tau$ 固定这三个实根、交换剩下两个非实根，所以 $\\tau \\in G$ 是一个换位（奇置换）。\n\n**第四步：$\\langle \\sigma, \\tau \\rangle = S_{5}$**。把 $\\sigma$ 写成 $(0\\,1\\,2\\,3\\,4)$。换位 $\\tau = (a\\,b)$ 的两个点在 5-循环上的距离只可能是 $1$ 或 $2$（距离 $d$ 与 $5-d$ 等价）。若距离为 $1$，$\\sigma^{k}\\tau\\sigma^{-k}$ 给出全部相邻换位 $(i\\,i+1)$，它们生成 $S_{5}$。若距离为 $2$，不妨取 $\\tau = (0\\,2)$：共轭给出 $(0\\,2), (1\\,3), (2\\,4), (3\\,0), (4\\,1)$。由 $(0\\,2)$ 与 $(2\\,4)$ 得乘积 $(0\\,4\\,2)$，于是 $\\{0, 2, 4\\}$ 上的 $S_{3}$（含换位 $(0\\,2)$）落在 $G$ 里；$S_{3}$ 与 5-循环合起来使 $|G|$ 被 $6$ 与 $5$ 整除，故 $30 \\mid |G|$。若 $|G|=30$，则 $G$ 是 $S_{5}$ 的指数 $4$ 子群；$S_{5}$ 在 $G$ 的 $4$ 个左陪集上的作用给出**传递**同态 $\\varphi:S_{5}\\to S_{4}$，其核必为 $S_{5}$ 的正规子群 $1$、$A_{5}$ 或 $S_{5}$。核为 $1$ 时得单射 $S_{5}\\hookrightarrow S_{4}$，$120>24$ 不可能；核为 $A_{5}$ 时像为 $S_{5}/A_{5}\\cong C_{2}$，而 $C_{2}$ 在 $4$ 个点上每条轨道长 $\\le 2$，不能传递；核为 $S_{5}$ 时作用平凡，也不能传递。矛盾，故 $|G|\\ne30$。$G$ 含奇置换，不能等于 $A_{5}$（$S_{5}$ 中唯一的指数 2 子群），所以 $|G| = 120$、$G = S_{5}$。\n\n**收尾**。于是 $\\operatorname{Gal}(f) \\cong S_{5}$。由 `prop.sn-solvable`，$S_{5}$ 不可解；由 `thm.radical-solvable`（特征 $0$，底域 $\\mathbb{Q}$），根式可解当且仅当伽罗瓦群可解。所以 $f$ 的根不能由 $\\mathbb{Q}$ 的元素经四则运算与开方写出，特别地不存在一般的五次根式公式。∎\n\n⭐ **精确的说法**：不是「五次方程没有解」，而是「**没有用根式写出的通用公式**」。根当然存在（代数基本定理），只是写不成开方的组合。有些特殊的五次方程有根式解，例如 $x^{5} - 2 = 0$，它的伽罗瓦群是循环群。\n\n⭐ **为什么是 5**：$S_{4}$ 可解（$A_{4}$ 可解），所以四次还有 Ferrari 公式；$A_{5}$ 是最小的非交换单群，可解性在这里第一次断掉。数字 5 的全部特殊性就在这一处。\n\n📌 **图上的位置**：这条定理的链条是「$\\operatorname{Gal}(f)$ 的可解性」（`prop.sn-solvable`）$\\to$「根式可解当且仅当群可解」（`thm.radical-solvable`）$\\to$ 本条。反过来用时要说清：不可解 $\\implies$ 无根式解，而不是「方程无解」。",
+   "notes": "⭐ **精确的说法**：不是「五次方程没有解」，而是「**没有用根式写出的通用公式**」。根当然存在（代数基本定理），只是写不成开方的组合。有些特殊的五次方程有根式解，例如 $x^{5} - 2 = 0$，它的伽罗瓦群是循环群。\n\n⭐ **为什么是 5**：$S_{4}$ 可解（$A_{4}$ 可解），所以四次还有 Ferrari 公式；$A_{5}$ 是最小的非交换单群，可解性在这里第一次断掉。数字 5 的全部特殊性就在这一处。\n\n📌 **图上的位置**：这条定理的链条是「$\\operatorname{Gal}(f)$ 的可解性」（`prop.sn-solvable`）$\\to$「根式可解当且仅当群可解」（`thm.radical-solvable`）$\\to$ 本条。反过来用时要说清：不可解 $\\implies$ 无根式解，而不是「方程无解」。",
    "refs": [
     "Lang, Algebra, Ch. VI §6",
     "Stewart, Galois Theory, Ch. 24"
@@ -92386,6 +92543,20 @@
    "note": "陈述以阿贝尔群范畴 $\\mathbf{Ab}$ 为环境范畴"
   },
   {
+   "id": "imp.abelianization",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.commutator-subgroup",
+    "def.quotient-group",
+    "def.group-hom"
+   ],
+   "target": "prop.abelianization",
+   "title": "",
+   "proof": "**证明。** 要造自然双射\n$$\\operatorname{Hom}_{\\mathbf{Grp}}(G,\\ A) \\;\\cong\\; \\operatorname{Hom}_{\\mathbf{Ab}}\\bigl(G^{\\mathrm{ab}},\\ A\\bigr),\\qquad A\\ \\text{阿贝尔}.$$\n- **良定义**：任给群同态 $\\varphi : G\\to A$（$A$ 阿贝尔）。\n\n换位子 $ghg^{-1}h^{-1}$ 被送到 $\\varphi(g)\\varphi(h)\\varphi(g)^{-1}\\varphi(h)^{-1} = e$（交换性！），故 $[G,G] \\subseteq \\ker\\varphi$，于是 $\\varphi$ 唯一地穿过商 $G\\twoheadrightarrow G^{\\mathrm{ab}}$ ✓。\n- **反向**是 $G\\to G^{\\mathrm{ab}}$ 与函数的复合 ✓，且两个方向互逆（在 $G^{\\mathrm{ab}}$ 上验一次、在 $\\operatorname{Hom}(G,A)$ 上验一次）✓。\n- **自然性**对 $G$ 与 $A$ 都逐项验证（$G\\to G'$ 的像把 $[G,G]$ 送进 $[G',G']$，故诱导 $G^{\\mathrm{ab}}\\to G'^{\\mathrm{ab}}$）✓。∎",
+   "note": "换位子被送到单位元，万有性质给出自然双射。"
+  },
+  {
    "id": "dep.derivedlong-abelian",
    "kind": "definition",
    "strength": "strong",
@@ -94480,6 +94651,20 @@
    "definition": "def.banach-space",
    "usedBy": "prop.pontryagin-finite-dim-banach",
    "note": "V 是有限维实 Banach 空间"
+  },
+  {
+   "id": "imp.module-tensor-universal",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.tensor-module",
+    "def.module",
+    "def.module-hom"
+   ],
+   "target": "prop.module-tensor-universal",
+   "title": "",
+   "proof": "**证明。** 先造自由模上的张量积：取 $\\mathbb{Z}\\cdot(M \\times N)$（自由阿贝尔群），商掉「双线性关系」\n\n$$(m + m', n) \\sim (m, n) + (m', n), \\quad (m, n + n') \\sim (m, n) + (m, n'), \\quad (am, n) \\sim a(m,n) \\sim (m, an) ✓$$\n\n一般模由自由模商出（取表现）✓，商上的张量积就是商 ✓。这时 $M \\times N \\to M \\otimes N$ 双线性 ✓，任何双线性映射 $M \\times N \\to P$ 唯一地穿过它 ✓ —— 这正是万有性质 ✓。∎",
+   "note": "自由模商双线性关系、一般模取表现，得万有性质。"
   },
   {
    "id": "def-link.chausquot-chaus",
@@ -106554,6 +106739,21 @@
    "note": "主理想整环要求每个理想都是主理想。"
   },
   {
+   "id": "imp.crt-rings",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.comaximal",
+    "thm.first-iso",
+    "def.quotient-ring",
+    "def.ideal"
+   ],
+   "target": "thm.crt-rings",
+   "title": "",
+   "proof": "**构造**：由互素写 $1 = u + v$（$u \\in I$、$v \\in J$），令 $e := u$（于是 $e \\in I$、$e \\equiv 1 \\pmod J$）。则\n\n\n\n$$e \\equiv 0 \\pmod I, \\qquad e \\equiv 1 \\pmod J, \\qquad e^{2} \\equiv e \\pmod{I \\cap J} .$$\n\n\n\n（$e$ 不是幂等元本身：$e(1-e)=uv\\in IJ\\subseteq I\\cap J$，只在模 $I\\cap J$ 的意义下幂等；又 $1-e=v$。）于是对任意右端 $(x, y)$，元素 $a = x(1-e) + y e = xv + yu$ 满足 $a \\equiv x \\pmod I$、$a \\equiv y \\pmod J$ —— 存在性。唯一性：两解之差被 $I$ 与 $J$ 同时整除，故落在 $I \\cap J$。\n\n\n\n**同构**：由第一同构定理（`thm.first-iso`），核是 $I \\cap J$、商掉即得；满射由上面的构造给出。",
+   "note": "用互素写 $1=u+v$ 造幂等、给出存在唯一性与第一同构定理。"
+  },
+  {
    "id": "imp.pnt-lemma1",
    "kind": "implication",
    "strength": "strong",
@@ -112666,6 +112866,101 @@
    "note": "代数闭包要求扩域代数闭。"
   },
   {
+   "id": "imp.isomorphism-extension",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.field-extension",
+    "def.irreducible-poly",
+    "def.quotient-ring",
+    "def.polynomial-ring"
+   ],
+   "target": "lem.isomorphism-extension",
+   "title": "",
+   "proof": "证明：由 $\\sigma$ 诱导环同构 $\\Phi:F[x]\\to F'[x]$，$h\\mapsto h^{\\sigma}$。因 $p$ 不可约、$\\Phi$ 保次数，$p^{\\sigma}$ 不可约。又 $p$ 是求值核 $\\ker(\\operatorname{ev}_{\\alpha}:F[x]\\to L)$ 的生成元（$p$ 不可约且 $p(\\alpha)=0$），故 $\\Phi((p))=(p^{\\sigma})=\\ker(\\operatorname{ev}_{\\alpha'})$。于是 $\\Phi$ 下降为域同构 $\\bar\\Phi:F[x]/(p)\\to F'[x]/(p^{\\sigma})$。由第一同构定理，$\\operatorname{ev}_{\\alpha}$、$\\operatorname{ev}_{\\alpha'}$ 分别诱导 $F[x]/(p)\\cong F(\\alpha)$、$F'[x]/(p^{\\sigma})\\cong F'(\\alpha')$；复合得到 $\\tilde\\sigma:F(\\alpha)\\to F'(\\alpha')$，且 $\\tilde\\sigma|_F=\\sigma$、$\\tilde\\sigma(\\alpha)=\\alpha'$。唯一性：$F(\\alpha)=F[\\alpha]$，任何同构由 $\\alpha$ 的像决定，而该像必须是 $p^{\\sigma}$ 的根；给定 $\\alpha'$ 后，$\\sum c_i\\alpha^i$ 只能映到 $\\sum\\sigma(c_i)\\alpha'^i$。∎",
+   "note": "把单扩张写成不可约多项式的商域，再把基域同构搬过去。"
+  },
+  {
+   "id": "imp.splitting-field-exists",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.splitting-field",
+    "def.irreducible-poly",
+    "def.quotient-ring",
+    "def.polynomial-ring",
+    "def.field-extension"
+   ],
+   "target": "thm.splitting-field-exists",
+   "title": "",
+   "proof": "证明：对 $n=\\deg f$ 归纳。$n=0$ 时 $f\\in F^{\\times}$，取 $K=F$。设 $n\\ge1$。若 $f$ 在 $F[x]$ 中已分解为一次因子，取 $K=F$。否则取 $f$ 的次数 $d\\ge2$ 的不可约因子 $g$，令 $F_1=F[x]/(g)$，$\\alpha=x\\bmod g$，则 $\\alpha$ 是 $g$ 的根且 $[F_1:F]=d\\le n$。在 $F_1[x]$ 中写 $f=(x-\\alpha)h$，$\\deg h=n-1$。由归纳假设，$h$ 在 $F_1$ 上有分裂域 $K$，且 $[K:F_1]\\le(n-1)!$。则 $K$ 含 $f$ 的全部根，且 $K=F_1(h\\text{ 的根})=F(\\alpha,h\\text{ 的根})$，故 $K$ 是 $f$ 的分裂域；次数 $[K:F]=[K:F_1][F_1:F]\\le(n-1)!\\cdot n=n!$。∎",
+   "note": "对 $\\deg f$ 归纳：模掉一个不可约因子添一个根，再对余因子递归。"
+  },
+  {
+   "id": "imp.splitting-field-unique",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.splitting-field-exists",
+    "lem.isomorphism-extension",
+    "def.splitting-field",
+    "def.field-extension"
+   ],
+   "target": "thm.splitting-field-unique",
+   "title": "",
+   "proof": "证明：设 $\\sigma:F\\to F'$，对 $n=\\deg f$ 归纳证明 $\\sigma$ 可延拓为 $K\\to K'$。若 $f$ 在 $F$ 上分裂，则 $K=F$（根都在 $F$ 且由根生成），同理 $K'=F'$，取 $\\sigma$。否则取 $f$ 的次数 $\\ge2$ 的不可约因子 $g$，设 $\\alpha$ 是 $g$ 在 $K$ 中的根；因 $g^{\\sigma}\\mid f^{\\sigma}$ 且 $f^{\\sigma}$ 在 $K'$ 分裂，取 $g^{\\sigma}$ 在 $K'$ 中的根 $\\alpha'$。由 `lem.isomorphism-extension`，$\\sigma$ 延拓为 $\\sigma_1:F(\\alpha)\\to F'(\\alpha')$，$\\sigma_1(\\alpha)=\\alpha'$。在 $F(\\alpha)[x]$ 中 $f=(x-\\alpha)h$，$\\deg h=n-1$；则 $f^{\\sigma}=(x-\\alpha')h^{\\sigma_1}$，且 $K$ 是 $h$ 在 $F(\\alpha)$ 上的分裂域、$K'$ 是 $h^{\\sigma_1}$ 在 $F'(\\alpha')$ 上的分裂域。由归纳假设，$\\sigma_1$ 延拓为 $K\\to K'$。∎",
+   "note": "对 $\\deg f$ 归纳：先延拓到单扩张，再对余因子用归纳假设。"
+  },
+  {
+   "id": "imp.galois-correspondence",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.galois-extension",
+    "def.galois-group",
+    "def.fixed-field",
+    "def.separable-extension",
+    "def.normal-subgroup",
+    "thm.lagrange"
+   ],
+   "target": "thm.galois-correspondence",
+   "title": "",
+   "proof": "**证明**：核心是 Artin 定理（有限自同构群的阶 = 大域对固定域的次数）。先证三个引理，再逐条推。记 $K^{H} := \\{x\\in K : \\sigma(x)=x\\ \\text{对一切}\\ \\sigma\\in H\\}$。\n\n**引理 1（Dedekind 线性无关）**：域 $K$ 的两两不同的自同构 $\\sigma_{1},\\ldots,\\sigma_{n}$，作为 $K\\to K$ 的函数，在 $K$ 上线性无关。证明：设 $\\sum_{i}c_{i}\\sigma_{i}=0$ 是非零关系、非零系数个数 $r$ 最少；则 $r\\ge 2$ 且 $c_{1},\\ldots,c_{r}\\ne 0$（重排后）。取 $x\\in K$ 使 $\\sigma_{1}(x)\\ne\\sigma_{2}(x)$。对任意 $y$，把关系作用在 $xy$ 上得 $\\sum c_{i}\\sigma_{i}(x)\\sigma_{i}(y)=0$，再减去 $\\sigma_{1}(x)\\sum c_{i}\\sigma_{i}(y)=0$，得 $\\sum_{i\\ge 2}c_{i}\\bigl(\\sigma_{i}(x)-\\sigma_{1}(x)\\bigr)\\sigma_{i}(y)=0.$ 这是非零关系（$i=2$ 项系数 $c_{2}(\\sigma_{2}(x)-\\sigma_{1}(x))\\ne 0$），非零系数个数 $\\le r-1$，矛盾。\n\n**引理 2**：$|\\operatorname{Aut}(K/F)|\\le [K:F]$。证明：设 $m=[K:F]$，取 $F$-基 $e_{1},\\ldots,e_{m}$。若 $n>m$ 个不同自同构 $\\sigma_{1},\\ldots,\\sigma_{n}$ 存在，则 $K^{m}$ 中 $n$ 个向量 $\\bigl(\\sigma_{i}(e_{1}),\\ldots,\\sigma_{i}(e_{m})\\bigr)$ 线性相关：存在不全为零的 $c_{i}\\in K$ 使 $\\sum_{i}c_{i}\\sigma_{i}(e_{j})=0$ 对每个 $j$，于是 $\\sum_{i}c_{i}\\sigma_{i}=0$ 在 $K$ 上成立，违背引理 1。\n\n**引理 3（Artin 定理）**：设 $G$ 是 $K$ 的有限自同构群、$n=|G|$、$F=K^{G}$。则 $[K:F]=n$。证明分两步。先证 $[K:F]\\le n$：反设 $m=[K:F]>n$，取 $F$-线性无关的 $x_{1},\\ldots,x_{n+1}\\in K$。方程组 $\\sum_{j=1}^{n+1}\\sigma_{i}(x_{j})c_{j}=0$（$i=1,\\ldots,n$）是 $n$ 个方程、$n+1$ 个未知量，有非零解 $c\\in K^{n+1}$。在所有非零解中取非零分量个数 $r$ 最小者。$r\\ge 2$：若只有 $c_{j}\\ne 0$，由 $\\sigma_{1}=\\operatorname{id}$ 的方程得 $c_{j}x_{j}=0$，与 $x_{j}\\ne 0$ 矛盾。重排并伸缩，使 $c_{r}=1$（于是 $c_{r}\\in F$）；若此时所有分量都落在 $F$，则由 $\\sigma_{1}=\\operatorname{id}$ 的方程 $\\sum c_{j}x_{j}=0$ 与 $x_{j}$ 的 $F$-线性无关得所有 $c_{j}=0$，与非零解矛盾。故有某个分量 $\\notin F$，它必不是第 $r$ 个；重排前 $r-1$ 个分量使 $c_{1}\\notin F$。取 $\\tau\\in G$ 使 $\\tau(c_{1})\\ne c_{1}$。把方程组逐项作用 $\\tau$，并由 $\\{\\tau\\sigma_{i}\\}=\\{\\sigma_{i}\\}$ 重排，知 $\\bigl(\\tau(c_{j})\\bigr)$ 也是解；相减得解 $d_{j}=c_{j}-\\tau(c_{j})$：$d_{r}=0$、$d_{1}\\ne 0$，故非零分量个数 $\\le r-1$，矛盾。于是 $[K:F]\\le n$。再证 $n\\le[K:F]$：$G\\subseteq\\operatorname{Aut}(K/F)$，由引理 2 得 $n\\le|\\operatorname{Aut}(K/F)|\\le[K:K^{G}]=[K:F]$。合起来 $[K:F]=n$。∎\n\n**回到定理**。先说明 $K^{G}=F$：$K/F$ 正规且可分，若 $\\alpha\\notin F$，其极小多项式在 $K$ 中分裂且有另一个根 $\\beta\\ne\\alpha$（可分性保证无重根、正规性保证其它根都在 $K$），$F$-嵌入 $\\alpha\\mapsto\\beta$ 由正规性延拓为 $K$ 的自同构，它移动 $\\alpha$。故固定域恰为 $F$，引理 3 给出 $[K:F] = |G|.$ 对中间域 $E$，$K/E$ 仍有限伽罗瓦（正规、可分都继承），故 $|\\operatorname{Gal}(K/E)|=[K:E]$。\n\n**反序双射**。记 $\\Phi(E)=\\operatorname{Gal}(K/E)$。反序显然：$E_{1}\\subseteq E_{2}$ 时，固定 $E_{2}$ 的自同构也固定 $E_{1}$。单射：若 $\\Phi(E_{1})=\\Phi(E_{2})=H$，把引理 3 用于 $K$ 与 $H$ 得 $[K:K^{H}]=|H|$；而 $[K:E_{i}]=|\\Phi(E_{i})|=|H|$，且 $E_{i}\\subseteq K^{H}$，次数相等故 $E_{i}=K^{H}$，于是 $E_{1}=E_{2}$。满射：任给子群 $H\\le G$，令 $E=K^{H}$；引理 3 给 $[K:E]=|H|$，而 $H\\subseteq\\operatorname{Gal}(K/E)$ 且 $|\\operatorname{Gal}(K/E)|=[K:E]=|H|$，故 $H=\\operatorname{Gal}(K/E)=\\Phi(E)$。\n\n**次数与指数**。$[K:E]=|\\operatorname{Gal}(K/E)|$ 已证；由 $[K:F]=[K:E][E:F]$ 与 $[K:F]=|G|$ 得 $[E:F]=\\frac{|G|}{|\\operatorname{Gal}(K/E)|}=[G:\\operatorname{Gal}(K/E)].$\n\n**正规性**。$E/F$ 正规 $\\iff$ 对每个 $\\sigma\\in G$ 有 $\\sigma(E)=E$。理由：若 $E/F$ 正规、$\\sigma\\in G$，则 $\\sigma|_{E}$ 是 $E$ 到代数闭包里的 $F$-嵌入，正规性迫使 $\\sigma(E)\\subseteq E$，次数相同故相等；反之若 $\\sigma(E)=E$ 对一切 $\\sigma$，则 $E$ 中元素的每个共轭仍在 $E$，故 $E/F$ 正规。又 $\\operatorname{Gal}(K/\\sigma(E))=\\sigma\\operatorname{Gal}(K/E)\\sigma^{-1},$ 于是 $\\operatorname{Gal}(K/E)\\trianglelefteq G \\iff \\operatorname{Gal}(K/\\sigma(E))=\\operatorname{Gal}(K/E)\\ \\text{对一切}\\ \\sigma \\iff \\sigma(E)=E\\ \\text{对一切}\\ \\sigma \\iff E/F\\ \\text{正规},$ 中间一步用双射的单射性。最后，限制映射 $G\\to\\operatorname{Gal}(E/F)$ 是满射（$E/F$ 正规，$E$ 的 $F$-自同构可延拓到 $K$），核为 $\\operatorname{Gal}(K/E)$，故 $\\operatorname{Gal}(E/F)\\cong G/\\operatorname{Gal}(K/E)$。∎",
+   "note": "Dedekind 线性无关、Artin 定理与三条对应关系的完整证明。"
+  },
+  {
+   "id": "imp.radical-solvable",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.galois-correspondence",
+    "def.solvable-group",
+    "prop.sn-solvable",
+    "def.galois-extension",
+    "def.roots-of-unity",
+    "thm.cayley-hamilton"
+   ],
+   "target": "thm.radical-solvable",
+   "title": "",
+   "proof": "**证明**。先把「根式可解」说清楚：存在域塔 $F=F_{0}\\subseteq F_{1}\\subseteq\\cdots\\subseteq F_{m}$，$F_{i}=F_{i-1}(\\alpha_{i})$、$\\alpha_{i}^{n_{i}}\\in F_{i-1}$（$1\\le i\\le m$），且 $K\\subseteq F_{m}$。char 0 下 $K/F$ 是伽罗瓦扩张（分裂域 + 可分）。两个方向分别证。\n\n**引理（Kummer 一步）**：设 $F$ 含本原 $m$ 次单位根 $\\zeta$，$E/F$ 是 $m$ 次循环扩张，则 $E=F(\\beta)$ 且 $\\beta^{m}\\in F$。证明：取生成元 $\\sigma$，把 $\\sigma$ 看成 $E$ 上的 $F$-线性变换。$\\sigma^{m}=1$，而 $x^{m}-1$ 在 $F$ 上分裂且无重根，故 $\\sigma$ 可对角化，其特征值全是 $m$ 次单位根。**这里关键是 $\\sigma$ 的极小多项式恰为 $x^{m}-1$**：由 Dedekind 线性无关（「伽罗瓦对应」那条的引理 1：两两不同的自同构作为函数线性无关），$1,\\sigma,\\ldots,\\sigma^{m-1}$ 在 $E$ 上线性无关，故任何次数 $<m$ 的非零多项式都不零化 $\\sigma$，极小多项式次数 $\\ge m$；又 $\\sigma^{m}=1$ 使它整除 $x^{m}-1$（次数 $m$），故极小多项式 $=x^{m}-1$。又极小多项式整除特征多项式 $\\chi_{\\sigma}$（Cayley–Hamilton 定理的一般形式：$\\chi_{\\sigma}$ 零化 $\\sigma$，故被极小多项式整除），而 $\\deg\\chi_{\\sigma}=\\dim_{F}E=m=\\deg\\mu_{\\sigma}$，两者首一且次数相同，故 $\\chi_{\\sigma}=\\mu_{\\sigma}=x^{m}-1$。于是 $m$ 个特征值恰为**全部** $m$ 次单位根，其中必有本原的 $\\zeta^{k}$。取对应的特征向量 $\\beta$：$\\sigma(\\beta)=\\zeta^{k}\\beta$。于是 $\\sigma(\\beta^{m})=\\beta^{m}$，$\\beta^{m}$ 在 $\\sigma$ 的固定域里；循环扩张的固定域恰为 $F$，故 $\\beta^{m}\\in F$。又 $\\beta\\notin F$（否则 $\\sigma(\\beta)=\\beta$）。由于 $\\zeta^{k}$ 本原，$\\sigma^{d}(\\beta)=\\beta$ 当且仅当 $m\\mid d$；故 $F(\\beta)$ 的固定子群只含单位元，$[F(\\beta):F]=m$，从而 $E=F(\\beta)$。∎\n\n**$\\Leftarrow$（群可解 $\\implies$ 根式可解）**：设 $G=\\operatorname{Gal}(K/F)$ 可解。先假设 $F$ 含本原 $n$ 次单位根，$n=|G|$；对 $|G|$ 归纳。$|G|=1$ 时 $K=F$，无事可做。设 $|G|>1$。可解群有极大的真正规子群 $H$，此时 $G/H$ 单且交换，故是素数阶 $p$ 的循环群。令 $E=K^{H}$，伽罗瓦对应给 $[E:F]=p$、$\\operatorname{Gal}(E/F)=G/H$ 循环。$F$ 含 $\\zeta_{p}$，由 Kummer 一步，$E=F(\\beta)$、$\\beta^{p}\\in F$。另一方面 $K/E$ 伽罗瓦、群为 $H$，$H$ 可解且 $|H|<|G|$；$E$ 含本原 $|H|$ 次单位根（$|H|$ 整除 $n$），归纳假设给出从 $E$ 到 $K$ 的根式塔。把它接在一步 $F\\subseteq E$ 之后，就是 $K$ 在 $F$ 上的根式塔。\n\n**去掉单位根假设**：一般 $F$ 未必含 $\\zeta_{n}$。取 $N$ 为 $1,2,\\ldots,n$ 的公倍数（例如 $n!$），令 $F_{1}=F(\\zeta_{N})$、$K_{1}=K(\\zeta_{N})$。$K_{1}/F_{1}$ 伽罗瓦，限制映射 $\\operatorname{Gal}(K_{1}/F_{1})\\to\\operatorname{Gal}(K/F)$ 是单射，故 $G_{1}=\\operatorname{Gal}(K_{1}/F_{1})$ 可解且 $|G_{1}|\\le n$。$F_{1}$ 含所有次数 $\\le n$ 的单位根，特别是 $\\zeta_{|G_{1}|}$；上面已证的情形给出 $K_{1}$ 在 $F_{1}$ 上的根式塔。又 $F\\subseteq F_{1}=F(\\zeta_{N})$ 本身是一步根式扩张（$\\zeta_{N}^{N}=1\\in F$）。两段接起来，$K\\subseteq K_{1}$ 含在 $F$ 的根式塔中，故 $f$ 的根根式可解。\n\n**$\\implies$（根式可解 $\\implies$ 群可解）**：设 $F=F_{0}\\subseteq\\cdots\\subseteq F_{m}$ 是根式塔、$K\\subseteq F_{m}$、$\\alpha_{i}^{n_{i}}\\in F_{i-1}$。取 $N$ 为各 $n_{i}$ 的公倍数，令 $F^{\\prime}=F(\\zeta_{N})$、$E_{i}=F_{i}(\\zeta_{N})$；则 $E_{i}=E_{i-1}(\\alpha_{i})$、$\\alpha_{i}^{n_{i}}\\in E_{i-1}$，仍是根式塔，且底域 $E_{0}=F^{\\prime}$ 含 $\\zeta_{n_{i}}$。令 $M$ 为 $E_{m}$ 在 $F^{\\prime}$ 上的伽罗瓦闭包（各生成元极小多项式之积的分裂域），则 $M/F^{\\prime}$ 伽罗瓦，且 $K^{\\prime}=K(\\zeta_{N})\\subseteq M$。\n\n**逐层加闭包**：令 $M_{i}$ 为 $E_{i}$ 的所有 $F^{\\prime}$-共轭生成的合成域，则 $M_{0}=F^{\\prime}$、$M_{m}=M$，且每个 $M_{i}/F^{\\prime}$ 伽罗瓦。关键是 $M_{i}$ 由 $M_{i-1}$ 添加若干 $\\alpha_{i}$ 的共轭 $\\beta$ 得到，$\\beta^{n_{i}}\\in M_{i-1}$：写 $\\beta=\\sigma(\\alpha_{i})$，则 $\\beta^{n_{i}}=\\sigma(\\alpha_{i}^{n_{i}})\\in\\sigma(F_{i-1})\\subseteq M_{i-1}$。于是 $M_{i}/M_{i-1}$ 由若干 $n_{i}$ 次根生成，且 $\\zeta_{n_{i}}\\in F^{\\prime}\\subseteq M_{i-1}$，它是 Kummer 扩张：任意 $\\tau\\in\\operatorname{Gal}(M_{i}/M_{i-1})$ 把每个生成元 $\\beta$ 送到 $\\zeta_{n_{i}}^{k_{\\beta}}\\beta$，$\\tau\\mapsto(k_{\\beta})_{\\beta}$ 是到 $(\\mathbb{Z}/n_{i})^{r}$ 的单同态，故 $\\operatorname{Gal}(M_{i}/M_{i-1})$ 交换。\n\n**可解列**：因 $M_{i}/M_{i-1}$ 伽罗瓦，$\\operatorname{Gal}(M/M_{i})\\trianglelefteq\\operatorname{Gal}(M/M_{i-1})$，且商同构于 $\\operatorname{Gal}(M_{i}/M_{i-1})$，交换。于是 $\\operatorname{Gal}(M/F^{\\prime})\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{1})\\ \\trianglerighteq\\ \\cdots\\ \\trianglerighteq\\ \\operatorname{Gal}(M/M_{m})=1$ 是正规列，各商交换，故 $\\operatorname{Gal}(M/F^{\\prime})$ 可解。\n\n**回到 $K$**：$K^{\\prime}/F$ 伽罗瓦（两个正规扩张的合成），限制映射 $\\operatorname{Gal}(M/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ 满射，故 $\\operatorname{Gal}(K^{\\prime}/F^{\\prime})$ 可解。又有正合列 $1\\to\\operatorname{Gal}(K^{\\prime}/F^{\\prime})\\to\\operatorname{Gal}(K^{\\prime}/F)\\to\\operatorname{Gal}(F^{\\prime}/F)\\to1$（分圆扩张伽罗瓦，限制满射），两端可解、$\\operatorname{Gal}(F^{\\prime}/F)$ 交换，故 $\\operatorname{Gal}(K^{\\prime}/F)$ 可解。最后 $\\operatorname{Gal}(K/F)$ 是 $\\operatorname{Gal}(K^{\\prime}/F)$ 的商：$K^{\\prime}/F$ 正规，$K$ 的每个 $F$-自同构都可延拓到 $K^{\\prime}$。可解群的商可解，故 $\\operatorname{Gal}(K/F)$ 可解。∎",
+   "note": "两个方向的根式塔/可解群翻译；含 Kummer 一步与去单位根假设。"
+  },
+  {
+   "id": "imp.quintic-unsolvable",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "thm.radical-solvable",
+    "prop.sn-solvable",
+    "def.galois-group",
+    "def.irreducible-poly"
+   ],
+   "target": "thm.quintic-unsolvable",
+   "title": "",
+   "proof": "**证明**。取 $f = x^{5} - 4x + 2$，分四步：$f$ 不可约 $\\implies$ 伽罗瓦群传递且含 5-循环；$f$ 恰有三个实根 $\\implies$ 复共轭给出换位；5-循环与换位生成 $S_{5}$；最后用 `thm.radical-solvable` 与 `prop.sn-solvable`。\n\n**第一步：$f$ 在 $\\mathbb{Q}$ 上不可约**。反设 $f = gh$，其中 $g, h \\in \\mathbb{Z}[x]$ 本原、$1 \\le \\deg g \\le 4$（Gauss 引理把 $\\mathbb{Q}[x]$ 的分解搬到 $\\mathbb{Z}[x]$）。模 $2$ 约化：$f \\equiv x^{5} \\pmod 2$，因为 $-4x$ 与 $2$ 都被 $2$ 整除。$\\mathbb{F}_{2}[x]$ 是唯一分解整环，$x^{5}$ 的非常数首一因子只有 $x^{k}$，故 $\\bar g = x^{k}$、$\\bar h = x^{5-k}$（$1 \\le k \\le 4$）。于是 $g(0) \\equiv h(0) \\equiv 0 \\pmod 2$，即 $4 \\mid g(0)h(0) = f(0) = 2$，矛盾。故 $f$ 不可约。∎\n\n**第二步：$G = \\operatorname{Gal}(f)$ 传递且含 5-循环**。不可约多项式的伽罗瓦群在根集上传递：任取两根 $\\alpha, \\beta$，$\\mathbb{Q}(\\alpha) \\cong \\mathbb{Q}[x]/(f) \\cong \\mathbb{Q}(\\beta)$ 给出一个把 $\\alpha$ 送到 $\\beta$ 的 $\\mathbb{Q}$-嵌入，再延拓到分裂域。传递群的轨道大小 $5$ 整除 $|G|$，故 $5 \\mid |G|$；由 Cauchy 定理，$G$ 含 5 阶元，而 $S_{5}$ 中的 5 阶元恰是 5-循环。记其中一个为 $\\sigma$。\n\n**第三步：$G$ 含一个换位**。$f^{\\prime}(x) = 5x^{4} - 4$，唯一临界点为 $\\pm\\alpha$，$\\alpha = (4/5)^{1/4} \\in (3/4, 1)$。$f$ 在 $(-\\infty, -\\alpha)$ 与 $(\\alpha, \\infty)$ 上递增、在 $(-\\alpha, \\alpha)$ 上递减。又 $\\alpha^{5} = \\tfrac{4}{5}\\alpha$，故 $f(\\alpha) = 2 - \\tfrac{16}{5}\\alpha < 2 - \\tfrac{16}{5}\\cdot\\tfrac{3}{4} = -\\tfrac{2}{5} < 0$，而 $f(-\\alpha) = 2 + \\tfrac{16}{5}\\alpha > 0$；且 $x \\to -\\infty$ 时 $f \\to -\\infty$，$x \\to +\\infty$ 时 $f \\to +\\infty$。由介值定理与上述单调性，$f$ 恰有三个实根，分别落在 $(-\\infty, -\\alpha)$、$(-\\alpha, \\alpha)$、$(\\alpha, \\infty)$ 内。复共轭 $\\tau$ 固定这三个实根、交换剩下两个非实根，所以 $\\tau \\in G$ 是一个换位（奇置换）。\n\n**第四步：$\\langle \\sigma, \\tau \\rangle = S_{5}$**。把 $\\sigma$ 写成 $(0\\,1\\,2\\,3\\,4)$。换位 $\\tau = (a\\,b)$ 的两个点在 5-循环上的距离只可能是 $1$ 或 $2$（距离 $d$ 与 $5-d$ 等价）。若距离为 $1$，$\\sigma^{k}\\tau\\sigma^{-k}$ 给出全部相邻换位 $(i\\,i+1)$，它们生成 $S_{5}$。若距离为 $2$，不妨取 $\\tau = (0\\,2)$：共轭给出 $(0\\,2), (1\\,3), (2\\,4), (3\\,0), (4\\,1)$。由 $(0\\,2)$ 与 $(2\\,4)$ 得乘积 $(0\\,4\\,2)$，于是 $\\{0, 2, 4\\}$ 上的 $S_{3}$（含换位 $(0\\,2)$）落在 $G$ 里；$S_{3}$ 与 5-循环合起来使 $|G|$ 被 $6$ 与 $5$ 整除，故 $30 \\mid |G|$。若 $|G|=30$，则 $G$ 是 $S_{5}$ 的指数 $4$ 子群；$S_{5}$ 在 $G$ 的 $4$ 个左陪集上的作用给出**传递**同态 $\\varphi:S_{5}\\to S_{4}$，其核必为 $S_{5}$ 的正规子群 $1$、$A_{5}$ 或 $S_{5}$。核为 $1$ 时得单射 $S_{5}\\hookrightarrow S_{4}$，$120>24$ 不可能；核为 $A_{5}$ 时像为 $S_{5}/A_{5}\\cong C_{2}$，而 $C_{2}$ 在 $4$ 个点上每条轨道长 $\\le 2$，不能传递；核为 $S_{5}$ 时作用平凡，也不能传递。矛盾，故 $|G|\\ne30$。$G$ 含奇置换，不能等于 $A_{5}$（$S_{5}$ 中唯一的指数 2 子群），所以 $|G| = 120$、$G = S_{5}$。\n\n**收尾**。于是 $\\operatorname{Gal}(f) \\cong S_{5}$。由 `prop.sn-solvable`，$S_{5}$ 不可解；由 `thm.radical-solvable`（特征 $0$，底域 $\\mathbb{Q}$），根式可解当且仅当伽罗瓦群可解。所以 $f$ 的根不能由 $\\mathbb{Q}$ 的元素经四则运算与开方写出，特别地不存在一般的五次根式公式。∎",
+   "note": "取 $x^5-4x+2$，证不可约、群含 5-轮换与换位、$S_5$ 不可解。"
+  },
+  {
    "id": "dep.fieldext-algclosed",
    "kind": "definition",
    "strength": "strong",
@@ -117891,6 +118186,523 @@
    "target": "thm.watts",
    "title": "",
    "proof": "**证明（自由模上验、右正合推广）。**\n**① $F(R)$ 是 $R$-模。** $R$ 上的左乘给出 $\\operatorname{End}_{R\\text{-}\\mathbf{Mod}}(R) \\cong R^{\\mathrm{op}}$ 的作用；\n\n$F$ 把它送到 $F(R)$ 的自同态，于是 $F(R)$ 自动带上模结构 ✓（交换环上左右不分，可以就写 $R$）。\n**② 自由模上成立。** 对 $M = R^{(I)} = \\bigoplus_{i \\in I} R$，保直和给出\n$$F\\bigl(R^{(I)}\\bigr) \\cong \\bigoplus_{i} F(R) \\cong R^{(I)}\\otimes_{R} F(R)$$\n（最后一步是「自由模张量＝按系数重排」）✓。\n**③ 一般模上由右正合推过去。** 取自由表现 $R^{(J)} \\to R^{(I)} \\to M \\to 0$。\n\n$F$ 右正合，保这个右正合列；而 $M\\otimes_{R}-$ 也右正合，保同一个右正合列。\n\n② 给出两端（$R^{(I)}$ 与 $R^{(J)}$ 处）的自然同构，于是两行比较、用「$F(M) \\to M\\otimes F(R)$ 那个自然变换在两侧都是同构」以及五项（或三项）引理，中间也是同构 ✓。\n说明：那个自然变换 $\\tau_{M} : F(M) \\to M\\otimes_{R} F(R)$ 的构造是「$M$ 的元素沿 $R \\to M$ 送入、再作用 $F$」的一般化 —— 它在自由模上由 ② 给出、与生成元选取无关 ✓。∎",
+   "note": ""
+  },
+  {
+   "id": "imp.compact-subset-closed",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.hausdorff",
+    "def.compact",
+    "def.closed-set",
+    "def.metric-space"
+   ],
+   "target": "prop.compact-subset-closed",
+   "title": "",
+   "proof": "**证明。** 设 $A$ 紧，取 $x \\in X\\setminus A$ 要证它是内点。\n- 对每个 $a \\in A$，由 Hausdorff 性取 $a$ 的开邻域 $U_{a}$ 与 $x$ 的开邻域 $V_{a}$ 使 $U_{a}\\cap V_{a} = \\emptyset$（距离空间里取 $U_{a} = B(a, r/2)$、$V_{a} = B(x, r/2)$，$r = d(a,x)$）；\n- $\\{U_{a}\\}_{a\\in A}$ 是 $A$ 的开覆盖，由**紧性**取有限子覆盖 $U_{a_{1}}, \\ldots, U_{a_{n}}$；\n- $V := \\bigcap_{i=1}^{n} V_{a_{i}}$ 是 $x$ 的开邻域，且 $V\\cap U_{a_{i}} = \\emptyset$ 对每个 $i$ 成立，故 $V \\cap A = \\emptyset$，即 $V \\subseteq X\\setminus A$ ✓。\n于是 $X\\setminus A$ 开，$A$ 闭。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.subset-compact-equiv",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.metric-space",
+    "def.compact",
+    "def.complete",
+    "def.totally-bounded"
+   ],
+   "target": "prop.subset-compact-equiv",
+   "title": "",
+   "proof": "**证明。**\n- **$\\implies$**：$A$ 紧 $\\implies$ $A$ 在 $X$ 中闭（上一条）。\n\n全有界：任给 $\\varepsilon > 0$，$\\{B(a,\\varepsilon)\\cap A\\}_{a\\in A}$ 是 $A$（带子空间度量）的开覆盖，紧性给有限子覆盖，那有限个中心就是 $\\varepsilon$-网 ✓。\n- **$\\Longleftarrow$**：设 $A$ 闭、全有界。\n\n先看**完备性**：$X$ 完备、$A$ 闭，则 $A$ 里的 Cauchy 列在 $X$ 里收敛到某点，极限落在闭的 $A$ 里，故 $A$ 作为子空间完备 ✓。\n\n再证**紧**：全有界给可数稠密子集，于是 $A$ 里的任意序列可以用「逐层取 $2^{-n}$-网 + 抽屉原理」抽出 Cauchy 子列；\n\n完备性让这个子列收敛 ✓。\n\n所以 $A$ **列紧**；\n\n而在**度量空间**里列紧 $\\iff$ 紧 ✓。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.fchaus-pretopology",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.chaus",
+    "def.condensed-set",
+    "def.grothendieck-topology"
+   ],
+   "target": "prop.fchaus-pretopology",
+   "title": "",
+   "proof": "**证明（验证预拓扑的三条公理）。** 覆盖约定为：$(F_{i} \\to F)_{i \\in I}$，$I$ 有限且 $\\coprod_{i} F_{i} \\to F$ 双射。\n- **恒等**：$\\{\\mathrm{id}_{F}\\}$ 是覆盖；\n- **拉回稳定**：给覆盖与任意 $F' \\to F$，拉回族 $(F_{i} \\times_{F} F' \\to F')_{i}$ 仍然有限，且由「不交并沿任意映射拉回仍是不交并」得 $\\coprod_{i}(F_{i} \\times_{F} F') \\cong F'$；\n\n$\\mathbf{FCHaus}$ 对有限不交并与纤维积封闭（自由对象的有限不交并还是自由的：$\\beta I \\coprod \\beta J = \\beta(I \\coprod J)$）；\n\n\n- **复合**：覆盖的覆盖拼起来还是覆盖。\n另外，$\\mathbf{FCHaus}$ 里的覆盖 $\\coprod_{i} F_{i} \\to F$ 是**双射**，于是每个 $F_{i} \\to F$ 都是含入，而「$F \\to F_{i}$ 的截面」由 $F_{i}$ 的闭性 + 完全性给出 —— 这就是为什么这里的层条件好验。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.condab-section",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.condensed-set",
+    "def.abelian-category",
+    "def.grothendieck-topology",
+    "def.sheaf"
+   ],
+   "target": "prop.condab-section",
+   "title": "",
+   "proof": "**证明。** 把 $\\mathrm{CondAb}$ 等同于 $\\mathbf{FCHaus}$ 上的阿贝尔层范畴（这是「$\\mathrm{Cond} \\simeq \\widehat{\\mathbf{FCHaus}}$」的加法版本）。\n- **保余极限**：只需证预层意义的余极限**自动是层**。$F$ 自由时，$\\mathbf{FCHaus}$ 上的覆盖就是有限不交并，于是对 $\\coprod_{j=1}^{r} F_{j}$：\n$$\\Bigl(\\varinjlim_{i} M_{i}\\Bigr)\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} M_{i}\\Bigl(\\coprod_{j} F_{j}\\Bigr) = \\varinjlim_{i} \\bigoplus_{j} M_{i}(F_{j}) = \\bigoplus_{j} \\varinjlim_{i} M_{i}(F_{j}),$$\n中间一步用「$\\mathbf{FCHaus}$ 上的层保有限积」（即 $M(\\coprod F_{j}) = \\bigoplus M(F_{j})$），最后一步用 $\\mathbf{Ab}$ 里有限积与有限余积一致、且滤过余极限正合。既然余极限仍满足层条件，它就是层内的余极限，且 $\\Gamma(F, -)$ 与它交换 ✓。\n- **保极限**：层范畴里的极限**逐项**计算（预层极限自动是层），故 $\\Gamma(F, \\varprojlim M_{i}) = \\varprojlim \\Gamma(F, M_{i})$ ✓。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.condab-ab",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.condensed-set",
+    "def.abelian-category",
+    "def.grothendieck-topology",
+    "prop.condab-section"
+   ],
+   "target": "thm.condab-ab",
+   "title": "",
+   "proof": "**证明（逐条归约到 $\\mathbf{Ab}$）。** 关键工具就是上一条：**每个 $\\Gamma(F,-)$（$F$ 自由）都保所有极限与余极限**，所以任何「用有限极限 + 余极限写出来的性质」都可以逐项检验，而逐项之后就是 $\\mathbf{Ab}$ 里的熟事实。\n- **有余极限 / 有极限**：逐项取余极限得到的预层仍是层（上一条）$\\implies$ 存在 ✓；\n- **滤过余极限正合（AB5）**：逐项算，$\\mathbf{Ab}$ 里滤过余极限正合 ✓；\n- **有生成元**：$\\mathrm{Cond}$ 由 $\\{h_{F}\\}$（$F$ 自由紧 Hausdorff）生成 $\\implies$ $\\mathrm{CondAb}$ 由 $\\{\\mathbb{Z}\\cdot F\\}$ 生成 ✓；\n- **AB4\\*（积正合）**：积逐项算，$\\mathbf{Ab}$ 里积正合 ✓；\n- **AB6（滤过余极限与积交换）**：逐项化归到 $\\mathbf{Ab}$ 的 AB6 ✓；\n- **阿贝尔**：核、余核逐项算都是 $\\mathbf{Ab}$ 里的核余核，单满分解、$\\operatorname{im}\\cong\\operatorname{coim}$ 都逐项成立 ✓。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.stonean-projective",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.projective-object",
+    "def.condensed-set",
+    "def.abelian-category",
+    "def.tensor-product-vs"
+   ],
+   "target": "lem.stonean-projective",
+   "title": "",
+   "proof": "**证明。** 由张量—Hom 伴随，$\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}\\cdot F, M) \\cong M(F) = \\Gamma(F, M)$ ✓，所以只需看 $\\Gamma(F,-)$。\n- **保满态射**：上一条说 $\\Gamma(F,-)$ 保**所有**余极限，特别地保余核；$v$ 满 $\\iff$ $\\operatorname{coker} v = 0$ $\\implies$ $\\operatorname{coker}\\Gamma(v) = 0$ $\\implies$ $\\Gamma(v)$ 满 ✓；\n\n\n- **保滤过余极限**：同样由「保所有余极限」✓。\n而标准判据是：$P$ **投射** $\\iff$ $\\operatorname{Hom}(P,-)$ 保满态射；$P$ **有限表现** $\\iff$ $\\operatorname{Hom}(P,-)$ 保滤过余极限。两条合起来，$\\mathbb{Z}\\cdot F$ 就是有限表现的投射对象。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cohomology-exact-sequence",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.cochain-complex",
+    "def.cohomology",
+    "def.image"
+   ],
+   "target": "prop.cohomology-exact-sequence",
+   "title": "",
+   "proof": "**证明。** 记 $Z^{k} := \\ker d^{k}$、$B^{k} := \\operatorname{im} d^{k-1}$，于是 $H^{k} = Z^{k}/B^{k}$、$\\operatorname{coker} d^{k-1} = K^{k}/B^{k}$。要证的四个箭头依次是：\n- $Z^{k}/B^{k} \\to K^{k}/B^{k}$：由含入 $Z^{k} \\hookrightarrow K^{k}$ 诱导，单射（$Z^{k}$ 在 $K^{k}$ 里，商掉同一个 $B^{k}$）；\n- $K^{k}/B^{k} \\to Z^{k+1}$：由 $d^{k}$ 诱导（它把 $B^{k} = \\operatorname{im} d^{k-1}$ 送到 $d^{k}d^{k-1} = 0$，故下降得良定义）。核正是「$d^{k}x = 0$ 的那些 $x + B^{k}$」＝ $Z^{k}/B^{k}$；\n- $Z^{k+1} \\to Z^{k+1}/B^{k+1} = H^{k+1}$：取商映射，满，核是 $B^{k+1} = \\operatorname{im} d^{k}$ —— 正好是上一个箭头的像。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.k-product",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.compactly-generated",
+    "def.k-topology",
+    "def.locally-compact-space",
+    "def.hausdorff"
+   ],
+   "target": "prop.k-product",
+   "title": "",
+   "proof": "**证明（第一式）。** $k$-拓扑由「哪些紧 Hausdorff 块映射连续」决定，而关键是一条逐点事实：\n- **对 $T$ 紧 Hausdorff，$g : T \\to X$ 连续 $\\iff$ $g : T \\to kX$ 连续。** 反正向显然（$kX$ 拓扑更细）；正向因为 $kX$ 的开集就是这么定义的：$U \\subseteq kX$ 开 $\\iff$ 沿每个紧 Hausdorff 映射的拉回开，取 $g$ 即得 $g^{-1}(U)$ 开。\n- 于是对 $T$ 紧 Hausdorff：$(g_{1}, g_{2}) : T \\to X \\times Y$ 连续 $\\iff$ $g_{1} : T\\to X$ 与 $g_{2} : T \\to Y$ 都连续 $\\iff$ $g_{1} : T \\to kX$ 与 $g_{2}$ 都连续 $\\iff$ $T \\to kX\\times Y$ 连续。\n- 两张 $k$-拓扑 $k(X\\times Y)$ 与 $k(kX\\times Y)$ 由**同一族**测试映射（全体 $T \\to$ 该底集合，$T$ 紧 Hausdorff）的连续性刻画，故它们的开集族相同，即 $k(kX\\times Y) = k(X\\times Y)$。\n**第二式**：由上一条「$X$ 紧生成、$Y$ 局部紧 Hausdorff $\\implies$ $kX \\times Y$ 紧生成」得 $kX\\times Y$ 已经是紧生成的，对它取 $k$ 不再改变：$k(kX\\times Y) = kX\\times Y$；\n\n代入第一式即得 $kX\\times Y = k(X\\times Y)$。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.weak-hausdorff-basic",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.weak-hausdorff",
+    "def.chaus",
+    "def.condensed-set",
+    "def.fibered-product"
+   ],
+   "target": "prop.weak-hausdorff-basic",
+   "title": "",
+   "proof": "**证明。** 五条都只用定义。\n- **紧 Hausdorff 子空间闭**：$K \\subseteq X$ 紧 Hausdorff，含入 $K \\hookrightarrow X$ 就是定义里的那个 $f$，故 $K = f(K)$ 闭。\n- **$T_{1}$**：单点 $\\{x\\}$ 是紧 Hausdorff 空间（它自己的）的像，故闭 —— 单点闭就是 $T_{1}$。\n- **$f(S)$ 紧 Hausdorff**：$f(S)$ 紧（连续像），且由定义它在 $X$ 中闭；闭子空间的子空间拓扑是 Hausdorff 的，故 $f(S)$ 紧 Hausdorff。\n- **$\\Delta_{X}$ 是 $k$-闭的**：取紧 Hausdorff 的 $g = (g_{1}, g_{2}) : T \\to X\\times X$。\n\n$g_{1}(T)$、$g_{2}(T)$ 由上一款是紧 Hausdorff，故 $g_{1}(T)\\times g_{2}(T)$ 紧 Hausdorff，于是 $\\Delta_{X} \\cap \\bigl(g_{1}(T)\\times g_{2}(T)\\bigr) = \\Delta_{g_{1}(T)}$（两个紧 Hausdorff 集的「相等点」）在其中**闭**；\n\n而 $g^{-1}(\\Delta_{X}) = g^{-1}\\bigl(\\Delta_{X}\\cap(g_{1}(T)\\times g_{2}(T))\\bigr)$ 是闭集的逆像，闭 ✓。\n- **反过来（$X$ 紧生成 + $\\Delta$ $k$-闭 $\\implies$ 弱 Hausdorff）**：取 $f : S\\to X$（$S$ 紧 Hausdorff），要证 $f(S)$ 闭。\n\n$X$ 紧生成，故只需证对每个紧 Hausdorff 的 $h : T \\to X$，$h^{-1}\\bigl(f(S)\\bigr)$ 在 $T$ 中闭。\n\n而\n$$h^{-1}\\bigl(f(S)\\bigr) = \\operatorname{pr}_{T}\\Bigl(\\{(s, t) : f(s) = h(t)\\}\\Bigr) = \\operatorname{pr}_{T}\\Bigl((f,h)^{-1}(\\Delta_{X})\\Bigr),$$\n其中 $(f,h)^{-1}(\\Delta_{X})$ 在 $S\\times T$ 中闭（$S\\times T$ 紧 Hausdorff，$\\Delta$ $k$-闭）；而 $\\operatorname{pr}_{T} : S\\times T\\to T$ 是**闭映射**（$S$ 紧），故 $h^{-1}(f(S))$ 闭 ✓。\n- **$\\ker(f,g)$ 是 $k$-闭的**：$\\ker(f,g) = (f,g)^{-1}(\\Delta_{Y})$，而 $k$-闭集沿连续映射的拉回仍 $k$-闭（用紧 Hausdorff 测试：$(f,g)\\circ h$ 连续，$h^{-1}(\\ker) = ((f,g)\\circ h)^{-1}(\\Delta_{Y})$ 闭）。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.lc-ab-preabelian",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.locally-compact-space",
+    "def.abelian-category",
+    "def.fibered-product",
+    "def.equalizer"
+   ],
+   "target": "prop.lc-ab-preabelian",
+   "title": "",
+   "proof": "**证明。**\n- **预阿贝尔**：有有限积与有限余积（积 = 积群配积拓扑；余积 = 直和配「余积拓扑」）、核与余核都存在 —— 核是通常的核配**子空间拓扑**；余核是 $N/\\overline{f(M)}$ 配**商拓扑**（$f(M)$ 未必闭，必须商掉**闭包**：对闭子群商群配商拓扑才是局部紧 Hausdorff）✓。\n- **不是阿贝尔**：取 $\\mathrm{id} : \\mathbb{R}^{\\mathrm{disc}} \\to \\mathbb{R}$。\n\n它连续（离散拓扑比欧氏拓扑细）且是单射，故是单态射；\n\n它的**余核** $\\mathbb{R}/\\mathbb{R} = 0$。\n\n而阿贝尔范畴要求单态射是**严格的**，即 $f = \\ker(\\operatorname{coker} f)$ —— 这里 $\\ker(0) = \\mathbb{R}$，但 $\\ker(0)$ 要带的拓扑是欧氏拓扑，而 $\\mathbb{R}^{\\mathrm{disc}}$ 不是它，二者**同构但不相等**（作为拓扑群的态射不同构）✗。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.ab-limits-forgetful",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.group",
+    "def.limit",
+    "def.functor",
+    "def.additive-category"
+   ],
+   "target": "prop.ab-limits-forgetful",
+   "title": "",
+   "proof": "**证明（极限在遗忘函子下逐项算）。** 阿贝尔群对象的定义是一组态射与**交换图**：\n$$m : X \\times X \\to X, \\qquad e : 1 \\to X, \\qquad i : X \\to X$$\n配上一串等式（结合、单位、逆、交换性）—— 全是「两个复合相等」形式的图。\n- 设 $D : I \\to \\mathrm{Ab}(\\mathcal{C})$ 是可图表，记 $UX$ 为 $X$ 的底对象。\n\n因为极限保持极限（特别地保持有限积与终对象），把上述各图和等式逐项送进 $\\mathcal{C}$ 后仍然成立；\n\n于是底对象上的 $\\lim UD$ **自动**带上阿贝尔群对象的结构，$m$ 取 $\\lim (Um \\circ \\text{交换}) $、$e$ 取 $\\lim Ue$。\n- 于是 $\\mathrm{Ab}(\\mathcal{C})$ 有 $I$-极限，而遗忘函子把它送到 $\\mathcal{C}$ 里的 $\\lim UD$ —— 即**保极限**。\n- 细节只在一处：$\\lim$ 与有限积的交换（$U \\lim = \\lim U$ 与 $\\lim(X_{i}\\times Y_{i}) = \\lim X_{i}\\times \\lim Y_{i}$），那是极限的一般性质。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.exact-to-triangle",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.mapping-cone",
+    "def.distinguished-triangle",
+    "def.cochain-complex"
+   ],
+   "target": "prop.exact-to-triangle",
+   "title": "",
+   "proof": "**证明。** 由映射锥的显式写法（$M(f)^{n} = L^{n}\\oplus K^{n+1}$），复合\n$$M(f)^{n} \\longrightarrow L^{n} \\xrightarrow{\\;g\\;} M^{n}$$\n是复形态射（把 $L^{n}$ 那一块投过去），记作 $\\varphi : M(f)^{\\bullet} \\to M^{\\bullet}$。于是有复形的短正合列\n$$0 \\to M(\\mathrm{id}_{K^{\\bullet}})^{\\bullet} \\longrightarrow M(f)^{\\bullet} \\xrightarrow{\\;\\varphi\\;} M^{\\bullet} \\to 0 .$$\n而 $M(\\mathrm{id}_{K^{\\bullet}})$ 是**零调**的（$\\mathrm{id}_{K}$ 是拟同构；显式看就是可缩复形）。\n\n取长正合列，两头零调把首尾杀掉，读出 $\\varphi$ 是**拟同构** —— 于是它在 $D(\\mathcal{A})$ 里是同构，三角 $K^{\\bullet} \\xrightarrow{f} L^{\\bullet} \\to M(f)^{\\bullet} \\to K^{\\bullet}[1]$ 与要的那条同构。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.topos-morphism-derived",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.topos",
+    "def.sheaf",
+    "def.right-derived-functor",
+    "def.sheaf-cohomology"
+   ],
+   "target": "prop.topos-morphism-derived",
+   "title": "",
+   "proof": "**证明。** 记 $f = (f^{-1} \\dashv f_{*})$，并把 $f^{-1}$、$f_{*}$ 在**预层**上的版本记作 $\\hat{f}^{-1}$、$\\hat{f}_{*}$。两个关键事实：\n- $f^{-1}$ 与**层化**都是正合的（拓扑斯态射的定义要求 $f^{-1}$ 正合；层化左正合且右正合，因为它是伴随）。\n- $f_{*} = \\sharp \\circ \\hat{f}_{*}$（先按预层推，再层化）。\n于是 $R f_{*} = \\sharp \\circ \\hat{f}_{*} \\circ R H$（记 $H$ 为「把层看成预层」，它是左正合且正合的嵌入）。取第 $n$ 阶：**$R^{n}f_{*}M$ 就是预层 $\\hat{f}_{*}H^{n}(M)$ 的层化**。\n最后认这个预层：由伴随 $f^{-1} \\dashv \\hat{f}_{*}$，对每个 $X' \\in \\mathcal{T}'$\n$$\\bigl(\\hat{f}_{*}H^{n}(M)\\bigr)(X') = H^{n}(M)\\bigl(f^{-1}(X')\\bigr) = H^{n}\\bigl(f^{-1}(X'),\\ M\\bigr).$$\n两边一合就是要证的。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cond-internal-hom",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.condensed-set",
+    "def.topos",
+    "def.chaus",
+    "def.hausdorff"
+   ],
+   "target": "prop.cond-internal-hom",
+   "title": "",
+   "proof": "**存在性**，这一条给的是**具体形状**。$Y$ 紧生成这个假设不能去掉 —— 紧生成正是让「紧开拓扑」够用的那个条件。\n\n**证明。** 先设 $X = S$ 是紧 Hausdorff 空间（此时 $X(\\bullet) = S$）。对任意紧 Hausdorff 的 $T$，两边在 $T$ 上取值并逐步用「内部 Hom 的伴随」与「紧生成空间上的指数律」：\n$$\\underline{\\operatorname{Hom}}(S, \\underline{Y})(T) = \\operatorname{Hom}\\bigl(T,\\ \\underline{\\operatorname{Hom}}(S,\\underline{Y})\\bigr) \\cong \\operatorname{Hom}(T \\times S,\\ \\underline{Y}) \\cong C(T\\times S,\\ Y) \\cong C\\bigl(T,\\ C(S, Y)\\bigr) = \\underline{C(X(\\bullet), Y)}(T).$$\n其中第四步是紧生成空间（$T \\times S$ 与 $Y$）上的**指数律**。取 $T = \\bullet$ 得自然变换；一般 $X$ 再用 Yoneda：对紧 Hausdorff 的 $S$，\n$$\\operatorname{Hom}(X, \\underline{Y})(S) \\cong \\operatorname{Hom}(S, \\operatorname{Hom}(X, \\underline{Y})) \\cong \\operatorname{Hom}(X, \\operatorname{Hom}(S, \\underline{Y})) \\cong \\operatorname{Hom}\\bigl(X, C(S, Y)\\bigr) \\cong C\\bigl(X(\\bullet), C(S, Y)\\bigr) \\cong C\\bigl(S, C(X(\\bullet), Y)\\bigr),$$\n最后一步又是指数律。于是两边作为 $\\mathbf{CHaus}$ 上的层逐点同构，即自然同构。\n**紧生成的情形**：$X$ 也紧生成时，$X(\\bullet) = X$（底空间就是它自己），且两侧都落在 $\\mathrm{CGWH}$ 里，取 $k$-化即得 $kC(X, Y) \\cong \\operatorname{Hom}(X, \\underline{Y})$。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.weak-hausdorff-qseparated",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.weak-hausdorff",
+    "def.condensed-set",
+    "def.fibered-product",
+    "def.chaus"
+   ],
+   "target": "lem.weak-hausdorff-qseparated",
+   "title": "",
+   "proof": "**证明。** 不妨设 $X$ 紧生成（弱 Hausdorff 的 $k$-化不改变结论）。对 $i = 1, 2$，由拟紧性取紧 Hausdorff 空间 $S_{i}$ 与满态射 $S_{i} \\twoheadrightarrow X_{i}$（「拟紧 $\\iff$ 有从自由紧 Hausdorff 的满射」）。于是有满态射\n$$S_{1} \\times_{X} S_{2} \\twoheadrightarrow X_{1} \\times_{X} X_{2},$$\n（纤维积保满射）。\n\n而 $X$ 弱 Hausdorff、$S_{1}, S_{2}$ 紧 Hausdorff，于是 $S_{1} \\times_{X} S_{2}$ 是 $S_{1} \\times S_{2}$ 里的**闭**子集（弱 Hausdorff 的定义：紧 Hausdorff 子空间沿连续映射的纤维积仍紧 Hausdorff），故紧 Hausdorff。\n紧 Hausdorff 空间的商还是紧 Hausdorff（连续满像是紧的，Hausdorff 商还是 Hausdorff），故 $X_{1} \\times_{X} X_{2}$ 紧 Hausdorff。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.qseparated-ind-inclusions",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.quasi-separated",
+    "def.condensed-set",
+    "def.chaus"
+   ],
+   "target": "lem.qseparated-ind-inclusions",
+   "title": "",
+   "proof": "**证明。** 只需证正向（反向是定义）。\n- 任何凝聚态集 $X$ 都能写成 $X \\cong \\varinjlim_{i} T_{i}$（$T_{i}$ 紧 Hausdorff）—— 这是 $\\mathrm{Cond}$ 里「用紧块拼出来」的一般事实。\n- 记 $X_{i}$ 为 $T_{i}$ 在 $X$ 中的**像**，则 $X = \\varinjlim_{i} X_{i}$。\n\n每个 $X_{i}$ 作为 $T_{i}$ 的像是**拟紧**的；\n\n而 $X$ 拟分离，故每个 $X_{i}$ 也拟分离（拟分离沿子对象遗传）。\n\n于是由「拟紧拟分离 $\\cong$ 紧 Hausdorff」得 $X_{i} \\cong S_{i}$，$S_{i}$ 紧 Hausdorff。\n- 把族 $(S_{i})$ 换成 $S_{J} := \\bigcup_{i \\in J} S_{i}$（$J$ 有限）—— 因为 $X$ 拟分离，两个紧 Hausdorff 块的交还是紧 Hausdorff（上一条），有限并仍紧 Hausdorff，于是得到一个**有向**的族 $S_{J}$，且 $X = \\varinjlim_{J} S_{J}$，过渡映射都是含入。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.qseparated-underlying-weak-hausdorff",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.quasi-separated",
+    "def.weak-hausdorff",
+    "def.condensed-set"
+   ],
+   "target": "lem.qseparated-underlying-weak-hausdorff",
+   "title": "",
+   "proof": "**证法**：把 $X$ 写成紧 Hausdorff 块沿含入的滤过余极限（上一条），再对底空间取 $k$-化。滤过余极限在 $\\mathrm{CGWH}$ 里被保留，而每个紧 Hausdorff 块都弱 Hausdorff，于是余极限仍弱 Hausdorff。\n\n**方向别弄反**：这条是「拟分离 $\\implies$ 弱 Hausdorff」，反向要加**紧生成**才成立（见下一条）。\n\n**证明。** 由拟分离的刻画，把 $X$ 写成紧 Hausdorff 块沿**含入**的滤过余极限 $X = \\varinjlim_{i} S_{i}$（$S_{i} \\hookrightarrow S_{j}$）。底空间沿滤过余极限是正合的：\n$$X(\\bullet) = \\varinjlim_{i} S_{i}$$\n（在 $\\mathrm{CGWH}$ 里取 $k$-化后这个余极限仍被保留）。而**每个** $S_{i}$ 是紧 Hausdorff，当然弱 Hausdorff；$\\mathrm{CGWH}$ 是**余完备且对滤过余极限封闭**的，于是余极限 $X(\\bullet)$ 仍弱 Hausdorff。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cg-wh-iff-qseparated",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.weak-hausdorff",
+    "def.quasi-separated",
+    "def.compactly-generated",
+    "def.condensed-set"
+   ],
+   "target": "prop.cg-wh-iff-qseparated",
+   "title": "",
+   "proof": "**证明。** 两个方向各用一条引理：\n- **$\\implies$**：$X$ 紧生成且弱 Hausdorff，则视为凝聚态集时拟分离 —— 这正是「弱 Hausdorff $\\implies$ 拟分离」那条纤维积引理。\n- **$\\Longleftarrow$**：$X$ 紧生成且拟分离，则底空间 $X(\\bullet)$ 弱 Hausdorff；而 $X$ 紧生成意味着 $X(\\bullet) \\cong X$（紧生成空间的 $k$-化就是它自己，且它在凝聚态世界里由 $\\underline{S} \\mapsto \\operatorname{Hom}(S, X)$ 决定），所以 $X$ 本身弱 Hausdorff。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cond-slice-topos-morphism",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.topos",
+    "def.sheaf",
+    "def.fibered-product",
+    "def.condensed-set"
+   ],
+   "target": "prop.cond-slice-topos-morphism",
+   "title": "",
+   "proof": "**构造基础**：有了这两个方向，$\\mathrm{Cond}/X$ 上的上同调才能被 $\\mathrm{Open}(X)$ 上的层上同调逼近。\n\n**证明。** 先看两个函子都有定义：逆像把 $Y \\in \\mathrm{Cond}/X$ 送到预层 $U \\mapsto \\operatorname{Hom}_{/X}(\\underline{U}, Y)$，而 $\\mathrm{Open}(X)$ 上的层条件只涉及开集的含入，逐条验即可；\n\n顺像 $\\varinjlim_{U \\subseteq X,\\ s \\in F(U)} \\underline{U}$ 取的是**滤过**余极限（开集沿含入滤过），在 $\\mathrm{Cond}$ 里存在。\n**逆像左正合**：$\\varinjlim$ 在 $\\mathrm{Cond}$ 里正合（AB5）。\n**伴随**：逐项算\n$$\\operatorname{Hom}_{/X}\\Bigl(\\varinjlim_{U, s} \\underline{U},\\ Y\\Bigr) = \\varinjlim_{U, s} \\operatorname{Hom}_{/X}(\\underline{U}, Y) = \\operatorname{Hom}(F, Y),$$\n第一式是余极限的泛性质，第二式就是把「从 $F$ 到 $Y$ 的映射」按 $F$ 的定义写成相容族 $\\{F(U) \\to \\operatorname{Hom}_{/X}(\\underline{U}, Y)\\}$ —— 两者是同一件事。\n\n于是有伴随 $\\varinjlim \\underline{U} \\dashv \\bigl(U \\mapsto \\operatorname{Hom}_{/X}(\\underline{U}, -)\\bigr)$，逆像左正合，故 $c_{X}$ 是拓扑斯态射。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.stone-constant-acyclic",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.condensed-set",
+    "def.cech-complex",
+    "def.cech-cohomology",
+    "def.chaus"
+   ],
+   "target": "lem.stone-constant-acyclic",
+   "title": "",
+   "proof": "**证法**。把 $S$ 与它的一个 Stone 满射 $S_{0} \\twoheadrightarrow S$ 都写成**有限离散空间**的滤过**逆**极限（Stone 空间按定义就是投射有限空间的逆极限）。增广 Čech 复形逐段零调（有限离散情形是好算的），而滤过逆极限沿着正合列取极限仍然正合，于是整体零调。\n\n**为什么值得单列**：常系数是最常用的系数，这条让「Stone 空间上的常系数上同调」这一整类计算直接归零。\n\n**证明（先有限、再取逆极限）。** 由「无环 $\\iff$ Čech 上同调为零」，只需对 Stone 空间之间的**满射** $f : S_{0} \\twoheadrightarrow S$ 证明增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr)$ 零调（有限**不交**覆盖那情形由「有限不交覆盖的高次 Čech 为零」给出）。\n- **$S, S_{0}$ 有限的情形**：此时它们是有限离散集，$f$ 是有限满射，增广 Čech 复形是**零伦**的（有截面的态射那条），故零调。\n- **一般情形**：Stone 空间是**投射有限空间**的滤过逆极限，写 $S_{0} = \\varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），记 $S_{k}$ 为 $S_{0,k}$ 在 $S$ 里的像。$M$ **离散**，于是交叠上的连续函数就是逐块给定的，而逆极限的取值是滤过余极限：\n$$\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+},\\ M\\bigr) = \\varinjlim_{k} \\check{C}^{\\bullet}\\bigl((S_{0,k}\\to S_{k})^{+},\\ M\\bigr).$$\n- **滤过余极限正合**（AB5），所以「每一项都零调」沿这个余极限传下去：整体零调。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.k-bounded-completion",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.semi-normed-ab-group",
+    "def.complete",
+    "def.k-bounded-exact"
+   ],
+   "target": "lem.k-bounded-completion",
+   "title": "",
+   "proof": "**证明（两个方向各算一次 $\\varepsilon/2$）。** 先商掉 $M_{0}$（$K$-有界正合在商掉范数为零的元素下不变），于是可设 $M^{\\bullet} \\subseteq \\widehat{M}^{\\bullet}$ 是稠密保范嵌入。\n- **$\\implies$**：给 $s \\in \\widehat{M}^{n}$ 与 $\\varepsilon>0$。\n\n由稠密性取 $t \\in M^{n}$ 使 $\\|s - t\\| \\le \\frac{\\varepsilon}{2(1+K\\|d^{n}\\|)}$；\n\n由 $M^{\\bullet}$ 的 $K$-有界性取 $s' \\in M^{n+1}$ 使 $\\|t - ds'\\| \\le K\\|dt\\| + \\frac{\\varepsilon}{2}$。\n\n于是\n$$\\|s - ds'\\| \\le \\|s-t\\| + K\\|dt\\| + \\frac{\\varepsilon}{2} = K\\|ds\\| + \\Bigl(\\|s-t\\| + K\\|ds - dt\\| + \\frac{\\varepsilon}{2}\\Bigr) \\le K\\|ds\\| + \\varepsilon .$$\n- **$\\Longleftarrow$**：给 $s \\in M^{n} \\subseteq \\widehat{M}^{n}$。\n\n由 $\\widehat{M}^{\\bullet}$ 的 $K$-有界性取 $t' \\in \\widehat{M}^{n+1}$ 使 $\\|s - dt'\\| \\le K\\|ds\\| + \\frac{\\varepsilon}{2}$；\n\n再由稠密性取 $s' \\in M^{n+1}$ 使 $\\|s' - t'\\| \\le \\frac{\\varepsilon}{2(1+\\|d^{n+1}\\|)}$。\n\n于是 $\\|s - ds'\\| \\le K\\|ds\\| + \\varepsilon$。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.stone-cech-1-bounded",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.cech-complex",
+    "def.condensed-set",
+    "def.chaus"
+   ],
+   "target": "lem.stone-cech-1-bounded",
+   "title": "",
+   "proof": "**证明。** 三步归约。\n- **归约到 $M$ 离散**：Stone 空间写 $S_{0} = \\varprojlim_{k} S_{0,k}$（$S_{0,k}$ 有限），$S_{k}$ 为它在 $S$ 里的像，则\n$$\\varinjlim_{k} \\check{C}^{\\bullet}\\bigl((S_{0,k}\\to S_{k})^{+}, M\\bigr) = \\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M^{\\mathrm{disc}}\\bigr) \\hookrightarrow \\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr),$$\n左端的直极限拓扑就是**上确界范数**拓扑；而 $C(S, M^{\\mathrm{disc}})$ 在 $C(S, M)$ 里**稠密**（极不连通性给出有限不交闭开细化，在每块上取常值逼近）。配上「$K$-有界正合在完备化下不变」与「滤过余极限保持 $K$-有界」，只需证**离散那一个**复形 $1$-有界零调（对它自己的拓扑）。\n- **归约到 $S, S_{0}$ 有限**：同一个余极限再把离散情形化归到有限。\n- **有限情形**：由「有截面的态射给出零调」，$\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, M\\bigr)$ 是**零伦**的，且零伦有形式 $h^{n} : f \\mapsto f \\circ k_{n}$（逐纤维取一个截面点），于是 $\\|h^{n}\\| \\le 1$。\n\n由 $\\mathrm{id} = h\\circ d + d\\circ h$，对任意 $s$：\n$$\\|s - d(hs)\\| = \\|h(ds)\\| \\le \\|ds\\| ,$$\n这正是 $K = 1$ 的 $K$-有界正合。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.tietze-banach",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.paracompact",
+    "def.banach-space",
+    "def.chaus",
+    "def.continuous"
+   ],
+   "target": "thm.tietze-banach",
+   "title": "",
+   "proof": "**分层归约**。\n\n① 有限维：$V = \\mathbb{R}^{m}$，逐坐标用经典 Tietze 延拓（正规空间上实值连续函数的延拓，本质是 Urysohn 引理）。\n\n② 一般可分 Banach：每个可分 Banach 空间都同构于 $\\ell^{\\infty}$ 的闭子空间，而 $\\ell^{\\infty}$ 是 **Lipschitz 收缩核** —— 于是可以先把映射延拓到 $\\ell^{\\infty}$ 再收缩回来。\n\n③ 不可分的情形用「紧像落在某个可分闭子空间里」再归约到 ②。\n\n⭐ **为什么凝聚态数学要用它。** §8.2 的主定理「实 Banach 空间在紧 Hausdorff 空间上零调」走的是「把一般紧 Hausdorff 空间 $S$ 用 Stonean 的 $S_{0}$ 覆盖、再把偏差压回去」的路线；\n\n偏差项住在一个函数空间 $C(K, V)$ 里，而**要把它压掉就得靠延拓**，即这条 Tietze。\n\n⚠️ **这条一般拓扑里也有实值版本**（Tietze 延拓定理）；这里的增量是：**取值可以让是任意实 Banach 空间**。\n\n**证明（Dugundji 延拓定理）。** 取值在拓扑向量空间里的 Tietze 是 Dugundji 的定理：设 $X$ **仿紧**（度量空间即可）、$A \\subseteq X$ **闭**、$V$ 是**局部凸**拓扑向量空间，则存在**线性**延拓算子 $C(A, V) \\to C(X, V)$，特别地限制映射满。\n- **构造**：仿紧性给出 $A$ 的一个开邻域系 $\\{U_{i}\\}$ 的局部有限细化与配套的**单位分解** $\\{\\varphi_{i}\\}$（$\\sum \\varphi_{i} = 1$，$\\varphi_{i} \\ge 0$，支集在 $U_{i}$ 里）。\n\n每个 $U_{i}$ 上先把 $g|_{A \\cap U_{i}}$ 延拓成一个常值映射 $g_{i}$（取 $A\\cap U_{i}$ 上某点的值）；\n\n再令\n$$G := \\sum_{i} \\varphi_{i}\\, g_{i} .$$\n- **为什么良定义**：局部有限 $\\implies$ 每个点附近只有有限个 $\\varphi_{i}$ 非零，和是有限的；$V$ 是**向量空间**，凸组合有意义；$\\varphi_{i}$ 连续，故 $G$ 连续。\n- **为什么是延拓**：若 $x \\in A$，则所有满足 $\\varphi_{i}(x) > 0$ 的 $U_{i}$ 都含 $x$，而每个 $g_{i}$ 在 $A \\cap U_{i}$ 上等于 $g$，于是 $G(x) = \\sum \\varphi_{i}(x) g(x) = g(x)$。\n**应用到这里**：$X$ 正规（度量 / 仿紧空间都正规）、$K \\subseteq X$ 紧故闭，$V$ 实 Banach 空间（局部凸），于是限制映射 $C(X,V) \\twoheadrightarrow C(K,V)$ 满。$V = \\mathbb{R}^{m}$ 是逐坐标用经典 Tietze。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.real-banach-chaus-acyclic",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.chaus",
+    "def.cech-complex",
+    "def.cech-cohomology",
+    "def.banach-space"
+   ],
+   "target": "thm.real-banach-chaus-acyclic",
+   "title": "",
+   "proof": "**证法**。\n\n① 用 Stonean 空间 $S_{0}$ 满射到 $S$（由「紧 Hausdorff 空间沿闭含入的滤过余极限 / Stonean 覆盖」那套技术得到）；② 在 $S_{0}$ 上由「Banach 在 Stone 上零调」知道 Čech 复形零调；\n\n③ 比较 $S_{0} \\to S$ 的 Čech 复形与 $S$ 本身的上同调，偏差项住在 $C(K, V)$ 里；\n\n④ 用 **Tietze 延拓（Banach 值）** 把偏差压掉，得到 $S$ 上的**有界**零调；\n\n⑤ 用「$K$-有界零调 $\\implies$ 零调」转成通常零调。\n\n⚠️ **复 Banach 空间不成立。** 这是「solid 模 / solid 拟凝聚层」那一整套理论出现的直接原因之一 —— 实的情形能用 Tietze 那样的**序结构**（$\\mathbb{R}$ 上的上确界、分割）把它压下来，复的情形没有这套工具，得上完全不同的机器。\n\n📌 与「局部紧上凝聚态＝层上同调」对照：那条处理的是**离散系数**（且空间只需局部紧），这条处理的是 **Banach 系数**（而空间只需紧）—— 两条合起来覆盖了第 8 章大半的计算。\n\n**证明（把偏差用单位分解压掉）。** 由「紧 Hausdorff 上 Čech = 层上同调」、「Banach 在 Stone 上零调」与「$K$-有界零调 $\\implies$ 零调」，只需证：对 Stone 空间的连续满射 $S_{0} \\to S$，增广 Čech 复形 $\\check{C}^{\\bullet}\\bigl((S_{0}\\to S)^{+}, V\\bigr)$ 是 **$1$-有界零调**的。\n固定 $\\varepsilon > 0$ 与 $f \\in \\check{C}^{n}$（即 $S_{n} \\to V$ 连续，$S_{n}$ 是 $S_{0}$ 在 $S$ 上的 $(n{+}1)$ 重纤维积）。\n\n记 $\\pi_{n} : S_{n} \\to S$ 与 $f_{x} := f|_{\\pi_{n}^{-1}(x)}$。\n- 对每个 $x \\in S$，对纤维上的满射 $\\pi_{n}^{-1}(x) \\to \\{x\\}$ 用「Stone 满射的 Čech 复形 $1$-有界零调」（逐纤维的版本），得 $g_{x} : \\pi_{n+1}^{-1}(x) \\to V$ 使\n$$\\|f_{x} - d g_{x}\\| \\le \\|d f_{x}\\| + \\frac{\\varepsilon}{2} \\le \\|df\\| + \\frac{\\varepsilon}{2}.$$\n- 由 **Tietze（Banach 值）**，$g_{x}$ 延拓成 $S_{n+1}$ 上的 $G_{x}$；由连续性，$x$ 有邻域 $V_{x}$ 使在 $\\pi_{n+1}^{-1}(V_{x})$ 上 $\\|f - dG_{x}\\| < \\|df\\| + \\varepsilon$。\n- 取有限的 $V_{1}, \\ldots, V_{r}$ 覆盖 $S$（**紧性**），配从属的单位分解 $\\{\\varphi_{i}\\}$，令 $g := \\sum_{i} (\\varphi_{i}\\circ\\pi_{n+1})\\,G_{i}$。\n\n由 $\\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) = 1$ 得 $f = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n}) f$，又 $dg = \\sum_{i}(\\varphi_{i}\\circ\\pi_{n})\\, dG_{i}$，两式相减：\n$$\\|f - dg\\| = \\Bigl\\|\\sum_{i} (\\varphi_{i}\\circ\\pi_{n})\\,(f - dG_{i})\\Bigr\\| \\le \\max_{i} \\|f - dG_{i}\\| \\le \\|df\\| + \\varepsilon,$$\n最后一步是「凸组合的范数不超过最大范数」（$\\varphi_{i} \\ge 0$、$\\sum\\varphi_{i} = 1$）。这正是 $K = 1$ 的 $K$-有界正合。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.ext-stonean-section",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.projective-object",
+    "def.ext",
+    "def.sheaf-cohomology",
+    "def.derived-category"
+   ],
+   "target": "lem.ext-stonean-section",
+   "title": "",
+   "proof": "**证明。** $S$ Stonean $\\implies$ $\\mathbb{Z}[S]$ 是**投射**对象，于是 $\\operatorname{Hom}_{\\mathbb{Z}}(\\mathbb{Z}[S], -)$ **正合**。\n对自然同构\n$$\\operatorname{Hom}_{\\mathbb{Z}}(M \\cdot S,\\ N) \\cong \\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S],\\ \\operatorname{Hom}_{\\mathbb{Z}}(M, N)\\bigr)$$\n（这是 $M \\cdot S = M \\otimes_{\\mathbb{Z}} \\mathbb{Z}[S]$ 的伴随形式）两边取右导出：左端给出 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M\\cdot S, N)$；\n\n右端因为 $\\operatorname{Hom}(\\mathbb{Z}[S],-)$ 正合，可以直接穿过导出函子，得 $\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(\\mathbb{Z}[S], \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)\\bigr)$，而后者按定义就是 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M,N)(S)$。\n\n两边一比即得。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.rhom-chaus-banach-zero",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.spectral-sequence",
+    "def.chaus",
+    "def.banach-space",
+    "def.derived-category"
+   ],
+   "target": "prop.rhom-chaus-banach-zero",
+   "title": "",
+   "proof": "**证法里的关键工具**是分解上乘 $p$ 的同伦：紧 Hausdorff 群上有「乘 $2$」这个映射，它在 Banach 空间里**可逆**（除以 $2$）；利用 $2 - [2]$ 的同伦，可以把一个闭链写成 $d$(一个收敛级数)，即每个闭链都是边界。收敛用 Banach 的完备性。\n\n⚠️ 要求 $N$ 是**实** Banach 空间（带 $\\mathbb{R}$-模结构），不是任意 Banach 阿贝尔群 —— 除以 $2$ 那一步要用到标量结构。\n\n**证明（把闭链写成收敛级数）。** 仍用 Breen–Deligne 谱序列 $E^{p,q}_{1} = \\bigoplus_{i} H^{q}(M^{s_{p,i}}\\times S, N) \\implies \\operatorname{Ext}^{p+q}_{\\mathbb{Z}}(M,N)(S)$。\n- 由 **Thm（实 Banach 在紧 Hausdorff 上零调）**，$M^{s_{p,i}}\\times S$ 是紧 Hausdorff（$M$ 紧、$S$ Stonean 紧），故 $q > 0$ 的整行是 $0$；\n\n只剩下 $q = 0$ 那一行，即复形 $K^{\\bullet}$，$K^{n} := \\bigoplus_{i} C\\bigl(M^{s_{n,i}}\\times S,\\ N\\bigr)$（Banach 空间）。\n\n只要证 $K^{\\bullet}$ 零调。\n- **关键工具**是「乘 $2$ 与 $[2]$ 同伦」：由 $2 - [2] = dh + hd$，对闭链 $f \\in K^{n}$（$df = 0$）有 $2f - [2]f = dh^{n+1}f$，于是\n$$f = \\tfrac{1}{2}[2]f + d\\Bigl(\\tfrac{1}{2}h^{n+1}f\\Bigr).$$\n- 把这一式对 $f$ 反复代入 $n$ 次：\n$$f = \\frac{1}{2^{n}}[2^{n}]f + d\\Bigl(\\sum_{k=1}^{n} \\frac{1}{2^{k}} h^{n+1}\\bigl([2^{k-1}]f\\bigr)\\Bigr).$$\n- 因为 $\\|[2]\\| \\le 1$、$\\|h^{n+1}\\| \\le \\|h^{n+1}\\| < \\infty$ 且 $N$ 是 Banach（**完备**），级数 $\\sum_{k} \\frac{1}{2^{k}} h^{n+1}([2^{k-1}]f)$ **收敛**；\n\n又 $\\frac{1}{2^{n}}[2^{n}]f \\to 0$。\n\n令 $n\\to\\infty$：\n$$f = d\\Bigl(\\sum_{k=1}^{\\infty} \\frac{1}{2^{k}} h^{n+1}\\bigl([2^{k-1}]f\\bigr)\\Bigr),$$\n即每个闭链都是边界，$K^{\\bullet}$ 零调。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.lc-ext-vanishing",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.locally-compact-space",
+    "def.ext",
+    "def.derived-category",
+    "def.abelian-category"
+   ],
+   "target": "thm.lc-ext-vanishing",
+   "title": "",
+   "proof": "**证法：先归约、再逐类掐掉**。\n\n由局部紧阿贝尔群的**结构定理**（每个这样的群都是「离散群」被「有限维实 Banach 空间 $\\oplus$ 连通紧 Hausdorff 群」扩张出来的），只要对三类源与三类靶交叉验证即可。\n\n$M$ 离散时用两段自由消解，$N$ 离散时用那条练习（连通局部紧群对离散群）；\n\n$N$ 是 Banach 时用「紧 $\\to$ Banach 全零」与「有限维 Banach 之间的 RHom 只有 0 次」。\n\n**为什么是「只剩 $\\operatorname{Ext}^{0}, \\operatorname{Ext}^{1}$」**：$\\operatorname{Ext}^{0}$ 就是 $\\operatorname{Hom}$，$\\operatorname{Ext}^{1}$ 分类扩张 —— 这两项是**代数**上本来就该有的；\n\n这条定理说的是**没有更多**，即凝聚态阿贝尔群的范畴在局部紧对象上「同调维数 $\\le 1$」。\n\n⚠️ 结论**不适用于非局部紧**的对象：像 $\\mathbb{R}^{I}$（任意大的积）这类东西，$\\operatorname{RHom}$ 的行为完全是另一回事。\n\n**证明（按结构定理分三类，逐类掐掉）。** 局部紧 Hausdorff 阿贝尔群都是「离散群」被「有限维实 Banach 空间 $\\oplus$ 连通紧 Hausdorff 阿贝尔群」扩张出来的。于是只需对三类源与三类靶交叉处理：\n- **$M$ 离散**：有两段自由消解，长正合列把 $\\operatorname{Ext}^{n}$（$n \\ge 2$）全部掐掉（自由对象只在 $0$ 次有 Ext）。\n- **$N$ 离散**：由连通局部紧群对离散群的那条（Exercises 8.18）同样只剩 $0, 1$ 两格。\n- **$N$ 实 Banach**：由「紧 $\\to$ Banach 全零」与「有限维 Banach 之间的 $\\operatorname{RHom}$ 只有 $0$ 次」把高次掐掉。\n- **$N$ 连通紧 Hausdorff**：有兩段消解 $0 \\to N \\to T^{E} \\to T^{E'} \\to 0$，故只需证 $\\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, T^{E}) = \\operatorname{Ext}^{n}_{\\mathbb{Z}}(M, T)^{E} = 0$（$n \\ne 0,1$），而这由 $\\operatorname{RHom}_{\\mathbb{Z}}(M, T) \\cong M^{\\vee}$（上一条 Pontryagin 对偶）集中在次数 $0$ 给出。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.lc-structure",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.locally-compact-space",
+    "def.hausdorff",
+    "def.compact"
+   ],
+   "target": "thm.lc-structure",
+   "title": "",
+   "proof": "**证明（标准路线）。**\n1. **连通部分**：$M^{0}$（单位元的连通分支）是闭子群。$M^0$ 是**连通局部紧阿贝尔群**，而这一类群恰好形如 $\\mathbb{R}^{n}\\times K$（$K$ 紧连通阿贝尔群）—— 这一步是经典理论（用「无小子群」/Lie 理论把 $M^{0}$ 的紧子群部分与向量群部分分开）。\n2. **全不连通商**：$M/M^{0}$ 是**全不连通**的局部紧 Hausdorff 群；这类群必有**开紧子群**（取单位元的紧邻域并取它生成的子群的闭包）。\n3. **拼起来**：取 $M_{1}$ 为某个开紧子群的原像，则 $M_{1}$ 开、$M_{1}/M^{0}$ 紧。于是 $M_{1}$ 是紧群 $K$ 被 $\\mathbb{R}^{n}$ 扩张：$0 \\to K \\to M_{1} \\to \\mathbb{R}^{n} \\to 0$。\n4. **扩张分裂**：$\\mathbb{R}^{n}$ 是**向量群**，而「紧群被向量群扩张必分裂」（对紧方向取平均 / 用局部截面 + 紧性把它整体化），故 $M_{1} \\cong \\mathbb{R}^{n}\\times K$ ✓。\n5. **余商离散**：$M_{1}$ 开 $\\implies$ $D := M/M_{1}$ 带商拓扑是**离散**的 ✓，于是 $0\\to V\\oplus K\\to M\\to D\\to 0$ 正合。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cond-epi-regular",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.topos",
+    "def.mono",
+    "def.equalizer",
+    "def.condensed-set"
+   ],
+   "target": "prop.cond-epi-regular",
+   "title": "",
+   "proof": "**证明。** 一般范畴里「满」与「有效满」是两个概念；拓扑斯里两者重合。\n- 先看「$f$ 有效 $\\implies$ $f$ 满」：有效满按定义是余等化子，而余等化子总是满的。\n- 再看「$f: X \\to Y$ 满 $\\implies$ 有效」：令 $\\bar f : \\operatorname{coeq}(X \\times_{Y} X \\rightrightarrows X) \\to Y$ 为余等化子的泛性质给出的映射，它是满的，且由余等化子的泛性质本身就单 —— 于是只需证 **$\\bar f$ 是满**这一点在层论上「局部能验」。\n- 具体验：满态射的局部判据说 $f$ 在**自由**紧 Hausdorff 对象上逐点满（$X(F) \\to Y(F)$ 是满射）。\n\n取 $y \\in Y(F)$，有原像 $x \\in X(F)$；\n\n把 $x$ 送到余等化子，再送回来还是 $y$ —— 于是 $\\bar f$ 在 $F$ 上满。\n\n$\\bar f$ 单且满，故是同构，$f$ 是它自己核对对的余等化子。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cond-equivalence-effective",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.topos",
+    "def.condensed-set",
+    "def.equalizer",
+    "def.fibered-product"
+   ],
+   "target": "prop.cond-equivalence-effective",
+   "title": "",
+   "proof": "**证明。** 给定 $R \\rightrightarrows X$。\n\n因为 $\\mathrm{Cond}$ 有余极限，商 $Y := \\operatorname{coeq}(R \\rightrightarrows X)$ 存在，且商映射 $q : X \\to Y$ 满（余等化子总是满）。\n\n由**上一条**，$q$ 是有效满：$q$ 是 $X \\times_{Y} X \\rightrightarrows X$ 的余等化子。\n现在比较 $R$ 与 $X\\times_{Y} X$：\n- 两个投影 $R \\rightrightarrows X$ 复合到 $Y$ 相同（余等化子的定义），故 $R \\subseteq X \\times_{Y} X$；\n- 反过来，$X \\times_{Y} X$ 是「被 $q$ 认同的点对」，而层论上「$q$ 在两个点上取同值」这件事可以在**覆盖上逐点验**：取覆盖 $(X_{i} \\to X)$，$X\\times_{Y}X$ 在每块上就是 $R$ 在每块上的值（用 $X$ 与 $R$ 的层条件 + 余等化子的泛性质），于是 $X \\times_{Y} X \\subseteq R$。\n两边互包，$R \\cong X \\times_{Y} X$ —— 这正是有效性，也正是 Giraud 判据里那一条。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.simplicial-cohomology",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.cech-complex",
+    "def.sheaf-cohomology",
+    "def.injective-module",
+    "def.simplex-category"
+   ],
+   "target": "method.simplicial-cohomology",
+   "title": "",
+   "proof": "**证明。** 分两步。\n- **超覆盖的每一项在 $\\Gamma(X, -)$ 下零调。** $F_{n}$ 是可表层的直和，而 $\\Gamma(X, h_{U}) = \\operatorname{Hom}(X, U)$ 直接可算；\n\n「有截面 $\\implies$ 高阶为零」那套（$\\mathbb{Z}\\cdot h_{X}$ 是投射对象，投射 $\\implies$ 无环）保证 $H^{p}(\\Gamma(X, F_{n})) = 0$（$p > 0$）。\n- **于是 $F_{\\bullet} \\to M$ 就是一个「由 $\\Gamma(X, -)$-零调对象组成的消解」。** 把 Leray 零调性搬过来：$R\\Gamma(X, M)$ 可以直接用 $\\Gamma(X, F_{\\bullet})$ 这个复形算，即 $H^{n}(X, M) = H^{n}\\bigl(\\Gamma(X, F_{\\bullet})\\bigr)$。\n最后把链复形读成单纯阿贝尔群（Dold–Kan：单纯阿贝尔群的同伦群就是归一化链复形的上同调），就得到 $H^{n}(X, M) \\cong \\pi^{n}(\\Gamma(X, F_{\\bullet}))$。两个超覆盖之间的比较给出链同伦（投射性 / 已有的 Ext 论证），所以右边与超覆盖的选取无关。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.cartan-eilenberg",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.injective-module",
+    "def.spectral-sequence",
+    "def.bicomplex",
+    "def.abelian-category"
+   ],
+   "target": "lem.cartan-eilenberg",
+   "title": "",
+   "proof": "构造上保证「行和列都是内射消解」—— 这正是 Cartan–Eilenberg 分解给出的东西。\n\n**「$H^{p}$ 那一层也是内射消解」是关键的额外要求**：只要求每列是内射消解还不够（那样第二条谱序列会退化）；要求上同调层也是内射消解，才能让两条过滤都读到完整信息。\n\n⭐ **用在哪**：推导「两个导出函子的复合 = 谱序列」（Grothendieck 谱序列）、以及导出范畴里「有界下有界复形可以换成分解」的标准论证，都要先有这条。\n\n**构造（归纳 + 马蹄引理）。** 记 $Z^{p} := \\ker d^{p}$、$B^{p} := \\operatorname{im} d^{p-1}$，于是每个 $p$ 有两条短正合列\n$$0 \\to Z^{p} \\to K^{p} \\to B^{p+1} \\to 0, \\qquad 0 \\to B^{p} \\to Z^{p} \\to H^{p}(K^{\\bullet}) \\to 0 .$$\n- 对**大序数/整个复形同时**取内射消解：先取 $K^{p}$ 的内射消解 $I^{p,\\bullet}$，再用**马蹄引理**（horseshoe lemma）把它与 $B^{p+1}$、$Z^{p}$ 的消解拼起来 —— 因为 $B^{p+1}$ 与 $Z^{p}$ 的消解可以从 $K^{p}$ 的消解里「切」出来；\n- 两条正合列各用一次马蹄引理，就能保证**同时**满足两个要求：每个 $K^{p} \\to I^{p,\\bullet}$ 是内射消解，且每个 $H^{p}(K^{\\bullet}) \\to H^{p}(I^{\\bullet,\\bullet})$ 也是内射消解（后者靠第二条正合列与「分次内射」的逐层内射性）；\n- 下有界：从最小的 $p$ 起递推，$q < 0$ 的层取 $0$。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.discontinuity-types",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.limit-point",
+    "def.continuous",
+    "def.interior"
+   ],
+   "target": "prop.discontinuity-types",
+   "title": "",
+   "proof": "**证明**（分类是穷尽的）。\n\n在间断点 $x_0$ 处，每个单侧极限只有两种状态：存在且有限，或不存在 / 为无穷。\n\n于是「两个单侧极限都有限」与「至少一个不满足」互斥且穷尽，前者再按两侧极限是否相等分成可去与跳跃两类 —— 三种情形互斥且已列出全部可能。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.free-proper-quotient-manifold",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.group-action",
+    "def.smooth-manifold",
+    "def.topological-manifold",
+    "def.manifold-chart"
+   ],
+   "target": "lem.free-proper-quotient-manifold",
+   "title": "",
+   "proof": "**开邻域**：对每个 $x\\in M$，因 $\\Gamma$ 有限且自由，对每个 $g\\ne e$ 有 $gx\\ne x$。由 $M$ Hausdorff，取 $x$ 与 $gx$ 的互不相交开邻域；对有限多个 $g$ 取交并回拉，得到 $x$ 的开邻域 $U$ 使 $gU\\cap U=\\emptyset$（$g\\ne e$）。\n\n\n\n**局部单射与开映射**：若 $u,v\\in U$ 且 $\\pi(u)=\\pi(v)$，则 $v=gu$，故 $u\\in U\\cap g^{-1}U$；由 $gU\\cap U=\\emptyset$（$g\\ne e$）得 $g=e$，$u=v$。所以 $\\pi|_{U}$ 是单射；又群作用的商映射是开映射，故 $\\pi|_{U}:U\\to\\pi(U)$ 是同胚。\n\n\n\n**图册**：取 $M$ 的图卡 $(U,\\varphi)$ 且 $U$ 满足上条；定义 $M/\\Gamma$ 上的卡 $(\\pi(U),\\varphi\\circ(\\pi|_{U})^{-1})$。这些 $\\pi(U)$ 覆盖 $M/\\Gamma$。若 $\\pi(z)\\in\\pi(U)\\cap\\pi(V)$，取 $h\\in\\Gamma$ 使 $hz\\in V$；在 $z$ 附近 $\\pi|_{V}^{-1}\\circ\\pi=h$（因为 $\\pi\\circ h=\\pi$，且 $hu\\in V$ 对 $u$ 靠近 $z$ 成立），故转移映射局部等于 $\\psi\\circ h\\circ\\varphi^{-1}$，是光滑的。\n\n\n\n**拓扑条件**：$M/\\Gamma$ 作为第二可数空间 $M$ 的商仍第二可数；又 $\\Gamma$ 有限且作用真不连续，不同轨道的饱和邻域可分离（对有限多个 $g$ 取 $gx$ 与 $\\Gamma y$ 的分离邻域），故 $M/\\Gamma$ Hausdorff。\n\n\n\n**唯一性**：若两种光滑结构都使 $\\pi$ 为局部微分同胚，则恒等映射在这两种结构下都是局部微分同胚，从而是微分同胚，两种结构相同。\n\n∎",
+   "note": ""
+  },
+  {
+   "id": "imp.projection-convex",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.hilbert-space",
+    "def.convex-set",
+    "def.closed-set",
+    "def.inner-product",
+    "def.norm"
+   ],
+   "target": "thm.projection-convex",
+   "title": "",
+   "proof": "(1) 的证明全靠平行四边形法则：取极小化序列 $y_n$，则\n\n\n\n$$\\|y_n - y_m\\|^2 = 2\\|x - y_n\\|^2 + 2\\|x - y_m\\|^2 - 4\\Bigl\\| x - \\tfrac{y_n + y_m}{2} \\Bigr\\|^2 \\le 2(d^2 + \\tfrac1n) + 2(d^2 + \\tfrac1m) - 4d^2 \\to 0 ,$$\n\n\n\n（中间那个点落在 $C$ 里，所以它的距离 $\\ge d$）—— Cauchy 列 + $C$ 闭给出极限。唯一性同式取两个最小点即得。\n\n(2) 是「变分不等式」：对 $z \\in C$、$t \\in (0,1)$，$y + t(z-y) \\in C$，展开 $\\|x - (y + t(z-y))\\|^2 \\ge d^2$、舍 $t^2$ 项。\n\n⚠️ **凸**不能去掉：$\\mathbb{R}^2$ 的单位圆周上最近点不唯一；闭但不能去掉：开圆盘里没有最近点。\n\n⭐ 这是无穷维里「极小元存在」最干净的样本：强制性（$\\|x\\| \\to \\infty$）+ 弱下半连续 + 凸，就能推出存在性；这里的凸集不然。\n\n\n\n**四条里第一条是“存在+唯一”，第二条才是“怎么算”，后两条是推论**：\n\n- **① 存在且唯一**：存在用**极小化序列 + 凸性取中点**（$\\frac{x_{n}+x_{m}}{2}$ 仍在 $C$ 里，于是 $\\lVert\\cdot\\rVert^{2}$ 的平行四边形法则给 Cauchy），唯一用**严格凸性**（内积空间的范数是严格凸的：等号只在同一点）。⚠️ 这一步**要完备性**（Hilbert 而非一般内积空间，否则极小区间可能不收敛）。\n- **② 变分不等式**：$y = P_C(x)$ $\\iff$ $\\operatorname{Re}\\langle x-y, z-y\\rangle \\le 0$（$\\forall z\\in C$）。$(\\implies)$ 用 $y + t(z-y) \\in C$ 对 $t \\in (0,1)$ 展开 $\\lVert x - (\\cdot)\\rVert^2$ 取 $t \\to 0$；$(\\Leftarrow)$ 由同一个展开式（凸性保证二次项 $\\ge 0$）。**这一条不需要完备性**（只要 $P_C(x)$ 存在）。\n- **③ 非扩张**：**由 ② 两边相加**（对 $x$ 与 $x'$ 各写一次变分不等式）得 $\\lVert P x - P x'\\rVert^2 \\le \\operatorname{Re}\\langle x - x', Px - Px'\\rangle$，再 Cauchy–Schwarz。\n- **④ 幂等**：$y \\in C$ 时 $P_C(y) = y$（距离为 $0$ 且唯一）。\n\n⚠️ **凸性与闭性都不可去**：非凸闭集最小点可以不唯一（圆周上两点等距）；凸但非闭可以没有最小点（$\\mathbb{R}^{2}$ 里的开半平面）。\n\n∎",
    "note": ""
   },
   {
@@ -124494,7 +125306,7 @@
   {
    "a": "topology.general",
    "b": "topology.metric",
-   "count": 16,
+   "count": 18,
    "label": "",
    "explicit": false
   },
@@ -124669,7 +125481,7 @@
   {
    "a": "analysis.real",
    "b": "topology.general",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -124732,7 +125544,7 @@
   {
    "a": "topology.general",
    "b": "topology.separation",
-   "count": 17,
+   "count": 19,
    "label": "",
    "explicit": false
   },
@@ -124893,7 +125705,7 @@
   {
    "a": "cat.limit",
    "b": "cat.structure",
-   "count": 11,
+   "count": 12,
    "label": "",
    "explicit": false
   },
@@ -124991,14 +125803,14 @@
   {
    "a": "cat.structure",
    "b": "cat.topos",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.sheaf",
    "b": "cat.topos",
-   "count": 35,
+   "count": 37,
    "label": "",
    "explicit": false
   },
@@ -125012,42 +125824,42 @@
   {
    "a": "cond.set",
    "b": "topo.chaus",
-   "count": 15,
+   "count": 23,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.topos",
    "b": "cond.set",
-   "count": 11,
+   "count": 18,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.topos",
    "b": "topo.chaus",
-   "count": 2,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.sheaf",
    "b": "topo.chaus",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.sheaf",
    "b": "cond.set",
-   "count": 9,
+   "count": 13,
    "label": "",
    "explicit": false
   },
   {
    "a": "cond.set",
    "b": "topo.cg",
-   "count": 10,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -125068,7 +125880,7 @@
   {
    "a": "hom.ab",
    "b": "hom.complex",
-   "count": 25,
+   "count": 26,
    "label": "",
    "explicit": false
   },
@@ -125082,14 +125894,14 @@
   {
    "a": "cat.limit",
    "b": "hom.ab",
-   "count": 23,
+   "count": 25,
    "label": "",
    "explicit": false
   },
   {
    "a": "hom.cohomology",
    "b": "hom.complex",
-   "count": 24,
+   "count": 25,
    "label": "",
    "explicit": false
   },
@@ -125103,7 +125915,7 @@
   {
    "a": "hom.ab",
    "b": "hom.spectral",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -125138,7 +125950,7 @@
   {
    "a": "algebra.group-action",
    "b": "algebra.structures",
-   "count": 17,
+   "count": 18,
    "label": "",
    "explicit": false
   },
@@ -125152,7 +125964,7 @@
   {
    "a": "algebra.polynomial",
    "b": "algebra.structures",
-   "count": 6,
+   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -125180,28 +125992,28 @@
   {
    "a": "topology.convergence",
    "b": "topology.general",
-   "count": 16,
+   "count": 17,
    "label": "",
    "explicit": false
   },
   {
    "a": "hom.complex",
    "b": "hom.sheafcoh",
-   "count": 7,
+   "count": 9,
    "label": "",
    "explicit": false
   },
   {
    "a": "analysis.multivariable",
    "b": "cond.cohomology",
-   "count": 2,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
    "a": "analysis.multivariable",
    "b": "cond.compute",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -125215,14 +126027,14 @@
   {
    "a": "cond.topo",
    "b": "hom.ab",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.sheaf",
    "b": "hom.sheafcoh",
-   "count": 17,
+   "count": 18,
    "label": "",
    "explicit": false
   },
@@ -125236,7 +126048,7 @@
   {
    "a": "cond.compute",
    "b": "hom.sheafcoh",
-   "count": 4,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125250,7 +126062,7 @@
   {
    "a": "cond.compute",
    "b": "cond.set",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -125264,7 +126076,7 @@
   {
    "a": "cond.compute",
    "b": "topo.chaus",
-   "count": 5,
+   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -125285,7 +126097,7 @@
   {
    "a": "hom.complex",
    "b": "topo.chaus",
-   "count": 4,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125320,7 +126132,7 @@
   {
    "a": "cat.functor",
    "b": "hom.ab",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -125383,21 +126195,21 @@
   {
    "a": "hom.complex",
    "b": "hom.spectral",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
   {
    "a": "hom.sheafcoh",
    "b": "hom.spectral",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.topos",
    "b": "hom.sheafcoh",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125425,7 +126237,7 @@
   {
    "a": "cat.limit",
    "b": "topo.chaus",
-   "count": 3,
+   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -125433,6 +126245,13 @@
    "a": "cat.limit",
    "b": "set.construct",
    "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.structures",
+   "b": "hom.module",
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125446,7 +126265,7 @@
   {
    "a": "analysis.completeness",
    "b": "analysis.real",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125460,21 +126279,28 @@
   {
    "a": "analysis.completeness",
    "b": "topology.general",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "analysis.continuity",
    "b": "analysis.real",
-   "count": 5,
+   "count": 6,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.continuity",
+   "b": "topology.general",
+   "count": 2,
    "label": "",
    "explicit": false
   },
   {
    "a": "analysis.completeness",
    "b": "analysis.continuity",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -125628,7 +126454,7 @@
   {
    "a": "algebra.galois",
    "b": "algebra.spectral",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -125649,7 +126475,7 @@
   {
    "a": "algebra.rings",
    "b": "algebra.structures",
-   "count": 9,
+   "count": 10,
    "label": "",
    "explicit": false
   },
@@ -125685,6 +126511,13 @@
    "a": "analysis.multivariable",
    "b": "topology.metric",
    "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.multivariable",
+   "b": "analysis.real",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -125794,13 +126627,6 @@
    "explicit": false
   },
   {
-   "a": "algebra.structures",
-   "b": "hom.module",
-   "count": 5,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "algebra.multilinear",
    "b": "hom.module",
    "count": 2,
@@ -125824,7 +126650,7 @@
   {
    "a": "hom.ab",
    "b": "hom.injective",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -126027,7 +126853,7 @@
   {
    "a": "diffgeom.intrinsic",
    "b": "diffgeom.manifold",
-   "count": 13,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -126389,9 +127215,16 @@
    "explicit": false
   },
   {
-   "a": "diffgeom.intrinsic",
+   "a": "algebra.group-action",
    "b": "topology.fg",
    "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "diffgeom.intrinsic",
+   "b": "topology.fg",
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -126552,7 +127385,7 @@
   {
    "a": "algebra.inner",
    "b": "fa.hilbert",
-   "count": 12,
+   "count": 13,
    "label": "",
    "explicit": false
   },
@@ -126592,9 +127425,23 @@
    "explicit": false
   },
   {
+   "a": "topology.metric",
+   "b": "topology.separation",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
    "a": "topology.convergence",
    "b": "topology.separation",
-   "count": 3,
+   "count": 5,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.structure",
+   "b": "hom.complex",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -126643,7 +127490,7 @@
   {
    "a": "fa.hilbert",
    "b": "fa.norm",
-   "count": 10,
+   "count": 11,
    "label": "",
    "explicit": false
   },
@@ -126664,7 +127511,7 @@
   {
    "a": "fa.hilbert",
    "b": "topology.general",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -126685,14 +127532,14 @@
   {
    "a": "algebra.inner",
    "b": "fa.norm",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
    "a": "fa.norm",
    "b": "topology.general",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
@@ -126797,7 +127644,7 @@
   {
    "a": "algebra.galois",
    "b": "algebra.structures",
-   "count": 7,
+   "count": 10,
    "label": "",
    "explicit": false
   },
@@ -126811,21 +127658,21 @@
   {
    "a": "algebra.galois",
    "b": "algebra.polynomial",
-   "count": 3,
+   "count": 6,
    "label": "",
    "explicit": false
   },
   {
    "a": "algebra.galois",
    "b": "algebra.group-action",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
   {
    "a": "algebra.galois",
    "b": "algebra.solvable",
-   "count": 5,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -126860,7 +127707,7 @@
   {
    "a": "cat.functor",
    "b": "cat.limit",
-   "count": 12,
+   "count": 13,
    "label": "",
    "explicit": false
   },
@@ -126888,7 +127735,7 @@
   {
    "a": "cond.ab",
    "b": "hom.ab",
-   "count": 3,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -126908,8 +127755,15 @@
   },
   {
    "a": "topo.cg",
+   "b": "topology.convergence",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "topo.cg",
    "b": "topology.separation",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -126978,6 +127832,20 @@
   },
   {
    "a": "cat.sheaf",
+   "b": "hom.ab",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.ab",
+   "b": "hom.sheafcoh",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.sheaf",
    "b": "hom.sheaf",
    "count": 3,
    "label": "",
@@ -126993,28 +127861,28 @@
   {
    "a": "cat.limit",
    "b": "topo.cg",
-   "count": 3,
+   "count": 5,
    "label": "",
    "explicit": false
   },
   {
    "a": "hom.sheafcoh",
    "b": "topo.chaus",
-   "count": 3,
+   "count": 7,
    "label": "",
    "explicit": false
   },
   {
    "a": "topo.chaus",
    "b": "topology.separation",
-   "count": 3,
+   "count": 4,
    "label": "",
    "explicit": false
   },
   {
    "a": "cat.limit",
    "b": "cond.set",
-   "count": 4,
+   "count": 9,
    "label": "",
    "explicit": false
   },
@@ -127028,7 +127896,7 @@
   {
    "a": "cond.ab",
    "b": "topo.chaus",
-   "count": 5,
+   "count": 6,
    "label": "",
    "explicit": false
   },
@@ -127056,7 +127924,7 @@
   {
    "a": "hom.ab",
    "b": "topo.chaus",
-   "count": 4,
+   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -127077,7 +127945,7 @@
   {
    "a": "cat.structure",
    "b": "hom.cohomology",
-   "count": 2,
+   "count": 3,
    "label": "",
    "explicit": false
   },
@@ -127098,7 +127966,7 @@
   {
    "a": "cat.limit",
    "b": "cat.sheaf",
-   "count": 12,
+   "count": 13,
    "label": "",
    "explicit": false
   },
@@ -127119,7 +127987,7 @@
   {
    "a": "cat.limit",
    "b": "cat.topos",
-   "count": 9,
+   "count": 12,
    "label": "",
    "explicit": false
   },
@@ -127154,6 +128022,139 @@
   {
    "a": "algebra.structures",
    "b": "hom.ab",
+   "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.structures",
+   "b": "cat.functor",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.set",
+   "b": "hom.ab",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.ab",
+   "b": "cond.set",
+   "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.sheaf",
+   "b": "cond.ab",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "topo.cg",
+   "b": "topo.chaus",
+   "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.ab",
+   "b": "topology.convergence",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.topo",
+   "b": "topology.convergence",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.topos",
+   "b": "topo.cg",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.set",
+   "b": "hom.sheafcoh",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.cohomology",
+   "b": "topology.metric",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.ss",
+   "b": "hom.sheafcoh",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "analysis.multivariable",
+   "b": "topo.chaus",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.cohomology",
+   "b": "topo.chaus",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.compute",
+   "b": "hom.complex",
+   "count": 12,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.compute",
+   "b": "topology.convergence",
+   "count": 4,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.topo",
+   "b": "topology.separation",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cond.topo",
+   "b": "topology.general",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "hom.injective",
+   "b": "hom.sheafcoh",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.limit",
+   "b": "hom.sheafcoh",
    "count": 3,
    "label": "",
    "explicit": false
@@ -127250,13 +128251,6 @@
    "explicit": false
   },
   {
-   "a": "topo.cg",
-   "b": "topo.chaus",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cat.yoneda",
    "b": "hom.sheaf",
    "count": 2,
@@ -127278,22 +128272,8 @@
    "explicit": false
   },
   {
-   "a": "cat.limit",
-   "b": "hom.sheafcoh",
-   "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
    "a": "cond.compute",
    "b": "topo.stone",
-   "count": 3,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cond.compute",
-   "b": "topology.convergence",
    "count": 3,
    "label": "",
    "explicit": false
@@ -127316,13 +128296,6 @@
    "a": "cond.cohomology",
    "b": "topology.general",
    "count": 2,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "cond.compute",
-   "b": "hom.complex",
-   "count": 9,
    "label": "",
    "explicit": false
   },

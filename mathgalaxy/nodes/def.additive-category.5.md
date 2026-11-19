@@ -6,3 +6,4 @@
 - ⇒ [`prop.adjoint-additive`](../nodes/prop.adjoint-additive.md) 伴随函子都加法
 - ⇒ [`prop.simplicial-to-chain`](../nodes/prop.simplicial-to-chain.md) 单纯对象给出链复形
 - ⇒ [`prop.zero-object-final-criterion`](../nodes/prop.zero-object-final-criterion.md) 零对象与终对象
+- ⇒ [`prop.ab-limits-forgetful`](../nodes/prop.ab-limits-forgetful.md) Ab(C) 的极限

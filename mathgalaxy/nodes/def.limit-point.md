@@ -11,6 +11,9 @@ $$\forall \varepsilon > 0,\ \exists s \in S :\ 0 < |s - x| < \varepsilon$$
 
 把 $S$ 换成一个数列的项集，就得到「$x$ 是 $\{x_n\}$ 的聚点」=「$\{x_n\}$ 有子列收敛到 $x$」。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.discontinuity-types`](../nodes/prop.discontinuity-types.md) 间断点分类
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.limit-point.2.md](./def.limit-point.2.md)
 

@@ -9,13 +9,12 @@ $$\Gamma(F, -) : \mathrm{CondAb} \longrightarrow \mathbf{Ab}, \qquad M \mapsto \
 
 保**所有极限与所有余极限**。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-condab-section.md](../proofs/dep.cat-ab-prop-condab-section.md)
-
-- …另有入边，续页见 [nodes/prop.condab-section.2.md](./prop.condab-section.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.condab-section.3.md](./prop.condab-section.3.md)
+- ⇒ [`thm.abelian-sheaf-equiv`](../nodes/thm.abelian-sheaf-equiv.md) 阿贝尔层即拓扑斯里的阿贝尔群
+- ⇒ [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4*
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.condab-section.2.md](./prop.condab-section.2.md)
 
 refs: Le Stum, Lemma 6.1.3
 

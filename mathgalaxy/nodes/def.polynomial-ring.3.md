@@ -9,4 +9,6 @@
 - 被 [`def.invariant-polynomial`](../nodes/def.invariant-polynomial.md) 不变多项式 用
 - 被 [`def.algebraic-element`](../nodes/def.algebraic-element.md) 代数元与极小多项式 用
 - 被 [`def.splitting-field`](../nodes/def.splitting-field.md) 分裂域 用
-- 被 [`def.roots-of-unity`](../nodes/def.roots-of-unity.md) 单位根 用
+- ⇒ [`lem.isomorphism-extension`](../nodes/lem.isomorphism-extension.md) 同构延拓
+
+> 续见 [nodes/def.polynomial-ring.4.md](./def.polynomial-ring.4.md)

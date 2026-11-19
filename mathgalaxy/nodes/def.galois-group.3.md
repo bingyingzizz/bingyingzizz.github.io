@@ -7,4 +7,6 @@
 - 被 [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解 用
 - ～弱边 [`def.vector-space`](../nodes/def.vector-space.md) 向量空间
 - 被 [`def.fixed-field`](../nodes/def.fixed-field.md) 不动域 用
+- ⇒ [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理
+- ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
 - ～弱边 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群

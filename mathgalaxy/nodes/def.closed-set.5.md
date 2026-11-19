@@ -3,4 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.closed-map-neighborhood-basis`](../nodes/prop.closed-map-neighborhood-basis.md) 闭映射的邻域基
+- ⇒ [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的
+- ⇒ [`thm.projection-convex`](../nodes/thm.projection-convex.md) 凸闭集的最近点
 - 被 [`def.normal-space`](../nodes/def.normal-space.md) 正规空间 用

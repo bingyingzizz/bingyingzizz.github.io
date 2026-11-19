@@ -5,10 +5,9 @@
 - ⇒ [`prop.cond-projectives`](../nodes/prop.cond-projectives.md) Cond 有足够多投射对象
 - ⇒ [`prop.discrete-iff-constant`](../nodes/prop.discrete-iff-constant.md) 离散即常
 - ⇒ [`prop.open-covering-covering`](../nodes/prop.open-covering-covering.md) 开覆盖给出覆盖
-- 被 [`prop.condensed-criterion`](../nodes/prop.condensed-criterion.md) 凝聚态集的刻画 用
-- 被 [`thm.cond-topos`](../nodes/thm.cond-topos.md) Cond 是拓扑斯 用
-- 被 [`thm.top-cond-adjoint`](../nodes/thm.top-cond-adjoint.md) Top 与 Cond 的伴随 用
-- 被 [`def.condensed-abelian-group`](../nodes/def.condensed-abelian-group.md) 凝聚态阿贝尔群 用
-- 被 [`prop.cond-internal-hom`](../nodes/prop.cond-internal-hom.md) 内部 Hom 的函数空间刻画 用
+- ⇒ [`prop.fchaus-pretopology`](../nodes/prop.fchaus-pretopology.md) 有限紧 Hausdorff 空间上的预拓扑
+- ⇒ [`prop.condab-section`](../nodes/prop.condab-section.md) 截面函子保极限余极限
+- ⇒ [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4*
+- ⇒ [`lem.stonean-projective`](../nodes/lem.stonean-projective.md) Stonean 给出有限表现投射对象
 
 > 续见 [nodes/def.condensed-set.6.md](./def.condensed-set.6.md)

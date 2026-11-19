@@ -7,7 +7,7 @@
 - ⇒ [`prop.cohomology-of-coproduct`](../nodes/prop.cohomology-of-coproduct.md) 上同调与不交并
 - ⇒ [`prop.presheaf-representable-acyclic`](../nodes/prop.presheaf-representable-acyclic.md) 预层在可表示对象上没有高次上同调
 - ⇒ [`prop.stone-acyclic`](../nodes/prop.stone-acyclic.md) Stone 空间上的上同调为零
-- 被 [`def.acyclic-sheaf`](../nodes/def.acyclic-sheaf.md) 无环层 用
-- 被 [`prop.chaus-cech-eq-h`](../nodes/prop.chaus-cech-eq-h.md) 紧 Hausdorff 上 Čech 就是上同调 用
+- ⇒ [`prop.topos-morphism-derived`](../nodes/prop.topos-morphism-derived.md) 拓扑斯态射的导出函子
+- ⇒ [`lem.ext-stonean-section`](../nodes/lem.ext-stonean-section.md) Stonean 上 Ext 的截面公式
 
 > 续见 [nodes/def.sheaf-cohomology.6.md](./def.sheaf-cohomology.6.md)

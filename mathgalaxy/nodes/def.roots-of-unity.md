@@ -13,11 +13,13 @@ $\Phi_{n}(x) := \prod_{\zeta \text{ 本原}} (x - \zeta)$
 > 陈述续见 [nodes/def.roots-of-unity.2.md](./def.roots-of-unity.2.md)
 
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解
+
+- …另有出边，续页见 [nodes/def.roots-of-unity.4.md](./def.roots-of-unity.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.roots-of-unity.3.md](./def.roots-of-unity.3.md)
-
-## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.roots-of-unity.4.md](./def.roots-of-unity.4.md)
 
 refs: Lang, Algebra, Ch. VI §3；Stewart, Galois Theory, Ch. 13
 

@@ -4,3 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.injective-splitting`](../nodes/prop.injective-splitting.md) 内射的单射可裂
 - ⇒ [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据
+- ⇒ [`method.simplicial-cohomology`](../nodes/method.simplicial-cohomology.md) 单纯方法算层上同调
+- ⇒ [`lem.cartan-eilenberg`](../nodes/lem.cartan-eilenberg.md) Cartan–Eilenberg 分解

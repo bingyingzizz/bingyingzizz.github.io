@@ -6,3 +6,4 @@
 - ⇒ [`thm.tensor-universal-property`](../nodes/thm.tensor-universal-property.md) 张量积的万有性质
 - 被 [`def.tensor-field`](../nodes/def.tensor-field.md) 张量场 用
 - 被 [`def.tensor-representation`](../nodes/def.tensor-representation.md) 张量积表示 用
+- ⇒ [`lem.stonean-projective`](../nodes/lem.stonean-projective.md) Stonean 给出有限表现投射对象

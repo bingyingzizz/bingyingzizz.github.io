@@ -9,6 +9,8 @@ layer 15 · 命题 · 合成列与可解群 · 抽象代数
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
+- ⇒ [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解
+- ⇒ [`thm.quintic-unsolvable`](../nodes/thm.quintic-unsolvable.md) 五次方程没有根式解
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.sn-solvable.2.md](./prop.sn-solvable.2.md)

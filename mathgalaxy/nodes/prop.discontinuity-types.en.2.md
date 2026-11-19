@@ -2,6 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.discontinuity-types)　·　[Chinese page (authoritative)](./prop.discontinuity-types.md)
 
+**First kind**: $\lim_{x \to x_0^{-}} f(x)$ and $\lim_{x \to x_0^{+}} f(x)$ both exist (and are finite). Among these
+
 - **removable discontinuity**: the two one-sided limits are equal (denote the common value by $L$). In that case redefining $f(x_0)$ to be $L$ makes it continuous;
 - **jump discontinuity**: the two one-sided limits differ; the difference $f(x_0^{+}) - f(x_0^{-})$ is called the **jump**.
 

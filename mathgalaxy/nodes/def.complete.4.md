@@ -6,6 +6,8 @@
 - ⇒ [`thm.ck-complete`](../nodes/thm.ck-complete.md) C(K,E) 完备
 - 被 [`thm.bounded-operators-banach`](../nodes/thm.bounded-operators-banach.md) B(E,F) 完备 用
 - 被 [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理 用
+- ⇒ [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画
+- ⇒ [`lem.k-bounded-completion`](../nodes/lem.k-bounded-completion.md) K-有界正合在完备化下不变
 - 被 [`thm.real-ordered-field`](../nodes/thm.real-ordered-field.md) ℝ 是完备有序域 用
 - ～弱边 [`def.null-set`](../nodes/def.null-set.md) 零集与完备
 - 被 [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群 用

@@ -2,6 +2,8 @@
 [在星图里打开](../#n=def.spectral-sequence)　·　第 1 页 [nodes/def.spectral-sequence.md](./def.spectral-sequence.md)　·　上一页 [nodes/def.spectral-sequence.4.md](./def.spectral-sequence.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- ⇒ [`lem.cartan-eilenberg`](../nodes/lem.cartan-eilenberg.md) Cartan–Eilenberg 分解
+- 被 [`thm.filtered-complex-spectral`](../nodes/thm.filtered-complex-spectral.md) 过滤复形给出谱序列 用
 - 被 [`cor.grothendieck-spectral`](../nodes/cor.grothendieck-spectral.md) Grothendieck 谱序列 用
 - 被 [`thm.cartan-leray`](../nodes/thm.cartan-leray.md) Cartan–Leray 谱序列 用
 - 被 [`prop.breen-deligne-ss-stonean`](../nodes/prop.breen-deligne-ss-stonean.md) Stonean 上 Breen–Deligne 的谱序列 用

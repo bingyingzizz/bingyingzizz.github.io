@@ -7,6 +7,6 @@
 - 被 [`prop.additive-functor-preserves-triangles`](../nodes/prop.additive-functor-preserves-triangles.md) 加法函子保导出三角 用
 - ⇒ [`lem.triangle-morphism`](../nodes/lem.triangle-morphism.md) 三角态射的性质
 - ⇒ [`prop.additive-functor-preserves-triangles`](../nodes/prop.additive-functor-preserves-triangles.md) 加法函子保导出三角
-- 被 [`prop.triangle-rotation`](../nodes/prop.triangle-rotation.md) 三角的旋转与延拓 用
+- ⇒ [`prop.exact-to-triangle`](../nodes/prop.exact-to-triangle.md) 正合列给出导出三角
 
 > 续见 [nodes/def.distinguished-triangle.5.md](./def.distinguished-triangle.5.md)

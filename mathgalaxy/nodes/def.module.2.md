@@ -7,10 +7,9 @@
 - 被 [`def.module-hom`](../nodes/def.module-hom.md) 模同态 用
 - 被 [`def.quotient-module`](../nodes/def.quotient-module.md) 商模 用
 - 被 [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有 用
+- ⇒ [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有
 - 被 [`thm.pid-fg-module-structure`](../nodes/thm.pid-fg-module-structure.md) PID 上有限生成模的结构 用
 - ⇒ [`thm.pid-fg-module-structure`](../nodes/thm.pid-fg-module-structure.md) PID 上有限生成模的结构
 - 被 [`def.tensor-module`](../nodes/def.tensor-module.md) 张量积 用
-- 被 [`thm.mod-enough-injectives`](../nodes/thm.mod-enough-injectives.md) 足够多内射对象 用
-- 被 [`def.syzygy`](../nodes/def.syzygy.md) 合冲 用
 
 > 续见 [nodes/def.module.3.md](./def.module.3.md)

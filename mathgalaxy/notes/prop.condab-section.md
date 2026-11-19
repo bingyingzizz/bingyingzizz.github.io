@@ -5,4 +5,4 @@
 
 这条是**把 $\mathrm{CondAb}$ 的性质逐点归到 $\mathbf{Ab}$** 的通道 —— 下面的 AB 公理那一条就是靠它推出来的。
 
-> 续见 notes/prop.condab-section.2.md
+⭐ 推论：$\Gamma(F,-)$ 还是**正合**的（既保核又保余核）—— 这正是「自由紧 Hausdorff 空间给投射对象」的根源。

@@ -2,5 +2,8 @@
 [在星图里打开](../#n=thm.lc-ext-vanishing)　·　第 1 页 [nodes/thm.lc-ext-vanishing.md](./thm.lc-ext-vanishing.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间 + [`def.ext`](../nodes/def.ext.md) 扩展群 Ext + [`def.derived-category`](../nodes/def.derived-category.md) 导出范畴 + [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：imp.lc-ext-vanishing　[proofs/imp.lc-ext-vanishing.md](../proofs/imp.lc-ext-vanishing.md)
+- [`def.locally-compact-space`](../nodes/def.locally-compact-space.md) 局部紧空间：用到了定义 局部紧空间　[proofs/def-dep.lcext-lc.md](../proofs/def-dep.lcext-lc.md)
 - [`def.hausdorff`](../nodes/def.hausdorff.md) Hausdorff 空间：用到了定义 Hausdorff 空间　[proofs/def-dep.lcext-hausdorff.md](../proofs/def-dep.lcext-hausdorff.md)
-- [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-dep.lcext-ext.md](../proofs/def-dep.lcext-ext.md)
+
+> 续见 [nodes/thm.lc-ext-vanishing.3.md](./thm.lc-ext-vanishing.3.md)

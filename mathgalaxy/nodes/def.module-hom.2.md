@@ -4,4 +4,5 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`def.submodule`](../nodes/def.submodule.md) 子模
 - 被 [`def.quotient-module`](../nodes/def.quotient-module.md) 商模 用
+- ⇒ [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有
 - 被 [`def.representation-morphism`](../nodes/def.representation-morphism.md) 表示同态 用

@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.subset-compact-equiv)　·　[Chinese page (authoritative)](./prop.subset-compact-equiv.md)
 
-> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
+> fields: statement draft · notes stale · name derived
 
 layer 19 · proposition · cluster Metric Spaces (`topology.metric`) · Topology
 

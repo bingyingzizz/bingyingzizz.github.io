@@ -5,11 +5,11 @@
 - ～弱边 [`thm.compactness`](../nodes/thm.compactness.md) 紧致性定理
 - 被 [`thm.rado`](../nodes/thm.rado.md) Radó 定理 用
 - 被 [`def.closed-surface`](../nodes/def.closed-surface.md) 闭曲面 用
+- ⇒ [`prop.compact-subset-closed`](../nodes/prop.compact-subset-closed.md) 紧子集是闭的
+- ⇒ [`prop.subset-compact-equiv`](../nodes/prop.subset-compact-equiv.md) 子集的紧性刻画
+- ⇒ [`thm.lc-structure`](../nodes/thm.lc-structure.md) 局部紧阿贝尔群结构定理
 - 被 [`prop.chaus-reflective`](../nodes/prop.chaus-reflective.md) 紧 Haus 是反射子范畴 用
 - 被 [`lem.minimal-closed-surjection`](../nodes/lem.minimal-closed-surjection.md) 满射的极小闭子集 用
 - 被 [`def.regular-measure`](../nodes/def.regular-measure.md) 正则 Borel 测度 用
-- 被 [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 用
-- 被 [`def.compact-open-topology`](../nodes/def.compact-open-topology.md) 紧开拓扑 用
-- 被 [`thm.tykhonov`](../nodes/thm.tykhonov.md) Tychonoff 定理 用
 
 > 续见 [nodes/def.compact.7.md](./def.compact.7.md)

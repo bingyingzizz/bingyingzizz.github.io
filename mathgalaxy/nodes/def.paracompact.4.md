@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.bundle-classification`](../nodes/thm.bundle-classification.md) 丛的分类 用
+- ⇒ [`thm.tietze-banach`](../nodes/thm.tietze-banach.md) Tietze 延拓（Banach 值）

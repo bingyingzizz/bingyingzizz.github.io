@@ -1,6 +1,12 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 幂零群 | 下中心列 | nilpotent → def.nilpotent-group
+
+- 自同构群 | Aut(G) | automorphism group of a group → def.automorphism-group
+
+- 内自同构 | 共轭自同构 | conjugation automorphism → def.inner-automorphism
+
 - 素理想 | prime ideal of a ring → def.prime-ideal
 
 - 极大理想 | maximal ideal of a ring → def.maximal-ideal

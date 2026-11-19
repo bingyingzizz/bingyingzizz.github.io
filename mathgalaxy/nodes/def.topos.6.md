@@ -5,10 +5,10 @@
 - ⇒ [`prop.stalk-separated`](../nodes/prop.stalk-separated.md) 茎与分离预层
 - ⇒ [`prop.topos-covering-epi`](../nodes/prop.topos-covering-epi.md) 拓扑斯中覆盖即余积满射
 - ⇒ [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴
-- 被 [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理 用
-- 被 [`prop.topos-covering-epi`](../nodes/prop.topos-covering-epi.md) 拓扑斯中覆盖即余积满射 用
-- 被 [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
-- 被 [`def.topos-morphism`](../nodes/def.topos-morphism.md) 拓扑斯的态射 用
-- 被 [`def.internal-hom`](../nodes/def.internal-hom.md) 内 Hom 用
+- ⇒ [`prop.topos-morphism-derived`](../nodes/prop.topos-morphism-derived.md) 拓扑斯态射的导出函子
+- ⇒ [`prop.cond-internal-hom`](../nodes/prop.cond-internal-hom.md) 内部 Hom 的函数空间刻画
+- ⇒ [`prop.cond-slice-topos-morphism`](../nodes/prop.cond-slice-topos-morphism.md) Cond/X 到开集拓扑斯的态射
+- ⇒ [`prop.cond-epi-regular`](../nodes/prop.cond-epi-regular.md) Cond 的满态射都是正则的
+- ⇒ [`prop.cond-equivalence-effective`](../nodes/prop.cond-equivalence-effective.md) Cond 的等价关系有效
 
 > 续见 [nodes/def.topos.7.md](./def.topos.7.md)

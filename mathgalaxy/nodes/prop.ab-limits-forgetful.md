@@ -6,8 +6,6 @@ layer 17 · 命题 · 加法与阿贝尔范畴 · 同调代数+范畴论
 若 $\mathcal{C}$ 有所有极限，则 $\mathrm{Ab}(\mathcal{C})$ 也有所有极限，并且**遗忘函子** $\mathrm{Ab}(\mathcal{C}) \to \mathcal{C}$ 保它们。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.group-object`](../nodes/def.group-object.md) 群对象与阿贝尔群对象：用到了定义 群对象与阿贝尔群对象　[proofs/def-dep.abl-limits-groupobj.md](../proofs/def-dep.abl-limits-groupobj.md)
-
 - …另有入边，续页见 [nodes/prop.ab-limits-forgetful.2.md](./prop.ab-limits-forgetful.2.md)
 
 refs: Le Stum, Exercise 1.52

@@ -5,3 +5,6 @@
 - 被 [`prop.prime-ideal`](../nodes/prop.prime-ideal.md) 素理想与极大理想 用
 - 被 [`def.prime-ideal`](../nodes/def.prime-ideal.md) 素理想 用
 - 被 [`def.maximal-ideal`](../nodes/def.maximal-ideal.md) 极大理想 用
+- ⇒ [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
+- ⇒ [`lem.isomorphism-extension`](../nodes/lem.isomorphism-extension.md) 同构延拓
+- ⇒ [`thm.splitting-field-exists`](../nodes/thm.splitting-field-exists.md) 分裂域存在

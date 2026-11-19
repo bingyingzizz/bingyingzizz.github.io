@@ -14,6 +14,7 @@ $$I + J = A .$$
 
 ## 它能推出什么 / 谁在用它
 - 被 [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式） 用
+- ⇒ [`thm.crt-rings`](../nodes/thm.crt-rings.md) 中国剩余定理（环论形式）
 
 refs: Atiyah–Macdonald, Ch. 1
 

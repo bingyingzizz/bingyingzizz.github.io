@@ -13,7 +13,7 @@ layer 26 · 定理 · Hilbert 空间 · 泛函分析
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影
 
-- …另有出边，续页见 [nodes/thm.projection-convex.3.md](./thm.projection-convex.3.md)
+- …另有出边，续页见 [nodes/thm.projection-convex.4.md](./thm.projection-convex.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.projection-convex.2.md](./thm.projection-convex.2.md)

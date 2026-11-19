@@ -5,3 +5,4 @@
 - ⇒ [`thm.minimal-poly-divisor`](../nodes/thm.minimal-poly-divisor.md) 极小多项式整除特征多项式
 - ⇒ [`thm.rational-canonical-form`](../nodes/thm.rational-canonical-form.md) 有理标准形
 - ～弱边 [`def.nilpotent`](../nodes/def.nilpotent.md) 幂零
+- ⇒ [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解

@@ -4,4 +4,6 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.normal-extension`](../nodes/def.normal-extension.md) 正规扩张 用
 - 被 [`thm.radical-solvable`](../nodes/thm.radical-solvable.md) 根式可解 与 伽罗瓦群可解 用
+- ⇒ [`thm.splitting-field-exists`](../nodes/thm.splitting-field-exists.md) 分裂域存在
+- ⇒ [`thm.splitting-field-unique`](../nodes/thm.splitting-field-unique.md) 分裂域唯一
 - 被 [`def.galois-group`](../nodes/def.galois-group.md) 伽罗瓦群 用

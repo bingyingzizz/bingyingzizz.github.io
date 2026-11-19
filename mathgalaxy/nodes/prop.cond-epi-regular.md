@@ -8,7 +8,7 @@ layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 $$Y \cong \operatorname{coeq}\bigl(X \times_{Y} X \rightrightarrows X\bigr).$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.condensed-set`](../nodes/def.condensed-set.md) 凝聚态集：用到了定义 凝聚态集　[proofs/def-dep.condepi-condset.md](../proofs/def-dep.condepi-condset.md)
+- …另有入边，续页见 [nodes/prop.cond-epi-regular.2.md](./prop.cond-epi-regular.2.md)
 
 refs: Le Stum, §4.1
 
