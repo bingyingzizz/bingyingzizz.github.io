@@ -2,8 +2,7 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+ sets alone. To obtain normality under the definition that includes $T_1$, one must also assume $T_1$.
+- The missing separation hypothesis has a counterexample: In the indiscrete topology on at least two points, every open cover contains the entire space. The constant function one gives a subordinate partition of unity, yet the space is neither Hausdorff nor $T_1$. Both converses require the additional hypotheses.
 
-
-Cite: `prop.paracompact-partition-unity` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.paracompact-partition-unity.en.14.md

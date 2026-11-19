@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.symplectic-basis`](../nodes/def.symplectic-basis.md) 辛基 用
+- ⇒ [`thm.symplectic-normal-form`](../nodes/thm.symplectic-normal-form.md) 辛标准形定理

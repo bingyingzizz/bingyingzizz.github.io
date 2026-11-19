@@ -2,8 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham)　·　[Chinese page (authoritative)](./thm.de-rham.md)
 
- of naturality. **The well-definedness and exactness assertions in Steps 1 and 2 can be verified in full. The remaining parts rely on standard external results unproved in the graph, so the proof carries no ∎ and retains skeleton status.**
-**Why this is a theorem**: The two complexes are entirely different (smooth forms and topological simplices), so their agreement requires proof. The central step is Step 2, where the assertion that $\Omega^{\bullet}$ resolves the constant sheaf globalizes the Poincaré lemma.
-**Corollaries**: $H^{k}_{\mathrm{dR}}$ is homotopy invariant. On a compact manifold, each $H^{k}_{\mathrm{dR}}$ is finite-dimensional and vanishes when $k>\dim M$. Thus 
+f gaps**: (A) Smooth singular chains $\simeq$ continuous singular chains (simplicial approximation and smoothing). (B) Existence of good covers on smooth manifolds (geodesically convex neighborhoods and convexity radius). (C) Convergence of spectral sequences of double complexes (the graph has only ingredients such as `def.spectral-sequence`, `thm.filtered-complex-spectral`, and `cor.cech-cohomology-spectral`). (D) Acyclicity of fine sheaves (Godement). (E) Čech cohomology equals sheaf cohomology (`thm.paracompact-cech-equals-sheaf` remains a skeleton). (F) Sheaf cohomology equals singular cohomology (Eilenberg–Steenrod uniqueness). (G) Full verification of compatibility via Stokes and
 
 > continued in nodes/thm.de-rham.en.14.md

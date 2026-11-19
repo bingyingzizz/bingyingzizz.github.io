@@ -6,4 +6,8 @@
 - 被 [`prop.quasi-compact-properties`](../nodes/prop.quasi-compact-properties.md) 拟紧的性质 用
 - 被 [`prop.precanonical-sheaf`](../nodes/prop.precanonical-sheaf.md) 预标准拓扑下的层 用
 - 被 [`prop.precanonical-mono-epi`](../nodes/prop.precanonical-mono-epi.md) 单满在层化后不变 用
-- 被 [`prop.precanonical-preserves`](../nodes/prop.precanonical-preserves.md) 余积与商在层范畴中不变 用
+- ⇒ [`prop.precanonical-mono-epi`](../nodes/prop.precanonical-mono-epi.md) 单满在层化后不变
+- ⇒ [`prop.precanonical-preserves`](../nodes/prop.precanonical-preserves.md) 余积与商在层范畴中不变
+- ⇒ [`prop.precanonical-sheaf`](../nodes/prop.precanonical-sheaf.md) 预标准拓扑下的层
+
+> 续见 [nodes/def.precanonical-topology.4.md](./def.precanonical-topology.4.md)

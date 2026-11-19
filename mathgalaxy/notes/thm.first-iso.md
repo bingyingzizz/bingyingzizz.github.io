@@ -1,16 +1,18 @@
 # 第一同构定理（Noether）　`thm.first-iso`　·　说明
 根 `../`
 
-**证明的三步。** 记 $K = \ker\varphi$。
-
-- **良定义**：若 $gK = g'K$，则 $g' = gk$（某个 $k \in K$），于是 $\varphi(g') = \varphi(g)\varphi(k) = \varphi(g)e' = \varphi(g)$ —— 同一陪集里的元素被送到同一个值。
-- **同态**：$\overline{\varphi}\bigl((gK)(g'K)\bigr) = \overline{\varphi}(gg'K) = \varphi(gg') = \varphi(g)\varphi(g') = \overline{\varphi}(gK)\,\overline{\varphi}(g'K)$。
-- **双射**：单，因为 $\overline{\varphi}(gK) = e'$ 意味着 $\varphi(g) = e'$，即 $g \in K$，于是 $gK = K$；满，因为像本来就是 $\varphi(G)$。∎
-
 ⭐ **它其实是「集合 + 运算 + 公理」这套格式的通用定理，不是群的专利。** 同一个证明逐字照搬，只要把「同态」换成对应的东西：
+
+
 
 $$A \big/ \ker f \;\cong\; \operatorname{im} f.$$
 
+
+
 ⭐ **集合层面的原型**：对任何映射 $f : A \to B$，在 $A$ 上令 $a \sim a' \iff f(a) = f(a')$，则 $f$ 诱导**双射** $A/{\sim} \;\to\; \operatorname{im} f$（见「商集与等价类」）。
 
-> 续见 notes/thm.first-iso.2.md
+群版比它多出来的只有一句话：**商掉核之后，剩下的是一个群**。
+
+前两步（良定义、双射）就是集合版的内容，第三步（同态）才是新的。
+
+**它回答了什么问题。** 「同态把群送到哪里去了」这个问题，答案只有两部分：**核**（被压掉的部分）与**像**（留下来的部分），二者由一个同构精确地锁在一起。于是研究同态 = 研究正规子群，这就是把群论变成「子群格」的原因。

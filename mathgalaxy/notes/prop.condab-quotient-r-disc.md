@@ -1,16 +1,6 @@
 # R/R_disc 在 Stone 上的截面　`prop.condab-quotient-r-disc`　·　说明
 根 `../`
 
-**证明。** 凝聚态阿贝尔群里的短正合列
-$$0 \longrightarrow \mathbb{R}^{\mathrm{disc}} \longrightarrow \mathbb{R} \longrightarrow Q \longrightarrow 0$$
-给出长正合列
-$$0 \to \Gamma(S, \mathbb{R}^{\mathrm{disc}}) \to \Gamma(S, \mathbb{R}) \to \Gamma(S, Q) \to H^{1}_{\mathrm{cond}}(S, \mathbb{R}^{\mathrm{disc}}).$$
-末项为零：$S$ 是 Stone 空间，而 $\mathbb{R}^{\mathrm{disc}}$ 对应的凝聚态阿贝尔群就是**常**凝聚态群 $\underline{\mathbb{R}}$，由「Stone 空间上常系数零调」得 $H^{1} = 0$ ✓。
+⚠️ **这个商不是零**：只要 $S$ 上有非常值的连续实值函数（例如 $S = \beta I$ 时取一个非局部常值的有界函数），$Q(S) \ne 0$。这与「拓扑阿贝尔群**不是**阿贝尔范畴」是同一件事的两面：在拓扑群层面商不好使，在凝聚态层面才有上面这条正确的截面公式。
 
-再看前两项：$\Gamma(S, \mathbb{R}) = \operatorname{Hom}_{\mathrm{Cond}}(S, \mathbb{R}) = C(S, \mathbb{R})$ ✓；
-
-$\Gamma(S, \mathbb{R}^{\mathrm{disc}}) = C(S, \mathbb{R}^{\mathrm{disc}})$ —— 映入**离散**空间 $\mathbb{R}^{\mathrm{disc}}$ 的连续映射正是**局部常值**映射 ✓（$\mathbb{R}^{\mathrm{disc}}$ 的每个单点集都是开的，所以连续函数在每个点上局部常值）。
-
-于是 $\Gamma(S, Q) = C(S,\mathbb{R})/C(S,\mathbb{R}^{\mathrm{disc}})$ ✓。
-
-> 续见 notes/prop.condab-quotient-r-disc.2.md
+⭐ 它也是「$\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ 型现象」的一般样子：**改拓扑不改底集，却真的改变了层的截面**。

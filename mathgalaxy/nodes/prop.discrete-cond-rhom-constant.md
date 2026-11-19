@@ -7,13 +7,11 @@ layer 22 · 命题 · 导出 Hom 的具体计算 · 凝聚态数学
 > 陈述续见 [nodes/prop.discrete-cond-rhom-constant.2.md](./prop.discrete-cond-rhom-constant.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.internal-hom`](../nodes/def.internal-hom.md) 内 Hom：用到了定义 内 Hom　[proofs/def-link.drhom-internal.md](../proofs/def-link.drhom-internal.md)
-
-- …另有入边，续页见 [nodes/prop.discrete-cond-rhom-constant.3.md](./prop.discrete-cond-rhom-constant.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.discrete-cond-rhom-constant.4.md](./prop.discrete-cond-rhom-constant.4.md)
+- ⇒ [`prop.rhom-dual-tensor`](../nodes/prop.rhom-dual-tensor.md) 离散对偶的导出 Hom 与导出张量
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.discrete-cond-rhom-constant.3.md](./prop.discrete-cond-rhom-constant.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3
 

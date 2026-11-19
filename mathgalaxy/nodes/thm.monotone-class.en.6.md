@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-class)　·　[Chinese page (authoritative)](./thm.monotone-class.md)
 
-**③** Fix $B \in \mathfrak{m}$ and let $\mathcal{K}_{3} = \{A \in \mathfrak{m} : A \cup B \in \mathfrak{m}\}$. By ②, $\mathcal{K}_{3} \supseteq \mathcal{E} \implies \mathcal{K}_{3} = \mathfrak{m}$, i.e. $\mathfrak{m}$ is closed under **unions**.
+**①** Let $\mathcal{K}_{1} = \{A \in \mathfrak{m} : A^{c} \in \mathfrak{m}\}$. It contains $\mathcal{E}$ (first condition), and is itself a monotone class ($\mathfrak{m}$ is monotone $\implies$ limits stay in $\mathfrak{m}$; complements use one decreasing limit) $\implies \mathcal{K}_{1} = \mathfrak{m}$, i.e. $\mathfrak{m}$ is closed under **complements**.
 
-Hence $\mathfrak{m}$ is closed under $\cup$ and complements, and is a monotone class $\implies$ $\mathfrak{m}$ is a $\sigma$-algebra $\implies \mathcal{M}(\mathcal{E}) \subseteq \mathfrak{m}(\mathcal{E})$; the reverse inclusion always holds, so the two sides are equal. (One needs $\mathcal{E} \ne \emptyset$, otherwise $\mathfrak{m}(\mathcal{E}) = \{\emptyset \}$.)
+**②** Fix $A \in \mathcal{E}$ and let $\mathcal{K}_{2} = \{B \in \mathfrak{m} : A \cup B \in \mathfrak{m}\}$. By the second condition $\mathcal{K}_{2} \supseteq \mathcal{E} \implies \mathcal{K}_{2} = \mathfrak{m}$.
 
 > continued in nodes/thm.monotone-class.en.7.md

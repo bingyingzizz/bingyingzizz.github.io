@@ -14,6 +14,7 @@ $$G^{(I)} \twoheadrightarrow M.$$
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 5.13
 
-> 说明见 `notes/prop.generator-coproduct-epi.md`
+## 说明
+⚠️ 这条判据其实**只用到余积**（AB3），滤过余极限没有出场（AB5 的那部分条件用不上）。
 
 引用：`prop.generator-coproduct-epi`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

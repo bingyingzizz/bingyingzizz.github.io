@@ -6,3 +6,4 @@
 - 被 [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext 用
 - ⇒ [`thm.mod-enough-projectives`](../nodes/thm.mod-enough-projectives.md) 足够多投射对象
 - 被 [`lem.horseshoe`](../nodes/lem.horseshoe.md) 马蹄引理 用
+- ⇒ [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext

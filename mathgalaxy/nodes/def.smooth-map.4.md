@@ -8,3 +8,4 @@
 - 被 [`def.boundary-manifold`](../nodes/def.boundary-manifold.md) 带边流形 用
 - 被 [`def.vector-bundle`](../nodes/def.vector-bundle.md) 向量丛 用
 - 被 [`def.bundle-section`](../nodes/def.bundle-section.md) 丛的截面 用
+- ⇒ [`prop.pullback-form-manifold`](../nodes/prop.pullback-form-manifold.md) 拉回

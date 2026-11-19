@@ -13,7 +13,7 @@ layer 20 · 定义 · 加法与阿贝尔范畴 · 同调代数
 6. **AB6**：AB5 且**滤过余极限与积交换**（**AB5\*** 是对偶）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4* 用
+- ⇒ [`prop.ab6`](../nodes/prop.ab6.md) AB6：滤过余极限与积交换
 
 - …另有出边，续页见 [nodes/def.ab-axioms.3.md](./def.ab-axioms.3.md)
 

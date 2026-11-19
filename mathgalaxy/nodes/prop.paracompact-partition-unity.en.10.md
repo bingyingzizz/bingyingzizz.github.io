@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-**Hypotheses used in each direction** (the construction uses normality, and the converses require separate separation hypotheses):
-- Paracompact Hausdorff $\implies$ every open cover admits a subordinate partition of unity: Use normality of paracompact Hausdorff spaces, a locally finite refinement, the shrinking lemma, and Urysohn's lemma. A second shrinking ensures the supports lie in the original open sets.
-- Every open cover admits a subordinate partition of unity $\implies$ a locally finite open refinement exists: Take the sets on which the functions are posit
+⭐ This result **underlies extension theorems**: A partition of unity combines locally defined data by a weighted sum to produce a globally defined function. Tietze- and Dugundji-type extensions, integration on manifolds, and Stokes' theorem all use this construction.
+
+⚠️ **Local finiteness is essential**: Without local finiteness, $\sum \rho_{i} = 1$ is merely a pointwise assertion, and the pointwise sum need not be continuous.
 
 > continued in nodes/prop.paracompact-partition-unity.en.11.md

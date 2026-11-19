@@ -3,7 +3,7 @@
 layer 20 · 命题 · 仿紧与单位分解 · 拓扑学
 [在星图里打开](../#n=prop.paracompact-partition-unity)　·　[节点索引](../index.md)
 
-对
+对拓扑空间 $X$：
 > 陈述续见 [nodes/prop.paracompact-partition-unity.2.md](./prop.paracompact-partition-unity.2.md)
 
 
@@ -13,7 +13,7 @@ layer 20 · 命题 · 仿紧与单位分解 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/prop.paracompact-partition-unity.7.md](./prop.paracompact-partition-unity.7.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/prop.paracompact-partition-unity.3.md](./prop.paracompact-partition-unity.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3

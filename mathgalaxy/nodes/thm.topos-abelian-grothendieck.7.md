@@ -1,0 +1,7 @@
+# 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`thm.topos-abelian-grothendieck`　·　续页（第 7 页）
+[在星图里打开](../#n=thm.topos-abelian-grothendieck)　·　第 1 页 [nodes/thm.topos-abelian-grothendieck.md](./thm.topos-abelian-grothendieck.md)　·　上一页 [nodes/thm.topos-abelian-grothendieck.6.md](./thm.topos-abelian-grothendieck.6.md)
+
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.grothendieck-category`](../nodes/def.grothendieck-category.md) Grothendieck 范畴：用到了定义 Grothendieck 范畴　[proofs/def-dep.grothendieck-topos-ab.md](../proofs/def-dep.grothendieck-topos-ab.md)
+- [`def.generator`](../nodes/def.generator.md) 生成元集：用到了定义 生成元集　[proofs/def-dep.generator-topos-ab.md](../proofs/def-dep.generator-topos-ab.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-dep.abeliancat-topos-ab.md](../proofs/def-dep.abeliancat-topos-ab.md)

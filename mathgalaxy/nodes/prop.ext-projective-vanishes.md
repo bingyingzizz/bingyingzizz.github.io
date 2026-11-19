@@ -7,13 +7,11 @@ layer 24 · 命题 · 复形与导出三角 · 同调代数
 > 陈述续见 [nodes/prop.ext-projective-vanishes.2.md](./prop.ext-projective-vanishes.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-link.extproj-ext.md](../proofs/def-link.extproj-ext.md)
-
-- …另有入边，续页见 [nodes/prop.ext-projective-vanishes.3.md](./prop.ext-projective-vanishes.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.ext-projective-vanishes.4.md](./prop.ext-projective-vanishes.4.md)
+- ⇒ [`prop.dimension-shift`](../nodes/prop.dimension-shift.md) 维数转移
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.ext-projective-vanishes.3.md](./prop.ext-projective-vanishes.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.2
 

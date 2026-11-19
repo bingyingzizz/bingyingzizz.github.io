@@ -2,4 +2,6 @@
 [在星图里打开](../#n=prop.disjoint-universal)　·　第 1 页 [nodes/prop.disjoint-universal.md](./prop.disjoint-universal.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.universal-colimit`](../nodes/def.universal-colimit.md) 万有关系 + [`def.canonical-topology`](../nodes/def.canonical-topology.md) 标准拓扑：imp.disjoint-universal　[proofs/imp.disjoint-universal.md](../proofs/imp.disjoint-universal.md)
+- [`def.universal-colimit`](../nodes/def.universal-colimit.md) 万有关系：用到了定义 万有关系　[proofs/def-dep.universal-disjoint.md](../proofs/def-dep.universal-disjoint.md)
 - [`def.canonical-topology`](../nodes/def.canonical-topology.md) 标准拓扑：用到了定义 标准拓扑　[proofs/def-dep.canonical-disjoint.md](../proofs/def-dep.canonical-disjoint.md)

@@ -1,7 +1,6 @@
 # 加法与阿贝尔范畴 / Additive and Abelian Categories（hom.ab）· 节点清单（第 2/3 页）
 根 `../`　·　第 1 页 `index/hom.ab.md`
 
-- thm.five-lemma　五引理　layer 20
 - def.exact-sequence　一般正合列　layer 20
 - prop.zero-object-final-criterion　零对象与终对象　layer 20
 - prop.biproduct-is-product　直和就是积　layer 20
@@ -10,6 +9,7 @@
 - prop.image-kernel-cokernel　像就是余核的核　layer 20
 - prop.generator-coproduct-epi　生成元的余积刻画　layer 20
 - def.grothendieck-category　Grothendieck 范畴　layer 21
+- thm.five-lemma　五引理　layer 21
 - prop.ab6　AB6：滤过余极限与积交换　layer 21
 - prop.ab-axioms-examples　AB 公理的例子表　layer 21
 - prop.exact-sequence-subcategory　正合列构成子范畴　layer 21

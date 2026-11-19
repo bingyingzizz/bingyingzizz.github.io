@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
+- ⇒ [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近

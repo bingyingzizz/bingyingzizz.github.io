@@ -9,6 +9,9 @@ layer 19 · 命题 · 复形与导出三角 · 同调代数
 - 核与余核也**逐项**取：$(\ker f)^{n} = \ker f^{n}$，$d_{\ker f} := d_{K}|_{\ker f^{n}}$；
 - $\mathcal{C}(\mathcal{C})$ 中的**极限与余极限逐项计算**。
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.complexes-abelian`](../nodes/prop.complexes-abelian.md) 复形范畴是阿贝尔范畴
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.complex-additive.2.md](./prop.complex-additive.2.md)
 

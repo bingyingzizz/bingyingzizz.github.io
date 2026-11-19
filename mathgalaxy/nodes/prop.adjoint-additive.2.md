@@ -2,6 +2,8 @@
 [在星图里打开](../#n=prop.adjoint-additive)　·　第 1 页 [nodes/prop.adjoint-additive.md](./prop.adjoint-additive.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子 + [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子 + [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：imp.adjoint-additive　[proofs/imp.adjoint-additive.md](../proofs/imp.adjoint-additive.md)
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-link.adjadd-adjoint.md](../proofs/def-link.adjadd-adjoint.md)
 - [`def.additive-functor`](../nodes/def.additive-functor.md) 加法函子：用到了定义 加法函子　[proofs/def-link.adjadd-addfun.md](../proofs/def-link.adjadd-addfun.md)
-- [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：用到了定义 加法范畴　[proofs/dep.adjoint-additive.md](../proofs/dep.adjoint-additive.md)
+
+> 续见 [nodes/prop.adjoint-additive.3.md](./prop.adjoint-additive.3.md)

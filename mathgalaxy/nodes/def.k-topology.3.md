@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.weak-hausdorff-k-closed`](../nodes/prop.weak-hausdorff-k-closed.md) 弱 Hausdorff 的对角线与核 用
 - 被 [`ex.cg-examples`](../nodes/ex.cg-examples.md) 紧生成空间的例子 用
+- ⇒ [`prop.ktx-colimit`](../nodes/prop.ktx-colimit.md) kX 是紧空间的余极限
 - 被 [`prop.k-product`](../nodes/prop.k-product.md) k-化与积 用
 - 被 [`prop.ktx-colimit`](../nodes/prop.ktx-colimit.md) kX 是紧空间的余极限 用
 - 被 [`prop.cg-coreflective`](../nodes/prop.cg-coreflective.md) 紧生成空间是余反射子范畴 用

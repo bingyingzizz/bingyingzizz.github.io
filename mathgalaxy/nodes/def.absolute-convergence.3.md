@@ -7,3 +7,4 @@
 - 被 [`prop.weierstrass-m-test`](../nodes/prop.weierstrass-m-test.md) Weierstrass 判别法 用
 - 被 [`def.signed-measure`](../nodes/def.signed-measure.md) 符号测度 用
 - 被 [`def.riemann-zeta`](../nodes/def.riemann-zeta.md) 黎曼 ζ 函数 用
+- ⇒ [`thm.euler-product`](../nodes/thm.euler-product.md) Euler 乘积

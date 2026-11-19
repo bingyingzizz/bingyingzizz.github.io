@@ -9,13 +9,11 @@ layer 26 · 定理 · 多重线性与张量 · 抽象代数
 > 陈述续见 [nodes/thm.symplectic-normal-form.2.md](./thm.symplectic-normal-form.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.symplectic-basis`](../nodes/def.symplectic-basis.md) 辛基：用到了定义 辛基　[proofs/dep.snf-sb.md](../proofs/dep.snf-sb.md)
-
-- …另有入边，续页见 [nodes/thm.symplectic-normal-form.3.md](./thm.symplectic-normal-form.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.symplectic-normal-form.4.md](./thm.symplectic-normal-form.4.md)
+- ⇒ [`thm.darboux`](../nodes/thm.darboux.md) Darboux 定理
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.symplectic-normal-form.3.md](./thm.symplectic-normal-form.3.md)
 
 refs: Arnold, Mathematical Methods of Classical Mechanics；McDuff–Salamon, Introduction to Symplectic Topology, Ch. 3
 

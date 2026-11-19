@@ -11,27 +11,27 @@
 被最多结论当作前置（出边多）—— 值得优先学熟。
 
 - **38 / 38** `def.group` 群 · layer 9 · 代数结构
-- **36 / 36** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **36 / 39** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
 - **35 / 35** `def.complex` 复数 ℂ · layer 21 · 数系的构造
-- **33 / 33** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
-- **32 / 33** `def.measure` 测度 · layer 17 · 测度的构造
+- **33 / 35** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
+- **32 / 34** `def.measure` 测度 · layer 17 · 测度的构造
+- **31 / 42** `def.limit` 极限 · layer 13 · 图与极限
+- **31 / 40** `def.sheaf` 层 · layer 17 · 层与拓扑
+- **31 / 39** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
 - **31 / 31** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
 - **30 / 36** `def.compact` 紧 · layer 18 · 拓扑空间的基本语汇
-- **30 / 33** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
-- **30 / 33** `def.limit` 极限 · layer 13 · 图与极限
-- **29 / 32** `def.sheaf` 层 · layer 17 · 层与拓扑
+- **26 / 39** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
 - **26 / 29** `def.banach-space` Banach 空间 · layer 24 · 多元微分
-- **26 / 26** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
+- **25 / 29** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
+- **25 / 26** `def.functor` 函子 · layer 10 · 函子与自然变换
+- **25 / 26** `def.ring` 环 · layer 10 · 代数结构
 - **25 / 25** `def.category` 范畴 · layer 9 · 范畴与图
-- **25 / 25** `def.functor` 函子 · layer 10 · 函子与自然变换
-- **25 / 25** `def.ring` 环 · layer 10 · 代数结构
-- **24 / 27** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
+- **24 / 34** `def.topos` 拓扑斯 · layer 19 · 拓扑斯
+- **24 / 30** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 21 · 凝聚态阿贝尔群
 - **24 / 24** `def.function` 映射 · layer 7 · 关系与函数
-- **24 / 24** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 21 · 凝聚态阿贝尔群
-- **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
-- **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
+- **23 / 32** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 
-（共 1104 个节点有非零计数；这里列前 20 条。）
+（共 1110 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
@@ -45,6 +45,7 @@
 - **8 / 5** `thm.theorema-egregium` 绝妙定理 · layer 37 · 内蕴几何
 - **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 36 · 数论函数与素数分布
 - **7 / 8** `thm.bundle-classification` 丛的分类 · layer 36 · 丛的示性类
+- **7 / 7** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 22 · 阿贝尔层
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 27 · 同调群
 - **7 / 7** `thm.cartan-formula` Cartan 公式 · layer 31 · 向量场与 Lie 结构
 - **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
@@ -56,7 +57,6 @@
 - **6 / 7** `thm.stokes` Stokes 定理 · layer 35 · 内蕴几何
 - **6 / 6** `thm.primitive-root-exists` 模素数有原根 · layer 13 · 二次剩余与原根
 - **6 / 6** `def.representable` 表示函子 · layer 14 · 预层与米田
-- **6 / 6** `prop.set-top-ab-complete` Set、Top、Ab 的完备性 · layer 15 · 图与极限
 
 （共 1719 个节点有非零计数；这里列前 20 条。）
 
@@ -72,18 +72,18 @@
 - **14 团 / 23 节点** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 - **14 团 / 22 节点** `def.metric-space` 距离空间 · layer 16 · 度量空间
 - **13 团 / 33 节点** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
-- **13 团 / 24 节点** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
+- **13 团 / 25 节点** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
 - **13 团 / 19 节点** `def.real` 实数系 ℝ · layer 15 · 数系的构造
-- **12 团 / 30 节点** `def.limit` 极限 · layer 13 · 图与极限
+- **12 团 / 31 节点** `def.limit` 极限 · layer 13 · 图与极限
 - **12 团 / 25 节点** `def.ring` 环 · layer 10 · 代数结构
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
 - **12 团 / 20 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
 - **11 团 / 26 节点** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **11 团 / 22 节点** `def.abs` 绝对值 |x| · layer 12 · 实数的运算与不等式
+- **11 团 / 19 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 - **10 团 / 36 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
-- **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
+- **10 团 / 31 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
 - **10 团 / 25 节点** `def.category` 范畴 · layer 9 · 范畴与图
-- **10 团 / 19 节点** `def.category-of-topological-spaces` 拓扑空间范畴 · layer 10 · 范畴与图
 
-（共 1104 个节点有非零计数；这里列前 20 条。）
+（共 1110 个节点有非零计数；这里列前 20 条。）
 

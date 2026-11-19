@@ -7,8 +7,8 @@
 - ⇒ [`thm.gleason`](../nodes/thm.gleason.md) Gleason 定理
 - 被 [`prop.coproduct-chaus`](../nodes/prop.coproduct-chaus.md) 不交并是紧 Hausdorff 的余积 用
 - 被 [`prop.chaus-quotient-equiv`](../nodes/prop.chaus-quotient-equiv.md) 紧 Hausdorff 上商映射的四种说法 用
+- ⇒ [`prop.chaus-cech-eq-h`](../nodes/prop.chaus-cech-eq-h.md) 紧 Hausdorff 上 Čech 就是上同调
+- ⇒ [`prop.chaus-quotient-equiv`](../nodes/prop.chaus-quotient-equiv.md) 紧 Hausdorff 上商映射的四种说法
 - 被 [`prop.chaus-quotient-of-free`](../nodes/prop.chaus-quotient-of-free.md) 紧 Haus 是自由的商 用
-- 被 [`prop.component-clopen`](../nodes/prop.component-clopen.md) 连通分量是闭开邻域之交 用
-- 被 [`def.free-compact-hausdorff`](../nodes/def.free-compact-hausdorff.md) 自由紧 Hausdorff 空间 用
 
 > 续见 [nodes/def.chaus.4.md](./def.chaus.4.md)

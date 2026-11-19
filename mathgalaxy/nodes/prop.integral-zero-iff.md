@@ -8,11 +8,14 @@ layer 20 · 命题 · 积分 · 实变函数+数学分析
 $$\int f d\mu = 0 \iff f = 0 \mu-\text{a.e.}$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.null-set`](../nodes/def.null-set.md) 零集与完备：用到了定义 零集与完备　[proofs/def-link.nullset-zeromeasure.md](../proofs/def-link.nullset-zeromeasure.md)
-- [`def.ae`](../nodes/def.ae.md) 几乎处处：用到了定义 几乎处处　[proofs/def-link.ae-integral-zero.md](../proofs/def-link.ae-integral-zero.md)
+- [`def.null-set`](../nodes/def.null-set.md) 零集与完备 + [`def.ae`](../nodes/def.ae.md) 几乎处处：imp.integral-zero-iff　[proofs/imp.integral-zero-iff.md](../proofs/imp.integral-zero-iff.md)
+
+- …另有入边，续页见 [nodes/prop.integral-zero-iff.2.md](./prop.integral-zero-iff.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.integral-zero-iff.2.md](./prop.integral-zero-iff.2.md)
+- ⇒ [`thm.termwise-L1`](../nodes/thm.termwise-L1.md) L¹ 的逐项积分
+
+- …另有出边，续页见 [nodes/prop.integral-zero-iff.3.md](./prop.integral-zero-iff.3.md)
 
 refs: Folland, Real Analysis, Prop. 2.16
 

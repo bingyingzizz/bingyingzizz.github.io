@@ -12,11 +12,10 @@
 - prop.lq-in-lp-plus-lr　L^q 落在 L^p + L^r 里　layer 26
 - prop.lp-inter-lr-in-lq　L^p 与 L^r 的交包含于 L^q　layer 26
 - prop.ell-p-inclusion　ℓ^p 包含于 ℓ^q　layer 26
-- prop.lp-inclusion-finite　有限测度时方向反过来　layer 26
 - def.duality-map　对偶配对 φ_g　layer 26
-- cor.lp-reflexive　L^p 自反　layer 26
 - thm.minkowski　Minkowski 不等式　layer 27
 - thm.linf-properties　L^∞ 的性质　layer 27
+- prop.lp-inclusion-finite　有限测度时方向反过来　layer 27
 - prop.duality-isometry　对偶等距：范数相等　layer 27
 - prop.bounded-functional-gives-lq　有界 ⟹ g ∈ L^q　layer 27
 

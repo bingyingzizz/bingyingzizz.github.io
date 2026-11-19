@@ -8,4 +8,7 @@ has a **left adjoint** $p_{!}$ $\iff$ **left Kan extensions along $p$ with value
 
 Dually: $p^{-1}$ has a right adjoint $p_{*}$ $\iff$ right Kan extensions always exist.
 
+## Notes · **draft**
+⭐ How to read it: **the Kan extension is nothing new — it is the adjoint of precomposition**. This identifies the two languages "Kan extensions everywhere" and "adjoints everywhere".
+
 > continued in nodes/prop.kan-extension-adjoint.en.3.md

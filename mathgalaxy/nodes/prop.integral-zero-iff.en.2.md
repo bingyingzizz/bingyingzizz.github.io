@@ -2,10 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.integral-zero-iff)　·　[Chinese page (authoritative)](./prop.integral-zero-iff.md)
 
-**$(\Longleftarrow)$** If $f = 0$ a.e., then every simple function $\varphi \le f$ also vanishes a.e. (at points where $f = 0$ we have $\varphi = 0$), so $\int \varphi = 0$; taking the supremum over all such $\varphi$ gives $\int f = 0$ ✓.
+$(\Longleftarrow )$ it suffices that $f$ vanishes off a null set; then every simple function $\varphi \le f$ in the supremum vanishes almost everywhere, hence $\int \varphi = 0$.
 
-**$(\implies)$** Suppose $\int f = 0$. For each $n \ge 1$ put $A_{n} := \{f > 1/n\}$ (measurable). From $\frac1n\chi_{A_{n}} \le f$ we get
+$(\implies )$ put $A_n = \{f > 1/n\}$; then $(1/n)\cdot\mu(A_n) \le \int f = 0$, so $\mu (A_{n}) = 0$; and $\{f > 0\} = \bigcup_n A_n$ is null.
 
-$$\frac1n\,\mu(A_{n}) \le \int f\,\mathrm{d}\mu = 0 \implies \mu(A_{n}) = 0 .$$
+⭐ This ties "integral" to "almost everywhere" — it is why $L^{1}$'s "$f = g$" is understood a.e.
 
-> continued in nodes/prop.integral-zero-iff.en.3.md
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `prop.integral-zero-iff` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

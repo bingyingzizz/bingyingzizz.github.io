@@ -6,10 +6,12 @@ layer 17 · 定理 · 可度量化 · 拓扑学
 设 $(X, d)$ 是距离空间。则 $X$（带 $d$ 诱导的拓扑）是**仿紧**的：它的每个开覆盖都有局部有限的开加细。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：用到了定义 距离空间　[proofs/def-link.metric-paracompact.md](../proofs/def-link.metric-paracompact.md)
+- [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：imp.metric-paracompact-b5　[proofs/imp.metric-paracompact-b5.md](../proofs/imp.metric-paracompact-b5.md)
+
+- …另有入边，续页见 [nodes/thm.metric-paracompact.2.md](./thm.metric-paracompact.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.metric-paracompact.2.md](./thm.metric-paracompact.2.md)
+- …另有出边，续页见 [nodes/thm.metric-paracompact.3.md](./thm.metric-paracompact.3.md)
 
 refs: Stone, Paracompactness and product spaces, Bull. Amer. Math. Soc. 54 (1948)；Munkres, Topology (2nd ed.), Section 41
 

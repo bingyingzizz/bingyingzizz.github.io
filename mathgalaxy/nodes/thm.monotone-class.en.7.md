@@ -2,6 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-class)　·　[Chinese page (authoritative)](./thm.monotone-class.md)
 
-⚠ Replacing $\cup$ by $\cap$ or $\setminus$ gives the same conclusion — once complements are available, the various closure properties imply each other, so the symbol used here does not affect whether the theorem is true.
+**③** Fix $B \in \mathfrak{m}$ and let $\mathcal{K}_{3} = \{A \in \mathfrak{m} : A \cup B \in \mathfrak{m}\}$. By ②, $\mathcal{K}_{3} \supseteq \mathcal{E} \implies \mathcal{K}_{3} = \mathfrak{m}$, i.e. $\mathfrak{m}$ is closed under **unions**.
+
+Hence $\mathfrak{m}$ is closed under $\cup$ and complements, and is a monotone class $\implies$ $\mathfrak{m}$ is a $\sigma$-algebra $\implies \mathcal{M}(\mathcal{E}) \subseteq \mathfrak{m}(\mathcal{E})$; the reverse inclusion always holds, so the two sides are equal. (One needs $\mathcal{E} \ne \emptyset$, otherwise $\mathfrak{m}(\mathcal{E}) = \{\emptyset \}$.)
 
 > continued in nodes/thm.monotone-class.en.8.md

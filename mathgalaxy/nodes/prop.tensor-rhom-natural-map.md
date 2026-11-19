@@ -8,8 +8,6 @@ layer 23 · 命题 · 阿贝尔层 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.internal-hom`](../nodes/def.internal-hom.md) 内 Hom：用到了定义 内 Hom　[proofs/def-link.trnm-internal.md](../proofs/def-link.trnm-internal.md)
-
 - …另有入边，续页见 [nodes/prop.tensor-rhom-natural-map.3.md](./prop.tensor-rhom-natural-map.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3

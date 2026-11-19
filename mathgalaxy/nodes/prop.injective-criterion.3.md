@@ -2,8 +2,6 @@
 [在星图里打开](../#n=prop.injective-criterion)　·　第 1 页 [nodes/prop.injective-criterion.md](./prop.injective-criterion.md)　·　上一页 [nodes/prop.injective-criterion.2.md](./prop.injective-criterion.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/dep.injcrit-abelian.md](../proofs/dep.injcrit-abelian.md)
-- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-dep.injective-criterion.md](../proofs/def-dep.injective-criterion.md)
-- [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构：用到了定义 单态射 / 满态射 / 同构　[proofs/def-dep.mono-injective-criterion.md](../proofs/def-dep.mono-injective-criterion.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 + [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象 + [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构 + [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子 + [`thm.snake-lemma`](../nodes/thm.snake-lemma.md) 蛇引理 + [`def.fibered-product`](../nodes/def.fibered-product.md) 纤维积 / 纤维余积：imp.injective-criterion　[proofs/imp.injective-criterion.md](../proofs/imp.injective-criterion.md)
 
 > 续见 [nodes/prop.injective-criterion.4.md](./prop.injective-criterion.4.md)

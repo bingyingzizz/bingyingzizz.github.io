@@ -5,11 +5,11 @@
 - **12 团 / 20 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
 - **11 团 / 26 节点** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **11 团 / 22 节点** `def.abs` 绝对值 |x| · layer 12 · 实数的运算与不等式
+- **11 团 / 19 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 - **10 团 / 36 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
-- **10 团 / 30 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
+- **10 团 / 31 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
 - **10 团 / 25 节点** `def.category` 范畴 · layer 9 · 范畴与图
-- **10 团 / 19 节点** `def.category-of-topological-spaces` 拓扑空间范畴 · layer 10 · 范畴与图
 
-（共 1104 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1110 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

@@ -1,18 +1,10 @@
 # 比较定理　`thm.comparison-theorem`　·　说明
 根 `../`
 
-**证明（一）存在性：逐层抬升。**
-第 $0$ 层：$f\varepsilon_{P} : P_{0} \to N$ 沿满射 $\varepsilon_{Q} : Q_{0} \twoheadrightarrow N$ 抬升。
+⭐ **意义**：消解**不唯一**，但「唯一到链同伦」已经够用 —— 导出函子、$\operatorname{Ext}$、$\operatorname{Tor}$ 都只依赖消解的同伦类，于是它们的定义与消解选取无关。没有这条，整套求导机械都无定义。
 
-$P_{0}$ 投射，故存在 $\varphi_{0} : P_{0} \to Q_{0}$ 使 $\varepsilon_{Q}\varphi_{0} = f\varepsilon_{P}$ ✓。
-归纳步：设 $\varphi_{n} : P_{n} \to Q_{n}$ 已造好，且 $e_{n}\varphi_{n} = \varphi_{n-1}d_{n}$。
+⚠️ 结论**只到同伦**，不到同构：同一模的两条投射消解可以差一个可缩复形（例如一条消解与它的「直和一条形如 $0 \to P \xrightarrow{1} P \to 0$ 的可缩复形」）。这不是缺陷，反而是导出范畴里「同构」的正确含义。
 
-要造 $\varphi_{n+1}$，只需使 $e_{n+1}\varphi_{n+1} = \varphi_{n}d_{n+1}$。
+**对偶版本**：内射消解之间的提升有同样两条，只是抬升方向反过来（用内射对象的延拓性质），见「内射消解之间的提升」。
 
-令 $\theta := \varphi_{n}d_{n+1} : P_{n+1} \to Q_{n}$，算一下：
-$$e_{n}\theta = e_{n}\varphi_{n}d_{n+1} = \varphi_{n-1}d_{n}d_{n+1} = 0,$$
-所以 $\operatorname{im}\theta \subseteq \ker e_{n} = \operatorname{im} e_{n+1}$（两端的复形都正合）✓。
-
-沿满射 $Q_{n+1} \twoheadrightarrow \operatorname{im} e_{n+1}$ 用 $P_{n+1}$ 的投射性抬升 $\theta$，得 $\varphi_{n+1}$ ✓。
-
-> 续见 notes/thm.comparison-theorem.2.md
+⚠️ 用到的只有「每一项投射」与「两端正合」；**不需要**选择公理之外的东西，也不要求环交换。

@@ -8,6 +8,9 @@ layer 18 · 定义 · 拓扑斯 · 范畴论
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-dep.cocontfunctor-sheaf.md](../proofs/def-dep.cocontfunctor-sheaf.md)
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.slice-topos`](../nodes/prop.slice-topos.md) 切片拓扑斯
+
 refs: Le Stum, An introduction to condensed mathematics, §3.4
 
 > 说明见 `notes/def.cocontinuous-functor.md`

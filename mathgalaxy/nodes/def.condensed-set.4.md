@@ -7,7 +7,6 @@
 - 被 [`lem.qseparated-ind-inclusions`](../nodes/lem.qseparated-ind-inclusions.md) 拟分离即含入的滤过余极限 用
 - 被 [`lem.qseparated-underlying-weak-hausdorff`](../nodes/lem.qseparated-underlying-weak-hausdorff.md) 拟分离 推出 底空间弱 Hausdorff 用
 - 被 [`prop.countable-colimit-qseparated`](../nodes/prop.countable-colimit-qseparated.md) 可数递增余极限是拟分离的 用
-- 被 [`prop.condensed-criterion`](../nodes/prop.condensed-criterion.md) 凝聚态集的刻画 用
-- 被 [`thm.cond-topos`](../nodes/thm.cond-topos.md) Cond 是拓扑斯 用
+- ⇒ [`prop.cond-limits-colimits`](../nodes/prop.cond-limits-colimits.md) Cond 的极限与余极限
 
 > 续见 [nodes/def.condensed-set.5.md](./def.condensed-set.5.md)

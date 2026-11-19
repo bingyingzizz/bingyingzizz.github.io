@@ -7,4 +7,8 @@
 - 被 [`prop.forgetful-exactness`](../nodes/prop.forgetful-exactness.md) 遗忘与含入函子的正合性 用
 - 被 [`def.flat-module`](../nodes/def.flat-module.md) 平坦模 用
 - 被 [`thm.watts`](../nodes/thm.watts.md) 张量函子的刻画 用
-- 被 [`prop.preserves-products-kernels`](../nodes/prop.preserves-products-kernels.md) 保积与核 ⟹ 保所有有限极限 用
+- ⇒ [`prop.ind-representable-iff-left-exact`](../nodes/prop.ind-representable-iff-left-exact.md) ind-可表示即左正合
+- ⇒ [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据
+- ⇒ [`prop.left-exact-iff-R0`](../nodes/prop.left-exact-iff-R0.md) 左正合性与 R⁰
+
+> 续见 [nodes/def.exact-functor.3.md](./def.exact-functor.3.md)

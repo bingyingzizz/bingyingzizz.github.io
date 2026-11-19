@@ -12,6 +12,6 @@ Let $f \in L^+$. Then
 $$\int f d\mu = 0 \iff f = 0 \mu-\text{a.e.}$$
 
 ## Notes · **draft**
-**Proof.**
+Incidentally: $\{f = +\infty\} \subseteq \{f>0\}$ is handled at the same time.
 
 > continued in nodes/prop.integral-zero-iff.en.2.md

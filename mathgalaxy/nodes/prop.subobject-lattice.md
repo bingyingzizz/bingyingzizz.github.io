@@ -10,8 +10,6 @@ $$X_{1} \cup X_{2} := \operatorname{im}\bigl(X_{1} \coprod X_{2} \to X\bigr)$$
 而且**拉回是格之间的同态**（保交、保并、保上界）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.intersection-subobject`](../nodes/def.intersection-subobject.md) 子对象的交：用到了定义 子对象的交　[proofs/dep.inter-lattice.md](../proofs/dep.inter-lattice.md)
-
 - …另有入边，续页见 [nodes/prop.subobject-lattice.2.md](./prop.subobject-lattice.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.3

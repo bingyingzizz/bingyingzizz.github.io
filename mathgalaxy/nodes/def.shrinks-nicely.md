@@ -14,7 +14,7 @@ $\cdot$ 存在 $\alpha > 0$，使 $m(E_r) > \alpha\cdot m(B(x, r))$ 对一切 $r
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.shrinks-nicely.4.md](./def.shrinks-nicely.4.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/def.shrinks-nicely.2.md](./def.shrinks-nicely.2.md)
 
 refs: Folland, Real Analysis, §3.4

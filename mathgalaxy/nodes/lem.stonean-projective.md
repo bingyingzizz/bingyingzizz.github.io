@@ -10,6 +10,9 @@ layer 22 · 引理 · 凝聚态阿贝尔群 · 凝聚态数学
 
 - …另有入边，续页见 [nodes/lem.stonean-projective.2.md](./lem.stonean-projective.2.md)
 
+## 它能推出什么 / 谁在用它
+- …另有出边，续页见 [nodes/lem.stonean-projective.3.md](./lem.stonean-projective.3.md)
+
 refs: Le Stum, Lemma 6.1.6
 
 > 说明见 `notes/lem.stonean-projective.md`

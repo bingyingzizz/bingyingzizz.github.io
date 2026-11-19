@@ -6,5 +6,9 @@
 - 被 [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近 用
 - 被 [`def.integral-simple`](../nodes/def.integral-simple.md) 简单函数的积分 用
 - 被 [`thm.approximation-L1`](../nodes/thm.approximation-L1.md) L¹ 里的逼近 用
+- ⇒ [`prop.dense-simple-compact-support`](../nodes/prop.dense-simple-compact-support.md) 紧支简单函数稠密
+- ⇒ [`thm.linf-properties`](../nodes/thm.linf-properties.md) L^∞ 的性质
+- ⇒ [`thm.simple-approximation`](../nodes/thm.simple-approximation.md) 简单函数逼近
 - 被 [`prop.simple-integral-props`](../nodes/prop.simple-integral-props.md) 简单函数积分的性质 用
-- 被 [`prop.dense-simple-compact-support`](../nodes/prop.dense-simple-compact-support.md) 紧支简单函数稠密 用
+
+> 续见 [nodes/def.simple-function.4.md](./def.simple-function.4.md)

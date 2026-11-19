@@ -8,12 +8,11 @@ layer 26 · 推论 · 符号测度与分解 · 实变函数+数学分析
 $$\frac{d\mu}{d\lambda} \cdot \frac{d\lambda}{d\mu} = 1\quad  \text{a.e.}$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.rn-derivative`](../nodes/def.rn-derivative.md) Radon–Nikodym 导数与 Lebesgue 分解：用到了定义 Radon–Nikodym 导数与 Lebesgue 分解　[proofs/def-link.rn-derivative-inverse.md](../proofs/def-link.rn-derivative-inverse.md)
-
 - …另有入边，续页见 [nodes/cor.rn-inverse.2.md](./cor.rn-inverse.2.md)
 
 refs: Folland, Real Analysis, Theorem 3.9
 
-> 说明见 `notes/cor.rn-inverse.md`
+## 说明
+两条链式法则一拼：$d\mu / d\mu = \frac{d\mu}{d\lambda}\cdot\frac{d\lambda}{d\mu}$，而 $d\mu / d\mu \equiv  1$。
 
 引用：`cor.rn-inverse`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

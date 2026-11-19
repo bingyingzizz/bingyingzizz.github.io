@@ -6,12 +6,11 @@ layer 15 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 若 $S, S'$ 是紧 Hausdorff 空间、$X$ 弱 Hausdorff，且给定了连续映射 $S \to X$、$S' \to X$，则纤维积 $S \times_{X} S'$ 紧 Hausdorff。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.fibered-product`](../nodes/def.fibered-product.md) 纤维积 / 纤维余积：用到了定义 纤维积 / 纤维余积　[proofs/def-dep.cgwhfiber-fibered.md](../proofs/def-dep.cgwhfiber-fibered.md)
-
 - …另有入边，续页见 [nodes/prop.cgwh-fiber-product.2.md](./prop.cgwh-fiber-product.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §2.3
 
-> 说明见 `notes/prop.cgwh-fiber-product.md`
+## 说明
+⭐ **这条就是「$\mathrm{CGWH}$ 里紧块相交还是紧块」的全部内容** —— 后面「弱 Hausdorff $\implies$ 拟分离」「$\mathrm{CGWH}$ 对有限积封闭」都得靠它。
 
 引用：`prop.cgwh-fiber-product`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

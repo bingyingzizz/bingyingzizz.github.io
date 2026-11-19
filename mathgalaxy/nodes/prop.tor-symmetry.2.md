@@ -3,3 +3,5 @@
 
 ## 陈述（续）
 于是交换环上挠积可以只写一个符号、把两个变量当对称的看待。
+
+> 续见 [nodes/prop.tor-symmetry.3.md](./prop.tor-symmetry.3.md)

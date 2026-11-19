@@ -1,8 +1,10 @@
 # 拉回　`prop.pullback-form-manifold`　·　说明
 根 `../`
 
-**证明分四步**：先说明 $F^{\ast}\omega$ 确实是光滑的 $k$-形式，再逐条验证 (1)–(4)，最后 (2)+(3) 合起来说明它是微分分次代数同态。所有等式都是逐点验证 —— 形式逐点定义，所以「逐点相等」就是「形式相等」。
+**小结**：(1)+(2) 说 $F^{\ast}$ 是分次代数同态，(3) 说它与微分交换，(4) 说它保复合 —— 合起来，$F^{\ast}$ 是微分分次代数之间的（反变）映射。
 
-**光滑性**：取 $M$ 的图卡 $(U,x)$ 与 $N$ 的图卡 $(V,y)$，且 $F(U)\subseteq V$。在 $y$ 坐标下 $\omega = \sum_{I} a_{I}\,\mathrm{d}y^{I}$，$F$ 写成 $y = F(x) = (F^{1}(x), \ldots, F^{n}(x))$。则 $F^{\ast}\omega = \sum_{I}(a_{I}\circ F)\,\mathrm{d}F^{i_{1}}\wedge\cdots\wedge\mathrm{d}F^{i_{k}},\qquad \mathrm{d}F^{i} = \sum_{j}\frac{\partial F^{i}}{\partial x^{j}}\,\mathrm{d}x^{j}.$ 右端系数是光滑函数的积与和，故 $F^{\ast}\omega$ 在 $U$ 上光滑；图卡 $U$ 覆盖 $M$，故整体光滑。（这里 $\mathrm{d}F$ 与 `def.differential-map` 的微分是同一个东西：$\mathrm{d}F_{p}$ 是切映。）
+⭐ 这一条是 de Rham 上同调「是函子」的全部内容：$F^{\ast}$ 与 $\mathrm{d}$ 交换，故把闭形式送到闭形式、把恰当形式送到恰当形式，从而下到商空间 $F^{\ast} : H^{k}_{\mathrm{dR}}(N)\to H^{k}_{\mathrm{dR}}(M)$。方向是反的，这正是「上同调反变」的意思。
 
-> 续见 notes/prop.pullback-form-manifold.2.md
+⚠️ 与向量场的对照：向量场**不能**沿任意光滑映射拉回（要 $F$ 是微分同胚才能前推），形式可以。这个不对称不是技术缺陷，而是「形式是 $T^{\ast}M$ 的截面、向量场是 $TM$ 的截面」的直接后果。
+
+⚠️ **本图缺的节点/边**：(3) 里 $\mathrm{d}(\mathrm{d}F^{I}) = 0$ 用到「$\mathrm{d}^{2} = 0$」（函数情形即 Clairaut 定理），本图没有 Clairaut 节点；洗牌公式也没有独立节点，故在此写全。若日后加这两条，可改为引用。

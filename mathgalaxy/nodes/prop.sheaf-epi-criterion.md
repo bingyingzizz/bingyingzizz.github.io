@@ -7,6 +7,11 @@ layer 18 · 命题 · 层与拓扑 · 范畴论
 
 $$s|_{X_{i}} \in \operatorname{im}\bigl(F(X_{i}) \to G(X_{i})\bigr) \qquad (\forall i \in I)$$
 
+## 它能推出什么 / 谁在用它
+- ⇒ [`prop.cond-projectives`](../nodes/prop.cond-projectives.md) Cond 有足够多投射对象
+
+- …另有出边，续页见 [nodes/prop.sheaf-epi-criterion.3.md](./prop.sheaf-epi-criterion.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/prop.sheaf-epi-criterion.2.md](./prop.sheaf-epi-criterion.2.md)
 

@@ -6,6 +6,7 @@
 - 被 [`def.dual-functor`](../nodes/def.dual-functor.md) 对偶函子 用
 - ⇒ [`prop.functor-preserves-iso`](../nodes/prop.functor-preserves-iso.md) 函子保同构
 - 被 [`def.invariant-functor`](../nodes/def.invariant-functor.md) 不变量函子 用
+- ⇒ [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理
 - 被 [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理 用
 - 被 [`def.natural-transformation`](../nodes/def.natural-transformation.md) 自然变换 用
 - 被 [`def.ff-faithful`](../nodes/def.ff-faithful.md) 忠实 / 满 / 全忠实 用

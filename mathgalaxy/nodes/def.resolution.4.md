@@ -8,3 +8,4 @@
 - 被 [`def.injective-dimension`](../nodes/def.injective-dimension.md) 内射维数 用
 - 被 [`thm.ext-balanced`](../nodes/thm.ext-balanced.md) 扩展群的双边算法 用
 - 被 [`def.acyclic-complex`](../nodes/def.acyclic-complex.md) 零调复形 用
+- ⇒ [`thm.comparison-theorem`](../nodes/thm.comparison-theorem.md) 比较定理

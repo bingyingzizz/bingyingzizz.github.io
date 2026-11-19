@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.minkowski`](../nodes/thm.minkowski.md) Minkowski 不等式
 - ⇒ [`prop.bounded-functional-gives-lq`](../nodes/prop.bounded-functional-gives-lq.md) 有界 ⟹ g ∈ L^q
+- ⇒ [`prop.lp-inclusion-finite`](../nodes/prop.lp-inclusion-finite.md) 有限测度时方向反过来

@@ -6,4 +6,6 @@
 - 被 [`prop.slice-topos`](../nodes/prop.slice-topos.md) 切片拓扑斯 用
 - 被 [`def.mor-domain-codomain`](../nodes/def.mor-domain-codomain.md) 态射范畴上的域与余域函子 用
 - 被 [`prop.slice-cartesian`](../nodes/prop.slice-cartesian.md) 切片范畴是拉回 用
+- ⇒ [`prop.slice-cartesian`](../nodes/prop.slice-cartesian.md) 切片范畴是拉回
+- ⇒ [`prop.slice-topos`](../nodes/prop.slice-topos.md) 切片拓扑斯
 - 被 [`thm.density`](../nodes/thm.density.md) 稠密性定理 用

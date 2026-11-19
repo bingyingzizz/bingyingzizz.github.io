@@ -9,4 +9,6 @@
 - 被 [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点 用
 - ⇒ [`lem.countable-closed-cover`](../nodes/lem.countable-closed-cover.md) 闭覆盖的内点
 - ⇒ [`lem.closed-subalgebra-lattice`](../nodes/lem.closed-subalgebra-lattice.md) 闭子代数是格
-- 被 [`def.normal-space`](../nodes/def.normal-space.md) 正规空间 用
+- ⇒ [`prop.chaus-quotient-equiv`](../nodes/prop.chaus-quotient-equiv.md) 紧 Hausdorff 上商映射的四种说法
+
+> 续见 [nodes/def.closed-set.5.md](./def.closed-set.5.md)

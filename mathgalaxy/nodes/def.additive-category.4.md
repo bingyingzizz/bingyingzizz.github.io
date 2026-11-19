@@ -9,3 +9,5 @@
 - 被 [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核 用
 - 被 [`prop.additive-iff-preserves-biproduct`](../nodes/prop.additive-iff-preserves-biproduct.md) 加法函子的刻画 用
 - 被 [`prop.simplicial-to-chain`](../nodes/prop.simplicial-to-chain.md) 单纯对象给出链复形 用
+
+> 续见 [nodes/def.additive-category.5.md](./def.additive-category.5.md)

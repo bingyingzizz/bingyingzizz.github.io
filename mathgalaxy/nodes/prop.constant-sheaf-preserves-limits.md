@@ -1,5 +1,5 @@
 # 常层函子保极限　`prop.constant-sheaf-preserves-limits`
-命题：常（预）层函子 $\Delta$ 保所有极限
+命题：常层函子保有限极限；常预层函子保所有极限
 layer 18 · 命题 · 层与拓扑 · 范畴论
 [在星图里打开](../#n=prop.constant-sheaf-preserves-limits)　·　[节点索引](../index.md)
 

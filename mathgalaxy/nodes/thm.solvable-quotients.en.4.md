@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.solvable-quotients)　·　[Chinese page (authoritative)](./thm.solvable-quotients.md)
 
-⭐ This immediately gives a commonly used criterion: $G$ is solvable $\iff$ there is a normal chain whose quotients are **cyclic** (not merely abelian) — because an abelian group can be refined further into cyclic factors.
+⭐ One immediate useful criterion (**finite groups only**): $G$ finite and solvable $\iff$ there is a normal series with **cyclic** quotients (not merely abelian) — a finite abelian group can be refined further into cyclic factors of prime order. ⚠️ For infinite groups "finite" cannot be dropped: $\mathbb{Q}$ is solvable as an additive group, but all its finite quotients are trivial and none is isomorphic to $\mathbb{Z}$, so there is no normal series with cyclic quotients ending in $1$.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

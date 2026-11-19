@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.polarization)　·　[Chinese page (authoritative)](./thm.polarization.md)
 
-## Notes · **stale**
-**Use**: it recovers the inner product from the norm, so "preserving the norm" and "preserving the inner product" are equivalent in the real case; the complex case uses a combination of four directions. The full derivation is on the edge `imp.polarization-proof`.
+## Notes · **draft**
+**Use**: it recovers the inner product from the norm, so "preserving the norm" and "preserving the inner product" are equivalent in the real case; in the complex case one combines the four directions. The full derivation is on the edge `imp.polarization-proof`.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

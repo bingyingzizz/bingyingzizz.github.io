@@ -3,3 +3,4 @@
 
 - thm.lp-banach　L^p 是 Banach 空间　layer 28
 - thm.riesz-representation-lp　Riesz 表示定理　layer 30
+- cor.lp-reflexive　L^p 自反　layer 31

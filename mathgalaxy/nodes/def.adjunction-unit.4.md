@@ -4,5 +4,6 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.adjoint-full-faithful`](../nodes/prop.adjoint-full-faithful.md) 全忠实与单位
 - 被 [`prop.unit-counit-examples`](../nodes/prop.unit-counit-examples.md) 常见伴随的单位与余单位 用
+- ⇒ [`prop.counit-epi-iff-faithful`](../nodes/prop.counit-epi-iff-faithful.md) 余单位与忠实性
 - 被 [`prop.adjoint-full-faithful`](../nodes/prop.adjoint-full-faithful.md) 全忠实与单位 用
 - 被 [`prop.counit-epi-iff-faithful`](../nodes/prop.counit-epi-iff-faithful.md) 余单位与忠实性 用

@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.symplectic-normal-form`](../nodes/thm.symplectic-normal-form.md) 辛标准形定理 用
 - 被 [`def.symplectic-matrix`](../nodes/def.symplectic-matrix.md) 辛矩阵与辛群 用
+- ⇒ [`thm.symplectic-normal-form`](../nodes/thm.symplectic-normal-form.md) 辛标准形定理

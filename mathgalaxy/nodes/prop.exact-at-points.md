@@ -10,8 +10,6 @@ layer 21 · 命题 · 加法与阿贝尔范畴 · 同调代数
 - **右正合** $\iff$ 在 $M$、$M''$ 处正合。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列：用到了定义 一般正合列　[proofs/def-link.exactpts-exactseq.md](../proofs/def-link.exactpts-exactseq.md)
-
 - …另有入边，续页见 [nodes/prop.exact-at-points.2.md](./prop.exact-at-points.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 5.10

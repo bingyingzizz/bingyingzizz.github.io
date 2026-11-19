@@ -1,0 +1,12 @@
+# imp.integral-abs-ineq
+`imp.integral-abs-ineq` · 推出 · strong 边 · 根 `../`
+
+`def.integrable` 可积 / L¹ + `def.integral-complex` 复函数的积分 → `prop.integral-abs-ineq` 积分绝对值不等式
+
+**证明。** 若 $\int f\,\mathrm{d}\mu = 0$ 则**左边是 $0$、右边非负**（$\int |f|$ 未必为 $0$：$f = \chi_{[0,1/2]} - \chi_{(1/2,1]}$ 给 $\int f = 0$、$\int |f| = 1$）。否则——
+- **实值**：取 $\alpha := \operatorname{sgn}\bigl(\int f\,\mathrm{d}\mu\bigr) \in \{\pm1\}$，则 $\alpha\int f = \bigl|\int f\bigr|$，于是
+$$\Bigl|\int f\,\mathrm{d}\mu\Bigr| = \alpha\int f\,\mathrm{d}\mu = \int \alpha f\,\mathrm{d}\mu \le \int |f|\,\mathrm{d}\mu;$$
+- **复值**：取 $\alpha := e^{-i\theta}$，$\theta := \arg\int f\,\mathrm{d}\mu$。则 $\alpha\int f = \bigl|\int f\bigr|$ 是实数，而
+$$\Bigl|\int f\,\mathrm{d}\mu\Bigr| = \int \alpha f\,\m
+
+> 续见 proofs/imp.integral-abs-ineq.2.md

@@ -2,4 +2,6 @@
 [在星图里打开](../#n=prop.cgwh-fiber-product)　·　第 1 页 [nodes/prop.cgwh-fiber-product.md](./prop.cgwh-fiber-product.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.fibered-product`](../nodes/def.fibered-product.md) 纤维积 / 纤维余积 + [`def.weak-hausdorff`](../nodes/def.weak-hausdorff.md) 弱 Hausdorff 空间：imp.cgwh-fiber-product　[proofs/imp.cgwh-fiber-product.md](../proofs/imp.cgwh-fiber-product.md)
+- [`def.fibered-product`](../nodes/def.fibered-product.md) 纤维积 / 纤维余积：用到了定义 纤维积 / 纤维余积　[proofs/def-dep.cgwhfiber-fibered.md](../proofs/def-dep.cgwhfiber-fibered.md)
 - [`def.weak-hausdorff`](../nodes/def.weak-hausdorff.md) 弱 Hausdorff 空间：用到了定义 弱 Hausdorff 空间　[proofs/def-dep.cgwhfiber-weakhaus.md](../proofs/def-dep.cgwhfiber-weakhaus.md)

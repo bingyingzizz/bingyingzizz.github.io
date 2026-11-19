@@ -6,4 +6,5 @@
 - 被 [`def.group-action`](../nodes/def.group-action.md) 群作用 用
 - 被 [`prop.induced-homomorphism`](../nodes/prop.induced-homomorphism.md) 诱导同态 用
 - 被 [`def.dirichlet-character`](../nodes/def.dirichlet-character.md) 狄利克雷特征标 用
+- ⇒ [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether）
 - 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用

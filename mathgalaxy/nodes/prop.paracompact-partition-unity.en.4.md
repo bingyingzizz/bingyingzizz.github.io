@@ -2,10 +2,10 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-## Notes · **draft**
-**Proof (both directions).**
-**$(\Longleftarrow)$ A partition of unity gives a locally finite refinement.** Let $\{\rho_{i}\}$ be a partition of unity subordinate to the cover $\{U_{i}\}$.
+## Statement · **draft**
+For a topological space $X$:
 
-By the definition of a partition of unity, $\operatorname{supp}\rho_{i} \subseteq U_{i}$ and the family of supports is **locally finite** ✓.
+1. $X$ is **paracompact Hausdorff** $\implies$ every open cover admits a subordinate **partition of unity** (the converse requires a separation hypothesis. In the indiscrete topology on at least two points, the constant function $1$ gives a partition of unity, but the space is neither Hausdorff nor $T_1$).
+2. $X$ is **normal** $\implies$ every **locally finite** open cover admits a subordinate partition of unity (the converse likewise requires $T_1$ or Hausdorffness).
 
 > continued in nodes/prop.paracompact-partition-unity.en.5.md

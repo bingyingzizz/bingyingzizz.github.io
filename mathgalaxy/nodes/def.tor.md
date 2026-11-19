@@ -13,6 +13,8 @@ $$\operatorname{Tor}_{n}^{R}(M, N) := H_{n}\bigl(P_{\bullet} \otimes_{R} N\bigr)
 - 被 [`prop.tor-symmetry`](../nodes/prop.tor-symmetry.md) 挠积的对称性 用
 - 被 [`thm.tor-torsion`](../nodes/thm.tor-torsion.md) 挠积给出挠元 用
 
+- …另有出边，续页见 [nodes/def.tor.4.md](./def.tor.4.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.tor.3.md](./def.tor.3.md)
 

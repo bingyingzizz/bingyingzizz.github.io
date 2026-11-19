@@ -4,3 +4,5 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.stone-space`](../nodes/def.stone-space.md) 全不连通与 Stone 空间：用到了定义 全不连通与 Stone 空间　[proofs/def-dep.stonean-projective.md](../proofs/def-dep.stonean-projective.md)
 - [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-dep.projective-stonean.md](../proofs/def-dep.projective-stonean.md)
+
+> 续见 [nodes/lem.stonean-projective.3.md](./lem.stonean-projective.3.md)

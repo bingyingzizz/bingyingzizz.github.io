@@ -7,11 +7,11 @@ layer 19 · 命题 · 层与拓扑 · 范畴论
 2. $T$ 是预层 $\implies$ $\widehat{H}(T)$ **分离**；$T$ 分离 $\implies$ $\widehat{H}(T)$ 是**层**；
 3. $T$ 是分离的（层）$\iff$ $T \to \widehat{H}(T)$ 是单态射（同构）。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.cech-functor`](../nodes/def.cech-functor.md) Čech 函子：用到了定义 Čech 函子　[proofs/def-dep.cech-properties.md](../proofs/def-dep.cech-properties.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.cech-properties.2.md](./prop.cech-properties.2.md)
+- ⇒ [`thm.sheafification`](../nodes/thm.sheafification.md) 层化
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.cech-properties.2.md](./prop.cech-properties.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.1–3.2
 

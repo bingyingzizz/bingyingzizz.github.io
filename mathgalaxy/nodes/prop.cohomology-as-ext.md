@@ -8,8 +8,6 @@ layer 21 · 命题 · 层上同调 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.sheaf-cohomology`](../nodes/def.sheaf-cohomology.md) 层上同调：用到了定义 层上同调　[proofs/def-link.chext-sheafcoh.md](../proofs/def-link.chext-sheafcoh.md)
-
 - …另有入边，续页见 [nodes/prop.cohomology-as-ext.3.md](./prop.cohomology-as-ext.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.3

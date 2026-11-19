@@ -7,3 +7,4 @@
 - ⇒ [`thm.euler-maclaurin`](../nodes/thm.euler-maclaurin.md) 欧拉–麦克劳林公式
 - 被 [`def.contour-integral`](../nodes/def.contour-integral.md) 复围道积分 用
 - 被 [`thm.riemann-lebesgue`](../nodes/thm.riemann-lebesgue.md) Riemann–Lebesgue 引理 用
+- ⇒ [`thm.riemann-lebesgue`](../nodes/thm.riemann-lebesgue.md) Riemann–Lebesgue 引理

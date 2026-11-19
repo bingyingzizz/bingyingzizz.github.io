@@ -7,7 +7,6 @@
 - prop.sheaf-hom-computed-in-presheaves　层之间的 Hom 在预层里算　layer 13
 - prop.sieve-generated-by-family　族生成的筛　layer 14
 - def.pretopology　预拓扑　layer 15
-- prop.sheaf-mono-epi-iso　层中单满即同构　layer 15
 - def.effective-equivalence　有效等价关系　layer 15
 - def.grothendieck-topology　Grothendieck 拓扑　layer 16
 - def.regular-epi　正则满态射　layer 16
@@ -18,5 +17,6 @@
 - def.canonical-topology　标准拓扑　layer 17
 - prop.covering-sieve-epi　覆盖筛即余积满射　layer 17
 - def.topologically-generating　拓扑生成集　layer 17
+- prop.covering-sieves-filter　覆盖筛构成滤子　layer 17
 
 > 续见 `index/cat.sheaf.2.md`

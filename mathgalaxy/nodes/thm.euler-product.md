@@ -9,13 +9,12 @@ $$\zeta(s) \;=\; \prod_{p\ \text{素数}} \frac{1}{1 - p^{-s}},$$
 
 右端的无穷乘积绝对收敛。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.riemann-zeta`](../nodes/def.riemann-zeta.md) 黎曼 ζ 函数：用到了定义 黎曼 ζ 函数　[proofs/dep.euler-zeta.md](../proofs/dep.euler-zeta.md)
-
-- …另有入边，续页见 [nodes/thm.euler-product.2.md](./thm.euler-product.2.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/thm.euler-product.3.md](./thm.euler-product.3.md)
+- ⇒ [`thm.zeta-no-zeros-line1`](../nodes/thm.zeta-no-zeros-line1.md) ζ 在 Re s=1 上无零点
+- ⇒ [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/thm.euler-product.2.md](./thm.euler-product.2.md)
 
 refs: Apostol, Introduction to Analytic Number Theory, Ch. 11
 

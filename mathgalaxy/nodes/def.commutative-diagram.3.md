@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.sequence-of-morphisms`](../nodes/def.sequence-of-morphisms.md) 态射序列 用
+- ⇒ [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合
 - 被 [`prop.limit-adjoint`](../nodes/prop.limit-adjoint.md) 极限即伴随 用
 - 被 [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合 用
 - 被 [`def.simplicial`](../nodes/def.simplicial.md) 单纯对象 用

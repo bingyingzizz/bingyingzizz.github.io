@@ -7,13 +7,11 @@ layer 24 · 命题 · 复形与导出三角 · 同调代数
 > 陈述续见 [nodes/prop.ext-abelian-groups.2.md](./prop.ext-abelian-groups.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.ext`](../nodes/def.ext.md) 扩展群 Ext：用到了定义 扩展群 Ext　[proofs/def-link.extab-ext.md](../proofs/def-link.extab-ext.md)
-
-- …另有入边，续页见 [nodes/prop.ext-abelian-groups.3.md](./prop.ext-abelian-groups.3.md)
-
 ## 它能推出什么 / 谁在用它
 - ⇒ [`cor.gldim-pid`](../nodes/cor.gldim-pid.md) 主理想整环的整体维数
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.ext-abelian-groups.3.md](./prop.ext-abelian-groups.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.2
 

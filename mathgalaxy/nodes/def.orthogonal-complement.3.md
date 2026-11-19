@@ -9,3 +9,5 @@
 - ⇒ [`thm.witt-cancellation`](../nodes/thm.witt-cancellation.md) Witt 消去定理
 - 被 [`def.lagrangian-subspace`](../nodes/def.lagrangian-subspace.md) Lagrange 子空间 用
 - 被 [`thm.projection-subspace`](../nodes/thm.projection-subspace.md) 闭子空间的正交投影 用
+
+> 续见 [nodes/def.orthogonal-complement.4.md](./def.orthogonal-complement.4.md)

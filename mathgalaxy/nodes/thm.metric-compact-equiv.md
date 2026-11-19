@@ -3,7 +3,7 @@
 layer 19 · 定理 · 度量空间 · 拓扑学
 [在星图里打开](../#n=thm.metric-compact-equiv)　·　[节点索引](../index.md)
 
-设
+设 $X$
 > 陈述续见 [nodes/thm.metric-compact-equiv.2.md](./thm.metric-compact-equiv.2.md)
 
 
@@ -13,7 +13,7 @@ layer 19 · 定理 · 度量空间 · 拓扑学
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/thm.metric-compact-equiv.7.md](./thm.metric-compact-equiv.7.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/thm.metric-compact-equiv.3.md](./thm.metric-compact-equiv.3.md)
 
 refs: Engelking, Ch. 4 §4.3；Munkres, Topology, §28 与 §43

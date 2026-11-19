@@ -12,6 +12,8 @@ $$\alpha_{f} : f^{-1}\mathcal{F}_{Y} \longrightarrow \mathcal{F}_{Z} \qquad (f :
 ## 它能推出什么 / 谁在用它
 - 被 [`prop.crystalline-sheaf-equiv`](../nodes/prop.crystalline-sheaf-equiv.md) 晶体层就是 X 上的层 用
 
+- …另有出边，续页见 [nodes/def.crystalline-sheaf.3.md](./def.crystalline-sheaf.3.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.crystalline-sheaf.2.md](./def.crystalline-sheaf.2.md)
 

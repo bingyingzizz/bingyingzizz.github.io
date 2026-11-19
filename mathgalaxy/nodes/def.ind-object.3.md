@@ -3,5 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.ind-representable-iff-left-exact`](../nodes/prop.ind-representable-iff-left-exact.md) ind-可表示即左正合 用
+- ⇒ [`prop.ind-reflective`](../nodes/prop.ind-reflective.md) C 是 Ind(C) 的反射子范畴
+- ⇒ [`prop.ind-representable-iff-left-exact`](../nodes/prop.ind-representable-iff-left-exact.md) ind-可表示即左正合
 - 被 [`prop.ind-reflective`](../nodes/prop.ind-reflective.md) C 是 Ind(C) 的反射子范畴 用
 - 被 [`lem.qseparated-ind-inclusions`](../nodes/lem.qseparated-ind-inclusions.md) 拟分离即含入的滤过余极限 用

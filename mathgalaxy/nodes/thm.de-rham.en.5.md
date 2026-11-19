@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham)　·　[Chinese page (authoritative)](./thm.de-rham.md)
 
-## Notes · **draft**
-**This node retains skeleton status**: The graph has no full proof of the de Rham theorem. The outline below divides the proof into six steps and identifies which parts can be verified in full within the graph and which require external theorems. It names each missing result so that it can be checked individually as nodes are added.
-**Step 0: Conventions.** For smooth singular chains $C^{\infty}_{\bullet}(M)$, each simplex $\sigma:\Delta^{k}\to M$ is smooth and extends to a prism neighborhood of $\Delta^{k}$, so every face is smooth. $\Omega^{q}$ is the sheaf of $q$-forms, and $\mathrm{d}$ is the differential of the complex of sheaves. $\Gamma(M,\Omeg
+where $H^{k}_{\mathrm{sing}}(M;\mathbb{R}) := H^{k}\bigl(\operatorname{Hom}(C^{\mathrm{sing}}_{\bullet}(M),\mathbb{R})\bigr)$ is the cohomology of the dual of the singular chain complex (`def.singular-chain`), and $\int_{c}\omega$ is integration of forms over chains.
+
+$\Phi^{k}$ is compatible with pullbacks, so $k \mapsto \Phi^{k}$ is a family of natural isomorphisms. $H^{\bullet}_{\mathrm{dR}}$ and $H^{\bullet}_{\mathrm{sing}}$ are two ways to compute the same functor.
 
 > continued in nodes/thm.de-rham.en.6.md

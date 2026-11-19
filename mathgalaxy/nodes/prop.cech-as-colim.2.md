@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.cech-as-colim)　·　第 1 页 [nodes/prop.cech-as-colim.md](./prop.cech-as-colim.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.grothendieck-topology`](../nodes/def.grothendieck-topology.md) Grothendieck 拓扑：用到了定义 Grothendieck 拓扑　[proofs/def-dep.cechcolim-topology.md](../proofs/def-dep.cechcolim-topology.md)
 - [`def.cech-cohomology`](../nodes/def.cech-cohomology.md) Čech 上同调：用到了定义 Čech 上同调　[proofs/def-dep.cechcolim-cech.md](../proofs/def-dep.cechcolim-cech.md)
 
 > 续见 [nodes/prop.cech-as-colim.3.md](./prop.cech-as-colim.3.md)

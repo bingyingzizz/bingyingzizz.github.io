@@ -11,7 +11,7 @@ $$\lim D = \inf D, \qquad \varinjlim D = \sup D,$$
 只要它们存在。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.posetlim-limit.md](../proofs/def-dep.posetlim-limit.md)
+- [`def.limit`](../nodes/def.limit.md) 极限 + [`def.poset`](../nodes/def.poset.md) 偏序集：imp.poset-limit-join　[proofs/imp.poset-limit-join.md](../proofs/imp.poset-limit-join.md)
 
 - …另有入边，续页见 [nodes/prop.poset-limit-join.2.md](./prop.poset-limit-join.2.md)
 

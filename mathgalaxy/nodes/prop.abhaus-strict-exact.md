@@ -8,8 +8,6 @@ layer 21 · 命题 · 拓扑阿贝尔群 · 凝聚态数学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.topo-ab-group`](../nodes/def.topo-ab-group.md) 拓扑阿贝尔群：用到了定义 拓扑阿贝尔群　[proofs/def-link.abhaus-topab.md](../proofs/def-link.abhaus-topab.md)
-
 - …另有入边，续页见 [nodes/prop.abhaus-strict-exact.3.md](./prop.abhaus-strict-exact.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §5.1

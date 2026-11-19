@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`thm.convex-star-shaped-every-point`](../nodes/thm.convex-star-shaped-every-point.md) 凸集在每一点处星形
 - 被 [`def.convex-combination`](../nodes/def.convex-combination.md) 凸组合 用
+- ⇒ [`lem.polygon-diagonal`](../nodes/lem.polygon-diagonal.md) 简单多边形的对角线

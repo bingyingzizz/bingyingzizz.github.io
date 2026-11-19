@@ -5,6 +5,7 @@
 - 被 [`def.composition-series`](../nodes/def.composition-series.md) 合成列 用
 - 被 [`def.solvable-group`](../nodes/def.solvable-group.md) 可解群 用
 - 被 [`def.simplicial-homology`](../nodes/def.simplicial-homology.md) 单纯同调群 用
+- ⇒ [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether）
 - 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用
 - 被 [`def.ideal`](../nodes/def.ideal.md) 理想 用
 - 被 [`prop.abelianization`](../nodes/prop.abelianization.md) 交换化 用

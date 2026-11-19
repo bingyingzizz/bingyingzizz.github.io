@@ -2,8 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.polarization)　·　[Chinese page (authoritative)](./thm.polarization.md)
 
-> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
-> fields: statement draft · notes stale · name derived
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 

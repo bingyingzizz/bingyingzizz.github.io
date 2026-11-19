@@ -4,6 +4,9 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.hausdorff-reflective`](../nodes/prop.hausdorff-reflective.md) Hausdorff 空间是反射子范畴 用
 - 被 [`prop.reflection-criterion`](../nodes/prop.reflection-criterion.md) 反射的判据 用
+- ⇒ [`prop.ind-reflective`](../nodes/prop.ind-reflective.md) C 是 Ind(C) 的反射子范畴
+- ⇒ [`prop.reflective-limits`](../nodes/prop.reflective-limits.md) 反射子范畴里的极限
+- ⇒ [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴
 - 被 [`prop.reflective-limits`](../nodes/prop.reflective-limits.md) 反射子范畴里的极限 用
-- 被 [`thm.sheafification`](../nodes/thm.sheafification.md) 层化 用
-- 被 [`prop.ind-reflective`](../nodes/prop.ind-reflective.md) C 是 Ind(C) 的反射子范畴 用
+
+> 续见 [nodes/def.reflective-subcategory.5.md](./def.reflective-subcategory.5.md)

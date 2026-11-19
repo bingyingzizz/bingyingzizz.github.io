@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham)　·　[Chinese page (authoritative)](./thm.de-rham.md)
 
- have long exact sequences for good covers. The Eilenberg–Steenrod uniqueness theorem gives a natural isomorphism. The graph has neither a node nor a proof for this axiomatic uniqueness result, labeled **Gap F**.
-**Step 6: $\Phi$ agrees with these isomorphisms (naturality).** One must verify that the chain-level map $\omega\mapsto\bigl(c\mapsto\int_{c}\omega\bigr)$ agrees with the composite of the isomorphisms constructed in Steps 2–3 and is natural under pullbacks ($\int_{f_{*}c}f^{*}\omega=\int_{c}\omega$). Stokes gives commutativity, but the full verification, especially the passage between smooth and continuous chains, is missing. This is **Gap G**.
-**Summary o
+lexes)**.
+**Step 4: Čech cohomology equals sheaf cohomology.** On paracompact spaces, $\check{H}^{\bullet}(\mathfrak{U};\underline{\mathbb{R}})\cong H^{\bullet}(M;\underline{\mathbb{R}})$ (`thm.paracompact-cech-equals-sheaf`). ⚠️ That node **also remains a skeleton**. It outlines the argument using the facts that fine sheaves are soft and soft sheaves are acyclic, followed by an acyclic resolution, but leaves Godement's lemma and the comparison lemma unproved. This step is therefore also unproved in the graph and is labeled **Gap E**.
+**Step 5: Sheaf cohomology equals singular cohomology.** Both functors are homotopy invariant, agree with $\mathbb{R}$ on a point, and
 
 > continued in nodes/thm.de-rham.en.12.md

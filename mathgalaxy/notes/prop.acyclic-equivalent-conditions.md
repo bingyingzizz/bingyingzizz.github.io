@@ -1,14 +1,10 @@
 # 无环性的四条等价说法　`prop.acyclic-equivalent-conditions`　·　说明
 根 `../`
 
-**证明。**
-**(1) $\iff$ (2)**：层上同调就是「高次上同调预层」的整体截面，$H^{n}(X, M) = \Gamma\bigl(X, H^{n}(M)\bigr)$ ✓，两边同时为零 ✓。
-**(1) $\implies$ (3)**：对固定覆盖用 Cartan–Leray 谱序列 $E^{p,q}_{2} = \check{H}^{p}(\mathfrak{X}, H^{q}(M)) \implies H^{p+q}(X,M)$ ✓；
-
-(1) 让 $q \ne 0$ 的行全为零、$H^{p+q}$ 也全为零（$p+q \ne 0$），谱序列退化给出 $\check{H}^{n}(\mathfrak{X}, M) = 0$ ✓。
-**(3) $\implies$ (4)**：$\check{H}^{n}(X, -)$ 是沿覆盖取的滤过余极限 ✓，每个覆盖上都为零故为零 ✓。
-**(4) $\implies$ (1)**：把同一句话反过来 —— 用 Čech 到上同调的谱序列逐次消去，$E^{p,q}_{2}$ 的右端全为零，故全为零 ✓。∎
-
 **四条里 (1)$\iff$(2) 只是换记号，(2)$\iff$(3) 要用比较定理，(3)$\iff$(4) 要用极限**：
+
+- (1) $\iff$ (2)：**同义反复**。层的上同调就是逐点取值的上同调；$H^{n}(\mathcal{C}, M)$ 按定义等于 $H^{n}(X \mapsto\Gamma(X,M))$ 的导出。
+- (2) $\iff$ (4)：**这一步是 Čech 与导出函子的比较**：对**任意** $X$ 与**任意**覆盖，Čech 上同调与层上同调通过一个谱序列相连；无环时谱序列退化，两者一致。⚠️ 一般情形下**不**一致（要 $\mathcal{C}$ 是仿紧/开覆盖足够好，见 `thm.paracompact-cech-equals-sheaf`）。
+- (2) $\iff$ (3)：**要用「覆盖族的余极限」**：$H^{n}(X, M) = \varinjlim_{\mathfrak{X}} \check{H}^{n}(\mathfrak{X}, M)$（沿覆盖加细取极限）。既然每个 Čech 群为零，极限为零；反向由「每个覆盖都可细到单点覆盖」得。⚠️ 这一步要求该余极限**确实**是层上同调（即上述比较成立）。
 
 > 续见 notes/prop.acyclic-equivalent-conditions.2.md

@@ -17,7 +17,4 @@ $$\operatorname{Hom}(h^{X}, F) \;\cong\; F(X), \qquad \alpha \mapsto \alpha_{X}(
 
 that is, "all natural transformations" correspond one-to-one with "elements of $F(X)$".
 
-## Notes · **draft**
-**Proof.** Define the map
-
 > continued in nodes/lem.yoneda.en.2.md

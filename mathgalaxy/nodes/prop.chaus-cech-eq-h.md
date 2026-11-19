@@ -6,7 +6,7 @@ layer 20 · 命题 · 层上同调 · 同调代数+拓扑学
 若 $X$ 是**紧 Hausdorff** 空间，则 $\check{H}^{n}(X, M) = H^{n}(X, M)$（对一切阿贝尔层 $M$）。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-dep.chauscech-chaus.md](../proofs/def-dep.chauscech-chaus.md)
+- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴 + [`def.sheaf-cohomology`](../nodes/def.sheaf-cohomology.md) 层上同调：imp.chaus-cech-eq-h　[proofs/imp.chaus-cech-eq-h.md](../proofs/imp.chaus-cech-eq-h.md)
 
 - …另有入边，续页见 [nodes/prop.chaus-cech-eq-h.2.md](./prop.chaus-cech-eq-h.2.md)
 

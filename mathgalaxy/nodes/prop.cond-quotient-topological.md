@@ -12,6 +12,7 @@ $$\underline{M/N} \;\cong\; \underline{M}\big/\underline{N}.$$
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 6.5
 
-> 说明见 `notes/prop.cond-quotient-topological.md`
+## 说明
+📌 用处：算凝聚态阿贝尔群时，**可以先在拓扑这一侧把商算好再离散化**。
 
 引用：`prop.cond-quotient-topological`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

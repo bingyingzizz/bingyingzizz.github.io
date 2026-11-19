@@ -6,3 +6,6 @@
 - 被 [`prop.currying`](../nodes/prop.currying.md) 函数的柯里化 用
 - 被 [`prop.copowers-give-adjoint`](../nodes/prop.copowers-give-adjoint.md) 有余幂则可表示函子有伴随 用
 - 被 [`prop.forgetful-preserves-limits`](../nodes/prop.forgetful-preserves-limits.md) 代数遗忘函子保极限 用
+- ⇒ [`prop.constant-sheaf-preserves-limits`](../nodes/prop.constant-sheaf-preserves-limits.md) 常层函子保极限
+- ⇒ [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合
+- ⇒ [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限

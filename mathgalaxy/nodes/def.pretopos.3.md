@@ -4,6 +4,7 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.quasi-compact-properties`](../nodes/prop.quasi-compact-properties.md) 拟紧的性质 用
 - 被 [`prop.subobject-lattice`](../nodes/prop.subobject-lattice.md) 子对象构成有界格 用
+- ⇒ [`prop.subobject-lattice`](../nodes/prop.subobject-lattice.md) 子对象构成有界格
 - 被 [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解 用
 - 被 [`prop.condensed-criterion`](../nodes/prop.condensed-criterion.md) 凝聚态集的刻画 用
 - 被 [`def.precanonical-topology`](../nodes/def.precanonical-topology.md) 预标准拓扑 用

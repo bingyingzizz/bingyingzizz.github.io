@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=def.quotient-ring)　·　[Chinese page (authoritative)](./def.quotient-ring.md)
 
-⭐ $A/I$ is a domain if and only if $I$ is a prime ideal; $A/I$ is a field if and only if $I$ is a maximal ideal (both objects appear in later nodes; this node only constructs the quotient ring).
+⭐ If $A$ is a commutative ring with unit, then $A/I$ is an integral domain iff $I$ is prime; $A/I$ is a field iff $I$ is maximal (both objects come in later nodes; this pack only gives the construction of the quotient ring). Commutativity cannot be dropped: the ring $M_2(\mathbb{R})$ has zero ideal $(0)$, which is a maximal two-sided ideal, but $M_2(\mathbb{R})/(0)\cong M_2(\mathbb{R})$ is neither a domain nor a field.
 
 > Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 

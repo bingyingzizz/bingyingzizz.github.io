@@ -1,14 +1,4 @@
 # 拓扑斯上的阿贝尔群是 Grothendieck 范畴　`thm.topos-abelian-grothendieck`　·　说明
 根 `../`
 
-证明分三段：
-
-- **阿贝尔**：先在预层范畴 $\widehat{\mathcal{C}}(\mathbf{Ab})$ 里逐分量验证（那里就是逐点的阿贝尔群）—— 具体的，对任意态射 $u$ 验证 $\operatorname{coker}(\ker u) \cong \ker(\operatorname{coker} u)$；
-
-再沿**正合反射**（层化）把这些等式运回层范畴。
-
-滤过余极限正合同理。
-- **所有极限与余极限存在**：因为层范畴是预层范畴的反射子范畴。
-- **小生成元集**：若 $S$ 是 $\mathcal{T}$ 的小生成元集，则 $\{\mathbb{Z}\cdot X : X \in S\}$ 生成 $\mathcal{T}(\mathbf{Ab})$ —— 它们的余积就是生成元。
-
-> 续见 notes/thm.topos-abelian-grothendieck.2.md
+顺带一条：$\mathbb{Z}\cdot X$ 是**生成元**、而且**平坦**；但它**不是**投射 —— $\operatorname{Hom}(\mathbb{Z}\cdot X, -) \cong \Gamma(X, -)$（整体截面）只左正合，取不分裂的层短正合列 $0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$ 即知不满。投射性只在**预层**范畴成立（那里 $\operatorname{Hom}(\mathbb{Z}\cdot h_{X}, -) \cong (-)(X)$ 正合，见 `prop.presheaf-free-projective`）。

@@ -1,17 +1,8 @@
 # 挠积的对称性　`prop.tor-symmetry`　·　说明
 根 `../`
 
-**证明（双复形的两种算法）。** 取 $M, N$ 各自的投射消解 $P_{\bullet} \twoheadrightarrow M$、$Q_{\bullet} \twoheadrightarrow N$，作双复形 $P \otimes Q$（$p$ 次行为 $P_{p}\otimes Q_{q}$），取全复形 $T_{\bullet}$。
+⚠️ **「交换」不能省**：非交换时 $M\otimes_{R} N$ 只在 $M$ 右、$N$ 左时有定义，$N\otimes_{R} M$ 一般**根本没有定义**。
 
-对它按**行**过滤：
-$$E_{p,q}^{1} = H_{q}\bigl(P_{p}\otimes Q_{\bullet}\bigr) = \begin{cases} P_{p}\otimes N , & q = 0 \\ 0 , & q \ne 0 \end{cases}$$
-（因为 $Q_{\bullet} \to N$ 是消解、$P_{p}$ 平坦，张量后仍正合）✓。
+**换序必须同时换到反环**：$\operatorname{Tor}_{n}^{R}(M,N) \cong \operatorname{Tor}_{n}^{R^{\mathrm{op}}}(N,M)$（把右 $R$-模的消解看成左 $R^{\mathrm{op}}$-模的消解，逐项交换即得）—— 这条是**对的**；错的是**不带 $R^{\mathrm{op}}$** 的写法。
 
-于是谱序列在 $E^{1}$ 页就只剩一行 —— 但一行仍可能有非零的 $d^{1}$（如该行是 $\mathbb{Z} \xrightarrow{2} \mathbb{Z}$），所以要看**这一行的同调**（也就是 $E^{2}$），此时才退化，得 $H_{n}(T_{\bullet}) \cong H_{n}(P_{\bullet}\otimes N) = \operatorname{Tor}_{n}^{R}(M, N)$ ✓。
-再按**列**过滤（交换环上 $P\otimes Q \cong Q\otimes P$，双复形转置）：同一步计算给出 $H_{n}(T_{\bullet}) \cong H_{n}(Q_{\bullet}\otimes M) = \operatorname{Tor}_{n}^{R}(N, M)$ ✓。
-
-同一个 $H_{n}(T_{\bullet})$ 被算出两次，故两者同构 ✓。
-
-∎
-
-> 续见 notes/prop.tor-symmetry.2.md
+⭐ 这条的实际用处：**计算时可以任选一边做消解**。例如算 $\operatorname{Tor}_{n}^{R}(R/I, N)$ 时，通常用 $R/I$ 的两项消解（$0 \to I \to R \to R/I \to 0$）更省事 —— 但这**要求 $I$ 投射（或至少平坦）**，否则这两项复形算不对高次 Tor：$R = k[\varepsilon]/\varepsilon^{2}$、$I = (\varepsilon)$、$N = k$ 时 $\operatorname{Tor}_{2}(k,k) = k$ 会被算成 $0$ —— 有了对称性就知道这等价于对 $N$ 取消解。

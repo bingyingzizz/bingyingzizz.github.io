@@ -8,6 +8,7 @@
 - 被 [`prop.mitchell-exactness`](../nodes/prop.mitchell-exactness.md) 嵌入定理的细化 用
 - 被 [`def.exact-couple`](../nodes/def.exact-couple.md) 正合偶 用
 - ～弱边 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4*
-- 被 [`thm.topos-abelian-grothendieck`](../nodes/thm.topos-abelian-grothendieck.md) 拓扑斯上的阿贝尔群是 Grothendieck 范畴 用
+- ⇒ [`thm.five-lemma`](../nodes/thm.five-lemma.md) 五引理
+- ⇒ [`thm.snake-lemma`](../nodes/thm.snake-lemma.md) 蛇引理
 
 > 续见 [nodes/def.abelian-category.10.md](./def.abelian-category.10.md)

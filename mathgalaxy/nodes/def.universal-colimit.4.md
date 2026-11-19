@@ -3,6 +3,8 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.site-properties`](../nodes/prop.site-properties.md) 景的层范畴的好性质
+- ⇒ [`prop.disjoint-universal`](../nodes/prop.disjoint-universal.md) 不交万有余积与次标准拓扑
+- ⇒ [`prop.kan-extension-exists`](../nodes/prop.kan-extension-exists.md) 有余极限时 Kan 延拓总存在
 - 被 [`prop.site-properties`](../nodes/prop.site-properties.md) 景的层范畴的好性质 用
 - 被 [`prop.disjoint-universal`](../nodes/prop.disjoint-universal.md) 不交万有余积与次标准拓扑 用
 - 被 [`def.pretopos`](../nodes/def.pretopos.md) 预拓扑斯 用

@@ -9,6 +9,7 @@ $$\sum_{n=0}^{\infty} q^{n} = \frac{1}{1 - q}.$$
 
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.p-series`](../nodes/thm.p-series.md) p-级数
+- ⇒ [`thm.euler-product`](../nodes/thm.euler-product.md) Euler 乘积
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.geometric-series.2.md](./thm.geometric-series.2.md)

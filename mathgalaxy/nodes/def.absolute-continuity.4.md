@@ -2,5 +2,6 @@
 [在星图里打开](../#n=def.absolute-continuity)　·　第 1 页 [nodes/def.absolute-continuity.md](./def.absolute-continuity.md)　·　上一页 [nodes/def.absolute-continuity.3.md](./def.absolute-continuity.3.md)
 
 ## 它能推出什么 / 谁在用它（续）
+- 被 [`cor.rn-inverse`](../nodes/cor.rn-inverse.md) 互为绝对连续时导数互逆 用
 - 被 [`prop.nbv-derivative`](../nodes/prop.nbv-derivative.md) 规范有界变差函数的导数与测度的关系 用
 - 被 [`def.rn-derivative`](../nodes/def.rn-derivative.md) Radon–Nikodym 导数与 Lebesgue 分解 用

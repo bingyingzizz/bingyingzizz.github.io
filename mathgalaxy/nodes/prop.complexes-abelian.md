@@ -12,6 +12,7 @@ layer 20 · 命题 · 复形与导出三角 · 同调代数
 
 refs: Le Stum, An introduction to condensed mathematics, §7.1
 
-> 说明见 `notes/prop.complexes-abelian.md`
+## 说明
+⭐ 这条是**整个同调代数的前提**：只有在 $\mathcal{C}(\mathcal{A})$ 里才能谈正合、才能谈同调 $H^{n}$。
 
 引用：`prop.complexes-abelian`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-## Abstract · **stale**
-In a metric space the following are equivalent: compact, sequentially compact, and complete together with totally bounded. The skeleton lives in the implications: compact implies sequentially compact; sequentially compact implies totally bounded (one of two places dependent choice is used; the other is (b) implies (a)) and complete; sequentially compact implies compact by the "bad ball" argument; complete and totally bounded implies sequentially compact by diagonalisation. In general topological spaces **both implications fail** — sequential compactness is a metric-space luxury (counterexamples: $\{0,1
+## Abstract · **draft**
+For a metric space $X$, the following are equivalent: $X$ is compact (every open cover has a finite subcover), $X$ is sequentially compact (every sequence has a subsequence converging in $X$), and $X$ is complete and totally bounded. The proof is assembled on the edge: compactness yields sequential compactness by a neighbourhood argument, sequential compactness gives completeness and total boundedness, and the remaining step uses $\varepsilon$-nets and Lebesgue numbers. The equivalence is a metric-space phenomenon; in general topological spaces the implications fail.
 
 > continued in nodes/thm.metric-compact-equiv.en.3.md

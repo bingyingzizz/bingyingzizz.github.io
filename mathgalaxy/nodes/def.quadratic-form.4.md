@@ -8,3 +8,4 @@
 - 被 [`def.isotropic-vector`](../nodes/def.isotropic-vector.md) 迷向向量 用
 - 被 [`def.inertia-index`](../nodes/def.inertia-index.md) 惯性指数 用
 - ⇒ [`lem.equal-norm-isometry`](../nodes/lem.equal-norm-isometry.md) 等长向量由反射互达
+- ⇒ [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理

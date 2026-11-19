@@ -2,11 +2,9 @@
 English entry · root `../`
 [in graph](../#n=thm.metric-compact-equiv)　·　[Chinese page (authoritative)](./thm.metric-compact-equiv.md)
 
-- compact $\implies$ sequentially compact
-- sequentially compact $\implies$ totally bounded　(**one of two** steps in this cluster that genuinely uses a choice principle — DC; the other is (b) implies (a))
-- sequentially compact $\implies$ complete
-- sequentially compact $\implies$ compact　(the "bad balls" argument; it uses total boundedness and completeness, and the bad-ball construction invokes DC)
-- compact $\implies$ complete, compact $\implies$ totally bounded
-- complete + totally bounded $\implies$ sequentially compact　(the diagonal argument; again no choice)
+## Elsewhere
+Wikipedia: https://en.wikipedia.org/wiki/Sequentially_compact_space · nLab: https://ncatlab.org/nlab/show/compact+space
 
-> continued in nodes/thm.metric-compact-equiv.en.6.md
+
+Cite: `thm.metric-compact-equiv` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

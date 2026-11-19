@@ -7,10 +7,10 @@
 - 被 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示 用
 - 被 [`def.radon-measure`](../nodes/def.radon-measure.md) Radon 测度 用
 - 被 [`def.volume-density`](../nodes/def.volume-density.md) 体积密度与体积形式 用
+- ⇒ [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质
 - 被 [`lem.covering`](../nodes/lem.covering.md) 覆盖引理 用
 - 被 [`def.premeasure`](../nodes/def.premeasure.md) 预测度 用
 - 被 [`def.finitely-additive`](../nodes/def.finitely-additive.md) 有限可加测度 用
 - 被 [`def.null-set`](../nodes/def.null-set.md) 零集与完备 用
-- 被 [`def.lplus`](../nodes/def.lplus.md) 非负可测函数类 用
 
 > 续见 [nodes/def.measure.5.md](./def.measure.5.md)

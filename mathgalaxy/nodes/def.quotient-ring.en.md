@@ -2,8 +2,7 @@
 English entry · root `../`
 [in graph](../#n=def.quotient-ring)　·　[Chinese page (authoritative)](./def.quotient-ring.md)
 
-> English: **stale** · stale fields: notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
-> fields: statement draft · notes stale · name derived
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra
 

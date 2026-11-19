@@ -2,10 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.abhaus-strict-exact)　·　[Chinese page (authoritative)](./prop.abhaus-strict-exact.md)
 
-Conversely, if the sequence is exact as a sequence of abstract groups, $\varphi$ is a closed embedding, and $\psi$ is an open surjection, then $\varphi$ agrees with $\psi^{-1}(0)$ with the subspace topology, and $\psi$ agrees with the quotient by $\overline{\varphi(M)}$. Since $\varphi(M)$ is closed, this is the quotient by the image ✓.
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-Thus the sequence is a kernel-cokernel sequence, hence strictly exact ✓.
 
-∎
+Cite: `prop.abhaus-strict-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
 
-> continued in nodes/prop.abhaus-strict-exact.en.9.md

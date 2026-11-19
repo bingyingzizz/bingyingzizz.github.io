@@ -6,6 +6,8 @@
 - 被 [`prop.cech-section-vanishing`](../nodes/prop.cech-section-vanishing.md) 带截面的覆盖上 Čech 零调 用
 - 被 [`lem.covering-free-acyclic`](../nodes/lem.covering-free-acyclic.md) 覆盖给出的自由复形零调 用
 - 被 [`prop.cech-cochain-formula`](../nodes/prop.cech-cochain-formula.md) Čech 上链的具体公式 用
-- 被 [`prop.cech-properties`](../nodes/prop.cech-properties.md) Čech 函子的性质 用
-- 被 [`thm.sheafification`](../nodes/thm.sheafification.md) 层化 用
-- 被 [`def.cech-cohomology`](../nodes/def.cech-cohomology.md) Čech 上同调 用
+- ⇒ [`prop.cech-cochain-formula`](../nodes/prop.cech-cochain-formula.md) Čech 上链的具体公式
+- ⇒ [`prop.cech-properties`](../nodes/prop.cech-properties.md) Čech 函子的性质
+- ⇒ [`prop.cech-section-vanishing`](../nodes/prop.cech-section-vanishing.md) 带截面的覆盖上 Čech 零调
+
+> 续见 [nodes/def.cech-functor.4.md](./def.cech-functor.4.md)

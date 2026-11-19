@@ -6,6 +6,7 @@
 - 被 [`thm.ls-exists`](../nodes/thm.ls-exists.md) F ↔ Borel 测度 用
 - 被 [`def.lebesgue-measurable`](../nodes/def.lebesgue-measurable.md) Lebesgue 可测 用
 - 被 [`cor.continuous-measurable`](../nodes/cor.continuous-measurable.md) 连续 ⟹ Borel 可测 用
+- ⇒ [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数
 - 被 [`def.lebesgue-stieltjes`](../nodes/def.lebesgue-stieltjes.md) Lebesgue–Stieltjes 测度 用
 - 被 [`def.regular-measure`](../nodes/def.regular-measure.md) 正则 Borel 测度 用
 - 被 [`def.shrinks-nicely`](../nodes/def.shrinks-nicely.md) 可缩族 用

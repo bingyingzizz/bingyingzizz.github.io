@@ -7,3 +7,5 @@
 - 被 [`prop.measurable-product-and-realimag`](../nodes/prop.measurable-product-and-realimag.md) 积空间与实虚部 用
 - 被 [`def.product-measure`](../nodes/def.product-measure.md) 乘积测度 用
 - 被 [`prop.section-measurable`](../nodes/prop.section-measurable.md) 截口可测 用
+- ⇒ [`cor.borel-product`](../nodes/cor.borel-product.md) 可数积的 Borel 代数
+- ⇒ [`prop.product-sigma-generated`](../nodes/prop.product-sigma-generated.md) 可数积的生成集

@@ -5,3 +5,4 @@
 - 被 [`def.fundamental-group`](../nodes/def.fundamental-group.md) 基本群 用
 - ⇒ [`thm.lifting`](../nodes/thm.lifting.md) 提升定理
 - 被 [`thm.lifting`](../nodes/thm.lifting.md) 提升定理 用
+- ⇒ [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理

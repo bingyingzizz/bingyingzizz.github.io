@@ -14,6 +14,8 @@ $$
 ## 它能推出什么 / 谁在用它
 - ～弱边 [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）
 
+- …另有出边，续页见 [nodes/thm.riesz-representation-lp.6.md](./thm.riesz-representation-lp.6.md)
+
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/thm.riesz-representation-lp.3.md](./thm.riesz-representation-lp.3.md)
 

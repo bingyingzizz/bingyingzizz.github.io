@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.first-iso)　·　[Chinese page (authoritative)](./thm.first-iso.md)
 
-> English: **reviewed** · reviewed by the author; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> fields: abstract draft · statement reviewed · notes draft · name derived
 
 layer 12 · theorem · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Set Theory
 

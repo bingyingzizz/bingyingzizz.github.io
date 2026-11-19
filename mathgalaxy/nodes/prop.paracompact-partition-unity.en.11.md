@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-ive, using local finiteness of supports and the fact that the sum is one. This gives paracompactness. Hausdorffness must be assumed separately.
-- Normal $\implies$ every locally finite open cover admits a subordinate partition of unity: Use locally finite shrinking, Urysohn's lemma, and normalization of a locally finite sum of functions. There is no requirement that every cover admit a locally finite refinement.
-- For the converse, use the cover $\{X\setminus A,X\setminus B\}$ to separate the disjoint closed sets $A,B$. This gives the separation property for closed
+**Hypotheses used in each direction** (the construction uses normality, and the converses require separate separation hypotheses):
+- Paracompact Hausdorff $\implies$ every open cover admits a subordinate partition of unity: Use normality of paracompact Hausdorff spaces, a locally finite refinement, the shrinking lemma, and Urysohn's lemma. A second shrinking ensures the supports lie in the original open sets.
+- Every open cover admits a subordinate partition of unity $\implies$ a locally finite open refinement exists: Take the sets on which the functions are posit
 
 > continued in nodes/prop.paracompact-partition-unity.en.12.md

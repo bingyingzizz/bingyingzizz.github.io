@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=def.tensor-field)　·　[Chinese page (authoritative)](./def.tensor-field.md)
 
-## Abstract · **stale**
-A tensor field is the smooth version of a multilinear form attached to each point: an $(r,s)$-tensor at $p$ eats $r$ covectors and $s$ vectors and returns a number, and the tensor bundle $T^{(r,s)}M$ collects these into a manifold of dimension $n+n^{r+s}$ whose transition maps are products of Jacobi matrices. Smooth sections of that bundle are the $(r,s)$-tensor fields. Metrics, differential forms, symplectic forms and the curvature tensor are all instances, and because the transition law involves only first derivatives, tensor components never pick up second derivatives.
+## Abstract · **draft**
+An $(r,s)$-tensor at $p \in M$ is a multilinear map $T : (T^{*}_{p}M)^{r} \times (T_{p}M)^{s} \to \mathbb{R}$, and the tensor bundle $T^{(r,s)}M$ assembles these into a smooth manifold of dimension $n + n^{r+s}$ whose transition maps are products of $r$ copies of the Jacobian and $s$ copies of its inverse transpose. A tensor field is a smooth section of this bundle, written in coordinates with components $T^{i_{1}\cdots i_{r}}_{\ \ j_{1}\cdots j_{s}}$ that transform by one Jacobian factor per index. The $(0,0)$, $(1,0)$ and $(0,1)$ cases are smooth functions, vector fields and $1$-forms; differential forms are the alternating $(0
 
 > continued in nodes/def.tensor-field.en.3.md

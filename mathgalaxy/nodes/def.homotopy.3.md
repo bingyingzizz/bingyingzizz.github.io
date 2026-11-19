@@ -9,7 +9,6 @@
 - 被 [`def.singular-homology`](../nodes/def.singular-homology.md) 奇异同调群 用
 - ～弱边 [`def.homotopy-maps`](../nodes/def.homotopy-maps.md) 映射同伦
 - ⇒ [`thm.homotopy-invariance`](../nodes/thm.homotopy-invariance.md) 同伦不变性
-- 被 [`lem.triangle-morphism`](../nodes/lem.triangle-morphism.md) 三角态射的性质 用
-- 被 [`def.homotopy-category`](../nodes/def.homotopy-category.md) 同伦范畴 用
+- ⇒ [`lem.triangle-morphism`](../nodes/lem.triangle-morphism.md) 三角态射的性质
 
 > 续见 [nodes/def.homotopy.4.md](./def.homotopy.4.md)

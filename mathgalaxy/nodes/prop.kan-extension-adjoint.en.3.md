@@ -2,10 +2,10 @@
 English entry · root `../`
 [in graph](../#n=prop.kan-extension-adjoint)　·　[Chinese page (authoritative)](./prop.kan-extension-adjoint.md)
 
-## Notes · **draft**
-**Proof.** Compare the two sides verbatim.
-"$p^{-1}$ has a left adjoint $p_{!}$" says: for every $F \in \operatorname{Hom}(\mathcal{C}, \mathcal{D})$ there are $p_{!}F \in \operatorname{Hom}(\mathcal{C}', \mathcal{D})$ and a natural isomorphism
+⚠️ The proposition itself **does not guarantee existence**; it only says that "adjoint" and "Kan extension" live and die together. Existence needs an extra hypothesis (see "Kan extensions always exist when the target has enough limits").
 
-$$\operatorname{Hom}\bigl(p_{!}F,\ G\bigr) \;\cong\; \operatorname{Hom}\bigl(F,\ p^{-1}G\bigr) = \operatorname{Hom}\bigl(F,\ G \circ p\bigr).$$
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> continued in nodes/prop.kan-extension-adjoint.en.4.md
+
+Cite: `prop.kan-extension-adjoint` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

@@ -1,7 +1,7 @@
 # 阿贝尔范畴　`def.abelian-category`　·　续页（第 4 页）
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)　·　上一页 [nodes/def.abelian-category.3.md](./def.abelian-category.3.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative（续）
-owed by a monomorphism; $\ker(N \to \operatorname{coker} f) \cong \operatorname{coker}(\ker f \to M)$. Abelian categories are the working environment of homological algebra — exactness needs kernels and cokernels. $A\text{-}\mathbf{Mod}$ and $\mathbf{Ab}(\mathcal{T})$ for a topos are abelian; $\mathbf{AbTop}$ is not.
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative（续）
+n practice the factorization condition is the one usually checked. Abelian categories are the setting for exact sequences and homological algebra; kernels and cokernels alone do not suffice, since $\mathbf{AbTop}$ is preabelian but not abelian, whereas $A\text{-}\mathbf{Mod}$ and $\mathbf{Ab}(\mathcal{T})$ for a topos are abelian.
 
 > 续见 [nodes/def.abelian-category.5.md](./def.abelian-category.5.md)

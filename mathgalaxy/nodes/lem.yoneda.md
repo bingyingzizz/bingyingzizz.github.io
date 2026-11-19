@@ -16,7 +16,7 @@ $$\operatorname{Hom}(h^{X}, F) \;\cong\; F(X), \qquad \alpha \mapsto \alpha_{X}(
 ## 它能推出什么 / 谁在用它
 - ⇒ [`thm.represented-criterion`](../nodes/thm.represented-criterion.md) 表示的两个定义等价
 
-- …另有出边，续页见 [nodes/lem.yoneda.3.md](./lem.yoneda.3.md)
+- …另有出边，续页见 [nodes/lem.yoneda.4.md](./lem.yoneda.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/lem.yoneda.2.md](./lem.yoneda.2.md)

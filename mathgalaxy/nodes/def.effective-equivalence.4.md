@@ -4,7 +4,10 @@
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.pretopos-factorization`](../nodes/prop.pretopos-factorization.md) 满-单分解
 - 被 [`def.universal-colimit`](../nodes/def.universal-colimit.md) 万有关系 用
+- ⇒ [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降
+- ⇒ [`prop.sheafify-equivalence`](../nodes/prop.sheafify-equivalence.md) 层化与等价关系交换
 - 被 [`prop.sheafify-equivalence`](../nodes/prop.sheafify-equivalence.md) 层化与等价关系交换 用
 - 被 [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降 用
 - 被 [`def.pretopos`](../nodes/def.pretopos.md) 预拓扑斯 用
-- 被 [`prop.cond-equivalence-effective`](../nodes/prop.cond-equivalence-effective.md) Cond 的等价关系有效 用
+
+> 续见 [nodes/def.effective-equivalence.5.md](./def.effective-equivalence.5.md)

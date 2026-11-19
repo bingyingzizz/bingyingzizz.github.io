@@ -2,6 +2,10 @@
 English entry · root `../`
 [in graph](../#n=prop.paracompact-partition-unity)　·　[Chinese page (authoritative)](./prop.paracompact-partition-unity.md)
 
-Thus $\{ \rho_{i}^{-1}\bigl((0,1]\bigr) \}$ is an open refinement of $\{U_{i}\}$ and is still locally finite (each point lies outside all but finitely many supports) ✓. This is exactly the condition for paracompactness, with Hausdorffness assumed: every open cover has a locally finite open refinement.
+## Notes · **draft**
+**Proof (both directions).**
+**$(\Longleftarrow)$ A partition of unity gives a locally finite refinement.** Let $\{\rho_{i}\}$ be a partition of unity subordinate to the cover $\{U_{i}\}$.
+
+By the definition of a partition of unity, $\operatorname{supp}\rho_{i} \subseteq U_{i}$ and the family of supports is **locally finite** ✓.
 
 > continued in nodes/prop.paracompact-partition-unity.en.6.md

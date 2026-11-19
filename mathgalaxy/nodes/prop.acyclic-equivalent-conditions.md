@@ -8,7 +8,7 @@ layer 21 · 命题 · 层上同调 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.acyclic-sheaf`](../nodes/def.acyclic-sheaf.md) 无环层：用到了定义 无环层　[proofs/def-link.acyclicconds-acyclic.md](../proofs/def-link.acyclicconds-acyclic.md)
+- …另有入边，续页见 [nodes/prop.acyclic-equivalent-conditions.3.md](./prop.acyclic-equivalent-conditions.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 7.49
 

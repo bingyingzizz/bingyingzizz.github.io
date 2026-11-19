@@ -8,7 +8,7 @@ layer 17 · 推论 · 乘积测度与 Fubini · 实变函数+数学分析+拓扑
 $\bigotimes_{j=1}^{\infty} \mathfrak{B}_{X_j} = \mathfrak{B}_{X}$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.product-sigma`](../nodes/def.product-sigma.md) 积 σ-代数：用到了定义 积 σ-代数　[proofs/def-link.product-borel.md](../proofs/def-link.product-borel.md)
+- [`def.product-sigma`](../nodes/def.product-sigma.md) 积 σ-代数 + [`def.borel`](../nodes/def.borel.md) Borel σ-代数 + [`def.metric-space`](../nodes/def.metric-space.md) 距离空间：imp.borel-product　[proofs/imp.borel-product.md](../proofs/imp.borel-product.md)
 
 - …另有入边，续页见 [nodes/cor.borel-product.2.md](./cor.borel-product.2.md)
 

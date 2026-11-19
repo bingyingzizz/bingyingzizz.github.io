@@ -6,7 +6,7 @@ layer 15 · 命题 · 图与极限 · 范畴论
 若 $\mathcal{C}$ 有滤过余极限，则 $\mathcal{C}$ 是 $\operatorname{Ind}(\mathcal{C})$ 的**反射子范畴**。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.ind-object`](../nodes/def.ind-object.md) Ind-对象：用到了定义 Ind-对象　[proofs/def-dep.indrefl-indobj.md](../proofs/def-dep.indrefl-indobj.md)
+- [`def.ind-object`](../nodes/def.ind-object.md) Ind-对象 + [`def.reflective-subcategory`](../nodes/def.reflective-subcategory.md) 反射子范畴：imp.ind-reflective　[proofs/imp.ind-reflective.md](../proofs/imp.ind-reflective.md)
 
 - …另有入边，续页见 [nodes/prop.ind-reflective.2.md](./prop.ind-reflective.2.md)
 

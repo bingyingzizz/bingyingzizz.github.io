@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.homotopy-invariance`](../nodes/thm.homotopy-invariance.md) 同伦不变性 用
+- ⇒ [`thm.comparison-theorem`](../nodes/thm.comparison-theorem.md) 比较定理

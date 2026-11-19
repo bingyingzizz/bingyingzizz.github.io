@@ -6,6 +6,8 @@
 - 被 [`def.group-extension`](../nodes/def.group-extension.md) 群扩张 用
 - 被 [`thm.galois-correspondence`](../nodes/thm.galois-correspondence.md) 伽罗瓦基本定理 用
 - 被 [`thm.solvable-quotients`](../nodes/thm.solvable-quotients.md) 可解性对子群与商群封闭 用
+- ⇒ [`thm.van-kampen`](../nodes/thm.van-kampen.md) van Kampen 定理
+- ⇒ [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether）
 - 被 [`thm.first-iso`](../nodes/thm.first-iso.md) 第一同构定理（Noether） 用
 - 被 [`def.quotient-group`](../nodes/def.quotient-group.md) 商群 用
 - 被 [`def.group-hom`](../nodes/def.group-hom.md) 群同态、核与像 用

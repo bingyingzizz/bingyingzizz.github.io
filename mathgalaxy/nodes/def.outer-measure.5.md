@@ -1,9 +1,9 @@
 # 外测度　`def.outer-measure`　·　续页（第 5 页）
 [在星图里打开](../#n=def.outer-measure)　·　第 1 页 [nodes/def.outer-measure.md](./def.outer-measure.md)　·　上一页 [nodes/def.outer-measure.4.md](./def.outer-measure.4.md)
 
-## 它能推出什么 / 谁在用它（续）
-- ⇒ [`thm.caratheodory`](../nodes/thm.caratheodory.md) Carathéodory 定理
-- 被 [`thm.caratheodory`](../nodes/thm.caratheodory.md) Carathéodory 定理 用
-- 被 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示 用
-- 被 [`def.caratheodory-measurable`](../nodes/def.caratheodory-measurable.md) μ*-可测集 用
-- 被 [`def.product-measure`](../nodes/def.product-measure.md) 乘积测度 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.power-set`](../nodes/def.power-set.md) 幂集 𝒫(X)：用到了定义 幂集 𝒫(X)　[proofs/dep.powerset-outer-measure.md](../proofs/dep.powerset-outer-measure.md)
+- [`def.subset`](../nodes/def.subset.md) 子集：用到了定义 子集　[proofs/def-dep.subset-outer-measure.md](../proofs/def-dep.subset-outer-measure.md)
+- [`def.extended-real`](../nodes/def.extended-real.md) 扩充实数 [−∞,+∞]：用到了定义 扩充实数 [−∞,+∞]　[proofs/def-dep.extreal-outer-measure.md](../proofs/def-dep.extreal-outer-measure.md)
+
+> 续见 [nodes/def.outer-measure.6.md](./def.outer-measure.6.md)

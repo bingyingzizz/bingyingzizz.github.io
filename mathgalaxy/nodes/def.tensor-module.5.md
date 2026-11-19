@@ -9,3 +9,5 @@
 - 被 [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有 用
 - 被 [`def.tensor-product-vs`](../nodes/def.tensor-product-vs.md) 张量积（向量空间） 用
 - 被 [`prop.tensor-functor-properties`](../nodes/prop.tensor-functor-properties.md) 张量积的函子性质 用
+
+> 续见 [nodes/def.tensor-module.6.md](./def.tensor-module.6.md)

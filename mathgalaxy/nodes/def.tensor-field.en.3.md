@@ -2,9 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.tensor-field)　·　[Chinese page (authoritative)](./def.tensor-field.md)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.tensor-field.md` and `proofs/`.
+,k)$ tensors, and metrics, symplectic forms and curvature are further examples. Because the transition law involves only first derivatives, tensors are exactly the objects whose components never acquire second derivatives.
 
-
-Cite: `def.tensor-field` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.tensor-field.en.4.md

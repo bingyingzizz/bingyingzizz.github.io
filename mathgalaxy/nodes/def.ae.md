@@ -12,7 +12,7 @@ $$\exists E \in \mathcal{M}:\ \mu(E) = 0\ \wedge \ \forall x \in X \setminus E,\
 常见的用法：$f = g$ a.e.（$\{f \ne g\}$ 是零集）、$f_n \to f$ a.e.（不收敛的点是零集）、$F' = 0$ a.e.。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`cor.mct-ae`](../nodes/cor.mct-ae.md) 单调收敛定理（几乎处处版本） 用
+- ⇒ [`prop.complete-measurable`](../nodes/prop.complete-measurable.md) 完备性 ⟺ 不破坏可测性
 
 - …另有出边，续页见 [nodes/def.ae.3.md](./def.ae.3.md)
 

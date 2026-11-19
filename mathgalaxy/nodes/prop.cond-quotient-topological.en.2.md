@@ -3,8 +3,10 @@ English entry · root `../`
 [in graph](../#n=prop.cond-quotient-topological)　·　[Chinese page (authoritative)](./prop.cond-quotient-topological.md)
 
 ## Notes · **draft**
-**Proof sketch.** In the exact sequence $0 \to N \to M \to M/N \to 0$, closedness of $N$ ensures that $M/N$ is a locally compact Hausdorff group ✓.
+📌 Use: when computing condensed abelian groups, one may first compute the quotient on the topological side and then discretise.
 
-We must show $\underline{M}/\underline{N} \cong \underline{M/N}$. ⚠️ The argument “preserves limits $\implies$ preserves cokernels” is invalid: preservation of limits gives preservation of **kernels**. The correct argument has two steps:
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> continued in nodes/prop.cond-quotient-topological.en.3.md
+
+Cite: `prop.cond-quotient-topological` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

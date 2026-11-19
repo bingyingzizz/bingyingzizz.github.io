@@ -2,12 +2,13 @@
 English entry · root `../`
 [in graph](../#n=lem.yoneda)　·　[Chinese page (authoritative)](./lem.yoneda.md)
 
-$$\alpha_{Y}\circ h^{X}(f) = F(f)\circ \alpha_{X} \;\implies\; \alpha_{Y}(f) = F(f)\bigl(\alpha_{X}(1_{X})\bigr) = \Psi\bigl(\Phi(\alpha)\bigr)_{Y}(f) ✓$$
+The two formulas differ only by replacing $\mathcal{C}$ with $\mathcal{C}^{\mathrm{op}}$, so both versions are used below.
 
-- **Naturality**: $\Phi$ is natural in $F$ (along $\beta : F\to G$ both sides become $\beta_{X}\circ(-)$) ✓; and natural in $X$ (along $k : X'\to X$, precomposition with $h^{k}$ corresponds to $F(k)$) ✓.
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-Hence $\operatorname{Hom}(h^{X}, F) \cong F(X)$, and the bijection is $\alpha\mapsto\alpha_{X}(1_{X})$ ✓; dually (taking $\mathcal{C}^{\mathrm{op}}$) one gets the presheaf version $\operatorname{Hom}(h_{X}, T) \cong T(X)$ ✓.
+## Elsewhere
+Wikipedia: https://en.wikipedia.org/wiki/Yoneda_lemma · nLab: https://ncatlab.org/nlab/show/Yoneda+lemma
 
-∎
 
-> continued in nodes/lem.yoneda.en.4.md
+Cite: `lem.yoneda` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

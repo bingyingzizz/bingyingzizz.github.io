@@ -2,8 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.first-iso)　·　[Chinese page (authoritative)](./thm.first-iso.md)
 
-- **Well defined**: if $gK = g'K$ then $g' = gk$ for some $k \in K$, hence $\varphi(g') = \varphi(g)\varphi(k) = \varphi(g)e' = \varphi(g)$ — elements of the same coset are sent to the same value.
-- **Homomorphism**: $\overline{\varphi}\bigl((gK)(g'K)\bigr) = \overline{\varphi}(gg'K) = \varphi(gg') = \varphi(g)\varphi(g') = \overline{\varphi}(gK)\,\overline{\varphi}(g'K)$.
-- **Bijection**: injective, because $\overline{\varphi}(gK) = e'$ means $\varphi(g) = e'$, i.e. $g \in K$, so $gK = K$; surjective, because the image is $\varphi(G)$ by construction. ∎
+## Statement · **reviewed**
+Let $\varphi : G \to G'$ be a **group homomorphism**. Then $\varphi$ induces an isomorphism
+
+$$G \big/ \ker\varphi \;\cong\; \operatorname{im}\varphi, \qquad g \ker\varphi \;\longmapsto\; \varphi(g).$$
+
+In particular: **the image of a surjective homomorphism is the quotient group** ($G/\ker\varphi \cong G'$ when $\varphi$ is surjective).
+
+## Notes · **draft**
+⭐ **It is really a theorem about the format "set + operations + axioms", not a privilege of groups.** The same proof carries over verbatim once "homomorphism" is replaced by the corresponding notion:
 
 > continued in nodes/thm.first-iso.en.5.md

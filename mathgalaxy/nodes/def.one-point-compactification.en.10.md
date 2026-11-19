@@ -2,6 +2,10 @@
 English entry · root `../`
 [in graph](../#n=def.one-point-compactification)　·　[Chinese page (authoritative)](./def.one-point-compactification.md)
 
-n $X$ … — this direction is exactly the use of "compact sets are closed in a compact Hausdorff space".
+⚠️ **Why the neighbourhoods of $\infty$ have that form**: "complement compact" in the second axiom is not arbitrary — if the neighbourhood is $U\cup\{\infty\}$, then points "running to infinity" must eventually lie in $U$, i.e. eventually leave $X\setminus U$; requiring $X\setminus U$ compact is exactly what aligns "leaving it" with "compactness", so that $X^{*}$ is compact.
 
-> continued in nodes/def.one-point-compactification.en.11.md
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `def.one-point-compactification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

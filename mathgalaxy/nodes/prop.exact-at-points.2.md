@@ -2,4 +2,6 @@
 [在星图里打开](../#n=prop.exact-at-points)　·　第 1 页 [nodes/prop.exact-at-points.md](./prop.exact-at-points.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列 + [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核：imp.exact-at-points　[proofs/imp.exact-at-points.md](../proofs/imp.exact-at-points.md)
+- [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列：用到了定义 一般正合列　[proofs/def-link.exactpts-exactseq.md](../proofs/def-link.exactpts-exactseq.md)
 - [`def.kernel-cokernel`](../nodes/def.kernel-cokernel.md) 核与余核：用到了定义 核与余核　[proofs/def-link.exactpts-kernel.md](../proofs/def-link.exactpts-kernel.md)

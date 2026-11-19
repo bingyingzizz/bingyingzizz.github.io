@@ -3,6 +3,8 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.preimage-subobject`](../nodes/def.preimage-subobject.md) 子对象的原像 用
+- ⇒ [`prop.sheaf-epi-criterion`](../nodes/prop.sheaf-epi-criterion.md) 满态射的局部判据
+- ⇒ [`prop.subobject-lattice`](../nodes/prop.subobject-lattice.md) 子对象构成有界格
 - 被 [`prop.subobject-lattice`](../nodes/prop.subobject-lattice.md) 子对象构成有界格 用
 - 被 [`def.image`](../nodes/def.image.md) 像 / 余像 用
 - 被 [`def.filtration`](../nodes/def.filtration.md) 过滤 用

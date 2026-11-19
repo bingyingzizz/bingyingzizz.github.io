@@ -2,16 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.yoneda)　·　[Chinese page (authoritative)](./lem.yoneda.md)
 
-$$\Phi : \operatorname{Nat}(h^{X}, F) \longrightarrow F(X), \qquad \Phi(\alpha) := \alpha_{X}(1_{X}).$$
+## Notes · **draft**
+Both **sides** of this bijection are natural: it is natural in $F$ (natural transformations) and also in $X$ (morphisms). Naturality in both variables is what gives the lemma its real strength.
 
-- **Inverse map**: given $u \in F(X)$, for each $Y$ define
+It turns the set of "all natural transformations from $h^{X}$ to $F$", which is a priori hopeless, into **a single element** of $F(X)$. Whenever "natural transformations are hard to count", this is the step that saves the day.
 
-$$\Psi(u)_{Y} : \operatorname{Hom}_{\mathcal{C}}(X, Y) \to F(Y), \qquad \Psi(u)_{Y}(f) := F(f)(u).$$
-
-It is natural: for $g : Y \to Z$, by functoriality of $F$, $F(g)\circ F(f) = F(g\circ f)$, the two sides are exactly $F(g)\bigl(\Psi(u)_{Y}(f)\bigr)$ and $\Psi(u)_{Z}(g\circ f)$ ✓.
-
-- **$\Phi\Psi = \mathrm{id}$**: $\Psi(u)_{X}(1_{X}) = F(1_{X})(u) = u$ ✓.
-
-- **$\Psi\Phi = \mathrm{id}$**: given $\alpha$ and $f : X\to Y$, use the naturality of $\alpha$ (applied to $f$)
+The dual form: when $T$ is a presheaf ($T : \mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$) and $h_{X} = \operatorname{Hom}(-, X)$ is a representable presheaf, one likewise has $\operatorname{Hom}(h_{X}, T) \cong T(X)$.
 
 > continued in nodes/lem.yoneda.en.3.md

@@ -8,7 +8,7 @@ layer 24 · 引理 · 赋范空间与有界算子 · 泛函分析
 $$\|e\| = 1, \qquad d(e, F) := \inf_{y \in F} \|e - y\| \ge 1 - \varepsilon .$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间：用到了定义 赋范空间　[proofs/dep.almostorth-normed.md](../proofs/dep.almostorth-normed.md)
+- [`def.normed-space`](../nodes/def.normed-space.md) 赋范空间 + [`def.norm`](../nodes/def.norm.md) 范数：imp.almost-orthogonal　[proofs/imp.almost-orthogonal.md](../proofs/imp.almost-orthogonal.md)
 
 - …另有入边，续页见 [nodes/lem.almost-orthogonal.2.md](./lem.almost-orthogonal.2.md)
 

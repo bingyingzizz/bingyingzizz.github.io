@@ -7,3 +7,4 @@
 - 被 [`thm.euler-product`](../nodes/thm.euler-product.md) Euler 乘积 用
 - 被 [`def.dirichlet-character`](../nodes/def.dirichlet-character.md) 狄利克雷特征标 用
 - ～弱边 [`thm.prime-number-theorem`](../nodes/thm.prime-number-theorem.md) 素数定理
+- ⇒ [`thm.euler-product`](../nodes/thm.euler-product.md) Euler 乘积

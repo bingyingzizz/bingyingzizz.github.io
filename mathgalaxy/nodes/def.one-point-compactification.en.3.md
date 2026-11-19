@@ -2,11 +2,9 @@
 English entry · root `../`
 [in graph](../#n=def.one-point-compactification)　·　[Chinese page (authoritative)](./def.one-point-compactification.md)
 
-$X^{*}$ is called the **one-point compactification** of $X$ (also the Alexandrov compactification).
+## Notes · **draft**
+⭐ **Topological intuition**: $U \cup \{\infty\}$ is open $\iff$ its complement is compact. So "the complement of $X$ is compact" is "a neighbourhood of $\infty$" — the space around the point at infinity is exactly "what remains after $X$ escapes". Thus the compactification of $\mathbb{R}^{n}$ has its point $\infty$ with neighbourhoods that are "outside a ball", and $S^{n}$ is the north pole.
 
-**Theorem**:
-
-- $X^{*}$ is **compact** (for arbitrary $X$);
-- $X^{*}$ is **Hausdorff** $\iff$ $X$ is a locally compact Hausdorff space.
+⭐ **Standard examples**: $(\mathbb{R}^{n})^{*} \cong S^{n}$ (stereographic projection; for $n = 1$, $\mathbb{R} \cup \{\infty\} \cong S^{1}$);
 
 > continued in nodes/def.one-point-compactification.en.4.md

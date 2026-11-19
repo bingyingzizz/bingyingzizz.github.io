@@ -2,6 +2,7 @@
 [在星图里打开](../#n=prop.kan-extension-adjoint)　·　第 1 页 [nodes/prop.kan-extension-adjoint.md](./prop.kan-extension-adjoint.md)　·　上一页 [nodes/prop.kan-extension-adjoint.2.md](./prop.kan-extension-adjoint.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.kan-extension`](../nodes/def.kan-extension.md) Kan 延拓 + [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：imp.kan-extension-adjoint　[proofs/imp.kan-extension-adjoint.md](../proofs/imp.kan-extension-adjoint.md)
 - [`def.kan-extension`](../nodes/def.kan-extension.md) Kan 延拓：用到了定义 Kan 延拓　[proofs/def-link.kanadj-kan.md](../proofs/def-link.kanadj-kan.md)
 - [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子：用到了定义 伴随函子　[proofs/def-link.kanadj-adj.md](../proofs/def-link.kanadj-adj.md)
 

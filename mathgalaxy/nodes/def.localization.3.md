@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.localization-functor-exact`](../nodes/prop.localization-functor-exact.md) 允许右分式演算时局部化函子正合 用
+- ⇒ [`prop.calculus-of-fractions`](../nodes/prop.calculus-of-fractions.md) 分式演算下的局部化
 - 被 [`prop.calculus-of-fractions`](../nodes/prop.calculus-of-fractions.md) 分式演算下的局部化 用
 - 被 [`prop.ring-localization`](../nodes/prop.ring-localization.md) 环的局部化 W⁻¹R 用
 - 被 [`prop.localization-hom-colim`](../nodes/prop.localization-hom-colim.md) 局部化的 Hom 是滤过余极限 用

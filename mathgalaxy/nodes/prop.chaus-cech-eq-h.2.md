@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.chaus-cech-eq-h)　·　第 1 页 [nodes/prop.chaus-cech-eq-h.md](./prop.chaus-cech-eq-h.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.chaus`](../nodes/def.chaus.md) 紧 Hausdorff 空间范畴：用到了定义 紧 Hausdorff 空间范畴　[proofs/def-dep.chauscech-chaus.md](../proofs/def-dep.chauscech-chaus.md)
 - [`def.sheaf-cohomology`](../nodes/def.sheaf-cohomology.md) 层上同调：用到了定义 层上同调　[proofs/def-dep.chauscech-sheafcoh.md](../proofs/def-dep.chauscech-sheafcoh.md)

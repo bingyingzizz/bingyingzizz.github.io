@@ -12,6 +12,7 @@ $$\mathbb{Z}\cdot X \;\otimes_{\mathbb{Z}}\; \mathbb{Z}\cdot Y \;\cong\; \mathbb
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 5.29
 
-> 说明见 `notes/prop.free-sheaf-tensor.md`
+## 说明
+⭐ 读法：**自由对象把拓扑斯里的积翻译成阿贝尔群层里的张量积**。
 
 引用：`prop.free-sheaf-tensor`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

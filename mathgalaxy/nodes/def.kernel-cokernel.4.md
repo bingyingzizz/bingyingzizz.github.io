@@ -8,3 +8,7 @@
 - 被 [`prop.exact-at-points`](../nodes/prop.exact-at-points.md) 正合就是逐点正合 用
 - 被 [`def.cycle`](../nodes/def.cycle.md) 闭链 用
 - 被 [`prop.complex-additive`](../nodes/prop.complex-additive.md) 复形范畴是加法范畴 用
+- ⇒ [`prop.abhaus-strict-exact`](../nodes/prop.abhaus-strict-exact.md) Hausdorff 拓扑阿贝尔群的核与余核
+- ⇒ [`prop.exact-at-points`](../nodes/prop.exact-at-points.md) 正合就是逐点正合
+
+> 续见 [nodes/def.kernel-cokernel.5.md](./def.kernel-cokernel.5.md)

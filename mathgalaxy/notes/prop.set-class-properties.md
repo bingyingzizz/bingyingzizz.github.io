@@ -1,10 +1,10 @@
 # 集合族的基本性质　`prop.set-class-properties`　·　说明
 根 `../`
 
-**证明。**
-(1) $\emptyset$ 是**空的不交并**（$n = 0$），按 (5) 的定义直接属于 $\mathfrak{A}$ ✓。⚠️ 不能取 $A \in \mathfrak{A}$ 用 $A \setminus A$ 来证：基本类只要求「差能拆成有限不交并」，并不对差封闭，而且基本类本身根本不必含空集。
-(2) 代数：$A_{1}, \ldots, A_{n} \in \mathfrak{A}$ 时 $A_{1}\cap\cdots\cap A_{n} = X \setminus \bigl(\bigcup_{i}(X\setminus A_{i})\bigr) \in \mathfrak{A}$（补 + 有限并）✓；
+(1)：空并就是 $n = 0$ 的情形，直接属于 $\mathfrak{A}$；基本类不含 $\emptyset$ 也无妨。
 
-可数交由 $\sigma$代数的定义直接给出，可数交再用一次 De Morgan ✓。
+(2)：有限交直接由 De Morgan；可数交由 (3) 的补 + 可数并得到。若 $\mathfrak{A}$ 只是环而不含 $X$，「补」要小心，通常用 **$A \setminus \bigcup B_{j}$** 这种相对补。
 
-> 续见 notes/prop.set-class-properties.2.md
+(5)：这是把基本类升级成环的标准操作 —— 先做不交并保证「差」好算，再验证有限并仍是有限不交并。
+
+这几条性质的实际用途：**验证一个族是 $\sigma$代数时，只需查「含 $X$」「对补」「对可数并」三条**，其余全部免费。

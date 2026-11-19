@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 26 · corollary · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
+layer 31 · corollary · cluster L^p Spaces (`analysis.lp`) · Functions of a Real Variable / Mathematical Analysis
 
 ## Statement and proof
 Chinese only — see the Chinese page `nodes/cor.lp-reflexive.md` and `proofs/`.

@@ -5,4 +5,5 @@
 - 被 [`prop.outer-measure-induced`](../nodes/prop.outer-measure-induced.md) 由预测度诱导外测度 用
 - ⇒ [`def.product-measure`](../nodes/def.product-measure.md) 乘积测度
 - 被 [`def.product-measure`](../nodes/def.product-measure.md) 乘积测度 用
+- ⇒ [`prop.ls-premeasure`](../nodes/prop.ls-premeasure.md) F 给出的预测度
 - 被 [`prop.ls-premeasure`](../nodes/prop.ls-premeasure.md) F 给出的预测度 用

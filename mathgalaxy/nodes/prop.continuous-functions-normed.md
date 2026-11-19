@@ -8,8 +8,6 @@ layer 20 · 命题 · 凝聚态导出函子 · 凝聚态数学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.banach-ab-group`](../nodes/def.banach-ab-group.md) Banach 阿贝尔群：用到了定义 Banach 阿贝尔群　[proofs/def-link.cfn-banach.md](../proofs/def-link.cfn-banach.md)
-
 - …另有入边，续页见 [nodes/prop.continuous-functions-normed.3.md](./prop.continuous-functions-normed.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.2

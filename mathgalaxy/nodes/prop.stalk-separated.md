@@ -8,9 +8,6 @@ layer 20 · 命题 · 层与拓扑 · 范畴论
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.sheaf`](../nodes/def.sheaf.md) 层：用到了定义 层　[proofs/def-link.stalk-sheaf.md](../proofs/def-link.stalk-sheaf.md)
-- [`def.topos`](../nodes/def.topos.md) 拓扑斯：用到了定义 拓扑斯　[proofs/def-link.stalk-topos.md](../proofs/def-link.stalk-topos.md)
-
 - …另有入边，续页见 [nodes/prop.stalk-separated.3.md](./prop.stalk-separated.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §3.4

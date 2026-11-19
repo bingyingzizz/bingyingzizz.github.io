@@ -3,6 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.order-iso`](../nodes/def.order-iso.md) 序同构 用
+- ⇒ [`prop.poset-limit-join`](../nodes/prop.poset-limit-join.md) 偏序集里的极限是交
 - 被 [`def.chain`](../nodes/def.chain.md) 链 用
 - 被 [`def.bound`](../nodes/def.bound.md) 界与确界 用
 - 被 [`def.wellorder`](../nodes/def.wellorder.md) 良序集 用

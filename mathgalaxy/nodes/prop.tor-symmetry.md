@@ -10,7 +10,7 @@ $$\operatorname{Tor}_{n}^{R}(M, N) \;\cong\; \operatorname{Tor}_{n}^{R}(N, M).$$
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.tor`](../nodes/def.tor.md) 挠积：用到了定义 挠积　[proofs/def-link.torsym-tor.md](../proofs/def-link.torsym-tor.md)
+- …另有入边，续页见 [nodes/prop.tor-symmetry.3.md](./prop.tor-symmetry.3.md)
 
 refs: Rotman, An Introduction to Homological Algebra (2nd ed.), Ext 与 Tor 的部分 · Tor 在交换环上的对称性；Weibel, An Introduction to Homological Algebra, 关于 Tor 的对称性（symmetry）的部分
 

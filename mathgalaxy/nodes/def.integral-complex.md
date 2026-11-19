@@ -14,7 +14,7 @@ $$\int f := \int f^+ - \int f^-$$
 对复值函数，拆实部虚部：$\int f := \int \operatorname{Re} f + i \int \operatorname{Im} f$（要求两个积分都有意义）。
 
 ## 它能推出什么 / 谁在用它
-- 被 [`prop.integral-abs-ineq`](../nodes/prop.integral-abs-ineq.md) 积分绝对值不等式 用
+- ⇒ [`prop.integral-abs-ineq`](../nodes/prop.integral-abs-ineq.md) 积分绝对值不等式
 
 - …另有出边，续页见 [nodes/def.integral-complex.3.md](./def.integral-complex.3.md)
 

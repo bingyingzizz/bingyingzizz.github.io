@@ -1,11 +1,11 @@
 # 复形与导出三角 / Complexes and Distinguished Triangles（hom.complex）· 节点清单（第 3/4 页）
 根 `../`　·　第 1 页 `index/hom.complex.md`　·　上一页 `index/hom.complex.2.md`
 
-- thm.universal-coefficients　万有系数定理　layer 21
-- prop.k-calculus-fractions　K(A) 允许分式演算　layer 22
 - def.derived-category　导出范畴　layer 22
+- prop.leray-acyclicity　Leray 零调性　layer 22
 - prop.injective-complex-homotopy　内射复形：零调、拟同构与同伦　layer 22
 - prop.injective-resolution-lift　内射消解之间的提升　layer 22
+- prop.injective-iff-acyclic　内射与零调的等价　layer 22
 - prop.hom-k-eq-hom-d　Hom 在同伦范畴与导出范畴里一样　layer 23
 - thm.k-plus-injectives　内射复形就是导出范畴　layer 23
 - def.ext　扩展群 Ext　layer 23

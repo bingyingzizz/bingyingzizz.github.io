@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.topos-morphism-final-map`](../nodes/prop.topos-morphism-final-map.md) 终映射给出的拓扑斯态射
+- ⇒ [`prop.discrete-iff-constant`](../nodes/prop.discrete-iff-constant.md) 离散即常

@@ -7,6 +7,8 @@
 - 被 [`thm.de-rham`](../nodes/thm.de-rham.md) de Rham 定理 用
 - 被 [`def.cohomology-class`](../nodes/def.cohomology-class.md) 上同调类 用
 - 被 [`def.acyclic-complex`](../nodes/def.acyclic-complex.md) 零调复形 用
+- ⇒ [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理
+- ⇒ [`prop.cohomology-short-exact`](../nodes/prop.cohomology-short-exact.md) 同调的两条正合列
 - 被 [`thm.long-exact`](../nodes/thm.long-exact.md) 长正合列 用
-- 被 [`def.cohomological-functor`](../nodes/def.cohomological-functor.md) 上同调函子 用
-- 被 [`def.quasi-iso`](../nodes/def.quasi-iso.md) 拟同构 用
+
+> 续见 [nodes/def.cohomology.5.md](./def.cohomology.5.md)

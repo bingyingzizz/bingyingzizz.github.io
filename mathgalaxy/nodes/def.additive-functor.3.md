@@ -7,3 +7,6 @@
 - 被 [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据 用
 - 被 [`prop.additive-complex-construction`](../nodes/prop.additive-complex-construction.md) 加法函子与复形构造交换 用
 - 被 [`thm.watts`](../nodes/thm.watts.md) 张量函子的刻画 用
+- ⇒ [`prop.additive-functor-preserves-triangles`](../nodes/prop.additive-functor-preserves-triangles.md) 加法函子保导出三角
+
+> 续见 [nodes/def.additive-functor.4.md](./def.additive-functor.4.md)

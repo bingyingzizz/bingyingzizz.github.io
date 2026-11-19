@@ -8,8 +8,9 @@ layer 21 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间：用到了定义 紧生成空间　[proofs/def-dep.cgeq-cg.md](../proofs/def-dep.cgeq-cg.md)
-- [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑：用到了定义 商拓扑　[proofs/def-dep.cgeq-quotient.md](../proofs/def-dep.cgeq-quotient.md)
+- [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 + [`def.quotient-topology`](../nodes/def.quotient-topology.md) 商拓扑：imp.cg-equivalent-conditions　[proofs/imp.cg-equivalent-conditions.md](../proofs/imp.cg-equivalent-conditions.md)
+
+- …另有入边，续页见 [nodes/prop.cg-equivalent-conditions.3.md](./prop.cg-equivalent-conditions.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §2.3
 

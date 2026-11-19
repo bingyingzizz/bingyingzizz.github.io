@@ -2,6 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-class)　·　[Chinese page (authoritative)](./thm.monotone-class.md)
 
-What is stated above is the **strengthened version**: "$\mathcal{E}$ is an algebra" is replaced by two weaker conditions — the **complements** and the **unions** of sets in $\mathcal{E}$ only have to land in $\mathfrak{m}(\mathcal{E})$. The proof is still the usual three steps of the monotone class theorem:
+## Statement · **stale**
+Let $\mathcal{E} \subseteq \mathcal{P}(X)$ with $\mathcal{E} \ne \emptyset$. Then
+
+$$\mathcal{M}(\mathcal{E}) = \mathfrak{m}(\mathcal{E}) \iff \forall A \in \mathcal{E} : A^c \in \mathfrak{m}(\mathcal{E})\ \wedge\ \forall A, B \in \mathcal{E} : A \cup B \in \mathfrak{m}(\mathcal{E})$$
+
+## Notes · **reviewed**
+**This is the combined "standard + strengthened" version.**
+
+**Standard version** (Halmos §6 / Folland 2.37): if $\mathcal{A}$ is an **algebra** then $\mathfrak{m}(\mathcal{A}) = \mathcal{M}(\mathcal{A})$.
 
 > continued in nodes/thm.monotone-class.en.5.md

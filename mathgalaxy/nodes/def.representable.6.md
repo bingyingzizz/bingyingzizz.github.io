@@ -5,10 +5,9 @@
 - 被 [`prop.forgetful-representable`](../nodes/prop.forgetful-representable.md) 遗忘函子可表示 用
 - 被 [`prop.solution-functor-representable`](../nodes/prop.solution-functor-representable.md) 解集函子可表示 用
 - 被 [`prop.copowers-give-adjoint`](../nodes/prop.copowers-give-adjoint.md) 有余幂则可表示函子有伴随 用
+- ⇒ [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理
+- ⇒ [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降
+- ⇒ [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限
 - 被 [`lem.yoneda`](../nodes/lem.yoneda.md) 米田引理 用
-- 被 [`thm.represented-criterion`](../nodes/thm.represented-criterion.md) 表示的两个定义等价 用
-- 被 [`thm.right-adjoint-criterion`](../nodes/thm.right-adjoint-criterion.md) 右伴随存在的判据 用
-- 被 [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理 用
-- 被 [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降 用
 
 > 续见 [nodes/def.representable.7.md](./def.representable.7.md)

@@ -2,6 +2,8 @@
 [在星图里打开](../#n=prop.simplicial-to-chain)　·　第 1 页 [nodes/prop.simplicial-to-chain.md](./prop.simplicial-to-chain.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.simplicial`](../nodes/def.simplicial.md) 单纯对象 + [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形 + [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：imp.simplicial-to-chain　[proofs/imp.simplicial-to-chain.md](../proofs/imp.simplicial-to-chain.md)
 - [`def.simplicial`](../nodes/def.simplicial.md) 单纯对象：用到了定义 单纯对象　[proofs/def-link.simpchain-simplicial.md](../proofs/def-link.simpchain-simplicial.md)
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-link.simpchain-complex.md](../proofs/def-link.simpchain-complex.md)
-- [`def.additive-category`](../nodes/def.additive-category.md) 加法范畴：用到了定义 加法范畴　[proofs/dep.simplicialchain-additive.md](../proofs/dep.simplicialchain-additive.md)
+
+> 续见 [nodes/prop.simplicial-to-chain.3.md](./prop.simplicial-to-chain.3.md)

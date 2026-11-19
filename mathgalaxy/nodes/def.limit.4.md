@@ -7,9 +7,8 @@
 - ⇒ [`ex.kan-extension`](../nodes/ex.kan-extension.md) Kan 延拓的两个例子
 - 被 [`prop.set-top-ab-complete`](../nodes/prop.set-top-ab-complete.md) Set、Top、Ab 的完备性 用
 - 被 [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限 用
-- 被 [`prop.yoneda-embedding`](../nodes/prop.yoneda-embedding.md) 米田嵌入 用
-- 被 [`thm.density`](../nodes/thm.density.md) 稠密性定理 用
-- 被 [`thm.right-adjoint-preserves-limits`](../nodes/thm.right-adjoint-preserves-limits.md) 右伴随保极限 用
-- 被 [`prop.limit-adjoint`](../nodes/prop.limit-adjoint.md) 极限即伴随 用
+- ⇒ [`prop.cond-limits-colimits`](../nodes/prop.cond-limits-colimits.md) Cond 的极限与余极限
+- ⇒ [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合
+- ⇒ [`prop.filtered-finite-colimits`](../nodes/prop.filtered-finite-colimits.md) 滤过 + 有限余极限 ⟹ 所有余极限
 
 > 续见 [nodes/def.limit.5.md](./def.limit.5.md)

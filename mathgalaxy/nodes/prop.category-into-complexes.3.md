@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.category-into-complexes)　·　第 1 页 [nodes/prop.category-into-complexes.md](./prop.category-into-complexes.md)　·　上一页 [nodes/prop.category-into-complexes.2.md](./prop.category-into-complexes.2.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：imp.category-into-complexes　[proofs/imp.category-into-complexes.md](../proofs/imp.category-into-complexes.md)
 - [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-link.catcpx-complex.md](../proofs/def-link.catcpx-complex.md)

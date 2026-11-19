@@ -12,8 +12,8 @@
 - lem.ac-subset-bv　绝对连续蕴含有界变差　layer 24
 - thm.bv-jordan　有界变差函数的 Jordan 分解　layer 25
 - lem.nbv-variation　全变差的规范有界变差性质　layer 25
-- prop.monotone-integral-derivative　递增函数的导数积分不等式　layer 25
 - prop.bv-regularity　有界变差函数的正则性　layer 26
 - thm.borel-measure-nbv　测度与规范有界变差函数的一一对应　layer 26
+- prop.nbv-derivative　规范有界变差函数的导数与测度的关系　layer 27
 
 > 续见 `index/analysis.bv.2.md`

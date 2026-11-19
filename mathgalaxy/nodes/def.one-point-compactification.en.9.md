@@ -2,7 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.one-point-compactification)　·　[Chinese page (authoritative)](./def.one-point-compactification.md)
 
-ftarrow$) uses **local compactness**: given $x \in X$, separating it from $\infty$ requires "a compact neighbourhood $K$ of $x$", so $X\setminus K$ is open and $K^{\circ}$ is an open neighbourhood of $x$, the two disjoint. **Without local compactness this compact neighbourhood cannot be produced**.
-  $\cdot$ ($\implies$): deriving Hausdorffness of $X$ from that of $X^{*}$ is free (subspaces inherit it); deriving local compactness uses **closedness of compact sets**: an open neighbourhood $U\cup\{\infty\}$ of $\infty$ has $X\setminus U$ compact, so the closure of $U$ i
+⚠️ **So "the one-point compactification always exists" must be read in two parts**: $X^{*}$ always exists as a compact space; but it is **Hausdorff** only when $X$ is locally compact Hausdorff. Many textbooks state only the first, so beginners think "every space can be compactified" — **false**: those that admit a Hausdorff compactification are the locally compact Hausdorff ones.
 
 > continued in nodes/def.one-point-compactification.en.10.md

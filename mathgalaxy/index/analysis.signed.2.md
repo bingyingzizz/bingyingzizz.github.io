@@ -2,8 +2,8 @@
 根 `../`　·　第 1 页 `index/analysis.signed.md`
 
 - prop.integral-gives-ac　积分给出绝对连续测度　layer 27
-- thm.rn-complex　复测度的 Radon–Nikodym　layer 27
 - prop.ac-and-variations　绝对连续与变差　layer 28
 - cor.ac-integral-continuity　积分的绝对连续性　layer 28
 - prop.rn-chain-rule　Radon–Nikodym 导数的链式法则　layer 28
 - thm.lebesgue-radon-nikodym　Lebesgue–Radon–Nikodym 定理　layer 29
+- thm.rn-complex　复测度的 Radon–Nikodym　layer 30

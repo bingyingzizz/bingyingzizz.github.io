@@ -8,7 +8,7 @@
 - 被 [`prop.crystalline-sheaf-equiv`](../nodes/prop.crystalline-sheaf-equiv.md) 晶体层就是 X 上的层 用
 - 被 [`prop.cech-section-vanishing`](../nodes/prop.cech-section-vanishing.md) 带截面的覆盖上 Čech 零调 用
 - 被 [`def.free-abelian-sheaf`](../nodes/def.free-abelian-sheaf.md) 自由阿贝尔群层 用
-- 被 [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理 用
-- 被 [`prop.topos-covering-epi`](../nodes/prop.topos-covering-epi.md) 拓扑斯中覆盖即余积满射 用
+- ⇒ [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降
+- ⇒ [`prop.cech-section-vanishing`](../nodes/prop.cech-section-vanishing.md) 带截面的覆盖上 Čech 零调
 
 > 续见 [nodes/def.topos.5.md](./def.topos.5.md)

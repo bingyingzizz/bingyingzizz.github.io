@@ -2,6 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.ring-monotone-sigma)　·　[Chinese page (authoritative)](./thm.ring-monotone-sigma.md)
 
-othesis cannot be dropped: on a two-point set, the family of the two singletons is a monotone class, yet it does not contain their union.
+This theorem is the technical core of the monotone class theorem: it is precisely what lets one reduce "true for all $\sigma$-algebras" to "first verify it on a ring, then pass to monotone limits".**Which hypothesis each direction uses** (all three conditions are purely about set operations, but the ring hypothesis cannot be dropped):
 
 > continued in nodes/thm.ring-monotone-sigma.en.7.md

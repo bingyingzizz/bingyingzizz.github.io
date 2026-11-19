@@ -1,8 +1,6 @@
 # 内射对象的判据　`prop.injective-criterion`　·　说明
 根 `../`
 
-证明用一张 $3 \times 3$ 的 $\operatorname{Hom}$ 图表：把短正合列 $0 \to A \to B \to C \to 0$ 用 $\operatorname{Hom}(-, M)$ 家族拉成三行，用两次蛇引理读出中间一行 $0 \to \ker f \to \ker g \to \ker h \to \operatorname{coker} f \to \operatorname{coker} g \to 0$，再看出第一行与第三行都是正合的，于是 $\ker g = \operatorname{coker} g = 0$。
+**一条要用 Zorn 的补充（很关键）**：在 $R$-模范畴里，Bolzano–Weierstrass 式的论证 ——「$I$ 内射 $\iff$ 对每个**理想** $J \subseteq R$，每个 $J \to I$ 都能延拓到 $R \to I$」（Baer 判别法）—— 用的是 **Zorn 引理**（把“可延拓的子模”取极大）。所以「内射性可用理想检验」这条便利是**有选择公理代价**的；在一般的 Grothendieck 范畴里对应的是「用次对象检验」，不需要 AC。
 
-**四条是一个循环，但每一跳的代价不同**（这也是为什么内射性有这么多“等价说法”，却总是用同一条来验证）：
-
-> 续见 notes/prop.injective-criterion.2.md
+⚠️ **第二个断言的假设**：$M'$ 内射时 $M$ 内射 $\iff M''$ 内射 —— 这是「内射对象的扩张封闭性」，只用短正合列与 (4)，**不需要 $\mathcal{A}$ 有足够多内射**。别把它与「$\mathcal{A}$ 有足够多内射」这个范畴级假设混起来。

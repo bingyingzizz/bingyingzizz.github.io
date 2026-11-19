@@ -2,4 +2,5 @@
 [在星图里打开](../#n=prop.ind-reflective)　·　第 1 页 [nodes/prop.ind-reflective.md](./prop.ind-reflective.md)
 
 ## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.ind-object`](../nodes/def.ind-object.md) Ind-对象：用到了定义 Ind-对象　[proofs/def-dep.indrefl-indobj.md](../proofs/def-dep.indrefl-indobj.md)
 - [`def.reflective-subcategory`](../nodes/def.reflective-subcategory.md) 反射子范畴：用到了定义 反射子范畴　[proofs/def-dep.indrefl-reflective.md](../proofs/def-dep.indrefl-reflective.md)

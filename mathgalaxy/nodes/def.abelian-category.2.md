@@ -2,48 +2,16 @@
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)
 
 ## 陈述（续）
-*是满足下列**等
-价**条件之一的*
-*预阿贝尔范畴**
-（预加法、加法、预阿贝尔
-的定义见 `def.p
-re-additive-
-category`、
-`def.additi
-ve-category
-`、`def.pre
--abelian-cat
-egory`）：
-1. 每个单态射都是正则
-的（对偶地每个满态射都是
-正则的）；
-2. 若 $
-i : N \righ
-tarrowtail M
-$ 是单态射，则 $N 
-\cong \ker
-\bigl(M \t
-woheadrighta
-rrow \opera
-torname{coke
-r}(i)\bigr)
-$（对偶同理）；
-3. 
-每个态射都能（在相差一个
-同构的意义下**唯一
-**地）分解成满态射
-接单态射；
-4. 对每个
- $f : M \to
- N$ 有 $\ker
-\bigl(N \t
-o \operator
-name{coker} 
-f\bigr) \c
-ong \operat
-orname{coker
-}\bigl(\ke
-r f \to M\
-bigr)$。
+`def.pre-additive-category`、`def.additive-category`、`def.pre
+-abelian-category`）：
+1. 每个单态射都是正则的（对偶地每个满态射都是正则的）；
+2. 若 $i : N \rightarrowtail M$ 是单态
+射，则 $N \cong \ker\bigl(M \twoheadrightarrow \operatorname{co
+ker}(i)\bigr)$（对偶同理）；
+3. 每个态射都能（在相差一个同构的意义下**唯一**地）分解成满态射接单态
+射；
+4. 对每个 $f : M \to N$ 有 $\ker\bigl(N \to \operatorname{cok
+er} f\bigr) \cong \operatorname{coker}\bigl(\ker f \to M\b
+igr)$。
 
 > 续见 [nodes/def.abelian-category.3.md](./def.abelian-category.3.md)

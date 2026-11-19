@@ -6,7 +6,7 @@ layer 22 · 命题 · 紧生成空间与弱 Hausdorff · 拓扑学
 对任何拓扑空间 $X$，$kX$ 是全体连续映射 $S \to X$（$S$ 取遍紧 Hausdorff 空间）在 $\mathbf{Top}$ 中的余极限。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴：用到了定义 拓扑空间范畴　[proofs/dep.cat-top-prop-ktx-colimit.md](../proofs/dep.cat-top-prop-ktx-colimit.md)
+- [`def.category-of-topological-spaces`](../nodes/def.category-of-topological-spaces.md) 拓扑空间范畴 + [`def.compactly-generated`](../nodes/def.compactly-generated.md) 紧生成空间 + [`def.k-topology`](../nodes/def.k-topology.md) k-开、k-闭与 k-拓扑：imp.ktx-colimit　[proofs/imp.ktx-colimit.md](../proofs/imp.ktx-colimit.md)
 
 - …另有入边，续页见 [nodes/prop.ktx-colimit.2.md](./prop.ktx-colimit.2.md)
 

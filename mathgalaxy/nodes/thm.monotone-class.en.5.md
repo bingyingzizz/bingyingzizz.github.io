@@ -2,8 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-class)　·　[Chinese page (authoritative)](./thm.monotone-class.md)
 
-**①** Let $\mathcal{K}_{1} = \{A \in \mathfrak{m} : A^{c} \in \mathfrak{m}\}$. It contains $\mathcal{E}$ (first condition), and is itself a monotone class ($\mathfrak{m}$ is monotone $\implies$ limits stay in $\mathfrak{m}$; complements use one decreasing limit) $\implies \mathcal{K}_{1} = \mathfrak{m}$, i.e. $\mathfrak{m}$ is closed under **complements**.
-
-**②** Fix $A \in \mathcal{E}$ and let $\mathcal{K}_{2} = \{B \in \mathfrak{m} : A \cup B \in \mathfrak{m}\}$. By the second condition $\mathcal{K}_{2} \supseteq \mathcal{E} \implies \mathcal{K}_{2} = \mathfrak{m}$.
+What is stated above is the **strengthened version**: "$\mathcal{E}$ is an algebra" is replaced by two weaker conditions — the **complements** and the **unions** of sets in $\mathcal{E}$ only have to land in $\mathfrak{m}(\mathcal{E})$. The proof is still the usual three steps of the monotone class theorem:
 
 > continued in nodes/thm.monotone-class.en.6.md

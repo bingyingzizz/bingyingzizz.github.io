@@ -1,7 +1,8 @@
 # L¹(ν) 与全变差　`prop.L1-signed`　·　说明
 根 `../`
 
-**证明。**
-**(a)** 因为 $|\nu|(E) = 0 \implies \nu(E) = 0$（由 (a) 式 $|\nu(E)| \le |\nu|(E)$），所以 $\nu \ll |\nu|$，由 Radon–Nikodym 取 $g := \frac{d\nu}{d|\nu|}$ ✓。
+(a) 的来源：$d\nu = g\cdot d|\nu|$ 对某个 $g$ 成立（Radon–Nikodym），且 $|g| = 1 \text{a.e.}$ —— 因为全变差本来就是「把质量取绝对值」得到的。
 
-> 续见 notes/prop.L1-signed.2.md
+(b) 说明**积分理论对符号测度不需要重写**：把 $|\nu |$ 当作底层的真测度，一切照旧。
+
+(c) 让「全变差」成为一个范数，这正是把测度空间看作 Banach 空间的起点。

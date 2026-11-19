@@ -8,12 +8,13 @@ layer 20 · 引理 · 加法与阿贝尔范畴 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴：用到了定义 阿贝尔范畴　[proofs/def-dep.snake-abelian.md](../proofs/def-dep.snake-abelian.md)
-- [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-dep.snake-equalizer.md](../proofs/def-dep.snake-equalizer.md)
+- [`def.abelian-category`](../nodes/def.abelian-category.md) 阿贝尔范畴 + [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子 + [`def.image`](../nodes/def.image.md) 像 / 余像：imp.snake-lemma　[proofs/imp.snake-lemma.md](../proofs/imp.snake-lemma.md)
 
 - …另有入边，续页见 [nodes/thm.snake-lemma.3.md](./thm.snake-lemma.3.md)
 
 ## 它能推出什么 / 谁在用它
+- ⇒ [`lem.horseshoe`](../nodes/lem.horseshoe.md) 马蹄引理
+
 - …另有出边，续页见 [nodes/thm.snake-lemma.4.md](./thm.snake-lemma.4.md)
 
 refs: Weibel, An Introduction to Homological Algebra, Ch. 1；Le Stum, An introduction to condensed mathematics, §5.1–5.2

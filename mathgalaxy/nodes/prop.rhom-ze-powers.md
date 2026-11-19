@@ -9,13 +9,13 @@ $$\operatorname{RHom}_{\mathbb{Z}}\bigl(\mathbb{Z}[E],\ N\bigr) \;\cong\; N^{E} 
 
 （同样理解为集中在 $0$ 次的复形）。
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-link.ze-proj.md](../proofs/def-link.ze-proj.md)
-
-- …另有入边，续页见 [nodes/prop.rhom-ze-powers.2.md](./prop.rhom-ze-powers.2.md)
-
 ## 它能推出什么 / 谁在用它
+- ⇒ [`prop.condab-discrete-acyclic`](../nodes/prop.condab-discrete-acyclic.md) 离散空间上零调
+
 - …另有出边，续页见 [nodes/prop.rhom-ze-powers.3.md](./prop.rhom-ze-powers.3.md)
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.rhom-ze-powers.2.md](./prop.rhom-ze-powers.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §8.3
 

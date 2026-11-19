@@ -3,8 +3,10 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.banach-as-condensed`](../nodes/prop.banach-as-condensed.md) Banach 空间都是凝聚态阿贝尔群 用
-- 被 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4* 用
-- 被 [`def.tensor-abelian-sheaf`](../nodes/def.tensor-abelian-sheaf.md) 阿贝尔层的张量积 用
-- 被 [`prop.abtop-to-abcond`](../nodes/prop.abtop-to-abcond.md) 拓扑阿贝尔群嵌入凝聚态 用
-- 被 [`prop.stonean-cond-acyclic`](../nodes/prop.stonean-cond-acyclic.md) Stonean 上凝聚阿贝尔群零调 用
-- 被 [`thm.breen-deligne`](../nodes/thm.breen-deligne.md) Breen–Deligne 分解 用
+- ⇒ [`prop.cond-quotient-topological`](../nodes/prop.cond-quotient-topological.md) 商群在凝聚态意义下一致
+- ⇒ [`prop.condab-generated`](../nodes/prop.condab-generated.md) CondAb 由有限表现投射对象生成
+- ⇒ [`prop.condab-quotient-r-disc`](../nodes/prop.condab-quotient-r-disc.md) R/R_disc 在 Stone 上的截面
+- ⇒ [`prop.continuous-hom-condensed`](../nodes/prop.continuous-hom-condensed.md) 连续同态与内部 Hom
+- ⇒ [`prop.discrete-cond-rhom-constant`](../nodes/prop.discrete-cond-rhom-constant.md) 离散群的导出 Hom 是常层
+
+> 续见 [nodes/def.condensed-abelian-group.7.md](./def.condensed-abelian-group.7.md)

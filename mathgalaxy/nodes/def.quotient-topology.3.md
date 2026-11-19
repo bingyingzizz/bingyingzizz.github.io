@@ -7,8 +7,7 @@
 - 被 [`def.cw-complex`](../nodes/def.cw-complex.md) CW 复形 用
 - 被 [`def.polygon-representation`](../nodes/def.polygon-representation.md) 多边形表示 用
 - 被 [`def.mobius-band`](../nodes/def.mobius-band.md) 莫比乌斯带 用
-- 被 [`thm.quotient-product`](../nodes/thm.quotient-product.md) 商映射与局部紧空间作积 用
-- 被 [`prop.cg-kclosed-quotient`](../nodes/prop.cg-kclosed-quotient.md) k-闭等价关系与弱 Hausdorff 商 用
-- 被 [`def.k-topology`](../nodes/def.k-topology.md) k-开、k-闭与 k-拓扑 用
+- ⇒ [`prop.cg-equivalent-conditions`](../nodes/prop.cg-equivalent-conditions.md) 紧生成空间的等价刻画
+- ⇒ [`prop.cg-kclosed-quotient`](../nodes/prop.cg-kclosed-quotient.md) k-闭等价关系与弱 Hausdorff 商
 
 > 续见 [nodes/def.quotient-topology.4.md](./def.quotient-topology.4.md)

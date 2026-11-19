@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴
 - 被 [`def.algebra-representation`](../nodes/def.algebra-representation.md) 代数的线性表示 用
+- ⇒ [`thm.watts`](../nodes/thm.watts.md) 张量函子的刻画

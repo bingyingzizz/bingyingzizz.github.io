@@ -6,3 +6,5 @@
 - [`def.right-derived-functor`](../nodes/def.right-derived-functor.md) 右导出函子：用到了定义 右导出函子　[proofs/def-link.tor-derived.md](../proofs/def-link.tor-derived.md)
 - [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有：用到了定义 张量积对双线性映射万有　[proofs/def-link.tor-tensor.md](../proofs/def-link.tor-tensor.md)
 - [`def.deleted-resolution`](../nodes/def.deleted-resolution.md) 删除消解：用到了定义 删除消解　[proofs/dep.gap-tor-deleted-resolution.md](../proofs/dep.gap-tor-deleted-resolution.md)
+
+> 续见 [nodes/def.tor.4.md](./def.tor.4.md)

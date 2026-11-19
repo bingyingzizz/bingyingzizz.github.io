@@ -13,6 +13,7 @@ layer 21 · 命题 · 凝聚态集 · 凝聚态数学
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 4.6
 
-> 说明见 `notes/prop.open-covering-covering.md`
+## 说明
+⭐ 用处：$\mathrm{Cond}$ 里的覆盖可以**直接用拓扑的开覆盖**给出，这是后面「层在开集上算」的依据。
 
 引用：`prop.open-covering-covering`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

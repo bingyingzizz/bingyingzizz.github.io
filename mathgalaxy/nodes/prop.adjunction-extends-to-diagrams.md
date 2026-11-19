@@ -1,6 +1,6 @@
 # 伴随延拓到图范畴　`prop.adjunction-extends-to-diagrams`
 命题：$F \dashv G \implies F_{I} \dashv G_{I}$（逐点）
-layer 16 · 命题 · 伴随与反射 · 范畴论
+layer 19 · 命题 · 伴随与反射 · 范畴论
 [在星图里打开](../#n=prop.adjunction-extends-to-diagrams)　·　[节点索引](../index.md)
 
 若 $F : \mathcal{C} \to \mathcal{D}$ 与 $G : \mathcal{D} \to \mathcal{C}$ 互为伴随，则对任意指标范畴 $I$，**逐点作用**给出图范畴之间的伴随

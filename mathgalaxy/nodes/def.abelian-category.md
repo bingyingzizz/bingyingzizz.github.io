@@ -3,7 +3,7 @@
 layer 19 · 定义 · 加法与阿贝尔范畴 · 同调代数
 [在星图里打开](../#n=def.abelian-category)　·　[节点索引](../index.md)
 
-**阿贝尔范畴*
+**阿贝尔范畴**是满足下列**等价**条件之一的**预阿贝尔范畴**（预加法、加法、预阿贝尔的定义见 
 > 陈述续见 [nodes/def.abelian-category.2.md](./def.abelian-category.2.md)
 
 
@@ -13,7 +13,7 @@ layer 19 · 定义 · 加法与阿贝尔范畴 · 同调代数
 ## 它能推出什么 / 谁在用它
 - …另有出边，续页见 [nodes/def.abelian-category.7.md](./def.abelian-category.7.md)
 
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/def.abelian-category.3.md](./def.abelian-category.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §5.1–5.2

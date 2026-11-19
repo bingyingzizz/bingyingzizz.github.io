@@ -5,4 +5,6 @@
 - 被 [`prop.kan-extension-adjoint`](../nodes/prop.kan-extension-adjoint.md) Kan 延拓与伴随的存在性 用
 - 被 [`prop.kan-extension-exists`](../nodes/prop.kan-extension-exists.md) 有余极限时 Kan 延拓总存在 用
 - 被 [`prop.kan-extension-fully-faithful`](../nodes/prop.kan-extension-fully-faithful.md) 全忠实沿自身的 Kan 延拓 用
+- ⇒ [`prop.kan-extension-adjoint`](../nodes/prop.kan-extension-adjoint.md) Kan 延拓与伴随的存在性
+- ⇒ [`prop.kan-extension-exists`](../nodes/prop.kan-extension-exists.md) 有余极限时 Kan 延拓总存在
 - 被 [`ex.kan-extension`](../nodes/ex.kan-extension.md) Kan 延拓的两个例子 用

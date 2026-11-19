@@ -3,5 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据 用
+- ⇒ [`prop.left-exact-criterion`](../nodes/prop.left-exact-criterion.md) 左正合性的判据
+- ⇒ [`prop.preserves-products-kernels`](../nodes/prop.preserves-products-kernels.md) 保积与核 ⟹ 保所有有限极限
 - 被 [`def.exact-functor`](../nodes/def.exact-functor.md) 正合函子 用
 - 被 [`prop.preserves-products-kernels`](../nodes/prop.preserves-products-kernels.md) 保积与核 ⟹ 保所有有限极限 用

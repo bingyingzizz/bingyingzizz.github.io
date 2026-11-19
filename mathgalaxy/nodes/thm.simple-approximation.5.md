@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ⇒ [`prop.measurable-closure`](../nodes/prop.measurable-closure.md) 可测函数的封闭性
+- ⇒ [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质

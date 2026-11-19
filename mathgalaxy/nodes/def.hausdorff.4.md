@@ -10,5 +10,6 @@
 - 被 [`thm.baire`](../nodes/thm.baire.md) Baire 纲定理 用
 - 被 [`thm.riesz-markov`](../nodes/thm.riesz-markov.md) Riesz–Markov 表示 用
 - 被 [`ex.cg-examples`](../nodes/ex.cg-examples.md) 紧生成空间的例子 用
+- ⇒ [`cor.cg-product`](../nodes/cor.cg-product.md) 紧生成空间对积封闭
 
 > 续见 [nodes/def.hausdorff.5.md](./def.hausdorff.5.md)

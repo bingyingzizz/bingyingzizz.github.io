@@ -13,7 +13,7 @@ $$\operatorname{im} f \;=\; \ker\bigl(N \longrightarrow \operatorname{coker} f\b
 - …另有入边，续页见 [nodes/prop.image-kernel-cokernel.3.md](./prop.image-kernel-cokernel.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.image-kernel-cokernel.4.md](./prop.image-kernel-cokernel.4.md)
+- …另有出边，续页见 [nodes/prop.image-kernel-cokernel.5.md](./prop.image-kernel-cokernel.5.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 5.9
 

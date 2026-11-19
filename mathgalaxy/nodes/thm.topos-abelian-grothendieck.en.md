@@ -2,8 +2,8 @@
 English entry · root `../`
 [in graph](../#n=thm.topos-abelian-grothendieck)　·　[Chinese page (authoritative)](./thm.topos-abelian-grothendieck.md)
 
-> English: **stale** · stale fields: abstract, notes (the Chinese wording changed since this translation); the Chinese page is authoritative.
-> fields: abstract stale · statement reviewed · notes stale · name derived
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
+> fields: abstract draft · statement reviewed · notes draft · name derived
 
 layer 22 · theorem · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 

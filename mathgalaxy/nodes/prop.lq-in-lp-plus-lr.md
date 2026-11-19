@@ -10,10 +10,11 @@ $$L^q \subseteq L^p + L^r$$
 （右边理解为 $\{ g + h : g \in L^p,\ h \in L^r \}$。）
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.lp-norm`](../nodes/def.lp-norm.md) L^p 范数：用到了定义 L^p 范数　[proofs/def-link.lp-norm-lq-sum.md](../proofs/def-link.lp-norm-lq-sum.md)
+- …另有入边，续页见 [nodes/prop.lq-in-lp-plus-lr.2.md](./prop.lq-in-lp-plus-lr.2.md)
 
 refs: Folland, Real Analysis, Prop. 6.4
 
-> 说明见 `notes/prop.lq-in-lp-plus-lr.md`
+## 说明
+⭐ 这条说的是：**中间的 $L^q$ 可以被两端的 $L^p$ 与 $L^r$ 分担** —— 「大的部分」交给小的指数管，「小的部分」交给大的指数管。
 
 引用：`prop.lq-in-lp-plus-lr`（内容 v0.9.3）· CC BY 4.0 [LICENSE.txt](../LICENSE.txt)

@@ -1,7 +1,6 @@
 # 层与拓扑 / Sheaves and Topologies（cat.sheaf）· 节点清单（第 2/3 页）
 根 `../`　·　第 1 页 `index/cat.sheaf.md`
 
-- prop.covering-sieves-filter　覆盖筛构成滤子　layer 17
 - prop.topology-alternative-axiom　拓扑公理的替代形式　layer 17
 - thm.sheaf-descent　层的下降条件　layer 18
 - def.cech-functor　Čech 函子　layer 18
@@ -15,5 +14,6 @@
 - prop.constant-sheaf-adjunction　常层的伴随　layer 18
 - def.crystalline-sheaf　晶体层　layer 18
 - prop.cech-properties　Čech 函子的性质　layer 19
+- prop.sheafification-slice-colimit　层化是切片上的余极限　layer 19
 
 > 续见 `index/cat.sheaf.3.md`

@@ -3,3 +3,5 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.riesz-hilbert`](../nodes/thm.riesz-hilbert.md) Riesz 表示（Hilbert）：Riesz 表示定理：$L^{p}$ 版与 Hilbert 版　[proofs/e176.analogy.md](../proofs/e176.analogy.md)
+
+> 续见 [nodes/thm.riesz-representation-lp.6.md](./thm.riesz-representation-lp.6.md)

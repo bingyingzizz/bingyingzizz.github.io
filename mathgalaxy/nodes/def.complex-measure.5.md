@@ -3,5 +3,7 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.rn-complex`](../nodes/thm.rn-complex.md) 复测度的 Radon–Nikodym 用
+- ⇒ [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质
+- ⇒ [`thm.rn-complex`](../nodes/thm.rn-complex.md) 复测度的 Radon–Nikodym
 - 被 [`prop.total-variation-basics`](../nodes/prop.total-variation-basics.md) 全变差的基本性质 用
 - 被 [`def.regular-measure`](../nodes/def.regular-measure.md) 正则 Borel 测度 用

@@ -1,11 +1,16 @@
 # 万有系数定理　`thm.universal-coefficients`　·　说明
 根 `../`
 
-**证明（两条张量后的正合列，再比核与像）。** 记 $Z_{n} := \ker d_{n}$、$B_{n} := \operatorname{im} d_{n+1}$，于是 $H_{n}(C) = Z_{n}/B_{n}$。有两个短正合列
-$$0 \to Z_{n} \to C_{n} \to B_{n-1} \to 0 , \qquad 0 \to B_{n} \to Z_{n} \to H_{n}(C) \to 0 .$$
-主理想整环上 $C_{n}$ 自由，故 $Z_{n}$、$B_{n-1}$ 都**自由**（自由模的子模自由），于是第一条**分裂**，张量 $A$ 后仍正合；又自由 $\implies$ 平坦，故 $\operatorname{Tor}_{1}^{R}(Z_{n}, A) = \operatorname{Tor}_{1}^{R}(B_{n}, A) = 0$ ✓。
-**① 算中间的分子。** 把第一条张量 $A$ 后正合，得 $Z_{n}\otimes A \to C_{n}\otimes A$ 单、其像为 $\ker\bigl(C_{n}\otimes A \to B_{n-1}\otimes A\bigr)$，于是
-$$H_{n}(C\otimes A) = \frac{\ker\bigl(Z_{n}\otimes A \to B_{n-1}\otimes A\bigr)}{\operatorname{im}\bigl(B_{n}\otimes A \to Z_{n}\otimes A\bigr)} .$$
-**② 两个端点。** 把第二条张量 $A$（用 $\operatorname{Tor}_{1}(Z_{n},A) = 0$ 与 $\operatorname{Tor}_{0} = \otimes$
+⭐ **最常见的用法**：$A$ 取成域（$\mathbb{Z}$ 上的 $\mathbb{Q}$、域 $k$ 上的 $k$），$\operatorname{Tor}$ 项自动为零，于是
 
-> 续见 notes/thm.universal-coefficients.2.md
+
+
+$$H_{n}(C\otimes_{R} k) \cong H_{n}(C)\otimes_{R} k ,$$
+
+
+
+「系数扩张到域上」只是把同调张过去，**不产生新的类**。反过来，$A$ 有挠时多出来的那一块就来自低一次同调 —— 这正是万有系数定理真正的内容。
+
+⚠️ **两条假设**：$R$ 主理想整环（保证子模自由）与 $C_{\bullet}$ 每项自由。一般环上要换成「上边缘 $B_{n}$ 都投射」（即复形逐层分裂），否则 ① 的第一步就断。
+
+📌 同一条定理有**上同调版本**（$0 \to \operatorname{Ext}^{1}(H_{n-1}(C), A) \to H^{n}(\operatorname{Hom}(C, A)) \to \operatorname{Hom}(H_{n}(C), A) \to 0$），两项的角色由 $\operatorname{Tor}$ 换成 $\operatorname{Ext}$。

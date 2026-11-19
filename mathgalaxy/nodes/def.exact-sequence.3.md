@@ -8,3 +8,7 @@
 - 被 [`prop.tensor-right-exact`](../nodes/prop.tensor-right-exact.md) 张量函子右正合 用
 - 被 [`thm.long-exact-pair`](../nodes/thm.long-exact-pair.md) 对的长正合列 用
 - 被 [`def.acyclic-complex`](../nodes/def.acyclic-complex.md) 零调复形 用
+- ⇒ [`thm.five-lemma`](../nodes/thm.five-lemma.md) 五引理
+- ⇒ [`prop.abhaus-strict-exact`](../nodes/prop.abhaus-strict-exact.md) Hausdorff 拓扑阿贝尔群的核与余核
+
+> 续见 [nodes/def.exact-sequence.4.md](./def.exact-sequence.4.md)

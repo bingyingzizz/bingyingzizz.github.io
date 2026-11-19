@@ -6,3 +6,5 @@
 - 被 [`prop.free-sheaf-tensor`](../nodes/prop.free-sheaf-tensor.md) 自由对象的张量积 用
 - 被 [`prop.cech-cochain-formula`](../nodes/prop.cech-cochain-formula.md) Čech 上链的具体公式 用
 - 被 [`prop.slice-shriek-z`](../nodes/prop.slice-shriek-z.md) 切片左伴随作用在 Z 上 用
+- ⇒ [`prop.cech-cochain-formula`](../nodes/prop.cech-cochain-formula.md) Čech 上链的具体公式
+- ⇒ [`prop.free-sheaf-tensor`](../nodes/prop.free-sheaf-tensor.md) 自由对象的张量积

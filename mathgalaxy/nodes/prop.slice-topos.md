@@ -7,13 +7,11 @@ layer 20 · 命题 · 拓扑斯 · 范畴论
 > 陈述续见 [nodes/prop.slice-topos.2.md](./prop.slice-topos.2.md)
 
 
-## 为什么成立（入边，证明在 proofs/）
-- [`def.slice-category`](../nodes/def.slice-category.md) 切片范畴：用到了定义 切片范畴　[proofs/def-link.slicetopos-slice.md](../proofs/def-link.slicetopos-slice.md)
-
-- …另有入边，续页见 [nodes/prop.slice-topos.3.md](./prop.slice-topos.3.md)
-
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/prop.slice-topos.4.md](./prop.slice-topos.4.md)
+- ⇒ [`prop.slice-covering-sieve`](../nodes/prop.slice-covering-sieve.md) 切片里的覆盖筛
+
+## 为什么成立（入边，证明在 proofs/）
+- …另有入边，续页见 [nodes/prop.slice-topos.3.md](./prop.slice-topos.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, Exercise 3.63, Exercise 3.64
 

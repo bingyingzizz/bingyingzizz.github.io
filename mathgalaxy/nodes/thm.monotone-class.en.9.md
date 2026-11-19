@@ -2,13 +2,6 @@
 English entry · root `../`
 [in graph](../#n=thm.monotone-class)　·　[Chinese page (authoritative)](./thm.monotone-class.md)
 
-⚠ It is a sister result of "the criterion for a ring to be a $\sigma$-ring": that one says ring $+$ monotone $\implies$ $\sigma$-ring, this one says algebra $\implies$ monotone class and $\sigma$-algebra coincide.
+**How it is used** (the same for either version): to prove that a property holds for all sets in $\mathcal{M}(\mathcal{E})$, it suffices to ($i$) prove it for $\mathcal{E}$ and (ii) prove that "it holds" is preserved by increasing unions and decreasing intersections — then the sets for which it holds form a monotone class containing $\mathcal{E}$, hence one containing $\mathfrak{m}(\mathcal{E}) = \mathcal{M}(\mathcal{E})$. Uniqueness of the measure extension, the section formula for product measures and the approximation of measurable functions all follow this pattern.
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
-
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Monotone_class_theorem
-
-
-Cite: `thm.monotone-class` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.monotone-class.en.10.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 15 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
+layer 18 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 names: `Kan Extension Existence` (short) · `Left Kan Extensions Exist Given Colimits` (full)
 
 ## Statement and proof

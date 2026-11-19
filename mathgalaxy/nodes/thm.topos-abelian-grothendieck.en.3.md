@@ -2,6 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.topos-abelian-grothendieck)　·　[Chinese page (authoritative)](./thm.topos-abelian-grothendieck.md)
 
-tive.
+## Statement · **reviewed**
+If $\mathcal{T}$ is a topos, then the category $\mathcal{T}(\mathbf{Ab})$ of abelian sheaves on $\mathcal{T}$ is a **Grothendieck category**: it has a small set of generators, has all colimits, and filtered colimits are exact.
 
 > continued in nodes/thm.topos-abelian-grothendieck.en.4.md

@@ -5,6 +5,9 @@
 - 被 [`prop.tensor-rhom-natural-map`](../nodes/prop.tensor-rhom-natural-map.md) 张量与导出 Hom 的配对 用
 - 被 [`prop.cohomology-as-ext`](../nodes/prop.cohomology-as-ext.md) 上同调就是 Ext 用
 - 被 [`prop.internal-hom-slice-value`](../nodes/prop.internal-hom-slice-value.md) 内 Hom 的取值 用
-- 被 [`def.tensor-abelian-sheaf`](../nodes/def.tensor-abelian-sheaf.md) 阿贝尔层的张量积 用
-- 被 [`prop.continuous-hom-condensed`](../nodes/prop.continuous-hom-condensed.md) 连续同态与内部 Hom 用
-- 被 [`prop.ext-is-rhom`](../nodes/prop.ext-is-rhom.md) Ext 就是导出 Hom 用
+- ⇒ [`prop.cohomology-as-ext`](../nodes/prop.cohomology-as-ext.md) 上同调就是 Ext
+- ⇒ [`prop.continuous-hom-condensed`](../nodes/prop.continuous-hom-condensed.md) 连续同态与内部 Hom
+- ⇒ [`prop.discrete-cond-rhom-constant`](../nodes/prop.discrete-cond-rhom-constant.md) 离散群的导出 Hom 是常层
+- ⇒ [`prop.ext-is-rhom`](../nodes/prop.ext-is-rhom.md) Ext 就是导出 Hom
+
+> 续见 [nodes/def.internal-hom.6.md](./def.internal-hom.6.md)

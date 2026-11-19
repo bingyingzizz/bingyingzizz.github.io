@@ -5,5 +5,9 @@
 - ⇒ [`prop.topos-sheaf-limits`](../nodes/prop.topos-sheaf-limits.md) 拓扑斯上的层即保极限的预层
 - 被 [`prop.quasi-compact-properties`](../nodes/prop.quasi-compact-properties.md) 拟紧的性质 用
 - 被 [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降 用
+- ⇒ [`lem.representable-quotient`](../nodes/lem.representable-quotient.md) 可表示性的下降
+- ⇒ [`prop.disjoint-universal`](../nodes/prop.disjoint-universal.md) 不交万有余积与次标准拓扑
+- ⇒ [`prop.topos-covering-epi`](../nodes/prop.topos-covering-epi.md) 拓扑斯中覆盖即余积满射
 - 被 [`prop.disjoint-universal`](../nodes/prop.disjoint-universal.md) 不交万有余积与次标准拓扑 用
-- 被 [`thm.giraud`](../nodes/thm.giraud.md) Giraud 定理 用
+
+> 续见 [nodes/def.canonical-topology.4.md](./def.canonical-topology.4.md)

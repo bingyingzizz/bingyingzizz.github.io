@@ -2,12 +2,12 @@
 索引 `hubs.md`
 
 被最多结论当作前置（出边多）—— 值得优先学熟。
-- **24 / 27** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
+- **25 / 25** `def.category` 范畴 · layer 9 · 范畴与图
+- **24 / 34** `def.topos` 拓扑斯 · layer 19 · 拓扑斯
+- **24 / 30** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 21 · 凝聚态阿贝尔群
 - **24 / 24** `def.function` 映射 · layer 7 · 关系与函数
-- **24 / 24** `def.condensed-abelian-group` 凝聚态阿贝尔群 · layer 21 · 凝聚态阿贝尔群
-- **23 / 24** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
-- **22 / 23** `def.metric-space` 距离空间 · layer 16 · 度量空间
+- **23 / 32** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
 
-（共 1104 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1110 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

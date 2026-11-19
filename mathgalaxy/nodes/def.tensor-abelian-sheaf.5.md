@@ -4,6 +4,8 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.free-sheaf-tensor`](../nodes/prop.free-sheaf-tensor.md) 自由对象的张量积 用
 - 被 [`prop.inverse-image-tensor`](../nodes/prop.inverse-image-tensor.md) 拉回与内 Hom、张量积相容 用
+- ⇒ [`prop.free-sheaf-tensor`](../nodes/prop.free-sheaf-tensor.md) 自由对象的张量积
+- ⇒ [`prop.tensor-rhom-natural-map`](../nodes/prop.tensor-rhom-natural-map.md) 张量与导出 Hom 的配对
 - 被 [`def.flat-abelian-sheaf`](../nodes/def.flat-abelian-sheaf.md) 平坦阿贝尔层 用
 - 被 [`prop.ring-tensor-coproduct`](../nodes/prop.ring-tensor-coproduct.md) 交换环的纤维余积是张量积 用
 - 被 [`prop.rhom-dual-tensor`](../nodes/prop.rhom-dual-tensor.md) 离散对偶的导出 Hom 与导出张量 用

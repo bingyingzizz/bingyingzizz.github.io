@@ -5,4 +5,5 @@
 - 被 [`def.borel`](../nodes/def.borel.md) Borel σ-代数 用
 - 被 [`def.product-sigma`](../nodes/def.product-sigma.md) 积 σ-代数 用
 - 被 [`prop.product-sigma-base`](../nodes/prop.product-sigma-base.md) 积 σ-代数的生成基 用
+- ⇒ [`prop.measurable-criterion`](../nodes/prop.measurable-criterion.md) 可测性的两条判定准则
 - ～弱边 [`def.vs`](../nodes/def.vs.md) 线性无关与基

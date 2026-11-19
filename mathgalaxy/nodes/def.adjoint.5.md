@@ -7,8 +7,8 @@
 - 被 [`prop.currying`](../nodes/prop.currying.md) 函数的柯里化 用
 - 被 [`prop.copowers-give-adjoint`](../nodes/prop.copowers-give-adjoint.md) 有余幂则可表示函子有伴随 用
 - 被 [`def.power-object`](../nodes/def.power-object.md) 幂对象 用
-- 被 [`thm.right-adjoint-preserves-limits`](../nodes/thm.right-adjoint-preserves-limits.md) 右伴随保极限 用
-- 被 [`ex.kan-extension`](../nodes/ex.kan-extension.md) Kan 延拓的两个例子 用
-- 被 [`thm.right-adjoint-criterion`](../nodes/thm.right-adjoint-criterion.md) 右伴随存在的判据 用
+- ⇒ [`prop.adjoint-additive`](../nodes/prop.adjoint-additive.md) 伴随函子都加法
+- ⇒ [`prop.counit-epi-iff-faithful`](../nodes/prop.counit-epi-iff-faithful.md) 余单位与忠实性
+- ⇒ [`prop.injective-criterion`](../nodes/prop.injective-criterion.md) 内射对象的判据
 
 > 续见 [nodes/def.adjoint.6.md](./def.adjoint.6.md)

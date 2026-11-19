@@ -7,7 +7,7 @@
 - 被 [`thm.lebesgue-radon-nikodym`](../nodes/thm.lebesgue-radon-nikodym.md) Lebesgue–Radon–Nikodym 定理 用
 - 被 [`prop.ac-iff-measure-ac`](../nodes/prop.ac-iff-measure-ac.md) 函数绝对连续 ⟺ 测度绝对连续 用
 - 被 [`ex.density-abs-continuous`](../nodes/ex.density-abs-continuous.md) 密度型测度绝对连续 用
+- ⇒ [`cor.rn-inverse`](../nodes/cor.rn-inverse.md) 互为绝对连续时导数互逆
 - 被 [`cor.ac-integral-continuity`](../nodes/cor.ac-integral-continuity.md) 积分的绝对连续性 用
-- 被 [`cor.rn-inverse`](../nodes/cor.rn-inverse.md) 互为绝对连续时导数互逆 用
 
 > 续见 [nodes/def.absolute-continuity.4.md](./def.absolute-continuity.4.md)

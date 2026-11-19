@@ -2,6 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.abhaus-strict-exact)　·　[Chinese page (authoritative)](./prop.abhaus-strict-exact.md)
 
-The cokernel is a coequalizer. The quotient in $\mathbf{AbHaus}$ must still be Hausdorff, and $N/f(M)$ is Hausdorff only when $f(M)$ is **closed**. Thus the coequalizer must be $N/\overline{f(M)}$ (with the quotient topology) ✓. The image of a general continuous homomorphism **need not be closed** (the image of $\mathbb{Z}^{\mathrm{disc}} \to \mathbb{Z}^{\mathrm{coarse}}$ is dense and nonclosed), so the closure is necessary;
+**Hypotheses used in each direction** (the universal property of kernel and cokernel also determines the topology):
+- Kernel $\implies$ closed embedding: the kernel carries the subspace topology, and a Hausdorff target makes the zero point closed; conversely a closed embedding is the kernel of the quotient map $M\to M/H$, and it must not be miscalled the equaliser of itself with zero.
+- Cokernel $\implies$ open surjection: quotient by the closure of the image, and the quotient map of groups is open; conversely an open surjection gives a homeomorphism onto the quotient by the kerne
 
 > continued in nodes/prop.abhaus-strict-exact.en.6.md

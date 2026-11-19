@@ -8,8 +8,6 @@ layer 20 · 命题 · 复形与导出三角 · 同调代数
 
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.homotopy`](../nodes/def.homotopy.md) 同伦：用到了定义 同伦　[proofs/def-link.homcriterion-homotopy.md](../proofs/def-link.homcriterion-homotopy.md)
-
 - …另有入边，续页见 [nodes/prop.homotopy-equivalence-criterion.3.md](./prop.homotopy-equivalence-criterion.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §7.1

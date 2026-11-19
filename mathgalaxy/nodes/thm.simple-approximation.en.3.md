@@ -2,12 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.simple-approximation)　·　[Chinese page (authoritative)](./thm.simple-approximation.md)
 
-## Notes · **draft**
-**Proof.**
-**(a)** For $n \ge 1$ and $k = 0, 1, \ldots, 2^{n}n - 1$, set
-$$E_{n,k} := f^{-1}\bigl((k2^{-n}, (k+1)2^{-n}]\bigr), \qquad F_{n} := f^{-1}\bigl((n, +\infty]\bigr),$$
-$$\varphi_{n} := \sum_{k} k\,2^{-n}\,\chi_{E_{n,k}} \;+\; n\,\chi_{F_{n}} \;+\; 0\cdot\chi_{f^{-1}(\{0\})}.$$
-- **Simplicity**: each $E_{n,k}$ and $F_{n}$ is measurable ($f$ measurable plus intervals are Borel sets), and only finitely many values occur ✓;
-- **$0 \le \varphi_{n} \le f$**: on $E_{n,k}$ we have $k2^{-n} < f \le (k+1)2^{-n}$ ✓; on $F_{n}$ we 
+$$\varphi_n = \sum_{k=0}^{2^n\cdot n-1} k\cdot2^{-n}\cdot\chi_{E_n^k} + n\cdot\chi_{F_n}, $$
+
+$$E_n^k = f^{-1}((k\cdot2^{-n}, (k+1)\cdot2^{-n}]), \quad  F_n = f^{-1}((n, +\infty])$$
+
+Each layer is the preimage of a measurable set, so $\varphi _{n}$ is a simple function; as $n$ grows the grid refines and the ceiling rises, so the sequence climbs monotonically to $f$.
+
+For (b), split $f = g + ih$ into $g = g^+ - g^-$ and $h = h^+ - h^-$, and apply (a) to the four nonnegative parts:
+
+$$\varphi_n = \psi_n^+ - \psi_n^- + i(\zeta _n^+ - \zeta _n^-)$$
 
 > continued in nodes/thm.simple-approximation.en.4.md

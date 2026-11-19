@@ -1,8 +1,12 @@
 # 三角态射的性质　`lem.triangle-morphism`　·　说明
 根 `../`
 
-**证明第 2 条（三角的五引理）。** 取任意 $T \in \mathbf{K}(\mathcal{C})$，对共调函子 $\operatorname{Hom}_{\mathbf{K}}(T, -)$ 作用在两个三角上，得两条长正合列，并由 $(u, v, w, u[1], v[1], w[1])$ 连起来：
+**第 1 条在说什么**：三角之间的态射被前两步控制得很紧 —— 前两步一旦归零，第三步不但被逼成零平方，还被夹在两条正合列之间。这正是三角范畴公理里那条最不显然的要求的来源。
 
-$$\begin{array}{ccccccccc} \operatorname{Hom}(T, K) & \to & \operatorname{Hom}(T, L) & \to & \operatorname{Hom}(T, M) & \to & \operatorname{Hom}(T, K[1]) & \to & \operatorname{Hom}(T, L[1]) \\ {\scriptstyle u_{*}}\big\downarrow & & {\scriptstyle v_{*}}\big\downarrow & & {\scriptstyle w_{*}}\big\downarrow & & {\scriptstyle u[1]_{*}}\big\downarrow & & {\scriptstyle v[1]_{*}}\big\downarrow \\ \operatorname{Hom}(T, K') & \to & \operatorname{Hom}(T, L') & \to & \operatorname{Hom}(T, M') & \to & \operatorname{Hom}(T, K'[1]) & \to & \operatorname{Hom}(T, L'[1]) \end{array}$$
+**各方向用到的假设**（这两条是三角态射的推论，并非互为逆命题）：
+- 在 $\mathbf{K}(\mathcal{C})$ 中同伦等价 $\iff$ 同构：由同伦范畴态射的定义展开；后续必须在此范畴讨论。
+- 自态射且 $u=v=0$ $\implies$ $w^2=0$：需导出三角的 Hom 长正合列，把 $w$ 经连接态射分解，再用相邻箭头复合为零；不是零态射的定义展开。
+- $u,v$ 为同伦等价 $\implies$ $w$ 为同伦等价：对每个对象应用 Hom 长正合列、五引理及 Yoneda 判据；不需复形逐项有限或有界。
+- 第三分量同构不推出前两分量都同构：两个恒等三角 $K\xrightarrow{1}K\to0\to K[1]$ 之间取 $(0,0,1_0)$，非零 $K$ 时前两项不是同构；“到自身”也是写 $w^2$ 的必要类型条件。
 
 > 续见 notes/lem.triangle-morphism.2.md

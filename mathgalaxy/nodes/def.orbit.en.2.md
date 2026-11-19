@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.orbit)　·　[Chinese page (authoritative)](./def.orbit.md)
 
-The relation $x \sim y \iff \exists g \in G,\ y = g \cdot x$ is an equivalence relation on $X$, and the orbits are precisely its equivalence classes; hence $X$ is the **disjoint union** of the orbits. The action is **transitive** if $X$ has only one orbit.
+## Notes · **draft**
+⭐ When $G$ is finite, the orbit size divides $|G|$: orbit–stabilizer gives $|Gx| = [G : G_x]$ (see `thm.orbit-stabilizer`; for infinite groups read it as equipotence).
 
-## Notes · **stale**
-⭐ The orbit size divides $|G|$: orbit–stabilizer gives $|Gx| = [G : G_x]$ (see `thm.orbit-stabilizer`).
+⭐ Examples: $S_n$ acts transitively on $\{1,\ldots,n\}$; the orbits of the conjugation action are conjugacy classes; the left multiplication action has only one orbit.
 
-⭐ Examples: $S_n$ is transitive on the first n positive integers; the orbits of the conjugation action are the conjugacy classes; the left multiplication action has only one orbit.
+⚠ Orbits of different $x$ are either equal or disjoint; they never "partially overlap".
 
-⚠ Orbits of different $x$ are either equal or disjoint, never "partially overlapping".
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> continued in nodes/def.orbit.en.3.md
+
+Cite: `def.orbit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

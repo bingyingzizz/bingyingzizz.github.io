@@ -7,3 +7,5 @@
 - 被 [`thm.pid-fg-module-structure`](../nodes/thm.pid-fg-module-structure.md) PID 上有限生成模的结构 用
 - ⇒ [`thm.pid-fg-module-structure`](../nodes/thm.pid-fg-module-structure.md) PID 上有限生成模的结构
 - ⇒ [`def.ufd`](../nodes/def.ufd.md) 唯一分解整环
+- ⇒ [`thm.universal-coefficients`](../nodes/thm.universal-coefficients.md) 万有系数定理
+- ⇒ [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext

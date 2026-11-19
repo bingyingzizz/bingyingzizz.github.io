@@ -2,7 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.analytic-ring)　·　[Chinese page (authoritative)](./def.analytic-ring.md)
 
-complexes.
-- The original text's explanation identifying $\operatorname{RHom}_{\mathcal A}$ with $\operatorname{RHom}_A$ directly carries a circularity risk: for a general pre-analytic ring the derived category of complete modules has not been set up, so this step is unverified and recorded as a gap; the test condition is better formulated first in the derived category of condensed $A$-modules.
+Identifying $\operatorname{RHom}_{\mathcal A}(\mathcal A[S],C)$ with $\operatorname{RHom}_A(\mathcal A[S],C)$ **does not require** the derived category of complete modules: $C$ is a complex of $\mathcal A$-modules and $\mathcal A[S]$ is free, so both sides are canonically isomorphic to $C^{S}$ degree by degree, hence also at the derived level. The definition can therefore be stated entirely in the derived category of modules over the underlying $A$, without circularity.
 
 > continued in nodes/def.analytic-ring.en.10.md

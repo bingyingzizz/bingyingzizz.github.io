@@ -1,14 +1,10 @@
 # 米田引理　`lem.yoneda`　·　说明
 根 `../`
 
-**证明。** 定义映射
-$$\Phi : \operatorname{Nat}(h^{X}, F) \longrightarrow F(X), \qquad \Phi(\alpha) := \alpha_{X}(1_{X}).$$
-- **逆映射**：给 $u \in F(X)$，对每个 $Y$ 定义
-$$\Psi(u)_{Y} : \operatorname{Hom}_{\mathcal{C}}(X, Y) \to F(Y), \qquad \Psi(u)_{Y}(f) := F(f)(u).$$
-它是自然的：对 $g : Y \to Z$，由 $F$ 的函子性 $F(g)\circ F(f) = F(g\circ f)$，两边正是 $F(g)\bigl(\Psi(u)_{Y}(f)\bigr)$ 与 $\Psi(u)_{Z}(g\circ f)$ ✓。
-- **$\Phi\Psi = \mathrm{id}$**：$\Psi(u)_{X}(1_{X}) = F(1_{X})(u) = u$ ✓。
-- **$\Psi\Phi = \mathrm{id}$**：给 $\alpha$ 与 $f : X\to Y$，用 $\alpha$ 的自然性（作用在 $f$ 上）
-$$\alpha_{Y}\circ h^{X}(f) = F(f)\circ \alpha_{X} \;\implies\; \alpha_{Y}(f) = F(f)\bigl(\alpha_{X}(1_{X})\bigr) = \Psi\bigl(\Phi(\alpha)\bigr)_{Y}(f) ✓$$
-- **自然性**：$\Phi$ 对 $F$ 自然（沿 $\beta : F\to G$ 两边都变成 $\beta_{X}\circ(-)$）✓；对 $X$ 也自然（沿 $k : X'\to X$，$h^{
+这个双射在两**边**都自然：对 $F$（自然变换）自然，对 $X$（态射）也自然。两头都自然，才是这条引理真正有分量的地方。
 
-> 续见 notes/lem.yoneda.2.md
+它把「$h^{X}$ 到 $F$ 的所有自然变换」这个原则上无从下手的集合，压成了 $F(X)$ 里的**一个元素**。后面凡是遇到「自然变换不好数」的地方，基本都是靠这一步救场。
+
+对偶形式：$T$ 是预层（$T : \mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$）、$h_{X} = \operatorname{Hom}(-, X)$ 时可表示预层时，同样有 $\operatorname{Hom}(h_{X}, T) \cong T(X)$。
+
+两式只是把 $\mathcal{C}$ 换成 $\mathcal{C}^{\mathrm{op}}$，所以后面的推导两套都用。

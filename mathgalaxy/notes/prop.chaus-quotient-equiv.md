@@ -1,20 +1,8 @@
 # 紧 Hausdorff 上商映射的四种说法　`prop.chaus-quotient-equiv`　·　说明
 根 `../`
 
-**证明（循环）。** (1)$\implies$(2)：商映射是某个余等化子，因而正则满 ✓。
-
-(2)$\implies$(3)：正则满自动是满态射 ✓。
-
-(3)$\implies$(4)：紧 Hausdorff 之间，满态射就是满射（紧 Hausdorff 是「投射对象够多」的范畴，满态射有截面，特别地满）✓。
-
-(4)$\implies$(1)：紧 Hausdorff 的连续满射是商映射（紧空间到 Hausdorff 空间的连续满射诱导同胚于商）✓。
-
-∎
-
 ⭐ 用处：在紧 Hausdorff 里验「商映射」不必再拿开集去对，**满射就够了** —— 这是后面把「覆盖」读成「满态射」的依据。
 
-📌 「紧 $\to$ Hausdorff 的连续满射是商映射」这一步用的是：紧空间里闭子集紧、连续像紧，于是 $T$ 里的闭集若拉回来闭就闭。
+📌 关键一步「紧 $\to$ Hausdorff 的连续满射是商映射」：紧空间里闭子集紧、连续像紧，于是 $T$ 里的闭集若拉回来闭就闭。
 
-**四条里真正的“桥”是 (2) $\iff$ (3)**，而它完全靠**紧 Hausdorff**：
-
-> 续见 notes/prop.chaus-quotient-equiv.2.md
+⚠️ (3)$\implies$(4) 用 Sierpiński 空间分离，不能换成「紧 Hausdorff 满态射有截面」——那是假的（$[0,1]\to S^{1}$ 的商映射没有截面）。把「紧 Hausdorff」换成「Hausdorff」，(3)$\implies$(4) 立刻失效（$\mathbb{Q}\hookrightarrow\mathbb{R}$ 是满态射而非满射）。

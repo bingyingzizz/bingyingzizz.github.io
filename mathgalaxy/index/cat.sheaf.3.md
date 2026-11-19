@@ -1,9 +1,9 @@
 # 层与拓扑 / Sheaves and Topologies（cat.sheaf）· 节点清单（第 3/3 页）
 根 `../`　·　第 1 页 `index/cat.sheaf.md`　·　上一页 `index/cat.sheaf.2.md`
 
-- prop.sheafification-slice-colimit　层化是切片上的余极限　layer 19
 - prop.constant-sheaf-top　拓扑空间上的常层就是离散空间的层　layer 19
 - thm.sheafification　层化　layer 20
+- prop.sheaf-mono-epi-iso　层中单满即同构　layer 20
 - prop.stalk-separated　茎与分离预层　layer 20
 - prop.crystalline-sheaf-equiv　晶体层就是 X 上的层　layer 20
 - prop.site-properties　景的层范畴的好性质　layer 21

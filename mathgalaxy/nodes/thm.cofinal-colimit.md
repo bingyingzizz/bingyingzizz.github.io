@@ -8,8 +8,6 @@ layer 16 · 定理 · 图与极限 · 范畴论
 $$\varinjlim_{j \in J} D\bigl(F(j)\bigr) \;\cong\; \varinjlim_{i \in I} D(i).$$
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-dep.cofinalcolim-colimit.md](../proofs/def-dep.cofinalcolim-colimit.md)
-
 - …另有入边，续页见 [nodes/thm.cofinal-colimit.2.md](./thm.cofinal-colimit.2.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §1.3

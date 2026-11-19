@@ -12,3 +12,5 @@
 - 被 [`lem.gauss-qr`](../nodes/lem.gauss-qr.md) Gauss 引理（二次剩余） 用
 - 被 [`thm.quadratic-reciprocity`](../nodes/thm.quadratic-reciprocity.md) 二次互反律 用
 - 被 [`thm.euler-product`](../nodes/thm.euler-product.md) Euler 乘积 用
+
+> 续见 [nodes/def.prime.3.md](./def.prime.3.md)

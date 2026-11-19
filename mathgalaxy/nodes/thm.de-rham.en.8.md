@@ -2,7 +2,7 @@
 English entry · root `../`
 [in graph](../#n=thm.de-rham)　·　[Chinese page (authoritative)](./thm.de-rham.md)
 
- full. **Acyclicity of fine sheaves** is an external lemma (Gap D).
-**Step 3: The Čech–de Rham double complex.** Choose a good cover $\mathfrak{U}=\{U_\alpha\}$ (each point has a basis of contractible neighborhoods). Arrange $\check{C}^{p}(\mathfrak{U},\Omega^{q})$ into a double complex with the Čech coboundary $\delta$ as the horizontal differential and $\mathrm{d}$ as the vertical differential. The cohomology of the total complex $\operatorname{Tot}$ can be computed in either direction. Taking cohomology first with respect to $\mathrm{d}$ (each column $\Omega^{\bullet}(U_{p})$ is exact by the Poincaré lemma, leaving only, at $q=0$, the term $H^{0}_{\mathrm{dR}}(U_{p})=
+ined and clearly $\mathbb{R}$-bilinear.
+**Step 2: $\Omega^{\bullet}$ is a resolution of the constant sheaf $\underline{\mathbb{R}}$ (exactness is fully verifiable within the graph).** Exactness at each stalk follows from the Poincaré lemma (`lem.poincare-lemma`). $\ker(\mathrm{d}:\Omega^{0}\to\Omega^{1})$ is the sheaf of locally constant functions $\underline{\mathbb{R}}$. Since $\Omega^{q}$ is a fine sheaf and fine sheaves on paracompact manifolds have vanishing higher cohomology (Godement's lemma), we obtain $H^{k}_{\mathrm{dR}}(M)=H^{k}\bigl(\Gamma(M,\Omega^{\bullet})\bigr)\cong H^{k}(M;\underline{\mathbb{R}}).$. The **exactness** in this step can be checked in
 
 > continued in nodes/thm.de-rham.en.9.md

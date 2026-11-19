@@ -8,4 +8,5 @@
 - 被 [`def.strictly-convex`](../nodes/def.strictly-convex.md) 严格凸 用
 - 被 [`thm.linear-continuous-bounded`](../nodes/thm.linear-continuous-bounded.md) 连续 ⟺ 有界 用
 - 被 [`thm.hahn-banach`](../nodes/thm.hahn-banach.md) Hahn–Banach 定理 用
+- ⇒ [`lem.almost-orthogonal`](../nodes/lem.almost-orthogonal.md) 几乎正交引理
 - 被 [`def.banach-space`](../nodes/def.banach-space.md) Banach 空间 用

@@ -10,7 +10,7 @@ $$\varinjlim : \mathbf{Set}^{I} \longrightarrow \mathbf{Set}$$
 保持所有有限极限。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-filtered-exact.md](../proofs/dep.cat-sets-prop-filtered-exact.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴 + [`def.limit`](../nodes/def.limit.md) 极限 + [`def.commutative-diagram`](../nodes/def.commutative-diagram.md) 图与交换图：imp.filtered-exact　[proofs/imp.filtered-exact.md](../proofs/imp.filtered-exact.md)
 
 - …另有入边，续页见 [nodes/prop.filtered-exact.2.md](./prop.filtered-exact.2.md)
 

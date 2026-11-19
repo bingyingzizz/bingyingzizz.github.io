@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.inner-product`](../nodes/def.inner-product.md) 内积 用
+- ⇒ [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理

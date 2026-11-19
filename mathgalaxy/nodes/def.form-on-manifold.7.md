@@ -6,3 +6,4 @@
 - 被 [`thm.stokes-chain`](../nodes/thm.stokes-chain.md) 链上的 Stokes 定理 用
 - 被 [`def.symplectic-manifold`](../nodes/def.symplectic-manifold.md) 辛流形 用
 - 被 [`def.hodge-star`](../nodes/def.hodge-star.md) Hodge 星号 用
+- ⇒ [`prop.pullback-form-manifold`](../nodes/prop.pullback-form-manifold.md) 拉回

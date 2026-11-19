@@ -9,7 +9,7 @@ The left adjoint is given by a limit construction:
 
 $$F(X) \;=\; \varprojlim_{(Y,\, f) \in (X \downarrow G)} Y$$
 
-## Notes · **stale**
-**Preservation of limits is the only obstruction.** Together with "a right adjoint preserves limits" this gives a complete criterion: preservation of limits is necessary, and on a complete small category it is also sufficient.
+## Notes · **draft**
+**Preservation of limits is the only obstruction.** Together with "right adjoints preserve limits" this is a complete criterion: preserving limits is necessary, and on complete small categories it is also sufficient.
 
 > continued in nodes/thm.saft.en.4.md

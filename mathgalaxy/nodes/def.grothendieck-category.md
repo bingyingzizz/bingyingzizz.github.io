@@ -11,8 +11,6 @@ layer 21 · 定义 · 加法与阿贝尔范畴 · 同调代数
 - …另有入边，续页见 [nodes/def.grothendieck-category.2.md](./def.grothendieck-category.2.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.condab-ab`](../nodes/thm.condab-ab.md) 凝聚态阿贝尔群满足 AB6 与 AB4* 用
-
 - …另有出边，续页见 [nodes/def.grothendieck-category.3.md](./def.grothendieck-category.3.md)
 
 refs: Le Stum, An introduction to condensed mathematics, §5.1–5.2

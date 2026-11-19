@@ -10,7 +10,9 @@ $$\int (af + bg) = a\int f + b\int g\quad  \forall a, b \in \mathbb{R}$$
 即 $f \mapsto \int f$ 是线性的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.integrable`](../nodes/def.integrable.md) 可积 / L¹：用到了定义 可积 / L¹　[proofs/def-link.integrable-L1-vectorspace.md](../proofs/def-link.integrable-L1-vectorspace.md)
+- [`def.integrable`](../nodes/def.integrable.md) 可积 / L¹ + [`thm.mct`](../nodes/thm.mct.md) 单调收敛定理：imp.L1-vector-space　[proofs/imp.L1-vector-space.md](../proofs/imp.L1-vector-space.md)
+
+- …另有入边，续页见 [nodes/prop.L1-vector-space.2.md](./prop.L1-vector-space.2.md)
 
 refs: Folland, Real Analysis, Prop. 2.21
 

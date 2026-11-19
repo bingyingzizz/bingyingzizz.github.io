@@ -2,7 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.topos-abelian-grothendieck)　·　[Chinese page (authoritative)](./thm.topos-abelian-grothendieck.md)
 
-- **Abelian**: first verify componentwise in the presheaf category $\widehat{\mathcal{C}}(\mathbf{Ab})$ (there one simply has pointwise abelian groups) — concretely, for an arbitrary morphism $u$ verify $\operatorname{coker}(\ker u) \cong \ker(\operatorname{coker} u)$; then transport these identities back to the sheaf category along the **exact reflection** (sheafification). The same argument gives exactness of filtered colimits.
-- **All limits and colimits exist**: because the sheaf category is a reflective subcategory of the presheaf category.
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
 
-> continued in nodes/thm.topos-abelian-grothendieck.en.6.md
+## Elsewhere
+Wikipedia: https://en.wikipedia.org/wiki/Grothendieck_category · nLab: https://ncatlab.org/nlab/show/Grothendieck+category
+
+
+Cite: `thm.topos-abelian-grothendieck` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

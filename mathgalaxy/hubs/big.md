@@ -10,9 +10,9 @@
 - **8 / 5** `thm.theorema-egregium` 绝妙定理 · layer 37 · 内蕴几何
 - **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 36 · 数论函数与素数分布
 - **7 / 8** `thm.bundle-classification` 丛的分类 · layer 36 · 丛的示性类
+- **7 / 7** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 22 · 阿贝尔层
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 27 · 同调群
 - **7 / 7** `thm.cartan-formula` Cartan 公式 · layer 31 · 向量场与 Lie 结构
 - **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
-- **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 30 · L^p 空间
 
 > 续见 hubs/big.2.md

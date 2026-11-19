@@ -9,15 +9,14 @@ layer 25 · 定义 · L^p 空间 · 实变函数+数学分析
 
 ## 为什么成立（入边，证明在 proofs/）
 - [`def.complex`](../nodes/def.complex.md) 复数 ℂ：用到了定义 复数 ℂ　[proofs/dep.complex-lp.md](../proofs/dep.complex-lp.md)
+- [`def.abs`](../nodes/def.abs.md) 绝对值 |x|：用到了定义 绝对值 |x|　[proofs/def-link.abs-lp-norm.md](../proofs/def-link.abs-lp-norm.md)
 
 - …另有入边，续页见 [nodes/def.lp-norm.4.md](./def.lp-norm.4.md)
 
 ## 它能推出什么 / 谁在用它
-- 被 [`thm.holder`](../nodes/thm.holder.md) Hölder 不等式 用
+- …另有出边，续页见 [nodes/def.lp-norm.5.md](./def.lp-norm.5.md)
 
-- …另有出边，续页见 [nodes/def.lp-norm.6.md](./def.lp-norm.6.md)
-
-## English abstract · **stale** (the Chinese wording changed since this translation) · machine-drafted, pending author review; Chinese is authoritative
+## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/def.lp-norm.3.md](./def.lp-norm.3.md)
 
 refs: Folland, Real Analysis, §6.1

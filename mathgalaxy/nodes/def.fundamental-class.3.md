@@ -3,4 +3,6 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.set-class-properties`](../nodes/prop.set-class-properties.md) 集合族的基本性质 用
+- ⇒ [`prop.ls-premeasure`](../nodes/prop.ls-premeasure.md) F 给出的预测度
+- ⇒ [`prop.set-class-properties`](../nodes/prop.set-class-properties.md) 集合族的基本性质
 - 被 [`prop.ls-premeasure`](../nodes/prop.ls-premeasure.md) F 给出的预测度 用

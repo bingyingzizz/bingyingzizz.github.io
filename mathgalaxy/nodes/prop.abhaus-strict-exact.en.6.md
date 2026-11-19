@@ -2,7 +2,8 @@
 English entry · root `../`
 [in graph](../#n=prop.abhaus-strict-exact)　·　[Chinese page (authoritative)](./prop.abhaus-strict-exact.md)
 
-when the image is already closed, this reduces to $N/f(M)$ ✓.
-**2.** A kernel is an equalizer with the subspace topology, so the map is a homeomorphic embedding onto a closed subgroup ✓. Conversely, a closed embedding $\varphi : M' \to M$ is precisely the equalizer of $\varphi$ and $0$ (the equalizer carries the subspace topology, and the closed image ensures that the quotient gives the correct cokernel) ✓.
+l, hence is the cokernel of its kernel — both need the universal property of the quotient topology.
+- Strictly exact $\iff$ abstract exactness plus closed embeddings and open surjections: forward, expand the kernel–cokernel sequence and use the descriptions above; backward, recover the universal property via the two topological identifications, with no open mapping theorem.
+- Closure cannot be dropped: $\mathbb Q\hookrightarrow\mathbb R$ has dense but non-closed image in a Hausdorff group. Openness cannot be dropped either: the identity from $\mathbb R$ with the discrete topology to
 
 > continued in nodes/prop.abhaus-strict-exact.en.7.md

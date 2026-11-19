@@ -4,3 +4,4 @@
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理 用
 - 被 [`def.orthogonally-similar`](../nodes/def.orthogonally-similar.md) 正交相似 用
+- ⇒ [`thm.sylvester-law-inertia`](../nodes/thm.sylvester-law-inertia.md) 惯性定理

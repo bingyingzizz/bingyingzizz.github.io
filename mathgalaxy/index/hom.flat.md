@@ -4,7 +4,6 @@
 中心天体 def.flat-module　·　14 个节点　·　根 `../`　·　续页 `index/hom.flat.2.md`
 
 - def.flat-module　平坦模　layer 16
-- thm.watts　张量函子的刻画　layer 16
 - prop.flat-equivalences　平坦的等价说法　layer 17
 - prop.free-flat　自由模平坦　layer 17
 - thm.lazard　平坦模的结构定理　layer 17
@@ -16,5 +15,6 @@
 - def.tor　挠积　layer 19
 - prop.tor-symmetry　挠积的对称性　layer 20
 - thm.tor-torsion　挠积给出挠元　layer 20
+- prop.tensor-right-exact　张量函子右正合　layer 21
 
 > 续见 `index/hom.flat.2.md`
