@@ -15,7 +15,7 @@ layer 20 · 定义 · 加法与阿贝尔范畴 · 同调代数
 ## 它能推出什么 / 谁在用它
 - ⇒ [`prop.ab6`](../nodes/prop.ab6.md) AB6：滤过余极限与积交换
 
-- …另有出边，续页见 [nodes/def.ab-axioms.3.md](./def.ab-axioms.3.md)
+- …另有出边，续页见 [nodes/def.ab-axioms.4.md](./def.ab-axioms.4.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.ab-axioms.2.md](./def.ab-axioms.2.md)

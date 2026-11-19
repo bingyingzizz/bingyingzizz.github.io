@@ -2,13 +2,13 @@
 [在星图里打开](../#n=def.category-of-sets)　·　第 1 页 [nodes/def.category-of-sets.md](./def.category-of-sets.md)　·　上一页 [nodes/def.category-of-sets.2.md](./def.category-of-sets.2.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`thm.right-adjoint-criterion`](../nodes/thm.right-adjoint-criterion.md) 右伴随存在的判据 用
-- 被 [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合 用
-- 被 [`def.sheaf`](../nodes/def.sheaf.md) 层 用
-- 被 [`def.effective-equivalence`](../nodes/def.effective-equivalence.md) 有效等价关系 用
-- 被 [`def.generator`](../nodes/def.generator.md) 生成元集 用
-- 被 [`prop.topos-sheaf-limits`](../nodes/prop.topos-sheaf-limits.md) 拓扑斯上的层即保极限的预层 用
-- 被 [`def.free-group-universal`](../nodes/def.free-group-universal.md) 自由群的泛性质 用
-- 被 [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限 用
+- 被 [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴 用
+- 被 [`def.forgetful-functor`](../nodes/def.forgetful-functor.md) 遗忘函子 用
+- 被 [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构 用
+- 被 [`def.intersection-subobject`](../nodes/def.intersection-subobject.md) 子对象的交 用
+- 被 [`def.preimage-subobject`](../nodes/def.preimage-subobject.md) 子对象的原像 用
+- 被 [`def.elements-category`](../nodes/def.elements-category.md) 元素范畴 用
+- 被 [`def.presheaf`](../nodes/def.presheaf.md) 预层 用
+- 被 [`def.presheaf-cat`](../nodes/def.presheaf-cat.md) 预层范畴 用
 
 > 续见 [nodes/def.category-of-sets.4.md](./def.category-of-sets.4.md)

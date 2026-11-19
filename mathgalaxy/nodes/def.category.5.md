@@ -3,14 +3,13 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.matrix-category`](../nodes/prop.matrix-category.md) 矩阵范畴 用
+- 被 [`def.category-of-monoids`](../nodes/def.category-of-monoids.md) 幺半群范畴 用
+- 被 [`def.category-of-rings`](../nodes/def.category-of-rings.md) 环范畴 用
+- 被 [`def.category-of-g-sets`](../nodes/def.category-of-g-sets.md) G-集范畴 用
+- 被 [`def.category-of-algebras`](../nodes/def.category-of-algebras.md) R-代数范畴 用
+- 被 [`def.category-of-fields`](../nodes/def.category-of-fields.md) 域范畴 用
+- 被 [`def.cartesian-closed-category`](../nodes/def.cartesian-closed-category.md) 笛卡尔闭范畴 用
 - 被 [`def.isomorphism`](../nodes/def.isomorphism.md) 同构 用
 - 被 [`def.section-retraction`](../nodes/def.section-retraction.md) 截面与收缩 用
-- 被 [`def.functor`](../nodes/def.functor.md) 函子 用
-- 被 [`def.natural-transformation`](../nodes/def.natural-transformation.md) 自然变换 用
-- 被 [`def.commutative-diagram`](../nodes/def.commutative-diagram.md) 图与交换图 用
-- 被 [`def.limit`](../nodes/def.limit.md) 极限 用
-- 被 [`def.presheaf`](../nodes/def.presheaf.md) 预层 用
-- 被 [`def.representable`](../nodes/def.representable.md) 表示函子 用
-- 被 [`def.adjoint`](../nodes/def.adjoint.md) 伴随函子 用
 
 > 续见 [nodes/def.category.6.md](./def.category.6.md)

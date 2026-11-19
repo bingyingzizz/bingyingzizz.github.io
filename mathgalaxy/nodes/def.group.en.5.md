@@ -2,6 +2,10 @@
 English entry · root `../`
 [in graph](../#n=def.group)　·　[Chinese page (authoritative)](./def.group.md)
 
-cancellation semigroup $\implies$ group: left and right multiplication are injective, hence bijective by finiteness, which yields a common identity and inverses; the infinite counterexample above shows finiteness cannot be dropped.
+**Which hypothesis each direction uses** (a group is defined by axioms; shorter criteria must keep their ambient hypotheses):
+- group $\iff$ associativity, two-sided identity and two-sided inverses: unwinding the definition, with no commutativity requirement.
+- group $\implies$ uniqueness of identity and inverses: cancellation using associativity and the two-sided identity/inverse identities; no axiom of choice is needed to select inverses, since the inverse is already unique.
+- every element invertible in a monoid $\implies$ group: direct expansion; cancellation alone is not enough, since the non-negative integers under addition satisfy cancellation but positive elements have no inverses.
+- finite non-empty 
 
 > continued in nodes/def.group.en.6.md

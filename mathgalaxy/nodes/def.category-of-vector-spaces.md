@@ -13,7 +13,7 @@ layer 15 · 定义 · 范畴与图 · 范畴论+抽象代数
 - …另有入边，续页见 [nodes/def.category-of-vector-spaces.3.md](./def.category-of-vector-spaces.3.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.category-of-vector-spaces.4.md](./def.category-of-vector-spaces.4.md)
+- …另有出边，续页见 [nodes/def.category-of-vector-spaces.5.md](./def.category-of-vector-spaces.5.md)
 
 refs: Mac Lane, Categories for the Working Mathematician, Ch. I, II；Weibel, An Introduction to Homological Algebra, Ch. 1
 

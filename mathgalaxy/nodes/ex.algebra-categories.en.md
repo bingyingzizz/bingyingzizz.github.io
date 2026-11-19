@@ -4,7 +4,7 @@ English entry · root `../`
 
 > English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
 
-layer 17 · example · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Category Theory
+layer 17 · example · cluster Algebraic Structures in a Category (`cat.algebra`) · Category Theory / Abstract Algebra
 names: `Algebraic Categories` (short) · `Categories of Algebraic Structures` (full)
 
 ## Statement and proof

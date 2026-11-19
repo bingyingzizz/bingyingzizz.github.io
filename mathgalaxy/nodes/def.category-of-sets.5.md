@@ -2,11 +2,12 @@
 [在星图里打开](../#n=def.category-of-sets)　·　第 1 页 [nodes/def.category-of-sets.md](./def.category-of-sets.md)　·　上一页 [nodes/def.category-of-sets.4.md](./def.category-of-sets.4.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.cartesian-product-is-set-product`](../nodes/prop.cartesian-product-is-set-product.md) 笛卡尔积是集合范畴的积 用
-- 被 [`prop.constant-sheaf-adjunction`](../nodes/prop.constant-sheaf-adjunction.md) 常层的伴随 用
-- 被 [`prop.topos-morphism-from-object`](../nodes/prop.topos-morphism-from-object.md) 对象给出拓扑斯态射 用
-- 被 [`prop.free-objects-examples`](../nodes/prop.free-objects-examples.md) 自由对象的例子 用
-- 被 [`prop.forgetful-faithful-not-full`](../nodes/prop.forgetful-faithful-not-full.md) 遗忘函子忠实但不满 用
-- 被 [`prop.forgetful-representable`](../nodes/prop.forgetful-representable.md) 遗忘函子可表示 用
+- 被 [`prop.topos-sheaf-limits`](../nodes/prop.topos-sheaf-limits.md) 拓扑斯上的层即保极限的预层 用
+- 被 [`def.free-group-universal`](../nodes/def.free-group-universal.md) 自由群的泛性质 用
+- 被 [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限 用
+- 被 [`ex.ab-of-categories`](../nodes/ex.ab-of-categories.md) Ab(C) 的例子 用
+- 被 [`def.section-functor`](../nodes/def.section-functor.md) 截面函子 用
+- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
+- 被 [`prop.constant-sheaf-preserves-limits`](../nodes/prop.constant-sheaf-preserves-limits.md) 常层函子保极限 用
 
 > 续见 [nodes/def.category-of-sets.6.md](./def.category-of-sets.6.md)

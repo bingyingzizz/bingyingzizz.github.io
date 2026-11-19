@@ -2,15 +2,16 @@
 索引 `hubs.md`
 
 由最多前置一起推出（入边多）—— 学它之前得先懂一片，**不是**入门首选。
-- **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
-- **7 / 5** `thm.tietze-banach` Tietze 延拓（Banach 值） · layer 25 · 凝聚态导出函子
-- **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 30 · L^p 空间
-- **7 / 5** `thm.constant-gauss-curvature` 常 Gauss 曲率曲面 · layer 39 · 内蕴几何
-- **7 / 4** `prop.condab-section` 截面函子保极限余极限 · layer 21 · 凝聚态阿贝尔群
-- **7 / 4** `thm.condab-ab` 凝聚态阿贝尔群满足 AB6 与 AB4* · layer 22 · 凝聚态阿贝尔群
-- **7 / 4** `lem.stone-constant-acyclic` Stone 上常系数零调 · layer 22 · 导出 Hom 的具体计算
-- **7 / 4** `thm.solid-abelian` 固态群构成阿贝尔子范畴 · layer 24 · 固态阿贝尔群
+- **8 / 5** `thm.de-rham` de Rham 定理 · layer 36 · 微分形式、积分与 de Rham
+- **8 / 5** `thm.theorema-egregium` 绝妙定理 · layer 37 · 内蕴几何
+- **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 36 · 数论函数与素数分布
+- **7 / 8** `thm.bundle-classification` 丛的分类 · layer 36 · 丛的示性类
+- **7 / 7** `def.module-category` 模范畴 · layer 15 · 代数结构
+- **7 / 7** `def.ab-axioms` Grothendieck 的 AB 公理 · layer 20 · 加法与阿贝尔范畴
+- **7 / 7** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 22 · 阿贝尔层
+- **7 / 7** `def.singular-homology` 奇异同调群 · layer 27 · 同调群
+- **7 / 7** `thm.cartan-formula` Cartan 公式 · layer 31 · 向量场与 Lie 结构
 
-（共 1722 个节点在这一榜上有非零计数；这里列前 20 条。）
+（共 1731 个节点在这一榜上有非零计数；这里列前 20 条。）
 
 索引 `hubs.md`。

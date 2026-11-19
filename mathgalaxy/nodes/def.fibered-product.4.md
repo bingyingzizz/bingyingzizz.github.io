@@ -7,7 +7,6 @@
 - ⇒ [`lem.weak-hausdorff-qseparated`](../nodes/lem.weak-hausdorff-qseparated.md) 弱 Hausdorff 推出 拟分离
 - ⇒ [`prop.cond-slice-topos-morphism`](../nodes/prop.cond-slice-topos-morphism.md) Cond/X 到开集拓扑斯的态射
 - ⇒ [`prop.cond-equivalence-effective`](../nodes/prop.cond-equivalence-effective.md) Cond 的等价关系有效
-- 被 [`prop.slice-cartesian`](../nodes/prop.slice-cartesian.md) 切片范畴是拉回 用
-- 被 [`thm.sheaf-descent`](../nodes/thm.sheaf-descent.md) 层的下降条件 用
+- 被 [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限 用
 
 > 续见 [nodes/def.fibered-product.5.md](./def.fibered-product.5.md)

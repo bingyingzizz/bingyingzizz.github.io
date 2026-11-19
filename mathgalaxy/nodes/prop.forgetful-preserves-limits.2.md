@@ -5,3 +5,5 @@
 - [`def.forgetful-functor`](../nodes/def.forgetful-functor.md) 遗忘函子：用到了定义 遗忘函子　[proofs/dep.forgetful-prop-fpl.md](../proofs/dep.forgetful-prop-fpl.md)
 - [`def.monoid-object`](../nodes/def.monoid-object.md) 幺半群对象：用到了定义 幺半群对象　[proofs/def-link.forgetlim-monoid.md](../proofs/def-link.forgetlim-monoid.md)
 - [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-forgetful-preserves-limits.md](../proofs/dep.cat-sets-prop-forgetful-preserves-limits.md)
+
+> 续见 [nodes/prop.forgetful-preserves-limits.3.md](./prop.forgetful-preserves-limits.3.md)

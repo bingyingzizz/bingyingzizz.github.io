@@ -11,7 +11,7 @@ layer 19 · 定义 · 拓扑斯 · 范畴论
 4. 等价关系是有效的且万有的。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.pretopos`](../nodes/def.pretopos.md) 预拓扑斯：用到了定义 预拓扑斯　[proofs/def-dep.pretopos-topos.md](../proofs/def-dep.pretopos-topos.md)
+- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/atlas.props.set-topos.md](../proofs/atlas.props.set-topos.md)
 
 - …另有入边，续页见 [nodes/def.topos.2.md](./def.topos.2.md)
 

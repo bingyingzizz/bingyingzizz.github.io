@@ -1,6 +1,14 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- Wedderburn–Artin 定理 | 半单代数结构定理 | Wedderburn-Artin → thm.wedderburn-artin
+
+- Jacobson 根判定半单 | Jacobson 判据 | 半单当且仅当根为零 → thm.jacobson-criterion
+
+- 不可约表示的单位分解 | 正交幂等元分解 | 单位分解 → prop.partition-of-unity
+
+- 特征标决定半单表示 | 特征标完全决定表示 | 特征标分离半单表示 → thm.character-determines-semisimple
+
 - Fitting 分解 | 菲廷分解 | Fitting lemma → prop.fitting-decomposition
 
 - 不可分解表示的自同态 | 全有或全无性质 | Fitting 引理推论 → cor.indecomposable-endomorphism
@@ -12,15 +20,5 @@
 - Krull–Schmidt 定理 | 克鲁尔-施密特定理 | Krull-Schmidt → thm.krull-schmidt
 
 - Maschke 定理 | 马施克定理 | 完全可约定理 → thm.maschke
-
-- 群代数的 Wedderburn 分解 | 群代数分解 | F[G] 的矩阵代数分解 → cor.group-algebra-wedderburn
-
-- 特征标的运算 | 特征标公式 | 直和与张量的特征标 → prop.character-operations
-
-- 对称平方表示 | 对称幂表示 | Sym² 表示 → def.symmetric-power-representation
-
-- 外平方表示 | 外幂表示 | Alt² 表示 | 反对称平方 → def.exterior-power-representation
-
-- 正则表示 | 左正则表示 | regular module → ex.regular-representation
 
 > 续见 alias/aka/algebra.17.md

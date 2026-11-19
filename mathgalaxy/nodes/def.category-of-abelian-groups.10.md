@@ -8,3 +8,6 @@
 - 被 [`def.etale-sheaf`](../nodes/def.etale-sheaf.md) étale 层 用
 - ⇒ [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext
 - ⇒ [`prop.ab6`](../nodes/prop.ab6.md) AB6：滤过余极限与积交换
+- 被 [`def.module-category`](../nodes/def.module-category.md) 模范畴 用
+
+> 续见 [nodes/def.category-of-abelian-groups.11.md](./def.category-of-abelian-groups.11.md)

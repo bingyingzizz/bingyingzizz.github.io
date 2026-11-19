@@ -3,3 +3,4 @@
 
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.enough-projectives`](../nodes/def.enough-projectives.md) 足够多投射对象：自由模覆盖 $\implies$ 足够多投射　[proofs/imp.enough-projectives.md](../proofs/imp.enough-projectives.md)
+- [`def.module-category`](../nodes/def.module-category.md) 模范畴：用到了定义 模范畴　[proofs/atlas.props.mod-enough-proj-thm.md](../proofs/atlas.props.mod-enough-proj-thm.md)

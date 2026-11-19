@@ -1,6 +1,6 @@
 # 数学星图 · 缺口清单（提到了，但没节点 / 没边）
 
-规模：1728 节点 / 4073 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
+规模：1737 节点 / 4199 连线。本文件由 `tools/build.mjs` 生成，**警告级**，不是硬门。
 
 怎么读：
 - **第一节**：`src/data/gaps.js` 里的候选词，正文提到了 N 次，却没有任何节点的名字/别名对得上 ⇒ 这是个洞。
@@ -59,7 +59,7 @@
 ### Hodge 理论　出现 1 次
 `thm.divergence-theorem`
 
-## 二、陈述用到更深的定义却没有边（16 处）
+## 二、陈述用到更深的定义却没有边（19 处）
 
 - `ex.projective-plane`（射影平面 RP² · L20）用到 `def.nonorientable-genus`（不可定向亏格 · L37）　落差 17
 - `def.symplectic-basis`（辛基 · L19）用到 `def.orthonormal-set`（正交基 · L24）　落差 5
@@ -73,9 +73,12 @@
 - `def.category-of-groups`（群范畴 · L10）用到 `def.forgetful-functor`（遗忘函子 · L11）　落差 1
 - `def.weak-star-topology`（弱*拓扑 · L24）用到 `def.weak-topology`（弱拓扑 · L25）　落差 1
 - `def.real-metric-space`（实数的度量 · L17）用到 `def.canonical-topology`（标准拓扑 · L17）
-- `def.category-of-groups`（群范畴 · L10）用到 `def.subcategory`（子范畴 · L10）
+- `def.field`（域 · L10）用到 `def.abelian-group`（阿贝尔群 · L10）
 - `def.category-of-abelian-groups`（阿贝尔群范畴 · L11）用到 `def.forgetful-functor`（遗忘函子 · L11）
+- `def.category-of-vector-spaces`（向量空间范畴 · L15）用到 `def.quotient-vs`（商空间 · L15）
+- `def.ring`（环 · L10）用到 `def.abelian-group`（阿贝尔群 · L10）
 - `def.cech-complex`（Čech 复形 · L18）用到 `def.bicomplex`（双复形 · L18）
+- `def.divisible-group`（可除群 · L10）用到 `def.abelian-group`（阿贝尔群 · L10）
 - `def.complex-partial`（复偏导数 · L24）用到 `def.directional-derivative`（方向导数 · L24）
 
 ## 二·补　白名单里的（39 条，已判「不是缺边」）

@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-19T05:21:57.346Z
-> 15 星系 / 106 星团 / 1728 节点 / 4073 连线（强边 3981，弱边 92；其中**不分层**的「推论」100 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-19T11:06:15.621Z
+> 15 星系 / 106 星团 / 1737 节点 / 4199 连线（强边 4104，弱边 95；其中**不分层**的「推论」100 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.4 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -5966,7 +5966,7 @@ $\mathbb{Q}$ 就是「有序但完备不了」的例子 —— $\{q \in \mathbb{
 参考：Lang, Algebra, Ch. VI；Rudin, Principles of Mathematical Analysis, Ch. 1
 
 #### 群　`def.group`
-*定义*　群与阿贝尔群
+*定义*　群
 
 设 $G$ 是**集合**，$\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \times G \to G$，$(a, b) \mapsto a \cdot b$）。称 $(G, \cdot)$ 是一个**群**，当且仅当：
 
@@ -5974,7 +5974,7 @@ $\mathbb{Q}$ 就是「有序但完备不了」的例子 —— $\{q \in \mathbb{
 - **单位元**：存在 $e \in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；
 - **逆元**：对每个 $a \in G$ 存在 $a^{-1} \in G$ 使 $a a^{-1} = a^{-1} a = e$。
 
-再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。
+交换群单列为 `def.abelian-group`；本节点只保留群公理。
 
 ⭐ **格式还是「集合 + 运算 + 公理」**：群不是凭空的对象 —— 一个集合、一个函数、三条等式就定出了一个群。判别一个东西是不是群，就是逐条核对这些等式。
 
@@ -6497,7 +6497,7 @@ $(m + N) + (m' + N) := (m + m') + N, \qquad a(m + N) := a m + N .$
 
 设 $A$ 是含幺环。**左 $A$-模范畴** $A\text{-}\mathbf{Mod}$ 的对象是左 $A$-模，态射是 $A$-线性映射，复合与单位逐点定义。
 
-右 $A$-模构成 $\mathbf{Mod}\text{-}A$；$A$ 交换时两者等价。
+右 $A$-模构成 $\mathbf{Mod}\text{-}A$；$A$ 交换时两者等价。极限：积=直积、终对象=零模、等化子=核、拉回=纤维积；余极限：余积=直和、始对象=零模、余等化子=商模、推出=粘合。它满足 AB3/AB4/AB4*/AB5；本图不写 AB6、不写 AB3*。
 
 **同调代数的样板间**：$A\text{-}\mathbf{Mod}$ 是阿贝尔范畴，有核、余核、单满态射严格；自由模给出足够投射对象，Baer 判据给出足够内射对象，还是 Grothendieck 范畴。
 
@@ -6533,28 +6533,6 @@ $$r/w = r'/w' \iff \exists s \in W,\quad s\,(rw' - r'w) = 0$$
 **两个标准例子**：$R = \mathbb{Z}$、$W = \mathbb{Z} \setminus \{0\}$ 给出 $\mathbb{Q}$；$R$ 一般、$W = \{f^{n} : n \ge 0\}$ 给出「在 $f$ 处局部化」，把 $f$ 变成可逆元。
 
 ⭐ **为什么要求 $W$ 乘性封闭**：乘性封闭保证**分式集合本身对乘法封闭**；不封闭时需先取 $W$ 的**乘性闭包**再局部化 —— 泛性质（「使 $W$ 中元素可逆」的最一般的环）对任意子集 $W$ 仍然存在，例如 $\mathbb{Z}$ 取 $W = \{1, 2\}$ 得到的仍是 $\mathbb{Z}[1/2]$。
-
-参考：Lang, Algebra
-
-#### 代数的几个范畴　`ex.algebra-categories`
-*例*　$\mathrm{Mon}$、$\mathrm{Gr}$、$\mathrm{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$
-
-常用的代数范畴（对象 + 保结构映射）：
-
-- $\mathrm{Mon}$：幺半群；
-- $\mathrm{Gr}$（也写 $\mathbf{Grp}$）：群；
-- $\mathrm{Rng}$：环；
-- $G\text{-}\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；
-- $A\text{-}\mathbf{Mod}$：$A$-模；
-- $k\text{-}\mathbf{Alg}$：$k$-代数（$k$ 交换环）。
-
-⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。
-
-所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。
-
-**两个特殊的**：$G\text{-}\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \to \mathbf{Set}$ 的函子，$G$-映射就是自然变换）；
-
-$A\text{-}\mathbf{Mod}$ 是同调代数的样板间。
 
 参考：Lang, Algebra
 
@@ -6749,6 +6727,32 @@ $$\varphi : \mathbb{Z} \to K, \qquad \varphi(n) = \underbrace{1 + 1 + \cdots + 1
 📌 **反例式的用处**：$-1$ 在平凡群里等于 $1$（因为只有这一个元素），所以「$x^{2} = 1$ 推出 $x = \pm 1$」在平凡群里退化为一句废话 ——这正是有些命题要把「非平凡群」写进假设的原因。
 
 参考：Dummit–Foote, Abstract Algebra, §1.1
+
+#### 幺半群　`def.monoid`
+*定义*　幺半群
+
+设 $M$ 是集合，$\cdot$ 是 $M$ 上的二元运算，$e\in M$。若结合律 $(ab)c=a(bc)$ 与单位元 $ea=ae=a$ 对一切 $a,b,c$ 成立，称 $(M,\cdot,e)$ 为**幺半群**（monoid）；再满足交换律的称为**交换幺半群**。同态是保运算与单位的映射。
+
+**例**：$(\mathbb N,+ ,0)$ 与 $(\mathbb N,\cdot,1)$ 都是交换幺半群；字符串在连接下是幺半群；$n\times n$ 矩阵在乘法下是幺半群（$n\ge 2$ 时不交换）。
+
+**与群的关系**：群恰是每个元素都可逆的幺半群；本图把群公理单列在 `def.group`，把交换群单列在 `def.abelian-group`。
+
+**与范畴中的幺半群对象分开**：`def.monoid-object` 是「对象 + 乘法 + 单位」在一般范畴里的内化，本条只是集合层面。
+
+参考：Lang, Algebra, Ch. I；Mac Lane, Categories for the Working Mathematician, Ch. I
+
+#### 阿贝尔群　`def.abelian-group`
+*定义*　阿贝尔群（交换群）
+
+设 $(G,\cdot,e,{}^{-1})$ 是群。若对一切 $a,b\in G$ 有 $ab=ba$，称 $G$ 为**阿贝尔群**（Abelian group）或**交换群**。等价地，$G$ 是 $\mathbb Z$-模（把 $n$ 倍运算视为作用）。
+
+**例**：$(\mathbb Z,+)$、$(\mathbb Q,+)$、$(\mathbb R,+)$、$(\mathbb Z/n\mathbb Z,+)$ 都是阿贝尔群；$(\mathbb Q\setminus\{0\},\cdot)$ 也是。$n\times n$ 可逆矩阵在乘法下（$n\ge 2$）不是。
+
+**为什么单列**：`def.group` 只保留群公理；交换群在模论、同调代数与 $\mathbf{Ab}$ 的定义里反复出现，单列后可直接被 `def.module`、`def.category-of-abelian-groups` 引用。
+
+**同态群**：对任意群 $G$，$\hom(G,A)$（$A$ 阿贝尔）按逐点运算仍是阿贝尔群，这是「阿贝尔群是 $\mathbf{Grp}$ 的充实基底」的最简形式。
+
+参考：Lang, Algebra, Ch. I；Weibel, An Introduction to Homological Algebra, Ch. 1
 
 #### 二元运算　`def.binary-operation`
 *定义*　二元运算（$S \times S \to S$）
@@ -20427,7 +20431,8 @@ $$g \circ f = 1_X$$
 
 **群范畴** $\mathbf{Grp}$：对象是群，态射是群同态，复合是映射复合，单位是恒等同态。
 
-它有**遗忘函子** $\mathbf{Grp}\to\mathbf{Set}$；交换群构成全子范畴 $\mathbf{Ab}$，有限群构成全子范畴 $\mathbf{FinGrp}$。
+**极限与余极限**：积是直积、终对象是平凡群；等化子是子群、拉回是纤维积。余积是自由积、始对象也是平凡群（与终对象同构，故 $\mathbf{Grp}$ 有零对象）；余等化子是商群（取正规闭包），推出是 amalgamated free product。
+它有**遗忘函子** $\mathbf{Grp}\to\mathbf{Set}$；交换群另单列为 `def.abelian-group`，其范畴见 `def.category-of-abelian-groups`。
 
 **不是阿贝尔范畴**：$\hom_{\mathbf{Grp}}(G,H)$ 一般没有群结构（不能逐点相加），所以不能像 $A\text{-}\mathbf{Mod}$ 那样做同调代数。
 
@@ -20442,7 +20447,7 @@ $$g \circ f = 1_X$$
 
 **阿贝尔群范畴** $\mathbf{Ab}$：对象是阿贝尔群，态射是群同态；它是 $\mathbf{Grp}$ 的**全子范畴**。
 
-遗忘函子 $\mathbf{Ab}\to\mathbf{Set}$ 把阿贝尔群送到其底层集合；$\mathbb Z\text{-}\mathbf{Mod}$ 与 $\mathbf{Ab}$ 等价。
+遗忘函子 $\mathbf{Ab}\to\mathbf{Set}$ 把阿贝尔群送到其底层集合；$\mathbb Z\text{-}\mathbf{Mod}$ 与 $\mathbf{Ab}$ 等价。极限：积为直积、终对象为零群、等化子为子群、拉回为纤维积；余极限：余积为直和、始对象为零群、余等化子为商群、推出为粘合。
 
 **阿贝尔范畴的原型**：有核、余核，单/满态射都严格；$\hom(A,B)$ 逐点加法构成阿贝尔群。
 
@@ -20458,9 +20463,11 @@ $$g \circ f = 1_X$$
 *定义*　集合范畴 $\mathbf{Set}$
 
 **集合范畴** $\mathbf{Set}$：对象是集合，态射是函数，复合是映射复合，单位是恒等映射。
-$\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子的标准靶。
+$\mathbf{Set}$ 中积是笛卡尔积 $X\times Y$（投影为坐标映射），终对象是单点集，等化子是 $\{x:f(x)=g(x)\}$，拉回是纤维积 $X\times_Z Y$；余积是不交并 $X\sqcup Y$，始对象是空集，余等化子是商 $Y/\sim$（由 $f(x)\sim g(x)$ 生成），推出是粘合。它是遗忘函子的标准靶。
 
 **完备且余完备**：小积与等化子给出所有小极限，小余积与余等化子给出所有小余极限。
+
+**笛卡尔闭**：$\mathbf{Set}$ 有指数对象 $Y^X=\hom(X,Y)$，求值与 curry 化逐点验证；它还是拓扑斯，见 `def.cartesian-closed-category`。
 
 **不是加性范畴**：$\hom(A,B)$ 一般没有群结构，不能逐点相加。
 
@@ -20472,13 +20479,15 @@ $\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子�
 *定义*　拓扑空间范畴 $\mathbf{Top}$
 
 **拓扑空间范畴** $\mathbf{Top}$：对象是拓扑空间，态射是连续映射，复合是映射复合，单位是恒等映射。
-积取积拓扑，余积取不交并拓扑，等化子取子空间拓扑，余等化子取商拓扑。
+积取积拓扑，终对象是单点空间；等化子取子空间拓扑，拉回取纤维积。余积取不交并拓扑（始对象是空空间），余等化子取商拓扑，推出取粘合。
 
 **完备且余完备**：上述构造逐项给出小极限与小余极限。
 
 **遗忘函子** $\mathbf{Top}\to\mathbf{Set}$ 保所有极限与余极限，但它忠实而不满：不是每个函数都连续。
 
 **不是加性范畴**：$\hom(X,Y)$ 一般没有群结构；开映射也不是态射（态射只要求连续）。
+
+**不是笛卡尔闭**：指数拓扑使求值连续的条件太强；紧生成弱 Hausdorff 空间（CGWH）才是笛卡尔闭的，见 `prop.cg-cartesian-closed`。
 
 参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
 
@@ -20489,7 +20498,7 @@ $\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子�
 
 有限维向量空间构成**全子范畴** $\mathbf{Vect}_K^{\mathrm{fd}}$：对象只取有限维空间，态射仍是全部线性映射。
 
-$\mathbf{Vect}_K$ 是**加性范畴**：$\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。
+$\mathbf{Vect}_K$ 是**加性范畴**：$\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。它是**完备且余完备**的：积=直积、终对象=零空间、等化子=子空间、拉回=纤维积；余积=直和、始对象=零空间、余等化子=商空间、推出=粘合。
 
 **为什么单列**：线性代数的「对象 + 线性映射」在范畴语言里就是 $\mathbf{Vect}_K$；有了它，「对偶」「Hom」才能写成函子。
 
@@ -20711,6 +20720,79 @@ $\mathbf{Cat}$ 有**终对象**（单对象范畴 $\mathbf{1}$）、有**始对�
 ∎
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.54
+
+#### 幺半群范畴　`def.category-of-monoids`
+*定义*　幺半群范畴 $\mathbf{Mon}$
+
+**幺半群范畴** $\mathbf{Mon}$：对象是幺半群，态射是幺半群同态。终对象是平凡幺半群 $\{e\}$；积逐点构造；等化子是子幺半群；拉回是纤维积。
+
+余积是**自由积**（把字并置后取商使单位与运算相容）；始对象仍是平凡幺半群（与终对象同构）；余等化子是商幺半群（生成同余的闭包）；推出是 amalgamated free product。
+
+**完备且余完备**：上述构造逐项给出小极限与小余极限；遗忘函子 $\mathbf{Mon}\to\mathbf{Set}$ 保极限。
+
+**与 $\mathbf{Grp}$**：群是全子范畴（每个元素可逆的幺半群），包含函子有左伴随「群化」。
+
+**非加性**：$\hom(M,N)$ 一般没有幺半群结构；自由幺半群就是字幺半群。笛卡尔闭性本图不展开。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
+
+#### 环范畴　`def.category-of-rings`
+*定义*　环范畴 $\mathbf{Rng}$（不一定含幺）
+
+**环范畴** $\mathbf{Rng}$：对象是环（按 `def.ring` 的约定：不要求幺元、不要求交换），态射是环同态。**零环是零对象**（既是始对象又是终对象）；积逐点构造；等化子是子环；拉回是纤维积。
+
+余积是环的**自由积**；余等化子是商环（取生成的双边理想的闭包）；推出是 amalgamated free product。
+
+**完备且余完备**；**非加性**（$\hom(R,S)$ 一般没有加法群结构）。
+
+**为什么不含幺**：本图 `def.ring` 明确不要求幺元；含幺环范畴的始对象是 $\mathbb Z$，与零环作为终对象不冲突，但会与 `def.ring` 的约定分叉，故本图不单列含幺环范畴。
+
+**$\mathbb Z$ 不是始对象**：非含幺同态不必保 $1$，$\hom(\mathbb Z,R)$ 对应 $R$ 的幂等元，不唯一。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II；Lang, Algebra, Ch. II
+
+#### G-集范畴　`def.category-of-g-sets`
+*定义*　$G$-集范畴 $G\text{-}\mathbf{Set}$
+
+**$G$-集范畴** $G\text{-}\mathbf{Set}$：对象是左 $G$-集，态射是等变映射。终对象是单点集（平凡作用）；积取对角作用；等化子是不动点子集；拉回是纤维积。
+
+始对象是空集；余积是不交并；余等化子是商 $G$-集（生成等价关系的闭包）；推出是粘合。
+
+**完备且余完备**，且是**笛卡尔闭**的：$Y^X$ 取共轭作用 $(g\cdot f)(x)=g f(g^{-1}x)$，求值与 curry 逐点验证。
+
+**是拓扑斯**：等价于单对象群胚上的预层范畴，见 `def.topos`。
+
+**非加性**；自由 $G$-集是 $G\times X$（左乘作用）。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II；Le Stum, An introduction to condensed mathematics, §1
+
+#### R-代数范畴　`def.category-of-algebras`
+*定义*　$R$-代数范畴 $R\text{-}\mathbf{Alg}$
+
+固定交换含幺环 $R$。**$R$-代数范畴** $R\text{-}\mathbf{Alg}$：对象是含幺结合 $R$-代数（乘法不必交换），态射是保 $1$ 的 $R$-代数同态。
+
+$R$ 是始对象（$r\mapsto r1$）；本图允许**零代数**（$1=0$），它是终对象。积逐点构造；等化子是子代数；拉回是纤维积。余积是自由积；余等化子是商代数（生成的双边理想）；推出是 amalgamated free product。
+
+**完备且余完备**；**非加性**；一般**不是笛卡尔闭**。
+
+**交换情形**：交换 $R$-代数的余积是 $\otimes_R$；本图不单列交换代数范畴，故只在注里说明。
+
+**零代数的约定**：若不允许零代数，则本范畴没有终对象；本图按「允许零代数」处理，使终对象存在，并在此注明。
+
+参考：Lang, Algebra, Ch. II；Mac Lane, Categories for the Working Mathematician, Ch. I, II
+
+#### 域范畴　`def.category-of-fields`
+*定义*　域范畴 $\mathbf{Field}$
+
+**域范畴** $\mathbf{Field}$：对象是域，态射是域同态（自动单射）。它**没有终对象**（零环不是域），**没有始对象**（$\mathbb Q$ 与 $\mathbb F_p$ 不能同时接收同一个域的同态），也**没有二元积**（$\mathbb Q$ 与 $\mathbb F_p$ 的积不存在）。因此 $\mathbf{Field}$ 既不完备也不余完备。
+
+**等化子存在**：两个域同态的等化子是固定子域；但这不足以补出终对象或积。
+
+**用途**：它是「看起来像代数范畴、实际连有限积都没有」的标准反例，提醒不要默认「代数结构 + 同态」一定完备。
+
+**与 `def.field` 的关系**：域的定义在 `def.field`，本条只加范畴层面的极限/余极限信息。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. I, II
 
 #### 同构　`def.isomorphism`
 *定义*　同构（可逆态射）—— 各分支的通名
@@ -21608,6 +21690,19 @@ $\mathbf{Set}$、$\mathbf{Top}$、$\mathbf{Ab}$ 都有**所有小极限与小余
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.38, Exercise 1.45
 
+#### 笛卡尔闭范畴　`def.cartesian-closed-category`
+*定义*　笛卡尔闭范畴
+
+范畴 $\mathcal C$ 称为**笛卡尔闭**，若它有有限积（终对象与二元积），且对每个 $X$，函子 $(-)\times X:\mathcal C\to\mathcal C$ 有右伴随 $(-)^X$。等价地，存在求值态射 $\mathrm{ev}:Y^X\times X\to Y$ 与自然双射 $\hom_{\mathcal C}(Z\times X,Y)\cong\hom_{\mathcal C}(Z,Y^X)$，称为 curry 化。
+
+**例**：$\mathbf{Set}$ 中 $Y^X=\hom(X,Y)$；$G\text{-}\mathbf{Set}$ 中 $Y^X$ 取共轭作用 $(g\cdot f)(x)=g f(g^{-1}x)$。
+
+**反例**：$\mathbf{Top}$ 一般不是笛卡尔闭（指数拓扑使求值连续的条件太强）；紧生成弱 Hausdorff 空间 $\mathbf{CGWH}$ 才是，见 `prop.cg-cartesian-closed`。
+
+**与充实范畴的 internal hom 分开**：`def.internal-hom` 是充实范畴里的 hom 对象；本条的 $Y^X$ 是普通范畴中的指数对象。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. IV
+
 ### 星团：单满、子对象与像
 > 造出「用箭头替代元素」这套语言：可消性（单 / 满）→ 子对象 → 像与余像 → 泛元素。
 
@@ -21899,6 +21994,30 @@ $$\begin{array}{ccc} G & \xrightarrow{\;(\iota,\ \mathrm{id})\;} & G \times G \\
 
 参考：Mac Lane, Categories for the Working Mathematician, III.6
 
+#### 代数的几个范畴　`ex.algebra-categories`
+*例*　$\mathrm{Mon}$、$\mathrm{Gr}$、$\mathrm{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$
+
+常用的代数范畴（对象 + 保结构映射）：
+
+- $\mathrm{Mon}$：幺半群；
+- $\mathrm{Gr}$（也写 $\mathbf{Grp}$）：群；
+- $\mathrm{Rng}$：环；
+- $G\text{-}\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；
+- $A\text{-}\mathbf{Mod}$：$A$-模；
+- $k\text{-}\mathbf{Alg}$：$k$-代数（$k$ 交换环）。
+
+各范畴的极限、余极限与 AB 公理见 `def.category-of-monoids`、`def.category-of-groups`、`def.category-of-rings`、`def.category-of-g-sets`、`def.module-category`、`def.category-of-algebras`、`def.category-of-sets`、`def.category-of-topological-spaces`、`def.category-of-abelian-groups`、`def.category-of-vector-spaces`；统一构造见 `prop.algebra-categories-limits` 与 `prop.algebra-categories-colimits`。
+
+⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。
+
+所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。
+
+**两个特殊的**：$G\text{-}\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \to \mathbf{Set}$ 的函子，$G$-映射就是自然变换）；
+
+$A\text{-}\mathbf{Mod}$ 是同调代数的样板间。
+
+参考：Lang, Algebra
+
 #### 保有限积的函子作用于代数对象　`prop.functor-preserves-monoid-objects`
 *命题*　命题：$F$ 保有限积 $\implies F$ 诱导 $\mathrm{Mon}(\mathcal{C}) \to \mathrm{Mon}(\mathcal{D})$
 
@@ -21947,11 +22066,9 @@ $k$ 交换时 $\operatorname{Op}(k\text{-}\mathbf{Mod}) \simeq k[T]\text{-}\math
 #### 代数范畴里的极限与余极限　`prop.algebra-categories-limits`
 *命题*　命题：极限逐点算，余极限由自由构造加商给出
 
-$\mathbf{Mon}$、$\mathbf{Gr}$、$\mathbf{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$ 里的**极限逐点算**（忘到底集合就是集合的极限）；
+设 $\mathcal C$ 为 $\mathbf{Mon}$、$\mathbf{Grp}$、$\mathbf{Rng}$、$G\text{-}\mathbf{Set}$、$R\text{-}\mathbf{Mod}$、$R\text{-}\mathbf{Alg}$、$\mathbf{Vect}_K$、$\mathbf{Set}$、$\mathbf{Top}$、$\mathbf{Ab}$ 之一。则 $\mathcal C$ 完备：终对象、积、等化子与拉回都按底层集合逐项构造；遗忘函子 $U:\mathcal C\to\mathbf{Set}$ 保极限。余极限见 `prop.algebra-categories-colimits`。
 
-**余极限**由「先自由生成、再取商」给出 —— 例如 $\mathbf{Gr}$ 里的余积是自由积。
-
-**证明。** 这些遗忘函子都**保极限** ✓，所以极限 = 底层集合的极限配上由泛性质逐点给出的结构 ✓；余积则先把生成元自由地拼起来、再商掉关系 ✓。∎
+**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\mathbf{Top}$ 不是笛卡尔闭；$R\text{-}\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.28
 
@@ -21981,6 +22098,19 @@ $\mathbf{Mon}$、$\mathbf{Gr}$、$\mathbf{Rng}$、$G\text{-}\mathbf{Set}$、$A\t
 **证明。** 保极限见「代数遗忘函子保极限」✓；不保余极限：$M \oplus N$ 的底集合不是 $M \sqcup N$ ✓；层化是左伴随又左正合，故正合 ✓。∎
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.66
+
+#### 代数范畴的余极限　`prop.algebra-categories-colimits`
+*命题*　代数结构范畴的余极限逐项构造
+
+设 $\mathcal C\in\{\mathbf{Mon},\mathbf{Grp},\mathbf{Rng},G\text{-}\mathbf{Set},R\text{-}\mathbf{Mod},R\text{-}\mathbf{Alg}\}$（各范畴按对应节点的约定）。则 $\mathcal C$ 余完备：余积分别是自由积（$\mathbf{Mon},\mathbf{Grp},\mathbf{Rng},R\text{-}\mathbf{Alg}$）、不交并（$G\text{-}\mathbf{Set}$）、直和（$R\text{-}\mathbf{Mod}$）；余等化子分别是商幺半群、商群、商环、商 $G$-集、商模、商代数（取生成的同余或双边理想）。
+
+**证明见边** `imp.algebra-categories-colimits`：写出自由构造的泛性质，再验证商对象满足余等化子的泛性质。
+
+**$\mathbf{Set}$ 与 $\mathbf{Top}$** 的余极限同理（不交并、商拓扑）；本条只列代数结构，避免与 `prop.algebra-categories-limits` 重复。
+
+**交换 $R$-代数**的余积是 $\otimes_R$；零代数情形按 `def.category-of-algebras` 的约定处理。
+
+参考：Mac Lane, Categories for the Working Mathematician, Ch. V；Lang, Algebra, Ch. II
 
 ### 星团：预层与米田
 > 造出「表示」这套语言：预层范畴是落点，米田引理说自然变换集与 $F(X)$ 一一对应，稠密性定理说每个预层都是可表示预层的余极限。
@@ -65985,6 +66115,513 @@ $$\|y_n - y_m\|^2 = 2\|x - y_n\|^2 + 2\|x - y_m\|^2 - 4\Bigl\| x - \tfrac{y_n + 
 
 ∎
 
+#### 定义引用：「二元运算」→ 幺半群　`atlas.dep.binop-monoid`
+
+幺半群的运算就是二元运算。
+
+#### 定义引用：「群」→ 阿贝尔群　`atlas.dep.group-abelian`
+
+阿贝尔群先要是群，再加交换律。
+
+#### 定义引用：「范畴」→ 幺半群范畴　`atlas.dep.category-mon`
+
+范畴的定义用于陈述 $\mathbf{Mon}$。
+
+#### 定义引用：「范畴」→ 环范畴　`atlas.dep.category-rng`
+
+范畴的定义用于陈述 $\mathbf{Rng}$。
+
+#### 定义引用：「范畴」→ G-集范畴　`atlas.dep.category-gset`
+
+范畴的定义用于陈述 $G\text{-}\mathbf{Set}$。
+
+#### 定义引用：「范畴」→ R-代数范畴　`atlas.dep.category-alg`
+
+范畴的定义用于陈述 $R\text{-}\mathbf{Alg}$。
+
+#### 定义引用：「范畴」→ 域范畴　`atlas.dep.category-field`
+
+范畴的定义用于陈述 $\mathbf{Field}$。
+
+#### 定义引用：「幺半群」→ 幺半群范畴　`atlas.dep.monoid-mon`
+
+$\mathbf{Mon}$ 的对象就是幺半群。
+
+#### 定义引用：「环」→ 环范畴　`atlas.dep.ring-rng`
+
+$\mathbf{Rng}$ 的对象按 `def.ring` 的约定。
+
+#### 定义引用：「环同态」→ 环范畴　`atlas.dep.ringhom-rng`
+
+$\mathbf{Rng}$ 的态射是环同态。
+
+#### 定义引用：「群」→ G-集范畴　`atlas.dep.group-gset`
+
+$G$-集要先有群 $G$。
+
+#### 定义引用：「群作用」→ G-集范畴　`atlas.dep.action-gset`
+
+$G$-集就是带群作用集合。
+
+#### 定义引用：「集合范畴」→ G-集范畴　`atlas.dep.sets-gset`
+
+等变映射的底层是集合映射。
+
+#### 定义引用：「环上的代数」→ R-代数范畴　`atlas.dep.algebra-ring-alg`
+
+$R$-代数的定义用于陈述 $R\text{-}\mathbf{Alg}$。
+
+#### 定义引用：「环」→ R-代数范畴　`atlas.dep.ring-alg`
+
+$R$ 是环，代数对象带环结构。
+
+#### 定义引用：「环同态」→ R-代数范畴　`atlas.dep.ringhom-alg`
+
+代数同态的底层是环同态。
+
+#### 定义引用：「域」→ 域范畴　`atlas.dep.field-fieldcat`
+
+$\mathbf{Field}$ 的对象就是域。
+
+#### 定义引用：「环」→ 模范畴　`atlas.dep.ring-mod`
+
+$R\text{-}\mathbf{Mod}$ 的对象是 $R$-模，$R$ 是环。
+
+#### 定义引用：「阿贝尔群」→ 模范畴　`atlas.dep.abelian-mod`
+
+$R$-模的加法群是阿贝尔群。
+
+#### 定义引用：「阿贝尔群范畴」→ 模范畴　`atlas.dep.abcat-mod`
+
+$R=\mathbb Z$ 时退化为 $\mathbf{Ab}$。
+
+#### 定义引用：「模同态」→ 模范畴　`atlas.dep.modhom-mod`
+
+$R\text{-}\mathbf{Mod}$ 的态射是模同态。
+
+#### 定义引用：「积 / 余积」→ 笛卡尔闭范畴　`atlas.dep.product-cc`
+
+笛卡尔闭要求有限积，特别是二元积。
+
+#### 定义引用：「范畴」→ 笛卡尔闭范畴　`atlas.dep.category-cc`
+
+笛卡尔闭性是范畴的性质。
+
+#### 定义引用：「集合范畴」→ 代数范畴里的极限与余极限　`atlas.applies.set-lim`
+
+$\mathbf{Set}$ 的极限表由该命题统一给出（逐点构造）。
+
+#### 定义引用：「拓扑空间范畴」→ 代数范畴里的极限与余极限　`atlas.applies.top-lim`
+
+$\mathbf{Top}$ 的极限按子空间/积拓扑逐项给出。
+
+#### 定义引用：「群范畴」→ 代数范畴里的极限与余极限　`atlas.applies.grp-lim`
+
+$\mathbf{Grp}$ 的极限逐项构造。
+
+#### 定义引用：「幺半群范畴」→ 代数范畴里的极限与余极限　`atlas.applies.mon-lim`
+
+$\mathbf{Mon}$ 的极限逐项构造。
+
+#### 定义引用：「阿贝尔群范畴」→ 代数范畴里的极限与余极限　`atlas.applies.ab-lim`
+
+$\mathbf{Ab}$ 的极限逐项构造。
+
+#### 定义引用：「环范畴」→ 代数范畴里的极限与余极限　`atlas.applies.rng-lim`
+
+$\mathbf{Rng}$ 的极限逐项构造。
+
+#### 定义引用：「G-集范畴」→ 代数范畴里的极限与余极限　`atlas.applies.gset-lim`
+
+$G\text{-}\mathbf{Set}$ 的极限取不动点/对角作用。
+
+#### 定义引用：「模范畴」→ 代数范畴里的极限与余极限　`atlas.applies.mod-lim`
+
+$R\text{-}\mathbf{Mod}$ 的极限逐项构造。
+
+#### 定义引用：「R-代数范畴」→ 代数范畴里的极限与余极限　`atlas.applies.alg-lim`
+
+$R\text{-}\mathbf{Alg}$ 的极限逐项构造。
+
+#### 定义引用：「向量空间范畴」→ 代数范畴里的极限与余极限　`atlas.applies.vect-lim`
+
+$\mathbf{Vect}_K$ 的极限逐项构造。
+
+#### 定义引用：「集合范畴」→ 代数范畴的余极限　`atlas.applies.set-colim`
+
+$\mathbf{Set}$ 的余极限表由该命题统一给出。
+
+#### 定义引用：「拓扑空间范畴」→ 代数范畴的余极限　`atlas.applies.top-colim`
+
+$\mathbf{Top}$ 的余极限取商拓扑/不交并。
+
+#### 定义引用：「群范畴」→ 代数范畴的余极限　`atlas.applies.grp-colim`
+
+$\mathbf{Grp}$ 的余极限：自由积/商群。
+
+#### 定义引用：「幺半群范畴」→ 代数范畴的余极限　`atlas.applies.mon-colim`
+
+$\mathbf{Mon}$ 的余极限：自由积/商幺半群。
+
+#### 定义引用：「阿贝尔群范畴」→ 代数范畴的余极限　`atlas.applies.ab-colim`
+
+$\mathbf{Ab}$ 的余极限：直和/商群。
+
+#### 定义引用：「环范畴」→ 代数范畴的余极限　`atlas.applies.rng-colim`
+
+$\mathbf{Rng}$ 的余极限：自由积/商环。
+
+#### 定义引用：「G-集范畴」→ 代数范畴的余极限　`atlas.applies.gset-colim`
+
+$G\text{-}\mathbf{Set}$ 的余极限：不交并/商 $G$-集。
+
+#### 定义引用：「模范畴」→ 代数范畴的余极限　`atlas.applies.mod-colim`
+
+$R\text{-}\mathbf{Mod}$ 的余极限：直和/商模。
+
+#### 定义引用：「R-代数范畴」→ 代数范畴的余极限　`atlas.applies.alg-colim`
+
+$R\text{-}\mathbf{Alg}$ 的余极限：自由积/商代数。
+
+#### 定义引用：「向量空间范畴」→ 代数范畴的余极限　`atlas.applies.vect-colim`
+
+$\mathbf{Vect}_K$ 的余极限：直和/商空间。
+
+#### 定义引用：「幺半群范畴」→ 自由对象的例子　`atlas.free.mon`
+
+自由幺半群是字幺半群。
+
+#### 定义引用：「群范畴」→ 自由对象的例子　`atlas.free.grp`
+
+自由群。
+
+#### 定义引用：「环范畴」→ 自由对象的例子　`atlas.free.rng`
+
+自由环（非交换多项式环）。
+
+#### 定义引用：「G-集范畴」→ 自由对象的例子　`atlas.free.gset`
+
+自由 $G$-集是 $G\times X$。
+
+#### 定义引用：「模范畴」→ 自由对象的例子　`atlas.free.mod`
+
+自由模 $R^{(X)}$。
+
+#### 定义引用：「R-代数范畴」→ 自由对象的例子　`atlas.free.alg`
+
+自由结合代数（张量代数）。
+
+#### 定义引用：「向量空间范畴」→ 自由对象的例子　`atlas.free.vect`
+
+自由向量空间以基给出。
+
+#### 定义引用：「阿贝尔群范畴」→ 自由对象的例子　`atlas.free.ab`
+
+自由阿贝尔群 $\mathbb Z^{(X)}$。
+
+#### 定义引用：「幺半群范畴」→ 代数遗忘函子保极限　`atlas.forget.mon`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「群范畴」→ 代数遗忘函子保极限　`atlas.forget.grp`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「环范畴」→ 代数遗忘函子保极限　`atlas.forget.rng`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「G-集范畴」→ 代数遗忘函子保极限　`atlas.forget.gset`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「模范畴」→ 代数遗忘函子保极限　`atlas.forget.mod`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「R-代数范畴」→ 代数遗忘函子保极限　`atlas.forget.alg`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「向量空间范畴」→ 代数遗忘函子保极限　`atlas.forget.vect`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「阿贝尔群范畴」→ 代数遗忘函子保极限　`atlas.forget.ab`
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
+
+#### 定义引用：「集合范畴」→ 笛卡尔闭范畴　`atlas.props.set-cc`
+
+$\mathbf{Set}$ 是笛卡尔闭的，$Y^X=\hom(X,Y)$。
+
+#### 定义引用：「G-集范畴」→ 笛卡尔闭范畴　`atlas.props.gset-cc`
+
+$G\text{-}\mathbf{Set}$ 是笛卡尔闭的，指数取共轭作用。
+
+#### 定义引用：「集合范畴」→ 拓扑斯　`atlas.props.set-topos`
+
+$\mathbf{Set}$ 是拓扑斯。
+
+#### 定义引用：「G-集范畴」→ 拓扑斯　`atlas.props.gset-topos`
+
+$G\text{-}\mathbf{Set}$ 是拓扑斯（群胚上的预层）。
+
+#### 定义引用：「拓扑空间范畴」→ 紧生成空间是笛卡尔闭的　`atlas.props.top-cgcc`
+
+$\mathbf{Top}$ 本身不是笛卡尔闭；其紧生成弱 Hausdorff 全子范畴才是。
+
+#### 定义引用：「阿贝尔群范畴」→ 加法范畴　`atlas.props.ab-add`
+
+$\mathbf{Ab}$ 是加法范畴。
+
+#### 定义引用：「阿贝尔群范畴」→ 阿贝尔范畴　`atlas.props.ab-abelian`
+
+$\mathbf{Ab}$ 是阿贝尔范畴。
+
+#### 定义引用：「阿贝尔群范畴」→ Grothendieck 的 AB 公理　`atlas.props.ab-ax`
+
+$\mathbf{Ab}$ 满足 AB3–AB6。
+
+#### 定义引用：「阿贝尔群范畴」→ AB6：滤过余极限与积交换　`atlas.props.ab-ab6`
+
+$\mathbf{Ab}$ 满足 AB6（滤过余极限与积交换）。
+
+#### 定义引用：「阿贝尔群范畴」→ AB 公理的例子表　`atlas.props.ab-examples`
+
+$\mathbf{Ab}$ 是 AB 公理的标准例子。
+
+#### 定义引用：「阿贝尔群范畴」→ AB5 与 AB3*/AB4* 的关系　`atlas.props.ab-ab5`
+
+$\mathbf{Ab}$ 满足 AB5。
+
+#### 定义引用：「阿贝尔群范畴」→ 足够多投射对象　`atlas.props.ab-enough-proj`
+
+自由阿贝尔群投射，故 $\mathbf{Ab}$ 有足够多投射对象。
+
+#### 定义引用：「模范畴」→ 加法范畴　`atlas.props.mod-add`
+
+$R\text{-}\mathbf{Mod}$ 是加法范畴。
+
+#### 定义引用：「模范畴」→ 阿贝尔范畴　`atlas.props.mod-abelian`
+
+$R\text{-}\mathbf{Mod}$ 是阿贝尔范畴。
+
+#### 定义引用：「模范畴」→ Grothendieck 的 AB 公理　`atlas.props.mod-ax`
+
+$R\text{-}\mathbf{Mod}$ 满足 AB3/AB4/AB4*/AB5；**不写 AB6、不写 AB3***。
+
+#### 定义引用：「模范畴」→ AB 公理的例子表　`atlas.props.mod-examples`
+
+$R\text{-}\mathbf{Mod}$ 是 AB 公理的模范例。
+
+#### 定义引用：「模范畴」→ AB5 与 AB3*/AB4* 的关系　`atlas.props.mod-ab5`
+
+$R\text{-}\mathbf{Mod}$ 满足 AB5。
+
+#### 定义引用：「模范畴」→ 足够多投射对象　`atlas.props.mod-enough-proj`
+
+自由模投射，故有足够多投射对象。
+
+#### 定义引用：「模范畴」→ 足够多投射对象　`atlas.props.mod-enough-proj-thm`
+
+$R\text{-}\mathbf{Mod}$ 有足够多投射对象。
+
+#### 定义引用：「模范畴」→ 足够多内射对象　`atlas.props.mod-enough-inj-thm`
+
+$R\text{-}\mathbf{Mod}$ 有足够多内射对象（Baer 判别法）。
+
+#### 定义引用：「向量空间范畴」→ 加法范畴　`atlas.props.vect-add`
+
+$\mathbf{Vect}_K$ 是加法范畴。
+
+#### 定义引用：「向量空间范畴」→ 阿贝尔范畴　`atlas.props.vect-abelian`
+
+$\mathbf{Vect}_K$ 是阿贝尔范畴。
+
+#### 定义引用：「向量空间范畴」→ 足够多投射对象　`atlas.props.vect-enough-proj`
+
+每个向量空间有基，故自由空间投射。
+
+#### 定义引用：「向量空间范畴」→ Grothendieck 的 AB 公理　`atlas.props.vect-ax`
+
+$\mathbf{Vect}_K$ 满足 AB3/AB4/AB4*/AB5；不写 AB6、不写 AB3*。
+
+#### 定义引用：「向量空间范畴」→ AB5 与 AB3*/AB4* 的关系　`atlas.props.vect-ab5`
+
+$\mathbf{Vect}_K$ 满足 AB5。
+
+#### 定义引用：「向量空间范畴」→ 万有关系　`atlas.props.vect-ucolim`
+
+$\mathbf{Vect}_K$ 的余极限是直和/商空间。
+
+#### 定义引用：「集合范畴」→ 代数的几个范畴　`atlas.ex.set`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「拓扑空间范畴」→ 代数的几个范畴　`atlas.ex.top`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「群范畴」→ 代数的几个范畴　`atlas.ex.grp`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「阿贝尔群范畴」→ 代数的几个范畴　`atlas.ex.ab`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「向量空间范畴」→ 代数的几个范畴　`atlas.ex.vect`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「幺半群范畴」→ 代数的几个范畴　`atlas.ex.mon`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「环范畴」→ 代数的几个范畴　`atlas.ex.rng`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「G-集范畴」→ 代数的几个范畴　`atlas.ex.gset`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「模范畴」→ 代数的几个范畴　`atlas.ex.mod`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「R-代数范畴」→ 代数的几个范畴　`atlas.ex.alg`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「域范畴」→ 代数的几个范畴　`atlas.ex.field`
+
+索引该范畴的极限/余极限表。
+
+#### 定义引用：「极限」→ 代数范畴里的极限与余极限　`atlas.lim.in.limit`
+
+命题的极限表就是逐项验证 $\mathbf{Set}$ 中的极限。
+
+#### 定义引用：「积 / 余积」→ 代数范畴里的极限与余极限　`atlas.lim.in.product`
+
+积逐点构造。
+
+#### 定义引用：「等化子 / 余等化子」→ 代数范畴里的极限与余极限　`atlas.lim.in.equalizer`
+
+等化子取子对象。
+
+#### 定义引用：「终对象 / 始对象」→ 代数范畴里的极限与余极限　`atlas.lim.in.final`
+
+终对象逐项给出。
+
+#### 定义引用：「纤维积 / 纤维余积」→ 代数范畴里的极限与余极限　`atlas.lim.in.fibered`
+
+拉回是纤维积。
+
+#### 定义引用：「幺半群」→ 代数范畴里的极限与余极限　`atlas.lim.in.monoid`
+
+幺半群范畴的极限按底层集合逐项取。
+
+#### 定义引用：「群」→ 代数范畴里的极限与余极限　`atlas.lim.in.group`
+
+群范畴的极限按底层集合逐项取。
+
+#### 定义引用：「环」→ 代数范畴里的极限与余极限　`atlas.lim.in.ring`
+
+环范畴的极限按底层集合逐项取。
+
+#### 定义引用：「集合范畴」→ 代数范畴里的极限与余极限　`atlas.lim.in.sets`
+
+$\mathbf{Set}$ 是极限的基底。
+
+#### 定义引用：「群作用」→ 代数范畴里的极限与余极限　`atlas.lim.in.action`
+
+$G$-集的极限取不动点/对角作用。
+
+#### 定义引用：「模」→ 代数范畴里的极限与余极限　`atlas.lim.in.module`
+
+模的极限按底层阿贝尔群逐项取。
+
+#### 定义引用：「环上的代数」→ 代数范畴里的极限与余极限　`atlas.lim.in.algebra`
+
+代数的极限按底层模逐项取。
+
+#### 定义引用：「拓扑空间范畴」→ 代数范畴里的极限与余极限　`atlas.lim.in.top`
+
+$\mathbf{Top}$ 的极限取子空间/积拓扑。
+
+#### 定义引用：「万有关系」→ 代数范畴的余极限　`atlas.col.in.ucolim`
+
+余极限的泛性质用于验证余等化子。
+
+#### 定义引用：「积 / 余积」→ 代数范畴的余极限　`atlas.col.in.product`
+
+余积是不交并/自由积/直和。
+
+#### 定义引用：「等化子 / 余等化子」→ 代数范畴的余极限　`atlas.col.in.equalizer`
+
+余等化子是商对象。
+
+#### 定义引用：「终对象 / 始对象」→ 代数范畴的余极限　`atlas.col.in.final`
+
+始对象给出空余积。
+
+#### 定义引用：「幺半群」→ 代数范畴的余极限　`atlas.col.in.monoid`
+
+幺半群范畴的余极限：自由积/商幺半群。
+
+#### 定义引用：「群」→ 代数范畴的余极限　`atlas.col.in.group`
+
+群范畴的余极限：自由积/商群。
+
+#### 定义引用：「环」→ 代数范畴的余极限　`atlas.col.in.ring`
+
+环范畴的余极限：自由积/商环。
+
+#### 定义引用：「G-集范畴」→ 代数范畴的余极限　`atlas.col.in.gset`
+
+$G$-集的余极限：不交并/商。
+
+#### 定义引用：「模范畴」→ 代数范畴的余极限　`atlas.col.in.mod`
+
+模范畴的余极限：直和/商模。
+
+#### 定义引用：「R-代数范畴」→ 代数范畴的余极限　`atlas.col.in.alg`
+
+代数范畴的余极限：自由积/商代数。
+
+#### 定义引用：「集合范畴」→ 代数范畴的余极限　`atlas.col.in.sets`
+
+$\mathbf{Set}$ 的余极限是不交并/商。
+
+#### 定义引用：「拓扑空间范畴」→ 代数范畴的余极限　`atlas.col.in.top`
+
+$\mathbf{Top}$ 的余极限取商拓扑/不交并。
+
+#### 极限 + 积 / 余积 + 等化子 / 余等化子 + 终对象 / 始对象 + 纤维积 / 纤维余积 + 幺半群 + 群 + 环 + 集合范畴 + 群作用 + 模 + 环上的代数 ⟹ 代数范畴里的极限与余极限　`imp.algebra-categories-limits`
+
+**构造。** 设 $F:J\to\mathcal C$ 是小图。把每个 $F(j)$ 忘成底层集合，在 $\mathbf{Set}$ 中取极限 $L=\varprojlim F$，即 $L=\{(x_j)\in\prod_j F(j): F(u)(x_j)=x_k\ \text{对每条 }u:j\to k\}$。逐项验证：
+
+- **终对象**：单点集带唯一结构（平凡群/零环/零模/单点空间），从任何对象有唯一态射。
+- **积**：$\prod_i A_i$ 按逐点运算/逐点拓扑，投影为态射，满足泛性质。
+- **等化子**：$\{a\in A: f(a)=g(a)\}$ 带上子结构，包含映射等化 $f,g$。
+- **拉回**：$\{(a,b)\in A\times B: f(a)=g(b)\}$，两条投影与交换方块给出泛性质。
+
+**遗忘函子保极限**：上述构造的底层集合恰是 $\mathbf{Set}$ 中的极限，故 $U$ 把 $\mathcal C$ 的极限送到 $\mathbf{Set}$ 的极限；$\mathbf{Top}$ 的情形把拓扑取为子空间/积拓扑即可。**完备性**：小积 + 等化子生成所有小极限（标准极限定理）。∎
+
+> 逐项构造 + 遗忘函子保极限；证明中对每个具体范畴只需核对结构在极限上封闭。
+
+#### 万有关系 + 积 / 余积 + 等化子 / 余等化子 + 终对象 / 始对象 + 幺半群 + 群 + 环 + G-集范畴 + 模范畴 + R-代数范畴 + 集合范畴 ⟹ 代数范畴的余极限　`imp.algebra-categories-colimits`
+
+**构造。** 先看余积：$\mathbf{Mon}$ 的自由积取字并置后对「单位与运算相容」生成同余取商；$\mathbf{Grp}$ 的自由积同理（取正规闭包）；$\mathbf{Rng}$ 的自由积取非交换多项式环；$\mathbf{Alg}_R$ 的自由积取张量代数再商关系；$G\text{-}\mathbf{Set}$ 取不交并；$R\text{-}\mathbf{Mod}$ 取直和。每种的包含映射都满足余积泛性质。
+
+**余等化子**：对 $f,g:A\to B$，在 $\mathbf{Set}$ 中取商 $B/\sim$（$f(a)\sim g(a)$ 生成），再取使商映射成为该范畴态射的最细结构：幺半群取同余闭包、群取正规闭包、环取代数理想、$G$-集取生成等价关系、模取子模、代数取双边理想。商对象满足余等化子的泛性质。
+
+**余完备性**：小余积 + 余等化子生成所有小余极限；把上述构造组合即得。∎
+
+> 自由构造 + 商闭包；每一步只核对泛性质，不依赖具体元素计算。
+
 #### 定义引用：「向量空间」→ 维数良定义　`dep.vectorspace-dimension`
 
 「维数良定义」的陈述第一句就是「设 $V$ 是 $K$ 上的向量空间」—— 它测的是**向量空间**的维数，此前这条边不在图上（`def.vector-space` 的注里写了「见 `thm.dimension`」，却是空的）。
@@ -69705,6 +70342,18 @@ $$\int_{M} K\,\mathrm{d}A = 4\pi(1-g).$$
 
 Gauss 方程与 Codazzi–Mainardi 方程是曲面论基本方程的**两半**：前者管内蕴曲率（Gauss 曲率由第二基本形式算出），后者管第二基本形式的对称性；两者并列、彼此不互推，合起来才是「曲面论基本定理」的相容条件。
 
+#### 群范畴 ～ 幺半群范畴　`atlas.analogy.grp-mon`
+
+群范畴是幺半群范畴的全子范畴；极限逐项构造相同，余积都叫自由积。
+
+#### 向量空间范畴 ～ 模范畴　`atlas.analogy.vect-mod`
+
+$\mathbf{Vect}_K$ 就是 $K\text{-}\mathbf{Mod}$ 在 $K$ 为域时的特例。
+
+#### 环范畴 ～ R-代数范畴　`atlas.analogy.rng-alg`
+
+环是 $\mathbb Z$-代数的非含幺版本；余积都是自由积。
+
 #### 子空间 ～ 子空间拓扑　`e190.analogy`
 *两个「子空间」：线性代数的 vs 拓扑的子空间拓扑*
 
@@ -69961,7 +70610,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **序结构 ↔ ZFC 公理系统**　2 条节点级连线
 - **序数与超限 ↔ ZFC 公理系统**　3 条节点级连线
 - **一阶语言与公式 ↔ ZFC 公理系统**　3 条节点级连线
-- **代数结构 ↔ 范畴与图**　10 条节点级连线
+- **代数结构 ↔ 范畴与图**　20 条节点级连线
 - **向量空间与基 ↔ 范畴与图**　2 条节点级连线
 - **范畴与图 ↔ 函子与自然变换**　13 条节点级连线
 - **线性映射与秩 ↔ 函子与自然变换**　3 条节点级连线
@@ -69982,10 +70631,10 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **范畴与图 ↔ 紧 Hausdorff 空间**　5 条节点级连线
 - **伴随与反射 ↔ 层与拓扑**　3 条节点级连线
 - **层与拓扑 ↔ 单满、子对象与像**　4 条节点级连线
-- **范畴与图 ↔ 层与拓扑**　12 条节点级连线
+- **范畴与图 ↔ 层与拓扑**　14 条节点级连线
 - **单满、子对象与像 ↔ 拓扑斯**　7 条节点级连线
 - **层与拓扑 ↔ 拓扑斯**　37 条节点级连线
-- **范畴与图 ↔ 拓扑斯**　6 条节点级连线
+- **范畴与图 ↔ 拓扑斯**　8 条节点级连线
 - **凝聚态集 ↔ 紧 Hausdorff 空间**　23 条节点级连线
 - **拓扑斯 ↔ 凝聚态集**　18 条节点级连线
 - **拓扑斯 ↔ 紧 Hausdorff 空间**　4 条节点级连线
@@ -69995,21 +70644,21 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **范畴与图 ↔ 凝聚态集**　2 条节点级连线
 - **图与极限 ↔ 复形与导出三角**　6 条节点级连线
 - **加法与阿贝尔范畴 ↔ 复形与导出三角**　26 条节点级连线
-- **范畴与图 ↔ 加法与阿贝尔范畴**　7 条节点级连线
+- **范畴与图 ↔ 加法与阿贝尔范畴**　19 条节点级连线
 - **图与极限 ↔ 加法与阿贝尔范畴**　25 条节点级连线
 - **同调与正合列 ↔ 复形与导出三角**　25 条节点级连线
 - **加法与阿贝尔范畴 ↔ 同调与正合列**　5 条节点级连线
 - **加法与阿贝尔范畴 ↔ 过滤与谱序列**　4 条节点级连线
 - **范畴与图 ↔ 阿贝尔层**　8 条节点级连线
-- **范畴与图 ↔ 紧生成空间与弱 Hausdorff**　6 条节点级连线
+- **范畴与图 ↔ 紧生成空间与弱 Hausdorff**　7 条节点级连线
 - **代数结构 ↔ 伴随与反射**　2 条节点级连线
 - **代数结构 ↔ 群上同调**　6 条节点级连线
-- **群作用与置换 ↔ 代数结构**　18 条节点级连线
+- **群作用与置换 ↔ 代数结构**　19 条节点级连线
 - **合成列与可解群 ↔ 代数结构**　10 条节点级连线
 - **多项式与因式分解 ↔ 代数结构**　8 条节点级连线
-- **代数结构 ↔ 内射模与可除群**　5 条节点级连线
+- **代数结构 ↔ 内射模与可除群**　7 条节点级连线
 - **线性映射与秩 ↔ 代数结构**　3 条节点级连线
-- **范畴里的代数结构 ↔ 范畴与图**　5 条节点级连线
+- **范畴里的代数结构 ↔ 范畴与图**　56 条节点级连线
 - **收敛与紧性 ↔ 拓扑空间的基本语汇**　17 条节点级连线
 - **复形与导出三角 ↔ 层上同调**　9 条节点级连线
 - **多元微分 ↔ 凝聚态导出函子**　4 条节点级连线
@@ -70043,12 +70692,12 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **层上同调 ↔ 过滤与谱序列**　7 条节点级连线
 - **拓扑斯 ↔ 层上同调**　6 条节点级连线
 - **单满、子对象与像 ↔ 预层与米田**　4 条节点级连线
-- **范畴与图 ↔ 图与极限**　13 条节点级连线
+- **范畴与图 ↔ 图与极限**　18 条节点级连线
 - **图与极限 ↔ 预层与米田**　9 条节点级连线
 - **图与极限 ↔ 紧 Hausdorff 空间**　5 条节点级连线
 - **图与极限 ↔ 集合的构造**　4 条节点级连线
 - **代数结构 ↔ 模的张量积与标量限制**　6 条节点级连线
-- **范畴里的代数结构 ↔ 图与极限**　4 条节点级连线
+- **范畴里的代数结构 ↔ 图与极限**　14 条节点级连线
 - **实数完备性的等价刻画 ↔ 实数与极限**　6 条节点级连线
 - **实数完备性的等价刻画 ↔ 度量空间**　3 条节点级连线
 - **实数完备性的等价刻画 ↔ 拓扑空间的基本语汇**　3 条节点级连线
@@ -70264,11 +70913,11 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **数项级数的敛散性 ↔ 数论函数与素数分布**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 收敛与紧性**　2 条节点级连线
 - **紧生成空间与弱 Hausdorff ↔ 分离公理**　6 条节点级连线
-- **群与代数表示 ↔ 代数结构**　13 条节点级连线
+- **群与代数表示 ↔ 代数结构**　14 条节点级连线
 - **群与代数表示 ↔ 向量空间与基**　3 条节点级连线
 - **线性映射与秩 ↔ 群与代数表示**　3 条节点级连线
 - **群与代数表示 ↔ 群上同调**　4 条节点级连线
-- **群作用与置换 ↔ 群与代数表示**　4 条节点级连线
+- **群作用与置换 ↔ 群与代数表示**　5 条节点级连线
 - **群与代数表示 ↔ 特征值与 Jordan 型**　5 条节点级连线
 - **Galois 理论 ↔ 群与代数表示**　3 条节点级连线
 - **整环与分解 ↔ 复形与导出三角**　2 条节点级连线
@@ -70292,7 +70941,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **单满、子对象与像 ↔ 同调与正合列**　3 条节点级连线
 - **伴随与反射 ↔ 同调与正合列**　2 条节点级连线
 - **图与极限 ↔ 同调与正合列**　4 条节点级连线
-- **图与极限 ↔ 层与拓扑**　13 条节点级连线
+- **图与极限 ↔ 层与拓扑**　14 条节点级连线
 - **L^p 空间 ↔ 测度的构造**　6 条节点级连线
 - **图与极限 ↔ 序结构**　3 条节点级连线
 - **图与极限 ↔ 拓扑斯**　12 条节点级连线
@@ -70300,7 +70949,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **函子与自然变换 ↔ 拓扑斯**　2 条节点级连线
 - **层上同调 ↔ Stone 与 Stonean**　2 条节点级连线
 - **加法与阿贝尔范畴 ↔ 阿贝尔层**　3 条节点级连线
-- **代数结构 ↔ 加法与阿贝尔范畴**　4 条节点级连线
+- **代数结构 ↔ 加法与阿贝尔范畴**　10 条节点级连线
 - **代数结构 ↔ 函子与自然变换**　2 条节点级连线
 - **凝聚态集 ↔ 加法与阿贝尔范畴**　3 条节点级连线
 - **凝聚态阿贝尔群 ↔ 凝聚态集**　4 条节点级连线
@@ -70308,6 +70957,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **紧生成空间与弱 Hausdorff ↔ 紧 Hausdorff 空间**　4 条节点级连线
 - **加法与阿贝尔范畴 ↔ 收敛与紧性**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 收敛与紧性**　3 条节点级连线
+- **代数结构 ↔ 图与极限**　3 条节点级连线
 - **拓扑斯 ↔ 紧生成空间与弱 Hausdorff**　2 条节点级连线
 - **凝聚态集 ↔ 层上同调**　2 条节点级连线
 - **凝聚态导出函子 ↔ 度量空间**　2 条节点级连线
@@ -70320,6 +70970,12 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **拓扑阿贝尔群 ↔ 拓扑空间的基本语汇**　2 条节点级连线
 - **内射模与可除群 ↔ 层上同调**　2 条节点级连线
 - **图与极限 ↔ 层上同调**　3 条节点级连线
+- **群作用与置换 ↔ 范畴与图**　2 条节点级连线
+- **群与代数表示 ↔ 范畴与图**　2 条节点级连线
+- **代数结构 ↔ 范畴里的代数结构**　18 条节点级连线
+- **群作用与置换 ↔ 范畴里的代数结构**　2 条节点级连线
+- **群与代数表示 ↔ 范畴里的代数结构**　2 条节点级连线
+- **范畴里的代数结构 ↔ 层与拓扑**　2 条节点级连线
 - **序结构 ↔ 集合的构造**　4 条节点级连线
 - **选择原理 ↔ 序结构**　7 条节点级连线
 - **微分定理 ↔ 度量空间**　2 条节点级连线
@@ -70335,7 +70991,6 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **伴随与反射 ↔ 关系与函数**　2 条节点级连线
 - **预层与米田 ↔ 阿贝尔层**　2 条节点级连线
 - **拓扑阿贝尔群 ↔ 紧生成空间与弱 Hausdorff**　4 条节点级连线
-- **代数结构 ↔ 范畴里的代数结构**　2 条节点级连线
 - **导出 Hom 的具体计算 ↔ Stone 与 Stonean**　3 条节点级连线
 - **导出 Hom 的具体计算 ↔ 分离公理**　3 条节点级连线
 - **Breen–Deligne 谱序列 ↔ Stone 与 Stonean**　2 条节点级连线

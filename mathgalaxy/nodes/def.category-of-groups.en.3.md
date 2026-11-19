@@ -2,10 +2,9 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-groups)　·　[Chinese page (authoritative)](./def.category-of-groups.md)
 
-The Cartesian product gives a symmetric monoidal structure with the trivial group as unit; but it is not Cartesian closed ($\hom(G,H)$ generally cannot be made into a group naturally).
+## Notes · **draft**
+**Not an abelian category**: $\hom_{\mathbf{Grp}}(G,H)$ generally has no group structure (one cannot add pointwise), so one cannot do homological algebra as in $A\text{-}\mathbf{Mod}$.
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+**Monomorphisms = injective homomorphisms** and **epimorphisms = surjective homomorphisms**. Products are direct products and coproducts are free products; the only zero object is the trivial group, so $\mathbf{Grp}$ is not additive.
 
-
-Cite: `def.category-of-groups` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-groups.en.4.md

@@ -4,4 +4,6 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/dep.cat-ab-prop-ab-axioms-examples.md](../proofs/dep.cat-ab-prop-ab-axioms-examples.md)
 - [`def.topo-ab-group`](../nodes/def.topo-ab-group.md) 拓扑阿贝尔群：用到了定义 拓扑阿贝尔群　[proofs/dep.gap-prop.ab-axioms-examples-topo-ab-group.md](../proofs/dep.gap-prop.ab-axioms-examples-topo-ab-group.md)
-- [`def.ab-axioms`](../nodes/def.ab-axioms.md) Grothendieck 的 AB 公理：用到了定义 Grothendieck 的 AB 公理　[proofs/def-dep.abex-ab.md](../proofs/def-dep.abex-ab.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/atlas.props.ab-examples.md](../proofs/atlas.props.ab-examples.md)
+
+> 续见 [nodes/prop.ab-axioms-examples.4.md](./prop.ab-axioms-examples.4.md)

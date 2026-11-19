@@ -1,14 +1,10 @@
 # 阿贝尔范畴　`def.abelian-category`　·　续页（第 7 页）
 [在星图里打开](../#n=def.abelian-category)　·　第 1 页 [nodes/def.abelian-category.md](./def.abelian-category.md)　·　上一页 [nodes/def.abelian-category.6.md](./def.abelian-category.6.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.injective-criterion`](../nodes/prop.injective-criterion.md) 内射对象的判据 用
-- 被 [`def.filtration`](../nodes/def.filtration.md) 过滤 用
-- 被 [`def.cohomology`](../nodes/def.cohomology.md) 同调 用
-- 被 [`thm.derived-long-exact`](../nodes/thm.derived-long-exact.md) 导出函子的长正合列 用
-- 被 [`def.exact-sequence`](../nodes/def.exact-sequence.md) 一般正合列 用
-- 被 [`prop.zero-object-final-criterion`](../nodes/prop.zero-object-final-criterion.md) 零对象与终对象 用
-- 被 [`prop.biproduct-is-product`](../nodes/prop.biproduct-is-product.md) 直和就是积 用
-- 被 [`prop.hom-enrichment-unique`](../nodes/prop.hom-enrichment-unique.md) 预加性结构唯一 用
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.equalizer`](../nodes/def.equalizer.md) 等化子 / 余等化子：用到了定义 等化子 / 余等化子　[proofs/def-dep.equalizer-abelian.md](../proofs/def-dep.equalizer-abelian.md)
+- [`def.mono`](../nodes/def.mono.md) 单态射 / 满态射 / 同构：用到了定义 单态射 / 满态射 / 同构　[proofs/def-dep.mono-abelian.md](../proofs/def-dep.mono-abelian.md)
+- [`def.image`](../nodes/def.image.md) 像 / 余像：用到了定义 像 / 余像　[proofs/def-dep.image-abelian.md](../proofs/def-dep.image-abelian.md)
+- [`def.cochain-complex`](../nodes/def.cochain-complex.md) 上链复形：用到了定义 上链复形　[proofs/def-dep.complex-abelian.md](../proofs/def-dep.complex-abelian.md)
 
 > 续见 [nodes/def.abelian-category.8.md](./def.abelian-category.8.md)

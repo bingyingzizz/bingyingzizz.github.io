@@ -9,6 +9,7 @@
 - 被 [`def.algebra-representation`](../nodes/def.algebra-representation.md) 代数的线性表示 用
 - 被 [`def.algebra-over-ring`](../nodes/def.algebra-over-ring.md) 环上的代数 用
 - ⇒ [`lem.schanuel`](../nodes/lem.schanuel.md) 合冲比较引理
-- 被 [`thm.freyd-mitchell`](../nodes/thm.freyd-mitchell.md) Freyd–Mitchell 嵌入定理 用
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
-- 被 [`def.vector-space`](../nodes/def.vector-space.md) 向量空间 用
+- 被 [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限 用
+- ⇒ [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限
+
+> 续见 [nodes/def.module.4.md](./def.module.4.md)

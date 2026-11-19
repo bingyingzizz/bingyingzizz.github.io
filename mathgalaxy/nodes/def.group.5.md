@@ -11,6 +11,6 @@
 - 被 [`def.group-representation`](../nodes/def.group-representation.md) 有限群表示 用
 - 被 [`def.class-function`](../nodes/def.class-function.md) 类函数 用
 - ⇒ [`prop.ab-limits-forgetful`](../nodes/prop.ab-limits-forgetful.md) Ab(C) 的极限
-- 被 [`def.group-order`](../nodes/def.group-order.md) 群的阶与元素的阶 用
+- 被 [`def.abelian-group`](../nodes/def.abelian-group.md) 阿贝尔群 用
 
 > 续见 [nodes/def.group.6.md](./def.group.6.md)

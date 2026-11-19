@@ -23,8 +23,16 @@
 
 - 集合范畴 | Set 范畴 | 集合的范畴 | Set → def.category-of-sets
 
-- 拓扑空间范畴 | Top 范畴 | 拓扑空间的范畴 | Top → def.category-of-topological-spaces
+- 笛卡尔闭范畴 | CC category → def.cartesian-closed-category
 
-- 笛卡尔积是集合范畴的积 | Set 中的积是笛卡尔积 | 笛卡尔积的泛性质 → prop.cartesian-product-is-set-product
+- 幺半群范畴 | Mon → def.category-of-monoids
+
+- 环范畴 | Rng → def.category-of-rings
+
+- G-集范畴 | G-Set → def.category-of-g-sets
+
+- R-代数范畴 | R-Alg → def.category-of-algebras
+
+- 域范畴 | Field → def.category-of-fields
 
 > 续见 alias/aka/category.22.md

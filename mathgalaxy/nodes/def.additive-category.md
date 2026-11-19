@@ -13,7 +13,7 @@ layer 16 · 定义 · 加法与阿贝尔范畴 · 同调代数
 ## 它能推出什么 / 谁在用它
 - 被 [`def.category-of-complexes`](../nodes/def.category-of-complexes.md) 复形范畴 用
 
-- …另有出边，续页见 [nodes/def.additive-category.4.md](./def.additive-category.4.md)
+- …另有出边，续页见 [nodes/def.additive-category.5.md](./def.additive-category.5.md)
 
 ## 为什么成立（入边，证明在 proofs/）
 - …另有入边，续页见 [nodes/def.additive-category.3.md](./def.additive-category.3.md)

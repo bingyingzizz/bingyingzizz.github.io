@@ -4,3 +4,4 @@
 ## 为什么成立（入边，证明在 proofs/）（续）
 - [`thm.pid-injective-divisible`](../nodes/thm.pid-injective-divisible.md) 内射等价于可除 + [`thm.baer-criterion`](../nodes/thm.baer-criterion.md) 内射的理想判据：$\mathbb{Q}/\mathbb{Z}$ 内射 + 一个伴随 $\implies$ 足够多内射　[proofs/imp.enough-injectives.md](../proofs/imp.enough-injectives.md)
 - [`def.module`](../nodes/def.module.md) 模：用到了定义 模　[proofs/def-link.modenough-injmodule.md](../proofs/def-link.modenough-injmodule.md)
+- [`def.module-category`](../nodes/def.module-category.md) 模范畴：用到了定义 模范畴　[proofs/atlas.props.mod-enough-inj-thm.md](../proofs/atlas.props.mod-enough-inj-thm.md)

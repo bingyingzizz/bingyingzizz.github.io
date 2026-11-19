@@ -2,9 +2,8 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-groups)　·　[Chinese page (authoritative)](./def.category-of-groups.md)
 
-## Notes · **draft**
-**Not an abelian category**: $\hom_{\mathbf{Grp}}(G,H)$ generally has no group structure (one cannot add pointwise), so one cannot do homological algebra as in $A\text{-}\mathbf{Mod}$.
+**Limits and colimits**: products are direct products and the terminal object is the trivial group; equalizers are subgroups and pullbacks are fiber products. Coproducts are free products and the initial object is also the trivial group (isomorphic to the terminal object, so $\mathbf{Grp}$ has a zero object); coequalizers are quotient groups (normal closure), and pushouts are amalgamated free products.
 
-**Monomorphisms = injective homomorphisms** and **epimorphisms = surjective homomorphisms**. Products are direct products and coproducts are free products; the only zero object is the trivial group, so $\mathbf{Grp}$ is not additive.
+It has a **forgetful functor** $\mathbf{Grp}\to\mathbf{Set}$; abelian groups are listed separately as `def.abelian-group`, with category `def.category-of-abelian-groups`.
 
 > continued in nodes/def.category-of-groups.en.3.md

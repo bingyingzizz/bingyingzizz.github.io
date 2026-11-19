@@ -7,19 +7,18 @@
 每榜前 3 条；完整清单在 `hubs/<榜>.md`（各 20 条）。
 
 ## 基础工具榜
-- **39 / 39** `def.group` 群 · 代数结构
-- **36 / 39** `def.category-of-sets` 集合范畴 · 范畴与图
-- **35 / 35** `def.complex` 复数 ℂ · 数系的构造
+- **43 / 48** `def.category-of-abelian-groups` 阿贝尔群范畴 · 范畴与图
+- **43 / 45** `def.group` 群 · 代数结构
+- **40 / 49** `def.category-of-sets` 集合范畴 · 范畴与图
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
-- **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · 测度的构造
-- **9 / 7** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · Galois 理论
-- **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · 曲面的地形
+- **21 / 26** `prop.algebra-categories-limits` 代数范畴里的极限与余极限 · 范畴里的代数结构
+- **17 / 23** `prop.algebra-categories-colimits` 代数范畴的余极限 · 范畴里的代数结构
+- **14 / 15** `ex.algebra-categories` 代数的几个范畴 · 范畴里的代数结构
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜
 - **17 团 / 35 节点** `def.complex` 复数 ℂ · 数系的构造
-- **16 团 / 31 节点** `def.compact` 紧 · 拓扑空间的基本语汇
 - 全部：`hubs/cross.md`
 

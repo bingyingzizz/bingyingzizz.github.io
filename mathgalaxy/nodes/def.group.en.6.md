@@ -2,8 +2,6 @@
 English entry · root `../`
 [in graph](../#n=def.group)　·　[Chinese page (authoritative)](./def.group.md)
 
-> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+cancellation semigroup $\implies$ group: left and right multiplication are injective, hence bijective by finiteness, which yields a common identity and inverses; the infinite counterexample above shows finiteness cannot be dropped.
 
-
-Cite: `def.group` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.group.en.7.md

@@ -1,6 +1,7 @@
 # 代数范畴里的极限与余极限　`prop.algebra-categories-limits`　·　续页（第 2 页）
 [在星图里打开](../#n=prop.algebra-categories-limits)　·　第 1 页 [nodes/prop.algebra-categories-limits.md](./prop.algebra-categories-limits.md)
 
-## 为什么成立（入边，证明在 proofs/）（续）
-- [`def.limit`](../nodes/def.limit.md) 极限：用到了定义 极限　[proofs/def-link.algcatlim-limit.md](../proofs/def-link.algcatlim-limit.md)
-- [`def.category-of-sets`](../nodes/def.category-of-sets.md) 集合范畴：用到了定义 集合范畴　[proofs/dep.cat-sets-prop-algebra-categories-limits.md](../proofs/dep.cat-sets-prop-algebra-categories-limits.md)
+## 陈述（续）
+按底层集合逐项构造；遗忘函子 $U:\mathcal C\to\mathbf{Set}$ 保极限。余极限见 `prop.algebra-categories-colimits`。
+
+> 续见 [nodes/prop.algebra-categories-limits.3.md](./prop.algebra-categories-limits.3.md)

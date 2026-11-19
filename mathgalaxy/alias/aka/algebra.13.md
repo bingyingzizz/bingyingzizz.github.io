@@ -3,6 +3,22 @@
 
 - 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
 
+- 幺半群 | monoid → def.monoid
+
+- 阿贝尔群 | 交换群 → def.abelian-group
+
+- 幺半群范畴 | Mon → def.category-of-monoids
+
+- 环范畴 | Rng → def.category-of-rings
+
+- G-集范畴 | G-Set → def.category-of-g-sets
+
+- R-代数范畴 | R-Alg → def.category-of-algebras
+
+- 域范畴 | Field → def.category-of-fields
+
+- 代数范畴里的余极限 → prop.algebra-categories-colimits
+
 - 模范畴 | A-Mod → def.module-category
 
 - 自由群 | 自由群 F(S) → def.free-group
@@ -18,15 +34,5 @@
 - 代数的线性表示 | 代数表示 | A-模表示 → def.algebra-representation
 
 - 表示同态 | intertwiner | 缠结算子 | A-线性映射 → def.representation-morphism
-
-- 有限群表示 | 群表示 | group representation → def.group-representation
-
-- 子表示 | 不变子空间 | G-不变子空间 → def.subrepresentation
-
-- 不可约表示 | 单表示 | simple representation → def.irreducible-representation
-
-- 商表示 | quotient module → def.quotient-representation
-
-- 表示的直和 | 直和表示 | 分块对角表示 → def.direct-sum-representation
 
 > 续见 alias/aka/algebra.14.md

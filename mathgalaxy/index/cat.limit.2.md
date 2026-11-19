@@ -7,5 +7,6 @@
 - prop.ind-reflective　C 是 Ind(C) 的反射子范畴　layer 15
 - prop.cartesian-product-is-set-product　笛卡尔积是集合范畴的积　layer 15
 - prop.set-top-ab-complete　Set、Top、Ab 的完备性　layer 15
+- def.cartesian-closed-category　笛卡尔闭范畴　layer 15
 - thm.cofinal-colimit　共尾函子不改变余极限　layer 16
 - prop.filtered-directed　滤过范畴可换成有向集　layer 16

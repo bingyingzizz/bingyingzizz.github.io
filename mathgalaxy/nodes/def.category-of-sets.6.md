@@ -2,10 +2,11 @@
 [在星图里打开](../#n=def.category-of-sets)　·　第 1 页 [nodes/def.category-of-sets.md](./def.category-of-sets.md)　·　上一页 [nodes/def.category-of-sets.5.md](./def.category-of-sets.5.md)
 
 ## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限 用
-- 被 [`prop.currying`](../nodes/prop.currying.md) 函数的柯里化 用
-- 被 [`prop.copowers-give-adjoint`](../nodes/prop.copowers-give-adjoint.md) 有余幂则可表示函子有伴随 用
-- 被 [`prop.forgetful-preserves-limits`](../nodes/prop.forgetful-preserves-limits.md) 代数遗忘函子保极限 用
-- ⇒ [`prop.constant-sheaf-preserves-limits`](../nodes/prop.constant-sheaf-preserves-limits.md) 常层函子保极限
-- ⇒ [`prop.filtered-exact`](../nodes/prop.filtered-exact.md) 滤过余极限正合
-- ⇒ [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限
+- 被 [`prop.stalk-separated`](../nodes/prop.stalk-separated.md) 茎与分离预层 用
+- 被 [`thm.presheaf-limits-colimits`](../nodes/thm.presheaf-limits-colimits.md) 预层范畴的极限与余极限 用
+- 被 [`prop.set-top-ab-complete`](../nodes/prop.set-top-ab-complete.md) Set、Top、Ab 的完备性 用
+- 被 [`prop.cartesian-product-is-set-product`](../nodes/prop.cartesian-product-is-set-product.md) 笛卡尔积是集合范畴的积 用
+- 被 [`prop.constant-sheaf-adjunction`](../nodes/prop.constant-sheaf-adjunction.md) 常层的伴随 用
+- 被 [`prop.topos-morphism-from-object`](../nodes/prop.topos-morphism-from-object.md) 对象给出拓扑斯态射 用
+
+> 续见 [nodes/def.category-of-sets.7.md](./def.category-of-sets.7.md)

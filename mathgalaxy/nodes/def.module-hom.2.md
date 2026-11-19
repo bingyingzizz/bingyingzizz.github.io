@@ -6,3 +6,4 @@
 - 被 [`def.quotient-module`](../nodes/def.quotient-module.md) 商模 用
 - ⇒ [`prop.module-tensor-universal`](../nodes/prop.module-tensor-universal.md) 张量积对双线性映射万有
 - 被 [`def.representation-morphism`](../nodes/def.representation-morphism.md) 表示同态 用
+- 被 [`def.module-category`](../nodes/def.module-category.md) 模范畴 用

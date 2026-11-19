@@ -6,7 +6,7 @@
 
 （没有）
 
-## 二、近同名却没有任何边（12 对）
+## 二、近同名却没有任何边（16 对）
 
 判据：label 去掉括注/空格后相同或前缀相近（与 `_tools/_nov15.mjs` 同口径），且两颗星之间一条边都没有。
 
@@ -14,11 +14,15 @@
 - Euler 定理（`thm.euler-theorem` L12）⇸ Euler 类（`def.euler-class` L39）
 - Euler 判别法（`thm.euler-criterion` L13）⇸ Euler 类（`def.euler-class` L39）
 - Pontryagin 对偶（`def.pontryagin-dual` L21）⇸ Pontryagin 类（`def.pontryagin-class` L38）
+- 阿贝尔求和（分部求和）（`lem.abel-summation` L25）⇸ 阿贝尔群（`def.abelian-group` L10）
 - Euler 公式（`thm.euler-formula` L25）⇸ Euler 类（`def.euler-class` L39）
+- 阿贝尔范畴（`def.abelian-category` L19）⇸ 阿贝尔群（`def.abelian-group` L10）
 - Euler 示性数（`thm.euler-characteristic` L30）⇸ Euler 类（`def.euler-class` L39）
+- 阿贝尔层（`def.abelian-sheaf` L18）⇸ 阿贝尔群（`def.abelian-group` L10）
 - 阿贝尔层（`def.abelian-sheaf` L18）⇸ 阿贝尔求和（分部求和）（`lem.abel-summation` L25）
 - Euler 乘积（`thm.euler-product` L34）⇸ Euler 类（`def.euler-class` L39）
 - Euler 公式（`thm.euler-formula-surface` L35）⇸ Euler 类（`def.euler-class` L39）
+- 阿贝尔群范畴（`def.category-of-abelian-groups` L11）⇸ 阿贝尔群（`def.abelian-group` L10）
 - 阿贝尔范畴（`def.abelian-category` L19）⇸ 阿贝尔层（`def.abelian-sheaf` L18）
 - 特征标的运算（`prop.character-operations` L26）⇸ 特征标表（`def.character-table` L26）
 - 特征标内积（`def.character-inner-product` L26）⇸ 特征标表（`def.character-table` L26）
@@ -58,7 +62,7 @@
 值必须来自 `src/data/hypotheses.js` 的受控词表。第二条**只是提醒**：陈述里命中「假设关键词」却没标注 —— ⛔ 不自动打标（「注里提到」不等于「陈述里的假设」）。
 
 - 词表外取值：（没有）
-- 陈述里出现假设关键词、但没标注：**297** 处
+- 陈述里出现假设关键词、但没标注：**300** 处
 
   - ax.choice  ‹选择公理›
   - def.choicefn  ‹选择公理›
@@ -91,7 +95,7 @@
   - thm.real-ordered-field  ‹完备›
   - lem.archimedean  ‹完备›
   - thm.real-unique  ‹完备›
-  - def.category-of-vector-spaces  ‹有限维›
+  - def.category-of-vector-spaces  ‹完备›
   - thm.saft  ‹完备›
   - def.chaus  ‹Hausdorff›
   - prop.chaus-reflective  ‹Hausdorff›
@@ -100,5 +104,5 @@
   - prop.chaus-quotient-of-free  ‹Hausdorff›
   - prop.free-projective  ‹Hausdorff›
   - def.free-presentation  ‹Hausdorff›
-  - …还有 257 处
+  - …还有 260 处
 

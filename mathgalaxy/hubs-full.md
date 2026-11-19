@@ -10,33 +10,39 @@
 
 被最多结论当作前置（出边多）—— 值得优先学熟。
 
-- **39 / 39** `def.group` 群 · layer 9 · 代数结构
-- **36 / 39** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **43 / 48** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
+- **43 / 45** `def.group` 群 · layer 9 · 代数结构
+- **40 / 49** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
 - **35 / 35** `def.complex` 复数 ℂ · layer 21 · 数系的构造
 - **34 / 43** `def.sheaf` 层 · layer 17 · 层与拓扑
-- **33 / 35** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
 - **32 / 34** `def.measure` 测度 · layer 17 · 测度的构造
+- **31 / 45** `def.limit` 极限 · layer 13 · 图与极限
 - **31 / 45** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
-- **31 / 43** `def.limit` 极限 · layer 13 · 图与极限
 - **31 / 39** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
 - **31 / 39** `def.compact` 紧 · layer 18 · 拓扑空间的基本语汇
 - **31 / 31** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
+- **31 / 31** `def.category` 范畴 · layer 9 · 范畴与图
+- **30 / 33** `def.ring` 环 · layer 10 · 代数结构
 - **29 / 40** `def.condensed-set` 凝聚态集 · layer 20 · 凝聚态集
 - **29 / 39** `def.topos` 拓扑斯 · layer 19 · 拓扑斯
 - **29 / 34** `def.chaus` 紧 Hausdorff 空间范畴 · layer 19 · 紧 Hausdorff 空间
 - **28 / 33** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
 - **26 / 32** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **26 / 27** `def.functor` 函子 · layer 10 · 函子与自然变换
-- **25 / 26** `def.ring` 环 · layer 10 · 代数结构
-- **25 / 25** `def.category` 范畴 · layer 9 · 范畴与图
-- **24 / 34** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
+- **25 / 29** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 
-（共 1113 个节点有非零计数；这里列前 20 条。）
+（共 1121 个节点有非零计数；这里列前 20 条。）
 
 ## 综合结论榜
 
 由最多前置一起推出（入边多）—— 学它之前得先懂一片，**不是**入门首选。
 
+- **21 / 26** `prop.algebra-categories-limits` 代数范畴里的极限与余极限 · layer 16 · 范畴里的代数结构
+- **17 / 23** `prop.algebra-categories-colimits` 代数范畴的余极限 · layer 18 · 范畴里的代数结构
+- **14 / 15** `ex.algebra-categories` 代数的几个范畴 · layer 17 · 范畴里的代数结构
+- **11 / 11** `prop.forgetful-preserves-limits` 代数遗忘函子保极限 · layer 16 · 范畴里的代数结构
+- **10 / 10** `prop.free-objects-examples` 自由对象的例子 · layer 16 · 范畴里的代数结构
+- **9 / 9** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
 - **9 / 7** `thm.riesz-markov` Riesz–Markov 表示 · layer 21 · 测度的构造
 - **9 / 7** `thm.radical-solvable` 根式可解 与 伽罗瓦群可解 · layer 23 · Galois 理论
 - **9 / 7** `prop.eulerchar-genus` Euler 示性数与亏格 · layer 31 · 曲面的地形
@@ -46,19 +52,13 @@
 - **8 / 5** `thm.theorema-egregium` 绝妙定理 · layer 37 · 内蕴几何
 - **8 / 2** `thm.prime-number-theorem` 素数定理 · layer 36 · 数论函数与素数分布
 - **7 / 8** `thm.bundle-classification` 丛的分类 · layer 36 · 丛的示性类
+- **7 / 7** `def.module-category` 模范畴 · layer 15 · 代数结构
+- **7 / 7** `def.ab-axioms` Grothendieck 的 AB 公理 · layer 20 · 加法与阿贝尔范畴
 - **7 / 7** `thm.topos-abelian-grothendieck` 拓扑斯上的阿贝尔群是 Grothendieck 范畴 · layer 22 · 阿贝尔层
 - **7 / 7** `def.singular-homology` 奇异同调群 · layer 27 · 同调群
 - **7 / 7** `thm.cartan-formula` Cartan 公式 · layer 31 · 向量场与 Lie 结构
-- **7 / 7** `thm.classification-surfaces` 闭曲面分类定理 · layer 38 · 曲面的地形
-- **7 / 5** `thm.tietze-banach` Tietze 延拓（Banach 值） · layer 25 · 凝聚态导出函子
-- **7 / 5** `thm.riesz-representation-lp` Riesz 表示定理 · layer 30 · L^p 空间
-- **7 / 5** `thm.constant-gauss-curvature` 常 Gauss 曲率曲面 · layer 39 · 内蕴几何
-- **7 / 4** `prop.condab-section` 截面函子保极限余极限 · layer 21 · 凝聚态阿贝尔群
-- **7 / 4** `thm.condab-ab` 凝聚态阿贝尔群满足 AB6 与 AB4* · layer 22 · 凝聚态阿贝尔群
-- **7 / 4** `lem.stone-constant-acyclic` Stone 上常系数零调 · layer 22 · 导出 Hom 的具体计算
-- **7 / 4** `thm.solid-abelian` 固态群构成阿贝尔子范畴 · layer 24 · 固态阿贝尔群
 
-（共 1722 个节点有非零计数；这里列前 20 条。）
+（共 1731 个节点有非零计数；这里列前 20 条。）
 
 ## 跨领域连接榜
 
@@ -67,23 +67,23 @@
 - **17 团 / 35 节点** `def.complex` 复数 ℂ · layer 21 · 数系的构造
 - **16 团 / 31 节点** `def.compact` 紧 · layer 18 · 拓扑空间的基本语汇
 - **16 团 / 24 节点** `def.function` 映射 · layer 7 · 关系与函数
-- **15 团 / 39 节点** `def.group` 群 · layer 9 · 代数结构
+- **15 团 / 43 节点** `def.group` 群 · layer 9 · 代数结构
 - **15 团 / 28 节点** `def.hausdorff` Hausdorff 空间 · layer 5 · 分离公理
+- **14 团 / 43 节点** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
 - **14 团 / 31 节点** `def.topology` 拓扑空间与开集 · layer 4 · 拓扑空间的基本语汇
+- **14 团 / 30 节点** `def.ring` 环 · layer 10 · 代数结构
+- **14 团 / 25 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 - **14 团 / 24 节点** `def.metric-space` 距离空间 · layer 16 · 度量空间
 - **14 团 / 24 节点** `def.projective-object` 投射 / 内射对象 · layer 16 · 紧 Hausdorff 空间
-- **13 团 / 33 节点** `def.category-of-abelian-groups` 阿贝尔群范畴 · layer 11 · 范畴与图
-- **13 团 / 24 节点** `def.fibered-product` 纤维积 / 纤维余积 · layer 14 · 图与极限
 - **13 团 / 19 节点** `def.real` 实数系 ℝ · layer 15 · 数系的构造
 - **12 团 / 31 节点** `def.limit` 极限 · layer 13 · 图与极限
-- **12 团 / 25 节点** `def.ring` 环 · layer 10 · 代数结构
 - **12 团 / 21 节点** `def.subset` 子集 · layer 1 · 集合的构造
 - **12 团 / 20 节点** `def.linear-map` 线性映射 · layer 14 · 线性映射与秩
 - **11 团 / 26 节点** `def.banach-space` Banach 空间 · layer 24 · 多元微分
 - **11 团 / 22 节点** `def.abs` 绝对值 |x| · layer 12 · 实数的运算与不等式
-- **10 团 / 36 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **10 团 / 40 节点** `def.category-of-sets` 集合范畴 · layer 10 · 范畴与图
+- **10 团 / 31 节点** `def.category` 范畴 · layer 9 · 范畴与图
 - **10 团 / 31 节点** `def.adjoint` 伴随函子 · layer 11 · 伴随与反射
-- **10 团 / 31 节点** `def.abelian-category` 阿贝尔范畴 · layer 19 · 加法与阿贝尔范畴
 
-（共 1113 个节点有非零计数；这里列前 20 条。）
+（共 1121 个节点有非零计数；这里列前 20 条。）
 

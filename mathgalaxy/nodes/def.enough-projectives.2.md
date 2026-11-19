@@ -1,9 +1,9 @@
 # 足够多投射对象　`def.enough-projectives`　·　续页（第 2 页）
 [在星图里打开](../#n=def.enough-projectives)　·　第 1 页 [nodes/def.enough-projectives.md](./def.enough-projectives.md)
 
-## 它能推出什么 / 谁在用它（续）
-- 被 [`prop.injective-resolution-lift`](../nodes/prop.injective-resolution-lift.md) 内射消解之间的提升 用
-- 被 [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext 用
-- ⇒ [`thm.mod-enough-projectives`](../nodes/thm.mod-enough-projectives.md) 足够多投射对象
-- 被 [`lem.horseshoe`](../nodes/lem.horseshoe.md) 马蹄引理 用
-- ⇒ [`prop.ext-abelian-groups`](../nodes/prop.ext-abelian-groups.md) 阿贝尔群的 Ext
+## 为什么成立（入边，证明在 proofs/）（续）
+- [`def.module-category`](../nodes/def.module-category.md) 模范畴：用到了定义 模范畴　[proofs/atlas.props.mod-enough-proj.md](../proofs/atlas.props.mod-enough-proj.md)
+- [`def.category-of-vector-spaces`](../nodes/def.category-of-vector-spaces.md) 向量空间范畴：用到了定义 向量空间范畴　[proofs/atlas.props.vect-enough-proj.md](../proofs/atlas.props.vect-enough-proj.md)
+- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-dep.enoughproj-projective.md](../proofs/def-dep.enoughproj-projective.md)
+
+> 续见 [nodes/def.enough-projectives.3.md](./def.enough-projectives.3.md)

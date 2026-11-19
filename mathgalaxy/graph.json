@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-19T05:21:57.346Z",
+  "generated": "2026-11-19T11:06:15.621Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
-   "nodes": 1728,
-   "edges": 4073,
-   "strong": 3981,
-   "weak": 92,
+   "nodes": 1737,
+   "edges": 4199,
+   "strong": 4104,
+   "weak": 95,
    "derived": 100,
-   "en_pages": 1728
+   "en_pages": 1737
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 305
+   "nodeCount": 313
   },
   {
    "id": "analysis",
@@ -109,7 +109,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 224
+   "nodeCount": 231
   },
   {
    "id": "homology",
@@ -326,7 +326,7 @@
    "en": "Algebraic Structures",
    "parent": "algebra",
    "desc": "造出代数语言本身：**群** = 集合 + 运算 + 公理 → 子群 → 正规子群 → 商群 → 第一同构定理；再往上叠**域**（= 两个阿贝尔群 + 分配律）与**有序域**。",
-   "nodeCount": 44,
+   "nodeCount": 45,
    "nodes": [
     "def.field",
     "def.ordered-field",
@@ -359,7 +359,6 @@
     "def.quotient-module",
     "def.module-category",
     "prop.ring-localization",
-    "ex.algebra-categories",
     "prop.abelianization",
     "prop.ring-tensor-coproduct",
     "prop.module-tensor-universal",
@@ -370,6 +369,8 @@
     "def.characteristic",
     "ex.finite-field",
     "ex.trivial-group",
+    "def.monoid",
+    "def.abelian-group",
     "def.binary-operation",
     "def.group-order"
    ]
@@ -1464,7 +1465,7 @@
    "en": "Categories and Diagrams",
    "parent": "category",
    "desc": "造出「范畴」这个概念本身：先有图 $(V, E, s, t)$，再配上复合与单位，得到一个六元组。",
-   "nodeCount": 24,
+   "nodeCount": 29,
    "nodes": [
     "def.universe",
     "ax.grothendieck-universe",
@@ -1489,6 +1490,11 @@
     "prop.matrix-category",
     "prop.cat-final-initial-products",
     "prop.localization-functor-exact",
+    "def.category-of-monoids",
+    "def.category-of-rings",
+    "def.category-of-g-sets",
+    "def.category-of-algebras",
+    "def.category-of-fields",
     "def.isomorphism"
    ]
   },
@@ -1525,7 +1531,7 @@
    "en": "Diagrams and Limits",
    "parent": "category",
    "desc": "造出「在图上取值」这件事：交换图 → 锥 → 极限（泛锥）→ 积 / 纤维积 / 等化子。",
-   "nodeCount": 25,
+   "nodeCount": 26,
    "nodes": [
     "def.commutative-diagram",
     "def.simplicial",
@@ -1551,7 +1557,8 @@
     "prop.ind-reflective",
     "prop.filtered-finite-colimits",
     "prop.cartesian-product-is-set-product",
-    "prop.set-top-ab-complete"
+    "prop.set-top-ab-complete",
+    "def.cartesian-closed-category"
    ]
   },
   {
@@ -1580,18 +1587,20 @@
    "en": "Algebraic Structures in a Category",
    "parent": "category",
    "desc": "把「集合 + 运算 + 公理」搬到任意有有限积的范畴里：幺半群对象 → 群对象 → 阿贝尔群对象。⭐ $\\mathrm{Ab}(\\mathbf{Set})=\\mathbf{Ab}$、$\\mathrm{Ab}(\\mathbf{Top})$ = 拓扑阿贝尔群、$\\mathrm{Ab}(\\mathrm{Cond})=\\mathrm{CondAb}$ —— 代数那条线与凝聚态那条线在这里接上。",
-   "nodeCount": 10,
+   "nodeCount": 12,
    "nodes": [
     "def.monoid-object",
     "def.group-object",
     "ex.ab-of-categories",
+    "ex.algebra-categories",
     "prop.functor-preserves-monoid-objects",
     "prop.free-objects-examples",
     "prop.op-category-is-modules",
     "prop.algebra-categories-limits",
     "prop.bialgebra-examples",
     "prop.forgetful-preserves-limits",
-    "prop.forgetful-exactness"
+    "prop.forgetful-exactness",
+    "prop.algebra-categories-colimits"
    ]
   },
   {
@@ -15844,11 +15853,11 @@
    "title": "群范畴 $\\mathbf{Grp}$",
    "label_en": "category of groups",
    "title_en": "category of groups",
-   "statement_en": "**The category of groups** $\\mathbf{Grp}$: objects are groups, morphisms are group homomorphisms, composition is composition of maps, and identities are identity homomorphisms.\n\nIt has a **forgetful functor** $\\mathbf{Grp}\\to\\mathbf{Set}$; abelian groups form the full subcategory $\\mathbf{Ab}$, and finite groups form the full subcategory $\\mathbf{FinGrp}$.",
+   "statement_en": "**The category of groups** $\\mathbf{Grp}$: objects are groups, morphisms are group homomorphisms, composition is composition of maps, identities are identity homomorphisms.\n\n**Limits and colimits**: products are direct products and the terminal object is the trivial group; equalizers are subgroups and pullbacks are fiber products. Coproducts are free products and the initial object is also the trivial group (isomorphic to the terminal object, so $\\mathbf{Grp}$ has a zero object); coequalizers are quotient groups (normal closure), and pushouts are amalgamated free products.\n\nIt has a **forgetful functor** $\\mathbf{Grp}\\to\\mathbf{Set}$; abelian groups are listed separately as `def.abelian-group`, with category `def.category-of-abelian-groups`.",
    "notes_en": "**Not an abelian category**: $\\hom_{\\mathbf{Grp}}(G,H)$ generally has no group structure (one cannot add pointwise), so one cannot do homological algebra as in $A\\text{-}\\mathbf{Mod}$.\n\n**Monomorphisms = injective homomorphisms** and **epimorphisms = surjective homomorphisms**. Products are direct products and coproducts are free products; the only zero object is the trivial group, so $\\mathbf{Grp}$ is not additive.\n\nThe Cartesian product gives a symmetric monoidal structure with the trivial group as unit; but it is not Cartesian closed ($\\hom(G,H)$ generally cannot be made into a group naturally).",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -15860,11 +15869,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "stale",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#25441bc0",
       "notes": "v0.9.3#ad730236"
@@ -15885,7 +15896,7 @@
     "群",
     "群同态"
    ],
-   "statement": "**群范畴** $\\mathbf{Grp}$：对象是群，态射是群同态，复合是映射复合，单位是恒等同态。\n\n它有**遗忘函子** $\\mathbf{Grp}\\to\\mathbf{Set}$；交换群构成全子范畴 $\\mathbf{Ab}$，有限群构成全子范畴 $\\mathbf{FinGrp}$。",
+   "statement": "**群范畴** $\\mathbf{Grp}$：对象是群，态射是群同态，复合是映射复合，单位是恒等同态。\n\n**极限与余极限**：积是直积、终对象是平凡群；等化子是子群、拉回是纤维积。余积是自由积、始对象也是平凡群（与终对象同构，故 $\\mathbf{Grp}$ 有零对象）；余等化子是商群（取正规闭包），推出是 amalgamated free product。\n它有**遗忘函子** $\\mathbf{Grp}\\to\\mathbf{Set}$；交换群另单列为 `def.abelian-group`，其范畴见 `def.category-of-abelian-groups`。",
    "notes": "**不是阿贝尔范畴**：$\\hom_{\\mathbf{Grp}}(G,H)$ 一般没有群结构（不能逐点相加），所以不能像 $A\\text{-}\\mathbf{Mod}$ 那样做同调代数。\n\n**单态射 = 单同态**，**满态射 = 满同态**。积是直积，余积是自由积；零对象只有平凡群，所以 $\\mathbf{Grp}$ 不是加性范畴。\n\n笛卡尔积给出对称幺半结构，单位元是平凡群；但它不是笛卡尔闭的（$\\hom(G,H)$ 一般不能自然成为群）。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
@@ -15902,7 +15913,7 @@
    "notes_en": "**The prototype of an abelian category**: it has kernels and cokernels, monomorphisms and epimorphisms are strict; $\\hom(A,B)$ with pointwise addition is an abelian group.\n\n**Enough projective/injective objects**: free abelian groups are projective; $\\mathbb Q/\\mathbb Z$ gives an injective cogenerator, and every abelian group embeds into an injective group.\n\n**The tensor product** gives a symmetric monoidal structure with unit $\\mathbb Z$; $\\hom(A,B)$ is again an abelian group, so $\\mathbf{Ab}$ is even symmetric monoidal closed.\n\nRelation to $A\\text{-}\\mathbf{Mod}$: $\\mathbb Z\\text{-}\\mathbf{Mod}\\simeq\\mathbf{Ab}$, the most basic example of \"modules\" unifying \"abelian groups\".",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -15914,11 +15925,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "stale",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#35d7838c",
       "notes": "v0.9.3#082cf530"
@@ -15939,7 +15952,7 @@
     "阿贝尔群",
     "阿贝尔范畴"
    ],
-   "statement": "**阿贝尔群范畴** $\\mathbf{Ab}$：对象是阿贝尔群，态射是群同态；它是 $\\mathbf{Grp}$ 的**全子范畴**。\n\n遗忘函子 $\\mathbf{Ab}\\to\\mathbf{Set}$ 把阿贝尔群送到其底层集合；$\\mathbb Z\\text{-}\\mathbf{Mod}$ 与 $\\mathbf{Ab}$ 等价。",
+   "statement": "**阿贝尔群范畴** $\\mathbf{Ab}$：对象是阿贝尔群，态射是群同态；它是 $\\mathbf{Grp}$ 的**全子范畴**。\n\n遗忘函子 $\\mathbf{Ab}\\to\\mathbf{Set}$ 把阿贝尔群送到其底层集合；$\\mathbb Z\\text{-}\\mathbf{Mod}$ 与 $\\mathbf{Ab}$ 等价。极限：积为直积、终对象为零群、等化子为子群、拉回为纤维积；余极限：余积为直和、始对象为零群、余等化子为商群、推出为粘合。",
    "notes": "**阿贝尔范畴的原型**：有核、余核，单/满态射都严格；$\\hom(A,B)$ 逐点加法构成阿贝尔群。\n\n**足够投射/内射对象**：自由阿贝尔群投射；$\\mathbb Q/\\mathbb Z$ 给出内射余生成元，每个阿贝尔群都能嵌入内射群。\n\n**张量积**给出对称幺半结构，单位元是 $\\mathbb Z$；$\\hom(A,B)$ 又是阿贝尔群，所以 $\\mathbf{Ab}$ 还是对称幺半闭的。\n\n与 $A\\text{-}\\mathbf{Mod}$ 的关系：$\\mathbb Z\\text{-}\\mathbf{Mod}\\simeq\\mathbf{Ab}$，这是「模」统一「阿贝尔群」的最基本例子。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II",
@@ -15953,11 +15966,11 @@
    "title": "集合范畴 $\\mathbf{Set}$",
    "label_en": "category of sets",
    "title_en": "category of sets",
-   "statement_en": "**The category of sets** $\\mathbf{Set}$: objects are sets, morphisms are functions, composition is composition of maps, and identities are identity maps.\n\nIn $\\mathbf{Set}$ products are cartesian products and coproducts are disjoint unions; it is the standard target of the forgetful functor.",
+   "statement_en": "**The category of sets** $\\mathbf{Set}$: objects are sets, morphisms are functions, composition is composition of maps, and identities are identity maps.\n\nIn $\\mathbf{Set}$ products are cartesian products $X\\times Y$ (projections are coordinate maps), the terminal object is a singleton, equalizers are $\\{x:f(x)=g(x)\\}$, and pullbacks are fiber products $X\\times_Z Y$; coproducts are disjoint unions $X\\sqcup Y$, the initial object is the empty set, coequalizers are quotients $Y/\\sim$ (generated by $f(x)\\sim g(x)$), and pushouts are gluings. It is the standard target of the forgetful functor.",
    "notes_en": "**Complete and cocomplete**: small products together with equalizers give all small limits; small coproducts together with coequalizers give all small colimits.\n\n**Not an additive category**: $\\hom(A,B)$ in general has no group structure, so one cannot add pointwise.\n\n**Relation to the category of topological spaces**: there is a forgetful functor $\\mathbf{Top}\\to\\mathbf{Set}$ preserving limits and colimits, because the topologies are built pointwise from the underlying sets.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -15969,11 +15982,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
-      "notes": "draft",
+      "statement": "stale",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement",
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#7f767719",
       "notes": "v0.9.3#89e1676d"
@@ -15993,8 +16009,8 @@
     "集合",
     "Set"
    ],
-   "statement": "**集合范畴** $\\mathbf{Set}$：对象是集合，态射是函数，复合是映射复合，单位是恒等映射。\n$\\mathbf{Set}$ 中积是笛卡尔积，余积是不交并；它是遗忘函子的标准靶。",
-   "notes": "**完备且余完备**：小积与等化子给出所有小极限，小余积与余等化子给出所有小余极限。\n\n**不是加性范畴**：$\\hom(A,B)$ 一般没有群结构，不能逐点相加。\n\n**与拓扑空间范畴的关系**：存在遗忘函子 $\\mathbf{Top}\\to\\mathbf{Set}$，它保极限与余极限，因为拓扑都按底层集合逐点构造。",
+   "statement": "**集合范畴** $\\mathbf{Set}$：对象是集合，态射是函数，复合是映射复合，单位是恒等映射。\n$\\mathbf{Set}$ 中积是笛卡尔积 $X\\times Y$（投影为坐标映射），终对象是单点集，等化子是 $\\{x:f(x)=g(x)\\}$，拉回是纤维积 $X\\times_Z Y$；余积是不交并 $X\\sqcup Y$，始对象是空集，余等化子是商 $Y/\\sim$（由 $f(x)\\sim g(x)$ 生成），推出是粘合。它是遗忘函子的标准靶。",
+   "notes": "**完备且余完备**：小积与等化子给出所有小极限，小余积与余等化子给出所有小余极限。\n\n**笛卡尔闭**：$\\mathbf{Set}$ 有指数对象 $Y^X=\\hom(X,Y)$，求值与 curry 化逐点验证；它还是拓扑斯，见 `def.cartesian-closed-category`。\n\n**不是加性范畴**：$\\hom(A,B)$ 一般没有群结构，不能逐点相加。\n\n**与拓扑空间范畴的关系**：存在遗忘函子 $\\mathbf{Top}\\to\\mathbf{Set}$，它保极限与余极限，因为拓扑都按底层集合逐点构造。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
    ]
@@ -16010,7 +16026,7 @@
    "notes_en": "**Complete and cocomplete**: the constructions above give small limits and small colimits term by term.\n\n**The forgetful functor** $\\mathbf{Top}\\to\\mathbf{Set}$ preserves all limits and colimits, but it is faithful and not full: not every function is continuous.\n\n**Not an additive category**: $\\hom(X,Y)$ in general has no group structure; open maps are not morphisms either (morphisms need only be continuous).",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -16022,11 +16038,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
-      "notes": "draft",
+      "statement": "stale",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement",
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#b29c4e8a",
       "notes": "v0.9.3#0b476aeb"
@@ -16047,8 +16066,8 @@
     "拓扑空间",
     "Top"
    ],
-   "statement": "**拓扑空间范畴** $\\mathbf{Top}$：对象是拓扑空间，态射是连续映射，复合是映射复合，单位是恒等映射。\n积取积拓扑，余积取不交并拓扑，等化子取子空间拓扑，余等化子取商拓扑。",
-   "notes": "**完备且余完备**：上述构造逐项给出小极限与小余极限。\n\n**遗忘函子** $\\mathbf{Top}\\to\\mathbf{Set}$ 保所有极限与余极限，但它忠实而不满：不是每个函数都连续。\n\n**不是加性范畴**：$\\hom(X,Y)$ 一般没有群结构；开映射也不是态射（态射只要求连续）。",
+   "statement": "**拓扑空间范畴** $\\mathbf{Top}$：对象是拓扑空间，态射是连续映射，复合是映射复合，单位是恒等映射。\n积取积拓扑，终对象是单点空间；等化子取子空间拓扑，拉回取纤维积。余积取不交并拓扑（始对象是空空间），余等化子取商拓扑，推出取粘合。",
+   "notes": "**完备且余完备**：上述构造逐项给出小极限与小余极限。\n\n**遗忘函子** $\\mathbf{Top}\\to\\mathbf{Set}$ 保所有极限与余极限，但它忠实而不满：不是每个函数都连续。\n\n**不是加性范畴**：$\\hom(X,Y)$ 一般没有群结构；开映射也不是态射（态射只要求连续）。\n\n**不是笛卡尔闭**：指数拓扑使求值连续的条件太强；紧生成弱 Hausdorff 空间（CGWH）才是笛卡尔闭的，见 `prop.cg-cartesian-closed`。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
    ]
@@ -16064,7 +16083,7 @@
    "notes_en": "**Why it is listed separately**: the pair \"objects + linear maps\" of linear algebra is, in categorical language, $\\mathbf{Vect}_K$; once it is available, \"duality\" and \"Hom\" can be written as functors.\n\n**Forgetting structure**: the forgetful functor $\\mathbf{Vect}_K\\to\\mathbf{Set}$ forgets addition and scalar multiplication, retaining only the underlying sets and functions; it is faithful but not full (not every function is linear).\n\n**Relation to additive categories**: each Hom-set is itself a vector space and composition is bilinear; finite direct sums coincide with finite products, so it is an additive category, hence a preabelian category (kernels and cokernels are taken pointwise).",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -16076,11 +16095,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "stale",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#0c8288c9",
       "notes": "v0.9.3#770faf65"
@@ -16101,7 +16122,7 @@
     "线性代数",
     "Vect"
    ],
-   "statement": "**向量空间范畴** $\\mathbf{Vect}_K$：对象是域 $K$ 上的向量空间，态射是 $K$-线性映射，复合是映射复合，单位是恒等映射。\n\n有限维向量空间构成**全子范畴** $\\mathbf{Vect}_K^{\\mathrm{fd}}$：对象只取有限维空间，态射仍是全部线性映射。\n\n$\\mathbf{Vect}_K$ 是**加性范畴**：$\\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。",
+   "statement": "**向量空间范畴** $\\mathbf{Vect}_K$：对象是域 $K$ 上的向量空间，态射是 $K$-线性映射，复合是映射复合，单位是恒等映射。\n\n有限维向量空间构成**全子范畴** $\\mathbf{Vect}_K^{\\mathrm{fd}}$：对象只取有限维空间，态射仍是全部线性映射。\n\n$\\mathbf{Vect}_K$ 是**加性范畴**：$\\operatorname{Hom}_K(V,W)$ 按逐点和、逐点数乘成为 $K$-向量空间，复合对每个变元线性；有限直和同时是积与余积。它是**完备且余完备**的：积=直积、终对象=零空间、等化子=子空间、拉回=纤维积；余积=直和、始对象=零空间、余等化子=商空间、推出=粘合。",
    "notes": "**为什么单列**：线性代数的「对象 + 线性映射」在范畴语言里就是 $\\mathbf{Vect}_K$；有了它，「对偶」「Hom」才能写成函子。\n\n**忘掉结构**：遗忘函子 $\\mathbf{Vect}_K\\to\\mathbf{Set}$ 忘掉加法与数乘，只留底层集合与函数；它忠实但不满（不是每个函数都线性）。\n\n**与加性范畴**：Hom 集本身是向量空间，复合双线性；有限直和 = 有限积，所以它是加性范畴，进而是预阿贝尔范畴（核与余核逐点取）。",
    "refs": [
     "Mac Lane, Categories for the Working Mathematician, Ch. I, II",
@@ -23787,14 +23808,14 @@
    "id": "def.group",
    "type": "definition",
    "label": "群",
-   "title": "群与阿贝尔群",
+   "title": "群",
    "label_en": "group",
    "title_en": "group",
-   "statement_en": "Let $G$ be a **set** and $\\cdot$ a **binary operation** on $G$ (that is, a function $G \\times G \\to G$, $(a, b) \\mapsto a \\cdot b$). Then $(G, \\cdot)$ is a **group** if and only if:\n\n- **associativity**: $(a b) c = a (b c)$ for all $a, b, c \\in G$;\n- **identity**: there exists $e \\in G$ such that $e a = a e = a$ for all $a$;\n- **inverses**: for every $a \\in G$ there exists $a^{-1} \\in G$ such that $a a^{-1} = a^{-1} a = e$.\n\nA group that also satisfies the **commutative law** $a b = b a$ is called an **abelian group**, or **commutative group**.",
+   "statement_en": "Let $G$ be a **set** and $\\cdot$ a **binary operation** on $G$ (that is, a function $G \\times G \\to G$, $(a, b) \\mapsto a \\cdot b$). Then $(G, \\cdot)$ is a **group** if and only if:\n\n- **associativity**: $(a b) c = a (b c)$ for all $a, b, c \\in G$;\n- **identity**: there exists $e \\in G$ such that $e a = a e = a$ for all $a$;\n- **inverses**: for every $a \\in G$ there exists $a^{-1} \\in G$ such that $a a^{-1} = a^{-1} a = e$.",
    "notes_en": "⭐ **The format is again \"set + operation + axioms\"**: a group is not an object out of nowhere — one set, one function and three identities determine it. To decide whether something is a group, check these identities one by one.\n\n**The identity and inverses are unique**: if $e, e'$ are both identities, then $e = e e' = e'$; if $a^{-1}, a'$ are both inverses of $a$, then $a' = a' e = a' a a^{-1} = e a^{-1} = a^{-1}$. Hence the notations \"$e$\" and \"$a^{-1}$\" are legitimate.\n\n**Examples and counterexamples**: $(\\mathbb{Z}, +)$ is an abelian group; $(\\mathbb{Q} \\setminus \\{0\\}, \\cdot)$ is an abelian group; $(\\mathbb{Z}, \\cdot)$ is **not** a group (only $\\pm 1$ have multiplicative inverses);\n\n$n \\times n$ invertible matrices form a group under multiplication but **not** an abelian one ($n \\ge 2$).\n\n📌 There is a weaker layer: requiring only associativity and an identity, but not inverses, gives a **monoid**. ($\\mathbb{N}$ under addition is a monoid but not a group.)\n\n**Which hypothesis each direction uses** (a group is defined by axioms; shorter criteria must keep their ambient hypotheses):\n- group $\\iff$ associativity, two-sided identity and two-sided inverses: unwinding the definition, with no commutativity requirement.\n- group $\\implies$ uniqueness of identity and inverses: cancellation using associativity and the two-sided identity/inverse identities; no axiom of choice is needed to select inverses, since the inverse is already unique.\n- every element invertible in a monoid $\\implies$ group: direct expansion; cancellation alone is not enough, since the non-negative integers under addition satisfy cancellation but positive elements have no inverses.\n- finite non-empty cancellation semigroup $\\implies$ group: left and right multiplication are injective, hence bijective by finiteness, which yields a common identity and inverses; the infinite counterexample above shows finiteness cannot be dropped.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -23806,11 +23827,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "stale",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#dc564295",
       "notes": "v0.9.3#3dae59fa"
@@ -23828,10 +23851,9 @@
    "tags": [
     "代数",
     "群",
-    "阿贝尔群",
     "运算"
    ],
-   "statement": "设 $G$ 是**集合**，$\\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \\times G \\to G$，$(a, b) \\mapsto a \\cdot b$）。称 $(G, \\cdot)$ 是一个**群**，当且仅当：\n\n- **结合律**：$(a b) c = a (b c)$ 对一切 $a, b, c \\in G$ 成立；\n- **单位元**：存在 $e \\in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；\n- **逆元**：对每个 $a \\in G$ 存在 $a^{-1} \\in G$ 使 $a a^{-1} = a^{-1} a = e$。\n\n再满足**交换律** $a b = b a$ 的群叫**阿贝尔群**（Abelian group），也叫**交换群**。",
+   "statement": "设 $G$ 是**集合**，$\\cdot$ 是 $G$ 上的**二元运算**（即函数 $G \\times G \\to G$，$(a, b) \\mapsto a \\cdot b$）。称 $(G, \\cdot)$ 是一个**群**，当且仅当：\n\n- **结合律**：$(a b) c = a (b c)$ 对一切 $a, b, c \\in G$ 成立；\n- **单位元**：存在 $e \\in G$ 使 $e a = a e = a$ 对一切 $a$ 成立；\n- **逆元**：对每个 $a \\in G$ 存在 $a^{-1} \\in G$ 使 $a a^{-1} = a^{-1} a = e$。\n\n交换群单列为 `def.abelian-group`；本节点只保留群公理。",
    "notes": "⭐ **格式还是「集合 + 运算 + 公理」**：群不是凭空的对象 —— 一个集合、一个函数、三条等式就定出了一个群。判别一个东西是不是群，就是逐条核对这些等式。\n\n**单位元与逆元是唯一的**：若 $e, e'$ 都是单位元，则 $e = e e' = e'$；若 $a^{-1}, a'$ 都是 $a$ 的逆，则 $a' = a' e = a' a a^{-1} = e a^{-1} = a^{-1}$。所以「$e$」与「$a^{-1}$」这两个记号合法。\n\n**例子与反例**：$(\\mathbb{Z}, +)$ 是阿贝尔群；$(\\mathbb{Q} \\setminus \\{0\\}, \\cdot)$ 是阿贝尔群；$(\\mathbb{Z}, \\cdot)$ **不是**群（只有 $\\pm 1$ 有乘法逆元）；\n\n$n \\times n$ 可逆矩阵在乘法下是群但**不阿贝尔**（$n \\ge 2$）。\n\n📌 还有一层更弱的：只要求结合律与单位元、不要求逆元，叫**幺半群**。（$\\mathbb{N}$ 在加法下就是幺半群不是群。）\n\n\n\n**各方向用到的假设**（群是公理定义，较短判据须保留环境条件）：\n- 群 $\\iff$ 结合律、双侧单位元及双侧逆元：定义展开，不含交换律要求。\n- 群 $\\implies$ 单位元与逆元唯一：用结合律和两侧单位、逆元等式作消去，无需选择公理来同时选逆元，因为逆元已经唯一。\n- 幺半群中每个元素可逆 $\\implies$ 群：直接展开；只有消去律不够，非负整数加法有消去律但正元素无逆元。\n- 有限且非空的消去半群 $\\implies$ 群：左右乘法单射由有限性变成满射，进而构造共同单位及逆元；无限情形的上述反例说明不能省有限性。\n",
    "refs": [
     "Lang, Algebra"
@@ -25903,7 +25925,7 @@
    "notes_en": "**The model room of homological algebra**: $A\\text{-}\\mathbf{Mod}$ is abelian, with kernels, cokernels, and strict monomorphisms and epimorphisms; free modules give enough projectives, Baer's criterion gives enough injectives, and it is even a Grothendieck category.\n\n**Special cases**: $\\mathbb Z\\text{-}\\mathbf{Mod}\\simeq\\mathbf{Ab}$; when $k$ is a field, $k\\text{-}\\mathbf{Mod}$ is just $\\mathbf{Vect}_k$.\n\n**Freyd–Mitchell**: every small abelian category embeds fully faithfully and exactly into some $A\\text{-}\\mathbf{Mod}$, so “chasing elements in a module category” is a legitimate generalization.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -25915,11 +25937,13 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
+      "statement": "stale",
       "notes": "draft",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement"
+     ],
      "basedOn": {
       "statement": "v0.9.3#f932efdf",
       "notes": "v0.9.3#7df22f98"
@@ -25941,7 +25965,7 @@
     "阿贝尔范畴",
     "同调代数"
    ],
-   "statement": "设 $A$ 是含幺环。**左 $A$-模范畴** $A\\text{-}\\mathbf{Mod}$ 的对象是左 $A$-模，态射是 $A$-线性映射，复合与单位逐点定义。\n\n右 $A$-模构成 $\\mathbf{Mod}\\text{-}A$；$A$ 交换时两者等价。",
+   "statement": "设 $A$ 是含幺环。**左 $A$-模范畴** $A\\text{-}\\mathbf{Mod}$ 的对象是左 $A$-模，态射是 $A$-线性映射，复合与单位逐点定义。\n\n右 $A$-模构成 $\\mathbf{Mod}\\text{-}A$；$A$ 交换时两者等价。极限：积=直积、终对象=零模、等化子=核、拉回=纤维积；余极限：余积=直和、始对象=零模、余等化子=商模、推出=粘合。它满足 AB3/AB4/AB4*/AB5；本图不写 AB6、不写 AB3*。",
    "notes": "**同调代数的样板间**：$A\\text{-}\\mathbf{Mod}$ 是阿贝尔范畴，有核、余核、单满态射严格；自由模给出足够投射对象，Baer 判据给出足够内射对象，还是 Grothendieck 范畴。\n\n**特例**：$\\mathbb Z\\text{-}\\mathbf{Mod}\\simeq\\mathbf{Ab}$；$k$ 是域时 $k\\text{-}\\mathbf{Mod}$ 就是 $\\mathbf{Vect}_k$。\n\n**Freyd–Mitchell**：小阿贝尔范畴可全忠实、正合地嵌入某个 $A\\text{-}\\mathbf{Mod}$，所以「在模范畴里追元素」是合法的推广。",
    "refs": [
     "Lang, Algebra",
@@ -27648,12 +27672,12 @@
    },
    "en_page": "nodes/ex.algebra-categories.en.md",
    "en_html": false,
-   "region": "algebra",
+   "region": "category",
    "regions": [
-    "algebra",
-    "category"
+    "category",
+    "algebra"
    ],
-   "cluster": "algebra.structures",
+   "cluster": "cat.algebra",
    "layer": 17,
    "tags": [
     "代数",
@@ -27663,7 +27687,7 @@
     "模",
     "代数"
    ],
-   "statement": "常用的代数范畴（对象 + 保结构映射）：\n\n- $\\mathrm{Mon}$：幺半群；\n- $\\mathrm{Gr}$（也写 $\\mathbf{Grp}$）：群；\n- $\\mathrm{Rng}$：环；\n- $G\\text{-}\\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；\n- $A\\text{-}\\mathbf{Mod}$：$A$-模；\n- $k\\text{-}\\mathbf{Alg}$：$k$-代数（$k$ 交换环）。",
+   "statement": "常用的代数范畴（对象 + 保结构映射）：\n\n- $\\mathrm{Mon}$：幺半群；\n- $\\mathrm{Gr}$（也写 $\\mathbf{Grp}$）：群；\n- $\\mathrm{Rng}$：环；\n- $G\\text{-}\\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；\n- $A\\text{-}\\mathbf{Mod}$：$A$-模；\n- $k\\text{-}\\mathbf{Alg}$：$k$-代数（$k$ 交换环）。\n\n各范畴的极限、余极限与 AB 公理见 `def.category-of-monoids`、`def.category-of-groups`、`def.category-of-rings`、`def.category-of-g-sets`、`def.module-category`、`def.category-of-algebras`、`def.category-of-sets`、`def.category-of-topological-spaces`、`def.category-of-abelian-groups`、`def.category-of-vector-spaces`；统一构造见 `prop.algebra-categories-limits` 与 `prop.algebra-categories-colimits`。",
    "notes": "⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。\n\n所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。\n\n**两个特殊的**：$G\\text{-}\\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \\to \\mathbf{Set}$ 的函子，$G$-映射就是自然变换）；\n\n$A\\text{-}\\mathbf{Mod}$ 是同调代数的样板间。",
    "refs": [
     "Lang, Algebra"
@@ -38414,11 +38438,11 @@
    "label": "代数范畴里的极限与余极限",
    "title": "命题：极限逐点算，余极限由自由构造加商给出",
    "title_en": "limits and colimits in categories of algebras",
-   "statement_en": "In $\\mathbf{Mon}$, $\\mathbf{Gr}$, $\\mathbf{Rng}$, $G\\text{-}\\mathbf{Set}$, $A\\text{-}\\mathbf{Mod}$, $k\\text{-}\\mathbf{Alg}$ **limits are computed pointwise** (forgetting to sets gives the limit of sets);\n\n**colimits** are given by \"first generate freely, then quotient\" — for example the coproduct in $\\mathbf{Gr}$ is the free product.",
+   "statement_en": "Let $\\mathcal C$ be one of $\\mathbf{Mon}$, $\\mathbf{Grp}$, $\\mathbf{Rng}$, $G\\text{-}\\mathbf{Set}$, $R\\text{-}\\mathbf{Mod}$, $R\\text{-}\\mathbf{Alg}$, $\\mathbf{Vect}_K$, $\\mathbf{Set}$, $\\mathbf{Top}$, $\\mathbf{Ab}$. Then $\\mathcal C$ is complete: terminal objects, products, equalizers and pullbacks are all constructed pointwise on underlying sets; the forgetful functor $U:\\mathcal C\\to\\mathbf{Set}$ preserves limits. Colimits are treated in `prop.algebra-categories-colimits`.",
    "notes_en": "**Proof.** These forgetful functors **preserve limits** ✓, so a limit is the limit of underlying sets equipped with the structure given pointwise by the universal property ✓; for coproducts one first glues generators freely and then quotients by the relations ✓. ∎",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -38430,11 +38454,14 @@
       "notes"
      ],
      "fieldStatus": {
-      "statement": "draft",
-      "notes": "draft",
+      "statement": "stale",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "statement",
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#6cc16dae",
       "notes": "v0.9.3#eb2d27a6"
@@ -38448,7 +38475,7 @@
     "category"
    ],
    "cluster": "cat.algebra",
-   "layer": 14,
+   "layer": 16,
    "tags": [
     "命题",
     "极限",
@@ -38456,8 +38483,8 @@
     "自由对象",
     "代数范畴"
    ],
-   "statement": "$\\mathbf{Mon}$、$\\mathbf{Gr}$、$\\mathbf{Rng}$、$G\\text{-}\\mathbf{Set}$、$A\\text{-}\\mathbf{Mod}$、$k\\text{-}\\mathbf{Alg}$ 里的**极限逐点算**（忘到底集合就是集合的极限）；\n\n**余极限**由「先自由生成、再取商」给出 —— 例如 $\\mathbf{Gr}$ 里的余积是自由积。",
-   "notes": "**证明。** 这些遗忘函子都**保极限** ✓，所以极限 = 底层集合的极限配上由泛性质逐点给出的结构 ✓；余积则先把生成元自由地拼起来、再商掉关系 ✓。∎",
+   "statement": "设 $\\mathcal C$ 为 $\\mathbf{Mon}$、$\\mathbf{Grp}$、$\\mathbf{Rng}$、$G\\text{-}\\mathbf{Set}$、$R\\text{-}\\mathbf{Mod}$、$R\\text{-}\\mathbf{Alg}$、$\\mathbf{Vect}_K$、$\\mathbf{Set}$、$\\mathbf{Top}$、$\\mathbf{Ab}$ 之一。则 $\\mathcal C$ 完备：终对象、积、等化子与拉回都按底层集合逐项构造；遗忘函子 $U:\\mathcal C\\to\\mathbf{Set}$ 保极限。余极限见 `prop.algebra-categories-colimits`。",
+   "notes": "**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\\mathbf{Top}$ 不是笛卡尔闭；$R\\text{-}\\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.28"
    ]
@@ -87323,6 +87350,499 @@
    ]
   },
   {
+   "id": "def.monoid",
+   "type": "definition",
+   "label": "幺半群",
+   "title": "幺半群",
+   "label_en": "monoid",
+   "title_en": "monoid",
+   "statement_en": "Let $M$ be a set and $\\cdot$ a binary operation on $M$, with $e\\in M$. If **associativity** $(ab)c=a(bc)$ and the **identity law** $ea=ae=a$ hold for all $a,b,c$, then $(M,\\cdot,e)$ is called a **monoid**; one that also satisfies the **commutative law** is a **commutative monoid**. A homomorphism is a map preserving the operation and the identity.",
+   "notes_en": "**Examples**: $(\\mathbb N,+ ,0)$ and $(\\mathbb N,\\cdot,1)$ are commutative monoids; strings form a monoid under concatenation; the $n\\times n$ matrices form a monoid under multiplication (non-commutative when $n\\ge 2$).\n\n**Relation to groups**: a group is exactly a monoid in which every element is invertible; the group axioms are given separately in @@def.group@@, and abelian groups in @@def.abelian-group@@.\n\n**Kept separate from monoid objects in a category**: @@def.monoid-object@@ internalizes “object + multiplication + unit” in a general category; the present entry stays at the level of sets.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#271462ec",
+      "notes": "v0.9.3#7aa0f1a2"
+     }
+    }
+   },
+   "en_page": "nodes/def.monoid.en.md",
+   "en_html": true,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 9,
+   "tags": [
+    "代数",
+    "幺半群",
+    "结合律",
+    "单位元"
+   ],
+   "statement": "设 $M$ 是集合，$\\cdot$ 是 $M$ 上的二元运算，$e\\in M$。若结合律 $(ab)c=a(bc)$ 与单位元 $ea=ae=a$ 对一切 $a,b,c$ 成立，称 $(M,\\cdot,e)$ 为**幺半群**（monoid）；再满足交换律的称为**交换幺半群**。同态是保运算与单位的映射。",
+   "notes": "**例**：$(\\mathbb N,+ ,0)$ 与 $(\\mathbb N,\\cdot,1)$ 都是交换幺半群；字符串在连接下是幺半群；$n\\times n$ 矩阵在乘法下是幺半群（$n\\ge 2$ 时不交换）。\n\n**与群的关系**：群恰是每个元素都可逆的幺半群；本图把群公理单列在 `def.group`，把交换群单列在 `def.abelian-group`。\n\n**与范畴中的幺半群对象分开**：`def.monoid-object` 是「对象 + 乘法 + 单位」在一般范畴里的内化，本条只是集合层面。",
+   "refs": [
+    "Lang, Algebra, Ch. I",
+    "Mac Lane, Categories for the Working Mathematician, Ch. I"
+   ]
+  },
+  {
+   "id": "def.abelian-group",
+   "type": "definition",
+   "label": "阿贝尔群",
+   "title": "阿贝尔群（交换群）",
+   "label_en": "abelian group",
+   "title_en": "abelian group",
+   "statement_en": "Let $(G,\\cdot,e,{}^{-1})$ be a group. If for all $a,b\\in G$ one has $ab=ba$, then $G$ is called an **abelian group** (or **commutative group**). Equivalently, $G$ is a $\\mathbb Z$-module (with scalar multiplication by $n$ regarded as the action).",
+   "notes_en": "**Examples**: $(\\mathbb Z,+)$, $(\\mathbb Q,+)$, $(\\mathbb R,+)$ and $(\\mathbb Z/n\\mathbb Z,+)$ are abelian groups, and so is $(\\mathbb Q\\setminus\\{0\\},\\cdot)$. The $n\\times n$ invertible matrices do not form one under multiplication ($n\\ge 2$).\n\n**Why a separate entry**: @@def.group@@ keeps only the group axioms; abelian groups recur in module theory, homological algebra, and the definition of $\\mathbf{Ab}$, so a separate entry can be cited directly by @@def.module@@ and @@def.category-of-abelian-groups@@.\n\n**Homomorphism groups**: for any group $G$, the set $\\hom(G,A)$ (with $A$ abelian) is again an abelian group under pointwise operations; this is the simplest form of the statement that abelian groups are the enriched base of $\\mathbf{Grp}$.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#bc51f5c1",
+      "notes": "v0.9.3#6fb28093"
+     }
+    }
+   },
+   "en_page": "nodes/def.abelian-group.en.md",
+   "en_html": true,
+   "region": "algebra",
+   "regions": [
+    "algebra"
+   ],
+   "cluster": "algebra.structures",
+   "layer": 10,
+   "tags": [
+    "代数",
+    "群",
+    "交换群",
+    "阿贝尔群"
+   ],
+   "statement": "设 $(G,\\cdot,e,{}^{-1})$ 是群。若对一切 $a,b\\in G$ 有 $ab=ba$，称 $G$ 为**阿贝尔群**（Abelian group）或**交换群**。等价地，$G$ 是 $\\mathbb Z$-模（把 $n$ 倍运算视为作用）。",
+   "notes": "**例**：$(\\mathbb Z,+)$、$(\\mathbb Q,+)$、$(\\mathbb R,+)$、$(\\mathbb Z/n\\mathbb Z,+)$ 都是阿贝尔群；$(\\mathbb Q\\setminus\\{0\\},\\cdot)$ 也是。$n\\times n$ 可逆矩阵在乘法下（$n\\ge 2$）不是。\n\n**为什么单列**：`def.group` 只保留群公理；交换群在模论、同调代数与 $\\mathbf{Ab}$ 的定义里反复出现，单列后可直接被 `def.module`、`def.category-of-abelian-groups` 引用。\n\n**同态群**：对任意群 $G$，$\\hom(G,A)$（$A$ 阿贝尔）按逐点运算仍是阿贝尔群，这是「阿贝尔群是 $\\mathbf{Grp}$ 的充实基底」的最简形式。",
+   "refs": [
+    "Lang, Algebra, Ch. I",
+    "Weibel, An Introduction to Homological Algebra, Ch. 1"
+   ]
+  },
+  {
+   "id": "def.cartesian-closed-category",
+   "type": "definition",
+   "label": "笛卡尔闭范畴",
+   "title": "笛卡尔闭范畴",
+   "label_en": "cartesian closed category",
+   "title_en": "cartesian closed category",
+   "statement_en": "A category $\\mathcal C$ is called **cartesian closed** if it has finite products (a terminal object and binary products) and, for every $X$, the functor $(-)\\times X:\\mathcal C\\to\\mathcal C$ has a right adjoint $(-)^X$. Equivalently, there is an evaluation morphism $\\mathrm{ev}:Y^X\\times X\\to Y$ and a natural bijection $\\hom_{\\mathcal C}(Z\\times X,Y)\\cong\\hom_{\\mathcal C}(Z,Y^X)$, called currying.",
+   "notes_en": "**Examples**: in $\\mathbf{Set}$, $Y^X=\\hom(X,Y)$; in $G\\text{-}\\mathbf{Set}$, $Y^X$ with the conjugation action $(g\\cdot f)(x)=g f(g^{-1}x)$.\n\n**Counterexample**: $\\mathbf{Top}$ is not cartesian closed in general (the compact-open topology makes continuity of evaluation too strong); the category $\\mathbf{CGWH}$ of compactly generated weak Hausdorff spaces is, see @@prop.cg-cartesian-closed@@.\n\n**Kept separate from internal hom in enriched categories**: @@def.internal-hom@@ is the hom object in an enriched category; $Y^X$ here is an exponential object in an ordinary category.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#c359b851",
+      "notes": "v0.9.3#ef02103a"
+     }
+    }
+   },
+   "en_page": "nodes/def.cartesian-closed-category.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category"
+   ],
+   "cluster": "cat.limit",
+   "layer": 15,
+   "tags": [
+    "范畴论",
+    "笛卡尔闭",
+    "指数对象"
+   ],
+   "statement": "范畴 $\\mathcal C$ 称为**笛卡尔闭**，若它有有限积（终对象与二元积），且对每个 $X$，函子 $(-)\\times X:\\mathcal C\\to\\mathcal C$ 有右伴随 $(-)^X$。等价地，存在求值态射 $\\mathrm{ev}:Y^X\\times X\\to Y$ 与自然双射 $\\hom_{\\mathcal C}(Z\\times X,Y)\\cong\\hom_{\\mathcal C}(Z,Y^X)$，称为 curry 化。",
+   "notes": "**例**：$\\mathbf{Set}$ 中 $Y^X=\\hom(X,Y)$；$G\\text{-}\\mathbf{Set}$ 中 $Y^X$ 取共轭作用 $(g\\cdot f)(x)=g f(g^{-1}x)$。\n\n**反例**：$\\mathbf{Top}$ 一般不是笛卡尔闭（指数拓扑使求值连续的条件太强）；紧生成弱 Hausdorff 空间 $\\mathbf{CGWH}$ 才是，见 `prop.cg-cartesian-closed`。\n\n**与充实范畴的 internal hom 分开**：`def.internal-hom` 是充实范畴里的 hom 对象；本条的 $Y^X$ 是普通范畴中的指数对象。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. IV"
+   ]
+  },
+  {
+   "id": "def.category-of-monoids",
+   "type": "definition",
+   "label": "幺半群范畴",
+   "title": "幺半群范畴 $\\mathbf{Mon}$",
+   "label_en": "category of monoids",
+   "title_en": "category of monoids",
+   "statement_en": "**The category of monoids** $\\mathbf{Mon}$: objects are monoids and morphisms are monoid homomorphisms. The terminal object is the trivial monoid $\\{e\\}$; products are constructed pointwise; equalizers are submonoids; pullbacks are fiber products.\n\nCoproducts are **free products** (juxtapose words, then quotient so that the identity and the operation are respected); the initial object is again the trivial monoid (isomorphic to the terminal object); coequalizers are quotient monoids (the closure of the generated congruence); pushouts are amalgamated free products.",
+   "notes_en": "**Complete and cocomplete**: the constructions above give small limits and small colimits term by term; the forgetful functor $\\mathbf{Mon}\\to\\mathbf{Set}$ preserves limits.\n\n**Relation to $\\mathbf{Grp}$**: groups form a full subcategory (monoids in which every element is invertible), and the inclusion has a left adjoint, “groupification”.\n\n**Not additive**: $\\hom(M,N)$ has no monoid structure in general; the free monoid is the word monoid. Cartesian closedness is not developed here.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#1e74a797",
+      "notes": "v0.9.3#12eb8d9d"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-monoids.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 10,
+   "tags": [
+    "范畴论",
+    "幺半群",
+    "Mon"
+   ],
+   "statement": "**幺半群范畴** $\\mathbf{Mon}$：对象是幺半群，态射是幺半群同态。终对象是平凡幺半群 $\\{e\\}$；积逐点构造；等化子是子幺半群；拉回是纤维积。\n\n余积是**自由积**（把字并置后取商使单位与运算相容）；始对象仍是平凡幺半群（与终对象同构）；余等化子是商幺半群（生成同余的闭包）；推出是 amalgamated free product。",
+   "notes": "**完备且余完备**：上述构造逐项给出小极限与小余极限；遗忘函子 $\\mathbf{Mon}\\to\\mathbf{Set}$ 保极限。\n\n**与 $\\mathbf{Grp}$**：群是全子范畴（每个元素可逆的幺半群），包含函子有左伴随「群化」。\n\n**非加性**：$\\hom(M,N)$ 一般没有幺半群结构；自由幺半群就是字幺半群。笛卡尔闭性本图不展开。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
+   ]
+  },
+  {
+   "id": "def.category-of-rings",
+   "type": "definition",
+   "label": "环范畴",
+   "title": "环范畴 $\\mathbf{Rng}$（不一定含幺）",
+   "label_en": "category of rings",
+   "title_en": "category of rings",
+   "statement_en": "**The category of rings** $\\mathbf{Rng}$: objects are rings (in the convention of @@def.ring@@: not necessarily unital, not necessarily commutative) and morphisms are ring homomorphisms. **The zero ring is a zero object** (both initial and terminal); products are constructed pointwise; equalizers are subrings; pullbacks are fiber products.\n\nCoproducts are **free products** of rings; coequalizers are quotient rings (taking the closure of the generated two-sided ideal); pushouts are amalgamated free products.",
+   "notes_en": "**Complete and cocomplete**; **not additive** ($\\hom(R,S)$ has no abelian group structure in general).\n\n**Why no unit is required**: @@def.ring@@ explicitly does not require a unit. In the category of unital rings the initial object is $\\mathbb Z$; that does not conflict with the zero ring being terminal, but it would diverge from the convention of @@def.ring@@, so the category of unital rings is not given a separate entry.\n\n**$\\mathbb Z$ is not initial**: a non-unital homomorphism need not preserve $1$, and $\\hom(\\mathbb Z,R)$ corresponds to an idempotent of $R$, which is not unique.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#e9393128",
+      "notes": "v0.9.3#5a4f3e68"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-rings.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 12,
+   "tags": [
+    "范畴论",
+    "环",
+    "Rng"
+   ],
+   "statement": "**环范畴** $\\mathbf{Rng}$：对象是环（按 `def.ring` 的约定：不要求幺元、不要求交换），态射是环同态。**零环是零对象**（既是始对象又是终对象）；积逐点构造；等化子是子环；拉回是纤维积。\n\n余积是环的**自由积**；余等化子是商环（取生成的双边理想的闭包）；推出是 amalgamated free product。",
+   "notes": "**完备且余完备**；**非加性**（$\\hom(R,S)$ 一般没有加法群结构）。\n\n**为什么不含幺**：本图 `def.ring` 明确不要求幺元；含幺环范畴的始对象是 $\\mathbb Z$，与零环作为终对象不冲突，但会与 `def.ring` 的约定分叉，故本图不单列含幺环范畴。\n\n**$\\mathbb Z$ 不是始对象**：非含幺同态不必保 $1$，$\\hom(\\mathbb Z,R)$ 对应 $R$ 的幂等元，不唯一。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II",
+    "Lang, Algebra, Ch. II"
+   ]
+  },
+  {
+   "id": "def.category-of-g-sets",
+   "type": "definition",
+   "label": "G-集范畴",
+   "title": "$G$-集范畴 $G\\text{-}\\mathbf{Set}$",
+   "label_en": "category of G-sets",
+   "title_en": "category of G-sets",
+   "statement_en": "**The category of $G$-sets** $G\\text{-}\\mathbf{Set}$: objects are left $G$-sets and morphisms are equivariant maps. The terminal object is a one-point set (with the trivial action); products carry the diagonal action; equalizers are fixed-point subsets; pullbacks are fiber products.\n\nThe initial object is the empty set; coproducts are disjoint unions; coequalizers are quotient $G$-sets (the closure of the generated equivalence relation); pushouts are gluings.",
+   "notes_en": "**Complete and cocomplete**, and **cartesian closed**: $Y^X$ carries the conjugation action $(g\\cdot f)(x)=g f(g^{-1}x)$, and evaluation and currying are checked pointwise.\n\n**It is a topos**: it is equivalent to the category of presheaves on the one-object groupoid, see @@def.topos@@.\n\n**Not additive**; the free $G$-set is $G\\times X$ (with the left-multiplication action).",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#e25d162c",
+      "notes": "v0.9.3#7590a590"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-g-sets.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 13,
+   "tags": [
+    "范畴论",
+    "群作用",
+    "G-集",
+    "拓扑斯"
+   ],
+   "statement": "**$G$-集范畴** $G\\text{-}\\mathbf{Set}$：对象是左 $G$-集，态射是等变映射。终对象是单点集（平凡作用）；积取对角作用；等化子是不动点子集；拉回是纤维积。\n\n始对象是空集；余积是不交并；余等化子是商 $G$-集（生成等价关系的闭包）；推出是粘合。",
+   "notes": "**完备且余完备**，且是**笛卡尔闭**的：$Y^X$ 取共轭作用 $(g\\cdot f)(x)=g f(g^{-1}x)$，求值与 curry 逐点验证。\n\n**是拓扑斯**：等价于单对象群胚上的预层范畴，见 `def.topos`。\n\n**非加性**；自由 $G$-集是 $G\\times X$（左乘作用）。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II",
+    "Le Stum, An introduction to condensed mathematics, §1"
+   ]
+  },
+  {
+   "id": "def.category-of-algebras",
+   "type": "definition",
+   "label": "R-代数范畴",
+   "title": "$R$-代数范畴 $R\\text{-}\\mathbf{Alg}$",
+   "label_en": "category of algebras",
+   "title_en": "category of algebras",
+   "statement_en": "Fix a commutative unital ring $R$. **The category of $R$-algebras** $R\\text{-}\\mathbf{Alg}$: objects are unital associative $R$-algebras (multiplication need not be commutative) and morphisms preserve $1$ and are homomorphisms of $R$-algebras.\n\n$R$ is the initial object ($r\\mapsto r1$); **zero algebras** ($1=0$) are allowed, and are the terminal object. Products are constructed pointwise; equalizers are subalgebras; pullbacks are fiber products. Coproducts are free products; coequalizers are quotient algebras (the generated two-sided ideal); pushouts are amalgamated free products.",
+   "notes_en": "**Complete and cocomplete**; **not additive**; in general **not cartesian closed**.\n\n**Commutative case**: the coproduct of commutative $R$-algebras is $\\otimes_R$; no separate entry is given for the category of commutative algebras, so this is noted here.\n\n**Convention on zero algebras**: if zero algebras were disallowed, the category would have no terminal object; here they are allowed, so that a terminal object exists, as recorded in this note.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#baa38e47",
+      "notes": "v0.9.3#84915a5e"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-algebras.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 13,
+   "tags": [
+    "范畴论",
+    "代数",
+    "R-代数"
+   ],
+   "statement": "固定交换含幺环 $R$。**$R$-代数范畴** $R\\text{-}\\mathbf{Alg}$：对象是含幺结合 $R$-代数（乘法不必交换），态射是保 $1$ 的 $R$-代数同态。\n\n$R$ 是始对象（$r\\mapsto r1$）；本图允许**零代数**（$1=0$），它是终对象。积逐点构造；等化子是子代数；拉回是纤维积。余积是自由积；余等化子是商代数（生成的双边理想）；推出是 amalgamated free product。",
+   "notes": "**完备且余完备**；**非加性**；一般**不是笛卡尔闭**。\n\n**交换情形**：交换 $R$-代数的余积是 $\\otimes_R$；本图不单列交换代数范畴，故只在注里说明。\n\n**零代数的约定**：若不允许零代数，则本范畴没有终对象；本图按「允许零代数」处理，使终对象存在，并在此注明。",
+   "refs": [
+    "Lang, Algebra, Ch. II",
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
+   ]
+  },
+  {
+   "id": "def.category-of-fields",
+   "type": "definition",
+   "label": "域范畴",
+   "title": "域范畴 $\\mathbf{Field}$",
+   "label_en": "category of fields",
+   "title_en": "category of fields",
+   "statement_en": "**The category of fields** $\\mathbf{Field}$: objects are fields and morphisms are field homomorphisms (automatically injective). It has **no terminal object** (the zero ring is not a field), **no initial object** (no field admits homomorphisms to both $\\mathbb Q$ and $\\mathbb F_p$), and **no binary products** (the product of $\\mathbb Q$ and $\\mathbb F_p$ does not exist). Hence $\\mathbf{Field}$ is neither complete nor cocomplete.",
+   "notes_en": "**Equalizers exist**: the equalizer of two field homomorphisms is a fixed subfield; but this does not supply a terminal object or products.\n\n**Use**: it is the standard counterexample to “looks like an algebraic category but lacks even finite products”, a reminder not to assume that “algebraic structure + homomorphisms” is automatically complete.\n\n**Relation to `def.field`**: fields themselves are defined in `def.field`; this entry only adds limit and colimit information at the level of categories.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#55a190c8",
+      "notes": "v0.9.3#0ee59f21"
+     }
+    }
+   },
+   "en_page": "nodes/def.category-of-fields.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.basic",
+   "layer": 11,
+   "tags": [
+    "范畴论",
+    "域",
+    "反例"
+   ],
+   "statement": "**域范畴** $\\mathbf{Field}$：对象是域，态射是域同态（自动单射）。它**没有终对象**（零环不是域），**没有始对象**（$\\mathbb Q$ 与 $\\mathbb F_p$ 不能同时接收同一个域的同态），也**没有二元积**（$\\mathbb Q$ 与 $\\mathbb F_p$ 的积不存在）。因此 $\\mathbf{Field}$ 既不完备也不余完备。",
+   "notes": "**等化子存在**：两个域同态的等化子是固定子域；但这不足以补出终对象或积。\n\n**用途**：它是「看起来像代数范畴、实际连有限积都没有」的标准反例，提醒不要默认「代数结构 + 同态」一定完备。\n\n**与 `def.field` 的关系**：域的定义在 `def.field`，本条只加范畴层面的极限/余极限信息。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. I, II"
+   ]
+  },
+  {
+   "id": "prop.algebra-categories-colimits",
+   "type": "proposition",
+   "label": "代数范畴的余极限",
+   "title": "代数结构范畴的余极限逐项构造",
+   "label_en": "colimits in algebraic categories",
+   "title_en": "colimits in algebraic categories",
+   "statement_en": "Let $\\mathcal C\\in\\{\\mathbf{Mon},\\mathbf{Grp},\\mathbf{Rng},G\\text{-}\\mathbf{Set},R\\text{-}\\mathbf{Mod},R\\text{-}\\mathbf{Alg}\\}$ (each category with the convention of its own entry). Then $\\mathcal C$ is cocomplete: the coproducts are respectively free products ($\\mathbf{Mon},\\mathbf{Grp},\\mathbf{Rng},R\\text{-}\\mathbf{Alg}$), disjoint unions ($G\\text{-}\\mathbf{Set}$) and direct sums ($R\\text{-}\\mathbf{Mod}$); the coequalizers are respectively quotient monoids, quotient groups, quotient rings, quotient $G$-sets, quotient modules and quotient algebras (taking the generated congruence or two-sided ideal).",
+   "notes_en": "**Proof on the edge** @@imp.algebra-categories-colimits@@: write out the universal property of the free construction, then check that the quotient object satisfies the universal property of the coequalizer.\n\n**Colimits in $\\mathbf{Set}$ and $\\mathbf{Top}$** are analogous (disjoint unions, quotient topology); this entry lists only algebraic structures, to avoid duplicating @@prop.algebra-categories-limits@@.\n\n**The coproduct of commutative $R$-algebras** is $\\otimes_R$; the zero-algebra case follows the convention of @@def.category-of-algebras@@.",
+   "translations": {
+    "en": {
+     "status": "draft",
+     "version": "v0.9.3",
+     "fields": [
+      "statement",
+      "notes",
+      "name"
+     ],
+     "creative": [
+      "statement",
+      "notes"
+     ],
+     "fieldStatus": {
+      "statement": "draft",
+      "notes": "draft",
+      "name": "derived"
+     },
+     "staleFields": [],
+     "basedOn": {
+      "statement": "v0.9.3#40c1cdb0",
+      "notes": "v0.9.3#7cb1d980"
+     }
+    }
+   },
+   "en_page": "nodes/prop.algebra-categories-colimits.en.md",
+   "en_html": true,
+   "region": "category",
+   "regions": [
+    "category",
+    "algebra"
+   ],
+   "cluster": "cat.algebra",
+   "layer": 18,
+   "tags": [
+    "范畴论",
+    "余极限",
+    "余积",
+    "余等化子"
+   ],
+   "statement": "设 $\\mathcal C\\in\\{\\mathbf{Mon},\\mathbf{Grp},\\mathbf{Rng},G\\text{-}\\mathbf{Set},R\\text{-}\\mathbf{Mod},R\\text{-}\\mathbf{Alg}\\}$（各范畴按对应节点的约定）。则 $\\mathcal C$ 余完备：余积分别是自由积（$\\mathbf{Mon},\\mathbf{Grp},\\mathbf{Rng},R\\text{-}\\mathbf{Alg}$）、不交并（$G\\text{-}\\mathbf{Set}$）、直和（$R\\text{-}\\mathbf{Mod}$）；余等化子分别是商幺半群、商群、商环、商 $G$-集、商模、商代数（取生成的同余或双边理想）。",
+   "notes": "**证明见边** `imp.algebra-categories-colimits`：写出自由构造的泛性质，再验证商对象满足余等化子的泛性质。\n\n**$\\mathbf{Set}$ 与 $\\mathbf{Top}$** 的余极限同理（不交并、商拓扑）；本条只列代数结构，避免与 `prop.algebra-categories-limits` 重复。\n\n**交换 $R$-代数**的余积是 $\\otimes_R$；零代数情形按 `def.category-of-algebras` 的约定处理。",
+   "refs": [
+    "Mac Lane, Categories for the Working Mathematician, Ch. V",
+    "Lang, Algebra, Ch. II"
+   ]
+  },
+  {
    "id": "def.isomorphism",
    "type": "definition",
    "label": "同构",
@@ -118706,6 +119226,1046 @@
    "note": ""
   },
   {
+   "id": "atlas.dep.binop-monoid",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.binary-operation",
+   "usedBy": "def.monoid",
+   "note": "幺半群的运算就是二元运算。"
+  },
+  {
+   "id": "atlas.dep.group-abelian",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.abelian-group",
+   "note": "阿贝尔群先要是群，再加交换律。"
+  },
+  {
+   "id": "atlas.dep.category-mon",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-monoids",
+   "note": "范畴的定义用于陈述 $\\mathbf{Mon}$。"
+  },
+  {
+   "id": "atlas.dep.category-rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-rings",
+   "note": "范畴的定义用于陈述 $\\mathbf{Rng}$。"
+  },
+  {
+   "id": "atlas.dep.category-gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-g-sets",
+   "note": "范畴的定义用于陈述 $G\\text{-}\\mathbf{Set}$。"
+  },
+  {
+   "id": "atlas.dep.category-alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-algebras",
+   "note": "范畴的定义用于陈述 $R\\text{-}\\mathbf{Alg}$。"
+  },
+  {
+   "id": "atlas.dep.category-field",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.category-of-fields",
+   "note": "范畴的定义用于陈述 $\\mathbf{Field}$。"
+  },
+  {
+   "id": "atlas.dep.monoid-mon",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.monoid",
+   "usedBy": "def.category-of-monoids",
+   "note": "$\\mathbf{Mon}$ 的对象就是幺半群。"
+  },
+  {
+   "id": "atlas.dep.ring-rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "def.category-of-rings",
+   "note": "$\\mathbf{Rng}$ 的对象按 `def.ring` 的约定。"
+  },
+  {
+   "id": "atlas.dep.ringhom-rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring-hom",
+   "usedBy": "def.category-of-rings",
+   "note": "$\\mathbf{Rng}$ 的态射是环同态。"
+  },
+  {
+   "id": "atlas.dep.group-gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "def.category-of-g-sets",
+   "note": "$G$-集要先有群 $G$。"
+  },
+  {
+   "id": "atlas.dep.action-gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group-action",
+   "usedBy": "def.category-of-g-sets",
+   "note": "$G$-集就是带群作用集合。"
+  },
+  {
+   "id": "atlas.dep.sets-gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "def.category-of-g-sets",
+   "note": "等变映射的底层是集合映射。"
+  },
+  {
+   "id": "atlas.dep.algebra-ring-alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.algebra-over-ring",
+   "usedBy": "def.category-of-algebras",
+   "note": "$R$-代数的定义用于陈述 $R\\text{-}\\mathbf{Alg}$。"
+  },
+  {
+   "id": "atlas.dep.ring-alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "def.category-of-algebras",
+   "note": "$R$ 是环，代数对象带环结构。"
+  },
+  {
+   "id": "atlas.dep.ringhom-alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring-hom",
+   "usedBy": "def.category-of-algebras",
+   "note": "代数同态的底层是环同态。"
+  },
+  {
+   "id": "atlas.dep.field-fieldcat",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.field",
+   "usedBy": "def.category-of-fields",
+   "note": "$\\mathbf{Field}$ 的对象就是域。"
+  },
+  {
+   "id": "atlas.dep.ring-mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "def.module-category",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 的对象是 $R$-模，$R$ 是环。"
+  },
+  {
+   "id": "atlas.dep.abelian-mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.abelian-group",
+   "usedBy": "def.module-category",
+   "note": "$R$-模的加法群是阿贝尔群。"
+  },
+  {
+   "id": "atlas.dep.abcat-mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "def.module-category",
+   "note": "$R=\\mathbb Z$ 时退化为 $\\mathbf{Ab}$。"
+  },
+  {
+   "id": "atlas.dep.modhom-mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-hom",
+   "usedBy": "def.module-category",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 的态射是模同态。"
+  },
+  {
+   "id": "atlas.dep.product-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product",
+   "usedBy": "def.cartesian-closed-category",
+   "note": "笛卡尔闭要求有限积，特别是二元积。"
+  },
+  {
+   "id": "atlas.dep.category-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category",
+   "usedBy": "def.cartesian-closed-category",
+   "note": "笛卡尔闭性是范畴的性质。"
+  },
+  {
+   "id": "atlas.applies.set-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Set}$ 的极限表由该命题统一给出（逐点构造）。"
+  },
+  {
+   "id": "atlas.applies.top-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Top}$ 的极限按子空间/积拓扑逐项给出。"
+  },
+  {
+   "id": "atlas.applies.grp-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-groups",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Grp}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.mon-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-monoids",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Mon}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.ab-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Ab}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.rng-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-rings",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Rng}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.gset-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$G\\text{-}\\mathbf{Set}$ 的极限取不动点/对角作用。"
+  },
+  {
+   "id": "atlas.applies.mod-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.alg-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$R\\text{-}\\mathbf{Alg}$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.vect-lim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Vect}_K$ 的极限逐项构造。"
+  },
+  {
+   "id": "atlas.applies.set-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Set}$ 的余极限表由该命题统一给出。"
+  },
+  {
+   "id": "atlas.applies.top-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Top}$ 的余极限取商拓扑/不交并。"
+  },
+  {
+   "id": "atlas.applies.grp-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-groups",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Grp}$ 的余极限：自由积/商群。"
+  },
+  {
+   "id": "atlas.applies.mon-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-monoids",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Mon}$ 的余极限：自由积/商幺半群。"
+  },
+  {
+   "id": "atlas.applies.ab-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Ab}$ 的余极限：直和/商群。"
+  },
+  {
+   "id": "atlas.applies.rng-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-rings",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Rng}$ 的余极限：自由积/商环。"
+  },
+  {
+   "id": "atlas.applies.gset-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$G\\text{-}\\mathbf{Set}$ 的余极限：不交并/商 $G$-集。"
+  },
+  {
+   "id": "atlas.applies.mod-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 的余极限：直和/商模。"
+  },
+  {
+   "id": "atlas.applies.alg-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$R\\text{-}\\mathbf{Alg}$ 的余极限：自由积/商代数。"
+  },
+  {
+   "id": "atlas.applies.vect-colim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Vect}_K$ 的余极限：直和/商空间。"
+  },
+  {
+   "id": "atlas.free.mon",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-monoids",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由幺半群是字幺半群。"
+  },
+  {
+   "id": "atlas.free.grp",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-groups",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由群。"
+  },
+  {
+   "id": "atlas.free.rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-rings",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由环（非交换多项式环）。"
+  },
+  {
+   "id": "atlas.free.gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由 $G$-集是 $G\\times X$。"
+  },
+  {
+   "id": "atlas.free.mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由模 $R^{(X)}$。"
+  },
+  {
+   "id": "atlas.free.alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由结合代数（张量代数）。"
+  },
+  {
+   "id": "atlas.free.vect",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由向量空间以基给出。"
+  },
+  {
+   "id": "atlas.free.ab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.free-objects-examples",
+   "note": "自由阿贝尔群 $\\mathbb Z^{(X)}$。"
+  },
+  {
+   "id": "atlas.forget.mon",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-monoids",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.grp",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-groups",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-rings",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.vect",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.forget.ab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.forgetful-preserves-limits",
+   "note": "遗忘函子到 $\\mathbf{Set}$ 保极限。"
+  },
+  {
+   "id": "atlas.props.set-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "def.cartesian-closed-category",
+   "note": "$\\mathbf{Set}$ 是笛卡尔闭的，$Y^X=\\hom(X,Y)$。"
+  },
+  {
+   "id": "atlas.props.gset-cc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "def.cartesian-closed-category",
+   "note": "$G\\text{-}\\mathbf{Set}$ 是笛卡尔闭的，指数取共轭作用。"
+  },
+  {
+   "id": "atlas.props.set-topos",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "def.topos",
+   "note": "$\\mathbf{Set}$ 是拓扑斯。"
+  },
+  {
+   "id": "atlas.props.gset-topos",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "def.topos",
+   "note": "$G\\text{-}\\mathbf{Set}$ 是拓扑斯（群胚上的预层）。"
+  },
+  {
+   "id": "atlas.props.top-cgcc",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "prop.cg-cartesian-closed",
+   "note": "$\\mathbf{Top}$ 本身不是笛卡尔闭；其紧生成弱 Hausdorff 全子范畴才是。"
+  },
+  {
+   "id": "atlas.props.ab-add",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "def.additive-category",
+   "note": "$\\mathbf{Ab}$ 是加法范畴。"
+  },
+  {
+   "id": "atlas.props.ab-abelian",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "def.abelian-category",
+   "note": "$\\mathbf{Ab}$ 是阿贝尔范畴。"
+  },
+  {
+   "id": "atlas.props.ab-ax",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "def.ab-axioms",
+   "note": "$\\mathbf{Ab}$ 满足 AB3–AB6。"
+  },
+  {
+   "id": "atlas.props.ab-ab6",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.ab6",
+   "note": "$\\mathbf{Ab}$ 满足 AB6（滤过余极限与积交换）。"
+  },
+  {
+   "id": "atlas.props.ab-examples",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.ab-axioms-examples",
+   "note": "$\\mathbf{Ab}$ 是 AB 公理的标准例子。"
+  },
+  {
+   "id": "atlas.props.ab-ab5",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "prop.ab5-implications",
+   "note": "$\\mathbf{Ab}$ 满足 AB5。"
+  },
+  {
+   "id": "atlas.props.ab-enough-proj",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "def.enough-projectives",
+   "note": "自由阿贝尔群投射，故 $\\mathbf{Ab}$ 有足够多投射对象。"
+  },
+  {
+   "id": "atlas.props.mod-add",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "def.additive-category",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 是加法范畴。"
+  },
+  {
+   "id": "atlas.props.mod-abelian",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "def.abelian-category",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 是阿贝尔范畴。"
+  },
+  {
+   "id": "atlas.props.mod-ax",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "def.ab-axioms",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 满足 AB3/AB4/AB4*/AB5；**不写 AB6、不写 AB3***。"
+  },
+  {
+   "id": "atlas.props.mod-examples",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.ab-axioms-examples",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 是 AB 公理的模范例。"
+  },
+  {
+   "id": "atlas.props.mod-ab5",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.ab5-implications",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 满足 AB5。"
+  },
+  {
+   "id": "atlas.props.mod-enough-proj",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "def.enough-projectives",
+   "note": "自由模投射，故有足够多投射对象。"
+  },
+  {
+   "id": "atlas.props.mod-enough-proj-thm",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "thm.mod-enough-projectives",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 有足够多投射对象。"
+  },
+  {
+   "id": "atlas.props.mod-enough-inj-thm",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "thm.mod-enough-injectives",
+   "note": "$R\\text{-}\\mathbf{Mod}$ 有足够多内射对象（Baer 判别法）。"
+  },
+  {
+   "id": "atlas.props.vect-add",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.additive-category",
+   "note": "$\\mathbf{Vect}_K$ 是加法范畴。"
+  },
+  {
+   "id": "atlas.props.vect-abelian",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.abelian-category",
+   "note": "$\\mathbf{Vect}_K$ 是阿贝尔范畴。"
+  },
+  {
+   "id": "atlas.props.vect-enough-proj",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.enough-projectives",
+   "note": "每个向量空间有基，故自由空间投射。"
+  },
+  {
+   "id": "atlas.props.vect-ax",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.ab-axioms",
+   "note": "$\\mathbf{Vect}_K$ 满足 AB3/AB4/AB4*/AB5；不写 AB6、不写 AB3*。"
+  },
+  {
+   "id": "atlas.props.vect-ab5",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "prop.ab5-implications",
+   "note": "$\\mathbf{Vect}_K$ 满足 AB5。"
+  },
+  {
+   "id": "atlas.props.vect-ucolim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "def.universal-colimit",
+   "note": "$\\mathbf{Vect}_K$ 的余极限是直和/商空间。"
+  },
+  {
+   "id": "atlas.analogy.grp-mon",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.category-of-groups",
+   "b": "def.category-of-monoids",
+   "title": "",
+   "note": "群范畴是幺半群范畴的全子范畴；极限逐项构造相同，余积都叫自由积。"
+  },
+  {
+   "id": "atlas.analogy.vect-mod",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.category-of-vector-spaces",
+   "b": "def.module-category",
+   "title": "",
+   "note": "$\\mathbf{Vect}_K$ 就是 $K\\text{-}\\mathbf{Mod}$ 在 $K$ 为域时的特例。"
+  },
+  {
+   "id": "atlas.analogy.rng-alg",
+   "kind": "analogy",
+   "strength": "weak",
+   "a": "def.category-of-rings",
+   "b": "def.category-of-algebras",
+   "title": "",
+   "note": "环是 $\\mathbb Z$-代数的非含幺版本；余积都是自由积。"
+  },
+  {
+   "id": "atlas.ex.set",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.grp",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-groups",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.ab",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-abelian-groups",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.vect",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-vector-spaces",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.mon",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-monoids",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.rng",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-rings",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.ex.field",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-fields",
+   "usedBy": "ex.algebra-categories",
+   "note": "索引该范畴的极限/余极限表。"
+  },
+  {
+   "id": "atlas.lim.in.limit",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.limit",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "命题的极限表就是逐项验证 $\\mathbf{Set}$ 中的极限。"
+  },
+  {
+   "id": "atlas.lim.in.product",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "积逐点构造。"
+  },
+  {
+   "id": "atlas.lim.in.equalizer",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "等化子取子对象。"
+  },
+  {
+   "id": "atlas.lim.in.final",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.final-initial",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "终对象逐项给出。"
+  },
+  {
+   "id": "atlas.lim.in.fibered",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.fibered-product",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "拉回是纤维积。"
+  },
+  {
+   "id": "atlas.lim.in.monoid",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.monoid",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "幺半群范畴的极限按底层集合逐项取。"
+  },
+  {
+   "id": "atlas.lim.in.group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "群范畴的极限按底层集合逐项取。"
+  },
+  {
+   "id": "atlas.lim.in.ring",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "环范畴的极限按底层集合逐项取。"
+  },
+  {
+   "id": "atlas.lim.in.sets",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Set}$ 是极限的基底。"
+  },
+  {
+   "id": "atlas.lim.in.action",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group-action",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$G$-集的极限取不动点/对角作用。"
+  },
+  {
+   "id": "atlas.lim.in.module",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "模的极限按底层阿贝尔群逐项取。"
+  },
+  {
+   "id": "atlas.lim.in.algebra",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.algebra-over-ring",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "代数的极限按底层模逐项取。"
+  },
+  {
+   "id": "atlas.lim.in.top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "prop.algebra-categories-limits",
+   "note": "$\\mathbf{Top}$ 的极限取子空间/积拓扑。"
+  },
+  {
+   "id": "atlas.col.in.ucolim",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.universal-colimit",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "余极限的泛性质用于验证余等化子。"
+  },
+  {
+   "id": "atlas.col.in.product",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.product",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "余积是不交并/自由积/直和。"
+  },
+  {
+   "id": "atlas.col.in.equalizer",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.equalizer",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "余等化子是商对象。"
+  },
+  {
+   "id": "atlas.col.in.final",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.final-initial",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "始对象给出空余积。"
+  },
+  {
+   "id": "atlas.col.in.monoid",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.monoid",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "幺半群范畴的余极限：自由积/商幺半群。"
+  },
+  {
+   "id": "atlas.col.in.group",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.group",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "群范畴的余极限：自由积/商群。"
+  },
+  {
+   "id": "atlas.col.in.ring",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.ring",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "环范畴的余极限：自由积/商环。"
+  },
+  {
+   "id": "atlas.col.in.gset",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-g-sets",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$G$-集的余极限：不交并/商。"
+  },
+  {
+   "id": "atlas.col.in.mod",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.module-category",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "模范畴的余极限：直和/商模。"
+  },
+  {
+   "id": "atlas.col.in.alg",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-algebras",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "代数范畴的余极限：自由积/商代数。"
+  },
+  {
+   "id": "atlas.col.in.sets",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-sets",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Set}$ 的余极限是不交并/商。"
+  },
+  {
+   "id": "atlas.col.in.top",
+   "kind": "definition",
+   "strength": "strong",
+   "definition": "def.category-of-topological-spaces",
+   "usedBy": "prop.algebra-categories-colimits",
+   "note": "$\\mathbf{Top}$ 的余极限取商拓扑/不交并。"
+  },
+  {
+   "id": "imp.algebra-categories-limits",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.limit",
+    "def.product",
+    "def.equalizer",
+    "def.final-initial",
+    "def.fibered-product",
+    "def.monoid",
+    "def.group",
+    "def.ring",
+    "def.category-of-sets",
+    "def.group-action",
+    "def.module",
+    "def.algebra-over-ring"
+   ],
+   "target": "prop.algebra-categories-limits",
+   "title": "",
+   "proof": "**构造。** 设 $F:J\\to\\mathcal C$ 是小图。把每个 $F(j)$ 忘成底层集合，在 $\\mathbf{Set}$ 中取极限 $L=\\varprojlim F$，即 $L=\\{(x_j)\\in\\prod_j F(j): F(u)(x_j)=x_k\\ \\text{对每条 }u:j\\to k\\}$。逐项验证：\n\n- **终对象**：单点集带唯一结构（平凡群/零环/零模/单点空间），从任何对象有唯一态射。\n- **积**：$\\prod_i A_i$ 按逐点运算/逐点拓扑，投影为态射，满足泛性质。\n- **等化子**：$\\{a\\in A: f(a)=g(a)\\}$ 带上子结构，包含映射等化 $f,g$。\n- **拉回**：$\\{(a,b)\\in A\\times B: f(a)=g(b)\\}$，两条投影与交换方块给出泛性质。\n\n**遗忘函子保极限**：上述构造的底层集合恰是 $\\mathbf{Set}$ 中的极限，故 $U$ 把 $\\mathcal C$ 的极限送到 $\\mathbf{Set}$ 的极限；$\\mathbf{Top}$ 的情形把拓扑取为子空间/积拓扑即可。**完备性**：小积 + 等化子生成所有小极限（标准极限定理）。∎",
+   "note": "逐项构造 + 遗忘函子保极限；证明中对每个具体范畴只需核对结构在极限上封闭。"
+  },
+  {
+   "id": "imp.algebra-categories-colimits",
+   "kind": "implication",
+   "strength": "strong",
+   "sources": [
+    "def.universal-colimit",
+    "def.product",
+    "def.equalizer",
+    "def.final-initial",
+    "def.monoid",
+    "def.group",
+    "def.ring",
+    "def.category-of-g-sets",
+    "def.module-category",
+    "def.category-of-algebras",
+    "def.category-of-sets"
+   ],
+   "target": "prop.algebra-categories-colimits",
+   "title": "",
+   "proof": "**构造。** 先看余积：$\\mathbf{Mon}$ 的自由积取字并置后对「单位与运算相容」生成同余取商；$\\mathbf{Grp}$ 的自由积同理（取正规闭包）；$\\mathbf{Rng}$ 的自由积取非交换多项式环；$\\mathbf{Alg}_R$ 的自由积取张量代数再商关系；$G\\text{-}\\mathbf{Set}$ 取不交并；$R\\text{-}\\mathbf{Mod}$ 取直和。每种的包含映射都满足余积泛性质。\n\n**余等化子**：对 $f,g:A\\to B$，在 $\\mathbf{Set}$ 中取商 $B/\\sim$（$f(a)\\sim g(a)$ 生成），再取使商映射成为该范畴态射的最细结构：幺半群取同余闭包、群取正规闭包、环取代数理想、$G$-集取生成等价关系、模取子模、代数取双边理想。商对象满足余等化子的泛性质。\n\n**余完备性**：小余积 + 余等化子生成所有小余极限；把上述构造组合即得。∎",
+   "note": "自由构造 + 商闭包；每一步只核对泛性质，不依赖具体元素计算。"
+  },
+  {
    "id": "dep.vectorspace-dimension",
    "kind": "definition",
    "strength": "strong",
@@ -125649,7 +127209,7 @@
   {
    "a": "algebra.structures",
    "b": "cat.basic",
-   "count": 10,
+   "count": 20,
    "label": "",
    "explicit": false
   },
@@ -125796,7 +127356,7 @@
   {
    "a": "cat.basic",
    "b": "cat.sheaf",
-   "count": 12,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -125817,7 +127377,7 @@
   {
    "a": "cat.basic",
    "b": "cat.topos",
-   "count": 6,
+   "count": 8,
    "label": "",
    "explicit": false
   },
@@ -125887,7 +127447,7 @@
   {
    "a": "cat.basic",
    "b": "hom.ab",
-   "count": 7,
+   "count": 19,
    "label": "",
    "explicit": false
   },
@@ -125929,7 +127489,7 @@
   {
    "a": "cat.basic",
    "b": "topo.cg",
-   "count": 6,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -125950,7 +127510,7 @@
   {
    "a": "algebra.group-action",
    "b": "algebra.structures",
-   "count": 18,
+   "count": 19,
    "label": "",
    "explicit": false
   },
@@ -125971,7 +127531,7 @@
   {
    "a": "algebra.structures",
    "b": "hom.injective",
-   "count": 5,
+   "count": 7,
    "label": "",
    "explicit": false
   },
@@ -125985,7 +127545,7 @@
   {
    "a": "cat.algebra",
    "b": "cat.basic",
-   "count": 5,
+   "count": 56,
    "label": "",
    "explicit": false
   },
@@ -126223,7 +127783,7 @@
   {
    "a": "cat.basic",
    "b": "cat.limit",
-   "count": 13,
+   "count": 18,
    "label": "",
    "explicit": false
   },
@@ -126258,7 +127818,7 @@
   {
    "a": "cat.algebra",
    "b": "cat.limit",
-   "count": 4,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -127770,7 +129330,7 @@
   {
    "a": "algebra.representation",
    "b": "algebra.structures",
-   "count": 13,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -127798,7 +129358,7 @@
   {
    "a": "algebra.group-action",
    "b": "algebra.representation",
-   "count": 4,
+   "count": 5,
    "label": "",
    "explicit": false
   },
@@ -127966,7 +129526,7 @@
   {
    "a": "cat.limit",
    "b": "cat.sheaf",
-   "count": 13,
+   "count": 14,
    "label": "",
    "explicit": false
   },
@@ -128022,7 +129582,7 @@
   {
    "a": "algebra.structures",
    "b": "hom.ab",
-   "count": 4,
+   "count": 10,
    "label": "",
    "explicit": false
   },
@@ -128071,6 +129631,13 @@
   {
    "a": "cond.topo",
    "b": "topology.convergence",
+   "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.structures",
+   "b": "cat.limit",
    "count": 3,
    "label": "",
    "explicit": false
@@ -128156,6 +129723,48 @@
    "a": "cat.limit",
    "b": "hom.sheafcoh",
    "count": 3,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.group-action",
+   "b": "cat.basic",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.representation",
+   "b": "cat.basic",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.structures",
+   "b": "cat.algebra",
+   "count": 18,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.group-action",
+   "b": "cat.algebra",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "algebra.representation",
+   "b": "cat.algebra",
+   "count": 2,
+   "label": "",
+   "explicit": false
+  },
+  {
+   "a": "cat.algebra",
+   "b": "cat.sheaf",
+   "count": 2,
    "label": "",
    "explicit": false
   },
@@ -128261,13 +129870,6 @@
    "a": "cond.topo",
    "b": "topo.cg",
    "count": 4,
-   "label": "",
-   "explicit": false
-  },
-  {
-   "a": "algebra.structures",
-   "b": "cat.algebra",
-   "count": 2,
    "label": "",
    "explicit": false
   },

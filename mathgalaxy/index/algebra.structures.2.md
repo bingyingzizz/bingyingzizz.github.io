@@ -1,6 +1,8 @@
 # 代数结构 / Algebraic Structures（algebra.structures）· 节点清单（第 2/3 页）
 根 `../`　·　第 1 页 `index/algebra.structures.md`
 
+- def.group-order　群的阶与元素的阶　layer 11
+- def.nilpotent-group　幂零群　layer 12
 - def.automorphism-group　自同构群　layer 12
 - thm.first-iso　第一同构定理（Noether）　layer 12
 - def.free-group-universal　自由群的泛性质　layer 12
@@ -15,7 +17,5 @@
 - def.principal-ideal　主理想　layer 13
 - prop.ring-localization　环的局部化 W⁻¹R　layer 13
 - ex.finite-field　有限域 F_p　layer 13
-- def.maximal-ideal　极大理想　layer 14
-- prop.ideal-basic　理想的运算与商环泛性质　layer 14
 
 > 续见 `index/algebra.structures.3.md`

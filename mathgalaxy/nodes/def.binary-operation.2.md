@@ -3,3 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`def.group`](../nodes/def.group.md) 群 用
+- 被 [`def.monoid`](../nodes/def.monoid.md) 幺半群 用

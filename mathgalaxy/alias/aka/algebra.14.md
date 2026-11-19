@@ -1,6 +1,16 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
+- 有限群表示 | 群表示 | group representation → def.group-representation
+
+- 子表示 | 不变子空间 | G-不变子空间 → def.subrepresentation
+
+- 不可约表示 | 单表示 | simple representation → def.irreducible-representation
+
+- 商表示 | quotient module → def.quotient-representation
+
+- 表示的直和 | 直和表示 | 分块对角表示 → def.direct-sum-representation
+
 - 张量积表示 | 张量表示 → def.tensor-representation
 
 - 对偶表示 | 反变对偶 | contragredient representation → def.dual-representation
@@ -14,17 +24,5 @@
 - 群特征标 | 特征标 | group character → def.group-character
 
 - 类函数 | 共轭类函数 | central function → def.class-function
-
-- 表示的零化子 | 零化子理想 | 忠实表示的零化子 → def.representation-annihilator
-
-- Jacobson 根 | 雅各布森根 | Rad(A) → def.jacobson-radical
-
-- 单代数 | 单结合代数 → def.simple-algebra
-
-- 除法代数 | 可除代数 | 除代数 → def.division-algebra
-
-- 代数闭域上的 Schur 推论 | 纯量自同态 | endomorphisms are scalars → cor.schur-scalar
-
-- Schur 引理 | 舒尔引理 | Schur’s lemma → thm.schur-lemma
 
 > 续见 alias/aka/algebra.15.md

@@ -4,7 +4,7 @@ English entry · root `../`
 
 Products are products with the product topology, coproducts are disjoint unions, equalizers carry the subspace topology, and coequalizers carry the quotient topology.
 
-## Notes · **draft**
+## Notes · **stale**
 **Complete and cocomplete**: the constructions above give small limits and small colimits term by term.
 
 **The forgetful functor** $\mathbf{Top}\to\mathbf{Set}$ preserves all limits and colimits, but it is faithful and not full: not every function is continuous.

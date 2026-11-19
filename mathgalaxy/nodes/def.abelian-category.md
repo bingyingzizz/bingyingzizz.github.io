@@ -11,7 +11,7 @@ layer 19 · 定义 · 加法与阿贝尔范畴 · 同调代数
 - …另有入边，续页见 [nodes/def.abelian-category.5.md](./def.abelian-category.5.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.abelian-category.7.md](./def.abelian-category.7.md)
+- …另有出边，续页见 [nodes/def.abelian-category.8.md](./def.abelian-category.8.md)
 
 ## English abstract · **draft** · machine-drafted, pending author review; Chinese is authoritative
 > English abstract 续见 [nodes/def.abelian-category.3.md](./def.abelian-category.3.md)

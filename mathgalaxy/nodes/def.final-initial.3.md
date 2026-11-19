@@ -3,5 +3,9 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`prop.cat-final-initial-products`](../nodes/prop.cat-final-initial-products.md) Cat 的终始对象与有限积 用
+- 被 [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限 用
+- 被 [`prop.algebra-categories-colimits`](../nodes/prop.algebra-categories-colimits.md) 代数范畴的余极限 用
+- ⇒ [`prop.algebra-categories-limits`](../nodes/prop.algebra-categories-limits.md) 代数范畴里的极限与余极限
+- ⇒ [`prop.algebra-categories-colimits`](../nodes/prop.algebra-categories-colimits.md) 代数范畴的余极限
 - 被 [`def.monoid-object`](../nodes/def.monoid-object.md) 幺半群对象 用
 - 被 [`def.zero-object`](../nodes/def.zero-object.md) 零对象与直和 用

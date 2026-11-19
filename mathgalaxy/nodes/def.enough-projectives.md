@@ -10,10 +10,12 @@ $$P \twoheadrightarrow X.$$
 对偶地：**有足够多的内射对象**，如果每个 $X$ 都能**单射**进某个内射对象 $X \hookrightarrow I$。
 
 ## 为什么成立（入边，证明在 proofs/）
-- [`def.projective-object`](../nodes/def.projective-object.md) 投射 / 内射对象：用到了定义 投射 / 内射对象　[proofs/def-dep.enoughproj-projective.md](../proofs/def-dep.enoughproj-projective.md)
+- [`def.category-of-abelian-groups`](../nodes/def.category-of-abelian-groups.md) 阿贝尔群范畴：用到了定义 阿贝尔群范畴　[proofs/atlas.props.ab-enough-proj.md](../proofs/atlas.props.ab-enough-proj.md)
+
+- …另有入边，续页见 [nodes/def.enough-projectives.2.md](./def.enough-projectives.2.md)
 
 ## 它能推出什么 / 谁在用它
-- …另有出边，续页见 [nodes/def.enough-projectives.2.md](./def.enough-projectives.2.md)
+- …另有出边，续页见 [nodes/def.enough-projectives.3.md](./def.enough-projectives.3.md)
 
 refs: Le Stum, Definition 1.4.8
 

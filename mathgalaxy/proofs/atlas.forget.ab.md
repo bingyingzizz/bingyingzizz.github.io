@@ -1,0 +1,6 @@
+# atlas.forget.ab
+`atlas.forget.ab` · 定义引用 · strong 边 · 根 `../`
+
+`def.category-of-abelian-groups` 阿贝尔群范畴 → `prop.forgetful-preserves-limits` 代数遗忘函子保极限
+
+遗忘函子到 $\mathbf{Set}$ 保极限。
