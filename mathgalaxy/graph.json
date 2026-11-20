@@ -6,16 +6,16 @@
   "license": "CC-BY-4.0",
   "licenseCode": "MIT",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "generated": "2026-11-19T11:06:15.621Z",
+  "generated": "2026-11-20T12:01:36.885Z",
   "counts": {
    "regions": 15,
    "clusters": 106,
-   "nodes": 1737,
-   "edges": 4199,
-   "strong": 4104,
+   "nodes": 1736,
+   "edges": 4184,
+   "strong": 4089,
    "weak": 95,
    "derived": 100,
-   "en_pages": 1737
+   "en_pages": 1736
   },
   "readingGuide": {
    "layers": "星系(region) → 星团(cluster) → 恒星(node)",
@@ -77,7 +77,7 @@
    "en": "Abstract Algebra",
    "desc": "群、环、域、模与线性代数；佐恩引理的经典应用场。",
    "color": "#E08A3C",
-   "nodeCount": 313
+   "nodeCount": 312
   },
   {
    "id": "analysis",
@@ -109,7 +109,7 @@
    "en": "Category Theory",
    "desc": "范畴、函子、自然变换、极限与伴随；再往上走到层论与拓扑斯。",
    "color": "#B03A5B",
-   "nodeCount": 231
+   "nodeCount": 230
   },
   {
    "id": "homology",
@@ -1587,12 +1587,11 @@
    "en": "Algebraic Structures in a Category",
    "parent": "category",
    "desc": "把「集合 + 运算 + 公理」搬到任意有有限积的范畴里：幺半群对象 → 群对象 → 阿贝尔群对象。⭐ $\\mathrm{Ab}(\\mathbf{Set})=\\mathbf{Ab}$、$\\mathrm{Ab}(\\mathbf{Top})$ = 拓扑阿贝尔群、$\\mathrm{Ab}(\\mathrm{Cond})=\\mathrm{CondAb}$ —— 代数那条线与凝聚态那条线在这里接上。",
-   "nodeCount": 12,
+   "nodeCount": 11,
    "nodes": [
     "def.monoid-object",
     "def.group-object",
     "ex.ab-of-categories",
-    "ex.algebra-categories",
     "prop.functor-preserves-monoid-objects",
     "prop.free-objects-examples",
     "prop.op-category-is-modules",
@@ -27649,51 +27648,6 @@
    ]
   },
   {
-   "id": "ex.algebra-categories",
-   "type": "example",
-   "label": "代数的几个范畴",
-   "title": "$\\mathrm{Mon}$、$\\mathrm{Gr}$、$\\mathrm{Rng}$、$G\\text{-}\\mathbf{Set}$、$A\\text{-}\\mathbf{Mod}$、$k\\text{-}\\mathbf{Alg}$",
-   "label_en": "Algebraic Categories",
-   "title_en": "Categories of Algebraic Structures",
-   "translations": {
-    "en": {
-     "status": "derived",
-     "version": null,
-     "fields": [
-      "name"
-     ],
-     "creative": [],
-     "fieldStatus": {
-      "name": "derived"
-     },
-     "staleFields": [],
-     "basedOn": {}
-    }
-   },
-   "en_page": "nodes/ex.algebra-categories.en.md",
-   "en_html": false,
-   "region": "category",
-   "regions": [
-    "category",
-    "algebra"
-   ],
-   "cluster": "cat.algebra",
-   "layer": 17,
-   "tags": [
-    "代数",
-    "范畴",
-    "幺半群",
-    "环",
-    "模",
-    "代数"
-   ],
-   "statement": "常用的代数范畴（对象 + 保结构映射）：\n\n- $\\mathrm{Mon}$：幺半群；\n- $\\mathrm{Gr}$（也写 $\\mathbf{Grp}$）：群；\n- $\\mathrm{Rng}$：环；\n- $G\\text{-}\\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；\n- $A\\text{-}\\mathbf{Mod}$：$A$-模；\n- $k\\text{-}\\mathbf{Alg}$：$k$-代数（$k$ 交换环）。\n\n各范畴的极限、余极限与 AB 公理见 `def.category-of-monoids`、`def.category-of-groups`、`def.category-of-rings`、`def.category-of-g-sets`、`def.module-category`、`def.category-of-algebras`、`def.category-of-sets`、`def.category-of-topological-spaces`、`def.category-of-abelian-groups`、`def.category-of-vector-spaces`；统一构造见 `prop.algebra-categories-limits` 与 `prop.algebra-categories-colimits`。",
-   "notes": "⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。\n\n所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。\n\n**两个特殊的**：$G\\text{-}\\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \\to \\mathbf{Set}$ 的函子，$G$-映射就是自然变换）；\n\n$A\\text{-}\\mathbf{Mod}$ 是同调代数的样板间。",
-   "refs": [
-    "Lang, Algebra"
-   ]
-  },
-  {
    "id": "prop.abelianization",
    "type": "proposition",
    "label": "交换化",
@@ -38484,7 +38438,7 @@
     "代数范畴"
    ],
    "statement": "设 $\\mathcal C$ 为 $\\mathbf{Mon}$、$\\mathbf{Grp}$、$\\mathbf{Rng}$、$G\\text{-}\\mathbf{Set}$、$R\\text{-}\\mathbf{Mod}$、$R\\text{-}\\mathbf{Alg}$、$\\mathbf{Vect}_K$、$\\mathbf{Set}$、$\\mathbf{Top}$、$\\mathbf{Ab}$ 之一。则 $\\mathcal C$ 完备：终对象、积、等化子与拉回都按底层集合逐项构造；遗忘函子 $U:\\mathcal C\\to\\mathbf{Set}$ 保极限。余极限见 `prop.algebra-categories-colimits`。",
-   "notes": "**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\\mathbf{Top}$ 不是笛卡尔闭；$R\\text{-}\\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。",
+   "notes": "**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\\mathbf{Top}$ 不是笛卡尔闭；$R\\text{-}\\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。这些范畴的共同点是「集合 + 运算 + 公理」，所以极限与自由对象的构造逐字通用。",
    "refs": [
     "Le Stum, An introduction to condensed mathematics, Exercise 1.28"
    ]
@@ -46028,10 +45982,10 @@
    "label_en": "polynomial ring",
    "title_en": "polynomial ring",
    "statement_en": "For a field $K$, on the set $K[x]$ of all univariate polynomials over it define\n\n$$(f + g)_i := a_i + b_i, \\qquad (fg)_i := \\sum_{j=0}^{i} a_j\\, b_{i-j}$$\n\n(addition termwise, multiplication **convolution**). Then $K[x]$ is a commutative ring with unity, called the **polynomial ring** over $K$, and\n\n$$\\deg(fg) = \\deg f + \\deg g \\qquad (f, g \\ne 0)$$\n\nHence $K[x]$ is an **integral domain** (no zero divisors): $fg = 0 \\implies f = 0$ or $g = 0$.",
-   "notes_en": "⭐ $K[x]$ is the value of the “univariate polynomial functor on $K$”: $K \\mapsto K[x]$ is left adjoint to “sending $K$ to $K$-algebras” (the free $K$-algebra).\n\nThe node `ex.algebra-categories` already mentioned $k\\text{-}\\mathbf{Alg}$.\n\n⭐ $\\deg(fg) = \\deg f + \\deg g$ is the whole source of integrality: integrality of the coefficient field makes degrees add, so there are no zero divisors.\n\n⚠ Constant polynomials ($\\deg = 0$) and the zero polynomial must be treated separately; every identity about degrees needs the hypothesis “$f, g \\ne 0$”.",
+   "notes_en": "⭐ $K[x]$ is the value of the “univariate polynomial functor on $K$”: $K \\mapsto K[x]$ is left adjoint to “sending $K$ to $K$-algebras” (the free $K$-algebra).\n\n(In the category of $k$-algebras the free object is the tensor algebra.)algebra-categories` already mentioned $k\\text{-}\\mathbf{Alg}$.\n\n⭐ $\\deg(fg) = \\deg f + \\deg g$ is the whole source of integrality: integrality of the coefficient field makes degrees add, so there are no zero divisors.\n\n⚠ Constant polynomials ($\\deg = 0$) and the zero polynomial must be treated separately; every identity about degrees needs the hypothesis “$f, g \\ne 0$”.",
    "translations": {
     "en": {
-     "status": "draft",
+     "status": "stale",
      "version": "v0.9.3",
      "fields": [
       "statement",
@@ -46044,10 +45998,12 @@
      ],
      "fieldStatus": {
       "statement": "draft",
-      "notes": "draft",
+      "notes": "stale",
       "name": "derived"
      },
-     "staleFields": [],
+     "staleFields": [
+      "notes"
+     ],
      "basedOn": {
       "statement": "v0.9.3#fb822ec1",
       "notes": "v0.9.3#6b13910b"
@@ -46069,7 +46025,7 @@
     "环"
    ],
    "statement": "在 $K$ 上全体一元多项式构成的集合 $K[x]$ 上定义\n\n$$(f + g)_i := a_i + b_i, \\qquad (fg)_i := \\sum_{j=0}^{i} a_j\\, b_{i-j}$$\n\n（加法逐项、乘法是**卷积**）。则 $K[x]$ 是交换含幺环，叫 $K$ 上的**多项式环**，而且\n\n$$\\deg(fg) = \\deg f + \\deg g \\qquad (f, g \\ne 0)$$\n\n由此 $K[x]$ 是**整环**（无零因子）：$fg = 0 \\implies f = 0$ 或 $g = 0$。",
-   "notes": "⭐ $K[x]$ 是「$K$ 上的一元多项式函子」的取值：$K \\mapsto K[x]$ 与「把 $K$ 送入 $K$-代数」之间是伴随的（自由 $K$-代数）。\n\n图上 `ex.algebra-categories` 那条已经提过 $k\\text{-}\\mathbf{Alg}$。\n\n⭐ $\\deg(fg) = \\deg f + \\deg g$ 是整环性的全部来源：系数域的整性把次数加成，于是没有零因子。\n\n⚠ 常数多项式（$\\deg = 0$）与零多项式要分开处理，所有关于次数的等式都要加「$f, g \\ne 0$」的前提。",
+   "notes": "⭐ $K[x]$ 是「$K$ 上的一元多项式函子」的取值：$K \\mapsto K[x]$ 与「把 $K$ 送入 $K$-代数」之间是伴随的（自由 $K$-代数）。\n\n（$k$-代数范畴里的自由对象是张量代数。）\n\n⭐ $\\deg(fg) = \\deg f + \\deg g$ 是整环性的全部来源：系数域的整性把次数加成，于是没有零因子。\n\n⚠ 常数多项式（$\\deg = 0$）与零多项式要分开处理，所有关于次数的等式都要加「$f, g \\ne 0$」的前提。",
    "refs": [
     "Lang, Algebra, Ch. IV"
    ]
@@ -93039,14 +92995,6 @@
    "note": "局部紧空间的紧子集讨论以紧性为基础。"
   },
   {
-   "id": "dep.cat-sets-ex-algebra-categories",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-sets",
-   "usedBy": "ex.algebra-categories",
-   "note": "陈述以集合范畴 $\\mathbf{Set}$ 为环境范畴"
-  },
-  {
    "id": "dep.cat-ab-prop-abelianization",
    "kind": "definition",
    "strength": "strong",
@@ -119933,94 +119881,6 @@
    "note": "环是 $\\mathbb Z$-代数的非含幺版本；余积都是自由积。"
   },
   {
-   "id": "atlas.ex.set",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-sets",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.top",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-topological-spaces",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.grp",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-groups",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.ab",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-abelian-groups",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.vect",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-vector-spaces",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.mon",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-monoids",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.rng",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-rings",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.gset",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-g-sets",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.mod",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.module-category",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.alg",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-algebras",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
-   "id": "atlas.ex.field",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.category-of-fields",
-   "usedBy": "ex.algebra-categories",
-   "note": "索引该范畴的极限/余极限表。"
-  },
-  {
    "id": "atlas.lim.in.limit",
    "kind": "definition",
    "strength": "strong",
@@ -125257,30 +125117,6 @@
    "note": "诱导拓扑取的是使 $f^{-1}$ **连续**的最细拓扑。"
   },
   {
-   "id": "def-dep.algcats-groupobj",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.group-object",
-   "usedBy": "ex.algebra-categories",
-   "note": "$\\mathrm{Mon}$、$\\mathrm{Gr}$ 就是**范畴里的代数结构**在 $\\mathbf{Set}$ 上的样子。"
-  },
-  {
-   "id": "def-dep.algcats-ring",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.ring",
-   "usedBy": "ex.algebra-categories",
-   "note": "$\\mathrm{Rng}$、$k\\text{-}\\mathbf{Alg}$ 是**环**与它上面的代数。"
-  },
-  {
-   "id": "def-dep.algcats-module",
-   "kind": "definition",
-   "strength": "strong",
-   "definition": "def.module",
-   "usedBy": "ex.algebra-categories",
-   "note": "$A\\text{-}\\mathbf{Mod}$ 是**模**的范畴。"
-  },
-  {
    "id": "def-dep.abelianization-quotient",
    "kind": "definition",
    "strength": "strong",
@@ -127545,7 +127381,7 @@
   {
    "a": "cat.algebra",
    "b": "cat.basic",
-   "count": 56,
+   "count": 45,
    "label": "",
    "explicit": false
   },
@@ -129743,7 +129579,7 @@
   {
    "a": "algebra.structures",
    "b": "cat.algebra",
-   "count": 18,
+   "count": 15,
    "label": "",
    "explicit": false
   },

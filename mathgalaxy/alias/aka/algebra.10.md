@@ -1,10 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 循环子空间 | 循环向量 | cyclic vector | K[T]v | cyclic submodule → def.cyclic-subspace
-
-- 友矩阵 | 伴侣矩阵 | companion form | Frobenius companion matrix → def.companion-matrix
-
 - 主理想整环上有限生成模结构定理 | PID 结构定理 | invariant factor decomposition | 不变因子分解 → thm.pid-fg-module-structure
 
 - 初等因子 | 矩阵初等因子 | elementary divisor → def.elementary-divisor
@@ -32,5 +28,15 @@
 - 惯性指数 → def.inertia-index
 
 - 惯性定理 | 西尔维斯特惯性律 | 惯性律 → thm.sylvester-law-inertia
+
+- 特征子空间 → def.eigenspace
+
+- 广义特征向量 → def.generalized-eigenvector
+
+- 幂零 → def.nilpotent
+
+- 幂等 → def.idempotent
+
+- 正交相似 → def.orthogonally-similar
 
 > 续见 alias/aka/algebra.11.md

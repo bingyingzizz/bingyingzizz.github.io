@@ -1,8 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- Stone 表示定理 | 布尔环与 Stone 空间 | Stone representation | Exercise 2.22 | 布尔环与斯通空间 | 斯通表示定理 → thm.boolean-stone
-
 - Exercise 1.21 → prop.module-tensor-universal
 
 - Exercise 1.10 | Z-模 → prop.zmod-is-ab
@@ -30,5 +28,11 @@
 - Laplace 展开 | 拉普拉斯展开 → prop.det-laplace
 
 - 因式定理与根 → thm.factor-theorem
+
+- 极小多项式整除特征多项式 → thm.minimal-poly-divisor
+
+- 根子空间分解 → thm.primary-decomposition
+
+- Jordan 型的唯一性 | 若尔当型唯一性 → cor.jordan-uniqueness
 
 > 续见 alias/aka/algebra.4.md

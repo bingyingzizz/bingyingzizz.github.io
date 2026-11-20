@@ -17,4 +17,6 @@
 
 - 诱导拓扑 | induced topology | Definition 3.4.7 | Def 3.4.7 | Exercise 3.61 → def.induced-topology
 
+- 偏序集的极限 | 极限就是交 | Exercise 1.30 → prop.poset-limit-join
+
 > 续见 alias/aka/category.9.md

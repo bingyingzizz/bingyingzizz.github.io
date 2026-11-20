@@ -3,6 +3,5 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`def.category-of-vector-spaces`](../nodes/def.category-of-vector-spaces.md) 向量空间范畴
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
 - 被 [`prop.algebra-categories-colimits`](../nodes/prop.algebra-categories-colimits.md) 代数范畴的余极限 用
 - ⇒ [`prop.algebra-categories-colimits`](../nodes/prop.algebra-categories-colimits.md) 代数范畴的余极限

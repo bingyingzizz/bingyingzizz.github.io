@@ -3,4 +3,3 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - ～弱边 [`def.module-category`](../nodes/def.module-category.md) 模范畴
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用

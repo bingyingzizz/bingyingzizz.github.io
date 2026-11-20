@@ -1,7 +1,7 @@
 # 数学星图 · 全量导出
 
-> 由 `tools/build.mjs` 自动生成于 2026-11-19T11:06:15.621Z
-> 15 星系 / 106 星团 / 1737 节点 / 4199 连线（强边 4104，弱边 95；其中**不分层**的「推论」100 条（layer:false））
+> 由 `tools/build.mjs` 自动生成于 2026-11-20T12:01:36.885Z
+> 15 星系 / 106 星团 / 1736 节点 / 4184 连线（强边 4089，弱边 95；其中**不分层**的「推论」100 条（layer:false））
 
 > ⛔ **这是全量 bulk 导出（约 4.4 MB），不要单次抓取** —— 抓取工具单次通常只返回
 > 约 1000 词元（中文约 3 KB；各工具上限不同，这里说的是常见量级），你会只看到开头一小段，
@@ -10067,7 +10067,7 @@ $$\deg(fg) = \deg f + \deg g \qquad (f, g \ne 0)$$
 
 ⭐ $K[x]$ 是「$K$ 上的一元多项式函子」的取值：$K \mapsto K[x]$ 与「把 $K$ 送入 $K$-代数」之间是伴随的（自由 $K$-代数）。
 
-图上 `ex.algebra-categories` 那条已经提过 $k\text{-}\mathbf{Alg}$。
+（$k$-代数范畴里的自由对象是张量代数。）
 
 ⭐ $\deg(fg) = \deg f + \deg g$ 是整环性的全部来源：系数域的整性把次数加成，于是没有零因子。
 
@@ -21994,30 +21994,6 @@ $$\begin{array}{ccc} G & \xrightarrow{\;(\iota,\ \mathrm{id})\;} & G \times G \\
 
 参考：Mac Lane, Categories for the Working Mathematician, III.6
 
-#### 代数的几个范畴　`ex.algebra-categories`
-*例*　$\mathrm{Mon}$、$\mathrm{Gr}$、$\mathrm{Rng}$、$G\text{-}\mathbf{Set}$、$A\text{-}\mathbf{Mod}$、$k\text{-}\mathbf{Alg}$
-
-常用的代数范畴（对象 + 保结构映射）：
-
-- $\mathrm{Mon}$：幺半群；
-- $\mathrm{Gr}$（也写 $\mathbf{Grp}$）：群；
-- $\mathrm{Rng}$：环；
-- $G\text{-}\mathbf{Set}$：$G$-集（带 $G$ 作用的集合）；
-- $A\text{-}\mathbf{Mod}$：$A$-模；
-- $k\text{-}\mathbf{Alg}$：$k$-代数（$k$ 交换环）。
-
-各范畴的极限、余极限与 AB 公理见 `def.category-of-monoids`、`def.category-of-groups`、`def.category-of-rings`、`def.category-of-g-sets`、`def.module-category`、`def.category-of-algebras`、`def.category-of-sets`、`def.category-of-topological-spaces`、`def.category-of-abelian-groups`、`def.category-of-vector-spaces`；统一构造见 `prop.algebra-categories-limits` 与 `prop.algebra-categories-colimits`。
-
-⭐ **它们的共同点**：全都是「集合 + 运算 + 公理」，只是运算的元数与公理的条数不同。
-
-所以**关于它们的定理几乎逐字通用**（极限逐点算、遗忘函子保所有极限、自由对象是左伴随……）。
-
-**两个特殊的**：$G\text{-}\mathbf{Set}$ 是**函子范畴**（$G$ 看成单对象范畴，$G$-集就是 $G \to \mathbf{Set}$ 的函子，$G$-映射就是自然变换）；
-
-$A\text{-}\mathbf{Mod}$ 是同调代数的样板间。
-
-参考：Lang, Algebra
-
 #### 保有限积的函子作用于代数对象　`prop.functor-preserves-monoid-objects`
 *命题*　命题：$F$ 保有限积 $\implies F$ 诱导 $\mathrm{Mon}(\mathcal{C}) \to \mathrm{Mon}(\mathcal{D})$
 
@@ -22068,7 +22044,7 @@ $k$ 交换时 $\operatorname{Op}(k\text{-}\mathbf{Mod}) \simeq k[T]\text{-}\math
 
 设 $\mathcal C$ 为 $\mathbf{Mon}$、$\mathbf{Grp}$、$\mathbf{Rng}$、$G\text{-}\mathbf{Set}$、$R\text{-}\mathbf{Mod}$、$R\text{-}\mathbf{Alg}$、$\mathbf{Vect}_K$、$\mathbf{Set}$、$\mathbf{Top}$、$\mathbf{Ab}$ 之一。则 $\mathcal C$ 完备：终对象、积、等化子与拉回都按底层集合逐项构造；遗忘函子 $U:\mathcal C\to\mathbf{Set}$ 保极限。余极限见 `prop.algebra-categories-colimits`。
 
-**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\mathbf{Top}$ 不是笛卡尔闭；$R\text{-}\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。
+**证明见边** `imp.algebra-categories-limits`：逐项构造并验证泛性质；遗忘函子保极限。**余极限**另见 `prop.algebra-categories-colimits`。**注意**：$\mathbf{Top}$ 的极限取子空间/积拓扑，但 $\mathbf{Top}$ 不是笛卡尔闭；$R\text{-}\mathbf{Mod}$ 的 AB 公理见 `def.ab-axioms`。这些范畴的共同点是「集合 + 运算 + 公理」，所以极限与自由对象的构造逐字通用。
 
 参考：Le Stum, An introduction to condensed mathematics, Exercise 1.28
 
@@ -45225,10 +45201,6 @@ Pro-对象按余滤过指标范畴取形式极限；没有余滤过范畴就无�
 
 局部紧空间的紧子集讨论以紧性为基础。
 
-#### 定义引用：「集合范畴」→ 代数的几个范畴　`dep.cat-sets-ex-algebra-categories`
-
-陈述以集合范畴 $\mathbf{Set}$ 为环境范畴
-
 #### 定义引用：「阿贝尔群范畴」→ 交换化　`dep.cat-ab-prop-abelianization`
 
 陈述以阿贝尔群范畴 $\mathbf{Ab}$ 为环境范畴
@@ -66455,50 +66427,6 @@ $\mathbf{Vect}_K$ 满足 AB5。
 
 $\mathbf{Vect}_K$ 的余极限是直和/商空间。
 
-#### 定义引用：「集合范畴」→ 代数的几个范畴　`atlas.ex.set`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「拓扑空间范畴」→ 代数的几个范畴　`atlas.ex.top`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「群范畴」→ 代数的几个范畴　`atlas.ex.grp`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「阿贝尔群范畴」→ 代数的几个范畴　`atlas.ex.ab`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「向量空间范畴」→ 代数的几个范畴　`atlas.ex.vect`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「幺半群范畴」→ 代数的几个范畴　`atlas.ex.mon`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「环范畴」→ 代数的几个范畴　`atlas.ex.rng`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「G-集范畴」→ 代数的几个范畴　`atlas.ex.gset`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「模范畴」→ 代数的几个范畴　`atlas.ex.mod`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「R-代数范畴」→ 代数的几个范畴　`atlas.ex.alg`
-
-索引该范畴的极限/余极限表。
-
-#### 定义引用：「域范畴」→ 代数的几个范畴　`atlas.ex.field`
-
-索引该范畴的极限/余极限表。
-
 #### 定义引用：「极限」→ 代数范畴里的极限与余极限　`atlas.lim.in.limit`
 
 命题的极限表就是逐项验证 $\mathbf{Set}$ 中的极限。
@@ -69082,18 +69010,6 @@ $\operatorname{Hom}$ 集上要有**阿贝尔群**结构才谈得上保加法。
 
 诱导拓扑取的是使 $f^{-1}$ **连续**的最细拓扑。
 
-#### 定义引用：「群对象与阿贝尔群对象」→ 代数的几个范畴　`def-dep.algcats-groupobj`
-
-$\mathrm{Mon}$、$\mathrm{Gr}$ 就是**范畴里的代数结构**在 $\mathbf{Set}$ 上的样子。
-
-#### 定义引用：「环」→ 代数的几个范畴　`def-dep.algcats-ring`
-
-$\mathrm{Rng}$、$k\text{-}\mathbf{Alg}$ 是**环**与它上面的代数。
-
-#### 定义引用：「模」→ 代数的几个范畴　`def-dep.algcats-module`
-
-$A\text{-}\mathbf{Mod}$ 是**模**的范畴。
-
 #### 定义引用：「商群」→ 交换化　`def-dep.abelianization-quotient`
 
 交换化就是商掉**换位子子群**。
@@ -70658,7 +70574,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **多项式与因式分解 ↔ 代数结构**　8 条节点级连线
 - **代数结构 ↔ 内射模与可除群**　7 条节点级连线
 - **线性映射与秩 ↔ 代数结构**　3 条节点级连线
-- **范畴里的代数结构 ↔ 范畴与图**　56 条节点级连线
+- **范畴里的代数结构 ↔ 范畴与图**　45 条节点级连线
 - **收敛与紧性 ↔ 拓扑空间的基本语汇**　17 条节点级连线
 - **复形与导出三角 ↔ 层上同调**　9 条节点级连线
 - **多元微分 ↔ 凝聚态导出函子**　4 条节点级连线
@@ -70972,7 +70888,7 @@ $\ell^{2}(I)$ 同时是 Banach 空间的实例。
 - **图与极限 ↔ 层上同调**　3 条节点级连线
 - **群作用与置换 ↔ 范畴与图**　2 条节点级连线
 - **群与代数表示 ↔ 范畴与图**　2 条节点级连线
-- **代数结构 ↔ 范畴里的代数结构**　18 条节点级连线
+- **代数结构 ↔ 范畴里的代数结构**　15 条节点级连线
 - **群作用与置换 ↔ 范畴里的代数结构**　2 条节点级连线
 - **群与代数表示 ↔ 范畴里的代数结构**　2 条节点级连线
 - **范畴里的代数结构 ↔ 层与拓扑**　2 条节点级连线

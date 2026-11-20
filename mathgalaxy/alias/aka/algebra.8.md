@@ -1,16 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 内积 | ⟨u,v⟩ | 内积 ⟨,⟩ → def.inner-product
-
-- 正交 → def.orthogonality
-
-- 正交补 → def.orthogonal-complement
-
-- 伴随算子 → def.operator-adjoint
-
-- 等距与正交变换 → def.isometry
-
 - 二次型 → def.quadratic-form
 
 - 双线性型 → def.bilinear-form
@@ -42,5 +32,13 @@
 - Bézout 整环 | 裴蜀整环 | 贝祖整环 | 贝祖域 → def.bezout-domain
 
 - 欧几里得整环 | 欧氏整环 → def.euclidean-domain
+
+- 主理想整环 | PID → def.pid
+
+- 唯一分解整环 | UFD → def.ufd
+
+- 互素理想 | 互极大理想 → def.comaximal
+
+- 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
 
 > 续见 alias/aka/algebra.9.md

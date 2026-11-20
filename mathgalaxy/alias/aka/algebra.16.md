@@ -1,8 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- Wedderburn–Artin 定理 | 半单代数结构定理 | Wedderburn-Artin → thm.wedderburn-artin
-
 - Jacobson 根判定半单 | Jacobson 判据 | 半单当且仅当根为零 → thm.jacobson-criterion
 
 - 不可约表示的单位分解 | 正交幂等元分解 | 单位分解 → prop.partition-of-unity
@@ -20,5 +18,7 @@
 - Krull–Schmidt 定理 | 克鲁尔-施密特定理 | Krull-Schmidt → thm.krull-schmidt
 
 - Maschke 定理 | 马施克定理 | 完全可约定理 → thm.maschke
+
+- 群代数的 Wedderburn 分解 | 群代数分解 | F[G] 的矩阵代数分解 → cor.group-algebra-wedderburn
 
 > 续见 alias/aka/algebra.17.md

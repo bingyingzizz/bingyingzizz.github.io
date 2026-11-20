@@ -7,15 +7,15 @@
 每榜前 3 条；完整清单在 `hubs/<榜>.md`（各 20 条）。
 
 ## 基础工具榜
-- **43 / 48** `def.category-of-abelian-groups` 阿贝尔群范畴 · 范畴与图
 - **43 / 45** `def.group` 群 · 代数结构
-- **40 / 49** `def.category-of-sets` 集合范畴 · 范畴与图
+- **42 / 47** `def.category-of-abelian-groups` 阿贝尔群范畴 · 范畴与图
+- **39 / 47** `def.category-of-sets` 集合范畴 · 范畴与图
 - 全部：`hubs/base.md`
 
 ## 综合结论榜
 - **21 / 26** `prop.algebra-categories-limits` 代数范畴里的极限与余极限 · 范畴里的代数结构
 - **17 / 23** `prop.algebra-categories-colimits` 代数范畴的余极限 · 范畴里的代数结构
-- **14 / 15** `ex.algebra-categories` 代数的几个范畴 · 范畴里的代数结构
+- **11 / 11** `prop.forgetful-preserves-limits` 代数遗忘函子保极限 · 范畴里的代数结构
 - 全部：`hubs/big.md`
 
 ## 跨领域连接榜

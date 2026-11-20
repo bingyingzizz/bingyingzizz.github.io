@@ -1,10 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 有限群表示 | 群表示 | group representation → def.group-representation
-
-- 子表示 | 不变子空间 | G-不变子空间 → def.subrepresentation
-
 - 不可约表示 | 单表示 | simple representation → def.irreducible-representation
 
 - 商表示 | quotient module → def.quotient-representation
@@ -24,5 +20,9 @@
 - 群特征标 | 特征标 | group character → def.group-character
 
 - 类函数 | 共轭类函数 | central function → def.class-function
+
+- 表示的零化子 | 零化子理想 | 忠实表示的零化子 → def.representation-annihilator
+
+- Jacobson 根 | 雅各布森根 | Rad(A) → def.jacobson-radical
 
 > 续见 alias/aka/algebra.15.md

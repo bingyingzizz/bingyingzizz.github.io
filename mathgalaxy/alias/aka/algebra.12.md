@@ -1,10 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 伽罗瓦扩张 | Galois 扩张 → def.galois-extension
-
-- 伽罗瓦基本定理 | 伽罗瓦对应 | 基本定理（Galois） → thm.galois-correspondence
-
 - 根式可解 | 根式解 | 可解性判据 → thm.radical-solvable
 
 - 五次方程没有根式解 | Abel-Ruffini | 五次方程 → thm.quintic-unsolvable
@@ -30,5 +26,13 @@
 - 狄利克雷特征标 → def.dirichlet-character
 
 - 群范畴 | Grp → def.category-of-groups
+
+- 阿贝尔群范畴 | Ab → def.category-of-abelian-groups
+
+- 幺半群 | monoid → def.monoid
+
+- 阿贝尔群 | 交换群 → def.abelian-group
+
+- 幺半群范畴 | Mon → def.category-of-monoids
 
 > 续见 alias/aka/algebra.13.md

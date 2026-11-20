@@ -1,12 +1,6 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- Exercise 1.65 → prop.forgetful-preserves-limits
-
-- Exercise 1.66 → prop.forgetful-exactness
-
-- Exercise 1.71 → prop.reflection-criterion
-
 - Exercise 1.72 → prop.coreflective-monoids-full
 
 - Exercise 3.62 → prop.slice-covering-sieve
@@ -34,5 +28,9 @@
 - R-代数范畴 | R-Alg → def.category-of-algebras
 
 - 域范畴 | Field → def.category-of-fields
+
+- 代数范畴里的余极限 → prop.algebra-categories-colimits
+
+- 拓扑空间范畴 | Top 范畴 | 拓扑空间的范畴 | Top → def.category-of-topological-spaces
 
 > 续见 alias/aka/category.22.md

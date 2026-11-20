@@ -7,7 +7,7 @@
 - 被 [`prop.representable-preserves-limits`](../nodes/prop.representable-preserves-limits.md) 可表函子保所有极限 用
 - 被 [`ex.ab-of-categories`](../nodes/ex.ab-of-categories.md) Ab(C) 的例子 用
 - 被 [`def.section-functor`](../nodes/def.section-functor.md) 截面函子 用
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
 - 被 [`prop.constant-sheaf-preserves-limits`](../nodes/prop.constant-sheaf-preserves-limits.md) 常层函子保极限 用
+- 被 [`prop.stalk-separated`](../nodes/prop.stalk-separated.md) 茎与分离预层 用
 
 > 续见 [nodes/def.category-of-sets.6.md](./def.category-of-sets.6.md)

@@ -8,5 +8,3 @@
 - 被 [`prop.free-objects-examples`](../nodes/prop.free-objects-examples.md) 自由对象的例子 用
 - 被 [`prop.forgetful-preserves-limits`](../nodes/prop.forgetful-preserves-limits.md) 代数遗忘函子保极限 用
 - ～弱边 [`def.category-of-monoids`](../nodes/def.category-of-monoids.md) 幺半群范畴
-
-> 续见 [nodes/def.category-of-groups.5.md](./def.category-of-groups.5.md)

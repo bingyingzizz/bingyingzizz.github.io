@@ -1,18 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 诱导范数与距离 → def.induced-norm
-
-- 群作用 → def.group-action
-
-- Cayley 定理 | 凯莱定理 | 凯莱 → thm.cayley
-
-- 序与四则运算 → prop.order-rules
-
-- 子空间判据 → prop.subspace-criterion
-
-- 迹 | tr | Tr A → def.trace
-
 - 正交投影 → def.orthogonal-projection
 
 - Jordan–Hölder 定理 | 若尔当-赫尔德定理 | 若尔当-赫尔德 → thm.jordan-holder
@@ -48,5 +36,13 @@
 - 对偶基 → def.dual-basis
 
 - 零化子 → def.annihilator
+
+- 直和与补空间 | ⊕ | 直和 ⊕ → def.direct-sum
+
+- 矩阵 → def.matrix
+
+- 矩阵的加法与乘法 → def.matrix-operations
+
+- 初等变换与初等矩阵 → def.elementary-matrix
 
 > 续见 alias/aka/algebra.7.md

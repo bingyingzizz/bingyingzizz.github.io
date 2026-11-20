@@ -3,5 +3,4 @@
 
 ## 它能推出什么 / 谁在用它（续）
 - 被 [`thm.freyd-mitchell`](../nodes/thm.freyd-mitchell.md) Freyd–Mitchell 嵌入定理 用
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用
 - 被 [`def.vector-space`](../nodes/def.vector-space.md) 向量空间 用

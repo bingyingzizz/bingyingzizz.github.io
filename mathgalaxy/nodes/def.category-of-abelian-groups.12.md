@@ -7,4 +7,3 @@
 - 被 [`prop.ab-axioms-examples`](../nodes/prop.ab-axioms-examples.md) AB 公理的例子表 用
 - 被 [`prop.ab5-implications`](../nodes/prop.ab5-implications.md) AB5 与 AB3*/AB4* 的关系 用
 - 被 [`def.enough-projectives`](../nodes/def.enough-projectives.md) 足够多投射对象 用
-- 被 [`ex.algebra-categories`](../nodes/ex.algebra-categories.md) 代数的几个范畴 用

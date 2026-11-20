@@ -1,14 +1,6 @@
 # 别名 → 节点 · 抽象代数
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../algebra.md`
 
-- 主理想整环 | PID → def.pid
-
-- 唯一分解整环 | UFD → def.ufd
-
-- 互素理想 | 互极大理想 → def.comaximal
-
-- 中国剩余定理（环论） | 互素理想分解 → thm.crt-rings
-
 - 埃塔勒层 | 平展层 → def.etale-sheaf
 
 - 埃塔勒层的例子 → prop.etale-sheaf-examples
@@ -38,5 +30,9 @@
 - 有理标准形 → thm.rational-canonical-form
 
 - 不变因子 | invariant factor | 行列式因子 → def.invariant-factor
+
+- 循环子空间 | 循环向量 | cyclic vector | K[T]v | cyclic submodule → def.cyclic-subspace
+
+- 友矩阵 | 伴侣矩阵 | companion form | Frobenius companion matrix → def.companion-matrix
 
 > 续见 alias/aka/algebra.10.md

@@ -1,10 +1,6 @@
 # 别名 → 节点 · 范畴论
 根 `../../`　·　索引 `../../alias.md`　·　问法在 `../category.md`
 
-- 代数范畴里的余极限 → prop.algebra-categories-colimits
-
-- 拓扑空间范畴 | Top 范畴 | 拓扑空间的范畴 | Top → def.category-of-topological-spaces
-
 - 笛卡尔积是集合范畴的积 | Set 中的积是笛卡尔积 | 笛卡尔积的泛性质 → prop.cartesian-product-is-set-product
 
 - 子对象的交 | subobject intersection | fibred product of subobjects | 一般范畴中的交 | 一般范畴里的交 | 范畴中的交 | 范畴里的交 | categorical intersection | intersection in a category | intersection of subobjects → def.intersection-subobject

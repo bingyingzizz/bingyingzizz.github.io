@@ -13,8 +13,6 @@
 
 - 每个向量空间有基 | Hamel 基 | 基的存在性 → thm.vsbasis
 
-- 代数的范畴 | Mon | Gr | Rng | G-Set | A-Mod | k-Alg | Exercise 1.1 → ex.algebra-categories
-
 - 交换化 | abelianization | 换位子子群 | G ab | Exercise 1.9 → prop.abelianization
 
 - 环的纤维余积 | 张量积是推出 | Exercise 1.29 → prop.ring-tensor-coproduct
@@ -28,5 +26,7 @@
 - 正规子群 | normal subgroup | 陪集 | coset → def.normal-subgroup
 
 - 商群 | quotient group | G/N | 商映射 → def.quotient-group
+
+- 群同态 | group homomorphism | 核 | kernel | 像 | image → def.group-hom
 
 > 续见 alias/aka/algebra.2.md
