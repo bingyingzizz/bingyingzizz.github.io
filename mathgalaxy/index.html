@@ -6020,7 +6020,9 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
     /* 合流分组只与「可见边集合」有关，与相机无关 ⇒ 按 view.visible 的引用缓存。
        每帧只重算「汇合点位置」（对每个多源组做几次加法），不重扫 3600 条边。
        ⚠️ view.visible 只在过滤变更时整体替换（见 buildGeometry 的注释），
-       所以引用相同 = 分组相同；换层/换门槛会自然失效。 */
+       所以引用相同 = 分组相同；换层/换门槛会自然失效。
+       ⭐ 2026-11-20：分组键 = `e.id`（一条边一组）—— 同目标的两条独立证明
+       不再共享主干，点击不会串 proof。 */
     var trunkGroupCache = null, trunkGroupSrc = null;
     /* 世界坐标的合流组列表（`trunkPlan` 的输出）。几何重建时刷新；
        主干在实时层画（见 drawTrunksLive），所以位图模式下也必须有一份。
@@ -6041,7 +6043,13 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       list.forEach(function (e) {
         if (e.kind !== 'implication') return;
         if (GU.strengthOf(e) !== 'strong') return;
-        var key = e.target + '|' + (GU.isDerived(e) ? 'd' : 'n');
+        /* ⭐ 2026-11-20：分组键改成**边 id**（以前是 target|derived）。
+           同一条边的多个 source 仍合流；但**指向同一目标的两条不同证明边**
+           （例：`thm.fundamental-algebra` 的 evt+因式定理 与 Liouville 路线）
+           是两条边 ⇒ 各自一个汇合点、各自一条主干。
+           ⛔ 以前共用 target 键时两条边共享同一个 trunkPolys，点主干只会打开
+           root 那一条的证明 —— 用户看到「点一条显示另一条 proof」。 */
+        var key = e.id;
         (groups[key] = groups[key] || []).push(e);
       });
       trunkGroupSrc = list;
@@ -6067,7 +6075,8 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
         /* ⭐ 汇合点必须在**世界坐标**里定（2026-11-16 用户：交汇点不能随视口缩放变化）。
            同一条边的方向与源平均距离都是世界量 ⇒ 世界汇合点唯一；相机只负责把
            这个世界点映射到屏幕（computeEdge 里 w2s）。⛔ 不要再用屏幕像素上限。
-           规则仍只并 strong implication（trunkGroups 已筛），derived 单独一组。 */
+           2026-11-20 起分组键是边 id：derived 天然是另一条边、另一组，
+           不会和普通 implication 混；同目标的独立证明也各算各的汇合点。 */
         var T = { x: tn.x, y: tn.y };
         var cx = 0, cy = 0, ux = 0, uy = 0, sumD = 0;
         srcId.forEach(function (id) {
@@ -6296,12 +6305,12 @@ window.MG = window.MG || {}; MG.contentVersion = 'v0.9.3';</script>
       var Pt = screenOf(tg), rt = nodeRadius(tg);
       var wc = { x: 0, y: 0 };
 
-      /* ⭐ 2026-11-15 合流：同一目标的强推出入边共用一个汇合点（规则见 trunkPlan）。
+      /* ⭐ 2026-11-15 合流：**一条边**的多个强推出 source 共用一个汇合点（规则见 trunkPlan）。
          分支在汇合点**头尾相接**（以前提前 7px 收笔，留下一条缝）；主干只由
-         `trunkPlan` 选出的那条边（id 最小）画，箭头也只画一次 —— 一条主干、一个箭镞。 */
-      /* derived / 非 derived 是两组（颜色不同）⇒ 按同一个分组键取汇合点，
-         不能只按 target，否则同目标的两组会互相覆盖。 */
-      var tp = trunks && trunks[e.target + '|' + (GU.isDerived(e) ? 'd' : 'n')];
+         该边画，箭头也只画一次 —— 一条主干、一个箭镞。
+         ⭐ 2026-11-20：分组键是**边 id**，不是 target —— 同目标的多条独立证明
+         各有自己的汇合点/主干，点击不会串 proof。 */
+      var tp = trunks && trunks[e.id];
       if (tp) {
         var tpS = screenOf({ x: tp.wx, y: tp.wy });      // 世界汇合点 → 当前相机屏幕
         var tipJ = trimTo(Pt, tpS, rt + 5);
