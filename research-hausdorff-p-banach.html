@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-site="bingyingzizz" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>紧群上 Hausdorff p-Banach 系数的正次数上同调 · bingyingzizz</title>
+<meta name="description" content="预印本（未经同行评审）：对每个 0&lt;p&lt;1 构造 Hausdorff 实 p-Banach 空间 B_p 与连续四余圈，证明 H⁴(SU(2),B_p)≠0 —— 在 Hausdorff p-Banach 量词下否定 Clausen–Scholze Question 0.10.4；p=1 时正次上同调全消失。">
+<link rel="canonical" href="https://bingyingzizz.github.io/research-hausdorff-p-banach.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="数学星图 MathGalaxy">
+<meta property="og:title" content="紧群上 Hausdorff p-Banach 系数的正次数上同调 · bingyingzizz">
+<meta property="og:description" content="预印本（未经同行评审）：对每个 0&lt;p&lt;1 构造 Hausdorff 实 p-Banach 系数与连续四余圈，证明 H⁴(SU(2),B_p)≠0，在 Hausdorff p-Banach 量词下否定 Clausen–Scholze Question 0.10.4；p=1 时正次全消失。">
+<meta property="og:url" content="https://bingyingzizz.github.io/research-hausdorff-p-banach.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"紧群上 Hausdorff p-Banach 系数的正次数上同调","url":"https://bingyingzizz.github.io/research-hausdorff-p-banach.html","inLanguage":"zh-CN","description":"预印本（未经同行评审）：对每个 0<p<1 构造 Hausdorff 实 p-Banach 系数与连续四余圈，证明 H⁴(SU(2),B_p)≠0，在 Hausdorff p-Banach 量词下否定 Clausen–Scholze Question 0.10.4；p=1 时正次全消失。","isPartOf":{"@type":"WebSite","name":"bingyingzizz.github.io","url":"https://bingyingzizz.github.io/"}}</script>
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/katex.min.css">
+<script src="assets/katex.min.js"></script>
+<style>
+  :root { --ink:#16181d; --dim:#5b6270; --line:#e2e6ec; }
+  body { margin:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+    font-size:16.5px; line-height:1.82; }
+  .paper { max-width:49rem; margin:0 auto; padding:2.6rem 1.4rem 5rem; }
+  .topnav { max-width:49rem; margin:0 auto; padding:.9rem 1.4rem 0; font-size:.8rem;
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--dim); }
+  .topnav a { color:var(--dim); text-decoration:none; margin-right:1rem; }
+  .kicker { font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--dim); margin:0 0 .8rem; }
+  h1 { font-size:1.58rem; line-height:1.45; margin:0 0 .45rem; font-weight:600; }
+  .en-title { font-size:.97rem; color:var(--dim); font-style:italic; margin:0 0 1.2rem; line-height:1.55; }
+  .byline { font-size:.89rem; color:var(--dim); font-family:system-ui,sans-serif; margin:0 0 1.5rem; }
+  .status { font-size:.82rem; border-left:3px solid #d9bfbf; padding:.3rem 0 .3rem .85rem;
+    margin:0 0 1.8rem; color:#3a3f47; font-family:system-ui,sans-serif; line-height:1.65; }
+  h2 { font-size:1.06rem; margin:2.5rem 0 .7rem; font-weight:600; padding-bottom:.26rem;
+    border-bottom:1px solid var(--line); }
+  h3 { font-size:.96rem; margin:1.6rem 0 .35rem; font-weight:600; }
+  h4 { font-size:.92rem; margin:1.2rem 0 .3rem; font-weight:600; color:#3a4250; }
+  p { margin:.68rem 0; text-align:justify; }
+  .abstract { border-top:2px solid var(--ink); border-bottom:1px solid var(--line);
+    padding:1rem 0 1.1rem; margin:0 0 1.7rem; font-size:.94rem; }
+  .ablabel { font-family:system-ui,sans-serif; font-size:.7rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--dim); display:block; margin-bottom:.42rem; }
+  blockquote { margin:.85rem 0; padding:.4rem 1rem; border-left:3px solid var(--line);
+    background:#fafbfc; font-size:.95rem; }
+  blockquote p { margin:.3rem 0; }
+  .env { margin:1rem 0; padding:.5rem .9rem; border-left:2px solid var(--line); background:#fbfcfd; }
+  .env .hd { font-family:system-ui,sans-serif; font-size:.78rem; font-weight:600;
+    letter-spacing:.05em; color:#3a4250; margin-bottom:.22rem; }
+  .env.thm { border-left-color:var(--ink); } .env.thm .hd { color:var(--ink); }
+  .env.lem { border-left-color:#4a5d8a; } .env.lem .hd { color:#4a5d8a; }
+  .env.cor { border-left-color:#3f7a5e; } .env.cor .hd { color:#3f7a5e; }
+  .env .env { background:#fff; margin:.6rem 0; }
+  .pf { margin:.55rem 0 .85rem; }
+  .pf::before { content:"证明. "; }
+  .dm { margin:.7rem 0; overflow-x:auto; overflow-y:hidden; }
+  code { font-family:ui-monospace,Consolas,monospace; font-size:.85em; background:#f3f5f8;
+    padding:.05em .26em; border-radius:2px; }
+  table { border-collapse:collapse; width:100%; font-size:.85rem; margin:.85rem 0;
+    font-family:system-ui,sans-serif; }
+  th,td { border-bottom:1px solid var(--line); padding:.38rem .45rem; text-align:left; vertical-align:top; }
+  th { font-size:.79rem; font-weight:600; color:#3a4250; }
+  ol.refs { font-size:.88rem; padding-left:1.35rem; }
+  ol.refs li { margin:.42rem 0; }
+  .foot { margin-top:2.6rem; padding-top:.9rem; border-top:1px solid var(--line);
+    font-size:.78rem; color:var(--dim); font-family:system-ui,sans-serif; line-height:1.7; }
+  /* ---------- 语言开关（本页不加载 site.css，所以这一小段在这里重写一份） ---------- */
+  /* 论文正文只有英文：EN 是当前页，中文指向研究列表（那里有中文标题与摘要）。 */
+  .topnav { display:flex; flex-wrap:wrap; align-items:center; }
+  .lang-switch { margin-left:auto; display:inline-flex; align-items:center; gap:1px; padding:2px;
+    border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.92);
+    line-height:1; white-space:nowrap; }
+  .lang-switch .ls-item { display:inline-block; padding:4px 9px; border-radius:999px;
+    font-family:system-ui,sans-serif; font-size:.74rem; font-weight:600; color:var(--dim);
+    text-decoration:none; }
+  .topnav .lang-switch a.ls-item { margin-right:0; color:var(--dim); }
+  .topnav .lang-switch a.ls-item:hover { background:#eef1f6; color:var(--ink); text-decoration:none; }
+  .lang-switch .ls-item[aria-current="true"] { background:var(--ink); color:#fff; }
+  .lang-switch .ls-sep { color:#b6bdc7; font-size:.7rem; padding:0 1px; user-select:none; }
+  /* 中文说明条：论文是英文写的，这一条把中文读者接回中文页面，不伪造中文正文 */
+  .zh-note { max-width:49rem; margin:0 auto; padding:.55rem 1.4rem 0; }
+  .zh-note p { margin:0; font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+    font-size:.82rem; line-height:1.7; color:#4a515c; background:#f7f8fa;
+    border:1px solid var(--line); border-radius:3px; padding:.6rem .85rem; }
+  .zh-note b { color:var(--ink); }
+  @media (max-width:640px){ body{font-size:16px} .paper{padding:1.8rem 1rem 4rem} }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="./">← bingyingzizz</a>
+  <a href="research.html">星图研究</a>
+  <a href="mathgalaxy/">数学星图</a>
+  <!-- 全站统一的「中文 / EN」：本页正文用英文写成，所以 EN 是当前页；
+       中文指向研究列表（中文标题、摘要、状态都在那儿）—— 本页不另造中文正文。 -->
+  <nav class="lang-switch" aria-label="语言 / Language">
+    <a class="ls-item" href="research.html?lang=zh" hreflang="zh-CN" lang="zh">中文</a>
+    <span class="ls-sep" aria-hidden="true">/</span>
+    <span class="ls-item" aria-current="true" lang="en">EN</span>
+  </nav>
+</div>
+
+<!-- 中文说明条（chrome，不是正文）：英文论文页对中文读者的落点。
+     中文标题、摘要与状态都在研究列表里；这里只交代「本页为什么是英文」。 -->
+<div class="zh-note" lang="zh-CN">
+  <p><b>本页是英文论文稿</b> —— 正文只有英文，站点不提供中文翻译；中文框架稿保存在本地仓库里，
+  没有随站点发布。中文标题、摘要与状态见 <a href="research.html?lang=zh">星图研究</a>；
+  论文里的数学内容与中文页面上的同名命题是同一套。
+  标题：紧群上 Hausdorff p-Banach 系数的正次数上同调。</p>
+</div>
+
+<main class="paper">
+
+<h1>Positive-degree cohomology of compact groups with Hausdorff p-Banach coefficients</h1>
+<p class="byline">bingyingzizz · 22 November 2026</p>
+<div class="abstract"><span class="ablabel">Abstract</span>
+<p>Let $G=\mathrm{SU}(2)$ act trivially. For every $0&lt;p&lt;1$, we construct a Hausdorff real $p$-Banach space $B_p$ and a continuous $4$-cocycle with values in $B_p$ representing a non-zero class in $H^4(G,\underline{B_p})$. At $p=1$, all positive-degree cohomology vanishes for every real Banach coefficient with trivial action. The cohomology here is derived cohomology in the condensed classifying topos. For these coefficients, a descent argument identifies it with the cohomology of the continuous bar complex.</p>
+<p>The proof has two steps. First, we introduce constants $K_n(p)$ that measure the least mass of continuous primitives of finite-dimensional cocycles relative to the mass of the cocycles. Finiteness in two adjacent degrees gives vanishing in the lower degree for every Hausdorff $p$-Banach coefficient, while divergence in one degree gives a coefficient with non-zero cohomology in that degree. Second, we use polynomial tests on triples of unit quaternions to prove $K_4(p)=\infty$ for every $0&lt;p&lt;1$. Uniformly bounded test costs give a bound on the absolute coefficient tail after $J$ terms proportional to $(J+1)^{-(1-p)/p}$. This would yield a countable, absolutely summable atomic filling of a finite $3$-cycle. A bounded volume cocycle evaluates to a positive number on that cycle and to zero on the boundary of any such filling. In degree three a separate commutator estimate gives $K_3(p)\le C_p&lt;\infty$ and proves closedness of the continuous $3$-coboundaries for every $0&lt;p&lt;1$.</p>
+<p>The finite cycle and its volume pairing come from the companion paper on non-zero third cohomology with general liquid coefficients. Here, for each $0&lt;p&lt;1$, the cycle gives a lower bound on the primitives of continuous fourth-degree cocycles, and the coefficient is a $c_0$ sum of finite-dimensional spaces. The companion paper on low-degree vanishing gives internal first-degree vanishing for compact groups and internal second-degree vanishing for $\mathrm{SU}(2)$, both with trivial liquid coefficients.</p>
+</div>
+<h2>1 Introduction</h2>
+<p>Question 10.4 of Scholze's lectures [1] asks about positive-degree cohomology of a compact nonabelian group with $p$-liquid coefficients and singles out $\mathrm{SU}(2)$ and $p$-Banach coefficients. We consider trivial actions. The companion paper [2] gives a counterexample with a liquid cokernel in degree three. Its nonrepresentability result leaves the Hausdorff $p$-Banach case to be decided separately. The main theorem of the present paper is the following statement, proved in Section 6.</p>
+<p><b>Main theorem.</b> Let $G=\mathrm{SU}(2)$ act trivially. For every $0&lt;p&lt;1$, there exist a Hausdorff real $p$-Banach space $B_p$ and a continuous $4$-cocycle $c$ on $G$ with values in $B_p$ representing a non-zero class in $H^4(G,\underline{B_p})$.</p>
+<p>There are two analytic issues in this statement. The first is the comparison with continuous cochains. The condensed bar construction initially has derived sections in every simplicial degree. The spaces in that construction are the compact manifolds $G^r$. We use finite covering dimension to prove their acyclicity with Hausdorff $p$-Banach coefficients. On a profinite cover, one can insert a point of a chosen fiber to obtain a local primitive. A partition of unity of bounded multiplicity joins these local primitives up to a small error, and a convergent series of corrections removes the error. This allows the cohomology group in the theorem to be computed by global continuous cochains.</p>
+<p>The second issue is quantitative. A continuous real-valued cocycle has a continuous primitive obtained by scalar Haar integration, and this works coordinatewise in any finite-dimensional real vector space. When $p&lt;1$, the estimates on these primitives may depend on the dimension and on the mass used on the coefficient space. For a finite-dimensional real $p$-normed space $E$, we ask for the infimum of the uniform mass of a primitive of a prescribed cocycle. We then take its ratio to the uniform mass of the cocycle and let both the coefficient and the cocycle vary. The resulting constant $K_n(p)$ concerns all continuous primitives and all finite-dimensional $p$-norms in degree $n$.</p>
+<p>Two uses of finite-dimensional coefficients enter the criterion. If $K_n(p)$ is unbounded, a sequence of cocycles can have masses tending to zero and still require primitives of mass at least one in every coordinate. The coordinate tails of a continuous cochain with values in a $c_0$ sum tend to zero uniformly, so the cocycle assembled from this sequence has no continuous primitive. Conversely, finite-dimensional-valued interpolation of a cocycle typically introduces a coboundary in the next degree. A bound for $K_{n+1}(p)$ controls a correction of that coboundary, and a bound for $K_n(p)$ then controls a primitive of the corrected cocycle. Repetition gives a primitive in the original coefficient.</p>
+<p>For the degree-three estimate, write a cocycle initially as $\delta u$, where $u$ is a continuous $2$-cochain. The twisted multiplication on $G\times E$ defined by $u$ has associator defect measured by $\delta u$. Finite word comparisons and the geometry of commutator representations in the unit quaternions give a controlled correction of $u$. The resulting estimate applies to any coboundary with an existing continuous primitive in a Hausdorff real $p$-Banach space, proving that the subspace of $3$-coboundaries is closed for every $0&lt;p&lt;1$. Vanishing in degree three would also require density in the continuous $3$-cocycles.</p>
+<p>The degree-four argument uses a finite bar $3$-cycle $z$ and a bounded real function $\beta$ on $G^3$ from [2]. The function is a $3$-cocycle on the underlying discrete group, with a pointwise identity on every $4$-tuple. Its volume pairing with $z$ is positive. Every continuous scalar $3$-cocycle is a coboundary and therefore vanishes on $z$. Thus all continuous primitives of a given continuous $4$-cocycle have the same value on $z$. For fixed $0&lt;p&lt;1$, we apply this observation to the differentials of vectors of coordinate monomials and put a $p$-homogeneous mass on the span of each differential's image. Bounding the value on $z$ in these masses would amount to bounding the costs of finite $4$-chains satisfying increasingly many polynomial moment identities. With the coefficients sorted in decreasing absolute value, the bounded sum of their $p$-th powers controls the tails of their absolute values uniformly. We use this bound to pass to an atomic chain satisfying every polynomial test. Point-separating polynomial powers recover the coefficient of each atom of its boundary, so the test identities give a filling of $z$. The volume pairing then rules out the filling.</p>
+<p>Section 2 establishes the comparison with continuous cochains and records the inputs from the companion papers. Section 3 proves the criterion. For every $0&lt;p&lt;1$, Section 4 bounds $K_3(p)$ and Section 5 proves divergence of $K_4(p)$. Section 6 constructs the coefficient and proves the main theorem and the Banach endpoint corollary. Section 7 compares the three papers. Appendix A gives polynomial and bar-chain bookkeeping, Appendix B records the quadrature certificate, and Appendix C states the results imported from the companion papers.</p>
+<h2>2 Preliminaries</h2>
+<h3>2.1 Condensed abelian groups and p-liquid objects</h3>
+<p>We work with the site of profinite spaces and finite jointly surjective covering families, with the size convention of [4]. Write $\mathrm{Cond}$ for its topos of sheaves and $\operatorname{Cond}(\mathbb Z)$ for its category of abelian group objects. A topological space $X$ gives a condensed set $\underline X$ by the rule $P\mapsto C(P,X)$ for profinite $P$. We identify compact Hausdorff spaces with their associated condensed sets. In particular, $G$ also denotes the group object associated to the compact group $\mathrm{SU}(2)$. For a compact Hausdorff space $S$, condensed morphisms $S\to\underline X$ correspond to continuous maps $S\to X$. Indeed, a profinite surjection onto $S$ is a quotient map, so the continuous map on the cover associated to such a morphism descends to a continuous map on $S$. The converse is induced by composition on all tests.</p>
+<p>For a condensed set $S$, write $\mathbb Z[S]$ for the free condensed abelian group on $S$. For a condensed abelian group $A$, our convention for space cohomology is</p>
+<div class="dm">$$R\Gamma(S,A)
+=R\operatorname{Hom}_{\operatorname{Cond}(\mathbb Z)}(\mathbb Z[S],A),
+\qquad H^i(S,A)=H^iR\Gamma(S,A).
+\tag{2.1}$$</div>
+<p>Equivalently, these are derived sections of the coefficient pulled back to the slice over $S$. Write $BG$ for the topos of condensed sets with a $G$-action. For a condensed abelian group $A$ with such an action, $H^i(G,A)$ denotes the ordinary group $H^iR\Gamma(BG,A)$. In the notation $\underline H^i(G,A)$ for internal cohomology, the underline refers to the $i$-th derived direct image along $BG\to\mathrm{Cond}$. The underline on $\underline B$ in $H^i(G,\underline B)$ denotes the condensed coefficient associated to the topological vector space $B$.</p>
+<p>For a profinite space $P=\varprojlim_\alpha F_\alpha$ presented by its finite quotients, let $M_r(P)$ be the condensed measure object formed from the disks of compatible real coefficient vectors with bounded $r$-mass. Explicitly, for $0&lt;r\le 1$, use</p>
+<div class="dm">$$M_r(P)
+=\underset{b&gt;0}{\operatorname{colim}}\,
+\varprojlim_\alpha
+\left\{(a_x)_{x\in F_\alpha}:\ 
+\sum_{x\in F_\alpha}|a_x|^r\le b\right\},
+\qquad
+M_{&lt;p}(P)=\underset{0&lt;r&lt;p}{\operatorname{colim}}M_r(P).
+\tag{2.2}$$</div>
+<p>The bonding maps add coefficients over fibers. They preserve each mass bound by $|s+t|^r\le |s|^r+|t|^r$, and the disks carry their compact topologies before the colimit. The Dirac map sends a point of $P$ to its compatible family of unit atoms. A condensed real vector space $V$ is $p$-liquid if restriction along this map gives a bijection</p>
+<div class="dm">$$\operatorname{Hom}_{\operatorname{Cond}(\mathbb R)}(M_{&lt;p}(P),V)
+\ \xrightarrow{\ \sim\ }\ 
+\operatorname{Hom}_{\mathrm{Cond}}(P,V)
+\tag{2.3}$$</div>
+<p>for every profinite $P$. We use Definition 6.3 and Theorem 6.5 of [1] for these conventions. The lectures give Hausdorff $p$-Banach spaces, viewed as condensed real vector spaces, as examples in this theory. The distinction between such coefficients and general $p$-liquid objects is essential in comparing the counterexamples of the two papers.</p>
+<h3>2.2 Hausdorff p-Banach coefficients and the p-homogeneous mass</h3>
+<p>Our convention for a real $p$-norm, for $0&lt;p\le1$, is that $\|v\|$ is positive on non-zero vectors, obeys $\|\lambda v\|=|\lambda|\|v\|$, and satisfies $\|v+w\|^p\le\|v\|^p+\|w\|^p$. We write $q(v)=\|v\|^p$ for its mass. It satisfies</p>
+<div class="dm">$$q(\lambda v)=|\lambda|^p q(v),\qquad
+q(v+w)\le q(v)+q(w),\qquad
+|q(v)-q(w)|\le q(v-w).
+\tag{2.4}$$</div>
+<p>The last inequality follows by applying subadditivity to $v=(v-w)+w$ and exchanging $v,w$. The associated translation-invariant metric is $d(v,w)=q(v-w)$. A Hausdorff real $p$-Banach space is a real vector space equipped with a $p$-norm for which this metric is complete. We also use the equivalent convention in which $q$ is given first and the $p$-norm is $q^{1/p}$. At $p=1/2$ the scaling rule takes the form</p>
+<div class="dm">$$q(\lambda v)=\sqrt{|\lambda|}\,q(v).
+\tag{2.5}$$</div>
+<p>On a finite-dimensional $p$-normed space, the mass induces the ordinary real vector space topology. To see this, choose a basis $e_1,\ldots,e_d$. For $v=\sum_i v_i e_i$ we have $q(v)\le\sum_i |v_i|^p q(e_i)$, so coordinate convergence implies convergence in the mass metric. The last inequality in (2.4) makes $q$ continuous in coordinates. For $d&gt;0$, its minimum on the Euclidean unit sphere is strictly positive by compactness and positive definiteness. Homogeneity therefore also gives coordinate convergence from mass convergence, and completeness follows from the analogous comparison of Cauchy sequences. The space of dimension zero is complete as well.</p>
+<p>For a compact Hausdorff domain $S$ and a Hausdorff $p$-Banach target $B$, the metric on $C(S,B)$ is defined using the uniform mass</p>
+<div class="dm">$$M(u)=\sup_{x\in S} q(u(x)).
+\tag{2.6}$$</div>
+<p>Every continuous map on the compact domain has finite uniform mass. A uniformly Cauchy sequence has a pointwise limit by completeness, and the Cauchy bound passes to the limit uniformly. The limit is continuous by the triangle inequality in the mass metric. Thus $C(S,B)$ is complete, with mass $M$ and $p$-norm $M^{1/p}$. In particular, a series of continuous cochains whose uniform masses have finite sum converges uniformly to a continuous cochain.</p>
+<p>For the trivial action, put $C^r(G,B)=C(G^r,B)$ for $r\ge0$, where $G^0=*$. Use the inhomogeneous differential</p>
+<div class="dm">$$\begin{aligned}
+(\delta u)(g_1,\ldots,g_{r+1})
+={}&amp;u(g_2,\ldots,g_{r+1})\\
+&amp;+\sum_{i=1}^{r}(-1)^i
+u(g_1,\ldots,g_i g_{i+1},\ldots,g_{r+1})
++(-1)^{r+1}u(g_1,\ldots,g_r).
+\end{aligned}
+\tag{2.7}$$</div>
+<p>This uses unnormalized cochains. The deletion maps on homogeneous tuples satisfy the simplicial face identities, so two successive deletions cancel in pairs in the alternating sum. Passing to inhomogeneous coordinates given by consecutive quotients gives (2.7) and $\delta^2=0$. In degree $r$ there are $r+2$ summands, and the signs preserve mass because $|\pm1|^p=1$. Consequently $M(\delta u)\le(r+2)M(u)$. We use $Z^r(G,B)=\ker(\delta:C^r(G,B)\to C^{r+1}(G,B))$ for the cocycles and call a cochain $a$ satisfying $\delta a=c$ a primitive of $c$.</p>
+<p>Apart from the companion-paper results recorded in Section 2.3, the only non-trivial external step is the comparison of the continuous bar complex with condensed cohomology in Proposition 2.2, which uses profinite acyclicity from [1].</p>
+<h3>2.3 The external inputs used</h3>
+<p>The input about derived sections is Theorem 6.7 of [1]. For every profinite $P$ and every Hausdorff real $p$-Banach space $B$, it gives $H^i(P,\underline B)=0$ for $i&gt;0$. Footnote 12 of [1] discusses the finite-dimensional compact case. We give the argument needed here because the bar construction for $G$ has compact manifold terms.</p>
+<p>The inputs about liquid cohomology are from the two companion papers. From [2, Sections 5--6] we use the bounded volume cocycle on the underlying discrete group, the finite detecting $3$-cycle, and their positive pairing. The finite cycle is already closed in the ordinary bar chains. More precisely, [2, Section 6.3] constructs $z_\Gamma$, and [2, Lemma 6.1] pushes it forward to $G$ and computes the volume pairing. Section 5.3 describes the cocycle and the part of the pairing that is used here. The general liquid counterexample and the nonrepresentability of its coefficient are [2, Theorem 8.1 and Lemma 9.1]. From [3, Theorems 4.3 and 8.3] we use the internal vanishing statements in degrees one and two for the comparison in Section 7. Appendix C records the precise statements. The site facts used for condensed objects and extremally disconnected tests are those of [4, Lectures I--II].</p>
+<p class="thmline"><b>Lemma 2.1</b> (Acyclicity in finite covering dimension). Let $S$ be a compact metrizable space of finite covering dimension and $B$ a Hausdorff real $p$-Banach space. Then $H^i(S,\underline B)=0$ for every $i&gt;0$.</p>
+<p>Proof. The empty space has zero section groups, so assume $S\ne\varnothing$. Choose a metrizable profinite space $P$ and a continuous surjection $\pi:P\to S$. For example, start with $S$ and cover each nonempty compact piece at stage $k-1$ by finitely many nonempty compact subsets of diameter at most $2^{-k}$. Such covers are obtained by intersecting each piece with finitely many small closed balls. The space of infinite nested choices is an inverse limit of finite sets. Each choice has a unique common point, and the diameter bounds give continuity of the map taking this point. A nested choice containing any specified point can be made at every stage, giving surjectivity.</p>
+<p>Let $P^{[j]}$ be the space of $j$ points lying over the same point of $S$. This is a closed subspace of $P^j$, hence profinite. The map $P\to S$ is an epimorphism of condensed sets, and its Čech nerve gives a descent spectral sequence with terms $H^b(P^{[a+1]},\underline B)$ converging to $H^{a+b}(S,\underline B)$. This spectral sequence comes from the augmented alternating complex of free abelian sheaves on the nerve. That complex is exact locally, where the cover admits a section and insertion of that section gives its contracting homotopy. Applying Hom into an injective resolution of the coefficient gives the spectral sequence. By profinite acyclicity only the row $b=0$ remains. We thus work in $C(P^{[i+1]},B)$ with its alternating deletion differential, denoted by $d_{\mathrm{\check C}}$.</p>
+<p>Fix $i\ge1$ and a cocycle $f\in C(P^{[i+1]},B)$, and put $L=M(f)$. It extends to a continuous function $F:P^{i+1}\to B$ with $M(F)=L$. In fact, a nonempty closed subset $A$ of a compact metrizable profinite space is a retract. Take nested finite clopen partitions with mesh tending to zero, beginning with the one-part partition. On a part that first misses $A$, map every point to a chosen point of $A$ in its parent part. Fix $A$ pointwise. The map is locally constant off $A$. If a point lies in the same part of a given partition as a point of $A$, its image lies in that part as well, which proves continuity on $A$ by the mesh condition. Apply this retraction to $A=P^{[i+1]}$ and compose with $f$.</p>
+<p>For each $s\in S$, choose $a_s\in \pi^{-1}(s)$ and set $b_s(x_1,\ldots,x_i)=F(a_s,x_1,\ldots,x_i)$ on $P^{[i]}$. On the fiber over $s$, the cocycle identity on $(a_s,x_0,\ldots,x_i)$ gives $d_{\mathrm{\check C}} b_s=f$. For each $\eta&gt;0$, the subset of $P^{[i+1]}$ on which $q(f-d_{\mathrm{\check C}}b_s)\ge\eta$ is closed, hence compact. Its projection to $S$ misses $s$. There is therefore an open neighborhood $U_s$ of $s$ on whose entire inverse image the error is less than $\eta$.</p>
+<p>Let $m=1+\dim S$. By the definition of covering dimension, the cover $\{U_s\}_{s\in S}$ has a finite open refinement $(V_j)_j$ of multiplicity at most $m$. Choose $s_j$ with $V_j\subset U_{s_j}$ and a partition of unity $(\phi_j)_j$ with $\{\phi_j&gt;0\}\subset V_j$. For instance, use distances to the complements of $V_j$, with a constant positive function if $V_j=S$, and divide each function by their positive sum. Pull $\phi_j$ back along the common base point of a tuple. Since that point is preserved by deletion, the cochain $b=\sum_j\phi_j b_{s_j}$ satisfies</p>
+<div class="dm">$$M(b)\le mL,\qquad M(f-d_{\mathrm{\check C}}b)\le m\eta.
+\tag{2.8}$$</div>
+<p>Indeed, at most $m$ weights are positive at each tuple and each contributes a factor $\phi_j^p\le1$ to the mass of its summand. The bound for the error also uses $\sum_j\phi_j=1$.</p>
+<p>If $L=0$, $f=0$. Otherwise choose $\eta=L/(2m)$, apply the construction to the resulting closed error, and repeat. The successive errors have mass at most $2^{-k}L$ after $k$ corrections, and the $k$-th correction, with $k$ starting at zero, has mass at most $m2^{-k}L$. The correction series converges in the complete uniform mass metric. The deletion differential is continuous because it is an alternating sum of finitely many pullbacks. Its value on the series is $f$. This proves exactness in positive degrees and hence the asserted vanishing. ∎</p>
+<p class="thmline"><b>Proposition 2.2</b> (Continuous comparison for $\mathrm{SU}(2)$). For $G=\mathrm{SU}(2)$ and a Hausdorff real $p$-Banach space $B$ with trivial action, the condensed bar construction gives a natural isomorphism</p>
+<div class="dm">$$H^n(G,\underline B)\cong H^n(C^\bullet(G,B),\delta)
+\tag{2.9}$$</div>
+<p>for all $n\ge0$.</p>
+<p>Proof. In $BG$, the regular left $G$-object $G$ covers the terminal object. The terms of its Čech nerve are $G^{r+1}$ with diagonal left action. The slice over that $G$-object is equivalent to the condensed slice over $G^r$. In fact, a $G$-equivariant object over $G^{r+1}$ is determined by its restriction over tuples whose first coordinate is the identity, since multiplication by the first coordinate recovers the original object from that restriction. The orbit coordinates on the base are the consecutive quotients of the tuple. With these coordinates, the nerve gives the bar descent spectral sequence with terms $H^s(G^r,\underline B)$. Triviality of the coefficient action makes the descended coefficient the pullback of $\underline B$ on each slice. The degree-zero row is $C^r(G,B)$, and the induced differential is (2.7).</p>
+<p>The unit-quaternion model identifies $G$ with $S^3$ as a compact manifold. In particular $G^r$ is compact metrizable and has finite covering dimension. Lemma 2.1 gives zero in every positive row. In each total degree the spectral sequence has a finite filtration, so the surviving row computes the asserted groups. ∎</p>
+<p>The same comparison can be used with compact parameters when detecting internal vanishing. Let $T$ be an extremally disconnected compact Hausdorff space. Evaluation at $T$ is exact and these tests detect zero condensed abelian groups [4, Lectures I--II]. In the slice over $T$, the bar terms have bases $T\times G^r$. In Lemma 2.1 one can use $T\times P\to T\times G^r$, where $P\to G^r$ is the cover used there. Every Čech term $T\times P^{[j]}$ is profinite. For compact spaces $T$ and $X$, a continuous function on $T\times X$ is equivalent to a continuous map from $X$ to $C(T,B)$ with the uniform mass metric. Continuity into that metric follows from a finite neighborhood cover of $T$ at each fixed point of $X$. The converse follows from continuity of evaluation, by the triangle inequality for $q$. The proof of Lemma 2.1 on these Čech cochains therefore uses $C(T,B)$ as the complete coefficient and the finite covering dimension of $G^r$. Thus $\underline H^n(G,\underline B)(T)$ is computed by $C^\bullet(G,C(T,B))$. The criterion below ranges over all Hausdorff $p$-Banach spaces, so vanishing for every such ordinary coefficient in a fixed degree also implies internal vanishing for every such coefficient in that degree. The main theorem uses ordinary cohomology.</p>
+<h2>3 The criterion</h2>
+<h3>3.1 Primitives and the ratio $m_E(c)/M(c)$</h3>
+<p>Throughout this section, fix $0&lt;p\le1$ and $G=\mathrm{SU}(2)$. All actions on coefficients are trivial. Let $E$ be a finite-dimensional real $p$-normed space. For $c\in Z^n(G,E)$, define</p>
+<div class="dm">$$m_E(c)=\inf_{\substack{a\in C^{n-1}(G,E)\\ \delta a=c}}M(a),
+\qquad
+M(u)=\sup_x\|u(x)\|_E^p.
+\tag{3.1}$$</div>
+<p>The domain of the supremum is the domain of the cochain in question. In particular $M(a)$ and $M(c)$ use different powers of $G$. The infimum is over all continuous primitives, with the full freedom to add a continuous $(n-1)$-cocycle.</p>
+<p class="thmline"><b>Lemma 3.1</b> (Coordinate Haar homotopy). Every finite-dimensional continuous cocycle in positive degree has a continuous primitive.</p>
+<p>Proof. Use normalized Haar probability measure $\gamma$. If $u\in C^r(G,E)$ with $r\ge1$, let</p>
+<div class="dm">$$(Hu)(g_1,\ldots,g_{r-1})
+=\int_G u(x,g_1,\ldots,g_{r-1})\,d\gamma(x)
+\tag{3.2}$$</div>
+<p>by integrating in a real basis of $E$. Real linearity of integration makes this construction independent of the basis. Each integrated coordinate is continuous by uniform continuity of the integrand on the compact domain. The finite-dimensional topology established in Section 2.2 gives continuity into $E$.</p>
+<p>Apply (2.7) to $u$ with $x$ in the first position and integrate in $x$. The first term becomes $u(g_1,\ldots,g_r)$. The second becomes $-Hu(g_2,\ldots,g_r)$ by right invariance of $\gamma$ under $x\mapsto xg_1$. The terms that follow are the remaining terms of $-\delta Hu$, since inserting $x$ shifts the face indices by one. Thus $H\delta u=u-\delta Hu$ in every positive degree. For $u=c$ closed, this gives $\delta Hc=c$. ∎</p>
+<p>For $0&lt;p&lt;1$, we use Haar integration in Lemma 3.1 only for existence in each finite dimension. The uniform mass estimate at $p=1$ is given in Corollary 6.1. For a non-zero $c$, the bound on the differential in Section 2.2 gives</p>
+<div class="dm">$$0&lt;\frac{M(c)}{n+1}\le m_E(c)&lt;\infty.
+\tag{3.3}$$</div>
+<p>In fact a primitive has degree $n-1$ and its differential has $n+1$ terms. Also, for $\lambda\ne0$, multiplication by $\lambda$ gives a bijection between the primitives of $c$ and those of $\lambda c$. It follows that</p>
+<div class="dm">$$m_E(\lambda c)=|\lambda|^p m_E(c),
+\qquad
+M(\lambda c)=|\lambda|^p M(c).
+\tag{3.4}$$</div>
+<p>In particular the ratio $m_E(c)/M(c)$ is invariant under non-zero scalar multiplication. Normalizing $m_E(c)$ to one uses the scalar $m_E(c)^{-1/p}$.</p>
+<h3>3.2 The constants $K_n$</h3>
+<p>For $n\ge1$, define</p>
+<div class="dm">$$K_n(p)=\sup_{E,\,0\ne c\in Z^n(G,E)}
+\frac{m_E(c)}{M(c)}.
+\tag{3.5}$$</div>
+<p>Here $E$ ranges over all finite-dimensional real $p$-normed spaces. The empty supremum is zero. Neither the dimensions nor the $p$-norms are held fixed. The constants refer throughout to the inhomogeneous continuous bar complex for the chosen group $G$.</p>
+<p>Two forms of control in consecutive degrees are relevant. If a finite-dimensional-valued cochain $v$ has degree $n$, then $\delta v$ is a cocycle in degree $n+1$ for that same coefficient. A bound for $K_{n+1}(p)$ gives a small degree-$n$ cochain $u$ with $\delta u=\delta v$ when $M(\delta v)$ is small. The difference $v-u$ is closed. A bound for $K_n(p)$ then gives a degree-$(n-1)$ primitive for $v-u$. Section 3.3 uses this pair of estimates on approximations of a cocycle with values in a complete coefficient.</p>
+<h3>3.3 The two directions of the criterion</h3>
+<p class="thmline"><b>Theorem 3.2</b> (Finite-dimensional primitive criterion). Fix $0&lt;p\le1$. All positive-degree cohomology of $G=\mathrm{SU}(2)$ with trivial Hausdorff real $p$-Banach coefficients vanishes if and only if every $K_n(p)$ is finite. More precisely, $K_n(p)&lt;\infty$ and $K_{n+1}(p)&lt;\infty$ together force $H^n(G,\underline B)=0$ for every such $B$, and $K_n(p)=\infty$ produces such a coefficient with $H^n(G,\underline B)\ne0$. For the vanishing implication it suffices that both $K_n(p)$ and $K_{n+1}(p)$ are finite.</p>
+<p>Proof. Suppose first that $K_n(p)=\infty$. For every $j\ge1$, choose $E_j$ and a non-zero $c_j$ with ratio at least $2^j$. Rescale each $c_j$ by $m_{E_j}(c_j)^{-1/p}$, where the mass on the right is that of the initial $c_j$. Equation (3.4) gives, for the rescaled $c_j$,</p>
+<div class="dm">$$m_{E_j}(c_j)=1,\qquad M(c_j)\le 2^{-j}.
+\tag{3.6}$$</div>
+<p>Write $q_j$ for the mass on $E_j$, and form</p>
+<div class="dm">$$B=\left\{(v_j)_{j\ge1}:\ v_j\in E_j,\ q_j(v_j)\longrightarrow0\right\},
+\qquad
+q_B(v)=\sup_{j\ge1}q_j(v_j).
+\tag{3.7}$$</div>
+<p>The limit condition makes the supremum finite. Subadditivity and homogeneity in each coordinate give the corresponding properties for $q_B$, and positive definiteness holds because every coordinate is detected by the supremum. This mass defines a Hausdorff real $p$-Banach space. Indeed, a $q_B$-Cauchy sequence has a limit in each $E_j$. Every uniform Cauchy bound on the sequence passes to its coordinate limits and holds in all coordinates at once. For a given tolerance, choose one term of the sequence uniformly close to those limits. Its coordinate tails tend to zero. Subadditivity shows that the tails of the limit eventually have mass at most the sum of the tolerance and a bound on the tails of that term. Letting the tolerance tend to zero gives membership in $B$, and the same uniform bound gives convergence in $q_B$.</p>
+<p>Set $c(x)=(c_j(x))_j$ for $x\in G^n$. By (3.6), $c(x)$ belongs to $B$, and the finite coordinate truncations converge uniformly to $c$. A truncation is continuous since it is a finite tuple of continuous cochains and the mass on its range is a finite maximum. Hence $c$ is continuous. It is closed because the differential acts coordinatewise and each coordinate is closed.</p>
+<p>If $a\in C^{n-1}(G,B)$ were a primitive, each coordinate $a_j$ would be continuous since $q_j(v_j)\le q_B(v)$ makes the projection continuous. It would satisfy $\delta a_j=c_j$ and therefore $M(a_j)\ge1$. On the other hand, the tails tend to zero uniformly on every compact subset of $B$. To prove this, take a finite $\eta$-net for that subset in the mass metric, with its centers in $B$. Beyond a single index, all coordinates of all centers have mass less than $\eta$. By subadditivity and the projection bound, each corresponding coordinate of each point of the compact set has mass less than $2\eta$. Apply this to the compact image of $a$. It gives $M(a_j)\to0$, a contradiction. The continuous class is non-zero and Proposition 2.2 identifies it with a non-zero class in $H^n(G,\underline B)$.</p>
+<p>The construction also gives zero evaluation on each finite real bar $n$-cycle. For such a cycle $w$, evaluating $c$ is a finite sum in $B$. Its $j$-th coordinate is zero because $c_j$ has a continuous primitive by Lemma 3.1, and evaluation of a coboundary on a finite chain equals evaluation of its primitive on the boundary. All coordinates of $c(w)$ therefore vanish.</p>
+<p>For the converse implication, suppose $K_n(p)$ and $K_{n+1}(p)$ are finite. Let $B$ be an arbitrary Hausdorff real $p$-Banach coefficient and $c\in Z^n(G,B)$. If $M(c)=0$, take its primitive to be zero. Set $L=M(c)&gt;0$ otherwise. We first construct a finite-dimensional-valued cochain $v\in C^n(G,B)$ such that $M(v-c)&lt;\epsilon$, for an arbitrary $\epsilon&gt;0$.</p>
+<p>The compact manifold $G^n$ has covering dimension $3n$. By continuity, cover $G^n$ by open sets on each of which $c$ varies by mass less than $\epsilon/(2(3n+1))$. Choose a finite open refinement of multiplicity at most $3n+1$, a partition of unity subordinate in the sense of the positive weight sets, and a sample point $x_i$ in each nonempty member of the refinement. For the corresponding weights $\phi_i$, put $v(x)=\sum_i\phi_i(x)c(x_i)$. At $x$, $v(x)-c(x)=\sum_i\phi_i(x)(c(x_i)-c(x))$. Each non-zero term has mass less than $\epsilon/(2(3n+1))$, and at most $3n+1$ terms occur. This gives $M(v-c)\le\epsilon/2&lt;\epsilon$. The values of $v$ lie in the finite-dimensional span $E$ of the samples, equipped with the induced $p$-norm. Continuity into $E$ follows from equality of the induced mass with the original mass on that span.</p>
+<p>Since $c$ is closed, the continuous cocycle $\delta v$ with values in $E$ satisfies $M(\delta v)=M(\delta(v-c))\le(n+2)\epsilon$. If $\delta v\ne0$, the definition of $K_{n+1}(p)$ gives a continuous $E$-valued primitive $u$ of $\delta v$ satisfying $M(u)\le (K_{n+1}(p)+1)M(\delta v)$. The extra $1$ permits choosing a primitive with mass arbitrarily close to the infimum. If $\delta v=0$, take $u=0$. Thus $y=v-u$ is an $E$-valued cocycle, with</p>
+<div class="dm">$$M(c-y)\le \bigl(1+(n+2)(K_{n+1}(p)+1)\bigr)\epsilon.
+\tag{3.8}$$</div>
+<p>Choose $\epsilon$ so the right side is at most $L/2$. Then $M(y)\le 3L/2$, and $K_n(p)$ gives a primitive $a$ of $y$ with $M(a)\le \tfrac32(K_n(p)+1)L$, again taking zero if $y=0$.</p>
+<p>The residual $c-\delta a=c-y$ is closed. Iterate this construction on the residuals, using their own masses in place of $L$ and taking all remaining corrections zero if a residual vanishes. The $k$-th residual has mass at most $2^{-k}L$, and the primitive chosen for its correction has mass at most $\tfrac32(K_n(p)+1)2^{-k}L$. The sum of these primitives converges uniformly in $C^{n-1}(G,B)$. Applying the continuous differential gives $c$, since the residuals converge uniformly to zero. Proposition 2.2 yields vanishing in degree $n$ whenever the two adjacent constants are finite, including the case of equal finite constants.</p>
+<p>If every $K_n(p)$ is finite, the adjacent-degree argument applies in every positive degree. If some $K_n(p)$ is infinite, the first part of the proof gives a non-zero class. This proves the equivalence. ∎</p>
+<p>The interpolation in this proof takes place on the compact domain of the cochain using finitely many sample values. It imposes no finite-rank approximation hypothesis on the coefficient space. The bound in the next degree controls the differential introduced by this interpolation. The construction for divergence uses a different feature of the coefficient, the uniform decay of coordinate tails on compact sets. We will apply that construction in degree four using the specific polynomial cocycles of Section 5.</p>
+<p>For every $0&lt;p&lt;1$, Section 4 gives $K_3(p)\le C_p$ and proves closedness of the continuous $3$-coboundaries for every Hausdorff real $p$-Banach coefficient with trivial action. Vanishing in degree three would require density of those coboundaries in the continuous $3$-cocycles. The divergence $K_4(p)=\infty$ in Theorem 5.3 leaves this density question open, since Theorem 3.2 gives a sufficient condition for vanishing in a fixed degree.</p>
+<h2>4 A primitive bound in degree three</h2>
+<p>We bound the mass of a continuous primitive of a continuous $3$-coboundary for every $0&lt;p&lt;1$.</p>
+<h3>4.1 The twisted group and the associator defect</h3>
+<p>Fix $0&lt;p&lt;1$ and let $B$ be a Hausdorff real $p$-Banach space with trivial $G$-action. Let $u\in C^2(G,B)$ be a continuous primitive of $c=\delta u$. We begin with $u(1,g)=u(g,1)=0$, and put $\varepsilon=M(c)$. On $G\times B$ use the multiplication and inverse operation</p>
+<div class="dm">$$(g,r)*(h,s)=(gh,r+s+u(g,h)),
+\qquad
+(g,r)^\vee=(g^{-1},-r-u(g,g^{-1})).
+\tag{4.1}$$</div>
+<p>The expression twisted group refers to these operations. Its multiplication is associative when $c=0$. In general the group coordinate is still associative, and the difference between the second coordinates of $P*(Q*R)$ and $(P*Q)*R$ is $c(g,h,k)$ when the group coordinates of $P,Q,R$ are $g,h,k$. The unit is $(1,0)$. The right inverse is exact, and the second coordinate of $P^\vee*P$ is $c(g,g^{-1},g)$. In particular its mass is at most $\varepsilon$. Multiplication on either side by a fixed factor preserves the difference of second coordinates of elements with the same group coordinate. Applying $\vee$ to such elements negates that difference. Multiplication by $(1,s)$ adds $s$ to the second coordinate on either side.</p>
+<p>For words in formal letters with assigned values in $G\times B$, let $F(w)$ denote the second coordinate of left-associated evaluation, with inverse letters evaluated by $\vee$. Write $\bar w$ for the product of their group coordinates, and use $(1,0)$ for the empty word. The following estimates count how much this evaluation can change under rebracketing and free reduction.</p>
+<p class="thmline"><b>Lemma 4.1</b> (Finite word comparisons). For a word $w$ of positive length and any word $v$,</p>
+<div class="dm">$$\begin{aligned}
+q\bigl(F(vw)-F(v)-F(w)-u(\bar v,\bar w)\bigr)&amp;\le (|w|-1)\varepsilon,\\
+q\bigl(F(w^{-1})+F(w)+u(\bar w,\bar w^{-1})\bigr)&amp;\le (3|w|-1)\varepsilon.
+\end{aligned}
+\tag{4.2}$$</div>
+<p>Deletion of adjacent inverse letters changes the second coordinate by a difference of mass at most $2\varepsilon$.</p>
+<p>Proof. In the first estimate, a right word of length one is appended without changing brackets. On adjoining one more letter to the right word, use the existing estimate for the shorter suffix and apply the associator identity once to the resulting three factors. This propagates the old difference unchanged and adds a difference of mass at most $\varepsilon$. For deletion, write the word as a prefix followed by the pair and then a suffix. Rebracket the prefix and pair once to multiply the pair first. Its product has group coordinate $1$ and mass at most $\varepsilon$ in the second coordinate, for either order of the two inverse letters. Removing that product and then appending the suffix costs at most $2\varepsilon$ in total. The convention for the empty prefix gives the same estimate at the start of a word.</p>
+<p>Now reduce $ww^{-1}$ by deleting $|w|$ adjacent pairs. Its left-associated evaluation has group coordinate $1$ and second coordinate of mass at most $2|w|\varepsilon$. The first bound applied with right word $w^{-1}$ separates this evaluation into the contributions of the two words and their final multiplication. Combining the bounds gives the second line of (4.2). Here $w^{-1}$ is the formal word obtained by reversing and inverting letters. The comparison with the inverse of the evaluated word is precisely what the second line supplies. ∎</p>
+<p>We will use commutator and conjugation expressions, each left-associated at the indicated level,</p>
+<div class="dm">$$C(X,Y)=((X*Y)*X^\vee)*Y^\vee,
+\qquad
+T(X,Y)=(X*Y)*X^\vee .
+\tag{4.3}$$</div>
+<p>Let $\ell(P)$ denote the expanded word length of an expression $P$. A letter or signed letter has cost count $\kappa=0$. When flattening a product $P*Q$, add the counts for the two factors and $\ell(Q)-1$. For the inverse of a composite $P$, use the count for $P$ and add $3\ell(P)-1$. These rules follow from (4.2) and the preservation of coordinate differences under multiplication and inversion. If two expanded words freely reduce to the same word, the second coordinates of the original expressions differ by mass at most $(\kappa(P)+\kappa(Q)+d)\varepsilon$, where $d$ counts the deleted letters across both reductions. Each pair deletion costs at most $2\varepsilon$. These counts use only subadditivity and the mass factors $|\pm1|^p=1$, so they are independent of $p$. The comparisons used below are recorded in the table. The strings in the reduction column represent signed words, with a lowercase letter denoting the inverse of its uppercase counterpart.</p>
+<table><thead><tr><th>$P$</th><th>$Q$</th><th>Reduced word</th><th>$\kappa(P)$</th><th>$\kappa(Q)$</th><th>$d$</th><th>Total</th></tr></thead><tbody><tr><td>$C(A*Z,B)$</td><td>$T(A,C(Z,B))*C(A,B)$</td><td>AZBzab</td><td>6</td><td>6</td><td>4</td><td>16</td></tr><tr><td>$C(A,B*Z)$</td><td>$C(A,B)*T(B,C(A,Z))$</td><td>ABZazb</td><td>7</td><td>8</td><td>4</td><td>19</td></tr><tr><td>$C(T(Z,A),T(Z,B))$</td><td>$T(Z,C(A,B))$</td><td>ZABabz</td><td>22</td><td>3</td><td>6</td><td>31</td></tr><tr><td>$C(A,D)$</td><td>$C(A,B)*C(T(B,A),D*B^\vee)$</td><td>ADad</td><td>0</td><td>26</td><td>10</td><td>36</td></tr><tr><td>$T(Z,A)$</td><td>$C(Z,A)*A$</td><td>ZAz</td><td>0</td><td>0</td><td>2</td><td>2</td></tr></tbody></table>
+<p>For example, on the right in row four the first commutator contributes ABab and the second has four consecutive blocks BAb, Db, Bab, Bd. Their concatenation reduces to ADad after deleting five pairs. The two inverse costs of the composite arguments are $8$ and $5$, and the extra cost in assembling the second commutator is $1+2+1=4$. The two original composite arguments contribute zero as conjugation by a letter and a product of two letters. The last multiplication adds $10-1=9$, giving $26$. For row one the costs are $5+1$ on the left and $3+3$ on the right, and the lengths are $6,10$. In row two they are $5+1+1$ and $3+5$, with lengths $6,10$. Row three has costs $8+8+2+2+2$ and $3$, with lengths $12,6$. Row five has costs zero on both sides, with lengths $3,5$. The inverse operation and the signs in these comparisons are independent of the initial coordinates of the assigned letters.</p>
+<h3>4.2 The dimension-uniform bound for $K_3$</h3>
+<p>For $a,b\in G$ write $J(a,b)$ for the second coordinate of $C(A,B)$ with lifts of $a,b$ in $G\times B$. The two chosen initial second coordinates cancel against their occurrences in the inverse letters. Thus $J$ depends only on $a,b$, and its first-coordinate counterpart is $[a,b]=aba^{-1}b^{-1}$. With zero initial second coordinates, the product contributing to $J$ has three multiplication terms and two terms from the inverse operation. In particular $M(J)\le5M(u)$.</p>
+<p>If $a$ and $b$ commute, set $Z=A$ in the first row of the table. The commutator expression $C(A,B)$ then projects to $1$, and conjugation by $A$ preserves its second coordinate. The two commutators on the right add exactly, while the commutator on the left gives $J(a^2,b)$. Thus the error</p>
+<div class="dm">$$R(a,b)=J(a^2,b)-2J(a,b)
+\quad\text{satisfies}\quad q(R(a,b))\le16\varepsilon.
+\tag{4.4}$$</div>
+<p>The same relation holds for $(a^{2^j},b)$ for every $j\ge0$. Solving it by repeated substitution expresses $J(a,b)$ as $2^{-m}J(a^{2^m},b)$ minus the sum of $2^{-j-1}R(a^{2^j},b)$ for $0\le j&lt;m$. By $p$-homogeneity, $q(2^{-m}J(a^{2^m},b))\le 2^{-mp}5M(u)\to0$, and $q(2^{-j-1}R(a^{2^j},b))\le 2^{-p(j+1)}16\varepsilon$. Subadditivity bounds the sum of weighted errors in mass by $16\varepsilon\sum_{j\ge0}2^{-p(j+1)}$. Taking the limit gives</p>
+<div class="dm">$$q(J(a,b))\le L_p\varepsilon\quad(ab=ba),
+\qquad s_p=\frac{1}{2^p-1},\qquad L_p=16s_p.
+\tag{4.5}$$</div>
+<p class="thmline"><b>Lemma 4.2</b> (Comparison on a commutator fiber). Every $k\in G$ is a commutator. If $[a,b]=[a',b']=k$, then $q(J(a,b)-J(a',b'))\le A_p\varepsilon$, where $A_p=119+6L_p$.</p>
+<p>Proof. There are three moves preserving the commutator, each covered by the word table. Replacing $a$ by $az$ when $z$ commutes with $b$ costs at most $(16+L_p)\varepsilon$ by row one and (4.5). Indeed, in that row $C(Z,B)$ projects to the identity and contributes $J(z,b)$ to the second coordinate after conjugation by $A$. Replacing $b$ by $bz$ when $z$ commutes with $a$ costs at most $(19+L_p)\varepsilon$ by row two, since $T(B,C(A,Z))$ then contributes $J(a,z)$. Finally, simultaneous conjugation by $z$ when $z$ commutes with $k$ costs at most $(33+L_p)\varepsilon$. Row three costs $31\varepsilon$. Apply row five with the second letter assigned the value $C(A,B)$. It costs $2\varepsilon$, and the resulting product differs from $C(A,B)$ in the second coordinate by $J(z,k)$, bounded by (4.5).</p>
+<p>For the geometry, identify the unit quaternions with $G$ by sending $a+bi+cj+dk$ to the matrix with rows $(a+bi,c+di)$ and $(-c+di,a-bi)$, where $i$ in the entries is the complex unit. The relations on the three imaginary units verify multiplicativity, and the displayed form describes every special unitary $2$-by-$2$ matrix. For a unit imaginary quaternion $n$, conjugation by $\cos t+n\sin t$ fixes $n$ and acts on the plane perpendicular to $n$ by rotation through $2t$. This follows by multiplying an imaginary $v\perp n$ on both sides, using $nv=-vn$, which gives $\cos(2t)v+\sin(2t)nv$. Axis-angle rotations thus all occur as conjugations. A quaternion with nonzero imaginary part commutes exactly with the unit quaternions whose imaginary parts are parallel to its own, since the commutator in the quaternion algebra of two imaginary vectors is twice their cross product. Its centralizer is therefore a circle.</p>
+<p>For $k=1$, two bounds from (4.5) give a total of $2L_p\varepsilon\le A_p\varepsilon$. For $k\ne1$, neither factor is central in any representation. Multiply $a$ on the right by an element of the centralizer circle of $b$ to make $a$ purely imaginary. In fact the real part of $a(\cos t+n\sin t)$ is a real linear combination of $\cos t,\sin t$ and can be made zero. With this new first factor fixed, use the same argument on $b$ with the centralizer of that factor. Apply these two moves to each representation. A purely imaginary unit squares to $-1$, so the resulting factors satisfy $[a,b]=(ab)^2$.</p>
+<p>If $k=-1$, the product $ab$ is purely imaginary, and the two factors are perpendicular since the real part of their product is minus their dot product. The ordered orthonormal pairs are related by a rotation, by completing each pair using its cross product. Any conjugation that realizes this rotation centralizes $k$. If $k\ne\pm1$, each product $ab$ commutes with $k$, so the possible products are the two opposite square roots of $k$ on its centralizer circle. A sign change of $a$ in one pair, which is the first move with $z=-1$, makes the products agree. For a common product $r$, each $a$ is perpendicular to $\operatorname{Im}r$ by the cross product formula, and $\operatorname{Im}r$ is parallel to $\operatorname{Im}k$. Rotation about this axis can match the two first factors. As it fixes $r$, it also matches the second factors, which are recovered by $b=a^{-1}r$.</p>
+<p>The resulting budget, allowing two rounds of purely imaginary replacement, one sign change and one conjugation, has coefficient $2[(16+L_p)+(19+L_p)]+(16+L_p)+(33+L_p)=119+6L_p=A_p$. To see that every $k$ has a representation, choose a unit quaternion $r$ with $r^2=k$, by halving an angle on an appropriate unit circle. Choose a purely imaginary unit $a$ perpendicular to $\operatorname{Im}r$, with any such unit allowed when the imaginary part is zero. Then $b=a^{-1}r$ has real part zero, and $[a,b]=(ab)^2=k$. ∎</p>
+<p class="thmline"><b>Theorem 4.3</b> (Uniform correction of a continuous primitive). For every $0&lt;p&lt;1$, every Hausdorff real $p$-Banach space $B$ with trivial $G$-action, and every $u\in C^2(G,B)$, there is an $a\in C^2(G,B)$ with $\delta a=\delta u$ and</p>
+<div class="dm">$$\begin{gathered}
+M(a)\le C_p M(\delta u),\qquad C_p=2+3(36+3A_p)(1+3s_p),\\
+s_p=\frac{1}{2^p-1},\qquad L_p=16s_p,\qquad A_p=119+6L_p.
+\end{gathered}
+\tag{4.6}$$</div>
+<p>In particular $K_3(p)\le C_p&lt;\infty$.</p>
+<p>Proof. Continue first with normalized $u$. Select a commutator representation $g=[a_g,b_g]$ for each $g$ and put $t(g)=-J(a_g,b_g)$. This gives a bounded function $G\to B$ since $M(J)\le5M(u)$. We use $M$ for the supremum of the mass of a bounded function as well. The following simultaneous representations estimate $\delta t$ without imposing continuity on the choices.</p>
+<p>Given $g,h$, the equations $\operatorname{Re}a=\operatorname{Re}(g^{-1}a)=\operatorname{Re}((gh)^{-1}a)$ impose two homogeneous real linear conditions on the four coordinates of $a$. Their common kernel contains a unit quaternion. All the unit quaternions in this equality have the same real part and hence imaginary parts of the same length. They are conjugate by the rotations described in Lemma 4.2. Choose $b,d\in G$ with $bab^{-1}=g^{-1}a$ and $dad^{-1}=(gh)^{-1}a$. It follows that $[a,b]=g$ and $[a,d]=gh$. Row four of the table gives on group coordinates $[bab^{-1},db^{-1}]=h$. On the second coordinates it gives</p>
+<div class="dm">$$q\bigl(J(a,d)-J(a,b)-J(bab^{-1},db^{-1})-u(g,h)\bigr)
+\le36\varepsilon.
+\tag{4.7}$$</div>
+<p>The term $u(g,h)$ comes from the final product of expressions projecting to $g$ and $h$. Applying Lemma 4.2 at $gh,g,h$ compares the respective $J$-values with $-t(gh),-t(g),-t(h)$. With $(\delta t)(g,h)=t(h)-t(gh)+t(g)$, subadditivity gives the bounded error $e=u-\delta t$ with $M(e)\le(36+3A_p)\varepsilon$.</p>
+<p>To get a continuous correction, define</p>
+<div class="dm">$$t_0(g)=\sum_{j\ge0}2^{-j-1}u(g^{2^j},g^{2^j}).
+\tag{4.8}$$</div>
+<p>All summands are continuous, and their uniform masses are bounded by $2^{-p(j+1)}M(u)$. These bounds sum to $s_pM(u)$, so the series converges uniformly in mass and $t_0$ is continuous. The diagonal identity $\delta t(g,g)=2t(g)-t(g^2)$ gives a telescoping sum with these scalar weights. The first $m$ weighted terms formed from $\delta t$ sum to $t(g)-2^{-m}t(g^{2^m})$. The remainder has mass bounded by $2^{-mp}\sup_g q(t(g))$, which tends to zero uniformly. Subtracting the finite identity from the partial sums in (4.8) and taking limits expresses $t_0-t$ as the corresponding series formed from $e$, with $M(t_0-t)\le s_pM(e)$. The differential on bounded $1$-cochains has three terms, each with mass factor one. Hence</p>
+<div class="dm">$$M(u-\delta t_0)\le M(e)+3M(t_0-t)
+\le (36+3A_p)(1+3s_p)\varepsilon.
+\tag{4.9}$$</div>
+<p>The cochain $u-\delta t_0$ is continuous and has coboundary $c$.</p>
+<p>For general $u$, put $u^\circ(g,h)=u(g,h)-u(g,1)-u(1,h)+u(1,1)$. Substituting in the differential yields</p>
+<div class="dm">$$\begin{aligned}
+\delta u^\circ(g,h,k)&amp;=c(g,h,k)-c(g,h,1)-c(1,h,k),\\
+w(g,h):=u(g,h)-u^\circ(g,h)-u(1,1)&amp;=-c(g,1,1)+c(1,1,h).
+\end{aligned}
+\tag{4.10}$$</div>
+<p>For the first identity, the extra terms in $\delta u^\circ$ are $u(gh,1)-u(h,1)+u(1,h)-u(1,hk)$, which are exactly the two subtracted face evaluations. For the second, evaluating $c$ on $(g,1,1)$ and $(1,1,h)$ gives $u(1,1)-u(g,1)$ and $u(1,h)-u(1,1)$, respectively. The differential of the constant $2$-cochain $u(1,1)$ is zero because the four signs sum to zero. Hence $c=\delta u^\circ+\delta w$. Apply (4.9) to $u^\circ$ and add $w$ to the corrected primitive. Since $M(\delta u^\circ)\le3M(c)$ and $M(w)\le2M(c)$, the corrected primitive has mass at most $\bigl(2+3(36+3A_p)(1+3s_p)\bigr)M(c)$, as asserted in (4.6).</p>
+<p>Every continuous $3$-cocycle with finite-dimensional coefficients has an initial $u$ by Lemma 3.1. The estimate applies to all such coefficients with the same constant, so it bounds the supremum in (3.5) in degree three. ∎</p>
+<p>At $p=1/2$, $s_p=1+\sqrt2$ and $L_p=16(1+\sqrt2)&lt;39$, since $2&lt;(23/16)^2$. Thus $A_p&lt;353$ and $36+3A_p&lt;36+3\cdot353=1095$. In this specialization,</p>
+<div class="dm">$$K_3(p)\le C_p&lt;2+3285(4+3\sqrt2)&lt;28000.
+\tag{4.11}$$</div>
+<p>The last inequality follows from $\sqrt2&lt;3/2$.</p>
+<p>As $p\downarrow0$, $2^p-1\sim p\ln 2$, so $s_p\sim1/(p\ln 2)$ and $C_p\to\infty$, precluding a bound uniform in $p$ from this formula. At $p=1$ the formula gives $C_1=8174$, whereas Corollary 6.1 gives the stronger bound $K_3(1)\le1$ for the same quantity.</p>
+<p>The argument uses the multiplication in $G$ and the mass bounds on the associator. The Haar primitive in the finite-dimensional application supplies an initial $u$ of finite mass, and the corrected bound is independent of that mass. Appendix B gives a separate quadrature certificate for the restricted family of normalized cochains of total polynomial degree at most three.</p>
+<h3>4.3 Consequence: closedness of the 3-coboundaries</h3>
+<p class="thmline"><b>Corollary 4.4</b> (Closedness of the continuous image). For every $0&lt;p&lt;1$ and every Hausdorff real $p$-Banach coefficient $B$ with trivial $G$-action, the image of $\delta:C^2(G,B)\to C^3(G,B)$ is closed in the uniform mass metric.</p>
+<p>Proof. Suppose that $c$ is in the closure. Choose coboundaries $c_j$ with $M(c-c_j)\le2^{-j}$ for $j\ge1$. The differences $c_{j+1}-c_j$ are coboundaries and $M(c_{j+1}-c_j)\le2^{-j}+2^{-j-1}$. For each difference, Theorem 4.3 gives a continuous primitive $v_j$ of mass at most $C_p(2^{-j}+2^{-j-1})$. Choose a continuous primitive of $c_1$, denoted by $v_0$. Completeness of the cochain space gives $v=v_0+\sum_{j\ge1}v_j$ in the uniform mass metric. By continuity of the differential, $\delta v$ is the limit of the telescoping sequence $c_j$, which is $c$. ∎</p>
+<p>For every $0&lt;p&lt;1$, vanishing in degree three for all Hausdorff real $p$-Banach coefficients with trivial action would still require density of the coboundaries in the continuous cocycles for each coefficient. By Corollary 4.4, that density would also suffice. The next section proves $K_4(p)=\infty$ throughout this range.</p>
+<h2>5 Divergence in degree four</h2>
+<p>Throughout this section, fix $0&lt;p&lt;1$.</p>
+<h3>5.1 Polynomial tests and the constants $L_N$</h3>
+<p>Write $\mathbb R[G^r]$ for the real vector space of finite formal linear combinations of symbols $[x]$ with $x\in G^r$. Its inhomogeneous bar boundary $\partial_r$ is the alternating sum of the maps dual to (2.7). If $f$ is a function on $G^{r-1}$ with values in a real vector space and $b\in\mathbb R[G^r]$, finite linearity gives $(\delta f)(b)=f(\partial_r b)$. Appendix A gives the face formulas in the degrees used here.</p>
+<p>Fix the finite detecting $3$-cycle $z$ from [2, Sections 6.3--6.4]. Those sections give $\partial_3z=0$ in the finite bar chain space and construct a bounded set-theoretic $3$-cocycle $\beta:G^3\to\mathbb R$ with positive pairing on $z$. Appendix C records the imported statement. Write $z=\sum_s n_s[s]$, with the sum over its finite support and repeated atoms already combined, and let</p>
+<div class="dm">$$Z_p=\sum_s|n_s|^p.
+\tag{5.1}$$</div>
+<p>The positive pairing implies $z\ne0$, so $Z_p&gt;0$.</p>
+<p>Use the unit quaternion model to identify $G^3$ with the subset $(S^3)^3$ of $\mathbb R^{12}$. For each integer $N\ge0$, let $U_N:G^3\to\mathbb R^{r_N}$ have as coordinates all the coordinate monomials of total degree at most $N$, ordering the coordinates by increasing degree and using a fixed order within each degree. Set</p>
+<div class="dm">$$c_N=\delta U_N,\qquad E_N=\operatorname{span}_{\mathbb R}c_N(G^4).
+\tag{5.2}$$</div>
+<p>The polynomial map $U_N$ starts in the ambient coordinate space. The coefficients for $c_N$ will be the smaller span $E_N$, with a mass defined by its generating values. For $v\in E_N$, set</p>
+<div class="dm">$$q_N(v)=
+\inf_{\substack{v=\sum_{i=1}^m a_i c_N(x_i)\\
+                m&lt;\infty,\ a_i\in\mathbb R,\ x_i\in G^4}}
+\ \sum_{i=1}^m |a_i|^p.
+\tag{5.3}$$</div>
+<p>The empty decomposition is permitted for $v=0$. The infimum is finite because the listed generators span $E_N$. Concatenation of decompositions and approximation of the infimum give subadditivity. For $\lambda\ne0$, scaling the coefficients gives a bijection on decompositions of $v$ and $\lambda v$ and multiplies the cost by $|\lambda|^p$. Thus $q_N(\lambda v)=|\lambda|^p q_N(v)$. The identity also holds at $\lambda=0$.</p>
+<p>For coordinate $k$ let $C_k=\sup_{x\in G^4}|c_{N,k}(x)|$. Each coordinate monomial has absolute value at most one on $G^3$, so the five faces in the differential give $C_k\le5$. For a decomposition of $v$, write $S=\sum_i |a_i|^p$. If $S&gt;0$, the numbers $t_i=|a_i|^p/S$ lie in $[0,1]$ and sum to one. Since $t_i^{1/p}\le t_i$, we have $\sum_i |a_i|=S^{1/p}\sum_i t_i^{1/p}\le S^{1/p}$. The same bound holds at $S=0$. Hence $|v_k|\le C_k\sum_i|a_i|\le C_k S^{1/p}$. Taking the infimum gives</p>
+<div class="dm">$$|v_k|\le C_k q_N(v)^{1/p}\le 5 q_N(v)^{1/p}.
+\tag{5.4}$$</div>
+<p>Thus the mass separates points. For the reverse comparison, choose a basis of $E_N$ from among the generators, and express $v$ in this basis with coefficients $v_i'$. Then $q_N(v)\le\sum_i|v_i'|^p$, and the basis coordinates are continuous in the ambient finite-dimensional topology. These estimates give the ordinary topology on $E_N$. By Section 2.2 the mass is complete and defines a Hausdorff real $p$-Banach space with $p$-norm $q_N^{1/p}$. The map $c_N$ is continuous into $E_N$ with this topology. It satisfies $\delta c_N=0$ by $\delta^2=0$, and each $c_N(x)$ has a one-term decomposition of cost $1^p=1$, so $M(c_N)\le1$. If the span is zero, these claims hold with $q_N(0)=0$.</p>
+<p class="thmline"><b>Lemma 5.1</b> (Common value on the testing cycle). Every continuous $E_N$-valued primitive $a$ of $c_N$ has $a(z)=U_N(z)$ in $\mathbb R^{r_N}$. In particular $U_N(z)\in E_N$, and with $L_N=q_N(U_N(z))$ one has</p>
+<div class="dm">$$m_{E_N}(c_N)\ge L_N/Z_p.
+\tag{5.5}$$</div>
+<p>Proof. Lemma 3.1 gives a continuous primitive with values in $E_N$. For any such primitive, embed $E_N$ into $\mathbb R^{r_N}$ by the coordinate inclusion. The difference $U_N-a$ is a continuous ambient $3$-cocycle. Each real coordinate is a coboundary by Lemma 3.1. It evaluates to zero on $z$ by the finite duality formula and $\partial_3z=0$. Therefore $a(z)=U_N(z)$. In particular $U_N(z)$ belongs to the coefficient space where its mass is taken. By subadditivity and $p$-homogeneity,</p>
+<div class="dm">$$L_N=q_N\!\left(\sum_s n_s a(s)\right)
+\le\sum_s q_N(n_s a(s))
+=\sum_s |n_s|^p q_N(a(s))
+\le Z_p M(a).
+\tag{5.6}$$</div>
+<p>Taking the infimum over all continuous primitives proves (5.5). ∎</p>
+<p>The cycle tests the primitive in degree three. The prescribed cochain to which the definition of $K_4(p)$ applies is $c_N$ in degree four. In particular the polynomial degree $N$ controls how many scalar functions occur in $U_N$, while the number of group variables of $c_N$ is four for every $N$.</p>
+<h3>5.2 A bounded $L_N$ would give a countable atomic filling</h3>
+<p>By (5.3), $L_N$ is the infimum of the costs $\sum_i |a_i|^p$ of finite $4$-chains $b=\sum_i a_i[x_i]$ with</p>
+<div class="dm">$$(\delta f)(b)=f(z)
+\quad\text{for every coordinate monomial } f \text{ of total degree at most } N.
+\tag{5.7}$$</div>
+<p>Indeed the coordinate vector equation $\sum_i a_i c_N(x_i)=U_N(z)$ has precisely these entries. Merging repeated atoms can only decrease the cost, by scalar subadditivity $|a+b|^p\le |a|^p+|b|^p$. Thus one may use chains with their coefficients combined. Since the constraints for $N+1$ contain the constraints for $N$, the sequence $L_N$ is nondecreasing. Each $L_N$ is finite by Lemma 5.1 and the finite spanning in (5.2).</p>
+<p>In what follows a countable atomic chain on $G^r$ is specified by a sequence of points and real coefficients. We use only chains whose coefficients are absolutely summable. The chain is identified with the resulting function of combined coefficients on $G^r$, whose support is at most countable. Bounded scalar functions can be evaluated by summation, and each bar face acts by pushing the coefficients forward along its map on the atoms. The resulting signed boundary again has absolutely summable coefficients, with a bound equal to the number of faces times the absolute coefficient sum before combining. The stronger condition $\sum_k|a_k|^p&lt;\infty$ implies absolute summability by the finite coefficient estimate preceding (5.4) applied to all partial sums.</p>
+<p class="thmline"><b>Lemma 5.2</b> (Compactness under a cost bound). If $\sup_N L_N&lt;\infty$, then there is a countable atomic $4$-chain $b=\sum_{k\ge1}a_k[x_k]$ with $\sum_k|a_k|^p&lt;\infty$ and $\partial_4 b=z$.</p>
+<p>Proof. Take $D=1+\sup_N L_N$. For every $N$ choose a finite chain $b_N$ satisfying (5.7) with cost at most $D$. Order its atoms by nonincreasing absolute value of the coefficients and append zero coefficients with a fixed padding point of $G^4$. Write $(a_{N,k},x_{N,k})_{k\ge1}$ for the resulting sequence. Since each of the first $k$ terms contributes at least $|a_{N,k}|^p$ to the cost, we have</p>
+<div class="dm">$$\begin{aligned}
+|a_{N,k}|^p&amp;\le D/k,\\
+\sum_{k&gt;J}|a_{N,k}|
+&amp;=\sum_{k&gt;J}|a_{N,k}|^p|a_{N,k}|^{1-p}
+\le D\left(\frac{D}{J+1}\right)^{(1-p)/p}
+= D^{1/p}(J+1)^{-(1-p)/p}\qquad(J\ge0).
+\end{aligned}
+\tag{5.8}$$</div>
+<p>The second inequality bounds each $|a_{N,k}|^{1-p}$ in the tail by $(D/(J+1))^{(1-p)/p}$ and uses the total $p$-cost bound $D$. This tail bound decays only for $p&lt;1$. At $p=1$, a list of $N$ coefficients all equal to $D/N$ has cost $D$ and tail sum $D(1-J/N)$ for $N&gt;J$, so a cost bound alone gives no uniform decay. Such decay is needed to pass the polynomial constraints to the limit, which is why the divergence and non-vanishing argument stops at $p&lt;1$.</p>
+<p>For each fixed $k$, the pair $(a_{N,k},x_{N,k})$ belongs to the compact metrizable product $[-D^{1/p},D^{1/p}]\times G^4$. Extract convergent subsequences successively for $k=1,2,\ldots$ and take a diagonal subsequence with $N$ tending to infinity. Along it every pair converges to a pair $(a_k,x_k)$. Each finite partial sum of $\sum_k|a_k|^p$ is at most $D$ by passage to the limit in finitely many entries. Hence the series has sum at most $D$, and $|a_k|^p\le D/k$ by passage to the limit at each $k$. Define $b=\sum_{k\ge1}a_k[x_k]$. Its absolute tails obey (5.8) by the same estimate, and $J=0$ gives $\sum_k|a_k|\le D^{1/p}$.</p>
+<p>Fix a coordinate monomial $f$ on $G^3$. Along the subsequence, (5.7) holds eventually because the degree of $f$ is fixed. The function $\delta f$ is continuous and has absolute value at most $5$ on $G^4$, so the first $J$ terms of $(\delta f)(b_N)$ converge to the first $J$ terms of $(\delta f)(b)$. The tails in both sums have absolute value at most $5D^{1/p}(J+1)^{-(1-p)/p}$. Taking $J$ to infinity proves $(\delta f)(b)=f(z)$. Real linearity gives this for every restriction of a real polynomial in the twelve coordinates. The tail bound used here is on the absolute coefficients, which is the bound needed for bounded scalar tests.</p>
+<p>By absolute summability the coefficient function $w=\partial_4 b-z$ has at most countable support and an absolute coefficient sum at most $5\sum_k|a_k|+\sum_s|n_s|$. The scalar duality extends to the present chain because the five terms per atom may be grouped using absolute summability. Thus $f(w)=0$ for every real polynomial $f$ as above. Fix $s=(s_1,s_2,s_3)\in G^3$ and form</p>
+<div class="dm">$$h_s(x)=\prod_{\nu=1}^3\frac{1+\langle s_\nu,x_\nu\rangle_{\mathbb R^4}}{2}.
+\tag{5.9}$$</div>
+<p>For unit components every factor is in $[0,1]$, and a factor equals $1$ exactly when the two unit vectors coincide. Thus $h_s(x)^m$ tends to $1$ at $x=s$ and to $0$ at every other $x$ as the positive integer $m$ tends to infinity. Each $h_s^m$ is a polynomial, so $h_s^m(w)=0$. In this countable sum one may pass to the limit, using the absolute coefficient sum as a summable bound. Equivalently, take a finite set of atoms that leaves an arbitrarily small absolute tail, and take limits over that finite set first. The resulting limit is the combined coefficient at $s$, which is therefore zero. This argument establishes every coefficient identity using only countable support, absolute summability and the explicit polynomial (5.9). It requires no separability assumption on $G^3$. Hence $\partial_4b=z$. ∎</p>
+<h3>5.3 The volume cocycle forces $L_N$ to diverge</h3>
+<p>We recall how the two properties of $\beta$ used here arise. In [2, Sections 5--6], an automorphism $\sigma$ of $\mathbb C$ sends the entries of the compact real-place representation $\rho_0$ of a quaternionic lattice $\Gamma$ to those of its complex-place representation $\rho_2$. Applying $\sigma$ to a general matrix in $G$ gives an abstract group homomorphism $\rho:G\to\mathrm{SL}_2(\mathbb C)$. If $o$ is a base point of hyperbolic $3$-space, the oriented straight tetrahedron with vertices $o,Ao,ABo,ABCo$ gives the value $v(A,B,C)$. Then $\beta(g,h,k)=v(\rho(g),\rho(h),\rho(k))$. The volume bound from [2, Section 6.1] is uniform over all triples. Its signed five-point identity, pulled back along $\rho$, gives the cocycle identity. In particular the identity holds at every atom, including those with an identity entry or whose associated geometric simplex is degenerate. More explicitly, for each $(g,h,k)\in G^3$ and each $\ell\in G$,</p>
+<div class="dm">$$\begin{aligned}
+(\delta\beta)(g,h,k,\ell)
+={}&amp;\beta(h,k,\ell)-\beta(gh,k,\ell)+\beta(g,hk,\ell)\\
+ &amp;-\beta(g,h,k\ell)+\beta(g,h,k)=0.
+\end{aligned}
+\tag{5.10}$$</div>
+<p>Here $G^3$ is the domain of $\beta$, and $\delta\beta=0$ is a pointwise identity on $G^4$.</p>
+<p>The complex-place image gives a closed oriented hyperbolic $3$-manifold $M_{\mathrm{hyp}}$. The two representations of $\Gamma$ are used together through $\rho\circ\rho_0=\rho_2$. The bar cycle comes from a finite ordered triangulation of $M_{\mathrm{hyp}}$. Consecutive quotients of the labels on a lifted tetrahedron give an inhomogeneous bar tuple. Changing lifts left-multiplies the vertex labels simultaneously and leaves the tuple unchanged. The faces of the oriented fundamental chain cancel already in ordinary bar chains. Pushing that cycle along $\rho_0$ gives $z$, and evaluating $\beta$ there is the oriented volume sum for the straightened fundamental cycle. The map realizing the straightening is homotopic to the identity as proved in [2, Section 6.3]. Its degree is one, yielding the precise pairing of [2, Lemma 6.1],</p>
+<div class="dm">$$\beta(z)=\operatorname{Vol}(M_{\mathrm{hyp}})&gt;0.
+\tag{5.11}$$</div>
+<p>The symbol $M_{\mathrm{hyp}}$ for the manifold distinguishes it from uniform cochain mass.</p>
+<p class="thmline"><b>Theorem 5.3</b> (Divergence of the polynomial test). For every $0&lt;p&lt;1$, the sequence $L_N$ tends to infinity. Consequently $K_4(p)=\infty$ for $G=\mathrm{SU}(2)$ with trivial action.</p>
+<p>Proof. If $L_N$ were bounded, Lemma 5.2 would give $\partial_4 b=z$ for a countable atomic $4$-chain $b=\sum_k a_k[x_k]$ with absolutely summable coefficients. Let $\|\beta\|_\infty=\sup_{G^3}|\beta|$, which is finite. In evaluating $\beta$ on the boundary, the double series of the five face contributions is absolutely summable since its absolute sum is at most $5\|\beta\|_\infty\sum_k|a_k|$. It can be grouped either by the boundary atoms or by the terms of $b$. The first grouping gives $\beta(\partial_4 b)$, and the second gives the sum of $a_k(\delta\beta)(x_k)$. Using (5.10) pointwise on every $x_k$, we obtain</p>
+<div class="dm">$$0&lt;\operatorname{Vol}(M_{\mathrm{hyp}})
+=\beta(z)=\beta(\partial_4b)
+=\sum_k a_k(\delta\beta)(x_k)=0.
+\tag{5.12}$$</div>
+<p>Thus the rearrangement uses absolute summability, and the last equality uses pointwise vanishing. The identity of atomic chains was established first using continuous polynomial tests. Evaluation by $\beta$ thereafter is a sum on those atoms and requires no measurability assumption.</p>
+<p>This contradiction makes $L_N$ unbounded, so monotonicity gives $L_N\to\infty$. Whenever $L_N&gt;0$, the cocycle $c_N$ is non-zero, since the zero cocycle has a zero primitive and (5.5) would otherwise force $L_N=0$. Combining (5.5) with $M(c_N)\le1$ now gives</p>
+<div class="dm">$$\frac{m_{E_N}(c_N)}{M(c_N)}\ge \frac{L_N}{Z_p}
+\quad\text{whenever } L_N&gt;0.
+\tag{5.13}$$</div>
+<p>The right side tends to infinity, so the supremum in (3.5) diverges in degree four. ∎</p>
+<p>The positivity in (5.11) concerns a bounded cocycle on the abstract group. As observed in [2, Section 6.2], if $\beta$ were continuous for the compact topology, Lemma 3.1 would express it as a coboundary and its pairing with $z$ would vanish by finite duality. The cocycles $c_N$ used to estimate $K_4(p)$ are continuous. Their primitive lower bounds come from exact finite tests and the impossibility of an absolutely summable filling in the limit.</p>
+<h2>6 A coefficient with non-zero fourth cohomology</h2>
+<h3>6.1 The $c_0$ sum and its mass</h3>
+<p>Fix $0&lt;p&lt;1$. Using Theorem 5.3, choose a strictly increasing sequence of integers $N_j$, $j\ge1$, with $L_{N_j}\ge Z_p2^j$. Define the coefficient and its mass by</p>
+<div class="dm">$$B_p=\left(\bigoplus_{j\ge1}E_{N_j}\right)_{c_0}
+=\left\{(v_j)_j:\ v_j\in E_{N_j},\ q_{N_j}(v_j)\to0\right\},
+\qquad q_B(v)=\sup_j q_{N_j}(v_j).
+\tag{6.1}$$</div>
+<p>Give it the trivial $G$-action. The mass is subadditive and $p$-homogeneous by the corresponding coordinate properties, with $q_B(\lambda v)=|\lambda|^p q_B(v)$. A vector of zero mass vanishes in every coordinate. For completeness, a $q_B$-Cauchy sequence has limits in each $E_{N_j}$. Given $\eta&gt;0$, a single sufficiently late member of the sequence differs from the coordinate limits by mass at most $\eta$ in every coordinate, by taking limits in the uniform Cauchy bound. The coordinates of that member have masses at most $\eta$ beyond a sufficiently large index. The coordinate limits thus have masses at most $2\eta$ beyond the same index. Since this holds for every $\eta$, the limit belongs to $B_p$, and the uniform Cauchy bound also gives convergence in $q_B$. Thus $\|v\|_{B_p}=q_B(v)^{1/p}$ makes $B_p$ a Hausdorff real $p$-Banach space.</p>
+<p>Define</p>
+<div class="dm">$$\lambda_j=2^{-j/p},\qquad
+c(x)=\bigl(\lambda_j c_{N_j}(x)\bigr)_{j\ge1},\qquad x\in G^4.
+\tag{6.2}$$</div>
+<p>By $p$-homogeneity, $q_{N_j}(\lambda_j c_{N_j}(x))=(2^{-j/p})^p q_{N_j}(c_{N_j}(x))=2^{-j}q_{N_j}(c_{N_j}(x))\le2^{-j}$. In particular the values of $c$ lie in $B_p$. The finite truncations are continuous, as finite maxima of coordinate masses give the topology on their ranges. The truncation after coordinate $J$ differs from $c$ in uniform mass by at most $2^{-(J+1)}$. The limit is continuous. It is a cocycle since the differential is coordinatewise and each $c_{N_j}$ is closed.</p>
+<h3>6.2 The class is non-zero</h3>
+<p>Suppose a continuous $a:G^3\to B_p$ satisfies $\delta a=c$. Each $a_j:G^3\to E_{N_j}$ is continuous since the coordinate mass satisfies $q_{N_j}(a_j(x)-a_j(y))\le q_B(a(x)-a(y))$. Its rescaling satisfies $\delta(\lambda_j^{-1}a_j)=c_{N_j}$. By (5.5) and $|\lambda_j^{-1}|^p=(2^{j/p})^p=2^j$,</p>
+<div class="dm">$$2^j M(a_j)=M(\lambda_j^{-1}a_j)\ge L_{N_j}/Z_p\ge2^j,
+\qquad
+M(a_j)\ge1.
+\tag{6.3}$$</div>
+<p>The image $a(G^3)$ is compact. Given $\eta&gt;0$, choose a finite $\eta$-net in that image for the mass metric. The masses of the $j$-th coordinates of all net points are less than $\eta$ for all sufficiently large $j$, since the net is finite. Any point in the image is within mass $\eta$ of a net point, so by subadditivity the mass of its $j$-th coordinate is less than $2\eta$ for such $j$. Thus $M(a_j)\to0$. This contradicts (6.3), proving non-zero cohomology in the continuous bar complex.</p>
+<p>For a finite $4$-cycle $w$, one has $c(w)=0$. In fact the coordinate $c_{N_j}$ has a continuous primitive by Lemma 3.1, so its value on $w$ is the value of that primitive on $\partial_4w=0$. Scalar rescaling preserves zero and the coordinates determine every value of $c$. This describes the role of the finite detecting cycle in this construction. The cycle $z$ in degree three constrains all primitives of each coordinate $4$-cocycle. Non-zero cohomology of $c$ follows from the incompatibility of those constraints with uniform coordinate decay.</p>
+<h3>6.3 Main theorem</h3>
+<p><b>Main theorem.</b> Let $G=\mathrm{SU}(2)$ act trivially. For every $0&lt;p&lt;1$, there exist a Hausdorff real $p$-Banach space $B_p$ and a continuous $4$-cocycle $c$ on $G$ with values in $B_p$ representing a non-zero class in $H^4(G,\underline{B_p})$.</p>
+<p>Proof. Take $B_p$ of (6.1) and $c$ of (6.2). Section 6.1 verifies the asserted topology and the continuous cocycle identity. Section 6.2 proves that $c$ has no continuous primitive. Proposition 2.2 identifies its non-zero class in the continuous complex with the corresponding class in $H^4(G,\underline{B_p})$. ∎</p>
+<p class="thmline"><b>Corollary 6.1</b> (Vanishing at the Banach endpoint). Let $G=\mathrm{SU}(2)$ and let $B$ be a real Banach space with trivial $G$-action. Then $H^n(G,\underline B)=0$ and $K_n(1)\le1$ for every $n\ge1$.</p>
+<p>Proof. At $p=1$, use (3.2) with the Banach-valued Haar integral to define $H$ in every positive degree. For $u\in C^n(G,B)$, the integral is a uniform limit in the remaining variables of finite sums $\sum_i t_i u(x_i,g_1,\ldots,g_{n-1})$. Here $x_i$ is chosen in a member of a finite Borel partition of $G$ and $t_i$ is its Haar measure. Partitions with diameters tending to zero give this uniform approximation by uniform continuity on $G^n$ and completeness of $B$. The sums are continuous, so $Hu$ is continuous. Each sum has mass at most $\sum_i t_i M(u)=M(u)$ by subadditivity and the scaling factor $|t_i|^1=t_i$.</p>
+<p>Linearity and right invariance of the integral give the same face cancellation as in Lemma 3.1. The first face in $H\delta u$ gives $u$, the substitution $x\mapsto xg_1$ in the second face gives the first term of $-\delta Hu$, and the remaining faces give the remaining terms of $-\delta Hu$. Thus in positive degrees,</p>
+<div class="dm">$$\delta H+H\delta=\mathrm{id},\qquad M(Hu)\le M(u).
+\tag{6.4}$$</div>
+<p>For a cocycle $c$, this gives a continuous primitive $Hc$ with $M(Hc)\le M(c)$. Proposition 2.2 yields the asserted cohomology vanishing, and taking the supremum in (3.5) for finite-dimensional Banach coefficients gives $K_n(1)\le1$. ∎</p>
+<h2>7 Relation to the companion papers</h2>
+<p>The first companion paper [2] uses the free liquid bar chains $C_r=M_{&lt;p}(G^r)$. Its coefficient $V_p$ is the condensed cokernel of $\partial_4:C_4\to C_3$, and the image of the Dirac family in that cokernel gives its degree-three cocycle $c_p$. Theorem 8.1 of [2] shows that $[c_p]$ is non-zero by evaluating the derived map on the finite detecting cycle. Lemma 9.1 of [2] excludes an isomorphism $V_p\cong\underline B$ for a Hausdorff real $p$-Banach space $B$. Those statements concern the specific liquid quotient for all exponents in [2].</p>
+<p>Here the coefficient is assembled from finite-dimensional spaces with masses generated by the values $(\delta U_N)(x)$. Each constituent cocycle is a continuous coboundary. The use of $z$ is to specify the value $U_N(z)$ that every continuous primitive must take, because scalar continuous $3$-cocycles vanish on the finite cycle. The bounded abstract cocycle $\beta$ is evaluated after the polynomial identities have produced an equality of atomic chains. This evaluation uses only absolute summability. In particular none of the steps for the $L_N$ uses the extension of bounded functions to ordinary-point liquid chains proved in [2, Lemma 4.1].</p>
+<p>One can also see the nature of the class directly from the finite truncations of (6.2). Every truncation has a continuous primitive obtained by taking a finite tuple of rescaled coordinate primitives given by Lemma 3.1 and using zero in the remaining coordinates. The truncations converge to $c$ in uniform mass. Section 6.2 shows that $c$ is outside the image of $\delta:C^3(G,B_p)\to C^4(G,B_p)$, so that image is nonclosed for the coefficient in the main theorem. The ordinary cohomology in Proposition 2.2 is an algebraic quotient of the kernel by the image, which retains the class represented by this limit.</p>
+<p>The second companion paper [3] treats low-degree internal cohomology. Its Theorem 4.3 proves first-degree vanishing for every compact group with a trivial $p$-liquid real coefficient. Its Theorem 8.3 proves second-degree vanishing for $G=\mathrm{SU}(2)$ with the same coefficient hypothesis. These are statements about the internal sheaves, tested on all extremally disconnected compact Hausdorff spaces. Their ordinary specializations follow by evaluation at the point, where evaluation is exact. The proof in [3] reduces the first degree to group homomorphisms and the second degree to central extensions. Those results apply to the low degrees for $\underline{B_p}$ of (6.1) as well, by the $p$-Banach example of a liquid coefficient in [1]. The fourth-degree construction requires neither low-degree vanishing statement.</p>
+<p>For every $0&lt;p&lt;1$, Section 4 bounds $K_3(p)$ and proves closedness of the continuous $3$-coboundaries for Hausdorff real $p$-Banach coefficients with trivial action. Vanishing in degree three for all such coefficients would still require density of the coboundaries in the cocycles for each coefficient. In Theorem 3.2 the bound in degree $n+1$ corrects the defect of finite-dimensional interpolation before the bound in degree $n$ is applied. When $n=3$, the divergence $K_4(p)=\infty$ from Theorem 5.3 leaves the density question open. The non-vanishing theorem for Hausdorff coefficients concerns degree four for every $0&lt;p&lt;1$. In that range, the paper leaves $K_n(p)$ for $n\ge5$ open. At $p=1$, Corollary 6.1 gives vanishing in every positive degree for trivial Banach coefficients.</p>
+<h2>References</h2>
+<ol><li>Peter Scholze, *Lectures on Analytic Geometry*. Definition 6.3, Theorems 6.5 and 6.7, and Question 10.4. <a href="https://people.mpim-bonn.mpg.de/scholze/Analytic.pdf" rel="noopener">Lecture notes</a>.</li></ol>
+<ol><li>*Positive-degree cohomology of compact groups with p-liquid coefficients: A counterexample for general coefficients*. Companion paper, Sections 5--6, Theorem 8.1 and Lemma 9.1. [Companion manuscript](../papers/p-liquid-paper-en.md).</li></ol>
+<ol><li>*Low-degree cohomology of compact groups with trivial p-liquid coefficients*. Companion paper, Theorems 4.3 and 8.3. [Companion manuscript](../papers/low-degree-vanishing-en.md).</li></ol>
+<ol><li>Peter Scholze, *Lectures on Condensed Mathematics*. Lectures I--II, including Theorem 2.2 and the projective tests of Lecture II. <a href="https://people.mpim-bonn.mpg.de/scholze/Condensed.pdf" rel="noopener">Lecture notes</a>.</li></ol>
+<h2>Appendix A The polynomial test: definitions and bookkeeping</h2>
+<p>For $r\ge1$, write $[g_1|\cdots|g_r]$ for the atom at $(g_1,\ldots,g_r)$. The first bar face drops the first entry, the last drops the last entry, and face $i$ for $1\le i&lt;r$ replaces entries $i,i+1$ by their product. The signs start with $+1$. Thus</p>
+<div class="dm">$$\begin{aligned}
+\partial_3[g|h|k]&amp;=[h|k]-[gh|k]+[g|hk]-[g|h],\\
+\partial_4[g|h|k|\ell]&amp;=[h|k|\ell]-[gh|k|\ell]+[g|hk|\ell]\\
+&amp;\hspace{2em}-[g|h|k\ell]+[g|h|k].
+\end{aligned}
+\tag{A.1}$$</div>
+<p>These operations are induced by deletion on homogeneous tuples of length $r+1$, after passing to coordinates $g_i=x_{i-1}^{-1}x_i$. In a double deletion, the two orders of deleting a specified pair give the same surviving tuple and opposite signs. Hence $\partial_{r-1}\partial_r=0$. Since this is a finite identity on each generator, it also holds on a countable absolutely summable chain by finite repetition of each term and regrouping. In particular, if $\partial_r b$ is defined by combining coefficients over the face fibers, it agrees with the result of evaluating the formal sum of signed face atoms as a function of pointwise coefficients.</p>
+<p>For the polynomial test a coordinate is indexed by $\alpha=(\alpha_1,\ldots,\alpha_{12})$ with nonnegative integer entries and $|\alpha|=\sum_i\alpha_i\le N$. Let $f_\alpha(x)=\prod_{i=1}^{12}x_i^{\alpha_i}$ in real coordinates. The number of such indices is $r_N=\binom{N+12}{12}$. Indeed, adding a slack coordinate $N-|\alpha|$ identifies them with nonnegative $13$-tuples summing to $N$, counted by the positions of twelve separators in a string of $N+12$ positions. This indexes monomials in the ambient polynomial ring even when their restrictions satisfy linear relations on the sphere. In particular $U_N$ takes values in the full array of formal coordinates. The subspace $E_N$ handles all relations among coordinates of $\delta U_N$ automatically.</p>
+<p>In quaternion coordinates $g=(g_0,\mathbf g)$ and $h=(h_0,\mathbf h)$, their product has scalar part $g_0 h_0-\mathbf g\cdot\mathbf h$ and vector part $g_0\mathbf h+h_0\mathbf g+\mathbf g\times\mathbf h$. Consequently each coordinate of each face in $\partial_4$ is a polynomial in the sixteen real coordinates of $G^4$ of degree at most two. Composing a monomial of degree at most $N$ with a face yields a polynomial of degree at most $2N$. Thus $c_N$ in (5.2) is given coordinatewise by real polynomials and is closed by the cancellation of two successive faces in the bar differential. The degree zero monomial is included, so testing also includes the identity of total coefficients for the boundary of a chain and for $z$.</p>
+<p>The coordinate truncation from degree $N+1$ to degree $N$ restricts to a linear map $E_{N+1}\to E_N$. It sends $c_{N+1}(x)$ to $c_N(x)$ for every $x$ and is surjective since the target is spanned by the latter values. Every finite decomposition of a vector in $E_{N+1}$ therefore projects to a decomposition of its truncation with the same listed scalar coefficients, giving a mass for the truncation at most the original cost. The map is mass nonincreasing. On $U_{N+1}(z)$ its truncation is $U_N(z)$, giving $L_N\le L_{N+1}$ also from the coefficient spaces. If the value $U_N(z)$ is nonzero, (5.4) ensures $L_N&gt;0$. The factor $Z_p$ in the estimate for $m_{E_N}$ is the sum of the $p$-th powers of the absolute values of the combined coefficients of the fixed cycle. It is independent of the number of monomial coordinates.</p>
+<p>For each $s$, the polynomial $h_s^m$ from (5.9) has total degree at most $3m$. Hence any fixed test of this form occurs within the linear span of the degree-$N$ monomial tests once $N\ge3m$. The extraction in Section 5.2 first fixes the polynomial and passes through the sequence of finite chains, using a uniform bound on the tails of the absolute coefficients. It then raises $m$ on the resulting single chain $w=\partial_4 b-z$, whose coefficients have an absolutely summable bound. This order gives the point coefficient without requiring uniform approximation of the characteristic function of a singleton. In particular the tests impose identities exactly at each atom after taking the limit, even if the support of the limiting chain accumulates at that atom.</p>
+<h2>Appendix B The quadrature certificate for $K_3$</h2>
+<p>This appendix gives the finite quadrature estimate for normalized $2$-cochains of total polynomial degree at most three in the coordinates of two unit quaternions. This is a $p=1/2$ check of the restricted polynomial family, and Theorem 4.3 gives the general bound.</p>
+<p>Let $E$ be a finite-dimensional real $1/2$-normed space and let $u$ be such a polynomial cochain, normalized by $u(1,h)=u(g,1)=0$. To see which polynomial degrees occur in the integration variable, start with any monomial in a polynomial representative of $u$, written as a product $F(g)H(h)$. Applying the normalization operator in (4.10) to this monomial replaces it by $(F(g)-F(1))(H(h)-H(1))$. The operator fixes $u$, so one may use this representation term by term. When one variable has degree zero the corresponding centered term vanishes. Because the total degree is at most three, the surviving terms have degree at most two in each variable. Thus for each fixed $(g,h)$, the cochain $c=\delta u$, as a function of $k$ in $c(g,h,k)$, has degree at most two. This uses that left multiplication $k\mapsto hk$ is linear in quaternion coordinates. Normalization gives $c(g,h,1)=0$ by evaluating its four terms.</p>
+<p>Take $\gamma$ to be Haar probability measure on unit quaternions. It is the normalized spherical measure on $S^3$ since left multiplication is orthogonal and preserves spherical measure. The first moment is zero by sign symmetry. The off-diagonal second moments vanish by coordinate reflections, and the four equal diagonal moments sum to one. Thus the second moment matrix is $I_4/4$. Define $v(g)=\int_G u(g,k)\,d\gamma(k)$ by coordinatewise integration. Integrating $c(g,h,k)=u(h,k)-u(gh,k)+u(g,hk)-u(g,h)$ and substituting $k\mapsto hk$ in the third term yields</p>
+<div class="dm">$$u(g,h)-\delta v(g,h)=-\int_G c(g,h,k)\,d\gamma(k).
+\tag{B.1}$$</div>
+<p>By the continuity of coordinate integration on a compact domain, $v$ is continuous. So the left side is a continuous primitive of $c$.</p>
+<p>For the first quadrature take the four unit vectors $\mathbf n_i=(x,y,xy)/\sqrt3$ with $x,y\in\{-1,1\}$ in $\mathbb R^3$. Their mean is zero and their second moment matrix is $I_3/3$, by summing the sign coordinates and their products. Put $k_i=(-1/4,\sqrt{15}\,\mathbf n_i/4)$. Assign weight $1/5$ to the identity $1=(1,0,0,0)$ and weight $1/5$ to each $k_i$. The weighted real part is $(1+4(-1/4))/5=0$. The real-part second moment is $(1+4/16)/5=1/4$, and the imaginary-part second moment is $(4/5)(15/16)(I_3/3)=I_3/4$. The mixed moments are zero by the zero mean of the $\mathbf n_i$. Thus this rule reproduces Haar integrals of every polynomial of degree at most two. It reproduces (B.1) for all coordinates simultaneously. Since the contribution at $1$ vanishes,</p>
+<div class="dm">$$m_E(c)\le M(u-\delta v)
+\le \frac4{\sqrt5}\,M(c).
+\tag{B.2}$$</div>
+<p>The square root of the quadrature weight is the correct multiplier for the mass of each value. This estimate is uniform over finite-dimensional coefficient spaces within the stipulated polynomial family.</p>
+<p>The following refined rule gives a scalar certificate that improves (B.2) when $E=\ell_{1/2}^d$, whose mass is the sum of square roots of absolute coordinate values. Use a union of five rotated copies of the tetrahedral directions above. Retain weight $1/5$ at $1$, and give equal weight $1/25$ to the twenty other points. Each rotated tetrahedron has the same first and second moments on the latitude $\operatorname{Re} k=-1/4$. The combined rule therefore still integrates all polynomials of degree at most two.</p>
+<p>Here are exact coordinates for the scalar calculation. Take the five integer quaternions with coordinate tuples</p>
+<div class="dm">$$(1,0,0,0),\quad (1,2,3,4),\quad (3,1,1,2),\quad
+(3,2,4,1),\quad (1,5,2,1),
+\tag{B.3}$$</div>
+<p>and set $D=930$. For an entry $q=(a,b,c,d)$ of (B.3), let $s_q=a^2+b^2+c^2+d^2$ and use the integral matrix</p>
+<div class="dm">$$R_q=
+\begin{pmatrix}
+a^2+b^2-c^2-d^2 &amp; 2(bc-ad) &amp; 2(bd+ac)\\
+2(bc+ad) &amp; a^2-b^2+c^2-d^2 &amp; 2(cd-ab)\\
+2(bd-ac) &amp; 2(cd+ab) &amp; a^2-b^2-c^2+d^2
+\end{pmatrix}.
+\tag{B.4}$$</div>
+<p>The matrix $R_q/s_q$ is the rotation of the imaginary coordinates for conjugation by $q/\sqrt{s_q}$, as follows from quaternion multiplication. Using row vectors acts by its transpose on column vectors, also a rotation. In the order (B.3) and the nested order $x,y=-1,1$, take the twenty integer points $(X_i,Y_i,Z_i)=(D/s_q)(x,y,xy)R_q$, numbered from $0$ to $19$. The denominator $s_q$ divides $D$ in each case. Each point has squared length $3D^2$, and its corresponding latitude node is</p>
+<div class="dm">$$k_i=\left(-\frac14,\,\frac{\sqrt5}{4D}(X_i,Y_i,Z_i)\right).
+\tag{B.5}$$</div>
+<p>We give the arithmetic certificate for the inequality</p>
+<div class="dm">$$\frac1{20}\sum_{i=0}^{19}\sqrt{|f(k_i)|}
+\ \ge\ B_0\sqrt{|\overline f|},
+\qquad
+B_0=\frac{12733688}{20000000},
+\qquad
+\overline f=\frac1{20}\sum_{i=0}^{19} f(k_i),
+\tag{B.6}$$</div>
+<p>where $f$ is any real polynomial of degree at most two. When $\overline f=0$ the inequality holds by nonnegativity. Otherwise divide $f$ by $\overline f$ and use $1/2$-homogeneity to reduce to the case of mean one. On the latitude sphere the trace part of a quadratic is constant. The linear monomials, the off-diagonal quadratic terms and two independent differences of diagonal terms have mean zero by the first and second moments. Every mean-one restriction therefore has evaluations of the form $1+D^{-2}R_i'\theta$, where $\theta\in\mathbb R^8$ is a column vector, and the integer row $R_i'$ consists of the last eight entries of the row</p>
+<div class="dm">$$R_i=\bigl(D^2,DX_i,DY_i,DZ_i,
+          X_iY_i,X_iZ_i,Y_iZ_i,X_i^2-Y_i^2,Y_i^2-Z_i^2\bigr).
+\tag{B.7}$$</div>
+<p>The letters $R_q$ and $R_i$ denote the rotation numerator and the evaluation row, respectively.</p>
+<p>Partition the parameter space by the signs of the twenty affine evaluations, allowing zero on the boundaries of the resulting closed polyhedra. On each polyhedron the left side of (B.6) is nonnegative and concave since it is a sum of square roots of nonnegative affine functions. If the rows at the current zero evaluations have rank less than eight, choose a nonzero direction annihilating all those rows. Moving in this direction, the maximal permitted interval in the polyhedron has the current point in its interior relative to the line. The evaluation rows have rank eight, as certified by the enumeration below, so the interval has at least one finite endpoint. If both endpoints are finite, concavity bounds the smaller endpoint value by the current value. If one side is unbounded, the same bound holds at the finite endpoint. To see this, restrict to the ray starting at that endpoint. A nonnegative concave function on a ray is nondecreasing, since a strictly negative secant slope would bound all later secant slopes by a negative number and eventually force a negative value. At the chosen finite endpoint an additional evaluation becomes zero whose row does not annihilate the direction. It is independent of the previous zero rows, which still vanish there. Repeating increases rank until eight independent evaluations are zero. The value at the final point is at most the initial value. It therefore suffices to inspect all eight-element subsets of the twenty rows.</p>
+<p>The enumeration uses only integer equations and integer square comparisons. For each eight-element subset $I$, let $\Delta$ be the determinant of the matrix of the rows $R_i'$ with $i\in I$ in increasing order. For nonzero $\Delta$, let $b_\nu$ be the determinant with column $\nu$ replaced by the constant column $-D^2$. Cramer's rule gives $\theta_\nu=b_\nu/\Delta$. For every $i$, let $v_i=R_i(\Delta,b_1,\ldots,b_8)^{\mathsf T}$, so the evaluation is $v_i/(\Delta D^2)$. Set $t=10^6$. The integer</p>
+<div class="dm">$$\min\left(20t,\,
+\left\lfloor\sqrt{\left\lfloor |v_i|t^2/(|\Delta|D^2)\right\rfloor}\right\rfloor\right)
+\tag{B.8}$$</div>
+<p>is a lower bound for $t\sqrt{|f(k_i)|}$. The outer floor can be computed by integer square root on the inner quotient, since the candidate squares are integers. Capping a term preserves the lower bound and keeps the threshold $20t$ adequate for the minimum. The enumeration is specified by the following pseudocode, with $\operatorname{isqrt}$ denoting the largest nonnegative integer whose square is at most its argument.</p>
+<p>~~~text total = 0 independent = 0 minimum = 20 * t for I in the eight-element subsets of {0, ..., 19}: total = total + 1 A = matrix with rows R_i' for i in I, in increasing order determinant = det(A) if determinant == 0: continue independent = independent + 1 rhs = column with eight entries all equal to -D * D b = list of det(A with column nu replaced by rhs), for nu = 1, ..., 8 denominator = abs(determinant) * D * D sum_roots = 0 for i = 0, ..., 19: numerator = abs(dot(R_i, concatenate([determinant], b))) * t * t sum_roots = sum_roots + min(20 * t, isqrt(numerator div denominator)) minimum = min(minimum, sum_roots) ~~~</p>
+<table><thead><tr><th>Integer quantity</th><th>Value</th></tr></thead><tbody><tr><td>Eight-element subsets</td><td>125970</td></tr><tr><td>Subsets with nonzero determinant</td><td>116875</td></tr><tr><td>Minimum sum in (B.8)</td><td>12733688</td></tr></tbody></table>
+<p>For example a subset attaining this integer minimum is $\{1,6,7,8,10,11,14,15\}$ in the zero-based order above. Dividing the minimum by $20t$ proves (B.6) for all mean-one restrictions, by the reduction to independent zero evaluations. The bound is insensitive to linear relations among ambient polynomials with the same restriction, since the evaluation rows describe the restriction directly.</p>
+<p>Finally apply (B.6) to each scalar coordinate of $k\mapsto c(g,h,k)$. Its Haar integral is $4/5$ times the mean on the twenty latitude nodes, since it vanishes at the identity. For each coordinate, taking the square root of the absolute integral contributes the mass factor $\sqrt{4/5}=2/\sqrt5$. Sum the resulting inequalities over the coordinates of $E$ to obtain</p>
+<div class="dm">$$m_{\ell_{1/2}^d}(c)\le M(u-\delta v)
+\le \frac{2}{\sqrt5 B_0}\,M(c),
+\qquad \frac{\sqrt5 B_0}{2}&gt;\frac{71183}{100000}.
+\tag{B.9}$$</div>
+<p>The last strict comparison follows by squaring and using $5\cdot12733688^2-4(200\cdot71183)^2=10932166720&gt;0$. The argument for (B.9) uses the coordinate mass of $\ell_{1/2}^d$ when summing (B.6). Formula (B.2) gives the corresponding quadrature bound for arbitrary finite-dimensional $1/2$-normed $E$ on this family.</p>
+<h2>Appendix C Verbatim statements carried over from the companion papers</h2>
+<p>The source numbering is retained below. The displayed equation tags belong to the present paper. In the quotations from [2], $q$ is the quotient map to $V_p$, $c_p$ is its degree-three cocycle, $C_r=M_{&lt;p}(G^r)$, and $M$ denotes the closed oriented hyperbolic manifold. The notation $E_\beta$ in the finite-cycle statement restricts on finite chains to the sum of the values of $\beta$ with the coefficients of the atoms.</p>
+<p>The following definition and statement are from [2, Section 6.2], with $\rho$ and $v$ as in [2, Sections 5.5 and 6.1].</p>
+<p>Define</p>
+<div class="dm">$$\beta(g,h,k)=v(\rho(g),\rho(h),\rho(k)).
+\tag{C.1}$$</div>
+<p>Since $\rho$ is an abstract group homomorphism, $\delta\beta=0$, and $\|\beta\|_\infty\le v_3$. This is a bounded 3-cocycle on the discrete group $G^\delta$.</p>
+<p class="thmline"><b>Lemma 6.1</b> (Finite detecting 3-cycle). Let $z=(\rho_0)_*z_\Gamma\in\mathbb R[G^3]$. Then, for every $0&lt;p\le1$, it satisfies in $C_3(*)$</p>
+<div class="dm">$$\partial_3z=0,\qquad E_\beta(z)=\operatorname{Vol}(M)&gt;0.
+\tag{C.2}$$</div>
+<p>Proof. Carried over from [2, Sections 6.3--6.4]. The proof in Section 6.3 takes place in finite bar chains and shows $\partial_3z_\Gamma=0$ there by cancellation of the labeled faces. Applying the bar chain map of $\rho_0$ preserves this identity. Section 6.4 identifies the finite pairing with $\langle\rho_2^*v,z_\Gamma\rangle$ by $\rho\circ\rho_0=\rho_2$, and Section 6.3 computes this last pairing by straightening the fundamental cycle. The straightening has degree one. ∎</p>
+<p class="thmline"><b>Theorem 8.1</b> (A degree-three counterexample for general liquid coefficients). Let $G=\mathrm{SU}(2)$ and $0&lt;p\le1$. Using the inhomogeneous bar boundary, define</p>
+<div class="dm">$$V_p=\operatorname{coker}_{\operatorname{Cond}(\mathbb R)}
+\bigl(M_{&lt;p}(G^4)\xrightarrow{\partial_4}M_{&lt;p}(G^3)\bigr),
+\tag{C.3}$$</div>
+<p>and equip it with the trivial $G$ action. Then $V_p$ is a $p$-liquid real vector space, and</p>
+<div class="dm">$$[c_p]\ne0\quad\text{in }H^3(G,V_p).
+\tag{C.4}$$</div>
+<p>The same finite arithmetic 3-cycle $z$ satisfies $q(z)\ne0$ for every $p$.</p>
+<p>Proof. Carried over from [2, Sections 7--8], including the proof of Theorem 8.1 in Section 8.5. The result is used in Section 7 of the present paper to compare the two coefficient constructions. ∎</p>
+<p class="thmline"><b>Lemma 9.1</b> (Nonrepresentability of the coefficient). There is no Hausdorff $p$-Banach real space $B$ such that $\underline B\cong V_p$ as condensed real vector spaces.</p>
+<p>Proof. Carried over from [2, Section 9.1]. The proof uses a countable cover of the ordinary-point quotient by images of compact disks. A Hausdorff $p$-Banach realization would be a Baire space and hence locally compact and finite-dimensional. The boundary map out of $V_p$ detects an infinite linearly independent family, giving the contradiction. ∎</p>
+<p>The following two statements are [3, Theorems 4.3 and 8.3]. The cohomology in their conclusions is internal.</p>
+<p class="thmline"><b>Theorem 4.3</b> (Theorem B1: first-degree vanishing). Let $G$ be any compact group and let $V$ be a $p$-liquid real vector space with trivial $G$-action, where $0&lt;p\le1$. Then</p>
+<div class="dm">$$\underline H^1(G,V)=0.
+\tag{C.5}$$</div>
+<p>Proof. Carried over from [3, Section 4.2], using the squaring relation for parameterized homomorphisms in [3, Lemma 4.1] and the slice description in [3, Lemma 4.2]. ∎</p>
+<p class="thmline"><b>Theorem 8.3</b> (Theorem B2: second-degree vanishing for SU(2)). Let $0&lt;p\le1$, let $G=\mathrm{SU}(2)$ and let $V$ be any $p$-liquid real vector space with trivial $G$-action. Then</p>
+<div class="dm">$$\underline H^2(G,V)=0.
+\tag{C.6}$$</div>
+<p>Proof. Carried over from [3, Section 8.3]. In the proof, [3, Lemma 8.2] identifies cohomology on the test space with extension classes in the slice, and [3, Proposition 8.1] provides a splitting there. ∎</p>
+  </main>
+
+<script>
+(function () {
+  if (!window.katex) return;
+  var I = String.fromCharCode(36), D = I + I;
+  function mk(tex, display) {
+    var sp = document.createElement('span');
+    try { sp.innerHTML = katex.renderToString(tex, { throwOnError: false, displayMode: display }); }
+    catch (e) { sp.textContent = display ? D + tex + D : I + tex + I; }
+    return sp;
+  }
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), list = [];
+  while (w.nextNode()) list.push(w.currentNode);
+  for (var k = 0; k < list.length; k++) {
+    var node = list[k], par = node.parentNode;
+    if (!par || node.nodeValue.indexOf(I) < 0) continue;
+    if (par.closest('code, pre, script, style, .katex')) continue;
+    var txt = node.nodeValue, out = [], i = 0, changed = false;
+    for (;;) {
+      var s = txt.indexOf(I, i);
+      if (s < 0) break;
+      if (txt.substr(s, 2) === D) {
+        var e = txt.indexOf(D, s + 2);
+        if (e < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 2, e), true));
+        i = e + 2; changed = true;
+      } else {
+        var e2 = txt.indexOf(I, s + 1);
+        if (e2 < 0) break;
+        if (s > i) out.push(document.createTextNode(txt.slice(i, s)));
+        out.push(mk(txt.slice(s + 1, e2), false));
+        i = e2 + 1; changed = true;
+      }
+    }
+    if (!changed) continue;
+    if (i < txt.length) out.push(document.createTextNode(txt.slice(i)));
+    var frag = document.createDocumentFragment();
+    for (var q = 0; q < out.length; q++) frag.appendChild(out[q]);
+    par.replaceChild(frag, node);
+  }
+})();
+</script>
+</body>
+</html>
