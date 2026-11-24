@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.injective-iff-acyclic)　·　[Chinese page (authoritative)](./prop.injective-iff-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Injective iff Acyclic` (short) · `Injective Objects Are Exactly the Acyclic Ones` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.injective-iff-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be an abelian category and $I \in \mathcal{A}$. Then the following are equivalent:
 
-
-Cite: `prop.injective-iff-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.injective-iff-acyclic.en.2.md

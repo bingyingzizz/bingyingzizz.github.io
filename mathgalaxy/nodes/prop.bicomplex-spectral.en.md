@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.bicomplex-spectral)　·　[Chinese page (authoritative)](./prop.bicomplex-spectral.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.bicomplex-spectral.md` and `proofs/`.
+## Statement · **draft**
+Let $K^{\bullet,\bullet}$ be a bicomplex that is **bounded below in both directions**. Then there is a spectral sequence
 
+$$E^{0}_{p,q} \;=\; K^{p,q} \;\Longrightarrow\; H^{p+q}(K^{\bullet}),$$
 
-Cite: `prop.bicomplex-spectral` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $K^{\bullet}$ is the **total complex** $K^{n} := \bigoplus_{p+q=n} K^{p,q}$ with differential $d + d'$ (with signs).
 
+> continued in nodes/prop.bicomplex-spectral.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.category-of-complexes)　·　[Chinese page (authoritative)](./def.category-of-complexes.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `complexes category` (short) · `category of complexes` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.category-of-complexes.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be an additive category. The **category of complexes** $\mathcal{C}(\mathcal{C})$ has as objects the cochain complexes of $\mathcal{C}$, and as morphisms the **chain maps** $f : K \to L$: a family $f^{n} : K^{n} \to L^{n}$ such that
 
-
-Cite: `def.category-of-complexes` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.category-of-complexes.en.2.md

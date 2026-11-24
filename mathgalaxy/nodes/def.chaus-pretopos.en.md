@@ -2,14 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.chaus-pretopos)　·　[Chinese page (authoritative)](./def.chaus-pretopos.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `CHaus Is a Pretopos` (short) · `Compact Hausdorff Spaces Form a Pretopos` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.chaus-pretopos.md` and `proofs/`.
+## Statement · **draft**
+In $\mathbf{CHaus}$:
 
+1. all limits and colimits exist;
+2. finite coproducts are **disjoint** and **universal**;
+3. equivalence relations are **effective** and **universal**;
+4. epimorphisms are **regular** and **universal**.
 
-Cite: `def.chaus-pretopos` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Hence $\mathbf{CHaus}$ is a **pretopos**.
 
+> continued in nodes/def.chaus-pretopos.en.2.md

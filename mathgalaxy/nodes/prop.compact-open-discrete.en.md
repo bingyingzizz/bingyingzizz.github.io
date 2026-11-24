@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.compact-open-discrete)　·　[Chinese page (authoritative)](./prop.compact-open-discrete.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 names: `Discrete Function Spaces` (short) · `Function Spaces on Discrete Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.compact-open-discrete.md` and `proofs/`.
+## Statement · **draft**
+If $X$ is a **discrete** space, then $C(X, Y) \cong Y^{X}$ (the right-hand side carries the **product topology**).
 
-
-Cite: `prop.compact-open-discrete` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.compact-open-discrete.en.2.md

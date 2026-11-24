@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.positive-set-closure)　·　[Chinese page (authoritative)](./prop.positive-set-closure.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · proposition · cluster Signed Measures and Decompositions (`analysis.signed`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.positive-set-closure.md` and `proofs/`.
+## Statement · **draft**
+Let $\nu$ be a signed measure.
 
+- Every measurable subset of a positive set is positive;
+- **A countable union of positive sets is again positive.**
 
-Cite: `prop.positive-set-closure` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+The first item follows directly from the definition.
 
+> continued in nodes/prop.positive-set-closure.en.2.md

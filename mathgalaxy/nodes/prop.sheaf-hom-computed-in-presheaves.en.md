@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.sheaf-hom-computed-in-presheaves)　·　[Chinese page (authoritative)](./prop.sheaf-hom-computed-in-presheaves.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Hom of Sheaves` (short) · `Hom of Sheaves Computed in Presheaves` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.sheaf-hom-computed-in-presheaves.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a site, $T$ a presheaf, and $F$ a **sheaf**. Then
 
+$$\operatorname{Hom}_{\widetilde{\mathcal{C}}}\bigl(T^{\#},\ F\bigr) \;=\; \operatorname{Hom}_{\widehat{\mathcal{C}}}\bigl(T,\ F\bigr).$$
 
-Cite: `prop.sheaf-hom-computed-in-presheaves` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.sheaf-hom-computed-in-presheaves.en.2.md

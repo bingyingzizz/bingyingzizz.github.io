@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.cond-projectives)　·　[Chinese page (authoritative)](./prop.cond-projectives.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Cond Projectives` (short) · `Condensed Sets Have Enough Projectives` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.cond-projectives.md` and `proofs/`.
+## Statement · **draft**
+Free compact Hausdorff spaces (regarded as condensed sets) are all **projective objects**; moreover $\mathrm{Cond}$ has **enough projectives**.
 
-
-Cite: `prop.cond-projectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.cond-projectives.en.2.md

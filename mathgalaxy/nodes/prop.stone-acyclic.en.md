@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.stone-acyclic)　·　[Chinese page (authoritative)](./prop.stone-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Stone Spaces Are Acyclic` (short) · `Sheaf Cohomology on Stone Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.stone-acyclic.md` and `proofs/`.
+## Statement · **draft**
+If $S$ is a **Stone** space (= compact Hausdorff totally disconnected), then for every abelian sheaf $M$, $H^{n}(S, M) = 0$ for all $n \ne 0$.
 
-
-Cite: `prop.stone-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.stone-acyclic.en.2.md

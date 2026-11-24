@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.global-dimension)　·　[Chinese page (authoritative)](./def.global-dimension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · definition · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.global-dimension.md` and `proofs/`.
+## Statement · **draft**
+The **(left) global dimension** of a ring $R$ is the supremum of the projective dimensions of all left modules:
 
+$$\operatorname{gl.dim} R := \sup_{M} \operatorname{pd}_{R} M ,$$
 
-Cite: `def.global-dimension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+The supremum ranges over all left $R$-modules $M$. Equivalently,
 
+$$\operatorname{gl.dim} R = \sup_{M} \operatorname{id}_{R} M ,$$
+
+> continued in nodes/def.global-dimension.en.2.md

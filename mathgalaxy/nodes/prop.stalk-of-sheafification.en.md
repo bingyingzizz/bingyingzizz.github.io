@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.stalk-of-sheafification)　·　[Chinese page (authoritative)](./prop.stalk-of-sheafification.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Stalks of Sheafification` (short) · `Sheafification Does Not Change Stalks` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.stalk-of-sheafification.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a topological space, $T$ a presheaf on $X$, and $x \in X$. Then sheafification does not change stalks:
 
+$$\bigl(T^{\#}\bigr)_{x} \;=\; T_{x}.$$
 
-Cite: `prop.stalk-of-sheafification` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.stalk-of-sheafification.en.2.md

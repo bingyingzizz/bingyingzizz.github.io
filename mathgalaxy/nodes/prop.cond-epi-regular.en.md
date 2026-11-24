@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.cond-epi-regular)　·　[Chinese page (authoritative)](./prop.cond-epi-regular.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.cond-epi-regular.md` and `proofs/`.
+## Statement · **draft**
+In $\mathrm{Cond}$, every epimorphism $f : X \to Y$ is **regular**: it is the coequalizer of its own pair of projections,
 
+$$Y \cong \operatorname{coeq}\bigl(X \times_{Y} X \rightrightarrows X\bigr).$$
 
-Cite: `prop.cond-epi-regular` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.cond-epi-regular.en.2.md

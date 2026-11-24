@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.underlying-topological-space)　·　[Chinese page (authoritative)](./def.underlying-topological-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · definition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.underlying-topological-space.md` and `proofs/`.
+## Statement · **draft**
+For a condensed set $X$, its **underlying topological space** $X(\cdot)$ is the set $X(\ast)$ (sections over the one-point space), equipped with the **finest** topology making all maps
 
+$$f : S \longrightarrow X(\cdot), \qquad f \in X(S),\ S \in \mathbf{CHaus}$$
 
-Cite: `def.underlying-topological-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+continuous.
 
+> continued in nodes/def.underlying-topological-space.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.kernel-cokernel)　·　[Chinese page (authoritative)](./def.kernel-cokernel.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.kernel-cokernel.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a (pre)additive category and $f : M \to N$.
 
-
-Cite: `def.kernel-cokernel` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.kernel-cokernel.en.2.md

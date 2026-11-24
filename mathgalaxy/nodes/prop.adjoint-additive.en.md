@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.adjoint-additive)　·　[Chinese page (authoritative)](./prop.adjoint-additive.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 names: `Adjoints Are Additive` (short) · `Adjoints between Additive Categories Are Additive` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.adjoint-additive.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}, \mathcal{D}$ be additive categories and $F : \mathcal{C} \to \mathcal{D}$ left adjoint to $G : \mathcal{D} \to \mathcal{C}$ (write $F \dashv G$). Then $F$ and $G$ are **both additive**, and the adjunction bijection
 
-
-Cite: `prop.adjoint-additive` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.adjoint-additive.en.2.md

@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.stone-clopen-refinement)　·　[Chinese page (authoritative)](./prop.stone-clopen-refinement.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.stone-clopen-refinement.md` and `proofs/`.
+## Statement · **draft**
+Let $S$ be a **Stone** space. Then **every open cover of $S$ has a finite, pairwise disjoint clopen refinement**: there is a finite family $(C_{r})_{r \le m}$ such that
 
+- each $C_{r}$ is **clopen**;
+- $r \ne s$ implies $C_{r} \cap C_{s} = \emptyset$;
+- $\bigsqcup_{r} C_{r} = S$.
 
-Cite: `prop.stone-clopen-refinement` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+Moreover each $C_{r}$ is contained in some member of the cover.
 
+> continued in nodes/prop.stone-clopen-refinement.en.2.md

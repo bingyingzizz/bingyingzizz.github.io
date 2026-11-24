@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.discrete-cond-rhom-constant)　·　[Chinese page (authoritative)](./prop.discrete-cond-rhom-constant.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Discrete RHom Is Constant` (short) · `Derived Hom and Tensor of Discrete Groups Are Constant` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.discrete-cond-rhom-constant.md` and `proofs/`.
+## Statement · **draft**
+Let $M, N$ be **discrete** abelian groups, also regarded as the corresponding constant condensed abelian groups. Then
 
-
-Cite: `prop.discrete-cond-rhom-constant` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.discrete-cond-rhom-constant.en.2.md

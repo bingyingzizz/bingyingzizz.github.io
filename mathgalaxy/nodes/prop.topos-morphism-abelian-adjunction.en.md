@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.topos-morphism-abelian-adjunction)　·　[Chinese page (authoritative)](./prop.topos-morphism-abelian-adjunction.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Abelian Adjunction` (short) · `Topos Morphisms on Abelian Groups` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.topos-morphism-abelian-adjunction.md` and `proofs/`.
+## Statement · **draft**
+Let $f : \mathcal{T} \to \mathcal{T}'$ be a morphism of topoi. Then the pullback $f^{-1} : \mathcal{T}'(\mathbf{Ab}) \to \mathcal{T}(\mathbf{Ab})$ has a **right adjoint** $f_{*}$, and $f^{-1}$ is **exact**.
 
-
-Cite: `prop.topos-morphism-abelian-adjunction` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.topos-morphism-abelian-adjunction.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.ring-tensor-coproduct)　·　[Chinese page (authoritative)](./prop.ring-tensor-coproduct.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Algebraic Structures (`algebra.structures`) · Abstract Algebra / Category Theory
 names: `Rings and Tensor` (short) · `Fiber Coproducts of Commutative Rings Are Tensor Products` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.ring-tensor-coproduct.md` and `proofs/`.
+## Statement · **draft**
+In the category of **commutative rings**, the **fiber coproduct** (pushout) along $A \to B$ and $A \to C$ is $B \otimes_{A} C$.
 
-
-Cite: `prop.ring-tensor-coproduct` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.ring-tensor-coproduct.en.2.md

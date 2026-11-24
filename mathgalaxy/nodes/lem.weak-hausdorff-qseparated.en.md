@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=lem.weak-hausdorff-qseparated)　·　[Chinese page (authoritative)](./lem.weak-hausdorff-qseparated.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · lemma · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.weak-hausdorff-qseparated.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a weakly Hausdorff space (with $X$ compactly generated) and $X_{1}, X_{2} \hookrightarrow X$ a **quasi-compact** subspace. Then the fiber product
 
+$$X_{1} \times_{X} X_{2}$$
 
-Cite: `lem.weak-hausdorff-qseparated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is compact Hausdorff. In particular, the intersection of any two quasi-compact open subspaces is quasi-compact, that is, $X$ is **quasi-separated**.
 
+> continued in nodes/lem.weak-hausdorff-qseparated.en.2.md

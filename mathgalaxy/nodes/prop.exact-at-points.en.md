@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.exact-at-points)　·　[Chinese page (authoritative)](./prop.exact-at-points.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Pointwise Exactness` (short) · `Exactness Is Pointwise Exactness` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.exact-at-points.md` and `proofs/`.
+## Statement · **draft**
+Let $0 \to M' \xrightarrow{\ i\ } M \xrightarrow{\ p\ } M'' \to 0$ be a sequence in an abelian category. Then
 
+- **short exact** $\iff$ is exact at $M'$, $M$, and $M''$ — **all three places**;
+- **left exact** $\iff$ is exact at $M'$ and $M$;
+- **right exact** $\iff$ is exact at $M$ and $M''$.
 
-Cite: `prop.exact-at-points` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.exact-at-points.en.2.md

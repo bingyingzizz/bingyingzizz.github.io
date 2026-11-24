@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.complex-additive)　·　[Chinese page (authoritative)](./prop.complex-additive.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Complexes Are Additive` (short) · `The Category of Complexes Is Additive` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.complex-additive.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be an additive category. Complexes form a **full additive subcategory** $\mathcal{C}(\mathcal{C})$ of it:
 
-
-Cite: `prop.complex-additive` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.complex-additive.en.2.md

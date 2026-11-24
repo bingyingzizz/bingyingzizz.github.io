@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.flat-tensor-acyclic)　·　[Chinese page (authoritative)](./prop.flat-tensor-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Flat Tensors` (short) · `Flat Tensors Preserve Acyclicity` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.flat-tensor-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $P$ be a **flat** abelian group in a topos and $M$ an **acyclic** complex (bounded below, with homology vanishing for $n \ne 0$). Then $P \otimes_{\mathbb{Z}} M$ is also acyclic.
 
-
-Cite: `prop.flat-tensor-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.flat-tensor-acyclic.en.2.md

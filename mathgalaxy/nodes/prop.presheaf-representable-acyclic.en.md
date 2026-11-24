@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.presheaf-representable-acyclic)　·　[Chinese page (authoritative)](./prop.presheaf-representable-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Representables Are Acyclic` (short) · `Representable Presheaves Are Acyclic` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.presheaf-representable-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be any category, $\widehat{\mathcal{C}}$ equipped with the standard topology, and $X \in \mathcal{C}$, $M$ abelian **presheaves** on $\widehat{\mathcal{C}}$. Then
 
-
-Cite: `prop.presheaf-representable-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.presheaf-representable-acyclic.en.2.md

@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.fchaus-sheaf)　·　[Chinese page (authoritative)](./prop.fchaus-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `FCHaus Sheaves` (short) · `Sheaves on Finite Compact Hausdorff Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.fchaus-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a presheaf of sets on $\mathbf{FCHaus}$. Then $X$ is a sheaf $\iff$ $X$ **preserves finite products**.
 
-
-Cite: `prop.fchaus-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.fchaus-sheaf.en.2.md

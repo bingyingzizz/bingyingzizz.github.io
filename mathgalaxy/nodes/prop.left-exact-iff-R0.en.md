@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.left-exact-iff-R0)　·　[Chinese page (authoritative)](./prop.left-exact-iff-R0.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Left Exact and R0` (short) · `Left Exactness and the Zeroth Derived Functor` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.left-exact-iff-R0.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be an abelian category (with enough injectives), $\mathcal{A}'$ an abelian category, and $F : \mathcal{A} \to \mathcal{A}'$ an **additive** functor. Then
 
-
-Cite: `prop.left-exact-iff-R0` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.left-exact-iff-R0.en.2.md

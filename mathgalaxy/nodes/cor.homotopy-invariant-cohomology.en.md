@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=cor.homotopy-invariant-cohomology)　·　[Chinese page (authoritative)](./cor.homotopy-invariant-cohomology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · corollary · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Homotopy Invariance` (short) · `Sheaf Cohomology Is a Homotopy Invariant` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/cor.homotopy-invariant-cohomology.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a **constant** abelian group.
 
-
-Cite: `cor.homotopy-invariant-cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/cor.homotopy-invariant-cohomology.en.2.md

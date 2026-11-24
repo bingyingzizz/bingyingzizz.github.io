@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.cohomology-as-ext)　·　[Chinese page (authoritative)](./prop.cohomology-as-ext.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.cohomology-as-ext.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos, $X \in \mathcal{T}$, and $M^{\bullet}$ a complex of abelian groups in $\mathcal{T}$. Then
 
+$$\operatorname{R}\Gamma(X,\ M^{\bullet}) \;\cong\; \operatorname{RHom}_{\mathbb{Z}}\bigl(\mathbb{Z}\cdot X,\ M^{\bullet}\bigr), \qquad H^{n}(X,\ M^{\bullet}) \;\cong\; \operatorname{Ext}^{n}_{\mathbb{Z}}\bigl(\mathbb{Z}\cdot X,\ M^{\bullet}\bigr).$$
 
-Cite: `prop.cohomology-as-ext` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.cohomology-as-ext.en.2.md

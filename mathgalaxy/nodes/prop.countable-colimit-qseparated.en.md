@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.countable-colimit-qseparated)　·　[Chinese page (authoritative)](./prop.countable-colimit-qseparated.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Countable Colimits` (short) · `Countable Increasing Colimits Are Quasi-Separated` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.countable-colimit-qseparated.md` and `proofs/`.
+## Statement · **draft**
+If $X = \varinjlim_{n \in \mathbb{N}} S_{n}$ is a topological colimit of a sequence of compact Hausdorff spaces along **inclusions** $S_{n} \hookrightarrow S_{n+1}$, then
 
-
-Cite: `prop.countable-colimit-qseparated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.countable-colimit-qseparated.en.2.md

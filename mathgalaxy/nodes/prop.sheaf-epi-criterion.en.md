@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.sheaf-epi-criterion)　·　[Chinese page (authoritative)](./prop.sheaf-epi-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.sheaf-epi-criterion.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ carry a pretopology. A morphism of sheaves $u : F \to G$ is an epimorphism $\iff$ for every $X \in \mathcal{C}$ and every $s \in G(X)$ there is a covering $(X_{i} \to X)_{i \in I}$ such that
 
+$$s|_{X_{i}} \in \operatorname{im}\bigl(F(X_{i}) \to G(X_{i})\bigr) \qquad (\forall i \in I)$$
 
-Cite: `prop.sheaf-epi-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.sheaf-epi-criterion.en.2.md

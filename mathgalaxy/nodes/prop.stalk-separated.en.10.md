@@ -1,0 +1,9 @@
+# stalk　`prop.stalk-separated`
+English entry · root `../`
+[in graph](../#n=prop.stalk-separated)　·　[Chinese page (authoritative)](./prop.stalk-separated.md)
+
+> Proofs of the edges are still Chinese only: `proofs/`; the Chinese page remains authoritative.
+
+
+Cite: `prop.stalk-separated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+

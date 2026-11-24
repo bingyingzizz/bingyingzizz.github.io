@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=lem.schanuel)　·　[Chinese page (authoritative)](./lem.schanuel.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · lemma · cluster Resolutions and Dimensions (`hom.resolution`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.schanuel.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be an $R$-module, and suppose there are two short exact sequences
 
+$$0 \to K \to P \xrightarrow{\ \pi\ } M \to 0, \qquad 0 \to K_{1} \to P_{1} \xrightarrow{\ \pi_{1}\ } M \to 0,$$
 
-Cite: `lem.schanuel` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+in which $P, P_{1}$ are both **projective**. Then
 
+$$P_{1} \oplus K \;\cong\; P \oplus K_{1} .$$
+
+> continued in nodes/lem.schanuel.en.2.md

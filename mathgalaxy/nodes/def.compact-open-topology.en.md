@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.compact-open-topology)　·　[Chinese page (authoritative)](./def.compact-open-topology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.compact-open-topology.md` and `proofs/`.
+## Statement · **draft**
+Let $X, Y \in \mathbf{Top}$. For every continuous map $g : S \to X$ (with $S$ compact Hausdorff) and every open set $V \subseteq Y$, set
 
+$$W_{S,V} := \{\, f : X \to Y \;\mid\; \operatorname{Im}(f \circ g) \subseteq V \,\}.$$
 
-Cite: `def.compact-open-topology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.compact-open-topology.en.2.md

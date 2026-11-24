@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=def.universal-colimit)　·　[Chinese page (authoritative)](./def.universal-colimit.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Universal Colimits` (short) · `Universal Colimits and Disjoint Coproducts` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.universal-colimit.md` and `proofs/`.
+## Statement · **draft**
+1. A colimit $X = \varinjlim_{i} X_{i}$ is called **universal** if for every $X \to Y$ and $Y' \to Y$,
 
+$$X \times_{Y} Y' \;\cong\; \varinjlim_{i} \bigl(X_{i} \times_{Y} Y'\bigr)$$
 
-Cite: `def.universal-colimit` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.universal-colimit.en.2.md

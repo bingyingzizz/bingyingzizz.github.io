@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.qc-sheaf-etale)　·　[Chinese page (authoritative)](./prop.qc-sheaf-etale.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Quasi-Compact Sheaves` (short) · `Quasi-Compact Sheaves and Compact Étale Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.qc-sheaf-etale.md` and `proofs/`.
+## Statement · **draft**
+A sheaf on a topological space $X$ (for the **standard topology**) is **quasi-compact** $\iff$ the corresponding **espace étalé** is a **compact** space.
 
-
-Cite: `prop.qc-sheaf-etale` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.qc-sheaf-etale.en.2.md

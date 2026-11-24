@@ -2,13 +2,17 @@
 English entry · root `../`
 [in graph](../#n=def.image)　·　[Chinese page (authoritative)](./def.image.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.image.md` and `proofs/`.
+## Statement · **draft**
+For a morphism $f : X \to Y$, its **image** $\operatorname{im} f$ is a subobject of $Y$ that is **initial** in the category of all factorizations $f : X \to I \rightarrowtail Y$ (that is, every other factorization factors uniquely through it).
 
+Dually, $\operatorname{coim} f$ is the co-universal object of factorizations $X \twoheadrightarrow I \to Y$.
 
-Cite: `def.image` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+There is always a morphism
 
+$$\operatorname{coim} f \longrightarrow \operatorname{im} f$$
+
+> continued in nodes/def.image.en.2.md

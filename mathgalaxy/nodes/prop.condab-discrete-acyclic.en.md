@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.condab-discrete-acyclic)　·　[Chinese page (authoritative)](./prop.condab-discrete-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Discrete Acyclicity` (short) · `Acyclicity on Discrete and Discrete Times Stonean Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.condab-discrete-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a condensed abelian group. Then
 
-
-Cite: `prop.condab-discrete-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.condab-discrete-acyclic.en.2.md

@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.abelian-sheaf-equiv)　·　[Chinese page (authoritative)](./thm.abelian-sheaf-equiv.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Sheaves of Groups in a Topos` (short) · `Abelian Sheaves Are Abelian Groups in a Topos` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.abelian-sheaf-equiv.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a site. Then "**abelian sheaves** on the site" and "**abelian group objects** in the topos $\widetilde{\mathcal{C}}$" form the same category:
 
+$$\widetilde{\mathcal{C}}(\mathbf{Ab}) \;\simeq\; \mathbf{Ab}\bigl(\widetilde{\mathcal{C}}\bigr).$$
 
-Cite: `thm.abelian-sheaf-equiv` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.abelian-sheaf-equiv.en.2.md

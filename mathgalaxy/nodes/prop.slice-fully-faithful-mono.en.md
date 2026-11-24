@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.slice-fully-faithful-mono)　·　[Chinese page (authoritative)](./prop.slice-fully-faithful-mono.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.slice-fully-faithful-mono.md` and `proofs/`.
+## Statement · **draft**
+A morphism $f : Y \to X$ is a **monomorphism** $\iff$ the slice functor along $f$
 
+$$\mathcal{C}/Y \longrightarrow \mathcal{C}/X, \qquad (A \to Y) \longmapsto (A \to Y \to X)$$
 
-Cite: `prop.slice-fully-faithful-mono` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is **fully faithful**. Dually: $f$ is an epimorphism $\iff$ $X\backslash\mathcal{C} \to Y\backslash\mathcal{C}$ is fully faithful.
 
+> continued in nodes/prop.slice-fully-faithful-mono.en.2.md

@@ -2,13 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.filtered-finite-colimits)　·　[Chinese page (authoritative)](./prop.filtered-finite-colimits.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.filtered-finite-colimits.md` and `proofs/`.
+## Statement · **draft**
+A category with **filtered colimits** and **finite colimits** has **all colimits**.
 
+## Notes · **draft**
+⚠️ The hypothesis "finite colimits" cannot be reduced to "coproducts": pushouts / coequalizers are also needed for the two-step argument above to close.
 
-Cite: `prop.filtered-finite-colimits` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.filtered-finite-colimits.en.2.md

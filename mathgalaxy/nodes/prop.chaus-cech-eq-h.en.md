@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.chaus-cech-eq-h)　·　[Chinese page (authoritative)](./prop.chaus-cech-eq-h.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Čech on Compact Hausdorff` (short) · `Čech Cohomology on Compact Hausdorff Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.chaus-cech-eq-h.md` and `proofs/`.
+## Statement · **draft**
+If $X$ is a **compact Hausdorff** space, then $\check{H}^{n}(X, M) = H^{n}(X, M)$ (for every abelian sheaf $M$).
 
-
-Cite: `prop.chaus-cech-eq-h` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.chaus-cech-eq-h.en.2.md

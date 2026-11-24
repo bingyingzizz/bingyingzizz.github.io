@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.topology-alternative-axiom)　·　[Chinese page (authoritative)](./prop.topology-alternative-axiom.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Alternative Topology Axiom` (short) · `Alternative Axiom for a Grothendieck Topology` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.topology-alternative-axiom.md` and `proofs/`.
+## Statement · **draft**
+The **last axiom** in the definition of a Grothendieck topology may be replaced by: for all $R \subseteq R' \subseteq h_{X}$,
 
-
-Cite: `prop.topology-alternative-axiom` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.topology-alternative-axiom.en.2.md

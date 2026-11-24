@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.final-initial)　·　[Chinese page (authoritative)](./def.final-initial.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 names: `Terminal and Initial` (short) · `Terminal and Initial Objects` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.final-initial.md` and `proofs/`.
+## Statement · **draft**
+In a category $\mathcal{C}$, the **terminal object** $\mathbf{1}_{\mathcal{C}}$ is the limit of the empty diagram $\emptyset \to \mathcal{C}$, and the **initial object** $\mathbf{0}_{\mathcal{C}}$ is its colimit. In terms of hom-sets:
 
-
-Cite: `def.final-initial` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.final-initial.en.2.md

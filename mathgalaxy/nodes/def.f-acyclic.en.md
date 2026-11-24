@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.f-acyclic)　·　[Chinese page (authoritative)](./def.f-acyclic.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.f-acyclic.md` and `proofs/`.
+## Statement · **draft**
+Let $F$ be a **left exact** additive functor with enough injectives. An object $M \in \mathcal{A}$ is called (right) **$F$-acyclic** if
 
+$$FM = RFM,$$
 
-Cite: `def.f-acyclic` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+that is, $FM = R^{0}FM$ and $R^{n}FM = 0$ ($n \ne 0$).
 
+> continued in nodes/def.f-acyclic.en.2.md

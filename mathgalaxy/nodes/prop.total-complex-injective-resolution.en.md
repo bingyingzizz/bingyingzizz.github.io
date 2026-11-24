@@ -2,14 +2,9 @@
 English entry · root `../`
 [in graph](../#n=prop.total-complex-injective-resolution)　·　[Chinese page (authoritative)](./prop.total-complex-injective-resolution.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Total Complex` (short) · `The Total Complex Is Still an Injective Resolution` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.total-complex-injective-resolution.md` and `proofs/`.
-
-
-Cite: `prop.total-complex-injective-resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.total-complex-injective-resolution.en.2.md

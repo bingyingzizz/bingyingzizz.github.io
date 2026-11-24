@@ -2,14 +2,9 @@
 English entry · root `../`
 [in graph](../#n=thm.pushforward-enough-injectives)　·　[Chinese page (authoritative)](./thm.pushforward-enough-injectives.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · theorem · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 names: `Enough Injectives` (short) · `Abelian Sheaves Have Enough Injectives` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.pushforward-enough-injectives.md` and `proofs/`.
-
-
-Cite: `thm.pushforward-enough-injectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.pushforward-enough-injectives.en.2.md

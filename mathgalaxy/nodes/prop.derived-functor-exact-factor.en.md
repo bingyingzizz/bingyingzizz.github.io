@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.derived-functor-exact-factor)　·　[Chinese page (authoritative)](./prop.derived-functor-exact-factor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.derived-functor-exact-factor.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A} \xrightarrow{F} \mathcal{A}' \xrightarrow{G} \mathcal{A}''$ be additive functors satisfying the hypotheses of the Grothendieck spectral sequence. If $F$ is exact, then
 
+$$R^{n}G\bigl(F(K)\bigr) \;\cong\; R^{n}(G \circ F)(K);$$
 
-Cite: `prop.derived-functor-exact-factor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.derived-functor-exact-factor.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.slice-topos)　·　[Chinese page (authoritative)](./prop.slice-topos.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.slice-topos.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a site and $T \in \widehat{\mathcal{C}}$. Then
 
-
-Cite: `prop.slice-topos` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.slice-topos.en.2.md

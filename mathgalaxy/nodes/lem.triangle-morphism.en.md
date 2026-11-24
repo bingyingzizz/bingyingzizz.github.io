@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=lem.triangle-morphism)　·　[Chinese page (authoritative)](./lem.triangle-morphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · lemma · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Triangle Morphisms` (short) · `Morphisms of Distinguished Triangles` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.triangle-morphism.md` and `proofs/`.
+## Statement · **draft**
+Let $(u, v, w)$ be a morphism between derived triangles in $\mathbf{K}(\mathcal{C})$. Then
 
-
-Cite: `lem.triangle-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.triangle-morphism.en.2.md

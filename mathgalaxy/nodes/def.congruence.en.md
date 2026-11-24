@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.congruence)　·　[Chinese page (authoritative)](./def.congruence.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.congruence.md` and `proofs/`.
+## Statement · **draft**
+Let $n \ge 1$. One says $a$ and $b$ are **congruent modulo $n$**, written $a \equiv b \pmod n$, if $n \mid (a - b)$.
 
+Congruence is an equivalence relation on $\mathbb{Z}$, compatible with addition and multiplication: from $a \equiv b$ and $c \equiv d$ one obtains $a + c \equiv b + d$ and $ac \equiv bd$.
 
-Cite: `def.congruence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.congruence.en.2.md

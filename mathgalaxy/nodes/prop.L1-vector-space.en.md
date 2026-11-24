@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=prop.L1-vector-space)　·　[Chinese page (authoritative)](./prop.L1-vector-space.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 27 · proposition · cluster Integration (`analysis.integral`) · Functions of a Real Variable / Mathematical Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.L1-vector-space.md` and `proofs/`.
+## Statement · **draft**
+The integrable (real-valued) functions on $X$ form a **real vector space**, and
 
+$$\int (af + bg) = a\int f + b\int g\quad  \forall a, b \in \mathbb{R}$$
 
-Cite: `prop.L1-vector-space` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+i.e. $f \mapsto \int f$ is linear.
 
+## Notes · **draft**
+"Being a vector space" is understood in the a.e. sense (two integrable functions equal a.e. are regarded as the same element).
+
+> continued in nodes/prop.L1-vector-space.en.2.md

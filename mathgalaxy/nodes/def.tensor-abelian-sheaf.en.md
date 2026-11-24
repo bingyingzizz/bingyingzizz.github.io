@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.tensor-abelian-sheaf)　·　[Chinese page (authoritative)](./def.tensor-abelian-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Tensor of Sheaves` (short) · `Tensor Product of Abelian Sheaves` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.tensor-abelian-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos and $M, N \in \mathcal{T}(\mathbf{Ab})$. The functor
 
+$$P \longmapsto \operatorname{Hom}_{\mathbb{Z}}\bigl(M,\ \operatorname{Hom}_{\mathbb{Z}}(N, P)\bigr)$$
 
-Cite: `def.tensor-abelian-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is representable; its representing object is written $M \otimes_{\mathbb{Z}} N$. Thus
 
+> continued in nodes/def.tensor-abelian-sheaf.en.2.md

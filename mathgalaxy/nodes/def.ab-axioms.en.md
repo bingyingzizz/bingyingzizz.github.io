@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=def.ab-axioms)　·　[Chinese page (authoritative)](./def.ab-axioms.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `AB Axioms` (short) · `Grothendieck's AB Axioms` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ab-axioms.md` and `proofs/`.
+## Statement · **draft**
+The **exactness levels** of a category $\mathcal{C}$ (Grothendieck's AB axioms) strengthen one another as follows:
 
-
-Cite: `def.ab-axioms` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ab-axioms.en.2.md

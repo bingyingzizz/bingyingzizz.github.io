@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.five-lemma)　·　[Chinese page (authoritative)](./thm.five-lemma.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · lemma · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.five-lemma.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be an abelian category; both rows of the following commutative diagram are exact:
 
-
-Cite: `thm.five-lemma` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.five-lemma.en.2.md

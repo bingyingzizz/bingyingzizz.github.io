@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.filtered-complex-exact-couple)　·　[Chinese page (authoritative)](./prop.filtered-complex-exact-couple.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · proposition · cluster Filtrations and Spectral Sequences (`hom.spectral`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.filtered-complex-exact-couple.md` and `proofs/`.
+## Statement · **draft**
+Let $K$ be a complex with a **decreasing filtration** $F^{p}K$ ($d$ preserves the filtration, meaning $d(F^{p}K^{n}) \subseteq F^{p}K^{n+1}$). For each $p$ there is a short exact sequence of complexes
 
-
-Cite: `prop.filtered-complex-exact-couple` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.filtered-complex-exact-couple.en.2.md

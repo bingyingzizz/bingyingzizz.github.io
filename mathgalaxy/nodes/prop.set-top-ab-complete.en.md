@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.set-top-ab-complete)　·　[Chinese page (authoritative)](./prop.set-top-ab-complete.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.set-top-ab-complete.md` and `proofs/`.
+## Statement · **draft**
+$\mathbf{Set}$, $\mathbf{Top}$ and $\mathbf{Ab}$ all have **all small limits and all small colimits**.
 
+The forgetful functor $\mathbf{Top} \to \mathbf{Set}$ **preserves all limits and all colimits**; but $\mathbf{Ab} \to \mathbf{Set}$ **preserves all limits, but not coproducts**.
 
-Cite: `prop.set-top-ab-complete` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.set-top-ab-complete.en.2.md

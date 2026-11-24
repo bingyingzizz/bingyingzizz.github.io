@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.compactly-generated)　·　[Chinese page (authoritative)](./def.compactly-generated.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.compactly-generated.md` and `proofs/`.
+## Statement · **draft**
+A topological space $X$ is called **compactly generated** (also a **$k$-space**) if it is a colimit of compact Hausdorff spaces.
 
-
-Cite: `def.compactly-generated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.compactly-generated.en.2.md

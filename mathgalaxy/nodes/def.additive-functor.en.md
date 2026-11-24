@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.additive-functor)　·　[Chinese page (authoritative)](./def.additive-functor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.additive-functor.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}, \mathcal{D}$ be **preadditive categories**. A functor $F : \mathcal{C} \to \mathcal{D}$ is called an **additive functor** if for every pair $M, N \in \mathcal{C}$, the map
 
+$$\operatorname{Hom}_{\mathcal{C}}(M, N) \longrightarrow \operatorname{Hom}_{\mathcal{D}}(F(M), F(N)), \qquad f \longmapsto F(f)$$
 
-Cite: `def.additive-functor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.additive-functor.en.2.md

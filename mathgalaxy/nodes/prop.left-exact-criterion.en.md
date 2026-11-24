@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.left-exact-criterion)　·　[Chinese page (authoritative)](./prop.left-exact-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Left Exact Criterion` (short) · `Criterion for Left Exactness` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.left-exact-criterion.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}, \mathcal{D}$ be abelian categories and $F : \mathcal{C} \to \mathcal{D}$ a functor. Then
 
+$F$ **is left exact** $\iff$ $F$ **is additive and sends left exact sequences to left exact sequences**.
 
-Cite: `prop.left-exact-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.left-exact-criterion.en.2.md

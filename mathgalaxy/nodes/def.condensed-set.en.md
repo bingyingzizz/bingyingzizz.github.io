@@ -2,16 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.condensed-set)　·　[Chinese page (authoritative)](./def.condensed-set.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.condensed-set.md` and `proofs/`.
+## Statement · **draft**
+A **condensed set** is a (set-valued) **sheaf** on $\mathbf{CHaus}$. Its category is written
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Condensed_mathematics · nLab: https://ncatlab.org/nlab/show/condensed+mathematics
+$$\mathrm{Cond} \;:=\; \widehat{\mathbf{CHaus}}$$
 
+Here $\mathbf{CHaus}$ is equipped with its **precanonical topology**.
 
-Cite: `def.condensed-set` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.condensed-set.en.2.md

@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.flat-abelian-sheaf)　·　[Chinese page (authoritative)](./def.flat-abelian-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.flat-abelian-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos. An abelian group $P$ in it is called **flat** if the functor
 
+$$M \longmapsto P \otimes_{\mathbb{Z}} M$$
 
-Cite: `def.flat-abelian-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+is **exact**.
 
+> continued in nodes/def.flat-abelian-sheaf.en.2.md

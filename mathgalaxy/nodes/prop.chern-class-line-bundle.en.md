@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.chern-class-line-bundle)　·　[Chinese page (authoritative)](./prop.chern-class-line-bundle.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 38 · proposition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.chern-class-line-bundle.md` and `proofs/`.
+## Statement · **draft**
+**What is being done**: in rank $1$ the whole machine degenerates into a computable formula — this is the only case in which Chern classes can be "computed by hand", and the case to which the splitting principle reduces everything.
 
-
-Cite: `prop.chern-class-line-bundle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.chern-class-line-bundle.en.2.md

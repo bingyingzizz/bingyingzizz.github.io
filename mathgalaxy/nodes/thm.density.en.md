@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=thm.density)　·　[Chinese page (authoritative)](./thm.density.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · theorem · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.density.md` and `proofs/`.
+## Statement · **draft**
+In $\widehat{\mathcal{C}}$, every presheaf $T$ is a **colimit of representable presheaves**, as expressed by
 
+$$T \;\cong\; \varinjlim_{(X, s) \in \mathcal{C}_{T}} h_{X}$$
 
-Cite: `thm.density` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+The colimit is indexed by the slice category $\mathcal{C}_{T}$. For $T$, each element $(X, s)$ contributes a representable presheaf $h_{X}$, and $T$ is their colimit.
 
+> continued in nodes/thm.density.en.2.md

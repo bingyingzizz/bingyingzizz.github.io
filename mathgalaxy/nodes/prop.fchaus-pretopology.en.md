@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.fchaus-pretopology)　·　[Chinese page (authoritative)](./prop.fchaus-pretopology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `FCHaus Pretopology` (short) · `Pretopology on Finite Compact Hausdorff Spaces` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.fchaus-pretopology.md` and `proofs/`.
+## Statement · **draft**
+Write $\mathbf{FCHaus}$ for the full subcategory of **free compact Hausdorff spaces** (that is, $\beta I$).
 
-
-Cite: `prop.fchaus-pretopology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.fchaus-pretopology.en.2.md

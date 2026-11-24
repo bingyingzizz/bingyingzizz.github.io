@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.derived-functor-kan-extension)　·　[Chinese page (authoritative)](./prop.derived-functor-kan-extension.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Kan Extensions` (short) · `Derived Functors Are Kan Extensions` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.derived-functor-kan-extension.md` and `proofs/`.
+## Statement · **draft**
+Let $F : \mathcal{A} \to \mathcal{A}'$ be a **left exact** additive functor. Then $RF$ is the composite map
 
-
-Cite: `prop.derived-functor-kan-extension` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.derived-functor-kan-extension.en.2.md

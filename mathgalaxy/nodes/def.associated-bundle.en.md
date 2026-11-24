@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.associated-bundle)　·　[Chinese page (authoritative)](./def.associated-bundle.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 34 · definition · cluster Characteristic Classes (`diffgeom.characteristic`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.associated-bundle.md` and `proofs/`.
+## Statement · **draft**
+**What is being done**: the fibre of a principal bundle is the group $G$, but the fibre you want is often some other space $F$ (a vector space, a sphere, a flag manifold...). The **associated bundle** is the standard surgery "replace $G$ by $F$": use the action of $G$ on $F$ to glue the two together.
 
-
-Cite: `def.associated-bundle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.associated-bundle.en.2.md

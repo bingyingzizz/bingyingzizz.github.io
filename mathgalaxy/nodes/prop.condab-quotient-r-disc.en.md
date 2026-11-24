@@ -2,14 +2,9 @@
 English entry · root `../`
 [in graph](../#n=prop.condab-quotient-r-disc)　·　[Chinese page (authoritative)](./prop.condab-quotient-r-disc.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics
 names: `Quotient R Sections` (short) · `Sections of the Quotient of R by Its Discrete Subgroup` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.condab-quotient-r-disc.md` and `proofs/`.
-
-
-Cite: `prop.condab-quotient-r-disc` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.condab-quotient-r-disc.en.2.md

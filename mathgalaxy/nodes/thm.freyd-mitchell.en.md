@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.freyd-mitchell)　·　[Chinese page (authoritative)](./thm.freyd-mitchell.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · theorem · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Freyd–Mitchell Theorem` (short) · `Freyd–Mitchell Embedding Theorem` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.freyd-mitchell.md` and `proofs/`.
+## Statement · **draft**
+If $\mathcal{C}$ is a **small** abelian category, then there exist a ring $A$ and a **fully faithful** **exact** functor
 
+$$\mathcal{C} \longrightarrow A\text{-}\mathbf{Mod}.$$
 
-Cite: `thm.freyd-mitchell` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.freyd-mitchell.en.2.md

@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.lc-ext-vanishing)　·　[Chinese page (authoritative)](./thm.lc-ext-vanishing.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · theorem · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Ext Vanishes for LCA Groups` (short) · `Ext Vanishes in High Degrees for Locally Compact Abelian Groups` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.lc-ext-vanishing.md` and `proofs/`.
+## Statement · **draft**
+Let $M, N$ be a **locally compact Hausdorff abelian group**. Then for all $n \ne 0, 1$
 
+$$\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0.$$
 
-Cite: `thm.lc-ext-vanishing` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.lc-ext-vanishing.en.2.md

@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=def.free-abelian-sheaf)　·　[Chinese page (authoritative)](./def.free-abelian-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.free-abelian-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos. The forgetful functor
 
+$$\mathcal{T}(\mathbf{Ab}) \longrightarrow \mathcal{T}$$
 
-Cite: `def.free-abelian-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+(forgetting an abelian sheaf to its underlying sheaf of sets) has a **left adjoint**, written
 
+$$\mathbb{Z}\cdot(-) : \mathcal{T} \longrightarrow \mathcal{T}(\mathbf{Ab}), \qquad X \longmapsto \mathbb{Z}\cdot X,$$
+also denoted $\mathbb{Z}[X]$.
+
+> continued in nodes/def.free-abelian-sheaf.en.2.md

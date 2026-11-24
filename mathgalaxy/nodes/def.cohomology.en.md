@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.cohomology)　·　[Chinese page (authoritative)](./def.cohomology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.cohomology.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{A}$ be an abelian category and $K$ a cochain complex in $\mathcal{A}$. The **homology** of $K$ in degree $n$ is
 
+$$H^{n}(K) \;:=\; Z^{n}(K) \big/ B^{n}(K) \;=\; \ker d^{n} \big/ \operatorname{im} d^{n-1}$$
 
-Cite: `def.cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.cohomology.en.2.md

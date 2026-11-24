@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.mitchell-exactness)　·　[Chinese page (authoritative)](./prop.mitchell-exactness.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Mitchell Exactness` (short) · `Refinement of the Embedding Theorem` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.mitchell-exactness.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a **small abelian** category and $E : \mathcal{C} \to A\text{-}\mathbf{Mod}$ the Freyd–Mitchell embedding (fully faithful, exact). Then
 
-
-Cite: `prop.mitchell-exactness` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.mitchell-exactness.en.2.md

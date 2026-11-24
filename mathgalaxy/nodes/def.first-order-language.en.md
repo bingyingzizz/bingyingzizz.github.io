@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.first-order-language)　·　[Chinese page (authoritative)](./def.first-order-language.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 0 · definition · cluster First-Order Languages and Formulas (`logic.fol`) · Mathematical Logic
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.first-order-language.md` and `proofs/`.
+## Statement · **draft**
+A **first-order language** $\mathcal{L}$ is given by a **signature**, whose symbols fall into two classes:
 
-
-Cite: `def.first-order-language` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.first-order-language.en.2.md

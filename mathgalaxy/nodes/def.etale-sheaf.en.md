@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.etale-sheaf)　·　[Chinese page (authoritative)](./def.etale-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.etale-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a scheme.
 
+Write $X_{\text{et}}$ for the **small étale site** of $X$: objects are étale maps $U \to X$ (usually restricted to the **affine, locally of finite presentation** ones, so that the category is essentially small), morphisms are $X$-morphisms, and **coverings** are jointly surjective étale families $\{U_{i} \to U\}$.
 
-Cite: `def.etale-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+A **presheaf** on $X_{\text{et}}$ is a contravariant functor
 
+> continued in nodes/def.etale-sheaf.en.2.md

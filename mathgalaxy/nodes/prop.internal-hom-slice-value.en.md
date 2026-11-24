@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.internal-hom-slice-value)　·　[Chinese page (authoritative)](./prop.internal-hom-slice-value.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Internal Hom Values` (short) · `Values of the Internal Hom` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.internal-hom-slice-value.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos, $X \in \mathcal{T}$, and $M, N$ abelian group sheaves. Then
 
-
-Cite: `prop.internal-hom-slice-value` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.internal-hom-slice-value.en.2.md

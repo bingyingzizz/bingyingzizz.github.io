@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=thm.dyckhoff)　·　[Chinese page (authoritative)](./thm.dyckhoff.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.dyckhoff.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a **locally compact Hausdorff** space and $M$ a **discrete** abelian group (regarded as a constant condensed abelian group). Then for all $n \ge 0$
 
+$$H^{n}_{\mathrm{cond}}(X,\ M) \cong H^{n}_{\mathrm{sheaf}}(X,\ M).$$
 
-Cite: `thm.dyckhoff` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.dyckhoff.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.interior-product)　·　[Chinese page (authoritative)](./def.interior-product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · definition · cluster Vector Fields and Lie Structures (`diffgeom.vector`) · Differential Geometry
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.interior-product.md` and `proofs/`.
+## Statement · **draft**
+**In plain words**: put a vector field into the first slot of a form and the degree drops by one — that is the interior product. It is the half of Cartan's formula that pairs with the exterior derivative.
 
-
-Cite: `def.interior-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.interior-product.en.2.md

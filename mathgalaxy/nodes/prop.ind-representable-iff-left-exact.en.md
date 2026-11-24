@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.ind-representable-iff-left-exact)　·　[Chinese page (authoritative)](./prop.ind-representable-iff-left-exact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.ind-representable-iff-left-exact.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{C}$ be a small category with finite colimits. The following three statements about the presheaf $T \in \widehat{\mathcal{C}}$ are equivalent.
 
-
-Cite: `prop.ind-representable-iff-left-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.ind-representable-iff-left-exact.en.2.md

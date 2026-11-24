@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.topos-covering-epi)　·　[Chinese page (authoritative)](./prop.topos-covering-epi.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Coverings in a Topos` (short) · `Covering Families in a Topos` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.topos-covering-epi.md` and `proofs/`.
+## Statement · **draft**
+In a topos $\mathcal{T}$ (with the standard topology), a family $(X_{i} \to X)_{i \in I}$ is a covering $\iff \coprod_{i \in I} X_{i} \to X$ is an epimorphism.
 
-
-Cite: `prop.topos-covering-epi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.topos-covering-epi.en.2.md

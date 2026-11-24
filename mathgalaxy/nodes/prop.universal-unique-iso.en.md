@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.universal-unique-iso)　·　[Chinese page (authoritative)](./prop.universal-unique-iso.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Presheaves and Yoneda (`cat.yoneda`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.universal-unique-iso.md` and `proofs/`.
+## Statement · **draft**
+If $(X, s)$ and $(X', s')$ are both **universal elements** of the functor $F$, then there is a **unique isomorphism** $f : X \to X'$ such that $F(f)(s) = s'$.
 
-
-Cite: `prop.universal-unique-iso` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.universal-unique-iso.en.2.md

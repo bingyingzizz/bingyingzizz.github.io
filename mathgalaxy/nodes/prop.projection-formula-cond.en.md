@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.projection-formula-cond)　·　[Chinese page (authoritative)](./prop.projection-formula-cond.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Projection Formula` (short) · `Projection Formula for Condensed Sets` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.projection-formula-cond.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a condensed set and $S$ a **locally compact Hausdorff** topological space. Then
 
+$$S \times X(\cdot) \;\cong\; (S \times X)(\cdot).$$
 
-Cite: `prop.projection-formula-cond` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.projection-formula-cond.en.2.md

@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.intersection-subobject)　·　[Chinese page (authoritative)](./def.intersection-subobject.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · definition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.intersection-subobject.md` and `proofs/`.
+## Statement · **draft**
+Let $Y \rightarrowtail X$, $Z \rightarrowtail X$ be two **subobjects** of $X$ (isomorphism classes of monomorphisms, see @@def.subobject@@). Their **intersection** is the fibred product
 
+$$Y \cap Z := Y \times_{X} Z \;\longrightarrow\; X ,$$
 
-Cite: `def.intersection-subobject` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.intersection-subobject.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.stalk-separated)　·　[Chinese page (authoritative)](./prop.stalk-separated.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.stalk-separated.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a topological space, and regard $x \in X$ as a continuous map $x : 1 \to X$ ($1$ a one-point space), giving a topos morphism $\hat x : \mathbf{Set} \to \operatorname{Sh}(X)$. Then
 
-
-Cite: `prop.stalk-separated` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.stalk-separated.en.2.md

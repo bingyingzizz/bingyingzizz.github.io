@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.regular-monomorphism)　·　[Chinese page (authoritative)](./def.regular-monomorphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · definition · cluster Monos, Epis, Subobjects and Images (`cat.structure`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.regular-monomorphism.md` and `proofs/`.
+## Statement · **draft**
+A morphism $i : Y \to X$ is called a **regular monomorphism** if it is the **equalizer** of a pair of parallel morphisms $f, g : X \rightrightarrows Z$ (see @@def.equalizer@@):
 
+$$i = \ker(f, g) \;:\; Y \longrightarrow X .$$
 
-Cite: `def.regular-monomorphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+If the category has a zero object (such as $\mathbf{Ab}$), this is equivalent to "$i$ is the kernel of some morphism": $\ker(f) = \ker(f, 0)$.
 
+> continued in nodes/def.regular-monomorphism.en.2.md

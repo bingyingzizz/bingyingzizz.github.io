@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=thm.k-plus-injectives)　·　[Chinese page (authoritative)](./thm.k-plus-injectives.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · theorem · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `K+ of Injectives` (short) · `Bounded-Below Complexes of Injectives Model the Derived Category` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.k-plus-injectives.md` and `proofs/`.
+## Statement · **draft**
+If $\mathcal{A}$ has **enough injectives**, then the inclusion functor
 
+$$\mathbf{K}^{+}(\mathcal{I}) \xrightarrow{\;\sim\;} D^{+}(\mathcal{A})$$
 
-Cite: `thm.k-plus-injectives` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.k-plus-injectives.en.2.md

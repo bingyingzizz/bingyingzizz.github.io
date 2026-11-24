@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.higher-cohomology-presheaf-zero)　·　[Chinese page (authoritative)](./prop.higher-cohomology-presheaf-zero.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Higher Cohomology Presheaves` (short) · `Higher Cohomology Presheaves Sheafify to Zero` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.higher-cohomology-presheaf-zero.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be an abelian sheaf on a site $\mathcal{C}$ and $n \ne 0$. Then the presheaf
 
+$$U \longmapsto H^{n}(U,\ M)$$
 
-Cite: `prop.higher-cohomology-presheaf-zero` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+has **zero associated sheaf**: its sheafification is the zero sheaf.
 
+> continued in nodes/prop.higher-cohomology-presheaf-zero.en.2.md

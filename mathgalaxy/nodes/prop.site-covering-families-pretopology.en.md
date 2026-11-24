@@ -2,14 +2,9 @@
 English entry · root `../`
 [in graph](../#n=prop.site-covering-families-pretopology)　·　[Chinese page (authoritative)](./prop.site-covering-families-pretopology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 16 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Covering Families` (short) · `Covering Families Form a Pretopology` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.site-covering-families-pretopology.md` and `proofs/`.
-
-
-Cite: `prop.site-covering-families-pretopology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.site-covering-families-pretopology.en.2.md

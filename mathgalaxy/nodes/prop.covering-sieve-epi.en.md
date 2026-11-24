@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.covering-sieve-epi)　·　[Chinese page (authoritative)](./prop.covering-sieve-epi.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Sheaves and Topologies (`cat.sheaf`) · Category Theory
 names: `Covering Sieves Are Epimorphic` (short) · `Covering Sieves and Epimorphic Coproducts` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.covering-sieve-epi.md` and `proofs/`.
+## Statement · **draft**
+A family $(X_{i} \to X)_{i \in I}$ generates a **covering sieve** $\iff$ the coproduct $\coprod_{i \in I} X_{i} \to X$ is an **epimorphism** (in $\mathcal{C}$).
 
-
-Cite: `prop.covering-sieve-epi` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.covering-sieve-epi.en.2.md

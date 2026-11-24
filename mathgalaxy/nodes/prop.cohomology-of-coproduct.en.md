@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=prop.cohomology-of-coproduct)　·　[Chinese page (authoritative)](./prop.cohomology-of-coproduct.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.cohomology-of-coproduct.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos, $(X_{i})_{i \in I}$ a family of objects, and $M$ an abelian group in $\mathcal{T}$. Then for all $n \ge 0$
 
+$$H^{n}\Bigl(\coprod_{i \in I} X_{i},\ M\Bigr) \;\cong\; \prod_{i \in I} H^{n}(X_{i},\ M).$$
 
-Cite: `prop.cohomology-of-coproduct` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.cohomology-of-coproduct.en.2.md

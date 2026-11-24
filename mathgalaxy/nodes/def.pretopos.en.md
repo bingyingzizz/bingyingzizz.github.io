@@ -2,13 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.pretopos)　·　[Chinese page (authoritative)](./def.pretopos.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.pretopos.md` and `proofs/`.
+## Statement · **draft**
+A category $\mathcal{C}$ is called a **pretopos** if
 
+1. **finite limits exist**;
+2. **finite coproducts exist** and are **disjoint** and **universal**;
+3. **equivalence relations are effective and universal**;
+4. **epimorphisms are regular and universal**.
 
-Cite: `def.pretopos` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.pretopos.en.2.md

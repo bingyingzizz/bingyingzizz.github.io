@@ -2,16 +2,16 @@
 English entry · root `../`
 [in graph](../#n=def.ext)　·　[Chinese page (authoritative)](./def.ext.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · definition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.ext.md` and `proofs/`.
+## Statement · **draft**
+For objects $L^{\bullet}$ and $K^{\bullet}$, the $n$-th **extension group** is
 
-## Elsewhere
-Wikipedia: https://en.wikipedia.org/wiki/Ext_functor · nLab: https://ncatlab.org/nlab/show/Ext
+$$\operatorname{Ext}^{n}(K^{\bullet}, L^{\bullet}) := \operatorname{Hom}_{D(\mathcal{A})}\bigl(K^{\bullet},\ L^{\bullet}[n]\bigr).$$
 
+## Notes · **draft**
+**A few facts to remember at once** (for objects of $\mathcal{A}$, say $M, N$):
 
-Cite: `def.ext` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.ext.en.2.md

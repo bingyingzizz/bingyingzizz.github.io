@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.topos-morphism)　·　[Chinese page (authoritative)](./def.topos-morphism.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Toposes (`cat.topos`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.topos-morphism.md` and `proofs/`.
+## Statement · **draft**
+A **morphism** of topoi $f : \mathcal{T} \to \mathcal{T}'$ is a pair of functors
 
+$$f^{*} : \mathcal{T}' \longrightarrow \mathcal{T}, \qquad f_{*} : \mathcal{T} \longrightarrow \mathcal{T}'$$
 
-Cite: `def.topos-morphism` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+satisfying $f^{*} \dashv f_{*}$, with $f^{*}$ **exact** (preserving finite limits). $f^{*}$ is called the **pullback functor** and $f_{*}$ the **pushforward functor**.
 
+> continued in nodes/def.topos-morphism.en.2.md

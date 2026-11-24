@@ -2,13 +2,19 @@
 English entry · root `../`
 [in graph](../#n=def.exact-sequence)　·　[Chinese page (authoritative)](./def.exact-sequence.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · definition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra / Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.exact-sequence.md` and `proofs/`.
+## Statement · **draft**
+Let
 
+$$\cdots \longrightarrow M^{n-1} \xrightarrow{\ d^{n-1}\ } M^{n} \xrightarrow{\ d^{n}\ } M^{n+1} \longrightarrow \cdots$$
 
-Cite: `def.exact-sequence` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+be a complex in an abelian category ($d^{n} \circ d^{n-1} = 0$). It is called **exact at $M^{n}$** if
 
+$$\operatorname{im}(d^{n-1}) = \ker(d^{n}).$$
+
+A complex exact everywhere is an **exact sequence**. In particular, a **short exact sequence**
+
+> continued in nodes/def.exact-sequence.en.2.md

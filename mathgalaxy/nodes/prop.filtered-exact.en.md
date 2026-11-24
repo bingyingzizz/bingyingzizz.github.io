@@ -2,13 +2,18 @@
 English entry · root `../`
 [in graph](../#n=prop.filtered-exact)　·　[Chinese page (authoritative)](./prop.filtered-exact.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 14 · proposition · cluster Adjunctions and Reflections (`cat.adjoint`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.filtered-exact.md` and `proofs/`.
+## Statement · **draft**
+In $\mathbf{Set}$, **filtered colimits are exact**: when $I$ is a filtered category, the colimit functor
 
+$$\varinjlim : \mathbf{Set}^{I} \longrightarrow \mathbf{Set}$$
 
-Cite: `prop.filtered-exact` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+preserves all finite limits.
 
+## Notes · **draft**
+"Exact" here amounts to one sentence: filtered colimits **commute** with finite limits. The most basic example is that it preserves finite products:
+
+> continued in nodes/prop.filtered-exact.en.2.md

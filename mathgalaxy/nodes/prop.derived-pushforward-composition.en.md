@@ -2,14 +2,14 @@
 English entry · root `../`
 [in graph](../#n=prop.derived-pushforward-composition)　·　[Chinese page (authoritative)](./prop.derived-pushforward-composition.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra
 names: `Derived Pushforward Composition` (short) · `Composition of Derived Pushforwards` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.derived-pushforward-composition.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T} \xrightarrow{\ f\ } \mathcal{T}' \xrightarrow{\ f'\ } \mathcal{T}''$ be a sequence of morphisms of topoi. Then
 
+$$Rf'_{*} \circ Rf_{*} \;=\; R(f' \circ f)_{*},$$
 
-Cite: `prop.derived-pushforward-composition` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.derived-pushforward-composition.en.2.md

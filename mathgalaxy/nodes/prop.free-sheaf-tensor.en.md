@@ -2,14 +2,17 @@
 English entry · root `../`
 [in graph](../#n=prop.free-sheaf-tensor)　·　[Chinese page (authoritative)](./prop.free-sheaf-tensor.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 23 · proposition · cluster Abelian Sheaves (`hom.sheaf`) · Homological Algebra
 names: `Free Sheaf Tensor` (short) · `Tensor Product of Free Sheaves` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.free-sheaf-tensor.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos and $X, Y \in \mathcal{T}$. Then
 
+$$\mathbb{Z}\cdot X \;\otimes_{\mathbb{Z}}\; \mathbb{Z}\cdot Y \;\cong\; \mathbb{Z}\cdot (X \times Y).$$
 
-Cite: `prop.free-sheaf-tensor` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+## Notes · **draft**
+⭐ How to read it: **free objects translate products in the topos into tensor products of abelian sheaves**.
 
+> continued in nodes/prop.free-sheaf-tensor.en.2.md

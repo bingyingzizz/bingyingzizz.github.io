@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=thm.adjoint-hilbert)　·　[Chinese page (authoritative)](./thm.adjoint-hilbert.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 29 · theorem · cluster Hilbert Spaces (`fa.hilbert`) · Functional Analysis
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.adjoint-hilbert.md` and `proofs/`.
+## Statement · **draft**
+Let $H, K$ be Hilbert spaces and $u \in B(H, K)$. Then there is a **unique** $u^* \in B(K, H)$ such that
 
+$$\langle u^*(x), y\rangle_H = \langle x, \, u(y)\rangle_K \qquad (x \in K,\ y \in H) ,$$
 
-Cite: `thm.adjoint-hilbert` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+and $\|u^*\| = \|u\|$.
 
+> continued in nodes/thm.adjoint-hilbert.en.2.md

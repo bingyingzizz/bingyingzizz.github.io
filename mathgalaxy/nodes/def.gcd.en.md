@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.gcd)　·　[Chinese page (authoritative)](./def.gcd.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 10 · definition · cluster Divisibility and Congruences (`number.basic`) · Number Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.gcd.md` and `proofs/`.
+## Statement · **draft**
+Let $a, b \in \mathbb{Z}$ not both be zero. The **greatest common divisor** $\gcd(a, b)$ is the largest positive integer dividing both $a$ and $b$.
 
+Equivalent description (without assuming existence): $\gcd(a, b)$ is the smallest positive integer in the set $\{\, ua + vb : u, v \in \mathbb{Z} \,\}$.
 
-Cite: `def.gcd` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.gcd.en.2.md

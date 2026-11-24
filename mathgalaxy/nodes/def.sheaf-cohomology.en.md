@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.sheaf-cohomology)　·　[Chinese page (authoritative)](./def.sheaf-cohomology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.sheaf-cohomology.md` and `proofs/`.
+## Statement · **draft**
+Let $M^{\bullet}$ be an **abelian sheaf complex** on a site $\mathcal{C}$ and let $X \in \mathcal{C}$. For an object $X$, the **$n$-th cohomology group** is
 
+$$H^{n}(X, M^{\bullet}) := R^{n}\Gamma(X, M^{\bullet}),$$
 
-Cite: `def.sheaf-cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+where $\Gamma(X, -)$ is the **section functor** at $X$.
 
+> continued in nodes/def.sheaf-cohomology.en.2.md

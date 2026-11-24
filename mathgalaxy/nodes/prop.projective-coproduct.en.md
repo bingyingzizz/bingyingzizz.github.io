@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.projective-coproduct)　·　[Chinese page (authoritative)](./prop.projective-coproduct.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 17 · proposition · cluster Additive and Abelian Categories (`hom.ab`) · Homological Algebra
 names: `Projective Coproducts` (short) · `Coproducts of Projectives Are Projective` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.projective-coproduct.md` and `proofs/`.
+## Statement · **draft**
+The **coproduct** of projective objects is again projective; dually, the **product** of injective objects is again injective.
 
-
-Cite: `prop.projective-coproduct` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.projective-coproduct.en.2.md

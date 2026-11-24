@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=lem.minimal-closed-surjection)　·　[Chinese page (authoritative)](./lem.minimal-closed-surjection.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 19 · lemma · cluster Compact Hausdorff Spaces (`topo.chaus`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/lem.minimal-closed-surjection.md` and `proofs/`.
+## Statement · **draft**
+Let $f : S \to T$ be a continuous surjection between compact Hausdorff spaces. Then there is a **minimal** closed subset $S' \subseteq S$ such that the restriction $f|_{S'}$ is still surjective.
 
-
-Cite: `lem.minimal-closed-surjection` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/lem.minimal-closed-surjection.en.2.md

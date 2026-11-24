@@ -2,14 +2,18 @@
 English entry · root `../`
 [in graph](../#n=prop.condensed-criterion)　·　[Chinese page (authoritative)](./prop.condensed-criterion.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 names: `Condensed Criterion` (short) · `Criterion for a Presheaf to Be Condensed` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.condensed-criterion.md` and `proofs/`.
+## Statement · **draft**
+On $\mathbf{CHaus}$, a presheaf of sets $X$ is a condensed set $\iff$
 
+1. for every finite family $(S_{i})_{i \in I}$:
 
-Cite: `prop.condensed-criterion` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+$$X\Bigl(\coprod_{i \in I} S_{i}\Bigr) \;\cong\; \prod_{i \in I} X(S_{i})$$
 
+2. for every **closed equivalence relation** $R \rightrightarrows S$:
+
+> continued in nodes/prop.condensed-criterion.en.2.md

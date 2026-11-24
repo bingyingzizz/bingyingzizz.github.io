@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.cgwh-fiber-product)　·　[Chinese page (authoritative)](./prop.cgwh-fiber-product.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Compactly Generated Spaces and Weak Hausdorff (`topo.cg`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.cgwh-fiber-product.md` and `proofs/`.
+## Statement · **draft**
+If $S, S'$ are compact Hausdorff spaces, $X$ is weakly Hausdorff, and continuous maps $S \to X$, $S' \to X$ are given, then the fiber product $S \times_{X} S'$ is compact Hausdorff.
 
-
-Cite: `prop.cgwh-fiber-product` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.cgwh-fiber-product.en.2.md

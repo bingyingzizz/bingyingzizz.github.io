@@ -2,13 +2,13 @@
 English entry · root `../`
 [in graph](../#n=def.boolean-ring)　·　[Chinese page (authoritative)](./def.boolean-ring.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 11 · definition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology / Abstract Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.boolean-ring.md` and `proofs/`.
+## Statement · **draft**
+A **Boolean ring** is a ring $B$ in which every element is **idempotent**:
 
+$$\forall x \in B,\qquad x^{2} = x.$$
 
-Cite: `def.boolean-ring` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.boolean-ring.en.2.md

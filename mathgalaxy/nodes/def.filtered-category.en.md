@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=def.filtered-category)　·　[Chinese page (authoritative)](./def.filtered-category.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 13 · definition · cluster Diagrams and Limits (`cat.limit`) · Category Theory
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.filtered-category.md` and `proofs/`.
+## Statement · **draft**
+A category $I$ is called **filtered** if:
 
+1. **nonempty**: $I$ has at least one object;
+2. **upper bounds**: for any $i, j \in I$ there exist $k \in I$ and morphisms $i \to k$, $j \to k$;
+3. **coequalization**: for any parallel $u, v : i \rightrightarrows j$, there exists $w : j \to k$ with $w \circ u = w \circ v$.
 
-Cite: `def.filtered-category` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.filtered-category.en.2.md

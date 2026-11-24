@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=thm.cond-topos)　·　[Chinese page (authoritative)](./thm.cond-topos.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · theorem · cluster Condensed Sets (`cond.set`) · Condensed Mathematics
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/thm.cond-topos.md` and `proofs/`.
+## Statement · **draft**
+**The category of condensed sets $\mathrm{Cond}$ is a topos.**
 
-
-Cite: `thm.cond-topos` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/thm.cond-topos.en.2.md

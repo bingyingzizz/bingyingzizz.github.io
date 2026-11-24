@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.resolution)　·　[Chinese page (authoritative)](./def.resolution.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 22 · definition · cluster Homology and Exact Sequences (`hom.cohomology`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.resolution.md` and `proofs/`.
+## Statement · **draft**
+Let $f : K^{\bullet} \to L^{\bullet}$ be a **quasi-isomorphism** between complexes; then $L^{\bullet}$ is called a **right resolution** (also replacement) of $K^{\bullet}$. If every $L^{n}$ is an **injective** object, it is called an **injective resolution**.
 
-
-Cite: `def.resolution` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.resolution.en.2.md

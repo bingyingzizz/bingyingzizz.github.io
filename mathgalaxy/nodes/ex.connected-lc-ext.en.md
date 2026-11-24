@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=ex.connected-lc-ext)　·　[Chinese page (authoritative)](./ex.connected-lc-ext.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 25 · example · cluster Computing Derived Hom (`cond.compute`) · Condensed Mathematics / Homological Algebra
 names: `Connected Group Ext` (short) · `Connected Locally Compact to Discrete Has Only First Ext` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/ex.connected-lc-ext.md` and `proofs/`.
+## Statement · **draft**
+Let $M$ be a **connected** locally compact Hausdorff abelian group and $N$ a **discrete** abelian group. Then $\operatorname{Ext}^{n}_{\mathbb{Z}}(M, N) = 0$, for all $n \ne 1$.
 
-
-Cite: `ex.connected-lc-ext` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/ex.connected-lc-ext.en.2.md

@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.ext-is-rhom)　·　[Chinese page (authoritative)](./prop.ext-is-rhom.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 24 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.ext-is-rhom.md` and `proofs/`.
+## Statement · **draft**
+If $M \in \mathcal{A}$ and $K^{\bullet} \in C^{+}(\mathcal{A})$, then $R^{n}\operatorname{Hom}(M, K^{\bullet}) = \operatorname{Ext}^{n}(M, K^{\bullet})$ (dually, $R^{n}\operatorname{Hom}(-, N)$ gives $\operatorname{Ext}$ on the other side).
 
-
-Cite: `prop.ext-is-rhom` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.ext-is-rhom.en.2.md

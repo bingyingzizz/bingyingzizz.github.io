@@ -2,13 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.td-reflective)　·　[Chinese page (authoritative)](./prop.td-reflective.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 21 · proposition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.td-reflective.md` and `proofs/`.
+## Statement · **draft**
+The category of totally disconnected spaces is a **reflective subcategory** of $\mathbf{Top}$, with reflector
 
+$$\pi_{0} : \mathbf{Top} \longrightarrow \mathbf{Top}_{\mathrm{td}}, \qquad X \mapsto \pi_{0}(X)$$
 
-Cite: `prop.td-reflective` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+and $X \to \pi_{0}(X)$ is an isomorphism $\iff$ $X$ is totally disconnected.
 
+> continued in nodes/prop.td-reflective.en.2.md

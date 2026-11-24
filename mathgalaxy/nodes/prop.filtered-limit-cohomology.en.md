@@ -2,14 +2,15 @@
 English entry · root `../`
 [in graph](../#n=prop.filtered-limit-cohomology)　·　[Chinese page (authoritative)](./prop.filtered-limit-cohomology.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 names: `Filtered Limit Cohomology` (short) · `Cohomology of a Filtered Limit` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.filtered-limit-cohomology.md` and `proofs/`.
+## Statement · **draft**
+If $X = \varprojlim_{i \in I} X_{i}$ is a **filtered limit** of compact Hausdorff spaces (with surjective transition maps) and $M$ is a **constant** abelian group, then
 
+## Notes · **draft**
+$$H^{n}(X, M) = \varinjlim_{i \in I} H^{n}(X_{i}, M).$$
 
-Cite: `prop.filtered-limit-cohomology` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.filtered-limit-cohomology.en.2.md

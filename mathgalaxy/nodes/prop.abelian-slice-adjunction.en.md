@@ -2,14 +2,16 @@
 English entry · root `../`
 [in graph](../#n=prop.abelian-slice-adjunction)　·　[Chinese page (authoritative)](./prop.abelian-slice-adjunction.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Toposes (`cat.topos`) · Category Theory
 names: `Slice Adjunction` (short) · `Exact Left Adjoint on the Slice` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.abelian-slice-adjunction.md` and `proofs/`.
+## Statement · **draft**
+Let $\mathcal{T}$ be a topos and $X \in \mathcal{T}$. Then the functor
 
+$$j_{X}^{-1} : \mathcal{T}(\mathbf{Ab}) \longrightarrow \mathcal{T}/X(\mathbf{Ab})$$
 
-Cite: `prop.abelian-slice-adjunction` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
+has a **left adjoint** $j_{X!}$, and $j_{X!}$ is **exact**.
 
+> continued in nodes/prop.abelian-slice-adjunction.en.2.md

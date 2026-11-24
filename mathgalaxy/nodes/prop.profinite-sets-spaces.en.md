@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=prop.profinite-sets-spaces)　·　[Chinese page (authoritative)](./prop.profinite-sets-spaces.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 15 · proposition · cluster Stone and Stonean Spaces (`topo.stone`) · Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.profinite-sets-spaces.md` and `proofs/`.
+## Statement · **draft**
+The category of **pro-objects** of the category of finite sets is **equivalent** to the category of **profinite spaces**.
 
-
-Cite: `prop.profinite-sets-spaces` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.profinite-sets-spaces.en.2.md

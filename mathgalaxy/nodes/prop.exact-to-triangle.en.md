@@ -2,14 +2,12 @@
 English entry · root `../`
 [in graph](../#n=prop.exact-to-triangle)　·　[Chinese page (authoritative)](./prop.exact-to-triangle.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 20 · proposition · cluster Complexes and Distinguished Triangles (`hom.complex`) · Homological Algebra
 names: `Exact Sequence to Triangle` (short) · `Short Exact Sequences Give Distinguished Triangles` (full)
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/prop.exact-to-triangle.md` and `proofs/`.
+## Statement · **draft**
+If $0 \to K^{\bullet} \xrightarrow{\;f\;} L^{\bullet} \xrightarrow{\;g\;} M^{\bullet} \to 0$ is a **short exact sequence** of complexes, then in $D(\mathcal{A})$ there is a **derived triangle**
 
-
-Cite: `prop.exact-to-triangle` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/prop.exact-to-triangle.en.2.md

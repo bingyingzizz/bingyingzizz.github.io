@@ -2,13 +2,11 @@
 English entry · root `../`
 [in graph](../#n=def.flabby-sheaf)　·　[Chinese page (authoritative)](./def.flabby-sheaf.md)
 
-> English: **name only** · auto-derived from the source data; the Chinese page is authoritative.
+> English: **draft** · machine-drafted, pending author review; the Chinese page is authoritative.
 
 layer 18 · definition · cluster Sheaf Cohomology (`hom.sheafcoh`) · Homological Algebra / Topology
 
-## Statement and proof
-Chinese only — see the Chinese page `nodes/def.flabby-sheaf.md` and `proofs/`.
+## Statement · **draft**
+Let $X$ be a topological space and $\mathcal{F}$ an abelian sheaf on $X$. $\mathcal{F}$ is called a **flabby sheaf** if for every open set $U\subseteq X$ the restriction map $\Gamma(X,\mathcal{F})\to\Gamma(U,\mathcal{F})$ is surjective: every section over an open set extends to the whole space.
 
-
-Cite: `def.flabby-sheaf` (content v0.9.3) · CC BY 4.0: [LICENSE.txt](../LICENSE.txt)
-
+> continued in nodes/def.flabby-sheaf.en.2.md
