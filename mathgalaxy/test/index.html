@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>MathGalaxy · Task 3D.1 mobile test</title><style>body{font:16px system-ui;margin:32px;line-height:1.6}progress{width:100%}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body><h2>MathGalaxy 移动端测试</h2><p id="status">正在读取测试文件…</p><progress id="p" max="25" value="0"></progress><pre id="error"></pre><noscript>JavaScript 未启用。</noscript><script>
+(async function(){
+ var status=document.getElementById('status'),progress=document.getElementById('p'),done=0,parts=[];
+ try {
+ for(var i=0;i<25;i+=4){await Promise.all(Array.from({length:Math.min(4,25-i)},(_,j)=>i+j).map(async function(n){var r=await fetch('parts/'+String(n).padStart(2,'0')+'.txt');if(!r.ok)throw Error('Part '+n+' HTTP '+r.status);parts[n]=await r.text();progress.value=++done;status.textContent='已下载 '+done+'/25';}));}
+ var html=parts.join('');parts.length=0;
+ status.textContent='校验并启动…';
+ if(window.crypto&&crypto.subtle){var digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(html));var hex=Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');if(hex!=='6b2ee0fc56f2f83a19164451add3b942cf3348ef72d9b782b272140c4623b313')throw Error('SHA-256 mismatch: '+hex);}
+ html=html.replace('<head>','<head><meta name="robots" content="noindex,nofollow,noarchive">');
+ html=html.replace(/(['"])mathgalaxy\.(theme|read\.lang|geo|canvas\.lang|layout\.v[12]|camera\.v1|hidden\.v1|read\.v1|read\.show\.v1)\1/g, function(m,q,k){return q+'mathgalaxy-test.'+k+q;});
+ if(!/[?&]lang=/.test(location.search)){var u=new URL(location.href);u.searchParams.set('lang','zh');history.replaceState(null,'',u.href);}
+ document.open();document.write(html);document.close();
+ }catch(e){status.textContent='测试页面启动失败';document.getElementById('error').textContent=String(e);}
+})();
+</script></body></html>
